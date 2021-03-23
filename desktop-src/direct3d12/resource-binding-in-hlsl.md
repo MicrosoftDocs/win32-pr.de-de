@@ -5,26 +5,16 @@ ms.assetid: 3CD4BDAD-8AE3-4DE0-B3F8-9C9F9E83BBE9
 ms.localizationpriority: high
 ms.topic: article
 ms.date: 08/27/2019
-ms.openlocfilehash: 749fed319f9ffe840f2b06512e337efa28081e24
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 01039550f07de57fb7b2f1e815bced02e549c741
+ms.sourcegitcommit: 60120d10c957815d79af566c72e5f4bcfaca4025
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104548710"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104837488"
 ---
 # <a name="resource-binding-in-hlsl"></a>Ressourcen Bindung in HLSL
 
 In diesem Thema werden einige spezifische Features der Verwendung des HLSL- [Shader-Modells 5,1](/windows/desktop/direct3dhlsl/shader-model-5-1) (High Level Shader Language) mit Direct3D 12 beschrieben. Alle Direct3D 12-Hardware unterstützt das Shader-Modell 5,1. die Unterstützung für dieses Modell hängt daher nicht von der Hardware Funktionsebene ab.
-
--   [Ressourcentypen und Arrays](#resource-types-and-arrays)
--   [Deskriptorarrays und Textur Arrays](#descriptor-arrays-and-texture-arrays)
--   [Ressourcen Aliasing](#resource-aliasing)
--   [Abweichung und Ableitungen](#divergence-and-derivatives)
--   [UAVs in Pixel-Shadern](#uavs-in-pixel-shaders)
--   [Konstantenpuffer](#constant-buffers)
--   [Bytecode-Änderungen in SM 5.1](#bytecode-changes-in-sm51)
--   [Beispiele für HLSL-Deklarationen](#example-hlsl-declarations)
--   [Verwandte Themen](#related-topics)
 
 ## <a name="resource-types-and-arrays"></a>Ressourcentypen und Arrays
 
@@ -103,6 +93,7 @@ Bei bestimmter Hardware generiert die Verwendung dieses Qualifizierers zusätzli
 Textur Arrays sind seit DirectX 10 verfügbar. Textur Arrays erfordern einen Deskriptor, aber alle Array Slices müssen das gleiche Format, Breite, Höhe und MIP-Anzahl aufweisen. Außerdem muss das Array einen zusammenhängenden Bereich im virtuellen Adressraum belegen. Der folgende Code zeigt ein Beispiel für den Zugriff auf ein Textur Array aus einem Shader.
 
 ``` syntax
+Texture2DArray<float4> myTex2DArray : register(t0); // t0
 float3 myCoord(1.0f,1.4f,2.2f); // 2.2f is array index (rounded to int)
 color = myTex2DArray.Sample(mySampler, myCoord);
 ```
@@ -112,17 +103,17 @@ In einem Textur Array kann der Index frei variieren, ohne dass Qualifizierer wie
 Das entsprechende deskriptorarray wäre wie folgt:
 
 ``` syntax
-Texture2D<float4> myTex2DArray[] : register(t0); // t0+
+Texture2D<float4> myArrayOfTex2D[] : register(t0); // t0+
 float2 myCoord(1.0f, 1.4f);
-color = myTex2D[2].Sample(mySampler,myCoord); // 2 is index
+color = myArrayOfTex2D[2].Sample(mySampler,myCoord); // 2 is index
 ```
 
-Beachten Sie, dass die umständliche Verwendung eines float-Arrays für den Array Index durch ersetzt wird `myTex2D[2]` . Außerdem bieten deskriptorarrays mehr Flexibilität in Bezug auf die Dimensionen. Der-Typ, `Texture2D` ist dieses Beispiel, kann nicht variieren, aber das Format, die Breite, die Höhe und die MIP-Anzahl können bei jedem Deskriptor variieren.
+Beachten Sie, dass die umständliche Verwendung eines float-Arrays für den Array Index durch ersetzt wird `myArrayOfTex2D[2]` . Außerdem bieten deskriptorarrays mehr Flexibilität in Bezug auf die Dimensionen. Der-Typ, `Texture2D` ist dieses Beispiel, kann nicht variieren, aber das Format, die Breite, die Höhe und die MIP-Anzahl können bei jedem Deskriptor variieren.
 
 Es ist legitim, ein deskriptorarray von Textur Arrays zu haben:
 
 ``` syntax
-Texture2DArray<float4> myTex2DArrayOfArrays[2] : register(t0);
+Texture2DArray<float4> myArrayOfTex2DArrays[2] : register(t0);
 ```
 
 Es ist nicht legitim, ein Array von Strukturen zu deklarieren, jede Struktur mit Deskriptoren, z. b. der folgende Code wird nicht unterstützt.
@@ -148,7 +139,7 @@ Um das Layout " **abcabcabc....** Memory" zu erreichen, verwenden Sie eine Deskr
 
 ## <a name="resource-aliasing"></a>Ressourcen Aliasing
 
-Die in den HLSL-Shadern angegebenen Ressourcen Bereiche sind logische Bereiche. Sie werden zur Laufzeit über den Stamm Signatur Mechanismus an konkrete Heap Bereiche gebunden. Normalerweise wird ein logischer Bereich einem Heap Bereich zugeordnet, der sich nicht mit anderen Heap Bereichen überlappt. Der root Signature-Mechanismus ermöglicht jedoch das Alias (Überlappung) von Heap Bereichen kompatibler Typen. Beispielsweise `tex2` können und `tex3` Bereiche aus dem obigen Beispiel dem gleichen (oder überlappenden) Heap Bereich zugeordnet werden, der die Auswirkungen von Aliasing Texturen im HLSL-Programm hat. Wenn ein solches Alias gewünscht ist, muss der Shader mit der Option d3d10 \_ Shader \_ Resources \_ \_ Alias Alias kompiliert werden, die mithilfe der Option */Res \_ May \_ Alias* für das [Effekt-Compilertool](/windows/desktop/direct3dtools/fxc) (FXC) festgelegt wird. Die-Option bewirkt, dass der Compiler korrekten Code erzeugt, indem bestimmte Lade-/Speicheroptimierungen unter der Annahme vermieden werden, dass Ressourcen Alias sein dürfen.
+Die in den HLSL-Shadern angegebenen Ressourcen Bereiche sind logische Bereiche. Sie werden zur Laufzeit über den Stamm Signatur Mechanismus an konkrete Heap Bereiche gebunden. Normalerweise wird ein logischer Bereich einem Heap Bereich zugeordnet, der sich nicht mit anderen Heap Bereichen überlappt. Der root Signature-Mechanismus ermöglicht jedoch das Alias (Überlappung) von Heap Bereichen kompatibler Typen. Beispielsweise `tex2` können und `tex3` Bereiche aus dem obigen Beispiel dem gleichen (oder überlappenden) Heap Bereich zugeordnet werden, der die Auswirkungen von Aliasing Texturen im HLSL-Programm hat. Wenn ein solches Alias gewünscht ist, muss der Shader mit der Option d3d10 \_ Shader \_ Resources \_ \_ Alias Alias kompiliert werden, die mithilfe der Option */Res \_ May \_ Alias* für das [Effekt-Compilertool](/windows/win32/direct3dtools/fxc) (FXC) festgelegt wird. Die-Option bewirkt, dass der Compiler korrekten Code erzeugt, indem bestimmte Lade-/Speicheroptimierungen unter der Annahme vermieden werden, dass Ressourcen Alias sein dürfen.
 
 ## <a name="divergence-and-derivatives"></a>Abweichung und Ableitungen
 
@@ -322,37 +313,14 @@ struct Stuff
 ConstantBuffer<Stuff> myStuff[][3][8]  : register(b2, space3)
 ```
 
-## <a name="related-topics"></a>Verwandte Themen
+## <a name="related-topics"></a>Zugehörige Themen
 
-<dl> <dt>
-
-[Dynamische Indizierung mit HLSL 5.1](dynamic-indexing-using-hlsl-5-1.md)
-</dt> <dt>
-
-[Effekt-Compilertool](/windows/desktop/direct3dtools/fxc)
-</dt> <dt>
-
-[HLSL-Shader-Modell 5,1 Features für Direct3D 12](/windows/desktop/direct3dhlsl/hlsl-shader-model-5-1-features-for-direct3d-12)
-</dt> <dt>
-
-[Geordnete Ansichten des Rasterizers](rasterizer-order-views.md)
-</dt> <dt>
-
-[Ressourcen Bindung](resource-binding.md)
-</dt> <dt>
-
-[Stamm Signaturen](root-signatures.md)
-</dt> <dt>
-
-[Shadermodell 5,1](/windows/desktop/direct3dhlsl/shader-model-5-1)
-</dt> <dt>
-
-[Von Shader angegebener Schablone-Verweis Wert](shader-specified-stencil-reference-value.md)
-</dt> <dt>
-
-[Angeben von Stamm Signaturen in HLSL](specifying-root-signatures-in-hlsl.md)
-</dt> </dl>
-
- 
-
- 
+* [Dynamische Indizierung mit HLSL 5.1](dynamic-indexing-using-hlsl-5-1.md)
+* [Effekt-Compilertool](/windows/win32/direct3dtools/fxc)
+* [HLSL-Shader-Modell 5,1 Features für Direct3D 12](/windows/win32/direct3dhlsl/hlsl-shader-model-5-1-features-for-direct3d-12)
+* [Geordnete Rasterizeransichten](rasterizer-order-views.md)
+* [Ressourcen Bindung](resource-binding.md)
+* [Stammsignaturen](root-signatures.md)
+* [Shadermodell 5,1](/windows/win32/direct3dhlsl/shader-model-5-1)
+* [Von Shader festgelegter Schablonenreferenzwert](shader-specified-stencil-reference-value.md)
+* [Festlegen von Stammsignaturen in HLSL](specifying-root-signatures-in-hlsl.md)
