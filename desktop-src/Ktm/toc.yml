@@ -1,0 +1,139 @@
+- name: Kerneltransaktions-Manager
+  href: kernel-transaction-manager-portal.md
+  items:
+    - name: Informationen zu KTM
+      href: about-ktm.md
+      items:
+        - name: Was ist eine Transaktion?
+          href: what-is-a-transaction.md
+        - name: Arbeiten mit Transaktionen
+          href: programming-model.md
+          items:
+            - name: Transaktionen
+              href: transactions.md
+        - name: Schreiben einer Ressourcen-Manager
+          href: writing-a-resource-manager.md
+          items:
+            - name: Transaktions-Manager
+              href: transaction-managers.md
+            - name: Ressourcen-Manager
+              href: resource-managers.md
+            - name: Eintragungen
+              href: enlistments.md
+            - name: Wiederherstellungs Verarbeitung
+              href: recovery-processing.md
+            - name: Überlegungen zur Programmierung beim Schreiben von Ressourcen-Managern
+              href: programming-considerations.md
+        - name: Interoperabilität mit anderen Windows-Features
+          href: interoperability-with-other-windows-features.md
+        - name: Sicherheit und Zugriffsrechte für KTM
+          href: ktm-security-and-access-rights.md
+    - name: KTM-Referenz
+      href: ktm-reference.md
+      items:
+        - name: Kerneltransaktions-Manager-Enumerationen
+          href: kernel-transaction-manager-enumerations.md
+          items:
+            - name: TRANSACTION_OUTCOME
+              href: /windows/win32/api/Winnt/ne-winnt-transaction_outcome
+        - name: Kerneltransaktions-Manager-Funktionen
+          href: kernel-transaction-manager-functions.md
+          items:
+            - name: Commitcomplete
+              href: /windows/desktop/api/Ktmw32/nf-ktmw32-commitcomplete
+            - name: Commitenlistment
+              href: /windows/desktop/api/KtmW32/nf-ktmw32-commitenlistment
+            - name: CommitTransaction
+              href: /windows/desktop/api/Ktmw32/nf-ktmw32-committransaction
+            - name: Committransaktionasync
+              href: /windows/desktop/api/Ktmw32/nf-ktmw32-committransactionasync
+            - name: '"Kreateeintragung"'
+              href: /windows/desktop/api/KtmW32/nf-ktmw32-createenlistment
+            - name: CreateResourceManager
+              href: /windows/desktop/api/Ktmw32/nf-ktmw32-createresourcemanager
+            - name: CreateTransaction
+              href: /windows/desktop/api/KtmW32/nf-ktmw32-createtransaction
+            - name: '"Kreatetransaktionmanager"'
+              href: /windows/desktop/api/Ktmw32/nf-ktmw32-createtransactionmanager
+            - name: Getcurrentclocktransaktionmanager
+              href: /windows/desktop/api/Ktmw32/nf-ktmw32-getcurrentclocktransactionmanager
+            - name: Getenlistmentid
+              href: /windows/desktop/api/Ktmw32/nf-ktmw32-getenlistmentid
+            - name: Getenlistmentherstellungsinformationen
+              href: /windows/desktop/api/Ktmw32/nf-ktmw32-getenlistmentrecoveryinformation
+            - name: Getnotificationresourcemanager
+              href: /windows/desktop/api/KtmW32/nf-ktmw32-getnotificationresourcemanager
+            - name: Getnotificationresourcemanagerasync
+              href: /windows/desktop/api/KtmW32/nf-ktmw32-getnotificationresourcemanagerasync
+            - name: Gettransaktionid
+              href: /windows/desktop/api/Ktmw32/nf-ktmw32-gettransactionid
+            - name: Gettransaktioninformation
+              href: /windows/desktop/api/Ktmw32/nf-ktmw32-gettransactioninformation
+            - name: Gettransaktionmanagerid
+              href: /windows/desktop/api/Ktmw32/nf-ktmw32-gettransactionmanagerid
+            - name: Openeintragung
+              href: /windows/desktop/api/Ktmw32/nf-ktmw32-openenlistment
+            - name: Openresourcemanager
+              href: /windows/desktop/api/Ktmw32/nf-ktmw32-openresourcemanager
+            - name: Opentransaction
+              href: /windows/desktop/api/Ktmw32/nf-ktmw32-opentransaction
+            - name: Opentransactionmanager
+              href: /windows/desktop/api/Ktmw32/nf-ktmw32-opentransactionmanager
+            - name: Opentransactionmanagerbyid
+              href: /windows/desktop/api/Ktmw32/nf-ktmw32-opentransactionmanagerbyid
+            - name: Preparecomplete
+              href: /windows/desktop/api/Ktmw32/nf-ktmw32-preparecomplete
+            - name: Prepareeintragung
+              href: /windows/desktop/api/KtmW32/nf-ktmw32-prepareenlistment
+            - name: Prepreparecomplete
+              href: /windows/desktop/api/Ktmw32/nf-ktmw32-prepreparecomplete
+            - name: Vorprepareeintragung
+              href: /windows/desktop/api/KtmW32/nf-ktmw32-preprepareenlistment
+            - name: Read onlyeintragung
+              href: /windows/desktop/api/Ktmw32/nf-ktmw32-readonlyenlistment
+            - name: Wiederherstellung
+              href: /windows/desktop/api/Ktmw32/nf-ktmw32-recoverenlistment
+            - name: Wiederherstellbarkeits Manager
+              href: /windows/desktop/api/Ktmw32/nf-ktmw32-recoverresourcemanager
+            - name: Wiederherstellbarkeits-Manager
+              href: /windows/desktop/api/Ktmw32/nf-ktmw32-recovertransactionmanager
+            - name: Renametransaktionmanager
+              href: /windows/desktop/api/KtmW32/nf-ktmw32-renametransactionmanager
+            - name: Rollbackcomplete
+              href: /windows/desktop/api/Ktmw32/nf-ktmw32-rollbackcomplete
+            - name: Rollbackeintragung
+              href: /windows/desktop/api/Ktmw32/nf-ktmw32-rollbackenlistment
+            - name: RollbackTransaction
+              href: /windows/desktop/api/Ktmw32/nf-ktmw32-rollbacktransaction
+            - name: Rollbacktransaktionasync
+              href: /windows/desktop/api/Ktmw32/nf-ktmw32-rollbacktransactionasync
+            - name: Rollforwardtransaktionmanager
+              href: /windows/desktop/api/KtmW32/nf-ktmw32-rollforwardtransactionmanager
+            - name: '"Tenlistmentwiederherstellungsinformationen"'
+              href: /windows/desktop/api/Ktmw32/nf-ktmw32-setenlistmentrecoveryinformation
+            - name: Setresourcemanagercompletionport
+              href: /windows/desktop/api/Ktmw32/nf-ktmw32-setresourcemanagercompletionport
+            - name: Settransaktioninformation
+              href: /windows/desktop/api/Ktmw32/nf-ktmw32-settransactioninformation
+            - name: Singlephasereject
+              href: /windows/desktop/api/Ktmw32/nf-ktmw32-singlephasereject
+        - name: Kerneltransaktions-Manager-Strukturen
+          href: kernel-transaction-manager-structures.md
+          items:
+            - name: TRANSACTION_NOTIFICATION
+              href: /windows/win32/api/KtmTypes/ns-ktmtypes-transaction_notification
+            - name: TRANSACTION_NOTIFICATION_RECOVERY_ARGUMENT
+              href: /windows/win32/api/KtmTypes/ns-ktmtypes-transaction_notification_recovery_argument
+        - name: Kerneltransaktions-Manager-Konstanten
+          href: kernel-transaction-manager-constants.md
+          items:
+            - name: Eintragung von Zugriffs Masken
+              href: enlistment-access-masks.md
+            - name: NOTIFICATION_MASK
+              href: notification-mask.md
+            - name: Ressourcen-Manager Zugriffs Masken
+              href: resource-manager-access-masks.md
+            - name: Transaktions Zugriffs Masken
+              href: transaction-access-masks.md
+            - name: Zugriffs Masken für den Transaktions-Manager
+              href: transaction-manager-access-masks.md
