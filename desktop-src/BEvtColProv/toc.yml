@@ -1,0 +1,40 @@
+- name: WMI-Anbieter für Start Ereignis Sammler
+  href: boot-event-collector-wmi-provider-portal.md
+  items:
+    - name: Targetforwarding
+      href: targetforwarding.md
+    - name: Targetforwardingdestination
+      href: targetforwardingdestination.md
+    - name: Targetforwardinghistory
+      href: targetforwardinghistory.md
+    - name: Control
+      href: control.md
+      items:
+        - name: Checkpoint-Methode
+          href: control-checkpoint.md
+        - name: Dumpdiagnostics-Methode
+          href: control-dumpdiagnostics.md
+        - name: Fastshutdown-Methode
+          href: control-fastshutdown.md
+        - name: Flush-Methode
+          href: control-flush.md
+        - name: GetConfiguration-Methode
+          href: control-getconfiguration.md
+        - name: Isconfigurationequal-Methode
+          href: control-isconfigurationequal.md
+        - name: Listbackups-Methode
+          href: control-listbackups.md
+        - name: Redo-Methode
+          href: control-redo.md
+        - name: Restorefile-Methode
+          href: control-restorefile.md
+        - name: Restorefromtime-Methode
+          href: control-restorefromtime.md
+        - name: SetConfiguration-Methode
+          href: control-setconfiguration.md
+        - name: shutdown-Methode
+          href: control-shutdown.md
+        - name: Undo-Methode
+          href: control-undo.md
+        - name: Validateconfiguration-Methode
+          href: control-validateconfiguration.md
