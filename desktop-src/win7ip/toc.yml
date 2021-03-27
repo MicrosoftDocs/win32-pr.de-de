@@ -1,0 +1,7 @@
+- name: Platt Form Update für Windows Vista
+  href: platform-update-for-windows-vista-portal.md
+  items:
+    - name: Informationen zum Platt Form Update für Windows Vista
+      href: platform-update-for-windows-vista-overview.md
+    - name: Entwickeln von Anwendungen für frühere Versionen von Windows
+      href: developing-applications-for-previous-versions-of-windows.md
