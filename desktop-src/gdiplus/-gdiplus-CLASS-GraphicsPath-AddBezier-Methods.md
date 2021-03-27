@@ -1,0 +1,33 @@
+---
+description: In diesem Thema werden die AddBezier-Methoden der GraphicsPath-Klasse aufgelistet. Eine umfassende Liste der Methoden für die GraphicsPath-Klasse finden Sie unter GraphicsPath.
+ms.assetid: 1c4f3d1b-1fdb-4fde-8f69-bcfac1a33663
+title: GraphicsPath. AddBezier-Methoden
+ms.date: 07/02/2019
+ms.topic: reference
+ms.openlocfilehash: 1598986fad5e2da8adf81a280c96d7dcd52697e1
+ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "103864300"
+---
+# <a name="graphicspathaddbezier-methods"></a><span data-ttu-id="370ff-104">GraphicsPath. AddBezier-Methoden</span><span class="sxs-lookup"><span data-stu-id="370ff-104">GraphicsPath.AddBezier methods</span></span>
+
+<span data-ttu-id="370ff-105">In diesem Thema werden die AddBezier-Methoden der [**GraphicsPath**](/windows/win32/api/gdipluspath/nl-gdipluspath-graphicspath) -Klasse aufgelistet.</span><span class="sxs-lookup"><span data-stu-id="370ff-105">This topic lists the AddBezier methods of the [**GraphicsPath**](/windows/win32/api/gdipluspath/nl-gdipluspath-graphicspath) class.</span></span> <span data-ttu-id="370ff-106">Eine umfassende Liste der Methoden für die **GraphicsPath** -Klasse finden Sie unter [**GraphicsPath**](/windows/win32/api/gdipluspath/nl-gdipluspath-graphicspath).</span><span class="sxs-lookup"><span data-stu-id="370ff-106">For a complete list of methods for the **GraphicsPath** class, see [**GraphicsPath**](/windows/win32/api/gdipluspath/nl-gdipluspath-graphicspath).</span></span>
+
+### <a name="overload-list"></a><span data-ttu-id="370ff-107">Überladeliste</span><span class="sxs-lookup"><span data-stu-id="370ff-107">Overload list</span></span>
+
+
+
+| <span data-ttu-id="370ff-108">Methode</span><span class="sxs-lookup"><span data-stu-id="370ff-108">Method</span></span>                                                                                                                                                             | <span data-ttu-id="370ff-109">BESCHREIBUNG</span><span class="sxs-lookup"><span data-stu-id="370ff-109">Description</span></span>                                                                                                                                                                                                            |
+|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| <span data-ttu-id="370ff-110">[**AddBezier (Punkt&, Punkt&, Punkt&, Punkt&)**](/windows/win32/api/gdipluspath/nf-gdipluspath-graphicspath-addbezier(inconstpoint__inconstpoint__inconstpoint__inconstpoint_))</span><span class="sxs-lookup"><span data-stu-id="370ff-110">[**AddBezier(Point&,Point&,Point&,Point&)**](/windows/win32/api/gdipluspath/nf-gdipluspath-graphicspath-addbezier(inconstpoint__inconstpoint__inconstpoint__inconstpoint_))</span></span>                                   | <span data-ttu-id="370ff-111">Die [**GraphicsPath:: AddBezier**](/windows/win32/api/gdipluspath/nf-gdipluspath-graphicspath-addbezier(inconstpoint__inconstpoint__inconstpoint__inconstpoint_)) -Methode fügt der aktuellen Abbildung dieses Pfades eine Bézier-Spline hinzu.</span><span class="sxs-lookup"><span data-stu-id="370ff-111">The [**GraphicsPath::AddBezier**](/windows/win32/api/gdipluspath/nf-gdipluspath-graphicspath-addbezier(inconstpoint__inconstpoint__inconstpoint__inconstpoint_)) method adds a Bézier spline to the current figure of this path.</span></span><br/>                       |
+| <span data-ttu-id="370ff-112">[**AddBezier (int, int, int, int, int, int, int, int)**](/windows/win32/api/gdipluspath/nf-gdipluspath-graphicspath-addbezier(inint_inint_inint_inint_inint_inint_inint_inint))</span><span class="sxs-lookup"><span data-stu-id="370ff-112">[**AddBezier(INT,INT,INT,INT,INT,INT,INT,INT)**](/windows/win32/api/gdipluspath/nf-gdipluspath-graphicspath-addbezier(inint_inint_inint_inint_inint_inint_inint_inint))</span></span>               | <span data-ttu-id="370ff-113">Die [**GraphicsPath:: AddBezier**](/windows/win32/api/gdipluspath/nf-gdipluspath-graphicspath-addbezier(inint_inint_inint_inint_inint_inint_inint_inint)) -Methode fügt der aktuellen Abbildung dieses Pfades eine Bézier-Spline hinzu.</span><span class="sxs-lookup"><span data-stu-id="370ff-113">The [**GraphicsPath::AddBezier**](/windows/win32/api/gdipluspath/nf-gdipluspath-graphicspath-addbezier(inint_inint_inint_inint_inint_inint_inint_inint)) method adds a Bézier spline to the current figure of this path.</span></span><br/>       |
+| <span data-ttu-id="370ff-114">[**AddBezier (PointF&, PointF&, PointF&, PointF&)**](/previous-versions//ms535623(v=vs.85))</span><span class="sxs-lookup"><span data-stu-id="370ff-114">[**AddBezier(PointF&,PointF&,PointF&,PointF&)**](/previous-versions//ms535623(v=vs.85))</span></span>                           | <span data-ttu-id="370ff-115">Die [**GraphicsPath:: AddBezier**](/previous-versions//ms535623(v=vs.85)) -Methode fügt der aktuellen Abbildung dieses Pfades eine Bézier-Spline hinzu.</span><span class="sxs-lookup"><span data-stu-id="370ff-115">The [**GraphicsPath::AddBezier**](/previous-versions//ms535623(v=vs.85)) method adds a Bézier spline to the current figure of this path.</span></span><br/>                   |
+| <span data-ttu-id="370ff-116">[**AddBezier (Real, Real, Real, Real, Real, Real, Real, Real)**](/windows/win32/api/gdipluspath/nf-gdipluspath-graphicspath-addbezier(inreal_inreal_inreal_inreal_inreal_inreal_inreal_inreal))</span><span class="sxs-lookup"><span data-stu-id="370ff-116">[**AddBezier(REAL,REAL,REAL,REAL,REAL,REAL,REAL,REAL)**](/windows/win32/api/gdipluspath/nf-gdipluspath-graphicspath-addbezier(inreal_inreal_inreal_inreal_inreal_inreal_inreal_inreal))</span></span> | <span data-ttu-id="370ff-117">Die [**GraphicsPath:: AddBezier**](/windows/win32/api/gdipluspath/nf-gdipluspath-graphicspath-addbezier(inreal_inreal_inreal_inreal_inreal_inreal_inreal_inreal)) -Methode fügt der aktuellen Abbildung dieses Pfades eine Bézier-Spline hinzu.</span><span class="sxs-lookup"><span data-stu-id="370ff-117">The [**GraphicsPath::AddBezier**](/windows/win32/api/gdipluspath/nf-gdipluspath-graphicspath-addbezier(inreal_inreal_inreal_inreal_inreal_inreal_inreal_inreal)) method adds a Bézier spline to the current figure of this path.</span></span><br/> |
+
+
+
+ 
+
+ 
