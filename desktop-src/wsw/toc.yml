@@ -1,0 +1,1694 @@
+- name: Windows-Webdienste
+  href: portal.md
+  items:
+    - name: Informationen zu Windows-Webdiensten
+      href: about-windows-web-services.md
+      items:
+        - name: Übersicht über die Dienstmodell Ebene
+          href: service-model-layer-overview.md
+          items:
+            - name: Dienst Host
+              href: service-host.md
+              items:
+                - name: Dienstautorisierung
+                  href: service-authorization.md
+                - name: Benutzer Zustand des Dienst Hosts
+                  href: user-host-state.md
+                - name: Dienstmetadaten
+                  href: service-metadata.md
+                - name: Abbruch Abbrechen
+                  href: call-cancellation.md
+                - name: Abbruch
+                  href: cancellation.md
+            - name: Dienst Proxy
+              href: service-proxy.md
+              items:
+                - name: Dienst Proxy und-Sitzungen
+                  href: service-proxy-and-sessions.md
+            - name: Kontext
+              href: context.md
+            - name: Vertrag
+              href: contract.md
+        - name: Übersicht über die Kanal Schicht
+          href: channel-layer-overview.md
+          items:
+            - name: '`Message`'
+              href: message.md
+            - name: Kanal
+              href: channel.md
+              items:
+                - name: Endpunktadresse
+                  href: endpoint-address.md
+                - name: Kanalbindung
+                  href: binding.md
+            - name: Listener
+              href: listener.md
+            - name: url
+              href: url.md
+            - name: Sicherheitsübersicht
+              href: security-overview.md
+              items:
+                - name: Sicherheits Beschreibung
+                  href: security-description.md
+                - name: Sicherheits Kanaleinstellungen
+                  href: security-channel-settings.md
+                - name: Sicherheits Bindungen
+                  href: security-bindings.md
+                - name: Sicherheitsanmeldeinformationen
+                  href: security-credentials.md
+                - name: Sicherheitskontext
+                  href: security-context.md
+                - name: Sicherheitsbindungseinstellungen
+                  href: security-binding-settings.md
+                - name: Verbund
+                  href: federation.md
+                - name: Endpunktidentität
+                  href: endpoint-identity.md
+                - name: Ergebnisse der Sicherheits Verarbeitung
+                  href: security-processing-results.md
+                - name: wird von
+                  href: extended-protection.md
+            - name: Metadatenimport
+              href: metadata-import.md
+              items:
+                - name: Metadatenzuordnung
+                  href: metadata-mapping.md
+        - name: Übersicht über XML-Ebenen
+          href: xml-layer-overview.md
+          items:
+            - name: XML-Writer
+              href: xml-writer.md
+            - name: XML-Reader
+              href: xml-reader.md
+            - name: XML-Puffer
+              href: xml-buffer.md
+            - name: XML-Knoten
+              href: xml-node.md
+            - name: Serialisierung
+              href: serialization.md
+            - name: Codierung
+              href: encoding.md
+            - name: Wörterbücher
+              href: dictionaries.md
+            - name: XML-Kanonisierung
+              href: xml-canonicalization.md
+            - name: XML-Sprachunterstützung
+              href: xml-language-support.md
+        - name: Wsutil-Compilertool
+          href: wsutil-compiler-tool.md
+          items:
+            - name: Webdienst-Compilertool
+              href: web-service-compiler-tool.md
+            - name: Webdienst-Erweiterungs Datei
+              href: web-service-extension-file.md
+            - name: WSDL-Unterstützung
+              href: wsdl-support.md
+            - name: Dienst Vorgang
+              href: service-operation.md
+              items:
+                - name: Server seitige Dienst Vorgänge
+                  href: server-side-service-operations.md
+                - name: Client seitige Dienst Vorgänge
+                  href: client-side-service-operations.md
+            - name: Unterstützung von Schemas
+              href: schema-support.md
+            - name: Ebene der Schema Unterstützung
+              href: schema-support-level.md
+            - name: Richtlinien Unterstützung
+              href: policy-support.md
+        - name: Debuggen
+          href: debugging.md
+        - name: Ablaufverfolgung
+          href: tracing.md
+        - name: Asynchrones Modell
+          href: asynchronous-model.md
+          items:
+            - name: Vorgangs Kontext Lebensdauer und Threading
+              href: operation-context-lifetime-and-threading.md
+            - name: Threadsicherheit
+              href: thread-safety.md
+        - name: Errors
+          href: errors.md
+        - name: Fehler
+          href: faults.md
+        - name: Heap
+          href: heap.md
+        - name: Versorgungsunternehmen
+          href: utilities.md
+    - name: Verwenden von Windows-Webdiensten
+      href: using-windows-web-services.md
+      items:
+        - name: Erstellen eines Clients
+          href: creating-a-client.md
+        - name: Manuelles Erstellen eines Dienst Proxys für einen WCF-Dienst
+          href: manually-creating-a-service-proxy-for-a-wcf-service.md
+        - name: Erstellen eines Diensts
+          href: creating-a-service.md
+        - name: Beispiele für Windows-Webdienste
+          href: windows-web-services-examples.md
+          items:
+            - name: Beispiele für Dienst Modelle
+              href: service-model-examples.md
+              items:
+                - name: Calculatorwsdl
+                  href: calculatorwsdl.md
+                - name: Httpcalculatorclieintexample
+                  href: httpcalculatorclientexample.md
+                - name: Httpcalculatorserviceexample
+                  href: httpcalculatorserviceexample.md
+                - name: Httpcalculatorwithbasicoversslcliumtexample
+                  href: httpcalculatorwithbasicoversslclientexample.md
+                - name: Httpcalculatorwithbasicoversslserviceexample
+                  href: httpcalculatorwithbasicoversslserviceexample.md
+                - name: Httpcalculatorwithencodecodchannelclieintexample
+                  href: httpcalculatorwithencodedchannelclientexample.md
+                - name: Httpcalculatorwithencodecodchannelserviceexample
+                  href: httpcalculatorwithencodedchannelserviceexample.md
+                - name: Httpcalculatorwithkerberosoversslcliumtexample
+                  href: httpcalculatorwithkerberosoversslclientexample.md
+                - name: Httpcalculatorwithkerberosoversslserviceexample
+                  href: httpcalculatorwithkerberosoversslserviceexample.md
+                - name: Httpcalculatorwithlayeredchannelclieintexample
+                  href: httpcalculatorwithlayeredchannelclientexample.md
+                - name: Httpcalculatorwithlayeredchannelserviceexample
+                  href: httpcalculatorwithlayeredchannelserviceexample.md
+                - name: Httpcalculatorwithsslclieintexample
+                  href: httpcalculatorwithsslclientexample.md
+                - name: Httpcalculatorwithsslserviceexample
+                  href: httpcalculatorwithsslserviceexample.md
+                - name: Httpcalculatorwithsslpolizyklieintexample
+                  href: httpcalculatorwithsslpolicyclientexample.md
+                - name: Httpcalculatorwithsslpolicyserviceexample
+                  href: httpcalculatorwithsslpolicyserviceexample.md
+                - name: Httpcalculatorwithusernameoversslcliumtexample
+                  href: httpcalculatorwithusernameoversslclientexample.md
+                - name: Httpcalculatorwithusernameoversslserviceexample
+                  href: httpcalculatorwithusernameoversslserviceexample.md
+                - name: Beispiel für httpcalculatorwithusernamexmltekenoversslclient
+                  href: httpcalculatorwithusernamexmltokenoversslclientexample.md
+                - name: Httppurchaseorderclieintexample
+                  href: httppurchaseorderclientexample.md
+                - name: Httppurchaseorderserviceexample
+                  href: httppurchaseorderserviceexample.md
+                - name: Httppurchaseorderwithkerberosoversslclieintexample
+                  href: httppurchaseorderwithkerberosoversslclientexample.md
+                - name: Httppurchaseorderwithkerberosoversslserviceexample
+                  href: httppurchaseorderwithkerberosoversslserviceexample.md
+                - name: Httppurchaseorderwithsslcliumtexample
+                  href: httppurchaseorderwithsslclientexample.md
+                - name: Httppurchaseorderwithsslserviceexample
+                  href: httppurchaseorderwithsslserviceexample.md
+                - name: Httppurchaseorderwithusernameoversslcliumtexample
+                  href: httppurchaseorderwithusernameoversslclientexample.md
+                - name: Httppurchaseorderwithusernameoversslserviceexample
+                  href: httppurchaseorderwithusernameoversslserviceexample.md
+                - name: Httpcustomheaderpurchaseordercliumtexample
+                  href: httpcustomheaderpurchaseorderclientexample.md
+                - name: Httpcustomheaderpurchaseorderserviceexample
+                  href: httpcustomheaderpurchaseorderserviceexample.md
+                - name: Httpgetsample
+                  href: httpgetsample.md
+                - name: Servicecancellationexample
+                  href: servicecancellationexample.md
+                - name: Sessionfullcalculatorclieintexample
+                  href: sessionfullcalculatorclientexample.md
+                - name: Sessionfullcalculatorserviceexample
+                  href: sessionfullcalculatorserviceexample.md
+                - name: Httprawcliumtexample
+                  href: httprawclientexample.md
+                - name: Httprawserviceexample
+                  href: httprawserviceexample.md
+                - name: Untypedcliumtexample
+                  href: untypedclientexample.md
+                - name: Untypedserviceexample
+                  href: untypedserviceexample.md
+                - name: Blockingserviceexample
+                  href: blockingserviceexample.md
+                - name: Callabandon-Beispiel
+                  href: callabandonexample.md
+                - name: Asmxterraservicesamplewithcustomproxy
+                  href: asmxterraservicesamplewithcustomproxy.md
+                - name: Policytemplateexample
+                  href: policytemplateexample.md
+                - name: Wcfpublicservicesample
+                  href: wcfpublicservicesample.md
+            - name: Beispiele für die TCP-Kanal Schicht
+              href: tcp-channel-layer-examples.md
+              items:
+                - name: Asyncstreamingtcpcliumtexample
+                  href: asyncstreamingtcpclientexample.md
+                - name: Asyncstreamingtcpserverexample
+                  href: asyncstreamingtcpserverexample.md
+                - name: MetadataExchangeSample
+                  href: metadataexchangesample.md
+                - name: Onewaytcpcliumtexample
+                  href: onewaytcpclientexample.md
+                - name: Onewaytcpserverexample
+                  href: onewaytcpserverexample.md
+                - name: Requestreplytcpcliumtexample
+                  href: requestreplytcpclientexample.md
+                - name: Requestreplytcpserverexample
+                  href: requestreplytcpserverexample.md
+                - name: Servicemonikersample
+                  href: servicemonikersample.md
+                - name: Streamingtcpcliumtexample
+                  href: streamingtcpclientexample.md
+                - name: Streamingtcpserverexample
+                  href: streamingtcpserverexample.md
+            - name: Beispiele für HTTP-Kanal Ebenen
+              href: http-channel-layer-examples.md
+              items:
+                - name: Httpclieintexample
+                  href: httpclientexample.md
+                - name: Httpserverexample
+                  href: httpserverexample.md
+                - name: Streaminghttpcliumtexample
+                  href: streaminghttpclientexample.md
+                - name: Streaminghttpserverexample
+                  href: streaminghttpserverexample.md
+            - name: Beispiele für UDP-Kanal Ebenen
+              href: udp-channel-layer-examples.md
+              items:
+                - name: Multicastudpcliumtexample
+                  href: multicastudpclientexample.md
+                - name: MulticastUdpClientExample6
+                  href: multicastudpclientexample6.md
+                - name: Multicastudpserverexample
+                  href: multicastudpserverexample.md
+                - name: MulticastUdpServerExample6
+                  href: multicastudpserverexample6.md
+                - name: Onewayudpcliumtexample
+                  href: onewayudpclientexample.md
+                - name: Onewayudpserverexample
+                  href: onewayudpserverexample.md
+            - name: Kanalebenenbeispiele für benannte Pipes
+              href: named-pipes-channel-layer-examples.md
+              items:
+                - name: Requestreplynamedpipesclieintexample
+                  href: requestreplynamedpipesclientexample.md
+                - name: Requestreplynamedpipesserverexample
+                  href: requestreplynamedpipesserverexample.md
+                - name: Streamingnamedpipesclieintexample
+                  href: streamingnamedpipesclientexample.md
+                - name: Streamingnamedpipesserverexample
+                  href: streamingnamedpipesserverexample.md
+            - name: Nachrichtenbeispiele
+              href: message-examples.md
+              items:
+                - name: Customheaderexample
+                  href: customheaderexample.md
+                - name: Forwardmessageexample
+                  href: forwardmessageexample.md
+                - name: MessageEncodingExample
+                  href: messageencodingexample.md
+            - name: XML-Beispiele
+              href: xml-examples.md
+              items:
+                - name: Derivedtypeexample
+                  href: derivedtypeexample.md
+                - name: Insertelementexample
+                  href: insertelementexample.md
+                - name: Navigatexmlexample
+                  href: navigatexmlexample.md
+                - name: '"Read attributeexample"'
+                  href: readattributeexample.md
+                - name: '"Read Beschreib tearrayexample"'
+                  href: readwritearrayexample.md
+                - name: '"Read Write Items bytesxmlexample"'
+                  href: readwritebytesxmlexample.md
+                - name: '"Read Write texmlexample"'
+                  href: readwritexmlexample.md
+                - name: '"Read-terawxmlexample"'
+                  href: readwriterawxmlexample.md
+                - name: Read xmlexample
+                  href: readxmlexample.md
+                - name: '"Read xmlsimpleexample"'
+                  href: readxmlsimpleexample.md
+                - name: '"Write texmlsimpleexample"'
+                  href: writexmlsimpleexample.md
+                - name: Xmlbufferexample
+                  href: xmlbufferexample.md
+                - name: Xmlditionaryexample
+                  href: xmldictionaryexample.md
+            - name: Beispiele für asynchrone Modelle
+              href: async-model-examples.md
+              items:
+                - name: Beispiel für eine asynchrone Funktion
+                  href: asyncmodelexample.md
+                - name: AsyncAdd3ExplicitExample
+                  href: asyncadd3explicitexample.md
+                - name: AsyncAdd3ImplicitExample
+                  href: asyncadd3implicitexample.md
+            - name: Beispiele für Sicherheits Kanal Ebenen
+              href: security-channel-layer-examples.md
+              items:
+                - name: Httpclientwithkerberosoversslexample
+                  href: httpclientwithkerberosoversslexample.md
+                - name: Httpclientwithsslexample
+                  href: httpclientwithsslexample.md
+                - name: Httpclientwithusernameoversslexample
+                  href: httpclientwithusernameoversslexample.md
+                - name: Httpserverwithkerberosoversslexample
+                  href: httpserverwithkerberosoversslexample.md
+                - name: Httpserverwithsslexample
+                  href: httpserverwithsslexample.md
+                - name: Httpserverwithusernameoversslexample
+                  href: httpserverwithusernameoversslexample.md
+                - name: MetadataImportWithIssuedTokenOverSslExample
+                  href: metadataimportwithissuedtokenoversslexample.md
+                - name: MetadataImportWithUsernameOverSslExample
+                  href: metadataimportwithusernameoversslexample.md
+                - name: MetadataImportWithX509OverSslExample
+                  href: metadataimportwithx509oversslexample.md
+                - name: Requestreplynamedpipesclientwithwindowstransportsecurityexample
+                  href: requestreplynamedpipesclientwithwindowstransportsecurityexample.md
+                - name: Requestreplynamedpipesserverwithwindowstransportsecurityexample
+                  href: requestreplynamedpipesserverwithwindowstransportsecurityexample.md
+                - name: Requestreplytcpclientwithwindowstransportsecurityexample
+                  href: requestreplytcpclientwithwindowstransportsecurityexample.md
+                - name: Requestreplytcpserverwithwindowstransportsecurity-Beispiel
+                  href: requestreplytcpserverwithwindowstransportsecurityexample.md
+            - name: Datei Replikations Beispiele
+              href: file-replication-examples.md
+              items:
+                - name: Filereptoolexample
+                  href: filereptoolexample.md
+                - name: Filerepserviceexample
+                  href: filerepserviceexample.md
+    - name: Referenz zu Windows-Webdiensten
+      href: windows-web-services-reference.md
+      items:
+        - name: Rückruf Funktionen für Windows-Webdienste
+          href: web-services-for-windows-callback-functions.md
+          items:
+            - name: WS_ABANDON_MESSAGE_CALLBACK
+              href: /windows/desktop/api/WebServices/nc-webservices-ws_abandon_message_callback
+            - name: WS_ABORT_CHANNEL_CALLBACK
+              href: /windows/desktop/api/WebServices/nc-webservices-ws_abort_channel_callback
+            - name: WS_ABORT_LISTENER_CALLBACK
+              href: /windows/desktop/api/WebServices/nc-webservices-ws_abort_listener_callback
+            - name: WS_ACCEPT_CHANNEL_CALLBACK
+              href: /windows/desktop/api/WebServices/nc-webservices-ws_accept_channel_callback
+            - name: WS_ASYNC_CALLBACK
+              href: /windows/desktop/api/WebServices/nc-webservices-ws_async_callback
+            - name: WS_ASYNC_FUNCTION
+              href: /windows/desktop/api/WebServices/nc-webservices-ws_async_function
+            - name: WS_CERT_ISSUER_LIST_NOTIFICATION_CALLBACK
+              href: /windows/desktop/api/WebServices/nc-webservices-ws_cert_issuer_list_notification_callback
+            - name: WS_CLOSE_CHANNEL_CALLBACK
+              href: /windows/desktop/api/WebServices/nc-webservices-ws_close_channel_callback
+            - name: WS_CLOSE_LISTENER_CALLBACK
+              href: /windows/desktop/api/WebServices/nc-webservices-ws_close_listener_callback
+            - name: WS_CREATE_CHANNEL_CALLBACK
+              href: /windows/desktop/api/WebServices/nc-webservices-ws_create_channel_callback
+            - name: WS_CERTIFICATE_VALIDATION_CALLBACK
+              href: /windows/desktop/api/WebServices/nc-webservices-ws_certificate_validation_callback
+            - name: WS_CREATE_CHANNEL_FOR_LISTENER_CALLBACK
+              href: /windows/desktop/api/WebServices/nc-webservices-ws_create_channel_for_listener_callback
+            - name: WS_CREATE_DECODER_CALLBACK
+              href: /windows/desktop/api/WebServices/nc-webservices-ws_create_decoder_callback
+            - name: WS_CREATE_ENCODER_CALLBACK
+              href: /windows/desktop/api/WebServices/nc-webservices-ws_create_encoder_callback
+            - name: WS_CREATE_LISTENER_CALLBACK
+              href: /windows/desktop/api/WebServices/nc-webservices-ws_create_listener_callback
+            - name: WS_DECODER_DECODE_CALLBACK
+              href: /windows/desktop/api/WebServices/nc-webservices-ws_decoder_decode_callback
+            - name: WS_DECODER_END_CALLBACK
+              href: /windows/desktop/api/WebServices/nc-webservices-ws_decoder_end_callback
+            - name: WS_DECODER_GET_CONTENT_TYPE_CALLBACK
+              href: /windows/desktop/api/WebServices/nc-webservices-ws_decoder_get_content_type_callback
+            - name: WS_DECODER_START_CALLBACK
+              href: /windows/desktop/api/WebServices/nc-webservices-ws_decoder_start_callback
+            - name: WS_DURATION_COMPARISON_CALLBACK
+              href: /windows/desktop/api/WebServices/nc-webservices-ws_duration_comparison_callback
+            - name: WS_DYNAMIC_STRING_CALLBACK
+              href: /windows/desktop/api/WebServices/nc-webservices-ws_dynamic_string_callback
+            - name: WS_ENCODER_ENCODE_CALLBACK
+              href: /windows/desktop/api/WebServices/nc-webservices-ws_encoder_encode_callback
+            - name: WS_ENCODER_END_CALLBACK
+              href: /windows/desktop/api/WebServices/nc-webservices-ws_encoder_end_callback
+            - name: WS_ENCODER_GET_CONTENT_TYPE_CALLBACK
+              href: /windows/desktop/api/WebServices/nc-webservices-ws_encoder_get_content_type_callback
+            - name: WS_ENCODER_START_CALLBACK
+              href: /windows/desktop/api/WebServices/nc-webservices-ws_encoder_start_callback
+            - name: WS_FREE_CHANNEL_CALLBACK
+              href: /windows/desktop/api/WebServices/nc-webservices-ws_free_channel_callback
+            - name: WS_FREE_DECODER_CALLBACK
+              href: /windows/desktop/api/WebServices/nc-webservices-ws_free_decoder_callback
+            - name: WS_FREE_ENCODER_CALLBACK
+              href: /windows/desktop/api/WebServices/nc-webservices-ws_free_encoder_callback
+            - name: WS_FREE_LISTENER_CALLBACK
+              href: /windows/desktop/api/WebServices/nc-webservices-ws_free_listener_callback
+            - name: WS_GET_CERT_CALLBACK
+              href: /windows/desktop/api/WebServices/nc-webservices-ws_get_cert_callback
+            - name: WS_GET_CHANNEL_PROPERTY_CALLBACK
+              href: /windows/desktop/api/WebServices/nc-webservices-ws_get_channel_property_callback
+            - name: WS_GET_LISTENER_PROPERTY_CALLBACK
+              href: /windows/desktop/api/WebServices/nc-webservices-ws_get_listener_property_callback
+            - name: WS_HTTP_REDIRECT_CALLBACK
+              href: /windows/desktop/api/WebServices/nc-webservices-ws_http_redirect_callback
+            - name: WS_IS_DEFAULT_VALUE_CALLBACK
+              href: /windows/desktop/api/WebServices/nc-webservices-ws_is_default_value_callback
+            - name: WS_MESSAGE_DONE_CALLBACK
+              href: /windows/desktop/api/WebServices/nc-webservices-ws_message_done_callback
+            - name: WS_OPEN_CHANNEL_CALLBACK
+              href: /windows/desktop/api/WebServices/nc-webservices-ws_open_channel_callback
+            - name: WS_OPEN_LISTENER_CALLBACK
+              href: /windows/desktop/api/WebServices/nc-webservices-ws_open_listener_callback
+            - name: WS_OPERATION_CANCEL_CALLBACK
+              href: /windows/desktop/api/WebServices/nc-webservices-ws_operation_cancel_callback
+            - name: WS_OPERATION_FREE_STATE_CALLBACK
+              href: /windows/desktop/api/WebServices/nc-webservices-ws_operation_free_state_callback
+            - name: WS_PROXY_MESSAGE_CALLBACK
+              href: /windows/desktop/api/WebServices/nc-webservices-ws_proxy_message_callback
+            - name: WS_PULL_BYTES_CALLBACK
+              href: /windows/desktop/api/WebServices/nc-webservices-ws_pull_bytes_callback
+            - name: WS_PUSH_BYTES_CALLBACK
+              href: /windows/desktop/api/WebServices/nc-webservices-ws_push_bytes_callback
+            - name: WS_READ_CALLBACK
+              href: /windows/desktop/api/WebServices/nc-webservices-ws_read_callback
+            - name: WS_READ_MESSAGE_END_CALLBACK
+              href: /windows/desktop/api/WebServices/nc-webservices-ws_read_message_end_callback
+            - name: WS_READ_MESSAGE_START_CALLBACK
+              href: /windows/desktop/api/WebServices/nc-webservices-ws_read_message_start_callback
+            - name: WS_READ_TYPE_CALLBACK
+              href: /windows/desktop/api/WebServices/nc-webservices-ws_read_type_callback
+            - name: WS_RESET_CHANNEL_CALLBACK
+              href: /windows/desktop/api/WebServices/nc-webservices-ws_reset_channel_callback
+            - name: WS_RESET_LISTENER_CALLBACK
+              href: /windows/desktop/api/WebServices/nc-webservices-ws_reset_listener_callback
+            - name: WS_SERVICE_ACCEPT_CHANNEL_CALLBACK
+              href: /windows/desktop/api/WebServices/nc-webservices-ws_service_accept_channel_callback
+            - name: WS_SERVICE_CLOSE_CHANNEL_CALLBACK
+              href: /windows/desktop/api/WebServices/nc-webservices-ws_service_close_channel_callback
+            - name: WS_SERVICE_MESSAGE_RECEIVE_CALLBACK
+              href: /windows/desktop/api/WebServices/nc-webservices-ws_service_message_receive_callback
+            - name: WS_SERVICE_SECURITY_CALLBACK
+              href: /windows/desktop/api/WebServices/nc-webservices-ws_service_security_callback
+            - name: WS_SERVICE_STUB_CALLBACK
+              href: /windows/desktop/api/WebServices/nc-webservices-ws_service_stub_callback
+            - name: WS_SET_CHANNEL_PROPERTY_CALLBACK
+              href: /windows/desktop/api/WebServices/nc-webservices-ws_set_channel_property_callback
+            - name: WS_SET_LISTENER_PROPERTY_CALLBACK
+              href: /windows/desktop/api/WebServices/nc-webservices-ws_set_listener_property_callback
+            - name: WS_SHUTDOWN_SESSION_CHANNEL_CALLBACK
+              href: /windows/desktop/api/WebServices/nc-webservices-ws_shutdown_session_channel_callback
+            - name: WS_VALIDATE_PASSWORD_CALLBACK
+              href: /windows/desktop/api/WebServices/nc-webservices-ws_validate_password_callback
+            - name: WS_VALIDATE_SAML_CALLBACK
+              href: /windows/desktop/api/WebServices/nc-webservices-ws_validate_saml_callback
+            - name: WS_WRITE_CALLBACK
+              href: /windows/desktop/api/WebServices/nc-webservices-ws_write_callback
+            - name: WS_WRITE_MESSAGE_END_CALLBACK
+              href: /windows/desktop/api/WebServices/nc-webservices-ws_write_message_end_callback
+            - name: WS_WRITE_MESSAGE_START_CALLBACK
+              href: /windows/desktop/api/WebServices/nc-webservices-ws_write_message_start_callback
+            - name: WS_WRITE_TYPE_CALLBACK
+              href: /windows/desktop/api/WebServices/nc-webservices-ws_write_type_callback
+        - name: Windows-Webdienste-Enumerationen
+          href: web-services-for-windows-enumerations.md
+          items:
+            - name: WS_ADDRESSING_VERSION
+              href: /windows/desktop/api/WebServices/ne-webservices-ws_addressing_version
+            - name: WS_BINDING_TEMPLATE_TYPE
+              href: /windows/desktop/api/WebServices/ne-webservices-ws_binding_template_type
+            - name: WS_CALL_PROPERTY_ID
+              href: /windows/desktop/api/WebServices/ne-webservices-ws_call_property_id
+            - name: WS_CALLBACK_MODEL
+              href: /windows/desktop/api/WebServices/ne-webservices-ws_callback_model
+            - name: WS_CERT_CREDENTIAL_TYPE
+              href: /windows/desktop/api/WebServices/ne-webservices-ws_cert_credential_type
+            - name: WS_CERT_FAILURE
+              href: /windows/desktop/api/webservices/ne-webservices-__unnamed_enum_8
+            - name: WS_CHANNEL_BINDING
+              href: /windows/desktop/api/WebServices/ne-webservices-ws_channel_binding
+            - name: WS_CHANNEL_PROPERTY_ID
+              href: /windows/desktop/api/WebServices/ne-webservices-ws_channel_property_id
+            - name: WS_CHANNEL_STATE
+              href: /windows/desktop/api/WebServices/ne-webservices-ws_channel_state
+            - name: WS_CHANNEL_TYPE
+              href: /windows/desktop/api/WebServices/ne-webservices-ws_channel_type
+            - name: WS_CHARSET
+              href: /windows/desktop/api/WebServices/ne-webservices-ws_charset
+            - name: WS_COOKIE_MODE
+              href: /windows/desktop/api/WebServices/ne-webservices-ws_cookie_mode
+            - name: WS_DATETIME_FORMAT
+              href: /windows/desktop/api/WebServices/ne-webservices-ws_datetime_format
+            - name: WS_ENCODING
+              href: /windows/desktop/api/WebServices/ne-webservices-ws_encoding
+            - name: WS_ENDPOINT_ADDRESS_EXTENSION_TYPE
+              href: /windows/desktop/api/WebServices/ne-webservices-ws_endpoint_address_extension_type
+            - name: WS_ENDPOINT_IDENTITY_TYPE
+              href: /windows/desktop/api/WebServices/ne-webservices-ws_endpoint_identity_type
+            - name: WS_ENVELOPE_VERSION
+              href: /windows/desktop/api/WebServices/ne-webservices-ws_envelope_version
+            - name: WS_ERROR_PROPERTY_ID
+              href: /windows/desktop/api/WebServices/ne-webservices-ws_error_property_id
+            - name: WS_EXCEPTION_CODE
+              href: /windows/desktop/api/WebServices/ne-webservices-ws_exception_code
+            - name: WS_EXTENDED_PROTECTION_POLICY
+              href: /windows/desktop/api/WebServices/ne-webservices-ws_extended_protection_policy
+            - name: WS_EXTENDED_PROTECTION_SCENARIO
+              href: /windows/desktop/api/WebServices/ne-webservices-ws_extended_protection_scenario
+            - name: WS_FAULT_DISCLOSURE
+              href: /windows/desktop/api/WebServices/ne-webservices-ws_fault_disclosure
+            - name: WS_FAULT_ERROR_PROPERTY_ID
+              href: /windows/desktop/api/WebServices/ne-webservices-ws_fault_error_property_id
+            - name: WS_FIELD_MAPPING
+              href: /windows/desktop/api/WebServices/ne-webservices-ws_field_mapping
+            - name: WS_FIELD_OPTIONS
+              href: /windows/desktop/api/webservices/ne-webservices-__unnamed_enum_10
+            - name: WS_HEADER_ATTRIBUTES
+              href: /windows/desktop/api/webservices/ne-webservices-__unnamed_enum_5
+            - name: WS_HEADER_TYPE
+              href: /windows/desktop/api/WebServices/ne-webservices-ws_header_type
+            - name: WS_HEAP_PROPERTY_ID
+              href: /windows/desktop/api/WebServices/ne-webservices-ws_heap_property_id
+            - name: WS_HTTP_HEADER_AUTH_SCHEME
+              href: /windows/desktop/api/webservices/ne-webservices-__unnamed_enum_6
+            - name: WS_HTTP_HEADER_AUTH_TARGET
+              href: /windows/desktop/api/WebServices/ne-webservices-ws_http_header_auth_target
+            - name: WS_HTTP_HEADER_MAPPING_OPTIONS
+              href: /windows/win32/api/webservices/ne-webservices-ws_xml_canonicalization_algorithm
+            - name: WS_HTTP_PROXY_SETTING_MODE
+              href: /windows/desktop/api/WebServices/ne-webservices-ws_http_proxy_setting_mode
+            - name: WS_HTTP_REQUEST_MAPPING_OPTIONS
+              href: /windows/desktop/api/webservices/ne-webservices-__unnamed_enum_3
+            - name: WS_HTTP_RESPONSE_MAPPING_OPTIONS
+              href: /windows/desktop/api/webservices/ne-webservices-__unnamed_enum_2
+            - name: WS_IP_VERSION
+              href: /windows/desktop/api/WebServices/ne-webservices-ws_ip_version
+            - name: WS_LISTENER_PROPERTY_ID
+              href: /windows/desktop/api/WebServices/ne-webservices-ws_listener_property_id
+            - name: WS_LISTENER_STATE
+              href: /windows/desktop/api/WebServices/ne-webservices-ws_listener_state
+            - name: WS_MESSAGE_INITIALIZATION
+              href: /windows/desktop/api/WebServices/ne-webservices-ws_message_initialization
+            - name: WS_MESSAGE_PROPERTY_ID
+              href: /windows/desktop/api/WebServices/ne-webservices-ws_message_property_id
+            - name: WS_MESSAGE_SECURITY_USAGE
+              href: /windows/desktop/api/WebServices/ne-webservices-ws_message_security_usage
+            - name: WS_MESSAGE_STATE
+              href: /windows/desktop/api/WebServices/ne-webservices-ws_message_state
+            - name: WS_METADATA_EXCHANGE_TYPE
+              href: /windows/desktop/api/WebServices/ne-webservices-ws_metadata_exchange_type
+            - name: WS_METADATA_PROPERTY_ID
+              href: /windows/desktop/api/WebServices/ne-webservices-ws_metadata_property_id
+            - name: WS_METADATA_STATE
+              href: /windows/desktop/api/WebServices/ne-webservices-ws_metadata_state
+            - name: WS_MOVE_TO
+              href: /windows/desktop/api/WebServices/ne-webservices-ws_move_to
+            - name: WS_OPERATION_CONTEXT_PROPERTY_ID
+              href: /windows/desktop/api/WebServices/ne-webservices-ws_operation_context_property_id
+            - name: WS_OPERATION_STYLE
+              href: /windows/desktop/api/WebServices/ne-webservices-ws_operation_style
+            - name: WS_PARAMETER_TYPE
+              href: /windows/desktop/api/WebServices/ne-webservices-ws_parameter_type
+            - name: WS_POLICY_EXTENSION_TYPE
+              href: /windows/desktop/api/WebServices/ne-webservices-ws_policy_extension_type
+            - name: WS_POLICY_PROPERTY_ID
+              href: /windows/desktop/api/WebServices/ne-webservices-ws_policy_property_id
+            - name: WS_POLICY_STATE
+              href: /windows/desktop/api/WebServices/ne-webservices-ws_policy_state
+            - name: WS_PROTECTION_LEVEL
+              href: /windows/desktop/api/WebServices/ne-webservices-ws_protection_level
+            - name: WS_PROXY_PROPERTY_ID
+              href: /windows/desktop/api/WebServices/ne-webservices-ws_proxy_property_id
+            - name: WS_READ_OPTION
+              href: /windows/desktop/api/WebServices/ne-webservices-ws_read_option
+            - name: WS_RECEIVE_OPTION
+              href: /windows/desktop/api/WebServices/ne-webservices-ws_receive_option
+            - name: WS_REPEATING_HEADER_OPTION
+              href: /windows/desktop/api/WebServices/ne-webservices-ws_repeating_header_option
+            - name: WS_REQUEST_SECURITY_TOKEN_ACTION
+              href: /windows/desktop/api/WebServices/ne-webservices-ws_request_security_token_action
+            - name: WS_REQUEST_SECURITY_TOKEN_PROPERTY_ID
+              href: /windows/desktop/api/WebServices/ne-webservices-ws_request_security_token_property_id
+            - name: WS_SAML_AUTHENTICATOR_TYPE
+              href: /windows/desktop/api/WebServices/ne-webservices-ws_saml_authenticator_type
+            - name: WS_SECURE_CONVERSATION_VERSION
+              href: /windows/desktop/api/WebServices/ne-webservices-ws_secure_conversation_version
+            - name: WS_SECURITY_ALGORITHM_ID
+              href: /windows/desktop/api/WebServices/ne-webservices-ws_security_algorithm_id
+            - name: WS_SECURITY_ALGORITHM_PROPERTY_ID
+              href: /windows/win32/api/webservices/ne-webservices-ws_security_algorithm_property_id
+            - name: WS_SECURITY_ALGORITHM_SUITE_NAME
+              href: /windows/desktop/api/WebServices/ne-webservices-ws_security_algorithm_suite_name
+            - name: WS_SECURITY_BINDING_CONSTRAINT_TYPE
+              href: /windows/desktop/api/WebServices/ne-webservices-ws_security_binding_constraint_type
+            - name: WS_SECURITY_BINDING_PROPERTY_ID
+              href: /windows/desktop/api/WebServices/ne-webservices-ws_security_binding_property_id
+            - name: WS_SECURITY_BINDING_TYPE
+              href: /windows/desktop/api/WebServices/ne-webservices-ws_security_binding_type
+            - name: WS_SECURITY_CONTEXT_PROPERTY_ID
+              href: /windows/desktop/api/WebServices/ne-webservices-ws_security_context_property_id
+            - name: WS_SECURITY_HEADER_LAYOUT
+              href: /windows/desktop/api/WebServices/ne-webservices-ws_security_header_layout
+            - name: WS_SECURITY_HEADER_VERSION
+              href: /windows/desktop/api/WebServices/ne-webservices-ws_security_header_version
+            - name: WS_SECURITY_KEY_ENTROPY_MODE
+              href: /windows/desktop/api/WebServices/ne-webservices-ws_security_key_entropy_mode
+            - name: WS_SECURITY_KEY_HANDLE_TYPE
+              href: /windows/desktop/api/WebServices/ne-webservices-ws_security_key_handle_type
+            - name: WS_SECURITY_KEY_TYPE
+              href: /windows/desktop/api/WebServices/ne-webservices-ws_security_key_type
+            - name: WS_SECURITY_PROPERTY_ID
+              href: /windows/desktop/api/WebServices/ne-webservices-ws_security_property_id
+            - name: WS_SECURITY_TIMESTAMP_USAGE
+              href: /windows/desktop/api/WebServices/ne-webservices-ws_security_timestamp_usage
+            - name: WS_SECURITY_TOKEN_PROPERTY_ID
+              href: /windows/desktop/api/WebServices/ne-webservices-ws_security_token_property_id
+            - name: WS_SECURITY_TOKEN_REFERENCE_MODE
+              href: /windows/desktop/api/WebServices/ne-webservices-ws_security_token_reference_mode
+            - name: WS_SERVICE_CANCEL_REASON
+              href: /windows/desktop/api/WebServices/ne-webservices-ws_service_cancel_reason
+            - name: WS_SERVICE_ENDPOINT_PROPERTY_ID
+              href: /windows/desktop/api/WebServices/ne-webservices-ws_service_endpoint_property_id
+            - name: WS_SERVICE_HOST_STATE
+              href: /windows/desktop/api/WebServices/ne-webservices-ws_service_host_state
+            - name: WS_SERVICE_OPERATION_MESSAGE_OPTION
+              href: /windows/desktop/api/webservices/ne-webservices-__unnamed_enum_11
+            - name: WS_SERVICE_PROPERTY_ID
+              href: /windows/desktop/api/WebServices/ne-webservices-ws_service_property_id
+            - name: WS_SERVICE_PROXY_STATE
+              href: /windows/desktop/api/WebServices/ne-webservices-ws_service_proxy_state
+            - name: WS_STRUCT_OPTIONS
+              href: /windows/desktop/api/webservices/ne-webservices-__unnamed_enum_9
+            - name: WS_TRACE_API
+              href: /windows/desktop/api/WebServices/ne-webservices-ws_trace_api
+            - name: WS_TRANSFER_MODE
+              href: /windows/desktop/api/WebServices/ne-webservices-ws_transfer_mode
+            - name: WS_TRUST_VERSION
+              href: /windows/desktop/api/WebServices/ne-webservices-ws_trust_version
+            - name: WS_TYPE
+              href: /windows/desktop/api/WebServices/ne-webservices-ws_type
+            - name: WS_TYPE_MAPPING
+              href: /windows/desktop/api/WebServices/ne-webservices-ws_type_mapping
+            - name: WS_URL_FLAGS
+              href: /windows/desktop/api/webservices/ne-webservices-__unnamed_enum_12
+            - name: WS_URL_MATCHING_OPTIONS
+              href: /windows/desktop/api/webservices/ne-webservices-__unnamed_enum_4
+            - name: WS_URL_SCHEME_TYPE
+              href: /windows/desktop/api/WebServices/ne-webservices-ws_url_scheme_type
+            - name: WS_USERNAME_CREDENTIAL_TYPE
+              href: /windows/desktop/api/WebServices/ne-webservices-ws_username_credential_type
+            - name: WS_VALUE_TYPE
+              href: /windows/desktop/api/WebServices/ne-webservices-ws_value_type
+            - name: WS_WINDOWS_INTEGRATED_AUTH_CREDENTIAL_TYPE
+              href: /windows/desktop/api/WebServices/ne-webservices-ws_windows_integrated_auth_credential_type
+            - name: WS_WINDOWS_INTEGRATED_AUTH_PACKAGE
+              href: /windows/desktop/api/WebServices/ne-webservices-ws_windows_integrated_auth_package
+            - name: WS_WRITE_OPTION
+              href: /windows/desktop/api/WebServices/ne-webservices-ws_write_option
+            - name: WS_XML_BUFFER_PROPERTY_ID
+              href: /windows/win32/api/webservices/ne-webservices-ws_xml_buffer_property_id
+            - name: WS_XML_CANONICALIZATION_ALGORITHM
+              href: /windows/desktop/api/WebServices/ne-webservices-ws_xml_canonicalization_algorithm
+            - name: WS_XML_CANONICALIZATION_PROPERTY_ID
+              href: /windows/desktop/api/WebServices/ne-webservices-ws_xml_canonicalization_property_id
+            - name: WS_XML_NODE_TYPE
+              href: /windows/desktop/api/WebServices/ne-webservices-ws_xml_node_type
+            - name: WS_XML_READER_ENCODING_TYPE
+              href: /windows/desktop/api/WebServices/ne-webservices-ws_xml_reader_encoding_type
+            - name: WS_XML_READER_INPUT_TYPE
+              href: /windows/desktop/api/WebServices/ne-webservices-ws_xml_reader_input_type
+            - name: WS_XML_READER_PROPERTY_ID
+              href: /windows/desktop/api/WebServices/ne-webservices-ws_xml_reader_property_id
+            - name: WS_XML_SECURITY_TOKEN_PROPERTY_ID
+              href: /windows/desktop/api/WebServices/ne-webservices-ws_xml_security_token_property_id
+            - name: WS_XML_TEXT_TYPE
+              href: /windows/desktop/api/WebServices/ne-webservices-ws_xml_text_type
+            - name: WS_XML_WRITER_ENCODING_TYPE
+              href: /windows/desktop/api/WebServices/ne-webservices-ws_xml_writer_encoding_type
+            - name: WS_XML_WRITER_OUTPUT_TYPE
+              href: /windows/desktop/api/WebServices/ne-webservices-ws_xml_writer_output_type
+            - name: WS_XML_WRITER_PROPERTY_ID
+              href: /windows/desktop/api/WebServices/ne-webservices-ws_xml_writer_property_id
+        - name: Windows-Webdienst Funktionen
+          href: web-services-for-windows-functions.md
+          items:
+            - name: Wsabandoncall
+              href: /windows/desktop/api/WebServices/nf-webservices-wsabandoncall
+            - name: Wsabandonmessage
+              href: /windows/desktop/api/WebServices/nf-webservices-wsabandonmessage
+            - name: Wsabortchannel
+              href: /windows/desktop/api/WebServices/nf-webservices-wsabortchannel
+            - name: Wsabortlistener
+              href: /windows/desktop/api/WebServices/nf-webservices-wsabortlistener
+            - name: Wsabortservicehost
+              href: /windows/desktop/api/WebServices/nf-webservices-wsabortservicehost
+            - name: Wsabortserviceproxy
+              href: /windows/desktop/api/WebServices/nf-webservices-wsabortserviceproxy
+            - name: Wsakzeptchannel
+              href: /windows/desktop/api/WebServices/nf-webservices-wsacceptchannel
+            - name: Wsaddcustomheader
+              href: /windows/desktop/api/WebServices/nf-webservices-wsaddcustomheader
+            - name: Wsadderrorstring
+              href: /windows/desktop/api/WebServices/nf-webservices-wsadderrorstring
+            - name: Wsaddmappedheader
+              href: /windows/desktop/api/WebServices/nf-webservices-wsaddmappedheader
+            - name: Wsaddressmessage
+              href: /windows/desktop/api/WebServices/nf-webservices-wsaddressmessage
+            - name: Wsalloc
+              href: /windows/desktop/api/WebServices/nf-webservices-wsalloc
+            - name: Wsasyncexecute
+              href: /windows/desktop/api/WebServices/nf-webservices-wsasyncexecute
+            - name: Wscall
+              href: /windows/desktop/api/WebServices/nf-webservices-wscall
+            - name: Wscheckmustverständlicherweise-Header
+              href: /windows/desktop/api/WebServices/nf-webservices-wscheckmustunderstandheaders
+            - name: Wsclosechannel
+              href: /windows/desktop/api/WebServices/nf-webservices-wsclosechannel
+            - name: Wscloselistener
+              href: /windows/desktop/api/WebServices/nf-webservices-wscloselistener
+            - name: Wscloseservicehost
+              href: /windows/desktop/api/WebServices/nf-webservices-wscloseservicehost
+            - name: Wscloseserviceproxy
+              href: /windows/desktop/api/WebServices/nf-webservices-wscloseserviceproxy
+            - name: Wscombineurl
+              href: /windows/desktop/api/WebServices/nf-webservices-wscombineurl
+            - name: Wscopyerror
+              href: /windows/desktop/api/WebServices/nf-webservices-wscopyerror
+            - name: Wscopynode
+              href: /windows/desktop/api/WebServices/nf-webservices-wscopynode
+            - name: Wscreatechannel
+              href: /windows/desktop/api/WebServices/nf-webservices-wscreatechannel
+            - name: Wscreatechannelforlistener
+              href: /windows/desktop/api/WebServices/nf-webservices-wscreatechannelforlistener
+            - name: Wscreateerror
+              href: /windows/desktop/api/WebServices/nf-webservices-wscreateerror
+            - name: Wscreatefaultfromerror
+              href: /windows/desktop/api/WebServices/nf-webservices-wscreatefaultfromerror
+            - name: Wscreateheap
+              href: /windows/desktop/api/WebServices/nf-webservices-wscreateheap
+            - name: Wscreatelistener
+              href: /windows/desktop/api/WebServices/nf-webservices-wscreatelistener
+            - name: Wscreatemess Age
+              href: /windows/desktop/api/WebServices/nf-webservices-wscreatemessage
+            - name: Wscreatemessageforchannel
+              href: /windows/desktop/api/WebServices/nf-webservices-wscreatemessageforchannel
+            - name: Wscreatemetadata
+              href: /windows/desktop/api/WebServices/nf-webservices-wscreatemetadata
+            - name: Wscreatereader
+              href: /windows/desktop/api/WebServices/nf-webservices-wscreatereader
+            - name: Wscreateserviceendpointfromtemplate
+              href: /windows/desktop/api/WebServices/nf-webservices-wscreateserviceendpointfromtemplate
+            - name: Wscreateservicehost
+              href: /windows/desktop/api/WebServices/nf-webservices-wscreateservicehost
+            - name: Wscreateserviceproxy
+              href: /windows/desktop/api/WebServices/nf-webservices-wscreateserviceproxy
+            - name: Wscreateserviceproxyfromtemplate
+              href: /windows/desktop/api/WebServices/nf-webservices-wscreateserviceproxyfromtemplate
+            - name: Wscreatewriter
+              href: /windows/desktop/api/WebServices/nf-webservices-wscreatewriter
+            - name: Wscreatexmlbuffer
+              href: /windows/desktop/api/WebServices/nf-webservices-wscreatexmlbuffer
+            - name: Wscreatexmlsecuritytoken
+              href: /windows/desktop/api/WebServices/nf-webservices-wscreatexmlsecuritytoken
+            - name: Wsdatetimeto FILETIME
+              href: /windows/desktop/api/WebServices/nf-webservices-wsdatetimetofiletime
+            - name: Wsdecodeurl
+              href: /windows/desktop/api/WebServices/nf-webservices-wsdecodeurl
+            - name: Wsdumpmemory
+              href: wsdumpmemory.md
+            - name: Wsencodeurl
+              href: /windows/desktop/api/WebServices/nf-webservices-wsencodeurl
+            - name: Wsendreadercanonicalization
+              href: /windows/desktop/api/WebServices/nf-webservices-wsendreadercanonicalization
+            - name: Wsendschreiterkanonisierung
+              href: /windows/desktop/api/WebServices/nf-webservices-wsendwritercanonicalization
+            - name: Wsfiletimeto DateTime
+              href: /windows/desktop/api/WebServices/nf-webservices-wsfiletimetodatetime
+            - name: Wsfillbody
+              href: /windows/desktop/api/WebServices/nf-webservices-wsfillbody
+            - name: Wsfillreader
+              href: /windows/desktop/api/WebServices/nf-webservices-wsfillreader
+            - name: Wsfindattribute
+              href: /windows/desktop/api/WebServices/nf-webservices-wsfindattribute
+            - name: Wsflushbody
+              href: /windows/desktop/api/WebServices/nf-webservices-wsflushbody
+            - name: Wsflushwriter
+              href: /windows/desktop/api/WebServices/nf-webservices-wsflushwriter
+            - name: Wsfrechannel
+              href: /windows/desktop/api/WebServices/nf-webservices-wsfreechannel
+            - name: Wsfreerror
+              href: /windows/desktop/api/WebServices/nf-webservices-wsfreeerror
+            - name: Wsfreeheap
+              href: /windows/desktop/api/WebServices/nf-webservices-wsfreeheap
+            - name: Wsfreelistener
+              href: /windows/desktop/api/WebServices/nf-webservices-wsfreelistener
+            - name: Wsfreemess Age
+              href: /windows/desktop/api/WebServices/nf-webservices-wsfreemessage
+            - name: Wsfremetadata
+              href: /windows/desktop/api/WebServices/nf-webservices-wsfreemetadata
+            - name: Wsfreereader
+              href: /windows/desktop/api/WebServices/nf-webservices-wsfreereader
+            - name: Wsfreesecuritytoken
+              href: /windows/desktop/api/WebServices/nf-webservices-wsfreesecuritytoken
+            - name: Wsfreeservicehost
+              href: /windows/desktop/api/WebServices/nf-webservices-wsfreeservicehost
+            - name: Wsfreeserviceproxy
+              href: /windows/desktop/api/WebServices/nf-webservices-wsfreeserviceproxy
+            - name: Wsfrewriter
+              href: /windows/desktop/api/WebServices/nf-webservices-wsfreewriter
+            - name: Wsgetchannelproperty
+              href: /windows/desktop/api/WebServices/nf-webservices-wsgetchannelproperty
+            - name: Wsgetcustomheader
+              href: /windows/desktop/api/WebServices/nf-webservices-wsgetcustomheader
+            - name: Wsgetdictionary
+              href: /windows/desktop/api/WebServices/nf-webservices-wsgetdictionary
+            - name: Wsgeterrorproperty
+              href: /windows/desktop/api/WebServices/nf-webservices-wsgeterrorproperty
+            - name: Wsgeterrorstring
+              href: /windows/desktop/api/WebServices/nf-webservices-wsgeterrorstring
+            - name: Wsgetfaulterrordetail
+              href: /windows/desktop/api/WebServices/nf-webservices-wsgetfaulterrordetail
+            - name: Wsgetfaulterrorproperty
+              href: /windows/desktop/api/WebServices/nf-webservices-wsgetfaulterrorproperty
+            - name: Wsgederader
+              href: /windows/desktop/api/WebServices/nf-webservices-wsgetheader
+            - name: Wsgetheiaderattribute
+              href: /windows/desktop/api/WebServices/nf-webservices-wsgetheaderattributes
+            - name: Wsgeder approperty
+              href: /windows/desktop/api/WebServices/nf-webservices-wsgetheapproperty
+            - name: Wsgetlistenerproperty
+              href: /windows/desktop/api/WebServices/nf-webservices-wsgetlistenerproperty
+            - name: Wsgetmappedheader
+              href: /windows/desktop/api/WebServices/nf-webservices-wsgetmappedheader
+            - name: Wsgetmessageproperty
+              href: /windows/desktop/api/WebServices/nf-webservices-wsgetmessageproperty
+            - name: WsGetMetadataEndpoints
+              href: /windows/desktop/api/WebServices/nf-webservices-wsgetmetadataendpoints
+            - name: WsGetMetadataProperty
+              href: /windows/desktop/api/WebServices/nf-webservices-wsgetmetadataproperty
+            - name: WsGetMissingMetadataDocumentAddress
+              href: /windows/desktop/api/WebServices/nf-webservices-wsgetmissingmetadatadocumentaddress
+            - name: Wsgetnamespacefromprefix
+              href: /windows/desktop/api/WebServices/nf-webservices-wsgetnamespacefromprefix
+            - name: Wsgetoperationcontextproperty
+              href: /windows/desktop/api/WebServices/nf-webservices-wsgetoperationcontextproperty
+            - name: Wsgetpolicyalternativecount
+              href: /windows/desktop/api/WebServices/nf-webservices-wsgetpolicyalternativecount
+            - name: Wsgetpolicyproperty
+              href: /windows/desktop/api/WebServices/nf-webservices-wsgetpolicyproperty
+            - name: Wsgetprefixfromnamespace
+              href: /windows/desktop/api/WebServices/nf-webservices-wsgetprefixfromnamespace
+            - name: Wsgetreadernode
+              href: /windows/desktop/api/WebServices/nf-webservices-wsgetreadernode
+            - name: Wsgetreaderposition
+              href: /windows/desktop/api/WebServices/nf-webservices-wsgetreaderposition
+            - name: Wsgetreaderproperty
+              href: /windows/desktop/api/WebServices/nf-webservices-wsgetreaderproperty
+            - name: Wsgetsecuritycontextproperty
+              href: /windows/desktop/api/WebServices/nf-webservices-wsgetsecuritycontextproperty
+            - name: Wsgetsecuritytoken-Eigenschaft
+              href: /windows/desktop/api/WebServices/nf-webservices-wsgetsecuritytokenproperty
+            - name: Wsgetservicehostproperty
+              href: /windows/desktop/api/WebServices/nf-webservices-wsgetservicehostproperty
+            - name: Wsgetserviceproxyproperty
+              href: /windows/desktop/api/WebServices/nf-webservices-wsgetserviceproxyproperty
+            - name: Wsgetschreiterposition
+              href: /windows/desktop/api/WebServices/nf-webservices-wsgetwriterposition
+            - name: Wsgetschreiterproperty
+              href: /windows/desktop/api/WebServices/nf-webservices-wsgetwriterproperty
+            - name: Wsgetxmlattribute
+              href: /windows/desktop/api/WebServices/nf-webservices-wsgetxmlattribute
+            - name: Wsinitializemess
+              href: /windows/desktop/api/WebServices/nf-webservices-wsinitializemessage
+            - name: Wsmarkheaderasverstanden
+              href: /windows/desktop/api/WebServices/nf-webservices-wsmarkheaderasunderstood
+            - name: Wsmatchpolicyalternative
+              href: /windows/desktop/api/WebServices/nf-webservices-wsmatchpolicyalternative
+            - name: Wsmovereader
+              href: /windows/desktop/api/WebServices/nf-webservices-wsmovereader
+            - name: Wsmovewriter
+              href: /windows/desktop/api/WebServices/nf-webservices-wsmovewriter
+            - name: Wsoffsetof
+              href: /windows/desktop/api/WebServices/nf-webservices-wsoffsetof
+            - name: Wsopumchannel
+              href: /windows/desktop/api/WebServices/nf-webservices-wsopenchannel
+            - name: Wsopumlistener
+              href: /windows/desktop/api/WebServices/nf-webservices-wsopenlistener
+            - name: Wsopeinservicehost
+              href: /windows/desktop/api/WebServices/nf-webservices-wsopenservicehost
+            - name: Wsopeinserviceproxy
+              href: /windows/desktop/api/WebServices/nf-webservices-wsopenserviceproxy
+            - name: Wspullbytes
+              href: /windows/desktop/api/WebServices/nf-webservices-wspullbytes
+            - name: Wspushbytes
+              href: /windows/desktop/api/WebServices/nf-webservices-wspushbytes
+            - name: Wslesarray
+              href: /windows/desktop/api/WebServices/nf-webservices-wsreadarray
+            - name: Wslesattribute
+              href: /windows/desktop/api/WebServices/nf-webservices-wsreadattribute
+            - name: Wsread Body
+              href: /windows/desktop/api/WebServices/nf-webservices-wsreadbody
+            - name: Wslebytes
+              href: /windows/desktop/api/WebServices/nf-webservices-wsreadbytes
+            - name: Wsleserchars
+              href: /windows/desktop/api/WebServices/nf-webservices-wsreadchars
+            - name: WsReadCharsUtf8
+              href: /windows/desktop/api/WebServices/nf-webservices-wsreadcharsutf8
+            - name: Wsread Element
+              href: /windows/desktop/api/WebServices/nf-webservices-wsreadelement
+            - name: Wsumdattribute
+              href: /windows/desktop/api/WebServices/nf-webservices-wsreadendattribute
+            - name: Wsleserumdelta
+              href: /windows/desktop/api/WebServices/nf-webservices-wsreadendelement
+            - name: Wsleserendpointadressssextension
+              href: /windows/desktop/api/WebServices/nf-webservices-wsreadendpointaddressextension
+            - name: Wsumenvelopeend
+              href: /windows/desktop/api/WebServices/nf-webservices-wsreadenvelopeend
+            - name: Wsumenvelopestart
+              href: /windows/desktop/api/WebServices/nf-webservices-wsreadenvelopestart
+            - name: Wslesmessageend
+              href: /windows/desktop/api/WebServices/nf-webservices-wsreadmessageend
+            - name: Wsummessagestart
+              href: /windows/desktop/api/WebServices/nf-webservices-wsreadmessagestart
+            - name: Wsummetadata
+              href: /windows/desktop/api/WebServices/nf-webservices-wsreadmetadata
+            - name: Wsread Node
+              href: /windows/desktop/api/WebServices/nf-webservices-wsreadnode
+            - name: Wsleserqualifiedname
+              href: /windows/desktop/api/WebServices/nf-webservices-wsreadqualifiedname
+            - name: Wsleserstartattribute
+              href: /windows/desktop/api/WebServices/nf-webservices-wsreadstartattribute
+            - name: Wsleserstartelements
+              href: /windows/desktop/api/WebServices/nf-webservices-wsreadstartelement
+            - name: Wsumstartelements
+              href: /windows/desktop/api/WebServices/nf-webservices-wsreadtostartelement
+            - name: Wslestype
+              href: /windows/desktop/api/WebServices/nf-webservices-wsreadtype
+            - name: Wsread Value
+              href: /windows/desktop/api/WebServices/nf-webservices-wsreadvalue
+            - name: Wsumxmlbuffer
+              href: /windows/desktop/api/WebServices/nf-webservices-wsreadxmlbuffer
+            - name: Wsumxmlbufferfromb
+              href: /windows/desktop/api/WebServices/nf-webservices-wsreadxmlbufferfrombytes
+            - name: Wsreceivemess
+              href: /windows/desktop/api/WebServices/nf-webservices-wsreceivemessage
+            - name: Wsregisteroperationforcancel
+              href: /windows/desktop/api/WebServices/nf-webservices-wsregisteroperationforcancel
+            - name: Wsremovecustomheader
+              href: /windows/desktop/api/WebServices/nf-webservices-wsremovecustomheader
+            - name: Wsremoveheader
+              href: /windows/desktop/api/WebServices/nf-webservices-wsremoveheader
+            - name: Wsremovemappedheader
+              href: /windows/desktop/api/WebServices/nf-webservices-wsremovemappedheader
+            - name: Wsremovenode
+              href: /windows/desktop/api/WebServices/nf-webservices-wsremovenode
+            - name: Wsrequestreply
+              href: /windows/desktop/api/WebServices/nf-webservices-wsrequestreply
+            - name: Wsrequestsecuritytoken
+              href: /windows/desktop/api/WebServices/nf-webservices-wsrequestsecuritytoken
+            - name: Wsresetchannel
+              href: /windows/desktop/api/WebServices/nf-webservices-wsresetchannel
+            - name: Wsre-Terror
+              href: /windows/desktop/api/WebServices/nf-webservices-wsreseterror
+            - name: Wsreabthap
+              href: /windows/desktop/api/WebServices/nf-webservices-wsresetheap
+            - name: Wsresetlistener
+              href: /windows/desktop/api/WebServices/nf-webservices-wsresetlistener
+            - name: Wsresetmessage
+              href: /windows/desktop/api/WebServices/nf-webservices-wsresetmessage
+            - name: Wsresetmetadata
+              href: /windows/desktop/api/WebServices/nf-webservices-wsresetmetadata
+            - name: Wsresetservicehost
+              href: /windows/desktop/api/WebServices/nf-webservices-wsresetservicehost
+            - name: Wsresetserviceproxy
+              href: /windows/desktop/api/WebServices/nf-webservices-wsresetserviceproxy
+            - name: Wsrevokesecuritycontext
+              href: /windows/desktop/api/WebServices/nf-webservices-wsrevokesecuritycontext
+            - name: Wssendfaultmessageforerror
+              href: /windows/desktop/api/WebServices/nf-webservices-wssendfaultmessageforerror
+            - name: Wssendmessage
+              href: /windows/desktop/api/WebServices/nf-webservices-wssendmessage
+            - name: Wssendreplymess
+              href: /windows/desktop/api/WebServices/nf-webservices-wssendreplymessage
+            - name: Wssetauentfail
+              href: wssetautofail.md
+            - name: Wssetchannelproperty
+              href: /windows/desktop/api/WebServices/nf-webservices-wssetchannelproperty
+            - name: Wsseterrorproperty
+              href: /windows/desktop/api/WebServices/nf-webservices-wsseterrorproperty
+            - name: Wssetfaulterrordetail
+              href: /windows/desktop/api/WebServices/nf-webservices-wssetfaulterrordetail
+            - name: Wssetfaulterrorproperty
+              href: /windows/desktop/api/WebServices/nf-webservices-wssetfaulterrorproperty
+            - name: Wssetheiader
+              href: /windows/desktop/api/WebServices/nf-webservices-wssetheader
+            - name: Wssetinput
+              href: /windows/desktop/api/WebServices/nf-webservices-wssetinput
+            - name: Wssetinputstobuffer
+              href: /windows/desktop/api/WebServices/nf-webservices-wssetinputtobuffer
+            - name: Wssetlistenerproperty
+              href: /windows/desktop/api/WebServices/nf-webservices-wssetlistenerproperty
+            - name: Wssetmessageproperty
+              href: /windows/desktop/api/WebServices/nf-webservices-wssetmessageproperty
+            - name: Wssetoutput
+              href: /windows/desktop/api/WebServices/nf-webservices-wssetoutput
+            - name: Wssetoutputtbuffer
+              href: /windows/desktop/api/WebServices/nf-webservices-wssetoutputtobuffer
+            - name: Wssetreaderposition
+              href: /windows/desktop/api/WebServices/nf-webservices-wssetreaderposition
+            - name: Wssetschreiterposition
+              href: /windows/desktop/api/WebServices/nf-webservices-wssetwriterposition
+            - name: Wsshutdownsessionchannel
+              href: /windows/desktop/api/WebServices/nf-webservices-wsshutdownsessionchannel
+            - name: Wsskipnode
+              href: /windows/desktop/api/WebServices/nf-webservices-wsskipnode
+            - name: Wsstartreadercanonicalization
+              href: /windows/desktop/api/WebServices/nf-webservices-wsstartreadercanonicalization
+            - name: Wsstartschreitercanonicalization
+              href: /windows/desktop/api/WebServices/nf-webservices-wsstartwritercanonicalization
+            - name: Wstrimxmlwhitespace
+              href: /windows/desktop/api/WebServices/nf-webservices-wstrimxmlwhitespace
+            - name: Wsverifyxmlncname
+              href: /windows/desktop/api/WebServices/nf-webservices-wsverifyxmlncname
+            - name: Wsschreitearray
+              href: /windows/desktop/api/WebServices/nf-webservices-wswritearray
+            - name: Wsschreiteattribute
+              href: /windows/desktop/api/WebServices/nf-webservices-wswriteattribute
+            - name: Wsschreitebody
+              href: /windows/desktop/api/WebServices/nf-webservices-wswritebody
+            - name: Wsschreitebytes
+              href: /windows/desktop/api/WebServices/nf-webservices-wswritebytes
+            - name: Wswrite techars
+              href: /windows/desktop/api/WebServices/nf-webservices-wswritechars
+            - name: WsWriteCharsUtf8
+              href: /windows/desktop/api/WebServices/nf-webservices-wswritecharsutf8
+            - name: Wsschreiteelement
+              href: /windows/desktop/api/WebServices/nf-webservices-wswriteelement
+            - name: Wsschreiteendattribute
+              href: /windows/desktop/api/WebServices/nf-webservices-wswriteendattribute
+            - name: Wsschreiteendcdata
+              href: /windows/desktop/api/WebServices/nf-webservices-wswriteendcdata
+            - name: Wsschreiteendelta-Element
+              href: /windows/desktop/api/WebServices/nf-webservices-wswriteendelement
+            - name: Wsschreiteendstartelements
+              href: /windows/desktop/api/WebServices/nf-webservices-wswriteendstartelement
+            - name: Wsschreiteenvelopeend
+              href: /windows/desktop/api/WebServices/nf-webservices-wswriteenvelopeend
+            - name: Wsschreiteenvelopestart
+              href: /windows/desktop/api/WebServices/nf-webservices-wswriteenvelopestart
+            - name: Wsschreitemessageend
+              href: /windows/desktop/api/WebServices/nf-webservices-wswritemessageend
+            - name: Wsschreitemessagestart
+              href: /windows/desktop/api/WebServices/nf-webservices-wswritemessagestart
+            - name: Wsschreitenode
+              href: /windows/desktop/api/WebServices/nf-webservices-wswritenode
+            - name: Wsschreitequalifiedname
+              href: /windows/desktop/api/WebServices/nf-webservices-wswritequalifiedname
+            - name: Wsschreitestartattribute
+              href: /windows/desktop/api/WebServices/nf-webservices-wswritestartattribute
+            - name: Wsschreitestartcdata
+              href: /windows/desktop/api/WebServices/nf-webservices-wswritestartcdata
+            - name: Wsschreitestartelements
+              href: /windows/desktop/api/WebServices/nf-webservices-wswritestartelement
+            - name: Wsschreitetext
+              href: /windows/desktop/api/WebServices/nf-webservices-wswritetext
+            - name: Wsschreitetype
+              href: /windows/desktop/api/WebServices/nf-webservices-wswritetype
+            - name: Wsschreitevalue
+              href: /windows/desktop/api/WebServices/nf-webservices-wswritevalue
+            - name: Wsschreitexmlbuffer
+              href: /windows/desktop/api/WebServices/nf-webservices-wswritexmlbuffer
+            - name: Wsschreitexmlbufferybytes
+              href: /windows/desktop/api/WebServices/nf-webservices-wswritexmlbuffertobytes
+            - name: Wsschreitexmlnsattribute
+              href: /windows/desktop/api/WebServices/nf-webservices-wswritexmlnsattribute
+            - name: Wsxmlstringequals
+              href: /windows/desktop/api/WebServices/nf-webservices-wsxmlstringequals
+        - name: Windows-Webdienst Handles
+          href: web-services-for-windows-handles.md
+          items:
+            - name: WS_CHANNEL
+              href: ws-channel.md
+            - name: WS_ERROR
+              href: ws-error.md
+            - name: WS_HEAP
+              href: ws-heap.md
+            - name: WS_LISTENER
+              href: ws-listener.md
+            - name: WS_MESSAGE
+              href: ws-message.md
+            - name: WS_METADATA
+              href: ws-metadata.md
+            - name: WS_OPERATION_CONTEXT
+              href: ws-operation-context.md
+            - name: WS_POLICY
+              href: ws-policy.md
+            - name: WS_SECURITY_CONTEXT
+              href: ws-security-context.md
+            - name: WS_SECURITY_TOKEN
+              href: ws-security-token.md
+            - name: WS_SERVICE_HOST
+              href: ws-service-host.md
+            - name: WS_SERVICE_PROXY
+              href: ws-service-proxy.md
+            - name: WS_XML_BUFFER
+              href: ws-xml-buffer.md
+            - name: WS_XML_READER
+              href: ws-xml-reader.md
+            - name: WS_XML_WRITER
+              href: ws-xml-writer.md
+        - name: Windows-Webdienst Makros
+          href: web-services-for-windows-macros.md
+          items:
+            - name: WS_STRING_EMPTY
+              href: /previous-versions/windows/desktop/legacy/dd323449(v=vs.85)
+            - name: WS_STRING_VALUE
+              href: /windows/desktop/api/WebServices/nf-webservices-ws_string_value
+            - name: WS_XML_STRING_DICTIONARY_VALUE
+              href: /windows/desktop/api/WebServices/nf-webservices-ws_xml_string_dictionary_value
+            - name: WS_XML_STRING_NULL
+              href: /previous-versions/windows/desktop/legacy/dd323562(v=vs.85)
+            - name: WS_XML_STRING_VALUE
+              href: /windows/desktop/api/WebServices/nf-webservices-ws_xml_string_value
+            - name: Wsgräfin
+              href: /windows/desktop/api/WebServices/nf-webservices-wscountof
+        - name: Rückgabewerte für Windows-Webdienste
+          href: windows-web-services-return-values.md
+        - name: Windows-Webdienst Strukturen
+          href: web-services-for-windows-structures.md
+          items:
+            - name: WS_ANY_ATTRIBUTE
+              href: /windows/win32/api/WebServices/ns-webservices-ws_any_attribute
+            - name: WS_ANY_ATTRIBUTES
+              href: /windows/win32/api/WebServices/ns-webservices-ws_any_attributes
+            - name: WS_ASYNC_CONTEXT
+              href: /windows/win32/api/WebServices/ns-webservices-ws_async_context
+            - name: WS_ASYNC_OPERATION
+              href: /windows/win32/api/WebServices/ns-webservices-ws_async_operation
+            - name: WS_ASYNC_STATE
+              href: /windows/win32/api/WebServices/ns-webservices-ws_async_state
+            - name: WS_ATTRIBUTE_DESCRIPTION
+              href: /windows/win32/api/WebServices/ns-webservices-ws_attribute_description
+            - name: WS_BOOL_DESCRIPTION
+              href: /windows/win32/api/WebServices/ns-webservices-ws_bool_description
+            - name: WS_BUFFERS
+              href: /windows/win32/api/WebServices/ns-webservices-ws_buffers
+            - name: WS_BYTES
+              href: /windows/win32/api/WebServices/ns-webservices-ws_bytes
+            - name: WS_BYTES_DESCRIPTION
+              href: /windows/win32/api/WebServices/ns-webservices-ws_bytes_description
+            - name: WS_BYTE_ARRAY_DESCRIPTION
+              href: /windows/win32/api/WebServices/ns-webservices-ws_byte_array_description
+            - name: WS_CALL_PROPERTY
+              href: /windows/win32/api/WebServices/ns-webservices-ws_call_property
+            - name: WS_CAPI_ASYMMETRIC_SECURITY_KEY_HANDLE
+              href: /windows/win32/api/WebServices/ns-webservices-ws_capi_asymmetric_security_key_handle
+            - name: WS_CERT_CREDENTIAL
+              href: /windows/win32/api/WebServices/ns-webservices-ws_cert_credential
+            - name: WS_CERT_ENDPOINT_IDENTITY
+              href: /windows/win32/api/WebServices/ns-webservices-ws_cert_endpoint_identity
+            - name: WS_CERT_MESSAGE_SECURITY_BINDING_CONSTRAINT
+              href: /windows/win32/api/WebServices/ns-webservices-ws_cert_message_security_binding_constraint
+            - name: WS_CERT_SIGNED_SAML_AUTHENTICATOR
+              href: /windows/win32/api/WebServices/ns-webservices-ws_cert_signed_saml_authenticator
+            - name: WS_CERTIFICATE_VALIDATION_CALLBACK_CONTEXT
+              href: /windows/win32/api/WebServices/ns-webservices-ws_certificate_validation_callback_context
+            - name: WS_CHANNEL_DECODER
+              href: /windows/win32/api/WebServices/ns-webservices-ws_channel_decoder
+            - name: WS_CHANNEL_ENCODER
+              href: /windows/win32/api/WebServices/ns-webservices-ws_channel_encoder
+            - name: WS_CHANNEL_PROPERTIES
+              href: /windows/win32/api/WebServices/ns-webservices-ws_channel_properties
+            - name: WS_CHANNEL_PROPERTY
+              href: /windows/win32/api/WebServices/ns-webservices-ws_channel_property
+            - name: WS_CHANNEL_PROPERTY_CONSTRAINT
+              href: /windows/win32/api/WebServices/ns-webservices-ws_channel_property_constraint
+            - name: WS_CHAR_ARRAY_DESCRIPTION
+              href: /windows/win32/api/WebServices/ns-webservices-ws_char_array_description
+            - name: WS_CONTRACT_DESCRIPTION
+              href: /windows/win32/api/WebServices/ns-webservices-ws_contract_description
+            - name: WS_CUSTOM_CERT_CREDENTIAL
+              href: /windows/win32/api/WebServices/ns-webservices-ws_custom_cert_credential
+            - name: WS_CUSTOM_CHANNEL_CALLBACKS
+              href: /windows/win32/api/WebServices/ns-webservices-ws_custom_channel_callbacks
+            - name: WS_CUSTOM_HTTP_PROXY
+              href: /windows/win32/api/WebServices/ns-webservices-ws_custom_http_proxy
+            - name: WS_CUSTOM_LISTENER_CALLBACKS
+              href: /windows/win32/api/WebServices/ns-webservices-ws_custom_listener_callbacks
+            - name: WS_CUSTOM_TYPE_DESCRIPTION
+              href: /windows/win32/api/WebServices/ns-webservices-ws_custom_type_description
+            - name: WS_DATETIME
+              href: /windows/win32/api/WebServices/ns-webservices-ws_datetime
+            - name: WS_DATETIME_DESCRIPTION
+              href: /windows/win32/api/WebServices/ns-webservices-ws_datetime_description
+            - name: WS_DECIMAL_DESCRIPTION
+              href: /windows/win32/api/WebServices/ns-webservices-ws_decimal_description
+            - name: WS_DEFAULT_VALUE
+              href: /windows/win32/api/WebServices/ns-webservices-ws_default_value
+            - name: WS_DEFAULT_WINDOWS_INTEGRATED_AUTH_CREDENTIAL
+              href: /windows/win32/api/WebServices/ns-webservices-ws_default_windows_integrated_auth_credential
+            - name: WS_DISALLOWED_USER_AGENT_SUBSTRINGS
+              href: /windows/win32/api/WebServices/ns-webservices-ws_disallowed_user_agent_substrings
+            - name: WS_DNS_ENDPOINT_IDENTITY
+              href: /windows/win32/api/WebServices/ns-webservices-ws_dns_endpoint_identity
+            - name: WS_DOUBLE_DESCRIPTION
+              href: /windows/win32/api/WebServices/ns-webservices-ws_double_description
+            - name: WS_DURATION
+              href: /windows/win32/api/WebServices/ns-webservices-ws_duration
+            - name: WS_DURATION_DESCRIPTION
+              href: /windows/win32/api/WebServices/ns-webservices-ws_duration_description
+            - name: WS_ELEMENT_DESCRIPTION
+              href: /windows/win32/api/WebServices/ns-webservices-ws_element_description
+            - name: WS_ENDPOINT_ADDRESS
+              href: /windows/win32/api/WebServices/ns-webservices-ws_endpoint_address
+            - name: WS_ENDPOINT_ADDRESS_DESCRIPTION
+              href: /windows/win32/api/WebServices/ns-webservices-ws_endpoint_address_description
+            - name: WS_ENDPOINT_IDENTITY
+              href: /windows/win32/api/WebServices/ns-webservices-ws_endpoint_identity
+            - name: WS_ENDPOINT_POLICY_EXTENSION
+              href: /windows/win32/api/WebServices/ns-webservices-ws_endpoint_policy_extension
+            - name: WS_ENUM_DESCRIPTION
+              href: /windows/win32/api/WebServices/ns-webservices-ws_enum_description
+            - name: WS_ENUM_VALUE
+              href: /windows/win32/api/WebServices/ns-webservices-ws_enum_value
+            - name: WS_ERROR_PROPERTY
+              href: /windows/win32/api/WebServices/ns-webservices-ws_error_property
+            - name: WS_FAULT
+              href: /windows/win32/api/WebServices/ns-webservices-ws_fault
+            - name: WS_FAULT_CODE
+              href: /windows/win32/api/WebServices/ns-webservices-ws_fault_code
+            - name: WS_FAULT_DETAIL_DESCRIPTION
+              href: /windows/win32/api/WebServices/ns-webservices-ws_fault_detail_description
+            - name: WS_FAULT_REASON
+              href: /windows/win32/api/WebServices/ns-webservices-ws_fault_reason
+            - name: WS_FAULT_DESCRIPTION
+              href: /windows/win32/api/WebServices/ns-webservices-ws_fault_description
+            - name: WS_FIELD_DESCRIPTION
+              href: /windows/win32/api/WebServices/ns-webservices-ws_field_description
+            - name: WS_FLOAT_DESCRIPTION
+              href: /windows/win32/api/WebServices/ns-webservices-ws_float_description
+            - name: WS_GUID_DESCRIPTION
+              href: /windows/win32/api/WebServices/ns-webservices-ws_guid_description
+            - name: WS_HEAP_PROPERTIES
+              href: /windows/win32/api/WebServices/ns-webservices-ws_heap_properties
+            - name: WS_HEAP_PROPERTY
+              href: /windows/win32/api/WebServices/ns-webservices-ws_heap_property
+            - name: WS_HOST_NAMES
+              href: /windows/win32/api/WebServices/ns-webservices-ws_host_names
+            - name: WS_HTTP_BINDING_TEMPLATE
+              href: /windows/win32/api/WebServices/ns-webservices-ws_http_binding_template
+            - name: WS_HTTP_HEADER_AUTH_BINDING_TEMPLATE
+              href: /windows/win32/api/WebServices/ns-webservices-ws_http_header_auth_binding_template
+            - name: WS_HTTP_HEADER_AUTH_POLICY_DESCRIPTION
+              href: /windows/win32/api/WebServices/ns-webservices-ws_http_header_auth_policy_description
+            - name: WS_HTTP_HEADER_AUTH_SECURITY_BINDING
+              href: /windows/win32/api/WebServices/ns-webservices-ws_http_header_auth_security_binding
+            - name: WS_HTTP_HEADER_AUTH_SECURITY_BINDING_CONSTRAINT
+              href: /windows/win32/api/WebServices/ns-webservices-ws_http_header_auth_security_binding_constraint
+            - name: WS_HTTP_HEADER_AUTH_SECURITY_BINDING_POLICY_DESCRIPTION
+              href: /windows/win32/api/WebServices/ns-webservices-ws_http_header_auth_security_binding_policy_description
+            - name: WS_HTTP_HEADER_AUTH_SECURITY_BINDING_TEMPLATE
+              href: /windows/win32/api/WebServices/ns-webservices-ws_http_header_auth_security_binding_template
+            - name: WS_HTTP_HEADER_MAPPING
+              href: /windows/win32/api/WebServices/ns-webservices-ws_http_header_mapping
+            - name: WS_HTTP_MESSAGE_MAPPING
+              href: /windows/win32/api/WebServices/ns-webservices-ws_http_message_mapping
+            - name: WS_HTTP_POLICY_DESCRIPTION
+              href: /windows/win32/api/WebServices/ns-webservices-ws_http_policy_description
+            - name: WS_HTTP_REDIRECT_CALLBACK_CONTEXT
+              href: /windows/win32/api/WebServices/ns-webservices-ws_http_redirect_callback_context
+            - name: WS_HTTP_SSL_BINDING_TEMPLATE
+              href: /windows/win32/api/WebServices/ns-webservices-ws_http_ssl_binding_template
+            - name: WS_HTTP_SSL_HEADER_AUTH_BINDING_TEMPLATE
+              href: /windows/win32/api/WebServices/ns-webservices-ws_http_ssl_header_auth_binding_template
+            - name: WS_HTTP_SSL_HEADER_AUTH_POLICY_DESCRIPTION
+              href: /windows/win32/api/WebServices/ns-webservices-ws_http_ssl_header_auth_policy_description
+            - name: WS_HTTP_SSL_KERBEROS_APREQ_BINDING_TEMPLATE
+              href: /windows/win32/api/WebServices/ns-webservices-ws_http_ssl_kerberos_apreq_binding_template
+            - name: WS_HTTP_SSL_KERBEROS_APREQ_POLICY_DESCRIPTION
+              href: /windows/win32/api/WebServices/ns-webservices-ws_http_ssl_kerberos_apreq_policy_description
+            - name: WS_HTTP_SSL_KERBEROS_APREQ_SECURITY_CONTEXT_BINDING_TEMPLATE
+              href: /windows/win32/api/WebServices/ns-webservices-ws_http_ssl_kerberos_apreq_security_context_binding_template
+            - name: WS_HTTP_SSL_KERBEROS_APREQ_SECURITY_CONTEXT_POLICY_DESCRIPTION
+              href: /windows/win32/api/WebServices/ns-webservices-ws_http_ssl_kerberos_apreq_security_context_policy_description
+            - name: WS_HTTP_SSL_POLICY_DESCRIPTION
+              href: /windows/win32/api/WebServices/ns-webservices-ws_http_ssl_policy_description
+            - name: WS_HTTP_SSL_USERNAME_BINDING_TEMPLATE
+              href: /windows/win32/api/WebServices/ns-webservices-ws_http_ssl_username_binding_template
+            - name: WS_HTTP_SSL_USERNAME_POLICY_DESCRIPTION
+              href: /windows/win32/api/WebServices/ns-webservices-ws_http_ssl_username_policy_description
+            - name: WS_HTTP_SSL_USERNAME_SECURITY_CONTEXT_BINDING_TEMPLATE
+              href: /windows/win32/api/WebServices/ns-webservices-ws_http_ssl_username_security_context_binding_template
+            - name: WS_HTTP_SSL_USERNAME_SECURITY_CONTEXT_POLICY_DESCRIPTION
+              href: /windows/win32/api/WebServices/ns-webservices-ws_http_ssl_username_security_context_policy_description
+            - name: WS_HTTP_URL
+              href: /windows/win32/api/WebServices/ns-webservices-ws_http_url
+            - name: WS_HTTPS_URL
+              href: /windows/win32/api/WebServices/ns-webservices-ws_https_url
+            - name: WS_INT16_DESCRIPTION
+              href: /windows/win32/api/WebServices/ns-webservices-ws_int16_description
+            - name: WS_INT32_DESCRIPTION
+              href: /windows/win32/api/WebServices/ns-webservices-ws_int32_description
+            - name: WS_INT64_DESCRIPTION
+              href: /windows/win32/api/WebServices/ns-webservices-ws_int64_description
+            - name: WS_INT8_DESCRIPTION
+              href: /windows/win32/api/WebServices/ns-webservices-ws_int8_description
+            - name: WS_ISSUED_TOKEN_MESSAGE_SECURITY_BINDING_CONSTRAINT
+              href: /windows/win32/api/WebServices/ns-webservices-ws_issued_token_message_security_binding_constraint
+            - name: WS_ITEM_RANGE
+              href: /windows/win32/api/WebServices/ns-webservices-ws_item_range
+            - name: WS_KERBEROS_APREQ_MESSAGE_SECURITY_BINDING
+              href: /windows/win32/api/WebServices/ns-webservices-ws_kerberos_apreq_message_security_binding
+            - name: WS_KERBEROS_APREQ_MESSAGE_SECURITY_BINDING_CONSTRAINT
+              href: /windows/win32/api/WebServices/ns-webservices-ws_kerberos_apreq_message_security_binding_constraint
+            - name: WS_KERBEROS_APREQ_MESSAGE_SECURITY_BINDING_POLICY_DESCRIPTION
+              href: /windows/win32/api/WebServices/ns-webservices-ws_kerberos_apreq_message_security_binding_policy_description
+            - name: WS_KERBEROS_APREQ_MESSAGE_SECURITY_BINDING_TEMPLATE
+              href: /windows/win32/api/WebServices/ns-webservices-ws_kerberos_apreq_message_security_binding_template
+            - name: WS_LISTENER_PROPERTIES
+              href: /windows/win32/api/WebServices/ns-webservices-ws_listener_properties
+            - name: WS_LISTENER_PROPERTY
+              href: /windows/win32/api/WebServices/ns-webservices-ws_listener_property
+            - name: WS_MESSAGE_DESCRIPTION
+              href: /windows/win32/api/WebServices/ns-webservices-ws_message_description
+            - name: WS_MESSAGE_PROPERTIES
+              href: /windows/win32/api/WebServices/ns-webservices-ws_message_properties
+            - name: WS_MESSAGE_PROPERTY
+              href: /windows/win32/api/WebServices/ns-webservices-ws_message_property
+            - name: WS_METADATA_ENDPOINT
+              href: /windows/win32/api/WebServices/ns-webservices-ws_metadata_endpoint
+            - name: WS_METADATA_ENDPOINTS
+              href: /windows/win32/api/WebServices/ns-webservices-ws_metadata_endpoints
+            - name: WS_METADATA_PROPERTY
+              href: /windows/win32/api/WebServices/ns-webservices-ws_metadata_property
+            - name: WS_NAMEDPIPE_SSPI_TRANSPORT_SECURITY_BINDING
+              href: /windows/win32/api/WebServices/ns-webservices-ws_namedpipe_sspi_transport_security_binding
+            - name: WS_NCRYPT_ASYMMETRIC_SECURITY_KEY_HANDLE
+              href: /windows/win32/api/WebServices/ns-webservices-ws_ncrypt_asymmetric_security_key_handle
+            - name: WS_NETPIPE_URL
+              href: /windows/win32/api/WebServices/ns-webservices-ws_netpipe_url
+            - name: WS_NETTCP_URL
+              href: /windows/win32/api/WebServices/ns-webservices-ws_nettcp_url
+            - name: WS_OPAQUE_WINDOWS_INTEGRATED_AUTH_CREDENTIAL
+              href: /windows/win32/api/WebServices/ns-webservices-ws_opaque_windows_integrated_auth_credential
+            - name: WS_OPERATION_DESCRIPTION
+              href: /windows/win32/api/WebServices/ns-webservices-ws_operation_description
+            - name: WS_PARAMETER_DESCRIPTION
+              href: /windows/win32/api/WebServices/ns-webservices-ws_parameter_description
+            - name: WS_POLICY_CONSTRAINTS
+              href: /windows/win32/api/WebServices/ns-webservices-ws_policy_constraints
+            - name: WS_POLICY_EXTENSION
+              href: /windows/win32/api/WebServices/ns-webservices-ws_policy_extension
+            - name: WS_POLICY_PROPERTIES
+              href: /windows/win32/api/WebServices/ns-webservices-ws_policy_properties
+            - name: WS_POLICY_PROPERTY
+              href: /windows/win32/api/WebServices/ns-webservices-ws_policy_property
+            - name: WS_PROXY_MESSAGE_CALLBACK_CONTEXT
+              href: /windows/win32/api/WebServices/ns-webservices-ws_proxy_message_callback_context
+            - name: WS_PROXY_PROPERTY
+              href: /windows/win32/api/WebServices/ns-webservices-ws_proxy_property
+            - name: WS_RAW_SYMMETRIC_SECURITY_KEY_HANDLE
+              href: /windows/win32/api/WebServices/ns-webservices-ws_raw_symmetric_security_key_handle
+            - name: WS_REQUEST_SECURITY_TOKEN_PROPERTY
+              href: /windows/win32/api/WebServices/ns-webservices-ws_request_security_token_property
+            - name: WS_REQUEST_SECURITY_TOKEN_PROPERTY_CONSTRAINT
+              href: /windows/win32/api/WebServices/ns-webservices-ws_request_security_token_property_constraint
+            - name: WS_RSA_ENDPOINT_IDENTITY
+              href: /windows/win32/api/WebServices/ns-webservices-ws_rsa_endpoint_identity
+            - name: WS_SAML_AUTHENTICATOR
+              href: /windows/win32/api/WebServices/ns-webservices-ws_saml_authenticator
+            - name: WS_SAML_MESSAGE_SECURITY_BINDING
+              href: /windows/win32/api/WebServices/ns-webservices-ws_saml_message_security_binding
+            - name: WS_SECURITY_ALGORITHM_PROPERTY
+              href: /windows/win32/api/WebServices/ns-webservices-ws_security_algorithm_property
+            - name: WS_SECURITY_ALGORITHM_SUITE
+              href: /windows/win32/api/WebServices/ns-webservices-ws_security_algorithm_suite
+            - name: WS_SECURITY_BINDING
+              href: /windows/win32/api/WebServices/ns-webservices-ws_security_binding
+            - name: WS_SECURITY_BINDING_CONSTRAINT
+              href: /windows/win32/api/WebServices/ns-webservices-ws_security_binding_constraint
+            - name: WS_SECURITY_BINDING_PROPERTIES
+              href: /windows/win32/api/WebServices/ns-webservices-ws_security_binding_properties
+            - name: WS_SECURITY_BINDING_PROPERTY
+              href: /windows/win32/api/WebServices/ns-webservices-ws_security_binding_property
+            - name: WS_SECURITY_BINDING_PROPERTY_CONSTRAINT
+              href: /windows/win32/api/WebServices/ns-webservices-ws_security_binding_property_constraint
+            - name: WS_SECURITY_CONSTRAINTS
+              href: /windows/win32/api/WebServices/ns-webservices-ws_security_constraints
+            - name: WS_SECURITY_CONTEXT_MESSAGE_SECURITY_BINDING
+              href: /windows/win32/api/WebServices/ns-webservices-ws_security_context_message_security_binding
+            - name: WS_SECURITY_CONTEXT_MESSAGE_SECURITY_BINDING_CONSTRAINT
+              href: /windows/win32/api/WebServices/ns-webservices-ws_security_context_message_security_binding_constraint
+            - name: WS_SECURITY_CONTEXT_MESSAGE_SECURITY_BINDING_POLICY_DESCRIPTION
+              href: /windows/win32/api/WebServices/ns-webservices-ws_security_context_message_security_binding_policy_description
+            - name: WS_SECURITY_CONTEXT_MESSAGE_SECURITY_BINDING_TEMPLATE
+              href: /windows/win32/api/WebServices/ns-webservices-ws_security_context_message_security_binding_template
+            - name: WS_SECURITY_CONTEXT_PROPERTY
+              href: /windows/win32/api/WebServices/ns-webservices-ws_security_context_property
+            - name: WS_SECURITY_CONTEXT_SECURITY_BINDING_POLICY_DESCRIPTION
+              href: /windows/win32/api/WebServices/ns-webservices-ws_security_context_security_binding_policy_description
+            - name: WS_SECURITY_CONTEXT_SECURITY_BINDING_TEMPLATE
+              href: /windows/win32/api/WebServices/ns-webservices-ws_security_context_security_binding_template
+            - name: WS_SECURITY_DESCRIPTION
+              href: /windows/win32/api/WebServices/ns-webservices-ws_security_description
+            - name: WS_SECURITY_KEY_HANDLE
+              href: /windows/win32/api/WebServices/ns-webservices-ws_security_key_handle
+            - name: WS_SECURITY_PROPERTIES
+              href: /windows/win32/api/WebServices/ns-webservices-ws_security_properties
+            - name: WS_SECURITY_PROPERTY
+              href: /windows/win32/api/WebServices/ns-webservices-ws_security_property
+            - name: WS_SECURITY_PROPERTY_CONSTRAINT
+              href: /windows/win32/api/WebServices/ns-webservices-ws_security_property_constraint
+            - name: WS_SERVICE_CONTRACT
+              href: /windows/win32/api/WebServices/ns-webservices-ws_service_contract
+            - name: WS_SERVICE_ENDPOINT
+              href: /windows/win32/api/WebServices/ns-webservices-ws_service_endpoint
+            - name: WS_SERVICE_ENDPOINT_METADATA
+              href: /windows/win32/api/WebServices/ns-webservices-ws_service_endpoint_metadata
+            - name: WS_SERVICE_ENDPOINT_PROPERTY
+              href: /windows/win32/api/WebServices/ns-webservices-ws_service_endpoint_property
+            - name: WS_SERVICE_METADATA
+              href: /windows/win32/api/WebServices/ns-webservices-ws_service_metadata
+            - name: WS_SERVICE_METADATA_DOCUMENT
+              href: /windows/win32/api/WebServices/ns-webservices-ws_service_metadata_document
+            - name: WS_SERVICE_PROPERTY
+              href: /windows/win32/api/WebServices/ns-webservices-ws_service_property
+            - name: WS_SERVICE_PROPERTY_ACCEPT_CALLBACK
+              href: /windows/win32/api/WebServices/ns-webservices-ws_service_property_accept_callback
+            - name: WS_SERVICE_PROPERTY_CLOSE_CALLBACK
+              href: /windows/win32/api/WebServices/ns-webservices-ws_service_property_close_callback
+            - name: WS_SERVICE_SECURITY_IDENTITIES
+              href: /windows/win32/api/WebServices/ns-webservices-ws_service_security_identities
+            - name: WS_SOAPUDP_URL
+              href: /windows/win32/api/WebServices/ns-webservices-ws_soapudp_url
+            - name: WS_SPN_ENDPOINT_IDENTITY
+              href: /windows/win32/api/WebServices/ns-webservices-ws_spn_endpoint_identity
+            - name: WS_SSL_TRANSPORT_SECURITY_BINDING
+              href: /windows/win32/api/WebServices/ns-webservices-ws_ssl_transport_security_binding
+            - name: WS_SSL_TRANSPORT_SECURITY_BINDING_CONSTRAINT
+              href: /windows/win32/api/WebServices/ns-webservices-ws_ssl_transport_security_binding_constraint
+            - name: WS_SSL_TRANSPORT_SECURITY_BINDING_POLICY_DESCRIPTION
+              href: /windows/win32/api/WebServices/ns-webservices-ws_ssl_transport_security_binding_policy_description
+            - name: WS_SSL_TRANSPORT_SECURITY_BINDING_TEMPLATE
+              href: /windows/win32/api/WebServices/ns-webservices-ws_ssl_transport_security_binding_template
+            - name: WS_SSPI_TRANSPORT_SECURITY_BINDING_POLICY_DESCRIPTION
+              href: /windows/win32/api/WebServices/ns-webservices-ws_sspi_transport_security_binding_policy_description
+            - name: WS_STRING
+              href: /windows/win32/api/WebServices/ns-webservices-ws_string
+            - name: WS_STRING_DESCRIPTION
+              href: /windows/win32/api/WebServices/ns-webservices-ws_string_description
+            - name: WS_STRING_USERNAME_CREDENTIAL
+              href: /windows/win32/api/WebServices/ns-webservices-ws_string_username_credential
+            - name: WS_STRING_WINDOWS_INTEGRATED_AUTH_CREDENTIAL
+              href: /windows/win32/api/WebServices/ns-webservices-ws_string_windows_integrated_auth_credential
+            - name: WS_STRUCT_DESCRIPTION
+              href: /windows/win32/api/WebServices/ns-webservices-ws_struct_description
+            - name: WS_SUBJECT_NAME_CERT_CREDENTIAL
+              href: /windows/win32/api/WebServices/ns-webservices-ws_subject_name_cert_credential
+            - name: WS_TCP_BINDING_TEMPLATE
+              href: /windows/win32/api/WebServices/ns-webservices-ws_tcp_binding_template
+            - name: WS_TCP_POLICY_DESCRIPTION
+              href: /windows/win32/api/WebServices/ns-webservices-ws_tcp_policy_description
+            - name: WS_TCP_SSPI_BINDING_TEMPLATE
+              href: /windows/win32/api/WebServices/ns-webservices-ws_tcp_sspi_binding_template
+            - name: WS_TCP_SSPI_KERBEROS_APREQ_BINDING_TEMPLATE
+              href: /windows/win32/api/WebServices/ns-webservices-ws_tcp_sspi_kerberos_apreq_binding_template
+            - name: WS_TCP_SSPI_KERBEROS_APREQ_POLICY_DESCRIPTION
+              href: /windows/win32/api/WebServices/ns-webservices-ws_tcp_sspi_kerberos_apreq_policy_description
+            - name: WS_TCP_SSPI_KERBEROS_APREQ_SECURITY_CONTEXT_BINDING_TEMPLATE
+              href: /windows/win32/api/WebServices/ns-webservices-ws_tcp_sspi_kerberos_apreq_security_context_binding_template
+            - name: WS_TCP_SSPI_KERBEROS_APREQ_SECURITY_CONTEXT_POLICY_DESCRIPTION
+              href: /windows/win32/api/WebServices/ns-webservices-ws_tcp_sspi_kerberos_apreq_security_context_policy_description
+            - name: WS_TCP_SSPI_POLICY_DESCRIPTION
+              href: /windows/win32/api/WebServices/ns-webservices-ws_tcp_sspi_policy_description
+            - name: WS_TCP_SSPI_TRANSPORT_SECURITY_BINDING
+              href: /windows/win32/api/WebServices/ns-webservices-ws_tcp_sspi_transport_security_binding
+            - name: WS_TCP_SSPI_TRANSPORT_SECURITY_BINDING_CONSTRAINT
+              href: /windows/win32/api/WebServices/ns-webservices-ws_tcp_sspi_transport_security_binding_constraint
+            - name: WS_TCP_SSPI_TRANSPORT_SECURITY_BINDING_TEMPLATE
+              href: /windows/win32/api/WebServices/ns-webservices-ws_tcp_sspi_transport_security_binding_template
+            - name: WS_TCP_SSPI_USERNAME_BINDING_TEMPLATE
+              href: /windows/win32/api/WebServices/ns-webservices-ws_tcp_sspi_username_binding_template
+            - name: WS_TCP_SSPI_USERNAME_POLICY_DESCRIPTION
+              href: /windows/win32/api/WebServices/ns-webservices-ws_tcp_sspi_username_policy_description
+            - name: WS_TCP_SSPI_USERNAME_SECURITY_CONTEXT_BINDING_TEMPLATE
+              href: /windows/win32/api/WebServices/ns-webservices-ws_tcp_sspi_username_security_context_binding_template
+            - name: WS_TCP_SSPI_USERNAME_SECURITY_CONTEXT_POLICY_DESCRIPTION
+              href: /windows/win32/api/WebServices/ns-webservices-ws_tcp_sspi_username_security_context_policy_description
+            - name: WS_THUMBPRINT_CERT_CREDENTIAL
+              href: /windows/win32/api/WebServices/ns-webservices-ws_thumbprint_cert_credential
+            - name: WS_TIMESPAN
+              href: /windows/win32/api/WebServices/ns-webservices-ws_timespan
+            - name: WS_TIMESPAN_DESCRIPTION
+              href: /windows/win32/api/WebServices/ns-webservices-ws_timespan_description
+            - name: WS_UINT16_DESCRIPTION
+              href: /windows/win32/api/WebServices/ns-webservices-ws_uint16_description
+            - name: WS_UINT32_DESCRIPTION
+              href: /windows/win32/api/WebServices/ns-webservices-ws_uint32_description
+            - name: WS_UINT64_DESCRIPTION
+              href: /windows/win32/api/WebServices/ns-webservices-ws_uint64_description
+            - name: WS_UINT8_DESCRIPTION
+              href: /windows/win32/api/WebServices/ns-webservices-ws_uint8_description
+            - name: WS_UNION_DESCRIPTION
+              href: /windows/win32/api/WebServices/ns-webservices-ws_union_description
+            - name: WS_UNION_FIELD_DESCRIPTION
+              href: /windows/win32/api/WebServices/ns-webservices-ws_union_field_description
+            - name: WS_UNIQUE_ID
+              href: /windows/win32/api/WebServices/ns-webservices-ws_unique_id
+            - name: WS_UNIQUE_ID_DESCRIPTION
+              href: /windows/win32/api/WebServices/ns-webservices-ws_unique_id_description
+            - name: WS_UNKNOWN_ENDPOINT_IDENTITY
+              href: /windows/win32/api/WebServices/ns-webservices-ws_unknown_endpoint_identity
+            - name: WS_UPN_ENDPOINT_IDENTITY
+              href: /windows/win32/api/WebServices/ns-webservices-ws_upn_endpoint_identity
+            - name: WS_URL
+              href: /windows/win32/api/WebServices/ns-webservices-ws_url
+            - name: WS_USERNAME_CREDENTIAL
+              href: /windows/win32/api/WebServices/ns-webservices-ws_username_credential
+            - name: WS_USERNAME_MESSAGE_SECURITY_BINDING
+              href: /windows/win32/api/WebServices/ns-webservices-ws_username_message_security_binding
+            - name: WS_USERNAME_MESSAGE_SECURITY_BINDING_CONSTRAINT
+              href: /windows/win32/api/WebServices/ns-webservices-ws_username_message_security_binding_constraint
+            - name: WS_USERNAME_MESSAGE_SECURITY_BINDING_POLICY_DESCRIPTION
+              href: /windows/win32/api/WebServices/ns-webservices-ws_username_message_security_binding_policy_description
+            - name: WS_USERNAME_MESSAGE_SECURITY_BINDING_TEMPLATE
+              href: /windows/win32/api/WebServices/ns-webservices-ws_username_message_security_binding_template
+            - name: WS_UTF8_ARRAY_DESCRIPTION
+              href: /windows/win32/api/WebServices/ns-webservices-ws_utf8_array_description
+            - name: WS_VOID_DESCRIPTION
+              href: /windows/win32/api/WebServices/ns-webservices-ws_void_description
+            - name: WS_WINDOWS_INTEGRATED_AUTH_CREDENTIAL
+              href: /windows/win32/api/WebServices/ns-webservices-ws_windows_integrated_auth_credential
+            - name: WS_WSZ_DESCRIPTION
+              href: /windows/win32/api/WebServices/ns-webservices-ws_wsz_description
+            - name: WS_XML_ATTRIBUTE
+              href: /windows/win32/api/WebServices/ns-webservices-ws_xml_attribute
+            - name: WS_XML_BASE64_TEXT
+              href: /windows/win32/api/WebServices/ns-webservices-ws_xml_base64_text
+            - name: WS_XML_BOOL_TEXT
+              href: /windows/win32/api/WebServices/ns-webservices-ws_xml_bool_text
+            - name: WS_XML_BUFFER_PROPERTY
+              href: /windows/win32/api/WebServices/ns-webservices-ws_xml_buffer_property
+            - name: WS_XML_CANONICALIZATION_INCLUSIVE_PREFIXES
+              href: /windows/win32/api/WebServices/ns-webservices-ws_xml_canonicalization_inclusive_prefixes
+            - name: WS_XML_CANONICALIZATION_PROPERTY
+              href: /windows/win32/api/WebServices/ns-webservices-ws_xml_canonicalization_property
+            - name: WS_XML_COMMENT_NODE
+              href: /windows/win32/api/WebServices/ns-webservices-ws_xml_comment_node
+            - name: WS_XML_DATETIME_TEXT
+              href: /windows/win32/api/WebServices/ns-webservices-ws_xml_datetime_text
+            - name: WS_XML_DECIMAL_TEXT
+              href: /windows/win32/api/WebServices/ns-webservices-ws_xml_decimal_text
+            - name: WS_XML_DICTIONARY
+              href: /windows/win32/api/WebServices/ns-webservices-ws_xml_dictionary
+            - name: WS_XML_DOUBLE_TEXT
+              href: /windows/win32/api/WebServices/ns-webservices-ws_xml_double_text
+            - name: WS_XML_ELEMENT_NODE
+              href: /windows/win32/api/WebServices/ns-webservices-ws_xml_element_node
+            - name: WS_XML_FLOAT_TEXT
+              href: /windows/win32/api/WebServices/ns-webservices-ws_xml_float_text
+            - name: WS_XML_GUID_TEXT
+              href: /windows/win32/api/WebServices/ns-webservices-ws_xml_guid_text
+            - name: WS_XML_INT32_TEXT
+              href: /windows/win32/api/WebServices/ns-webservices-ws_xml_int32_text
+            - name: WS_XML_INT64_TEXT
+              href: /windows/win32/api/WebServices/ns-webservices-ws_xml_int64_text
+            - name: WS_XML_LIST_TEXT
+              href: /windows/win32/api/WebServices/ns-webservices-ws_xml_list_text
+            - name: WS_XML_NODE
+              href: /windows/win32/api/WebServices/ns-webservices-ws_xml_node
+            - name: WS_XML_NODE_POSITION
+              href: /windows/win32/api/WebServices/ns-webservices-ws_xml_node_position
+            - name: WS_XML_QNAME
+              href: /windows/win32/api/WebServices/ns-webservices-ws_xml_qname
+            - name: WS_XML_QNAME_DESCRIPTION
+              href: /windows/win32/api/WebServices/ns-webservices-ws_xml_qname_description
+            - name: WS_XML_QNAME_TEXT
+              href: /windows/win32/api/WebServices/ns-webservices-ws_xml_qname_text
+            - name: WS_XML_READER_BINARY_ENCODING
+              href: /windows/win32/api/WebServices/ns-webservices-ws_xml_reader_binary_encoding
+            - name: WS_XML_READER_BUFFER_INPUT
+              href: /windows/win32/api/WebServices/ns-webservices-ws_xml_reader_buffer_input
+            - name: WS_XML_READER_ENCODING
+              href: /windows/win32/api/WebServices/ns-webservices-ws_xml_reader_encoding
+            - name: WS_XML_READER_INPUT
+              href: /windows/win32/api/WebServices/ns-webservices-ws_xml_reader_input
+            - name: WS_XML_READER_MTOM_ENCODING
+              href: /windows/win32/api/WebServices/ns-webservices-ws_xml_reader_mtom_encoding
+            - name: WS_XML_READER_PROPERTIES
+              href: /windows/win32/api/WebServices/ns-webservices-ws_xml_reader_properties
+            - name: WS_XML_READER_PROPERTY
+              href: /windows/win32/api/WebServices/ns-webservices-ws_xml_reader_property
+            - name: WS_XML_READER_RAW_ENCODING
+              href: /windows/win32/api/WebServices/ns-webservices-ws_xml_reader_raw_encoding
+            - name: WS_XML_READER_STREAM_INPUT
+              href: /windows/win32/api/WebServices/ns-webservices-ws_xml_reader_stream_input
+            - name: WS_XML_READER_TEXT_ENCODING
+              href: /windows/win32/api/WebServices/ns-webservices-ws_xml_reader_text_encoding
+            - name: WS_XML_SECURITY_TOKEN_PROPERTY
+              href: /windows/win32/api/WebServices/ns-webservices-ws_xml_security_token_property
+            - name: WS_XML_STRING
+              href: /windows/win32/api/WebServices/ns-webservices-ws_xml_string
+            - name: WS_XML_STRING_DESCRIPTION
+              href: /windows/win32/api/WebServices/ns-webservices-ws_xml_string_description
+            - name: WS_XML_TEXT
+              href: /windows/win32/api/WebServices/ns-webservices-ws_xml_text
+            - name: WS_XML_TEXT_NODE
+              href: /windows/win32/api/WebServices/ns-webservices-ws_xml_text_node
+            - name: WS_XML_TIMESPAN_TEXT
+              href: /windows/win32/api/WebServices/ns-webservices-ws_xml_timespan_text
+            - name: WS_XML_TOKEN_MESSAGE_SECURITY_BINDING
+              href: /windows/win32/api/WebServices/ns-webservices-ws_xml_token_message_security_binding
+            - name: WS_XML_UINT64_TEXT
+              href: /windows/win32/api/WebServices/ns-webservices-ws_xml_uint64_text
+            - name: WS_XML_UNIQUE_ID_TEXT
+              href: /windows/win32/api/WebServices/ns-webservices-ws_xml_unique_id_text
+            - name: WS_XML_UTF16_TEXT
+              href: /windows/win32/api/WebServices/ns-webservices-ws_xml_utf16_text
+            - name: WS_XML_UTF8_TEXT
+              href: /windows/win32/api/WebServices/ns-webservices-ws_xml_utf8_text
+            - name: WS_XML_WRITER_BINARY_ENCODING
+              href: /windows/win32/api/WebServices/ns-webservices-ws_xml_writer_binary_encoding
+            - name: WS_XML_WRITER_BUFFER_OUTPUT
+              href: /windows/win32/api/WebServices/ns-webservices-ws_xml_writer_buffer_output
+            - name: WS_XML_WRITER_ENCODING
+              href: /windows/win32/api/WebServices/ns-webservices-ws_xml_writer_encoding
+            - name: WS_XML_WRITER_MTOM_ENCODING
+              href: /windows/win32/api/WebServices/ns-webservices-ws_xml_writer_mtom_encoding
+            - name: WS_XML_WRITER_OUTPUT
+              href: /windows/win32/api/WebServices/ns-webservices-ws_xml_writer_output
+            - name: WS_XML_WRITER_PROPERTIES
+              href: /windows/win32/api/WebServices/ns-webservices-ws_xml_writer_properties
+            - name: WS_XML_WRITER_PROPERTY
+              href: /windows/win32/api/WebServices/ns-webservices-ws_xml_writer_property
+            - name: WS_XML_WRITER_RAW_ENCODING
+              href: /windows/win32/api/WebServices/ns-webservices-ws_xml_writer_raw_encoding
+            - name: WS_XML_WRITER_STREAM_OUTPUT
+              href: /windows/win32/api/WebServices/ns-webservices-ws_xml_writer_stream_output
+            - name: WS_XML_WRITER_TEXT_ENCODING
+              href: /windows/win32/api/WebServices/ns-webservices-ws_xml_writer_text_encoding
+- name: Vorabruf von Debug-APIs für Windows Store-Apps
+  href: windows-runtime-prefetch-debug-apis.md
+  items:
+    - name: Icontentprefetchertask-Auslösers
+      href: /windows/desktop/api/IContentPrefetcherTaskTrigger/nn-icontentprefetchertasktrigger-icontentprefetchertasktrigger
+      items:
+        - name: Isregisteredforcontentprefetch-Methode
+          href: /windows/desktop/api/IContentPrefetcherTaskTrigger/nf-icontentprefetchertasktrigger-icontentprefetchertasktrigger-isregisteredforcontentprefetch
+        - name: Triggercontentprefetchertask-Methode
+          href: /windows/desktop/api/IContentPrefetcherTaskTrigger/nf-icontentprefetchertasktrigger-icontentprefetchertasktrigger-triggercontentprefetchertask
