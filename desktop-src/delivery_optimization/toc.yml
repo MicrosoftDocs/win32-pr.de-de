@@ -1,0 +1,269 @@
+- name: Übermittlungs Optimierung (Do)
+  href: delivery-optimization-portal.md
+  items:
+    - name: Verweis
+      href: do-reference.md
+      items:
+        - name: Enumerationen ausführen
+          href: do-enumerations.md
+          items:
+            - name: BG_ERROR_CONTEXT
+              href: bg-error-context.md
+            - name: BG_JOB_PRIORITY
+              href: bg-job-priority-.md
+            - name: BG_JOB_STATE
+              href: bg-job-state-.md
+            - name: BG_JOB_TYPE
+              href: bg-job-type.md
+            - name: BITS_FILE_PROPERTY_ID
+              href: bits-file-property-id-.md
+            - name: BITS_JOB_PROPERTY_ID
+              href: bits-job-property-id.md
+            - name: BITS_JOB_TRANSFER_POLICY
+              href: bits-job-transfer-policy-.md
+            - name: Deliveryoptimizationfileproperty
+              href: deliveryoptimizationfileproperty.md
+            - name: Dodownloadcostpolicy
+              href: ./deliveryoptimizationdownloadtypes/ne-deliveryoptimizationdownloadtypes-dodownloadcostpolicy.md
+            - name: Dodownloadproperty
+              href: ./deliveryoptimizationdownloadtypes/ne-deliveryoptimizationdownloadtypes-dodownloadproperty.md
+            - name: Dodownloadpropertyex
+              href: ./dodownloadinternal/ne-dodownloadinternal-dodownloadpropertyex.md
+            - name: Dodownloadstate
+              href: ./deliveryoptimizationdownloadtypes/ne-deliveryoptimizationdownloadtypes-dodownloadstate.md
+            - name: Download Mode
+              href: downloadmode.md
+            - name: Swarmstatus
+              href: swarmstatus.md
+        - name: Do-Schnittstellen
+          href: do-interfaces.md
+          items:
+            - name: Ibackgroundcopycallback
+              href: ibackgroundcopycallback.md
+              items:
+                - name: Ibackgroundcopycallback-Methoden
+                  href: ibackgroundcopycallback-methods.md
+                  items:
+                    - name: Joberror-Methode
+                      href: ibackgroundcopycallback-joberror-method.md
+                    - name: Jobänderungs-Methode
+                      href: ibackgroundcopycallback-jobmodification-method.md
+                    - name: Jobübertragene Methode
+                      href: ibackgroundcopycallback-jobtransferred.md
+            - name: Ibackgroundcopyerror
+              href: ibackgroundcopyerror.md
+              items:
+                - name: Ibackgroundcopyerror-Methoden
+                  href: ibackgroundcopyerror-methods.md
+                  items:
+                    - name: GetError-Methode
+                      href: ibackgroundcopyerror-geterror-method.md
+                    - name: GetFile-Methode
+                      href: ibackgroundcopyerror-getfile-method.md
+            - name: Ibackgroundcopyfile
+              href: ibackgroundcopyfile.md
+              items:
+                - name: Ibackgroundcopyfile-Methoden
+                  href: ibackgroundcopyfile-methods.md
+                  items:
+                    - name: GetLocalName-Methode
+                      href: ibackgroundcopyfile-getlocalname-method.md
+                    - name: GetProgress-Methode
+                      href: ibackgroundcopyfile-getprogress-method.md
+                    - name: Getremutename-Methode
+                      href: ibackgroundcopyfile-getremotename-method.md
+            - name: IBackgroundCopyFile2
+              href: ibackgroundcopyfile2.md
+              items:
+                - name: IBackgroundCopyFile2-Methoden
+                  href: ibackgroundcopyfile2-methods.md
+                  items:
+                    - name: Getfileranges-Methode
+                      href: ibackgroundcopyfile2-getfileranges-method.md
+                    - name: Methode "Setup Name"
+                      href: ibackgroundcopyfile2-setremotename-method.md
+            - name: IBackgroundCopyFile5
+              href: ibackgroundcopyfile5.md
+              items:
+                - name: IBackgroundCopyFile5-Methoden
+                  href: ibackgroundcopyfile5-methods.md
+                  items:
+                    - name: GetProperty-Methode
+                      href: ibackgroundcopyfile5-getproperty.md
+                    - name: SetProperty-Methode
+                      href: ibackgroundcopyfile5-setproperty.md
+            - name: IBackgroundCopyJob
+              href: ibackgroundcopyjob-.md
+              items:
+                - name: Ibackgroundcopyjob-Methoden
+                  href: ibackgroundcopyjob-methods.md
+                  items:
+                    - name: Cancel-Methode
+                      href: ibackgroundcopyjob-cancel.md
+                    - name: Complete-Methode
+                      href: ibackgroundcopyjob-complete.md
+                    - name: EnumFiles-Methode
+                      href: ibackgroundcopyjob-enumfiles.md
+                    - name: GetDisplayName-Methode
+                      href: ibackgroundcopyjob-getdisplayname.md
+                    - name: GetError-Methode
+                      href: ibackgroundcopyjob-geterror.md
+                    - name: GetId-Methode
+                      href: ibackgroundcopyjob-getid.md
+                    - name: Getnoprogresstimeout-Methode
+                      href: ibackgroundcopyjob-getnoprogresstimeout.md
+                    - name: Getnotifyflags-Methode
+                      href: ibackgroundcopyjob-getnotifyflags.md
+                    - name: Getnotifyinterface-Methode
+                      href: ibackgroundcopyjob-getnotifyinterface.md
+                    - name: GetPriority-Methode
+                      href: ibackgroundcopyjob-getpriority.md
+                    - name: GetProgress-Methode
+                      href: ibackgroundcopyjob-getprogress.md
+                    - name: GetState-Methode
+                      href: ibackgroundcopyjob-getstate.md
+                    - name: Gettimes-Methode
+                      href: ibackgroundcopyjob-gettimes.md
+                    - name: GetType-Methode
+                      href: ibackgroundcopyjob-gettype.md
+                    - name: Resume-Methode
+                      href: ibackgroundcopyjob-resume.md
+                    - name: Setnoprogresstimeout-Methode
+                      href: ibackgroundcopyjob-setnoprogresstimeout.md
+                    - name: Setnotifyflags-Methode
+                      href: ibackgroundcopyjob-setnotifyflags.md
+                    - name: Setnotifyinterface-Methode
+                      href: ibackgroundcopyjob-setnotifyinterface.md
+                    - name: SetPriority-Methode
+                      href: ibackgroundcopyjob-setpriority.md
+                    - name: Suspend-Methode
+                      href: ibackgroundcopyjob-suspend.md
+            - name: IBackgroundCopyJob5
+              href: ibackgroundcopyjob5.md
+              items:
+                - name: IBackgroundCopyJob5-Methoden
+                  href: ibackgroundcopyjob5-methods.md
+                  items:
+                    - name: GetProperty-Methode
+                      href: ibackgroundcopyjob5-getproperty.md
+                    - name: SetProperty-Methode
+                      href: ibackgroundcopyjob5-setproperty.md
+            - name: Ibackgroundcopymanager
+              href: ibackgroundcopymanager.md
+              items:
+                - name: Ibackgroundcopymanager-Methoden
+                  href: ibackgroundcopymanager-methods.md
+                  items:
+                    - name: Methode "kreatejob"
+                      href: ibackgroundcopymanager-createjob.md
+                    - name: GetJob-Methode
+                      href: ibackgroundcopymanager-getjob.md
+            - name: Ideliveryoptimizationjob
+              href: ideliveryoptimizationjob.md
+              items:
+                - name: Ideliveryoptimizationjob-Methoden
+                  href: ideliveryoptimizationjob-methods.md
+                  items:
+                    - name: ADDFILEWITHRANGES-Methode
+                      href: ideliveryoptimizationjob-addfilewithranges.md
+            - name: IDeliveryOptimizationJob2
+              href: ideliveryoptimizationjob2.md
+              items:
+                - name: AddFile-Methode
+                  href: ideliveryoptimizationjob2-addfile.md
+                - name: GetProperty-Methode
+                  href: ideliveryoptimizationjob2-getproperty.md
+                - name: SetProperty-Methode
+                  href: ideliveryoptimizationjob2-setproperty.md
+            - name: Ideliveryoptimizationfile
+              href: ideliveryoptimizationfile.md
+              items:
+                - name: Ideliveryoptimizationfile-Methoden
+                  href: ideliveryoptimizationfile-methods.md
+                  items:
+                    - name: GetStats-Methode
+                      href: ideliveryoptimizationfile-getstats.md
+            - name: IDeliveryOptimizationFile2
+              href: ideliveryoptimizationfile2.md
+              items:
+                - name: GetProperty-Methode
+                  href: ideliveryoptimizationfile2-getproperty.md
+                - name: SetProperty-Methode
+                  href: ideliveryoptimizationfile2-setproperty.md
+            - name: Ienumbackgroundcopyfiles
+              href: ienumbackgroundcopyfiles-.md
+              items:
+                - name: Ienumbackgroundcopyfiles-Methoden
+                  href: ienumbackgroundcopyfiles-methods.md
+                  items:
+                    - name: GetCount-Methode
+                      href: ienumbackgroundcopyfiles-getcount.md
+                    - name: Nächste Methode
+                      href: ienumbackgroundcopyfiles-next.md
+                    - name: Reset-Methode
+                      href: ienumbackgroundcopyfiles-reset.md
+                    - name: Skip-Methode
+                      href: ienumbackgroundcopyfiles-skip.md
+            - name: Idodownload
+              href: ./do/nn-do-idodownload.md
+              items:
+                - name: Abort-Methode
+                  href: ./do/nf-do-idodownload-abort.md
+                - name: Finalize-Methode
+                  href: ./do/nf-do-idodownload-finalize.md
+                - name: GetProperty-Methode
+                  href: ./do/nf-do-idodownload-getproperty.md
+                - name: GetStatus-Methode
+                  href: ./do/nf-do-idodownload-getstatus.md
+                - name: Pause-Methode
+                  href: ./do/nf-do-idodownload-pause.md
+                - name: SetProperty-Methode
+                  href: ./do/nf-do-idodownload-setproperty.md
+                - name: Start-Methode
+                  href: ./do/nf-do-idodownload-start.md
+            - name: Idodownloadinternal
+              href: ./dodownloadinternal/nn-dodownloadinternal-idodownloadinternal.md
+              items:
+                - name: Getpropertyex-Methode
+                  href: ./dodownloadinternal/nf-dodownloadinternal-idodownloadinternal-getpropertyex.md
+                - name: Setpropertyex-Methode
+                  href: ./dodownloadinternal/nf-dodownloadinternal-idodownloadinternal-setpropertyex.md
+            - name: Idodownloadstatus Callback
+              href: ./do/nn-do-idodownloadstatuscallback.md
+              items:
+                - name: Onstatuschge-Methode
+                  href: ./do/nf-do-idodownloadstatuscallback-onstatuschanged.md
+            - name: Idomanager
+              href: ./do/nn-do-idomanager.md
+              items:
+                - name: Methode "kreatedownload"
+                  href: ./do/nf-do-idomanager-createdownload.md
+                - name: Enumdownloads-Methode
+                  href: ./do/nf-do-idomanager-enumdownloads.md
+        - name: Rückgabewerte
+          href: do-return-values.md
+        - name: Do-Strukturen und Unions
+          href: do-structures-and-unions.md
+          items:
+            - name: BG_FILE_PROGRESS
+              href: bg-file-progress.md
+            - name: BG_FILE_RANGE
+              href: bg-file-range.md
+            - name: BG_JOB_PROGRESS
+              href: bg-job-progress.md
+            - name: BG_JOB_TIMES
+              href: bg-job-times.md
+            - name: BITS_FILE_PROPERTY_VALUE
+              href: bits-file-property-value.md
+            - name: BITS_JOB_PROPERTY_VALUE
+              href: bits-job-property-value-.md
+            - name: DO_DOWNLOAD_ENUM_CATEGORY
+              href: ./do/ns-do-do_download_enum_category.md
+            - name: DO_DOWNLOAD_RANGE
+              href: ./deliveryoptimizationdownloadtypes/ns-deliveryoptimizationdownloadtypes-do_download_range.md
+            - name: DO_DOWNLOAD_RANGE_INFO
+              href: ./do/ns-do-do_download_range_info.md
+            - name: DO_DOWNLOAD_STATUS
+              href: ./do/ns-do-do_download_status.md
+            - name: Doswarmstats
+              href: doswarmstats.md

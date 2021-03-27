@@ -1,0 +1,43 @@
+---
+description: In diesem Thema werden die FillPie-Methoden der Grafikklasse aufgelistet. Eine umfassende Liste der Methoden für die Grafikklasse finden Sie unter Grafiken.
+ms.assetid: e6de6634-b87f-4fe9-a0d4-ffeea0e0ae8b
+title: Graphics. FillPie-Methoden (gdiplinggraphics. h)
+ms.date: 07/02/2019
+ms.topic: reference
+ms.openlocfilehash: 35f6d24ade375fb524bac71145807680da6e7e28
+ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/22/2021
+ms.locfileid: "104996570"
+---
+# <a name="graphicsfillpie-methods"></a>Graphics. FillPie-Methoden
+
+In diesem Thema werden die FillPie-Methoden der [**Grafik**](/windows/win32/api/gdiplusgraphics/nl-gdiplusgraphics-graphics) Klasse aufgelistet. Eine umfassende Liste der Methoden für die **Grafik** Klasse finden Sie unter [**Grafiken**](/windows/win32/api/gdiplusgraphics/nl-gdiplusgraphics-graphics).
+
+### <a name="overload-list"></a>Überladeliste
+
+
+
+| Methode                                                                                                                                                         | BESCHREIBUNG                                                                                                                                                                                          |
+|:---------------------------------------------------------------------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [**FillPie (Pinsel \* , Rect&, Real, Real)**](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-fillpie(inconstbrush_inconstrect__inreal_inreal))                             | Die [**Graphics:: FillPie**](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-fillpie(inconstbrush_inconstrect__inreal_inreal)) -Methode verwendet einen Pinsel, um das Innere eines Kreises auszufüllen. <br/>               |
+| [**FillPie (Pinsel \* , RectF&, Real, Real)**](/previous-versions//ms535965(v=vs.85))                           | Die [**Graphics:: FillPie**](/previous-versions//ms535965(v=vs.85)) -Methode verwendet einen Pinsel, um das Innere eines Kreises auszufüllen. <br/>              |
+| [**FillPie (Brush \* , int, int, int, int, Real, Real)**](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-fillpie(inconstbrush_inint_inint_inint_inint_inreal_inreal))     | Die [**Graphics:: FillPie**](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-fillpie(inconstbrush_inint_inint_inint_inint_inreal_inreal)) -Methode verwendet einen Pinsel, um das Innere eines Kreises auszufüllen. <br/> |
+| [**FillPie (Pinsel, Real, Real, Real, Real, Real, Real \* )**](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-fillpie(inconstbrush_inreal_inreal_inreal_inreal_inreal_inreal)) | Die [**Graphics:: FillPie**](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-fillpie(inconstbrush_inreal_inreal_inreal_inreal_inreal_inreal)) -Methode verwendet einen Pinsel, um das Innere eines Kreises auszufüllen. <br/> |
+
+
+
+## <a name="requirements"></a>Requirements (Anforderungen)
+
+
+
+| Anforderung | Wert |
+|-------------------|----------------------------------------------------------------------------------------------|
+| Header<br/> | <dl> <dt>Gdipl-Grafik. h</dt> </dl> |
+
+
+
+ 
+
+ 

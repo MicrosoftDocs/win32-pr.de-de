@@ -1,0 +1,657 @@
+- name: Netzwerkverwaltung
+  href: network-management.md
+  items:
+    - name: Neuerungen bei der Netzwerkverwaltung
+      href: what-s-new-in-network-management.md
+    - name: Informationen zur Netzwerkverwaltung
+      href: about-network-management.md
+      items:
+        - name: Netzwerk Verwaltungs Funktionsgruppen
+          href: network-management-function-groups.md
+          items:
+            - name: Benachrichtigungsfunktionen
+              href: alert-functions.md
+            - name: Apibuffer-Funktionen
+              href: apibuffer-functions.md
+            - name: Verzeichnisdienst Funktionen
+              href: directory-service-functions.md
+            - name: Get-Funktionen
+              href: get-functions.md
+            - name: Gruppenfunktionen
+              href: group-functions.md
+            - name: Lokale Gruppenfunktionen
+              href: local-group-functions.md
+            - name: Nachrichtenfunktionen
+              href: message-functions.md
+            - name: Netfile-Funktionen
+              href: netfile-functions.md
+            - name: Remote Utility-Funktionen
+              href: remote-utility-functions.md
+            - name: Zeit Plan Funktionen
+              href: schedule-functions.md
+            - name: Server Funktionen
+              href: server-functions.md
+            - name: Server-und Arbeitsstations Transport-Funktionen
+              href: server-and-workstation-transport-functions.md
+            - name: Sitzungs Funktionen
+              href: session-functions.md
+            - name: Freigabe Funktionen
+              href: share-functions.md
+            - name: Verwenden von Funktionen
+              href: use-functions.md
+            - name: Benutzer Funktionen
+              href: user-functions.md
+            - name: Modale Benutzer Funktionen
+              href: user-modal-functions.md
+            - name: Benutzer Funktionen für Arbeitsstationen und Arbeitsstationen
+              href: workstation-and-workstation-user-functions.md
+        - name: Sicherheitsanforderungen für die Netzwerk Verwaltungsfunktion
+          href: security-requirements-for-the-network-management-functions.md
+          items:
+            - name: Anforderungen an die Netzwerk Verwaltungsfunktionen auf Active Directory-Domäne Controllern
+              href: requirements-for-network-management-functions-on-active-directory-domain-controllers.md
+            - name: Anforderungen an Netzwerk Verwaltungsfunktionen auf Servern und Arbeitsstationen
+              href: requirements-for-network-management-functions-on-servers-and-workstations.md
+        - name: Zuordnung von ADSI-Schnittstellen zu den Netzwerk Verwaltungsfunktionen
+          href: mapping-adsi-interfaces-to-the-network-management-functions.md
+        - name: Netzwerk Verwaltungsdaten
+          href: network-management-data.md
+          items:
+            - name: Puffer der Netzwerk Verwaltungsfunktion
+              href: network-management-function-buffers.md
+            - name: Puffer Längen der Netzwerk Verwaltungsfunktion
+              href: network-management-function-buffer-lengths.md
+            - name: API-Daten Ausrichtung
+              href: api-data-alignment.md
+            - name: Eingebettete Zeichen folgen
+              href: embedded-strings.md
+            - name: Enumerationshandles wieder aufnehmen
+              href: enumeration-resume-handles.md
+            - name: Funktions Status
+              href: function-status.md
+            - name: NLS-Unterstützung
+              href: nls-support.md
+            - name: Parameter Fehlerberichterstattung
+              href: parameter-error-reporting.md
+            - name: RPC-Puffer Zuordnungs Fehler
+              href: rpc-buffer-allocation-errors.md
+            - name: Veraltete Informationsfelder
+              href: obsolete-information-fields.md
+    - name: Verwenden der Netzwerkverwaltung
+      href: using-network-management.md
+      items:
+        - name: Suchen des vollständigen Namens eines Benutzers
+          href: looking-up-a-users-full-name.md
+        - name: 'Erzwingen, dass ein Benutzer das Anmelde Kennwort ändert'
+          href: forcing-a-user-to-change-the-logon-password.md
+        - name: Ändern von Elementen von Benutzerinformationen
+          href: changing-elements-of-user-information.md
+        - name: Erstellen eines neuen Computer Kontos
+          href: creating-a-new-computer-account.md
+        - name: Erstellen einer lokalen Gruppe und Hinzufügen eines Benutzers
+          href: creating-a-local-group-and-adding-a-user.md
+        - name: Suchen von Text nach Fehler Code Nummern
+          href: looking-up-text-for-error-code-numbers.md
+    - name: Referenz zur Netzwerkverwaltung
+      href: network-management-reference.md
+      items:
+        - name: Netzwerkverwaltungs-Enumerationen
+          href: network-management-enumerations.md
+          items:
+            - name: DSREG_JOIN_TYPE
+              href: /windows/win32/api/lmjoin/ne-lmjoin-dsreg_join_type
+        - name: Netzwerk Verwaltungsfunktionen
+          href: network-management-functions.md
+          items:
+            - name: Getnetscheduleaccountinformation
+              href: /windows/desktop/api/AtAcct/nf-atacct-getnetscheduleaccountinformation
+            - name: Netaccessadd
+              href: /windows/desktop/api/lmaccess/nf-lmaccess-netaccessadd
+            - name: Network Access Check
+              href: /previous-versions/windows/desktop/legacy/aa370291(v=vs.85)
+            - name: Netaccessdel
+              href: /windows/desktop/api/lmaccess/nf-lmaccess-netaccessdel
+            - name: Netaccessenum
+              href: /windows/desktop/api/lmaccess/nf-lmaccess-netaccessenum
+            - name: Netaccessgetinfo
+              href: /windows/desktop/api/lmaccess/nf-lmaccess-netaccessgetinfo
+            - name: Netaccessgetuserperms
+              href: /windows/desktop/api/lmaccess/nf-lmaccess-netaccessgetuserperms
+            - name: Netaccesseintinfo
+              href: /windows/desktop/api/lmaccess/nf-lmaccess-netaccesssetinfo
+            - name: Netaddalternativen Computername
+              href: /windows/desktop/api/Lmjoin/nf-lmjoin-netaddalternatecomputername
+            - name: Netzwerkertraise
+              href: /windows/desktop/api/Lmalert/nf-lmalert-netalertraise
+            - name: '"Ntalertraiseex"'
+              href: /windows/desktop/api/Lmalert/nf-lmalert-netalertraiseex
+            - name: '"Ntapibuffer" zuordnen'
+              href: /windows/desktop/api/Lmapibuf/nf-lmapibuf-netapibufferallocate
+            - name: '"Nettapibufferfree"'
+              href: /windows/desktop/api/Lmapibuf/nf-lmapibuf-netapibufferfree
+            - name: '"Nettapibufferrezuordnen"'
+              href: /windows/desktop/api/Lmapibuf/nf-lmapibuf-netapibufferreallocate
+            - name: '"Nettapibuffersize"'
+              href: /windows/desktop/api/Lmapibuf/nf-lmapibuf-netapibuffersize
+            - name: Netauditclear
+              href: netauditclear.md
+            - name: Netauditread
+              href: netauditread.md
+            - name: Netauditwrite
+              href: netauditwrite.md
+            - name: Netconfigget
+              href: netconfigget.md
+            - name: Netconfiggetall
+              href: netconfiggetall.md
+            - name: Netconfigset
+              href: netconfigset.md
+            - name: Netkreateprovisioningpackage
+              href: /windows/desktop/api/Lmjoin/nf-lmjoin-netcreateprovisioningpackage
+            - name: '"Nettenreeratecomputernames"'
+              href: /windows/desktop/api/Lmjoin/nf-lmjoin-netenumeratecomputernames
+            - name: '"Nterrorlogclear"'
+              href: neterrorlogclear.md
+            - name: '"Netterrorlogread"'
+              href: neterrorlogread.md
+            - name: '"Netterrorlogwrite"'
+              href: neterrorlogwrite.md
+            - name: Netfreeaadjoininformation
+              href: /windows/desktop/api/lmjoin/nf-lmjoin-netfreeaadjoininformation
+            - name: Netgetaadjoininformation
+              href: /windows/desktop/api/lmjoin/nf-lmjoin-netgetaadjoininformation
+            - name: Netgetanydcname
+              href: /windows/desktop/api/Lmaccess/nf-lmaccess-netgetanydcname
+            - name: NetGetDCName
+              href: /windows/desktop/api/Lmaccess/nf-lmaccess-netgetdcname
+            - name: Netgetdisplayinformationindex
+              href: /windows/desktop/api/Lmaccess/nf-lmaccess-netgetdisplayinformationindex
+            - name: Netgetjoinableous
+              href: /windows/desktop/api/Lmjoin/nf-lmjoin-netgetjoinableous
+            - name: Netgetjoininformation
+              href: /windows/desktop/api/Lmjoin/nf-lmjoin-netgetjoininformation
+            - name: '"NetGroupAdd"'
+              href: /windows/desktop/api/Lmaccess/nf-lmaccess-netgroupadd
+            - name: Netgroupadduser
+              href: /windows/desktop/api/Lmaccess/nf-lmaccess-netgroupadduser
+            - name: Netgroupdel
+              href: /windows/desktop/api/Lmaccess/nf-lmaccess-netgroupdel
+            - name: Netgroupdelta User
+              href: /windows/desktop/api/Lmaccess/nf-lmaccess-netgroupdeluser
+            - name: Netgroupum
+              href: /windows/desktop/api/Lmaccess/nf-lmaccess-netgroupenum
+            - name: Netgroupgetinfo
+              href: /windows/desktop/api/Lmaccess/nf-lmaccess-netgroupgetinfo
+            - name: Netgroupgetusers
+              href: /windows/desktop/api/Lmaccess/nf-lmaccess-netgroupgetusers
+            - name: Netgroupeintinfo
+              href: /windows/desktop/api/Lmaccess/nf-lmaccess-netgroupsetinfo
+            - name: Netgroupsetusers
+              href: /windows/desktop/api/Lmaccess/nf-lmaccess-netgroupsetusers
+            - name: NetJoinDomain
+              href: /windows/desktop/api/Lmjoin/nf-lmjoin-netjoindomain
+            - name: NetLocalGroupAdd
+              href: /windows/desktop/api/Lmaccess/nf-lmaccess-netlocalgroupadd
+            - name: NetLocalGroupAddMember
+              href: /windows/desktop/api/lmaccess/nf-lmaccess-netlocalgroupaddmember
+            - name: NetLocalGroupAddMembers
+              href: /windows/desktop/api/Lmaccess/nf-lmaccess-netlocalgroupaddmembers
+            - name: NetLocalGroupDel
+              href: /windows/desktop/api/Lmaccess/nf-lmaccess-netlocalgroupdel
+            - name: Netlocalgroupdelta Member
+              href: /windows/desktop/api/lmaccess/nf-lmaccess-netlocalgroupdelmember
+            - name: Netlocalgroupdelta Members
+              href: /windows/desktop/api/Lmaccess/nf-lmaccess-netlocalgroupdelmembers
+            - name: Netlocalgroupum
+              href: /windows/desktop/api/Lmaccess/nf-lmaccess-netlocalgroupenum
+            - name: Netlocalgroupgetinfo
+              href: /windows/desktop/api/Lmaccess/nf-lmaccess-netlocalgroupgetinfo
+            - name: Netlocalgroupgetmembers
+              href: /windows/desktop/api/Lmaccess/nf-lmaccess-netlocalgroupgetmembers
+            - name: Netlocalgroupeintinfo
+              href: /windows/desktop/api/Lmaccess/nf-lmaccess-netlocalgroupsetinfo
+            - name: Netlocalgroupsetmembers
+              href: /windows/desktop/api/Lmaccess/nf-lmaccess-netlocalgroupsetmembers
+            - name: Netmessagebuffersend
+              href: /windows/desktop/api/Lmmsg/nf-lmmsg-netmessagebuffersend
+            - name: Netmessagenameadd
+              href: /windows/desktop/api/Lmmsg/nf-lmmsg-netmessagenameadd
+            - name: Netmessagenamedel
+              href: /windows/desktop/api/Lmmsg/nf-lmmsg-netmessagenamedel
+            - name: Netmessagenameenum
+              href: /windows/desktop/api/Lmmsg/nf-lmmsg-netmessagenameenum
+            - name: Netmessagenamegetinfo
+              href: /windows/desktop/api/Lmmsg/nf-lmmsg-netmessagenamegetinfo
+            - name: NetProvisionComputerAccount
+              href: /windows/desktop/api/Lmjoin/nf-lmjoin-netprovisioncomputeraccount
+            - name: NetQueryDisplayInformation
+              href: /windows/desktop/api/Lmaccess/nf-lmaccess-netquerydisplayinformation
+            - name: '"Nettremuvealternativen Computername"'
+              href: /windows/desktop/api/Lmjoin/nf-lmjoin-netremovealternatecomputername
+            - name: '"Nettremotecomputerunter stützt"'
+              href: /windows/desktop/api/Lmremutl/nf-lmremutl-netremotecomputersupports
+            - name: '"Nettremotetod"'
+              href: /windows/desktop/api/Lmremutl/nf-lmremutl-netremotetod
+            - name: '"Nettrenamemachineindomain"'
+              href: /windows/desktop/api/Lmjoin/nf-lmjoin-netrenamemachineindomain
+            - name: '"Nettrequestofflinedomainjoin"'
+              href: /windows/desktop/api/Lmjoin/nf-lmjoin-netrequestofflinedomainjoin
+            - name: '"Nettrequestprovisioningpackagein Stall"'
+              href: /windows/desktop/api/Lmjoin/nf-lmjoin-netrequestprovisioningpackageinstall
+            - name: NetScheduleJobAdd
+              href: /windows/desktop/api/Lmat/nf-lmat-netschedulejobadd
+            - name: NetScheduleJobDel
+              href: /windows/desktop/api/Lmat/nf-lmat-netschedulejobdel
+            - name: Netschedulejobenum
+              href: /windows/desktop/api/Lmat/nf-lmat-netschedulejobenum
+            - name: Netschedulejobgetinfo
+              href: /windows/desktop/api/Lmat/nf-lmat-netschedulejobgetinfo
+            - name: Netservercomputernameadd
+              href: /windows/desktop/api/Lmserver/nf-lmserver-netservercomputernameadd
+            - name: Netservercomputernamedel
+              href: /windows/desktop/api/Lmserver/nf-lmserver-netservercomputernamedel
+            - name: Netserverdiskerum
+              href: /windows/desktop/api/Lmserver/nf-lmserver-netserverdiskenum
+            - name: NetServerEnum
+              href: /windows/desktop/api/Lmserver/nf-lmserver-netserverenum
+            - name: NetServerGetInfo
+              href: /windows/desktop/api/Lmserver/nf-lmserver-netservergetinfo
+            - name: Netserverabfo
+              href: /windows/desktop/api/Lmserver/nf-lmserver-netserversetinfo
+            - name: Netservertransportadd
+              href: /windows/desktop/api/Lmserver/nf-lmserver-netservertransportadd
+            - name: Netservertransportaddex
+              href: /windows/desktop/api/Lmserver/nf-lmserver-netservertransportaddex
+            - name: Netservertransportdel
+              href: /windows/desktop/api/Lmserver/nf-lmserver-netservertransportdel
+            - name: Netservertransportenum
+              href: /windows/desktop/api/Lmserver/nf-lmserver-netservertransportenum
+            - name: NetServiceControl
+              href: netservicecontrol.md
+            - name: Netserviceaufumum
+              href: netserviceenum.md
+            - name: Netservicegetinfo
+              href: netservicegetinfo.md
+            - name: Netserviceingestall
+              href: netserviceinstall.md
+            - name: Netsetprimarycomputername
+              href: /windows/desktop/api/Lmjoin/nf-lmjoin-netsetprimarycomputername
+            - name: Netunjoindomain
+              href: /windows/desktop/api/Lmjoin/nf-lmjoin-netunjoindomain
+            - name: '"Nettuseadd"'
+              href: /windows/desktop/api/Lmuse/nf-lmuse-netuseadd
+            - name: '"Nettusedel"'
+              href: /windows/desktop/api/Lmuse/nf-lmuse-netusedel
+            - name: '"Nettuseenum"'
+              href: /windows/desktop/api/Lmuse/nf-lmuse-netuseenum
+            - name: '"Nettusegetinfo"'
+              href: /windows/desktop/api/Lmuse/nf-lmuse-netusegetinfo
+            - name: '"Nettuseradd"'
+              href: /windows/desktop/api/Lmaccess/nf-lmaccess-netuseradd
+            - name: '"Nettuserchangepassword"'
+              href: /windows/desktop/api/Lmaccess/nf-lmaccess-netuserchangepassword
+            - name: '"Nettuserdel"'
+              href: /windows/desktop/api/Lmaccess/nf-lmaccess-netuserdel
+            - name: '"Nettuserenum"'
+              href: /windows/desktop/api/Lmaccess/nf-lmaccess-netuserenum
+            - name: '"Nettusergetgroups"'
+              href: /windows/desktop/api/Lmaccess/nf-lmaccess-netusergetgroups
+            - name: '"Nettusergetinfo"'
+              href: /windows/desktop/api/Lmaccess/nf-lmaccess-netusergetinfo
+            - name: '"Nettusergetlocalgroups"'
+              href: /windows/desktop/api/Lmaccess/nf-lmaccess-netusergetlocalgroups
+            - name: '"Nettusermodalsget"'
+              href: /windows/desktop/api/Lmaccess/nf-lmaccess-netusermodalsget
+            - name: '"Nettusermodalsset"'
+              href: /windows/desktop/api/Lmaccess/nf-lmaccess-netusermodalsset
+            - name: '"Nettusersetgroups"'
+              href: /windows/desktop/api/Lmaccess/nf-lmaccess-netusersetgroups
+            - name: '"Nettusersetinfo"'
+              href: /windows/desktop/api/Lmaccess/nf-lmaccess-netusersetinfo
+            - name: Netvalidatename
+              href: /windows/desktop/api/Lmjoin/nf-lmjoin-netvalidatename
+            - name: Netvalidatepasswordpolicyfree
+              href: /windows/desktop/api/Lmaccess/nf-lmaccess-netvalidatepasswordpolicyfree
+            - name: NetValidatePasswordPolicy
+              href: /windows/desktop/api/Lmaccess/nf-lmaccess-netvalidatepasswordpolicy
+            - name: Netwkstagetinfo
+              href: /windows/desktop/api/Lmwksta/nf-lmwksta-netwkstagetinfo
+            - name: Netwkstasetinfo
+              href: /windows/desktop/api/Lmwksta/nf-lmwksta-netwkstasetinfo
+            - name: Netwkstaturansport
+              href: /windows/desktop/api/lmwksta/nf-lmwksta-netwkstatransportadd
+            - name: Netwkstaturansport
+              href: /windows/desktop/api/lmwksta/nf-lmwksta-netwkstatransportdel
+            - name: Netwkstatus-Sportenum
+              href: /windows/desktop/api/Lmwksta/nf-lmwksta-netwkstatransportenum
+            - name: Netwkstauserereration
+              href: /windows/desktop/api/Lmwksta/nf-lmwksta-netwkstauserenum
+            - name: NetWkstaUserGetInfo
+              href: /windows/desktop/api/Lmwksta/nf-lmwksta-netwkstausergetinfo
+            - name: Netwkstauserot
+              href: /windows/desktop/api/Lmwksta/nf-lmwksta-netwkstausersetinfo
+            - name: Setnetscheduleaccountinformation
+              href: /windows/desktop/api/AtAcct/nf-atacct-setnetscheduleaccountinformation
+        - name: Netzwerk Verwaltungsstrukturen
+          href: network-management-structures.md
+          items:
+            - name: ADMIN_OTHER_INFO
+              href: /windows/win32/api/Lmalert/ns-lmalert-admin_other_info
+            - name: AT_ENUM
+              href: /windows/win32/api/Lmat/ns-lmat-at_enum
+            - name: AT_INFO
+              href: /windows/win32/api/Lmat/ns-lmat-at_info
+            - name: DSREG_JOIN_INFO
+              href: /windows/win32/api/lmjoin/ns-lmjoin-dsreg_join_info
+            - name: DSREG_USER_INFO
+              href: /windows/win32/api/lmjoin/ns-lmjoin-dsreg_user_info
+            - name: ERRLOG_OTHER_INFO
+              href: /windows/win32/api/Lmalert/ns-lmalert-errlog_other_info
+            - name: GROUP_INFO_0
+              href: /windows/win32/api/Lmaccess/ns-lmaccess-group_info_0
+            - name: GROUP_INFO_1
+              href: /windows/win32/api/Lmaccess/ns-lmaccess-group_info_1
+            - name: GROUP_INFO_2
+              href: /windows/win32/api/Lmaccess/ns-lmaccess-group_info_2
+            - name: GROUP_INFO_3
+              href: /windows/win32/api/Lmaccess/ns-lmaccess-group_info_3
+            - name: GROUP_INFO_1002
+              href: /windows/win32/api/Lmaccess/ns-lmaccess-group_info_1002
+            - name: GROUP_INFO_1005
+              href: /windows/win32/api/Lmaccess/ns-lmaccess-group_info_1005
+            - name: GROUP_USERS_INFO_0
+              href: /windows/win32/api/Lmaccess/ns-lmaccess-group_users_info_0
+            - name: GROUP_USERS_INFO_1
+              href: /windows/win32/api/Lmaccess/ns-lmaccess-group_users_info_1
+            - name: LOCALGROUP_INFO_0
+              href: /windows/win32/api/Lmaccess/ns-lmaccess-localgroup_info_0
+            - name: LOCALGROUP_INFO_1
+              href: /windows/win32/api/Lmaccess/ns-lmaccess-localgroup_info_1
+            - name: LOCALGROUP_INFO_1002
+              href: /windows/win32/api/Lmaccess/ns-lmaccess-localgroup_info_1002
+            - name: LOCALGROUP_MEMBERS_INFO_0
+              href: /windows/win32/api/Lmaccess/ns-lmaccess-localgroup_members_info_0
+            - name: LOCALGROUP_MEMBERS_INFO_1
+              href: /windows/win32/api/Lmaccess/ns-lmaccess-localgroup_members_info_1
+            - name: LOCALGROUP_MEMBERS_INFO_2
+              href: /windows/win32/api/Lmaccess/ns-lmaccess-localgroup_members_info_2
+            - name: LOCALGROUP_MEMBERS_INFO_3
+              href: /windows/win32/api/Lmaccess/ns-lmaccess-localgroup_members_info_3
+            - name: LOCALGROUP_USERS_INFO_0
+              href: /windows/win32/api/Lmaccess/ns-lmaccess-localgroup_users_info_0
+            - name: MSG_INFO_0
+              href: /windows/win32/api/Lmmsg/ns-lmmsg-msg_info_0
+            - name: MSG_INFO_1
+              href: /windows/win32/api/Lmmsg/ns-lmmsg-msg_info_1
+            - name: NET_DISPLAY_GROUP
+              href: /windows/win32/api/Lmaccess/ns-lmaccess-net_display_group
+            - name: NET_DISPLAY_MACHINE
+              href: /windows/win32/api/Lmaccess/ns-lmaccess-net_display_machine
+            - name: NET_DISPLAY_USER
+              href: /windows/win32/api/Lmaccess/ns-lmaccess-net_display_user
+            - name: NET_VALIDATE_AUTHENTICATION_INPUT_ARG
+              href: /windows/win32/api/Lmaccess/ns-lmaccess-net_validate_authentication_input_arg
+            - name: NET_VALIDATE_OUTPUT_ARG
+              href: /windows/win32/api/Lmaccess/ns-lmaccess-net_validate_output_arg
+            - name: NET_VALIDATE_PASSWORD_CHANGE_INPUT_ARG
+              href: /windows/win32/api/Lmaccess/ns-lmaccess-net_validate_password_change_input_arg
+            - name: NET_VALIDATE_PASSWORD_HASH
+              href: /windows/win32/api/Lmaccess/ns-lmaccess-net_validate_password_hash
+            - name: NET_VALIDATE_PASSWORD_RESET_INPUT_ARG
+              href: /windows/win32/api/Lmaccess/ns-lmaccess-net_validate_password_reset_input_arg
+            - name: NET_VALIDATE_PERSISTED_FIELDS
+              href: /windows/win32/api/Lmaccess/ns-lmaccess-net_validate_persisted_fields
+            - name: NETSETUP_PROVISIONING_PARAMS
+              href: /windows/win32/api/Lmjoin/ns-lmjoin-netsetup_provisioning_params
+            - name: IDL-Definitionen im Offline-Domänen Beitritt
+              href: ./odj-idl.md
+            - name: ODJ_BLOB
+              href: ./odj-odj_blob.md
+            - name: ODJ_POLICY_DNS_DOMAIN_INFO
+              href: ./odj-odj_policy_dns_domain_info.md
+            - name: ODJ_PROVISION_DATA
+              href: ./odj-odj_provision_data.md
+            - name: ODJ_SID
+              href: ./odj-odj_sid.md
+            - name: ODJ_SID_IDENTIFIER_AUTHORITY
+              href: ./odj-sid_identifier_authority.md
+            - name: ODJ_UNICODE_STRING
+              href: ./odj-odj_unicode_string.md
+            - name: ODJ_WIN7BLOB
+              href: ./odj-odj_win7blob.md
+            - name: OP_BLOB
+              href: ./odj-op_blob.md
+            - name: OP_CERT_PART
+              href: ./odj-op_cert_part.md
+            - name: OP_CERT_PFX_STORE
+              href: ./odj-op_cert_pfx_store.md
+            - name: OP_CERT_SST_STORE
+              href: ./odj-op_cert_sst_store.md
+            - name: OP_JOIN_PROV2_PART
+              href: ./odj-op_join_prov2_part.md
+            - name: OP_JOIN_PROV3_PART
+              href: ./odj-op_join_prov3_part.md
+            - name: OP_PACKAGE
+              href: ./odj-op_package.md
+            - name: OP_PACKAGE_COLLECTION
+              href: ./odj-op_package_collection.md
+            - name: OP_PACKAGE_PART
+              href: ./odj-op_package_part.md
+            - name: OP_POLICY_ELEMENT
+              href: ./odj-op_policy_element.md
+            - name: OP_POLICY_ELEMENT_LIST
+              href: ./odj-op_policy_element_list.md
+            - name: OP_POLICY_PART
+              href: ./odj-op_policy_part.md
+            - name: PRINT_OTHER_INFO
+              href: /windows/win32/api/Lmalert/ns-lmalert-print_other_info
+            - name: SERVER_INFO_100
+              href: /windows/win32/api/Lmserver/ns-lmserver-server_info_100
+            - name: SERVER_INFO_101
+              href: /windows/win32/api/Lmserver/ns-lmserver-server_info_101
+            - name: SERVER_INFO_102
+              href: /windows/win32/api/Lmserver/ns-lmserver-server_info_102
+            - name: SERVER_INFO_402
+              href: /windows/win32/api/Lmserver/ns-lmserver-server_info_402
+            - name: SERVER_INFO_403
+              href: /windows/win32/api/Lmserver/ns-lmserver-server_info_403
+            - name: SERVER_INFO_502
+              href: /windows/win32/api/Lmserver/ns-lmserver-server_info_502
+            - name: SERVER_INFO_503
+              href: /windows/win32/api/Lmserver/ns-lmserver-server_info_503
+            - name: SERVER_INFO_1005
+              href: /windows/win32/api/Lmserver/ns-lmserver-server_info_1005
+            - name: SERVER_INFO_1010
+              href: /windows/win32/api/Lmserver/ns-lmserver-server_info_1010
+            - name: SERVER_INFO_1016
+              href: /windows/win32/api/Lmserver/ns-lmserver-server_info_1016
+            - name: SERVER_INFO_1017
+              href: /windows/win32/api/Lmserver/ns-lmserver-server_info_1017
+            - name: SERVER_INFO_1018
+              href: /windows/win32/api/Lmserver/ns-lmserver-server_info_1018
+            - name: SERVER_INFO_1107
+              href: /windows/win32/api/Lmserver/ns-lmserver-server_info_1107
+            - name: SERVER_INFO_1501
+              href: /windows/win32/api/Lmserver/ns-lmserver-server_info_1501
+            - name: SERVER_INFO_1502
+              href: /windows/win32/api/Lmserver/ns-lmserver-server_info_1502
+            - name: SERVER_INFO_1503
+              href: /windows/win32/api/Lmserver/ns-lmserver-server_info_1503
+            - name: SERVER_INFO_1506
+              href: /windows/win32/api/Lmserver/ns-lmserver-server_info_1506
+            - name: SERVER_INFO_1509
+              href: /windows/win32/api/Lmserver/ns-lmserver-server_info_1509
+            - name: SERVER_INFO_1510
+              href: /windows/win32/api/Lmserver/ns-lmserver-server_info_1510
+            - name: SERVER_INFO_1511
+              href: /windows/win32/api/Lmserver/ns-lmserver-server_info_1511
+            - name: SERVER_INFO_1512
+              href: /windows/win32/api/Lmserver/ns-lmserver-server_info_1512
+            - name: SERVER_INFO_1513
+              href: /windows/win32/api/Lmserver/ns-lmserver-server_info_1513
+            - name: SERVER_INFO_1515
+              href: /windows/win32/api/Lmserver/ns-lmserver-server_info_1515
+            - name: SERVER_INFO_1516
+              href: /windows/win32/api/Lmserver/ns-lmserver-server_info_1516
+            - name: SERVER_INFO_1518
+              href: /windows/win32/api/Lmserver/ns-lmserver-server_info_1518
+            - name: SERVER_INFO_1523
+              href: /windows/win32/api/Lmserver/ns-lmserver-server_info_1523
+            - name: SERVER_INFO_1528
+              href: /windows/win32/api/Lmserver/ns-lmserver-server_info_1528
+            - name: SERVER_INFO_1529
+              href: /windows/win32/api/Lmserver/ns-lmserver-server_info_1529
+            - name: SERVER_INFO_1530
+              href: /windows/win32/api/Lmserver/ns-lmserver-server_info_1530
+            - name: SERVER_INFO_1533
+              href: /windows/win32/api/Lmserver/ns-lmserver-server_info_1533
+            - name: SERVER_INFO_1536
+              href: /windows/win32/api/Lmserver/ns-lmserver-server_info_1536
+            - name: SERVER_INFO_1538
+              href: /windows/win32/api/Lmserver/ns-lmserver-server_info_1538
+            - name: SERVER_INFO_1539
+              href: /windows/win32/api/Lmserver/ns-lmserver-server_info_1539
+            - name: SERVER_INFO_1540
+              href: /windows/win32/api/Lmserver/ns-lmserver-server_info_1540
+            - name: SERVER_INFO_1541
+              href: /windows/win32/api/Lmserver/ns-lmserver-server_info_1541
+            - name: SERVER_INFO_1542
+              href: /windows/win32/api/Lmserver/ns-lmserver-server_info_1542
+            - name: SERVER_INFO_1544
+              href: /windows/win32/api/Lmserver/ns-lmserver-server_info_1544
+            - name: SERVER_INFO_1550
+              href: /windows/win32/api/Lmserver/ns-lmserver-server_info_1550
+            - name: SERVER_INFO_1552
+              href: /windows/win32/api/Lmserver/ns-lmserver-server_info_1552
+            - name: SERVER_TRANSPORT_INFO_0
+              href: /windows/win32/api/Lmserver/ns-lmserver-server_transport_info_0
+            - name: SERVER_TRANSPORT_INFO_1
+              href: /windows/win32/api/Lmserver/ns-lmserver-server_transport_info_1
+            - name: SERVER_TRANSPORT_INFO_2
+              href: /windows/win32/api/Lmserver/ns-lmserver-server_transport_info_2
+            - name: SERVER_TRANSPORT_INFO_3
+              href: /windows/win32/api/Lmserver/ns-lmserver-server_transport_info_3
+            - name: STD_ALERT
+              href: /windows/win32/api/Lmalert/ns-lmalert-std_alert
+            - name: TIME_OF_DAY_INFO
+              href: /windows/win32/api/Lmremutl/ns-lmremutl-time_of_day_info
+            - name: USE_INFO_0
+              href: /windows/win32/api/Lmuse/ns-lmuse-use_info_0
+            - name: USE_INFO_1
+              href: /windows/win32/api/Lmuse/ns-lmuse-use_info_1
+            - name: USE_INFO_2
+              href: /windows/win32/api/Lmuse/ns-lmuse-use_info_2
+            - name: USE_INFO_3
+              href: /windows/win32/api/Lmuse/ns-lmuse-use_info_3
+            - name: USER_INFO_0
+              href: /windows/win32/api/Lmaccess/ns-lmaccess-user_info_0
+            - name: USER_INFO_1
+              href: /windows/win32/api/Lmaccess/ns-lmaccess-user_info_1
+            - name: USER_INFO_2
+              href: /windows/win32/api/Lmaccess/ns-lmaccess-user_info_2
+            - name: USER_INFO_3
+              href: /windows/win32/api/Lmaccess/ns-lmaccess-user_info_3
+            - name: USER_INFO_4
+              href: /windows/win32/api/Lmaccess/ns-lmaccess-user_info_4
+            - name: USER_INFO_10
+              href: /windows/win32/api/Lmaccess/ns-lmaccess-user_info_10
+            - name: USER_INFO_11
+              href: /windows/win32/api/Lmaccess/ns-lmaccess-user_info_11
+            - name: USER_INFO_20
+              href: /windows/win32/api/Lmaccess/ns-lmaccess-user_info_20
+            - name: USER_INFO_21
+              href: /windows/win32/api/Lmaccess/ns-lmaccess-user_info_21
+            - name: USER_INFO_22
+              href: /windows/win32/api/Lmaccess/ns-lmaccess-user_info_22
+            - name: USER_INFO_23
+              href: /windows/win32/api/Lmaccess/ns-lmaccess-user_info_23
+            - name: USER_INFO_24
+              href: /windows/win32/api/Lmaccess/ns-lmaccess-user_info_24
+            - name: USER_INFO_1003
+              href: /windows/win32/api/Lmaccess/ns-lmaccess-user_info_1003
+            - name: USER_INFO_1005
+              href: /windows/win32/api/Lmaccess/ns-lmaccess-user_info_1005
+            - name: USER_INFO_1006
+              href: /windows/win32/api/Lmaccess/ns-lmaccess-user_info_1006
+            - name: USER_INFO_1007
+              href: /windows/win32/api/Lmaccess/ns-lmaccess-user_info_1007
+            - name: USER_INFO_1008
+              href: /windows/win32/api/Lmaccess/ns-lmaccess-user_info_1008
+            - name: USER_INFO_1009
+              href: /windows/win32/api/Lmaccess/ns-lmaccess-user_info_1009
+            - name: USER_INFO_1010
+              href: /windows/win32/api/Lmaccess/ns-lmaccess-user_info_1010
+            - name: USER_INFO_1011
+              href: /windows/win32/api/Lmaccess/ns-lmaccess-user_info_1011
+            - name: USER_INFO_1012
+              href: /windows/win32/api/Lmaccess/ns-lmaccess-user_info_1012
+            - name: USER_INFO_1013
+              href: /windows/win32/api/Lmaccess/ns-lmaccess-user_info_1013
+            - name: USER_INFO_1014
+              href: /windows/win32/api/Lmaccess/ns-lmaccess-user_info_1014
+            - name: USER_INFO_1017
+              href: /windows/win32/api/Lmaccess/ns-lmaccess-user_info_1017
+            - name: USER_INFO_1018
+              href: /windows/win32/api/Lmaccess/ns-lmaccess-user_info_1018
+            - name: USER_INFO_1020
+              href: /windows/win32/api/Lmaccess/ns-lmaccess-user_info_1020
+            - name: USER_INFO_1023
+              href: /windows/win32/api/Lmaccess/ns-lmaccess-user_info_1023
+            - name: USER_INFO_1024
+              href: /windows/win32/api/Lmaccess/ns-lmaccess-user_info_1024
+            - name: USER_INFO_1025
+              href: /windows/win32/api/Lmaccess/ns-lmaccess-user_info_1025
+            - name: USER_INFO_1051
+              href: /windows/win32/api/Lmaccess/ns-lmaccess-user_info_1051
+            - name: USER_INFO_1052
+              href: /windows/win32/api/Lmaccess/ns-lmaccess-user_info_1052
+            - name: USER_INFO_1053
+              href: /windows/win32/api/Lmaccess/ns-lmaccess-user_info_1053
+            - name: USER_MODALS_INFO_0
+              href: /windows/win32/api/Lmaccess/ns-lmaccess-user_modals_info_0
+            - name: USER_MODALS_INFO_1
+              href: /windows/win32/api/Lmaccess/ns-lmaccess-user_modals_info_1
+            - name: USER_MODALS_INFO_2
+              href: /windows/win32/api/Lmaccess/ns-lmaccess-user_modals_info_2
+            - name: USER_MODALS_INFO_3
+              href: /windows/win32/api/Lmaccess/ns-lmaccess-user_modals_info_3
+            - name: USER_MODALS_INFO_1001
+              href: /windows/win32/api/Lmaccess/ns-lmaccess-user_modals_info_1001
+            - name: USER_MODALS_INFO_1002
+              href: /windows/win32/api/Lmaccess/ns-lmaccess-user_modals_info_1002
+            - name: USER_MODALS_INFO_1003
+              href: /windows/win32/api/Lmaccess/ns-lmaccess-user_modals_info_1003
+            - name: USER_MODALS_INFO_1004
+              href: /windows/win32/api/Lmaccess/ns-lmaccess-user_modals_info_1004
+            - name: USER_MODALS_INFO_1005
+              href: /windows/win32/api/Lmaccess/ns-lmaccess-user_modals_info_1005
+            - name: USER_MODALS_INFO_1006
+              href: /windows/win32/api/Lmaccess/ns-lmaccess-user_modals_info_1006
+            - name: USER_MODALS_INFO_1007
+              href: /windows/win32/api/Lmaccess/ns-lmaccess-user_modals_info_1007
+            - name: USER_OTHER_INFO
+              href: /windows/win32/api/Lmalert/ns-lmalert-user_other_info
+            - name: WKSTA_INFO_100
+              href: /windows/win32/api/Lmwksta/ns-lmwksta-wksta_info_100
+            - name: WKSTA_INFO_101
+              href: /windows/win32/api/Lmwksta/ns-lmwksta-wksta_info_101
+            - name: WKSTA_INFO_102
+              href: /windows/win32/api/Lmwksta/ns-lmwksta-wksta_info_102
+            - name: WKSTA_INFO_502
+              href: /windows/win32/api/Lmwksta/ns-lmwksta-wksta_info_502
+            - name: WKSTA_TRANSPORT_INFO_0
+              href: /windows/win32/api/Lmwksta/ns-lmwksta-wksta_transport_info_0
+            - name: WKSTA_USER_INFO_0
+              href: /windows/win32/api/Lmwksta/ns-lmwksta-wksta_user_info_0
+            - name: WKSTA_USER_INFO_1
+              href: /windows/win32/api/Lmwksta/ns-lmwksta-wksta_user_info_1
+            - name: WKSTA_USER_INFO_1101
+              href: /windows/win32/api/Lmwksta/ns-lmwksta-wksta_user_info_1101
+        - name: Netzwerk Verwaltungs Makros
+          href: network-management-macros.md
+          items:
+            - name: ALERT_OTHER_INFO
+              href: /windows/desktop/api/Lmalert/nf-lmalert-alert_other_info
+            - name: ALERT_VAR_DATA
+              href: /windows/desktop/api/Lmalert/nf-lmalert-alert_var_data
+        - name: Fehler Codes der Netzwerkverwaltung
+          href: network-management-error-codes.md
