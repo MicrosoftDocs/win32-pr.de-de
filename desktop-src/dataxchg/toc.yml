@@ -1,0 +1,358 @@
+- name: Datenaustausch
+  href: data-exchange.md
+  items:
+    - name: Zwischenablage
+      href: clipboard.md
+      items:
+        - name: Zwischenablage Übersichten
+          href: clipboard-overviews.md
+          items:
+            - name: Informationen zur Zwischenablage
+              href: about-the-clipboard.md
+            - name: Zwischenablage Formate
+              href: clipboard-formats.md
+            - name: HTML-Zwischenablage Format
+              href: html-clipboard-format.md
+            - name: Zwischenablage Vorgänge
+              href: clipboard-operations.md
+            - name: Verwenden der Zwischenablage
+              href: using-the-clipboard.md
+        - name: Zwischenablage Verweis
+          href: clipboard-reference.md
+          items:
+            - name: Zwischenablage Funktionen
+              href: clipboard-functions.md
+              items:
+                - name: Addclipboardformatlistener
+                  href: /windows/desktop/api/Winuser/nf-winuser-addclipboardformatlistener
+                - name: Changeclipboardchain
+                  href: /windows/desktop/api/Winuser/nf-winuser-changeclipboardchain
+                - name: CloseClipboard
+                  href: /windows/desktop/api/Winuser/nf-winuser-closeclipboard
+                - name: Countryclipboardformats
+                  href: /windows/desktop/api/Winuser/nf-winuser-countclipboardformats
+                - name: EmptyClipboard
+                  href: /windows/desktop/api/Winuser/nf-winuser-emptyclipboard
+                - name: Enumclipboardformats
+                  href: /windows/desktop/api/Winuser/nf-winuser-enumclipboardformats
+                - name: GetClipboardData
+                  href: /windows/desktop/api/Winuser/nf-winuser-getclipboarddata
+                - name: Getclipboardformatname
+                  href: /windows/desktop/api/Winuser/nf-winuser-getclipboardformatnamea
+                - name: Getclipboardowner
+                  href: /windows/desktop/api/Winuser/nf-winuser-getclipboardowner
+                - name: Getclipboardsequencenumschlag
+                  href: /windows/desktop/api/Winuser/nf-winuser-getclipboardsequencenumber
+                - name: Getclipboardviewer
+                  href: /windows/desktop/api/Winuser/nf-winuser-getclipboardviewer
+                - name: Getopenclipboardwindow
+                  href: /windows/desktop/api/Winuser/nf-winuser-getopenclipboardwindow
+                - name: Getpriorityclipboardformat
+                  href: /windows/desktop/api/Winuser/nf-winuser-getpriorityclipboardformat
+                - name: Getupdatedclipboardformats
+                  href: /windows/desktop/api/Winuser/nf-winuser-getupdatedclipboardformats
+                - name: Isclipboardformatavailable
+                  href: /windows/desktop/api/Winuser/nf-winuser-isclipboardformatavailable
+                - name: OpenClipboard
+                  href: /windows/desktop/api/Winuser/nf-winuser-openclipboard
+                - name: RegisterClipboardFormat
+                  href: /windows/desktop/api/Winuser/nf-winuser-registerclipboardformata
+                - name: Removeclipboardformatlistener
+                  href: /windows/desktop/api/Winuser/nf-winuser-removeclipboardformatlistener
+                - name: SetClipboardData
+                  href: /windows/desktop/api/Winuser/nf-winuser-setclipboarddata
+                - name: Setclipboardviewer
+                  href: /windows/desktop/api/Winuser/nf-winuser-setclipboardviewer
+            - name: Zwischenablage Nachrichten
+              href: clipboard-messages.md
+              items:
+                - name: WM_CLEAR
+                  href: wm-clear.md
+                - name: WM_COPY
+                  href: wm-copy.md
+                - name: WM_CUT
+                  href: wm-cut.md
+                - name: WM_PASTE
+                  href: wm-paste.md
+            - name: Zwischenablage Benachrichtigungen
+              href: clipboard-notifications.md
+              items:
+                - name: WM_ASKCBFORMATNAME
+                  href: wm-askcbformatname.md
+                - name: WM_CHANGECBCHAIN
+                  href: wm-changecbchain.md
+                - name: WM_CLIPBOARDUPDATE
+                  href: wm-clipboardupdate.md
+                - name: WM_DESTROYCLIPBOARD
+                  href: wm-destroyclipboard.md
+                - name: WM_DRAWCLIPBOARD
+                  href: wm-drawclipboard.md
+                - name: WM_HSCROLLCLIPBOARD
+                  href: wm-hscrollclipboard.md
+                - name: WM_PAINTCLIPBOARD
+                  href: wm-paintclipboard.md
+                - name: WM_RENDERALLFORMATS
+                  href: wm-renderallformats.md
+                - name: WM_RENDERFORMAT
+                  href: wm-renderformat.md
+                - name: WM_SIZECLIPBOARD
+                  href: wm-sizeclipboard.md
+                - name: WM_VSCROLLCLIPBOARD
+                  href: wm-vscrollclipboard.md
+            - name: Zwischenablage Strukturen
+              href: clipboard-structures.md
+              items:
+                - name: MetafilePict
+                  href: /windows/win32/api/Wingdi/ns-wingdi-metafilepict
+            - name: Standard Formate für Zwischenablage
+              href: standard-clipboard-formats.md
+    - name: Datenkopie
+      href: data-copy.md
+      items:
+        - name: Verwenden der Datenkopie
+          href: using-data-copy.md
+        - name: Verweis zum Kopieren von Daten
+          href: data-copy-reference.md
+          items:
+            - name: WM_COPYDATA
+              href: wm-copydata.md
+            - name: Copydatastruct
+              href: /windows/win32/api/Winuser/ns-winuser-copydatastruct
+    - name: Dynamischer Datenaustausch (DDE)
+      href: dynamic-data-exchange.md
+      items:
+        - name: DDE-Übersichten
+          href: dynamic-data-exchange-overviews.md
+          items:
+            - name: Informationen zu dynamischer Datenaustausch
+              href: about-dynamic-data-exchange.md
+            - name: Informationen zu Atom-Tabellen
+              href: about-atom-tables.md
+            - name: Verwenden von dynamischer Datenaustausch
+              href: using-dynamic-data-exchange.md
+        - name: DDE-Referenz
+          href: dynamic-data-exchange-reference.md
+          items:
+            - name: DDE-Funktionen
+              href: dynamic-data-exchange-functions.md
+              items:
+                - name: Ddesetqualityofservice
+                  href: /windows/desktop/api/Dde/nf-dde-ddesetqualityofservice
+                - name: Freeddelta param
+                  href: /windows/desktop/api/Dde/nf-dde-freeddelparam
+                - name: Identitätsnachweis für Identitätswechsel
+                  href: /windows/desktop/api/Dde/nf-dde-impersonateddeclientwindow
+                - name: Packddelta param
+                  href: /windows/desktop/api/Dde/nf-dde-packddelparam
+                - name: Reuseddelta param
+                  href: /windows/desktop/api/Dde/nf-dde-reuseddelparam
+                - name: Unpackddelta param
+                  href: /windows/desktop/api/Dde/nf-dde-unpackddelparam
+            - name: DDE-Nachrichten
+              href: dynamic-data-exchange-messages.md
+              items:
+                - name: WM_DDE_INITIATE
+                  href: wm-dde-initiate.md
+            - name: DDE-Benachrichtigungen
+              href: dynamic-data-exchange-notifications.md
+              items:
+                - name: WM_DDE_ACK
+                  href: wm-dde-ack.md
+                - name: WM_DDE_ADVISE
+                  href: wm-dde-advise.md
+                - name: WM_DDE_DATA
+                  href: wm-dde-data.md
+                - name: WM_DDE_EXECUTE
+                  href: wm-dde-execute.md
+                - name: WM_DDE_POKE
+                  href: wm-dde-poke.md
+                - name: WM_DDE_REQUEST
+                  href: wm-dde-request.md
+                - name: WM_DDE_TERMINATE
+                  href: wm-dde-terminate.md
+                - name: WM_DDE_UNADVISE
+                  href: wm-dde-unadvise.md
+            - name: DDE-Strukturen
+              href: dynamic-data-exchange-structures.md
+              items:
+                - name: DDE ACK
+                  href: /windows/desktop/api/Dde/ns-dde-ddeack
+                - name: DDE-Empfehlung
+                  href: /windows/desktop/api/Dde/ns-dde-ddeadvise
+                - name: DDE-Daten
+                  href: /windows/desktop/api/Dde/ns-dde-ddedata
+                - name: DDE Poke
+                  href: /windows/desktop/api/Dde/ns-dde-ddepoke
+                - name: Hszpair
+                  href: /windows/win32/api/Ddeml/ns-ddeml-hszpair
+        - name: Atom-Verweis
+          href: atoms-reference.md
+          items:
+            - name: Atom-Funktionen
+              href: atoms-functions.md
+              items:
+                - name: Addatom
+                  href: /windows/desktop/api/Winbase/nf-winbase-addatomw
+                - name: Deleteatom
+                  href: /windows/desktop/api/Winbase/nf-winbase-deleteatom
+                - name: Findatom
+                  href: /windows/desktop/api/Winbase/nf-winbase-findatoma
+                - name: Getatomname
+                  href: /windows/desktop/api/Winbase/nf-winbase-getatomnamea
+                - name: Globaladdatom
+                  href: /windows/desktop/api/Winbase/nf-winbase-globaladdatoma
+                - name: Globaladdatomex
+                  href: /windows/desktop/api/winbase/nf-winbase-globaladdatomexa
+                - name: Globaldeleteatom
+                  href: /windows/desktop/api/Winbase/nf-winbase-globaldeleteatom
+                - name: Globalfindatom
+                  href: /windows/desktop/api/Winbase/nf-winbase-globalfindatoma
+                - name: Globalgetatomname
+                  href: /windows/desktop/api/Winbase/nf-winbase-globalgetatomnamea
+                - name: Initatomtable
+                  href: /windows/desktop/api/Winbase/nf-winbase-initatomtable
+            - name: Atom-Makros
+              href: atoms-macros.md
+              items:
+                - name: Makeintatom
+                  href: /windows/desktop/api/Winbase/nf-winbase-makeintatom
+    - name: Dynamischer Datenaustausch-Verwaltungs Bibliothek (Ddeml)
+      href: dynamic-data-exchange-management-library.md
+      items:
+        - name: Ddeml-Übersichten
+          href: dynamic-data-exchange-management-library-overviews.md
+          items:
+            - name: Informationen zur Ddeml
+              href: about-the-ddeml.md
+            - name: Grundlegende Konzepte
+              href: basic-concepts.md
+            - name: Konversations Verwaltung
+              href: conversation-management.md
+            - name: Datenverwaltung
+              href: data-management.md
+            - name: Überwachen von Anwendungen
+              href: monitoring-applications.md
+            - name: Namensdienst
+              href: name-service.md
+            - name: Transaktionsverwaltung
+              href: transaction-management.md
+        - name: Ddeml-Verweis
+          href: dynamic-data-exchange-management-library-reference.md
+          items:
+            - name: Ddeml-Funktionen
+              href: dynamic-data-exchange-management-library-functions.md
+              items:
+                - name: DDE abandontransaction
+                  href: /windows/desktop/api/Ddeml/nf-ddeml-ddeabandontransaction
+                - name: DDE Access Data
+                  href: /windows/desktop/api/Ddeml/nf-ddeml-ddeaccessdata
+                - name: Ddeadddata
+                  href: /windows/desktop/api/Ddeml/nf-ddeml-ddeadddata
+                - name: DDE Callback
+                  href: /windows/desktop/api/ddeml/nc-ddeml-pfncallback
+                - name: DDE clienttransaction
+                  href: /windows/desktop/api/Ddeml/nf-ddeml-ddeclienttransaction
+                - name: Ddecmpstringhandles
+                  href: /windows/desktop/api/Ddeml/nf-ddeml-ddecmpstringhandles
+                - name: DDE Connect
+                  href: /windows/desktop/api/Ddeml/nf-ddeml-ddeconnect
+                - name: DDE ConnectList
+                  href: /windows/desktop/api/Ddeml/nf-ddeml-ddeconnectlist
+                - name: Ddecreatedatahandle
+                  href: /windows/desktop/api/Ddeml/nf-ddeml-ddecreatedatahandle
+                - name: Ddecreatestringhandle
+                  href: /windows/desktop/api/Ddeml/nf-ddeml-ddecreatestringhandlea
+                - name: DDE Disconnect
+                  href: /windows/desktop/api/Ddeml/nf-ddeml-ddedisconnect
+                - name: DDE disconnectlist
+                  href: /windows/desktop/api/Ddeml/nf-ddeml-ddedisconnectlist
+                - name: DDE enablecallback
+                  href: /windows/desktop/api/Ddeml/nf-ddeml-ddeenablecallback
+                - name: Dtofredatahandle
+                  href: /windows/desktop/api/Ddeml/nf-ddeml-ddefreedatahandle
+                - name: DDE-frestringhandle
+                  href: /windows/desktop/api/Ddeml/nf-ddeml-ddefreestringhandle
+                - name: DDE GetData
+                  href: /windows/desktop/api/Ddeml/nf-ddeml-ddegetdata
+                - name: DDE GetLastError
+                  href: /windows/desktop/api/Ddeml/nf-ddeml-ddegetlasterror
+                - name: DdeImpersonateClient
+                  href: /windows/desktop/api/Ddeml/nf-ddeml-ddeimpersonateclient
+                - name: DDEInitialize
+                  href: /windows/desktop/api/Ddeml/nf-ddeml-ddeinitializea
+                - name: DDE keepstringhandle
+                  href: /windows/desktop/api/Ddeml/nf-ddeml-ddekeepstringhandle
+                - name: DDENameService
+                  href: /windows/desktop/api/Ddeml/nf-ddeml-ddenameservice
+                - name: DDE postadvise
+                  href: /windows/desktop/api/Ddeml/nf-ddeml-ddepostadvise
+                - name: Dabqueryüberzeugungs Info
+                  href: /windows/desktop/api/Ddeml/nf-ddeml-ddequeryconvinfo
+                - name: DDE querynextserver
+                  href: /windows/desktop/api/Ddeml/nf-ddeml-ddequerynextserver
+                - name: Dabquerystring
+                  href: /windows/desktop/api/Ddeml/nf-ddeml-ddequerystringa
+                - name: Ddereconnetct
+                  href: /windows/desktop/api/Ddeml/nf-ddeml-ddereconnect
+                - name: Dabsetuserhandle
+                  href: /windows/desktop/api/Ddeml/nf-ddeml-ddesetuserhandle
+                - name: Ddecounaccessdata
+                  href: /windows/desktop/api/Ddeml/nf-ddeml-ddeunaccessdata
+                - name: DDE-Initialisierung
+                  href: /windows/desktop/api/Ddeml/nf-ddeml-ddeuninitialize
+            - name: Ddeml-Transaktionen
+              href: dynamic-data-exchange-management-library-transactions.md
+              items:
+                - name: XTYP_ADVDATA
+                  href: xtyp-advdata.md
+                - name: XTYP_ADVREQ
+                  href: xtyp-advreq.md
+                - name: XTYP_ADVSTART
+                  href: xtyp-advstart.md
+                - name: XTYP_ADVSTOP
+                  href: xtyp-advstop.md
+                - name: XTYP_CONNECT
+                  href: xtyp-connect.md
+                - name: XTYP_CONNECT_CONFIRM
+                  href: xtyp-connect-confirm.md
+                - name: XTYP_DISCONNECT
+                  href: xtyp-disconnect.md
+                - name: XTYP_ERROR
+                  href: xtyp-error.md
+                - name: XTYP_EXECUTE
+                  href: xtyp-execute.md
+                - name: XTYP_MONITOR
+                  href: xtyp-monitor.md
+                - name: XTYP_POKE
+                  href: xtyp-poke.md
+                - name: XTYP_REGISTER
+                  href: xtyp-register.md
+                - name: XTYP_REQUEST
+                  href: xtyp-request.md
+                - name: XTYP_UNREGISTER
+                  href: xtyp-unregister.md
+                - name: XTYP_WILDCONNECT
+                  href: xtyp-wildconnect.md
+                - name: XTYP_XACT_COMPLETE
+                  href: xtyp-xact-complete.md
+            - name: Ddeml-Strukturen
+              href: dynamic-data-exchange-management-library-structures.md
+              items:
+                - name: Konvcontext
+                  href: /windows/win32/api/Ddeml/ns-ddeml-convcontext
+                - name: Überzeugend
+                  href: /windows/win32/api/Ddeml/ns-ddeml-convinfo
+                - name: DDEML_MSG_HOOK_DATA
+                  href: /windows/win32/api/Ddeml/ns-ddeml-ddeml_msg_hook_data
+                - name: Moncbstruct
+                  href: /windows/win32/api/Ddeml/ns-ddeml-moncbstruct
+                - name: Mon-vstruct
+                  href: /windows/win32/api/Ddeml/ns-ddeml-monconvstruct
+                - name: Monerrstruct
+                  href: /windows/win32/api/Ddeml/ns-ddeml-monerrstruct
+                - name: Monhszstruct
+                  href: /windows/win32/api/Ddeml/ns-ddeml-monhszstructa
+                - name: Monlinkstruct
+                  href: /windows/win32/api/Ddeml/ns-ddeml-monlinkstruct
+                - name: Monmsgstruct
+                  href: /windows/win32/api/Ddeml/ns-ddeml-monmsgstruct

@@ -1,0 +1,60 @@
+- name: Verwenden der Windows-Header
+  href: using-the-windows-headers.md
+  items:
+    - name: Header Anmerkungen
+      href: header-annotations.md
+    - name: Strikte Typüberprüfung
+      href: strict-type-checking.md
+      items:
+        - name: Aktivieren von Strict
+          href: enabling-strict.md
+        - name: Deaktivieren von Strict
+          href: disabling-strict.md
+        - name: Strikte Konformität
+          href: strict-compliance.md
+    - name: Windows-Datentypen
+      href: windows-data-types.md
+      items:
+        - name: Große ganze Zahlen
+          href: large-integers.md
+          items:
+            - name: Große ganzzahlige Funktionen
+              href: large-integer-functions.md
+              items:
+                - name: Int32x32To64
+                  href: /windows/desktop/api/Winnt/nf-winnt-int32x32to64
+                - name: Int64ShllMod32
+                  href: /windows/desktop/api/Winnt/nf-winnt-int64shllmod32
+                - name: Int64ShraMod32
+                  href: /windows/desktop/api/Winnt/nf-winnt-int64shramod32
+                - name: Int64ShrlMod32
+                  href: /windows/desktop/api/Winnt/nf-winnt-int64shrlmod32
+                - name: Muldiv
+                  href: /windows/desktop/api/Winbase/nf-winbase-muldiv
+                - name: Multiply128
+                  href: /windows/desktop/api/Winnt/nf-winnt-multiply128
+                - name: MultiplyExtract128
+                  href: /windows/desktop/api/Winnt/nf-winnt-multiplyextract128
+                - name: Multiplyhigh
+                  href: /windows/desktop/api/Winnt/nf-winnt-multiplyhigh
+                - name: PopulationCount64
+                  href: /windows/desktop/api/Winnt/nf-winnt-populationcount64
+                - name: ShiftLeft128
+                  href: /windows/desktop/api/winnt/nf-winnt-shiftleft128
+                - name: ShiftRight128
+                  href: /windows/desktop/api/winnt/nf-winnt-shiftright128
+                - name: UInt32x32To64
+                  href: /windows/desktop/api/Winnt/nf-winnt-uint32x32to64
+                - name: UnsignedMultiply128
+                  href: /windows/desktop/api/Winnt/nf-winnt-unsignedmultiply128
+                - name: UnsignedMultiplyExtract128
+                  href: /windows/desktop/api/Winnt/nf-winnt-unsignedmultiplyextract128
+                - name: Unsignedmulitplyhigh
+                  href: /windows/desktop/api/Winnt/nf-winnt-unsignedmultiplyhigh
+            - name: Large Integer-Strukturen
+              href: large-integer-structures.md
+              items:
+                - name: LARGE_INTEGER
+                  href: /windows/win32/api/winnt/ns-winnt-large_integer-r1
+                - name: ULARGE_INTEGER
+                  href: /windows/win32/api/winnt/ns-winnt-ularge_integer~r1
