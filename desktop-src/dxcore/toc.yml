@@ -1,0 +1,101 @@
+- name: DXCore
+  href: dxcore.md
+  items:
+    - name: DXCore-Programmieranleitung
+      href: dxcore-programming-guide.md
+      items:
+        - name: Verwenden von DXCore zum Auflisten von Adaptern
+          href: dxcore-enum-adapters.md
+        - name: Minimale DXCore-Anwendung
+          href: dxcore-source-code.md
+    - name: DXCore-Referenz
+      href: dxcore-reference.md
+      items:
+        - name: DXCore-Adapterattribut-GUIDs
+          href: dxcore-adapter-attribute-guids.md
+        - name: DXCore-Rückrufe
+          href: dxcore-callbacks.md
+          items:
+            - name: PFN_DXCORE_NOTIFICATION_CALLBACK
+              href: ./dxcore_interface/nc-dxcore_interface-pfn_dxcore_notification_callback.md
+        - name: DXCore-Enumerationen
+          href: dxcore-enumerations.md
+          items:
+            - name: DXCoreAdapterPreference
+              href: ./dxcore_interface/ne-dxcore_interface-dxcoreadapterpreference.md
+            - name: 'DXCoreAdapterProperty '
+              href: ./dxcore_interface/ne-dxcore_interface-dxcoreadapterproperty.md
+            - name: DXCoreAdapterState
+              href: ./dxcore_interface/ne-dxcore_interface-dxcoreadapterstate.md
+            - name: DXCoreNotificationType
+              href: ./dxcore_interface/ne-dxcore_interface-dxcorenotificationtype.md
+            - name: DXCoreSegmentGroup
+              href: ./dxcore_interface/ne-dxcore_interface-dxcoresegmentgroup.md
+        - name: DXCore-Funktionen
+          href: dxcore-functions.md
+          items:
+            - name: DXCoreCreateAdapterFactory
+              href: ./dxcore/nf-dxcore-dxcorecreateadapterfactory.md
+        - name: DXCore-Schnittstellen
+          href: dxcore-interfaces.md
+          items:
+            - name: IDXCoreAdapter
+              href: ./dxcore_interface/nn-dxcore_interface-idxcoreadapter.md
+              items:
+                - name: GetFactory
+                  href: ./dxcore_interface/nf-dxcore_interface-idxcoreadapter-getfactory.md
+                - name: GetProperty
+                  href: ./dxcore_interface/nf-dxcore_interface-idxcoreadapter-getproperty.md
+                - name: Getpropertysize
+                  href: ./dxcore_interface/nf-dxcore_interface-idxcoreadapter-getpropertysize.md
+                - name: Isattributesupportiert
+                  href: ./dxcore_interface/nf-dxcore_interface-idxcoreadapter-isattributesupported.md
+                - name: Ispropertysupported
+                  href: ./dxcore_interface/nf-dxcore_interface-idxcoreadapter-ispropertysupported.md
+                - name: Isquerystaatupportiert
+                  href: ./dxcore_interface/nf-dxcore_interface-idxcoreadapter-isquerystatesupported.md
+                - name: Issetstaatupportiert
+                  href: ./dxcore_interface/nf-dxcore_interface-idxcoreadapter-issetstatesupported.md
+                - name: IsValid
+                  href: ./dxcore_interface/nf-dxcore_interface-idxcoreadapter-isvalid.md
+                - name: QueryState
+                  href: ./dxcore_interface/nf-dxcore_interface-idxcoreadapter-querystate.md
+                - name: SetState
+                  href: ./dxcore_interface/nf-dxcore_interface-idxcoreadapter-setstate.md
+            - name: IDXCoreAdapterFactory
+              href: ./dxcore_interface/nn-dxcore_interface-idxcoreadapterfactory.md
+              items:
+                - name: '"Kreateadapterlist"'
+                  href: ./dxcore_interface/nf-dxcore_interface-idxcoreadapterfactory-createadapterlist.md
+                - name: Getadapterbyluid
+                  href: ./dxcore_interface/nf-dxcore_interface-idxcoreadapterfactory-getadapterbyluid.md
+                - name: Isnotificationtypesupportiert
+                  href: ./dxcore_interface/nf-dxcore_interface-idxcoreadapterfactory-isnotificationtypesupported.md
+                - name: Registereventnotification
+                  href: ./dxcore_interface/nf-dxcore_interface-idxcoreadapterfactory-registereventnotification.md
+                - name: Unregistereventnotification
+                  href: ./dxcore_interface/nf-dxcore_interface-idxcoreadapterfactory-unregistereventnotification.md
+            - name: IDXCoreAdapterList
+              href: ./dxcore_interface/nn-dxcore_interface-idxcoreadapterlist.md
+              items:
+                - name: GetAdapter
+                  href: ./dxcore_interface/nf-dxcore_interface-idxcoreadapterlist-getadapter.md
+                - name: Getadaptercount
+                  href: ./dxcore_interface/nf-dxcore_interface-idxcoreadapterlist-getadaptercount.md
+                - name: GetFactory
+                  href: ./dxcore_interface/nf-dxcore_interface-idxcoreadapterlist-getfactory.md
+                - name: Isadapterpreferkocesupportiert
+                  href: ./dxcore_interface/nf-dxcore_interface-idxcoreadapterlist-isadapterpreferencesupported.md
+                - name: Isstale
+                  href: ./dxcore_interface/nf-dxcore_interface-idxcoreadapterlist-isstale.md
+                - name: Sortieren
+                  href: ./dxcore_interface/nf-dxcore_interface-idxcoreadapterlist-sort.md
+        - name: DXCore-Strukturen
+          href: dxcore-structures.md
+          items:
+            - name: DXCoreAdapterMemoryBudget
+              href: ./dxcore_interface/ns-dxcore_interface-dxcoreadaptermemorybudget.md
+            - name: DXCoreAdapterMemoryBudgetNodeSegmentGroup
+              href: ./dxcore_interface/ns-dxcore_interface-dxcoreadaptermemorybudgetnodesegmentgroup.md
+            - name: DXCoreHardwareID
+              href: ./dxcore_interface/ns-dxcore_interface-dxcorehardwareid.md

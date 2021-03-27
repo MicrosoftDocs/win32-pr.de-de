@@ -1,0 +1,33 @@
+---
+description: In diesem Thema werden die FillEllipse-Methoden der Grafikklasse aufgelistet. Eine umfassende Liste der Methoden für die Grafikklasse finden Sie unter Grafiken.
+ms.assetid: 92f6f3ca-337b-4f57-9472-2dc677550b39
+title: Graphics. FillEllipse-Methoden
+ms.date: 07/02/2019
+ms.topic: reference
+ms.openlocfilehash: 59187f9dd3e58f3e99d1892e08d1107a7c5261f2
+ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "104131401"
+---
+# <a name="graphicsfillellipse-methods"></a><span data-ttu-id="b148d-104">Graphics. FillEllipse-Methoden</span><span class="sxs-lookup"><span data-stu-id="b148d-104">Graphics.FillEllipse methods</span></span>
+
+<span data-ttu-id="b148d-105">In diesem Thema werden die FillEllipse-Methoden der [**Grafik**](/windows/win32/api/gdiplusgraphics/nl-gdiplusgraphics-graphics) Klasse aufgelistet.</span><span class="sxs-lookup"><span data-stu-id="b148d-105">This topic lists the FillEllipse methods of the [**Graphics**](/windows/win32/api/gdiplusgraphics/nl-gdiplusgraphics-graphics) class.</span></span> <span data-ttu-id="b148d-106">Eine umfassende Liste der Methoden für die **Grafik** Klasse finden Sie unter [**Grafiken**](/windows/win32/api/gdiplusgraphics/nl-gdiplusgraphics-graphics).</span><span class="sxs-lookup"><span data-stu-id="b148d-106">For a complete list of methods for the **Graphics** class, see [**Graphics**](/windows/win32/api/gdiplusgraphics/nl-gdiplusgraphics-graphics).</span></span>
+
+### <a name="overload-list"></a><span data-ttu-id="b148d-107">Überladeliste</span><span class="sxs-lookup"><span data-stu-id="b148d-107">Overload list</span></span>
+
+
+
+| <span data-ttu-id="b148d-108">Methode</span><span class="sxs-lookup"><span data-stu-id="b148d-108">Method</span></span>                                                                                                                                    | <span data-ttu-id="b148d-109">BESCHREIBUNG</span><span class="sxs-lookup"><span data-stu-id="b148d-109">Description</span></span>                                                                                                                                                                                                                                   |
+|:------------------------------------------------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| <span data-ttu-id="b148d-110">[**FillEllipse (Pinsel \* , Rect&)**](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-fillellipse(inconstbrush_inconstrect_))</span><span class="sxs-lookup"><span data-stu-id="b148d-110">[**FillEllipse(Brush\*,Rect&)**](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-fillellipse(inconstbrush_inconstrect_))</span></span>                                          | <span data-ttu-id="b148d-111">Die [**Graphics:: FillEllipse**](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-fillellipse(inconstbrush_inconstrect_)) -Methode verwendet einen Pinsel, um das Innere einer Ellipse auszufüllen, die durch ein Rechteck angegeben wird.</span><span class="sxs-lookup"><span data-stu-id="b148d-111">The [**Graphics::FillEllipse**](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-fillellipse(inconstbrush_inconstrect_)) method uses a brush to fill the interior of an ellipse that is specified by a rectangle.</span></span><br/>                                           |
+| <span data-ttu-id="b148d-112">[**FillEllipse (Pinsel \* , RectF&)**](/previous-versions//ms535968(v=vs.85))</span><span class="sxs-lookup"><span data-stu-id="b148d-112">[**FillEllipse(Brush\*,RectF&)**](/previous-versions//ms535968(v=vs.85))</span></span>                                        | <span data-ttu-id="b148d-113">Die [**Graphics:: FillEllipse**](/previous-versions//ms535968(v=vs.85)) -Methode verwendet einen Pinsel, um das Innere einer Ellipse auszufüllen, die durch ein Rechteck angegeben wird.</span><span class="sxs-lookup"><span data-stu-id="b148d-113">The [**Graphics::FillEllipse**](/previous-versions//ms535968(v=vs.85)) method uses a brush to fill the interior of an ellipse that is specified by a rectangle.</span></span><br/>                                          |
+| <span data-ttu-id="b148d-114">[**FillEllipse (Brush \* , int, int, int, int)**](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-fillellipse(inconstbrush_inint_inint_inint_inint))</span><span class="sxs-lookup"><span data-stu-id="b148d-114">[**FillEllipse(Brush\*,INT,INT,INT,INT)**](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-fillellipse(inconstbrush_inint_inint_inint_inint))</span></span>         | <span data-ttu-id="b148d-115">Die [**Graphics:: FillEllipse**](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-fillellipse(inconstbrush_inint_inint_inint_inint)) -Methode verwendet einen Pinsel, um das Innere einer Ellipse auszufüllen, die durch Koordinaten und Dimensionen angegeben wird.</span><span class="sxs-lookup"><span data-stu-id="b148d-115">The [**Graphics::FillEllipse**](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-fillellipse(inconstbrush_inint_inint_inint_inint)) method uses a brush to fill the interior of an ellipse that is specified by coordinates and dimensions.</span></span><br/>     |
+| <span data-ttu-id="b148d-116">[**FillEllipse (Pinsel, Real, Real, Real, Real \* )**](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-fillellipse(inconstbrush_inreal_inreal_inreal_inreal))</span><span class="sxs-lookup"><span data-stu-id="b148d-116">[**FillEllipse(Brush\*,REAL,REAL,REAL,REAL)**](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-fillellipse(inconstbrush_inreal_inreal_inreal_inreal))</span></span> | <span data-ttu-id="b148d-117">Die [**Graphics:: FillEllipse**](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-fillellipse(inconstbrush_inreal_inreal_inreal_inreal)) -Methode verwendet einen Pinsel, um das Innere einer Ellipse auszufüllen, die durch Koordinaten und Dimensionen angegeben wird.</span><span class="sxs-lookup"><span data-stu-id="b148d-117">The [**Graphics::FillEllipse**](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-fillellipse(inconstbrush_inreal_inreal_inreal_inreal)) method uses a brush to fill the interior of an ellipse that is specified by coordinates and dimensions.</span></span><br/> |
+
+
+
+ 
+
+ 
