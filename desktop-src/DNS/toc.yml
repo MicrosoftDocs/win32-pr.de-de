@@ -1,0 +1,560 @@
+- name: Domänennamenserver (DNS)
+  href: dns-start-page.md
+  items:
+    - name: DNS-Standarddokumente
+      href: dns-standards-documents.md
+    - name: Informationen zu DNS
+      href: about-dns.md
+    - name: DNS-Verweis
+      href: dns-reference.md
+      items:
+        - name: DNS-Rückrufe
+          href: dns-callbacks.md
+          items:
+            - name: DNS_QUERY_COMPLETION_ROUTINE
+              href: /windows/desktop/api/Windns/nc-windns-dns_query_completion_routine
+            - name: DNS_SERVICE_BROWSE_CALLBACK
+              href: /windows/desktop/api/Windns/nc-windns-dns_service_browse_callback
+            - name: DNS_SERVICE_REGISTER_COMPLETE
+              href: /windows/desktop/api/Windns/nc-windns-dns_service_register_complete
+            - name: DNS_SERVICE_RESOLVE_COMPLETE
+              href: /windows/desktop/api/Windns/nc-windns-dns_service_resolve_complete
+            - name: MDNS_QUERY_CALLBACK
+              href: /windows/desktop/api/Windns/nc-windns-mdns_query_callback
+        - name: DNS-Konstanten
+          href: dns-constants.md
+        - name: DNS-Datentypen
+          href: dns-data-types.md
+        - name: DNS-Enumerationen
+          href: dns-enumerations.md
+          items:
+            - name: DNS_CHARSET
+              href: /windows/win32/api/Windns/ne-windns-dns_charset
+            - name: DNS_CONFIG_TYPE
+              href: /windows/desktop/api/Windns/ne-windns-dns_config_type
+            - name: DNS_FREE_TYPE
+              href: /windows/desktop/api/Windns/ne-windns-dns_free_type
+            - name: DNS_NAME_FORMAT
+              href: /windows/win32/api/Windns/ne-windns-dns_name_format
+            - name: DNS_PROXY_INFORMATION_TYPE
+              href: /windows/desktop/api/Windns/ne-windns-dns_proxy_information_type
+            - name: DNS_SECTION
+              href: /windows/desktop/api/Windns/ne-windns-dns_section
+        - name: DNS-Funktionen
+          href: dns-functions.md
+          items:
+            - name: Dnsacquirecontexthandle
+              href: /windows/desktop/api/Windns/nf-windns-dnsacquirecontexthandle_a
+            - name: Dnscancelquery
+              href: /windows/desktop/api/Windns/nf-windns-dnscancelquery
+            - name: Dnsextractrecordsfrommess
+              href: /windows/desktop/api/Windns/nf-windns-dnsextractrecordsfrommessage_utf8
+            - name: Dnsfree
+              href: /windows/desktop/api/Windns/nf-windns-dnsfree
+            - name: Dnsfreproxyname
+              href: /windows/desktop/api/Windns/nf-windns-dnsfreeproxyname
+            - name: Dnsgetproxyinformation
+              href: /windows/desktop/api/Windns/nf-windns-dnsgetproxyinformation
+            - name: Dnsmodifyrecordsinset
+              href: /windows/desktop/api/Windns/nf-windns-dnsmodifyrecordsinset_a
+            - name: Dnsnamecompare
+              href: /windows/desktop/api/Windns/nf-windns-dnsnamecompare
+            - name: DNSQuery
+              href: /windows/desktop/api/Windns/nf-windns-dnsquery_a
+            - name: Dnsqueryconfig
+              href: /windows/desktop/api/Windns/nf-windns-dnsqueryconfig
+            - name: Dnsqueryex
+              href: /windows/desktop/api/Windns/nf-windns-dnsqueryex
+            - name: Dnsrecordcompare
+              href: /windows/desktop/api/Windns/nf-windns-dnsrecordcompare
+            - name: Dnsrecordcopyex
+              href: /windows/desktop/api/Windns/nf-windns-dnsrecordcopyex
+            - name: Dnsrecordlistfree
+              href: /windows/desktop/api/Windns/nf-windns-dnsrecordlistfree
+            - name: Dnsrecordsetcompare
+              href: /windows/desktop/api/Windns/nf-windns-dnsrecordsetcompare
+            - name: Dnsrecordsetcopyex
+              href: /windows/desktop/api/Windns/nf-windns-dnsrecordsetcopyex
+            - name: Dnsrecordsetdetach
+              href: /windows/desktop/api/Windns/nf-windns-dnsrecordsetdetach
+            - name: Dnsreleasecontexthandle
+              href: /windows/desktop/api/Windns/nf-windns-dnsreleasecontexthandle
+            - name: Dnsreplacerecordset
+              href: /windows/desktop/api/Windns/nf-windns-dnsreplacerecordseta
+            - name: Dnsservicebrowse
+              href: /windows/desktop/api/Windns/nf-windns-dnsservicebrowse
+            - name: Dnsservicebrowse Abbrechen
+              href: /windows/desktop/api/Windns/nf-windns-dnsservicebrowsecancel
+            - name: Dnsserviceconstructinstance
+              href: /windows/desktop/api/Windns/nf-windns-dnsserviceconstructinstance
+            - name: Dnsservicecopyinstance
+              href: /windows/desktop/api/Windns/nf-windns-dnsservicecopyinstance
+            - name: Dnsservicederegister
+              href: /windows/desktop/api/Windns/nf-windns-dnsservicederegister
+            - name: Dnsservicefreeingestance
+              href: /windows/desktop/api/Windns/nf-windns-dnsservicefreeinstance
+            - name: Dnsserviceregiester
+              href: /windows/desktop/api/Windns/nf-windns-dnsserviceregister
+            - name: Dnsserviceregistercancel
+              href: /windows/desktop/api/Windns/nf-windns-dnsserviceregistercancel
+            - name: Dnsserviceresolve
+              href: /windows/desktop/api/Windns/nf-windns-dnsserviceresolve
+            - name: Dnsserviceresolvecancel
+              href: /windows/desktop/api/Windns/nf-windns-dnsserviceresolvecancel
+            - name: Dnsstartmulticastquery
+              href: /windows/desktop/api/Windns/nf-windns-dnsstartmulticastquery
+            - name: Dnsstopmulticastquery
+              href: /windows/desktop/api/Windns/nf-windns-dnsstopmulticastquery
+            - name: DnsValidateName
+              href: /windows/desktop/api/Windns/nf-windns-dnsvalidatename
+            - name: Dnsvalidateserverstatus
+              href: /windows/desktop/api/Windns/nf-windns-dnsvalidateserverstatus
+            - name: Dnsschreitefrag-Element Puffer
+              href: /windows/desktop/api/Windns/nf-windns-dnswritequestiontobuffer_utf8
+        - name: DNS-Strukturen
+          href: dns-structures.md
+          items:
+            - name: DNS_A_DATA
+              href: /windows/desktop/api/Windns/ns-windns-dns_a_data
+            - name: DNS_AAAA_DATA
+              href: /windows/desktop/api/Windns/ns-windns-dns_aaaa_data
+            - name: DNS_ADDR
+              href: /windows/desktop/api/Windns/ns-windns-dns_addr
+            - name: DNS_ADDR_ARRAY
+              href: /windows/desktop/api/Windns/ns-windns-dns_addr_array
+            - name: DNS_ATMA_DATA
+              href: /windows/desktop/api/Windns/ns-windns-dns_atma_data
+            - name: DNS_DHCID_DATA
+              href: /windows/desktop/api/Windns/ns-windns-dns_dhcid_data
+            - name: DNS_DS_DATA
+              href: /windows/desktop/api/Windns/ns-windns-dns_ds_data
+            - name: DNS_HEADER
+              href: /windows/win32/api/Windns/ns-windns-dns_header
+            - name: DNS_KEY_DATA
+              href: /windows/desktop/api/Windns/ns-windns-dns_key_data
+            - name: DNS_LOC_DATA
+              href: /windows/desktop/api/Windns/ns-windns-dns_loc_data
+            - name: DNS_MESSAGE_BUFFER
+              href: /windows/win32/api/Windns/ns-windns-dns_message_buffer
+            - name: DNS_MINFO_DATA
+              href: /windows/desktop/api/Windns/ns-windns-dns_minfo_dataa
+            - name: DNS_MX_DATA
+              href: /windows/desktop/api/Windns/ns-windns-dns_mx_dataa
+            - name: DNS_NAPTR_DATA
+              href: /windows/desktop/api/Windns/ns-windns-dns_naptr_dataa
+            - name: DNS_NSEC_DATA
+              href: /windows/desktop/api/Windns/ns-windns-dns_nsec_dataa
+            - name: DNS_NULL_DATA
+              href: /windows/desktop/api/Windns/ns-windns-dns_null_data
+            - name: DNS_NXT_DATA
+              href: /windows/desktop/api/Windns/ns-windns-dns_nxt_dataa
+            - name: DNS_OPT_DATA
+              href: /windows/desktop/api/Windns/ns-windns-dns_opt_data
+            - name: DNS_PTR_DATA
+              href: /windows/desktop/api/Windns/ns-windns-dns_ptr_dataa
+            - name: DNS_PROXY_INFORMATION
+              href: /windows/desktop/api/Windns/ns-windns-dns_proxy_information
+            - name: DNS_QUERY_CANCEL
+              href: /windows/win32/api/Windns/ns-windns-dns_query_cancel
+            - name: DNS_QUERY_REQUEST
+              href: /windows/win32/api/Windns/ns-windns-dns_query_request
+            - name: DNS_QUERY_RESULT
+              href: /windows/win32/api/Windns/ns-windns-dns_query_result
+            - name: DNS_RRSET
+              href: /windows/desktop/api/Windns/ns-windns-dns_rrset
+            - name: DNS_SIG_DATA
+              href: /windows/desktop/api/Windns/ns-windns-dns_sig_dataa
+            - name: DNS_RECORD
+              href: /windows/desktop/api/Windns/ns-windns-dns_recorda
+            - name: DNS_RECORD_FLAGS
+              href: /windows/desktop/api/Windns/ns-windns-dns_record_flags
+            - name: DNS_SERVICE_BROWSE_REQUEST
+              href: /windows/desktop/api/windns/ns-windns-dns_service_browse_request
+            - name: DNS_SERVICE_CANCEL
+              href: /windows/desktop/api/windns/ns-windns-dns_service_cancel
+            - name: DNS_SERVICE_INSTANCE
+              href: /windows/desktop/api/windns/ns-windns-dns_service_instance
+            - name: DNS_SERVICE_REGISTER_REQUEST
+              href: /windows/desktop/api/windns/ns-windns-dns_service_register_request
+            - name: DNS_SERVICE_RESOLVE_REQUEST
+              href: /windows/desktop/api/windns/ns-windns-dns_service_resolve_request
+            - name: DNS_SIG_DATA
+              href: /previous-versions/windows/desktop/legacy/ms682094(v=vs.85)
+            - name: DNS_SOA_DATA
+              href: /windows/desktop/api/Windns/ns-windns-dns_soa_dataa
+            - name: DNS_SRV_DATA
+              href: /windows/desktop/api/Windns/ns-windns-dns_srv_dataa
+            - name: DNS_TKEY_DATA
+              href: /windows/desktop/api/Windns/ns-windns-dns_tkey_dataa
+            - name: DNS_TSIG_DATA
+              href: /windows/desktop/api/Windns/ns-windns-dns_tsig_dataa
+            - name: DNS_TXT_DATA
+              href: /windows/desktop/api/Windns/ns-windns-dns_txt_dataa
+            - name: DNS_WINS_DATA
+              href: /windows/desktop/api/Windns/ns-windns-dns_wins_data
+            - name: DNS_WINSR_DATA
+              href: /windows/desktop/api/Windns/ns-windns-dns_winsr_dataa
+            - name: DNS_WIRE_QUESTION
+              href: /windows/win32/api/Windns/ns-windns-dns_wire_question
+            - name: DNS_WIRE_RECORD
+              href: /windows/win32/api/Windns/ns-windns-dns_wire_record
+            - name: DNS_WKS_DATA
+              href: /windows/desktop/api/Windns/ns-windns-dns_wks_data
+            - name: IP4_ARRAY
+              href: /windows/win32/api/Windns/ns-windns-ip4_array
+            - name: IP6_ADDRESS
+              href: /windows/desktop/api/Windns/ns-windns-ip6_address
+            - name: MDNS_QUERY_HANDLE
+              href: /windows/desktop/api/windns/ns-windns-mdns_query_handle
+            - name: MDNS_QUERY_REQUEST
+              href: /windows/desktop/api/windns/ns-windns-mdns_query_request
+    - name: DNS-WMI-Anbieter
+      href: dns-wmi-provider.md
+      items:
+        - name: 'Suchen nach dem, was Sie im DNS-WMI-Anbieter benötigen'
+          href: finding-what-you-need-in-the-dns-wmi-provider.md
+        - name: Ressourcen Informationen für den DNS-WMI-Anbieter
+          href: resource-information-for-the-dns-wmi-provider.md
+        - name: Informationen zum DNS-WMI-Anbieter
+          href: about-the-dns-wmi-provider.md
+          items:
+            - name: DNS (Übersicht)
+              href: dns-overview.md
+              items:
+                - name: Namenskonventionen
+                  href: naming-conventions.md
+            - name: DNS-Konzepte
+              href: dns-concepts.md
+              items:
+                - name: Name Space
+                  href: name-space.md
+                - name: DNS-Domänen
+                  href: dns-domains.md
+                - name: DNS-Zonen
+                  href: dns-zones.md
+                - name: Root
+                  href: root.md
+                - name: Namensauflösung
+                  href: name-resolution.md
+                - name: DNS-Server
+                  href: dns-servers.md
+                - name: DNS-Resolver
+                  href: dns-resolvers.md
+                - name: Ressourcen Einträge
+                  href: resource-records.md
+            - name: DNS WMI-Anbieter (Übersicht)
+              href: dns-wmi-provider-overview.md
+            - name: Installieren des Anbieters
+              href: installing-the-provider.md
+        - name: Verwenden des DNS-WMI-Anbieters
+          href: using-the-dns-wmi-provider.md
+          items:
+            - name: Übersicht über die Verwendung des DNS-WMI-Anbieters
+              href: overview-of-using-the-dns-wmi-provider.md
+            - name: Verwalten von DNS-Servern
+              href: managing-dns-servers.md
+            - name: Verwalten von DNS-Ressourcen Einträgen
+              href: managing-dns-resource-records.md
+            - name: Verwalten von DNS-Zonen
+              href: managing-dns-zones.md
+        - name: DNS-WMI-Anbieter Referenz
+          href: dns-wmi-provider-reference.md
+          items:
+            - name: DNS-WMI-Klassen
+              href: dns-wmi-classes.md
+              items:
+                - name: MicrosoftDNS_ServerDomainContainment
+                  href: microsoftdns-serverdomaincontainment.md
+                - name: MicrosoftDNS_DomainDomainContainment
+                  href: microsoftdns-domaindomaincontainment.md
+                - name: MicrosoftDNS_DomainResourceRecordContainment
+                  href: microsoftdns-domainresourcerecordcontainment.md
+                - name: MicrosoftDNS_Cache
+                  href: microsoftdns-cache.md
+                  items:
+                    - name: ClearCache-Methode
+                      href: microsoftdns-cache-clearcache.md
+                    - name: Getscheiden shedname-Methode
+                      href: microsoftdns-cache-getdistinguishedname.md
+                - name: MicrosoftDNS_Domain
+                  href: microsoftdns-domain.md
+                  items:
+                    - name: Getscheiden shedname-Methode
+                      href: microsoftdns-domain-getdistinguishedname.md
+                - name: MicrosoftDNS_Server
+                  href: microsoftdns-server.md
+                  items:
+                    - name: StartService-Methode
+                      href: microsoftdns-server-startservice.md
+                    - name: StopService-Methode
+                      href: microsoftdns-server-stopservice.md
+                    - name: Startscavenging-Methode
+                      href: microsoftdns-server-startscavenging.md
+                    - name: Getscheiden shedname-Methode
+                      href: microsoftdns-server-getdistinguishedname.md
+                - name: MicrosoftDNS_Statistic
+                  href: microsoftdns-statistic.md
+                  items:
+                    - name: MicrosoftDNS_StatisticCollection
+                      href: microsoftdns-statisticcollection.md
+                - name: MicrosoftDNS_Zone
+                  href: microsoftdns-zone.md
+                  items:
+                    - name: AgeAllRecords-Methode
+                      href: microsoftdns-zone-ageallrecords.md
+                    - name: Changezonetype-Methode
+                      href: microsoftdns-zone-changezonetype.md
+                    - name: Methode "kreatezone"
+                      href: microsoftdns-zone-createzone.md
+                    - name: ForceRefresh-Methode
+                      href: microsoftdns-zone-forcerefresh.md
+                    - name: Getscheiden shedname-Methode
+                      href: microsoftdns-zone-getdistinguishedname.md
+                    - name: Pauzzone-Methode
+                      href: microsoftdns-zone-pausezone.md
+                    - name: Resetseconreplikats-Methode
+                      href: microsoftdns-zone-resetsecondaries.md
+                    - name: Resumezone-Methode
+                      href: microsoftdns-zone-resumezone.md
+                    - name: Reloadzone-Methode
+                      href: microsoftdns-zone-reloadzone.md
+                    - name: Updatefromds-Methode
+                      href: microsoftdns-zone-updatefromds.md
+                    - name: Methode "Write Report Backzone"
+                      href: microsoftdns-zone-writebackzone.md
+                - name: MicrosoftDNS_RootHints
+                  href: microsoftdns-roothints.md
+                  items:
+                    - name: Write-backroothintdatafile-Methode
+                      href: microsoftdns-roothints-writebackroothintdatafile.md
+                    - name: Getscheiden shedname-Methode
+                      href: microsoftdns-roothints-getdistinguishedname.md
+                - name: MicrosoftDNS_ResourceRecord
+                  href: microsoftdns-resourcerecord.md
+                  items:
+                    - name: Methode "kreateinzustancefromtextrepresentation"
+                      href: microsoftdns-resourcerecord-createinstancefromtextrepresentation.md
+                    - name: Getobjectbytextrepresentation-Methode
+                      href: microsoftdns-resourcerecord-getobjectbytextrepresentation.md
+                - name: MicrosoftDNS_AAAAType
+                  href: microsoftdns-aaaatype.md
+                  items:
+                    - name: Methode "| ateinzustancefrompropertydata"
+                      href: microsoftdns-aaaatype-createinstancefrompropertydata.md
+                    - name: Modify-Methode
+                      href: microsoftdns-aaaatype-modify.md
+                - name: MicrosoftDNS_AFSDBType
+                  href: microsoftdns-afsdbtype.md
+                  items:
+                    - name: Methode "| ateinzustancefrompropertydata"
+                      href: microsoftdns-afsdbtype-createinstancefrompropertydata.md
+                    - name: Modify-Methode
+                      href: microsoftdns-afsdbtype-modify.md
+                - name: MicrosoftDNS_ATMAType
+                  href: microsoftdns-atmatype.md
+                  items:
+                    - name: Methode "| ateinzustancefrompropertydata"
+                      href: microsoftdns-atmatype-createinstancefrompropertydata.md
+                    - name: Modify-Methode
+                      href: microsoftdns-atmatype-modify.md
+                - name: MicrosoftDNS_AType
+                  href: microsoftdns-atype.md
+                  items:
+                    - name: Methode "| ateinzustancefrompropertydata"
+                      href: microsoftdns-atype-createinstancefrompropertydata.md
+                    - name: Modify-Methode
+                      href: microsoftdns-atype-modify.md
+                - name: MicrosoftDNS_CNAMEType
+                  href: microsoftdns-cnametype.md
+                  items:
+                    - name: Methode "| ateinzustancefrompropertydata"
+                      href: microsoftdns-cnametype-createinstancefrompropertydata.md
+                    - name: Modify-Methode
+                      href: microsoftdns-cnametype-modify.md
+                - name: MicrosoftDNS_HINFOType
+                  href: microsoftdns-hinfotype.md
+                  items:
+                    - name: Methode "| ateinzustancefrompropertydata"
+                      href: microsoftdns-hinfotype-createinstancefrompropertydata.md
+                    - name: Modify-Methode
+                      href: microsoftdns-hinfotype-modify.md
+                - name: MicrosoftDNS_ISDNType
+                  href: microsoftdns-isdntype.md
+                  items:
+                    - name: Methode "| ateinzustancefrompropertydata"
+                      href: microsoftdns-isdntype-createinstancefrompropertydata.md
+                    - name: Modify-Methode
+                      href: microsoftdns-isdntype-modify.md
+                - name: MicrosoftDNS_KEYType
+                  href: microsoftdns-keytype.md
+                  items:
+                    - name: Methode "| ateinzustancefrompropertydata"
+                      href: microsoftdns-keytype-createinstancefrompropertydata.md
+                    - name: Modify-Methode
+                      href: microsoftdns-keytype-modify.md
+                - name: MicrosoftDNS_MBType
+                  href: microsoftdns-mbtype.md
+                  items:
+                    - name: Methode "| ateinzustancefrompropertydata"
+                      href: microsoftdns-mbtype-createinstancefrompropertydata.md
+                    - name: Modify-Methode
+                      href: microsoftdns-mbtype-modify.md
+                - name: MicrosoftDNS_MDType
+                  href: microsoftdns-mdtype.md
+                  items:
+                    - name: Methode "| ateinzustancefrompropertydata"
+                      href: microsoftdns-mdtype-createinstancefrompropertydata.md
+                    - name: Modify-Methode
+                      href: microsoftdns-mdtype-modify.md
+                - name: MicrosoftDNS_MFType
+                  href: microsoftdns-mftype.md
+                  items:
+                    - name: Methode "| ateinzustancefrompropertydata"
+                      href: microsoftdns-mftype-createinstancefrompropertydata.md
+                    - name: Modify-Methode
+                      href: microsoftdns-mftype-modify.md
+                - name: MicrosoftDNS_MGType
+                  href: microsoftdns-mgtype.md
+                  items:
+                    - name: Methode "| ateinzustancefrompropertydata"
+                      href: microsoftdns-mgtype-createinstancefrompropertydata.md
+                    - name: Modify-Methode
+                      href: microsoftdns-mgtype-modify.md
+                - name: MicrosoftDNS_MINFOType
+                  href: microsoftdns-minfotype.md
+                  items:
+                    - name: Methode "| ateinzustancefrompropertydata"
+                      href: microsoftdns-minfotype-createinstancefrompropertydata.md
+                    - name: Modify-Methode
+                      href: microsoftdns-minfotype-modify.md
+                - name: MicrosoftDNS_MRType
+                  href: microsoftdns-mrtype.md
+                  items:
+                    - name: Methode "| ateinzustancefrompropertydata"
+                      href: microsoftdns-mrtype-createinstancefrompropertydata.md
+                    - name: Modify-Methode
+                      href: microsoftdns-mrtype-modify.md
+                - name: MicrosoftDNS_MXType
+                  href: microsoftdns-mxtype.md
+                  items:
+                    - name: Methode "| ateinzustancefrompropertydata"
+                      href: microsoftdns-mxtype-createinstancefrompropertydata.md
+                    - name: Modify-Methode
+                      href: microsoftdns-mxtype-modify.md
+                - name: MicrosoftDNS_NSType
+                  href: microsoftdns-nstype.md
+                  items:
+                    - name: Methode "| ateinzustancefrompropertydata"
+                      href: microsoftdns-nstype-createinstancefrompropertydata.md
+                    - name: Modify-Methode
+                      href: microsoftdns-nstype-modify.md
+                - name: MicrosoftDNS_NXTType
+                  href: microsoftdns-nxttype.md
+                  items:
+                    - name: Methode "| ateinzustancefrompropertydata"
+                      href: microsoftdns-nxttype-createinstancefrompropertydata.md
+                    - name: Modify-Methode
+                      href: microsoftdns-nxttype-modify.md
+                - name: MicrosoftDNS_PTRType
+                  href: microsoftdns-ptrtype.md
+                  items:
+                    - name: Methode "| ateinzustancefrompropertydata"
+                      href: microsoftdns-ptrtype-createinstancefrompropertydata.md
+                    - name: Modify-Methode
+                      href: microsoftdns-ptrtype-modify.md
+                - name: MicrosoftDNS_RPType
+                  href: microsoftdns-rptype.md
+                  items:
+                    - name: Methode "| ateinzustancefrompropertydata"
+                      href: microsoftdns-rptype-createinstancefrompropertydata.md
+                    - name: Modify-Methode
+                      href: microsoftdns-rptype-modify.md
+                - name: MicrosoftDNS_RTType
+                  href: microsoftdns-rttype.md
+                  items:
+                    - name: Methode "| ateinzustancefrompropertydata"
+                      href: microsoftdns-rttype-createinstancefrompropertydata.md
+                    - name: Modify-Methode
+                      href: microsoftdns-rttype-modify.md
+                - name: MicrosoftDNS_SIGType
+                  href: microsoftdns-sigtype.md
+                  items:
+                    - name: Methode "| ateinzustancefrompropertydata"
+                      href: microsoftdns-sigtype-createinstancefrompropertydata.md
+                    - name: Modify-Methode
+                      href: microsoftdns-sigtype-modify.md
+                - name: MicrosoftDNS_SOAType
+                  href: microsoftdns-soatype.md
+                  items:
+                    - name: Modify-Methode
+                      href: microsoftdns-soatype-modify.md
+                - name: MicrosoftDNS_SRVType
+                  href: microsoftdns-srvtype.md
+                  items:
+                    - name: Methode "| ateinzustancefrompropertydata"
+                      href: microsoftdns-srvtype-createinstancefrompropertydata.md
+                    - name: Modify-Methode
+                      href: microsoftdns-srvtype-modify.md
+                - name: MicrosoftDNS_TXTType
+                  href: microsoftdns-txttype.md
+                  items:
+                    - name: Methode "| ateinzustancefrompropertydata"
+                      href: microsoftdns-txttype-createinstancefrompropertydata.md
+                    - name: Modify-Methode
+                      href: microsoftdns-txttype-modify.md
+                - name: MicrosoftDNS_WINSRType
+                  href: microsoftdns-winsrtype.md
+                  items:
+                    - name: Methode "| ateinzustancefrompropertydata"
+                      href: microsoftdns-winsrtype-createinstancefrompropertydata.md
+                    - name: Modify-Methode
+                      href: microsoftdns-winsrtype-modify.md
+                - name: MicrosoftDNS_WINSType
+                  href: microsoftdns-winstype.md
+                  items:
+                    - name: Methode "| ateinzustancefrompropertydata"
+                      href: microsoftdns-winstype-createinstancefrompropertydata.md
+                    - name: Modify-Methode
+                      href: microsoftdns-winstype-modify.md
+                - name: MicrosoftDNS_WKSType
+                  href: microsoftdns-wkstype.md
+                  items:
+                    - name: Methode "| ateinzustancefrompropertydata"
+                      href: microsoftdns-wkstype-createinstancefrompropertydata.md
+                    - name: Modify-Methode
+                      href: microsoftdns-wkstype-modify.md
+                - name: MicrosoftDNS_X25Type
+                  href: microsoftdns-x25type.md
+                  items:
+                    - name: Methode "| ateinzustancefrompropertydata"
+                      href: microsoftdns-x25type-createinstancefrompropertydata.md
+                    - name: Modify-Methode
+                      href: microsoftdns-x25type-modify.md
+        - name: Skript Beispiele für DNS-WMI-Anbieter
+          href: dns-wmi-provider-scripting-examples.md
+          items:
+            - name: Beispiele für DNS-WMI-Anbieter – Verwalten eines DNS-Servers
+              href: dns-wmi-provider-samples-managing-a-dns-server.md
+            - name: Beispiele für DNS-WMI-Anbieter – Verwalten von DNS-Ressourcen Einträgen
+              href: dns-wmi-provider-samples-managing-dns-resource-records.md
+            - name: DNS-WMI-Anbieter Beispiele – Verwalten von DNS-Zonen
+              href: dns-wmi-provider-samples-managing-dns-zones.md
+    - name: Glossar
+      href: glossary-gly.md
+      items:
+        - name: C
+          href: c-gly.md
+        - name: F
+          href: f-gly.md
+        - name: H
+          href: h-gly.md
+        - name: L
+          href: l-gly.md
+        - name: P
+          href: p-gly.md
+        - name: R
+          href: r-gly.md
+        - name: E
+          href: s-gly.md
+        - name: Z
+          href: z-gly.md
