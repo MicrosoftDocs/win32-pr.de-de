@@ -1,0 +1,2671 @@
+- name: High-Level-Shaderprogrammiersprache (HLSL)
+  href: dx-graphics-hlsl.md
+  items:
+    - name: Programmier Handbuch für HLSL
+      href: dx-graphics-hlsl-pguide.md
+      items:
+        - name: Verwenden der Shader-Verknüpfung
+          href: using-shader-linking.md
+          items:
+            - name: Verpacken einer shaderbibliothek
+              href: pachaging-a-shader-library.md
+            - name: Erstellen eines funktionsverknüpfungs Diagramms und Verknüpfen dieses Diagramms mit kompiliertem Code
+              href: constructing-a-function-linking-graph.md
+        - name: "Schreiben von HLSL-Shadern in Direct3D\_9"
+          href: dx-graphics-hlsl-writing-shaders-9.md
+        - name: Verwenden von Shadern in Direct3D 9
+          href: dx-graphics-hlsl-using-shaders-9.md
+        - name: Verwenden von Shadern in Direct3D 10
+          href: dx-graphics-hlsl-using-shaders-10.md
+        - name: Optimieren von HLSL-Shadern
+          href: dx-graphics-hlsl-optimize.md
+        - name: Debuggen von Shadern in Visual Studio
+          href: dx-graphics-hlsl-debug-visual-studio.md
+        - name: Kompilieren von Shadern
+          href: dx-graphics-hlsl-part1.md
+        - name: Angeben von compilerzielen
+          href: specifying-compiler-targets.md
+        - name: Entpacken und Verpacken DXGI_FORMAT für die In-Place Bildbearbeitung
+          href: dx-graphics-hlsl-unpacking-packing-dxgi-format.md
+        - name: Verwenden der minimalen Genauigkeit von HLSL
+          href: using-hlsl-minimum-precision.md
+          items:
+            - name: Benutzer Clip Flächen auf Featureebene 9 Hardware
+              href: user-clip-planes-on-10level9.md
+        - name: HLSL-Shader-Modell 5
+          href: overviews-direct3d-11-hlsl.md
+          items:
+            - name: Dynamisches Verknüpfen
+              href: overviews-direct3d-11-hlsl-dynamic-linking.md
+              items:
+                - name: Speichern von Variablen und Typen für die Freigabe von Shadern
+                  href: storing-variables-and-types-for-shaders-to-share.md
+                - name: Schnittstellen und Klassen
+                  href: overviews-direct3d-11-hlsl-dynamic-linking-class.md
+                - name: Einschränkungen der Schnittstellen Verwendung
+                  href: overviews-direct3d-11-hlsl-dynamic-linking-expression.md
+            - name: Geometry-Shaderfunktionen
+              href: overviews-direct3d-11-hlsl-gs-features.md
+              items:
+                - name: 'Vorgehensweise: Indizieren mehrerer Ausgabedaten Ströme'
+                  href: overviews-direct3d-11-hlsl-gs-index.md
+                - name: 'Gewusst wie: instanzgeometrie-Shader'
+                  href: overviews-direct3d-11-hlsl-gs-instance.md
+        - name: 'HLSL-Shader-Modell 5,1'
+          href: hlsl-shader-model-5-1-features-for-direct3d-12.md
+          items:
+            - name: Bytecode-Änderungen in SM 5.1
+              href: bytecode-changes-in-sm5-1.md
+            - name: HLSL angegebene Stamm Signatur
+              href: hlsl-specified-root-signature.md
+        - name: 'HLSL-Shader-Modell 6,0'
+          href: hlsl-shader-model-6-0-features-for-direct3d-12.md
+        - name: 'HLSL-Shader-Modell 6,4'
+          href: hlsl-shader-model-6-4-features-for-direct3d-12.md
+    - name: Verweis für HLSL
+      href: dx-graphics-hlsl-reference.md
+      items:
+        - name: Sprach Syntax
+          href: dx-graphics-hlsl-language-syntax.md
+          items:
+            - name: Variables
+              href: dx-graphics-hlsl-variables.md
+              items:
+                - name: Variablensyntax
+                  href: dx-graphics-hlsl-variable-syntax.md
+                  items:
+                    - name: packoffset
+                      href: dx-graphics-hlsl-variable-packoffset.md
+                    - name: Registrieren
+                      href: dx-graphics-hlsl-variable-register.md
+                - name: Datentypen
+                  href: dx-graphics-hlsl-data-types.md
+                  items:
+                    - name: Puffertyp
+                      href: dx-graphics-hlsl-buffer.md
+                    - name: Skalare Typen
+                      href: dx-graphics-hlsl-scalar.md
+                    - name: Vektortyp
+                      href: dx-graphics-hlsl-vector.md
+                    - name: Matrixtyp
+                      href: dx-graphics-hlsl-matrix.md
+                    - name: Per-Component mathematische Vorgänge
+                      href: dx-graphics-hlsl-per-component-math.md
+                    - name: Samplertyp
+                      href: dx-graphics-hlsl-sampler.md
+                    - name: Shadertyp
+                      href: dx-graphics-hlsl-shader.md
+                    - name: Textur-Typ
+                      href: dx-graphics-hlsl-texture.md
+                    - name: Strukturtyp
+                      href: dx-graphics-hlsl-struct.md
+                    - name: Benutzerdefinierter Typ
+                      href: dx-graphics-hlsl-user-defined.md
+                    - name: Zustands Objekttypen
+                      href: dx-graphics-hlsl-state-object.md
+            - name: Flusssteuerung
+              href: dx-graphics-hlsl-flow-control.md
+              items:
+                - name: break-Anweisung
+                  href: dx-graphics-hlsl-break.md
+                - name: continue-Anweisung
+                  href: dx-graphics-hlsl-continue.md
+                - name: Verwerfungs Anweisung
+                  href: dx-graphics-hlsl-discard.md
+                - name: Do-Anweisung
+                  href: dx-graphics-hlsl-do.md
+                - name: for-Anweisung
+                  href: dx-graphics-hlsl-for.md
+                - name: if-Anweisung
+                  href: dx-graphics-hlsl-if.md
+                - name: switch-Anweisung
+                  href: dx-graphics-hlsl-switch.md
+                - name: while-Anweisung
+                  href: dx-graphics-hlsl-while.md
+            - name: Functions
+              href: dx-graphics-hlsl-functions.md
+              items:
+                - name: Syntax der Funktionsdeklaration
+                  href: dx-graphics-hlsl-function-syntax.md
+                - name: Funktionsargumente
+                  href: dx-graphics-hlsl-function-parameters.md
+                - name: return-Anweisung
+                  href: dx-graphics-hlsl-return.md
+                - name: Signaturen
+                  href: dx-graphics-hlsl-signatures.md
+            - name: Anweisungen
+              href: dx-graphics-hlsl-statements.md
+              items:
+                - name: Ausdrücke
+                  href: dx-graphics-hlsl-expressions.md
+                - name: Operatoren
+                  href: dx-graphics-hlsl-operators.md
+                - name: Anweisungsblöcke
+                  href: dx-graphics-hlsl-statement-blocks.md
+            - name: Semantik
+              href: dx-graphics-hlsl-semantics.md
+              items:
+                - name: SV_DispatchThreadID
+                  href: sv-dispatchthreadid.md
+                - name: SV_DomainLocation
+                  href: sv-domainlocation.md
+                - name: SV_TessFactor
+                  href: sv-tessfactor.md
+                - name: SV_GroupID
+                  href: sv-groupid.md
+                - name: SV_GroupIndex
+                  href: sv-groupindex.md
+                - name: SV_GroupThreadID
+                  href: sv-groupthreadid.md
+                - name: SV_GSInstanceID
+                  href: sv-gsinstanceid.md
+                - name: SV_InsideTessFactor
+                  href: sv-insidetessfactor.md
+                - name: SV_OutputControlPointID
+                  href: sv-outputcontrolpointid.md
+        - name: Shader-Modelle vs shaderprofile
+          href: dx-graphics-hlsl-models.md
+          items:
+            - name: Shader-Modell 1 (DirectX HLSL)
+              href: dx-graphics-hlsl-sm1.md
+            - name: Shader-Modell 2 (DirectX HLSL)
+              href: dx-graphics-hlsl-sm2.md
+            - name: Shader-Modell 3 (DirectX HLSL)
+              href: dx-graphics-hlsl-sm3.md
+              items:
+                - name: Shader-Modell 3 (DirectX HLSL)
+                  href: shader-model-3.md
+                - name: Syntax der fragmentdeklaration (Direct3D 9 HLSL)
+                  href: fragment-declaration-syntax.md
+            - name: Shadermodell 4
+              href: dx-graphics-hlsl-sm4.md
+              items:
+                - name: Common-Shader Core (DirectX HLSL)
+                  href: dx-graphics-hlsl-common-core.md
+                - name: Shaderkonstanten (DirectX HLSL)
+                  href: dx-graphics-hlsl-constants.md
+                - name: Geometry-Shader-Objekt (DirectX HLSL)
+                  href: dx-graphics-hlsl-geometry-shader.md
+                - name: Stream-Output-Objekt (DirectX HLSL)
+                  href: dx-graphics-hlsl-so-type.md
+                  items:
+                    - name: Anfügen (DirectX HLSL Stream-Output-Objekt)
+                      href: dx-graphics-hlsl-so-append.md
+                    - name: Restartstrip (DirectX HLSL Stream-Output-Objekt)
+                      href: dx-graphics-hlsl-so-restartstrip.md
+                - name: Texture-Objekt
+                  href: dx-graphics-hlsl-to-type.md
+                  items:
+                    - name: Calculatelevelof Detail (DirectX HLSL Texture-Objekt)
+                      href: dx-graphics-hlsl-to-calculate-lod.md
+                    - name: Calculatelevelof detailunklamed (DirectX HLSL Texture-Objekt)
+                      href: dx-graphics-hlsl-to-calculate-lod-unclamped.md
+                    - name: Gather (DirectX-HLSL-Textur Objekt)
+                      href: dx-graphics-hlsl-to-gather.md
+                    - name: GetDimensions (DirectX HLSL-Textur Objekt)
+                      href: dx-graphics-hlsl-to-getdimensions.md
+                    - name: Getsampleposition (DirectX HLSL-Textur Objekt)
+                      href: dx-graphics-hlsl-to-get-sample-position.md
+                    - name: Load (DirectX-HLSL-Textur Objekt)
+                      href: dx-graphics-hlsl-to-load.md
+                    - name: Beispiel (DirectX HLSL-Strukturobjekt)
+                      href: dx-graphics-hlsl-to-sample.md
+                    - name: Sample Bias (DirectX HLSL-Textur Objekt)
+                      href: dx-graphics-hlsl-to-samplebias.md
+                    - name: Samplecmp (DirectX HLSL-Textur Objekt)
+                      href: dx-graphics-hlsl-to-samplecmp.md
+                    - name: Samplecmplevelzero (DirectX HLSL Texture-Objekt)
+                      href: dx-graphics-hlsl-to-samplecmplevelzero.md
+                    - name: Sample Grad (DirectX HLSL-Textur Objekt)
+                      href: dx-graphics-hlsl-to-samplegrad.md
+                    - name: Samplelevel (DirectX HLSL-Textur Objekt)
+                      href: dx-graphics-hlsl-to-samplelevel.md
+                - name: Packen von Regeln für konstante Variablen (DirectX HLSL)
+                  href: dx-graphics-hlsl-packing-rules.md
+                - name: Register-ps_4_0
+                  href: dx-graphics-hlsl-sm4-registers-ps-4-0.md
+                - name: Register-ps_4_1
+                  href: dx-graphics-hlsl-sm4-registers-ps-4-1.md
+                - name: Register-vs_4_0
+                  href: dx-graphics-hlsl-sm4-registers-vs-4-0.md
+                - name: Register-vs_4_1
+                  href: dx-graphics-hlsl-sm4-registers-vs-4-1.md
+                - name: Register-gs_4_0
+                  href: dx-graphics-hlsl-sm4-registers-gs-4-0.md
+                - name: Register-gs_4_1
+                  href: dx-graphics-hlsl-sm4-registers-gs-4-1.md
+            - name: Shader-Modell 5
+              href: d3d11-graphics-reference-sm5.md
+              items:
+                - name: Shader Model 5-Attribute
+                  href: d3d11-graphics-reference-sm5-attributes.md
+                  items:
+                    - name: Domäne
+                      href: sm5-attributes-domain.md
+                    - name: earlydepthstencil
+                      href: sm5-attributes-earlydepthstencil.md
+                    - name: instance
+                      href: sm5-attributes-instance.md
+                    - name: maxtess Factor
+                      href: sm5-attributes-maxtessfactor.md
+                    - name: numThreads
+                      href: sm5-attributes-numthreads.md
+                    - name: outputcontrolpoints
+                      href: sm5-attributes-outputcontrolpoints.md
+                    - name: outputtopology
+                      href: sm5-attributes-outputtopology.md
+                    - name: Partitionierung
+                      href: sm5-attributes-partitioning.md
+                    - name: patchconstantfunc
+                      href: sm5-attributes-patchconstantfunc.md
+                - name: Intrinsische Funktionen von Shader Model 5
+                  href: d3d11-graphics-reference-sm5-intrinsics.md
+                - name: Shader Model 5-Objekte
+                  href: d3d11-graphics-reference-sm5-objects.md
+                  items:
+                    - name: Appendstructuredbuffer
+                      href: sm5-object-appendstructuredbuffer.md
+                      items:
+                        - name: Anfügen
+                          href: sm5-object-appendstructuredbuffer-append.md
+                        - name: GetDimensions
+                          href: sm5-object-appendstructuredbuffer-getdimensions.md
+                    - name: Buffer
+                      href: sm5-object-buffer.md
+                      items:
+                        - name: GetDimensions
+                          href: sm5-object-buffer-getdimensions.md
+                        - name: Lade Methoden
+                          href: buffer-load.md
+                          items:
+                            - name: 'Load (int, uint)'
+                              href: sm5-object-buffer-load.md
+                        - name: KOM
+                          href: sm5-object-buffer-operatorindex.md
+                    - name: Byteaddressbuffer
+                      href: sm5-object-byteaddressbuffer.md
+                      items:
+                        - name: GetDimensions
+                          href: sm5-object-byteaddressbuffer-getdimensions.md
+                        - name: Lade Methoden
+                          href: byteaddressbuffer-load.md
+                          items:
+                            - name: Laden (int)
+                              href: sm5-object-byteaddressbuffer-load.md
+                            - name: 'Load (int, uint)'
+                              href: sm5-object-byteaddressbuffer-load-2.md
+                        - name: Load2-Methoden
+                          href: byteaddressbuffer-load2.md
+                          items:
+                            - name: Load2 (uint)
+                              href: sm5-object-byteaddressbuffer-load2.md
+                            - name: 'Load2 (uint, uint)'
+                              href: sm5-object-byteaddressbuffer-load2-2.md
+                        - name: Load3-Methoden
+                          href: byteaddressbuffer-load3.md
+                          items:
+                            - name: Load3 (uint)
+                              href: sm5-object-byteaddressbuffer-load3.md
+                            - name: 'Load3 (uint, uint)'
+                              href: sm5-object-byteaddressbuffer-load3-2.md
+                        - name: Load4-Methoden
+                          href: byteaddressbuffer-load4.md
+                          items:
+                            - name: Load4 (uint)
+                              href: sm5-object-byteaddressbuffer-load4.md
+                            - name: 'Load4 (uint, uint)'
+                              href: sm5-object-byteaddressbuffer-load4-2.md
+                    - name: Consumestructuredbuffer
+                      href: sm5-object-consumestructuredbuffer.md
+                      items:
+                        - name: Nutzen
+                          href: sm5-object-consumestructuredbuffer-consume.md
+                        - name: GetDimensions
+                          href: sm5-object-consumestructuredbuffer-getdimensions.md
+                    - name: Input Patch
+                      href: sm5-object-inputpatch.md
+                      items:
+                        - name: KOM
+                          href: sm5-object-inputpatch-operatorindex.md
+                    - name: Outputpatch
+                      href: sm5-object-outputpatch.md
+                      items:
+                        - name: KOM
+                          href: sm5-object-outputpatch-operatorindex.md
+                    - name: Rwbuffer
+                      href: sm5-object-rwbuffer.md
+                      items:
+                        - name: Lade Methoden
+                          href: rwbuffer-load.md
+                          items:
+                            - name: Laden (int)
+                              href: rwbuffer-load-float-.md
+                            - name: 'Load (int, uint)'
+                              href: rwbuffer-load-float-uint-.md
+                        - name: GetDimensions
+                          href: sm5-object-rwbuffer-getdimensions.md
+                        - name: KOM
+                          href: sm5-object-rwbuffer-operatorindex.md
+                    - name: Rwbyteaddressbuffer
+                      href: sm5-object-rwbyteaddressbuffer.md
+                      items:
+                        - name: GetDimensions
+                          href: sm5-object-rwbyteaddressbuffer-getdimensions.md
+                        - name: Interlockedadd
+                          href: sm5-object-rwbyteaddressbuffer-interlockedadd.md
+                        - name: Interlockedand
+                          href: sm5-object-rwbyteaddressbuffer-interlockedand.md
+                        - name: InterlockedCompareExchange
+                          href: sm5-object-rwbyteaddressbuffer-interlockedcompareexchange.md
+                        - name: Interlockedcomparestore
+                          href: sm5-object-rwbyteaddressbuffer-interlockedcomparestore.md
+                        - name: InterlockedExchange
+                          href: sm5-object-rwbyteaddressbuffer-interlockedexchange.md
+                        - name: Interlockedmax
+                          href: sm5-object-rwbyteaddressbuffer-interlockedmax.md
+                        - name: Interlockedmin
+                          href: sm5-object-rwbyteaddressbuffer-interlockedmin.md
+                        - name: Interlockedor
+                          href: sm5-object-rwbyteaddressbuffer-interlockedor.md
+                        - name: Interlockedxor
+                          href: sm5-object-rwbyteaddressbuffer-interlockedxor.md
+                        - name: Lade Methoden
+                          href: rwbyteaddressbuffer-load.md
+                          items:
+                            - name: Laden (int)
+                              href: rwbyteaddressbuffer-load-float-.md
+                            - name: 'Load (int, uint)'
+                              href: rwbyteaddressbuffer-load-float-uint-.md
+                        - name: Load2-Methoden
+                          href: rwbyteaddressbuffer-load2.md
+                          items:
+                            - name: Load2 (uint)
+                              href: sm5-object-rwbyteaddressbuffer-load2.md
+                            - name: 'Load2 (uint, uint)'
+                              href: rwbyteaddressbuffer-load2-float-uint-.md
+                        - name: Load3-Methoden
+                          href: rwbyteaddressbuffer-load3.md
+                          items:
+                            - name: Load3 (uint)
+                              href: sm5-object-rwbyteaddressbuffer-load3.md
+                            - name: 'Load3 (uint, uint)'
+                              href: rwbyteaddressbuffer-load3-float-uint-.md
+                        - name: Load4-Methoden
+                          href: rwbyteaddressbuffer-load4.md
+                          items:
+                            - name: Load4 (uint)
+                              href: sm5-object-rwbyteaddressbuffer-load4.md
+                            - name: 'Load4 (uint, uint)'
+                              href: rwbyteaddressbuffer-load4-float-uint-.md
+                        - name: Speicher
+                          href: sm5-object-rwbyteaddressbuffer-store.md
+                        - name: Store2
+                          href: sm5-object-rwbyteaddressbuffer-store2.md
+                        - name: Store3
+                          href: sm5-object-rwbyteaddressbuffer-store3.md
+                        - name: Store4
+                          href: sm5-object-rwbyteaddressbuffer-store4.md
+                    - name: Rwstructuredbuffer
+                      href: sm5-object-rwstructuredbuffer.md
+                      items:
+                        - name: Dekrementcounter
+                          href: sm5-object-rwstructuredbuffer-decrementcounter.md
+                        - name: GetDimensions
+                          href: sm5-object-rwstructuredbuffer-getdimensions.md
+                        - name: Incrementcounter
+                          href: sm5-object-rwstructuredbuffer-incrementcounter.md
+                        - name: Lade Methoden
+                          href: rwstructuredbuffer-load.md
+                          items:
+                            - name: Laden (int)
+                              href: rwstructuredbuffer-load-float-.md
+                            - name: 'Load (int, uint)'
+                              href: rwstructuredbuffer-load-float-uint-.md
+                        - name: KOM
+                          href: sm5-object-rwstructuredbuffer-operatorindex.md
+                    - name: RWTexture1D
+                      href: sm5-object-rwtexture1d.md
+                      items:
+                        - name: GetDimensions
+                          href: sm5-object-rwtexture1d-getdimensions.md
+                        - name: Lade Methoden
+                          href: rwtexture1d-load.md
+                          items:
+                            - name: Laden (int)
+                              href: rwtexture1d-load-float-.md
+                            - name: 'Load (int, uint)'
+                              href: rwtexture1d-load-float-uint-.md
+                        - name: KOM
+                          href: sm5-object-rwtexture1d-operatorindex.md
+                    - name: RWTexture1DArray
+                      href: sm5-object-rwtexture1darray.md
+                      items:
+                        - name: GetDimensions
+                          href: sm5-object-rwtexture1darray-getdimensions.md
+                        - name: Lade Methoden
+                          href: rwtexture1darray-load.md
+                          items:
+                            - name: Laden (int)
+                              href: rwtexture1darray-load-float-.md
+                            - name: 'Load (int, uint)'
+                              href: rwtexture1darray-load-float-uint-.md
+                        - name: KOM
+                          href: sm5-object-rwtexture1darray-operatorindex.md
+                    - name: RWTexture2D
+                      href: sm5-object-rwtexture2d.md
+                      items:
+                        - name: GetDimensions
+                          href: sm5-object-rwtexture2d-getdimensions.md
+                        - name: Lade Methoden
+                          href: rwtexture2d-load.md
+                          items:
+                            - name: Laden (int)
+                              href: rwtexture2d-load-float-.md
+                            - name: 'Load (int, uint)'
+                              href: rwtexture2d-load-float-uint-.md
+                        - name: KOM
+                          href: sm5-object-rwtexture2d-operatorindex.md
+                    - name: RWTexture2DArray
+                      href: sm5-object-rwtexture2darray.md
+                      items:
+                        - name: GetDimensions
+                          href: sm5-object-rwtexture2darray-getdimensions.md
+                        - name: Lade Methoden
+                          href: rwtexture2darray-load.md
+                          items:
+                            - name: Laden (int)
+                              href: rwtexture2darray-load-float-.md
+                            - name: 'Load (int, uint)'
+                              href: rwtexture2darray-load-float-uint-.md
+                        - name: KOM
+                          href: sm5-object-rwtexture2darray-operatorindex.md
+                    - name: RWTexture3D
+                      href: sm5-object-rwtexture3d.md
+                      items:
+                        - name: GetDimensions
+                          href: sm5-object-rwtexture3d-getdimensions.md
+                        - name: Lade Methoden
+                          href: rwtexture3d-load.md
+                          items:
+                            - name: Laden (int)
+                              href: rwtexture3d-load-float-.md
+                            - name: 'Load (int, uint)'
+                              href: rwtexture3d-load-float-uint-.md
+                        - name: KOM
+                          href: sm5-object-rwtexture3d-operatorindex.md
+                    - name: Structuredbuffer
+                      href: sm5-object-structuredbuffer.md
+                      items:
+                        - name: GetDimensions
+                          href: sm5-object-structuredbuffer-getdimensions.md
+                        - name: Lade Methoden
+                          href: structuredbuffer-load.md
+                          items:
+                            - name: Laden (int)
+                              href: structuredbuffer-load-float-.md
+                            - name: 'Load (int, uint)'
+                              href: structuredbuffer-load-float-uint-.md
+                        - name: KOM
+                          href: sm5-object-structuredbuffer-operatorindex.md
+                    - name: Texture1D
+                      href: sm5-object-texture1d.md
+                      items:
+                        - name: GetDimensions
+                          href: sm5-object-texture1d-getdimensions.md
+                        - name: Lade Methoden
+                          href: texture1d-load.md
+                          items:
+                            - name: 'Load (int, int, uint)'
+                              href: texture1d-load-float-int-uint-.md
+                        - name: MIPS. KOM
+                          href: sm5-object-texture1d-mipsoperatorindex.md
+                        - name: KOM
+                          href: sm5-object-texture1d-operatorindex.md
+                        - name: Beispiel Methoden
+                          href: texture1d-sample.md
+                          items:
+                            - name: 'Sample (S, float, int, float)'
+                              href: t1d-sample-s-float-int-float-.md
+                            - name: 'Sample (S, float, int, float, uint)'
+                              href: t1d-sample-s-float-int-float-uint-.md
+                        - name: Samplebias-Methoden
+                          href: texture1d-samplebias.md
+                          items:
+                            - name: 'Sample Bias (S, float, float, int, float)'
+                              href: t1d-samplebias-s-float-float-int-float-.md
+                            - name: 'Sample Bias (S, float, float, int, float, uint)'
+                              href: t1d-samplebias-s-float-float-int-float-uint-.md
+                        - name: Samplecmp-Methoden
+                          href: texture1d-samplecmp.md
+                          items:
+                            - name: 'Samplecmp (S, float, float, int, float)'
+                              href: t1d-samplecmp-s-float-float-int-float-.md
+                            - name: 'Samplecmp (S, float, float, int, float, uint)'
+                              href: t1d-samplecmp-s-float-float-int-float-uint-.md
+                        - name: Samplecmplevelzero-Methoden
+                          href: texture1d-samplecmplevelzero.md
+                          items:
+                            - name: 'Samplecmplevelzero (S, float, float, int, uint)'
+                              href: t1d-samplecmplevelzero-s-float-float-int-uint-.md
+                        - name: Samplegrad-Methoden
+                          href: texture1d-samplegrad.md
+                          items:
+                            - name: 'Samplegrad (S, float, float, float, int, float)'
+                              href: t1d-samplegrad-s-float-float-float-int-float-.md
+                            - name: 'Samplegrad (S, float, float, float, int, float, uint)'
+                              href: t1d-samplegrad-s-float-float-float-int-float-uint-.md
+                        - name: Samplelevel-Methoden
+                          href: texture1d-samplelevel.md
+                          items:
+                            - name: 'Samplelevel (S, float, float, int, uint)'
+                              href: t1d-samplelevel-s-float-float-int-uint-.md
+                    - name: Texture1DArray
+                      href: sm5-object-texture1darray.md
+                      items:
+                        - name: GetDimensions
+                          href: sm5-object-texture1darray-getdimensions.md
+                        - name: Lade Methoden
+                          href: texture1darray-load.md
+                          items:
+                            - name: 'Load (int, int, uint)'
+                              href: texture1darray-load-float-int-uint-.md
+                        - name: MIPS. KOM
+                          href: sm5-object-texture1darray-mipsoperatorindex.md
+                        - name: KOM
+                          href: sm5-object-texture1darray-operatorindex.md
+                        - name: Beispiel Methoden
+                          href: texture1darray-sample.md
+                          items:
+                            - name: 'Sample (S, float, int, float)'
+                              href: t1darray-sample-s-float-int-float-.md
+                            - name: 'Sample (S, float, int, float, uint)'
+                              href: t1darray-sample-s-float-int-float-uint-.md
+                        - name: Samplebias-Methoden
+                          href: texture1darray-samplebias.md
+                          items:
+                            - name: 'Sample Bias (S, float, float, int, float)'
+                              href: t1darray-samplebias-s-float-float-int-float-.md
+                            - name: 'Sample Bias (S, float, float, int, float, uint)'
+                              href: t1darray-samplebias-s-float-float-int-float-uint-.md
+                        - name: Samplecmp-Methoden
+                          href: texture1darray-samplecmp.md
+                          items:
+                            - name: 'Samplecmp (S, float, float, int, float)'
+                              href: t1darray-samplecmp-s-float-float-int-float-.md
+                            - name: 'Samplecmp (S, float, float, int, float, uint)'
+                              href: t1darray-samplecmp-s-float-float-int-float-uint-.md
+                        - name: Samplecmplevelzero-Methoden
+                          href: texture1darray-samplecmplevelzero.md
+                          items:
+                            - name: 'Samplecmplevelzero (S, float, float, int, uint)'
+                              href: t1darray-samplecmplevelzero-s-float-float-int-uint-.md
+                        - name: Samplegrad-Methoden
+                          href: texture1darray-samplegrad.md
+                          items:
+                            - name: 'Samplegrad (S, float, float, float, int, float)'
+                              href: t1darray-samplegrad-s-float-float-float-int-float-.md
+                            - name: 'Samplegrad (S, float, float, float, int, float, uint)'
+                              href: t1darray-samplegrad-s-float-float-float-int-float-uint-.md
+                        - name: Samplelevel-Methoden
+                          href: texture1darray-samplelevel.md
+                          items:
+                            - name: 'Samplelevel (S, float, float, int, uint)'
+                              href: t1darray-samplelevel-s-float-float-int-uint-.md
+                    - name: Texture2D
+                      href: sm5-object-texture2d.md
+                      items:
+                        - name: Gather-Methoden
+                          href: texture2d-gather.md
+                          items:
+                            - name: 'Gather (S, float, int)'
+                              href: sm5-object-texture2d-gather.md
+                            - name: 'Gather (S, float, int, uint)'
+                              href: t2d-gather-s-float-int-uint-.md
+                        - name: Gatheralpha-Methoden
+                          href: texture2d-gatheralpha.md
+                          items:
+                            - name: 'Gatheralpha (S, float, int)'
+                              href: sm5-object-texture2d-gatheralpha.md
+                            - name: 'Gatheralpha (S, float, int2, int2, int2, int2)'
+                              href: t2d-gatheralpha-s-float-int2-int2-int2-int2-.md
+                            - name: 'Gatheralpha (S, float, int, uint)'
+                              href: t2d-gatheralpha-s-float-int-uint-.md
+                            - name: 'Gatheralpha (S, float, int2, int2, int2, int2, uint)'
+                              href: t2d-gatheralpha-s-float-int2-int2-int2-int2-uint-.md
+                        - name: Gatherblue-Methoden
+                          href: texture2d-gatherblue.md
+                          items:
+                            - name: 'Gatherblue (S, float, int)'
+                              href: sm5-object-texture2d-gatherblue.md
+                            - name: 'Gatherblue (S, float, int2, int2, int2, int2)'
+                              href: t2d-gatherblue-s-float-int2-int2-int2-int2-.md
+                            - name: 'Gatherblue (S, float, int, uint)'
+                              href: t2d-gatherblue-s-float-int-uint-.md
+                            - name: 'Gatherblue (S, float, int2, int2, int2, int2, uint)'
+                              href: t2d-gatherblue-s-float-int2-int2-int2-int2-uint-.md
+                        - name: Gathercmp-Methoden
+                          href: texture2d-gathercmp.md
+                          items:
+                            - name: 'Gathercmp (S, float, float, int)'
+                              href: sm5-object-texture2d-gathercmp.md
+                            - name: 'Gathercmp (S, float, float, int, uint)'
+                              href: t2d-gathercmp-s-float-float-int-uint-.md
+                        - name: Gathercmpalpha-Methoden
+                          href: texture2d-gathercmpalpha.md
+                          items:
+                            - name: 'Gathercmpalpha (S, float, float, int)'
+                              href: sm5-object-texture2d-gathercmpalpha.md
+                            - name: 'Gathercmpalpha (S, float, int2, int2, int2, int2)'
+                              href: t2d-gathercmpalpha-s-float-int2-int2-int2-int2-.md
+                            - name: 'Gathercmpalpha (S, float, float, int, uint)'
+                              href: t2d-gathercmpalpha-s-float-float-int-uint-.md
+                            - name: 'Gathercmpalpha (S, float, float, int2, int2, int2, int2, uint)'
+                              href: t2d-gathercmpalpha-s-float-float-int2-int2-int2-int2-uint-.md
+                        - name: Gathercmpblue-Methoden
+                          href: texture2d-gathercmpblue.md
+                          items:
+                            - name: 'Gathercmpblue (S, float, float, int)'
+                              href: sm5-object-texture2d-gathercmpblue.md
+                            - name: 'Gathercmpblue (S, float, float, int2, int2, int2, int2)'
+                              href: t2d-gathercmpblue-s-float-float-int2-int2-int2-int2-.md
+                            - name: 'Gathercmpblue (S, float, float, int, uint)'
+                              href: t2d-gathercmpblue-s-float-float-int-uint-.md
+                            - name: 'Gathercmpblue (S, float, float, int2, int2, int2, int2, uint)'
+                              href: t2d-gathercmpblue-s-float-float-int2-int2-int2-int2-uint-.md
+                        - name: Gathercmpgreen-Methoden
+                          href: texture2d-gathercmpgreen.md
+                          items:
+                            - name: 'Gathercmpgreen (S, float, float, int)'
+                              href: sm5-object-texture2d-gathercmpgreen.md
+                            - name: 'Gathercmpgreen (S, float, float, int2, int2, int2, int2)'
+                              href: t2d-gathercmpgreen-s-float-float-int2-int2-int2-int2-.md
+                            - name: 'Gathercmpgreen (S, float, float, int, uint)'
+                              href: t2d-gathercmpgreen-s-float-float-int-uint-.md
+                            - name: 'Gathercmpgreen (S, float, float, int2, int2, int2, int2, uint)'
+                              href: t2d-gathercmpgreen-s-float-float-int2-int2-int2-int2-uint-.md
+                        - name: Gathercmpred-Methoden
+                          href: texture2d-gathercmpred.md
+                          items:
+                            - name: 'Gathercmpred (S, float, float, int)'
+                              href: sm5-object-texture2d-gathercmpred.md
+                            - name: 'Gathercmpred (S, float, float, int2, int2, int2, int2)'
+                              href: t2d-gathercmpred-s-float-float-int2-int2-int2-int2-.md
+                            - name: 'Gathercmpred (S, float, float, int, uint)'
+                              href: t2d-gathercmpred-s-float-float-int-uint-.md
+                            - name: 'Gathercmpred (S, float, float, int2, int2, int2, int2, uint)'
+                              href: t2d-gathercmpred-s-float-float-int2-int2-int2-int2-uint-.md
+                        - name: Gathergreen-Methoden
+                          href: texture2d-gathergreen.md
+                          items:
+                            - name: 'Gathergrün (S, float, int)'
+                              href: sm5-object-texture2d-gathergreen.md
+                            - name: 'Gathergrün (S, float, int2, int2, int2, int2)'
+                              href: t2d-gathergreen-s-float-float-int2-int2-int2-int2-.md
+                            - name: 'Gathergrün (S, float, int, uint)'
+                              href: t2d-gathergreen-s-float-int-uint-.md
+                            - name: 'Gathergrün (S, float, int2, int2, int2, int2, uint)'
+                              href: t2d-gathergreen-s-float-int2-int2-int2-int2-uint-.md
+                        - name: Gatherred-Methoden
+                          href: texture2d-gatherred.md
+                          items:
+                            - name: 'Gatherred (S, float, int)'
+                              href: sm5-object-texture2d-gatherred.md
+                            - name: 'Gatherred (S, float, int2, int2, int2, int2)'
+                              href: t2d-gatherred-s-float-int2-int2-int2-int2-.md
+                            - name: 'Gatherred (S, float, int, uint)'
+                              href: t2d-gatherred-s-float-int-uint-.md
+                            - name: 'Gatherred (S, float, int2, int2, int2, int2, uint)'
+                              href: t2d-gatherred-s-float-int2-int2-int2-int2-uint-.md
+                        - name: GetDimensions
+                          href: sm5-object-texture2d-getdimensions.md
+                        - name: Lade Methoden
+                          href: texture2d-load.md
+                          items:
+                            - name: 'Load (int, int, uint)'
+                              href: t2d-load-float-int-uint-.md
+                        - name: MIPS. KOM
+                          href: sm5-object-texture2d-mipsoperatorindex.md
+                        - name: KOM
+                          href: sm5-object-texture2d-operatorindex.md
+                        - name: Beispiel Methoden
+                          href: texture-sample-overload.md
+                          items:
+                            - name: 'Sample (S, float, int, float)'
+                              href: sample-s-float--int-float-.md
+                            - name: 'Sample (S, float, int, float, uint)'
+                              href: sample-s-float--int-uint-.md
+                        - name: Samplebias-Methoden
+                          href: texture2d-samplebias.md
+                          items:
+                            - name: 'Sample Bias (S, float, float, int, float)'
+                              href: samplebias-s-float-float-int-float-.md
+                            - name: 'Sample Bias (S, float, float, int, float, uint)'
+                              href: samplebias-s-float-float-int-float-uint-.md
+                        - name: Samplecmp-Methoden
+                          href: texture2d-samplecmp.md
+                          items:
+                            - name: 'Samplecmp (S, float, float, int, float)'
+                              href: samplecmp-s-float-float-int-float-.md
+                            - name: 'Samplecmp (S, float, float, int, float, uint)'
+                              href: samplecmp-s-float-float-int-float-uint-.md
+                        - name: Samplecmplevelzero-Methoden
+                          href: texture2d-samplecmplevelzero.md
+                          items:
+                            - name: 'Samplecmplevelzero (S, float, float, int, uint)'
+                              href: samplecmplevelzero-s-float-float-int-uint-.md
+                        - name: Samplegrad-Methoden
+                          href: texture2d-samplegrad.md
+                          items:
+                            - name: 'Samplegrad (S, float, float, float, int, float)'
+                              href: samplegrad-s-float-float-float-int-float-.md
+                            - name: 'Samplegrad (S, float, float, float, int, float, uint)'
+                              href: samplegrad-s-float-float-float-int-float-uint-.md
+                        - name: Samplelevel-Methoden
+                          href: texture2d-samplelevel.md
+                          items:
+                            - name: 'Samplelevel (S, float, float, int, uint)'
+                              href: samplelevel-s-float-float-int-uint-.md
+                    - name: Texture2DArray
+                      href: sm5-object-texture2darray.md
+                      items:
+                        - name: Gather-Methoden
+                          href: texture2darray-gather.md
+                          items:
+                            - name: 'Gather (S, float, int)'
+                              href: sm5-object-texture2darray-gather.md
+                            - name: 'Gather (S, float, int, uint)'
+                              href: t2darray-gather-s-float-int-uint-.md
+                        - name: Gatheralpha-Methoden
+                          href: texture2darray-gatheralpha.md
+                          items:
+                            - name: 'Gatheralpha (S, float, int)'
+                              href: sm5-object-texture2darray-gatheralpha.md
+                            - name: 'Gatheralpha (S, float, int2, int2, int2, int2)'
+                              href: t2darray-gatheralpha-s-float-int2-int2-int2-int2-.md
+                            - name: 'Gatheralpha (S, float, int, uint)'
+                              href: t2darray-gatheralpha-s-float-int-uint-.md
+                            - name: 'Gatheralpha (S, float, int2, int2, int2, int2, uint)'
+                              href: t2darray-gatheralpha-s-float-int2-int2-int2-int2-uint-.md
+                        - name: Gatherblue-Methoden
+                          href: texture2darray-gatherblue.md
+                          items:
+                            - name: 'Gatherblue (S, float, int)'
+                              href: sm5-object-texture2darray-gatherblue.md
+                            - name: 'Gatherblue (S, float, int2, int2, int2, int2)'
+                              href: t2array-gatherblue-s-float-int2-int2-int2-int2-.md
+                            - name: 'Gatherblue (S, float, int, uint)'
+                              href: t2darray-gatherblue-s-float-int-uint-.md
+                            - name: 'Gatherblue (S, float, int2, int2, int2, int2, uint)'
+                              href: t2darray-gatherblue-s-float-int2-int2-int2-int2-uint-.md
+                        - name: Gathercmp-Methoden
+                          href: texture2darray-gathercmp.md
+                          items:
+                            - name: 'Gathercmp (S, float, float, int)'
+                              href: sm5-object-texture2darray-gathercmp.md
+                            - name: 'Gathercmp (S, float, float, int, uint)'
+                              href: t2darray-gathercmp-s-float-float-int-uint-.md
+                        - name: Gathercmpalpha-Methoden
+                          href: texture2darray-gathercmpalpha.md
+                          items:
+                            - name: 'Gathercmpalpha (S, float, float, int)'
+                              href: sm5-object-texture2darray-gathercmpalpha.md
+                            - name: 'Gathercmpalpha (S, float, float, int2, int2, int2, int2)'
+                              href: t2darray-gathercmpalpha-s-float-float-int2-int2-int2-int2-.md
+                            - name: 'Gathercmpalpha (S, float, float, int, uint)'
+                              href: t2darray-gathercmpalpha-s-float-float-int-uint-.md
+                            - name: 'Gathercmpalpha (S, float, float, int2, int2, int2, int2, uint)'
+                              href: t2darray-gathercmpalpha-s-float-float-int2-int2-int2-int2-uint-.md
+                        - name: Gathercmpblue-Methoden
+                          href: texture2darray-gathercmpblue.md
+                          items:
+                            - name: 'Gathercmpblue (S, float, float, int)'
+                              href: sm5-object-texture2darray-gathercmpblue.md
+                            - name: 'Gathercmpblue (S, float, float, int2, int2, int2, int2)'
+                              href: t2darray-gathercmpblue-s-float-float-int2-int2-int2-int2-.md
+                            - name: 'Gathercmpblue (S, float, float, int, uint)'
+                              href: t2darray-gathercmpblue-s-float-float-int-uint-.md
+                            - name: 'Gathercmpblue (S, float, float, int2, int2, int2, int2, uint)'
+                              href: t2darray-gathercmpblue-s-float-float-int2-int2-int2-int2-uint-.md
+                        - name: Gathercmpgreen-Methoden
+                          href: texture2darray-gathercmpgreen.md
+                          items:
+                            - name: 'Gathercmpgreen (S, float, float, int)'
+                              href: sm5-object-texture2darray-gathercmpgreen.md
+                            - name: 'Gathercmpgreen (S, float, float, int2, int2, int2, int2)'
+                              href: t2darray-gathercmpgreen-s-float-float-int2-int2-int2-int2-.md
+                            - name: 'Gathercmpgreen (S, float, float, int, uint)'
+                              href: t2darray-gathercmpgreen-s-float-float-int-uint-.md
+                            - name: 'Gathercmpgreen (S, float, float, int2, int2, int2, int2, uint)'
+                              href: t2darray-gathercmpgreen-s-float-float-int2-int2-int2-int2-uint-.md
+                        - name: Gathercmpred-Methoden
+                          href: texture2darray-gathercmpred.md
+                          items:
+                            - name: 'Gathercmpred (S, float, float, int)'
+                              href: sm5-object-texture2darray-gathercmpred.md
+                            - name: 'Gathercmpred (S, float, float, int2, int2, int2, int2)'
+                              href: t2darray-gathercmpred-s-float-float-int2-int2-int2-int2-.md
+                            - name: 'Gathercmpred (S, float, float, int, uint)'
+                              href: t2darray-gathercmpred-s-float-float-int-uint-.md
+                            - name: 'Gathercmpred (S, float, float, int2, int2, int2, int2, uint)'
+                              href: t2darray-gathercmpred-s-float-float-int2-int2-int2-int2-uint-.md
+                        - name: Gathergreen-Methoden
+                          href: texture2darray-gathergreen.md
+                          items:
+                            - name: 'Gathergrün (S, float, int)'
+                              href: sm5-object-texture2darray-gathergreen.md
+                            - name: 'Gathergrün (S, float, int2, int2, int2, int2)'
+                              href: t2darray-gathergreen-s-float-int2-int2-int2-int2-.md
+                            - name: 'Gathergrün (S, float, int, uint)'
+                              href: t2darray-gathergreen-s-float-int-uint-.md
+                            - name: 'Gathergrün (S, float, int2, int2, int2, int2, uint)'
+                              href: t2darray-gathergreen-s-float-int2-int2-int2-int2-uint-.md
+                        - name: Gatherred-Methoden
+                          href: texture2darray-gatherred.md
+                          items:
+                            - name: 'Gatherred (S, float, int)'
+                              href: sm5-object-texture2darray-gatherred.md
+                            - name: 'Gatherred (S, float, int2, int2, int2, int2)'
+                              href: t2darray-gatherred-s-float-int2-int2-int2-int2-.md
+                            - name: 'Gatherred (S, float, int, uint)'
+                              href: t2darray-gatherred-s-float-int-uint-.md
+                            - name: 'Gatherred (S, float, int2, int2, int2, int2, uint)'
+                              href: t2darray-gatherred-s-float-int2-int2-int2-int2-uint-.md
+                        - name: GetDimensions
+                          href: sm5-object-texture2darray-getdimensions.md
+                        - name: Lade Methoden
+                          href: texture2darray-load.md
+                          items:
+                            - name: 'Load (int, int, uint)'
+                              href: t2darray-load-float-int-uint-.md
+                        - name: MIPS. KOM
+                          href: sm5-object-texture2darray-mipsoperatorindex.md
+                        - name: KOM
+                          href: sm5-object-texture2darray-operatorindex.md
+                        - name: Beispiel Methoden
+                          href: texture2darray-sample.md
+                          items:
+                            - name: 'Sample (S, float, int, float)'
+                              href: t2darray-sample-s-float-int-float-.md
+                            - name: 'Sample (S, float, int, float, uint)'
+                              href: t2darray-sample-s-float-int-float-uint-.md
+                        - name: Samplebias-Methoden
+                          href: texture2darray-samplebias.md
+                          items:
+                            - name: 'Sample Bias (S, float, float, int, float)'
+                              href: t2darray-samplebias-s-float-float-int-float-.md
+                            - name: 'Sample Bias (S, float, float, int, float, uint)'
+                              href: t2darray-samplebias-s-float-float-int-float-uint-.md
+                        - name: Samplecmp-Methoden
+                          href: texture2darray-samplecmp.md
+                          items:
+                            - name: 'Samplecmp (S, float, float, int, float)'
+                              href: t2darray-samplecmp-s-float-float-int-float-.md
+                            - name: 'Samplecmp (S, float, float, int, float, uint)'
+                              href: t2darray-samplecmp-s-float-float-int-float-uint-.md
+                        - name: Samplecmplevelzero-Methoden
+                          href: texture2darray-samplecmplevelzero.md
+                          items:
+                            - name: 'Samplecmplevelzero (S, float, float, int, uint)'
+                              href: t2darray-samplecmplevelzero-s-float-float-int-uint-.md
+                        - name: Samplegrad-Methoden
+                          href: texture2darray-samplegrad.md
+                          items:
+                            - name: 'Samplegrad (S, float, float, float, int, float)'
+                              href: t2darray-samplegrad-s-float-float-float-int-float-.md
+                            - name: 'Samplegrad (S, float, float, float, int, float, uint)'
+                              href: t2darray-samplegrad-s-float-float-float-int-float-uint-.md
+                        - name: Samplelevel-Methoden
+                          href: texture2darray-samplelevel.md
+                          items:
+                            - name: 'Samplelevel (S, float, float, int, uint)'
+                              href: t2darray-samplelevel-s-float-float-int-uint-.md
+                    - name: Texture3D
+                      href: sm5-object-texture3d.md
+                      items:
+                        - name: GetDimensions
+                          href: sm5-object-texture3d-getdimensions.md
+                        - name: Lade Methoden
+                          href: texture3d-load.md
+                          items:
+                            - name: 'Load (int, int, uint)'
+                              href: t3d-load-float-int-uint-.md
+                        - name: MIPS. KOM
+                          href: sm5-object-texture3d-mipsoperatorindex.md
+                        - name: KOM
+                          href: sm5-object-texture3d-operatorindex.md
+                        - name: Beispiel Methoden
+                          href: texture3d-sample.md
+                          items:
+                            - name: 'Sample (S, float, int, float)'
+                              href: t3d-sample-s-float-int-float-.md
+                            - name: 'Sample (S, float, int, float, uint)'
+                              href: t3d-sample-s-float-int-float-uint-.md
+                        - name: Samplebias-Methoden
+                          href: texture3d-samplebias.md
+                          items:
+                            - name: 'Sample Bias (S, float, float, int, float)'
+                              href: t3d-samplebias-s-float-float-int-float-.md
+                            - name: 'Sample Bias (S, float, float, int, float, uint)'
+                              href: t3d-samplebias-s-float-float-int-float-uint-.md
+                        - name: Samplegrad-Methoden
+                          href: texture3d-samplegrad.md
+                          items:
+                            - name: 'Samplegrad (S, float, float, float, int, float)'
+                              href: t3d-samplegrad-s-float-float-float-int-float-.md
+                            - name: 'Samplegrad (S, float, float, float, int, float, uint)'
+                              href: t3d-samplegrad-s-float-float-float-int-float-uint-.md
+                        - name: Samplelevel-Methoden
+                          href: texture3d-samplelevel.md
+                          items:
+                            - name: 'Samplelevel (S, float, float, int, uint)'
+                              href: t3d-samplelevel-s-float-float-int-uint-.md
+                    - name: Texture2DMS
+                      href: sm5-object-texture2dms.md
+                      items:
+                        - name: GetDimensions
+                          href: sm5-object-texture2dms-getdimensions.md
+                        - name: Getsampleposition
+                          href: sm5-object-texture2dms-getsampleposition.md
+                        - name: Lade Methoden
+                          href: texture2dms-load.md
+                          items:
+                            - name: 'Load (int, int)'
+                              href: sm5-object-texture2dms-load.md
+                            - name: 'Load (int, int, int, uint)'
+                              href: t2dms-load-float-int-int-uint-.md
+                        - name: Blutprobe. KOM
+                          href: sm5-object-texture2dms-sampleoperatorindex.md
+                        - name: KOM
+                          href: sm5-object-texture2dms-operator1.md
+                    - name: Texture2DMSArray
+                      href: sm5-object-texture2dmsarray.md
+                      items:
+                        - name: GetDimensions
+                          href: sm5-object-texture2dmsarray-getdimensions.md
+                        - name: Getsampleposition
+                          href: sm5-object-texture2dmsarray-getsampleposition.md
+                        - name: Lade Methoden
+                          href: texture2dmsarray-load.md
+                          items:
+                            - name: 'Load (int, int)'
+                              href: sm5-object-texture2dmsarray-load.md
+                            - name: 'Load (int, int, int, uint)'
+                              href: t2dmsarray-load-float-int-int-uint-.md
+                        - name: Blutprobe. KOM
+                          href: sm5-object-texture2dmsarray-sampleoperatorindex.md
+                    - name: TextureCube
+                      href: texturecube.md
+                      items:
+                        - name: Gather-Methoden
+                          href: texturecube-gather.md
+                          items:
+                            - name: 'Gather (S, float, uint)'
+                              href: tcube-gather-s-float-uint-.md
+                        - name: Gatheralpha-Methoden
+                          href: texturecube-gatheralpha.md
+                          items:
+                            - name: 'Gatheralpha (S, float, uint)'
+                              href: tcube-gatheralpha-s-float-uint-.md
+                        - name: Gatherblue-Methoden
+                          href: texturecube-gatherblue.md
+                          items:
+                            - name: 'Gatherblue (S, float, uint)'
+                              href: tcube-gatherblue-s-float-uint-.md
+                        - name: Gathercmp-Methoden
+                          href: texturecube-gathercmp.md
+                          items:
+                            - name: 'Gathercmp (S, float, float, uint)'
+                              href: tcube-gathercmp-s-float-float-uint-.md
+                        - name: Gathercmpalpha-Methoden
+                          href: texturecube-gathercmpalpha.md
+                          items:
+                            - name: 'Gathercmpalpha (S, float, float, uint)'
+                              href: tcube-gathercmpalpha-s-float-float-uint-.md
+                        - name: Gathercmpblue-Methoden
+                          href: texturecube-gathercmpblue.md
+                          items:
+                            - name: 'Gathercmpblue (S, float, float, uint)'
+                              href: tcube-gathercmpblue-s-float-float-uint-.md
+                        - name: Gathercmpgreen-Methoden
+                          href: texturecube-gathercmpgreen.md
+                          items:
+                            - name: 'Gathercmpgreen (S, float, float, uint)'
+                              href: tcube-gathercmpgreen-s-float-float-uint-.md
+                        - name: Gathercmpred-Methoden
+                          href: texturecube-gathercmpred.md
+                          items:
+                            - name: 'Gathercmpred (S, float, float, uint)'
+                              href: tcube-gathercmpred-s-float-float-uint-.md
+                        - name: Gathergreen-Methoden
+                          href: texturecube-gathergreen.md
+                          items:
+                            - name: 'Gathergrün (S, float, uint)'
+                              href: tcube-gathergreen-s-float-uint-.md
+                        - name: Gatherred-Methoden
+                          href: texturecube-gatherred.md
+                          items:
+                            - name: 'Gatherred (S, float, uint)'
+                              href: tcube-gatherred-s-float-uint-.md
+                        - name: Beispiel Methoden
+                          href: texturecube-sample.md
+                          items:
+                            - name: 'Sample (S, float, float)'
+                              href: tcube-sample-s-float-float-.md
+                            - name: 'Sample (S, float, float, uint)'
+                              href: tcube-sample-s-float-float-uint-.md
+                        - name: Samplebias-Methoden
+                          href: texturecube-samplebias.md
+                          items:
+                            - name: 'Sample Bias (S, float, float, float)'
+                              href: tcube-samplebias-s-float-float-float-.md
+                            - name: 'Sample Bias (S, float, float, float, uint)'
+                              href: tcube-samplebias-s-float-float-float-uint-.md
+                        - name: Samplecmp-Methoden
+                          href: texturecube-samplecmp.md
+                          items:
+                            - name: 'Samplecmp (S, float, float, float)'
+                              href: tcube-samplecmp-s-float-float-float-.md
+                            - name: 'Samplecmp (S, float, float, float, uint)'
+                              href: tcube-samplecmp-s-float-float-float-uint-.md
+                        - name: Samplecmplevelzero-Methoden
+                          href: texturecube-samplecmplevelzero.md
+                          items:
+                            - name: 'Samplecmplevelzero (S, float, float, uint)'
+                              href: tcube-samplecmplevelzero-s-float-float-uint-.md
+                        - name: Samplegrad-Methoden
+                          href: texturecube-samplegrad.md
+                          items:
+                            - name: 'Samplegrad (S, float, float, float, float)'
+                              href: tcube-samplegrad-s-float-float-float-float-.md
+                            - name: 'Samplegrad (S, float, float, float, float, uint)'
+                              href: tcube-samplegrad-s-float-float-float-float-uint-.md
+                        - name: Samplelevel-Methoden
+                          href: texturecube-samplelevel.md
+                          items:
+                            - name: 'Samplelevel (S, float, float, uint)'
+                              href: tcube-samplelevel-s-float-float-uint-.md
+                    - name: Texturecubearray
+                      href: texturecubearray.md
+                      items:
+                        - name: Gather-Methoden
+                          href: texturecubearray-gather.md
+                          items:
+                            - name: 'Gather (S, float, uint)'
+                              href: tcubearray-gather-s-float-uint-.md
+                        - name: Gatheralpha-Methoden
+                          href: texturecubearray-gatheralpha.md
+                          items:
+                            - name: 'Gatheralpha (S, float, uint)'
+                              href: tcubearray-gatheralpha-s-float-uint-.md
+                        - name: Gatherblue-Methoden
+                          href: texturecubearray-gatherblue.md
+                          items:
+                            - name: 'Gatherblue (S, float, uint)'
+                              href: tcubearray-gatherblue-s-float-uint-.md
+                        - name: Gathercmp-Methoden
+                          href: texturecubearray-gathercmp.md
+                          items:
+                            - name: 'Gathercmp (S, float, float, uint)'
+                              href: tcubearray-gathercmp-s-float-float-uint-.md
+                        - name: Gathercmpalpha-Methoden
+                          href: texturecubearray-gathercmpalpha.md
+                          items:
+                            - name: 'Gathercmpalpha (S, float, float, uint)'
+                              href: tcubearray-gathercmpalpha-s-float-float-uint-.md
+                        - name: Gathercmpblue-Methoden
+                          href: texturecubearray-gathercmpblue.md
+                          items:
+                            - name: 'Gathercmpblue (S, float, float, uint)'
+                              href: tcubearray-gathercmpblue-s-float-float-uint-.md
+                        - name: Gathercmpgreen-Methoden
+                          href: texturecubearray-gathercmpgreen.md
+                          items:
+                            - name: 'Gathercmpgreen (S, float, float, uint)'
+                              href: tcubearray-gathercmpgreen-s-float-float-uint-.md
+                        - name: Gathercmpred-Methoden
+                          href: texturecubearray-gathercmpred.md
+                          items:
+                            - name: 'Gathercmpred (S, float, float, uint)'
+                              href: tcubearray-gathercmpred-s-float-float-uint-.md
+                        - name: Gathergreen-Methoden
+                          href: texturecubearray-gathergreen.md
+                          items:
+                            - name: 'Gathergrün (S, float, uint)'
+                              href: tcubearray-gathergreen-s-float-uint-.md
+                        - name: Gatherred-Methoden
+                          href: texturecubearray-gatherred.md
+                          items:
+                            - name: 'Gatherred (S, float, uint)'
+                              href: tcubearray-gatherred-s-float-uint-.md
+                        - name: Beispiel Methoden
+                          href: texturecubearray-sample.md
+                          items:
+                            - name: 'Sample (S, float, float)'
+                              href: tcubearray-sample-s-float-float-.md
+                            - name: 'Sample (S, float, float, uint)'
+                              href: tcubearray-sample-s-float-float-uint-.md
+                        - name: Samplebias-Methoden
+                          href: texturecubearray-samplebias.md
+                          items:
+                            - name: 'Sample Bias (S, float, float, float)'
+                              href: tcubearray-samplebias-s-float-float-float-.md
+                            - name: 'Sample Bias (S, float, float, float, uint)'
+                              href: tcubearray-samplebias-s-float-float-float-uint-.md
+                        - name: Samplecmp-Methoden
+                          href: texturecubearray-samplecmp.md
+                          items:
+                            - name: 'Samplecmp (S, float, float, float)'
+                              href: tcubearray-samplecmp-s-float-float-float-.md
+                            - name: 'Samplecmp (S, float, float, float, uint)'
+                              href: tcubearray-samplecmp-s-float-float-float-uint-.md
+                        - name: Samplecmplevelzero-Methoden
+                          href: texturecubearray-samplecmplevelzero.md
+                          items:
+                            - name: 'Samplecmplevelzero (S, float, float, uint)'
+                              href: tcubearray-samplecmplevelzero-s-float-float-uint-.md
+                        - name: Samplegrad-Methoden
+                          href: texturecubearray-samplegrad.md
+                          items:
+                            - name: 'Samplegrad (S, float, float, float, float)'
+                              href: tcubearray-samplegrad-s-float-float-float-float-.md
+                            - name: 'Samplegrad (S, float, float, float, float, uint)'
+                              href: tcubearray-samplegrad-s-float-float-float-float-uint-.md
+                        - name: Samplelevel-Methoden
+                          href: texturecubearray-samplelevel.md
+                          items:
+                            - name: 'Samplelevel (S, float, float, uint)'
+                              href: tcubearray-samplelevel-s-float-float-uint-.md
+                - name: Shader-Modell 5-System Werte
+                  href: d3d11-graphics-reference-sm5-system-values.md
+                - name: Register-vs_5_0
+                  href: registers---vs-5-0.md
+                - name: Register-ps_5_0
+                  href: registers---ps-5-0.md
+                - name: Register-gs_5_0
+                  href: registers---gs-5-0.md
+                - name: Register-hs_5_0
+                  href: registers---hs-5-0.md
+                - name: Register-ds_5_0
+                  href: registers---ds-5-0.md
+                - name: Register-cs_5_0
+                  href: registers---cs-5-0.md
+            - name: 'Shadermodell 5,1'
+              href: shader-model-5-1.md
+              items:
+                - name: 'Shader-Modell 5,1-Objekte'
+                  href: shader-model-5-1-objects.md
+                - name: 'Shader-Modell 5,1 System Werte'
+                  href: shader-model-5-1-system-values.md
+                  items:
+                    - name: SV_InnerCoverage
+                      href: sv-innercoverage.md
+                    - name: SV_StencilRef
+                      href: sv-stencilref.md
+            - name: Shader-Modell 6
+              href: shader-model-6-0.md
+              items:
+                - name: Quad-acrossdiagonal
+                  href: quadreadacrossdiagonal.md
+                - name: Quadumeat
+                  href: quadreadlaneat.md
+                - name: Quad-acrossx
+                  href: quadswapx.md
+                - name: Quad-acrossy
+                  href: quadswapy.md
+                - name: Waveactiveallequal
+                  href: waveactiveallequal.md
+                - name: Waveactivebitand
+                  href: waveallbitand.md
+                - name: Waveactivebitor
+                  href: waveallbitor.md
+                - name: Waveactivebitxor
+                  href: waveallbitxor.md
+                - name: Waveactivezählbits
+                  href: waveactivecountbits.md
+                - name: Waveactivemax
+                  href: waveallmax.md
+                - name: Waveactivemin
+                  href: waveallmin.md
+                - name: Waveactiveproduct
+                  href: waveallproduct.md
+                - name: Waveactivesum
+                  href: waveallsum.md
+                - name: Waveactivealltrue
+                  href: wavealltrue.md
+                - name: Waveactiveanytrue
+                  href: waveanytrue.md
+                - name: Waveactiveballot
+                  href: waveballot.md
+                - name: Wavegetlanecount
+                  href: wavegetlanecount.md
+                - name: Wavegetlaneingedex
+                  href: wavegetlaneindex.md
+                - name: Waveisfirstlane
+                  href: waveisfirstlane.md
+                - name: Waveprefixzählbits
+                  href: waveprefixcountbytes.md
+                - name: Waveprefixproduct
+                  href: waveprefixproduct.md
+                - name: Waveprefixsum
+                  href: waveprefixsum.md
+                - name: Wavereadlanefirst
+                  href: wavereadfirstlane.md
+                - name: Wavereadlaneat
+                  href: wavereadlaneat.md
+        - name: Systeminterne Funktionen
+          href: dx-graphics-hlsl-intrinsic-functions.md
+          items:
+            - name: abort
+              href: abort.md
+            - name: abs
+              href: dx-graphics-hlsl-abs.md
+            - name: acos
+              href: dx-graphics-hlsl-acos.md
+            - name: alle
+              href: dx-graphics-hlsl-all.md
+            - name: Allmemorybarrier
+              href: allmemorybarrier.md
+            - name: Allmemorybarrierwithgroupsync
+              href: allmemorybarrierwithgroupsync.md
+            - name: any
+              href: dx-graphics-hlsl-any.md
+            - name: AsDouble
+              href: asdouble.md
+            - name: asfloat
+              href: dx-graphics-hlsl-asfloat.md
+            - name: asin
+              href: dx-graphics-hlsl-asin.md
+            - name: asint
+              href: asint.md
+            - name: asint
+              href: dx-graphics-hlsl-asint.md
+            - name: asuint
+              href: asuint.md
+            - name: asuint
+              href: dx-graphics-hlsl-asuint.md
+            - name: atan
+              href: dx-graphics-hlsl-atan.md
+            - name: atan2
+              href: dx-graphics-hlsl-atan2.md
+            - name: ceil
+              href: dx-graphics-hlsl-ceil.md
+            - name: Checkaccessfullymapping
+              href: checkaccessfullymapped.md
+            - name: gekl
+              href: dx-graphics-hlsl-clamp.md
+            - name: Clip
+              href: dx-graphics-hlsl-clip.md
+            - name: cos
+              href: dx-graphics-hlsl-cos.md
+            - name: cosh
+              href: dx-graphics-hlsl-cosh.md
+            - name: countbits
+              href: countbits.md
+            - name: übergreifende
+              href: dx-graphics-hlsl-cross.md
+            - name: D3DCOLORtoUBYTE4
+              href: dx-graphics-hlsl-d3dcolortoubyte4.md
+            - name: DDX
+              href: dx-graphics-hlsl-ddx.md
+            - name: ddx_coarse
+              href: ddx-coarse.md
+            - name: ddx_fine
+              href: ddx-fine.md
+            - name: tziger
+              href: dx-graphics-hlsl-ddy.md
+            - name: ddy_coarse
+              href: ddy-coarse.md
+            - name: ddy_fine
+              href: ddy-fine.md
+            - name: Grad
+              href: dx-graphics-hlsl-degrees.md
+            - name: Determinante
+              href: dx-graphics-hlsl-determinant.md
+            - name: Devicememorybarrier
+              href: devicememorybarrier.md
+            - name: Devicememorybarrierwithgroupsync
+              href: devicememorybarrierwithgroupsync.md
+            - name: distance
+              href: dx-graphics-hlsl-distance.md
+            - name: DOT
+              href: dx-graphics-hlsl-dot.md
+            - name: DST
+              href: dst.md
+            - name: '"errorf"'
+              href: errorf.md
+            - name: Evaluateattributeatcentroid
+              href: evaluateattributeatcentroid.md
+            - name: Evaluateattributeatsample
+              href: evaluateattributeatsample.md
+            - name: Evaluateattributesnapped
+              href: evaluateattributesnapped.md
+            - name: exp
+              href: dx-graphics-hlsl-exp.md
+            - name: exp2
+              href: dx-graphics-hlsl-exp2.md
+            - name: f16tof32
+              href: f16tof32.md
+            - name: f32tof16
+              href: f32tof16.md
+            - name: faceforward
+              href: dx-graphics-hlsl-faceforward.md
+            - name: firstbithigh
+              href: firstbithigh.md
+            - name: firstbitlow
+              href: firstbitlow.md
+            - name: floor
+              href: dx-graphics-hlsl-floor.md
+            - name: fma
+              href: dx-graphics-hlsl-fma.md
+            - name: fmod
+              href: dx-graphics-hlsl-fmod.md
+            - name: Frac
+              href: dx-graphics-hlsl-frac.md
+            - name: frexp
+              href: dx-graphics-hlsl-frexp.md
+            - name: Breite
+              href: dx-graphics-hlsl-fwidth.md
+            - name: GetRenderTargetSampleCount
+              href: dx-graphics-hlsl-getrendertargetsamplecount.md
+            - name: GetRenderTargetSamplePosition
+              href: dx-graphics-hlsl-getrendertargetsampleposition.md
+            - name: Groupmemorybarrier
+              href: groupmemorybarrier.md
+            - name: Groupmemorybarrierwithgroupsync
+              href: groupmemorybarrierwithgroupsync.md
+            - name: Interlockedadd
+              href: interlockedadd.md
+            - name: Interlockedand
+              href: interlockedand.md
+            - name: InterlockedCompareExchange
+              href: interlockedcompareexchange.md
+            - name: Interlockedcomparestore
+              href: interlockedcomparestore.md
+            - name: InterlockedExchange
+              href: interlockedexchange.md
+            - name: Interlockedmax
+              href: interlockedmax.md
+            - name: Interlockedmin
+              href: interlockedmin.md
+            - name: Interlockedor
+              href: interlockedor.md
+            - name: Interlockedxor
+              href: interlockedxor.md
+            - name: isFinite
+              href: dx-graphics-hlsl-isfinite.md
+            - name: isinf
+              href: dx-graphics-hlsl-isinf.md
+            - name: IsNaN
+              href: dx-graphics-hlsl-isnan.md
+            - name: ldexp
+              href: dx-graphics-hlsl-ldexp.md
+            - name: length
+              href: dx-graphics-hlsl-length.md
+            - name: Lerp
+              href: dx-graphics-hlsl-lerp.md
+            - name: gezündet
+              href: dx-graphics-hlsl-lit.md
+            - name: log
+              href: dx-graphics-hlsl-log.md
+            - name: LOG10
+              href: dx-graphics-hlsl-log10.md
+            - name: log2
+              href: dx-graphics-hlsl-log2.md
+            - name: geworden
+              href: mad.md
+            - name: max
+              href: dx-graphics-hlsl-max.md
+            - name: Min
+              href: dx-graphics-hlsl-min.md
+            - name: modf
+              href: dx-graphics-hlsl-modf.md
+            - name: msad4
+              href: dx-graphics-hlsl-msad4.md
+            - name: mul
+              href: dx-graphics-hlsl-mul.md
+            - name: Lautstärke
+              href: dx-graphics-hlsl-noise.md
+            - name: Normalisieren
+              href: dx-graphics-hlsl-normalize.md
+            - name: pow
+              href: dx-graphics-hlsl-pow.md
+            - name: printf
+              href: printf.md
+            - name: Process2DQuadTessFactorsAvg
+              href: process2dquadtessfactorsavg.md
+            - name: Process2DQuadTessFactorsMax
+              href: process2dquadtessfactorsmax.md
+            - name: Process2DQuadTessFactorsMin
+              href: process2dquadtessfactorsmin.md
+            - name: Processisolinetess Factors
+              href: processisolinetessfactors.md
+            - name: Processquadtess Factor-savg
+              href: processquadtessfactorsavg.md
+            - name: Processquadtfaktorialsmax
+              href: processquadtessfactorsmax.md
+            - name: Processquadtess Factor Smin
+              href: processquadtessfactorsmin.md
+            - name: Processtritesfactor
+              href: processtritessfactorsavg.md
+            - name: Processtritesfactorismax
+              href: processtritessfactorsmax.md
+            - name: Processtritesfactor Smin
+              href: processtritessfactorsmin.md
+            - name: Bogenmaß
+              href: dx-graphics-hlsl-radians.md
+            - name: rcp
+              href: rcp.md
+            - name: widerzuspiegeln
+              href: dx-graphics-hlsl-reflect.md
+            - name: Löschen
+              href: dx-graphics-hlsl-refract.md
+            - name: reversebits
+              href: reversebits.md
+            - name: round
+              href: dx-graphics-hlsl-round.md
+            - name: rsqrt
+              href: dx-graphics-hlsl-rsqrt.md
+            - name: auslasten
+              href: dx-graphics-hlsl-saturate.md
+            - name: Signieren
+              href: dx-graphics-hlsl-sign.md
+            - name: sin
+              href: dx-graphics-hlsl-sin.md
+            - name: SinCos
+              href: dx-graphics-hlsl-sincos.md
+            - name: sinh
+              href: dx-graphics-hlsl-sinh.md
+            - name: smoothstep
+              href: dx-graphics-hlsl-smoothstep.md
+            - name: sqrt
+              href: dx-graphics-hlsl-sqrt.md
+            - name: Schritt
+              href: dx-graphics-hlsl-step.md
+            - name: tan
+              href: dx-graphics-hlsl-tan.md
+            - name: tanh
+              href: dx-graphics-hlsl-tanh.md
+            - name: tex1D
+              href: dx-graphics-hlsl-tex1d.md
+            - name: tex1D
+              href: dx-graphics-hlsl-tex1d-s-t-ddx-ddy.md
+            - name: tex1Dbias
+              href: dx-graphics-hlsl-tex1dbias.md
+            - name: tex1Dgrad
+              href: dx-graphics-hlsl-tex1dgrad.md
+            - name: tex1Dlod
+              href: dx-graphics-hlsl-tex1dlod.md
+            - name: tex1Dproj
+              href: dx-graphics-hlsl-tex1dproj.md
+            - name: tex2D
+              href: dx-graphics-hlsl-tex2d.md
+            - name: tex2D
+              href: dx-graphics-hlsl-tex2d-s-t-ddx-ddy.md
+            - name: tex2Dbias
+              href: dx-graphics-hlsl-tex2dbias.md
+            - name: tex2Dgrad
+              href: dx-graphics-hlsl-tex2dgrad.md
+            - name: tex2Dlod
+              href: dx-graphics-hlsl-tex2dlod.md
+            - name: tex2Dproj
+              href: dx-graphics-hlsl-tex2dproj.md
+            - name: tex3D
+              href: dx-graphics-hlsl-tex3d.md
+            - name: tex3D
+              href: dx-graphics-hlsl-tex3d-s-t-ddx-ddy.md
+            - name: tex3Dbias
+              href: dx-graphics-hlsl-tex3dbias.md
+            - name: tex3Dgrad
+              href: dx-graphics-hlsl-tex3dgrad.md
+            - name: tex3Dlod
+              href: dx-graphics-hlsl-tex3dlod.md
+            - name: tex3Dproj
+              href: dx-graphics-hlsl-tex3dproj.md
+            - name: Texcube
+              href: dx-graphics-hlsl-texcube.md
+            - name: Texcube
+              href: dx-graphics-hlsl-texcube-s-t-ddx-ddy.md
+            - name: texcubebias
+              href: dx-graphics-hlsl-texcubebias.md
+            - name: texcubegrad
+              href: dx-graphics-hlsl-texcubegrad.md
+            - name: texcubelod
+              href: dx-graphics-hlsl-texcubelod.md
+            - name: texcubeproj
+              href: dx-graphics-hlsl-texcubeproj.md
+            - name: austauschen
+              href: dx-graphics-hlsl-transpose.md
+            - name: trunc
+              href: dx-graphics-hlsl-trunc.md
+        - name: ASM-Shader-Referenz
+          href: dx9-graphics-reference-asm.md
+          items:
+            - name: Vertex-Shader
+              href: dx9-graphics-reference-asm-vs.md
+              items:
+                - name: vs_1_1
+                  href: dx9-graphics-reference-asm-vs-1-1.md
+                - name: vs_2_0
+                  href: dx9-graphics-reference-asm-vs-2-0.md
+                - name: vs_2_x
+                  href: dx9-graphics-reference-asm-vs-2-x.md
+                - name: vs_3_0
+                  href: dx9-graphics-reference-asm-vs-3-0.md
+                - name: Vertexshader-Unterschiede
+                  href: dx9-graphics-reference-asm-vs-differences.md
+                - name: Vertex-shaderanweisungen
+                  href: dx9-graphics-reference-asm-vs-instructions.md
+                  items:
+                    - name: Anweisungen-vs_1_1
+                      href: dx9-graphics-reference-asm-vs-instructions-vs-1-1.md
+                    - name: Anweisungen-VS_2_0
+                      href: dx9-graphics-reference-asm-vs-instructions-vs-2-0.md
+                    - name: Anweisungen-vs_2_x
+                      href: dx9-graphics-reference-asm-vs-instructions-vs-2-x.md
+                    - name: Anweisungen-vs_3_0
+                      href: dx9-graphics-reference-asm-vs-instructions-vs-3-0.md
+                    - name: Schachtelungs Limits der Fluss Steuerung
+                      href: dx9-graphics-reference-asm-vs-instructions-flow-control.md
+                    - name: Anweisungs Modifizierer
+                      href: dx9-graphics-reference-asm-vs-instructions-modifiers.md
+                    - name: ABS-vs
+                      href: abs---vs.md
+                    - name: Add-vs
+                      href: add---vs.md
+                    - name: Break-vs
+                      href: break---vs.md
+                    - name: break_comp vs
+                      href: break-comp---vs.md
+                    - name: Break p-vs
+                      href: breakp---vs.md
+                    - name: callvs
+                      href: call---vs.md
+                    - name: callnz bool-vs
+                      href: callnz-bool---vs.md
+                    - name: callnz pred-vs
+                      href: callnz-pred---vs.md
+                    - name: CRS-vs
+                      href: crs---vs.md
+                    - name: dcl_samplerType (SM3-vs ASM)
+                      href: dcl-samplertype---vs.md
+                    - name: 'dcl_usage Eingabe (SM1, SM2, SM3-vs ASM)'
+                      href: dcl-usage-input-register---vs.md
+                    - name: 'dcl_usage Ausgabe (SM1, SM2, SM3-vs ASM)'
+                      href: dcl-usage-outut-register---vs.md
+                    - name: DEF-vs
+                      href: def---vs.md
+                    - name: DEFB-vs
+                      href: defb---vs.md
+                    - name: Defi-vs
+                      href: defi---vs.md
+                    - name: DP3-vs
+                      href: dp3---vs.md
+                    - name: DP4-vs
+                      href: dp4---vs.md
+                    - name: DST-vs
+                      href: dst---vs.md
+                    - name: Else-vs
+                      href: else---vs.md
+                    - name: umdif-vs
+                      href: endif---vs.md
+                    - name: ENDLOOP-vs
+                      href: endloop---vs.md
+                    - name: ENDREP-vs
+                      href: endrep---vs.md
+                    - name: Exp-vs
+                      href: exp---vs.md
+                    - name: EXPP-vs
+                      href: expp---vs.md
+                    - name: FRC-vs
+                      href: frc---vs.md
+                    - name: Wenn bool-vs
+                      href: if-bool---vs.md
+                    - name: if_comp vs
+                      href: if-comp---vs.md
+                    - name: Wenn pred-vs
+                      href: if-pred---vs.md
+                    - name: Bezeichnung (VS)
+                      href: label---vs.md
+                    - name: Lit-vs
+                      href: lit---vs.md
+                    - name: Log-vs
+                      href: log---vs.md
+                    - name: LogP-vs
+                      href: logp---vs.md
+                    - name: Schleifen-vs
+                      href: loop---vs.md
+                    - name: LRP-vs
+                      href: lrp---vs.md
+                    - name: m3x2-vs
+                      href: m3x2---vs.md
+                    - name: M3x3-vs
+                      href: m3x3---vs.md
+                    - name: M3x4-vs
+                      href: m3x4---vs.md
+                    - name: m4x3-vs
+                      href: m4x3---vs.md
+                    - name: M4x4-vs
+                      href: m4x4---vs.md
+                    - name: Mad-vs
+                      href: mad---vs.md
+                    - name: Max-vs
+                      href: max---vs.md
+                    - name: min-vs
+                      href: min---vs.md
+                    - name: MOV (VS)
+                      href: mov---vs.md
+                    - name: vs
+                      href: mova---vs.md
+                    - name: Mul-vs
+                      href: mul---vs.md
+                    - name: NOP-vs
+                      href: nop---vs.md
+                    - name: NRM-vs
+                      href: nrm---vs.md
+                    - name: Pow-vs
+                      href: pow---vs.md
+                    - name: RCP-vs
+                      href: rcp---vs.md
+                    - name: Rep-vs
+                      href: rep---vs.md
+                    - name: Ret-vs
+                      href: ret---vs.md
+                    - name: RSQ-vs
+                      href: rsq---vs.md
+                    - name: setp_comp vs
+                      href: setp-comp---vs.md
+                    - name: SGE-vs
+                      href: sge---vs.md
+                    - name: SGN-vs
+                      href: sgn---vs.md
+                    - name: SinCos-vs
+                      href: sincos---vs.md
+                    - name: SLT-vs
+                      href: slt---vs.md
+                    - name: Sub-vs
+                      href: sub---vs.md
+                    - name: texldl-vs
+                      href: texldl---vs.md
+                    - name: vs
+                      href: vs---vs.md
+                - name: Vertex-Shader-Register
+                  href: dx9-graphics-reference-asm-vs-registers.md
+                  items:
+                    - name: Vertex-Shader-registermodifiziererer
+                      href: dx9-graphics-reference-asm-vs-registers-modifiers.md
+                      items:
+                        - name: Vertex-Shader-Quell Registrierungs Modifiers
+                          href: dx9-graphics-reference-asm-vs-registers-modifiers-source.md
+                        - name: Quellen Register (swizzling)
+                          href: dx9-graphics-reference-asm-vs-registers-modifiers-source-swizzling.md
+                        - name: Ziel Register Maskierung
+                          href: dx9-graphics-reference-asm-vs-registers-modifiers-masking.md
+                    - name: Register-vs_1_1
+                      href: dx9-graphics-reference-asm-vs-registers-vs-1-1.md
+                    - name: Register-VS_2_0
+                      href: dx9-graphics-reference-asm-vs-registers-vs-2-0.md
+                    - name: Register-vs_2_x
+                      href: dx9-graphics-reference-asm-vs-registers-vs-2-x.md
+                    - name: Register-vs_3_0
+                      href: dx9-graphics-reference-asm-vs-registers-vs-3-0.md
+                    - name: Relative Adressierung
+                      href: dx9-graphics-reference-asm-vs-registers-relative-addressing.md
+                    - name: Adress Register
+                      href: dx9-graphics-reference-asm-vs-registers-address.md
+                    - name: Konstantes float-Register
+                      href: dx9-graphics-reference-asm-vs-registers-constant-float.md
+                    - name: Konstanter ganzzahliges Register
+                      href: dx9-graphics-reference-asm-vs-registers-constant-integer.md
+                    - name: Konstantes boolesches Register
+                      href: dx9-graphics-reference-asm-vs-registers-constant-boolean.md
+                    - name: Farb Register
+                      href: dx9-graphics-reference-asm-vs-registers-color.md
+                    - name: Nebelregister
+                      href: dx9-graphics-reference-asm-vs-registers-fog.md
+                    - name: Eingabe Register
+                      href: dx9-graphics-reference-asm-vs-registers-input.md
+                    - name: Schleifen-Counter-Register
+                      href: dx9-graphics-reference-asm-vs-registers-loop-counter.md
+                    - name: Ausgabe Register
+                      href: dx9-graphics-reference-asm-vs-registers-output.md
+                    - name: Punktgröße registrieren
+                      href: dx9-graphics-reference-asm-vs-registers-point-size.md
+                    - name: Positions Register
+                      href: dx9-graphics-reference-asm-vs-registers-position.md
+                    - name: Prädikat Register
+                      href: dx9-graphics-reference-asm-vs-registers-predicate.md
+                    - name: Sampler (Direct3D 9 ASM-vs)
+                      href: dx9-graphics-reference-asm-vs-registers-sampler.md
+                    - name: Temporäres Register
+                      href: dx9-graphics-reference-asm-vs-registers-temporary.md
+                    - name: Texturkoordinaten Register
+                      href: dx9-graphics-reference-asm-vs-registers-texture-coordinate.md
+            - name: Pixel-Shader
+              href: dx9-graphics-reference-asm-ps.md
+              items:
+                - name: 'ps_1_1, ps_1_2 ps_1_3, ps_1_4'
+                  href: dx9-graphics-reference-asm-ps-1-x.md
+                - name: ps_2_0
+                  href: dx9-graphics-reference-asm-ps-2-0.md
+                - name: ps_2_x
+                  href: dx9-graphics-reference-asm-ps-2-x.md
+                - name: ps_3_0
+                  href: dx9-graphics-reference-asm-ps-3-0.md
+                - name: Pixel-Shader-Unterschiede
+                  href: dx9-graphics-reference-asm-ps-differences.md
+                - name: Pixelshaderanweisungen
+                  href: dx9-graphics-reference-asm-ps-instructions.md
+                  items:
+                    - name: 'ps_1_1, ps_1_2, ps_1_3, ps_1_4 Anweisungen'
+                      href: dx9-graphics-reference-asm-ps-instructions-ps-1-x.md
+                    - name: PS_2_0 Anweisungen
+                      href: dx9-graphics-reference-asm-ps-instructions-ps-2-0.md
+                    - name: ps_2_x Anweisungen
+                      href: dx9-graphics-reference-asm-ps-instructions-ps-2-x.md
+                    - name: ps_3_0 Anweisungen
+                      href: dx9-graphics-reference-asm-ps-instructions-ps-3-0.md
+                    - name: Modifiziererer für ps_1_X
+                      href: dx9-graphics-reference-asm-ps-instructions-modifiers-ps-1-x.md
+                    - name: Modifiziererer für PS_2_0 und höher
+                      href: dx9-graphics-reference-asm-ps-instructions-modifiers-ps-2-0.md
+                    - name: Einschränkungen der Fluss Steuerung
+                      href: dx9-graphics-reference-asm-ps-instructions-flow-control.md
+                    - name: ABS-PS
+                      href: abs---ps.md
+                    - name: Add-PS
+                      href: add---ps.md
+                    - name: Bem-PS
+                      href: bem---ps.md
+                    - name: Break-PS
+                      href: break---ps.md
+                    - name: break_comp-PS
+                      href: break-comp---ps.md
+                    - name: breakp-PS
+                      href: break-p---ps.md
+                    - name: callps
+                      href: call---ps.md
+                    - name: callnz bool-PS
+                      href: callnz-bool---ps.md
+                    - name: callnz pred-PS
+                      href: callnz-pred---ps.md
+                    - name: CMP-PS
+                      href: cmp---ps.md
+                    - name: CND-PS
+                      href: cnd---ps.md
+                    - name: CRS-PS
+                      href: crs---ps.md
+                    - name: 'DCL-(SM2, SM3-PS ASM)'
+                      href: dcl---ps.md
+                    - name: 'dcl_samplerType (SM2, SM3-PS ASM)'
+                      href: dcl-samplertype---ps.md
+                    - name: dcl_semantics (SM3-PS ASM)
+                      href: dcl-usage---ps.md
+                    - name: DEF-PS
+                      href: def---ps.md
+                    - name: DEFB-PS
+                      href: defb---ps.md
+                    - name: Defi-PS
+                      href: defi---ps.md
+                    - name: dp2add-PS
+                      href: dp2add---ps.md
+                    - name: DP3-PS
+                      href: dp3---ps.md
+                    - name: DP4-PS
+                      href: dp4---ps.md
+                    - name: DSX-PS
+                      href: dsx---ps.md
+                    - name: DSY-PS
+                      href: dsy---ps.md
+                    - name: Else-PS
+                      href: else---ps.md
+                    - name: in-PS-PS
+                      href: endif---ps.md
+                    - name: ENDLOOP-PS
+                      href: endloop---ps.md
+                    - name: ENDREP-PS
+                      href: endrep---ps.md
+                    - name: Exp-PS
+                      href: exp---ps.md
+                    - name: FRC-PS
+                      href: frc---ps.md
+                    - name: Wenn bool-PS
+                      href: if-bool---ps.md
+                    - name: if_comp-PS
+                      href: if-comp---ps.md
+                    - name: Wenn pred-PS
+                      href: if-pred---ps.md
+                    - name: Bezeichnung-PS
+                      href: label---ps.md
+                    - name: Schleife-PS
+                      href: loop---ps.md
+                    - name: Log-PS
+                      href: log---ps.md
+                    - name: LRP-PS
+                      href: lrp---ps.md
+                    - name: m3x2-PS
+                      href: m3x2---ps.md
+                    - name: M3x3-PS
+                      href: m3x3---ps.md
+                    - name: M3x4-PS
+                      href: m3x4---ps.md
+                    - name: m4x3-PS
+                      href: m4x3---ps.md
+                    - name: M4x4-PS
+                      href: m4x4---ps.md
+                    - name: Mad-PS
+                      href: mad---ps.md
+                    - name: MOV-PS
+                      href: mov---ps.md
+                    - name: Mul-PS
+                      href: mul---ps.md
+                    - name: Max-PS
+                      href: max---ps.md
+                    - name: min-PS
+                      href: min---ps.md
+                    - name: NRM-PS
+                      href: nrm---ps.md
+                    - name: NOP-PS
+                      href: nop---ps.md
+                    - name: Phase-PS
+                      href: phase---ps.md
+                    - name: Pow-PS
+                      href: pow---ps.md
+                    - name: ps
+                      href: ps---ps.md
+                    - name: RCP-PS
+                      href: rcp---ps.md
+                    - name: Rep-PS
+                      href: rep---ps.md
+                    - name: Ret-PS
+                      href: ret---ps.md
+                    - name: RSQ-PS
+                      href: rsq---ps.md
+                    - name: setp_comp-PS
+                      href: setp-comp---ps.md
+                    - name: SinCos-PS
+                      href: sincos---ps.md
+                    - name: Sub-PS
+                      href: sub---ps.md
+                    - name: tex-PS
+                      href: tex---ps.md
+                    - name: texbem-PS
+                      href: texbem---ps.md
+                    - name: texbeml-PS
+                      href: texbeml---ps.md
+                    - name: texcoord-PS
+                      href: texcoord---ps.md
+                    - name: texcrd-PS
+                      href: texcrd---ps.md
+                    - name: textiefe-PS
+                      href: texdepth---ps.md
+                    - name: texdp3-PS
+                      href: texdp3---ps.md
+                    - name: texdp3tex-PS
+                      href: texdp3tex---ps.md
+                    - name: texkill-PS
+                      href: texkill---ps.md
+                    - name: texld-ps_1_4
+                      href: texld---ps-1-4.md
+                    - name: texld-PS_2_0 und aufwärts
+                      href: texld---ps-2-0.md
+                    - name: texldb-PS
+                      href: texldb---ps.md
+                    - name: texldd-PS
+                      href: texldd---ps.md
+                    - name: texldl-PS
+                      href: texldl---ps.md
+                    - name: texldp-PS
+                      href: texldp---ps.md
+                    - name: texm3x2depth-PS
+                      href: texm3x2depth---ps.md
+                    - name: texm3x2pad-PS
+                      href: texm3x2pad---ps.md
+                    - name: texm3x2tex-PS
+                      href: texm3x2tex---ps.md
+                    - name: texm3x3-PS
+                      href: texm3x3---ps.md
+                    - name: texm3x3pad-PS
+                      href: texm3x3pad---ps.md
+                    - name: texm3x3spec-PS
+                      href: texm3x3spec---ps.md
+                    - name: texm3x3tex-PS
+                      href: texm3x3tex---ps.md
+                    - name: texm3x3vspec-PS
+                      href: texm3x3vspec---ps.md
+                    - name: texreg2ar-PS
+                      href: texreg2ar---ps.md
+                    - name: texreg2gb-PS
+                      href: texreg2gb---ps.md
+                    - name: texreg2rgb-PS
+                      href: texreg2rgb---ps.md
+                - name: Register
+                  href: dx9-graphics-reference-asm-ps-registers.md
+                  items:
+                    - name: Pixelshadermodifizierern
+                      href: dx9-graphics-reference-asm-ps-registers-modifiers.md
+                      items:
+                        - name: Pixel-Shader-quellregistrierungs Modifizierern
+                          href: dx9-graphics-reference-asm-ps-registers-modifiers-source.md
+                          items:
+                            - name: Quellen Register-Bias
+                              href: dx9-graphics-reference-asm-ps-registers-modifiers-bias.md
+                            - name: Quell Register Invert
+                              href: dx9-graphics-reference-asm-ps-registers-modifiers-invert.md
+                            - name: Quellen Register Negate
+                              href: dx9-graphics-reference-asm-ps-registers-modifiers-negate.md
+                            - name: Quell Register Skala x 2
+                              href: dx9-graphics-reference-asm-ps-registers-modifiers-scale-x2.md
+                            - name: Quell Registrierung mit signierter Skalierung
+                              href: dx9-graphics-reference-asm-ps-registers-modifiers-signed-scale.md
+                            - name: 'ps_1_4 Quell Registrierungs modifiziererer für texld, texcrd'
+                              href: dx9-graphics-reference-asm-ps-registers-modifiers-ps-1-4.md
+                            - name: Quellen Register (swizzling)
+                              href: dx9-graphics-reference-asm-ps-registers-modifiers-source-register-swizzling.md
+                        - name: Ziel Registrierungs-Schreib Maske
+                          href: dx9-graphics-reference-asm-ps-registers-modifiers-write-mask.md
+                    - name: ps_1_1__ps_1_2__ps_1_3__ps_1_4 Register
+                      href: dx9-graphics-reference-asm-ps-registers-ps-1-x.md
+                    - name: PS_2_0 Register
+                      href: dx9-graphics-reference-asm-ps-registers-ps-2-0.md
+                    - name: ps_2_x Register
+                      href: dx9-graphics-reference-asm-ps-registers-ps-2-x.md
+                    - name: ps_3_0 Register
+                      href: dx9-graphics-reference-asm-ps-registers-ps-3-0.md
+                    - name: Relative Adressierung
+                      href: dx9-graphics-reference-asm-ps-registers-relative-addressing.md
+                    - name: Eingabe Farb Register
+                      href: dx9-graphics-reference-asm-ps-registers-input-color.md
+                    - name: Konstantes boolesches Register
+                      href: dx9-graphics-reference-asm-ps-registers-constant-boolean.md
+                    - name: Konstantes float-Register
+                      href: dx9-graphics-reference-asm-ps-registers-constant-float.md
+                    - name: Konstanter ganzzahliges Register
+                      href: dx9-graphics-reference-asm-ps-registers-constant-integer.md
+                    - name: Schleifen-Counter-Register
+                      href: dx9-graphics-reference-asm-ps-registers-loop-counter.md
+                    - name: Prädikat Register
+                      href: dx9-graphics-reference-asm-ps-registers-predicate.md
+                    - name: Sampler (Direct3D 9 ASM-PS)
+                      href: dx9-graphics-reference-asm-ps-registers-sampler.md
+                    - name: Temporäres Register
+                      href: dx9-graphics-reference-asm-ps-registers-temporary.md
+                    - name: Texturkoordinaten Register
+                      href: dx9-graphics-reference-asm-ps-registers-texture-coordinate.md
+                    - name: Ausgabe Farb Register
+                      href: dx9-graphics-reference-asm-ps-registers-output-color.md
+                    - name: Ausgabe tiefen Register
+                      href: dx9-graphics-reference-asm-ps-registers-output-depth.md
+            - name: Shader Model 4-Assembly (DirectX HLSL)
+              href: dx-graphics-hlsl-sm4-asm.md
+              items:
+                - name: Anweisungs Modifizierer
+                  href: instruction-modifiers.md
+                  items:
+                    - name: Absoluter Wert
+                      href: absolute-value.md
+                    - name: Negate
+                      href: negate.md
+                    - name: Sättigung
+                      href: saturate.md
+                - name: Add (SM4-ASM)
+                  href: add--sm4---asm-.md
+                - name: und (SM4-ASM)
+                  href: and--sm4---asm-.md
+                - name: Break (SM4-ASM)
+                  href: break--sm4---asm-.md
+                - name: breakc (SM4-ASM)
+                  href: breakc--sm4---asm-.md
+                - name: '-Rückruf (SM4-ASM)'
+                  href: call--sm4---asm-.md
+                - name: callc (SM4-ASM)
+                  href: callc--sm4---asm-.md
+                - name: Case (SM4-ASM)
+                  href: case--sm4---asm-.md
+                - name: Continue (SM4-ASM)
+                  href: continue--sm4---asm-.md
+                - name: continuec (SM4-ASM)
+                  href: continuec--sm4---asm-.md
+                - name: Ausschneiden (SM4-ASM)
+                  href: cut--sm4---asm-.md
+                - name: dcl_constantBuffer (SM4-ASM)
+                  href: dcl-constantbuffer.md
+                - name: dcl_globalFlags (SM4-ASM)
+                  href: dcl-globalflags.md
+                - name: dcl_immediateConstantBuffer (SM4-ASM)
+                  href: dcl-immediateconstantbuffer.md
+                - name: dcl_indexableTemp (SM4-ASM)
+                  href: dcl-indexabletemp.md
+                - name: dcl_indexRange (SM4-ASM)
+                  href: dcl-indexrange.md
+                - name: dcl_input (SM4-ASM)
+                  href: dcl-input.md
+                - name: dcl_input_sv (SM4-ASM)
+                  href: dcl-input-sv.md
+                - name: dcl_input vprim (SM4-ASM)
+                  href: dcl-input-vprim.md
+                - name: dcl_inputPrimitive (SM4-ASM)
+                  href: dcl-inputprimitive.md
+                - name: dcl_maxOutputVertexCount (SM4-ASM)
+                  href: dcl-maxoutputvertexcount.md
+                - name: dcl_output (SM4-ASM)
+                  href: dcl-output.md
+                - name: dcl_output otiefe (SM4-ASM)
+                  href: dcl-output-odepth.md
+                - name: dcl_output_sgv (SM4-ASM)
+                  href: dcl-output-sgv.md
+                - name: dcl_output_siv (SM4-ASM)
+                  href: dcl-output-siv.md
+                - name: dcl_outputTopology (SM4-ASM)
+                  href: dcl-outputtopology.md
+                - name: dcl_resource (SM4-ASM)
+                  href: dcl-resource.md
+                - name: dcl_sampler (SM4-ASM)
+                  href: dcl-sampler.md
+                - name: dcl_temps (SM4-ASM)
+                  href: dcl-temps.md
+                - name: Standard (SM4-ASM)
+                  href: default--sm4---asm-.md
+                - name: deriv_rtx (SM4-ASM)
+                  href: deriv-rtx--sm4---asm-.md
+                - name: deriv_rty (SM4-ASM)
+                  href: deriv-rty--sm4---asm-.md
+                - name: verwerfen (SM4-ASM)
+                  href: discard--sm4---asm-.md
+                - name: div (SM4-ASM)
+                  href: div--sm4---asm-.md
+                - name: DP2 (SM4-ASM)
+                  href: dp2--sm4---asm-.md
+                - name: DP3 (SM4-ASM)
+                  href: dp3--sm4---asm-.md
+                - name: DP4 (SM4-ASM)
+                  href: dp4--sm4---asm-.md
+                - name: Else (SM4-ASM)
+                  href: else--sm4---asm-.md
+                - name: Ausgabe (SM4-ASM)
+                  href: emit--sm4---asm-.md
+                - name: emitthencut (SM4-ASM)
+                  href: emitthencut--sm4---asm-.md
+                - name: umdif (SM4-ASM)
+                  href: endif--sm4---asm-.md
+                - name: ENDLOOP (SM4-ASM)
+                  href: endloop--sm4---asm-.md
+                - name: Endswitch (SM4-ASM)
+                  href: endswitch--sm4---asm-.md
+                - name: EQ (SM4-ASM)
+                  href: eq--sm4---asm-.md
+                - name: Exp (SM4-ASM)
+                  href: exp--sm4---asm-.md
+                - name: FRC (SM4-ASM)
+                  href: frc--sm4---asm-.md
+                - name: 'ftoi (sm4 – asm) '
+                  href: ftoi--sm4---asm-.md
+                - name: ftou (SM4-ASM)
+                  href: ftou--sm4---asm-.md
+                - name: gather4 (SM 4.1-ASM)
+                  href: gather4--sm4-1---asm-.md
+                - name: GE (SM4-ASM)
+                  href: ge--sm4---asm-.md
+                - name: IAdd (SM4-ASM)
+                  href: iadd--sm4---asm-.md
+                - name: IEQ (SM4-ASM)
+                  href: ieq--sm4---asm-.md
+                - name: if (SM4-ASM)
+                  href: if--sm4---asm-.md
+                - name: ige (SM4-ASM)
+                  href: ige--sm4---asm-.md
+                - name: ILT (SM4-ASM)
+                  href: ilt--sm4---asm-.md
+                - name: Imad (SM4-ASM)
+                  href: imad--sm4---asm-.md
+                - name: IMAX (SM4-ASM)
+                  href: imax--sm4---asm-.md
+                - name: Imin (SM4-ASM)
+                  href: imin--sm4---asm-.md
+                - name: imul (SM4-ASM)
+                  href: imul--sm4---asm-.md
+                - name: ine (SM4-ASM)
+                  href: ine--sm4---asm-.md
+                - name: InEG (SM4-ASM)
+                  href: ineg--sm4---asm-.md
+                - name: ishl (SM4-ASM)
+                  href: ishl--sm4---asm-.md
+                - name: ISHR (SM4-ASM)
+                  href: ishr--sm4---asm-.md
+                - name: itof (SM4-ASM)
+                  href: itof--sm4---asm-.md
+                - name: Bezeichnung (SM4-ASM)
+                  href: label--sm4---asm-.md
+                - name: LD (SM4-ASM)
+                  href: ld--sm4---asm-.md
+                - name: ld2dms (SM 4.1-ASM)
+                  href: ld2dms--sm4-1---asm-.md
+                - name: LOD (SM 4.1-ASM)
+                  href: lod--sm4-1---asm-.md
+                - name: Log (SM4-ASM)
+                  href: log--sm4---asm-.md
+                - name: Schleife (SM4-ASM)
+                  href: loop--sm4---asm-.md
+                - name: lt (SM4-ASM)
+                  href: lt--sm4---asm-.md
+                - name: Mad (SM4-ASM)
+                  href: mad--sm4---asm-.md
+                - name: Max (SM4-ASM)
+                  href: max--sm4---asm-.md
+                - name: min (SM4-ASM)
+                  href: min--sm4---asm-.md
+                - name: MOV (SM4-ASM)
+                  href: mov--sm4---asm-.md
+                - name: '"muvc" (SM4-ASM)'
+                  href: movc--sm4---asm-.md
+                - name: Mul (SM4-ASM)
+                  href: mul--sm4---asm-.md
+                - name: ne (SM4-ASM)
+                  href: ne--sm4---asm-.md
+                - name: NOP (SM4-ASM)
+                  href: nop--sm4---asm-.md
+                - name: Not (SM4-ASM)
+                  href: not--sm4---asm-.md
+                - name: or (SM4-ASM)
+                  href: or--sm4---asm-.md
+                - name: ResInfo (SM4-ASM)
+                  href: resinfo--sm4---asm-.md
+                - name: ret (SM4-ASM)
+                  href: ret--sm4---asm-.md
+                - name: RETC (SM4-ASM)
+                  href: retc--sm4---asm-.md
+                - name: round_ne (SM4-ASM)
+                  href: round-ne--sm4---asm-.md
+                - name: round_ni (SM4-ASM)
+                  href: round-ni--sm4---asm-.md
+                - name: round_pi (SM4-ASM)
+                  href: round-pi--sm4---asm-.md
+                - name: round_z (SM4-ASM)
+                  href: round-z--sm4---asm-.md
+                - name: RSQ (SM4-ASM)
+                  href: rsq--sm4---asm-.md
+                - name: Sample (SM4-ASM)
+                  href: sample--sm4---asm-.md
+                - name: sample_b (SM4-ASM)
+                  href: sample-b--sm4---asm-.md
+                - name: sample_c (SM4-ASM)
+                  href: sample-c--sm4---asm-.md
+                - name: sample_c_lz (SM4-ASM)
+                  href: sample-c-lz--sm4---asm-.md
+                - name: sample_d (SM4-ASM)
+                  href: sample-d--sm4---asm-.md
+                - name: sample_l (SM4-ASM)
+                  href: sample-l--sm4---asm-.md
+                - name: sampleinfo (SM 4.1-ASM)
+                  href: sampleinfo--sm4-1---asm-.md
+                - name: samplepos (SM 4.1-ASM)
+                  href: samplepos--sm4-1---asm-.md
+                - name: SinCos (SM4-ASM)
+                  href: sincos--sm4---asm-.md
+                - name: SQRT (SM4-ASM)
+                  href: sqrt--sm4---asm-.md
+                - name: Switch (SM4-ASM)
+                  href: switch--sm4---asm-.md
+                - name: udiv (SM4-ASM)
+                  href: udiv--sm4---asm-.md
+                - name: UGE (SM4-ASM)
+                  href: uge--sm4---asm-.md
+                - name: ULT (SM4-ASM)
+                  href: ult--sm4---asm-.md
+                - name: Umad (SM4-ASM)
+                  href: umad--sm4---asm-.md
+                - name: Umax (SM4-ASM)
+                  href: umax--sm4---asm-.md
+                - name: Umschlag (SM4-ASM)
+                  href: umin--sm4---asm-.md
+                - name: Umul (SM4-ASM)
+                  href: umul--sm4---asm-.md
+                - name: ushr (SM4-ASM)
+                  href: ushr--sm4---asm-.md
+                - name: utof (SM4-ASM)
+                  href: utof--sm4---asm-.md
+                - name: XOR (SM4-ASM)
+                  href: xor--sm4---asm-.md
+            - name: Shader Model 5-Assembly (DirectX HLSL)
+              href: shader-model-5-assembly--directx-hlsl-.md
+              items:
+                - name: Shader Model 5-Anweisungs modifiziererer
+                  href: shader-model-5-instruction-modifiers.md
+                  items:
+                    - name: Precise (Genau)
+                      href: precise.md
+                - name: atomic_and (SM5-ASM)
+                  href: atomic-and--sm5---asm-.md
+                - name: atomic_cmp_store (SM5-ASM)
+                  href: atomic-cmp-store--sm5---asm-.md
+                - name: atomic_iadd (SM5-ASM)
+                  href: atomic-iadd--sm5---asm-.md
+                - name: atomic_imax (SM5-ASM)
+                  href: atomic-imax--sm5---asm-.md
+                - name: atomic_imin (SM5-ASM)
+                  href: atomic-imin--sm5---asm-.md
+                - name: atomic_or (SM5-ASM)
+                  href: atomic-or--sm5---asm-.md
+                - name: atomic_umax (SM5-ASM)
+                  href: atomic-umax--sm5---asm-.md
+                - name: atomic_umin (SM5-ASM)
+                  href: atomic-umin--sm5---asm-.md
+                - name: atomic_xor (SM5-ASM)
+                  href: atomic-xor--sm5---asm-.md
+                - name: BFI (SM5-ASM)
+                  href: bfi---sm5---asm-.md
+                - name: bfrev (SM5-ASM)
+                  href: bfrev---sm5---asm-.md
+                - name: bufinfo (SM5-ASM)
+                  href: bufinfo---sm5---asm-.md
+                - name: count Bits (SM5-ASM)
+                  href: countbits---sm5---asm-.md
+                - name: cut_stream (SM5-ASM)
+                  href: cut-stream---sm5---asm-.md
+                - name: Dadd (SM5-ASM)
+                  href: dadd---sm5---asm-.md
+                - name: dcl_function_body (SM5-ASM)
+                  href: dcl-function-body---sm5---asm-.md
+                - name: dcl_function_table (SM5-ASM)
+                  href: dcl-function-table---sm5---asm-.md
+                - name: dcl_hs_fork_phase_instance_count (SM5-ASM)
+                  href: dcl-hs-fork-phase-instance-count---sm5---asm-.md
+                - name: dcl_hs_join_phase_instance_count (SM5-ASM)
+                  href: dcl-hs-join-phase-instance-count---sm5---asm-.md
+                - name: dcl_hs_max_tessfactor (SM5-ASM)
+                  href: dcl-hs-max-tessfactor---sm5---asm-.md
+                - name: dcl_input vforkinstanceid (SM5-ASM)
+                  href: dcl-input-vforkinstanceid--sm5---asm-.md
+                - name: dcl_input vgsinstanceid (SM5-ASM)
+                  href: dcl-input-vgsinstanceid--sm5---asm-.md
+                - name: dcl_input vjoininstanceid (SM5-ASM)
+                  href: dcl-input-vjoininstanceid--sm5---asm-.md
+                - name: dcl_input voutputcontrolpointid (SM5-ASM)
+                  href: dcl-input-voutputcontrolpointid--sm5---asm-.md
+                - name: dcl_input vthread (SM5-ASM)
+                  href: dcl-input-vthread--sm5---asm-.md
+                - name: dcl_input_control_point_count (SM5-ASM)
+                  href: dcl-input-control-point-count--sm5---asm-.md
+                - name: dcl_interface (SM5-ASM)
+                  href: dcl-interface--sm5---asm-.md
+                - name: dcl_interface_dynamicindexed (SM5-ASM)
+                  href: dcl-interface-dynamicindexed--sm5---asm-.md
+                - name: dcl_output omask (SM5-ASM)
+                  href: dcl-output-omask--sm5---asm-.md
+                - name: dcl_output_control_point_count (SM5-ASM)
+                  href: dcl-output-control-point-count--sm5---asm-.md
+                - name: dcl_resource RAW (SM5-ASM)
+                  href: dcl-resource-raw--sm5---asm-.md
+                - name: dcl_resource strukturiert (SM5-ASM)
+                  href: dcl-resource-structured--sm5---asm-.md
+                - name: dcl_stream (SM5-ASM)
+                  href: dcl-stream--sm5---asm-.md
+                - name: dcl_tessellator_domain (SM5-ASM)
+                  href: dcl-tessellator-domain--sm5---asm-.md
+                - name: dcl_tessellator_output_primitive (SM5-ASM)
+                  href: dcl-tessellator-output-primitive--sm5---asm-.md
+                - name: dcl_tessellator_partitioning (SM5-ASM)
+                  href: dcl-tessellator-partitioning--sm5---asm-.md
+                - name: dcl_tgsm_raw (SM5-ASM)
+                  href: dcl-tgsm-raw--sm5---asm-.md
+                - name: dcl_tgsm_structured (SM5-ASM)
+                  href: dcl-tgsm-structured--sm5---asm-.md
+                - name: dcl_thread_group (SM5-ASM)
+                  href: dcl-thread-group--sm5---asm-.md
+                - name: dcl_uav_raw (SM5-ASM)
+                  href: dcl-uav-raw--sm5---asm-.md
+                - name: dcl_uav_structured (SM5-ASM)
+                  href: dcl-uav-structured--sm5---asm-.md
+                - name: dcl_uav_typed (SM5-ASM)
+                  href: dcl-uav-typed--sm5---asm-.md
+                - name: ddiv (SM5-ASM)
+                  href: ddiv--sm5---asm-.md
+                - name: Debug (SM5-ASM)
+                  href: deq--sm5---asm-.md
+                - name: deriv_rtx_coarse (SM5-ASM)
+                  href: deriv-rtx-coarse--sm5---asm-.md
+                - name: deriv_rtx_fine (SM5-ASM)
+                  href: deriv-rtx-fine--sm5---asm-.md
+                - name: deriv_rty_coarse (SM5-ASM)
+                  href: deriv-rty-coarse--sm5---asm-.md
+                - name: deriv_rty_fine (SM5-ASM)
+                  href: deriv-rty-fine--sm5---asm-.md
+                - name: DFMA (SM5-ASM)
+                  href: dfma--sm5---asm-.md
+                - name: DGE (SM5-ASM)
+                  href: dge--sm5---asm-.md
+                - name: DLT (SM5-ASM)
+                  href: dlt--sm5---asm-.md
+                - name: DMax (SM5-ASM)
+                  href: dmax--sm5---asm-.md
+                - name: DMin (SM5-ASM)
+                  href: dmin--sm5---asm-.md
+                - name: dmov (SM5-ASM)
+                  href: dmov--sm5---asm-.md
+                - name: dmuvc (SM5-ASM)
+                  href: dmovc--sm5---asm-.md
+                - name: dmul (SM5-ASM)
+                  href: dmul--sm5---asm-.md
+                - name: dne (SM5-ASM)
+                  href: dne--sm5---asm-.md
+                - name: DRCP (SM5-ASM)
+                  href: drcp--sm5---asm-.md
+                - name: dtof (SM5-ASM)
+                  href: dtof--sm5---asm-.md
+                - name: emit_stream (SM5-ASM)
+                  href: emit-stream--sm5---asm-.md
+                - name: emitThenCut_stream (SM5-ASM)
+                  href: emitthencut-stream--sm5---asm-.md
+                - name: f16tof32 (SM5-ASM)
+                  href: f16tof32--sm5---asm-.md
+                - name: f32tof16 (SM5-ASM)
+                  href: f32tof16--sm5---asm-.md
+                - name: fcall(SM5-ASM)
+                  href: fcall--sm5---asm-.md
+                - name: firstbit (SM5-ASM)
+                  href: firstbit--sm5---asm-.md
+                - name: '"f" (SM5-ASM)'
+                  href: ftod--sm5---asm-.md
+                - name: gather4 (SM5-ASM)
+                  href: gather4--sm5---asm-.md
+                - name: gather4_c (SM5-ASM)
+                  href: gather4-c--sm5---asm-.md
+                - name: gather4_po (SM5-ASM)
+                  href: gather4-po--sm5---asm-.md
+                - name: gather4_po_c (SM5-ASM)
+                  href: gather4-po-c--sm5---asm-.md
+                - name: hs_control_point_phase (SM5-ASM)
+                  href: hs-control-point-phase--sm5---asm-.md
+                - name: hs_decls (SM5-ASM)
+                  href: hs-decls--sm5---asm-.md
+                - name: hs_fork_phase (SM5-ASM)
+                  href: hs-fork-phase--sm5---asm-.md
+                - name: hs_join_phase (SM5-ASM)
+                  href: hs-join-phase--sm5---asm-.md
+                - name: ibfe (SM5-ASM)
+                  href: ibfe--sm5---asm-.md
+                - name: imm_atomic_alloc (SM5-ASM)
+                  href: imm-atomic-alloc--sm5---asm-.md
+                - name: imm_atomic_and (SM5-ASM)
+                  href: imm-atomic-and--sm5---asm-.md
+                - name: imm_atomic_cmp_exch (SM5-ASM)
+                  href: imm-atomic-cmp-exch--sm5---asm-.md
+                - name: imm_atomic_consume (SM5-ASM)
+                  href: imm-atomic-consume--sm5---asm-.md
+                - name: imm_atomic_exch (SM5-ASM)
+                  href: imm-atomic-exch--sm5---asm-.md
+                - name: imm_atomic_iadd (SM5-ASM)
+                  href: imm-atomic-iadd--sm5---asm-.md
+                - name: imm_atomic_imax (SM5-ASM)
+                  href: imm-atomic-imax--sm5---asm-.md
+                - name: imm_atomic_imin (SM5-ASM)
+                  href: imm-atomic-imin--sm5---asm-.md
+                - name: imm_atomic_or (SM5-ASM)
+                  href: imm-atomic-or--sm5---asm-.md
+                - name: imm_atomic_umax (SM5-ASM)
+                  href: imm-atomic-umax--sm5---asm-.md
+                - name: imm_atomic_umin (SM5-ASM)
+                  href: imm-atomic-umin--sm5---asm-.md
+                - name: imm_atomic_xor (SM5-ASM)
+                  href: imm-atomic-xor--sm5---asm-.md
+                - name: ishl (sm5 - asm)
+                  href: ishl--sm5---asm-.md
+                - name: ISHR (SM5-ASM)
+                  href: ishr--sm5---asm-.md
+                - name: ld_raw (SM5-ASM)
+                  href: ld-raw--sm5---asm-.md
+                - name: ld_structured (SM5-ASM)
+                  href: ld-structured--sm5---asm-.md
+                - name: ld_uav_typed (SM5-ASM)
+                  href: ld-uav-typed--sm5---asm-.md
+                - name: rcp (SM5-ASM)
+                  href: rcp--sm5---asm-.md
+                - name: store_raw (SM5-ASM)
+                  href: store-raw--sm5---asm-.md
+                - name: store_structured (SM5-ASM)
+                  href: store-structured--sm5---asm-.md
+                - name: store_uav_typed (SM5-ASM)
+                  href: store-uav-typed--sm5---asm-.md
+                - name: Swap (SM5-ASM)
+                  href: swapc--sm5---asm-.md
+                - name: Sync (SM5-ASM)
+                  href: sync--sm5---asm-.md
+                - name: uaddc (SM5-ASM)
+                  href: uaddc--sm5---asm-.md
+                - name: ubfe (SM5-ASM)
+                  href: ubfe--sm5---asm-.md
+                - name: ushr (SM5-ASM)
+                  href: ushr--sm5---asm-.md
+                - name: usubb (SM5-ASM)
+                  href: usubb--sm5---asm-.md
+            - name: Software-Shader
+              href: dx9-graphics-reference-asm-software-shaders.md
+        - name: D3DCompiler-Referenz
+          href: dx-graphics-d3dcompiler-reference.md
+          items:
+            - name: Functions
+              href: dx-graphics-d3dcompiler-reference-functions.md
+              items:
+                - name: D3D11Reflect
+                  href: d3d11reflect.md
+                - name: D3DCompile
+                  href: /windows/desktop/api/d3dcompiler/nf-d3dcompiler-d3dcompile
+                - name: D3DCompile2
+                  href: /windows/desktop/api/d3dcompiler/nf-d3dcompiler-d3dcompile2
+                - name: D3DCompileFromFile
+                  href: /windows/desktop/api/d3dcompiler/nf-d3dcompiler-d3dcompilefromfile
+                - name: D3DCompressShaders
+                  href: /windows/desktop/api/d3dcompiler/nf-d3dcompiler-d3dcompressshaders
+                - name: D3DCreateBlob
+                  href: /windows/desktop/api/d3dcompiler/nf-d3dcompiler-d3dcreateblob
+                - name: D3DCreateFunctionLinkingGraph
+                  href: /windows/desktop/api/D3Dcompiler/nf-d3dcompiler-d3dcreatefunctionlinkinggraph
+                - name: D3DCreateLinker
+                  href: /windows/desktop/api/D3Dcompiler/nf-d3dcompiler-d3dcreatelinker
+                - name: D3DDecompressShaders
+                  href: /windows/desktop/api/d3dcompiler/nf-d3dcompiler-d3ddecompressshaders
+                - name: D3DDisassemble
+                  href: /windows/desktop/api/d3dcompiler/nf-d3dcompiler-d3ddisassemble
+                - name: D3DDisassemble10Effect
+                  href: /windows/desktop/api/d3dcompiler/nf-d3dcompiler-d3ddisassemble10effect
+                - name: D3DDisassemble11Trace
+                  href: /windows/desktop/api/d3d11shadertracing/nf-d3d11shadertracing-d3ddisassemble11trace
+                - name: D3DDisassembleRegion
+                  href: /windows/desktop/api/d3dcompiler/nf-d3dcompiler-d3ddisassembleregion
+                - name: D3DGetBlobPart
+                  href: /windows/desktop/api/d3dcompiler/nf-d3dcompiler-d3dgetblobpart
+                - name: D3DGetDebugInfo
+                  href: /windows/desktop/api/d3dcompiler/nf-d3dcompiler-d3dgetdebuginfo
+                - name: D3DGetInputAndOutputSignatureBlob
+                  href: /windows/desktop/api/d3dcompiler/nf-d3dcompiler-d3dgetinputandoutputsignatureblob
+                - name: D3DGetInputSignatureBlob
+                  href: /windows/desktop/api/d3dcompiler/nf-d3dcompiler-d3dgetinputsignatureblob
+                - name: D3DGetOutputSignatureBlob
+                  href: /windows/desktop/api/d3dcompiler/nf-d3dcompiler-d3dgetoutputsignatureblob
+                - name: D3DGetTraceInstructionOffsets
+                  href: /windows/desktop/api/d3dcompiler/nf-d3dcompiler-d3dgettraceinstructionoffsets
+                - name: D3DLoadModule
+                  href: /windows/desktop/api/D3Dcompiler/nf-d3dcompiler-d3dloadmodule
+                - name: D3DPreprocess
+                  href: /windows/desktop/api/d3dcompiler/nf-d3dcompiler-d3dpreprocess
+                - name: D3DReadFileToBlob
+                  href: /windows/desktop/api/d3dcompiler/nf-d3dcompiler-d3dreadfiletoblob
+                - name: D3DReflect
+                  href: /windows/desktop/api/d3dcompiler/nf-d3dcompiler-d3dreflect
+                - name: D3DReflectLibrary
+                  href: /windows/desktop/api/D3Dcompiler/nf-d3dcompiler-d3dreflectlibrary
+                - name: D3DSetBlobPart
+                  href: /windows/desktop/api/d3dcompiler/nf-d3dcompiler-d3dsetblobpart
+                - name: D3DStripShader
+                  href: /windows/desktop/api/d3dcompiler/nf-d3dcompiler-d3dstripshader
+                - name: D3DWriteBlobToFile
+                  href: /windows/desktop/api/d3dcompiler/nf-d3dcompiler-d3dwriteblobtofile
+            - name: Strukturen
+              href: dx-graphics-d3dcompiler-reference-structs.md
+              items:
+                - name: D3D_SHADER_DATA
+                  href: /windows/win32/api/d3dcompiler/ns-d3dcompiler-d3d_shader_data
+            - name: Enumerationen
+              href: dx-graphics-d3dcompiler-reference-enums.md
+              items:
+                - name: D3D_BLOB_PART
+                  href: /windows/desktop/api/d3dcompiler/ne-d3dcompiler-d3d_blob_part
+                - name: D3DCOMPILER_STRIP_FLAGS
+                  href: /windows/desktop/api/d3dcompiler/ne-d3dcompiler-d3dcompiler_strip_flags
+            - name: Konstanten
+              href: dx-graphics-d3dcompiler-reference-constants.md
+              items:
+                - name: D3DCOMPILE-Konstanten
+                  href: d3dcompile-constants.md
+                - name: D3DCOMPILE_EFFECT Konstanten
+                  href: d3dcompile-effect-constants.md
+        - name: Referenz zur Inline Format Konvertierung
+          href: inline-format-conversion-reference.md
+          items:
+            - name: Functions
+              href: format-conversion-functions.md
+              items:
+                - name: D3DX_B8G8R8A8_UNORM_SRGB_to_FLOAT4
+                  href: d3dx-b8g8r8a8-unorm-srgb-to-float4.md
+                - name: D3DX_B8G8R8A8_UNORM_SRGB_to_FLOAT4_inexact
+                  href: d3dx-b8g8r8a8-unorm-srgb-to-float4-inexact.md
+                - name: D3DX_B8G8R8A8_UNORM_to_FLOAT4
+                  href: d3dx-b8g8r8a8-unorm-to-float4.md
+                - name: D3DX_B8G8R8X8_UNORM_SRGB_to_FLOAT3
+                  href: d3dx-b8g8r8x8-unorm-srgb-to-float3.md
+                - name: D3DX_B8G8R8X8_UNORM_SRGB_to_FLOAT3_inexact
+                  href: d3dx-b8g8r8x8-unorm-srgb-to-float3-inexact.md
+                - name: D3DX_B8G8R8X8_UNORM_to_FLOAT3
+                  href: d3dx-b8g8r8x8-unorm-to-float3.md
+                - name: D3DX_FLOAT_to_INT
+                  href: d3dx-float-to-int.md
+                - name: D3DX_FLOAT_to_SRGB
+                  href: d3dx-float-to-srgb.md
+                - name: D3DX_FLOAT_to_UINT
+                  href: d3dx-float-to-uint.md
+                - name: D3DX_FLOAT2_to_R16G16_FLOAT
+                  href: d3dx-float2-to-r16g16-float.md
+                - name: D3DX_FLOAT2_to_R16G16_SNORM
+                  href: d3dx-float2-to-r16g16-snorm.md
+                - name: D3DX_FLOAT2_to_R16G16_UNORM
+                  href: d3dx-float2-to-r16g16-unorm.md
+                - name: D3DX_FLOAT3_to_B8G8R8X8_UNORM
+                  href: d3dx-float3-to-b8g8r8x8-unorm.md
+                - name: D3DX_FLOAT3_to_B8G8R8X8_UNORM_SRGB
+                  href: d3dx-float3-to-b8g8r8x8-unorm-srgb.md
+                - name: D3DX_FLOAT4_to_R10G10B10A2_UNORM
+                  href: d3dx-float4-to-r10g10b10a2-unorm.md
+                - name: D3DX_FLOAT4_to_B8G8R8A8_UNORM
+                  href: d3dx-float4-to-b8g8r8a8-unorm.md
+                - name: D3DX_FLOAT4_to_B8G8R8A8_UNORM_SRGB
+                  href: d3dx-float4-to-b8g8r8a8-unorm-srgb.md
+                - name: D3DX_FLOAT4_to_R8G8B8A8_SNORM
+                  href: d3dx-float4-to-r8g8b8a8-snorm.md
+                - name: D3DX_FLOAT4_to_R8G8B8A8_UNORM
+                  href: d3dx-float4-to-r8g8b8a8-unorm.md
+                - name: D3DX_FLOAT4_to_R8G8B8A8_UNORM_SRGB
+                  href: d3dx-float4-to-r8g8b8a8-unorm-srgb.md
+                - name: D3DX_INT_to_FLOAT
+                  href: d3dx-int-to-float.md
+                - name: D3DX_INT2_to_R16G16_SINT
+                  href: d3dx-int2-to-r16g16-sint.md
+                - name: D3DX_INT4_to_R8G8B8A8_SINT
+                  href: d3dx-int4-to-r8g8b8a8-sint.md
+                - name: D3DX_IsNan
+                  href: d3dx-isnan.md
+                - name: D3DX_R10G10B10A2_UINT_to_UINT4
+                  href: d3dx-r10g10b10a2-uint-to-uint4.md
+                - name: D3DX_R10G10B10A2_UNORM_to_FLOAT4
+                  href: d3dx-r10g10b10a2-unorm-to-float4.md
+                - name: D3DX_R16G16_FLOAT_to_FLOAT2
+                  href: d3dx-r16g16-float-to-float2.md
+                - name: D3DX_R16G16_SINT_to_INT2
+                  href: d3dx-r16g16-sint-to-int2.md
+                - name: D3DX_R16G16_SNORM_to_FLOAT2
+                  href: d3dx-r16g16-snorm-to-float2.md
+                - name: D3DX_R16G16_UINT_to_UINT2
+                  href: d3dx-r16g16-uint-to-uint2.md
+                - name: D3DX_R16G16_UNORM_to_FLOAT2
+                  href: d3dx-r16g16-unorm-to-float2.md
+                - name: D3DX_R8G8B8A8_SINT_to_INT4
+                  href: d3dx-r8g8b8a8-sint-to-int4.md
+                - name: D3DX_R8G8B8A8_SNORM_to_FLOAT4
+                  href: d3dx-r8g8b8a8-snorm-to-float4.md
+                - name: D3DX_R8G8B8A8_UINT_to_UINT4
+                  href: d3dx-r8g8b8a8-uint-to-uint4.md
+                - name: D3DX_R8G8B8A8_UNORM_SRGB_to_FLOAT4
+                  href: d3dx-r8g8b8a8-unorm-srgb-to-float4.md
+                - name: D3DX_R8G8B8A8_UNORM_SRGB_to_FLOAT4_inexact
+                  href: d3dx-r8g8b8a8-unorm-srgb-to-float4-inexact.md
+                - name: D3DX_R8G8B8A8_UNORM_to_FLOAT4
+                  href: d3dx-r8g8b8a8-unorm-to-float4.md
+                - name: D3DX_Saturate_FLOAT
+                  href: d3dx-saturate-float.md
+                - name: D3DX_SaturateSigned_FLOAT
+                  href: d3dx-saturatesigned-float.md
+                - name: D3DX_SRGB_to_FLOAT
+                  href: d3dx-srgb-to-float.md
+                - name: D3DX_SRGB_to_FLOAT_inexact
+                  href: d3dx-srgb-to-float-inexact.md
+                - name: D3DX_Truncate_FLOAT
+                  href: d3dx-truncate-float.md
+                - name: D3DX_UINT2_to_R16G16_UINT
+                  href: d3dx-uint2-to-r16g16-uint.md
+                - name: D3DX_UINT4_to_R10G10B10A2_UINT
+                  href: d3dx-uint4-to-r10g10b10a2-uint.md
+                - name: D3DX_UINT4_to_R8G8B8A8_UINT
+                  href: d3dx-uint4-to-r8g8b8a8-uint.md
+            - name: Strukturen
+              href: format-conversion-structures.md
+              items:
+                - name: XMINT2
+                  href: xmint2.md
+                - name: XMINT4
+                  href: xmint4.md
+                - name: XMUINT2
+                  href: xmuint2.md
+                - name: XMUINT4
+                  href: xmuint4.md
+        - name: Anhang
+          href: dx-graphics-hlsl-appendix.md
+          items:
+            - name: Keywords
+              href: dx-graphics-hlsl-appendix-keywords.md
+            - name: Präprozessoranweisungen
+              href: dx-graphics-hlsl-appendix-preprocessor.md
+              items:
+                - name: '#define-Direktive'
+                  href: dx-graphics-hlsl-appendix-pre-define.md
+                  items:
+                    - name: '#define-Direktive'
+                      href: dx-graphics-hlsl-appendix-pre-define-1.md
+                    - name: '#define-Direktive'
+                      href: dx-graphics-hlsl-appendix-pre-define-2.md
+                - name: '#Error-Direktive'
+                  href: dx-graphics-hlsl-appendix-pre-error.md
+                - name: '#if-, #elif-, #else-und #endif-Direktiven'
+                  href: dx-graphics-hlsl-appendix-pre-if.md
+                - name: '#ifdef-und #ifndef-Direktiven'
+                  href: dx-graphics-hlsl-appendix-pre-ifdef.md
+                - name: '#include-Direktive'
+                  href: dx-graphics-hlsl-appendix-pre-include.md
+                - name: '#line-Direktive'
+                  href: dx-graphics-hlsl-appendix-pre-line.md
+                - name: '#pragma-Direktive'
+                  href: dx-graphics-hlsl-appendix-pre-pragma.md
+                  items:
+                    - name: DEF-pragma-Direktive
+                      href: dx-graphics-hlsl-appendix-pre-pragma-def.md
+                    - name: Message-pragma-Direktive
+                      href: message-pragma-directive--directx-hlsl-.md
+                    - name: pack_matrix pragma-Direktive
+                      href: dx-graphics-hlsl-appendix-pre-pragma-pack-matrix.md
+                    - name: warning-pragma-Direktive
+                      href: dx-graphics-hlsl-appendix-pre-pragma-warning.md
+                - name: '#undef-Direktive'
+                  href: dx-graphics-hlsl-appendix-pre-undef.md
+            - name: Reservierte Wörter
+              href: dx-graphics-hlsl-appendix-reserved-words.md
+            - name: Grammatik
+              href: dx-graphics-hlsl-appendix-grammar.md
+        - name: HLSL-Fehler und-Warnungen
+          href: hlsl-errors-and-warnings.md
