@@ -1,0 +1,93 @@
+---
+description: Diese Klasse ist die übergeordnete Klasse für Hardware Konfigurations Ereignisse. Die folgende Syntax wird durch den MOF-Code vereinfacht.
+ms.assetid: 9da1a7ec-89b5-462b-a336-544e4b7adf96
+title: SystemConfig_V0-Klasse
+ms.topic: reference
+ms.date: 05/31/2018
+topic_type:
+- APIRef
+- kbSyntax
+api_name:
+- SystemConfig_V0
+api_type:
+- NA
+api_location: ''
+ms.openlocfilehash: 92d77d1ad3effdd2bf22a7df8112187b27666238
+ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "103864251"
+---
+# <a name="systemconfig_v0-class"></a>SystemConfig \_ v0-Klasse
+
+Diese Klasse ist die übergeordnete Klasse für Hardware Konfigurations Ereignisse.
+
+Die folgende Syntax wird durch den MOF-Code vereinfacht.
+
+## <a name="syntax"></a>Syntax
+
+``` syntax
+[Guid("{01853a65-418f-4f36-aefc-dc0f1d2fd235}"), EventVersion(0)]
+class SystemConfig_V0 : MSNT_SystemTrace
+{
+};
+```
+
+## <a name="members"></a>Member
+
+Die Klasse " **SystemConfig \_ v0** " definiert keine Member.
+
+## <a name="remarks"></a>Bemerkungen
+
+Informationen zu Hardware Konfigurations Ereignissen unter Windows XP finden Sie in der [**hwconfig**](hwconfig.md) -Klasse.
+
+## <a name="requirements"></a>Requirements (Anforderungen)
+
+
+
+| Anforderung | Wert |
+|-------------------------------------|------------------------------------------------------|
+| Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                            |
+| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/> |
+
+
+
+## <a name="see-also"></a>Weitere Informationen
+
+<dl> <dt>
+
+[**MSNT \_ systemtrace**](msnt-systemtrace.md)
+</dt> <dt>
+
+[**SystemConfig**](systemconfig.md)
+</dt> <dt>
+
+[**SystemConfig \_ v0- \_ CPU**](systemconfig-v0-cpu.md)
+</dt> <dt>
+
+[**SystemConfig \_ v0- \_ logdisk**](systemconfig-v0-logdisk.md)
+</dt> <dt>
+
+[**SystemConfig \_ v0- \_ NIC**](systemconfig-v0-nic.md)
+</dt> <dt>
+
+[**SystemConfig \_ v0- \_ phydisk**](systemconfig-v0-phydisk.md)
+</dt> <dt>
+
+[**SystemConfig \_ v0- \_ Strom**](systemconfig-v0-power.md)
+</dt> <dt>
+
+[**SystemConfig \_ v0- \_ Dienste**](systemconfig-v0-services.md)
+</dt> <dt>
+
+[**System config \_ v0- \_ Video**](systemconfig-v0-video.md)
+</dt> </dl>
+
+ 
+
+ 
+
+
+
+

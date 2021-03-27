@@ -1,0 +1,94 @@
+---
+title: Schritt
+description: Vergleicht zwei Werte, wobei 0 oder 1 zurückgegeben wird, je nachdem, welcher Wert größer ist.
+ms.assetid: 1c1c4ec4-ae97-42ce-99af-71903e0b5edf
+keywords:
+- Schritt HLSL
+topic_type:
+- apiref
+api_name:
+- step
+api_type:
+- NA
+ms.topic: reference
+ms.date: 05/31/2018
+api_location: ''
+ms.openlocfilehash: f9c800e8d8c6f78386139f822f118163f3b431f5
+ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "103729528"
+---
+# <a name="step"></a>Schritt
+
+Vergleicht zwei Werte, wobei 0 oder 1 zurückgegeben wird, je nachdem, welcher Wert größer ist.
+
+
+
+| *ret* -Schritt (*y*, *x*) |
+|----------------------|
+
+
+
+ 
+
+## <a name="parameters"></a>Parameter
+
+
+
+| Element                                                   | BESCHREIBUNG                                                   |
+|--------------------------------------------------------|---------------------------------------------------------------|
+| <span id="y"></span><span id="Y"></span>*Teenie*<br/> | \[\]der erste zu vergleichende Gleit Komma Wert.<br/>  |
+| <span id="x"></span><span id="X"></span>*Stuben*<br/> | \[im \] zweiten zu vergleichenden Gleit Komma Wert.<br/> |
+
+
+
+ 
+
+## <a name="return-value"></a>Rückgabewert
+
+1, wenn der *x* -Parameter größer oder gleich dem *y* -Parameter ist. andernfalls 0.
+
+## <a name="remarks"></a>Bemerkungen
+
+Diese Funktion verwendet die folgende Formel: (*x*  >=  *y*)? 1:0. Die-Funktion gibt entweder 0 oder 1 zurück, je nachdem, ob der *x* -Parameter größer als der *y* -Parameter ist. Verwenden Sie die systeminterne Funktion " [**smoothstep**](dx-graphics-hlsl-smoothstep.md) HLSL", um eine reibungslose interpolsierung zwischen 0 und 1 zu berechnen.
+
+## <a name="type-description"></a>Typbeschreibung
+
+
+
+| Name  | [**Vorlagentyp**](dx-graphics-hlsl-intrinsic-functions.md)                                                  | [**Komponententyp**](dx-graphics-hlsl-intrinsic-functions.md) | Size                           |
+|-------|----------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------|--------------------------------|
+| *y*   | [**Skalar**](dx-graphics-hlsl-intrinsic-functions.md), **Vektor** oder **Matrix** | [**Hafen**](/windows/desktop/WinProg/windows-data-types)                        | any                            |
+| *x*   | identisch mit der Eingabe *y*                                                                                              | [**Hafen**](/windows/desktop/WinProg/windows-data-types)                        | gleiche Dimension (n) wie Eingabe *y* |
+| *TZI* | identisch mit der Eingabe *y*                                                                                              | [**Hafen**](/windows/desktop/WinProg/windows-data-types)                        | gleiche Dimension (n) wie Eingabe *y* |
+
+
+
+ 
+
+## <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+
+Diese Funktion wird in den folgenden shadermodellen unterstützt.
+
+
+
+| Shadermodell                                                                       | Unterstützt                   |
+|------------------------------------------------------------------------------------|-----------------------------|
+| [Shader Model 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) und höhere Shader-Modelle | ja                         |
+| [Shader-Modell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md)                          | Ja (vs \_ 1 \_ 1 und PS \_ 1 \_ 4) |
+
+
+
+ 
+
+## <a name="see-also"></a>Weitere Informationen
+
+<dl> <dt>
+
+[**Intrinsische Funktionen (DirectX HLSL)**](dx-graphics-hlsl-intrinsic-functions.md)
+</dt> </dl>
+
+ 
+
