@@ -1,0 +1,749 @@
+- name: Fenster und Meldungen
+  href: windowing.md
+  items:
+    - name: Windows
+      href: windows.md
+      items:
+        - name: Fenster Übersichten
+          href: window-overviews.md
+          items:
+            - name: Info
+              href: about-windows.md
+            - name: Fensterfeatures
+              href: window-features.md
+            - name: Verwenden von Windows
+              href: using-windows.md
+        - name: Fenster Verweis
+          href: window-reference.md
+          items:
+            - name: Fenster Konstanten
+              href: constants.md
+              items:
+                - name: Erweiterte Fensterstile
+                  href: extended-window-styles.md
+                - name: Fensterstile
+                  href: window-styles.md
+            - name: Fensterfunktionen
+              href: window-functions.md
+              items:
+                - name: '"Setting WindowRect"'
+                  href: /windows/desktop/api/winuser/nf-winuser-adjustwindowrect
+                - name: '"Setting windowrectex"'
+                  href: /windows/desktop/api/winuser/nf-winuser-adjustwindowrectex
+                - name: Allowsetforegroundwindow
+                  href: /windows/desktop/api/winuser/nf-winuser-allowsetforegroundwindow
+                - name: Animatewindow
+                  href: /windows/desktop/api/winuser/nf-winuser-animatewindow
+                - name: Anypopup
+                  href: /windows/desktop/api/winuser/nf-winuser-anypopup
+                - name: Arrangeideicwindows
+                  href: /windows/desktop/api/winuser/nf-winuser-arrangeiconicwindows
+                - name: Begindeferwindowpos
+                  href: /windows/desktop/api/winuser/nf-winuser-begindeferwindowpos
+                - name: BringWindowToTop
+                  href: /windows/desktop/api/winuser/nf-winuser-bringwindowtotop
+                - name: Calculatepopupwindowposition
+                  href: /windows/desktop/api/winuser/nf-winuser-calculatepopupwindowposition
+                - name: Cascade-Fenster
+                  href: /windows/desktop/api/winuser/nf-winuser-cascadewindows
+                - name: Changewindowmessagefilter
+                  href: /windows/desktop/api/winuser/nf-winuser-changewindowmessagefilter
+                - name: Changewindowmessagefilterex
+                  href: /windows/desktop/api/winuser/nf-winuser-changewindowmessagefilterex
+                - name: Childwindowfrompoint
+                  href: /windows/desktop/api/winuser/nf-winuser-childwindowfrompoint
+                - name: ChildWindowFromPointEx
+                  href: /windows/desktop/api/winuser/nf-winuser-childwindowfrompointex
+                - name: CloseWindow
+                  href: /windows/desktop/api/winuser/nf-winuser-closewindow
+                - name: CreateWindow
+                  href: /windows/desktop/api/winuser/nf-winuser-createwindowa
+                - name: CreateWindowEx
+                  href: /windows/desktop/api/winuser/nf-winuser-createwindowexa
+                - name: Deferwindowpos
+                  href: /windows/desktop/api/winuser/nf-winuser-deferwindowpos
+                - name: Deregistershellhuokwindow
+                  href: /windows/desktop/api/winuser/nf-winuser-deregistershellhookwindow
+                - name: DestroyWindow
+                  href: /windows/desktop/api/winuser/nf-winuser-destroywindow
+                - name: Enddeferwindowpos
+                  href: /windows/desktop/api/winuser/nf-winuser-enddeferwindowpos
+                - name: Endtask
+                  href: /windows/desktop/api/winuser/nf-winuser-endtask
+                - name: Enumchildproc
+                  href: /previous-versions/windows/desktop/legacy/ms633493(v=vs.85)
+                - name: Enumchildwindows
+                  href: /windows/desktop/api/winuser/nf-winuser-enumchildwindows
+                - name: Enumthreadfenster
+                  href: /windows/desktop/api/winuser/nf-winuser-enumthreadwindows
+                - name: Enumthreadwndproc
+                  href: /previous-versions/windows/desktop/legacy/ms633496(v=vs.85)
+                - name: EnumWindows
+                  href: /windows/desktop/api/winuser/nf-winuser-enumwindows
+                - name: EnumWindowsProc
+                  href: /previous-versions/windows/desktop/legacy/ms633498(v=vs.85)
+                - name: FindWindow
+                  href: /windows/desktop/api/winuser/nf-winuser-findwindowa
+                - name: FindWindowEx
+                  href: /windows/desktop/api/winuser/nf-winuser-findwindowexa
+                - name: Getalttabinfo
+                  href: /windows/desktop/api/winuser/nf-winuser-getalttabinfoa
+                - name: GetAncestor
+                  href: /windows/desktop/api/winuser/nf-winuser-getancestor
+                - name: GetClientRect
+                  href: /windows/desktop/api/winuser/nf-winuser-getclientrect
+                - name: GetDesktopWindow
+                  href: /windows/desktop/api/winuser/nf-winuser-getdesktopwindow
+                - name: Getforegroundwindow
+                  href: /windows/desktop/api/winuser/nf-winuser-getforegroundwindow
+                - name: Getguithreadinfo
+                  href: /windows/desktop/api/winuser/nf-winuser-getguithreadinfo
+                - name: Getlastactivepopup
+                  href: /windows/desktop/api/winuser/nf-winuser-getlastactivepopup
+                - name: Getlayeredwindowattributes
+                  href: /windows/desktop/api/winuser/nf-winuser-getlayeredwindowattributes
+                - name: Getnextwindow
+                  href: /windows/desktop/api/winuser/nf-winuser-getnextwindow
+                - name: GetParent
+                  href: /windows/desktop/api/winuser/nf-winuser-getparent
+                - name: Getprocessdefaultlayout
+                  href: /windows/desktop/api/winuser/nf-winuser-getprocessdefaultlayout
+                - name: Getshellwindow
+                  href: /windows/desktop/api/winuser/nf-winuser-getshellwindow
+                - name: GetSysColor
+                  href: /windows/desktop/api/winuser/nf-winuser-getsyscolor
+                - name: Gettitlebarinfo
+                  href: /windows/desktop/api/winuser/nf-winuser-gettitlebarinfo
+                - name: Gettopwindow
+                  href: /windows/desktop/api/winuser/nf-winuser-gettopwindow
+                - name: GetWindow
+                  href: /windows/desktop/api/winuser/nf-winuser-getwindow
+                - name: Getwindowdisplayaffinität
+                  href: /windows/desktop/api/winuser/nf-winuser-getwindowdisplayaffinity
+                - name: Getwindowinfo
+                  href: /windows/desktop/api/winuser/nf-winuser-getwindowinfo
+                - name: Getwindowmodulefilename
+                  href: /windows/desktop/api/winuser/nf-winuser-getwindowmodulefilenamea
+                - name: GetWindowPlacement
+                  href: /windows/desktop/api/winuser/nf-winuser-getwindowplacement
+                - name: GetWindowRect
+                  href: /windows/desktop/api/winuser/nf-winuser-getwindowrect
+                - name: GetWindowText
+                  href: /windows/desktop/api/winuser/nf-winuser-getwindowtexta
+                - name: Getwindowtextlength
+                  href: /windows/desktop/api/winuser/nf-winuser-getwindowtextlengtha
+                - name: Getwindowthreadprocessid
+                  href: /windows/desktop/api/winuser/nf-winuser-getwindowthreadprocessid
+                - name: Internalgetwindowtext
+                  href: /windows/desktop/api/winuser/nf-winuser-internalgetwindowtext
+                - name: IsChild
+                  href: /windows/desktop/api/winuser/nf-winuser-ischild
+                - name: Isguithread
+                  href: /windows/desktop/api/winuser/nf-winuser-isguithread
+                - name: Ishungappwindow
+                  href: /windows/desktop/api/winuser/nf-winuser-ishungappwindow
+                - name: Isireisch
+                  href: /windows/desktop/api/winuser/nf-winuser-isiconic
+                - name: Isprocessdpiaware
+                  href: /windows/desktop/api/winuser/nf-winuser-isprocessdpiaware
+                - name: IsWindow
+                  href: /windows/desktop/api/winuser/nf-winuser-iswindow
+                - name: Iswindowunicode
+                  href: /windows/desktop/api/winuser/nf-winuser-iswindowunicode
+                - name: Iswindowvisible
+                  href: /windows/desktop/api/winuser/nf-winuser-iswindowvisible
+                - name: Iszoom
+                  href: /windows/desktop/api/winuser/nf-winuser-iszoomed
+                - name: Locksetforegroundwindow
+                  href: /windows/desktop/api/winuser/nf-winuser-locksetforegroundwindow
+                - name: LogicalToPhysicalPoint
+                  href: /windows/desktop/api/winuser/nf-winuser-logicaltophysicalpoint
+                - name: Fenster
+                  href: /windows/desktop/api/winuser/nf-winuser-movewindow
+                - name: Openicon
+                  href: /windows/desktop/api/winuser/nf-winuser-openicon
+                - name: PhysicalToLogicalPoint
+                  href: /windows/desktop/api/winuser/nf-winuser-physicaltologicalpoint
+                - name: Realchildwindowfrompoint
+                  href: /windows/desktop/api/winuser/nf-winuser-realchildwindowfrompoint
+                - name: Realgetwindowclass
+                  href: /windows/desktop/api/winuser/nf-winuser-realgetwindowclassw
+                - name: Registershellhuokwindow
+                  href: /windows/desktop/api/winuser/nf-winuser-registershellhookwindow
+                - name: SetForegroundWindow
+                  href: /windows/desktop/api/winuser/nf-winuser-setforegroundwindow
+                - name: SetLayeredWindowAttributes
+                  href: /windows/desktop/api/winuser/nf-winuser-setlayeredwindowattributes
+                - name: SetParent
+                  href: /windows/desktop/api/winuser/nf-winuser-setparent
+                - name: Setprocessdefaultlayout
+                  href: /windows/desktop/api/winuser/nf-winuser-setprocessdefaultlayout
+                - name: SetProcessDPIAware
+                  href: /windows/desktop/api/winuser/nf-winuser-setprocessdpiaware
+                - name: SetSysColors
+                  href: /windows/desktop/api/winuser/nf-winuser-setsyscolors
+                - name: Setwindowdisplayaffinität
+                  href: /windows/desktop/api/winuser/nf-winuser-setwindowdisplayaffinity
+                - name: Setwindowfeedbacksettings
+                  href: /previous-versions/windows/desktop/legacy/hh405402(v=vs.85)
+                - name: SetWindowPlacement
+                  href: /windows/desktop/api/winuser/nf-winuser-setwindowplacement
+                - name: SetWindowPos
+                  href: /windows/desktop/api/winuser/nf-winuser-setwindowpos
+                - name: SetWindowText
+                  href: /windows/desktop/api/winuser/nf-winuser-setwindowtexta
+                - name: Showownedpopups
+                  href: /windows/desktop/api/winuser/nf-winuser-showownedpopups
+                - name: ShowWindow
+                  href: /windows/desktop/api/winuser/nf-winuser-showwindow
+                - name: ShowWindowAsync
+                  href: /windows/desktop/api/winuser/nf-winuser-showwindowasync
+                - name: Hat Dienst
+                  href: /windows/desktop/api/winuser/nf-winuser-soundsentry
+                - name: Switchumthiswindow
+                  href: /windows/desktop/api/winuser/nf-winuser-switchtothiswindow
+                - name: Tilewindows
+                  href: /windows/desktop/api/winuser/nf-winuser-tilewindows
+                - name: UpdateLayeredWindow
+                  href: /windows/desktop/api/winuser/nf-winuser-updatelayeredwindow
+                - name: UpdateLayeredWindowIndirect
+                  href: /previous-versions/windows/desktop/legacy/ms633557(v=vs.85)
+                - name: Windowfromphysicalpoint
+                  href: /windows/desktop/api/winuser/nf-winuser-windowfromphysicalpoint
+                - name: WindowFromPoint
+                  href: /windows/desktop/api/winuser/nf-winuser-windowfrompoint
+                - name: WinMain
+                  href: /windows/desktop/api/winbase/nf-winbase-winmain
+            - name: Fenster Makros
+              href: window-macros.md
+              items:
+                - name: GET_X_LPARAM
+                  href: /windows/desktop/api/windowsx/nf-windowsx-get_x_lparam
+                - name: GET_Y_LPARAM
+                  href: /windows/desktop/api/windowsx/nf-windowsx-get_y_lparam
+                - name: Hibyte
+                  href: /previous-versions/windows/desktop/legacy/ms632656(v=vs.85)
+                - name: HIWORD
+                  href: /previous-versions/windows/desktop/legacy/ms632657(v=vs.85)
+                - name: Lobyte
+                  href: /previous-versions/windows/desktop/legacy/ms632658(v=vs.85)
+                - name: LOWORD
+                  href: /previous-versions/windows/desktop/legacy/ms632659(v=vs.85)
+                - name: Makelong
+                  href: /previous-versions/windows/desktop/legacy/ms632660(v=vs.85)
+                - name: Makelparam
+                  href: /windows/desktop/api/winuser/nf-winuser-makelparam
+                - name: Makelresult
+                  href: /windows/desktop/api/winuser/nf-winuser-makelresult
+                - name: Makeword
+                  href: /previous-versions/windows/desktop/legacy/ms632663(v=vs.85)
+                - name: Makewparam
+                  href: /windows/desktop/api/winuser/nf-winuser-makewparam
+            - name: Fenster Meldungen
+              href: window-messages.md
+              items:
+                - name: MN_GETHMENU
+                  href: mn-gethmenu.md
+                - name: WM_ERASEBKGND
+                  href: wm-erasebkgnd.md
+                - name: WM_GETFONT
+                  href: wm-getfont.md
+                - name: WM_GETTEXT
+                  href: wm-gettext.md
+                - name: WM_GETTEXTLENGTH
+                  href: wm-gettextlength.md
+                - name: WM_SETFONT
+                  href: wm-setfont.md
+                - name: WM_SETICON
+                  href: wm-seticon.md
+                - name: WM_SETTEXT
+                  href: wm-settext.md
+            - name: Fenster Benachrichtigungen
+              href: window-notifications.md
+              items:
+                - name: WM_ACTIVATEAPP
+                  href: wm-activateapp.md
+                - name: WM_CANCELMODE
+                  href: wm-cancelmode.md
+                - name: WM_CHILDACTIVATE
+                  href: wm-childactivate.md
+                - name: WM_CLOSE
+                  href: wm-close.md
+                - name: WM_COMPACTING
+                  href: wm-compacting.md
+                - name: WM_CREATE
+                  href: wm-create.md
+                - name: WM_DESTROY
+                  href: wm-destroy.md
+                - name: WM_ENABLE
+                  href: wm-enable.md
+                - name: WM_ENTERSIZEMOVE
+                  href: wm-entersizemove.md
+                - name: WM_EXITSIZEMOVE
+                  href: wm-exitsizemove.md
+                - name: WM_GETICON
+                  href: wm-geticon.md
+                - name: WM_GETMINMAXINFO
+                  href: wm-getminmaxinfo.md
+                - name: WM_INPUTLANGCHANGE
+                  href: wm-inputlangchange.md
+                - name: WM_INPUTLANGCHANGEREQUEST
+                  href: wm-inputlangchangerequest.md
+                - name: WM_MOVE
+                  href: wm-move.md
+                - name: WM_MOVING
+                  href: wm-moving.md
+                - name: WM_NCACTIVATE
+                  href: wm-ncactivate.md
+                - name: WM_NCCALCSIZE
+                  href: wm-nccalcsize.md
+                - name: WM_NCCREATE
+                  href: wm-nccreate.md
+                - name: WM_NCDESTROY
+                  href: wm-ncdestroy.md
+                - name: WM_NULL
+                  href: wm-null.md
+                - name: WM_QUERYDRAGICON
+                  href: wm-querydragicon.md
+                - name: WM_QUERYOPEN
+                  href: wm-queryopen.md
+                - name: WM_QUIT
+                  href: wm-quit.md
+                - name: WM_SHOWWINDOW
+                  href: wm-showwindow.md
+                - name: WM_SIZE
+                  href: wm-size.md
+                - name: WM_SIZING
+                  href: wm-sizing.md
+                - name: WM_STYLECHANGED
+                  href: wm-stylechanged.md
+                - name: WM_STYLECHANGING
+                  href: wm-stylechanging.md
+                - name: WM_THEMECHANGED
+                  href: wm-themechanged.md
+                - name: WM_USERCHANGED
+                  href: wm-userchanged.md
+                - name: WM_WINDOWPOSCHANGED
+                  href: wm-windowposchanged.md
+                - name: WM_WINDOWPOSCHANGING
+                  href: wm-windowposchanging.md
+            - name: Fenster Strukturen
+              href: window-structures.md
+              items:
+                - name: Alttabinfo
+                  href: /windows/win32/api/winuser/ns-winuser-alttabinfo
+                - name: Changefilterstruct
+                  href: /windows/win32/api/winuser/ns-winuser-changefilterstruct
+                - name: Clientkreatestruct
+                  href: /windows/win32/api/winuser/ns-winuser-clientcreatestruct
+                - name: CREATESTRUCT
+                  href: /windows/win32/api/winuser/ns-winuser-createstructa
+                - name: Guithreadinfo
+                  href: /windows/win32/api/winuser/ns-winuser-guithreadinfo
+                - name: MINMAXINFO
+                  href: /windows/win32/api/winuser/ns-winuser-minmaxinfo
+                - name: NCCALCSIZE_PARAMS
+                  href: /windows/win32/api/winuser/ns-winuser-nccalcsize_params
+                - name: Stylestruct
+                  href: /windows/win32/api/winuser/ns-winuser-stylestruct
+                - name: Titlebarinfo
+                  href: /windows/win32/api/winuser/ns-winuser-titlebarinfo
+                - name: Titlebarinfoex
+                  href: /windows/win32/api/winuser/ns-winuser-titlebarinfoex
+                - name: UPDATELAYEREDWINDOWINFO
+                  href: /windows/win32/api/winuser/ns-winuser-updatelayeredwindowinfo
+                - name: Windowinfo
+                  href: /windows/win32/api/winuser/ns-winuser-windowinfo
+                - name: WINDOWPLACEMENT
+                  href: /windows/win32/api/winuser/ns-winuser-windowplacement
+                - name: WINDOWPOS
+                  href: /windows/win32/api/winuser/ns-winuser-windowpos
+    - name: Fensterklassen
+      href: window-classes.md
+      items:
+        - name: Fenster Klassen Übersichten
+          href: window-class-overviews.md
+          items:
+            - name: Informationen zu Fenster Klassen
+              href: about-window-classes.md
+            - name: Verwenden von Fenster Klassen
+              href: using-window-classes.md
+        - name: Fenster Klassen Verweis
+          href: window-class-reference.md
+          items:
+            - name: Fenster Klassen Funktionen
+              href: window-class-functions.md
+              items:
+                - name: GetClassInfo
+                  href: /windows/desktop/api/winuser/nf-winuser-getclassinfoa
+                - name: Getclassinfoex
+                  href: /windows/desktop/api/winuser/nf-winuser-getclassinfoexa
+                - name: GetClassLong
+                  href: /windows/desktop/api/winuser/nf-winuser-getclasslonga
+                - name: Getclasslongptr
+                  href: /windows/desktop/api/winuser/nf-winuser-getclasslongptra
+                - name: GetClassName
+                  href: /windows/desktop/api/winuser/nf-winuser-getclassname
+                - name: Getclassword
+                  href: /windows/desktop/api/winuser/nf-winuser-getclassword
+                - name: GetWindowLong
+                  href: /windows/desktop/api/winuser/nf-winuser-getwindowlonga
+                - name: Getwindowlongptr
+                  href: /windows/desktop/api/winuser/nf-winuser-getwindowlongptra
+                - name: RegisterClass
+                  href: /windows/desktop/api/winuser/nf-winuser-registerclassa
+                - name: RegisterClassEx
+                  href: /windows/desktop/api/winuser/nf-winuser-registerclassexa
+                - name: SetClassLong
+                  href: /windows/desktop/api/winuser/nf-winuser-setclasslonga
+                - name: Setclasslongptr
+                  href: /windows/desktop/api/winuser/nf-winuser-setclasslongptra
+                - name: Setclassword
+                  href: /windows/desktop/api/winuser/nf-winuser-setclassword
+                - name: SetWindowLong
+                  href: /windows/desktop/api/winuser/nf-winuser-setwindowlonga
+                - name: Setwindowlongptr
+                  href: /windows/desktop/api/winuser/nf-winuser-setwindowlongptra
+                - name: Unregisterclass
+                  href: /windows/desktop/api/winuser/nf-winuser-unregisterclassa
+            - name: Fenster Klassenstrukturen
+              href: window-class-structures.md
+              items:
+                - name: WNDCLASS
+                  href: /windows/win32/api/winuser/ns-winuser-wndclassa
+                - name: WNDCLASSEX
+                  href: /windows/win32/api/winuser/ns-winuser-wndclassexa
+            - name: Fenster Klassen Stile
+              href: window-class-styles.md
+    - name: Fenster Prozeduren
+      href: window-procedures.md
+      items:
+        - name: Fenster Prozedur Übersichten
+          href: window-procedure-overviews.md
+          items:
+            - name: Informationen zu Fenster Verfahren
+              href: about-window-procedures.md
+            - name: Verwenden von Window
+              href: using-window-procedures.md
+        - name: Fenster Prozedur Referenz
+          href: window-procedure-reference.md
+          items:
+            - name: Fenster Prozedur Funktionen
+              href: window-procedure-functions.md
+              items:
+                - name: Callwindowproc
+                  href: /windows/desktop/api/winuser/nf-winuser-callwindowproca
+                - name: DefWindowProc
+                  href: /windows/desktop/api/winuser/nf-winuser-defwindowproca
+                - name: WindowProc
+                  href: /previous-versions/windows/desktop/legacy/ms633573(v=vs.85)
+    - name: Nachrichten und Nachrichten Warteschlangen
+      href: messages-and-message-queues.md
+      items:
+        - name: Übersichten der Nachrichten-und Nachrichten Warteschlange
+          href: message-and-message-queue-overviews.md
+          items:
+            - name: Informationen zu Meldungen und Meldungswarteschlangen
+              href: about-messages-and-message-queues.md
+            - name: Verwenden von Meldungen und Nachrichten Warteschlangen
+              href: using-messages-and-message-queues.md
+        - name: Nachrichten Verweis
+          href: message-and-message-queue-reference.md
+          items:
+            - name: Nachrichtenfunktionen
+              href: message-and-message-queue-functions.md
+              items:
+                - name: Broadcastsystemmessage
+                  href: /windows/desktop/api/winuser/nf-winuser-broadcastsystemmessage
+                - name: Broadcastsystemmessageex
+                  href: /windows/desktop/api/winuser/nf-winuser-broadcastsystemmessageexa
+                - name: DispatchMessage gesendet
+                  href: /windows/desktop/api/winuser/nf-winuser-dispatchmessage
+                - name: Getinputstate
+                  href: /windows/desktop/api/winuser/nf-winuser-getinputstate
+                - name: GetMessage
+                  href: /windows/desktop/api/winuser/nf-winuser-getmessage
+                - name: GetMessageExtraInfo
+                  href: /windows/desktop/api/winuser/nf-winuser-getmessageextrainfo
+                - name: GetMessagePos
+                  href: /windows/desktop/api/winuser/nf-winuser-getmessagepos
+                - name: Getmessagetime
+                  href: /windows/desktop/api/winuser/nf-winuser-getmessagetime
+                - name: Getqueuestatus
+                  href: /windows/desktop/api/winuser/nf-winuser-getqueuestatus
+                - name: Insendmessage
+                  href: /windows/desktop/api/winuser/nf-winuser-insendmessage
+                - name: Insendmessageex
+                  href: /windows/desktop/api/winuser/nf-winuser-insendmessageex
+                - name: PeekMessage
+                  href: /windows/desktop/api/winuser/nf-winuser-peekmessagea
+                - name: PostMessage
+                  href: /windows/desktop/api/winuser/nf-winuser-postmessagea
+                - name: PostQuitMessage
+                  href: /windows/desktop/api/winuser/nf-winuser-postquitmessage
+                - name: PostThreadMessage
+                  href: /windows/desktop/api/winuser/nf-winuser-postthreadmessagea
+                - name: RegisterWindowMessage
+                  href: /windows/desktop/api/winuser/nf-winuser-registerwindowmessagea
+                - name: RequestMessage
+                  href: /windows/desktop/api/winuser/nf-winuser-replymessage
+                - name: Sendasyncproc
+                  href: /windows/desktop/api/winuser/nc-winuser-sendasyncproc
+                - name: SendMessage
+                  href: /windows/desktop/api/winuser/nf-winuser-sendmessage
+                - name: Sendmessagecallback
+                  href: /windows/desktop/api/winuser/nf-winuser-sendmessagecallbacka
+                - name: Von SendMessageTimeout
+                  href: /windows/desktop/api/winuser/nf-winuser-sendmessagetimeouta
+                - name: Sendnotisymess
+                  href: /windows/desktop/api/winuser/nf-winuser-sendnotifymessagea
+                - name: '"*"'
+                  href: /windows/desktop/api/winuser/nf-winuser-setmessageextrainfo
+                - name: TranslateMessage
+                  href: /windows/desktop/api/winuser/nf-winuser-translatemessage
+                - name: Waitmessage
+                  href: /windows/desktop/api/winuser/nf-winuser-waitmessage
+            - name: Nachrichten Strukturen
+              href: message-and-message-queue-structures.md
+              items:
+                - name: BSMinfo
+                  href: /windows/desktop/api/winuser/ns-winuser-bsminfo
+                - name: Meldung
+                  href: /windows/win32/api/winuser/ns-winuser-msg
+            - name: Nachrichten Konstanten
+              href: message-and-message-queue-notifications.md
+              items:
+                - name: OCM__BASE
+                  href: ocm--base.md
+                - name: WM_APP
+                  href: wm-app.md
+                - name: WM_USER
+                  href: wm-user.md
+    - name: Timer
+      href: timers.md
+      items:
+        - name: Zeit Geber Übersichten
+          href: timer-overviews.md
+          items:
+            - name: Informationen zu Timern
+              href: about-timers.md
+            - name: Verwenden von Timern
+              href: using-timers.md
+        - name: Timer-Verweis
+          href: timer-reference.md
+          items:
+            - name: Timer-Funktionen
+              href: timer-functions.md
+              items:
+                - name: Killtimer Memberfunktion
+                  href: /windows/desktop/api/winuser/nf-winuser-killtimer
+                - name: Setcoalescabletimer
+                  href: /windows/desktop/api/winuser/nf-winuser-setcoalescabletimer
+                - name: Ziel
+                  href: /windows/desktop/api/winuser/nf-winuser-settimer
+                - name: Timerproc
+                  href: /windows/desktop/api/winuser/nc-winuser-timerproc
+            - name: Timer-Benachrichtigungen
+              href: timer-notifications.md
+              items:
+                - name: WM_TIMER
+                  href: wm-timer.md
+    - name: Fenstereigenschaften
+      href: window-properties.md
+      items:
+        - name: Fenster Eigenschaften Übersichten
+          href: window-property-overviews.md
+          items:
+            - name: Informationen zu Fenster Eigenschaften
+              href: about-window-properties.md
+            - name: Verwenden von Fenster Eigenschaften
+              href: using-window-properties.md
+        - name: Fenster Eigenschafts Verweis
+          href: window-property-reference.md
+          items:
+            - name: Fenster Eigenschaften Funktionen
+              href: window-property-functions.md
+              items:
+                - name: Enum-Eigenschaften
+                  href: /windows/desktop/api/winuser/nf-winuser-enumpropsa
+                - name: Enumpropsex
+                  href: /windows/desktop/api/winuser/nf-winuser-enumpropsexa
+                - name: Getprop
+                  href: /windows/desktop/api/winuser/nf-winuser-getpropa
+                - name: Neigung
+                  href: /windows/desktop/api/winuser/nc-winuser-propenumproca
+                - name: Neigung
+                  href: /windows/desktop/api/winuser/nc-winuser-propenumprocexa
+                - name: Removeprop
+                  href: /windows/desktop/api/winuser/nf-winuser-removepropa
+                - name: SetProp
+                  href: /windows/desktop/api/winuser/nf-winuser-setpropa
+    - name: Konfiguration
+      href: configuration.md
+      items:
+        - name: Referenz zur Konfiguration
+          href: configuration-reference.md
+          items:
+            - name: Konfigurations Konstanten
+              href: configuration-constants.md
+              items:
+                - name: Kontakt Visualisierung
+                  href: contact-visualization.md
+                - name: Gesten Visualisierung
+                  href: gesture-visualization.md
+                - name: Stift Visualisierung
+                  href: pen-visualization.md
+            - name: GetSystemMetrics
+              href: /windows/desktop/api/winuser/nf-winuser-getsystemmetrics
+            - name: SystemParametersInfo
+              href: /windows/desktop/api/winuser/nf-winuser-systemparametersinfoa
+              items:
+                - name: ANIMATIONINFO
+                  href: /windows/win32/api/winuser/ns-winuser-animationinfo
+                - name: Audiodescription
+                  href: /windows/win32/api/winuser/ns-winuser-audiodescription
+                - name: Minimizedmetriken
+                  href: /windows/win32/api/winuser/ns-winuser-minimizedmetrics
+                - name: Nicht Clientmetriken
+                  href: /windows/win32/api/winuser/ns-winuser-nonclientmetricsa
+                - name: WM_SETTINGCHANGE
+                  href: wm-settingchange.md
+                - name: WM_WININICHANGE
+                  href: wm-wininichange.md
+    - name: Hooks
+      href: hooks.md
+      items:
+        - name: Übersicht über Hook
+          href: about-hooks.md
+        - name: Verwenden von Hooks
+          href: using-hooks.md
+        - name: Hook-Verweis
+          href: hook-reference.md
+          items:
+            - name: Hook-Funktionen
+              href: hook-functions.md
+              items:
+                - name: Callmsgfilter
+                  href: /windows/desktop/api/winuser/nf-winuser-callmsgfiltera
+                - name: CallNextHookEx
+                  href: /windows/desktop/api/winuser/nf-winuser-callnexthookex
+                - name: Callwndproc
+                  href: /previous-versions/windows/desktop/legacy/ms644975(v=vs.85)
+                - name: Callwndretproc
+                  href: /windows/desktop/api/winuser/nc-winuser-hookproc
+                - name: Cbtproc
+                  href: /previous-versions/windows/desktop/legacy/ms644977(v=vs.85)
+                - name: Debug-Prozedur
+                  href: /previous-versions/windows/desktop/legacy/ms644978(v=vs.85)
+                - name: Foregroundidleproc
+                  href: /previous-versions/windows/desktop/legacy/ms644980(v=vs.85)
+                - name: Getmsgproc
+                  href: /previous-versions/windows/desktop/legacy/ms644981(v=vs.85)
+                - name: Journalplaybackproc
+                  href: /previous-versions/windows/desktop/legacy/ms644982(v=vs.85)
+                - name: Journalrecordproc
+                  href: /previous-versions/windows/desktop/legacy/ms644983(v=vs.85)
+                - name: Keyboardproc
+                  href: /previous-versions/windows/desktop/legacy/ms644984(v=vs.85)
+                - name: LowLevelKeyboardProc
+                  href: /previous-versions/windows/desktop/legacy/ms644985(v=vs.85)
+                - name: Lowlevelmousegproc
+                  href: /previous-versions/windows/desktop/legacy/ms644986(v=vs.85)
+                - name: MessageProc
+                  href: /previous-versions/windows/desktop/legacy/ms644987(v=vs.85)
+                - name: Mousegproc
+                  href: /previous-versions/windows/desktop/legacy/ms644988(v=vs.85)
+                - name: SetWindowsHookEx
+                  href: /windows/desktop/api/winuser/nf-winuser-setwindowshookexa
+                - name: Shellproc
+                  href: /previous-versions/windows/desktop/legacy/ms644991(v=vs.85)
+                - name: Sysmsgproc
+                  href: /previous-versions/windows/desktop/legacy/ms644992(v=vs.85)
+                - name: Unhuokwindowshookex
+                  href: /windows/desktop/api/winuser/nf-winuser-unhookwindowshookex
+            - name: Hook-Benachrichtigungen
+              href: hook-notifications.md
+              items:
+                - name: WM_CANCELJOURNAL
+                  href: wm-canceljournal.md
+                - name: WM_QUEUESYNC
+                  href: wm-queuesync.md
+            - name: Hook-Strukturen
+              href: hook-structures.md
+              items:
+                - name: CBT_CREATEWND
+                  href: /windows/win32/api/winuser/ns-winuser-cbt_createwnda
+                - name: Cbtactivatestruct
+                  href: /windows/win32/api/winuser/ns-winuser-cbtactivatestruct
+                - name: Cwpretstruct
+                  href: /windows/win32/api/winuser/ns-winuser-cwpretstruct
+                - name: Cwpstruct
+                  href: /windows/win32/api/winuser/ns-winuser-cwpstruct
+                - name: Debug-Info
+                  href: /windows/win32/api/winuser/ns-winuser-debughookinfo
+                - name: Eventmsg
+                  href: /windows/win32/api/winuser/ns-winuser-eventmsg
+                - name: Kbdlltuokstruct
+                  href: /windows/win32/api/winuser/ns-winuser-kbdllhookstruct
+                - name: Mouselhuokstruct
+                  href: /windows/win32/api/winuser/ns-winuser-mousehookstruct
+                - name: Mouselhuokstructex
+                  href: /windows/win32/api/winuser/ns-winuser-mousehookstructex
+                - name: Msllhuokstruct
+                  href: /windows/win32/api/winuser/ns-winuser-msllhookstruct
+    - name: Multiple Document Interface (MDI)
+      href: multiple-document-interface.md
+      items:
+        - name: MDI-Übersichten
+          href: multiple-document-interface-overviews.md
+          items:
+            - name: Informationen zur Schnittstelle für mehrere Dokumente
+              href: about-the-multiple-document-interface.md
+            - name: Verwenden der Multiple Document-Schnittstelle
+              href: using-the-multiple-document-interface.md
+        - name: MDI-Referenz
+          href: multiple-document-interface-reference.md
+          items:
+            - name: MDI-Funktionen
+              href: multiple-document-interface-functions.md
+              items:
+                - name: '"Anatemdiwindow"'
+                  href: /windows/desktop/api/winuser/nf-winuser-createmdiwindowa
+                - name: '"Debug"'
+                  href: /windows/desktop/api/winuser/nf-winuser-defframeproca
+                - name: Defmdichildproc
+                  href: /windows/desktop/api/winuser/nf-winuser-defmdichildproca
+                - name: Translatemdisysaccel
+                  href: /windows/desktop/api/winuser/nf-winuser-translatemdisysaccel
+            - name: MDI-Meldungen
+              href: multiple-document-interface-messages.md
+              items:
+                - name: WM_MDIACTIVATE
+                  href: wm-mdiactivate.md
+                - name: WM_MDICASCADE
+                  href: wm-mdicascade.md
+                - name: WM_MDICREATE
+                  href: wm-mdicreate.md
+                - name: WM_MDIDESTROY
+                  href: wm-mdidestroy.md
+                - name: WM_MDIGETACTIVE
+                  href: wm-mdigetactive.md
+                - name: WM_MDIICONARRANGE
+                  href: wm-mdiiconarrange.md
+                - name: WM_MDIMAXIMIZE
+                  href: wm-mdimaximize.md
+                - name: WM_MDINEXT
+                  href: wm-mdinext.md
+                - name: WM_MDIREFRESHMENU
+                  href: wm-mdirefreshmenu.md
+                - name: WM_MDIRESTORE
+                  href: wm-mdirestore.md
+                - name: WM_MDISETMENU
+                  href: wm-mdisetmenu.md
+                - name: WM_MDITILE
+                  href: wm-mditile.md
+            - name: MDI-Strukturen
+              href: multiple-document-interface-structures.md
+              items:
+                - name: Mdikreatestruct
+                  href: /windows/win32/api/winuser/ns-winuser-mdicreatestructa?redirectedfrom=MSDN
