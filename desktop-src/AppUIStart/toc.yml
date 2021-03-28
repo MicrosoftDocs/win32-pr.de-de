@@ -1,0 +1,29 @@
+- name: Einstieg in die Entwicklung von Benutzeroberflächen für Windows-Anwendungen
+  href: getting-started-developing-user-interfaces-portal.md
+  items:
+    - name: Übersicht über den Entwicklungsprozess der Benutzeroberfläche
+      href: the-process.md
+    - name: Entwerfen einer Benutzeroberfläche
+      href: designing-a-user-interface.md
+      items:
+        - name: Nutzbarkeit beim Software Entwurf
+          href: usability-in-software-design.md
+        - name: Grundlagen der Benutzeroberfläche
+          href: '-user-interface-principles.md'
+        - name: Folgende Richtlinien zur Benutzeroberfläche
+          href: following-guidelines.md
+        - name: Induktive Benutzeroberfläche
+          href: inductive-user-interface.md
+    - name: Implementieren einer Benutzeroberfläche
+      href: implementing-a-user-interface.md
+      items:
+        - name: Prototyperstellung einer Benutzeroberfläche
+          href: prototyping-a-user-interface.md
+        - name: Technologien für die Benutzeroberfläche
+          href: user-interface-technologies-for-windows-applications.md
+    - name: Testen einer Benutzeroberfläche
+      href: testing-a-user-interface.md
+    - name: 'Sicherheitsüberlegungen: Windows-Benutzeroberfläche'
+      href: sec-ui.md
+    - name: Weitere Ressourcen
+      href: other-resources.md
