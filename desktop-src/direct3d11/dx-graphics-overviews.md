@@ -1,0 +1,34 @@
+---
+title: Programmier Handbuch für Direct3D 11
+description: Das-Programmier Handbuch enthält Informationen zur Verwendung der programmierbaren Microsoft Direct3D 11-Pipeline zum Erstellen von Echtzeit-3D-Grafiken für Spiele sowie für wissenschaftliche und Desktop Anwendungen.
+ms.assetid: 1db500e4-c03d-442a-b429-1599d9591292
+ms.topic: article
+ms.date: 05/31/2018
+ms.openlocfilehash: 5fdb374d19126f46ed484154b363c975ca9ebe17
+ms.sourcegitcommit: 73417d55867c804274a55abe5ca71bcba7006119
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "104316742"
+---
+# <a name="programming-guide-for-direct3d-11"></a><span data-ttu-id="5b736-103">Programmier Handbuch für Direct3D 11</span><span class="sxs-lookup"><span data-stu-id="5b736-103">Programming guide for Direct3D 11</span></span>
+
+<span data-ttu-id="5b736-104">Das-Programmier Handbuch enthält Informationen zur Verwendung der programmierbaren Microsoft Direct3D 11-Pipeline zum Erstellen von Echtzeit-3D-Grafiken für Spiele sowie für wissenschaftliche und Desktop Anwendungen.</span><span class="sxs-lookup"><span data-stu-id="5b736-104">The programming guide contains information about how to use the Microsoft Direct3D 11 programmable pipeline to create realtime 3D graphics for games as well as scientific and desktop applications.</span></span>
+
+## <a name="in-this-section"></a><span data-ttu-id="5b736-105">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="5b736-105">In this section</span></span>
+
+| <span data-ttu-id="5b736-106">Thema</span><span class="sxs-lookup"><span data-stu-id="5b736-106">Topic</span></span> | <span data-ttu-id="5b736-107">BESCHREIBUNG</span><span class="sxs-lookup"><span data-stu-id="5b736-107">Description</span></span> |
+|-|-|
+| [<span data-ttu-id="5b736-108">Geräte</span><span class="sxs-lookup"><span data-stu-id="5b736-108">Devices</span></span>](overviews-direct3d-11-devices.md) | <span data-ttu-id="5b736-109">In diesem Abschnitt werden Direct3D 11 Geräte-und Gerätekontext Objekte beschrieben.</span><span class="sxs-lookup"><span data-stu-id="5b736-109">This section describes Direct3D 11 device and device-context objects.</span></span> |
+| [<span data-ttu-id="5b736-110">Ressourcen</span><span class="sxs-lookup"><span data-stu-id="5b736-110">Resources</span></span>](overviews-direct3d-11-resources.md) | <span data-ttu-id="5b736-111">In diesem Abschnitt werden die Aspekte von Direct3D 11-Ressourcen beschrieben.</span><span class="sxs-lookup"><span data-stu-id="5b736-111">This section describes aspects of Direct3D 11 resources.</span></span> |
+| [<span data-ttu-id="5b736-112">Grafikpipeline</span><span class="sxs-lookup"><span data-stu-id="5b736-112">Graphics pipeline</span></span>](overviews-direct3d-11-graphics-pipeline.md) | <span data-ttu-id="5b736-113">In diesem Abschnitt wird die programmierbare Pipeline Direct3D 11 beschrieben.</span><span class="sxs-lookup"><span data-stu-id="5b736-113">This section describes the Direct3D 11 programmable pipeline.</span></span> |
+| [<span data-ttu-id="5b736-114">Übersicht über Compute-Shader</span><span class="sxs-lookup"><span data-stu-id="5b736-114">Compute shader overview</span></span>](direct3d-11-advanced-stages-compute-shader.md) | <span data-ttu-id="5b736-115">Ein Compute-Shader ist eine programmierbare Shader-Stufe, die Direct3D 11 über die Grafik Programmierung hinaus erweitert.</span><span class="sxs-lookup"><span data-stu-id="5b736-115">A compute shader is a programmable shader stage that expands Direct3D 11 beyond graphics programming.</span></span> <span data-ttu-id="5b736-116">Die COMPUTE-Shader-Technologie wird auch als DirectCompute-Technologie bezeichnet.</span><span class="sxs-lookup"><span data-stu-id="5b736-116">The compute shader technology is also known as the DirectCompute technology.</span></span> |
+| [<span data-ttu-id="5b736-117">Darstellung</span><span class="sxs-lookup"><span data-stu-id="5b736-117">Rendering</span></span>](overviews-direct3d-11-render.md) | <span data-ttu-id="5b736-118">Dieser Abschnitt enthält Informationen zu mehreren Direct3D 11-renderingtechnologien.</span><span class="sxs-lookup"><span data-stu-id="5b736-118">This section contains information about several Direct3D 11 rendering technologies.</span></span> |
+| [<span data-ttu-id="5b736-119">Effekte</span><span class="sxs-lookup"><span data-stu-id="5b736-119">Effects</span></span>](d3d11-graphics-programming-guide-effects.md) | <span data-ttu-id="5b736-120">Ein DirectX-Effekt ist eine Auflistung von Pipeline Zuständen, die durch in [HLSL](/windows/desktop/direct3dhlsl/dx-graphics-hlsl-reference) geschriebene Ausdrücke und eine bestimmte, für das Effect-Framework spezifische Syntax festgelegt ist.</span><span class="sxs-lookup"><span data-stu-id="5b736-120">A DirectX effect is a collection of pipeline state, set by expressions written in [HLSL](/windows/desktop/direct3dhlsl/dx-graphics-hlsl-reference) and some syntax that is specific to the effect framework.</span></span> |
+| [<span data-ttu-id="5b736-121">Migrieren zu Direct3D 11</span><span class="sxs-lookup"><span data-stu-id="5b736-121">Migrating to Direct3D 11</span></span>](d3d11-programming-guide-migrating.md) | <span data-ttu-id="5b736-122">Dieser Abschnitt enthält Informationen für die Migration von einer früheren Version von Direct3D zu Direct3D 11.</span><span class="sxs-lookup"><span data-stu-id="5b736-122">This section provides info for migrating to Direct3D 11 from an earlier version of Direct3D.</span></span> |
+| [<span data-ttu-id="5b736-123">Direct3D-Video Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="5b736-123">Direct3D video interfaces</span></span>](direct3d-video-interfaces.md) | <span data-ttu-id="5b736-124">In diesem Thema werden die Direct3D-Video Schnittstellen aufgelistet, die in Direct3D 9Ex verfügbar sind und unter Windows 7 und höheren Versionen von Windows-Client Betriebssystemen und Windows Server 2008 R2 und höheren Versionen von Windows Server-Betriebssystemen unterstützt werden.</span><span class="sxs-lookup"><span data-stu-id="5b736-124">This topic lists the Direct3D video interfaces that are available in Direct3D 9Ex and that are supported on Windows 7 and later versions of Windows client operating systems and on Windows Server 2008 R2 and later versions of Windows server operating systems.</span></span> |
+
+## <a name="related-topics"></a><span data-ttu-id="5b736-125">Zugehörige Themen</span><span class="sxs-lookup"><span data-stu-id="5b736-125">Related topics</span></span>
+
+* [<span data-ttu-id="5b736-126">Direct3D 11-Grafik</span><span class="sxs-lookup"><span data-stu-id="5b736-126">Direct3D 11 Graphics</span></span>](atoc-dx-graphics-direct3d-11.md)
+* [<span data-ttu-id="5b736-127">Grafik Referenz</span><span class="sxs-lookup"><span data-stu-id="5b736-127">Graphics Reference</span></span>](atoc-d3d11-graphics-reference.md)
