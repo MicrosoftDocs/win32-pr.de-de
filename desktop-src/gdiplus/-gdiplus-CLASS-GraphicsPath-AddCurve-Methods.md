@@ -1,0 +1,45 @@
+---
+description: In diesem Thema werden die AddCurve-Methoden der GraphicsPath-Klasse aufgelistet. Eine umfassende Liste der Methoden für die GraphicsPath-Klasse finden Sie unter GraphicsPath.
+ms.assetid: 81f43f7e-a383-44f7-a3bd-2969d541b616
+title: GraphicsPath. AddCurve-Methode (gdipluspath. h)
+ms.date: 07/02/2019
+ms.topic: reference
+ms.openlocfilehash: 76ef04d0bd1efce00f767e675a64f8ba2ceb8908
+ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/22/2021
+ms.locfileid: "104982868"
+---
+# <a name="graphicspathaddcurve-methods"></a><span data-ttu-id="7cb90-104">GraphicsPath. AddCurve-Methoden</span><span class="sxs-lookup"><span data-stu-id="7cb90-104">GraphicsPath.AddCurve methods</span></span>
+
+<span data-ttu-id="7cb90-105">In diesem Thema werden die AddCurve-Methoden der [**GraphicsPath**](/windows/win32/api/gdipluspath/nl-gdipluspath-graphicspath) -Klasse aufgelistet.</span><span class="sxs-lookup"><span data-stu-id="7cb90-105">This topic lists the AddCurve methods of the [**GraphicsPath**](/windows/win32/api/gdipluspath/nl-gdipluspath-graphicspath) class.</span></span> <span data-ttu-id="7cb90-106">Eine umfassende Liste der Methoden für die **GraphicsPath** -Klasse finden Sie unter [**GraphicsPath**](/windows/win32/api/gdipluspath/nl-gdipluspath-graphicspath).</span><span class="sxs-lookup"><span data-stu-id="7cb90-106">For a complete list of methods for the **GraphicsPath** class, see [**GraphicsPath**](/windows/win32/api/gdipluspath/nl-gdipluspath-graphicspath).</span></span>
+
+### <a name="overload-list"></a><span data-ttu-id="7cb90-107">Überladeliste</span><span class="sxs-lookup"><span data-stu-id="7cb90-107">Overload list</span></span>
+
+
+
+| <span data-ttu-id="7cb90-108">Methode</span><span class="sxs-lookup"><span data-stu-id="7cb90-108">Method</span></span>                                                                                                                                              | <span data-ttu-id="7cb90-109">BESCHREIBUNG</span><span class="sxs-lookup"><span data-stu-id="7cb90-109">Description</span></span>                                                                                                                                                                                                             |
+|:----------------------------------------------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| <span data-ttu-id="7cb90-110">[**AddCurve (Punkt \* , int)**](/windows/win32/api/gdipluspath/nf-gdipluspath-graphicspath-addcurve(inconstpoint_inint))</span><span class="sxs-lookup"><span data-stu-id="7cb90-110">[**AddCurve(Point\*,INT)**](/windows/win32/api/gdipluspath/nf-gdipluspath-graphicspath-addcurve(inconstpoint_inint))</span></span>                                                       | <span data-ttu-id="7cb90-111">Die [**GraphicsPath:: AddCurve**](/windows/win32/api/gdipluspath/nf-gdipluspath-graphicspath-addcurve(inconstpoint_inint)) -Methode fügt der aktuellen Abbildung dieses Pfades einen kardinalspline hinzu.</span><span class="sxs-lookup"><span data-stu-id="7cb90-111">The [**GraphicsPath::AddCurve**](/windows/win32/api/gdipluspath/nf-gdipluspath-graphicspath-addcurve(inconstpoint_inint)) method adds a cardinal spline to the current figure of this path.</span></span><br/>                                         |
+| <span data-ttu-id="7cb90-112">[**AddCurve (PointF \* , int)**](/previous-versions//ms535611(v=vs.85))</span><span class="sxs-lookup"><span data-stu-id="7cb90-112">[**AddCurve(PointF\*,INT)**](/previous-versions//ms535611(v=vs.85))</span></span>                                                     | <span data-ttu-id="7cb90-113">Die [**GraphicsPath:: AddCurve**](/previous-versions//ms535611(v=vs.85)) -Methode fügt der aktuellen Abbildung dieses Pfades einen kardinalspline hinzu.</span><span class="sxs-lookup"><span data-stu-id="7cb90-113">The [**GraphicsPath::AddCurve**](/previous-versions//ms535611(v=vs.85)) method adds a cardinal spline to the current figure of this path.</span></span><br/>                                        |
+| <span data-ttu-id="7cb90-114">[**AddCurve (Point \* , int, Real)**](/windows/win32/api/gdipluspath/nf-gdipluspath-graphicspath-addcurve(inconstpoint_inint_inreal))</span><span class="sxs-lookup"><span data-stu-id="7cb90-114">[**AddCurve(Point\*,INT,REAL)**](/windows/win32/api/gdipluspath/nf-gdipluspath-graphicspath-addcurve(inconstpoint_inint_inreal))</span></span>                                     | <span data-ttu-id="7cb90-115">Die [**GraphicsPath:: AddCurve**](/windows/win32/api/gdipluspath/nf-gdipluspath-graphicspath-addcurve(inconstpoint_inint_inreal)) -Methode fügt der aktuellen Abbildung dieses Pfades einen kardinalspline hinzu.</span><span class="sxs-lookup"><span data-stu-id="7cb90-115">The [**GraphicsPath::AddCurve**](/windows/win32/api/gdipluspath/nf-gdipluspath-graphicspath-addcurve(inconstpoint_inint_inreal)) method adds a cardinal spline to the current figure of this path.</span></span><br/>                            |
+| <span data-ttu-id="7cb90-116">[**AddCurve (PointF \* , int, Real)**](/windows/win32/api/gdipluspath/nf-gdipluspath-graphicspath-addcurve(inconstpointf_inint_inreal))</span><span class="sxs-lookup"><span data-stu-id="7cb90-116">[**AddCurve(PointF\*,INT,REAL)**](/windows/win32/api/gdipluspath/nf-gdipluspath-graphicspath-addcurve(inconstpointf_inint_inreal))</span></span>                                   | <span data-ttu-id="7cb90-117">Die [**GraphicsPath:: AddCurve**](/windows/win32/api/gdipluspath/nf-gdipluspath-graphicspath-addcurve(inconstpointf_inint_inreal)) -Methode fügt der aktuellen Abbildung dieses Pfades einen kardinalspline hinzu.</span><span class="sxs-lookup"><span data-stu-id="7cb90-117">The [**GraphicsPath::AddCurve**](/windows/win32/api/gdipluspath/nf-gdipluspath-graphicspath-addcurve(inconstpointf_inint_inreal)) method adds a cardinal spline to the current figure of this path.</span></span><br/>                           |
+| <span data-ttu-id="7cb90-118">[**AddCurve (Point \* , int, int, int, Real)**](/windows/win32/api/gdipluspath/nf-gdipluspath-graphicspath-addcurve(inconstpoint_inint_inint_inint_inreal))</span><span class="sxs-lookup"><span data-stu-id="7cb90-118">[**AddCurve(Point\*,INT,INT,INT,REAL)**](/windows/win32/api/gdipluspath/nf-gdipluspath-graphicspath-addcurve(inconstpoint_inint_inint_inint_inreal))</span></span>  | <span data-ttu-id="7cb90-119">Die [**GraphicsPath:: AddCurve**](/windows/win32/api/gdipluspath/nf-gdipluspath-graphicspath-addcurve(inconstpoint_inint_inint_inint_inreal)) -Methode fügt der aktuellen Abbildung dieses Pfades einen kardinalspline hinzu.</span><span class="sxs-lookup"><span data-stu-id="7cb90-119">The [**GraphicsPath::AddCurve**](/windows/win32/api/gdipluspath/nf-gdipluspath-graphicspath-addcurve(inconstpoint_inint_inint_inint_inreal)) method adds a cardinal spline to the current figure of this path.</span></span><br/> |
+| <span data-ttu-id="7cb90-120">[**AddCurve (PointF \* , int, int, int, Real)**](/windows/win32/api/gdipluspath/nf-gdipluspath-graphicspath-addcurve(inconstpointf_inint_inint_inint_inreal))</span><span class="sxs-lookup"><span data-stu-id="7cb90-120">[**AddCurve(PointF\*,INT,INT,INT,REAL)**](/windows/win32/api/gdipluspath/nf-gdipluspath-graphicspath-addcurve(inconstpointf_inint_inint_inint_inreal))</span></span> | <span data-ttu-id="7cb90-121">Die [**GraphicsPath:: AddCurve**](/windows/win32/api/gdipluspath/nf-gdipluspath-graphicspath-addcurve(inconstpointf_inint_inint_inint_inreal)) -Methode fügt der aktuellen Abbildung dieses Pfades einen kardinalspline hinzu.</span><span class="sxs-lookup"><span data-stu-id="7cb90-121">The [**GraphicsPath::AddCurve**](/windows/win32/api/gdipluspath/nf-gdipluspath-graphicspath-addcurve(inconstpointf_inint_inint_inint_inreal)) method adds a cardinal spline to the current figure of this path.</span></span><br/> |
+
+
+
+## <a name="requirements"></a><span data-ttu-id="7cb90-122">Requirements (Anforderungen)</span><span class="sxs-lookup"><span data-stu-id="7cb90-122">Requirements</span></span>
+
+
+
+| <span data-ttu-id="7cb90-123">Anforderung</span><span class="sxs-lookup"><span data-stu-id="7cb90-123">Requirement</span></span> | <span data-ttu-id="7cb90-124">Wert</span><span class="sxs-lookup"><span data-stu-id="7cb90-124">Value</span></span> |
+|-------------------|------------------------------------------------------------------------------------------|
+| <span data-ttu-id="7cb90-125">Header</span><span class="sxs-lookup"><span data-stu-id="7cb90-125">Header</span></span><br/> | <dl> <span data-ttu-id="7cb90-126"><dt>Gdipluspath. h</dt></span><span class="sxs-lookup"><span data-stu-id="7cb90-126"><dt>Gdipluspath.h</dt></span></span> </dl> |
+
+
+
+ 
+
+ 
