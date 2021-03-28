@@ -1,0 +1,38 @@
+- name: Registrierung für die Verwaltung mobiler Geräte
+  href: mobile-device-management-registration-portal.md
+  items:
+    - name: MDM-Registrierungs Referenz
+      href: mdm-registration-reference.md
+      items:
+        - name: MDM-Registrierungsfehler Werte
+          href: mdm-registration-constants.md
+        - name: MDM-Registrierungsfunktionen
+          href: mdm-registration-functions.md
+          items:
+            - name: Discovermanagementservice
+              href: /windows/desktop/api/MDMRegistration/nf-mdmregistration-discovermanagementservice
+            - name: Discovermanagementserviceex
+              href: /windows/desktop/api/MDMRegistration/nf-mdmregistration-discovermanagementserviceex
+            - name: Getdeviceregistrationinfo
+              href: /windows/desktop/api/MDMRegistration/nf-mdmregistration-getdeviceregistrationinfo
+            - name: Getmanagementapphyperlink
+              href: /windows/desktop/api/MDMRegistration/nf-mdmregistration-getmanagementapphyperlink
+            - name: Isdeviceregisteredwithmanagement
+              href: /windows/desktop/api/MDMRegistration/nf-mdmregistration-isdeviceregisteredwithmanagement
+            - name: Ismanagementregistrationallowed
+              href: /windows/desktop/api/MDMRegistration/nf-mdmregistration-ismanagementregistrationallowed
+            - name: Registerdevicewithmanagement
+              href: /windows/desktop/api/MDMRegistration/nf-mdmregistration-registerdevicewithmanagement
+            - name: Registerdevicewithmanagementusingaadanmeldeinformationen
+              href: /windows/desktop/api/MDMRegistration/nf-mdmregistration-registerdevicewithmanagementusingaadcredentials
+            - name: Setmanagedexternally
+              href: /windows/desktop/api/MDMRegistration/nf-mdmregistration-setmanagedexternally
+            - name: Unregisterdevicewithmanagement
+              href: /windows/desktop/api/MDMRegistration/nf-mdmregistration-unregisterdevicewithmanagement
+        - name: MDM-Registrierungs Strukturen
+          href: mdm-registration-structures.md
+          items:
+            - name: MANAGEMENT_SERVICE_INFO
+              href: /windows/win32/api/MDMRegistration/ns-mdmregistration-management_service_info
+            - name: REGISTRATION_INFORMATION_CLASS
+              href: /windows/win32/api/MDMRegistration/ne-mdmregistration-registration_information_class
