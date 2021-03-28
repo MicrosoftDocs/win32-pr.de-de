@@ -1,0 +1,188 @@
+---
+description: Führt ein Verb für eine Auflistung von folderItem-Objekten aus. Bei dieser Methode handelt es sich um eine Erweiterung der invokeverb-Methode, die eine zusätzliche Steuerung des Vorgangs über einen Satz von Flags ermöglicht.
+ms.assetid: 2c02985d-8877-4a02-a232-6aeb1716928c
+title: FolderItems2. invokeverbex-Methode (Shldisp. h)
+ms.topic: reference
+ms.date: 05/31/2018
+topic_type:
+- APIRef
+- kbSyntax
+api_name:
+- FolderItems2.InvokeVerbEx
+api_type:
+- COM
+api_location:
+- Shell32.dll
+ms.openlocfilehash: aa9b986b5cb76f14cc950f522e1e289224c17b58
+ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "104977016"
+---
+# <a name="folderitems2invokeverbex-method"></a>FolderItems2. invokeverbex-Methode
+
+Führt ein Verb für eine Auflistung von [**folderItem**](folderitem.md) -Objekten aus. Bei dieser Methode handelt es sich um eine Erweiterung der [**invokeverb**](folderitem-invokeverb.md) -Methode, die eine zusätzliche Steuerung des Vorgangs über einen Satz von Flags ermöglicht.
+
+## <a name="syntax"></a>Syntax
+
+
+```JScript
+iRetVal = FolderItems2.InvokeVerbEx(
+  [ vVerb ],
+  [ vArgs ]
+)
+```
+
+
+
+## <a name="parameters"></a>Parameter
+
+<dl> <dt>
+
+*vverb* \[ in, optional\]
+</dt> <dd>
+
+Typ: **Variant**
+
+Eine **Variante** mit der Verb Zeichenfolge, die dem auszuführenden Befehl entspricht. Wenn kein Verb angegeben ist, wird das Standardverb ausgeführt.
+
+</dd> <dt>
+
+*vArgs* \[ in, optional\]
+</dt> <dd>
+
+Typ: **Variant**
+
+Eine **Variante** , die aus einer Zeichenfolge mit einem oder mehreren Argumenten für den von *vverb* angegebenen Befehl besteht. Das Format dieser Zeichenfolge hängt von dem jeweiligen Verb ab.
+
+</dd> </dl>
+
+## <a name="remarks"></a>Bemerkungen
+
+Ein Verb ist eine Zeichenfolge, die verwendet wird, um eine bestimmte Aktion anzugeben, die einem Element oder einer Auflistung von Elementen zugeordnet ist. Wenn Sie ein Verb aufrufen, wird in der Regel eine verwandte Anwendung gestartet. Wenn Sie z. b. das **geöffnete** Verb in einer txt-Datei aufrufen, wird die Datei normalerweise mit einem Text-Editor geöffnet, in der Regel Microsoft Notepad. Weitere Erläuterungen zu Verben finden Sie unter [Starten von Anwendungen](launch.md).
+
+## <a name="examples"></a>Beispiele
+
+Im folgenden Beispiel wird **invokeverbex** verwendet, um das Standardverb ("Öffnen") auf **Arbeitsplatz** aufzurufen. Die richtige Verwendung wird für JScript, VBScript und Visual Basic angezeigt.
+
+JScript
+
+
+```JScript
+<script language="JScript">
+    function fnFolderItems2InvokeVerbExJ()
+    {
+        var objShell  = new ActiveXObject("shell.application");
+        var objFolder;
+        var ssfDRIVES = 17;
+        
+        objFolder = objShell.NameSpace(ssfDRIVES);
+        if (objFolder != null)
+        {
+            var objFolderItems2;
+            
+            objFolderItems2 = objFolder.Items();
+            if (objFolderItems2 != null)
+            {
+                objFolderItems2.InvokeVerbEx();
+            }
+        }
+    }
+</script>
+```
+
+
+
+VBScript
+
+
+```VB
+<script language="VBScript">
+    function fnFolderItems2InvokeVerbExVB()
+        dim objShell
+        
+        set objShell = CreateObject("shell.application")
+        if (not objShell is nothing) then
+            dim objFolder
+            dim ssfDRIVES
+                
+            ssfWINDOWS = 17
+            set objFolder = objShell.NameSpace(ssfWINDOWS)
+            if (not objFolder is nothing) then
+                dim objFolderItems2
+                        
+                set objFolderItems2 = objFolder.Items()
+                if (not objFolderItems2 is nothing) then
+                    objFolderItems2.InvokeVerbEx
+                end if
+                set objFolderItems2 = nothing
+            end if
+            set objFolder = nothing
+        end if
+        set objShell = nothing
+    end function
+</script>
+```
+
+
+
+Visual Basic:
+
+
+```VB
+Private Sub fnFolderItems2InvokeVerbExVB()
+    Dim objShell      As Shell
+    Dim objFolder     As Folder2
+    Dim ssfDRIVES     As Long
+    
+    ssfDRIVES = 17
+    Set objShell = New Shell
+    Set objFolder = objShell.NameSpace(ssfDRIVES)
+        If (Not objFolder Is Nothing) Then
+            Dim objFolderItems2 As FolderItems
+            
+            Set objFolderItems2 = objFolder.Items
+                If (Not objFolderItems2 Is Nothing) Then
+                    objFolderItems2.InvokeVerbEx
+                End If
+            Set objFolderItems2 = Nothing
+        End If
+    Set objFolder = Nothing
+    Set objShell = Nothing
+End Sub
+```
+
+
+
+## <a name="requirements"></a>Requirements (Anforderungen)
+
+
+
+| Anforderung | Wert |
+|-------------------------------------|---------------------------------------------------------------------------------------------------------------|
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, Windows XP \[ Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                          |
+| Header<br/>                   | <dl> <dt>Shldisp. h</dt> </dl>                          |
+| IDL<br/>                      | <dl> <dt>Shldisp. idl</dt> </dl>                        |
+| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 5,0 oder höher)</dt> </dl> |
+
+
+
+## <a name="see-also"></a>Weitere Informationen
+
+<dl> <dt>
+
+[**FolderItems2**](folderitems2-object.md)
+</dt> <dt>
+
+[**Invokeverb**](folderitem-invokeverb.md)
+</dt> </dl>
+
+ 
+
+ 
+
+
+
+
