@@ -1,0 +1,81 @@
+---
+description: Sie können festlegen, dass Ihre Anwendung den gesamten Inhalt des Client Bereichs neu zeichnet, wenn die Größe des Fensters geändert wird, indem Sie die \_ Stile CS hredraw und CS \_ vredraw für die Fenster Klasse festlegen.
+ms.assetid: ed68b85e-8382-4450-b07d-0422b44dc2e3
+title: Neuzeichnen des gesamten Client Bereichs
+ms.topic: article
+ms.date: 05/31/2018
+ms.openlocfilehash: d67640d1b464173755029bef1d0feb91f215cda6
+ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "104993878"
+---
+# <a name="redrawing-the-entire-client-area"></a>Neuzeichnen des gesamten Client Bereichs
+
+Sie können festlegen, dass Ihre Anwendung den gesamten Inhalt des Client Bereichs neu zeichnet, wenn die Größe des Fensters geändert wird, indem Sie die \_ Stile CS hredraw und CS \_ vredraw für die Fenster Klasse festlegen. Anwendungen, die die Größe der Zeichnung basierend auf der Größe des Fensters anpassen, verwenden diese Stile, um sicherzustellen, dass Sie beim Zeichnen mit einem vollständig leeren Client Bereich beginnen.
+
+Im folgenden Beispiel zeichnet die Fenster Prozedur einen fünf-Sterne-Stern, der sauber in den Client Bereich passt. Es verwendet einen gemeinsamen Gerätekontext und muss den Zuordnungs Modus und die Blöcke "Fenster" und "Viewport" jedes Mal festlegen, wenn die WM-Zeichnungs Nachricht verarbeitet wird. [**\_**](wm-paint.md)
+
+
+```C++
+LRESULT APIENTRY WndProc(HWMD hwnd, UINT message, WPARAM wParam, LPARAM lParam) 
+{ 
+    PAINTSTRUCT ps; 
+    HDC hdc; 
+    RECT rc; 
+    POINT aptStar[6] = {50,2, 2,98, 98,33, 2,33, 98,98, 50,2}; 
+ 
+    . 
+    . 
+    . 
+ 
+        case WM_PAINT: 
+            hdc = BeginPaint(hwnd, &ps); 
+            GetClientRect(hwnd, &rc); 
+            SetMapMode(hdc, MM_ANISOTROPIC); 
+            SetWindowExtEx(hdc, 100, 100, NULL); 
+            SetViewportExtEx(hdc, rc.right, rc.bottom, NULL); 
+            Polyline(hdc, aptStar, 6); 
+            EndPaint(hwnd, &ps); 
+            return 0L; 
+ 
+        . 
+        . 
+        . 
+} 
+ 
+ 
+int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow) 
+{ 
+    WNDCLASS wc; 
+ 
+    . 
+    . 
+    . 
+ 
+        wc.style = CS_HREDRAW | CS_VREDRAW; 
+        wc.lpfnWndProc = (WNDPROC) WndProc; 
+ 
+    . 
+    . 
+    . 
+ 
+        RegisterClass(&wc); 
+ 
+    . 
+    . 
+    . 
+ 
+    return msg.wParam; 
+} 
+```
+
+
+
+ 
+
+ 
+
+
+
