@@ -1,0 +1,300 @@
+- name: Dialogfelder
+  href: dialog-boxes.md
+  items:
+    - name: Dialog Feld Übersichten
+      href: dialog-box-overviews.md
+      items:
+        - name: Dialogfelder "Info"
+          href: about-dialog-boxes.md
+        - name: Erwägungen zur Dialogfeldprogrammierung
+          href: dlgbox-programming-considerations.md
+        - name: Verwenden von Dialog Feldern
+          href: using-dialog-boxes.md
+    - name: Dialog Feldverweis
+      href: dialog-box-reference.md
+      items:
+        - name: Dialog Feld Funktionen
+          href: dialog-box-functions.md
+          items:
+            - name: '"Kreatedialog"'
+              href: /windows/desktop/api/Winuser/nf-winuser-createdialoga
+            - name: '"Kreatedialogindirect"'
+              href: /windows/desktop/api/Winuser/nf-winuser-createdialogindirecta
+            - name: '"Kreatedialogindirectparam"'
+              href: /windows/desktop/api/Winuser/nf-winuser-createdialogindirectparama
+            - name: '"Kreatedialogparam"'
+              href: /windows/desktop/api/Winuser/nf-winuser-createdialogparama
+            - name: Defdlgproc
+              href: /windows/desktop/api/Winuser/nf-winuser-defdlgprocw
+            - name: Dialogbox
+              href: /windows/desktop/api/Winuser/nf-winuser-dialogboxa
+            - name: Dialogboxindirekte
+              href: /windows/desktop/api/Winuser/nf-winuser-dialogboxindirecta
+            - name: Dialogboxderedereparam
+              href: /windows/desktop/api/Winuser/nf-winuser-dialogboxindirectparama
+            - name: DialogBoxParam
+              href: /windows/desktop/api/Winuser/nf-winuser-dialogboxparama
+            - name: DlgProc
+              href: /windows/desktop/api/winuser/nc-winuser-dlgproc
+            - name: EndDialog
+              href: /windows/desktop/api/Winuser/nf-winuser-enddialog
+            - name: GetDialogBaseUnits
+              href: /windows/desktop/api/Winuser/nf-winuser-getdialogbaseunits
+            - name: Getdlgctrlid
+              href: /windows/desktop/api/Winuser/nf-winuser-getdlgctrlid
+            - name: GetDlgItem
+              href: /windows/desktop/api/Winuser/nf-winuser-getdlgitem
+            - name: Getdlgitemint
+              href: /windows/desktop/api/Winuser/nf-winuser-getdlgitemint
+            - name: Getdlgitemtext
+              href: /windows/desktop/api/Winuser/nf-winuser-getdlgitemtexta
+            - name: Getnextdlggroupitem
+              href: /windows/desktop/api/Winuser/nf-winuser-getnextdlggroupitem
+            - name: Getnextdlgtabitem
+              href: /windows/desktop/api/Winuser/nf-winuser-getnextdlgtabitem
+            - name: IsDialogMessage
+              href: /windows/desktop/api/Winuser/nf-winuser-isdialogmessagea
+            - name: Mapdialogrect
+              href: /windows/desktop/api/Winuser/nf-winuser-mapdialogrect
+            - name: MB_GetString
+              href: mb-getstring.md
+            - name: MessageBox
+              href: /windows/desktop/api/Winuser/nf-winuser-messagebox
+            - name: Messageboxex
+              href: /windows/desktop/api/Winuser/nf-winuser-messageboxexa
+            - name: Messageboxindirekte
+              href: /windows/desktop/api/Winuser/nf-winuser-messageboxindirecta
+            - name: SendDlgItemMess age
+              href: /windows/desktop/api/Winuser/nf-winuser-senddlgitemmessagea
+            - name: Setdlgitemint
+              href: /windows/desktop/api/Winuser/nf-winuser-setdlgitemint
+            - name: SetDlgItemText
+              href: /windows/desktop/api/Winuser/nf-winuser-setdlgitemtexta
+        - name: Dialog Feld Meldungen
+          href: dialog-box-messages.md
+          items:
+            - name: DM_GETDEFID
+              href: dm-getdefid.md
+            - name: DM_REPOSITION
+              href: dm-reposition.md
+            - name: DM_SETDEFID
+              href: dm-setdefid.md
+        - name: Dialog Feld Benachrichtigungen
+          href: dialog-box-notifications.md
+          items:
+            - name: WM_CTLCOLORDLG
+              href: wm-ctlcolordlg.md
+            - name: WM_ENTERIDLE
+              href: wm-enteridle.md
+            - name: WM_GETDLGCODE
+              href: wm-getdlgcode.md
+            - name: WM_INITDIALOG
+              href: wm-initdialog.md
+            - name: WM_NEXTDLGCTL
+              href: wm-nextdlgctl.md
+        - name: Dialog Feld Strukturen
+          href: dialog-box-structures.md
+          items:
+            - name: DLGITEMTEMPLATE
+              href: /windows/desktop/api/Winuser/ns-winuser-dlgitemtemplate
+            - name: Dlgitemtemplateex
+              href: dlgitemtemplateex.md
+            - name: DLGTEMPLATE
+              href: /windows/desktop/api/Winuser/ns-winuser-dlgtemplate
+            - name: Dlgtemplateex
+              href: dlgtemplateex.md
+            - name: Msgboxparameams
+              href: /windows/win32/api/Winuser/ns-winuser-msgboxparamsa
+        - name: Dialog Feld Stile
+          href: dialog-box-styles.md
+    - name: Allgemeine Dialog Feld Bibliothek
+      href: common-dialog-box-library.md
+      items:
+        - name: Allgemeine Dialog Feld-Bibliotheks Übersichten
+          href: common-dialog-box-library-overviews.md
+          items:
+            - name: Allgemeine Dialog Feld Typen
+              href: dialog-box-types.md
+              items:
+                - name: Farben (Dialogfeld)
+                  href: color-dialog-box.md
+                - name: Dialog Felder suchen und ersetzen
+                  href: find-and-replace-dialog-boxes.md
+                - name: Dialogfeld 'Schriftart'
+                  href: font-dialog-box.md
+                - name: Dialog Felder "Öffnen" und "Speichern unter"
+                  href: open-and-save-as-dialog-boxes.md
+                - name: Seite einrichten (Dialogfeld)
+                  href: page-setup-dialog-box.md
+                - name: Drucken (Dialogfeld)
+                  href: print-dialog-box.md
+                - name: Eigenschaften Blatt "Drucken"
+                  href: print-property-sheet.md
+            - name: Allgemeine Initialisierungs Flags für Dialog Felder
+              href: common-dialog-box-initialization-flags.md
+            - name: Anpassen von allgemeinen Dialog Feldern
+              href: customizing-common-dialog-boxes.md
+            - name: Verwenden von allgemeinen Dialog Feldern
+              href: using-common-dialog-boxes.md
+        - name: Allgemeine Dialog Feld Referenz
+          href: common-dialog-box-reference.md
+          items:
+            - name: Allgemeine Dialog Feld Funktionen
+              href: common-dialog-box-functions.md
+              items:
+                - name: Cchookproc
+                  href: /windows/desktop/api/commdlg/nc-commdlg-lpcchookproc
+                - name: Lpcfhuokproc
+                  href: /windows/desktop/api/commdlg/nc-commdlg-lpcfhookproc
+                - name: ChooseColor
+                  href: /previous-versions/windows/desktop/legacy/ms646912(v=vs.85)
+                - name: Auswahl Schriftart
+                  href: /windows/win32/api/Commdlg/ns-commdlg-choosefonta
+                - name: Kommdlgextendecoderror
+                  href: /windows/desktop/api/Commdlg/nf-commdlg-commdlgextendederror
+                - name: FindText
+                  href: /windows/desktop/api/Commdlg/nf-commdlg-findtexta
+                - name: Lpfrhuokproc
+                  href: /windows/desktop/api/commdlg/nc-commdlg-lpfrhookproc
+                - name: GetFileTitle
+                  href: /windows/desktop/api/Commdlg/nf-commdlg-getfiletitlea
+                - name: GetOpenFileName
+                  href: /windows/desktop/api/Commdlg/nf-commdlg-getopenfilenamea
+                - name: GetSaveFileName
+                  href: /windows/desktop/api/Commdlg/nf-commdlg-getsavefilenamea
+                - name: Lpofnhuokproc
+                  href: /windows/desktop/api/commdlg/nc-commdlg-lpofnhookproc
+                - name: Lppagepainthook
+                  href: /windows/desktop/api/commdlg/nc-commdlg-lppagepainthook
+                - name: Pagesetupdlg
+                  href: /previous-versions/windows/desktop/legacy/ms646937(v=vs.85)
+                - name: Lppagesetuphook
+                  href: /windows/desktop/api/commdlg/nc-commdlg-lppagesetuphook
+                - name: PRINTDLG
+                  href: /previous-versions/windows/desktop/legacy/ms646940(v=vs.85)
+                - name: Printdlgex
+                  href: /previous-versions/windows/desktop/legacy/ms646942(v=vs.85)
+                - name: Lpprinthookproc
+                  href: /windows/desktop/api/commdlg/nc-commdlg-lpprinthookproc
+                - name: ReplaceText
+                  href: /windows/desktop/api/Commdlg/nf-commdlg-replacetexta
+                - name: Lpsetuphookproc
+                  href: /windows/desktop/api/commdlg/nc-commdlg-lpsetuphookproc
+            - name: Allgemeine Dialog Feld Schnittstellen
+              href: common-dialog-box-interfaces.md
+              items:
+                - name: Iprintdialogcallback
+                  href: /windows/desktop/api/commdlg/nn-commdlg-iprintdialogcallback
+                  items:
+                    - name: Lenker Nachricht
+                      href: /windows/desktop/api/commdlg/nf-commdlg-iprintdialogcallback-handlemessage
+                    - name: Initdone
+                      href: /windows/desktop/api/commdlg/nf-commdlg-iprintdialogcallback-initdone
+                    - name: SelectionChange
+                      href: /windows/desktop/api/commdlg/nf-commdlg-iprintdialogcallback-selectionchange
+                - name: Iprintdialogservices
+                  href: /windows/desktop/api/commdlg/nn-commdlg-iprintdialogservices
+                  items:
+                    - name: GetCurrentDevMode
+                      href: /windows/desktop/api/Commdlg/nf-commdlg-iprintdialogservices-getcurrentdevmode
+                    - name: Getcurrentportname
+                      href: /windows/desktop/api/Commdlg/nf-commdlg-iprintdialogservices-getcurrentportname
+                    - name: Getcurrentprintername
+                      href: /windows/desktop/api/Commdlg/nf-commdlg-iprintdialogservices-getcurrentprintername
+            - name: Allgemeine Dialog Feld Meldungen
+              href: common-dialog-box-messages.md
+              items:
+                - name: CDM_GETFILEPATH
+                  href: cdm-getfilepath.md
+                - name: CDM_GETFOLDERIDLIST
+                  href: cdm-getfolderidlist.md
+                - name: CDM_GETFOLDERPATH
+                  href: cdm-getfolderpath.md
+                - name: CDM_GETSPEC
+                  href: cdm-getspec.md
+                - name: CDM_HIDECONTROL
+                  href: cdm-hidecontrol.md
+                - name: CDM_SETCONTROLTEXT
+                  href: cdm-setcontroltext.md
+                - name: CDM_SETDEFEXT
+                  href: cdm-setdefext.md
+                - name: '"Sstrgbstring"'
+                  href: setrgbstring.md
+                - name: WM_CHOOSEFONT_GETLOGFONT
+                  href: wm-choosefont-getlogfont.md
+                - name: WM_CHOOSEFONT_SETFLAGS
+                  href: wm-choosefont-setflags.md
+                - name: WM_CHOOSEFONT_SETLOGFONT
+                  href: wm-choosefont-setlogfont.md
+            - name: Allgemeine Dialog Feld Benachrichtigungen
+              href: common-dialog-box-notifications.md
+              items:
+                - name: CDN_FILEOK
+                  href: cdn-fileok.md
+                - name: CDN_FOLDERCHANGE
+                  href: cdn-folderchange.md
+                - name: CDN_HELP
+                  href: cdn-help.md
+                - name: CDN_INCLUDEITEM
+                  href: cdn-includeitem.md
+                - name: CDN_INITDONE
+                  href: cdn-initdone.md
+                - name: CDN_SELCHANGE
+                  href: cdn-selchange.md
+                - name: CDN_SHAREVIOLATION
+                  href: cdn-shareviolation.md
+                - name: CDN_TYPECHANGE
+                  href: cdn-typechange.md
+                - name: Colorokstring
+                  href: colorokstring.md
+                - name: Fileokstring
+                  href: fileokstring.md
+                - name: Findmsgstring
+                  href: findmsgstring.md
+                - name: Helpmsgstring
+                  href: helpmsgstring.md
+                - name: Lbselchstring
+                  href: lbselchstring.md
+                - name: Sharevistring
+                  href: sharevistring.md
+                - name: WM_PSD_ENVSTAMPRECT
+                  href: wm-psd-envstamprect.md
+                - name: WM_PSD_FULLPAGERECT
+                  href: wm-psd-fullpagerect.md
+                - name: WM_PSD_GREEKTEXTRECT
+                  href: wm-psd-greektextrect.md
+                - name: WM_PSD_MARGINRECT
+                  href: wm-psd-marginrect.md
+                - name: WM_PSD_MINMARGINRECT
+                  href: wm-psd-minmarginrect.md
+                - name: WM_PSD_PAGESETUPDLG
+                  href: wm-psd-pagesetupdlg.md
+                - name: WM_PSD_YAFULLPAGERECT
+                  href: wm-psd-yafullpagerect.md
+            - name: Allgemeine Dialog Feld Strukturen
+              href: common-dialog-box-structures.md
+              items:
+                - name: CHOOSECOLOR
+                  href: /windows/win32/api/Commdlg/ns-commdlg-choosecolora-r1
+                - name: Auswahl Schriftart
+                  href: /windows/win32/api/Commdlg/ns-commdlg-choosefonta
+                - name: DEVNAMES
+                  href: /windows/win32/api/Commdlg/ns-commdlg-devnames
+                - name: FindReplace
+                  href: /windows/win32/api/Commdlg/ns-commdlg-findreplacea
+                - name: Ofnotify
+                  href: /windows/win32/api/Commdlg/ns-commdlg-ofnotifya
+                - name: Ofnotifyex
+                  href: /windows/win32/api/Commdlg/ns-commdlg-ofnotifyexa
+                - name: OpenFileName
+                  href: /windows/win32/api/Commdlg/ns-commdlg-openfilenamea
+                - name: OPENFILENAME_NT4
+                  href: /windows/win32/api/Commdlg/ns-commdlg-openfilename_nt4a
+                - name: Pagesetupdlg
+                  href: /windows/desktop/api/Commdlg/ns-commdlg-pagesetupdlga
+                - name: PRINTDLG
+                  href: /windows/desktop/api/Commdlg/ns-commdlg-printdlga
+                - name: Printdlgex
+                  href: /windows/desktop/api/Commdlg/ns-commdlg-printdlgexa
+                - name: PRINTPAGERANGE
+                  href: /windows/win32/api/Commdlg/ns-commdlg-printpagerange

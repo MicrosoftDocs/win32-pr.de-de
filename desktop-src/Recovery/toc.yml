@@ -1,0 +1,34 @@
+- name: Anwendungswiederherstellung und Neustart
+  href: application-recovery-and-restart-portal.md
+  items:
+    - name: Verwenden von Anwendungs Wiederherstellung und Neustart
+      href: using-application-recovery-and-restart.md
+      items:
+        - name: Registrieren für die Anwendungs Wiederherstellung
+          href: registering-for-application-recovery.md
+        - name: Registrieren für Anwendungs Neustart
+          href: registering-for-application-restart.md
+    - name: Anwendungs Wiederherstellung und Neustart Referenz
+      href: application-recovery-and-restart-reference.md
+      items:
+        - name: Funktionen für die Anwendungs Wiederherstellung und Neustart
+          href: application-recovery-and-restart-functions.md
+          items:
+            - name: Applicationwiederherstellungsrückruf
+              href: /previous-versions/windows/desktop/legacy/aa373202(v=vs.85)
+            - name: Applicationwiederherstellungsfertig
+              href: /windows/desktop/api/winbase/nf-winbase-applicationrecoveryfinished
+            - name: Applicationwiederherstellungsinprogress
+              href: /windows/desktop/api/winbase/nf-winbase-applicationrecoveryinprogress
+            - name: Getapplicationwiederherstellungsrückruf
+              href: /windows/desktop/api/winbase/nf-winbase-getapplicationrecoverycallback
+            - name: Getapplicationrestartsettings
+              href: /windows/desktop/api/winbase/nf-winbase-getapplicationrestartsettings
+            - name: Registerapplicationwiederherstellungsrückruf
+              href: /windows/desktop/api/winbase/nf-winbase-registerapplicationrecoverycallback
+            - name: RegisterApplicationRestart
+              href: /windows/desktop/api/winbase/nf-winbase-registerapplicationrestart
+            - name: Unregisterapplicationwiederherstellungsrückruf
+              href: /windows/desktop/api/winbase/nf-winbase-unregisterapplicationrecoverycallback
+            - name: Unregisterapplicationrestart
+              href: /windows/desktop/api/winbase/nf-winbase-unregisterapplicationrestart

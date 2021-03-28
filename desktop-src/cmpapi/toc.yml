@@ -1,0 +1,47 @@
+- name: Komprimierungs-API
+  href: '-compression-portal.md'
+  items:
+    - name: Verwenden der Komprimierungs-API
+      href: using-the-compression-api.md
+      items:
+        - name: Verwenden der Komprimierungs-API im Puffer Modus
+          href: using-the-compression-api-in-buffer-mode.md
+        - name: Verwenden der Komprimierungs-API im Block Modus
+          href: using-the-compression-api-in-block-mode.md
+    - name: API-Komprimierungs Funktionen
+      href: compression-api-functions.md
+      items:
+        - name: Closecompressor
+          href: /windows/desktop/api/compressapi/nf-compressapi-closecompressor
+        - name: Closedebug
+          href: /windows/desktop/api/compressapi/nf-compressapi-closedecompressor
+        - name: Komprimieren
+          href: /windows/desktop/api/compressapi/nf-compressapi-compress
+        - name: '"Kreatecompressor"'
+          href: /windows/desktop/api/compressapi/nf-compressapi-createcompressor
+        - name: '"Kreatedecompressor"'
+          href: /windows/desktop/api/compressapi/nf-compressapi-createdecompressor
+        - name: Nachricht
+          href: /windows/desktop/api/compressapi/nf-compressapi-decompress
+        - name: Querycompressorinformation
+          href: /windows/desktop/api/compressapi/nf-compressapi-querycompressorinformation
+        - name: Querydecompressorinformation
+          href: /windows/desktop/api/compressapi/nf-compressapi-querydecompressorinformation
+        - name: Resetcompressor
+          href: /windows/desktop/api/compressapi/nf-compressapi-resetcompressor
+        - name: Resetdebug
+          href: /windows/desktop/api/compressapi/nf-compressapi-resetdecompressor
+        - name: Setcompressorinformation
+          href: /windows/desktop/api/compressapi/nf-compressapi-setcompressorinformation
+        - name: Setdecompressorinformation
+          href: /windows/desktop/api/compressapi/nf-compressapi-setdecompressorinformation
+    - name: Komprimieren von API-Strukturen
+      href: compression-api-structures.md
+      items:
+        - name: COMPRESS_ALLOCATION_ROUTINES
+          href: /windows/win32/api/compressapi/ns-compressapi-compress_allocation_routines
+    - name: Komprimierungs-API-Enumerationen
+      href: compression-api-enumerations.md
+      items:
+        - name: COMPRESS_INFORMATION_CLASS
+          href: /windows/desktop/api/compressapi/ne-compressapi-compress_information_class
