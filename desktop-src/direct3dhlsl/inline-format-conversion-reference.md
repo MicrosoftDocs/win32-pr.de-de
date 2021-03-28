@@ -1,0 +1,42 @@
+---
+title: Referenz zur Inline Format Konvertierung
+description: 'Dieser Abschnitt enthält die folgenden Abschnitte:'
+ms.assetid: 75e7ff03-0946-406d-a769-73f3da8d1dc1
+ms.topic: reference
+ms.date: 05/31/2018
+topic_type:
+- kbArticle
+api_name: ''
+api_type: ''
+api_location: ''
+ms.openlocfilehash: 06bf059aa110ae3795ea95bc74471b9e7c3f42b8
+ms.sourcegitcommit: fe03c5d92ca6a0d66a114b2303e99c0a19241ffb
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "103948329"
+---
+# <a name="inline-format-conversion-reference"></a>Referenz zur Inline Format Konvertierung
+
+Dieser Abschnitt enthält die folgenden Abschnitte:
+
+-   [Funktionen](format-conversion-functions.md)
+-   [Strukturen](format-conversion-structures.md)
+
+## <a name="related-topics"></a>Zugehörige Themen
+
+<dl> <dt>
+
+[Verweis für HLSL](dx-graphics-hlsl-reference.md)
+</dt> <dt>
+
+[Entpacken und Verpacken des DXGI- \_ Formats für In-Place Bildbearbeitung](dx-graphics-hlsl-unpacking-packing-dxgi-format.md)
+</dt> </dl>
+
+ 
+
+ 
+
+
+
+
