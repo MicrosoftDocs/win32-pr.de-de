@@ -1,0 +1,42 @@
+- name: Software Geräte-API
+  href: software-device-api-portal.md
+  items:
+    - name: Programmier Handbuch zur Software Geräte-API
+      href: /previous-versions/windows/hardware/drivers/dn315034(v=vs.85)
+    - name: API-Referenz für Software Geräte
+      href: software-device-api-reference.md
+      items:
+        - name: API-Funktionen der Software Geräte
+          href: software-device-api-functions.md
+          items:
+            - name: Austausch von "austauschen"
+              href: /windows/desktop/api/swdevice/nf-swdevice-swdeviceclose
+            - name: SW_DEVICE_CREATE_CALLBACK
+              href: /windows/desktop/api/swdevice/nc-swdevice-sw_device_create_callback
+            - name: Austauschen von "austauschen"
+              href: /windows/desktop/api/swdevice/nf-swdevice-swdevicecreate
+            - name: Swap-Lebensdauer
+              href: /windows/desktop/api/swdevice/nf-swdevice-swdevicegetlifetime
+            - name: ''' Swap PropertySet '''
+              href: /windows/desktop/api/swdevice/nf-swdevice-swdeviceinterfacepropertyset
+            - name: Austauschen von Austausch Elementen
+              href: /windows/desktop/api/swdevice/nf-swdevice-swdeviceinterfaceregister
+            - name: Austausch von "austauschen"
+              href: /windows/desktop/api/swdevice/nf-swdevice-swdeviceinterfacesetstate
+            - name: '"Devidevicepropertyset"'
+              href: /windows/desktop/api/swdevice/nf-swdevice-swdevicepropertyset
+            - name: Austauschbare Lebensdauer
+              href: /windows/desktop/api/swdevice/nf-swdevice-swdevicesetlifetime
+            - name: Austausch frei
+              href: /windows/desktop/api/swdevice/nf-swdevice-swmemfree
+        - name: API-Strukturen für Software Geräte
+          href: software-device-api-structures.md
+          items:
+            - name: Devpropcompkey
+              href: /previous-versions/windows/hardware/drivers/dn315029(v=vs.85)
+            - name: Devproperty
+              href: /previous-versions/windows/hardware/drivers/dn315030(v=vs.85)
+            - name: Devpropkey
+              href: /previous-versions/windows/hardware/drivers/dn315031(v=vs.85)
+            - name: SW_DEVICE_CREATE_INFO
+              href: /windows/desktop/api/swdevicedef/ns-swdevicedef-sw_device_create_info
