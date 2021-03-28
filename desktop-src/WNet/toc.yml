@@ -1,0 +1,111 @@
+- name: Windows-Netzwerke (WNET)
+  href: windows-networking-wnet-.md
+  items:
+    - name: Informationen über Windows-Netzwerke
+      href: about-windows-networking.md
+      items:
+        - name: WNET-Funktionen
+          href: wnet-functions.md
+        - name: Windows-Netzwerk Vorgänge
+          href: windows-networking-operations.md
+    - name: Verwenden der Windows-Netzwerke
+      href: using-windows-networking.md
+      items:
+        - name: Verwenden des Dialog Felds "Verbindungen"
+          href: using-the-connections-dialog-box.md
+        - name: Auflisten von Netzwerkressourcen
+          href: enumerating-network-resources.md
+        - name: Hinzufügen einer Netzwerkverbindung
+          href: adding-a-network-connection.md
+        - name: Zuweisen eines Laufwerks zu einer Freigabe
+          href: assigning-a-drive-to-a-share.md
+        - name: Bestimmen des Speicher Orts einer Freigabe
+          href: determining-the-location-of-a-share.md
+        - name: Der Verbindungs Name wird abgerufen.
+          href: retrieving-the-connection-name.md
+        - name: Abrufen des Benutzernamens
+          href: retrieving-the-user-name.md
+        - name: Abbrechen einer Netzwerkverbindung
+          href: canceling-a-network-connection.md
+        - name: Abrufen von Informationen zu einer Netzwerkressource
+          href: retrieving-information-about-a-network-resource.md
+        - name: Abrufen von Netzwerkfehlern
+          href: retrieving-network-errors.md
+    - name: Windows-Netzwerk Referenz
+      href: windows-networking-reference.md
+      items:
+        - name: Windows-Netzwerk Rückrufe
+          href: windows-networking-callbacks.md
+          items:
+            - name: Pfngetprofilepath
+              href: /previous-versions/windows/desktop/legacy/aa385358(v=vs.85)
+            - name: Pfnprocesspolicies
+              href: /previous-versions/windows/desktop/legacy/aa385360(v=vs.85)
+            - name: Pfnversöversleprofile
+              href: /previous-versions/windows/desktop/legacy/aa385364(v=vs.85)
+        - name: Windows-Netzwerkfunktionen
+          href: windows-networking-functions.md
+          items:
+            - name: '"Getetgetconnectionperformance"'
+              href: /windows/desktop/api/winnetwk/nf-winnetwk-multinetgetconnectionperformancea
+            - name: Wnetaddconnection
+              href: /windows/desktop/api/winnetwk/nf-winnetwk-wnetaddconnectiona
+            - name: WNetAddConnection2
+              href: /windows/desktop/api/winnetwk/nf-winnetwk-wnetaddconnection2a
+            - name: WNetAddConnection3
+              href: /windows/desktop/api/winnetwk/nf-winnetwk-wnetaddconnection3a
+            - name: Wnetcancelconnection
+              href: /windows/desktop/api/winnetwk/nf-winnetwk-wnetcancelconnectiona
+            - name: WNetCancelConnection2
+              href: /windows/desktop/api/winnetwk/nf-winnetwk-wnetcancelconnection2a
+            - name: Wnetcloseerum
+              href: /windows/desktop/api/winnetwk/nf-winnetwk-wnetcloseenum
+            - name: Wnetconnectiondialog
+              href: /windows/desktop/api/winnetwk/nf-winnetwk-wnetconnectiondialog
+            - name: WNetConnectionDialog1
+              href: /windows/desktop/api/winnetwk/nf-winnetwk-wnetconnectiondialog1a
+            - name: Wnetdisconnectdialog
+              href: /windows/desktop/api/winnetwk/nf-winnetwk-wnetdisconnectdialog
+            - name: WNetDisconnectDialog1
+              href: /windows/desktop/api/winnetwk/nf-winnetwk-wnetdisconnectdialog1a
+            - name: Wnettenumschlag-Ressource
+              href: /windows/desktop/api/winnetwk/nf-winnetwk-wnetenumresourcea
+            - name: WNetGetConnection
+              href: /windows/desktop/api/winnetwk/nf-winnetwk-wnetgetconnectiona
+            - name: Wnetgetlasterror
+              href: /windows/desktop/api/winnetwk/nf-winnetwk-wnetgetlasterrora
+            - name: Wnetgetnetworkinformation
+              href: /windows/desktop/api/winnetwk/nf-winnetwk-wnetgetnetworkinformationa
+            - name: Wnetgetprovidername
+              href: /windows/desktop/api/winnetwk/nf-winnetwk-wnetgetprovidernamea
+            - name: Wnetgetresourceinformation
+              href: /windows/desktop/api/winnetwk/nf-winnetwk-wnetgetresourceinformationa
+            - name: Wnetgetresourceparent
+              href: /windows/desktop/api/winnetwk/nf-winnetwk-wnetgetresourceparenta
+            - name: Wnetgetuniversalname
+              href: /windows/desktop/api/winnetwk/nf-winnetwk-wnetgetuniversalnamea
+            - name: Wnetgetuser
+              href: /windows/desktop/api/winnetwk/nf-winnetwk-wnetgetusera
+            - name: Wnetopenaufumum
+              href: /windows/desktop/api/winnetwk/nf-winnetwk-wnetopenenuma
+            - name: Wnetrestoreconnectionw
+              href: /windows/desktop/api/winnetwk/nf-winnetwk-wnetrestoreconnectionw
+            - name: Wnettuseconnction
+              href: /windows/desktop/api/winnetwk/nf-winnetwk-wnetuseconnectiona
+        - name: Windows-Netzwerkstrukturen
+          href: windows-networking-structures.md
+          items:
+            - name: Connectdlgstruct
+              href: /windows/win32/api/winnetwk/ns-winnetwk-connectdlgstructa
+            - name: Discdlgstruct
+              href: /windows/win32/api/winnetwk/ns-winnetwk-discdlgstructa
+            - name: Netconnectinfostruct
+              href: /windows/win32/api/Winnetwk/ns-winnetwk-netconnectinfostruct
+            - name: Netinfostruct
+              href: /windows/win32/api/winnetwk/ns-winnetwk-netinfostruct
+            - name: '"Nettresource"'
+              href: /windows/win32/api/Winnetwk/ns-winnetwk-netresourcea
+            - name: REMOTE_NAME_INFO
+              href: /windows/win32/api/Winnetwk/ns-winnetwk-remote_name_infoa
+            - name: UNIVERSAL_NAME_INFO
+              href: /windows/win32/api/Winnetwk/ns-winnetwk-universal_name_infoa

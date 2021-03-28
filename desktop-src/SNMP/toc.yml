@@ -1,0 +1,412 @@
+- name: Simple Network Management-Protokoll
+  href: snmp-start-page.md
+  items:
+    - name: Neues in SNMP
+      href: new-in-snmp.md
+    - name: Simple Network Management-Protokoll (SNMP)
+      href: simple-network-management-protocol-snmp-.md
+      items:
+        - name: Unterstützte Versionen
+          href: supported-versions.md
+        - name: Informationen zu SNMP
+          href: about-snmp.md
+          items:
+            - name: Funktionsweise von SNMP
+              href: how-snmp-works.md
+            - name: Die SNMP-Verwaltungs Informationsbasis (MIB)
+              href: the-snmp-management-information-base-mib-.md
+              items:
+                - name: MIB-namens Struktur
+                  href: mib-name-tree.md
+            - name: Relevante RFCs
+              href: relevant-rfcs.md
+            - name: System Dateien für SNMP
+              href: system-files-for-snmp.md
+            - name: SNMP-Hilfsprogramme
+              href: snmp-utilities.md
+            - name: Konfigurieren des SNMP-Dienstanbieter
+              href: configuring-the-snmp-service.md
+              items:
+                - name: Communitynamen
+                  href: community-names.md
+                - name: Hostnamen und IP-Adressen
+                  href: host-names-and-ip-addresses.md
+                - name: Konfigurieren der SNMP-Sicherheit
+                  href: configuring-snmp-security.md
+                - name: Konfigurieren von SNMP-Gruppenrichtlinie
+                  href: configuring-snmp-group-policy.md
+                - name: Konfigurieren von SNMP-Agent-Informationen
+                  href: configuring-snmp-agent-information.md
+        - name: SNMP-Referenz
+          href: snmp-reference.md
+          items:
+            - name: SNMP-Konstanten
+              href: snmp-constants.md
+              items:
+                - name: PDU-Typwerte
+                  href: pdu-type-values.md
+                - name: SNMP-Anwendungs Syntax Werte
+                  href: snmp-application-syntax-values.md
+                - name: Einfache SNMP-Syntax Werte
+                  href: snmp-simple-syntax-values.md
+                - name: Werte der SNMP-Konstruktorsyntax
+                  href: snmp-constructor-syntax-values.md
+                - name: SNMP-Anforderungs Typen
+                  href: snmp-request-types.md
+                - name: SNMPv1 Trap-Typen
+                  href: snmpv1-trap-types.md
+            - name: SNMP-Datentypen
+              href: snmp-data-types.md
+            - name: SNMP-Fehler Codes
+              href: snmp-error-codes.md
+            - name: SNMP-Funktionen
+              href: snmp-functions.md
+              items:
+                - name: Snmpextensionclose
+                  href: /windows/desktop/api/Snmp/nf-snmp-snmpextensionclose
+                - name: Snmpextensioninit
+                  href: /windows/desktop/api/Snmp/nf-snmp-snmpextensioninit
+                - name: Snmpextensioninitex
+                  href: /windows/desktop/api/Snmp/nf-snmp-snmpextensioninitex
+                - name: Snmpextensionmonitor
+                  href: /windows/desktop/api/Snmp/nf-snmp-snmpextensionmonitor
+                - name: Snmpextensionquery
+                  href: /windows/desktop/api/Snmp/nf-snmp-snmpextensionquery
+                - name: Snmpextensionqueryex
+                  href: /windows/desktop/api/Snmp/nf-snmp-snmpextensionqueryex
+                - name: Snmpextensiontrap
+                  href: /windows/desktop/api/Snmp/nf-snmp-snmpextensiontrap
+                - name: Snmpmgrclose
+                  href: /windows/desktop/api/Mgmtapi/nf-mgmtapi-snmpmgrclose
+                - name: Snmpmgrctl
+                  href: /windows/desktop/api/Mgmtapi/nf-mgmtapi-snmpmgrctl
+                - name: Snmpmgrgettrap
+                  href: /windows/desktop/api/Mgmtapi/nf-mgmtapi-snmpmgrgettrap
+                - name: Snmpmgrgettrapex
+                  href: /windows/desktop/api/Mgmtapi/nf-mgmtapi-snmpmgrgettrapex
+                - name: Snmpmgroidin
+                  href: /windows/desktop/api/Mgmtapi/nf-mgmtapi-snmpmgroidtostr
+                - name: Snmpmgropen
+                  href: /windows/desktop/api/Mgmtapi/nf-mgmtapi-snmpmgropen
+                - name: SnmpMgrRequest
+                  href: /windows/desktop/api/Mgmtapi/nf-mgmtapi-snmpmgrrequest
+                - name: Snmpmgrotesoid
+                  href: /windows/desktop/api/Mgmtapi/nf-mgmtapi-snmpmgrstrtooid
+                - name: Snmpmgrtraplauschen
+                  href: /windows/desktop/api/Mgmtapi/nf-mgmtapi-snmpmgrtraplisten
+                - name: Snmpsvcgetuptime
+                  href: /windows/desktop/api/Snmp/nf-snmp-snmpsvcgetuptime
+                - name: Snmpsvcsetloglevel
+                  href: /windows/desktop/api/Snmp/nf-snmp-snmpsvcsetloglevel
+                - name: Snmpsvcsetlogtype
+                  href: /windows/desktop/api/Snmp/nf-snmp-snmpsvcsetlogtype
+                - name: Snmputilasnanycpy
+                  href: /windows/desktop/api/Snmp/nf-snmp-snmputilasnanycpy
+                - name: Snmputilasnanyfree
+                  href: /windows/desktop/api/Snmp/nf-snmp-snmputilasnanyfree
+                - name: Snmputildbgprint
+                  href: /windows/desktop/api/Snmp/nf-snmp-snmputildbgprint
+                - name: Snmputilidstoa
+                  href: /windows/desktop/api/Snmp/nf-snmp-snmputilidstoa
+                - name: Snmputilmemzuweisung
+                  href: /windows/desktop/api/Snmp/nf-snmp-snmputilmemalloc
+                - name: Snmputilmemfree
+                  href: /windows/desktop/api/Snmp/nf-snmp-snmputilmemfree
+                - name: Snmputilmemrezuweisungen
+                  href: /windows/desktop/api/Snmp/nf-snmp-snmputilmemrealloc
+                - name: Snmputiloctetscmp
+                  href: /windows/desktop/api/Snmp/nf-snmp-snmputiloctetscmp
+                - name: Snmputiloctetscpy
+                  href: /windows/desktop/api/Snmp/nf-snmp-snmputiloctetscpy
+                - name: Snmputilocteout
+                  href: /windows/desktop/api/Snmp/nf-snmp-snmputiloctetsfree
+                - name: Snmputiloctetincmp
+                  href: /windows/desktop/api/Snmp/nf-snmp-snmputiloctetsncmp
+                - name: Snmputiloidappend
+                  href: /windows/desktop/api/Snmp/nf-snmp-snmputiloidappend
+                - name: Snmputiloidcmp
+                  href: /windows/desktop/api/Snmp/nf-snmp-snmputiloidcmp
+                - name: Snmputiloidcpy
+                  href: /windows/desktop/api/Snmp/nf-snmp-snmputiloidcpy
+                - name: Snmputiloidfree
+                  href: /windows/desktop/api/Snmp/nf-snmp-snmputiloidfree
+                - name: Snmputiloidncmp
+                  href: /windows/desktop/api/Snmp/nf-snmp-snmputiloidncmp
+                - name: Snmputiloiddienst
+                  href: /windows/desktop/api/Snmp/nf-snmp-snmputiloidtoa
+                - name: Snmputilprintasnany
+                  href: /windows/desktop/api/Snmp/nf-snmp-snmputilprintasnany
+                - name: Snmputilprintoid
+                  href: /windows/desktop/api/Snmp/nf-snmp-snmputilprintoid
+                - name: Snmputilvarbindcpy
+                  href: /windows/desktop/api/Snmp/nf-snmp-snmputilvarbindcpy
+                - name: Snmputilvarbindlistcpy
+                  href: /windows/desktop/api/Snmp/nf-snmp-snmputilvarbindlistcpy
+                - name: Snmputilvarbindfree
+                  href: /windows/desktop/api/Snmp/nf-snmp-snmputilvarbindfree
+                - name: Snmputilvarbindlistfree
+                  href: /windows/desktop/api/Snmp/nf-snmp-snmputilvarbindlistfree
+            - name: SNMP-Strukturen
+              href: snmp-structures.md
+              items:
+                - name: Asnany
+                  href: /windows/desktop/api/Snmp/ns-snmp-asnany
+                - name: AsnCounter64
+                  href: /previous-versions/windows/desktop/legacy/aa377953(v=vs.85)
+                - name: Asnobjectidentifier
+                  href: /windows/desktop/api/Snmp/ns-snmp-asnobjectidentifier
+                - name: Asnoctetstring
+                  href: /windows/desktop/api/Snmp/ns-snmp-asnoctetstring
+                - name: Snmpvarbind
+                  href: /windows/desktop/api/Snmp/ns-snmp-snmpvarbind
+                - name: Snmpvarbindlist
+                  href: /windows/desktop/api/Snmp/ns-snmp-snmpvarbindlist
+            - name: SNMP-Variablen Typen und PDU-Anforderungs Typen
+              href: snmp-variable-types-and-request-pdu-types.md
+    - name: WinSNMP-API
+      href: winsnmp-api.md
+      items:
+        - name: Informationen zur WinSNMP-API
+          href: about-the-winsnmp-api.md
+          items:
+            - name: 'Informationen zum WinSNMP 2,0-Nachtrag'
+              href: about-the-winsnmp-2-0-addendum.md
+            - name: Informationen zu SNMP-Versionen
+              href: about-snmp-versions.md
+              items:
+                - name: Für WinSNMP relevante RFCs
+                  href: rfcs-relevant-to-winsnmp.md
+            - name: Software Anforderungen für die WinSNMP-API
+              href: software-requirements-for-the-winsnmp-api.md
+            - name: Das WinSNMP-Modell
+              href: the-winsnmp-model.md
+            - name: Informationen zur Microsoft WinSNMP-Implementierung
+              href: about-the-microsoft-winsnmp-implementation.md
+              items:
+                - name: Die WinSNMP-Datenbank
+                  href: the-winsnmp-database.md
+                - name: Ebenen der SNMP-Unterstützung
+                  href: levels-of-snmp-support.md
+            - name: WinSNMP-Sitzungen
+              href: winsnmp-sessions.md
+            - name: Konzepte von WinSNMP-Datenverwaltung
+              href: winsnmp-data-management-concepts.md
+              items:
+                - name: Objektbezeichner
+                  href: object-identifiers.md
+                - name: WinSNMP-Deskriptoren
+                  href: winsnmp-descriptors.md
+                - name: Ressourcenhandle-Objekte
+                  href: resource-handle-objects.md
+                - name: Zeichen folgen im C-Stil
+                  href: c-style-strings.md
+                - name: Zuordnen von WinSNMP-Speicher Objekten
+                  href: allocating-winsnmp-memory-objects.md
+            - name: Konzepte der WinSNMP-Kommunikations Verwaltung
+              href: winsnmp-communications-management-concepts.md
+              items:
+                - name: Informationen zu SNMP-Nachrichten
+                  href: about-snmp-messages.md
+                  items:
+                    - name: Übersetzen von Nachrichten Anforderungen
+                      href: translating-message-requests.md
+                - name: Informationen zu Traps und Benachrichtigungen
+                  href: about-traps-and-notifications.md
+                  items:
+                    - name: Übersetzen von Traps von SNMPv1 in SNMPv2C
+                      href: translating-traps-from-snmpv1-to-snmpv2c.md
+                    - name: Trap-Formate
+                      href: trap-formats.md
+                - name: Informationen zur erneuten Übertragung
+                  href: about-retransmission.md
+            - name: WinSNMP-Programmieraufgaben
+              href: winsnmp-programming-tasks.md
+            - name: Öffnen und Schließen einer WinSNMP-Anwendung
+              href: opening-and-closing-a-winsnmp-application.md
+            - name: Öffnen und Schließen einer WinSNMP-Sitzung
+              href: opening-and-closing-a-winsnmp-session.md
+            - name: Verwalten von Traps und Benachrichtigungen
+              href: managing-traps-and-notifications.md
+              items:
+                - name: Mehrfache Trap-Registrierungen
+                  href: multiple-trap-registrations.md
+            - name: Arbeiten mit Variablen Bindungs Listen
+              href: working-with-variable-binding-lists.md
+              items:
+                - name: Erstellen einer Variablen Bindungs Liste
+                  href: creating-a-variable-binding-list.md
+                - name: Verwalten einer Variablen Bindungs Liste
+                  href: managing-a-variable-binding-list.md
+            - name: Arbeiten mit Protokolldaten Einheiten
+              href: working-with-protocol-data-units.md
+              items:
+                - name: Erstellen eines PDU
+                  href: creating-a-pdu.md
+                - name: Aktualisieren eines PDU
+                  href: updating-a-pdu.md
+                - name: Duplizieren eines PDU
+                  href: duplicating-a-pdu.md
+                - name: Validieren eines PDU
+                  href: validating-a-pdu.md
+                - name: Übereinstimmende Antworten und Anforderungs-PDUs
+                  href: matching-response-and-request-pdus.md
+                  items:
+                    - name: Zuweisen von Anforderungs bezeichlern
+                      href: assigning-request-identifiers.md
+            - name: Senden von SNMP-Nachrichten
+              href: sending-snmp-messages.md
+            - name: Empfangen von SNMP-Nachrichten
+              href: receiving-snmp-messages.md
+            - name: Allgemeine WinSNMP-Programmieraufgaben
+              href: general-winsnmp-programming-tasks.md
+              items:
+                - name: Verwalten von Objekt bezeichlern
+                  href: managing-object-identifiers.md
+                - name: Freigeben von WinSNMP-Deskriptoren
+                  href: freeing-winsnmp-descriptors.md
+                - name: Festlegen des Entitäts-und Kontext Übersetzungsmodus
+                  href: setting-the-entity-and-context-translation-mode.md
+                  items:
+                    - name: Unterstützung für IPX-Adress Zeichenfolgen in WinSNMP
+                      href: support-for-ipx-address-strings-in-winsnmp.md
+                - name: Verwalten der Richtlinie für Neuübertragungen
+                  href: managing-the-retransmission-policy.md
+                  items:
+                    - name: Aktivieren und Deaktivieren der erneuten Übertragung
+                      href: turning-retransmission-on-and-off.md
+                    - name: Neuübertragung wird abgebrochen
+                      href: canceling-retransmission.md
+                    - name: Ändern der Richtlinie für Neuübertragungen
+                      href: changing-the-retransmission-policy.md
+                - name: Schreiben von WinSNMP-Anwendungen mit mehreren Threads
+                  href: writing-winsnmp-applications-with-multiple-threads.md
+                - name: Registrieren einer SNMP-Agent-Anwendung
+                  href: registering-an-snmp-agent-application.md
+        - name: WinSNMP-API-Referenz
+          href: winsnmp-api-reference.md
+          items:
+            - name: WinSNMP-Datentypen
+              href: winsnmp-data-types.md
+            - name: WinSNMP-Fehler Codes
+              href: winsnmp-error-codes.md
+              items:
+                - name: Allgemeine WinSNMP-Fehler Codes
+                  href: winsnmp-common-error-codes.md
+                - name: Netzwerk Transport Fehler
+                  href: network-transport-errors.md
+            - name: Rückgabewerte der WinSNMP-Funktion
+              href: winsnmp-function-return-values.md
+            - name: WinSNMP-Funktionen
+              href: winsnmp-functions.md
+              items:
+                - name: SNMPAPI_CALLBACK
+                  href: /windows/desktop/api/Winsnmp/nc-winsnmp-snmpapi_callback
+                - name: Snmpcancelmsg
+                  href: /windows/desktop/api/Winsnmp/nf-winsnmp-snmpcancelmsg
+                - name: Snmpcleanup
+                  href: /windows/desktop/api/Winsnmp/nf-winsnmp-snmpcleanup
+                - name: Snmpcleanupex
+                  href: /windows/desktop/api/Winsnmp/nf-winsnmp-snmpcleanupex
+                - name: Snmpclose
+                  href: /windows/desktop/api/Winsnmp/nf-winsnmp-snmpclose
+                - name: Snmpcontexttstr
+                  href: /windows/desktop/api/Winsnmp/nf-winsnmp-snmpcontexttostr
+                - name: Snmpzähltvbl
+                  href: /windows/desktop/api/Winsnmp/nf-winsnmp-snmpcountvbl
+                - name: Snmpkreatepdu
+                  href: /windows/desktop/api/Winsnmp/nf-winsnmp-snmpcreatepdu
+                - name: Snmpkreatesession
+                  href: /windows/desktop/api/Winsnmp/nf-winsnmp-snmpcreatesession
+                - name: Snmpkreatevbl
+                  href: /windows/desktop/api/Winsnmp/nf-winsnmp-snmpcreatevbl
+                - name: Snmpdecodemsg
+                  href: /windows/desktop/api/Winsnmp/nf-winsnmp-snmpdecodemsg
+                - name: Snmpdeletevb
+                  href: /windows/desktop/api/Winsnmp/nf-winsnmp-snmpdeletevb
+                - name: Snmpduplialisiepdu
+                  href: /windows/desktop/api/Winsnmp/nf-winsnmp-snmpduplicatepdu
+                - name: Snmpduplimpevbl
+                  href: /windows/desktop/api/Winsnmp/nf-winsnmp-snmpduplicatevbl
+                - name: Snmpencodemsg
+                  href: /windows/desktop/api/Winsnmp/nf-winsnmp-snmpencodemsg
+                - name: Snmpentitytstr
+                  href: /windows/desktop/api/Winsnmp/nf-winsnmp-snmpentitytostr
+                - name: Snmpfreecontext
+                  href: /windows/desktop/api/Winsnmp/nf-winsnmp-snmpfreecontext
+                - name: Snmpfredescriptor
+                  href: /windows/desktop/api/Winsnmp/nf-winsnmp-snmpfreedescriptor
+                - name: Snmpfreentity
+                  href: /windows/desktop/api/Winsnmp/nf-winsnmp-snmpfreeentity
+                - name: Snmpfreepdu
+                  href: /windows/desktop/api/Winsnmp/nf-winsnmp-snmpfreepdu
+                - name: Snmpfreevbl
+                  href: /windows/desktop/api/Winsnmp/nf-winsnmp-snmpfreevbl
+                - name: Snmpgetlasterror
+                  href: /windows/desktop/api/Winsnmp/nf-winsnmp-snmpgetlasterror
+                - name: Snmpgetpdudata
+                  href: /windows/desktop/api/Winsnmp/nf-winsnmp-snmpgetpdudata
+                - name: Snmpgetretransmitmode
+                  href: /windows/desktop/api/Winsnmp/nf-winsnmp-snmpgetretransmitmode
+                - name: Snmpgetretry
+                  href: /windows/desktop/api/Winsnmp/nf-winsnmp-snmpgetretry
+                - name: Snmpgettimeout
+                  href: /windows/desktop/api/Winsnmp/nf-winsnmp-snmpgettimeout
+                - name: Snmpgettranslatemode
+                  href: /windows/desktop/api/Winsnmp/nf-winsnmp-snmpgettranslatemode
+                - name: Snmpgetvb
+                  href: /windows/desktop/api/Winsnmp/nf-winsnmp-snmpgetvb
+                - name: Snmpgetvendorinfo
+                  href: /windows/desktop/api/Winsnmp/nf-winsnmp-snmpgetvendorinfo
+                - name: Snmplauschen
+                  href: /windows/desktop/api/Winsnmp/nf-winsnmp-snmplisten
+                - name: Snmpoidcompare
+                  href: /windows/desktop/api/Winsnmp/nf-winsnmp-snmpoidcompare
+                - name: Snmpoidcopy
+                  href: /windows/desktop/api/Winsnmp/nf-winsnmp-snmpoidcopy
+                - name: Snmpoidin
+                  href: /windows/desktop/api/Winsnmp/nf-winsnmp-snmpoidtostr
+                - name: Snmpopen
+                  href: /windows/desktop/api/Winsnmp/nf-winsnmp-snmpopen
+                - name: Snmprecvmsg
+                  href: /windows/desktop/api/Winsnmp/nf-winsnmp-snmprecvmsg
+                - name: Snmpregiester
+                  href: /windows/desktop/api/Winsnmp/nf-winsnmp-snmpregister
+                - name: Snmpsendmsg
+                  href: /windows/desktop/api/Winsnmp/nf-winsnmp-snmpsendmsg
+                - name: Snmpsetpdudata
+                  href: /windows/desktop/api/Winsnmp/nf-winsnmp-snmpsetpdudata
+                - name: Snmpsetport
+                  href: /windows/desktop/api/Winsnmp/nf-winsnmp-snmpsetport
+                - name: Snmpstretransmitmode
+                  href: /windows/desktop/api/Winsnmp/nf-winsnmp-snmpsetretransmitmode
+                - name: Snmpabtretry
+                  href: /windows/desktop/api/Winsnmp/nf-winsnmp-snmpsetretry
+                - name: Snmpsettimeout
+                  href: /windows/desktop/api/Winsnmp/nf-winsnmp-snmpsettimeout
+                - name: Snmpsettranslatemode
+                  href: /windows/desktop/api/Winsnmp/nf-winsnmp-snmpsettranslatemode
+                - name: Snmpsetvb
+                  href: /windows/desktop/api/Winsnmp/nf-winsnmp-snmpsetvb
+                - name: SnmpStartup
+                  href: /windows/desktop/api/Winsnmp/nf-winsnmp-snmpstartup
+                - name: Snmpstartupex
+                  href: /windows/desktop/api/Winsnmp/nf-winsnmp-snmpstartupex
+                - name: Snmpstraudecontext
+                  href: /windows/desktop/api/Winsnmp/nf-winsnmp-snmpstrtocontext
+                - name: Snmpstrauch-Entität
+                  href: /windows/desktop/api/Winsnmp/nf-winsnmp-snmpstrtoentity
+                - name: Snmpstrau| OID
+                  href: /windows/desktop/api/Winsnmp/nf-winsnmp-snmpstrtooid
+            - name: WinSNMP-Strukturen
+              href: winsnmp-structures.md
+              items:
+                - name: smiCNTR64
+                  href: /windows/desktop/api/Winsnmp/ns-winsnmp-smicntr64
+                - name: smioctets
+                  href: /windows/desktop/api/Winsnmp/ns-winsnmp-smioctets
+                - name: smioid
+                  href: /windows/desktop/api/Winsnmp/ns-winsnmp-smioid
+                - name: smivalue
+                  href: /windows/desktop/api/Winsnmp/ns-winsnmp-smivalue
+                - name: smivendorinfo
+                  href: /windows/desktop/api/Winsnmp/ns-winsnmp-smivendorinfo

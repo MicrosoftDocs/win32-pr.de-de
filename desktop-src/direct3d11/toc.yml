@@ -1,0 +1,2772 @@
+- name: "Direct3D\_11-Grafik"
+  href: atoc-dx-graphics-direct3d-11.md
+  items:
+    - name: Verwendung von Direct3D 11
+      href: how-to-use-direct3d-11.md
+      items:
+        - name: 'Vorgehensweise: Erstellen eines Referenz Geräts'
+          href: overviews-direct3d-11-devices-create-ref.md
+        - name: 'Vorgehensweise: Erstellen eines Warp-Geräts'
+          href: overviews-direct3d-11-devices-create-warp.md
+        - name: 'Gewusst wie: Erstellen einer SwapChain'
+          href: overviews-direct3d-11-devices-create-swap-chain.md
+        - name: 'Gewusst wie: Aufzählen von Adaptern'
+          href: overviews-direct3d-11-devices-enum.md
+        - name: 'Gewusst wie: Anzeigen von Adapter Anzeigemodi'
+          href: overviews-direct3d-11-devices-get-adapter-info.md
+        - name: 'Gewusst wie: Erstellen eines Geräts und eines unmittelbaren Kontexts'
+          href: overviews-direct3d-11-devices-initialize.md
+        - name: 'Gewusst wie: erhalten der Geräte Funktionsebene'
+          href: overviews-direct3d-11-devices-downlevel-get.md
+        - name: 'Vorgehensweise: Erstellen eines Scheitelpunkt Puffers'
+          href: overviews-direct3d-11-resources-buffers-vertex-how-to.md
+        - name: 'Vorgehensweise: Erstellen eines Index Puffers'
+          href: overviews-direct3d-11-resources-buffers-index-how-to.md
+        - name: 'Vorgehensweise: Erstellen eines konstanten Puffers'
+          href: overviews-direct3d-11-resources-buffers-constant-how-to.md
+        - name: 'Vorgehensweise: Erstellen einer Textur'
+          href: overviews-direct3d-11-resources-textures-create.md
+        - name: 'Gewusst wie: Programm gesteuertes Initialisieren einer Textur'
+          href: overviews-direct3d-11-resources-textures-how-to-fill-manually.md
+        - name: 'Gewusst wie: Initialisieren einer Textur aus einer Datei'
+          href: overviews-direct3d-11-resources-textures-how-to.md
+        - name: 'Gewusst wie: Verwenden von dynamischen Ressourcen'
+          href: how-to--use-dynamic-resources.md
+        - name: 'Vorgehensweise: Erstellen eines Compute-Shaders'
+          href: direct3d-11-advanced-stages-compute-create.md
+        - name: 'Gewusst wie: Entwerfen eines Hull-Shaders'
+          href: direct3d-11-advanced-stages-hull-shader-design.md
+        - name: 'Gewusst wie: Erstellen eines Hull-Shaders'
+          href: direct3d-11-advanced-stages-hull-shader-create.md
+        - name: 'Gewusst wie: Initialisieren der Mosaik Phase'
+          href: direct3d-11-advanced-stages-tessellator-initialize.md
+        - name: 'Vorgehensweise: Entwerfen eines Domänen-Shader'
+          href: direct3d-11-advanced-stages-domain-shader-design.md
+        - name: 'Vorgehensweise: Erstellen eines Domänen-Shader'
+          href: direct3d-11-advanced-stages-domain-shader-create.md
+        - name: 'Gewusst wie: Kompilieren eines Shaders'
+          href: how-to--compile-a-shader.md
+        - name: 'Gewusst wie: Aufzeichnen einer Befehlsliste'
+          href: overviews-direct3d-11-render-multi-thread-command-list-record.md
+        - name: 'Gewusst wie: Wiedergeben einer Befehlsliste'
+          href: overviews-direct3d-11-render-multi-thread-command-list-play.md
+        - name: 'Vorgehensweise: Überprüfen der Treiberunterstützung'
+          href: overviews-direct3d-11-render-multi-thread-support.md
+    - name: Neuerungen in Direct3D 11
+      href: dx-graphics-overviews-introduction.md
+      items:
+        - name: Direct3D 11-Features
+          href: direct3d-11-features.md
+        - name: 'Direct3D 11,1-Features'
+          href: direct3d-11-1-features.md
+        - name: 'Direct3D 11,2-Features'
+          href: direct3d-11-2-features.md
+        - name: 'Direct3D 11,3-Features'
+          href: direct3d-11-3-features.md
+          items:
+            - name: Konservative Rasterung
+              href: conservative-rasterization.md
+            - name: Standard Textur Zuordnung
+              href: default-texture-mapping.md
+            - name: Reihen folgen Ansichten für Rasterizer
+              href: rasterizer-order-views.md
+            - name: Von Shader festgelegter Schablonenreferenzwert
+              href: shader-specified-stencil-reference-value.md
+            - name: Typisierte nicht geordnete zugriffsansichts Ladungen
+              href: typed-unordered-access-view-loads.md
+            - name: Einheitliche Speicherarchitektur
+              href: unified-memory-architecture.md
+            - name: Menge gekachelter Ressourcen
+              href: volume-tiled-resources.md
+        - name: 'Direct3D 11,4-Features'
+          href: direct3d-11-4-features.md
+        - name: In früheren Versionen eingeführte Features
+          href: d3d11-features-introduced-previous-releases.md
+          items:
+            - name: Neuerungen im SDK für Windows 7/Direct3D 11 vom August 2009
+              href: dx11-whats-new.md
+            - name: Neuerungen in der Technical Preview-Version von November 2008 Direct3D 11
+              href: dx11-08nov-whats-new.md
+    - name: "Programmieranleitung für Direct3D\_11"
+      href: dx-graphics-overviews.md
+      items:
+        - name: Geräte
+          href: overviews-direct3d-11-devices.md
+          items:
+            - name: Einführung in ein Gerät in Direct3D 11
+              href: overviews-direct3d-11-devices-intro.md
+            - name: Software Ebenen
+              href: overviews-direct3d-11-devices-layers.md
+              items:
+                - name: Debuggen von apps mithilfe der Debugebene
+                  href: using-the-debug-layer-to-test-apps.md
+            - name: Einschränkungen beim Erstellen von Warp-und Referenz Geräten
+              href: overviews-direct3d-11-devices-limitations.md
+            - name: Direct3D 11 auf downlevelhardware
+              href: overviews-direct3d-11-devices-downlevel.md
+              items:
+                - name: Direct3D-Featureebenen
+                  href: overviews-direct3d-11-devices-downlevel-intro.md
+                - name: Ausnahmen
+                  href: overviews-direct3d-11-devices-downlevel-exceptions.md
+                - name: Compute-Shader auf downlevelhardware
+                  href: overviews-direct3d-11-devices-downlevel-compute-shaders.md
+                - name: Verhindern unerwünschter NULL-Pixel-Shader-Srvs
+                  href: overviews-direct3d-11-devices-downlevel-prevent-null-srvs.md
+            - name: Verwenden von Direct3D 11 Feature-Daten zum ergänzen von Direct3D-Funktionsebenen
+              href: using-direct3d-optional-features-to-supplement-direct3d-feature-levels.md
+        - name: Ressourcen
+          href: overviews-direct3d-11-resources.md
+          items:
+            - name: Einführung in eine Ressource in Direct3D 11
+              href: overviews-direct3d-11-resources-intro.md
+            - name: Ressourcentypen
+              href: overviews-direct3d-11-resources-types.md
+            - name: Ressourceneinschränkungen
+              href: overviews-direct3d-11-resources-limits.md
+            - name: Unterressourcen
+              href: overviews-direct3d-11-resources-subresources.md
+            - name: Puffer
+              href: overviews-direct3d-11-resources-buffers.md
+              items:
+                - name: Einführung in Puffer in Direct3D 11
+                  href: overviews-direct3d-11-resources-buffers-intro.md
+            - name: Texturen
+              href: overviews-direct3d-11-resources-textures.md
+              items:
+                - name: Einführung in Texturen in Direct3D 11
+                  href: overviews-direct3d-11-resources-textures-intro.md
+                - name: Textur Block Komprimierung in Direct3D 11
+                  href: texture-block-compression-in-direct3d-11.md
+                  items:
+                    - name: BC6H-Format
+                      href: bc6h-format.md
+                    - name: Bzw bc7-Format
+                      href: bc7-format.md
+                    - name: Bzw bc7-formatmodusverweis
+                      href: bc7-format-mode-reference.md
+            - name: Gleitkommaregeln
+              href: floating-point-rules.md
+            - name: Gekachelte Ressourcen
+              href: tiled-resources.md
+              items:
+                - name: Warum werden Kachel Ressourcen benötigt?
+                  href: why-are-tiled-resources-needed-.md
+                - name: Erstellen von Kachel Ressourcen
+                  href: creating-tiled-resources.md
+                  items:
+                    - name: Zuordnungen in einen Kachelpool
+                      href: mappings-are-into-a-tile-pool.md
+                      items:
+                        - name: Erstellung eines Kachelpools
+                          href: tile-pool-creation.md
+                        - name: Ändern der Größe des Kachelpools
+                          href: tile-pool-resizing.md
+                        - name: Gefahrennachverfolgung im Vergleich mit den Kachelpoolressourcen
+                          href: hazard-tracking-versus-tile-pool-resources.md
+                    - name: Parameter für die Kachel Ressourcen Erstellung
+                      href: tiled-resource-creation-parameters.md
+                    - name: Für Kachel Ressourcen verfügbarer Adressraum
+                      href: address-space-available-for-tiled-resources.md
+                    - name: Parameter zum Erstellen des Kachelpools
+                      href: tile-pool-creation-parameters.md
+                    - name: Prozessübergreifende Ressourcen übergreifende und Geräte Freigabe
+                      href: tiled-resource-cross-process-and-device-sharing.md
+                      items:
+                        - name: Bei gekachelten Ressourcen werden keine Schablonen Formate unterstützt.
+                          href: stencil-formats-not-supported-with-tiled-resources.md
+                    - name: Auf gekachelten Ressourcen verfügbare Vorgänge
+                      href: operations-available-on-tiled-resources.md
+                    - name: Vorgänge für Kachelpools
+                      href: operations-available-on-tile-pools.md
+                    - name: Kacheln eines gekachelten Ressourcenbereichs
+                      href: how-a-tiled-resource-s-area-is-tiled.md
+                      items:
+                        - name: Unterteilung von Texture2D- und Texture2DArray-Unterressourcen
+                          href: texture2d-and-texture2darray-subresource-tiling.md
+                        - name: Unterteilung von Texture3D-Unterressourcen
+                          href: texture3d-subresource-tiling.md
+                        - name: Pufferanordnung
+                          href: buffer-tiling.md
+                        - name: MipMap-Verpackung
+                          href: mipmap-packing.md
+                - name: Ressourcen-APIs mit Kachel
+                  href: tiled-resource-apis.md
+                - name: Pipeline Zugriff auf gekachelte Ressourcen
+                  href: pipeline-access-to-tiled-resources.md
+                  items:
+                    - name: SRV-verhalten bei nicht zugeordneten Kacheln
+                      href: srv-behavior-with-non-mapped-tiles.md
+                    - name: UAV-verhalten bei nicht zugeordneten Kacheln
+                      href: uav-behavior-with-non-mapped-tiles.md
+                    - name: Rasterizerverhalten bei nicht zugeordneten Kacheln
+                      href: rasterizer-behavior-with-non-mapped-tiles.md
+                    - name: Kachelzugriffseinschränkungen bei doppelten Zuordnungen
+                      href: tile-access-limitations-with-duplicate-mappings-.md
+                    - name: Funktionen für Textur Stichproben der Kachel Ressourcen
+                      href: tiled-resources-texture-sampling-features.md
+                    - name: Verfügbar machen von HLSL-Kacheln
+                      href: hlsl-tiled-resources-exposure.md
+                - name: Tarife der Kachel "Ressourcen"
+                  href: tiled-resources-features-tiers.md
+                  items:
+                    - name: "Ebene\_1"
+                      href: tier-1.md
+                    - name: "Ebene\_2"
+                      href: tier-2.md
+        - name: Grafik Pipeline
+          href: overviews-direct3d-11-graphics-pipeline.md
+          items:
+            - name: Eingabe-Assembler-Stufe
+              href: d3d10-graphics-programming-guide-input-assembler-stage.md
+              items:
+                - name: Ersten Einstieg in die Input-Assembler Phase
+                  href: d3d10-graphics-programming-guide-input-assembler-stage-getting-started.md
+                - name: Primitive Topologien
+                  href: d3d10-graphics-programming-guide-primitive-topologies.md
+                - name: Verwenden der Input-Assembler-Phase ohne Puffer
+                  href: d3d10-graphics-programming-guide-input-assembler-stage-no-buffers.md
+                - name: Verwenden von System-Generated Werten
+                  href: d3d10-graphics-programming-guide-input-assembler-stage-using.md
+            - name: Vertex-Shader-Phase
+              href: vertex-shader-stage.md
+            - name: Mosaik Phasen
+              href: direct3d-11-advanced-stages-tessellation.md
+            - name: Geometry-Shader-Phase
+              href: geometry-shader-stage.md
+            - name: Stream-Output Phase
+              href: d3d10-graphics-programming-guide-output-stream-stage.md
+              items:
+                - name: Ersten Einstieg in die Stream-Output Phase
+                  href: d3d10-graphics-programming-guide-output-stream-stage-getting-started.md
+            - name: Stufe des Rasterizers
+              href: d3d10-graphics-programming-guide-rasterizer-stage.md
+              items:
+                - name: Einstieg in die Rasterizer-Phase
+                  href: d3d10-graphics-programming-guide-rasterizer-stage-getting-started.md
+                - name: Rasterisierungsregeln
+                  href: d3d10-graphics-programming-guide-rasterizer-stage-rules.md
+            - name: Pixel-Shader-Phase
+              href: pixel-shader-stage.md
+            - name: Output-Merger Phase
+              href: d3d10-graphics-programming-guide-output-merger-stage.md
+              items:
+                - name: Konfigurieren von Depth-Stencil Funktionen
+                  href: d3d10-graphics-programming-guide-depth-stencil.md
+                - name: Konfigurieren von Mischungs Funktionen
+                  href: d3d10-graphics-programming-guide-blend-state.md
+                - name: Tiefenausrichtung
+                  href: d3d10-graphics-programming-guide-output-merger-stage-depth-bias.md
+        - name: Übersicht über Compute-Shader
+          href: direct3d-11-advanced-stages-compute-shader.md
+          items:
+            - name: Neue Ressourcentypen
+              href: direct3d-11-advanced-stages-cs-resources.md
+            - name: Zugreifen auf Ressourcen
+              href: direct3d-11-advanced-stages-cs-access.md
+            - name: Atomarische Funktionen
+              href: direct3d-11-advanced-stages-cs-atomic-functions.md
+        - name: Darstellung
+          href: overviews-direct3d-11-render.md
+          items:
+            - name: MultiThreading
+              href: overviews-direct3d-11-render-multi-thread.md
+              items:
+                - name: Einführung in das Multithreading in Direct3D 11
+                  href: overviews-direct3d-11-render-multi-thread-intro.md
+                - name: Objekt Erstellung mit Multithreading
+                  href: overviews-direct3d-11-render-multi-thread-create.md
+                - name: Sofortiges und verzögertes Rendering
+                  href: overviews-direct3d-11-render-multi-thread-render.md
+                - name: Befehlsliste
+                  href: overviews-direct3d-11-render-multi-thread-command-list.md
+                - name: Threading Unterschiede zwischen Direct3D-Versionen
+                  href: overviews-direct3d-11-render-multi-thread-differences.md
+            - name: Multiple-Pass Rendering
+              href: overviews-direct3d-11-render-multipass.md
+        - name: Effekte
+          href: d3d11-graphics-programming-guide-effects.md
+          items:
+            - name: Anordnen des Zustands eines Effekts
+              href: d3d11-graphics-programming-guide-effects-organize.md
+            - name: System Schnittstellen des Effekts
+              href: d3d11-graphics-programming-guide-effects-interfaces.md
+            - name: Spezialisierte Schnittstellen
+              href: d3d11-graphics-reference-effect-specializing.md
+            - name: Schnittstellen und Klassen in Effekten
+              href: d3d11-graphics-programming-guide-effects-interfaces-and-classes.md
+            - name: Rendern eines Effekts
+              href: d3d11-graphics-programming-guide-effects-render.md
+              items:
+                - name: Kompilieren eines Effekts
+                  href: d3d11-graphics-programming-guide-effects-compile.md
+                - name: Erstellen eines Effekts
+                  href: d3d11-graphics-programming-guide-effects-create.md
+                - name: Status des festgelegten Effekts
+                  href: d3d11-graphics-programming-guide-effects-set-state.md
+                - name: Anwenden einer Technik
+                  href: d3d11-graphics-programming-guide-effects-apply-technique.md
+            - name: Klonen eines Effekts
+              href: d3d11-graphics-programming-guide-effects-cloning.md
+            - name: Stream out-Syntax
+              href: d3d11-graphics-reference-effect-streamout.md
+            - name: Unterschiede zwischen den Effekten 10 und Effekte 11
+              href: d3d11-graphics-programming-guide-effects-differences.md
+        - name: Migrieren zu Direct3D 11
+          href: d3d11-programming-guide-migrating.md
+        - name: Direct3D-Video Schnittstellen
+          href: direct3d-video-interfaces.md
+    - name: 'Referenz zu Direct3D 11, Dienstprogrammen und Effekten'
+      href: atoc-d3d11-graphics-reference.md
+      items:
+        - name: "Referenz für Direct3D\_11"
+          href: d3d11-graphics-reference.md
+          items:
+            - name: Core-Referenz
+              href: d3d11-graphics-reference-d3d11-core.md
+              items:
+                - name: Core-Schnittstellen
+                  href: d3d11-graphics-reference-d3d11-core-interfaces.md
+                  items:
+                    - name: ID3D11Asynchronous
+                      href: /windows/win32/api/D3D11/nn-d3d11-id3d11asynchronous
+                      items:
+                        - name: Getdatasize
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11asynchronous-getdatasize
+                    - name: ID3D11BlendState
+                      href: /windows/win32/api/D3D11/nn-d3d11-id3d11blendstate
+                      items:
+                        - name: GetDesc
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11blendstate-getdesc
+                    - name: ID3D11BlendState1
+                      href: /windows/win32/api/D3D11_1/nn-d3d11_1-id3d11blendstate1
+                      items:
+                        - name: GetDesc1
+                          href: /windows/win32/api/D3D11_1/nf-d3d11_1-id3d11blendstate1-getdesc1
+                    - name: ID3D11CommandList
+                      href: /windows/win32/api/D3D11/nn-d3d11-id3d11commandlist
+                      items:
+                        - name: Getcontextflags
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11commandlist-getcontextflags
+                    - name: ID3D11Counter
+                      href: /windows/win32/api/D3D11/nn-d3d11-id3d11counter
+                      items:
+                        - name: GetDesc
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11counter-getdesc
+                    - name: ID3D11DepthStencilState
+                      href: /windows/win32/api/D3D11/nn-d3d11-id3d11depthstencilstate
+                      items:
+                        - name: GetDesc
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11depthstencilstate-getdesc
+                    - name: ID3D11Device
+                      href: /windows/win32/api/D3D11/nn-d3d11-id3d11device
+                      items:
+                        - name: Prüfpunkt
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11device-checkcounter
+                        - name: Checkcounterinfo
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11device-checkcounterinfo
+                        - name: CheckFeatureSupport
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11device-checkfeaturesupport
+                        - name: Checkformatsupport
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11device-checkformatsupport
+                        - name: Checkmultisamplequalitylevels
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11device-checkmultisamplequalitylevels
+                        - name: '"Kreateblendstate"'
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11device-createblendstate
+                        - name: '"Up Buffer"'
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11device-createbuffer
+                        - name: '"Kreateclassverknüpfung"'
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11device-createclasslinkage
+                        - name: '"Kreatecomputeshader"'
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11device-createcomputeshader
+                        - name: '"Kreatecounter"'
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11device-createcounter
+                        - name: '"Kreatedeferredcontext"'
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11device-createdeferredcontext
+                        - name: '"Kreatedepthstencilstate"'
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11device-createdepthstencilstate
+                        - name: CreateDepthStencilView
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11device-createdepthstencilview
+                        - name: '"Kreatedomainshader"'
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11device-createdomainshader
+                        - name: '"Kreategeometryshader"'
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11device-creategeometryshader
+                        - name: '"Kreategeometryshaderwithstreamoutput"'
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11device-creategeometryshaderwithstreamoutput
+                        - name: '"Kreatehullshader"'
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11device-createhullshader
+                        - name: '"Kreatinput Layout"'
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11device-createinputlayout
+                        - name: '"Kreatepixelshader"'
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11device-createpixelshader
+                        - name: '"Kreatepredicate"'
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11device-createpredicate
+                        - name: CreateQuery
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11device-createquery
+                        - name: '"Kreaterasterizerstate"'
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11device-createrasterizerstate
+                        - name: CreateRenderTargetView
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11device-createrendertargetview
+                        - name: '"Kreatesamplerstate"'
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11device-createsamplerstate
+                        - name: CreateShaderResourceView
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11device-createshaderresourceview
+                        - name: CreateTexture1D
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11device-createtexture1d
+                        - name: CreateTexture2D
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11device-createtexture2d
+                        - name: CreateTexture3D
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11device-createtexture3d
+                        - name: CreateUnorderedAccessView
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11device-createunorderedaccessview
+                        - name: '"Kreatevertexshader"'
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11device-createvertexshader
+                        - name: GetCreationFlags
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11device-getcreationflags
+                        - name: GetDeviceRemovedReason
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11device-getdeviceremovedreason
+                        - name: Getexceptionmode
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11device-getexceptionmode
+                        - name: Getfeaturelevel
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11device-getfeaturelevel
+                        - name: Getimmediatecontext
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11device-getimmediatecontext
+                        - name: GetPrivateData
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11device-getprivatedata
+                        - name: Opensharedresource
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11device-opensharedresource
+                        - name: '"Abtexceptionmode"'
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11device-setexceptionmode
+                        - name: SetPrivateData
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11device-setprivatedata
+                        - name: SetPrivateDataInterface
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11device-setprivatedatainterface
+                    - name: ID3D11Device1
+                      href: /windows/win32/api/D3D11_1/nn-d3d11_1-id3d11device1
+                      items:
+                        - name: CreateBlendState1
+                          href: /windows/win32/api/D3D11_1/nf-d3d11_1-id3d11device1-createblendstate1
+                        - name: CreateDeferredContext1
+                          href: /windows/win32/api/D3D11_1/nf-d3d11_1-id3d11device1-createdeferredcontext1
+                        - name: '"Kreatedevicecontextstate"'
+                          href: /windows/win32/api/D3D11_1/nf-d3d11_1-id3d11device1-createdevicecontextstate
+                        - name: CreateRasterizerState1
+                          href: /windows/win32/api/D3D11_1/nf-d3d11_1-id3d11device1-createrasterizerstate1
+                        - name: GetImmediateContext1
+                          href: /windows/win32/api/D3D11_1/nf-d3d11_1-id3d11device1-getimmediatecontext1
+                        - name: OpenSharedResource1
+                          href: /windows/win32/api/D3D11_1/nf-d3d11_1-id3d11device1-opensharedresource1
+                        - name: Opensharedresourcebyname
+                          href: /windows/win32/api/D3D11_1/nf-d3d11_1-id3d11device1-opensharedresourcebyname
+                    - name: ID3D11Device2
+                      href: /windows/win32/api/D3D11_2/nn-d3d11_2-id3d11device2
+                      items:
+                        - name: CheckMultisampleQualityLevels1-Methode
+                          href: /windows/win32/api/D3D11_2/nf-d3d11_2-id3d11device2-checkmultisamplequalitylevels1
+                        - name: CreateDeferredContext2-Methode
+                          href: /windows/win32/api/D3D11_2/nf-d3d11_2-id3d11device2-createdeferredcontext2
+                        - name: GetImmediateContext2-Methode
+                          href: /windows/win32/api/D3D11_2/nf-d3d11_2-id3d11device2-getimmediatecontext2
+                        - name: Getresourcetiult-Methode
+                          href: /windows/win32/api/D3D11_2/nf-d3d11_2-id3d11device2-getresourcetiling
+                    - name: ID3D11Device3
+                      href: /windows/win32/api/D3D11_3/nn-d3d11_3-id3d11device3
+                      items:
+                        - name: CreateDeferredContext3-Methode
+                          href: /windows/win32/api/d3d11_3/nf-d3d11_3-id3d11device3-createdeferredcontext3
+                        - name: CreateQuery1-Methode
+                          href: /windows/win32/api/D3D11_3/nf-d3d11_3-id3d11device3-createquery1
+                        - name: CreateRasterizerState2-Methode
+                          href: /windows/win32/api/D3D11_3/nf-d3d11_3-id3d11device3-createrasterizerstate2
+                        - name: CreateRenderTargetView1-Methode
+                          href: /windows/win32/api/D3D11_3/nf-d3d11_3-id3d11device3-createrendertargetview1
+                        - name: CreateShaderResourceView1-Methode
+                          href: /windows/win32/api/D3D11_3/nf-d3d11_3-id3d11device3-createshaderresourceview1
+                        - name: CreateTexture2D1-Methode
+                          href: /windows/win32/api/D3D11_3/nf-d3d11_3-id3d11device3-createtexture2d1
+                        - name: CreateTexture3D1-Methode
+                          href: /windows/win32/api/D3D11_3/nf-d3d11_3-id3d11device3-createtexture3d1
+                        - name: CreateUnorderedAccessView1-Methode
+                          href: /windows/win32/api/D3D11_3/nf-d3d11_3-id3d11device3-createunorderedaccessview1
+                        - name: GetImmediateContext3-Methode
+                          href: /windows/win32/api/d3d11_3/nf-d3d11_3-id3d11device3-getimmediatecontext3
+                        - name: Read fromsubresource-Methode
+                          href: /windows/win32/api/d3d11_3/nf-d3d11_3-id3d11device3-readfromsubresource
+                        - name: Methode "Write-desubresource"
+                          href: /windows/win32/api/d3d11_3/nf-d3d11_3-id3d11device3-writetosubresource
+                    - name: ID3D11Device4
+                      href: /windows/win32/api/d3d11_4/nn-d3d11_4-id3d11device4
+                      items:
+                        - name: Registerdeviceremoveabvent
+                          href: /windows/win32/api/d3d11_4/nf-d3d11_4-id3d11device4-registerdeviceremovedevent
+                        - name: Unregisterdeviceremoved
+                          href: /windows/win32/api/d3d11_4/nf-d3d11_4-id3d11device4-unregisterdeviceremoved
+                    - name: ID3D11Device5
+                      href: /windows/win32/api/d3d11_4/nn-d3d11_4-id3d11device5
+                      items:
+                        - name: CreateFence
+                          href: /windows/win32/api/d3d11_4/nf-d3d11_4-id3d11device5-createfence
+                        - name: Opensharedfence
+                          href: /windows/win32/api/d3d11_4/nf-d3d11_4-id3d11device5-opensharedfence
+                    - name: ID3D11DeviceChild
+                      href: /windows/win32/api/D3D11/nn-d3d11-id3d11devicechild
+                      items:
+                        - name: GetDevice
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicechild-getdevice
+                        - name: GetPrivateData
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicechild-getprivatedata
+                        - name: SetPrivateData
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicechild-setprivatedata
+                        - name: SetPrivateDataInterface
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicechild-setprivatedatainterface
+                    - name: ID3D11DeviceContext
+                      href: /windows/win32/api/D3D11/nn-d3d11-id3d11devicecontext
+                      items:
+                        - name: Starten
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-begin
+                        - name: ClearDepthStencilView
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-cleardepthstencilview
+                        - name: ClearRenderTargetView
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-clearrendertargetview
+                        - name: ClearState
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-clearstate
+                        - name: ClearUnorderedAccessViewUint
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-clearunorderedaccessviewuint
+                        - name: ClearUnorderedAccessViewFloat
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-clearunorderedaccessviewfloat
+                        - name: CopyResource
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-copyresource
+                        - name: Copystructurecount
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-copystructurecount
+                        - name: Copysubresourceregion
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-copysubresourceregion
+                        - name: Csgetconstantbuffers
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-csgetconstantbuffers
+                        - name: Csgetsamplers
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-csgetsamplers
+                        - name: Csgetshader
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-csgetshader
+                        - name: Csgetshaderresources
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-csgetshaderresources
+                        - name: Csgetunorderedaccessviews
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-csgetunorderedaccessviews
+                        - name: Cssetconstantbuffers
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-cssetconstantbuffers
+                        - name: Cssetsamplers
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-cssetsamplers
+                        - name: CSSetShader
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-cssetshader
+                        - name: Cssetshaderresources
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-cssetshaderresources
+                        - name: Cssetunorderedaccessviews
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-cssetunorderedaccessviews
+                        - name: Dispatch
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-dispatch
+                        - name: Dispatchindirekte
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-dispatchindirect
+                        - name: Draw
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-draw
+                        - name: Drawauto
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-drawauto
+                        - name: DrawIndexed
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-drawindexed
+                        - name: DrawIndexedInstanced
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-drawindexedinstanced
+                        - name: Drawindexedinstancedindirect
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-drawindexedinstancedindirect
+                        - name: DrawInstanced
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-drawinstanced
+                        - name: Drawinstancedindirect
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-drawinstancedindirect
+                        - name: Dsgetconstantbuffers
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-dsgetconstantbuffers
+                        - name: Dsgetsamplers
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-dsgetsamplers
+                        - name: Dsgetshader
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-dsgetshader
+                        - name: Dsgetshaderresources
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-dsgetshaderresources
+                        - name: Dssetconstantbuffers
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-dssetconstantbuffers
+                        - name: Dssetsamplers
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-dssetsamplers
+                        - name: Dssetshader
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-dssetshader
+                        - name: Dssetshaderresources
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-dssetshaderresources
+                        - name: Ende
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-end
+                        - name: '"Executecommandlist'
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-executecommandlist
+                        - name: Finishcommandlist
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-finishcommandlist
+                        - name: Leerung
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-flush
+                        - name: Generatemips
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-generatemips
+                        - name: Getcontextflags
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-getcontextflags
+                        - name: GetData
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-getdata
+                        - name: Getprediation
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-getpredication
+                        - name: Getresourceminlod
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-getresourceminlod
+                        - name: GetType
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-gettype
+                        - name: Gsgetconstantbuffers
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-gsgetconstantbuffers
+                        - name: Gsgetsamplers
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-gsgetsamplers
+                        - name: Gsgetshader
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-gsgetshader
+                        - name: Gsgetshaderresources
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-gsgetshaderresources
+                        - name: Gssetconstantbuffers
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-gssetconstantbuffers
+                        - name: Gssetsamplers
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-gssetsamplers
+                        - name: Gssetshader
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-gssetshader
+                        - name: Gssetshaderresources
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-gssetshaderresources
+                        - name: Hsgetconstantbuffers
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-hsgetconstantbuffers
+                        - name: Hsgetsamplers
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-hsgetsamplers
+                        - name: Hsgetshader
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-hsgetshader
+                        - name: Hsgetshaderresources
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-hsgetshaderresources
+                        - name: Hssetconstantbuffers
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-hssetconstantbuffers
+                        - name: Hssetsamplers
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-hssetsamplers
+                        - name: Hssetshader
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-hssetshader
+                        - name: Hssetshaderresources
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-hssetshaderresources
+                        - name: Iagetindexbuffer
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-iagetindexbuffer
+                        - name: Iagetinputlayout
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-iagetinputlayout
+                        - name: Iagetprimitivetopology
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-iagetprimitivetopology
+                        - name: Iagetvertexbuffers
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-iagetvertexbuffers
+                        - name: IASetIndexBuffer
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-iasetindexbuffer
+                        - name: Iasetinputlayout
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-iasetinputlayout
+                        - name: IASetPrimitiveTopology
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-iasetprimitivetopology
+                        - name: IASetVertexBuffers
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-iasetvertexbuffers
+                        - name: Zuordnung
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-map
+                        - name: Omgetblendstate
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-omgetblendstate
+                        - name: Omgetdepthstencilstate
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-omgetdepthstencilstate
+                        - name: OMGetRenderTargets
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-omgetrendertargets
+                        - name: OMGetRenderTargetsAndUnorderedAccessViews
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-omgetrendertargetsandunorderedaccessviews
+                        - name: Omsetblendstate
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-omsetblendstate
+                        - name: Omsetdepthstencilstate
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-omsetdepthstencilstate
+                        - name: OMSetRenderTargets
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-omsetrendertargets
+                        - name: Omantrendertargeandandunorderedaccessviews
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-omsetrendertargetsandunorderedaccessviews
+                        - name: Psgetconstantbuffers
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-psgetconstantbuffers
+                        - name: Psgetsamplers
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-psgetsamplers
+                        - name: Psgetshader
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-psgetshader
+                        - name: Psgetshaderresources
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-psgetshaderresources
+                        - name: Pssetconstantbuffers
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-pssetconstantbuffers
+                        - name: Pssetsamplers
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-pssetsamplers
+                        - name: PSSetShader
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-pssetshader
+                        - name: Pssetshaderresources
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-pssetshaderresources
+                        - name: ResolveSubresource
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-resolvesubresource
+                        - name: Rsgezcissorrects
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-rsgetscissorrects
+                        - name: Rsgetstate
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-rsgetstate
+                        - name: Rsgetviewports
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-rsgetviewports
+                        - name: RSSetScissorRects
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-rssetscissorrects
+                        - name: Rssetstate
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-rssetstate
+                        - name: RSSetViewports
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-rssetviewports
+                        - name: SetPredication
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-setpredication
+                        - name: '"Ctresourceminlod"'
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-setresourceminlod
+                        - name: Sogettargets
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-sogettargets
+                        - name: SOSetTargets
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-sosettargets
+                        - name: Unmap
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-unmap
+                        - name: Updatesubresource
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-updatesubresource
+                        - name: Vsgetconstantbuffers
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-vsgetconstantbuffers
+                        - name: Vsgetsamplers
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-vsgetsamplers
+                        - name: Vsgetshader
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-vsgetshader
+                        - name: Vsgetshaderresources
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-vsgetshaderresources
+                        - name: Vssetconstantbuffers
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-vssetconstantbuffers
+                        - name: Vssetsamplers
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-vssetsamplers
+                        - name: Vssetshader
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-vssetshader
+                        - name: Vssetshaderresources
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11devicecontext-vssetshaderresources
+                    - name: ID3D11DeviceContext1
+                      href: /windows/win32/api/D3D11_1/nn-d3d11_1-id3d11devicecontext1
+                      items:
+                        - name: Clearview
+                          href: /windows/win32/api/D3D11_1/nf-d3d11_1-id3d11devicecontext1-clearview
+                        - name: CopySubresourceRegion1
+                          href: /windows/win32/api/D3D11_1/nf-d3d11_1-id3d11devicecontext1-copysubresourceregion1
+                        - name: CSGetConstantBuffers1
+                          href: /windows/win32/api/D3D11_1/nf-d3d11_1-id3d11devicecontext1-csgetconstantbuffers1
+                        - name: CSSetConstantBuffers1
+                          href: /windows/win32/api/D3D11_1/nf-d3d11_1-id3d11devicecontext1-cssetconstantbuffers1
+                        - name: DiscardResource
+                          href: /windows/win32/api/D3D11_1/nf-d3d11_1-id3d11devicecontext1-discardresource
+                        - name: Verwerfen von Ansichten
+                          href: /windows/win32/api/D3D11_1/nf-d3d11_1-id3d11devicecontext1-discardview
+                        - name: DiscardView1
+                          href: /windows/win32/api/D3D11_1/nf-d3d11_1-id3d11devicecontext1-discardview1
+                        - name: DSGetConstantBuffers1
+                          href: /windows/win32/api/D3D11_1/nf-d3d11_1-id3d11devicecontext1-dsgetconstantbuffers1
+                        - name: DSSetConstantBuffers1
+                          href: /windows/win32/api/D3D11_1/nf-d3d11_1-id3d11devicecontext1-dssetconstantbuffers1
+                        - name: GSGetConstantBuffers1
+                          href: /windows/win32/api/D3D11_1/nf-d3d11_1-id3d11devicecontext1-gsgetconstantbuffers1
+                        - name: GSSetConstantBuffers1
+                          href: /windows/win32/api/D3D11_1/nf-d3d11_1-id3d11devicecontext1-gssetconstantbuffers1
+                        - name: HSGetConstantBuffers1
+                          href: /windows/win32/api/D3D11_1/nf-d3d11_1-id3d11devicecontext1-hsgetconstantbuffers1
+                        - name: HSSetConstantBuffers1
+                          href: /windows/win32/api/D3D11_1/nf-d3d11_1-id3d11devicecontext1-hssetconstantbuffers1
+                        - name: PSGetConstantBuffers1
+                          href: /windows/win32/api/D3D11_1/nf-d3d11_1-id3d11devicecontext1-psgetconstantbuffers1
+                        - name: PSSetConstantBuffers1
+                          href: /windows/win32/api/D3D11_1/nf-d3d11_1-id3d11devicecontext1-pssetconstantbuffers1
+                        - name: VSGetConstantBuffers1
+                          href: /windows/win32/api/D3D11_1/nf-d3d11_1-id3d11devicecontext1-vsgetconstantbuffers1
+                        - name: VSSetConstantBuffers1
+                          href: /windows/win32/api/D3D11_1/nf-d3d11_1-id3d11devicecontext1-vssetconstantbuffers1
+                        - name: Austausch von "austauschen"
+                          href: /windows/win32/api/D3D11_1/nf-d3d11_1-id3d11devicecontext1-swapdevicecontextstate
+                        - name: UpdateSubresource1
+                          href: /windows/win32/api/D3D11_1/nf-d3d11_1-id3d11devicecontext1-updatesubresource1
+                    - name: ID3D11DeviceContext2
+                      href: /windows/win32/api/D3D11_2/nn-d3d11_2-id3d11devicecontext2
+                      items:
+                        - name: Begineventint-Methode
+                          href: /windows/win32/api/d3d11_2/nf-d3d11_2-id3d11devicecontext2-begineventint
+                        - name: Copytiles-Methode
+                          href: /windows/win32/api/D3D11_2/nf-d3d11_2-id3d11devicecontext2-copytiles
+                        - name: Copytilemappings-Methode
+                          href: /windows/win32/api/D3D11_2/nf-d3d11_2-id3d11devicecontext2-copytilemappings
+                        - name: Endevent-Methode
+                          href: /windows/win32/api/d3d11_2/nf-d3d11_2-id3d11devicecontext2-endevent
+                        - name: Isannotationaktivierte Methode
+                          href: /windows/win32/api/d3d11_2/nf-d3d11_2-id3d11devicecontext2-isannotationenabled
+                        - name: Resizetilepool-Methode
+                          href: /windows/win32/api/D3D11_2/nf-d3d11_2-id3d11devicecontext2-resizetilepool
+                        - name: Setmarkerint-Methode
+                          href: /windows/win32/api/d3d11_2/nf-d3d11_2-id3d11devicecontext2-setmarkerint
+                        - name: Tiledresourcebarrier-Methode
+                          href: /windows/win32/api/D3D11_2/nf-d3d11_2-id3d11devicecontext2-tiledresourcebarrier
+                        - name: Updatetilemappings-Methode
+                          href: /windows/win32/api/D3D11_2/nf-d3d11_2-id3d11devicecontext2-updatetilemappings
+                        - name: Updatetiles-Methode
+                          href: /windows/win32/api/D3D11_2/nf-d3d11_2-id3d11devicecontext2-updatetiles
+                    - name: ID3D11DeviceContext3
+                      href: /windows/win32/api/d3d11_3/nn-d3d11_3-id3d11devicecontext3
+                      items:
+                        - name: Flush1-Methode
+                          href: /windows/win32/api/d3d11_3/nf-d3d11_3-id3d11devicecontext3-flush1
+                        - name: Gethardwareschutzstate-Methode
+                          href: /windows/win32/api/d3d11_3/nf-d3d11_3-id3d11devicecontext3-gethardwareprotectionstate
+                        - name: '"Lthardwareschutzstate"-Methode'
+                          href: /windows/win32/api/d3d11_3/nf-d3d11_3-id3d11devicecontext3-sethardwareprotectionstate
+                    - name: ID3D11DeviceContext4
+                      href: /windows/win32/api/d3d11_3/nn-d3d11_3-id3d11devicecontext4
+                      items:
+                        - name: Signal
+                          href: /windows/win32/api/d3d11_3/nf-d3d11_3-id3d11devicecontext4-signal
+                        - name: Warten
+                          href: /windows/win32/api/d3d11_3/nf-d3d11_3-id3d11devicecontext4-wait
+                    - name: ID3DDeviceContextState
+                      href: /windows/win32/api/d3d11_1/nn-d3d11_1-id3ddevicecontextstate
+                    - name: ID3D11Fence
+                      href: /windows/win32/api/D3D11_3/nn-d3d11_3-id3d11fence
+                      items:
+                        - name: CreateSharedHandle
+                          href: /windows/win32/api/D3D11_3/nf-d3d11_3-id3d11fence-createsharedhandle
+                        - name: GetCompletedValue
+                          href: /windows/win32/api/D3D11_3/nf-d3d11_3-id3d11fence-getcompletedvalue
+                        - name: SetEventOnCompletion
+                          href: /windows/win32/api/D3D11_3/nf-d3d11_3-id3d11fence-seteventoncompletion
+                    - name: ID3D11InputLayout
+                      href: /windows/win32/api/d3d11/nn-d3d11-id3d11inputlayout
+                    - name: ID3D11Multithread
+                      href: /windows/win32/api/d3d11_4/nn-d3d11_4-id3d11multithread
+                      items:
+                        - name: Enter-Methode
+                          href: /windows/win32/api/d3d11_4/nf-d3d11_4-id3d11multithread-enter
+                        - name: Getmultithreadprotected-Methode
+                          href: /windows/win32/api/d3d11_4/nf-d3d11_4-id3d11multithread-getmultithreadprotected
+                        - name: Leave-Methode
+                          href: /windows/win32/api/d3d11_4/nf-d3d11_4-id3d11multithread-leave
+                        - name: Setmultithreadprotected-Methode
+                          href: /windows/win32/api/d3d11_4/nf-d3d11_4-id3d11multithread-setmultithreadprotected
+                    - name: ID3D11Predicate
+                      href: /windows/win32/api/d3d11/nn-d3d11-id3d11predicate
+                    - name: ID3D11Query
+                      href: /windows/win32/api/D3D11/nn-d3d11-id3d11query
+                      items:
+                        - name: GetDesc
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11query-getdesc
+                    - name: ID3D11Query1
+                      href: /windows/win32/api/D3D11_3/nn-d3d11_3-id3d11query1
+                      items:
+                        - name: GetDesc1-Methode
+                          href: /windows/win32/api/D3D11_3/nf-d3d11_3-id3d11query1-getdesc1
+                    - name: ID3D11RasterizerState
+                      href: /windows/win32/api/D3D11/nn-d3d11-id3d11rasterizerstate
+                      items:
+                        - name: GetDesc
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11rasterizerstate-getdesc
+                    - name: ID3D11RasterizerState1
+                      href: /windows/win32/api/D3D11_1/nn-d3d11_1-id3d11rasterizerstate1
+                      items:
+                        - name: GetDesc1
+                          href: /windows/win32/api/D3D11_1/nf-d3d11_1-id3d11rasterizerstate1-getdesc1
+                    - name: ID3D11RasterizerState2
+                      href: /windows/win32/api/D3D11_3/nn-d3d11_3-id3d11rasterizerstate2
+                      items:
+                        - name: GetDesc2-Methode
+                          href: /windows/win32/api/D3D11_3/nf-d3d11_3-id3d11rasterizerstate2-getdesc2
+                    - name: ID3D11SamplerState
+                      href: /windows/win32/api/D3D11/nn-d3d11-id3d11samplerstate
+                      items:
+                        - name: GetDesc
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11samplerstate-getdesc
+                - name: Core-Funktionen
+                  href: d3d11-graphics-reference-d3d11-core-functions.md
+                  items:
+                    - name: D3D11CreateDevice
+                      href: /windows/win32/api/D3D11/nf-d3d11-d3d11createdevice
+                    - name: D3D11CreateDeviceAndSwapChain
+                      href: /windows/win32/api/D3D11/nf-d3d11-d3d11createdeviceandswapchain
+                - name: Core-Strukturen
+                  href: d3d11-graphics-reference-d3d11-core-structures.md
+                  items:
+                    - name: D3D11_BLEND_DESC
+                      href: /windows/win32/api/D3D11/ns-d3d11-d3d11_blend_desc
+                    - name: D3D11_BLEND_DESC1
+                      href: /windows/win32/api/D3D11_1/ns-d3d11_1-cd3d11_blend_desc1
+                    - name: D3D11_BOX
+                      href: /windows/win32/api/D3D11/ns-d3d11-d3d11_box
+                    - name: D3D11_COUNTER_DESC
+                      href: /windows/win32/api/D3D11/ns-d3d11-d3d11_counter_desc
+                    - name: D3D11_COUNTER_INFO
+                      href: /windows/win32/api/D3D11/ns-d3d11-d3d11_counter_info
+                    - name: D3D11_DEPTH_STENCIL_DESC
+                      href: /windows/win32/api/D3D11/ns-d3d11-d3d11_depth_stencil_desc
+                    - name: D3D11_DEPTH_STENCILOP_DESC
+                      href: /windows/win32/api/D3D11/ns-d3d11-d3d11_depth_stencilop_desc
+                    - name: D3D11_DRAW_INDEXED_INSTANCED_INDIRECT_ARGS
+                      href: /windows/win32/api/d3d11/ns-d3d11-d3d11_draw_indexed_instanced_indirect_args
+                    - name: D3D11_DRAW_INSTANCED_INDIRECT_ARGS
+                      href: /windows/win32/api/d3d11/ns-d3d11-d3d11_draw_instanced_indirect_args
+                    - name: D3D11_FEATURE_DATA_ARCHITECTURE_INFO
+                      href: /windows/win32/api/D3D11/ns-d3d11-d3d11_feature_data_architecture_info
+                    - name: D3D11_FEATURE_DATA_D3D9_OPTIONS
+                      href: /windows/win32/api/D3D11/ns-d3d11-d3d11_feature_data_d3d9_options
+                    - name: D3D11_FEATURE_DATA_D3D9_OPTIONS1
+                      href: /windows/win32/api/D3D11/ns-d3d11-d3d11_feature_data_d3d9_options1
+                    - name: D3D11_FEATURE_DATA_D3D9_SHADOW_SUPPORT
+                      href: /windows/win32/api/D3D11/ns-d3d11-d3d11_feature_data_d3d9_shadow_support
+                    - name: D3D11_FEATURE_DATA_D3D9_SIMPLE_INSTANCING_SUPPORT
+                      href: /windows/win32/api/D3D11/ns-d3d11-d3d11_feature_data_d3d9_simple_instancing_support
+                    - name: D3D11_FEATURE_DATA_D3D10_X_HARDWARE_OPTIONS
+                      href: /windows/win32/api/D3D11/ns-d3d11-d3d11_feature_data_d3d10_x_hardware_options
+                    - name: D3D11_FEATURE_DATA_D3D11_OPTIONS
+                      href: /windows/win32/api/D3D11/ns-d3d11-d3d11_feature_data_d3d11_options
+                    - name: D3D11_FEATURE_DATA_D3D11_OPTIONS1
+                      href: /windows/win32/api/D3D11/ns-d3d11-d3d11_feature_data_d3d11_options1
+                    - name: D3D11_FEATURE_DATA_D3D11_OPTIONS2
+                      href: /windows/win32/api/D3D11/ns-d3d11-d3d11_feature_data_d3d11_options2
+                    - name: D3D11_FEATURE_DATA_D3D11_OPTIONS3
+                      href: /windows/win32/api/d3d11/ns-d3d11-d3d11_feature_data_d3d11_options3
+                    - name: D3D11_FEATURE_DATA_D3D11_OPTIONS4
+                      href: /windows/win32/api/d3d11_4/ns-d3d11_4-d3d11_feature_data_d3d11_options4
+                    - name: D3D11_FEATURE_DATA_D3D11_OPTIONS5
+                      href: /windows/win32/api/d3d11/ns-d3d11-d3d11_feature_data_d3d11_options5
+                    - name: D3D11_FEATURE_DATA_DOUBLES
+                      href: /windows/win32/api/D3D11/ns-d3d11-d3d11_feature_data_doubles
+                    - name: D3D11_FEATURE_DATA_FORMAT_SUPPORT
+                      href: /windows/win32/api/D3D11/ns-d3d11-d3d11_feature_data_format_support
+                    - name: D3D11_FEATURE_DATA_FORMAT_SUPPORT2
+                      href: /windows/win32/api/D3D11/ns-d3d11-d3d11_feature_data_format_support2
+                    - name: D3D11_FEATURE_DATA_GPU_VIRTUAL_ADDRESS_SUPPORT
+                      href: /windows/win32/api/d3d11/ns-d3d11-d3d11_feature_data_gpu_virtual_address_support
+                    - name: D3D11_FEATURE_DATA_MARKER_SUPPORT
+                      href: /windows/win32/api/D3D11/ns-d3d11-d3d11_feature_data_marker_support
+                    - name: D3D11_FEATURE_DATA_SHADER_CACHE
+                      href: /windows/win32/api/d3d11/ns-d3d11-d3d11_feature_data_shader_cache
+                    - name: D3D11_FEATURE_DATA_SHADER_MIN_PRECISION_SUPPORT
+                      href: /windows/win32/api/D3D11/ns-d3d11-d3d11_feature_data_shader_min_precision_support
+                    - name: D3D11_FEATURE_DATA_THREADING
+                      href: /windows/win32/api/D3D11/ns-d3d11-d3d11_feature_data_threading
+                    - name: D3D11_INPUT_ELEMENT_DESC
+                      href: /windows/win32/api/D3D11/ns-d3d11-d3d11_input_element_desc
+                    - name: D3D11_QUERY_DATA_PIPELINE_STATISTICS
+                      href: /windows/win32/api/D3D11/ns-d3d11-d3d11_query_data_pipeline_statistics
+                    - name: D3D11_QUERY_DATA_SO_STATISTICS
+                      href: /windows/win32/api/D3D11/ns-d3d11-d3d11_query_data_so_statistics
+                    - name: D3D11_QUERY_DATA_TIMESTAMP_DISJOINT
+                      href: /windows/win32/api/D3D11/ns-d3d11-d3d11_query_data_timestamp_disjoint
+                    - name: D3D11_QUERY_DESC
+                      href: /windows/win32/api/D3D11/ns-d3d11-d3d11_query_desc
+                    - name: D3D11_QUERY_DESC1
+                      href: /windows/win32/api/D3D11_3/ns-d3d11_3-cd3d11_query_desc1
+                    - name: D3D11_RASTERIZER_DESC
+                      href: /windows/win32/api/D3D11/ns-d3d11-d3d11_rasterizer_desc
+                    - name: D3D11_RASTERIZER_DESC1
+                      href: /windows/win32/api/D3D11_1/ns-d3d11_1-cd3d11_rasterizer_desc1
+                    - name: D3D11_RASTERIZER_DESC2
+                      href: /windows/win32/api/D3D11_3/ns-d3d11_3-cd3d11_rasterizer_desc2
+                    - name: D3D11_RECT
+                      href: d3d11-rect.md
+                    - name: D3D11_RENDER_TARGET_BLEND_DESC
+                      href: /windows/win32/api/D3D11/ns-d3d11-d3d11_render_target_blend_desc
+                    - name: D3D11_RENDER_TARGET_BLEND_DESC1
+                      href: /windows/win32/api/D3D11_1/ns-d3d11_1-d3d11_render_target_blend_desc1
+                    - name: D3D11_SAMPLER_DESC
+                      href: /windows/win32/api/D3D11/ns-d3d11-d3d11_sampler_desc
+                    - name: D3D11_SO_DECLARATION_ENTRY
+                      href: /windows/win32/api/D3D11/ns-d3d11-d3d11_so_declaration_entry
+                    - name: D3D11_VIEWPORT
+                      href: /windows/win32/api/D3D11/ns-d3d11-d3d11_viewport
+                - name: Core-Enumerationen
+                  href: d3d11-graphics-reference-d3d11-core-enums.md
+                  items:
+                    - name: D3D11_ASYNC_GETDATA_FLAG
+                      href: /windows/win32/api/D3D11/ne-d3d11-d3d11_async_getdata_flag
+                    - name: D3D11_BLEND
+                      href: /windows/win32/api/D3D11/ne-d3d11-d3d11_blend
+                    - name: D3D11_BLEND_OP
+                      href: /windows/win32/api/D3D11/ne-d3d11-d3d11_blend_op
+                    - name: D3D11_CLEAR_FLAG
+                      href: /windows/win32/api/D3D11/ne-d3d11-d3d11_clear_flag
+                    - name: D3D11_COLOR_WRITE_ENABLE
+                      href: /windows/win32/api/D3D11/ne-d3d11-d3d11_color_write_enable
+                    - name: D3D11_COMPARISON_FUNC
+                      href: /windows/win32/api/D3D11/ne-d3d11-d3d11_comparison_func
+                    - name: D3D11_CONSERVATIVE_RASTERIZATION_MODE
+                      href: /windows/win32/api/D3D11_3/ne-d3d11_3-d3d11_conservative_rasterization_mode
+                    - name: D3D11_CONSERVATIVE_RASTERIZATION_TIER
+                      href: /windows/win32/api/D3D11/ne-d3d11-d3d11_conservative_rasterization_tier
+                    - name: D3D11_CONTEXT_TYPE
+                      href: /windows/win32/api/D3D11_3/ne-d3d11_3-d3d11_context_type
+                    - name: D3D11_COPY_FLAGS
+                      href: /windows/win32/api/D3D11_1/ne-d3d11_1-d3d11_copy_flags
+                    - name: D3D11_COUNTER
+                      href: /windows/win32/api/D3D11/ne-d3d11-d3d11_counter
+                    - name: D3D11_COUNTER_TYPE
+                      href: /windows/win32/api/D3D11/ne-d3d11-d3d11_counter_type
+                    - name: D3D11_CREATE_DEVICE_FLAG
+                      href: /windows/win32/api/D3D11/ne-d3d11-d3d11_create_device_flag
+                    - name: D3D11_1_CREATE_DEVICE_CONTEXT_STATE_FLAG
+                      href: /windows/win32/api/D3D11_1/ne-d3d11_1-d3d11_1_create_device_context_state_flag
+                    - name: D3D11_CULL_MODE
+                      href: /windows/win32/api/D3D11/ne-d3d11-d3d11_cull_mode
+                    - name: D3D11_DEPTH_WRITE_MASK
+                      href: /windows/win32/api/D3D11/ne-d3d11-d3d11_depth_write_mask
+                    - name: D3D11_DEVICE_CONTEXT_TYPE
+                      href: /windows/win32/api/D3D11/ne-d3d11-d3d11_device_context_type
+                    - name: D3D11_FEATURE
+                      href: /windows/win32/api/D3D11/ne-d3d11-d3d11_feature
+                    - name: D3D11_FENCE_FLAG
+                      href: /windows/win32/api/d3d11_3/ne-d3d11_3-d3d11_fence_flag
+                    - name: D3D11_FILL_MODE
+                      href: /windows/win32/api/D3D11/ne-d3d11-d3d11_fill_mode
+                    - name: D3D11_FILTER
+                      href: /windows/win32/api/D3D11/ne-d3d11-d3d11_filter
+                    - name: D3D11_FILTER_TYPE
+                      href: /windows/win32/api/D3D11/ne-d3d11-d3d11_filter_type
+                    - name: D3D11_FILTER_REDUCTION_TYPE
+                      href: /windows/win32/api/d3d11/ne-d3d11-d3d11_filter_reduction_type
+                    - name: D3D11_FORMAT_SUPPORT
+                      href: /windows/win32/api/D3D11/ne-d3d11-d3d11_format_support
+                    - name: D3D11_FORMAT_SUPPORT2
+                      href: /windows/win32/api/D3D11/ne-d3d11-d3d11_format_support2
+                    - name: D3D11_INPUT_CLASSIFICATION
+                      href: /windows/win32/api/D3D11/ne-d3d11-d3d11_input_classification
+                    - name: D3D11_LOGIC_OP
+                      href: /windows/win32/api/D3D11_1/ne-d3d11_1-d3d11_logic_op
+                    - name: D3D11_PRIMITIVE
+                      href: /windows/win32/api/d3dcommon/ne-d3dcommon-d3d_primitive
+                    - name: D3D11_PRIMITIVE_TOPOLOGY
+                      href: /previous-versions/windows/desktop/legacy/ff476189(v=vs.85)
+                    - name: D3D11_QUERY
+                      href: /windows/win32/api/D3D11/ne-d3d11-d3d11_query
+                    - name: D3D11_QUERY_MISC_FLAG
+                      href: /windows/win32/api/D3D11/ne-d3d11-d3d11_query_misc_flag
+                    - name: D3D11_RAISE_FLAG
+                      href: /windows/win32/api/D3D11/ne-d3d11-d3d11_raise_flag
+                    - name: D3D11_SHADER_CACHE_SUPPORT_FLAGS
+                      href: /windows/win32/api/d3d11/ne-d3d11-d3d11_shader_cache_support_flags
+                    - name: D3D11_SHADER_MIN_PRECISION_SUPPORT
+                      href: /windows/win32/api/D3D11/ne-d3d11-d3d11_shader_min_precision_support
+                    - name: D3D11_SHARED_RESOURCE_TIER
+                      href: /windows/win32/api/d3d11/ne-d3d11-d3d11_shared_resource_tier
+                    - name: D3D11_STENCIL_OP
+                      href: /windows/win32/api/D3D11/ne-d3d11-d3d11_stencil_op
+                    - name: D3D11_TEXTURE_ADDRESS_MODE
+                      href: /windows/win32/api/D3D11/ne-d3d11-d3d11_texture_address_mode
+                    - name: D3D11_TEXTURECUBE_FACE
+                      href: /windows/win32/api/D3D11/ne-d3d11-d3d11_texturecube_face
+                    - name: D3D11_TILED_RESOURCES_TIER
+                      href: /windows/win32/api/D3D11/ne-d3d11-d3d11_tiled_resources_tier
+            - name: Ebenenverweis
+              href: d3d11-graphics-reference-d3d11-layer.md
+              items:
+                - name: Ebenenschnittstellen
+                  href: d3d11-graphics-reference-d3d11-layer-interfaces.md
+                  items:
+                    - name: ID3D11Debug
+                      href: /windows/win32/api/D3D11SDKLayers/nn-d3d11sdklayers-id3d11debug
+                      items:
+                        - name: GetFeatureMask
+                          href: /windows/win32/api/D3D11SDKLayers/nf-d3d11sdklayers-id3d11debug-getfeaturemask
+                        - name: Getpresentperrenderopdelay
+                          href: /windows/win32/api/D3D11SDKLayers/nf-d3d11sdklayers-id3d11debug-getpresentperrenderopdelay
+                        - name: Geout wapchain
+                          href: /windows/win32/api/D3D11SDKLayers/nf-d3d11sdklayers-id3d11debug-getswapchain
+                        - name: ReportLiveDeviceObjects
+                          href: /windows/win32/api/D3D11SDKLayers/nf-d3d11sdklayers-id3d11debug-reportlivedeviceobjects
+                        - name: SetFeatureMask
+                          href: /windows/win32/api/D3D11SDKLayers/nf-d3d11sdklayers-id3d11debug-setfeaturemask
+                        - name: Setpresentperrenderopdelay
+                          href: /windows/win32/api/D3D11SDKLayers/nf-d3d11sdklayers-id3d11debug-setpresentperrenderopdelay
+                        - name: '"-Wapchain"'
+                          href: /windows/win32/api/D3D11SDKLayers/nf-d3d11sdklayers-id3d11debug-setswapchain
+                        - name: Validatecontext
+                          href: /windows/win32/api/D3D11SDKLayers/nf-d3d11sdklayers-id3d11debug-validatecontext
+                        - name: Validatecontextfordispatch
+                          href: /windows/win32/api/D3D11SDKLayers/nf-d3d11sdklayers-id3d11debug-validatecontextfordispatch
+                    - name: ID3D11InfoQueue
+                      href: /windows/win32/api/D3D11SDKLayers/nn-d3d11sdklayers-id3d11infoqueue
+                      items:
+                        - name: AddApplicationMessage
+                          href: /windows/win32/api/D3D11SDKLayers/nf-d3d11sdklayers-id3d11infoqueue-addapplicationmessage
+                        - name: AddMessage
+                          href: /windows/win32/api/D3D11SDKLayers/nf-d3d11sdklayers-id3d11infoqueue-addmessage
+                        - name: AddRetrievalFilterEntries
+                          href: /windows/win32/api/D3D11SDKLayers/nf-d3d11sdklayers-id3d11infoqueue-addretrievalfilterentries
+                        - name: AddStorageFilterEntries
+                          href: /windows/win32/api/D3D11SDKLayers/nf-d3d11sdklayers-id3d11infoqueue-addstoragefilterentries
+                        - name: ClearRetrievalFilter
+                          href: /windows/win32/api/D3D11SDKLayers/nf-d3d11sdklayers-id3d11infoqueue-clearretrievalfilter
+                        - name: ClearStorageFilter
+                          href: /windows/win32/api/D3D11SDKLayers/nf-d3d11sdklayers-id3d11infoqueue-clearstoragefilter
+                        - name: ClearStoredMessages
+                          href: /windows/win32/api/D3D11SDKLayers/nf-d3d11sdklayers-id3d11infoqueue-clearstoredmessages
+                        - name: GetBreakOnCategory
+                          href: /windows/win32/api/D3D11SDKLayers/nf-d3d11sdklayers-id3d11infoqueue-getbreakoncategory
+                        - name: Getbreakonid
+                          href: /windows/win32/api/D3D11SDKLayers/nf-d3d11sdklayers-id3d11infoqueue-getbreakonid
+                        - name: GetBreakOnSeverity
+                          href: /windows/win32/api/D3D11SDKLayers/nf-d3d11sdklayers-id3d11infoqueue-getbreakonseverity
+                        - name: GetMessage
+                          href: /windows/win32/api/D3D11SDKLayers/nf-d3d11sdklayers-id3d11infoqueue-getmessage
+                        - name: GetMessageCountLimit
+                          href: /windows/win32/api/D3D11SDKLayers/nf-d3d11sdklayers-id3d11infoqueue-getmessagecountlimit
+                        - name: GetMuteDebugOutput
+                          href: /windows/win32/api/D3D11SDKLayers/nf-d3d11sdklayers-id3d11infoqueue-getmutedebugoutput
+                        - name: GetNumMessagesAllowedByStorageFilter
+                          href: /windows/win32/api/D3D11SDKLayers/nf-d3d11sdklayers-id3d11infoqueue-getnummessagesallowedbystoragefilter
+                        - name: GetNumMessagesDeniedByStorageFilter
+                          href: /windows/win32/api/D3D11SDKLayers/nf-d3d11sdklayers-id3d11infoqueue-getnummessagesdeniedbystoragefilter
+                        - name: GetNumMessagesDiscardedByMessageCountLimit
+                          href: /windows/win32/api/D3D11SDKLayers/nf-d3d11sdklayers-id3d11infoqueue-getnummessagesdiscardedbymessagecountlimit
+                        - name: GetNumStoredMessages
+                          href: /windows/win32/api/D3D11SDKLayers/nf-d3d11sdklayers-id3d11infoqueue-getnumstoredmessages
+                        - name: GetNumStoredMessagesAllowedByRetrievalFilter
+                          href: /windows/win32/api/D3D11SDKLayers/nf-d3d11sdklayers-id3d11infoqueue-getnumstoredmessagesallowedbyretrievalfilter
+                        - name: GetRetrievalFilter
+                          href: /windows/win32/api/D3D11SDKLayers/nf-d3d11sdklayers-id3d11infoqueue-getretrievalfilter
+                        - name: GetRetrievalFilterStackSize
+                          href: /windows/win32/api/D3D11SDKLayers/nf-d3d11sdklayers-id3d11infoqueue-getretrievalfilterstacksize
+                        - name: GetStorageFilter
+                          href: /windows/win32/api/D3D11SDKLayers/nf-d3d11sdklayers-id3d11infoqueue-getstoragefilter
+                        - name: GetStorageFilterStackSize
+                          href: /windows/win32/api/D3D11SDKLayers/nf-d3d11sdklayers-id3d11infoqueue-getstoragefilterstacksize
+                        - name: PopRetrievalFilter
+                          href: /windows/win32/api/D3D11SDKLayers/nf-d3d11sdklayers-id3d11infoqueue-popretrievalfilter
+                        - name: PopStorageFilter
+                          href: /windows/win32/api/D3D11SDKLayers/nf-d3d11sdklayers-id3d11infoqueue-popstoragefilter
+                        - name: PushCopyOfRetrievalFilter
+                          href: /windows/win32/api/D3D11SDKLayers/nf-d3d11sdklayers-id3d11infoqueue-pushcopyofretrievalfilter
+                        - name: PushCopyOfStorageFilter
+                          href: /windows/win32/api/D3D11SDKLayers/nf-d3d11sdklayers-id3d11infoqueue-pushcopyofstoragefilter
+                        - name: PushEmptyRetrievalFilter
+                          href: /windows/win32/api/D3D11SDKLayers/nf-d3d11sdklayers-id3d11infoqueue-pushemptyretrievalfilter
+                        - name: PushEmptyStorageFilter
+                          href: /windows/win32/api/D3D11SDKLayers/nf-d3d11sdklayers-id3d11infoqueue-pushemptystoragefilter
+                        - name: PushRetrievalFilter
+                          href: /windows/win32/api/D3D11SDKLayers/nf-d3d11sdklayers-id3d11infoqueue-pushretrievalfilter
+                        - name: PushStorageFilter
+                          href: /windows/win32/api/D3D11SDKLayers/nf-d3d11sdklayers-id3d11infoqueue-pushstoragefilter
+                        - name: SetBreakOnCategory
+                          href: /windows/win32/api/D3D11SDKLayers/nf-d3d11sdklayers-id3d11infoqueue-setbreakoncategory
+                        - name: Setbreakonid
+                          href: /windows/win32/api/D3D11SDKLayers/nf-d3d11sdklayers-id3d11infoqueue-setbreakonid
+                        - name: SetBreakOnSeverity
+                          href: /windows/win32/api/D3D11SDKLayers/nf-d3d11sdklayers-id3d11infoqueue-setbreakonseverity
+                        - name: SetMessageCountLimit
+                          href: /windows/win32/api/D3D11SDKLayers/nf-d3d11sdklayers-id3d11infoqueue-setmessagecountlimit
+                        - name: SetMuteDebugOutput
+                          href: /windows/win32/api/D3D11SDKLayers/nf-d3d11sdklayers-id3d11infoqueue-setmutedebugoutput
+                    - name: ID3D11RefDefaultTrackingOptions
+                      href: /windows/win32/api/D3D11SDKLayers/nn-d3d11sdklayers-id3d11refdefaulttrackingoptions
+                      items:
+                        - name: Settrackingoptions
+                          href: /windows/win32/api/D3D11SDKLayers/nf-d3d11sdklayers-id3d11refdefaulttrackingoptions-settrackingoptions
+                    - name: ID3D11RefTrackingOptions
+                      href: /windows/win32/api/D3D11SDKLayers/nn-d3d11sdklayers-id3d11reftrackingoptions
+                      items:
+                        - name: Settrackingoptions
+                          href: /windows/win32/api/D3D11SDKLayers/nf-d3d11sdklayers-id3d11reftrackingoptions-settrackingoptions
+                    - name: ID3D11SwitchToRef
+                      href: /windows/win32/api/D3D11SDKLayers/nn-d3d11sdklayers-id3d11switchtoref
+                      items:
+                        - name: Getuseref
+                          href: /windows/win32/api/D3D11SDKLayers/nf-d3d11sdklayers-id3d11switchtoref-getuseref
+                        - name: Setuseref
+                          href: /windows/win32/api/D3D11SDKLayers/nf-d3d11sdklayers-id3d11switchtoref-setuseref
+                    - name: ID3D11TracingDevice
+                      href: /windows/win32/api/D3D11SDKLayers/nn-d3d11sdklayers-id3d11tracingdevice
+                      items:
+                        - name: Setshadertrackingoptions
+                          href: /windows/win32/api/D3D11SDKLayers/nf-d3d11sdklayers-id3d11tracingdevice-setshadertrackingoptions
+                        - name: Setshadertrackingoptionsbytype
+                          href: /windows/win32/api/D3D11SDKLayers/nf-d3d11sdklayers-id3d11tracingdevice-setshadertrackingoptionsbytype
+                - name: Ebenenstrukturen
+                  href: d3d11-graphics-reference-d3d11-layer-structures.md
+                  items:
+                    - name: D3D11_INFO_QUEUE_FILTER
+                      href: /windows/win32/api/D3D11SDKLayers/ns-d3d11sdklayers-d3d11_info_queue_filter
+                    - name: D3D11_INFO_QUEUE_FILTER_DESC
+                      href: /windows/win32/api/D3D11SDKLayers/ns-d3d11sdklayers-d3d11_info_queue_filter_desc
+                    - name: D3D11_MESSAGE
+                      href: /windows/win32/api/D3D11SDKLayers/ns-d3d11sdklayers-d3d11_message
+                - name: Ebenenenumerationen
+                  href: d3d11-graphics-reference-d3d11-layer-enums.md
+                  items:
+                    - name: D3D11_MESSAGE_CATEGORY
+                      href: /windows/win32/api/D3D11SDKLayers/ne-d3d11sdklayers-d3d11_message_category
+                    - name: D3D11_MESSAGE_ID
+                      href: /windows/win32/api/D3D11SDKLayers/ne-d3d11sdklayers-d3d11_message_id
+                    - name: D3D11_MESSAGE_SEVERITY
+                      href: /windows/win32/api/D3D11SDKLayers/ne-d3d11sdklayers-d3d11_message_severity
+                    - name: D3D11_RLDO_FLAGS
+                      href: /windows/win32/api/D3D11SDKLayers/ne-d3d11sdklayers-d3d11_rldo_flags
+                    - name: D3D11_SHADER_TRACKING_OPTIONS
+                      href: /windows/win32/api/D3D11SDKLayers/ne-d3d11sdklayers-d3d11_shader_tracking_options
+                    - name: D3D11_SHADER_TRACKING_RESOURCE_TYPE
+                      href: /windows/win32/api/D3D11SDKLayers/ne-d3d11sdklayers-d3d11_shader_tracking_resource_type
+            - name: Ressourcen Verweis
+              href: d3d11-graphics-reference-resource.md
+              items:
+                - name: Ressourcen Schnittstellen
+                  href: d3d11-graphics-reference-resource-interfaces.md
+                  items:
+                    - name: ID3D11Buffer
+                      href: /windows/win32/api/D3D11/nn-d3d11-id3d11buffer
+                      items:
+                        - name: GetDesc
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11buffer-getdesc
+                    - name: ID3D11DepthStencilView
+                      href: /windows/win32/api/D3D11/nn-d3d11-id3d11depthstencilview
+                      items:
+                        - name: GetDesc
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11depthstencilview-getdesc
+                    - name: ID3D11RenderTargetView
+                      href: /windows/win32/api/D3D11/nn-d3d11-id3d11rendertargetview
+                      items:
+                        - name: GetDesc
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11rendertargetview-getdesc
+                    - name: ID3D11RenderTargetView1
+                      href: /windows/win32/api/D3D11_3/nn-d3d11_3-id3d11rendertargetview1
+                      items:
+                        - name: GetDesc1-Methode
+                          href: /windows/win32/api/D3D11_3/nf-d3d11_3-id3d11rendertargetview1-getdesc1
+                    - name: ID3D11Resource
+                      href: /windows/win32/api/D3D11/nn-d3d11-id3d11resource
+                      items:
+                        - name: Getevictionpriority
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11resource-getevictionpriority
+                        - name: GetType
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11resource-gettype
+                        - name: '"Mentevictionpriority"'
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11resource-setevictionpriority
+                    - name: ID3D11ShaderResourceView
+                      href: /windows/win32/api/D3D11/nn-d3d11-id3d11shaderresourceview
+                      items:
+                        - name: GetDesc
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11shaderresourceview-getdesc
+                    - name: ID3D11ShaderResourceView1
+                      href: /windows/win32/api/D3D11_3/nn-d3d11_3-id3d11shaderresourceview1
+                      items:
+                        - name: GetDesc1-Methode
+                          href: /windows/win32/api/D3D11_3/nf-d3d11_3-id3d11shaderresourceview1-getdesc1
+                    - name: ID3D11Texture1D
+                      href: /windows/win32/api/D3D11/nn-d3d11-id3d11texture1d
+                      items:
+                        - name: GetDesc
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11texture1d-getdesc
+                    - name: ID3D11Texture2D
+                      href: /windows/win32/api/D3D11/nn-d3d11-id3d11texture2d
+                      items:
+                        - name: GetDesc
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11texture2d-getdesc
+                    - name: ID3D11Texture2D1
+                      href: /windows/win32/api/D3D11_3/nn-d3d11_3-id3d11texture2d1
+                      items:
+                        - name: GetDesc1-Methode
+                          href: /windows/win32/api/D3D11_3/nf-d3d11_3-id3d11texture2d1-getdesc1
+                    - name: ID3D11Texture3D
+                      href: /windows/win32/api/D3D11/nn-d3d11-id3d11texture3d
+                      items:
+                        - name: GetDesc
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11texture3d-getdesc
+                    - name: ID3D11Texture3D1
+                      href: /windows/win32/api/D3D11_3/nn-d3d11_3-id3d11texture3d1
+                      items:
+                        - name: GetDesc1-Methode
+                          href: /windows/win32/api/D3D11_3/nf-d3d11_3-id3d11texture3d1-getdesc1
+                    - name: ID3D11UnorderedAccessView
+                      href: /windows/win32/api/D3D11/nn-d3d11-id3d11unorderedaccessview
+                      items:
+                        - name: GetDesc
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11unorderedaccessview-getdesc
+                    - name: ID3D11UnorderedAccessView1
+                      href: /windows/win32/api/D3D11_3/nn-d3d11_3-id3d11unorderedaccessview1
+                      items:
+                        - name: GetDesc1-Methode
+                          href: /windows/win32/api/D3D11_3/nf-d3d11_3-id3d11unorderedaccessview1-getdesc1
+                    - name: ID3D11View
+                      href: /windows/win32/api/D3D11/nn-d3d11-id3d11view
+                      items:
+                        - name: GetResource
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11view-getresource
+                - name: Ressourcen Funktionen
+                  href: d3d11-graphics-reference-resource-functions.md
+                  items:
+                    - name: D3D11CalcSubresource
+                      href: /windows/win32/api/D3D11/nf-d3d11-d3d11calcsubresource
+                - name: Ressourcen Strukturen
+                  href: d3d11-graphics-reference-resource-structures.md
+                  items:
+                    - name: D3D11_BUFFER_DESC
+                      href: /windows/win32/api/D3D11/ns-d3d11-d3d11_buffer_desc
+                    - name: D3D11_BUFFER_RTV
+                      href: /windows/win32/api/D3D11/ns-d3d11-d3d11_buffer_rtv
+                    - name: D3D11_BUFFER_SRV
+                      href: /windows/win32/api/D3D11/ns-d3d11-d3d11_buffer_srv
+                    - name: D3D11_BUFFER_UAV
+                      href: /windows/win32/api/D3D11/ns-d3d11-d3d11_buffer_uav
+                    - name: D3D11_BUFFEREX_SRV
+                      href: /windows/win32/api/D3D11/ns-d3d11-d3d11_bufferex_srv
+                    - name: D3D11_DEPTH_STENCIL_VIEW_DESC
+                      href: /windows/win32/api/D3D11/ns-d3d11-d3d11_depth_stencil_view_desc
+                    - name: D3D11_MAPPED_SUBRESOURCE
+                      href: /windows/win32/api/D3D11/ns-d3d11-d3d11_mapped_subresource
+                    - name: D3D11_PACKED_MIP_DESC
+                      href: /windows/win32/api/d3d11_2/ns-d3d11_2-d3d11_packed_mip_desc
+                    - name: D3D11_RENDER_TARGET_VIEW_DESC
+                      href: /windows/win32/api/D3D11/ns-d3d11-d3d11_render_target_view_desc
+                    - name: D3D11_RENDER_TARGET_VIEW_DESC1
+                      href: /windows/win32/api/D3D11_3/ns-d3d11_3-cd3d11_render_target_view_desc1
+                    - name: D3D11_SHADER_RESOURCE_VIEW_DESC
+                      href: /windows/win32/api/d3d11/ns-d3d11-d3d11_shader_resource_view_desc
+                    - name: D3D11_SHADER_RESOURCE_VIEW_DESC1
+                      href: /windows/win32/api/D3D11_3/ns-d3d11_3-cd3d11_shader_resource_view_desc1
+                    - name: D3D11_SUBRESOURCE_DATA
+                      href: /windows/win32/api/D3D11/ns-d3d11-d3d11_subresource_data
+                    - name: D3D11_SUBRESOURCE_TILING
+                      href: /windows/win32/api/D3D11_2/ns-d3d11_2-d3d11_subresource_tiling
+                    - name: D3D11_TEX1D_ARRAY_DSV
+                      href: /windows/win32/api/D3D11/ns-d3d11-d3d11_tex1d_array_dsv
+                    - name: D3D11_TEX1D_ARRAY_RTV
+                      href: /windows/win32/api/D3D11/ns-d3d11-d3d11_tex1d_array_rtv
+                    - name: D3D11_TEX1D_ARRAY_SRV
+                      href: /windows/win32/api/D3D11/ns-d3d11-d3d11_tex1d_array_srv
+                    - name: D3D11_TEX1D_ARRAY_UAV
+                      href: /windows/win32/api/D3D11/ns-d3d11-d3d11_tex1d_array_uav
+                    - name: D3D11_TEX1D_DSV
+                      href: /windows/win32/api/D3D11/ns-d3d11-d3d11_tex1d_dsv
+                    - name: D3D11_TEX1D_RTV
+                      href: /windows/win32/api/D3D11/ns-d3d11-d3d11_tex1d_rtv
+                    - name: D3D11_TEX1D_SRV
+                      href: /windows/win32/api/D3D11/ns-d3d11-d3d11_tex1d_srv
+                    - name: D3D11_TEX1D_UAV
+                      href: /windows/win32/api/D3D11/ns-d3d11-d3d11_tex1d_uav
+                    - name: D3D11_TEX2D_ARRAY_DSV
+                      href: /windows/win32/api/D3D11/ns-d3d11-d3d11_tex2d_array_dsv
+                    - name: D3D11_TEX2D_ARRAY_RTV
+                      href: /windows/win32/api/D3D11/ns-d3d11-d3d11_tex2d_array_rtv
+                    - name: D3D11_TEX2D_ARRAY_RTV1
+                      href: /windows/win32/api/D3D11_3/ns-d3d11_3-d3d11_tex2d_array_rtv1
+                    - name: D3D11_TEX2D_ARRAY_SRV
+                      href: /windows/win32/api/D3D11/ns-d3d11-d3d11_tex2d_array_srv
+                    - name: D3D11_TEX2D_ARRAY_SRV1
+                      href: /windows/win32/api/D3D11_3/ns-d3d11_3-d3d11_tex2d_array_srv1
+                    - name: D3D11_TEX2D_ARRAY_UAV
+                      href: /windows/win32/api/D3D11/ns-d3d11-d3d11_tex2d_array_uav
+                    - name: D3D11_TEX2D_ARRAY_UAV1
+                      href: /windows/win32/api/D3D11_3/ns-d3d11_3-d3d11_tex2d_array_uav1
+                    - name: D3D11_TEX2D_DSV
+                      href: /windows/win32/api/D3D11/ns-d3d11-d3d11_tex2d_dsv
+                    - name: D3D11_TEX2D_RTV
+                      href: /windows/win32/api/D3D11/ns-d3d11-d3d11_tex2d_rtv
+                    - name: D3D11_TEX2D_RTV1
+                      href: /windows/win32/api/D3D11_3/ns-d3d11_3-d3d11_tex2d_rtv1
+                    - name: D3D11_TEX2D_SRV
+                      href: /windows/win32/api/D3D11/ns-d3d11-d3d11_tex2d_srv
+                    - name: D3D11_TEX2D_SRV1
+                      href: /windows/win32/api/D3D11_3/ns-d3d11_3-d3d11_tex2d_srv1
+                    - name: D3D11_TEX2D_UAV
+                      href: /windows/win32/api/D3D11/ns-d3d11-d3d11_tex2d_uav
+                    - name: D3D11_TEX2D_UAV1
+                      href: /windows/win32/api/D3D11_3/ns-d3d11_3-d3d11_tex2d_uav1
+                    - name: D3D11_TEX2DMS_ARRAY_DSV
+                      href: /windows/win32/api/D3D11/ns-d3d11-d3d11_tex2dms_array_dsv
+                    - name: D3D11_TEX2DMS_ARRAY_RTV
+                      href: /windows/win32/api/D3D11/ns-d3d11-d3d11_tex2dms_array_rtv
+                    - name: D3D11_TEX2DMS_ARRAY_SRV
+                      href: /windows/win32/api/D3D11/ns-d3d11-d3d11_tex2dms_array_srv
+                    - name: D3D11_TEX2DMS_DSV
+                      href: /windows/win32/api/D3D11/ns-d3d11-d3d11_tex2dms_dsv
+                    - name: D3D11_TEX2DMS_RTV
+                      href: /windows/win32/api/D3D11/ns-d3d11-d3d11_tex2dms_rtv
+                    - name: D3D11_TEX2DMS_SRV
+                      href: /windows/win32/api/D3D11/ns-d3d11-d3d11_tex2dms_srv
+                    - name: D3D11_TEX3D_RTV
+                      href: /windows/win32/api/D3D11/ns-d3d11-d3d11_tex3d_rtv
+                    - name: D3D11_TEX3D_SRV
+                      href: /windows/win32/api/D3D11/ns-d3d11-d3d11_tex3d_srv
+                    - name: D3D11_TEX3D_UAV
+                      href: /windows/win32/api/D3D11/ns-d3d11-d3d11_tex3d_uav
+                    - name: D3D11_TEXCUBE_ARRAY_SRV
+                      href: /windows/win32/api/D3D11/ns-d3d11-d3d11_texcube_array_srv
+                    - name: D3D11_TEXCUBE_SRV
+                      href: /windows/win32/api/D3D11/ns-d3d11-d3d11_texcube_srv
+                    - name: D3D11_TEXTURE1D_DESC
+                      href: /windows/win32/api/D3D11/ns-d3d11-d3d11_texture1d_desc
+                    - name: D3D11_TEXTURE2D_DESC
+                      href: /windows/win32/api/D3D11/ns-d3d11-d3d11_texture2d_desc
+                    - name: D3D11_TEXTURE2D_DESC1
+                      href: /windows/win32/api/D3D11_3/ns-d3d11_3-cd3d11_texture2d_desc1
+                    - name: D3D11_TEXTURE3D_DESC
+                      href: /windows/win32/api/D3D11/ns-d3d11-d3d11_texture3d_desc
+                    - name: D3D11_TEXTURE3D_DESC1
+                      href: /windows/win32/api/D3D11_3/ns-d3d11_3-cd3d11_texture3d_desc1
+                    - name: D3D11_TILE_REGION_SIZE
+                      href: /windows/win32/api/D3D11_2/ns-d3d11_2-d3d11_tile_region_size
+                    - name: D3D11_TILED_RESOURCE_COORDINATE
+                      href: /windows/win32/api/D3D11_2/ns-d3d11_2-d3d11_tiled_resource_coordinate
+                    - name: D3D11_TILE_SHAPE
+                      href: /windows/win32/api/D3D11_2/ns-d3d11_2-d3d11_tile_shape
+                    - name: D3D11_UNORDERED_ACCESS_VIEW_DESC
+                      href: /windows/win32/api/D3D11/ns-d3d11-d3d11_unordered_access_view_desc
+                    - name: D3D11_UNORDERED_ACCESS_VIEW_DESC1
+                      href: /windows/win32/api/D3D11_3/ns-d3d11_3-cd3d11_unordered_access_view_desc1
+                - name: Ressourcenenumerationen
+                  href: d3d11-graphics-reference-resource-enums.md
+                  items:
+                    - name: D3D11_BIND_FLAG
+                      href: /windows/win32/api/D3D11/ne-d3d11-d3d11_bind_flag
+                    - name: D3D11_BUFFEREX_SRV_FLAG
+                      href: /windows/win32/api/D3D11/ne-d3d11-d3d11_bufferex_srv_flag
+                    - name: D3D11_BUFFER_UAV_FLAG
+                      href: /windows/win32/api/D3D11/ne-d3d11-d3d11_buffer_uav_flag
+                    - name: D3D11_CHECK_MULTISAMPLE_QUALITY_LEVELS_FLAG
+                      href: /windows/win32/api/D3D11_2/ne-d3d11_2-d3d11_check_multisample_quality_levels_flag
+                    - name: D3D11_CPU_ACCESS_FLAG
+                      href: /windows/win32/api/D3D11/ne-d3d11-d3d11_cpu_access_flag
+                    - name: D3D11_DSV_DIMENSION
+                      href: /windows/win32/api/D3D11/ne-d3d11-d3d11_dsv_dimension
+                    - name: D3D11_DSV_FLAG
+                      href: /windows/win32/api/D3D11/ne-d3d11-d3d11_dsv_flag
+                    - name: D3D11_MAP
+                      href: /windows/win32/api/D3D11/ne-d3d11-d3d11_map
+                    - name: D3D11_MAP_FLAG
+                      href: /windows/win32/api/D3D11/ne-d3d11-d3d11_map_flag
+                    - name: D3D11_RESOURCE_DIMENSION
+                      href: /windows/win32/api/D3D11/ne-d3d11-d3d11_resource_dimension
+                    - name: D3D11_RESOURCE_MISC_FLAG
+                      href: /windows/win32/api/D3D11/ne-d3d11-d3d11_resource_misc_flag
+                    - name: D3D11_RTV_DIMENSION
+                      href: /windows/win32/api/D3D11/ne-d3d11-d3d11_rtv_dimension
+                    - name: D3D11_SRV_DIMENSION
+                      href: /previous-versions/windows/desktop/legacy/ff476217(v=vs.85)
+                    - name: D3D11_STANDARD_MULTISAMPLE_QUALITY_LEVELS
+                      href: /windows/win32/api/D3D11/ne-d3d11-d3d11_standard_multisample_quality_levels
+                    - name: D3D11_TEXTURE_LAYOUT
+                      href: /windows/win32/api/D3D11_3/ne-d3d11_3-d3d11_texture_layout
+                    - name: D3D11_TILE_COPY_FLAG
+                      href: /windows/win32/api/D3D11_2/ne-d3d11_2-d3d11_tile_copy_flag
+                    - name: D3D11_TILE_MAPPING_FLAG
+                      href: /windows/win32/api/D3D11_2/ne-d3d11_2-d3d11_tile_mapping_flag
+                    - name: D3D11_TILE_RANGE_FLAG
+                      href: /windows/win32/api/d3d11_2/ne-d3d11_2-d3d11_tile_range_flag
+                    - name: D3D11_UAV_DIMENSION
+                      href: /windows/win32/api/D3D11/ne-d3d11-d3d11_uav_dimension
+                    - name: D3D11_USAGE
+                      href: /windows/win32/api/D3D11/ne-d3d11-d3d11_usage
+            - name: Shader-Referenz
+              href: d3d11-graphics-reference-d3d11-shader.md
+              items:
+                - name: Shader-Schnittstellen
+                  href: d3d11-graphics-reference-d3d11-shader-interfaces.md
+                  items:
+                    - name: ID3D11ClassInstance
+                      href: /windows/win32/api/D3D11/nn-d3d11-id3d11classinstance
+                      items:
+                        - name: Getclassverknüpfung
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11classinstance-getclasslinkage
+                        - name: GetDesc
+                          href: /windows/win32/api/d3d11/nf-d3d11-id3d11classinstance-getdesc
+                        - name: GetInstanceName
+                          href: /windows/win32/api/d3d11/nf-d3d11-id3d11classinstance-getinstancename
+                        - name: Gettyname
+                          href: /windows/win32/api/d3d11/nf-d3d11-id3d11classinstance-gettypename
+                    - name: ID3D11ClassLinkage
+                      href: /windows/win32/api/D3D11/nn-d3d11-id3d11classlinkage
+                      items:
+                        - name: '"Kreateclassinstance"'
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11classlinkage-createclassinstance
+                        - name: Getclassinstance
+                          href: /windows/win32/api/D3D11/nf-d3d11-id3d11classlinkage-getclassinstance
+                    - name: ID3D11ComputeShader
+                      href: /windows/win32/api/d3d11/nn-d3d11-id3d11computeshader
+                    - name: ID3D11DomainShader
+                      href: /windows/win32/api/d3d11/nn-d3d11-id3d11domainshader
+                    - name: ID3D11FunctionLinkingGraph
+                      href: /windows/win32/api/D3D11Shader/nn-d3d11shader-id3d11functionlinkinggraph
+                      items:
+                        - name: CallFunction-Methode
+                          href: /windows/win32/api/D3D11Shader/nf-d3d11shader-id3d11functionlinkinggraph-callfunction
+                        - name: Methode "kreatemoduleinstance"
+                          href: /windows/win32/api/D3D11Shader/nf-d3d11shader-id3d11functionlinkinggraph-createmoduleinstance
+                        - name: Generatehlsl-Methode
+                          href: /windows/win32/api/D3D11Shader/nf-d3d11shader-id3d11functionlinkinggraph-generatehlsl
+                        - name: GetLastError-Methode
+                          href: /windows/win32/api/D3D11Shader/nf-d3d11shader-id3d11functionlinkinggraph-getlasterror
+                        - name: Passvalue-Methode
+                          href: /windows/win32/api/D3D11Shader/nf-d3d11shader-id3d11functionlinkinggraph-passvalue
+                        - name: Passvaluewithswizzle-Methode
+                          href: /windows/win32/api/D3D11Shader/nf-d3d11shader-id3d11functionlinkinggraph-passvaluewithswizzle
+                        - name: '* Tinputsignature-Methode'
+                          href: /windows/win32/api/D3D11Shader/nf-d3d11shader-id3d11functionlinkinggraph-setinputsignature
+                        - name: Setoutputsignature-Methode
+                          href: /windows/win32/api/D3D11Shader/nf-d3d11shader-id3d11functionlinkinggraph-setoutputsignature
+                    - name: ID3D11FunctionReflection
+                      href: /windows/win32/api/D3D11Shader/nn-d3d11shader-id3d11functionreflection
+                      items:
+                        - name: Getconstantbufferbyindex-Methode
+                          href: /windows/win32/api/D3D11Shader/nf-d3d11shader-id3d11functionreflection-getconstantbufferbyindex
+                        - name: Getconstantbufferbyname-Methode
+                          href: /windows/win32/api/D3D11Shader/nf-d3d11shader-id3d11functionreflection-getconstantbufferbyname
+                        - name: Getdesc-Methode
+                          href: /windows/win32/api/D3D11Shader/nf-d3d11shader-id3d11functionreflection-getdesc
+                        - name: Getfunctionparameter-Methode
+                          href: /windows/win32/api/D3D11Shader/nf-d3d11shader-id3d11functionreflection-getfunctionparameter
+                        - name: Getresourcebindingdesc-Methode
+                          href: /windows/win32/api/D3D11Shader/nf-d3d11shader-id3d11functionreflection-getresourcebindingdesc
+                        - name: Getresourcebindingdescbyname-Methode
+                          href: /windows/win32/api/D3D11Shader/nf-d3d11shader-id3d11functionreflection-getresourcebindingdescbyname
+                        - name: Getvariablebyname-Methode
+                          href: /windows/win32/api/D3D11Shader/nf-d3d11shader-id3d11functionreflection-getvariablebyname
+                    - name: ID3D11FunctionParameterReflection
+                      href: /windows/win32/api/D3D11Shader/nn-d3d11shader-id3d11functionparameterreflection
+                      items:
+                        - name: Getdesc-Methode
+                          href: /windows/win32/api/D3D11Shader/nf-d3d11shader-id3d11functionparameterreflection-getdesc
+                    - name: ID3D11GeometryShader
+                      href: /windows/win32/api/d3d11/nn-d3d11-id3d11geometryshader
+                    - name: ID3D11HullShader
+                      href: /windows/win32/api/d3d11/nn-d3d11-id3d11hullshader
+                    - name: ID3D11LibraryReflection
+                      href: /windows/win32/api/D3D11Shader/nn-d3d11shader-id3d11libraryreflection
+                      items:
+                        - name: Getdesc-Methode
+                          href: /windows/win32/api/D3D11Shader/nf-d3d11shader-id3d11libraryreflection-getdesc
+                        - name: Getfunctionbyindex-Methode
+                          href: /windows/win32/api/D3D11Shader/nf-d3d11shader-id3d11libraryreflection-getfunctionbyindex
+                    - name: ID3D11Linker
+                      href: /windows/win32/api/D3D11Shader/nn-d3d11shader-id3d11linker
+                      items:
+                        - name: Addclipplanefromcbuffer-Methode
+                          href: /windows/win32/api/D3D11Shader/nf-d3d11shader-id3d11linker-addclipplanefromcbuffer
+                        - name: Link-Methode
+                          href: /windows/win32/api/D3D11Shader/nf-d3d11shader-id3d11linker-link
+                        - name: Uselibrary-Methode
+                          href: /windows/win32/api/D3D11Shader/nf-d3d11shader-id3d11linker-uselibrary
+                    - name: ID3D11LinkingNode
+                      href: /windows/win32/api/D3D11Shader/nn-d3d11shader-id3d11linkingnode
+                    - name: ID3D11Module
+                      href: /windows/win32/api/D3D11Shader/nn-d3d11shader-id3d11module
+                      items:
+                        - name: CreateInstance-Methode
+                          href: /windows/win32/api/D3D11Shader/nf-d3d11shader-id3d11module-createinstance
+                    - name: ID3D11ModuleInstance
+                      href: /windows/win32/api/D3D11Shader/nn-d3d11shader-id3d11moduleinstance
+                      items:
+                        - name: Bindconstantbuffer-Methode
+                          href: /windows/win32/api/D3D11Shader/nf-d3d11shader-id3d11moduleinstance-bindconstantbuffer
+                        - name: Bindconstantbufferbyname-Methode
+                          href: /windows/win32/api/D3D11Shader/nf-d3d11shader-id3d11moduleinstance-bindconstantbufferbyname
+                        - name: Bindresource-Methode
+                          href: /windows/win32/api/D3D11Shader/nf-d3d11shader-id3d11moduleinstance-bindresource
+                        - name: Bindresourceasunorderedaccessview-Methode
+                          href: /windows/win32/api/D3D11Shader/nf-d3d11shader-id3d11moduleinstance-bindresourceasunorderedaccessview
+                        - name: Bindresourceasunorderedaccessviewbyname-Methode
+                          href: /windows/win32/api/D3D11Shader/nf-d3d11shader-id3d11moduleinstance-bindresourceasunorderedaccessviewbyname
+                        - name: Bindresourcebyname-Methode
+                          href: /windows/win32/api/D3D11Shader/nf-d3d11shader-id3d11moduleinstance-bindresourcebyname
+                        - name: Bindsampler-Methode
+                          href: /windows/win32/api/D3D11Shader/nf-d3d11shader-id3d11moduleinstance-bindsampler
+                        - name: Bindsamplerbyname-Methode
+                          href: /windows/win32/api/D3D11Shader/nf-d3d11shader-id3d11moduleinstance-bindsamplerbyname
+                        - name: Bindunorderedaccessview-Methode
+                          href: /windows/win32/api/D3D11Shader/nf-d3d11shader-id3d11moduleinstance-bindunorderedaccessview
+                        - name: Bindunorderedaccessviewbyname-Methode
+                          href: /windows/win32/api/D3D11Shader/nf-d3d11shader-id3d11moduleinstance-bindunorderedaccessviewbyname
+                    - name: ID3D11PixelShader
+                      href: /windows/win32/api/d3d11/nn-d3d11-id3d11pixelshader
+                    - name: ID3D11ShaderReflection
+                      href: /windows/win32/api/D3D11Shader/nn-d3d11shader-id3d11shaderreflection
+                      items:
+                        - name: GetBitwiseInstructionCount
+                          href: /windows/win32/api/D3D11Shader/nf-d3d11shader-id3d11shaderreflection-getbitwiseinstructioncount
+                        - name: GetConstantBufferByIndex
+                          href: /windows/win32/api/D3D11Shader/nf-d3d11shader-id3d11shaderreflection-getconstantbufferbyindex
+                        - name: GetConstantBufferByName
+                          href: /windows/win32/api/D3D11Shader/nf-d3d11shader-id3d11shaderreflection-getconstantbufferbyname
+                        - name: GetConversionInstructionCount
+                          href: /windows/win32/api/D3D11Shader/nf-d3d11shader-id3d11shaderreflection-getconversioninstructioncount
+                        - name: GetDesc
+                          href: /windows/win32/api/D3D11Shader/nf-d3d11shader-id3d11shaderreflection-getdesc
+                        - name: GetGSInputPrimitive
+                          href: /windows/win32/api/D3D11Shader/nf-d3d11shader-id3d11shaderreflection-getgsinputprimitive
+                        - name: GetInputParameterDesc
+                          href: /windows/win32/api/D3D11Shader/nf-d3d11shader-id3d11shaderreflection-getinputparameterdesc
+                        - name: GetMinFeatureLevel
+                          href: /windows/win32/api/D3D11Shader/nf-d3d11shader-id3d11shaderreflection-getminfeaturelevel
+                        - name: GetMovInstructionCount
+                          href: /windows/win32/api/D3D11Shader/nf-d3d11shader-id3d11shaderreflection-getmovinstructioncount
+                        - name: GetMovcInstructionCount
+                          href: /windows/win32/api/D3D11Shader/nf-d3d11shader-id3d11shaderreflection-getmovcinstructioncount
+                        - name: GetNumInterfaceSlots
+                          href: /windows/win32/api/D3D11Shader/nf-d3d11shader-id3d11shaderreflection-getnuminterfaceslots
+                        - name: GetOutputParameterDesc
+                          href: /windows/win32/api/D3D11Shader/nf-d3d11shader-id3d11shaderreflection-getoutputparameterdesc
+                        - name: GetPatchConstantParameterDesc
+                          href: /windows/win32/api/D3D11Shader/nf-d3d11shader-id3d11shaderreflection-getpatchconstantparameterdesc
+                        - name: Getrequiresflags-Methode
+                          href: /windows/win32/api/D3D11Shader/nf-d3d11shader-id3d11shaderreflection-getrequiresflags
+                        - name: GetResourceBindingDesc
+                          href: /windows/win32/api/D3D11Shader/nf-d3d11shader-id3d11shaderreflection-getresourcebindingdesc
+                        - name: GetResourceBindingDescByName
+                          href: /windows/win32/api/D3D11Shader/nf-d3d11shader-id3d11shaderreflection-getresourcebindingdescbyname
+                        - name: GetThreadGroupSize
+                          href: /windows/win32/api/D3D11Shader/nf-d3d11shader-id3d11shaderreflection-getthreadgroupsize
+                        - name: GetVariableByName
+                          href: /windows/win32/api/D3D11Shader/nf-d3d11shader-id3d11shaderreflection-getvariablebyname
+                        - name: IsSampleFrequencyShader
+                          href: /windows/win32/api/D3D11Shader/nf-d3d11shader-id3d11shaderreflection-issamplefrequencyshader
+                    - name: ID3D11ShaderReflectionConstantBuffer
+                      href: /windows/win32/api/D3D11Shader/nn-d3d11shader-id3d11shaderreflectionconstantbuffer
+                      items:
+                        - name: GetDesc
+                          href: /windows/win32/api/D3D11Shader/nf-d3d11shader-id3d11shaderreflectionconstantbuffer-getdesc
+                        - name: GetVariableByIndex
+                          href: /windows/win32/api/D3D11Shader/nf-d3d11shader-id3d11shaderreflectionconstantbuffer-getvariablebyindex
+                        - name: GetVariableByName
+                          href: /windows/win32/api/D3D11Shader/nf-d3d11shader-id3d11shaderreflectionconstantbuffer-getvariablebyname
+                    - name: ID3D11ShaderReflectionType
+                      href: /windows/win32/api/D3D11Shader/nn-d3d11shader-id3d11shaderreflectiontype
+                      items:
+                        - name: GetBaseClass
+                          href: /windows/win32/api/D3D11Shader/nf-d3d11shader-id3d11shaderreflectiontype-getbaseclass
+                        - name: GetDesc
+                          href: /windows/win32/api/D3D11Shader/nf-d3d11shader-id3d11shaderreflectiontype-getdesc
+                        - name: GetInterfaceByIndex
+                          href: /windows/win32/api/D3D11Shader/nf-d3d11shader-id3d11shaderreflectiontype-getinterfacebyindex
+                        - name: GetMemberTypeByIndex
+                          href: /windows/win32/api/D3D11Shader/nf-d3d11shader-id3d11shaderreflectiontype-getmembertypebyindex
+                        - name: GetMemberTypeByName
+                          href: /windows/win32/api/D3D11Shader/nf-d3d11shader-id3d11shaderreflectiontype-getmembertypebyname
+                        - name: GetMemberTypeName
+                          href: /windows/win32/api/D3D11Shader/nf-d3d11shader-id3d11shaderreflectiontype-getmembertypename
+                        - name: GetNumInterfaces
+                          href: /windows/win32/api/D3D11Shader/nf-d3d11shader-id3d11shaderreflectiontype-getnuminterfaces
+                        - name: Getsubtype
+                          href: /windows/win32/api/D3D11Shader/nf-d3d11shader-id3d11shaderreflectiontype-getsubtype
+                        - name: ImplementsInterface
+                          href: /windows/win32/api/D3D11Shader/nf-d3d11shader-id3d11shaderreflectiontype-implementsinterface
+                        - name: IsEqual
+                          href: /windows/win32/api/D3D11Shader/nf-d3d11shader-id3d11shaderreflectiontype-isequal
+                        - name: IsOfType
+                          href: /windows/win32/api/D3D11Shader/nf-d3d11shader-id3d11shaderreflectiontype-isoftype
+                    - name: ID3D11ShaderReflectionVariable
+                      href: /windows/win32/api/D3D11Shader/nn-d3d11shader-id3d11shaderreflectionvariable
+                      items:
+                        - name: GetBuffer
+                          href: /windows/win32/api/d3d11shader/nf-d3d11shader-id3d11shaderreflectionvariable-getbuffer
+                        - name: GetDesc
+                          href: /windows/win32/api/D3D11Shader/nf-d3d11shader-id3d11shaderreflectionvariable-getdesc
+                        - name: GetInterfaceSlot
+                          href: /windows/win32/api/D3D11Shader/nf-d3d11shader-id3d11shaderreflectionvariable-getinterfaceslot
+                        - name: GetType
+                          href: /windows/win32/api/D3D11Shader/nf-d3d11shader-id3d11shaderreflectionvariable-gettype
+                    - name: ID3D11ShaderTrace
+                      href: /windows/win32/api/D3D11ShaderTracing/nn-d3d11shadertracing-id3d11shadertrace
+                      items:
+                        - name: Getinitialregistercontent
+                          href: /windows/win32/api/D3D11ShaderTracing/nf-d3d11shadertracing-id3d11shadertrace-getinitialregistercontents
+                        - name: Getreadregister
+                          href: /windows/win32/api/D3D11ShaderTracing/nf-d3d11shadertracing-id3d11shadertrace-getreadregister
+                        - name: Getstep
+                          href: /windows/win32/api/D3D11ShaderTracing/nf-d3d11shadertracing-id3d11shadertrace-getstep
+                        - name: Gettracestats
+                          href: /windows/win32/api/D3D11ShaderTracing/nf-d3d11shadertracing-id3d11shadertrace-gettracestats
+                        - name: Getwrite-Register
+                          href: /windows/win32/api/D3D11ShaderTracing/nf-d3d11shadertracing-id3d11shadertrace-getwrittenregister
+                        - name: Psselectstamp
+                          href: /windows/win32/api/D3D11ShaderTracing/nf-d3d11shadertracing-id3d11shadertrace-psselectstamp
+                        - name: Resettrace
+                          href: /windows/win32/api/D3D11ShaderTracing/nf-d3d11shadertracing-id3d11shadertrace-resettrace
+                        - name: Traceready
+                          href: /windows/win32/api/D3D11ShaderTracing/nf-d3d11shadertracing-id3d11shadertrace-traceready
+                    - name: ID3D11ShaderTraceFactory
+                      href: /windows/win32/api/D3D11ShaderTracing/nn-d3d11shadertracing-id3d11shadertracefactory
+                      items:
+                        - name: '"Kreateshadertrace"'
+                          href: /windows/win32/api/D3D11ShaderTracing/nf-d3d11shadertracing-id3d11shadertracefactory-createshadertrace
+                    - name: ID3D11VertexShader
+                      href: /windows/win32/api/d3d11/nn-d3d11-id3d11vertexshader
+                - name: Shaderfunktionen
+                  href: d3d11-graphics-reference-shader-functions.md
+                  items:
+                    - name: D3DDisassemble11Trace
+                      href: /windows/win32/api/D3D11ShaderTracing/nf-d3d11shadertracing-d3ddisassemble11trace
+                - name: Shader-Strukturen
+                  href: d3d11-graphics-reference-shader-structures.md
+                  items:
+                    - name: D3D11_CLASS_INSTANCE_DESC
+                      href: /windows/win32/api/D3D11/ns-d3d11-d3d11_class_instance_desc
+                    - name: D3D11_COMPUTE_SHADER_TRACE_DESC
+                      href: /windows/win32/api/D3D11ShaderTracing/ns-d3d11shadertracing-d3d11_compute_shader_trace_desc
+                    - name: D3D11_DOMAIN_SHADER_TRACE_DESC
+                      href: /windows/win32/api/D3D11ShaderTracing/ns-d3d11shadertracing-d3d11_domain_shader_trace_desc
+                    - name: D3D11_FUNCTION_DESC
+                      href: /windows/win32/api/D3D11Shader/ns-d3d11shader-d3d11_function_desc
+                    - name: D3D11_GEOMETRY_SHADER_TRACE_DESC
+                      href: /windows/win32/api/D3D11ShaderTracing/ns-d3d11shadertracing-d3d11_geometry_shader_trace_desc
+                    - name: D3D11_HULL_SHADER_TRACE_DESC
+                      href: /windows/win32/api/D3D11ShaderTracing/ns-d3d11shadertracing-d3d11_hull_shader_trace_desc
+                    - name: D3D11_LIBRARY_DESC
+                      href: /windows/win32/api/D3D11Shader/ns-d3d11shader-d3d11_library_desc
+                    - name: D3D11_PARAMETER_DESC
+                      href: /windows/win32/api/D3D11Shader/ns-d3d11shader-d3d11_parameter_desc
+                    - name: D3D11_PIXEL_SHADER_TRACE_DESC
+                      href: /windows/win32/api/D3D11ShaderTracing/ns-d3d11shadertracing-d3d11_pixel_shader_trace_desc
+                    - name: D3D11_SHADER_BUFFER_DESC
+                      href: /windows/win32/api/D3D11Shader/ns-d3d11shader-d3d11_shader_buffer_desc
+                    - name: D3D11_SHADER_DESC
+                      href: /windows/win32/api/D3D11Shader/ns-d3d11shader-d3d11_shader_desc
+                    - name: D3D11_SHADER_INPUT_BIND_DESC
+                      href: /windows/win32/api/D3D11Shader/ns-d3d11shader-d3d11_shader_input_bind_desc
+                    - name: D3D11_SHADER_TRACE_DESC
+                      href: /windows/win32/api/D3D11ShaderTracing/ns-d3d11shadertracing-d3d11_shader_trace_desc
+                    - name: D3D11_SHADER_TYPE_DESC
+                      href: /windows/win32/api/D3D11Shader/ns-d3d11shader-d3d11_shader_type_desc
+                    - name: D3D11_SHADER_VARIABLE_DESC
+                      href: /windows/win32/api/D3D11Shader/ns-d3d11shader-d3d11_shader_variable_desc
+                    - name: D3D11_SIGNATURE_PARAMETER_DESC
+                      href: /windows/win32/api/D3D11Shader/ns-d3d11shader-d3d11_signature_parameter_desc
+                    - name: D3D11_TRACE_REGISTER
+                      href: /windows/win32/api/D3D11ShaderTracing/ns-d3d11shadertracing-d3d11_trace_register
+                    - name: D3D11_TRACE_STATS
+                      href: /windows/win32/api/D3D11ShaderTracing/ns-d3d11shadertracing-d3d11_trace_stats
+                    - name: D3D11_TRACE_STEP
+                      href: /windows/win32/api/D3D11ShaderTracing/ns-d3d11shadertracing-d3d11_trace_step
+                    - name: D3D11_TRACE_VALUE
+                      href: /windows/win32/api/D3D11ShaderTracing/ns-d3d11shadertracing-d3d11_trace_value
+                    - name: D3D11_VERTEX_SHADER_TRACE_DESC
+                      href: /windows/win32/api/D3D11ShaderTracing/ns-d3d11shadertracing-d3d11_vertex_shader_trace_desc
+                - name: Shader-Enumerationen
+                  href: d3d11-graphics-reference-shader-enums.md
+                  items:
+                    - name: D3D11_CBUFFER_TYPE
+                      href: /previous-versions/windows/desktop/legacy/ff476097(v=vs.85)
+                    - name: D3D_PARAMETER_FLAGS
+                      href: /windows/win32/api/d3dcommon/ne-d3dcommon-d3d_parameter_flags
+                    - name: D3D11_RESOURCE_RETURN_TYPE
+                      href: /windows/win32/api/d3dcommon/ne-d3dcommon-d3d_resource_return_type
+                    - name: D3D11_SHADER_TYPE
+                      href: /windows/win32/api/D3D11ShaderTracing/ne-d3d11shadertracing-d3d11_shader_type
+                    - name: D3D11_SHADER_VERSION_TYPE
+                      href: /windows/win32/api/d3d11shader/ne-d3d11shader-d3d11_shader_version_type
+                    - name: D3D11_TESSELLATOR_DOMAIN
+                      href: /windows/win32/api/d3dcommon/ne-d3dcommon-d3d_tessellator_domain
+                    - name: D3D11_TESSELLATOR_PARTITIONING
+                      href: /windows/win32/api/d3dcommon/ne-d3dcommon-d3d_tessellator_partitioning
+                    - name: D3D11_TESSELLATOR_OUTPUT_PRIMITIVE
+                      href: /windows/win32/api/d3dcommon/ne-d3dcommon-d3d_tessellator_output_primitive
+                    - name: D3D11_TRACE_GS_INPUT_PRIMITIVE
+                      href: /windows/win32/api/D3D11ShaderTracing/ne-d3d11shadertracing-d3d11_trace_gs_input_primitive
+                    - name: D3D11_TRACE_REGISTER_TYPE
+                      href: /windows/win32/api/D3D11ShaderTracing/ne-d3d11shadertracing-d3d11_trace_register_type
+            - name: 10level9-Referenz
+              href: d3d11-graphics-reference-10level9.md
+              items:
+                - name: 10level9 ID3D11Device Methoden
+                  href: d3d11-graphics-reference-10level9-device.md
+                - name: 10level9 Verknüpfung id3d11devicecontext aus Methoden
+                  href: d3d11-graphics-reference-10level9-context.md
+            - name: Direct3D 11-Rückgabe Codes
+              href: d3d11-graphics-reference-returnvalues.md
+            - name: Allgemeine Versions Referenz
+              href: d3d11-graphics-reference-d3d11-common.md
+              items:
+                - name: Allgemeine Versions Schnittstellen
+                  href: d3d11-graphics-reference-d3d11-common-interfaces.md
+                  items:
+                    - name: ID3D10Blob
+                      href: /windows/win32/api/d3dcommon/nn-d3dcommon-id3d10blob
+                      items:
+                        - name: Getbufferpointer
+                          href: /windows/win32/api/d3dcommon/nf-d3dcommon-id3d10blob-getbufferpointer
+                        - name: GetBufferSize
+                          href: /windows/win32/api/d3dcommon/nf-d3dcommon-id3d10blob-getbuffersize
+                    - name: ID3DBlob
+                      href: /previous-versions/windows/desktop/legacy/ff728743(v=vs.85)
+                      items:
+                        - name: Getbufferpointer
+                          href: /previous-versions/windows/desktop/legacy/(v=vs.85)
+                        - name: GetBufferSize
+                          href: /previous-versions/windows/desktop/legacy/(v=vs.85)
+                    - name: ID3DDestructionNotifier
+                      href: /windows/win32/api/d3dcommon/nn-d3dcommon-id3ddestructionotifier
+                      items:
+                        - name: Registerdestruktioncallback
+                          href: /windows/win32/api/d3dcommon/nf-d3dcommon-id3ddestructionotifier-registerdestructioncallback
+                        - name: Unregisterdestruktioncallback
+                          href: /windows/win32/api/d3dcommon/nf-d3dcommon-id3ddestructionotifier-unregisterdestructioncallback
+                    - name: ID3DInclude
+                      href: /windows/win32/api/d3dcommon/nn-d3dcommon-id3dinclude
+                      items:
+                        - name: Schließen
+                          href: /windows/win32/api/d3dcommon/nf-d3dcommon-id3dinclude-close
+                        - name: Öffnen
+                          href: /windows/win32/api/d3dcommon/nf-d3dcommon-id3dinclude-open
+                    - name: ID3DUserDefinedAnnotation
+                      href: /windows/win32/api/D3D11_1/nn-d3d11_1-id3duserdefinedannotation
+                      items:
+                        - name: BeginEvent
+                          href: /windows/win32/api/D3D11_1/nf-d3d11_1-id3duserdefinedannotation-beginevent
+                        - name: EndEvent
+                          href: /windows/win32/api/D3D11_1/nf-d3d11_1-id3duserdefinedannotation-endevent
+                        - name: GetStatus
+                          href: /windows/win32/api/D3D11_1/nf-d3d11_1-id3duserdefinedannotation-getstatus
+                        - name: SetMarker
+                          href: /windows/win32/api/D3D11_1/nf-d3d11_1-id3duserdefinedannotation-setmarker
+                - name: Allgemeine Versions Strukturen
+                  href: d3d11-graphics-reference-d3d11-common-structures.md
+                  items:
+                    - name: D3D_SHADER_MACRO
+                      href: /windows/win32/api/d3dcommon/ns-d3dcommon-d3d_shader_macro
+                - name: Allgemeine Versions Enumerationen
+                  href: d3d11-graphics-reference-d3d11-common-enumerations.md
+                  items:
+                    - name: D3D_CBUFFER_TYPE
+                      href: /windows/win32/api/d3dcommon/ne-d3dcommon-d3d_cbuffer_type
+                    - name: D3D_DRIVER_TYPE
+                      href: /windows/win32/api/d3dcommon/ne-d3dcommon-d3d_driver_type
+                    - name: D3D_FEATURE_LEVEL
+                      href: /windows/win32/api/d3dcommon/ne-d3dcommon-d3d_feature_level
+                    - name: D3D_INCLUDE_TYPE
+                      href: /windows/win32/api/d3dcommon/ne-d3dcommon-d3d_include_type
+                    - name: D3D_INTERPOLATION_MODE
+                      href: /windows/win32/api/d3dcommon/ne-d3dcommon-d3d_interpolation_mode
+                    - name: D3D_MIN_PRECISION
+                      href: /windows/win32/api/d3dcommon/ne-d3dcommon-d3d_min_precision
+                    - name: D3D_NAME
+                      href: /windows/win32/api/d3dcommon/ne-d3dcommon-d3d_name
+                    - name: D3D_PRIMITIVE
+                      href: /windows/win32/api/d3dcommon/ne-d3dcommon-d3d_primitive
+                    - name: D3D_PRIMITIVE_TOPOLOGY
+                      href: /windows/win32/api/d3dcommon/ne-d3dcommon-d3d_primitive_topology
+                    - name: D3D_REGISTER_COMPONENT_TYPE
+                      href: /windows/win32/api/d3dcommon/ne-d3dcommon-d3d_register_component_type
+                    - name: D3D_RESOURCE_RETURN_TYPE
+                      href: /windows/win32/api/d3dcommon/ne-d3dcommon-d3d_resource_return_type
+                    - name: D3D_SHADER_CBUFFER_FLAGS
+                      href: /windows/win32/api/d3dcommon/ne-d3dcommon-d3d_shader_cbuffer_flags
+                    - name: D3D_SHADER_INPUT_FLAGS
+                      href: /windows/win32/api/d3dcommon/ne-d3dcommon-d3d_shader_input_flags
+                    - name: D3D_SHADER_INPUT_TYPE
+                      href: /windows/win32/api/d3dcommon/ne-d3dcommon-d3d_shader_input_type
+                    - name: D3D_SHADER_VARIABLE_CLASS
+                      href: /windows/win32/api/d3dcommon/ne-d3dcommon-d3d_shader_variable_class
+                    - name: D3D_SHADER_VARIABLE_FLAGS
+                      href: /windows/win32/api/d3dcommon/ne-d3dcommon-d3d_shader_variable_flags
+                    - name: D3D_SHADER_VARIABLE_TYPE
+                      href: /windows/win32/api/d3dcommon/ne-d3dcommon-d3d_shader_variable_type
+                    - name: D3D_SRV_DIMENSION
+                      href: /windows/win32/api/d3dcommon/ne-d3dcommon-d3d_srv_dimension
+                    - name: D3D_TESSELLATOR_DOMAIN
+                      href: /windows/win32/api/d3dcommon/ne-d3dcommon-d3d_tessellator_domain
+                    - name: D3D_TESSELLATOR_OUTPUT_PRIMITIVE
+                      href: /windows/win32/api/d3dcommon/ne-d3dcommon-d3d_tessellator_output_primitive
+                    - name: D3D_TESSELLATOR_PARTITIONING
+                      href: /windows/win32/api/d3dcommon/ne-d3dcommon-d3d_tessellator_partitioning
+            - name: CD3D11 Helper-Strukturen
+              href: cd3d11-helper-classes.md
+              items:
+                - name: CD3D11_RECT
+                  href: /windows/win32/api/d3d11/ns-d3d11-cd3d11_rect
+                  items:
+                    - name: CD3D11_RECT ()-Konstruktor
+                      href: /windows/win32/api/d3d11/nf-d3d11-cd3d11_rect-cd3d11_rect
+                    - name: CD3D11_RECT-Konstruktor (constD3D11_RECT)
+                      href: /windows/win32/api/d3d11/nf-d3d11-cd3d11_rect-cd3d11_rect
+                    - name: 'CD3D11_RECT (Long, Long, Long, Long)-Konstruktor'
+                      href: /windows/win32/api/d3d11/nf-d3d11-cd3d11_rect-cd3d11_rect(long_long_long_long)
+                    - name: ~ CD3D11_RECT ()-Dekonstruktor
+                      href: /windows/win32/api/d3d11/nf-d3d11-cd3d11_rect-~cd3d11_rect
+                    - name: Operator Konstanten D3D11_RECT& ()-Methode
+                      href: /previous-versions/windows/desktop/legacy/jj151667(v=vs.85)
+                - name: CD3D11_BOX
+                  href: /previous-versions/windows/desktop/legacy/jj151614(v=vs.85)
+                  items:
+                    - name: CD3D11_BOX ()-Konstruktor
+                      href: /windows/win32/api/d3d11/nf-d3d11-cd3d11_box-cd3d11_box
+                    - name: CD3D11_BOX-Konstruktor (constD3D11_BOX)
+                      href: /windows/win32/api/d3d11/nf-d3d11-cd3d11_box-cd3d11_box(constd3d11_box_)
+                    - name: 'CD3D11_BOX (Long, Long, Long, Long, Long, Long)-Konstruktor'
+                      href: /windows/win32/api/d3d11/nf-d3d11-cd3d11_box-cd3d11_box(long_long_long_long_long_long)
+                    - name: ~ CD3D11_BOX ()-Dekonstruktor
+                      href: /windows/win32/api/d3d11/nf-d3d11-cd3d11_box-~cd3d11_box
+                    - name: Operator Konstanten D3D11_BOX& ()-Methode
+                      href: /previous-versions/windows/desktop/legacy/jj151619(v=vs.85)
+                - name: CD3D11_DEPTH_STENCIL_DESC
+                  href: /previous-versions/windows/desktop/legacy/jj151632(v=vs.85)
+                  items:
+                    - name: CD3D11_DEPTH_STENCIL_DESC ()-Konstruktor
+                      href: /windows/win32/api/d3d11/nf-d3d11-cd3d11_depth_stencil_desc-cd3d11_depth_stencil_desc
+                    - name: CD3D11_DEPTH_STENCIL_DESC-Konstruktor (constD3D11_DEPTH_STENCIL_DESC)
+                      href: /windows/win32/api/d3d11/nf-d3d11-cd3d11_depth_stencil_desc-cd3d11_depth_stencil_desc(constd3d11_depth_stencil_desc_)
+                    - name: CD3D11_DEPTH_STENCIL_DESC-Konstruktor (CD3D11_DEFAULT)
+                      href: /windows/win32/api/d3d11/nf-d3d11-cd3d11_depth_stencil_desc-cd3d11_depth_stencil_desc(cd3d11_default)
+                    - name: 'CD3D11_DEPTH_STENCIL_DESC (bool, D3D11_DEPTH_WRITE_MASK, D3D11_COMPARISON_FUNC, bool, Uint8, Uint8, D3D11_STENCIL_OP, D3D11_STENCIL_OP, D3D11_STENCIL_OP, D3D11_COMPARISON_FUNC, D3D11_STENCIL_OP, D3D11_STENCIL_OP, D3D11_STENCIL_OP, D3D11_COMPARISON_FUNC)-Konstruktor'
+                      href: /windows/win32/api/d3d11/nf-d3d11-cd3d11_depth_stencil_desc-cd3d11_depth_stencil_desc(bool_d3d11_depth_write_mask_d3d11_comparison_func_bool_uint8_uint8_d3d11_stencil_op_d3d11_stencil_op_d3d11_stencil_op_d3d11_compa
+                    - name: ~ CD3D11_DEPTH_STENCIL_DESC ()-Dekonstruktor
+                      href: /windows/win32/api/d3d11/nf-d3d11-cd3d11_depth_stencil_desc-~cd3d11_depth_stencil_desc
+                    - name: Operator Konstanten D3D11_DEPTH_STENCIL_DESC& ()-Methode
+                      href: /previous-versions/windows/desktop/legacy/jj151637(v=vs.85)
+                - name: CD3D11_BLEND_DESC
+                  href: /windows/win32/api/D3D11/ns-d3d11-cd3d11_blend_desc
+                  items:
+                    - name: CD3D11_BLEND_DESC ()-Konstruktor
+                      href: /windows/win32/api/d3d11/nf-d3d11-cd3d11_blend_desc-cd3d11_blend_desc
+                    - name: CD3D11_BLEND_DESC-Konstruktor (constD3D11_BLEND_DESC)
+                      href: /windows/win32/api/d3d11/nf-d3d11-cd3d11_blend_desc-cd3d11_blend_desc(constd3d11_blend_desc_)
+                    - name: CD3D11_BLEND_DESC-Konstruktor (CD3D11_DEFAULT)
+                      href: /windows/win32/api/d3d11/nf-d3d11-cd3d11_blend_desc-cd3d11_blend_desc(cd3d11_default)
+                    - name: ~ CD3D11_BLEND_DESC ()-Dekonstruktor
+                      href: /windows/win32/api/d3d11/nf-d3d11-cd3d11_blend_desc-~cd3d11_blend_desc
+                    - name: Operator Konstanten D3D11_BLEND_DESC& ()-Methode
+                      href: /windows/win32/api/d3d11/nf-d3d11-cd3d11_blend_desc-operatorconstd3d11_blend_desc_
+                - name: CD3D11_RASTERIZER_DESC
+                  href: /previous-versions/windows/desktop/legacy/jj151654(v=vs.85)
+                  items:
+                    - name: CD3D11_RASTERIZER_DESC ()-Konstruktor
+                      href: /windows/win32/api/d3d11/nf-d3d11-cd3d11_rasterizer_desc-cd3d11_rasterizer_desc
+                    - name: CD3D11_RASTERIZER_DESC-Konstruktor (constD3D11_RASTERIZER_DESC)
+                      href: /windows/win32/api/d3d11/nf-d3d11-cd3d11_rasterizer_desc-cd3d11_rasterizer_desc(constd3d11_rasterizer_desc_)
+                    - name: CD3D11_RASTERIZER_DESC-Konstruktor (CD3D11_DEFAULT)
+                      href: /windows/win32/api/d3d11/nf-d3d11-cd3d11_rasterizer_desc-cd3d11_rasterizer_desc(cd3d11_default)
+                    - name: 'CD3D11_RASTERIZER_DESC (D3D11_FILL_MODE, D3D11_CULL_MODE, bool, int, float, float, bool, bool, bool, bool)-Konstruktor'
+                      href: /windows/win32/api/d3d11/nf-d3d11-cd3d11_rasterizer_desc-cd3d11_rasterizer_desc(d3d11_fill_mode_d3d11_cull_mode_bool_int_float_float_bool_bool_bool_bool)
+                    - name: ~ CD3D11_RASTERIZER_DESC ()-Dekonstruktor
+                      href: /windows/win32/api/d3d11/nf-d3d11-cd3d11_rasterizer_desc-~cd3d11_rasterizer_desc
+                    - name: Operator Konstanten D3D11_RASTERIZER_DESC& ()-Methode
+                      href: /previous-versions/windows/desktop/legacy/jj151659(v=vs.85)
+                - name: CD3D11_BUFFER_DESC
+                  href: /windows/win32/api/D3D11/ns-d3d11-cd3d11_buffer_desc
+                  items:
+                    - name: CD3D11_BUFFER_DESC ()-Konstruktor
+                      href: /windows/win32/api/d3d11/nf-d3d11-cd3d11_buffer_desc-cd3d11_buffer_desc
+                    - name: CD3D11_BUFFER_DESC-Konstruktor (constD3D11_BUFFER_DESC)
+                      href: /windows/win32/api/d3d11/nf-d3d11-cd3d11_buffer_desc-cd3d11_buffer_desc(constd3d11_buffer_desc_)
+                    - name: 'CD3D11_BUFFER_DESC (uint, D3D11_USAGE, uint, uint, uint, uint)-Konstruktor'
+                      href: /windows/win32/api/d3d11/nf-d3d11-cd3d11_buffer_desc-cd3d11_buffer_desc(uint_uint_d3d11_usage_uint_uint_uint)
+                    - name: ~ CD3D11_BUFFER_DESC ()-Dekonstruktor
+                      href: /windows/win32/api/d3d11/nf-d3d11-cd3d11_buffer_desc-~cd3d11_buffer_desc
+                    - name: Operator Konstanten D3D11_BUFFER_DESC& ()-Methode
+                      href: /windows/win32/api/d3d11/nf-d3d11-cd3d11_buffer_desc-operatorconstd3d11_buffer_desc_
+                - name: CD3D11_TEXTURE1D_DESC
+                  href: /previous-versions/windows/desktop/legacy/jj151694(v=vs.85)
+                  items:
+                    - name: CD3D11_TEXTURE1D_DESC ()-Konstruktor
+                      href: /windows/win32/api/d3d11/nf-d3d11-cd3d11_texture1d_desc-cd3d11_texture1d_desc
+                    - name: CD3D11_TEXTURE1D_DESC-Konstruktor (constD3D11_TEXTURE1D_DESC&)
+                      href: /windows/win32/api/d3d11/nf-d3d11-cd3d11_texture1d_desc-cd3d11_texture1d_desc(constd3d11_texture1d_desc_)
+                    - name: 'CD3D11_TEXTURE1D_DESC (DXGI_FORMAT, uint, uint, uint, uint, D3D11_USAGE, uint, uint)-Konstruktor'
+                      href: /windows/win32/api/d3d11/nf-d3d11-cd3d11_texture1d_desc-cd3d11_texture1d_desc(dxgi_format_uint_uint_uint_uint_d3d11_usage_uint_uint)
+                    - name: ~ CD3D11_TEXTURE1D_DESC ()-Dekonstruktor
+                      href: /windows/win32/api/d3d11/nf-d3d11-cd3d11_texture1d_desc-~cd3d11_texture1d_desc
+                    - name: Operator Konstanten D3D11_TEXTURE1D_DESC& ()-Methode
+                      href: /previous-versions/windows/desktop/legacy/jj151698(v=vs.85)
+                - name: CD3D11_TEXTURE2D_DESC
+                  href: /previous-versions/windows/desktop/legacy/jj151700(v=vs.85)
+                  items:
+                    - name: CD3D11_TEXTURE2D_DESC ()-Konstruktor
+                      href: /windows/win32/api/d3d11/nf-d3d11-cd3d11_texture2d_desc-cd3d11_texture2d_desc
+                    - name: CD3D11_TEXTURE2D_DESC-Konstruktor (constD3D11_TEXTURE2D_DESC&)
+                      href: /windows/win32/api/d3d11/nf-d3d11-cd3d11_texture2d_desc-cd3d11_texture2d_desc(constd3d11_texture2d_desc_)
+                    - name: 'CD3D11_TEXTURE2D_DESC (DXGI_FORMAT, uint, uint, uint, uint, uint, D3D11_USAGE, uint, uint, uint, uint)-Konstruktor'
+                      href: /windows/win32/api/d3d11/nf-d3d11-cd3d11_texture2d_desc-cd3d11_texture2d_desc(dxgi_format_uint_uint_uint_uint_uint_d3d11_usage_uint_uint_uint_uint)
+                    - name: ~ CD3D11_TEXTURE2D_DESC ()-Dekonstruktor
+                      href: /windows/win32/api/d3d11/nf-d3d11-cd3d11_texture2d_desc-~cd3d11_texture2d_desc
+                    - name: Operator Konstanten D3D11_TEXTURE2D_DESC& ()-Methode
+                      href: /previous-versions/windows/desktop/legacy/jj151704(v=vs.85)
+                - name: CD3D11_TEXTURE3D_DESC
+                  href: /previous-versions/windows/desktop/legacy/jj151706(v=vs.85)
+                  items:
+                    - name: CD3D11_TEXTURE3D_DESC ()-Konstruktor
+                      href: /windows/win32/api/d3d11/nf-d3d11-cd3d11_texture3d_desc-cd3d11_texture3d_desc
+                    - name: CD3D11_TEXTURE3D_DESC-Konstruktor (constD3D11_TEXTURE3D_DESC&)
+                      href: /windows/win32/api/d3d11/nf-d3d11-cd3d11_texture3d_desc-cd3d11_texture3d_desc(constd3d11_texture3d_desc_)
+                    - name: 'CD3D11_TEXTURE3D_DESC (DXGI_FORMAT, uint, uint, uint, uint, uint, D3D11_USAGE, uint, uint)-Konstruktor'
+                      href: /windows/win32/api/d3d11/nf-d3d11-cd3d11_texture3d_desc-cd3d11_texture3d_desc(dxgi_format_uint_uint_uint_uint_uint_d3d11_usage_uint_uint)
+                    - name: ~ CD3D11_TEXTURE3D_DESC ()-Dekonstruktor
+                      href: /windows/win32/api/d3d11/nf-d3d11-cd3d11_texture3d_desc-~cd3d11_texture3d_desc
+                    - name: Operator Konstanten D3D11_TEXTURE3D_DESC& ()-Methode
+                      href: /previous-versions/windows/desktop/legacy/jj151710(v=vs.85)
+                - name: CD3D11_SHADER_RESOURCE_VIEW_DESC
+                  href: /previous-versions/windows/desktop/legacy/jj151684(v=vs.85)
+                  items:
+                    - name: CD3D11_SHADER_RESOURCE_VIEW_DESC ()-Konstruktor
+                      href: /windows/win32/api/d3d11/nf-d3d11-cd3d11_shader_resource_view_desc-cd3d11_shader_resource_view_desc
+                    - name: CD3D11_SHADER_RESOURCE_VIEW_DESC-Konstruktor (constD3D11_SHADER_RESOURCE_VIEW_DESC&)
+                      href: /windows/win32/api/d3d11/nf-d3d11-cd3d11_shader_resource_view_desc-cd3d11_shader_resource_view_desc(constd3d11_shader_resource_view_desc_)
+                    - name: 'CD3D11_SHADER_RESOURCE_VIEW_DESC (D3D11_SRV_DIMENSION, DXGI_FORMAT, uint, uint, uint, uint, uint)-Konstruktor'
+                      href: /windows/win32/api/d3d11/nf-d3d11-cd3d11_shader_resource_view_desc-cd3d11_shader_resource_view_desc(d3d11_srv_dimension_dxgi_format_uint_uint_uint_uint_uint)
+                    - name: 'CD3D11_SHADER_RESOURCE_VIEW_DESC (ID3D11Buffer *, DXGI_FORMAT, uint, uint, uint)-Konstruktor'
+                      href: /windows/win32/api/d3d11/nf-d3d11-cd3d11_shader_resource_view_desc-cd3d11_shader_resource_view_desc(id3d11buffer_dxgi_format_uint_uint_uint)
+                    - name: 'CD3D11_SHADER_RESOURCE_VIEW_DESC (ID3D11Texture1D *, D3D11_SRV_DIMENSION, DXGI_FORMAT, uint, uint, uint, uint)-Konstruktor'
+                      href: /windows/win32/api/d3d11/nf-d3d11-cd3d11_shader_resource_view_desc-cd3d11_shader_resource_view_desc(id3d11texture1d_d3d11_srv_dimension_dxgi_format_uint_uint_uint_uint)
+                    - name: 'CD3D11_SHADER_RESOURCE_VIEW_DESC (ID3D11Texture2D *, D3D11_SRV_DIMENSION, DXGI_FORMAT, uint, uint, uint, uint)-Konstruktor'
+                      href: /windows/win32/api/d3d11/nf-d3d11-cd3d11_shader_resource_view_desc-cd3d11_shader_resource_view_desc(id3d11texture1d_d3d11_srv_dimension_dxgi_format_uint_uint_uint_uint)
+                    - name: 'CD3D11_SHADER_RESOURCE_VIEW_DESC (ID3D11Texture3D *, DXGI_FORMAT, uint, uint)-Konstruktor'
+                      href: /windows/win32/api/d3d11/nf-d3d11-cd3d11_shader_resource_view_desc-cd3d11_shader_resource_view_desc(id3d11texture3d_dxgi_format_uint_uint)
+                    - name: ~ CD3D11_SHADER_RESOURCE_VIEW_DESC ()-Dekonstruktor
+                      href: /windows/win32/api/d3d11/nf-d3d11-cd3d11_shader_resource_view_desc-~cd3d11_shader_resource_view_desc
+                    - name: Operator Konstanten D3D11_SHADER_RESOURCE_VIEW_DESC& ()-Methode
+                      href: /previous-versions/windows/desktop/legacy/jj151692(v=vs.85)
+                - name: CD3D11_RENDER_TARGET_VIEW_DESC
+                  href: /previous-versions/windows/desktop/legacy/jj151668(v=vs.85)
+                  items:
+                    - name: CD3D11_RENDER_TARGET_VIEW_DESC ()-Konstruktor
+                      href: /windows/win32/api/d3d11/nf-d3d11-cd3d11_render_target_view_desc-cd3d11_render_target_view_desc
+                    - name: CD3D11_RENDER_TARGET_VIEW_DESC-Konstruktor (constD3D11_RENDER_TARGET_VIEW_DESC&)
+                      href: /windows/win32/api/d3d11/nf-d3d11-cd3d11_render_target_view_desc-cd3d11_render_target_view_desc(constd3d11_render_target_view_desc_)
+                    - name: 'CD3D11_RENDER_TARGET_VIEW_DESC (D3D11_RTV_DIMENSION, DXGI_FORMAT, uint, uint, uint)-Konstruktor'
+                      href: /windows/win32/api/d3d11/nf-d3d11-cd3d11_render_target_view_desc-cd3d11_render_target_view_desc(d3d11_rtv_dimension_dxgi_format_uint_uint_uint)
+                    - name: 'CD3D11_RENDER_TARGET_VIEW_DESC (ID3D11Buffer *, DXGI_FORMAT, uint, uint)-Konstruktor'
+                      href: /windows/win32/api/d3d11/nf-d3d11-cd3d11_render_target_view_desc-cd3d11_render_target_view_desc(id3d11texture1d_d3d11_rtv_dimension_dxgi_format_uint_uint_uint)
+                    - name: 'CD3D11_RENDER_TARGET_VIEW_DESC (ID3D11Texture1D *, D3D11_RTV_DIMENSION, DXGI_FORMAT, uint, uint, uint)-Konstruktor'
+                      href: /windows/win32/api/d3d11/nf-d3d11-cd3d11_render_target_view_desc-cd3d11_render_target_view_desc(id3d11texture1d_d3d11_rtv_dimension_dxgi_format_uint_uint_uint)
+                    - name: 'CD3D11_RENDER_TARGET_VIEW_DESC (ID3D11Texture2D *, D3D11_RTV_DIMENSION, DXGI_FORMAT, uint, uint, uint)-Konstruktor'
+                      href: /windows/win32/api/d3d11/nf-d3d11-cd3d11_render_target_view_desc-cd3d11_render_target_view_desc(id3d11texture2d_d3d11_rtv_dimension_dxgi_format_uint_uint_uint)
+                    - name: 'CD3D11_RENDER_TARGET_VIEW_DESC (ID3D11Texture3D *, DXGI_FORMAT, uint, uint, uint)-Konstruktor'
+                      href: /windows/win32/api/d3d11/nf-d3d11-cd3d11_render_target_view_desc-cd3d11_render_target_view_desc(id3d11texture3d_dxgi_format_uint_uint_uint)
+                    - name: ~ CD3D11_RENDER_TARGET_VIEW_DESC ()-Dekonstruktor
+                      href: /windows/win32/api/d3d11/nf-d3d11-cd3d11_render_target_view_desc-~cd3d11_render_target_view_desc
+                    - name: Operator Konstanten D3D11_RENDER_TARGET_VIEW_DESC& ()-Methode
+                      href: /previous-versions/windows/desktop/legacy/jj151676(v=vs.85)
+                - name: CD3D11_VIEWPORT
+                  href: /previous-versions/windows/desktop/legacy/jj151722(v=vs.85)
+                  items:
+                    - name: CD3D11_VIEWPORT ()-Konstruktor
+                      href: /windows/win32/api/d3d11/nf-d3d11-cd3d11_viewport-cd3d11_viewport
+                    - name: CD3D11_VIEWPORT-Konstruktor (constD3D11_VIEWPORT&)
+                      href: /windows/win32/api/d3d11/nf-d3d11-cd3d11_viewport-cd3d11_viewport(constd3d11_viewport_)
+                    - name: 'CD3D11_VIEWPORT (float-, float-, float-, float-, float-, float-)-Konstruktor'
+                      href: /windows/win32/api/d3d11/nf-d3d11-cd3d11_viewport-cd3d11_viewport(float_float_float_float_float_float)
+                    - name: 'CD3D11_VIEWPORT (ID3D11Buffer *, ID3D11RenderTargetView*, float, float, float)-Konstruktor'
+                      href: /windows/win32/api/d3d11/nf-d3d11-cd3d11_viewport-cd3d11_viewport(id3d11texture2d_id3d11rendertargetview_float_float_float_float)
+                    - name: 'CD3D11_VIEWPORT (ID3D11Texture1D *, ID3D11RenderTargetView*, float, float, float)-Konstruktor'
+                      href: /windows/win32/api/d3d11/nf-d3d11-cd3d11_viewport-cd3d11_viewport(id3d11texture1d_id3d11rendertargetview_float_float_float)
+                    - name: 'CD3D11_VIEWPORT (ID3D11Texture2D-*, ID3D11RenderTargetView*-, float-, float-, float-, float-)-Konstruktor'
+                      href: /windows/win32/api/d3d11/nf-d3d11-cd3d11_viewport-cd3d11_viewport(float_float_float_float_float_float)
+                    - name: 'CD3D11_VIEWPORT (ID3D11Texture3D-*, ID3D11RenderTargetView*-, float-, float-, float-, float-)-Konstruktor'
+                      href: /windows/win32/api/d3d11/nf-d3d11-cd3d11_viewport-cd3d11_viewport(float_float_float_float_float_float)
+                    - name: ~ CD3D11_VIEWPORT ()-Dekonstruktor
+                      href: /windows/win32/api/d3d11/nf-d3d11-cd3d11_viewport-~cd3d11_viewport
+                    - name: Operator Konstanten D3D11_VIEWPORT& ()-Methode
+                      href: /previous-versions/windows/desktop/legacy/jj151730(v=vs.85)
+                - name: CD3D11_DEPTH_STENCIL_VIEW_DESC
+                  href: /previous-versions/windows/desktop/legacy/jj151639(v=vs.85)
+                  items:
+                    - name: CD3D11_DEPTH_STENCIL_VIEW_DESC ()-Konstruktor
+                      href: /windows/win32/api/d3d11/nf-d3d11-cd3d11_depth_stencil_view_desc-cd3d11_depth_stencil_view_desc
+                    - name: CD3D11_DEPTH_STENCIL_VIEW_DESC-Konstruktor (constD3D11_DEPTH_STENCIL_VIEW_DESC&)
+                      href: /windows/win32/api/d3d11/nf-d3d11-cd3d11_depth_stencil_view_desc-cd3d11_depth_stencil_view_desc(constd3d11_depth_stencil_view_desc_)
+                    - name: 'CD3D11_DEPTH_STENCIL_VIEW_DESC (D3D11_DSV_DIMENSION, DXGI_FORMAT, uint, uint, uint, uint)-Konstruktor'
+                      href: /windows/win32/api/d3d11/nf-d3d11-cd3d11_depth_stencil_view_desc-cd3d11_depth_stencil_view_desc(d3d11_dsv_dimension_dxgi_format_uint_uint_uint_uint)
+                    - name: 'CD3D11_DEPTH_STENCIL_VIEW_DESC (ID3D11Texture1D *, D3D11_DSV_DIMENSION, DXGI_FORMAT, uint, uint, uint, uint)-Konstruktor'
+                      href: /windows/win32/api/d3d11/nf-d3d11-cd3d11_depth_stencil_view_desc-cd3d11_depth_stencil_view_desc(id3d11texture2d_d3d11_dsv_dimension_dxgi_format_uint_uint_uint_uint)
+                    - name: 'CD3D11_DEPTH_STENCIL_VIEW_DESC (ID3D11Texture2D *, D3D11_DSV_DIMENSION, DXGI_FORMAT, uint, uint, uint, uint)-Konstruktor'
+                      href: /windows/win32/api/d3d11/nf-d3d11-cd3d11_depth_stencil_view_desc-cd3d11_depth_stencil_view_desc(d3d11_dsv_dimension_dxgi_format_uint_uint_uint_uint)
+                    - name: ~ CD3D11_DEPTH_STENCIL_VIEW_DESC ()-Dekonstruktor
+                      href: /windows/win32/api/d3d11/nf-d3d11-cd3d11_depth_stencil_view_desc-~cd3d11_depth_stencil_view_desc
+                    - name: Operator Konstanten D3D11_DEPTH_STENCIL_VIEW_DESC& ()-Methode
+                      href: /previous-versions/windows/desktop/legacy/jj151645(v=vs.85)
+                - name: CD3D11_UNORDERED_ACCESS_VIEW_DESC
+                  href: /previous-versions/windows/desktop/legacy/jj151712(v=vs.85)
+                  items:
+                    - name: CD3D11_UNORDERED_ACCESS_VIEW_DESC ()-Konstruktor
+                      href: /windows/win32/api/d3d11/nf-d3d11-cd3d11_unordered_access_view_desc-cd3d11_unordered_access_view_desc
+                    - name: CD3D11_UNORDERED_ACCESS_VIEW_DESC-Konstruktor (constD3D11_UNORDERED_ACCESS_VIEW_DESC&)
+                      href: /windows/win32/api/d3d11/nf-d3d11-cd3d11_unordered_access_view_desc-cd3d11_unordered_access_view_desc(constd3d11_unordered_access_view_desc_)
+                    - name: 'CD3D11_UNORDERED_ACCESS_VIEW_DESC (D3D11_UAV_DIMENSION, DXGI_FORMAT, uint, uint, uint, uint)-Konstruktor'
+                      href: /windows/win32/api/d3d11/nf-d3d11-cd3d11_unordered_access_view_desc-cd3d11_unordered_access_view_desc(d3d11_uav_dimension_dxgi_format_uint_uint_uint_uint)
+                    - name: 'CD3D11_UNORDERED_ACCESS_VIEW_DESC (ID3D11Buffer *, DXGI_FORMAT, uint, uint, uint)-Konstruktor'
+                      href: /windows/win32/api/d3d11/nf-d3d11-cd3d11_unordered_access_view_desc-cd3d11_unordered_access_view_desc(id3d11buffer_dxgi_format_uint_uint_uint)
+                    - name: 'CD3D11_UNORDERED_ACCESS_VIEW_DESC (ID3D11Texture1D *, D3D11_UAV_DIMENSION, DXGI_FORMAT, uint, uint, uint)-Konstruktor'
+                      href: /windows/win32/api/d3d11/nf-d3d11-cd3d11_unordered_access_view_desc-cd3d11_unordered_access_view_desc(id3d11texture1d_d3d11_uav_dimension_dxgi_format_uint_uint_uint)
+                    - name: 'CD3D11_UNORDERED_ACCESS_VIEW_DESC (ID3D11Texture2D *, D3D11_UAV_DIMENSION, DXGI_FORMAT, uint, uint, uint)-Konstruktor'
+                      href: /windows/win32/api/d3d11/nf-d3d11-cd3d11_unordered_access_view_desc-cd3d11_unordered_access_view_desc(id3d11texture2d_d3d11_uav_dimension_dxgi_format_uint_uint_uint)
+                    - name: 'CD3D11_UNORDERED_ACCESS_VIEW_DESC (ID3D11Texture3D *, DXGI_FORMAT, uint, uint, uint)-Konstruktor'
+                      href: /windows/win32/api/d3d11/nf-d3d11-cd3d11_unordered_access_view_desc-cd3d11_unordered_access_view_desc(id3d11texture3d_dxgi_format_uint_uint_uint)
+                    - name: ~ CD3D11_UNORDERED_ACCESS_VIEW_DESC ()-Dekonstruktor
+                      href: /windows/win32/api/d3d11/nf-d3d11-cd3d11_unordered_access_view_desc-~cd3d11_unordered_access_view_desc
+                    - name: Operator Konstanten D3D11_UNORDERED_ACCESS_VIEW_DESC& ()-Methode
+                      href: /previous-versions/windows/desktop/legacy/jj151720(v=vs.85)
+                - name: CD3D11_SAMPLER_DESC
+                  href: /previous-versions/windows/desktop/legacy/jj151678(v=vs.85)
+                  items:
+                    - name: CD3D11_SAMPLER_DESC ()-Konstruktor
+                      href: /windows/win32/api/d3d11/nf-d3d11-cd3d11_sampler_desc-cd3d11_sampler_desc
+                    - name: CD3D11_SAMPLER_DESC-Konstruktor (constD3D11_SAMPLER_DESC&)
+                      href: /windows/win32/api/d3d11/nf-d3d11-cd3d11_sampler_desc-cd3d11_sampler_desc(constd3d11_sampler_desc_)
+                    - name: CD3D11_SAMPLER_DESC-Konstruktor (CD3D11_DEFAULT)
+                      href: /windows/win32/api//d3d11/nf-d3d11-cd3d11_sampler_desc-cd3d11_sampler_desc(cd3d11_default)
+                    - name: ~ CD3D11_SAMPLER_DESC ()-Dekonstruktor
+                      href: /windows/win32/api/d3d11/nf-d3d11-cd3d11_sampler_desc-~cd3d11_sampler_desc
+                    - name: Operator Konstanten D3D11_SAMPLER_DESC& ()-Methode
+                      href: /previous-versions/windows/desktop/legacy/jj151682(v=vs.85)
+                - name: CD3D11_QUERY_DESC
+                  href: /previous-versions/windows/desktop/legacy/jj151648(v=vs.85)
+                  items:
+                    - name: CD3D11_QUERY_DESC ()-Konstruktor
+                      href: /windows/win32/api/d3d11/nf-d3d11-cd3d11_query_desc-cd3d11_query_desc
+                    - name: CD3D11_QUERY_DESC-Konstruktor (constD3D11_QUERY_DESC&)
+                      href: /windows/win32/api/d3d11/nf-d3d11-cd3d11_query_desc-cd3d11_query_desc(constd3d11_query_desc_)
+                    - name: 'CD3D11_QUERY_DESC-Konstruktor (D3D11_QUERY, uint)'
+                      href: /windows/win32/api/d3d11/nf-d3d11-cd3d11_query_desc-cd3d11_query_desc(d3d11_query_uint)
+                    - name: ~ CD3D11_QUERY_DESC ()-Dekonstruktor
+                      href: /windows/win32/api/d3d11/nf-d3d11-cd3d11_query_desc-~cd3d11_query_desc
+                    - name: Operator Konstanten D3D11_QUERY_DESC& ()-Methode
+                      href: /previous-versions/windows/desktop/legacy/jj151652(v=vs.85)
+                - name: CD3D11_COUNTER_DESC
+                  href: /previous-versions/windows/desktop/legacy/jj151626(v=vs.85)
+                  items:
+                    - name: CD3D11_COUNTER_DESC ()-Konstruktor
+                      href: /windows/win32/api/d3d11/nf-d3d11-cd3d11_counter_desc-cd3d11_counter_desc
+                    - name: CD3D11_COUNTER_DESC-Konstruktor (constD3D11_COUNTER_DESC&)
+                      href: /windows/win32/api/d3d11/nf-d3d11-cd3d11_counter_desc-cd3d11_counter_desc(constd3d11_counter_desc_)
+                    - name: 'CD3D11_COUNTER_DESC-Konstruktor (D3D11_COUNTER, uint)'
+                      href: /windows/win32/api/d3d11/nf-d3d11-cd3d11_counter_desc-cd3d11_counter_desc(d3d11_counter_uint)
+                    - name: ~ CD3D11_COUNTER_DESC ()-Methode
+                      href: /windows/win32/api/d3d11/nf-d3d11-cd3d11_counter_desc-~cd3d11_counter_desc
+                    - name: Operator Konstanten D3D11_COUNTER_DESC& ()-Methode
+                      href: /previous-versions/windows/desktop/legacy/jj151630(v=vs.85)
+        - name: Referenz zu D3DCSX 11
+          href: d3d11-graphics-reference-d3dcsx11.md
+          items:
+            - name: D3DCSX 11-Schnittstellen
+              href: d3d11-graphics-reference-d3dcsx11-interfaces.md
+              items:
+                - name: ID3DX11FFT
+                  href: /windows/win32/api/d3dcsx/nn-d3dcsx-id3dx11fft
+                  items:
+                    - name: Attachbuffersandprecompute
+                      href: /windows/win32/api/d3dcsx/nf-d3dcsx-id3dx11fft-attachbuffersandprecompute
+                    - name: Forwardtransform
+                      href: /windows/win32/api/d3dcsx/nf-d3dcsx-id3dx11fft-forwardtransform
+                    - name: Getforwardscale
+                      href: /windows/win32/api/d3dcsx/nf-d3dcsx-id3dx11fft-getforwardscale
+                    - name: Getinversescale
+                      href: /windows/win32/api/d3dcsx/nf-d3dcsx-id3dx11fft-getinversescale
+                    - name: Inverumtransform
+                      href: /windows/win32/api/d3dcsx/nf-d3dcsx-id3dx11fft-inversetransform
+                    - name: Setforwardscale
+                      href: /windows/win32/api/d3dcsx/nf-d3dcsx-id3dx11fft-setforwardscale
+                    - name: '""'
+                      href: /windows/win32/api/d3dcsx/nf-d3dcsx-id3dx11fft-setinversescale
+                - name: ID3DX11Scan
+                  href: /windows/win32/api/d3dcsx/nn-d3dcsx-id3dx11scan
+                  items:
+                    - name: MultiScan
+                      href: /windows/win32/api/d3dcsx/nf-d3dcsx-id3dx11scan-multiscan
+                    - name: Überprüfen
+                      href: /windows/win32/api/d3dcsx/nf-d3dcsx-id3dx11scan-scan
+                    - name: Setscandirection
+                      href: /windows/win32/api/d3dcsx/nf-d3dcsx-id3dx11scan-setscandirection
+                - name: ID3DX11SegmentedScan
+                  href: /windows/win32/api/d3dcsx/nn-d3dcsx-id3dx11segmentedscan
+                  items:
+                    - name: Segscan
+                      href: /windows/win32/api/d3dcsx/nf-d3dcsx-id3dx11segmentedscan-segscan
+                    - name: Setscandirection
+                      href: /windows/win32/api/d3dcsx/nf-d3dcsx-id3dx11segmentedscan-setscandirection
+            - name: D3DCSX 11-Funktionen
+              href: d3d11-graphics-reference-d3dcsx11-functions.md
+              items:
+                - name: D3DX11CreateScan
+                  href: /windows/win32/api/d3dcsx/nf-d3dcsx-d3dx11createscan
+                - name: D3DX11CreateSegmentedScan
+                  href: /windows/win32/api/d3dcsx/nf-d3dcsx-d3dx11createsegmentedscan
+                - name: D3DX11CreateFFT
+                  href: /windows/win32/api/d3dcsx/nf-d3dcsx-d3dx11createfft
+                - name: D3DX11CreateFFT1DComplex
+                  href: /windows/win32/api/d3dcsx/nf-d3dcsx-d3dx11createfft1dcomplex
+                - name: D3DX11CreateFFT1DReal
+                  href: /windows/win32/api/d3dcsx/nf-d3dcsx-d3dx11createfft1dreal
+                - name: D3DX11CreateFFT2DComplex
+                  href: /windows/win32/api/d3dcsx/nf-d3dcsx-d3dx11createfft2dcomplex
+                - name: D3DX11CreateFFT2DReal
+                  href: /windows/win32/api/d3dcsx/nf-d3dcsx-d3dx11createfft2dreal
+                - name: D3DX11CreateFFT3DComplex
+                  href: /windows/win32/api/d3dcsx/nf-d3dcsx-d3dx11createfft3dcomplex
+                - name: D3DX11CreateFFT3DReal
+                  href: /windows/win32/api/d3dcsx/nf-d3dcsx-d3dx11createfft3dreal
+            - name: D3DCSX 11-Strukturen
+              href: d3d11-graphics-reference-d3dcsx11-structures.md
+              items:
+                - name: D3DX11_FFT_BUFFER_INFO
+                  href: /windows/win32/api/d3dcsx/ns-d3dcsx-d3dx11_fft_buffer_info
+                - name: D3DX11_FFT_DESC
+                  href: /windows/win32/api/d3dcsx/ns-d3dcsx-d3dx11_fft_desc
+            - name: D3DCSX 11-Enumerationen
+              href: d3d11-graphics-reference-d3dcsx11-enums.md
+              items:
+                - name: D3DX11_FFT_CREATE_FLAG
+                  href: /windows/win32/api/d3dcsx/ne-d3dcsx-d3dx11_fft_create_flag
+                - name: D3DX11_FFT_DATA_TYPE
+                  href: /windows/win32/api/d3dcsx/ne-d3dcsx-d3dx11_fft_data_type
+                - name: D3DX11_FFT_DIM_MASK
+                  href: /windows/win32/api/d3dcsx/ne-d3dcsx-d3dx11_fft_dim_mask
+                - name: D3DX11_SCAN_DATA_TYPE
+                  href: /windows/win32/api/d3dcsx/ne-d3dcsx-d3dx11_scan_data_type
+                - name: D3DX11_SCAN_DIRECTION
+                  href: /windows/win32/api/d3dcsx/ne-d3dcsx-d3dx11_scan_direction
+                - name: D3DX11_SCAN_OPCODE
+                  href: /windows/win32/api/d3dcsx/ne-d3dcsx-d3dx11_scan_opcode
+        - name: Referenz zu D3DX 11
+          href: d3d11-graphics-reference-d3dx11.md
+          items:
+            - name: D3DX-Schnittstellen
+              href: d3d11-graphics-reference-d3dx11-interfaces.md
+              items:
+                - name: ID3DX11DataLoader
+                  href: id3dx11dataloader.md
+                  items:
+                    - name: Nachricht
+                      href: id3dx11dataloader-decompress.md
+                    - name: Zerstören
+                      href: id3dx11dataloader-destroy.md
+                    - name: Laden
+                      href: id3dx11dataloader-load.md
+                - name: ID3DX11DataProcessor
+                  href: id3dx11dataprocessor.md
+                  items:
+                    - name: '"Kreatedeviceobject"'
+                      href: id3dx11dataprocessor-createdeviceobject.md
+                    - name: Zerstören
+                      href: id3dx11dataprocessor-destroy.md
+                    - name: Prozess
+                      href: id3dx11dataprocessor-process.md
+                - name: ID3DX11ThreadPump
+                  href: id3dx11threadpump.md
+                  items:
+                    - name: Addworkitem
+                      href: id3dx11threadpump-addworkitem.md
+                    - name: Getqueuestatus
+                      href: id3dx11threadpump-getqueuestatus.md
+                    - name: Getworkitemcount
+                      href: id3dx11threadpump-getworkitemcount.md
+                    - name: Processdeviceworkitems
+                      href: id3dx11threadpump-processdeviceworkitems.md
+                    - name: Purgeallitems
+                      href: id3dx11threadpump-purgeallitems.md
+                    - name: Waitforallitems
+                      href: id3dx11threadpump-waitforallitems.md
+            - name: D3DX-Funktionen
+              href: d3d11-graphics-reference-d3dx11-functions.md
+              items:
+                - name: D3DX11CompileFromFile
+                  href: d3dx11compilefromfile.md
+                - name: D3DX11CompileFromMemory
+                  href: d3dx11compilefrommemory.md
+                - name: D3DX11CompileFromResource
+                  href: d3dx11compilefromresource.md
+                - name: D3DX11ComputeNormalMap
+                  href: d3dx11computenormalmap.md
+                - name: D3DX11CreateAsyncCompilerProcessor
+                  href: d3dx11createasynccompilerprocessor.md
+                - name: D3DX11CreateAsyncFileLoader
+                  href: d3dx11createasyncfileloader.md
+                - name: D3DX11CreateAsyncMemoryLoader
+                  href: d3dx11createasyncmemoryloader.md
+                - name: D3DX11CreateAsyncResourceLoader
+                  href: d3dx11createasyncresourceloader.md
+                - name: D3DX11CreateAsyncShaderPreprocessProcessor
+                  href: d3dx11createasyncshaderpreprocessprocessor.md
+                - name: D3DX11CreateAsyncTextureInfoProcessor
+                  href: d3dx11createasynctextureinfoprocessor.md
+                - name: D3DX11CreateAsyncTextureProcessor
+                  href: d3dx11createasynctextureprocessor.md
+                - name: D3DX11CreateAsyncShaderResourceViewProcessor
+                  href: d3dx11createasyncshaderresourceviewprocessor.md
+                - name: D3DX11CreateShaderResourceViewFromFile
+                  href: d3dx11createshaderresourceviewfromfile.md
+                - name: D3DX11CreateShaderResourceViewFromMemory
+                  href: d3dx11createshaderresourceviewfrommemory.md
+                - name: D3DX11CreateShaderResourceViewFromResource
+                  href: d3dx11createshaderresourceviewfromresource.md
+                - name: D3DX11CreateTextureFromFile
+                  href: d3dx11createtexturefromfile.md
+                - name: D3DX11CreateTextureFromMemory
+                  href: d3dx11createtexturefrommemory.md
+                - name: D3DX11CreateTextureFromResource
+                  href: d3dx11createtexturefromresource.md
+                - name: D3DX11CreateThreadPump
+                  href: d3dx11createthreadpump.md
+                - name: D3DX11FilterTexture
+                  href: d3dx11filtertexture.md
+                - name: D3DX11GetImageInfoFromFile
+                  href: d3dx11getimageinfofromfile.md
+                - name: D3DX11GetImageInfoFromMemory
+                  href: d3dx11getimageinfofrommemory.md
+                - name: D3DX11GetImageInfoFromResource
+                  href: d3dx11getimageinfofromresource.md
+                - name: D3DX11LoadTextureFromTexture
+                  href: d3dx11loadtexturefromtexture.md
+                - name: D3DX11PreprocessShaderFromFile
+                  href: d3dx11preprocessshaderfromfile.md
+                - name: D3DX11PreprocessShaderFromMemory
+                  href: d3dx11preprocessshaderfrommemory.md
+                - name: D3DX11PreprocessShaderFromResource
+                  href: d3dx11preprocessshaderfromresource.md
+                - name: D3DX11SaveTextureToFile
+                  href: d3dx11savetexturetofile.md
+                - name: D3DX11SaveTextureToMemory
+                  href: d3dx11savetexturetomemory.md
+                - name: D3DX11SHProjectCubeMap
+                  href: d3dx11shprojectcubemap.md
+                - name: D3DX11UnsetAllDeviceObjects
+                  href: d3dx11unsetalldeviceobjects.md
+            - name: D3DX-Strukturen
+              href: d3d11-graphics-reference-d3dx11-structures.md
+              items:
+                - name: D3DX11_IMAGE_INFO
+                  href: d3dx11-image-info.md
+                - name: D3DX11_IMAGE_LOAD_INFO
+                  href: d3dx11-image-load-info.md
+                - name: D3DX11_TEXTURE_LOAD_INFO
+                  href: d3dx11-texture-load-info.md
+            - name: D3DX-Enumerationen
+              href: d3d11-graphics-reference-d3dx11-enums.md
+              items:
+                - name: D3DX11_CHANNEL_FLAG
+                  href: d3dx11-channel-flag.md
+                - name: D3DX11_ERR
+                  href: d3dx11-err.md
+                - name: D3DX11_FILTER_FLAG
+                  href: d3dx11-filter-flag.md
+                - name: D3DX11_IMAGE_FILE_FORMAT
+                  href: d3dx11-image-file-format.md
+                - name: D3DX11_NORMALMAP_FLAG
+                  href: d3dx11-normalmap-flag.md
+                - name: D3DX11_SAVE_TEXTURE_FLAG
+                  href: d3dx11-save-texture-flag.md
+        - name: Auswirkung 11-Referenz
+          href: d3d11-graphics-reference-effects11.md
+          items:
+            - name: Effekte 11-Schnittstellen
+              href: d3d11-graphics-reference-effects11-interfaces.md
+              items:
+                - name: ID3DX11Effect
+                  href: id3dx11effect.md
+                  items:
+                    - name: Cloneeffect
+                      href: id3dx11effect-cloneeffect.md
+                    - name: Getclassverknüpfung
+                      href: id3dx11effect-getclasslinkage.md
+                    - name: GetConstantBufferByIndex
+                      href: id3dx11effect-getconstantbufferbyindex.md
+                    - name: GetConstantBufferByName
+                      href: id3dx11effect-getconstantbufferbyname.md
+                    - name: GetDesc
+                      href: id3dx11effect-getdesc.md
+                    - name: GetDevice
+                      href: id3dx11effect-getdevice.md
+                    - name: Getgroupbyindex
+                      href: id3dx11effect-getgroupbyindex.md
+                    - name: Getgroupbyname
+                      href: id3dx11effect-getgroupbyname.md
+                    - name: Gettechniquebyindex
+                      href: id3dx11effect-gettechniquebyindex.md
+                    - name: Gettechniquebyname
+                      href: id3dx11effect-gettechniquebyname.md
+                    - name: GetVariableByIndex
+                      href: id3dx11effect-getvariablebyindex.md
+                    - name: GetVariableByName
+                      href: id3dx11effect-getvariablebyname.md
+                    - name: Getvariablebysemantic
+                      href: id3dx11effect-getvariablebysemantic.md
+                    - name: Isoptimiert
+                      href: id3dx11effect-isoptimized.md
+                    - name: IsValid
+                      href: id3dx11effect-isvalid.md
+                    - name: Optimieren
+                      href: id3dx11effect-optimize.md
+                - name: ID3DX11EffectBlendVariable
+                  href: id3dx11effectblendvariable.md
+                  items:
+                    - name: Getbackingstore
+                      href: id3dx11effectblendvariable-getbackingstore.md
+                    - name: Getblendstate
+                      href: id3dx11effectblendvariable-getblendstate.md
+                    - name: Setblendstate
+                      href: id3dx11effectblendvariable-setblendstate.md
+                    - name: Undosetblendstate
+                      href: id3dx11effectblendvariable-undosetblendstate.md
+                - name: ID3DX11EffectClassInstanceVariable
+                  href: id3dx11effectclassinstancevariable.md
+                  items:
+                    - name: Getclassinstance
+                      href: id3dx11effectclassinstancevariable-getclassinstance.md
+                - name: ID3DX11EffectConstantBuffer
+                  href: id3dx11effectconstantbuffer.md
+                  items:
+                    - name: Getconstantbuffer
+                      href: id3dx11effectconstantbuffer-getconstantbuffer.md
+                    - name: Gettexturebuffer
+                      href: id3dx11effectconstantbuffer-gettexturebuffer.md
+                    - name: Setconstantbuffer
+                      href: id3dx11effectconstantbuffer-setconstantbuffer.md
+                    - name: Settexturebuffer
+                      href: id3dx11effectconstantbuffer-settexturebuffer.md
+                    - name: Undosetconstantbuffer
+                      href: id3dx11effectconstantbuffer-undosetconstantbuffer.md
+                    - name: Undosettexturebuffer
+                      href: id3dx11effectconstantbuffer-undosettexturebuffer.md
+                - name: ID3DX11EffectDepthStencilVariable
+                  href: id3dx11effectdepthstencilvariable.md
+                  items:
+                    - name: Getbackingstore
+                      href: id3dx11effectdepthstencilvariable-getbackingstore.md
+                    - name: Getdepthstencilstate
+                      href: id3dx11effectdepthstencilvariable-getdepthstencilstate.md
+                    - name: Setdepthstencilstate
+                      href: id3dx11effectdepthstencilvariable-setdepthstencilstate.md
+                    - name: Undosetdepthstencilstate
+                      href: id3dx11effectdepthstencilvariable-undosetdepthstencilstate.md
+                - name: ID3DX11EffectDepthStencilViewVariable
+                  href: id3dx11effectdepthstencilviewvariable.md
+                  items:
+                    - name: Getdepthstencil
+                      href: id3dx11effectdepthstencilviewvariable-getdepthstencil.md
+                    - name: Getdepthstencilarray
+                      href: id3dx11effectdepthstencilviewvariable-getdepthstencilarray.md
+                    - name: Setdepthstencil
+                      href: id3dx11effectdepthstencilviewvariable-setdepthstencil.md
+                    - name: Setdepthstencilarray
+                      href: id3dx11effectdepthstencilviewvariable-setdepthstencilarray.md
+                - name: ID3DX11EffectGroup
+                  href: id3dx11effectgroup.md
+                  items:
+                    - name: Getannotationbyindex
+                      href: id3dx11effectgroup-getannotationbyindex.md
+                    - name: Getannotationbyname
+                      href: id3dx11effectgroup-getannotationbyname.md
+                    - name: GetDesc
+                      href: id3dx11effectgroup-getdesc.md
+                    - name: Gettechniquebyindex
+                      href: id3dx11effectgroup-gettechniquebyindex.md
+                    - name: Gettechniquebyname
+                      href: id3dx11effectgroup-gettechniquebyname.md
+                    - name: IsValid
+                      href: id3dx11effectgroup-isvalid.md
+                - name: ID3DX11EffectInterfaceVariable
+                  href: id3dx11effectinterfacevariable.md
+                  items:
+                    - name: Getclassinstance
+                      href: id3dx11effectinterfacevariable-getclassinstance.md
+                    - name: Setclassinstance
+                      href: id3dx11effectinterfacevariable-setclassinstance.md
+                - name: ID3DX11EffectMatrixVariable
+                  href: id3dx11effectmatrixvariable.md
+                  items:
+                    - name: GetMatrix
+                      href: id3dx11effectmatrixvariable-getmatrix.md
+                    - name: Getmatrixarray
+                      href: id3dx11effectmatrixvariable-getmatrixarray.md
+                    - name: Getmatrixtransform
+                      href: id3dx11effectmatrixvariable-getmatrixtranspose.md
+                    - name: Getmatrixtransposearray
+                      href: id3dx11effectmatrixvariable-getmatrixtransposearray.md
+                    - name: SetMatrix
+                      href: id3dx11effectmatrixvariable-setmatrix.md
+                    - name: Setmatrixarray
+                      href: id3dx11effectmatrixvariable-setmatrixarray.md
+                    - name: Setmatrixtransform
+                      href: id3dx11effectmatrixvariable-setmatrixtranspose.md
+                    - name: Setmatrixtransposearray
+                      href: id3dx11effectmatrixvariable-setmatrixtransposearray.md
+                - name: ID3DX11EffectPass
+                  href: id3dx11effectpass.md
+                  items:
+                    - name: Anwenden
+                      href: id3dx11effectpass-apply.md
+                    - name: Computestateblockmask
+                      href: id3dx11effectpass-computestateblockmask.md
+                    - name: Getannotationbyindex
+                      href: id3dx11effectpass-getannotationbyindex.md
+                    - name: Getannotationbyname
+                      href: id3dx11effectpass-getannotationbyname.md
+                    - name: Getcomputeshaderentsc
+                      href: id3dx11effectpass-getcomputeshaderdesc.md
+                    - name: GetDesc
+                      href: id3dx11effectpass-getdesc.md
+                    - name: Getdomainshaderdebug
+                      href: id3dx11effectpass-getdomainshaderdesc.md
+                    - name: Getgeometryshaderdebug
+                      href: id3dx11effectpass-getgeometryshaderdesc.md
+                    - name: Gethullshaderdebug
+                      href: id3dx11effectpass-gethullshaderdesc.md
+                    - name: Getpixelshaderdebug
+                      href: id3dx11effectpass-getpixelshaderdesc.md
+                    - name: Getvertexshaderdebug
+                      href: id3dx11effectpass-getvertexshaderdesc.md
+                    - name: IsValid
+                      href: id3dx11effectpass-isvalid.md
+                - name: ID3DX11EffectRasterizerVariable
+                  href: id3dx11effectrasterizervariable.md
+                  items:
+                    - name: Getbackingstore
+                      href: id3dx11effectrasterizervariable-getbackingstore.md
+                    - name: Getrasterizerstate
+                      href: id3dx11effectrasterizervariable-getrasterizerstate.md
+                    - name: '"Tartrasterizerstate"'
+                      href: id3dx11effectrasterizervariable-setrasterizerstate.md
+                    - name: Undotartrasterizerstate
+                      href: id3dx11effectrasterizervariable-undosetrasterizerstate.md
+                - name: ID3DX11EffectRenderTargetViewVariable
+                  href: id3dx11effectrendertargetviewvariable.md
+                  items:
+                    - name: GetRenderTarget
+                      href: id3dx11effectrendertargetviewvariable-getrendertarget.md
+                    - name: GetRenderTargetArray
+                      href: id3dx11effectrendertargetviewvariable-getrendertargetarray.md
+                    - name: '"Zielort"'
+                      href: id3dx11effectrendertargetviewvariable-setrendertarget.md
+                    - name: '"Tartrendertargetarray"'
+                      href: id3dx11effectrendertargetviewvariable-setrendertargetarray.md
+                - name: ID3DX11EffectSamplerVariable
+                  href: id3dx11effectsamplervariable.md
+                  items:
+                    - name: Getbackingstore
+                      href: id3dx11effectsamplervariable-getbackingstore.md
+                    - name: Getsampler
+                      href: id3dx11effectsamplervariable-getsampler.md
+                    - name: Setsampler
+                      href: id3dx11effectsamplervariable-setsampler.md
+                    - name: Undosetsampler
+                      href: id3dx11effectsamplervariable-undosetsampler.md
+                - name: ID3DX11EffectScalarVariable
+                  href: id3dx11effectscalarvariable.md
+                  items:
+                    - name: GetBool
+                      href: id3dx11effectscalarvariable-getbool.md
+                    - name: Getboolarray
+                      href: id3dx11effectscalarvariable-getboolarray.md
+                    - name: GetFloat
+                      href: id3dx11effectscalarvariable-getfloat.md
+                    - name: Getfloatarray
+                      href: id3dx11effectscalarvariable-getfloatarray.md
+                    - name: GetInt
+                      href: id3dx11effectscalarvariable-getint.md
+                    - name: Getintarray
+                      href: id3dx11effectscalarvariable-getintarray.md
+                    - name: SetBool
+                      href: id3dx11effectscalarvariable-setbool.md
+                    - name: Setboolarray
+                      href: id3dx11effectscalarvariable-setboolarray.md
+                    - name: SetFloat
+                      href: id3dx11effectscalarvariable-setfloat.md
+                    - name: Setfloatarray
+                      href: id3dx11effectscalarvariable-setfloatarray.md
+                    - name: SetInt
+                      href: id3dx11effectscalarvariable-setint.md
+                    - name: '"Tartintarray"'
+                      href: id3dx11effectscalarvariable-setintarray.md
+                - name: ID3DX11EffectShaderResourceVariable
+                  href: id3dx11effectshaderresourcevariable.md
+                  items:
+                    - name: GetResource
+                      href: id3dx11effectshaderresourcevariable-getresource.md
+                    - name: Getresourcearray
+                      href: id3dx11effectshaderresourcevariable-getresourcearray.md
+                    - name: Ziel Quelle
+                      href: id3dx11effectshaderresourcevariable-setresource.md
+                    - name: '"Tartresourcearray"'
+                      href: id3dx11effectshaderresourcevariable-setresourcearray.md
+                - name: ID3DX11EffectShaderVariable
+                  href: id3dx11effectshadervariable.md
+                  items:
+                    - name: Getcomputeshader
+                      href: id3dx11effectshadervariable-getcomputeshader.md
+                    - name: Getdomainshader
+                      href: id3dx11effectshadervariable-getdomainshader.md
+                    - name: Getgeometryshader
+                      href: id3dx11effectshadervariable-getgeometryshader.md
+                    - name: Gethullshader
+                      href: id3dx11effectshadervariable-gethullshader.md
+                    - name: GetInputSignatureElementDesc
+                      href: id3dx11effectshadervariable-getinputsignatureelementdesc.md
+                    - name: GetOutputSignatureElementDesc
+                      href: id3dx11effectshadervariable-getoutputsignatureelementdesc.md
+                    - name: GetPatchConstantSignatureElementDesc
+                      href: id3dx11effectshadervariable-getpatchconstantsignatureelementdesc.md
+                    - name: Getpixelshader
+                      href: id3dx11effectshadervariable-getpixelshader.md
+                    - name: Getshaderdebug
+                      href: id3dx11effectshadervariable-getshaderdesc.md
+                    - name: Getvertexshader
+                      href: id3dx11effectshadervariable-getvertexshader.md
+                - name: ID3DX11EffectStringVariable
+                  href: id3dx11effectstringvariable.md
+                  items:
+                    - name: GetString
+                      href: id3dx11effectstringvariable-getstring.md
+                    - name: GetStringArray
+                      href: id3dx11effectstringvariable-getstringarray.md
+                - name: ID3DX11EffectTechnique
+                  href: id3dx11effecttechnique.md
+                  items:
+                    - name: Computestateblockmask
+                      href: id3dx11effecttechnique-computestateblockmask.md
+                    - name: Getannotationbyindex
+                      href: id3dx11effecttechnique-getannotationbyindex.md
+                    - name: Getannotationbyname
+                      href: id3dx11effecttechnique-getannotationbyname.md
+                    - name: GetDesc
+                      href: id3dx11effecttechnique-getdesc.md
+                    - name: Getpassbyindex
+                      href: id3dx11effecttechnique-getpassbyindex.md
+                    - name: Getpassbyname
+                      href: id3dx11effecttechnique-getpassbyname.md
+                    - name: IsValid
+                      href: id3dx11effecttechnique-isvalid.md
+                - name: ID3DX11EffectType
+                  href: id3dx11effecttype.md
+                  items:
+                    - name: GetDesc
+                      href: id3dx11effecttype-getdesc.md
+                    - name: Getmembership Name
+                      href: id3dx11effecttype-getmembername.md
+                    - name: Getmembership Semantic
+                      href: id3dx11effecttype-getmembersemantic.md
+                    - name: GetMemberTypeByIndex
+                      href: id3dx11effecttype-getmembertypebyindex.md
+                    - name: GetMemberTypeByName
+                      href: id3dx11effecttype-getmembertypebyname.md
+                    - name: Getmembership typebysemantic
+                      href: id3dx11effecttype-getmembertypebysemantic.md
+                    - name: IsValid
+                      href: id3dx11effecttype-isvalid.md
+                - name: ID3DX11EffectUnorderedAccessViewVariable
+                  href: id3dx11effectunorderedaccessviewvariable.md
+                  items:
+                    - name: Getunorderedaccessview
+                      href: id3dx11effectunorderedaccessviewvariable-getunorderedaccessview.md
+                    - name: Getunorderedaccessviewarray
+                      href: id3dx11effectunorderedaccessviewvariable-getunorderedaccessviewarray.md
+                    - name: '"*"'
+                      href: id3dx11effectunorderedaccessviewvariable-setunorderedaccessview.md
+                    - name: '"*"'
+                      href: id3dx11effectunorderedaccessviewvariable-setunorderedaccessviewarray.md
+                - name: ID3DX11EffectVariable
+                  href: id3dx11effectvariable.md
+                  items:
+                    - name: Asblend
+                      href: id3dx11effectvariable-asblend.md
+                    - name: Asclassinstance
+                      href: id3dx11effectvariable-asclassinstance.md
+                    - name: Asconstantbuffer
+                      href: id3dx11effectvariable-asconstantbuffer.md
+                    - name: Asdepthstencil
+                      href: id3dx11effectvariable-asdepthstencil.md
+                    - name: Asdepthstencilview
+                      href: id3dx11effectvariable-asdepthstencilview.md
+                    - name: Asinterface
+                      href: id3dx11effectvariable-asinterface.md
+                    - name: Asmatrix
+                      href: id3dx11effectvariable-asmatrix.md
+                    - name: Asrasterizer
+                      href: id3dx11effectvariable-asrasterizer.md
+                    - name: Asrendertargetview
+                      href: id3dx11effectvariable-asrendertargetview.md
+                    - name: Assampler
+                      href: id3dx11effectvariable-assampler.md
+                    - name: Asscalar
+                      href: id3dx11effectvariable-asscalar.md
+                    - name: Asshader
+                      href: id3dx11effectvariable-asshader.md
+                    - name: Asshaderresource
+                      href: id3dx11effectvariable-asshaderresource.md
+                    - name: AsString
+                      href: id3dx11effectvariable-asstring.md
+                    - name: Asunorderedaccessview
+                      href: id3dx11effectvariable-asunorderedaccessview.md
+                    - name: Asvector
+                      href: id3dx11effectvariable-asvector.md
+                    - name: Getannotationbyindex
+                      href: id3dx11effectvariable-getannotationbyindex.md
+                    - name: Getannotationbyname
+                      href: id3dx11effectvariable-getannotationbyname.md
+                    - name: GetDesc
+                      href: id3dx11effectvariable-getdesc.md
+                    - name: GetElement
+                      href: id3dx11effectvariable-getelement.md
+                    - name: Getmembership byindex
+                      href: id3dx11effectvariable-getmemberbyindex.md
+                    - name: Getmembership byname
+                      href: id3dx11effectvariable-getmemberbyname.md
+                    - name: Getmembership bysemantic
+                      href: id3dx11effectvariable-getmemberbysemantic.md
+                    - name: Getparametenconstantbuffer
+                      href: id3dx11effectvariable-getparentconstantbuffer.md
+                    - name: Getrawvalue
+                      href: id3dx11effectvariable-getrawvalue.md
+                    - name: GetType
+                      href: id3dx11effectvariable-gettype.md
+                    - name: IsValid
+                      href: id3dx11effectvariable-isvalid.md
+                    - name: '"Strawvalue"'
+                      href: id3dx11effectvariable-setrawvalue.md
+                - name: ID3DX11EffectVectorVariable
+                  href: id3dx11effectvectorvariable.md
+                  items:
+                    - name: Getboolvector
+                      href: id3dx11effectvectorvariable-getboolvector.md
+                    - name: Getboolvectorarray
+                      href: id3dx11effectvectorvariable-getboolvectorarray.md
+                    - name: Getfloatvector
+                      href: id3dx11effectvectorvariable-getfloatvector.md
+                    - name: Getfloatvector Array
+                      href: id3dx11effectvectorvariable-getfloatvectorarray.md
+                    - name: Getintvector
+                      href: id3dx11effectvectorvariable-getintvector.md
+                    - name: Getintvector Array
+                      href: id3dx11effectvectorvariable-getintvectorarray.md
+                    - name: Setboolvector
+                      href: id3dx11effectvectorvariable-setboolvector.md
+                    - name: Setboolvectorarray
+                      href: id3dx11effectvectorvariable-setboolvectorarray.md
+                    - name: Setfloatvector
+                      href: id3dx11effectvectorvariable-setfloatvector.md
+                    - name: Setfloatvector Array
+                      href: id3dx11effectvectorvariable-setfloatvectorarray.md
+                    - name: Objekt Vektor
+                      href: id3dx11effectvectorvariable-setintvector.md
+                    - name: '"Tartintvector Array"'
+                      href: id3dx11effectvectorvariable-setintvectorarray.md
+            - name: Effekte 11-Funktionen
+              href: d3d11-graphics-reference-effects11-functions.md
+              items:
+                - name: D3DX11CreateEffectFromMemory
+                  href: d3dx11createeffectfrommemory.md
+            - name: Effekte 11-Strukturen
+              href: d3d11-graphics-reference-effects11-structures.md
+              items:
+                - name: D3DX11_EFFECT_DESC
+                  href: d3dx11-effect-desc.md
+                - name: D3DX11_EFFECT_SHADER_DESC
+                  href: d3dx11-effect-shader-desc.md
+                - name: D3DX11_EFFECT_TYPE_DESC
+                  href: d3dx11-effect-type-desc.md
+                - name: D3DX11_EFFECT_VARIABLE_DESC
+                  href: d3dx11-effect-variable-desc.md
+                - name: D3DX11_GROUP_DESC
+                  href: d3dx11-group-desc.md
+                - name: D3DX11_PASS_DESC
+                  href: d3dx11-pass-desc.md
+                - name: D3DX11_PASS_SHADER_DESC
+                  href: d3dx11-pass-shader-desc.md
+                - name: D3DX11_STATE_BLOCK_MASK
+                  href: d3dx11-state-block-mask.md
+                - name: D3DX11_TECHNIQUE_DESC
+                  href: d3dx11-technique-desc.md
+            - name: Effekt Format
+              href: d3d11-effect-format.md
+              items:
+                - name: Syntax der Effekt Variablen
+                  href: d3d11-effect-variable-syntax.md
+                - name: Syntax der Anmerkung
+                  href: d3d11-effect-annotation-syntax.md
+                - name: Syntax der Effekt Funktion
+                  href: d3d11-effect-function-syntax.md
+                - name: Syntax der Effekt Technik
+                  href: d3d11-effect-technique-syntax.md
+                - name: Effekt Zustands Gruppen
+                  href: d3d11-effect-states.md
+                - name: Effekt Gruppen Syntax
+                  href: d3d11-effect-group-syntax.md
