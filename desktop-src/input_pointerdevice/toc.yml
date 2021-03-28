@@ -1,0 +1,39 @@
+- name: Eingabe Stapel für Zeiger Geräte
+  href: pointer-device-stack-portal.md
+  items:
+    - name: Verweis auf Zeiger Geräte-Eingabe Stapel Referenz
+      href: unified-input-stack-reference.md
+      items:
+        - name: Enumerationen
+          href: enumerations.md
+          items:
+            - name: POINTER_DEVICE_CURSOR_TYPE
+              href: /windows/win32/api/Winuser/ne-winuser-pointer_device_cursor_type
+            - name: POINTER_DEVICE_TYPE
+              href: /windows/win32/api/Winuser/ne-winuser-pointer_device_type
+        - name: Functions
+          href: functions.md
+          items:
+            - name: Getpointerdevice
+              href: /windows/win32/api/winuser/nf-winuser-getpointerdevice
+            - name: Getpointerde vicecursoren
+              href: /windows/win32/api/winuser/nf-winuser-getpointerdevicecursors
+            - name: Getpointerdeviceproperties
+              href: /windows/win32/api/winuser/nf-winuser-getpointerdeviceproperties
+            - name: Getpointerdevicerects
+              href: /windows/win32/api/winuser/nf-winuser-getpointerdevicerects
+            - name: Getpointerdevices
+              href: /windows/win32/api/winuser/nf-winuser-getpointerdevices
+            - name: Getrawpointerdevicedata
+              href: /windows/win32/api/winuser/nf-winuser-getrawpointerdevicedata
+            - name: Registerpointerdevicenotifications
+              href: /windows/win32/api/winuser/nf-winuser-registerpointerdevicenotifications
+        - name: Strukturen
+          href: structures.md
+          items:
+            - name: POINTER_DEVICE_CURSOR_INFO
+              href: /windows/win32/api/Winuser/ns-winuser-pointer_device_cursor_info
+            - name: POINTER_DEVICE_INFO
+              href: /windows/win32/api/Winuser/ns-winuser-pointer_device_info
+            - name: POINTER_DEVICE_PROPERTY
+              href: /windows/win32/api/Winuser/ns-winuser-pointer_device_property
