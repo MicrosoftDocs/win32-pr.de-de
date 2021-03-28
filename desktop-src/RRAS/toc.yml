@@ -1,0 +1,1675 @@
+- name: Routing- und RAS-Dienst
+  href: portal.md
+  items:
+    - name: Architektur der Routing-und RAS-Dienste
+      href: routing-and-remote-access-services-architecture.md
+    - name: Registrierungs Layout für Routing und Remote Zugriff
+      href: routing-and-remote-access-registry-layout.md
+    - name: Fehler Codes für Routing und Remote Zugriff
+      href: routing-and-remote-access-error-codes.md
+    - name: Remotezugriff
+      href: remote-access-start-page.md
+      items:
+        - name: Remote Zugriffs Anforderung für Kommentare
+          href: remote-access-request-for-comments.md
+        - name: RAS-Dienst
+          href: remote-access-service.md
+          items:
+            - name: Informationen zum RAS-Dienst
+              href: about-remote-access-service.md
+              items:
+                - name: Allgemeine RAS-Dialog Felder
+                  href: ras-common-dialog-boxes.md
+                - name: RAS-Verbindungs Vorgänge
+                  href: ras-connection-operations.md
+                  items:
+                    - name: Synchrone Vorgänge
+                      href: synchronous-operations.md
+                    - name: Asynchrone Vorgänge
+                      href: asynchronous-operations.md
+                    - name: Phone-Book von Dateien und Verbindungsinformationen
+                      href: phone-book-files-and-connection-information.md
+                    - name: Informationen zur Benutzerauthentifizierung
+                      href: user-authentication-information.md
+                    - name: Weitere Verbindungsinformationen
+                      href: other-connection-information.md
+                    - name: Verbindungszustände
+                      href: connection-states.md
+                    - name: Benachrichtigungs Handler
+                      href: notification-handlers.md
+                    - name: Behandeln von RAS-Fehlern
+                      href: handling-ras-errors.md
+                    - name: Informations Benachrichtigungen
+                      href: informational-notifications.md
+                    - name: Abschluss Benachrichtigungen
+                      href: completion-notifications.md
+                    - name: Angehaltene Zustände
+                      href: paused-states.md
+                    - name: Rückruf Verbindungen
+                      href: callback-connections.md
+                    - name: Verbindung wird getrennt
+                      href: disconnecting.md
+                    - name: Benutzerdefinierte-diker
+                      href: custom-dialers.md
+                    - name: Verbindungs-Manager
+                      href: connection-manager.md
+                    - name: Benutzerdefinierte RAS-Skript
+                      href: ras-custom-scripting.md
+                    - name: Verbindungen mit einem virtuellen privaten Netzwerk
+                      href: virtual-private-network-connections.md
+                    - name: Point-to-Point-Protokoll über Ethernet-Verbindungen
+                      href: point-to-point-protocol-over-ethernet-connections.md
+                - name: RAS-Telefonbücher
+                  href: ras-phone-books.md
+                  items:
+                    - name: Phone-Book Einträge
+                      href: phone-book-entries.md
+                    - name: Unter Einträge und Multilink-Verbindungen
+                      href: subentries-and-multilink-connections.md
+                - name: RAS-AutoDial
+                  href: ras-autodial.md
+                  items:
+                    - name: AutoDial-Daten Bank Zuordnung
+                      href: autodial-mapping-database.md
+                    - name: AutoDial-Verbindungs Vorgänge
+                      href: autodial-connection-operations.md
+                - name: RAS-Konfiguration und Verbindungsinformationen
+                  href: ras-configuration-and-connection-information.md
+                - name: RAS-Server Verwaltung
+                  href: ras-server-administration.md
+                  items:
+                    - name: RAS-Benutzerkonten Verwaltung
+                      href: ras-user-account-administration.md
+                    - name: RAS-Server und-Port Verwaltung
+                      href: ras-server-and-port-administration-ras.md
+                    - name: RAS-Verwaltungs-dll
+                      href: ras-administration-dll-ras.md
+                    - name: Registrierungs Einrichtung der RAS-Verwaltungs-dll
+                      href: ras-administration-dll-registry-setup-ras.md
+                - name: Unterstützung für RAS-Sicherheits Host
+                  href: ras-security-host-support.md
+                  items:
+                    - name: Registrieren einer RAS-Sicherheits-dll
+                      href: registering-a-ras-security-dll.md
+                    - name: RAS-Server-Sicherheits Authentifizierung
+                      href: ras-server-security-authentication.md
+                    - name: RAS-Sicherheits-DLL-Authentifizierungs Transaktion
+                      href: ras-security-dll-authentication-transaction.md
+            - name: Verwenden des Remote Zugriffs Dienstanbieter
+              href: using-remote-access-service.md
+              items:
+                - name: Verknüpfen mit der Remote Zugriffs-dll
+                  href: linking-to-the-remote-access-dll.md
+            - name: RAS-Dienst Referenz
+              href: remote-access-service-reference.md
+              items:
+                - name: RAS-Dienst Datentypen
+                  href: remote-access-service-data-types.md
+                - name: Funktionen des RAS-Diensts
+                  href: remote-access-service-functions.md
+                  items:
+                    - name: Orasadfunc
+                      href: /windows/desktop/api/Ras/nc-ras-orasadfunc
+                    - name: Rasadfunc
+                      href: /windows/desktop/api/Ras/nc-ras-rasadfunca
+                    - name: Rasclearconnectionstatistics
+                      href: /windows/desktop/api/Ras/nf-ras-rasclearconnectionstatistics
+                    - name: Rasclearlinkstatistics
+                      href: /windows/desktop/api/Ras/nf-ras-rasclearlinkstatistics
+                    - name: Rasconnectionnotification
+                      href: /windows/desktop/api/Ras/nf-ras-rasconnectionnotificationa
+                    - name: Rascreatephonebookentry
+                      href: /windows/desktop/api/Ras/nf-ras-rascreatephonebookentrya
+                    - name: Rascustomdeleteentrynotifyfn
+                      href: /windows/desktop/api/Ras/nc-ras-rascustomdeleteentrynotifyfn
+                    - name: Rascustomdialfn
+                      href: /windows/desktop/api/Ras/nc-ras-rascustomdialfn
+                    - name: Rascustomdialdlgfn
+                      href: /windows/desktop/api/Rasdlg/nc-rasdlg-rascustomdialdlgfn
+                    - name: Rascustomentrydlgfn
+                      href: /windows/desktop/api/Rasdlg/nc-rasdlg-rascustomentrydlgfn
+                    - name: Rascustomhangupfn
+                      href: /windows/desktop/api/Ras/nc-ras-rascustomhangupfn
+                    - name: Rasdeleteentry
+                      href: /windows/desktop/api/Ras/nf-ras-rasdeleteentrya
+                    - name: Rasdelta etesubentry
+                      href: /windows/desktop/api/Ras/nf-ras-rasdeletesubentrya
+                    - name: Rasdial
+                      href: /windows/desktop/api/Ras/nf-ras-rasdiala
+                    - name: RasDialDlg
+                      href: /windows/desktop/api/Rasdlg/nf-rasdlg-rasdialdlga
+                    - name: Rasdialfunc
+                      href: /windows/desktop/api/Ras/nc-ras-rasdialfunc
+                    - name: RasDialFunc1
+                      href: /windows/desktop/api/Ras/nc-ras-rasdialfunc1
+                    - name: RasDialFunc2
+                      href: /windows/desktop/api/Ras/nc-ras-rasdialfunc2
+                    - name: Raseditphonebookentry
+                      href: /windows/desktop/api/Ras/nf-ras-raseditphonebookentrya
+                    - name: RasEntryDlg
+                      href: /windows/desktop/api/Rasdlg/nf-rasdlg-rasentrydlga
+                    - name: Rasen-autodialadressen
+                      href: /windows/desktop/api/Ras/nf-ras-rasenumautodialaddressesa
+                    - name: Rasen-Connections
+                      href: /windows/desktop/api/Ras/nf-ras-rasenumconnectionsa
+                    - name: Rasengeräte
+                      href: /windows/desktop/api/Ras/nf-ras-rasenumdevicesa
+                    - name: Raseneinträge
+                      href: /windows/desktop/api/Ras/nf-ras-rasenumentriesa
+                    - name: Rasfreeapuseridentity
+                      href: /windows/desktop/api/Ras/nf-ras-rasfreeeapuseridentitya
+                    - name: Rasgetautodialaddress
+                      href: /windows/desktop/api/Ras/nf-ras-rasgetautodialaddressa
+                    - name: Rasgetautodialenable
+                      href: /windows/desktop/api/Ras/nf-ras-rasgetautodialenablea
+                    - name: Rasgetautodialparam
+                      href: /windows/desktop/api/Ras/nf-ras-rasgetautodialparama
+                    - name: '"Rasgetconnectionstatistics"'
+                      href: /windows/desktop/api/Ras/nf-ras-rasgetconnectionstatistics
+                    - name: Rasgetconnectstatus
+                      href: /windows/desktop/api/Ras/nf-ras-rasgetconnectstatusa
+                    - name: Rasgetcountryinfo
+                      href: /windows/desktop/api/Ras/nf-ras-rasgetcountryinfoa
+                    - name: Rasgetanmeldeinformationen
+                      href: /windows/desktop/api/Ras/nf-ras-rasgetcredentialsa
+                    - name: Rasgetcustomauthdata
+                      href: /windows/desktop/api/Ras/nf-ras-rasgetcustomauthdataa
+                    - name: Rasgeteapuserdata
+                      href: /windows/desktop/api/Ras/nf-ras-rasgeteapuserdataa
+                    - name: Rasgeteapuseridentity
+                      href: /windows/desktop/api/Ras/nf-ras-rasgeteapuseridentitya
+                    - name: Rasgetentrydialparameams
+                      href: /windows/desktop/api/Ras/nf-ras-rasgetentrydialparamsa
+                    - name: Rasgetentryproperties
+                      href: /windows/desktop/api/Ras/nf-ras-rasgetentrypropertiesa
+                    - name: Rasgeterrorstring
+                      href: /windows/desktop/api/Ras/nf-ras-rasgeterrorstringa
+                    - name: '"Rasgetlinkstatistics"'
+                      href: /windows/desktop/api/Ras/nf-ras-rasgetlinkstatistics
+                    - name: Rasgetnapstatus
+                      href: /windows/desktop/api/Ras/nf-ras-rasgetnapstatus
+                    - name: Rasgetprojectioninfo
+                      href: /previous-versions/aa918872(v=msdn.10)
+                    - name: Rasgetprojectioninfoex
+                      href: /windows/desktop/api/Ras/nf-ras-rasgetprojectioninfoex
+                    - name: Rasgetquarantineconnectionid
+                      href: /previous-versions/windows/desktop/legacy/aa377552(v=vs.85)
+                    - name: Rasgetsubentryhandle
+                      href: /windows/desktop/api/Ras/nf-ras-rasgetsubentryhandlea
+                    - name: Rasgetsubentryproperties
+                      href: /windows/desktop/api/Ras/nf-ras-rasgetsubentrypropertiesa
+                    - name: RasHangUp
+                      href: /windows/desktop/api/Ras/nf-ras-rashangupa
+                    - name: Rasinvokeeapui
+                      href: /windows/desktop/api/Ras/nf-ras-rasinvokeeapui
+                    - name: Rasmonitordlg
+                      href: /previous-versions/windows/desktop/legacy/aa377584(v=vs.85)
+                    - name: Raspbdlgfunc
+                      href: /windows/desktop/api/Rasdlg/nc-rasdlg-raspbdlgfunca
+                    - name: Rasphonebookdlg
+                      href: /windows/desktop/api/Rasdlg/nf-rasdlg-rasphonebookdlga
+                    - name: Rasrenameentry
+                      href: /windows/desktop/api/Ras/nf-ras-rasrenameentrya
+                    - name: Rassetauwebdialaddress
+                      href: /windows/desktop/api/Ras/nf-ras-rassetautodialaddressa
+                    - name: Rassetauto dialenable
+                      href: /windows/desktop/api/Ras/nf-ras-rassetautodialenablea
+                    - name: Rassetauto dialparam
+                      href: /windows/desktop/api/Ras/nf-ras-rassetautodialparama
+                    - name: Pfnrassetcommsettings
+                      href: /windows/desktop/api/Ras/nc-ras-pfnrassetcommsettings
+                    - name: Rassetanmelde Informationen
+                      href: /windows/desktop/api/Ras/nf-ras-rassetcredentialsa
+                    - name: Rassetcustomauthdata
+                      href: /windows/desktop/api/Ras/nf-ras-rassetcustomauthdataa
+                    - name: Rasseteapuserdata
+                      href: /windows/desktop/api/Ras/nf-ras-rasseteapuserdataa
+                    - name: Rassetentrydialparametriams
+                      href: /windows/desktop/api/Ras/nf-ras-rassetentrydialparamsa
+                    - name: Rassetentryproperties
+                      href: /windows/desktop/api/Ras/nf-ras-rassetentrypropertiesa
+                    - name: Rassetsubentryproperties
+                      href: /windows/desktop/api/Ras/nf-ras-rassetsubentrypropertiesa
+                    - name: Rasupdateconnetction
+                      href: /windows/desktop/api/Ras/nf-ras-rasupdateconnection
+                    - name: Rasvalidateentryname
+                      href: /windows/desktop/api/Ras/nf-ras-rasvalidateentrynamea
+                    - name: Benutzerdefinierte RAS-DLL-Funktionen
+                      href: ras-custom-scripting-dll-functions.md
+                      items:
+                        - name: Rascustomscriptexecutefn
+                          href: /windows/desktop/api/Ras/nc-ras-rascustomscriptexecutefn
+                        - name: Pfnrasgetbuffer
+                          href: /windows/desktop/api/Ras/nc-ras-pfnrasgetbuffer
+                        - name: Pfnrasfrebuffer
+                          href: /windows/desktop/api/Ras/nc-ras-pfnrasfreebuffer
+                        - name: Pfnrassendbuffer
+                          href: /windows/desktop/api/Ras/nc-ras-pfnrassendbuffer
+                        - name: Pfnrasreceivebuffer
+                          href: /windows/desktop/api/Ras/nc-ras-pfnrasreceivebuffer
+                        - name: Pfnrasretrievebuffer
+                          href: /windows/desktop/api/Ras/nc-ras-pfnrasretrievebuffer
+                - name: Remote Zugriffs Dienst-Meldungen
+                  href: remote-access-service-messages.md
+                  items:
+                    - name: WM_RASDIALEVENT
+                      href: wm-rasdialevent.md
+                - name: RAS-Dienst Strukturen
+                  href: remote-access-service-structures.md
+                  items:
+                    - name: RAS_PROJECTION_INFO
+                      href: /windows/win32/api/Ras/ns-ras-ras_projection_info
+                    - name: RAS_STATS
+                      href: /windows/win32/api/Ras/ns-ras-ras_stats
+                    - name: Rasadparameams
+                      href: /previous-versions/windows/desktop/legacy/aa376719(v=vs.85)
+                    - name: Rasamb
+                      href: /previous-versions/windows/desktop/legacy/aa376720(v=vs.85)
+                    - name: Rasapiversion
+                      href: /previous-versions/windows/desktop/legacy/dd408102(v=vs.85)
+                    - name: Rasauydialentry
+                      href: /previous-versions/windows/desktop/legacy/aa376721(v=vs.85)
+                    - name: Rascommsettings
+                      href: /previous-versions/windows/desktop/legacy/aa376724(v=vs.85)
+                    - name: Rasconn
+                      href: /previous-versions/windows/desktop/legacy/aa376725(v=vs.85)
+                    - name: Rasrestatus
+                      href: /previous-versions/windows/desktop/legacy/aa376728(v=vs.85)
+                    - name: Rascredenseins
+                      href: /previous-versions/windows/desktop/legacy/aa376730(v=vs.85)
+                    - name: Rasctryinfo
+                      href: /previous-versions/windows/desktop/legacy/aa376731(v=vs.85)
+                    - name: Rascustomscriptextensions
+                      href: /previous-versions/windows/desktop/legacy/aa376738(v=vs.85)
+                    - name: Rasdevinfo
+                      href: /previous-versions/windows/desktop/legacy/aa377001(v=vs.85)
+                    - name: Rasdevspecificinfo
+                      href: /windows/win32/api/Ras/ns-ras-rasdevspecificinfo
+                    - name: RasDialDlg
+                      href: /previous-versions/windows/desktop/legacy/aa377023(v=vs.85)
+                    - name: Rasdialextensions
+                      href: /previous-versions/windows/desktop/legacy/aa377029(v=vs.85)
+                    - name: Rasdialparametriams
+                      href: /previous-versions/windows/desktop/legacy/aa377238(v=vs.85)
+                    - name: Raseapinfo
+                      href: /previous-versions/windows/desktop/legacy/aa377242(v=vs.85)
+                    - name: Raseemapuseridentity
+                      href: /previous-versions/windows/desktop/legacy/aa377247(v=vs.85)
+                    - name: RASENTRY
+                      href: /previous-versions/windows/desktop/legacy/aa377274(v=vs.85)
+                    - name: RasEntryDlg
+                      href: /previous-versions/windows/desktop/legacy/aa377260(v=vs.85)
+                    - name: Rasentryname
+                      href: /previous-versions/windows/desktop/legacy/aa377267(v=vs.85)
+                    - name: RASIKEV2_PROJECTION_INFO
+                      href: /windows/win32/api/Ras/ns-ras-rasikev2_projection_info
+                    - name: Rasipaddr
+                      href: /previous-versions/windows/desktop/legacy/aa377578(v=vs.85)
+                    - name: Rasmonitordlg
+                      href: /previous-versions/windows/desktop/legacy/aa377591(v=vs.85)
+                    - name: Rasnapstate
+                      href: /windows/win32/api/ras/ns-ras-rasnapstate
+                    - name: Rasnouser
+                      href: /previous-versions/windows/desktop/legacy/aa377598(v=vs.85)
+                    - name: Raspbdlg
+                      href: /previous-versions/windows/desktop/legacy/aa377607(v=vs.85)
+                    - name: RASPPP_PROJECTION_INFO
+                      href: /windows/win32/api/Ras/ns-ras-rasppp_projection_info
+                    - name: Raspppccp
+                      href: /previous-versions/windows/desktop/legacy/aa377620(v=vs.85)
+                    - name: Raspppip
+                      href: /previous-versions/windows/desktop/legacy/aa377634(v=vs.85)
+                    - name: RASPPPIPV6
+                      href: /previous-versions/windows/desktop/legacy/aa816540(v=vs.85)
+                    - name: Raspppipx
+                      href: /previous-versions/windows/desktop/legacy/aa377623(v=vs.85)
+                    - name: Rasppplcp
+                      href: /previous-versions/windows/desktop/legacy/aa377638(v=vs.85)
+                    - name: Raspppnbf
+                      href: /previous-versions/windows/desktop/legacy/aa377642(v=vs.85)
+                    - name: RASPROJECTION_INFO_TYPE
+                      href: /windows/win32/api/Ras/ne-ras-rasprojection_info_type
+                    - name: Rasslip
+                      href: /previous-versions/windows/desktop/legacy/aa377836(v=vs.85)
+                    - name: Rassubentry
+                      href: /previous-versions/windows/desktop/legacy/aa377839(v=vs.85)
+                    - name: Rastunnelendpoint
+                      href: /previous-versions/windows/desktop/legacy/dd430579(v=vs.85)
+                    - name: Rasupdateconn
+                      href: /previous-versions/windows/desktop/legacy/dd408110(v=vs.85)
+                - name: RAS-Dienst-Enumerationen
+                  href: remote-access-service-enumerations.md
+                  items:
+                    - name: Rasrestate
+                      href: /previous-versions/windows/desktop/legacy/aa376727(v=vs.85)
+                    - name: Rasresubstate
+                      href: /previous-versions/windows/desktop/legacy/dd408103(v=vs.85)
+                    - name: Rasprojection
+                      href: /previous-versions/windows/desktop/legacy/aa377648(v=vs.85)
+        - name: Remote Zugriffs Dienst-Verwaltung
+          href: remote-access-service-administration.md
+          items:
+            - name: Informationen zur Remote Zugriffs Dienst-Verwaltung
+              href: about-remote-access-service-administration.md
+              items:
+                - name: 'Funktions Vergleich: Windows 2000 und RRAS Redistributable'
+                  href: function-comparison-windows-2000-versus-rras-redistributable.md
+                - name: RAS-Benutzerverwaltung
+                  href: ras-user-administration.md
+                - name: RAS-Server und-Port Verwaltung
+                  href: ras-server-and-port-administration.md
+                - name: RAS-Verwaltungs-dll
+                  href: ras-administration-dll.md
+                - name: Registrierungs Einrichtung der RAS-Verwaltungs-dll
+                  href: ras-administration-dll-registry-setup.md
+            - name: RAS-Dienst-Verwaltungs Referenz
+              href: remote-access-service-administration-reference.md
+              items:
+                - name: RAS-Verwaltungsfunktionen
+                  href: ras-administration-functions.md
+                  items:
+                    - name: Mpradminconnectionclearstats
+                      href: /windows/desktop/api/Mprapi/nf-mprapi-mpradminconnectionclearstats
+                    - name: Mpradminconnectionenum
+                      href: /windows/desktop/api/Mprapi/nf-mprapi-mpradminconnectionenum
+                    - name: Mpradminconnectionenumex
+                      href: /windows/desktop/api/Mprapi/nf-mprapi-mpradminconnectionenumex
+                    - name: Mpradminconnectiongetinfo
+                      href: /windows/desktop/api/Mprapi/nf-mprapi-mpradminconnectiongetinfo
+                    - name: Mpradminconnectiongetinfoex
+                      href: /windows/desktop/api/Mprapi/nf-mprapi-mpradminconnectiongetinfoex
+                    - name: Mpradminconnectionremovequarantäne
+                      href: /windows/desktop/api/Mprapi/nf-mprapi-mpradminconnectionremovequarantine
+                    - name: Mpradminportclearstats
+                      href: /windows/desktop/api/Mprapi/nf-mprapi-mpradminportclearstats
+                    - name: Mpradminportdisconnect
+                      href: /windows/desktop/api/Mprapi/nf-mprapi-mpradminportdisconnect
+                    - name: Mpradminportenum
+                      href: /windows/desktop/api/Mprapi/nf-mprapi-mpradminportenum
+                    - name: Mpradminportgetinfo
+                      href: /windows/desktop/api/Mprapi/nf-mprapi-mpradminportgetinfo
+                    - name: Mpradminportreset
+                      href: /windows/desktop/api/Mprapi/nf-mprapi-mpradminportreset
+                    - name: Funktionen der RAS-Admininstration-dll
+                      href: ras-admin-dll-functions.md
+                      items:
+                        - name: Mpradminakzeptnewconnection
+                          href: /windows/desktop/api/Mprapi/nf-mprapi-mpradminacceptnewconnection
+                        - name: Mpradminakzeptnewconnectionex
+                          href: /windows/desktop/api/Mprapi/nf-mprapi-mpradminacceptnewconnectionex
+                        - name: MprAdminAcceptNewConnection2
+                          href: /windows/desktop/api/Mprapi/nf-mprapi-mpradminacceptnewconnection2
+                        - name: MprAdminAcceptNewConnection3
+                          href: /windows/desktop/api/Mprapi/nf-mprapi-mpradminacceptnewconnection3
+                        - name: Mpradminakzeptnewlink
+                          href: /windows/desktop/api/Mprapi/nf-mprapi-mpradminacceptnewlink
+                        - name: Mpradminakzeptreauthentication
+                          href: /windows/desktop/api/Mprapi/nf-mprapi-mpradminacceptreauthentication
+                        - name: Mpradminaccept treauthenticationex
+                          href: /windows/desktop/api/Mprapi/nf-mprapi-mpradminacceptreauthenticationex
+                        - name: Mpradminconnectionhangupnotification
+                          href: /windows/desktop/api/Mprapi/nf-mprapi-mpradminconnectionhangupnotification
+                        - name: MprAdminConnectionHangupNotification2
+                          href: /windows/desktop/api/Mprapi/nf-mprapi-mpradminconnectionhangupnotification2
+                        - name: MprAdminConnectionHangupNotification3
+                          href: /windows/desktop/api/Mprapi/nf-mprapi-mpradminconnectionhangupnotification3
+                        - name: Mpradminconnectionhangupnotificationex
+                          href: /windows/desktop/api/Mprapi/nf-mprapi-mpradminconnectionhangupnotificationex
+                        - name: Mpradmingetipaddressforuser
+                          href: /windows/desktop/api/Mprapi/nf-mprapi-mpradmingetipaddressforuser
+                        - name: MprAdminGetIpv6AddressForUser
+                          href: /windows/desktop/api/Mprapi/nf-mprapi-mpradmingetipv6addressforuser
+                        - name: Mpradmininitializedll
+                          href: /windows/desktop/api/Mprapi/nf-mprapi-mpradmininitializedll
+                        - name: Mpradmininitializedllex
+                          href: /windows/desktop/api/mprapi/nf-mprapi-mpradmininitializedllex
+                        - name: Mpradminlinkhangupnotification
+                          href: /windows/desktop/api/Mprapi/nf-mprapi-mpradminlinkhangupnotification
+                        - name: Mpradminreleaseipaddress
+                          href: /windows/desktop/api/Mprapi/nf-mprapi-mpradminreleaseipaddress
+                        - name: MprAdminReleaseIpv6AddressForUser
+                          href: /windows/desktop/api/Mprapi/nf-mprapi-mpradminreleaseipv6addressforuser
+                        - name: Mpradminterminatedll
+                          href: /windows/desktop/api/Mprapi/nf-mprapi-mpradminterminatedll
+                    - name: RAS-Benutzer Verwaltungsfunktionen
+                      href: ras-user-administration-functions.md
+                      items:
+                        - name: Mpradmingetpdcserver
+                          href: /windows/desktop/api/Mprapi/nf-mprapi-mpradmingetpdcserver
+                        - name: Mpradminsendusermessage
+                          href: /windows/desktop/api/Mprapi/nf-mprapi-mpradminsendusermessage
+                        - name: Mpradminusergetinfo
+                          href: /windows/desktop/api/Mprapi/nf-mprapi-mpradminusergetinfo
+                        - name: Mpradminusereintinfo
+                          href: /windows/desktop/api/Mprapi/nf-mprapi-mpradminusersetinfo
+                - name: RAS-Verwaltungsstrukturen
+                  href: ras-administration-structures.md
+                  items:
+                    - name: MPRAPI_ADMIN_DLL_CALLBACKS
+                      href: /windows/win32/api/Mprapi/ns-mprapi-mprapi_admin_dll_callbacks
+                    - name: PPP_ATCP_INFO
+                      href: /windows/win32/api/Mprapi/ns-mprapi-ppp_atcp_info
+                    - name: PPP_CCP_INFO
+                      href: /windows/win32/api/Mprapi/ns-mprapi-ppp_ccp_info
+                    - name: PPP_INFO
+                      href: /windows/win32/api/Mprapi/ns-mprapi-ppp_info
+                    - name: PPP_INFO_2
+                      href: /windows/win32/api/Mprapi/ns-mprapi-ppp_info_2
+                    - name: PPP_INFO_3
+                      href: /windows/win32/api/Mprapi/ns-mprapi-ppp_info_3
+                    - name: PPP_IPCP_INFO
+                      href: /windows/win32/api/Mprapi/ns-mprapi-ppp_ipcp_info
+                    - name: PPP_IPCP_INFO2
+                      href: /windows/win32/api/Mprapi/ns-mprapi-ppp_ipcp_info2
+                    - name: PPP_IPXCP_INFO
+                      href: /windows/win32/api/Mprapi/ns-mprapi-ppp_ipxcp_info
+                    - name: PPP_IPV6_CP_INFO
+                      href: /windows/win32/api/Mprapi/ns-mprapi-ppp_ipv6_cp_info
+                    - name: PPP_LCP_INFO
+                      href: /windows/win32/api/Mprapi/ns-mprapi-ppp_lcp_info
+                    - name: PPP_NBFCP_INFO
+                      href: /windows/win32/api/Mprapi/ns-mprapi-ppp_nbfcp_info
+                    - name: RAS_CONNECTION_0
+                      href: /windows/win32/api/Mprapi/ns-mprapi-ras_connection_0
+                    - name: RAS_CONNECTION_1
+                      href: /windows/win32/api/Mprapi/ns-mprapi-ras_connection_1
+                    - name: RAS_CONNECTION_2
+                      href: /windows/win32/api/Mprapi/ns-mprapi-ras_connection_2
+                    - name: RAS_CONNECTION_3
+                      href: /windows/win32/api/Mprapi/ns-mprapi-ras_connection_3
+                    - name: RAS_CONNECTION_EX
+                      href: /windows/win32/api/Mprapi/ns-mprapi-ras_connection_ex
+                    - name: RAS_PORT_0
+                      href: /windows/win32/api/Mprapi/ns-mprapi-ras_port_0
+                    - name: RAS_PORT_1
+                      href: /windows/win32/api/Mprapi/ns-mprapi-ras_port_1
+                    - name: RAS_USER_0
+                      href: /windows/win32/api/Mprapi/ns-mprapi-ras_user_0
+                    - name: RAS_USER_1
+                      href: /windows/win32/api/Mprapi/ns-mprapi-ras_user_1
+                - name: RAS-Administration-Enumerationen
+                  href: ras-administration-enumerations.md
+                  items:
+                    - name: RAS_HARDWARE_CONDITION
+                      href: /windows/win32/api/Mprapi/ne-mprapi-ras_hardware_condition
+                    - name: RAS_PORT_CONDITION
+                      href: /windows/win32/api/Mprapi/ne-mprapi-ras_port_condition
+                    - name: RAS_QUARANTINE_STATE
+                      href: /windows/win32/api/Mprapi/ne-mprapi-ras_quarantine_state
+            - name: RAS-Server-Verwaltungs Referenz
+              href: ras-server-administration-reference.md
+              items:
+                - name: RAS-Server-Verwaltungsfunktionen
+                  href: ras-server-administration-functions.md
+                  items:
+                    - name: Rasadminfrebuffer
+                      href: rasadminfreebuffer.md
+                    - name: Rasadmingeterrorstring
+                      href: rasadmingeterrorstring.md
+                    - name: Rasadmingetuseraccountserver
+                      href: rasadmingetuseraccountserver.md
+                    - name: Rasadminportclearstatistics
+                      href: rasadminportclearstatistics.md
+                    - name: Rasadminportdisconnect
+                      href: rasadminportdisconnect.md
+                    - name: Rasadminportenum
+                      href: rasadminportenum.md
+                    - name: Rasadminportgetinfo
+                      href: rasadminportgetinfo.md
+                    - name: Rasadminservergetinfo
+                      href: rasadminservergetinfo.md
+                    - name: Rasadminusergetinfo
+                      href: rasadminusergetinfo.md
+                    - name: Rasadminusereintinfo
+                      href: rasadminusersetinfo.md
+                    - name: Funktionen der RAS-Verwaltungs-dll
+                      href: ras-administration-dll-functions.md
+                      items:
+                        - name: Rasadminakzeptnewconnection
+                          href: rasadminacceptnewconnection.md
+                        - name: Rasadminconnectionhangupnotification
+                          href: rasadminconnectionhangupnotification.md
+                        - name: Rasadmingetipaddressforuser
+                          href: rasadmingetipaddressforuser.md
+                        - name: Rasadminreleaseipaddress
+                          href: rasadminreleaseipaddress.md
+                    - name: RAS-Sicherheits-DLL-Funktionen
+                      href: ras-security-dll-functions.md
+                      items:
+                        - name: Rassecuritydialogbegin
+                          href: /windows/desktop/api/Rasshost/nf-rasshost-rassecuritydialogbegin
+                        - name: Rassecuritydialogcomplete
+                          href: /windows/desktop/api/Rasshost/nf-rasshost-rassecuritydialogcomplete
+                        - name: Rassecuritydialogend
+                          href: /windows/desktop/api/Rasshost/nf-rasshost-rassecuritydialogend
+                        - name: Rassecuritydialoggetinfo
+                          href: /windows/desktop/api/Rasshost/nf-rasshost-rassecuritydialoggetinfo
+                        - name: Rassecuritydialogreceive
+                          href: /windows/desktop/api/Rasshost/nf-rasshost-rassecuritydialogreceive
+                        - name: Rassecuritydialogsend
+                          href: /windows/desktop/api/Rasshost/nf-rasshost-rassecuritydialogsend
+                - name: RAS-Server-Verwaltungsstrukturen
+                  href: ras-server-administration-structures.md
+                  items:
+                    - name: RAS_PARAMETERS
+                      href: ras-parameters-str.md
+                    - name: RAS_PORT_0
+                      href: ras-port-0-str.md
+                    - name: RAS_PORT_1
+                      href: ras-port-1-str.md
+                    - name: RAS_PORT_STATISTICS
+                      href: ras-port-statistics-str.md
+                    - name: RAS_PPP_ATCP_RESULT
+                      href: ras-ppp-atcp-result-str.md
+                    - name: RAS_PPP_IPCP_RESULT
+                      href: ras-ppp-ipcp-result-str.md
+                    - name: RAS_PPP_IPXCP_RESULT
+                      href: ras-ppp-ipxcp-result-str.md
+                    - name: RAS_PPP_NBFCP_RESULT
+                      href: ras-ppp-nbfcp-result-str.md
+                    - name: RAS_PPP_PROJECTION_RESULT
+                      href: ras-ppp-projection-result-str.md
+                    - name: RAS_SECURITY_INFO
+                      href: /windows/win32/api/Rasshost/ns-rasshost-ras_security_info
+                    - name: RAS_SERVER_0
+                      href: ras-server-0-str.md
+                    - name: RAS_USER_0
+                      href: ras-user-0-str.md
+                    - name: SECURITY_MESSAGE
+                      href: /windows/win32/api/Rasshost/ns-rasshost-security_message
+                - name: RAS-Server-Administrations Enumerationen
+                  href: ras-server-administration-enumerations.md
+                  items:
+                    - name: RAS_PARAMS_FORMAT
+                      href: ras-params-format-str.md
+                - name: RAS-Server Verwaltung (Union)
+                  href: ras-server-administration-union.md
+                  items:
+                    - name: RAS_PARAMS_VALUE
+                      href: ras-params-value-str.md
+    - name: Routing
+      href: routing-start-page.md
+      items:
+        - name: Routing Anforderung für Kommentare
+          href: routing-request-for-comments.md
+        - name: Informationen zum Routing
+          href: about-routing.md
+        - name: Routerverwaltung
+          href: router-management.md
+          items:
+            - name: Informationen zur Routerverwaltung
+              href: about-router-management.md
+              items:
+                - name: Komponenten der routerarchitektur
+                  href: components-of-the-router-architecture.md
+                - name: Routerinitialisierung
+                  href: router-initialization.md
+                - name: Grundlegendes zu routerverwaltungsfunktionen
+                  href: understanding-router-management-functions.md
+                  items:
+                    - name: Funktionen der Routerschnittstelle
+                      href: router-interface-functions.md
+                    - name: Router-Manager-Funktionen (Transport)
+                      href: router-manager-transport-functions.md
+                    - name: Routermanager-Client Funktionen (interfacetransport)
+                      href: router-manager-client-interfacetransport-functions.md
+                - name: Grundlegendes zu mprinfo-Funktionen und Informations Headern
+                  href: understanding-mprinfo-functions-and-information-headers.md
+                - name: Verwalten von routerclients und Schnittstellen
+                  href: managing-router-clients-and-interfaces.md
+                  items:
+                    - name: Ändern von Interface-Specific und globalen Informationen für Clients
+                      href: changing-interface-specific-and-global-information-for-clients.md
+                    - name: Löschen eines Clients aus einer Schnittstelle
+                      href: deleting-a-client-from-an-interface.md
+            - name: Festlegen von L2TP-und PPTP-Ports des lokalen RRAS-Dienstanbieter.
+              href: setting-l2tp-and-pptp-ports.md
+            - name: Referenz zur Routerverwaltung
+              href: router-management-reference.md
+              items:
+                - name: Datentypen der Routerverwaltung
+                  href: router-management-data-types.md
+                - name: Referenz zur Routerverwaltung
+                  href: router-administration-reference.md
+                  items:
+                    - name: Routerverwaltungsfunktionen
+                      href: router-administration-functions.md
+                      items:
+                        - name: Mpradminbufferfree
+                          href: /windows/desktop/api/Mprapi/nf-mprapi-mpradminbufferfree
+                        - name: Mpradminderegisterconnectionnotification
+                          href: /windows/desktop/api/Mprapi/nf-mprapi-mpradminderegisterconnectionnotification
+                        - name: Mpradminmenshdomainrasserver
+                          href: /windows/desktop/api/Mprapi/nf-mprapi-mpradminestablishdomainrasserver
+                        - name: Mpradmindeviceaufumum
+                          href: /windows/desktop/api/Mprapi/nf-mprapi-mpradmindeviceenum
+                        - name: Mpradmingeterrorstring
+                          href: /windows/desktop/api/Mprapi/nf-mprapi-mpradmingeterrorstring
+                        - name: Mpradmininterfakeconnetct
+                          href: /windows/desktop/api/Mprapi/nf-mprapi-mpradmininterfaceconnect
+                        - name: Mpradmininterfakecreate
+                          href: /windows/desktop/api/Mprapi/nf-mprapi-mpradmininterfacecreate
+                        - name: Mpradmininterfacedelete
+                          href: /windows/desktop/api/Mprapi/nf-mprapi-mpradmininterfacedelete
+                        - name: Mpradmininterfacedevicegetinfo
+                          href: /windows/desktop/api/Mprapi/nf-mprapi-mpradmininterfacedevicegetinfo
+                        - name: Mpradmininterfacedevicesetinfo
+                          href: /windows/desktop/api/Mprapi/nf-mprapi-mpradmininterfacedevicesetinfo
+                        - name: Mpradmininterfacedisconnect
+                          href: /windows/desktop/api/Mprapi/nf-mprapi-mpradmininterfacedisconnect
+                        - name: Mpradmininterfaceerum
+                          href: /windows/desktop/api/Mprapi/nf-mprapi-mpradmininterfaceenum
+                        - name: Mpradmininterfacegetanmeldeinformationen
+                          href: /windows/desktop/api/Mprapi/nf-mprapi-mpradmininterfacegetcredentials
+                        - name: Mpradmininterfacegetkredentialsex
+                          href: /windows/desktop/api/Mprapi/nf-mprapi-mpradmininterfacegetcredentialsex
+                        - name: Mpradmininterfacegetcustominfoex
+                          href: /windows/desktop/api/mprapi/nf-mprapi-mpradmininterfacegetcustominfoex
+                        - name: Mpradmininterfacegethandle
+                          href: /windows/desktop/api/Mprapi/nf-mprapi-mpradmininterfacegethandle
+                        - name: Mpradmininterfacegetinfo
+                          href: /windows/desktop/api/Mprapi/nf-mprapi-mpradmininterfacegetinfo
+                        - name: Mpradmininterfakequeryupdateresult
+                          href: /windows/desktop/api/Mprapi/nf-mprapi-mpradmininterfacequeryupdateresult
+                        - name: Mpradmininterfakesetanmelde Informationen
+                          href: /windows/desktop/api/Mprapi/nf-mprapi-mpradmininterfacesetcredentials
+                        - name: Mpradmininterfakesetkredentialsex
+                          href: /windows/desktop/api/Mprapi/nf-mprapi-mpradmininterfacesetcredentialsex
+                        - name: Mpradmininterfakesetcustominfoex
+                          href: /windows/desktop/api/mprapi/nf-mprapi-mpradmininterfacesetcustominfoex
+                        - name: Mpradmininterfakesetinfo
+                          href: /windows/desktop/api/Mprapi/nf-mprapi-mpradmininterfacesetinfo
+                        - name: Mpradmininterfacetransportadd
+                          href: /windows/desktop/api/Mprapi/nf-mprapi-mpradmininterfacetransportadd
+                        - name: Mpradmininterfacetransportgetinfo
+                          href: /windows/desktop/api/Mprapi/nf-mprapi-mpradmininterfacetransportgetinfo
+                        - name: Mpradmininterfacetransportremove
+                          href: /windows/desktop/api/Mprapi/nf-mprapi-mpradmininterfacetransportremove
+                        - name: Mpradmininterfacetransportabfo
+                          href: /windows/desktop/api/Mprapi/nf-mprapi-mpradmininterfacetransportsetinfo
+                        - name: Mpradmininterfakeupdatephonebookinfo
+                          href: /windows/desktop/api/Mprapi/nf-mprapi-mpradmininterfaceupdatephonebookinfo
+                        - name: Mpradmininterfakeupdateroutes
+                          href: /windows/desktop/api/Mprapi/nf-mprapi-mpradmininterfaceupdateroutes
+                        - name: Mpradminisdomainrasserver
+                          href: /windows/desktop/api/Mprapi/nf-mprapi-mpradminisdomainrasserver
+                        - name: Mpradminisserviceinitialized
+                          href: /windows/desktop/api/Mprapi/nf-mprapi-mpradminisserviceinitialized
+                        - name: Mpradminisservicerunning
+                          href: /windows/desktop/api/Mprapi/nf-mprapi-mpradminisservicerunning
+                        - name: Mpradminregisterconnectionnotification
+                          href: /windows/desktop/api/Mprapi/nf-mprapi-mpradminregisterconnectionnotification
+                        - name: Mpradminserverconnect
+                          href: /windows/desktop/api/Mprapi/nf-mprapi-mpradminserverconnect
+                        - name: Mpradminserverdisconnect
+                          href: /windows/desktop/api/Mprapi/nf-mprapi-mpradminserverdisconnect
+                        - name: Mpradminservergetanmeldeinformationen
+                          href: /windows/desktop/api/Mprapi/nf-mprapi-mpradminservergetcredentials
+                        - name: Mpradminservergetinfo
+                          href: /windows/desktop/api/Mprapi/nf-mprapi-mpradminservergetinfo
+                        - name: Mpradminservergetinfoex
+                          href: /windows/desktop/api/Mprapi/nf-mprapi-mpradminservergetinfoex
+                        - name: Mpradminserversetanmelde Informationen
+                          href: /windows/desktop/api/Mprapi/nf-mprapi-mpradminserversetcredentials
+                        - name: Mpradminserverminfo
+                          href: /windows/desktop/api/Mprapi/nf-mprapi-mpradminserversetinfo
+                        - name: Mpradminservermentinfoex
+                          href: /windows/desktop/api/Mprapi/nf-mprapi-mpradminserversetinfoex
+                        - name: Mpradmintransportcreate
+                          href: /windows/desktop/api/Mprapi/nf-mprapi-mpradmintransportcreate
+                        - name: Mpradmintransportgetinfo
+                          href: /windows/desktop/api/Mprapi/nf-mprapi-mpradmintransportgetinfo
+                        - name: Mpradmintransporteintinfo
+                          href: /windows/desktop/api/Mprapi/nf-mprapi-mpradmintransportsetinfo
+                - name: Routerkonfigurationsverweis
+                  href: router-configuration-reference.md
+                  items:
+                    - name: Routerkonfigurationsfunktionen
+                      href: router-configuration-functions.md
+                      items:
+                        - name: Mprconfigbufferfree
+                          href: /windows/desktop/api/Mprapi/nf-mprapi-mprconfigbufferfree
+                        - name: Mprconfigfiltergetinfo
+                          href: /windows/desktop/api/Mprapi/nf-mprapi-mprconfigfiltergetinfo
+                        - name: Mprconfigfiltersetinfo
+                          href: /windows/desktop/api/Mprapi/nf-mprapi-mprconfigfiltersetinfo
+                        - name: Mprconfiggetfriendlyname
+                          href: /windows/desktop/api/Mprapi/nf-mprapi-mprconfiggetfriendlyname
+                        - name: Mprconfiggetguidname
+                          href: /windows/desktop/api/Mprapi/nf-mprapi-mprconfiggetguidname
+                        - name: Mprconfiginterfaecreate
+                          href: /windows/desktop/api/Mprapi/nf-mprapi-mprconfiginterfacecreate
+                        - name: Mprconfiginterfacedelete
+                          href: /windows/desktop/api/Mprapi/nf-mprapi-mprconfiginterfacedelete
+                        - name: Mprconfiginterfacereum
+                          href: /windows/desktop/api/Mprapi/nf-mprapi-mprconfiginterfaceenum
+                        - name: Mprconfiginterfacegetcustominfoex
+                          href: /windows/desktop/api/mprapi/nf-mprapi-mprconfiginterfacegetcustominfoex
+                        - name: Mprconfiginterfacegethandle
+                          href: /windows/desktop/api/Mprapi/nf-mprapi-mprconfiginterfacegethandle
+                        - name: Mprconfiginterfacegetinfo
+                          href: /windows/desktop/api/Mprapi/nf-mprapi-mprconfiginterfacegetinfo
+                        - name: Mprconfiginterfakesetcustominfoex
+                          href: /windows/desktop/api/mprapi/nf-mprapi-mprconfiginterfacesetcustominfoex
+                        - name: Mprconfiginterfakesetinfo
+                          href: /windows/desktop/api/Mprapi/nf-mprapi-mprconfiginterfacesetinfo
+                        - name: Mprconfiginterfacetransportadd
+                          href: /windows/desktop/api/Mprapi/nf-mprapi-mprconfiginterfacetransportadd
+                        - name: Mprconfiginterfacetransportenum
+                          href: /windows/desktop/api/Mprapi/nf-mprapi-mprconfiginterfacetransportenum
+                        - name: Mprconfiginterfacetransportgethandle
+                          href: /windows/desktop/api/Mprapi/nf-mprapi-mprconfiginterfacetransportgethandle
+                        - name: Mprconfiginterfacetransportgetinfo
+                          href: /windows/desktop/api/Mprapi/nf-mprapi-mprconfiginterfacetransportgetinfo
+                        - name: Mprconfiginterfacetransportremove
+                          href: /windows/desktop/api/Mprapi/nf-mprapi-mprconfiginterfacetransportremove
+                        - name: Mprconfiginterfacetransportantinfo
+                          href: /windows/desktop/api/Mprapi/nf-mprapi-mprconfiginterfacetransportsetinfo
+                        - name: Mprconfigserverbackup
+                          href: /windows/desktop/api/Mprapi/nf-mprapi-mprconfigserverbackup
+                        - name: Mprconfigserverconnect
+                          href: /windows/desktop/api/Mprapi/nf-mprapi-mprconfigserverconnect
+                        - name: Mprconfigserverdisconnect
+                          href: /windows/desktop/api/Mprapi/nf-mprapi-mprconfigserverdisconnect
+                        - name: Mprconfigservergetinfo
+                          href: /windows/desktop/api/Mprapi/nf-mprapi-mprconfigservergetinfo
+                        - name: Mprconfigservergetinfoex
+                          href: /windows/desktop/api/Mprapi/nf-mprapi-mprconfigservergetinfoex
+                        - name: Mprconfigserverinstall
+                          href: /windows/desktop/api/Mprapi/nf-mprapi-mprconfigserverinstall
+                        - name: Mprconfigserverrestore
+                          href: /windows/desktop/api/Mprapi/nf-mprapi-mprconfigserverrestore
+                        - name: Mprconfigserverabfo
+                          href: /windows/desktop/api/Mprapi/nf-mprapi-mprconfigserversetinfo
+                        - name: Mprconfigserverab.
+                          href: /windows/desktop/api/Mprapi/nf-mprapi-mprconfigserversetinfoex
+                        - name: Mprconfigtransportcreate
+                          href: /windows/desktop/api/Mprapi/nf-mprapi-mprconfigtransportcreate
+                        - name: Mprconfigtransportdelete
+                          href: /windows/desktop/api/Mprapi/nf-mprapi-mprconfigtransportdelete
+                        - name: Mprconfigtransportenum
+                          href: /windows/desktop/api/Mprapi/nf-mprapi-mprconfigtransportenum
+                        - name: Mprconfigtransportgethandle
+                          href: /windows/desktop/api/Mprapi/nf-mprapi-mprconfigtransportgethandle
+                        - name: Mprconfigtransportgetinfo
+                          href: /windows/desktop/api/Mprapi/nf-mprapi-mprconfigtransportgetinfo
+                        - name: Mprconfigtransporteintinfo
+                          href: /windows/desktop/api/Mprapi/nf-mprapi-mprconfigtransportsetinfo
+                - name: Referenz zu Routerinformationen
+                  href: router-information-reference.md
+                  items:
+                    - name: Routerinformationsfunktionen
+                      href: router-information-functions.md
+                      items:
+                        - name: Mprinfoblockadd
+                          href: /windows/desktop/api/Mprapi/nf-mprapi-mprinfoblockadd
+                        - name: Mprinfoblockfind
+                          href: /windows/desktop/api/Mprapi/nf-mprapi-mprinfoblockfind
+                        - name: Mprinfoblockquerysize
+                          href: /windows/desktop/api/Mprapi/nf-mprapi-mprinfoblockquerysize
+                        - name: Mprinfoblockremove
+                          href: /windows/desktop/api/Mprapi/nf-mprapi-mprinfoblockremove
+                        - name: Mprinfoblockset
+                          href: /windows/desktop/api/Mprapi/nf-mprapi-mprinfoblockset
+                        - name: Mprinfocreate
+                          href: /windows/desktop/api/Mprapi/nf-mprapi-mprinfocreate
+                        - name: Mprinfodelete
+                          href: /windows/desktop/api/Mprapi/nf-mprapi-mprinfodelete
+                        - name: Mprinfoduplicate
+                          href: /windows/desktop/api/Mprapi/nf-mprapi-mprinfoduplicate
+                        - name: Mprinforemoveall
+                          href: /windows/desktop/api/Mprapi/nf-mprapi-mprinforemoveall
+                    - name: Router-Informationsstrukturen
+                      href: router-information-structures.md
+                      items:
+                        - name: IP-Informationsstrukturen
+                          href: ip-information-structures.md
+                        - name: IPX-Informationsstrukturen
+                          href: ipx-information-structures.md
+                          items:
+                            - name: IPX_IF_INFO
+                              href: /windows/win32/api/Ipxrtdef/ns-ipxrtdef-ipx_if_info
+                            - name: IPXWAN_IF_INFO
+                              href: /windows/win32/api/Ipxrtdef/ns-ipxrtdef-ipxwan_if_info
+                    - name: Routerinformationenumerationen
+                      href: router-information-enumerations.md
+                      items:
+                        - name: IP-Informationstypen für routerinformationblöcke
+                          href: ip-information-types-for-router-information-blocks.md
+                        - name: IPv6-Informationstypen für routerinformationblöcke
+                          href: ipv6-information-types-for-router-information-blocks.md
+                        - name: IPX-Informationstypen für routerinformationblöcke
+                          href: ipx-information-types-for-router-information-blocks.md
+                - name: Routerverwaltungstrukturen
+                  href: router-management-structures.md
+                  items:
+                    - name: AUTH_VALIDATION_EX
+                      href: /windows/win32/api/Mprapi/ns-mprapi-auth_validation_ex
+                    - name: IKEV2_CONFIG_PARAMS
+                      href: /windows/win32/api/Mprapi/ns-mprapi-ikev2_config_params
+                    - name: IKEV2_PROJECTION_INFO
+                      href: /windows/win32/api/Mprapi/ns-mprapi-ikev2_projection_info
+                    - name: IKEV2_PROJECTION_INFO2
+                      href: /windows/win32/api/mprapi/ns-mprapi-ikev2_projection_info2
+                    - name: IKEV2_TUNNEL_CONFIG_PARAMS1
+                      href: /windows/win32/api/mprapi/ns-mprapi-ikev2_tunnel_config_params1
+                    - name: IKEV2_TUNNEL_CONFIG_PARAMS2
+                      href: /windows/win32/api/mprapi/ns-mprapi-ikev2_tunnel_config_params2
+                    - name: IP_ADAPTER_BINDING_INFO
+                      href: /windows/desktop/api/Routprot/ns-routprot-ip_adapter_binding_info
+                    - name: IP_LOCAL_BINDING
+                      href: /windows/desktop/api/Routprot/ns-routprot-ip_local_binding
+                    - name: IPV6_ADAPTER_BINDING_INFO
+                      href: /windows/desktop/api/Routprot/ns-routprot-ipv6_adapter_binding_info
+                    - name: IPV6_LOCAL_BINDING
+                      href: /windows/desktop/api/Routprot/ns-routprot-ipv6_local_binding
+                    - name: L2TP_CONFIG_PARAMS
+                      href: /windows/win32/api/Mprapi/ns-mprapi-l2tp_config_params0
+                    - name: MPR_CREDENTIALSEX_0
+                      href: /windows/win32/api/Mprapi/ns-mprapi-mpr_credentialsex_0
+                    - name: MPR_CREDENTIALSEX_1
+                      href: /windows/win32/api/Mprapi/ns-mprapi-mpr_credentialsex_1
+                    - name: MPR_DEVICE_0
+                      href: /windows/win32/api/Mprapi/ns-mprapi-mpr_device_0
+                    - name: MPR_DEVICE_1
+                      href: /windows/win32/api/Mprapi/ns-mprapi-mpr_device_1
+                    - name: MPR_FILTER_0
+                      href: /windows/win32/api/Mprapi/ns-mprapi-mpr_filter_0
+                    - name: MPR_IF_CUSTOMINFOEX0
+                      href: /windows/win32/api/mprapi/ns-mprapi-mpr_if_custominfoex0
+                    - name: MPR_IFTRANSPORT_0
+                      href: /windows/win32/api/Mprapi/ns-mprapi-mpr_iftransport_0
+                    - name: MPR_INTERFACE_0
+                      href: /windows/win32/api/Mprapi/ns-mprapi-mpr_interface_0
+                    - name: MPR_INTERFACE_1
+                      href: /windows/win32/api/Mprapi/ns-mprapi-mpr_interface_1
+                    - name: MPR_INTERFACE_2
+                      href: /windows/win32/api/Mprapi/ns-mprapi-mpr_interface_2
+                    - name: MPR_INTERFACE_3
+                      href: /windows/win32/api/Mprapi/ns-mprapi-mpr_interface_3
+                    - name: MPR_SERVER_0
+                      href: /windows/win32/api/Mprapi/ns-mprapi-mpr_server_0
+                    - name: MPR_SERVER_1
+                      href: /windows/win32/api/Mprapi/ns-mprapi-mpr_server_1
+                    - name: MPR_SERVER_2
+                      href: /windows/win32/api/Mprapi/ns-mprapi-mpr_server_2
+                    - name: MPR_SERVER_EX
+                      href: /windows/win32/api/Mprapi/ns-mprapi-mpr_server_ex0
+                    - name: MPR_SERVER_SET_CONFIG_EX
+                      href: /windows/win32/api/Mprapi/ns-mprapi-mpr_server_set_config_ex0
+                    - name: MPR_TRANSPORT_0
+                      href: /windows/win32/api/Mprapi/ns-mprapi-mpr_transport_0
+                    - name: MPRAPI_OBJECT_HEADER
+                      href: /windows/win32/api/Mprapi/ns-mprapi-mprapi_object_header
+                    - name: MPRAPI_TUNNEL_CONFIG_PARAMS
+                      href: /windows/win32/api/Mprapi/ns-mprapi-mprapi_tunnel_config_params0
+                    - name: PPP_PROJECTION_INFO
+                      href: /windows/win32/api/Mprapi/ns-mprapi-ppp_projection_info
+                    - name: PPP_PROJECTION_INFO2
+                      href: /windows/win32/api/mprapi/ns-mprapi-ppp_projection_info2
+                    - name: PPTP_CONFIG_PARAMS
+                      href: /windows/win32/api/Mprapi/ns-mprapi-pptp_config_params
+                    - name: PROJECTION_INFO
+                      href: /windows/win32/api/Mprapi/ns-mprapi-projection_info
+                    - name: PROJECTION_INFO2
+                      href: /windows/win32/api/mprapi/ns-mprapi-projection_info2
+                    - name: RAS_CONNECTION_4
+                      href: /windows/win32/api/mprapi/ns-mprapi-ras_connection_4
+                    - name: RAS_UPDATE_CONNECTION
+                      href: /windows/win32/api/Mprapi/ns-mprapi-ras_update_connection
+                    - name: ROUTER_CUSTOM_IKEV2_POLICY0
+                      href: /windows/win32/api/mprapi/ns-mprapi-router_custom_ikev2_policy0
+                    - name: ROUTER_IKEV2_IF_CUSTOM_CONFIG0
+                      href: /windows/win32/api/mprapi/ns-mprapi-router_ikev2_if_custom_config0
+                    - name: SSTP_CERT_INFO
+                      href: /windows/win32/api/Mprapi/ns-mprapi-sstp_cert_info
+                    - name: SSTP_CONFIG_PARAMS
+                      href: /windows/win32/api/Mprapi/ns-mprapi-sstp_config_params
+                - name: Routerverwaltungenumerationen
+                  href: router-management-enumerations.md
+                  items:
+                    - name: MPRAPI_OBJECT_TYPE
+                      href: /windows/win32/api/Mprapi/ne-mprapi-mprapi_object_type
+                    - name: ROUTER_CONNECTION_STATE
+                      href: /windows/win32/api/Mprapi/ne-mprapi-router_connection_state
+                    - name: ROUTER_INTERFACE_TYPE
+                      href: /windows/win32/api/Mprapi/ne-mprapi-router_interface_type
+                    - name: Gründe für die Nichterreichbarkeit
+                      href: unreachability-reasons.md
+        - name: Routermanager und Verwaltungs Informationsbasis
+          href: router-managers-and-management-information-base.md
+          items:
+            - name: Informationen zur Routerverwaltung mit MIB
+              href: about-router-management-with-mib.md
+            - name: Verwenden der MIB-API der Routerverwaltung
+              href: using-the-router-management-mib-api.md
+              items:
+                - name: Abrufen der MIB II-Schnittstellen Tabelle
+                  href: obtaining-the-mib-ii-interfaces-table.md
+            - name: MIB-Referenz zur Routerverwaltung
+              href: router-management-mib-reference.md
+              items:
+                - name: MIB-Funktionen der Routerverwaltung
+                  href: mib-functions.md
+                  items:
+                    - name: Mpradminmibbufferfree
+                      href: /windows/desktop/api/Mprapi/nf-mprapi-mpradminmibbufferfree
+                    - name: Mpradminmibentrycreate
+                      href: /windows/desktop/api/Mprapi/nf-mprapi-mpradminmibentrycreate
+                    - name: Mpradminmibentrydelete
+                      href: /windows/desktop/api/Mprapi/nf-mprapi-mpradminmibentrydelete
+                    - name: Mpradminmibentryget
+                      href: /windows/desktop/api/Mprapi/nf-mprapi-mpradminmibentryget
+                    - name: Mpradminmibentrygetfirst
+                      href: /windows/desktop/api/Mprapi/nf-mprapi-mpradminmibentrygetfirst
+                    - name: Mpradminmibentrygetnext
+                      href: /windows/desktop/api/Mprapi/nf-mprapi-mpradminmibentrygetnext
+                    - name: Mpradminmibentryset
+                      href: /windows/desktop/api/Mprapi/nf-mprapi-mpradminmibentryset
+                    - name: Mpradminmibgettrapinfo
+                      href: /windows/desktop/api/Mprapi/nf-mprapi-mpradminmibgettrapinfo
+                    - name: Mpradminmibserverconnect
+                      href: /windows/desktop/api/Mprapi/nf-mprapi-mpradminmibserverconnect
+                    - name: Mpradminmibserverdisconnect
+                      href: /windows/desktop/api/Mprapi/nf-mprapi-mpradminmibserverdisconnect
+                    - name: Mpradminmibsettrapinfo
+                      href: /windows/desktop/api/Mprapi/nf-mprapi-mpradminmibsettrapinfo
+                - name: Transport-und Protokoll Konstanten
+                  href: transport-and-protocol-constants.md
+                  items:
+                    - name: Protokoll Bezeichner
+                      href: protocol-identifiers.md
+                    - name: Transport-IDs
+                      href: transport-identifiers.md
+    - name: Routing Protokolle
+      href: routing-protocols-start-page.md
+      items:
+        - name: Routing Protokolle anfordern von Kommentaren
+          href: routing-protocols-request-for-comments.md
+        - name: Schreiben eines Treibers zum Erfassen von PPP-Frames
+          href: ppp-frame-capture.md
+        - name: Multicast-Gruppen-Manager
+          href: multicast-group-manager.md
+          items:
+            - name: Informationen zum Multicast-Gruppen-Manager
+              href: about-multicast-group-manager.md
+              items:
+                - name: Komponenten der Multicast Architektur
+                  href: components-of-the-multicast-architecture.md
+                  items:
+                    - name: Router
+                      href: router.md
+                    - name: Multicast Routing Protokoll
+                      href: multicast-routing-protocol.md
+                    - name: Schnittstelle
+                      href: interface.md
+                    - name: Multicast Quelle
+                      href: multicast-source.md
+                    - name: Multicast Gruppe
+                      href: multicast-group.md
+                    - name: '(s, g), (*, g) und (*, *) Paare'
+                      href: '-s-g-g-and-pairs.md'
+                    - name: Destination
+                      href: destination.md
+                    - name: Nächster Hop
+                      href: next-hop.md
+                    - name: Multicast-Gruppen-Manager-Client
+                      href: multicast-group-manager-client.md
+                    - name: Kombinieren der Multicast Architektur
+                      href: how-the-multicast-architecture-fits-together.md
+                - name: Übersicht über die MGM-Rückrufe
+                  href: overview-of-mgm-callbacks.md
+                  items:
+                    - name: Routing Protokoll Rückrufe
+                      href: routing-protocol-callbacks.md
+                      items:
+                        - name: Rückruf für Benachrichtigungs Rückrufe
+                          href: join-alert-callbacks.md
+                        - name: Warnungs Rückrufe löschen
+                          href: prune-alert-callbacks.md
+                        - name: Lokale joinrückrufe
+                          href: local-join-callbacks.md
+                        - name: Lokale Leave-Rückrufe
+                          href: local-leave-callbacks.md
+                        - name: Falsche Schnittstellen Warnungs Rückrufe
+                          href: wrong-interface-alert-callbacks.md
+                        - name: RPF-Warnungs Rückrufe
+                          href: rpf-alert-callbacks.md
+                    - name: IGMP-Rückrufe aktivieren und deaktivieren
+                      href: igmp-enable-and-disable-callbacks.md
+            - name: Verwenden des Multicast-Gruppen-Managers
+              href: using-the-multicast-group-manager.md
+              items:
+                - name: Überlegungen zur Programmiersprache
+                  href: mgm-programming-considerations.md
+                - name: Multicast Routing Protokoll-Szenario
+                  href: multicast-routing-protocol-scenario.md
+                  items:
+                    - name: Starten eines Multicast-Routing Protokolls
+                      href: starting-up-a-multicast-routing-protocol.md
+                    - name: Verarbeiten von Gruppen und Rückrufen
+                      href: processing-groups-and-callbacks.md
+                    - name: Auflisten von Gruppen
+                      href: enumerating-groups.md
+                    - name: Herunterfahren eines Multicast-Routing Protokolls
+                      href: shutting-down-a-multicast-routing-protocol.md
+                - name: Verwaltungs Anwendungsszenario
+                  href: administrative-application-scenario.md
+            - name: Referenz zum Multicast-Gruppen-Manager
+              href: multicast-group-manager-reference.md
+              items:
+                - name: Multicast-Gruppen-Manager-Funktionen
+                  href: multicast-group-manager-functions.md
+                  items:
+                    - name: Mgmaddgroupmembership shipentry
+                      href: /windows/desktop/api/Mgm/nf-mgm-mgmaddgroupmembershipentry
+                    - name: Mgmdeletegroupmembership shipentry
+                      href: /windows/desktop/api/Mgm/nf-mgm-mgmdeletegroupmembershipentry
+                    - name: Mgmderegistermprotocol
+                      href: /windows/desktop/api/Mgm/nf-mgm-mgmderegistermprotocol
+                    - name: Mgmgetfirstmfe
+                      href: /windows/desktop/api/Mgm/nf-mgm-mgmgetfirstmfe
+                    - name: Mgmgetfirstmfestats
+                      href: /windows/desktop/api/Mgm/nf-mgm-mgmgetfirstmfestats
+                    - name: Mgmgetmfe
+                      href: /windows/desktop/api/Mgm/nf-mgm-mgmgetmfe
+                    - name: Mgmgetmfestats
+                      href: /windows/desktop/api/Mgm/nf-mgm-mgmgetmfestats
+                    - name: Mgmgetnextmfe
+                      href: /windows/desktop/api/Mgm/nf-mgm-mgmgetnextmfe
+                    - name: Mgmgetnextmfestats
+                      href: /windows/desktop/api/Mgm/nf-mgm-mgmgetnextmfestats
+                    - name: Mgmgetprotocoloninterface
+                      href: /windows/desktop/api/Mgm/nf-mgm-mgmgetprotocoloninterface
+                    - name: Mgmgroupenerationend
+                      href: /windows/desktop/api/Mgm/nf-mgm-mgmgroupenumerationend
+                    - name: Mgmgroupvererationgetnext
+                      href: /windows/desktop/api/Mgm/nf-mgm-mgmgroupenumerationgetnext
+                    - name: Mgmgroupvererationstart
+                      href: /windows/desktop/api/Mgm/nf-mgm-mgmgroupenumerationstart
+                    - name: Mgmregistermprotocol
+                      href: /windows/desktop/api/Mgm/nf-mgm-mgmregistermprotocol
+                    - name: Mgmreleaseingeterfaceownership
+                      href: /windows/desktop/api/Mgm/nf-mgm-mgmreleaseinterfaceownership
+                    - name: Mgmabtmfe
+                      href: /windows/desktop/api/Mgm/nf-mgm-mgmsetmfe
+                    - name: Mgmtakeinterfaceownership
+                      href: /windows/desktop/api/Mgm/nf-mgm-mgmtakeinterfaceownership
+                - name: Multicast-Gruppen-Manager-Rückrufe
+                  href: multicast-group-manager-callbacks.md
+                  items:
+                    - name: PMGM_CREATION_ALERT_CALLBACK
+                      href: /windows/desktop/api/mgm/nc-mgm-pmgm_creation_alert_callback
+                    - name: PMGM_DISABLE_IGMP_CALLBACK
+                      href: /windows/desktop/api/mgm/nc-mgm-pmgm_disable_igmp_callback
+                    - name: PMGM_ENABLE_IGMP_CALLBACK
+                      href: /windows/desktop/api/Mgm/nc-mgm-pmgm_enable_igmp_callback
+                    - name: PMGM_JOIN_ALERT_CALLBACK
+                      href: /windows/desktop/api/Mgm/nc-mgm-pmgm_join_alert_callback
+                    - name: PMGM_LOCAL_JOIN_CALLBACK
+                      href: /windows/desktop/api/Mgm/nc-mgm-pmgm_local_join_callback
+                    - name: PMGM_LOCAL_LEAVE_CALLBACK
+                      href: /windows/desktop/api/Mgm/nc-mgm-pmgm_local_leave_callback
+                    - name: PMGM_PRUNE_ALERT_CALLBACK
+                      href: /windows/desktop/api/Mgm/nc-mgm-pmgm_prune_alert_callback
+                    - name: PMGM_RPF_CALLBACK
+                      href: /windows/desktop/api/Mgm/nc-mgm-pmgm_rpf_callback
+                    - name: PMGM_WRONG_IF_CALLBACK
+                      href: /windows/desktop/api/Mgm/nc-mgm-pmgm_wrong_if_callback
+                - name: Multicast-Gruppen-Manager-Strukturen
+                  href: multicast-group-manager-structures.md
+                  items:
+                    - name: MGM_IF_ENTRY
+                      href: /windows/win32/api/Mgm/ns-mgm-mgm_if_entry
+                    - name: ROUTING_PROTOCOL_CONFIG
+                      href: /windows/win32/api/Mgm/ns-mgm-routing_protocol_config
+                    - name: SOURCE_GROUP_ENTRY
+                      href: /windows/win32/api/Mgm/ns-mgm-source_group_entry
+                - name: Enumerationen für Multicast-Gruppen-Manager
+                  href: multicast-group-manager-enumerations.md
+                  items:
+                    - name: MGM_ENUM_TYPES
+                      href: /windows/win32/api/Mgm/ne-mgm-mgm_enum_types
+        - name: Routing Protokoll Schnittstelle
+          href: routing-protocol-interface.md
+          items:
+            - name: Informationen zur Routing Protokoll Schnittstelle
+              href: about-routing-protocol-interface.md
+              items:
+                - name: Adapter
+                  href: adapters.md
+                - name: Schnittstellen
+                  href: interfaces.md
+                - name: Statische und automatische statische Routen
+                  href: static-and-autostatic-routes.md
+            - name: Referenz zur Routing Protokoll Schnittstelle
+              href: routing-protocol-interface-reference.md
+              items:
+                - name: Routing Protokoll Schnittstellen-Funktionen
+                  href: routing-protocol-interface-functions.md
+                  items:
+                    - name: PADD_INTERFACE
+                      href: /windows/desktop/api/Routprot/nc-routprot-padd_interface
+                    - name: PCONNECT_CLIENT
+                      href: /windows/desktop/api/Routprot/nc-routprot-pconnect_client
+                    - name: PDELETE_INTERFACE
+                      href: /windows/desktop/api/Routprot/nc-routprot-pdelete_interface
+                    - name: PDISCONNECT_CLIENT
+                      href: /windows/desktop/api/Routprot/nc-routprot-pdisconnect_client
+                    - name: PDO_UPDATE_ROUTES
+                      href: /windows/desktop/api/Routprot/nc-routprot-pdo_update_routes
+                    - name: PGET_EVENT_MESSAGE
+                      href: /windows/desktop/api/Routprot/nc-routprot-pget_event_message
+                    - name: PGET_GLOBAL_INFO
+                      href: /windows/desktop/api/Routprot/nc-routprot-pget_global_info
+                    - name: PGET_INTERFACE_INFO
+                      href: /windows/desktop/api/Routprot/nc-routprot-pget_interface_info
+                    - name: PGET_MFE_STATUS
+                      href: /windows/desktop/api/Routprot/nc-routprot-pget_mfe_status
+                    - name: PGET_NEIGHBORS
+                      href: /windows/desktop/api/Routprot/nc-routprot-pget_neighbors
+                    - name: PINTERFACE_STATUS
+                      href: /windows/desktop/api/Routprot/nc-routprot-pinterface_status
+                    - name: PMIB_CREATE
+                      href: /windows/desktop/api/Routprot/nc-routprot-pmib_create
+                    - name: PMIB_DELETE
+                      href: /windows/desktop/api/Routprot/nc-routprot-pmib_delete
+                    - name: PMIB_GET
+                      href: /windows/desktop/api/Routprot/nc-routprot-pmib_get
+                    - name: PMIB_GET_FIRST
+                      href: /windows/desktop/api/Routprot/nc-routprot-pmib_get_first
+                    - name: PMIB_GET_NEXT
+                      href: /windows/desktop/api/Routprot/nc-routprot-pmib_get_next
+                    - name: PMIB_GET_TRAP_INFO
+                      href: /windows/desktop/api/Routprot/nc-routprot-pmib_get_trap_info
+                    - name: PMIB_SET
+                      href: /windows/desktop/api/Routprot/nc-routprot-pmib_set
+                    - name: PMIB_SET_TRAP_INFO
+                      href: /windows/desktop/api/Routprot/nc-routprot-pmib_set_trap_info
+                    - name: PQUERY_POWER
+                      href: /windows/desktop/api/Routprot/nc-routprot-pquery_power
+                    - name: PREGISTER_PROTOCOL
+                      href: /windows/desktop/api/Routprot/nc-routprot-pregister_protocol
+                    - name: PSET_GLOBAL_INFO
+                      href: /windows/desktop/api/Routprot/nc-routprot-pset_global_info
+                    - name: PSET_INTERFACE_INFO
+                      href: /windows/desktop/api/Routprot/nc-routprot-pset_interface_info
+                    - name: PSET_POWER
+                      href: /windows/desktop/api/Routprot/nc-routprot-pset_power
+                    - name: PSTART_COMPLETE
+                      href: /windows/desktop/api/Routprot/nc-routprot-pstart_complete
+                    - name: PSTART_PROTOCOL
+                      href: /windows/desktop/api/Routprot/nc-routprot-pstart_protocol
+                    - name: PSTOP_PROTOCOL
+                      href: /windows/desktop/api/Routprot/nc-routprot-pstop_protocol
+                - name: Routing Protokoll Schnittstellen Strukturen
+                  href: routing-protocol-interface-structures.md
+                  items:
+                    - name: MESSAGE
+                      href: /windows/win32/api/Routprot/ns-routprot-message
+                    - name: MPR_ROUTING_CHARACTERISTICS
+                      href: /windows/win32/api/Routprot/ns-routprot-mpr50_routing_characteristics
+                    - name: MPR_SERVICE_CHARACTERISTICS
+                      href: /windows/win32/api/stm/ns-stm-mpr40_service_characteristics
+                    - name: UPDATE_COMPLETE_MESSAGE
+                      href: /windows/win32/api/Routprot/ns-routprot-update_complete_message
+                    - name: Referenz zu Unterstützungsfunktionen
+                      href: support-functions-reference.md
+                      items:
+                        - name: SUPPORT_FUNCTIONS
+                          href: /windows/win32/api/Routprot/ns-routprot-support_functions_50
+                        - name: Demanddialrequest
+                          href: /previous-versions/windows/desktop/legacy/aa373924(v=vs.85)
+                        - name: Mibentrycreate
+                          href: //previous-versions/windows/desktop/legacy/aa374538(v=vs.85)
+                        - name: Mibentrydelete
+                          href: /previous-versions/windows/desktop/legacy/aa374539(v=vs.85)
+                        - name: Mibentryget
+                          href: /previous-versions/windows/desktop/legacy/aa374540(v=vs.85)
+                        - name: Mibentrygetfirst
+                          href: /previous-versions/windows/desktop/legacy/aa374541(v=vs.85)
+                        - name: Mibentrygetnext
+                          href: /previous-versions/windows/desktop/legacy/aa374542(v=vs.85)
+                        - name: Mibentryset
+                          href: /previous-versions/windows/desktop/legacy/aa374543(v=vs.85)
+                        - name: Setinterfakereceivetype
+                          href: /previous-versions/windows/desktop/legacy/aa382181(v=vs.85)
+                        - name: Validateroute
+                          href: /previous-versions/windows/desktop/legacy/aa382342(v=vs.85)
+                - name: Verwaltung von IPX-Dienst Tabellen
+                  href: ipx-service-table-management.md
+                  items:
+                    - name: Funktionen der Dienst Tabellen Verwaltung
+                      href: service-table-management-functions.md
+                      items:
+                        - name: PBLOCK_CONVERT_SERVICES_TO_STATIC
+                          href: /windows/desktop/api/Stm/nc-stm-pblock_convert_services_to_static
+                        - name: PBLOCK_DELETE_STATIC_SERVICES
+                          href: /windows/desktop/api/Stm/nc-stm-pblock_delete_static_services
+                        - name: PCLOSE_SERVICE_ENUMERATION_HANDLE
+                          href: /windows/desktop/api/Stm/nc-stm-pclose_service_enumeration_handle
+                        - name: PCREATE_SERVICE_ENUMERATION_HANDLE
+                          href: /windows/desktop/api/Stm/nc-stm-pcreate_service_enumeration_handle
+                        - name: PCREATE_STATIC_SERVICE
+                          href: /windows/desktop/api/Stm/nc-stm-pcreate_static_service
+                        - name: PDELETE_STATIC_SERVICE
+                          href: /windows/desktop/api/Stm/nc-stm-pdelete_static_service
+                        - name: PENUMERATE_GET_NEXT_SERVICE
+                          href: /windows/desktop/api/Stm/nc-stm-penumerate_get_next_service
+                        - name: PGET_FIRST_ORDERED_SERVICE
+                          href: /windows/desktop/api/Stm/nc-stm-pget_first_ordered_service
+                        - name: PGET_NEXT_ORDERED_SERVICE
+                          href: /windows/desktop/api/Stm/nc-stm-pget_next_ordered_service
+                        - name: PGET_SERVICE_COUNT
+                          href: /windows/desktop/api/Stm/nc-stm-pget_service_count
+                        - name: PIS_SERVICE
+                          href: /windows/desktop/api/Stm/nc-stm-pis_service
+                    - name: Strukturen der Dienst Tabellen Verwaltung
+                      href: service-table-management-structures.md
+                      items:
+                        - name: IPX_SERVER_ENTRY
+                          href: /windows/win32/api/Stm/ns-stm-ipx_server_entry
+                        - name: IPX_SERVICE
+                          href: /windows/win32/api/Stm/ns-stm-ipx_service
+        - name: 'Routing-Tabellen-Manager, Version 1'
+          href: routing-table-manager-version-1.md
+          items:
+            - name: Informationen zum Routing Table Manager Version 1
+              href: about-routing-table-manager-version-1.md
+              items:
+                - name: Routen Tabellen und Routen Tabelleneinträge
+                  href: route-tables-and-route-table-entries.md
+                - name: Änderungen an der besten Route zu einem Netzwerk
+                  href: changes-to-the-best-route-to-a-network.md
+            - name: Referenz für Routing Tabellen-Manager Version 1
+              href: routing-table-manager-version-1-reference.md
+              items:
+                - name: Funktionen der Routing-Tabellen-Manager-Version 1
+                  href: routing-table-manager-version-1-functions.md
+                  items:
+                    - name: Rtmaddroute
+                      href: rtmaddroute.md
+                    - name: Rtmblockdeleteroutes
+                      href: rtmblockdeleteroutes.md
+                    - name: Rtmcloseenumerationhandle
+                      href: rtmcloseenumerationhandle.md
+                    - name: Rtmkreateenumerationhandle
+                      href: rtmcreateenumerationhandle.md
+                    - name: Rtmdeleteroute
+                      href: rtmdeleteroute.md
+                    - name: Rtmde queueroutechangemess
+                      href: rtmdequeueroutechangemessage.md
+                    - name: Rtmderegisterclient
+                      href: rtmderegisterclient.md
+                    - name: Rtmenumschlag-ategetnextroute
+                      href: rtmenumerategetnextroute.md
+                    - name: Rtmgetfirstroute
+                      href: rtmgetfirstroute.md
+                    - name: Rtmgetnetworkcount
+                      href: rtmgetnetworkcount.md
+                    - name: Rtmgetnextroute
+                      href: rtmgetnextroute.md
+                    - name: Rtmgetrouteage
+                      href: rtmgetrouteage.md
+                    - name: Rtmisroute
+                      href: rtmisroute.md
+                    - name: Rtmregisterclient
+                      href: rtmregisterclient.md
+                - name: 'Routing Tabellen-Manager, Version 1, Strukturen'
+                  href: routing-table-manager-version-1-structures.md
+                  items:
+                    - name: IP_NETWORK
+                      href: ip-network.md
+                    - name: IP_NEXT_HOP_ADDRESS
+                      href: ip-next-hop-address.md
+                    - name: IP_SPECIFIC_DATA
+                      href: ip-specific-data.md
+                    - name: IPX_NETWORK
+                      href: ipx-network.md
+                    - name: IPX_NEXT_HOP_ADDRESS
+                      href: ipx-next-hop-address.md
+                    - name: IPX_SPECIFIC_DATA
+                      href: ipx-specific-data.md
+                    - name: PROTOCOL_SPECIFIC_DATA
+                      href: protocol-specific-data.md
+                    - name: 'Routing Tabellen-Manager, Version 1, Protokoll Familien-IDs'
+                      href: routing-table-manager-version-1-protocol-family-identifiers.md
+                    - name: RTM_IP_ROUTE
+                      href: rtm-ip-route.md
+                    - name: RTM_IPX_ROUTE
+                      href: rtm-ipx-route.md
+        - name: Routing-Tabellen-Manager Version 2
+          href: routing-table-manager-version-2.md
+          items:
+            - name: Informationen zum Routing Table Manager Version 2
+              href: about-routing-table-manager-version-2.md
+              items:
+                - name: Komponenten der Architektur des Routing Tabellen-Managers
+                  href: components-of-the-routing-table-manager-architecture.md
+                  items:
+                    - name: Router
+                      href: router-rtmv2ov.md
+                    - name: Client
+                      href: client.md
+                    - name: Routermanager
+                      href: router-manager.md
+                    - name: Routing Protokoll
+                      href: routing-protocol.md
+                    - name: Weiterleitung
+                      href: forwarder.md
+                    - name: Routing Tabellen-Manager
+                      href: routing-table-manager.md
+                    - name: Routing-Tabellen-Manager-Instanz
+                      href: routing-table-manager-instance.md
+                    - name: Adressfamilie
+                      href: address-family.md
+                    - name: Routing Tabelle
+                      href: routing-table.md
+                    - name: Sicht
+                      href: view.md
+                    - name: Routing Tabelleneinträge
+                      href: routing-table-entries.md
+                      items:
+                        - name: Destinations
+                          href: destinations.md
+                        - name: Routen und die beste Route
+                          href: routes-and-the-best-route.md
+                        - name: Nächste Hops
+                          href: next-hops.md
+                    - name: Kombinieren der Architektur des Routing Tabellen-Managers
+                      href: how-the-routing-table-manager-architecture-fits-together.md
+                - name: Registrieren beim Routing Tabellen-Manager
+                  href: registering-with-the-routing-table-manager.md
+                - name: Auflisten registrierter Entitäten
+                  href: enumerating-registered-entities.md
+                - name: Verwenden von Methoden
+                  href: using-methods.md
+                - name: Verwenden undurchsichtiger Zeiger
+                  href: using-opaque-pointers.md
+                  items:
+                    - name: Zugreifen auf nicht transparente Zeiger
+                      href: accessing-opaque-pointers.md
+                - name: Markieren von Routen für den Hold-Down Status
+                  href: marking-routes-for-the-hold-down-state.md
+                - name: Hinzufügen von Routen
+                  href: adding-routes.md
+                - name: Abrufen von Routeninformationen
+                  href: retrieving-route-information.md
+                - name: Aktualisieren von Routen
+                  href: updating-routes.md
+                  items:
+                    - name: Aktualisieren von Routen mithilfe von rtmaddroutededest
+                      href: updating-routes-using-rtmaddroutetodest.md
+                    - name: Direktes Aktualisieren von Routen mithilfe von rtmupdateandunlockroute
+                      href: updating-routes-in-place-using-rtmupdateandunlockroute.md
+                - name: Empfangen von Benachrichtigungen über Änderungen
+                  href: receiving-notification-of-changes.md
+                  items:
+                    - name: Registrieren für Änderungs Benachrichtigung
+                      href: registering-for-change-notification.md
+                    - name: Abrufen von Änderungen
+                      href: retrieving-changes.md
+                    - name: Abrufen des Änderungs Status und ignorieren von Änderungen
+                      href: retrieving-change-status-and-ignoring-changes.md
+                - name: Arbeiten mit den nächsten Hops
+                  href: working-with-next-hops.md
+                - name: Auflisten von Routing Tabellen Einträgen
+                  href: enumerating-routing-table-entries.md
+                - name: Suchen nach bestimmten Informationen in der Routing Tabelle
+                  href: finding-specific-information-in-the-routing-table.md
+                  items:
+                    - name: Abrufen von Informationen
+                      href: retrieving-information.md
+                - name: Verwalten von Client-Specific Listen
+                  href: maintaining-client-specific-lists.md
+                - name: Verwalten von Handles
+                  href: managing-handles.md
+            - name: Verwenden von Routing Table Manager Version 2
+              href: using-routing-table-manager-version-2.md
+              items:
+                - name: RTMv2-Programmierprobleme
+                  href: rtmv2-programming-issues.md
+                - name: Registrieren beim Routing Tabellen-Manager
+                  href: register-with-the-routing-table-manager.md
+                - name: Auflisten der registrierten Entitäten
+                  href: enumerate-the-registered-entities.md
+                - name: Abrufen und Abrufen der exportierten Methoden für einen Client
+                  href: obtain-and-call-the-exported-methods-for-a-client.md
+                - name: Für Änderungs Benachrichtigung registrieren
+                  href: register-for-change-notification.md
+                - name: Hinzufügen und Aktualisieren von Routen mithilfe von rtmaddroutededest
+                  href: add-and-update-routes-using-rtmaddroutetodest.md
+                - name: Direktes Aktualisieren einer Route mithilfe von rtmupdateandunlockroute
+                  href: update-a-route-in-place-using-rtmupdateandunlockroute.md
+                - name: Verwenden der Route Hold-Down Status
+                  href: use-the-route-hold-down-state.md
+                - name: Alle Ziele auflisten
+                  href: enumerate-all-destinations.md
+                - name: Alle Routen aufzählen
+                  href: enumerate-all-routes.md
+                - name: Suchen nach der optimalen Route
+                  href: search-for-the-best-route.md
+                - name: Suchen nach Routen mithilfe eines Präfix Baums
+                  href: search-for-routes-using-rtmgetmostspecificdestination-and-rtmgetlessspecificdestination.md
+                - name: Zugreifen auf den nicht transparenten Zeiger in einem Ziel
+                  href: access-the-opaque-pointer-in-a-destination.md
+                - name: Client-Specific Routenliste verwenden
+                  href: use-a-client-specific-route-list.md
+                - name: Verwenden des Ereignis Benachrichtigungs Rückrufs
+                  href: use-the-event-notification-callback.md
+            - name: Referenz für Routing Tabellen-Manager Version 2
+              href: routing-table-manager-version-2-reference.md
+              items:
+                - name: Routing Table Manager Version 2-Funktionen
+                  href: routing-table-manager-version-2-functions.md
+                  items:
+                    - name: Rtmaddnexthop
+                      href: /windows/desktop/api/Rtmv2/nf-rtmv2-rtmaddnexthop
+                    - name: Rtmaddroutededest
+                      href: /windows/desktop/api/Rtmv2/nf-rtmv2-rtmaddroutetodest
+                    - name: Rtmblockmethods
+                      href: /windows/desktop/api/Rtmv2/nf-rtmv2-rtmblockmethods
+                    - name: Rtmkreatedesterum
+                      href: /windows/desktop/api/Rtmv2/nf-rtmv2-rtmcreatedestenum
+                    - name: Rtmkreatenexthopenum
+                      href: /windows/desktop/api/Rtmv2/nf-rtmv2-rtmcreatenexthopenum
+                    - name: Rtmkreaterouteenum
+                      href: /windows/desktop/api/Rtmv2/nf-rtmv2-rtmcreaterouteenum
+                    - name: Rtmkreateroutelist
+                      href: /windows/desktop/api/Rtmv2/nf-rtmv2-rtmcreateroutelist
+                    - name: Rtmkreateroutelistenum
+                      href: /windows/desktop/api/Rtmv2/nf-rtmv2-rtmcreateroutelistenum
+                    - name: Rtmdeleteenumschlag handle
+                      href: /windows/desktop/api/Rtmv2/nf-rtmv2-rtmdeleteenumhandle
+                    - name: Rtmdeletenexthop
+                      href: /windows/desktop/api/Rtmv2/nf-rtmv2-rtmdeletenexthop
+                    - name: Rtmdeleteroutelist
+                      href: /windows/desktop/api/Rtmv2/nf-rtmv2-rtmdeleteroutelist
+                    - name: Rtmdeleteroutededest
+                      href: /windows/desktop/api/Rtmv2/nf-rtmv2-rtmdeleteroutetodest
+                    - name: Rtmderegisterentity
+                      href: /windows/desktop/api/Rtmv2/nf-rtmv2-rtmderegisterentity
+                    - name: Rtmderegisterfromchangenotifizierung
+                      href: /windows/desktop/api/Rtmv2/nf-rtmv2-rtmderegisterfromchangenotification
+                    - name: Rtmfindnexthop
+                      href: /windows/desktop/api/Rtmv2/nf-rtmv2-rtmfindnexthop
+                    - name: Rtmgetchangeddebug
+                      href: /windows/desktop/api/Rtmv2/nf-rtmv2-rtmgetchangeddests
+                    - name: Rtmgetchangestatus
+                      href: /windows/desktop/api/Rtmv2/nf-rtmv2-rtmgetchangestatus
+                    - name: Rtmgetdestinfo
+                      href: /windows/desktop/api/Rtmv2/nf-rtmv2-rtmgetdestinfo
+                    - name: Rtmgetentityinfo
+                      href: /windows/desktop/api/Rtmv2/nf-rtmv2-rtmgetentityinfo
+                    - name: Rtmgetentitymethods
+                      href: /windows/desktop/api/Rtmv2/nf-rtmv2-rtmgetentitymethods
+                    - name: Rtmgetenumschlag
+                      href: /windows/desktop/api/Rtmv2/nf-rtmv2-rtmgetenumdests
+                    - name: Rtmgetenrenexthops
+                      href: /windows/desktop/api/Rtmv2/nf-rtmv2-rtmgetenumnexthops
+                    - name: Rtmgetenumroutes
+                      href: /windows/desktop/api/Rtmv2/nf-rtmv2-rtmgetenumroutes
+                    - name: Rtmgetexactmatchdestination
+                      href: /windows/desktop/api/Rtmv2/nf-rtmv2-rtmgetexactmatchdestination
+                    - name: Rtmgetexactmatchroute
+                      href: /windows/desktop/api/Rtmv2/nf-rtmv2-rtmgetexactmatchroute
+                    - name: Rtmgetlessspecificdestination
+                      href: /windows/desktop/api/Rtmv2/nf-rtmv2-rtmgetlessspecificdestination
+                    - name: Rtmgetlistenumroutes
+                      href: /windows/desktop/api/Rtmv2/nf-rtmv2-rtmgetlistenumroutes
+                    - name: Rtmgetmuspecificdestination
+                      href: /windows/desktop/api/Rtmv2/nf-rtmv2-rtmgetmostspecificdestination
+                    - name: Rtmgetnexthopinfo
+                      href: /windows/desktop/api/Rtmv2/nf-rtmv2-rtmgetnexthopinfo
+                    - name: Rtmgetnexthoppointer
+                      href: /windows/desktop/api/Rtmv2/nf-rtmv2-rtmgetnexthoppointer
+                    - name: Rtmgetopaqueingeformationpointer
+                      href: /windows/desktop/api/Rtmv2/nf-rtmv2-rtmgetopaqueinformationpointer
+                    - name: Rtmgetregisteredentities
+                      href: /windows/desktop/api/Rtmv2/nf-rtmv2-rtmgetregisteredentities
+                    - name: Rtmgetrouteingefo
+                      href: /windows/desktop/api/Rtmv2/nf-rtmv2-rtmgetrouteinfo
+                    - name: Rtmgetroutepointer
+                      href: /windows/desktop/api/Rtmv2/nf-rtmv2-rtmgetroutepointer
+                    - name: Rtmholddestination
+                      href: /windows/desktop/api/Rtmv2/nf-rtmv2-rtmholddestination
+                    - name: Rtmignorechangedentsts
+                      href: /windows/desktop/api/Rtmv2/nf-rtmv2-rtmignorechangeddests
+                    - name: Rtminsertinroutelist
+                      href: /windows/desktop/api/Rtmv2/nf-rtmv2-rtminsertinroutelist
+                    - name: Rtminvokemethod
+                      href: /windows/desktop/api/Rtmv2/nf-rtmv2-rtminvokemethod
+                    - name: Rtmisbestroute
+                      href: /windows/desktop/api/Rtmv2/nf-rtmv2-rtmisbestroute
+                    - name: Rtmismarkedforchangenotifizierung
+                      href: /windows/desktop/api/Rtmv2/nf-rtmv2-rtmismarkedforchangenotification
+                    - name: Rtmlockdestination
+                      href: /windows/desktop/api/Rtmv2/nf-rtmv2-rtmlockdestination
+                    - name: Rtmlocknexthop
+                      href: /windows/desktop/api/Rtmv2/nf-rtmv2-rtmlocknexthop
+                    - name: Rtmlockroute
+                      href: /windows/desktop/api/Rtmv2/nf-rtmv2-rtmlockroute
+                    - name: Rtmmarkdestforchangenotifizierung
+                      href: /windows/desktop/api/Rtmv2/nf-rtmv2-rtmmarkdestforchangenotification
+                    - name: Rtmreferencehandles
+                      href: /windows/desktop/api/Rtmv2/nf-rtmv2-rtmreferencehandles
+                    - name: Rtmregisterentity
+                      href: /windows/desktop/api/Rtmv2/nf-rtmv2-rtmregisterentity
+                    - name: Rtmregisterforchangenotifizierung
+                      href: /windows/desktop/api/Rtmv2/nf-rtmv2-rtmregisterforchangenotification
+                    - name: Rtmreleasechangeddebug
+                      href: /windows/desktop/api/Rtmv2/nf-rtmv2-rtmreleasechangeddests
+                    - name: Rtmreleasedestinfo
+                      href: /windows/desktop/api/Rtmv2/nf-rtmv2-rtmreleasedestinfo
+                    - name: Rtmreleasedests
+                      href: /windows/desktop/api/Rtmv2/nf-rtmv2-rtmreleasedests
+                    - name: Rtmreleaseentities
+                      href: /windows/desktop/api/Rtmv2/nf-rtmv2-rtmreleaseentities
+                    - name: Rtmreleaseentityinfo
+                      href: /windows/desktop/api/Rtmv2/nf-rtmv2-rtmreleaseentityinfo
+                    - name: Rtmreleasenexthopinfo
+                      href: /windows/desktop/api/Rtmv2/nf-rtmv2-rtmreleasenexthopinfo
+                    - name: Rtmreleasenexthops
+                      href: /windows/desktop/api/Rtmv2/nf-rtmv2-rtmreleasenexthops
+                    - name: Rtmreleaserouteingefo
+                      href: /windows/desktop/api/Rtmv2/nf-rtmv2-rtmreleaserouteinfo
+                    - name: Rtmreleaseroutes
+                      href: /windows/desktop/api/Rtmv2/nf-rtmv2-rtmreleaseroutes
+                    - name: Rtmupdateandunlockroute
+                      href: /windows/desktop/api/Rtmv2/nf-rtmv2-rtmupdateandunlockroute
+                - name: 'Routing Table Manager, Version 2, Rückrufe'
+                  href: routing-table-manager-version-2-callbacks.md
+                  items:
+                    - name: _ENTITY_METHOD
+                      href: /windows/desktop/api/Rtmv2/nc-rtmv2-_entity_method
+                    - name: _EVENT_CALLBACK
+                      href: /windows/desktop/api/Rtmv2/nc-rtmv2-_event_callback
+                - name: 'Routing Table Manager, Version 2, Strukturen'
+                  href: routing-table-manager-version-2-structures.md
+                  items:
+                    - name: RTM_DEST_INFO
+                      href: /windows/win32/api/Rtmv2/ns-rtmv2-rtm_dest_info
+                    - name: RTM_ENTITY_EXPORT_METHODS
+                      href: /windows/win32/api/Rtmv2/ns-rtmv2-rtm_entity_export_methods
+                    - name: RTM_ENTITY_ID
+                      href: /windows/win32/api/Rtmv2/ns-rtmv2-rtm_entity_id
+                    - name: RTM_ENTITY_INFO
+                      href: /windows/win32/api/Rtmv2/ns-rtmv2-rtm_entity_info
+                    - name: RTM_ENTITY_METHOD_INPUT
+                      href: /windows/win32/api/Rtmv2/ns-rtmv2-rtm_entity_method_input
+                    - name: RTM_ENTITY_METHOD_OUTPUT
+                      href: /windows/win32/api/Rtmv2/ns-rtmv2-rtm_entity_method_output
+                    - name: RTM_NET_ADDRESS
+                      href: /windows/win32/api/Rtmv2/ns-rtmv2-rtm_net_address
+                    - name: RTM_NEXTHOP_INFO
+                      href: /windows/win32/api/Rtmv2/ns-rtmv2-rtm_nexthop_info
+                    - name: RTM_NEXTHOP_LIST
+                      href: /windows/win32/api/Rtmv2/ns-rtmv2-rtm_nexthop_list
+                    - name: RTM_PREF_INFO
+                      href: /windows/win32/api/Rtmv2/ns-rtmv2-rtm_pref_info
+                    - name: RTM_REGN_PROFILE
+                      href: /windows/win32/api/Rtmv2/ns-rtmv2-rtm_regn_profile
+                    - name: RTM_ROUTE_INFO
+                      href: /windows/win32/api/Rtmv2/ns-rtmv2-rtm_route_info
+                - name: 'Routingtabellenmanager, Version 2, Makros'
+                  href: routing-table-manager-version-2-macros.md
+                  items:
+                    - name: RTM_IPV4_GET_ADDR_AND_LEN
+                      href: /windows/desktop/api/Rtmv2/nf-rtmv2-rtm_ipv4_get_addr_and_len
+                    - name: RTM_IPV4_GET_ADDR_AND_MASK
+                      href: /windows/desktop/api/Rtmv2/nf-rtmv2-rtm_ipv4_get_addr_and_mask
+                    - name: RTM_IPV4_LEN_FROM_MASK
+                      href: /windows/desktop/api/Rtmv2/nf-rtmv2-rtm_ipv4_len_from_mask
+                    - name: RTM_IPV4_MAKE_NET_ADDRESS
+                      href: /windows/desktop/api/Rtmv2/nf-rtmv2-rtm_ipv4_make_net_address
+                    - name: RTM_IPV4_MASK_FROM_LEN
+                      href: /windows/desktop/api/Rtmv2/nf-rtmv2-rtm_ipv4_mask_from_len
+                    - name: RTM_IPV4_SET_ADDR_AND_LEN
+                      href: /windows/desktop/api/Rtmv2/nf-rtmv2-rtm_ipv4_set_addr_and_len
+                    - name: RTM_IPV4_SET_ADDR_AND_MASK
+                      href: /windows/desktop/api/Rtmv2/nf-rtmv2-rtm_ipv4_set_addr_and_mask
+                    - name: RTM_SIZE_OF_DEST_INFO
+                      href: /windows/desktop/api/Rtmv2/nf-rtmv2-rtm_size_of_dest_info
+                    - name: RTM_SIZE_OF_ROUTE_INFO
+                      href: /windows/desktop/api/Rtmv2/nf-rtmv2-rtm_size_of_route_info
+                - name: Routing Table Manager Version 2-Konstanten
+                  href: routing-table-manager-version-2-constants.md
+                  items:
+                    - name: Benachrichtigungshub ändern
+                      href: change-notification-flags.md
+                    - name: Enumerationsflags
+                      href: enumeration-flags.md
+                    - name: Flags für den nächsten Hop
+                      href: next-hop-flags.md
+                    - name: Weiterleitungs Flags
+                      href: route-flags.md
+                    - name: Abfrage-Flags für Routing Tabelle
+                      href: routing-table-query-flags.md
+                    - name: Anzeigen von Flags
+                      href: view-flags.md
+                - name: 'Routing Table Manager, Version 2, Enumerationen'
+                  href: routing-table-manager-version-2-enumerations.md
+                  items:
+                    - name: RTM_EVENT_TYPE
+                      href: /windows/win32/api/Rtmv2/ne-rtmv2-rtm_event_type
+                - name: 'Routing Table Manager, Version 2, einfache Datentypen'
+                  href: routing-table-manager-version-2-simple-data-types.md
+    - name: Glossar
+      href: glossary.md
+      items:
+        - name: A
+          href: a-gly.md
+        - name: B
+          href: b-gly.md
+        - name: C
+          href: c-gly.md
+        - name: D
+          href: d-gly.md
+        - name: E
+          href: e-gly.md
+        - name: I
+          href: i-gly.md
+        - name: P
+          href: p-gly.md
+        - name: E
+          href: s-gly.md
