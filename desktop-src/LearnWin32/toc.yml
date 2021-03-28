@@ -1,0 +1,119 @@
+- name: Erste Schritte mit Win32 und C++
+  href: learn-to-program-for-windows.md
+  items:
+    - name: Einführung in die Win32-Programmierung in C++
+      items:
+        - name: Übersicht
+          href: introduction-to-windows-programming-in-c--.md
+        - name: Vorbereiten der Entwicklungsumgebung
+          href: prepare-your-development-environment.md
+        - name: Windows-Codierungs Konventionen
+          href: windows-coding-conventions.md
+        - name: Arbeiten mit Zeichenfolgen
+          href: working-with-strings.md
+        - name: Was ist ein Fenster?
+          href: what-is-a-window-.md
+        - name: 'WinMain: der Einstiegspunkt der Anwendung'
+          href: winmain--the-application-entry-point.md
+    - name: Modul 1. Ihr erstes Windows-Programm
+      items:
+        - name: Übersicht
+          href: your-first-windows-program.md
+        - name: Erstellen eines Fensters
+          href: creating-a-window.md
+        - name: Fenster Meldungen
+          href: window-messages.md
+        - name: Schreiben der Fenster Prozedur
+          href: writing-the-window-procedure.md
+        - name: Zeichnen des Fensters
+          href: painting-the-window.md
+        - name: Schließen des Fensters
+          href: closing-the-window.md
+        - name: Managing Application State (Verwalten eines Anwendungszustands)
+          href: managing-application-state-.md
+    - name: Modul 2. Verwenden von com in Ihrem Windows-Programm
+      items:
+        - name: Übersicht
+          href: module-2--using-com-in-your-windows-program.md
+        - name: Was ist eine COM-Schnittstelle?
+          href: what-is-a-com-interface-.md
+        - name: Initialisieren der com-Bibliothek
+          href: initializing-the-com-library.md
+        - name: Fehler Codes in com
+          href: error-codes-in-com.md
+        - name: Erstellen eines Objekts in com
+          href: creating-an-object-in-com.md
+        - name: 'Beispiel: das Dialog Feld "Öffnen"'
+          href: example--the-open-dialog-box.md
+        - name: Verwalten der Lebensdauer eines Objekts
+          href: managing-the-lifetime-of-an-object.md
+        - name: Anfordern eines Objekts für eine Schnittstelle
+          href: asking-an-object-for-an-interface.md
+        - name: Speicher Belegung in com
+          href: memory-allocation-in-com.md
+        - name: COM-Codierungs Methoden
+          href: com-coding-practices.md
+        - name: Fehlerbehandlung in com
+          href: error-handling-in-com.md
+    - name: Modul 3. Windows-Grafiken
+      items:
+        - name: Übersicht
+          href: module-3---windows-graphics.md
+        - name: Übersicht über die Windows-Grafik Architektur
+          href: overview-of-the-windows-graphics-architecture.md
+        - name: Der Desktopfenster-Manager
+          href: the-desktop-window-manager.md
+        - name: Modus für beibehaltene Modus und unmittelbarer
+          href: retained-mode-versus-immediate-mode.md
+        - name: Ihr erstes Direct2D-Programm
+          href: your-first-direct2d-program.md
+        - name: 'Renderziele, Geräte und Ressourcen'
+          href: render-targets--devices--and-resources.md
+        - name: Zeichnen mit Direct2D
+          href: drawing-with-direct2d.md
+        - name: DPI-und Device-Independent Pixel
+          href: dpi-and-device-independent-pixels.md
+        - name: Verwenden von Color in Direct2D
+          href: using-color-in-direct2d.md
+        - name: Anwenden von Transformationen in Direct2D
+          href: applying-transforms-in-direct2d.md
+        - name: 'Anhang: Matrix Transformationen'
+          href: appendix--matrix-transforms.md
+    - name: Modul 4. Benutzereingaben
+      items:
+        - name: Übersicht
+          href: module-4--user-input.md
+        - name: Mauseingabe
+          href: mouse-input.md
+        - name: Antworten auf Mausklicks
+          href: mouse-clicks.md
+        - name: Mausbewegung
+          href: mouse-movement.md
+        - name: Verschiedene Maus Vorgänge
+          href: other-mouse-operations.md
+        - name: Tastatureingabe
+          href: keyboard-input.md
+        - name: Zugriffstasten Tabellen
+          href: accelerator-tables.md
+        - name: Festlegen des Cursor Bilds
+          href: setting-the-cursor-image.md
+        - name: 'Benutzereingabe: erweitertes Beispiel'
+          href: user-input--extended-example.md
+    - name: 'Einstieg in Win32: Beispiel Code'
+      items:
+        - name: Übersicht
+          href: learn-to-program-for-windows--sample-code.md
+        - name: Windows Hallo Welt-Beispiel
+          href: windows-hello-world-sample.md
+        - name: Basewindow-Beispiel
+          href: basewindow-sample.md
+        - name: Dialog Feld Öffnen (Beispiel)
+          href: open-dialog-box-sample.md
+        - name: Direct2D Circle-Beispiel
+          href: direct2d-circle-sample.md
+        - name: Direct2D Uhr-Beispiel
+          href: direct2d-clock-sample.md
+        - name: Beispiel zum Zeichnen eines Kreises
+          href: draw-circle-sample.md
+        - name: Einfaches Zeichnungs Beispiel
+          href: simple-drawing-sample.md
