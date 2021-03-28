@@ -1,0 +1,59 @@
+- name: TPM-Basisdienste
+  href: tpm-base-services-portal.md
+  items:
+    - name: Informationen zu TSB
+      href: about-tbs.md
+    - name: Verwenden von TSB
+      href: using-tbs.md
+      items:
+        - name: Ressourcenvirtualisierung
+          href: resource-virtualization.md
+        - name: Befehls Planung
+          href: command-scheduling.md
+        - name: Energieverwaltung
+          href: power-management.md
+        - name: Befehls Blockierung
+          href: command-blocking.md
+    - name: TSB-Referenz
+      href: tbs-reference.md
+      items:
+        - name: TSB-Datentypen
+          href: tbs-data-types.md
+        - name: TSB-Funktionen
+          href: tbs-functions.md
+          items:
+            - name: Tbsi_Context_Create
+              href: /windows/desktop/api/Tbs/nf-tbs-tbsi_context_create
+            - name: Tbsi_Create_Attestation_From_Log
+              href: /previous-versions/windows/desktop/legacy/dn455155(v=vs.85)
+            - name: Tbsi_GetDeviceInfo
+              href: /windows/desktop/api/Tbs/nf-tbs-tbsi_getdeviceinfo
+            - name: Tbsi_Get_OwnerAuth
+              href: /windows/desktop/api/Tbs/nf-tbs-tbsi_get_ownerauth
+            - name: Tbsi_Get_TCG_Log
+              href: /windows/desktop/api/Tbs/nf-tbs-tbsi_get_tcg_log
+            - name: Tbsi_Get_TCG_Log_Ex
+              href: /windows/desktop/api/Tbs/nf-tbs-tbsi_get_tcg_log_ex
+            - name: Tbsi_Get_TCG_Logs
+              href: /previous-versions/windows/desktop/legacy/dn455156(v=vs.85)
+            - name: Tbsi_Physical_Presence_Command
+              href: /windows/desktop/api/Tbs/nf-tbs-tbsi_physical_presence_command
+            - name: Tbsi_Revoke_Attestation
+              href: /windows/desktop/api/Tbs/nf-tbs-tbsi_revoke_attestation
+            - name: Tbsip_Cancel_Commands
+              href: /windows/desktop/api/Tbs/nf-tbs-tbsip_cancel_commands
+            - name: Tbsip_Context_Close
+              href: /windows/desktop/api/Tbs/nf-tbs-tbsip_context_close
+            - name: Tbsip_Submit_Command
+              href: /windows/desktop/api/Tbs/nf-tbs-tbsip_submit_command
+        - name: TSB-Rückgabe Codes
+          href: tbs-return-codes.md
+        - name: TSB-Strukturen
+          href: tbs-structures.md
+          items:
+            - name: TBS_CONTEXT_PARAMS
+              href: /windows/win32/api/tbs/ns-tbs-tbs_context_params
+            - name: TBS_CONTEXT_PARAMS2
+              href: /windows/win32/api/tbs/ns-tbs-tbs_context_params2
+            - name: TPM_DEVICE_INFO
+              href: /windows/win32/api/Tbs/ns-tbs-tpm_device_info
