@@ -1,0 +1,1437 @@
+- name: OpenGL
+  href: opengl.md
+  items:
+    - name: Rechtliche Informationen
+      href: legal-information.md
+    - name: Einführung in OpenGL
+      href: introduction-to-opengl.md
+      items:
+        - name: Primitive und Befehle
+          href: primitives-and-commands.md
+        - name: OpenGL-Grafik Steuerelement
+          href: opengl-graphic-control.md
+        - name: Ausführungs Modell
+          href: execution-model.md
+        - name: Grundlegender OpenGL-Vorgang
+          href: basic-opengl-operation.md
+        - name: OpenGL-Funktionsnamen
+          href: opengl-function-names.md
+        - name: OpenGL-Verarbeitungs Pipeline
+          href: opengl-processing-pipeline.md
+          items:
+            - name: Scheitelpunkte
+              href: vertices.md
+              items:
+                - name: Eingabedaten
+                  href: input-data.md
+                - name: Matrix Transformationen
+                  href: matrix-transformations.md
+                - name: Festlegen von Beleuchtung und Farben
+                  href: setting-lighting-and-coloring.md
+                - name: Texturkoordinaten werden erzeugt.
+                  href: generating-texture-coordinates.md
+                - name: Assemblierungsprimitive
+                  href: assembling-primitives.md
+                - name: Vertices-Referenz
+                  href: vertices-reference.md
+            - name: Primitive
+              href: primitives.md
+              items:
+                - name: Freistellen
+                  href: clipping.md
+                - name: Transformieren in Fenster Koordinaten
+                  href: transforming-to-window-coordinates.md
+                - name: Rasterungs
+                  href: rasterizing.md
+                - name: Primitiver Verweis
+                  href: primitives-reference.md
+            - name: Fragments
+              href: fragments.md
+              items:
+                - name: Pixel Besitz Test
+                  href: pixel-ownership-test.md
+                - name: Scissor-Test
+                  href: scissor-test.md
+                - name: Alpha-Test
+                  href: alpha-test.md
+                - name: Schablone-Test
+                  href: stencil-test.md
+                - name: Tiefen Puffer Test
+                  href: depth-buffer-test.md
+                - name: Bänder
+                  href: blending.md
+                - name: Dithering
+                  href: dithering.md
+                - name: Logische Vorgänge
+                  href: logical-operations.md
+                - name: Fragmente-Referenz
+                  href: fragments-reference.md
+            - name: Okkludierte
+              href: pixels.md
+              items:
+                - name: Framebuffer-Vorgänge
+                  href: framebuffer-operations.md
+                - name: Lesen oder Kopieren von Pixeln
+                  href: reading-or-copying-pixels.md
+                - name: Pixel Verweis
+                  href: pixels-reference.md
+        - name: Verwenden von Evaluatoren
+          href: using-evaluators.md
+          items:
+            - name: Evaluatorreferenz
+              href: evaluators-reference.md
+        - name: Ausführen von Auswahl und Feedback
+          href: performing-selection-and-feedback.md
+          items:
+            - name: Auswahl
+              href: selection.md
+            - name: Feedback
+              href: feedback.md
+            - name: Auswahl-und Feedback Referenz
+              href: selection-and-feedback-reference.md
+        - name: Verwenden von anzeigen Listen
+          href: using-display-lists.md
+          items:
+            - name: Anzeigen von Listen verweisen
+              href: display-lists-reference.md
+        - name: Verwalten von Modi und Ausführung
+          href: managing-modes-and-execution.md
+          items:
+            - name: Modi und Ausführungs Verweis
+              href: modes-and-execution-reference.md
+        - name: Abrufen von Zustandsinformationen
+          href: obtaining-state-information.md
+          items:
+            - name: Verwenden der Abfragefunktionen
+              href: using-the-query-functions.md
+            - name: Fehlerbehandlung
+              href: error-handling.md
+            - name: OpenGL-Fehler Codes
+              href: opengl-error-codes.md
+            - name: Speichern und Wiederherstellen von Sätzen von Zustandsvariablen
+              href: saving-and-restoring-sets-of-state-variables.md
+            - name: OpenGL-Zustandsvariablen
+              href: opengl-state-variables.md
+            - name: Referenz zu Zustandsinformationen
+              href: state-information-reference.md
+        - name: OpenGL-Hilfsprogrammbibliothek
+          href: opengl-utility-library.md
+          items:
+            - name: Wird initialisiert...
+              href: initializing.md
+            - name: Bearbeiten von Bildern für die Verwendung in der Texturierung
+              href: manipulating-images-for-use-in-texturing.md
+            - name: Transformieren von Koordinaten
+              href: transforming-coordinates.md
+            - name: Mosaik von Polygonen
+              href: tessellating-polygons.md
+            - name: Verwenden von Rückruf Funktionen
+              href: using-callback-functions.md
+            - name: Verwenden von Mosaik Objekten
+              href: using-tessellation-objects.md
+            - name: Angeben von Rückrufen
+              href: specifying-callbacks.md
+            - name: Angeben des zu Mosaik enden Polygons
+              href: specifying-the-polygon-to-be-tessellated.md
+            - name: Rendering von einfachen Oberflächen
+              href: rendering-simple-surfaces.md
+            - name: Verwenden von nursb-Kurven und-Oberflächen
+              href: using-nurbs-curves-and-surfaces.md
+            - name: Behandeln von Fehlern
+              href: handling-errors.md
+    - name: Windows-Erweiterungen für OpenGL
+      href: windows-extensions-to-opengl.md
+      items:
+        - name: OpenGL unter Windows
+          href: opengl-on-windows-nt--windows-2000--and-windows-95-98.md
+          items:
+            - name: Leitfaden zur Dokumentation
+              href: guide-to-documentation.md
+            - name: Komponenten
+              href: components.md
+            - name: Generische Implementierung und Hardware Implementierungen
+              href: generic-implementation-and-hardware-implementations.md
+              items:
+                - name: Einschränkungen
+                  href: limitations.md
+            - name: Renderingkontexte
+              href: rendering-contexts.md
+              items:
+                - name: Rendern von Kontextfunktionen
+                  href: rendering-context-functions.md
+            - name: Pixel Formate
+              href: pixel-formats.md
+              items:
+                - name: Pixel Format Funktionen
+                  href: pixel-format-functions.md
+            - name: 'Front, Back und andere Puffer'
+              href: front--back--and-other-buffers.md
+              items:
+                - name: Pufferfunktionen
+                  href: buffer-functions.md
+            - name: Schriftarten und Text
+              href: fonts-and-text.md
+              items:
+                - name: Schriftart-und Text Funktionen
+                  href: font-and-text-functions.md
+            - name: OpenGL-Farbmodi und Windows-Palettenverwaltung
+              href: opengl-color-modes-and-windows-palette-management.md
+              items:
+                - name: Paletten und der Palette-Manager
+                  href: palettes-and-the-palette-manager.md
+                - name: Palettenbewusstsein
+                  href: palette-awareness.md
+                - name: Lesen von Farbwerten aus dem Framebuffer
+                  href: reading-color-values-from-the-framebuffer.md
+                - name: Auswählen zwischen RGBA und Color-Index Modus
+                  href: choosing-between-rgba-and-color-index-mode.md
+                - name: RGBA-Modus und Windows-Palettenverwaltung
+                  href: rgba-mode-and-windows-palette-management.md
+                - name: Color-Index Modus und Windows-Palettenverwaltung
+                  href: color-index-mode-and-windows-palette-management.md
+            - name: 'Überlagerung, Unterebene und Hauptebenen'
+              href: overlay--underlay--and-main-planes.md
+            - name: Freigeben von anzeigen Listen
+              href: sharing-display-lists.md
+            - name: Erweitern von OpenGL-Funktionen
+              href: extending-opengl-functions.md
+            - name: Glx und WGL/Windows
+              href: glx-and-wgl-win32.md
+            - name: Verwenden von OpenGL unter Windows
+              href: using-opengl-on-windows-nt-2000-and-windows-95-98.md
+              items:
+                - name: Headerdateien
+                  href: header-files.md
+                - name: Aufgaben im Pixel Format
+                  href: pixel-format-tasks.md
+                  items:
+                    - name: Auswählen und Festlegen eines Best-Match Pixel Formats
+                      href: choosing-and-setting-a-best-match-pixel-format.md
+                    - name: Untersuchen des aktuellen Pixel Formats eines Geräte Kontexts
+                      href: examining-a-device-contexts-current-pixel-format.md
+                    - name: Untersuchen der unterstützten Pixel Formate eines Geräts
+                      href: examining-a-devices-supported-pixel-formats.md
+                - name: Rendern von Kontext Tasks
+                  href: rendering-context-tasks.md
+                  items:
+                    - name: Erstellen eines renderingkontexts und Erstellen des aktuellen
+                      href: creating-a-rendering-context-and-making-it-current.md
+                    - name: Erstellen eines renderingkontexts ist nicht aktuell
+                      href: making-a-rendering-context-not-current.md
+                    - name: Löschen eines renderingkontexts
+                      href: deleting-a-rendering-context.md
+                - name: Zeichnen mit doppelten Puffern
+                  href: drawing-with-double-buffers.md
+                - name: Zeichnen von Text in einem Double-Buffered OpenGL-Fenster
+                  href: drawing-text-in-a-double-buffered-opengl-window.md
+                - name: Drucken eines OpenGL-Bilds
+                  href: printing-an-opengl-image.md
+                - name: Kopieren eines OpenGL-Bilds in die Zwischenablage
+                  href: copying-an-opengl-image-to-the-clipboard.md
+                - name: Multithread-OpenGL-Zeichnungs Strategien
+                  href: multithread-opengl-drawing-strategies.md
+                - name: Verwenden der Hilfsbibliothek
+                  href: using-the-auxiliary-library.md
+            - name: Referenz für Windows-Erweiterungen für OpenGL
+              href: reference-for-win-32-extensions-to-opengl.md
+              items:
+                - name: WGL-Funktionen
+                  href: wgl-functions.md
+                - name: Windows-Funktionen
+                  href: win32-functions.md
+                - name: Strukturen
+                  href: structures.md
+        - name: WGL-und Windows-Referenz
+          href: wgl-and-windows-reference.md
+          items:
+            - name: Auswahl Pixel Format
+              href: /windows/desktop/api/wingdi/nf-wingdi-choosepixelformat
+            - name: Describepixelformat
+              href: /windows/desktop/api/wingdi/nf-wingdi-describepixelformat
+            - name: Getenhmetafilepixelformat
+              href: /windows/desktop/api/wingdi/nf-wingdi-getenhmetafilepixelformat
+            - name: GetPixelFormat
+              href: /windows/desktop/api/wingdi/nf-wingdi-getpixelformat
+            - name: SetPixelFormat
+              href: /windows/desktop/api/wingdi/nf-wingdi-setpixelformat
+            - name: Austausch Puffer
+              href: /windows/desktop/api/wingdi/nf-wingdi-swapbuffers
+            - name: wglkreatecontext
+              href: /windows/desktop/api/wingdi/nf-wingdi-wglcreatecontext
+            - name: wglkreatelayercontext
+              href: /windows/desktop/api/wingdi/nf-wingdi-wglcreatelayercontext
+            - name: wglcopycontext
+              href: /windows/desktop/api/wingdi/nf-wingdi-wglcopycontext
+            - name: wgldeletecontext
+              href: /windows/desktop/api/wingdi/nf-wingdi-wgldeletecontext
+            - name: wgldescribelayerplane
+              href: /windows/desktop/api/wingdi/nf-wingdi-wgldescribelayerplane
+            - name: wglgetcurrentcontext
+              href: /windows/desktop/api/wingdi/nf-wingdi-wglgetcurrentcontext
+            - name: wglgetcurrentdc
+              href: /windows/desktop/api/wingdi/nf-wingdi-wglgetcurrentdc
+            - name: wglgetlayerpaletteentries
+              href: /windows/desktop/api/wingdi/nf-wingdi-wglgetlayerpaletteentries
+            - name: wglgetprocaddress
+              href: /windows/desktop/api/wingdi/nf-wingdi-wglgetprocaddress
+            - name: wglmakecurrent
+              href: /windows/desktop/api/wingdi/nf-wingdi-wglmakecurrent
+            - name: wglrealizelayerpalette
+              href: /windows/desktop/api/wingdi/nf-wingdi-wglrealizelayerpalette
+            - name: wglsetlayerpaletteentries
+              href: /windows/desktop/api/wingdi/nf-wingdi-wglsetlayerpaletteentries
+            - name: wglsharelists
+              href: /windows/desktop/api/wingdi/nf-wingdi-wglsharelists
+            - name: wglswaplayerbuffers
+              href: /windows/desktop/api/wingdi/nf-wingdi-wglswaplayerbuffers
+            - name: wgluseefontbitmaps
+              href: /windows/desktop/api/wingdi/nf-wingdi-wglusefontbitmapsa
+            - name: wgluseelfontgliederungen
+              href: /windows/desktop/api/wingdi/nf-wingdi-wglusefontoutlinesa
+            - name: Glyphmetricsfloat
+              href: /windows/win32/api/wingdi/ns-wingdi-glyphmetricsfloat
+            - name: Layerplanedescriptor
+              href: /windows/win32/api/Wingdi/ns-wingdi-layerplanedescriptor
+            - name: Pixelformatdescriptor
+              href: /windows/win32/api/Wingdi/ns-wingdi-pixelformatdescriptor
+            - name: Pointfloat
+              href: /windows/win32/api/wingdi/ns-wingdi-pointfloat
+    - name: Programmiertipps
+      href: programming-tips.md
+      items:
+        - name: OpenGL-Tipps zur Richtigkeit
+          href: opengl-correctness-tips.md
+        - name: OpenGL-Leistungs Tipps
+          href: opengl-performance-tips.md
+        - name: 'Sicherheitsüberlegungen: OpenGL'
+          href: security-considerations--opengl.md
+    - name: OpenGL-Referenz
+      href: opengl-reference.md
+      items:
+        - name: Zustandsvariablen
+          href: state-variables.md
+          items:
+            - name: Attributgruppen
+              href: attribute-groups.md
+            - name: Zustandsvariablen für aktuelle Werte und zugehörige Daten
+              href: state-variables-for-current-values-and-associated-data.md
+            - name: Transformations Zustandsvariablen
+              href: transformation-state-variables.md
+            - name: Farb Statusvariablen
+              href: coloring-state-variables.md
+            - name: Beleuchtungs Zustandsvariablen
+              href: lighting-state-variables.md
+            - name: Rasterization-Zustandsvariablen
+              href: rasterization-state-variables.md
+            - name: Texturierungsstatusvariablen
+              href: texturing-state-variables.md
+            - name: Pixel Vorgänge
+              href: pixel-operations.md
+            - name: Statusvariablen des Framebuffer-Steuer Elements
+              href: framebuffer-control-state-variables.md
+            - name: Pixel Zustandsvariablen
+              href: pixel-state-variables.md
+            - name: Evaluatorstatusvariablen
+              href: evaluator-state-variables.md
+            - name: Hinweis Zustandsvariablen
+              href: hint-state-variables.md
+            - name: Implementation-Dependent Statusvariablen
+              href: implementation-dependent-state-variables.md
+            - name: Implementation-Dependent Pixel-Depth Statusvariablen
+              href: implementation-dependent-pixel-depth-state-variables.md
+            - name: Diverse Zustandsvariablen
+              href: miscellaneous-state-variables.md
+        - name: GL-Funktionen
+          href: gl-functions.md
+          items:
+            - name: glaccum
+              href: glaccum.md
+            - name: gladdtauaphintrectwin
+              href: gladdswaphintrectwin.md
+            - name: glalphafunc
+              href: glalphafunc.md
+            - name: glaretexturesresidente
+              href: glaretexturesresident.md
+            - name: glarrayelement
+              href: glarrayelement.md
+            - name: glBegin
+              href: glbegin.md
+            - name: glBindTexture
+              href: glbindtexture.md
+            - name: glbitmap
+              href: glbitmap.md
+            - name: glblendfunc
+              href: glblendfunc.md
+            - name: glCallList
+              href: glcalllist.md
+            - name: glcalllists
+              href: glcalllists.md
+            - name: glClear
+              href: glclear.md
+            - name: glclearaccum
+              href: glclearaccum.md
+            - name: glclearcolor
+              href: glclearcolor.md
+            - name: glcleartiefe
+              href: glcleardepth.md
+            - name: glclearindex
+              href: glclearindex.md
+            - name: glclearstencil
+              href: glclearstencil.md
+            - name: glclipplane
+              href: glclipplane.md
+            - name: glcolor-Funktionen
+              href: glcolor-functions.md
+              items:
+                - name: glColor3b
+                  href: glcolor3b.md
+                - name: glColor3bv
+                  href: glcolor3bv.md
+                - name: glColor3d
+                  href: glcolor3d.md
+                - name: glColor3dv
+                  href: glcolor3dv.md
+                - name: glColor3f
+                  href: glcolor3f.md
+                - name: glColor3fv
+                  href: glcolor3fv.md
+                - name: glColor3i
+                  href: glcolor3i.md
+                - name: glColor3iv
+                  href: glcolor3iv.md
+                - name: glColor3s
+                  href: glcolor3s.md
+                - name: glColor3sv
+                  href: glcolor3sv.md
+                - name: glColor3ub
+                  href: glcolor3ub.md
+                - name: glColor3ubv
+                  href: glcolor3ubv.md
+                - name: glColor3ui
+                  href: glcolor3ui.md
+                - name: glColor3uiv
+                  href: glcolor3uiv.md
+                - name: glColor3us
+                  href: glcolor3us.md
+                - name: glColor3usv
+                  href: glcolor3usv.md
+                - name: glColor4b
+                  href: glcolor4b.md
+                - name: glColor4bv
+                  href: glcolor4bv.md
+                - name: glColor4d
+                  href: glcolor4d.md
+                - name: glColor4dv
+                  href: glcolor4dv.md
+                - name: glColor4f
+                  href: glcolor4f.md
+                - name: glColor4fv
+                  href: glcolor4fv.md
+                - name: glColor4i
+                  href: glcolor4i.md
+                - name: glColor4iv
+                  href: glcolor4iv.md
+                - name: glColor4s
+                  href: glcolor4s.md
+                - name: glColor4sv
+                  href: glcolor4sv.md
+                - name: glColor4ub
+                  href: glcolor4ub.md
+                - name: glColor4ubv
+                  href: glcolor4ubv.md
+                - name: glColor4ui
+                  href: glcolor4ui.md
+                - name: glColor4uiv
+                  href: glcolor4uiv.md
+                - name: glColor4us
+                  href: glcolor4us.md
+                - name: glColor4usv
+                  href: glcolor4usv.md
+            - name: glcolormask
+              href: glcolormask.md
+            - name: glcolormaterial
+              href: glcolormaterial.md
+            - name: glcolorpointer
+              href: glcolorpointer.md
+            - name: glcolortableext
+              href: glcolortableext.md
+            - name: glcolorsubtableext
+              href: glcolorsubtableext.md
+            - name: glcopypixels
+              href: glcopypixels.md
+            - name: glCopyTexImage1D
+              href: glcopyteximage1d.md
+            - name: glCopyTexImage2D
+              href: glcopyteximage2d.md
+            - name: glCopyTexSubImage1D
+              href: glcopytexsubimage1d.md
+            - name: glCopyTexSubImage2D
+              href: glcopytexsubimage2d.md
+            - name: glcullface
+              href: glcullface.md
+            - name: gldelta etelists
+              href: gldeletelists.md
+            - name: gldeletetexturen
+              href: gldeletetextures.md
+            - name: gldepthfunc
+              href: gldepthfunc.md
+            - name: gldepthmask
+              href: gldepthmask.md
+            - name: gldepthrange
+              href: gldepthrange.md
+            - name: gldeaktivieren
+              href: gldisable.md
+            - name: gldisableclientstate
+              href: gldisableclientstate.md
+            - name: gldrawarrays
+              href: gldrawarrays.md
+            - name: gldrawbuffer
+              href: gldrawbuffer.md
+            - name: glDrawElements
+              href: gldrawelements.md
+            - name: gldrawpixels
+              href: gldrawpixels.md
+            - name: gledgeflag-Funktionen
+              href: gledgeflag-functions.md
+              items:
+                - name: gledgeflag
+                  href: gledgeflag.md
+                - name: gledgeflagv
+                  href: gledgeflagv.md
+            - name: gledgeflagpointer
+              href: gledgeflagpointer.md
+            - name: glEnable
+              href: glenable.md
+            - name: glenableclientstate
+              href: glenableclientstate.md
+            - name: glEnd
+              href: glend.md
+            - name: glendlist
+              href: glendlist.md
+            - name: glevalcoord-Funktionen
+              href: glevalcoord-functions.md
+              items:
+                - name: glEvalCoord1d
+                  href: glevalcoord1d.md
+                - name: glEvalCoord1dv
+                  href: glevalcoord1dv.md
+                - name: glEvalCoord1f
+                  href: glevalcoord1f.md
+                - name: glEvalCoord1fv
+                  href: glevalcoord1fv.md
+                - name: glEvalCoord2d
+                  href: glevalcoord2d.md
+                - name: glEvalCoord2dv
+                  href: glevalcoord2dv.md
+                - name: glEvalCoord2f
+                  href: glevalcoord2f.md
+                - name: glEvalCoord2fv
+                  href: glevalcoord2fv.md
+            - name: glevalmesh-Funktionen
+              href: glevalmesh-functions.md
+              items:
+                - name: glEvalMesh1
+                  href: glevalmesh1.md
+                - name: glEvalMesh2
+                  href: glevalmesh2.md
+            - name: glevalpoint-Funktionen
+              href: glevalpoint.md
+              items:
+                - name: glEvalPoint1
+                  href: glevalpoint1.md
+                - name: glEvalPoint2
+                  href: glevalpoint2.md
+            - name: glfeedbackbuffer
+              href: glfeedbackbuffer.md
+            - name: glfinish
+              href: glfinish.md
+            - name: glflush
+              href: glflush.md
+            - name: glnebel-Funktionen
+              href: glfog.md
+              items:
+                - name: glfogf
+                  href: glfogf.md
+                - name: glfogfv
+                  href: glfogfv.md
+                - name: glfogi
+                  href: glfogi.md
+                - name: glfogiv
+                  href: glfogiv.md
+            - name: glfrontface
+              href: glfrontface.md
+            - name: glfrustum
+              href: glfrustum.md
+            - name: glgenlists
+              href: glgenlists.md
+            - name: glgentexturen
+              href: glgentextures.md
+            - name: glget
+              href: glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md
+              items:
+                - name: glgetbooleanv
+                  href: glgetbooleanv.md
+                - name: glgetdoublev
+                  href: glgetdoublev.md
+                - name: glgetfloatv
+                  href: glgetfloatv.md
+                - name: glgetintegerv
+                  href: glgetintegerv.md
+            - name: glgetclipplane
+              href: glgetclipplane.md
+            - name: glgetcolortableext
+              href: glgetcolortableext.md
+            - name: glgetcolortableparameterfvext
+              href: glgetcolortableparameterfvext.md
+            - name: glgetcolortableparameterivext
+              href: glgetcolortableparameterivext.md
+            - name: glgeterror
+              href: glgeterror.md
+            - name: glgetlight-Funktionen
+              href: glgetlight.md
+              items:
+                - name: glgetlightfv
+                  href: glgetlightfv.md
+                - name: glgetlightiv
+                  href: glgetlightiv.md
+            - name: glgetmap-Funktionen
+              href: glgetmap.md
+              items:
+                - name: glgetmapdv
+                  href: glgetmapdv.md
+                - name: glgetmapfv
+                  href: glgetmapfv.md
+                - name: glgetmapiv
+                  href: glgetmapiv.md
+            - name: glgetmaterial-Funktionen
+              href: glgetmaterial.md
+              items:
+                - name: glgetmaterialfv
+                  href: glgetmaterialfv.md
+                - name: glgetmaterialiv
+                  href: glgetmaterialiv.md
+            - name: glgetpixelmap-Funktionen
+              href: glgetpixelmap.md
+              items:
+                - name: glgetpixelmapfv
+                  href: glgetpixelmapfv.md
+                - name: glgetpixelmapuiv
+                  href: glgetpixelmapuiv.md
+                - name: glgetpixelmapusv
+                  href: glgetpixelmapusv.md
+            - name: glgetpointerv
+              href: glgetpointerv.md
+            - name: glgetpolygonstippel
+              href: glgetpolygonstipple.md
+            - name: glgetstring
+              href: glgetstring.md
+            - name: glgettexdev-Funktionen
+              href: glgettexenv.md
+              items:
+                - name: glgettexendvfv
+                  href: glgettexenvfv.md
+                - name: glgettexenviv
+                  href: glgettexenviv.md
+            - name: glgettexgen-Funktionen
+              href: glgettexgen.md
+              items:
+                - name: glgettexgendv
+                  href: glgettexgendv.md
+                - name: glgettexgenfv
+                  href: glgettexgenfv.md
+                - name: glgettexgeniv
+                  href: glgettexgeniv.md
+            - name: glgetteximage
+              href: glgetteximage.md
+            - name: glgettexlevelparameter-Funktionen
+              href: glgettexlevelparameter.md
+              items:
+                - name: glgettexlevelparameterfv
+                  href: glgettexlevelparameterfv.md
+                - name: glgettexlevelparameteriv
+                  href: glgettexlevelparameteriv.md
+            - name: glgettexparameter-Funktionen
+              href: glgettexparameter.md
+              items:
+                - name: glgettexparameterfv
+                  href: glgettexparameterfv.md
+                - name: glgettexparameteriv
+                  href: glgettexparameteriv.md
+            - name: glhint
+              href: glhint.md
+            - name: glindex-Funktionen
+              href: glindex-functions.md
+              items:
+                - name: glindexd
+                  href: glindexd.md
+                - name: glindexdv
+                  href: glindexdv.md
+                - name: glindexf
+                  href: glindexf.md
+                - name: glindexfv
+                  href: glindexfv.md
+                - name: Glinde XI
+                  href: glindexi.md
+                - name: Glinde XIV
+                  href: glindexiv.md
+                - name: glindexs
+                  href: glindexs.md
+                - name: glindexsv
+                  href: glindexsv.md
+            - name: glindexmask
+              href: glindexmask.md
+            - name: glindexpointer
+              href: glindexpointer.md
+            - name: glinitnames
+              href: glinitnames.md
+            - name: glinterleavedarrays
+              href: glinterleavedarrays.md
+            - name: glisenabled
+              href: glisenabled.md
+            - name: glislist
+              href: glislist.md
+            - name: glistexture
+              href: glistexture.md
+            - name: gllight-Funktionen
+              href: gllight-functions.md
+              items:
+                - name: gllightf
+                  href: gllightf.md
+                - name: gllightfv
+                  href: gllightfv.md
+                - name: gllighti
+                  href: gllighti.md
+                - name: gllightiv
+                  href: gllightiv.md
+            - name: gllightmodel-Funktionen
+              href: gllightmodel-functions.md
+              items:
+                - name: gllightmodelf
+                  href: gllightmodelf.md
+                - name: gllightmodelfv
+                  href: gllightmodelfv.md
+                - name: gllightmodeli
+                  href: gllightmodeli.md
+                - name: gllightmudeliv
+                  href: gllightmodeliv.md
+            - name: gllinestippel
+              href: gllinestipple.md
+            - name: glLineWidth
+              href: gllinewidth.md
+            - name: gllistbase
+              href: gllistbase.md
+            - name: glLoadIdentity
+              href: glloadidentity.md
+            - name: glloadmatrix-Funktionen
+              href: glloadmatrix.md
+              items:
+                - name: glloadmatrixd
+                  href: glloadmatrixd.md
+                - name: glloadmatrixf
+                  href: glloadmatrixf.md
+            - name: glloadname
+              href: glloadname.md
+            - name: gllogicop
+              href: gllogicop.md
+            - name: glMap1-Funktionen
+              href: glmap1.md
+              items:
+                - name: glMap1d
+                  href: glmap1d.md
+                - name: glMap1f
+                  href: glmap1f.md
+            - name: glMap2-Funktionen
+              href: glmap2.md
+              items:
+                - name: glMap2d
+                  href: glmap2d.md
+                - name: glMap2f
+                  href: glmap2f.md
+            - name: glmapgrid-Funktionen
+              href: glmapgrid-functions.md
+              items:
+                - name: glMapGrid1d
+                  href: glmapgrid1d.md
+                - name: glMapGrid1f
+                  href: glmapgrid1f.md
+                - name: glMapGrid2d
+                  href: glmapgrid2d.md
+                - name: glMapGrid2f
+                  href: glmapgrid2f.md
+            - name: glmaterial-Funktionen
+              href: glmaterial-functions.md
+              items:
+                - name: glmaterialf
+                  href: glmaterialf.md
+                - name: glmaterialfv
+                  href: glmaterialfv.md
+                - name: glmateriali
+                  href: glmateriali.md
+                - name: glmaterialiv
+                  href: glmaterialiv.md
+            - name: glMatrixMode
+              href: glmatrixmode.md
+            - name: glmultmatrix-Funktionen
+              href: glmultmatrix.md
+              items:
+                - name: glmultmatrixd
+                  href: glmultmatrixd.md
+                - name: glmultmatrixf
+                  href: glmultmatrixf.md
+            - name: glnewlist
+              href: glnewlist.md
+            - name: glnormal-Funktionen
+              href: glnormal-functions.md
+              items:
+                - name: glNormal3b
+                  href: glnormal3b.md
+                - name: glNormal3bv
+                  href: glnormal3bv.md
+                - name: glNormal3d
+                  href: glnormal3d.md
+                - name: glNormal3dv
+                  href: glnormal3dv.md
+                - name: glNormal3f
+                  href: glnormal3f.md
+                - name: glNormal3fv
+                  href: glnormal3fv.md
+                - name: glNormal3i
+                  href: glnormal3i.md
+                - name: glNormal3iv
+                  href: glnormal3iv.md
+                - name: glNormal3s
+                  href: glnormal3s.md
+                - name: glNormal3sv
+                  href: glnormal3sv.md
+            - name: glnormalpointer
+              href: glnormalpointer.md
+            - name: glortho
+              href: glortho.md
+            - name: glpassthrough
+              href: glpassthrough.md
+            - name: glpixelmap-Funktionen
+              href: glpixelmap.md
+              items:
+                - name: glpixelmapfv
+                  href: glpixelmapfv.md
+                - name: glpixelmapuiv
+                  href: glpixelmapuiv.md
+                - name: glpixelmapusv
+                  href: glpixelmapusv.md
+            - name: glpixelstore-Funktionen
+              href: glpixelstore-functions.md
+              items:
+                - name: glpixelstoref
+                  href: glpixelstoref.md
+                - name: glpixelstorei
+                  href: glpixelstorei.md
+            - name: glpixeltransfer-Funktionen
+              href: glpixeltransfer.md
+              items:
+                - name: glpixeltransferf
+                  href: glpixeltransferf.md
+                - name: glpixeltransferi
+                  href: glpixeltransferi.md
+            - name: glpixelzoom
+              href: glpixelzoom.md
+            - name: glPointSize
+              href: glpointsize.md
+            - name: glpolygonmode
+              href: glpolygonmode.md
+            - name: glpolygonoffset
+              href: glpolygonoffset.md
+            - name: glpolygonstippel
+              href: glpolygonstipple.md
+            - name: glpopattenb
+              href: glpopattrib.md
+            - name: glpopclientattrb
+              href: glpopclientattrib.md
+            - name: glPopMatrix
+              href: glpopmatrix.md
+            - name: glpopname
+              href: glpopname.md
+            - name: glpriorizetexturen
+              href: glprioritizetextures.md
+            - name: glpushatpub
+              href: glpushattrib.md
+            - name: glpushclientatpub
+              href: glpushclientattrib.md
+            - name: glPushMatrix
+              href: glpushmatrix.md
+            - name: glpushname
+              href: glpushname.md
+            - name: glRasterPos-Funktionen
+              href: glrasterpos-functions.md
+              items:
+                - name: glRasterPos2d
+                  href: glrasterpos2d.md
+                - name: glRasterPos2dv
+                  href: glrasterpos2dv.md
+                - name: glRasterPos2f
+                  href: glrasterpos2f.md
+                - name: glRasterPos2fv
+                  href: glrasterpos2fv.md
+                - name: glRasterPos2i
+                  href: glrasterpos2i.md
+                - name: glRasterPos2iv
+                  href: glrasterpos2iv.md
+                - name: glRasterPos2s
+                  href: glrasterpos2s.md
+                - name: glRasterPos2sv
+                  href: glrasterpos2sv.md
+                - name: glRasterPos3d
+                  href: glrasterpos3d.md
+                - name: glRasterPos3dv
+                  href: glrasterpos3dv.md
+                - name: glRasterPos3f
+                  href: glrasterpos3f.md
+                - name: glRasterPos3fv
+                  href: glrasterpos3fv.md
+                - name: glRasterPos3i
+                  href: glrasterpos3i.md
+                - name: glRasterPos3iv
+                  href: glrasterpos3iv.md
+                - name: glRasterPos3s
+                  href: glrasterpos3s.md
+                - name: glRasterPos3sv
+                  href: glrasterpos3sv.md
+                - name: glRasterPos4d
+                  href: glrasterpos4d.md
+                - name: glRasterPos4dv
+                  href: glrasterpos4dv.md
+                - name: glRasterPos4f
+                  href: glrasterpos4f.md
+                - name: glRasterPos4fv
+                  href: glrasterpos4fv.md
+                - name: glRasterPos4i
+                  href: glrasterpos4i.md
+                - name: glRasterPos4iv
+                  href: glrasterpos4iv.md
+                - name: glRasterPos4s
+                  href: glrasterpos4s.md
+                - name: glRasterPos4sv
+                  href: glrasterpos4sv.md
+            - name: glread Buffer
+              href: glreadbuffer.md
+            - name: glread Pixels
+              href: glreadpixels.md
+            - name: glrect-Funktionen
+              href: glrect-functions.md
+              items:
+                - name: glrectd
+                  href: glrectd.md
+                - name: glrectdv
+                  href: glrectdv.md
+                - name: glrectf
+                  href: glrectf.md
+                - name: glrectfv
+                  href: glrectfv.md
+                - name: glrecti
+                  href: glrecti.md
+                - name: glrectiv
+                  href: glrectiv.md
+                - name: glrects
+                  href: glrects.md
+                - name: glrectsv
+                  href: glrectsv.md
+            - name: glrendermode
+              href: glrendermode.md
+            - name: glrotation-Funktionen
+              href: glrotate.md
+              items:
+                - name: glrotiert
+                  href: glrotated.md
+                - name: glrotatef
+                  href: glrotatef.md
+            - name: glscale-Funktionen
+              href: glscale.md
+              items:
+                - name: glskaliert
+                  href: glscaled.md
+                - name: glScalef
+                  href: glscalef.md
+            - name: glscissor
+              href: glscissor.md
+            - name: glselectbuffer
+              href: glselectbuffer.md
+            - name: glshademodel
+              href: glshademodel.md
+            - name: glstencilfunc
+              href: glstencilfunc.md
+            - name: glstencilmask
+              href: glstencilmask.md
+            - name: glstencilop
+              href: glstencilop.md
+            - name: gltexcoord-Funktionen
+              href: gltexcoord-functions.md
+              items:
+                - name: glTexCoord1d
+                  href: gltexcoord1d.md
+                - name: glTexCoord1dv
+                  href: gltexcoord1dv.md
+                - name: glTexCoord1f
+                  href: gltexcoord1f.md
+                - name: glTexCoord1fv
+                  href: gltexcoord1fv.md
+                - name: glTexCoord1i
+                  href: gltexcoord1i.md
+                - name: glTexCoord1iv
+                  href: gltexcoord1iv.md
+                - name: glTexCoord1s
+                  href: gltexcoord1s.md
+                - name: glTexCoord1sv
+                  href: gltexcoord1sv.md
+                - name: glTexCoord2d
+                  href: gltexcoord2d.md
+                - name: glTexCoord2dv
+                  href: gltexcoord2dv.md
+                - name: glTexCoord2fv
+                  href: gltexcoord2fv.md
+                - name: glTexCoord2i
+                  href: gltexcoord2i.md
+                - name: glTexCoord2iv
+                  href: gltexcoord2iv.md
+                - name: glTexCoord2s
+                  href: gltexcoord2s.md
+                - name: glTexCoord2sv
+                  href: gltexcoord2sv.md
+                - name: glTexCoord3d
+                  href: gltexcoord3d.md
+                - name: glTexCoord3dv
+                  href: gltexcoord3dv.md
+                - name: glTexCoord3f
+                  href: gltexcoord3f.md
+                - name: glTexCoord3fv
+                  href: gltexcoord3fv.md
+                - name: glTexCoord3i
+                  href: gltexcoord3i.md
+                - name: glTexCoord3iv
+                  href: gltexcoord3iv.md
+                - name: glTexCoord3s
+                  href: gltexcoord3s.md
+                - name: glTexCoord3sv
+                  href: gltexcoord3sv.md
+                - name: glTexCoord4d
+                  href: gltexcoord4d.md
+                - name: glTexCoord4dv
+                  href: gltexcoord4dv.md
+                - name: glTexCoord4f
+                  href: gltexcoord4f.md
+                - name: glTexCoord4fv
+                  href: gltexcoord4fv.md
+                - name: glTexCoord4i
+                  href: gltexcoord4i.md
+                - name: glTexCoord4iv
+                  href: gltexcoord4iv.md
+                - name: glTexCoord4s
+                  href: gltexcoord4s.md
+                - name: glTexCoord4sv
+                  href: gltexcoord4sv.md
+            - name: gltexcoordpointer
+              href: gltexcoordpointer.md
+            - name: gltexdev-Funktionen
+              href: gltexenv-functions.md
+              items:
+                - name: gltexumvf
+                  href: gltexenvf.md
+                - name: gltexendvfv
+                  href: gltexenvfv.md
+                - name: gltexkovi
+                  href: gltexenvi.md
+                - name: gltexenviv
+                  href: gltexenviv.md
+            - name: gltexgen-Funktionen
+              href: gltexgen-functions.md
+              items:
+                - name: gltexgend
+                  href: gltexgend.md
+                - name: gltexgendv
+                  href: gltexgendv.md
+                - name: gltexgenf
+                  href: gltexgenf.md
+                - name: gltexgenfv
+                  href: gltexgenfv.md
+                - name: gltexgeni
+                  href: gltexgeni.md
+                - name: gltexgeniv
+                  href: gltexgeniv.md
+            - name: glTexImage1D
+              href: glteximage1d.md
+            - name: glTexImage2D
+              href: glteximage2d.md
+            - name: gltexparameter-Funktionen
+              href: gltexparameter-functions.md
+              items:
+                - name: gltexparameterf
+                  href: gltexparameterf.md
+                - name: gltexparameterfv
+                  href: gltexparameterfv.md
+                - name: gltexparameteri
+                  href: gltexparameteri.md
+                - name: gltexparameteriv
+                  href: gltexparameteriv.md
+            - name: glTexSubImage1D
+              href: gltexsubimage1d.md
+            - name: glTexSubImage2D
+              href: gltexsubimage2d.md
+            - name: gltranslation-Funktionen
+              href: gltranslate.md
+              items:
+                - name: glübersetzt
+                  href: gltranslated.md
+                - name: glTranslatef
+                  href: gltranslatef.md
+            - name: glVertex-Funktionen
+              href: glvertex-functions.md
+              items:
+                - name: glVertex2d
+                  href: glvertex2d.md
+                - name: glVertex2dv
+                  href: glvertex2dv.md
+                - name: glVertex2f
+                  href: glvertex2f.md
+                - name: glVertex2fv
+                  href: glvertex2fv.md
+                - name: glVertex2i
+                  href: glvertex2i.md
+                - name: glVertex2iv
+                  href: glvertex2iv.md
+                - name: glVertex2s
+                  href: glvertex2s.md
+                - name: glVertex2sv
+                  href: glvertex2sv.md
+                - name: glVertex3d
+                  href: glvertex3d.md
+                - name: glVertex3dv
+                  href: glvertex3dv.md
+                - name: glVertex3f
+                  href: glvertex3f.md
+                - name: glVertex3fv
+                  href: glvertex3fv.md
+                - name: glVertex3i
+                  href: glvertex3i.md
+                - name: glVertex3iv
+                  href: glvertex3iv.md
+                - name: glVertex3s
+                  href: glvertex3s.md
+                - name: glVertex3sv
+                  href: glvertex3sv.md
+                - name: glVertex4d
+                  href: glvertex4d.md
+                - name: glVertex4dv
+                  href: glvertex4dv.md
+                - name: glVertex4f
+                  href: glvertex4f.md
+                - name: glVertex4fv
+                  href: glvertex4fv.md
+                - name: glVertex4i
+                  href: glvertex4i.md
+                - name: glVertex4iv
+                  href: glvertex4iv.md
+                - name: glVertex4s
+                  href: glvertex4s.md
+                - name: glVertex4sv
+                  href: glvertex4sv.md
+            - name: glvertexpointer
+              href: glvertexpointer.md
+            - name: glViewport
+              href: glviewport.md
+        - name: Glu-Funktionen
+          href: glu-functions.md
+          items:
+            - name: glubegincurve
+              href: glubegincurve.md
+            - name: glubeginpolygon
+              href: glubeginpolygon.md
+            - name: glubeginsurface
+              href: glubeginsurface.md
+            - name: glubegintrim
+              href: glubegintrim.md
+            - name: gluBuild1DMipmaps
+              href: glubuild1dmipmaps.md
+            - name: gluBuild2DMipmaps
+              href: glubuild2dmipmaps.md
+            - name: gluzylinder
+              href: glucylinder.md
+            - name: gludeletenurbsrenderer
+              href: gludeletenurbsrenderer.md
+            - name: gludeletequadric
+              href: gludeletequadric.md
+            - name: gludeletetess
+              href: gludeletetess.md
+            - name: gludisk
+              href: gludisk.md
+            - name: gluendcurve
+              href: gluendcurve.md
+            - name: gluendpolygon
+              href: gluendpolygon.md
+            - name: gluendsurface
+              href: gluendsurface.md
+            - name: gluendtrim
+              href: gluendtrim.md
+            - name: gluerrorstring
+              href: gluerrorstring.md
+            - name: glugetnurbsproperty
+              href: glugetnurbsproperty.md
+            - name: glugetstring
+              href: glugetstring.md
+            - name: '"glugettessproperty"'
+              href: glugettessproperty.md
+            - name: gluloadsamplingmatrices
+              href: gluloadsamplingmatrices.md
+            - name: glulookat
+              href: glulookat.md
+            - name: glunewnurbsrenderer
+              href: glunewnurbsrenderer.md
+            - name: glunewquadric
+              href: glunewquadric.md
+            - name: glunewtess
+              href: glunewtess.md
+            - name: glunextcontour
+              href: glunextcontour.md
+            - name: glunurbscallback
+              href: glunurbs.md
+            - name: glunurbscurve
+              href: glunurbscurve.md
+            - name: glunurbsproperty
+              href: glunurbsproperty.md
+            - name: glunurbssurface
+              href: glunurbssurface.md
+            - name: gluOrtho2D
+              href: gluortho2d.md
+            - name: glupartialdisk
+              href: glupartialdisk.md
+            - name: gluperspective
+              href: gluperspective.md
+            - name: glupickmatrix
+              href: glupickmatrix.md
+            - name: gluproject
+              href: gluproject.md
+            - name: glupwlcurve
+              href: glupwlcurve.md
+            - name: gluvierccallback
+              href: gluquadric.md
+            - name: gluquadricdrawstyle
+              href: gluquadricdrawstyle.md
+            - name: gluquadricnormals
+              href: gluquadricnormals.md
+            - name: gluquadricorientation
+              href: gluquadricorientation.md
+            - name: gluquadrictexture
+              href: gluquadrictexture.md
+            - name: gluscaleimage
+              href: gluscaleimage.md
+            - name: glusphere
+              href: glusphere.md
+            - name: glutess begincontour
+              href: glutessbegincontour.md
+            - name: glutess beginpolygon
+              href: glutessbeginpolygon.md
+            - name: glutesscallback
+              href: glutess.md
+            - name: gluTessEndContour
+              href: glutessendcontour.md
+            - name: glutessendpolygon
+              href: glutessendpolygon.md
+            - name: glutess normal
+              href: glutessnormal.md
+            - name: glutessproperty
+              href: glutessproperty.md
+            - name: glutess Vertex
+              href: glutessvertex.md
+            - name: '"gluunproject"'
+              href: gluunproject.md
+    - name: Portieren auf OpenGL
+      href: porting-to-opengl.md
+      items:
+        - name: Einführung in das Portieren in OpenGL für Windows
+          href: introduction-to-porting-to-opengl-for-windows-nt--windows-2000--and-windows-95-98.md
+          items:
+            - name: Portieren von System Anwendungen für X-Fenster
+              href: porting-x-window-system-applications.md
+            - name: Übersetzen der glx-Bibliothek
+              href: translating-the-glx-library.md
+            - name: Portieren von Geräte Kontexten und Pixel Formaten
+              href: porting-device-contexts-and-pixel-formats.md
+              items:
+                - name: Code Beispiel für das glx-Pixel Format
+                  href: glx-pixel-format-code-sample.md
+                - name: Code Beispiel für Windows-Pixel Format
+                  href: win32-pixel-format-code-sample.md
+            - name: Portieren von renderingkontexten
+              href: porting-rendering-contexts.md
+              items:
+                - name: Kontext Code Beispiel für glx-Rendering
+                  href: glx-rendering-context-code-sample.md
+                - name: Code Beispiel für Windows-Rendering-Kontext
+                  href: win32-rendering-context-code-sample.md
+            - name: Portieren von glx-pixmap-Code
+              href: porting-glx-pixmap-code.md
+            - name: Portieren von anderem glx-Code
+              href: porting-other-glx-code.md
+            - name: Beispiel für eine Portierung
+              href: a-porting-sample.md
+              items:
+                - name: Ein System eigenes OpenGL-Programm für X-Fenster
+                  href: an-x-window-system-opengl-program.md
+                - name: Das Programm wurde nach Windows portiert.
+                  href: the-program-ported-to-win32.md
+            - name: Portieren von Anwendungen von IRIS GL
+              href: porting-applications-from-iris-gl.md
+            - name: Besondere IRIS GL-Portierungsprobleme
+              href: special-iris-gl-porting-issues.md
+              items:
+                - name: Portieren von greset
+                  href: porting-greset.md
+                - name: Portieren von IRIS GL &quot; get- &quot; Funktionen
+                  href: porting-iris-gl-get-functions.md
+                - name: 'Port Code, der eine aktuelle Grafik Position benötigt'
+                  href: porting-code-that-requires-a-current-graphics-position.md
+                  items:
+                    - name: Portieren von Bildschirm-und Puffer Lösch Befehlen
+                      href: porting-screen-and-buffer-clearing-commands.md
+                    - name: Portieren von Matrix-und Transformations Funktionen
+                      href: porting-matrix-and-transformation-functions.md
+                    - name: Portieren von Code im msingle-Modus
+                      href: porting-msingle-mode-code.md
+                    - name: 'Portieren von Funktionen, die Matrizen und Transformationen erhalten'
+                      href: porting-functions-that-get-matrices-and-transformations.md
+                    - name: 'Portieren von Viewports, screenmasken und scrboxes'
+                      href: porting-viewports--screenmasks--and-scrboxes.md
+                    - name: Portieren von Clippingebenen
+                      href: porting-clipping-planes.md
+                - name: Portieren von Zeichnungsfunktionen
+                  href: porting-drawing-functions.md
+                  items:
+                    - name: Die Iris GL Sphere-Bibliothek
+                      href: the-iris-gl-sphere-library.md
+                    - name: Portieren von v-Funktionen
+                      href: porting-v-functions.md
+                    - name: Portieren von BGN-/End-Befehlen
+                      href: porting-bgn-end-commands.md
+                    - name: Portieren von Punkten
+                      href: porting-points.md
+                    - name: Portieren von Linien
+                      href: porting-lines.md
+                    - name: Portieren von Polygonen und vier eckalen
+                      href: porting-polygons-and-quadrilaterals.md
+                    - name: Portieren von Dreiecken
+                      href: porting-triangles.md
+                    - name: Portieren von Arcs und Kreisen
+                      href: porting-arcs-and-circles.md
+                    - name: Portieren von Bereichen
+                      href: porting-spheres.md
+                - name: 'Portieren von Farb-, Schattierungs-und beschreibe-Code'
+                  href: porting-color--shading--and-writemask-code.md
+                  items:
+                    - name: Portieren von Farb aufrufen
+                      href: porting-color-calls.md
+                    - name: Portieren von Schattierungs Modellen
+                      href: porting-shading-models.md
+                - name: Portieren von Pixel Vorgängen
+                  href: porting-pixel-operations.md
+                - name: Portieren von tiefen Cube-und Nebel Befehlen
+                  href: porting-depth-cueing-and-fog-commands.md
+                - name: Portieren von Kurven-und Oberflächen Funktionen
+                  href: porting-curve-and-surface-functions.md
+                  items:
+                    - name: Portieren von nursb-Objekten
+                      href: porting-nurbs-objects.md
+                    - name: Portieren von nursb-Kurven
+                      href: porting-nurbs-curves.md
+                    - name: Portieren von Kürzungs Kurven
+                      href: porting-trimming-curves.md
+                    - name: Portieren von nursb-Oberflächen
+                      href: porting-nurbs-surfaces.md
+                - name: Portieren von Antialiasing-Funktionen
+                  href: porting-antialiasing-functions.md
+                  items:
+                    - name: Portieren von Mischungs Code
+                      href: porting-blending-code.md
+                    - name: Portieren von Test Funktionen
+                      href: porting-afunction-test-functions.md
+                    - name: Verwenden von Antialiasing-Funktionen
+                      href: using-antialiasing-functions.md
+                - name: Portieren von Akkumulations Puffer aufrufen
+                  href: porting-accumulation-buffer-calls.md
+                - name: Portieren von Schablonen der Schablone
+                  href: porting-stencil-plane-calls.md
+                - name: Portieren von Anzeigelisten
+                  href: porting-display-lists.md
+                  items:
+                    - name: Portieren der BBOX2-Funktion
+                      href: porting-the-bbox2-function.md
+                    - name: Portieren von bearbeiteten anzeigen Listen
+                      href: porting-edited-display-lists.md
+                    - name: Einen Beispielport einer Anzeigeliste
+                      href: a-sample-port-of-a-display-list.md
+                - name: 'Portieren von defs, Bindungen und Sätzen'
+                  href: porting-defs--binds--and-sets.md
+                - name: Portieren von Beleuchtungs-und Material Funktionen
+                  href: porting-lighting-and-materials-functions.md
+                - name: Portieren von Textur Funktionen
+                  href: porting-texture-functions.md
+                  items:
+                    - name: Übersetzen von tevdef
+                      href: translating-tevdef.md
+                    - name: Übersetzen von texdef
+                      href: translating-texdef.md
+                    - name: Übersetzen von TEXGEN
+                      href: translating-texgen.md
+                - name: Portieren von Pick-Funktionen
+                  href: porting-picking-functions.md
+                - name: Portieren von Feedback Funktionen
+                  href: porting-feedback-functions.md
+        - name: OpenGL-Funktionen und ihre IRIS GL-Entsprechungen
+          href: opengl-functions-and-their-iris-gl-equivalents.md
+        - name: IRIS GL-und OpenGL-Unterschiede
+          href: iris-gl-and-opengl-differences.md
+    - name: OpenGL-Glossar
+      href: opengl-glossary.md
+      items:
+        - name: A
+          href: a.md
+        - name: B
+          href: b.md
+        - name: C
+          href: c.md
+        - name: D
+          href: d.md
+        - name: E
+          href: e.md
+        - name: F
+          href: f.md
+        - name: G
+          href: g.md
+        - name: H
+          href: h.md
+        - name: I
+          href: i.md
+        - name: J K
+          href: jk.md
+        - name: L
+          href: l.md
+        - name: M
+          href: m.md
+        - name: 'N'
+          href: n.md
+        - name: O
+          href: o.md
+        - name: P
+          href: p.md
+        - name: Q
+          href: q.md
+        - name: R
+          href: r.md
+        - name: E
+          href: s.md
+        - name: T
+          href: t.md
+        - name: U V
+          href: u-v.md
+        - name: W
+          href: w.md
+        - name: X Y Z
+          href: x-y-z.md
+    - name: Anhang
+      href: about-opengl.md

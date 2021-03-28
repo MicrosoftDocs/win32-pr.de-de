@@ -1,0 +1,32 @@
+- name: Bewährte Methoden für die Sicherheits-APIs
+  href: best-practices-for-the-security-apis.md
+  items:
+    - name: Ausführen mit besonderen Berechtigungen
+      href: running-with-special-privileges.md
+      items:
+        - name: Ausführen mit Administrator Rechten
+          href: running-with-administrator-privileges.md
+        - name: Benutzer werden zur Anmelde Informationen aufgefordert
+          href: asking-the-user-for-credentials.md
+        - name: Ändern von Berechtigungen in einem Token
+          href: changing-privileges-in-a-token.md
+        - name: Zuweisen von Berechtigungen zu einem Konto
+          href: assigning-privileges-to-an-account.md
+    - name: Vermeiden von Pufferüberläufen
+      href: avoiding-buffer-overruns.md
+    - name: Ablaufsteuerungsschutz
+      href: control-flow-guard.md
+      items:
+        - name: PE-Metadaten
+          href: pe-metadata.md
+    - name: Erstellen einer DACL
+      href: creating-a-dacl.md
+    - name: Behandeln von Kenn Wörtern
+      href: handling-passwords.md
+      items:
+        - name: Kenn Wort Bedrohungsbewertung
+          href: password-threat-assessment.md
+        - name: Techniken zur Bedrohungsminderung
+          href: threat-mitigation-techniques.md
+    - name: Optimieren der MSDN Library-Suche
+      href: how-to-optimize-your-msdn-library-search.md
