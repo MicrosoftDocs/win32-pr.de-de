@@ -1,0 +1,217 @@
+---
+description: Konvertierungsfunktionen
+title: Konvertierungsfunktionen
+ms.topic: article
+ms.date: 05/31/2018
+ms.assetid: 4f63e5af-e756-4a2f-99ba-fea608fa23c6
+api_name: ''
+api_type: ''
+api_location: ''
+topic_type:
+- kbArticle
+ms.openlocfilehash: 6f966ab31644a41ff745e19b99fb06be8691a2d7
+ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "104977361"
+---
+# <a name="conversion-functions"></a><span data-ttu-id="e0fcd-103">Konvertierungsfunktionen</span><span class="sxs-lookup"><span data-stu-id="e0fcd-103">Conversion Functions</span></span>
+
+-   [<span data-ttu-id="e0fcd-104">**Byteto Char**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-104">**ByteToChar**</span></span>](/windows/desktop/api/intsafe/nf-intsafe-bytetochar)
+-   [<span data-ttu-id="e0fcd-105">**ByteToInt8**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-105">**ByteToInt8**</span></span>](/windows/desktop/api/intsafe/nf-intsafe-bytetoint8)
+-   <span data-ttu-id="e0fcd-106">[**Dwordptrumint**](/previous-versions/windows/desktop/legacy/bb776679(v=vs.85))</span><span class="sxs-lookup"><span data-stu-id="e0fcd-106">[**DWordPtrToInt**](/previous-versions/windows/desktop/legacy/bb776679(v=vs.85))</span></span>
+-   <span data-ttu-id="e0fcd-107">[**DWordPtrToInt64**](/previous-versions/windows/desktop/legacy/bb776680(v=vs.85))</span><span class="sxs-lookup"><span data-stu-id="e0fcd-107">[**DWordPtrToInt64**](/previous-versions/windows/desktop/legacy/bb776680(v=vs.85))</span></span>
+-   <span data-ttu-id="e0fcd-108">[**Dwordtolongptr**](/previous-versions/windows/desktop/legacy/bb776694(v=vs.85))</span><span class="sxs-lookup"><span data-stu-id="e0fcd-108">[**DWordToLongPtr**](/previous-versions/windows/desktop/legacy/bb776694(v=vs.85))</span></span>
+-   <span data-ttu-id="e0fcd-109">[**Dwordumssizet**](/previous-versions/windows/desktop/legacy/bb776697(v=vs.85))</span><span class="sxs-lookup"><span data-stu-id="e0fcd-109">[**DWordToSSIZET**](/previous-versions/windows/desktop/legacy/bb776697(v=vs.85))</span></span>
+-   <span data-ttu-id="e0fcd-110">[**Int64ToInt**](/previous-versions/windows/desktop/legacy/bb776705(v=vs.85))</span><span class="sxs-lookup"><span data-stu-id="e0fcd-110">[**Int64ToInt**](/previous-versions/windows/desktop/legacy/bb776705(v=vs.85))</span></span>
+-   <span data-ttu-id="e0fcd-111">[**Int64ToIntPtr**](/previous-versions/windows/desktop/legacy/bb776706(v=vs.85))</span><span class="sxs-lookup"><span data-stu-id="e0fcd-111">[**Int64ToIntPtr**](/previous-versions/windows/desktop/legacy/bb776706(v=vs.85))</span></span>
+-   <span data-ttu-id="e0fcd-112">[**Int64ToLong**](/previous-versions/windows/desktop/legacy/bb776707(v=vs.85))</span><span class="sxs-lookup"><span data-stu-id="e0fcd-112">[**Int64ToLong**](/previous-versions/windows/desktop/legacy/bb776707(v=vs.85))</span></span>
+-   <span data-ttu-id="e0fcd-113">[**Int64ToLongPtr**](/previous-versions/windows/desktop/legacy/bb776708(v=vs.85))</span><span class="sxs-lookup"><span data-stu-id="e0fcd-113">[**Int64ToLongPtr**](/previous-versions/windows/desktop/legacy/bb776708(v=vs.85))</span></span>
+-   <span data-ttu-id="e0fcd-114">[**Int64ToULongLong**](/previous-versions/windows/desktop/legacy/bb776716(v=vs.85))</span><span class="sxs-lookup"><span data-stu-id="e0fcd-114">[**Int64ToULongLong**](/previous-versions/windows/desktop/legacy/bb776716(v=vs.85))</span></span>
+-   <span data-ttu-id="e0fcd-115">[**Int64ToULongPtr**](/previous-versions/windows/desktop/legacy/bb776717(v=vs.85))</span><span class="sxs-lookup"><span data-stu-id="e0fcd-115">[**Int64ToULongPtr**](/previous-versions/windows/desktop/legacy/bb776717(v=vs.85))</span></span>
+-   [<span data-ttu-id="e0fcd-116">**Int8ToUChar**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-116">**Int8ToUChar**</span></span>](/windows/desktop/api/intsafe/nf-intsafe-int8touchar)
+-   [<span data-ttu-id="e0fcd-117">**Int8ToUInt**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-117">**Int8ToUInt**</span></span>](/windows/desktop/api/intsafe/nf-intsafe-int8touint)
+-   [<span data-ttu-id="e0fcd-118">**Int8ToUInt8**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-118">**Int8ToUInt8**</span></span>](/windows/desktop/api/intsafe/nf-intsafe-int8touint8)
+-   [<span data-ttu-id="e0fcd-119">**Int8ToUIntPtr**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-119">**Int8ToUIntPtr**</span></span>](/windows/desktop/api/intsafe/nf-intsafe-int8touintptr)
+-   [<span data-ttu-id="e0fcd-120">**Int8ToULong**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-120">**Int8ToULong**</span></span>](/windows/desktop/api/intsafe/nf-intsafe-int8toulong)
+-   [<span data-ttu-id="e0fcd-121">**Int8ToULongLong**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-121">**Int8ToULongLong**</span></span>](/windows/desktop/api/intsafe/nf-intsafe-int8toulonglong)
+-   [<span data-ttu-id="e0fcd-122">**Int8ToULongPtr**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-122">**Int8ToULongPtr**</span></span>](/windows/desktop/api/intsafe/nf-intsafe-int8toulongptr)
+-   [<span data-ttu-id="e0fcd-123">**Int8ToUShort**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-123">**Int8ToUShort**</span></span>](/windows/desktop/api/intsafe/nf-intsafe-int8toushort)
+-   [<span data-ttu-id="e0fcd-124">**Intptrumchar**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-124">**IntPtrToChar**</span></span>](/windows/desktop/api/intsafe/nf-intsafe-intptrtochar)
+-   <span data-ttu-id="e0fcd-125">[**Intptrtodword**](/previous-versions/windows/desktop/legacy/bb776718(v=vs.85))</span><span class="sxs-lookup"><span data-stu-id="e0fcd-125">[**IntPtrToDWord**](/previous-versions/windows/desktop/legacy/bb776718(v=vs.85))</span></span>
+-   <span data-ttu-id="e0fcd-126">[**Intptrtodwordptr**](/previous-versions/windows/desktop/legacy/bb776719(v=vs.85))</span><span class="sxs-lookup"><span data-stu-id="e0fcd-126">[**IntPtrToDWordPtr**](/previous-versions/windows/desktop/legacy/bb776719(v=vs.85))</span></span>
+-   [<span data-ttu-id="e0fcd-127">**Intptrumint**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-127">**IntPtrToInt**</span></span>](/windows/desktop/api/Intsafe/nf-intsafe-intptrtoint)
+-   [<span data-ttu-id="e0fcd-128">**IntPtrToInt8**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-128">**IntPtrToInt8**</span></span>](/windows/desktop/api/intsafe/nf-intsafe-intptrtoint8)
+-   [<span data-ttu-id="e0fcd-129">**Intptrtolong**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-129">**IntPtrToLong**</span></span>](/windows/desktop/api/Intsafe/nf-intsafe-intptrtolong)
+-   [<span data-ttu-id="e0fcd-130">**Intptrtolongptr**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-130">**IntPtrToLongPtr**</span></span>](/windows/desktop/api/intsafe/nf-intsafe-intptrtolongptr)
+-   [<span data-ttu-id="e0fcd-131">**Intptrinshort**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-131">**IntPtrToShort**</span></span>](/windows/desktop/api/intsafe/nf-intsafe-intptrtoshort)
+-   <span data-ttu-id="e0fcd-132">[**Intptrumsizet**](/previous-versions/windows/desktop/legacy/bb776722(v=vs.85))</span><span class="sxs-lookup"><span data-stu-id="e0fcd-132">[**IntPtrToSizeT**](/previous-versions/windows/desktop/legacy/bb776722(v=vs.85))</span></span>
+-   [<span data-ttu-id="e0fcd-133">**Intptrtouchar**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-133">**IntPtrToUChar**</span></span>](/windows/desktop/api/intsafe/nf-intsafe-intptrtouchar)
+-   [<span data-ttu-id="e0fcd-134">**Intptrtouint**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-134">**IntPtrToUInt**</span></span>](/windows/desktop/api/Intsafe/nf-intsafe-intptrtouint)
+-   [<span data-ttu-id="e0fcd-135">**Intptrtouintptr**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-135">**IntPtrToUIntPtr**</span></span>](/windows/desktop/api/Intsafe/nf-intsafe-intptrtouintptr)
+-   [<span data-ttu-id="e0fcd-136">**IntPtrToUInt8**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-136">**IntPtrToUInt8**</span></span>](/windows/desktop/api/intsafe/nf-intsafe-intptrtouint8)
+-   [<span data-ttu-id="e0fcd-137">**Intptrtoulong**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-137">**IntPtrToULong**</span></span>](/windows/desktop/api/Intsafe/nf-intsafe-intptrtoulong)
+-   [<span data-ttu-id="e0fcd-138">**Intptrtoulonglong**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-138">**IntPtrToULongLong**</span></span>](/windows/desktop/api/Intsafe/nf-intsafe-intptrtoulonglong)
+-   [<span data-ttu-id="e0fcd-139">**Intptrtoulongptr**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-139">**IntPtrToULongPtr**</span></span>](/windows/desktop/api/Intsafe/nf-intsafe-intptrtoulongptr)
+-   [<span data-ttu-id="e0fcd-140">**Intptrtoushort**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-140">**IntPtrToUShort**</span></span>](/windows/desktop/api/intsafe/nf-intsafe-intptrtoushort)
+-   <span data-ttu-id="e0fcd-141">[**Intbybyte**](/previous-versions/windows/desktop/legacy/bb776729(v=vs.85))</span><span class="sxs-lookup"><span data-stu-id="e0fcd-141">[**IntToByte**](/previous-versions/windows/desktop/legacy/bb776729(v=vs.85))</span></span>
+-   [<span data-ttu-id="e0fcd-142">**Intto Char**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-142">**IntToChar**</span></span>](/windows/desktop/api/Intsafe/nf-intsafe-inttochar)
+-   <span data-ttu-id="e0fcd-143">[**Inttodword**](/previous-versions/windows/desktop/legacy/bb776731(v=vs.85))</span><span class="sxs-lookup"><span data-stu-id="e0fcd-143">[**IntToDWord**](/previous-versions/windows/desktop/legacy/bb776731(v=vs.85))</span></span>
+-   [<span data-ttu-id="e0fcd-144">**IntToInt8**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-144">**IntToInt8**</span></span>](/windows/desktop/api/intsafe/nf-intsafe-inttoint8)
+-   [<span data-ttu-id="e0fcd-145">**Intinshort**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-145">**IntToShort**</span></span>](/windows/desktop/api/Intsafe/nf-intsafe-inttoshort)
+-   [<span data-ttu-id="e0fcd-146">**Inttouchar**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-146">**IntToUChar**</span></span>](/windows/desktop/api/Intsafe/nf-intsafe-inttouchar)
+-   [<span data-ttu-id="e0fcd-147">**Inttouint**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-147">**IntToUInt**</span></span>](/windows/desktop/api/Intsafe/nf-intsafe-inttouint)
+-   [<span data-ttu-id="e0fcd-148">**IntToUInt8**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-148">**IntToUInt8**</span></span>](/windows/desktop/api/intsafe/nf-intsafe-inttouint8)
+-   [<span data-ttu-id="e0fcd-149">**Inttouintptr**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-149">**IntToUIntPtr**</span></span>](/windows/desktop/api/Intsafe/nf-intsafe-inttoulonglong)
+-   [<span data-ttu-id="e0fcd-150">**Inttoulong**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-150">**IntToULong**</span></span>](/windows/desktop/api/Intsafe/nf-intsafe-inttoulong)
+-   <span data-ttu-id="e0fcd-151">[**Inttoulonglong**](/previous-versions/windows/desktop/legacy/bb776740(v=vs.85))</span><span class="sxs-lookup"><span data-stu-id="e0fcd-151">[**IntToULongLong**](/previous-versions/windows/desktop/legacy/bb776740(v=vs.85))</span></span>
+-   [<span data-ttu-id="e0fcd-152">**Inttoushort**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-152">**IntToUShort**</span></span>](/windows/desktop/api/Intsafe/nf-intsafe-inttoushort)
+-   [<span data-ttu-id="e0fcd-153">**Longlongto Char**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-153">**LongLongToChar**</span></span>](/windows/desktop/api/intsafe/nf-intsafe-longlongtochar)
+-   [<span data-ttu-id="e0fcd-154">**Longlongto int**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-154">**LongLongToInt**</span></span>](/windows/desktop/api/intsafe/nf-intsafe-longlongtoint)
+-   [<span data-ttu-id="e0fcd-155">**LongLongToInt8**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-155">**LongLongToInt8**</span></span>](/windows/desktop/api/intsafe/nf-intsafe-longlongtoint8)
+-   [<span data-ttu-id="e0fcd-156">**Longlongumintptr**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-156">**LongLongToIntPtr**</span></span>](/windows/desktop/api/intsafe/nf-intsafe-longlongtointptr)
+-   [<span data-ttu-id="e0fcd-157">**Longlongtolong**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-157">**LongLongToLong**</span></span>](/windows/desktop/api/intsafe/nf-intsafe-longlongtolong)
+-   [<span data-ttu-id="e0fcd-158">**Longlongtolongptr**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-158">**LongLongToLongPtr**</span></span>](/windows/desktop/api/intsafe/nf-intsafe-longlongtolongptr)
+-   [<span data-ttu-id="e0fcd-159">**Longlongto Short**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-159">**LongLongToShort**</span></span>](/windows/desktop/api/intsafe/nf-intsafe-longlongtoshort)
+-   [<span data-ttu-id="e0fcd-160">**Longlongtouchar**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-160">**LongLongToUChar**</span></span>](/windows/desktop/api/intsafe/nf-intsafe-longlongtouchar)
+-   [<span data-ttu-id="e0fcd-161">**Longlongtouint**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-161">**LongLongToUInt**</span></span>](/windows/desktop/api/intsafe/nf-intsafe-longlongtouint)
+-   [<span data-ttu-id="e0fcd-162">**LongLongToUInt8**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-162">**LongLongToUInt8**</span></span>](/windows/desktop/api/intsafe/nf-intsafe-longlongtouint8)
+-   [<span data-ttu-id="e0fcd-163">**Longlongtoulong**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-163">**LongLongToULong**</span></span>](/windows/desktop/api/intsafe/nf-intsafe-longlongtoulong)
+-   [<span data-ttu-id="e0fcd-164">**Longlongtoulonglong**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-164">**LongLongToULongLong**</span></span>](/windows/desktop/api/intsafe/nf-intsafe-longlongtoulonglong)
+-   [<span data-ttu-id="e0fcd-165">**Longlongtoushort**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-165">**LongLongToUShort**</span></span>](/windows/desktop/api/intsafe/nf-intsafe-longlongtoushort)
+-   [<span data-ttu-id="e0fcd-166">**Longptrumchar**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-166">**LongPtrToChar**</span></span>](/windows/desktop/api/intsafe/nf-intsafe-longptrtochar)
+-   <span data-ttu-id="e0fcd-167">[**Longptrtodword**](/previous-versions/windows/desktop/legacy/bb776744(v=vs.85))</span><span class="sxs-lookup"><span data-stu-id="e0fcd-167">[**LongPtrToDWord**](/previous-versions/windows/desktop/legacy/bb776744(v=vs.85))</span></span>
+-   <span data-ttu-id="e0fcd-168">[**Longptrtodwordptr**](/previous-versions/windows/desktop/legacy/bb776745(v=vs.85))</span><span class="sxs-lookup"><span data-stu-id="e0fcd-168">[**LongPtrToDWordPtr**](/previous-versions/windows/desktop/legacy/bb776745(v=vs.85))</span></span>
+-   [<span data-ttu-id="e0fcd-169">**Longptrumint**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-169">**LongPtrToInt**</span></span>](/windows/desktop/api/Intsafe/nf-intsafe-longptrtoint)
+-   [<span data-ttu-id="e0fcd-170">**LongPtrToInt8**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-170">**LongPtrToInt8**</span></span>](/windows/desktop/api/intsafe/nf-intsafe-longptrtoint8)
+-   [<span data-ttu-id="e0fcd-171">**Longptrumintptr**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-171">**LongPtrToIntPtr**</span></span>](/windows/desktop/api/Intsafe/nf-intsafe-longptrtointptr)
+-   [<span data-ttu-id="e0fcd-172">**Longptrtolong**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-172">**LongPtrToLong**</span></span>](/windows/desktop/api/Intsafe/nf-intsafe-longptrtolong)
+-   [<span data-ttu-id="e0fcd-173">**Longptrumshort**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-173">**LongPtrToShort**</span></span>](/windows/desktop/api/intsafe/nf-intsafe-longptrtoshort)
+-   [<span data-ttu-id="e0fcd-174">**Longptrtouchar**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-174">**LongPtrToUChar**</span></span>](/windows/desktop/api/intsafe/nf-intsafe-longptrtouchar)
+-   [<span data-ttu-id="e0fcd-175">**Longptrtouint**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-175">**LongPtrToUInt**</span></span>](/windows/desktop/api/Intsafe/nf-intsafe-longptrtouint)
+-   [<span data-ttu-id="e0fcd-176">**LongPtrToUInt8**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-176">**LongPtrToUInt8**</span></span>](/windows/desktop/api/intsafe/nf-intsafe-longptrtouint8)
+-   [<span data-ttu-id="e0fcd-177">**Longptrtouintptr**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-177">**LongPtrToUIntPtr**</span></span>](/windows/desktop/api/Intsafe/nf-intsafe-longptrtouintptr)
+-   [<span data-ttu-id="e0fcd-178">**Longptrtoulong**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-178">**LongPtrToULong**</span></span>](/windows/desktop/api/Intsafe/nf-intsafe-longptrtoulong)
+-   [<span data-ttu-id="e0fcd-179">**Longptrtoulonglong**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-179">**LongPtrToULongLong**</span></span>](/windows/desktop/api/Intsafe/nf-intsafe-longptrtoulonglong)
+-   [<span data-ttu-id="e0fcd-180">**Longptrtoulongptr**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-180">**LongPtrToULongPtr**</span></span>](/windows/desktop/api/Intsafe/nf-intsafe-longptrtoulongptr)
+-   [<span data-ttu-id="e0fcd-181">**Longptrtoushort**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-181">**LongPtrToUShort**</span></span>](/windows/desktop/api/intsafe/nf-intsafe-longptrtoushort)
+-   <span data-ttu-id="e0fcd-182">[**Longbybyte**](/previous-versions/windows/desktop/legacy/bb776756(v=vs.85))</span><span class="sxs-lookup"><span data-stu-id="e0fcd-182">[**LongToByte**](/previous-versions/windows/desktop/legacy/bb776756(v=vs.85))</span></span>
+-   [<span data-ttu-id="e0fcd-183">**Longto Char**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-183">**LongToChar**</span></span>](/windows/desktop/api/Intsafe/nf-intsafe-longtochar)
+-   <span data-ttu-id="e0fcd-184">[**Longtodword**](/previous-versions/windows/desktop/legacy/bb776758(v=vs.85))</span><span class="sxs-lookup"><span data-stu-id="e0fcd-184">[**LongToDWord**](/previous-versions/windows/desktop/legacy/bb776758(v=vs.85))</span></span>
+-   [<span data-ttu-id="e0fcd-185">**Longto int**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-185">**LongToInt**</span></span>](/windows/desktop/api/Intsafe/nf-intsafe-longtoint)
+-   [<span data-ttu-id="e0fcd-186">**LongToInt8**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-186">**LongToInt8**</span></span>](/windows/desktop/api/intsafe/nf-intsafe-longtoint8)
+-   [<span data-ttu-id="e0fcd-187">**Longinintptr**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-187">**LongToIntPtr**</span></span>](/windows/desktop/api/Intsafe/nf-intsafe-longtointptr)
+-   [<span data-ttu-id="e0fcd-188">**Longto Short**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-188">**LongToShort**</span></span>](/windows/desktop/api/Intsafe/nf-intsafe-longtoshort)
+-   <span data-ttu-id="e0fcd-189">[**Longzum Standort**](/previous-versions/windows/desktop/legacy/bb776764(v=vs.85))</span><span class="sxs-lookup"><span data-stu-id="e0fcd-189">[**LongToSizeT**](/previous-versions/windows/desktop/legacy/bb776764(v=vs.85))</span></span>
+-   [<span data-ttu-id="e0fcd-190">**Longtouchar**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-190">**LongToUChar**</span></span>](/windows/desktop/api/Intsafe/nf-intsafe-longtouchar)
+-   [<span data-ttu-id="e0fcd-191">**Longtouint**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-191">**LongToUInt**</span></span>](/windows/desktop/api/Intsafe/nf-intsafe-longtouint)
+-   [<span data-ttu-id="e0fcd-192">**LongToUInt8**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-192">**LongToUInt8**</span></span>](/windows/desktop/api/intsafe/nf-intsafe-longtouint8)
+-   [<span data-ttu-id="e0fcd-193">**Longtouintptr**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-193">**LongToUIntPtr**</span></span>](/windows/desktop/api/Intsafe/nf-intsafe-longtouintptr)
+-   [<span data-ttu-id="e0fcd-194">**Longtoulong**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-194">**LongToULong**</span></span>](/windows/desktop/api/Intsafe/nf-intsafe-longtoulong)
+-   [<span data-ttu-id="e0fcd-195">**Longtoulonglong**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-195">**LongToULongLong**</span></span>](/windows/desktop/api/Intsafe/nf-intsafe-longtoulonglong)
+-   [<span data-ttu-id="e0fcd-196">**Longtoulongptr**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-196">**LongToULongPtr**</span></span>](/windows/desktop/api/Intsafe/nf-intsafe-longtoulongptr)
+-   [<span data-ttu-id="e0fcd-197">**Longtoushort**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-197">**LongToUShort**</span></span>](/windows/desktop/api/Intsafe/nf-intsafe-longtoushort)
+-   <span data-ttu-id="e0fcd-198">[**Shortbybyte**](/previous-versions/windows/desktop/legacy/bb762359(v=vs.85))</span><span class="sxs-lookup"><span data-stu-id="e0fcd-198">[**ShortToByte**](/previous-versions/windows/desktop/legacy/bb762359(v=vs.85))</span></span>
+-   [<span data-ttu-id="e0fcd-199">**Shortto Char**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-199">**ShortToChar**</span></span>](/windows/desktop/api/Intsafe/nf-intsafe-shorttochar)
+-   [<span data-ttu-id="e0fcd-200">**Shorttodwordptr**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-200">**ShortToDWordPtr**</span></span>](/windows/desktop/api/intsafe/nf-intsafe-shorttodwordptr)
+-   [<span data-ttu-id="e0fcd-201">**ShortToInt8**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-201">**ShortToInt8**</span></span>](/windows/desktop/api/intsafe/nf-intsafe-shorttoint8)
+-   [<span data-ttu-id="e0fcd-202">**Shorttouchar**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-202">**ShortToUChar**</span></span>](/windows/desktop/api/Intsafe/nf-intsafe-shorttouchar)
+-   [<span data-ttu-id="e0fcd-203">**Shorttouint**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-203">**ShortToUInt**</span></span>](/windows/desktop/api/intsafe/nf-intsafe-shorttouint)
+-   [<span data-ttu-id="e0fcd-204">**ShortToUInt8**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-204">**ShortToUInt8**</span></span>](/windows/desktop/api/intsafe/nf-intsafe-shorttouint8)
+-   [<span data-ttu-id="e0fcd-205">**Shorttouintptr**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-205">**ShortToUIntPtr**</span></span>](/windows/desktop/api/intsafe/nf-intsafe-shorttouintptr)
+-   [<span data-ttu-id="e0fcd-206">**Shorttoulong**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-206">**ShortToULong**</span></span>](/windows/desktop/api/intsafe/nf-intsafe-shorttoulong)
+-   [<span data-ttu-id="e0fcd-207">**Shorttoulonglong**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-207">**ShortToULongLong**</span></span>](/windows/desktop/api/intsafe/nf-intsafe-shorttoulonglong)
+-   [<span data-ttu-id="e0fcd-208">**Shorttoulongptr**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-208">**ShortToULongPtr**</span></span>](/windows/desktop/api/intsafe/nf-intsafe-shorttoulongptr)
+-   [<span data-ttu-id="e0fcd-209">**Kurzform**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-209">**ShortToUShort**</span></span>](/windows/desktop/api/Intsafe/nf-intsafe-shorttoushort)
+-   <span data-ttu-id="e0fcd-210">[**Sizettodword \_ 1**](/previous-versions/windows/desktop/legacy/bb762365(v=vs.85))</span><span class="sxs-lookup"><span data-stu-id="e0fcd-210">[**SIZETToDWord\_1**](/previous-versions/windows/desktop/legacy/bb762365(v=vs.85))</span></span>
+-   [<span data-ttu-id="e0fcd-211">**Sizetto int**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-211">**SizeTToInt**</span></span>](/windows/desktop/api/Intsafe/nf-intsafe-ulongptrtoint)
+-   [<span data-ttu-id="e0fcd-212">**Sizetto int \_ 1**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-212">**SIZETToInt\_1**</span></span>](/windows/desktop/api/Intsafe/nf-intsafe-uintptrtoint)
+-   [<span data-ttu-id="e0fcd-213">**SIZETToInt64 \_ 1**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-213">**SIZETToInt64\_1**</span></span>](/windows/desktop/api/Intsafe/nf-intsafe-ulongptrtolonglong)
+-   <span data-ttu-id="e0fcd-214">[**Sizetumintptr**](/previous-versions/windows/desktop/legacy/bb762370(v=vs.85))</span><span class="sxs-lookup"><span data-stu-id="e0fcd-214">[**SizeTToIntPtr**](/previous-versions/windows/desktop/legacy/bb762370(v=vs.85))</span></span>
+-   [<span data-ttu-id="e0fcd-215">**Sizettolong**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-215">**SizeTToLong**</span></span>](/windows/desktop/api/Intsafe/nf-intsafe-uintptrtolong)
+-   <span data-ttu-id="e0fcd-216">[**Sizettolongptr**](/previous-versions/windows/desktop/legacy/bb762374(v=vs.85))</span><span class="sxs-lookup"><span data-stu-id="e0fcd-216">[**SizeTToLongPtr**](/previous-versions/windows/desktop/legacy/bb762374(v=vs.85))</span></span>
+-   <span data-ttu-id="e0fcd-217">[**Sizettouint**](/previous-versions/windows/desktop/legacy/bb762380(v=vs.85))</span><span class="sxs-lookup"><span data-stu-id="e0fcd-217">[**SizeTToUInt**](/previous-versions/windows/desktop/legacy/bb762380(v=vs.85))</span></span>
+-   [<span data-ttu-id="e0fcd-218">**UInt8ToChar**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-218">**UInt8ToChar**</span></span>](/windows/desktop/api/intsafe/nf-intsafe-uint8tochar)
+-   [<span data-ttu-id="e0fcd-219">**UInt8ToInt8**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-219">**UInt8ToInt8**</span></span>](/windows/desktop/api/intsafe/nf-intsafe-uint8toint8)
+-   [<span data-ttu-id="e0fcd-220">**Uintptrumchar**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-220">**UIntPtrToChar**</span></span>](/windows/desktop/api/intsafe/nf-intsafe-uintptrtochar)
+-   <span data-ttu-id="e0fcd-221">[**Uintptrumint**](/previous-versions/windows/desktop/legacy/bb762396(v=vs.85))</span><span class="sxs-lookup"><span data-stu-id="e0fcd-221">[**UIntPtrToInt**](/previous-versions/windows/desktop/legacy/bb762396(v=vs.85))</span></span>
+-   [<span data-ttu-id="e0fcd-222">**UIntPtrToInt16**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-222">**UIntPtrToInt16**</span></span>](/windows/desktop/api/intsafe/nf-intsafe-uintptrtoint16)
+-   [<span data-ttu-id="e0fcd-223">**UIntPtrToInt8**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-223">**UIntPtrToInt8**</span></span>](/windows/desktop/api/intsafe/nf-intsafe-uintptrtoint8)
+-   [<span data-ttu-id="e0fcd-224">**Uintptrumintptr**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-224">**UIntPtrToIntPtr**</span></span>](/windows/desktop/api/Intsafe/nf-intsafe-uintptrtointptr)
+-   <span data-ttu-id="e0fcd-225">[**Uintptrtolong**](/previous-versions/windows/desktop/legacy/bb762399(v=vs.85))</span><span class="sxs-lookup"><span data-stu-id="e0fcd-225">[**UIntPtrToLong**](/previous-versions/windows/desktop/legacy/bb762399(v=vs.85))</span></span>
+-   [<span data-ttu-id="e0fcd-226">**Uintptrtolonglong**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-226">**UIntPtrToLongLong**</span></span>](/windows/desktop/api/intsafe/nf-intsafe-uintptrtolonglong)
+-   [<span data-ttu-id="e0fcd-227">**Uintptrtolongptr**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-227">**UIntPtrToLongPtr**</span></span>](/windows/desktop/api/Intsafe/nf-intsafe-uintptrtolongptr)
+-   [<span data-ttu-id="e0fcd-228">**Uintptrinshort**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-228">**UIntPtrToShort**</span></span>](/windows/desktop/api/intsafe/nf-intsafe-uintptrtoshort)
+-   [<span data-ttu-id="e0fcd-229">**Uintptrtouchar**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-229">**UIntPtrToUChar**</span></span>](/windows/desktop/api/intsafe/nf-intsafe-uintptrtouchar)
+-   [<span data-ttu-id="e0fcd-230">**Uintptrtouint**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-230">**UIntPtrToUInt**</span></span>](/windows/desktop/api/Intsafe/nf-intsafe-uintptrtouint)
+-   [<span data-ttu-id="e0fcd-231">**UIntPtrToUInt16**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-231">**UIntPtrToUInt16**</span></span>](/windows/desktop/api/intsafe/nf-intsafe-uintptrtouint16)
+-   [<span data-ttu-id="e0fcd-232">**UIntPtrToUInt8**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-232">**UIntPtrToUInt8**</span></span>](/windows/desktop/api/intsafe/nf-intsafe-uintptrtouint8)
+-   [<span data-ttu-id="e0fcd-233">**Uintptrtoulong**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-233">**UIntPtrToULong**</span></span>](/windows/desktop/api/Intsafe/nf-intsafe-uintptrtoulong)
+-   [<span data-ttu-id="e0fcd-234">**Uintptrtoushort**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-234">**UIntPtrToUShort**</span></span>](/windows/desktop/api/intsafe/nf-intsafe-uintptrtoushort)
+-   <span data-ttu-id="e0fcd-235">[**Uintbybyte**](/previous-versions/windows/desktop/legacy/bb762404(v=vs.85))</span><span class="sxs-lookup"><span data-stu-id="e0fcd-235">[**UIntToByte**](/previous-versions/windows/desktop/legacy/bb762404(v=vs.85))</span></span>
+-   [<span data-ttu-id="e0fcd-236">**Uintinchar**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-236">**UIntToChar**</span></span>](/windows/desktop/api/Intsafe/nf-intsafe-uinttochar)
+-   [<span data-ttu-id="e0fcd-237">**Uintto int**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-237">**UIntToInt**</span></span>](/windows/desktop/api/Intsafe/nf-intsafe-uinttoint)
+-   [<span data-ttu-id="e0fcd-238">**UIntToInt8**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-238">**UIntToInt8**</span></span>](/windows/desktop/api/intsafe/nf-intsafe-uinttoint8)
+-   [<span data-ttu-id="e0fcd-239">**Uintumintptr**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-239">**UIntToIntPtr**</span></span>](/windows/desktop/api/Intsafe/nf-intsafe-uinttointptr)
+-   [<span data-ttu-id="e0fcd-240">**Uinttolong**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-240">**UIntToLong**</span></span>](/windows/desktop/api/Intsafe/nf-intsafe-uinttolong)
+-   [<span data-ttu-id="e0fcd-241">**Uinttolongptr**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-241">**UIntToLongPtr**</span></span>](/windows/desktop/api/Intsafe/nf-intsafe-uinttolongptr)
+-   [<span data-ttu-id="e0fcd-242">**Uintinshort**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-242">**UIntToShort**</span></span>](/windows/desktop/api/Intsafe/nf-intsafe-uinttoshort)
+-   [<span data-ttu-id="e0fcd-243">**Uinttouchar**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-243">**UIntToUChar**</span></span>](/windows/desktop/api/Intsafe/nf-intsafe-uinttouchar)
+-   [<span data-ttu-id="e0fcd-244">**UIntToUInt8**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-244">**UIntToUInt8**</span></span>](/windows/desktop/api/intsafe/nf-intsafe-uinttouint8)
+-   [<span data-ttu-id="e0fcd-245">**Uinttoushort**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-245">**UIntToUShort**</span></span>](/windows/desktop/api/Intsafe/nf-intsafe-uinttoushort)
+-   [<span data-ttu-id="e0fcd-246">**Ulonglongonchar**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-246">**ULongLongToChar**</span></span>](/windows/desktop/api/intsafe/nf-intsafe-ulonglongtochar)
+-   <span data-ttu-id="e0fcd-247">[**Ulonglongtodword**](/previous-versions/windows/desktop/legacy/bb762416(v=vs.85))</span><span class="sxs-lookup"><span data-stu-id="e0fcd-247">[**ULongLongToDWord**](/previous-versions/windows/desktop/legacy/bb762416(v=vs.85))</span></span>
+-   <span data-ttu-id="e0fcd-248">[**Ulonglongtodwordptr**](/previous-versions/windows/desktop/legacy/bb762417(v=vs.85))</span><span class="sxs-lookup"><span data-stu-id="e0fcd-248">[**ULongLongToDWordPtr**](/previous-versions/windows/desktop/legacy/bb762417(v=vs.85))</span></span>
+-   [<span data-ttu-id="e0fcd-249">**Ulonglongtint**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-249">**ULongLongToInt**</span></span>](/windows/desktop/api/Intsafe/nf-intsafe-ulonglongtoint)
+-   <span data-ttu-id="e0fcd-250">[**ULongLongToInt64**](/previous-versions/windows/desktop/legacy/bb762419(v=vs.85))</span><span class="sxs-lookup"><span data-stu-id="e0fcd-250">[**ULongLongToInt64**](/previous-versions/windows/desktop/legacy/bb762419(v=vs.85))</span></span>
+-   [<span data-ttu-id="e0fcd-251">**ULongLongToInt8**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-251">**ULongLongToInt8**</span></span>](/windows/desktop/api/intsafe/nf-intsafe-ulonglongtoint8)
+-   [<span data-ttu-id="e0fcd-252">**Ulonglongumintptr**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-252">**ULongLongToIntPtr**</span></span>](/windows/desktop/api/Intsafe/nf-intsafe-ulonglongtolonglong)
+-   [<span data-ttu-id="e0fcd-253">**Ulonglongtolong**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-253">**ULongLongToLong**</span></span>](/windows/desktop/api/Intsafe/nf-intsafe-ulonglongtolong)
+-   <span data-ttu-id="e0fcd-254">[**Ulonglongtolonglong**](/previous-versions/windows/desktop/legacy/hh707135(v=vs.85))</span><span class="sxs-lookup"><span data-stu-id="e0fcd-254">[**ULongLongToLongLong**](/previous-versions/windows/desktop/legacy/hh707135(v=vs.85))</span></span>
+-   [<span data-ttu-id="e0fcd-255">**Ulonglongtolongptr**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-255">**ULongLongToLongPtr**</span></span>](/windows/desktop/api/Intsafe/nf-intsafe-ulonglongtolongptr)
+-   [<span data-ttu-id="e0fcd-256">**Ulonglongonshort**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-256">**ULongLongToShort**</span></span>](/windows/desktop/api/intsafe/nf-intsafe-ulonglongtoshort)
+-   <span data-ttu-id="e0fcd-257">[**Ulonglongonsizet**](/previous-versions/windows/desktop/legacy/bb762424(v=vs.85))</span><span class="sxs-lookup"><span data-stu-id="e0fcd-257">[**ULongLongToSizeT**](/previous-versions/windows/desktop/legacy/bb762424(v=vs.85))</span></span>
+-   [<span data-ttu-id="e0fcd-258">**Ulonglongtouchar**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-258">**ULongLongToUChar**</span></span>](/windows/desktop/api/intsafe/nf-intsafe-ulonglongtouchar)
+-   [<span data-ttu-id="e0fcd-259">**Ulonglongtouint**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-259">**ULongLongToUInt**</span></span>](/windows/desktop/api/Intsafe/nf-intsafe-ulonglongtouint)
+-   [<span data-ttu-id="e0fcd-260">**ULongLongToUInt8**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-260">**ULongLongToUInt8**</span></span>](/windows/desktop/api/intsafe/nf-intsafe-ulonglongtouint8)
+-   [<span data-ttu-id="e0fcd-261">**Ulonglongtouintptr**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-261">**ULongLongToUIntPtr**</span></span>](/windows/desktop/api/Intsafe/nf-intsafe-ulonglongtouintptr)
+-   [<span data-ttu-id="e0fcd-262">**Ulonglongtoulong**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-262">**ULongLongToULong**</span></span>](/windows/desktop/api/Intsafe/nf-intsafe-ulonglongtoulong)
+-   [<span data-ttu-id="e0fcd-263">**Ulonglongtoulongptr**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-263">**ULongLongToULongPtr**</span></span>](/windows/desktop/api/Intsafe/nf-intsafe-ulonglongtoulongptr)
+-   [<span data-ttu-id="e0fcd-264">**Ulonglongtoushort**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-264">**ULongLongToUShort**</span></span>](/windows/desktop/api/intsafe/nf-intsafe-ulonglongtoushort)
+-   [<span data-ttu-id="e0fcd-265">**Ulongptrumchar**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-265">**ULongPtrToChar**</span></span>](/windows/desktop/api/intsafe/nf-intsafe-ulongptrtochar)
+-   <span data-ttu-id="e0fcd-266">[**Ulongptrumint**](/previous-versions/windows/desktop/legacy/bb762432(v=vs.85))</span><span class="sxs-lookup"><span data-stu-id="e0fcd-266">[**ULongPtrToInt**](/previous-versions/windows/desktop/legacy/bb762432(v=vs.85))</span></span>
+-   [<span data-ttu-id="e0fcd-267">**ULongPtrToInt8**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-267">**ULongPtrToInt8**</span></span>](/windows/desktop/api/intsafe/nf-intsafe-ulongptrtoint8)
+-   [<span data-ttu-id="e0fcd-268">**Ulongptrumintptr**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-268">**ULongPtrToIntPtr**</span></span>](/windows/desktop/api/Intsafe/nf-intsafe-ulongptrtointptr)
+-   [<span data-ttu-id="e0fcd-269">**Ulongptrtolong**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-269">**ULongPtrToLong**</span></span>](/windows/desktop/api/Intsafe/nf-intsafe-ulongptrtolong)
+-   <span data-ttu-id="e0fcd-270">[**Ulongptrtolonglong**](/previous-versions/windows/desktop/legacy/hh707142(v=vs.85))</span><span class="sxs-lookup"><span data-stu-id="e0fcd-270">[**ULongPtrToLongLong**](/previous-versions/windows/desktop/legacy/hh707142(v=vs.85))</span></span>
+-   [<span data-ttu-id="e0fcd-271">**Ulongptrtolongptr**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-271">**ULongPtrToLongPtr**</span></span>](/windows/desktop/api/Intsafe/nf-intsafe-ulongptrtolongptr)
+-   [<span data-ttu-id="e0fcd-272">**Ulongptrumshort**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-272">**ULongPtrToShort**</span></span>](/windows/desktop/api/intsafe/nf-intsafe-ulongptrtoshort)
+-   [<span data-ttu-id="e0fcd-273">**Ulongptrtouchar**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-273">**ULongPtrToUChar**</span></span>](/windows/desktop/api/intsafe/nf-intsafe-ulongptrtouchar)
+-   [<span data-ttu-id="e0fcd-274">**Ulongptrtouint**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-274">**ULongPtrToUInt**</span></span>](/windows/desktop/api/Intsafe/nf-intsafe-ulongptrtouint)
+-   [<span data-ttu-id="e0fcd-275">**ULongPtrToUInt8**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-275">**ULongPtrToUInt8**</span></span>](/windows/desktop/api/intsafe/nf-intsafe-ulongptrtouint8)
+-   [<span data-ttu-id="e0fcd-276">**Ulongptrtouintptr**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-276">**ULongPtrToUIntPtr**</span></span>](/windows/desktop/api/Intsafe/nf-intsafe-ulongptrtouintptr)
+-   [<span data-ttu-id="e0fcd-277">**Ulongptrtoulong**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-277">**ULongPtrToULong**</span></span>](/windows/desktop/api/Intsafe/nf-intsafe-ulongptrtoulong)
+-   [<span data-ttu-id="e0fcd-278">**Ulongptrtoushort**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-278">**ULongPtrToUShort**</span></span>](/windows/desktop/api/intsafe/nf-intsafe-ulongptrtoushort)
+-   [<span data-ttu-id="e0fcd-279">**Ulongtchar**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-279">**ULongToChar**</span></span>](/windows/desktop/api/Intsafe/nf-intsafe-ulongtochar)
+-   [<span data-ttu-id="e0fcd-280">**Ulongtint**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-280">**ULongToInt**</span></span>](/windows/desktop/api/Intsafe/nf-intsafe-ulongtoint)
+-   [<span data-ttu-id="e0fcd-281">**ULongToInt8**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-281">**ULongToInt8**</span></span>](/windows/desktop/api/intsafe/nf-intsafe-ulongtoint8)
+-   [<span data-ttu-id="e0fcd-282">**Ulongumintptr**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-282">**ULongToIntPtr**</span></span>](/windows/desktop/api/Intsafe/nf-intsafe-ulongtointptr)
+-   [<span data-ttu-id="e0fcd-283">**Ulongtolong**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-283">**ULongToLong**</span></span>](/windows/desktop/api/Intsafe/nf-intsafe-ulongtolong)
+-   [<span data-ttu-id="e0fcd-284">**Ulongtolongptr**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-284">**ULongToLongPtr**</span></span>](/windows/desktop/api/Intsafe/nf-intsafe-ulongtolongptr)
+-   [<span data-ttu-id="e0fcd-285">**Ulongtshort**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-285">**ULongToShort**</span></span>](/windows/desktop/api/Intsafe/nf-intsafe-ulongtoshort)
+-   [<span data-ttu-id="e0fcd-286">**Ulongtouchar**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-286">**ULongToUChar**</span></span>](/windows/desktop/api/Intsafe/nf-intsafe-ulongtouchar)
+-   [<span data-ttu-id="e0fcd-287">**Ulongtouint**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-287">**ULongToUInt**</span></span>](/windows/desktop/api/Intsafe/nf-intsafe-ulongtouint)
+-   [<span data-ttu-id="e0fcd-288">**ULongToUInt8**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-288">**ULongToUInt8**</span></span>](/windows/desktop/api/intsafe/nf-intsafe-ulongtouint8)
+-   [<span data-ttu-id="e0fcd-289">**Ulongtouintptr**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-289">**ULongToUIntPtr**</span></span>](/windows/desktop/api/Intsafe/nf-intsafe-ulongtouintptr)
+-   [<span data-ttu-id="e0fcd-290">**Ulongtoushort**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-290">**ULongToUShort**</span></span>](/windows/desktop/api/Intsafe/nf-intsafe-ulongtoushort)
+-   <span data-ttu-id="e0fcd-291">[**Ushortbybyte**](/previous-versions/windows/desktop/legacy/bb762457(v=vs.85))</span><span class="sxs-lookup"><span data-stu-id="e0fcd-291">[**UShortToByte**](/previous-versions/windows/desktop/legacy/bb762457(v=vs.85))</span></span>
+-   [<span data-ttu-id="e0fcd-292">**Ushortgechar**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-292">**UShortToChar**</span></span>](/windows/desktop/api/Intsafe/nf-intsafe-ushorttochar)
+-   [<span data-ttu-id="e0fcd-293">**UShortToInt8**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-293">**UShortToInt8**</span></span>](/windows/desktop/api/intsafe/nf-intsafe-ushorttoint8)
+-   [<span data-ttu-id="e0fcd-294">**Ushortzu Short**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-294">**UShortToShort**</span></span>](/windows/desktop/api/Intsafe/nf-intsafe-ushorttoshort)
+-   [<span data-ttu-id="e0fcd-295">**Ushorttouchar**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-295">**UShortToUChar**</span></span>](/windows/desktop/api/Intsafe/nf-intsafe-ushorttouchar)
+-   [<span data-ttu-id="e0fcd-296">**UShortToUInt8**</span><span class="sxs-lookup"><span data-stu-id="e0fcd-296">**UShortToUInt8**</span></span>](/windows/desktop/api/intsafe/nf-intsafe-ushorttouint8)
+
+ 
+
+ 

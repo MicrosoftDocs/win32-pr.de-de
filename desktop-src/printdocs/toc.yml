@@ -1,0 +1,2542 @@
+- name: 'Dokumente und Drucken '
+  href: documents-and-printing.md
+  items:
+    - name: Neues beim Drucken
+      href: what-s-new-for-printing-in-windows-vnext.md
+      items:
+        - name: Neues beim Drucken in Windows 7
+          href: what-s-new-in-windows-7.md
+        - name: Neues beim Drucken in Windows Vista
+          href: what-s-new-in-windows-vista.md
+    - name: App-Unterstützung für openxps-Druck
+      href: app-support-for-openxps-printing.md
+    - name: XPS-Dokumente
+      href: documents.md
+      items:
+        - name: XPS-Dokument-API
+          href: documents-xps.md
+          items:
+            - name: Informationen zur XPS-Dokument-API
+              href: about-xps-document-api.md
+              items:
+                - name: XPS-OM-trunk Schnittstellen
+                  href: xps-om-trunk-interfaces.md
+                  items:
+                    - name: XPS-OM-Paket Schnittstellen
+                      href: xps-object-model-package-interfaces.md
+                      items:
+                        - name: Verwenden der ixpsompackagewriter-Schnittstelle
+                          href: using-the-ixpsompackagewriter-interface.md
+                    - name: XPS-OM-Dokument Schnittstellen
+                      href: xps-object-model-document-interfaces.md
+                      items:
+                        - name: Arbeiten mit ixpsomdocumentsequence-Schnittstellen
+                          href: working-with-xpsomdocumentsequence-interfaces.md
+                        - name: Arbeiten mit ixpsomdocument-Schnittstellen
+                          href: working-with-xpsomdocument-interfaces.md
+                        - name: Arbeiten mit ixpsompagereferenzierungsschnittstellen
+                          href: working-with-xpsompagereference-interfaces.md
+                    - name: XPS-OM-Teil Schnittstellen
+                      href: working-with-xps-object-model-part-interfaces.md
+                - name: XPS-Schnittstellen für Schnittstellen
+                  href: xps-object-model-page-interfaces.md
+                  items:
+                    - name: Arbeiten mit XPS OM-Canvas und visuellen Schnittstellen
+                      href: working-with-xpsomcanvas-interfaces.md
+                    - name: Arbeiten mit XPS-OM-Pfad Schnittstellen
+                      href: working-with-xps-object-model-path-interfaces.md
+                      items:
+                        - name: XPS-OM-Pinsel
+                          href: xps-object-model-brushes.md
+                        - name: XPS-OM-Farbverläufe
+                          href: xps-object-model-gradients.md
+                        - name: XPS OM-Geometry-Objekte
+                          href: xps-object-model-geometry-objects.md
+                    - name: 'Arbeiten mit XPS OM-Text, Grafiken und Bild Schnittstellen'
+                      href: working-with-xps-object-model-text-and-image-interfaces.md
+                      items:
+                        - name: XPS-OM-Farbverwaltung
+                          href: xps-object-model-color-interfaces.md
+                    - name: Arbeiten mit XPS-OM-Seiten Schnittstellen
+                      href: working-with-xpsompage-interfaces.md
+                - name: Digitale XPS-OM-Signaturen
+                  href: using-the-xps-digital-signatures.md
+                - name: Schnittstellen für XPS-OM-Druck Tickets
+                  href: xps-object-model-print-ticket-interfaces.md
+            - name: Verwenden der XPS-Dokument-API
+              href: using-xps-document-api.md
+              items:
+                - name: Arbeiten mit XPS OM-Sammlungs Schnittstellen
+                  href: working-with-xps-object-model-collection-interfaces.md
+                - name: Allgemeine XPS-Dokument Programmierungsaufgaben
+                  href: common-xps-document-tasks.md
+                  items:
+                    - name: Initialisieren eines XPS-OMS
+                      href: xps-object-model-initialization.md
+                    - name: Erstellen eines leeren XPS-OMS
+                      href: create-a-blank-xps-om.md
+                    - name: Lesen eines XPS-Dokuments in ein XPS-OM
+                      href: read-an-xps-document-into-an-xps-om.md
+                    - name: Navigieren im XPS-OM
+                      href: navigate-the-xps-om.md
+                    - name: Schreiben von Text in ein XPS-OM
+                      href: write-text-to-an-xps-om.md
+                    - name: Zeichnen von Grafiken in einem XPS-OM
+                      href: draw-graphics-in-an-xps-om.md
+                    - name: Platzieren von Bildern in einem XPS-OM
+                      href: place-images-in-an-xps-om.md
+                    - name: Schreiben eines XPS-om in ein XPS-Dokument
+                      href: write-an-xps-om-to-an-xps-document.md
+                    - name: Drucken eines XPS-OM
+                      href: print-an-xps-om.md
+                - name: Erweiterte XPS-Dokument Programmierungsaufgaben
+                  href: advanced-xps-document-tasks.md
+                  items:
+                    - name: XPS-Dokumente zusammenführen
+                      href: merging-xps-documents.md
+                    - name: Verarbeiten von XPS-Dokumenten in einem XPSDrv-Filter
+                      href: processing-xps-documents-in-an-xpsdrv-filter.md
+            - name: XPS-Dokument-API-Referenz
+              href: xps-programming-reference.md
+              items:
+                - name: XPS-Dokument Schnittstellen
+                  href: document-object-model-interfaces.md
+                  items:
+                    - name: Ixpsdocumentpackagetarget
+                      href: /windows/desktop/api/Xpsobjectmodel_1/nn-xpsobjectmodel_1-ixpsdocumentpackagetarget
+                      items:
+                        - name: Getxpsompackagewriter-Methode
+                          href: /windows/desktop/api/Xpsobjectmodel_1/nf-xpsobjectmodel_1-ixpsdocumentpackagetarget-getxpsompackagewriter
+                        - name: Getxpsomfactory-Methode
+                          href: /windows/desktop/api/Xpsobjectmodel_1/nf-xpsobjectmodel_1-ixpsdocumentpackagetarget-getxpsomfactory
+                        - name: Getxpstype-Methode
+                          href: /windows/desktop/api/Xpsobjectmodel_1/nf-xpsobjectmodel_1-ixpsdocumentpackagetarget-getxpstype
+                    - name: IXpsDocumentPackageTarget3D
+                      href: /windows/desktop/api/XpsObjectModel_2/nn-xpsobjectmodel_2-ixpsdocumentpackagetarget3d
+                      items:
+                        - name: Getxpsomfactory-Methode
+                          href: /windows/desktop/api/XpsObjectModel_2/nf-xpsobjectmodel_2-ixpsdocumentpackagetarget3d-getxpsomfactory
+                        - name: GetXpsOMPackageWriter3D-Methode
+                          href: /windows/desktop/api/XpsObjectModel_2/nf-xpsobjectmodel_2-ixpsdocumentpackagetarget3d-getxpsompackagewriter3d
+                    - name: Ixpsombrush
+                      href: /windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsombrush
+                      items:
+                        - name: GetOpacity
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsombrush-getopacity
+                        - name: Deckkraft
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsombrush-setopacity
+                    - name: Ixpsomcanvas
+                      href: /windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomcanvas
+                      items:
+                        - name: Klon
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomcanvas-clone
+                        - name: Getaccessibilitylongdescription
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomcanvas-getaccessibilitylongdescription
+                        - name: Getaccessibilityshortdescription
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomcanvas-getaccessibilityshortdescription
+                        - name: Getdictionary
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomcanvas-getdictionary
+                        - name: Getdiktattionarylocal
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomcanvas-getdictionarylocal
+                        - name: Getdiktattionaryresource
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomcanvas-getdictionaryresource
+                        - name: Getusealiasededgemode
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomcanvas-getusealiasededgemode
+                        - name: Getvisuals
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomcanvas-getvisuals
+                        - name: Setaccessibilitylongdescription
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomcanvas-setaccessibilitylongdescription
+                        - name: Setaccessibilityshortdescription
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomcanvas-setaccessibilityshortdescription
+                        - name: Setdidaktitionarylocal
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomcanvas-setdictionarylocal
+                        - name: Setdiktattionaryresource
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomcanvas-setdictionaryresource
+                        - name: Setusealiasededgemode
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomcanvas-setusealiasededgemode
+                    - name: Ixpsomcolorprofileresource
+                      href: /windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomcolorprofileresource
+                      items:
+                        - name: GetStream
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomcolorprofileresource-getstream
+                        - name: SetContent
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomcolorprofileresource-setcontent
+                    - name: Ixpsomcolorprofileresourcecollection
+                      href: /windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomcolorprofileresourcecollection
+                      items:
+                        - name: Anfügen
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomcolorprofileresourcecollection-append
+                        - name: GetAt
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomcolorprofileresourcecollection-getat
+                        - name: Getbypartname
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomcolorprofileresourcecollection-getbypartname
+                        - name: GetCount
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomcolorprofileresourcecollection-getcount
+                        - name: InsertAt
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomcolorprofileresourcecollection-insertat
+                        - name: RemoveAt
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomcolorprofileresourcecollection-removeat
+                        - name: SetAt
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomcolorprofileresourcecollection-setat
+                    - name: Ixpsomcoreproperties
+                      href: /windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomcoreproperties
+                      items:
+                        - name: Klon
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomcoreproperties-clone
+                        - name: GetCategory
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomcoreproperties-getcategory
+                        - name: Getcontentstatus
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomcoreproperties-getcontentstatus
+                        - name: GetContentType
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomcoreproperties-getcontenttype
+                        - name: Getcreated
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomcoreproperties-getcreated
+                        - name: Getcreator
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomcoreproperties-getcreator
+                        - name: GetDescription
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomcoreproperties-getdescription
+                        - name: GetIdentifier
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomcoreproperties-getidentifier
+                        - name: GetKeywords
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomcoreproperties-getkeywords
+                        - name: GetLanguage
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomcoreproperties-getlanguage
+                        - name: Getlastmodifiedby
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomcoreproperties-getlastmodifiedby
+                        - name: Getlastprint
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomcoreproperties-getlastprinted
+                        - name: GetModified
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomcoreproperties-getmodified
+                        - name: GetOwner
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomcoreproperties-getowner
+                        - name: Getrevision
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomcoreproperties-getrevision
+                        - name: GetSubject
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomcoreproperties-getsubject
+                        - name: GetTitle
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomcoreproperties-gettitle
+                        - name: GetVersion
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomcoreproperties-getversion
+                        - name: Setcategory
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomcoreproperties-setcategory
+                        - name: Setcontentstatus
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomcoreproperties-setcontentstatus
+                        - name: SetContentType
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomcoreproperties-setcontenttype
+                        - name: Setcreated
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomcoreproperties-setcreated
+                        - name: Setcreator
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomcoreproperties-setcreator
+                        - name: SetDescription
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomcoreproperties-setdescription
+                        - name: Objekt-tifier
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomcoreproperties-setidentifier
+                        - name: Setkeywords
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomcoreproperties-setkeywords
+                        - name: SetLanguage
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomcoreproperties-setlanguage
+                        - name: Setlastmodifiedby
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomcoreproperties-setlastmodifiedby
+                        - name: Setlastprint
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomcoreproperties-setlastprinted
+                        - name: SetModified
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomcoreproperties-setmodified
+                        - name: Abbild Vision
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomcoreproperties-setrevision
+                        - name: SetSubject
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomcoreproperties-setsubject
+                        - name: SetTitle
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomcoreproperties-settitle
+                        - name: SetVersion
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomcoreproperties-setversion
+                    - name: Ixpsomdashcollection
+                      href: /windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomdashcollection
+                      items:
+                        - name: Anfügen
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomdashcollection-append
+                        - name: GetAt
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomdashcollection-getat
+                        - name: GetCount
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomdashcollection-getcount
+                        - name: InsertAt
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomdashcollection-insertat
+                        - name: RemoveAt
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomdashcollection-removeat
+                        - name: SetAt
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomdashcollection-setat
+                    - name: Ixpsomdictionary
+                      href: /windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomdictionary
+                      items:
+                        - name: Anfügen
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomdictionary-append
+                        - name: Klon
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomdictionary-clone
+                        - name: GetAt
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomdictionary-getat
+                        - name: Getbykey
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomdictionary-getbykey
+                        - name: GetCount
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomdictionary-getcount
+                        - name: GetIndex
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomdictionary-getindex
+                        - name: GetOwner
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomdictionary-getowner
+                        - name: InsertAt
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomdictionary-insertat
+                        - name: RemoveAt
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomdictionary-removeat
+                        - name: SetAt
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomdictionary-setat
+                    - name: Ixpsomdocument
+                      href: /windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomdocument
+                      items:
+                        - name: Klon
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomdocument-clone
+                        - name: Getdocumentstructureresource
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomdocument-getdocumentstructureresource
+                        - name: GetOwner
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomdocument-getowner
+                        - name: Getpagereferences
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomdocument-getpagereferences
+                        - name: Getprintticketresource
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomdocument-getprintticketresource
+                        - name: Getsignatureblockresources
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomdocument-getsignatureblockresources
+                        - name: Setdocumentstructureresource
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomdocument-setdocumentstructureresource
+                        - name: Setprintticketresource
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomdocument-setprintticketresource
+                    - name: Ixpsomdocumentcollection
+                      href: /windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomdocumentcollection
+                      items:
+                        - name: Anfügen
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomdocumentcollection-append
+                        - name: GetAt
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomdocumentcollection-getat
+                        - name: GetCount
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomdocumentcollection-getcount
+                        - name: InsertAt
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomdocumentcollection-insertat
+                        - name: RemoveAt
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomdocumentcollection-removeat
+                        - name: SetAt
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomdocumentcollection-setat
+                    - name: Ixpsomdocumentsequence
+                      href: /windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomdocumentsequence
+                      items:
+                        - name: GetDocuments
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomdocumentsequence-getdocuments
+                        - name: GetOwner
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomdocumentsequence-getowner
+                        - name: Getprintticketresource
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomdocumentsequence-getprintticketresource
+                        - name: Setprintticketresource
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomdocumentsequence-setprintticketresource
+                    - name: Ixpsomdocumentstructureresource
+                      href: /windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomdocumentstructureresource
+                      items:
+                        - name: GetOwner
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomdocumentstructureresource-getowner
+                        - name: GetStream
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomdocumentstructureresource-getstream
+                        - name: SetContent
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomdocumentstructureresource-setcontent
+                    - name: Ixpsomfontresource
+                      href: /windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomfontresource
+                      items:
+                        - name: Getembeddingoption
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomfontresource-getembeddingoption
+                        - name: GetStream
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomfontresource-getstream
+                        - name: SetContent
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomfontresource-setcontent
+                    - name: Ixpsomfontresourcecollection
+                      href: /windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomfontresourcecollection
+                      items:
+                        - name: Anfügen
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomfontresourcecollection-append
+                        - name: GetAt
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomfontresourcecollection-getat
+                        - name: Getbypartname
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomfontresourcecollection-getbypartname
+                        - name: GetCount
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomfontresourcecollection-getcount
+                        - name: InsertAt
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomfontresourcecollection-insertat
+                        - name: RemoveAt
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomfontresourcecollection-removeat
+                        - name: SetAt
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomfontresourcecollection-setat
+                    - name: Ixpsomgeometry
+                      href: /windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomgeometry
+                      items:
+                        - name: Klon
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomgeometry-clone
+                        - name: Getfigures
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomgeometry-getfigures
+                        - name: GetFillRule
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomgeometry-getfillrule
+                        - name: GetTransform
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomgeometry-gettransform
+                        - name: Gettransformlocal
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomgeometry-gettransformlocal
+                        - name: Gettransformlookup
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomgeometry-gettransformlookup
+                        - name: Setfillrule
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomgeometry-setfillrule
+                        - name: Settransformlocal
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomgeometry-settransformlocal
+                        - name: Settransformlookup
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomgeometry-settransformlookup
+                    - name: Ixpsomgeometryfigure
+                      href: /windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomgeometryfigure
+                      items:
+                        - name: Klon
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomgeometryfigure-clone
+                        - name: Getisclosed
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomgeometryfigure-getisclosed
+                        - name: Getisfüllt
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomgeometryfigure-getisfilled
+                        - name: GetOwner
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomgeometryfigure-getowner
+                        - name: Getsegmentcount
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomgeometryfigure-getsegmentcount
+                        - name: Getsegmentdata
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomgeometryfigure-getsegmentdata
+                        - name: Getsegmentdatacount
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomgeometryfigure-getsegmentdatacount
+                        - name: Getsegmentstrokepattern
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomgeometryfigure-getsegmentstrokepattern
+                        - name: Getsegmentstrokes
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomgeometryfigure-getsegmentstrokes
+                        - name: Getsegmenttypes
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomgeometryfigure-getsegmenttypes
+                        - name: GetStartPoint
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomgeometryfigure-getstartpoint
+                        - name: In den meisten Sekunden
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomgeometryfigure-setisclosed
+                        - name: Abfüllt
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomgeometryfigure-setisfilled
+                        - name: Setsegments
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomgeometryfigure-setsegments
+                        - name: Setstartpoint
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomgeometryfigure-setstartpoint
+                    - name: Ixpsomgeometryfigurückruf
+                      href: /windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomgeometryfigurecollection
+                      items:
+                        - name: Anfügen
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomgeometryfigurecollection-append
+                        - name: GetAt
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomgeometryfigurecollection-getat
+                        - name: GetCount
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomgeometryfigurecollection-getcount
+                        - name: InsertAt
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomgeometryfigurecollection-insertat
+                        - name: RemoveAt
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomgeometryfigurecollection-removeat
+                        - name: SetAt
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomgeometryfigurecollection-setat
+                    - name: Ixpsomglyphs
+                      href: /windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomglyphs
+                      items:
+                        - name: Klon
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomglyphs-clone
+                        - name: Getbidilevel
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomglyphs-getbidilevel
+                        - name: Getdebug Name
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomglyphs-getdevicefontname
+                        - name: Getfillbrush
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomglyphs-getfillbrush
+                        - name: Getfillbrushlocal
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomglyphs-getfillbrushlocal
+                        - name: Getfillbrushlookup
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomglyphs-getfillbrushlookup
+                        - name: Getfontfakeingedex
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomglyphs-getfontfaceindex
+                        - name: Getfontrenderingemsize
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomglyphs-getfontrenderingemsize
+                        - name: Getfontresource
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomglyphs-getfontresource
+                        - name: Getglyphindexcount
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomglyphs-getglyphindexcount
+                        - name: Getglyphindices
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomglyphs-getglyphindices
+                        - name: Getglyphmappingcount
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomglyphs-getglyphmappingcount
+                        - name: Getglyphmappings
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomglyphs-getglyphmappings
+                        - name: Getglyphseditor
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomglyphs-getglyphseditor
+                        - name: Getissientways
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomglyphs-getissideways
+                        - name: Getorigin
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomglyphs-getorigin
+                        - name: Getprohibitedcaretstopcount
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomglyphs-getprohibitedcaretstopcount
+                        - name: Getprohibitedcaretstopps
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomglyphs-getprohibitedcaretstops
+                        - name: Getstylesimulationen
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomglyphs-getstylesimulations
+                        - name: Getunicodestring
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomglyphs-getunicodestring
+                        - name: Setfillbrushlocal
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomglyphs-setfillbrushlocal
+                        - name: Setfillbrushlookup
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomglyphs-setfillbrushlookup
+                        - name: Setfontfakeingedex
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomglyphs-setfontfaceindex
+                        - name: Setfontrenderingemsize
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomglyphs-setfontrenderingemsize
+                        - name: Setfontresource
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomglyphs-setfontresource
+                        - name: Abktorigin
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomglyphs-setorigin
+                        - name: Setstylesimulationen
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomglyphs-setstylesimulations
+                    - name: Ixpsomglyphseditor
+                      href: /windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomglyphseditor
+                      items:
+                        - name: Applyedits
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomglyphseditor-applyedits
+                        - name: Getbidilevel
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomglyphseditor-getbidilevel
+                        - name: Getdebug Name
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomglyphseditor-getdevicefontname
+                        - name: Getglyphindexcount
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomglyphseditor-getglyphindexcount
+                        - name: Getglyphindices
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomglyphseditor-getglyphindices
+                        - name: Getglyphmappingcount
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomglyphseditor-getglyphmappingcount
+                        - name: Getglyphmappings
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomglyphseditor-getglyphmappings
+                        - name: Getissientways
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomglyphseditor-getissideways
+                        - name: Getprohibitedcaretstopcount
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomglyphseditor-getprohibitedcaretstopcount
+                        - name: Getprohibitedcaretstopps
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomglyphseditor-getprohibitedcaretstops
+                        - name: Getunicodestring
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomglyphseditor-getunicodestring
+                        - name: Setbidilevel
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomglyphseditor-setbidilevel
+                        - name: Setde vicefontname
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomglyphseditor-setdevicefontname
+                        - name: Setglyphindices
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomglyphseditor-setglyphindices
+                        - name: Setglyphmappings
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomglyphseditor-setglyphmappings
+                        - name: '"-Ssitissientways"'
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomglyphseditor-setissideways
+                        - name: Setprohibitedcaretstopps
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomglyphseditor-setprohibitedcaretstops
+                        - name: '"" "".'
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomglyphseditor-setunicodestring
+                    - name: Ixpsomgradientbrush
+                      href: /windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomgradientbrush
+                      items:
+                        - name: Getcolorinterpolationmode
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomgradientbrush-getcolorinterpolationmode
+                        - name: Getgradientstopps
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomgradientbrush-getgradientstops
+                        - name: Getspreadmethod
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomgradientbrush-getspreadmethod
+                        - name: GetTransform
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomgradientbrush-gettransform
+                        - name: Gettransformlocal
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomgradientbrush-gettransformlocal
+                        - name: Gettransformlookup
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomgradientbrush-gettransformlookup
+                        - name: Setcolorinterpolationmode
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomgradientbrush-setcolorinterpolationmode
+                        - name: Setspreadmethod
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomgradientbrush-setspreadmethod
+                        - name: Settransformlocal
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomgradientbrush-settransformlocal
+                        - name: Settransformlookup
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomgradientbrush-settransformlookup
+                    - name: Ixpsomgradientstoppt
+                      href: /windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomgradientstop
+                      items:
+                        - name: Klon
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomgradientstop-clone
+                        - name: GetColor
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomgradientstop-getcolor
+                        - name: GetOffset
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomgradientstop-getoffset
+                        - name: GetOwner
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomgradientstop-getowner
+                        - name: SetColor
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomgradientstop-setcolor
+                        - name: Sechanset
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomgradientstop-setoffset
+                    - name: Ixpsomgradientstopcollection
+                      href: /windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomgradientstopcollection
+                      items:
+                        - name: Anfügen
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomgradientstopcollection-append
+                        - name: GetAt
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomgradientstopcollection-getat
+                        - name: GetCount
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomgradientstopcollection-getcount
+                        - name: InsertAt
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomgradientstopcollection-insertat
+                        - name: RemoveAt
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomgradientstopcollection-removeat
+                        - name: SetAt
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomgradientstopcollection-setat
+                    - name: Ixpsomimagebrush
+                      href: /windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomimagebrush
+                      items:
+                        - name: Klon
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomimagebrush-clone
+                        - name: Getcolorprofileresource
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomimagebrush-getcolorprofileresource
+                        - name: Getimageresource
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomimagebrush-getimageresource
+                        - name: Setcolorprofileresource
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomimagebrush-setcolorprofileresource
+                        - name: Setimageresource
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomimagebrush-setimageresource
+                    - name: Ixpsomimageresource
+                      href: /windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomimageresource
+                      items:
+                        - name: GetImageType
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomimageresource-getimagetype
+                        - name: GetStream
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomimageresource-getstream
+                        - name: SetContent
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomimageresource-setcontent
+                    - name: Ixpsomimageresourcecollection
+                      href: /windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomimageresourcecollection
+                      items:
+                        - name: Anfügen
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomimageresourcecollection-append
+                        - name: GetAt
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomimageresourcecollection-getat
+                        - name: Getbypartname
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomimageresourcecollection-getbypartname
+                        - name: GetCount
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomimageresourcecollection-getcount
+                        - name: InsertAt
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomimageresourcecollection-insertat
+                        - name: RemoveAt
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomimageresourcecollection-removeat
+                        - name: SetAt
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomimageresourcecollection-setat
+                    - name: Ixpsomlineargradientbrush
+                      href: /windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomlineargradientbrush
+                      items:
+                        - name: Klon
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomlineargradientbrush-clone
+                        - name: GetEndPoint
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomlineargradientbrush-getendpoint
+                        - name: GetStartPoint
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomlineargradientbrush-getstartpoint
+                        - name: '"Seiten-dpoint"'
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomlineargradientbrush-setendpoint
+                        - name: Setstartpoint
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomlineargradientbrush-setstartpoint
+                    - name: Ixpsommatrixtransform
+                      href: /windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsommatrixtransform
+                      items:
+                        - name: Klon
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsommatrixtransform-clone
+                        - name: GetMatrix
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsommatrixtransform-getmatrix
+                        - name: SetMatrix
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsommatrixtransform-setmatrix
+                    - name: Ixpsomnamecollection
+                      href: /windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomnamecollection
+                      items:
+                        - name: GetAt
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomnamecollection-getat
+                        - name: GetCount
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomnamecollection-getcount
+                    - name: Ixpsomobjectfactory
+                      href: /windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomobjectfactory
+                      items:
+                        - name: '"Kreatecanvas"'
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomobjectfactory-createcanvas
+                        - name: '"Kreatecolorprofileresource"'
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomobjectfactory-createcolorprofileresource
+                        - name: '"Kreatecoreproperties"'
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomobjectfactory-createcoreproperties
+                        - name: CreateDictionary
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomobjectfactory-createdictionary
+                        - name: CreateDocument
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomobjectfactory-createdocument
+                        - name: '"Kreatedocumentsequence"'
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomobjectfactory-createdocumentsequence
+                        - name: '"Kreatedocumentstructureresource"'
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomobjectfactory-createdocumentstructureresource
+                        - name: '"Kreatefontresource"'
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomobjectfactory-createfontresource
+                        - name: '"Kreategeometry"'
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomobjectfactory-creategeometry
+                        - name: '"Kreategeometryfigure"'
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomobjectfactory-creategeometryfigure
+                        - name: '"Kreateglyphs"'
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomobjectfactory-createglyphs
+                        - name: '"Kreategradientstoppt"'
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomobjectfactory-creategradientstop
+                        - name: '"Kreateimagebrush"'
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomobjectfactory-createimagebrush
+                        - name: '"Kreateimageresource"'
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomobjectfactory-createimageresource
+                        - name: '"Kreatelineargradientbrush"'
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomobjectfactory-createlineargradientbrush
+                        - name: '"Fiatematrixtransform"'
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomobjectfactory-creatematrixtransform
+                        - name: '"Kreatepackage"'
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomobjectfactory-createpackage
+                        - name: '"Kreatepackagefromfile"'
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomobjectfactory-createpackagefromfile
+                        - name: '"Kreatepackagefromstream"'
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomobjectfactory-createpackagefromstream
+                        - name: '"Kreatepackageschreiteronfile"'
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomobjectfactory-createpackagewriteronfile
+                        - name: '"Kreatepackageschreiteronstream"'
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomobjectfactory-createpackagewriteronstream
+                        - name: '"Kreatepage"'
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomobjectfactory-createpage
+                        - name: '"Kreatepagefromstream"'
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomobjectfactory-createpagefromstream
+                        - name: '"Kreatepagereferenzierung"'
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomobjectfactory-createpagereference
+                        - name: '"Kreateparametresources"'
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomobjectfactory-createpartresources
+                        - name: '"Kreateparamei"'
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomobjectfactory-createparturi
+                        - name: '"Auflistungs Sammlung"'
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomobjectfactory-createparturicollection
+                        - name: '"Kreatepath"'
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomobjectfactory-createpath
+                        - name: '"Kreateprintticketresource"'
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomobjectfactory-createprintticketresource
+                        - name: '"Kreateradialgradientbrush"'
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomobjectfactory-createradialgradientbrush
+                        - name: '"Anatereadonlystreamonfile"'
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomobjectfactory-createreadonlystreamonfile
+                        - name: '"Kreateremoteditionaryresource"'
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomobjectfactory-createremotedictionaryresource
+                        - name: '"Kreateremotediktattionaryresourcefromstream"'
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomobjectfactory-createremotedictionaryresourcefromstream
+                        - name: '"Kreatesignatureblockresource"'
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomobjectfactory-createsignatureblockresource
+                        - name: '"Kreatesolidcolorbrush"'
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomobjectfactory-createsolidcolorbrush
+                        - name: '"Kreatestoryfragmentsresource"'
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomobjectfactory-createstoryfragmentsresource
+                        - name: '"Kreatevisualbrush"'
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomobjectfactory-createvisualbrush
+                    - name: IXpsOMObjectFactory1
+                      href: /windows/desktop/api/XpsObjectModel_1/nn-xpsobjectmodel_1-ixpsomobjectfactory1
+                      items:
+                        - name: Converthdphototo jpgxr
+                          href: /windows/desktop/api/XpsObjectModel_1/nf-xpsobjectmodel_1-ixpsomobjectfactory1-converthdphototojpegxr
+                        - name: Convertjpeer-xrto HDPhoto
+                          href: /windows/desktop/api/XpsObjectModel_1/nf-xpsobjectmodel_1-ixpsomobjectfactory1-convertjpegxrtohdphoto
+                        - name: CreatePackageFromFile1
+                          href: /windows/desktop/api/XpsObjectModel_1/nf-xpsobjectmodel_1-ixpsomobjectfactory1-createpackagefromfile1
+                        - name: CreatePackageFromStream1
+                          href: /windows/desktop/api/XpsObjectModel_1/nf-xpsobjectmodel_1-ixpsomobjectfactory1-createpackagefromstream1
+                        - name: CreatePackageWriterOnFile1
+                          href: /windows/desktop/api/XpsObjectModel_1/nf-xpsobjectmodel_1-ixpsomobjectfactory1-createpackagewriteronfile1
+                        - name: CreatePackageWriterOnStream1
+                          href: /windows/desktop/api/XpsObjectModel_1/nf-xpsobjectmodel_1-ixpsomobjectfactory1-createpackagewriteronstream1
+                        - name: CreatePageFromStream1
+                          href: /windows/desktop/api/XpsObjectModel_1/nf-xpsobjectmodel_1-ixpsomobjectfactory1-createpagefromstream1
+                        - name: CreateRemoteDictionaryResourceFromStream1
+                          href: /windows/desktop/api/XpsObjectModel_1/nf-xpsobjectmodel_1-ixpsomobjectfactory1-createremotedictionaryresourcefromstream1
+                        - name: Getdocumenttypefromfile
+                          href: /windows/desktop/api/XpsObjectModel_1/nf-xpsobjectmodel_1-ixpsomobjectfactory1-getdocumenttypefromfile
+                        - name: Getdocumenttypefromstream
+                          href: /windows/desktop/api/XpsObjectModel_1/nf-xpsobjectmodel_1-ixpsomobjectfactory1-getdocumenttypefromstream
+                    - name: Ixpsompackage
+                      href: /windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsompackage
+                      items:
+                        - name: Getcoreproperties
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompackage-getcoreproperties
+                        - name: Getverwerdcontrolpartname
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompackage-getdiscardcontrolpartname
+                        - name: Getdocumentsequence
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompackage-getdocumentsequence
+                        - name: Getthumbnailresource
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompackage-getthumbnailresource
+                        - name: Setcoreproperties
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompackage-setcoreproperties
+                        - name: Setverwerdcontrolpartname
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompackage-setdiscardcontrolpartname
+                        - name: Setdocumentsequence
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompackage-setdocumentsequence
+                        - name: Setthumbnailresource
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompackage-setthumbnailresource
+                        - name: Write-Datei
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompackage-writetofile
+                        - name: Schreiben von Datenstrom
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompackage-writetostream
+                    - name: IXpsOMPackage1
+                      href: /windows/desktop/api/XpsObjectModel_1/nn-xpsobjectmodel_1-ixpsompackage1
+                      items:
+                        - name: GetDocumentType
+                          href: /windows/desktop/api/XpsObjectModel_1/nf-xpsobjectmodel_1-ixpsompackage1-getdocumenttype
+                        - name: WriteToFile1
+                          href: /windows/desktop/api/XpsObjectModel_1/nf-xpsobjectmodel_1-ixpsompackage1-writetofile1
+                        - name: WriteToStream1
+                          href: /windows/desktop/api/XpsObjectModel_1/nf-xpsobjectmodel_1-ixpsompackage1-writetostream1
+                    - name: Ixpsompackagetarget
+                      href: /previous-versions/windows/desktop/ff970304(v=vs.85)
+                      items:
+                        - name: '"Kreatexpsompackagewriter"'
+                          href: /previous-versions/windows/desktop/ff970305(v=vs.85)
+                    - name: Ixpsompackagewriter
+                      href: /windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsompackagewriter
+                      items:
+                        - name: AddPage
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompackagewriter-addpage
+                        - name: AddResource
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompackagewriter-addresource
+                        - name: Schließen
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompackagewriter-close
+                        - name: IsClosed
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompackagewriter-isclosed
+                        - name: Startnewdocument
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompackagewriter-startnewdocument
+                    - name: IXpsOMPackageWriter3D
+                      href: /windows/desktop/api/XpsObjectModel_2/nn-xpsobjectmodel_2-ixpsompackagewriter3d
+                      items:
+                        - name: Addmodeltexture-Methode
+                          href: /windows/desktop/api/XpsObjectModel_2/nf-xpsobjectmodel_2-ixpsompackagewriter3d-addmodeltexture
+                        - name: Setmodelprintticket-Methode
+                          href: /windows/desktop/api/XpsObjectModel_2/nf-xpsobjectmodel_2-ixpsompackagewriter3d-setmodelprintticket
+                    - name: Ixpsompage
+                      href: /windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsompage
+                      items:
+                        - name: Klon
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompage-clone
+                        - name: Generateunusedlookupkey
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompage-generateunusedlookupkey
+                        - name: Getbleedbox
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompage-getbleedbox
+                        - name: Getcontentbox
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompage-getcontentbox
+                        - name: Getdictionary
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompage-getdictionary
+                        - name: Getdiktattionarylocal
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompage-getdictionarylocal
+                        - name: Getdiktattionaryresource
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompage-getdictionaryresource
+                        - name: Getishyperlinktarget
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompage-getishyperlinktarget
+                        - name: GetLanguage
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompage-getlanguage
+                        - name: GetName
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompage-getname
+                        - name: GetOwner
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompage-getowner
+                        - name: Getpagedimensions
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompage-getpagedimensions
+                        - name: Getvisuals
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompage-getvisuals
+                        - name: Setbleedbox
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompage-setbleedbox
+                        - name: Setcontentbox
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompage-setcontentbox
+                        - name: Setdidaktitionarylocal
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompage-setdictionarylocal
+                        - name: Setdiktattionaryresource
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompage-setdictionaryresource
+                        - name: '"Ziel"'
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompage-setishyperlinktarget
+                        - name: SetLanguage
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompage-setlanguage
+                        - name: SetName
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompage-setname
+                        - name: Setpagedimensions
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompage-setpagedimensions
+                        - name: Schreiben
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompage-write
+                    - name: IXpsOMPage1
+                      href: /windows/desktop/api/XpsObjectModel_1/nn-xpsobjectmodel_1-ixpsompage1
+                      items:
+                        - name: GetDocumentType
+                          href: /windows/desktop/api/XpsObjectModel_1/nf-xpsobjectmodel_1-ixpsompage1-getdocumenttype
+                    - name: Ixpsompagereferenzierung
+                      href: /windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsompagereference
+                      items:
+                        - name: Klon
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompagereference-clone
+                        - name: Collectlinktargets
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompagereference-collectlinktargets
+                        - name: Collectparametresources
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompagereference-collectpartresources
+                        - name: Verwerfen von Seiten
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompagereference-discardpage
+                        - name: Getadvisorypagedimensions
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompagereference-getadvisorypagedimensions
+                        - name: GetOwner
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompagereference-getowner
+                        - name: GetPage
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompagereference-getpage
+                        - name: Getprintticketresource
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompagereference-getprintticketresource
+                        - name: Getstoryfragmentsresource
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompagereference-getstoryfragmentsresource
+                        - name: Getthumbnailresource
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompagereference-getthumbnailresource
+                        - name: Hasrestrictedfonts
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompagereference-hasrestrictedfonts
+                        - name: Ispageloaded
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompagereference-ispageloaded
+                        - name: Setadvisorypagedimensions
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompagereference-setadvisorypagedimensions
+                        - name: Setpage
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompagereference-setpage
+                        - name: Setprintticketresource
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompagereference-setprintticketresource
+                        - name: Setstoryfragmentsresource
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompagereference-setstoryfragmentsresource
+                        - name: Setthumbnailresource
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompagereference-setthumbnailresource
+                    - name: Ixpsompagereferencecollection
+                      href: /windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsompagereferencecollection
+                      items:
+                        - name: Anfügen
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompagereferencecollection-append
+                        - name: GetAt
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompagereferencecollection-getat
+                        - name: GetCount
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompagereferencecollection-getcount
+                        - name: InsertAt
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompagereferencecollection-insertat
+                        - name: RemoveAt
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompagereferencecollection-removeat
+                        - name: SetAt
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompagereferencecollection-setat
+                    - name: Ixpsompart
+                      href: /windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsompart
+                      items:
+                        - name: Getpartname
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompart-getpartname
+                        - name: Setpartname
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompart-setpartname
+                    - name: Ixpsomparametresources
+                      href: /windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsompartresources
+                      items:
+                        - name: Getcolorprofileresources
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompartresources-getcolorprofileresources
+                        - name: Getfontresources
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompartresources-getfontresources
+                        - name: Getimageresources
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompartresources-getimageresources
+                        - name: Getremotediktattionaryresources
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompartresources-getremotedictionaryresources
+                    - name: Ixpsomparamecollection
+                      href: /windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomparturicollection
+                      items:
+                        - name: Anfügen
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomparturicollection-append
+                        - name: GetAt
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomparturicollection-getat
+                        - name: GetCount
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomparturicollection-getcount
+                        - name: InsertAt
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomparturicollection-insertat
+                        - name: RemoveAt
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomparturicollection-removeat
+                        - name: SetAt
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomparturicollection-setat
+                    - name: Ixpsompath
+                      href: /windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsompath
+                      items:
+                        - name: Klon
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompath-clone
+                        - name: Getaccessibilitylongdescription
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompath-getaccessibilitylongdescription
+                        - name: Getaccessibilityshortdescription
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompath-getaccessibilityshortdescription
+                        - name: Getfillbrush
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompath-getfillbrush
+                        - name: Getfillbrushlocal
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompath-getfillbrushlocal
+                        - name: Getfillbrushlookup
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompath-getfillbrushlookup
+                        - name: GetGeometry
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompath-getgeometry
+                        - name: Getgeometrylocal
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompath-getgeometrylocal
+                        - name: Getgeometrylookup
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompath-getgeometrylookup
+                        - name: Gewahrheits napstopixels
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompath-getsnapstopixels
+                        - name: Getstrokebrush
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompath-getstrokebrush
+                        - name: Getstrokebrushlocal
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompath-getstrokebrushlocal
+                        - name: Getstrokebrushlookup
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompath-getstrokebrushlookup
+                        - name: Getstrokedashcap
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompath-getstrokedashcap
+                        - name: Getstrokedashes
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompath-getstrokedashes
+                        - name: Getstrokedashoffset
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompath-getstrokedashoffset
+                        - name: Getstrokeendlinecap
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompath-getstrokeendlinecap
+                        - name: Getstrokelinejoin
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompath-getstrokelinejoin
+                        - name: Getstrokemiterlimit
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompath-getstrokemiterlimit
+                        - name: Getstrokestartlinecap
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompath-getstrokestartlinecap
+                        - name: Getstrokedicke
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompath-getstrokethickness
+                        - name: Setaccessibilitylongdescription
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompath-setaccessibilitylongdescription
+                        - name: Setaccessibilityshortdescription
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompath-setaccessibilityshortdescription
+                        - name: Setfillbrushlocal
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompath-setfillbrushlocal
+                        - name: Setfillbrushlookup
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompath-setfillbrushlookup
+                        - name: Setgeometrylocal
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompath-setgeometrylocal
+                        - name: Setgeometrylookup
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompath-setgeometrylookup
+                        - name: '"*"-Napstopixels'
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompath-setsnapstopixels
+                        - name: Setstrokebrushlocal
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompath-setstrokebrushlocal
+                        - name: Setstrokebrushlookup
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompath-setstrokebrushlookup
+                        - name: Setstrokedashcap
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompath-setstrokedashcap
+                        - name: Setstrokedashoffset
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompath-setstrokedashoffset
+                        - name: Setstrokeendlinecap
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompath-setstrokeendlinecap
+                        - name: Setstrokelinejoin
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompath-setstrokelinejoin
+                        - name: Setstrokemiterlimit
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompath-setstrokemiterlimit
+                        - name: Setstrokestartlinecap
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompath-setstrokestartlinecap
+                        - name: Setstrokedicke
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompath-setstrokethickness
+                    - name: Ixpsomprintticketresource
+                      href: /windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomprintticketresource
+                      items:
+                        - name: GetStream
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomprintticketresource-getstream
+                        - name: SetContent
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomprintticketresource-setcontent
+                    - name: Ixpsomradialgradientbrush
+                      href: /windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomradialgradientbrush
+                      items:
+                        - name: Klon
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomradialgradientbrush-clone
+                        - name: Getcenter
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomradialgradientbrush-getcenter
+                        - name: Getgradientorigin
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomradialgradientbrush-getgradientorigin
+                        - name: Getradiisizes
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomradialgradientbrush-getradiisizes
+                        - name: SetCenter
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomradialgradientbrush-setcenter
+                        - name: Setgradientorigin
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomradialgradientbrush-setgradientorigin
+                        - name: '"-Größen"'
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomradialgradientbrush-setradiisizes
+                    - name: Ixpsomremotediktattionaryresource
+                      href: /windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomremotedictionaryresource
+                      items:
+                        - name: Getdictionary
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomremotedictionaryresource-getdictionary
+                        - name: Setdictionary
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomremotedictionaryresource-setdictionary
+                    - name: IXpsOMRemoteDictionaryResource1
+                      href: /windows/desktop/api/XpsObjectModel_1/nn-xpsobjectmodel_1-ixpsomremotedictionaryresource1
+                      items:
+                        - name: GetDocumentType
+                          href: /windows/desktop/api/XpsObjectModel_1/nf-xpsobjectmodel_1-ixpsomremotedictionaryresource1-getdocumenttype
+                        - name: Write1
+                          href: /windows/desktop/api/XpsObjectModel_1/nf-xpsobjectmodel_1-ixpsomremotedictionaryresource1-write1
+                    - name: Ixpsomremotediktattionaryresourcecollection
+                      href: /windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomremotedictionaryresourcecollection
+                      items:
+                        - name: Anfügen
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomremotedictionaryresourcecollection-append
+                        - name: GetAt
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomremotedictionaryresourcecollection-getat
+                        - name: Getbypartname
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomremotedictionaryresourcecollection-getbypartname
+                        - name: GetCount
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomremotedictionaryresourcecollection-getcount
+                        - name: InsertAt
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomremotedictionaryresourcecollection-insertat
+                        - name: RemoveAt
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomremotedictionaryresourcecollection-removeat
+                        - name: SetAt
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomremotedictionaryresourcecollection-setat
+                    - name: Ixpsomresource
+                      href: /previous-versions/windows/desktop/dd372762(v=vs.85)
+                    - name: Ixpsomshareable
+                      href: /windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomshareable
+                      items:
+                        - name: GetOwner
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomshareable-getowner
+                        - name: GetType
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomshareable-gettype
+                    - name: Ixpsomsignatureblockresource
+                      href: /windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomsignatureblockresource
+                      items:
+                        - name: GetOwner
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomsignatureblockresource-getowner
+                        - name: GetStream
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomsignatureblockresource-getstream
+                        - name: SetContent
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomsignatureblockresource-setcontent
+                    - name: Ixpsomsignatureblockresourcecollection
+                      href: /windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomsignatureblockresourcecollection
+                      items:
+                        - name: Anfügen
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomsignatureblockresourcecollection-append
+                        - name: GetAt
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomsignatureblockresourcecollection-getat
+                        - name: Getbypartname
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomsignatureblockresourcecollection-getbypartname
+                        - name: GetCount
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomsignatureblockresourcecollection-getcount
+                        - name: InsertAt
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomsignatureblockresourcecollection-insertat
+                        - name: RemoveAt
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomsignatureblockresourcecollection-removeat
+                        - name: SetAt
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomsignatureblockresourcecollection-setat
+                    - name: Ixpsomsolidcolorbrush
+                      href: /windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomsolidcolorbrush
+                      items:
+                        - name: Klon
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomsolidcolorbrush-clone
+                        - name: GetColor
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomsolidcolorbrush-getcolor
+                        - name: SetColor
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomsolidcolorbrush-setcolor
+                    - name: Ixpsomstoryfragmentsresource
+                      href: /windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomstoryfragmentsresource
+                      items:
+                        - name: GetOwner
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomstoryfragmentsresource-getowner
+                        - name: GetStream
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomstoryfragmentsresource-getstream
+                        - name: SetContent
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomstoryfragmentsresource-setcontent
+                    - name: Ixpsomthumbnailgenerator
+                      href: /windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomthumbnailgenerator
+                      items:
+                        - name: GenerateThumbnail
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomthumbnailgenerator-generatethumbnail
+                    - name: Ixpsomtilebrush
+                      href: /windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomtilebrush
+                      items:
+                        - name: Gettilemode
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomtilebrush-gettilemode
+                        - name: GetTransform
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomtilebrush-gettransform
+                        - name: Gettransformlocal
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomtilebrush-gettransformlocal
+                        - name: Gettransformlookup
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomtilebrush-gettransformlookup
+                        - name: Getviewbox
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomtilebrush-getviewbox
+                        - name: Getviewport
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomtilebrush-getviewport
+                        - name: '"Ziel Modus"'
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomtilebrush-settilemode
+                        - name: Settransformlocal
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomtilebrush-settransformlocal
+                        - name: Settransformlookup
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomtilebrush-settransformlookup
+                        - name: Setviewbox
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomtilebrush-setviewbox
+                        - name: Setviewport
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomtilebrush-setviewport
+                    - name: Ixpsomvisual
+                      href: /windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomvisual
+                      items:
+                        - name: Getclipgeometry
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomvisual-getclipgeometry
+                        - name: Getclipgeometrylocal
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomvisual-getclipgeometrylocal
+                        - name: Getclipgeometrylookup
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomvisual-getclipgeometrylookup
+                        - name: Gethyperlinknavigateuri
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomvisual-gethyperlinknavigateuri
+                        - name: Getishyperlinktarget
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomvisual-getishyperlinktarget
+                        - name: GetLanguage
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomvisual-getlanguage
+                        - name: GetName
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomvisual-getname
+                        - name: GetOpacity
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomvisual-getopacity
+                        - name: Getopacitymaskbrush
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomvisual-getopacitymaskbrush
+                        - name: Getopacitymaskbrushlocal
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomvisual-getopacitymaskbrushlocal
+                        - name: Getopacitymaskbrushlookup
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomvisual-getopacitymaskbrushlookup
+                        - name: GetTransform
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomvisual-gettransform
+                        - name: Gettransformlocal
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomvisual-gettransformlocal
+                        - name: Gettransformlookup
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomvisual-gettransformlookup
+                        - name: Setclipgeometrylocal
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomvisual-setclipgeometrylocal
+                        - name: Setclipgeometrylookup
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomvisual-setclipgeometrylookup
+                        - name: '"" "".'
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomvisual-sethyperlinknavigateuri
+                        - name: '"Ziel"'
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomvisual-setishyperlinktarget
+                        - name: SetLanguage
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomvisual-setlanguage
+                        - name: SetName
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomvisual-setname
+                        - name: Deckkraft
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomvisual-setopacity
+                        - name: Lokale Zugriffs Steuerungs Liste
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomvisual-setopacitymaskbrushlocal
+                        - name: Setup für "Setup"
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomvisual-setopacitymaskbrushlookup
+                        - name: Settransformlocal
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomvisual-settransformlocal
+                        - name: Settransformlookup
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomvisual-settransformlookup
+                    - name: Ixpsomvisualbrush
+                      href: /windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomvisualbrush
+                      items:
+                        - name: Klon
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomvisualbrush-clone
+                        - name: Getvisual
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomvisualbrush-getvisual
+                        - name: Getvisuzuweisung
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomvisualbrush-getvisuallocal
+                        - name: Getvisuallookup
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomvisualbrush-getvisuallookup
+                        - name: Setvisuzuweisung
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomvisualbrush-setvisuallocal
+                        - name: Setvisuallookup
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomvisualbrush-setvisuallookup
+                    - name: Ixpsomvisualcollection
+                      href: /windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomvisualcollection
+                      items:
+                        - name: Anfügen
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomvisualcollection-append
+                        - name: GetAt
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomvisualcollection-getat
+                        - name: GetCount
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomvisualcollection-getcount
+                        - name: InsertAt
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomvisualcollection-insertat
+                        - name: RemoveAt
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomvisualcollection-removeat
+                        - name: SetAt
+                          href: /windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomvisualcollection-setat
+                - name: XPS-Dokument Strukturen
+                  href: document-object-model-structures.md
+                  items:
+                    - name: XPS_COLOR
+                      href: xps-color.md
+                      items:
+                        - name: XPS_COLOR_TYPE_SRGB
+                          href: /previous-versions/windows/desktop/dd372944(v=vs.85)
+                        - name: XPS_COLOR_TYPE_SCRGB
+                          href: /previous-versions/windows/desktop/dd372943(v=vs.85)
+                        - name: XPS_COLOR_TYPE_CONTEXT
+                          href: /windows/win32/api/xpsobjectmodel/ns-xpsobjectmodel-xps_color
+                    - name: XPS_DASH
+                      href: /windows/win32/api/xpsobjectmodel/ns-xpsobjectmodel-xps_dash
+                    - name: XPS_GLYPH_INDEX
+                      href: /windows/win32/api/xpsobjectmodel/ns-xpsobjectmodel-xps_glyph_index
+                    - name: XPS_GLYPH_MAPPING
+                      href: /windows/win32/api/xpsobjectmodel/ns-xpsobjectmodel-xps_glyph_mapping
+                    - name: XPS_MATRIX
+                      href: /windows/win32/api/xpsobjectmodel/ns-xpsobjectmodel-xps_matrix
+                    - name: XPS_POINT
+                      href: /windows/win32/api/xpsobjectmodel/ns-xpsobjectmodel-xps_point
+                    - name: XPS_RECT
+                      href: /windows/win32/api/xpsobjectmodel/ns-xpsobjectmodel-xps_rect
+                    - name: XPS_SIZE
+                      href: /windows/win32/api/xpsobjectmodel/ns-xpsobjectmodel-xps_size
+                - name: XPS-dokumentenumerationen
+                  href: document-object-model-enumerations.md
+                  items:
+                    - name: XPS_COLOR_INTERPOLATION
+                      href: /windows/win32/api/xpsobjectmodel/ne-xpsobjectmodel-xps_color_interpolation
+                    - name: XPS_COLOR_TYPE
+                      href: /windows/win32/api/xpsobjectmodel/ne-xpsobjectmodel-xps_color_type
+                    - name: XPS_DASH_CAP
+                      href: /windows/win32/api/xpsobjectmodel/ne-xpsobjectmodel-xps_dash_cap
+                    - name: XPS_DOCUMENT_TYPE
+                      href: /windows/win32/api/xpsobjectmodel_1/ne-xpsobjectmodel_1-xps_document_type
+                    - name: XPS_FILL_RULE
+                      href: /windows/win32/api/xpsobjectmodel/ne-xpsobjectmodel-xps_fill_rule
+                    - name: XPS_FONT_EMBEDDING
+                      href: /windows/win32/api/xpsobjectmodel/ne-xpsobjectmodel-xps_font_embedding
+                    - name: XPS_IMAGE_TYPE
+                      href: /windows/win32/api/xpsobjectmodel/ne-xpsobjectmodel-xps_image_type
+                    - name: XPS_INTERLEAVING
+                      href: /windows/win32/api/xpsobjectmodel/ne-xpsobjectmodel-xps_interleaving
+                    - name: XPS_LINE_CAP
+                      href: /windows/win32/api/xpsobjectmodel/ne-xpsobjectmodel-xps_line_cap
+                    - name: XPS_LINE_JOIN
+                      href: /windows/win32/api/xpsobjectmodel/ne-xpsobjectmodel-xps_line_join
+                    - name: XPS_OBJECT_TYPE
+                      href: /windows/win32/api/xpsobjectmodel/ne-xpsobjectmodel-xps_object_type
+                    - name: XPS_SEGMENT_STROKE_PATTERN
+                      href: /windows/win32/api/xpsobjectmodel/ne-xpsobjectmodel-xps_segment_stroke_pattern
+                    - name: XPS_SEGMENT_TYPE
+                      href: /windows/win32/api/xpsobjectmodel/ne-xpsobjectmodel-xps_segment_type
+                    - name: XPS_SPREAD_METHOD
+                      href: /windows/win32/api/xpsobjectmodel/ne-xpsobjectmodel-xps_spread_method
+                    - name: XPS_STYLE_SIMULATION
+                      href: /windows/win32/api/xpsobjectmodel/ne-xpsobjectmodel-xps_style_simulation
+                    - name: XPS_THUMBNAIL_SIZE
+                      href: /windows/win32/api/xpsobjectmodel/ne-xpsobjectmodel-xps_thumbnail_size
+                    - name: XPS_TILE_MODE
+                      href: /windows/win32/api/xpsobjectmodel/ne-xpsobjectmodel-xps_tile_mode
+                - name: XPS-Dokument Fehler
+                  href: xps-document-errors.md
+        - name: XPS-API für digitale Signaturen
+          href: xps-digital-signatures.md
+          items:
+            - name: Informationen über die XPS Digital Signature-API
+              href: about-xps-digital-signatures.md
+            - name: Verwenden der XPS Digital-Signatur-API
+              href: using-digital-signatures-in-xps-documents.md
+              items:
+                - name: Allgemeine Programmieraufgaben für digitale Signaturen
+                  href: basic-digital-signature-programming-tasks.md
+                  items:
+                    - name: Initialisieren des Signatur-Managers
+                      href: initialize-the-signature-manager.md
+                    - name: Signieren eines Dokuments
+                      href: sign-a-document.md
+                    - name: Hinzufügen einer Signatur Anforderung zu einem XPS-Dokument
+                      href: add-a-signature-request-to-a-document.md
+                    - name: Überprüfen von Dokument Signaturen und Zertifikaten
+                      href: verify-document-signatures.md
+                - name: Weitere Programmieraufgaben für digitale Signaturen
+                  href: advanced-digital-signature-programming-tasks.md
+                  items:
+                    - name: Laden eines Zertifikats aus einer Datei
+                      href: load-a-certificate-from-a-file.md
+                    - name: 'Überprüfen, ob ein Zertifikat eine Signatur Methode unterstützt'
+                      href: verify-a-certificate-supports-a-signature-method.md
+                    - name: 'Überprüfen, ob das System eine Digest-Methode unterstützt'
+                      href: verify-a-certificate-supports-a-digest-method.md
+                    - name: Einbinden von Zertifikat Ketten in ein Dokument
+                      href: embedding-certificate-trust-chains-in-a-document.md
+            - name: XPS-API-Referenz für digitale Signaturen
+              href: xps-digital-signatures-programming-reference.md
+              items:
+                - name: XPS-API-Schnittstellen für digitale Signaturen
+                  href: xps-digital-signatures-interfaces.md
+                  items:
+                    - name: Ixpssignature
+                      href: /windows/desktop/api/xpsdigitalsignature/nn-xpsdigitalsignature-ixpssignature
+                      items:
+                        - name: Getcertificateenumerator
+                          href: /windows/desktop/api/xpsdigitalsignature/nf-xpsdigitalsignature-ixpssignature-getcertificateenumerator
+                        - name: Getcustomobjectenreerator
+                          href: /windows/desktop/api/xpsdigitalsignature/nf-xpsdigitalsignature-ixpssignature-getcustomobjectenumerator
+                        - name: Getcustomreferenceenumerator
+                          href: /windows/desktop/api/xpsdigitalsignature/nf-xpsdigitalsignature-ixpssignature-getcustomreferenceenumerator
+                        - name: GetPolicy
+                          href: /windows/desktop/api/xpsdigitalsignature/nf-xpsdigitalsignature-ixpssignature-getpolicy
+                        - name: Getsignatureid
+                          href: /windows/desktop/api/xpsdigitalsignature/nf-xpsdigitalsignature-ixpssignature-getsignatureid
+                        - name: Getsignaturepartname
+                          href: /windows/desktop/api/xpsdigitalsignature/nf-xpsdigitalsignature-ixpssignature-getsignaturepartname
+                        - name: Getsignaturexml
+                          href: /windows/desktop/api/xpsdigitalsignature/nf-xpsdigitalsignature-ixpssignature-getsignaturexml
+                        - name: Getsignaturevalue
+                          href: /windows/desktop/api/xpsdigitalsignature/nf-xpsdigitalsignature-ixpssignature-getsignaturevalue
+                        - name: Getsigningtime
+                          href: /windows/desktop/api/xpsdigitalsignature/nf-xpsdigitalsignature-ixpssignature-getsigningtime
+                        - name: Getsigningtimeformat
+                          href: /windows/desktop/api/xpsdigitalsignature/nf-xpsdigitalsignature-ixpssignature-getsigningtimeformat
+                        - name: Setsignaturexml
+                          href: /windows/desktop/api/xpsdigitalsignature/nf-xpsdigitalsignature-ixpssignature-setsignaturexml
+                        - name: Überprüfung
+                          href: /windows/desktop/api/xpsdigitalsignature/nf-xpsdigitalsignature-ixpssignature-verify
+                    - name: Ixpssignatureblock
+                      href: /windows/desktop/api/xpsdigitalsignature/nn-xpsdigitalsignature-ixpssignatureblock
+                      items:
+                        - name: '"Kreaterequest"'
+                          href: /windows/desktop/api/xpsdigitalsignature/nf-xpsdigitalsignature-ixpssignatureblock-createrequest
+                        - name: Getdocumentindex
+                          href: /windows/desktop/api/xpsdigitalsignature/nf-xpsdigitalsignature-ixpssignatureblock-getdocumentindex
+                        - name: Getdocumentname
+                          href: /windows/desktop/api/xpsdigitalsignature/nf-xpsdigitalsignature-ixpssignatureblock-getdocumentname
+                        - name: Getpartname
+                          href: /windows/desktop/api/xpsdigitalsignature/nf-xpsdigitalsignature-ixpssignatureblock-getpartname
+                        - name: GetRequests
+                          href: /windows/desktop/api/xpsdigitalsignature/nf-xpsdigitalsignature-ixpssignatureblock-getrequests
+                    - name: Ixpssignatureblockcollection
+                      href: /windows/desktop/api/xpsdigitalsignature/nn-xpsdigitalsignature-ixpssignatureblockcollection
+                      items:
+                        - name: GetAt
+                          href: /windows/desktop/api/xpsdigitalsignature/nf-xpsdigitalsignature-ixpssignatureblockcollection-getat
+                        - name: GetCount
+                          href: /windows/desktop/api/xpsdigitalsignature/nf-xpsdigitalsignature-ixpssignatureblockcollection-getcount
+                        - name: RemoveAt
+                          href: /windows/desktop/api/xpsdigitalsignature/nf-xpsdigitalsignature-ixpssignatureblockcollection-removeat
+                    - name: Ixpssignaturückruf
+                      href: /windows/desktop/api/xpsdigitalsignature/nn-xpsdigitalsignature-ixpssignaturecollection
+                      items:
+                        - name: GetAt
+                          href: /windows/desktop/api/xpsdigitalsignature/nf-xpsdigitalsignature-ixpssignaturecollection-getat
+                        - name: GetCount
+                          href: /windows/desktop/api/xpsdigitalsignature/nf-xpsdigitalsignature-ixpssignaturecollection-getcount
+                        - name: RemoveAt
+                          href: /windows/desktop/api/xpsdigitalsignature/nf-xpsdigitalsignature-ixpssignaturecollection-removeat
+                    - name: Ixpssignaturemanager
+                      href: /windows/desktop/api/xpsdigitalsignature/nn-xpsdigitalsignature-ixpssignaturemanager
+                      items:
+                        - name: Addsignatureblock
+                          href: /windows/desktop/api/xpsdigitalsignature/nf-xpsdigitalsignature-ixpssignaturemanager-addsignatureblock
+                        - name: '"Kreatesigningoptions"'
+                          href: /windows/desktop/api/xpsdigitalsignature/nf-xpsdigitalsignature-ixpssignaturemanager-createsigningoptions
+                        - name: Getsignatureoriginpartname
+                          href: /windows/desktop/api/xpsdigitalsignature/nf-xpsdigitalsignature-ixpssignaturemanager-getsignatureoriginpartname
+                        - name: Getsignaturen
+                          href: /windows/desktop/api/xpsdigitalsignature/nf-xpsdigitalsignature-ixpssignaturemanager-getsignatures
+                        - name: Getsignatureblocks
+                          href: /windows/desktop/api/xpsdigitalsignature/nf-xpsdigitalsignature-ixpssignaturemanager-getsignatureblocks
+                        - name: Loadpackagefile
+                          href: /windows/desktop/api/xpsdigitalsignature/nf-xpsdigitalsignature-ixpssignaturemanager-loadpackagefile
+                        - name: Loadpackagestream
+                          href: /windows/desktop/api/xpsdigitalsignature/nf-xpsdigitalsignature-ixpssignaturemanager-loadpackagestream
+                        - name: Savepackagedefile
+                          href: /windows/desktop/api/xpsdigitalsignature/nf-xpsdigitalsignature-ixpssignaturemanager-savepackagetofile
+                        - name: Savepackageto-Stream
+                          href: /windows/desktop/api/xpsdigitalsignature/nf-xpsdigitalsignature-ixpssignaturemanager-savepackagetostream
+                        - name: Setsignatureoriginpartname
+                          href: /windows/desktop/api/xpsdigitalsignature/nf-xpsdigitalsignature-ixpssignaturemanager-setsignatureoriginpartname
+                        - name: Signieren
+                          href: /windows/desktop/api/xpsdigitalsignature/nf-xpsdigitalsignature-ixpssignaturemanager-sign
+                    - name: Ixpssignaturerequest
+                      href: /windows/desktop/api/xpsdigitalsignature/nn-xpsdigitalsignature-ixpssignaturerequest
+                      items:
+                        - name: Getintent
+                          href: /windows/desktop/api/xpsdigitalsignature/nf-xpsdigitalsignature-ixpssignaturerequest-getintent
+                        - name: Getrequestedsigner
+                          href: /windows/desktop/api/xpsdigitalsignature/nf-xpsdigitalsignature-ixpssignaturerequest-getrequestedsigner
+                        - name: GetRequestID
+                          href: /windows/desktop/api/xpsdigitalsignature/nf-xpsdigitalsignature-ixpssignaturerequest-getrequestid
+                        - name: Getrequestsignbydate
+                          href: /windows/desktop/api/xpsdigitalsignature/nf-xpsdigitalsignature-ixpssignaturerequest-getrequestsignbydate
+                        - name: GetSignature
+                          href: /windows/desktop/api/xpsdigitalsignature/nf-xpsdigitalsignature-ixpssignaturerequest-getsignature
+                        - name: Getsigninglocale
+                          href: /windows/desktop/api/xpsdigitalsignature/nf-xpsdigitalsignature-ixpssignaturerequest-getsigninglocale
+                        - name: Getspotlocation
+                          href: /windows/desktop/api/xpsdigitalsignature/nf-xpsdigitalsignature-ixpssignaturerequest-getspotlocation
+                        - name: Eintintent
+                          href: /windows/desktop/api/xpsdigitalsignature/nf-xpsdigitalsignature-ixpssignaturerequest-setintent
+                        - name: '"Abtrequestedsigner"'
+                          href: /windows/desktop/api/xpsdigitalsignature/nf-xpsdigitalsignature-ixpssignaturerequest-setrequestedsigner
+                        - name: '"" Für ""'
+                          href: /windows/desktop/api/xpsdigitalsignature/nf-xpsdigitalsignature-ixpssignaturerequest-setrequestsignbydate
+                        - name: Setsigninglocale
+                          href: /windows/desktop/api/xpsdigitalsignature/nf-xpsdigitalsignature-ixpssignaturerequest-setsigninglocale
+                        - name: Setspotlocation
+                          href: /windows/desktop/api/xpsdigitalsignature/nf-xpsdigitalsignature-ixpssignaturerequest-setspotlocation
+                    - name: Ixpssignaturerequestcollection
+                      href: /windows/desktop/api/xpsdigitalsignature/nn-xpsdigitalsignature-ixpssignaturerequestcollection
+                      items:
+                        - name: GetAt
+                          href: /windows/desktop/api/xpsdigitalsignature/nf-xpsdigitalsignature-ixpssignaturerequestcollection-getat
+                        - name: GetCount
+                          href: /windows/desktop/api/xpsdigitalsignature/nf-xpsdigitalsignature-ixpssignaturerequestcollection-getcount
+                        - name: RemoveAt
+                          href: /windows/desktop/api/xpsdigitalsignature/nf-xpsdigitalsignature-ixpssignaturerequestcollection-removeat
+                    - name: Ixpssigningoptions
+                      href: /windows/desktop/api/xpsdigitalsignature/nn-xpsdigitalsignature-ixpssigningoptions
+                      items:
+                        - name: Getcertifiaseeteset
+                          href: /windows/desktop/api/xpsdigitalsignature/nf-xpsdigitalsignature-ixpssigningoptions-getcertificateset
+                        - name: Getcustomobjects
+                          href: /windows/desktop/api/xpsdigitalsignature/nf-xpsdigitalsignature-ixpssigningoptions-getcustomobjects
+                        - name: Getcustomreferences
+                          href: /windows/desktop/api/xpsdigitalsignature/nf-xpsdigitalsignature-ixpssigningoptions-getcustomreferences
+                        - name: Getdigestmethod
+                          href: /windows/desktop/api/xpsdigitalsignature/nf-xpsdigitalsignature-ixpssigningoptions-getdigestmethod
+                        - name: GetFlags
+                          href: /windows/desktop/api/xpsdigitalsignature/nf-xpsdigitalsignature-ixpssigningoptions-getflags
+                        - name: GetPolicy
+                          href: /windows/desktop/api/xpsdigitalsignature/nf-xpsdigitalsignature-ixpssigningoptions-getpolicy
+                        - name: Getsignatureid
+                          href: /windows/desktop/api/xpsdigitalsignature/nf-xpsdigitalsignature-ixpssigningoptions-getsignatureid
+                        - name: Getsignaturemethod
+                          href: /windows/desktop/api/xpsdigitalsignature/nf-xpsdigitalsignature-ixpssigningoptions-getsignaturemethod
+                        - name: Getsignaturepartname
+                          href: /windows/desktop/api/xpsdigitalsignature/nf-xpsdigitalsignature-ixpssigningoptions-getsignaturepartname
+                        - name: Getsigningtimeformat
+                          href: /windows/desktop/api/xpsdigitalsignature/nf-xpsdigitalsignature-ixpssigningoptions-getsigningtimeformat
+                        - name: Setdigestmethod
+                          href: /windows/desktop/api/xpsdigitalsignature/nf-xpsdigitalsignature-ixpssigningoptions-setdigestmethod
+                        - name: SetFlags
+                          href: /windows/desktop/api/xpsdigitalsignature/nf-xpsdigitalsignature-ixpssigningoptions-setflags
+                        - name: Setpolicy
+                          href: /windows/desktop/api/xpsdigitalsignature/nf-xpsdigitalsignature-ixpssigningoptions-setpolicy
+                        - name: Setsignatureid
+                          href: /windows/desktop/api/xpsdigitalsignature/nf-xpsdigitalsignature-ixpssigningoptions-setsignatureid
+                        - name: Setsignaturemethod
+                          href: /windows/desktop/api/xpsdigitalsignature/nf-xpsdigitalsignature-ixpssigningoptions-setsignaturemethod
+                        - name: Setsignaturepartname
+                          href: /windows/desktop/api/xpsdigitalsignature/nf-xpsdigitalsignature-ixpssigningoptions-setsignaturepartname
+                        - name: Setsigningtimeformat
+                          href: /windows/desktop/api/xpsdigitalsignature/nf-xpsdigitalsignature-ixpssigningoptions-setsigningtimeformat
+                - name: XPS-API-Enumerationen für digitale Signaturen
+                  href: xps-digital-signatures-enumerations.md
+                  items:
+                    - name: XPS_SIGN_FLAGS
+                      href: /windows/win32/api/xpsdigitalsignature/ne-xpsdigitalsignature-xps_sign_flags
+                    - name: XPS_SIGN_POLICY
+                      href: /windows/win32/api/xpsdigitalsignature/ne-xpsdigitalsignature-xps_sign_policy
+                    - name: XPS_SIGNATURE_STATUS
+                      href: /windows/win32/api/xpsdigitalsignature/ne-xpsdigitalsignature-xps_signature_status
+                - name: XPS-Fehler bei der digitalen Signatur-API
+                  href: xps-digital-signatures-errors.md
+        - name: Glossar für XPS-Dokumente
+          href: xpsapi-glossary.md
+    - name: Drucken
+      href: printdocs-printing.md
+      items:
+        - name: Drucken von Desktop-Apps
+          href: using-printing.md
+          items:
+            - name: 'Gewusst wie: Drucken von einem Windows-Programm'
+              href: how-to--print-from-a-windows-application.md
+              items:
+                - name: 'Gewusst wie: Sammeln von Druckauftrags Informationen vom Benutzer'
+                  href: preparing-to-print.md
+                - name: 'Vorgehensweise: Anzeigen des Status des Druckauftrags'
+                  href: cancel-dialog-box.md
+                - name: 'Vorgehensweise: starten und Abbrechen eines Druck Threads'
+                  href: how-to--start-and-stop-a-printing-thread.md
+                - name: 'Gewusst wie: Rendering von Druckauftrags Daten'
+                  href: how-to--render-the-print-job-data.md
+                - name: 'Gewusst wie: Verwenden der Anwendungs Isolation'
+                  href: use-application-isolation.md
+            - name: 'Vorgehensweise: Abrufen eines Drucker Geräte Kontexts'
+              href: retrieving-a-printer-device-context.md
+        - name: Drucken der Dokumenten Paket-API
+          href: tailored-app-printing-api.md
+          items:
+            - name: API-Schnittstellen für Dokument Pakete drucken
+              href: tailored-app-printing-api-interfaces.md
+              items:
+                - name: Iprintdocumentpackagestatus-Ereignis
+                  href: /windows/desktop/api/Documenttarget/nn-documenttarget-iprintdocumentpackagestatusevent
+                  items:
+                    - name: Packagestatusupveraltet
+                      href: /windows/desktop/api/Documenttarget/nf-documenttarget-iprintdocumentpackagestatusevent-packagestatusupdated
+                - name: Iprintdocumentpackagetarget
+                  href: /windows/desktop/api/documenttarget/nn-documenttarget-iprintdocumentpackagetarget
+                  items:
+                    - name: Abbrechen
+                      href: /windows/desktop/api/Documenttarget/nf-documenttarget-iprintdocumentpackagetarget-cancel
+                    - name: Getpackagetarget
+                      href: /windows/desktop/api/Documenttarget/nf-documenttarget-iprintdocumentpackagetarget-getpackagetarget
+                    - name: Getpackagetargettypes
+                      href: /windows/desktop/api/Documenttarget/nf-documenttarget-iprintdocumentpackagetarget-getpackagetargettypes
+                - name: Iprintdocumentpackagetargetfactory
+                  href: /windows/desktop/api/documenttarget/nn-documenttarget-iprintdocumentpackagetargetfactory
+                  items:
+                    - name: '"Foratedocumentpackagetargetforprintjob"'
+                      href: /windows/desktop/api/Documenttarget/nf-documenttarget-iprintdocumentpackagetargetfactory-createdocumentpackagetargetforprintjob
+            - name: Drucken von Dokumenten Paket-API-Strukturen
+              href: tailored-app-printing-api-structures.md
+              items:
+                - name: Printdocumentpackagestatus
+                  href: /windows/win32/api/Documenttarget/ns-documenttarget-printdocumentpackagestatus
+            - name: Enumerationen der Dokumenten Paket-API drucken
+              href: tailored-app-printing-api-enumerations.md
+              items:
+                - name: Printdocumentpackagecompletion
+                  href: /windows/desktop/api/Documenttarget/ne-documenttarget-printdocumentpackagecompletion
+        - name: Druckspoolerapi
+          href: print-spooler-api.md
+          items:
+            - name: Referenz zur Druck Spooler-API
+              href: printing-and-print-spooler-reference.md
+              items:
+                - name: Druckspooler-API-Funktionen
+                  href: printing-and-print-spooler-functions.md
+                  items:
+                    - name: Abbruch Drucker
+                      href: abortprinter.md
+                    - name: AddForm
+                      href: addform.md
+                    - name: AddJob
+                      href: addjob.md
+                    - name: AddPrinter
+                      href: addprinter.md
+                    - name: '"AddPrinterConnection"'
+                      href: addprinterconnection.md
+                    - name: AddPrinterConnection2
+                      href: addprinterconnection2.md
+                    - name: Advanceddocumentproperties
+                      href: advanceddocumentproperties.md
+                    - name: Bindptproviderthunk
+                      href: bindptproviderthunk.md
+                    - name: Closeprinter
+                      href: closeprinter.md
+                    - name: Closespoolfilehandle
+                      href: closespoolfilehandle.md
+                    - name: Commitspooldata
+                      href: commitspooldata.md
+                    - name: Konfigurieren von Berichten
+                      href: configureport.md
+                    - name: Connecttoprinterdlg
+                      href: connecttoprinterdlg.md
+                    - name: Deleteform
+                      href: deleteform.md
+                    - name: Deleteprinter
+                      href: deleteprinter.md
+                    - name: Deleteprinterconnection
+                      href: deleteprinterconnection.md
+                    - name: Deleteprinterdata
+                      href: deleteprinterdata.md
+                    - name: Deleteprinterdataex
+                      href: deleteprinterdataex.md
+                    - name: Deleteprinterkey
+                      href: deleteprinterkey.md
+                    - name: DocumentEvent
+                      href: documentevent.md
+                    - name: DocumentProperties
+                      href: documentproperties.md
+                    - name: Enddocprinter
+                      href: enddocprinter.md
+                    - name: Endpageprinter
+                      href: endpageprinter.md
+                    - name: Enumforms
+                      href: enumforms.md
+                    - name: EnumJobs
+                      href: enumjobs.md
+                    - name: Enumprinterdata
+                      href: enumprinterdata.md
+                    - name: Enumprinterdataex
+                      href: enumprinterdataex.md
+                    - name: Enumprinterkey
+                      href: enumprinterkey.md
+                    - name: Enumdrucker
+                      href: enumprinters.md
+                    - name: Findcloseprinterchangenotifizierung
+                      href: findcloseprinterchangenotification.md
+                    - name: Findfirstprinterchangenotifizierung
+                      href: findfirstprinterchangenotification.md
+                    - name: Findnextprinterchangenotifizierung
+                      href: findnextprinterchangenotification.md
+                    - name: Flushprinter
+                      href: flushprinter.md
+                    - name: Freiprinternotifyinfo
+                      href: freeprinternotifyinfo.md
+                    - name: GetDefaultPrinter
+                      href: getdefaultprinter.md
+                    - name: GetForm
+                      href: getform.md
+                    - name: GetJob
+                      href: getjob.md
+                    - name: GetPrintCapabilitiesThunk2
+                      href: getprintcapabilitiesthunk2.md
+                    - name: GetPrinter
+                      href: getprinter.md
+                    - name: Getprinterdata
+                      href: getprinterdata.md
+                    - name: Getprinterdataex
+                      href: getprinterdataex.md
+                    - name: Getprintexecutiondata
+                      href: getprintexecutiondata.md
+                    - name: Getspoolfilehandle
+                      href: getspoolfilehandle.md
+                    - name: Isvaliddevmode
+                      href: isvaliddevmode.md
+                    - name: OpenPrinter
+                      href: openprinter.md
+                    - name: OpenPrinter2
+                      href: openprinter2.md
+                    - name: Printerproperties
+                      href: printerproperties.md
+                    - name: Lesen von Druckern
+                      href: readprinter.md
+                    - name: Reportjobprocessingprogress
+                      href: reportjobprocessingprogress.md
+                    - name: Resetprinter
+                      href: resetprinter.md
+                    - name: ScheduleJob
+                      href: schedulejob.md
+                    - name: Methode SetDefaultPrinter auf
+                      href: setdefaultprinter.md
+                    - name: Setform
+                      href: setform.md
+                    - name: Setjob
+                      href: setjob.md
+                    - name: SetPort
+                      href: setport.md
+                    - name: SetPrinter
+                      href: setprinter.md
+                    - name: Setprinterdata
+                      href: setprinterdata.md
+                    - name: Setprinterdataex
+                      href: setprinterdataex.md
+                    - name: StartDocPrinter
+                      href: startdocprinter.md
+                    - name: Startpageprinter
+                      href: startpageprinter.md
+                    - name: '"Write Printer"'
+                      href: writeprinter.md
+                - name: Enumerationen der Druck Spooler-API
+                  href: enumerations.md
+                  items:
+                    - name: Eprintxpsjoboperation
+                      href: eprintxpsjoboperation.md
+                    - name: Eprintxpsjobprogress
+                      href: eprintxpsjobprogress.md
+                    - name: PRINT_EXECUTION_CONTEXT
+                      href: print-execution-context.md
+                    - name: PRINTER_OPTION_FLAGS
+                      href: printer-option-flags.md
+                - name: Druck Spooler-API-Strukturen
+                  href: printing-and-print-spooler-structures.md
+                  items:
+                    - name: ADDJOB_INFO_1
+                      href: addjob-info-1.md
+                    - name: CORE_PRINTER_DRIVER
+                      href: core-printer-driver.md
+                    - name: DATATYPES_INFO_1
+                      href: datatypes-info-1.md
+                    - name: DOC_INFO_1
+                      href: doc-info-1.md
+                    - name: DOC_INFO_2
+                      href: doc-info-2.md
+                    - name: DOC_INFO_3
+                      href: doc-info-3.md
+                    - name: DRIVER_INFO_1
+                      href: driver-info-1.md
+                    - name: DRIVER_INFO_2
+                      href: driver-info-2.md
+                    - name: DRIVER_INFO_3
+                      href: driver-info-3.md
+                    - name: DRIVER_INFO_4
+                      href: driver-info-4.md
+                    - name: DRIVER_INFO_5
+                      href: driver-info-5.md
+                    - name: DRIVER_INFO_6
+                      href: driver-info-6.md
+                    - name: DRIVER_INFO_8
+                      href: driver-info-8.md
+                    - name: FORM_INFO_1
+                      href: form-info-1.md
+                    - name: FORM_INFO_2
+                      href: form-info-2.md
+                    - name: JOB_INFO_1
+                      href: job-info-1.md
+                    - name: JOB_INFO_2
+                      href: job-info-2.md
+                    - name: JOB_INFO_3
+                      href: job-info-3.md
+                    - name: JOB_INFO_4
+                      href: job-info-4.md
+                    - name: MONITOR_INFO_1
+                      href: monitor-info-1.md
+                    - name: MONITOR_INFO_2
+                      href: monitor-info-2.md
+                    - name: PORT_INFO_1
+                      href: port-info-1.md
+                    - name: PORT_INFO_2
+                      href: port-info-2.md
+                    - name: PORT_INFO_3
+                      href: port-info-3.md
+                    - name: PRINT_EXECUTION_DATA
+                      href: print-execution-data.md
+                    - name: PRINTER_CONNECTION_INFO_1
+                      href: printer-connection-info-1.md
+                    - name: PRINTER_DEFAULTS
+                      href: printer-defaults.md
+                    - name: PRINTER_ENUM_VALUES
+                      href: printer-enum-values.md
+                    - name: PRINTER_INFO_1
+                      href: printer-info-1.md
+                    - name: PRINTER_INFO_2
+                      href: printer-info-2.md
+                    - name: PRINTER_INFO_3
+                      href: printer-info-3.md
+                    - name: PRINTER_INFO_4
+                      href: printer-info-4.md
+                    - name: PRINTER_INFO_5
+                      href: printer-info-5.md
+                    - name: PRINTER_INFO_6
+                      href: printer-info-6.md
+                    - name: PRINTER_INFO_7
+                      href: printer-info-7.md
+                    - name: PRINTER_INFO_8
+                      href: printer-info-8.md
+                    - name: PRINTER_INFO_9
+                      href: printer-info-9.md
+                    - name: PRINTER_NOTIFY_INFO
+                      href: printer-notify-info.md
+                    - name: PRINTER_NOTIFY_INFO_DATA
+                      href: printer-notify-info-data.md
+                    - name: PRINTER_NOTIFY_OPTIONS
+                      href: printer-notify-options.md
+                    - name: PRINTER_NOTIFY_OPTIONS_TYPE
+                      href: printer-notify-options-type.md
+                    - name: PRINTER_OPTIONS
+                      href: printer-options.md
+                    - name: PRINTPROCESSOR_CAPS_1
+                      href: printprocessor-caps-1.md
+                    - name: PRINTPROCESSOR_CAPS_2
+                      href: printprocessor-caps-2.md
+                    - name: PRINTPROCESSOR_INFO_1
+                      href: printprocessor-info-1.md
+                    - name: PROVIDOR_INFO_1
+                      href: providor-info-1.md
+                    - name: PROVIDOR_INFO_2
+                      href: providor-info-2.md
+                - name: Druck Spooler-API-Meldungen
+                  href: printing-and-print-spooler-messages.md
+                  items:
+                    - name: WM_SPOOLERSTATUS
+                      href: wm-spoolerstatus.md
+            - name: Asynchrone Druck Benachrichtigungs Referenz
+              href: asynchronous-printing-notification.md
+              items:
+                - name: Asynchrone Druck Benachrichtigungsfunktionen
+                  href: asynchronous-printing-notification-functions.md
+                  items:
+                    - name: '"Kreateprintasyncnotifychannel"'
+                      href: /windows/desktop/api/prnasnot/nf-prnasnot-createprintasyncnotifychannel
+                    - name: Registerforprintasyncbenachrichtigungen
+                      href: /windows/desktop/api/prnasnot/nf-prnasnot-registerforprintasyncnotifications
+                    - name: Unregisterforprintasyncnotification
+                      href: /windows/desktop/api/prnasnot/nf-prnasnot-unregisterforprintasyncnotifications
+                - name: Asynchrone Druck Benachrichtigungs Schnittstellen
+                  href: asynchronous-notification-interfaces.md
+                  items:
+                    - name: Iprintasyncnotifycallback
+                      href: /windows/desktop/api/prnasnot/nn-prnasnot-iprintasyncnotifycallback
+                      items:
+                        - name: Channelclosed
+                          href: /windows/desktop/api/prnasnot/nf-prnasnot-iprintasyncnotifycallback-channelclosed
+                        - name: Oneventnotify
+                          href: /windows/desktop/api/prnasnot/nf-prnasnot-iprintasyncnotifycallback-oneventnotify
+                    - name: Iprintasyncnotifychannel
+                      href: /windows/desktop/api/prnasnot/nn-prnasnot-iprintasyncnotifychannel
+                      items:
+                        - name: Closechannel
+                          href: /windows/desktop/api/prnasnot/nf-prnasnot-iprintasyncnotifychannel-closechannel
+                        - name: SendNotification
+                          href: /windows/desktop/api/prnasnot/nf-prnasnot-iprintasyncnotifychannel-sendnotification
+                    - name: Iprintasyncnotifydataobject
+                      href: /windows/desktop/api/prnasnot/nn-prnasnot-iprintasyncnotifydataobject
+                      items:
+                        - name: Acquiredata
+                          href: /windows/desktop/api/prnasnot/nf-prnasnot-iprintasyncnotifydataobject-acquiredata
+                        - name: ReleaseData
+                          href: /windows/desktop/api/prnasnot/nf-prnasnot-iprintasyncnotifydataobject-releasedata
+                - name: Asynchrone Druck Benachrichtigungs Enumerationen
+                  href: asynchronous-printing-notification-enumerations.md
+                  items:
+                    - name: Printasyncnotifyconversation-Stil
+                      href: /windows/desktop/api/prnasnot/ne-prnasnot-printasyncnotifyconversationstyle
+                    - name: Printasyncnotifyerror
+                      href: /windows/desktop/api/prnasnot/ne-prnasnot-printasyncnotifyerror
+                    - name: Printasyncnotif yuserfilter
+                      href: /windows/desktop/api/prnasnot/ne-prnasnot-printasyncnotifyuserfilter
+            - name: Referenz zur Druckertreiber Installation
+              href: printer-driver-installation-reference.md
+              items:
+                - name: Addmonitor
+                  href: addmonitor.md
+                - name: AddPort
+                  href: addport.md
+                - name: Addprinterdriver
+                  href: addprinterdriver.md
+                - name: Addprinterdriverex
+                  href: addprinterdriverex.md
+                - name: Addprintprocessor
+                  href: addprintprocessor.md
+                - name: Addprintprovidor
+                  href: addprintprovidor.md
+                - name: Coreprinterdriverinstalliert
+                  href: coreprinterdriverinstalled.md
+                - name: Deletemonitor
+                  href: deletemonitor.md
+                - name: DeletePort
+                  href: deleteport.md
+                - name: Deleteprinterdriver
+                  href: deleteprinterdriver.md
+                - name: Deleteprinterdriverex
+                  href: deleteprinterdriverex.md
+                - name: Deleteprinterdriverpackage
+                  href: deleteprinterdriverpackage.md
+                - name: Deleteprintprocessor
+                  href: deleteprintprocessor.md
+                - name: Deleteprintprovidor
+                  href: deleteprintprovidor.md
+                - name: Enumüberwachungen
+                  href: enummonitors.md
+                - name: EnumPorts
+                  href: enumports.md
+                - name: Enumprinterdrivers
+                  href: enumprinterdrivers.md
+                - name: Enumprintprocessordatatypes
+                  href: enumprintprocessordatatypes.md
+                - name: Enumprintprozessoren
+                  href: enumprintprocessors.md
+                - name: Getcoreprinterdrivers
+                  href: getcoreprinterdrivers.md
+                - name: Getprinterdriver
+                  href: getprinterdriver.md
+                - name: GetPrinterDriver2
+                  href: getprinterdriver2.md
+                - name: Getprinterdriverdirectory
+                  href: getprinterdriverdirectory.md
+                - name: GetPrinterDriverPackagePath
+                  href: getprinterdriverpackagepath.md
+                - name: Getprintprocessordirectory
+                  href: getprintprocessordirectory.md
+                - name: Installprinterdriverfrompackage
+                  href: installprinterdriverfrompackage.md
+                - name: Uploadprinterdriverpackage
+                  href: uploadprinterdriverpackage.md
+        - name: Print Ticket-API
+          href: print-ticket-api.md
+          items:
+            - name: Druckticket-API-Funktionen
+              href: print-ticket-api-functions.md
+              items:
+                - name: ConvertDevModeToPrintTicketThunk2
+                  href: convertdevmodetoprintticketthunk2.md
+                - name: ConvertPrintTicketToDevModeThunk2
+                  href: convertprinttickettodevmodethunk2.md
+                - name: MergeAndValidatePrintTicketThunk2
+                  href: mergeandvalidateprintticketthunk2.md
+                - name: Ptcloseprovider
+                  href: /windows/desktop/api/prntvpt/nf-prntvpt-ptcloseprovider
+                - name: Ptconvertdevmodetoprintticket
+                  href: /windows/desktop/api/prntvpt/nf-prntvpt-ptconvertdevmodetoprintticket
+                - name: Ptconvertprintticketdedevmode
+                  href: /windows/desktop/api/prntvpt/nf-prntvpt-ptconvertprinttickettodevmode
+                - name: Ptgetprint-Funktionen
+                  href: /windows/desktop/api/prntvpt/nf-prntvpt-ptgetprintcapabilities
+                - name: Ptgetprintdebug-Funktionen
+                  href: /windows/desktop/api/prntvpt/nf-prntvpt-ptgetprintdevicecapabilities
+                - name: Ptgetprintdeviceresources
+                  href: /windows/desktop/api/prntvpt/nf-prntvpt-ptgetprintdeviceresources
+                - name: Ptmergeandvalidateprintticket
+                  href: /windows/desktop/api/prntvpt/nf-prntvpt-ptmergeandvalidateprintticket
+                - name: Ptopenprovider
+                  href: /windows/desktop/api/prntvpt/nf-prntvpt-ptopenprovider
+                - name: Ptopzuproviderex
+                  href: /windows/desktop/api/prntvpt/nf-prntvpt-ptopenproviderex
+                - name: Ptqueryschemaversionsupport
+                  href: /windows/desktop/api/prntvpt/nf-prntvpt-ptqueryschemaversionsupport
+                - name: Ptreleasememory
+                  href: /windows/desktop/api/prntvpt/nf-prntvpt-ptreleasememory
+                - name: Unbindptproviderthunk
+                  href: unbindptproviderthunk.md
+            - name: API-Enumerationen der Druck Ticket
+              href: print-ticket-api-enumerations.md
+              items:
+                - name: Edefaultdevmodetype
+                  href: /windows/win32/api/prntvpt/ne-prntvpt-edefaultdevmodetype
+                - name: Eprintticketscope
+                  href: /windows/desktop/api/prntvpt/ne-prntvpt-eprintticketscope
+        - name: GDI-Druck-API
+          href: gdi-printing.md
+          items:
+            - name: Informationen zur GDI-Druck-API
+              href: about-the-gdi-print-api.md
+              items:
+                - name: Standarddruck Schnittstelle
+                  href: default-printing-interface.md
+                  items:
+                    - name: Druckspooler
+                      href: print-spooler.md
+                    - name: Druck Prozessor
+                      href: print-processor.md
+                    - name: Port Monitore
+                      href: port-monitors.md
+                - name: Drucker Geräte Kontexte
+                  href: printer-output.md
+                - name: Drucker Escapezeichen
+                  href: printer-escapes.md
+                - name: WYSIWYG-Anzeige und-Ausgabe
+                  href: wysiwyg-display-and-output.md
+                - name: Per-User DEVMODE
+                  href: per-user-devmode.md
+            - name: Verwenden der GDI-Druck-API
+              href: using-the-printing-functions.md
+              items:
+                - name: 'Vorgehensweise: Drucken mithilfe der GDI-Druck-API'
+                  href: how-to--print-using-the-gdi-print-api.md
+                - name: 'Gewusst wie: direktes Senden von Daten an einen GDI-Drucker'
+                  href: sending-data-directly-to-a-printer.md
+            - name: Referenz zur GDI-Druck-API
+              href: gdi-print-api-reference.md
+              items:
+                - name: GDI-druckapi-Funktionen
+                  href: gdi-print-api-functions.md
+                  items:
+                    - name: Abortdoc
+                      href: /windows/desktop/api/Wingdi/nf-wingdi-abortdoc
+                    - name: AbortProc
+                      href: /windows/desktop/api/Wingdi/nc-wingdi-abortproc
+                    - name: Gerätefunktionen
+                      href: /windows/desktop/api/WinGdi/nf-wingdi-devicecapabilitiesa
+                    - name: EndDoc
+                      href: /windows/desktop/api/Wingdi/nf-wingdi-enddoc
+                    - name: EndPage
+                      href: /windows/desktop/api/Wingdi/nf-wingdi-endpage
+                    - name: Escape
+                      href: /windows/desktop/api/Wingdi/nf-wingdi-escape
+                    - name: Extescape
+                      href: /windows/desktop/api/Wingdi/nf-wingdi-extescape
+                    - name: Iswindowredirectedforprint
+                      href: iswindowredirectedforprint.md
+                    - name: PrintWindow
+                      href: /windows/desktop/api/Winuser/nf-winuser-printwindow
+                    - name: SetAbortProc
+                      href: /windows/desktop/api/Wingdi/nf-wingdi-setabortproc
+                    - name: StartDoc
+                      href: /windows/desktop/api/Wingdi/nf-wingdi-startdoca
+                    - name: StartPage
+                      href: /windows/desktop/api/Wingdi/nf-wingdi-startpage
+                - name: GDI-druckapi-Strukturen
+                  href: gdi-print-api-structures.md
+                  items:
+                    - name: DEVMODE
+                      href: /windows/win32/api/wingdi/ns-wingdi-devmodea
+                    - name: DocInfo
+                      href: /windows/win32/api/Wingdi/ns-wingdi-docinfoa
+                    - name: Drawpatrect
+                      href: /windows/win32/api/Wingdi/ns-wingdi-drawpatrect
+                    - name: PSFEATURE_CUSTPAPER
+                      href: /windows/win32/api/Wingdi/ns-wingdi-psfeature_custpaper
+                    - name: PSFEATURE_OUTPUT
+                      href: /windows/win32/api/Wingdi/ns-wingdi-psfeature_output
+                    - name: Psinjectdata
+                      href: /windows/win32/api/Wingdi/ns-wingdi-psinjectdata
+                - name: Escapefunktionen für GDI-Drucker
+                  href: printer-escapes.md
+                  items:
+                    - name: Checkjpeer-Format-Drucker-Escapezeichen
+                      href: /previous-versions/windows/desktop/legacy/dd183421(v=vs.85)
+                    - name: Checkpngformat-Drucker Escapezeichen
+                      href: /previous-versions/windows/desktop/legacy/dd183424(v=vs.85)
+                    - name: Drawpatternrect-druckerescapezeichen
+                      href: /previous-versions/windows/desktop/legacy/dd162495(v=vs.85)
+                    - name: GET_PS_FEATURESETTING Drucker Escapezeichen
+                      href: /previous-versions/windows/desktop/legacy/dd144954(v=vs.85)
+                    - name: Gettechnology-Drucker Escape
+                      href: /previous-versions/windows/desktop/legacy/dd144931(v=vs.85)
+                    - name: Pass-Through-Drucker Escape
+                      href: /previous-versions/windows/desktop/legacy/dd162776(v=vs.85)
+                    - name: POSTSCRIPT_DATA Drucker Escapezeichen
+                      href: /previous-versions/windows/desktop/legacy/dd162828(v=vs.85)
+                    - name: POSTSCRIPT_IDENTIFY Drucker Escapezeichen
+                      href: /previous-versions/windows/desktop/legacy/dd162829(v=vs.85)
+                    - name: POSTSCRIPT_INJECTION Drucker Escapezeichen
+                      href: /previous-versions/windows/desktop/legacy/dd162830(v=vs.85)
+                    - name: POSTSCRIPT_PASSTHROUGH Drucker Escapezeichen
+                      href: /previous-versions/windows/desktop/legacy/dd162831(v=vs.85)
+                    - name: Queryescsupport-druckerescapezeichen
+                      href: /previous-versions/windows/desktop/legacy/ff686811(v=vs.85)
+                    - name: SPCLPASSTHROUGH2-Drucker-Escape
+                      href: /previous-versions/windows/desktop/legacy/dd145110(v=vs.85)
+            - name: Microsoft XPS Document Converter (mxdc)
+              href: microsoft-xps-document-converter--mxdc-.md
+              items:
+                - name: MXDC_ESCAPE-Funktion
+                  href: mxdc-escape.md
+                - name: MXDC_S0_PAGE_ENUMS-Enumeration
+                  href: mxdcs0pageenums.md
+                - name: Mxdc-escapecodestrukturen
+                  href: mxdc-escape-codes.md
+                  items:
+                    - name: MXDC_ESCAPE_HEADER_T
+                      href: mxdcescapeheader.md
+                    - name: MXDC_GET_FILENAME_DATA_T
+                      href: mxdcgetfilenamedata.md
+                    - name: MXDC_PRINTTICKET_ESCAPE_T
+                      href: mxdcprintticketescape.md
+                    - name: MXDC_PRINTTICKET_DATA_T
+                      href: mxdcprintticketpassthrough.md
+                    - name: MXDC_S0PAGE_DATA_T
+                      href: mxdcs0pagedata.md
+                    - name: MXDC_S0PAGE_PASSTHROUGH_ESCAPE_T
+                      href: mxdcs0pagepassthroughescape.md
+                    - name: MXDC_S0PAGE_RESOURCE_ESCAPE_T
+                      href: mxdcs0pageresourceescape.md
+                    - name: MXDC_XPS_S0PAGE_RESOURCE_T
+                      href: mxdcxpss0pageresource.md
+            - name: Microsoft XPS Document Writer (MXDW)
+              href: microsoft-xps-document-writer.md
+              items:
+                - name: MXDW-Konfigurationseinstellungen
+                  href: mxdw-configuration-settings.md
+        - name: XPS-Druck-API
+          href: xps-printing.md
+          items:
+            - name: Informationen zur XPS-Druck-API
+              href: about-xps-print-api.md
+            - name: Verwenden der XPS-Druck-API
+              href: using-the-xps-print-api.md
+              items:
+                - name: 'Gewusst wie: Drucken mit der XPS-Druck-API'
+                  href: printing-with-the-xpsprint-api.md
+                - name: 'Gewusst wie: direktes Senden von Daten an einen XPS-Drucker'
+                  href: sending-data-directly-to-an-xps-printer.md
+            - name: XPS-Druck-API-Referenz
+              href: xpsprint-api.md
+              items:
+                - name: XPS-druckapi-Schnittstellen
+                  href: xpsprint-interfaces.md
+                  items:
+                    - name: Ixpsprintjob
+                      href: /windows/desktop/api/XpsPrint/nn-xpsprint-ixpsprintjob
+                      items:
+                        - name: Abbrechen
+                          href: /windows/desktop/api/XpsPrint/nf-xpsprint-ixpsprintjob-cancel
+                        - name: Getjobstatus
+                          href: /windows/desktop/api/XpsPrint/nf-xpsprint-ixpsprintjob-getjobstatus
+                    - name: Ixpsprintjobstream
+                      href: /windows/desktop/api/XpsPrint/nn-xpsprint-ixpsprintjobstream
+                      items:
+                        - name: Schließen
+                          href: /windows/desktop/api/XpsPrint/nf-xpsprint-ixpsprintjobstream-close
+                - name: Funktionen der XPS-Druck-API
+                  href: xpsprint-functions.md
+                  items:
+                    - name: Startxpsprintjob
+                      href: /windows/desktop/api/XpsPrint/nf-xpsprint-startxpsprintjob
+                    - name: StartXpsPrintJob1
+                      href: /windows/desktop/api/XpsPrint/nf-xpsprint-startxpsprintjob1
+                - name: XPS-Druck-API-Strukturen
+                  href: xpsprint-structures.md
+                  items:
+                    - name: XPS_JOB_STATUS
+                      href: /windows/win32/api/XpsPrint/ns-xpsprint-xps_job_status
+                - name: XPS-druckapi-Enumerationen
+                  href: xpsprint-enumerations.md
+                  items:
+                    - name: XPS_JOB_COMPLETION
+                      href: /windows/win32/api/XpsPrint/ne-xpsprint-xps_job_completion
+    - name: Druck Schema
+      href: printschema.md
+      items:
+        - name: Ältere Druck Schema Referenz
+          href: print-schema.md
+          items:
+            - name: Hintergrund des Druck Schemas
+              href: print-schema-background.md
+            - name: Kurzanleitung
+              href: quick-starter-guide.md
+            - name: Druck Schema-Related Technologien
+              href: print-schema-related-technologies.md
+            - name: Sprach Hinweise zum Druck Schema
+              href: print-schema-language-notes.md
+            - name: 'Begriffe, die im Druck Schema verwendet werden'
+              href: terms-used-in-the-print-schema.md
+            - name: Syntax des Druck Schemas
+              href: syntax-of-the-print-schema.md
+            - name: Zusammenfassung der Element Typen
+              href: summary-of-element-types.md
+              items:
+                - name: Feature
+                  href: feature.md
+                - name: Option
+                  href: option.md
+                - name: ParameterDef
+                  href: parameterdef.md
+                - name: Parameterinit
+                  href: parameterinit.md
+                - name: ParameterRef
+                  href: parameterref.md
+                - name: PrintCapabilities
+                  href: printcapabilities.md
+                - name: PrintTicket
+                  href: printticket.md
+                - name: Eigenschaft
+                  href: property.md
+                - name: ScoredProperty
+                  href: scoredproperty.md
+                - name: Wert
+                  href: value.md
+            - name: Print Schema Framework
+              href: print-schema-framework.md
+              items:
+                - name: Bereichs Präfix
+                  href: scoping-prefix.md
+                - name: Parameterkonstrukte
+                  href: parameter-constructs.md
+                  items:
+                    - name: ParameterDef-und parameterinit-Elemente
+                      href: parameterdef-and-parameterinit-elements.md
+                    - name: ParameterRef-Elemente
+                      href: parameter-reference-elements.md
+                - name: In den Schlüsselwörtern des Druck Schemas definierte Objekte und Namen
+                  href: objects-and-names-defined-in-the-print-schema-keywords.md
+                - name: XML-Attribute
+                  href: xml-attributes.md
+                - name: Farbverwaltung und das Druck Schema
+                  href: color-management-and-the-print-schema.md
+            - name: Öffentliche Schlüsselwörter des Druck Schemas
+              href: print-schema-public-keywords.md
+              items:
+                - name: Öffentliche Schlüsselwörter von printfunktionalitäten
+                  href: printcapabilities-public-keywords.md
+                  items:
+                    - name: Vom benutzerkonfigurierbare Elemente
+                      href: user-configurable-elements.md
+                      items:
+                        - name: Documentbannersheet
+                          href: documentbannersheet.md
+                        - name: Documentbinding
+                          href: documentbinding.md
+                        - name: DocumentCollate
+                          href: documentcollate.md
+                        - name: Documentcoverback
+                          href: documentcoverback.md
+                        - name: Documentcoverfront
+                          href: documentcoverfront.md
+                        - name: DocumentDuplex
+                          href: documentduplex.md
+                        - name: Documentholepunch
+                          href: documentholepunch.md
+                        - name: DocumentInputBin
+                          href: documentinputbin.md
+                        - name: DocumentNUp
+                          href: documentnup.md
+                        - name: Documentoutputbin
+                          href: documentoutputbin.md
+                        - name: Documentrollcut
+                          href: documentrollcut.md
+                        - name: Documentseparatorsheet
+                          href: documentseparatorsheet.md
+                        - name: DocumentStaple
+                          href: documentstaple.md
+                        - name: Jobaccountingsheet
+                          href: jobaccountingsheet.md
+                        - name: Jobprimarybannersheet
+                          href: jobprimarybannersheet.md
+                        - name: Jobbindalldocuments
+                          href: jobbindalldocuments.md
+                        - name: JobCollateAllDocuments
+                          href: jobcollatealldocuments.md
+                        - name: Jobprimarycoverback
+                          href: jobprimarycoverback.md
+                        - name: Jobprimarycoverfront
+                          href: jobprimarycoverfront.md
+                        - name: Jobdevicelanguage
+                          href: jobdevicelanguage.md
+                        - name: Jobdigitalsignatureprocessing
+                          href: jobdigitalsignatureprocessing.md
+                        - name: Jobduplexalldocumentszusammen hängend
+                          href: jobduplexalldocumentscontiguously.md
+                        - name: Joberrorsheet
+                          href: joberrorsheet.md
+                        - name: Jobholepunch
+                          href: jobholepunch.md
+                        - name: JobInputBin
+                          href: jobinputbin.md
+                        - name: Jobnupalldocumentszusammen hängend
+                          href: jobnupalldocumentscontiguously.md
+                        - name: Joboptimaldestinationcolorprofile
+                          href: joboptimaldestinationcolorprofile.md
+                        - name: Joboutputoptimization
+                          href: joboutputoptimization.md
+                        - name: Joboutputbin
+                          href: joboutputbin.md
+                        - name: Jobpage Order
+                          href: jobpageorder.md
+                        - name: Jobrollcutatendof Job
+                          href: jobrollcutatendofjob.md
+                        - name: JobStapleAllDocuments
+                          href: jobstaplealldocuments.md
+                        - name: '"Pgeblackgenerationprocessing"'
+                          href: pageblackgenerationprocessing.md
+                        - name: '"Pgeblendcolorspace"'
+                          href: pageblendcolorspace.md
+                        - name: Paarlose
+                          href: pageborderless.md
+                        - name: Pagecolormanagement
+                          href: pagecolormanagement.md
+                        - name: Pagedestinationcolorprofile
+                          href: pagedestinationcolorprofile.md
+                        - name: Pagede vicecolorspaceusage
+                          href: pagedevicecolorspaceusage.md
+                        - name: Pagede vicefontsubstitution
+                          href: pagedevicefontsubstitution.md
+                        - name: Pageforcefrontside
+                          href: pageforcefrontside.md
+                        - name: Pageicmrenderingintent
+                          href: pageicmrenderingintent.md
+                        - name: PageImageableSize
+                          href: pageimageablesize.md
+                        - name: Paginput bin
+                          href: pageinputbin.md
+                        - name: Pagemediacolor
+                          href: pagemediacolor.md
+                        - name: PageMediaSize
+                          href: pagemediasize.md
+                        - name: PageMediaType
+                          href: pagemediatype.md
+                        - name: Pagemirrorimage
+                          href: pagemirrorimage.md
+                        - name: Pagenegativeimage
+                          href: pagenegativeimage.md
+                        - name: PageOrientation
+                          href: pageorientation.md
+                        - name: Pageoutputbin
+                          href: pageoutputbin.md
+                        - name: PageOutputColor
+                          href: pageoutputcolor.md
+                        - name: PageOutputQuality
+                          href: pageoutputquality.md
+                        - name: Pagephotoprintingintent
+                          href: pagephotoprintingintent.md
+                        - name: Pageposter
+                          href: pageposter.md
+                        - name: PageResolution
+                          href: pageresolution.md
+                        - name: PageScaling
+                          href: pagescaling.md
+                        - name: Pagesourcecolorprofile
+                          href: pagesourcecolorprofile.md
+                        - name: Pagetruetypeer fontmode
+                          href: pagetruetypefontmode.md
+                        - name: Einfügemarke
+                          href: pagewatermark.md
+                    - name: Parameterdefinitionen
+                      href: parameter-definitions.md
+                      items:
+                        - name: Documentbannersheetsource
+                          href: documentbannersheetsource.md
+                        - name: Documentbindingmötter
+                          href: documentbindinggutter.md
+                        - name: DocumentCopiesAllPages
+                          href: documentcopiesallpages.md
+                        - name: Documentcoverbacksource
+                          href: documentcoverbacksource.md
+                        - name: Documentcoverfrontsource
+                          href: documentcoverfrontsource.md
+                        - name: Documentimpositioncolor
+                          href: documentimpositioncolor.md
+                        - name: DocumentPageRanges
+                          href: documentpageranges.md
+                        - name: Jobprimarybannersheetsource
+                          href: jobprimarybannersheetsource.md
+                        - name: Jobbindalldocumentsmötter
+                          href: jobbindalldocumentsgutter.md
+                        - name: Jobcomment
+                          href: jobcomment.md
+                        - name: JobCopiesAllDocuments
+                          href: jobcopiesalldocuments.md
+                        - name: Jobprimarycoverbacksource
+                          href: jobprimarycoverbacksource.md
+                        - name: Jobprimarycoverfrontsource
+                          href: jobprimarycoverfrontsource.md
+                        - name: Joberrorsheetsource
+                          href: joberrorsheetsource.md
+                        - name: Pgeblackgenerationprocessingblackinklimit
+                          href: pageblackgenerationprocessingblackinklimit.md
+                        - name: '"Pgeblackgenerationprocessinggraycomponentreplacementlevel"'
+                          href: pageblackgenerationprocessinggraycomponentreplacementlevel.md
+                        - name: '"Pgeblackgenerationprocessinggraycomponentreplacementextent"'
+                          href: pageblackgenerationprocessinggraycomponentreplacementextent.md
+                        - name: '"Pgeblackgenerationprocessinggraycomponentreplacementstart"'
+                          href: pageblackgenerationprocessinggraycomponentreplacementstart.md
+                        - name: '"Pgeblackgenerationprocessingtotalinkcoveragelimit"'
+                          href: pageblackgenerationprocessingtotalinkcoveragelimit.md
+                        - name: '"Pgeblackgenerationprocessingundercoloradditionlevel"'
+                          href: pageblackgenerationprocessingundercoloradditionlevel.md
+                        - name: '"Pgeblackgenerationprocessingundercoloradditionstart"'
+                          href: pageblackgenerationprocessingundercoloradditionstart.md
+                        - name: '"Pgeblendcolorspaceiccprofileuri"'
+                          href: pageblendcolorspaceiccprofileuri.md
+                        - name: Pagekopien
+                          href: pagecopies.md
+                        - name: Pagedestinationcolorprofileembedded
+                          href: pagedestinationcolorprofileembedded.md
+                        - name: Pagedestinationcolorprofileuri
+                          href: pagedestinationcolorprofileuri.md
+                        - name: Pagede vicecolorspaceprofileuri
+                          href: pagedevicecolorspaceprofileuri.md
+                        - name: Pagemediasizemediasizewidth
+                          href: pagemediasizemediasizewidth.md
+                        - name: Pagemediasizemediasizeheight
+                          href: pagemediasizemediasizeheight.md
+                        - name: Pagemediasizepsheight
+                          href: pagemediasizepsheight.md
+                        - name: Pagemediasizepsheighworffset
+                          href: pagemediasizepsheightoffset.md
+                        - name: Pagemediasizepsorientation
+                          href: pagemediasizepsorientation.md
+                        - name: Pagemediasizepswidth
+                          href: pagemediasizepswidth.md
+                        - name: Pagemediasizepswidthoffset
+                          href: pagemediasizepswidthoffset.md
+                        - name: Pagescalingoffte twidth
+                          href: pagescalingoffsetwidth.md
+                        - name: Pagescalingoffertheight
+                          href: pagescalingoffsetheight.md
+                        - name: PageScalingScale
+                          href: pagescalingscale.md
+                        - name: PageScalingScaleWidth
+                          href: pagescalingscalewidth.md
+                        - name: PageScalingScaleHeight
+                          href: pagescalingscaleheight.md
+                        - name: Pagesourcecolorprofileembedded
+                          href: pagesourcecolorprofileembedded.md
+                        - name: Pagesourcecolorprofileuri
+                          href: pagesourcecolorprofileuri.md
+                        - name: '"Pgewatermarkoriginwidth"'
+                          href: pagewatermarkoriginwidth.md
+                        - name: '"Pgewatermarkoriginheight"'
+                          href: pagewatermarkoriginheight.md
+                        - name: '"Pgewatermarktextangle"'
+                          href: pagewatermarktextangle.md
+                        - name: '"Pgewatermarktextcolor"'
+                          href: pagewatermarktextcolor.md
+                        - name: '"Pgewatermarktextfontsize"'
+                          href: pagewatermarktextfontsize.md
+                        - name: '"Pgewatermarktexttext"'
+                          href: pagewatermarktexttext.md
+                        - name: '"Pgewatermarktransparenz"'
+                          href: pagewatermarktransparency.md
+                - name: Öffentliche Schlüsselwörter von PrintTicket
+                  href: printticket-public-keywords.md
+                  items:
+                    - name: Beschreibungen der PrintTicket-spezifischen Eigenschaften
+                      href: printticket-specific-property-descriptions.md
+                      items:
+                        - name: DocumentID
+                          href: documentid.md
+                        - name: DocumentName
+                          href: documentname.md
+                        - name: Documenturi
+                          href: documenturi.md
+                        - name: JobID
+                          href: jobid.md
+                        - name: JobName
+                          href: jobname.md
+                        - name: Joburi
+                          href: joburi.md
+                    - name: Parameterinitialisierer
+                      href: parameter-initializers.md
+            - name: Printfunktionalitäten-Schema und Dokument Erstellung
+              href: printcapabilities-schema-and-document-construction.md
+              items:
+                - name: Übersicht über Print-Funktionen
+                  href: overview-of-the-printcapabilities.md
+                  items:
+                    - name: Geräte Konfigurationsbereich und Geräte Konfigurationen
+                      href: device-configuration-space-and-device-configurations.md
+                    - name: Printfunktionalitäten-Dokument als Momentaufnahme von Eigenschaften
+                      href: printcapabilities-document-as-a-snapshot-of-properties.md
+                    - name: Darstellen von Attributen als Feature/Options-Konstrukte oder als Parameter
+                      href: representing-attributes-as-feature-option-constructs-or-as-parameters.md
+                    - name: Das Dokument "printfunktionalitäten" ist nicht
+                      href: what-a-printcapabilities-document-is-not.md
+                    - name: Verwendung der Print-Funktionen
+                      href: uses-of-the-printcapabilities.md
+                - name: Konfigurations Abhängigkeit im printfunktionalitäten-Schema
+                  href: configuration-dependency-in-the-printcapabilities-schema.md
+                - name: Prüfliste zur Erstellung von printfunktionen
+                  href: printcapabilities-document-construction-checklist.md
+                - name: Details zum printfunktionalitäten-Schema
+                  href: details-of-the-printcapabilities-schema.md
+                  items:
+                    - name: Features und Optionen
+                      href: features-and-options.md
+                      items:
+                        - name: Options Definitionen
+                          href: option-definitions.md
+                        - name: Ausführlichere Options Definitionen
+                          href: more-elaborate-option-definitions.md
+                          items:
+                            - name: Geschsted ScoredProperty-Instanzen
+                              href: nested-scoredproperty-instances.md
+                            - name: Verweis Parameter
+                              href: referencing-parameters.md
+                            - name: Verhalten der Benutzeroberfläche
+                              href: user-interface-behavior.md
+                            - name: Parametrisierte Optionen im Vergleich zu nicht parametrisierten Optionen
+                              href: parameterized-options-versus-nonparameterized-options.md
+                            - name: Hinzufügen von Eigenschaften Instanzen
+                              href: adding-property-instances.md
+                        - name: Wichtige Eigenschaften Instanzen
+                          href: important-property-instances.md
+                          items:
+                            - name: Hinweis für GPD-Autoren
+                              href: note-to-gpd-authors.md
+                    - name: Parameter im printfunktionalitäten-Dokument
+                      href: parameters-in-the-printcapabilities-document.md
+                      items:
+                        - name: Verwenden von Parametern
+                          href: using-parameters.md
+                    - name: Einschränkungen für Schema-Imposed
+                      href: schema-imposed-limitations.md
+                - name: Verbinden von printfunktionen mit dem Druck Schema
+                  href: connecting-printcapabilities-with-the-print-schema.md
+                - name: Zuständigkeiten von Kunden des Printworks-Dokuments
+                  href: responsibilities-of-consumers-of-the-printcapabilities-document.md
+                - name: Zuständigkeiten von printfunktionalitäten-Anbietern
+                  href: responsibilities-of-printcapabilities-providers.md
+                - name: Beispiel für printfunktionalitäten-Dokument
+                  href: printcapabilities-document-example.md
+            - name: PrintTicket-Schema und Dokument Erstellung
+              href: printticket-schema-and-document-construction.md
+              items:
+                - name: Übersicht über die PrintTicket-Funktionalität
+                  href: overview-of-printticket-functionality.md
+                  items:
+                    - name: Zweck des Print Ticket
+                      href: purpose-of-the-printticket.md
+                    - name: 'Konfigurationsinformationen, die nicht mit Print-Funktionen verknüpft sind'
+                      href: configuration-information-not-related-to-printcapabilities.md
+                    - name: Einschränkungen und PrintTicket-Validierung
+                      href: constraints-and-printticket-validation.md
+                - name: Print Ticket-Syntax und-Schema
+                  href: printticket-syntax-and-schema.md
+                - name: Checklisten für die PrintTicket-Erstellung
+                  href: printticket-construction-checklists.md
+                  items:
+                    - name: Erstellen eines generischen PrintTicket
+                      href: creating-a-generic-printticket.md
+                    - name: Erstellen eines Device-Specific PrintTicket
+                      href: creating-a-device-specific-printticket.md
+                - name: Prüfprüfliste für PrintTicket
+                  href: printticket-validation-checklist.md
+                - name: Weitere Überlegungen zu PrintTicket-Anbietern
+                  href: additional-considerations-for-printticket-providers.md
+                  items:
+                    - name: Unterstützen von PrintTicket-Delta
+                      href: supporting-printticket-deltas.md
+                    - name: Erstellen eines Standard-PrintTicket
+                      href: creating-a-default-printticket.md
+                    - name: Erstellen eines printfunktionalitäten-Dokuments
+                      href: creating-a-printcapabilities-document.md
+                    - name: Unterstützende Schema Versionen
+                      href: supporting-schema-versions.md
+                - name: Print Ticket-Beispiel
+                  href: printticket-example.md
