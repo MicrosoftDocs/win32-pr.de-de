@@ -1,0 +1,63 @@
+---
+description: 'Ermöglicht dem Rückruf Objekt, eine QuickInfo-Text Zeichenfolge für Menü Elemente oder Symbolleisten-Schaltflächen anzugeben. Wird von ishellfolderviewcb:: messagesfvcb verwendet.'
+ms.assetid: 29849218-0d30-4412-86c8-5d320bc5dd26
+title: SFVM_GETTOOLTIPTEXT Meldung (shlobj. h)
+ms.topic: reference
+ms.date: 05/31/2018
+ms.openlocfilehash: 9ffea70f6051ec435e14640ac70d2e9617b11305
+ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "103960767"
+---
+# <a name="sfvm_gettooltiptext-message"></a><span data-ttu-id="043bb-104">Sfvm \_ GetToolTipText-Nachricht</span><span class="sxs-lookup"><span data-stu-id="043bb-104">SFVM\_GETTOOLTIPTEXT message</span></span>
+
+<span data-ttu-id="043bb-105">Ermöglicht dem Rückruf Objekt, eine QuickInfo-Text Zeichenfolge für Menü Elemente oder Symbolleisten-Schaltflächen anzugeben.</span><span class="sxs-lookup"><span data-stu-id="043bb-105">Allows the callback object to specify a tooltip text string for menu items or toolbar buttons.</span></span> <span data-ttu-id="043bb-106">Wird von [**ishellfolderviewcb:: messagesfvcb**](/windows/win32/api/shlobj_core/nf-shlobj_core-ishellfolderviewcb-messagesfvcb)verwendet.</span><span class="sxs-lookup"><span data-stu-id="043bb-106">Used by [**IShellFolderViewCB::MessageSFVCB**](/windows/win32/api/shlobj_core/nf-shlobj_core-ishellfolderviewcb-messagesfvcb).</span></span>
+
+
+```C++
+SFVM_GETTOOLTIPTEXT 
+
+    wParam = (WPARAM)(int) idCmd,cchMax;
+
+    lParam = (LPARAM)(LPTSTR) pszText;
+
+            
+```
+
+
+
+## <a name="parameters"></a><span data-ttu-id="043bb-107">Parameter</span><span class="sxs-lookup"><span data-stu-id="043bb-107">Parameters</span></span>
+
+<dl> <dt>
+
+<span data-ttu-id="043bb-108">*idcmd \_ cchmax* \[ in\]</span><span class="sxs-lookup"><span data-stu-id="043bb-108">*idCmd\_cchMax* \[in\]</span></span>
+</dt> <dd>
+
+<span data-ttu-id="043bb-109">Das nieder wertige Wort dieses Parameters enthält die Befehls-ID.</span><span class="sxs-lookup"><span data-stu-id="043bb-109">The low-order word of this parameter holds the command ID.</span></span> <span data-ttu-id="043bb-110">Das höchst wertige Wort enthält die Anzahl der Zeichen im *pszText* -Puffer.</span><span class="sxs-lookup"><span data-stu-id="043bb-110">The high-order word holds the number of characters in the *pszText* buffer.</span></span>
+
+</dd> <dt>
+
+<span data-ttu-id="043bb-111">*pszText* \[ vorgenommen\]</span><span class="sxs-lookup"><span data-stu-id="043bb-111">*pszText* \[out\]</span></span>
+</dt> <dd>
+
+<span data-ttu-id="043bb-112">Eine mit NULL endenden Zeichenfolge, die den Hilfetext enthält.</span><span class="sxs-lookup"><span data-stu-id="043bb-112">A null-terminated string containing the help text.</span></span>
+
+</dd> </dl>
+
+## <a name="requirements"></a><span data-ttu-id="043bb-113">Requirements (Anforderungen)</span><span class="sxs-lookup"><span data-stu-id="043bb-113">Requirements</span></span>
+
+
+
+| <span data-ttu-id="043bb-114">Anforderung</span><span class="sxs-lookup"><span data-stu-id="043bb-114">Requirement</span></span> | <span data-ttu-id="043bb-115">Wert</span><span class="sxs-lookup"><span data-stu-id="043bb-115">Value</span></span> |
+|-------------------------------------|-------------------------------------------------------------------------------------|
+| <span data-ttu-id="043bb-116">Unterstützte Mindestversion (Client)</span><span class="sxs-lookup"><span data-stu-id="043bb-116">Minimum supported client</span></span><br/> | <span data-ttu-id="043bb-117">Windows 2000 Professional \[nur Desktop-Apps\]</span><span class="sxs-lookup"><span data-stu-id="043bb-117">Windows 2000 Professional \[desktop apps only\]</span></span><br/>                          |
+| <span data-ttu-id="043bb-118">Unterstützte Mindestversion (Server)</span><span class="sxs-lookup"><span data-stu-id="043bb-118">Minimum supported server</span></span><br/> | <span data-ttu-id="043bb-119">Windows 2000 Server \[nur Desktop-Apps\]</span><span class="sxs-lookup"><span data-stu-id="043bb-119">Windows 2000 Server \[desktop apps only\]</span></span><br/>                                |
+| <span data-ttu-id="043bb-120">Header</span><span class="sxs-lookup"><span data-stu-id="043bb-120">Header</span></span><br/>                   | <dl> <span data-ttu-id="043bb-121"><dt>Shlobj. h</dt></span><span class="sxs-lookup"><span data-stu-id="043bb-121"><dt>Shlobj.h</dt></span></span> </dl> |
+
+
+
+ 
+
+ 

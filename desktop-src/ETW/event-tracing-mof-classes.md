@@ -1,0 +1,150 @@
+---
+description: Die Klassen werden im Stamm- \\ \\ WMI-Namespace definiert.
+ms.assetid: b86c3863-b92c-4f6c-b953-3e0638bc915e
+title: MOF-Klassen der Ereignis Ablauf Verfolgung
+ms.topic: article
+ms.date: 05/31/2018
+ms.openlocfilehash: c0a94fb5608ddcdd8a13df2d221adf3d032f6be8
+ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "103958753"
+---
+# <a name="event-tracing-mof-classes"></a><span data-ttu-id="1ecab-103">MOF-Klassen der Ereignis Ablauf Verfolgung</span><span class="sxs-lookup"><span data-stu-id="1ecab-103">Event Tracing MOF Classes</span></span>
+
+<span data-ttu-id="1ecab-104">Die Klassen werden im Stamm- \\ \\ WMI-Namespace definiert.</span><span class="sxs-lookup"><span data-stu-id="1ecab-104">The classes are defined in the \\root\\wmi namespace.</span></span> <span data-ttu-id="1ecab-105">Der **eventversion** -Qualifizierer für die Kernel Ereignisse verknüpft die Klasse mit einem bestimmten Betriebssystem.</span><span class="sxs-lookup"><span data-stu-id="1ecab-105">The **EventVersion** qualifier for the kernel events associates the class with a specific operating system.</span></span> <span data-ttu-id="1ecab-106">Beispielsweise ist Version Zero mit Windows 2000 verknüpft, Version eins mit Windows XP und Windows Server 2003 und Version 2 mit Windows Vista.</span><span class="sxs-lookup"><span data-stu-id="1ecab-106">For example, version zero is associated with Windows 2000, version one with Windows XP and Windows Server 2003, and version two with Windows Vista.</span></span>
+
+<span data-ttu-id="1ecab-107">Die folgenden MOF-Klassen definieren die ETW-Ereignis Klassen.</span><span class="sxs-lookup"><span data-stu-id="1ecab-107">The following MOF classes define the ETW event classes.</span></span>
+
+-   [<span data-ttu-id="1ecab-108">**EventTrace**</span><span class="sxs-lookup"><span data-stu-id="1ecab-108">**EventTrace**</span></span>](eventtrace.md)
+-   [<span data-ttu-id="1ecab-109">**EventTrace- \_ Header**</span><span class="sxs-lookup"><span data-stu-id="1ecab-109">**EventTrace\_Header**</span></span>](eventtrace-header.md)
+-   [<span data-ttu-id="1ecab-110">**Eventtraceevent**</span><span class="sxs-lookup"><span data-stu-id="1ecab-110">**EventTraceEvent**</span></span>](eventtraceevent.md)
+-   [<span data-ttu-id="1ecab-111">**\_Ereignis Verlust**</span><span class="sxs-lookup"><span data-stu-id="1ecab-111">**Lost\_Event**</span></span>](lost-event.md)
+-   [<span data-ttu-id="1ecab-112">**MSNT \_ systemtrace**</span><span class="sxs-lookup"><span data-stu-id="1ecab-112">**MSNT\_SystemTrace**</span></span>](msnt-systemtrace.md)
+-   [<span data-ttu-id="1ecab-113">**RT \_ lostevent**</span><span class="sxs-lookup"><span data-stu-id="1ecab-113">**RT\_LostEvent**</span></span>](rt-lostevent.md)
+
+<span data-ttu-id="1ecab-114">Die folgenden MOF-Klassen definieren die Kernel Ereignis Klassen.</span><span class="sxs-lookup"><span data-stu-id="1ecab-114">The following MOF classes define the kernel events classes.</span></span>
+
+-   [<span data-ttu-id="1ecab-115">**ALPC**</span><span class="sxs-lookup"><span data-stu-id="1ecab-115">**ALPC**</span></span>](alpc.md)
+-   [<span data-ttu-id="1ecab-116">**ALPC- \_ Empfangs \_ Nachricht**</span><span class="sxs-lookup"><span data-stu-id="1ecab-116">**ALPC\_Receive\_Message**</span></span>](alpc-receive-message.md)
+-   [<span data-ttu-id="1ecab-117">**ALPC- \_ Sende \_ Nachricht**</span><span class="sxs-lookup"><span data-stu-id="1ecab-117">**ALPC\_Send\_Message**</span></span>](alpc-send-message.md)
+-   [<span data-ttu-id="1ecab-118">**ALPC- \_ Wartezeit**</span><span class="sxs-lookup"><span data-stu-id="1ecab-118">**ALPC\_Unwait**</span></span>](alpc-unwait.md)
+-   [<span data-ttu-id="1ecab-119">**ALPC \_ wartet \_ auf \_ neue \_ Nachricht**</span><span class="sxs-lookup"><span data-stu-id="1ecab-119">**ALPC\_Wait\_For\_New\_Message**</span></span>](alpc-wait-for-new-message.md)
+-   [<span data-ttu-id="1ecab-120">**ALPC \_ wartet \_ auf \_ Antwort**</span><span class="sxs-lookup"><span data-stu-id="1ecab-120">**ALPC\_Wait\_For\_Reply**</span></span>](alpc-wait-for-reply.md)
+-   [<span data-ttu-id="1ecab-121">**Cswitch**</span><span class="sxs-lookup"><span data-stu-id="1ecab-121">**CSwitch**</span></span>](cswitch.md)
+-   [<span data-ttu-id="1ecab-122">**DPC**</span><span class="sxs-lookup"><span data-stu-id="1ecab-122">**DPC**</span></span>](dpc.md)
+-   [<span data-ttu-id="1ecab-123">**Sowie**</span><span class="sxs-lookup"><span data-stu-id="1ecab-123">**DiskIo**</span></span>](diskio.md)
+-   [<span data-ttu-id="1ecab-124">**Diskio \_ TypeGroup1**</span><span class="sxs-lookup"><span data-stu-id="1ecab-124">**DiskIo\_TypeGroup1**</span></span>](diskio-typegroup1.md)
+-   [<span data-ttu-id="1ecab-125">**Diskio \_ TypeGroup2**</span><span class="sxs-lookup"><span data-stu-id="1ecab-125">**DiskIo\_TypeGroup2**</span></span>](diskio-typegroup2.md)
+-   [<span data-ttu-id="1ecab-126">**Diskio \_ TypeGroup3**</span><span class="sxs-lookup"><span data-stu-id="1ecab-126">**DiskIo\_TypeGroup3**</span></span>](diskio-typegroup3.md)
+-   [<span data-ttu-id="1ecab-127">**Drivercompleterequest**</span><span class="sxs-lookup"><span data-stu-id="1ecab-127">**DriverCompleteRequest**</span></span>](drivercompleterequest.md)
+-   [<span data-ttu-id="1ecab-128">**Drivercompleterequestreturn**</span><span class="sxs-lookup"><span data-stu-id="1ecab-128">**DriverCompleteRequestReturn**</span></span>](drivercompleterequestreturn.md)
+-   [<span data-ttu-id="1ecab-129">**Drivercompletionroutine**</span><span class="sxs-lookup"><span data-stu-id="1ecab-129">**DriverCompletionRoutine**</span></span>](drivercompletionroutine.md)
+-   [<span data-ttu-id="1ecab-130">**Drivermajorfunctioncallcenter**</span><span class="sxs-lookup"><span data-stu-id="1ecab-130">**DriverMajorFunctionCall**</span></span>](drivermajorfunctioncall.md)
+-   [<span data-ttu-id="1ecab-131">**Drivermajorfunctionreturn**</span><span class="sxs-lookup"><span data-stu-id="1ecab-131">**DriverMajorFunctionReturn**</span></span>](drivermajorfunctionreturn.md)
+-   [<span data-ttu-id="1ecab-132">**FileIo**</span><span class="sxs-lookup"><span data-stu-id="1ecab-132">**FileIo**</span></span>](fileio.md)
+-   [<span data-ttu-id="1ecab-133">**Erstellen von "fleio" \_**</span><span class="sxs-lookup"><span data-stu-id="1ecab-133">**FileIo\_Create**</span></span>](fileio-create.md)
+-   [<span data-ttu-id="1ecab-134">**"Fleio \_ direnum"**</span><span class="sxs-lookup"><span data-stu-id="1ecab-134">**FileIo\_DirEnum**</span></span>](fileio-direnum.md)
+-   [<span data-ttu-id="1ecab-135">**Informationen zu "Fi" \_**</span><span class="sxs-lookup"><span data-stu-id="1ecab-135">**FileIo\_Info**</span></span>](fileio-info.md)
+-   [<span data-ttu-id="1ecab-136">**\_Name des Namens**</span><span class="sxs-lookup"><span data-stu-id="1ecab-136">**FileIo\_Name**</span></span>](fileio-name.md)
+-   [<span data-ttu-id="1ecab-137">**"Fleio \_ opend"**</span><span class="sxs-lookup"><span data-stu-id="1ecab-137">**FileIo\_OpEnd**</span></span>](fileio-opend.md)
+-   [<span data-ttu-id="1ecab-138">**Fleio- \_ Lesevorgang**</span><span class="sxs-lookup"><span data-stu-id="1ecab-138">**FileIo\_ReadWrite**</span></span>](fileio-readwrite.md)
+-   [<span data-ttu-id="1ecab-139">**"Fleio \_ simpleop"**</span><span class="sxs-lookup"><span data-stu-id="1ecab-139">**FileIo\_SimpleOp**</span></span>](fileio-simpleop.md)
+-   [<span data-ttu-id="1ecab-140">**"Fleio \_ v0"**</span><span class="sxs-lookup"><span data-stu-id="1ecab-140">**FileIo\_V0**</span></span>](fileio-v0.md)
+-   [<span data-ttu-id="1ecab-141">**Name von "fleio \_ v0" \_**</span><span class="sxs-lookup"><span data-stu-id="1ecab-141">**FileIo\_V0\_Name**</span></span>](fileio-v0-name.md)
+-   [<span data-ttu-id="1ecab-142">**Fleio \_ v1**</span><span class="sxs-lookup"><span data-stu-id="1ecab-142">**FileIo\_V1**</span></span>](fileio-v1.md)
+-   [<span data-ttu-id="1ecab-143">**Name von fleio \_ v1 \_**</span><span class="sxs-lookup"><span data-stu-id="1ecab-143">**FileIo\_V1\_Name**</span></span>](fileio-v1-name.md)
+-   [<span data-ttu-id="1ecab-144">**Hwconfig**</span><span class="sxs-lookup"><span data-stu-id="1ecab-144">**HWConfig**</span></span>](hwconfig.md)
+-   [<span data-ttu-id="1ecab-145">**Hwconfig- \_ CPU**</span><span class="sxs-lookup"><span data-stu-id="1ecab-145">**HWConfig\_CPU**</span></span>](hwconfig-cpu.md)
+-   [<span data-ttu-id="1ecab-146">**Hwconfig- \_ logdisk**</span><span class="sxs-lookup"><span data-stu-id="1ecab-146">**HWConfig\_LogDisk**</span></span>](hwconfig-logdisk.md)
+-   [<span data-ttu-id="1ecab-147">**Hwconfig- \_ NIC**</span><span class="sxs-lookup"><span data-stu-id="1ecab-147">**HWConfig\_NIC**</span></span>](hwconfig-nic.md)
+-   [<span data-ttu-id="1ecab-148">**Hwconfig- \_ phydisk**</span><span class="sxs-lookup"><span data-stu-id="1ecab-148">**HWConfig\_PhyDisk**</span></span>](hwconfig-phydisk.md)
+-   [<span data-ttu-id="1ecab-149">**Image**</span><span class="sxs-lookup"><span data-stu-id="1ecab-149">**Image**</span></span>](image.md)
+-   [<span data-ttu-id="1ecab-150">**Laden von Bildern \_**</span><span class="sxs-lookup"><span data-stu-id="1ecab-150">**Image\_Load**</span></span>](image-load.md)
+-   [<span data-ttu-id="1ecab-151">**Bild \_ v0**</span><span class="sxs-lookup"><span data-stu-id="1ecab-151">**Image\_V0**</span></span>](image-v0.md)
+-   [<span data-ttu-id="1ecab-152">**Bild \_ v0 \_ Laden**</span><span class="sxs-lookup"><span data-stu-id="1ecab-152">**Image\_V0\_Load**</span></span>](image-v0-load.md)
+-   [<span data-ttu-id="1ecab-153">**Bild \_ v1**</span><span class="sxs-lookup"><span data-stu-id="1ecab-153">**Image\_V1**</span></span>](image-v1.md)
+-   [<span data-ttu-id="1ecab-154">**Bild \_ v1- \_ Auslastung**</span><span class="sxs-lookup"><span data-stu-id="1ecab-154">**Image\_V1\_Load**</span></span>](image-v1-load.md)
+-   [<span data-ttu-id="1ecab-155">**ISR**</span><span class="sxs-lookup"><span data-stu-id="1ecab-155">**ISR**</span></span>](isr.md)
+-   [<span data-ttu-id="1ecab-156">**Pagefault \_ v2**</span><span class="sxs-lookup"><span data-stu-id="1ecab-156">**PageFault\_V2**</span></span>](pagefault-v2.md)
+-   [<span data-ttu-id="1ecab-157">**Pagefault- \_ Hardfault**</span><span class="sxs-lookup"><span data-stu-id="1ecab-157">**PageFault\_HardFault**</span></span>](pagefault-hardfault.md)
+-   [<span data-ttu-id="1ecab-158">**Pagefault \_ imageloadbackup**</span><span class="sxs-lookup"><span data-stu-id="1ecab-158">**PageFault\_ImageLoadBacked**</span></span>](pagefault-imageloadbacked.md)
+-   [<span data-ttu-id="1ecab-159">**Pagefault \_ TypeGroup1**</span><span class="sxs-lookup"><span data-stu-id="1ecab-159">**PageFault\_TypeGroup1**</span></span>](pagefault-typegroup1.md)
+-   [<span data-ttu-id="1ecab-160">**Perfinfo**</span><span class="sxs-lookup"><span data-stu-id="1ecab-160">**PerfInfo**</span></span>](perfinfo.md)
+-   [<span data-ttu-id="1ecab-161">**Prozess**</span><span class="sxs-lookup"><span data-stu-id="1ecab-161">**Process**</span></span>](process.md)
+-   [<span data-ttu-id="1ecab-162">**Prozess \_ TypeGroup1**</span><span class="sxs-lookup"><span data-stu-id="1ecab-162">**Process\_TypeGroup1**</span></span>](process-typegroup1.md)
+-   [<span data-ttu-id="1ecab-163">**Prozess \_ v0**</span><span class="sxs-lookup"><span data-stu-id="1ecab-163">**Process\_V0**</span></span>](process-v0.md)
+-   [<span data-ttu-id="1ecab-164">**Prozess \_ v0 \_ TypeGroup1**</span><span class="sxs-lookup"><span data-stu-id="1ecab-164">**Process\_V0\_TypeGroup1**</span></span>](process-v0-typegroup1.md)
+-   [<span data-ttu-id="1ecab-165">**Prozess \_ v1**</span><span class="sxs-lookup"><span data-stu-id="1ecab-165">**Process\_V1**</span></span>](process-v1.md)
+-   [<span data-ttu-id="1ecab-166">**Prozess \_ v1 \_ TypeGroup1**</span><span class="sxs-lookup"><span data-stu-id="1ecab-166">**Process\_V1\_TypeGroup1**</span></span>](process-v1-typegroup1.md)
+-   [<span data-ttu-id="1ecab-167">**Prozess \_ v2**</span><span class="sxs-lookup"><span data-stu-id="1ecab-167">**Process\_V2**</span></span>](process-v2.md)
+-   [<span data-ttu-id="1ecab-168">**Process \_ v2 \_ TypeGroup1**</span><span class="sxs-lookup"><span data-stu-id="1ecab-168">**Process\_V2\_TypeGroup1**</span></span>](process-v2-typegroup1.md)
+-   [<span data-ttu-id="1ecab-169">**Process \_ v2 \_ TypeGroup2**</span><span class="sxs-lookup"><span data-stu-id="1ecab-169">**Process\_V2\_TypeGroup2**</span></span>](process-v2-typegroup2.md)
+-   [<span data-ttu-id="1ecab-170">**"Read ythread"**</span><span class="sxs-lookup"><span data-stu-id="1ecab-170">**ReadyThread**</span></span>](readythread.md)
+-   [<span data-ttu-id="1ecab-171">**Registrierung**</span><span class="sxs-lookup"><span data-stu-id="1ecab-171">**Registry**</span></span>](registry.md)
+-   [<span data-ttu-id="1ecab-172">**Registrierungs \_ TypeGroup1**</span><span class="sxs-lookup"><span data-stu-id="1ecab-172">**Registry\_TypeGroup1**</span></span>](registry-typegroup1.md)
+-   [<span data-ttu-id="1ecab-173">**Registrierung \_ v0**</span><span class="sxs-lookup"><span data-stu-id="1ecab-173">**Registry\_V0**</span></span>](registry-v0.md)
+-   [<span data-ttu-id="1ecab-174">**Registrierung \_ v0 \_ TypeGroup1**</span><span class="sxs-lookup"><span data-stu-id="1ecab-174">**Registry\_V0\_TypeGroup1**</span></span>](registry-v0-typegroup1.md)
+-   [<span data-ttu-id="1ecab-175">**Registrierung \_ v1**</span><span class="sxs-lookup"><span data-stu-id="1ecab-175">**Registry\_V1**</span></span>](registry-v1.md)
+-   [<span data-ttu-id="1ecab-176">**Registrierung \_ v1 \_ TypeGroup1**</span><span class="sxs-lookup"><span data-stu-id="1ecab-176">**Registry\_V1\_TypeGroup1**</span></span>](registry-v1-typegroup1.md)
+-   [<span data-ttu-id="1ecab-177">**Sampledprofile**</span><span class="sxs-lookup"><span data-stu-id="1ecab-177">**SampledProfile**</span></span>](sampledprofile.md)
+-   [<span data-ttu-id="1ecab-178">**Splitio**</span><span class="sxs-lookup"><span data-stu-id="1ecab-178">**SplitIo**</span></span>](splitio.md)
+-   [<span data-ttu-id="1ecab-179">**Splitio- \_ Informationen**</span><span class="sxs-lookup"><span data-stu-id="1ecab-179">**SplitIo\_Info**</span></span>](splitio-info.md)
+-   [<span data-ttu-id="1ecab-180">**Syscallenter**</span><span class="sxs-lookup"><span data-stu-id="1ecab-180">**SysCallEnter**</span></span>](syscallenter.md)
+-   [<span data-ttu-id="1ecab-181">**Syscallexit**</span><span class="sxs-lookup"><span data-stu-id="1ecab-181">**SysCallExit**</span></span>](syscallexit.md)
+-   [<span data-ttu-id="1ecab-182">**SystemConfig**</span><span class="sxs-lookup"><span data-stu-id="1ecab-182">**SystemConfig**</span></span>](systemconfig.md)
+-   [<span data-ttu-id="1ecab-183">**SystemConfig- \_ CPU**</span><span class="sxs-lookup"><span data-stu-id="1ecab-183">**SystemConfig\_CPU**</span></span>](systemconfig-cpu.md)
+-   [<span data-ttu-id="1ecab-184">**SystemConfig- \_ idechannel**</span><span class="sxs-lookup"><span data-stu-id="1ecab-184">**SystemConfig\_IDEChannel**</span></span>](systemconfig-idechannel.md)
+-   [<span data-ttu-id="1ecab-185">**SystemConfig \_ UNQ**</span><span class="sxs-lookup"><span data-stu-id="1ecab-185">**SystemConfig\_IRQ**</span></span>](systemconfig-irq.md)
+-   [<span data-ttu-id="1ecab-186">**SystemConfig- \_ logdisk**</span><span class="sxs-lookup"><span data-stu-id="1ecab-186">**SystemConfig\_LogDisk**</span></span>](systemconfig-logdisk.md)
+-   [<span data-ttu-id="1ecab-187">**SystemConfig- \_ Netzwerk**</span><span class="sxs-lookup"><span data-stu-id="1ecab-187">**SystemConfig\_Network**</span></span>](systemconfig-network.md)
+-   [<span data-ttu-id="1ecab-188">**SystemConfig- \_ NIC**</span><span class="sxs-lookup"><span data-stu-id="1ecab-188">**SystemConfig\_NIC**</span></span>](systemconfig-nic.md)
+-   [<span data-ttu-id="1ecab-189">**SystemConfig- \_ phydisk**</span><span class="sxs-lookup"><span data-stu-id="1ecab-189">**SystemConfig\_PhyDisk**</span></span>](systemconfig-phydisk.md)
+-   [<span data-ttu-id="1ecab-190">**SystemConfig \_ PnP**</span><span class="sxs-lookup"><span data-stu-id="1ecab-190">**SystemConfig\_PnP**</span></span>](systemconfig-pnp.md)
+-   [<span data-ttu-id="1ecab-191">**\_Systemkonfigurationsstrom**</span><span class="sxs-lookup"><span data-stu-id="1ecab-191">**SystemConfig\_Power**</span></span>](systemconfig-power.md)
+-   [<span data-ttu-id="1ecab-192">**SystemConfig- \_ Dienste**</span><span class="sxs-lookup"><span data-stu-id="1ecab-192">**SystemConfig\_Services**</span></span>](systemconfig-services.md)
+-   [<span data-ttu-id="1ecab-193">**SystemConfig- \_ Video**</span><span class="sxs-lookup"><span data-stu-id="1ecab-193">**SystemConfig\_Video**</span></span>](systemconfig-video.md)
+-   [<span data-ttu-id="1ecab-194">**SystemConfig \_ v0- \_ CPU**</span><span class="sxs-lookup"><span data-stu-id="1ecab-194">**SystemConfig\_V0\_CPU**</span></span>](systemconfig-v0-cpu.md)
+-   [<span data-ttu-id="1ecab-195">**SystemConfig \_ v0- \_ logdisk**</span><span class="sxs-lookup"><span data-stu-id="1ecab-195">**SystemConfig\_V0\_LogDisk**</span></span>](systemconfig-v0-logdisk.md)
+-   [<span data-ttu-id="1ecab-196">**SystemConfig \_ v0- \_ NIC**</span><span class="sxs-lookup"><span data-stu-id="1ecab-196">**SystemConfig\_V0\_NIC**</span></span>](systemconfig-v0-nic.md)
+-   [<span data-ttu-id="1ecab-197">**SystemConfig \_ v0- \_ phydisk**</span><span class="sxs-lookup"><span data-stu-id="1ecab-197">**SystemConfig\_V0\_PhyDisk**</span></span>](systemconfig-v0-phydisk.md)
+-   [<span data-ttu-id="1ecab-198">**SystemConfig \_ v0- \_ Strom**</span><span class="sxs-lookup"><span data-stu-id="1ecab-198">**SystemConfig\_V0\_Power**</span></span>](systemconfig-v0-power.md)
+-   [<span data-ttu-id="1ecab-199">**SystemConfig \_ v0- \_ Dienste**</span><span class="sxs-lookup"><span data-stu-id="1ecab-199">**SystemConfig\_V0\_Services**</span></span>](systemconfig-v0-services.md)
+-   [<span data-ttu-id="1ecab-200">**System config \_ v0- \_ Video**</span><span class="sxs-lookup"><span data-stu-id="1ecab-200">**SystemConfig\_V0\_Video**</span></span>](systemconfig-v0-video.md)
+-   [<span data-ttu-id="1ecab-201">**TcpIp**</span><span class="sxs-lookup"><span data-stu-id="1ecab-201">**TcpIp**</span></span>](tcpip.md)
+-   [<span data-ttu-id="1ecab-202">**Tcpip \_ schlägt fehl**</span><span class="sxs-lookup"><span data-stu-id="1ecab-202">**TcpIp\_Fail**</span></span>](tcpip-fail.md)
+-   [<span data-ttu-id="1ecab-203">**Tcpip \_ SendIPV4**</span><span class="sxs-lookup"><span data-stu-id="1ecab-203">**TcpIp\_SendIPV4**</span></span>](tcpip-sendipv4.md)
+-   [<span data-ttu-id="1ecab-204">**Tcpip \_ SendIPV6**</span><span class="sxs-lookup"><span data-stu-id="1ecab-204">**TcpIp\_SendIPV6**</span></span>](tcpip-sendipv6.md)
+-   [<span data-ttu-id="1ecab-205">**Tcpip \_ TypeGroup1**</span><span class="sxs-lookup"><span data-stu-id="1ecab-205">**TcpIp\_TypeGroup1**</span></span>](tcpip-typegroup1.md)
+-   [<span data-ttu-id="1ecab-206">**Tcpip \_ TypeGroup2**</span><span class="sxs-lookup"><span data-stu-id="1ecab-206">**TcpIp\_TypeGroup2**</span></span>](tcpip-typegroup2.md)
+-   [<span data-ttu-id="1ecab-207">**Tcpip \_ TypeGroup3**</span><span class="sxs-lookup"><span data-stu-id="1ecab-207">**TcpIp\_TypeGroup3**</span></span>](tcpip-typegroup3.md)
+-   [<span data-ttu-id="1ecab-208">**Tcpip \_ TypeGroup4**</span><span class="sxs-lookup"><span data-stu-id="1ecab-208">**TcpIp\_TypeGroup4**</span></span>](tcpip-typegroup4.md)
+-   [<span data-ttu-id="1ecab-209">**Tcpip \_ v0**</span><span class="sxs-lookup"><span data-stu-id="1ecab-209">**TcpIp\_V0**</span></span>](tcpip-v0.md)
+-   [<span data-ttu-id="1ecab-210">**Tcpip \_ v0 \_ TypeGroup1**</span><span class="sxs-lookup"><span data-stu-id="1ecab-210">**TcpIp\_V0\_TypeGroup1**</span></span>](tcpip-v0-typegroup1.md)
+-   [<span data-ttu-id="1ecab-211">**Tcpip \_ v1**</span><span class="sxs-lookup"><span data-stu-id="1ecab-211">**TcpIp\_V1**</span></span>](tcpip-v1.md)
+-   [<span data-ttu-id="1ecab-212">**Tcpip \_ v1 \_ TypeGroup1**</span><span class="sxs-lookup"><span data-stu-id="1ecab-212">**TcpIp\_V1\_TypeGroup1**</span></span>](tcpip-v1-typegroup1.md)
+-   [<span data-ttu-id="1ecab-213">**Aden**</span><span class="sxs-lookup"><span data-stu-id="1ecab-213">**Thread**</span></span>](thread.md)
+-   [<span data-ttu-id="1ecab-214">**Thread \_ TypeGroup1**</span><span class="sxs-lookup"><span data-stu-id="1ecab-214">**Thread\_TypeGroup1**</span></span>](thread-typegroup1.md)
+-   [<span data-ttu-id="1ecab-215">**Thread \_ v0**</span><span class="sxs-lookup"><span data-stu-id="1ecab-215">**Thread\_V0**</span></span>](thread-v0.md)
+-   [<span data-ttu-id="1ecab-216">**Thread \_ v0 \_ TypeGroup1**</span><span class="sxs-lookup"><span data-stu-id="1ecab-216">**Thread\_V0\_TypeGroup1**</span></span>](thread-v0-typegroup1.md)
+-   [<span data-ttu-id="1ecab-217">**Thread \_ v1**</span><span class="sxs-lookup"><span data-stu-id="1ecab-217">**Thread\_V1**</span></span>](thread-v1.md)
+-   [<span data-ttu-id="1ecab-218">**Thread \_ v1 \_ TypeGroup1**</span><span class="sxs-lookup"><span data-stu-id="1ecab-218">**Thread\_V1\_TypeGroup1**</span></span>](thread-v1-typegroup1.md)
+-   [<span data-ttu-id="1ecab-219">**Thread \_ v1 \_ TypeGroup2**</span><span class="sxs-lookup"><span data-stu-id="1ecab-219">**Thread\_V1\_TypeGroup2**</span></span>](thread-v1-typegroup2.md)
+-   [<span data-ttu-id="1ecab-220">**Thread \_ v2**</span><span class="sxs-lookup"><span data-stu-id="1ecab-220">**Thread\_V2**</span></span>](thread-v2.md)
+-   [<span data-ttu-id="1ecab-221">**Thread \_ v2 \_ TypeGroup1**</span><span class="sxs-lookup"><span data-stu-id="1ecab-221">**Thread\_V2\_TypeGroup1**</span></span>](thread-v2-typegroup1.md)
+-   [<span data-ttu-id="1ecab-222">**Udpip**</span><span class="sxs-lookup"><span data-stu-id="1ecab-222">**UdpIp**</span></span>](udpip.md)
+-   [<span data-ttu-id="1ecab-223">**Udpip \_ schlägt fehl**</span><span class="sxs-lookup"><span data-stu-id="1ecab-223">**UdpIp\_Fail**</span></span>](udpip-fail.md)
+-   [<span data-ttu-id="1ecab-224">**Udpip \_ TypeGroup1**</span><span class="sxs-lookup"><span data-stu-id="1ecab-224">**UdpIp\_TypeGroup1**</span></span>](udpip-typegroup1.md)
+-   [<span data-ttu-id="1ecab-225">**Udpip \_ TypeGroup2**</span><span class="sxs-lookup"><span data-stu-id="1ecab-225">**UdpIp\_TypeGroup2**</span></span>](udpip-typegroup2.md)
+-   [<span data-ttu-id="1ecab-226">**Udpip \_ v0**</span><span class="sxs-lookup"><span data-stu-id="1ecab-226">**UdpIp\_V0**</span></span>](udpip-v0.md)
+-   [<span data-ttu-id="1ecab-227">**Udpip \_ v0 \_ TypeGroup1**</span><span class="sxs-lookup"><span data-stu-id="1ecab-227">**UdpIp\_V0\_TypeGroup1**</span></span>](udpip-v0-typegroup1.md)
+-   [<span data-ttu-id="1ecab-228">**Udpip \_ v1**</span><span class="sxs-lookup"><span data-stu-id="1ecab-228">**UdpIp\_V1**</span></span>](udpip-v1.md)
+-   [<span data-ttu-id="1ecab-229">**Udpip \_ v1 \_ TypeGroup1**</span><span class="sxs-lookup"><span data-stu-id="1ecab-229">**UdpIp\_V1\_TypeGroup1**</span></span>](udpip-v1-typegroup1.md)
+
+ 
+
+ 
+
+
+
