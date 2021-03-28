@@ -1,0 +1,1400 @@
+- name: Windows-Runtime C++ Verweis
+  href: reference.md
+  items:
+    - name: Datentypen
+      href: data-types.md
+      items:
+        - name: Windows-Runtime Basis Datentypen
+          href: base-data-types.md
+        - name: HSTRING
+          href: hstring.md
+        - name: HSTRING_BUFFER
+          href: hstring-buffer.md
+        - name: PINSPECT_HSTRING_CALLBACK
+          href: /windows/win32/api/winstring/nc-winstring-pinspect_hstring_callback
+        - name: PINSPECT_MEMORY_CALLBACK
+          href: /windows/win32/api/roerrorapi/nc-roerrorapi-pinspect_memory_callback
+        - name: RO_REGISTRATION_COOKIE
+          href: ro-registration-cookie.md
+    - name: Enumerationen
+      href: enumerations.md
+      items:
+        - name: HANDLE_ACCESS_OPTIONS
+          href: /windows/win32/api/windowsstoragecom/ne-windowsstoragecom-handle_access_options
+        - name: HANDLE_CREATION_OPTIONS
+          href: /windows/win32/api/windowsstoragecom/ne-windowsstoragecom-handle_creation_options
+        - name: HANDLE_OPTIONS
+          href: /windows/win32/api/windowsstoragecom/ne-windowsstoragecom-handle_options
+        - name: HANDLE_SHARING_OPTIONS
+          href: /windows/win32/api/windowsstoragecom/ne-windowsstoragecom-handle_sharing_options
+        - name: ActivationType
+          href: /windows/win32/api/activationregistration/ne-activationregistration-activationtype
+        - name: Agilereferenceoptions
+          href: /windows/win32/api/combaseapi/ne-combaseapi-agilereferenceoptions
+        - name: BSOS_OPTIONS
+          href: /windows/win32/api/shcore/ne-shcore-bsos_options
+        - name: Asyncstatus
+          href: /windows/win32/api/asyncinfo/ne-asyncinfo-asyncstatus
+        - name: Erroroptions
+          href: /previous-versions//hh438361(v=vs.85)
+        - name: IdentityType
+          href: /windows/win32/api/activationregistration/ne-activationregistration-identitytype
+        - name: Inputstreamoptions
+          href: /previous-versions//hh438389(v=vs.85)
+        - name: Instancingtype
+          href: /windows/win32/api/activationregistration/ne-activationregistration-instancingtype
+        - name: PropertyType
+          href: /windows/win32/api/windows.foundation/ne-windows-foundation-propertytype
+        - name: Registeredtrustlevel
+          href: /previous-versions/dn408470(v%3Dvs.85)
+        - name: Registrationscope
+          href: /windows/win32/api/activationregistration/ne-activationregistration-registrationscope
+        - name: Threadingtype
+          href: /windows/win32/api/activationregistration/ne-activationregistration-threadingtype
+        - name: Trust Level
+          href: /windows/win32/api/inspectable/ne-inspectable-trustlevel
+        - name: RO_INIT_TYPE
+          href: /windows/win32/api/roapi/ne-roapi-ro_init_type
+        - name: RO_ERROR_REPORTING_FLAGS
+          href: /windows/win32/api/roerrorapi/ne-roerrorapi-roerrorreportingflags
+    - name: Functions
+      href: functions.md
+      items:
+        - name: Codecodeproxy
+          href: /windows/win32/api/combaseapi/nf-combaseapi-codecodeproxy
+        - name: '"Kreatecontrolinput"'
+          href: /windows/win32/api/corewindow/nf-corewindow-createcontrolinput
+        - name: '"Kreatecontrolinputex"'
+          href: /windows/win32/api/corewindow/nf-corewindow-createcontrolinputex
+        - name: CreateDirect3D11DeviceFromDXGIDevice
+          href: /windows/win32/api/windows.graphics.directx.direct3d11.interop/nf-windows-graphics-directx-direct3d11-interop-createdirect3d11devicefromdxgidevice
+        - name: CreateDirect3D11SurfaceFromDXGISurface
+          href: /windows/win32/api/windows.graphics.directx.direct3d11.interop/nf-windows-graphics-directx-direct3d11-interop-createdirect3d11surfacefromdxgisurface
+        - name: CreateDirect3DDevice
+          href: /windows/win32/api/windows.graphics.directx.direct3d11.interop/nf-windows-graphics-directx-direct3d11-interop-createdirect3ddevice
+        - name: CreateDirect3DSurface
+          href: /windows/win32/api/windows.graphics.directx.direct3d11.interop/nf-windows-graphics-directx-direct3d11-interop-createdirect3dsurface
+        - name: '"Kreaterandomaccessstreamonfile"'
+          href: /windows/win32/api/shcore/nf-shcore-createrandomaccessstreamonfile
+        - name: '"Kreaterandomaccessstreamoverstream"'
+          href: /windows/win32/api/shcore/nf-shcore-createrandomaccessstreamoverstream
+        - name: '"Kreatestreamoverrandomaccessstream"'
+          href: /windows/win32/api/shcore/nf-shcore-createstreamoverrandomaccessstream
+        - name: '"Kreatexamluipresenter"'
+          href: createxamluipresenter.md
+        - name: Dbgraiseassertionfailure
+          href: /previous-versions//jj635749(v=vs.85)
+        - name: 'Getdxgiinterface (IDirect3DDevice ^, DXGI_TYPE * *)'
+          href: /windows/win32/api/windows.graphics.directx.direct3d11.interop/nf-windows-graphics-directx-direct3d11-interop-getdxgiinterface
+        - name: 'Getdxgiinterface (IDirect3DSurface ^, DXGI_TYPE * *)'
+          href: /windows/win32/api/windows.graphics.directx.direct3d11.interop/nf-windows-graphics-directx-direct3d11-interop-getdxgiinterface~r1
+        - name: Getdxgiinterfakefromuject
+          href: /windows/win32/api/windows.graphics.directx.direct3d11.interop/nf-windows-graphics-directx-direct3d11-interop-getdxgiinterfacefromobject
+        - name: Getrestrictederrorinfo
+          href: /windows/win32/api/roerrorapi/nf-roerrorapi-getrestrictederrorinfo
+        - name: HSTRING_UserFree
+          href: /windows/win32/api/remotesystemadditionalinfo/nf-remotesystemadditionalinfo-hstring_userfree
+        - name: HSTRING_UserFree64
+          href: /windows/win32/api/remotesystemadditionalinfo/nf-remotesystemadditionalinfo-hstring_userfree64
+        - name: HSTRING_UserMarshal
+          href: /windows/win32/api/remotesystemadditionalinfo/nf-remotesystemadditionalinfo-hstring_usermarshal
+        - name: HSTRING_UserMarshal64
+          href: /windows/win32/api/remotesystemadditionalinfo/nf-remotesystemadditionalinfo-hstring_usermarshal64
+        - name: HSTRING_UserSize
+          href: /windows/win32/api/remotesystemadditionalinfo/nf-remotesystemadditionalinfo-hstring_usersize
+        - name: HSTRING_UserSize64
+          href: /windows/win32/api/remotesystemadditionalinfo/nf-remotesystemadditionalinfo-hstring_usersize64
+        - name: HSTRING_UserUnmarshal
+          href: /windows/win32/api/remotesystemadditionalinfo/nf-remotesystemadditionalinfo-hstring_userunmarshal
+        - name: HSTRING_UserUnmarshal64
+          href: /windows/win32/api/remotesystemadditionalinfo/nf-remotesystemadditionalinfo-hstring_userunmarshal64
+        - name: Iserrorpropagationationaktivierte
+          href: /windows/win32/api/roerrorapi/nf-roerrorapi-iserrorpropagationenabled
+        - name: Dllgetactivationfactory
+          href: /previous-versions//br205771(v=vs.85)
+        - name: MetaDataGetDispenser
+          href: /windows/win32/api/rometadata/nf-rometadata-metadatagetdispenser
+        - name: Pdfkreatererderer
+          href: /windows/win32/api/windows.data.pdf.interop/nf-windows-data-pdf-interop-pdfcreaterenderer
+        - name: Pdfrenderparameams
+          href: /windows/win32/api/windows.data.pdf.interop/nf-windows-data-pdf-interop-pdfrenderparams
+        - name: Roactivateingestance
+          href: /windows/win32/api/roapi/nf-roapi-roactivateinstance
+        - name: Rocaptureerrorcontext
+          href: /windows/win32/api/roerrorapi/nf-roerrorapi-rocaptureerrorcontext
+        - name: Roclearerror
+          href: /windows/win32/api/roerrorapi/nf-roerrorapi-roclearerror
+        - name: Rofailfastwitherrorcontext
+          href: /windows/win32/api/roerrorapi/nf-roerrorapi-rofailfastwitherrorcontext
+        - name: RoFailFastWithErrorContextInternal2
+          href: ./roerrorapi/nf-roerrorapi-rofailfastwitherrorcontextinternal2.md
+        - name: Rofreparameterizedtypeextra
+          href: /windows/win32/api/roparameterizediid/nf-roparameterizediid-rofreeparameterizedtypeextra
+        - name: Rogetactivatableclassregistration
+          href: /windows/win32/api/roregistrationapi/nf-roregistrationapi-rogetactivatableclassregistration
+        - name: RoGetActivationFactory
+          href: /windows/win32/api/roapi/nf-roapi-rogetactivationfactory
+        - name: Rogetagilereferenzierung
+          href: /windows/win32/api/ComBaseApi/nf-combaseapi-rogetagilereference
+        - name: Rogetapartmentidentifier
+          href: /windows/win32/api/roapi/nf-roapi-rogetapartmentidentifier
+        - name: Rogetbuffermarshaler
+          href: /windows/win32/api/robuffer/nf-robuffer-rogetbuffermarshaler
+        - name: Rogeterrorreportingflags
+          href: /windows/win32/api/roerrorapi/nf-roerrorapi-rogeterrorreportingflags
+        - name: RoGetMetaDataFile
+          href: /windows/win32/api/rometadataresolution/nf-rometadataresolution-rogetmetadatafile
+        - name: Rogetparameterizedtypeinstanceiid
+          href: /windows/win32/api/roparameterizediid/nf-roparameterizediid-rogetparameterizedtypeinstanceiid
+        - name: Rogetserveractivatableclasses
+          href: /windows/win32/api/roregistrationapi/nf-roregistrationapi-rogetserveractivatableclasses
+        - name: RoInitialize
+          href: /windows/win32/api/roapi/nf-roapi-roinitialize
+        - name: Roinspectthreaderrorinfo
+          href: /windows/win32/api/roerrorapi/nf-roerrorapi-roinspectthreaderrorinfo
+        - name: Roinspectcapturedstackbacktrace
+          href: /windows/win32/api/roerrorapi/nf-roerrorapi-roinspectcapturedstackbacktrace
+        - name: Rooriginateerror
+          href: /windows/win32/api/roerrorapi/nf-roerrorapi-rooriginateerror
+        - name: Rooriginateerrorw
+          href: /windows/win32/api/roerrorapi/nf-roerrorapi-rooriginateerrorw
+        - name: Rooriginatelanguageexception
+          href: /windows/win32/api/roerrorapi/nf-roerrorapi-rooriginatelanguageexception
+        - name: Roparameterizedtypeextragettypeer Signature
+          href: /windows/win32/api/roparameterizediid/nf-roparameterizediid-roparameterizedtypeextragettypesignature
+        - name: Roparser-Typname
+          href: /windows/win32/api/rometadataresolution/nf-rometadataresolution-roparsetypename
+        - name: Roregisteractivationfactorys
+          href: /windows/win32/api/roapi/nf-roapi-roregisteractivationfactories
+        - name: Roregisterforapartmentshutdown
+          href: /windows/win32/api/roapi/nf-roapi-roregisterforapartmentshutdown
+        - name: Roreportunhandlederror
+          href: /windows/win32/api/roerrorapi/nf-roerrorapi-roreportunhandlederror
+        - name: Roreportfaileddelegat
+          href: /windows/win32/api/roerrorapi/nf-roerrorapi-roreportfaileddelegate
+        - name: Roresolvenamespace
+          href: /windows/win32/api/rometadataresolution/nf-rometadataresolution-roresolvenamespace
+        - name: Roresolverestrictederrorinforeferenzierung
+          href: /windows/win32/api/roerrorapi/nf-roerrorapi-roresolverestrictederrorinforeference
+        - name: Rorevokeactivationfactorys
+          href: /windows/win32/api/roapi/nf-roapi-rorevokeactivationfactories
+        - name: Roseterrorreportingflags
+          href: /windows/win32/api/roerrorapi/nf-roerrorapi-roseterrorreportingflags
+        - name: Rotransformerror
+          href: /windows/win32/api/roerrorapi/nf-roerrorapi-rotransformerror
+        - name: Rotransformerrorw
+          href: /windows/win32/api/roerrorapi/nf-roerrorapi-rotransformerrorw
+        - name: Rouninitialize
+          href: /windows/win32/api/roapi/nf-roapi-rouninitialize
+        - name: Rounregisterforapartmentshutdown
+          href: /windows/win32/api/roapi/nf-roapi-rounregisterforapartmentshutdown
+        - name: '"Abtrestrictederrorinfo"'
+          href: /windows/win32/api/roerrorapi/nf-roerrorapi-setrestrictederrorinfo
+        - name: Windowscomparestringordinal
+          href: /windows/win32/api/winstring/nf-winstring-windowscomparestringordinal
+        - name: Windowsconcatstring
+          href: /windows/win32/api/winstring/nf-winstring-windowsconcatstring
+        - name: Windowscreatestring
+          href: /windows/win32/api/winstring/nf-winstring-windowscreatestring
+        - name: Windowscreatestrauingreferenzierung
+          href: /windows/win32/api/winstring/nf-winstring-windowscreatestringreference
+        - name: Windowsdeletestring
+          href: /windows/win32/api/winstring/nf-winstring-windowsdeletestring
+        - name: Windowsdeletestringbuffer
+          href: /windows/win32/api/winstring/nf-winstring-windowsdeletestringbuffer
+        - name: Windowsduplicatestring
+          href: /windows/win32/api/winstring/nf-winstring-windowsduplicatestring
+        - name: Windowsgetstringlen
+          href: /windows/win32/api/winstring/nf-winstring-windowsgetstringlen
+        - name: WindowsGetStringRawBuffer
+          href: /windows/win32/api/winstring/nf-winstring-windowsgetstringrawbuffer
+        - name: Windowsinspectstring
+          href: /windows/win32/api/winstring/nf-winstring-windowsinspectstring
+        - name: WindowsInspectString2
+          href: /windows/win32/api/winstring/nf-winstring-windowsinspectstring2
+        - name: Windowsisstringempty
+          href: /windows/win32/api/winstring/nf-winstring-windowsisstringempty
+        - name: Windowshalzugecatestringbuffer
+          href: /windows/win32/api/winstring/nf-winstring-windowspreallocatestringbuffer
+        - name: Windowspromotestringbuffer
+          href: /windows/win32/api/winstring/nf-winstring-windowspromotestringbuffer
+        - name: Windowsreplacestring
+          href: /windows/win32/api/winstring/nf-winstring-windowsreplacestring
+        - name: Windowsstringhasembeddednull
+          href: /windows/win32/api/winstring/nf-winstring-windowsstringhasembeddednull
+        - name: Windowssubstring
+          href: /windows/win32/api/winstring/nf-winstring-windowssubstring
+        - name: Windowssubstringwithspecifiedlength
+          href: /windows/win32/api/winstring/nf-winstring-windowssubstringwithspecifiedlength
+        - name: Windowstrimstringend
+          href: /windows/win32/api/winstring/nf-winstring-windowstrimstringend
+        - name: Windowstrimstringstart
+          href: /windows/win32/api/winstring/nf-winstring-windowstrimstringstart
+    - name: Schnittstellen
+      href: interfaces.md
+      items:
+        - name: Iactivatableclassregistration
+          href: /windows/win32/api/activationregistration/nn-activationregistration-iactivatableclassregistration
+          items:
+            - name: Activatableclassid-Methode
+              href: /windows/win32/api/activationregistration/nf-activationregistration-iactivatableclassregistration-get_activatableclassid
+            - name: ActivationType-Methode
+              href: /windows/win32/api/activationregistration/nf-activationregistration-iactivatableclassregistration-get_activationtype
+            - name: Attribute-Methode
+              href: /windows/win32/api/activationregistration/nf-activationregistration-iactivatableclassregistration-get_attributes
+            - name: Registeredtrustlevel-Methode
+              href: /windows/win32/api/activationregistration/nf-activationregistration-iactivatableclassregistration-get_registeredtrustlevel
+            - name: Registrationscope-Methode
+              href: /windows/win32/api/activationregistration/nf-activationregistration-iactivatableclassregistration-get_registrationscope
+        - name: IActivationFactory
+          href: /windows/win32/api/activation/nn-activation-iactivationfactory
+          items:
+            - name: ActivateInstance-Methode
+              href: /windows/win32/api/activation/nf-activation-iactivationfactory-activateinstance
+        - name: Iagilereferenzierung
+          href: /windows/win32/api/objidl/nn-objidl-iagilereference
+          items:
+            - name: Resolve-Methode
+              href: iagilereference-resolve.md
+        - name: Iapartmentshutdown
+          href: /windows/win32/api/objidl/nn-objidl-iapartmentshutdown
+          items:
+            - name: OnUninitialize-Methode
+              href: /windows/win32/api/objidl/nf-objidl-iapartmentshutdown-onuninitialize
+        - name: Asyncactioncompletedhandler
+          href: asyncactioncompletedhandler.md
+          items:
+            - name: Invoke-Methode
+              href: asyncactioncompletedhandler-invoke.md
+        - name: IAsyncAction
+          href: /windows/win32/api/windows.foundation/nn-windows-foundation-iasyncaction
+          items:
+            - name: get_Completed-Methode
+              href: iasyncaction-get-completed.md
+            - name: put_Completed-Methode
+              href: iasyncaction-put-completed.md
+            - name: GetResults-Methode
+              href: iasyncaction-getresults.md
+        - name: Iasyncactionprogresshandler<TProgress>
+          href: /previous-versions//br205782(v=vs.85)
+          items:
+            - name: Invoke-Methode
+              href: /previous-versions//br205783(v=vs.85)
+        - name: IAsyncActionWithProgress<TProgress>
+          href: /previous-versions//br205784(v=vs.85)
+          items:
+            - name: get_Completed-Methode
+              href: /previous-versions//br205788(v=vs.85)
+            - name: put_Completed-Methode
+              href: /previous-versions//br205790(v=vs.85)
+            - name: get_Progress-Methode
+              href: /previous-versions//br205789(v=vs.85)
+            - name: put_Progress-Methode
+              href: /previous-versions//br205791(v=vs.85)
+            - name: GetResults-Methode
+              href: /previous-versions//br205787(v=vs.85)
+        - name: Iasyncactionwithprogresscompletedhandler<TProgress>
+          href: /previous-versions//br205785(v=vs.85)
+          items:
+            - name: Invoke-Methode
+              href: /previous-versions//br205786(v=vs.85)
+        - name: IAsyncInfo
+          href: /windows/win32/api/asyncinfo/nn-asyncinfo-iasyncinfo
+          items:
+            - name: Cancel-Methode
+              href: /windows/win32/api/asyncinfo/nf-asyncinfo-iasyncinfo-cancel
+            - name: Close-Methode
+              href: /windows/win32/api/asyncinfo/nf-asyncinfo-iasyncinfo-close
+            - name: ErrorCode-Eigenschaft
+              href: /windows/win32/api/asyncinfo/nf-asyncinfo-iasyncinfo-get_errorcode
+            - name: ID-Eigenschaft
+              href: /windows/win32/api/asyncinfo/nf-asyncinfo-iasyncinfo-get_id
+            - name: Status-Eigenschaft
+              href: /windows/win32/api/asyncinfo/nf-asyncinfo-iasyncinfo-get_status
+        - name: IAsyncOperation<TResult>
+          href: /previous-versions//br205802(v=vs.85)
+          items:
+            - name: get_Completed-Methode
+              href: /previous-versions//br205816(v=vs.85)
+            - name: put_Completed-Methode
+              href: /previous-versions//br205817(v=vs.85)
+            - name: GetResults-Methode
+              href: /previous-versions//br205815(v=vs.85)
+        - name: Iasyncoperationcompletedhandler<TResult>
+          href: /previous-versions//br205803(v=vs.85)
+          items:
+            - name: Invoke-Methode
+              href: /previous-versions//br205804(v=vs.85)
+        - name: Iasyncoperationprogresshandler
+          href: /previous-versions//br205805(v=vs.85)
+          items:
+            - name: Invoke-Methode
+              href: /previous-versions//br205806(v=vs.85)
+        - name: IAsyncOperationWithProgress
+          href: /previous-versions//br205807(v=vs.85)
+          items:
+            - name: get_Completed-Methode
+              href: /previous-versions//br205811(v=vs.85)
+            - name: put_Completed-Methode
+              href: /previous-versions//br205813(v=vs.85)
+            - name: get_Progress-Methode
+              href: /previous-versions//br205812(v=vs.85)
+            - name: put_Progress-Methode
+              href: /previous-versions//br205814(v=vs.85)
+            - name: GetResults-Methode
+              href: /previous-versions//br205810(v=vs.85)
+        - name: 'Iasyncoperationwithprogresscompletedhandler<TResult, tprogress>'
+          href: /previous-versions//br205808(v=vs.85)
+          items:
+            - name: Invoke-Methode
+              href: iasyncoperationwithprogresscompletedhandler-invoke.md
+        - name: Iaudioframenative
+          href: /windows/win32/api/windows.media.core.interop/nn-windows-media-core-interop-iaudioframenative
+          items:
+            - name: GetData-Methode
+              href: iaudioframenative-getdata.md
+        - name: Iaudioframenativefactory
+          href: /windows/win32/api/windows.media.core.interop/nn-windows-media-core-interop-iaudioframenativefactory
+          items:
+            - name: Methode "kreatefrommf Sample"
+              href: /windows/win32/api/windows.media.core.interop/nf-windows-media-core-interop-iaudioframenativefactory-createfrommfsample
+        - name: IBuffer
+          href: /previous-versions//hh438362(v=vs.85)
+          items:
+            - name: Capacity-Eigenschaft
+              href: /previous-versions//hh438363(v=vs.85)
+            - name: Längeneigenschaft
+              href: /previous-versions//hh438364(v=vs.85)
+        - name: IBufferByteAccess
+          href: /previous-versions//hh846267(v=vs.85)
+          items:
+            - name: Buffer-Methode
+              href: /previous-versions//hh846268(v=vs.85)
+        - name: IClosable
+          href: /windows/win32/api/windows.foundation/nn-windows-foundation-iclosable
+          items:
+            - name: Close-Methode
+              href: /windows/win32/api/windows.foundation/nf-windows-foundation-iclosable-close
+        - name: ICompositionDrawingSurfaceInterop2
+          href: /windows/win32/api/windows.ui.composition.interop/nn-windows-ui-composition-interop-icompositiondrawingsurfaceinterop2
+          items:
+            - name: Copysurface-Methode
+              href: /windows/win32/api/windows.ui.composition.interop/nf-windows-ui-composition-interop-icompositiondrawingsurfaceinterop2-copysurface
+        - name: Icontactmanagerinterop
+          href: /previous-versions//dn302109(v=vs.85)
+          items:
+            - name: Showcontactcardforwindow-Methode
+              href: /previous-versions//dn302110(v=vs.85)
+        - name: ICoreApplication
+          href: /previous-versions//hh438365(v=vs.85)
+          items:
+            - name: add_Resuming-Methode
+              href: /previous-versions//hh438375(v=vs.85)
+            - name: remove_Resuming-Methode
+              href: /previous-versions//hh438380(v=vs.85)
+            - name: add_Suspending-Methode
+              href: /previous-versions//hh438376(v=vs.85)
+            - name: remove_Suspending-Methode
+              href: /previous-versions//hh438381(v=vs.85)
+            - name: get_ID-Methode
+              href: /previous-versions//hh438378(v=vs.85)
+            - name: get_Properties-Methode
+              href: /previous-versions//hh438379(v=vs.85)
+            - name: Getcurrentview-Methode
+              href: /previous-versions//hh438377(v=vs.85)
+        - name: Icoreapplicationexit
+          href: /previous-versions//hh438366(v=vs.85)
+          items:
+            - name: add_Exiting-Methode
+              href: /previous-versions//hh438367(v=vs.85)
+            - name: remove_Exiting-Methode
+              href: /previous-versions//hh438369(v=vs.85)
+            - name: Exit-Methode
+              href: /previous-versions//hh438368(v=vs.85)
+        - name: Icoreapplicationinitialization
+          href: /previous-versions//hh438370(v=vs.85)
+          items:
+            - name: Run-Methode
+              href: /previous-versions//hh438371(v=vs.85)
+        - name: Icoreapplicationview
+          href: /previous-versions//hh438372(v=vs.85)
+          items:
+            - name: Aktiviertes Ereignis
+              href: icoreapplicationview-activated.md
+            - name: Corewindow (Eigenschaft)
+              href: /previous-versions//hh438374(v=vs.85)
+        - name: Icoreimmersiveapplication
+          href: /previous-versions//hh438382(v=vs.85)
+          items:
+            - name: get_Views-Methode
+              href: /previous-versions//hh438384(v=vs.85)
+            - name: Kreatenewview-Methode
+              href: /previous-versions//hh438383(v=vs.85)
+        - name: Icorinputinterop
+          href: /windows/win32/api/corewindow/nn-corewindow-icoreinputinterop
+          items:
+            - name: Messagebehandelte (Eigenschaft)
+              href: /windows/win32/api/corewindow/nf-corewindow-icoreinputinterop-put_messagehandled
+            - name: '* Tinputsource-Methode'
+              href: /windows/win32/api/corewindow/nf-corewindow-icoreinputinterop-setinputsource
+        - name: Icorewindowinterop
+          href: /windows/win32/api/corewindow/nn-corewindow-icorewindowinterop
+          items:
+            - name: WindowHandle-Eigenschaft
+              href: /windows/win32/api/corewindow/nf-corewindow-icorewindowinterop-get_windowhandle
+            - name: Messagebehandelte (Eigenschaft)
+              href: /windows/win32/api/corewindow/nf-corewindow-icorewindowinterop-put_messagehandled
+        - name: IDirect3DDxgiInterfaceAccess
+          href: /windows/win32/api/windows.graphics.directx.direct3d11.interop/ns-windows-graphics-directx-direct3d11-interop-idirect3ddxgiinterfaceaccess
+          items:
+            - name: GetInterface
+              href: /windows/win32/api/windows.graphics.directx.direct3d11.interop/nf-windows-graphics-directx-direct3d11-interop-idirect3ddxgiInterfaceaccess-getinterface
+        - name: Idllserveractivatableclassregistration
+          href: /windows/win32/api/activationregistration/nn-activationregistration-idllserveractivatableclassregistration
+          items:
+            - name: DllPath-Methode
+              href: /windows/win32/api/activationregistration/nf-activationregistration-idllserveractivatableclassregistration-get_dllpath
+            - name: Threadingtype-Methode
+              href: /windows/win32/api/activationregistration/nf-activationregistration-idllserveractivatableclassregistration-get_threadingtype
+        - name: Ierrorreportingsettings
+          href: /previous-versions//br205818(v=vs.85)
+          items:
+            - name: Geterroroptions-Methode
+              href: /previous-versions//br205819(v=vs.85)
+            - name: Methode "* terroroptions"
+              href: /previous-versions//br205820(v=vs.85)
+        - name: IEventHandler<T>
+          href: /previous-versions//hh438385(v=vs.85)
+          items:
+            - name: Invoke-Methode
+              href: /previous-versions//hh438386(v=vs.85)
+        - name: Iexeserveractivatableclassregistration
+          href: /windows/win32/api/activationregistration/nn-activationregistration-iexeserveractivatableclassregistration
+          items:
+            - name: Serverregistration-Methode
+              href: /windows/win32/api/activationregistration/nf-activationregistration-iexeserveractivatableclassregistration-get_serverregistration
+        - name: Iexeserverregistration
+          href: /windows/win32/api/activationregistration/nn-activationregistration-iexeserverregistration
+          items:
+            - name: Servername-Methode
+              href: /windows/win32/api/activationregistration/nf-activationregistration-iexeserverregistration-get_servername
+            - name: ExePath-Methode
+              href: /windows/win32/api/activationregistration/nf-activationregistration-iexeserverregistration-get_exepath
+            - name: CommandLine-Methode
+              href: /windows/win32/api/activationregistration/nf-activationregistration-iexeserverregistration-get_commandline
+            - name: Appusermodelid-Methode
+              href: /windows/win32/api/activationregistration/nf-activationregistration-iexeserverregistration-get_appusermodelid
+            - name: IdentityType-Methode
+              href: /windows/win32/api/activationregistration/nf-activationregistration-iexeserverregistration-get_identitytype
+            - name: Identitäts Methode
+              href: /windows/win32/api/activationregistration/nf-activationregistration-iexeserverregistration-get_identity
+            - name: Instancing-Methode
+              href: /windows/win32/api/activationregistration/nf-activationregistration-iexeserverregistration-get_instancing
+            - name: Berechtigungs Methode
+              href: /windows/win32/api/activationregistration/nf-activationregistration-iexeserverregistration-get_permissions
+        - name: Ifindreferencetargetscallback
+          href: /windows/win32/api/windows.ui.xaml.hosting.referencetracker/nn-windows-ui-xaml-hosting-referencetracker-ifindreferencetargetscallback
+          items:
+            - name: Foundtrackertarget-Methode
+              href: /windows/win32/api/windows.ui.xaml.hosting.referencetracker/nf-windows-ui-xaml-hosting-referencetracker-ifindreferencetargetscallback-foundtrackertarget
+        - name: Iinputpaneinterop
+          href: /windows/win32/api/inputpaneinterop/nn-inputpaneinterop-iinputpaneinterop
+          items:
+            - name: Getforwindow-Methode
+              href: /windows/win32/api/inputpaneinterop/nf-inputpaneinterop-iinputpaneinterop-getforwindow
+        - name: IInputStream
+          href: /previous-versions//hh438387(v=vs.85)
+          items:
+            - name: Read Async-Methode
+              href: /previous-versions//hh438388(v=vs.85)
+        - name: IInspectable
+          href: /windows/win32/api/inspectable/nn-inspectable-iinspectable
+          items:
+            - name: GetIids-Methode
+              href: /windows/win32/api/inspectable/nf-inspectable-iinspectable-getiids
+            - name: GetRuntimeClassName-Methode
+              href: /windows/win32/api/inspectable/nf-inspectable-iinspectable-getruntimeclassname
+            - name: GetTrustLevel-Methode
+              href: /windows/win32/api/inspectable/nf-inspectable-iinspectable-gettrustlevel
+        - name: IIterable<T>
+          href: /previous-versions//br205825(v=vs.85)
+          items:
+            - name: Erste Methode
+              href: /previous-versions//br205826(v=vs.85)
+        - name: IIterator<T>
+          href: /previous-versions//br205827(v=vs.85)
+          items:
+            - name: get_Current-Methode
+              href: /previous-versions//br205828(v=vs.85)
+            - name: get_HasCurrent-Methode
+              href: /previous-versions//br205829(v=vs.85)
+            - name: MoveNext-Methode
+              href: /previous-versions//br205830(v=vs.85)
+        - name: 'Ikeyvaluepair<K, V>'
+          href: /previous-versions//br205831(v=vs.85)
+          items:
+            - name: get_Key-Methode
+              href: /previous-versions//br205832(v=vs.85)
+            - name: get_Value-Methode
+              href: /previous-versions//br205833(v=vs.85)
+        - name: Ilanguageexceptionerrorinfo
+          href: /windows/win32/api/restrictederrorinfo/nn-restrictederrorinfo-ilanguageexceptionerrorinfo
+          items:
+            - name: Getlanguageexception-Methode
+              href: /windows/win32/api/restrictederrorinfo/nf-restrictederrorinfo-ilanguageexceptionerrorinfo-getlanguageexception
+        - name: ILanguageExceptionErrorInfo2
+          href: /windows/win32/api/restrictederrorinfo/nn-restrictederrorinfo-ilanguageexceptionerrorinfo2
+          items:
+            - name: Getpreviouslanguageexceptionerrorinfo-Methode
+              href: /windows/win32/api/restrictederrorinfo/nf-restrictederrorinfo-ilanguageexceptionerrorinfo2-getpreviouslanguageexceptionerrorinfo
+            - name: Capturepropagationcontext-Methode
+              href: /windows/win32/api/restrictederrorinfo/nf-restrictederrorinfo-ilanguageexceptionerrorinfo2-capturepropagationcontext
+            - name: Getpropagationcontexerad-Methode
+              href: /windows/win32/api/restrictederrorinfo/nf-restrictederrorinfo-ilanguageexceptionerrorinfo2-getpropagationcontexthead
+        - name: Ilanguageexceptiontransform
+          href: /windows/win32/api/restrictederrorinfo/nn-restrictederrorinfo-ilanguageexceptiontransform
+          items:
+            - name: Gettransformedrestrictederrorinfo-Methode
+              href: /windows/win32/api/restrictederrorinfo/nf-restrictederrorinfo-ilanguageexceptiontransform-gettransformedrestrictederrorinfo
+        - name: Ilanguageexceptionstackbacktrace
+          href: /windows/win32/api/restrictederrorinfo/nn-restrictederrorinfo-ilanguageexceptionstackbacktrace
+          items:
+            - name: Getstackbacktrace-Methode
+              href: /windows/win32/api/restrictederrorinfo/nf-restrictederrorinfo-ilanguageexceptionstackbacktrace-getstackbacktrace
+        - name: 'IMap<K, V>'
+          href: /previous-versions//br205834(v=vs.85)
+          items:
+            - name: Clear-Methode
+              href: /previous-versions//br205843(v=vs.85)
+            - name: get_Size-Methode
+              href: /previous-versions//br205845(v=vs.85)
+            - name: GetView-Methode
+              href: /previous-versions//br205844(v=vs.85)
+            - name: Haskey-Methode
+              href: /previous-versions//br205846(v=vs.85)
+            - name: Insert-Methode
+              href: /previous-versions//br205847(v=vs.85)
+            - name: Lookup-Methode
+              href: /previous-versions//br205848(v=vs.85)
+            - name: Remove-Methode
+              href: /previous-versions//br205849(v=vs.85)
+        - name: IMapChangedEventArgs<K>
+          href: /previous-versions//br205835(v=vs.85)
+          items:
+            - name: get_CollectionChange-Methode
+              href: /previous-versions//br205836(v=vs.85)
+            - name: get_Key-Methode
+              href: /previous-versions//br205837(v=vs.85)
+        - name: 'Imapview<K, V>'
+          href: /previous-versions//br205838(v=vs.85)
+          items:
+            - name: get_Size-Methode
+              href: /previous-versions//br205839(v=vs.85)
+            - name: Haskey-Methode
+              href: /previous-versions//br205840(v=vs.85)
+            - name: Lookup-Methode
+              href: /previous-versions//br205841(v=vs.85)
+            - name: Split-Methode
+              href: /previous-versions//br205842(v=vs.85)
+        - name: Imemorybufferbyteaccess
+          href: /previous-versions//mt297505(v=vs.85)
+          items:
+            - name: GetBuffer-Methode
+              href: imemorybufferbyteaccess-getbuffer.md
+        - name: IMetaDataAssemblyImport
+          href: /windows/win32/api/rometadataapi/nn-rometadataapi-imetadataassemblyimport
+          items:
+            - name: CloseEnum-Methode
+              href: /windows/win32/api/rometadataapi/nf-rometadataapi-imetadataassemblyimport-closeenum
+            - name: EnumAssemblyRefs-Methode
+              href: /windows/win32/api/rometadataapi/nf-rometadataapi-imetadataassemblyimport-enumassemblyrefs
+            - name: EnumExportedTypes-Methode
+              href: /windows/win32/api/rometadataapi/nf-rometadataapi-imetadataassemblyimport-enumexportedtypes
+            - name: EnumFiles-Methode
+              href: /windows/win32/api/rometadataapi/nf-rometadataapi-imetadataassemblyimport-enumfiles
+            - name: EnumManifestResources-Methode
+              href: /windows/win32/api/rometadataapi/nf-rometadataapi-imetadataassemblyimport-enummanifestresources
+            - name: FindAssembliesByName-Methode
+              href: /windows/win32/api/rometadataapi/nf-rometadataapi-imetadataassemblyimport-findassembliesbyname
+            - name: FindExportedTypeByName-Methode
+              href: /windows/win32/api/rometadataapi/nf-rometadataapi-imetadataassemblyimport-findexportedtypebyname
+            - name: FindManifestResourceByName-Methode
+              href: /windows/win32/api/rometadataapi/nf-rometadataapi-imetadataassemblyimport-findmanifestresourcebyname
+            - name: GetAssemblyFromScope-Methode
+              href: /windows/win32/api/rometadataapi/nf-rometadataapi-imetadataassemblyimport-getassemblyfromscope
+            - name: GetAssemblyProps-Methode
+              href: /windows/win32/api/rometadataapi/nf-rometadataapi-imetadataassemblyimport-getassemblyprops
+            - name: GetAssemblyRefProps-Methode
+              href: /windows/win32/api/rometadataapi/nf-rometadataapi-imetadataassemblyimport-getassemblyrefprops
+            - name: GetExportedTypeProps-Methode
+              href: /windows/win32/api/rometadataapi/nf-rometadataapi-imetadataassemblyimport-getexportedtypeprops
+            - name: GetFileProps-Methode
+              href: /windows/win32/api/rometadataapi/nf-rometadataapi-imetadataassemblyimport-getfileprops
+            - name: GetManifestResourceProps-Methode
+              href: /windows/win32/api/rometadataapi/nf-rometadataapi-imetadataassemblyimport-getmanifestresourceprops
+        - name: IMetaDataDispenser
+          href: /windows/win32/api/rometadataapi/nn-rometadataapi-imetadatadispenser
+          items:
+            - name: DefineScope-Methode
+              href: /windows/win32/api/rometadataapi/nf-rometadataapi-imetadatadispenser-definescope
+            - name: OpenScope-Methode
+              href: /windows/win32/api/rometadataapi/nf-rometadataapi-imetadatadispenser-openscope
+            - name: OpenScopeOnMemory-Methode
+              href: /windows/win32/api/rometadataapi/nf-rometadataapi-imetadatadispenser-openscopeonmemory
+        - name: IMetaDataDispenserEx
+          href: /windows/win32/api/rometadataapi/nn-rometadataapi-imetadatadispenserex
+          items:
+            - name: FindAssembly-Methode
+              href: /windows/win32/api/rometadataapi/nf-rometadataapi-imetadatadispenserex-findassembly
+            - name: FindAssemblyModule-Methode
+              href: /windows/win32/api/rometadataapi/nf-rometadataapi-imetadatadispenserex-findassemblymodule
+            - name: GetCORSystemDirectory-Methode
+              href: /windows/win32/api/rometadataapi/nf-rometadataapi-imetadatadispenserex-getcorsystemdirectory
+            - name: GetOption-Methode
+              href: /windows/win32/api/rometadataapi/nf-rometadataapi-imetadatadispenserex-getoption
+            - name: OpenScopeOnITypeInfo-Methode
+              href: /windows/win32/api/rometadataapi/nf-rometadataapi-imetadatadispenserex-openscopeonitypeinfo
+            - name: SetOption-Methode
+              href: /windows/win32/api/rometadataapi/nf-rometadataapi-imetadatadispenserex-setoption
+        - name: IMetaDataImport
+          href: /windows/win32/api/rometadataapi/nn-rometadataapi-imetadataimport
+          items:
+            - name: CloseEnum-Methode
+              href: /windows/win32/api/rometadataapi/nf-rometadataapi-imetadataimport-closeenum
+            - name: CountEnum-Methode
+              href: /windows/win32/api/rometadataapi/nf-rometadataapi-imetadataimport-countenum
+            - name: EnumCustomAttributes-Methode
+              href: /windows/win32/api/rometadataapi/nf-rometadataapi-imetadataimport-enumcustomattributes
+            - name: EnumEvents-Methode
+              href: /windows/win32/api/rometadataapi/nf-rometadataapi-imetadataimport-enumevents
+            - name: EnumFields-Methode
+              href: /windows/win32/api/rometadataapi/nf-rometadataapi-imetadataimport-enumfields
+            - name: EnumFieldsWithName-Methode
+              href: /windows/win32/api/rometadataapi/nf-rometadataapi-imetadataimport-enumfieldswithname
+            - name: EnumInterfaceImpls-Methode
+              href: /windows/win32/api/rometadataapi/nf-rometadataapi-imetadataimport-enuminterfaceimpls
+            - name: EnumMemberRefs-Methode
+              href: /windows/win32/api/rometadataapi/nf-rometadataapi-imetadataimport-enummemberrefs
+            - name: EnumMembers-Methode
+              href: /windows/win32/api/rometadataapi/nf-rometadataapi-imetadataimport-enummembers
+            - name: EnumMembersWithName-Methode
+              href: /windows/win32/api/rometadataapi/nf-rometadataapi-imetadataimport-enummemberswithname
+            - name: EnumMethodImpls-Methode
+              href: /windows/win32/api/rometadataapi/nf-rometadataapi-imetadataimport-enummethodimpls
+            - name: EnumMethods-Methode
+              href: /windows/win32/api/rometadataapi/nf-rometadataapi-imetadataimport-enummethods
+            - name: EnumMethodSemantics-Methode
+              href: /windows/win32/api/rometadataapi/nf-rometadataapi-imetadataimport-enummethodsemantics
+            - name: EnumMethodsWithName-Methode
+              href: /windows/win32/api/rometadataapi/nf-rometadataapi-imetadataimport-enummethodswithname
+            - name: EnumModuleRefs-Methode
+              href: /windows/win32/api/rometadataapi/nf-rometadataapi-imetadataimport-enummodulerefs
+            - name: EnumParams-Methode
+              href: /windows/win32/api/rometadataapi/nf-rometadataapi-imetadataimport-enumparams
+            - name: EnumPermissionSets-Methode
+              href: /windows/win32/api/rometadataapi/nf-rometadataapi-imetadataimport-enumpermissionsets
+            - name: EnumProperties-Methode
+              href: /windows/win32/api/rometadataapi/nf-rometadataapi-imetadataimport-enumproperties
+            - name: EnumSignatures-Methode
+              href: /windows/win32/api/rometadataapi/nf-rometadataapi-imetadataimport-enumsignatures
+            - name: EnumTypeDefs-Methode
+              href: /windows/win32/api/rometadataapi/nf-rometadataapi-imetadataimport-enumtypedefs
+            - name: EnumTypeRefs-Methode
+              href: /windows/win32/api/rometadataapi/nf-rometadataapi-imetadataimport-enumtyperefs
+            - name: EnumTypeSpecs-Methode
+              href: /windows/win32/api/rometadataapi/nf-rometadataapi-imetadataimport-enumtypespecs
+            - name: EnumUnresolvedMethods-Methode
+              href: /windows/win32/api/rometadataapi/nf-rometadataapi-imetadataimport-enumunresolvedmethods
+            - name: EnumUserStrings-Methode
+              href: /windows/win32/api/rometadataapi/nf-rometadataapi-imetadataimport-enumuserstrings
+            - name: FindMemberRef-Methode
+              href: /windows/win32/api/rometadataapi/nf-rometadataapi-imetadataimport-findmemberref
+            - name: FindTypeDefByName-Methode
+              href: /windows/win32/api/rometadataapi/nf-rometadataapi-imetadataimport-findtypedefbyname
+            - name: FindTypeRef-Methode
+              href: /windows/win32/api/rometadataapi/nf-rometadataapi-imetadataimport-findtyperef
+            - name: GetCustomAttributeByName-Methode
+              href: /windows/win32/api/rometadataapi/nf-rometadataapi-imetadataimport-getcustomattributebyname
+            - name: GetCustomAttributeProps-Methode
+              href: /windows/win32/api/rometadataapi/nf-rometadataapi-imetadataimport-getcustomattributeprops
+            - name: GetFieldMarshal-Methode
+              href: /windows/win32/api/rometadataapi/nf-rometadataapi-imetadataimport-getfieldmarshal
+            - name: GetFieldProps-Methode
+              href: /windows/win32/api/rometadataapi/nf-rometadataapi-imetadataimport-getfieldprops
+            - name: GetInterfaceImplProps-Methode
+              href: /windows/win32/api/rometadataapi/nf-rometadataapi-imetadataimport-getinterfaceimplprops
+            - name: GetMemberProps-Methode
+              href: /windows/win32/api/rometadataapi/nf-rometadataapi-imetadataimport-getmemberprops
+            - name: GetMemberRefProps-Methode
+              href: /windows/win32/api/rometadataapi/nf-rometadataapi-imetadataimport-getmemberrefprops
+            - name: GetMethodProps-Methode
+              href: /windows/win32/api/rometadataapi/nf-rometadataapi-imetadataimport-getmethodprops
+            - name: GetMethodSemantics-Methode
+              href: /windows/win32/api/rometadataapi/nf-rometadataapi-imetadataimport-getmethodsemantics
+            - name: GetModuleFromScope-Methode
+              href: /windows/win32/api/rometadataapi/nf-rometadataapi-imetadataimport-getmodulefromscope
+            - name: GetModuleRefProps-Methode
+              href: /windows/win32/api/rometadataapi/nf-rometadataapi-imetadataimport-getmodulerefprops
+            - name: GetNameFromToken-Methode
+              href: /windows/win32/api/rometadataapi/nf-rometadataapi-imetadataimport-getnamefromtoken
+            - name: GetNativeCallConvFromSig-Methode
+              href: /windows/win32/api/rometadataapi/nf-rometadataapi-imetadataimport-getnativecallconvfromsig
+            - name: GetNestedClassProps-Methode
+              href: /windows/win32/api/rometadataapi/nf-rometadataapi-imetadataimport-getnestedclassprops
+            - name: GetParamForMethodIndex-Methode
+              href: /previous-versions//hh870628(v=vs.85)
+            - name: GetParamProps-Methode
+              href: /windows/win32/api/rometadataapi/nf-rometadataapi-imetadataimport-getparamprops
+            - name: GetPermissionSetProps-Methode
+              href: /windows/win32/api/rometadataapi/nf-rometadataapi-imetadataimport-getpermissionsetprops
+            - name: GetPinvokeMap-Methode
+              href: /windows/win32/api/rometadataapi/nf-rometadataapi-imetadataimport-getpinvokemap
+            - name: GetRVA-Methode
+              href: /windows/win32/api/rometadataapi/nf-rometadataapi-imetadataimport-getrva
+            - name: GetScopeProps-Methode
+              href: /windows/win32/api/rometadataapi/nf-rometadataapi-imetadataimport-getscopeprops
+            - name: GetSigFromToken-Methode
+              href: /windows/win32/api/rometadataapi/nf-rometadataapi-imetadataimport-getsigfromtoken
+            - name: GetTypeDefProps-Methode
+              href: /windows/win32/api/rometadataapi/nf-rometadataapi-imetadataimport-gettypedefprops
+            - name: GetTypeRefProps-Methode
+              href: /windows/win32/api/rometadataapi/nf-rometadataapi-imetadataimport-gettyperefprops
+            - name: GetTypeSpecFromToken-Methode
+              href: /windows/win32/api/rometadataapi/nf-rometadataapi-imetadataimport-gettypespecfromtoken
+            - name: GetUserString-Methode
+              href: /windows/win32/api/rometadataapi/nf-rometadataapi-imetadataimport-getuserstring
+            - name: IsGlobal-Methode
+              href: /windows/win32/api/rometadataapi/nf-rometadataapi-imetadataimport-isglobal
+            - name: IsValidToken-Methode
+              href: /windows/win32/api/rometadataapi/nf-rometadataapi-imetadataimport-isvalidtoken
+            - name: ResetEnum-Methode
+              href: /windows/win32/api/rometadataapi/nf-rometadataapi-imetadataimport-resetenum
+            - name: ResolveTypeRef-Methode
+              href: /windows/win32/api/rometadataapi/nf-rometadataapi-imetadataimport-resolvetyperef
+        - name: IMetaDataImport2
+          href: /windows/win32/api/rometadataapi/nn-rometadataapi-imetadataimport2
+          items:
+            - name: EnumGenericParamConstraints-Methode
+              href: /windows/win32/api/rometadataapi/nf-rometadataapi-imetadataimport2-enumgenericparamconstraints
+            - name: EnumGenericParams-Methode
+              href: /windows/win32/api/rometadataapi/nf-rometadataapi-imetadataimport2-enumgenericparams
+            - name: EnumMethodSpecs-Methode
+              href: /windows/win32/api/rometadataapi/nf-rometadataapi-imetadataimport2-enummethodspecs
+            - name: GetGenericParamConstraintProps-Methode
+              href: /windows/win32/api/rometadataapi/nf-rometadataapi-imetadataimport2-getgenericparamconstraintprops
+            - name: GetGenericParamProps-Methode
+              href: /windows/win32/api/rometadataapi/nf-rometadataapi-imetadataimport2-getgenericparamprops
+            - name: GetMethodSpecProps-Methode
+              href: /windows/win32/api/rometadataapi/nf-rometadataapi-imetadataimport2-getmethodspecprops
+            - name: GetPEKind-Methode
+              href: /windows/win32/api/rometadataapi/nf-rometadataapi-imetadataimport2-getpekind
+            - name: GetVersionString-Methode
+              href: /windows/win32/api/rometadataapi/nf-rometadataapi-imetadataimport2-getversionstring
+        - name: IMetaDataTables
+          href: /windows/win32/api/rometadataapi/nn-rometadataapi-imetadatatables
+          items:
+            - name: GetBlob-Methode
+              href: /windows/win32/api/rometadataapi/nf-rometadataapi-imetadatatables-getblob
+            - name: GetBlobHeapSize-Methode
+              href: /windows/win32/api/rometadataapi/nf-rometadataapi-imetadatatables-getblobheapsize
+            - name: GetCodedTokenInfo-Methode
+              href: /windows/win32/api/rometadataapi/nf-rometadataapi-imetadatatables-getcodedtokeninfo
+            - name: GetColumn-Methode
+              href: /windows/win32/api/rometadataapi/nf-rometadataapi-imetadatatables-getcolumn
+            - name: GetColumnInfo-Methode
+              href: /windows/win32/api/rometadataapi/nf-rometadataapi-imetadatatables-getcolumninfo
+            - name: GetGuid-Methode
+              href: /windows/win32/api/rometadataapi/nf-rometadataapi-imetadatatables-getguid
+            - name: GetGuidHeapSize-Methode
+              href: /windows/win32/api/rometadataapi/nf-rometadataapi-imetadatatables-getguidheapsize
+            - name: GetNextBlob-Methode
+              href: /windows/win32/api/rometadataapi/nf-rometadataapi-imetadatatables-getnextblob
+            - name: GetNextGuid-Methode
+              href: /windows/win32/api/rometadataapi/nf-rometadataapi-imetadatatables-getnextguid
+            - name: GetNextString-Methode
+              href: /windows/win32/api/rometadataapi/nf-rometadataapi-imetadatatables-getnextstring
+            - name: GetNextUserString-Methode
+              href: /windows/win32/api/rometadataapi/nf-rometadataapi-imetadatatables-getnextuserstring
+            - name: GetNumTables-Methode
+              href: /windows/win32/api/rometadataapi/nf-rometadataapi-imetadatatables-getnumtables
+            - name: GetRow-Methode
+              href: /windows/win32/api/rometadataapi/nf-rometadataapi-imetadatatables-getrow
+            - name: GetString-Methode
+              href: /windows/win32/api/rometadataapi/nf-rometadataapi-imetadatatables-getstring
+            - name: GetStringHeapSize-Methode
+              href: /windows/win32/api/rometadataapi/nf-rometadataapi-imetadatatables-getstringheapsize
+            - name: GetTableIndex-Methode
+              href: /previous-versions//hh870662(v=vs.85)
+            - name: GetTableInfo-Methode
+              href: /windows/win32/api/rometadataapi/nf-rometadataapi-imetadatatables-gettableinfo
+            - name: GetUserString-Methode
+              href: /windows/win32/api/rometadataapi/nf-rometadataapi-imetadatatables-getuserstring
+            - name: GetUserStringHeapSize-Methode
+              href: /windows/win32/api/rometadataapi/nf-rometadataapi-imetadatatables-getuserstringheapsize
+        - name: IMetaDataTables2
+          href: /windows/win32/api/rometadataapi/nn-rometadataapi-imetadatatables2
+          items:
+            - name: GetMetaDataStorage-Methode
+              href: /windows/win32/api/rometadataapi/nf-rometadataapi-imetadatatables2-getmetadatastorage
+            - name: GetMetaDataStreamInfo-Methode
+              href: /windows/win32/api/rometadataapi/nf-rometadataapi-imetadatatables2-getmetadatastreaminfo
+        - name: 'Iobservablemap<K, V>'
+          href: /previous-versions//br205851(v=vs.85)
+          items:
+            - name: add_MapChanged-Methode
+              href: /previous-versions//br205852(v=vs.85)
+            - name: remove_MapChanged-Methode
+              href: /previous-versions//br205853(v=vs.85)
+        - name: IObservableVector<T>
+          href: /previous-versions//br205854(v=vs.85)
+          items:
+            - name: add_VectorChanged-Methode
+              href: /previous-versions//br205855(v=vs.85)
+            - name: remove_VectorChanged-Methode
+              href: /previous-versions//br205856(v=vs.85)
+        - name: Ioplockbreakinghandler
+          href: /windows/win32/api/windowsstoragecom/nn-windowsstoragecom-ioplockbreakinghandler
+          items:
+            - name: Oplockbreaking-Methode
+              href: /windows/win32/api/windowsstoragecom/nf-windowsstoragecom-ioplockbreakinghandler-oplockbreaking
+        - name: IOutputStream
+          href: /previous-versions//hh438390(v=vs.85)
+          items:
+            - name: Write-Async-Methode
+              href: /previous-versions//hh438392(v=vs.85)
+            - name: Flushasync-Methode
+              href: /previous-versions//hh438391(v=vs.85)
+        - name: Ipdfrenderernative
+          href: /windows/win32/api/windows.data.pdf.interop/nn-windows-data-pdf-interop-ipdfrenderernative
+          items:
+            - name: Renderpagetodevicecontext-Methode
+              href: /windows/win32/api/windows.data.pdf.interop/nf-windows-data-pdf-interop-ipdfrenderernative-renderpagetodevicecontext
+            - name: Renderpagedesurface-Methode
+              href: /windows/win32/api/windows.data.pdf.interop/nf-windows-data-pdf-interop-ipdfrenderernative-renderpagetosurface
+        - name: Ipackagedebugsettings
+          href: /previous-versions//hh438393(v=vs.85)
+          items:
+            - name: Activatebackgroundtask-Methode
+              href: /previous-versions//dn315019(v=vs.85)
+            - name: Disabledebugging-Methode
+              href: /previous-versions//hh438394(v=vs.85)
+            - name: Enabledebugging-Methode
+              href: /previous-versions//hh438395(v=vs.85)
+            - name: Enumeratebackgroundtasks-Methode
+              href: /previous-versions//dn315020(v=vs.85)
+            - name: Getpackageexecutionstate-Methode
+              href: /previous-versions//dn315021(v=vs.85)
+            - name: Registerforpackagestatechanges-Methode
+              href: /previous-versions//dn315022(v=vs.85)
+            - name: Resume-Methode
+              href: ipackagedebugsettings-resume.md
+            - name: Settargezessionid-Methode
+              href: /previous-versions//hh438397(v=vs.85)
+            - name: StartService-Methode
+              href: /previous-versions//dn315023(v=vs.85)
+            - name: Starungessionredirect-Methode
+              href: /previous-versions//dn315024(v=vs.85)
+            - name: Stopwartung-Methode
+              href: /previous-versions//dn315025(v=vs.85)
+            - name: Stopsessionredirect-Methode
+              href: /previous-versions//dn315026(v=vs.85)
+            - name: Suspend-Methode
+              href: ipackagedebugsettings-suspend.md
+            - name: Terminateallprocesses-Methode
+              href: /previous-versions//hh438399(v=vs.85)
+            - name: Unregisterforpackagestatechanges-Methode
+              href: /previous-versions//dn315027(v=vs.85)
+        - name: Iplaytomanagerinterop
+          href: /windows/win32/api/playtomanagerinterop/nn-playtomanagerinterop-iplaytomanagerinterop
+          items:
+            - name: Getforwindow-Methode
+              href: /windows/win32/api/playtomanagerinterop/nf-playtomanagerinterop-iplaytomanagerinterop-getforwindow
+            - name: Showplaytouiforwindow-Methode
+              href: /windows/win32/api/playtomanagerinterop/nf-playtomanagerinterop-iplaytomanagerinterop-showplaytouiforwindow
+        - name: Iprintmanagerinterop
+          href: /windows/win32/api/printmanagerinterop/nn-printmanagerinterop-iprintmanagerinterop
+          items:
+            - name: Getforwindow-Methode
+              href: /windows/win32/api/printmanagerinterop/nf-printmanagerinterop-iprintmanagerinterop-getforwindow
+            - name: Showprintuiforwindowasync-Methode
+              href: /windows/win32/api/printmanagerinterop/nf-printmanagerinterop-iprintmanagerinterop-showprintuiforwindowasync
+        - name: IPropertyValue
+          href: /windows/win32/api/windows.foundation/nn-windows-foundation-ipropertyvalue
+          items:
+            - name: GetBoolean-Methode
+              href: /windows/win32/api/windows.foundation/nf-windows-foundation-ipropertyvalue-getboolean
+            - name: Getbooleanarray-Methode
+              href: /windows/win32/api/windows.foundation/nf-windows-foundation-ipropertyvalue-getbooleanarray
+            - name: GetChar16-Methode
+              href: /windows/win32/api/windows.foundation/nf-windows-foundation-ipropertyvalue-getchar16
+            - name: GetChar16Array-Methode
+              href: /windows/win32/api/windows.foundation/nf-windows-foundation-ipropertyvalue-getchar16array
+            - name: GetDateTime-Methode
+              href: /windows/win32/api/windows.foundation/nf-windows-foundation-ipropertyvalue-getdatetime
+            - name: Getdatetimearray-Methode
+              href: /windows/win32/api/windows.foundation/nf-windows-foundation-ipropertyvalue-getdatetimearray
+            - name: GetDouble-Methode
+              href: /windows/win32/api/windows.foundation/nf-windows-foundation-ipropertyvalue-getdouble
+            - name: Getdoublearray-Methode
+              href: /windows/win32/api/windows.foundation/nf-windows-foundation-ipropertyvalue-getdoublearray
+            - name: GetGuid-Methode
+              href: /windows/win32/api/windows.foundation/nf-windows-foundation-ipropertyvalue-getguid
+            - name: Getguidarray-Methode
+              href: /windows/win32/api/windows.foundation/nf-windows-foundation-ipropertyvalue-getguidarray
+            - name: Getinspectablearray-Methode
+              href: /windows/win32/api/windows.foundation/nf-windows-foundation-ipropertyvalue-getinspectablearray
+            - name: GetInt32-Methode
+              href: /windows/win32/api/windows.foundation/nf-windows-foundation-ipropertyvalue-getint32
+            - name: GetInt32Array-Methode
+              href: /windows/win32/api/windows.foundation/nf-windows-foundation-ipropertyvalue-getint32array
+            - name: GetInt64-Methode
+              href: /windows/win32/api/windows.foundation/nf-windows-foundation-ipropertyvalue-getint64
+            - name: GetInt64Array-Methode
+              href: /windows/win32/api/windows.foundation/nf-windows-foundation-ipropertyvalue-getint64array
+            - name: GetPoint-Methode
+              href: /windows/win32/api/windows.foundation/nf-windows-foundation-ipropertyvalue-getpoint
+            - name: Getpointarray-Methode
+              href: /windows/win32/api/windows.foundation/nf-windows-foundation-ipropertyvalue-getpointarray
+            - name: GetRect-Methode
+              href: /windows/win32/api/windows.foundation/nf-windows-foundation-ipropertyvalue-getrect
+            - name: Getrectarray-Methode
+              href: /windows/win32/api/windows.foundation/nf-windows-foundation-ipropertyvalue-getrectarray
+            - name: GetSingle-Methode
+              href: /windows/win32/api/windows.foundation/nf-windows-foundation-ipropertyvalue-getsingle
+            - name: Getsinglearray-Methode
+              href: /windows/win32/api/windows.foundation/nf-windows-foundation-ipropertyvalue-getsinglearray
+            - name: GetSize-Methode
+              href: /windows/win32/api/windows.foundation/nf-windows-foundation-ipropertyvalue-getsize
+            - name: Getsizearray-Methode
+              href: /windows/win32/api/windows.foundation/nf-windows-foundation-ipropertyvalue-getsizearray
+            - name: GetString-Methode
+              href: /windows/win32/api/windows.foundation/nf-windows-foundation-ipropertyvalue-getstring
+            - name: GetStringArray-Methode
+              href: /windows/win32/api/windows.foundation/nf-windows-foundation-ipropertyvalue-getstringarray
+            - name: GetTimeSpan-Methode
+              href: /windows/win32/api/windows.foundation/nf-windows-foundation-ipropertyvalue-gettimespan
+            - name: Gettimespanarray-Methode
+              href: /windows/win32/api/windows.foundation/nf-windows-foundation-ipropertyvalue-gettimespanarray
+            - name: GetUInt32-Methode
+              href: /windows/win32/api/windows.foundation/nf-windows-foundation-ipropertyvalue-getuint32
+            - name: GetUInt32Array-Methode
+              href: /windows/win32/api/windows.foundation/nf-windows-foundation-ipropertyvalue-getuint32array
+            - name: GetUInt64-Methode
+              href: /windows/win32/api/windows.foundation/nf-windows-foundation-ipropertyvalue-getuint64
+            - name: GetUInt64Array-Methode
+              href: /windows/win32/api/windows.foundation/nf-windows-foundation-ipropertyvalue-getuint64array
+            - name: GetUInt8-Methode
+              href: /windows/win32/api/windows.foundation/nf-windows-foundation-ipropertyvalue-getuint8
+            - name: GetUInt8Array-Methode
+              href: /windows/win32/api/windows.foundation/nf-windows-foundation-ipropertyvalue-getuint8array
+            - name: Type (Eigenschaft)
+              href: /windows/win32/api/windows.foundation/nf-windows-foundation-ipropertyvalue-get_type
+        - name: Ipropertyvaluestatik
+          href: /windows/win32/api/windows.foundation/nn-windows-foundation-ipropertyvaluestatics
+          items:
+            - name: Methode "kreateboolean"
+              href: /windows/win32/api/windows.foundation/nf-windows-foundation-ipropertyvaluestatics-createboolean
+            - name: Methode "kreatebooleanarray"
+              href: /windows/win32/api/windows.foundation/nf-windows-foundation-ipropertyvaluestatics-createbooleanarray
+            - name: CreateChar16-Methode
+              href: /windows/win32/api/windows.foundation/nf-windows-foundation-ipropertyvaluestatics-createchar16
+            - name: CreateChar16Array-Methode
+              href: /windows/win32/api/windows.foundation/nf-windows-foundation-ipropertyvaluestatics-createchar16array
+            - name: Methode "kreatedatetime"
+              href: /windows/win32/api/windows.foundation/nf-windows-foundation-ipropertyvaluestatics-createdatetime
+            - name: Methode "kreatedatetimearray"
+              href: /windows/win32/api/windows.foundation/nf-windows-foundation-ipropertyvaluestatics-createdatetimearray
+            - name: Methode "kreatedouble"
+              href: /windows/win32/api/windows.foundation/nf-windows-foundation-ipropertyvaluestatics-createdouble
+            - name: Methode "kreatedoublearray"
+              href: /windows/win32/api/windows.foundation/nf-windows-foundation-ipropertyvaluestatics-createdoublearray
+            - name: Methode "kreateempty"
+              href: /windows/win32/api/windows.foundation/nf-windows-foundation-ipropertyvaluestatics-createempty
+            - name: Methode "kreateguid"
+              href: /windows/win32/api/windows.foundation/nf-windows-foundation-ipropertyvaluestatics-createguid
+            - name: Methode "kreateguidarray"
+              href: /windows/win32/api/windows.foundation/nf-windows-foundation-ipropertyvaluestatics-createguidarray
+            - name: Methode "kreateingespectable"
+              href: /windows/win32/api/windows.foundation/nf-windows-foundation-ipropertyvaluestatics-createinspectable
+            - name: Methode "kreateingespectablearray"
+              href: /windows/win32/api/windows.foundation/nf-windows-foundation-ipropertyvaluestatics-createinspectablearray
+            - name: CreateInt32-Methode
+              href: /windows/win32/api/windows.foundation/nf-windows-foundation-ipropertyvaluestatics-createint32
+            - name: CreateInt32Array-Methode
+              href: /windows/win32/api/windows.foundation/nf-windows-foundation-ipropertyvaluestatics-createint32array
+            - name: CreateInt64-Methode
+              href: /windows/win32/api/windows.foundation/nf-windows-foundation-ipropertyvaluestatics-createint64
+            - name: CreateInt64Array-Methode
+              href: /windows/win32/api/windows.foundation/nf-windows-foundation-ipropertyvaluestatics-createint64array
+            - name: Methode "kreatepoint"
+              href: /windows/win32/api/windows.foundation/nf-windows-foundation-ipropertyvaluestatics-createpoint
+            - name: Methode "kreatepointarray"
+              href: /windows/win32/api/windows.foundation/nf-windows-foundation-ipropertyvaluestatics-createpointarray
+            - name: Methode "kreaterect"
+              href: /windows/win32/api/windows.foundation/nf-windows-foundation-ipropertyvaluestatics-createrect
+            - name: Methode "| aterectarray"
+              href: /windows/win32/api/windows.foundation/nf-windows-foundation-ipropertyvaluestatics-createrectarray
+            - name: Methode "kreatesingle"
+              href: /windows/win32/api/windows.foundation/nf-windows-foundation-ipropertyvaluestatics-createsingle
+            - name: Methode "kreatesinglearray"
+              href: /windows/win32/api/windows.foundation/nf-windows-foundation-ipropertyvaluestatics-createsinglearray
+            - name: Kreatesize-Methode
+              href: /windows/win32/api/windows.foundation/nf-windows-foundation-ipropertyvaluestatics-createsize
+            - name: Kreatesizearray-Methode
+              href: /windows/win32/api/windows.foundation/nf-windows-foundation-ipropertyvaluestatics-createsizearray
+            - name: Methode "kreatestring"
+              href: /windows/win32/api/windows.foundation/nf-windows-foundation-ipropertyvaluestatics-createstring
+            - name: Methode "kreatestringarray"
+              href: /windows/win32/api/windows.foundation/nf-windows-foundation-ipropertyvaluestatics-createstringarray
+            - name: Methode "kreatetimespan"
+              href: /windows/win32/api/windows.foundation/nf-windows-foundation-ipropertyvaluestatics-createtimespan
+            - name: Methode "kreatetimespanarray"
+              href: /windows/win32/api/windows.foundation/nf-windows-foundation-ipropertyvaluestatics-createtimespanarray
+            - name: CreateUInt32-Methode
+              href: /windows/win32/api/windows.foundation/nf-windows-foundation-ipropertyvaluestatics-createuint32
+            - name: CreateUInt32Array-Methode
+              href: /windows/win32/api/windows.foundation/nf-windows-foundation-ipropertyvaluestatics-createuint32array
+            - name: CreateUInt64-Methode
+              href: /windows/win32/api/windows.foundation/nf-windows-foundation-ipropertyvaluestatics-createuint64
+            - name: CreateUInt64Array-Methode
+              href: /windows/win32/api/windows.foundation/nf-windows-foundation-ipropertyvaluestatics-createuint64array
+            - name: CreateUInt8-Methode
+              href: /windows/win32/api/windows.foundation/nf-windows-foundation-ipropertyvaluestatics-createuint8
+            - name: CreateUInt8Array-Methode
+              href: /windows/win32/api/windows.foundation/nf-windows-foundation-ipropertyvaluestatics-createuint8array
+        - name: IRandomAccessStream
+          href: /previous-versions//hh438400(v=vs.85)
+          items:
+            - name: Getinputstreamat-Methode
+              href: /previous-versions//hh438401(v=vs.85)
+            - name: Getoutputstreamat-Methode
+              href: /previous-versions//hh438402(v=vs.85)
+            - name: Size-Eigenschaft
+              href: /previous-versions//hh438403(v=vs.85)
+        - name: '"Unandomaccessstreamfileaccessmode"'
+          href: /windows/win32/api/windowsstoragecom/nn-windowsstoragecom-irandomaccessstreamfileaccessmode
+          items:
+            - name: GetMode-Methode
+              href: /windows/win32/api/windowsstoragecom/nf-windowsstoragecom-irandomaccessstreamfileaccessmode-getmode
+        - name: IReference<T>
+          href: /previous-versions//br224583(v=vs.85)
+          items:
+            - name: get_Value-Methode
+              href: /previous-versions//br224586(v=vs.85)
+        - name: Ireferencearray<T>
+          href: /previous-versions//br224584(v=vs.85)
+          items:
+            - name: get_Value-Methode
+              href: /previous-versions//br224585(v=vs.85)
+        - name: Ireferencetracker
+          href: /windows/win32/api/windows.ui.xaml.hosting.referencetracker/nn-windows-ui-xaml-hosting-referencetracker-ireferencetracker
+          items:
+            - name: Connectfromtrackersource-Methode
+              href: /windows/win32/api/windows.ui.xaml.hosting.referencetracker/nf-windows-ui-xaml-hosting-referencetracker-ireferencetracker-connectfromtrackersource
+            - name: Disconnectfromtrackersource-Methode
+              href: /windows/win32/api/windows.ui.xaml.hosting.referencetracker/nf-windows-ui-xaml-hosting-referencetracker-ireferencetracker-disconnectfromtrackersource
+            - name: Findtrackertargets-Methode
+              href: /windows/win32/api/windows.ui.xaml.hosting.referencetracker/nf-windows-ui-xaml-hosting-referencetracker-ireferencetracker-findtrackertargets
+            - name: Getreferencetrackermanager-Methode
+              href: /windows/win32/api/windows.ui.xaml.hosting.referencetracker/nf-windows-ui-xaml-hosting-referencetracker-ireferencetracker-getreferencetrackermanager
+            - name: Adressffromtrackersource-Methode
+              href: /windows/win32/api/windows.ui.xaml.hosting.referencetracker/nf-windows-ui-xaml-hosting-referencetracker-ireferencetracker-addreffromtrackersource
+            - name: Releasefromtrackersource-Methode
+              href: /windows/win32/api/windows.ui.xaml.hosting.referencetracker/nf-windows-ui-xaml-hosting-referencetracker-ireferencetracker-releasefromtrackersource
+            - name: Pgfromtrackersource-Methode
+              href: /windows/win32/api/windows.ui.xaml.hosting.referencetracker/nf-windows-ui-xaml-hosting-referencetracker-ireferencetracker-pegfromtrackersource
+        - name: Ireferencetrackerhost
+          href: /windows/win32/api/windows.ui.xaml.hosting.referencetracker/nn-windows-ui-xaml-hosting-referencetracker-ireferencetrackerhost
+          items:
+            - name: Disconnectunusedreferencesources-Methode
+              href: /windows/win32/api/windows.ui.xaml.hosting.referencetracker/nf-windows-ui-xaml-hosting-referencetracker-ireferencetrackerhost-disconnectunusedreferencesources
+            - name: Releasedisconnectedreferencesources-Methode
+              href: /windows/win32/api/windows.ui.xaml.hosting.referencetracker/nf-windows-ui-xaml-hosting-referencetracker-ireferencetrackerhost-releasedisconnectedreferencesources
+            - name: Notifyendofreferencetrackingonthread-Methode
+              href: /windows/win32/api/windows.ui.xaml.hosting.referencetracker/nf-windows-ui-xaml-hosting-referencetracker-ireferencetrackerhost-notifyendofreferencetrackingonthread
+            - name: Gettrackertarget-Methode
+              href: /windows/win32/api/windows.ui.xaml.hosting.referencetracker/nf-windows-ui-xaml-hosting-referencetracker-ireferencetrackerhost-gettrackertarget
+            - name: AddMemoryPressure-Methode
+              href: /windows/win32/api/windows.ui.xaml.hosting.referencetracker/nf-windows-ui-xaml-hosting-referencetracker-ireferencetrackerhost-addmemorypressure
+            - name: RemoveMemoryPressure-Methode
+              href: /windows/win32/api/windows.ui.xaml.hosting.referencetracker/nf-windows-ui-xaml-hosting-referencetracker-ireferencetrackerhost-removememorypressure
+        - name: Ireferencetrackermanager
+          href: /windows/win32/api/windows.ui.xaml.hosting.referencetracker/nn-windows-ui-xaml-hosting-referencetracker-ireferencetrackermanager
+          items:
+            - name: Referencetrackingstarted-Methode
+              href: /windows/win32/api/windows.ui.xaml.hosting.referencetracker/nf-windows-ui-xaml-hosting-referencetracker-ireferencetrackermanager-referencetrackingstarted
+            - name: Findtrackertargezabgeschlossene-Methode
+              href: /windows/win32/api/windows.ui.xaml.hosting.referencetracker/nf-windows-ui-xaml-hosting-referencetracker-ireferencetrackermanager-findtrackertargetscompleted
+            - name: Referencetrackingabgeschlossene-Methode
+              href: /windows/win32/api/windows.ui.xaml.hosting.referencetracker/nf-windows-ui-xaml-hosting-referencetracker-ireferencetrackermanager-referencetrackingcompleted
+            - name: Methode "-Methode"
+              href: /windows/win32/api/windows.ui.xaml.hosting.referencetracker/nf-windows-ui-xaml-hosting-referencetracker-ireferencetrackermanager-setreferencetrackerhost
+        - name: Ireferencetrackertarget
+          href: /windows/win32/api/windows.ui.xaml.hosting.referencetracker/nn-windows-ui-xaml-hosting-referencetracker-ireferencetrackertarget
+          items:
+            - name: Adressffromreferencetracker-Methode
+              href: /windows/win32/api/windows.ui.xaml.hosting.referencetracker/nf-windows-ui-xaml-hosting-referencetracker-ireferencetrackertarget-addreffromreferencetracker
+            - name: Releasefromreferencetracker-Methode
+              href: /windows/win32/api/windows.ui.xaml.hosting.referencetracker/nf-windows-ui-xaml-hosting-referencetracker-ireferencetrackertarget-releasefromreferencetracker
+            - name: PEG-Methode
+              href: /windows/win32/api/windows.ui.xaml.hosting.referencetracker/nf-windows-ui-xaml-hosting-referencetracker-ireferencetrackertarget-peg
+            - name: Unpeg-Methode
+              href: /windows/win32/api/windows.ui.xaml.hosting.referencetracker/nf-windows-ui-xaml-hosting-referencetracker-ireferencetrackertarget-unpeg
+        - name: IRestrictedErrorInfo
+          href: /windows/win32/api/RestrictedErrorInfo/nn-restrictederrorinfo-irestrictederrorinfo
+          items:
+            - name: Geterrordetails-Methode
+              href: /windows/win32/api/RestrictedErrorInfo/nf-restrictederrorinfo-irestrictederrorinfo-geterrordetails
+            - name: Getreferenzierungsmethode
+              href: /windows/win32/api/RestrictedErrorInfo/nf-restrictederrorinfo-irestrictederrorinfo-getreference
+        - name: Isoftwarebitmapnative
+          href: /windows/win32/api/windows.graphics.imaging.interop/nn-windows-graphics-imaging-interop-isoftwarebitmapnative
+          items:
+            - name: GetData-Methode
+              href: /windows/win32/api/windows.graphics.imaging.interop/nf-windows-graphics-imaging-interop-isoftwarebitmapnative-getdata
+        - name: Isoftwarebitmapnativefactory
+          href: /windows/win32/api/windows.graphics.imaging.interop/nn-windows-graphics-imaging-interop-isoftwarebitmapnativefactory
+          items:
+            - name: CreateFromMF2DBuffer2-Methode
+              href: /windows/win32/api/windows.graphics.imaging.interop/nf-windows-graphics-imaging-interop-isoftwarebitmapnativefactory-createfrommf2dbuffer2
+            - name: Methode "kreatefromwicbitmap"
+              href: /windows/win32/api/windows.graphics.imaging.interop/nf-windows-graphics-imaging-interop-isoftwarebitmapnativefactory-createfromwicbitmap
+        - name: Istoragefolderlenker Access
+          href: /windows/win32/api/windowsstoragecom/nn-windowsstoragecom-istoragefolderhandleaccess
+          items:
+            - name: Erstellungsmethode
+              href: /windows/win32/api/windowsstoragecom/nf-windowsstoragecom-istoragefolderhandleaccess-create
+        - name: Istorageitemlenker Access
+          href: /windows/win32/api/windowsstoragecom/nn-windowsstoragecom-istorageitemhandleaccess
+          items:
+            - name: Erstellungsmethode
+              href: /windows/win32/api/windowsstoragecom/nf-windowsstoragecom-istorageitemhandleaccess-create
+        - name: IStringable
+          href: /windows/win32/api/windows.foundation/nn-windows-foundation-istringable
+          items:
+            - name: ToString-Methode
+              href: /windows/win32/api/windows.foundation/nf-windows-foundation-istringable-tostring
+        - name: Isurfakeimagesourcemanagernative
+          href: /windows/win32/api/windows.ui.xaml.media.dxinterop/nn-windows-ui-xaml-media-dxinterop-isurfaceimagesourcemanagernative
+          items:
+            - name: Flushallsurfaceswithdevice-Methode
+              href: /windows/win32/api/windows.ui.xaml.media.dxinterop/nf-windows-ui-xaml-media-dxinterop-isurfaceimagesourcemanagernative-flushallsurfaceswithdevice
+        - name: ISurfaceImageSourceNativeWithD2D
+          href: /windows/win32/api/windows.ui.xaml.media.dxinterop/nn-windows-ui-xaml-media-dxinterop-isurfaceimagesourcenativewithd2d
+          items:
+            - name: BeginDraw-Methode
+              href: /windows/win32/api/windows.ui.xaml.media.dxinterop/nf-windows-ui-xaml-media-dxinterop-isurfaceimagesourcenativewithd2d-begindraw
+            - name: EndDraw-Methode
+              href: /windows/win32/api/windows.ui.xaml.media.dxinterop/nf-windows-ui-xaml-media-dxinterop-isurfaceimagesourcenativewithd2d-enddraw
+            - name: Resumedraw-Methode
+              href: /windows/win32/api/windows.ui.xaml.media.dxinterop/nf-windows-ui-xaml-media-dxinterop-isurfaceimagesourcenativewithd2d-resumedraw
+            - name: Setdevice-Methode
+              href: /windows/win32/api/windows.ui.xaml.media.dxinterop/nf-windows-ui-xaml-media-dxinterop-isurfaceimagesourcenativewithd2d-setdevice
+            - name: Suspenddraw-Methode
+              href: /windows/win32/api/windows.ui.xaml.media.dxinterop/nf-windows-ui-xaml-media-dxinterop-isurfaceimagesourcenativewithd2d-suspenddraw
+        - name: ISurfaceImageSourceNative
+          href: /windows/win32/api/windows.ui.xaml.media.dxinterop/nn-windows-ui-xaml-media-dxinterop-isurfaceimagesourcenative
+          items:
+            - name: Setdevice-Methode
+              href: /windows/win32/api/windows.ui.xaml.media.dxinterop/nf-windows-ui-xaml-media-dxinterop-isurfaceimagesourcenative-setdevice
+            - name: BeginDraw-Methode
+              href: /windows/win32/api/windows.ui.xaml.media.dxinterop/nf-windows-ui-xaml-media-dxinterop-isurfaceimagesourcenative-begindraw
+            - name: EndDraw-Methode
+              href: /windows/win32/api/windows.ui.xaml.media.dxinterop/nf-windows-ui-xaml-media-dxinterop-isurfaceimagesourcenative-enddraw
+        - name: Isuspendingdeferral
+          href: isuspendingdeferral.md
+          items:
+            - name: Complete-Methode
+              href: isuspendingdeferral-complete.md
+        - name: Isuspendingeventargs
+          href: isuspendingeventargs.md
+          items:
+            - name: Suspendingoperation (Eigenschaft)
+              href: isuspendingeventargs-suspendingoperation.md
+        - name: Isuspendingoperation
+          href: isuspendingoperation.md
+          items:
+            - name: Stichtag (Eigenschaft)
+              href: isuspendingoperation-deadline.md
+            - name: Getdeferral-Methode
+              href: isuspendingoperation-getdeferral.md
+        - name: Iswapchainbackgroundpanelnative
+          href: /windows/win32/api/windows.ui.xaml.media.dxinterop/nn-windows-ui-xaml-media-dxinterop-iswapchainbackgroundpanelnative
+          items:
+            - name: Methode "-wapchain"
+              href: /windows/win32/api/windows.ui.xaml.media.dxinterop/nf-windows-ui-xaml-media-dxinterop-iswapchainbackgroundpanelnative-setswapchain
+        - name: ISwapChainPanelNative
+          href: /windows/win32/api/windows.ui.xaml.media.dxinterop/nn-windows-ui-xaml-media-dxinterop-iswapchainpanelnative
+          items:
+            - name: Methode "-wapchain"
+              href: /windows/win32/api/windows.ui.xaml.media.dxinterop/nf-windows-ui-xaml-media-dxinterop-iswapchainpanelnative-setswapchain
+        - name: ISwapChainPanelNative2
+          href: /windows/win32/api/windows.ui.xaml.media.dxinterop/nn-windows-ui-xaml-media-dxinterop-iswapchainpanelnative2
+          items:
+            - name: Methode "-wapchainhandle"
+              href: /windows/win32/api/windows.ui.xaml.media.dxinterop/nf-windows-ui-xaml-media-dxinterop-iswapchainpanelnative2-setswapchainhandle
+        - name: 'Itypedeventhandler<tsender, targs>'
+          href: /previous-versions//hh438424(v=vs.85)
+          items:
+            - name: Invoke-Methode
+              href: /previous-versions//hh438425(v=vs.85)
+        - name: Iunbufferedfilehandleoplockcallback
+          href: /windows/win32/api/windowsstoragecom/nn-windowsstoragecom-iunbufferedfilehandleoplockcallback
+          items:
+            - name: Onbrokencallback-Methode
+              href: /windows/win32/api/windowsstoragecom/nf-windowsstoragecom-iunbufferedfilehandleoplockcallback-onbrokencallback
+        - name: Iunbufferedfilelenker Provider
+          href: /windows/win32/api/windowsstoragecom/nn-windowsstoragecom-iunbufferedfilehandleprovider
+          items:
+            - name: Closeunbufferedfilehandle-Methode
+              href: /windows/win32/api/windowsstoragecom/nf-windowsstoragecom-iunbufferedfilehandleprovider-closeunbufferedfilehandle
+            - name: Openunbufferedfilehandle-Methode
+              href: /windows/win32/api/windowsstoragecom/nf-windowsstoragecom-iunbufferedfilehandleprovider-openunbufferedfilehandle
+        - name: IVector<T>
+          href: /previous-versions//br224590(v=vs.85)
+          items:
+            - name: Append-Methode
+              href: /previous-versions//br224598(v=vs.85)
+            - name: Clear-Methode
+              href: /previous-versions//br224599(v=vs.85)
+            - name: get_Size-Methode
+              href: /previous-versions//br224602(v=vs.85)
+            - name: GetAt-Methode
+              href: /previous-versions//br224600(v=vs.85)
+            - name: GetView-Methode
+              href: /previous-versions//br224601(v=vs.85)
+            - name: IndexOf-Methode
+              href: /previous-versions//br224603(v=vs.85)
+            - name: InsertAt-Methode
+              href: /previous-versions//br224604(v=vs.85)
+            - name: RemoveAt-Methode
+              href: /previous-versions//br224605(v=vs.85)
+            - name: Removeatend-Methode
+              href: /previous-versions//br224606(v=vs.85)
+            - name: Methode "-Methode"
+              href: /previous-versions//br224607(v=vs.85)
+        - name: IVector changedebug-args
+          href: ivectorchangedeventargs.md
+          items:
+            - name: get_CollectionChange-Methode
+              href: ivectorchangedeventargs-get-collectionchange.md
+            - name: get_Index-Methode
+              href: ivectorchangedeventargs-get-index.md
+        - name: 'IVectorView<T> '
+          href: /previous-versions//br224594(v=vs.85)
+          items:
+            - name: get_Size-Methode
+              href: /previous-versions//br224596(v=vs.85)
+            - name: GetAt-Methode
+              href: /previous-versions//br224595(v=vs.85)
+            - name: IndexOf-Methode
+              href: /previous-versions//br224597(v=vs.85)
+        - name: Ivideoframenative
+          href: /windows/win32/api/windows.media.core.interop/nn-windows-media-core-interop-ivideoframenative
+          items:
+            - name: GetData-Methode
+              href: ivideoframenative-getdata.md
+            - name: Getdevice-Methode
+              href: ivideoframenative-getdevice.md
+        - name: Ivideoframenativefactory
+          href: /windows/win32/api/windows.media.core.interop/nn-windows-media-core-interop-ivideoframenativefactory
+          items:
+            - name: Methode "kreatefrommf Sample"
+              href: /windows/win32/api/windows.media.core.interop/nf-windows-media-core-interop-ivideoframenativefactory-createfrommfsample
+        - name: Iviewprovider
+          href: /previous-versions//hh438426(v=vs.85)
+        - name: Iviewproviderfactory
+          href: /previous-versions//hh438427(v=vs.85)
+        - name: '"Ivirtualsurfaceimagesourcenative'
+          href: /windows/win32/api/windows.ui.xaml.media.dxinterop/nn-windows-ui-xaml-media-dxinterop-ivirtualsurfaceimagesourcenative
+          items:
+            - name: Invalidate-Methode
+              href: /windows/win32/api/windows.ui.xaml.media.dxinterop/nf-windows-ui-xaml-media-dxinterop-ivirtualsurfaceimagesourcenative-invalidate
+            - name: Getupdaterectcount-Methode
+              href: /windows/win32/api/windows.ui.xaml.media.dxinterop/nf-windows-ui-xaml-media-dxinterop-ivirtualsurfaceimagesourcenative-getupdaterectcount
+            - name: Getupdaterects-Methode
+              href: /windows/win32/api/windows.ui.xaml.media.dxinterop/nf-windows-ui-xaml-media-dxinterop-ivirtualsurfaceimagesourcenative-getupdaterects
+            - name: Getvisiblebounds-Methode
+              href: /windows/win32/api/windows.ui.xaml.media.dxinterop/nf-windows-ui-xaml-media-dxinterop-ivirtualsurfaceimagesourcenative-getvisiblebounds
+            - name: Registerforupdatesbenötigte-Methode
+              href: /windows/win32/api/windows.ui.xaml.media.dxinterop/nf-windows-ui-xaml-media-dxinterop-ivirtualsurfaceimagesourcenative-registerforupdatesneeded
+            - name: Resize-Methode
+              href: /windows/win32/api/windows.ui.xaml.media.dxinterop/nf-windows-ui-xaml-media-dxinterop-ivirtualsurfaceimagesourcenative-resize
+        - name: Ivirtualsurfakeupdatescallbacknative
+          href: /windows/win32/api/windows.ui.xaml.media.dxinterop/nn-windows-ui-xaml-media-dxinterop-ivirtualsurfaceupdatescallbacknative
+          items:
+            - name: Updatesbenöenmethode
+              href: /windows/win32/api/windows.ui.xaml.media.dxinterop/nf-windows-ui-xaml-media-dxinterop-ivirtualsurfaceupdatescallbacknative-updatesneeded
+        - name: IWeakReference
+          href: /windows/win32/api/weakreference/nn-weakreference-iweakreference
+          items:
+            - name: Resolve-Methode
+              href: /windows/win32/api/weakreference/nf-weakreference-iweakreference-resolve(refiid_iinspectable)
+        - name: IWeakReferenceSource
+          href: /windows/win32/api/weakreference/nn-weakreference-iweakreferencesource
+          items:
+            - name: GetWeakReference-Methode
+              href: /windows/win32/api/weakreference/nf-weakreference-iweakreferencesource-getweakreference
+        - name: 'Mapchangereventhandler<K, V>'
+          href: /previous-versions//br224612(v=vs.85)
+          items:
+            - name: Invoke-Methode
+              href: /previous-versions//br224613(v=vs.85)
+        - name: VectorChangedEventHandler<T>
+          href: /previous-versions//br224626(v=vs.85)
+          items:
+            - name: Invoke-Methode
+              href: /previous-versions//br224627(v=vs.85)
+    - name: Strukturen
+      href: structures.md
+      items:
+        - name: APARTMENT_SHUTDOWN_REGISTRATION_COOKIE
+          href: /previous-versions//jj219262(v=vs.85)
+        - name: EventRegistrationToken
+          href: /windows/win32/api/eventtoken/ns-eventtoken-eventregistrationtoken
+        - name: Datetime
+          href: /windows/win32/api/windows.foundation/ns-windows-foundation-datetime
+        - name: HSTRING_HEADER
+          href: /windows/win32/api/hstring/ns-hstring-hstring_header
+        - name: IRoSimpleMetaDataBuilder
+          href: /windows/win32/api/roparameterizediid/ns-roparameterizediid-irosimplemetadatabuilder
+          items:
+            - name: Setdelegatmethode
+              href: /previous-versions/hh438407(v=vs.85)
+            - name: TEnum-Methode
+              href: /previous-versions/hh438408(v%3Dvs.85)
+            - name: Setinterfacegroupparameterizeddefault-Methode
+              href: /previous-versions/hh438409(v=vs.85)
+            - name: Setinterfacegroupsimpledefault-Methode
+              href: /previous-versions/hh438410(v=vs.85)
+            - name: Setparameterizeddelegatmethode
+              href: /previous-versions/hh438411(v%3Dvs.85)
+            - name: Setparameterizedinterface-Methode
+              href: /previous-versions/hh438412(v=vs.90)
+            - name: '""-Methode ""'
+              href: /previous-versions/hh438413(v%3Dvs.85)
+            - name: '* Truntimeclasssimpledefault-Methode'
+              href: /previous-versions/hh438414(v%3Dvs.85)
+            - name: Setstruct-Methode
+              href: /previous-versions/hh438415(v%3Dvs.85)
+            - name: Setwinrtinterface-Methode
+              href: /previous-versions/hh438416(v%3Dvs.85)
+        - name: IRoMetaDataLocator
+          href: /windows/win32/api/roparameterizediid/ns-roparameterizediid-irometadatalocator
+          items:
+            - name: Methode suchen
+              href: /previous-versions//hh438405(v=vs.85)
+        - name: Point
+          href: /windows/win32/api/windows.foundation/ns-windows-foundation-point
+        - name: PDF_RENDER_PARAMS
+          href: /windows/win32/api/windows.data.pdf.interop/ns-windows-data-pdf-interop-pdf_render_params
+        - name: Rect
+          href: /windows/win32/api/windows.foundation/ns-windows-foundation-rect
+        - name: Server Information
+          href: /windows/win32/api/combaseapi/ns-combaseapi-serverinformation
+        - name: Size
+          href: /windows/win32/api/windows.foundation/ns-windows-foundation-size
+        - name: TextRange
+          href: /previous-versions//dn302173(v=vs.85)
+        - name: TimeSpan
+          href: /windows/win32/api/windows.foundation/ns-windows-foundation-timespan

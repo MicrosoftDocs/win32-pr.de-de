@@ -1,0 +1,755 @@
+- name: DXGI
+  href: dx-graphics-dxgi.md
+  items:
+    - name: Programmier Handbuch für DXGI
+      href: dx-graphics-dxgi-overviews.md
+      items:
+        - name: Übersicht über DXGI
+          href: d3d10-graphics-programming-guide-dxgi.md
+        - name: 'DXGI 1,2-Verbesserungen'
+          href: dxgi-1-2-improvements.md
+          items:
+            - name: 'Kippen von Modellen, Dirty Rechtecke, scrollt-Bereiche'
+              href: dxgi-1-2-presentation-improvements.md
+              items:
+                - name: DXGI-Flip-Modell
+                  href: dxgi-flip-model.md
+                - name: Verbessern der Leistung mit mehreren Austausch Ketten pro renderinggerät
+                  href: dxgi-multiple-swap-chains.md
+                - name: Daten für den Farbraum werden umgerechnet
+                  href: converting-data-color-space.md
+            - name: Desktopduplizierungs-API
+              href: desktop-dup-api.md
+            - name: Rendering in Stereo und Benachrichtigung über den Stereo Status
+              href: stereo-rendering-stereo-status-notifying.md
+            - name: 'Warten auf ein Ereignis, wenn das Rendering unnötig ist'
+              href: waiting-when-occluded.md
+        - name: 'DXGI 1,3-Verbesserungen'
+          href: dxgi-1-3-improvements.md
+        - name: 'DXGI 1,4-Verbesserungen'
+          href: dxgi-1-4-improvements.md
+        - name: 'DXGI 1,5-Verbesserungen'
+          href: dxgi-1-5-improvements.md
+        - name: 'DXGI 1,6-Verbesserungen'
+          href: dxgi-1-6-improvements.md
+        - name: Variable Aktualisierungsrate anzeigen
+          href: variable-refresh-rate-displays.md
+        - name: Verwenden von Gammakorrektur
+          href: using-gamma-correction.md
+        - name: 'Format Unterstützung für das Direct3D-Feature 10level9 9,1 Hardware'
+          href: format-support-for-direct3d-feature-level-9-1-hardware.md
+        - name: 'Format Unterstützung für das Direct3D-Feature 10level9 9,3 Hardware'
+          href: format-support-for-direct3d-feature-level-9-3-hardware.md
+        - name: 'Format Unterstützung für Direct3D Feature Level 10,0 Hardware'
+          href: format-support-for-direct3d-feature-level-10-0-hardware.md
+        - name: 'Format Unterstützung für Direct3D Feature Level 10,1 Hardware'
+          href: format-support-for-direct3d-feature-level-10-1-hardware.md
+        - name: 'Format Unterstützung für Direct3D Feature Level 11,0 Hardware'
+          href: format-support-for-direct3d-11-0-feature-level-hardware.md
+        - name: 'Format Unterstützung für Direct3D Feature Level 11,1 Hardware'
+          href: format-support-for-direct3d-11-1-feature-level-hardware.md
+        - name: 'Format Unterstützung für Direct3D Feature Level 12,0 Hardware'
+          href: hardware-support-for-direct3d-12-0-formats.md
+        - name: 'Format Unterstützung für Direct3D Feature Level 12,1 Hardware'
+          href: hardware-support-for-direct3d-12-1-formats.md
+        - name: 'Überprüfen der Unterstützung von Hardwarefunktionen '
+          href: checking-hardware-feature-support.md
+        - name: Verwenden Sie zum erzielen der optimalen Leistung DXGI-Flip-Modell.
+          href: for-best-performance--use-dxgi-flip-model.md
+    - name: DXGI-Referenz
+      href: d3d10-graphics-reference-dxgi.md
+      items:
+        - name: DXGI-Schnittstellen
+          href: d3d10-graphics-reference-dxgi-interfaces.md
+          items:
+            - name: Idxgiadapter
+              href: /windows/desktop/api/DXGI/nn-dxgi-idxgiadapter
+              items:
+                - name: Checkinterfakesupport
+                  href: /windows/desktop/api/DXGI/nf-dxgi-idxgiadapter-checkinterfacesupport
+                - name: EnumOutputs
+                  href: /windows/desktop/api/DXGI/nf-dxgi-idxgiadapter-enumoutputs
+                - name: GetDesc
+                  href: /windows/desktop/api/DXGI/nf-dxgi-idxgiadapter-getdesc
+            - name: IDXGIAdapter1
+              href: /windows/desktop/api/DXGI/nn-dxgi-idxgiadapter1
+              items:
+                - name: GetDesc1
+                  href: /windows/desktop/api/DXGI/nf-dxgi-idxgiadapter1-getdesc1
+            - name: IDXGIAdapter2
+              href: /windows/desktop/api/DXGI1_2/nn-dxgi1_2-idxgiadapter2
+              items:
+                - name: GetDesc2
+                  href: /windows/desktop/api/DXGI1_2/nf-dxgi1_2-idxgiadapter2-getdesc2
+            - name: IDXGIAdapter3
+              href: /windows/desktop/api/dxgi1_4/nn-dxgi1_4-idxgiadapter3
+              items:
+                - name: Queryvideomemoryinfo
+                  href: /windows/desktop/api/dxgi1_4/nf-dxgi1_4-idxgiadapter3-queryvideomemoryinfo
+                - name: Registerhardwarecontentschutzteardownstatuusevent
+                  href: /windows/desktop/api/dxgi1_4/nf-dxgi1_4-idxgiadapter3-registerhardwarecontentprotectionteardownstatusevent
+                - name: Registervideomemorybudgetchangenotificationevent
+                  href: /windows/desktop/api/dxgi1_4/nf-dxgi1_4-idxgiadapter3-registervideomemorybudgetchangenotificationevent
+                - name: Setvideomemoryreservierung
+                  href: /windows/desktop/api/dxgi1_4/nf-dxgi1_4-idxgiadapter3-setvideomemoryreservation
+                - name: Unregisterhardwarecontentschutzteardownstatus
+                  href: /windows/desktop/api/dxgi1_4/nf-dxgi1_4-idxgiadapter3-unregisterhardwarecontentprotectionteardownstatus
+                - name: Unregistervideomemorybudgetchangenotifizierung
+                  href: /windows/desktop/api/dxgi1_4/nf-dxgi1_4-idxgiadapter3-unregistervideomemorybudgetchangenotification
+            - name: IDXGIAdapter4
+              href: /windows/desktop/api/DXGI1_6/nn-dxgi1_6-idxgiadapter4
+              items:
+                - name: GetDesc3
+                  href: /windows/desktop/api/DXGI1_6/nf-dxgi1_6-idxgiadapter4-getdesc3
+            - name: Idxgidebug
+              href: /windows/desktop/api/DXGIDebug/nn-dxgidebug-idxgidebug
+              items:
+                - name: Report Live Objects
+                  href: /windows/desktop/api/DXGIDebug/nf-dxgidebug-idxgidebug-reportliveobjects
+            - name: IDXGIDebug1
+              href: /windows/desktop/api/DXGIDebug/nn-dxgidebug-idxgidebug1
+              items:
+                - name: Disableleaktrackingforthread
+                  href: /windows/desktop/api/DXGIDebug/nf-dxgidebug-idxgidebug1-disableleaktrackingforthread
+                - name: Enableleaktrackingforthread
+                  href: /windows/desktop/api/DXGIDebug/nf-dxgidebug-idxgidebug1-enableleaktrackingforthread
+                - name: Isleaktrackingenabledforthread
+                  href: /windows/desktop/api/DXGIDebug/nf-dxgidebug-idxgidebug1-isleaktrackingenabledforthread
+            - name: Idxgidecodeswapchain
+              href: /windows/desktop/api/dxgi1_3/nn-dxgi1_3-idxgidecodeswapchain
+              items:
+                - name: GetColorSpace
+                  href: /windows/desktop/api/dxgi1_3/nf-dxgi1_3-idxgidecodeswapchain-getcolorspace
+                - name: Getdestsize
+                  href: /windows/desktop/api/dxgi1_3/nf-dxgi1_3-idxgidecodeswapchain-getdestsize
+                - name: Getsourcerect
+                  href: /windows/desktop/api/dxgi1_3/nf-dxgi1_3-idxgidecodeswapchain-getsourcerect
+                - name: Gettargetrect
+                  href: /windows/desktop/api/dxgi1_3/nf-dxgi1_3-idxgidecodeswapchain-gettargetrect
+                - name: Presentbuffer
+                  href: /windows/desktop/api/dxgi1_3/nf-dxgi1_3-idxgidecodeswapchain-presentbuffer
+                - name: Setcolorspace
+                  href: /windows/desktop/api/dxgi1_3/nf-dxgi1_3-idxgidecodeswapchain-setcolorspace
+                - name: Setdestsize
+                  href: /windows/desktop/api/dxgi1_3/nf-dxgi1_3-idxgidecodeswapchain-setdestsize
+                - name: Setsourcerect
+                  href: /windows/desktop/api/dxgi1_3/nf-dxgi1_3-idxgidecodeswapchain-setsourcerect
+                - name: Settargetrect
+                  href: /windows/desktop/api/dxgi1_3/nf-dxgi1_3-idxgidecodeswapchain-settargetrect
+            - name: Idxgidevice
+              href: /windows/desktop/api/DXGI/nn-dxgi-idxgidevice
+              items:
+                - name: '"Kreatesurface"'
+                  href: /windows/desktop/api/DXGI/nf-dxgi-idxgidevice-createsurface
+                - name: GetAdapter
+                  href: /windows/desktop/api/DXGI/nf-dxgi-idxgidevice-getadapter
+                - name: Getgputhreadpriority
+                  href: /windows/desktop/api/DXGI/nf-dxgi-idxgidevice-getgputhreadpriority
+                - name: Queryresourceresidency
+                  href: /windows/desktop/api/DXGI/nf-dxgi-idxgidevice-queryresourceresidency
+                - name: Setgputhreadpriority
+                  href: /windows/desktop/api/DXGI/nf-dxgi-idxgidevice-setgputhreadpriority
+            - name: IDXGIDevice1
+              href: /windows/desktop/api/DXGI/nn-dxgi-idxgidevice1
+              items:
+                - name: Getmaximumframelatency
+                  href: /windows/desktop/api/DXGI/nf-dxgi-idxgidevice1-getmaximumframelatency
+                - name: Setmaximumframelatency
+                  href: /windows/desktop/api/DXGI/nf-dxgi-idxgidevice1-setmaximumframelatency
+            - name: IDXGIDevice2
+              href: /windows/desktop/api/DXGI1_2/nn-dxgi1_2-idxgidevice2
+              items:
+                - name: Offerresources
+                  href: /windows/desktop/api/DXGI1_2/nf-dxgi1_2-idxgidevice2-offerresources
+                - name: Reclaimresources
+                  href: /windows/desktop/api/DXGI1_2/nf-dxgi1_2-idxgidevice2-reclaimresources
+                - name: Einqueuesetevent
+                  href: /windows/desktop/api/DXGI1_2/nf-dxgi1_2-idxgidevice2-enqueuesetevent
+            - name: '"Idxgidevice3'
+              href: /windows/desktop/api/DXGI1_3/nn-dxgi1_3-idxgidevice3
+              items:
+                - name: Glätten
+                  href: /windows/desktop/api/DXGI1_3/nf-dxgi1_3-idxgidevice3-trim
+            - name: IDXGIDevice4
+              href: /windows/desktop/api/dxgi1_5/nn-dxgi1_5-idxgidevice4
+              items:
+                - name: OfferResources1-Methode
+                  href: /windows/desktop/api/dxgi1_5/nf-dxgi1_5-idxgidevice4-offerresources1
+                - name: ReclaimResources1-Methode
+                  href: /windows/desktop/api/dxgi1_5/nf-dxgi1_5-idxgidevice4-reclaimresources1
+            - name: Idxgide vicesubobject
+              href: /windows/desktop/api/DXGI/nn-dxgi-idxgidevicesubobject
+              items:
+                - name: GetDevice
+                  href: /windows/desktop/api/DXGI/nf-dxgi-idxgidevicesubobject-getdevice
+            - name: Idxgidisplaycontrol
+              href: /windows/desktop/api/DXGI1_2/nn-dxgi1_2-idxgidisplaycontrol
+              items:
+                - name: Isstereofähig
+                  href: /windows/desktop/api/DXGI1_2/nf-dxgi1_2-idxgidisplaycontrol-isstereoenabled
+                - name: Setstereoaktivierte
+                  href: /windows/desktop/api/DXGI1_2/nf-dxgi1_2-idxgidisplaycontrol-setstereoenabled
+            - name: Idxgifactory
+              href: /windows/desktop/api/DXGI/nn-dxgi-idxgifactory
+              items:
+                - name: '"Kreatesoftwareadapter"'
+                  href: /windows/desktop/api/DXGI/nf-dxgi-idxgifactory-createsoftwareadapter
+                - name: '"Kreateswapchain"'
+                  href: /windows/desktop/api/DXGI/nf-dxgi-idxgifactory-createswapchain
+                - name: Benutzer
+                  href: /windows/desktop/api/DXGI/nf-dxgi-idxgifactory-enumadapters
+                - name: Getwindowassociation
+                  href: /windows/desktop/api/DXGI/nf-dxgi-idxgifactory-getwindowassociation
+                - name: Makewindowassociation
+                  href: /windows/desktop/api/DXGI/nf-dxgi-idxgifactory-makewindowassociation
+            - name: IDXGIFactory1
+              href: /windows/desktop/api/DXGI/nn-dxgi-idxgifactory1
+              items:
+                - name: EnumAdapters1
+                  href: /windows/desktop/api/DXGI/nf-dxgi-idxgifactory1-enumadapters1
+                - name: IsCurrent
+                  href: /windows/desktop/api/DXGI/nf-dxgi-idxgifactory1-iscurrent
+            - name: IDXGIFactory2
+              href: /windows/desktop/api/DXGI1_2/nn-dxgi1_2-idxgifactory2
+              items:
+                - name: Iswindowedstereoaktivierte
+                  href: /windows/desktop/api/DXGI1_2/nf-dxgi1_2-idxgifactory2-iswindowedstereoenabled
+                - name: '"Kreateswapchainforhwnd"'
+                  href: /windows/desktop/api/DXGI1_2/nf-dxgi1_2-idxgifactory2-createswapchainforhwnd
+                - name: '"Kreateswapchadetailcorewindow"'
+                  href: /windows/desktop/api/DXGI1_2/nf-dxgi1_2-idxgifactory2-createswapchainforcorewindow
+                - name: '"Kreateswapchainforcomposition"'
+                  href: /windows/desktop/api/DXGI1_2/nf-dxgi1_2-idxgifactory2-createswapchainforcomposition
+                - name: Getsharedresourceadapterluid
+                  href: /windows/desktop/api/DXGI1_2/nf-dxgi1_2-idxgifactory2-getsharedresourceadapterluid
+                - name: Registerstereostatus Window
+                  href: /windows/desktop/api/DXGI1_2/nf-dxgi1_2-idxgifactory2-registerstereostatuswindow
+                - name: Registerstereostatus usevent
+                  href: /windows/desktop/api/DXGI1_2/nf-dxgi1_2-idxgifactory2-registerstereostatusevent
+                - name: Unregisterstereostatus
+                  href: /windows/desktop/api/DXGI1_2/nf-dxgi1_2-idxgifactory2-unregisterstereostatus
+                - name: Registeroksionstatus Window
+                  href: /windows/desktop/api/DXGI1_2/nf-dxgi1_2-idxgifactory2-registerocclusionstatuswindow
+                - name: Registeroksionstatus usevent
+                  href: /windows/desktop/api/DXGI1_2/nf-dxgi1_2-idxgifactory2-registerocclusionstatusevent
+                - name: Unregisterocclusionstatus
+                  href: /windows/desktop/api/DXGI1_2/nf-dxgi1_2-idxgifactory2-unregisterocclusionstatus
+            - name: IDXGIFactory3
+              href: /windows/desktop/api/DXGI1_3/nn-dxgi1_3-idxgifactory3
+              items:
+                - name: GetCreationFlags
+                  href: idxgifactory3-getcreationflags.md
+            - name: IDXGIFactory4
+              href: /windows/desktop/api/DXGI1_4/nn-dxgi1_4-idxgifactory4
+              items:
+                - name: '"Umumadapterbyluid"'
+                  href: /windows/desktop/api/DXGI1_4/nf-dxgi1_4-idxgifactory4-enumadapterbyluid
+                - name: Enumwarpadapter
+                  href: /windows/desktop/api/DXGI1_4/nf-dxgi1_4-idxgifactory4-enumwarpadapter
+            - name: IDXGIFactory5
+              href: /windows/desktop/api/DXGI1_5/nn-dxgi1_5-idxgifactory5
+              items:
+                - name: Checkfeaturesupport-Methode
+                  href: /windows/desktop/api/DXGI1_5/nf-dxgi1_5-idxgifactory5-checkfeaturesupport
+            - name: IDXGIFactory6
+              href: /windows/desktop/api/dxgi1_6/nn-dxgi1_6-idxgifactory6
+              items:
+                - name: Methode "endumadapterbygpupreference"
+                  href: /windows/desktop/api/dxgi1_6/nf-dxgi1_6-idxgifactory6-enumadapterbygpupreference
+            - name: Idxgifacrenymedia
+              href: /windows/desktop/api/dxgi1_3/nn-dxgi1_3-idxgifactorymedia
+              items:
+                - name: '"Kreatedecodeskiapchainforcompositionsurfakehandle"'
+                  href: /windows/desktop/api/dxgi1_3/nf-dxgi1_3-idxgifactorymedia-createdecodeswapchainforcompositionsurfacehandle
+                - name: '"Kreateswapchainforcompositionsurandle"'
+                  href: /windows/desktop/api/dxgi1_3/nf-dxgi1_3-idxgifactorymedia-createswapchainforcompositionsurfacehandle
+            - name: Idxgiinfoqueue
+              href: /windows/desktop/api/DXGIDebug/nn-dxgidebug-idxgiinfoqueue
+              items:
+                - name: AddApplicationMessage
+                  href: /windows/desktop/api/DXGIDebug/nf-dxgidebug-idxgiinfoqueue-addapplicationmessage
+                - name: AddMessage
+                  href: /windows/desktop/api/DXGIDebug/nf-dxgidebug-idxgiinfoqueue-addmessage
+                - name: AddRetrievalFilterEntries
+                  href: /windows/desktop/api/DXGIDebug/nf-dxgidebug-idxgiinfoqueue-addretrievalfilterentries
+                - name: AddStorageFilterEntries
+                  href: /windows/desktop/api/DXGIDebug/nf-dxgidebug-idxgiinfoqueue-addstoragefilterentries
+                - name: ClearRetrievalFilter
+                  href: /windows/desktop/api/DXGIDebug/nf-dxgidebug-idxgiinfoqueue-clearretrievalfilter
+                - name: ClearStorageFilter
+                  href: /windows/desktop/api/DXGIDebug/nf-dxgidebug-idxgiinfoqueue-clearstoragefilter
+                - name: ClearStoredMessages
+                  href: /windows/desktop/api/DXGIDebug/nf-dxgidebug-idxgiinfoqueue-clearstoredmessages
+                - name: GetBreakOnCategory
+                  href: /windows/desktop/api/DXGIDebug/nf-dxgidebug-idxgiinfoqueue-getbreakoncategory
+                - name: Getbreakonid
+                  href: /windows/desktop/api/DXGIDebug/nf-dxgidebug-idxgiinfoqueue-getbreakonid
+                - name: GetBreakOnSeverity
+                  href: /windows/desktop/api/DXGIDebug/nf-dxgidebug-idxgiinfoqueue-getbreakonseverity
+                - name: GetMessage
+                  href: /windows/desktop/api/DXGIDebug/nf-dxgidebug-idxgiinfoqueue-getmessage
+                - name: GetMessageCountLimit
+                  href: /windows/desktop/api/DXGIDebug/nf-dxgidebug-idxgiinfoqueue-getmessagecountlimit
+                - name: GetMuteDebugOutput
+                  href: /windows/desktop/api/DXGIDebug/nf-dxgidebug-idxgiinfoqueue-getmutedebugoutput
+                - name: GetNumMessagesAllowedByStorageFilter
+                  href: /windows/desktop/api/DXGIDebug/nf-dxgidebug-idxgiinfoqueue-getnummessagesallowedbystoragefilter
+                - name: GetNumMessagesDeniedByStorageFilter
+                  href: /windows/desktop/api/DXGIDebug/nf-dxgidebug-idxgiinfoqueue-getnummessagesdeniedbystoragefilter
+                - name: GetNumMessagesDiscardedByMessageCountLimit
+                  href: /windows/desktop/api/DXGIDebug/nf-dxgidebug-idxgiinfoqueue-getnummessagesdiscardedbymessagecountlimit
+                - name: GetNumStoredMessages
+                  href: /windows/desktop/api/DXGIDebug/nf-dxgidebug-idxgiinfoqueue-getnumstoredmessages
+                - name: Getnumstoredmessagesnumwedbyretrievalfilters
+                  href: /windows/desktop/api/DXGIDebug/nf-dxgidebug-idxgiinfoqueue-getnumstoredmessagesallowedbyretrievalfilters
+                - name: GetRetrievalFilter
+                  href: /windows/desktop/api/DXGIDebug/nf-dxgidebug-idxgiinfoqueue-getretrievalfilter
+                - name: GetRetrievalFilterStackSize
+                  href: /windows/desktop/api/DXGIDebug/nf-dxgidebug-idxgiinfoqueue-getretrievalfilterstacksize
+                - name: GetStorageFilter
+                  href: /windows/desktop/api/DXGIDebug/nf-dxgidebug-idxgiinfoqueue-getstoragefilter
+                - name: GetStorageFilterStackSize
+                  href: /windows/desktop/api/DXGIDebug/nf-dxgidebug-idxgiinfoqueue-getstoragefilterstacksize
+                - name: PopRetrievalFilter
+                  href: /windows/desktop/api/DXGIDebug/nf-dxgidebug-idxgiinfoqueue-popretrievalfilter
+                - name: PopStorageFilter
+                  href: /windows/desktop/api/DXGIDebug/nf-dxgidebug-idxgiinfoqueue-popstoragefilter
+                - name: PushCopyOfRetrievalFilter
+                  href: /windows/desktop/api/DXGIDebug/nf-dxgidebug-idxgiinfoqueue-pushcopyofretrievalfilter
+                - name: PushCopyOfStorageFilter
+                  href: /windows/desktop/api/DXGIDebug/nf-dxgidebug-idxgiinfoqueue-pushcopyofstoragefilter
+                - name: Pushdenyallretrievalfilter
+                  href: /windows/desktop/api/DXGIDebug/nf-dxgidebug-idxgiinfoqueue-pushdenyallretrievalfilter
+                - name: Pushdenyallstoragefilter
+                  href: /windows/desktop/api/DXGIDebug/nf-dxgidebug-idxgiinfoqueue-pushdenyallstoragefilter
+                - name: PushEmptyRetrievalFilter
+                  href: /windows/desktop/api/DXGIDebug/nf-dxgidebug-idxgiinfoqueue-pushemptyretrievalfilter
+                - name: PushEmptyStorageFilter
+                  href: /windows/desktop/api/DXGIDebug/nf-dxgidebug-idxgiinfoqueue-pushemptystoragefilter
+                - name: PushRetrievalFilter
+                  href: /windows/desktop/api/DXGIDebug/nf-dxgidebug-idxgiinfoqueue-pushretrievalfilter
+                - name: PushStorageFilter
+                  href: /windows/desktop/api/DXGIDebug/nf-dxgidebug-idxgiinfoqueue-pushstoragefilter
+                - name: SetBreakOnCategory
+                  href: /windows/desktop/api/DXGIDebug/nf-dxgidebug-idxgiinfoqueue-setbreakoncategory
+                - name: Setbreakonid
+                  href: /windows/desktop/api/DXGIDebug/nf-dxgidebug-idxgiinfoqueue-setbreakonid
+                - name: SetBreakOnSeverity
+                  href: /windows/desktop/api/DXGIDebug/nf-dxgidebug-idxgiinfoqueue-setbreakonseverity
+                - name: SetMessageCountLimit
+                  href: /windows/desktop/api/DXGIDebug/nf-dxgidebug-idxgiinfoqueue-setmessagecountlimit
+                - name: SetMuteDebugOutput
+                  href: /windows/desktop/api/DXGIDebug/nf-dxgidebug-idxgiinfoqueue-setmutedebugoutput
+            - name: Idxgikeyedmutex
+              href: /windows/desktop/api/DXGI/nn-dxgi-idxgikeyedmutex
+              items:
+                - name: Acquiresync
+                  href: /windows/desktop/api/DXGI/nf-dxgi-idxgikeyedmutex-acquiresync
+                - name: Releasesync
+                  href: /windows/desktop/api/DXGI/nf-dxgi-idxgikeyedmutex-releasesync
+            - name: Idxgiobject
+              href: /windows/desktop/api/DXGI/nn-dxgi-idxgiobject
+              items:
+                - name: GetParent
+                  href: /windows/desktop/api/DXGI/nf-dxgi-idxgiobject-getparent
+                - name: GetPrivateData
+                  href: /windows/desktop/api/DXGI/nf-dxgi-idxgiobject-getprivatedata
+                - name: SetPrivateData
+                  href: /windows/desktop/api/DXGI/nf-dxgi-idxgiobject-setprivatedata
+                - name: SetPrivateDataInterface
+                  href: /windows/desktop/api/DXGI/nf-dxgi-idxgiobject-setprivatedatainterface
+            - name: Idxgioutput
+              href: /windows/desktop/api/DXGI/nn-dxgi-idxgioutput
+              items:
+                - name: Findclosestmatchingmode
+                  href: /windows/desktop/api/DXGI/nf-dxgi-idxgioutput-findclosestmatchingmode
+                - name: GetDesc
+                  href: /windows/desktop/api/DXGI/nf-dxgi-idxgioutput-getdesc
+                - name: Getdisplaymodelist
+                  href: /windows/desktop/api/DXGI/nf-dxgi-idxgioutput-getdisplaymodelist
+                - name: Getdisplaysurfacedata
+                  href: /windows/desktop/api/DXGI/nf-dxgi-idxgioutput-getdisplaysurfacedata
+                - name: Getframestatistics
+                  href: /windows/desktop/api/DXGI/nf-dxgi-idxgioutput-getframestatistics
+                - name: Getgammacontrol
+                  href: /windows/desktop/api/DXGI/nf-dxgi-idxgioutput-getgammacontrol
+                - name: Getgammacontrol-Funktionen
+                  href: /windows/desktop/api/DXGI/nf-dxgi-idxgioutput-getgammacontrolcapabilities
+                - name: Releaseownership
+                  href: /windows/desktop/api/DXGI/nf-dxgi-idxgioutput-releaseownership
+                - name: Setdisplaysurface
+                  href: /windows/desktop/api/DXGI/nf-dxgi-idxgioutput-setdisplaysurface
+                - name: Setgammacontrol
+                  href: /windows/desktop/api/DXGI/nf-dxgi-idxgioutput-setgammacontrol
+                - name: TakeOwnership
+                  href: /windows/desktop/api/DXGI/nf-dxgi-idxgioutput-takeownership
+                - name: Waitforvblank
+                  href: /windows/desktop/api/DXGI/nf-dxgi-idxgioutput-waitforvblank
+            - name: IDXGIOutput1
+              href: /windows/desktop/api/DXGI1_2/nn-dxgi1_2-idxgioutput1
+              items:
+                - name: GetDisplayModeList1
+                  href: /windows/desktop/api/DXGI1_2/nf-dxgi1_2-idxgioutput1-getdisplaymodelist1
+                - name: GetDisplaySurfaceData1
+                  href: /windows/desktop/api/DXGI1_2/nf-dxgi1_2-idxgioutput1-getdisplaysurfacedata1
+                - name: FindClosestMatchingMode1
+                  href: /windows/desktop/api/DXGI1_2/nf-dxgi1_2-idxgioutput1-findclosestmatchingmode1
+                - name: Duplicateoutput
+                  href: /windows/desktop/api/DXGI1_2/nf-dxgi1_2-idxgioutput1-duplicateoutput
+            - name: IDXGIOutput2
+              href: /windows/desktop/api/DXGI1_3/nn-dxgi1_3-idxgioutput2
+              items:
+                - name: Supportsoverlay
+                  href: /windows/desktop/api/dxgi1_3/nf-dxgi1_3-idxgioutput2-supportsoverlays
+            - name: IDXGIOutput3
+              href: /windows/desktop/api/DXGI1_3/nn-dxgi1_3-idxgioutput3
+              items:
+                - name: Checkoverlaysupport
+                  href: /windows/desktop/api/DXGI1_3/nf-dxgi1_3-idxgioutput3-checkoverlaysupport
+            - name: IDXGIOutput4
+              href: /windows/desktop/api/DXGI1_4/nn-dxgi1_4-idxgioutput4
+              items:
+                - name: Checkoverlaycolorspacesupport
+                  href: /windows/desktop/api/DXGI1_4/nf-dxgi1_4-idxgioutput4-checkoverlaycolorspacesupport
+            - name: IDXGIOutput5
+              href: /windows/desktop/api/DXGI1_5/nn-dxgi1_5-idxgioutput5
+              items:
+                - name: DuplicateOutput1-Methode
+                  href: /windows/desktop/api/DXGI1_5/nf-dxgi1_5-idxgioutput5-duplicateoutput1
+            - name: IDXGIOutput6
+              href: /windows/desktop/api/DXGI1_6/nn-dxgi1_6-idxgioutput6
+              items:
+                - name: Checkhardwarecompositionsupport-Methode
+                  href: /windows/desktop/api/DXGI1_6/nf-dxgi1_6-idxgioutput6-checkhardwarecompositionsupport
+                - name: GetDesc1-Methode
+                  href: /windows/desktop/api/DXGI1_6/nf-dxgi1_6-idxgioutput6-getdesc1
+            - name: Idxgioutputduplizierung
+              href: /windows/desktop/api/DXGI1_2/nn-dxgi1_2-idxgioutputduplication
+              items:
+                - name: GetDesc
+                  href: /windows/desktop/api/DXGI1_2/nf-dxgi1_2-idxgioutputduplication-getdesc
+                - name: '"Acquunesextframe"'
+                  href: /windows/desktop/api/DXGI1_2/nf-dxgi1_2-idxgioutputduplication-acquirenextframe
+                - name: Getframedirtyrects
+                  href: /windows/desktop/api/DXGI1_2/nf-dxgi1_2-idxgioutputduplication-getframedirtyrects
+                - name: Getframemuverects
+                  href: /windows/desktop/api/DXGI1_2/nf-dxgi1_2-idxgioutputduplication-getframemoverects
+                - name: Getframepointershape
+                  href: /windows/desktop/api/DXGI1_2/nf-dxgi1_2-idxgioutputduplication-getframepointershape
+                - name: Mapdesktopsurface
+                  href: /windows/desktop/api/DXGI1_2/nf-dxgi1_2-idxgioutputduplication-mapdesktopsurface
+                - name: Unmapdesktopsurface
+                  href: /windows/desktop/api/DXGI1_2/nf-dxgi1_2-idxgioutputduplication-unmapdesktopsurface
+                - name: Releaseframe
+                  href: /windows/desktop/api/DXGI1_2/nf-dxgi1_2-idxgioutputduplication-releaseframe
+            - name: Idxgiresource
+              href: /windows/desktop/api/DXGI/nn-dxgi-idxgiresource
+              items:
+                - name: Getevictionpriority
+                  href: /windows/desktop/api/DXGI/nf-dxgi-idxgiresource-getevictionpriority
+                - name: Getsharedhandle
+                  href: /windows/desktop/api/DXGI/nf-dxgi-idxgiresource-getsharedhandle
+                - name: Getusage
+                  href: /windows/desktop/api/DXGI/nf-dxgi-idxgiresource-getusage
+                - name: '"Mentevictionpriority"'
+                  href: /windows/desktop/api/DXGI/nf-dxgi-idxgiresource-setevictionpriority
+            - name: IDXGIResource1
+              href: /windows/desktop/api/DXGI1_2/nn-dxgi1_2-idxgiresource1
+              items:
+                - name: '"Kreatesubresourcesurface"'
+                  href: /windows/desktop/api/DXGI1_2/nf-dxgi1_2-idxgiresource1-createsubresourcesurface
+                - name: CreateSharedHandle
+                  href: /windows/desktop/api/DXGI1_2/nf-dxgi1_2-idxgiresource1-createsharedhandle
+            - name: '"Idxgisurface"'
+              href: /windows/desktop/api/DXGI/nn-dxgi-idxgisurface
+              items:
+                - name: GetDesc
+                  href: /windows/desktop/api/DXGI/nf-dxgi-idxgisurface-getdesc
+                - name: Zuordnung
+                  href: /windows/desktop/api/DXGI/nf-dxgi-idxgisurface-map
+                - name: Unmap
+                  href: /windows/desktop/api/DXGI/nf-dxgi-idxgisurface-unmap
+            - name: IDXGISurface1
+              href: /windows/desktop/api/DXGI/nn-dxgi-idxgisurface1
+              items:
+                - name: GetDC
+                  href: /windows/desktop/api/DXGI/nf-dxgi-idxgisurface1-getdc
+                - name: ReleaseDC
+                  href: /windows/desktop/api/DXGI/nf-dxgi-idxgisurface1-releasedc
+            - name: IDXGISurface2
+              href: /windows/desktop/api/DXGI1_2/nn-dxgi1_2-idxgisurface2
+              items:
+                - name: GetResource
+                  href: /windows/desktop/api/DXGI1_2/nf-dxgi1_2-idxgisurface2-getresource
+            - name: Idxgiswapchain
+              href: /windows/desktop/api/DXGI/nn-dxgi-idxgiswapchain
+              items:
+                - name: GetBuffer
+                  href: /windows/desktop/api/DXGI/nf-dxgi-idxgiswapchain-getbuffer
+                - name: Getcontainingoutput
+                  href: /windows/desktop/api/DXGI/nf-dxgi-idxgiswapchain-getcontainingoutput
+                - name: GetDesc
+                  href: /windows/desktop/api/DXGI/nf-dxgi-idxgiswapchain-getdesc
+                - name: Getframestatistics
+                  href: /windows/desktop/api/DXGI/nf-dxgi-idxgiswapchain-getframestatistics
+                - name: Getfullscreenstate
+                  href: /windows/desktop/api/DXGI/nf-dxgi-idxgiswapchain-getfullscreenstate
+                - name: Getlastpresentcount
+                  href: /windows/desktop/api/DXGI/nf-dxgi-idxgiswapchain-getlastpresentcount
+                - name: Anzahl
+                  href: /windows/desktop/api/DXGI/nf-dxgi-idxgiswapchain-present
+                - name: Resizebuffers
+                  href: /windows/desktop/api/DXGI/nf-dxgi-idxgiswapchain-resizebuffers
+                - name: Resizetarget
+                  href: /windows/desktop/api/DXGI/nf-dxgi-idxgiswapchain-resizetarget
+                - name: Setfullscreenstate
+                  href: /windows/desktop/api/DXGI/nf-dxgi-idxgiswapchain-setfullscreenstate
+            - name: IDXGISwapChain1
+              href: /windows/desktop/api/DXGI1_2/nn-dxgi1_2-idxgiswapchain1
+              items:
+                - name: Getbackgroundcolor
+                  href: /windows/desktop/api/DXGI1_2/nf-dxgi1_2-idxgiswapchain1-getbackgroundcolor
+                - name: Getcorewindow
+                  href: /windows/desktop/api/DXGI1_2/nf-dxgi1_2-idxgiswapchain1-getcorewindow
+                - name: GetDesc1
+                  href: /windows/desktop/api/DXGI1_2/nf-dxgi1_2-idxgiswapchain1-getdesc1
+                - name: Getfullscreendebug
+                  href: /windows/desktop/api/DXGI1_2/nf-dxgi1_2-idxgiswapchain1-getfullscreendesc
+                - name: GetHwnd
+                  href: /windows/desktop/api/DXGI1_2/nf-dxgi1_2-idxgiswapchain1-gethwnd
+                - name: Getrestrictdeoutput
+                  href: /windows/desktop/api/DXGI1_2/nf-dxgi1_2-idxgiswapchain1-getrestricttooutput
+                - name: GetRotation
+                  href: /windows/desktop/api/DXGI1_2/nf-dxgi1_2-idxgiswapchain1-getrotation
+                - name: Istemporarymonosupported
+                  href: /windows/desktop/api/DXGI1_2/nf-dxgi1_2-idxgiswapchain1-istemporarymonosupported
+                - name: Present1
+                  href: /windows/desktop/api/DXGI1_2/nf-dxgi1_2-idxgiswapchain1-present1
+                - name: SetBackgroundColor
+                  href: /windows/desktop/api/DXGI1_2/nf-dxgi1_2-idxgiswapchain1-setbackgroundcolor
+                - name: Abmelde
+                  href: /windows/desktop/api/DXGI1_2/nf-dxgi1_2-idxgiswapchain1-setrotation
+            - name: IDXGISwapChain2
+              href: /windows/desktop/api/dxgi1_3/nn-dxgi1_3-idxgiswapchain2
+              items:
+                - name: Getframelatencywaitableobject
+                  href: /windows/desktop/api/dxgi1_3/nf-dxgi1_3-idxgiswapchain2-getframelatencywaitableobject
+                - name: Getsourcesize
+                  href: /windows/desktop/api/dxgi1_3/nf-dxgi1_3-idxgiswapchain2-getsourcesize
+                - name: Getmatrixtransform
+                  href: /windows/desktop/api/dxgi1_3/nf-dxgi1_3-idxgiswapchain2-getmatrixtransform
+                - name: Getmaximumframelatency
+                  href: /windows/desktop/api/dxgi1_3/nf-dxgi1_3-idxgiswapchain2-getmaximumframelatency
+                - name: Setmatrixtransform
+                  href: /windows/desktop/api/dxgi1_3/nf-dxgi1_3-idxgiswapchain2-setmatrixtransform
+                - name: Setmaximumframelatency
+                  href: /windows/desktop/api/dxgi1_3/nf-dxgi1_3-idxgiswapchain2-setmaximumframelatency
+                - name: Setsourcesize
+                  href: /windows/desktop/api/dxgi1_3/nf-dxgi1_3-idxgiswapchain2-setsourcesize
+            - name: IDXGISwapChain3
+              href: /windows/desktop/api/DXGI1_4/nn-dxgi1_4-idxgiswapchain3
+              items:
+                - name: Getcurrentbackbufferindex
+                  href: /windows/desktop/api/DXGI1_4/nf-dxgi1_4-idxgiswapchain3-getcurrentbackbufferindex
+                - name: Checkcolorspacesupport
+                  href: /windows/desktop/api/DXGI1_4/nf-dxgi1_4-idxgiswapchain3-checkcolorspacesupport
+                - name: ResizeBuffers1
+                  href: /windows/desktop/api/DXGI1_4/nf-dxgi1_4-idxgiswapchain3-resizebuffers1
+                - name: SetColorSpace1
+                  href: /windows/desktop/api/DXGI1_4/nf-dxgi1_4-idxgiswapchain3-setcolorspace1
+            - name: IDXGISwapChain4
+              href: /windows/desktop/api/dxgi1_5/nn-dxgi1_5-idxgiswapchain4
+              items:
+                - name: Methode "" der Methode ""
+                  href: /windows/desktop/api/dxgi1_5/nf-dxgi1_5-idxgiswapchain4-sethdrmetadata
+            - name: Idxgitauapchainmedia
+              href: /windows/desktop/api/dxgi1_3/nn-dxgi1_3-idxgiswapchainmedia
+              items:
+                - name: Checkpresentdurationsupport
+                  href: /windows/desktop/api/dxgi1_3/nf-dxgi1_3-idxgiswapchainmedia-checkpresentdurationsupport
+                - name: Getframestatisticsmedia
+                  href: /windows/desktop/api/dxgi1_3/nf-dxgi1_3-idxgiswapchainmedia-getframestatisticsmedia
+                - name: Setpresentduration
+                  href: /windows/desktop/api/dxgi1_3/nf-dxgi1_3-idxgiswapchainmedia-setpresentduration
+        - name: DXGI-Funktionen
+          href: d3d10-graphics-reference-dxgi-functions.md
+          items:
+            - name: '"Kreatedxgifactory"'
+              href: /windows/desktop/api/DXGI/nf-dxgi-createdxgifactory
+            - name: CreateDXGIFactory1
+              href: /windows/desktop/api/DXGI/nf-dxgi-createdxgifactory1
+            - name: CreateDXGIFactory2
+              href: /windows/desktop/api/dxgi1_3/nf-dxgi1_3-createdxgifactory2
+            - name: Dxgideclareadapterremovalsupport
+              href: /windows/desktop/api/dxgi1_6/nf-dxgi1_6-dxgideclareadapterremovalsupport
+            - name: Dxgigetdebug-Schnittstelle
+              href: /windows/desktop/api/DXGIDebug/nf-dxgidebug-dxgigetdebuginterface
+            - name: DXGIGetDebugInterface1
+              href: /windows/desktop/api/dxgi1_3/nf-dxgi1_3-dxgigetdebuginterface1
+        - name: DXGI-Strukturen
+          href: d3d10-graphics-reference-dxgi-structures.md
+          items:
+            - name: D3DCOLORVALUE
+              href: d3dcolorvalue.md
+            - name: DXGI_ADAPTER_DESC
+              href: /windows/desktop/api/DXGI/ns-dxgi-dxgi_adapter_desc
+            - name: DXGI_ADAPTER_DESC1
+              href: /windows/desktop/api/DXGI/ns-dxgi-dxgi_adapter_desc1
+            - name: DXGI_ADAPTER_DESC2
+              href: /windows/desktop/api/DXGI1_2/ns-dxgi1_2-dxgi_adapter_desc2
+            - name: DXGI_ADAPTER_DESC3
+              href: /windows/desktop/api/DXGI1_6/ns-dxgi1_6-dxgi_adapter_desc3
+            - name: DXGI_DECODE_SWAP_CHAIN_DESC
+              href: /windows/desktop/api/dxgi1_3/ns-dxgi1_3-dxgi_decode_swap_chain_desc
+            - name: DXGI_DISPLAY_COLOR_SPACE
+              href: /windows/desktop/api/dxgi/ns-dxgi-dxgi_display_color_space
+            - name: DXGI_FRAME_STATISTICS
+              href: /windows/desktop/api/DXGI/ns-dxgi-dxgi_frame_statistics
+            - name: DXGI_FRAME_STATISTICS_MEDIA
+              href: /windows/desktop/api/dxgi1_3/ns-dxgi1_3-dxgi_frame_statistics_media
+            - name: DXGI_GAMMA_CONTROL
+              href: /previous-versions/windows/desktop/legacy/bb173061(v=vs.85)
+            - name: DXGI_GAMMA_CONTROL_CAPABILITIES
+              href: /previous-versions/windows/desktop/legacy/bb173062(v=vs.85)
+            - name: DXGI_HDR_METADATA_HDR10
+              href: /windows/desktop/api/dxgi1_5/ns-dxgi1_5-dxgi_hdr_metadata_hdr10
+            - name: DXGI_INFO_QUEUE_FILTER
+              href: /windows/desktop/api/DXGIDebug/ns-dxgidebug-dxgi_info_queue_filter
+            - name: DXGI_INFO_QUEUE_FILTER_DESC
+              href: /windows/desktop/api/DXGIDebug/ns-dxgidebug-dxgi_info_queue_filter_desc
+            - name: DXGI_INFO_QUEUE_MESSAGE
+              href: /windows/desktop/api/DXGIDebug/ns-dxgidebug-dxgi_info_queue_message
+            - name: DXGI_JPEG_AC_HUFFMAN_TABLE
+              href: dxgi-jpeg-ac-huffman-table.md
+            - name: DXGI_JPEG_DC_HUFFMAN_TABLE
+              href: dxgi-jpeg-dc-huffman-table.md
+            - name: DXGI_JPEG_QUANTIZATION_TABLE
+              href: dxgi-jpeg-quantization-table.md
+            - name: DXGI_MATRIX_3X2_F
+              href: /windows/desktop/api/dxgi1_3/ns-dxgi1_3-dxgi_matrix_3x2_f
+            - name: DXGI_MAPPED_RECT
+              href: /windows/desktop/api/DXGI/ns-dxgi-dxgi_mapped_rect
+            - name: DXGI_MODE_DESC
+              href: /previous-versions/windows/desktop/legacy/bb173064(v=vs.85)
+            - name: DXGI_MODE_DESC1
+              href: /windows/desktop/api/DXGI1_2/ns-dxgi1_2-dxgi_mode_desc1
+            - name: DXGI_OUTPUT_DESC
+              href: /windows/desktop/api/DXGI/ns-dxgi-dxgi_output_desc
+            - name: DXGI_OUTPUT_DESC1
+              href: /windows/desktop/api/DXGI1_6/ns-dxgi1_6-dxgi_output_desc1
+            - name: DXGI_OUTDUPL_DESC
+              href: /windows/desktop/api/DXGI1_2/ns-dxgi1_2-dxgi_outdupl_desc
+            - name: DXGI_OUTDUPL_FRAME_INFO
+              href: /windows/desktop/api/DXGI1_2/ns-dxgi1_2-dxgi_outdupl_frame_info
+            - name: DXGI_OUTDUPL_MOVE_RECT
+              href: /windows/desktop/api/DXGI1_2/ns-dxgi1_2-dxgi_outdupl_move_rect
+            - name: DXGI_OUTDUPL_POINTER_POSITION
+              href: /windows/desktop/api/DXGI1_2/ns-dxgi1_2-dxgi_outdupl_pointer_position
+            - name: DXGI_OUTDUPL_POINTER_SHAPE_INFO
+              href: /windows/desktop/api/DXGI1_2/ns-dxgi1_2-dxgi_outdupl_pointer_shape_info
+            - name: DXGI_PRESENT_PARAMETERS
+              href: /windows/desktop/api/DXGI1_2/ns-dxgi1_2-dxgi_present_parameters
+            - name: DXGI_QUERY_VIDEO_MEMORY_INFO
+              href: /windows/desktop/api/dxgi1_4/ns-dxgi1_4-dxgi_query_video_memory_info
+            - name: DXGI_RATIONAL
+              href: /windows/desktop/api/dxgicommon/ns-dxgicommon-dxgi_rational
+            - name: DXGI_RGB
+              href: /previous-versions/windows/desktop/legacy/bb173071(v=vs.85)
+            - name: DXGI_RGBA
+              href: dxgi-rgba.md
+            - name: DXGI_SAMPLE_DESC
+              href: /windows/desktop/api/dxgicommon/ns-dxgicommon-dxgi_sample_desc
+            - name: DXGI_SHARED_RESOURCE
+              href: /windows/desktop/api/DXGI/ns-dxgi-dxgi_shared_resource
+            - name: DXGI_SURFACE_DESC
+              href: /windows/desktop/api/DXGI/ns-dxgi-dxgi_surface_desc
+            - name: DXGI_SWAP_CHAIN_DESC
+              href: /windows/desktop/api/DXGI/ns-dxgi-dxgi_swap_chain_desc
+            - name: DXGI_SWAP_CHAIN_DESC1
+              href: /windows/desktop/api/DXGI1_2/ns-dxgi1_2-dxgi_swap_chain_desc1
+            - name: DXGI_SWAP_CHAIN_FULLSCREEN_DESC
+              href: /windows/desktop/api/DXGI1_2/ns-dxgi1_2-dxgi_swap_chain_fullscreen_desc
+            - name: _LUID
+              href: /windows/desktop/api/winnt/ns-winnt-luid
+        - name: DXGI-Enumerationen
+          href: d3d10-graphics-reference-dxgi-enums.md
+          items:
+            - name: DXGI_ADAPTER_FLAG
+              href: /windows/desktop/api/DXGI/ne-dxgi-dxgi_adapter_flag
+            - name: DXGI_ADAPTER_FLAG3
+              href: /windows/desktop/api/DXGI1_6/ne-dxgi1_6-dxgi_adapter_flag3
+            - name: DXGI_ALPHA_MODE
+              href: /windows/desktop/api/DXGI1_2/ne-dxgi1_2-dxgi_alpha_mode
+            - name: DXGI_COLOR_SPACE_TYPE
+              href: /windows/desktop/api/dxgicommon/ne-dxgicommon-dxgi_color_space_type
+            - name: DXGI_COMPUTE_PREEMPTION_GRANULARITY
+              href: /windows/desktop/api/DXGI1_2/ne-dxgi1_2-dxgi_compute_preemption_granularity
+            - name: DXGI_DEBUG_RLO_FLAGS
+              href: /windows/desktop/api/DXGIDebug/ne-dxgidebug-dxgi_debug_rlo_flags
+            - name: DXGI_FEATURE
+              href: /windows/desktop/api/DXGI1_5/ne-dxgi1_5-dxgi_feature
+            - name: DXGI_FORMAT
+              href: /windows/desktop/api/DXGIFormat/ne-dxgiformat-dxgi_format
+            - name: DXGI_FRAME_PRESENTATION_MODE
+              href: /windows/desktop/api/dxgi1_3/ne-dxgi1_3-dxgi_frame_presentation_mode
+            - name: DXGI_GPU_PREFERENCE
+              href: /windows/desktop/api/dxgi1_6/ne-dxgi1_6-dxgi_gpu_preference
+            - name: DXGI_GRAPHICS_PREEMPTION_GRANULARITY
+              href: /windows/desktop/api/DXGI1_2/ne-dxgi1_2-dxgi_graphics_preemption_granularity
+            - name: DXGI_HARDWARE_COMPOSITION_SUPPORT_FLAGS
+              href: /windows/desktop/api/dxgi1_6/ne-dxgi1_6-dxgi_hardware_composition_support_flags
+            - name: DXGI_HDR_METADATA_TYPE
+              href: /windows/desktop/api/dxgi1_5/ne-dxgi1_5-dxgi_hdr_metadata_type
+            - name: DXGI_INFO_QUEUE_MESSAGE_CATEGORY
+              href: /windows/desktop/api/DXGIDebug/ne-dxgidebug-dxgi_info_queue_message_category
+            - name: DXGI_INFO_QUEUE_MESSAGE_SEVERITY
+              href: /windows/desktop/api/DXGIDebug/ne-dxgidebug-dxgi_info_queue_message_severity
+            - name: DXGI_MEMORY_SEGMENT_GROUP
+              href: /windows/desktop/api/dxgi1_4/ne-dxgi1_4-dxgi_memory_segment_group
+            - name: DXGI_MODE_ROTATION
+              href: /previous-versions/windows/desktop/legacy/bb173065(v=vs.85)
+            - name: DXGI_MODE_SCALING
+              href: /previous-versions/windows/desktop/legacy/bb173066(v=vs.85)
+            - name: DXGI_MODE_SCANLINE_ORDER
+              href: /previous-versions/windows/desktop/legacy/bb173067(v=vs.85)
+            - name: DXGI_MULTIPLANE_OVERLAY_YCbCr_FLAGS
+              href: /windows/desktop/api/dxgi1_3/ne-dxgi1_3-dxgi_multiplane_overlay_ycbcr_flags
+            - name: DXGI_OFFER_RESOURCE_FLAGS
+              href: /windows/win32/api/dxgi1_5/ne-dxgi1_5-dxgi_offer_resource_flags
+            - name: DXGI_OFFER_RESOURCE_PRIORITY
+              href: /windows/win32/api/dxgi1_2/ne-dxgi1_2-dxgi_offer_resource_priority
+            - name: DXGI_OUTDUPL_POINTER_SHAPE_TYPE
+              href: /windows/desktop/api/DXGI1_2/ne-dxgi1_2-dxgi_outdupl_pointer_shape_type
+            - name: DXGI_OVERLAY_COLOR_SPACE_SUPPORT_FLAG
+              href: /windows/desktop/api/DXGI1_4/ne-dxgi1_4-dxgi_overlay_color_space_support_flag
+            - name: DXGI_OVERLAY_SUPPORT_FLAG
+              href: /windows/desktop/api/DXGI1_3/ne-dxgi1_3-dxgi_overlay_support_flag
+            - name: DXGI_RECLAIM_RESOURCE_RESULTS
+              href: /windows/win32/api/dxgi1_5/ne-dxgi1_5-dxgi_reclaim_resource_results
+            - name: DXGI_RESIDENCY
+              href: /windows/desktop/api/DXGI/ne-dxgi-dxgi_residency
+            - name: DXGI_SCALING
+              href: /windows/desktop/api/DXGI1_2/ne-dxgi1_2-dxgi_scaling
+            - name: DXGI_SWAP_CHAIN_COLOR_SPACE_SUPPORT_FLAG
+              href: /windows/desktop/api/DXGI1_4/ne-dxgi1_4-dxgi_swap_chain_color_space_support_flag
+            - name: DXGI_SWAP_CHAIN_FLAG
+              href: /windows/desktop/api/DXGI/ne-dxgi-dxgi_swap_chain_flag
+            - name: DXGI_SWAP_EFFECT
+              href: /windows/desktop/api/DXGI/ne-dxgi-dxgi_swap_effect
+        - name: DXGI-Konstanten
+          href: d3d10-graphics-reference-dxgi-constants.md
+          items:
+            - name: DXGI_DEBUG_ID
+              href: dxgi-debug-id.md
+            - name: DXGI_ENUM_MODES
+              href: dxgi-enum-modes.md
+            - name: DXGI_ERROR
+              href: dxgi-error.md
+            - name: DXGI_PRESENT
+              href: dxgi-present.md
+            - name: DXGI_SHARED_RESOURCE_RW
+              href: dxgi-shared-resource-rw.md
+            - name: DXGI_STATUS
+              href: dxgi-status.md
+            - name: DXGI_USAGE
+              href: dxgi-usage.md
