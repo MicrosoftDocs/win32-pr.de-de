@@ -1,0 +1,101 @@
+- name: WMI-Kern Anbieter
+  href: wmi-core-provider-.md
+  items:
+    - name: MSMonitorClass
+      href: msmonitorclass.md
+    - name: MSMCA-Klassen
+      href: msmca-classes.md
+      items:
+        - name: MSMCAEvent_CPUError
+          href: msmcaevent-cpuerror.md
+        - name: MSMCAEvent_Header
+          href: msmcaevent-header.md
+        - name: MSMCAEvent_InvalidError
+          href: msmcaevent-invaliderror.md
+        - name: MSMCAEvent_MemoryError
+          href: msmcaevent-memoryerror.md
+        - name: MSMCAEvent_MemoryPageRemoved
+          href: msmcaevent-memorypageremoved.md
+        - name: MSMCAEvent_PCIBusError
+          href: msmcaevent-pcibuserror.md
+        - name: MSMCAEvent_PCIComponentError
+          href: msmcaevent-pcicomponenterror.md
+        - name: MSMCAEvent_PlatformSpecificError
+          href: msmcaevent-platformspecificerror.md
+        - name: MSMCAEvent_SMBIOSError
+          href: msmcaevent-smbioserror.md
+        - name: MSMCAEvent_SwitchToCMCPolling
+          href: msmcaevent-switchtocmcpolling.md
+        - name: MSMCAEvent_SystemEventError
+          href: msmcaevent-systemeventerror.md
+        - name: Msmcainfo
+          href: msmcainfo.md
+        - name: MSMCAInfo_Entry
+          href: msmcainfo-entry.md
+        - name: MSMCAInfo_RawCMCEvent
+          href: msmcainfo-rawcmcevent.md
+        - name: MSMCAInfo_RawCorrectedPlatformEvent
+          href: msmcainfo-rawcorrectedplatformevent.md
+        - name: MSMCAInfo_RawMCAData
+          href: msmcainfo-rawmcadata.md
+        - name: MSMCAInfo_RawMCAEvent
+          href: msmcainfo-rawmcaevent.md
+    - name: Frequencyrangedescriptor
+      href: frequencyrangedescriptor.md
+    - name: Supporteddisplayfeaturesdescriptor
+      href: supporteddisplayfeaturesdescriptor.md
+    - name: Videomodebug Descriptor
+      href: videomodedescriptor.md
+    - name: WMIEvent
+      href: wmievent.md
+    - name: Wmimonitoranalog gvideoinputparameams
+      href: wmimonitoranalogvideoinputparams.md
+    - name: Wmimonitorbasicdisplaypara
+      href: wmimonitorbasicdisplayparams.md
+    - name: Wmimonitorhelligkeit
+      href: wmimonitorbrightness.md
+    - name: Wmimonitorbrightnesabvent
+      href: wmimonitorbrightnessevent.md
+    - name: Wmimonitorbrightnessmethods
+      href: wmimonitorbrightnessmethods.md
+      items:
+        - name: Wmimonitorbrightnessmethods-Methoden
+          href: wmimonitorbrightnessmethods-methods.md
+          items:
+            - name: Wmireverttopolicyhelligkeit-Methode
+              href: wmireverttopolicybrightness-method-in-class-wmimonitorbrightnessmethods.md
+            - name: Wmiantalsbrightnessstate-Methode
+              href: wmisetalsbrightnessstate-method-in-class-wmimonitorbrightnessmethods.md
+            - name: Wmistalsbrightness-Methode
+              href: wmisetalsbrightness-method-in-class-wmimonitorbrightnessmethods.md
+            - name: Wmisethelligkeit-Methode
+              href: wmisetbrightness-method-in-class-wmimonitorbrightnessmethods.md
+    - name: Wmimonitorcolorcharacteristics
+      href: wmimonitorcolorcharacteristics.md
+    - name: Wmimonitorconnectionpara
+      href: wmimonitorconnectionparams.md
+    - name: Wmimonitordescriptormethods
+      href: wmimonitordescriptormethods.md
+      items:
+        - name: Wmimonitordescriptormethods-Methoden
+          href: wmimonitordescriptormethods-methods.md
+          items:
+            - name: WmiGetMonitorRawEEdidV1Block-Methode
+              href: wmigetmonitorraweedidv1block-wmimonitordescriptormethods.md
+    - name: Wmimonitordigitalvideoinputparameter.
+      href: wmimonitordigitalvideoinputparams.md
+    - name: Wmimonitorid
+      href: wmimonitorid.md
+    - name: Wmimonitorlistedfrequencyranges
+      href: wmimonitorlistedfrequencyranges.md
+    - name: Wmimonitorlistedsupportedsourcemodes
+      href: wmimonitorlistedsupportedsourcemodes.md
+    - name: WmiMonitorRawEEdidV1Block
+      href: wmimonitorraweedidv1block.md
+    - name: Xyzincie
+      href: xyzincie.md
+- name: WDM-Anbieter
+  href: wdm-provider.md
+  items:
+    - name: Wmibinarymufresource
+      href: wmibinarymofresource.md
