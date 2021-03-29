@@ -1,0 +1,148 @@
+---
+title: 'Samplegrad:: samplegrad (S, float, float, float, float)-Funktion für texturecube'
+description: Verwendet einen Farbverlauf, um die Art und Weise zu beeinflussen, wie der Beispiel Speicherort berechnet wird, mit einem optionalen Wert, mit dem Samplingrate-Werte (LOD-Werte) fixiert werden. Für texturecube
+ms.assetid: C5BC71FA-63E3-4DE2-9202-B9C79789AE8E
+keywords:
+- Samplegrad-Funktion HLSL
+topic_type:
+- apiref
+api_name:
+- SampleGrad
+api_type:
+- NA
+ms.topic: reference
+ms.date: 05/31/2018
+api_location: ''
+ms.openlocfilehash: e4a51c49d9373dc210cbf216089e4c82835bf2c4
+ms.sourcegitcommit: 168d11879cb9fd89d26f826482725c0a626be00f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "104531121"
+---
+# <a name="samplegradsamplegradsfloatfloatfloatfloat-function-for-texturecube"></a>Samplegrad:: samplegrad (S, float, float, float, float)-Funktion für texturecube
+
+Verwendet einen Farbverlauf, um die Art und Weise zu beeinflussen, wie der Beispiel Speicherort berechnet wird, mit einem optionalen Wert, mit dem Samplingrate-Werte (LOD-Werte) fixiert werden.
+
+## <a name="syntax"></a>Syntax
+
+
+``` syntax
+DXGI_FORMAT SampleGrad(
+  in SamplerState S,
+  in float        Location,
+  in float        DDX,
+  in float        DDY,
+  in float        Clamp
+);
+```
+
+
+
+## <a name="parameters"></a>Parameter
+
+<dl> <dt>
+
+*S* \[ in\]
+</dt> <dd>
+
+Typ: **samplerstate**
+
+Ein [samplerzustand](dx-graphics-hlsl-sampler.md). Dies ist ein Objekt, das in einer Effekt Datei deklariert wurde, die Zustands Zuweisungen enthält.
+
+</dd> <dt>
+
+*Speicherort* \[ in\]
+</dt> <dd>
+
+Typ: **float**
+
+Texturkoordinaten Der Argumenttyp ist vom Textur Objekttyp abhängig.
+
+
+
+| Texture-Object-Typ                    | Parametertyp |
+|----------------------------------------|----------------|
+| Texture1D                              | float          |
+| Texture1DArray, Texture2D              | float2         |
+| Texture2DArray, Texture3D, texturecube | float3         |
+| Texturecubearray                       | float4         |
+
+
+
+ 
+
+</dd> <dt>
+
+*DDX* \[ in\]
+</dt> <dd>
+
+Typ: **float**
+
+Die Änderungs Rate der Oberflächengeometrie in der x-Richtung. Der Argumenttyp ist vom Textur Objekttyp abhängig.
+
+
+
+| Texture-Object-Typ                      | Parametertyp |
+|------------------------------------------|----------------|
+| Texture1D, Texture1DArray                | float          |
+| Texture2D, Texture2DArray                | float2         |
+| Texture3D, texturecube, texturecubearray | float3         |
+| Texture2DMS, Texture2DMSArray            | Nicht unterstützt  |
+
+
+
+ 
+
+</dd> <dt>
+
+Nicht mehr  \[ in\]
+</dt> <dd>
+
+Typ: **float**
+
+Die Änderungs Rate der Oberflächengeometrie in der y-Richtung. Der Argumenttyp ist vom Textur Objekttyp abhängig.
+
+
+
+| Texture-Object-Typ                      | Parametertyp |
+|------------------------------------------|----------------|
+| Texture1D, Texture1DArray                | float          |
+| Texture2D, Texture2DArray                | float2         |
+| Texture3D, texturecube, texturecubearray | float3         |
+| Texture2DMS, Texture2DMSArray            | Nicht unterstützt  |
+
+
+
+ 
+
+</dd> <dt>
+
+*Klammer* \[ in\]
+</dt> <dd>
+
+Typ: **float**
+
+Ein optionaler Wert zum Einspannen von Sample-Lod-Werten. Wenn Sie beispielsweise 2.0 f als Klammer Wert übergeben, stellen Sie sicher, dass kein einzelnes Beispiel auf eine MIP-Ebene kleiner als 2.0 f zugreift.
+
+</dd> </dl>
+
+## <a name="return-value"></a>Rückgabewert
+
+Typ: **[ **DXGI- \_ Format**](/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format)**
+
+Das Textur Format, bei dem es sich um einen der im [**DXGI- \_ Format**](/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format)aufgelisteten typisierten Werte handelt.
+
+## <a name="see-also"></a>Weitere Informationen
+
+<dl> <dt>
+
+[Samplegrad-Methoden](texturecube-samplegrad.md)
+</dt> <dt>
+
+[**TextureCube**](texturecube.md)
+</dt> </dl>
+
+ 
+
+ 
