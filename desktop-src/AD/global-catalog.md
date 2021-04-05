@@ -1,0 +1,27 @@
+---
+title: Globaler Katalog
+description: Eine Domäne, die von Active Directory Domain Services ausgeführt wird, kann aus vielen Partitionen oder namens Kontexten bestehen.
+ms.assetid: eac02c1f-0c37-4eee-822d-07913ea8775a
+ms.tgt_platform: multiple
+keywords:
+- globaler Katalog Active Directory
+ms.topic: article
+ms.date: 05/31/2018
+ms.openlocfilehash: b4496804d21e53cf2d87947288179e7f96ca75c8
+ms.sourcegitcommit: 803f3ccd65bdefe36bd851b9c6e7280be9489016
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "103724512"
+---
+# <a name="global-catalog"></a><span data-ttu-id="a6384-104">Globaler Katalog</span><span class="sxs-lookup"><span data-stu-id="a6384-104">Global Catalog</span></span>
+
+<span data-ttu-id="a6384-105">Eine Domäne, die von Active Directory Domain Services ausgeführt wird, kann aus vielen Partitionen oder namens Kontexten bestehen.</span><span class="sxs-lookup"><span data-stu-id="a6384-105">A Domain run by Active Directory Domain Services can consist of many partitions or naming contexts.</span></span> <span data-ttu-id="a6384-106">Der Distinguished Name (DN) eines Objekts enthält ausreichend Informationen, um nach einem Replikat der Partition zu suchen, die das Objekt enthält.</span><span class="sxs-lookup"><span data-stu-id="a6384-106">The distinguished name (DN) of an object includes enough information to locate a replica of the partition that holds the object.</span></span> <span data-ttu-id="a6384-107">Häufig ist es jedoch nicht möglich, dass der Benutzer oder die Anwendung den DN des Zielobjekts oder die Partition, in der das Objekt enthalten ist, kennt.</span><span class="sxs-lookup"><span data-stu-id="a6384-107">Many times however, the user or application does not know the DN of the target object or which partition might contain the object.</span></span> <span data-ttu-id="a6384-108">Der [*globale Katalog (GC)*](/previous-versions/windows/desktop/legacy/ms681905(v=vs.85)) ermöglicht Benutzern und Anwendungen das Auffinden von Objekten in einer Active Directory Domänen Struktur mit einem oder mehreren Attributen des Zielobjekts.</span><span class="sxs-lookup"><span data-stu-id="a6384-108">The [*global catalog (GC)*](/previous-versions/windows/desktop/legacy/ms681905(v=vs.85)) allows users and applications to find objects in an Active Directory domain tree, given one or more attributes of the target object.</span></span>
+
+<span data-ttu-id="a6384-109">Der globale Katalog enthält ein partielles Replikat jedes namens Kontexts im Verzeichnis.</span><span class="sxs-lookup"><span data-stu-id="a6384-109">The global catalog contains a partial replica of every naming context in the directory.</span></span> <span data-ttu-id="a6384-110">Sie enthält auch die Schema-und Konfigurations Namenskontexte.</span><span class="sxs-lookup"><span data-stu-id="a6384-110">It contains the schema and configuration naming contexts as well.</span></span> <span data-ttu-id="a6384-111">Dies bedeutet, dass der GC ein Replikat jedes Objekts im Verzeichnis enthält, aber nur eine kleine Anzahl von Attributen enthält.</span><span class="sxs-lookup"><span data-stu-id="a6384-111">This means the GC holds a replica of every object in the directory but with only a small number of their attributes.</span></span> <span data-ttu-id="a6384-112">Die Attribute in der GC sind diejenigen, die am häufigsten in Such Vorgängen verwendet werden (z. b. die vor-und Nachnamen eines Benutzers oder Anmelde Namen), und diejenigen, die zum Suchen eines vollständigen Replikats des Objekts erforderlich sind.</span><span class="sxs-lookup"><span data-stu-id="a6384-112">The attributes in the GC are those most frequently used in search operations (such as a user's first and last names or login names) and those required to locate a full replica of the object.</span></span> <span data-ttu-id="a6384-113">Die GC ermöglicht es Benutzern, interessante Objekte schnell zu finden, ohne zu wissen, welche Domäne Sie enthält und ohne dass ein zusammenhängender erweiterter Namespace im Unternehmen erforderlich ist.</span><span class="sxs-lookup"><span data-stu-id="a6384-113">The GC allows users to quickly find objects of interest without knowing what domain holds them and without requiring a contiguous extended namespace in the enterprise.</span></span>
+
+<span data-ttu-id="a6384-114">Der globale Katalog wird automatisch vom Active Directory Domain Services Replikationssystem erstellt.</span><span class="sxs-lookup"><span data-stu-id="a6384-114">The global catalog is built automatically by the Active Directory Domain Services replication system.</span></span> <span data-ttu-id="a6384-115">Die Replikations Topologie für den globalen Katalog wird automatisch generiert.</span><span class="sxs-lookup"><span data-stu-id="a6384-115">The replication topology for the global catalog is generated automatically.</span></span> <span data-ttu-id="a6384-116">Die Eigenschaften, die in den globalen Katalog repliziert werden, enthalten ein von Microsoft definiertes Basisset.</span><span class="sxs-lookup"><span data-stu-id="a6384-116">The properties replicated into the global catalog include a base set defined by Microsoft.</span></span> <span data-ttu-id="a6384-117">Administratoren können zusätzliche Eigenschaften angeben, um die Anforderungen Ihrer Installation zu erfüllen.</span><span class="sxs-lookup"><span data-stu-id="a6384-117">Administrators can specify additional properties to meet the needs of their installation.</span></span>
+
+ 
+
+ 
