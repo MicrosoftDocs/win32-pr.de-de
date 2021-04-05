@@ -1,0 +1,31 @@
+---
+title: String-Attribut (RPC)
+description: Das \ String \-Attribut und der Remote Prozedur Aufruf (RPC).
+ms.assetid: 794e03f2-b1e9-42dc-8536-9ced5c0e3dad
+ms.topic: article
+ms.date: 05/31/2018
+ms.openlocfilehash: e413c0b3b8f5a379dc3448f07aed4a5a7a6aba07
+ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "103949017"
+---
+# <a name="string-attribute-rpc"></a><span data-ttu-id="4ae74-103">String-Attribut (RPC)</span><span class="sxs-lookup"><span data-stu-id="4ae74-103">string attribute (RPC)</span></span>
+
+<span data-ttu-id="4ae74-104">Das \[ [String](/windows/desktop/Midl/string) - \] Attribut gibt an, dass der-Parameter ein Zeiger auf ein Array vom Typ [char](/windows/desktop/Midl/char-idl), [Byte](/windows/desktop/Midl/byte)oder **w \_ char** ist.</span><span class="sxs-lookup"><span data-stu-id="4ae74-104">The \[ [string](/windows/desktop/Midl/string)\] attribute indicates that the parameter is a pointer to an array of type [char](/windows/desktop/Midl/char-idl), [byte](/windows/desktop/Midl/byte), or **w\_char**.</span></span> <span data-ttu-id="4ae74-105">Wie bei einem konformen Array wird die Größe eines **\[ Zeichen \]** folgen Parameters zur Laufzeit bestimmt.</span><span class="sxs-lookup"><span data-stu-id="4ae74-105">As with a conformant array, the size of a **\[string\]** parameter is determined at run time.</span></span> <span data-ttu-id="4ae74-106">Anders als bei einem konformen Array muss der Entwickler nicht die Länge angeben, die dem Array zugeordnet ist – das **\[ Zeichen \]** folgen Attribut weist den Stub an, die Array Größe durch Aufrufen von " **strinlen**" zu bestimmen.</span><span class="sxs-lookup"><span data-stu-id="4ae74-106">Unlike a conformant array, the developer does not have to provide the length associated with the array—the **\[string\]** attribute tells the stub to determine the array size by calling **strlen**.</span></span> <span data-ttu-id="4ae74-107">Ein **\[ Zeichen \]** folgen Attribut kann nicht gleichzeitig verwendet werden, wenn die \[ [ \_ Länge](/windows/desktop/Midl/length-is) \] oder die \[ [Last Attribute \_ ist](/windows/desktop/Midl/last-is) \] .</span><span class="sxs-lookup"><span data-stu-id="4ae74-107">A **\[string\]** attribute cannot be used at the same time as the \[ [length\_is](/windows/desktop/Midl/length-is)\] or \[ [last\_is](/windows/desktop/Midl/last-is)\] attributes.</span></span>
+
+<span data-ttu-id="4ae74-108">Die Kombination aus **\[ Zeichen \]** folgen Attribut weist den Stub an, die Zeichenfolge nur vom Client an den Server zu übergeben.</span><span class="sxs-lookup"><span data-stu-id="4ae74-108">The **\[in, string\]** attribute combination directs the stub to pass the string from client to server only.</span></span> <span data-ttu-id="4ae74-109">Die Menge an Arbeitsspeicher, die auf dem Server belegt wird, entspricht der übertragenen Zeichen folgen Größe Plus 1.</span><span class="sxs-lookup"><span data-stu-id="4ae74-109">The amount of memory allocated on the server is the same as the transmitted string size plus one.</span></span>
+
+<span data-ttu-id="4ae74-110">Die \[ [out](/windows/desktop/Midl/out-idl)-, **String** - \] Attribute leiten den Stub so an, dass die Zeichenfolge nur vom Server an den Client übergeben wird.</span><span class="sxs-lookup"><span data-stu-id="4ae74-110">The \[ [out](/windows/desktop/Midl/out-idl), **string**\] attributes direct the stub to pass the string from server to client only.</span></span> <span data-ttu-id="4ae74-111">Der Entwurf der Programmiersprache C setzt darauf, dass alle **\[ out \]** -Parameter Zeiger sein müssen.</span><span class="sxs-lookup"><span data-stu-id="4ae74-111">The call-by-value design of the C language insists that all **\[out\]** parameters must be pointers.</span></span>
+
+<span data-ttu-id="4ae74-112">Der **\[ out \]** -Parameter muss ein Zeiger sein, und standardmäßig handelt es sich bei allen Zeiger Parametern um Verweis Zeiger.</span><span class="sxs-lookup"><span data-stu-id="4ae74-112">The **\[out\]** parameter must be a pointer and, by default, all pointer parameters are reference pointers.</span></span> <span data-ttu-id="4ae74-113">Der Verweis Zeiger wird während des Aufrufes nicht geändert – er verweist auf denselben Speicher wie vor dem-Befehl.</span><span class="sxs-lookup"><span data-stu-id="4ae74-113">The reference pointer does not change during the call—it points to the same memory as before the call.</span></span> <span data-ttu-id="4ae74-114">Für Zeichen folgen Zeiger bedeutet die zusätzliche Einschränkung des Verweis Zeigers, dass der Client vor dem Ausführen des Remote Prozedur Aufrufes ausreichend gültigen Speicher zuweisen muss.</span><span class="sxs-lookup"><span data-stu-id="4ae74-114">For string pointers, the additional constraint of the reference pointer means the client must allocate sufficient valid memory before making the remote procedure call.</span></span> <span data-ttu-id="4ae74-115">Die stubzeichen übertragen die Zeichenfolge, die **\[ von den Zeichen \]** folgen Attributen out in den bereits auf der Clientseite zugewiesenen Speicher angegeben wird.</span><span class="sxs-lookup"><span data-stu-id="4ae74-115">The stubs transmit the string that the **\[out, string\]** attributes indicate into the memory already allocated on the client side.</span></span>
+
+<span data-ttu-id="4ae74-116">In den folgenden Themen werden die Prototypen für Remote Prozedur Parameter für Zeichen folgen beschrieben:</span><span class="sxs-lookup"><span data-stu-id="4ae74-116">The following topics describe the remote procedure parameter prototypes for strings:</span></span>
+
+-   <span data-ttu-id="4ae74-117">[\[in, out, Zeichen folgen \] Prototyp](-in-out-string-prototype.md)</span><span class="sxs-lookup"><span data-stu-id="4ae74-117">[\[in, out, string\] Prototype](-in-out-string-prototype.md)</span></span>
+-   <span data-ttu-id="4ae74-118">[\[in, String \] und \[ out, Zeichen folgen \] Prototyp](-in-string-and-out-string-prototype.md)</span><span class="sxs-lookup"><span data-stu-id="4ae74-118">[\[in, string\] and \[out, string\] Prototype](-in-string-and-out-string-prototype.md)</span></span>
+
+ 
+
+ 
