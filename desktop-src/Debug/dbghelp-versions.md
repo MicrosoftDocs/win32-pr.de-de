@@ -1,0 +1,28 @@
+---
+description: Die DbgHelp-Bibliothek wird von DbgHelp.dll implementiert.
+ms.assetid: 8ef1740d-c791-4fbd-8297-7207a987c09d
+title: Dbghelp-Versionen
+ms.topic: article
+ms.date: 05/31/2018
+ms.openlocfilehash: 811e92ba88bf38cb46274e2d2c716a620ea83b16
+ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "103747744"
+---
+# <a name="dbghelp-versions"></a><span data-ttu-id="5f0b6-103">Dbghelp-Versionen</span><span class="sxs-lookup"><span data-stu-id="5f0b6-103">DbgHelp Versions</span></span>
+
+<span data-ttu-id="5f0b6-104">Die DbgHelp-Bibliothek wird von DbgHelp.dll implementiert.</span><span class="sxs-lookup"><span data-stu-id="5f0b6-104">The DbgHelp library is implemented by DbgHelp.dll.</span></span> <span data-ttu-id="5f0b6-105">Obwohl diese DLL in allen unterstützten Versionen von Windows enthalten ist, ist sie selten die aktuellste Version von dbghelp verfügbar.</span><span class="sxs-lookup"><span data-stu-id="5f0b6-105">Although this DLL is included in all supported versions of Windows, it is rarely the most current version of DbgHelp available.</span></span> <span data-ttu-id="5f0b6-106">Außerdem hat die in Windows enthaltene Version von dbghelp eine geringere Funktionalität wie die anderen Releases. insbesondere fehlt die Unterstützung für Symbol Server und Quell Server.</span><span class="sxs-lookup"><span data-stu-id="5f0b6-106">Furthermore, the version of DbgHelp that ships in Windows has reduced functionality from the other releases-- specifically, it lacks support for Symbol Server and Source Server.</span></span>
+
+<span data-ttu-id="5f0b6-107">Die aktuellsten Versionen von DbgHelp.dll, SymSrv.dll und SrcSrv.dll sind als Teil des Pakets " [Debugtools für Windows](https://developer.microsoft.com/windows/downloads/windows-10-sdk) " verfügbar.</span><span class="sxs-lookup"><span data-stu-id="5f0b6-107">The most current versions of DbgHelp.dll, SymSrv.dll, and SrcSrv.dll are available as a part of the [Debugging Tools For Windows](https://developer.microsoft.com/windows/downloads/windows-10-sdk) package.</span></span> <span data-ttu-id="5f0b6-108">Die weitergaberichtlinienerweiterungsrichtlinien für diese enthaltenen DLLs wurden speziell so konzipiert, dass die Benutzer diese Dateien in ihren eigenen Paketen und Releases einschließen können.</span><span class="sxs-lookup"><span data-stu-id="5f0b6-108">The redistribution policies for these included DLLs were specifically designed to make it as easy as possible for people to include these files in their own packages and releases.</span></span>
+
+> [!Caution]  
+> <span data-ttu-id="5f0b6-109">Benutzer sollten nie versuchen, die [Debugtools für Windows](https://developer.microsoft.com/windows/downloads/windows-10-sdk) -Versionen von DbgHelp.dll in den Windows-Systemverzeichnissen zu installieren, da Sie in diesem Szenario nicht getestet werden und wahrscheinlich das System destabilisieren.</span><span class="sxs-lookup"><span data-stu-id="5f0b6-109">Users should never attempt to install the [Debugging Tools For Windows](https://developer.microsoft.com/windows/downloads/windows-10-sdk) versions of DbgHelp.dll into the Windows system directories because they are untested in this scenario and likely to destabilize the system.</span></span> <span data-ttu-id="5f0b6-110">Es gibt separate x64-und x86-Versionen des debugpakets. beides ist für Benutzer erforderlich, die beide Plattformen unterstützen möchten.</span><span class="sxs-lookup"><span data-stu-id="5f0b6-110">There are separate X64 and X86 versions of the debugging package and both are necessary for people interested in supporting both platforms.</span></span>
+
+<span data-ttu-id="5f0b6-111">Um die neueste Version von DbgHelp.dll zu erhalten, navigieren [https://developer.microsoft.com/windows/downloads/windows-10-sdk](https://developer.microsoft.com/windows/downloads/windows-10-sdk) Sie zu, und laden Sie die Debugtools für Windows herunter.</span><span class="sxs-lookup"><span data-stu-id="5f0b6-111">To obtain the latest version of DbgHelp.dll, go to [https://developer.microsoft.com/windows/downloads/windows-10-sdk](https://developer.microsoft.com/windows/downloads/windows-10-sdk) and download Debugging Tools for Windows.</span></span> <span data-ttu-id="5f0b6-112">Informationen zur ordnungsgemäßen Installation finden Sie unter [Aufrufen der DbgHelp-Bibliothek](calling-the-dbghelp-library.md) .</span><span class="sxs-lookup"><span data-stu-id="5f0b6-112">Refer to [Calling the DbgHelp Library](calling-the-dbghelp-library.md) for information on proper installation.</span></span>
+
+> [!Note]  
+> <span data-ttu-id="5f0b6-113">Die DbgHelp.dll-Datei, die in Windows enthalten ist, ist nicht Verteil Bar.</span><span class="sxs-lookup"><span data-stu-id="5f0b6-113">The DbgHelp.dll file that ships in Windows is not redistributable.</span></span>
+
+<span data-ttu-id="5f0b6-114">Viele Versionen von dbghelp enthalten zusätzliche Funktionen.</span><span class="sxs-lookup"><span data-stu-id="5f0b6-114">Many versions of DbgHelp include additional functionality.</span></span> <span data-ttu-id="5f0b6-115">Um sicherzustellen, dass die richtige Version von dbghelp für Ihre Anwendung verfügbar ist, überprüfen Sie die Anforderungs Informationen in der spezifischen API-Referenz Dokumentation.</span><span class="sxs-lookup"><span data-stu-id="5f0b6-115">To ensure that the correct version of DbgHelp is available for your application, review the Requirements information in the specific API reference documentation.</span></span>
