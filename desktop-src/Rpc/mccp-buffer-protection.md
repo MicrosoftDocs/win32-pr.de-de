@@ -1,0 +1,34 @@
+---
+title: Schutz von MCCP-Puffern
+description: Ab Windows Vista führt das RPC-Marshalling-Modul weitere Schritte aus, um zu versuchen, Client seitige Pufferüberläufe aufgrund von zurückgegebenen Daten zu verhindern. Diese Funktion wird als Mini Server-Konformitäts Schutz (Mini Compute Conformance Protection, MCCP) bezeichnet.
+ms.assetid: 37fe743b-c64e-469d-b8f4-abab9f05c813
+ms.topic: article
+ms.date: 05/31/2018
+ms.openlocfilehash: a70d04de57974bd9665d659129590d72513eb83e
+ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "103729800"
+---
+# <a name="mccp-buffer-protection"></a><span data-ttu-id="c6308-104">Schutz von MCCP-Puffern</span><span class="sxs-lookup"><span data-stu-id="c6308-104">MCCP Buffer Protection</span></span>
+
+<span data-ttu-id="c6308-105">Ab Windows Vista führt das RPC-Marshalling-Modul weitere Schritte aus, um zu versuchen, Client seitige Pufferüberläufe aufgrund von zurückgegebenen Daten zu verhindern.</span><span class="sxs-lookup"><span data-stu-id="c6308-105">Starting with Windows Vista, the RPC Marshalling Engine takes further steps to try to prevent client-side buffer overruns due to returned data.</span></span> <span data-ttu-id="c6308-106">Diese Funktion wird als Mini Server-Konformitäts Schutz (Mini Compute Conformance Protection, MCCP) bezeichnet.</span><span class="sxs-lookup"><span data-stu-id="c6308-106">This facility is called Mini Compute Conformance Protection (MCCP).</span></span>
+
+<span data-ttu-id="c6308-107">Wenn der Client einen Zeiger an einen vorhandenen Puffer an einen \[ [**out**](/windows/desktop/Midl/out-idl) - \] oder \[ [**in**](/windows/desktop/Midl/in)-,**out** - \] Parameter übergibt, werden die zurückgegebenen Daten für diesen Parameter in den vorhandenen Puffer kopiert.</span><span class="sxs-lookup"><span data-stu-id="c6308-107">When the client passes a pointer to an existing buffer to an \[[**out**](/windows/desktop/Midl/out-idl)\] or \[[**in**](/windows/desktop/Midl/in),**out**\] parameter, returned data for that parameter is copied into the existing buffer.</span></span> <span data-ttu-id="c6308-108">Wenn die zurückgegebenen Daten größer als der übergebenen Puffer sind, kann ein Pufferüberlauf auftreten, wenn die zurückgegebenen Daten von RPC in den zu kleinen Puffer kopiert werden.</span><span class="sxs-lookup"><span data-stu-id="c6308-108">If the returned data is larger than the passed buffer, a buffer overrun can occur when RPC copies the returned data into the too-small buffer.</span></span> <span data-ttu-id="c6308-109">Siehe [Top-Level-und Embedded-Zeiger](top-level-and-embedded-pointers.md).</span><span class="sxs-lookup"><span data-stu-id="c6308-109">See [Top-Level and Embedded Pointers](top-level-and-embedded-pointers.md).</span></span>
+
+<span data-ttu-id="c6308-110">Bei der Verwendung von MCCP versucht RPC, diesen Zustand zu erkennen und den Aufruf abzulehnen, wenn er erkannt wird.</span><span class="sxs-lookup"><span data-stu-id="c6308-110">With MCCP, RPC attempts to detect this condition and reject the call if it is detected.</span></span> <span data-ttu-id="c6308-111">Bei Puffern mit einem Korrelations Wert, z. b. \[ [**Größe \_**](/windows/desktop/Midl/size-is) \] , wird der Aufruf abgelehnt, wenn die zurückgegebenen Daten nicht in die angegebene Puffergröße \_ passen \_ \_ \_ .</span><span class="sxs-lookup"><span data-stu-id="c6308-111">For buffers with a correlation value, such as \[[**size\_is**](/windows/desktop/Midl/size-is)\], if the returned data does not fit in the specified buffer size, the call is rejected and RPC\_X\_BAD\_STUB\_DATA exception is raised.</span></span> <span data-ttu-id="c6308-112">Bei nicht großen Zeichen folgen wird der-Rückruf zurückgewiesen, wenn die vorhandene Zeichen folgen Größe (Länge bis zum **null** -Terminator) nicht ausreicht, um die zurückgegebene Zeichenfolge zu speichern. der-Rückruf wird zurückgewiesen.</span><span class="sxs-lookup"><span data-stu-id="c6308-112">For unsized strings, the call is rejected if the existing string size (length until the **null** terminator) is insufficient to hold the returned string, the call is rejected.</span></span> <span data-ttu-id="c6308-113">RPC kann in allen Bedingungen keine Pufferüberläufe erkennen, daher wird empfohlen, die normalen Vorsichtsmaßnahmen gegen Pufferüberläufe weiterhin zu übernehmen.</span><span class="sxs-lookup"><span data-stu-id="c6308-113">RPC cannot detect buffer overruns in all conditions, so the developer is advised to continue to take normal precautions against buffer overruns.</span></span>
+
+<span data-ttu-id="c6308-114">Wenn der Client keinen vorhandenen Puffer für einen \[ [**out**](/windows/desktop/Midl/out-idl) - \] Parameter übergibt, sondern stattdessen einen dereferenzierten Zeiger an **null** übergibt, befolgt RPC die normalen Regeln, um im Auftrag des Clients einen neuen Puffer zuzuweisen.</span><span class="sxs-lookup"><span data-stu-id="c6308-114">If the client does not pass an existing buffer for an \[[**out**](/windows/desktop/Midl/out-idl)\] parameter, but instead passes a dereferenced pointer to **NULL**, RPC will follow normal rules to allocate a new buffer on the client’s behalf.</span></span> <span data-ttu-id="c6308-115">Dieser Puffer wird mit ausreichendem Speicherplatz zum Speichern der zurückgegebenen Daten zugeordnet.</span><span class="sxs-lookup"><span data-stu-id="c6308-115">This buffer will be allocated with sufficient space to hold the returned data.</span></span>
+
+<span data-ttu-id="c6308-116">Ein zweiter Schutz besteht darin, dass RPC bei korrelierten Parametern erzwingt, dass ein nicht-**null** -Puffer übermittelt wird, wenn die Korrelations Anzahl Variable nicht **null** ist.</span><span class="sxs-lookup"><span data-stu-id="c6308-116">A second protection is that for correlated parameters, RPC will enforce that a non-**null** buffer is passed when the correlation count variable is non-**null**.</span></span>
+
+``` syntax
+HRESULT PassString( [in] DWORD Length, [in, unique, string, size_is( Length )]LPWSTR MyString );
+```
+
+<span data-ttu-id="c6308-117">Wenn *MyString* **null** ist, lehnt RPC den Aufruf ab, sofern die *Länge* nicht auf 0 festgelegt ist.</span><span class="sxs-lookup"><span data-stu-id="c6308-117">If *MyString* is **NULL**, RPC will reject the call unless *Length* is set to 0.</span></span> <span data-ttu-id="c6308-118">Beachten Sie, dass RPC eine *Länge* von 0 (null) zulässt, während *MyString* nicht **null** ist, und RPC behandelt *MyString* als Puffer Zuordnung mit einer Länge von 0 (null).</span><span class="sxs-lookup"><span data-stu-id="c6308-118">Note that RPC will allow *Length* to be 0 while *MyString* is non-**NULL**, and RPC will treat *MyString* as a 0-length buffer allocation.</span></span>
+
+ 
+
+ 

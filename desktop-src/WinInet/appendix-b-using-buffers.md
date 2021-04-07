@@ -1,0 +1,25 @@
+---
+title: Verwenden der Zeichen folgen Puffer
+description: Funktionen, die Zeichen folgen zurückgeben, enthalten den Eingabeparameter lpszbuffer und den Größen Parameter lpdwbufferlength. Obwohl lpszbuffer NULL sein kann, muss lpdwbufferlength ein gültiger Zeiger auf eine DWORD-Variable sein.
+ms.assetid: ae7f84ba-15d4-483b-bdda-0042854f9e1b
+ms.topic: article
+ms.date: 05/31/2018
+ms.openlocfilehash: 309d887458521b99069b381f8bf6650ebeda488a
+ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "103728761"
+---
+# <a name="using-string-buffers"></a><span data-ttu-id="372ca-104">Verwenden der Zeichen folgen Puffer</span><span class="sxs-lookup"><span data-stu-id="372ca-104">Using String Buffers</span></span>
+
+<span data-ttu-id="372ca-105">Funktionen, die Zeichen folgen zurückgeben, enthalten den Eingabeparameter *lpszbuffer* und den Größen Parameter *lpdwbufferlength*.</span><span class="sxs-lookup"><span data-stu-id="372ca-105">Functions that return strings contain an input parameter, *lpszBuffer*, and a size parameter, *lpdwBufferLength*.</span></span> <span data-ttu-id="372ca-106">Obwohl *lpszbuffer* **null** sein kann, muss *lpdwbufferlength* ein gültiger Zeiger auf eine **DWORD** -Variable sein.</span><span class="sxs-lookup"><span data-stu-id="372ca-106">Although *lpszBuffer* can be **NULL**, *lpdwBufferLength* must be a valid pointer to a **DWORD** variable.</span></span> <span data-ttu-id="372ca-107">Wenn der Eingabepuffer, auf den von *lpszbuffer* verwiesen wird, **null** oder zu klein ist, um die Ausgabe Zeichenfolge zu speichern, schlägt die Funktion fehl, und [**GetLastError**](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) gibt **fehlerhaften \_ \_ Puffer** zurück.</span><span class="sxs-lookup"><span data-stu-id="372ca-107">If the input buffer pointed to by *lpszBuffer* is **NULL** or too small to hold the output string, the function fails and [**GetLastError**](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) returns **ERROR\_INSUFFICIENT\_BUFFER**.</span></span> <span data-ttu-id="372ca-108">Die Variable, auf die von *lpdwbufferlength* verwiesen wird, enthält eine Zahl, die die Anzahl der Bytes darstellt, die die Funktion zum Zurückgeben der angeforderten Zeichenfolge benötigt, einschließlich des **null** -Terminator.</span><span class="sxs-lookup"><span data-stu-id="372ca-108">The variable pointed to by *lpdwBufferLength* contains a number that represents the number of bytes the function requires to return the requested string, including the **null** terminator.</span></span> <span data-ttu-id="372ca-109">Die Anwendung muss einen Puffer dieser Größe zuordnen, die Variable, auf die von *lpdwbufferlength* verwiesen wird, auf diesen Wert festlegen und die Anforderung erneut senden.</span><span class="sxs-lookup"><span data-stu-id="372ca-109">The application should allocate a buffer of this size, set the variable pointed to by *lpdwBufferLength* to this value, and resubmit the request.</span></span> <span data-ttu-id="372ca-110">Wenn die Puffergröße ausreichend ist, um die angeforderte Zeichenfolge zu empfangen, wird die Zeichenfolge mit einem **null** -Terminator in den Ausgabepuffer kopiert, und die Funktion gibt eine Erfolgs Angabe zurück.</span><span class="sxs-lookup"><span data-stu-id="372ca-110">If the buffer size is sufficient to receive the requested string, the string is copied to the output buffer with a **null** terminator and the function returns a success indication.</span></span> <span data-ttu-id="372ca-111">Die Variable, auf die von *lpdwbufferlength* verwiesen wird, enthält jetzt die Anzahl der im Puffer gespeicherten Zeichen, ausgenommen das **null** -Terminator.</span><span class="sxs-lookup"><span data-stu-id="372ca-111">The variable pointed to by *lpdwBufferLength* now contains the number of characters stored in the buffer, excluding the **null** terminator.</span></span>
+
+> [!Note]  
+> <span data-ttu-id="372ca-112">WinInet unterstützt keine Server Implementierungen.</span><span class="sxs-lookup"><span data-stu-id="372ca-112">WinINet does not support server implementations.</span></span> <span data-ttu-id="372ca-113">Außerdem sollte Sie nicht von einem Dienst verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="372ca-113">In addition, it should not be used from a service.</span></span> <span data-ttu-id="372ca-114">Verwenden Sie für Server Implementierungen oder-Dienste [Microsoft Windows HTTP-Dienste (WinHTTP)](/windows/desktop/WinHttp/winhttp-start-page).</span><span class="sxs-lookup"><span data-stu-id="372ca-114">For server implementations or services use [Microsoft Windows HTTP Services (WinHTTP)](/windows/desktop/WinHttp/winhttp-start-page).</span></span>
+
+ 
+
+ 
+
+ 

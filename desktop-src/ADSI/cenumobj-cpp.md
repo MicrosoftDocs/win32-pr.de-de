@@ -1,0 +1,41 @@
+---
+title: Cenumubj. CPP
+description: In der Beispiel Anbieter Komponente verwendet die-Enumeration eines Container Objekts die Routinen aus "cenumubj. cpp", die in der folgenden Tabelle aufgeführt sind.
+ms.assetid: 7166230d-0bf8-4f7d-9781-72f125a3dd21
+ms.tgt_platform: multiple
+ms.topic: article
+ms.date: 05/31/2018
+ms.openlocfilehash: 5b7859571c7136cf1f8a2895b69fe7cdcdf07604
+ms.sourcegitcommit: b0ebdefc3dcd5c04bede94091833aa1015a2f95c
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "103730193"
+---
+# <a name="cenumobjcpp"></a><span data-ttu-id="f25e2-103">Cenumubj. CPP</span><span class="sxs-lookup"><span data-stu-id="f25e2-103">CENUMOBJ.CPP</span></span>
+
+<span data-ttu-id="f25e2-104">In der Beispiel Anbieter Komponente verwendet die-Enumeration eines Container Objekts die Routinen aus "cenumubj. cpp", die in der folgenden Tabelle aufgeführt sind.</span><span class="sxs-lookup"><span data-stu-id="f25e2-104">In the example provider component, the enumeration of a container object uses the routines, from cenumobj.cpp, listed in the following table.</span></span>
+
+
+
+| <span data-ttu-id="f25e2-105">Methode</span><span class="sxs-lookup"><span data-stu-id="f25e2-105">Method</span></span>                                                 | <span data-ttu-id="f25e2-106">BESCHREIBUNG</span><span class="sxs-lookup"><span data-stu-id="f25e2-106">Description</span></span>                                                                                                                                                           |
+|--------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| <span data-ttu-id="f25e2-107">**Csampledsgenobjectenum:: Create**</span><span class="sxs-lookup"><span data-stu-id="f25e2-107">**CSampleDSGenObjectEnum::Create**</span></span>                     | <span data-ttu-id="f25e2-108">Erstellen Sie ein-Objekt, um die Enumeration generischer Active Directory Objekte zu aktivieren.</span><span class="sxs-lookup"><span data-stu-id="f25e2-108">Create an object to enable enumeration of generic Active Directory objects.</span></span>                                                                                           |
+| <span data-ttu-id="f25e2-109">**Csampledsgenobjectenum:: csampledsgenobjectenum**</span><span class="sxs-lookup"><span data-stu-id="f25e2-109">**CSampleDSGenObjectEnum::CSampleDSGenObjectEnum**</span></span>     | <span data-ttu-id="f25e2-110">Initialisierung.</span><span class="sxs-lookup"><span data-stu-id="f25e2-110">Initialization.</span></span>                                                                                                                                                       |
+| <span data-ttu-id="f25e2-111">**Csampledsgenobjectenum:: enumgenericobjects**</span><span class="sxs-lookup"><span data-stu-id="f25e2-111">**CSampleDSGenObjectEnum::EnumGenericObjects**</span></span>         | <span data-ttu-id="f25e2-112">Verwalten des Abrufens von Objekten.</span><span class="sxs-lookup"><span data-stu-id="f25e2-112">Manage retrieval of objects.</span></span>                                                                                                                                          |
+| <span data-ttu-id="f25e2-113">**Csampledsgenobjectenum:: fetchobjects**</span><span class="sxs-lookup"><span data-stu-id="f25e2-113">**CSampleDSGenObjectEnum::FetchObjects**</span></span>               | <span data-ttu-id="f25e2-114">Ruft die Menge der [**IDispatch**](/windows/win32/api/oaidl/nn-oaidl-idispatch) -Zeiger ab, die dem Filter entsprechen.</span><span class="sxs-lookup"><span data-stu-id="f25e2-114">Retrieve the set of [**IDispatch**](/windows/win32/api/oaidl/nn-oaidl-idispatch) pointers that match the filter.</span></span>                                                             |
+| <span data-ttu-id="f25e2-115">**Csampledsgenobjectenum:: fetchnextobject**</span><span class="sxs-lookup"><span data-stu-id="f25e2-115">**CSampleDSGenObjectEnum::FetchNextObject**</span></span>            | <span data-ttu-id="f25e2-116">Rufen Sie ein-Objekt ab, und vergleichen Sie den Filter.</span><span class="sxs-lookup"><span data-stu-id="f25e2-116">Retrieve an object and match against the filter.</span></span> <span data-ttu-id="f25e2-117">Wenn er übereinstimmt, binden Sie ihn in das generische Objekt ein, und geben Sie einen [**IDispatch**](/windows/win32/api/oaidl/nn-oaidl-idispatch) -Zeiger zurück</span><span class="sxs-lookup"><span data-stu-id="f25e2-117">If it matches, wrap it in generic object and return a [**IDispatch**](/windows/win32/api/oaidl/nn-oaidl-idispatch) pointer.</span></span> |
+| <span data-ttu-id="f25e2-118">**Csampledsgenobjectenum:: enumgenericobjects**</span><span class="sxs-lookup"><span data-stu-id="f25e2-118">**CSampleDSGenObjectEnum::EnumGenericObjects**</span></span>         | <span data-ttu-id="f25e2-119">Verwalten des Abrufens der Objekte.</span><span class="sxs-lookup"><span data-stu-id="f25e2-119">Manage retrieving the objects.</span></span>                                                                                                                                        |
+| <span data-ttu-id="f25e2-120">**Csampledsgenobjectenum:: Next**</span><span class="sxs-lookup"><span data-stu-id="f25e2-120">**CSampleDSGenObjectEnum::Next**</span></span>                       | <span data-ttu-id="f25e2-121">Ruft die angegebene Anzahl von Elementen aus dem angegebenen Enumerationsobjekt ab.</span><span class="sxs-lookup"><span data-stu-id="f25e2-121">Retrieve the specified number of elements from the enumeration object indicated.</span></span>                                                                                      |
+| <span data-ttu-id="f25e2-122">**Csampledsgenobjectenum:: isvaliddsfilter**</span><span class="sxs-lookup"><span data-stu-id="f25e2-122">**CSampleDSGenObjectEnum::IsValidDSFilter**</span></span>            | <span data-ttu-id="f25e2-123">Überprüfen Sie, ob die Objektklasse mit einer in der Filterliste übereinstimmt</span><span class="sxs-lookup"><span data-stu-id="f25e2-123">Verify that object class matches one in the filter list.</span></span>                                                                                                              |
+| <span data-ttu-id="f25e2-124">**Csampledsgenobjectenum:: builddsfilterarray**</span><span class="sxs-lookup"><span data-stu-id="f25e2-124">**CSampleDSGenObjectEnum::BuildDSFilterArray**</span></span>         | <span data-ttu-id="f25e2-125">Verwalten des Filter Arrays.</span><span class="sxs-lookup"><span data-stu-id="f25e2-125">Manage the filter array.</span></span>                                                                                                                                              |
+| <span data-ttu-id="f25e2-126">**Csampledsgenobjectenum:: kreateandappendfilterentry**</span><span class="sxs-lookup"><span data-stu-id="f25e2-126">**CSampleDSGenObjectEnum::CreateAndAppendFilterEntry**</span></span> | <span data-ttu-id="f25e2-127">Fügen Sie dem Filter eine neue Objektklasse hinzu, und legen Sie den Filter als zusammenhängend fest.</span><span class="sxs-lookup"><span data-stu-id="f25e2-127">Add a new object class to the filter and set the filter as contiguous.</span></span>                                                                                                |
+| <span data-ttu-id="f25e2-128">**Freifilterlist**</span><span class="sxs-lookup"><span data-stu-id="f25e2-128">**FreeFilterList**</span></span>                                     | <span data-ttu-id="f25e2-129">Freigeben Sie den Filter.</span><span class="sxs-lookup"><span data-stu-id="f25e2-129">Free the filter.</span></span>                                                                                                                                                      |
+
+
+
+ 
+
+ 
+
+ 
