@@ -1,0 +1,87 @@
+---
+description: Dieses Thema enthält Aktionen zum Erstellen von Code, der mehrere Märkte unterstützt. Berücksichtigen Sie diese Anweisungen als Leitfaden für den Code Entwurf und als Metriken, wenn Sie die Builds auswerten.
+ms.assetid: cf2ac58e-7fc3-4635-8b82-586a0732b2a3
+title: Internationalisierungs Checkliste
+ms.topic: article
+ms.date: 05/31/2018
+ms.openlocfilehash: 22b18ef8cf88efa8d496d19c0b66208cd44abaf7
+ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "103861912"
+---
+# <a name="internationalization-checklist"></a><span data-ttu-id="362be-104">Internationalisierungs Checkliste</span><span class="sxs-lookup"><span data-stu-id="362be-104">Internationalization Checklist</span></span>
+
+<span data-ttu-id="362be-105">Dieses Thema enthält Aktionen zum Erstellen von Code, der mehrere Märkte unterstützt.</span><span class="sxs-lookup"><span data-stu-id="362be-105">This topic provides actions to take to create code that supports multiple markets.</span></span> <span data-ttu-id="362be-106">Berücksichtigen Sie diese Anweisungen als Leitfaden für den Code Entwurf und als Metriken, wenn Sie die Builds auswerten.</span><span class="sxs-lookup"><span data-stu-id="362be-106">Consider these statements as a guide during code design, and as metrics when you evaluate the builds.</span></span>
+
+-   <span data-ttu-id="362be-107">Erstellen Sie Programmspezifikationen, die von Anfang an internationale Überlegungen berücksichtigen.</span><span class="sxs-lookup"><span data-stu-id="362be-107">Create program specifications that account for international considerations from the outset.</span></span>
+    -   <span data-ttu-id="362be-108">Entwerfen Sie Symbole und Bitmaps so, dass Sie in den Zielmärkten sinnvoll und nicht anstößig sind und keinen Text enthalten.</span><span class="sxs-lookup"><span data-stu-id="362be-108">Design icons and bitmaps to be meaningful and not offensive in your target markets, and to not contain text.</span></span>
+    -   <span data-ttu-id="362be-109">Design Menüs und Dialogfelder, um Platz für die Texterweiterung zu belassen.</span><span class="sxs-lookup"><span data-stu-id="362be-109">Design menus and dialog boxes to leave room for text expansion.</span></span> <span data-ttu-id="362be-110">Beispielsweise werden englische Zeichen folgen häufig um 40% erweitert, wenn Sie in Deutsch oder Niederländisch übersetzt werden.</span><span class="sxs-lookup"><span data-stu-id="362be-110">For example, English strings often expand by 40% when translated into German or Dutch.</span></span>
+    -   <span data-ttu-id="362be-111">Verwenden Sie keine oder Kultur abhängigen Verweise in Benutzeroberflächen Elementen oder-Meldungen.</span><span class="sxs-lookup"><span data-stu-id="362be-111">Do not use slang or culturally-specific references in UI elements or messages.</span></span>
+    -   <span data-ttu-id="362be-112">Erstellen Sie Tastenkombinationen, die auf internationalen Tastaturen zugänglich sind.</span><span class="sxs-lookup"><span data-stu-id="362be-112">Create shortcut key combinations that are accessible on international keyboards.</span></span> <span data-ttu-id="362be-113">Vermeiden Sie z. b. die Verwendung von Interpunktions Zeichen Schlüsseln als Tastenkombinationen, da Sie nicht immer auf internationalen Tastaturen gefunden werden oder vom Benutzer leicht erstellt werden.</span><span class="sxs-lookup"><span data-stu-id="362be-113">For example, avoid using punctuation character keys as shortcut keys because they are not always found on international keyboards or easily produced by the user.</span></span> <span data-ttu-id="362be-114">Beispiele für Tastaturlayouts finden Sie unter [Windows-Tastaturlayouts](https://msdn.microsoft.com/goglobal/bb964651.aspx).</span><span class="sxs-lookup"><span data-stu-id="362be-114">For examples of keyboard layouts, see [Windows Keyboard Layouts](https://msdn.microsoft.com/goglobal/bb964651.aspx).</span></span>
+    -   <span data-ttu-id="362be-115">Beachten Sie lokale Gesetze, die sich auf featureentwürfe auswirken, wie z. b. Anforderungen, dass Regierungseinrichtungen Software erwerben, die mehrere offizielle</span><span class="sxs-lookup"><span data-stu-id="362be-115">Consider local laws affecting feature designs, such as requirements that government entities purchase software that supports multiple official languages.</span></span>
+    -   <span data-ttu-id="362be-116">Entwickeln Sie Verträge von Drittanbietern, die die internationalen Benutzeroberflächen Standards und Entwurfsentscheidungen Ihrer Organisation unterstützen.</span><span class="sxs-lookup"><span data-stu-id="362be-116">Develop third-party agreements that support your organization's international UI standards and design decisions.</span></span>
+    -   <span data-ttu-id="362be-117">Verwenden Sie konsistente Terminologie in Benutzeroberflächen Zeichenfolgen, die übersetzt werden müssen.</span><span class="sxs-lookup"><span data-stu-id="362be-117">Use consistent terminology in user interface strings that must be translated.</span></span>
+
+<!-- -->
+
+-   <span data-ttu-id="362be-118">Erstellen Sie Code, der unabhängig vom Gebiets Schema ist.</span><span class="sxs-lookup"><span data-stu-id="362be-118">Create code that is independent of locale.</span></span>
+    -   <span data-ttu-id="362be-119">Verketten Sie keine Zeichen folgen, um Sätze zu bilden.</span><span class="sxs-lookup"><span data-stu-id="362be-119">Don't concatenate strings to form sentences.</span></span>
+    -   <span data-ttu-id="362be-120">Verwenden Sie eine angegebene Zeichen folgen Variable nicht in mehr als einem Kontext, wie z. b. die Wiederverwendung eines Satz Fragments in verschiedenen Nachrichten und Eingabe Aufforderungen, da solche Zeichen folgen möglicherweise nicht leicht übersetzt werden.</span><span class="sxs-lookup"><span data-stu-id="362be-120">Don't use a given string variable in more than one context, such as reusing a sentence fragment in different messages and prompts, because such strings may not be easy to translate.</span></span>
+    -   <span data-ttu-id="362be-121">Dokumentieren Sie Zeichen folgen mithilfe von Kommentaren, um Kontext für Konvertierer bereitzustellen, und markieren Sie Zeichen folgen oder Zeichen, die nicht lokalisiert werden sollten.</span><span class="sxs-lookup"><span data-stu-id="362be-121">Document strings using comments to provide context for translators, and clearly mark strings or characters that should not be localized.</span></span>
+    -   <span data-ttu-id="362be-122">Verwenden Sie keine hart codierten Zeichen Konstanten, numerischen Konstanten, Bildschirm Positionen, Dateinamen oder Pfadnamen, die eine bestimmte Sprache voraussetzen.</span><span class="sxs-lookup"><span data-stu-id="362be-122">Don't use hard-coded character constants, numeric constants, screen positions, filenames, or pathnames that presume a particular language.</span></span>
+    -   <span data-ttu-id="362be-123">Stellen Sie die Puffer groß genug, um übersetzte Zeichen folgen aufzunehmen.</span><span class="sxs-lookup"><span data-stu-id="362be-123">Make buffers large enough to hold translated strings.</span></span>
+    -   <span data-ttu-id="362be-124">Hiermit wird die Eingabe von Daten mit Formaten zugelassen, die je nach Gebiets Schema variieren, z. b. Datumsangaben, Uhrzeiten und Währungen.</span><span class="sxs-lookup"><span data-stu-id="362be-124">Allow the input of data with formats that vary by locale, such as dates, times, and currencies.</span></span>
+    -   <span data-ttu-id="362be-125">Verwenden Sie Papiergröße, Umschlag Größe und andere Standardwerte, die für ein bestimmtes Gebiets Schema geeignet sind.</span><span class="sxs-lookup"><span data-stu-id="362be-125">Use paper size, envelope size, and other defaults that are appropriate to a given locale.</span></span>
+    -   <span data-ttu-id="362be-126">Stellen Sie sicher, dass jede Sprachausgabe Dokumente lesen kann, die von den anderen Editionen erstellt wurden.</span><span class="sxs-lookup"><span data-stu-id="362be-126">Ensure that each language edition can read documents created by the other editions.</span></span>
+    -   <span data-ttu-id="362be-127">Stellen Sie ggf. Unterstützung für Gebiets Schema spezifische Hardware bereit.</span><span class="sxs-lookup"><span data-stu-id="362be-127">Provide support for locale-specific hardware, if necessary.</span></span>
+    -   <span data-ttu-id="362be-128">Konfigurieren Sie Features, die nicht für internationale Märkte gelten, als Implementierungs Optionen, die problemlos deaktiviert werden können.</span><span class="sxs-lookup"><span data-stu-id="362be-128">Configure features that don't apply to international markets as implementation options that can be disabled easily.</span></span>
+
+<!-- -->
+
+-   <span data-ttu-id="362be-129">Erstellen Sie Code, der von Microsoft Windows angebotene internationale Funktionen nutzt.</span><span class="sxs-lookup"><span data-stu-id="362be-129">Create code that takes advantage of international functionality offered by Microsoft Windows.</span></span>
+    -   <span data-ttu-id="362be-130">Verwenden Sie internationale Informationen, die vom System unterstützt werden (Unterstützung der Landessprache).</span><span class="sxs-lookup"><span data-stu-id="362be-130">Use international information carried by the system (National Language Support).</span></span>
+    -   <span data-ttu-id="362be-131">Verwenden Sie Systemfunktionen für Sortierung, Fall Konvertierung und Zeichen folgen Zuordnung.</span><span class="sxs-lookup"><span data-stu-id="362be-131">Use system functions for sorting, case conversion, and string mapping.</span></span>
+    -   <span data-ttu-id="362be-132">Verwenden Sie generische textlayoutfunktionen.</span><span class="sxs-lookup"><span data-stu-id="362be-132">Use generic text layout functions.</span></span>
+    -   <span data-ttu-id="362be-133">Reagieren Sie auf Änderungen an den internationalen Einstellungen in der Systemsteuerung.</span><span class="sxs-lookup"><span data-stu-id="362be-133">Respond to changes to international settings in Control Panel.</span></span>
+    -   <span data-ttu-id="362be-134">Behandeln Sie die "WM \_ inputlangchangerequest"-Nachricht.</span><span class="sxs-lookup"><span data-stu-id="362be-134">Handle the WM\_INPUTLANGCHANGEREQUEST message.</span></span>
+    -   <span data-ttu-id="362be-135">Unterstützung für Eingabemethoden-Editoren, vertikalen Text und Zeilenumbruch Regeln in ostasiatischen Editionen.</span><span class="sxs-lookup"><span data-stu-id="362be-135">Support input method editors, vertical text, and line-breaking rules in East Asian editions.</span></span>
+
+<!-- -->
+
+-   <span data-ttu-id="362be-136">Kompilieren Sie alle internationalen Editionen des Programms aus einem Satz von Quelldateien.</span><span class="sxs-lookup"><span data-stu-id="362be-136">Compile all international editions of the program from one set of source files.</span></span>
+    -   <span data-ttu-id="362be-137">Minimieren oder eliminieren Sie Mechanismen, die erfordern, dass Code für verschiedene sprach Editionen neu kompiliert wird.</span><span class="sxs-lookup"><span data-stu-id="362be-137">Minimize or eliminate mechanisms that require code to be recompiled for different language editions.</span></span>
+    -   <span data-ttu-id="362be-138">Speichern Sie lokalisierbare Elemente, z. b. Zeichen folgen und Symbole, in Windows-Ressourcen Dateien.</span><span class="sxs-lookup"><span data-stu-id="362be-138">Store localizable items, such as strings and icons, in Windows resource files.</span></span>
+    -   <span data-ttu-id="362be-139">Speichern Sie Dokumente in allen Sprach Editionen, die das gleiche Dateiformat aufweisen.</span><span class="sxs-lookup"><span data-stu-id="362be-139">Store documents in all language editions using the same file format.</span></span>
+
+<!-- -->
+
+-   <span data-ttu-id="362be-140">Unterstützt unterschiedliche Zeichensätze, nicht nur die lateinische 1-Codepage, Nummer 1252.</span><span class="sxs-lookup"><span data-stu-id="362be-140">Support different character sets, not just the Latin 1 code page, number 1252.</span></span>
+    -   <span data-ttu-id="362be-141">Das Programm unterstützt Netzwerkumgebungen, in denen Computerbetriebs Systeme mit unterschiedlichen Standard Codepages ausführen.</span><span class="sxs-lookup"><span data-stu-id="362be-141">Program supports network environments in which computers run operating systems with different default code pages.</span></span>
+    -   <span data-ttu-id="362be-142">Verwenden Sie getcpinfoex zum Abrufen von Lead-Byte-Bereichen für ostasiatische Codepages.</span><span class="sxs-lookup"><span data-stu-id="362be-142">Use GetCPInfoEx to retrieve lead-byte ranges for East Asian code pages.</span></span>
+    -   <span data-ttu-id="362be-143">Analysieren Sie Doppelbyte Zeichen in ostasiatischen –-Anwendungen, es sei denn, der Code basiert auf Unicode.</span><span class="sxs-lookup"><span data-stu-id="362be-143">Parse double-byte characters in East Asian–language applications unless the code is based on Unicode.</span></span>
+    -   <span data-ttu-id="362be-144">Unterstützung von Unicode oder Konvertierung zwischen Unicode und der lokalen Codepage.</span><span class="sxs-lookup"><span data-stu-id="362be-144">Support Unicode or conversion between Unicode and the local code page.</span></span>
+    -   <span data-ttu-id="362be-145">Gehen Sie nicht davon aus, dass alle Zeichen 8-Bit oder 16-Bit sind.</span><span class="sxs-lookup"><span data-stu-id="362be-145">Don't assume that all characters are 8-bit or 16-bit.</span></span>
+    -   <span data-ttu-id="362be-146">Verwenden Sie generische Datentypen und generische Funktionsprototypen.</span><span class="sxs-lookup"><span data-stu-id="362be-146">Use generic data types and generic function prototypes.</span></span>
+    -   <span data-ttu-id="362be-147">Verwenden Sie die Schriftart CharSet-Eigenschaft, die enumfontfamiliesex und die allgemeine Dialog Funktion "choosefont" aufruft.</span><span class="sxs-lookup"><span data-stu-id="362be-147">Use the font charset property, which calls EnumFontFamiliesEx and the ChooseFont common dialog function.</span></span>
+    -   <span data-ttu-id="362be-148">Sie können Text mit den Schriftarten anzeigen und drucken, die für das Gebiets Schema geeignet sind.</span><span class="sxs-lookup"><span data-stu-id="362be-148">Display and print text using the fonts that are appropriate for the locale.</span></span>
+
+<!-- -->
+
+-   <span data-ttu-id="362be-149">Testen Sie die internationalen Features des Programms.</span><span class="sxs-lookup"><span data-stu-id="362be-149">Test the international features of the program.</span></span>
+    -   <span data-ttu-id="362be-150">Der übersetzte Text muss den Standards von systemeigenen Referenten entsprechen.</span><span class="sxs-lookup"><span data-stu-id="362be-150">Translated text should meet the standards of native speakers.</span></span>
+    -   <span data-ttu-id="362be-151">Die Größe der Dialog Felder sollte ordnungsgemäß geändert werden, und der Text sollte bei der Anzeige unterschiedlicher Sprachen ordnungsgemäß durchgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="362be-151">Dialog boxes should resize properly, and text should be hyphenated appropriately, when different languages are displayed.</span></span>
+    -   <span data-ttu-id="362be-152">Dialog Felder, Status leisten, Symbolleisten und Menüs sollten auf den Bildschirm passen und lesbar lesbar sein, wenn die Anzeige in unterschiedlichen Auflösungen für alle übersetzten Sprachen festgelegt ist.</span><span class="sxs-lookup"><span data-stu-id="362be-152">Dialog boxes, status bars, toolbars, and menus should fit on the screen and read legibly when the display is set at different resolutions, for all translated languages.</span></span>
+    -   <span data-ttu-id="362be-153">Menü-und Dialogfeld-Accelerators sollten eindeutig sein.</span><span class="sxs-lookup"><span data-stu-id="362be-153">Menu and dialog-box accelerators should be unique.</span></span>
+    -   <span data-ttu-id="362be-154">Benutzer sollten in der Lage sein, Zeichen aus nicht-europäischen Skripts in Dokumente, Dialogfelder und Dateinamen einzugeben.</span><span class="sxs-lookup"><span data-stu-id="362be-154">Users should be able to type characters from non-European scripts into documents, dialog boxes, and filenames.</span></span>
+    -   <span data-ttu-id="362be-155">Benutzer sollten in der Lage sein, Zeichen aus nichteuropäischen Skripts auszuschneiden, einzufügen, zu speichern und zu drucken.</span><span class="sxs-lookup"><span data-stu-id="362be-155">Users should be able to cut, paste, save, and print characters from non-European scripts successfully.</span></span>
+    -   <span data-ttu-id="362be-156">Sortierung und Groß-/Kleinschreibung sollten für verschiedene Gebiets Schemas genau sein.</span><span class="sxs-lookup"><span data-stu-id="362be-156">Sorting and case conversion should be accurate for different locales.</span></span>
+    -   <span data-ttu-id="362be-157">Die Anwendung sollte in lokalisierten Editionen von Windows ordnungsgemäß funktionieren.</span><span class="sxs-lookup"><span data-stu-id="362be-157">The application should work correctly on localized editions of Windows.</span></span>
+
+ 
+
+ 
+
+
+
