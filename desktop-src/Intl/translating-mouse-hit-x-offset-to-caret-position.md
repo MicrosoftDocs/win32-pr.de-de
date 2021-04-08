@@ -1,0 +1,44 @@
+---
+description: Im konventionell kann der Benutzer die Position der Einfügemarke (CP) auswählen, indem er entweder auf die nachfolgende Hälfte des Zeichens &\# 0034; CP-1&\# 0034; oder die führende Hälfte des Zeichens &\# 0034; CP&\# 0034; klickt.
+ms.assetid: 36b6ff00-7ea8-40e5-90f7-917cef117d4a
+title: Übersetzen des X-Offsets in der Einfügemarke
+ms.topic: article
+ms.date: 05/31/2018
+ms.openlocfilehash: f993de35ebffac4740b367927d1a8edf864a813e
+ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "103865484"
+---
+# <a name="translating-mouse-hit-x-offset-to-caret-position"></a><span data-ttu-id="0e5ef-103">Übersetzen des X-Offsets in der Einfügemarke</span><span class="sxs-lookup"><span data-stu-id="0e5ef-103">Translating Mouse Hit X Offset to Caret Position</span></span>
+
+<span data-ttu-id="0e5ef-104">Im konventionalbereich kann der Benutzer die Position der Einfügemarke (CP) auswählen, indem er entweder auf die nachfolgende Hälfte des Zeichens "CP-1" oder die führende Hälfte des Zeichens "CP" klickt.</span><span class="sxs-lookup"><span data-stu-id="0e5ef-104">Conventionally, the user can select caret position (cp) by clicking either the trailing half of character "cp-1" or the leading half of character "cp".</span></span> <span data-ttu-id="0e5ef-105">Eine Anwendung kann die Übersetzung von mousehit x Offset in die Position der Einfügemarke wie folgt implementieren:</span><span class="sxs-lookup"><span data-stu-id="0e5ef-105">An application can implement the translation of mouse hit x offset to caret position as follows:</span></span>
+
+
+```C++
+int iCharPos;
+int iCaretPos;
+int fTrailing;
+ScriptXtoCP(iMouseX, cChars, cGlyphs, pwLogClust, psva, piAdvance, psa,
+            &iCharPos, &fTrailing);
+iCaretPos = iCharPos + fTrailing;
+```
+
+
+
+<span data-ttu-id="0e5ef-106">Bei Skripts, die die Einfügemarke zu Cluster Grenzen ausrichten, gibt ein [**scriptxchandecp-Skript**](/windows/desktop/api/Usp10/nf-usp10-scriptxtocp) zurück, wobei *ftrailing* entweder auf 0 oder die Breite des Clusters in Code Punkten festgelegt ist.</span><span class="sxs-lookup"><span data-stu-id="0e5ef-106">For scripts that snap the caret to cluster boundaries, a call to [**ScriptXtoCP**](/windows/desktop/api/Usp10/nf-usp10-scriptxtocp) returns with *fTrailing* set to either 0 or the width of the cluster in code points.</span></span>
+
+## <a name="related-topics"></a><span data-ttu-id="0e5ef-107">Zugehörige Themen</span><span class="sxs-lookup"><span data-stu-id="0e5ef-107">Related topics</span></span>
+
+<dl> <dt>
+
+[<span data-ttu-id="0e5ef-108">Verwenden von uniscri</span><span class="sxs-lookup"><span data-stu-id="0e5ef-108">Using Uniscribe</span></span>](using-uniscribe.md)
+</dt> </dl>
+
+ 
+
+ 
+
+
+
