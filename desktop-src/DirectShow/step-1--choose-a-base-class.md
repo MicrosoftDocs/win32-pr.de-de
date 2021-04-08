@@ -1,0 +1,45 @@
+---
+description: 'Schritt 1:'
+ms.assetid: 4b2d3add-0430-480b-ad5f-bb1aa19fef21
+title: 'Schritt 1: Basisklasse auswählen'
+ms.topic: article
+ms.date: 05/31/2018
+ms.openlocfilehash: f4679873e78e75b350335b5294db63579fd41f36
+ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "103866476"
+---
+# <a name="step-1-choose-a-base-class"></a><span data-ttu-id="2a0d0-104">Schritt 1:</span><span class="sxs-lookup"><span data-stu-id="2a0d0-104">Step 1.</span></span> <span data-ttu-id="2a0d0-105">Basisklasse auswählen</span><span class="sxs-lookup"><span data-stu-id="2a0d0-105">Choose a Base Class</span></span>
+
+<span data-ttu-id="2a0d0-106">Dies ist Schritt 1 des Tutorials zum [Schreiben von Transformations Filtern](writing-transform-filters.md).</span><span class="sxs-lookup"><span data-stu-id="2a0d0-106">This is step 1 of the tutorial [Writing Transform Filters](writing-transform-filters.md).</span></span>
+
+<span data-ttu-id="2a0d0-107">Angenommen, Sie entscheiden sich für das Schreiben eines Filters und nicht eines DMO. der erste Schritt besteht darin, die zu verwendende Basisklasse auszuwählen.</span><span class="sxs-lookup"><span data-stu-id="2a0d0-107">Assuming that you decide to write a filter and not a DMO, the first step is choosing which base class to use.</span></span> <span data-ttu-id="2a0d0-108">Die folgenden Klassen sind für Transformations Filter geeignet:</span><span class="sxs-lookup"><span data-stu-id="2a0d0-108">The following classes are appropriate for transform filters:</span></span>
+
+-   <span data-ttu-id="2a0d0-109">[**Ctransformfilter**](ctransformfilter.md) wurde für Transformations Filter entwickelt, für die separate Eingabe-und Ausgabepuffer verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="2a0d0-109">[**CTransformFilter**](ctransformfilter.md) is designed for transform filters that use separate input and output buffers.</span></span> <span data-ttu-id="2a0d0-110">Diese Art von Filter wird manchmal als "Copy-Transform"-Filter bezeichnet.</span><span class="sxs-lookup"><span data-stu-id="2a0d0-110">This kind of filter is sometimes called a copy-transform filter.</span></span> <span data-ttu-id="2a0d0-111">Wenn ein "Copy-Transform"-Filter ein Eingabe Beispiel empfängt, werden neue Daten in ein Ausgabe Beispiel geschrieben und das Ausgabe Beispiel an den nächsten Filter übermittelt.</span><span class="sxs-lookup"><span data-stu-id="2a0d0-111">When a copy-transform filter receives an input sample, it writes new data to an output sample and delivers the output sample to the next filter.</span></span>
+-   <span data-ttu-id="2a0d0-112">[**Ctransinplacefilter**](ctransinplacefilter.md) wurde für Filter entwickelt, die Daten im ursprünglichen Puffer ändern, auch als "Trans-in-Place"-Filter bezeichnet.</span><span class="sxs-lookup"><span data-stu-id="2a0d0-112">[**CTransInPlaceFilter**](ctransinplacefilter.md) is designed for filters that modify data in the original buffer, also called trans-in-place filters.</span></span> <span data-ttu-id="2a0d0-113">Wenn ein transdirektionale Filter eine Stichprobe empfängt, werden die Daten innerhalb dieses Beispiels geändert, und es wird das gleiche Beispiel für einen downstreamvorgang durchgeführt.</span><span class="sxs-lookup"><span data-stu-id="2a0d0-113">When a trans-in-place filter receives a sample, it changes the data inside that sample and delivers the same sample downstream.</span></span> <span data-ttu-id="2a0d0-114">Die Eingabe-PIN und die Ausgabe-PIN des Filters stellen immer eine Verbindung mit den entsprechenden Medientypen her.</span><span class="sxs-lookup"><span data-stu-id="2a0d0-114">The filter's input pin and output pin always connect with matching media types.</span></span>
+-   <span data-ttu-id="2a0d0-115">[**Cvideotransformfilter**](cvideotransformfilter.md) ist hauptsächlich für Video Decoder konzipiert.</span><span class="sxs-lookup"><span data-stu-id="2a0d0-115">[**CVideoTransformFilter**](cvideotransformfilter.md) is designed primarily for video decoders.</span></span> <span data-ttu-id="2a0d0-116">Sie wird von **ctransformfilter** abgeleitet, bietet jedoch Funktionen zum Löschen von Frames, wenn der downstreamrenderer dahinter liegt.</span><span class="sxs-lookup"><span data-stu-id="2a0d0-116">It derives from **CTransformFilter**, but includes functionality for dropping frames if the downstream renderer falls behind.</span></span>
+-   <span data-ttu-id="2a0d0-117">[**Cbasefilter**](cbasefilter.md) ist eine generische Filterklasse.</span><span class="sxs-lookup"><span data-stu-id="2a0d0-117">[**CBaseFilter**](cbasefilter.md) is a generic filter class.</span></span> <span data-ttu-id="2a0d0-118">Die anderen Klassen in dieser Liste werden alle von **cbasefilter** abgeleitet.</span><span class="sxs-lookup"><span data-stu-id="2a0d0-118">The other classes in this list all derive from **CBaseFilter**.</span></span> <span data-ttu-id="2a0d0-119">Wenn keines dieser Elemente geeignet ist, können Sie auf diese Klasse zurückgreifen.</span><span class="sxs-lookup"><span data-stu-id="2a0d0-119">If none of them is suitable, you can fall back on this class.</span></span> <span data-ttu-id="2a0d0-120">Diese Klasse erfordert jedoch auch die meiste Arbeit an Ihrem Teil.</span><span class="sxs-lookup"><span data-stu-id="2a0d0-120">However, this class also requires the most work on your part.</span></span>
+-   <span data-ttu-id="2a0d0-121">\[! Wichtig\]</span><span class="sxs-lookup"><span data-stu-id="2a0d0-121">\[!Important\]</span></span>  
+    > <span data-ttu-id="2a0d0-122">Direkte Video Transformationen können schwerwiegende Auswirkungen auf die Renderingleistung haben.</span><span class="sxs-lookup"><span data-stu-id="2a0d0-122">In-place video transforms can have a serious impact on rendering performance.</span></span> <span data-ttu-id="2a0d0-123">Direkte Transformationen erfordern Lese-und Schreibvorgänge für den Puffer.</span><span class="sxs-lookup"><span data-stu-id="2a0d0-123">In-place transforms require read-modify-write operations on the buffer.</span></span> <span data-ttu-id="2a0d0-124">Wenn sich der Arbeitsspeicher auf einer Grafikkarte befindet, sind Lesevorgänge erheblich langsamer.</span><span class="sxs-lookup"><span data-stu-id="2a0d0-124">If the memory resides on a graphics card, read operations are significantly slower.</span></span> <span data-ttu-id="2a0d0-125">Darüber hinaus kann auch eine Kopier Transformation unerwünschte Lesevorgänge verursachen, wenn Sie Sie nicht sorgfältig implementieren.</span><span class="sxs-lookup"><span data-stu-id="2a0d0-125">Moreover, even a copy transform can cause unintended read operations if you do not implement it carefully.</span></span> <span data-ttu-id="2a0d0-126">Daher sollten Sie bei der Erstellung einer Video Transformation immer Leistungstests durchführen.</span><span class="sxs-lookup"><span data-stu-id="2a0d0-126">Therefore, you should always do performance testing if you write a video transform.</span></span>
+
+     
+
+<span data-ttu-id="2a0d0-127">Für den RLE-Beispiel Encoder ist entweder **ctransformfilter** oder **cvideotransformfilter** die beste Wahl.</span><span class="sxs-lookup"><span data-stu-id="2a0d0-127">For the example RLE encoder, the best choice is either **CTransformFilter** or **CVideoTransformFilter**.</span></span> <span data-ttu-id="2a0d0-128">Tatsächlich sind die Unterschiede zwischen Ihnen größtenteils intern, sodass es einfach ist, von einem in das andere zu konvertieren.</span><span class="sxs-lookup"><span data-stu-id="2a0d0-128">In fact, the differences between them are largely internal, so it is easy to convert from one to the other.</span></span> <span data-ttu-id="2a0d0-129">Da sich die Medientypen auf den beiden Pins unterscheiden müssen, ist die **ctransinplacefilter** -Klasse für diesen Filter nicht geeignet.</span><span class="sxs-lookup"><span data-stu-id="2a0d0-129">Because the media types must be different on the two pins, the **CTransInPlaceFilter** class is not appropriate for this filter.</span></span> <span data-ttu-id="2a0d0-130">In diesem Beispiel wird **ctransformfilter** verwendet.</span><span class="sxs-lookup"><span data-stu-id="2a0d0-130">This example will use **CTransformFilter**.</span></span>
+
+<span data-ttu-id="2a0d0-131">Weiter: [Schritt 2. Deklarieren Sie die Filter-Klasse](step-2--declare-the-filter-class.md).</span><span class="sxs-lookup"><span data-stu-id="2a0d0-131">Next: [Step 2. Declare the Filter Class](step-2--declare-the-filter-class.md).</span></span>
+
+## <a name="related-topics"></a><span data-ttu-id="2a0d0-132">Zugehörige Themen</span><span class="sxs-lookup"><span data-stu-id="2a0d0-132">Related topics</span></span>
+
+<dl> <dt>
+
+[<span data-ttu-id="2a0d0-133">Schreiben von DirectShow-Filtern</span><span class="sxs-lookup"><span data-stu-id="2a0d0-133">Writing DirectShow Filters</span></span>](writing-directshow-filters.md)
+</dt> </dl>
+
+ 
+
+ 
+
+
+
