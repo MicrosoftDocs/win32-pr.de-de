@@ -1,0 +1,42 @@
+---
+title: Auswählen einer Protokoll Sequenz
+description: Eine Protokoll Sequenz ist die Sprache, die ein Netzwerk Betriebssystem verwendet, um über das Netzwerk mit anderen Computern zu kommunizieren.
+ms.assetid: 9c788b9b-82c5-4a4b-86c6-e9a9df699da3
+ms.topic: article
+ms.date: 05/31/2018
+ms.openlocfilehash: 3ac6b79f5f7a0829eea88eba77f2d022e8de2ca8
+ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 09/16/2019
+ms.locfileid: "104037414"
+---
+# <a name="selecting-a-protocol-sequence"></a><span data-ttu-id="f7092-103">Auswählen einer Protokoll Sequenz</span><span class="sxs-lookup"><span data-stu-id="f7092-103">Selecting a Protocol Sequence</span></span>
+
+<span data-ttu-id="f7092-104">Eine Protokoll Sequenz ist die Sprache, die ein Netzwerk Betriebssystem verwendet, um über das Netzwerk mit anderen Computern zu kommunizieren.</span><span class="sxs-lookup"><span data-stu-id="f7092-104">A protocol sequence is the language that a network operating system uses to talk over the network to other computers.</span></span> <span data-ttu-id="f7092-105">In spezifischeren Begriffen müssen RPC-Anwendungen eine Zeichenfolge angeben, die eine Kombination aus einem RPC-Protokoll, einem Transportprotokoll und einem Netzwerkprotokoll darstellt.</span><span class="sxs-lookup"><span data-stu-id="f7092-105">In more specific terms, RPC applications must specify a string that represents a combination of an RPC protocol, a transport protocol, and a network protocol.</span></span>
+
+<span data-ttu-id="f7092-106">Microsoft RPC unterstützt drei RPC-Protokolle:</span><span class="sxs-lookup"><span data-stu-id="f7092-106">Microsoft RPC supports three RPC protocols:</span></span>
+
+-   <span data-ttu-id="f7092-107">Verbindungs orientiertes Protokoll der Netzwerk Rechen Architektur (ncacn)</span><span class="sxs-lookup"><span data-stu-id="f7092-107">Network Computing Architecture connection-oriented protocol (NCACN)</span></span>
+-   <span data-ttu-id="f7092-108">Network Computing Architecture Datagram Protocol (ncadg)</span><span class="sxs-lookup"><span data-stu-id="f7092-108">Network Computing Architecture datagram protocol (NCADG)</span></span>
+-   <span data-ttu-id="f7092-109">Lokaler Remote Prozedur Aufruf (Ncalrpc) für die Netzwerk Computing-Architektur</span><span class="sxs-lookup"><span data-stu-id="f7092-109">Network Computing Architecture local remote procedure call (NCALRPC)</span></span>
+
+<span data-ttu-id="f7092-110">RPC-Anwendungen können das Ncalrpc-Protokoll verwenden, um Prozeduren von Serverprogrammen aufzurufen, die auf demselben Computer ausgeführt werden, auf dem das Client Programm ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="f7092-110">RPC applications can use the NCALRPC protocol to invoke procedures offered by server programs running on the same computer that the client program runs on.</span></span> <span data-ttu-id="f7092-111">Dies ist bisher die effizienteste Methode zum Aufrufen von Funktionen in einem anderen Prozess auf demselben Computer.</span><span class="sxs-lookup"><span data-stu-id="f7092-111">This is, by far, the most efficient method for calling functionality in a different process on the same computer.</span></span>
+
+<span data-ttu-id="f7092-112">Welche Transport-und Netzwerkprotokolle von Ihrer Anwendung verwendet werden, hängt davon ab, welche Protokolle das Netzwerk unterstützt.</span><span class="sxs-lookup"><span data-stu-id="f7092-112">The transport and network protocols that your application uses depend on which protocols the network supports.</span></span> <span data-ttu-id="f7092-113">Viele Netzwerke, einschließlich des Internets, unterstützen TCP/IP.</span><span class="sxs-lookup"><span data-stu-id="f7092-113">Many networks today, including the Internet, support TCP/IP.</span></span> <span data-ttu-id="f7092-114">Andere gängige Transport-und Netzwerkprotokolle sind IPX/SPX, NetBIOS und AppleTalk DSP.</span><span class="sxs-lookup"><span data-stu-id="f7092-114">Other common transport and network protocols are IPX/SPX, NetBIOS, and AppleTalk DSP.</span></span> <span data-ttu-id="f7092-115">Microsoft RPC unterstützt diese und andere Transport-und Netzwerkprotokolle.</span><span class="sxs-lookup"><span data-stu-id="f7092-115">Microsoft RPC supports these and other transport and network protocols.</span></span> <span data-ttu-id="f7092-116">Eine komplette Liste finden Sie unter [Protokoll Sequenz Konstanten](protocol-sequence-constants.md).</span><span class="sxs-lookup"><span data-stu-id="f7092-116">For a complete list, see [Protocol Sequence Constants](protocol-sequence-constants.md).</span></span>
+
+<span data-ttu-id="f7092-117">Wenn Ihre Anwendung automatische Bindungs Handles verwendet, muss Sie die Protokoll Sequenz nicht angeben.</span><span class="sxs-lookup"><span data-stu-id="f7092-117">When your application uses automatic binding handles, it does not need to specify the protocol sequence.</span></span> <span data-ttu-id="f7092-118">Wenn Sie implizite oder explizite Handles verwendet, muss Sie die Protokoll Sequenz abrufen oder angeben.</span><span class="sxs-lookup"><span data-stu-id="f7092-118">If it uses implicit or explicit handles, it must obtain or specify the protocol sequence.</span></span> <span data-ttu-id="f7092-119">Jedes verteilte System muss die Umgebung untersuchen, in der es bereitgestellt wird, um zu bestimmen, welche Protokoll Sequenz für diese Umgebung am besten geeignet ist.</span><span class="sxs-lookup"><span data-stu-id="f7092-119">Each distributed system must examine the environment in which it will be deployed to determine which protocol sequence is best suited for that environment.</span></span>
+
+<span data-ttu-id="f7092-120">Nicht alle Protokoll Sequenzen verfügen über äquivalente Funktionalität.</span><span class="sxs-lookup"><span data-stu-id="f7092-120">Not all protocol sequences have equivalent functionality.</span></span> <span data-ttu-id="f7092-121">Entwickler sollten überprüfen, ob die ausgewählte Protokoll Sequenz die erforderlichen Features unterstützt.</span><span class="sxs-lookup"><span data-stu-id="f7092-121">Developers should verify that the chosen protocol sequence supports the required features.</span></span> <span data-ttu-id="f7092-122">Im Allgemeinen werden **Ncalrpc** für die lokale Kommunikation und **ncacn \_ IP \_ TCP** oder **ncacn \_ http** for Remote Communications empfohlen. Sie funktionieren in allen Umgebungen, haben eine optimale Leistung und unterstützen alle notwendigen, bewährten Features.</span><span class="sxs-lookup"><span data-stu-id="f7092-122">In general, **ncalrpc** for local communications and **ncacn\_ip\_tcp** or **ncacn\_http** for remote communications are recommended; they work in all environments, they have optimal performance, and they support all necessary, best-practice features.</span></span>
+
+<span data-ttu-id="f7092-123">Clients können auch Protokoll Sequenz Informationen angeben, die Sie von Active Directory, die Registrierung, die vom Setup Programm erstellten und initialisierten Umgebungsvariablen, anwendungsspezifische Konfigurationsdateien oder Literalzeichenfolgen im Quellcode des Programms erhalten.</span><span class="sxs-lookup"><span data-stu-id="f7092-123">Clients can also specify protocol sequence information that they obtain from Active Directory, the registry, environment variables created and initialized by the setup program, application-specific configuration files, or from literal strings in the program source code.</span></span>
+
+<span data-ttu-id="f7092-124">Nachdem das Client Programm eine gültige Protokoll Sequenz Zeichenfolge aufweist, kann es diese Informationen an die Funktionen [**rpcstringbindingcompose**](/windows/desktop/api/Rpcdce/nf-rpcdce-rpcstringbindingcompose) und [**RpcBindingFromStringBinding**](/windows/desktop/api/Rpcdce/nf-rpcdce-rpcbindingfromstringbinding) übergeben, um das Bindungs Handle zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="f7092-124">After your client program has a valid protocol sequence string, it can pass that information to the [**RpcStringBindingCompose**](/windows/desktop/api/Rpcdce/nf-rpcdce-rpcstringbindingcompose) and [**RpcBindingFromStringBinding**](/windows/desktop/api/Rpcdce/nf-rpcdce-rpcbindingfromstringbinding) functions to create the binding handle.</span></span>
+
+ 
+
+ 
+
+
+
+
