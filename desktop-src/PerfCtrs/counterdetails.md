@@ -1,0 +1,33 @@
+---
+description: In der Tabelle Counter Details wird ein bestimmter Indikator auf einem bestimmten Computer beschrieben.
+ms.assetid: e2a16a6e-8cd4-4fd3-adeb-461faed948e4
+title: Counter Details
+ms.topic: article
+ms.date: 05/31/2018
+ms.openlocfilehash: 751073cdc2f2646ad1f2351bff0bdc02c498d428
+ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "103959770"
+---
+# <a name="counterdetails"></a><span data-ttu-id="375d4-103">Counter Details</span><span class="sxs-lookup"><span data-stu-id="375d4-103">CounterDetails</span></span>
+
+<span data-ttu-id="375d4-104">In der Tabelle **Counter Details** wird ein bestimmter Indikator auf einem bestimmten Computer beschrieben.</span><span class="sxs-lookup"><span data-stu-id="375d4-104">The **CounterDetails** table describes a specific counter on a particular computer.</span></span>
+
+<span data-ttu-id="375d4-105">Die Tabelle **Counter Details** definiert die folgenden Felder:</span><span class="sxs-lookup"><span data-stu-id="375d4-105">The **CounterDetails** table defines the following fields:</span></span>
+
+-   <span data-ttu-id="375d4-106">**Counter ID:** Ein eindeutiger Bezeichner in der Datenbank, der einer bestimmten Text Zeichenfolge für den Counter-Namen entspricht.</span><span class="sxs-lookup"><span data-stu-id="375d4-106">**CounterID:** A unique identifier in the database that maps to a specific counter name text string.</span></span> <span data-ttu-id="375d4-107">Dieses Feld ist der Primärschlüssel dieser Tabelle.</span><span class="sxs-lookup"><span data-stu-id="375d4-107">This field is the primary key of this table.</span></span>
+-   <span data-ttu-id="375d4-108">**MachineName:** Der Name des Computers, von dem dieses DataSet protokolliert wurde.</span><span class="sxs-lookup"><span data-stu-id="375d4-108">**MachineName:** The name of the computer that logged this data set.</span></span>
+-   <span data-ttu-id="375d4-109">**ObjectName:** Der Name des Leistungsobjekts.</span><span class="sxs-lookup"><span data-stu-id="375d4-109">**ObjectName:** The name of the performance object.</span></span>
+-   <span data-ttu-id="375d4-110">**Counter Name:** Der Name des Zählers.</span><span class="sxs-lookup"><span data-stu-id="375d4-110">**CounterName:** The name of the counter.</span></span>
+-   <span data-ttu-id="375d4-111">**CounterType:** Der zähtertyp.</span><span class="sxs-lookup"><span data-stu-id="375d4-111">**CounterType:** The counter type.</span></span> <span data-ttu-id="375d4-112">Eine Liste der-Typen und ihrer Formeln finden Sie im Abschnitt Counter Types des [Windows Server 2003 Deployment Kits](/previous-versions/windows/it-pro/windows-server-2003/cc776490(v=ws.10)).</span><span class="sxs-lookup"><span data-stu-id="375d4-112">For a list of counter types and their formulas, see the Counter Types section of the [Windows Server 2003 Deployment Kit](/previous-versions/windows/it-pro/windows-server-2003/cc776490(v=ws.10)).</span></span>
+-   <span data-ttu-id="375d4-113">**DEFAULTSCALE:** Die Standard Skalierung, die auf die Rohdaten des Leistungs Zählers angewendet werden soll.</span><span class="sxs-lookup"><span data-stu-id="375d4-113">**DefaultScale:** The default scaling to be applied to the raw performance counter data.</span></span>
+-   <span data-ttu-id="375d4-114">**InstanceName:** Der Name der Counter-Instanz.</span><span class="sxs-lookup"><span data-stu-id="375d4-114">**InstanceName:** The name of the counter instance.</span></span>
+-   <span data-ttu-id="375d4-115">**Instancin:** Die Indexnummer der Indikator Instanz.</span><span class="sxs-lookup"><span data-stu-id="375d4-115">**InstanceIndex:** The index number of the counter instance.</span></span>
+-   <span data-ttu-id="375d4-116">**Name des Parametern:** Einige Leistungsindikatoren sind logisch mit anderen verknüpft und werden als übergeordnete Elemente bezeichnet.</span><span class="sxs-lookup"><span data-stu-id="375d4-116">**ParentName:** Some counters are logically associated with others, and are referred to as parents.</span></span> <span data-ttu-id="375d4-117">Beispielsweise ist das übergeordnete Element eines Threads ein Prozess, und das übergeordnete Element eines logischen Datenträger Treibers ist ein physisches Laufwerk.</span><span class="sxs-lookup"><span data-stu-id="375d4-117">For example, the parent of a thread is a process and the parent of a logical disk driver is a physical drive.</span></span> <span data-ttu-id="375d4-118">Dieses Feld enthält den Namen des übergeordneten Elements.</span><span class="sxs-lookup"><span data-stu-id="375d4-118">This field contains the name of the parent.</span></span> <span data-ttu-id="375d4-119">Entweder der Wert in diesem Feld oder das Feld " **parametriobjectid** " identifiziert eine bestimmte übergeordnete Instanz.</span><span class="sxs-lookup"><span data-stu-id="375d4-119">Either the value in this field or the **ParentObjectID** field identifies a specific parent instance.</span></span> <span data-ttu-id="375d4-120">Wenn der Wert in diesem Feld **null** ist, muss der Wert im Feld " **parametriobjectid** " so geprüft werden, dass das übergeordnete Element identifiziert wird.</span><span class="sxs-lookup"><span data-stu-id="375d4-120">If the value in this field is **NULL**, the value in the **ParentObjectID** field must be checked to identify the parent.</span></span> <span data-ttu-id="375d4-121">Wenn die Werte in beiden Feldern **null** sind, verfügt der-Counter nicht über ein übergeordnetes Element.</span><span class="sxs-lookup"><span data-stu-id="375d4-121">If the values in both fields are **NULL**, the counter does not have a parent.</span></span>
+-   <span data-ttu-id="375d4-122">**Parametriobjectid:** Der eindeutige Bezeichner des übergeordneten Elements.</span><span class="sxs-lookup"><span data-stu-id="375d4-122">**ParentObjectID:** The unique identifier of the parent.</span></span> <span data-ttu-id="375d4-123">Der Wert in diesem Feld oder im Feld " **Parser Name** " identifiziert eine bestimmte übergeordnete Instanz.</span><span class="sxs-lookup"><span data-stu-id="375d4-123">The value in either this field or the **ParentName** field identifies a specific parent instance.</span></span> <span data-ttu-id="375d4-124">Wenn der Wert in diesem Feld **null** ist, muss der Wert im Feld "Element **Name** " geprüft werden, um das übergeordnete Element zu identifizieren.</span><span class="sxs-lookup"><span data-stu-id="375d4-124">If the value in this field is **NULL**, the value in the **ParentName** field must be checked to identify the parent.</span></span>
+
+ 
+
+ 
