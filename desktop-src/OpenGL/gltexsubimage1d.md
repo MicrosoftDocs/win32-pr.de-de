@@ -1,0 +1,235 @@
+---
+title: glTexSubImage1D-Funktion (GL. h)
+description: Die glTexSubImage1D-Funktion gibt einen Teil eines vorhandenen eindimensionalen Textur Bilds an. Sie können keine neue Textur mit glTexSubImage1D definieren.
+ms.assetid: e5fcb1a3-96f8-47a6-a9a7-0061faaaa6ac
+keywords:
+- glTexSubImage1D-Funktion OpenGL
+topic_type:
+- apiref
+api_name:
+- glTexSubImage1D
+api_location:
+- opengl32.dll
+api_type:
+- DllExport
+ms.topic: reference
+ms.date: 05/31/2018
+ms.openlocfilehash: dfe5510221b738a81f428f9e982a2f9bb2c23588
+ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "103740633"
+---
+# <a name="gltexsubimage1d-function"></a>glTexSubImage1D-Funktion
+
+Die **glTexSubImage1D** -Funktion gibt einen Teil eines vorhandenen eindimensionalen Textur Bilds an. Sie können keine neue Textur mit **glTexSubImage1D** definieren.
+
+## <a name="syntax"></a>Syntax
+
+
+```C++
+void WINAPI glTexSubImage1D(
+         GLenum  target,
+         GLint   level,
+         GLint   xoffset,
+         GLsizei width,
+         GLenum  format,
+         GLenum  type,
+   const GLvoid  *pixels
+);
+```
+
+
+
+## <a name="parameters"></a>Parameter
+
+<dl> <dt>
+
+*Ziel* 
+</dt> <dd>
+
+Die Ziel Textur. Muss "GL \_ Texture \_ 1D" lauten.
+
+</dd> <dt>
+
+*level* 
+</dt> <dd>
+
+Die Detailebene. Ebene 0 ist das Basis Image. Ebene *n* ist das *n*-te MipMap-Reduzierungs Bild.
+
+</dd> <dt>
+
+*xoffset* 
+</dt> <dd>
+
+Ein textOffset in der *x* -Richtung innerhalb des Textur Arrays.
+
+</dd> <dt>
+
+*width* 
+</dt> <dd>
+
+Die Breite des Textur unter Bilds.
+
+</dd> <dt>
+
+*format* 
+</dt> <dd>
+
+Das Format der Pixeldaten. Dieser Parameter kann einen der folgenden symbolischen Werte annehmen.
+
+
+
+| Wert                                                                                                                                                                         | Bedeutung                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| <span id="GL_COLOR_INDEX"></span><span id="gl_color_index"></span><dl> <dt>**GL- \_ Farb \_ Index**</dt> </dl>             | Jedes Element ist ein einzelner Wert, ein Farbindex. Sie wird in ein festes Punkt Format (mit einer nicht angegebenen Anzahl von 0 Bits rechts neben dem binären Punkt) konvertiert, nach links oder rechts verschoben, abhängig vom Wert und Vorzeichen der GL \_ -Index \_ Verschiebung, und zum GL- \_ Index \_ Offset (siehe [**glpixeltransfer**](glpixeltransfer.md)). Der resultierende Index wird mithilfe von GL \_ Pixel \_ map \_ i to \_ \_ R, GL \_ Pixel \_ map \_ i \_ to \_ G, GL \_ Pixel \_ map \_ i \_ to \_ B und GL Pixel Map i to a Tables in eine Gruppe von Farbkomponenten konvertiert \_ \_ \_ \_ \_ und an den Bereich \[ 0, 1 gebunden \] .<br/> |
+| <span id="GL_RED"></span><span id="gl_red"></span><dl> <dt>**GL. \_ rot**</dt> </dl>                                      | Jedes Element ist eine einzelne rote Komponente. Sie wird in ein Gleit Komma Format konvertiert und in ein RGBA-Element zusammengefasst, indem 0,0 für Grün und blau und 1,0 für Alpha angefügt wird. Jede Komponente wird dann mit der signierten Skalierungsfaktor-GL \_ c \_ -Skala multipliziert, dem signierten Bias \_ -GL \_ -c-Bias hinzugefügt und an den Bereich \[ 0, 1 \] (siehe **glpixeltransfer**) gebunden.<br/>                                                                                                                                                                                                |
+| <span id="GL_GREEN"></span><span id="gl_green"></span><dl> <dt>**GL \_ grün**</dt> </dl>                                | Jedes Element ist eine einzelne grüne Komponente. Sie wird in ein Gleit Komma Format konvertiert und in ein RGBA-Element zusammengefasst, indem 0,0 für "Red" und "Blue" und 1,0 für Alpha angehängt werden. Jede Komponente wird dann mit der signierten Skalierungsfaktor-GL \_ c \_ -Skala multipliziert, dem signierten Bias \_ -GL \_ -c-Bias hinzugefügt und an den Bereich \[ 0, 1 \] (siehe [**glpixeltransfer**](glpixeltransfer.md)) gebunden.<br/>                                                                                                                                                                         |
+| <span id="GL_BLUE"></span><span id="gl_blue"></span><dl> <dt>**GL \_ blau**</dt> </dl>                                   | Jedes Element ist eine einzelne blaue Komponente. Sie wird in ein Gleit Komma Format konvertiert und in ein RGBA-Element zusammengefasst, indem 0,0 für Rot und grün und 1,0 für Alpha angefügt wird. Jede Komponente wird dann mit der signierten Skalierungsfaktor-GL \_ c \_ -Skala multipliziert, dem signierten Bias \_ -GL \_ -c-Bias hinzugefügt und an den Bereich \[ 0, 1 \] (siehe **glpixeltransfer**) gebunden.<br/>                                                                                                                                                                                                |
+| <span id="GL_ALPHA"></span><span id="gl_alpha"></span><dl> <dt>**GL- \_ Alpha**</dt> </dl>                                | Jedes Element ist eine einzelne Alpha Komponente. Sie wird in ein Gleit Komma Format konvertiert und in ein RGBA-Element zusammengefasst, indem 0,0 für Rot, grün und blau angefügt wird. Jede Komponente wird dann mit der signierten Skalierungsfaktor-GL \_ c \_ -Skala multipliziert, dem signierten Bias \_ -GL \_ -c-Bias hinzugefügt und an den Bereich \[ 0, 1 \] (siehe [**glpixeltransfer**](glpixeltransfer.md)) gebunden.<br/>                                                                                                                                                                                    |
+| <span id="GL_RGB"></span><span id="gl_rgb"></span><dl> <dt>**GL. \_ RGB**</dt> </dl>                                      | Jedes Element ist ein RGB-Triple. Sie wird in den Gleit Komma Wert konvertiert und in ein RGBA-Element zusammengefasst, indem 1,0 für Alpha angefügt wird. Jede Komponente wird dann mit der signierten Skalierungsfaktor-GL \_ c \_ -Skala multipliziert, dem signierten Bias \_ -GL \_ -c-Bias hinzugefügt und an den Bereich \[ 0, 1 \] (siehe **glpixeltransfer**) gebunden.<br/>                                                                                                                                                                                                                                            |
+| <span id="GL_RGBA"></span><span id="gl_rgba"></span><dl> <dt>**GL \_ RGBA**</dt> </dl>                                   | Jedes Element ist ein umfassendes RGBA-Element. Sie wird in das Gleit Komma Format konvertiert. Jede Komponente wird dann mit der signierten Skalierungsfaktor-GL \_ c \_ -Skala multipliziert, dem signierten Bias \_ -GL \_ -c-Bias hinzugefügt und an den Bereich \[ 0, 1 \] (siehe **glpixeltransfer**) gebunden.<br/>                                                                                                                                                                                                                                                                                         |
+| <span id="GL_LUMINANCE"></span><span id="gl_luminance"></span><dl> <dt>**GL- \_ Beleuchtung**</dt> </dl>                    | Jedes Element ist ein einzelner Wert für die Leuchtkraft. Sie wird in das Gleit Komma Format konvertiert und dann in einem RGBA-Element zusammengefasst, indem der Wert für die Leuchtkraft dreimal für Rot, grün und blau replizieren und 1,0 für Alpha angefügt wird. Jede Komponente wird dann mit der signierten Skalierungsfaktor-GL \_ c \_ -Skala multipliziert, dem signierten Bias \_ -GL \_ -c-Bias hinzugefügt und an den Bereich \[ 0, 1 \] (siehe [**glpixeltransfer**](glpixeltransfer.md)) gebunden.<br/>                                                                                                                   |
+| <span id="GL_LUMINANCE_ALPHA"></span><span id="gl_luminance_alpha"></span><dl> <dt>**GL- \_ Leuchtkraft \_ Alpha**</dt> </dl> | Jedes Element ist ein leuchtendes/Alpha-Paar. Sie wird in das Gleit Komma Format konvertiert und dann in einem RGBA-Element zusammengefasst, indem der Wert für die Leuchtkraft dreimal für Rot, grün und blau replizieren wird. Jede Komponente wird dann mit der signierten Skalierungsfaktor-GL \_ c \_ -Skala multipliziert, dem signierten Bias \_ -GL \_ -c-Bias hinzugefügt und an den Bereich \[ 0, 1 \] (siehe **glpixeltransfer**) gebunden.<br/>                                                                                                                                                                         |
+
+
+
+ 
+
+</dd> <dt>
+
+*type* 
+</dt> <dd>
+
+Der Datentyp der Pixeldaten. Die folgenden symbolischen Werte werden akzeptiert: GL \_ unsigned \_ Byte, GL \_ Byte, GL \_ Bitmap, GL \_ unsigned \_ Short, GL \_ Short, GL \_ unsigned \_ int, GL \_ int und GL \_ float.
+
+</dd> <dt>
+
+*Pixel* 
+</dt> <dd>
+
+Ein Zeiger auf die Bilddaten im Arbeitsspeicher.
+
+</dd> </dl>
+
+## <a name="return-value"></a>Rückgabewert
+
+Diese Funktion gibt keinen Wert zurück.
+
+## <a name="error-codes"></a>Fehlercodes
+
+Die folgenden Fehlercodes können von der Funktion " [**glgeterror**](glgeterror.md) " abgerufen werden.
+
+
+
+| Name                                                                                                  | Bedeutung                                                                                                                                                                                                                                                                  |
+|-------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| <dl> <dt>**GL \_ ungültige Aufzählung. \_**</dt> </dl>      | *target* war nicht gl \_ Texture \_ 1D.<br/>                                                                                                                                                                                                                             |
+| <dl> <dt>**GL \_ ungültige Aufzählung. \_**</dt> </dl>      | Das *Format* war keine akzeptierte Konstante.<br/>                                                                                                                                                                                                                        |
+| <dl> <dt>**GL \_ ungültige Aufzählung. \_**</dt> </dl>      | der *Typ* war keine akzeptierte Konstante.<br/>                                                                                                                                                                                                                          |
+| <dl> <dt>**GL \_ ungültige Aufzählung. \_**</dt> </dl>      | *Typ* : GL \_ Bitmap und *Format* war kein GL \_ - \_ Farbindex.<br/>                                                                                                                                                                                                  |
+| <dl> <dt>**\_Ungültiger GL- \_ Wert**</dt> </dl>     | die *Ebene* war kleiner als 0 (null) oder größer als log2 *Max*, wobei *Max* der zurückgegebene Wert von GL \_ Max \_ Texture \_ size war.<br/>                                                                                                                                          |
+| <dl> <dt>**\_Ungültiger GL- \_ Wert**</dt> </dl>     | *xoffset* war kleiner als *b*, oder die *Offset*  +  *Breite* war größer als *WB*, wobei *w* die GL \_ -Textur Breite ist \_ , und *b* die Breite des GL-Textur Rahmens \_ \_ des Textur Bilds ist, das geändert wird.<br/> Beachten Sie, dass *w* die doppelte Rahmenbreite umfasst.<br/> |
+| <dl> <dt>**\_Ungültiger GL- \_ Wert**</dt> </dl>     | die *Breite* war kleiner als *b*, wobei *b* die Rahmenbreite des Textur Arrays ist.<br/>                                                                                                                                                                            |
+| <dl> <dt>**\_Ungültiger GL- \_ Wert**</dt> </dl>     | der *Rahmen war nicht* 0 (null) oder 1.<br/>                                                                                                                                                                                                                                   |
+| <dl> <dt>**\_ungültiger \_ Vorgang**</dt> </dl> | Das texure-Array wurde nicht durch einen vorherigen **glTexImage1D** -Vorgang definiert.<br/>                                                                                                                                                                                    |
+| <dl> <dt>**\_ungültiger \_ Vorgang**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd**](glend.md)aufgerufen.<br/>                                                                                                                                    |
+
+
+
+## <a name="remarks"></a>Bemerkungen
+
+Eindimensionale Texturierung für ein primitiv wird mithilfe von [**glEnable**](glenable.md) und **glEnable** mit dem Argument GL \_ Texture \_ 1D aktiviert. Während der Texturierung wird ein Teil eines angegebenen Textur Bilds jedem aktivierten primitiven zugeordnet. Verwenden Sie die **glTexSubImage1D** -Funktion, um ein zusammenhängendes unter Bild eines vorhandenen eindimensionalen Textur Bilds für die Texturierung anzugeben.
+
+Die texeln, auf die in *Pixel* verwiesen wird, ersetzen einen Bereich des vorhandenen Textur Arrays durch *x* -Indizes von *xoffset* und *xoffset* + (*Width* 1) einschließlich. Dieser Bereich darf keine texeln außerhalb des Bereichs des ursprünglich angegebenen Textur Arrays enthalten.
+
+Die Angabe eines unter Bilds mit einer *Breite* von 0 (null) hat keine Auswirkung und generiert keinen Fehler.
+
+Die Texturierung hat keine Auswirkung auf den Farb Index Modus.
+
+Im Allgemeinen können Textur Bilder durch die gleichen Datenformate wie die Pixel in einem [**gldrawpixels**](gldrawpixels.md) -Befehl dargestellt werden, mit dem Unterschied, dass der GL \_ \_ -Schablone-Index und die GL- \_ tiefen \_ Komponente nicht verwendet werden können. Die [**glpixelstore**](glpixelstore-functions.md) -und [**glpixeltransfer**](glpixeltransfer.md) -Modi wirken sich auf Textur Bilder genau so aus, wie Sie sich auf **gldrawpixels** auswirken.
+
+Die folgenden Funktionen rufen Informationen im Zusammenhang mit **glTexSubImage1D** ab:
+
+[**glgetteximage**](glgetteximage.md)
+
+[**glisenabled**](glisenabled.md) mit dem Argument GL \_ Texture \_ 1D
+
+## <a name="requirements"></a>Anforderungen
+
+
+
+| Anforderung | Wert |
+|-------------------------------------|-----------------------------------------------------------------------------------------|
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                              |
+| Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                    |
+| Header<br/>                   | <dl> <dt>GL. h</dt> </dl>         |
+| Bibliothek<br/>                  | <dl> <dt>Opengl32. lib</dt> </dl> |
+| DLL<br/>                      | <dl> <dt>Opengl32.dll</dt> </dl> |
+
+
+
+## <a name="see-also"></a>Siehe auch
+
+<dl> <dt>
+
+[**glCopyTexImage1D**](glcopyteximage1d.md)
+</dt> <dt>
+
+[**glCopyTexImage2D**](glcopyteximage2d.md)
+</dt> <dt>
+
+[**glCopyTexSubImage1D**](glcopytexsubimage1d.md)
+</dt> <dt>
+
+[**glCopyTexSubImage2D**](glcopytexsubimage2d.md)
+</dt> <dt>
+
+[**gldrawpixels**](gldrawpixels.md)
+</dt> <dt>
+
+[**glEnable**](glenable.md)
+</dt> <dt>
+
+[**glnebel**](glfog.md)
+</dt> <dt>
+
+[**glgetteximage**](glgetteximage.md)
+</dt> <dt>
+
+[**glisenabled**](glisenabled.md)
+</dt> <dt>
+
+[**glpixelstore**](glpixelstore-functions.md)
+</dt> <dt>
+
+[**glpixeltransfer**](glpixeltransfer.md)
+</dt> <dt>
+
+[**gltexd**](gltexenv-functions.md)
+</dt> <dt>
+
+[**gltexgen**](gltexgen-functions.md)
+</dt> <dt>
+
+[**glTexImage1D**](glteximage1d.md)
+</dt> <dt>
+
+[**glTexImage2D**](glteximage2d.md)
+</dt> <dt>
+
+[**gltexparameter**](gltexparameter-functions.md)
+</dt> <dt>
+
+[**glTexSubImage2D**](gltexsubimage2d.md)
+</dt> </dl>
+
+ 
+
+ 
+
+
+
+
+
