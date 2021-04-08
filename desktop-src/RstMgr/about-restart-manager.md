@@ -1,0 +1,41 @@
+---
+title: Informationen zum Neustart-Manager
+description: Der primäre Grund für die Installation und Aktualisierung von Software erfordert einen Systemneustart, da einige der Dateien, die aktualisiert werden, zurzeit von einer ausgelaufenden Anwendung oder einem Dienst verwendet werden.
+ms.assetid: 9a1166d7-a0e1-4948-9077-278c84afccac
+keywords:
+- Neustart-Manager neu starten, Info
+ms.topic: article
+ms.date: 05/31/2018
+ms.openlocfilehash: ec1cfd300d554e311ab43cc0a9413514b6b60081
+ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "103729576"
+---
+# <a name="about-restart-manager"></a><span data-ttu-id="ceb28-104">Informationen zum Neustart-Manager</span><span class="sxs-lookup"><span data-stu-id="ceb28-104">About Restart Manager</span></span>
+
+<span data-ttu-id="ceb28-105">Der primäre Grund für die Installation und Aktualisierung von Software erfordert einen Systemneustart, da einige der Dateien, die aktualisiert werden, zurzeit von einer ausgelaufenden Anwendung oder einem Dienst verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="ceb28-105">The primary reason software installation and updates require a system restart is that some of the files that are being updated are currently being used by a running application or service.</span></span> <span data-ttu-id="ceb28-106">Mit dem Neustart-Manager können alle außer wichtigen Anwendungen und Dienste heruntergefahren und neu gestartet werden.</span><span class="sxs-lookup"><span data-stu-id="ceb28-106">Restart Manager enables all but the critical applications and services to be shut down and restarted .</span></span> <span data-ttu-id="ceb28-107">Dadurch werden die verwendeten Dateien freigegeben, und die Installations Vorgänge können ausgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="ceb28-107">This frees the files that are in use and allows installation operations to complete.</span></span> <span data-ttu-id="ceb28-108">Außerdem kann die Anzahl der Systemneustarts, die zum Durchführen einer Installation oder eines Updates erforderlich sind, beseitigt oder reduziert werden.</span><span class="sxs-lookup"><span data-stu-id="ceb28-108">It can also eliminate or reduce the number of system restarts that are required to complete an installation or update.</span></span>
+
+<span data-ttu-id="ceb28-109">Der Neustart-Manager stoppt Anwendungen in der folgenden Reihenfolge und startet Anwendungen, die für den Neustart in umgekehrter Reihenfolge registriert wurden, nach der Aktualisierung der Anwendungen neu.</span><span class="sxs-lookup"><span data-stu-id="ceb28-109">The Restart Manager stops applications in the following order, and after the applications have been updated, restarts applications that have been registered for restart in the reverse order.</span></span>
+
+1.  <span data-ttu-id="ceb28-110">GUI-Anwendungen</span><span class="sxs-lookup"><span data-stu-id="ceb28-110">GUI applications</span></span>
+2.  <span data-ttu-id="ceb28-111">Konsolenanwendungen</span><span class="sxs-lookup"><span data-stu-id="ceb28-111">Console applications</span></span>
+3.  <span data-ttu-id="ceb28-112">Windows-Dienste</span><span class="sxs-lookup"><span data-stu-id="ceb28-112">Windows services</span></span>
+4.  <span data-ttu-id="ceb28-113">Windows-Explorer</span><span class="sxs-lookup"><span data-stu-id="ceb28-113">Windows explorer</span></span>
+
+<span data-ttu-id="ceb28-114">Durch den Neustart-Manager werden Anwendungen oder Dienste nur dann heruntergefahren, wenn der Aufrufer über die entsprechende Berechtigung verfügt.</span><span class="sxs-lookup"><span data-stu-id="ceb28-114">Restart Manager shuts down application or services only if the caller has permission to do so.</span></span> <span data-ttu-id="ceb28-115">Beachten Sie, dass das Sitzungs übergreifende Herunterfahren nicht unterstützt wird.</span><span class="sxs-lookup"><span data-stu-id="ceb28-115">Note that shutdown across sessions is not supported.</span></span>
+
+<span data-ttu-id="ceb28-116">Anwendungen, die die [Windows Installer](/windows/desktop/Msi/windows-installer-portal) Version 4,0 für die Installation und Wartung verwenden, verwenden automatisch den Neustart-Manager, um die Systemneustarts zu verringern.</span><span class="sxs-lookup"><span data-stu-id="ceb28-116">Applications that use the [Windows Installer](/windows/desktop/Msi/windows-installer-portal) version 4.0 for installation and servicing automatically use the Restart Manager to reduce system restarts.</span></span> <span data-ttu-id="ceb28-117">Benutzerdefinierte Installationsprogramme können auch so entworfen werden, dass Sie die Restart Manager-API zum Herunterfahren und Neustarten von Anwendungen und Diensten aufruft.</span><span class="sxs-lookup"><span data-stu-id="ceb28-117">Custom installers can also be designed to call the Restart Manager API to shut down and restart applications and services.</span></span> <span data-ttu-id="ceb28-118">In Fällen, in denen ein Systemneustart unvermeidlich ist, können Installer die Neustart-Manager-API verwenden, um Neustarts so zu planen, dass die Unterbrechung des Arbeits Flusses des Benutzers minimiert wird.</span><span class="sxs-lookup"><span data-stu-id="ceb28-118">In cases where a system restart is unavoidable, installers can use the Restart Manager API to schedule restarts in such a way that it minimizes the disruption of the user's work flow.</span></span>
+
+<span data-ttu-id="ceb28-119">Informationen zur Verwendung der Neustart-Manager-API während der Installation und Updates finden Sie unter [Verwenden des Neustart-Managers](using-restart-manager.md).</span><span class="sxs-lookup"><span data-stu-id="ceb28-119">For information about using the Restart Manager API during installation and updates, see [Using Restart Manager](using-restart-manager.md).</span></span>
+
+<span data-ttu-id="ceb28-120">Kritische Systemdienste können vom Neustart-Manager ohne Systemneustart nicht beendet und neu gestartet werden.</span><span class="sxs-lookup"><span data-stu-id="ceb28-120">Critical system services cannot be stopped and restarted by the Restart Manager without a system restart.</span></span> <span data-ttu-id="ceb28-121">Weitere Informationen zum Identifizieren kritischer Systemdienste finden Sie unter [wichtige Systemdienste](critical-system-services.md).</span><span class="sxs-lookup"><span data-stu-id="ceb28-121">For more information about identifying critical system services, see [Critical System Services](critical-system-services.md).</span></span>
+
+<span data-ttu-id="ceb28-122">Ihre Anwendungen und Dienste sollten so vorbereitet sein, dass Sie vom Neustart-Manager heruntergefahren werden und Benutzerdaten und Zustandsinformationen speichern, die für einen sauberen Neustart erforderlich sind.</span><span class="sxs-lookup"><span data-stu-id="ceb28-122">Your applications and services should be prepared to be shut down by the Restart Manager and save user data and state information that are needed for a clean restart.</span></span> <span data-ttu-id="ceb28-123">Weitere Informationen zum Vorbereiten von Anwendungen und Diensten für die Zusammenarbeit mit dem Neustart-Manager finden Sie unter [Richtlinien für Anwendungen und Dienste](guidelines-for-applications-and-services.md).</span><span class="sxs-lookup"><span data-stu-id="ceb28-123">For more information about how to prepare your applications and services to work with the Restart Manager, see [Guidelines for Applications and Services](guidelines-for-applications-and-services.md).</span></span>
+
+<span data-ttu-id="ceb28-124">Referenzinformationen zu den Enumerationen, Strukturen und Funktionen der Neustart-Manager-API finden Sie im Abschnitt " [Neustart-Manager-Referenz](restart-manager-reference.md) ".</span><span class="sxs-lookup"><span data-stu-id="ceb28-124">For reference information about the enumerations, structures, and functions of the Restart Manager API, see the [Restart Manager Reference](restart-manager-reference.md) section</span></span>
+
+ 
+
+ 
