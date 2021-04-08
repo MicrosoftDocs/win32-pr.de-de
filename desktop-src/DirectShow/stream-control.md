@@ -1,0 +1,25 @@
+---
+description: Stream-Steuerelement
+ms.assetid: b529b38c-a25c-42dd-aee1-5d263c94202d
+title: Stream-Steuerelement
+ms.topic: article
+ms.date: 05/31/2018
+ms.openlocfilehash: c41cee586737e131d4a32508b9ba6dd9ef1bd3b2
+ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "103866475"
+---
+# <a name="stream-control"></a><span data-ttu-id="bee6b-103">Stream-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="bee6b-103">Stream Control</span></span>
+
+<span data-ttu-id="bee6b-104">Die [**ivmrvideostreamcontrol**](/windows/desktop/api/Strmif/nn-strmif-ivmrvideostreamcontrol) -Schnittstelle in den eingabepin (s) des VMR ermöglicht Anwendungen und upstreamfiltern, das Verhalten der Mischungs Komponente zu steuern, einschließlich der Z-Reihenfolge und des aktiven Zustands der Eingabestreams von VMR.</span><span class="sxs-lookup"><span data-stu-id="bee6b-104">The [**IVMRVideoStreamControl**](/windows/desktop/api/Strmif/nn-strmif-ivmrvideostreamcontrol) interface on the VMR's input pin(s) enables applications and upstream filters to control the behavior of the mixer component, including the Z-order and the active state of the VMR's input streams.</span></span> <span data-ttu-id="bee6b-105">Obwohl diese Schnittstelle auf den Pins verfügbar gemacht wird, wird Sie mit der Mischungs Komponente von VMR betrieben, sodass Sie nur verfügbar ist, wenn der Mixer geladen wird. Dies ist der Fall, wenn der VMR mehrere Eingabedaten Ströme verarbeitet.</span><span class="sxs-lookup"><span data-stu-id="bee6b-105">Although this interface is exposed on the pins, it operates on the VMR's mixer component, so it is only available when the mixer is loaded, which is when the VMR is processing multiple input streams.</span></span> <span data-ttu-id="bee6b-106">Upstreamfilter verwenden die Methoden [**SetColorKey**](/windows/desktop/api/Strmif/nf-strmif-ivmrvideostreamcontrol-setcolorkey) und [**getcolorkey**](/windows/desktop/api/Strmif/nf-strmif-ivmrvideostreamcontrol-getcolorkey) , um den Quell Farben Schlüssel zu steuern.</span><span class="sxs-lookup"><span data-stu-id="bee6b-106">Upstream filters use the [**SetColorKey**](/windows/desktop/api/Strmif/nf-strmif-ivmrvideostreamcontrol-setcolorkey) and [**GetColorKey**](/windows/desktop/api/Strmif/nf-strmif-ivmrvideostreamcontrol-getcolorkey) methods to control the source color key.</span></span> <span data-ttu-id="bee6b-107">Diese Methoden ermöglichen Effekte, wie z. b. das Überlagern der Animation über Video.</span><span class="sxs-lookup"><span data-stu-id="bee6b-107">These methods enable effects such as the overlay of animation over video.</span></span> <span data-ttu-id="bee6b-108">Legen Sie einfach den Farbschlüssel auf die Hintergrundfarbe des Animations Streams fest, und der VMR vermischt diesen Stream mit einem anderen Videostream.</span><span class="sxs-lookup"><span data-stu-id="bee6b-108">Simply set the color key to the animation stream's background color, and the VMR will mix that stream with another video stream.</span></span> <span data-ttu-id="bee6b-109">Anwendungen sollten darauf achten, den Farbschlüssel nicht in einen anderen Wert als den Wert zu ändern, der von einem upstreamfilter verwendet wird, z. b. ein Decoder.</span><span class="sxs-lookup"><span data-stu-id="bee6b-109">Applications should take care not to change the color key to some value that is different than the value being used by an upstream filter, such as a decoder.</span></span>
+
+<span data-ttu-id="bee6b-110">Filter verwenden die [**getstreamactivestate**](/windows/desktop/api/Strmif/nf-strmif-ivmrvideostreamcontrol-getstreamactivestate) -Methode und die [**setstreamactivestate**](/windows/desktop/api/Strmif/nf-strmif-ivmrvideostreamcontrol-setstreamactivestate) -Methode, um dem Mixer mitzuteilen, ob die Eingabedaten von einer angegebenen Pin erwartet werden.</span><span class="sxs-lookup"><span data-stu-id="bee6b-110">Filters use the [**GetStreamActiveState**](/windows/desktop/api/Strmif/nf-strmif-ivmrvideostreamcontrol-getstreamactivestate) and [**SetStreamActiveState**](/windows/desktop/api/Strmif/nf-strmif-ivmrvideostreamcontrol-setstreamactivestate) methods to tell the mixer whether to expect input data from a specified pin.</span></span> <span data-ttu-id="bee6b-111">Beispielsweise verwendet der Line21-Decoder diese Methoden, um die VMR-Eingabe-PIN für Line21-Daten nur dann zu aktivieren, wenn diese Daten im Stream vorhanden sind.</span><span class="sxs-lookup"><span data-stu-id="bee6b-111">For example, the Line21 Decoder uses these methods to activate the VMR's input pin for Line21 data only when that data is present in the stream.</span></span> <span data-ttu-id="bee6b-112">Das Festlegen einer PIN auf einen inaktiven Status weist den Mixer an, vor der Zusammensetzung des Bilds nicht auf Daten von einer angegebenen PIN zu warten.</span><span class="sxs-lookup"><span data-stu-id="bee6b-112">Setting a pin to an inactive state instructs the mixer not to wait for data from a specified pin before compositing the image.</span></span>
+
+ 
+
+ 
+
+
+
