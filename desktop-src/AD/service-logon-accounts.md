@@ -1,0 +1,40 @@
+---
+title: Dienst Anmeldekonten
+description: Ein Dienst hat wie ein beliebiger Prozess eine primäre Sicherheitsidentität, die die gewährten Zugriffsrechte und Berechtigungen für lokale und Netzwerkressourcen bestimmt.
+ms.assetid: c2345967-8415-4cc0-96d3-12c48e74028e
+ms.tgt_platform: multiple
+keywords:
+- Active Directory mithilfe von, Dienst Anmeldung
+ms.topic: article
+ms.date: 05/31/2018
+ms.openlocfilehash: 9340fe7eebc95ec4c7ea3091c96a2539cb08dee4
+ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 09/16/2019
+ms.locfileid: "103855383"
+---
+# <a name="service-logon-accounts"></a><span data-ttu-id="fd037-104">Dienst Anmeldekonten</span><span class="sxs-lookup"><span data-stu-id="fd037-104">Service Logon Accounts</span></span>
+
+<span data-ttu-id="fd037-105">Ein Dienst hat wie ein beliebiger Prozess eine primäre Sicherheitsidentität, die die gewährten Zugriffsrechte und Berechtigungen für lokale und Netzwerkressourcen bestimmt.</span><span class="sxs-lookup"><span data-stu-id="fd037-105">A service, like any process, has a primary security identity that determines the granted access rights and privileges for local and network resources.</span></span> <span data-ttu-id="fd037-106">Diese Sicherheitsidentität oder der Sicherheitskontext bestimmt auch das Potenzial, das der Dienst für schädliche lokale Ressourcen und Netzwerkressourcen hat.</span><span class="sxs-lookup"><span data-stu-id="fd037-106">This security identity, or security context, also determines the potential the service has for damaging local and network resources.</span></span>
+
+<span data-ttu-id="fd037-107">Der Sicherheitskontext für einen Microsoft Win32-Dienst wird durch das Anmelde Konto bestimmt, das zum Starten des Diensts verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="fd037-107">The security context for a Microsoft Win32 service is determined by the logon account that is used to start the service.</span></span> <span data-ttu-id="fd037-108">In diesem Abschnitt werden Programmierprobleme und bewährte Methoden im Zusammenhang mit dem Dienst Anmelde Konto erläutert, das von Win32-Diensten verwendet wird, wobei der Schwerpunkt auf Verzeichnis aktivierten Diensten liegt.</span><span class="sxs-lookup"><span data-stu-id="fd037-108">This section discusses programming issues and best practices relating to the service logon account used by Win32 services, with a focus on directory-enabled services.</span></span> <span data-ttu-id="fd037-109">Dieser Abschnitt schließt folgende Themen ein:</span><span class="sxs-lookup"><span data-stu-id="fd037-109">This section includes the following topics:</span></span>
+
+-   <span data-ttu-id="fd037-110">[Informationen zu Dienst Anmeldekonten](about-service-logon-accounts.md)– eine Übersicht über Dienst Anmeldekonten und Probleme beim Programmieren von Sicherheits Kontexten für einen Win32-Dienst.</span><span class="sxs-lookup"><span data-stu-id="fd037-110">[About Service Logon Accounts](about-service-logon-accounts.md)—An overview of service logon accounts and security context programming issues for a Win32 service.</span></span>
+-   <span data-ttu-id="fd037-111">[Richtlinien für das Auswählen eines Dienst Anmelde Kontos](guidelines-for-selecting-a-service-logon-account.md) für einen Win32-Dienst.</span><span class="sxs-lookup"><span data-stu-id="fd037-111">[Guidelines for Selecting a Service Logon Account](guidelines-for-selecting-a-service-logon-account.md) for a Win32 service.</span></span>
+-   <span data-ttu-id="fd037-112">[Einrichten des Benutzerkontos eines Dienstanbieter](setting-up-a-serviceampaposs-user-account.md).</span><span class="sxs-lookup"><span data-stu-id="fd037-112">[Setting up a Service's User Account](setting-up-a-serviceampaposs-user-account.md).</span></span>
+-   <span data-ttu-id="fd037-113">[Installieren eines Diensts auf einem Host Computer](installing-a-service-on-a-host-computer.md) und angeben des Dienst Anmelde Kontos.</span><span class="sxs-lookup"><span data-stu-id="fd037-113">[Installing a Service on a Host Computer](installing-a-service-on-a-host-computer.md) and specifying the service logon account.</span></span>
+-   <span data-ttu-id="fd037-114">Gewähren der Berechtigung " [Anmelden als Dienst" auf dem Host Computer](granting-logon-as-service-right-on-the-host-computer.md)– gewähren des Benutzerkontos "Anmelden als Dienst" auf dem Host Computer für das Benutzerkonto des Diensts.</span><span class="sxs-lookup"><span data-stu-id="fd037-114">[Granting Logon as Service Right on the Host Computer](granting-logon-as-service-right-on-the-host-computer.md)—Granting the service's user account the logon as a service right on the host computer.</span></span>
+-   <span data-ttu-id="fd037-115">[Testen, ob auf einem Domänen Controller ausgeführt](testing-whether-running-on-a-domain-controller.md)wird – erkennen, ob die Dienst Instanz auf einem Domänen Controller installiert ist.</span><span class="sxs-lookup"><span data-stu-id="fd037-115">[Testing Whether Running on a Domain Controller](testing-whether-running-on-a-domain-controller.md)—Detecting at installation time whether the service instance is being installed on a domain controller.</span></span>
+-   <span data-ttu-id="fd037-116">[Erteilen von Zugriffsrechten für das Dienst Anmelde Konto](granting-access-rights-to-the-service-logon-account.md)– festlegen und Verwalten von ACEs und Gruppenmitgliedschaften, um sicherzustellen, dass das System dem laufenden Dienst Zugriff auf die erforderlichen lokalen Ressourcen und Netzwerkressourcen gewährt.</span><span class="sxs-lookup"><span data-stu-id="fd037-116">[Granting Access Rights to the Service Logon Account](granting-access-rights-to-the-service-logon-account.md)—Setting and maintaining ACEs and group memberships to ensure that the system will grant the running service access to the necessary local and network resources.</span></span>
+-   <span data-ttu-id="fd037-117">[Ändern des Kennworts für das Benutzerkonto eines Diensts](changing-the-password-on-a-serviceampaposs-user-account.md)– Ändern des Kennworts für das Benutzerkonto eines Diensts und gleichzeitigem Aktualisieren des Kennworts, das mit dem Dienststeuerungs-Manager auf jedem Host Server registriert ist, auf dem der Dienst installiert ist.</span><span class="sxs-lookup"><span data-stu-id="fd037-117">[Changing the Password on a Service's User Account](changing-the-password-on-a-serviceampaposs-user-account.md)—Changing the password on a service's user account, and at the same time updating the password registered with the service control manager on each host server on which the service is installed.</span></span>
+-   <span data-ttu-id="fd037-118">[Gegenseitige Authentifizierung mithilfe von Kerberos](mutual-authentication-using-kerberos.md)– Wartung der Dienst Prinzipal Namen-Registrierung (SPN) für das Verzeichnis Objekt, das dem Anmelde Konto der einzelnen Instanzen Ihres Diensts zugeordnet ist.</span><span class="sxs-lookup"><span data-stu-id="fd037-118">[Mutual Authentication Using Kerberos](mutual-authentication-using-kerberos.md)—Maintaining service principal name (SPN) registration on the directory object associated with the logon account of each instance of your service.</span></span> <span data-ttu-id="fd037-119">Mithilfe von SPNs können Clients einen Dienst mithilfe der gegenseitigen Kerberos-Authentifizierung authentifizieren.</span><span class="sxs-lookup"><span data-stu-id="fd037-119">SPNs enable clients to authenticate a service using Kerberos mutual authentication.</span></span>
+-   <span data-ttu-id="fd037-120">Das [Umrechnen von Domänen Konto-namens Formaten](converting-domain-account-name-formats.md)– z. b. das Umbenennen eines Distinguished Name in das *Domänen ***\\*** Benutzernamen* Format und umgekehrt</span><span class="sxs-lookup"><span data-stu-id="fd037-120">[Converting Domain Account Name Formats](converting-domain-account-name-formats.md)—For example, converting a distinguished name to *Domain ***\\*** UserName* format, and vice versa.</span></span>
+
+ 
+
+ 
+
+
+
+
