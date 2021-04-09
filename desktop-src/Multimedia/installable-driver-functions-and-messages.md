@@ -1,0 +1,41 @@
+---
+title: Installierbare Treiberfunktionen und-Meldungen
+description: Installierbare Treiberfunktionen und-Meldungen
+ms.assetid: f487705a-ae8e-4ea8-bfd5-9b0f6087ddbb
+keywords:
+- installierbare Treiber, Funktionen
+- installierbare Treiber, Meldungen
+- installierbare Treiber, opendriver-Funktion
+- Opendriver-Funktion
+- installierbare Treiber, benutzerdefinierte Meldungen
+- Treiber Meldungen
+- benutzerdefinierte Treiber Meldungen
+ms.topic: article
+ms.date: 05/31/2018
+ms.openlocfilehash: c66e6ebaac73bf8eb779119750cb390481152c3f
+ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "103948701"
+---
+# <a name="installable-driver-functions-and-messages"></a><span data-ttu-id="bbb9d-110">Installierbare Treiberfunktionen und-Meldungen</span><span class="sxs-lookup"><span data-stu-id="bbb9d-110">Installable Driver Functions and Messages</span></span>
+
+<span data-ttu-id="bbb9d-111">Sie können einen installierbaren Treiber aus einer Anwendung öffnen, indem Sie die [**opendriver**](/windows/win32/api/mmiscapi/nf-mmiscapi-opendriver) -Funktion verwenden.</span><span class="sxs-lookup"><span data-stu-id="bbb9d-111">You can open an installable driver from an application by using the [**OpenDriver**](/windows/win32/api/mmiscapi/nf-mmiscapi-opendriver) function.</span></span> <span data-ttu-id="bbb9d-112">Diese Funktion erstellt eine Instanz des Treibers, lädt den Treiber in den Arbeitsspeicher, wenn keine andere Instanz vorhanden ist, und gibt das Handle der neuen Instanz zurück.</span><span class="sxs-lookup"><span data-stu-id="bbb9d-112">This function creates an instance of the driver, loading the driver into memory if no other instance exists, and returns the handle of the new instance.</span></span> <span data-ttu-id="bbb9d-113">Beim Öffnen eines installierbaren Treibers müssen Sie entweder den vollständigen Pfad des Treibers oder die Namen des Registrierungsschlüssels und des Werts angeben, die dem Treiber zugeordnet sind.</span><span class="sxs-lookup"><span data-stu-id="bbb9d-113">When opening an installable driver, you must supply either the full path of the driver or the names of the registry key and value associated with the driver.</span></span>
+
+<span data-ttu-id="bbb9d-114">Sobald ein Treiber geöffnet ist, können Sie ihn zum Ausführen von Tasks leiten, indem Sie die [**senddrivermessage**](/windows/win32/api/mmiscapi/nf-mmiscapi-senddrivermessage) -Funktion verwenden, um Treiber Nachrichten an den Treiber zu senden.</span><span class="sxs-lookup"><span data-stu-id="bbb9d-114">Once a driver is open, you can direct it to carry out tasks by using the [**SendDriverMessage**](/windows/win32/api/mmiscapi/nf-mmiscapi-senddrivermessage) function to send driver messages to the driver.</span></span> <span data-ttu-id="bbb9d-115">Beispielsweise können Sie den Treiber weiterleiten, um das Konfigurations Dialogfeld anzuzeigen, indem Sie die [**drv- \_ configure**](drv-configure.md) -Nachricht senden.</span><span class="sxs-lookup"><span data-stu-id="bbb9d-115">For example, you can direct the driver to display its configuration dialog box by sending the [**DRV\_CONFIGURE**](drv-configure.md) message.</span></span> <span data-ttu-id="bbb9d-116">Vor dem Senden dieser Nachricht müssen Sie bestimmen, ob der Treiber über ein Konfigurations Dialogfeld verfügt, indem Sie die [**drv \_ queryconfigure**](drv-queryconfigure.md) -Nachricht senden und einen Rückgabewert ungleich NULL überprüfen.</span><span class="sxs-lookup"><span data-stu-id="bbb9d-116">Before sending this message, you must determine whether the driver has a configuration dialog box by sending the [**DRV\_QUERYCONFIGURE**](drv-queryconfigure.md) message and checking for a nonzero return value.</span></span> <span data-ttu-id="bbb9d-117">Viele Treiber stellen eine Reihe von benutzerdefinierten Nachrichten bereit, die Sie senden können, um die Vorgänge des Treibers zu steuern.</span><span class="sxs-lookup"><span data-stu-id="bbb9d-117">Many drivers provide a set of custom messages that you can send to direct the operations of the driver.</span></span>
+
+<span data-ttu-id="bbb9d-118">Wenn Sie besonderen Zugriff auf einen installierbaren Treiber benötigen, z. b. auf seine Ressourcen zugreifen, können Sie das Modul Handle des Treibers abrufen, indem Sie die [**getdrivermodulehandle**](/windows/win32/api/mmiscapi/nf-mmiscapi-getdrivermodulehandle) -Funktion verwenden.</span><span class="sxs-lookup"><span data-stu-id="bbb9d-118">If you need special access to an installable driver, such as access to its resources, you can retrieve the module handle of the driver by using the [**GetDriverModuleHandle**](/windows/win32/api/mmiscapi/nf-mmiscapi-getdrivermodulehandle) function.</span></span>
+
+<span data-ttu-id="bbb9d-119">Wenn Sie den installierbaren Treiber nicht mehr benötigen, können Sie ihn mit der [**closedriver**](/windows/win32/api/mmiscapi/nf-mmiscapi-closedriver) -Funktion schließen.</span><span class="sxs-lookup"><span data-stu-id="bbb9d-119">When you no longer need the installable driver, you can close it by using the [**CloseDriver**](/windows/win32/api/mmiscapi/nf-mmiscapi-closedriver) function.</span></span>
+
+<span data-ttu-id="bbb9d-120">Mit den installierbaren Treiberfunktionen und-Nachrichten können Sie beliebige installierbare Treiber öffnen und verwalten.</span><span class="sxs-lookup"><span data-stu-id="bbb9d-120">You can use the installable driver functions and messages to open and manage any installable driver.</span></span> <span data-ttu-id="bbb9d-121">Die empfohlene Vorgehensweise zum Öffnen und Verwalten von Multimedia-Geräten ist jedoch zunächst die Verwendung von Standarddiensten (z. b. [**WaveOutOpen**](/windows/win32/api/mmeapi/nf-mmeapi-waveoutopen), [**waveoutmessage**](/windows/win32/api/mmeapi/nf-mmeapi-waveoutmessage)und [**waveoutclose**](/windows/win32/api/mmeapi/nf-mmeapi-waveoutclose) für Wellenform-Ausgabegeräte), sofern diese vorhanden sind.</span><span class="sxs-lookup"><span data-stu-id="bbb9d-121">However, the recommended course of action for opening and managing multimedia devices is to first use standard services (such as [**waveOutOpen**](/windows/win32/api/mmeapi/nf-mmeapi-waveoutopen), [**waveOutMessage**](/windows/win32/api/mmeapi/nf-mmeapi-waveoutmessage), and [**waveOutClose**](/windows/win32/api/mmeapi/nf-mmeapi-waveoutclose) for waveform output devices), if they exist.</span></span> <span data-ttu-id="bbb9d-122">Wenn für einen Multimedia-Treiber keine Standarddienste vorhanden sind, öffnen und verwalten Sie den Treiber mithilfe der installierbaren Treiberfunktionen und-Meldungen.</span><span class="sxs-lookup"><span data-stu-id="bbb9d-122">If standard services do not exist for a multimedia driver, then open and manage the driver using the installable driver functions and messages.</span></span>
+
+> [!Note]  
+> <span data-ttu-id="bbb9d-123">Die [**senddrivermessage**](/windows/win32/api/mmiscapi/nf-mmiscapi-senddrivermessage) -Funktion und die [**getdrivermodulehandle**](/windows/win32/api/mmiscapi/nf-mmiscapi-getdrivermodulehandle) -Funktion sind die bevorzugten Funktionen, die zum Senden von Nachrichten an einen Treiber und zum Abrufen eines Handles für eine Modul Instanz verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="bbb9d-123">The [**SendDriverMessage**](/windows/win32/api/mmiscapi/nf-mmiscapi-senddrivermessage) and [**GetDriverModuleHandle**](/windows/win32/api/mmiscapi/nf-mmiscapi-getdrivermodulehandle) functions are the preferred functions to use to send messages to a driver and to obtain a handle to a module instance.</span></span> <span data-ttu-id="bbb9d-124">Die ältere [**drvgetmodulehandle**](/windows/win32/api/mmiscapi/nf-mmiscapi-drvgetmodulehandle) -Funktion wurde jedoch eingeschlossen, um die Kompatibilität mit früheren Versionen des Windows-Betriebssystems aufrechtzuerhalten.</span><span class="sxs-lookup"><span data-stu-id="bbb9d-124">The older [**DrvGetModuleHandle**](/windows/win32/api/mmiscapi/nf-mmiscapi-drvgetmodulehandle) function, however, has been included to maintain compatibility with previous versions of the Windows operating system.</span></span>
+
+ 
+
+ 
+
+ 
