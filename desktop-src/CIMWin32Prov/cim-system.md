@@ -1,0 +1,357 @@
+---
+description: Die CIM- \_ System Klasse aggregiert einen Aufzähl baren Satz verwalteter System Elemente.
+ms.assetid: cbfa60d4-36ae-4e0c-a57f-aabf219851d0
+ms.tgt_platform: multiple
+title: CIM_System-Klasse (cimwin32-WMI-Anbieter)
+ms.topic: reference
+ms.date: 05/31/2018
+topic_type:
+- APIRef
+- kbSyntax
+api_name:
+- CIM_System
+- CIM_System.Caption
+- CIM_System.Description
+- CIM_System.InstallDate
+- CIM_System.Status
+- CIM_System.CreationClassName
+- CIM_System.Name
+- CIM_System.NameFormat
+- CIM_System.PrimaryOwnerContact
+- CIM_System.PrimaryOwnerName
+- CIM_System.Roles
+api_type:
+- DllExport
+api_location:
+- CIMWin32.dll
+ms.openlocfilehash: ef04e472e11c848aadb63c98b3dee2ea645a3ce7
+ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "103958443"
+---
+# <a name="cim_system-class-cimwin32-wmi-providers"></a>CIM_System-Klasse (cimwin32-WMI-Anbieter)
+
+Die **CIM- \_ System** Klasse aggregiert einen Aufzähl baren Satz verwalteter System Elemente. Die Aggregation funktioniert als Ganzes funktionstüchtig. Innerhalb einer bestimmten Unterklasse des Systems gibt es eine klar definierte Liste der verwalteten System Element Klassen, deren Instanzen aggregiert werden müssen.
+
+Das **CIM- \_ System** Objekt und seine Ableitungen sind Objekte der obersten Ebene von CIM. Sie stellen den Bereich für zahlreiche Komponenten bereit und sind für eindeutige Systemschlüssel erforderlich.
+
+> [!IMPORTANT]
+> Die Klassen der DMTF-CIM (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt zurzeit nur die [CIM 2. x-Versions Schemas](https://dmtf.org/standards/cim/schemas).
+
+ 
+
+Die folgende Syntax wird aus dem MOF-Code (Managed Object Format) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in der MOF-Reihenfolge aufgelistet.
+
+## <a name="syntax"></a>Syntax
+
+``` syntax
+[Abstract, UUID("{8502C524-5FBB-11D2-AAC1-006008C78BC7}"), AMENDMENT]
+class CIM_System : CIM_LogicalElement
+{
+  string   Caption;
+  string   Description;
+  datetime InstallDate;
+  string   Status;
+  string   CreationClassName;
+  string   Name;
+  string   NameFormat;
+  string   PrimaryOwnerContact;
+  string   PrimaryOwnerName;
+  string   Roles[];
+};
+```
+
+## <a name="members"></a>Member
+
+Die **CIM- \_ System** Klasse verfügt über diese Typen von Membern:
+
+-   [Eigenschaften](#properties)
+
+### <a name="properties"></a>Eigenschaften
+
+Die **CIM- \_ System** Klasse verfügt über diese Eigenschaften.
+
+<dl> <dt>
+
+**Caption**
+</dt> <dd> <dl> <dt>
+
+Datentyp: **Zeichenfolge**
+</dt> <dt>
+
+Zugriffstyp: Schreibgeschützt
+</dt> <dt>
+
+Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (64), [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) ("Caption")
+</dt> </dl>
+
+Eine kurze Textbeschreibung des-Objekts.
+
+Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
+
+</dd> <dt>
+
+**"Name der Klassenname"**
+</dt> <dd> <dl> <dt>
+
+Datentyp: **Zeichenfolge**
+</dt> <dt>
+
+Zugriffstyp: Schreibgeschützt
+</dt> <dt>
+
+Qualifizierer: [ **CIM- \_ Taste**](/windows/desktop/WmiSdk/standard-wmi-qualifiers)
+</dt> </dl>
+
+Der Name der Klasse oder Unterklasse, die bei der Erstellung einer Instanz verwendet wird. Wenn diese Eigenschaft mit anderen Schlüsseleigenschaften der-Klasse verwendet wird, können alle Instanzen der-Klasse und deren Unterklassen eindeutig identifiziert werden.
+
+</dd> <dt>
+
+**Beschreibung**
+</dt> <dd> <dl> <dt>
+
+Datentyp: **Zeichenfolge**
+</dt> <dt>
+
+Zugriffstyp: Schreibgeschützt
+</dt> <dt>
+
+Qualifizierer: [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) ("Description")
+</dt> </dl>
+
+Eine Textbeschreibung des-Objekts.
+
+Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
+
+</dd> <dt>
+
+**InstallDate**
+</dt> <dd> <dl> <dt>
+
+**Datentyp: DateTime**
+</dt> <dt>
+
+Zugriffstyp: Schreibgeschützt
+</dt> <dt>
+
+Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF". DMTF \| ComponentID \| 001,5 "), [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) (" Install Date ")
+</dt> </dl>
+
+Gibt an, wann das Objekt installiert wurde. Ein fehlender Wert weist nicht darauf hin, dass das Objekt nicht installiert ist.
+
+Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
+
+</dd> <dt>
+
+**Name**
+</dt> <dd> <dl> <dt>
+
+Datentyp: **Zeichenfolge**
+</dt> <dt>
+
+Zugriffstyp: Schreibgeschützt
+</dt> <dt>
+
+Qualifizierer: [**außer Kraft**](/windows/desktop/WmiSdk/standard-qualifiers) Setzung ("Name"), [**Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
+</dt> </dl>
+
+Definiert die Bezeichnung, mit der das-Objekt bekannt ist.
+
+</dd> <dt>
+
+**NameFormat**
+</dt> <dd> <dl> <dt>
+
+Datentyp: **Zeichenfolge**
+</dt> <dt>
+
+Zugriffstyp: Schreibgeschützt
+</dt> </dl>
+
+Gibt an, wie der Systemname mithilfe der Unterklasse heuristic generiert wurde.
+
+</dd> <dt>
+
+**PrimaryOwnerContact**
+</dt> <dd> <dl> <dt>
+
+Datentyp: **Zeichenfolge**
+</dt> <dt>
+
+Zugriffstyp: Schreibgeschützt
+</dt> </dl>
+
+Wie der primäre Systembesitzer erreicht werden kann (z. b. Telefonnummer oder e-Mail-Adresse).
+
+</dd> <dt>
+
+**Primaryownername**
+</dt> <dd> <dl> <dt>
+
+Datentyp: **Zeichenfolge**
+</dt> <dt>
+
+Zugriffstyp: Schreibgeschützt
+</dt> <dt>
+
+Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (64)
+</dt> </dl>
+
+Der Name des primären System Besitzers.
+
+</dd> <dt>
+
+**Rollen**
+</dt> <dd> <dl> <dt>
+
+Datentyp: **Zeichen** folgen Array
+</dt> <dt>
+
+Zugriffstyp: Lesen/Schreiben
+</dt> </dl>
+
+Rollen, die das System in der Informationstechnologie Umgebung spielt. Unterklassen des Systems können diese Eigenschaft überschreiben, um explizite Rollen Werte zu definieren. Alternativ kann eine Arbeitsgruppe die Heuristik, Konventionen und Richtlinien zum Angeben von Rollen beschreiben. Beispielsweise kann für eine Instanz eines Netzwerksystems diese Eigenschaft die Zeichenfolge "Switch" oder "Bridge" enthalten.
+
+</dd> <dt>
+
+**Status**
+</dt> <dd> <dl> <dt>
+
+Datentyp: **Zeichenfolge**
+</dt> <dt>
+
+Zugriffstyp: Schreibgeschützt
+</dt> <dt>
+
+Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (10), [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) ("Status")
+</dt> </dl>
+
+Eine Zeichenfolge, die den aktuellen Status des Objekts angibt. Der Betriebsstatus und der nicht betriebliche Status können definiert werden. Der Betriebsstatus kann "OK", "heruntergestuft" und "pred Fail" enthalten. "Pred Fail" gibt an, dass ein Element ordnungsgemäß funktioniert, aber einen Fehler vorhersagt (z. b. ein intelligent-fähiges Festplattenlaufwerk).
+
+Der nicht betriebliche Status kann "Error", "Starting", "Stop" und "Service" enthalten. "Service" kann während der Datenträger Spiegelung angewendet werden, indem eine Benutzer Berechtigungs Liste oder eine andere administrative Arbeit neu geladen wird. Nicht alle diese Arbeiten sind online, aber das verwaltete Element ist weder "OK" noch in einem der anderen Zustände.
+
+Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
+
+Folgende Werte sind gültig:
+
+<dt>
+
+<span id="OK"></span><span id="ok"></span>
+
+**OK** ("OK")
+
+
+</dt> <dd></dd> <dt>
+
+<span id="Error"></span><span id="error"></span><span id="ERROR"></span>
+
+**Fehler** ("Fehler")
+
+
+</dt> <dd></dd> <dt>
+
+<span id="Degraded"></span><span id="degraded"></span><span id="DEGRADED"></span>
+
+Herunter **gestuft ("** heruntergestuft")
+
+
+</dt> <dd></dd> <dt>
+
+<span id="Unknown"></span><span id="unknown"></span><span id="UNKNOWN"></span>
+
+**Unbekannt** ("unbekannt")
+
+
+</dt> <dd></dd> <dt>
+
+<span id="Pred_Fail"></span><span id="pred_fail"></span><span id="PRED_FAIL"></span>
+
+**Pred-** Fehler ("pred Fail")
+
+
+</dt> <dd></dd> <dt>
+
+<span id="Starting"></span><span id="starting"></span><span id="STARTING"></span>
+
+Wird **gestartet** ("wird gestartet")
+
+
+</dt> <dd></dd> <dt>
+
+<span id="Stopping"></span><span id="stopping"></span><span id="STOPPING"></span>
+
+Wird **beendet ("wird angehalten** ")
+
+
+</dt> <dd></dd> <dt>
+
+<span id="Service"></span><span id="service"></span><span id="SERVICE"></span>
+
+**Dienst** ("Dienst")
+
+
+</dt> <dd></dd> <dt>
+
+<span id="Stressed"></span><span id="stressed"></span><span id="STRESSED"></span>
+
+**Betont** ("gestresst")
+
+
+</dt> <dd></dd> <dt>
+
+<span id="NonRecover"></span><span id="nonrecover"></span><span id="NONRECOVER"></span>
+
+**Nicht wiederherstellen** ("nicht wiederherstellen")
+
+
+</dt> <dd></dd> <dt>
+
+<span id="No_Contact"></span><span id="no_contact"></span><span id="NO_CONTACT"></span>
+
+**Kein Kontakt** ("kein Kontakt")
+
+
+</dt> <dd></dd> <dt>
+
+<span id="Lost_Comm"></span><span id="lost_comm"></span><span id="LOST_COMM"></span>
+
+**Verlorene** Kommunikations ("verlorene Kommunikations-")
+
+
+</dt> <dd></dd> </dl>
+
+</dd> </dl>
+
+## <a name="remarks"></a>Bemerkungen
+
+Die **CIM- \_ System** Klasse wird von [**CIM \_ LogicalElement**](cim-logicalelement.md)abgeleitet.
+
+Diese Klasse wird von WMI nicht implementiert. Informationen zu WMI-Klassen, die vom **CIM- \_ System** abgeleitet sind, finden Sie unter [Win32](win32-provider.md)
+
+Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Beschreibungen abgeleitet. Microsoft hat möglicherweise Änderungen an den korrekten geringfügigen Fehlern vorgenommen, den Microsoft SDK-Dokumentations Standards entsprechen oder weitere Informationen bereitstellen.
+
+## <a name="requirements"></a>Anforderungen
+
+
+
+| Anforderung | Wert |
+|-------------------------------------|-----------------------------------------------------------------------------------------|
+| Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
+| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
+
+
+
+## <a name="see-also"></a>Siehe auch
+
+<dl> <dt>
+
+[**CIM \_ LogicalElement**](cim-logicalelement.md)
+</dt> </dl>
+
+ 
+
