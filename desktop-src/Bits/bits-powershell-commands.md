@@ -1,0 +1,62 @@
+---
+title: Managed Reference for BITS PowerShell Commands
+description: In Background Intelligent Transfer Service (Bits) 4,0 können Windows PowerShell-Cmdlets zum Verwalten von Übertragungs Aufträgen verwendet werden.
+ms.assetid: 2c151dfe-4f89-41ea-a533-21ffcf0aa39e
+ms.topic: article
+ms.date: 05/31/2018
+ms.openlocfilehash: c5bd195d2202849c2bf2df580d159ee401911c51
+ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "103858369"
+---
+# <a name="managed-reference-for-bits-powershell-commands"></a><span data-ttu-id="7f2e3-103">Managed Reference for BITS PowerShell Commands</span><span class="sxs-lookup"><span data-stu-id="7f2e3-103">Managed Reference for BITS PowerShell Commands</span></span>
+
+<span data-ttu-id="7f2e3-104">In Background Intelligent Transfer Service (Bits) 4,0 können Windows PowerShell-Cmdlets zum Erstellen und Verwalten von Dateidownloads und Hochladen von Übertragungs Aufträgen verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="7f2e3-104">Background Intelligent Transfer Service (BITS) 4.0 can use Windows PowerShell cmdlets to create and manage file download and upload transfer jobs.</span></span>
+
+```PowerShell
+Import-Module BitsTransfer
+mkdir -force c:\temp\BITSFILES
+Start-BitsTransfer -Source https://aka.ms/WinServ16/StndPDF -Destination c:\temp\BITSFILES\WindowsServer2016.pdf
+```
+
+<span data-ttu-id="7f2e3-105">Windows PowerShell-Cmdlets für Bits bieten einen Großteil der gleichen Funktionen wie das BITSAdmin-Befehlszeilenprogramm.</span><span class="sxs-lookup"><span data-stu-id="7f2e3-105">Windows PowerShell cmdlets for BITS provide much of the same functionality as the bitsadmin command-line utility.</span></span> <span data-ttu-id="7f2e3-106">Windows PowerShell führt jedoch auch die folgenden Schritte aus:</span><span class="sxs-lookup"><span data-stu-id="7f2e3-106">However, Windows PowerShell also does the following:</span></span>
+
+-   <span data-ttu-id="7f2e3-107">Automatisiert Bits-Aufgaben in einer erweiterbaren und Verwaltungs orientierten Skriptsprache.</span><span class="sxs-lookup"><span data-stu-id="7f2e3-107">Automates BITS tasks in an extensible and management-oriented scripting language.</span></span>
+-   <span data-ttu-id="7f2e3-108">Stellt ein einzelnes Tool für alle auftragsbezogenen Aufgaben bereit.</span><span class="sxs-lookup"><span data-stu-id="7f2e3-108">Provides a single tool for all job-related tasks.</span></span>
+
+> [!Note]  
+> <span data-ttu-id="7f2e3-109">Um diese Befehle verwenden zu können, müssen Sie zunächst das Bits-PowerShell-Modul mit dem `Import-Module BitsTransfer` Befehl importieren.</span><span class="sxs-lookup"><span data-stu-id="7f2e3-109">To use these commands, you must first import the BITS PowerShell module, using the `Import-Module BitsTransfer` command.</span></span> <span data-ttu-id="7f2e3-110">Weitere Informationen finden Sie im folgenden [TechNet-Artikel](/previous-versions/technet-magazine/ff382721(v=msdn.10)).</span><span class="sxs-lookup"><span data-stu-id="7f2e3-110">For more information, see the following [TechNet article](/previous-versions/technet-magazine/ff382721(v=msdn.10)).</span></span>
+
+ 
+
+<span data-ttu-id="7f2e3-111">Weitere Informationen zur Verwendung von Windows PowerShell finden Sie unter [Windows PowerShell](https://msdn.microsoft.com/library/dd835506(v=vs.85).aspx).</span><span class="sxs-lookup"><span data-stu-id="7f2e3-111">For more information on using Windows Powershell, see [Windows PowerShell](https://msdn.microsoft.com/library/dd835506(v=vs.85).aspx).</span></span>
+
+## <a name="bits-powershell-classes"></a><span data-ttu-id="7f2e3-112">Bits-PowerShell-Klassen</span><span class="sxs-lookup"><span data-stu-id="7f2e3-112">BITS PowerShell Classes</span></span>
+
+<span data-ttu-id="7f2e3-113">**Namespace**: Microsoft. backgroundintelligenttransfer. Management</span><span class="sxs-lookup"><span data-stu-id="7f2e3-113">**Namespace**: Microsoft.BackgroundIntelligentTransfer.Management</span></span>
+
+<span data-ttu-id="7f2e3-114">**Assembly**: System. Management. Automation</span><span class="sxs-lookup"><span data-stu-id="7f2e3-114">**Assembly**: System.Management.Automation</span></span>
+
+<span data-ttu-id="7f2e3-115">Diese Bits-Befehls Klassen werden von Windows PowerShell implementiert.</span><span class="sxs-lookup"><span data-stu-id="7f2e3-115">These BITS command classes are implemented by Windows PowerShell.</span></span> <span data-ttu-id="7f2e3-116">Diese Klassen sind nur aus Gründen der Vollständigkeit in diesem Software Development Kit (SDK) enthalten.</span><span class="sxs-lookup"><span data-stu-id="7f2e3-116">These classes are included in this software development kit (SDK) for completeness only.</span></span> <span data-ttu-id="7f2e3-117">Die Member dieser Klassen können nicht direkt verwendet werden und sollten nicht zum Ableiten anderer Klassen verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="7f2e3-117">The members of these classes cannot be used directly, nor should they be used to derive other classes.</span></span>
+
+
+
+| <span data-ttu-id="7f2e3-118">Klasse</span><span class="sxs-lookup"><span data-stu-id="7f2e3-118">Class</span></span>                           | <span data-ttu-id="7f2e3-119">BESCHREIBUNG</span><span class="sxs-lookup"><span data-stu-id="7f2e3-119">Description</span></span>                                                                                                                                                                                                                                         |
+|---------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| <span data-ttu-id="7f2e3-120">**Addbihandfilecommand**</span><span class="sxs-lookup"><span data-stu-id="7f2e3-120">**AddBitsFileCommand**</span></span>          | <span data-ttu-id="7f2e3-121">Fügt einem vorhandenen Bits-Übertragungs Auftrag eine oder mehrere Dateien hinzu.</span><span class="sxs-lookup"><span data-stu-id="7f2e3-121">Adds one or more files to an existing BITS transfer job.</span></span><br/> <span data-ttu-id="7f2e3-122">Ausführliche Informationen zu den Parametern und Beispielen finden Sie im Cmdlet " [Add-bizfile](/previous-versions//dd347701(v=technet.10)) ".</span><span class="sxs-lookup"><span data-stu-id="7f2e3-122">See the [Add-BitsFile](/previous-versions//dd347701(v=technet.10)) cmdlet for detailed information about the parameters and for examples.</span></span><br/>                       |
+| <span data-ttu-id="7f2e3-123">**Clearbitstransfercommand**</span><span class="sxs-lookup"><span data-stu-id="7f2e3-123">**ClearBitsTransferCommand**</span></span>    | <span data-ttu-id="7f2e3-124">Bricht einen Bits-Übertragungs Auftrag ab.</span><span class="sxs-lookup"><span data-stu-id="7f2e3-124">Cancels a BITS transfer job.</span></span><br/> <span data-ttu-id="7f2e3-125">Ausführliche Informationen zu den Parametern und Beispielen finden Sie im Cmdlet " [Clear-bitstransfer]( /previous-versions//dd347701(v=technet.10)) ".</span><span class="sxs-lookup"><span data-stu-id="7f2e3-125">See the [Clear-BitsTransfer]( /previous-versions//dd347701(v=technet.10)) cmdlet for detailed information about the parameters and for examples.</span></span><br/>                                          |
+| <span data-ttu-id="7f2e3-126">**Completebitstransfercommand**</span><span class="sxs-lookup"><span data-stu-id="7f2e3-126">**CompleteBitsTransferCommand**</span></span> | <span data-ttu-id="7f2e3-127">Schließt einen Bits-Übertragungs Auftrag ab.</span><span class="sxs-lookup"><span data-stu-id="7f2e3-127">Completes a BITS transfer job.</span></span><br/> <span data-ttu-id="7f2e3-128">Ausführliche Informationen zu den Parametern und Beispielen finden Sie im Cmdlet [Complete-bitstransfer]( /previous-versions//dd347701(v=technet.10)) .</span><span class="sxs-lookup"><span data-stu-id="7f2e3-128">See the [Complete-BitsTransfer]( /previous-versions//dd347701(v=technet.10)) cmdlet for detailed information about the parameters and for examples.</span></span><br/>                                     |
+| <span data-ttu-id="7f2e3-129">**Getbitstransfercommand**</span><span class="sxs-lookup"><span data-stu-id="7f2e3-129">**GetBitsTransferCommand**</span></span>      | <span data-ttu-id="7f2e3-130">Ruft das zugeordnete bitsjob-Objekt für einen vorhandenen Bits-Übertragungs Auftrag ab.</span><span class="sxs-lookup"><span data-stu-id="7f2e3-130">Retrieves the associated BitsJob object for an existing BITS transfer job.</span></span><br/> <span data-ttu-id="7f2e3-131">Ausführliche Informationen zu den Parametern und Beispielen finden Sie im Cmdlet " [Get-bitstransfer](/previous-versions//dd347701(v=technet.10)) ".</span><span class="sxs-lookup"><span data-stu-id="7f2e3-131">See the [Get-BitsTransfer](/previous-versions//dd347701(v=technet.10)) cmdlet for detailed information about the parameters and for examples.</span></span><br/> |
+| <span data-ttu-id="7f2e3-132">**Newbitstransfercommand**</span><span class="sxs-lookup"><span data-stu-id="7f2e3-132">**NewBitsTransferCommand**</span></span>      | <span data-ttu-id="7f2e3-133">Erstellt einen neuen Bits-Übertragungs Auftrag.</span><span class="sxs-lookup"><span data-stu-id="7f2e3-133">Creates a new BITS transfer job.</span></span><br/> <span data-ttu-id="7f2e3-134">Ausführliche Informationen zu den Parametern und Beispielen finden Sie im Cmdlet [New-bitstransfer](/previous-versions//dd347701(v=technet.10)) .</span><span class="sxs-lookup"><span data-stu-id="7f2e3-134">See the [New-BitsTransfer](/previous-versions//dd347701(v=technet.10)) cmdlet for detailed information about the parameters and for examples.</span></span><br/>                                           |
+| <span data-ttu-id="7f2e3-135">**Resumebitstransfercommand**</span><span class="sxs-lookup"><span data-stu-id="7f2e3-135">**ResumeBitsTransferCommand**</span></span>   | <span data-ttu-id="7f2e3-136">Setzt einen Bits-Übertragungs Auftrag fort.</span><span class="sxs-lookup"><span data-stu-id="7f2e3-136">Resumes a BITS transfer job.</span></span><br/> <span data-ttu-id="7f2e3-137">Ausführliche Informationen zu den Parametern und Beispielen finden Sie im Cmdlet [Resume-bitstransfer](/previous-versions//dd347701(v=technet.10)) .</span><span class="sxs-lookup"><span data-stu-id="7f2e3-137">See the [Resume-BitsTransfer](/previous-versions//dd347701(v=technet.10)) cmdlet for detailed information about the parameters and for examples.</span></span><br/>                                            |
+| <span data-ttu-id="7f2e3-138">**Setbitstransfercommand**</span><span class="sxs-lookup"><span data-stu-id="7f2e3-138">**SetBitsTransferCommand**</span></span>      | <span data-ttu-id="7f2e3-139">Ändert die Eigenschaften eines vorhandenen Bits-Übertragungs Auftrags.</span><span class="sxs-lookup"><span data-stu-id="7f2e3-139">Modifies the properties of an existing BITS transfer job.</span></span><br/> <span data-ttu-id="7f2e3-140">Ausführliche Informationen zu den Parametern und Beispielen finden Sie im Cmdlet [Set-bitstransfer](/previous-versions//dd347701(v=technet.10)) .</span><span class="sxs-lookup"><span data-stu-id="7f2e3-140">See the [Set-BitsTransfer](/previous-versions//dd347701(v=technet.10)) cmdlet for detailed information about the parameters and for examples.</span></span><br/>                  |
+| <span data-ttu-id="7f2e3-141">**Suspendbitstransfercommand**</span><span class="sxs-lookup"><span data-stu-id="7f2e3-141">**SuspendBitsTransferCommand**</span></span>  | <span data-ttu-id="7f2e3-142">Hält einen Bits-Übertragungs Auftrag an.</span><span class="sxs-lookup"><span data-stu-id="7f2e3-142">Suspends a BITS transfer job.</span></span><br/> <span data-ttu-id="7f2e3-143">Ausführliche Informationen zu den Parametern und Beispielen finden Sie im Cmdlet [Suspend-bitstransfer](/previous-versions//dd347701(v=technet.10)) .</span><span class="sxs-lookup"><span data-stu-id="7f2e3-143">See the [Suspend-BitsTransfer](/previous-versions//dd347701(v=technet.10)) cmdlet for detailed information about the parameters and for examples.</span></span><br/>                                          |
+
+
+
+ 
+
+ 
+
