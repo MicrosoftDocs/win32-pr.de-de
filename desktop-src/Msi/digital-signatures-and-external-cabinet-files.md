@@ -1,0 +1,29 @@
+---
+description: Windows Installer können mithilfe digitaler Signaturen beschädigte Ressourcen erkennen.
+ms.assetid: 49f1c1f9-d342-47e0-8888-2eadc5dbd000
+title: Digitale Signaturen und externe CAB-Dateien
+ms.topic: article
+ms.date: 05/31/2018
+ms.openlocfilehash: f10e921b324a43a919a417f47953c0a44e4777ba
+ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "103866339"
+---
+# <a name="digital-signatures-and-external-cabinet-files"></a><span data-ttu-id="9fdd8-103">Digitale Signaturen und externe CAB-Dateien</span><span class="sxs-lookup"><span data-stu-id="9fdd8-103">Digital Signatures and External Cabinet Files</span></span>
+
+<span data-ttu-id="9fdd8-104">Windows Installer können mithilfe digitaler Signaturen beschädigte Ressourcen erkennen.</span><span class="sxs-lookup"><span data-stu-id="9fdd8-104">Windows Installer can use digital signatures to detect corrupted resources.</span></span> <span data-ttu-id="9fdd8-105">Wenn eine externe Ressource installiert wird, kann das Signatur Geber Zertifikat, das zur Ressource gehört, anhand eines im Paket erstellten Referenz Signatur Geber Zertifikats überprüft werden.</span><span class="sxs-lookup"><span data-stu-id="9fdd8-105">When installing an external resource, the signer certificate belonging to the resource may be verified against a reference signer certificate authored in the package.</span></span> <span data-ttu-id="9fdd8-106">Der Installer kann keine Signaturen für interne Schränke überprüfen.</span><span class="sxs-lookup"><span data-stu-id="9fdd8-106">The installer cannot verify signatures for internal cabinets.</span></span> <span data-ttu-id="9fdd8-107">Es können nur digitale Signaturen überprüft werden, indem die [msidigitalsignature-Tabelle](msidigitalsignature-table.md) und die [msidigitalcertificate-Tabelle](msidigitalcertificate-table.md)verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="9fdd8-107">It can only verify digital signatures by using the [MsiDigitalSignature table](msidigitalsignature-table.md) and [MsiDigitalCertificate table](msidigitalcertificate-table.md).</span></span>
+
+<span data-ttu-id="9fdd8-108">Windows Installer führt Folgendes aus, wenn eine in einer externen CAB-Datei gespeicherte Datei installiert wird:</span><span class="sxs-lookup"><span data-stu-id="9fdd8-108">Windows Installer does the following when installing a file stored in an external cabinet:</span></span>
+
+-   <span data-ttu-id="9fdd8-109">Der Installer überprüft, ob der Medien Eintrag für diese externe CAB-Datei in der [Tabelle msidigitalsignature](msidigitalsignature-table.md)aufgeführt ist.</span><span class="sxs-lookup"><span data-stu-id="9fdd8-109">The installer checks to see whether the media entry for that external cabinet is listed in the [MsiDigitalSignature table](msidigitalsignature-table.md).</span></span> <span data-ttu-id="9fdd8-110">Eine Datei, die in einer externen CAB-Datei gespeichert ist, wird durch einen Eintrag in der CAB-Spalte der [Medien Tabelle](media-table.md) identifiziert, der kein-Zeichen vorangestellt ist \# .</span><span class="sxs-lookup"><span data-stu-id="9fdd8-110">A file stored in an external cabinet is identified by having an entry in the Cabinet column of the [Media table](media-table.md) that is not prefixed by a '\#' character.</span></span>
+-   <span data-ttu-id="9fdd8-111">Bevor die externe CAB-Datei geöffnet wird, ruft der Installer WinVerifyTrust auf, um das aktuelle Zertifikat und die aktuellen Hash Informationen zu extrahieren.</span><span class="sxs-lookup"><span data-stu-id="9fdd8-111">Before opening the external cabinet, the installer calls WinVerifyTrust to extract the current certificate and hash information.</span></span> <span data-ttu-id="9fdd8-112">Wenn die aktuellen Signatur Informationen im CAB und die im Paket erstellten Signatur Informationen nicht übereinstimmen, tritt bei der Installation ein Fehler auf.</span><span class="sxs-lookup"><span data-stu-id="9fdd8-112">If there is a mismatch between the current signature information on the cabinet and the signature information authored in the package, the installation fails.</span></span> <span data-ttu-id="9fdd8-113">Die Installation schlägt fehl, da die CAB-Version möglicherweise kompromittiert wurde und nicht vertrauenswürdig ist.</span><span class="sxs-lookup"><span data-stu-id="9fdd8-113">The installation fails because the cabinet may have been compromised and cannot be trusted.</span></span>
+
+<span data-ttu-id="9fdd8-114">Weitere Informationen zur Verwendung digitaler Signaturen, digitaler Zertifikate und [**WinVerifyTrust**](/windows/desktop/api/wintrust/nf-wintrust-winverifytrust)finden Sie im Abschnitt " [Sicherheit](https://msdn.microsoft.com/library/cc527452.aspx) " des Microsoft Windows Software Development Kit (SDK).</span><span class="sxs-lookup"><span data-stu-id="9fdd8-114">For more information regarding the use of digital signatures, digital certificates, and [**WinVerifyTrust**](/windows/desktop/api/wintrust/nf-wintrust-winverifytrust), see the [Security](https://msdn.microsoft.com/library/cc527452.aspx) section of the Microsoft Windows Software Development Kit (SDK).</span></span>
+
+<span data-ttu-id="9fdd8-115">Weitere Informationen finden Sie unter [**msigetfilesignatureinformation**](/windows/desktop/api/Msi/nf-msi-msigetfilesignatureinformationa), [msidigitalcertificate Table](msidigitalcertificate-table.md)und [msidigitalsignature Table](msidigitalsignature-table.md).</span><span class="sxs-lookup"><span data-stu-id="9fdd8-115">For more information, see [**MsiGetFileSignatureInformation**](/windows/desktop/api/Msi/nf-msi-msigetfilesignatureinformationa), [MsiDigitalCertificate table](msidigitalcertificate-table.md), and [MsiDigitalSignature table](msidigitalsignature-table.md).</span></span>
+
+ 
+
+ 
