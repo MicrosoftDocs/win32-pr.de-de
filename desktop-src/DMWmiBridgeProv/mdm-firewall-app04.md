@@ -1,0 +1,149 @@
+---
+title: MDM_Firewall_App04-Klasse
+description: Die MDM- \_ Firewall \_ App04-Klasse wird verwendet, um die Windows Defender Firewall-Einstellungen zu konfigurieren.
+ms.assetid: d7844d89-97d3-43b4-85af-c9464d475167
+keywords:
+- MDM_Firewall_App04-Klasse
+- MDM_Firewall_App04-Klasse, beschrieben
+topic_type:
+- apiref
+api_name:
+- MDM_Firewall_App04
+- MDM_Firewall_App04.InstanceID
+- MDM_Firewall_App04.ParentID
+api_location:
+- DMWmiBridgeProv.dll
+api_type:
+- DllExport
+ms.topic: reference
+ms.date: 05/31/2018
+ms.openlocfilehash: 00a8558fb2834ba9b0143d644cf4922aa9a710d2
+ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "104103335"
+---
+# <a name="mdm_firewall_app04-class"></a>MDM- \_ Firewall \_ App04-Klasse
+
+\[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
+
+Die MDM- \_ Firewall \_ App04-Klasse wird verwendet, um die Windows Defender Firewall-Einstellungen zu konfigurieren.
+
+Die folgende Syntax enthält vereinfachten MOF-Code und schließt alle geerbten Eigenschaften ein.
+
+## <a name="syntax"></a>Syntax
+
+``` syntax
+[InPartition("local-system"), dynamic, provider("DMWmiBridgeProv1")]
+class MDM_Firewall_App04
+{
+  string InstanceID;
+  string ParentID;
+  string PackageFamilyName;
+  string FilePath;
+  string Fqbn;
+  string ServiceName;
+};
+```
+
+## <a name="members"></a>Member
+
+Die **MDM- \_ Firewall \_ App04** -Klasse verfügt über diese Typen von Membern:
+
+-   [Eigenschaften](#properties)
+
+### <a name="properties"></a>Eigenschaften
+
+Die **MDM- \_ Firewall \_ App04** -Klasse verfügt über diese Eigenschaften.
+
+<dl> <dt>
+
+[FilePath](/windows/client-management/mdm/firewall-csp#filepath)
+</dt> <dd> <dl> <dt>
+
+Datentyp: **Zeichenfolge**
+</dt> <dt>
+
+Zugriffstyp: Lesen/Schreiben
+</dt> </dl>
+
+</dd> <dt>
+
+[Vollständig verfügbar](/windows/client-management/mdm/firewall-csp#fqbn)
+</dt> <dd> <dl> <dt>
+
+Datentyp: **Zeichenfolge**
+</dt> <dt>
+
+Zugriffstyp: Lesen/Schreiben
+</dt> </dl>
+
+</dd> <dt>
+
+**InstanceID**
+</dt> <dd> <dl> <dt>
+
+Datentyp: **Zeichenfolge**
+</dt> <dt>
+
+Zugriffstyp: Schreibgeschützt
+</dt> <dt>
+
+Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
+</dt> </dl>
+
+</dd> <dt>
+
+[Packagefamilyname](/windows/client-management/mdm/firewall-csp#packagefamilyname)
+</dt> <dd> <dl> <dt>
+
+Datentyp: **Zeichenfolge**
+</dt> <dt>
+
+Zugriffstyp: Lesen/Schreiben
+</dt> </dl>
+
+</dd> <dt>
+
+**ParentID**
+</dt> <dd> <dl> <dt>
+
+Datentyp: **Zeichenfolge**
+</dt> <dt>
+
+Zugriffstyp: Schreibgeschützt
+</dt> <dt>
+
+Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
+</dt> </dl>
+
+</dd> <dt>
+
+[Service Name](/windows/client-management/mdm/firewall-csp#servicename)
+</dt> <dd> <dl> <dt>
+
+Datentyp: **Zeichenfolge**
+</dt> <dt>
+
+Zugriffstyp: Lesen/Schreiben
+</dt> </dl>
+
+</dd> </dl>
+
+## <a name="requirements"></a>Anforderungen
+
+
+
+| Anforderung | Wert |
+|-------------------------------------|-------------------------------------------------------------------------------------------------|
+| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                     |
+| Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                       |
+| Namespace<br/>                | Root \\ CIMV2 \\ MDM- \\ dmmap<br/>                                                              |
+| MOF<br/>                      | <dl> <dt>DMWmiBridgeProv1. MOF</dt> </dl> |
+| DLL<br/>                      | <dl> <dt>DMWmiBridgeProv.dll</dt> </dl>  |
+
+
+
+ 
+
