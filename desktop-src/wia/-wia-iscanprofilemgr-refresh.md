@@ -1,0 +1,79 @@
+---
+description: Listet alle Scan Profile im System erneut auf.
+ms.assetid: f5e49645-e81a-4750-8ea5-f0c698a61752
+title: 'Iscanprofilemgr:: Refresh-Methode (scanprofilemgr. h)'
+ms.topic: reference
+ms.date: 05/31/2018
+topic_type:
+- APIRef
+- kbSyntax
+api_name:
+- IScanProfileMgr.Refresh
+api_type:
+- COM
+api_location:
+- Scanprofilemgr.h
+ms.openlocfilehash: e4af44e95889abf35fe13e1669411513458a16c6
+ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "103959087"
+---
+# <a name="iscanprofilemgrrefresh-method"></a>Iscanprofilemgr:: Refresh-Methode
+
+Listet alle Scan Profile im System erneut auf.
+
+## <a name="syntax"></a>Syntax
+
+
+```C++
+HRESULT Refresh();
+```
+
+
+
+## <a name="parameters"></a>Parameter
+
+Diese Methode hat keine Parameter.
+
+## <a name="return-value"></a>Rückgabewert
+
+Typ: **HRESULT**
+
+Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+
+## <a name="remarks"></a>Bemerkungen
+
+Verwenden Sie diese Methode, wenn mehrere [**iscanprofilemgr**](-wia-iscanprofilemgr.md) -Objekte gleichzeitig Profile erstellen oder löschen.
+
+## <a name="requirements"></a>Anforderungen
+
+
+
+| Anforderung | Wert |
+|-------------------------------------|---------------------------------------------------------------------------------------------|
+| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                              |
+| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                        |
+| Header<br/>                   | <dl> <dt>Scanprofilemgr. h</dt> </dl> |
+| IDL<br/>                      | <dl> <dt>Scanprofiles. idl</dt> </dl> |
+
+
+
+## <a name="see-also"></a>Siehe auch
+
+<dl> <dt>
+
+[**Iscanprofilemgr**](-wia-iscanprofilemgr.md)
+</dt> <dt>
+
+[Profil Schema überprüfen](-wia-scan-profile-schema.md)
+</dt> </dl>
+
+ 
+
+ 
+
+
+
+
