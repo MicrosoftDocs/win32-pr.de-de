@@ -1,0 +1,30 @@
+---
+description: Übersicht über die Fehlerbehandlung bei Verwendung der StylusInput-APIs (Application Programming Interfaces).
+ms.assetid: 7d7ff5b2-3eda-4570-96fe-b3b8f41ff69b
+title: Überlegungen zur Fehlerbehandlung für die StylusInput-API
+ms.topic: article
+ms.date: 05/31/2018
+ms.openlocfilehash: 35fa582a8dbf531588f6d3d0c142c4ec7b40a058
+ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "103958980"
+---
+# <a name="error-handling-considerations-for-the-stylusinput-api"></a><span data-ttu-id="daeb0-103">Überlegungen zur Fehlerbehandlung für die StylusInput-API</span><span class="sxs-lookup"><span data-stu-id="daeb0-103">Error Handling Considerations for the StylusInput API</span></span>
+
+<span data-ttu-id="daeb0-104">Nicht behandelte Ausnahmen, die von einem Plug-in ausgelöst werden, werden durch das [**RealTimeStylus**](realtimestylus-class.md) -Objekt abgefangen.</span><span class="sxs-lookup"><span data-stu-id="daeb0-104">Unhandled exceptions thrown by a plug-in are caught by the [**RealTimeStylus**](realtimestylus-class.md) object.</span></span> <span data-ttu-id="daeb0-105">Wenn ein Plug-in eine Ausnahme auslöst, wird der normale Datenfluss unterbrochen.</span><span class="sxs-lookup"><span data-stu-id="daeb0-105">When a plug-in throws an exception, the normal flow of data is interrupted.</span></span> <span data-ttu-id="daeb0-106">Das **RealTimeStylus** -Objekt:</span><span class="sxs-lookup"><span data-stu-id="daeb0-106">The **RealTimeStylus** object:</span></span>
+
+1.  <span data-ttu-id="daeb0-107">Erstellt ein [ErrorData](/previous-versions/ms575221(v=vs.100)) -Objekt (in verwaltetem Code).</span><span class="sxs-lookup"><span data-stu-id="daeb0-107">Creates an [ErrorData](/previous-versions/ms575221(v=vs.100)) object (in managed code).</span></span>
+2.  <span data-ttu-id="daeb0-108">Ruft die [**Fehler**](/windows/desktop/api/RTSCom/nf-rtscom-istylusplugin-error) Methode (in verwaltetem Code, entweder die [Microsoft. StylusInput. IStylusSyncPlugin. Error](/previous-versions/ms824754(v=msdn.10)) -oder [Microsoft. StylusInput. IStylusAsyncPlugin. Error](/previous-versions/ms824771(v=msdn.10)) -Methode) des Plug-Ins auf, das die Ausnahme ausgelöst hat.</span><span class="sxs-lookup"><span data-stu-id="daeb0-108">Calls the [**Error**](/windows/desktop/api/RTSCom/nf-rtscom-istylusplugin-error) method (in managed code, either the [Microsoft.StylusInput.IStylusSyncPlugin.Error](/previous-versions/ms824754(v=msdn.10)) or [Microsoft.StylusInput.IStylusAsyncPlugin.Error](/previous-versions/ms824771(v=msdn.10)) method) of the plug-in that threw the exception.</span></span>
+3.  <span data-ttu-id="daeb0-109">Ruft die [**Fehler**](/windows/desktop/api/RTSCom/nf-rtscom-istylusplugin-error) Methode der restlichen Plug-ins in dieser Auflistung auf.</span><span class="sxs-lookup"><span data-stu-id="daeb0-109">Calls the [**Error**](/windows/desktop/api/RTSCom/nf-rtscom-istylusplugin-error) method of the remaining plug-ins in that collection.</span></span>
+4.  <span data-ttu-id="daeb0-110">Wenn das Plug-in, das die Ausnahme ausgelöst hat, ein synchrones Plug-in ist, wird das [ErrorData](/previous-versions/ms575221(v=vs.100)) -Objekt (in verwaltetem Code) der Ausgabe Warteschlange hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="daeb0-110">If the plug-in that threw the exception is a synchronous plug-in, the [ErrorData](/previous-versions/ms575221(v=vs.100)) object (in managed code) is added to the output queue.</span></span>
+5.  <span data-ttu-id="daeb0-111">Das [**RealTimeStylus**](realtimestylus-class.md) -Objekt nimmt die normale Verarbeitung der ursprünglichen Daten wieder auf.</span><span class="sxs-lookup"><span data-stu-id="daeb0-111">The [**RealTimeStylus**](realtimestylus-class.md) object resumes normal processing of the original data.</span></span>
+
+<span data-ttu-id="daeb0-112">Wenn ein Plug-in eine Ausnahme von der [**Fehler**](/windows/desktop/api/RTSCom/nf-rtscom-istylusplugin-error) Methode auslöst, fängt das [**RealTimeStylus**](realtimestylus-class.md) -Objekt die Ausnahme ab, generiert jedoch kein neues [ErrorData](/previous-versions/ms575221(v=vs.100)) -Objekt.</span><span class="sxs-lookup"><span data-stu-id="daeb0-112">If a plug-in throws an exception from its [**Error**](/windows/desktop/api/RTSCom/nf-rtscom-istylusplugin-error) method, the [**RealTimeStylus**](realtimestylus-class.md) object catches the exception but does not generate a new [ErrorData](/previous-versions/ms575221(v=vs.100)) object.</span></span> <span data-ttu-id="daeb0-113">Weitere Informationen zum Hinzufügen von ErrorData zur Warteschlange finden Sie unter [Plug-in-Daten und die RealTimeStylus-Klasse](plug-in-data-and-the-realtimestylus-class.md).</span><span class="sxs-lookup"><span data-stu-id="daeb0-113">For more information about how ErrorData is added to the queue, see [Plug-in Data and the RealTimeStylus Class](plug-in-data-and-the-realtimestylus-class.md).</span></span>
+
+<span data-ttu-id="daeb0-114">Das [**RealTimeStylus**](realtimestylus-class.md) -Objekt beendet die Verarbeitung von Daten aus dem Datenstrom des Tablettstifts nicht, wenn eines der Plug-ins eine Ausnahme auslöst.</span><span class="sxs-lookup"><span data-stu-id="daeb0-114">The [**RealTimeStylus**](realtimestylus-class.md) object does not stop processing data from the tablet pen's data stream when one of its plug-ins throws an exception.</span></span> <span data-ttu-id="daeb0-115">Abhängig vom Entwurf müssen einige der Plug-ins möglicherweise die [ErrorData](/previous-versions/ms575221(v=vs.100)) -Benachrichtigung abonnieren und ihr Verhalten ändern, wenn eine Ausnahme auftritt.</span><span class="sxs-lookup"><span data-stu-id="daeb0-115">Depending on your design, some of your plug-ins may need to subscribe to the [ErrorData](/previous-versions/ms575221(v=vs.100)) notification and modify their behavior when an exception occurs.</span></span>
+
+ 
+
+ 
