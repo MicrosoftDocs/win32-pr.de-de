@@ -1,0 +1,81 @@
+---
+description: Wird zur Darstellung von Registrierungs Einträgen verwendet, die das Zwischenspeichern von privaten Schlüsseln durch Microsoft-softwarebasierte CSPs steuern.
+ms.assetid: 67909072-72fe-4777-ae52-a7b9047c9dd5
+title: Zwischen Speicherungs Konstanten für private Schlüssel (Wincrypt. h)
+ms.topic: reference
+ms.date: 05/31/2018
+ms.openlocfilehash: 6afa1394b33f4e36e31934e813b7c9fc41814e28
+ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "103869007"
+---
+# <a name="private-key-caching-constants"></a>Zwischen Speicherungs Konstanten für private Schlüssel
+
+Die folgenden Konstanten werden verwendet, um Registrierungseinträge darzustellen, die das Zwischenspeichern von [*privaten Schlüsseln*](../secgloss/p-gly.md) durch Microsoft softwarebasierte CSPs steuern.
+
+
+
+| Konstante/Wert                                                                                                                                                                                                                                                                                                                                                                                    | BESCHREIBUNG                                                                                                |
+|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------|
+| <span id="szKEY_CRYPTOAPI_PRIVATE_KEY_OPTIONS"></span><span id="szkey_cryptoapi_private_key_options"></span><span id="SZKEY_CRYPTOAPI_PRIVATE_KEY_OPTIONS"></span><dl> <dt>**szkey \_ Optionen für \_ den \_ privaten \_ Schlüssel von CryptoAPI**</dt> <dt>"Software \\ \\ Policies \\ \\ Microsoft \\ \\ Cryptography"</dt> </dl> | Der Pfad unter dem Stammverzeichnis des **\_ lokalen \_ HKEY** -Computers der Registrierungseinträge für den privaten Schlüssel Caching.<br/> |
+
+
+
+Die folgenden Konstanten werden verwendet, um Registrierungs Werte zu identifizieren, die das Zwischenspeichern von privaten Schlüsseln für einen bestimmten Prozess von Microsoft-softwarebasierten CSPs global steuern.
+
+
+
+| Konstante/Wert                                                                                                                                                                                                                                                                                                                                                                                    | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| <span id="szPRIV_KEY_CACHE_MAX_ITEMS"></span><span id="szpriv_key_cache_max_items"></span><span id="SZPRIV_KEY_CACHE_MAX_ITEMS"></span><dl> <dt>**szpriv \_ \_Maximale Schlüssel \_ Cache \_ Elemente**</dt> <dt>"privkeycachemaxitems"</dt> </dl>                                                                  | Ein **reg \_ DWORD** -Wert unter dem Registrierungsschlüssel " **szkey \_ CryptoAPI \_ private \_ Key \_ options** ", der die maximale Anzahl von privaten Schlüsseln angibt, die gleichzeitig für einen einzelnen Prozess zwischengespeichert werden können. Diese Überprüfung wird ausgeführt, wenn ein gespeicherter privater Schlüssel gelesen wird. Wenn die maximale Anzahl überschritten wird, wird der zuletzt verwendete Schlüssel aus dem Cache entfernt.<br/> Wenn dieser Wert 0 (null) ist, werden keine Schlüssel zwischengespeichert. Wenn dieser Wert nicht vorhanden ist, wird der Standardwert für den **Schlüssel Cache für cpriv \_ Key \_ Cache \_ \_ \_** als Standardwert verwendet.<br/> Wenn auf einen privaten Schlüssel, der aus dem Cache gelöscht wird, zurzeit in einem geöffneten Kontext verwiesen wird, wird der Schlüssel beim nächsten Versuch, den Schlüssel zu verwenden, aus dem Speicher gelesen.<br/> **Windows Server 2003 und Windows XP mit SP1 und früher:** Dieser Registrierungs Wert wird nicht unterstützt.<br/>                                  |
+| <span id="cPRIV_KEY_CACHE_MAX_ITEMS_DEFAULT"></span><span id="cpriv_key_cache_max_items_default"></span><span id="CPRIV_KEY_CACHE_MAX_ITEMS_DEFAULT"></span><dl> <dt>**cpriv \_ Maximale Anzahl der Schlüssel \_ Cache \_ Elemente, \_ \_ Standard**</dt> Wert <dt>20</dt> </dl>                                                         | Der Standardwert des Registrierungs Eintrags für **\_ \_ \_ Maximale \_ Elemente des szpriv-Schlüssel Caches** , wenn kein Wert angegeben wird.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| <span id="szPRIV_KEY_CACHE_PURGE_INTERVAL_SECONDS"></span><span id="szpriv_key_cache_purge_interval_seconds"></span><span id="SZPRIV_KEY_CACHE_PURGE_INTERVAL_SECONDS"></span><dl> <dt>**szpriv \_ Lösch \_ Intervall für Schlüssel Cache \_ \_ \_ Sekunden**</dt> <dt>"privkeycachepurgeintervalseconds"</dt> </dl> | Ein **reg \_ DWORD** -Wert unter dem Registrierungsschlüssel " **szkey \_ CryptoAPI \_ private \_ Key \_ options** ", der das maximale Alter (in Sekunden) eines beliebigen zwischengespeicherten privaten Schlüssels angibt. Diese Überprüfung wird ausgeführt, wenn ein gespeicherter privater Schlüssel verwendet oder gelesen wird. Wenn diese Zeitspanne seit dem letzten löschen verstrichen ist, werden alle zwischengespeicherten Schlüssel, auf die seit dem letzten Löschen nicht verwiesen wurde, aus dem Cache entfernt.<br/> Wenn dieser Wert nicht vorhanden ist, wird der Standardwert des **cpriv \_ Key Cache-Lösch \_ \_ \_ Intervalls \_ Sekunden \_** als Standardwert verwendet.<br/> Wenn auf einen privaten Schlüssel, der aus dem Cache gelöscht wird, zurzeit in einem geöffneten Kontext verwiesen wird, wird der Schlüssel beim nächsten Versuch, den Schlüssel zu verwenden, aus dem Speicher gelesen.<br/> **Windows Server 2003 und Windows XP mit SP1 und früher:** Dieser Registrierungs Wert wird nicht unterstützt.<br/> |
+| <span id="cPRIV_KEY_CACHE_PURGE_INTERVAL_SECONDS_DEFAULT"></span><span id="cpriv_key_cache_purge_interval_seconds_default"></span><span id="CPRIV_KEY_CACHE_PURGE_INTERVAL_SECONDS_DEFAULT"></span><dl> <dt>**cpriv \_ Standardwert für das Löschen von Schlüssel \_ Cache \_ Sekunden, \_ \_ \_ Standard**</dt> <dt>86400</dt> </dl> | Der Standardwert des Registrierungs Eintrags " **szpriv \_ Key \_ Cache \_ Purge \_ Interval \_ seconds** ", wenn kein Wert angegeben wird. Dieser Wert entspricht einem Tag.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+
+
+
+Die folgenden Konstanten werden verwendet, um Registrierungs Werte zu identifizieren, die das Zwischenspeichern des privaten Schlüssels für eine einzelne Microsoft softwarebasierte [*Kryptografiedienstanbieter*](../secgloss/c-gly.md) -Instanz steuern.
+
+
+
+| Konstante/Wert                                                                                                                                                                                                                                                                                          | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| <dl> <dt></dt><dt>"Allowcachepw"</dt> </dl>                                                                                                                                                         | Ein **reg \_ DWORD** -Wert unter dem **HKEY \_ local \_ Machine \\ Software \\ Policies \\ Microsoft \\ Cryptography \\ Protect** -Registrierungsschlüssel, der angibt, ob das Zwischenspeichern von Kenn Wörtern für Kenn Wort geschützte Schlüssel in den softwarebasierten CSPs von Microsoft aktiviert ist. Wenn dieser Wert 0 ist, wird das Zwischenspeichern von Kenn Wörtern deaktiviert, und der Benutzer wird bei jeder Verwendung eines Kenn Wort geschützten Schlüssels zur Eingabe des Kennworts aufgefordert. Jeder andere Wert oder das Fehlen dieses Werts gibt an, dass das Kennwort zwischengespeichert wird. In diesem Szenario wird der Benutzer nur einmal pro Prozess für jeden dieser Schlüssel aufgefordert. <br/> |
+| <span id="szKEY_CACHE_ENABLED"></span><span id="szkey_cache_enabled"></span><span id="SZKEY_CACHE_ENABLED"></span><dl> <dt>**szkey \_ Cache \_ aktiviert**</dt> <dt>"cacheprivatekeys"</dt> </dl>          | Ein **reg \_ DWORD** -Wert unter dem Registrierungsschlüssel " **szkey \_ CryptoAPI \_ private \_ Key \_ options** ", der angibt, ob das Zwischenspeichern privater Schlüssel aktiviert ist. Wenn dieser Wert 1 ist, wird das Zwischenspeichern privater Schlüssel aktiviert. Jeder andere Wert oder das Fehlen dieses Werts gibt an, dass das Zwischenspeichern des privaten Schlüssels deaktiviert ist.<br/> **Windows Vista mit SP1, Windows Vista und Windows XP:** Dieser Registrierungs Wert wird nicht unterstützt.<br/>                                                                                                                                                        |
+| <span id="szKEY_CACHE_SECONDS"></span><span id="szkey_cache_seconds"></span><span id="SZKEY_CACHE_SECONDS"></span><dl> <dt>**szkey \_ Cache \_ Sekunden**</dt> <dt>"privatekeylifetimeseconds"</dt> </dl> | Ein **reg \_ DWORD** -Wert unter dem Registrierungsschlüssel " **szkey \_ CryptoAPI \_ private \_ Key \_ options** ", der das maximale Alter (in Sekunden) eines beliebigen zwischengespeicherten privaten Schlüssels angibt.<br/> **Windows XP:** Dieser Registrierungs Wert wird nicht unterstützt.<br/>                                                                                                                                                                                                                                                                                                                                          |
+
+
+
+## <a name="remarks"></a>Bemerkungen
+
+Die Unterschiede zwischen den Sekunden für den **szkey- \_ \_ Cache** und dem Intervall für das **Löschen von szpriv- \_ Schlüsseln \_ \_ \_ \_** liegen in den folgenden Werten:
+
+ **szkey- \_ Cache \_ Sekunden**  
+
+-   Dieser Wert gilt nur für einen bestimmten CSP. Nachdem der CSP freigegeben wurde, wird auch der CSP-Cache freigegeben.  
+-   Dieser Wert wird nur angewendet, wenn versucht wird, einen bestimmten privaten Schlüssel mit einem bestimmten Kontext Handle zu verwenden.  
+
+**Intervall für das Löschen von szpriv- \_ Schlüsseln in \_ \_ \_ \_ Sekunden**  
+
+-   Dieser Wert gilt für alle CSPs in einem Prozess. Auch wenn der CSP freigegeben wird, wird dieser Cache nicht freigegeben.  
+-   Dieser Wert gilt immer dann, wenn ein gespeicherter privater Schlüssel in einem einzelnen Prozess verwendet oder aus dem Speicher gelesen wird.  
+
+
+
+## <a name="requirements"></a>Anforderungen
+
+
+
+| Anforderung | Wert |
+|-------------------------------------|---------------------------------------------------------------------------------------|
+| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                           |
+| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>WinCrypt. h</dt> </dl> |
+
+
+
+ 
+
+ 
