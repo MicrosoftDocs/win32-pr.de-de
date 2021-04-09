@@ -1,0 +1,100 @@
+---
+description: Transformiert einen 4D-Vektor durch eine angegebene Matrix.
+ms.assetid: ccbf33bc-1f94-4cf8-b048-220d54516e00
+title: D3DXVec4Transform-Funktion (D3DX10Math. h)
+ms.topic: reference
+ms.date: 05/31/2018
+topic_type:
+- APIRef
+- kbSyntax
+api_name:
+- D3DXVec4Transform
+api_type:
+- HeaderDef
+api_location:
+- D3DX10Math.h
+ms.openlocfilehash: 56fc6b3041d799cda3e98d459b2523d4b171df10
+ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103870095"
+---
+# <a name="d3dxvec4transform-function-d3dx10mathh"></a>D3DXVec4Transform-Funktion (D3DX10Math. h)
+
+Transformiert einen 4D-Vektor durch eine angegebene Matrix.
+
+## <a name="syntax"></a>Syntax
+
+
+```C++
+D3DXVECTOR4* D3DXVec4Transform(
+  _Inout_       D3DXVECTOR4 *pOut,
+  _In_    const D3DXVECTOR4 *pV,
+  _In_    const D3DXMATRIX  *pM
+);
+```
+
+
+
+## <a name="parameters"></a>Parameter
+
+<dl> <dt>
+
+*Pout* \[ in, out\]
+</dt> <dd>
+
+Typ: **[ **D3DXVECTOR4**](../direct3d9/d3dxvector4.md)\***
+
+Zeiger auf das [**D3DXVECTOR4**](d3d10-d3dxvector4.md) , das das Ergebnis des Vorgangs ist.
+
+</dd> <dt>
+
+*PV* \[ in\]
+</dt> <dd>
+
+Typ: **Konstanten [**D3DXVECTOR4**](../direct3d9/d3dxvector4.md) \***
+
+Ein Zeiger auf die Quell-D3DXVECTOR4-Struktur.
+
+</dd> <dt>
+
+*pm* \[ in\]
+</dt> <dd>
+
+Typ: **Konstanten [**D3DXMATRIX**](../direct3d9/d3dxmatrix.md) \***
+
+Ein Zeiger auf die Quell- [**D3DXMATRIX**](d3d10-d3dxmatrix.md) -Struktur.
+
+</dd> </dl>
+
+## <a name="return-value"></a>Rückgabewert
+
+Typ: **[ **D3DXVECTOR4**](../direct3d9/d3dxvector4.md)\***
+
+Zeiger auf eine D3DXVECTOR4-Struktur, die der transformierte 4D-Vektor ist.
+
+## <a name="remarks"></a>Bemerkungen
+
+Der Rückgabewert für diese Funktion ist derselbe Wert, der im Pout-Parameter zurückgegeben wird. Auf diese Weise kann die D3DXVec4Transform-Funktion als Parameter für eine andere Funktion verwendet werden.
+
+## <a name="requirements"></a>Anforderungen
+
+
+
+| Anforderung | Wert |
+|-------------------|-----------------------------------------------------------------------------------------|
+| Header<br/> | <dl> <dt>D3DX10Math. h</dt> </dl> |
+
+
+
+## <a name="see-also"></a>Siehe auch
+
+<dl> <dt>
+
+[Mathematische Funktionen](d3d10-graphics-reference-d3dx10-functions-math.md)
+</dt> </dl>
+
+ 
+
+ 
