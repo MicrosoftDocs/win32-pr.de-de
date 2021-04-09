@@ -1,0 +1,35 @@
+---
+title: Direct2D-Beispiele
+description: In den folgenden Beispielen wird die Direct2D-API veranschaulicht.
+ms.assetid: 4e972beb-5c69-4617-a5fe-0e0e4759240a
+keywords:
+- Direct2D, Beispiele
+ms.topic: article
+ms.date: 05/31/2018
+ms.openlocfilehash: c4219d5b10a6a46659fc0c13ac091a2f3ab01b2c
+ms.sourcegitcommit: 6f905c836d3fd04934fb3e5f1a56b4a421f7596f
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "103948497"
+---
+# <a name="direct2d-samples"></a><span data-ttu-id="9bbea-104">Direct2D-Beispiele</span><span class="sxs-lookup"><span data-stu-id="9bbea-104">Direct2D samples</span></span>
+
+<span data-ttu-id="9bbea-105">In den folgenden Beispielen wird die Direct2D-API veranschaulicht.</span><span class="sxs-lookup"><span data-stu-id="9bbea-105">The following samples demonstrate the Direct2D API.</span></span>
+
+## <a name="windows-10-and-microsoft-visual-studio-2015-samples"></a><span data-ttu-id="9bbea-106">Beispiele zu Windows 10 und Microsoft Visual Studio 2015</span><span class="sxs-lookup"><span data-stu-id="9bbea-106">Windows 10 and Microsoft Visual Studio 2015 samples</span></span>
+
+| <span data-ttu-id="9bbea-107">Beispiel</span><span class="sxs-lookup"><span data-stu-id="9bbea-107">Sample</span></span> | <span data-ttu-id="9bbea-108">BESCHREIBUNG</span><span class="sxs-lookup"><span data-stu-id="9bbea-108">Description</span></span> |
+|-|-|
+| [<span data-ttu-id="9bbea-109">Beispiel für benutzerdefinierte Direct2D-Bildeffekte</span><span class="sxs-lookup"><span data-stu-id="9bbea-109">Direct2D custom image effects sample</span></span>](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/D2DCustomEffects) | <span data-ttu-id="9bbea-110">In diesem Beispiel wird veranschaulicht, wie [benutzerdefinierte Effekte](custom-effects.md) mit HLSL-Pixel-, Scheitelpunkt-und Compute-Shadern implementiert werden.</span><span class="sxs-lookup"><span data-stu-id="9bbea-110">This sample demonstrates how to implement [Custom effects](custom-effects.md) using HLSL pixel, vertex, and compute shaders.</span></span> |
+| [<span data-ttu-id="9bbea-111">Beispiel für ein Direct2D-Farbverlaufsgitter</span><span class="sxs-lookup"><span data-stu-id="9bbea-111">Direct2D gradient mesh sample</span></span>](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/D2DGradientMesh) | <span data-ttu-id="9bbea-112">In diesem Beispiel wird veranschaulicht, wie ein Farbverlaufs Mesh in Direct2D instanziiert und Rendern wird.</span><span class="sxs-lookup"><span data-stu-id="9bbea-112">This sample demonstrates how to instantiate and render a gradient mesh in Direct2D.</span></span> <span data-ttu-id="9bbea-113">In diesen Beispielen wird die von Direct2D bereitgestellte Hilfsmethode zum Erstellen eines Netzes verwendet, das aus zwei tensorflow-Patches besteht, die eine Seite gemeinsam verwenden.</span><span class="sxs-lookup"><span data-stu-id="9bbea-113">This samples uses the helper method provided by Direct2D to create a mesh consisting of two tensor patches that share a side.</span></span> |
+| [<span data-ttu-id="9bbea-114">Beispiel für eine Direct2D-Fotoanpassung</span><span class="sxs-lookup"><span data-stu-id="9bbea-114">Direct2D photo adjustment sample</span></span>](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/D2DPhotoAdjustment) | <span data-ttu-id="9bbea-115">In diesem Beispiel wird veranschaulicht, wie Sie mit Direct2D-und Direct2D-Effekten einen Foto-Viewer und Editor erstellen.</span><span class="sxs-lookup"><span data-stu-id="9bbea-115">This sample demonstrates how to build a photo viewer and editor using Direct2D and Direct2D Effects.</span></span> |
+
+## <a name="windows-8-and-microsoft-visual-studio-2013-samples"></a><span data-ttu-id="9bbea-116">Beispiele für Windows 8 und Microsoft Visual Studio 2013</span><span class="sxs-lookup"><span data-stu-id="9bbea-116">Windows 8 and Microsoft Visual Studio 2013 samples</span></span>
+
+| | |
+|-|-|
+| [<span data-ttu-id="9bbea-117">Direct2D-Beispiel für zusammengesetzte Effekt Modi</span><span class="sxs-lookup"><span data-stu-id="9bbea-117">Direct2D composite effect modes sample</span></span>](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/master/Official%20Windows%20Platform%20Sample/Direct2D%20basic%20image%20effects%20sample) | <span data-ttu-id="9bbea-118">Dieses Beispiel zeigt den großen Bereich der zusammengesetzten und Füllmethoden, die in Direct2D verfügbar sind.</span><span class="sxs-lookup"><span data-stu-id="9bbea-118">This sample shows the wide range of composite and blend modes available from Direct2D.</span></span> |
+| [<span data-ttu-id="9bbea-119">Beispiel für Direct2D grundlegende Bildeffekte</span><span class="sxs-lookup"><span data-stu-id="9bbea-119">Direct2D basic image effects sample</span></span>](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/master/Official%20Windows%20Platform%20Sample/Direct2D%20basic%20image%20effects%20sample) | <span data-ttu-id="9bbea-120">Dieses Beispiel zeigt, wie Sie ein Bild laden, den gausischen Weichzeichnereffekt darauf anwenden und dann in einem Fenster "Windows:: UI:: Core:: corewindow" anzeigen können.</span><span class="sxs-lookup"><span data-stu-id="9bbea-120">This sample shows how to load an image, apply the Gaussian blur effect to it, and then display it in a Windows::UI::Core::CoreWindow.</span></span> |
+| [<span data-ttu-id="9bbea-121">JPEG YCbCr-Optimierungen in Direct2D und WIC Sample</span><span class="sxs-lookup"><span data-stu-id="9bbea-121">JPEG YCbCr optimizations in Direct2D and WIC sample</span></span>](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/master/Official%20Windows%20Platform%20Sample/JPEG%20YCbCr%20optimizations%20in%20Direct2D%20and%20WIC%20sample) | <span data-ttu-id="9bbea-122">Veranschaulicht Leistungsoptimierungen in Direct2D und der Windows-Abbild Erstellungs Komponente zum Rendern von Bilddaten im JPEG YCbCr-Format nativ.</span><span class="sxs-lookup"><span data-stu-id="9bbea-122">Demonstrates performance optimizations in Direct2D and the Windows Imaging Component rendering image data in the JPEG YCbCr format natively.</span></span> |
+| [<span data-ttu-id="9bbea-123">Beispiel für DirectX-Postkarte-App</span><span class="sxs-lookup"><span data-stu-id="9bbea-123">DirectX postcard app sample</span></span>](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/master/Official%20Windows%20Platform%20Sample/DirectX%20postcard%20app%20sample) | <span data-ttu-id="9bbea-124">Dieses Beispiel veranschaulicht die End-to-End-Implementierung einer einfachen Windows Store-App unter Verwendung von DirectX mit C++ für die Postkarte-Erstellung mithilfe von DirectX und XAML-Interop.</span><span class="sxs-lookup"><span data-stu-id="9bbea-124">This sample demonstrates the end-to-end implementation of a simple Windows Store app using DirectX with C++ for postcard creation using DirectX and XAML interop.</span></span> |

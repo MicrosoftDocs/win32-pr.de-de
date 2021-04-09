@@ -1,0 +1,44 @@
+---
+description: Der Windows Installer speichert alle Daten Bank Zeichenfolgen in einem einzelnen freigegebenen Zeichen folgen Pool, um die Größe der Datenbank zu reduzieren und die Leistung zu verbessern.
+ms.assetid: b627f3da-3545-4c1a-85b0-d8845fdac621
+title: String-Pool Validierung
+ms.topic: article
+ms.date: 05/31/2018
+ms.openlocfilehash: ecb544b5c76026846f7e8b8f6f331195426ab55c
+ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "104130277"
+---
+# <a name="string-pool-validation"></a><span data-ttu-id="f5c39-103">String-Pool Validierung</span><span class="sxs-lookup"><span data-stu-id="f5c39-103">String-Pool Validation</span></span>
+
+<span data-ttu-id="f5c39-104">Der Windows Installer speichert alle Daten Bank Zeichenfolgen in einem einzelnen freigegebenen Zeichen folgen Pool, um die Größe der Datenbank zu reduzieren und die Leistung zu verbessern.</span><span class="sxs-lookup"><span data-stu-id="f5c39-104">The Windows Installer stores all database strings in a single shared string pool to reduce the size of the database and to improve performance.</span></span> <span data-ttu-id="f5c39-105">Die einzige Möglichkeit, den Zeichen folgen Pool zu validieren, ist die Verwendung des Msiinfo-Tools, das im Windows Installer SDK gefunden wurde.</span><span class="sxs-lookup"><span data-stu-id="f5c39-105">The only means of validating the string pool is to use the MsiInfo tool found in the Windows Installer SDK.</span></span>
+
+<span data-ttu-id="f5c39-106">Die Überprüfung des Zeichen folgen Pools besteht aus zwei Hauptprüfungen:</span><span class="sxs-lookup"><span data-stu-id="f5c39-106">String pool verification consists of two main checks:</span></span>
+
+-   [<span data-ttu-id="f5c39-107">DBCS-Zeichen folgen Tests</span><span class="sxs-lookup"><span data-stu-id="f5c39-107">DBCS string tests</span></span>](#dbcs-string-tests)
+-   [<span data-ttu-id="f5c39-108">Verweis Zähler Überprüfung</span><span class="sxs-lookup"><span data-stu-id="f5c39-108">Reference count verification</span></span>](#reference-count-verification)
+
+## <a name="dbcs-string-tests"></a><span data-ttu-id="f5c39-109">DBCS-Zeichen folgen Tests</span><span class="sxs-lookup"><span data-stu-id="f5c39-109">DBCS String Tests</span></span>
+
+<span data-ttu-id="f5c39-110">Die DBCS-Zeichen folgen Tests Scannen jede Zeichenfolge in der Datenbank auf zwei Kriterien: Wenn ein beliebiges Zeichen ein erweitertes Zeichen (größer als 127) ist, wird die Zeichenfolge gekennzeichnet, und es wird eine Meldung angezeigt, die besagt, dass die Codepage der Datenbank ungültig ist, da diese Zeichen erfordern, dass eine bestimmte Codepage auf allen Systemen konsistent gerendert wird.</span><span class="sxs-lookup"><span data-stu-id="f5c39-110">The DBCS string tests scan each string in the database for two criteria: For packages with a neutral code page marked, if any character is an extended character (greater than 127), the string is flagged and a message is displayed saying that the code page of the database is invalid because these characters require a specific code page to be rendered consistently on all systems.</span></span>
+
+<span data-ttu-id="f5c39-111">Wenn die Datenbank über eine Codepage verfügt, wird jede Zeichenfolge auf einen ungültigen DBCS-Indikator überprüft.</span><span class="sxs-lookup"><span data-stu-id="f5c39-111">If the database has a code page, each string is scanned for an invalid DBCS indicator.</span></span> <span data-ttu-id="f5c39-112">Wenn eine nicht neutrale Zeichenfolge nicht ordnungsgemäß markiert wurde, werden die Zeichen nicht korrekt dargestellt.</span><span class="sxs-lookup"><span data-stu-id="f5c39-112">If a non-neutral string has been improperly marked, the characters will not render correctly.</span></span> <span data-ttu-id="f5c39-113">(Dies wird in der Regel durch erzwingen der Codepage zu einem bestimmten Wert verursacht, indem Sie das \_ Forcecodepage-Tabelle mit nicht neutralen Zeichen folgen, die sich bereits in der Datenbank befinden.) Beachten Sie, dass diese Überprüfung erfordert, dass die Codepage der Datenbank auf dem System installiert ist.</span><span class="sxs-lookup"><span data-stu-id="f5c39-113">(This is most commonly caused by forcing the code page to a particular value using the \_ForceCodepage table with non-neutral strings already in the database.) Note that this check requires that the code page of the database be installed on the system.</span></span>
+
+<span data-ttu-id="f5c39-114">Wenn ein Code Page Problem vorliegt, kann der Benutzer den Fehler möglicherweise beheben, indem er die \_ forcecodepage-Tabelle verwendet, um die Codepage der Datenbank auf den entsprechenden Wert zu erzwingen.</span><span class="sxs-lookup"><span data-stu-id="f5c39-114">If there is a code page problem, the user may fix the error by using the \_ForceCodepage table to force the code page of the database to the appropriate value.</span></span> <span data-ttu-id="f5c39-115">Weitere Informationen finden Sie unter [Code Page Handling](code-page-handling-windows-installer-.md).</span><span class="sxs-lookup"><span data-stu-id="f5c39-115">For more information, see [Code Page Handling](code-page-handling-windows-installer-.md).</span></span>
+
+## <a name="reference-count-verification"></a><span data-ttu-id="f5c39-116">Verweis Zähler Überprüfung</span><span class="sxs-lookup"><span data-stu-id="f5c39-116">Reference Count Verification</span></span>
+
+<span data-ttu-id="f5c39-117">Zum Überprüfen der Verweis Anzahl aller Zeichen folgen wird jede Tabelle auf Zeichen folgen Werte überprüft, die Anzahl der einzelnen Zeichen folgen wird beibehalten, und das Ergebnis wird mit dem gespeicherten Verweis Zähler im Daten Bank Zeichenfolgen-Pool verglichen.</span><span class="sxs-lookup"><span data-stu-id="f5c39-117">To verify the reference counts of all strings, every table is scanned for string values, a count of each distinct string is kept, and the result is compared to the stored reference count in the database string pool.</span></span>
+
+<span data-ttu-id="f5c39-118">Wenn ein Problem mit der Zeichenfolge Verweis Zählung vorliegt, sollte der Benutzer jede Tabelle der Datenbank sofort mithilfe von " [**msidatabaseexport**](/windows/desktop/api/Msiquery/nf-msiquery-msidatabaseexporta)" exportieren, eine neue Datenbank erstellen und die Tabellen mithilfe von " [**msidatabaseimport**](/windows/desktop/api/Msiquery/nf-msiquery-msidatabaseimporta)" in die neue Datenbank importieren.</span><span class="sxs-lookup"><span data-stu-id="f5c39-118">If there is a string reference count problem, the user should immediately export each table of the database using [**MsiDatabaseExport**](/windows/desktop/api/Msiquery/nf-msiquery-msidatabaseexporta), create a new database, and import the tables into the new database using [**MsiDatabaseImport**](/windows/desktop/api/Msiquery/nf-msiquery-msidatabaseimporta).</span></span> <span data-ttu-id="f5c39-119">Die neue Datenbank hat dann denselben Inhalt wie die alte Datenbank, aber die Anzahl der Zeichen folgen Verweise ist richtig.</span><span class="sxs-lookup"><span data-stu-id="f5c39-119">The new database then has the same content as the old database, but the string reference counts are correct.</span></span> <span data-ttu-id="f5c39-120">Durch das Hinzufügen oder Löschen von Daten aus einer Datenbank mit einem beschädigten Zeichen folgen Pool kann die Beschädigung der Datenbank und des Daten Verlusts erhöht werden. Daher ist es wichtig, diese Schritte schnell auszuführen, um weiteren Datenverlust zu verhindern.</span><span class="sxs-lookup"><span data-stu-id="f5c39-120">Adding or deleting data from a database with a corrupt string pool can increase corruption of the database and loss of data, so taking these steps quickly is important to prevent further data loss.</span></span>
+
+<span data-ttu-id="f5c39-121">Beachten Sie beim Neuerstellen von Datenbanken, dass alle erforderlichen Speicher-und Datenströme in die neue Datenbank eingebettet werden (siehe Tabelle " [ \_ Streams Table](-streams-table.md) " und " [ \_ Speicher Table](-storages-table.md)"), und beachten Sie die Probleme mit der</span><span class="sxs-lookup"><span data-stu-id="f5c39-121">When rebuilding databases, remember to embed any necessary storages and streams in the new database (see [\_Streams Table](-streams-table.md) and [\_Storages Table](-storages-table.md)) and be aware of code page issues.</span></span> <span data-ttu-id="f5c39-122">Denken Sie auch daran, die erforderlichen Eigenschaften für [Zusammenfassungs Informationsdaten Ströme](summary-information-stream.md) festzulegen.</span><span class="sxs-lookup"><span data-stu-id="f5c39-122">Also remember to set each of the necessary [Summary Information Stream](summary-information-stream.md) properties.</span></span>
+
+ 
+
+ 
+
+
+

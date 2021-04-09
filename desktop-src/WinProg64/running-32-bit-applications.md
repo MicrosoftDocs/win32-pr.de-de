@@ -1,0 +1,43 @@
+---
+title: Ausführen von 32-Bit-Anwendungen
+description: Führen Sie Windows-basierte 32-Bit-Anwendungen nahtlos auf 64-Bit-Fenstern mit dem WOW64 x86-Emulator aus. Außerdem erfahren Sie mehr über den Registry Director, den Dateisystem-Redirector, die Anwendungs Installation auf 64-Bit-Systemen und das Debuggen von WOW64.
+ms.assetid: ac75c5af-86e8-4282-9a8e-8db3c22cbda0
+keywords:
+- WOW64 64-Bit-Windows-Programmierung
+- WOW64 64-Bit-Windows-Programmierung, Informationen zu
+- 32-Bit-Anwendungen auf 64-Bit Windows 64-Bit Windows-Programmierung
+- 64-Bit-Windows-Programmier Handbuch 64-Bit Windows-Programmierung, WOW64 siehe WOW64
+ms.topic: article
+ms.date: 05/31/2018
+ms.openlocfilehash: 39872be28da0853f0cff62a9a0ab82065105c687
+ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "103948794"
+---
+# <a name="running-32-bit-applications"></a><span data-ttu-id="1d523-108">Ausführen von 32-Bit-Anwendungen</span><span class="sxs-lookup"><span data-stu-id="1d523-108">Running 32-bit Applications</span></span>
+
+<span data-ttu-id="1d523-109">WOW64 ist der x86-Emulator, der es ermöglicht, Windows-basierte 32-Bit-Anwendungen nahtlos auf 64-Bit-Fenstern auszuführen.</span><span class="sxs-lookup"><span data-stu-id="1d523-109">WOW64 is the x86 emulator that allows 32-bit Windows-based applications to run seamlessly on 64-bit Windows.</span></span> <span data-ttu-id="1d523-110">Dadurch können 32-Bit-Windows-Anwendungen (x86) nahtlos in 64-Bit (x64)-Fenstern und für 32-Bit-(x86) und 32-Bit (Arm)-Windows-Anwendungen ausgeführt werden, um Sie nahtlos in ARM64-Fenstern (64 Bit) auszuführen.</span><span class="sxs-lookup"><span data-stu-id="1d523-110">This allows for 32-bit (x86) Windows applications to run seamlessly in 64-bit (x64) Windows, as well as for 32-bit (x86) and 32-bit (ARM) Windows applications to run seamlessly in 64-bit (ARM64) Windows.</span></span> <span data-ttu-id="1d523-111">WOW64 wird mit dem Betriebssystem bereitgestellt und muss nicht explizit aktiviert werden.</span><span class="sxs-lookup"><span data-stu-id="1d523-111">WOW64 is provided with the operating system and does not have to be explicitly enabled.</span></span> <span data-ttu-id="1d523-112">Weitere Informationen finden Sie unter [WOW64-Implementierungs Details](wow64-implementation-details.md).</span><span class="sxs-lookup"><span data-stu-id="1d523-112">For more information, see [WOW64 Implementation Details](wow64-implementation-details.md).</span></span>
+
+<span data-ttu-id="1d523-113">Das System isoliert 32-Bit-Anwendungen von 64-Bit-Anwendungen, einschließlich der Vermeidung von Datei-und Registrierungs Kollisionen.</span><span class="sxs-lookup"><span data-stu-id="1d523-113">The system isolates 32-bit applications from 64-bit applications, which includes preventing file and registry collisions.</span></span> <span data-ttu-id="1d523-114">Konsolen-, GUI-und Dienst Anwendungen werden unterstützt.</span><span class="sxs-lookup"><span data-stu-id="1d523-114">Console, GUI, and service applications are supported.</span></span> <span data-ttu-id="1d523-115">Das System stellt Interoperabilität zwischen der 32/64-Grenze für Szenarien wie Ausschneiden, einfügen und com bereit.</span><span class="sxs-lookup"><span data-stu-id="1d523-115">The system provides interoperability across the 32/64 boundary for scenarios such as cut and paste and COM.</span></span> <span data-ttu-id="1d523-116">Allerdings können 32-Bit-Prozesse keine 64-Bit-DLLs für die Ausführung laden, und 64-Bit-Prozesse können keine 32-Bit-DLLs für die Ausführung laden.</span><span class="sxs-lookup"><span data-stu-id="1d523-116">However, 32-bit processes cannot load 64-bit DLLs for execution, and 64-bit processes cannot load 32-bit DLLs for execution.</span></span> <span data-ttu-id="1d523-117">Diese Einschränkung gilt nicht für DLLs, die als Datendateien oder Bild Ressourcen Dateien geladen werden. Weitere Informationen finden Sie unter [**LoadLibraryEx**](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibraryexa).</span><span class="sxs-lookup"><span data-stu-id="1d523-117">This restriction does not apply to DLLs loaded as data files or image resource files; for more information, see [**LoadLibraryEx**](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibraryexa).</span></span>
+
+<span data-ttu-id="1d523-118">Eine 32-Bit-Anwendung kann erkennen, ob Sie unter WOW64 durch Aufrufen der [**IsWow64Process**](/windows/desktop/api/wow64apiset/nf-wow64apiset-iswow64process) -Funktion ausgeführt wird (verwenden Sie [**IsWow64Process2**](/windows/desktop/api/wow64apiset/nf-wow64apiset-iswow64process2) , wenn Windows 10 als Zielversion verwendet wird).</span><span class="sxs-lookup"><span data-stu-id="1d523-118">A 32-bit application can detect whether it is running under WOW64 by calling the [**IsWow64Process**](/windows/desktop/api/wow64apiset/nf-wow64apiset-iswow64process) function (use [**IsWow64Process2**](/windows/desktop/api/wow64apiset/nf-wow64apiset-iswow64process2) if targeting Windows 10).</span></span> <span data-ttu-id="1d523-119">Die Anwendung kann zusätzliche Informationen über den Prozessor mithilfe der [**GetNativeSystemInfo**](/windows/desktop/api/sysinfoapi/nf-sysinfoapi-getnativesysteminfo) -Funktion abrufen.</span><span class="sxs-lookup"><span data-stu-id="1d523-119">The application can obtain additional information about the processor by using the [**GetNativeSystemInfo**](/windows/desktop/api/sysinfoapi/nf-sysinfoapi-getnativesysteminfo) function.</span></span>
+
+<span data-ttu-id="1d523-120">Beachten Sie, dass 64-Bit-Windows die Ausführung von 16-Bit-Windows-basierten Anwendungen nicht unterstützt.</span><span class="sxs-lookup"><span data-stu-id="1d523-120">Note that 64-bit Windows does not support running 16-bit Windows-based applications.</span></span> <span data-ttu-id="1d523-121">Der Hauptgrund ist, dass Handles 32 signifikante Bits auf 64-Bit-Fenstern aufweisen.</span><span class="sxs-lookup"><span data-stu-id="1d523-121">The primary reason is that handles have 32 significant bits on 64-bit Windows.</span></span> <span data-ttu-id="1d523-122">Daher können Handles nicht abgeschnitten und ohne Datenverlust an 16-Bit-Anwendungen übermittelt werden.</span><span class="sxs-lookup"><span data-stu-id="1d523-122">Therefore, handles cannot be truncated and passed to 16-bit applications without loss of data.</span></span> <span data-ttu-id="1d523-123">Der Versuch, 16-Bit-Anwendungen zu starten, schlägt mit folgendem Fehler fehl: **fehlerhafte \_ exe- \_ \_ Format**.</span><span class="sxs-lookup"><span data-stu-id="1d523-123">Attempts to launch 16-bit applications fail with the following error: **ERROR\_BAD\_EXE\_FORMAT**.</span></span>
+
+## <a name="in-this-section"></a><span data-ttu-id="1d523-124">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="1d523-124">In this Section</span></span>
+
+-   [<span data-ttu-id="1d523-125">Leistung und Arbeitsspeicher Verbrauch unter WOW64</span><span class="sxs-lookup"><span data-stu-id="1d523-125">Performance and Memory Consumption Under WOW64</span></span>](performance-and-memory-consumption.md)
+-   [<span data-ttu-id="1d523-126">WOW64-Implementierungs Details</span><span class="sxs-lookup"><span data-stu-id="1d523-126">WOW64 Implementation Details</span></span>](wow64-implementation-details.md)
+-   [<span data-ttu-id="1d523-127">Registrierungs Redirector</span><span class="sxs-lookup"><span data-stu-id="1d523-127">Registry Redirector</span></span>](registry-redirector.md)
+-   [<span data-ttu-id="1d523-128">Datei System-Redirector</span><span class="sxs-lookup"><span data-stu-id="1d523-128">File System Redirector</span></span>](file-system-redirector.md)
+-   [<span data-ttu-id="1d523-129">Speicherverwaltung</span><span class="sxs-lookup"><span data-stu-id="1d523-129">Memory Management</span></span>](memory-management.md)
+-   [<span data-ttu-id="1d523-130">Prozessoraffinität</span><span class="sxs-lookup"><span data-stu-id="1d523-130">Processor Affinity</span></span>](processor-affinity.md)
+-   [<span data-ttu-id="1d523-131">Prozessübergreifende Kommunikation</span><span class="sxs-lookup"><span data-stu-id="1d523-131">Interprocess Communication</span></span>](interprocess-communication.md)
+-   [<span data-ttu-id="1d523-132">Anwendungs Installation</span><span class="sxs-lookup"><span data-stu-id="1d523-132">Application Installation</span></span>](application-installation.md)
+-   [<span data-ttu-id="1d523-133">Debuggen WOW64</span><span class="sxs-lookup"><span data-stu-id="1d523-133">Debugging WOW64</span></span>](debugging-wow64.md)
+
+ 
+
+ 
