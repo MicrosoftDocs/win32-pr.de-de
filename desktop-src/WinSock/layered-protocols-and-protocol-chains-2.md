@@ -1,0 +1,26 @@
+---
+description: 'Windows Sockets 2 umfasst das Konzept eines geschichteten Protokolls: eines, das nur Kommunikationsfunktionen auf höherer Ebene implementiert und sich auf einen zugrunde liegenden Transport Stapel für den eigentlichen Datenaustausch mit einem Remote Endpunkt stützt.'
+ms.assetid: 80e0b229-ebdc-4ac1-8e8e-9e5b7cfc3ab5
+title: Geschichtete Protokolle und Protokoll Ketten
+ms.topic: article
+ms.date: 05/31/2018
+ms.openlocfilehash: bacf74a11dffca9d8c49c61af82132857f5510e1
+ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "104129164"
+---
+# <a name="layered-protocols-and-protocol-chains"></a><span data-ttu-id="d2295-103">Geschichtete Protokolle und Protokoll Ketten</span><span class="sxs-lookup"><span data-stu-id="d2295-103">Layered Protocols and Protocol Chains</span></span>
+
+<span data-ttu-id="d2295-104">Windows Sockets 2 umfasst das Konzept eines geschichteten Protokolls: eines, das nur Kommunikationsfunktionen auf höherer Ebene implementiert und sich auf einen zugrunde liegenden Transport Stapel für den eigentlichen Datenaustausch mit einem Remote Endpunkt stützt.</span><span class="sxs-lookup"><span data-stu-id="d2295-104">Windows Sockets 2 incorporates the concept of a layered protocol: one that implements only higher-level communications functions while relying on an underlying transport stack for the actual exchange of data with a remote endpoint.</span></span> <span data-ttu-id="d2295-105">Ein Beispiel für diesen Typ eines geschichteten Protokolls ist eine Sicherheitsebene, die dem socketverbindungsprozess ein Protokoll hinzufügt, um die Authentifizierung durchzuführen und ein Verschlüsselungsschema einzurichten.</span><span class="sxs-lookup"><span data-stu-id="d2295-105">An example of this type of layered protocol is a security layer that adds a protocol to the socket connection process in order to perform authentication and establish an encryption scheme.</span></span> <span data-ttu-id="d2295-106">Ein solches Sicherheitsprotokoll erfordert im Allgemeinen die Dienste eines zugrunde liegenden und zuverlässigen Transport Protokolls, z. b. TCP oder SPX.</span><span class="sxs-lookup"><span data-stu-id="d2295-106">Such a security protocol generally requires the services of an underlying and reliable transport protocol such as TCP or SPX.</span></span>
+
+<span data-ttu-id="d2295-107">Der Begriff " *Basisprotokoll* " bezieht sich auf ein Protokoll, z. b. TCP oder SPX, das die Datenkommunikation mit einem Remote Endpunkt vollständig durchführen kann.</span><span class="sxs-lookup"><span data-stu-id="d2295-107">The term *base protocol* refers to a protocol, such as TCP or SPX, that is fully capable of performing data communications with a remote endpoint.</span></span> <span data-ttu-id="d2295-108">Ein mehrstufiger *Protokoll* ist ein Protokoll, das nicht allein stehen kann, während eine *Protokoll Kette* ein oder mehrere geschichtete Protokolle ist, die durch ein Basisprotokoll verankert und verankert werden.</span><span class="sxs-lookup"><span data-stu-id="d2295-108">A *layered protocol* is a protocol that cannot stand alone, while a *protocol chain* is one or more layered protocols strung together and anchored by a base protocol.</span></span>
+
+<span data-ttu-id="d2295-109">Sie können eine Protokoll Kette erstellen, wenn Sie die überlappenden Protokolle so entwerfen, dass die Windows Sockets 2-SPI an beiden oberen und unteren Rändern unterstützt werden.</span><span class="sxs-lookup"><span data-stu-id="d2295-109">You can create a protocol chain if you design the layered protocols to support the Windows Sockets 2 SPI at both their upper and lower edges.</span></span> <span data-ttu-id="d2295-110">Eine spezielle [**wsaprotocol- \_ Informations**](/windows/win32/api/winsock2/ns-winsock2-wsaprotocol_infoa) Struktur bezieht sich auf die gesamte Protokoll Kette und beschreibt die explizite Reihenfolge, in der die geschichteten Protokolle verknüpft werden.</span><span class="sxs-lookup"><span data-stu-id="d2295-110">A special [**WSAPROTOCOL\_INFO**](/windows/win32/api/winsock2/ns-winsock2-wsaprotocol_infoa) structure refers to the protocol chain as a whole and describes the explicit order in which the layered protocols are joined.</span></span> <span data-ttu-id="d2295-111">Dies wird in der folgenden Abbildung veranschaulicht.</span><span class="sxs-lookup"><span data-stu-id="d2295-111">This is illustrated in the figure below.</span></span> <span data-ttu-id="d2295-112">Da nur Basis Protokolle und Protokoll Ketten direkt von Anwendungen verwendet werden können, sind Sie die einzigen, die aufgeführt werden, wenn die installierten Protokolle mit der [**wsaenumprotokolls**](/windows/desktop/api/Winsock2/nf-winsock2-wsaenumprotocolsa) -Funktion aufgelistet werden.</span><span class="sxs-lookup"><span data-stu-id="d2295-112">Since only base protocols and protocol chains are directly usable by applications, they are the only ones listed when the installed protocols are enumerated with the [**WSAEnumProtocols**](/windows/desktop/api/Winsock2/nf-winsock2-wsaenumprotocolsa) function.</span></span>
+
+![Architektur des geschichteten Protokolls](images/ovrvw2-3.png)
+
+ 
+
+ 
