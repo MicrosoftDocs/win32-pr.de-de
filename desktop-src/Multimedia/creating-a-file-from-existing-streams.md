@@ -1,0 +1,44 @@
+---
+title: Erstellen einer Datei aus vorhandenen Streams
+description: Erstellen einer Datei aus vorhandenen Streams
+ms.assetid: 5149a766-7809-42b7-8e5c-b67b847b9218
+keywords:
+- Avisave-Funktion
+- Avisavev-Funktion
+ms.topic: article
+ms.date: 05/31/2018
+ms.openlocfilehash: 2bc422d2170ccd49b8a9746666db7ebbcd7dff14
+ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 09/16/2019
+ms.locfileid: "103947637"
+---
+# <a name="creating-a-file-from-existing-streams"></a><span data-ttu-id="c6462-105">Erstellen einer Datei aus vorhandenen Streams</span><span class="sxs-lookup"><span data-stu-id="c6462-105">Creating a File from Existing Streams</span></span>
+
+<span data-ttu-id="c6462-106">Eine Möglichkeit, eine Datei zu erstellen, die Datenströme enthält, besteht darin, vorhandene Streams in einer neuen Datei zu kombinieren.</span><span class="sxs-lookup"><span data-stu-id="c6462-106">One way to create a file that contains data streams is to combine existing streams into a new file.</span></span> <span data-ttu-id="c6462-107">Die Streams, die Daten für die neue Datei bereitstellen, können sich im Arbeitsspeicher oder in einer oder mehreren Dateien befinden.</span><span class="sxs-lookup"><span data-stu-id="c6462-107">The streams that provide data for the new file can reside in memory or in one or more files.</span></span>
+
+<span data-ttu-id="c6462-108">Mithilfe der [**avisave**](/windows/desktop/api/Vfw/nf-vfw-avisavea) -Funktion können Sie eine Datei aus mehreren Datenströmen erstellen.</span><span class="sxs-lookup"><span data-stu-id="c6462-108">You can build a file from several streams by using the [**AVISave**](/windows/desktop/api/Vfw/nf-vfw-avisavea) function.</span></span> <span data-ttu-id="c6462-109">Diese Funktion erstellt eine Datei und schreibt die Datenströme, die in der aufrufenden Sequenz angegeben sind, in die Datei.</span><span class="sxs-lookup"><span data-stu-id="c6462-109">This function creates a file and writes the data streams specified in its calling sequence to the file.</span></span> <span data-ttu-id="c6462-110">Die Aufruf Sequenz für **avisave** verwendet eine Variable Anzahl von Argumenten, die Schnittstellen für die Streams enthalten, die in der neuen Datei kombiniert werden.</span><span class="sxs-lookup"><span data-stu-id="c6462-110">The calling sequence for **AVISave** uses a variable number of arguments that include interfaces for the streams combined in the new file.</span></span>
+
+<span data-ttu-id="c6462-111">Mithilfe der [**avisavev**](/windows/desktop/api/Vfw/nf-vfw-avisaveva) -Funktion können Sie auch Datenströme in einer neuen Datei kombinieren.</span><span class="sxs-lookup"><span data-stu-id="c6462-111">You can also combine data streams in a new file by using the [**AVISaveV**](/windows/desktop/api/Vfw/nf-vfw-avisaveva) function.</span></span> <span data-ttu-id="c6462-112">Diese Funktion bietet die gleiche Funktionalität wie **avisave**, aber wenn Sie **avisavev** verwenden, gibt Ihre Anwendung die Datenströme als Array und nicht als Variable Anzahl von Argumenten an.</span><span class="sxs-lookup"><span data-stu-id="c6462-112">This function provides the same functionality as **AVISave**, but when you use **AVISaveV**, your application specifies the data streams as an array, not as a variable number of arguments.</span></span>
+
+<span data-ttu-id="c6462-113">Sie können ein Dialogfeld erstellen, in dem der Benutzer mithilfe der [**avisaveoptions**](/windows/desktop/api/Vfw/nf-vfw-avisaveoptions) -Funktion Komprimierungs Einstellungen für die neue Datei auswählen kann.</span><span class="sxs-lookup"><span data-stu-id="c6462-113">You can create a dialog box in which the user can select compression settings for the new file by using the [**AVISaveOptions**](/windows/desktop/api/Vfw/nf-vfw-avisaveoptions) function.</span></span> <span data-ttu-id="c6462-114">Das Dialogfeld zeigt die aktuellen Komprimierungs Einstellungen an und ermöglicht dem Benutzer, Sie zu bearbeiten.</span><span class="sxs-lookup"><span data-stu-id="c6462-114">The dialog box displays the current compression settings and lets the user edit them.</span></span> <span data-ttu-id="c6462-115">Änderungen an der Komprimierungs Einstellung werden in einer [**avicompressoptions**](/windows/desktop/api/Vfw/ns-vfw-avicompressoptions) -Struktur gespeichert.</span><span class="sxs-lookup"><span data-stu-id="c6462-115">Compression setting changes are stored in an [**AVICOMPRESSOPTIONS**](/windows/desktop/api/Vfw/ns-vfw-avicompressoptions) structure.</span></span>
+
+<span data-ttu-id="c6462-116">Sie können auch eine Rückruffunktion mit [**avisave**](/windows/desktop/api/Vfw/nf-vfw-avisavea) und [**avisavev**](/windows/desktop/api/Vfw/nf-vfw-avisaveva) einschließen, die Ihre Anwendung verwenden kann, um den Fortschritt beim Schreiben der Datei anzuzeigen und ggf. den Benutzer den Speichervorgang abzubrechen.</span><span class="sxs-lookup"><span data-stu-id="c6462-116">You can also include a callback function with [**AVISave**](/windows/desktop/api/Vfw/nf-vfw-avisavea) and [**AVISaveV**](/windows/desktop/api/Vfw/nf-vfw-avisaveva) that your application can use to display the progress of writing the file and, if needed, let the user cancel the save operation.</span></span> <span data-ttu-id="c6462-117">Sie können die Adresse der Rückruffunktion in die Aufruf Sequenz von **avisave** oder **avisavev** einschließen.</span><span class="sxs-lookup"><span data-stu-id="c6462-117">You can include the address of the callback function in the calling sequence of **AVISave** or **AVISaveV**.</span></span>
+
+<span data-ttu-id="c6462-118">Mithilfe der Funktion [**getsavefileamepreview**](/windows/desktop/api/Vfw/nf-vfw-getsavefilenamepreviewa) können Sie den Benutzer einen Dateinamen für die neue Datei auswählen lassen.</span><span class="sxs-lookup"><span data-stu-id="c6462-118">You can let the user select a filename for the new file by using the [**GetSaveFileNamePreview**](/windows/desktop/api/Vfw/nf-vfw-getsavefilenamepreviewa) function.</span></span> <span data-ttu-id="c6462-119">Diese Funktion zeigt das Dialogfeld Speichern unter an, in dem der Benutzer eine Vorschau für den ersten Datenstrom (normalerweise den Videostream) einer AVI-Datei anzeigen kann.</span><span class="sxs-lookup"><span data-stu-id="c6462-119">This function displays the Save As dialog box in which the user can preview the first stream (normally the video stream) of an AVI file.</span></span>
+
+<span data-ttu-id="c6462-120">Mithilfe der [**avimakefilefromstreams**](/windows/desktop/api/Vfw/nf-vfw-avimakefilefromstreams) -Funktion können Sie einen Datei Schnittstellen Zeiger (und eine virtuelle Datei) für eine Gruppe von Datenströmen erstellen.</span><span class="sxs-lookup"><span data-stu-id="c6462-120">You can create a file interface pointer (and a virtual file) for a group of streams by using the [**AVIMakeFileFromStreams**](/windows/desktop/api/Vfw/nf-vfw-avimakefilefromstreams) function.</span></span> <span data-ttu-id="c6462-121">Andere avifile-Funktionen können den Datei Schnittstellen Zeiger verwenden, der von dieser Funktion zurückgegeben wird, um auf die Datenströme in der virtuellen Datei zuzugreifen.</span><span class="sxs-lookup"><span data-stu-id="c6462-121">Other AVIFile functions can use the file interface pointer returned by this function to access the streams in the virtual file.</span></span> <span data-ttu-id="c6462-122">Nachdem Sie die virtuelle Datei fertig verwendet haben, löschen Sie den Datei Schnittstellen Zeiger mithilfe der [**avifilerelease**](/windows/desktop/api/Vfw/nf-vfw-avifilerelease) -Funktion.</span><span class="sxs-lookup"><span data-stu-id="c6462-122">After you finish using the virtual file, delete the file interface pointer by using the [**AVIFileRelease**](/windows/desktop/api/Vfw/nf-vfw-avifilerelease) function.</span></span>
+
+> [!Note]  
+> <span data-ttu-id="c6462-123">Vermeiden Sie es, eine AVI-Datei mehrmals zu komprimieren, um die Abbild-und audiobeeinträchtigung zu minimieren.</span><span class="sxs-lookup"><span data-stu-id="c6462-123">To minimize image and audio degradation, avoid compressing an AVI file more than once.</span></span> <span data-ttu-id="c6462-124">Kombinieren Sie unkomprimierte Video Teile in Ihrem Bearbeitungssystem, und komprimieren Sie dann das endgültige Produkt.</span><span class="sxs-lookup"><span data-stu-id="c6462-124">Combine uncompressed pieces of video in your editing system and then compress the final product.</span></span> <span data-ttu-id="c6462-125">Weitere Informationen zu Komprimierungs Optionen finden Sie unter [Video Compression Manager](video-compression-manager.md).</span><span class="sxs-lookup"><span data-stu-id="c6462-125">For information about compression options, see [Video Compression Manager](video-compression-manager.md).</span></span>
+
+ 
+
+ 
+
+ 
+
+
+
+
