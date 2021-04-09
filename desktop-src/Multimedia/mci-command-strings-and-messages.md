@@ -1,0 +1,30 @@
+---
+title: MCI-Befehls Zeichenfolgen und-Meldungen
+description: MCI-Befehls Zeichenfolgen und-Meldungen
+ms.assetid: eb60c96b-e89e-4673-a8e0-98fabe4af7ca
+keywords:
+- MCI-Befehls Zeichenfolgen, Informationen zu
+- MCI-Befehls Meldungen, Informationen zu
+ms.topic: article
+ms.date: 05/31/2018
+ms.openlocfilehash: 107a317442280b8fb4c7afe7832205b1c7128513
+ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "103858258"
+---
+# <a name="mci-command-strings-and-messages"></a><span data-ttu-id="1b85b-105">MCI-Befehls Zeichenfolgen und-Meldungen</span><span class="sxs-lookup"><span data-stu-id="1b85b-105">MCI Command Strings and Messages</span></span>
+
+<span data-ttu-id="1b85b-106">MCI unterstützt [Befehls](command-strings.md) Zeichenfolgen und [Befehls Meldungen](command-messages.md).</span><span class="sxs-lookup"><span data-stu-id="1b85b-106">MCI supports [Command Strings](command-strings.md) and [Command Messages](command-messages.md).</span></span> <span data-ttu-id="1b85b-107">In ihrer MCI-Anwendung können Sie entweder Zeichen folgen oder Nachrichten oder beides verwenden.</span><span class="sxs-lookup"><span data-stu-id="1b85b-107">You can use either strings or messages, or both, in your MCI application.</span></span>
+
+-   <span data-ttu-id="1b85b-108">Die *befehlsnachrichten Schnittstelle* besteht aus Konstanten und Strukturen.</span><span class="sxs-lookup"><span data-stu-id="1b85b-108">The *command-message interface* consists of constants and structures.</span></span> <span data-ttu-id="1b85b-109">Verwenden Sie die Funktion " [**mciSendCommand**](/previous-versions//dd757160(v=vs.85)) ", um Nachrichten an ein MCI-Gerät zu senden.</span><span class="sxs-lookup"><span data-stu-id="1b85b-109">Use the [**mciSendCommand**](/previous-versions//dd757160(v=vs.85)) function to send messages to an MCI device.</span></span>
+-   <span data-ttu-id="1b85b-110">Die *Befehls Zeichenfolgen-Schnittstelle* stellt eine Textversion der Befehls Meldungen bereit.</span><span class="sxs-lookup"><span data-stu-id="1b85b-110">The *command-string interface* provides a textual version of the command messages.</span></span> <span data-ttu-id="1b85b-111">Verwenden Sie die [**mciSendString**](/previous-versions//dd757161(v=vs.85)) -Funktion, um Zeichen folgen an ein MCI-Gerät zu senden.</span><span class="sxs-lookup"><span data-stu-id="1b85b-111">Use the [**mciSendString**](/previous-versions//dd757161(v=vs.85)) function to send strings to an MCI device.</span></span> <span data-ttu-id="1b85b-112">Befehls Zeichenfolgen duplizieren die Funktionalität der Befehls Meldungen.</span><span class="sxs-lookup"><span data-stu-id="1b85b-112">Command strings duplicate the functionality of the command messages.</span></span> <span data-ttu-id="1b85b-113">Das Betriebssystem konvertiert die Befehls Zeichenfolgen in Befehls Meldungen, bevor diese zur Verarbeitung an den MCI-Treiber gesendet werden.</span><span class="sxs-lookup"><span data-stu-id="1b85b-113">The operating system converts the command strings to command messages before sending them to the MCI driver for processing.</span></span>
+
+<span data-ttu-id="1b85b-114">Die Befehlszeilen, die Informationen abrufen, weisen dies in Form von Strukturen auf, die in einer C-Anwendung leicht interpretiert werden können.</span><span class="sxs-lookup"><span data-stu-id="1b85b-114">The command messages that retrieve information do so in the form of structures, which are easy to interpret in a C application.</span></span> <span data-ttu-id="1b85b-115">Diese Strukturen können Informationen zu vielen verschiedenen Aspekten eines Geräts enthalten.</span><span class="sxs-lookup"><span data-stu-id="1b85b-115">These structures can contain information on many different aspects of a device.</span></span> <span data-ttu-id="1b85b-116">Die Befehls Zeichenfolgen, die Informationen abrufen, führen dies in Form von Zeichen folgen aus und können jeweils nur eine Zeichenfolge abrufen.</span><span class="sxs-lookup"><span data-stu-id="1b85b-116">The command strings that retrieve information do so in the form of strings, and can only retrieve one string at a time.</span></span> <span data-ttu-id="1b85b-117">Die Anwendung muss jede Zeichenfolge analysieren oder testen, um Sie zu interpretieren.</span><span class="sxs-lookup"><span data-stu-id="1b85b-117">Your application must parse or test each string to interpret it.</span></span> <span data-ttu-id="1b85b-118">In einigen Fällen können Sie feststellen, dass die Befehlszeilen einfacher zu verwenden sind als die Befehls Zeichenfolgen, aber die Befehls Zeichenfolgen sind leicht zu merken und zu implementieren.</span><span class="sxs-lookup"><span data-stu-id="1b85b-118">You might find that the command messages are easier to use than the command strings in some cases, but the command strings are easy to remember and implement.</span></span> <span data-ttu-id="1b85b-119">Einige MCI-Anwendungen verwenden Befehls Zeichenfolgen, wenn der Rückgabewert nicht (außer zum Überprüfen des Erfolgs) und Befehls Meldungen beim Abrufen von Informationen vom Gerät verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="1b85b-119">Some MCI applications use command strings when the return value will not be used (other than to verify success) and command messages when retrieving information from the device.</span></span>
+
+<span data-ttu-id="1b85b-120">Bei der Erörterung von Befehlen wird in dieser Übersicht die Zeichen folgen Form des Befehls verwendet, gefolgt vom Nachrichten Formular in Klammern.</span><span class="sxs-lookup"><span data-stu-id="1b85b-120">When commands are discussed, this overview uses the string form of the command followed by the message form in parentheses.</span></span>
+
+ 
+
+ 
