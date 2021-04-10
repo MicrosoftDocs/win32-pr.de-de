@@ -1,0 +1,51 @@
+---
+description: Standardmäßige Qualitätskontrolle
+ms.assetid: 91c4b8cf-3d24-4a11-b19c-b0297734e52b
+title: Standardmäßige Qualitätskontrolle
+ms.topic: article
+ms.date: 05/31/2018
+ms.openlocfilehash: 864cd187df71c56441edcfd00fcd6785d96afe84
+ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "104041125"
+---
+# <a name="default-quality-control"></a><span data-ttu-id="32a26-103">Standardmäßige Qualitätskontrolle</span><span class="sxs-lookup"><span data-stu-id="32a26-103">Default Quality Control</span></span>
+
+<span data-ttu-id="32a26-104">Die [DirectShow-Basisklassen](directshow-base-classes.md) implementieren einige Standardverhalten für die Video Qualitäts Steuerung.</span><span class="sxs-lookup"><span data-stu-id="32a26-104">The [DirectShow Base Classes](directshow-base-classes.md) implement some default behaviors for video quality control.</span></span>
+
+<span data-ttu-id="32a26-105">Qualitäts Meldungen beginnen beim Renderer.</span><span class="sxs-lookup"><span data-stu-id="32a26-105">Quality messages start at the renderer.</span></span> <span data-ttu-id="32a26-106">Die Basisklasse für Videorenderer ist [**cbasevideorenderer**](cbasevideorenderer.md), die folgendes Verhalten aufweist:</span><span class="sxs-lookup"><span data-stu-id="32a26-106">The base class for video renderers is [**CBaseVideoRenderer**](cbasevideorenderer.md), which has the following behavior:</span></span>
+
+1.  <span data-ttu-id="32a26-107">Wenn der Videorenderer ein Beispiel erhält, vergleicht es den Zeitstempel des Beispiels mit der aktuellen Verweis Zeit.</span><span class="sxs-lookup"><span data-stu-id="32a26-107">When the video renderer receives a sample, it compares the time stamp on the sample with the current reference time.</span></span>
+2.  <span data-ttu-id="32a26-108">Der Videorenderer generiert eine Qualitäts Meldung.</span><span class="sxs-lookup"><span data-stu-id="32a26-108">The video renderer generates a quality message.</span></span> <span data-ttu-id="32a26-109">In der Basisklasse ist der **Anteils** Wert der Qualitäts Nachricht auf einen Bereich von 500 (50%) beschränkt. auf 2000 (200%).</span><span class="sxs-lookup"><span data-stu-id="32a26-109">In the base class, the **Proportion** member of the quality message is limited to a range of 500 (50%) to 2000 (200%).</span></span> <span data-ttu-id="32a26-110">Werte außerhalb dieses Bereichs können zu abrupten Qualitätsänderungen führen.</span><span class="sxs-lookup"><span data-stu-id="32a26-110">Values outside this range could result in abrupt quality changes.</span></span>
+3.  <span data-ttu-id="32a26-111">Standardmäßig sendet der Videorenderer die Qualitäts Meldung an die upstreamausgabepin (die PIN, die mit der eingabepin verbunden ist).</span><span class="sxs-lookup"><span data-stu-id="32a26-111">By default, the video renderer sends the quality message to the upstream output pin (the pin connected to its input pin).</span></span> <span data-ttu-id="32a26-112">Anwendungen können dieses Verhalten überschreiben, indem Sie die **setsink** -Methode aufrufen.</span><span class="sxs-lookup"><span data-stu-id="32a26-112">Applications can override this behavior by calling the **SetSink** method.</span></span>
+
+<span data-ttu-id="32a26-113">Was als nächstes passiert, hängt vom upstreamfilter ab.</span><span class="sxs-lookup"><span data-stu-id="32a26-113">What happens next depends on the upstream filter.</span></span> <span data-ttu-id="32a26-114">In der Regel handelt es sich hierbei um einen Transformations Filter.</span><span class="sxs-lookup"><span data-stu-id="32a26-114">Typically, this is a transform filter.</span></span> <span data-ttu-id="32a26-115">Die Basisklasse für Transformations Filter ist [**ctransformfilter**](ctransformfilter.md), bei dem die Klassen [**ctransforminputpin**](ctransforminputpin.md) und [**ctransformoutputpin**](ctransformoutputpin.md) zum Implementieren von Eingabe-und Ausgabe Pins verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="32a26-115">The base class for transform filters is [**CTransformFilter**](ctransformfilter.md), which uses the [**CTransformInputPin**](ctransforminputpin.md) and [**CTransformOutputPin**](ctransformoutputpin.md) classes to implement input and output pins.</span></span> <span data-ttu-id="32a26-116">Diese Klassen haben das folgende Verhalten:</span><span class="sxs-lookup"><span data-stu-id="32a26-116">Together, these classes have the following behavior:</span></span>
+
+1.  <span data-ttu-id="32a26-117">Die [**ctransformoutputpin:: notify**](ctransformoutputpin-notify.md) -Methode ruft [**ctransformfilter:: alterquality**](ctransformfilter-alterquality.md)auf, eine private Methode für die Filter Basisklasse.</span><span class="sxs-lookup"><span data-stu-id="32a26-117">The [**CTransformOutputPin::Notify**](ctransformoutputpin-notify.md) method calls [**CTransformFilter::AlterQuality**](ctransformfilter-alterquality.md), a private method on the filter base class.</span></span>
+2.  <span data-ttu-id="32a26-118">Abgeleitete Filter können **alterquality** überschreiben, um die Qualitäts Meldung zu verarbeiten.</span><span class="sxs-lookup"><span data-stu-id="32a26-118">Derived filters can override **AlterQuality** to handle the quality message.</span></span> <span data-ttu-id="32a26-119">Standardmäßig ignoriert **alterquality** die Qualitäts Meldung.</span><span class="sxs-lookup"><span data-stu-id="32a26-119">By default, **AlterQuality** ignores the quality message.</span></span>
+3.  <span data-ttu-id="32a26-120">Wenn **alterquality** die Qualitäts Meldung nicht verarbeitet, ruft die Ausgabe-PIN [**cbaseinputpin::P assnotify**](cbaseinputpin-passnotify.md)auf, eine private Methode für die Eingabe-PIN des Filters.</span><span class="sxs-lookup"><span data-stu-id="32a26-120">If **AlterQuality** does not handle the quality message, the output pin calls [**CBaseInputPin::PassNotify**](cbaseinputpin-passnotify.md), a private method on the filter's input pin.</span></span>
+4.  <span data-ttu-id="32a26-121">**Passnotify** übergibt die Qualitäts Nachricht an die entsprechende Stelle – die nächste upstreamausgabepin oder ein benutzerdefinierter Quality Manager.</span><span class="sxs-lookup"><span data-stu-id="32a26-121">**PassNotify** passes the quality message to the appropriate place—the next upstream output pin, or a custom quality manager.</span></span>
+
+<span data-ttu-id="32a26-122">Vorausgesetzt, dass kein Transformations Filter die Qualitäts Meldung behandelt, erreicht die Nachricht schließlich die Ausgabe-PIN für den Quell Filter.</span><span class="sxs-lookup"><span data-stu-id="32a26-122">Assuming that no transform filter handles the quality message, the message eventually reaches the output pin on the source filter.</span></span> <span data-ttu-id="32a26-123">In den Basisklassen gibt [**cbasepin:: notify**](cbasepin-notify.md) E \_ notimpl zurück.</span><span class="sxs-lookup"><span data-stu-id="32a26-123">In the base classes, [**CBasePin::Notify**](cbasepin-notify.md) returns E\_NOTIMPL.</span></span> <span data-ttu-id="32a26-124">Die Art und Weise, in der ein bestimmter Quell Filter Qualitäts Meldungen verarbeitet, hängt von der Art der Quelle ab.</span><span class="sxs-lookup"><span data-stu-id="32a26-124">How a particular source filter handles quality messages depends on the nature of the source.</span></span> <span data-ttu-id="32a26-125">Einige Quellen, z. b. die Live Video Erfassung, können keine sinnvolle Qualitätskontrolle ausführen.</span><span class="sxs-lookup"><span data-stu-id="32a26-125">Some sources, such as live video capture, cannot perform meaningful quality control.</span></span> <span data-ttu-id="32a26-126">Andere Quellen können die Rate anpassen, mit der Sie Stichproben bereitstellen.</span><span class="sxs-lookup"><span data-stu-id="32a26-126">Other sources can adjust the rate at which they deliver samples.</span></span>
+
+<span data-ttu-id="32a26-127">Das folgende Diagramm veranschaulicht das Standardverhalten.</span><span class="sxs-lookup"><span data-stu-id="32a26-127">The following diagram illustrates the default behavior.</span></span>
+
+![Qualitätskontrolle in den Basisklassen](images/quality-control.png)
+
+<span data-ttu-id="32a26-129">Der basisvideorenderer implementiert **iqualitycontrol:: notify**. Dies bedeutet, dass Sie Qualitäts Meldungen an den Renderer selbst übergeben können.</span><span class="sxs-lookup"><span data-stu-id="32a26-129">The base video renderer implements **IQualityControl::Notify**, which means you can pass quality messages to the renderer itself.</span></span> <span data-ttu-id="32a26-130">Wenn Sie für das **proportional** Element einen Wert kleiner als 1000 festlegen, fügt der Videorenderer eine Wartezeit zwischen den einzelnen Frames ein, die er rendert, wodurch der Renderer verlangsamt wird.</span><span class="sxs-lookup"><span data-stu-id="32a26-130">If you set the **Proportion** member to a value less than 1000, the video renderer inserts a wait period between each frame that it renders, in effect slowing down the renderer.</span></span> <span data-ttu-id="32a26-131">(Beispielsweise können Sie dies tun, um die System Auslastung zu reduzieren.) Weitere Informationen finden Sie unter [**cbasevideorenderer:: throttlewait**](cbasevideorenderer-throttlewait.md).</span><span class="sxs-lookup"><span data-stu-id="32a26-131">(You might do this to reduce system usage, for example.) For more information, see [**CBaseVideoRenderer::ThrottleWait**](cbasevideorenderer-throttlewait.md).</span></span> <span data-ttu-id="32a26-132">Das Festlegen des **proportionalmembers** auf einen Wert größer als 1000 hat keine Auswirkungen.</span><span class="sxs-lookup"><span data-stu-id="32a26-132">Setting the **Proportion** member to a value greater than 1000 has no effect.</span></span>
+
+## <a name="related-topics"></a><span data-ttu-id="32a26-133">Zugehörige Themen</span><span class="sxs-lookup"><span data-stu-id="32a26-133">Related topics</span></span>
+
+<dl> <dt>
+
+[<span data-ttu-id="32a26-134">Qualitäts Steuerungs Verwaltung</span><span class="sxs-lookup"><span data-stu-id="32a26-134">Quality-Control Management</span></span>](quality-control-management.md)
+</dt> </dl>
+
+ 
+
+ 
+
+
+
