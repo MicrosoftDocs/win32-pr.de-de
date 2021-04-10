@@ -1,0 +1,74 @@
+---
+title: IMsRdpWorkspace2-Schnittstelle
+description: Macht eine Methode verfügbar, die RemoteApp-und Desktopverbindung Anmelde Informationen mit einer Verbindung verknüpft.
+ms.assetid: 7E09AF14-2D6C-4D6E-8033-C691D9DC8057
+ms.tgt_platform: multiple
+keywords:
+- Imsrdpworkspace-Schnittstelle Remotedesktopdienste
+- Imsrdpworkspace-Schnittstelle Remotedesktopdienste, beschrieben
+topic_type:
+- apiref
+api_name:
+- IMsRdpWorkspace
+api_location:
+- MsRdpWebAccess.dll
+api_type:
+- COM
+ms.topic: reference
+ms.date: 05/31/2018
+ms.openlocfilehash: 3d6b5ff193eec393b67029d355a0f0c1bc67c0ad
+ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "104040535"
+---
+# <a name="imsrdpworkspace2-interface"></a><span data-ttu-id="ea595-105">IMsRdpWorkspace2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="ea595-105">IMsRdpWorkspace2 interface</span></span>
+
+<span data-ttu-id="ea595-106">Macht eine Methode verfügbar, die RemoteApp-und Desktopverbindung Anmelde Informationen mit einer Verbindung verknüpft.</span><span class="sxs-lookup"><span data-stu-id="ea595-106">Exposes a method that associates RemoteApp and Desktop Connection credentials with a connection.</span></span> <span data-ttu-id="ea595-107">Diese Schnittstelle wird von der Remotedesktopdienste Webzugriff-Steuerelement implementiert.</span><span class="sxs-lookup"><span data-stu-id="ea595-107">This interface is implemented by the Remote Desktop Services Web Access Control.</span></span> <span data-ttu-id="ea595-108">Dieses Steuerelement ist ein Wrapper um den Remotedesktopverbindung Client (MsTscAx.dll) und den Lauf Zeit Proxy für RemoteApp-und Desktop Verbindungen (Tswbprxy.exe).</span><span class="sxs-lookup"><span data-stu-id="ea595-108">This control is a wrapper around the Remote Desktop Connection client (MsTscAx.dll) and the RemoteApp and Desktop Connections runtime proxy (Tswbprxy.exe).</span></span>
+
+## <a name="members"></a><span data-ttu-id="ea595-109">Member</span><span class="sxs-lookup"><span data-stu-id="ea595-109">Members</span></span>
+
+<span data-ttu-id="ea595-110">Die **imsrdpworkspace** -Schnittstelle erbt von [**imsrdpworkspace**](imsrdpworkspace.md).</span><span class="sxs-lookup"><span data-stu-id="ea595-110">The **IMsRdpWorkspace** interface inherits from [**IMsRdpWorkspace**](imsrdpworkspace.md).</span></span> <span data-ttu-id="ea595-111">**IMsRdpWorkspace2** verfügt auch über die folgenden Typen von Membern:</span><span class="sxs-lookup"><span data-stu-id="ea595-111">**IMsRdpWorkspace2** also has these types of members:</span></span>
+
+-   [<span data-ttu-id="ea595-112">Methoden</span><span class="sxs-lookup"><span data-stu-id="ea595-112">Methods</span></span>](#methods)
+
+### <a name="methods"></a><span data-ttu-id="ea595-113">Methoden</span><span class="sxs-lookup"><span data-stu-id="ea595-113">Methods</span></span>
+
+<span data-ttu-id="ea595-114">Die **imsrdpworkspace** -Schnittstelle verfügt über diese Methoden.</span><span class="sxs-lookup"><span data-stu-id="ea595-114">The **IMsRdpWorkspace** interface has these methods.</span></span>
+
+
+
+| <span data-ttu-id="ea595-115">Methode</span><span class="sxs-lookup"><span data-stu-id="ea595-115">Method</span></span>                                                        | <span data-ttu-id="ea595-116">BESCHREIBUNG</span><span class="sxs-lookup"><span data-stu-id="ea595-116">Description</span></span>                                                                    |
+|:--------------------------------------------------------------|:-------------------------------------------------------------------------------|
+| <span data-ttu-id="ea595-117">[**Startworkspaceex**](/previous-versions/windows/desktop/legacy/dn123459(v=vs.85))</span><span class="sxs-lookup"><span data-stu-id="ea595-117">[**StartWorkspaceEx**](/previous-versions/windows/desktop/legacy/dn123459(v=vs.85))</span></span> | <span data-ttu-id="ea595-118">Ordnet Benutzer Anmelde Informationen und Zertifikate einer Verbindungs-ID zu.</span><span class="sxs-lookup"><span data-stu-id="ea595-118">Associates user credentials and certificates with a connection ID.</span></span> <br/> |
+
+
+
+ 
+
+## <a name="requirements"></a><span data-ttu-id="ea595-119">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="ea595-119">Requirements</span></span>
+
+
+
+| <span data-ttu-id="ea595-120">Anforderung</span><span class="sxs-lookup"><span data-stu-id="ea595-120">Requirement</span></span> | <span data-ttu-id="ea595-121">Wert</span><span class="sxs-lookup"><span data-stu-id="ea595-121">Value</span></span> |
+|-------------------------------------|-----------------------------------------------------------------------------------------------|
+| <span data-ttu-id="ea595-122">Unterstützte Mindestversion (Client)</span><span class="sxs-lookup"><span data-stu-id="ea595-122">Minimum supported client</span></span><br/> | <span data-ttu-id="ea595-123">Windows 8</span><span class="sxs-lookup"><span data-stu-id="ea595-123">Windows 8</span></span><br/>                                                                          |
+| <span data-ttu-id="ea595-124">Unterstützte Mindestversion (Server)</span><span class="sxs-lookup"><span data-stu-id="ea595-124">Minimum supported server</span></span><br/> | <span data-ttu-id="ea595-125">Windows Server 2012</span><span class="sxs-lookup"><span data-stu-id="ea595-125">Windows Server 2012</span></span><br/>                                                                |
+| <span data-ttu-id="ea595-126">DLL</span><span class="sxs-lookup"><span data-stu-id="ea595-126">DLL</span></span><br/>                      | <dl> <span data-ttu-id="ea595-127"><dt>MsRdpWebAccess.dll</dt></span><span class="sxs-lookup"><span data-stu-id="ea595-127"><dt>MsRdpWebAccess.dll</dt></span></span> </dl> |
+| <span data-ttu-id="ea595-128">IID</span><span class="sxs-lookup"><span data-stu-id="ea595-128">IID</span></span><br/>                      | <span data-ttu-id="ea595-129">IID \_ IMsRdpWorkspace2 ist als 145d0622-04cf-4FC3-a776-a82a9169cdf8 definiert.</span><span class="sxs-lookup"><span data-stu-id="ea595-129">IID\_IMsRdpWorkspace2 is defined as 145D0622-04CF-4FC3-A776-A82A9169CDF8</span></span><br/>           |
+
+
+
+## <a name="see-also"></a><span data-ttu-id="ea595-130">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="ea595-130">See also</span></span>
+
+<dl> <dt>
+
+[<span data-ttu-id="ea595-131">**IMsRdpClientShell2**</span><span class="sxs-lookup"><span data-stu-id="ea595-131">**IMsRdpClientShell2**</span></span>](imsrdpclientshell2.md)
+</dt> <dt>
+
+[<span data-ttu-id="ea595-132">**Imsrdpworkspace**</span><span class="sxs-lookup"><span data-stu-id="ea595-132">**IMsRdpWorkspace**</span></span>](imsrdpworkspace.md)
+</dt> </dl>
+
+ 
+
