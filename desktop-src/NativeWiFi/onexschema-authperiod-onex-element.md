@@ -1,0 +1,82 @@
+---
+description: Gibt die maximale Zeitspanne in Sekunden an, in der ein Client auf eine Antwort vom Authentifikator wartet.
+ms.assetid: 5cb2e164-913f-4c35-854f-aac8ed180c46
+title: authperiod-Element (Onex)
+ms.topic: reference
+ms.date: 05/31/2018
+topic_type:
+- APIRef
+- kbSyntax
+api_name:
+- authPeriod
+api_type:
+- Schema
+api_location: ''
+ms.openlocfilehash: 098391a672eedd2657dbd7ad5913fef13fde98cd
+ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "104042230"
+---
+# <a name="authperiod-onex-element"></a><span data-ttu-id="29e3b-103">authperiod-Element (Onex)</span><span class="sxs-lookup"><span data-stu-id="29e3b-103">authPeriod (OneX) Element</span></span>
+
+<span data-ttu-id="29e3b-104">Das authperiod (Onex)-Element gibt die maximale Zeitspanne in Sekunden an, in der ein Client auf eine Antwort vom Authentifikator wartet.</span><span class="sxs-lookup"><span data-stu-id="29e3b-104">The authPeriod (OneX) element specifies the maximum length of time, in seconds, in which a client waits for a response from the authenticator.</span></span> <span data-ttu-id="29e3b-105">Wenn innerhalb des angegebenen Zeitraums keine Antwort empfangen wird, geht der Client davon aus, dass im Netzwerk kein Authentifikator vorhanden ist.</span><span class="sxs-lookup"><span data-stu-id="29e3b-105">If a response is not received within the specified period, the client assumes that there is no authenticator present on the network.</span></span>
+
+<span data-ttu-id="29e3b-106">Dieses Element ist optional.</span><span class="sxs-lookup"><span data-stu-id="29e3b-106">This element is optional.</span></span> <span data-ttu-id="29e3b-107">Wenn authperiod nicht in einem Profil angegeben ist, wird ein Wert von 18 Sekunden verwendet.</span><span class="sxs-lookup"><span data-stu-id="29e3b-107">When authPeriod is not specified in a profile, a value of 18 seconds is used.</span></span>
+
+<span data-ttu-id="29e3b-108">**Windows XP mit SP3 und Wireless LAN API für Windows XP mit SP2:** Dieses Element wird ignoriert, wenn es in einem Profil vorhanden ist.</span><span class="sxs-lookup"><span data-stu-id="29e3b-108">**Windows XP with SP3 and Wireless LAN API for Windows XP with SP2:** This element will be ignored if it is present in a profile.</span></span>
+
+``` syntax
+<xs:element name="authPeriod">
+    <xs:simpleType>
+        <xs:restriction
+            base="integer"
+        >
+            <xs:enumeration
+                value="1"
+             />
+            <xs:enumeration
+                value="3600"
+             />
+        </xs:restriction>
+    </xs:simpleType>
+</xs:element>
+```
+
+<span data-ttu-id="29e3b-109">Das **authperiod** -Element wird durch das [**Onex**](onexschema-onex-element.md) -Element definiert.</span><span class="sxs-lookup"><span data-stu-id="29e3b-109">The **authPeriod** element is defined by the [**OneX**](onexschema-onex-element.md) element.</span></span>
+
+## <a name="requirements"></a><span data-ttu-id="29e3b-110">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="29e3b-110">Requirements</span></span>
+
+
+
+| <span data-ttu-id="29e3b-111">Anforderung</span><span class="sxs-lookup"><span data-stu-id="29e3b-111">Requirement</span></span> | <span data-ttu-id="29e3b-112">Wert</span><span class="sxs-lookup"><span data-stu-id="29e3b-112">Value</span></span> |
+|-------------------------------------|------------------------------------------------------|
+| <span data-ttu-id="29e3b-113">Unterstützte Mindestversion (Client)</span><span class="sxs-lookup"><span data-stu-id="29e3b-113">Minimum supported client</span></span><br/> | <span data-ttu-id="29e3b-114">Nur Windows Vista \[ -Desktop-Apps\]</span><span class="sxs-lookup"><span data-stu-id="29e3b-114">Windows Vista \[desktop apps only\]</span></span><br/>       |
+| <span data-ttu-id="29e3b-115">Unterstützte Mindestversion (Server)</span><span class="sxs-lookup"><span data-stu-id="29e3b-115">Minimum supported server</span></span><br/> | <span data-ttu-id="29e3b-116">Nur Windows Server 2008 \[ -Desktop-Apps\]</span><span class="sxs-lookup"><span data-stu-id="29e3b-116">Windows Server 2008 \[desktop apps only\]</span></span><br/> |
+
+
+
+## <a name="see-also"></a><span data-ttu-id="29e3b-117">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="29e3b-117">See also</span></span>
+
+<dl> <dt>
+
+<span data-ttu-id="29e3b-118">**Definitions Kontext des Elements im Schema**</span><span class="sxs-lookup"><span data-stu-id="29e3b-118">**Definition context of element in schema**</span></span>
+</dt> <dt>
+
+[<span data-ttu-id="29e3b-119">**Onex**</span><span class="sxs-lookup"><span data-stu-id="29e3b-119">**OneX**</span></span>](onexschema-onex-element.md)
+</dt> <dt>
+
+<span data-ttu-id="29e3b-120">**Mögliches unmittelbar übergeordnetes Element in der Schema Instanz**</span><span class="sxs-lookup"><span data-stu-id="29e3b-120">**Possible immediate parent element in schema instance**</span></span>
+</dt> <dt>
+
+[<span data-ttu-id="29e3b-121">**Onex**</span><span class="sxs-lookup"><span data-stu-id="29e3b-121">**OneX**</span></span>](onexschema-onex-element.md)
+</dt> </dl>
+
+ 
+
+ 
+
+
+
+
