@@ -1,0 +1,35 @@
+---
+title: Bits C++ Anwendungsbeispiele
+description: Die Background Intelligent Transfer Service (Bits)-Anwendungsbeispiele in diesem Abschnitt sind in C++ geschrieben. Sie veranschaulichen eine Reihe von Aufgaben, die mit Bits-Features ausgeführt werden können. Jede Anwendung wird in eine Reihe von Schritten aufgeteilt.
+ms.assetid: 6163c7fd-e187-4f75-bf25-e3a515e50db5
+ms.topic: article
+ms.date: 05/31/2018
+ms.openlocfilehash: cf577509dac58a655c2cbc8b602b75bd48aa03e4
+ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "104039359"
+---
+# <a name="bits-c-application-examples"></a><span data-ttu-id="de6a0-105">Bits C++ Anwendungsbeispiele</span><span class="sxs-lookup"><span data-stu-id="de6a0-105">BITS C++ Application Examples</span></span>
+
+<span data-ttu-id="de6a0-106">Die Background Intelligent Transfer Service (Bits)-Anwendungsbeispiele in diesem Abschnitt sind in C++ geschrieben.</span><span class="sxs-lookup"><span data-stu-id="de6a0-106">The Background Intelligent Transfer Service (BITS) application examples in this section are written in C++.</span></span> <span data-ttu-id="de6a0-107">Sie veranschaulichen eine Reihe von Aufgaben, die mit Bits-Features ausgeführt werden können.</span><span class="sxs-lookup"><span data-stu-id="de6a0-107">They demonstrate a range of tasks that can be completed by using BITS features.</span></span> <span data-ttu-id="de6a0-108">Jede Anwendung wird in eine Reihe von Schritten aufgeteilt.</span><span class="sxs-lookup"><span data-stu-id="de6a0-108">Each application is separated into a series of steps.</span></span>
+
+<span data-ttu-id="de6a0-109">In der folgenden Tabelle sind die C++-Beispiele in diesem Abschnitt aufgeführt.</span><span class="sxs-lookup"><span data-stu-id="de6a0-109">The following table lists the C++ examples in this section.</span></span>
+
+
+
+| <span data-ttu-id="de6a0-110">Beispiel</span><span class="sxs-lookup"><span data-stu-id="de6a0-110">Example</span></span>                                                                                                                                                            | <span data-ttu-id="de6a0-111">BESCHREIBUNG</span><span class="sxs-lookup"><span data-stu-id="de6a0-111">Description</span></span>                                                                                                                                                                                                                                                                                |
+|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [<span data-ttu-id="de6a0-112">Beispiel: allgemeine Klassen</span><span class="sxs-lookup"><span data-stu-id="de6a0-112">Example: Common Classes</span></span>](common-classes.md)                                                                                                                      | <span data-ttu-id="de6a0-113">Dieses Beispiel enthält allgemeine Klassen, die für die Beispiele in diesem Abschnitt verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="de6a0-113">This example contains common classes that are used for the examples in this section.</span></span> <span data-ttu-id="de6a0-114">Diese allgemeinen Klassen umfassen eine Rückruf Klasse, eine generische Fehler Klasse und eine ressourcenerwerbs-Hilfsklasse für die com-Funktion [CoInitializeEx](/windows/win32/api/combaseapi/nf-combaseapi-coinitializeex) .</span><span class="sxs-lookup"><span data-stu-id="de6a0-114">These common classes include a callback class, a generic error class, and a resource acquisition helper class for the COM [CoInitializeEx](/windows/win32/api/combaseapi/nf-combaseapi-coinitializeex) function.</span></span> |
+| [<span data-ttu-id="de6a0-115">Beispiel: Angeben von Anmelde Informationen für die Server Authentifizierung für einen Bits-Übertragungs Auftrag</span><span class="sxs-lookup"><span data-stu-id="de6a0-115">Example: Specifying Server Authentication Credentials for a BITS Transfer Job</span></span>](example-specifying-server-authentication-credentials-for-a-bits-transfer-job-.md) | <span data-ttu-id="de6a0-116">Dieses Beispiel ruft das Autorisierungs Schema und die Anmelde Informationen vom Benutzer ab, erstellt einen Bits-Übertragungs Auftrag, legt die Anmelde Informationen für den Auftrag fest und überwacht den Status des Auftrags.</span><span class="sxs-lookup"><span data-stu-id="de6a0-116">This example gets the authorization scheme and credentials from the user, creates a BITS transfer job, sets the credentials for the job, and monitors the status of the job.</span></span>                                                                                                               |
+| [<span data-ttu-id="de6a0-117">Beispiel: Verwenden der SSPI-Authentifizierungs Codierung mit Bits.</span><span class="sxs-lookup"><span data-stu-id="de6a0-117">Example: Using SSPI Authentication Encoding with BITS.</span></span>](example-using-sspi-authentication-encoding-with-bits.md)                                                 | <span data-ttu-id="de6a0-118">Dieses Beispiel veranschaulicht die Verwendung der SSPI-Authentifizierung (Security Support Provider Interface) und Bits zum erhalten der Anmelde Informationen von einem Benutzer, zum Codieren der Anmelde Informationen und zum Festlegen der codierten Anmelde Informationen für einen Bits-Übertragungs Auftrag.</span><span class="sxs-lookup"><span data-stu-id="de6a0-118">This example demonstrates the use of Security Support Provider Interface (SSPI) authentication and BITS to get the credentials from a user, encode the credentials, and set the encoded credentials on a BITS transfer job.</span></span>                                                                |
+| [<span data-ttu-id="de6a0-119">Beispiel: Hinzufügen eines Hilfsobjekts zu einem Bits-Übertragungs Auftrag</span><span class="sxs-lookup"><span data-stu-id="de6a0-119">Example: Adding a Helper Token to a BITS Transfer Job</span></span>](example-adding-a-helper-token-to-a-bits-transfer-job-.md)                                                 | <span data-ttu-id="de6a0-120">In diesem Beispiel wird ein Bits-Übertragungs Auftrag erstellt, und dem Auftrag wird ein zweiter Satz von Anmelde Informationen hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="de6a0-120">This example creates a BITS transfer job and adds a second set of credentials to the job.</span></span>                                                                                                                                                                                                  |
+
+
+
+ 
+
+ 
+
+ 
