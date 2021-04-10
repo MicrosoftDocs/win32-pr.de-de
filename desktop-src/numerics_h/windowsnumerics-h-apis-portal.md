@@ -1,0 +1,31 @@
+---
+title: windowsnumerics. h-APIs
+description: Die Header Datei windowsnumerics. h definiert C++ Vector-und Matrix Typen im Windows. Foundation. Numerics-Namespace. Die Strukturen werden von Windows. Foundation. Numerics durch einen Bereich mathematischer Operatoren und Funktionen erweitert.
+ms.assetid: 7aa15f80-c440-4dcb-a9a6-f1000a3a95da
+ms.topic: article
+ms.date: 05/31/2018
+ms.openlocfilehash: 268caf0a0215c3d25a86a22fb51204472af481fe
+ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "103729593"
+---
+# <a name="windowsnumericsh-apis"></a><span data-ttu-id="7ad0a-104">windowsnumerics. h-APIs</span><span class="sxs-lookup"><span data-stu-id="7ad0a-104">windowsnumerics.h APIs</span></span>
+
+<span data-ttu-id="7ad0a-105">Die Header Datei windowsnumerics. h definiert C++ Vector-und Matrix Typen im [**Windows. Foundation. Numerics**](/uwp/api/Windows.Foundation.Numerics) -Namespace.</span><span class="sxs-lookup"><span data-stu-id="7ad0a-105">The windowsnumerics.h header file defines C++ vector and matrix types in the [**Windows.Foundation.Numerics**](/uwp/api/Windows.Foundation.Numerics) namespace.</span></span> <span data-ttu-id="7ad0a-106">Die Strukturen werden von **Windows. Foundation. Numerics** durch einen Bereich mathematischer Operatoren und Funktionen erweitert.</span><span class="sxs-lookup"><span data-stu-id="7ad0a-106">It extends the structs from **Windows.Foundation.Numerics** with a range of mathematical operators and functions.</span></span>
+
+<span data-ttu-id="7ad0a-107">Dieser Namespace ist nur in C++ verfügbar.</span><span class="sxs-lookup"><span data-stu-id="7ad0a-107">This namespace is available only in C++.</span></span> <span data-ttu-id="7ad0a-108">Die .NET-Entsprechung ist [System. Numerics](/dotnet/api/system.numerics?view=netframework-4.8).</span><span class="sxs-lookup"><span data-stu-id="7ad0a-108">Its .NET equivalent is [System.Numerics](/dotnet/api/system.numerics?view=netframework-4.8).</span></span>
+
+## <a name="in-this-section"></a><span data-ttu-id="7ad0a-109">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="7ad0a-109">In this section</span></span>
+
+| <span data-ttu-id="7ad0a-110">Thema</span><span class="sxs-lookup"><span data-stu-id="7ad0a-110">Topic</span></span> | <span data-ttu-id="7ad0a-111">BESCHREIBUNG</span><span class="sxs-lookup"><span data-stu-id="7ad0a-111">Description</span></span> |
+|-|-|
+| [<span data-ttu-id="7ad0a-112">**float2-Struktur**</span><span class="sxs-lookup"><span data-stu-id="7ad0a-112">**float2 structure**</span></span>](float2-structure.md) | <span data-ttu-id="7ad0a-113">Ein Vektor mit zwei Komponenten.</span><span class="sxs-lookup"><span data-stu-id="7ad0a-113">A vector with two components.</span></span> |
+| [<span data-ttu-id="7ad0a-114">**float3-Struktur**</span><span class="sxs-lookup"><span data-stu-id="7ad0a-114">**float3 structure**</span></span>](float3-structure.md) | <span data-ttu-id="7ad0a-115">Ein Vektor mit drei Komponenten.</span><span class="sxs-lookup"><span data-stu-id="7ad0a-115">A vector with three components.</span></span> |
+| [<span data-ttu-id="7ad0a-116">**float3x2-Struktur**</span><span class="sxs-lookup"><span data-stu-id="7ad0a-116">**float3x2 structure**</span></span>](float3x2-structure.md) | <span data-ttu-id="7ad0a-117">Eine 3 x 2-Matrix, die für 2D-Transformationen verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="7ad0a-117">A 3x2 matrix, used for 2D transforms.</span></span> |
+| [<span data-ttu-id="7ad0a-118">**FLOAT4-Struktur**</span><span class="sxs-lookup"><span data-stu-id="7ad0a-118">**float4 structure**</span></span>](float4-structure.md) | <span data-ttu-id="7ad0a-119">Ein Vektor mit vier Komponenten.</span><span class="sxs-lookup"><span data-stu-id="7ad0a-119">A vector with four components.</span></span> |
+| [<span data-ttu-id="7ad0a-120">**float4x4-Struktur**</span><span class="sxs-lookup"><span data-stu-id="7ad0a-120">**float4x4 structure**</span></span>](float4x4-structure.md) | <span data-ttu-id="7ad0a-121">Eine 4 x 4-Matrix, die für 3D-Transformationen verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="7ad0a-121">A 4x4 matrix, used for 3D transforms.</span></span> |
+| [<span data-ttu-id="7ad0a-122">**Plane-Struktur**</span><span class="sxs-lookup"><span data-stu-id="7ad0a-122">**plane structure**</span></span>](plane-structure.md) | <span data-ttu-id="7ad0a-123">Diese Struktur stellt eine Ebene mit einem 3D-Vektor normal und einem Entfernungs Wert dar.</span><span class="sxs-lookup"><span data-stu-id="7ad0a-123">This structure represents a plane using a 3D vector normal and a distance value.</span></span> |
+| [<span data-ttu-id="7ad0a-124">**Quaternion-Struktur**</span><span class="sxs-lookup"><span data-stu-id="7ad0a-124">**quaternion structure**</span></span>](quaternion-structure.md) | <span data-ttu-id="7ad0a-125">Ein vierdimensionaler Vektor, der zum Darstellen einer Drehung verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="7ad0a-125">A four dimensional vector, used to represent a rotation.</span></span> |
+| [<span data-ttu-id="7ad0a-126">**Windows-Numerics und directxmath-Interop-APIs**</span><span class="sxs-lookup"><span data-stu-id="7ad0a-126">**Windows numerics and DirectXMath interop APIs**</span></span>](windows-numerics-and-directxmath-interop-apis.md) | <span data-ttu-id="7ad0a-127">Diese Funktionen konvertieren [**Windows. Foundation. Numerics**](/uwp/api/Windows.Foundation.Numerics) -Typen in und aus den directxmath-SIMD-Typen [xmvector](../dxmath/xmvector-data-type.md) und [xmmatrix](/windows/win32/api/directxmath/ns-directxmath-xmmatrix).</span><span class="sxs-lookup"><span data-stu-id="7ad0a-127">These functions convert [**Windows.Foundation.Numerics**](/uwp/api/Windows.Foundation.Numerics) types to and from the DirectXMath SIMD types [XMVECTOR](../dxmath/xmvector-data-type.md) and [XMMATRIX](/windows/win32/api/directxmath/ns-directxmath-xmmatrix).</span></span> |
