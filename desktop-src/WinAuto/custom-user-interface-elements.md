@@ -1,0 +1,35 @@
+---
+title: Benutzerdefinierte Benutzeroberflächen Elemente
+description: Server Entwickler entwerfen barrierefreie Objekte basierend auf der Benutzeroberfläche einer Anwendung.
+ms.assetid: d9453fb0-9b4a-4103-81e3-1255091255a0
+ms.topic: article
+ms.date: 05/31/2018
+ms.openlocfilehash: b32a086b977a1737a17206261aaaa94faa754d93
+ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 09/16/2019
+ms.locfileid: "103855648"
+---
+# <a name="custom-user-interface-elements"></a><span data-ttu-id="5ecd0-103">Benutzerdefinierte Benutzeroberflächen Elemente</span><span class="sxs-lookup"><span data-stu-id="5ecd0-103">Custom User Interface Elements</span></span>
+
+<span data-ttu-id="5ecd0-104">Server Entwickler entwerfen barrierefreie Objekte basierend auf der Benutzeroberfläche einer Anwendung.</span><span class="sxs-lookup"><span data-stu-id="5ecd0-104">Server developers design accessible objects based on an application's UI.</span></span> <span data-ttu-id="5ecd0-105">Da [Active Accessibility die IAccessible-Schnittstelle für vom System bereitgestellte Benutzeroberflächen Elemente](appendix-a--supported-user-interface-elements-reference.md) (z. b. Listenfelder, Menüs und TrackBar-Steuerelemente) implementiert, müssen Sie die [**IAccessible**](/windows/desktop/api/oleacc/nn-oleacc-iaccessible) -Schnittstelle nur für die folgenden Arten von benutzerdefinierten Benutzeroberflächen Elementen implementieren:</span><span class="sxs-lookup"><span data-stu-id="5ecd0-105">Because [Active Accessibility implements the IAccessible interface on behalf of system-provided user interface elements](appendix-a--supported-user-interface-elements-reference.md) such as list boxes, menus, and trackbar controls, you need to implement the [**IAccessible**](/windows/desktop/api/oleacc/nn-oleacc-iaccessible) interface only for the following kinds of custom UI elements:</span></span>
+
+-   <span data-ttu-id="5ecd0-106">Benutzerdefinierte Steuerelemente, die durch das Registrieren einer Anwendungs definierten Fenster Klasse erstellt werden</span><span class="sxs-lookup"><span data-stu-id="5ecd0-106">Custom controls created by registering an application-defined window class</span></span>
+-   <span data-ttu-id="5ecd0-107">Benutzerdefinierte Steuerelemente, die direkt auf dem Bildschirm gezeichnet werden, denen kein **HWND** zugeordnet ist</span><span class="sxs-lookup"><span data-stu-id="5ecd0-107">Custom controls drawn directly on the screen that do not have an associated **HWND**</span></span>
+-   <span data-ttu-id="5ecd0-108">Benutzerdefinierte Steuerelemente wie Microsoft ActiveX-und Java-Steuerelemente</span><span class="sxs-lookup"><span data-stu-id="5ecd0-108">Custom controls such as Microsoft ActiveX and Java controls</span></span>
+-   <span data-ttu-id="5ecd0-109">Steuerelemente oder Objekte im Client Fenster der Anwendung, die noch nicht verfügbar sind</span><span class="sxs-lookup"><span data-stu-id="5ecd0-109">Controls or objects in the application's client window that aren't already exposed</span></span>
+
+<span data-ttu-id="5ecd0-110">Auf Besitzer gezeichnete Steuerelemente und Menüs kann zugegriffen werden, solange Sie die Richtlinien befolgen, die unter Verknüpfungen zum verfügbar machen [benutzerdefinierter Benutzeroberflächen Elemente](shortcuts-for-exposing-custom-user-interface-elements.md)erläutert werden.</span><span class="sxs-lookup"><span data-stu-id="5ecd0-110">Owner-drawn controls and menus are accessible as long as you follow the guidelines discussed in [Shortcuts for Exposing Custom User Interface Elements](shortcuts-for-exposing-custom-user-interface-elements.md).</span></span> <span data-ttu-id="5ecd0-111">Wenn Sie diese Richtlinien befolgen, müssen Sie die [**IAccessible**](/windows/desktop/api/oleacc/nn-oleacc-iaccessible) -Schnittstelle nicht für vom Besitzer gezeichnete Steuerelemente und Menüs implementieren.</span><span class="sxs-lookup"><span data-stu-id="5ecd0-111">If you follow these guidelines, then you do not need to implement the [**IAccessible**](/windows/desktop/api/oleacc/nn-oleacc-iaccessible) interface for owner-drawn controls and menus.</span></span>
+
+<span data-ttu-id="5ecd0-112">In den meisten Fällen sind die über-und untergeordneten Steuerelemente zugänglich, da das System die grundlegenden Funktionen des Steuer Elements behandelt.</span><span class="sxs-lookup"><span data-stu-id="5ecd0-112">In most cases, superclassed and subclassed controls are accessible because the system handles the basic functionality of the control.</span></span> <span data-ttu-id="5ecd0-113">Wenn jedoch das Verhalten des vom System bereitgestellten Steuer Elements, auf dem es basiert, von einem übergeordneten oder untergeordneten Steuerelement erheblich geändert wird, müssen Sie die [**IAccessible**](/windows/desktop/api/oleacc/nn-oleacc-iaccessible) -Schnittstelle implementieren.</span><span class="sxs-lookup"><span data-stu-id="5ecd0-113">However, if a superclassed or subclassed control significantly modifies the behavior of the system-provided control on which it is based, then you must implement the [**IAccessible**](/windows/desktop/api/oleacc/nn-oleacc-iaccessible) interface.</span></span> <span data-ttu-id="5ecd0-114">Weitere Informationen finden Sie unter verfügbar machen [von Steuerelementen auf der Grundlage von System Steuerelementen](exposing-controls-based-on-system-controls.md).</span><span class="sxs-lookup"><span data-stu-id="5ecd0-114">For more information, see [Exposing Controls Based on System Controls](exposing-controls-based-on-system-controls.md).</span></span>
+
+<span data-ttu-id="5ecd0-115">Wenn eine Anwendung nur vom System bereitgestellte Benutzeroberflächen Elemente verwendet, muss [**IAccessible**](/windows/desktop/api/oleacc/nn-oleacc-iaccessible)nicht implementiert werden, außer für das Client Fenster.</span><span class="sxs-lookup"><span data-stu-id="5ecd0-115">If an application uses only system-provided user interface elements, then it does not need to implement [**IAccessible**](/windows/desktop/api/oleacc/nn-oleacc-iaccessible), except for its client window.</span></span> <span data-ttu-id="5ecd0-116">Beispielsweise stellt eine Anwendung, die einen Text-Editor enthält, der nicht mit einem Bearbeitungs Steuerelement implementiert ist, Textzeilen als barrierefreie Objekte zur Verfügung.</span><span class="sxs-lookup"><span data-stu-id="5ecd0-116">For example, an application that includes a text editor, not implemented using an edit control, exposes lines of text as accessible objects.</span></span> <span data-ttu-id="5ecd0-117">Beachten Sie, dass Microsoft Active Accessibility den Text in Edit-und Rich Edit-Steuerelementen automatisch als eine einzelne Text Zeichenfolge in der [**value**](value-property.md) -Eigenschaft des-Steuer Elements verfügbar macht.</span><span class="sxs-lookup"><span data-stu-id="5ecd0-117">Note that Microsoft Active Accessibility automatically exposes the text in edit and rich edit controls as a single string of text in the [**Value**](value-property.md) property of the control.</span></span>
+
+ 
+
+ 
+
+
+
+
