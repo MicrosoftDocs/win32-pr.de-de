@@ -1,0 +1,95 @@
+---
+title: EN_ALIGNLTR Benachrichtigungs Code (RichEdit. h)
+description: Benachrichtigt das übergeordnete Fenster eines Rich-Edit-Steuer Elements, dass die Absatz Richtung von links nach rechts geändert wurde. Ein Rich Edit-Steuerelement sendet diesen Benachrichtigungs Code in Form einer WM- \_ Befehls Meldung.
+ms.assetid: 754ac2b5-bcec-487b-a1ab-b653f673830a
+keywords:
+- Windows-Steuerelemente für EN_ALIGNLTR Benachrichtigungs
+topic_type:
+- apiref
+api_name:
+- EN_ALIGNLTR
+api_location:
+- Richedit.h
+api_type:
+- HeaderDef
+ms.topic: reference
+ms.date: 05/31/2018
+ms.openlocfilehash: f55c20a9ae4efb3ba5758ed0740b20b8b57f3877
+ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "104040446"
+---
+# <a name="en_alignltr-notification-code"></a>EN \_ alignltr-Benachrichtigungs Code
+
+Benachrichtigt das übergeordnete Fenster eines Rich-Edit-Steuer Elements, dass die Absatz Richtung von links nach rechts geändert wurde. Ein Rich Edit-Steuerelement sendet diesen Benachrichtigungs Code in Form einer [**WM- \_ Befehls**](/windows/desktop/menurc/wm-command) Meldung.
+
+
+```C++
+EN_ALIGNLTR
+
+    WPARAM wParam
+    LPARAM lParam; 
+```
+
+
+
+## <a name="parameters"></a>Parameter
+
+<dl> <dt>
+
+*wParam* 
+</dt> <dd>
+
+Das [**LoWord**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) enthält den Bezeichner des Rich Edit-Steuer Elements. Das [**HIWORD**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) gibt den Benachrichtigungs Code an.
+
+</dd> <dt>
+
+*lParam* 
+</dt> <dd>
+
+Handle für das Rich Edit-Steuerelement.
+
+</dd> </dl>
+
+## <a name="return-value"></a>Rückgabewert
+
+Dieser Benachrichtigungs Code gibt keinen Wert zurück.
+
+## <a name="requirements"></a>Anforderungen
+
+
+
+| Anforderung | Wert |
+|-------------------------------------|---------------------------------------------------------------------------------------|
+| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>RichEdit. h</dt> </dl> |
+
+
+
+## <a name="see-also"></a>Siehe auch
+
+<dl> <dt>
+
+**Verweis**
+</dt> <dt>
+
+[**de \_ alignrtl**](en-alignrtl.md)
+</dt> <dt>
+
+**Andere Ressourcen**
+</dt> <dt>
+
+[**HIWORD**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85))
+</dt> <dt>
+
+[**LOWORD**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85))
+</dt> <dt>
+
+[**WM- \_ Befehl**](/windows/desktop/menurc/wm-command)
+</dt> </dl>
+
+ 
+
