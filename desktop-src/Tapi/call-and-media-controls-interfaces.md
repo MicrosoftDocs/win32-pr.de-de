@@ -1,0 +1,128 @@
+---
+description: Im folgenden finden Sie die Schnittstellen "TAPI 3. x" und "Media Controls". Eine Auflistung dieser Schnittstellen nach Funktionalität finden Sie unter "Aufrufe und mediensteuer Elemente" Kurzübersicht.
+ms.assetid: aa43013d-826e-487b-b0a3-2d890f93a512
+title: Schnittstellen für Aufrufe und mediensteuer Elemente
+ms.topic: article
+ms.date: 05/31/2018
+ms.openlocfilehash: d9e80ea4ae8abcdad4c3629249faeaf30a1472d3
+ms.sourcegitcommit: c16214e53680dc71d1c07111b51f72b82a4512d8
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "103961146"
+---
+# <a name="call-and-media-controls-interfaces"></a>Schnittstellen für Aufrufe und mediensteuer Elemente
+
+Im folgenden finden Sie die Schnittstellen "TAPI 3. x" und "Media Controls". Eine Auflistung dieser Schnittstellen nach Funktionalität finden Sie unter " [Aufrufe und mediensteuer Elemente" kurz](call-and-media-controls-quick-reference.md)Übersicht.
+
+-   [**Iendumaddress**](/windows/desktop/api/tapi3if/nn-tapi3if-ienumaddress)
+-   [**Ienumbstr**](/windows/desktop/api/tapi3if/nn-tapi3if-ienumbstr)
+-   [**Ienumcall**](/windows/desktop/api/tapi3if/nn-tapi3if-ienumcall)
+-   [**Ienumcallhub**](/windows/desktop/api/tapi3if/nn-tapi3if-ienumcallhub)
+-   [**Ienumcallingcard**](/windows/desktop/api/tapi3if/nn-tapi3if-ienumcallingcard)
+-   [**Ienumlocation**](/windows/desktop/api/tapi3if/nn-tapi3if-ienumlocation)
+-   [**Ienumteilnehmer**](ienumparticipant.md)
+-   [**Ienumphone**](/windows/desktop/api/tapi3if/nn-tapi3if-ienumphone)
+-   [**Ienumpluggablesuperclassinfo**](/windows/desktop/api/tapi3if/nn-tapi3if-ienumpluggablesuperclassinfo)
+-   [**Ienumpluggableterminalclassinfo**](/windows/desktop/api/tapi3if/nn-tapi3if-ienumpluggableterminalclassinfo)
+-   [**Ienumterminal**](/windows/desktop/api/tapi3if/nn-tapi3if-ienumterminal)
+-   [**Ienumterminalclass**](/windows/desktop/api/tapi3if/nn-tapi3if-ienumterminalclass)
+-   [**IH323LineEx**](ih323lineex.md)
+-   [**Ikeyframecontrol**](ikeyframecontrol.md)
+-   [**Imulticastcontrol**](imulticastcontrol.md)
+-   [**Itaddress**](/windows/desktop/api/tapi3if/nn-tapi3if-itaddress)
+-   [**ITAddress2**](/windows/desktop/api/tapi3if/nn-tapi3if-itaddress2)
+-   [**Itaddress-Funktionen**](/windows/desktop/api/tapi3if/nn-tapi3if-itaddresscapabilities)
+-   [**Itaddressdebug-Ereignis**](/windows/desktop/api/Tapi3if/nn-tapi3if-itaddressdevicespecificevent)
+-   [**Itadressssevent**](/windows/desktop/api/tapi3if/nn-tapi3if-itaddressevent)
+-   [**Itadresssstranslations**](/windows/desktop/api/tapi3if/nn-tapi3if-itaddresstranslation)
+-   [**Itadresssstranslationinfo**](/windows/desktop/api/tapi3if/nn-tapi3if-itaddresstranslationinfo)
+-   [**Itzugegenorproperties**](/windows/win32/api/tapi3/nn-tapi3-itallocatorproperties)
+-   [**Itammediaformat**](/windows/win32/api/tapi3/nn-tapi3-itammediaformat)
+-   [**Itasrterminalevent**](/windows/desktop/api/tapi3if/nn-tapi3if-itasrterminalevent)
+-   [**Itaudiodebug econtrol**](itaudiodevicecontrol.md)
+-   [**Itaudiosettings**](itaudiosettings.md)
+-   [**Itautomatedphonecontrol**](/windows/desktop/api/tapi3if/nn-tapi3if-itautomatedphonecontrol)
+-   [**Itbasicaudioterminal**](/windows/desktop/api/tapi3if/nn-tapi3if-itbasicaudioterminal)
+-   [**Itbasiccallcontrol**](/windows/desktop/api/tapi3if/nn-tapi3if-itbasiccallcontrol)
+-   [**ITBasicCallControl2**](/windows/desktop/api/tapi3if/nn-tapi3if-itbasiccallcontrol2)
+-   [**Itcallhub**](/windows/desktop/api/tapi3if/nn-tapi3if-itcallhub)
+-   [**Itcallhubevent**](/windows/desktop/api/tapi3if/nn-tapi3if-itcallhubevent)
+-   [**Itcallinfo**](/windows/desktop/api/tapi3if/nn-tapi3if-itcallinfo)
+-   [**ITCallInfo2**](/windows/desktop/api/tapi3if/nn-tapi3if-itcallinfo2)
+-   [**Itcallinfochangeevent**](/windows/desktop/api/tapi3if/nn-tapi3if-itcallinfochangeevent)
+-   [**Itcallingcard**](/windows/desktop/api/tapi3if/nn-tapi3if-itcallingcard)
+-   [**Itcallmediaevent**](/windows/desktop/api/tapi3if/nn-tapi3if-itcallmediaevent)
+-   [**Itcallnotificationevent**](/windows/desktop/api/tapi3if/nn-tapi3if-itcallnotificationevent)
+-   [**Itcallqualitycontrol**](itcallqualitycontrol.md)
+-   [**Itcallstateevent**](/windows/desktop/api/tapi3if/nn-tapi3if-itcallstateevent)
+-   [**Itcollection**](/windows/desktop/api/tapi3if/nn-tapi3if-itcollection)
+-   [**ITCollection2**](/windows/desktop/api/Tapi3if/nn-tapi3if-itcollection2)
+-   [**Itcustomtone**](/windows/desktop/api/Tapi3if/nn-tapi3if-itcustomtone)
+-   [**Itdetecttone**](/windows/desktop/api/Tapi3if/nn-tapi3if-itdetecttone)
+-   [**Itdigitdetectionevent**](/windows/desktop/api/tapi3if/nn-tapi3if-itdigitdetectionevent)
+-   [**Itdigitgenerationevent**](/windows/desktop/api/tapi3if/nn-tapi3if-itdigitgenerationevent)
+-   [**Itdigiungsgatherede Vent**](/windows/desktop/api/Tapi3if/nn-tapi3if-itdigitsgatheredevent)
+-   [**Itdispatchmapper**](/windows/desktop/api/tapi3if/nn-tapi3if-itdispatchmapper)
+-   [**Itfileterminalevent**](/windows/desktop/api/tapi3if/nn-tapi3if-itfileterminalevent)
+-   [**Itfiletrack**](/windows/desktop/api/tapi3if/nn-tapi3if-itfiletrack)
+-   [**Itformatcontrol**](itformatcontrol.md)
+-   [**Itforwardinformation**](/windows/desktop/api/tapi3if/nn-tapi3if-itforwardinformation)
+-   [**ITForwardInformation2**](/windows/desktop/api/Tapi3if/nn-tapi3if-itforwardinformation2)
+-   [**Itlegacyaddressmediacontrol**](/windows/desktop/api/tapi3if/nn-tapi3if-itlegacyaddressmediacontrol)
+-   [**ITLegacyAddressMediaControl2**](/windows/desktop/api/Tapi3if/nn-tapi3if-itlegacyaddressmediacontrol2)
+-   [**Itlegacycallmediacontrol**](/windows/desktop/api/tapi3if/nn-tapi3if-itlegacycallmediacontrol)
+-   [**ITLegacyCallMediaControl2**](/windows/desktop/api/Tapi3if/nn-tapi3if-itlegacycallmediacontrol2)
+-   [**Itlegacywavesupport**](/windows/desktop/api/tapi3if/nn-tapi3if-itlegacywavesupport)
+-   [**Itlocalteilnehmer**](itlocalparticipant.md)
+-   [**Itlocationinfo**](/windows/desktop/api/tapi3if/nn-tapi3if-itlocationinfo)
+-   [**Itmediacontrol**](/windows/desktop/api/tapi3if/nn-tapi3if-itmediacontrol)
+-   [**Itmediaplayback**](/windows/desktop/api/tapi3if/nn-tapi3if-itmediaplayback)
+-   [**Itmediarecord**](/windows/desktop/api/tapi3if/nn-tapi3if-itmediarecord)
+-   [**Itmediasupport**](/windows/desktop/api/tapi3if/nn-tapi3if-itmediasupport)
+-   [**Itmultitrackterminal**](/windows/desktop/api/tapi3if/nn-tapi3if-itmultitrackterminal)
+-   [**Itteilnehmer**](itparticipant.md)
+-   [**Itparticipantcontrol**](itparticipantcontrol.md)
+-   [**Itparticipvorgänger Vent**](itparticipantevent.md)
+-   [**Itparticipantsubstreamcontrol**](itparticipantsubstreamcontrol.md)
+-   [**ITPhone**](/windows/desktop/api/tapi3if/nn-tapi3if-itphone)
+-   [**Itphonedebug-Ereignis**](/windows/desktop/api/Tapi3if/nn-tapi3if-itphonedevicespecificevent)
+-   [**Itphoneevent**](/windows/desktop/api/tapi3if/nn-tapi3if-itphoneevent)
+-   [**Itpluggableterminalclassinfo**](/windows/desktop/api/tapi3if/nn-tapi3if-itpluggableterminalclassinfo)
+-   [**Itpluggableterminalclassregistration**](/windows/desktop/api/Termmgr/nn-termmgr-itpluggableterminalclassregistration)
+-   [**Itpluggableterminaleventsink**](/windows/desktop/api/msp/nn-msp-itpluggableterminaleventsink)
+-   [**Itpluggableterminaleventsink Registration**](/windows/desktop/api/msp/nn-msp-itpluggableterminaleventsinkregistration)
+-   [**Itpluggableterminalinitialization**](/windows/desktop/api/Termmgr/nn-termmgr-itpluggableterminalinitialization)
+-   [**Itpluggableterminalsuperclassinfo**](/windows/desktop/api/tapi3if/nn-tapi3if-itpluggableterminalsuperclassinfo)
+-   [**Itpluggableterminalsuperclassregistration**](/windows/desktop/api/Termmgr/nn-termmgr-itpluggableterminalsuperclassregistration)
+-   [**Itprivateevent**](/windows/desktop/api/tapi3if/nn-tapi3if-itprivateevent)
+-   [**Itqosapplicationid**](itqosapplicationid.md)
+-   [**Itqoabvent**](/windows/desktop/api/tapi3if/nn-tapi3if-itqosevent)
+-   [**Itrequest**](/windows/desktop/api/tapi3if/nn-tapi3if-itrequest)
+-   [**Itrequestevent**](/windows/desktop/api/tapi3if/nn-tapi3if-itrequestevent)
+-   [**Itscriptableaudioformat**](/windows/desktop/api/tapi3if/nn-tapi3if-itscriptableaudioformat)
+-   [**Itstaticaudioterminal**](/windows/desktop/api/tapi3if/nn-tapi3if-itstaticaudioterminal)
+-   [**Itstreamqualitycontrol**](itstreamqualitycontrol.md)
+-   [**Ittapi**](/windows/desktop/api/tapi3if/nn-tapi3if-ittapi)
+-   [**ITTAPI2**](/windows/desktop/api/tapi3if/nn-tapi3if-ittapi2)
+-   [**Ittapicallcenter**](/windows/win32/api/tapi3cc/nn-tapi3cc-ittapicallcenter)
+-   [**Ittapieventnotification**](/windows/desktop/api/Tapi3if/nn-tapi3if-ittapieventnotification)
+-   [**Ittapiobjectevent**](/windows/desktop/api/tapi3if/nn-tapi3if-ittapiobjectevent)
+-   [**ITTAPIObjectEvent2**](/windows/desktop/api/tapi3if/nn-tapi3if-ittapiobjectevent2)
+-   [**Ittonedetectionevent**](/windows/desktop/api/Tapi3if/nn-tapi3if-ittonedetectionevent)
+-   [**Ittoneterminalevent**](/windows/desktop/api/tapi3if/nn-tapi3if-ittoneterminalevent)
+-   [**Itttsterminalevent**](/windows/desktop/api/tapi3if/nn-tapi3if-itttsterminalevent)
+
+Die folgenden Schnittstellen sind verfügbar, wenn dem-Befehl ein MSP zugeordnet ist. Die MSP-Schnittstellen Steuern Medien Streaming und Terminals für den-Befehl.
+
+-   [**Itstream (MSPi)**](itstream-mspi-.md)
+-   [**Itstreamcontrol (MSPi)**](itstreamcontrol-mspi-.md)
+-   [**Itsubstream (MSPi)**](itsubstream-mspi-.md)
+-   [**Itsubstreamcontrol (MSPi)**](itsubstreamcontrol-mspi-.md)
+-   [**Itterminal (MSPi)**](itterminal-mspi-.md)
+-   [**Itterminalevent (MSPi)**](itterminalevent-mspi-.md)
+-   [**Itterminalsupport (MSPi)**](itterminalsupport-mspi-.md)
+
+ 
+
+ 
