@@ -1,0 +1,30 @@
+---
+title: Implementierung von untergeordneten IDs durch Server
+description: Server Entwickler können sowohl einfachen Elementen als auch barrierefreien Objekten untergeordnete IDs zuweisen. Die empfohlene Vorgehensweise ist jedoch die Unterstützung der Standard-Component Object Model (com)-Schnittstelle IEnumVARIANT in jedem zugänglichen Objekt, das über untergeordnete Elemente verfügt.
+ms.assetid: 236de46e-8fe0-4f53-b989-267c9ee87545
+ms.topic: article
+ms.date: 05/31/2018
+ms.openlocfilehash: 0721c9660aa02fb16e9ec33495279cd90e872a37
+ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "103948913"
+---
+# <a name="how-servers-implement-child-ids"></a><span data-ttu-id="97fcd-104">Implementierung von untergeordneten IDs durch Server</span><span class="sxs-lookup"><span data-stu-id="97fcd-104">How Servers Implement Child IDs</span></span>
+
+<span data-ttu-id="97fcd-105">Server Entwickler können sowohl einfachen Elementen als auch barrierefreien Objekten untergeordnete IDs zuweisen.</span><span class="sxs-lookup"><span data-stu-id="97fcd-105">Server developers can assign child IDs to both simple elements and accessible objects.</span></span> <span data-ttu-id="97fcd-106">Die empfohlene Vorgehensweise ist jedoch die Unterstützung der Standard-Component Object Model (com)-Schnittstelle [IEnumVARIANT](/windows/win32/api/oaidl/nn-oaidl-ienumvariant) in jedem zugänglichen Objekt, das über untergeordnete Elemente verfügt.</span><span class="sxs-lookup"><span data-stu-id="97fcd-106">However, the recommended approach is to support the standard Component Object Model (COM) interface [IEnumVARIANT](/windows/win32/api/oaidl/nn-oaidl-ienumvariant) in every accessible object that has children.</span></span>
+
+<span data-ttu-id="97fcd-107">Wenn Sie [IEnumVARIANT](/windows/win32/api/oaidl/nn-oaidl-ienumvariant)implementieren, müssen Sie folgende Schritte ausführen:</span><span class="sxs-lookup"><span data-stu-id="97fcd-107">If you implement [IEnumVARIANT](/windows/win32/api/oaidl/nn-oaidl-ienumvariant), you must:</span></span>
+
+-   <span data-ttu-id="97fcd-108">Listet alle untergeordneten Elemente auf, sowohl einfache Elemente als auch barrierefreie Objekte.</span><span class="sxs-lookup"><span data-stu-id="97fcd-108">Enumerate all children, both simple elements and accessible objects.</span></span> <span data-ttu-id="97fcd-109">Bereitstellen von untergeordneten IDs für alle einfachen Elemente und Bereitstellen der [**IDispatch**](idispatch-interface.md) für jedes barrierefreie Objekt.</span><span class="sxs-lookup"><span data-stu-id="97fcd-109">Provide child IDs for all simple elements and provide the [**IDispatch**](idispatch-interface.md) to each accessible object.</span></span>
+-   <span data-ttu-id="97fcd-110">Legen Sie für barrierefreie Objekte den **VT** -Member der [**Variante**](variant-structure.md) auf VT \_ Dispatch fest.</span><span class="sxs-lookup"><span data-stu-id="97fcd-110">For accessible objects, set the **vt** member of the [**VARIANT**](variant-structure.md) to VT\_DISPATCH.</span></span> <span data-ttu-id="97fcd-111">Der **pdispVal** -Member muss einen Zeiger auf die [**IDispatch**](idispatch-interface.md) -Schnittstelle enthalten.</span><span class="sxs-lookup"><span data-stu-id="97fcd-111">The **pdispVal** member must contain a pointer to the [**IDispatch**](idispatch-interface.md) interface.</span></span> <span data-ttu-id="97fcd-112">Beachten Sie, dass die **Variante** vom Client zugeordnet und freigegeben wird.</span><span class="sxs-lookup"><span data-stu-id="97fcd-112">Note that the **VARIANT** is allocated and freed by the client.</span></span>
+-   <span data-ttu-id="97fcd-113">Bei einfachen Elementen ist die untergeordnete ID eine beliebige positive ganze Zahl mit 32 Bit.</span><span class="sxs-lookup"><span data-stu-id="97fcd-113">For simple elements, the child ID is any 32-bit positive integer.</span></span> <span data-ttu-id="97fcd-114">Beachten Sie, dass die NULL-und negativen ganzen Zahlen von Microsoft Active Accessibility reserviert werden.</span><span class="sxs-lookup"><span data-stu-id="97fcd-114">Note that zero and negative integers are reserved by Microsoft Active Accessibility.</span></span> <span data-ttu-id="97fcd-115">Legen Sie die [**Variant**](variant-structure.md) -Struktur **VT** -Member auf VT \_ I4 und den **LVAL** -Member auf die untergeordnete ID fest.</span><span class="sxs-lookup"><span data-stu-id="97fcd-115">Set the [**VARIANT**](variant-structure.md) structure **vt** member to VT\_I4 and the **lVal** member to the child ID.</span></span>
+
+<span data-ttu-id="97fcd-116">Wenn Sie [IEnumVARIANT](/windows/win32/api/oaidl/nn-oaidl-ienumvariant)nicht unterstützen, müssen Sie untergeordnete IDs zuweisen und die untergeordneten Elemente in jedem Objekt sequenziell beginnend mit einem Objekt angeben.</span><span class="sxs-lookup"><span data-stu-id="97fcd-116">If you do not support [IEnumVARIANT](/windows/win32/api/oaidl/nn-oaidl-ienumvariant), you must assign child IDs and number the children in each object sequentially starting with one.</span></span>
+
+<span data-ttu-id="97fcd-117">Es wird empfohlen, dass Clients die Microsoft Active Accessibility-Funktion [**accessiblechildren**](/windows/desktop/api/Oleacc/nf-oleacc-accessiblechildren) verwenden, anstatt die [IEnumVARIANT](/windows/win32/api/oaidl/nn-oaidl-ienumvariant) -Schnittstelle des Servers direkt aufzurufen.</span><span class="sxs-lookup"><span data-stu-id="97fcd-117">It is recommended that clients use the Microsoft Active Accessibility function [**AccessibleChildren**](/windows/desktop/api/Oleacc/nf-oleacc-accessiblechildren) rather than call the server [IEnumVARIANT](/windows/win32/api/oaidl/nn-oaidl-ienumvariant) interface directly.</span></span>
+
+ 
+
+ 

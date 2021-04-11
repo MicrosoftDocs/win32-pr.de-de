@@ -1,0 +1,62 @@
+---
+title: Informationen zu IP-Adress Steuerelementen
+description: Ein IP-Adress Steuerelement (Internet Protocol) ermöglicht es dem Benutzer, eine IP-Adresse in einem leicht verständlichen Format einzugeben.
+ms.assetid: cf6a59fc-661c-420a-a67f-a42619946357
+ms.topic: article
+ms.date: 05/31/2018
+ms.openlocfilehash: bb8cf39400c97d211d83b5496067fe6d4772e1e7
+ms.sourcegitcommit: 5f33645661bf8c825a7a2e73950b1f4ea0f1cd82
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "103949146"
+---
+# <a name="about-ip-address-controls"></a><span data-ttu-id="c55df-103">Informationen zu IP-Adress Steuerelementen</span><span class="sxs-lookup"><span data-stu-id="c55df-103">About IP Address Controls</span></span>
+
+<span data-ttu-id="c55df-104">Ein IP-Adress Steuerelement (Internet Protocol) ermöglicht es dem Benutzer, eine IP-Adresse in einem leicht verständlichen Format einzugeben.</span><span class="sxs-lookup"><span data-stu-id="c55df-104">An Internet Protocol (IP) address control allows the user to enter an IP address in an easily understood format.</span></span> <span data-ttu-id="c55df-105">Dieses Steuerelement ermöglicht der Anwendung auch das Abrufen der Adresse in numerischer Form und nicht in Textform.</span><span class="sxs-lookup"><span data-stu-id="c55df-105">This control also allows the application to obtain the address in numeric form rather than in text form.</span></span>
+
+-   [<span data-ttu-id="c55df-106">Informationen zu IP-Adress Steuerelementen</span><span class="sxs-lookup"><span data-stu-id="c55df-106">About IP Address Controls</span></span>](#about-ip-address-controls)
+-   [<span data-ttu-id="c55df-107">Erstellen eines IP-Adress Steuer Elements</span><span class="sxs-lookup"><span data-stu-id="c55df-107">Creating an IP Address Control</span></span>](#creating-an-ip-address-control)
+-   [<span data-ttu-id="c55df-108">Ist ein Steuerelement für die IP-Adresse ein Bearbeitungs Steuerelement?</span><span class="sxs-lookup"><span data-stu-id="c55df-108">Is an IP Address Control an Edit Control?</span></span>](#is-an-ip-address-control-an-edit-control)
+
+## <a name="about-ip-address-controls"></a><span data-ttu-id="c55df-109">Informationen zu IP-Adress Steuerelementen</span><span class="sxs-lookup"><span data-stu-id="c55df-109">About IP Address Controls</span></span>
+
+<span data-ttu-id="c55df-110">In Windows Internet Explorer Version 4,0 wird das IP-Adress Steuerelement eingeführt, ein neues Steuerelement, das einem Bearbeitungs Steuerelement ähnelt, mit dem der Benutzer eine numerische Adresse im IP-Format (Internet Protocol) eingeben kann.</span><span class="sxs-lookup"><span data-stu-id="c55df-110">Windows Internet Explorer Version 4.0 introduces the IP address control, a new control similar to an edit control that allows the user to enter a numeric address in Internet protocol (IP) format.</span></span> <span data-ttu-id="c55df-111">Dieses Format besteht aus 4 3-stelligen Feldern.</span><span class="sxs-lookup"><span data-stu-id="c55df-111">This format consists of four three-digit fields.</span></span> <span data-ttu-id="c55df-112">Jedes Feld wird einzeln behandelt. die Feldnummern sind NULL basiert und werden von links nach rechts fortgesetzt, wie in dieser Abbildung dargestellt.</span><span class="sxs-lookup"><span data-stu-id="c55df-112">Each field is treated individually; the field numbers are zero-based and proceed from left to right as shown in this figure.</span></span>
+
+![Diagramm, das die Werte in jedem der vier Felder eines IP-Adress Steuer Elements anzeigt](images/ipa-scrn.png)
+
+<span data-ttu-id="c55df-114">Mit dem-Steuerelement kann in jedem der Felder nur numerischer Text eingegeben werden.</span><span class="sxs-lookup"><span data-stu-id="c55df-114">The control allows only numeric text to be entered in each of the fields.</span></span> <span data-ttu-id="c55df-115">Nachdem drei Ziffern in ein bestimmtes Feld eingegeben wurden, wird der Tastaturfokus automatisch in das nächste Feld verschoben.</span><span class="sxs-lookup"><span data-stu-id="c55df-115">Once three digits have been entered in a given field, keyboard focus is automatically moved to the next field.</span></span> <span data-ttu-id="c55df-116">Wenn das Ausfüllen des gesamten Felds für die Anwendung nicht erforderlich ist, kann der Benutzer weniger als drei Ziffern eingeben.</span><span class="sxs-lookup"><span data-stu-id="c55df-116">If filling the entire field is not required by the application, the user can enter fewer than three digits.</span></span> <span data-ttu-id="c55df-117">Wenn das Feld z. b. nur die Zahl Twenty-One enthalten soll, geben Sie "21" ein, und drücken Sie die Taste, um den Benutzer zum nächsten Feld zu gelangen.</span><span class="sxs-lookup"><span data-stu-id="c55df-117">For example, if the field should only contain the number twenty-one, typing "21" and pressing the key will take the user to the next field.</span></span>
+
+<span data-ttu-id="c55df-118">Der Standardbereich für jedes Feld liegt zwischen 0 und 255, aber die Anwendung kann den Bereich für alle Werte zwischen diesen Grenzwerten mit der [**IPM- \_ SetRange**](ipm-setrange.md) -Nachricht festlegen.</span><span class="sxs-lookup"><span data-stu-id="c55df-118">The default range for each field is 0 to 255, but the application can set the range to any values between those limits with the [**IPM\_SETRANGE**](ipm-setrange.md) message.</span></span>
+
+> [!Note]  
+> <span data-ttu-id="c55df-119">Das IP-Adress Steuerelement wird in Version 4,71 und höher von Comctl32.dll implementiert.</span><span class="sxs-lookup"><span data-stu-id="c55df-119">The IP address control is implemented in version 4.71 and later of Comctl32.dll.</span></span>
+
+ 
+
+## <a name="creating-an-ip-address-control"></a><span data-ttu-id="c55df-120">Erstellen eines IP-Adress Steuer Elements</span><span class="sxs-lookup"><span data-stu-id="c55df-120">Creating an IP Address Control</span></span>
+
+<span data-ttu-id="c55df-121">Bevor Sie ein IP-Adress Steuerelement erstellen, müssen Sie [**InitCommonControlsEx**](/windows/desktop/api/Commctrl/nf-commctrl-initcommoncontrolsex) mit dem im **dwicc** -Member der [**InitCommonControlsEx**](/windows/win32/api/commctrl/ns-commctrl-initcommoncontrolsex) -Struktur festgelegten Flag " **ICC \_ Internet \_ Classes** " anrufen.</span><span class="sxs-lookup"><span data-stu-id="c55df-121">Before creating an IP address control, call [**InitCommonControlsEx**](/windows/desktop/api/Commctrl/nf-commctrl-initcommoncontrolsex) with the **ICC\_INTERNET\_CLASSES** flag set in the **dwICC** member of the [**INITCOMMONCONTROLSEX**](/windows/win32/api/commctrl/ns-commctrl-initcommoncontrolsex) structure.</span></span>
+
+<span data-ttu-id="c55df-122">Verwenden Sie die Funktion "up [**Window**](/windows/desktop/api/winuser/nf-winuser-createwindowa) " oder " [**kreatewindowex**](/windows/desktop/api/winuser/nf-winuser-createwindowexa) ", um ein IP-Adress Steuerelement zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="c55df-122">Use the [**CreateWindow**](/windows/desktop/api/winuser/nf-winuser-createwindowa) or the [**CreateWindowEx**](/windows/desktop/api/winuser/nf-winuser-createwindowexa) function to create an IP address control.</span></span> <span data-ttu-id="c55df-123">Der Klassenname für das-Steuerelement ist eine [**WC- \_ IP-Adresse**](common-control-window-classes.md), die in "kommctrl. h" definiert ist.</span><span class="sxs-lookup"><span data-stu-id="c55df-123">The class name for the control is [**WC\_IPADDRESS**](common-control-window-classes.md), which is defined in Commctrl.h.</span></span> <span data-ttu-id="c55df-124">Es sind keine IP-Adress Steuerungs spezifischen Stile vorhanden. Da es sich hierbei jedoch um ein untergeordnetes Steuerelement handelt, verwenden Sie den untergeordneten [**WS \_**](/windows/desktop/winmsg/window-styles) -Stil als Minimalwert.</span><span class="sxs-lookup"><span data-stu-id="c55df-124">No IP address control-specific styles exist; however, because this is a child control, use the [**WS\_CHILD**](/windows/desktop/winmsg/window-styles) style as a minimum.</span></span>
+
+## <a name="is-an-ip-address-control-an-edit-control"></a><span data-ttu-id="c55df-125">Ist ein Steuerelement für die IP-Adresse ein Bearbeitungs Steuerelement?</span><span class="sxs-lookup"><span data-stu-id="c55df-125">Is an IP Address Control an Edit Control?</span></span>
+
+<span data-ttu-id="c55df-126">Ein IP-Adress Steuerelement ist kein Bearbeitungs Steuerelement und antwortet nicht auf EM- \_ Meldungen.</span><span class="sxs-lookup"><span data-stu-id="c55df-126">An IP address control is not an edit control and it will not respond to EM\_ messages.</span></span> <span data-ttu-id="c55df-127">Das Besitzer Fenster wird jedoch über die [**WM- \_ Befehls**](/windows/desktop/menurc/wm-command) Meldung mit den folgenden Bearbeitungs Steuerelement-Benachrichtigungen gesendet.</span><span class="sxs-lookup"><span data-stu-id="c55df-127">It will, however, send the owner window the following edit control notifications through the [**WM\_COMMAND**](/windows/desktop/menurc/wm-command) message.</span></span> <span data-ttu-id="c55df-128">Beachten Sie, dass das IP-Adress Steuerelement auch private IPN- \_ Benachrichtigungen über die [**WM- \_ Benachrichtigungs**](wm-notify.md) Meldung sendet.</span><span class="sxs-lookup"><span data-stu-id="c55df-128">Note that the IP address control will also send private IPN\_ notifications through the [**WM\_NOTIFY**](wm-notify.md) message.</span></span>
+
+
+
+|                                   |                                                                                                                                                                                                         |
+|-----------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| <span data-ttu-id="c55df-129">**Benachrichtigung**</span><span class="sxs-lookup"><span data-stu-id="c55df-129">**Notification**</span></span>                  | <span data-ttu-id="c55df-130">**Grund für Benachrichtigung**</span><span class="sxs-lookup"><span data-stu-id="c55df-130">**Reason for notification**</span></span>                                                                                                                                                                             |
+| [<span data-ttu-id="c55df-131">EN \_ SetFocus</span><span class="sxs-lookup"><span data-stu-id="c55df-131">EN\_SETFOCUS</span></span>](en-setfocus.md)   | <span data-ttu-id="c55df-132">Wird gesendet, wenn die IP-Adress Steuerung den Tastaturfokus erhält.</span><span class="sxs-lookup"><span data-stu-id="c55df-132">Sent when the IP address control gains the keyboard focus.</span></span>                                                                                                                                              |
+| [<span data-ttu-id="c55df-133">EN \_ killfokus</span><span class="sxs-lookup"><span data-stu-id="c55df-133">EN\_KILLFOCUS</span></span>](en-killfocus.md) | <span data-ttu-id="c55df-134">Wird gesendet, wenn das IP-Adress Steuerelement den Tastaturfokus verliert.</span><span class="sxs-lookup"><span data-stu-id="c55df-134">Sent when the IP address control loses the keyboard focus.</span></span>                                                                                                                                              |
+| [<span data-ttu-id="c55df-135">\_Änderung der Änderung</span><span class="sxs-lookup"><span data-stu-id="c55df-135">EN\_CHANGE</span></span>](en-change.md)       | <span data-ttu-id="c55df-136">Wird gesendet, wenn ein Feld im IP-Adress Steuerelement geändert wird.</span><span class="sxs-lookup"><span data-stu-id="c55df-136">Sent when any field in the IP address control changes.</span></span> <span data-ttu-id="c55df-137">Wie bei [der \_ Änderung der en-Änderung](en-change.md) von einem Standard-Bearbeitungs Steuerelement wird diese Benachrichtigung empfangen, nachdem der Bildschirm aktualisiert wurde.</span><span class="sxs-lookup"><span data-stu-id="c55df-137">Like the [EN\_CHANGE](en-change.md) notification from a standard edit control, this notification is received after the screen has been updated.</span></span> |
+
+
+
+ 
+
+ 
+
+ 
