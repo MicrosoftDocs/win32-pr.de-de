@@ -1,0 +1,68 @@
+---
+title: Code Beispiel für Windows-Pixel Format
+description: Das folgende Codebeispiel zeigt eine Funktion, die das Pixel Format mithilfe von Windows-Funktionen festlegt.
+ms.assetid: fa863999-72f1-4280-b278-d9336f62108d
+keywords:
+- Pixel OpenGL, Windows-Beispiel
+- Portieren auf OpenGL, Pixel
+- OpenGL-portieren, Pixel
+ms.topic: article
+ms.date: 05/31/2018
+ms.openlocfilehash: 4328976a3622d19c3482aa2845c2094975dd7f74
+ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 09/16/2019
+ms.locfileid: "104310191"
+---
+# <a name="windows-pixel-format-code-sample"></a>Code Beispiel für Windows-Pixel Format
+
+Das folgende Codebeispiel zeigt eine Funktion, die das Pixel Format mithilfe von Windows-Funktionen festlegt:
+
+
+```C++
+BOOL bSetupPixelFormat(HDC hdc) 
+{ 
+    PIXELFORMATDESCRIPTOR pfd, *ppfd; 
+    int pixelformat; 
+ 
+    ppfd = &pfd; 
+ 
+    ppfd->nSize = sizeof(PIXELFORMATDESCRIPTOR); 
+    ppfd->nVersion = 1; 
+    ppfd->dwFlags = PFD_DRAW_TO_WINDOW | PFD_SUPPORT_OPENGL |  
+                        PFD_DOUBLEBUFFER; 
+    ppfd->dwLayerMask = PFD_MAIN_PLANE; 
+    ppfd->iPixelType = PFD_TYPE_COLORINDEX; 
+    ppfd->cColorBits = 8; 
+    ppfd->cDepthBits = 16; 
+    ppfd->cAccumBits = 0; 
+    ppfd->cStencilBits = 0; 
+ 
+    pixelformat = ChoosePixelFormat(hdc, ppfd); 
+ 
+    if ( (pixelformat = ChoosePixelFormat(hdc, ppfd)) == 0 ) 
+    { 
+        MessageBox(NULL, "ChoosePixelFormat failed", "Error", MB_OK); 
+        return FALSE; 
+    } 
+ 
+    if (SetPixelFormat(hdc, pixelformat, ppfd) == FALSE) 
+    { 
+        MessageBox(NULL, "SetPixelFormat failed", "Error", MB_OK); 
+        return FALSE; 
+    } 
+ 
+    return TRUE; 
+}
+```
+
+
+
+ 
+
+ 
+
+
+
+
