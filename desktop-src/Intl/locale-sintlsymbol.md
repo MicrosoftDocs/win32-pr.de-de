@@ -1,0 +1,23 @@
+---
+description: LOCALE- \_ sintlsymbol
+ms.assetid: 731d56e9-1676-43c5-b218-25924d615a2b
+title: LOCALE_SINTLSYMBOL
+ms.topic: article
+ms.date: 05/31/2018
+ms.openlocfilehash: f74635950e35ea406203d2b0d50f057f7a8bbc78
+ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "104217366"
+---
+# <a name="locale_sintlsymbol"></a>LOCALE- \_ sintlsymbol
+
+Drei Zeichen des internationalen Währungs Symbols, das in ISO 4217 angegeben ist, gefolgt von dem Zeichen, das diese Zeichenfolge von der Summe trennt. Die maximale Anzahl von Zeichen, die für diese Zeichenfolge zulässig ist, ist neun, einschließlich eines abschließenden NULL-Zeichens.
+
+ 
+
+ 
+
+
+
