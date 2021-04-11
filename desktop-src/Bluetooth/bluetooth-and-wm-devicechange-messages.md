@@ -1,0 +1,88 @@
+---
+title: Bluetooth-und WM_DEVICECHANGE-Nachrichten
+description: Bluetooth umfasst bestimmte WM \_ devicechange-Nachrichten, mit denen Entwickler Nachrichten abrufen können, wenn Bluetooth-Gerätestatus Änderungen durchlaufen.
+ms.assetid: 7dab37a6-63ac-4377-9884-61dd19972433
+ms.topic: article
+ms.date: 05/31/2018
+ms.openlocfilehash: 5d0fe553a91823850b8bc90164c9c79e4e58ed7f
+ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "103948828"
+---
+# <a name="bluetooth-and-wm_devicechange-messages"></a><span data-ttu-id="333e7-103">Bluetooth-und WM- \_ devicechange-Meldungen</span><span class="sxs-lookup"><span data-stu-id="333e7-103">Bluetooth and WM\_DEVICECHANGE Messages</span></span>
+
+<span data-ttu-id="333e7-104">Bluetooth umfasst bestimmte [**WM \_ devicechange**](/windows/desktop/DevIO/wm-devicechange) -Nachrichten, mit denen Entwickler Nachrichten abrufen können, wenn Bluetooth-Gerätestatus Änderungen durchlaufen.</span><span class="sxs-lookup"><span data-stu-id="333e7-104">Bluetooth includes specific [**WM\_DEVICECHANGE**](/windows/desktop/DevIO/wm-devicechange) messages that enable developers to obtain messages when Bluetooth devices undergo status changes.</span></span> <span data-ttu-id="333e7-105">In diesem Thema wird beschrieben, wie Sie Bluetooth-spezifische **WM- \_ devicechange** -Nachrichten empfangen und Bluetooth-spezifische Meldungen auflisten.</span><span class="sxs-lookup"><span data-stu-id="333e7-105">This topic describes how to receive Bluetooth-specific **WM\_DEVICECHANGE** messages and lists Bluetooth-specific messages.</span></span>
+
+## <a name="receiving-bluetooth-specific-wm_devicechange-messages"></a><span data-ttu-id="333e7-106">Empfangen von Bluetooth-spezifischen WM- \_ devicechange-Nachrichten</span><span class="sxs-lookup"><span data-stu-id="333e7-106">Receiving Bluetooth-specific WM\_DEVICECHANGE Messages</span></span>
+
+<span data-ttu-id="333e7-107">Zum Empfangen von " [**WM \_ devicechange**](/windows/desktop/DevIO/wm-devicechange) "-Nachrichten muss zunächst ein Handle für das lokale Radio geöffnet werden.</span><span class="sxs-lookup"><span data-stu-id="333e7-107">To receive [**WM\_DEVICECHANGE**](/windows/desktop/DevIO/wm-devicechange) messages, a handle to the local radio must first be opened.</span></span> <span data-ttu-id="333e7-108">Hierzu können Sie eine der folgenden Methoden verwenden:</span><span class="sxs-lookup"><span data-stu-id="333e7-108">To do this, use one of the following methods:</span></span>
+
+-   <span data-ttu-id="333e7-109">Verwenden Sie die [setupdigetclassdevs](/windows/win32/api/setupapi/nf-setupapi-setupdigetclassdevsw) -Funktion mit den folgenden Parametern: (GUID \_ bthport- \_ Geräte \_ Schnittstelle,..., digcf stellt " \_ \| digcf \_ deviceinterface" dar) und dann die Funktionen " [setupdienumdeviceintergesichter](/windows/win32/api/setupapi/nf-setupapi-setupdienumdeviceinterfaces)", " [setupdigetdeviceinterfacedetail](https://msdn.microsoft.com/library/ms792901.aspx)", "|" und " [setupdidestroydeviceinfolist](/windows/win32/api/setupapi/nf-setupapi-setupdidestroydeviceinfolist) " zu verwenden. [](/windows/desktop/api/fileapi/nf-fileapi-createfilea)</span><span class="sxs-lookup"><span data-stu-id="333e7-109">Use the [SetupDiGetClassDevs](/windows/win32/api/setupapi/nf-setupapi-setupdigetclassdevsw) function with the following parameters: (GUID\_BTHPORT\_DEVICE\_INTERFACE, …, DIGCF\_PRESENT \| DIGCF\_DEVICEINTERFACE), then use the [SetupDiEnumDeviceInterfaces](/windows/win32/api/setupapi/nf-setupapi-setupdienumdeviceinterfaces), [SetupDiGetDeviceInterfaceDetail](https://msdn.microsoft.com/library/ms792901.aspx), [**CreateFile**](/windows/desktop/api/fileapi/nf-fileapi-createfilea), and the [SetupDiDestroyDeviceInfoList](/windows/win32/api/setupapi/nf-setupapi-setupdidestroydeviceinfolist) functions.</span></span>
+-   <span data-ttu-id="333e7-110">Verwenden Sie die Funktionen [**bluetoothfindfirstradio**](/windows/desktop/api/BluetoothAPIs/nf-bluetoothapis-bluetoothfindfirstradio), [**bluetoothfindnextradio**](/windows/desktop/api/BluetoothAPIs/nf-bluetoothapis-bluetoothfindnextradio)und [**bluetoothfindradioclose**](/windows/desktop/api/BluetoothAPIs/nf-bluetoothapis-bluetoothfindradioclose) .</span><span class="sxs-lookup"><span data-stu-id="333e7-110">Use the [**BluetoothFindFirstRadio**](/windows/desktop/api/BluetoothAPIs/nf-bluetoothapis-bluetoothfindfirstradio), [**BluetoothFindNextRadio**](/windows/desktop/api/BluetoothAPIs/nf-bluetoothapis-bluetoothfindnextradio), and [**BluetoothFindRadioClose**](/windows/desktop/api/BluetoothAPIs/nf-bluetoothapis-bluetoothfindradioclose) functions.</span></span>
+
+<span data-ttu-id="333e7-111">Wenn das Bluetooth-Funk Handle geöffnet ist, können Sie die [**registerdevicenotifi-**](/windows/desktop/api/winuser/nf-winuser-registerdevicenotificationa) Funktion aufrufen und sich für Benachrichtigungen über das Handle mithilfe des **DBT \_ devype- \_ Handles** als DeviceType registrieren.</span><span class="sxs-lookup"><span data-stu-id="333e7-111">When the Bluetooth radio handle is opened, call the [**RegisterDeviceNotification**](/windows/desktop/api/winuser/nf-winuser-registerdevicenotificationa) function and register for notifications on the handle using **DBT\_DEVTYP\_HANDLE** as the devicetype.</span></span> <span data-ttu-id="333e7-112">Wenn Sie registriert sind, werden die folgenden GUIDs gesendet, und das [**dev \_ Broadcast \_ handle**](/windows/desktop/api/dbt/ns-dbt-dev_broadcast_handle)::**dbch- \_ Datenmember** ist der zugeordnete Puffer.</span><span class="sxs-lookup"><span data-stu-id="333e7-112">When registered, the following GUIDs are sent, and the [**DEV\_BROADCAST\_HANDLE**](/windows/desktop/api/dbt/ns-dbt-dev_broadcast_handle)::**dbch\_data** member is the associated buffer.</span></span>
+
+## <a name="bluetooth-specific-messages"></a><span data-ttu-id="333e7-113">Bluetooth-spezifische Meldungen</span><span class="sxs-lookup"><span data-stu-id="333e7-113">Bluetooth-specific Messages</span></span>
+
+<span data-ttu-id="333e7-114">In der folgenden Tabelle sind Bluetooth-spezifische [**WM \_ devicechange**](/windows/desktop/DevIO/wm-devicechange) -Meldungen aufgeführt.</span><span class="sxs-lookup"><span data-stu-id="333e7-114">The following table lists Bluetooth-specific [**WM\_DEVICECHANGE**](/windows/desktop/DevIO/wm-devicechange) messages.</span></span>
+
+| <span data-ttu-id="333e7-115">GUID</span><span class="sxs-lookup"><span data-stu-id="333e7-115">GUID</span></span>                                   | <span data-ttu-id="333e7-116">BUFFER</span><span class="sxs-lookup"><span data-stu-id="333e7-116">BUFFER</span></span>                                                  | <span data-ttu-id="333e7-117">BESCHREIBUNG</span><span class="sxs-lookup"><span data-stu-id="333e7-117">Description</span></span>                                                                                                                                                                                                                                                                                                                                                      |
+|----------------------------------------|---------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| <span data-ttu-id="333e7-118">GUID \_ Bluetooth \_ HCI- \_ Ereignis</span><span class="sxs-lookup"><span data-stu-id="333e7-118">GUID\_BLUETOOTH\_HCI\_EVENT</span></span>            | [<span data-ttu-id="333e7-119">**BTH \_ HCI- \_ Ereignis \_ Informationen**</span><span class="sxs-lookup"><span data-stu-id="333e7-119">**BTH\_HCI\_EVENT\_INFO**</span></span>](/windows/desktop/api/Bthdef/ns-bthdef-bth_hci_event_info)     | <span data-ttu-id="333e7-120">Diese Meldung wird gesendet, wenn ein Bluetooth-Remote Gerät eine Verbindung mit der ACL-Ebene herstellt oder trennt.</span><span class="sxs-lookup"><span data-stu-id="333e7-120">This message is sent when a remote Bluetooth device connects or disconnects at the ACL level.</span></span>                                                                                                                                                                                                                                                                    |
+| <span data-ttu-id="333e7-121">GUID \_ Bluetooth \_ L2CAP \_ Ereignis</span><span class="sxs-lookup"><span data-stu-id="333e7-121">GUID\_BLUETOOTH\_L2CAP\_EVENT</span></span>          | [<span data-ttu-id="333e7-122">**BTH \_ L2CAP \_ Ereignis \_ Informationen**</span><span class="sxs-lookup"><span data-stu-id="333e7-122">**BTH\_L2CAP\_EVENT\_INFO**</span></span>](/windows/desktop/api/Bthdef/ns-bthdef-bth_l2cap_event_info) | <span data-ttu-id="333e7-123">Diese Meldung wird gesendet, wenn ein L2CAP-Kanal zwischen dem lokalen Radio und einem Bluetooth-Remote Gerät eingerichtet oder beendet wurde.</span><span class="sxs-lookup"><span data-stu-id="333e7-123">This message is sent when an L2CAP channel between the local radio and a remote Bluetooth device has been established or terminated.</span></span> <span data-ttu-id="333e7-124">Bei L2CAP-Kanälen, bei denen es sich um Multiplexer handelt, wie z. b. RFCOMM, wird diese Nachricht nur gesendet, wenn der zugrunde liegende Kanal eingerichtet wird, nicht, wenn jeder Multiplex-Kanal (z. b. ein RFCOMM-Kanal) eingerichtet oder beendet</span><span class="sxs-lookup"><span data-stu-id="333e7-124">For L2CAP channels that are multiplexers, such as RFCOMM, this message is only sent when the underlying channel is established, not when each multiplexed channel, such as an RFCOMM channel, is established or terminated.</span></span> |
+| <span data-ttu-id="333e7-125">GUID \_ Bluetooth- \_ Pin- \_ Anforderung</span><span class="sxs-lookup"><span data-stu-id="333e7-125">GUID\_BLUETOOTH\_PIN\_REQUEST</span></span>          | <span data-ttu-id="333e7-126">Nicht zutreffend</span><span class="sxs-lookup"><span data-stu-id="333e7-126">Not applicable.</span></span>                                         | <span data-ttu-id="333e7-127">Diese Meldung sollte von der Anwendung ignoriert werden.</span><span class="sxs-lookup"><span data-stu-id="333e7-127">This message should be ignored by the application.</span></span> <span data-ttu-id="333e7-128">Wenn die Anwendung Pin-Anforderungen empfangen muss, sollte die [**bluetoothregisterforauthentication**](/windows/desktop/api/BluetoothAPIs/nf-bluetoothapis-bluetoothregisterforauthentication) -Funktion verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="333e7-128">If the application must receive PIN requests, the [**BluetoothRegisterForAuthentication**](/windows/desktop/api/BluetoothAPIs/nf-bluetoothapis-bluetoothregisterforauthentication) function should be used.</span></span>                                                                                                                                                   |
+| <span data-ttu-id="333e7-129">GUID- \_ Bluetooth- \_ Radio \_ im \_ Bereich</span><span class="sxs-lookup"><span data-stu-id="333e7-129">GUID\_BLUETOOTH\_RADIO\_IN\_RANGE</span></span>      | [<span data-ttu-id="333e7-130">**BTH \_ Radio \_ in \_ Bereich**</span><span class="sxs-lookup"><span data-stu-id="333e7-130">**BTH\_RADIO\_IN\_RANGE**</span></span>](/windows/desktop/api/Bthdef/ns-bthdef-bth_radio_in_range)     | <span data-ttu-id="333e7-131">Diese Meldung wird gesendet, wenn eines der folgenden Attribute eines Bluetooth-Remote Geräts geändert wurde: das Gerät wurde ermittelt, die Klasse des Geräts, der Name, der verbundene Zustand oder der Zustand des Geräts wurde gespeichert.</span><span class="sxs-lookup"><span data-stu-id="333e7-131">This message is sent when any of the following attributes of a remote Bluetooth device has changed: the device has been discovered, the class of device, name, connected state, or device remembered state.</span></span> <span data-ttu-id="333e7-132">Diese Meldung wird auch gesendet, wenn diese Attribute festgelegt oder gelöscht werden.</span><span class="sxs-lookup"><span data-stu-id="333e7-132">This message is also sent when these attributes are set or cleared.</span></span>                                                                                  |
+| <span data-ttu-id="333e7-133">GUID \_ Bluetooth- \_ Radio \_ außerhalb des gültigen \_ \_ Bereichs</span><span class="sxs-lookup"><span data-stu-id="333e7-133">GUID\_BLUETOOTH\_RADIO\_OUT\_OF\_RANGE</span></span> | [<span data-ttu-id="333e7-134">**Bluetooth- \_ Adresse**</span><span class="sxs-lookup"><span data-stu-id="333e7-134">**BLUETOOTH\_ADDRESS**</span></span>](/windows/win32/api/bluetoothapis/ns-bluetoothapis-bluetooth_address_struct)         | <span data-ttu-id="333e7-135">Diese Meldung wird gesendet, wenn ein zuvor ermitteltes Gerät nach dem Abschluss der letzten Abfrage nicht gefunden wurde.</span><span class="sxs-lookup"><span data-stu-id="333e7-135">This message is sent when a previously discovered device has not been found after the completion of the last inquiry.</span></span> <span data-ttu-id="333e7-136">Diese Meldung wird nicht für gespeicherte Geräte gesendet.</span><span class="sxs-lookup"><span data-stu-id="333e7-136">This message will not be sent for remembered devices.</span></span> <span data-ttu-id="333e7-137">Die **BTH- \_ Adress** Struktur ist die Adresse des Geräts, das nicht gefunden wurde.</span><span class="sxs-lookup"><span data-stu-id="333e7-137">The **BTH\_ADDRESS** structure is the address of the device that was not found.</span></span>                                                                                                      |
+
+
+
+ 
+
+## <a name="related-topics"></a><span data-ttu-id="333e7-138">Zugehörige Themen</span><span class="sxs-lookup"><span data-stu-id="333e7-138">Related topics</span></span>
+
+<dl> <dt>
+
+[<span data-ttu-id="333e7-139">**Bluetoothfindfirstradio**</span><span class="sxs-lookup"><span data-stu-id="333e7-139">**BluetoothFindFirstRadio**</span></span>](/windows/desktop/api/BluetoothAPIs/nf-bluetoothapis-bluetoothfindfirstradio)
+</dt> <dt>
+
+[<span data-ttu-id="333e7-140">**Bluetoothfindnextradio**</span><span class="sxs-lookup"><span data-stu-id="333e7-140">**BluetoothFindNextRadio**</span></span>](/windows/desktop/api/BluetoothAPIs/nf-bluetoothapis-bluetoothfindnextradio)
+</dt> <dt>
+
+[<span data-ttu-id="333e7-141">**Bluetoothfindradioclose**</span><span class="sxs-lookup"><span data-stu-id="333e7-141">**BluetoothFindRadioClose**</span></span>](/windows/desktop/api/BluetoothAPIs/nf-bluetoothapis-bluetoothfindradioclose)
+</dt> <dt>
+
+[<span data-ttu-id="333e7-142">**Registerdevicenotifizierung**</span><span class="sxs-lookup"><span data-stu-id="333e7-142">**RegisterDeviceNotification**</span></span>](/windows/desktop/api/winuser/nf-winuser-registerdevicenotificationa)
+</dt> <dt>
+
+[<span data-ttu-id="333e7-143">Setupdidestroyeinfolist</span><span class="sxs-lookup"><span data-stu-id="333e7-143">SetupDiDestroyDeviceInfoList</span></span>](/windows/win32/api/setupapi/nf-setupapi-setupdidestroydeviceinfolist)
+</dt> <dt>
+
+[<span data-ttu-id="333e7-144">Setupdienumbinviceintergesichter</span><span class="sxs-lookup"><span data-stu-id="333e7-144">SetupDiEnumDeviceInterfaces</span></span>](/windows/win32/api/setupapi/nf-setupapi-setupdienumdeviceinterfaces)
+</dt> <dt>
+
+[<span data-ttu-id="333e7-145">Setupdigetclassbinvs</span><span class="sxs-lookup"><span data-stu-id="333e7-145">SetupDiGetClassDevs</span></span>](/windows/win32/api/setupapi/nf-setupapi-setupdigetclassdevsw)
+</dt> <dt>
+
+[<span data-ttu-id="333e7-146">**Bluetooth- \_ Adresse**</span><span class="sxs-lookup"><span data-stu-id="333e7-146">**BLUETOOTH\_ADDRESS**</span></span>](/windows/win32/api/bluetoothapis/ns-bluetoothapis-bluetooth_address_struct)
+</dt> <dt>
+
+[<span data-ttu-id="333e7-147">**BTH \_ HCI- \_ Ereignis \_ Informationen**</span><span class="sxs-lookup"><span data-stu-id="333e7-147">**BTH\_HCI\_EVENT\_INFO**</span></span>](/windows/desktop/api/Bthdef/ns-bthdef-bth_hci_event_info)
+</dt> <dt>
+
+[<span data-ttu-id="333e7-148">**BTH \_ L2CAP \_ Ereignis \_ Informationen**</span><span class="sxs-lookup"><span data-stu-id="333e7-148">**BTH\_L2CAP\_EVENT\_INFO**</span></span>](/windows/desktop/api/Bthdef/ns-bthdef-bth_l2cap_event_info)
+</dt> <dt>
+
+[<span data-ttu-id="333e7-149">**BTH \_ Radio \_ in \_ Bereich**</span><span class="sxs-lookup"><span data-stu-id="333e7-149">**BTH\_RADIO\_IN\_RANGE**</span></span>](/windows/desktop/api/Bthdef/ns-bthdef-bth_radio_in_range)
+</dt> <dt>
+
+[<span data-ttu-id="333e7-150">**DEV- \_ Broadcast \_ handle**</span><span class="sxs-lookup"><span data-stu-id="333e7-150">**DEV\_BROADCAST\_HANDLE**</span></span>](/windows/desktop/api/dbt/ns-dbt-dev_broadcast_handle)
+</dt> <dt>
+
+[<span data-ttu-id="333e7-151">**WM- \_ devicechange**</span><span class="sxs-lookup"><span data-stu-id="333e7-151">**WM\_DEVICECHANGE**</span></span>](/windows/desktop/DevIO/wm-devicechange)
+</dt> </dl>
+
+ 
+
+ 
