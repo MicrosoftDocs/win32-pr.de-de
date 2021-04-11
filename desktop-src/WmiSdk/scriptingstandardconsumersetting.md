@@ -1,0 +1,176 @@
+---
+description: Die Singleton scriptingstandardconsumersetting-Klasse stellt Registrierungsdaten bereit, die allen Instanzen der activescripteventconsumer Standard-Consumerklasse gemeinsam sind.
+ms.assetid: d217e058-3529-4173-b896-ebff3d7b05c6
+ms.tgt_platform: multiple
+title: Scriptingstandardconsumersetting-Klasse
+ms.topic: reference
+ms.date: 05/31/2018
+topic_type:
+- APIRef
+- kbSyntax
+api_name:
+- ScriptingStandardConsumerSetting
+- ScriptingStandardConsumerSetting.Caption
+- ScriptingStandardConsumerSetting.Description
+- ScriptingStandardConsumerSetting.MaximumScripts
+- ScriptingStandardConsumerSetting.SettingID
+- ScriptingStandardConsumerSetting.Timeout
+api_type:
+- DllExport
+api_location:
+- Scrcons.exe
+ms.openlocfilehash: 43eae14eea445f546f731605c94b38e770b08691
+ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "104215329"
+---
+# <a name="scriptingstandardconsumersetting-class"></a>Scriptingstandardconsumersetting-Klasse
+
+Die Singleton **scriptingstandardconsumersetting** -Klasse stellt Registrierungsdaten bereit, die allen Instanzen der [**activescripteventconsumer**](activescripteventconsumer.md) Standard-Consumerklasse gemeinsam sind. Eine **activescripteventconsumer** -Instanz verwendet die Eigenschaften **maximumscripts** und **Timeout** . Weitere Informationen finden Sie unter über [wachen und reagieren auf Ereignisse mit Standard](monitoring-and-responding-to-events-with-standard-consumers.md)Consumern.
+
+Die folgende Syntax wird aus dem MOF-Code (Managed Object Format) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften und Methoden sind in alphabetischer Reihenfolge, nicht in der MOF-Reihenfolge.
+
+## <a name="syntax"></a>Syntax
+
+``` syntax
+[Singleton, AMENDMENT]
+class ScriptingStandardConsumerSetting : CIM_Setting
+{
+  string Caption = "Scripting Standard Consumer Setting";
+  string Description = "Registration data common to all instances of the Scripting Standard Consumer";
+  uint32 MaximumScripts = 300;
+  string SettingID = "ScriptingStandardConsumerSetting";
+  uint32 Timeout = 0;
+};
+```
+
+## <a name="members"></a>Member
+
+Die **scriptingstandardconsumersetting** -Klasse verfügt über diese Typen von Membern:
+
+-   [Eigenschaften](#properties)
+
+### <a name="properties"></a>Eigenschaften
+
+Die **scriptingstandardconsumersetting** -Klasse verfügt über diese Eigenschaften.
+
+<dl> <dt>
+
+**Caption**
+</dt> <dd> <dl> <dt>
+
+Datentyp: **Zeichenfolge**
+</dt> <dt>
+
+Zugriffstyp: Schreibgeschützt
+</dt> <dt>
+
+Qualifizierer: [**maxlen**](standard-qualifiers.md) (64)
+</dt> </dl>
+
+Eine kurze Beschreibung eines Objekts mit einer Zeilen Zeichenfolge. Enthält die Zeichenfolge **scriptingstandardconsumersetting** , da es sich hierbei um eine Singleton-Klasse handelt.
+
+</dd> <dt>
+
+**Beschreibung**
+</dt> <dd> <dl> <dt>
+
+Datentyp: **Zeichenfolge**
+</dt> <dt>
+
+Zugriffstyp: Schreibgeschützt
+</dt> </dl>
+
+Eine Textbeschreibung eines-Objekts.
+
+</dd> <dt>
+
+**Maximumscripts**
+</dt> <dd> <dl> <dt>
+
+Datentyp: **UInt32**
+</dt> <dt>
+
+Zugriffstyp: Lesen/Schreiben
+</dt> </dl>
+
+Maximale Anzahl von Skripts, die ausgeführt werden, bevor ein Consumer eine neue Instanz startet. Wenn Sie Speicher Verluste aus Skripts löschen möchten, fahren Sie den Consumer regelmäßig herunter. Der Standardwert ist 300.
+
+</dd> <dt>
+
+**SettingID**
+</dt> <dd> <dl> <dt>
+
+Datentyp: **Zeichenfolge**
+</dt> <dt>
+
+Zugriffstyp: Schreibgeschützt
+</dt> <dt>
+
+Qualifizierer: [**maxlen**](standard-qualifiers.md) (256)
+</dt> </dl>
+
+Der Bezeichner für das Einstellungs Objekt.
+
+</dd> <dt>
+
+**Timeout**
+</dt> <dd> <dl> <dt>
+
+Datentyp: **UInt32**
+</dt> <dt>
+
+Zugriffstyp: Lesen/Schreiben
+</dt> <dt>
+
+Qualifizierer: [**Einheiten**](standard-qualifiers.md) ("Minuten")
+</dt> </dl>
+
+Maximale Anzahl von Minuten, bevor ein Consumer eine neue Instanz startet. Wenn 0 (null), steuert die **maximumscripts** -Eigenschaft die Verbraucher Lebensdauer. Der gültige Bereich für das **Timeout** liegt zwischen 0 und 71.000, und der Standardwert ist 0 (null).
+
+</dd> </dl>
+
+## <a name="remarks"></a>Bemerkungen
+
+Die einzelne Instanz der **scriptingstandardconsumersetting** -Klasse befindet sich im root \\ CIMV2-Namespace.
+
+## <a name="requirements"></a>Anforderungen
+
+
+
+| Anforderung | Wert |
+|-------------------------------------|----------------------------------------------------------------------------------------|
+| Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                               |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                         |
+| Namespace<br/>                | Stamm \\ Abonnement<br/>                                                          |
+| MOF<br/>                      | <dl> <dt>Scrcons. MOF</dt> </dl> |
+| DLL<br/>                      | <dl> <dt>Scrcons.exe</dt> </dl> |
+
+
+
+## <a name="see-also"></a>Siehe auch
+
+<dl> <dt>
+
+[**CIM- \_ Einstellung**](/windows/desktop/CIMWin32Prov/cim-setting)
+</dt> <dt>
+
+[Standard Consumer-Klassen](standard-consumer-classes.md)
+</dt> <dt>
+
+[Ausführen eines Skripts auf der Grundlage eines Ereignisses](running-a-script-based-on-an-event.md)
+</dt> <dt>
+
+[Erstellen eines logischen Consumers](creating-a-logical-consumer.md)
+</dt> <dt>
+
+[Empfangen von Ereignissen zu allen Zeitpunkten](receiving-events-at-all-times.md)
+</dt> <dt>
+
+[**\_\_Eventconsumer**](--eventconsumer.md)
+</dt> </dl>
+
+ 
+
