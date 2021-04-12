@@ -1,0 +1,26 @@
+---
+description: Eine Anwendung kann die RegSetValueEx-Funktion verwenden, um einen Wert und seine Daten einem Schlüssel zuzuordnen. Eine Liste der Werttypen, die von RegSetValueEx unterstützt werden, finden Sie unter Registrierungs Werttypen.
+ms.assetid: 75ac826a-f169-400c-b6d6-3e3ec9ebf996
+title: Schreiben und Löschen von Registrierungsdaten
+ms.topic: article
+ms.date: 05/31/2018
+ms.openlocfilehash: d5185c98f39a37512ec56fb994d5f1c4ba4b61ee
+ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "104345029"
+---
+# <a name="writing-and-deleting-registry-data"></a><span data-ttu-id="2172f-104">Schreiben und Löschen von Registrierungsdaten</span><span class="sxs-lookup"><span data-stu-id="2172f-104">Writing and Deleting Registry Data</span></span>
+
+<span data-ttu-id="2172f-105">Eine Anwendung kann die [**RegSetValueEx**](/windows/desktop/api/Winreg/nf-winreg-regsetvalueexa) -Funktion verwenden, um einen Wert und seine Daten einem Schlüssel zuzuordnen.</span><span class="sxs-lookup"><span data-stu-id="2172f-105">An application can use the [**RegSetValueEx**](/windows/desktop/api/Winreg/nf-winreg-regsetvalueexa) function to associate a value and its data with a key.</span></span> <span data-ttu-id="2172f-106">Eine Liste der Werttypen, die von **RegSetValueEx** unterstützt werden, finden Sie unter [Registrierungs Werttypen](registry-value-types.md).</span><span class="sxs-lookup"><span data-stu-id="2172f-106">For a list of the value types supported by **RegSetValueEx**, see [Registry Value Types](registry-value-types.md).</span></span>
+
+<span data-ttu-id="2172f-107">Um einen Wert aus einem Schlüssel zu löschen, kann eine Anwendung die [**RegDeleteValue**](/windows/desktop/api/Winreg/nf-winreg-regdeletevaluea) -Funktion verwenden.</span><span class="sxs-lookup"><span data-stu-id="2172f-107">To delete a value from a key, an application can use the [**RegDeleteValue**](/windows/desktop/api/Winreg/nf-winreg-regdeletevaluea) function.</span></span> <span data-ttu-id="2172f-108">Um einen Schlüssel zu löschen, kann er die [**regdeletekey**](/windows/desktop/api/Winreg/nf-winreg-regdeletekeya) -Funktion verwenden.</span><span class="sxs-lookup"><span data-stu-id="2172f-108">To delete a key, it can use the [**RegDeleteKey**](/windows/desktop/api/Winreg/nf-winreg-regdeletekeya) function.</span></span> <span data-ttu-id="2172f-109">Ein gelöschter Schlüssel wird erst entfernt, wenn das letzte Handle geschlossen wurde.</span><span class="sxs-lookup"><span data-stu-id="2172f-109">A deleted key is not removed until the last handle to it has been closed.</span></span> <span data-ttu-id="2172f-110">Unterschlüssel und Werte können nicht unter einem gelöschten Schlüssel erstellt werden.</span><span class="sxs-lookup"><span data-stu-id="2172f-110">Subkeys and values cannot be created under a deleted key.</span></span>
+
+<span data-ttu-id="2172f-111">Es ist nicht möglich, einen Registrierungsschlüssel während eines Schreibvorgangs zu sperren, um den Zugriff auf die Daten zu synchronisieren.</span><span class="sxs-lookup"><span data-stu-id="2172f-111">It is not possible to lock a registry key during a write operation to synchronize access to the data.</span></span> <span data-ttu-id="2172f-112">Sie können jedoch den Zugriff auf einen Registrierungsschlüssel mithilfe von Sicherheits Attributen steuern.</span><span class="sxs-lookup"><span data-stu-id="2172f-112">However, you can control access to a registry key using security attributes.</span></span> <span data-ttu-id="2172f-113">Weitere Informationen finden Sie unter [Sicherheits-und Zugriffsrechte für den Registrierungsschlüssel](registry-key-security-and-access-rights.md).</span><span class="sxs-lookup"><span data-stu-id="2172f-113">For more information, see [Registry Key Security and Access Rights](registry-key-security-and-access-rights.md).</span></span>
+
+<span data-ttu-id="2172f-114">Innerhalb einer einzelnen Transaktion können mehrere Registrierungs Vorgänge ausgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="2172f-114">More than one registry operation can be performed within a single transaction.</span></span> <span data-ttu-id="2172f-115">Um einer Transaktion einen Registrierungsschlüssel zuzuordnen, kann eine Anwendung die [**regkreatekeytransfailed**](/windows/desktop/api/Winreg/nf-winreg-regcreatekeytransacteda) -oder [**regopenkeytransfailed**](/windows/desktop/api/Winreg/nf-winreg-regopenkeytransacteda) -Funktion verwenden.</span><span class="sxs-lookup"><span data-stu-id="2172f-115">To associate a registry key with a transaction, an application can use the [**RegCreateKeyTransacted**](/windows/desktop/api/Winreg/nf-winreg-regcreatekeytransacteda) or [**RegOpenKeyTransacted**](/windows/desktop/api/Winreg/nf-winreg-regopenkeytransacteda) function.</span></span> <span data-ttu-id="2172f-116">Weitere Informationen zu Transaktionen finden Sie unter [Kerneltransaktions-Manager](/windows/desktop/Ktm/kernel-transaction-manager-portal).</span><span class="sxs-lookup"><span data-stu-id="2172f-116">For more information about transactions, see [Kernel Transaction Manager](/windows/desktop/Ktm/kernel-transaction-manager-portal).</span></span>
+
+ 
+
+ 

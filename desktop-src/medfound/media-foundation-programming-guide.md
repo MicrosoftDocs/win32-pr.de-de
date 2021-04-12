@@ -1,0 +1,67 @@
+---
+description: Media Foundation-Programmier Handbuch
+ms.assetid: 5258b2ff-96d5-490f-9a18-c01dd6924f1c
+title: Media Foundation-Programmier Handbuch
+ms.topic: article
+ms.date: 05/31/2018
+ms.openlocfilehash: 7ffc8e0d9197f3a9528a6586cb4ddc8da9a3a45f
+ms.sourcegitcommit: c16214e53680dc71d1c07111b51f72b82a4512d8
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "104218982"
+---
+# <a name="media-foundation-programming-guide"></a><span data-ttu-id="16629-103">Media Foundation-Programmier Handbuch</span><span class="sxs-lookup"><span data-stu-id="16629-103">Media Foundation Programming Guide</span></span>
+
+<span data-ttu-id="16629-104">Dieser Abschnitt enthält Übersichts Themen zur Verwendung von Microsoft Media Foundation in Ihrer C++-Anwendung.</span><span class="sxs-lookup"><span data-stu-id="16629-104">This section contains overview topics for using Microsoft Media Foundation in your C++ application.</span></span>
+
+### <a name="getting-started"></a><span data-ttu-id="16629-105">Erste Schritte</span><span class="sxs-lookup"><span data-stu-id="16629-105">Getting Started</span></span>
+
+-   [<span data-ttu-id="16629-106">Grundlegende Konzepte</span><span class="sxs-lookup"><span data-stu-id="16629-106">Essential Concepts</span></span>](media-foundation-programming--essential-concepts.md)
+-   [<span data-ttu-id="16629-107">Media Foundation-Architektur</span><span class="sxs-lookup"><span data-stu-id="16629-107">Media Foundation Architecture</span></span>](media-foundation-architecture.md)
+
+### <a name="writing-media-applications"></a><span data-ttu-id="16629-108">Schreiben von Medienanwendungen</span><span class="sxs-lookup"><span data-stu-id="16629-108">Writing Media Applications</span></span>
+
+-   [<span data-ttu-id="16629-109">Audio-/Videowiedergabe</span><span class="sxs-lookup"><span data-stu-id="16629-109">Audio/Video Playback</span></span>](audio-video-playback.md)
+-   [<span data-ttu-id="16629-110">Audio-/Videoaufzeichnung</span><span class="sxs-lookup"><span data-stu-id="16629-110">Audio/Video Capture</span></span>](audio-video-capture.md)
+-   [<span data-ttu-id="16629-111">Codierung und Dateierstellung</span><span class="sxs-lookup"><span data-stu-id="16629-111">Encoding and File Authoring</span></span>](encoding-and-file-authoring.md)
+-   [<span data-ttu-id="16629-112">Medien Metadaten</span><span class="sxs-lookup"><span data-stu-id="16629-112">Media Metadata</span></span>](media-metadata.md)
+-   [<span data-ttu-id="16629-113">Netzwerk in Media Foundation</span><span class="sxs-lookup"><span data-stu-id="16629-113">Networking in Media Foundation</span></span>](networking-in-media-foundation.md)
+
+### <a name="media-format-support"></a><span data-ttu-id="16629-114">Unterstützung für Medienformate</span><span class="sxs-lookup"><span data-stu-id="16629-114">Media Format Support</span></span>
+
+-   [<span data-ttu-id="16629-115">Unterstützte Medienformate in Media Foundation</span><span class="sxs-lookup"><span data-stu-id="16629-115">Supported Media Formats in Media Foundation</span></span>](supported-media-formats-in-media-foundation.md)
+-   [<span data-ttu-id="16629-116">Media Foundation von Codec-Objekten</span><span class="sxs-lookup"><span data-stu-id="16629-116">Media Foundation Codec Objects</span></span>](codecobjects.md)
+-   [<span data-ttu-id="16629-117">Unterstützung von ASF in Media Foundation</span><span class="sxs-lookup"><span data-stu-id="16629-117">ASF Support in Media Foundation</span></span>](asf-support-in-media-foundation.md)
+-   [<span data-ttu-id="16629-118">MPEG-4-Unterstützung in Media Foundation</span><span class="sxs-lookup"><span data-stu-id="16629-118">MPEG-4 Support in Media Foundation</span></span>](mpeg-4-support-in-media-foundation.md)
+-   [<span data-ttu-id="16629-119">Windows Media-Codecs</span><span class="sxs-lookup"><span data-stu-id="16629-119">Windows Media Codecs</span></span>](windows-media-codecs.md)
+
+### <a name="low-level-video-apis"></a><span data-ttu-id="16629-120">Low-Level Video-APIs</span><span class="sxs-lookup"><span data-stu-id="16629-120">Low-Level Video APIs</span></span>
+
+-   [<span data-ttu-id="16629-121">Direct3D 9-Video-APIs</span><span class="sxs-lookup"><span data-stu-id="16629-121">Direct3D 9 Video APIs</span></span>](direct3d-video-apis.md)
+-   [<span data-ttu-id="16629-122">Direct3D 11-Video-APIs</span><span class="sxs-lookup"><span data-stu-id="16629-122">Direct3D 11 Video APIs</span></span>](direct3d-11-video-apis.md)
+-   [<span data-ttu-id="16629-123">DirectX-Video Beschleunigung 2,0</span><span class="sxs-lookup"><span data-stu-id="16629-123">DirectX Video Acceleration 2.0</span></span>](directx-video-acceleration-2-0.md)
+-   [<span data-ttu-id="16629-124">Output Protection Manager</span><span class="sxs-lookup"><span data-stu-id="16629-124">Output Protection Manager</span></span>](output-protection-manager.md)
+
+### <a name="writing-media-foundation-plug-ins"></a><span data-ttu-id="16629-125">Schreiben von Media Foundation-Plug-ins</span><span class="sxs-lookup"><span data-stu-id="16629-125">Writing Media Foundation Plug-ins</span></span>
+
+-   [<span data-ttu-id="16629-126">Media Foundation Transformationen</span><span class="sxs-lookup"><span data-stu-id="16629-126">Media Foundation Transforms</span></span>](media-foundation-transforms.md)
+-   [<span data-ttu-id="16629-127">Medien senken</span><span class="sxs-lookup"><span data-stu-id="16629-127">Media Sinks</span></span>](media-sinks.md)
+-   [<span data-ttu-id="16629-128">Medienquellen</span><span class="sxs-lookup"><span data-stu-id="16629-128">Media Sources</span></span>](media-sources.md)
+
+## <a name="related-topics"></a><span data-ttu-id="16629-129">Zugehörige Themen</span><span class="sxs-lookup"><span data-stu-id="16629-129">Related topics</span></span>
+
+<dl> <dt>
+
+[<span data-ttu-id="16629-130">Media Foundation-Architektur</span><span class="sxs-lookup"><span data-stu-id="16629-130">Media Foundation Architecture</span></span>](media-foundation-architecture.md)
+</dt> <dt>
+
+[<span data-ttu-id="16629-131">Microsoft Media Foundation</span><span class="sxs-lookup"><span data-stu-id="16629-131">Microsoft Media Foundation</span></span>](microsoft-media-foundation-sdk.md)
+</dt> </dl>
+
+ 
+
+ 
+
+
+
