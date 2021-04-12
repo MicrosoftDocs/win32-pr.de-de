@@ -1,0 +1,68 @@
+---
+description: Ein Anforderer muss über ein klar definiertes Verständnis bezüglich des Status des Writers verfügen, der während der Erstellung der Schatten Kopie und während Sicherungs-und Wiederherstellungs Vorgängen an dieser teilnimmt.
+ms.assetid: 676d5cff-bd28-43f0-a402-d184c96f0061
+title: Ermitteln des Writer-Status
+ms.topic: article
+ms.date: 05/31/2018
+ms.openlocfilehash: 719322a18808748e92d412c48c7b7628fdac9d51
+ms.sourcegitcommit: 70f39ec77d19d3c32c376ee2831753d2cafae41a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/09/2021
+ms.locfileid: "104219115"
+---
+# <a name="determining-writer-status"></a><span data-ttu-id="deadc-103">Ermitteln des Writer-Status</span><span class="sxs-lookup"><span data-stu-id="deadc-103">Determining Writer Status</span></span>
+
+<span data-ttu-id="deadc-104">Ein Anforderer muss über ein klar definiertes Verständnis bezüglich des Status des Writers verfügen, der während der Erstellung der Schatten Kopie und während Sicherungs-und Wiederherstellungs Vorgängen an dieser teilnimmt.</span><span class="sxs-lookup"><span data-stu-id="deadc-104">A requester needs to have a well-defined understanding about the status of the writer that participates with it during shadow copy creation, and during backup and restore operations.</span></span> <span data-ttu-id="deadc-105">Zu diesem Zweck wird Folgendes empfohlen:</span><span class="sxs-lookup"><span data-stu-id="deadc-105">To do so, it is recommended:</span></span>
+
+-   <span data-ttu-id="deadc-106">Anforderer verwenden [**IVssBackupComponents:: gatherbeschreiterstatus**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-gatherwriterstatus), [**IVssBackupComponents:: getschreiterstatuscount**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-getwriterstatuscount)und [**IVssBackupComponents:: getschreiterstatus**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-getwriterstatus).</span><span class="sxs-lookup"><span data-stu-id="deadc-106">Requesters use [**IVssBackupComponents::GatherWriterStatus**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-gatherwriterstatus), [**IVssBackupComponents::GetWriterStatusCount**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-getwriterstatuscount), and [**IVssBackupComponents::GetWriterStatus**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-getwriterstatus).</span></span>
+-   <span data-ttu-id="deadc-107">Wie in Übersicht über die [Verarbeitung einer Sicherung unter VSS](overview-of-processing-a-backup-under-vss.md) und im Überblick über die [Verarbeitung einer Wiederherstellung unter VSS](overview-of-processing-a-restore-under-vss.md)beschrieben, sind diese Methoden besonders nützlich, wenn Sie in einer klar definierten Sicherungs-oder Wiederherstellungs Sequenz aufgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="deadc-107">As described in [Overview of Processing a Backup Under VSS](overview-of-processing-a-backup-under-vss.md) and [Overview of Processing a Restore Under VSS](overview-of-processing-a-restore-under-vss.md), these methods are most useful when called in a well-defined backup or restore sequence.</span></span> <span data-ttu-id="deadc-108">In der Regel bedeutet dies, dass die Writer abgefragt werden sollten, nachdem ein Anforderer eine seiner Aufgaben abgeschlossen und ein VSS-Ereignis generiert hat.</span><span class="sxs-lookup"><span data-stu-id="deadc-108">Typically, this means that the writers should be queried after a requester has completed one of its tasks and generated a VSS event.</span></span>
+
+    <span data-ttu-id="deadc-109">Wenn eine Sicherung verarbeitet wird, sollte ein Antragsteller einen Writer nach dem Abschluss der folgenden Methoden Abfragen.</span><span class="sxs-lookup"><span data-stu-id="deadc-109">When processing a backup, a requester should query a writer following the completion of the following methods.</span></span> <span data-ttu-id="deadc-110">Anforderer muss [**gatherschreibstatus**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-gatherwriterstatus) nach dem Aufruf von [**BackupComplete**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-backupcomplete) aufrufen, damit die Writer-Sitzung auf den Status abgeschlossen festgelegt wird.</span><span class="sxs-lookup"><span data-stu-id="deadc-110">Requesters must call [**GatherWriterStatus**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-gatherwriterstatus) after calling [**BackupComplete**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-backupcomplete) to cause the writer session to be set to a completed state.</span></span>
+
+    > [!Note]  
+    > <span data-ttu-id="deadc-111">Dies ist nur auf Windows Server 2008 mit Service Pack 2 (SP2) und früher erforderlich.</span><span class="sxs-lookup"><span data-stu-id="deadc-111">This is only necessary on Windows Server 2008 with Service Pack 2 (SP2) and earlier.</span></span>
+
+     
+
+    <dl> <dt>
+
+[<span data-ttu-id="deadc-112">**IVssBackupComponents::P Analyse forbackup**</span><span class="sxs-lookup"><span data-stu-id="deadc-112">**IVssBackupComponents::PrepareForBackup**</span></span>](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-prepareforbackup)
+</dt> <dt>
+
+[<span data-ttu-id="deadc-113">**IVssBackupComponents::D osnapshotset**</span><span class="sxs-lookup"><span data-stu-id="deadc-113">**IVssBackupComponents::DoSnapshotSet**</span></span>](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-dosnapshotset)
+</dt> <dt>
+
+[<span data-ttu-id="deadc-114">**IVssBackupComponents:: BackupComplete**</span><span class="sxs-lookup"><span data-stu-id="deadc-114">**IVssBackupComponents::BackupComplete**</span></span>](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-backupcomplete)
+</dt> </dl>
+
+<span data-ttu-id="deadc-115">Während des Wiederherstellungs Vorgangs sollte ein Antragsteller einen Writer nach Abschluss dieser Methoden Abfragen:</span><span class="sxs-lookup"><span data-stu-id="deadc-115">During restore operations, a requester should query a writer after completion of these methods:</span></span>
+<dl> <dt>
+
+[<span data-ttu-id="deadc-116">**IVssBackupComponents::P erneut ausführen**</span><span class="sxs-lookup"><span data-stu-id="deadc-116">**IVssBackupComponents::PreRestore**</span></span>](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-prerestore)
+</dt> <dt>
+
+[<span data-ttu-id="deadc-117">**IVssBackupComponents::P ostrestore**</span><span class="sxs-lookup"><span data-stu-id="deadc-117">**IVssBackupComponents::PostRestore**</span></span>](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-postrestore)
+</dt> </dl>
+
+-   <span data-ttu-id="deadc-118">Aufrufe von [**IVssBackupComponents:: gatherwrite Status**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-gatherwriterstatus) , die nicht Teil einer klar definierten Sicherungs-oder Wiederherstellungs Sequenz sind, bieten kein zuverlässiges Bild des Writer-Status, da Sie möglicherweise Bedingungen widerspiegeln, die im aktuellen Vorgang keinen Fehler angeben, z. b.:</span><span class="sxs-lookup"><span data-stu-id="deadc-118">Calls to [**IVssBackupComponents::GatherWriterStatus**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-gatherwriterstatus) that are not part of a well-defined backup or restore sequence do not provide a reliable picture of writer status, because they might reflect conditions that do not indicate failure in the current operation, such as:</span></span>
+    -   <span data-ttu-id="deadc-119">Fehler bei der Erstellung vorheriger Schatten Kopien.</span><span class="sxs-lookup"><span data-stu-id="deadc-119">A failure of a previous shadow copy creation</span></span>
+    -   <span data-ttu-id="deadc-120">Ein Fehler in einem frühen Sicherungs-oder Wiederherstellungs Vorgang.</span><span class="sxs-lookup"><span data-stu-id="deadc-120">An error in an early backup or restore operation</span></span>
+    -   <span data-ttu-id="deadc-121">Ein nicht reagierender Writer, der derzeit ein Ereignis verarbeitet</span><span class="sxs-lookup"><span data-stu-id="deadc-121">An unresponsive writer currently processing an event</span></span>
+
+<span data-ttu-id="deadc-122">Daher sollten sich Entwickler nicht auf den Schreiber Status verlassen, der von anderen Prozessen als der Anforderer zurückgegeben wird, oder versuchen, den Fortschritt einer Instanz der [**IVssBackupComponents**](/windows/desktop/api/VsBackup/nl-vsbackup-ivssbackupcomponents) -Schnittstelle mit einer anderen (möglicherweise in einem separaten Thread) zu überwachen.</span><span class="sxs-lookup"><span data-stu-id="deadc-122">Therefore, developers should not rely on writer status returned by processes other then the requester or attempt to monitor the progress of one instance of the [**IVssBackupComponents**](/windows/desktop/api/VsBackup/nl-vsbackup-ivssbackupcomponents) interface with another (possibly in a separate thread).</span></span>
+
+<span data-ttu-id="deadc-123">Beachten Sie, dass bei Sicherungs Vorgängen, bei denen es erforderlich ist, Writer-Metadatendokumente zu untersuchen, kein Anforderer-Befehl für [**IVssBackupComponents:: GatherWriterStatus**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-gatherwriterstatus) und [**IVssBackupComponents:: getwriterstatus**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-getwriterstatus) nach der Generierung und [*Behandlung des von*](vssgloss-i.md) [**IVssBackupComponents:: gatherwritermetdata**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-gatherwritermetadata)verursachten Erstellungs Ereignisses ist.</span><span class="sxs-lookup"><span data-stu-id="deadc-123">Note that for backup operations, where it is necessary to examine writers' Writer Metadata Documents, there is no need for a requester call to [**IVssBackupComponents::GatherWriterStatus**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-gatherwriterstatus) and [**IVssBackupComponents::GetWriterStatus**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-getwriterstatus) following the generation and handling of the [*Identify*](vssgloss-i.md) event caused by [**IVssBackupComponents::GatherWriterMetdata**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-gatherwritermetadata).</span></span>
+
+<span data-ttu-id="deadc-124">[**IVssBackupComponents:: getwriterstatus**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-getwriterstatus) meldet nur den Status dieser Writer, deren Metadaten von Writern von Writer [*-Ereignis*](vssgloss-i.md) Handlern, [**CVssWriter:: onidentifi(**](/windows/desktop/api/VsWriter/nf-vswriter-cvsswriter-onidentify) und zurückgegeben von [**IVssBackupComponents:: GetWriterMetadataCount**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-getwritermetadatacount) und [**IVssBackupComponents:: getwritermetadata**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-getwritermetadata)) für VSS bereitgestellt wurden.</span><span class="sxs-lookup"><span data-stu-id="deadc-124">[**IVssBackupComponents::GetWriterStatus**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-getwriterstatus) reports only the status of those writers whose metadata was provided to VSS by writers' [*Identify*](vssgloss-i.md) event handlers, [**CVssWriter::OnIdentify**](/windows/desktop/api/VsWriter/nf-vswriter-cvsswriter-onidentify) (and returned to the requester by [**IVssBackupComponents::GetWriterMetadataCount**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-getwritermetadatacount) and [**IVssBackupComponents::GetWriterMetadata**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-getwritermetadata)).</span></span>
+
+<span data-ttu-id="deadc-125">Wenn die Implementierung von [**CVssWriter:: OnIdentify**](/windows/desktop/api/VsWriter/nf-vswriter-cvsswriter-onidentify) eines Writers fehlschlägt, werden die Metadaten des Writers nicht in der Liste der für den VSS bereitgestellten Writer-Metadatendokumente angezeigt, es sind keine Statusinformationen verfügbar, und der-Befehl wäre redundant.</span><span class="sxs-lookup"><span data-stu-id="deadc-125">If a writer's implementation of [**CVssWriter::OnIdentify**](/windows/desktop/api/VsWriter/nf-vswriter-cvsswriter-onidentify) fails, that writer's metadata will not be part of the list of Writer Metadata Documents provided to VSS, no status information will be available, and the call would be redundant.</span></span>
+
+<span data-ttu-id="deadc-126">Bei Wiederherstellungs Vorgängen, bei denen der Anforderer keine Writer-Metadatendokumente zum Ausführen von Writern untersuchen muss, kann der Aufruf von [**IVssBackupComponents:: GatherWriterStatus**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-gatherwriterstatus) und [**IVssBackupComponents:: getwriterstatus**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-getwriterstatus) eine effizientere Möglichkeit sein, um zu bestimmen, welche Writer ausgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="deadc-126">For restore operations, where the requester does not need to examine Writer Metadata Documents of executing writers, calling [**IVssBackupComponents::GatherWriterStatus**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-gatherwriterstatus) and [**IVssBackupComponents::GetWriterStatus**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-getwriterstatus) may be a more efficient way to determine which writers are executing.</span></span>
+
+ 
+
+ 
+
+
+
