@@ -1,0 +1,40 @@
+---
+title: Referenz zu Unterstützungsfunktionen
+description: Die folgenden Funktionen werden für das Routing von Protokollen durch den routermanager bereitgestellt.
+ms.assetid: 4e88c9fe-f6ec-4f9c-88b1-8726e10d0f6d
+keywords:
+- Routing Protokoll Schnittstelle RRAS, Supportfunktionen
+ms.topic: article
+ms.date: 05/31/2018
+ms.openlocfilehash: bbbaba49c5f7e4130491a50176d560ee565b0046
+ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "104473813"
+---
+# <a name="support-functions-reference"></a>Referenz zu Unterstützungsfunktionen
+
+Die folgenden Funktionen werden für das Routing von Protokollen durch den routermanager bereitgestellt. Wenn der routermanager die [**startprotocol**](/windows/desktop/api/Routprot/nc-routprot-pstart_protocol) -Funktion aufruft (implementiert durch das Routing Protokoll), übergibt der routermanager das Routing Protokoll einer [**Unterstützungs \_ Funktions**](/windows/desktop/api/Routprot/ns-routprot-support_functions_50) Struktur, die Zeiger auf diese Funktionen enthält:
+
+[**Demanddialrequest**](/previous-versions/windows/desktop/legacy/aa373924(v=vs.85))
+
+[**Mibentrycreate**](/previous-versions/windows/desktop/legacy/aa374538(v=vs.85))
+
+[**Mibentrydelete**](/previous-versions/windows/desktop/legacy/aa374539(v=vs.85))
+
+[**Mibentryget**](/previous-versions/windows/desktop/legacy/aa374540(v=vs.85))
+
+[**Mibentrygetfirst**](/previous-versions/windows/desktop/legacy/aa374541(v=vs.85))
+
+[**Mibentrygetnext**](/previous-versions/windows/desktop/legacy/aa374542(v=vs.85))
+
+[**Mibentryset**](/previous-versions/windows/desktop/legacy/aa374543(v=vs.85))
+
+[**Setinterfakereceivetype**](/previous-versions/windows/desktop/legacy/aa382181(v=vs.85))
+
+[**Validateroute**](/previous-versions/windows/desktop/legacy/aa382342(v=vs.85))
+
+ 
+
+ 
