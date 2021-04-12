@@ -1,0 +1,63 @@
+---
+title: VML-Attribut "fitpath"
+description: VML-Attribut "fitpath"
+ms.assetid: f15775ed-f7b7-45d9-83ed-e307daf7451b
+ms.topic: article
+ms.date: 05/31/2018
+ms.openlocfilehash: 1805e59a50c63248ed936f6a849869057a34a6e5
+ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "104209351"
+---
+# <a name="vml-fitpath-attribute"></a><span data-ttu-id="b27c7-103">VML-Attribut "fitpath"</span><span class="sxs-lookup"><span data-stu-id="b27c7-103">VML FitPath Attribute</span></span>
+
+<span data-ttu-id="b27c7-104">In diesem Thema wird VML beschrieben, eine Funktion, die ab Windows Internet Explorer 9 veraltet ist.</span><span class="sxs-lookup"><span data-stu-id="b27c7-104">This topic describes VML, a feature that is deprecated as of Windows Internet Explorer 9.</span></span> <span data-ttu-id="b27c7-105">Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.</span><span class="sxs-lookup"><span data-stu-id="b27c7-105">Webpages and applications that rely on VML should be migrated to SVG or other widely supported standards.</span></span>
+
+> [!Note]  
+> <span data-ttu-id="b27c7-106">Ab Dezember 2011 wurde dieses Thema archiviert.</span><span class="sxs-lookup"><span data-stu-id="b27c7-106">As of December 2011, this topic has been archived.</span></span> <span data-ttu-id="b27c7-107">Daher wird er nicht mehr aktiv verwaltet.</span><span class="sxs-lookup"><span data-stu-id="b27c7-107">As a result, it is no longer actively maintained.</span></span> <span data-ttu-id="b27c7-108">Weitere Informationen finden Sie unter [archivierte Inhalte](/previous-versions/windows/internet-explorer/ie-developer/).</span><span class="sxs-lookup"><span data-stu-id="b27c7-108">For more information, see [Archived Content](/previous-versions/windows/internet-explorer/ie-developer/).</span></span> <span data-ttu-id="b27c7-109">Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center](https://msdn.microsoft.com/ie/).</span><span class="sxs-lookup"><span data-stu-id="b27c7-109">For information, recommendations, and guidance regarding the current version of Windows Internet Explorer, see [Internet Explorer Developer Center](https://msdn.microsoft.com/ie/).</span></span>
+
+ 
+
+<span data-ttu-id="b27c7-110">Definiert, ob der Text dem Pfad einer Form entspricht.</span><span class="sxs-lookup"><span data-stu-id="b27c7-110">Defines whether the text fits the path of a shape.</span></span> <span data-ttu-id="b27c7-111">Lese-/Schreibzugriff.</span><span class="sxs-lookup"><span data-stu-id="b27c7-111">Read/write.</span></span> <span data-ttu-id="b27c7-112">**Vgder State**.</span><span class="sxs-lookup"><span data-stu-id="b27c7-112">**VgTriState**.</span></span>
+
+<span data-ttu-id="b27c7-113">**Gilt für**</span><span class="sxs-lookup"><span data-stu-id="b27c7-113">**Applies To**</span></span>
+
+[<span data-ttu-id="b27c7-114">TextPath</span><span class="sxs-lookup"><span data-stu-id="b27c7-114">TextPath</span></span>](msdn-online-vml-textpath-element.md)
+
+<span data-ttu-id="b27c7-115">**Tagsyntax**</span><span class="sxs-lookup"><span data-stu-id="b27c7-115">**Tag Syntax**</span></span>
+
+<span data-ttu-id="b27c7-116"><v: *Element* fitpath = " *Ausdruck* " ></span><span class="sxs-lookup"><span data-stu-id="b27c7-116"><v: *element* fitpath=" *expression* "></span></span>
+
+<span data-ttu-id="b27c7-117">**Skript Syntax**</span><span class="sxs-lookup"><span data-stu-id="b27c7-117">**Script Syntax**</span></span>
+
+<span data-ttu-id="b27c7-118">*Element* . fitpath = "*Ausdruck*"</span><span class="sxs-lookup"><span data-stu-id="b27c7-118">*element* .fitpath="*expression*"</span></span>
+
+<span data-ttu-id="b27c7-119">*Ausdruck* = *Element*. fitpath</span><span class="sxs-lookup"><span data-stu-id="b27c7-119">*expression*=*element*.fitpath</span></span>
+
+<span data-ttu-id="b27c7-120">**Anmerkungen**</span><span class="sxs-lookup"><span data-stu-id="b27c7-120">**Remarks**</span></span>
+
+<span data-ttu-id="b27c7-121">Wenn **true**, wird der Text so groß, dass der Pfad ausgefüllt wird, in dem er sich befindet.</span><span class="sxs-lookup"><span data-stu-id="b27c7-121">If **True**, sizes the text to fill the path it lies out on.</span></span> <span data-ttu-id="b27c7-122">Der Standardwert ist **False**.</span><span class="sxs-lookup"><span data-stu-id="b27c7-122">The default is **False**.</span></span>
+
+<span data-ttu-id="b27c7-123">*VML-Standard Attribut*</span><span class="sxs-lookup"><span data-stu-id="b27c7-123">*VML Standard Attribute*</span></span>
+
+<span data-ttu-id="b27c7-124">**Beispiel**</span><span class="sxs-lookup"><span data-stu-id="b27c7-124">**Example**</span></span>
+
+<span data-ttu-id="b27c7-125">Der Text wird an den Pfad angepasst.</span><span class="sxs-lookup"><span data-stu-id="b27c7-125">The text will fit the path.</span></span>
+
+
+```HTML
+   <v:line from="50 100" to="400 100">
+   <v:fill on="True" color="red"/>
+   <v:path textpathok="True"/>
+   <v:textpath on="True" string="VML Text" fitpath="True"
+   style="font:normal normal normal 36pt Arial"/>
+   </v:line>
+```
+
+
+
+ 
+
+ 
