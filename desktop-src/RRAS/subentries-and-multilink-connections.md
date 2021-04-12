@@ -1,0 +1,34 @@
+---
+title: Unter Einträge und Multilink-Verbindungen
+description: Windows NT Server 4,0 bietet Unterstützung für Telefonbuch-unter Einträge, die Multilinkverbindungen ermöglichen. Eine Multilinkverbindung kombiniert die Bandbreite mehrerer Verbindungen, um eine einzelne Verbindung mit höherer Bandbreite bereitzustellen.
+ms.assetid: 19cf6e1a-cdba-47e4-8d8f-d6030ed6f9e3
+ms.topic: article
+ms.date: 05/31/2018
+ms.openlocfilehash: c1970e2e2ad668b376b1097aa20cd18986fb605a
+ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "104316077"
+---
+# <a name="subentries-and-multilink-connections"></a>Unter Einträge und Multilink-Verbindungen
+
+Windows NT Server 4,0 bietet Unterstützung für Telefonbuch-unter Einträge, die Multilinkverbindungen ermöglichen. Eine Multilinkverbindung kombiniert die Bandbreite mehrerer Verbindungen, um eine einzelne Verbindung mit höherer Bandbreite bereitzustellen.
+
+Ein RAS-Telefonbucheintrag kann NULL oder mehr unter Einträge enthalten. Die Funktion " [**rasgetentryproperties**](/windows/desktop/api/Ras/nf-ras-rasgetentrypropertiesa) " Ruft eine " [**rasentry**](/previous-versions/windows/desktop/legacy/aa377274(v=vs.85)) "-Struktur ab, die Informationen über die untergeordneten Einträge eines Telefonbucheintrags enthält. Der **dwsubentries** -Member der **rasentry** -Struktur gibt die Anzahl der untergeordneten Einträge an. Für Telefonbucheinträge sind anfänglich keine unter Einträge vorhanden. Verwenden Sie die [**rassetsubentryproperties**](/windows/desktop/api/Ras/nf-ras-rassetsubentrypropertiesa) -Funktion, um einem Telefonbucheintrag unter Einträge hinzuzufügen.
+
+Die Eigenschaften für jeden unter Eintrag enthalten eine Telefonnummer und den Namen und den Typ des TAPI-Geräts, das beim Untersuchen des unter Eintrags verwendet werden soll. Außerdem kann ein unter Eintrag eine Liste alternativer Telefonnummern enthalten, die gewählt werden sollen, wenn RAS keine Verbindung mit der primären Nummer herstellen kann. Die [**rassetsubentryproperties**](/windows/desktop/api/Ras/nf-ras-rassetsubentrypropertiesa) -Funktion und die [**rasgetsubentryproperties**](/windows/desktop/api/Ras/nf-ras-rasgetsubentrypropertiesa) -Funktion verwenden die " [**rassubentry**](/previous-versions/windows/desktop/legacy/aa377839(v=vs.85)) "-Struktur, um die Eigenschaften eines angegebenen Telefonbuch-unter Eintrags festzulegen und abzurufen. Unter Einträge werden durch einen 1-basierten Index identifiziert.
+
+Sie können die [**rassetentryproperties**](/windows/desktop/api/Ras/nf-ras-rassetentrypropertiesa) -Funktion so konfigurieren, dass ein mehrfach-RAS-Eintrag konfiguriert wird, um alle untergeordneten Einträge zu verbinden, wenn diese zuerst ausgewählt werden. Alternativ können Sie einen Eintrag so konfigurieren, dass er eine Variablen Bandbreite bereitstellt. In diesem Fall stellt RAS anfänglich eine Verbindung mit einem einzelnen unter Eintrag her und verbindet bzw. trennt zusätzliche untergeordnete Einträge nach Bedarf. Für eine mehrfach-Verbindung mit variabler Bandbreite können Sie die Struktur " [**rasdialparser**](/previous-versions/windows/desktop/legacy/aa377238(v=vs.85)) " verwenden, um den anfänglichen unter Eintrag anzugeben, mit dem eine Verbindung hergestellt wird, wenn Sie die Funktion " [**rasdial**](/windows/desktop/api/Ras/nf-ras-rasdiala) " aufruft. Wenn Sie die Funktion " [**RasDialDlg**](/windows/desktop/api/Rasdlg/nf-rasdlg-rasdialdlga) " verwenden, um einen mehrfach-Eintrag zu verbinden, können Sie die " [**RasDialDlg**](/previous-versions/windows/desktop/legacy/aa377023(v=vs.85)) "-Struktur verwenden, um den anfänglichen unter Eintrag zum Verbinden anzugeben.
+
+Verwenden Sie für eine Multilinkverbindung mit variabler Bandbreite die [**rasentry**](/previous-versions/windows/desktop/legacy/aa377274(v=vs.85)) -Struktur mit der [**rassetentryproperties**](/windows/desktop/api/Ras/nf-ras-rassetentrypropertiesa) -Funktion, um die Parameter zum Verbinden und Trennen der einzelnen untergeordneten Einträge anzugeben. RAS verbindet einen zusätzlichen unter Eintrag, wenn die verwendete Bandbreite einen angegebenen Prozentsatz der verfügbaren Bandbreite für ein bestimmtes Intervall überschreitet.
+
+Wenn Sie die Funktion " [**rasdial**](/windows/desktop/api/Ras/nf-ras-rasdiala) " zum Herstellen einer Verbindung mit mehreren Links aufzurufen, können Sie eine [**RasDialFunc2**](/windows/desktop/api/Ras/nc-ras-rasdialfunc2) -Rückruffunktion angeben, um Benachrichtigungen über die Verbindung zu empfangen. **RasDialFunc2** ähnelt der [**RasDialFunc1**](/windows/desktop/api/Ras/nc-ras-rasdialfunc1) Callback-Funktion, mit der Ausnahme, dass Sie zusätzliche Informationen für eine Multilinkverbindung bereitstellt, z. b. den Index des unter Eintrags, der die Benachrichtigung verursacht hat. RAS Ruft die **RasDialFunc2** -Funktion auf, wenn ein untergeordneter Eintrag verbunden oder getrennt wird.
+
+Sie können ein **hrasconn** -Verbindungs Handle verwenden, um Informationen zu einer mehrfach-Verbindung zu sichern oder abzurufen. Sie können ein Verbindungs Handle für jede der untergeordneten Eintrags Verbindungen, die den mehrfach bilden, sowie für die kombinierte mehrfach-Verbindung erhalten. Wenn Sie die Funktion " [**rasdial**](/windows/desktop/api/Ras/nf-ras-rasdiala) " zum Herstellen einer Verbindung mit mehreren Links aufzurufen, gibt " **rasdial** " ein Handle für die kombinierte mehrfach-Verbindung zurück. Ebenso gibt [**rasenumconnections**](/windows/desktop/api/Ras/nf-ras-rasenumconnectionsa) das kombinierte multilinkhandle zurück, wenn Sie Verbindungen auflisten. Zum Abrufen eines Handles für eine der untergeordneten Zuordnungs Verbindungen in einer Verbindung mit mehreren Links müssen Sie die Funktion " [**rasgetsubentryhandle**](/windows/desktop/api/Ras/nf-ras-rasgetsubentryhandlea) " aufrufen.
+
+Sie können das kombinierte mehrfach-Verbindungs Handle und die unter Eingabe-Verbindungs Handles in den [**rashangup**](/windows/desktop/api/Ras/nf-ras-rashangupa)-, [**rasgetconnectstatus**](/windows/desktop/api/Ras/nf-ras-rasgetconnectstatusa)-und [**rasgetprojectioninfo**](/previous-versions/windows/embedded/ms897107(v=msdn.10)) -Funktionen verwenden. Durch Aufrufen von **rashangup** mit einem kombinierten multilinkhandle wird die gesamte Verbindung beendet. Wenn Sie mit einem unter Eingabe Handle aufgerufen wird, hängt nur diese unter Eingabe Verbindung ab. Ebenso gibt " **rasgetconnectstatus** " Informationen für die kombinierte oder einzelne Verbindung zurück, abhängig vom angegebenen Handle. Die von **rasgetprojectioninfo** für einen Eintrag mit mehreren Links zurückgegebenen Projektionsinformationen sind für jedes der untergeordneten Verbindungs Handles identisch, wie dies für das Haupt Verbindungs Handle der Fall ist.
+
+ 
+
+ 
