@@ -1,0 +1,41 @@
+---
+title: Interaktiver Benutzer
+description: Der interaktive Benutzer ist der Benutzer, der zurzeit an dem Computer angemeldet ist, auf dem der com-Server ausgeführt wird.
+ms.assetid: 6d43842c-0ad1-4563-b50c-5024bda480f1
+ms.topic: article
+ms.date: 05/31/2018
+ms.openlocfilehash: fb7fc8aeb5fd9674c09b40f6c46e4e173f5965a9
+ms.sourcegitcommit: 5f33645661bf8c825a7a2e73950b1f4ea0f1cd82
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "104316520"
+---
+# <a name="interactive-user"></a><span data-ttu-id="56249-103">Interaktiver Benutzer</span><span class="sxs-lookup"><span data-stu-id="56249-103">Interactive User</span></span>
+
+<span data-ttu-id="56249-104">Der *interaktive Benutzer* ist der Benutzer, der zurzeit an dem Computer angemeldet ist, auf dem der com-Server ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="56249-104">The *interactive user* is the user that is currently logged on to the computer where the COM server is running.</span></span> <span data-ttu-id="56249-105">Wenn die Identität als interaktiver Benutzer festgelegt ist, verwenden alle Clients die gleiche Instanz des Servers, wenn der Server seine Klassenfactory als mehrfach verwendende Registrierung registriert.</span><span class="sxs-lookup"><span data-stu-id="56249-105">If the identity is set to be the interactive user, all clients use the same instance of the server if the server registers its class factory as multi-use.</span></span> <span data-ttu-id="56249-106">Wenn kein Benutzer angemeldet ist, wird der Server nicht ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="56249-106">If no user is logged on, the server will not run.</span></span> <span data-ttu-id="56249-107">Wenn der Server über eine grafische Benutzeroberfläche (GUI) verfügt, die der Client sehen muss, sollten Sie den interaktiven Benutzer für die Identität des Servers verwenden.</span><span class="sxs-lookup"><span data-stu-id="56249-107">If the server has a graphical user interface (GUI) that the client needs to see, you should use interactive user for the server's identity.</span></span> <span data-ttu-id="56249-108">Das Auswählen dieser Identität birgt jedoch einige Sicherheitsrisiken, da der Server mit der Identität des angemeldeten Benutzers ausgeführt wird, ohne dass das wissen oder die Zustimmung des angemeldeten Benutzers erfolgt ist.</span><span class="sxs-lookup"><span data-stu-id="56249-108">However, choosing this identity carries some security risks because the server runs under the identity of the logged on user without the logged on user's knowledge or consent.</span></span> <span data-ttu-id="56249-109">Außerdem kann eine-Dienst Anwendung keine Benutzeroberfläche anzeigen.</span><span class="sxs-lookup"><span data-stu-id="56249-109">In addition, a service application cannot display a user interface.</span></span> <span data-ttu-id="56249-110">Weitere Informationen finden Sie unter [interaktive Dienste](/windows/desktop/Services/interactive-services).</span><span class="sxs-lookup"><span data-stu-id="56249-110">For more information, see [Interactive Services](/windows/desktop/Services/interactive-services).</span></span>
+
+<span data-ttu-id="56249-111">Wenn ein com-Server so konfiguriert ist, dass er als interaktiver Benutzer ausgeführt wird, wird der Server in einer Terminaldiensteumgebung in der interaktiven Sitzung gestartet, die mit der Benutzeridentität des Clients übereinstimmt.</span><span class="sxs-lookup"><span data-stu-id="56249-111">If a COM server is configured to run as the interactive user, in a terminal services environment, the server will be launched in the interactive session that matches the client's user identity.</span></span> <span data-ttu-id="56249-112">Die Client Anwendung kann jedoch den sitzungsmoniker verwenden, um auf ein Objekt zu verweisen, das in einer Sitzung vom Server bereitgestellt wird, die nicht mit der Client Identität identisch ist.</span><span class="sxs-lookup"><span data-stu-id="56249-112">However, the client application can use the session moniker to reference an object provided by the server in a session that does not match the client identity.</span></span> <span data-ttu-id="56249-113">Wenn diese verwendet wird, kann die Client Anwendung eine beliebige Sitzung angeben. in diesem Fall wird der Server als der Benutzer ausgeführt, der die Sitzung besitzt, nicht als der Start Benutzer.</span><span class="sxs-lookup"><span data-stu-id="56249-113">When this is used, the client application can specify any session, in which case the server will run as the user who owns the session, not the launching user.</span></span> <span data-ttu-id="56249-114">Die Standard Zugriffsberechtigungen in diesem Szenario ermöglichen dem Start Benutzer nicht das Aufrufen von Methoden auf dem Server.</span><span class="sxs-lookup"><span data-stu-id="56249-114">The default access permissions in this scenario would not allow the launching user to call methods on the server.</span></span> <span data-ttu-id="56249-115">Die folgenden Sicherheitsrisiken bleiben jedoch bestehen:</span><span class="sxs-lookup"><span data-stu-id="56249-115">However, the following security risks remain:</span></span>
+
+-   <span data-ttu-id="56249-116">Wenn der com-Server Schnittstellen verfügbar macht, die nicht von com gesteuert werden, wie z. b. TCP-Ports, Named Pipes, LPC-Ports, freigegebene Speicher Abschnitte usw., können diese vom Start Benutzer verwendet werden, um den Server zu beeinflussen.</span><span class="sxs-lookup"><span data-stu-id="56249-116">If the COM server exposes interfaces that are not controlled by COM, such as TCP ports, named pipes, LPC ports, shared memory sections, and so on, these could be used by the launching user to influence the server.</span></span> <span data-ttu-id="56249-117">COM-Objekte, die so konfiguriert sind, dass Sie als interaktiver Benutzer ausgeführt werden, sollten diese Angriffsfläche so weit wie möglich verringern.</span><span class="sxs-lookup"><span data-stu-id="56249-117">COM objects configured to run as the interactive user should reduce this attack surface as much as possible.</span></span>
+-   <span data-ttu-id="56249-118">COM-Objekte können Ihre eigenen Zugriffsberechtigungen festlegen.</span><span class="sxs-lookup"><span data-stu-id="56249-118">COM objects are free to set their own access permissions.</span></span> <span data-ttu-id="56249-119">Wenn das Objekt Zugriffsberechtigungen festlegt, entweder in der AppID-Registrierung oder durch den Aufruf von [**CoInitializeSecurity**](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializesecurity), kann der Benutzer den Server starten, um ihn als ein anderer Benutzer auszuführen, und dann auf das Objekt zugreifen.</span><span class="sxs-lookup"><span data-stu-id="56249-119">If the object sets access permissions, either in its AppID registration or by calling [**CoInitializeSecurity**](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializesecurity), to allow the launching user access, the user would be able to launch the server to run as another user, then access the object.</span></span>
+
+## <a name="related-topics"></a><span data-ttu-id="56249-120">Zugehörige Themen</span><span class="sxs-lookup"><span data-stu-id="56249-120">Related topics</span></span>
+
+<dl> <dt>
+
+[<span data-ttu-id="56249-121">Anwendungs Identität</span><span class="sxs-lookup"><span data-stu-id="56249-121">Application Identity</span></span>](application-identity.md)
+</dt> <dt>
+
+[<span data-ttu-id="56249-122">Benutzer wird gestartet</span><span class="sxs-lookup"><span data-stu-id="56249-122">Launching User</span></span>](launching-user.md)
+</dt> <dt>
+
+[<span data-ttu-id="56249-123">Dienst Identität</span><span class="sxs-lookup"><span data-stu-id="56249-123">Service Identity</span></span>](service-identity.md)
+</dt> <dt>
+
+[<span data-ttu-id="56249-124">Angegebener Benutzer</span><span class="sxs-lookup"><span data-stu-id="56249-124">Specified User</span></span>](specified-user.md)
+</dt> </dl>
+
+ 
+
+ 
