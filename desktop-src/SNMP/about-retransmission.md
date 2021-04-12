@@ -1,0 +1,32 @@
+---
+title: Informationen zur erneuten Übertragung
+description: Eine WinSNMP-Anwendung kann SNMP-Vorgangs Anforderungen auf verschiedene Weise ausführen.
+ms.assetid: 71150a66-74a3-4957-bc70-3dd25c3b9c71
+ms.topic: article
+ms.date: 05/31/2018
+ms.openlocfilehash: 83a26ba632cec096300927911c2277cbcf5911e4
+ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 09/16/2019
+ms.locfileid: "104309599"
+---
+# <a name="about-retransmission"></a><span data-ttu-id="b32ec-103">Informationen zur erneuten Übertragung</span><span class="sxs-lookup"><span data-stu-id="b32ec-103">About Retransmission</span></span>
+
+<span data-ttu-id="b32ec-104">Eine WinSNMP-Anwendung kann SNMP-Vorgangs Anforderungen auf verschiedene Weise ausführen.</span><span class="sxs-lookup"><span data-stu-id="b32ec-104">A WinSNMP application can make SNMP operation requests in various ways.</span></span> <span data-ttu-id="b32ec-105">Die Anwendung kann mehrere Anforderungen an einen SNMP-Agent ausgeben, ohne auf eine Antwort zu warten, oder es kann eine einzelne Anforderung ausgeben und auf die Antwort warten.</span><span class="sxs-lookup"><span data-stu-id="b32ec-105">The application can issue several requests to an SNMP agent, without waiting for a response, or it can issue a single request and wait for the response.</span></span> <span data-ttu-id="b32ec-106">Da SNMP in mehreren Transportprotokollen implementiert werden kann, können Übermittlungs Mechanismen und Zuverlässigkeits Merkmale variieren.</span><span class="sxs-lookup"><span data-stu-id="b32ec-106">Since SNMP can be implemented on multiple transport protocols, delivery mechanisms and reliability characteristics can vary.</span></span>
+
+<span data-ttu-id="b32ec-107">Wenn Sie die WinSNMP-Anwendung programmieren, müssen Sie den Grad der Zuverlässigkeit ermitteln, den Sie für Kommunikations Vorgänge benötigen, basierend auf der Art und Weise, in der die Anwendung Vorgangs Anforderungen ausgibt.</span><span class="sxs-lookup"><span data-stu-id="b32ec-107">When you code the WinSNMP application you must determine the level of reliability you need for communications operations, based on the way the application issues operation requests.</span></span> <span data-ttu-id="b32ec-108">Anschließend müssen Sie eine Neuübertragungs Strategie auswählen und eine Richtlinie für die erneute Übertragung implementieren.</span><span class="sxs-lookup"><span data-stu-id="b32ec-108">Then you must select a retransmission strategy and implement a retransmission policy.</span></span>
+
+<span data-ttu-id="b32ec-109">Eine Richtlinie für Neuübertragungen umfasst einen Timeout Zeitraum und eine Wiederholungs Anzahl.</span><span class="sxs-lookup"><span data-stu-id="b32ec-109">A retransmission policy includes a time-out period and a retry count.</span></span> <span data-ttu-id="b32ec-110">Ein Timeout Zeitraum ist die verstrichene Zeit (in Hundertstel Sekunden) zwischen der Ausgabe einer [**snmpsendmsg**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpsendmsg) -Anforderung einer Anwendung und dem Empfang der entsprechenden Nachricht.</span><span class="sxs-lookup"><span data-stu-id="b32ec-110">A time-out period is the elapsed time, in hundredths of a second, between an application's issuance of an [**SnmpSendMsg**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpsendmsg) request and its receipt of the corresponding message.</span></span> <span data-ttu-id="b32ec-111">Die Anwendung empfängt die Nachricht als Ergebnis eines Aufrufes der [**snmprecvmsg**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmprecvmsg) -Funktion.</span><span class="sxs-lookup"><span data-stu-id="b32ec-111">The application receives the message as a result of a call to the [**SnmpRecvMsg**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmprecvmsg) function.</span></span> <span data-ttu-id="b32ec-112">Der Timeout Wert ist die Zeitspanne, die die Microsoft WinSNMP-Implementierung darauf wartet, dass eine Entität auf eine Kommunikations Anforderung antwortet.</span><span class="sxs-lookup"><span data-stu-id="b32ec-112">The time-out value is the period of time the Microsoft WinSNMP implementation waits for an entity to respond to a communication request.</span></span> <span data-ttu-id="b32ec-113">Wenn innerhalb des Timeout Zeitraums keine Antwort vorhanden ist, wird die Anforderung von der Implementierung entweder erneut übermittelt, wenn der Wert für die Wiederholungs Anzahl Neuübertragungs Versuche angibt, oder der Aufruf von [**snmpsendmsg**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpsendmsg)schlägt fehl.</span><span class="sxs-lookup"><span data-stu-id="b32ec-113">If there is no response within the time-out period, the implementation either retransmits the request if the retry count value specifies retransmission attempts, or it fails the call to [**SnmpSendMsg**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpsendmsg).</span></span> <span data-ttu-id="b32ec-114">Eine Wiederholungs Anzahl ist die maximale Anzahl von Neuübertragungs versuchen, die die Implementierung durchführt, wenn eine SNMP-Übertragungs Anforderung fehlschlägt.</span><span class="sxs-lookup"><span data-stu-id="b32ec-114">A retry count is the maximum number of retransmission attempts the implementation makes if an SNMP transmission request fails.</span></span>
+
+<span data-ttu-id="b32ec-115">Die-Implementierung speichert Timeout Werte und die Anzahl der Wiederholungs Versuche in der Datenbank für die Anwendung.</span><span class="sxs-lookup"><span data-stu-id="b32ec-115">The implementation stores time-out values and retry counts in its database for the application.</span></span> <span data-ttu-id="b32ec-116">Die-Implementierung speichert einzelne Werte für jede Ziel Entität.</span><span class="sxs-lookup"><span data-stu-id="b32ec-116">The implementation stores individual values for each destination entity.</span></span>
+
+<span data-ttu-id="b32ec-117">Anwendungen müssen eigene Abruf Frequenzen einrichten und Zeit Geber Variablen verwalten.</span><span class="sxs-lookup"><span data-stu-id="b32ec-117">Applications must establish their own polling frequencies and they must manage timer variables.</span></span> <span data-ttu-id="b32ec-118">Weitere Informationen finden Sie unter [Verwalten der Richtlinie für Neuübertragungen](managing-the-retransmission-policy.md).</span><span class="sxs-lookup"><span data-stu-id="b32ec-118">For more information, see [Managing the Retransmission Policy](managing-the-retransmission-policy.md).</span></span>
+
+ 
+
+ 
+
+
+
+
