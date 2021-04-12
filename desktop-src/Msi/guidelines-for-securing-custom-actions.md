@@ -1,0 +1,32 @@
+---
+description: Befolgen Sie diese Richtlinien, wenn Sie eine Windows Installer benutzerdefinierte Aktion erstellen, um die Sicherheit einer Software Installation zu gewährleisten.
+ms.assetid: f7081b0c-bfa2-47a1-840b-28881ad97071
+title: Richtlinien zum Sichern von benutzerdefinierten Aktionen
+ms.topic: article
+ms.date: 05/31/2018
+ms.openlocfilehash: 119c045833b165222756702244cf65bb2225a8f4
+ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "104216749"
+---
+# <a name="guidelines-for-securing-custom-actions"></a><span data-ttu-id="3f8b4-103">Richtlinien zum Sichern von benutzerdefinierten Aktionen</span><span class="sxs-lookup"><span data-stu-id="3f8b4-103">Guidelines for Securing Custom Actions</span></span>
+
+<span data-ttu-id="3f8b4-104">Beachten Sie beim Erstellen eines Windows Installer Pakets mit benutzerdefinierten Aktionen die folgenden Richtlinien, um während der Installation eine sichere Umgebung zu gewährleisten:</span><span class="sxs-lookup"><span data-stu-id="3f8b4-104">Adherence to the following guidelines when authoring a Windows Installer package with custom actions helps maintain a secure environment during installation:</span></span>
+
+-   <span data-ttu-id="3f8b4-105">Sichern Sie alle zusätzlichen Dateien, die von der benutzerdefinierten Aktion geschrieben wurden.</span><span class="sxs-lookup"><span data-stu-id="3f8b4-105">Secure any additional files written by your custom action.</span></span>
+-   <span data-ttu-id="3f8b4-106">Überprüfen Sie die Puffer Längen und die Gültigkeit aller von der benutzerdefinierten Aktion gelesenen Daten.</span><span class="sxs-lookup"><span data-stu-id="3f8b4-106">Check buffer lengths and validity of all data read by your custom action.</span></span> <span data-ttu-id="3f8b4-107">Dies schließt Eigenschaften ein, die möglicherweise Daten für Ihre benutzerdefinierte Aktion bereitstellen, insbesondere solche, die von einem Benutzer bereitgestellte öffentliche Eigenschaften verwenden.</span><span class="sxs-lookup"><span data-stu-id="3f8b4-107">This includes properties that may supply data to your custom action, particularly those that use public properties provided by a user.</span></span>
+-   <span data-ttu-id="3f8b4-108">Verlassen Sie sich nicht auf externe DLLs, die vom System auf allen Plattformen, auf denen das Installationspaket ausgeführt werden soll, nicht als vertrauenswürdig eingestuft werden.</span><span class="sxs-lookup"><span data-stu-id="3f8b4-108">Do not rely on external DLLs that are not trusted by the system on all platforms on which your installation package is intended to run.</span></span>
+-   <span data-ttu-id="3f8b4-109">Überlegen Sie sorgfältig, ob benutzerdefinierte Aktionen verwendet werden sollen, die [*erhöhte*](e-gly.md) Rechte oder Identitätswechsel verwenden.</span><span class="sxs-lookup"><span data-stu-id="3f8b4-109">Carefully consider whether to use custom actions that use [*elevated*](e-gly.md) privileges or impersonation.</span></span> <span data-ttu-id="3f8b4-110">Benutzerdefinierte Aktionen, wie z. b. "URL nach der Installation öffnen", "die Software nach Abschluss der Installation starten" oder "die Installation nach Abschluss der Installation starten" erfordert normalerweise keine erhöhten Berechtigungen.</span><span class="sxs-lookup"><span data-stu-id="3f8b4-110">Custom actions such as “open a URL after installation is completed,” “launch the software after installation is complete,” or “launch ReadMe after installation is complete” would not usually require elevated privileges to function.</span></span> <span data-ttu-id="3f8b4-111">Wenn Ihre benutzerdefinierte Aktion mit *erhöhten* Rechten ausgeführt werden muss, müssen Sie sicherstellen, dass der Code der benutzerdefinierten Aktion vor Pufferüberläufen und unbeabsichtigtem Laden von unsicherem Code schützt.</span><span class="sxs-lookup"><span data-stu-id="3f8b4-111">If your custom action must run with *elevated* privileges, be sure that the custom action code guards against buffer overruns and inadvertent loading of unsafe code.</span></span> <span data-ttu-id="3f8b4-112">Beachten Sie, dass das Installationsprogramm während der Ausführungsphase der Installation Informationen an einen Prozess mit *erhöhten* rechten übergibt und das Skript ausführt.</span><span class="sxs-lookup"><span data-stu-id="3f8b4-112">Note that during the execution phase of the installation, the installer passes information to a process with *elevated* privileges and runs the script.</span></span> <span data-ttu-id="3f8b4-113">Alle benutzerdefinierten Aktionen, die während der Ausführungsphase ausgeführt werden, werden möglicherweise mit *erhöhten* Rechten ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="3f8b4-113">Any custom actions that run during the execution phase may run with *elevated* privileges.</span></span>
+-   <span data-ttu-id="3f8b4-114">Sammeln Sie alle Informationen, die vom Benutzer während der UI-Sequenz bereitgestellt werden.</span><span class="sxs-lookup"><span data-stu-id="3f8b4-114">Gather all information provided by the user during the UI sequence.</span></span> <span data-ttu-id="3f8b4-115">Fordern Sie den Benutzer nicht auf, Informationen einzugeben, die nicht mit einer öffentlichen Eigenschaft festgelegt werden können.</span><span class="sxs-lookup"><span data-stu-id="3f8b4-115">Do not prompt the user for any information that can't be set using a public property.</span></span>
+-   <span data-ttu-id="3f8b4-116">Wenn die benutzerdefinierte Skript Aktion Eigenschaften erweitert, ergreifen Sie Vorsichtsmaßnahmen, dass die benutzerdefinierte Aktion vor der Möglichkeit der Skript Injektion geschützt ist.</span><span class="sxs-lookup"><span data-stu-id="3f8b4-116">If your script custom action expands properties, take precautions that the custom action is secured against the possibility of script injection.</span></span> <span data-ttu-id="3f8b4-117">Das Skript kann als Klartext protokolliert werden.</span><span class="sxs-lookup"><span data-stu-id="3f8b4-117">Script may be logged in clear text.</span></span>
+
+<span data-ttu-id="3f8b4-118">Siehe auch [Sicherheit für benutzerdefinierte Aktionen](custom-action-security.md).</span><span class="sxs-lookup"><span data-stu-id="3f8b4-118">See also [Custom Action Security](custom-action-security.md).</span></span>
+
+ 
+
+ 
+
+
+
