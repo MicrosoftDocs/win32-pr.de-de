@@ -1,0 +1,86 @@
+---
+title: Ivmvirtualmachine Parallelports-Eigenschaft (vpccominterfaces. h)
+description: Ruft eine Aufzähl Bare Auflistung paralleler Ports ab.
+ms.assetid: 458e6e77-3728-4b5c-910b-f958f42785e4
+keywords:
+- Parallelports-Eigenschaft virtueller PC
+- Parallelports-Eigenschaft Virtual PC, ivmvirtualmachine-Schnittstelle
+- Ivmvirtualmachine Interface Virtual PC, Parallelports (Eigenschaft)
+topic_type:
+- apiref
+api_name:
+- IVMVirtualMachine.ParallelPorts
+- IVMVirtualMachine.get_ParallelPorts
+api_location:
+- VPCCOMInterfaces.h
+api_type:
+- COM
+ms.topic: reference
+ms.date: 05/31/2018
+ms.openlocfilehash: 6aba742a206857e73e0d1447f422f7182fb7a304
+ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "104105651"
+---
+# <a name="ivmvirtualmachineparallelports-property"></a><span data-ttu-id="414d4-106">Ivmvirtualmachine::P arallelports-Eigenschaft</span><span class="sxs-lookup"><span data-stu-id="414d4-106">IVMVirtualMachine::ParallelPorts property</span></span>
+
+<span data-ttu-id="414d4-107">\[Windows Virtual PC ist nicht mehr für die Verwendung ab Windows 8 verfügbar.</span><span class="sxs-lookup"><span data-stu-id="414d4-107">\[Windows Virtual PC is no longer available for use as of Windows 8.</span></span> <span data-ttu-id="414d4-108">Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (v2)](/windows/desktop/HyperV_v2/windows-virtualization-portal).\]</span><span class="sxs-lookup"><span data-stu-id="414d4-108">Instead, use the [Hyper-V WMI provider (V2)](/windows/desktop/HyperV_v2/windows-virtualization-portal).\]</span></span>
+
+<span data-ttu-id="414d4-109">Ruft eine Aufzähl Bare Auflistung paralleler Ports ab.</span><span class="sxs-lookup"><span data-stu-id="414d4-109">Retrieves an enumerable collection of parallel ports.</span></span>
+
+<span data-ttu-id="414d4-110">Diese Eigenschaft ist schreibgeschützt.</span><span class="sxs-lookup"><span data-stu-id="414d4-110">This property is read-only.</span></span>
+
+## <a name="syntax"></a><span data-ttu-id="414d4-111">Syntax</span><span class="sxs-lookup"><span data-stu-id="414d4-111">Syntax</span></span>
+
+
+```C++
+HRESULT get_ParallelPorts(
+  [out, retval] IVMParallelPortCollection **parallelPortCollection
+);
+```
+
+
+
+## <a name="property-value"></a><span data-ttu-id="414d4-112">Eigenschaftswert</span><span class="sxs-lookup"><span data-stu-id="414d4-112">Property value</span></span>
+
+<span data-ttu-id="414d4-113">Ein [**ivmparallelportcollection**](ivmparallelportcollection.md) -Objekt.</span><span class="sxs-lookup"><span data-stu-id="414d4-113">An [**IVMParallelPortCollection**](ivmparallelportcollection.md) object.</span></span>
+
+## <a name="error-codes"></a><span data-ttu-id="414d4-114">Fehlercodes</span><span class="sxs-lookup"><span data-stu-id="414d4-114">Error codes</span></span>
+
+
+
+| <span data-ttu-id="414d4-115">Name/Wert</span><span class="sxs-lookup"><span data-stu-id="414d4-115">Name/value</span></span>                                                                                                                                                    | <span data-ttu-id="414d4-116">Bedeutung</span><span class="sxs-lookup"><span data-stu-id="414d4-116">Meaning</span></span>                                      |
+|---------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------|
+| <dl> <span data-ttu-id="414d4-117"><dt>S \_ OK</dt> <dt>0</dt></span><span class="sxs-lookup"><span data-stu-id="414d4-117"><dt>S\_OK</dt> <dt>0</dt></span></span> </dl>                       | <span data-ttu-id="414d4-118">Der Vorgang wurde durchgeführt.</span><span class="sxs-lookup"><span data-stu-id="414d4-118">The operation was successful.</span></span><br/>     |
+| <dl> <span data-ttu-id="414d4-119"><dt>E \_ Zeiger</dt> <dt>0x80004003</dt></span><span class="sxs-lookup"><span data-stu-id="414d4-119"><dt>E\_POINTER</dt> <dt>0x80004003</dt></span></span> </dl>         | <span data-ttu-id="414d4-120">Der-Parameter ist **null**.</span><span class="sxs-lookup"><span data-stu-id="414d4-120">The parameter is **NULL**.</span></span><br/>        |
+| <dl> <span data-ttu-id="414d4-121"><dt>VM \_ E \_ VM \_ unbekannt</dt> <dt>0xa0040207</dt></span><span class="sxs-lookup"><span data-stu-id="414d4-121"><dt>VM\_E\_VM\_UNKNOWN</dt> <dt>0xA0040207</dt></span></span> </dl> | <span data-ttu-id="414d4-122">Die Konfiguration ist unbekannt.</span><span class="sxs-lookup"><span data-stu-id="414d4-122">The configuration is unknown.</span></span><br/>     |
+| <dl> <span data-ttu-id="414d4-123"><dt>DISP \_ E- \_ Ausnahme</dt> <dt>0x80020009</dt></span><span class="sxs-lookup"><span data-stu-id="414d4-123"><dt>DISP\_E\_EXCEPTION</dt> <dt>0x80020009</dt></span></span> </dl> | <span data-ttu-id="414d4-124">Ein unerwarteter Fehler ist aufgetreten.</span><span class="sxs-lookup"><span data-stu-id="414d4-124">An unexpected error has occurred.</span></span><br/> |
+
+
+
+## <a name="requirements"></a><span data-ttu-id="414d4-125">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="414d4-125">Requirements</span></span>
+
+
+
+| <span data-ttu-id="414d4-126">Anforderung</span><span class="sxs-lookup"><span data-stu-id="414d4-126">Requirement</span></span> | <span data-ttu-id="414d4-127">Wert</span><span class="sxs-lookup"><span data-stu-id="414d4-127">Value</span></span> |
+|-------------------------------------|-----------------------------------------------------------------------------------------------|
+| <span data-ttu-id="414d4-128">Unterstützte Mindestversion (Client)</span><span class="sxs-lookup"><span data-stu-id="414d4-128">Minimum supported client</span></span><br/> | <span data-ttu-id="414d4-129">Nur Windows 7 \[ -Desktop-Apps\]</span><span class="sxs-lookup"><span data-stu-id="414d4-129">Windows 7 \[desktop apps only\]</span></span><br/>                                                    |
+| <span data-ttu-id="414d4-130">Unterstützte Mindestversion (Server)</span><span class="sxs-lookup"><span data-stu-id="414d4-130">Minimum supported server</span></span><br/> | <span data-ttu-id="414d4-131">Nicht unterstützt</span><span class="sxs-lookup"><span data-stu-id="414d4-131">None supported</span></span><br/>                                                                     |
+| <span data-ttu-id="414d4-132">Ende des Supports (Client)</span><span class="sxs-lookup"><span data-stu-id="414d4-132">End of client support</span></span><br/>    | <span data-ttu-id="414d4-133">Windows 7</span><span class="sxs-lookup"><span data-stu-id="414d4-133">Windows 7</span></span><br/>                                                                          |
+| <span data-ttu-id="414d4-134">Produkt</span><span class="sxs-lookup"><span data-stu-id="414d4-134">Product</span></span><br/>                  | <span data-ttu-id="414d4-135">Windows Virtual PC</span><span class="sxs-lookup"><span data-stu-id="414d4-135">Windows Virtual PC</span></span><br/>                                                                 |
+| <span data-ttu-id="414d4-136">Header</span><span class="sxs-lookup"><span data-stu-id="414d4-136">Header</span></span><br/>                   | <dl> <span data-ttu-id="414d4-137"><dt>Vpccominterfaces. h</dt></span><span class="sxs-lookup"><span data-stu-id="414d4-137"><dt>VPCCOMInterfaces.h</dt></span></span> </dl> |
+| <span data-ttu-id="414d4-138">IID</span><span class="sxs-lookup"><span data-stu-id="414d4-138">IID</span></span><br/>                      | <span data-ttu-id="414d4-139">IID \_ ivmvirtualmachine ist als f7092aa1-33ed-4f78-a59f-c00adfc2edd7 definiert.</span><span class="sxs-lookup"><span data-stu-id="414d4-139">IID\_IVMVirtualMachine is defined as f7092aa1-33ed-4f78-a59f-c00adfc2edd7</span></span><br/>          |
+
+
+
+## <a name="see-also"></a><span data-ttu-id="414d4-140">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="414d4-140">See also</span></span>
+
+<dl> <dt>
+
+[<span data-ttu-id="414d4-141">**Ivmvirtualmachine**</span><span class="sxs-lookup"><span data-stu-id="414d4-141">**IVMVirtualMachine**</span></span>](ivmvirtualmachine.md)
+</dt> </dl>
+
+ 
+
