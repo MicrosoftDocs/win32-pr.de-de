@@ -1,0 +1,40 @@
+---
+title: Aufheben der Registrierung eines Geräts
+description: Verwenden Sie die iupnpregistrinsterdevice-Methode, um die Registrierung eines Geräts aufzuheben.
+ms.assetid: 4f7624e3-4d60-406d-8521-1dfc9aee4408
+ms.topic: article
+ms.date: 05/31/2018
+ms.openlocfilehash: b4c480433e3d8dbf4ff823728281018801ec35c1
+ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 09/16/2019
+ms.locfileid: "104471668"
+---
+# <a name="unregistering-a-device"></a><span data-ttu-id="1cca2-103">Aufheben der Registrierung eines Geräts</span><span class="sxs-lookup"><span data-stu-id="1cca2-103">Unregistering a Device</span></span>
+
+<span data-ttu-id="1cca2-104">Verwenden Sie die [**iupnpregistrannpregistranar:: unregisterdevice**](/windows/desktop/api/Upnphost/nf-upnphost-iupnpregistrar-unregisterdevice) -Methode, um die Registrierung eines Geräts aufzuheben.</span><span class="sxs-lookup"><span data-stu-id="1cca2-104">Use the [**IUPnPRegistrar::UnregisterDevice**](/windows/desktop/api/Upnphost/nf-upnphost-iupnpregistrar-unregisterdevice) method to unregister a device.</span></span> <span data-ttu-id="1cca2-105">Abhängig vom Wert von " *spermanent*" kann die Registrierung des Geräts (entfernt vom Geräte Host) vorübergehend oder dauerhaft aufgehoben werden.</span><span class="sxs-lookup"><span data-stu-id="1cca2-105">The device can be unregistered (removed from the device host) temporarily or permanently, depending on the value of *fPermanent*.</span></span> <span data-ttu-id="1cca2-106">Entwickler sollten Geräte vorübergehend entfernen, wenn die Geräte neu registriert werden und die Geräte denselben udn verwenden sollten.</span><span class="sxs-lookup"><span data-stu-id="1cca2-106">Developers should remove devices temporarily if the devices will be re-registered, and the devices should use the same UDN.</span></span> <span data-ttu-id="1cca2-107">Andernfalls werden die Geräte dauerhaft entfernt.</span><span class="sxs-lookup"><span data-stu-id="1cca2-107">Otherwise, the devices are removed permanently.</span></span>
+
+<span data-ttu-id="1cca2-108">Der GUID, der zum Aufheben der Registrierung verwendet wird, ist nicht der udn.</span><span class="sxs-lookup"><span data-stu-id="1cca2-108">The GUID used to unregister is not the UDN.</span></span> <span data-ttu-id="1cca2-109">Sie müssen die ID verwenden, die für Sie von [**iupnpregistraut:: registerdevice**](/windows/desktop/api/Upnphost/nf-upnphost-iupnpregistrar-registerdevice) oder [**iupnpregistrear:: registerrunningdevice**](/windows/desktop/api/Upnphost/nf-upnphost-iupnpregistrar-registerrunningdevice)zurückgegeben wurde.</span><span class="sxs-lookup"><span data-stu-id="1cca2-109">You must use the ID returned to you by [**IUPnPRegistrar::RegisterDevice**](/windows/desktop/api/Upnphost/nf-upnphost-iupnpregistrar-registerdevice) or [**IUPnPRegistrar::RegisterRunningDevice**](/windows/desktop/api/Upnphost/nf-upnphost-iupnpregistrar-registerrunningdevice).</span></span>
+
+> [!Note]  
+> <span data-ttu-id="1cca2-110">Sie können das [**iupnpregistrinar**](/windows/desktop/api/Upnphost/nn-upnphost-iupnpregistrar) -Objekt freigeben.</span><span class="sxs-lookup"><span data-stu-id="1cca2-110">You can release the [**IUPnPRegistrar**](/windows/desktop/api/Upnphost/nn-upnphost-iupnpregistrar) object.</span></span> <span data-ttu-id="1cca2-111">Nur die ID muss zwischengespeichert werden.</span><span class="sxs-lookup"><span data-stu-id="1cca2-111">Only the ID must be cached.</span></span>
+
+ 
+
+<span data-ttu-id="1cca2-112">Wenn " *f* " den Wert " **false**" hat, wird das Gerät vorübergehend entfernt.</span><span class="sxs-lookup"><span data-stu-id="1cca2-112">If *fPermanent* is **FALSE**, the device is removed temporarily.</span></span> <span data-ttu-id="1cca2-113">Verwenden Sie [**iupnpreregistrear**](/windows/desktop/api/Upnphost/nn-upnphost-iupnpreregistrar) Interface, um das Gerät erneut zu registrieren.</span><span class="sxs-lookup"><span data-stu-id="1cca2-113">Use [**IUPnPReregistrar**](/windows/desktop/api/Upnphost/nn-upnphost-iupnpreregistrar) interface to re-register the device.</span></span> <span data-ttu-id="1cca2-114">Die Methoden [**iupnpreregistrinar:: reregisterdevice**](/windows/desktop/api/Upnphost/nf-upnphost-iupnpreregistrar-reregisterdevice) und [**iupnpreregistrinar:: reregisterrunningdevice**](/windows/desktop/api/Upnphost/nf-upnphost-iupnpreregistrar-reregisterrunningdevice) verwenden im Fall von zuvor vom Geräte Host für das nicht registrierte Gerät generierten Geräten dieselbe udn oder udns.</span><span class="sxs-lookup"><span data-stu-id="1cca2-114">The [**IUPnPReregistrar::ReregisterDevice**](/windows/desktop/api/Upnphost/nf-upnphost-iupnpreregistrar-reregisterdevice) and [**IUPnPReregistrar::ReregisterRunningDevice**](/windows/desktop/api/Upnphost/nf-upnphost-iupnpreregistrar-reregisterrunningdevice) methods use the same UDN or UDNs, in the case of nested devices, previously generated by the device host for the unregistered device.</span></span>
+
+<span data-ttu-id="1cca2-115">Wenn " *spermanent* " den Wert " **true**" hat, wird das Gerät dauerhaft vom Geräte Host entfernt.</span><span class="sxs-lookup"><span data-stu-id="1cca2-115">If *fPermanent* is **TRUE**, the device is permanently removed from the device host.</span></span> <span data-ttu-id="1cca2-116">Wenn Sie dieses Gerät erneut auf demselben Computer registrieren, wird ein anderes udn erstellt als zuvor erstellt.</span><span class="sxs-lookup"><span data-stu-id="1cca2-116">Registering this device again on the same computer creates a different UDN than the one previously created.</span></span>
+
+> [!Note]  
+> <span data-ttu-id="1cca2-117">Wenn ein Gerät mehrmals auf demselben Computer registriert ist, generiert der Geräte Host verschiedene udns für jede Instanz des Geräts.</span><span class="sxs-lookup"><span data-stu-id="1cca2-117">When a device is registered multiple times on the same computer, the device host generates different UDNs for each instance of the device.</span></span>
+
+ 
+
+ 
+
+ 
+
+
+
+

@@ -1,0 +1,33 @@
+---
+description: Wenn ein Thread aktiv mit einem Windows-Abbild Erfassungsgerät (WIA) kommuniziert (z. b. das Übertragen von Daten oder das Schreiben von Geräteeigenschaften), sperrt WIA &\# 0034; sperrt&\# 0034; das Gerät.
+ms.assetid: 59533937-284a-4732-a73b-d2e0b5a9a370
+title: Kommunizieren mit einem WIA-Gerät in mehreren Threads oder Anwendungen
+ms.topic: article
+ms.date: 05/31/2018
+ms.openlocfilehash: 1a7a4b518093c3a0fc09534d67e22e5349d44d09
+ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "104216055"
+---
+# <a name="communicating-with-a-wia-device-in-multiple-threads-or-applications"></a><span data-ttu-id="4dfb5-103">Kommunizieren mit einem WIA-Gerät in mehreren Threads oder Anwendungen</span><span class="sxs-lookup"><span data-stu-id="4dfb5-103">Communicating with a WIA Device in Multiple Threads or Applications</span></span>
+
+<span data-ttu-id="4dfb5-104">Wenn ein Thread aktiv mit einem WIA-Gerät (Windows Image Acquisition) kommuniziert (z. b. das Übertragen von Daten oder das Schreiben von Geräteeigenschaften), wird das Gerät durch einen "Sperren" gesperrt.</span><span class="sxs-lookup"><span data-stu-id="4dfb5-104">When a thread is actively communicating with a Windows Image Acquisition (WIA) device (for example, transferring data or writing device properties) WIA "locks" the device.</span></span> <span data-ttu-id="4dfb5-105">Wenn ein Gerät gesperrt ist, können keine anderen Threads oder Prozesse aktiv mit dem Gerät kommunizieren.</span><span class="sxs-lookup"><span data-stu-id="4dfb5-105">When a device is locked, no other threads or processes can actively communicate with that device.</span></span>
+
+<span data-ttu-id="4dfb5-106">WIA lässt nicht zu, dass mehrere Threads oder Prozesse Verbindungen mit einem einzelnen Gerät aufrechterhalten.</span><span class="sxs-lookup"><span data-stu-id="4dfb5-106">WIA does not prohibit multiple threads or processes from maintaining connections to a single device.</span></span> <span data-ttu-id="4dfb5-107">Das heißt, dass ein Gerät nur während der eigentlichen Kommunikation gesperrt ist und zwei oder mehr Anwendungen gleichzeitig ein einzelnes Gerät auswählen können.</span><span class="sxs-lookup"><span data-stu-id="4dfb5-107">That is, a device is locked only during the actual communication, and two or more applications can simultaneously have a single device selected.</span></span>
+
+<span data-ttu-id="4dfb5-108">WIA erstellt immer dann eine separate Elementstruktur, wenn ein Thread oder eine Anwendung [**iwiadevmgr:: foratedevice**](/windows/desktop/api/wia_xp/nf-wia_xp-iwiadevmgr-createdevice) oder [**IWiaDevMgr2:: foratedevice**](-wia-iwiadevmgr2-createdevice.md) aufruft, um eine Instanz dieses Geräts zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="4dfb5-108">WIA creates a separate item tree each time any thread or application calls [**IWiaDevMgr::CreateDevice**](/windows/desktop/api/wia_xp/nf-wia_xp-iwiadevmgr-createdevice) or [**IWiaDevMgr2::CreateDevice**](-wia-iwiadevmgr2-createdevice.md) to create an instance of that device.</span></span> <span data-ttu-id="4dfb5-109">WIA verwaltet separate Zustandsinformationen für jede Elementstruktur.</span><span class="sxs-lookup"><span data-stu-id="4dfb5-109">WIA maintains separate state information for each item tree.</span></span> <span data-ttu-id="4dfb5-110">Wenn ein Thread z. b. zwei Instanzen eines bestimmten Scanners erstellt, kann er verschiedene Scanauflösungen für die beiden Instanzen festlegen.</span><span class="sxs-lookup"><span data-stu-id="4dfb5-110">For example, if a thread creates two instances of a particular scanner, it can set different scan resolutions for the two instances.</span></span> <span data-ttu-id="4dfb5-111">Wenn [**iwiadatatransfer:: idtGetData**](/windows/desktop/api/wia_xp/nf-wia_xp-iwiadatatransfer-idtgetdata) für eine bestimmte Instanz aufgerufen wird, lädt WIA die Eigenschaften, die dieser Instanz zugeordnet sind, dem Gerät, bevor die tatsächliche Überprüfung erfolgt.</span><span class="sxs-lookup"><span data-stu-id="4dfb5-111">When [**IWiaDataTransfer::idtGetData**](/windows/desktop/api/wia_xp/nf-wia_xp-iwiadatatransfer-idtgetdata) is called on a particular instance, WIA loads the properties associated with that instance to the device before the actual scan takes place.</span></span> <span data-ttu-id="4dfb5-112">Dies wirkt sich nicht auf den Status der anderen Instanz des Geräts aus.</span><span class="sxs-lookup"><span data-stu-id="4dfb5-112">This does not affect the state of the other instance of the device.</span></span>
+
+<span data-ttu-id="4dfb5-113">Wenn für einen Thread zurzeit ein Gerät gesperrt ist (es wird aktiv mit diesem Gerät kommuniziert) und ein anderer Thread versucht, eine Methode aufzurufen, die aktiv mit dem Gerät kommuniziert, gibt die Methode einen Fehler aufgrund eines WIA- \_ Fehlers zurück \_ .</span><span class="sxs-lookup"><span data-stu-id="4dfb5-113">If a thread currently has a device locked (it is actively communicating with that device) and another thread attempts to call a method that actively communicates with the device, the method returns a WIA\_ERROR\_BUSY error.</span></span>
+
+<span data-ttu-id="4dfb5-114">Das Lesen und Schreiben von Geräteeigenschaften dauert in der Regel so wenig Zeit, dass diese Vorgänge selten zu Konflikten führen.</span><span class="sxs-lookup"><span data-stu-id="4dfb5-114">Typically, reading and writing device properties takes so little time that these operations rarely cause a conflict.</span></span> <span data-ttu-id="4dfb5-115">Das Übertragen von Daten dauert jedoch in der Regel länger und ist daher wahrscheinlicher, dass Geräte Zugriffs Konflikte entstehen.</span><span class="sxs-lookup"><span data-stu-id="4dfb5-115">Transferring data, however, usually takes longer, and therefore is more likely to create device access conflicts.</span></span> <span data-ttu-id="4dfb5-116">Es handelt sich um eine solide Programmierung, um langwierige Geräte Vorgänge (Datenübertragungen) gleichzeitig in separaten Threads innerhalb einer Anwendung zu vermeiden.</span><span class="sxs-lookup"><span data-stu-id="4dfb5-116">It is sound programming to avoid lengthy device operations (data transfers) concurrently in separate threads within an application.</span></span>
+
+<span data-ttu-id="4dfb5-117">Eine Anwendung sollte niemals davon ausgehen, dass es sich um die einzige Anwendung handelt, die beim Start mit einem WIA-Gerät kommuniziert.</span><span class="sxs-lookup"><span data-stu-id="4dfb5-117">An application should never assume that it is the only application that is communicating with a WIA device when it starts.</span></span>
+
+ 
+
+ 
+
+
+
