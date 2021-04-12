@@ -1,0 +1,60 @@
+---
+title: So schreiben Sie Beispiele
+description: So schreiben Sie Beispiele
+ms.assetid: 9ce10a77-9e80-45e0-a7e7-2ffdf8b57773
+keywords:
+- Advanced Systems Format (ASF), Schreiben von Beispielen
+- ASF (Advanced Systems Format), Schreiben von Beispielen
+- Advanced Systems Format (ASF), übergeben von Beispielen an den Writer
+- ASF (Advanced Systems Format), übergeben von Beispielen an den Writer
+ms.topic: article
+ms.date: 05/31/2018
+ms.openlocfilehash: 738014b3c42441e878105d12a8ebf23ce4b266f7
+ms.sourcegitcommit: 48d1c892045445bcbd0f22bafa2fd3861ffaa6e7
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "104389862"
+---
+# <a name="to-write-samples"></a><span data-ttu-id="5d090-107">So schreiben Sie Beispiele</span><span class="sxs-lookup"><span data-stu-id="5d090-107">To Write Samples</span></span>
+
+<span data-ttu-id="5d090-108">Wenn Sie die Eingaben für die Datei, die Sie schreiben, identifiziert und konfiguriert haben, können Sie mit dem übergeben von Beispielen an den Writer beginnen.</span><span class="sxs-lookup"><span data-stu-id="5d090-108">When you have identified and configured the inputs for the file you are writing, you can begin passing samples to the writer.</span></span> <span data-ttu-id="5d090-109">Sie sollten Beispiele in der Präsentationszeit Reihenfolge übergeben, um den Schreibvorgang effizienter zu gestalten.</span><span class="sxs-lookup"><span data-stu-id="5d090-109">You should pass samples in presentation-time order, if possible, to make the writing process more efficient.</span></span>
+
+<span data-ttu-id="5d090-110">Vor dem übergeben von Beispielen müssen Sie den Writer festlegen, um Sie durch Aufrufen von [**iwmwriter:: BeginWrite**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmwriter-beginwriting)zu akzeptieren.</span><span class="sxs-lookup"><span data-stu-id="5d090-110">Before passing any samples, you must set the writer to accept them by calling [**IWMWriter::BeginWriting**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmwriter-beginwriting).</span></span>
+
+<span data-ttu-id="5d090-111">Führen Sie die folgenden Schritte aus, um ein Beispiel an den Writer zu übergeben:</span><span class="sxs-lookup"><span data-stu-id="5d090-111">To pass a sample to the writer, perform the following steps:</span></span>
+
+1.  <span data-ttu-id="5d090-112">Zuordnen eines Puffers und Abrufen eines Zeigers auf die [**inssbuffer**](/previous-versions/windows/desktop/api/wmsbuffer/nn-wmsbuffer-inssbuffer) -Schnittstelle durch Aufrufen von [**iwmwriter:: allopriesample**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmwriter-allocatesample).</span><span class="sxs-lookup"><span data-stu-id="5d090-112">Allocate a buffer and retrieve a pointer to the [**INSSBuffer**](/previous-versions/windows/desktop/api/wmsbuffer/nn-wmsbuffer-inssbuffer) interface by calling [**IWMWriter::AllocateSample**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmwriter-allocatesample).</span></span>
+2.  <span data-ttu-id="5d090-113">Rufen Sie die Adresse des Puffers ab, der in Schritt 1 erstellt wurde, indem Sie [**inssbuffer:: GetBuffer**](/previous-versions/windows/desktop/api/Wmsbuffer/nf-wmsbuffer-inssbuffer-getbuffer)aufrufen.</span><span class="sxs-lookup"><span data-stu-id="5d090-113">Retrieve the address of the buffer created in step 1 by calling [**INSSBuffer::GetBuffer**](/previous-versions/windows/desktop/api/Wmsbuffer/nf-wmsbuffer-inssbuffer-getbuffer).</span></span>
+3.  <span data-ttu-id="5d090-114">Kopieren Sie die Beispiel Daten in den Puffer Speicherort, und stellen Sie sicher, dass das Beispiel erfolgreich in den zugeordneten Puffer passt.</span><span class="sxs-lookup"><span data-stu-id="5d090-114">Copy your sample data to the buffer location, making sure that the sample passed will fit in the allocated buffer.</span></span> <span data-ttu-id="5d090-115">Sie können eine beliebige Speicher Kopierfunktion verwenden, um die Daten zu kopieren.</span><span class="sxs-lookup"><span data-stu-id="5d090-115">You can use any memory copying function to copy your data.</span></span> <span data-ttu-id="5d090-116">Eine gängige Wahl ist "memcpy", die in der Standard-C-Lauf Zeit Bibliothek enthalten ist.</span><span class="sxs-lookup"><span data-stu-id="5d090-116">A common choice is memcpy, which is included in the standard C run-time library.</span></span>
+4.  <span data-ttu-id="5d090-117">Aktualisieren Sie die im Puffer verwendete Datenmenge, um die tatsächliche Größe des Beispiels durch Aufrufen von " [**inssbuffer:: SetLength**](/previous-versions/windows/desktop/api/Wmsbuffer/nf-wmsbuffer-inssbuffer-setlength)" widerzuspiegeln.</span><span class="sxs-lookup"><span data-stu-id="5d090-117">Update the amount of data used in the buffer to reflect the actual size of the sample by calling [**INSSBuffer::SetLength**](/previous-versions/windows/desktop/api/Wmsbuffer/nf-wmsbuffer-inssbuffer-setlength).</span></span>
+5.  <span data-ttu-id="5d090-118">Übergeben Sie die Puffer Schnittstelle zusammen mit der Eingabe Nummer und der Stichproben Zeit mithilfe der [**iwmwriter:: schreitesample**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmwriter-writesample) -Methode an den Writer.</span><span class="sxs-lookup"><span data-stu-id="5d090-118">Pass the buffer interface to the writer along with the input number and sample time using the [**IWMWriter::WriteSample**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmwriter-writesample) method.</span></span> <span data-ttu-id="5d090-119">Alle Audiobeispiele für eine Eingabe repräsentieren dieselbe Dauer von Inhalten, sodass Sie die Stichproben Zeit ermitteln können, indem Sie die Stichproben Dauer einem laufenden Gesamtwert hinzufügen.</span><span class="sxs-lookup"><span data-stu-id="5d090-119">All audio samples for an input represent the same duration of content, so you can figure the sample time by adding the sample duration to a running total.</span></span> <span data-ttu-id="5d090-120">Für ein Video müssen Sie die Uhrzeit basierend auf der Framerate berechnen.</span><span class="sxs-lookup"><span data-stu-id="5d090-120">For video, you need to calculate the time based on the frame rate.</span></span>
+
+<span data-ttu-id="5d090-121">**Writesample** arbeitet asynchron und beendet das Schreiben der Daten aus dem Puffer möglicherweise nicht, bevor die Anwendung bereit ist, die Methode erneut aufzurufen.</span><span class="sxs-lookup"><span data-stu-id="5d090-121">**WriteSample** works asynchronously and might not finish writing the data from the buffer before your application is ready to call the method again.</span></span> <span data-ttu-id="5d090-122">Daher ist es wichtig, dass Sie  für jeden Aufrufe von " **Write**" "" "" "" "" "" "" ""</span><span class="sxs-lookup"><span data-stu-id="5d090-122">Therefore, it is important to call **AllocateSample** once for each call to **WriteSample**.</span></span> <span data-ttu-id="5d090-123">Allerdings können Sie die **inssbuffer** -Schnittstelle sofort nach dem Aufruf von " **Write-ample**" freigeben.</span><span class="sxs-lookup"><span data-stu-id="5d090-123">However, you can release the **INSSBuffer** interface immediately after calling **WriteSample**.</span></span>
+
+<span data-ttu-id="5d090-124">Wenn Sie die Übergabe von Beispielen abgeschlossen haben, nennen Sie [**iwmwriter:: EndWrite**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmwriter-endwriting).</span><span class="sxs-lookup"><span data-stu-id="5d090-124">When you have finished passing samples, call [**IWMWriter::EndWriting**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmwriter-endwriting).</span></span>
+
+<span data-ttu-id="5d090-125">**Hinweis** Es ist wichtig, dass die Beispiele aus allen Streams in der Datei in der Synchronisierung miteinander an den Writer übermittelt werden.</span><span class="sxs-lookup"><span data-stu-id="5d090-125">**Note** It is important that samples from all streams in the file are passed to the writer in synchronization with one another.</span></span> <span data-ttu-id="5d090-126">Das heißt, wann immer es möglich ist, sollten Sie in der Präsentationszeit in der angegebenen Synchronisierungs Toleranz in [**iwmschreiteradvanced:: setsynctolerance**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmwriteradvanced-setsynctolerance)Beispiele an den Writer übergeben.</span><span class="sxs-lookup"><span data-stu-id="5d090-126">That is, whenever possible you should pass samples to the writer in presentation-time order within the sync tolerance specified in [**IWMWriterAdvanced::SetSyncTolerance**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmwriteradvanced-setsynctolerance).</span></span> <span data-ttu-id="5d090-127">Optimale Ergebnisse werden erzielt, wenn Daten an jeden Stream in Einheiten von mindestens einer Sekunde zugestellt werden.</span><span class="sxs-lookup"><span data-stu-id="5d090-127">Best results are achieved when data is delivered to each stream in units of one second or less.</span></span>
+
+<span data-ttu-id="5d090-128">Streams sollten auch ungefähr zur gleichen Zeit enden.</span><span class="sxs-lookup"><span data-stu-id="5d090-128">Streams should also end at approximately the same time.</span></span> <span data-ttu-id="5d090-129">Sie sollten z. b. keine Datei mit einem Audiostream mit einer Länge von 45 Sekunden schreiben und einen Videostream mit einer Länge von 50 Sekunden.</span><span class="sxs-lookup"><span data-stu-id="5d090-129">For example, you should not write a file with an audio stream that is 45 seconds long and a video stream that is 50 seconds long.</span></span> <span data-ttu-id="5d090-130">Wenn Sie eine solche Datei mit unveränderten Eingaben codieren, werden einige der Audiodaten am Ende des Streams gelöscht (auch wenn es sich um den kürzeren Datenstrom handelt).</span><span class="sxs-lookup"><span data-stu-id="5d090-130">If you encode such a file with unaltered inputs, some of the audio data at the end of the stream will be dropped (even though it is the shorter stream).</span></span> <span data-ttu-id="5d090-131">Damit die Datei Codierung funktioniert, sollten Sie der Audioeingabe 5 Sekunden Ruhe Wert hinzufügen, damit ein Stream nicht mehrere Sekunden vor einem anderen Datenstrom endet.</span><span class="sxs-lookup"><span data-stu-id="5d090-131">To make the file encoding work, you should add 5 seconds of silence to the audio input so that one stream does not end several seconds before another.</span></span> <span data-ttu-id="5d090-132">Es ist nicht erforderlich, dass Streamtypen mit zeitweiligen Stichproben wie Text-oder bildstreams auf diese Weise aufgefüllt werden.</span><span class="sxs-lookup"><span data-stu-id="5d090-132">It is not necessary for stream types with intermittent samples, like text or image streams, to be padded in this way.</span></span> <span data-ttu-id="5d090-133">Skript befehlsstreams sollten auch all diese Regeln einhalten.</span><span class="sxs-lookup"><span data-stu-id="5d090-133">Script command streams should also follow all these rules.</span></span>
+
+## <a name="related-topics"></a><span data-ttu-id="5d090-134">Zugehörige Themen</span><span class="sxs-lookup"><span data-stu-id="5d090-134">Related topics</span></span>
+
+<dl> <dt>
+
+[<span data-ttu-id="5d090-135">**Inssbuffer-Schnittstelle**</span><span class="sxs-lookup"><span data-stu-id="5d090-135">**INSSBuffer Interface**</span></span>](/previous-versions/windows/desktop/api/wmsbuffer/nn-wmsbuffer-inssbuffer)
+</dt> <dt>
+
+[<span data-ttu-id="5d090-136">**Iwmwriter-Schnittstelle**</span><span class="sxs-lookup"><span data-stu-id="5d090-136">**IWMWriter Interface**</span></span>](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmwriter)
+</dt> <dt>
+
+[<span data-ttu-id="5d090-137">**Schreiben von ASF-Dateien**</span><span class="sxs-lookup"><span data-stu-id="5d090-137">**Writing ASF Files**</span></span>](writing-asf-files.md)
+</dt> </dl>
+
+ 
+
+ 
+
+
+
+
