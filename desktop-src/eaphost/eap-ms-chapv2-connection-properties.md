@@ -1,0 +1,56 @@
+---
+title: Eigenschaften der EAP-MS-CHAPv2 Verbindung
+description: Erfahren Sie mehr über die Eigenschaften der EAP-MS-CHAPv2 Verbindung. Sehen Sie sich ein Beispiel an, das eine Instanz des mschapv2connectionpropertiesv1-Legacy Schemas ist.
+ms.assetid: d6a057e0-56f6-4a31-9391-fde631ac2898
+ms.topic: article
+ms.date: 05/31/2018
+ms.openlocfilehash: e353c4685e131c2e7301db35de26d927b5882c06
+ms.sourcegitcommit: 773fa6257ead6c74154ad3cf46d21e49adc900aa
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "104391153"
+---
+# <a name="eap-ms-chapv2-connection-properties"></a>Eigenschaften der EAP-MS-CHAPv2 Verbindung
+
+Bei diesem Beispiel handelt es sich um eine Instanz des [mschapv2connectionpropertiesv1](mschapv2connectionpropertiesv1schema-schema.md) -Legacy Schemas.
+
+``` syntax
+  <?xml version="1.0" ?> 
+  <EapHostConfig xmlns="https://www.microsoft.com/provisioning/EapHostConfig" 
+    xmlns:eapCommon="https://www.microsoft.com/provisioning/EapCommon" 
+    xmlns:baseEap="https://www.microsoft.com/provisioning/BaseEapMethodConfig">
+    <EapMethod>
+      <eapCommon:Type>26</eapCommon:Type> 
+      <eapCommon:AuthorId>0</eapCommon:AuthorId> 
+    </EapMethod>
+    <Config xmlns:baseEap="https://www.microsoft.com/provisioning/BaseEapConnectionPropertiesV1" 
+      xmlns:msPeap="https://www.microsoft.com/provisioning/MsPeapConnectionPropertiesV1" 
+      xmlns:msChapV2="https://www.microsoft.com/provisioning/MsChapV2ConnectionPropertiesV1">
+      <baseEap:Eap>
+        <baseEap:Type>26</baseEap:Type> 
+        <msChapV2:EapType>
+        <msChapV2:UseWinLogonCredentials>false</msChapV2:UseWinLogonCredentials> 
+        </msChapV2:EapType>
+      </baseEap:Eap>
+    </Config>
+  </EapHostConfig>
+```
+
+## <a name="related-topics"></a>Zugehörige Themen
+
+<dl> <dt>
+
+[Verbindungs Eigenschaften](connection-profiles.md)
+</dt> <dt>
+
+[EAPHost und Legacy Schema](eaphost-schemas.md)
+</dt> </dl>
+
+ 
+
+ 
+
+
+
+
