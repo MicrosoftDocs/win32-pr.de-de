@@ -1,0 +1,77 @@
+---
+description: Verwenden von CryptoAPI-Funktionen zum Verwalten von Zertifikat speichern und Zertifikaten, Zertifikat Sperr Listen und Zertifikat Vertrauens Listen innerhalb dieser Speicher.
+ms.assetid: 6a56c355-8f24-41cc-88d9-2a02d9863ccf
+title: Verwalten von Zertifikaten mit Zertifikat speichern
+ms.topic: article
+ms.date: 05/31/2018
+ms.openlocfilehash: 98abb2b612f77db3f1c59e53fb9c7bf0f34cefb3
+ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "104568309"
+---
+# <a name="managing-certificates-with-certificate-stores"></a><span data-ttu-id="e52ea-103">Verwalten von Zertifikaten mit Zertifikat speichern</span><span class="sxs-lookup"><span data-stu-id="e52ea-103">Managing Certificates with Certificate Stores</span></span>
+
+<span data-ttu-id="e52ea-104">Über einen bestimmten Zeitraum häufen sich die [*Zertifikate*](../secgloss/c-gly.md) auf dem Computer eines Benutzers an.</span><span class="sxs-lookup"><span data-stu-id="e52ea-104">Over a period of time, [*certificates*](../secgloss/c-gly.md) will accumulate on a user's computer.</span></span> <span data-ttu-id="e52ea-105">Zum Verwalten dieser Zertifikate sind Tools erforderlich.</span><span class="sxs-lookup"><span data-stu-id="e52ea-105">Tools are required to manage these certificates.</span></span> <span data-ttu-id="e52ea-106">[*CryptoAPI*](../secgloss/c-gly.md) stellt diese Tools als Funktionen zum Speichern, abrufen, löschen, auflisten (auflisten) und Überprüfen von Zertifikaten bereit.</span><span class="sxs-lookup"><span data-stu-id="e52ea-106">[*CryptoAPI*](../secgloss/c-gly.md) provides those tools as functions to store, retrieve, delete, list (enumerate), and verify certificates.</span></span> <span data-ttu-id="e52ea-107">CryptoAPI bietet auch die Möglichkeit, Zertifikate an Nachrichten anzufügen.</span><span class="sxs-lookup"><span data-stu-id="e52ea-107">CryptoAPI also provides the means to attach certificates to messages.</span></span>
+
+<span data-ttu-id="e52ea-108">CryptoAPI bietet zwei Hauptkategorien von Funktionen für die Verwaltung von Zertifikaten: Funktionen zum Verwalten von [*Zertifikat speichern*](../secgloss/c-gly.md)und Funktionen, die mit den Zertifikaten, [*Zertifikat Sperr Listen*](../secgloss/c-gly.md) (CRLs) und [*Zertifikat Vertrauens Listen*](../secgloss/c-gly.md) (CTLs) in diesen speichern funktionieren.</span><span class="sxs-lookup"><span data-stu-id="e52ea-108">CryptoAPI offers two main categories of functions for managing certificates: functions that manage [*certificate stores*](../secgloss/c-gly.md), and functions that work with the certificates, [*certificate revocation lists*](../secgloss/c-gly.md) (CRLs), and [*certificate trust lists*](../secgloss/c-gly.md) (CTLs) within those stores.</span></span>
+
+<span data-ttu-id="e52ea-109">Zu den Funktionen, die [*Zertifikat Speicher*](../secgloss/c-gly.md) verwalten, gehören Funktionen zum Arbeiten mit logischen oder [*virtuellen speichern*](../secgloss/v-gly.md), [*Remote speichern*](../secgloss/r-gly.md), [*externen speichern*](../secgloss/e-gly.md)und speichern, die verschoben werden können.</span><span class="sxs-lookup"><span data-stu-id="e52ea-109">The functions that manage [*certificate stores*](../secgloss/c-gly.md) include functions for working with logical or [*virtual stores*](../secgloss/v-gly.md), [*remote stores*](../secgloss/r-gly.md), [*external stores*](../secgloss/e-gly.md), and stores that can be relocated.</span></span>
+
+<span data-ttu-id="e52ea-110">Zertifikate, [*CRLs*](../secgloss/c-gly.md)und [*CTLs*](../secgloss/c-gly.md) können in [*Zertifikat speichern*](../secgloss/c-gly.md)aufbewahrt und verwaltet werden.</span><span class="sxs-lookup"><span data-stu-id="e52ea-110">Certificates, [*CRLs*](../secgloss/c-gly.md), and [*CTLs*](../secgloss/c-gly.md) can be kept and maintained in [*certificate stores*](../secgloss/c-gly.md).</span></span> <span data-ttu-id="e52ea-111">Sie können aus einem Speicher abgerufen werden, in dem Sie für die Verwendung in Authentifizierungs Prozessen persistent gespeichert wurden.</span><span class="sxs-lookup"><span data-stu-id="e52ea-111">They can be retrieved from a store where they have been persisted for use in authentication processes.</span></span>
+
+<span data-ttu-id="e52ea-112">Der [*Zertifikat Speicher*](../secgloss/c-gly.md) ist für alle Zertifikat Funktionen von zentraler Bedeutung.</span><span class="sxs-lookup"><span data-stu-id="e52ea-112">The [*certificate store*](../secgloss/c-gly.md) is central to all certificate functionality.</span></span> <span data-ttu-id="e52ea-113">Die Zertifikate werden im Speicher mithilfe von Funktionen mit einem Präfix "CERT" verwaltet.</span><span class="sxs-lookup"><span data-stu-id="e52ea-113">The certificates are managed in the store using functions with a "Cert" prefix.</span></span> <span data-ttu-id="e52ea-114">Ein typischer Zertifikat Speicher ist eine verknüpfte Liste mit [*Zertifikaten*](../secgloss/c-gly.md) , wie in der folgenden Abbildung dargestellt.</span><span class="sxs-lookup"><span data-stu-id="e52ea-114">A typical certificate store is a linked list of [*certificates*](../secgloss/c-gly.md) as shown in the following illustration.</span></span>
+
+![Zertifikatspeicher](images/certstore1.png)
+
+<span data-ttu-id="e52ea-116">Die vorherige Abbildung zeigt Folgendes:</span><span class="sxs-lookup"><span data-stu-id="e52ea-116">The preceding illustration shows:</span></span>
+
+-   <span data-ttu-id="e52ea-117">Jeder [*Zertifikat Speicher*](../secgloss/c-gly.md) verfügt über einen Zeiger auf den ersten Zertifikat Block in diesem Speicher.</span><span class="sxs-lookup"><span data-stu-id="e52ea-117">Each [*certificate store*](../secgloss/c-gly.md) has a pointer to the first certificate block in that store.</span></span>
+-   <span data-ttu-id="e52ea-118">Ein Zertifikat Block enthält einen Zeiger auf die Daten dieses Zertifikats und einen "Next"-Zeiger auf den nächsten Zertifikat Block im Speicher.</span><span class="sxs-lookup"><span data-stu-id="e52ea-118">A certificate block includes a pointer to that certificate's data and a "next" pointer to the next certificate block in the store.</span></span>
+-   <span data-ttu-id="e52ea-119">Der "Next"-Zeiger im letzten Zertifikat Block wird auf **null** festgelegt.</span><span class="sxs-lookup"><span data-stu-id="e52ea-119">The "next" pointer in the last certificate block is set to **NULL**.</span></span>
+-   <span data-ttu-id="e52ea-120">Der Datenblock eines Zertifikats enthält den schreibgeschützten Zertifikat Kontext und alle erweiterten Eigenschaften des Zertifikats.</span><span class="sxs-lookup"><span data-stu-id="e52ea-120">The data block of a certificate contains the read-only certificate context and any extended properties of the certificate.</span></span>
+-   <span data-ttu-id="e52ea-121">Der Datenblock jedes Zertifikats enthält einen [*Verweis Zähler*](../secgloss/r-gly.md) , der die Anzahl der Zeiger auf das Zertifikat nachverfolgt, das vorhanden ist.</span><span class="sxs-lookup"><span data-stu-id="e52ea-121">The data block of each certificate contains a [*reference count*](../secgloss/r-gly.md) that keeps track of the number of pointers to the certificate that exist.</span></span>
+
+<span data-ttu-id="e52ea-122">Zertifikate in einem [*Zertifikat Speicher*](../secgloss/c-gly.md) werden normalerweise in einem permanenten Speicher gespeichert, z. b. einer Datenträger Datei oder der Systemregistrierung.</span><span class="sxs-lookup"><span data-stu-id="e52ea-122">Certificates in a [*certificate store*](../secgloss/c-gly.md) are normally kept in some kind of permanent storage such as a disk file or the system registry.</span></span> <span data-ttu-id="e52ea-123">Zertifikat Speicher können auch ausschließlich im Arbeitsspeicher erstellt und geöffnet werden.</span><span class="sxs-lookup"><span data-stu-id="e52ea-123">Certificate stores can also be created and opened strictly in memory.</span></span> <span data-ttu-id="e52ea-124">Ein Speicher Speicher bietet temporären Zertifikat Speicher für das Arbeiten mit Zertifikaten, die nicht aufbewahrt werden müssen.</span><span class="sxs-lookup"><span data-stu-id="e52ea-124">A memory store provides temporary certificate storage for working with certificates that do not need to be kept.</span></span>
+
+<span data-ttu-id="e52ea-125">Zusätzliche Speicherorte ermöglichen das aufbewahren und Durchsuchen von Speichern in den verschiedenen Teilen der Registrierung eines lokalen Computers oder, wobei die entsprechenden Berechtigungen in der Registrierung auf einem Remote Computer festgelegt sind.</span><span class="sxs-lookup"><span data-stu-id="e52ea-125">Additional store locations allow stores to be kept and searched in various parts of a local computer's registry or, with proper permissions set, in the registry on a remote computer.</span></span>
+
+<span data-ttu-id="e52ea-126">Jeder Benutzer verfügt über einen persönlichen Speicher, in dem die Zertifikate des Benutzers gespeichert sind.</span><span class="sxs-lookup"><span data-stu-id="e52ea-126">Each user has a personal My store where that user's certificates are stored.</span></span> <span data-ttu-id="e52ea-127">Der My-Speicher kann sich an einem der vielen physischen Standorte befinden, einschließlich der Registrierung auf einem lokalen Computer oder Remote Computer, einer Datenträger Datei, einer Datenbank, eines Verzeichnis Diensts, einer [*Smartcard*](../secgloss/s-gly.md)oder einem anderen Speicherort.</span><span class="sxs-lookup"><span data-stu-id="e52ea-127">The My store can be at any one of many physical locations, including the registry on a local or remote computer, a disk file, a database, directory service, a [*smart card*](../secgloss/s-gly.md), or another location.</span></span> <span data-ttu-id="e52ea-128">Obwohl alle Zertifikate im My-Speicher gespeichert werden können, sollte dieser Speicher für die persönlichen Zertifikate eines Benutzers reserviert werden: die Zertifikate, die zum Signieren und Entschlüsseln der Nachrichten dieses Benutzers verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="e52ea-128">While any certificate can be stored in the My store, this store should be reserved for a user's personal certificates: those certificates used for signing and decrypting that user's messages.</span></span>
+
+<span data-ttu-id="e52ea-129">Die Verwendung von Zertifikaten für die Authentifizierung hängt davon ab, welche Zertifikate von einem vertrauenswürdigen Zertifikat Aussteller ausgestellt wurden.</span><span class="sxs-lookup"><span data-stu-id="e52ea-129">Using certificates for authentication depends on having certificates issued by some trusted certificate issuer.</span></span> <span data-ttu-id="e52ea-130">Zertifikate für vertrauenswürdige Zertifikat Aussteller werden in der Regel im Stamm Speicher gespeichert, der derzeit in einem Registrierungs Unterschlüssel persistent gespeichert wird.</span><span class="sxs-lookup"><span data-stu-id="e52ea-130">Certificates for trusted certificate issuers are typically kept in the Root store, which is currently persisted to a registry subkey.</span></span> <span data-ttu-id="e52ea-131">Im kryptoapi-Kontext wird der Stamm Speicher geschützt, und die Dialogfelder in der Benutzeroberfläche erinnern den Benutzer daran, nur vertrauenswürdige Zertifikate in diesem Speicher zu platzieren.</span><span class="sxs-lookup"><span data-stu-id="e52ea-131">In the CryptoAPI context, the Root store is protected, and user interface dialog boxes remind the user to place only trusted certificates into that store.</span></span> <span data-ttu-id="e52ea-132">In Unternehmensnetzwerk Situationen können Zertifikate von einem Systemadministrator per pushübertragung (kopiert) vom Domänen Controller Computer in die Stamm Speicher auf Client Computern übermittelt werden.</span><span class="sxs-lookup"><span data-stu-id="e52ea-132">In enterprise network situations, certificates might be pushed (copied) by a system administrator from the domain controller computer to the Root stores on client computers.</span></span> <span data-ttu-id="e52ea-133">Bei diesem Vorgang werden alle Mitglieder einer Domäne mit ähnlichen Vertrauens Listen bereitstellt.</span><span class="sxs-lookup"><span data-stu-id="e52ea-133">This process provides all members of a domain with similar trust lists.</span></span>
+
+<span data-ttu-id="e52ea-134">Andere Zertifikate können im Systemspeicher der [*Zertifizierungsstelle (Certification Authority*](../secgloss/c-gly.md) , ca) oder in Benutzer erstellten, dateibasierten speichern gespeichert werden.</span><span class="sxs-lookup"><span data-stu-id="e52ea-134">Other certificates can be stored in the [*certification authority*](../secgloss/c-gly.md) (CA) system store or in user-created, file-based stores.</span></span>
+
+<span data-ttu-id="e52ea-135">Eine Liste der Funktionen zum verwenden und Verwalten von Zertifikat speichern finden Sie unter [Zertifikat Speicherfunktionen](cryptography-functions.md).</span><span class="sxs-lookup"><span data-stu-id="e52ea-135">For lists of functions for using and maintaining certificate stores, see [Certificate Store Functions](cryptography-functions.md).</span></span>
+
+<span data-ttu-id="e52ea-136">Ein Beispiel, in dem einige dieser Funktionen verwendet werden, finden Sie unter [Beispiel C-Programm: Zertifikat Speichervorgänge](example-c-program-certificate-store-operations.md).</span><span class="sxs-lookup"><span data-stu-id="e52ea-136">For an example that uses some of these functions, see [Example C Program: Certificate Store Operations](example-c-program-certificate-store-operations.md).</span></span>
+
+## <a name="related-topics"></a><span data-ttu-id="e52ea-137">Zugehörige Themen</span><span class="sxs-lookup"><span data-stu-id="e52ea-137">Related topics</span></span>
+
+<dl> <dt>
+
+[<span data-ttu-id="e52ea-138">Verwalten eines Zertifikat Speicher Zustands</span><span class="sxs-lookup"><span data-stu-id="e52ea-138">Managing a Certificate Store State</span></span>](managing-a-certificate-store-state.md)
+</dt> <dt>
+
+[<span data-ttu-id="e52ea-139">Arbeiten mit Zertifikaten in Zertifikat speichern</span><span class="sxs-lookup"><span data-stu-id="e52ea-139">Working with Certificates in Certificate Stores</span></span>](working-with-certificates-in-certificate-stores.md)
+</dt> <dt>
+
+[<span data-ttu-id="e52ea-140">Zertifikat Verknüpfungen</span><span class="sxs-lookup"><span data-stu-id="e52ea-140">Certificate Links</span></span>](certificate-links.md)
+</dt> <dt>
+
+[<span data-ttu-id="e52ea-141">Sammlungs Speicher</span><span class="sxs-lookup"><span data-stu-id="e52ea-141">Collection Stores</span></span>](collection-stores.md)
+</dt> <dt>
+
+[<span data-ttu-id="e52ea-142">Logische und physische Speicher</span><span class="sxs-lookup"><span data-stu-id="e52ea-142">Logical and Physical Stores</span></span>](logical-and-physical-stores.md)
+</dt> <dt>
+
+[<span data-ttu-id="e52ea-143">System Speicherorte</span><span class="sxs-lookup"><span data-stu-id="e52ea-143">System Store Locations</span></span>](system-store-locations.md)
+</dt> <dt>
+
+[<span data-ttu-id="e52ea-144">Zertifikat Speicher Migration</span><span class="sxs-lookup"><span data-stu-id="e52ea-144">Certificate Store Migration</span></span>](certificate-store-migration.md)
+</dt> </dl>
+
+ 
+
+ 
