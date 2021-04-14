@@ -1,0 +1,34 @@
+---
+title: Sicherheitsüberlegungen für den Geräte Host
+description: Durch die Verwendung des Geräte Hosts werden Sicherheitsprobleme verursacht.
+ms.assetid: 7cb445ea-5df4-4030-babd-62527b4d6210
+ms.topic: article
+ms.date: 05/31/2018
+ms.openlocfilehash: 2b5a51b90bff33949a33cd9fa1046deb1916ab30
+ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "104473404"
+---
+# <a name="device-host-security-considerations"></a><span data-ttu-id="f5567-103">Sicherheitsüberlegungen für den Geräte Host</span><span class="sxs-lookup"><span data-stu-id="f5567-103">Device Host Security Considerations</span></span>
+
+<span data-ttu-id="f5567-104">Durch die Verwendung des Geräte Hosts werden Sicherheitsprobleme aufgrund folgender Aktionen verursacht:</span><span class="sxs-lookup"><span data-stu-id="f5567-104">Using the device host creates security issues because of the following:</span></span>
+
+-   <span data-ttu-id="f5567-105">Geräte, die auf einem Computer unter Windows XP gehostet werden, senden Ankündigungen in allen Netzwerken.</span><span class="sxs-lookup"><span data-stu-id="f5567-105">Devices hosted on a computer running Windows XP sends announcements on all networks.</span></span>
+-   <span data-ttu-id="f5567-106">Geräte, die auf einem Computer unter Windows XP gehostet werden, ermöglichen die Steuerung der Geräte aus allen Netzwerken.</span><span class="sxs-lookup"><span data-stu-id="f5567-106">Devices hosted on a computer running Windows XP allow control of devices from all networks.</span></span>
+
+<span data-ttu-id="f5567-107">Dies erhöht das Risiko für Heimanwender, weil Geräte, wie z. b. eine Media Player-oder eine über brückbare Beleuchtung oder ein HVAC-System, das auf einem Computer mit Windows XP gehostet wird, sichtbar sind und von Steuerungs Punkten außerhalb der Startseite gesteuert werden können.</span><span class="sxs-lookup"><span data-stu-id="f5567-107">This increases the risk to home consumers, because devices such as a media player or a bridged lighting or HVAC system hosted on a computer running Windows XP are visible and can be controlled from control points outside the home.</span></span>
+
+<span data-ttu-id="f5567-108">Wenn Sie ein gehosteter Gerät erstellen, müssen Sie einige Sicherheitsprobleme berücksichtigen.</span><span class="sxs-lookup"><span data-stu-id="f5567-108">When you are creating a hosted device, you need to take into consideration some security issues.</span></span>
+
+-   <span data-ttu-id="f5567-109">Um den Umfang der Ermittlung und des Angriffs von UPnP-basierten Geräten zu reduzieren, ist die Gültigkeitsdauer aller SSDP-Nachrichten 1.</span><span class="sxs-lookup"><span data-stu-id="f5567-109">To reduce the scope of discovery and attack of UPnP-based devices, the TTL of all SSDP messages is 1.</span></span> <span data-ttu-id="f5567-110">Dies bedeutet, dass ein registriertes Gerät nur von Steuerungs Punkten im gleichen Netzwerk erkannt wird.</span><span class="sxs-lookup"><span data-stu-id="f5567-110">This means that a registered device is only discovered by control points on the same network.</span></span> <span data-ttu-id="f5567-111">Sie können eine höhere Gültigkeitsdauer in der Registrierung konfigurieren.</span><span class="sxs-lookup"><span data-stu-id="f5567-111">You can configure a higher TTL in the registry.</span></span>
+-   <span data-ttu-id="f5567-112">Zum Registrieren eines Geräts, das nicht ausgeführt wird, müssen Sie die Anwendung "Device. dll" vorab mit com registrieren, was Administratorrechte erfordert.</span><span class="sxs-lookup"><span data-stu-id="f5567-112">Registering a non-running device requires pre-registering the device .dll with COM, which requires administrator privilege.</span></span>
+-   <span data-ttu-id="f5567-113">Zum Registrieren eines laufenden Geräts sind die Berechtigungen Administrator, lokaler Dienst oder lokales System erforderlich.</span><span class="sxs-lookup"><span data-stu-id="f5567-113">Registering a running device requires Administrator, Local Service, or Local System privilege.</span></span>
+-   <span data-ttu-id="f5567-114">Wenn der Geräte Host gestartet wird, wird er als [LocalService](/windows/desktop/Services/localservice-account)ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="f5567-114">When the device host is started, it is run as [LocalService](/windows/desktop/Services/localservice-account).</span></span> <span data-ttu-id="f5567-115">Dadurch erhält das Gerät die Möglichkeit, Überwachungen zu generieren und den Registrierungsschlüssel für den **lokalen HKEY- \_ \_ Computer** zu lesen.</span><span class="sxs-lookup"><span data-stu-id="f5567-115">This gives the device the ability to generate audits and read the **HKEY\_LOCAL\_MACHINE** registry key.</span></span> <span data-ttu-id="f5567-116">Das Gerät hat Zugriff auf den **aktuellen HKEY- \_ \_ Benutzer**.</span><span class="sxs-lookup"><span data-stu-id="f5567-116">The device does have access to **HKEY\_CURRENT\_USER**.</span></span> <span data-ttu-id="f5567-117">Das LocalService-Konto kann Ressourcen verwenden, denen LocalService Zugriff gewährt wurde, sowie diejenigen, die Zugriff auf authentiereduser gewähren.</span><span class="sxs-lookup"><span data-stu-id="f5567-117">The LocalService account can use resources to which LocalService has been granted access, as well as those that grant access to AuthenticatedUser.</span></span> <span data-ttu-id="f5567-118">Das Gerät verfügt über eingeschränkten Zugriff auf den Dateisystem Zugriff.</span><span class="sxs-lookup"><span data-stu-id="f5567-118">The device has restricted file system access.</span></span>
+-   <span data-ttu-id="f5567-119">Die Dateisystem-ACLs müssen aktualisiert werden, damit [LocalService](/windows/desktop/Services/localservice-account) auf das Ressourcenverzeichnis zugreifen kann.</span><span class="sxs-lookup"><span data-stu-id="f5567-119">The file system ACLs must be updated to allow [LocalService](/windows/desktop/Services/localservice-account) access to the resource directory.</span></span>
+-   <span data-ttu-id="f5567-120">Wenn Ihr Gerät über mehr Sicherheits Zugriff verfügen muss, können Sie einen eigenen Prozess für das Gerät erstellen und es mithilfe von [**iupnpregistranar:: registerrunningdevice**](/windows/desktop/api/Upnphost/nf-upnphost-iupnpregistrar-registerrunningdevice)registrieren.</span><span class="sxs-lookup"><span data-stu-id="f5567-120">If your device must have more security access, you can create your own process for the device and register it by using [**IUPnPRegistrar::RegisterRunningDevice**](/windows/desktop/api/Upnphost/nf-upnphost-iupnpregistrar-registerrunningdevice).</span></span>
+
+ 
+
+ 
