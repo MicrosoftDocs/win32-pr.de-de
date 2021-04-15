@@ -1,0 +1,113 @@
+- name: Windows-Fehlerberichterstattung
+  href: windows-error-reporting.md
+  items:
+    - name: Neues in Wer
+      href: what-s-new-in-wer.md
+    - name: Informationen zu wer
+      href: about-wer.md
+    - name: Verwenden von wer
+      href: using-wer.md
+      items:
+        - name: Sammeln von User-Mode Dumps
+          href: collecting-user-mode-dumps.md
+    - name: Wer-Verweis
+      href: wer-reference.md
+      items:
+        - name: Wer-Fehler Codes
+          href: wer-error-codes.md
+        - name: Wer-Funktionen
+          href: wer-functions.md
+          items:
+            - name: Adderexcludebug
+              href: /windows/desktop/api/ErrorRep/nf-errorrep-adderexcludedapplicationa
+            - name: PFN_WER_RUNTIME_EXCEPTION_EVENT
+              href: /windows/desktop/api/Werapi/nc-werapi-pfn_wer_runtime_exception_event
+            - name: PFN_WER_RUNTIME_EXCEPTION_DEBUGGER_LAUNCH
+              href: /windows/desktop/api/Werapi/nc-werapi-pfn_wer_runtime_exception_debugger_launch
+            - name: PFN_WER_RUNTIME_EXCEPTION_EVENT_SIGNATURE
+              href: /windows/desktop/api/Werapi/nc-werapi-pfn_wer_runtime_exception_event_signature
+            - name: ReportFault
+              href: /windows/desktop/api/ErrorRep/nf-errorrep-reportfault
+            - name: Weraddexcludebug
+              href: /windows/desktop/api/Werapi/nf-werapi-weraddexcludedapplication
+            - name: Werfrestring
+              href: /windows/desktop/api/Werapi/nf-werapi-werfreestring
+            - name: Wergetflags
+              href: /windows/desktop/api/Werapi/nf-werapi-wergetflags
+            - name: Werregisteradditionalprocess
+              href: /windows/desktop/api/Werapi/nf-werapi-werregisteradditionalprocess
+            - name: Werregisterapplocaldump
+              href: /windows/desktop/api/Werapi/nf-werapi-werregisterapplocaldump
+            - name: Werregistercustommetadata
+              href: /windows/desktop/api/Werapi/nf-werapi-werregistercustommetadata
+            - name: Werregisterexcluentdmemoryblock
+              href: /windows/desktop/api/Werapi/nf-werapi-werregisterexcludedmemoryblock
+            - name: Werregisterfile
+              href: /windows/desktop/api/Werapi/nf-werapi-werregisterfile
+            - name: Werregistermemoryblock
+              href: /windows/desktop/api/Werapi/nf-werapi-werregistermemoryblock
+            - name: Werregisterruntimeexceptionmodule
+              href: /windows/desktop/api/Werapi/nf-werapi-werregisterruntimeexceptionmodule
+            - name: Werremoveexcludebudapplikation
+              href: /windows/desktop/api/Werapi/nf-werapi-werremoveexcludedapplication
+            - name: Werreportadddump
+              href: /windows/desktop/api/Werapi/nf-werapi-werreportadddump
+            - name: Werreportaddfile
+              href: /windows/desktop/api/Werapi/nf-werapi-werreportaddfile
+            - name: Werreportclosehandle
+              href: /windows/desktop/api/Werapi/nf-werapi-werreportclosehandle
+            - name: Werreportcreate
+              href: /windows/desktop/api/Werapi/nf-werapi-werreportcreate
+            - name: Werreporthang
+              href: /windows/desktop/api/ErrorRep/nf-errorrep-werreporthang
+            - name: Werreportsetparameter
+              href: /windows/desktop/api/Werapi/nf-werapi-werreportsetparameter
+            - name: Werreporteintuioption
+              href: /windows/desktop/api/Werapi/nf-werapi-werreportsetuioption
+            - name: Werreportsubmit
+              href: /windows/desktop/api/Werapi/nf-werapi-werreportsubmit
+            - name: Wersetflags
+              href: /windows/desktop/api/Werapi/nf-werapi-wersetflags
+            - name: Werstoreclose
+              href: /windows/desktop/api/Werapi/nf-werapi-werstoreclose
+            - name: Werstoregetfirstreportkey
+              href: /windows/desktop/api/Werapi/nf-werapi-werstoregetfirstreportkey
+            - name: Werstoregetnextreportkey
+              href: /windows/desktop/api/Werapi/nf-werapi-werstoregetnextreportkey
+            - name: Werstoreopen
+              href: /windows/desktop/api/Werapi/nf-werapi-werstoreopen
+            - name: WerStoreQueryReportMetadataV2
+              href: /windows/desktop/api/Werapi/nf-werapi-werstorequeryreportmetadatav2
+            - name: Werunregisteradditionalprocess
+              href: /windows/desktop/api/Werapi/nf-werapi-werunregisteradditionalprocess
+            - name: Werunregisterapplocaldump
+              href: /windows/desktop/api/Werapi/nf-werapi-werunregisterapplocaldump
+            - name: Werunregistercustommetadata
+              href: /windows/desktop/api/Werapi/nf-werapi-werunregistercustommetadata
+            - name: Werunregisterexcludecodmemoryblock
+              href: /windows/desktop/api/Werapi/nf-werapi-werunregisterexcludedmemoryblock
+            - name: Werunregisterfile
+              href: /windows/desktop/api/Werapi/nf-werapi-werunregisterfile
+            - name: Werunregistermemoryblock
+              href: /windows/desktop/api/Werapi/nf-werapi-werunregistermemoryblock
+            - name: Werunregisterruntimeexceptionmodule
+              href: /windows/desktop/api/Werapi/nf-werapi-werunregisterruntimeexceptionmodule
+        - name: WER-Einstellungen
+          href: wer-settings.md
+        - name: Wer-Strukturen
+          href: wer-structures.md
+          items:
+            - name: WER_REPORT_METADATA_V2
+              href: /windows/win32/api/Werapi/ns-werapi-wer_report_metadata_v2
+            - name: STOWED_EXCEPTION_INFORMATION_HEADER
+              href: stowed-exception-information-header.md
+            - name: STOWED_EXCEPTION_INFORMATION_V2
+              href: stowed-exception-information-v2.md
+            - name: WER_DUMP_CUSTOM_OPTIONS
+              href: /windows/win32/api/Werapi/ns-werapi-wer_dump_custom_options
+            - name: WER_EXCEPTION_INFORMATION
+              href: /windows/win32/api/Werapi/ns-werapi-wer_exception_information
+            - name: WER_REPORT_INFORMATION
+              href: /windows/win32/api/Werapi/ns-werapi-wer_report_information
+            - name: WER_RUNTIME_EXCEPTION_INFORMATION
+              href: /windows/win32/api/Werapi/ns-werapi-wer_runtime_exception_information
