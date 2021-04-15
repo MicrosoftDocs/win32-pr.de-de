@@ -1,0 +1,16 @@
+- name: Windows Mixed Reality
+  href: mixed-reality-portal.md
+  items:
+    - name: Windows Mixed Reality-com-Schnittstellen
+      href: mixed-reality-com-interfaces.md
+      items:
+        - name: Ispatialinteraktionmanagerinterop
+          href: /windows/desktop/api/spatialinteractionmanagerinterop/nn-spatialinteractionmanagerinterop-ispatialinteractionmanagerinterop
+          items:
+            - name: Getforwindow-Methode
+              href: /windows/desktop/api/spatialinteractionmanagerinterop/nf-spatialinteractionmanagerinterop-ispatialinteractionmanagerinterop-getforwindow
+        - name: Iholographicspaceingeterop
+          href: /windows/desktop/api/holographicspaceinterop/nn-holographicspaceinterop-iholographicspaceinterop
+          items:
+            - name: Methode "forateforwindow"
+              href: /windows/desktop/api/holographicspaceinterop/nf-holographicspaceinterop-iholographicspaceinterop-createforwindow
