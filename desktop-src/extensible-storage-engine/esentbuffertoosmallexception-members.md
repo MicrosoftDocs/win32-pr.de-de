@@ -1,0 +1,173 @@
+---
+description: 'Weitere Informationen finden Sie unter: esentbufferdeosmallexception-Member'
+title: Esentbufferdeosmallexception-Elemente
+TOCTitle: EsentBufferTooSmallException members
+ms:assetid: AllMembers.T:Microsoft.Isam.Esent.Interop.EsentBufferTooSmallException
+ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentbuffertoosmallexception_members(v=EXCHG.10)
+ms:contentKeyID: 55101171
+ms.date: 07/30/2014
+ms.topic: article
+ms.openlocfilehash: 2f8f27a5a90cba42d2a56f969309ee48740f52fb
+ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "104554741"
+---
+# <a name="esentbuffertoosmallexception-members"></a><span data-ttu-id="a9be3-103">Esentbufferdeosmallexception-Elemente</span><span class="sxs-lookup"><span data-stu-id="a9be3-103">EsentBufferTooSmallException members</span></span>
+
+<span data-ttu-id="a9be3-104">Geschützte Member einschließen</span><span class="sxs-lookup"><span data-stu-id="a9be3-104">Include protected members</span></span>  
+<span data-ttu-id="a9be3-105">Geerbte Member einschließen</span><span class="sxs-lookup"><span data-stu-id="a9be3-105">Include inherited members</span></span>  
+
+<span data-ttu-id="a9be3-106">Basisklasse für JET_err. Bufferto osmall-Ausnahmen.</span><span class="sxs-lookup"><span data-stu-id="a9be3-106">Base class for JET_err.BufferTooSmall exceptions.</span></span>
+
+<span data-ttu-id="a9be3-107">Der [esentbufferdeosmallexception](./esentbuffertoosmallexception-class.md) -Typ macht die folgenden Member verfügbar.</span><span class="sxs-lookup"><span data-stu-id="a9be3-107">The [EsentBufferTooSmallException](./esentbuffertoosmallexception-class.md) type exposes the following members.</span></span>
+
+## <a name="constructors"></a><span data-ttu-id="a9be3-108">Konstruktoren</span><span class="sxs-lookup"><span data-stu-id="a9be3-108">Constructors</span></span>
+
+<table>
+<thead>
+<tr class="header">
+<th> </th>
+<th><span data-ttu-id="a9be3-109">Name</span><span class="sxs-lookup"><span data-stu-id="a9be3-109">Name</span></span></th>
+<th><span data-ttu-id="a9be3-110">BESCHREIBUNG</span><span class="sxs-lookup"><span data-stu-id="a9be3-110">Description</span></span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /></td>
+<td><span data-ttu-id="a9be3-112"><a href="dn274075(v=exchg.10).md">Esentbufferdeosmallexception</a></span><span class="sxs-lookup"><span data-stu-id="a9be3-112"><a href="dn274075(v=exchg.10).md">EsentBufferTooSmallException</a></span></span></td>
+<td><span data-ttu-id="a9be3-113">Initialisiert eine neue Instanz der esentbufferdeosmallexception-Klasse.</span><span class="sxs-lookup"><span data-stu-id="a9be3-113">Initializes a new instance of the EsentBufferTooSmallException class.</span></span></td>
+</tr>
+</tbody>
+</table>
+
+
+<span data-ttu-id="a9be3-114">Oben</span><span class="sxs-lookup"><span data-stu-id="a9be3-114">Top</span></span>
+
+## <a name="properties"></a><span data-ttu-id="a9be3-115">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="a9be3-115">Properties</span></span>
+
+<table>
+<thead>
+<tr class="header">
+<th> </th>
+<th><span data-ttu-id="a9be3-116">Name</span><span class="sxs-lookup"><span data-stu-id="a9be3-116">Name</span></span></th>
+<th><span data-ttu-id="a9be3-117">BESCHREIBUNG</span><span class="sxs-lookup"><span data-stu-id="a9be3-117">Description</span></span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
+<td><span data-ttu-id="a9be3-119"><a href="/dotnet/api/system.exception.data#System_Exception_Data">Daten</a></span><span class="sxs-lookup"><span data-stu-id="a9be3-119"><a href="/dotnet/api/system.exception.data#System_Exception_Data">Data</a></span></span></td>
+<td><span data-ttu-id="a9be3-120">(Geerbt von der <a href="/dotnet/api/system.exception">Ausnahme</a>.)</span><span class="sxs-lookup"><span data-stu-id="a9be3-120">(Inherited from <a href="/dotnet/api/system.exception">Exception</a>.)</span></span></td>
+</tr>
+<tr class="even">
+<td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
+<td><span data-ttu-id="a9be3-122"><a href="dn274313(v=exchg.10).md">Fehler</a></span><span class="sxs-lookup"><span data-stu-id="a9be3-122"><a href="dn274313(v=exchg.10).md">Error</a></span></span></td>
+<td><span data-ttu-id="a9be3-123">Ruft den zugrunde liegenden ESENT-Fehler für diese Ausnahme ab.</span><span class="sxs-lookup"><span data-stu-id="a9be3-123">Gets the underlying Esent error for this exception.</span></span> <span data-ttu-id="a9be3-124">(Geerbt von " <a href="dn274314(v=exchg.10).md">esenterrorexception</a>".)</span><span class="sxs-lookup"><span data-stu-id="a9be3-124">(Inherited from <a href="dn274314(v=exchg.10).md">EsentErrorException</a>.)</span></span></td>
+</tr>
+<tr class="odd">
+<td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
+<td><span data-ttu-id="a9be3-126"><a href="/dotnet/api/system.exception.helplink#System_Exception_HelpLink">HelpLink</a></span><span class="sxs-lookup"><span data-stu-id="a9be3-126"><a href="/dotnet/api/system.exception.helplink#System_Exception_HelpLink">HelpLink</a></span></span></td>
+<td><span data-ttu-id="a9be3-127">(Geerbt von der <a href="/dotnet/api/system.exception">Ausnahme</a>.)</span><span class="sxs-lookup"><span data-stu-id="a9be3-127">(Inherited from <a href="/dotnet/api/system.exception">Exception</a>.)</span></span></td>
+</tr>
+<tr class="even">
+<td><img src="../images/dn292128.protproperty(exchg.10).gif" title="Geschützte Eigenschaft" alt="Protected property" /></td>
+<td><span data-ttu-id="a9be3-129"><a href="/dotnet/api/system.exception.hresult#System_Exception_HResult">HRESULT</a></span><span class="sxs-lookup"><span data-stu-id="a9be3-129"><a href="/dotnet/api/system.exception.hresult#System_Exception_HResult">HResult</a></span></span></td>
+<td><span data-ttu-id="a9be3-130">(Geerbt von der <a href="/dotnet/api/system.exception">Ausnahme</a>.)</span><span class="sxs-lookup"><span data-stu-id="a9be3-130">(Inherited from <a href="/dotnet/api/system.exception">Exception</a>.)</span></span></td>
+</tr>
+<tr class="odd">
+<td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
+<td><span data-ttu-id="a9be3-132"><a href="/dotnet/api/system.exception.innerexception#System_Exception_InnerException">InnerException</a></span><span class="sxs-lookup"><span data-stu-id="a9be3-132"><a href="/dotnet/api/system.exception.innerexception#System_Exception_InnerException">InnerException</a></span></span></td>
+<td><span data-ttu-id="a9be3-133">(Geerbt von der <a href="/dotnet/api/system.exception">Ausnahme</a>.)</span><span class="sxs-lookup"><span data-stu-id="a9be3-133">(Inherited from <a href="/dotnet/api/system.exception">Exception</a>.)</span></span></td>
+</tr>
+<tr class="even">
+<td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
+<td><span data-ttu-id="a9be3-135"><a href="/dotnet/api/system.exception.message#System_Exception_Message">Meldung</a></span><span class="sxs-lookup"><span data-stu-id="a9be3-135"><a href="/dotnet/api/system.exception.message#System_Exception_Message">Message</a></span></span></td>
+<td><span data-ttu-id="a9be3-136">(Geerbt von der <a href="/dotnet/api/system.exception">Ausnahme</a>.)</span><span class="sxs-lookup"><span data-stu-id="a9be3-136">(Inherited from <a href="/dotnet/api/system.exception">Exception</a>.)</span></span></td>
+</tr>
+<tr class="odd">
+<td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
+<td><span data-ttu-id="a9be3-138"><a href="/dotnet/api/system.exception.source#System_Exception_Source">Quelle</a></span><span class="sxs-lookup"><span data-stu-id="a9be3-138"><a href="/dotnet/api/system.exception.source#System_Exception_Source">Source</a></span></span></td>
+<td><span data-ttu-id="a9be3-139">(Geerbt von der <a href="/dotnet/api/system.exception">Ausnahme</a>.)</span><span class="sxs-lookup"><span data-stu-id="a9be3-139">(Inherited from <a href="/dotnet/api/system.exception">Exception</a>.)</span></span></td>
+</tr>
+<tr class="even">
+<td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
+<td><span data-ttu-id="a9be3-141"><a href="/dotnet/api/system.exception.stacktrace#System_Exception_StackTrace">StackTrace</a></span><span class="sxs-lookup"><span data-stu-id="a9be3-141"><a href="/dotnet/api/system.exception.stacktrace#System_Exception_StackTrace">StackTrace</a></span></span></td>
+<td><span data-ttu-id="a9be3-142">(Geerbt von der <a href="/dotnet/api/system.exception">Ausnahme</a>.)</span><span class="sxs-lookup"><span data-stu-id="a9be3-142">(Inherited from <a href="/dotnet/api/system.exception">Exception</a>.)</span></span></td>
+</tr>
+<tr class="odd">
+<td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
+<td><span data-ttu-id="a9be3-144"><a href="/dotnet/api/system.exception.targetsite#System_Exception_TargetSite">TargetSite</a></span><span class="sxs-lookup"><span data-stu-id="a9be3-144"><a href="/dotnet/api/system.exception.targetsite#System_Exception_TargetSite">TargetSite</a></span></span></td>
+<td><span data-ttu-id="a9be3-145">(Geerbt von der <a href="/dotnet/api/system.exception">Ausnahme</a>.)</span><span class="sxs-lookup"><span data-stu-id="a9be3-145">(Inherited from <a href="/dotnet/api/system.exception">Exception</a>.)</span></span></td>
+</tr>
+</tbody>
+</table>
+
+
+<span data-ttu-id="a9be3-146">Oben</span><span class="sxs-lookup"><span data-stu-id="a9be3-146">Top</span></span>
+
+## <a name="methods"></a><span data-ttu-id="a9be3-147">Methoden</span><span class="sxs-lookup"><span data-stu-id="a9be3-147">Methods</span></span>
+
+<table>
+<thead>
+<tr class="header">
+<th> </th>
+<th><span data-ttu-id="a9be3-148">Name</span><span class="sxs-lookup"><span data-stu-id="a9be3-148">Name</span></span></th>
+<th><span data-ttu-id="a9be3-149">BESCHREIBUNG</span><span class="sxs-lookup"><span data-stu-id="a9be3-149">Description</span></span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /></td>
+<td><span data-ttu-id="a9be3-151"><a href="/dotnet/api/system.object.equals#System_Object_Equals_System_Object_">Ist gleich</a></span><span class="sxs-lookup"><span data-stu-id="a9be3-151"><a href="/dotnet/api/system.object.equals#System_Object_Equals_System_Object_">Equals</a></span></span></td>
+<td><span data-ttu-id="a9be3-152">(Von <a href="/dotnet/api/system.object">Objekt</a>geerbt.)</span><span class="sxs-lookup"><span data-stu-id="a9be3-152">(Inherited from <a href="/dotnet/api/system.object">Object</a>.)</span></span></td>
+</tr>
+<tr class="even">
+<td><img src="../images/dn292116.protmethod(exchg.10).gif" title="Geschützte Methode" alt="Protected method" /></td>
+<td><span data-ttu-id="a9be3-154"><a href="/dotnet/api/system.object.finalize#System_Object_Finalize">Finalize</a></span><span class="sxs-lookup"><span data-stu-id="a9be3-154"><a href="/dotnet/api/system.object.finalize#System_Object_Finalize">Finalize</a></span></span></td>
+<td><span data-ttu-id="a9be3-155">(Von <a href="/dotnet/api/system.object">Objekt</a>geerbt.)</span><span class="sxs-lookup"><span data-stu-id="a9be3-155">(Inherited from <a href="/dotnet/api/system.object">Object</a>.)</span></span></td>
+</tr>
+<tr class="odd">
+<td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /></td>
+<td><span data-ttu-id="a9be3-157"><a href="/dotnet/api/system.exception.getbaseexception#System_Exception_GetBaseException">GetBaseException</a></span><span class="sxs-lookup"><span data-stu-id="a9be3-157"><a href="/dotnet/api/system.exception.getbaseexception#System_Exception_GetBaseException">GetBaseException</a></span></span></td>
+<td><span data-ttu-id="a9be3-158">(Geerbt von der <a href="/dotnet/api/system.exception">Ausnahme</a>.)</span><span class="sxs-lookup"><span data-stu-id="a9be3-158">(Inherited from <a href="/dotnet/api/system.exception">Exception</a>.)</span></span></td>
+</tr>
+<tr class="even">
+<td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /></td>
+<td><span data-ttu-id="a9be3-160"><a href="/dotnet/api/system.object.gethashcode#System_Object_GetHashCode">GetHashCode</a></span><span class="sxs-lookup"><span data-stu-id="a9be3-160"><a href="/dotnet/api/system.object.gethashcode#System_Object_GetHashCode">GetHashCode</a></span></span></td>
+<td><span data-ttu-id="a9be3-161">(Von <a href="/dotnet/api/system.object">Objekt</a>geerbt.)</span><span class="sxs-lookup"><span data-stu-id="a9be3-161">(Inherited from <a href="/dotnet/api/system.object">Object</a>.)</span></span></td>
+</tr>
+<tr class="odd">
+<td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /></td>
+<td><span data-ttu-id="a9be3-163"><a href="dn334369(v=exchg.10).md">GetObjectData</a></span><span class="sxs-lookup"><span data-stu-id="a9be3-163"><a href="dn334369(v=exchg.10).md">GetObjectData</a></span></span></td>
+<td><span data-ttu-id="a9be3-164">Legt beim Überschreiben in einer abgeleiteten Klasse die <a href="/dotnet/api/system.runtime.serialization.serializationinfo">SerializationInfo</a> mit Informationen zur Ausnahme fest.</span><span class="sxs-lookup"><span data-stu-id="a9be3-164">When overridden in a derived class, sets the <a href="/dotnet/api/system.runtime.serialization.serializationinfo">SerializationInfo</a> with information about the exception.</span></span> <span data-ttu-id="a9be3-165">(Geerbt von " <a href="dn274314(v=exchg.10).md">esenterrorexception</a>".)</span><span class="sxs-lookup"><span data-stu-id="a9be3-165">(Inherited from <a href="dn274314(v=exchg.10).md">EsentErrorException</a>.)</span></span></td>
+</tr>
+<tr class="even">
+<td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /></td>
+<td><span data-ttu-id="a9be3-167"><a href="/dotnet/api/system.exception.gettype#System_Exception_GetType">GetType</a></span><span class="sxs-lookup"><span data-stu-id="a9be3-167"><a href="/dotnet/api/system.exception.gettype#System_Exception_GetType">GetType</a></span></span></td>
+<td><span data-ttu-id="a9be3-168">(Geerbt von der <a href="/dotnet/api/system.exception">Ausnahme</a>.)</span><span class="sxs-lookup"><span data-stu-id="a9be3-168">(Inherited from <a href="/dotnet/api/system.exception">Exception</a>.)</span></span></td>
+</tr>
+<tr class="odd">
+<td><img src="../images/dn292116.protmethod(exchg.10).gif" title="Geschützte Methode" alt="Protected method" /></td>
+<td><span data-ttu-id="a9be3-170"><a href="/dotnet/api/system.object.memberwiseclone#System_Object_MemberwiseClone">Mitgliedglieder Klon</a></span><span class="sxs-lookup"><span data-stu-id="a9be3-170"><a href="/dotnet/api/system.object.memberwiseclone#System_Object_MemberwiseClone">MemberwiseClone</a></span></span></td>
+<td><span data-ttu-id="a9be3-171">(Von <a href="/dotnet/api/system.object">Objekt</a>geerbt.)</span><span class="sxs-lookup"><span data-stu-id="a9be3-171">(Inherited from <a href="/dotnet/api/system.object">Object</a>.)</span></span></td>
+</tr>
+<tr class="even">
+<td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /></td>
+<td><span data-ttu-id="a9be3-173"><a href="/dotnet/api/system.exception.tostring#System_Exception_ToString">ToString</a></span><span class="sxs-lookup"><span data-stu-id="a9be3-173"><a href="/dotnet/api/system.exception.tostring#System_Exception_ToString">ToString</a></span></span></td>
+<td><span data-ttu-id="a9be3-174">(Geerbt von der <a href="/dotnet/api/system.exception">Ausnahme</a>.)</span><span class="sxs-lookup"><span data-stu-id="a9be3-174">(Inherited from <a href="/dotnet/api/system.exception">Exception</a>.)</span></span></td>
+</tr>
+</tbody>
+</table>
+
+
+<span data-ttu-id="a9be3-175">Oben</span><span class="sxs-lookup"><span data-stu-id="a9be3-175">Top</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="a9be3-176">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="a9be3-176">See also</span></span>
+
+#### <a name="reference"></a><span data-ttu-id="a9be3-177">Referenz</span><span class="sxs-lookup"><span data-stu-id="a9be3-177">Reference</span></span>
+
+[<span data-ttu-id="a9be3-178">Esentbufferdeosmallexception-Klasse</span><span class="sxs-lookup"><span data-stu-id="a9be3-178">EsentBufferTooSmallException class</span></span>](./esentbuffertoosmallexception-class.md)
+
+[<span data-ttu-id="a9be3-179">Microsoft. ISAM. ESENT. Interop-Namespace</span><span class="sxs-lookup"><span data-stu-id="a9be3-179">Microsoft.Isam.Esent.Interop namespace</span></span>](./microsoft.isam.esent.interop-namespace.md)
