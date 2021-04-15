@@ -1,0 +1,31 @@
+---
+title: Prozessserialisierung
+description: Wenn Sie die Prozedur-Serialisierung verwenden, wird eine Prozedur mit dem Attribut \ codieren \ oder \ Decode \ bezeichnet. Anstatt den üblichen RemoteStub zu generieren, generiert der Compiler einen serialisierungsstub für die Routine.
+ms.assetid: 98367b00-696b-44c4-a747-92ecac34ba1e
+ms.topic: article
+ms.date: 05/31/2018
+ms.openlocfilehash: 77696761a9aa5fe1471e9ebf24a57303b15d0ff3
+ms.sourcegitcommit: de72a1294df274b0a71dc0fdc42d757e5f6df0f3
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "104393877"
+---
+# <a name="procedure-serialization"></a><span data-ttu-id="6d6aa-104">Prozessserialisierung</span><span class="sxs-lookup"><span data-stu-id="6d6aa-104">Procedure Serialization</span></span>
+
+<span data-ttu-id="6d6aa-105">Wenn Sie die Prozedur-Serialisierung verwenden, wird eine Prozedur mit dem \[ Attribut [**Codieren**](/windows/desktop/Midl/encode) \] oder \[ [**decodieren**](/windows/desktop/Midl/decode) bezeichnet \] .</span><span class="sxs-lookup"><span data-stu-id="6d6aa-105">When you use procedure serialization, a procedure is labeled with the \[[**encode**](/windows/desktop/Midl/encode)\] or \[[**decode**](/windows/desktop/Midl/decode)\] attribute.</span></span> <span data-ttu-id="6d6aa-106">Anstatt den üblichen RemoteStub zu generieren, generiert der Compiler einen serialisierungsstub für die Routine.</span><span class="sxs-lookup"><span data-stu-id="6d6aa-106">Instead of generating the usual remote stub, the compiler generates a serialization stub for the routine.</span></span>
+
+<span data-ttu-id="6d6aa-107">Ebenso wie eine Remote Prozedur ein Bindungs Handle für einen Remote-Befehl verwenden muss, muss bei einer Serialisierungsprozedur ein serialisierungshandle verwendet werden, um Serialisierungsdienste zu verwenden.</span><span class="sxs-lookup"><span data-stu-id="6d6aa-107">Just as a remote procedure must use a binding handle to make a remote call, a serialization procedure must use a serialization handle to use serialization services.</span></span> <span data-ttu-id="6d6aa-108">Wenn kein serialisierungshandle angegeben ist, wird ein implizites implizites Handle zum Weiterleiten des Aufrufes verwendet.</span><span class="sxs-lookup"><span data-stu-id="6d6aa-108">If a serialization handle is not specified, a default implicit handle is used to direct the call.</span></span> <span data-ttu-id="6d6aa-109">Wenn das serialisierungshandle hingegen entweder als explizites [**handle \_ t**](/windows/desktop/Midl/handle-t) -Argument der Routine oder mithilfe des \[ [**expliziten \_ handle**](/windows/desktop/Midl/explicit-handle) - \] Attributs angegeben wird, müssen Sie ein gültiges Handle als Argument des Aufrufes übergeben.</span><span class="sxs-lookup"><span data-stu-id="6d6aa-109">On the other hand, if the serialization handle is specified, either as an explicit [**handle\_t**](/windows/desktop/Midl/handle-t) argument of the routine or by using the \[[**explicit\_handle**](/windows/desktop/Midl/explicit-handle)\] attribute, you must pass a valid handle as an argument of the call.</span></span> <span data-ttu-id="6d6aa-110">Weitere Informationen zum Erstellen eines gültigen serialisierungshandles finden Sie unter [serialisierungshandles](serialization-handles.md), [Beispiele für die festgelegte Puffer Codierung](fixed-buffer-serialization.md)und [Beispiele für die inkrementelle Codierung](examples-of-incremental-encoding.md).</span><span class="sxs-lookup"><span data-stu-id="6d6aa-110">For additional information on how to create a valid serialization handle, see [Serialization Handles](serialization-handles.md), [Examples of Fixed Buffer Encoding](fixed-buffer-serialization.md), and [Examples of Incremental Encoding](examples-of-incremental-encoding.md).</span></span>
+
+> [!Note]
+> <span data-ttu-id="6d6aa-111">Mit Microsoft RPC können Remote-und serialisierungsprozeduren in einer einzigen Schnittstelle gemischt werden.</span><span class="sxs-lookup"><span data-stu-id="6d6aa-111">Microsoft RPC allows remote and serialization procedures to be mixed in one interface.</span></span> <span data-ttu-id="6d6aa-112">Verwenden Sie hierfür jedoch Vorsicht.</span><span class="sxs-lookup"><span data-stu-id="6d6aa-112">However, use caution when doing so.</span></span>
+> 
+> <span data-ttu-id="6d6aa-113">Für Remote Prozeduren mit impliziten Bindungs Handles generiert der-compilercompiler eine globale handle-Variable vom Typ [**handle \_ t**](/windows/desktop/Midl/handle-t).</span><span class="sxs-lookup"><span data-stu-id="6d6aa-113">For remote procedures with implicit binding handles, the MIDL compiler generates a global handle variable of type [**handle\_t**](/windows/desktop/Midl/handle-t).</span></span> <span data-ttu-id="6d6aa-114">Prozeduren und Typen mit impliziten serialisierungshandles verwenden dieselbe globale handle-Variable.</span><span class="sxs-lookup"><span data-stu-id="6d6aa-114">Procedures and types with implicit serialization handles use this same global handle variable.</span></span>
+> 
+> <span data-ttu-id="6d6aa-115">Bei impliziten Handles muss das globale implizite handle vor einem Remote-Befehl auf ein gültiges Bindungs handle festgelegt werden.</span><span class="sxs-lookup"><span data-stu-id="6d6aa-115">For implicit handles, the global implicit handle must be set to a valid binding handle before a remote call.</span></span> <span data-ttu-id="6d6aa-116">Das implizite Handle muss vor einem serialisierungsbefehl auf ein gültiges serialisierungshandle festgelegt werden.</span><span class="sxs-lookup"><span data-stu-id="6d6aa-116">The implicit handle must be set to a valid serialization handle before a serialization call.</span></span> <span data-ttu-id="6d6aa-117">Daher kann eine Prozedur nicht sowohl Remote als auch serialisiert werden.</span><span class="sxs-lookup"><span data-stu-id="6d6aa-117">Therefore, a procedure cannot be both remote and serialized.</span></span> <span data-ttu-id="6d6aa-118">Der Wert muss ein oder der andere sein.</span><span class="sxs-lookup"><span data-stu-id="6d6aa-118">It must be one or the other.</span></span>
+
+ 
+
+ 
+
+ 
