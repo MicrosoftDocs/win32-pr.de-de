@@ -1,0 +1,27 @@
+---
+description: Empfangen einer Antwort
+ms.assetid: 48919608-a102-43e2-9ca0-80b17344b5eb
+title: Empfangen einer Antwort
+ms.topic: article
+ms.date: 05/31/2018
+ms.openlocfilehash: 9e9e05ec392b7db828ad1efd1360c4d4fb232210
+ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "104524179"
+---
+# <a name="receiving-a-response"></a><span data-ttu-id="ebc73-103">Empfangen einer Antwort</span><span class="sxs-lookup"><span data-stu-id="ebc73-103">Receiving a Response</span></span>
+
+<span data-ttu-id="ebc73-104">Da Komponenten in der Warteschlange für die asynchrone Verwendung entworfen wurden, sollten Client Anwendungen nicht blockieren, während Sie auf eine Antwort von einer Anforderung in der Warteschlange warten.</span><span class="sxs-lookup"><span data-stu-id="ebc73-104">Because queued components are designed to work asynchronously, client applications should not block while waiting for a response from a queued request.</span></span> <span data-ttu-id="ebc73-105">Dennoch ist es oft nützlich, wenn die Client Anwendung oder eine verwandte Anwendung auf dem Client Computer eine Antwort erhalten.</span><span class="sxs-lookup"><span data-stu-id="ebc73-105">Nevertheless, it is often useful for the client application or a related application on the client machine to receive a response eventually.</span></span> <span data-ttu-id="ebc73-106">Beispielsweise kann ein Client benachrichtigt werden, wenn eine angeforderte Transaktion erfolgreich abgeschlossen wurde.</span><span class="sxs-lookup"><span data-stu-id="ebc73-106">For example, a client may want to be notified when a requested transaction has been completed successfully.</span></span>
+
+<span data-ttu-id="ebc73-107">Es gibt verschiedene Möglichkeiten für eine in der Warteschlange befindliche Komponente, eine Antwort asynchron an den Aufrufer zurückzusenden.</span><span class="sxs-lookup"><span data-stu-id="ebc73-107">There are a variety of ways for a queued component to send a response back to its caller asynchronously.</span></span> <span data-ttu-id="ebc73-108">Beispielsweise könnte eine e-Mail gesendet werden.</span><span class="sxs-lookup"><span data-stu-id="ebc73-108">For example, it could send an email.</span></span> <span data-ttu-id="ebc73-109">Alternativ könnte der Server lose gekoppelte Ereignisse veröffentlichen, die der Client abonnieren könnte.</span><span class="sxs-lookup"><span data-stu-id="ebc73-109">Alternatively, the server could publish loosely coupled events to which the client could subscribe.</span></span>
+
+<span data-ttu-id="ebc73-110">Eine andere Möglichkeit für einen Client, eine Antwort von einer in der Warteschlange befindlichen Komponente zu erhalten, die auf einem Server ausgeführt wird, besteht darin, dass der Client die aufgerufene Methode als Benachrichtigungs Objekt übergibt.</span><span class="sxs-lookup"><span data-stu-id="ebc73-110">Another way for a client to obtain a response from a queued component that runs on a server is for the client to pass the called method a notification object.</span></span> <span data-ttu-id="ebc73-111">Ein Benachrichtigungs Objekt ist eine Instanz einer in der Warteschlange befindlichen Komponente, die auf dem Client ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="ebc73-111">A notification object is an instance of a queued component that runs on the client.</span></span> <span data-ttu-id="ebc73-112">Ein solches Benachrichtigungs Objekt ist möglicherweise sehr einfach und enthält nur eine Ganzzahl, die zur Darstellung eines Fehler Werts verwendet wird, oder es ist recht komplex und enthält alle Informationen, die erforderlich sind, um ein Rollback für eine Transaktion auf dem Client auszuführen.</span><span class="sxs-lookup"><span data-stu-id="ebc73-112">Such a notification object might be quite simple, containing only an integer that is used to represent an error value, or it might be quite complex, containing all the information necessary to roll back a transaction on the client.</span></span> <span data-ttu-id="ebc73-113">In beiden Fällen übergibt der aufrufende Client ein Benachrichtigungs Objekt als Eingabeparameter, wenn er eine Antwort von einer in der Warteschlange befindlichen Komponente wünscht, die auf einem Server ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="ebc73-113">In either case, the calling client passes a notification object as an input parameter whenever it desires a response from a queued component that runs on a server.</span></span> <span data-ttu-id="ebc73-114">Da das Benachrichtigungs Objekt in die Warteschlange eingereiht wird, kann der Server auf seine Methoden aufzurufen, um seinen Zustand zu ändern, der anschließend vom Client gelesen werden kann.</span><span class="sxs-lookup"><span data-stu-id="ebc73-114">Because the notification object is queued, the server can call on its methods to alter its state, which can subsequently be read out by the client.</span></span> <span data-ttu-id="ebc73-115">In diesem Szenario wird der in der Warteschlange befindliche com+-Komponenten Dienst sowohl auf dem Client als auch auf dem Server verwendet, um die asynchrone Kommunikation in beide Richtungen zuzulassen.</span><span class="sxs-lookup"><span data-stu-id="ebc73-115">In this scenario, the COM+ queued components service is used on both the client and the server to allow asynchronous communication in both directions.</span></span>
+
+ 
+
+ 
+
+
+
