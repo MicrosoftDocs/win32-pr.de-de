@@ -1,0 +1,38 @@
+---
+title: Verhindern der Abmeldung oder aussetzen während eines Burn-Vorgangs
+description: Wenn in einer Anwendung keine angemessenen Vorsichtsmaßnahmen getroffen werden, kann sich ein Benutzer während eines Verbrennungs Vorgangs abmelden. Dies führt zu einer Unterbrechung des Brennvorgangs, was zu Datenverlusten führen und die Diskette möglicherweise unbrauchbar machen kann.
+ms.assetid: 5223c9f6-30f6-43ce-b46c-267da0a53d4b
+ms.topic: article
+ms.date: 05/31/2018
+ms.openlocfilehash: 5922fbe6dbc27303cee82e7ed745cbaaf2744781
+ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "104472876"
+---
+# <a name="preventing-logoff-or-suspend-during-a-burn"></a><span data-ttu-id="bb96d-104">Verhindern der Abmeldung oder aussetzen während eines Burn-Vorgangs</span><span class="sxs-lookup"><span data-stu-id="bb96d-104">Preventing Logoff or Suspend During a Burn</span></span>
+
+<span data-ttu-id="bb96d-105">Wenn in einer Anwendung keine angemessenen Vorsichtsmaßnahmen getroffen werden, kann sich ein Benutzer während eines Verbrennungs Vorgangs abmelden.</span><span class="sxs-lookup"><span data-stu-id="bb96d-105">If proper precautions are not made within an application, it is possible for a user to log off during a burn operation.</span></span> <span data-ttu-id="bb96d-106">Dies führt zu einer Unterbrechung des Brennvorgangs, was zu Datenverlusten führen und die Diskette möglicherweise unbrauchbar machen kann.</span><span class="sxs-lookup"><span data-stu-id="bb96d-106">This leads to the interruption of the burn process, which can result in lost data and possibly render the disc unusable.</span></span>
+
+<span data-ttu-id="bb96d-107">Um dieses Problem zu vermeiden, sollte die Anwendung die " [**WM \_ queryendsession**](/windows/desktop/Shutdown/wm-queryendsession) "-Nachricht verarbeiten, die vor der Abmeldung zugestellt wird.</span><span class="sxs-lookup"><span data-stu-id="bb96d-107">To avoid this problem, the application should process the [**WM\_QUERYENDSESSION**](/windows/desktop/Shutdown/wm-queryendsession) message which is delivered prior to log off.</span></span> <span data-ttu-id="bb96d-108">Wenn die Anwendung diese Nachricht beim Ausführen eines Verbrennungs Vorgangs empfängt, geben Sie **false** zurück, um die Abmelde Prozedur abzubrechen.</span><span class="sxs-lookup"><span data-stu-id="bb96d-108">If the application receives this message while performing a burn operation, return **FALSE** to cancel the logoff procedure.</span></span> <span data-ttu-id="bb96d-109">Wenn die Anwendung es dem Benutzer ermöglicht, sich zu entscheiden, ob die Anmeldung fortgesetzt werden soll, sollte eine Warnung angezeigt werden, die besagt, dass der Benutzerdaten verliert.</span><span class="sxs-lookup"><span data-stu-id="bb96d-109">If the application allows the user to decide whether to continue logging off, a warning should be provided indicating that user will lose data.</span></span>
+
+<span data-ttu-id="bb96d-110">Durch Strom Übergänge während des Brennvorgangs können auch potenzielle Probleme beim Erfolg einer Verbrennungs Aktivität entstehen.</span><span class="sxs-lookup"><span data-stu-id="bb96d-110">Power transitions during the burn process can also create potential problems in the success of a burn activity.</span></span> <span data-ttu-id="bb96d-111">Um diese Komplikationen während des Verbrennungs Vorgangs zu verhindern, muss eine Anwendung wissen, wann die Strom Übergänge stattfinden.</span><span class="sxs-lookup"><span data-stu-id="bb96d-111">Preventing these complications during the burn process requires an application to be aware of when power transitions are about to take place.</span></span> <span data-ttu-id="bb96d-112">Dies wird durch ermöglicht, dass die Anwendung die WM- [**\_ powerbroadcast**](/windows/desktop/Power/wm-powerbroadcast) -Nachricht verarbeiten kann.</span><span class="sxs-lookup"><span data-stu-id="bb96d-112">This is accomplished by by enabling the application to process the [**WM\_POWERBROADCAST**](/windows/desktop/Power/wm-powerbroadcast) message.</span></span> <span data-ttu-id="bb96d-113">Anwendungen, die für Windows XP oder Windows Server 2003 entwickelt wurden, können als Reaktion auf [**PBT \_ apmquerysuspend**](/windows/desktop/Power/pbt-apmquerysuspend) **Broadcast- \_ Abfrage \_ ablehnen** zurückgeben und verhindern, dass während des Brennvorgangs angehalten wird.</span><span class="sxs-lookup"><span data-stu-id="bb96d-113">Applications developed for Windows XP or Windows Server 2003 can return **BROADCAST\_QUERY\_DENY** in response to [**PBT\_APMQUERYSUSPEND**](/windows/desktop/Power/pbt-apmquerysuspend), preventing Suspend during the burn process.</span></span>
+
+<span data-ttu-id="bb96d-114">Aufgrund von Änderungen im Energie Verwaltungsmodell für Windows Vista und Windows Server 2008 wird das [**PBT \_ apmquerysuspend**](/windows/desktop/Power/pbt-apmquerysuspend) -Ereignis nicht mehr an Anwendungen übermittelt.</span><span class="sxs-lookup"><span data-stu-id="bb96d-114">Due to changes in the Power Management Model for Windows Vista and Windows Server 2008, the [**PBT\_APMQUERYSUSPEND**](/windows/desktop/Power/pbt-apmquerysuspend) event is no longer delivered to applications.</span></span> <span data-ttu-id="bb96d-115">Stattdessen wird das [**PBT \_ apmsuspend**](/windows/desktop/Power/pbt-apmsuspend) -Ereignis zugestellt, das zwei Sekunden für eine Anwendung zur Vorbereitung des Übergangs bereitstellt.</span><span class="sxs-lookup"><span data-stu-id="bb96d-115">Instead the [**PBT\_APMSUSPEND**](/windows/desktop/Power/pbt-apmsuspend) event is delivered, providing two seconds for an application to prepare for the transition.</span></span>
+
+<span data-ttu-id="bb96d-116">Aufgrund dieser Änderungen wird empfohlen, dass Anwendungen die [**SetThreadExecutionState**](/windows/desktop/api/winbase/nf-winbase-setthreadexecutionstate) -Funktion aufrufen, um zu verhindern, dass ein Timeout für das System im Leerlauf ist, was normalerweise zu einem Übergang zum aussetzen führt.</span><span class="sxs-lookup"><span data-stu-id="bb96d-116">As a result of these changes, it is recommended that applications call the [**SetThreadExecutionState**](/windows/desktop/api/winbase/nf-winbase-setthreadexecutionstate) function to prevent a system idle time-out which ordinarily results in the transition to Suspend.</span></span> <span data-ttu-id="bb96d-117">Beachten Sie, dass das Aufrufen dieser Funktion mit den entsprechenden Flags nur das System im Leerlauf und keinen laufenden Anhaltevorgang verhindert.</span><span class="sxs-lookup"><span data-stu-id="bb96d-117">It is important to remember that calling this function with the appropriate flags set will only prevent system idle, not an in-progress Suspend.</span></span>
+
+## <a name="related-topics"></a><span data-ttu-id="bb96d-118">Zugehörige Themen</span><span class="sxs-lookup"><span data-stu-id="bb96d-118">Related topics</span></span>
+
+<dl> <dt>
+
+[<span data-ttu-id="bb96d-119">Verwenden von IMAPI</span><span class="sxs-lookup"><span data-stu-id="bb96d-119">Using IMAPI</span></span>](using-imapi.md)
+</dt> <dt>
+
+[<span data-ttu-id="bb96d-120">**SetThreadExecutionState**</span><span class="sxs-lookup"><span data-stu-id="bb96d-120">**SetThreadExecutionState**</span></span>](/windows/desktop/api/winbase/nf-winbase-setthreadexecutionstate)
+</dt> </dl>
+
+ 
+
+ 
