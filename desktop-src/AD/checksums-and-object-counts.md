@@ -1,0 +1,34 @@
+---
+title: Prüfsummen und Objekt Anzahl
+description: Prüfsummen und Objekt Anzahlen sind Erkennungs Strategien, die es einer Anwendung ermöglichen, einen teilweisen Update Status zu erkennen.
+ms.assetid: 14829a74-c186-4250-beac-036c5ecc5913
+ms.tgt_platform: multiple
+ms.topic: article
+ms.date: 05/31/2018
+ms.openlocfilehash: bc643ec7cd896a7c73df0be5738887a330392140
+ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 09/16/2019
+ms.locfileid: "104470756"
+---
+# <a name="checksums-and-object-counts"></a><span data-ttu-id="e7780-103">Prüfsummen und Objekt Anzahl</span><span class="sxs-lookup"><span data-stu-id="e7780-103">Checksums and Object Counts</span></span>
+
+<span data-ttu-id="e7780-104">Prüfsummen und Objekt Anzahlen sind Erkennungs Strategien, die es einer Anwendung ermöglichen, einen teilweisen Update Status zu erkennen.</span><span class="sxs-lookup"><span data-stu-id="e7780-104">Checksums and object counts are detection strategies that allow an application to detect a partial update state.</span></span> <span data-ttu-id="e7780-105">Prüfsummen können auch zum Erkennen von Inkonsistenzen verwendet werden, die durch die Konfliktlösung</span><span class="sxs-lookup"><span data-stu-id="e7780-105">Checksums can also be used to detect inconsistencies introduced by collision resolution.</span></span> <span data-ttu-id="e7780-106">Sowohl Prüfsummen als auch Objekt Zählungen erfordern einen Speicherort zum Speichern des Werts, der zum Überprüfen einer Prüfsumme oder Objekt Anzahl verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="e7780-106">Both checksums and object counts require a place to store the value used for verifying a checksum or object count.</span></span> <span data-ttu-id="e7780-107">Dies kann sich auf einem "Master"-Objekt befinden, das für die anwendungsspezifische Beziehung oder für ein übergeordnetes Objekt ausgewählt ist, unter dem die verknüpften Objekte gespeichert werden.</span><span class="sxs-lookup"><span data-stu-id="e7780-107">This can be on a "master" object chosen from among those involved in the application-specific relationship or on a parent object under which the related objects are stored.</span></span>
+
+<span data-ttu-id="e7780-108">Für Prüfsummen überprüfen Anwendungen, die die verknüpften Objekte lesen, die Prüfsumme, indem Sie ein lokales Ergebnis berechnen und mit dem gespeicherten Wert vergleichen.</span><span class="sxs-lookup"><span data-stu-id="e7780-108">For checksums, applications reading the related objects verify the checksum by calculating a local result and comparing it with the stored value.</span></span> <span data-ttu-id="e7780-109">Wenn die Werte nicht identisch sind, befindet sich das Replikat in einem teilweisen Update Status, und die Objekte können nicht verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="e7780-109">If the values do not match, the replica is in a partial update state and the objects cannot be used.</span></span>
+
+<span data-ttu-id="e7780-110">Bei der Objekt Anzahl zählen Anwendungen zum zählen der verknüpften Objekte (in der Regel untergeordnete Elemente eines einzelnen übergeordneten Elements) und vergleichen die Anzahl mit dem gespeicherten Wert.</span><span class="sxs-lookup"><span data-stu-id="e7780-110">For object counts, applications count the related objects (typically children of a single parent) and compare the count with the stored value.</span></span> <span data-ttu-id="e7780-111">Wenn die Anzahl nicht stimmt, befindet sich das Replikat in einem teilweisen Update Status, und die Objekte können nicht verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="e7780-111">If the counts do not match, the replica is in a partial update state and the objects cannot be used.</span></span>
+
+<span data-ttu-id="e7780-112">Wichtige Hinweise:</span><span class="sxs-lookup"><span data-stu-id="e7780-112">Some important considerations:</span></span>
+
+-   <span data-ttu-id="e7780-113">Damit der Prüfsummen Ansatz funktioniert, muss mindestens ein Attribut, das zum Berechnen der Prüfsumme verwendet wird, aktualisiert werden.</span><span class="sxs-lookup"><span data-stu-id="e7780-113">For the checksum approach to work, the one or more attributes used in computing the checksum must be updated.</span></span> <span data-ttu-id="e7780-114">Der Algorithmus, der zum Berechnen der Prüfsumme verwendet wird, muss die Unterschiede in der Eingabe zuverlässig widerspiegeln.</span><span class="sxs-lookup"><span data-stu-id="e7780-114">The algorithm used to compute the checksum must reliably reflect differences in input.</span></span> <span data-ttu-id="e7780-115">Wenn viele verschiedene Eingaben die gleiche Prüfsumme haben, erkennt der Algorithmus teilweise Updates nicht zuverlässig.</span><span class="sxs-lookup"><span data-stu-id="e7780-115">If many different inputs product the same checksum, the algorithm will not reliably detect partial updates.</span></span> <span data-ttu-id="e7780-116">Die Eingabe mit Werten wie der **objectGUID** des Quell Computers und dem Datum und der Uhrzeit des Updates sind ebenfalls hilfreich.</span><span class="sxs-lookup"><span data-stu-id="e7780-116">"Salting" the input with values like the **objectGUID** of the source computer and the date and time of the update is also helpful.</span></span>
+-   <span data-ttu-id="e7780-117">Objekt Zähler funktionieren am besten, wenn Sie mit neuen Objekt Sätzen oder in Kombination mit Konsistenz-GUIDs verwendet werden (Weitere Informationen finden Sie im nächsten Abschnitt).</span><span class="sxs-lookup"><span data-stu-id="e7780-117">Object counts work best when used with new sets of objects, or in combination with consistency GUIDs (see the next section for more information).</span></span> <span data-ttu-id="e7780-118">Die Anwendung, die das Update durchführt, muss entweder die Anzahl der Objekte, die sich im Container befinden, wenn das Update abgeschlossen ist, oder eine andere Methode zum Kennzeichnen des Containers beim Fortsetzen des Updates verwenden (z. b. wenn die Anzahl auf NULL festgelegt wird).</span><span class="sxs-lookup"><span data-stu-id="e7780-118">The application performing the update must either know, in advance, the number of objects that will be in the container when the update is completed or use some other means of marking the container invalid while the update proceeds (for example, setting the count to zero).</span></span> <span data-ttu-id="e7780-119">Nachdem Sie das Update abgeschlossen haben, markiert die Quell Anwendung den Container mit der Anzahl der enthaltenen Objekte.</span><span class="sxs-lookup"><span data-stu-id="e7780-119">After completing the update the source application marks the container with the count of objects contained.</span></span>
+
+ 
+
+ 
+
+
+
+
