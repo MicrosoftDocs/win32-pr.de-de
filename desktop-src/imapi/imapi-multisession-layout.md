@@ -1,0 +1,86 @@
+---
+title: Layout von IMAPI-Multisession
+description: IMAPI bietet Anwendungsentwicklern die Möglichkeit, ISO 9660-und UDF-Dateisystem Images zu erstellen und Sie auf CD, DVD und Blu-Ray \ 8482; zu brennen. optische Medien.
+ms.assetid: 691fdc3a-e762-4d6d-9980-e2d9227100a5
+ms.topic: article
+ms.date: 05/31/2018
+ms.openlocfilehash: 2581672fac78d23a0d2f4e2bc36ee4227adbca1d
+ms.sourcegitcommit: af9983bab40fe0b042f177ce7ca79f2eb0f9d0e8
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "104556844"
+---
+# <a name="imapi-multisession-layout"></a><span data-ttu-id="5fa63-103">Layout von IMAPI-Multisession</span><span class="sxs-lookup"><span data-stu-id="5fa63-103">IMAPI Multisession Layout</span></span>
+
+<span data-ttu-id="5fa63-104">IMAPI bietet Anwendungsentwicklern die Möglichkeit, ISO 9660-und UDF-Dateisystem Images zu erstellen und Sie auf CD-, DVD-und Blu-Ray-™ optischen Medien zu brennen.</span><span class="sxs-lookup"><span data-stu-id="5fa63-104">IMAPI provides application developers with the ability to create ISO 9660 and UDF file system images and burn them onto CD, DVD and Blu-Ray™ optical media.</span></span> <span data-ttu-id="5fa63-105">Mit Windows 7 bietet IMAPI zusätzliche Unterstützung für das Brennen von mehreren Sitzungen auf DVD-und Blu-Ray-™ erneut beschreibbare Medien.</span><span class="sxs-lookup"><span data-stu-id="5fa63-105">With Windows 7, IMAPI provides additional support for multisession burning on DVD and Blu-Ray™ rewritable media.</span></span>
+
+<span data-ttu-id="5fa63-106">In der folgenden Dokumentation wird das Festplattenlayout erläutert, das von IMAPI zum Implementieren von mehreren Sitzungen verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="5fa63-106">The following documentation details the disc layout that IMAPI utilizes to implement multisession.</span></span> <span data-ttu-id="5fa63-107">Diese Informationen sollten verwendet werden, um die Interoperabilität zwischen IMAPI und anderer brennender Software zu gewährleisten und Entwicklern dieser Software das Erstellen von IMAPI-kompatiblen Festplatten Abbildern mit mehreren Sitzungen zu ermöglichen.</span><span class="sxs-lookup"><span data-stu-id="5fa63-107">This information should be used to ensure interoperability between IMAPI and other burning software as well as allow the developers of this software to create IMAPI-compatible multisession disc images.</span></span>
+
+> [!Note]  
+> <span data-ttu-id="5fa63-108">Ein Beispiel für die Erstellung einer mehr sitzenden CD finden Sie unter [Erstellen eines mehrteiligen](creating-a-multisession-disc.md)Festplatten Datenträgers.</span><span class="sxs-lookup"><span data-stu-id="5fa63-108">For an example detailing the creation of a multisession disc, see [Creating a Multisession Disc](creating-a-multisession-disc.md).</span></span>
+
+ 
+
+## <a name="multisession-on-sequential-media"></a><span data-ttu-id="5fa63-109">Multisession auf sequenziellen Medien</span><span class="sxs-lookup"><span data-stu-id="5fa63-109">Multisession on Sequential Media</span></span>
+
+<span data-ttu-id="5fa63-110">Die IMAPI-Implementierung von Multisession auf sequenziellen Medien wird für die Verwendung mit CD-r, CD-RW, DVD-r, DVD + R und Blu-Ray™ Medien unterstützt.</span><span class="sxs-lookup"><span data-stu-id="5fa63-110">The IMAPI implementation of multisession on sequential media is supported for use with CD-R, CD-RW, DVD-R, DVD+R and Blu-Ray™ media.</span></span> <span data-ttu-id="5fa63-111">IMAPI verwendet den Session-at-Once-Aufzeichnungsmodus für CD-RW. Folglich wird das Format in diesem Szenario als sequenzieller Medientyp betrachtet.</span><span class="sxs-lookup"><span data-stu-id="5fa63-111">IMAPI uses the Session-At-Once recording mode for CD-RW, and as a result, in this scenario, the format is considered a sequential media type.</span></span>
+
+<span data-ttu-id="5fa63-112">In einem Szenario, in dem mehrere Sitzungen auf sequenziellen Medien mithilfe der benutzerdefinierten Funktion verwendet werden, schreibt IMAPI die Anker Strukturen (UDF-Anker Volume Deskriptor Zeiger-avdp), volumestrukturen (UDF-volumedeskriptorsequenz-VDS) und die Dateisystem-Metadatenstrukturen (UDF-Datei Satz Deskriptor-FSD) zu Beginn jeder neuen</span><span class="sxs-lookup"><span data-stu-id="5fa63-112">In a scenario involving multisession on sequential media using UDF, IMAPI writes out the anchor structures (UDF Anchor Volume Descriptor Pointer - AVDP), volume structures (UDF Volume Descriptor Sequence - VDS) , and the file system metadata structures (UDF File Set Descriptor - FSD) at the start of every new session as outlined in the following diagram:</span></span>
+
+![Diagramm, das die Dateisystem-Metadatenstruktur mit dem ' Import/F S-Bereitstellungs Punkt ' anzeigt, wird mit einem roten Pfeil an der ' Anker ' der physischen Sitzung 2 angezeigt.](images/multises1.png)
+
+> [!Note]  
+> <span data-ttu-id="5fa63-114">In dieser Abbildung wird das IMAPI-Festplattenlayout bei Verwendung von UDF 2,50 mit redundanten Metadaten veranschaulicht.</span><span class="sxs-lookup"><span data-stu-id="5fa63-114">This figure illustrates the IMAPI disc layout when using UDF 2.50 with redundant metadata.</span></span>
+
+ 
+
+<span data-ttu-id="5fa63-115">Die auf sequenziell aufgezeichneten Medien gespeicherten Daten bestehen aus einer Reihe physischer Sitzungen.</span><span class="sxs-lookup"><span data-stu-id="5fa63-115">The data stored on sequentially recorded media consists of a number of physical sessions.</span></span> <span data-ttu-id="5fa63-116">Jede Sitzung enthält ein ganzes Dateisystem, das Benutzerdaten als eine Gruppe von Dateien darstellt, die in Verzeichnissen organisiert sind.</span><span class="sxs-lookup"><span data-stu-id="5fa63-116">Each session contains a complete file system representing user data as a set of files organized in directories.</span></span> <span data-ttu-id="5fa63-117">Die Metadaten des Dateisystems bestehen aus einer Reihe von hierarchisch organisierten Datenstrukturen.</span><span class="sxs-lookup"><span data-stu-id="5fa63-117">The file system metadata consists of a number of hierarchically organized data structures.</span></span> <span data-ttu-id="5fa63-118">Am Anfang der Hierarchie befinden sich Anker Strukturen (avdp), die sich unter vordefinierte logische Block Adressen (LBAs) befinden.</span><span class="sxs-lookup"><span data-stu-id="5fa63-118">At the top of the hierarchy reside anchor structures (AVDP) located at pre-defined Logical Block Addresses (LBAs).</span></span> <span data-ttu-id="5fa63-119">Die Anker Strukturen geben die Speicherorte der nächsten Ebenen Strukturen an, die nicht über vordefinierte Adressen verfügen.</span><span class="sxs-lookup"><span data-stu-id="5fa63-119">The anchor structures specify the locations of the next level structures which do not have predefined addresses.</span></span> <span data-ttu-id="5fa63-120">Die nächste Hierarchieebene nach Anker Strukturen enthält die volumestrukturen (VDS), die die Eigenschaften des Volumes beschreiben und auf die Dateisystem-Metadatenstrukturen (FSD) verweisen, die wiederum einzelne Dateien und Verzeichnisse beschreiben.</span><span class="sxs-lookup"><span data-stu-id="5fa63-120">The next level of hierarchy after anchor structures contains the volume structures (VDS) that describe the properties of the volume and referencing the file system metadata structures (FSD), which in turn describe individual files and directories.</span></span>
+
+## <a name="multisession-on-rewritable-media"></a><span data-ttu-id="5fa63-121">Mehrfach Sitzung auf neu beschreibbaren Medien</span><span class="sxs-lookup"><span data-stu-id="5fa63-121">Multisession on Rewritable Media</span></span>
+
+<span data-ttu-id="5fa63-122">Der Ansatz für sequenzielle Medien, die im vorherigen Abschnitt beschrieben wurden, ist nicht kompatibel mit dem wieder beschreibbaren (nicht sequenziellen) Medium.</span><span class="sxs-lookup"><span data-stu-id="5fa63-122">The approach for sequential media outlined in the previous section is incompatible with rewritable (non-sequential) media.</span></span> <span data-ttu-id="5fa63-123">Zu diesen Medienformaten zählen DVD-RW, DVD + RW, DVD-RAM, Blu-Ray™ reschreibbar und andere zufällige beschreibbare Medien, wie z. b. Iomega REV Disks.</span><span class="sxs-lookup"><span data-stu-id="5fa63-123">These media formats include DVD-RW, DVD+RW, DVD-RAM, Blu-Ray™ rewritable and other random writable media, such as Iomega REV disks.</span></span> <span data-ttu-id="5fa63-124">Ein erneut beschreibbares Medium unterstützt nicht das Konzept physischer Sitzungen, die logischen Sitzungen entsprechen, bei denen es sich um einzelne Inkremente handelt, die durch eine Mastering-Anwendung zugesichert werden.</span><span class="sxs-lookup"><span data-stu-id="5fa63-124">Rewritable media does not support the concept of physical sessions corresponding to logical sessions, which are individual increments committed by a mastering application.</span></span> <span data-ttu-id="5fa63-125">Es wird nur eine einzelne physische Sitzung verfügbar gemacht. dabei handelt es sich um einen Bereich, der am Anfang der Festplatte steht, der den gesamten adressierbaren Bereich darstellt, in dem mehrere logische Sitzungen enthalten sein können.</span><span class="sxs-lookup"><span data-stu-id="5fa63-125">Only a single physical session is exposed, which is an area starting at the beginning of the disc representing the entire addressable area that has the potential to contain multiple logical sessions.</span></span>
+
+> [!Note]  
+> <span data-ttu-id="5fa63-126">Obwohl es sich bei DVD-RW um eine Ausnahme handelt, da Sie das Konzept einer physischen Sitzung im sequenziellen Modus unterstützt, wird diese Funktion derzeit von IMAPI nicht unterstützt.</span><span class="sxs-lookup"><span data-stu-id="5fa63-126">While DVD-RW is an exception in that it supports the concept of a physical session in the Sequential mode, this capability is currently not supported by IMAPI.</span></span>
+
+ 
+
+<span data-ttu-id="5fa63-127">Um dem Mangel an einer eins-zu-Eins-Zuordnung zwischen physischen und logischen Sitzungen in neu beschreibbaren Formaten zu begegnen, aktualisiert IMAPI die Anker Strukturen (avdp) in der *ersten* logischen Sitzung selektiv, sodass Sie am Anfang der *letzten* logischen Sitzung auf die neuen volumestrukturen (VDS) und Dateisystem-Metadatenstrukturen (FSD) verweisen, wie im folgenden Diagramm dargestellt:</span><span class="sxs-lookup"><span data-stu-id="5fa63-127">To address the lack of one-to-one mapping between physical and logical sessions on rewritable formats, IMAPI selectively updates the anchor structures (AVDP) in the *first* logical session to point to the new volume structures (VDS) and file system metadata structures (FSD) at the beginning of the *last* logical session as outlined in the following diagram:</span></span>
+
+![Diagramm, das die Dateisystem-Metadatenstruktur mit dem ' Import/F S-Bereitstellungs Punkt ' anzeigt, wird mit einem roten Pfeil an der ' Anker ' der logischen Sitzung 1 angegeben.](images/multises2.png)
+
+> [!Note]  
+> <span data-ttu-id="5fa63-129">In dieser Abbildung wird das IMAPI-Festplattenlayout bei Verwendung von UDF 2,50 mit redundanten Metadaten veranschaulicht.</span><span class="sxs-lookup"><span data-stu-id="5fa63-129">This figure illustrates the IMAPI disc layout when using UDF 2.50 with redundant metadata.</span></span>
+
+ 
+
+<span data-ttu-id="5fa63-130">Beim Hinzufügen einer neuen logischen Sitzung zu einer wieder Schreib baren Diskette bestimmt IMAPI zuerst das Ende der letzten logischen Sitzung durch Analysieren der Volumemetadaten (VDS).</span><span class="sxs-lookup"><span data-stu-id="5fa63-130">When adding a new logical session to a rewritable disc, IMAPI first determines the end of the last logical session by analyzing the volume metadata (VDS).</span></span> <span data-ttu-id="5fa63-131">IMAPI fügt dann die neue logische Sitzung mit dem neuen Anker (avdp), dem Volume (VDS) und den Dateisystem-Metadatenstrukturen (FSD) hinzu, die physisch mit der zuvor aufgezeichneten logischen Sitzung zusammenhängend sind.</span><span class="sxs-lookup"><span data-stu-id="5fa63-131">IMAPI then adds the new logical session, complete with new anchor (AVDP), volume (VDS) and file system metadata structures (FSD), physically contiguous with the previously recorded logical session.</span></span> <span data-ttu-id="5fa63-132">Der letzte Schritt erfordert, dass die Anker Strukturen (avdp) am Anfang der ersten logischen Sitzung aktualisiert werden, um auf die volumestrukturen (VDS) in der *neuen* logischen Sitzung zu verweisen.</span><span class="sxs-lookup"><span data-stu-id="5fa63-132">The final step requires that the anchor structures (AVDP) at the beginning of the first logical session are updated to point to the volume structures (VDS) in the *new* logical session.</span></span> <span data-ttu-id="5fa63-133">Das operative Ergebnis ist mit dem sequenziellen Medium identisch.</span><span class="sxs-lookup"><span data-stu-id="5fa63-133">The operational result is the same as with sequential media.</span></span>
+
+## <a name="additional-recommendations"></a><span data-ttu-id="5fa63-134">Zusätzliche Empfehlungen</span><span class="sxs-lookup"><span data-stu-id="5fa63-134">Additional Recommendations</span></span>
+
+-   <span data-ttu-id="5fa63-135">**Partitions Layout**</span><span class="sxs-lookup"><span data-stu-id="5fa63-135">**Partition Layout**</span></span>
+
+    <span data-ttu-id="5fa63-136">Um IMAPI-Kompatibilität zu erzielen, wird empfohlen, dass Entwickler von Drittanbietern die in dieser Dokumentation beschriebenen Festplatten Layouts verwenden.</span><span class="sxs-lookup"><span data-stu-id="5fa63-136">To achieve IMAPI compatiblity, it is recommended that third-party burning software developers use the disc layouts outlined in this documentation.</span></span> <span data-ttu-id="5fa63-137">Entwickler sollten Layouts mit Dateisystem Partitionen vermeiden, die den gesamten Datenträger belegen, da dies das Aufzeichnen von Anwendungen erfordert, um den freien Speicherplatz in vorhandenen Partitionen zu ermitteln, wenn Daten an die Festplatte angefügt werden müssen. Oft erreichen die Aufzeichnungs Anwendungen dies, indem Sie proprietäre Marker auf der Festplatte verwenden, um anzugeben, wie viel Speicherplatz tatsächlich von Benutzerdaten belegt wird.</span><span class="sxs-lookup"><span data-stu-id="5fa63-137">Developers should avoid layouts with file system partitions occupying the entire disc, as this requires recording applications to locate free space within existing partitions whenever data needs to be appended to the disc. Oftentimes, the recording applications accomplish this by utilizing proprietary markers on the disc to indicate how much space is actually occupied by user data.</span></span> <span data-ttu-id="5fa63-138">Solche Festplatten Layouts sind mit IMAPI nicht kompatibel, da die proprietären Marker außerhalb der Anwendung, für die Sie erstellt wurden, nicht erkannt werden.</span><span class="sxs-lookup"><span data-stu-id="5fa63-138">Such disc layouts are incompatible with IMAPI as the proprietary markers are not recognized outside of the application they were created for.</span></span>
+
+-   <span data-ttu-id="5fa63-139">**UDF-Partitionstyp**</span><span class="sxs-lookup"><span data-stu-id="5fa63-139">**UDF Partition Type**</span></span>
+
+    <span data-ttu-id="5fa63-140">IMAPI verwendet den schreibgeschützten UDF-Partitionstyp **in der Implementierung** von Multisession auf neu beschreibbaren Medien.</span><span class="sxs-lookup"><span data-stu-id="5fa63-140">IMAPI uses the **Read-Only** UDF partition type in its implementation of multisession on rewritable media.</span></span> <span data-ttu-id="5fa63-141">Entwickler von Drittanbieter-Brennsoftware sollten den schreibgeschützten UDF-Partitionstyp verwenden, um Kompatibilität mit Windows **-vorschautem** brennen über IMAPI zu erzielen.</span><span class="sxs-lookup"><span data-stu-id="5fa63-141">Developers of third-party burning software should use the **Read-Only** UDF partition type to achieve compatiblity with Windows mastered burning via IMAPI.</span></span> <span data-ttu-id="5fa63-142">Wenn ein anderer UDF-Partitionstyp verwendet wird, z. b. " **Rewrite Table** ", kann IMAPI keine Unterstützung für die</span><span class="sxs-lookup"><span data-stu-id="5fa63-142">If another UDF partition type such as **Rewritable** is used, IMAPI cannot provide mastering support.</span></span>
+
+## <a name="related-topics"></a><span data-ttu-id="5fa63-143">Zugehörige Themen</span><span class="sxs-lookup"><span data-stu-id="5fa63-143">Related topics</span></span>
+
+<dl> <dt>
+
+[<span data-ttu-id="5fa63-144">Erstellen einer Multi-Session-CD</span><span class="sxs-lookup"><span data-stu-id="5fa63-144">Creating a Multisession Disc</span></span>](creating-a-multisession-disc.md)
+</dt> <dt>
+
+[<span data-ttu-id="5fa63-145">**Imultisessionrandomwrite**</span><span class="sxs-lookup"><span data-stu-id="5fa63-145">**IMultisessionRandomWrite**</span></span>](/windows/desktop/api/imapi2/nn-imapi2-imultisessionrandomwrite)
+</dt> </dl>
+
+ 
+
+ 
+
+
+
+
