@@ -1,0 +1,38 @@
+---
+description: 'Windows stellt Funktionen bereit, die die folgenden Aufgaben ausführen:'
+ms.assetid: 437419c7-d6c5-4cae-b5d0-d552c75d4448
+title: Objektschnittstelle
+ms.topic: article
+ms.date: 05/31/2018
+ms.openlocfilehash: 9adc85eafdcfe4bb573d3e156b20f9b74dbf0652
+ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "104485246"
+---
+# <a name="object-interface"></a><span data-ttu-id="50349-103">Objektschnittstelle</span><span class="sxs-lookup"><span data-stu-id="50349-103">Object Interface</span></span>
+
+<span data-ttu-id="50349-104">Windows stellt Funktionen bereit, die die folgenden Aufgaben ausführen:</span><span class="sxs-lookup"><span data-stu-id="50349-104">Windows provides functions that perform the following tasks:</span></span>
+
+-   <span data-ttu-id="50349-105">Erstellen eines Objekts</span><span class="sxs-lookup"><span data-stu-id="50349-105">Create an object</span></span>
+-   <span data-ttu-id="50349-106">Objekt Handle erhalten</span><span class="sxs-lookup"><span data-stu-id="50349-106">Get an object handle</span></span>
+-   <span data-ttu-id="50349-107">Informationen zum Objekt erhalten</span><span class="sxs-lookup"><span data-stu-id="50349-107">Get information about the object</span></span>
+-   <span data-ttu-id="50349-108">Legen Sie Informationen zum Objekt fest.</span><span class="sxs-lookup"><span data-stu-id="50349-108">Set information about the object</span></span>
+-   <span data-ttu-id="50349-109">Objekt Handle schließen</span><span class="sxs-lookup"><span data-stu-id="50349-109">Close the object handle</span></span>
+-   <span data-ttu-id="50349-110">Objekt zerstören</span><span class="sxs-lookup"><span data-stu-id="50349-110">Destroy the object</span></span>
+
+<span data-ttu-id="50349-111">Einige dieser Aufgaben sind für jedes Objekt nicht erforderlich.</span><span class="sxs-lookup"><span data-stu-id="50349-111">Some of these tasks are not necessary for each object.</span></span> <span data-ttu-id="50349-112">Einige dieser Aufgaben werden für bestimmte Objekte kombiniert.</span><span class="sxs-lookup"><span data-stu-id="50349-112">Some of these tasks are combined for certain objects.</span></span> <span data-ttu-id="50349-113">Beispielsweise kann eine Anwendung ein Ereignis Objekt erstellen.</span><span class="sxs-lookup"><span data-stu-id="50349-113">For example, an application can create an event object.</span></span> <span data-ttu-id="50349-114">Andere Anwendungen können das Ereignis öffnen, um ein eindeutiges Handle für dieses Ereignis Objekt zu erhalten.</span><span class="sxs-lookup"><span data-stu-id="50349-114">Other applications can open the event to obtain a unique handle to this event object.</span></span> <span data-ttu-id="50349-115">Wenn jede Anwendung mit dem-Ereignis abgeschlossen wird, schließt Sie das Handle für das-Objekt.</span><span class="sxs-lookup"><span data-stu-id="50349-115">As each application finishes using the event, it closes its handle to the object.</span></span> <span data-ttu-id="50349-116">Wenn keine verbleibenden geöffneten Handles für das Ereignis Objekt vorhanden sind, zerstört das System das Ereignis Objekt.</span><span class="sxs-lookup"><span data-stu-id="50349-116">When there are no remaining open handles to the event object, the system destroys the event object.</span></span> <span data-ttu-id="50349-117">Im Gegensatz dazu kann eine Anwendung ein Handle für ein vorhandenes Fenster Objekt abrufen.</span><span class="sxs-lookup"><span data-stu-id="50349-117">In contrast, an application can obtain a handle to an existing window object.</span></span> <span data-ttu-id="50349-118">Wenn das Window-Objekt nicht mehr benötigt wird, muss die Anwendung das-Objekt zerstören, wodurch das Fenster Handle ungültig wird.</span><span class="sxs-lookup"><span data-stu-id="50349-118">When the window object is no longer needed, the application must destroy the object, which invalidates the window handle.</span></span>
+
+<span data-ttu-id="50349-119">Gelegentlich bleibt ein Objekt im Speicher, nachdem alle Objekt Handles geschlossen wurden.</span><span class="sxs-lookup"><span data-stu-id="50349-119">Occasionally, an object remains in memory after all object handles have been closed.</span></span> <span data-ttu-id="50349-120">Ein Thread könnte z. b. ein Ereignis Objekt erstellen und auf das Ereignis Handle warten.</span><span class="sxs-lookup"><span data-stu-id="50349-120">For example, a thread could create an event object and wait on the event handle.</span></span> <span data-ttu-id="50349-121">Während der Thread wartet, könnte ein anderer Thread denselben Ereignis Objekt Handle schließen.</span><span class="sxs-lookup"><span data-stu-id="50349-121">While the thread is waiting, another thread could close the same event object handle.</span></span> <span data-ttu-id="50349-122">Das Ereignis Objekt verbleibt im Arbeitsspeicher, ohne dass Ereignis Objekt Handles vorhanden sind, bis das Ereignis Objekt auf den signalisierten Zustand festgelegt ist und der Warte Vorgang abgeschlossen ist.</span><span class="sxs-lookup"><span data-stu-id="50349-122">The event object remains in memory, without any event object handles, until the event object is set to the signaled state and the wait operation is completed.</span></span> <span data-ttu-id="50349-123">Zu diesem Zeitpunkt entfernt das System das Objekt aus dem Arbeitsspeicher.</span><span class="sxs-lookup"><span data-stu-id="50349-123">At this time, the system removes the object from memory.</span></span>
+
+<span data-ttu-id="50349-124">Handles und Objekte belegen Arbeitsspeicher.</span><span class="sxs-lookup"><span data-stu-id="50349-124">Handles and objects consume memory.</span></span> <span data-ttu-id="50349-125">Um die Systemleistung zu erhalten, sollten Sie daher Handles schließen und Objekte löschen, sobald Sie nicht mehr benötigt werden.</span><span class="sxs-lookup"><span data-stu-id="50349-125">Therefore, to preserve system performance, you should close handles and delete objects as soon as they are no longer needed.</span></span> <span data-ttu-id="50349-126">Wenn Sie dies nicht tun, kann die Systemleistung aufgrund einer übermäßigen Verwendung der Auslagerungs Datei durch die Anwendung beeinträchtigt werden.</span><span class="sxs-lookup"><span data-stu-id="50349-126">If you do not do this, your application can hurt system performance, due to excessive use of the paging file.</span></span>
+
+<span data-ttu-id="50349-127">Wenn ein Prozess beendet wird, schließt das System die Handles automatisch und löscht die vom Prozess erstellten Objekte.</span><span class="sxs-lookup"><span data-stu-id="50349-127">When a process terminates, the system automatically closes handles and deletes objects created by the process.</span></span> <span data-ttu-id="50349-128">Wenn jedoch ein Thread beendet wird, schließt das System in der Regel keine Handles oder löscht Objekte.</span><span class="sxs-lookup"><span data-stu-id="50349-128">However, when a thread terminates, the system usually does not close handles or delete objects.</span></span> <span data-ttu-id="50349-129">Die einzigen Ausnahmen sind Fenster, Hook, Fensterposition und DDE-Konversations Objekte (Dynamic Data Exchange). Diese Objekte werden zerstört, wenn der Erstellungsthread beendet wird.</span><span class="sxs-lookup"><span data-stu-id="50349-129">The only exceptions are window, hook, window position, and dynamic data exchange (DDE) conversation objects; these objects are destroyed when the creating thread terminates.</span></span>
+
+ 
+
+ 
+
+
+
