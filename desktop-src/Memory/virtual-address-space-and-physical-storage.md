@@ -1,0 +1,27 @@
+---
+description: Die von Microsoft Windows unterstützte maximale Menge an physischem Arbeitsspeicher liegt abhängig von der Windows-Version zwischen 2 GB und 2 TB.
+ms.assetid: 5e8fca7a-b85f-4bbd-80c1-e580a815fdce
+title: Virtueller Adressraum und physischer Speicher
+ms.topic: article
+ms.date: 05/31/2018
+ms.openlocfilehash: e7d36445eb2639cbfc4db2a6e4abaf28b9af87cb
+ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "104528889"
+---
+# <a name="virtual-address-space-and-physical-storage"></a><span data-ttu-id="6f807-103">Virtueller Adressraum und physischer Speicher</span><span class="sxs-lookup"><span data-stu-id="6f807-103">Virtual Address Space and Physical Storage</span></span>
+
+<span data-ttu-id="6f807-104">Die von Microsoft Windows unterstützte maximale Menge an physischem Arbeitsspeicher liegt abhängig von der Windows-Version zwischen 2 GB und 24 TB.</span><span class="sxs-lookup"><span data-stu-id="6f807-104">The maximum amount of physical memory supported by Microsoft Windows ranges from 2 GB to 24 TB, depending on the version of Windows.</span></span> <span data-ttu-id="6f807-105">Weitere Informationen finden Sie unter Arbeits [Speicher Grenzwerte für Windows-Releases](memory-limits-for-windows-releases.md).</span><span class="sxs-lookup"><span data-stu-id="6f807-105">For more information, see [Memory Limits for Windows Releases](memory-limits-for-windows-releases.md).</span></span> <span data-ttu-id="6f807-106">Der virtuelle Adressraum der einzelnen Prozesse kann kleiner oder größer als der auf dem Computer verfügbare physische Arbeitsspeicher sein.</span><span class="sxs-lookup"><span data-stu-id="6f807-106">The virtual address space of each process can be smaller or larger than the total physical memory available on the computer.</span></span> <span data-ttu-id="6f807-107">Die Teilmenge des virtuellen Adressraums eines Prozesses, der sich im physischen Arbeitsspeicher befindet, wird als *Workingset* bezeichnet.</span><span class="sxs-lookup"><span data-stu-id="6f807-107">The subset of the virtual address space of a process that resides in physical memory is known as the *working set*.</span></span> <span data-ttu-id="6f807-108">Wenn die Threads eines Prozesses versuchen, mehr physischen Speicher zu verwenden, als zurzeit verfügbar ist, wird ein Teil der Arbeitsspeicher Inhalte vom System auf den Datenträger über gestellt.</span><span class="sxs-lookup"><span data-stu-id="6f807-108">If the threads of a process attempt to use more physical memory than is currently available, the system pages some of the memory contents to disk.</span></span> <span data-ttu-id="6f807-109">Die Gesamtmenge des virtuellen Adressraums, der für einen Prozess verfügbar ist, wird durch den physischen Speicher und den verfügbaren freien Speicherplatz auf dem Datenträger für die Auslagerungs Datei beschränkt.</span><span class="sxs-lookup"><span data-stu-id="6f807-109">The total amount of virtual address space available to a process is limited by physical memory and the free space on disk available for the paging file.</span></span>
+
+<span data-ttu-id="6f807-110">Physischer Speicher und der virtuelle Adressraum der einzelnen Prozesse sind in *Seiten*, Arbeitsspeicher Einheiten, angeordnet, deren Größe vom Host Computer abhängig ist.</span><span class="sxs-lookup"><span data-stu-id="6f807-110">Physical storage and the virtual address space of each process are organized into *pages*, units of memory, whose size depends on the host computer.</span></span> <span data-ttu-id="6f807-111">Auf x86-Computern beträgt die Größe der Host Seite z. b. 4 Kilobyte.</span><span class="sxs-lookup"><span data-stu-id="6f807-111">For example, on x86 computers the host page size is 4 kilobytes.</span></span>
+
+<span data-ttu-id="6f807-112">Um die Flexibilität bei der Verwaltung des Arbeitsspeichers zu maximieren, kann das System physische Arbeitsspeicher Seiten in eine und aus einer Auslagerungs Datei auf dem Datenträger verschieben.</span><span class="sxs-lookup"><span data-stu-id="6f807-112">To maximize its flexibility in managing memory, the system can move pages of physical memory to and from a paging file on disk.</span></span> <span data-ttu-id="6f807-113">Wenn eine Seite in den physischen Speicher verschoben wird, aktualisiert das System die Seiten Zuordnungen der betroffenen Prozesse.</span><span class="sxs-lookup"><span data-stu-id="6f807-113">When a page is moved in physical memory, the system updates the page maps of the affected processes.</span></span> <span data-ttu-id="6f807-114">Wenn das Systemspeicher Platz im physischen Speicher benötigt, werden die zuletzt verwendeten Seiten des physischen Speichers in die Auslagerungs Datei verschoben.</span><span class="sxs-lookup"><span data-stu-id="6f807-114">When the system needs space in physical memory, it moves the least recently used pages of physical memory to the paging file.</span></span> <span data-ttu-id="6f807-115">Die Bearbeitung des physischen Speichers durch das System ist für Anwendungen, die nur in Ihren virtuellen Adressräumen funktionieren, vollständig transparent.</span><span class="sxs-lookup"><span data-stu-id="6f807-115">Manipulation of physical memory by the system is completely transparent to applications, which operate only in their virtual address spaces.</span></span>
+
+ 
+
+ 
+
+
+
