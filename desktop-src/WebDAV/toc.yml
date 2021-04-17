@@ -1,0 +1,49 @@
+- name: WebDAV
+  href: webdav-portal.md
+  items:
+    - name: WebDAV-API-Referenz
+      href: webdav-api-reference.md
+      items:
+        - name: WebDAV-API-Enumerationen
+          href: webdav-api-enumerations.md
+          items:
+            - name: Authnextstep
+              href: /windows/desktop/api/davclnt/ne-davclnt-authnextstep
+        - name: WebDAV-API-Funktionen
+          href: webdav-api-functions.md
+          items:
+            - name: Davaddconnection
+              href: /windows/desktop/api/davclnt/nf-davclnt-davaddconnection
+            - name: Pfndavauthcallback
+              href: /windows/desktop/api/Davclnt/nc-davclnt-pfndavauthcallback
+            - name: Davcancelconnectionstoserver
+              href: /windows/desktop/api/davclnt/nf-davclnt-davcancelconnectionstoserver
+            - name: Davdeleteconnection
+              href: /windows/desktop/api/davclnt/nf-davclnt-davdeleteconnection
+            - name: Davflushfile
+              href: /windows/desktop/api/davclnt/nf-davclnt-davflushfile
+            - name: PFNDAVAUTHCALLBACK_FREECRED
+              href: /windows/desktop/api/Davclnt/nc-davclnt-pfndavauthcallback_freecred
+            - name: Davgetextendecoderror
+              href: /windows/desktop/api/davclnt/nf-davclnt-davgetextendederror
+            - name: Davgethttpfromuncpath
+              href: /windows/desktop/api/davclnt/nf-davclnt-davgethttpfromuncpath
+            - name: Davgetthelockbesitzofder file
+              href: /windows/desktop/api/davclnt/nf-davclnt-davgetthelockownerofthefile
+            - name: Davgetuncfromhttppath
+              href: /windows/desktop/api/davclnt/nf-davclnt-davgetuncfromhttppath
+            - name: Davinvalidatecache
+              href: /windows/desktop/api/davclnt/nf-davclnt-davinvalidatecache
+            - name: Davregisterauthcallback
+              href: /windows/desktop/api/Davclnt/nf-davclnt-davregisterauthcallback
+            - name: Davunregisterauthcallback
+              href: /windows/desktop/api/Davclnt/nf-davclnt-davunregisterauthcallback
+        - name: WebDAV-API-Strukturen
+          href: webdav-api-structures.md
+          items:
+            - name: DAV_CALLBACK_AUTH_BLOB
+              href: /windows/win32/api/Davclnt/ns-davclnt-dav_callback_auth_blob
+            - name: DAV_CALLBACK_AUTH_UNP
+              href: /windows/win32/api/Davclnt/ns-davclnt-dav_callback_auth_unp
+            - name: DAV_CALLBACK_CRED
+              href: /windows/win32/api/Davclnt/ns-davclnt-dav_callback_cred
