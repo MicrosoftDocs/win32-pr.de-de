@@ -1517,7 +1517,7 @@
                   href: windowsvolume.md
             - name: Betriebs System-Eigenschaftswerte
               href: operating-system-property-values.md
-            - name: Registrierungsschlüssel deinstallieren
+            - name: Eigenschaften für den Registrierungsschlüssel "deinstallieren"
               href: uninstall-registry-key.md
         - name: Zusammenfassungs Informationsdaten Strom
           href: summary-information-stream.md
@@ -3411,7 +3411,7 @@
                           href: filename.md
                         - name: Platzhalter Dateiname
                           href: wildcardfilename.md
-                        - name: '`Path`'
+                        - name: Pfad
                           href: path.md
                         - name: Paths
                           href: paths.md
@@ -3441,7 +3441,7 @@
                           href: customsource.md
                         - name: KEs
                           href: cabinet.md
-                        - name: Verknüpfung
+                        - name: Abkürzung
                           href: shortcut.md
                     - name: _RowState Spalte
                       href: '-rowstate-column.md'
