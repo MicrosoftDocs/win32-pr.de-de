@@ -1,0 +1,57 @@
+---
+description: Listet die geometrischen 4D-Vektor Funktionen auf.
+ms.assetid: 40cf28ab-aa5a-396d-2f9e-2206651966af
+title: Directxmath-Bibliothek 4D-Vektor geometrische Funktionen
+ms.topic: reference
+ms.date: 05/31/2018
+ms.openlocfilehash: 36bc6ee08abe90ece0a0e0a02aa2a4c2fb549096
+ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "106347284"
+---
+# <a name="directxmath-library-4d-vector-geometric-functions"></a><span data-ttu-id="934b1-103">Directxmath-Bibliothek 4D-Vektor geometrische Funktionen</span><span class="sxs-lookup"><span data-stu-id="934b1-103">DirectXMath Library 4D vector geometric functions</span></span>
+
+<span data-ttu-id="934b1-104">Listet die geometrischen 4D-Vektor Funktionen auf.</span><span class="sxs-lookup"><span data-stu-id="934b1-104">Lists the 4D vector geometric functions.</span></span>
+
+## <a name="in-this-section"></a><span data-ttu-id="934b1-105">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="934b1-105">In this section</span></span>
+
+
+
+| <span data-ttu-id="934b1-106">Thema</span><span class="sxs-lookup"><span data-stu-id="934b1-106">Topic</span></span>                                                                                 | <span data-ttu-id="934b1-107">BESCHREIBUNG</span><span class="sxs-lookup"><span data-stu-id="934b1-107">Description</span></span>                                                                   |
+|---------------------------------------------------------------------------------------|-------------------------------------------------------------------------------|
+| [<span data-ttu-id="934b1-108">**XMVector4AngleBetweenNormals**</span><span class="sxs-lookup"><span data-stu-id="934b1-108">**XMVector4AngleBetweenNormals**</span></span>](/windows/win32/api/directxmath/nf-directxmath-xmvector4anglebetweennormals)<br/>       | <span data-ttu-id="934b1-109">Berechnen Sie den Bogenwinkel zwischen zwei normalisierten 4D-Vektoren.</span><span class="sxs-lookup"><span data-stu-id="934b1-109">Compute the radian angle between two normalized 4D vectors.</span></span><br/>        |
+| [<span data-ttu-id="934b1-110">**XMVector4AngleBetweenNormalsEst**</span><span class="sxs-lookup"><span data-stu-id="934b1-110">**XMVector4AngleBetweenNormalsEst**</span></span>](/windows/win32/api/directxmath/nf-directxmath-xmvector4anglebetweennormalsest)<br/> | <span data-ttu-id="934b1-111">Schätzt den Bogenwinkel zwischen zwei normalisierten 4D-Vektoren.</span><span class="sxs-lookup"><span data-stu-id="934b1-111">Estimates the radian angle between two normalized 4D vectors.</span></span><br/>      |
+| [<span data-ttu-id="934b1-112">**XMVector4AngleBetweenVectors**</span><span class="sxs-lookup"><span data-stu-id="934b1-112">**XMVector4AngleBetweenVectors**</span></span>](/windows/win32/api/directxmath/nf-directxmath-xmvector4anglebetweenvectors)<br/>       | <span data-ttu-id="934b1-113">Berechnen Sie den Bogenwinkel zwischen zwei 4D-Vektoren.</span><span class="sxs-lookup"><span data-stu-id="934b1-113">Compute the radian angle between two 4D vectors.</span></span><br/>                   |
+| [<span data-ttu-id="934b1-114">**XMVector4ClampLength**</span><span class="sxs-lookup"><span data-stu-id="934b1-114">**XMVector4ClampLength**</span></span>](/windows/win32/api/directxmath/nf-directxmath-xmvector4clamplength)<br/>                       | <span data-ttu-id="934b1-115">Bindet die Länge eines 4D-Vektors an einen angegebenen Bereich.</span><span class="sxs-lookup"><span data-stu-id="934b1-115">Clamps the length of a 4D vector to a given range.</span></span><br/>                 |
+| [<span data-ttu-id="934b1-116">**XMVector4ClampLengthV**</span><span class="sxs-lookup"><span data-stu-id="934b1-116">**XMVector4ClampLengthV**</span></span>](/windows/win32/api/directxmath/nf-directxmath-xmvector4clamplengthv)<br/>                     | <span data-ttu-id="934b1-117">Bindet die Länge eines 4D-Vektors an einen angegebenen Bereich.</span><span class="sxs-lookup"><span data-stu-id="934b1-117">Clamps the length of a 4D vector to a given range.</span></span><br/>                 |
+| [<span data-ttu-id="934b1-118">**XMVector4Cross**</span><span class="sxs-lookup"><span data-stu-id="934b1-118">**XMVector4Cross**</span></span>](/windows/win32/api/directxmath/nf-directxmath-xmvector4cross)<br/>                                   | <span data-ttu-id="934b1-119">Berechnet das 4D-Kreuz Produkt.</span><span class="sxs-lookup"><span data-stu-id="934b1-119">Computes the 4D cross product.</span></span><br/>                                     |
+| [<span data-ttu-id="934b1-120">**XMVector4Dot**</span><span class="sxs-lookup"><span data-stu-id="934b1-120">**XMVector4Dot**</span></span>](/windows/win32/api/directxmath/nf-directxmath-xmvector4dot)<br/>                                       | <span data-ttu-id="934b1-121">Berechnet das Punktprodukt zwischen 4D-Vektoren.</span><span class="sxs-lookup"><span data-stu-id="934b1-121">Computes the dot product between 4D vectors.</span></span><br/>                       |
+| [<span data-ttu-id="934b1-122">**XMVector4InBounds**</span><span class="sxs-lookup"><span data-stu-id="934b1-122">**XMVector4InBounds**</span></span>](/windows/win32/api/directxmath/nf-directxmath-xmvector4inbounds)<br/>                             | <span data-ttu-id="934b1-123">Testet, ob die Komponenten eines 4D-Vektors innerhalb von festgelegten Begrenzungen liegen.</span><span class="sxs-lookup"><span data-stu-id="934b1-123">Tests whether the components of a 4D vector are within set bounds.</span></span><br/> |
+| [<span data-ttu-id="934b1-124">**XMVector4Length**</span><span class="sxs-lookup"><span data-stu-id="934b1-124">**XMVector4Length**</span></span>](/windows/win32/api/directxmath/nf-directxmath-xmvector4length)<br/>                                 | <span data-ttu-id="934b1-125">Berechnet die Länge eines 4D-Vektors.</span><span class="sxs-lookup"><span data-stu-id="934b1-125">Computes the length of a 4D vector.</span></span><br/>                                |
+| [<span data-ttu-id="934b1-126">**XMVector4LengthEst**</span><span class="sxs-lookup"><span data-stu-id="934b1-126">**XMVector4LengthEst**</span></span>](/windows/win32/api/directxmath/nf-directxmath-xmvector4lengthest)<br/>                           | <span data-ttu-id="934b1-127">Schätzt die Länge eines 4D-Vektors.</span><span class="sxs-lookup"><span data-stu-id="934b1-127">Estimates the length of a 4D vector.</span></span><br/>                               |
+| [<span data-ttu-id="934b1-128">**XMVector4LengthSq**</span><span class="sxs-lookup"><span data-stu-id="934b1-128">**XMVector4LengthSq**</span></span>](/windows/win32/api/directxmath/nf-directxmath-xmvector4lengthsq)<br/>                             | <span data-ttu-id="934b1-129">Berechnet das Quadrat der Länge eines 4D-Vektors.</span><span class="sxs-lookup"><span data-stu-id="934b1-129">Computes the square of the length of a 4D vector.</span></span><br/>                  |
+| [<span data-ttu-id="934b1-130">**XMVector4Normalize**</span><span class="sxs-lookup"><span data-stu-id="934b1-130">**XMVector4Normalize**</span></span>](/windows/win32/api/directxmath/nf-directxmath-xmvector4normalize)<br/>                           | <span data-ttu-id="934b1-131">Gibt die normalisierte Version eines 4D-Vektors zurück.</span><span class="sxs-lookup"><span data-stu-id="934b1-131">Returns the normalized version of a 4D vector.</span></span><br/>                     |
+| [<span data-ttu-id="934b1-132">**XMVector4NormalizeEst**</span><span class="sxs-lookup"><span data-stu-id="934b1-132">**XMVector4NormalizeEst**</span></span>](/windows/win32/api/directxmath/nf-directxmath-xmvector4normalizeest)<br/>                     | <span data-ttu-id="934b1-133">Schätzt die normalisierte Version eines 4D-Vektors.</span><span class="sxs-lookup"><span data-stu-id="934b1-133">Estimates the normalized version of a 4D vector.</span></span><br/>                   |
+| [<span data-ttu-id="934b1-134">**XMVector4Orthogonal**</span><span class="sxs-lookup"><span data-stu-id="934b1-134">**XMVector4Orthogonal**</span></span>](/windows/win32/api/directxmath/nf-directxmath-xmvector4orthogonal)<br/>                         | <span data-ttu-id="934b1-135">Berechnet einen Vektor senkrecht zu einem 4D-Vektor.</span><span class="sxs-lookup"><span data-stu-id="934b1-135">Computes a vector perpendicular to a 4D vector.</span></span><br/>                    |
+| [<span data-ttu-id="934b1-136">**XMVector4ReciprocalLength**</span><span class="sxs-lookup"><span data-stu-id="934b1-136">**XMVector4ReciprocalLength**</span></span>](/windows/win32/api/directxmath/nf-directxmath-xmvector4reciprocallength)<br/>             | <span data-ttu-id="934b1-137">Berechnet die Gegenüberstellung der Länge eines 4D-Vektors.</span><span class="sxs-lookup"><span data-stu-id="934b1-137">Computes the reciprocal of the length of a 4D vector.</span></span><br/>              |
+| [<span data-ttu-id="934b1-138">**XMVector4ReciprocalLengthEst**</span><span class="sxs-lookup"><span data-stu-id="934b1-138">**XMVector4ReciprocalLengthEst**</span></span>](/windows/win32/api/directxmath/nf-directxmath-xmvector4reciprocallengthest)<br/>       | <span data-ttu-id="934b1-139">Schätzt die gegenseitige Länge eines 4D-Vektors.</span><span class="sxs-lookup"><span data-stu-id="934b1-139">Estimates the reciprocal of the length of a 4D vector.</span></span><br/>             |
+| [<span data-ttu-id="934b1-140">**XMVector4Reflect**</span><span class="sxs-lookup"><span data-stu-id="934b1-140">**XMVector4Reflect**</span></span>](/windows/win32/api/directxmath/nf-directxmath-xmvector4reflect)<br/>                               | <span data-ttu-id="934b1-141">Reflektiert einen 4D-incidentvektor über einen 4D-normal Vektor.</span><span class="sxs-lookup"><span data-stu-id="934b1-141">Reflects an incident 4D vector across a 4D normal vector.</span></span><br/>          |
+| [<span data-ttu-id="934b1-142">**XMVector4Refract**</span><span class="sxs-lookup"><span data-stu-id="934b1-142">**XMVector4Refract**</span></span>](/windows/win32/api/directxmath/nf-directxmath-xmvector4refract)<br/>                               | <span data-ttu-id="934b1-143">Gibt einen 4-d-incidentvektor über einen 4D-normal Vektor hinweg aus.</span><span class="sxs-lookup"><span data-stu-id="934b1-143">Refracts an incident 4D vector across a 4D normal vector.</span></span><br/>          |
+| [<span data-ttu-id="934b1-144">**XMVector4RefractV**</span><span class="sxs-lookup"><span data-stu-id="934b1-144">**XMVector4RefractV**</span></span>](/windows/win32/api/directxmath/nf-directxmath-xmvector4refractv)<br/>                             | <span data-ttu-id="934b1-145">Gibt einen 4-d-incidentvektor über einen 4D-normal Vektor hinweg aus.</span><span class="sxs-lookup"><span data-stu-id="934b1-145">Refracts an incident 4D vector across a 4D normal vector.</span></span><br/>          |
+
+
+
+ 
+
+## <a name="related-topics"></a><span data-ttu-id="934b1-146">Zugehörige Themen</span><span class="sxs-lookup"><span data-stu-id="934b1-146">Related topics</span></span>
+
+<dl> <dt>
+
+[<span data-ttu-id="934b1-147">Directxmath-Bibliotheks-4D-Vektor Funktionen</span><span class="sxs-lookup"><span data-stu-id="934b1-147">DirectXMath Library 4D Vector Functions</span></span>](ovw-xnamath-reference-functions-vector4.md)
+</dt> </dl>
+
+ 
+
+ 
