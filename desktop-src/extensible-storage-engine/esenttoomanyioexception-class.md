@@ -1,0 +1,77 @@
+---
+description: 'Weitere Informationen finden Sie unter: esentesomanyioexception-Klasse'
+title: Esentesomanyioexception-Klasse
+TOCTitle: EsentTooManyIOException class
+ms:assetid: T:Microsoft.Isam.Esent.Interop.EsentTooManyIOException
+ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esenttoomanyioexception(v=EXCHG.10)
+ms:contentKeyID: 55103065
+ms.date: 07/30/2014
+ms.topic: reference
+f1_keywords:
+- Microsoft.Isam.Esent.Interop.EsentTooManyIOException
+dev_langs:
+- CSharp
+- JScript
+- VB
+- other
+api_name:
+- Microsoft.Isam.Esent.Interop.EsentTooManyIOException
+topic_type:
+- apiref
+- kbSyntax
+api_type:
+- Managed
+api_location:
+- Microsoft.Isam.Esent.Interop.dll
+ROBOTS: INDEX,FOLLOW
+ms.openlocfilehash: 47a098691d8d471b0bb553a1893513f737bf51fb
+ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "106352640"
+---
+# <a name="esenttoomanyioexception-class"></a>Esentesomanyioexception-Klasse
+
+Basisklasse für JET_err. "|"-Ausnahmen.
+
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
+
+[System.Object](/dotnet/api/system.object)  
+  [System.Exception](/dotnet/api/system.exception)  
+    [Microsoft. ISAM. ESENT. esentexception](./esentexception-class.md)  
+      [Microsoft. ISAM. ESENT. Interop. esenterrorexception](./esenterrorexception-class.md)  
+        [Microsoft. ISAM. ESENT. Interop. esentoperationexception](./esentoperationexception-class.md)  
+          [Microsoft. ISAM. ESENT. Interop. esentresourceexception](./esentresourceexception-class.md)  
+            Microsoft. ISAM. ESENT. Interop. esentesomanyioexception  
+
+**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+
+## <a name="syntax"></a>Syntax
+
+``` vb
+'Declaration
+<SerializableAttribute> _
+Public NotInheritable Class EsentTooManyIOException _
+    Inherits EsentResourceException
+'Usage
+Dim instance As EsentTooManyIOException
+```
+
+``` csharp
+[SerializableAttribute]
+public sealed class EsentTooManyIOException : EsentResourceException
+```
+
+## <a name="thread-safety"></a>Threadsicherheit
+
+Alle öffentlichen statischen Elemente dieses Typs (Shared in Microsoft Visual Basic) sind threadsicher. Bei Instanzmembern ist die Threadsicherheit nicht gewährleistet.
+
+## <a name="see-also"></a>Siehe auch
+
+#### <a name="reference"></a>Referenz
+
+[Esentesomanyioexception-Member](./esenttoomanyioexception-members.md)
+
+[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
