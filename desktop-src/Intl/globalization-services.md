@@ -1,0 +1,28 @@
+---
+description: Globalisierungs Dienste
+ms.assetid: 24bf4d02-c8c9-4294-9a4c-54eb993bab3e
+title: Globalisierungs Dienste
+ms.topic: article
+ms.date: 05/31/2018
+ms.openlocfilehash: 4dff020a479a0c08b64fd0a7579b3749f4a2c8d0
+ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "106347690"
+---
+# <a name="globalization-services"></a><span data-ttu-id="5efbc-103">Globalisierungs Dienste</span><span class="sxs-lookup"><span data-stu-id="5efbc-103">Globalization Services</span></span>
+
+<span data-ttu-id="5efbc-104">Globalisierungs Dienste bieten Unterstützung der Kern Globalisierung für Sprachen und Regionen, um die Erstellung globalisierter Anwendungen zu ermöglichen, die für eine Vielzahl internationaler Kunden gelten.</span><span class="sxs-lookup"><span data-stu-id="5efbc-104">Globalization Services exposes core globalization support for languages and regions to enable creation of globalized applications that apply to a broad range of international customers.</span></span> <span data-ttu-id="5efbc-105">Diese Technologie stellt die Globalisierungs Infrastruktur bereit, um eine konsistente und kulturelle Windows-Benutzerfunktion zu unterstützen.</span><span class="sxs-lookup"><span data-stu-id="5efbc-105">This technology supplies the globalization infrastructure to support a Windows user experience that is consistent, and linguistically and culturally appropriate.</span></span> <span data-ttu-id="5efbc-106">Globalisierungs Dienste beinhalten die folgenden Technologien:</span><span class="sxs-lookup"><span data-stu-id="5efbc-106">Globalization Services includes the following technologies:</span></span>
+
+-   <span data-ttu-id="5efbc-107">[Erweiterte linguistische Dienste](extended-linguistic-services.md).</span><span class="sxs-lookup"><span data-stu-id="5efbc-107">[Extended Linguistic Services](extended-linguistic-services.md).</span></span> <span data-ttu-id="5efbc-108">Bietet eine Reihe von textbasierten Diensten für Windows-Entwickler (einschließlich Spracherkennung, Transliterierung und anderer linguistischer Grundfunktionen) sowie die Plattform und Schnittstellen, mit denen Anwendungen problemlos Dienste nutzen können, sowie Schnittstellen, die es Entwicklern ermöglichen, eigene Dienste hinzuzufügen.</span><span class="sxs-lookup"><span data-stu-id="5efbc-108">Provides a range of text-based services for Windows developers (including language detection, transliteration, and other core linguistic functionality) and the platform and interfaces for applications to consume services easily, as well as interfaces to allow developers to add services of their own.</span></span>
+-   <span data-ttu-id="5efbc-109">[Internationale Komponenten für Unicode (ICU)](international-components-for-unicode--icu-.md).</span><span class="sxs-lookup"><span data-stu-id="5efbc-109">[International Components for Unicode (ICU)](international-components-for-unicode--icu-.md).</span></span> <span data-ttu-id="5efbc-110">Bietet einen ausgereiften, häufig verwendeten Satz von Open Source-Globalisierungs-APIs.</span><span class="sxs-lookup"><span data-stu-id="5efbc-110">Provides a mature, widely used set of open-source globalization APIs.</span></span> <span data-ttu-id="5efbc-111">ICU nutzt das riesige Common Locale Data Repository (CLDR) von Unicode als Datenbibliothek und bietet Globalisierungs Unterstützung für Softwareanwendungen.</span><span class="sxs-lookup"><span data-stu-id="5efbc-111">ICU utilizes Unicode’s vast Common Locale Data Repository (CLDR) as it’s data library, providing Globalization support for software applications.</span></span> <span data-ttu-id="5efbc-112">ICU ist umfassend portierbar und bietet Anwendungen die gleichen Ergebnisse auf allen Plattformen.</span><span class="sxs-lookup"><span data-stu-id="5efbc-112">ICU is widely portable and gives applications the same results across on all platforms.</span></span>
+-   <span data-ttu-id="5efbc-113">[Unterstützung für nationale Sprache](national-language-support.md).</span><span class="sxs-lookup"><span data-stu-id="5efbc-113">[National Language Support](national-language-support.md).</span></span> <span data-ttu-id="5efbc-114">Bietet internationale Daten und APIs zur Unterstützung von Datums-, Uhrzeit-und Kalender Formatierung, Tastaturlayouts, Sortier Verhalten, Aspekten der Text Aktivierung und anderen grundlegenden Gebiets Schema Informationen.</span><span class="sxs-lookup"><span data-stu-id="5efbc-114">Provides international data and APIs to support date, time, and calendar formatting, keyboard layouts, sorting behavior, aspects of text enablement, and other core locale information.</span></span>
+-   <span data-ttu-id="5efbc-115">[Rechtschreibprüfungs-API](spell-checker-api.md).</span><span class="sxs-lookup"><span data-stu-id="5efbc-115">[Spell Checking API](spell-checker-api.md).</span></span> <span data-ttu-id="5efbc-116">Bietet Entwicklern eine API, mit der Sie Rechtschreibprüfung nutzen können, um Text zu überprüfen, Vorschläge zu erhalten und Einstellungen und Benutzer Wörterbücher zu verwalten.</span><span class="sxs-lookup"><span data-stu-id="5efbc-116">Provides an API for developers to consume spell-checking capability to check text, get suggestions, and maintain settings and user dictionaries.</span></span> <span data-ttu-id="5efbc-117">Entwickler können auch Rechtschreibprüfungen erstellen, die als Anbieter in das Framework für die Rechtschreibprüfung integriert sind.</span><span class="sxs-lookup"><span data-stu-id="5efbc-117">Developers can also create spell checkers that are integrated into the spell-checking framework as providers.</span></span>
+
+ 
+
+ 
+
+
+
