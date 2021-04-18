@@ -1,0 +1,56 @@
+---
+title: ActiveX steuert Registrierungsinformationen
+description: ActiveX steuert Registrierungsinformationen
+ms.assetid: fda5b1e6-2048-4df7-ba8f-145652e3883c
+ms.topic: article
+ms.date: 05/31/2018
+ms.openlocfilehash: b6b180b327a4239b220185a9073ebc7bc0826c39
+ms.sourcegitcommit: 5f33645661bf8c825a7a2e73950b1f4ea0f1cd82
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "104517138"
+---
+# <a name="activex-controls-registry-information"></a><span data-ttu-id="6e108-103">ActiveX steuert Registrierungsinformationen</span><span class="sxs-lookup"><span data-stu-id="6e108-103">ActiveX Controls Registry Information</span></span>
+
+<span data-ttu-id="6e108-104">Es gibt eine Reihe von Registrierungs Einträgen und Flags, die verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="6e108-104">There are a number of registry entries and flags that are used.</span></span> <span data-ttu-id="6e108-105">Darüber hinaus können Steuerelemente Komponenten Kategorien zum Klassifizieren der Features unterstützen, die Sie bereitstellen.</span><span class="sxs-lookup"><span data-stu-id="6e108-105">Additionally, controls can support component categories to classify the features they provide.</span></span>
+
+<span data-ttu-id="6e108-106">Registrierungsschlüssel, die sich auf Steuerelemente beziehen, werden mit einem Sternchen in der folgenden Struktur markiert:</span><span class="sxs-lookup"><span data-stu-id="6e108-106">Registry keys related to controls are marked with an asterisk in the following tree:</span></span>
+
+```
+HKEY_CLASSES_ROOT
+   CLSID
+      {control_CLSID}
+         ProgID = <identifier>
+         InprocServer32 = <filename>.dll
+         *DefaultIcon = <filename>.<ext>,resourceID
+         *ToolboxBitmap32 = <filename>.<ext>,resourceID
+         *Control
+         verb
+            *n = &Properties...
+         *MiscStatus = 0
+         TypeLib = {object_typelibID}
+         *Version = version_number
+```
+
+<span data-ttu-id="6e108-107">Der **DefaultIcon** -Eintrag wird zum Identifizieren eines Symbols verwendet, das angezeigt wird, wenn das Steuerelement auf ein Symbol minimiert wird.</span><span class="sxs-lookup"><span data-stu-id="6e108-107">The **DefaultIcon** entry is used to identify an icon to be displayed when the control is minimized to an icon.</span></span> <span data-ttu-id="6e108-108">Die [**ExtractIcon**](/windows/win32/api/shellapi/nf-shellapi-extracticona) -Funktion wird verwendet, um das Symbol aus der zu erhalten. DLL oder. Die exe-Datei wurde angegeben.</span><span class="sxs-lookup"><span data-stu-id="6e108-108">The [**ExtractIcon**](/windows/win32/api/shellapi/nf-shellapi-extracticona) function is used to get the icon from the .DLL or .EXE file specified.</span></span>
+
+<span data-ttu-id="6e108-109">Der **ToolboxBitmap32** -Eintrag identifiziert den Modulnamen und den Ressourcen Bezeichner für eine 16 \* 15-Bitmap, die für das Gesicht einer Symbolleiste oder Toolbox Schaltfläche verwendet werden soll.</span><span class="sxs-lookup"><span data-stu-id="6e108-109">The **ToolboxBitmap32** entry identifies the module name and resource identifier for a 16\*15 bitmap to use for the face of a toolbar or toolbox button.</span></span> <span data-ttu-id="6e108-110">Die standardmäßige Windows-Symbolgröße ist zu groß, um für diesen Zweck verwendet zu werden.</span><span class="sxs-lookup"><span data-stu-id="6e108-110">The standard Windows icon size is too large to be used for this purpose.</span></span> <span data-ttu-id="6e108-111">Dieser Eintrag unterstützt speziell Steuerelement Container mit einem Entwurfs Modus, in dem ein Steuerelement ausgewählt und in einem entworfenen Formular platziert wird.</span><span class="sxs-lookup"><span data-stu-id="6e108-111">This entry specifically supports control containers that have a design mode in which one selects controls and places them on a form being designed.</span></span> <span data-ttu-id="6e108-112">Beispielsweise wird in Visual Basic das Symbol des-Steuer Elements im Entwurfs Modus in der Visual Basic Toolbox angezeigt.</span><span class="sxs-lookup"><span data-stu-id="6e108-112">For example, in Visual Basic, the control's icon is displayed in the Visual Basic toolbox during design mode.</span></span>
+
+<span data-ttu-id="6e108-113">Der **Steuer** Element Eintrag kennzeichnet ein Objekt als-Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="6e108-113">The **Control** entry marks an object as a control.</span></span> <span data-ttu-id="6e108-114">Dieser Eintrag wird häufig von Containern verwendet, um Dialogfelder auszufüllen.</span><span class="sxs-lookup"><span data-stu-id="6e108-114">This entry is often used by containers to fill in dialog boxes.</span></span> <span data-ttu-id="6e108-115">Der Container verwendet diesen Unterschlüssel, um zu bestimmen, ob ein Objekt in ein Dialogfeld aufgenommen werden soll, in dem Steuerelemente angezeigt werden.</span><span class="sxs-lookup"><span data-stu-id="6e108-115">The container uses this sub-key to determine whether to include an object in a dialog box that displays controls.</span></span>
+
+<span data-ttu-id="6e108-116">Der **Insertable** -Unterschlüssel kann auch mit-Steuerelementen verwendet werden, je nachdem, ob das Objekt nur als direktes eingebettetes Objekt ohne spezielle Steuerelement Funktionen fungieren kann.</span><span class="sxs-lookup"><span data-stu-id="6e108-116">The **Insertable** sub-key can also be used with controls, depending on whether the object can act only as an in-place embedded object with no special control features.</span></span> <span data-ttu-id="6e108-117">Objekte, die mit **Insertable** gekennzeichnet sind, werden im Dialogfeld Objekt einfügen ihres Containers angezeigt.</span><span class="sxs-lookup"><span data-stu-id="6e108-117">Objects marked with **Insertable** appear in the Insert Object dialog box of their container.</span></span> <span data-ttu-id="6e108-118">Der **Insertable** -Eintrag bedeutet im Allgemeinen, dass das Steuerelement mit nicht-Steuerungs Containern getestet wurde.</span><span class="sxs-lookup"><span data-stu-id="6e108-118">The **Insertable** entry generally means that the control has been tested with non-control containers.</span></span>
+
+<span data-ttu-id="6e108-119">Die Unterschlüssel **Insertable** und **Control** sind optional.</span><span class="sxs-lookup"><span data-stu-id="6e108-119">Both the **Insertable** and the **Control** sub-keys are optional.</span></span> <span data-ttu-id="6e108-120">Ein Steuerelement kann den Unterschlüssel **Insertable** weglassen, wenn er nicht für die Arbeit mit älteren Containern konzipiert ist, die Steuerelemente nicht verstehen.</span><span class="sxs-lookup"><span data-stu-id="6e108-120">A control can omit the **Insertable** sub-key if it not designed to work with older containers that do not understand controls.</span></span> <span data-ttu-id="6e108-121">Ein Steuerelement kann die **Steuer** Element Taste weglassen, wenn es nur für den Einsatz mit einem bestimmten Container konzipiert ist und daher nicht in andere Container eingefügt werden soll.</span><span class="sxs-lookup"><span data-stu-id="6e108-121">A control can omit the **Control** key if it is only designed to work with a specific container and thus does not wish to be inserted in other containers.</span></span>
+
+<span data-ttu-id="6e108-122">Steuerelemente sollten über ein Eigenschaften Verb, oleiverb- \_ Eigenschaften und alle anderen Verben verfügen, die Sie unterstützen.</span><span class="sxs-lookup"><span data-stu-id="6e108-122">Controls should have a Properties verb, OLEIVERB\_PROPERTIES, along with any other verbs they support.</span></span> <span data-ttu-id="6e108-123">Das Eigenschaften Verb sowie das Standard-Verb oleiverb Primary weisen das-Steuerelement an, das zugehörige Eigenschaften \_ Blatt anzuzeigen.</span><span class="sxs-lookup"><span data-stu-id="6e108-123">The Properties verb, as well as the standard verb OLEIVERB\_PRIMARY, instructs the control to display its property sheet.</span></span> <span data-ttu-id="6e108-124">Das Eigenschaften-Verb wird im Menü des Containers als Eigenschaften Element angezeigt, wenn das Steuerelement aktiv ist.</span><span class="sxs-lookup"><span data-stu-id="6e108-124">The Properties verb is displayed as the Properties item on the container's menu when the control is active.</span></span> <span data-ttu-id="6e108-125">Auf diese Weise kann das Steuerelement eine eigene Eigenschaften Seite anzeigen, die dem Endbenutzer nützliche Funktionen bietet, auch wenn der Container keine Steuerelemente behandelt.</span><span class="sxs-lookup"><span data-stu-id="6e108-125">This way, the control can display its own property page allowing some useful functionality to the end user, even if the container does not handle controls.</span></span>
+
+<span data-ttu-id="6e108-126">Ein-Steuerelement definiert den **fehlstatus** -Schlüssel, um sich für potenzielle Container zu beschreiben.</span><span class="sxs-lookup"><span data-stu-id="6e108-126">A control defines the **MiscStatus** key to describe itself to potential containers.</span></span> <span data-ttu-id="6e108-127">Die Bits übernehmen die Werte aus [**OLEMISC**](/windows/win32/api/oleidl/ne-oleidl-olemisc), und die Steuerelemente fügen dieser Enumeration mehrere Werte hinzu.</span><span class="sxs-lookup"><span data-stu-id="6e108-127">The bits take on the values from [**OLEMISC**](/windows/win32/api/oleidl/ne-oleidl-olemisc), and controls add several values to this enumeration.</span></span> <span data-ttu-id="6e108-128">Weitere Informationen finden Sie in den **OLEMISC** -Enumerationswerten.</span><span class="sxs-lookup"><span data-stu-id="6e108-128">See the **OLEMISC** enumeration values for more information.</span></span> <span data-ttu-id="6e108-129">Der Client kann diese Informationen durch Aufrufen von [**IOleObject:: getfehlstatus**](/windows/desktop/api/OleIdl/nf-oleidl-ioleobject-getmiscstatus) abrufen, ohne das Steuerelement zuerst instanziieren zu müssen.</span><span class="sxs-lookup"><span data-stu-id="6e108-129">The client can obtain this information by calling [**IOleObject::GetMiscStatus**](/windows/desktop/api/OleIdl/nf-oleidl-ioleobject-getmiscstatus) without having to instantiate the control first.</span></span>
+
+<span data-ttu-id="6e108-130">Schließlich wird in **Version** die Version des-Steuer Elements beschrieben, die mit der Version der Typbibliothek, die diesem Steuerelement zugeordnet ist, entsprechen sollte.</span><span class="sxs-lookup"><span data-stu-id="6e108-130">Finally, **Version** describes the version of the control which should match the version of the type library associated with this control.</span></span>
+
+<span data-ttu-id="6e108-131">Auch in den Typinformationen für ein Steuerelement markiert das Attribut Steuerelement einen Co-Klassen Eintrag als Beschreibung eines Steuer Elements.</span><span class="sxs-lookup"><span data-stu-id="6e108-131">Also in the type information for a control, the attribute control marks a coclass entry as describing a control.</span></span>
+
+ 
+
+ 
