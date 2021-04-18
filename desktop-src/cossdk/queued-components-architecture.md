@@ -1,0 +1,51 @@
+---
+description: Der von com+ in der Warteschlange befindliche Komponenten Dienst erweitert das COM-Programmiermodell durch Bereitstellen einer Umgebung, in der eine Komponente synchron (in Echtzeit) oder asynchron (in der Warteschlange) aufgerufen werden kann.
+ms.assetid: fd455679-b2b3-487f-8494-9ea296ce2c89
+title: Architektur der Warteschlangen Komponenten
+ms.topic: article
+ms.date: 05/31/2018
+ms.openlocfilehash: a8a2f6e1012bd3c11a27a44214ee28e84d5bd404
+ms.sourcegitcommit: bf526e267d3991892733bdd229c66d5365cf244a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "104564554"
+---
+# <a name="queued-components-architecture"></a><span data-ttu-id="e880a-103">Architektur der Warteschlangen Komponenten</span><span class="sxs-lookup"><span data-stu-id="e880a-103">Queued Components Architecture</span></span>
+
+<span data-ttu-id="e880a-104">Der von com+ in der Warteschlange befindliche Komponenten Dienst erweitert das COM-Programmiermodell durch Bereitstellen einer Umgebung, in der eine Komponente synchron (in Echtzeit) oder asynchron (in der Warteschlange) aufgerufen werden kann.</span><span class="sxs-lookup"><span data-stu-id="e880a-104">The COM+ queued components service enhances the COM programming model by providing an environment in which a component can be invoked either synchronously (real-time) or asynchronously (queued).</span></span> <span data-ttu-id="e880a-105">Eine Komponente muss nicht wissen, ob Sie in einem echt Zeit-oder in einem Warteschlangen Kontext verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="e880a-105">A component need not be aware of whether it is employed in a real-time or a queued context.</span></span>
+
+<span data-ttu-id="e880a-106">Messaging Anwendungen sind e-Mail-Transaktionen zwischen Programmen.</span><span class="sxs-lookup"><span data-stu-id="e880a-106">Messaging applications are like email transactions between programs.</span></span> <span data-ttu-id="e880a-107">Der Anforderer sendet eine Nachricht an den Server. Wenn der Server die Nachricht erhält, wird die Nachricht verarbeitet.</span><span class="sxs-lookup"><span data-stu-id="e880a-107">The requester sends a message to the server; when the server gets to it, the message is processed.</span></span> <span data-ttu-id="e880a-108">Wie bei e-Mail auch, muss ein Messaging System die Netzwerk Details verarbeiten und sicherstellen, dass die Nachricht vom Client zum Server verschoben wird.</span><span class="sxs-lookup"><span data-stu-id="e880a-108">Like email, a messaging system must handle the network details and ensure that the message moves from the client to the server.</span></span> <span data-ttu-id="e880a-109">Im Framework der in der Warteschlange befindlichen Komponenten ist Message Queuing dafür verantwortlich.</span><span class="sxs-lookup"><span data-stu-id="e880a-109">In the queued components framework, Message Queuing is responsible for this.</span></span>
+
+<span data-ttu-id="e880a-110">Der Dienst für die com+-Warteschlangen Komponenten besteht aus den folgenden Teilen:</span><span class="sxs-lookup"><span data-stu-id="e880a-110">The COM+ queued components service consists of the following parts:</span></span>
+
+-   <span data-ttu-id="e880a-111">Recorder (für die Client-oder Sendeseite)</span><span class="sxs-lookup"><span data-stu-id="e880a-111">Recorder (for the client or send side)</span></span>
+-   <span data-ttu-id="e880a-112">Listener (für den Server oder die Empfangsseite)</span><span class="sxs-lookup"><span data-stu-id="e880a-112">Listener (for the server or receive side)</span></span>
+-   <span data-ttu-id="e880a-113">Player (für die Server-oder Empfangsseite)</span><span class="sxs-lookup"><span data-stu-id="e880a-113">Player (for the server or receive side)</span></span>
+
+![Diagramm, das den Pfad vom Client zum Server anzeigt: Client, Recorder, Queue, Listener, Player, Server.](images/d732774b-1ca6-45ad-bce0-a95b0bfc3edb.png)
+
+## <a name="the-recorder"></a><span data-ttu-id="e880a-115">Der Recorder</span><span class="sxs-lookup"><span data-stu-id="e880a-115">The Recorder</span></span>
+
+<span data-ttu-id="e880a-116">In einem typischen Szenario mit in der Warteschlange befindlichen Komponenten ruft der Client eine in der Warteschlange befindliche Komponente auf.</span><span class="sxs-lookup"><span data-stu-id="e880a-116">In a typical queued components scenario, the client calls a queued component.</span></span> <span data-ttu-id="e880a-117">Der-Befehl wird an den in der Warteschlange befindlichen Komponenten Recorder ausgegeben, der ihn als Teil einer Nachricht an den Server verpackt und in eine Warteschlange einfügt.</span><span class="sxs-lookup"><span data-stu-id="e880a-117">The call is made to the queued components recorder, which packages it as part of a message to the server and puts it in a queue.</span></span> <span data-ttu-id="e880a-118">Die Aufzeichnung Marshalls den Sicherheitskontext des Clients in die Nachricht und zeichnet alle Methodenaufrufe des Clients auf.</span><span class="sxs-lookup"><span data-stu-id="e880a-118">The recorder marshals the client's security context into the message and records all of the client's method calls.</span></span> <span data-ttu-id="e880a-119">In seiner Rolle als Proxy für die Serverkomponente wählt die Aufzeichnung Schnittstellen aus den Warteschlangen fähigen Schnittstellen im com+-Katalog aus.</span><span class="sxs-lookup"><span data-stu-id="e880a-119">In its role as proxy for the server component, the recorder selects interfaces from the queuable interfaces in the COM+ catalog.</span></span>
+
+<span data-ttu-id="e880a-120">Eine Darstellung der Aufzeichnung wird an Message Queuing als Nachricht gesendet, die an einen Server gesendet werden soll.</span><span class="sxs-lookup"><span data-stu-id="e880a-120">A representation of the recording is sent to Message Queuing as a message to be sent to a server.</span></span> <span data-ttu-id="e880a-121">Wenn für die in der Warteschlange befindliche Komponente die Einstellung für das Transaktions Attribut erforderlich oder unterstützt festgelegt ist, akzeptiert Message Queuing nur dann die Übermittlung der Nachricht, wenn die Client seitige Transaktion einen Commit ausführt und die Message Queuing Warteschlange transaktional ist. Dies ist die Standardeinstellung.</span><span class="sxs-lookup"><span data-stu-id="e880a-121">When the queued component has the transaction attribute setting of Required or Supported, Message Queuing accepts delivery of the message only if the client-side transaction commits and the Message Queuing queue is transactional, which is the default normally established.</span></span> <span data-ttu-id="e880a-122">Wenn für die Einstellung des Transaktions Attributs neu erforderlich ist, kann Message Queuing die Nachricht auch dann akzeptieren, wenn die Client seitige Transaktion abgebrochen wird.</span><span class="sxs-lookup"><span data-stu-id="e880a-122">When the transaction attribute setting is Requires New, Message Queuing can accept the message even if the client-side transaction aborts.</span></span> <span data-ttu-id="e880a-123">Weitere Informationen zu Transaktionen finden Sie unter [transaktionale Message Queuing](transactional-message-queuing.md).</span><span class="sxs-lookup"><span data-stu-id="e880a-123">For more information on transactions, see [Transactional Message Queuing](transactional-message-queuing.md).</span></span>
+
+## <a name="the-listener"></a><span data-ttu-id="e880a-124">Der Listener</span><span class="sxs-lookup"><span data-stu-id="e880a-124">The Listener</span></span>
+
+<span data-ttu-id="e880a-125">Der in der Warteschlange befindliche Komponenten Listener Ruft die Nachricht aus der Warteschlange ab und übergibt sie an den Player der in der Warteschlange befindlichen Komponenten.</span><span class="sxs-lookup"><span data-stu-id="e880a-125">The queued components listener retrieves the message from the queue and passes it to the queued components player.</span></span>
+
+## <a name="the-player"></a><span data-ttu-id="e880a-126">Der Player</span><span class="sxs-lookup"><span data-stu-id="e880a-126">The Player</span></span>
+
+<span data-ttu-id="e880a-127">Der Player gibt den Sicherheitskontext des Clients auf der Serverseite aus und ruft dann die Serverkomponente auf und führt die gleichen Methodenaufrufe aus.</span><span class="sxs-lookup"><span data-stu-id="e880a-127">The player unmarshals the client's security context at the server side and then invokes the server component and makes the same method calls.</span></span> <span data-ttu-id="e880a-128">Die Methodenaufrufe werden vom Player nicht wiedergegeben, bis die Client Komponente abgeschlossen ist, und die Transaktion, die die Methode aufgezeichnet hat, führt Commits aus.</span><span class="sxs-lookup"><span data-stu-id="e880a-128">The method calls are not played back by the player until the client component completes and the transaction that recorded the method calls commits.</span></span>
+
+## <a name="the-message-mover"></a><span data-ttu-id="e880a-129">Der Nachrichten Verschiebe Vorgang</span><span class="sxs-lookup"><span data-stu-id="e880a-129">The Message Mover</span></span>
+
+<span data-ttu-id="e880a-130">Der Nachrichten Verschiebungsvorgang in der Warteschlange ist ein Hilfsprogramm, das alle fehlgeschlagenen Message Queuing Nachrichten aus einer Warteschlange in eine andere verschiebt, damit Sie wiederholt werden können.</span><span class="sxs-lookup"><span data-stu-id="e880a-130">The queued components message mover is a utility that moves all failed Message Queuing messages from one queue to another so that they can be retried.</span></span> <span data-ttu-id="e880a-131">Das Hilfsprogramm für den Nachrichten Verschiebungsvorgang ist ein Automatisierungs Objekt, das mit einem VBScript aufgerufen werden kann. Weitere Informationen finden Sie unter [Behandeln von Fehlern](handling-errors-in-queued-components.md).</span><span class="sxs-lookup"><span data-stu-id="e880a-131">The message mover utility is an Automation object that can be invoked with a VBScript; for more information, see [Handling Errors](handling-errors-in-queued-components.md).</span></span>
+
+ 
+
+ 
+
+
+
