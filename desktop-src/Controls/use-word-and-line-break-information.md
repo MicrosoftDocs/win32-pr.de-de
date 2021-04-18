@@ -1,0 +1,78 @@
+---
+title: Verwenden von Wort-und Zeilenumbruch Informationen
+description: Ein Rich-Edit-Steuerelement ruft eine Funktion auf, die als Wort Umbruch Prozedur bezeichnet wird, um Unterbrechungen zwischen Wörtern zu finden und zu bestimmen, wo Zeilen unterbrochen werden können
+ms.assetid: DDCE9814-0D39-494C-953A-FB6A98100EEA
+ms.topic: article
+ms.date: 05/31/2018
+ms.openlocfilehash: feb90064e455bfeb8ee126e6107d75ef29b3a4f3
+ms.sourcegitcommit: 5f33645661bf8c825a7a2e73950b1f4ea0f1cd82
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "106340287"
+---
+# <a name="how-to-use-word-and-line-break-information"></a><span data-ttu-id="01d0d-103">Verwenden von Wort-und Zeilenumbruch Informationen</span><span class="sxs-lookup"><span data-stu-id="01d0d-103">How to Use Word and Line Break Information</span></span>
+
+<span data-ttu-id="01d0d-104">Ein Rich-Edit-Steuerelement ruft eine Funktion auf, die als Wort Umbruch Prozedur bezeichnet wird, um Unterbrechungen zwischen Wörtern zu finden und zu bestimmen, wo Zeilen unterbrochen werden können</span><span class="sxs-lookup"><span data-stu-id="01d0d-104">A rich edit control calls a function called a word-break procedure to find breaks between words and to determine where it can break lines.</span></span> <span data-ttu-id="01d0d-105">Das-Steuerelement verwendet diese Informationen beim Ausführen von Zeilenumbruch Vorgängen und bei der Verarbeitung von STRG + nach-links-Pfeiltaste und STRG + nach-rechts-Taste.</span><span class="sxs-lookup"><span data-stu-id="01d0d-105">The control uses this information when performing word-wrap operations and when processing CTRL+LEFT ARROW key and CTRL+RIGHT ARROW key combinations.</span></span> <span data-ttu-id="01d0d-106">Eine Anwendung kann Nachrichten an ein Rich-Edit-Steuerelement senden, um die Standardprozedur für das Wort Umbruch zu ersetzen, Informationen zum Wort Umbruch abzurufen und zu bestimmen, auf welche Zeile ein bestimmtes Zeichen fällt.</span><span class="sxs-lookup"><span data-stu-id="01d0d-106">An application can send messages to a rich edit control to replace the default word-break procedure, to retrieve word-break information, and to determine what line a given character falls on.</span></span>
+
+## <a name="what-you-need-to-know"></a><span data-ttu-id="01d0d-107">Was Sie wissen müssen</span><span class="sxs-lookup"><span data-stu-id="01d0d-107">What you need to know</span></span>
+
+### <a name="technologies"></a><span data-ttu-id="01d0d-108">Technologien</span><span class="sxs-lookup"><span data-stu-id="01d0d-108">Technologies</span></span>
+
+-   [<span data-ttu-id="01d0d-109">Windows-Steuerelemente</span><span class="sxs-lookup"><span data-stu-id="01d0d-109">Windows Controls</span></span>](window-controls.md)
+
+### <a name="prerequisites"></a><span data-ttu-id="01d0d-110">Voraussetzungen</span><span class="sxs-lookup"><span data-stu-id="01d0d-110">Prerequisites</span></span>
+
+-   <span data-ttu-id="01d0d-111">C/C++</span><span class="sxs-lookup"><span data-stu-id="01d0d-111">C/C++</span></span>
+-   <span data-ttu-id="01d0d-112">Programmieren der Windows-Benutzeroberfläche</span><span class="sxs-lookup"><span data-stu-id="01d0d-112">Windows User Interface Programming</span></span>
+
+## <a name="instructions"></a><span data-ttu-id="01d0d-113">Anweisungen</span><span class="sxs-lookup"><span data-stu-id="01d0d-113">Instructions</span></span>
+
+### <a name="use-word-and-line-break-information"></a><span data-ttu-id="01d0d-114">Verwenden von Wort-und Zeilenumbruch Informationen</span><span class="sxs-lookup"><span data-stu-id="01d0d-114">Use Word and Line Break Information</span></span>
+
+<span data-ttu-id="01d0d-115">Wörter Trennungs Prozeduren für Rich Edit-Steuerelemente ähneln denen für Bearbeitungs Steuerelemente, verfügen jedoch über zusätzliche Funktionen: Wörter Trennungs Prozeduren für beide Arten von Steuerelementen können bestimmen, ob ein Zeichen ein Trennzeichen ist, und das nächste Wörter Umbruch vor oder nach der angegebenen Position finden.</span><span class="sxs-lookup"><span data-stu-id="01d0d-115">Word-break procedures for rich edit controls are similar to those for edit controls, but they have additional capabilities: word-break procedures for both kinds of controls can determine whether a character is a delimiter and can find the nearest word break before or after the specified position.</span></span> <span data-ttu-id="01d0d-116">Ein Trennzeichen ist ein Zeichen, das das Ende eines Worts markiert, z. b. ein Leerzeichen.</span><span class="sxs-lookup"><span data-stu-id="01d0d-116">A delimiter is a character that marks the end of a word, such as a space.</span></span> <span data-ttu-id="01d0d-117">In der Regel tritt ein Wort Umbruch in einem Bearbeitungs Steuerelement nur nach Trennzeichen auf.</span><span class="sxs-lookup"><span data-stu-id="01d0d-117">Usually, in an edit control, a word break occurs only after delimiters.</span></span> <span data-ttu-id="01d0d-118">Allerdings gelten für die meisten asiatischen Sprachen unterschiedliche Regeln.</span><span class="sxs-lookup"><span data-stu-id="01d0d-118">However, different rules apply to most Asian languages.</span></span>
+
+<span data-ttu-id="01d0d-119">Wörter Trennungs Prozeduren für Rich Edit-Steuerelemente gruppieren auch Zeichen in Zeichenklassen, die jeweils durch einen Wert im Bereich von 0x00 bis 0x0f identifiziert werden.</span><span class="sxs-lookup"><span data-stu-id="01d0d-119">Word-break procedures for rich edit controls also group characters into character classes, each identified by a value in the range 0x00 through 0x0F.</span></span> <span data-ttu-id="01d0d-120">Unterbrechungen treten entweder nach Trennzeichen oder zwischen Zeichen verschiedener Klassen auf.</span><span class="sxs-lookup"><span data-stu-id="01d0d-120">Breaks occur either after delimiters or between characters of different classes.</span></span> <span data-ttu-id="01d0d-121">Folglich findet eine Prozedur zum Umbrechen mit unterschiedlichen Klassen für alphanumerische Zeichen und Interpunktions Zeichen zwei Wort Umbrüche in der Zeichenfolge "Win.doc" (vor und nach dem Zeitraum).</span><span class="sxs-lookup"><span data-stu-id="01d0d-121">Thus, a word-break procedure with different classes for alphanumeric and punctuation characters would find two word breaks in the string "Win.doc" (before and after the period).</span></span>
+
+<span data-ttu-id="01d0d-122">Die Klasse eines Zeichens kann mit 0 (null) oder mehreren Flag zum Abbrechen von Wörtern kombiniert werden, um einen 8-Bit-Wert zu bilden.</span><span class="sxs-lookup"><span data-stu-id="01d0d-122">A character's class can be combined with zero or more word-break flags to form an 8-bit value.</span></span> <span data-ttu-id="01d0d-123">Beim Ausführen von Zeilenumbruch Vorgängen verwendet ein Rich-Edit-Steuerelement Wort Umbruch Flags, um zu bestimmen, wo es Zeilen unterbrechen kann.</span><span class="sxs-lookup"><span data-stu-id="01d0d-123">When performing word-wrap operations, a rich edit control uses word-break flags to determine where it can break lines.</span></span> <span data-ttu-id="01d0d-124">Rich Edit verwendet die folgenden Flags für die Wort Umbruch.</span><span class="sxs-lookup"><span data-stu-id="01d0d-124">Rich Edit uses the following word-break flags.</span></span>
+
+
+
+| <span data-ttu-id="01d0d-125">Flag</span><span class="sxs-lookup"><span data-stu-id="01d0d-125">Flag</span></span>            | <span data-ttu-id="01d0d-126">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="01d0d-126">Description</span></span>                                                                                                                       |
+|-----------------|-----------------------------------------------------------------------------------------------------------------------------------|
+| <span data-ttu-id="01d0d-127">WBF- \_ BreakAfter</span><span class="sxs-lookup"><span data-stu-id="01d0d-127">WBF\_BREAKAFTER</span></span> | <span data-ttu-id="01d0d-128">Zeilen können nach dem-Zeichen getrennt werden.</span><span class="sxs-lookup"><span data-stu-id="01d0d-128">Lines may be broken after the character.</span></span>                                                                                          |
+| <span data-ttu-id="01d0d-129">WBF-halte \_ Linie</span><span class="sxs-lookup"><span data-stu-id="01d0d-129">WBF\_BREAKLINE</span></span>  | <span data-ttu-id="01d0d-130">Das Zeichen ist ein Trennzeichen.</span><span class="sxs-lookup"><span data-stu-id="01d0d-130">The character is a delimiter.</span></span> <span data-ttu-id="01d0d-131">Trennzeichen markieren die Enden von Wörtern.</span><span class="sxs-lookup"><span data-stu-id="01d0d-131">Delimiters mark the ends of words.</span></span> <span data-ttu-id="01d0d-132">Zeilen können nach Trennzeichen getrennt werden.</span><span class="sxs-lookup"><span data-stu-id="01d0d-132">Lines may be broken after delimiters.</span></span>                            |
+| <span data-ttu-id="01d0d-133">WBF \_ iswhite</span><span class="sxs-lookup"><span data-stu-id="01d0d-133">WBF\_ISWHITE</span></span>    | <span data-ttu-id="01d0d-134">Das Zeichen ist ein Leerzeichen.</span><span class="sxs-lookup"><span data-stu-id="01d0d-134">The character is a white-space character.</span></span> <span data-ttu-id="01d0d-135">Nachfolgende Leerzeichen sind beim umwickeln nicht in der Länge einer Zeile enthalten.</span><span class="sxs-lookup"><span data-stu-id="01d0d-135">Trailing white-space characters are not included in the length of a line when wrapping.</span></span> |
+
+
+
+ 
+
+<span data-ttu-id="01d0d-136">Der WBF \_ BreakAfter-Wert wird verwendet, um das umschließen nach einem Zeichen zuzulassen, das das Ende eines Worts nicht markiert, z. b. ein Bindestrich.</span><span class="sxs-lookup"><span data-stu-id="01d0d-136">The WBF\_BREAKAFTER value is used to allow wrapping after a character that does not mark the end of a word, such as a hyphen.</span></span>
+
+<span data-ttu-id="01d0d-137">Sie können die standardmäßige Wort Umbruch Prozedur für ein Rich Edit-Steuerelement durch ihre eigene Prozedur ersetzen, indem Sie die Nachricht " [**EM \_ setwordbreakproc**](em-setwordbreakproc.md) " verwenden.</span><span class="sxs-lookup"><span data-stu-id="01d0d-137">You can replace the default word-break procedure for a rich edit control with your own procedure by using the [**EM\_SETWORDBREAKPROC**](em-setwordbreakproc.md) message.</span></span> <span data-ttu-id="01d0d-138">Weitere Informationen zu Word-Break-Prozeduren finden Sie in der Beschreibung der [*editwordbreakproc*](/windows/win32/api/winuser/nc-winuser-editwordbreakproca) -Funktion.</span><span class="sxs-lookup"><span data-stu-id="01d0d-138">For more information about word-break procedures, see the description of the [*EditWordBreakProc*](/windows/win32/api/winuser/nc-winuser-editwordbreakproca) function.</span></span>
+
+> [!Note]  
+> <span data-ttu-id="01d0d-139">Diese Ersetzung wird für Microsoft Rich Edit 2,0 und höher aufgrund der Komplexität der mehrsprachigen Wörter Trennung nicht empfohlen.</span><span class="sxs-lookup"><span data-stu-id="01d0d-139">This replacement is not recommended for Microsoft Rich Edit 2.0 and later, due to the complexity of multilingual word breaking.</span></span>
+
+ 
+
+<span data-ttu-id="01d0d-140">Für Microsoft Rich Edit 1,0 können Sie die EM- [**\_ setwordbreakprocex**](em-setwordbreakprocex.md) -Nachricht verwenden, um die Standardprozedur für erweiterte Wörter Umbrüche durch eine [*editwordbreakprocex*](/windows/desktop/api/Richedit/nc-richedit-editwordbreakprocex) -Funktion zu ersetzen.</span><span class="sxs-lookup"><span data-stu-id="01d0d-140">For Microsoft Rich Edit 1.0, you can use the [**EM\_SETWORDBREAKPROCEX**](em-setwordbreakprocex.md) message to replace the default extended word-break procedure with an [*EditWordBreakProcEx*](/windows/desktop/api/Richedit/nc-richedit-editwordbreakprocex) function.</span></span> <span data-ttu-id="01d0d-141">Diese Funktion stellt zusätzliche Informationen über den Text bereit, z. b. den Zeichensatz.</span><span class="sxs-lookup"><span data-stu-id="01d0d-141">This function provides additional information about the text, such as the character set.</span></span> <span data-ttu-id="01d0d-142">Sie können die [**EM \_ getwordbreakprocex**](em-getwordbreakprocex.md) -Nachricht verwenden, um die Adresse des aktuellen erweiterten Wort Umbruch Verfahrens abzurufen.</span><span class="sxs-lookup"><span data-stu-id="01d0d-142">You can use the [**EM\_GETWORDBREAKPROCEX**](em-getwordbreakprocex.md) message to retrieve the address of the current extended word-break procedure.</span></span> <span data-ttu-id="01d0d-143">Beachten Sie, dass Microsoft Rich Edit 2,0 und höher " *editwordbreakprocex*", " **EM \_ getwordbreakprocex**" und " **EM \_ setwordbreakprocex**" nicht unterstützt.</span><span class="sxs-lookup"><span data-stu-id="01d0d-143">Note that Microsoft Rich Edit 2.0 and later do not support *EditWordBreakProcEx*, **EM\_GETWORDBREAKPROCEX**, and **EM\_SETWORDBREAKPROCEX**.</span></span>
+
+<span data-ttu-id="01d0d-144">Sie können die Nachricht [**EM \_ findwordbreak**](em-findwordbreak.md) verwenden, um Wort Umbrüche zu suchen oder um die Klassen-und Wort Umbruch Flags eines Zeichens zu ermitteln.</span><span class="sxs-lookup"><span data-stu-id="01d0d-144">You can use the [**EM\_FINDWORDBREAK**](em-findwordbreak.md) message to find word breaks or to determine a character's class and word-break flags.</span></span> <span data-ttu-id="01d0d-145">Das Steuerelement ruft wiederum seine Wort Umbruch Prozedur auf, um die angeforderten Informationen zu erhalten.</span><span class="sxs-lookup"><span data-stu-id="01d0d-145">In turn, the control calls its word-break procedure to get the requested information.</span></span>
+
+<span data-ttu-id="01d0d-146">Zum Ermitteln der Zeile, auf die ein bestimmtes Zeichen fällt, können Sie die [**EM \_ exlinefromchar**](em-exlinefromchar.md) -Nachricht verwenden.</span><span class="sxs-lookup"><span data-stu-id="01d0d-146">To determine which line a given character falls on, you can use the [**EM\_EXLINEFROMCHAR**](em-exlinefromchar.md) message.</span></span>
+
+## <a name="related-topics"></a><span data-ttu-id="01d0d-147">Zugehörige Themen</span><span class="sxs-lookup"><span data-stu-id="01d0d-147">Related topics</span></span>
+
+<dl> <dt>
+
+[<span data-ttu-id="01d0d-148">Verwenden von Rich Edit-Steuerelementen</span><span class="sxs-lookup"><span data-stu-id="01d0d-148">Using Rich Edit Controls</span></span>](using-rich-edit-controls.md)
+</dt> <dt>
+
+<span data-ttu-id="01d0d-149">[Demo zu allgemeinen Windows-Steuerelementen (cppwindowscommoncontrols)](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/master/OneCodeTeam/Windows%20common%20controls%20demo%20(CppWindowsCommonControls)/%5BC++%5D-Windows%20common%20controls%20demo%20(CppWindowsCommonControls)/C++/CppWindowsCommonControls)</span><span class="sxs-lookup"><span data-stu-id="01d0d-149">[Windows common controls demo (CppWindowsCommonControls)](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/master/OneCodeTeam/Windows%20common%20controls%20demo%20(CppWindowsCommonControls)/%5BC++%5D-Windows%20common%20controls%20demo%20(CppWindowsCommonControls)/C++/CppWindowsCommonControls)</span></span>
+</dt> </dl>
+
+ 
+
+ 
