@@ -1,0 +1,31 @@
+---
+title: Verarbeiten der WM_GETOBJECT Nachricht
+description: Sowohl Microsoft Active Accessibility als auch Microsoft UI Automation senden die WM- \_ GetObject-Nachricht an eine Server-oder Anbieter Anwendung, um Informationen über ein Barrierefreies Objekt abzurufen, das vom Server oder Anbieter unterstützt wird.
+ms.assetid: 4b8e551f-aba7-4a89-8874-ba690175f525
+ms.topic: article
+ms.date: 05/31/2018
+ms.openlocfilehash: 695fad8f050606f0a95a1780551d35499e39d166
+ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "106338285"
+---
+# <a name="handling-the-wm_getobject-message"></a>Behandeln der WM- \_ GetObject-Nachricht
+
+Sowohl Microsoft Active Accessibility als auch Microsoft UI Automation senden die [**WM- \_ GetObject**](wm-getobject.md) -Nachricht an eine Server-oder Anbieter Anwendung, um Informationen über ein Barrierefreies Objekt abzurufen, das vom Server oder Anbieter unterstützt wird. Clients senden **WM \_ GetObject** niemals direkt. Stattdessen sendet Microsoft Active Accessibility diese Nachricht, wenn ein Client die Funktionen [**accessibleobjectfrompoint**](/windows/desktop/api/Oleacc/nf-oleacc-accessibleobjectfrompoint), [**accessibleobjectfromevent**](/windows/desktop/api/Oleacc/nf-oleacc-accessibleobjectfromevent)und [**accessibleobjectfromwindow**](/windows/desktop/api/Oleacc/nf-oleacc-accessibleobjectfromwindow) aufruft. Die Benutzeroberflächenautomatisierung sendet das **WM- \_ GetObject** -Element, wenn ein Client [**iuiautomation:: elementfromhandle**](/windows/desktop/api/UIAutomationClient/nf-uiautomationclient-iuiautomation-elementfromhandle), [**elementFromPoint**](/windows/desktop/api/UIAutomationClient/nf-uiautomationclient-iuiautomation-elementfrompoint)und [**getfocucements**](/windows/desktop/api/UIAutomationClient/nf-uiautomationclient-iuiautomation-getfocusedelement)aufruft und Ereignisse behandelt, die vom Client registriert wurden.
+
+Microsoft Active Accessibility oder UI Automation gibt den Objekttyp an, für den Informationen benötigt werden, indem ein Wert, der als *Objekt Bezeichner* bezeichnet wird, mit der [**WM \_ GetObject**](wm-getobject.md) -Nachricht übergeben Beim Empfang der Nachricht prüft der Server oder Anbieter den Objekt Bezeichner, um zu bestimmen, wie auf die Nachricht geantwortet werden soll. Die Antwort hängt davon ab, ob die empfangende Anwendung Microsoft Active Accessibility (einen Server), eine Benutzeroberflächen Automatisierung (einen Anbieter) oder keines von beiden für das angegebene Objekt implementiert.
+
+-   Wenn die empfangende Anwendung ein Microsoft Active Accessibility Server ist und [**die WM \_ GetObject**](wm-getobject.md) -Nachricht einen Objekt Bezeichner des [**objID- \_ Clients**](object-identifiers.md)enthält, sollte der Server den Wert zurückgeben, der durch übergeben der [**IAccessible**](/windows/desktop/api/oleacc/nn-oleacc-iaccessible) -Schnittstelle des Objekts an die [**lresultfrofubject**](/windows/desktop/api/Oleacc/nf-oleacc-lresultfromobject) -Funktion abgerufen wurde.
+-   Wenn es sich bei der empfangenden Anwendung um einen AUI-Automatisierungsanbieter handelt und der Objekt Bezeichner **uiarootobjectid** ist, sollte der Anbieter die [**IRawElementProviderSimple**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-irawelementprovidersimple) -Schnittstelle des Objekts zurückgeben. Der Anbieter Ruft die-Schnittstelle durch Aufrufen der [**uiareturnrawelementprovider**](/windows/desktop/api/UIAutomationCoreApi/nf-uiautomationcoreapi-uiareturnrawelementprovider) -Funktion ab.
+-   Wenn die empfangende Anwendung weder Microsoft Active Accessibility noch eine Benutzeroberflächen Automatisierung implementiert, sollte Sie die [**WM- \_ GetObject**](wm-getobject.md) -Nachricht an die [**defwindowproc**](/windows/desktop/api/winuser/nf-winuser-defwindowproca) -Funktion übergeben. Durch das übergeben der Nachricht kann das Barrierefreiheits Framework ermitteln, ob ein Proxy für das angegebene Objekt verfügbar ist.
+-   Wenn es sich bei dem Objekt Bezeichner weder um einen [**objID- \_ Client**](object-identifiers.md) noch um uiarootobjectid handelt, sollte die empfangende Anwendung die [**WM- \_ GetObject**](wm-getobject.md) -Nachricht an die [**defwindowproc**](/windows/desktop/api/winuser/nf-winuser-defwindowproca) -Funktion übergeben. Das übergeben der Nachricht ermöglicht dem Barrierefreiheits Framework die Verwendung der Standardanbieter für Standardbenutzer Oberflächen Elemente.
+
+Microsoft Active Accessibility und die Benutzeroberflächen Automatisierung können benutzerdefinierte Objekt Bezeichner in einer [**WM- \_ GetObject**](wm-getobject.md) -Nachricht übergeben, um Anwendungs definierte Werte oder Objekte von einem Server oder Anbieter abzurufen. Der Objekt Bezeichner " [**objID \_ nativeom**](object-identifiers.md) " oder " [**objID \_ queryclassnameidx**](object-identifiers.md) " kann zum Abrufen einer systemeigenen Objektmodell Schnittstelle oder zum Anfordern eines bestimmten Proxy Objekts verwendet werden, das von Oleacc.dll unterstützt wird.
+
+Indem sowohl der [**objID- \_ Client**](object-identifiers.md) als auch der **uiarootobjectid** -Objekt Bezeichner verarbeitet wird, kann eine Microsoft Active Accessibility Server-Implementierung parallel zur Implementierung eines Benutzeroberflächenautomatisierungs-Anbieters vorhanden sein. Da die meisten standardmäßigen Windows-Steuerelemente und allgemeinen Steuerelemente, die von der allgemeinen Steuerelement Bibliothek (ComCtl32.dll) implementiert werden, weder Microsoft Active Accessibility noch eine Benutzeroberflächen Automatisierung implementieren, verarbeiten diese Steuerelemente in der Regel nicht die [**WM \_ GetObject**](wm-getobject.md) -Nachricht Stattdessen überprüft das Microsoft Active Accessibility-oder Benutzeroberflächenautomatisierungs-Framework, ob ein Proxy Objekt für ein bestimmtes UI-Element verfügbar ist. Andernfalls wird das Standard Proxy Objekt für das Host Fenster Objekt bereitstellt.
+
+ 
+
+ 

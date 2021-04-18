@@ -1,0 +1,54 @@
+---
+description: Sie können entweder synchrone oder asynchrone (auch überlappende) e/a-Vorgänge für Dateien, Named Pipes und serielle Kommunikationsgeräte ausführen.
+ms.assetid: db44990e-5a0f-4153-8ff6-79dd7cda48af
+title: Synchronisierung und überlappende Eingabe und Ausgabe
+ms.topic: article
+ms.date: 05/31/2018
+ms.openlocfilehash: e263bb39badc7cbfadd67d80eb169dc1fe6d6c35
+ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "106352303"
+---
+# <a name="synchronization-and-overlapped-input-and-output"></a>Synchronisierung und überlappende Eingabe und Ausgabe
+
+Sie können entweder synchrone oder asynchrone (auch überlappende) e/a-Vorgänge für Dateien, Named Pipes und serielle Kommunikationsgeräte ausführen. Die Funktionen " [**Write File**](/windows/win32/api/fileapi/nf-fileapi-writefile)", " [**ReadFile**](/windows/win32/api/fileapi/nf-fileapi-readfile)", " [**DeviceIoControl**](/windows/win32/api/ioapiset/nf-ioapiset-deviceiocontrol)", " [**WaitCommEvent**](/windows/win32/api/winbase/nf-winbase-waitcommevent)", " [**connectnamedpipe**](/windows/win32/api/namedpipeapi/nf-namedpipeapi-connectnamedpipe)" und " [**transactnamedpipe**](/windows/win32/api/namedpipeapi/nf-namedpipeapi-transactnamedpipe) " können entweder synchron oder asynchron ausgeführt werden. Die Funktionen "read [**fileex**](/windows/win32/api/fileapi/nf-fileapi-readfileex) " und " [**Write fileex**](/windows/win32/api/fileapi/nf-fileapi-writefileex) " können nur asynchron ausgeführt werden.
+
+Wenn eine Funktion synchron ausgeführt wird, wird Sie erst zurückgegeben, wenn der Vorgang abgeschlossen wurde. Dies bedeutet, dass die Ausführung des aufrufenden Threads für einen unbestimmten Zeitraum blockiert werden kann, während er darauf wartet, dass ein zeitaufwendiger Vorgang abgeschlossen wird. Funktionen, die für den überlappenden Vorgang aufgerufen werden, können sofort zurückgegeben werden, obwohl der Vorgang nicht abgeschlossen wurde. Dadurch kann ein zeitaufwendiger e/a-Vorgang im Hintergrund ausgeführt werden, während der aufrufende Thread kostenlos andere Aufgaben ausführen kann. Beispielsweise kann ein einzelner Thread gleichzeitige e/a-Vorgänge für verschiedene Handles oder sogar gleichzeitige Lese-und Schreibvorgänge für das gleiche Handle ausführen.
+
+Zum Synchronisieren der Ausführung mit dem Abschluss des überlappenden Vorgangs verwendet der aufrufende Thread die [**GetOverLappedResult**](/windows/win32/api/ioapiset/nf-ioapiset-getoverlappedresult) -Funktion, die [**getoverlappedresultex**](/windows/desktop/api/Ioapiset/nf-ioapiset-getoverlappedresultex) -Funktion oder eine der [Wait-Funktionen](wait-functions.md) , um zu bestimmen, wann der überlappende Vorgang abgeschlossen wurde. Sie können auch das [**hasoverlappedioabgeschlossene**](/windows/desktop/api/WinBase/nf-winbase-hasoverlappediocompleted) -Makro verwenden, um den Abschluss abzufragen.
+
+Wenn alle ausstehenden asynchronen e/a-Vorgänge abgebrochen werden sollen, verwenden Sie die [**CancelIoEx**](/windows/win32/api/ioapiset/nf-ioapiset-cancelioex) -Funktion, und stellen Sie eine [**über**](/windows/win32/api/minwinbase/ns-minwinbase-overlapped) Lapp Ende Struktur bereit, die die abzubrechende Anforderung angibt. Verwenden Sie die [**CancelIo**](/windows/win32/api/ioapiset/nf-ioapiset-cancelio) -Funktion, um ausstehende asynchrone e/a-Vorgänge abzubrechen, die vom aufrufenden Thread für das angegebene Datei Handle ausgegeben werden.
+
+Überlappende Vorgänge erfordern ein Datei-, Named Pipe-oder Kommunikationsgerät, das mit dem überlappenden Flag für das **\_ Dateiflag \_** erstellt wurde. Wenn ein Thread eine Funktion (z. b. die Funktion "read [**File**](/windows/win32/api/fileapi/nf-fileapi-readfile) ") aufruft, um einen überlappenden Vorgang auszuführen, muss der aufrufende Thread einen Zeiger auf eine [**über**](/windows/win32/api/minwinbase/ns-minwinbase-overlapped) Lapp Ende Struktur angeben. (Wenn dieser Zeiger **null** ist, kann der Rückgabewert der Funktion fälschlicherweise darauf hindeuten, dass der Vorgang abgeschlossen wurde.) Alle Member der **über** Lapp enden Struktur müssen mit 0 (null) initialisiert werden, es sei denn, es wird ein Ereignis verwendet, um den Abschluss eines e/a-Vorgangs zu signalisieren. Wenn ein Ereignis verwendet wird, gibt das **hevent** -Member der **über** Lapp enden Struktur ein Handle für das zugeordnete Ereignis Objekt an. Das System legt den Status des Ereignis Objekts auf "nicht signalisiert" fest, wenn ein Aufrufe an die e/a-Funktion zurückgegeben wird, bevor der Vorgang abgeschlossen wurde. Das System legt den Status des Ereignis Objekts auf signalisiert fest, wenn der Vorgang abgeschlossen wurde. Ein Ereignis ist nur erforderlich, wenn gleichzeitig mehr als ein ausstehender e/a-Vorgang vorhanden ist. Wenn ein Ereignis nicht verwendet wird, signalisiert jeder abgeschlossene e/a-Vorgang dem Datei-, Named Pipe-oder Kommunikationsgerät.
+
+Wenn eine Funktion aufgerufen wird, um einen überlappenden Vorgang auszuführen, wird der Vorgang möglicherweise abgeschlossen, bevor die Funktion zurückgegeben wird. Wenn dies der Fall ist, werden die Ergebnisse so behandelt, als ob der Vorgang synchron ausgeführt worden wäre. Wenn der Vorgang nicht abgeschlossen wurde, ist der Rückgabewert der Funktion jedoch " **false**", und die Funktion " [**GetLastError**](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) " gibt die Fehler-e/a steht **\_ \_ aus**.
+
+Ein Thread kann überlappende Vorgänge mit einer der beiden folgenden Methoden verwalten:
+
+-   Verwenden Sie die Funktion [**gedeverlappedresult**](/windows/win32/api/ioapiset/nf-ioapiset-getoverlappedresult) oder [**gedeverlappedresultex**](/windows/desktop/api/Ioapiset/nf-ioapiset-getoverlappedresultex) , um zu warten, bis der überlappende Vorgang abgeschlossen ist. Wenn **getoverlappedresultex** verwendet wird, kann der aufrufende Thread ein Timeout für den überlappenden Vorgang angeben oder einen wartewartevorgang ausführen.
+-   Geben Sie ein Handle für das Ereignis Objekt für die [**über**](/windows/win32/api/minwinbase/ns-minwinbase-overlapped) Lapp Ende Struktur in einer der Wait- [Funktionen](wait-functions.md) an, und geben Sie dann [**GetOverLappedResult**](/windows/win32/api/ioapiset/nf-ioapiset-getoverlappedresult) oder [**getoverlappedresultex**](/windows/desktop/api/Ioapiset/nf-ioapiset-getoverlappedresultex)an, nachdem die wait-Funktion zurückgegeben wurde. Die-Funktion gibt die Ergebnisse der abgeschlossenen überlappenden Operation zurück. für Funktionen, bei denen diese Informationen angemessen sind, meldet Sie die tatsächliche Anzahl der übertragenen Bytes.
+
+Wenn mehrere überlappende Vorgänge in einem einzelnen Thread durchgeführt werden, muss der aufrufende Thread eine [**über**](/windows/win32/api/minwinbase/ns-minwinbase-overlapped) Lapp Ende Struktur für jeden Vorgang angeben. Jede **über** Lapp Ende Struktur muss ein Handle für ein anderes Ereignis Objekt für manuelles Zurücksetzen angeben. Um zu warten, bis eine der überlappenden Vorgänge abgeschlossen ist, gibt der Thread alle manuellen rücksetzungs-Ereignis Handles als warte Kriterien in einer der multiobjektwait- [Funktionen](wait-functions.md)an. Der Rückgabewert der Multiple-Object-wait-Funktion gibt an, welches Ereignis Objekt für manuelles Zurücksetzen signalisiert wurde, sodass der Thread ermitteln kann, welcher überlappende Vorgang den Vorgang abgeschlossen hat.
+
+Es ist sicherer, ein separates Ereignis Objekt für jeden überlappenden Vorgang zu verwenden, anstatt ein Ereignis Objekt anzugeben oder das gleiche Ereignis Objekt für mehrere Vorgänge wiederzuverwenden. Wenn kein Ereignis Objekt in der [**über**](/windows/win32/api/minwinbase/ns-minwinbase-overlapped) Lapp enden Struktur angegeben ist, signalisiert das System den Status der Datei, Named Pipe oder des kommunikationsgeräts, wenn der überlappende Vorgang abgeschlossen wurde. Daher können Sie diese Handles als Synchronisierungs Objekte in einer wait-Funktion angeben. die Verwendung dieses zwecks kann jedoch schwierig sein, da Sie bei gleichzeitigen überlappenden Vorgängen auf derselben Datei, Named Pipe oder einem Kommunikationsgerät nicht wissen, welcher Vorgang bewirkt hat, dass der Zustand des Objekts signalisiert wurde.
+
+Ein Thread sollte ein Ereignis nicht wieder verwenden, da davon ausgegangen wird, dass das Ereignis nur durch den überlappenden Vorgang dieses Threads signalisiert wird. Ein Ereignis wird im gleichen Thread signalisiert wie der überlappende Vorgang, der abgeschlossen wird. Wenn Sie das gleiche Ereignis für mehrere Threads verwenden, kann dies zu einer Racebedingung führen, bei der das Ereignis ordnungsgemäß für den Thread signalisiert wird, dessen Vorgang zuerst und vorzeitig für andere Threads mit diesem Ereignis ausgeführt wird. Wenn dann der nächste überlappende Vorgang abgeschlossen wird, wird das Ereignis erneut für alle Threads signalisiert, die dieses Ereignis verwenden, usw., bis alle überlappenden Vorgänge abgeschlossen sind.
+
+Beispiele, die die Verwendung von überlappenden Vorgängen, Vervollständigungs Routinen und der [**gedeverlappedresult**](/windows/win32/api/ioapiset/nf-ioapiset-getoverlappedresult) -Funktion veranschaulichen, finden [Sie unter Verwenden von Pipes](../ipc/using-pipes.md).
+
+* * Windows Vista, Windows Server 2003 und Windows XP: * *
+
+Seien Sie vorsichtig, wenn Sie [**über**](/windows/win32/api/minwinbase/ns-minwinbase-overlapped) Lapp Ende Strukturen wieder verwenden. Wenn **über** Lapp Ende Strukturen für mehrere Threads wieder verwendet werden und [**GetOverLappedResult**](/windows/win32/api/ioapiset/nf-ioapiset-getoverlappedresult) aufgerufen wird, wobei der *bwait* -Parameter auf **true** festgelegt ist, muss der aufrufende Thread sicherstellen, dass das zugeordnete Ereignis signalisiert wird, bevor die Struktur wieder verwendet wird. Dies kann mithilfe der [**WaitForSingleObject**](/windows/win32/api/winbase/nf-winbase-registerwaitforsingleobject) -Funktion nach dem Aufruf von **GetOverLappedResult** erreicht werden, um zu erzwingen, dass der Thread wartet, bis der Vorgang abgeschlossen ist. Beachten Sie, dass das Ereignis Objekt ein Ereignis Objekt für manuelles Zurücksetzen sein muss. Wenn ein AutoReset-Ereignis Objekt verwendet wird, bewirkt das Aufrufen von **GetOverLappedResult** , dass der *bwait* -Parameter auf **true** festgelegt ist, dass die Funktion unbegrenzt blockiert wird. Dieses Verhalten änderte sich ab Windows 7 und Windows Server 2008 R2 für Anwendungen, die Windows 7 als unterstütztes Betriebssystem im Anwendungs Manifest angeben. Weitere Informationen finden Sie unter [Anwendungs Manifeste](/previous-versions/windows/desktop/adrms_sdk/application-manifests).
+
+## <a name="related-topics"></a>Zugehörige Themen
+
+<dl> <dt>
+
+[E/a-Konzepte](../fileio/i-o-concepts.md)
+</dt> </dl>
+
+ 
+
+ 
