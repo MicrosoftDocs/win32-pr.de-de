@@ -13,12 +13,12 @@ api_type:
 - DllExport
 api_location:
 - Shell32.dll
-ms.openlocfilehash: 841c30be827ddabc40bd8af50423c844ce927e6d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ae50ad570211303cdfb7aa8e86908593ab48537d
+ms.sourcegitcommit: 0e611cdff84ff9f897c59e4e1d2b2d134bc4e133
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104524427"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106368281"
 ---
 # <a name="wowshellexecute-function"></a>Wowshellexecute-Funktion
 
@@ -165,148 +165,16 @@ Ein Zeiger auf eine **null**-terminierte Zeichenfolge, die das Standardverzeichn
 
 Typ: **int**
 
-Die Flags, die angeben, wie eine Anwendung beim Öffnen angezeigt werden soll. Wenn *lpfile* eine Dokument Datei angibt, wird das Flag einfach an die zugehörige Anwendung übergeben. Es liegt an der Anwendung, zu entscheiden, wie Sie behandelt werden soll.
-
-<dt>
-
-<span id="SW_HIDE"></span><span id="sw_hide"></span>
-
-<span id="SW_HIDE"></span><span id="sw_hide"></span>**SW \_ ausblenden**
-
-
-</dt> <dd>
-
-Blendet das Fenster aus und aktiviert ein anderes Fenster.
+Die Flags, die angeben, wie eine Anwendung beim Öffnen angezeigt werden soll. Wenn *lpfile* eine Dokument Datei angibt, wird das Flag einfach an die zugehörige Anwendung übergeben. Es liegt an der Anwendung, zu entscheiden, wie Sie behandelt werden soll. Dabei kann es sich um einen beliebigen Wert handeln, der im *nCmdShow* -Parameter für die [ShowWindow](/windows/desktop/api/winuser/nf-winuser-showwindow) -Funktion angegeben werden kann.
 
 </dd> <dt>
-
-<span id="SW_MAXIMIZE"></span><span id="sw_maximize"></span>
-
-<span id="SW_MAXIMIZE"></span><span id="sw_maximize"></span>**SW- \_ maximieren**
-
-
-</dt> <dd>
-
-Maximiert das angegebene Fenster.
-
-</dd> <dt>
-
-<span id="SW_MINIMIZE"></span><span id="sw_minimize"></span>
-
-<span id="SW_MINIMIZE"></span><span id="sw_minimize"></span>**SW- \_ minimieren**
-
-
-</dt> <dd>
-
-Minimiert das angegebene Fenster und aktiviert das nächste Fenster der obersten Ebene in der z-Reihenfolge.
-
-</dd> <dt>
-
-<span id="SW_RESTORE"></span><span id="sw_restore"></span>
-
-<span id="SW_RESTORE"></span><span id="sw_restore"></span>**SW- \_ Wiederherstellung**
-
-
-</dt> <dd>
-
-Aktiviert und zeigt das Fenster an. Wenn das Fenster minimiert oder maximiert ist, stellt Windows es in seiner ursprünglichen Größe und Position wieder her. Wenn ein minimiertes Fenster wieder hergestellt wird, sollte eine Anwendung dieses Flag angeben.
-
-</dd> <dt>
-
-<span id="SW_SHOW"></span><span id="sw_show"></span>
-
-<span id="SW_SHOW"></span><span id="sw_show"></span>**Anzeige von SW \_**
-
-
-</dt> <dd>
-
-Aktiviert das Fenster und zeigt es in seiner aktuellen Größe und Position an.
-
-</dd> <dt>
-
-<span id="SW_SHOWDEFAULT"></span><span id="sw_showdefault"></span>
-
-<span id="SW_SHOWDEFAULT"></span><span id="sw_showdefault"></span>**SW \_ Show default**
-
-
-</dt> <dd>
-
-Legt den Ansichts Zustand basierend auf dem \_ in der [**STARTUPINFO**](/windows/win32/api/processthreadsapi/ns-processthreadsapi-startupinfoa) -Struktur angegebenen SW-Flag fest, das von dem Programm, das die Anwendung gestartet hat, an die Funktion " [**deateprocess**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessa) " übergeben wurde Eine Anwendung sollte [**ShowWindow**](/windows/win32/api/winuser/nf-winuser-showwindow) mit diesem Flag aufgerufen werden, um den anfänglichen Anzeige Zustand des Hauptfensters festzulegen.
-
-</dd> <dt>
-
-<span id="SW_SHOWMAXIMIZED"></span><span id="sw_showmaximized"></span>
-
-<span id="SW_SHOWMAXIMIZED"></span><span id="sw_showmaximized"></span>**SW \_ showmaximized**
-
-
-</dt> <dd>
-
-Aktiviert das Fenster und zeigt es als maximiertes Fenster an.
-
-</dd> <dt>
-
-<span id="SW_SHOWMINIMIZED"></span><span id="sw_showminimized"></span>
-
-<span id="SW_SHOWMINIMIZED"></span><span id="sw_showminimized"></span>**SW \_ showminimi**
-
-
-</dt> <dd>
-
-Aktiviert das Fenster und zeigt es als minimiertes Fenster an.
-
-</dd> <dt>
-
-<span id="SW_SHOWMINNOACTIVE"></span><span id="sw_showminnoactive"></span>
-
-<span id="SW_SHOWMINNOACTIVE"></span><span id="sw_showminnoactive"></span>**SW \_ showminnoactive**
-
-
-</dt> <dd>
-
-Zeigt das Fenster als minimiertes Fenster an. Das aktive Fenster bleibt aktiv.
-
-</dd> <dt>
-
-<span id="SW_SHOWNA"></span><span id="sw_showna"></span>
-
-<span id="SW_SHOWNA"></span><span id="sw_showna"></span>**SW- \_ showna**
-
-
-</dt> <dd>
-
-Zeigt das Fenster in seinem aktuellen Zustand an. Das aktive Fenster bleibt aktiv.
-
-</dd> <dt>
-
-<span id="SW_SHOWNOACTIVATE"></span><span id="sw_shownoactivate"></span>
-
-<span id="SW_SHOWNOACTIVATE"></span><span id="sw_shownoactivate"></span>**SW \_ shownoaktivierungs**
-
-
-</dt> <dd>
-
-Zeigt ein Fenster mit der aktuellen Größe und Position an. Das aktive Fenster bleibt aktiv.
-
-</dd> <dt>
-
-<span id="SW_SHOWNORMAL"></span><span id="sw_shownormal"></span>
-
-<span id="SW_SHOWNORMAL"></span><span id="sw_shownormal"></span>**SW \_ Show normal**
-
-
-</dt> <dd>
-
-Aktiviert und zeigt ein Fenster an. Wenn das Fenster minimiert oder maximiert ist, stellt Windows es in seiner ursprünglichen Größe und Position wieder her. Eine Anwendung sollte dieses Flag angeben, wenn das Fenster zum ersten Mal angezeigt wird.
-
-</dd> </dl> </dd> <dt>
 
 *lpfncbwinexec* 
 </dt> <dd>
 
-Geben Sie Folgendes ein: **void \** _
+Typ: **void \***
 
-Rückruffunktion, die verwendet wird, um [_ |*ateprocess* *](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessa) im 16-Bit-Kernel aufzurufen.
+Rückruffunktion, die verwendet wird, um " [**deateprocess**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessa) " im 16-Bit-Kernel aufzurufen.
 
 </dd> </dl>
 
@@ -320,7 +188,7 @@ Gibt einen Wert zurück, der größer als 32 ist, wenn erfolgreich, oder einen F
 
 | Rückgabecode                                                                                             | Beschreibung                                                                                                                                                              |
 |---------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**1,0**</dt> </dl>                        | Das Betriebssystem verfügt nicht über genügend Arbeitsspeicher oder Ressourcen.<br/>                                                                                                           |
+| <dl> <dt>**0**</dt> </dl>                        | Das Betriebssystem verfügt nicht über genügend Arbeitsspeicher oder Ressourcen.<br/>                                                                                                           |
 | <dl> <dt>**Fehler \_ Datei \_ nicht \_ gefunden.**</dt> </dl>  | Die angegebene Datei wurde nicht gefunden.<br/>                                                                                                                             |
 | <dl> <dt>**der Fehler \_ Pfad wurde \_ nicht \_ gefunden.**</dt> </dl>  | Der angegebene Pfad wurde nicht gefunden.<br/>                                                                                                                             |
 | <dl> <dt>**fehlerhaftes \_ \_ Format**</dt> </dl>       | Die exe-Datei ist ungültig (keine Win32. exe-Datei oder Fehler im exe-Image).<br/>                                                                                             |
@@ -355,7 +223,7 @@ Zum Abrufen von Informationen über die Anwendung, die als Ergebnis des Aufrufs 
 
  
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
@@ -367,7 +235,7 @@ Zum Abrufen von Informationen über die Anwendung, die als Ergebnis des Aufrufs 
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

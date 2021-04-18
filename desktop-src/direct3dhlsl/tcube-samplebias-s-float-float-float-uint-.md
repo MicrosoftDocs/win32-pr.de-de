@@ -1,6 +1,6 @@
 ---
-title: 'Samplebias:: samplebias (S, float, float, float, uint)-Funktion'
-description: 'Gibt eine Textur aus, nachdem der Wert "Bias" auf die MipMap-Ebene angewendet wurde, mit einem optionalen Wert, mit dem Sample Level-of-Detail-Werte (LOD) an eine Klammer übergeben werden. Gibt den Status des Vorgangs zurück. | Samplebias:: samplebias (S, float, float, float, uint)-Funktion'
+title: 'Samplebias:: samplebias (S, float, float, float, uint)-Funktion für texturecube'
+description: 'Die samplebias:: samplebias (S, float, float, float, uint)-Funktion für texturecube gibt eine Textur aus, nachdem der Bias-Wert auf die MipMap-Ebene angewendet wurde.'
 ms.assetid: A2F10B9B-5DF2-4389-83A9-F6A29781BF0A
 keywords:
 - Samplebias-Funktion HLSL
@@ -13,14 +13,14 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 2f3a994d7b0f0c2d55ae3203db9f3205932c1a25
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 116749acdc23bb8ac2fd057139bf8ef7c8f5ddcc
+ms.sourcegitcommit: 0e611cdff84ff9f897c59e4e1d2b2d134bc4e133
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104219293"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106368704"
 ---
-# <a name="samplebiassamplebiassfloatfloatfloatuint-function"></a>Samplebias:: samplebias (S, float, float, float, uint)-Funktion
+# <a name="samplebiassamplebiassfloatfloatfloatuint-function-for-texturecube"></a>Samplebias:: samplebias (S, float, float, float, uint)-Funktion für texturecube
 
 Gibt eine Textur aus, nachdem der Wert "Bias" auf die MipMap-Ebene angewendet wurde, mit einem optionalen Wert, mit dem Sample Level-of-Detail-Werte (LOD) an eine Klammer übergeben werden. Gibt den Status des Vorgangs zurück.
 
@@ -107,7 +107,7 @@ Typ: **[ **DXGI- \_ Format**](/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi
 
 Das Textur Format, bei dem es sich um einen der im [**DXGI- \_ Format**](/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format)aufgelisteten typisierten Werte handelt.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

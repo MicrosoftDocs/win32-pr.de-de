@@ -9,16 +9,18 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: c613a3f0068537733961b58a8a4c2b4528d21f25
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 04f3729bbeda5b0677da9d52e595e621523ff2d1
+ms.sourcegitcommit: 0e611cdff84ff9f897c59e4e1d2b2d134bc4e133
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104309576"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106368283"
 ---
 # <a name="unpacking-and-packing-dxgi_format-for-in-place-image-editing"></a>Entpacken und Verpacken des DXGI- \_ Formats für In-Place Bildbearbeitung
 
 Die D3DX \_ dxgiformatconvert. INL-Datei enthält Funktionen für Inline Formatkonvertierungen, die Sie im COMPUTE-Shader oder Pixel-Shader auf Direct3D 11-Hardware verwenden können. Sie können diese Funktionen in der Anwendung verwenden, um gleichzeitig Lese-und Schreibvorgänge für eine Textur auszuführen. Das heißt, Sie können eine direkte Bildbearbeitung ausführen. Um diese Funktionen für die Inline Formatkonvertierung zu verwenden, schließen \_ Sie die Datei D3DX dxgiformatconvert. INL in Ihre Anwendung ein.
+
+> Der D3DX \_ dxgiformatconvert. INL-Header wird im Legacy-DirectX-SDK ausgeliefert. Es ist auch im nuget-Paket [Microsoft. dxsdk. D3DX](https://www.nuget.org/packages/Microsoft.DXSDK.D3DX) enthalten.
 
 Die unsortierter Zugriffs Ansicht (UAV) von Direct3D 11 einer Texture1D-, Texture2D-oder Texture3D-Ressource unterstützt den zufälligen Zugriff auf Lese-und Schreibvorgänge von einem Compute-Shader oder Pixel-Shader in den Arbeitsspeicher. Allerdings unterstützt Direct3D 11 gleichzeitige Lese-und Schreibvorgänge für das DXGI- \_ Format \_ R32 \_ uint. Beispielsweise unterstützt Direct3D 11 nicht gleichzeitiges Lesen von und Schreiben in andere, nützlichere Formate, wie z. b. DXGI- \_ Format \_ R8G8B8A8 \_ unorm. Sie können nur einen UAV-Vorgang für den zufälligen Zugriff auf solche anderen Formate verwenden, oder Sie können nur einen Shader-Ressourcenansicht (SRV) für den zufälligen Zugriff verwenden, der aus solchen anderen Formaten gelesen wird. Die Hardware für die Format Konvertierung ist nicht verfügbar, um gleichzeitig Lese-und Schreibvorgänge in solchen anderen Formaten auszuführen.
 
@@ -63,7 +65,7 @@ Das DXGI- \_ Format \_ R10G10B10A2 \_ unorm-Format ist beispielsweise ein Nachfo
 > [!Note]  
 > Wenn der Shader nur in eine UAV schreiben oder als SRV gelesen werden muss, ist keiner dieser Konvertierungs Aufgaben erforderlich, da Sie vollständig typisierte UAVs oder Srvs verwenden können. Die in D3DX \_ dxgiformatconvert. INL bereitgestellten formatkonvertierungs Funktionen sind möglicherweise nur nützlich, wenn Sie gleichzeitige Lese-und Schreibvorgänge in eine UAV einer Textur durchführen möchten.
 
- 
+ 
 
 Im folgenden finden Sie eine Liste der formatkonvertierungs Funktionen, die in der \_ Datei D3DX dxgiformatconvert. INL enthalten sind. Diese Funktionen werden nach dem DXGI \_ -Format kategorisiert, das Sie entpacken und Verpacken. Jedes der unterstützten Formate wird von einem der im vorherigen Szenario aufgelisteten typlosen Formate abgeleitet und unterstützt die Umwandlung in das DXGI- \_ Format \_ R32 \_ uint als UAV.
 
@@ -123,7 +125,7 @@ UINT     D3DX_FLOAT4_to_R8G8B8A8_UNORM_SRGB(hlsl_precise XMFLOAT4 unpackedInput)
 > [!Note]  
 > Die \_ inexact-Type-Funktion verwendet shaderanweisungen ohne hohe Genauigkeit, um die genaue Antwort zu erhalten. Die Alternative Funktion verwendet eine im Shader gespeicherte Nachschlage Tabelle, um eine exakte sRGB->float-Konvertierung anzugeben.
 
- 
+ 
 
 </dd> <dt>
 
@@ -194,7 +196,7 @@ UINT     D3DX_FLOAT4_to_R8G8B8A8_UNORM_SRGB(hlsl_precise XMFLOAT4 unpackedInput)
 > [!Note]  
 > Die \_ inexact-Type-Funktion verwendet shaderanweisungen ohne hohe Genauigkeit, um die genaue Antwort zu erhalten. Die Alternative Funktion verwendet eine im Shader gespeicherte Nachschlage Tabelle, um eine exakte sRGB->float-Konvertierung anzugeben.
 
- 
+ 
 
 </dd> <dt>
 
@@ -226,7 +228,7 @@ UINT     D3DX_FLOAT3_to_B8G8R8X8_UNORM_SRGB(hlsl_precise XMFLOAT3 unpackedInput)
 > [!Note]  
 > Die \_ inexact-Type-Funktion verwendet shaderanweisungen ohne hohe Genauigkeit, um die genaue Antwort zu erhalten. Die Alternative Funktion verwendet eine im Shader gespeicherte Nachschlage Tabelle, um eine exakte sRGB->float-Konvertierung anzugeben.
 
- 
+ 
 
 </dd> <dt>
 
@@ -307,9 +309,9 @@ UINT   D3DX_INT2_to_R16G16_SINT(XMINT2 unpackedInput)
 [Programmieranleitung für HLSL](dx-graphics-hlsl-pguide.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 
