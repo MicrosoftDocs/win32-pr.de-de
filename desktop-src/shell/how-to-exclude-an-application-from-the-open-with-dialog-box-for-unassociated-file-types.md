@@ -1,0 +1,78 @@
+---
+description: Ausschließen einer Anwendung aus dem Dialogfeld Öffnen mit für den nicht zugeordneten Dateityp.
+title: Ausschließen einer Anwendung aus dem Dialog Feld "Öffnen mit" für nicht zugeordnete Dateitypen
+ms.topic: article
+ms.date: 05/31/2018
+ms.openlocfilehash: 9443416e95fca112623d487bf58f4fce1d51d13d
+ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "104554119"
+---
+# <a name="how-to-exclude-an-application-from-the-open-with-dialog-box-for-unassociated-file-types"></a><span data-ttu-id="48d3a-103">Ausschließen einer Anwendung aus dem Dialog Feld "Öffnen mit" für nicht zugeordnete Dateitypen</span><span class="sxs-lookup"><span data-stu-id="48d3a-103">How to Exclude an Application from the Open With Dialog Box for Unassociated File Types</span></span>
+
+<span data-ttu-id="48d3a-104">Wenn ein Benutzer versucht, eine Datei zu öffnen, die kein Mitglied eines registrierten Dateityps ist (d. h. ein Unbekannter Dateityp), oder wenn ein Benutzer **Öffnen mit** oder **Öffnen mit-> die Option Standardprogramm** aus dem Kontextmenü einer Datei auswählen, zeigt die Shell ein Untermenü oder Dialogfeld an, in dem der Benutzer das zum Öffnen der Datei verwendete Programm angeben kann.</span><span class="sxs-lookup"><span data-stu-id="48d3a-104">When a user attempts to open a file that is not a member of any registered file type (that is, an unknown file type), or when a user selects **Open with** or **Open with -> Choose default program** from a file's shortcut menu, the Shell presents a submenu or dialog box that enables the user to specify the program used to open the file.</span></span>
+
+<span data-ttu-id="48d3a-105">Standardmäßig wird jede Anwendung, die als Unterschlüssel von **HKEY \_ - \_ Klassen**-Stamm \\ **Anwendungen** registriert ist, im Dialogfeld **Öffnen mit** angezeigt.</span><span class="sxs-lookup"><span data-stu-id="48d3a-105">By default, any application registered as a subkey of **HKEY\_CLASSES\_ROOT**\\**Applications** is presented in the **Open with** dialog box.</span></span> <span data-ttu-id="48d3a-106">Diese Anwendungen werden in **geöffnet** angezeigt, unabhängig davon, ob die Anwendung für die Behandlung des Dateityps registriert ist.</span><span class="sxs-lookup"><span data-stu-id="48d3a-106">These applications are presented in **Open with** regardless of whether the application is registered to handle the file type.</span></span>
+
+<span data-ttu-id="48d3a-107">Verwenden Sie eines der beiden in diesem Thema beschriebenen Verfahren, um zu verhindern, dass eine Anwendung im Dialogfeld **Öffnen mit** angezeigt wird, wenn die Anwendung nicht zum Öffnen bestimmter Dateitypen verwendet werden kann.</span><span class="sxs-lookup"><span data-stu-id="48d3a-107">To prevent an application from appearing in the **Open with** dialog box when the application should not or cannot be used to open certain file types, use one of the two techniques described in this topic.</span></span>
+
+## <a name="instructions"></a><span data-ttu-id="48d3a-108">Instructions</span><span class="sxs-lookup"><span data-stu-id="48d3a-108">Instructions</span></span>
+
+### <a name="step-1"></a><span data-ttu-id="48d3a-109">Schritt 1:</span><span class="sxs-lookup"><span data-stu-id="48d3a-109">Step 1:</span></span>
+
+<span data-ttu-id="48d3a-110">Fügen Sie dem Unterschlüssel der Anwendung einen noopenwith-Eintrag hinzu.</span><span class="sxs-lookup"><span data-stu-id="48d3a-110">Add a NoOpenWith entry to the application's subkey.</span></span> <span data-ttu-id="48d3a-111">Wenn eine Anwendung einen Dateityp verwendet, zeichnet Windows diese Informationen auf, um die Liste der **empfohlenen Programme** zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="48d3a-111">When an application uses a file type, Windows records that information to build the **Recommended Programs** list.</span></span> <span data-ttu-id="48d3a-112">Diese Liste wird im Untermenü **Öffnen mit** angezeigt, wie im folgenden Screenshot dargestellt.</span><span class="sxs-lookup"><span data-stu-id="48d3a-112">This list is presented in the **Open with** submenu as shown in the following screen shot.</span></span>
+
+![Screenshot des Kontextmenüs mit dem angezeigten Untermenü "Öffnen mit"](images/file-assoc/openwithsubmenu.png)
+
+<span data-ttu-id="48d3a-114">Diese empfohlenen Anwendungen werden auch im Abschnitt **Empfohlene Programme** des Dialog Felds **Öffnen mit** angezeigt, wie im folgenden Screenshot gezeigt.</span><span class="sxs-lookup"><span data-stu-id="48d3a-114">These recommended applications are also shown in the **Recommended Programs** portion of the **Open with** dialog box as shown in the following screen shot.</span></span>
+
+![Screenshot des Dialog Felds "Öffnen mit" mit empfohlenen Programmen](images/file-assoc/openwithdialog.png)
+
+> [!Note]  
+> <span data-ttu-id="48d3a-116">Wenn sich eine Anwendung für den Dateityp in [OpenWithList](fa-file-types.md) oder OpenWithProgIds registriert hat, wird Sie in der Liste **Empfohlene Programme** angezeigt, auch wenn der Eintrag noopenwith festgelegt ist.</span><span class="sxs-lookup"><span data-stu-id="48d3a-116">If an application has registered itself in the [OpenWithList](fa-file-types.md) or OpenWithProgIDs for the file type, it will appear in the **Recommended Programs** list even if the NoOpenWith entry is set.</span></span> <span data-ttu-id="48d3a-117">Beachten Sie auch, dass ein Benutzer unabhängig davon, ob eine Anwendung in einer Liste von empfohlenen Programmen angeboten wird, manuell zu einer beliebigen ausführbaren Datei navigieren kann.</span><span class="sxs-lookup"><span data-stu-id="48d3a-117">Also, remember that regardless of whether an application is offered in a list of recommended programs, a user can manually browse to any executable file.</span></span>
+
+ 
+
+<span data-ttu-id="48d3a-118">Anwendungen können diese Nachverfolgung deaktivieren, indem Sie unter dem Unterschlüssel der Anwendung einen noopenwith-Wert angeben.</span><span class="sxs-lookup"><span data-stu-id="48d3a-118">Applications can disable this tracking by specifying a NoOpenWith value under the application's subkey.</span></span>
+
+<span data-ttu-id="48d3a-119">Der noopenwith-Eintrag ist ein leerer **reg \_ SZ** -Wert, wie im folgenden Beispiel gezeigt.</span><span class="sxs-lookup"><span data-stu-id="48d3a-119">The NoOpenWith entry is an empty **REG\_SZ** value as shown in the following example.</span></span>
+
+```
+HKEY_CLASSES_ROOT
+   Applications
+      MyProgram.exe
+         NoOpenWith
+```
+
+<span data-ttu-id="48d3a-120">Das Festlegen des noopenwith-Eintrags hat ebenfalls folgende Auswirkungen:</span><span class="sxs-lookup"><span data-stu-id="48d3a-120">Setting the NoOpenWith entry also has these effects:</span></span>
+
+-   <span data-ttu-id="48d3a-121">Verhindert, dass eine Datei mithilfe von Drag & amp; Drop an die Sprung Liste der Anwendung angehefnt wird, es sei denn, die Anwendung wird speziell für die Verarbeitung dieses Dateityps registriert.</span><span class="sxs-lookup"><span data-stu-id="48d3a-121">Prevents pinning a file to the application's Jump List through drag-and-drop, unless the application is specifically registered to handle that file type.</span></span>
+-   <span data-ttu-id="48d3a-122">Verhindert, dass das Dialogfeld "allgemeine Datei" und alle Aufrufe der Funktion " [**SHAddToRecentDocs**](/windows/desktop/api/shlobj_core/nf-shlobj_core-shaddtorecentdocs) " eine beliebige Datei zur Sprung Liste der Anwendung hinzufügen, es sei denn, die Anwendung ist speziell für die Verarbeitung dieses Dateityps registriert.</span><span class="sxs-lookup"><span data-stu-id="48d3a-122">Prevents the common file dialog box and any call to the [**SHAddToRecentDocs**](/windows/desktop/api/shlobj_core/nf-shlobj_core-shaddtorecentdocs) function from adding any file to the application's Jump List, unless the application is specifically registered to handle that file type.</span></span>
+
+### <a name="step-2"></a><span data-ttu-id="48d3a-123">Schritt 2:</span><span class="sxs-lookup"><span data-stu-id="48d3a-123">Step 2:</span></span>
+
+<span data-ttu-id="48d3a-124">Die zweite Möglichkeit, um zu verhindern, dass eine Anwendung im Dialogfeld **Öffnen mit** angezeigt wird, ist die Verwendung des unter Schlüssels **SupportedTypes** , um die Erweiterungen von Dateitypen, die von der Anwendung geöffnet werden können, explizit aufzulisten.</span><span class="sxs-lookup"><span data-stu-id="48d3a-124">The second way to prevent an application from appearing in the **Open with** dialog box is to use the **SupportedTypes** subkey to explicitly list the extensions of file types that the application can open.</span></span> <span data-ttu-id="48d3a-125">Dadurch wird verhindert, dass die Anwendung im Dialogfeld **Öffnen mit** für Dateitypen angezeigt wird, die nicht geöffnet werden können.</span><span class="sxs-lookup"><span data-stu-id="48d3a-125">This prevents the application from appearing in the **Open with** dialog box for file types that it cannot open.</span></span> <span data-ttu-id="48d3a-126">Außerdem bewirkt dies, dass die Anwendung in der Liste der **empfohlenen Programme** angezeigt wird, wie bereits erläutert.</span><span class="sxs-lookup"><span data-stu-id="48d3a-126">It also causes the application to appear in the **Recommended Programs** list as discussed previously.</span></span>
+
+<span data-ttu-id="48d3a-127">Diese Methode ist besonders nützlich, wenn eine Anwendung eine Datei als bestimmten Dateityp speichern kann, diesen Dateityp jedoch nicht öffnen kann.</span><span class="sxs-lookup"><span data-stu-id="48d3a-127">This method is particularly useful if an application can save a file as a certain file type but cannot open that file type.</span></span> <span data-ttu-id="48d3a-128">Eine Anwendung sollte auch das Flag "Fos \_ dontaddtor ecent" über [**ifiledialog:: SetOptions**](/windows/win32/api/shobjidl_core/nf-shobjidl_core-ifiledialog-setoptions) festlegen, wenn das Dialogfeld " **Speichern** " aufgerufen wird.</span><span class="sxs-lookup"><span data-stu-id="48d3a-128">An application should also set the FOS\_DONTADDTORECENT flag through [**IFileDialog::SetOptions**](/windows/win32/api/shobjidl_core/nf-shobjidl_core-ifiledialog-setoptions) when calling the **Save** dialog box.</span></span> <span data-ttu-id="48d3a-129">Dadurch wird verhindert, dass das Element dem **letzten** oder **häufigen** Teil einer Sprung Liste hinzugefügt wird.</span><span class="sxs-lookup"><span data-stu-id="48d3a-129">This keeps the item from being added to the **Recent** or **Frequent** portions of a Jump List.</span></span> <span data-ttu-id="48d3a-130">Außerdem wird die Nachverfolgung der Anwendung unter [OpenWithList](fa-file-types.md)blockiert.</span><span class="sxs-lookup"><span data-stu-id="48d3a-130">It also blocks the application from being tracked under [OpenWithList](fa-file-types.md).</span></span>
+
+<span data-ttu-id="48d3a-131">Jede unterstützte Erweiterung wird als Eintrag unter dem **SupportedTypes** -Unterschlüssel hinzugefügt, wie im folgenden Beispiel gezeigt.</span><span class="sxs-lookup"><span data-stu-id="48d3a-131">Each supported extension is added as an entry under the **SupportedTypes** subkey as shown in the following example.</span></span> <span data-ttu-id="48d3a-132">Die Einträge sind vom Typ **reg \_ SZ** oder **reg \_ null** ohne zugeordnete Werte.</span><span class="sxs-lookup"><span data-stu-id="48d3a-132">The entries are of type **REG\_SZ** or **REG\_NULL**, with no associated values.</span></span>
+
+```
+HKEY_CLASSES_ROOT
+   Applications
+      ApplicationName
+         SupportedTypes
+            .ext1
+            .ext2
+            .ext3
+```
+
+<span data-ttu-id="48d3a-133">Wenn ein **SupportedTypes** -Unterschlüssel angegeben wird, können nur Dateien mit diesen Erweiterungen an die Sprung Liste der Anwendung angehefteter oder in der Liste mit **den neuesten** oder **häufigen** Zielen einer Anwendung nachverfolgt werden.</span><span class="sxs-lookup"><span data-stu-id="48d3a-133">If a **SupportedTypes** subkey is provided, only files with those extensions are eligible for pinning to the application's Jump List or for being tracked in an application's **Recent** or **Frequent** destinations list.</span></span>
+
+<span data-ttu-id="48d3a-134">Der noopenwith-Eintrag überschreibt den **SupportedTypes** -Unterschlüssel und blendet die Anwendung im Dialogfeld **Öffnen mit** aus.</span><span class="sxs-lookup"><span data-stu-id="48d3a-134">The NoOpenWith entry overrides the **SupportedTypes** subkey and hides the application in the **Open with** dialog box.</span></span>
+
+ 
+
+ 
