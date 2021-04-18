@@ -1,0 +1,42 @@
+---
+description: Erweiterte Zeilen Dienste (oder gerätespezifische Zeilen Dienste) enthalten alle vom Dienstanbieter definierten Erweiterungen für TSPI.
+ms.assetid: 23519d23-27bd-422e-b3c4-00e0d0d93f9e
+title: Erweiterte Zeilen Dienste
+ms.topic: article
+ms.date: 05/31/2018
+ms.openlocfilehash: dbc1ce08d25633d33fd518d8686271c198ca5034
+ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "106357742"
+---
+# <a name="extended-line-services"></a>Erweiterte Zeilen Dienste
+
+Erweiterte Zeilen Dienste (oder gerätespezifische Zeilen Dienste) enthalten alle vom Dienstanbieter definierten Erweiterungen für TSPI. TSPI definiert einen Mechanismus, mit dem Anbieter von Dienstanbietern die telefoniespi mithilfe von gerätespezifischen Erweiterungen erweitern können. TSPI definiert nur den Erweiterungsmechanismus und bietet dadurch Zugriff auf gerätespezifische Erweiterungen, aber TSPI definiert das Verhalten nicht. Das Verhalten wird vom Dienstanbieter vollständig definiert.
+
+Der telefoniespi besteht aus skalaren und Bitflag-Konstanten Definitionen, Datenstrukturen, Funktionen und Rückruf Nachrichten. Es werden Prozeduren definiert, mit denen ein Anbieter die meisten dieser wie folgt erweitern kann.
+
+Für erweiterbare skalare Daten Konstanten kann ein Anbieter von Dienstanbietern neue Werte in einem angegebenen Bereich definieren. Da die meisten Daten Konstanten **DWORD** s sind, ist in der Regel der Bereich 0x00000000 bis 0x7FFFFFFF für allgemeine zukünftige Erweiterungen reserviert, während 0x80000000 bis 0xffffffff für herstellerspezifische Erweiterungen verfügbar sind. Es wird davon ausgegangen, dass ein Anbieter Werte definieren würde, bei denen es sich um natürliche Erweiterungen der von TSPI definierten Datentypen handelt.
+
+Für erweiterbare Bitflag-Daten Konstanten kann ein Anbieter von Dienstanbietern neue Werte für angegebene Bits definieren. Da die meisten Bitflag-Konstanten **DWORD** s sind, sind in der Regel eine bestimmte Anzahl von niedrigeren Bits für allgemeine Erweiterungen reserviert, während die restlichen oberen Bits für herstellerspezifische Erweiterungen verfügbar sind. Allgemeine Bitflags werden aus Bit 0 (null) zugewiesen. herstellerspezifische Erweiterungen sollten von Bit 31 nach unten zugewiesen werden. Dies bietet maximale Flexibilität beim Zuweisen von Bitpositionen zu allgemeinen Erweiterungen im Vergleich zu herstellerspezifischen Erweiterungen. Es wird erwartet, dass ein Anbieter neue Werte definiert, bei denen es sich um natürliche Erweiterungen der von TSPI definierten Bitflags handelt.
+
+Erweiterbare Datenstrukturen verfügen über ein Feld mit variabler Größe, das für die gerätespezifische Verwendung reserviert ist. Bei der Größenanpassung bestimmt der Dienstanbieter die Menge der Informationen und die Interpretation. Ein Anbieter, der ein Geräte spezifisches Feld definiert, wird davon ausgegangen, dass diese natürlichen Erweiterungen der ursprünglichen Datenstruktur, die von TSPI definiert wird, vorgenommen werden.
+
+Zwei Funktionen, [**TSPI \_ linedevspecific**](/windows/win32/api/tspi/nf-tspi-tspi_linedevspecific) und [**TSPI \_ linedevspecificfeature**](/windows/win32/api/tspi/nf-tspi-tspi_linedevspecificfeature)und vier Verwandte Meldungen, [**line \_ DevSpecific**](/previous-versions/windows/desktop/legacy/ms725225(v=vs.85)), [**line \_ calldevspecific**](line-calldevspecific.md), [**line \_ devspecificfeature**](/previous-versions/windows/desktop/legacy/ms725227(v=vs.85))und [**line \_ calldevspecificfeature**](line-calldevspecificfeature.md)bieten einen herstellerspezifischen Erweiterungsmechanismus. Der **TSPI- \_ linedevspecific** -Vorgang und zugehörige Zeilen- \_ DevSpecific-und line \_ calldevspecific-Meldungen ermöglichen der Tapi32.dll Client Anwendung den Zugriff auf gerätespezifische Zeilen-, Adress-oder Aufruf Features, die in den Basic-oder ergänzenden Telefoniediensten nicht verfügbar sind. Das Parameter Profil der [**TSPI \_ linedevspecific**](/windows/win32/api/tspi/nf-tspi-tspi_linedevspecific) -Funktion ist generisch, da die Parameter von TSPI kaum interpretiert werden. Geräte handle-Parameter haben eine durch TSPI definierte Bedeutung und werden zwischen der Anwendung und dem Dienstanbieter entsprechend übersetzt. Generische Parameter werden einfach unverändert übermittelt. Die Interpretation der generischen Parameter wird vom Dienstanbieter definiert und muss von allen Anwendungen verstanden werden, die Sie verwenden. Eine Anwendung, die auf gerätespezifischen Erweiterungen basiert, funktioniert in der Regel nicht mit anderen Dienstanbietern. Anwendungen, die vollständig in die grundlegenden und ergänzenden Telefoniedienste geschrieben wurden, sollten jedoch mit dem erweiterten Dienstanbieter zusammenarbeiten.
+
+Die TAPI-Implementierung der gerätespezifischen Funktionen und Nachrichten ist "Pass-Through". TAPI überprüft oder ändert die generischen gerätespezifischen Parameter und Puffer nicht, aber es werden nicht transparente handle-Werte auf Anwendungsebene (auf der TAPI-Ebene verwendet) auf nicht transparente handle-Werte auf Dienstanbieter Ebene (auf der TSPI-Ebene verwendet) zugeordnet.
+
+Bezüglich der Übersetzung von Handles hat die Passthrough-Art der generischen Teile von gerätespezifischen Erweiterungen eine wichtige Folge. Ein Dienstanbieter hat keine Möglichkeit, die auf der TSPI-Ebene verwendeten Handles mit denen auf der TAPI-Ebene in Beziehung zu setzen, es sei denn, Sie übergeben Sie durch die vordefinierten handle-Parameter und-Felder. Alle Handles, die in den generischen Erweiterungsbereich eingefügt werden, werden nicht von TAPI übersetzt, da Sie zwischen dem Anwendungs-und Dienstanbieter übermittelt werden. Der Designer einer Dienstanbieter Erweiterung sollte in der Regel keine Erweiterungen definieren, die Handles auf diese Weise übergeben.
+
+Der geeignete Ansatz beim Definieren einer gerätespezifischen Erweiterung, die auf bestimmte Geräte ohne Verwendung von Handles verweisen muss, besteht darin, mithilfe ihrer absoluten Geräte Identifizierung darauf zu verweisen. Der Geräte Bezeichner, der zum Öffnen einer Zeile auf der TAPI-Ebene verwendet wird, ist beispielsweise genau derselbe Wert, der auf der TSPI-Ebene verwendet wird, um die Zeile zu öffnen. Analog dazu verwendet ein Tupel (Line Device Identifier, Address Identifier), das eine Adresse auf der TAPI-Ebene eindeutig identifiziert, dieselben Werte, um das gleiche auf der TSPI-Ebene zu identifizieren.
+
+Zur einfacheren Bereitstellung wird auch eine speziellere escapefunktion bereitgestellt. Sie ähnelt [**TSPI \_ linedevspecific**](/windows/win32/api/tspi/nf-tspi-tspi_linedevspecific), legt aber die Interpretation einiger Parameter fest. Die [**TSPI \_ linedevspecificfeature**](/windows/win32/api/tspi/nf-tspi-tspi_linedevspecificfeature) -Funktion und die zugeordneten [**Zeilen- \_ devspecificfeature**](/previous-versions/windows/desktop/legacy/ms725227(v=vs.85)) -und [**line \_ calldevspecificfeature**](line-calldevspecificfeature.md) -Meldungen ermöglichen TAPI das Emulieren von Schaltflächen auf der Telefonnummer der Zeile. Wenn featuretelefone und die Bedeutungen ihrer Schaltflächen Hersteller spezifisch sind, ist der Funktionsaufruf mit **TSPI \_ linedevspecificfeature** ebenfalls Anbieter spezifisch.
+
+Zusammenfassend gesagt, ist die [**TSPI \_ linedevspecificfeature**](/windows/win32/api/tspi/nf-tspi-tspi_linedevspecificfeature) -Funktion eine gerätespezifische escapefunktion, um das Senden von Switchfeatures an den Switch zuzulassen. Die [**Zeile \_ calldevspecificfeature**](line-calldevspecificfeature.md) ist eine gerätespezifische Nachricht, die an den Rückruf der Anwendung gesendet wird. Dies ist ein Hinweis auf Aufruf bezogene Features, die an den Switch gesendet werden. [**Zeile \_ Devspecificfeature**](/previous-versions/windows/desktop/legacy/ms725227(v=vs.85)) ist eine gerätespezifische Nachricht, die an den Rückruf der Anwendung gesendet wird, als Angabe von Zeilen bezogenen Features, die an den Switch gesendet werden.
+
+Es gibt keine zentrale Registrierung für Hersteller Bezeichner. Stattdessen wird ein eindeutiger bezeichnergenerator mit dem Namen Extidgen.exe als Teil von TSPI zur Verfügung gestellt. Der Hersteller, der einen Satz Geräte spezifischer Erweiterungen entwirft, verwendet dieses Hilfsprogramm, um einen eindeutigen Bezeichner für diese Erweiterungen zu erhalten.
+
+ 
+
+ 
