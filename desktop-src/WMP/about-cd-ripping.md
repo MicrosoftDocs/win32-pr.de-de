@@ -1,0 +1,49 @@
+---
+title: Informationen zum CD-Ripping
+description: Informationen zum CD-Ripping
+ms.assetid: 1a179284-2909-4fc0-82be-996794ee4f31
+keywords:
+- Windows Media Player, CD-einreißen
+- Windows Media Player-Objektmodell, CD-einreißen
+- Objektmodell, CD-einreißen
+- Windows Media Player ActiveX-Steuerelement, CD-einreißen
+- ActiveX-Steuerelement, CD-einreißen
+- Windows Media Player Mobile ActiveX-Steuerelement, CD-einreißen
+- Windows Media Player Mobile, CD-einreißen
+- CD-Ripping, Info
+- einreißen CDs, Info
+ms.topic: article
+ms.date: 05/31/2018
+ms.openlocfilehash: e28769c6af666e510fb97ebc98e44fadc7c3e472
+ms.sourcegitcommit: 48d1c892045445bcbd0f22bafa2fd3861ffaa6e7
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "106338439"
+---
+# <a name="about-cd-ripping"></a><span data-ttu-id="97adb-112">Informationen zum CD-Ripping</span><span class="sxs-lookup"><span data-stu-id="97adb-112">About CD Ripping</span></span>
+
+<span data-ttu-id="97adb-113">Mit dem Windows Media Player 11 SDK werden neue Funktionen zum Kopieren von Audiospuren aus CDs auf den Computer des Benutzers eingeführt.</span><span class="sxs-lookup"><span data-stu-id="97adb-113">The Windows Media Player 11 SDK introduces new functionality for copying audio tracks from CDs to the user's computer.</span></span> <span data-ttu-id="97adb-114">Dieser Vorgang wird als *einreißen* bezeichnet.</span><span class="sxs-lookup"><span data-stu-id="97adb-114">This process is called *ripping*.</span></span>
+
+<span data-ttu-id="97adb-115">Wenn Sie Audiospuren mithilfe der Windows-Media Player-SDK-Schnittstellen durchlaufen, werden die sich ergebenden Musiktitel mit den Einstellungen erstellt, die der Benutzer im Dialogfeld Windows Media Player **Optionen** definiert hat.</span><span class="sxs-lookup"><span data-stu-id="97adb-115">When you rip audio tracks by using the Windows Media Player SDK interfaces, the resulting music tracks are created by using the settings that the user defined in the Windows Media Player **Options** dialog box.</span></span>
+
+<span data-ttu-id="97adb-116">Um die CD-Laufwerke auf dem Computer des Benutzers aufzulisten, verwenden Sie die **iwmpcdromcollection** -Schnittstelle.</span><span class="sxs-lookup"><span data-stu-id="97adb-116">To enumerate the CD drives on the user's computer, use the **IWMPCdromCollection** interface.</span></span> <span data-ttu-id="97adb-117">Sie rufen einen Zeiger auf diese Schnittstelle ab, indem Sie [iwmpcore:: get \_ cdromcollection](/previous-versions/windows/desktop/api/wmp/nf-wmp-iwmpcore-get_cdromcollection)aufrufen.</span><span class="sxs-lookup"><span data-stu-id="97adb-117">You retrieve a pointer to this interface by calling [IWMPCore::get\_cdromCollection](/previous-versions/windows/desktop/api/wmp/nf-wmp-iwmpcore-get_cdromcollection).</span></span> <span data-ttu-id="97adb-118">Mithilfe der Methoden " **count** " und " **Item** " können Sie die Auflistung durchlaufen, um einen **iwmpcdrom** -Schnittstellen Zeiger für jedes CD-Laufwerk auf dem Computer des Benutzers abzurufen.</span><span class="sxs-lookup"><span data-stu-id="97adb-118">By using the **count** and **item** methods, you can iterate the collection to retrieve an **IWMPCdrom** interface pointer for each CD drive on the user's computer.</span></span> <span data-ttu-id="97adb-119">Die **iwmpcdrom** -Schnittstelle stellt ein einzelnes CD-Laufwerk dar.</span><span class="sxs-lookup"><span data-stu-id="97adb-119">The **IWMPCdrom** interface represents an individual CD drive.</span></span> <span data-ttu-id="97adb-120">Bevor Sie mit dem Einreißen einer CD beginnen, müssen Sie zuerst **QueryInterface** über einen **iwmpcdrom** -Zeiger aufrufen, um einen Zeiger auf die **iwmpcdromrip** -Schnittstelle abzurufen.</span><span class="sxs-lookup"><span data-stu-id="97adb-120">Before you begin ripping a CD, you must first call **QueryInterface** through an **IWMPCdrom** pointer to retrieve a pointer to the **IWMPCdromRip** interface.</span></span>
+
+<span data-ttu-id="97adb-121">Um den einreißen-Vorgang zu starten, nennen Sie einfach [iwmpcdromrip:: startrip](/previous-versions/windows/desktop/api/wmp/nf-wmp-iwmpcdromrip-startrip).</span><span class="sxs-lookup"><span data-stu-id="97adb-121">To start the ripping operation, simply call [IWMPCdromRip::startRip](/previous-versions/windows/desktop/api/wmp/nf-wmp-iwmpcdromrip-startrip).</span></span> <span data-ttu-id="97adb-122">Sie können den Fortschritt des einreißen-Vorgangs überwachen, indem Sie in regelmäßigen Abständen [iwmpcdromrip:: get \_ ripprogress](/previous-versions/windows/desktop/api/wmp/nf-wmp-iwmpcdromrip-get_ripprogress)aufrufen.</span><span class="sxs-lookup"><span data-stu-id="97adb-122">You can monitor the progress of the ripping operation by periodically calling [IWMPCdromRip::get\_ripProgress](/previous-versions/windows/desktop/api/wmp/nf-wmp-iwmpcdromrip-get_ripprogress).</span></span> <span data-ttu-id="97adb-123">Diese Methode ruft einen Statuswert für den gesamten einreißen-Vorgang ab.</span><span class="sxs-lookup"><span data-stu-id="97adb-123">This method retrieves a progress value for the entire ripping operation.</span></span> <span data-ttu-id="97adb-124">Der abgerufene Wert ist eine Zahl, die den Prozentsatz der abgeschlossenen einreißen darstellt.</span><span class="sxs-lookup"><span data-stu-id="97adb-124">The value retrieved is a number that represents the percentage of ripping completed.</span></span> <span data-ttu-id="97adb-125">Sie können den Status des einreißen-Vorgangs überwachen, indem Sie in regelmäßigen Abständen [iwmpcdromrip:: get \_ ripstate](/previous-versions/windows/desktop/api/wmp/nf-wmp-iwmpcdromrip-get_ripstate)aufrufen.</span><span class="sxs-lookup"><span data-stu-id="97adb-125">You can monitor the state of the ripping operation by periodically calling [IWMPCdromRip::get\_ripState](/previous-versions/windows/desktop/api/wmp/nf-wmp-iwmpcdromrip-get_ripstate).</span></span> <span data-ttu-id="97adb-126">Diese Methode ruft einen [wmpripstate](/previous-versions/windows/desktop/api/wmp/ne-wmp-wmpripstate) -Enumerationswert ab, der angibt, ob der Vorgang gerade ausgeführt wird oder beendet wurde.</span><span class="sxs-lookup"><span data-stu-id="97adb-126">This method retrieves a [WMPRipState](/previous-versions/windows/desktop/api/wmp/ne-wmp-wmpripstate) enumeration value that indicates whether the operation is in progress or stopped.</span></span> <span data-ttu-id="97adb-127">Sie können auch den Status des rippingvorgangs überwachen, indem Sie das [IWMPEvents3:: cdromripstatechange](/previous-versions/windows/desktop/api/wmp/nf-wmp-iwmpevents3-cdromripstatechange) -Ereignis behandeln.</span><span class="sxs-lookup"><span data-stu-id="97adb-127">You can also monitor the state of the ripping operation by handling the [IWMPEvents3::CdromRipStateChange](/previous-versions/windows/desktop/api/wmp/nf-wmp-iwmpevents3-cdromripstatechange) event.</span></span> <span data-ttu-id="97adb-128">Sie sollten darauf achten, den **iwmpcdromrip** -Zeiger (bereitgestellt durch das-Ereignis) mit dem Zeiger zu vergleichen, der den einreißen-Vorgang darstellt, um sicherzustellen, dass das Ereignis durch den Vorgang ausgelöst wurde.</span><span class="sxs-lookup"><span data-stu-id="97adb-128">You should be careful to compare the **IWMPCdromRip** pointer (provided by the event) to the pointer that represents your ripping operation to ensure that the event was raised by your operation.</span></span> <span data-ttu-id="97adb-129">Sie können den einreißen-Vorgang beenden, indem Sie [iwmpcdromrip:: stoprip](/previous-versions/windows/desktop/api/wmp/nf-wmp-iwmpcdromrip-stoprip)aufrufen.</span><span class="sxs-lookup"><span data-stu-id="97adb-129">You can stop the ripping operation by calling [IWMPCdromRip::stopRip](/previous-versions/windows/desktop/api/wmp/nf-wmp-iwmpcdromrip-stoprip).</span></span>
+
+<span data-ttu-id="97adb-130">Zum Empfangen von Fehler Benachrichtigungen zu einem einreißen-Vorgang können Sie das [IWMPEvents3:: cdromripmediaerror](/previous-versions/windows/desktop/api/wmp/nf-wmp-iwmpevents3-cdromripmediaerror) -Ereignis behandeln.</span><span class="sxs-lookup"><span data-stu-id="97adb-130">To receive error notifications about a ripping operation, you can handle the [IWMPEvents3::CdromRipMediaError](/previous-versions/windows/desktop/api/wmp/nf-wmp-iwmpevents3-cdromripmediaerror) event.</span></span> <span data-ttu-id="97adb-131">Wie **cdromripstatechange** stellt dieses Ereignis einen **iwmpcdromrip** -Schnittstellen Zeiger bereit, der den einreißen-Vorgang darstellt, der das Ereignis ausgelöst hat.</span><span class="sxs-lookup"><span data-stu-id="97adb-131">Like **CdromRipStateChange**, this event provides an **IWMPCdromRip** interface pointer that represents the ripping operation that raised the event.</span></span> <span data-ttu-id="97adb-132">Das Ereignis stellt auch einen **IDispatch** -Zeiger bereit, der das Medien Element darstellt, das das Ereignis ausgelöst hat.</span><span class="sxs-lookup"><span data-stu-id="97adb-132">The event also provides an **IDispatch** pointer that represents the media item that raised the event.</span></span> <span data-ttu-id="97adb-133">Sie können **QueryInterface** mithilfe dieses Zeigers aufrufen, um einen **iwmpmedia** -Zeiger abzurufen.</span><span class="sxs-lookup"><span data-stu-id="97adb-133">You can call **QueryInterface** through this pointer to retrieve an **IWMPMedia** pointer.</span></span>
+
+## <a name="related-topics"></a><span data-ttu-id="97adb-134">Zugehörige Themen</span><span class="sxs-lookup"><span data-stu-id="97adb-134">Related topics</span></span>
+
+<dl> <dt>
+
+[<span data-ttu-id="97adb-135">**Informationen zum Player-Objektmodell**</span><span class="sxs-lookup"><span data-stu-id="97adb-135">**About the Player Object Model**</span></span>](about-the-player-object-model.md)
+</dt> </dl>
+
+ 
+
+ 
+
+
+
+
