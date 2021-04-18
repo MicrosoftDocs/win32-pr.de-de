@@ -1,0 +1,128 @@
+---
+UID: NS:directml.DML_ELEMENT_WISE_MODULUS_TRUNCATE_OPERATOR_DESC
+title: DML_ELEMENT_WISE_MODULUS_TRUNCATE_OPERATOR_DESC
+description: Berechnet den C-Modulo-Operator für jedes Paar entsprechender Elemente der Eingabe-Tensoren, wobei das Ergebnis in das entsprechende Element von *outputtensor* platziert wird.
+helpviewer_keywords:
+- DML_ELEMENT_WISE_MODULUS_TRUNCATE_OPERATOR_DESC
+- DML_ELEMENT_WISE_MODULUS_TRUNCATE_OPERATOR_DESC structure
+- direct3d12.dml_element_wise_modulus_truncate_operator_desc
+- directml/DML_ELEMENT_WISE_MODULUS_TRUNCATE_OPERATOR_DESC
+ms.topic: reference
+tech.root: directml
+ms.date: 10/30/2020
+req.header: directml.h
+req.include-header: ''
+req.target-type: Windows
+req.target-min-winverclnt: ''
+req.target-min-winversvr: ''
+req.kmdf-ver: ''
+req.umdf-ver: ''
+req.ddi-compliance: ''
+req.unicode-ansi: ''
+req.idl: ''
+req.max-support: ''
+req.namespace: ''
+req.assembly: ''
+req.type-library: ''
+req.lib: ''
+req.dll: ''
+req.irql: ''
+targetos: Windows
+req.typenames: ''
+req.redist: ''
+f1_keywords:
+- DML_ELEMENT_WISE_MODULUS_TRUNCATE_OPERATOR_DESC
+- directml/DML_ELEMENT_WISE_MODULUS_TRUNCATE_OPERATOR_DESC
+dev_langs:
+- c++
+topic_type:
+- APIRef
+- kbSyntax
+api_type:
+- HeaderDef
+api_location:
+- DirectML.h
+api_name:
+- DML_ELEMENT_WISE_MODULUS_TRUNCATE_OPERATOR_DESC
+ms.openlocfilehash: f7cbfbf8613fb4309c6d336ccd807565d0dae53c
+ms.sourcegitcommit: 3bdf30edb314e0fcd17dc4ddbc70e4ec7d3596e6
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "106351187"
+---
+# <a name="dml_element_wise_modulus_truncate_operator_desc-structure-directmlh"></a>DML_ELEMENT_WISE_MODULUS_TRUNCATE_OPERATOR_DESC-Struktur (directml. h)
+
+Berechnet den C-Modulo-Operator für jedes Paar entsprechender Elemente der Eingabe-Tensoren, wobei das Ergebnis in das entsprechende Element von *outputtensor* platziert wird.
+
+Da der Quotienten auf 0 (null) gerundet wird, hat das Ergebnis dasselbe Vorzeichen wie die Dividende.
+
+```
+f(a, b) = a - (b * trunc(a / b))
+```
+
+Dieser Operator unterstützt die direkte Ausführung. Dies bedeutet, dass *outputtensor* bei der Bindung eine der Eingabe-Tensoren Alias zulässt.
+
+> [!IMPORTANT]
+> Diese API ist als Teil des eigenständigen Redistributable Package von directml verfügbar (siehe [Microsoft. ai. directml](https://www.nuget.org/packages/Microsoft.AI.DirectML/)). Siehe auch [Versionsverlauf der directml](../dml-version-history.md).
+
+## <a name="syntax"></a>Syntax
+```cpp
+struct DML_ELEMENT_WISE_MODULUS_TRUNCATE_OPERATOR_DESC {
+  const DML_TENSOR_DESC *ATensor;
+  const DML_TENSOR_DESC *BTensor;
+  const DML_TENSOR_DESC *OutputTensor;
+};
+```
+
+
+
+## <a name="members"></a>Member
+
+`ATensor`
+
+Typ: Konstante **[DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
+
+Ein tensorflow, der die Links neben Eingaben enthält.
+
+
+`BTensor`
+
+Typ: Konstante **[DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
+
+Ein tensorflow, der die Eingaben auf der rechten Seite enthält.
+
+
+`OutputTensor`
+
+Typ: Konstante **[DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
+
+Der Ausgabe Mandanten, in den die Ergebnisse geschrieben werden sollen.
+
+## <a name="availability"></a>Verfügbarkeit
+Dieser Operator wurde in eingeführt `DML_FEATURE_LEVEL_2_1` .
+
+## <a name="tensor-constraints"></a>Tensor-Einschränkungen
+*Atensor*, *btensor* und *outputtensor* müssen denselben *Datentyp*, jede *DimensionCount* und jede *Größe* aufweisen.
+
+## <a name="tensor-support"></a>Tensor-Unterstützung
+### <a name="dml_feature_level_3_0-and-above"></a>DML_FEATURE_LEVEL_3_0 und höher
+| Tensorflow | Typ | Unterstützte Dimensions Anzahl | Unterstützte Datentypen |
+| ------ | ---- | -------------------------- | -------------------- |
+| Atensor | Eingabe | 1 bis 8 | Float32, FLOAT16, Int32, INT16, int8, UInt32, UInt16, Uint8 |
+| Btensor | Eingabe | 1 bis 8 | Float32, FLOAT16, Int32, INT16, int8, UInt32, UInt16, Uint8 |
+| Outputtensor | Ausgabe | 1 bis 8 | Float32, FLOAT16, Int32, INT16, int8, UInt32, UInt16, Uint8 |
+
+### <a name="dml_feature_level_2_1-and-above"></a>DML_FEATURE_LEVEL_2_1 und höher
+| Tensorflow | Typ | Unterstützte Dimensions Anzahl | Unterstützte Datentypen |
+| ------ | ---- | -------------------------- | -------------------- |
+| Atensor | Eingabe | 4 | Float32, FLOAT16, Int32, INT16, int8, UInt32, UInt16, Uint8 |
+| Btensor | Eingabe | 4 | Float32, FLOAT16, Int32, INT16, int8, UInt32, UInt16, Uint8 |
+| Outputtensor | Ausgabe | 4 | Float32, FLOAT16, Int32, INT16, int8, UInt32, UInt16, Uint8 |
+
+
+
+## <a name="requirements"></a>Anforderungen
+| &nbsp; | &nbsp; |
+| ---- |:---- |
+| **Header** | directml. h |
