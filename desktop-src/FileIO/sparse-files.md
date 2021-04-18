@@ -1,0 +1,46 @@
+---
+description: Durch die Dateikomprimierung von Dateien, die größtenteils Nullen enthalten, wird Speicherplatz effizient genutzt.
+ms.assetid: 7326041d-f11e-4b80-ac4e-07173e418ce7
+title: Dateien von geringer Dichte
+ms.topic: article
+ms.date: 05/31/2018
+ms.openlocfilehash: 21c282ca89c9dc9e44800a2a7fc969c3f883006b
+ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "106354522"
+---
+# <a name="sparse-files"></a><span data-ttu-id="1909c-103">Dateien von geringer Dichte</span><span class="sxs-lookup"><span data-stu-id="1909c-103">Sparse Files</span></span>
+
+<span data-ttu-id="1909c-104">Eine Datei, in *der ein Großteil* der Daten Nullen ist, enthält ein DataSet mit geringer Dichte.</span><span class="sxs-lookup"><span data-stu-id="1909c-104">A file in which much of the data is zeros is said to contain a *sparse data set*.</span></span> <span data-ttu-id="1909c-105">Dateien wie diese sind in der Regel sehr groß, z. b. eine Datei mit Abbild Daten, die verarbeitet werden sollen, oder eine Matrix in einer hoch Geschwindigkeits Datenbank.</span><span class="sxs-lookup"><span data-stu-id="1909c-105">Files like these are typically very large for example, a file that contains image data to be processed or a matrix within a high-speed database.</span></span> <span data-ttu-id="1909c-106">Das Problem bei Dateien, die sparsesdatasets enthalten, besteht darin, dass der Großteil der Datei keine nützlichen Daten enthält und daher eine ineffiziente Nutzung des Speicherplatzes darstellt.</span><span class="sxs-lookup"><span data-stu-id="1909c-106">The problem with files that contain sparse data sets is that the majority of the file does not contain useful data and, because of this, they are an inefficient use of disk space.</span></span>
+
+<span data-ttu-id="1909c-107">Die Dateikomprimierung im NTFS-Dateisystem ist eine partielle Lösung für das Problem.</span><span class="sxs-lookup"><span data-stu-id="1909c-107">The file compression in the NTFS file system is a partial solution to the problem.</span></span> <span data-ttu-id="1909c-108">Alle Daten in der Datei, die nicht explizit geschrieben werden, werden explizit auf 0 (null) festgelegt.</span><span class="sxs-lookup"><span data-stu-id="1909c-108">All data in the file that is not explicitly written is explicitly set to zero.</span></span> <span data-ttu-id="1909c-109">Die Dateikomprimierung komprimiert diese Bereiche von Nullen.</span><span class="sxs-lookup"><span data-stu-id="1909c-109">File compression compacts these ranges of zeros.</span></span> <span data-ttu-id="1909c-110">Ein Nachteil der Dateikomprimierung ist jedoch, dass die Zugriffszeit aufgrund von Datenkomprimierung und-Dekomprimierung erhöht werden kann.</span><span class="sxs-lookup"><span data-stu-id="1909c-110">However, a drawback of file compression is that access time may increase due to data compression and decompression.</span></span>
+
+<span data-ttu-id="1909c-111">Die Unterstützung für sparsesdateien wird im NTFS-Dateisystem als eine andere Möglichkeit eingeführt, um die Speicherplatz Nutzung effizienter zu gestalten.</span><span class="sxs-lookup"><span data-stu-id="1909c-111">Support for sparse files is introduced in the NTFS file system as another way to make disk space usage more efficient.</span></span> <span data-ttu-id="1909c-112">Wenn die Funktionalität für die Datei mit geringer Dichte aktiviert ist, weist das System keinen Festplatten Speicherplatz zu einer Datei zu, außer in Regionen, in denen Sie Daten enthalten, die nicht NULL sind.</span><span class="sxs-lookup"><span data-stu-id="1909c-112">When sparse file functionality is enabled, the system does not allocate hard disk drive space to a file except in regions where it contains nonzero data.</span></span> <span data-ttu-id="1909c-113">Wenn versucht wird, einen Schreibvorgang auszuführen, bei dem eine große Menge an Daten im Puffer Nullen ist, werden die Nullen nicht in die Datei geschrieben.</span><span class="sxs-lookup"><span data-stu-id="1909c-113">When a write operation is attempted where a large amount of the data in the buffer is zeros, the zeros are not written to the file.</span></span> <span data-ttu-id="1909c-114">Stattdessen erstellt das Dateisystem eine interne Liste mit den Speicherorten der Nullen in der Datei, und diese Liste wird bei allen Lesevorgängen abgefragt.</span><span class="sxs-lookup"><span data-stu-id="1909c-114">Instead, the file system creates an internal list containing the locations of the zeros in the file, and this list is consulted during all read operations.</span></span> <span data-ttu-id="1909c-115">Wenn ein Lesevorgang in den Bereichen der Datei ausgeführt wird, in der Nullen gefunden wurden, gibt das Dateisystem die entsprechende Anzahl von Nullen im Puffer zurück, der für den Lesevorgang reserviert ist.</span><span class="sxs-lookup"><span data-stu-id="1909c-115">When a read operation is performed in areas of the file where zeros were located, the file system returns the appropriate number of zeros in the buffer allocated for the read operation.</span></span> <span data-ttu-id="1909c-116">Auf diese Weise ist die Wartung der sparsedatei für alle Prozesse transparent, die darauf zugreifen, und ist effizienter als die Komprimierung für dieses spezielle Szenario.</span><span class="sxs-lookup"><span data-stu-id="1909c-116">In this way, maintenance of the sparse file is transparent to all processes that access it, and is more efficient than compression for this particular scenario.</span></span>
+
+<span data-ttu-id="1909c-117">Der Standard Datenwert einer sparsedatei ist 0 (null). Sie kann jedoch auf andere Werte festgelegt werden.</span><span class="sxs-lookup"><span data-stu-id="1909c-117">The default data value of a sparse file is zero; however, it can be set to other values.</span></span>
+
+<span data-ttu-id="1909c-118">Weitere Informationen zu sparsesdateien finden Sie in den folgenden Themen.</span><span class="sxs-lookup"><span data-stu-id="1909c-118">For more information about sparse files, see the following topics.</span></span>
+
+## <a name="in-this-section"></a><span data-ttu-id="1909c-119">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="1909c-119">In this section</span></span>
+
+
+
+| <span data-ttu-id="1909c-120">Thema</span><span class="sxs-lookup"><span data-stu-id="1909c-120">Topic</span></span>                                                                                     | <span data-ttu-id="1909c-121">BESCHREIBUNG</span><span class="sxs-lookup"><span data-stu-id="1909c-121">Description</span></span>                                                                                                                                                                                   |
+|-------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [<span data-ttu-id="1909c-122">Vorgänge mit geringer Dichte</span><span class="sxs-lookup"><span data-stu-id="1909c-122">Sparse File Operations</span></span>](sparse-file-operations.md)<br/>                           | <span data-ttu-id="1909c-123">Bestimmen Sie, ob ein Dateisystem sparsesdateien unterstützt, indem Sie die GetVolumeInformation-Funktion aufrufen.</span><span class="sxs-lookup"><span data-stu-id="1909c-123">Determine whether a file system supports sparse files by calling the GetVolumeInformation function.</span></span><br/>                                                                                |
+| [<span data-ttu-id="1909c-124">Abrufen der Größe einer sparsedatei</span><span class="sxs-lookup"><span data-stu-id="1909c-124">Obtaining the Size of a Sparse File</span></span>](obtaining-the-size-of-a-sparse-file.md)<br/> | <span data-ttu-id="1909c-125">Rufen Sie die zugeordnete Größe oder die Gesamtgröße für eine Datei mithilfe der [**getcompressedfilesize**](/windows/desktop/api/fileapi/nf-fileapi-getcompressedfilesizea) -Funktion oder der [**GetFileSize**](/windows/desktop/api/FileAPI/nf-fileapi-getfilesize) -Funktion ab.</span><span class="sxs-lookup"><span data-stu-id="1909c-125">Get the allocated size or the total size for a file by using either the [**GetCompressedFileSize**](/windows/desktop/api/fileapi/nf-fileapi-getcompressedfilesizea) or the [**GetFileSize**](/windows/desktop/api/FileAPI/nf-fileapi-getfilesize) function.</span></span><br/> |
+| [<span data-ttu-id="1909c-126">Sparsesdateien und Datenträger Kontingente</span><span class="sxs-lookup"><span data-stu-id="1909c-126">Sparse Files and Disk Quotas</span></span>](sparse-files-and-disk-quota.md)<br/>                | <span data-ttu-id="1909c-127">Eine sparsedatei wirkt sich auf Benutzerkontingente durch die nominale Größe der Datei und nicht die tatsächlich zugeordnete Menge an Speicherplatz aus.</span><span class="sxs-lookup"><span data-stu-id="1909c-127">A sparse file affects user quotas by the nominal size of the file, not the actual allocated amount of disk space.</span></span><br/>                                                                  |
+
+
+
+ 
+
+ 
+
+ 
+
+
+
+

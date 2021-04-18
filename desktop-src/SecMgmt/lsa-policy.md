@@ -1,0 +1,20 @@
+---
+description: Bei der lokalen Sicherheits Autorität (Local Security Authority, LSA) handelt es sich um ein geschütztes Subsystem von Windows, das Informationen zu allen Aspekten der lokalen Sicherheit auf einem System verwaltet, die als lokale Sicherheitsrichtlinie des Systems bezeichnet werden.
+ms.assetid: 16c0a7cb-77c9-4c2d-ba82-e7b8edfbb3a2
+title: LSA-Richtlinie
+ms.topic: article
+ms.date: 05/31/2018
+ms.openlocfilehash: 2e317821ed22ac9d6beafbfdc8b1617ce5330a40
+ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "106347392"
+---
+# <a name="lsa-policy"></a><span data-ttu-id="570c6-103">LSA-Richtlinie</span><span class="sxs-lookup"><span data-stu-id="570c6-103">LSA Policy</span></span>
+
+<span data-ttu-id="570c6-104">Bei der [*lokalen Sicherheits Autorität (Local Security Authority*](/windows/desktop/SecGloss/l-gly) , LSA) handelt es sich um ein geschütztes Subsystem von Windows, das Informationen zu allen Aspekten der lokalen Sicherheit auf einem System verwaltet, die als [lokale Sicherheitsrichtlinie](local-security-policy.md) des Systems bezeichnet werden.</span><span class="sxs-lookup"><span data-stu-id="570c6-104">The [*Local Security Authority*](/windows/desktop/SecGloss/l-gly) (LSA) is a protected subsystem of Windows that maintains information about all aspects of local security on a system, collectively known as the [local security policy](local-security-policy.md) of the system.</span></span> <span data-ttu-id="570c6-105">Zusätzlich zu den Informationen zu den Informationen zu den Informationen bietet die LSA Dienste für die Übersetzung zwischen Namen und [*Sicherheits*](/windows/desktop/SecGloss/s-gly) -IDs (SIDs).</span><span class="sxs-lookup"><span data-stu-id="570c6-105">In addition to housing policy information, the LSA provides services for translation between names and [*security identifiers*](/windows/desktop/SecGloss/s-gly) (SIDs).</span></span>
+
+ 
+
+ 
