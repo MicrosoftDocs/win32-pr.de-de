@@ -1,0 +1,68 @@
+---
+description: Mit der IX500DistinguishedName-Schnittstelle können Sie einen Antragsteller Namen aus einer Distinguished Name-Zeichenfolge erstellen.
+ms.assetid: 78fbf15a-678f-4d87-a309-e70374e3ecee
+title: Erstellen eines Antragsteller namens
+ms.topic: article
+ms.date: 05/31/2018
+ms.openlocfilehash: 7fe512be48c9a727857c4fac4abc6e04a705b7f6
+ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "104525097"
+---
+# <a name="creating-a-subject-name"></a><span data-ttu-id="a9d88-103">Erstellen eines Antragsteller namens</span><span class="sxs-lookup"><span data-stu-id="a9d88-103">Creating a Subject Name</span></span>
+
+<span data-ttu-id="a9d88-104">Mit der [**IX500DistinguishedName**](/windows/desktop/api/CertEnroll/nn-certenroll-ix500distinguishedname) -Schnittstelle können Sie einen Antragsteller Namen aus einer Distinguished Name-Zeichenfolge erstellen.</span><span class="sxs-lookup"><span data-stu-id="a9d88-104">You can use the [**IX500DistinguishedName**](/windows/desktop/api/CertEnroll/nn-certenroll-ix500distinguishedname) interface to create a subject name from a distinguished name string.</span></span> <span data-ttu-id="a9d88-105">Die Zeichenfolge besteht aus verketteten relativen Distinguished Names (rDNS).</span><span class="sxs-lookup"><span data-stu-id="a9d88-105">The string consists of concatenated relative distinguished names (RDNs).</span></span> <span data-ttu-id="a9d88-106">Die folgenden RDN-Schlüssel werden von der Zertifikatregistrierungs-API unterstützt.</span><span class="sxs-lookup"><span data-stu-id="a9d88-106">The following RDN keys are supported by the Certificate Enrollment API.</span></span>
+
+| <span data-ttu-id="a9d88-107">Schlüssel</span><span class="sxs-lookup"><span data-stu-id="a9d88-107">Key</span></span>                               | <span data-ttu-id="a9d88-108">OID</span><span class="sxs-lookup"><span data-stu-id="a9d88-108">OID</span></span>                                             | <span data-ttu-id="a9d88-109">BESCHREIBUNG</span><span class="sxs-lookup"><span data-stu-id="a9d88-109">Description</span></span>                                                                                        |
+|-----------------------------------|-------------------------------------------------|----------------------------------------------------------------------------------------------------|
+| <span data-ttu-id="a9d88-110">C</span><span class="sxs-lookup"><span data-stu-id="a9d88-110">C</span></span><br/>                      | <span data-ttu-id="a9d88-111">XCN- \_ OID- \_ Länder \_ Name</span><span class="sxs-lookup"><span data-stu-id="a9d88-111">XCN\_OID\_COUNTRY\_NAME</span></span><br/>              | <span data-ttu-id="a9d88-112">Enthält einen aus zwei Buchstaben bestehenden Code für ISO 3166-Länder oder-Regionen.</span><span class="sxs-lookup"><span data-stu-id="a9d88-112">Contains a two-letter ISO 3166 country or region code.</span></span><br/>                                  |
+| <span data-ttu-id="a9d88-113">CN</span><span class="sxs-lookup"><span data-stu-id="a9d88-113">CN</span></span><br/>                     | <span data-ttu-id="a9d88-114">allgemeiner Name der XCN- \_ OID \_ \_</span><span class="sxs-lookup"><span data-stu-id="a9d88-114">XCN\_OID\_COMMON\_NAME</span></span><br/>               | <span data-ttu-id="a9d88-115">Enthält einen allgemeinen Namen.</span><span class="sxs-lookup"><span data-stu-id="a9d88-115">Contains a common name.</span></span><br/>                                                                 |
+| <span data-ttu-id="a9d88-116">E</span><span class="sxs-lookup"><span data-stu-id="a9d88-116">E</span></span><br/> <span data-ttu-id="a9d88-117">E-Mail</span><span class="sxs-lookup"><span data-stu-id="a9d88-117">EMAIL</span></span><br/>     | <span data-ttu-id="a9d88-118">XCN \_ OID \_ RSA \_ EmailAddr</span><span class="sxs-lookup"><span data-stu-id="a9d88-118">XCN\_OID\_RSA\_emailAddr</span></span><br/>             | <span data-ttu-id="a9d88-119">Enthält eine e-Mail-Adresse.</span><span class="sxs-lookup"><span data-stu-id="a9d88-119">Contains an email address.</span></span><br/>                                                              |
+| <span data-ttu-id="a9d88-120">SL</span><span class="sxs-lookup"><span data-stu-id="a9d88-120">DC</span></span><br/>                     | <span data-ttu-id="a9d88-121">XCN \_ OID- \_ Domänen \_ Komponente</span><span class="sxs-lookup"><span data-stu-id="a9d88-121">XCN\_OID\_DOMAIN\_COMPONENT</span></span><br/>          | <span data-ttu-id="a9d88-122">Enthält einen Teil eines Domain Name System-namens (DNS).</span><span class="sxs-lookup"><span data-stu-id="a9d88-122">Contains one part of a Domain Name System (DNS) name.</span></span><br/>                                   |
+| <span data-ttu-id="a9d88-123">G</span><span class="sxs-lookup"><span data-stu-id="a9d88-123">G</span></span><br/> <span data-ttu-id="a9d88-124">GivenName</span><span class="sxs-lookup"><span data-stu-id="a9d88-124">GivenName</span></span><br/> | <span data-ttu-id="a9d88-125">Vorname der XCN- \_ OID \_ \_</span><span class="sxs-lookup"><span data-stu-id="a9d88-125">XCN\_OID\_GIVEN\_NAME</span></span><br/>                | <span data-ttu-id="a9d88-126">Enthält den Teil des Namens einer Person, bei dem es sich nicht um einen Nachnamen handelt.</span><span class="sxs-lookup"><span data-stu-id="a9d88-126">Contains the part of a person's name that is not a surname.</span></span><br/>                             |
+| <span data-ttu-id="a9d88-127">I</span><span class="sxs-lookup"><span data-stu-id="a9d88-127">I</span></span><br/>                      | <span data-ttu-id="a9d88-128">XCN- \_ OID- \_ Initialen</span><span class="sxs-lookup"><span data-stu-id="a9d88-128">XCN\_OID\_INITIALS</span></span><br/>                   | <span data-ttu-id="a9d88-129">Enthält die Initialen einer Person.</span><span class="sxs-lookup"><span data-stu-id="a9d88-129">Contains a person's initials.</span></span><br/>                                                           |
+| <span data-ttu-id="a9d88-130">L</span><span class="sxs-lookup"><span data-stu-id="a9d88-130">L</span></span><br/>                      | <span data-ttu-id="a9d88-131">XCN- \_ OID- \_ lokalitäts \_ Name</span><span class="sxs-lookup"><span data-stu-id="a9d88-131">XCN\_OID\_LOCALITY\_NAME</span></span><br/>             | <span data-ttu-id="a9d88-132">Enthält den Ortsnamen, der eine Stadt, ein Land oder eine andere geografische Region identifiziert.</span><span class="sxs-lookup"><span data-stu-id="a9d88-132">Contains the locality name that identifies a city, country, or other geographic region.</span></span><br/> |
+| <span data-ttu-id="a9d88-133">O</span><span class="sxs-lookup"><span data-stu-id="a9d88-133">O</span></span><br/>                      | <span data-ttu-id="a9d88-134">Name der XCN- \_ OID- \_ Organisation \_</span><span class="sxs-lookup"><span data-stu-id="a9d88-134">XCN\_OID\_ORGANIZATION\_NAME</span></span><br/>         | <span data-ttu-id="a9d88-135">Enthält den Namen einer Organisation.</span><span class="sxs-lookup"><span data-stu-id="a9d88-135">Contains the name of an organization.</span></span><br/>                                                   |
+| <span data-ttu-id="a9d88-136">OU</span><span class="sxs-lookup"><span data-stu-id="a9d88-136">OU</span></span><br/>                     | <span data-ttu-id="a9d88-137">Name der \_ \_ Organisations \_ Einheit \_ für XCN OID</span><span class="sxs-lookup"><span data-stu-id="a9d88-137">XCN\_OID\_ORGANIZATIONAL\_UNIT\_NAME</span></span><br/> | <span data-ttu-id="a9d88-138">Enthält den Namen einer Einheiten Teildivision innerhalb einer Organisation.</span><span class="sxs-lookup"><span data-stu-id="a9d88-138">Contains the name of a unit subdivision within an organization.</span></span><br/>                         |
+| <span data-ttu-id="a9d88-139">E</span><span class="sxs-lookup"><span data-stu-id="a9d88-139">S</span></span><br/> <span data-ttu-id="a9d88-140">ST</span><span class="sxs-lookup"><span data-stu-id="a9d88-140">ST</span></span><br/>        | <span data-ttu-id="a9d88-141">XCN- \_ OID- \_ Status \_ oder \_ Provinz \_ Name</span><span class="sxs-lookup"><span data-stu-id="a9d88-141">XCN\_OID\_STATE\_OR\_PROVINCE\_NAME</span></span><br/>  | <span data-ttu-id="a9d88-142">Enthält den vollständigen Namen eines Bundesstaats oder Provinz-.</span><span class="sxs-lookup"><span data-stu-id="a9d88-142">Contains the full name of a state or province.</span></span><br/>                                          |
+| <span data-ttu-id="a9d88-143">STREET</span><span class="sxs-lookup"><span data-stu-id="a9d88-143">STREET</span></span><br/>                 | <span data-ttu-id="a9d88-144">XCN- \_ OID- \_ Straße \_</span><span class="sxs-lookup"><span data-stu-id="a9d88-144">XCN\_OID\_STREET\_ADDRESS</span></span><br/>            | <span data-ttu-id="a9d88-145">Enthält die physische Adresse.</span><span class="sxs-lookup"><span data-stu-id="a9d88-145">Contains the physical address.</span></span><br/>                                                          |
+| <span data-ttu-id="a9d88-146">SN</span><span class="sxs-lookup"><span data-stu-id="a9d88-146">SN</span></span><br/>                     | <span data-ttu-id="a9d88-147">XCN \_ OID \_ - \_ Name</span><span class="sxs-lookup"><span data-stu-id="a9d88-147">XCN\_OID\_SUR\_NAME</span></span><br/>                  | <span data-ttu-id="a9d88-148">Enthält den Familiennamen einer Person.</span><span class="sxs-lookup"><span data-stu-id="a9d88-148">Contains the family name of a person.</span></span><br/>                                                   |
+| <span data-ttu-id="a9d88-149">T</span><span class="sxs-lookup"><span data-stu-id="a9d88-149">T</span></span><br/> <span data-ttu-id="a9d88-150">TITLE-</span><span class="sxs-lookup"><span data-stu-id="a9d88-150">TITLE</span></span><br/>     | <span data-ttu-id="a9d88-151">XCN- \_ OID- \_ Titel</span><span class="sxs-lookup"><span data-stu-id="a9d88-151">XCN\_OID\_TITLE</span></span><br/>                      | <span data-ttu-id="a9d88-152">Enthält den Titel einer Person in der Organisation.</span><span class="sxs-lookup"><span data-stu-id="a9d88-152">Contains the title of a person in the organization.</span></span><br/>                                     |
+
+
+
+ 
+
+<span data-ttu-id="a9d88-153">Wenn Sie ein [**IX500DistinguishedName**](/windows/desktop/api/CertEnroll/nn-certenroll-ix500distinguishedname) -Objekt initialisieren, können Sie das Format des Distinguished Name-Objekts identifizieren, indem Sie einen Wert aus dem [**X500NameFlags**](/windows/desktop/api/CertEnroll/ne-certenroll-x500nameflags) -Enumerationstyp angeben.</span><span class="sxs-lookup"><span data-stu-id="a9d88-153">When you initialize an [**IX500DistinguishedName**](/windows/desktop/api/CertEnroll/nn-certenroll-ix500distinguishedname) object, you can identify the format of the distinguished name by specifying a value from the [**X500NameFlags**](/windows/desktop/api/CertEnroll/ne-certenroll-x500nameflags) enumeration type.</span></span> <span data-ttu-id="a9d88-154">Nehmen Sie beispielsweise an, dass der Distinguished Name des Antragstellers aus folgendem RDNs besteht:</span><span class="sxs-lookup"><span data-stu-id="a9d88-154">For example, assume that the subject distinguished name consists of the following RDNs:</span></span><dl> <span data-ttu-id="a9d88-155">CN = Administrator</span><span class="sxs-lookup"><span data-stu-id="a9d88-155">CN=Administrator</span></span>  
+<span data-ttu-id="a9d88-156">CN = Benutzer</span><span class="sxs-lookup"><span data-stu-id="a9d88-156">CN=Users</span></span>  
+<span data-ttu-id="a9d88-157">DC = jdomcsc</span><span class="sxs-lookup"><span data-stu-id="a9d88-157">DC=jdomcsc</span></span>  
+<span data-ttu-id="a9d88-158">DC = nttest</span><span class="sxs-lookup"><span data-stu-id="a9d88-158">DC=nttest</span></span>  
+<span data-ttu-id="a9d88-159">DC = Microsoft</span><span class="sxs-lookup"><span data-stu-id="a9d88-159">DC=microsoft</span></span>  
+<span data-ttu-id="a9d88-160">DC = com</span><span class="sxs-lookup"><span data-stu-id="a9d88-160">DC=com</span></span>  
+</dl>
+
+<span data-ttu-id="a9d88-161">Wenn Sie diese RDNs in der folgenden durch Trennzeichen getrennten Distinguished Name-Zeichenfolge verketten, können Sie beim Initialisieren eines [**IX500DistinguishedName**](/windows/desktop/api/CertEnroll/nn-certenroll-ix500distinguishedname) -Objekts den Wert für den **XCN \_ CERT \_ Name \_ Str-Komma- \_ \_ Flag** angeben.</span><span class="sxs-lookup"><span data-stu-id="a9d88-161">If you concatenate these RDNs into the following comma-delimited distinguished name string, you can specify the **XCN\_CERT\_NAME\_STR\_COMMA\_FLAG** value when initializing an [**IX500DistinguishedName**](/windows/desktop/api/CertEnroll/nn-certenroll-ix500distinguishedname) object.</span></span>
+
+``` syntax
+CN=Administrator,CN=Users,DC=jdomcsc,DC=nttest,DC=microsoft,DC=com
+```
+
+## <a name="related-topics"></a><span data-ttu-id="a9d88-162">Zugehörige Themen</span><span class="sxs-lookup"><span data-stu-id="a9d88-162">Related topics</span></span>
+
+<dl> <dt>
+
+[<span data-ttu-id="a9d88-163">Codieren eines Antragsteller namens</span><span class="sxs-lookup"><span data-stu-id="a9d88-163">Encoding a Subject Name</span></span>](encoding-a-subject-name.md)
+</dt> <dt>
+
+[<span data-ttu-id="a9d88-164">Antragstellernamen</span><span class="sxs-lookup"><span data-stu-id="a9d88-164">Subject Names</span></span>](subject-names.md)
+</dt> </dl>
+
+ 
+
+ 
+
+
+
+
