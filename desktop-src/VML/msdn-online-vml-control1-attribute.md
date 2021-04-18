@@ -1,0 +1,63 @@
+---
+title: VML Control1-Attribut
+description: VML Control1-Attribut
+ms.assetid: 4a304936-4da8-4197-b7f3-d89551de0c85
+ms.topic: article
+ms.date: 05/31/2018
+ms.openlocfilehash: 88516592c371a19a7a3b001a708c507d3103927a
+ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "106339274"
+---
+# <a name="vml-control1-attribute"></a><span data-ttu-id="b59b8-103">VML Control1-Attribut</span><span class="sxs-lookup"><span data-stu-id="b59b8-103">VML Control1 Attribute</span></span>
+
+<span data-ttu-id="b59b8-104">In diesem Thema wird VML beschrieben, eine Funktion, die ab Windows Internet Explorer 9 veraltet ist.</span><span class="sxs-lookup"><span data-stu-id="b59b8-104">This topic describes VML, a feature that is deprecated as of Windows Internet Explorer 9.</span></span> <span data-ttu-id="b59b8-105">Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.</span><span class="sxs-lookup"><span data-stu-id="b59b8-105">Webpages and applications that rely on VML should be migrated to SVG or other widely supported standards.</span></span>
+
+> [!Note]  
+> <span data-ttu-id="b59b8-106">Ab Dezember 2011 wurde dieses Thema archiviert.</span><span class="sxs-lookup"><span data-stu-id="b59b8-106">As of December 2011, this topic has been archived.</span></span> <span data-ttu-id="b59b8-107">Daher wird er nicht mehr aktiv verwaltet.</span><span class="sxs-lookup"><span data-stu-id="b59b8-107">As a result, it is no longer actively maintained.</span></span> <span data-ttu-id="b59b8-108">Weitere Informationen finden Sie unter [archivierte Inhalte](/previous-versions/windows/internet-explorer/ie-developer/).</span><span class="sxs-lookup"><span data-stu-id="b59b8-108">For more information, see [Archived Content](/previous-versions/windows/internet-explorer/ie-developer/).</span></span> <span data-ttu-id="b59b8-109">Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center](https://msdn.microsoft.com/ie/).</span><span class="sxs-lookup"><span data-stu-id="b59b8-109">For information, recommendations, and guidance regarding the current version of Windows Internet Explorer, see [Internet Explorer Developer Center](https://msdn.microsoft.com/ie/).</span></span>
+
+ 
+
+<span data-ttu-id="b59b8-110">Definiert den ersten Kontrollpunkt einer Bézier-Kurve.</span><span class="sxs-lookup"><span data-stu-id="b59b8-110">Defines the first control point of a bezier curve.</span></span> <span data-ttu-id="b59b8-111">Lese-/Schreibzugriff.</span><span class="sxs-lookup"><span data-stu-id="b59b8-111">Read/write.</span></span> <span data-ttu-id="b59b8-112">**VgVector2D**.</span><span class="sxs-lookup"><span data-stu-id="b59b8-112">**VgVector2D**.</span></span>
+
+<span data-ttu-id="b59b8-113">**Gilt für**</span><span class="sxs-lookup"><span data-stu-id="b59b8-113">**Applies To**</span></span>
+
+[<span data-ttu-id="b59b8-114">FF</span><span class="sxs-lookup"><span data-stu-id="b59b8-114">Curve</span></span>](msdn-online-vml-curve-element.md)
+
+<span data-ttu-id="b59b8-115">**Tagsyntax**</span><span class="sxs-lookup"><span data-stu-id="b59b8-115">**Tag Syntax**</span></span>
+
+<span data-ttu-id="b59b8-116"><v: *Element* Control1 = " *Ausdruck* " ></span><span class="sxs-lookup"><span data-stu-id="b59b8-116"><v: *element* control1=" *expression* "></span></span>
+
+<span data-ttu-id="b59b8-117">**Skript Syntax**</span><span class="sxs-lookup"><span data-stu-id="b59b8-117">**Script Syntax**</span></span>
+
+<span data-ttu-id="b59b8-118">*Element* . Control1 = "*Ausdruck*"</span><span class="sxs-lookup"><span data-stu-id="b59b8-118">*element* .control1="*expression*"</span></span>
+
+<span data-ttu-id="b59b8-119">*Ausdruck* = *Element*. Control1</span><span class="sxs-lookup"><span data-stu-id="b59b8-119">*expression*=*element*.control1</span></span>
+
+<span data-ttu-id="b59b8-120">**Anmerkungen**</span><span class="sxs-lookup"><span data-stu-id="b59b8-120">**Remarks**</span></span>
+
+<span data-ttu-id="b59b8-121">Definiert den ersten Kontrollpunkt einer kubischen Bézier-Kurve im Koordinatenraum des übergeordneten Elements. Wenn das übergeordnete Element kein VML-Element ist, ist die Standard [Einheit](msdn-online-vml-units.md) ein Pixel (in, cm, mm, PT, kann jedoch auch der PC angegeben werden).</span><span class="sxs-lookup"><span data-stu-id="b59b8-121">Defines the first control point of a cubic bezier curve in the coordinate space of the parent element.If the parent is not a VML element, the default [unit](msdn-online-vml-units.md) is a pixel (but in, cm, mm, pt, pc may also be specified).</span></span> <span data-ttu-id="b59b8-122">Der Standardwert ist 10, 10.</span><span class="sxs-lookup"><span data-stu-id="b59b8-122">Default is 10,10.</span></span>
+
+<span data-ttu-id="b59b8-123">*VML-Standard Attribut*</span><span class="sxs-lookup"><span data-stu-id="b59b8-123">*VML Standard Attribute*</span></span>
+
+<span data-ttu-id="b59b8-124">**Beispiel**</span><span class="sxs-lookup"><span data-stu-id="b59b8-124">**Example**</span></span>
+
+<span data-ttu-id="b59b8-125">Die Kurve wird Lächeln.</span><span class="sxs-lookup"><span data-stu-id="b59b8-125">The curve is smiling.</span></span> <span data-ttu-id="b59b8-126">Sie beginnt auf der linken Seite und endet auf der rechten Seite.</span><span class="sxs-lookup"><span data-stu-id="b59b8-126">It starts at the left and ends at the right.</span></span> <span data-ttu-id="b59b8-127">Die beiden Kontrollpunkte sind auf dem Weg, um die Kurve nach unten zu ziehen, um die Darstellung eines Lächelns zu gestalten.</span><span class="sxs-lookup"><span data-stu-id="b59b8-127">The two control points are situated along the way so as to pull the curve down to give the appearance of a smile.</span></span>
+
+
+```HTML
+   <v:curve id="mycurve"
+   from="10pt,10pt" to="100pt,10pt"
+   control1="40pt,10pt" control2="70pt,10pt">
+   </v:curve>
+```
+
+
+
+
+
+ 
+
+ 

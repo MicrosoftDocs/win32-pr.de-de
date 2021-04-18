@@ -1,0 +1,42 @@
+---
+title: Geräte Konfigurationsbereich
+description: Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie in der PrintSchema-Spezifikation.
+ms.assetid: 598299c3-159f-4cad-b6a5-d282cd5bb4a1
+ms.topic: article
+ms.date: 05/31/2018
+ms.openlocfilehash: 120e12b6480675dba6e735390f4820a8782edc5c
+ms.sourcegitcommit: de72a1294df274b0a71dc0fdc42d757e5f6df0f3
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "106366379"
+---
+# <a name="device-configuration-space-and-device-configurations"></a><span data-ttu-id="d621d-104">Geräte Konfigurationsbereich und Geräte Konfigurationen</span><span class="sxs-lookup"><span data-stu-id="d621d-104">Device Configuration Space and Device Configurations</span></span>
+
+<span data-ttu-id="d621d-105">Dieses Thema ist nicht aktuell.</span><span class="sxs-lookup"><span data-stu-id="d621d-105">This topic is not current.</span></span> <span data-ttu-id="d621d-106">Die aktuellsten Informationen finden Sie in der [PrintSchema-Spezifikation](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip).</span><span class="sxs-lookup"><span data-stu-id="d621d-106">For the most current information, see the [Print Schema Specification](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip).</span></span>
+
+<span data-ttu-id="d621d-107">Der *Konfigurationsbereich* eines Geräts ist der Satz aller möglichen Werte, die allen Attributen des Geräts zugewiesen werden können.</span><span class="sxs-lookup"><span data-stu-id="d621d-107">A device's *configuration space* is the set of all possible values that can be assigned to all of the attributes of the device.</span></span> <span data-ttu-id="d621d-108">Die zwei wichtigsten Gründe, den Konfigurationsbereich des Geräts in den Print-Funktionen zu beschreiben, sind wie folgt.</span><span class="sxs-lookup"><span data-stu-id="d621d-108">The two most important reasons to describe the configuration space of the device in the PrintCapabilities are as follows.</span></span>
+
+1.  <span data-ttu-id="d621d-109">Die Informationen tragen wesentlich zu einem besseren Verständnis der Gerätefunktionen bei.</span><span class="sxs-lookup"><span data-stu-id="d621d-109">The information contributes significantly to an increased understanding of the device's capabilities.</span></span> <span data-ttu-id="d621d-110">Diese Informationen erleichtern es einem Client der printfunktionen, Benutzeroberflächen Elemente (UI) zu generieren, was es dem Endbenutzer erleichtert, eine bestimmte Konfiguration zum Verarbeiten eines Auftrags auszuwählen.</span><span class="sxs-lookup"><span data-stu-id="d621d-110">This information makes it easier for a client of the PrintCapabilities to generate user interface (UI) elements, which makes it easier for the end user to select a particular configuration to process a job.</span></span> <span data-ttu-id="d621d-111">Durch die Bereitstellung ausführlichere Informationen zu den Funktionen des Geräts für die Anwendung und letztendlich zum Endbenutzer kann die Druck Absicht des Benutzers effektiver erfüllt werden.</span><span class="sxs-lookup"><span data-stu-id="d621d-111">By providing more details of the device's capabilities to the application and ultimately to the end user, the user's printing intent can be more effectively fulfilled.</span></span>
+
+2.  <span data-ttu-id="d621d-112">Bestimmte Geräteeigenschaften, die in den Print-Funktionen angezeigt werden, sind möglicherweise von der jeweiligen Konfiguration abhängig, die vom Client ausgewählt wird.</span><span class="sxs-lookup"><span data-stu-id="d621d-112">Certain device properties presented in the PrintCapabilities might be dependent on the particular configuration selected by the client.</span></span>
+
+<span data-ttu-id="d621d-113">Einige Informationen sollten nicht in die Print-Funktionen eingebunden werden.</span><span class="sxs-lookup"><span data-stu-id="d621d-113">Some information should not be incorporated into the PrintCapabilities.</span></span> <span data-ttu-id="d621d-114">Dies umfasst Informationen, die sich nicht auf die Art und Weise auswirken, wie ein Auftrag erstellt wird, keine Einschränkungen der Art und Weise der Erstellung eines Auftrags auferlegt und die Geräteeigenschaften anderweitig nicht beeinträchtigt werden.</span><span class="sxs-lookup"><span data-stu-id="d621d-114">This includes information that does not affect the way a job is created, does not impose constraints on the way a job is created, nor otherwise affects the device properties.</span></span> <span data-ttu-id="d621d-115">Ein Gerät kann z. b. Statusinformationen melden, z. b. den Satz von Aufträgen, die auf die Verarbeitung warten.</span><span class="sxs-lookup"><span data-stu-id="d621d-115">For example, a device might be able to report status information, such as the set of jobs waiting to be processed.</span></span> <span data-ttu-id="d621d-116">Diese Informationen wirken sich nicht auf die Informationen aus, die zum Formatieren des Auftrags erforderlich sind, und es gibt auch keine Hinweise auf die auf dem Gerät verfügbaren Funktionen.</span><span class="sxs-lookup"><span data-stu-id="d621d-116">This information has no effect on the information needed to format the job, nor does it provide any indication of the capabilities available in the device.</span></span> <span data-ttu-id="d621d-117">Aus diesem Grund muss diese Art von Informationen nicht in den Print-Funktionen vorhanden sein.</span><span class="sxs-lookup"><span data-stu-id="d621d-117">For this reason, this type of information does not need to be present in the PrintCapabilities.</span></span>
+
+## <a name="device-constraints"></a><span data-ttu-id="d621d-118">Geräte Einschränkungen</span><span class="sxs-lookup"><span data-stu-id="d621d-118">Device Constraints</span></span>
+
+<span data-ttu-id="d621d-119">Viele Geräte unterstützen nicht alle möglichen Konfigurationen im Konfigurationsbereich aufgrund einer Einschränkung auf dem Gerät.</span><span class="sxs-lookup"><span data-stu-id="d621d-119">Many devices do not support all possible configurations in the configuration space due to a constraint on the device.</span></span> <span data-ttu-id="d621d-120">Ein Gerät kann z. b. von der Durchführung des Duplex Drucks auf transparenten Medien eingeschränkt werden.</span><span class="sxs-lookup"><span data-stu-id="d621d-120">For example, a device can be constrained from performing duplex printing on transparent media.</span></span> <span data-ttu-id="d621d-121">Eine Einschränkung kann eine physische Einschränkung darstellen: einige Medientypen sind einfach zu starr, um bestimmte Papier Pfade im Gerät zu durchlaufen, und können daher nicht in einigen Eingabe Slots abgelegt oder an einige Ausgabebehälter weitergeleitet werden. Derzeit liegt es in der Verantwortung des Print-oder PrintTicket-Anbieters, die Konfiguration zu überprüfen, die durch die Print Ticket-Eingabe dargestellt wird, um sicherzustellen, dass Sie keine ungültige Konfiguration darstellt.</span><span class="sxs-lookup"><span data-stu-id="d621d-121">A constraint can represent a physical limitation: some media types are simply too rigid to travel through certain paper paths in the device, and so cannot be placed in some input slots or be routed to some output bins. Currently it is the responsibility of the PrintCapabilities or PrintTicket provider to validate the configuration represented by the input PrintTicket, to verify that it does not represent an invalid configuration.</span></span> <span data-ttu-id="d621d-122">Wenn die Konfiguration ungültig ist, sollte der printfunktionen-oder PrintTicket-Anbieter die Konfiguration so ändern, dass Sie gültig wird.</span><span class="sxs-lookup"><span data-stu-id="d621d-122">If the configuration is invalid, the PrintCapabilities or PrintTicket provider should modify the configuration in such a way that it becomes valid.</span></span>
+
+## <a name="related-topics"></a><span data-ttu-id="d621d-123">Zugehörige Themen</span><span class="sxs-lookup"><span data-stu-id="d621d-123">Related topics</span></span>
+
+<dl> <dt>
+
+[<span data-ttu-id="d621d-124">Druck Schema Spezifikation</span><span class="sxs-lookup"><span data-stu-id="d621d-124">Print Schema Specification</span></span>](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
+</dt> </dl>
+
+ 
+
+ 
+
+
+
