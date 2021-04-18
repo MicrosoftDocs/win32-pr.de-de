@@ -1,0 +1,36 @@
+---
+title: Laden des Standard Zeichens
+description: Laden des Standard Zeichens
+ms.assetid: 4e91aef5-8402-401d-b09f-83be25011027
+ms.topic: article
+ms.date: 05/31/2018
+ms.openlocfilehash: 387715b5078c4ec875c9abce47039898e4998cf7
+ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 09/16/2019
+ms.locfileid: "106339812"
+---
+# <a name="loading-the-default-character"></a><span data-ttu-id="d1f29-103">Laden des Standard Zeichens</span><span class="sxs-lookup"><span data-stu-id="d1f29-103">Loading the Default Character</span></span>
+
+<span data-ttu-id="d1f29-104">\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]</span><span class="sxs-lookup"><span data-stu-id="d1f29-104">\[Microsoft Agent is deprecated as of Windows 7, and may be unavailable in subsequent versions of Windows.\]</span></span>
+
+<span data-ttu-id="d1f29-105">Anstatt nur ein bestimmtes Zeichen direkt durch Angabe des Datei namens zu laden, können Sie das *Standard Zeichen* laden.</span><span class="sxs-lookup"><span data-stu-id="d1f29-105">Instead of loading only a specific character directly by specifying its filename, you can load the *default character*.</span></span> <span data-ttu-id="d1f29-106">Das Standard Zeichen ist ein Dienst, der einen freigegebenen, zentralen Windows-Assistenten bereitstellen soll, den der Benutzer auswählt.</span><span class="sxs-lookup"><span data-stu-id="d1f29-106">The default character is a service intended to provide a shared, central Windows assistant that the user chooses.</span></span> <span data-ttu-id="d1f29-107">Der Microsoft-Agent enthält ein Eigenschaften Blatt als Teil des Standard-Zeichen diensdienstanders, das als Zeichen Eigenschaftenfenster bezeichnet wird, das es dem Benutzer ermöglicht, die Auswahl des Standard Zeichens zu ändern.</span><span class="sxs-lookup"><span data-stu-id="d1f29-107">Microsoft Agent includes a property sheet as part of the default character service, known as the Character Properties window, which enables the user to change their selection of the default character.</span></span>
+
+<span data-ttu-id="d1f29-108">Die Auswahl des Standard Zeichens ist auf ein Zeichen beschränkt, das den Standard Animations Satz unterstützt. Dadurch wird ein grundlegendes Maß an Konsistenz zwischen Zeichen sichergestellt.</span><span class="sxs-lookup"><span data-stu-id="d1f29-108">Selection of the default character is limited to a character that supports the standard animation set, ensuring a basic level of consistency across characters.</span></span> <span data-ttu-id="d1f29-109">Dadurch wird kein Zeichen von zusätzlichen Animationen ausgeschlossen.</span><span class="sxs-lookup"><span data-stu-id="d1f29-109">This does not exclude a character from having additional animations.</span></span>
+
+<span data-ttu-id="d1f29-110">Da das Standard Zeichen jedoch für die Verwendung durch allgemeine Zwecke vorgesehen ist und von anderen Anwendungen gleichzeitig gemeinsam genutzt werden kann, sollten Sie das Standard Zeichen nicht laden, wenn Sie ein Zeichen exklusiv für Ihre Anwendung verwenden möchten.</span><span class="sxs-lookup"><span data-stu-id="d1f29-110">However, because the default character is intended for general-purpose use and may be shared by other applications at the same time, avoid loading the default character when you want a character exclusively for your application.</span></span>
+
+<span data-ttu-id="d1f29-111">Um das Standard Zeichen zu laden, müssen Sie die [**Load**](load-method.md) -Methode ohne Angabe eines Datei namens oder Pfads aufzurufen.</span><span class="sxs-lookup"><span data-stu-id="d1f29-111">To load the default character, call the [**Load**](load-method.md) method without specifying a filename or path.</span></span> <span data-ttu-id="d1f29-112">Der Microsoft-Agent lädt den aktuellen Zeichensatz automatisch als Standard Zeichen.</span><span class="sxs-lookup"><span data-stu-id="d1f29-112">Microsoft Agent automatically loads the current character set as the default character.</span></span> <span data-ttu-id="d1f29-113">Wenn der Benutzer noch kein Standard Zeichen ausgewählt hat, wählt der-Agent das erste Zeichen aus, das den Standard Animations Satz unterstützt.</span><span class="sxs-lookup"><span data-stu-id="d1f29-113">If the user has not yet selected a default character, Agent will select the first character that supports the standard animation set.</span></span> <span data-ttu-id="d1f29-114">Wenn keine verfügbar ist, schlägt die Methode fehl, und die Ursache wird gemeldet.</span><span class="sxs-lookup"><span data-stu-id="d1f29-114">If none is available, the method will fail and report back the cause.</span></span>
+
+<span data-ttu-id="d1f29-115">Obwohl eine Client Anwendung die Identität des Zeichens untersuchen kann, kann nur ein Benutzer seine Einstellungen ändern.</span><span class="sxs-lookup"><span data-stu-id="d1f29-115">Although a client application can inquire as to the identity of the character, only a user can change its settings.</span></span> <span data-ttu-id="d1f29-116">Mithilfe der [**showdefaultcharacters-Eigenschaften**](showdefaultcharacterproperties-method.md) können Sie das Zeichen Eigenschaftenfenster anzeigen.</span><span class="sxs-lookup"><span data-stu-id="d1f29-116">You can use the [**ShowDefaultCharacterProperties**](showdefaultcharacterproperties-method.md) to display the Character Properties window.</span></span>
+
+<span data-ttu-id="d1f29-117">Der Server benachrichtigt Clients, die das Standard Zeichen geladen haben, wenn ein Benutzer eine Zeichenauswahl ändert, und übergibt die GUID des neuen Zeichens.</span><span class="sxs-lookup"><span data-stu-id="d1f29-117">The server will notify clients that have loaded the default character when a user changes a character selection, and pass the GUID of the new character.</span></span> <span data-ttu-id="d1f29-118">Der Server entlädt automatisch das erste Zeichen und lädt das neue Zeichen erneut.</span><span class="sxs-lookup"><span data-stu-id="d1f29-118">The server automatically unloads the former character and reloads the new character.</span></span> <span data-ttu-id="d1f29-119">Die Warteschlangen aller Clients, die das Standard Zeichen geladen haben, werden angehalten und geleert.</span><span class="sxs-lookup"><span data-stu-id="d1f29-119">The queues of any clients that have loaded the default character are halted and flushed.</span></span> <span data-ttu-id="d1f29-120">Die Warteschlangen von Clients, die das Zeichen explizit mit dem Dateinamen des Zeichens geladen haben, sind jedoch nicht betroffen.</span><span class="sxs-lookup"><span data-stu-id="d1f29-120">However, the queues of clients that have loaded the character explicitly using the character's filename are not affected.</span></span> <span data-ttu-id="d1f29-121">Der Server übernimmt bei Bedarf auch das automatische Zurücksetzen des Text-zu-Sprache-Moduls (TTS) für das neue Zeichen.</span><span class="sxs-lookup"><span data-stu-id="d1f29-121">If necessary, the server also handles automatically resetting the text-to-speech (TTS) engine for the new character.</span></span>
+
+ 
+
+ 
+
+
+
+
