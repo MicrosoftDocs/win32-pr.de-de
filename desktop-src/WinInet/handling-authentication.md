@@ -1,115 +1,115 @@
 ---
 title: Behandeln der Authentifizierung
-description: Einige Proxys und Server erfordern eine Authentifizierung, bevor Sie Zugriff auf Ressourcen im Internet gewähren.
+description: Einige Proxys und Server erfordern eine Authentifizierung, bevor sie Zugriff auf Ressourcen im Internet gewähren.
 ms.assetid: f3752031-30d3-4e35-8eae-1d4971b66bc2
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 36a8eaa38f61f0d97f1f543e0623313aa196aab7
-ms.sourcegitcommit: 773fa6257ead6c74154ad3cf46d21e49adc900aa
+ms.openlocfilehash: e82d8cd93f1010c71560d856793ad06d8bc5d9d5
+ms.sourcegitcommit: 59ec383331366f8a62c94bb88468ca03e95c43f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "104039772"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107380854"
 ---
 # <a name="handling-authentication"></a>Behandeln der Authentifizierung
 
-Einige Proxys und Server erfordern eine Authentifizierung, bevor Sie Zugriff auf Ressourcen im Internet gewähren. Die WinInet-Funktionen unterstützen die Server-und Proxy Authentifizierung für HTTP-Sitzungen. Die Authentifizierung von FTP-Servern muss von der [**InternetConnect**](/windows/desktop/api/Wininet/nf-wininet-internetconnecta) -Funktion verarbeitet werden. Die FTP-Gatewayauthentifizierung wird derzeit nicht unterstützt.
+Einige Proxys und Server erfordern eine Authentifizierung, bevor sie Zugriff auf Ressourcen im Internet gewähren. Die WinINet-Funktionen unterstützen die Server- und Proxyauthentifizierung für HTTP-Sitzungen. Die Authentifizierung von FTP-Servern muss von der [**InternetConnect-Funktion verarbeitet**](/windows/desktop/api/Wininet/nf-wininet-internetconnecta) werden. Derzeit wird die FTP-Gatewayauthentifizierung nicht unterstützt.
 
 ## <a name="about-http-authentication"></a>Informationen zur HTTP-Authentifizierung
 
-Wenn eine Authentifizierung erforderlich ist, empfängt die Client Anwendung den Statuscode 401, wenn der Server eine Authentifizierung erfordert, oder 407, wenn für den Proxy eine Authentifizierung erforderlich ist. Mit dem Statuscode sendet der Proxy oder Server mindestens einen authentifikatsantwortheader – Proxy-authentifizieren (für die Proxy Authentifizierung) oder WWW-Authenticate (für die Server Authentifizierung).
+Wenn eine Authentifizierung erforderlich ist, erhält die Clientanwendung den Statuscode 401, wenn der Server eine Authentifizierung erfordert, oder 407, wenn der Proxy eine Authentifizierung erfordert. Mit dem Statuscode sendet der Proxy oder Server einen oder mehrere Authentifizierungsantwortheader – Proxyauthentifizierung (für Proxyauthentifizierung) oder WWW-Authenticate (für Serverauthentifizierung).
 
-Jeder authentifizieren-Antwortheader enthält ein verfügbares Authentifizierungsschema und einen Bereich. Wenn mehrere Authentifizierungs Schemas unterstützt werden, gibt der Server mehrere authentifizieren-Antwortheader zurück. Beim Bereichs Wert wird die Groß-/Kleinschreibung beachtet, und es wird ein Schutzbereich auf dem Proxy oder Server definiert. Beispielsweise wäre der Header "www-Authenticate: Basic Realm =" example "" ein Beispiel für einen Header, der zurückgegeben wird, wenn eine Server Authentifizierung erforderlich ist.
+Jeder Authentifizierungsantwortheader enthält ein verfügbares Authentifizierungsschema und einen Bereich. Wenn mehrere Authentifizierungsschemas unterstützt werden, gibt der Server mehrere Authentifizierungsantwortheader zurück. Beim Bereichswert wird die Kleinschreibung beachtet, und es wird ein Schutzbereich auf dem Proxy oder Server definiert. Der Header "WWW-Authenticate: Basic Realm="example"" wäre beispielsweise ein Beispiel für einen Header, der zurückgegeben wird, wenn eine Serverauthentifizierung erforderlich ist.
 
-Die Client Anwendung, die die Anforderung gesendet hat, kann sich selbst authentifizieren, indem Sie ein Autorisierungs Header Feld mit der Anforderung einschließt. Der Autorisierungs Header würde das Authentifizierungsschema und die entsprechende Antwort enthalten, die für dieses Schema erforderlich ist. Beispielsweise würde die Kopfzeile "Authorization: Basic <username: Password>" der Anforderung hinzugefügt und erneut an den Server gesendet, wenn der Client den authentifizieren-Antwortheader "www-authentifizieren: Basic Realm =" example "" empfangen hat.
+Die Clientanwendung, die die Anforderung gesendet hat, kann sich selbst authentifizieren, indem sie ein Autorisierungsheaderfeld in die Anforderung einschleiert. Der Autorisierungsheader enthält das Authentifizierungsschema und die entsprechende Antwort, die für dieses Schema erforderlich ist. Beispielsweise würde der Header "Authorization: Basic" der Anforderung hinzugefügt und erneut an den Server gesendet, wenn der Client den Authentifizierungsantwortheader \<username:password> "WWW-Authenticate: Basic Realm="example" erhalten hat.
 
-Es gibt zwei allgemeine Arten von Authentifizierungs Schemas:
+Es gibt zwei allgemeine Arten von Authentifizierungsschemas:
 
--   Standard Authentifizierungsschema, bei dem der Benutzername und das Kennwort in Klartext an den Server gesendet werden.
+-   Standardauthentifizierungsschema, bei dem Benutzername und Kennwort in Klartext an den Server gesendet werden.
 -   Challenge-Response-Schemas, die ein Challenge-Response-Format ermöglichen.
 
-Das grundlegende Authentifizierungsschema basiert auf dem Modell, das ein Client selbst mit einem Benutzernamen und einem Kennwort für jeden Bereich authentifizieren muss. Der Server dient zum Verarbeiten der Anforderung, wenn Sie mit einem Autorisierungs Header mit einem gültigen Benutzernamen und Kennwort erneut gesendet wird.
+Das Standardauthentifizierungsschema basiert auf dem Modell, das ein Client sich mit einem Benutzernamen und kennwort für jeden Bereich authentifizieren muss. Der Server wartet die Anforderung, wenn er erneut mit einem Autorisierungsheader gesendet wird, der einen gültigen Benutzernamen und ein gültiges Kennwort enthält.
 
-Mit Challenge-Response-Schemas wird eine sicherere Authentifizierung ermöglicht. Wenn eine Anforderung eine Authentifizierung mit einem Challenge-Response-Schema erfordert, werden der entsprechende Statuscode und die Authenticate-Header an den Client zurückgegeben. Der Client muss dann die Anforderung mit einem Aushandlungs Vorgang erneut senden. Der Server gibt einen entsprechenden Statuscode mit einer Herausforderung zurück, und der Client müsste dann die Anforderung mit der richtigen Antwort erneut senden, um den angeforderten Dienst zu erhalten.
+Abfrage-Antwort-Schemas ermöglichen eine sicherere Authentifizierung. Wenn eine Anforderung eine Authentifizierung mithilfe eines Abfrage-/Antwortschemas erfordert, werden der entsprechende Statuscode und die Authenticate-Header an den Client zurückgegeben. Der Client muss dann die Anforderung mit einer Aushandlung erneut senden. Der Server gibt einen entsprechenden Statuscode mit einer Abfrage zurück, und der Client müsste die Anforderung dann mit der richtigen Antwort erneut senden, um den angeforderten Dienst abzurufen.
 
-In der folgenden Tabelle sind die Authentifizierungs Schemas, der Authentifizierungstyp, die dll, die Sie unterstützt, und eine Beschreibung des Schemas aufgelistet.
+In der folgenden Tabelle sind die Authentifizierungsschemas, der Authentifizierungstyp, die DLL, die sie unterstützt, und eine Beschreibung des Schemas aufgeführt.
 
 
 
-| Schema                                    | type               | DLL                  | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                        |
+| Schema                                    | type               | DLL                  | Beschreibung                                                                                                                                                                                                                                                                                                                                        |
 |-------------------------------------------|--------------------|----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Basic (cleartext)                         | basic              | Wininet.dll          | Verwendet eine Base64-codierte Zeichenfolge, die den Benutzernamen und das Kennwort enthält.                                                                                                                                                                                                                                                                             |
-| Digest                                    | Challenge-Response | Digest.dll           | Ein Challenge-Response-Schema, das die Verwendung eines Nonce-Werts (eine vom Server angegebene Daten Zeichenfolge) herausstellt. Eine gültige Antwort enthält eine Prüfsumme aus dem Benutzernamen, dem Kennwort, dem angegebenen Nonce-Wert, der HTTP-Methode und dem angeforderten Uniform Resource Identifier (URI). Die Unterstützung für die Digest-Authentifizierung wurde in Microsoft Internet Explorer 5 eingeführt. |
-| NT-LAN-Manager (NTLM)                     | Challenge-Response | Winsspi.dll          | Ein Challenge-Response-Schema, das die Herausforderung auf den Benutzernamen stützt.                                                                                                                                                                                                                                                                             |
-| Microsoft-Netzwerk (MSN)                   | Challenge-Response | Msnsspc.dll          | Das Authentifizierungsschema the Microsoft Network.                                                                                                                                                                                                                                                                                                     |
-| Authentifizierung verteilter Kenn Wörter (dpa) | Challenge-Response | Msapsspc.dll         | Ähnelt der MSN-Authentifizierung und wird auch vom Microsoft-Netzwerk verwendet.                                                                                                                                                                                                                                                                           |
-| Remote Passphrase-Authentifizierung (RPA)    | CompuServe         | Rpawinet.dll da.dll | Compuservice-Authentifizierungsschema. Weitere Informationen finden Sie in den [Spezifikationen für den RPA-Mechanismus](https://www.compuserve.com/).                                                                                                                                                                                                    |
+| Basic (Klartext)                         | basic              | Wininet.dll          | Verwendet eine Base64-codierte Zeichenfolge, die den Benutzernamen und das Kennwort enthält.                                                                                                                                                                                                                                                                             |
+| Digest                                    | Challenge-Response | Digest.dll           | Ein Abfrage-Antwort-Schema, das die Verwendung eines Nonce-Werts (einer vom Server angegebenen Datenzeichenfolge) in Frage stellt. Eine gültige Antwort enthält eine Prüfsumme des Benutzernamens, des Kennworts, des angegebenen Nonce-Werts, der HTTP-Methode und des angeforderten Uniform Resource Identifier (URI). Unterstützung der Digestauthentifizierung wurde in Microsoft Internet Explorer 5 eingeführt. |
+| NT LAN-Manager (NTLM)                     | Challenge-Response | Winsspi.dll          | Ein Abfrage-Antwort-Schema, das die Abfrage auf dem Benutzernamen basiert.                                                                                                                                                                                                                                                                             |
+| Microsoft Network (MSN)                   | Challenge-Response | Msnsspc.dll          | The Microsoft Network des Authentifizierungsschemas.                                                                                                                                                                                                                                                                                                     |
+| Verteilte Kennwortauthentifizierung (Distributed Password Authentication, DPA) | Challenge-Response | Msapsspc.dll         | Ähnelt der MSN-Authentifizierung und wird auch vom Microsoft Network verwendet.                                                                                                                                                                                                                                                                           |
+| Remotepassphrase-Authentifizierung (RPA)    | Compuserve         | Rpawinet.dll, da.dll | CompuServe-Authentifizierungsschema. Weitere Informationen finden Sie unter [RPA Mechanism Specifications (RPA-Mechanismusspezifikationen).](https://www.compuserve.com/)                                                                                                                                                                                                    |
 
 
 
- 
+ 
 
-Für andere als die Standard Authentifizierung müssen die Registrierungsschlüssel zusätzlich zur Installation der entsprechenden DLL eingerichtet werden.
+Für alle Anderen als die Standardauthentifizierung müssen die Registrierungsschlüssel zusätzlich zur Installation der entsprechenden DLL eingerichtet werden.
 
-Wenn eine Authentifizierung erforderlich ist, sollte das [Internet \_ Flag \_ Keep \_ Connection](api-flags.md) -Flag im [**httpopanrequest**](/windows/desktop/api/Wininet/nf-wininet-httpopenrequesta)-Befehl verwendet werden. Das \_ \_ \_ kennflag für die Verbindungsart "Internet" ist für NTLM und andere Arten der Authentifizierung erforderlich, um die Verbindung während des Authentifizierungs Vorgangs aufrechtzuerhalten. Wenn die Verbindung nicht beibehalten wird, muss der Authentifizierungs Vorgang mit dem Proxy oder dem Server neu gestartet werden.
+Wenn eine Authentifizierung erforderlich ist, sollte [das FLAG INTERNET FLAG KEEP \_ \_ \_ CONNECTION](api-flags.md) im Aufruf von [**HttpOpenRequest verwendet werden.**](/windows/desktop/api/Wininet/nf-wininet-httpopenrequesta) Das FLAG INTERNET FLAG KEEP CONNECTION ist für NTLM und andere Authentifizierungstypen erforderlich, um die Verbindung während des Abschlusses des \_ \_ \_ Authentifizierungsprozesses zu verwalten. Wenn die Verbindung nicht aufrechterhalten wird, muss der Authentifizierungsprozess mit dem Proxy oder Server neu gestartet werden.
 
-Die Funktionen [**InternetOpenUrl**](/windows/desktop/api/Wininet/nf-wininet-internetopenurla) und [**HttpSendRequest**](/windows/desktop/api/Wininet/nf-wininet-httpsendrequesta) werden erfolgreich abgeschlossen, auch wenn eine Authentifizierung erforderlich ist. Der Unterschied besteht darin, dass die in den Header Dateien und in der [**Datei "internetreadfile**](/windows/desktop/api/Wininet/nf-wininet-internetreadfile) " zurückgegebenen Daten eine HTML-Seite erhalten, in der der Benutzer über den Statuscode
+Die [**Funktionen InternetOpenUrl**](/windows/desktop/api/Wininet/nf-wininet-internetopenurla) und [**HttpSendRequest**](/windows/desktop/api/Wininet/nf-wininet-httpsendrequesta) werden auch dann erfolgreich abgeschlossen, wenn eine Authentifizierung erforderlich ist. Der Unterschied besteht in den in den Headerdateien zurückgegebenen Daten, und [**InternetReadFile**](/windows/desktop/api/Wininet/nf-wininet-internetreadfile) erhält eine HTML-Seite, die den Benutzer über den Statuscode informiert.
 
-### <a name="registering-authentication-keys"></a>Registrieren von authentifizierungsschlüsseln
+### <a name="registering-authentication-keys"></a>Registrieren von Authentifizierungsschlüsseln
 
-Internet \_ Open \_ Type \_ preconfig prüft die Registrierungs Werte **ProxyEnable**, **Proxyserver** und **ProxyOverride**. Diese Werte befinden sich unter **HKEY \_ Current \_ User** \\ **Software** \\ **Microsoft** \\ **Windows** \\ **CurrentVersion** \\ **Internet Settings**.
+INTERNET \_ OPEN \_ TYPE \_ PRECONFIG untersucht die Registrierungswerte **ProxyEnable,** **ProxyServer** und **ProxyOverride.** Diese Werte befinden sich unter **HKEY \_ CURRENT \_ USER** \\ **Software** \\ **Microsoft** \\ **Windows** \\ **CurrentVersion** Internet \\ **Settings**.
 
-Für andere Authentifizierungs Schemas als Basic muss der Registrierung unter **HKEY \_ local \_ Machine** \\ **Software** \\ **Microsoft** \\ **Internet Explorer** \\ **Security** ein Schlüssel hinzugefügt werden. Ein **DWORD** -Wert, **Flags**, sollte mit dem entsprechenden Wert festgelegt werden. In der folgenden Liste werden die möglichen Werte für den **Flags** -Wert angezeigt.
+Bei anderen Authentifizierungsschemas als Basic muss der Registrierung unter **HKEY \_ LOCAL \_ MACHINE** SOFTWARE Microsoft Internet Explorer Security ein Schlüssel hinzugefügt \\  \\  \\  \\ werden. Der **DWORD-Wert** **Flags** sollte mit dem entsprechenden Wert festgelegt werden. Die folgende Liste zeigt die möglichen Werte für den **Flags-Wert.**
 
--   Eindeutiger \_ \_ \_ \_ Kontext \_ pro \_ tcpip (Wert = 0x01) für Plug-in-Authentifizierungsflags
+-   PLUGIN \_ AUTH \_ FLAGS \_ UNIQUE CONTEXT PER \_ \_ \_ TCPIP (value=0x01)
 
-    Jeder TCP/IP-Socket (Transmission Control Protocol/Internet Protocol) enthält einen anderen Kontext. Andernfalls wird für jede Bereichs-oder Block-URL-Vorlage ein neuer Kontext übermittelt.
+    Jeder TCP/IP-Socket (Transmission Control Protocol/Internet Protocol) enthält einen anderen Kontext. Andernfalls wird ein neuer Kontext für jede Bereichs- oder Block-URL-Vorlage übergeben.
 
--   Plug-in- \_ Authentifizierungsflags \_ können die \_ \_ \_ Benutzeroberfläche verarbeiten (Wert = 0x02)
+-   PLUGIN \_ AUTH \_ FLAGS \_ CAN HANDLE UI \_ \_ (value=0x02)
 
-    Diese DLL kann Ihre eigene Benutzereingaben verarbeiten.
+    Diese DLL kann ihre eigenen Benutzereingaben verarbeiten.
 
--   Plug-in- \_ auth- \_ Flags \_ können \_ \_ keine \_ passwd verarbeiten (Wert = 0x04)
+-   PLUGIN \_ AUTH \_ FLAGS \_ CAN HANDLE \_ \_ NO \_ PASSWD (value=0x04) (PLUG-IN-AUTHENTIFIZIERUNGSFLAGS KÖNNEN KEIN PASSWD verarbeiten (value=0x04)
 
-    Diese DLL kann eine Authentifizierung durchgeführt werden, ohne dass der Benutzer zur Eingabe eines Kennworts aufgefordert wird.
+    Diese DLL kann eine Authentifizierung durchführen, ohne den Benutzer zur Eingabe eines Kennworts aufzufordern.
 
--   Plug-in für die Plug-in-Authentifizierung \_ \_ \_ ohne \_ Bereich (Wert = 0x08)
+-   PLUGIN \_ AUTH \_ FLAGS \_ NO REALM \_ (value=0x08)
 
-    Diese DLL verwendet keine Standard-HTTP-Bereichs Zeichenfolge. Alle Daten, die als Bereich angezeigt werden, sind Schema spezifische Daten.
+    Diese DLL verwendet keine standardmäßige HTTP-Bereichszeichenfolge. Alle Daten, die ein Bereich zu sein scheinen, sind schemaspezifische Daten.
 
--   Plug-in- \_ auth- \_ Flags \_ bleiben \_ \_ nicht \_ erforderlich (Wert = 0x10)
+-   \_PLUG-IN-AUTHENTIFIZIERUNGSFLAGS \_ KEEP ALIVE NOT REQUIRED \_ \_ \_ \_ (value=0x10)
 
-    Diese DLL erfordert keine permanente Verbindung für Ihre Challenge-Response-Sequenz.
+    Diese DLL erfordert keine permanente Verbindung für die Abfrageantwortsequenz.
 
-Wenn Sie z. b. die NTLM-Authentifizierung hinzufügen möchten, muss der Schlüssel NTLM der **lokalen HKEY- \_ \_ Computer** \\ **Software** \\ **Microsoft** \\ **Internet Explorer** \\ **Security** hinzugefügt werden. Unter **HKEY \_ local \_ Machine** \\ **Software** \\ **Microsoft** \\ **Internet Explorer** \\ **Security** \\ **NTLM** müssen der Zeichen folgen Wert, der **dllfile**-Wert und der **DWORD** -Wert **Flags** hinzugefügt werden. **Dllfile** muss auf Winsspi.dll festgelegt werden, und **Flags** müssen auf 0x08 festgelegt werden.
+Um z. B. die NTLM-Authentifizierung hinzuzufügen, muss der Schlüssel NTLM **HKEY \_ LOCAL \_ MACHINE** SOFTWARE Microsoft Internet Explorer Security hinzugefügt \\  \\  \\  \\ werden. Unter **HKEY \_ LOCAL \_ MACHINE** \\ **SOFTWARE** \\ **Microsoft** \\ **Internet Explorer** \\ **Security** \\ **NTLM** müssen der Zeichenfolgenwert **DLLFile** und der **DWORD-Wert** **Flags** hinzugefügt werden. **DLLFile** muss auf Winsspi.dll und **Flags** auf 0x08.
 
 ### <a name="server-authentication"></a>Serverauthentifizierung
 
-Wenn ein Server eine Anforderung empfängt, die eine Authentifizierung erfordert, gibt der Server eine 401-Statuscode Meldung zurück. In dieser Meldung sollte der Server mindestens einen WWW-Authenticate Antwortheader enthalten. Diese Header enthalten die Authentifizierungsmethoden, die der Server zur Verfügung gestellt hat. WinInet wählt die erste Methode aus, die er erkennt.
+Wenn ein Server eine Anforderung empfängt, die eine Authentifizierung erfordert, gibt der Server die Statuscodemeldung 401 zurück. In dieser Meldung sollte der Server mindestens einen WWW-Authenticate-Antwortheader enthalten. Diese Header enthalten die Authentifizierungsmethoden, die der Server zur Verfügung hat. WinINet wählt die erste Methode aus, die erkannt wird.
 
-Die Standard Authentifizierung bietet eine schwache Sicherheit, es sei denn, der Channel ist erstmalig mit SSL oder PCT verschlüsselt.
+Die Standardauthentifizierung bietet schwache Sicherheit, es sei denn, der Kanal wird zuerst mit SSL oder PCT linkverschlüsselt.
 
-Die [**internetterrordlg**](/windows/desktop/api/Wininet/nf-wininet-interneterrordlg) -Funktion kann verwendet werden, um die Benutzernamen-und Kenn Wort Daten vom Benutzer abzurufen, oder es kann eine angepasste Benutzeroberfläche entworfen werden, um die Daten zu erhalten.
+Die [**InternetErrorDlg-Funktion**](/windows/desktop/api/Wininet/nf-wininet-interneterrordlg) kann verwendet werden, um die Benutzernamen- und Kennwortdaten vom Benutzer zu erhalten, oder eine benutzerdefinierte Benutzeroberfläche kann zum Abrufen der Daten entworfen werden.
 
-Eine benutzerdefinierte Schnittstelle kann die [**internettoption**](/windows/desktop/api/Wininet/nf-wininet-internetsetoptiona) -Funktion verwenden, um die [Internet \_ Option \_ Password](option-flags.md) -und [Internet \_ Option \_ username](option-flags.md) -Werte festzulegen und die Anforderung dann erneut an den Server zu senden.
+Eine benutzerdefinierte Schnittstelle kann die [**InternetSetOption-Funktion**](/windows/desktop/api/Wininet/nf-wininet-internetsetoptiona) verwenden, um die Werte [INTERNET OPTION \_ \_ PASSWORD](option-flags.md) und [INTERNET OPTION \_ \_ USERNAME](option-flags.md) festlegen und dann die Anforderung erneut an den Server senden.
 
 ### <a name="proxy-authentication"></a>Proxyauthentifizierung
 
-Wenn ein Client versucht, einen Proxy zu verwenden, der eine Authentifizierung erfordert, gibt der Proxy eine 407-Statuscode Meldung an den Client zurück. In dieser Meldung sollte der Proxy mindestens einen Proxy-Authenticate Antwortheader enthalten. Diese Header enthalten die vom Proxy verfügbaren Authentifizierungsmethoden. WinInet wählt die erste Methode aus, die er erkennt.
+Wenn ein Client versucht, einen Proxy zu verwenden, der eine Authentifizierung erfordert, gibt der Proxy eine 407-Statuscodemeldung an den Client zurück. In dieser Nachricht sollte der Proxy mindestens einen Proxy-Authenticate-Antwortheader enthalten. Diese Header enthalten die vom Proxy verfügbaren Authentifizierungsmethoden. WinINet wählt die erste Methode aus, die erkannt wird.
 
-Die [**internetterrordlg**](/windows/desktop/api/Wininet/nf-wininet-interneterrordlg) -Funktion kann verwendet werden, um die Benutzernamen-und Kenn Wort Daten vom Benutzer zu erhalten, oder es kann eine angepasste Benutzeroberfläche entworfen werden.
+Die [**InternetErrorDlg-Funktion**](/windows/desktop/api/Wininet/nf-wininet-interneterrordlg) kann verwendet werden, um die Benutzernamen- und Kennwortdaten vom Benutzer zu erhalten, oder eine benutzerdefinierte Benutzeroberfläche kann entworfen werden.
 
-Eine benutzerdefinierte Schnittstelle kann die [**internettoption**](/windows/desktop/api/Wininet/nf-wininet-internetsetoptiona) -Funktion verwenden, um die [Internet \_ Option \_ Proxy \_ Kennwort](option-flags.md) und [Internet \_ options \_ Proxy- \_ Benutzernamen](option-flags.md) Werte festzulegen und die Anforderung dann erneut an den Proxy zu senden.
+Eine benutzerdefinierte Schnittstelle kann die [**InternetSetOption-Funktion**](/windows/desktop/api/Wininet/nf-wininet-internetsetoptiona) verwenden, um die Werte [INTERNET OPTION PROXY \_ \_ \_ PASSWORD](option-flags.md) und [INTERNET OPTION PROXY \_ \_ \_ USERNAME](option-flags.md) festlegen und dann die Anforderung erneut an den Proxy senden.
 
-Wenn kein Proxy Benutzername und kein Kennwort festgelegt sind, versucht WinInet, den Benutzernamen und das Kennwort für den Server zu verwenden. Dieses Verhalten ermöglicht es Clients, dieselbe angepasste Benutzeroberfläche zu implementieren, die zum Verarbeiten der Server Authentifizierung verwendet wird.
+Wenn kein Proxybenutzername und kein Kennwort festgelegt sind, versucht WinINet, den Benutzernamen und das Kennwort für den Server zu verwenden. Durch dieses Verhalten können Clients dieselbe benutzerdefinierte Benutzeroberfläche implementieren, die auch für die Serverauthentifizierung verwendet wird.
 
 ## <a name="handling-http-authentication"></a>Behandeln der HTTP-Authentifizierung
 
-Die HTTP-Authentifizierung kann entweder mit " [**internetterrordlg**](/windows/desktop/api/Wininet/nf-wininet-interneterrordlg) " oder mit einer benutzerdefinierten Funktion durchgeführt werden, die " [**InternetSetOption**](/windows/desktop/api/Wininet/nf-wininet-internetsetoptiona) " verwendet oder eigene Authentifizierungs Header hinzufügt. [**Internetzterrordlg**](/windows/desktop/api/Wininet/nf-wininet-interneterrordlg) kann die mit einem [**hinternethandle**](appendix-a-hinternet-handles.md) verknüpften Header untersuchen, um verborgene Fehler, wie z. b. Statuscodes von einem Proxy oder Server, zu suchen. [**InternetSetOption**](/windows/desktop/api/Wininet/nf-wininet-internetsetoptiona) kann verwendet werden, um den Benutzernamen und das Kennwort für den Proxy und den Server festzulegen. Bei der MSN-und DPA-Authentifizierung muss [**internetterrordlg**](/windows/desktop/api/Wininet/nf-wininet-interneterrordlg) verwendet werden, um den Benutzernamen und das Kennwort festzulegen.
+Die HTTP-Authentifizierung kann entweder mit [**InternetErrorDlg**](/windows/desktop/api/Wininet/nf-wininet-interneterrordlg) oder einer benutzerdefinierten Funktion verarbeitet werden, die [**InternetSetOption**](/windows/desktop/api/Wininet/nf-wininet-internetsetoptiona) verwendet oder eigene Authentifizierungsheader hinzufügt. [**InternetErrorDlg**](/windows/desktop/api/Wininet/nf-wininet-interneterrordlg) kann die einem [**HINTERNET-Handle**](appendix-a-hinternet-handles.md) zugeordneten Header untersuchen, um ausgeblendete Fehler zu finden, z. B. Statuscodes von einem Proxy oder Server. [**InternetSetOption**](/windows/desktop/api/Wininet/nf-wininet-internetsetoptiona) kann verwendet werden, um den Benutzernamen und das Kennwort für den Proxy und den Server festzulegen. Für die MSN- und DPA-Authentifizierung muss [**InternetErrorDlg**](/windows/desktop/api/Wininet/nf-wininet-interneterrordlg) verwendet werden, um den Benutzernamen und das Kennwort festzulegen.
 
-Für jede benutzerdefinierte Funktion, die eigene WWW-Authenticate oder Proxy-Authenticate Header hinzufügt, sollte das [Internet \_ Flag \_ No \_ auth](api-flags.md) -Flag festgelegt werden, um die Authentifizierung zu deaktivieren.
+Für jede benutzerdefinierte Funktion, die eigene WWW-Authenticate- oder Proxy-Authenticate-Header hinzufügt, sollte das [INTERNET \_ FLAG NO \_ \_ AUTH-Flag](api-flags.md) so festgelegt werden, dass die Authentifizierung deaktiviert wird.
 
-Im folgenden Beispiel wird gezeigt, wie mit [**internetterrordlg**](/windows/desktop/api/Wininet/nf-wininet-interneterrordlg) die HTTP-Authentifizierung behandelt werden kann.
+Das folgende Beispiel zeigt, wie [**InternetErrorDlg**](/windows/desktop/api/Wininet/nf-wininet-interneterrordlg) zur Behandlung der HTTP-Authentifizierung verwendet werden kann.
 
 
 ```C++
@@ -159,9 +159,9 @@ if (dwError == ERROR_INTERNET_FORCE_RETRY)
 
 
 
-Im Beispiel wird dwErrorCode verwendet, um alle Fehler zu speichern, die mit dem-Befehl von [**HttpSendRequest**](/windows/desktop/api/Wininet/nf-wininet-httpsendrequesta)verknüpft sind. [**HttpSendRequest**](/windows/desktop/api/Wininet/nf-wininet-httpsendrequesta) wird erfolgreich abgeschlossen, auch wenn für den Proxy oder Server eine Authentifizierung erforderlich ist. Wenn das \_ Flag Fehler UI-Filter für Fehler der Flags-Fehlermeldung \_ \_ \_ \_ an [**internetterrordlg**](/windows/desktop/api/Wininet/nf-wininet-interneterrordlg)übermittelt wird, prüft die Funktion die Header auf alle verdeckten Fehler. Diese ausgeblendeten Fehler würden alle Authentifizierungsanforderungen einschließen. [**Interneterrordlg**](/windows/desktop/api/Wininet/nf-wininet-interneterrordlg) zeigt das entsprechende Dialogfeld an, in dem der Benutzer zur Eingabe der erforderlichen Daten aufgefordert wird. Die Flags \_ \_ -Fehler \_ - \_ UI \_ -Flags Daten generieren Daten und Flags \_ Fehler \_ UI \_ Flags ändern-Flags \_ \_ müssen auch an [**interneterrordlg**](/windows/desktop/api/Wininet/nf-wininet-interneterrordlg)übermittelt werden, damit die Funktion die entsprechende Datenstruktur für den Fehler erstellt und die Ergebnisse des Dialog Felds im [**HINTERNET**](appendix-a-hinternet-handles.md) -handle speichert.
+Im Beispiel wird dwErrorCode verwendet, um alle Fehler zu speichern, die dem Aufruf von [**HttpSendRequest**](/windows/desktop/api/Wininet/nf-wininet-httpsendrequesta)zugeordnet sind. [**HttpSendRequest**](/windows/desktop/api/Wininet/nf-wininet-httpsendrequesta) wird erfolgreich abgeschlossen, auch wenn der Proxy oder Server eine Authentifizierung erfordert. Wenn das \_ FLAGS ERROR \_ UI FILTER FOR ERRORS \_ \_ \_ -Flag an [**InternetErrorDlg**](/windows/desktop/api/Wininet/nf-wininet-interneterrordlg)übergeben wird, überprüft die Funktion die Header auf ausgeblendete Fehler. Zu diesen ausgeblendeten Fehlern gehören alle Anforderungen für die Authentifizierung. [**InternetErrorDlg**](/windows/desktop/api/Wininet/nf-wininet-interneterrordlg) zeigt das entsprechende Dialogfeld an, um den Benutzer zur Eingabe der erforderlichen Daten aufzufordern. Die Flags FLAGS \_ ERROR \_ UI \_ FLAGS GENERATE DATA und \_ \_ FLAGS ERROR UI \_ \_ \_ FLAGS CHANGE OPTIONS sollten ebenfalls an \_ \_ [**InternetErrorDlg**](/windows/desktop/api/Wininet/nf-wininet-interneterrordlg)übergeben werden, damit die Funktion die entsprechende Datenstruktur für den Fehler erstellt und die Ergebnisse des Dialogfelds im [**HINTERNET-Handle**](appendix-a-hinternet-handles.md) speichert.
 
-Der folgende Beispielcode zeigt, wie die Authentifizierung mithilfe von [**InternetSetOption**](/windows/desktop/api/Wininet/nf-wininet-internetsetoptiona)verarbeitet werden kann.
+Der folgende Beispielcode zeigt, wie die Authentifizierung mit [**InternetSetOption**](/windows/desktop/api/Wininet/nf-wininet-internetsetoptiona)behandelt werden kann.
 
 
 ```C++
@@ -242,10 +242,10 @@ switch (dwStatus)
 
 
 > [!Note]  
-> WinInet unterstützt keine Server Implementierungen. Außerdem sollte Sie nicht von einem Dienst verwendet werden. Verwenden Sie für Server Implementierungen oder-Dienste [Microsoft Windows HTTP-Dienste (WinHTTP)](/windows/desktop/WinHttp/winhttp-start-page).
+> WinINet unterstützt keine Serverimplementierungen. Darüber hinaus sollte es nicht von einem Dienst verwendet werden. Verwenden Sie für Serverimplementierungen oder -dienste [Microsoft Windows HTTP Services (WinHTTP).](/windows/desktop/WinHttp/winhttp-start-page)
 
- 
+ 
 
- 
+ 
 
- 
+ 

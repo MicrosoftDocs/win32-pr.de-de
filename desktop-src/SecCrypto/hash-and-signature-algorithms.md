@@ -1,0 +1,36 @@
+---
+description: Die folgenden Algorithmen berechnen Hashes und digitale Signaturen. Jeder dieser Algorithmen wird in den Kryptografieanbietern von Microsoft Base, Strong und Enhanced unterstützt.
+ms.assetid: 91bf898d-658a-4e45-aa6e-eded46657563
+title: Hash-und Signatur Algorithmen
+ms.topic: article
+ms.date: 05/31/2018
+ms.openlocfilehash: bc1ca0819aebc01bba342410eda20b626349f1b5
+ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "106353998"
+---
+# <a name="hash-and-signature-algorithms"></a>Hash-und Signatur Algorithmen
+
+Die folgenden Algorithmen berechnen [*Hashes*](../secgloss/h-gly.md) und [*digitale Signaturen*](../secgloss/d-gly.md). Jeder dieser Algorithmen wird in den Kryptografieanbietern von Microsoft Base, Strong und Enhanced unterstützt. Interne Details dieser Algorithmen gehen über den Rahmen dieser Dokumentation hinaus. Eine Liste der zusätzlichen Quellen finden Sie in der [zusätzlichen Dokumentation zu Cryptography](additional-documentation-on-cryptography.md).
+
+
+
+| Algorithmen                                     | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+|------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| CBC-MAC (Cipher Block Chaining)<br/>     | Einer der Algorithmen (calg \_ Mac), der von Microsoft-Anbietern implementiert wird, ist ein [*Blockchiffre*](../secgloss/b-gly.md) [*Nachrichtenauthentifizierungscode*](../secgloss/m-gly.md) (Mac). Diese Methode verschlüsselt die Basisdaten mit einer Blockchiffre und verwendet dann den letzten verschlüsselten Block als [*Hashwert*](../secgloss/h-gly.md) . Der Verschlüsselungsalgorithmus, der verwendet wird, um den Mac zu erstellen, ist der Verschlüsselungsalgorithmus, der beim Erstellen des Sitzungsschlüssels angegeben wurde. <br/>                                                                            |
+| HMAC<br/>                                | Ein \_ von Microsoft-Anbietern implementierter Algorithmus (calg HMAC). Dieser Algorithmus verwendet auch einen [*symmetrischen Schlüssel*](../secgloss/s-gly.md) , um den [*Hash*](../secgloss/h-gly.md)zu erstellen, ist jedoch komplexer als der CBC-MAC-Algorithmus (Simple [*Cipher Block Chaining*](../secgloss/c-gly.md) ). Sie kann mit einem beliebigen iterierten kryptografischen Hash Algorithmus verwendet werden, z. b. MD5 oder SHA-1. Weitere Informationen finden Sie unter [Erstellen eines HMAC](creating-an-hmac.md).<br/>                                                                                       |
+| MD2, MD4 und MD5<br/>                   | Diese Hash Algorithmen wurden alle von RSA Data Security, Inc. entwickelt. Diese Algorithmen wurden in sequenzieller Reihenfolge entwickelt. Alle drei 128-Bit-Hashwerte generieren. Alle drei sind bekanntermaßen schwach und sollten nur verwendet werden, wenn Sie für Kompatibilitätszwecke benötigt werden. Für neuen Code wird die SHA-2-Familie von Hashes empfohlen.<br/> Diese Algorithmen sind bekannt und können ausführlich in jedem Verweis auf die [*Kryptografie*](../secgloss/c-gly.md)überprüft werden.<br/>                                                                                                                                                           |
+| Nachrichtenauthentifizierungscode (Mac)<br/>   | Mac-Algorithmen ähneln [*Hash*](../secgloss/h-gly.md) Algorithmen, werden jedoch mit einem [*symmetrischen*](../secgloss/s-gly.md) (Sitzungs-) Schlüssel berechnet. Der ursprüngliche [*Sitzungsschlüssel*](../secgloss/s-gly.md) ist erforderlich, um den Hashwert neu zu berechnen. Der neu berechnete Hashwert wird verwendet, um zu überprüfen, ob die Basisdaten nicht geändert wurden. Diese Algorithmen werden manchmal als Schlüssel für Schlüssel gesteuerte Hash bezeichnet. Informationen dazu, welche Microsoft-Anbieter Mac unterstützen, finden Sie unter [Microsoft Kryptografiedienstanbieter](microsoft-cryptographic-service-providers.md).<br/>    |
+| Secure Hash-Algorithmus (SHA-1)<br/>       | Dieser Hash Algorithmus wurde vom [*National Institute of Standards and Technology*](../secgloss/n-gly.md) (NIST) und von der National Security Agency (NSA) entwickelt. Dieser Algorithmus wurde für die Verwendung mit DSA (Digital Signature-Algorithmus) oder DSS (Digital Signature Standard) entwickelt. Dieser Algorithmus generiert einen 160-Bit- [*Hashwert*](../secgloss/h-gly.md) . SHA-1 hat bekanntermaßen Schwächen und sollte nur verwendet werden, wenn dies für Kompatibilitätszwecke erforderlich ist. Für neuen Code wird die SHA-2-Familie von Hashes empfohlen.<br/> |
+| Secure Hash-Algorithmus-2 (SHA-2)<br/>   | Dieser Hash Algorithmus wurde als Nachfolger von SHA-1 vom [*National Institute of Standards and Technology*](../secgloss/n-gly.md) (NIST) und der National Security Agency (NSA) entwickelt. Sie verfügt über vier Varianten – SHA-224, SHA-256, SHA-384 und SHA-512 –, die entsprechend der Anzahl der Bits in ihren Ausgaben benannt werden. Dabei werden SHA-256, SHA-384 und SHA-512 in den Kryptografieanbieter von Microsoft AES implementiert.<br/>                                                                                                                                |
+| SSL3-Client Autorisierungs Algorithmus<br/> | Dieser Algorithmus wird für die SSL3-Client Authentifizierung verwendet. Im SSL3-Protokoll wird eine Verkettung eines MD5-Hashs und eines SHA-Hashs mit einem privaten RSA- [*Schlüssel*](../secgloss/p-gly.md)signiert. CryptoAPI 2.0 und die Microsoft Base und die erweiterten Kryptografieanbieter unterstützen dies mit dem [*Hashtyp*](../secgloss/h-gly.md) calg \_ SSL3 \_ SHAMD5. Weitere Informationen finden Sie unter [Creating a calg \_ SSL3 \_ SHAMD5 Hash](creating-a-calg-ssl3-shamd5-hash.md).<br/>                                                                                                                                               |
+
+
+
+ 
+
+ 
+
+ 
