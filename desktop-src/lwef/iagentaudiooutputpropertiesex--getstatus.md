@@ -1,19 +1,19 @@
 ---
-title: Iagentaudiooutputpropertiesex GetStatus
-description: Iagentaudiooutputpropertiesex GetStatus
+title: IAgentAudioOutputPropertiesEx GetStatus
+description: IAgentAudioOutputPropertiesEx GetStatus
 ms.assetid: 29bf1379-eebe-4b8b-b8d0-b86d2da78b64
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9dd89f4b3d8101ff15b868551626775e6f2e341f
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: f851c8fc73e9f427bd725d7ef647b84a68be13e4
+ms.sourcegitcommit: 59ec383331366f8a62c94bb88468ca03e95c43f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104388472"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107380744"
 ---
-# <a name="iagentaudiooutputpropertiesexgetstatus"></a>Iagentaudiooutputpropertiesex:: GetStatus
+# <a name="iagentaudiooutputpropertiesexgetstatus"></a>IAgentAudioOutputPropertiesEx::GetStatus
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Microsoft Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht mehr verfügbar.\]
 
 ``` syntax
 HRESULT GetStatus(
@@ -27,22 +27,22 @@ Ruft den Status des Audiokanals ab.
 
 <dl> <dt>
 
-<span id="plStatus"></span><span id="plstatus"></span><span id="PLSTATUS"></span>*plstatus*
+<span id="plStatus"></span><span id="plstatus"></span><span id="PLSTATUS"></span>*plStatus*
 </dt> <dd>
 
-Status des audioausgabekanals, bei dem es sich um einen der folgenden Werte handeln kann:
+Status des Audioausgabekanals, der einer der folgenden Werte sein kann:
 
 
 
-| Wert                                                                         | BESCHREIBUNG                                                                                                    |
+| Wert                                                                         | Beschreibung                                                                                                    |
 |-------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| **Ganzzahl ohne Vorzeichen Short** **- \_ Audiostatus \_ verfügbar = 0;**<br/>         | Der audioausgabechannel ist verfügbar (nicht ausgelastet).                                                              |
-| **Ganzzahl ohne Vorzeichen Short** -Audiostatus (Ganzzahl ohne Vorzeichen Short) **\_ \_ noaudio= 1;**<br/>           | Die Audioausgabe wird nicht unterstützt. Dies ist beispielsweise der Fall, weil keine Soundkarte vorhanden ist.                             |
-| der Konstante **Ganzzahl ohne Vorzeichen Short** **\_ Audiostatus \_ kanopenaudio= 2;**<br/>     | Der audioausgabechannel kann nicht geöffnet werden (ist ausgelastet); beispielsweise, weil eine andere Anwendung Audiofunktionen wieder gibt. |
-| " **Ganzzahl ohne Vorzeichen Short** **\_ \_ audiouser sprechender" = 3;**<br/>      | Der audioausgabechannel ist ausgelastet, weil der Server die Benutzer Spracheingabe verarbeitet.                            |
-| Konstante **unsignierte** **\_ kurzaudiostatus \_ = 4;**<br/> | Der audioausgabechannel ist ausgelastet, weil zurzeit ein Zeichen spricht.                                    |
-| " **Ganzzahl ohne Vorzeichen Short** **\_ Audiostatus" \_ sroverrideable = 5;**<br/>    | Der audioausgabechannel ist nicht ausgelastet, aber er wartet auf die Benutzer Spracheingabe.                                 |
-| **Ganzzahl ohne Vorzeichen Short** **- \_ audiostatusfehler \_ = 6;**<br/>             | Beim Versuch, auf den audioausgabechannel zuzugreifen, ist ein anderes (Unbekanntes) Problem aufgetreten.                       |
+| **const unsigned short** **AUDIO STATUS AVAILABLE = \_ \_ 0;**<br/>         | Der Audioausgabekanal ist verfügbar (nicht ausgelastet).                                                              |
+| **const unsigned short** **AUDIO STATUS \_ \_ NOAUDIO = 1;**<br/>           | Die Audioausgabe wird nicht unterstützt. z. B. weil keine Soundkarte ist.                             |
+| **const unsigned short** **AUDIO STATUS \_ \_ CANTOPENAUDIO = 2;**<br/>     | Der Audioausgabekanal kann nicht geöffnet werden (ist ausgelastet). Dies liegt beispielsweise daran, dass eine andere Anwendung Audio abspielt. |
+| **const unsigned short** **AUDIO STATUS \_ \_ USERSPEAKING = 3;**<br/>      | Der Audioausgabekanal ist ausgelastet, da der Server Spracheingaben des Benutzers verarbeitet.                            |
+| **const unsigned short** **AUDIO STATUS \_ \_ CHARACTERSPEAKING = 4;**<br/> | Der Audioausgabekanal ist ausgelastet, da derzeit ein Zeichen spricht.                                    |
+| **const unsigned short** **AUDIO STATUS \_ \_ SROVERRIDEABLE = 5;**<br/>    | Der Audioausgabekanal ist nicht ausgelastet, wartet aber auf die Spracheingabe des Benutzers.                                 |
+| **const unsigned short** **AUDIO STATUS ERROR = \_ \_ 6;**<br/>             | Es gab ein anderes (unbekanntes) Problem beim Versuch, auf den Audioausgabekanal zu zugreifen.                       |
 
 
 
@@ -50,7 +50,7 @@ Status des audioausgabekanals, bei dem es sich um einen der folgenden Werte hand
 
 </dd> </dl>
 
-Mit dieser Einstellung kann Ihre Client Anwendung den Status des audioausgabekanals Abfragen. Sie können dies verwenden, um zu bestimmen, ob Ihr Zeichen sprechen soll oder zu versuchen, den Empfangsmodus zu aktivieren (mit [**iagentcharakteriex::**](lwef.iagentcharacterex::listen_method)Listening).
+Mit dieser Einstellung kann Ihre Clientanwendung den Status des Audioausgabekanals abfragen. Sie können damit bestimmen, ob Das Zeichen sprechen soll oder ob sie versuchen soll, den Lauschmodus zu aktivieren (mithilfe von **IAgentCharacterEx::Listen**).
 
  
 
