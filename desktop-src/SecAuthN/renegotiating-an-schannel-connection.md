@@ -1,0 +1,33 @@
+---
+description: Zum Ändern der Attribute einer Verbindung, z. b. der Verschlüsselungs Sammlung oder der Client Authentifizierung, können Sie eine &0034, eine \# Wiederholung&\# 0034 oder eine erneute Aushandlung der Verbindung anfordern.
+ms.assetid: 681b607d-66d8-4012-9a84-d202c9778a26
+title: Neuverhandlung einer Kanalverbindung
+ms.topic: article
+ms.date: 05/31/2018
+ms.openlocfilehash: 9fbcd25dad39ab7f35e77277eee9275004cd8a26
+ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "106367917"
+---
+# <a name="renegotiating-an-schannel-connection"></a><span data-ttu-id="9fc26-103">Neuverhandlung einer Kanalverbindung</span><span class="sxs-lookup"><span data-stu-id="9fc26-103">Renegotiating an Schannel Connection</span></span>
+
+<span data-ttu-id="9fc26-104">Wenn Sie die Attribute einer Verbindung ändern möchten, z. b. die Verschlüsselungs Sammlung oder die Client Authentifizierung, können Sie eine Wiederholung oder eine erneute Aushandlung der Verbindung anfordern.</span><span class="sxs-lookup"><span data-stu-id="9fc26-104">To change a connection's attributes, such as the cipher suite or client authentication, you can request a "redo" or renegotiation of the connection.</span></span>
+
+<span data-ttu-id="9fc26-105">Wenn die zu ändernde Attribute über Anmelde Informationen gesteuert werden, müssen Sie vor der erneuten Aushandlung der Verbindung neue Anmelde Informationen abrufen.</span><span class="sxs-lookup"><span data-stu-id="9fc26-105">If the attributes you want to change are controlled by credentials, you must obtain new credentials before you renegotiate the connection.</span></span> <span data-ttu-id="9fc26-106">Weitere Informationen finden Sie unter Abrufen von [SChannel-Anmelde](obtaining-schannel-credentials.md)Informationen.</span><span class="sxs-lookup"><span data-stu-id="9fc26-106">For more information, see [Obtaining Schannel Credentials](obtaining-schannel-credentials.md).</span></span>
+
+<span data-ttu-id="9fc26-107">Um eine Wiederholung von einer Client Anwendung anzufordern, müssen Sie die Funktion [**InitializeSecurityContext (SChannel)**](./initializesecuritycontext--schannel.md) aufzurufen.</span><span class="sxs-lookup"><span data-stu-id="9fc26-107">To request a redo from a client application, call the [**InitializeSecurityContext (Schannel)**](./initializesecuritycontext--schannel.md) function.</span></span> <span data-ttu-id="9fc26-108">Server Anwendungen nennen die Funktion " [**akzeptsecuritycontext" (SChannel)**](acceptsecuritycontext--schannel.md) .</span><span class="sxs-lookup"><span data-stu-id="9fc26-108">Server applications call the [**AcceptSecurityContext (Schannel)**](acceptsecuritycontext--schannel.md) function.</span></span> <span data-ttu-id="9fc26-109">Legen Sie die Parameter wie folgt fest:</span><span class="sxs-lookup"><span data-stu-id="9fc26-109">Set the parameters as follows:</span></span>
+
+-   <span data-ttu-id="9fc26-110">Geben Sie den vorhandenen [*Sicherheitskontext*](../secgloss/s-gly.md#_SECURITY_SECURITY_CONTEXT_GLY) im Parameter " *phcontext* " an.</span><span class="sxs-lookup"><span data-stu-id="9fc26-110">Specify the existing [*security context*](../secgloss/s-gly.md#_SECURITY_SECURITY_CONTEXT_GLY) in the *phContext* parameter.</span></span>
+-   <span data-ttu-id="9fc26-111">(Nur Clients) Geben Sie den gleichen Servernamen (im *psztargetname* -Parameter) an, wie beim Einrichten des Kontexts angegeben.</span><span class="sxs-lookup"><span data-stu-id="9fc26-111">(Clients only) Specify the same server name (in the *pszTargetName* parameter) as specified when establishing the context.</span></span>
+-   <span data-ttu-id="9fc26-112">Geben Sie ggf. neue Anmelde Informationen mithilfe des Parameters *phcredential* an.</span><span class="sxs-lookup"><span data-stu-id="9fc26-112">Specify new credentials, using the *phCredential* parameter, if applicable.</span></span>
+-   <span data-ttu-id="9fc26-113">Wenn Sie Kontext Attribute ändern möchten, die nicht mit den Anmelde Informationen verknüpft sind, geben Sie diese Attribute mithilfe des *fContextReq* -Parameters an.</span><span class="sxs-lookup"><span data-stu-id="9fc26-113">If you want to change context attributes unrelated to the credentials, specify these attributes using the *fContextReq* parameter.</span></span>
+
+<span data-ttu-id="9fc26-114">Nachdem Sie die entsprechende Funktion aufgerufen haben, sollte Ihre Anwendung die Ergebnisse an den Client senden und die Verarbeitung eingehender Nachrichten mit der Funktion [**DecryptMessage (SChannel)**](decryptmessage--schannel.md) fortsetzen.</span><span class="sxs-lookup"><span data-stu-id="9fc26-114">After calling the appropriate function, your application should send the results to the client and continue processing incoming messages using the [**DecryptMessage (Schannel)**](decryptmessage--schannel.md) function.</span></span>
+
+<span data-ttu-id="9fc26-115">Die Funktion [**DecryptMessage (SChannel)**](decryptmessage--schannel.md) gibt Sekunde zurück \_ , die ich erneut \_ aushandeln, wenn SChannel für die Fortsetzung ihrer Anwendung bereit ist.</span><span class="sxs-lookup"><span data-stu-id="9fc26-115">The [**DecryptMessage (Schannel)**](decryptmessage--schannel.md) function will return SEC\_I\_RENEGOTIATE when Schannel is ready for your application to proceed.</span></span> <span data-ttu-id="9fc26-116">Wenn Sie die Sekunde nach der erneuten Aushandlung von \_ \_ Rückgabecode erhalten, muss Ihre Anwendung " [**Accept-SecurityContext (SChannel)**](acceptsecuritycontext--schannel.md) (Server)" oder " [**InitializeSecurityContext (SChannel)**](./initializesecuritycontext--schannel.md) (Clients)" abrufen und die Inhalte der von "DecryptMessage" zurückgegebenen SECBUFFER_EXTRA in der SECBUFFER_TOKEN übergeben.</span><span class="sxs-lookup"><span data-stu-id="9fc26-116">When you receive the SEC\_I\_RENEGOTIATE return code, your application must call [**AcceptSecurityContext (Schannel)**](acceptsecuritycontext--schannel.md) (servers) or [**InitializeSecurityContext (Schannel)**](./initializesecuritycontext--schannel.md) (clients), and pass the contents of SECBUFFER_EXTRA returned from DecryptMessage in the SECBUFFER_TOKEN.</span></span> <span data-ttu-id="9fc26-117">Nachdem dieser Rückruf einen Wert zurückgegeben hat, fahren Sie so fort, als ob Ihre Anwendung eine neue Verbindung erstellt hat.</span><span class="sxs-lookup"><span data-stu-id="9fc26-117">After this call returns a value, proceed as though your application were creating a new connection.</span></span>
+
+ 
+
+ 
