@@ -4,12 +4,12 @@ description: Mit dem IPSec-Richtlinien Szenario "manuelle Sicherheits Zuordnung 
 ms.assetid: 2bcc0b40-ca43-43c6-b1e4-b64426ef7ff4
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7161447ff5cfd98878ab4ee0f4b18cbcc3a53643
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: beeef4486e3a07dea2e83d924c2354a3dabca241
+ms.sourcegitcommit: 78b64f3865e64768b5319d4f010032ee68924a98
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "103948645"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107314573"
 ---
 # <a name="manual-sa"></a>Manuelles SA
 
@@ -29,6 +29,7 @@ Um dieses Beispielprogramm gesteuert zu implementieren, verwenden Sie die folgen
 **Auf der swpm- \_ Schicht \_ eingehender \_ Transport \_ V {4 \| 6} einrichten eingehender Filterregeln pro Paket**  
 
 1.  Fügen Sie einen Filter mit den folgenden Eigenschaften hinzu. 
+
     | Filter-Eigenschaft                                                   | Wert                                                         |
     |-------------------------------------------------------------------|---------------------------------------------------------------|
     | "F" **\_ Bedingung für die Filterbedingung für die \_ \_ lokale \_ Adress \_ Typen Bedingung** | [Nlatunicast](/windows/win32/api/nldef/ne-nldef-nl_address_type) |
@@ -39,6 +40,7 @@ Um dieses Beispielprogramm gesteuert zu implementieren, verwenden Sie die folgen
 
         
 2.  Ausnehmen von ICMP-Datenverkehr von IPSec durch Hinzufügen eines Filters mit den folgenden Eigenschaften. 
+
     | Filter-Eigenschaft                                                   | Wert                                                                      |
     |-------------------------------------------------------------------|----------------------------------------------------------------------------|
     | "F" **\_ Bedingung für die Filterbedingung für die \_ \_ lokale \_ Adress \_ Typen Bedingung** | Nlatunicast                                                                |
@@ -51,6 +53,7 @@ Um dieses Beispielprogramm gesteuert zu implementieren, verwenden Sie die folgen
 **Bei der WPM- \_ Schicht \_ ausgehende \_ Transport \_ V {4 \| 6} Einrichten von ausgehenden Regeln pro Paket Filtern**  
 
 1.  Fügen Sie einen Filter mit den folgenden Eigenschaften hinzu. 
+
     | Filter-Eigenschaft                                                   | Wert                                                  |
     |-------------------------------------------------------------------|--------------------------------------------------------|
     | "F" **\_ Bedingung für die Filterbedingung für die \_ \_ lokale \_ Adress \_ Typen Bedingung** | Nlatunicast                                            |
@@ -61,6 +64,7 @@ Um dieses Beispielprogramm gesteuert zu implementieren, verwenden Sie die folgen
 
         
 2.  Ausnehmen von ICMP-Datenverkehr von IPSec durch Hinzufügen eines Filters mit den folgenden Eigenschaften. 
+
     | Filter-Eigenschaft                                                   | Wert                                                                      |
     |-------------------------------------------------------------------|----------------------------------------------------------------------------|
     | "F" **\_ Bedingung für die Filterbedingung für die \_ \_ lokale \_ Adress \_ Typen Bedingung** | Nlatunicast                                                                |
