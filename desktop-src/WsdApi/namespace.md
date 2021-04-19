@@ -1,21 +1,21 @@
 ---
 description: Beschreibt einen Namespace.
 ms.assetid: 8e31526a-639f-481b-91f1-fcd376818cbf
-title: Namespace-Element
+title: nameSpace-Element
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0a8747a25988b880d5287d959273fa0f4d144045
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e2414919f699bb60c2cf1e48bc52030c36cf67a0
+ms.sourcegitcommit: 59ec383331366f8a62c94bb88468ca03e95c43f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104528580"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107380844"
 ---
-# <a name="namespace-element"></a>Namespace-Element
+# <a name="namespace-element"></a>nameSpace-Element
 
-Beschreibt einen Namespace. Dieser Namespace kann für die Codegenerierung oder für die Behandlung von <WSDL: Import-> Direktiven verwendet werden.
+Beschreibt einen Namespace. Dieser Namespace kann für die Codegenerierung oder für die Verarbeitung von Direktiven \<wsdl:import> verwendet werden.
 
-## <a name="usage"></a>Verbrauch
+## <a name="usage"></a>Verwendung
 
 ``` syntax
 <nameSpace
@@ -28,9 +28,9 @@ Beschreibt einen Namespace. Dieser Namespace kann für die Codegenerierung oder 
 
 
 
-| Attribut          | type                         | Erforderlich       | BESCHREIBUNG                                             |
+| Attribut          | type                         | Erforderlich       | Beschreibung                                             |
 |--------------------|------------------------------|----------------|---------------------------------------------------------|
-| **uri**<br/> | Zeichen \_ Folge<br/> | Ja<br/> | Der eindeutige URI des Namespace.<br/> <br/> |
+| **uri**<br/> | \_Zeichenfolge<br/> | Ja<br/> | Der eindeutige URI des Namespace.<br/> <br/> |
 
 
 
@@ -38,12 +38,12 @@ Beschreibt einen Namespace. Dieser Namespace kann für die Codegenerierung oder 
 
 
 
-| Element                                               | BESCHREIBUNG                                                                                              |
+| Element                                               | Beschreibung                                                                                              |
 |-------------------------------------------------------|----------------------------------------------------------------------------------------------------------|
-| [**codeName**](codename.md)<br/>               | Der Name, der zum Identifizieren des Namespace in generiertem Code verwendet werden soll.<br/> <br/>                  |
-| [**makroprefix**](macroprefix.md)<br/>         | Das Präfix, das im generierten Code für Namen von Makros im-Namespace verwendet werden soll.<br/> <br/> |
-| [**Benennen**](name.md)<br/>                       | Ein qualifizierter Name im-Namespace.<br/> <br/>                                                |
-| [**preferredprefix**](preferredprefix.md)<br/> | Das Präfix, dem der Namespace zugeordnet werden soll, um den XML-Code lesbarer zu machen.<br/> <br/> |
+| [**Codename**](codename.md)<br/>               | Der Name, der verwendet werden soll, um den Namespace im generierten Code zu identifizieren.<br/> <br/>                  |
+| [**macroPrefix**](macroprefix.md)<br/>         | Das Präfix, das im generierten Code für Die Namen von Makros im Namespace verwendet werden soll.<br/> <br/> |
+| [**Namen**](name.md)<br/>                       | Ein qualifizierter Name im Namespace.<br/> <br/>                                                |
+| [**preferredPrefix**](preferredprefix.md)<br/> | Das Präfix, dem der Namespace zugeordnet werden soll, damit der XML-Code besser lesbar ist.<br/> <br/> |
 
 
 
@@ -62,19 +62,19 @@ Beschreibt einen Namespace. Dieser Namespace kann für die Codegenerierung oder 
 
 
 
-| Element                                     | BESCHREIBUNG                                                                          |
+| Element                                     | Beschreibung                                                                          |
 |---------------------------------------------|--------------------------------------------------------------------------------------|
-| [**wsdcodegen**](wsdcodegen.md)<br/> | Das Stamm Element einer XML-Skriptdatei des WSDAPI-Code-Generators.<br/> <br/> |
+| [**wsdCodeGen**](wsdcodegen.md)<br/> | Das Stammelement einer XML-Skriptdatei des WSDAPI-Codegenerators.<br/> <br/> |
 
 
 
 ## <a name="remarks"></a>Bemerkungen
 
-Dieses Element kann verwendet werden, um dem Code Generator zusätzliche Informationen zu Namespaces, die in WSDL-und XSD-Dateien auftreten, oder zum Einführen neuer Namespaces bereitzustellen.
+Dieses Element kann verwendet werden, um dem Codegenerator zusätzliche Informationen zu Namespaces zur Verfügung zu stellen, auf die es in WSDL- und XSD-Dateien trifft, oder um neue Namespaces einzuführen.
 
-Namespaces, die durch eine Typreflektion oder in WSDL-und XSD-Dateien angegeben werden, werden automatisch vom Code-Generator analysiert und müssen nicht explizit im Skript definiert werden. In einigen Fällen kann dieses Element verwendet werden, um einem Namespace, auf den von der Typreflektion oder WSDL/XSD verwiesen wird, zusätzliche Eigenschaften oder Namen hinzuzufügen. Der Code-Generator berücksichtigt dies nicht als Konflikt.
+Namespaces, die durch Typlektion impliziert oder in WSDL- und XSD-Dateien angegeben werden, werden automatisch vom Codegenerator analysiert und müssen nicht explizit im Skript definiert werden. In einigen Fällen kann dieses Element verwendet werden, um zusätzliche Eigenschaften oder Namen zu einem Namespace hinzuzufügen, auf den durch Typlektion oder WSDL/XSD verwiesen wird. Der Codegenerator betrachtet dies nicht als Konflikt.
 
-Der folgende XML-Code zeigt ein Namespace-Element (mit untergeordneten Elementen, die ausgelassen werden).
+Der folgende XML-Code zeigt ein nameSpace-Element (mit untergeordneten Elementen, die aus Gründen der Kürze ausgelassen werden).
 
 ``` syntax
 <nameSpace uri="https://www.example.com/namespace">

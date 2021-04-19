@@ -1,23 +1,23 @@
 ---
-description: 'Verhindert die Generierung von Import-Anweisungen für angegebene Ziele, die in einem <WSDL: Import>-Element in einer WSDL-Datei genannt werden.'
+description: Verhindert die Generierung von Import-Anweisungen für angegebene Ziele, die in einem wsdl:import-Element in einer WSDL-Datei benannt sind.
 ms.assetid: 9a50ee38-fadf-4112-8430-cb5a07ae04ce
-title: excludeimport-Element
+title: excludeImport-Element
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7c08d8880029d9e03917e48b61561e3ab3eb2815
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: cf511a24ad4007deb886900843991364fcf03a5a
+ms.sourcegitcommit: 59ec383331366f8a62c94bb88468ca03e95c43f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103863999"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107380774"
 ---
-# <a name="excludeimport-element"></a>excludeimport-Element
+# <a name="excludeimport-element"></a>excludeImport-Element
 
-Verhindert die Generierung von Import-Anweisungen für angegebene Ziele, die in einem <WSDL: Import>-Element in einer WSDL-Datei genannt werden. Dies kann verwendet werden, um zu verhindern, dass wsdcodegen bekannte Ziele importiert, wie z. b. die WS-Addressing-und WS-Eventing Spezifikationen, auch wenn in der WSDL auf diese Ziele verwiesen wird.
+Verhindert die Generierung von Import-Anweisungen für angegebene Ziele, die in einem \<wsdl:import> -Element in einer WSDL-Datei benannt sind. Dies kann verwendet werden, um zu halten, dass WsdCodeGen bekannte Ziele wie die WS-Addressing- und WS-Eventing-Spezifikationen importiert, obwohl in der WSDL auf diese Ziele verwiesen wird.
 
-Der Wert dieses Elements muss auf den Namespace festgelegt werden, der im <WSDL: Import>-Elements benannt ist, das ausgeschlossen werden soll.
+Der Wert dieses Elements muss auf den Namespace mit dem Namen im \<wsdl:import> auszuschließenden Element festgelegt werden.
 
-## <a name="usage"></a>Verbrauch
+## <a name="usage"></a>Verwendung
 
 ``` syntax
 <excludeImport/>
@@ -35,9 +35,9 @@ Es gibt keine untergeordneten Elemente.
 
 
 
-| Element                         | BESCHREIBUNG                                                                       |
+| Element                         | Beschreibung                                                                       |
 |---------------------------------|-----------------------------------------------------------------------------------|
-| [**WSDL**](wsdl.md)<br/> | Gibt eine WSDL-Datei an, die für Vertragsinformationen verarbeitet werden soll.<br/> <br/> |
+| [**Wsdl**](wsdl.md)<br/> | Gibt eine WSDL-Datei an, die für Vertragsinformationen zu verarbeiten ist.<br/> <br/> |
 
 
 
