@@ -1,7 +1,7 @@
 ---
 description: Die Set-Methode legt den Medientyp von einem anderen Medientyp fest.
 ms.assetid: b3cf65c2-48db-4ee0-9a74-c1652f017eed
-title: Cmediatype. Set-Methode (mtype. h)
+title: Cmediatype. Set-Methode (mtype. h)-mtype [REF]-Parameter
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,12 +16,12 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: afe99c3f5ee10e6aacd3dadf69af320b110688af
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: e8fd9145ee33dbe4b589b34833836466efa62ada
+ms.sourcegitcommit: 4d4a6e9ad5de37e467cd3164276771b71e1f113f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358267"
+ms.lasthandoff: 04/05/2021
+ms.locfileid: "106389085"
 ---
 # <a name="cmediatypeset-method-mtypeh"></a>Cmediatype. Set-Methode (mtype. h)
 

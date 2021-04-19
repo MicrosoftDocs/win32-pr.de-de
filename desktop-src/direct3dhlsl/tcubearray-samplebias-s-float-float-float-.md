@@ -1,6 +1,6 @@
 ---
-title: 'Samplebias:: samplebias (S, float, float, float)-Funktion'
-description: 'Gibt eine Textur aus, nachdem der Wert "Bias" auf die MipMap-Ebene angewendet wurde, mit einem optionalen Wert, mit dem Sample Level-of-Detail-Werte (LOD) an eine Klammer übergeben werden. | Samplebias:: samplebias (S, float, float, float)-Funktion'
+title: 'Samplebias:: samplebias (S, float, float, float)-Funktion für texturecubearray'
+description: 'Die samplebias:: samplebias (S, float, float, float)-Funktion für texturecubearray gibt eine Textur aus, nachdem der Wert für den Wert auf MipMap-Ebene angewendet wurde.'
 ms.assetid: 6683F115-4F81-4C24-B735-67DB4B52455B
 keywords:
 - Samplebias-Funktion HLSL
@@ -13,14 +13,14 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 8d95a1b0341e61853a20d313a04d1cde64dde66d
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 0c57eec224ca92b2584ba7262488530ea7080939
+ms.sourcegitcommit: 0e611cdff84ff9f897c59e4e1d2b2d134bc4e133
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104132229"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106372032"
 ---
-# <a name="samplebiassamplebiassfloatfloatfloat-function"></a>Samplebias:: samplebias (S, float, float, float)-Funktion
+# <a name="samplebiassamplebiassfloatfloatfloat-function-for-texturecubearray"></a>Samplebias:: samplebias (S, float, float, float)-Funktion für texturecubearray
 
 Gibt eine Textur aus, nachdem der Wert "Bias" auf die MipMap-Ebene angewendet wurde, mit einem optionalen Wert, mit dem Sample Level-of-Detail-Werte (LOD) an eine Klammer übergeben werden.
 
@@ -97,7 +97,7 @@ Typ: **[ **DXGI- \_ Format**](/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi
 
 Das Textur Format, bei dem es sich um einen der im [**DXGI- \_ Format**](/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format)aufgelisteten typisierten Werte handelt.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
