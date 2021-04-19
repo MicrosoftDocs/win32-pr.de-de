@@ -1,9 +1,9 @@
 ---
-title: CDN_INCLUDEITEM Benachrichtigungs Code (kommdlg. h)
-description: Wird von einem Dialogfeld "Öffnen" oder "Speichern unter" gesendet, um zu bestimmen, ob das Dialogfeld ein Element in der Elementliste eines shellordners anzeigen soll.
+title: CDN_INCLUDEITEM Benachrichtigungscode (Commdlg.h)
+description: Wird über das Dialogfeld Öffnen oder Speichern unter gesendet, um zu bestimmen, ob im Dialogfeld ein Element in der Elementliste eines Shellordners angezeigt werden soll.
 ms.assetid: 0972a78d-e058-4bac-85bd-fbd4c3885552
 keywords:
-- Dialog Felder für CDN_INCLUDEITEM Benachrichtigungs Code
+- CDN_INCLUDEITEM Benachrichtigungscode (Dialogfelder)
 topic_type:
 - apiref
 api_name:
@@ -14,20 +14,20 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 67cbe830c644657425eb087dd64884da17a9a0c2
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 2a91c61e4a7c2786e67ed28e2c62e5963762659c
+ms.sourcegitcommit: 8e083a10b3a480dec8a8d74dbd5889f49dea15e4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103742848"
+ms.lasthandoff: 04/17/2021
+ms.locfileid: "107590777"
 ---
-# <a name="cdn_includeitem-notification-code"></a>CDN \_ includeitem-Benachrichtigungs Code
+# <a name="cdn_includeitem-notification-code"></a>CDN \_ INCLUDEITEM-Benachrichtigungscode
 
-\[Ab Windows Vista wurden die Dialogfelder " **Öffnen** " und " **Speichern** unter" im allgemeinen [Element](/previous-versions/windows/desktop/legacy/bb776913(v=vs.85))ersetzt. Es wird empfohlen, dass Sie die allgemeine Element Dialogfeld-API anstelle dieser Dialogfelder aus der allgemeinen Dialogfeld Bibliothek verwenden.\]
+\[Ab Windows Vista wurden  **die** allgemeinen Dialogfelder Öffnen und Speichern unter durch den Allgemeinen [Elementdialog ersetzt.](/windows/win32/shell/common-file-dialog) Es wird empfohlen, anstelle dieser Dialogfelder aus der Common Dialog Box Library die API für den Allgemeinen Elementdialog zu verwenden.\]
 
-Wird von einem Dialogfeld " **Öffnen** " oder " **Speichern** unter" gesendet, um zu bestimmen, ob das Dialogfeld ein Element in der Elementliste eines shellordners anzeigen soll. Wenn der Benutzer einen Ordner öffnet, sendet das Dialogfeld für jedes Element im Ordner eine **CDN- \_ includeitem** -Benachrichtigung. Das Dialogfeld sendet diese Benachrichtigung nur dann, wenn das **ofn \_ enableinclubezeichtifisflag** beim Erstellen des Dialog Felds festgelegt wurde.
+Wird über das **Dialogfeld Öffnen** oder Speichern **unter** gesendet, um zu bestimmen, ob im Dialogfeld ein Element in der Elementliste eines Shellordners angezeigt werden soll. Wenn der Benutzer einen Ordner öffnet, sendet das Dialogfeld eine **CDN \_ INCLUDEITEM-Benachrichtigung** für jedes Element im Ordner. Das Dialogfeld sendet diese Benachrichtigung nur, wenn das **OFN \_ ENABLEINCLUDENOTIFY-Flag** beim Erstellen des Dialogfelds festgelegt wurde.
 
-Die [*ofnhuokproc*](/windows/win32/api/commdlg/nc-commdlg-lpofnhookproc) -Hook-Prozedur empfängt diese Nachricht in Form einer [**WM- \_ Benachrichtigungs**](../controls/wm-notify.md) Meldung.
+Ihre [*OFNHookProc-Hookprozedur*](/windows/win32/api/commdlg/nc-commdlg-lpofnhookproc) empfängt diese Nachricht in Form einer [**WM \_ NOTIFY-Nachricht.**](../controls/wm-notify.md)
 
 
 ```C++
@@ -51,23 +51,23 @@ Dieser Parameter wird nicht verwendet.
 *lParam* 
 </dt> <dd>
 
-Ein Zeiger auf eine [**ofnotifyex**](/windows/desktop/api/Commdlg/ns-commdlg-ofnotifyexa) -Struktur.
+Ein Zeiger auf eine [**OFNOTIFYEX-Struktur.**](/windows/desktop/api/Commdlg/ns-commdlg-ofnotifyexa)
 
-Die [**ofnotifyex**](/windows/desktop/api/Commdlg/ns-commdlg-ofnotifyexa) -Struktur enthält eine [**NMHDR**](/windows/desktop/api/richedit/ns-richedit-nmhdr) -Struktur, deren **Codemember** die **CDN \_ includeitem** -Benachrichtigungs Meldung angibt.
+Die [**OFNOTIFYEX-Struktur**](/windows/desktop/api/Commdlg/ns-commdlg-ofnotifyexa) enthält eine [**NMHDR-Struktur,**](/windows/desktop/api/richedit/ns-richedit-nmhdr) deren **Code** member die **CDN \_ INCLUDEITEM-Benachrichtigungsmeldung** angibt.
 
-Der **PSF** -Member der [**ofnotifyex**](/windows/desktop/api/Commdlg/ns-commdlg-ofnotifyexa) -Struktur ist ein Zeiger auf eine Schnittstelle für den Ordner, dessen Elemente aufgelistet werden. Der **PIDL** -Member ist ein Zeiger auf eine Element Bezeichner-Liste, die das Element relativ zum Ordner identifiziert.
+Der **psf-Member** der [**OFNOTIFYEX-Struktur**](/windows/desktop/api/Commdlg/ns-commdlg-ofnotifyexa) ist ein Zeiger auf eine Schnittstelle für den Ordner, dessen Elemente aufzählt werden. Das **pidl-Element** ist ein Zeiger auf eine Elementbezeichnerliste, die das Element relativ zum Ordner identifiziert.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die [*ofnhuokproc*](/windows/win32/api/commdlg/nc-commdlg-lpofnhookproc) -Hook-Prozedur NULL zurückgibt, schließt das Dialogfeld das Element aus der Liste der Elemente aus.
+Wenn die [*HOOKprozedur OFNHookProc*](/windows/win32/api/commdlg/nc-commdlg-lpofnhookproc) null zurückgibt, schließt das Dialogfeld das Element aus der Liste der Elemente aus.
 
-Um das Element einzuschließen, geben Sie einen Wert ungleich 0 (null) von der Hook-Prozedur zurück.
+Um das Element ein include zu erhalten, geben Sie einen Wert ungleich 0 (null) aus der Hookprozedur zurück.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Das Dialogfeld enthält immer Elemente, die sowohl das **sfgao- \_ Dateisystem** als auch das **sfgao \_ filesysancestor** -Attribut aufweisen, unabhängig von dem Wert, der von **CDN \_ includeitem** zurückgegeben wird.
+Das Dialogfeld enthält immer Elemente mit den Attributen **SFGAO \_ FILESYSTEM** und **SFGAO \_ FILESYSANCESTOR,** unabhängig vom wert, der von **CDN \_ INCLUDEITEM zurückgegeben wird.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -77,11 +77,11 @@ Das Dialogfeld enthält immer Elemente, die sowohl das **sfgao- \_ Dateisystem**
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Kommdlg. h (Include Windows. h)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Commdlg.h (einschließlich Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
@@ -94,16 +94,16 @@ Das Dialogfeld enthält immer Elemente, die sowohl das **sfgao- \_ Dateisystem**
 [**GetSaveFileName**](/windows/desktop/api/Commdlg/nf-commdlg-getsavefilenamea)
 </dt> <dt>
 
-[*Ofnhuokproc*](/windows/win32/api/commdlg/nc-commdlg-lpofnhookproc)
+[*OFNHookProc*](/windows/win32/api/commdlg/nc-commdlg-lpofnhookproc)
 </dt> <dt>
 
-[**Ofnotifyex**](/windows/desktop/api/Commdlg/ns-commdlg-ofnotifyexa)
+[**OFNOTIFYEX**](/windows/desktop/api/Commdlg/ns-commdlg-ofnotifyexa)
 </dt> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
-[Allgemeine Dialog Feld Bibliothek](common-dialog-box-library.md)
+[Allgemeine Dialogfeldbibliothek](common-dialog-box-library.md)
 </dt> </dl>
 
  
