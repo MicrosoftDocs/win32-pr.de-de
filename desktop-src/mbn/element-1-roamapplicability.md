@@ -1,47 +1,39 @@
 ---
-description: "\"Fidemdmconfigprofile\" \\/ ... \\/ Ignorepassword (v4)"
-MS-HAID: WWAN\_profile\_v4.element\_1\_IgnorePassword
+description: Wdemdmconfigprofile \/ roamanwendbarkeit (v4)
+MS-HAID: WWAN\_profile\_v4.element\_1\_RoamApplicability
 MSHAttr:
 - PreferredSiteName:MSDN
 - PreferredLib:/library/windows/desktop
-title: Ignorepassword (v4)
+title: Roamanwendbarkeit (v4)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0286fcc7a025bc565916e68b817c6a79f378f26d
+ms.openlocfilehash: e4d78618598b758d4c2654f0f2911637e638aacf
 ms.sourcegitcommit: 4d4a6e9ad5de37e467cd3164276771b71e1f113f
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/05/2021
-ms.locfileid: "106388790"
+ms.locfileid: "106388796"
 ---
-# <a name="span-idwwan_profile_v4element_1_ignorepasswordspanmodemdmconfigprofileignorepassword-v4"></a><span id="WWAN_profile_v4.element_1_IgnorePassword"></span>"Fidemdmconfigprofile" \/ ... \/ Ignorepassword (v4)
+# <a name="span-idwwan_profile_v4element_1_roamapplicabilityspanmodemdmconfigprofileroamapplicability-v4"></a><span id="WWAN_profile_v4.element_1_RoamApplicability"></span>Wdemdmconfigprofile \/ roamanwendbarkeit (v4)
 
-Gibt an, wie Kenn Wörter beim Aktualisieren von Profilen behandelt werden.
-
-Wenn diese Einstellung auf " **true** " festgelegt ist und zum Zeitpunkt des Aktualisierungs Vorgangs ein Profil mit demselben Namen vorhanden ist, wird das Kennwort aus diesem Profil übernommen und im neuen Profil gespeichert.
-
-Weitere Informationen finden Sie in der Dokumentation für das v1 [**ignorepassword**](./schema-ignorepassword-userlogoncred-element.md) -Element.
+Gibt an, dass dieses Profil nur aktiv ist, wenn die aktuelle roamingbedingung festgelegt ist. Andernfalls ist das Profil nicht anwendbar und kann nicht verwendet werden, um einen PDP-Kontext (Packet Data Protocol) zu aktivieren. Der Wert dieses Elements muss ein gültiger [**roamapplicabilitytype**](simpletype-roamapplicabilitytype.md) -Wert sein.
 
 ## <a name="element-hierarchy"></a>Elementhierarchie
 
 [\<MBNProfileExt\>](element-mbnprofileext.md)  
-&nbsp;&nbsp;[\<Context\>](element-context.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;[\<UserLogonCred\>](element-userlogoncred.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<IgnorePassword\>**
+&nbsp;&nbsp;**\<RoamApplicability\>**
 
 [\<ModemDMConfigProfile\>](element-modemdmconfigprofile.md)  
-&nbsp;&nbsp;[\<Context\>](element-1-context.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;[\<UserLogonCred\>](element-1-userlogoncred.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<IgnorePassword\>**
+&nbsp;&nbsp;**\<RoamApplicability\>**
 
 ## <a name="syntax"></a>Syntax
 
 ``` syntax
-<IgnorePassword>
+<RoamApplicability>
 
-  boolean
+  "NonPartnerOnly" | "PartnerOnly" | "HomeOnly" | "HomeAndPartner" | "PartnerAndNonpartner" | "AllRoaming"
 
-</IgnorePassword>
+</RoamApplicability>
 ```
 
 ## <a name="span-idattributes_and_elementsspanspan-idattributes_and_elementsspanspan-idattributes_and_elementsspanattributes-and-elements"></a><span id="Attributes_and_Elements"></span><span id="attributes_and_elements"></span><span id="ATTRIBUTES_AND_ELEMENTS"></span>Attribute und Elemente
@@ -69,8 +61,13 @@ Keine.
 </thead>
 <tbody>
 <tr class="odd">
-<td><a href="element-1-userlogoncred.md">UserLogonCred</a></td>
-<td><p>Anmelde Informationen für eine Verbindung.</p></td>
+<td><a href="element-modemdmconfigprofile.md">ModemDMConfigProfile</a></td>
+<td><p>Modem-DM-Konfigurations Profil.</p></td>
+</tr>
+<tr class="even">
+<td><a href="element-profileconditionedon.md">Profileconditionedon</a></td>
+<td><p>Gibt die Bedingungen an, die erfüllt sein müssen, damit ein Profil anwendbar ist.</p>
+<p>Dieses Element ist neu für v4. Sie ermöglicht es Ihnen, mehrere Profile anzugeben, die unterschiedlichen Bedingungen gelten, und damit das richtige Profil automatisch verwendet wird, wenn es anwendbar ist. Dieses Element ist optional. Wenn Sie ihn nicht angeben, gilt das Profil immer in Bezug auf die aufgeführten Bedingungen.</p></td>
 </tr>
 </tbody>
 </table>
@@ -95,3 +92,6 @@ Keine.
  
 
  
+
+
+
