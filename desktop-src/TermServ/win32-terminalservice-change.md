@@ -1,5 +1,5 @@
 ---
-title: Change-Methode der Win32_Service-Klasse (mbnapi. h)
+title: Change-Methode der Win32_Service-Klasse (mbnapi. h) (Terminalservice)
 description: Ändert einen Win32 \_ Terminalservice.
 ms.assetid: 19E43A80-47C9-4C5A-8E73-723F206AA7C0
 ms.tgt_platform: multiple
@@ -17,12 +17,12 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f4514d89e47ded60550a28303d0f04e227211e3a
-ms.sourcegitcommit: 168d11879cb9fd89d26f826482725c0a626be00f
+ms.openlocfilehash: fa34ea0c9c38cd0b11f97a0bbf651f1aebf37a46
+ms.sourcegitcommit: 4d4a6e9ad5de37e467cd3164276771b71e1f113f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "106355243"
+ms.lasthandoff: 04/05/2021
+ms.locfileid: "106389204"
 ---
 # <a name="change-method-of-the-win32_service-class-mbnapih---terminalservice"></a>Change-Methode der Win32_Service-Klasse (mbnapi. h)-Terminalservice
 
