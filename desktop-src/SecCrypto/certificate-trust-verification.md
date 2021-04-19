@@ -1,0 +1,24 @@
+---
+description: Zwischen dem Empfänger einer signierten Nachricht und dem Signatur Geber der Nachricht muss eine Vertrauensstellung bestehen.
+ms.assetid: 770e4674-8896-4062-a93a-a17bd30a9129
+title: Zertifikat Vertrauensstellungs Überprüfung
+ms.topic: article
+ms.date: 05/31/2018
+ms.openlocfilehash: 7b711e0a86dcc5ae9cdedea278d6a3a698dfd633
+ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "106350796"
+---
+# <a name="certificate-trust-verification"></a><span data-ttu-id="fb8ef-103">Zertifikat Vertrauensstellungs Überprüfung</span><span class="sxs-lookup"><span data-stu-id="fb8ef-103">Certificate Trust Verification</span></span>
+
+<span data-ttu-id="fb8ef-104">Zwischen dem Empfänger einer signierten Nachricht und dem Signatur Geber der Nachricht muss eine Vertrauensstellung bestehen.</span><span class="sxs-lookup"><span data-stu-id="fb8ef-104">A trust must exist between the recipient of a signed message and the signer of the message.</span></span> <span data-ttu-id="fb8ef-105">Eine Methode zum Einrichten dieser Vertrauensstellung ist ein [*Zertifikat*](../secgloss/c-gly.md), ein elektronisches Dokument, das überprüft, ob es sich bei Entitäten oder Personen um die Ansprüche handelt.</span><span class="sxs-lookup"><span data-stu-id="fb8ef-105">One method of establishing this trust is through a [*certificate*](../secgloss/c-gly.md), an electronic document verifying that entities or persons are who they claim to be.</span></span> <span data-ttu-id="fb8ef-106">Ein Zertifikat wird für eine Entität von einem Drittanbieter ausgestellt, der von beiden anderen Parteien als vertrauenswürdig eingestuft wird.</span><span class="sxs-lookup"><span data-stu-id="fb8ef-106">A certificate is issued to an entity by a third party that is trusted by both of the other parties.</span></span> <span data-ttu-id="fb8ef-107">Daher entscheidet jeder Empfänger einer signierten Nachricht, ob der Aussteller des Zertifikats des Signatur Gebers vertrauenswürdig ist.</span><span class="sxs-lookup"><span data-stu-id="fb8ef-107">So, each recipient of a signed message decides if the issuer of the signer's certificate is trustworthy.</span></span> <span data-ttu-id="fb8ef-108">[*CryptoAPI*](../secgloss/c-gly.md) hat eine Methodik implementiert, mit der Anwendungsentwickler Anwendungen erstellen können, die Zertifikate automatisch anhand einer vordefinierten Liste vertrauenswürdiger Zertifikate [*oder Stämme*](../secgloss/r-gly.md)überprüfen.</span><span class="sxs-lookup"><span data-stu-id="fb8ef-108">[*CryptoAPI*](../secgloss/c-gly.md) has implemented a methodology to allow application developers to create applications that automatically verify certificates against a predefined list of trusted certificates or [*roots*](../secgloss/r-gly.md).</span></span> <span data-ttu-id="fb8ef-109">Diese Liste vertrauenswürdiger Entitäten (so genannte Themen) wird als [*Zertifikats Vertrauens Liste (Certificate Trust List*](../secgloss/c-gly.md) , CTL) bezeichnet.</span><span class="sxs-lookup"><span data-stu-id="fb8ef-109">This list of trusted entities (called subjects) is called a [*certificate trust list*](../secgloss/c-gly.md) (CTL).</span></span>
+
+<span data-ttu-id="fb8ef-110">Das folgende Beispiel für die Verwendung einer CTL umfasst einen Intranetadministrator (Inner Company Network), der steuern möchte, welche externen Quellen vertrauenswürdig sind.</span><span class="sxs-lookup"><span data-stu-id="fb8ef-110">The following example of using a CTL involves an intranet (intra-company network) administrator who wants to control just which outside sources are trusted.</span></span> <span data-ttu-id="fb8ef-111">In diesem Fall kann der Administrator eine Liste vertrauenswürdiger Zertifikate oder Stämme erstellen, Signieren und die Liste für alle Clients im Netzwerk in Form einer CTL verfügbar machen.</span><span class="sxs-lookup"><span data-stu-id="fb8ef-111">In this case, the administrator can create a list of trusted certificates or roots, sign it, and make the list available to all clients on the network in the form of a CTL.</span></span> <span data-ttu-id="fb8ef-112">Eine Anwendung, die diese CryptoAPI-Funktionalität verwendet, würde dann nur signierte Nachrichten oder heruntergeladene Software akzeptieren, die von Entitäten in der Liste signiert wurde.</span><span class="sxs-lookup"><span data-stu-id="fb8ef-112">An application designed to use this CryptoAPI functionality would then only accept signed messages or downloaded software that was signed by entities on the list.</span></span>
+
+<span data-ttu-id="fb8ef-113">Eine Liste dieser Funktionen finden Sie unter Funktionen für die [Zertifikat Überprüfung](cryptography-functions.md).</span><span class="sxs-lookup"><span data-stu-id="fb8ef-113">For a list of these functions, see [Certificate Verification Functions](cryptography-functions.md).</span></span>
+
+ 
+
+ 
