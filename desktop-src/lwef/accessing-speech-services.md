@@ -1,27 +1,27 @@
 ---
-title: Zugreifen auf Sprachdienste (Microsoft Agent-Server Schnittstelle)
-description: Zugreifen auf Sprachdienste
+title: Zugreifen auf Speech-Dienste (Microsoft-Agent-Serverschnittstelle)
+description: Zugreifen auf Speech-Dienste
 ms.assetid: 99cf630d-3bd1-403a-833a-9173a84fe3c0
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: fda1369fa83c5e8ffaf7f08317f69a2a569620f3
-ms.sourcegitcommit: 8fa6614b715bddf14648cce36d2df22e5232801a
+ms.openlocfilehash: 9eeb4afb2b05ca13c52d49508c3c25b7e02da676
+ms.sourcegitcommit: 59ec383331366f8a62c94bb88468ca03e95c43f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "106341348"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107380804"
 ---
-# <a name="accessing-speech-services-microsoft-agent-server-interface"></a>Zugreifen auf Sprachdienste (Microsoft Agent-Server Schnittstelle)
+# <a name="accessing-speech-services-microsoft-agent-server-interface"></a>Zugreifen auf Speech-Dienste (Microsoft-Agent-Serverschnittstelle)
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht mehr verfügbar.\]
 
-Obwohl die Dienste von Microsoft Agent Unterstützung für Spracheingaben enthalten, muss ein kompatibles Befehls-und Steuerelement-Spracherkennungs-Engine installiert sein, um auf die Spracheingabe Dienste des Agents zugreifen zu können. Wenn Sie die Sprachausgabe von Microsoft-Agent verwenden möchten, um die Sprachausgabe für ein Zeichen in synthetischer Sprache zu unterstützen, müssen Sie auch eine kompatible Text-zu-Sprache-sprach-Engine (TTS) für Ihr Zeichen installieren. Da die Sprachdienste von Microsoft-Agent auf der Microsoft Speech-API (SAPI) basieren, können Sie alle Engines verwenden, die die erforderlichen Sprachschnittstellen unterstützen.
+Obwohl die Dienste des Microsoft-Agents Unterstützung für die Spracheingabe enthalten, muss eine kompatible Spracherkennungs-Engine für Befehle und Steuerungen installiert werden, um auf die Spracheingabedienste des -Agents zuzugreifen. Wenn Sie die Sprachdienste des Microsoft-Agents verwenden möchten, um die synthetisierte Sprachausgabe für ein Zeichen zu unterstützen, müssen Sie eine kompatible Sprachsynthese-Engine (Text-to-Speech, TTS) für Ihr Zeichen installieren. Da die Sprachdienste des Microsoft-Agents auf der Microsoft Speech API (SAPI) basieren, können Sie beliebige Engines verwenden, die die erforderlichen Sprachschnittstellen problemlos unterstützen.
 
-Um die Spracheingabe Unterstützung in der Anwendung zu aktivieren, definieren Sie ein [**Command**](https://www.bing.com/search?q=**Command**) -Objekt, und legen Sie die [**Voice**](https://www.bing.com/search?q=**Voice**) -Eigenschaft fest. Der Microsoft-Agent lädt Sprachdienste automatisch, sodass die Spracherkennungs-Engine geladen wird, wenn der Benutzer die Abhör Taste drückt oder [**lauschen**](https://www.bing.com/search?q=**Listen**)aufruft. Standardmäßig bestimmt die Sprach-ID des Zeichens, welches Modul geladen wird. Der-Agent versucht, die erste Engine zu laden, die SAPI als Übereinstimmung mit dieser Sprache zurückgibt. Wenn Sie ein bestimmtes Modul laden möchten, verwenden Sie [**iagentcharakteriex:: absrmodeid**](IAgentCharacterEx::SetSRModeID) .
+Um die Spracheingabeunterstützung in Ihrer Anwendung zu aktivieren, definieren Sie ein [**Command-Objekt,**](https://www.bing.com/search?q=**Command**) und legen Sie dessen [**Voice-Eigenschaft**](https://www.bing.com/search?q=**Voice**) fest. Der Microsoft-Agent lädt spracherkennungsdienste automatisch, sodass die Spracherkennungs-Engine geladen wird, wenn der Benutzer die Hörtaste drückt oder [**Sie Lauschen**](https://www.bing.com/search?q=**Listen**)aufrufen. Standardmäßig bestimmt die Sprach-ID des Zeichens, welche Engine geladen wird. Der Agent versucht, die erste Engine zu laden, die SAPI als Übereinstimmung mit dieser Sprache zurückgibt. Verwenden Sie **IAgentCharacterEx::SetSRModeID,** wenn Sie eine bestimmte Engine laden möchten.
 
-Um die Text-zu-Sprache-Ausgabe zu aktivieren, verwenden Sie die [**Sprech**](https://www.bing.com/search?q=**Speak**) Methode. Der Microsoft-Agent wird automatisch versuchen, ein Modul zu laden, das mit der Sprach-ID des Zeichens übereinstimmt. Wenn die Definition des Zeichens eine bestimmte ID des TTS-Engine-Modus enthält und diese Engine verfügbar ist und mit der Sprach-ID des Zeichens übereinstimmt, lädt der-Agent diese Engine für das Zeichen. Andernfalls lädt der-Agent die erste von SAPI zurückgegebene TTS-Engine als Übereinstimmung mit der Spracheinstellung des Zeichens. Sie können auch [**iagentcharakteriex:: setttmodeid**](IAgentCharacterEx::SetTTSModeID) verwenden, um eine bestimmte Engine zu laden.
+Verwenden Sie die Speak-Methode, [](https://www.bing.com/search?q=**Speak**) um die Sprachtextausgabe zu aktivieren. Der Microsoft-Agent versucht automatisch, eine Engine zu laden, die der Sprach-ID des Zeichens entspricht. Wenn die Definition des Zeichens eine bestimmte ID des TTS-Engine-Modus enthält und diese Engine verfügbar ist und mit der Sprach-ID des Zeichens übereinstimmt, lädt der -Agent diese Engine für das Zeichen. Falls nicht, lädt der -Agent die erste TTS-Engine, die SAPI als Übereinstimmung mit der Spracheinstellung des Zeichens zurückgibt. Sie können auch **IAgentCharacterEx::SetTTSModeID** verwenden, um eine bestimmte Engine zu laden.
 
-In der Regel lädt der Microsoft-Agent eine Spracherkennungs-Engine, wenn der Empfangsmodus initiiert wird, und lädt eine Text-zu-Sprache-Engine, wenn zum ersten Mal [**gesprochen**](https://www.bing.com/search?q=**Speak**) wird. Wenn Sie jedoch die Sprach-Engine vorab laden möchten, können Sie dazu die Eigenschaften Abfragen, die mit den Sprachschnittstellen verknüpft sind. Beispielsweise wird durch den Aufruf von [**iagentcharakteriex:: gezrmodeid**](IAgentCharacterEx::GetSRModeID) oder [**iagentcharakteriex:: getttionmodeid**](IAgentCharacterEx::GetTTSModeID) versucht, diese Art von Engine zu laden.
+In der Regel lädt Microsoft Agent eine Spracherkennungs-Engine, wenn der Überwachungsmodus initiiert wird, und lädt eine Text-zu-Sprache-Engine, wenn [**Speak**](https://www.bing.com/search?q=**Speak**) zum ersten Mal aufgerufen wird. Wenn Sie jedoch die Sprach-Engine vorab laden möchten, können Sie dazu die Eigenschaften abfragen, die sich auf die Sprachschnittstellen beziehen. Wenn Sie beispielsweise **IAgentCharacterEx::GetSRModeID** oder **IAgentCharacterEx::GetTTSModeID** aufrufen, wird versucht, diesen Engine-Typ zu laden.
 
  
 

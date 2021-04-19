@@ -9,12 +9,12 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: b71990e230290403bca2a5af11eeca11b093402f
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 47f47a937123ce252189aac57e922b10c2a015fc
+ms.sourcegitcommit: 8737f32d64e5f01c1d38aab92736e4088d6c446e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104516886"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106367244"
 ---
 # <a name="texld---ps_2_0-and-up"></a>texld-PS \_ 2 \_ 0 und aufwärts
 
@@ -29,7 +29,7 @@ Beispiel für eine Textur bei einem bestimmten Sampler mithilfe der angegebenen 
 
 
 
- 
+ 
 
 Hierbei gilt:
 
@@ -54,7 +54,7 @@ Eine abhängige Textur Anweisung in zweiter Reihenfolge wird als Textur Anweisun
 
 ### <a name="ps_3_0"></a>PS \_ 3 \_ 0
 
-Quelle1 muss ein [Sampler (Direct3D 9 ASM-PS)](dx9-graphics-reference-asm-ps-registers-sampler.md) \# ohne Modifizierer sein. Swizzle ist für src0 oder Quelle1 zulässig. Das Swizzle wird vor der Textur Suche auf die Textur Koordinate angewendet.
+Quelle1 muss ein [Sampler (Direct3D 9 ASM-PS)](dx9-graphics-reference-asm-ps-registers-sampler.md) \# ohne Modifizierer sein. Swizzle ist für src0 oder Quelle1 zulässig. Das Swizzle wird vor der Textur Suche auf die Texturkoordinaten angewendet.
 
 ## <a name="remarks"></a>Bemerkungen
 
@@ -68,7 +68,7 @@ Diese Anweisung wird in den folgenden Versionen unterstützt:
 
 
 
- 
+ 
 
 Die Anzahl der Koordinaten, die erforderlich sind, damit src0 das Textur Beispiel durchführen kann, hängt davon ab, wie Quelle1 deklariert wurde, sowie der. w-Komponente. [ \_ Samplertypen werden mit DCL samplertype (SM2, SM3-PS ASM)](dcl-samplertype---ps.md)deklariert. Wenn Quelle1 als 2D-Sampler deklariert ist, muss src0. XY-Koordinaten enthalten. Wenn Quelle1 entweder als Cube-Sampler oder als volumesampler deklariert ist, muss src0 die. XYZ-Koordinaten enthalten. Das Sampling einer Textur mit weniger Dimensionen als in der Textur Koordinate vorhanden ist zulässig, da die zusätzlichen Texturkoordinaten Komponenten ignoriert werden.
 
@@ -86,7 +86,7 @@ Wenn die Quell Textur weniger als vier Komponenten enthält, werden die fehlende
 
 
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -95,6 +95,6 @@ Wenn die Quell Textur weniger als vier Komponenten enthält, werden die fehlende
 [Pixelshaderanweisungen](dx9-graphics-reference-asm-ps-instructions.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

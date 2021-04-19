@@ -4,22 +4,22 @@ ms.assetid: 72a77e83-ab18-438c-af11-fa6d55bf0180
 title: Kompatibilitätsadministrator
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e8b3c65388c99d3f3a5755b6971bc42c7478054f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: abde760ca7324aec18f0576a7f04e3a4c5db2d22
+ms.sourcegitcommit: 78b64f3865e64768b5319d4f010032ee68924a98
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104050552"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107314983"
 ---
 # <a name="compatibility-administrator"></a>Kompatibilitätsadministrator
 
 ## <a name="affected-platforms"></a>Betroffene Plattformen
 
- **Clients:** Windows 2000 \| Windows XP Windows \| Vista Windows \| 7  
-**Server:** Windows Server 2003 \| Windows Server 2008 \| Windows Server 2008 R2  
+ **Clients:** Windows 2000, Windows XP, Windows Vista, Windows 7  
+**Server:** Windows Server 2003, Windows Server 2008, Windows Server 2008 R2  
 
 
-## <a name="description"></a>BESCHREIBUNG
+## <a name="description"></a>Beschreibung
 
 Das mit dem Anwendungskompatibilitäts-Toolkit (Application Compatibility Toolkit, Act) bereitgestellte Kompatibilitäts Administrator Tool ermöglicht es Ihnen, viele ihrer möglichen Anwendungs Kompatibilitätsprobleme zu beheben, bevor Sie eine neue Version von Windows in Ihrer Organisation bereitstellen:
 
@@ -27,7 +27,7 @@ Das mit dem Anwendungskompatibilitäts-Toolkit (Application Compatibility Toolki
 -   So können Sie angepasste Kompatibilitäts Behebungen, Kompatibilitäts Modi, AppHelp-Nachrichten und Kompatibilitäts Datenbanken erstellen
 -   Bereitstellen eines Abfrage Tools, mit dem Sie auf Ihren lokalen Computern nach installierten Korrekturen suchen können
 
-## <a name="usage"></a>Verbrauch
+## <a name="usage"></a>Verwendung
 
 Das folgende Flussdiagramm veranschaulicht die Schritte, die bei der Verwendung des Kompatibilitäts Administrators zum Erstellen von Kompatibilitäts Korrekturen, Kompatibilitäts Modi und ihrer AppHelp-Nachrichten erforderlich sind.
 
