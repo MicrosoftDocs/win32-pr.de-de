@@ -1,137 +1,137 @@
 ---
-title: Schattierung variabler Rate (VRS)
-description: Das Schattieren von Variablenraten &mdash; oder grobe Pixel Schattierung &mdash; ist ein Mechanismus, mit dem Sie Renderingleistung/-Leistung zu raten zuweisen können, die in Ihrem gerenderten Bild variieren.
+title: Schattierung mit variabler Rate (VRS)
+description: Schattierung mit variabler Rate oder grobe Pixelschattierung ist ein Mechanismus, mit dem Sie Renderingleistung/Leistung mit Raten zuordnen können, die in Ihrem gerenderten &mdash; &mdash; Bild variieren.
 ms.localizationpriority: high
 ms.topic: article
 ms.date: 04/08/2019
-ms.openlocfilehash: be2367ceb72d2e693d86b6f279b627f3bffa9e1c
-ms.sourcegitcommit: 628fda3e63fd1d513ce9a5f55be8bbc4af4b2a4b
+ms.openlocfilehash: 2f207cddee978915788291fc0ffe55160e6a93c6
+ms.sourcegitcommit: 59ec383331366f8a62c94bb88468ca03e95c43f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "104548759"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107380764"
 ---
-# <a name="variable-rate-shading-vrs"></a>Schattierung variabler Rate (VRS)
+# <a name="variable-rate-shading-vrs"></a>Schattierung mit variabler Rate (VRS)
 
 ## <a name="the-motivation-for-vrs"></a>Die Motivation für VRS
-Aufgrund von Leistungseinschränkungen kann ein grafikrenderer sich nicht immer für jeden Teil des Ausgabe Bilds den gleichen Grad an Qualität leisten. Das Schattieren von Variablenraten &mdash; oder grobe Pixel Schattierung &mdash; ist ein Mechanismus, mit dem Sie Renderingleistung/-Leistung zu raten zuweisen können, die in Ihrem gerenderten Bild variieren.
+Aufgrund von Leistungseinschränkungen kann es sich ein Grafikrenderer nicht immer leisten, jedem Teil seines Ausgabebilds die gleiche Qualität zu bieten. Schattierung mit variabler Rate oder Schattierung mit grobem Pixel ist ein Mechanismus, mit dem Sie Renderingleistung/Leistung mit Raten zuordnen können, die in Ihrem gerenderten &mdash; &mdash; Bild variieren.
 
-In einigen Fällen kann die Schattierungs Rate mit geringfügigen oder ohne Reduzierung der wahrnehmbaren Ausgabequalität reduziert werden. Dies führt zu einer Leistungsverbesserung, die im wesentlichen kostenlos ist.
+In einigen Fällen kann die Schattierungsrate mit geringer oder keiner Verringerung der wahrnehmbaren Ausgabequalität reduziert werden. führt zu einer Leistungsverbesserung, die im Wesentlichen kostenlos ist.
 
-## <a name="without-vrsmdashmulti-sample-anti-aliasing-with-supersampling"></a>Ohne VRS &mdash; -Antialiasing mit mehreren Beispielen mit Supersampling
-Ohne Schattierung variabler Geschwindigkeit ist die einzige Möglichkeit, die Schattierungs Rate zu steuern, mit Multi-Sample Anti-Aliasing (MSAA) mit Beispiel basierter Ausführung (auch als Supersampling bezeichnet).
+## <a name="without-vrsmdashmulti-sample-anti-aliasing-with-supersampling"></a>Ohne &mdash; VRS-Multi-Sample-Antialiasing mit Supersampling
+Ohne Schattierung variabler Rate ist die einzige Möglichkeit, die Schattierungsrate zu steuern, das Multi-Sample Anti-Aliasing (MSAA) mit stichprobenbasierter Ausführung (auch als Supersampling bezeichnet).
 
-MSAA ist ein Mechanismus zum Verringern der geometrischen Aliasing und zum Verbessern der renderingqualität eines Bilds im Vergleich zur Verwendung von MSAA. Die MSAA-Stichproben Anzahl, die 1X, 2X, 4x, 8x oder 16X sein kann, steuert die Anzahl der pro renderzielpixel zugeordneten Stichproben. Die MSAA-Stichproben Anzahl muss im Voraus bekannt sein, wenn das Ziel zugeordnet wird, und kann anschließend nicht mehr geändert werden.
+MSAA ist ein Mechanismus zum Reduzieren geometrischer Aliasings und Verbessern der Renderingqualität eines Bilds im Vergleich zur Nicht-Verwendung von MSAA. Die MSAA-Stichprobenanzahl, die 1x, 2x, 4x, 8x oder 16x sein kann, bestimmt die Anzahl der pro Renderzielpixel zugeordneten Stichproben. Die MSAA-Stichprobenanzahl muss im Vor-/Nachher bekannt sein, wenn das Ziel zugeordnet wird, und kann danach nicht mehr geändert werden.
 
-Die Supersampling bewirkt, dass der Pixelshader einmal pro Stichprobe mit höherer Qualität aufgerufen wird, aber auch höhere Leistungskosten im Vergleich zur pro-Pixel-Ausführung.
+Die Übersamplingung bewirkt, dass der Pixel-Shader einmal pro Stichprobe aufgerufen wird, mit einer höheren Qualität, aber auch höheren Leistungskosten im Vergleich zur Ausführung pro Pixel.
 
-Ihre Anwendung kann Ihre Schattierungs Rate steuern, indem Sie zwischen pro Pixel basierender Ausführung oder MSAA-with-Supersampling wählen. Diese beiden Optionen bieten keine sehr feine Kontrolle. Außerdem möchten Sie möglicherweise eine niedrigere Schattierungs Rate für eine bestimmte Objektklasse im Vergleich zum Rest des Bilds. Zu diesen Objekten kann ein Objekt hinter einem HUD-Element, eine Transparenz, ein weich Zeichen (Tiefe von Feld, Bewegung usw.) oder eine optische Verzerrung aufgrund von VR-Optiken gehören. Dies wäre jedoch nicht möglich, da die Schattierungs Qualität und die Kosten für das gesamte Image korrigiert werden.
+Ihre Anwendung kann die Schattierungsrate steuern, indem sie zwischen pixelbasierter Ausführung oder MSAA-with-supersampling wählt. Diese beiden Optionen bieten keine sehr gute Kontrolle. Außerdem können Sie eine niedrigere Schattierungsrate für eine bestimmte Objektklasse im Vergleich zum Rest des Bilds wünschen. Solche Objekte können ein Objekt hinter einem HUD-Element oder eine Transparenz, eine Weichzeichnung (Tiefen des Felds, Bewegung usw.) oder eine optische Verzerrung aufgrund von VR-Brillen umfassen. Dies wäre jedoch nicht möglich, da die Schattierungsqualität und die Kosten für das gesamte Bild festgelegt sind.
 
-## <a name="with-variable-rate-shading-vrs"></a>Mit Variablen Raten Schattierung (VRS)
-Das VRS-Modell (Variable Rate Schattierung) erweitert Supersampling-with-MSAA durch das Konzept der groben Schattierung in das Gegenteil, "grobe Pixel", Richtung. An dieser Stelle kann Schattierung mit einer Häufigkeit von mehr als einem Pixel ausgeführt werden. Anders ausgedrückt: eine Gruppe von Pixeln kann als einzelne Einheit schattiert werden, und das Ergebnis wird dann an alle Beispiele in der Gruppe übertragen.
+## <a name="with-variable-rate-shading-vrs"></a>Mit VariableRate Shading (VRS)
+Das VRS-Modell (Variable-Rate Shading) erweitert supersampling-with-MSAA in die entgegengesetzte Richtung "coarse pixel", indem das Konzept der groben Schattierung hinzugefügt wird. Hier kann die Schattierung mit einer Häufigkeit durchgeführt werden, die eher grob als ein Pixel ist. Anders ausgedrückt: Eine Gruppe von Pixeln kann als einzelne Einheit schattiert werden, und das Ergebnis wird dann an alle Stichproben in der Gruppe übertragen.
 
-Eine grobe Schattierungs-API ermöglicht der Anwendung die Angabe der Anzahl von Pixeln, die zu einer schattierten Gruppe oder einem *groben Pixel* gehören. Nachdem Sie das Renderziel zugeordnet haben, können Sie die Größe des groben Pixels verändern. Daher können unterschiedliche Bildschirm Teile oder unterschiedliche Zeichnungs Pässe unterschiedliche Schattierungs Raten aufweisen.
+Mit einer API für die schattierte Schattierung kann Ihre Anwendung die Anzahl der Pixel angeben, die zu einer schattierten Gruppe gehören, oder die Anzahl *der pixeligen Pixel.* Sie können die größe der groben Pixel nach dem Zuordnen des Renderziels variieren. Daher können verschiedene Teile des Bildschirms oder verschiedene Zeichnen-Läufe unterschiedliche Schattierungsraten aufweisen.
 
-Im folgenden finden Sie eine Tabelle, in der beschrieben wird, welche MSAA-Ebene mit welcher Pixelgröße unterstützt wird Einige werden auf keiner Plattform unterstützt. während andere bedingt basierend auf einer Funktion (*additionalshadingratessupported*), die durch "Cap" angegeben wird, bedingt aktiviert werden.
+Die folgende Tabelle beschreibt, welche MSAA-Ebene mit welcher groben Pixelgröße unterstützt wird. Einige werden auf keiner Plattform unterstützt. während andere basierend auf einer Funktion (*AdditionalShadingRatesSupported*) bedingt aktiviert sind, die durch "Cap" angegeben wird.
 
-![coarseepixelsizesupport](images/CoarsePixelSizeSupport.PNG "Grobe Pixelgrößen")
+![In der Tabelle wird die größe des unausgegreiften Pixels für M S A A-Ebenen angezeigt.](images/CoarsePixelSizeSupport.PNG "Grobe Pixelgrößen")
 
-Für die im nächsten Abschnitt erläuterten Funktionsebenen gibt es keine Kombination aus "grob Pixel-Größe und Stichproben Anzahl", bei der Hardware mehr als 16 Stichproben pro Pixel-Shader-Aufruf nachverfolgen muss. Diese Kombinationen sind in der obigen Tabelle durch Halbton schattiert.
+Für die featureebenen, die im nächsten Abschnitt erläutert werden, gibt es keine Kombination aus größe und Stichprobenanzahl für ungenaue Pixel, bei der hardware mehr als 16 Stichproben pro Aufruf des Pixelshaders nachverfolgen muss. Diese Kombinationen sind in der obigen Tabelle halbtonschattend.
 
-## <a name="feature-tiers"></a>Funktionsebenen
-Es gibt zwei Ebenen der VRS-Implementierung und zwei Funktionen, die Sie Abfragen können. Jede Ebene wird nach der Tabelle ausführlicher beschrieben.
+## <a name="feature-tiers"></a>Featureebenen
+Es gibt zwei Ebenen für die VRS-Implementierung und zwei Funktionen, die Sie abfragen können. Jede Ebene wird nach der Tabelle ausführlicher beschrieben.
 
-![wirft](images/Tiers.PNG "VRS-Ebenen")
+![Die Tabelle zeigt die funktionen, die in Ebene 1 und Ebene 2 verfügbar sind.](images/Tiers.PNG "VRS-Ebenen")
 
-### <a name="tier-1"></a>Ebene 1
-- Die Schattierungs Rate kann nur pro zeichnen angegeben werden. nicht präziser als das.
-- Die Schattierungs Rate gilt einheitlich für das, was unabhängig davon gezeichnet wird, wo Sie sich innerhalb des Renderziels befindet.
+### <a name="tier-1"></a>Ebene 1
+- Schattierungsrate kann nur pro Zeichnen angegeben werden. nicht präziser als das.
+- Die Schattierungsrate gilt einheitlich für das, was unabhängig davon gezeichnet wird, wo sie sich innerhalb des Renderziels befindet.
 
-### <a name="tier-2"></a>Ebene 2
-- Die Schattierungs Rate kann pro zeichnen angegeben werden, wie in Ebene 1. Sie kann auch durch eine Kombination aus pro-zeichnen-Basis und von:
-  - Semantik aus jedem provozierenden Scheitelpunkt und
-  - ein Bild Raum Bild.
-- Die Schattierungs Raten aus den drei Quellen werden mithilfe eines Satzes von Combiner kombiniert.
-- Die Bild Kachel Größe des Bildschirm Raums ist 16x16 oder kleiner.
-- Die von Ihrer Anwendung angeforderte Schattierungs Rate ist garantiert genau (aus Gründen der Genauigkeit Temporaler und anderer erbaufilter).
+### <a name="tier-2"></a>Ebene 2
+- Die Schattierungsrate kann wie in Ebene 1 pro Zeichnen angegeben werden. Sie kann auch durch eine Kombination von pro Zeichnen-Basis und von angegeben werden:
+  - Semantik von jedem aufrufenden Scheitelpunkt und
+  - ein Bildschirmbereichsbild.
+- Schattierungsraten aus den drei Quellen werden mithilfe einer Reihe von Kombinationen kombiniert.
+- Die Größe der Bildkachel im Bildschirmbereich ist 16 x 16 oder kleiner.
+- Die von Ihrer Anwendung angeforderte Schattierungsrate wird garantiert genau übermittelt (um die Genauigkeit von temporalen und anderen Filterfiltern zu gewährleisten).
 - SV_ShadingRate PS-Eingabe wird unterstützt.
-- Die Schattierungs Rate "pro-provoziert-Vertex" (auch als "pro primitiv" bezeichnet) ist gültig, wenn ein Viewport verwendet wird und `SV_ViewportArrayIndex` nicht in den Wert geschrieben wird.
-- Wenn die *supportspervertexshadingratewithmultipleviewports* -Funktion auf festgelegt ist, kann die pro-anregende-Vertex-Rate mit mehr als einem Viewport verwendet werden `true` . Außerdem kann diese Rate in diesem Fall verwendet werden, wenn `SV_ViewportArrayIndex` in geschrieben wird.
+- Die Schattierungsrate pro Pro-Provoking-Scheitelpunkt (auch als pro primitiv bezeichnet) ist gültig, wenn ein Viewport verwendet und nicht `SV_ViewportArrayIndex` in geschrieben wird.
+- Die Pro-Provoking-Vertexrate kann mit mehr als einem Viewport verwendet werden, wenn die *SupportsPerVertexShadingRateWithMultipleViewports-Funktion* auf festgelegt `true` ist. Darüber hinaus kann in diesem Fall diese Rate verwendet werden, wenn `SV_ViewportArrayIndex` in geschrieben wird.
 
 ### <a name="list-of-capabilities"></a>Liste der Funktionen
-- *Additionalshadingratessupported*
+- *AdditionalShadingRatesSupported*
   - Boolescher Typ.
-  - Gibt an, ob 2x4, 4x2 und 4 x 4 grobe Pixelgrößen für das Rendering mit einem Sampling unterstützt werden. und ob eine grobe Pixelgröße von 2x4 für 2X-MSAA unterstützt wird.
-- *Supportspervertexshadingratewithmultipleviewports*
+  - Gibt an, ob die Pixelgrößen 2x4, 4x2 und 4 x 4 für das Rendern mit Einzelstichproben unterstützt werden. und ob die grobe Pixelgröße 2x4 für 2-fache MSAA unterstützt wird.
+- *SupportsPerVertexShadingRateWithMultipleViewports*
   - Boolescher Typ.
-  - Gibt an, ob mehr als ein Viewport mit der Schattierungs Rate pro Scheitelpunkt (auch als pro primitiv bezeichnet) verwendet werden kann.
+  - Gibt an, ob mehrere Viewports mit der Schattierungsrate pro Scheitelpunkt (auch als pro Primitive bezeichnet) verwendet werden können.
 
-## <a name="specifying-shading-rate"></a>Angeben der Schattierungs Rate
-Aus Gründen der Flexibilität in Anwendungen gibt es eine Reihe von Mechanismen zur Steuerung der Schattierungs Rate. Abhängig von der Hardware Funktionsebene sind unterschiedliche Mechanismen verfügbar.
+## <a name="specifying-shading-rate"></a>Angeben der Schattierungsrate
+Aus Gründen der Flexibilität in Anwendungen stehen verschiedene Mechanismen zur Verfügung, um die Schattierungsrate zu steuern. Je nach Hardwarefeatureebene sind verschiedene Mechanismen verfügbar.
 
 ### <a name="command-list"></a>Befehlsliste
-Dies ist der einfachste Mechanismus zum Festlegen der Schattierungs Rate. Es ist auf allen Ebenen verfügbar.
+Dies ist der einfachste Mechanismus zum Festlegen der Schattierungsrate. Sie ist auf allen Ebenen verfügbar.
 
-Die Anwendung kann mit der [ **ID3D12GraphicsCommandList5:: rssetshadingrate** -Methode](/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist5-rssetshadingrate)eine grobe Pixelgröße angeben. Diese API nimmt ein einzelnes Aufzählungs Argument an. Die API bietet eine allgemeine Kontrolle über den Grad an Qualität für das Rendern der &mdash; Möglichkeit, die Schattierungs Rate pro zeichnen festzulegen.
+Ihre Anwendung kann mithilfe der [ **ID3D12GraphicsCommandList5::RSSetShadingRate-Methode**](/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist5-rssetshadingrate)eine grobe Pixelgröße angeben. Diese API nimmt ein einzelnes Enumerationsargument an. Die API bietet eine allgemeine Steuerung des Qualitätsgrads für &mdash; das Rendern, um die Schattierungsrate pro Zeichnen festzulegen.
 
-Werte für diesen Zustand werden durch die [**D3D12_SHADING_RATE**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_shading_rate) -Enumeration ausgedrückt.
+Werte für diesen Zustand werden durch die [**D3D12_SHADING_RATE-Enumeration**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_shading_rate) ausgedrückt.
 
-#### <a name="coarse-pixel-size-support"></a>Unterstützung für grobe Pixelgrößen
-Die Schattierungs Raten 1x1, 1X2, 2 x 2 und 2 x 2 werden auf allen Ebenen unterstützt.
+#### <a name="coarse-pixel-size-support"></a>Unterstützung für coarse pixel size
+Die Schattierungsraten 1x1, 1x2, 2x2 und 2x2 werden auf allen Ebenen unterstützt.
 
-Es gibt eine Funktion, *additionalshadingratessupported*, um anzugeben, ob 2x4, 4x2 und 4X4 auf dem Gerät unterstützt werden.
+Die Funktion *AdditionalShadingRatesSupported* gibt an, ob 2x4, 4x2 und 4x4 auf dem Gerät unterstützt werden.
 
-### <a name="screen-space-image-image-based"></a>Bild Raum Bild (Bild basiert)
-Auf Ebene 2 und höher können Sie die Pixel Schattierungs Rate mit einem Bild Raum Bild angeben.
+### <a name="screen-space-image-image-based"></a>Bildschirmraumbild (bildbasiert)
+Auf Ebene 2 und höher können Sie die Pixelschattierungsrate mit einem Bildschirmraumbild angeben.
 
-Das Bild für den Bildschirm ermöglicht der Anwendung, eine "Detailebene (LOD)" zu erstellen, die Bereiche mit unterschiedlicher Qualität anzeigt, z. b. Bereiche, die von Bewegungsunschärfe, Tiefe, transparente Objekte oder HUD-Benutzeroberflächen Elemente abgedeckt werden. Die Auflösung des Bilds erfolgt in Macroblocks. Sie befindet sich nicht in der Auflösung des Renderziels. Mit anderen Worten, die Daten der Schattierungs Rate werden bei einer Granularität von 8 x 8-oder 16x16-Pixel Kacheln angegeben, wie durch die VRS-Kachel Größe angegeben.
+Mit dem Bildschirmbereichsbild kann Ihre Anwendung ein Bild mit einer LOD-Maske (Level of Detail, Detailebene) erstellen, das Bereiche unterschiedlicher Qualität angibt, z. B. Bereiche, die durch Bewegungsunschärfe, Tiefenbereichsunschärfe, transparente Objekte oder HUD-UI-Elemente abgedeckt werden. Die Auflösung des Bilds befindet sich in Makroblocks. sie ist nicht in der Auflösung des Renderziels. Anders ausgedrückt: Die Schattierungsratedaten werden mit einer Granularität von 8 x 8 oder 16 x 16 Pixeln angegeben, wie durch die VRS-Kachelgröße angegeben.
 
 #### <a name="tile-size"></a>Tile size (Kachelgröße)
-Ihre Anwendung kann eine API Abfragen, um die unterstützte VRS-Kachel Größe für Ihr Gerät abzurufen.
+Ihre Anwendung kann eine API abfragen, um die unterstützte VRS-Kachelgröße für ihr Gerät abzurufen.
 
-Kacheln sind quadratisch, und die Größe bezieht sich auf die Breite oder Höhe der Kachel in texeln.
+Kacheln sind quadratisch, und die Größe bezieht sich auf die Breite oder Höhe der Kachel in Texel.
 
-Wenn die Hardware die Schattierung der Variablen der Ebene 2 nicht unterstützt, gibt die Funktions Abfrage für die Kachel Größe 0 zurück.
+Wenn die Hardware die Schattierung mit variabler Ratenebene 2 nicht unterstützt, gibt die Funktionsabfrage für die Kachelgröße 0 zurück.
 
-Wenn die Hardware die Schattierung der Variablen der Ebene 2 unterstützt *, entspricht die* Kachel Größe einem dieser Werte.
+Wenn die *Hardware* die Schattierung variabler Ebenen 2 unterstützt, ist die Kachelgröße einer dieser Werte.
 
 - 8
 - 16
 - 32
 
-#### <a name="screen-space-image-size"></a>Bildspeicher Größe des Bildschirms
-Für ein Renderziel der Größe {rtwidth, rtheight} unter Verwendung einer angegebenen Kachel Größe namens **vrstilesize** ist das Bild Raum Bild, das es abdeckt, diese Dimensionen.
+#### <a name="screen-space-image-size"></a>Bildgröße des Bildschirmbereichs
+Für ein Renderziel der Größe {rtWidth, rtHeight}, wobei eine bestimmte Kachelgröße namens **VRSTileSize** verwendet wird, weist das Bildschirmraumbild, das es abdeckt, diese Dimensionen auf.
 
 ```cpp
 { ceil((float)rtWidth / VRSTileSize), ceil((float)rtHeight / VRSTileSize) }
 ```
 
-Die obere linke Seite des Bildschirms Bilds (0,0) ist an der oberen linken Seite des Renderziels (0,0) gesperrt.
+Das Bild des Bildschirmbereichs oben links (0, 0) ist links oben (0, 0) des Renderziels gesperrt.
 
-Um die (x, y)-Koordinate einer Kachel zu suchen, die einer bestimmten Position im Renderziel entspricht, unterteilen Sie die fensterraum Koordinaten von (x, y) durch die Kachel Größe, wobei Bruchteile ignoriert werden.
+Zum Suchen der (x,y)-Koordinate einer Kachel, die einer bestimmten Position im Renderziel entspricht, dividieren Sie die Fensterraumkoordinaten von (x, y) durch die Kachelgröße und ignorieren dabei Bruchbits.
 
-Wenn das Bildschirmraum Bild größer als das angegebene Renderziel sein muss, werden die zusätzlichen Teile rechts und/oder unten nicht verwendet.
+Wenn das Bildschirmbereichsbild größer ist, als es für ein bestimmtes Renderziel sein muss, werden die zusätzlichen Teile rechts und/oder unten nicht verwendet.
 
-Wenn das Bildschirmraum Bild für ein bestimmtes Renderziel zu klein ist, ergibt jeder versuchte Lesevorgang aus dem Image über die tatsächlichen Blöcke hinaus eine Standard Schattierungs Rate von 1x1. Dies liegt daran, dass die obere linke Seite (0,0) des Bildschirm Leerraums für das Renderziel in der oberen linken Ecke (0,0) gesperrt ist, und das Lesen über die Blöcke des Renderziels hinaus bedeutet, dass die Werte für x und y zu groß sind.
+Wenn das Bildschirmbereichsbild für ein bestimmtes Renderziel zu klein ist, ergibt jeder Versuch, das Bild über die tatsächlichen Werte zu lesen, eine Standardschattierungsrate von 1x1. Dies liegt daran, dass das Bild oben links im Bildschirmbereich (0, 0) an der oberen linken Seite des Renderziels (0, 0) gesperrt ist und "Lesen über die Renderziel-Werte hinaus" bedeutet, dass die Werte für x und y zu groß gelesen werden.
 
-#### <a name="format-layout-resource-properties"></a>Format, Layout, Ressourcen Eigenschaften
-Das Format dieser Oberfläche ist eine 8-Bit-Oberfläche mit einem einzigen Kanal ([**DXGI_FORMAT_R8_UINT**](/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format)).
+#### <a name="format-layout-resource-properties"></a>Format, Layout, Ressourceneigenschaften
+Das Format dieser Oberfläche ist eine 8-Bit-Einzelkanaloberfläche ([**DXGI_FORMAT_R8_UINT**](/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format)).
 
-Die Ressource ist "Dimension **TEXTURE2D**".
+Die Ressource ist die **Dimension TEXTURE2D.**
 
-Sie kann nicht in ein-oder falsch eingegeben werden. Sie muss explizit über eine MIP-Ebene verfügen.
+Sie kann nicht arrayiert oder übersprungen werden. Sie muss explizit eine MIP-Ebene haben.
 
-Sie enthält die Stichproben Anzahl 1 und die Stichproben Qualität 0.
+Sie verfügt über die Stichprobenanzahl 1 und die Stichprobenqualität 0.
 
-Das Textur Layout ist **unbekannt**. Es kann implizit kein Zeilen Hauptlayout sein, da Cross-Adapter nicht zulässig ist.
+Es verfügt über das Texturlayout **UNKNOWN**. Es kann implizit kein Zeilen-Hauptlayout sein, da adapterübergreifendes Layout nicht zulässig ist.
 
-Die erwartete Art und Weise, in der die Bildspeicher Daten aufgefüllt werden, ist entweder
-1. Schreiben der Daten mit einem Compute-Shader Das Bildschirmraum Bild ist als UAV gebunden, oder
-2. Kopieren Sie die Daten auf das Bildschirm Bild.
+Die erwartete Art und Weise, in der die Bilddaten des Bildschirmbereichs aufgefüllt werden, ist entweder
+1. Schreiben der Daten mithilfe eines Compute-Shaders; Das Bildschirmbereichsbild ist als UAV gebunden, oder
+2. Kopieren Sie die Daten in das Bildschirmbereichsbild.
 
-Wenn Sie das Bild für den Bildschirm erstellen, sind diese Flags zulässig.
+Beim Erstellen des Bildschirmbereichsbilds sind diese Flags zulässig.
 
-- NONE
+- Keine
 - ALLOW_UNORDERED_ACCESS
 - DENY_SHADER_RESOURCE
 
@@ -143,137 +143,137 @@ Diese Flags sind nicht zulässig.
 - ALLOW_SIMULTANEOUS_ACCESS
 - VIDEO_DECODE_REFERENCE_ONLY
 
-Der heaptyp der Ressource kann nicht hoch-oder eingelesen werden.
+Der Heaptyp der Ressource kann weder UPLOAD noch READBACK sein.
 
-Die Ressource kann nicht SIMULTANEOUS_ACCESS werden. Die Ressource darf nicht Adapter übergreifend sein.
+Die Ressource kann nicht SIMULTANEOUS_ACCESS werden. Die Ressource darf nicht adapterübergreifend sein.
 
 #### <a name="data"></a>Daten
-Jedes Byte des Bildschirmraum Bilds entspricht einem Wert der [**D3D12_SHADING_RATE**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_shading_rate)  -Enumeration.
+Jedes Byte des Bildschirmraumbilds entspricht [](/windows/desktop/api/d3d12/ne-d3d12-d3d12_shading_rate) einem Wert der D3D12_SHADING_RATE-Enumeration.
 
 #### <a name="resource-state"></a>Ressourcenzustand
-Eine Ressource muss in einen schreibgeschützten Status versetzt werden, wenn Sie als Bildspeicher Image verwendet wird. Zu diesem Zweck wird ein Schreib geschützter Zustand, [**D3D12_RESOURCE_STATE_SHADING_RATE_SOURCE**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_resource_states), definiert.
+Eine Ressource muss in einen schreibgeschützten Zustand übergehen, wenn sie als Bildschirmraumbild verwendet wird. Zu diesem Zweck wird ein schreibgeschützter Zustand [**D3D12_RESOURCE_STATE_SHADING_RATE_SOURCE**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_resource_states)definiert.
 
-Die Bildressource ist aus diesem Zustand übergegangen, sodass Sie wiederbeschreibbar ist.
+Die Imageressource wird aus diesem Zustand umgestellt, um wieder schreibbar zu werden.
 
 #### <a name="setting-the-image"></a>Festlegen des Bilds
-Das Bild Raum Bild zum Angeben der Shader-Rate wird in der Befehlsliste festgelegt.
+Das Bildschirmraumbild zum Angeben der Shaderrate wird in der Befehlsliste festgelegt.
 
-Eine Ressource, die als Quelle für Schattierungs Raten festgelegt wurde, kann nicht aus einer Shader-Stufe gelesen oder geschrieben werden.
+Eine Ressource, die als Schattierungsratenquelle festgelegt wurde, kann in keiner Shaderphase gelesen oder geschrieben werden.
 
-`null`Zum Angeben der shaderrate kann ein Bildschirmraum Bild festgelegt werden. Dies hat den Effekt, dass 1x1 konsistent als Beitrag aus dem Bildschirmraum Bild verwendet wird. Das Bild für den Bildschirmraum kann anfänglich als festgelegt betrachtet werden `null` .
+Ein `null` Bildschirmraumbild kann zum Angeben der Shaderrate festgelegt werden. Dies hat zur Folge, dass 1x1 konsistent als Beitrag aus dem Bildschirmbereichsbild verwendet wird. Das Bildschirmraumbild kann anfänglich als auf festgelegt betrachtet `null` werden.
 
-#### <a name="promotion-and-decay"></a>Herauf Stufung und Verfall
-Eine Bild-und Bildspeicher Ressource hat keine besonderen Auswirkungen in Bezug auf die herauf Stufung oder den Verfall.
+#### <a name="promotion-and-decay"></a>Heraufstufung und Verfall
+Eine Bildressource im Bildschirmbereich hat keine besonderen Auswirkungen auf die Heraufstufung oder den Verfall.
 
-### <a name="per-primitive-attribute"></a>Pro primitiver Attribut
-Ein pro Primitives Attribut bietet die Möglichkeit, einen Schattierungs Raten Begriff als Attribut aus einem provogenden Scheitelpunkt anzugeben. Dieses Attribut ist flach schattiert &mdash; , d. h., es wird an alle Pixel im aktuellen Dreieck oder Zeilen primitiven weitergegeben. Die Verwendung eines pro primitiver Attributs kann im Vergleich zu den anderen Schattierungs Raten bezeichlern eine präzisere Steuerung der Bildqualität ermöglichen.
+### <a name="per-primitive-attribute"></a>Attribut pro Grundtyp
+Ein attributspezifisches Attribut fügt die Möglichkeit hinzu, einen Schattierungsratenbegriff als Attribut aus einem aufrufenden Scheitelpunkt anzugeben. Dieses Attribut ist flach schattiert, d. &nd; es wird an alle Pixel im aktuellen Dreieck oder Linienprimitiven &mdash; propagiert. Die Verwendung eines primitiven Attributs kann im Vergleich zu den anderen Schattierungsratenspezifizierern eine feiner abgrenzende Steuerung der Bildqualität ermöglichen.
 
-Das pro primitive Attribut ist eine festleg Bare Semantik namens `SV_ShadingRate` . `SV_ShadingRate` ist als Teil des [HLSL-Shader-Modells 6,4](/windows/desktop/direct3dhlsl/hlsl-shader-model-6-4-features-for-direct3d-12)vorhanden.
+Das attributspezifische Attribut ist eine festlegbare Semantik mit dem Namen `SV_ShadingRate` . `SV_ShadingRate`ist als Teil des [HLSL-Shadermodells 6.4 vorhanden.](/windows/desktop/direct3dhlsl/hlsl-shader-model-6-4-features-for-direct3d-12)
 
-Wenn vs oder GS festgelegt `SV_ShadingRate` sind, aber VRS nicht aktiviert ist, hat die Semantik Einstellung keine Auswirkungen. Wenn kein Wert für `SV_ShadingRate` pro primitiver Angabe angegeben ist, wird ein Schattierungs Raten Wert von 1x1 als pro primitiver Beitrag angenommen.
+Wenn vs oder GS festlegen, VRS jedoch nicht aktiviert ist, hat die `SV_ShadingRate` semantische Einstellung keine Auswirkungen. Wenn kein Wert für pro Primitiv angegeben wird, wird ein Schattierungsratenwert von 1x1 als pro `SV_ShadingRate` primitivem Beitrag angenommen.
 
-### <a name="combining-shading-rate-factors"></a>Kombinieren von Schattierungs Raten Faktoren
-Die verschiedenen Quellen der Schattierungs Rate werden mithilfe dieses Diagramms nacheinander angewendet.
+### <a name="combining-shading-rate-factors"></a>Kombinieren von Schattierungsratenfaktoren
+Die verschiedenen Quellen der Schattierungsrate werden anhand dieses Diagramms nacheinander angewendet.
 
-![Combiner](images/Combiners.PNG "Schattierungs Kombinatoren")
+![Das Diagramm zeigt einen Pipelinezustand mit der Bezeichnung A mit der Provoking-Schattierungsrate des Scheitelpunkts mit der Bezeichnung B, angewendet auf einen Combiner und der bildbasierten Schattierungsrate mit der Bezeichnung B, die auf einen Combiner angewendet wird.](images/Combiners.PNG "Schattieren von Combinern")
 
-Jedes Paar von A und B wird mit einem Combiner kombiniert.
+Jedes Paar aus A und B wird mithilfe eines Kombinierers kombiniert.
 
-\* Beim Angeben einer shaderrate nach Vertex-Attribut.
+\* Beim Angeben einer Shaderrate nach Scheitelpunktattribut.
 
-- Wenn ein Geometry-Shader verwendet wird, kann die Schattierungs Rate über diese festgelegt werden.
-- Wenn ein Geometry-Shader nicht verwendet wird, wird die Schattierungs Rate durch den anregenden Scheitelpunkt angegeben.
+- Wenn ein Geometrie-Shader verwendet wird, kann die Schattierungsrate dadurch angegeben werden.
+- Wenn kein Geometrie-Shader verwendet wird, wird die Schattierungsrate durch den aufrufenden Scheitelpunkt angegeben.
 
-#### <a name="list-of-combiners"></a>Liste der Combiner
-Die folgenden Kombinatoren werden unterstützt. Mit einem Combiner (C) und zwei Eingaben (a und B).
+#### <a name="list-of-combiners"></a>Liste der Kombinierer
+Die folgenden Kombinationen werden unterstützt. Verwenden eines Combiners (C) und zweier Eingaben (A und B).
 
-- **Pass-Through**. C. XY = A. XY.
-- Über **Schreiben**. C. XY = B. XY.
-- **Höhere Qualität**. C. XY = min (A. XY, B. XY).
-- **Niedrigere Qualität**. C. XY = Max (A. XY, B. XY).
-- **Apply Cost B in Relation zu A**. C. XY = min (maxrate, A. XY + B. XY).
+- **Passthrough:**. C.xy = A.xy.
+- **Überschreiben Sie**. C.xy = B.xy.
+- **Höhere Qualität.** C.xy = min(A.xy, B.xy).
+- **Niedrigere Qualität.** C.xy = max(A.xy, B.xy).
+- **Wenden Sie Kosten B relativ zu A an.** C.xy = min(maxRate, A.xy + B.xy).
 
-dabei `maxRate` ist die größte zulässige Dimension des groben Pixels auf dem Gerät. Dies wäre
+dabei `maxRate` ist die größte zulässige Dimension von grobem Pixel auf dem Gerät. Dies wäre
 
-- **D3D12_AXIS_SHADING_RATE_2X** (d. h. ein Wert von 1), wenn additionalshadingratessupported ist `false` .
-- **D3D12_AXIS_SHADING_RATE_4X** (d. h. der Wert 2), wenn additionalshadingratessupported ist `true` .
+- **D3D12_AXIS_SHADING_RATE_2X** (d. h. der Wert 1), wenn AdditionalShadingRatesSupported `false` ist.
+- **D3D12_AXIS_SHADING_RATE_4X** (d.h. der Wert 2), wenn AdditionalShadingRatesSupported `true` ist.
 
-Die Auswahl des Combiners für die Schattierung variabler Rate wird in der Befehlsliste über [**ID3D12GraphicsCommandList5:: rssetshadingrate**](/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist5-rssetshadingrate)festgelegt.
+Die Auswahl des Combiners für die Schattierung variabler Raten wird in der Befehlsliste über [**ID3D12GraphicsCommandList5::RSSetShadingRate**](/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist5-rssetshadingrate)festgelegt.
 
-Wenn keine Combiner festgelegt ist, behalten Sie den Standardwert bei, der Pass-Through ist.
+Wenn keine Kombinierer festgelegt werden, bleiben sie bei der Standardeinstellung PASSTHROUGH.
 
-Wenn die Quelle zu einem Combiner eine [**D3D12_AXIS_SHADING_RATE**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_axis_shading_rate)ist, die in der Unterstützungs Tabelle nicht zulässig ist *, wird die* Eingabe auf eine unterstützte Schattierungs Rate bereinigt.
+Wenn die Quelle für einen Combiner ein [**D3D12_AXIS_SHADING_RATE**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_axis_shading_rate)ist, was in der Unterstützungstabelle nicht zulässig ist, wird die Eingabe mit einer *unterstützten* Schattierungsrate bereinigt.
 
-Wenn die Ausgabe eines Combiners keiner Schattierungs Rate entspricht, die auf der Plattform unterstützt wird, wird das Ergebnis auf *eine unterstützte* Schattierungs Rate bereinigt.
+Wenn die Ausgabe eines Combiners keiner schattierungsrate entspricht, die auf der Plattform unterstützt wird, wird das Ergebnis mit einer *unterstützten* Schattierungsrate bereinigt.
 
-### <a name="default-state-and-state-clearing"></a>Standardzustand und Status Löschung
-Alle Schattierungs Raten Quellen, nämlich
+### <a name="default-state-and-state-clearing"></a>Standardzustand und Zustandsbereinigung
+Alle Schattierungsratequellen, nämlich
 
-- der vom Pipeline Status angegebene Satz (angegeben in der Befehlsliste),
-- das Bild für den Bildschirm, das von einem Bild angezeigt wird, und
-- das Attribut pro primitiver
+- die vom Pipelinezustand angegebene Rate (in der Befehlsliste angegeben),
+- die vom Bild angegebene Bildfrequenz im Bildschirmbereich und
+- das Pro-Primitive-Attribut
 
-hat den Standardwert **D3D12_SHADING_RATE_1X1**. Die Standard Kombinatoren lauten {Passthrough, Passthrough}.
+hat den Standardwert **D3D12_SHADING_RATE_1X1**. Die Standard-Combiner sind {PASSTHROUGH, PASSTHROUGH}.
 
-Wenn kein Bildschirmraum Bild angegeben ist, wird von dieser Quelle eine Schattierungs Rate von 1x1 abgeleitet.
+Wenn kein Bildschirmbereichsbild angegeben ist, wird von dieser Quelle eine Schattierungsrate von 1x1 abgeleitet.
 
-Wenn kein pro Primitives Attribut angegeben ist, wird von dieser Quelle eine Schattierungs Rate von 1x1 abgeleitet.
+Wenn kein primitives Attribut angegeben wird, wird von dieser Quelle eine Schattierungsrate von 1x1 abgeleitet.
 
-[ID3D12CommandList:: clearstate](/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-clearstate) setzt die vom Pipeline Status angegebene Rate auf den Standardwert zurück, und die Auswahl des Bildschirmraum Bilds ist standardmäßig auf "kein Bildschirm-Bild" festgelegt.
+[ID3D12CommandList::ClearState](/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-clearstate) setzt die vom Pipelinezustand angegebene Rate auf den Standardwert und die Auswahl des Bildschirmbereichsbilds auf den Standardwert "Kein Bildschirmbereichsbild" zurück.
 
-## <a name="querying-shading-rate-by-using-sv_shadingrate"></a>Abfragen der Schattierungs Rate mithilfe von SV_ShadingRate
-Es ist hilfreich zu wissen, welche Schattierungs Rate von der Hardware bei einem beliebigen Pixel-Shader-Aufruf gewählt wurde. Dies könnte eine Vielzahl von Optimierungen im PS-Code ermöglichen. Eine reine PS-Systemvariable, `SV_ShadingRate` , stellt Informationen zur Schattierungs Rate bereit.
+## <a name="querying-shading-rate-by-using-sv_shadingrate"></a>Abfragen der Schattierungsrate mit SV_ShadingRate
+Es ist hilfreich zu wissen, welche Schattierungsrate von der Hardware bei einem bestimmten Shaderaufruf ausgewählt wurde. Dies könnte eine Vielzahl von Optimierungen in Ihrem PS-Code ermöglichen. Eine nur ps-Systemvariable, `SV_ShadingRate` , stellt Informationen zur Schattierungsrate zur Verfügung.
 
-### <a name="type"></a>Typ
+### <a name="type"></a>type
 Der Typ dieser Semantik ist uint.
 
 ### <a name="data-interpretation"></a>Dateninterpretation
-Die Daten werden als Wert der [**D3D12_SHADING_RATE**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_shading_rate) -Enumeration interpretiert.
+Die Daten werden als Wert der D3D12_SHADING_RATE [**interpretiert.**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_shading_rate)
 
 ### <a name="if-vrs-is-not-being-used"></a>Wenn VRS nicht verwendet wird
-Wenn eine grobe Pixel Schattierung nicht verwendet wird, `SV_ShadingRate` wird als Wert von 1 x 1 zurückgelesen, was feine Pixel angibt.
+Wenn keine grobe Pixelschattierung verwendet wird, wird als Wert von 1x1 zurückgelesen, was die Anzahl der `SV_ShadingRate` Pixel angibt.
 
-### <a name="behavior-under-sample-based-execution"></a>Verhalten bei der Beispiel basierten Ausführung
-Bei einem Pixelshader tritt bei der Kompilierung ein Fehler auf, wenn er Eingaben erzeugt `SV_ShadingRate` und auch eine Beispiel basierte Ausführung verwendet &mdash; , z. b. durch Einfügen `SV_SampleIndex` oder Verwenden des Sample Interpolation-Schlüssel Worts
+### <a name="behavior-under-sample-based-execution"></a>Verhalten bei der beispielbasierten Ausführung
+Ein Pixel-Shader schlägt bei der Kompilierung fehl, wenn er eingabet, und verwendet auch beispielbasierte Ausführung, z. B. durch Eingabe von oder mithilfe des Schlüsselworts `SV_ShadingRate` &mdash; für die `SV_SampleIndex` Beispielinterpolation.
 
 > ### <a name="remarks-on-deferred-shading"></a>Hinweise zur verzögerten Schattierung
 >
-> Die Beleuchtungs Durchläufen einer verzögerten Schattierungs Anwendung müssen möglicherweise wissen, welche Schattierungs Rate für welchen Bereich des Bildschirms verwendet wurde. Dies ist so, dass die Verteilung von Beleuchtungs bestandenen mit einem gröbere-Satz gestartet werden kann. Die- `SV_ShadingRate` Variable kann verwendet werden, um dies zu erreichen, wenn Sie in den gbuffer geschrieben wird.
+> Die Beleuchtungsüberläufe einer Anwendung mit verzögerter Schattierung müssen möglicherweise wissen, welche Schattierungsrate für welchen Bereich des Bildschirms verwendet wurde. Dies ist so, dass Beleuchtungspass-Dispatchs mit einer groberen Rate gestartet werden können. Die `SV_ShadingRate` Variable kann verwendet werden, um dies zu erreichen, wenn sie in den Gbuffer geschrieben wird.
 
 ## <a name="depth-and-stencil"></a>Tiefe und Schablone
-Wenn grobe Pixel Schattierung verwendet wird, werden tiefe, Schablone und Abdeckung immer berechnet und bei der vollständigen Stichproben Auflösung ausgegeben.
+Wenn eine grobe Pixelschattierung verwendet wird, werden Tiefe, Schablone und Abdeckung immer berechnet und mit der vollständigen Stichprobenauflösung ausgegeben.
 
-## <a name="using-the-shading-rate-requested"></a>Verwenden der angeforderten Schattierungs Rate
-Bei allen Stufen wird erwartet, dass die von der Hardware bereitgestellte Schattierungs Rate, wenn eine Schattierungs Rate angefordert wird und auf der Kombination von Gerät und MSAA-Level unterstützt wird.
+## <a name="using-the-shading-rate-requested"></a>Verwenden der angeforderten Schattierungsrate
+Für alle Ebenen wird erwartet, dass die Schattierungsrate, die von der Hardware bereitgestellt wird, wenn eine Schattierungsrate angefordert und für die Kombination aus Gerät und MSAA-Ebene unterstützt wird.
 
-Eine angeforderte Schattierungs Rate bedeutet eine Schattierungs Rate, die als Ausgabe der Combiner berechnet wird (siehe den Abschnitt [Kombinieren von Schattierungs Raten Faktoren](#combining-shading-rate-factors) in diesem Thema).
+Eine angeforderte Schattierungsrate bedeutet eine Schattierungsrate, die als Ausgabe der Kombinierer berechnet wird (siehe Abschnitt Kombinieren von [Schattierungsratenfaktoren](#combining-shading-rate-factors) in diesem Thema).
 
-Eine unterstützte Schattierungs Rate beträgt 1x1, 1X2, 2x1 oder 2 x 2 bei einem Renderingvorgang, bei dem die Stichproben Anzahl kleiner oder gleich vier ist. Wenn die *additionalshadingratessupported* -Funktion ist `true` , werden 2 x 4, 4x2 und 4X4 auch die Schattierungs Raten für einige Stichproben gezählt. (Weitere Informationen finden Sie in der Tabelle im Abschnitt [mit Variablen Raten Schattierung (VRS)](#with-variable-rate-shading-vrs) in diesem Thema).
+Eine unterstützte Schattierungsrate ist 1x1, 1x2, 2x1 oder 2x2 in einem Renderingvorgang, bei dem die Stichprobenanzahl kleiner oder gleich vier ist. Wenn die *AdditionalShadingRatesSupported-Funktion* `true` ist, werden 2x4, 4x2 und 4x4 auch Schattierungsraten für einige Stichprobenanzahlen unterstützt (siehe die Tabelle im Abschnitt [With variable-rate shading (VRS)](#with-variable-rate-shading-vrs) in diesem Thema).
 
-## <a name="screen-space-derivatives"></a>Bildschirm-Speicher Ableitungen
-Berechnungen von Pixel-zu-angrenzende-Pixel-Farbverläufen sind von der groben Pixel Schattierung betroffen. Wenn z. b. 2 x 2 grobe Pixel verwendet werden, ist ein Farbverlauf doppelt so groß wie bei Verwendung von groben Pixeln. Abhängig von der gewünschten Funktionalität kann es sein, dass die Anwendung Shader so anpassen soll, dass dies kompensiert &mdash; wird oder nicht.
+## <a name="screen-space-derivatives"></a>Bildschirmraum-Ableitungen
+Berechnungen von Pixel-zu-Angrenzende-Pixel-Farbverläufen werden durch eine grobe Pixelschattierung beeinflusst. Wenn z. B. 2 x 2 undifferenzige Pixel verwendet werden, ist ein Farbverlauf doppelt so groß wie bei nicht verwendeten pixeligen Pixeln. Ihre Anwendung kann Shader je nach gewünschter Funktionalität anpassen, um dies zu kompensieren &mdash; oder nicht.
 
-Da MIPS basierend auf einer abgeleiteten Bildschirmfläche ausgewählt wird, wirkt sich die Verwendung der groben Pixel Schattierung auf die MIP-Auswahl aus. Die Verwendung der groben Pixel Schattierung bewirkt, dass weniger ausführliche MIPS ausgewählt werden, als wenn grobe Pixel nicht verwendet werden.
+Da Mips basierend auf einer Ableitung des Bildschirmraums ausgewählt werden, wirkt sich die Verwendung der groben Pixelschattierung auf die Mip-Auswahl aus. Die Verwendung von ungenauer Pixelschattierung führt dazu, dass weniger detaillierte Mips ausgewählt werden, als wenn ungenaue Pixel nicht verwendet werden.
 
-## <a name="attribute-interpolation"></a>Attribut Interpolations
-Eingaben an einen PixelShader können basierend auf Ihren Quell Vertices interpoliert werden. Da die Schattierung von Variablen Raten sich auf die Bereiche des Ziels auswirkt, die von den einzelnen Aufrufen des Pixel-Shaders geschrieben wurden, interagiert Sie mit der Attribut Interpolation. Die drei Arten von Interpolationen sind Center, Centroid und Sample.
+## <a name="attribute-interpolation"></a>Attributinterpolation
+Eingaben für einen Pixel-Shader können basierend auf ihren Quellvertices interpoliert werden. Da sich die Schattierung variabler Raten auf die Bereiche des Ziels auswirkt, die bei jedem Aufruf des Pixel-Shaders geschrieben werden, interagiert sie mit der Attributinterpolation. Die drei Arten der Interpolation sind "center", "schwerpunkt" und "sample".
 
 ### <a name="center"></a>Zentrum
-Die zentrale Interpolations Position eines groben Pixels ist das geometrische Zentrum des vollständigen Pixel Bereichs. `SV_Position` wird immer in der Mitte des groben Pixel Bereichs interpoliert.
+Die mittlere Interpolationsposition für ein grobes Pixel ist der geometrische Mittelpunkt des vollständigen pixelgenauen Bereichs. `SV_Position` wird immer in der Mitte des groben Pixelbereichs interpoliert.
 
 ### <a name="centroid"></a>Schwerpunkt
-Wenn eine grobe Pixel Schattierung mit MSAA verwendet wird, werden für jedes feine Pixel immer noch Schreibvorgänge auf die vollständige Anzahl der für die MSAA-Ebene des Ziels zugeordneten Stichproben durchlaufen. Daher berücksichtigt der Speicherort der Schwerpunkt Interpolation alle Stichproben für feine Pixel in groben Pixeln. Das heißt, der Speicherort der Schwerpunkt-Interpolation ist als erstes abgedecktes Beispiel definiert, und zwar in zunehmender Reihenfolge des Beispiel Index. Die effektive Abdeckung des Beispiels ist und wird mit dem entsprechenden Bit des Raster State Sample Mask festgestellt.
+Wenn bei MSAA eine grobe Pixelschattierung verwendet wird, werden für jedes fine-Pixel weiterhin Schreibvorgänge in die vollständige Anzahl von Stichproben durchgeführt, die für die MSAA-Ebene des Ziels zugeordnet sind. Daher werden bei der Schwerpunktinterpolationsposition alle Stichproben für fein pixel in groben Pixeln in Betracht ziehen. Die Position der Schwerpunktinterpolation wird jedoch als erste abgedeckte Stichprobe definiert, in zunehmender Reihenfolge des Beispielindexes. Die effektive Abdeckung des Beispiels ist AND-ed mit dem entsprechenden Bit des Rasterizerzustands SampleMask.
 
 > [!NOTE]
-> Wenn eine grobe Pixel Schattierung auf Ebene 1 verwendet wird, ist samplemask immer eine vollständige Maske. Wenn samplemask so konfiguriert ist, dass es keine vollständige Maske ist, ist die grobe Pixel Schattierung auf Ebene 1 deaktiviert.
+> Wenn eine grobe Pixelschattierung auf Ebene 1 verwendet wird, ist SampleMask immer eine vollständige Maske. Wenn SampleMask so konfiguriert ist, dass es sich nicht um eine vollständige Maske handelt, wird die Schattierung mit groben Pixeln auf Ebene 1 deaktiviert.
 
-### <a name="sample-based-execution"></a>Beispiel basierte Ausführung
-Eine Beispiel basierte Ausführung oder eine *Supersampling*, &mdash; die durch die Verwendung der Beispiel Interpolations Funktion verursacht wird, &mdash; kann mit grober Pixel Schattierung verwendet werden und bewirkt, dass der Pixelshader pro Stichprobe aufgerufen wird. Für Ziele der Stichproben Anzahl n wird der Pixelshader n-Mal pro feiner Pixel aufgerufen.
+### <a name="sample-based-execution"></a>Beispielbasierte Ausführung
+Beispielbasierte Ausführung oder *Supersampling,* die durch die Verwendung der Beispielinterpolationsfunktion verursacht wird, kann mit grober Pixelschattierung verwendet werden und bewirkt, dass der Pixel-Shader pro Stichprobe aufgerufen &mdash; &mdash; wird. Für Ziele der Stichprobenanzahl N wird der Pixel-Shader N-mal pro Feinpixel aufgerufen.
 
-### <a name="evaluateattributesnapped"></a>Evaluateattributesnapped
-Systeminterne Pull-Modell-Funktionen sind nicht mit groben Pixel Schattierung auf Ebene 1 kompatibel. Wenn versucht wird, systeminterne pullmodellfunktionen mit grober Pixel Schattierung auf Ebene 1 zu verwenden, wird die grobe Pixel Schattierung automatisch deaktiviert.
+### <a name="evaluateattributesnapped"></a>EvaluateAttributeSnapped
+Systeminterne Pullmodell-Eigenschaften sind nicht mit der groben Pixelschattierung auf Ebene 1 kompatibel. Wenn versucht wird, intrinsische Pullmodell-Modelle mit grober Pixelschattierung auf Ebene 1 zu verwenden, wird die schattierte Pixelschattierung automatisch deaktiviert.
 
-Die systeminterne Funktion `EvaluateAttributeSnapped` darf mit grober Pixel Schattierung auf Ebene 2 verwendet werden. Die Syntax ist identisch mit der Syntax.
+Das `EvaluateAttributeSnapped` systeminterne -System kann mit grober Pixelschattierung auf Ebene 2 verwendet werden. Die Syntax ist identisch mit der, die sie schon immer verwendet hat.
 
 ```hlsl
 numeric EvaluateAttributeSnapped(   
@@ -281,222 +281,222 @@ numeric EvaluateAttributeSnapped(
     in int2 offset);
 ```
 
-Für den Kontext `EvaluateAttributeSnapped` verfügt über einen Offset-Parameter mit zwei Feldern. Bei Verwendung ohne grobe Pixel Schattierung werden nur die nieder wertigen vier Bits aus dem vollständigen 32 verwendet. Diese vier Bits stellen den Bereich [-8, 7] dar. Dieser Bereich umfasst ein 16x16-Raster innerhalb eines Pixels. Der Bereich gibt an, dass der obere und linke Rand des Pixels eingeschlossen werden, der untere und der Rechte Rand jedoch nicht. Offset (-8,-8) befindet sich in der linken oberen Ecke, und Offset (7, 7) befindet sich in der rechten unteren Ecke. Offset (0,0) ist die Mitte des Pixels.
+Für den Kontext `EvaluateAttributeSnapped` verfügt über einen Offsetparameter mit zwei Feldern. Bei Verwendung ohne grobe Pixelschattierung werden nur die unteren vier Bits aus den vollständigen 32 verwendet. Diese vier Bits stellen den Bereich [-8, 7] dar. Dieser Bereich umfasst ein 16x16-Raster innerhalb eines Pixels. Der Bereich ist so, dass der obere und linke Rand des Pixels eingeschlossen werden und der untere und rechte Rand nicht. Offset (-8, -8) befindet sich in der oberen linken Ecke, offset (7, 7) durch die untere rechte Ecke. Offset (0, 0) ist die Mitte des Pixels.
 
-Bei Verwendung mit grober Pixel Schattierung `EvaluateAttributeSnapped` kann mit dem Offset-Parameter eine größere Anzahl von Positionen angegeben werden. Der Offset-Parameter wählt ein 16x16-Raster für jedes feine Pixel aus, und es sind mehrere feine Pixel vorhanden. Der Ausdrucks Bare Bereich und die resultierende Anzahl von Bits, die verwendet werden, hängen von der groben Pixelgröße ab. Der obere und linke Rand des groben Pixels sind eingeschlossen, der untere und der Rechte Rand hingegen nicht.
+Bei Verwendung mit einer groben Pixelschattierung `EvaluateAttributeSnapped` kann der offset-Parameter von einen größeren Bereich von Positionen angeben. Der offset-Parameter wählt ein 16x16-Raster für jedes einzelne Pixel aus, und es gibt mehrere feinen Pixel. Der ausdrucksfähige Bereich und die daraus resultierende Anzahl der verwendeten Bits hängen von der groben Pixelgröße ab. Der obere und der linke Rand des groben Pixels sind enthalten, der untere und der rechte Rand nicht.
 
-In der folgenden Tabelle wird die Interpretation des `EvaluateAttributeSnapped` offset-Parameters für jede grobe Pixelgröße beschrieben.
+In der folgenden Tabelle wird die Interpretation des `EvaluateAttributeSnapped` Offsetparameters von für jede grobe Pixelgröße beschrieben.
 
-#### <a name="evaluateattributesnappeds-offset-range"></a>Offset Bereich von evaluateattributesnapped
+#### <a name="evaluateattributesnappeds-offset-range"></a>EvaluateAttributeSnappeds Offsetbereich
 
-|Grobe Pixelgröße  |Indexbare Bereiche             |Darstellbare Bereichs Größe  |Erforderliche Anzahl von Bits {x, y}  |Binäre Maske verwendbarer Bits          |    
+|Grobe Pixelgröße  |Indizierbarer Bereich             |Darstellbare Bereichsgröße  |Anzahl der benötigten Bits {x, y}  |Binäre Maske verwendbarer Bits          |    
 |------------------:|---------------------------:|-------------------------:|-----------------------------:|-----------------------------------:|    
-|1x1 (fein)         |{ \[ -8, 7 \] , \[ -8, 7 \] }      |{16, 16}                  |{4, 4}                        |{000000000000xxxx, 000000000000xxxx}|    
-|1X2                |{ \[ -8, 7 \] , \[ -16, 15 \] }    |{16, 32}                  |{4, 5}                        |{000000000000xxxx, 00000000000xxxxx}|    
-|2x1                |{ \[ -16, 15 \] , \[ -8, 7 \] }    |{32, 16}                  |{5, 4}                        |{00000000000xxxxx, 000000000000xxxx}|    
-|2 x 2                |{ \[ -16, 15 \] , \[ -16, 15 \] }  |{32, 32}                  |{5, 5}                        |{00000000000xxxxx, 00000000000xxxxx}|    
-|2 x 4                |{ \[ -16, 15 \] , \[ -32, 31 \] }  |{32, 64}                  |{5, 6}                        |{00000000000xxxxx, 0000000000xxxxxx}|    
-|4x2                |{ \[ -32, 31 \] , \[ -16, 15 \] }  |{64, 32}                  |{6, 5}                        |{0000000000xxxxxx, 00000000000xxxxx}|    
-|4x4                |{ \[ -32, 31 \] , \[ -32, 31 \] }  |{64, 64}                  |{6, 6}                        |{0000000000xxxxxx, 0000000000xxxxxx}|   
+|1x1 (fine)         |{ \[ -8, 7 \] , \[ -8, 7 \] }      |{16, 16}                  |{4, 4}                        |{0000000000000xxxx, 0000000000000xxxx}|    
+|1x2                |{ \[ -8, 7 \] , \[ -16, 15 \] }    |{16, 32}                  |{4, 5}                        |{0000000000000xxxx, 00000000000xxxxx}|    
+|2x1                |{ \[ -16, 15 \] , \[ -8, 7 \] }    |{32, 16}                  |{5, 4}                        |{000000000000xxxxx, 0000000000000xxxx}|    
+|2 x 2                |{ \[ -16, 15 \] , \[ -16, 15 \] }  |{32, 32}                  |{5, 5}                        |{000000000000xxxxx, 00000000000xxxxx}|    
+|2x4                |{ \[ -16, 15 \] , \[ -32, 31 \] }  |{32, 64}                  |{5, 6}                        |{000000000000xxxxx, 0000000000xxxxxx}|    
+|4 x 2                |{ \[ -32, 31 \] , \[ -16, 15 \] }  |{64, 32}                  |{6, 5}                        |{0000000000xxxxxxxx, 000000000000xxxxx}|    
+|4x4                |{ \[ -32, 31 \] , \[ -32, 31 \] }  |{64, 64}                  |{6, 6}                        |{0000000000xxxxxxxx, 00000000000xxxxxxxx}|   
 
-In den folgenden Tabellen finden Sie eine Anleitung für die Konvertierung von in die Dezimal-und dezimal Darstellung. Das erste nutzbare Bit in der Binär Maske ist das Signier Bit, und der Rest der Binär Maske besteht aus dem numerischen Teil.
+Die folgenden Tabellen sind eine Anleitung für die Konvertierung von der Darstellung mit festem Punkt in Dezimal- und Bruchzahlen. Das erste verwendbare Bit in der Binärmaske ist das Vorzeichenbit, und der Rest der binären Maske besteht aus dem numerischen Teil.
 
-Das Zahlen Schema für vier-Bit-Werte, die an an übermittelt werden, `EvaluateAttributeSnapped` ist nicht spezifisch für die Schattierung von Variablenraten. Dies wird aus Gründen der Vollständigkeit hier wiederholt.
+Das Zahlenschema für vier-Bit-Werte, die an übergeben `EvaluateAttributeSnapped` werden, ist nicht spezifisch für die Schattierung variabler Raten. Sie wird hier aus Gründen der Vollständigkeit wiederholt.
 
-Für vier-Bit-Werte.
-
-| Binärwert | Decimal  | Bruchteil |
-|-------------:|---------:|-----------:|
-|         1000 |-0,5 f     |-8/16     |
-|         1001 |-0.4375 f  |-7/16|    |
-|         1010 |-0,375 f   |-6/16|    |
-|         1011 |-0.3125 f  |-5/16     |
-|         1100 |0,25 f    |-4/16     |
-|         1101 |-0.1875 f  |-3/16     |
-|         1110 |-0,125 f   |-2/16     |
-|         1111 |-0.0625 f  |-1/16      |
-|         0000 |0,0 f      |0 / 16      |
-|         0001 |-0.0625 f  |1 / 16      |
-|         0010 |-0,125 f   |2 / 16      |
-|         0011 |-0.1875 f  |3 / 16      |
-|         0100 |0,25 f    |4 / 16      |
-|         0101 |-0.3125 f  |5 / 16      |
-|         0110 |-0,375 f   |6 / 16      |
-|         0111 |-0.4375 f  |7 / 16      |
-
-Für fünf-Bit-Werte.
+Für Vier-Bit-Werte.
 
 | Binärwert | Decimal  | Bruchteil |
 |-------------:|---------:|-----------:|
-|        10000 |-1        |-16/16    |
-|        10001 |-0,9375   |-15/16    |
-|        10010 |-0,875    |-14/16    |
-|        10011 |-0,8125   |-13/16    |
-|        10100 |-0.75     |-12/16    |
-|        10101 |-0,6875   |-11/16    |
-|        10110 |-0,625    |-10/16    |
-|        10111 |-0,5625   |-9/16     |
-|        11000 |–0,5      |-8/16     |
-|        11001 |-0,4375   |-7/16     |
-|        11010 |-0,375    |-6/16     |
-|        11011 |-0,3125   |-5/16     |
-|        11100 |-0.25     |-4/16     |
-|        11101 |-0,1875   |-3/16     |
-|        11110 |-0,125    |-2/16     |
-|        11111 |-0,0625   |-1/16     |
+|         1000 |-0,5f     |-8 / 16     |
+|         1001 |-0.4375f  |-7 / 16|    |
+|         1010 |-0,375f   |-6 / 16|    |
+|         1011 |-0.3125f  |-5 / 16     |
+|         1100 |-0,25f    |-4 / 16     |
+|         1101 |-0,1875f  |-3 / 16     |
+|         1110 |-0,125f   |-2 / 16     |
+|         1111 |-0,0625f  |-1 /16      |
+|         0000 |0,0f      |0 / 16      |
+|         0001 |-0,0625f  |1 / 16      |
+|         0010 |-0,125f   |2 / 16      |
+|         0011 |-0,1875f  |3 / 16      |
+|         0100 |-0,25f    |4 / 16      |
+|         0101 |-0.3125f  |5 / 16      |
+|         0110 |-0,375f   |6 / 16      |
+|         0111 |-0.4375f  |7 / 16      |
+
+Für Fünf-Bit-Werte.
+
+| Binärwert | Decimal  | Bruchteil |
+|-------------:|---------:|-----------:|
+|        10000 |-1        |-16 / 16    |
+|        10001 |-0.9375   |-15 / 16    |
+|        10010 |-0.875    |-14 / 16    |
+|        10011 |-0.8125   |-13 / 16    |
+|        10100 |-0.75     |-12 / 16    |
+|        10101 |-0.6875   |-11 / 16    |
+|        10110 |-0.625    |-10 / 16    |
+|        10111 |-0.5625   |-9 / 16     |
+|        11000 |–0,5      |-8 / 16     |
+|        11001 |-0.4375   |-7 / 16     |
+|        11010 |-0.375    |-6 / 16     |
+|        11011 |-0.3125   |-5 / 16     |
+|        11100 |-0.25     |-4 / 16     |
+|        11101 |-0.1875   |-3 / 16     |
+|        11110 |-0.125    |-2 / 16     |
+|        11111 |-0.0625   |-1 / 16     |
 |        00000 |0         |0 / 16      |
-|        00001 |0,0625    |1 / 16      |
+|        00001 |0.0625    |1 / 16      |
 |        00010 |0,125     |2 / 16      |
-|        00011 |0,1875    |3 / 16      |
+|        00011 |0.1875    |3 / 16      |
 |        00100 |0,25      |4 / 16      |
-|        00101 |0,3125    |5 / 16      |
-|        00110 |0,375     |6 / 16      |
-|        00111 |0,4375    |7 / 16      |
-|        01000 |0.5       |8 / 16      |
-|        01001 |0,5625    |9 / 16      |
-|        01010 |0,625     |10 / 16     |
-|        01011 |0,6875    |11 / 16     |
+|        00101 |0.3125    |5 / 16      |
+|        00110 |0.375     |6 / 16      |
+|        00111 |0.4375    |7 / 16      |
+|        01000 |0,5       |8 / 16      |
+|        01001 |0.5625    |9 / 16      |
+|        01010 |0.625     |10 / 16     |
+|        01011 |0.6875    |11 / 16     |
 |        01100 |0,75      |12 / 16     |
-|        01101 |0,8125    |13 / 16     |
-|        01110 |0,875     |14 / 16     |
-|        01111 |0,9375    |15 / 16     |
+|        01101 |0.8125    |13 / 16     |
+|        01110 |0.875     |14 / 16     |
+|        01111 |0.9375    |15 / 16     |
 
-Für 6-Bit-Werte.
+Für Sechs-Bit-Werte.
 
 | Binärwert | Decimal  | Bruchteil |
 |-------------:|---------:|-----------:|
-|       100.000 |-2        |-32/16    |
-|       100001 |-1,9375   |-31/16    |
-|       100010 |-1,875    |-30/16    |
-|       100011 |-1,8125   |-29/16    |
-|       100100 |-1,75     |-28/16    |
-|       100101 |-1,6875   |-27/16    |
-|       100110 |-1,625    |-26/16    |
-|       100111 |-1,5625   |-25/16    |
-|       101000 |-1,5      |-24/16    |
-|       101001 |-1,4375   |-23/16    |
-|       101010 |-1,375    |-22/16    |
-|       101011 |-1,3125   |-21/16    |
-|       101100 |-1.25     |-20/16    |
-|       101101 |-1,1875   |-19/16    |
-|       101110 |-1,125    |-18/16    |
-|       101111 |-1,0625   |-17/16    |
-|       110000 |-1        |-16/16    |
-|       110001 |-0,9375   |-15/16    |
-|       110010 |-0,875    |-14/16    |
-|       110011 |-0,8125   |-13/16    |
-|       110100 |-0.75     |-12/16    |
-|       110101 |-0,6875   |-11/16    |
-|       110110 |-0,625    |-10/16    |
-|       110111 |-0,5625   |-9/16     |
-|       111000 |–0,5      |-8/16     |
-|       111001 |-0,4375   |-7/16     |
-|       111010 |-0,375    |-6/16     |
-|       111011 |-0,3125   |-5/16     |
-|       111100 |-0.25     |-4/16     |
-|       111101 |-0,1875   |-3/16     |
-|       111110 |-0,125    |-2/16     |
-|       111111 |-0,0625   |-1/16     |
+|       100.000 |-2        |-32 / 16    |
+|       100001 |-1.9375   |-31 / 16    |
+|       100010 |-1.875    |-30 / 16    |
+|       100011 |-1.8125   |-29 / 16    |
+|       100100 |-1.75     |-28 / 16    |
+|       100101 |-1.6875   |-27 / 16    |
+|       100110 |-1.625    |-26 / 16    |
+|       100111 |-1.5625   |-25 / 16    |
+|       101000 |-1.5      |-24 / 16    |
+|       101001 |-1.4375   |-23 / 16    |
+|       101010 |-1.375    |-22 / 16    |
+|       101011 |-1.3125   |-21 / 16    |
+|       101100 |-1.25     |-20 / 16    |
+|       101101 |-1.1875   |-19 / 16    |
+|       101110 |-1.125    |-18 / 16    |
+|       101111 |-1.0625   |-17 / 16    |
+|       110000 |-1        |-16 / 16    |
+|       110001 |-0.9375   |-15 / 16    |
+|       110010 |-0.875    |-14 / 16    |
+|       110011 |-0.8125   |-13 / 16    |
+|       110100 |-0.75     |-12 / 16    |
+|       110101 |-0.6875   |-11 / 16    |
+|       110110 |-0.625    |-10 / 16    |
+|       110111 |-0.5625   |-9 / 16     |
+|       111000 |–0,5      |-8 / 16     |
+|       111001 |-0.4375   |-7 / 16     |
+|       111010 |-0.375    |-6 / 16     |
+|       111011 |-0.3125   |-5 / 16     |
+|       111100 |-0.25     |-4 / 16     |
+|       111101 |-0.1875   |-3 / 16     |
+|       111110 |-0.125    |-2 / 16     |
+|       111111 |-0.0625   |-1 / 16     |
 |       000000 |0         |0 / 16      |
-|       000001 |0,0625    |1 / 16      |
+|       000001 |0.0625    |1 / 16      |
 |       000010 |0,125     |2 / 16      |
-|       000011 |0,1875    |3 / 16      |
+|       000011 |0.1875    |3 / 16      |
 |       000100 |0,25      |4 / 16      |
-|       000101 |0,3125    |5 / 16      |
-|       000110 |0,375     |6 / 16      |
-|       000111 |0,4375    |7 / 16      |
-|       001000 |0.5       |8 / 16      |
-|       001001 |0,5625    |9 / 16      |
-|       001010 |0,625     |10 / 16     |
-|       001011 |0,6875    |11 / 16     |
+|       000101 |0.3125    |5 / 16      |
+|       000110 |0.375     |6 / 16      |
+|       000111 |0.4375    |7 / 16      |
+|       001000 |0,5       |8 / 16      |
+|       001001 |0.5625    |9 / 16      |
+|       001010 |0.625     |10 / 16     |
+|       001011 |0.6875    |11 / 16     |
 |       001100 |0,75      |12 / 16     |
-|       001101 |0,8125    |13 / 16     |
-|       001110 |0,875     |14 / 16     |
-|       001111 |0,9375    |15 / 16     |
+|       001101 |0.8125    |13 / 16     |
+|       001110 |0.875     |14 / 16     |
+|       001111 |0.9375    |15 / 16     |
 |       010000 |1         |16 / 16     |
-|       010001 |1,0625    |17 / 16     |
+|       010001 |1.0625    |17 / 16     |
 |       010010 |1,125     |18 / 16     |
-|       010011 |1,1875    |19 / 16     |
+|       010011 |1.1875    |19 / 16     |
 |       010100 |1,25      |20 / 16     |
-|       010101 |1,3125    |21 / 16     |
-|       010110 |1,375     |22 / 16     |
-|       010111 |1,4375    |23 / 16     |
+|       010101 |1.3125    |21 / 16     |
+|       010110 |1.375     |22 / 16     |
+|       010111 |1.4375    |23 / 16     |
 |       011000 |1.5       |24 / 16     |
-|       011001 |1,5625    |25 / 16     |
+|       011001 |1.5625    |25 / 16     |
 |       011010 |1,625     |26 / 16     |
-|       011011 |1,6875    |27 / 16     |
+|       011011 |1.6875    |27 / 16     |
 |       011100 |1,75      |28 / 16     |
-|       011101 |1,8125    |29 / 16     |
-|       011110 |1,875     |30 / 16     |
-|       011111 |1,9375    |31 / 16     |
+|       011101 |1.8125    |29 / 16     |
+|       011110 |1.875     |30 / 16     |
+|       011111 |1.9375    |31 / 16     |
 
-Auf die gleiche Weise wie bei fein Pixeln `EvaluateAttributeSnapped` wird das Raster der auswertbaren Speicherorte bei der Verwendung der groben Pixel Schattierung auf das grobe Pixel Zentrum zentriert.
+Auf die gleiche Weise wie bei feinen Pixeln `EvaluateAttributeSnapped` wird das Raster von auswertebaren Positionen bei Verwendung der schattierten Pixel schattierung auf den mittleren Pixelpunkt zentriert.
 
-## <a name="setsamplepositions"></a>Setsamplepositions
-Wenn die API [**ID3D12GraphicsCommandList1:: setsamplepositions**](/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist1-setsamplepositions) mit der groben Schattierung verwendet wird, legt die API die Beispiel Positionen für feine Pixel fest.
+## <a name="setsamplepositions"></a>SetSamplePositions
+Wenn die [**API-ID3D12GraphicsCommandList1::SetSamplePositions**](/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist1-setsamplepositions) mit einer groben Schattierung verwendet wird, legt die API die Beispielpositionen für hohe Pixel fest.
 
 ## <a name="sv_coverage"></a>SV_Coverage
-Wenn `SV_Coverage` als Shader-Eingabe oder-Ausgabe auf Ebene 1 deklariert ist, wird die grobe Pixel Schattierung deaktiviert.
+Wenn `SV_Coverage` als Shadereingabe oder -ausgabe auf Ebene 1 deklariert wird, ist die schattierte Pixelschattierung deaktiviert.
 
-Sie können die `SV_Coverage` Semantik mit grober Pixel Schattierung auf Ebene 2 verwenden, und Sie gibt an, welche Beispiele eines MSAA-Ziels geschrieben werden.
+Sie können die `SV_Coverage` Semantik mit einer groben Pixelschattierung auf Ebene 2 verwenden und gibt an, welche Beispiele eines MSAA-Ziels geschrieben werden.
 
-Wenn eine grobe Pixel Schattierung verwendet wird &mdash; , sodass mehrere Quell Pixel eine Kachel bilden, &mdash; stellt die Abdeckungs Maske alle Beispiele dar, die von dieser Kachel stammen.
+Wenn eine grobe Pixelschattierung verwendet wird, &mdash; sodass mehrere Quellpixel eine Kachel umfassen können, &mdash; stellt die Abdeckungsmaske alle Stichproben dar, die von dieser Kachel stammen.
 
-Wenn die Kompatibilität mit MSAA durch grobe Pixel Schattierung festgelegt wurde, kann die Anzahl der Abdeckungs Bits variieren, die angegeben werden müssen. Beispielsweise wird mit einer 4X-MSAA-Ressource, die [**D3D12_SHADING_RATE_2x2**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_shading_rate)verwendet, jedes grobe Pixel in vier feine Pixel geschrieben, und jedes feine Pixel hat vier Stichproben. Dies bedeutet, dass jedes grobe Pixel auf insgesamt 4 * 4 = 16 Stichproben schreibt.
+Angesichts der Kompatibilität der ungenauen Pixelschattierung mit MSAA kann die Anzahl der anzugebenden Abdeckungsbits variieren. Bei einer 4-fachen MSAA-Ressource, die [**D3D12_SHADING_RATE_2x2**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_shading_rate)verwendet, schreibt jedes grobe Pixel in vier feinen Pixel, und jedes einzelne Pixel verfügt über vier Stichproben. Dies bedeutet, dass jedes grobe Pixel in insgesamt 4 * 4 = 16 Stichproben schreibt.
 
-### <a name="number-of-coverage-bits-needed"></a>Anzahl der benötigten Abdeckungs Bits
-In der folgenden Tabelle wird angegeben, wie viele Abdeckungs Bits für jede Kombination von grober Pixelgröße und MSAA-Ebene benötigt werden.
+### <a name="number-of-coverage-bits-needed"></a>Anzahl erforderlicher Abdeckungsbits
+In der folgenden Tabelle wird angegeben, wie viele Abdeckungsbits für jede Kombination aus der Größe der groben Pixelgröße und der MSAA-Ebene benötigt werden.
 
-![Numofcoveragebits](images/NumberOfCoverageBits.PNG "Abdeckungs Bits")
+![In der Tabelle werden die Größe der groben Pixel, die Anzahl der feinen Pixel und die M S A A-Ebenen angezeigt.](images/NumberOfCoverageBits.PNG "Abdeckungsbits")
 
-Wie in der Tabelle angegeben, ist es nicht möglich, grobe Pixel zu verwenden, um zu einem Zeitpunkt mehr als 16 Stichproben zu schreiben, indem Sie das durch Direct3D 12 bereitgestellte Schattierungs Feature für Variablen Raten verwenden. Diese Einschränkung ist auf die Einschränkungen von Direct3D 12 in Bezug darauf zurückzuführen, welche MSAA-Ebenen mit welcher groben Pixelgröße zulässig sind (Weitere Informationen finden Sie in der Tabelle im Abschnitt [mit Variablen Raten Schattierung (VRS)](#with-variable-rate-shading-vrs) in diesem Thema).
+Wie in der Tabelle angegeben, ist es nicht möglich, mithilfe der über Direct3D 12 verfügbar gemachten Funktion zur Schattierung variabler Raten gleichzeitig in mehr als 16 Stichproben zu schreiben. Diese Einschränkung ist auf Die Einschränkungen von Direct3D 12 in Bezug darauf zurückzuführen, welche MSAA-Ebenen mit welcher groben Pixelgröße zulässig sind (siehe Tabelle im Abschnitt [With variable-rate shading (VRS)](#with-variable-rate-shading-vrs) in diesem Thema).
 
-### <a name="ordering-and-format-of-bits-in-the-coverage-mask"></a>Reihenfolge und Format von Bits in der Abdeckungs Maske
-Die Bits der Abdeckungs Maske entsprechen einer klar definierten Reihenfolge. Die Maske besteht aus den Abdeckungen (von links nach rechts und dann von oben nach unten (Spalten-Hauptreihen Folge). Abdeckungs Bits sind die nieder wertigen Bits der Abdeckungs Semantik und sind dicht gepackt.
+### <a name="ordering-and-format-of-bits-in-the-coverage-mask"></a>Reihenfolge und Format von Bits in der Abdeckungsmaske
+Die Bits der Abdeckungsmaske halten sich an eine klar definierte Reihenfolge. Die Maske besteht aus Abdeckungen von Pixeln von links nach rechts und dann aus der Reihenfolge von oben nach unten (Hauptspalten). Abdeckungsbits sind die niedrig geordneten Bits der Abdeckungssemantik und sind eng gepackt.
 
-Die folgende Tabelle zeigt das Abdeckungs Masken Format für unterstützte Kombinationen von grober Pixelgröße und MSAA-Ebene.
+Die folgende Tabelle zeigt das Abdeckungsmaskenformat für unterstützte Kombinationen von grober Pixelgröße und MSAA-Ebene.
 
-![Coverage1x](images/Coverage1x.PNG "Abdeckung bei 1 x")
+![Die Tabelle zeigt eine grobe Pixelgröße, ein grobes Pixeldiagramm und 1 x M S A A-Abdeckungsbits.](images/Coverage1x.PNG "Abdeckung bei 1x")
 
-In der folgenden Tabelle sind 2X-MSAA-Pixel aufgeführt, wobei jedes Pixel zwei Stichproben der Indizes 0 und 1 aufweist.
+In der folgenden Tabelle werden 2-fache MSAA-Pixel dargestellt, wobei jedes Pixel zwei Stichproben der Indizes 0 und 1 enthält.
 
-Die Positionierung der Bezeichnungen von Beispielen in den Pixeln dient zur Veranschaulichung und vermittelt nicht notwendigerweise die räumlichen {X, Y}-Speicherorte von Beispielen auf diesem Pixel. vor allem, wenn Beispiel Positionen Programm gesteuert geändert werden können. Auf die Beispiele wird durch ihren 0-basierten Index verwiesen.
+Die Positionierung der Bezeichnungen von Stichproben auf den Pixeln dient zur Veranschaulichung und vermittelt nicht notwendigerweise die räumlichen {X, Y}-Positionen von Stichproben auf diesem Pixel. Dies gilt insbesondere dann, wenn Beispielpositionen programmgesteuert geändert werden können. Beispiele werden durch ihren 0-basierten Index bezeichnet.
 
-![Coverage2x](images/Coverage2x.PNG "Abdeckung bei 2 x")
+![Die Tabelle zeigt eine grobe Pixelgröße, ein grobes Pixeldiagramm und 2 x M S A A-Abdeckungsbits.](images/Coverage2x.PNG "Abdeckung bei 2x")
 
-In der folgenden Tabelle werden 4X-MSAA-Pixel angezeigt, wobei jedes Pixel vier Stichproben der Indizes 0, 1, 2 und 3 enthält.
+Die folgende Tabelle zeigt viermal MSAA-Pixel, wobei jedes Pixel vier Stichproben der Indizes 0, 1, 2 und 3 enthält.
 
-![Coverage4x](images/Coverage4x.PNG "Abdeckung bei 4X")
+![Die Tabelle zeigt eine grobe Pixelgröße, ein grobes Pixeldiagramm und 4 x M S A A-Abdeckungsbits.](images/Coverage4x.PNG "Abdeckung bei 4-facher Abdeckung")
 
 ## <a name="discard"></a>Verwerfen
-Wenn die HLSL-Semantik `discard` mit grober Pixel Schattierung verwendet wird, werden grobe Pixel verworfen.
+Wenn die HLSL-Semantik `discard` mit grober Pixelschattierung verwendet wird, werden grobe Pixel verworfen.
 
-## <a name="target-independent-rasterization-tir"></a>Ziel unabhängige rasterisierung (TIR)
-TIR wird nicht unterstützt, wenn eine grobe Pixel Schattierung verwendet wird.
+## <a name="target-independent-rasterization-tir"></a>Zielunabhängige Rasterung (TARGET-Independent Rasterization, SOLL)
+DIE WIRD nicht unterstützt, wenn eine grobe Pixelschattierung verwendet wird.
 
-## <a name="raster-order-views-rovs"></a>Raster Anordnungs Sichten (ROVs)
-Die Rots-Interlocks werden als Betriebs bei feiner Pixel Granularität angegeben. Wenn eine Schattierung pro Stichprobe durchgeführt wird, werden die Interlocks bei der Stichproben Granularität betrieben.
+## <a name="raster-order-views-rovs"></a>Raster-Reihenfolgenansichten (ROVs)
+ROV-Interlocks werden als mit feiner Pixelgranularität ausgeführt angegeben. Wenn eine Schattierung pro Stichprobe durchgeführt wird, werden Interlocks mit Stichprobengranularität ausgeführt.
 
-## <a name="conservative-rasterization"></a>Konservative rasterisierung
-Sie können die konservative Rasterung mit Schattierung variabler Geschwindigkeit verwenden. Wenn die konservative rasterisierung mit grober Pixel Schattierung verwendet wird, werden feine Pixel in groben Pixeln durch eine vollständige Abdeckung im Rahmen einer vollständigen Abdeckung unregelmäßig gerachtelt.
+## <a name="conservative-rasterization"></a>Konservative Rasterung
+Sie können die konservative Rasterung mit Schattierung mit variabler Rate verwenden. Wenn die konservative Rasterung mit grober Pixelschattierung verwendet wird, werden die feinen Pixel innerhalb von groben Pixeln konservativ rastert, indem sie vollständige Abdeckung erhalten.
 
 ### <a name="coverage"></a>Abdeckung
-Wenn eine konservative rasterisierung verwendet wird, enthält die Abdeckungs Semantik vollständige Masken für feine Pixel, die abgedeckt werden, und 0 für feine Pixel, die nicht abgedeckt werden.
+Wenn die konservative Rasterung verwendet wird, enthält die Abdeckungssemantik vollständige Masken für fein abgedeckte Pixel und 0 für nicht abgedeckte Pixel.
 
 ## <a name="bundles"></a>Bundles
-Sie können Schattierungs-APIs für Variablen Raten für ein Bündel aufrufen.
+Sie können APIs für die Schattierung variabler Raten in einem Paket aufrufen.
 
-## <a name="render-passes"></a>Rendering-Durchlauf
-Sie können Schattierungs-APIs für Variablen Raten in einem [renderdurchlauf](/windows/desktop/direct3d12/direct3d-12-render-passes)aufrufen.
+## <a name="render-passes"></a>Renderdurchgänge
+Sie können SCHATT-APIs mit variabler Rate in einem [Renderdurchlauf](/windows/desktop/direct3d12/direct3d-12-render-passes)aufrufen.
 
 ## <a name="calling-the-vrs-apis"></a>Aufrufen der VRS-APIs
-Im nächsten Abschnitt wird beschrieben, wie Sie mithilfe von Direct3D 12 von Ihrer Anwendung auf Variablen Raten Schattierung zugreifen können.
+In diesem nächsten Abschnitt wird beschrieben, wie die Schattierung variabler Raten für Ihre Anwendung über Direct3D 12 zugänglich ist.
 
-### <a name="capability-querying"></a>Funktions Abfrage
+### <a name="capability-querying"></a>Funktionsabfragen
 
-Um die Schattierungs Funktion für Variablen Raten des Adapters abzufragen, müssen Sie [**ID3D12Device:: checkfeaturesupport**](/windows/desktop/api/d3d12/nf-d3d12-id3d12device-checkfeaturesupport) mit [**D3D12_FEATURE::D 3D12_FEATURE_D3D12_OPTIONS6**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_feature)aufrufen und eine [ **D3D12_FEATURE_DATA_D3D12_OPTIONS6** Struktur](/windows/desktop/api/d3d12/ns-d3d12-d3d12_feature_data_d3d12_options6) bereitstellen, die die Funktion ausfüllen kann. Die **D3D12_FEATURE_DATA_D3D12_OPTIONS6** Struktur enthält mehrere Member, einschließlich einer, die vom enumerierten Typ ist [**D3D12_VARIABLE_SHADING_RATE_TIER**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_variable_shading_rate_tier) (D3D12_FEATURE_DATA_D3D12_OPTIONS6:: variableshadingratetier), und eine, die angibt, ob die Hintergrundverarbeitung unterstützt wird (D3D12_FEATURE_DATA_D3D12_OPTIONS6:: backgroundprocessingsupported).
+Um die Funktion zur Schattierung variabler Raten des Adapters abzufragen, rufen Sie [**ID3D12Device::CheckFeatureSupport**](/windows/desktop/api/d3d12/nf-d3d12-id3d12device-checkfeaturesupport) mit [**D3D12_FEATURE::D 3D12_FEATURE_D3D12_OPTIONS6 auf,**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_feature)und stellen Sie eine [ **D3D12_FEATURE_DATA_D3D12_OPTIONS6** Struktur](/windows/desktop/api/d3d12/ns-d3d12-d3d12_feature_data_d3d12_options6) bereit, die die Funktion für Sie ausfüllen soll. Die **D3D12_FEATURE_DATA_D3D12_OPTIONS6-Struktur** enthält mehrere Member, einschließlich eines, das den aufzählten Typ [**D3D12_VARIABLE_SHADING_RATE_TIER**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_variable_shading_rate_tier) (D3D12_FEATURE_DATA_D3D12_OPTIONS6::VariableShadingRateTier) aufweist, und einen Member, der angibt, ob die Hintergrundverarbeitung unterstützt wird (D3D12_FEATURE_DATA_D3D12_OPTIONS6::BackgroundProcessingSupported).
 
-Zum Abfragen der Funktion der Ebene 1 können Sie beispielsweise dies tun.
+Um z. B. die Funktion der Ebene 1 abzufragen, können Sie dies tun.
 
 ```cpp
 D3D12_FEATURE_DATA_D3D12_OPTIONS6 options;
@@ -508,11 +508,11 @@ return
     options.ShadingRateTier == D3D12_VARIABLE_SHADING_RATE_TIER_1;
 ```
 
-### <a name="shading-rates"></a>Schattierungs Raten
+### <a name="shading-rates"></a>Schattierungsraten
 
-Die Werte in der [ **D3D12_SHADING_RATE** -Enumeration](/windows/desktop/api/d3d12/ne-d3d12-d3d12_shading_rate) sind so organisiert, dass Schattierungs Raten leicht in zwei Achsen aufgeteilt werden können, wobei die Werte jeder Achse im logarithmischen Raum entsprechend der [ **D3D12_AXIS_SHADING_RATE** -Enumeration](/windows/desktop/api/d3d12/ne-d3d12-d3d12_axis_shading_rate)entsprechend dargestellt werden.
+Die Werte in der [ **D3D12_SHADING_RATE-Enumeration**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_shading_rate) sind so organisiert, dass Schattierungsraten leicht in zwei Achsen zerlegt werden können, wobei die Werte jeder Achse gemäß der [ **D3D12_AXIS_SHADING_RATE** Enumeration](/windows/desktop/api/d3d12/ne-d3d12-d3d12_axis_shading_rate)im logarithmischen Raum kompakt dargestellt werden.
 
-Sie können ein Makro verfassen, um zwei Achsen Schattierungs Raten in eine Schattierungs Rate wie diese zu verfassen.
+Sie können ein Makro erstellen, um zwei Schattierungsraten der Achse in einer Schattierungsrate wie dieser zusammenzufassen.
 
 ```cpp
 #define D3D12_MAKE_COARSE_SHADING_RATE(x,y) ((x) << 2 | (y))
@@ -521,32 +521,32 @@ D3D12_MAKE_COARSE_SHADING_RATE(
     D3D12_AXIS_SHADING_RATE_1X)
 ```
 
-Die Plattform stellt auch diese Makros bereit, die in definiert sind `d3d12.h` .
+Die Plattform stellt auch diese Makros bereit, die in definiert `d3d12.h` sind.
 
 ```cpp
 #define D3D12_GET_COARSE_SHADING_RATE_X_AXIS(x) ((x) >> 2 )
 #define D3D12_GET_COARSE_SHADING_RATE_Y_AXIS(y) ((y) & 3 )
 ```
 
-Diese können verwendet werden, um sich zu Verschneiden und zu verstehen `SV_ShaderRate` .
+Diese können verwendet werden, um zu erkennen und zu `SV_ShaderRate` verstehen.
 
 > [!NOTE]
-> Diese Dateninterpretation ist darauf ausgerichtet, das Bildschirmraum Bild zu beschreiben, das von Shadern manipuliert werden kann. Dies wird in den obigen Abschnitten ausführlicher erläutert. Es gibt jedoch keinen Grund, eine konsistente Definition der groben Pixelgrößen zu verwenden, die überall verwendet werden sollen, einschließlich beim Festlegen der Schattierungs Rate auf Befehls Ebene.
+> Diese Dateninterpretation ist auf die Beschreibung des Bildschirmraumbilds ausgerichtet, das von Shadern bearbeitet werden kann. Dies wird in den obigen Abschnitten näher erläutert. Es gibt jedoch keinen Grund, keine konsistente Definition der coarse Pixelgrößen zu haben, die überall verwendet werden sollen, auch nicht beim Festlegen der Schattierungsrate auf Befehlsebene.
 
-### <a name="setting-command-level-shading-rate-and-combiners"></a>Festlegen von Schattierungs Rate und Kombinatoren auf Befehls Ebene
-Die Schattierungs Rate und optional Kombinatoren werden durch die [**ID3D12GraphicsCommandList5:: rssetshadingrate**](/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist5-rssetshadingrate) -Methode angegeben. Sie übergeben einen [**D3D12_SHADING_RATE**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_shading_rate) Wert für die Basis Schattierungs Rate und ein optionales Array von [D3D12_SHADING_RATE_COMBINER](/windows/desktop/api/d3d12/ne-d3d12-d3d12_shading_rate_combiner) Werten.
+### <a name="setting-command-level-shading-rate-and-combiners"></a>Festlegen von Schattierungsrate und Kombinationen auf Befehlsebene
+Die Schattierungsrate und optional die Kombinierer werden über die [**ID3D12GraphicsCommandList5::RSSetShadingRate-Methode**](/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist5-rssetshadingrate) angegeben. Sie übergeben einen [**D3D12_SHADING_RATE**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_shading_rate) für die Basisschattierungsrate und ein optionales Array von D3D12_SHADING_RATE_COMBINER [Werten.](/windows/desktop/api/d3d12/ne-d3d12-d3d12_shading_rate_combiner)
 
-### <a name="preparing-the-screen-space-image"></a>Vorbereiten des Bildschirmraum Bilds
-Der schreibgeschützte Ressourcen Status, der ein verwendbares Schattierungs Raten Image angibt, wird als [D3D12_RESOURCE_STATES definiert::D 3D12_RESOURCE_STATE_SHADING_RATE_SOURCE](/windows/desktop/api/d3d12/ne-d3d12-d3d12_resource_states).
+### <a name="preparing-the-screen-space-image"></a>Vorbereiten des Bildschirmbereichsbilds
+Der schreibgeschützte Ressourcenzustand, der ein nutzbares Schattierungsratenbild bestimmt, wird als [D3D12_RESOURCE_STATES::D 3D12_RESOURCE_STATE_SHADING_RATE_SOURCE definiert.](/windows/desktop/api/d3d12/ne-d3d12-d3d12_resource_states)
 
-### <a name="setting-the-screen-space-image"></a>Festlegen des Bildschirmraum Bilds
-Sie geben das Bildschirmraum Bild mithilfe der [**ID3D12GraphicsCommandList5:: rssetshadingrateimage**](/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist5-rssetshadingrateimage) -Methode an.
+### <a name="setting-the-screen-space-image"></a>Festlegen des Bildschirmbereichsbilds
+Sie geben das Bildschirmbereichsbild über die [**ID3D12GraphicsCommandList5::RSSetShadingRateImage-Methode**](/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist5-rssetshadingrateimage) an.
 
 ```cpp
 m_commandList->RSSetShadingRateImage(screenSpaceImage);
 ```
 
-### <a name="querying-the-tile-size"></a>Abfragen der Kachel Größe
-Sie können die Kachel Größe aus dem [**D3D12_FEATURE_DATA_D3D12_OPTIONS6:: shadingrateimagetilesize**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_feature_data_d3d12_options6) -Member Abfragen. Siehe Funktions [Abfrage](#capability-querying) oben.
+### <a name="querying-the-tile-size"></a>Abfragen der Kachelgröße
+Sie können die Kachelgröße aus dem [**D3D12_FEATURE_DATA_D3D12_OPTIONS6::ShadingRateImageTileSize-Member**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_feature_data_d3d12_options6) abfragen. Siehe [Funktionsabfragen](#capability-querying) weiter oben.
 
-Eine Dimension wird abgerufen, da die horizontale und die vertikale Dimension immer identisch sind. Wenn die Funktion des Systems [**D3D12_SHADING_RATE_TIER_NOT_SUPPORTED**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_variable_shading_rate_tier)ist, ist die zurückgegebene Kachel Größe 0.
+Eine Dimension wird abgerufen, da die horizontalen und vertikalen Dimensionen immer identisch sind. Wenn die Funktion des Systems nicht D3D12_SHADING_RATE_TIER_NOT_SUPPORTED [**ist,**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_variable_shading_rate_tier)ist die zurückgegebene Kachelgröße 0.
