@@ -1,0 +1,88 @@
+---
+description: Proxy Funktion für die GetPreview-Methode.
+ms.assetid: 8251af14-68db-4e4a-a501-115e7bbd53cd
+title: IWICBitmapDecoder_GetPreview_Proxy-Funktion
+ms.topic: reference
+ms.date: 05/31/2018
+topic_type:
+- APIRef
+- kbSyntax
+api_name:
+- IWICBitmapDecoder_GetPreview_Proxy
+api_type:
+- DllExport
+api_location:
+- Windowscodecs.dll
+- Wincodec.lib
+ms.openlocfilehash: 0fc6808d94cdc1cdcdaf65e252107b939e12eeaf
+ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "106350418"
+---
+# <a name="iwicbitmapdecoder_getpreview_proxy-function"></a>IWICBitmapDecoder \_ GetPreview- \_ Proxy Funktion
+
+Proxy Funktion für die [**GetPreview**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapdecoder-getpreview) -Methode.
+
+## <a name="syntax"></a>Syntax
+
+
+```C++
+HRESULT IWICBitmapDecoder_GetPreview_Proxy(
+  _In_  IWICBitmapDecoder *THIS_PTR,
+  _Out_ IWICBitmapSource  **ppIBitmapSource
+);
+```
+
+
+
+## <a name="parameters"></a>Parameter
+
+<dl> <dt>
+
+*Dies \_ PTR* \[ in\]
+</dt> <dd>
+
+Typ: **[**IWICBitmapDecoder**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapdecoder) \** _
+
+Zeiger auf dieses [_ *IWICBitmapDecoder* *](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapdecoder) -Objekt.
+
+</dd> <dt>
+
+*ppibitmapsource* \[ vorgenommen\]
+</dt> <dd>
+
+Typ: **[ **IWICBitmapSource**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapsource)\*\***
+
+Ein Zeiger, der einen Zeiger auf die Vorschau Bitmap erhält, sofern dies unterstützt wird.
+
+</dd> </dl>
+
+## <a name="return-value"></a>Rückgabewert
+
+Typ: **HRESULT**
+
+Wenn diese Funktion erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+
+## <a name="remarks"></a>Bemerkungen
+
+## <a name="requirements"></a>Requirements (Anforderungen)
+
+
+
+| Anforderung | Wert |
+|-------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Unterstützte Mindestversion (Client)<br/> | Windows XP mit SP2, nur Windows Vista \[ -Desktop-Apps\]<br/>                                                                                              |
+| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                                                                             |
+| DLL<br/>                      | <dl> <dt>Windowscodecs.dll; </dt> <dt>Wincodec. lib</dt> </dl> |
+
+
+
+ 
+
+ 
+
+
+
+
