@@ -1,9 +1,9 @@
 ---
-title: CDM_GETSPEC Meldung (kommdlg. h)
-description: Ruft den Dateinamen (ohne den Pfad) der aktuell ausgewählten Datei in einem Dialogfeld "Öffnen" oder "Speichern unter" im Explorer-Format ab.
+title: CDM_GETSPEC Meldung (Commdlg.h)
+description: Ruft den Dateinamen (ohne Den Pfad) der aktuell ausgewählten Datei in einem Dialogfeld im Explorer-Stil open or Save As (Öffnen oder Speichern unter) ab.
 ms.assetid: 22a67c92-bd24-4cba-bef8-291d241e6ec8
 keywords:
-- Dialog Felder CDM_GETSPEC Meldung
+- Dialogfelder für CDM_GETSPEC Meldung
 topic_type:
 - apiref
 api_name:
@@ -14,18 +14,18 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2732bf2a8c581439a40538445853531b57cfc77a
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 938536ea7cc72ebb950420ad3d5c9bd35c64db72
+ms.sourcegitcommit: 8e083a10b3a480dec8a8d74dbd5889f49dea15e4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104102779"
+ms.lasthandoff: 04/17/2021
+ms.locfileid: "107590927"
 ---
-# <a name="cdm_getspec-message"></a>CDM- \_ getSpec-Nachricht
+# <a name="cdm_getspec-message"></a>CDM \_ GETSPEC-Nachricht
 
-\[Ab Windows Vista wurden die Dialogfelder " **Öffnen** " und " **Speichern** unter" im allgemeinen [Element](/previous-versions/windows/desktop/legacy/bb776913(v=vs.85))ersetzt. Es wird empfohlen, dass Sie die allgemeine Element Dialogfeld-API anstelle dieser Dialogfelder aus der allgemeinen Dialogfeld Bibliothek verwenden.\]
+\[Ab Windows Vista wurden die Dialogfelder **Öffnen** und **Speichern unter** allgemein durch das [Dialogfeld "Allgemeines Element"](/windows/win32/shell/common-file-dialog)ersetzt. Es wird empfohlen, die DIALOGFELD-API für allgemeine Elemente anstelle dieser Dialogfelder aus der Common Dialog Box Library zu verwenden.\]
 
-Ruft den Dateinamen (ohne den Pfad) der aktuell ausgewählten Datei in einem Dialogfeld " **Öffnen** " oder "Speichern unter" im Explorer-Format **ab** . Das Dialogfeld muss mit dem **ofn- \_ Explorer** -Flag erstellt worden sein. andernfalls schlägt die Meldung fehl.
+Ruft den Dateinamen (ohne Den Pfad) der aktuell ausgewählten Datei in einem Dialogfeld im Explorer-Stil open or Save As **(Öffnen** oder **Speichern unter)** ab. Das Dialogfeld muss mit dem **\_ OFN-EXPLORER-Flag** erstellt worden sein. Andernfalls schlägt die Meldung fehl.
 
 
 ```C++
@@ -43,7 +43,7 @@ Ruft den Dateinamen (ohne den Pfad) der aktuell ausgewählten Datei in einem Dia
 *wParam* 
 </dt> <dd>
 
-Die Größe des *LPARAM* -Puffers in Zeichen.
+Die Größe des *lParam-Puffers* in Zeichen.
 
 </dd> <dt>
 
@@ -56,7 +56,7 @@ Ein Zeiger auf den Puffer, der den Dateinamen empfängt.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Nachricht erfolgreich ist, ist der Rückgabewert die Größe (in Zeichen) der Dateiname-Zeichenfolge, einschließlich des abschließenden NULL-Zeichens. Dies ist entweder die Anzahl von Bytes oder Zeichen, die in den Puffer kopiert werden, oder die erforderliche Puffergröße, wenn der Puffer zu klein ist.
+Wenn die Nachricht erfolgreich ist, entspricht der Rückgabewert der Größe der Dateinamenzeichenfolge in Zeichen, einschließlich des abschließenden NULL-Zeichens. Dies ist entweder die Anzahl von Bytes oder Zeichen, die in den Puffer kopiert werden, oder die erforderliche Puffergröße, wenn der Puffer zu klein ist.
 
 Wenn ein Fehler auftritt, ist der Rückgabewert kleiner als 0 (null).
 
@@ -76,11 +76,11 @@ int CommDlg_OpenSave_GetSpec(hwnd, lparam, wparam);
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Kommdlg. h (Include Windows. h)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Commdlg.h (windows.h einschließen)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
@@ -93,13 +93,13 @@ int CommDlg_OpenSave_GetSpec(hwnd, lparam, wparam);
 [**GetSaveFileName**](/windows/desktop/api/Commdlg/nf-commdlg-getsavefilenamea)
 </dt> <dt>
 
-[**OpenFileName**](/windows/win32/api/commdlg/ns-commdlg-openfilenamea)
+[**OPENFILENAME**](/windows/win32/api/commdlg/ns-commdlg-openfilenamea)
 </dt> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
-[Allgemeine Dialog Feld Bibliothek](common-dialog-box-library.md)
+[Allgemeine Dialogfeldbibliothek](common-dialog-box-library.md)
 </dt> </dl>
 
  
