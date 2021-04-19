@@ -1,55 +1,55 @@
 ---
-title: Text Formatierung und Layout
-description: DirectWrite stellt zwei Schnittstellen zum Formatieren von Text idschreitetextformat und idwrite tetextlayout bereit.
+title: Textformatierung und Layout
+description: DirectWrite bietet zwei Schnittstellen zum Formatieren von Text IDWriteTextFormat und IDWriteTextLayout.
 ms.assetid: a68963a6-e486-4881-8ad6-873173396fca
 keywords:
-- DirectWrite, Textformatierung
+- DirectWrite,Textformatierung
 - DirectWrite, Layout
-- DirectWrite, idschreitetextformat-Schnittstelle
-- DirectWrite, idschreitetextlayout-Schnittstelle
-- Idschreitetextformat-Schnittstelle
-- Idschreitetextlayout-Schnittstelle
+- DirectWrite,IDWriteTextFormat-Schnittstelle
+- DirectWrite,IDWriteTextLayout-Schnittstelle
+- IDWriteTextFormat-Schnittstelle
+- IDWriteTextLayout-Schnittstelle
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 30fcf884c15015af2645c32e217d3b4a6b433554
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: e9e5790742a3d3caf7f962a6b5e2b3111c626f28
+ms.sourcegitcommit: 59ec383331366f8a62c94bb88468ca03e95c43f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104209331"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107380754"
 ---
-# <a name="text-formatting-and-layout"></a>Text Formatierung und Layout
+# <a name="text-formatting-and-layout"></a>Textformatierung und Layout
 
-[DirectWrite](direct-write-portal.md) stellt zwei Schnittstellen zum Formatieren von Text bereit: [**idschreitetextformat**](/windows/win32/api/dwrite/nn-dwrite-idwritetextformat) und [**idschreitetextlayout**](/windows/win32/api/dwrite/nn-dwrite-idwritetextlayout). **Idwrite tetextformat** beschreibt nur das Format für Text und wird in Fällen verwendet, in denen eine ganze Zeichenfolge dieselbe Schriftgröße, denselben Stil, die gleiche Gewichtung usw. hat. Auf der anderen Seite kapselt **idbeschreib tetextlayout** sowohl eine Text Zeichenfolge als auch die Formatierung für angegebene Bereiche der Zeichenfolge. In diesem Dokument werden die einzelnen Schnittstellen und deren Verwendungsmöglichkeiten beschrieben. Weitere Informationen zur Erstellung und zu Methoden dieser Schnittstellen finden Sie auf den Referenzseiten [**idschreitetextformat**](/windows/win32/api/dwrite/nn-dwrite-idwritetextformat) und [**idschreitetextlayout**](/windows/win32/api/dwrite/nn-dwrite-idwritetextlayout) .
+[DirectWrite](direct-write-portal.md) stellt zwei Schnittstellen zum Formatieren von Text bereit: [**IDWriteTextFormat**](/windows/win32/api/dwrite/nn-dwrite-idwritetextformat) und [**IDWriteTextLayout**](/windows/win32/api/dwrite/nn-dwrite-idwritetextlayout). **IDWriteTextFormat** beschreibt nur das Format für Text und wird in Fällen verwendet, in denen eine gesamte Zeichenfolge denselben Schriftgrad, Stil, dieselbe Gewichtung und so weiter haben soll. Andererseits kapselt **IDWriteTextLayout** sowohl eine Textzeichenfolge als auch die Formatierung für angegebene Bereiche der Zeichenfolge. In diesem Dokument werden die einzelnen Schnittstellen und deren Verwendung beschrieben. Weitere Informationen zur Erstellung und den Methoden dieser Schnittstellen finden Sie auf den Referenzseiten [**IDWriteTextFormat**](/windows/win32/api/dwrite/nn-dwrite-idwritetextformat) und [**IDWriteTextLayout.**](/windows/win32/api/dwrite/nn-dwrite-idwritetextlayout)
 
 Dieses Dokument enthält die folgenden Teile:
 
--   [Idschreitetextformat](#modifying-an-idwritetextformat)
-    -   [Ändern eines idwrite-Textformat](#modifying-an-idwritetextformat)
--   [Idschreitetextlayout](#idwritetextlayout)
-    -   [Formatieren eines Text Bereichs](#formatting-a-range-of-text)
+-   [Idwritetextformat](#modifying-an-idwritetextformat)
+    -   [Ändern eines IDWriteTextFormat](#modifying-an-idwritetextformat)
+-   [Idwritetextlayout](#idwritetextlayout)
+    -   [Formatieren eines Textbereichs](#formatting-a-range-of-text)
     -   [Renderingoptionen](#rendering-options)
 
-## <a name="idwritetextformat"></a>Idschreitetextformat
+## <a name="idwritetextformat"></a>Idwritetextformat
 
-Ein [**idschreitetextformat**](/windows/win32/api/dwrite/nn-dwrite-idwritetextformat) -Objekt wird für Folgendes verwendet:
+Ein [**IDWriteTextFormat-Objekt**](/windows/win32/api/dwrite/nn-dwrite-idwritetextformat) wird für Dies verwendet:
 
--   Beschreiben Sie das Format für eine ganze Zeichenfolge beim Rendern. Verwenden Sie zum renderingzeichen einer Zeichenfolge mit mehreren Formaten ein [**idwrite-Textlayout**](/windows/win32/api/dwrite/nn-dwrite-idwritetextlayout) -Objekt.
--   Geben Sie beim Erstellen eines [**idwrite-Textlayout**](/windows/win32/api/dwrite/nn-dwrite-idwritetextlayout) -Objekts das Standardtext Format an.
+-   Beschreiben des Formats für eine gesamte Zeichenfolge beim Rendern. Um eine Zeichenfolge mit mehreren Formaten zu rendern, verwenden Sie ein [**IDWriteTextLayout-Objekt.**](/windows/win32/api/dwrite/nn-dwrite-idwritetextlayout)
+-   Geben Sie beim Erstellen eines [**IDWriteTextLayout-Objekts**](/windows/win32/api/dwrite/nn-dwrite-idwritetextlayout) das Standardtextformat an.
 
-Zum Erstellen eines [**idwrite-Textformat**](/windows/win32/api/dwrite/nn-dwrite-idwritetextformat) -Objekts verwenden Sie die [**idschreitefactory::**](/windows/win32/api/dwrite/nf-dwrite-idwritefactory-createtextformat) -Methode für das Erstellen von Textformaten und geben die Schriftfamilie, die Schriftart Auflistung, die Schrift Breite, den Schrift Grad (in Dips) und den Gebiets Schema Namen an.
+Um ein [**IDWriteTextFormat-Objekt**](/windows/win32/api/dwrite/nn-dwrite-idwritetextformat) zu erstellen, verwenden Sie die [**IDWriteFactory::CreateTextFormat-Methode**](/windows/win32/api/dwrite/nf-dwrite-idwritefactory-createtextformat) und geben die Schriftfamilie, die Schriftartauflistung, die Schriftbreite, den Schriftgrad (in DIPs) und den Gebietsschemanamen an.
 
-### <a name="modifying-an-idwritetextformat"></a>Ändern eines idwrite-Textformat
+### <a name="modifying-an-idwritetextformat"></a>Ändern eines IDWriteTextFormat
 
-Wenn eine [**idwrite-Textformat**](/windows/win32/api/dwrite/nn-dwrite-idwritetextformat) -Schnittstelle erstellt wurde, können einige Werte nicht geändert werden: Schriftfamilie, Auflistung, Gewichtung und Größe sowie der Gebiets Schema Name. Um diese Werte zu ändern, muss ein neues **idschreitetextformat** -Objekt erstellt werden.
+Nachdem eine [**IDWriteTextFormat-Schnittstelle**](/windows/win32/api/dwrite/nn-dwrite-idwritetextformat) erstellt wurde, können einige Werte nicht mehr geändert werden: die Schriftfamilie, die Auflistung, die Gewichtung und die Größe sowie der Gebietsschemaname. Um diese Werte zu ändern, muss ein neues **IDWriteTextFormat-Objekt** erstellt werden.
 
-Mit [**idwrite tetextlayout**](/windows/win32/api/dwrite/nn-dwrite-idwritetextlayout) können Sie die oben aufgeführten Eigenschaften ändern, ohne einen Anding neu zu erstellen. Mit [**idwrite-Textformat**](/windows/win32/api/dwrite/nn-dwrite-idwritetextformat) können Sie Formatänderungen vornehmen, die für den gesamten Text gelten, z. b. die Textausrichtung. Wenn Sie die Formatierung auf bestimmte Zeichen Bereiche anwenden möchten, sollten Sie dazu ein **idwrite-Textlayout** verwenden.
+[**MIT IDWriteTextLayout**](/windows/win32/api/dwrite/nn-dwrite-idwritetextlayout) können Sie die oben genannten Eigenschaften ändern, ohne etwas neu erstellen zu müssen. [**MIT IDWriteTextFormat**](/windows/win32/api/dwrite/nn-dwrite-idwritetextformat) können Sie Formatänderungen vornehmen, die für den gesamten Text gelten, z. B. die Textausrichtung. Wenn Sie die Formatierung auf bestimmte Zeichenbereiche anwenden möchten, sollten Sie dazu ein **IDWriteTextLayout** verwenden.
 
-[**Idwrite tetextformat**](/windows/win32/api/dwrite/nn-dwrite-idwritetextformat) stellt Methoden zum Festlegen der Textausrichtung, der Fluss Richtung, des inkrementellen Tabstopps, des Zeilen Abstands, der Absatz Ausrichtung, der Kürzung und der Wort Umbruch bereit. Diese Eigenschaften können zu einem beliebigen Zeitpunkt nach der Erstellung des **idschreitetextformat** -Objekts geändert werden.
+[**IDWriteTextFormat**](/windows/win32/api/dwrite/nn-dwrite-idwritetextformat) stellt Methoden zum Festlegen der Textausrichtung, der Flussrichtung, der inkrementellen Tabstopps, des Zeilenabstands, der Absatzausrichtung, des Kürzens und des Zeilenumbruchs bereit. Diese Eigenschaften können nach der Erstellung des **IDWriteTextFormat-Objekts** jederzeit geändert werden.
 
-## <a name="idwritetextlayout"></a>Idschreitetextlayout
+## <a name="idwritetextlayout"></a>Idwritetextlayout
 
-Die [**idwrite tetextlayout**](/windows/win32/api/dwrite/nn-dwrite-idwritetextlayout) -Schnittstelle stellt im Gegensatz zu [**idschreitetextformat**](/windows/win32/api/dwrite/nn-dwrite-idwritetextformat)sowohl einen TextBlock als auch die zugeordnete Formatierung dar. **Idschreitetextformat** stellt anfängliche Formatierungsinformationen dar. Im folgenden Beispiel wird gezeigt, wie ein **idwrite-Textlayout** -Objekt mithilfe von [**idwrite tefactory:: up Text Layout**](/windows/win32/api/dwrite/nf-dwrite-idwritefactory-createtextlayout)erstellt wird.
+Die [**IDWriteTextLayout-Schnittstelle**](/windows/win32/api/dwrite/nn-dwrite-idwritetextlayout) stellt im Gegensatz zu [**IDWriteTextFormat**](/windows/win32/api/dwrite/nn-dwrite-idwritetextformat)sowohl einen Textblock als auch die zugeordnete Formatierung dar. **IDWriteTextFormat** stellt Informationen zur anfänglichen Formatierung dar. Das folgende Beispiel zeigt, wie ein **IDWriteTextLayout-Objekt** mit [**idWriteFactory::CreateTextLayout**](/windows/win32/api/dwrite/nf-dwrite-idwritefactory-createtextlayout)erstellt wird.
 
 
 ```C++
@@ -75,13 +75,13 @@ if (SUCCEEDED(hr))
 
 
 
-Der Text in einem [**idschreitetextlayout**](/windows/win32/api/dwrite/nn-dwrite-idwritetextlayout) -Objekt kann nicht geändert werden, nachdem das Objekt erstellt wurde. Um den Text zu ändern, müssen Sie das vorhandene Objekt löschen und ein neues **idschreitetextlayout** -Objekt erstellen.
+Der Text in einem [**IDWriteTextLayout-Objekt**](/windows/win32/api/dwrite/nn-dwrite-idwritetextlayout) kann nach der Erstellung des Objekts nicht mehr geändert werden. Um den Text zu ändern, müssen Sie das vorhandene Objekt löschen und ein neues **IDWriteTextLayout-Objekt** erstellen.
 
-Sie können ein [**idwrite-Textlayout**](/windows/win32/api/dwrite/nn-dwrite-idwritetextlayout) verwenden, um bestimmte Textbereiche zu formatieren. **Idwrite tetextlayout** bietet auch Methoden zum Ändern des Schrift Stils und der Gewichtung sowie zum Hinzufügen von OpenType-Schriftart Features und Treffer Tests. Weitere Informationen und eine umfassende Liste der Methoden finden Sie auf der Referenzseite zu [**idschreitetextlayout**](/windows/win32/api/dwrite/nn-dwrite-idwritetextlayout) .
+Sie können ein [**IDWriteTextLayout verwenden,**](/windows/win32/api/dwrite/nn-dwrite-idwritetextlayout) um angegebene Textbereiche zu formatieren. **IDWriteTextLayout bietet** auch Methoden zum Ändern des Schriftschnitts und der Schriftgewichtung sowie zum Hinzufügen von OpenType-Schriftartfeatures und Treffertests. Weitere Informationen und eine vollständige Liste der Methoden finden Sie auf der [**Referenzseite zu IDWriteTextLayout.**](/windows/win32/api/dwrite/nn-dwrite-idwritetextlayout)
 
-### <a name="formatting-a-range-of-text"></a>Formatieren eines Text Bereichs
+### <a name="formatting-a-range-of-text"></a>Formatieren eines Textbereichs
 
-[**Idwrite tetextlayout**](/windows/win32/api/dwrite/nn-dwrite-idwritetextlayout) stellt mehrere Methoden zum Formatieren von Textbereichen bereit. Jede dieser Methoden übernimmt eine [**dwrite- \_ Text \_ Bereichs**](/windows/win32/api/dwrite/ns-dwrite-dwrite_text_range) Struktur als Parameter, um die Anfangs Text Position innerhalb der Zeichenfolge und die Länge des zu formatierenden Bereichs anzugeben. Im folgenden Beispiel wird gezeigt, wie die Schrift Breite eines Text Bereichs auf "Bold" festgelegt wird.
+[**IDWriteTextLayout stellt**](/windows/win32/api/dwrite/nn-dwrite-idwritetextlayout) mehrere Methoden zum Formatieren von Textbereichen zur Verfügung. Jede dieser Methoden akzeptiert eine [**DWRITE \_ TEXT \_ RANGE-Struktur**](/windows/win32/api/dwrite/ns-dwrite-dwrite_text_range) als Parameter, um die Anfangstextposition innerhalb der Zeichenfolge und die Länge des zu formatierten Bereichs anzugeben. Das folgende Beispiel zeigt, wie die Schriftgrad eines Textbereichs fett festgelegt wird.
 
 
 ```C++
@@ -99,14 +99,14 @@ if (SUCCEEDED(hr))
 
 ### <a name="rendering-options"></a>Renderingoptionen
 
-Text mit Formatierungen, die nur von einem [**idschreitetextformat**](/windows/win32/api/dwrite/nn-dwrite-idwritetextformat) -Objekt beschrieben werden, kann mit [Direct2D](../direct2d/direct2d-portal.md)gerendert werden. es gibt jedoch noch einige weitere Optionen zum Rendern eines [**idwrite-Textlayout**](/windows/win32/api/dwrite/nn-dwrite-idwritetextlayout) -Objekts.
+Text mit Formatierung, der nur von einem [**IDWriteTextFormat-Objekt**](/windows/win32/api/dwrite/nn-dwrite-idwritetextformat) beschrieben wird, kann mit [Direct2D](../direct2d/direct2d-portal.md)gerendert werden. Es gibt jedoch noch einige weitere Optionen zum Rendern eines [**IDWriteTextLayout-Objekts.**](/windows/win32/api/dwrite/nn-dwrite-idwritetextlayout)
 
-Die durch ein [**idwrite-Textlayout**](/windows/win32/api/dwrite/nn-dwrite-idwritetextlayout) -Objekt beschriebene Zeichenfolge kann mithilfe der folgenden Methoden gerendert werden.
+Die von einem [**IDWriteTextLayout-Objekt**](/windows/win32/api/dwrite/nn-dwrite-idwritetextlayout) beschriebene Zeichenfolge kann mit den unten angegebenen Methoden gerendert werden.
 
-1.  [Rendering mithilfe von Direct2D](rendering-by-using-direct2d.md).
-2.  [Renderverwendung eines benutzerdefinierten textrenderers](how-to-implement-a-custom-text-renderer.md).
-3.  [Rendering zu einer GDI-Oberfläche](render-to-a-gdi-surface.md).
+1.  [Rendern mithilfe von Direct2D](rendering-by-using-direct2d.md).
+2.  [Rendern mithilfe eines benutzerdefinierten Textrenderers.](how-to-implement-a-custom-text-renderer.md)
+3.  [Rendern sie auf einer GDI-Oberfläche.](render-to-a-gdi-surface.md)
 
- 
+ 
 
- 
+ 
