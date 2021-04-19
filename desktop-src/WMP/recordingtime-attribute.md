@@ -1,0 +1,62 @@
+---
+title: Recordingtime-Attribut
+description: Das recordingtime-Attribut ist das Datum und die Uhrzeit der ursprünglichen Aufzeichnung für Elemente, bei denen dieses Datum vom Veröffentlichungsdatum abweicht.
+ms.assetid: 39f7356b-b4b9-48cd-bd14-1336a2f4736a
+keywords:
+- Recordingtime-Attribut, Windows Media Player
+topic_type:
+- apiref
+api_name:
+- RecordingTime
+api_type:
+- NA
+ms.topic: reference
+ms.date: 05/31/2018
+ms.openlocfilehash: a11f0ee588ed05f0a7ecf14e07bf20fc62039c4b
+ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/22/2021
+ms.locfileid: "106369228"
+---
+# <a name="recordingtime-attribute"></a>Recordingtime-Attribut
+
+Das **recordingtime** -Attribut ist das Datum und die Uhrzeit der ursprünglichen Aufzeichnung für Elemente, bei denen dieses Datum vom Veröffentlichungsdatum abweicht.
+
+## <a name="applies-to"></a>Gilt für
+
+-   [Audioelemente](audio-item-attributes.md)
+-   [Foto Elemente](photo-item-attributes.md)
+-   [Video Elemente](video-item-attributes.md)
+
+## <a name="remarks"></a>Bemerkungen
+
+Dieses Attribut ist nur in der-Bibliothek gespeichert.
+
+Um zu ermitteln, ob Sie den Wert dieses Attributs ändern können, verwenden Sie die [Media. isread onlyitem](media-isreadonlyitem.md) -Methode.
+
+## <a name="requirements"></a>Anforderungen
+
+
+
+| Anforderung | Wert |
+|--------------------|--------------------------------------------------------------------------------------------------------------------------|
+| Version<br/> | Windows Media Player 9-Serie oder höher (das Foto Element wird nur in Windows Media Player 10 oder höher unterstützt)<br/> |
+
+
+
+## <a name="see-also"></a>Siehe auch
+
+<dl> <dt>
+
+[**Attribut Verweis**](attribute-reference.md)
+</dt> </dl>
+
+ 
+
+ 
+
+
+
+
+
