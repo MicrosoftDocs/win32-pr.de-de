@@ -14,12 +14,12 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e71eb1470ddef65b73523ef904274d0e490c7188
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 1e93e26933ad6b3829848e7e826d8d9685e9f141
+ms.sourcegitcommit: 556bf3a984f2fc4d18e370329c3043bf3329c93f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104982107"
+ms.lasthandoff: 04/09/2021
+ms.locfileid: "107222858"
 ---
 # <a name="xmint2-structure"></a>XMINT2-Struktur
 
@@ -37,7 +37,7 @@ typedef struct _XMINT2 {
 
 
 
-## <a name="members"></a>Member
+## <a name="members"></a>Members
 
 <dl> <dt>
 
@@ -55,6 +55,14 @@ y-Komponente des Vektors.
 
 </dd> </dl>
 
+
+
+## <a name="remarks"></a>Bemerkungen
+
+Diese Struktur wird in der ``D3DX\_DXGIFormatConvert.inl`` Kopfzeile im DirectX SDK (Juni 2010) für die Verwendung von C++ definiert. Die neueste Version dieses Headers im nuget-Paket [Microsoft. dxsdk. D3DX](https://www.nuget.org/packages/Microsoft.DXSDK.D3DX) definiert Sie nicht mehr und basiert stattdessen auf [DirectX:: XMINT2](https://docs.microsoft.com/en-us/windows/win32/api/directxmath/ns-directxmath-xmint2) in directxmath.
+
+
+
 ## <a name="requirements"></a>Requirements (Anforderungen)
 
 
@@ -65,7 +73,7 @@ y-Komponente des Vektors.
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
@@ -74,12 +82,3 @@ y-Komponente des Vektors.
 
 [Entpacken und Verpacken des DXGI- \_ Formats für In-Place Bildbearbeitung](dx-graphics-hlsl-unpacking-packing-dxgi-format.md)
 </dt> </dl>
-
- 
-
- 
-
-
-
-
-
