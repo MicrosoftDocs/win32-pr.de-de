@@ -1,0 +1,35 @@
+---
+title: Abfragen von MIDI-Ausgabegeräten
+description: Abfragen von MIDI-Ausgabegeräten
+ms.assetid: c6a33a4e-c61a-4e06-805e-5128a97f5199
+keywords:
+- Digital Instrumentation Digital Interface (MIDI), Ausgabegeräte
+- MIDI (Digital Instrumentation Digital Interface), Ausgabegeräte
+- Abspielen von MIDI-Dateien, Ausgabe von Geräten
+- MIDI-Ausgabegeräte
+- Digital Instrumentation Digital Interface (MIDI), Abfragen von Ausgabegeräten
+- MIDI (Digital Instrumentation Digital Interface), Abfragen von Ausgabegeräten
+- Abspielen von MIDI-Dateien, Abfragen von Ausgabegeräten
+- Abfragen von MIDI-Ausgabegeräten
+ms.topic: article
+ms.date: 05/31/2018
+ms.openlocfilehash: 292fbacbb4acf182d566e8c98832dfb0f993ea2b
+ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "106342126"
+---
+# <a name="querying-midi-output-devices"></a><span data-ttu-id="c752e-111">Abfragen von MIDI-Ausgabegeräten</span><span class="sxs-lookup"><span data-stu-id="c752e-111">Querying MIDI Output Devices</span></span>
+
+<span data-ttu-id="c752e-112">Vor der Wiedergabe einer MIDI-Datei sollten Sie die Funktion " [**midioutgetdevcaps**](/windows/win32/api/mmeapi/nf-mmeapi-midioutgetdevcaps) " verwenden, um die Funktionen des im System vorhandenen Ausgabegeräts von MIDI zu ermitteln.</span><span class="sxs-lookup"><span data-stu-id="c752e-112">Before playing a MIDI file, you should use the [**midiOutGetDevCaps**](/windows/win32/api/mmeapi/nf-mmeapi-midioutgetdevcaps) function to determine the capabilities of the MIDI output device that is present in the system.</span></span> <span data-ttu-id="c752e-113">Diese Funktion verwendet eine Adresse einer [**midioutcaps**](/windows/win32/api/mmeapi/ns-mmeapi-midioutcaps) -Struktur, die Informationen zu den Funktionen des jeweiligen Geräts füllt.</span><span class="sxs-lookup"><span data-stu-id="c752e-113">This function takes an address of a [**MIDIOUTCAPS**](/windows/win32/api/mmeapi/ns-mmeapi-midioutcaps) structure, which it fills with information about the capabilities of the given device.</span></span> <span data-ttu-id="c752e-114">Diese Informationen umfassen die Hersteller-und Produkt-IDs, einen Produktnamen für das Gerät und die Versionsnummer des Gerätetreibers (angegeben in den Membern **wmid**, **wpid**, **szpname** und **vdriverversion** ).</span><span class="sxs-lookup"><span data-stu-id="c752e-114">This information includes the manufacturer and product identifiers, a product name for the device, and the version number of the device driver (specified in the **wMid**, **wPid**, **szPname**, and **vDriverVersion** members, respectively).</span></span>
+
+<span data-ttu-id="c752e-115">Bei der Ausgabe von MIDI-Geräten kann es sich entweder um interne oder externe, von der Ausgabe Ports von MIDI</span><span class="sxs-lookup"><span data-stu-id="c752e-115">MIDI output devices can be either internal synthesizers or external MIDI output ports.</span></span> <span data-ttu-id="c752e-116">Der **wtechnology** -Member der **midioutcaps** -Struktur gibt die Technologie des Geräts an.</span><span class="sxs-lookup"><span data-stu-id="c752e-116">The **wTechnology** member of the **MIDIOUTCAPS** structure specifies the technology of the device.</span></span>
+
+<span data-ttu-id="c752e-117">Wenn es sich bei dem Gerät um einen internen Synthesizer handelt, sind zusätzliche Geräteinformationen in den Elementen **wvoices**, **wnotes** und **wchannelmask** verfügbar.</span><span class="sxs-lookup"><span data-stu-id="c752e-117">If the device is an internal synthesizer, additional device information is available in the **wVoices**, **wNotes**, and **wChannelMask** members.</span></span> <span data-ttu-id="c752e-118">Das **wvoices** -Element gibt die Anzahl der Stimmen an, die das Gerät unterstützt.</span><span class="sxs-lookup"><span data-stu-id="c752e-118">The **wVoices** member specifies the number of voices that the device supports.</span></span> <span data-ttu-id="c752e-119">Jede Stimme kann einen anderen Sound oder ein anderes Timbre aufweisen.</span><span class="sxs-lookup"><span data-stu-id="c752e-119">Each voice can have a different sound or timbre.</span></span> <span data-ttu-id="c752e-120">Stimmen sind in den MIDI-Kanälen organisiert.</span><span class="sxs-lookup"><span data-stu-id="c752e-120">Voices are organized into MIDI channels.</span></span> <span data-ttu-id="c752e-121">Der **wnotes** -Member gibt die *Polyphonie* des Geräts an, d. –. die maximale Anzahl von Notizen, die gleichzeitig wiedergegeben werden können.</span><span class="sxs-lookup"><span data-stu-id="c752e-121">The **wNotes** member specifies the *polyphony* of the device — that is, the maximum number of notes that can be played simultaneously.</span></span> <span data-ttu-id="c752e-122">Der **wchannelmask** -Member ist eine Bitdarstellung der MIDI-Kanäle, auf die das Gerät antwortet.</span><span class="sxs-lookup"><span data-stu-id="c752e-122">The **wChannelMask** member is a bit representation of the MIDI channels that the device responds to.</span></span> <span data-ttu-id="c752e-123">Wenn das Gerät z. b. auf die ersten acht MIDI-Kanäle antwortet, ist **wchannelmask** 0x00FF.</span><span class="sxs-lookup"><span data-stu-id="c752e-123">For example, if the device responds to the first eight MIDI channels, **wChannelMask** is 0x00FF.</span></span> <span data-ttu-id="c752e-124">Wenn das Gerät ein externer Ausgabeport ist, werden **wstimmen** und **wnotes** nicht verwendet, und **wchannelmask** wird auf 0xFFFF festgelegt.</span><span class="sxs-lookup"><span data-stu-id="c752e-124">If the device is an external output port, **wVoices** and **wNotes** are unused, and **wChannelMask** is set to 0xFFFF.</span></span>
+
+<span data-ttu-id="c752e-125">Der **dwsupport** -Member der **midioutcaps** -Struktur gibt an, ob der Gerätetreiber volumeänderungen, patchcaching und Streaming unterstützt.</span><span class="sxs-lookup"><span data-stu-id="c752e-125">The **dwSupport** member of the **MIDIOUTCAPS** structure indicates whether the device driver supports volume changes, patch caching, and streaming.</span></span> <span data-ttu-id="c752e-126">Volumeänderungen werden nur von internen Synthesizer-Geräten unterstützt.</span><span class="sxs-lookup"><span data-stu-id="c752e-126">Volume changes are supported only by internal synthesizer devices.</span></span> <span data-ttu-id="c752e-127">Externe MIDI-Ausgabeports unterstützen keine volumeänderungen.</span><span class="sxs-lookup"><span data-stu-id="c752e-127">External MIDI output ports do not support volume changes.</span></span> <span data-ttu-id="c752e-128">Weitere Informationen zum Ändern des Volumes finden Sie unter [Ändern des internen MIDI-synthesizervolumes](changing-internal-midi-synthesizer-volume.md).</span><span class="sxs-lookup"><span data-stu-id="c752e-128">For information about changing volume, see [Changing Internal MIDI Synthesizer Volume](changing-internal-midi-synthesizer-volume.md).</span></span>
+
+ 
+
+ 
