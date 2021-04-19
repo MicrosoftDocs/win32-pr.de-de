@@ -1,0 +1,77 @@
+---
+description: Eine Verschlüsselungssammlung ist ein Satz von Kryptografiealgorithmen.
+ms.assetid: 513e5e73-12f8-4b64-86e4-179518c3582d
+title: Verschlüsselungs Sammlungen in TLS/SSL (Schannel SSP)
+ms.topic: article
+ms.date: 05/31/2018
+ms.openlocfilehash: 33fa8b47aed266c49ac306adfd2aef78af269a39
+ms.sourcegitcommit: de72a1294df274b0a71dc0fdc42d757e5f6df0f3
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "106373429"
+---
+# <a name="cipher-suites-in-tlsssl-schannel-ssp"></a><span data-ttu-id="43e03-103">Verschlüsselungs Sammlungen in TLS/SSL (Schannel SSP)</span><span class="sxs-lookup"><span data-stu-id="43e03-103">Cipher Suites in TLS/SSL (Schannel SSP)</span></span>
+
+<span data-ttu-id="43e03-104">Eine Verschlüsselungssammlung ist ein Satz von Kryptografiealgorithmen.</span><span class="sxs-lookup"><span data-stu-id="43e03-104">A cipher suite is a set of cryptographic algorithms.</span></span> <span data-ttu-id="43e03-105">Die Schannel SSP-Implementierung der TLS/SSL-Protokolle verwendet Algorithmen aus einer Verschlüsselungs Sammlung zum Erstellen von Schlüsseln und Verschlüsseln von Informationen.</span><span class="sxs-lookup"><span data-stu-id="43e03-105">The schannel SSP implementation of the TLS/SSL protocols use algorithms from a cipher suite to create keys and encrypt information.</span></span> <span data-ttu-id="43e03-106">Eine Verschlüsselungssammlung gibt einen Algorithmus für jede der folgenden Aufgaben an:</span><span class="sxs-lookup"><span data-stu-id="43e03-106">A cipher suite specifies one algorithm for each of the following tasks:</span></span>
+
+-   <span data-ttu-id="43e03-107">Schlüsselaustausch</span><span class="sxs-lookup"><span data-stu-id="43e03-107">Key exchange</span></span>
+-   <span data-ttu-id="43e03-108">Massenverschlüsselung</span><span class="sxs-lookup"><span data-stu-id="43e03-108">Bulk encryption</span></span>
+-   <span data-ttu-id="43e03-109">Nachrichtenauthentifizierung</span><span class="sxs-lookup"><span data-stu-id="43e03-109">Message authentication</span></span>
+
+<span data-ttu-id="43e03-110">[*Schlüsselaustausch Algorithmen*](/windows/desktop/SecGloss/k-gly) schützen die Informationen, die zum Erstellen von freigegebenen Schlüsseln erforderlich sind</span><span class="sxs-lookup"><span data-stu-id="43e03-110">[*Key exchange algorithms*](/windows/desktop/SecGloss/k-gly) protect information required to create shared keys.</span></span> <span data-ttu-id="43e03-111">Diese Algorithmen sind asymmetrisch ([*Algorithmen mit öffentlichem Schlüssel*](/windows/desktop/SecGloss/p-gly)) und eignen sich gut für relativ kleine Datenmengen.</span><span class="sxs-lookup"><span data-stu-id="43e03-111">These algorithms are asymmetric ([*public key algorithms*](/windows/desktop/SecGloss/p-gly)) and perform well for relatively small amounts of data.</span></span>
+
+<span data-ttu-id="43e03-112">Massen Verschlüsselungsalgorithmen verschlüsseln Nachrichten, die zwischen Clients und Servern ausgetauscht werden.</span><span class="sxs-lookup"><span data-stu-id="43e03-112">Bulk encryption algorithms encrypt messages exchanged between clients and servers.</span></span> <span data-ttu-id="43e03-113">Diese Algorithmen sind [*symmetrisch*](/windows/desktop/SecGloss/s-gly) und gut für große Datenmengen geeignet.</span><span class="sxs-lookup"><span data-stu-id="43e03-113">These algorithms are [*symmetric*](/windows/desktop/SecGloss/s-gly) and perform well for large amounts of data.</span></span>
+
+<span data-ttu-id="43e03-114">[Nachrichten Authentifizierungs](message-authentication-codes-in-schannel.md) Algorithmen generieren [*Nachrichtenhashes*](/windows/desktop/SecGloss/h-gly) und Signaturen, die die [*Integrität*](/windows/desktop/SecGloss/i-gly) einer Nachricht gewährleisten.</span><span class="sxs-lookup"><span data-stu-id="43e03-114">[Message authentication](message-authentication-codes-in-schannel.md) algorithms generate message [*hashes*](/windows/desktop/SecGloss/h-gly) and signatures that ensure the [*integrity*](/windows/desktop/SecGloss/i-gly) of a message.</span></span>
+
+<span data-ttu-id="43e03-115">Entwickler geben diese Elemente mithilfe von [**ALG- \_ ID**](/windows/desktop/SecCrypto/alg-id) -Datentypen an.</span><span class="sxs-lookup"><span data-stu-id="43e03-115">Developers specify these elements by using [**ALG\_ID**](/windows/desktop/SecCrypto/alg-id) data types.</span></span> <span data-ttu-id="43e03-116">Weitere Informationen finden Sie unter [Angeben von SChannel-Chiffren und Verschlüsselungs stärken](specifying-schannel-ciphers-and-cipher-strengths.md).</span><span class="sxs-lookup"><span data-stu-id="43e03-116">For more information, see [Specifying Schannel Ciphers and Cipher Strengths](specifying-schannel-ciphers-and-cipher-strengths.md).</span></span>
+
+<span data-ttu-id="43e03-117">In früheren Versionen von Windows wurden TLS-Verschlüsselungs Sammlungen und elliptische Kurven mithilfe einer einzelnen Zeichenfolge konfiguriert:</span><span class="sxs-lookup"><span data-stu-id="43e03-117">In earlier versions of Windows, TLS cipher suites and elliptical curves were configured by using a single string:</span></span>
+
+![Diagramm, das eine einzelne Zeichenfolge für eine Verschlüsselungs Sammlung anzeigt.](images/tls-cipher-suite.png)
+
+<span data-ttu-id="43e03-119">Unterschiedliche Windows-Versionen unterstützen verschiedene TLS-Verschlüsselungs Sammlungen und Prioritäts Reihenfolge.</span><span class="sxs-lookup"><span data-stu-id="43e03-119">Different Windows versions support different TLS cipher suites and priority order.</span></span> <span data-ttu-id="43e03-120">Sehen Sie sich die entsprechende Windows-Version für die Standard Reihenfolge an, in der Sie vom Microsoft SChannel-Anbieter ausgewählt werden.</span><span class="sxs-lookup"><span data-stu-id="43e03-120">See the corresponding Windows version for the default order in which they are chosen by the Microsoft Schannel Provider.</span></span>
+
+<span data-ttu-id="43e03-121">**Windows Server 2022:** Informationen zu unterstützten Verschlüsselungs Sammlungen finden Sie unter TLS-Verschlüsselungs Sammlungen [in Windows Server 2022](tls-cipher-suites-in-windows-server-2022.md) .</span><span class="sxs-lookup"><span data-stu-id="43e03-121">**Windows Server 2022:** For information about supported cipher suites, see [TLS Cipher Suites in Windows Server 2022](tls-cipher-suites-in-windows-server-2022.md)</span></span>
+
+<span data-ttu-id="43e03-122">**Windows 10, Version 1903:** Informationen zu unterstützten Verschlüsselungs Sammlungen finden Sie unter [TLS Chiffre Suites in Windows 10 v1903](tls-cipher-suites-in-windows-10-v1903.md)</span><span class="sxs-lookup"><span data-stu-id="43e03-122">**Windows 10, version 1903:** For information about supported cipher suites, see [TLS Cipher Suites in Windows 10 v1903](tls-cipher-suites-in-windows-10-v1903.md)</span></span>
+
+<span data-ttu-id="43e03-123">**Windows 10, Version 1809:** Informationen zu unterstützten Verschlüsselungs Sammlungen finden Sie unter [TLS Chiffre Suites in Windows 10 v1809](tls-cipher-suites-in-windows-10-v1809.md)</span><span class="sxs-lookup"><span data-stu-id="43e03-123">**Windows 10, version 1809:** For information about supported cipher suites, see [TLS Cipher Suites in Windows 10 v1809](tls-cipher-suites-in-windows-10-v1809.md)</span></span>
+
+<span data-ttu-id="43e03-124">**Windows 10, Version 1803:** Informationen zu unterstützten Verschlüsselungs Sammlungen finden Sie unter [TLS Chiffre Suites in Windows 10 v1803](tls-cipher-suites-in-windows-10-v1803.md)</span><span class="sxs-lookup"><span data-stu-id="43e03-124">**Windows 10, version 1803:** For information about supported cipher suites, see [TLS Cipher Suites in Windows 10 v1803](tls-cipher-suites-in-windows-10-v1803.md)</span></span>
+
+<span data-ttu-id="43e03-125">**Windows 10, Version 1709:** Informationen zu unterstützten Verschlüsselungs Sammlungen finden Sie unter [TLS Chiffre Suites in Windows 10 v1709](tls-cipher-suites-in-windows-10-v1709.md)</span><span class="sxs-lookup"><span data-stu-id="43e03-125">**Windows 10, version 1709:** For information about supported cipher suites, see [TLS Cipher Suites in Windows 10 v1709](tls-cipher-suites-in-windows-10-v1709.md)</span></span>
+
+<span data-ttu-id="43e03-126">**Windows 10, Version 1703:** Informationen zu unterstützten Verschlüsselungs Sammlungen finden Sie unter [TLS Chiffre Suites in Windows 10 v1703](tls-cipher-suites-in-windows-10-v1703.md)</span><span class="sxs-lookup"><span data-stu-id="43e03-126">**Windows 10, version 1703:** For information about supported cipher suites, see [TLS Cipher Suites in Windows 10 v1703](tls-cipher-suites-in-windows-10-v1703.md)</span></span>
+
+<span data-ttu-id="43e03-127">**Windows Server 2016 und Windows 10, Version 1607:** Informationen zu unterstützten Verschlüsselungs Sammlungen finden Sie unter [TLS Chiffre Suites in Windows 10 v1607](tls-cipher-suites-in-windows-10-v1607.md)</span><span class="sxs-lookup"><span data-stu-id="43e03-127">**Windows Server 2016 and Windows 10, version 1607:** For information about supported cipher suites, see [TLS Cipher Suites in Windows 10 v1607](tls-cipher-suites-in-windows-10-v1607.md)</span></span>
+
+<span data-ttu-id="43e03-128">**Windows 10, Version 1511:** Informationen zu unterstützten Verschlüsselungs Sammlungen finden Sie unter [TLS Chiffre Suites in Windows 10 v1511](tls-cipher-suites-in-windows-10-v1511.md)</span><span class="sxs-lookup"><span data-stu-id="43e03-128">**Windows 10, version 1511:** For information about supported cipher suites, see [TLS Cipher Suites in Windows 10 v1511](tls-cipher-suites-in-windows-10-v1511.md)</span></span>
+
+<span data-ttu-id="43e03-129">**Windows 10, Version 1507:** Informationen zu unterstützten Verschlüsselungs Sammlungen finden Sie unter [TLS Chiffre Suites in Windows 10 v1507](./tls-cipher-suites-in-windows-10--version-1507.md)</span><span class="sxs-lookup"><span data-stu-id="43e03-129">**Windows 10, version 1507:** For information about supported cipher suites, see [TLS Cipher Suites in Windows 10 v1507](./tls-cipher-suites-in-windows-10--version-1507.md)</span></span>
+
+<span data-ttu-id="43e03-130">**Windows Server 2012 R2 und Windows 8.1:** Weitere Informationen zu unterstützten Verschlüsselungs Sammlungen finden Sie unter TLS-Verschlüsselungs Sammlungen [in Windows 8.1](tls-cipher-suites-in-windows-8-1.md)</span><span class="sxs-lookup"><span data-stu-id="43e03-130">**Windows Server 2012 R2 and Windows 8.1:** For information about supported cipher suites, see [TLS Cipher Suites in Windows 8.1](tls-cipher-suites-in-windows-8-1.md)</span></span>
+
+<span data-ttu-id="43e03-131">**Windows Server 2012 und Windows 8:** Informationen zu unterstützten Verschlüsselungs Sammlungen finden Sie unter TLS-Verschlüsselungs Sammlungen [in Windows 8](tls-cipher-suites-in-windows-8.md) .</span><span class="sxs-lookup"><span data-stu-id="43e03-131">**Windows Server 2012 and Windows 8:** For information about supported cipher suites, see [TLS Cipher Suites in Windows 8](tls-cipher-suites-in-windows-8.md)</span></span>
+
+<span data-ttu-id="43e03-132">**Windows Server 2008 R2 und Windows 7:** Informationen zu unterstützten Verschlüsselungs Sammlungen finden Sie unter TLS-Verschlüsselungs Sammlungen [in Windows 7](tls-cipher-suites-in-windows-7.md)</span><span class="sxs-lookup"><span data-stu-id="43e03-132">**Windows Server 2008 R2 and Windows 7:** For information about supported cipher suites, see [TLS Cipher Suites in Windows 7](tls-cipher-suites-in-windows-7.md)</span></span>
+
+<span data-ttu-id="43e03-133">**Windows Server 2008 und Windows Vista:** Informationen zu unterstützten Verschlüsselungs Sammlungen finden Sie unter TLS-Verschlüsselungs Sammlungen [in Windows Vista](schannel-cipher-suites-in-windows-vista.md) .</span><span class="sxs-lookup"><span data-stu-id="43e03-133">**Windows Server 2008 and Windows Vista:** For information about supported cipher suites, see [TLS Cipher Suites in Windows Vista](schannel-cipher-suites-in-windows-vista.md)</span></span>
+
+<span data-ttu-id="43e03-134">**Windows Server 2003 und Windows XP:** Informationen zu unterstützten Verschlüsselungs Sammlungen finden Sie in den folgenden Themen.</span><span class="sxs-lookup"><span data-stu-id="43e03-134">**Windows Server 2003 and Windows XP:** For information about supported cipher suites, see the following topics.</span></span>
+
+| <span data-ttu-id="43e03-135">Thema</span><span class="sxs-lookup"><span data-stu-id="43e03-135">Topic</span></span>                                                                         | <span data-ttu-id="43e03-136">BESCHREIBUNG</span><span class="sxs-lookup"><span data-stu-id="43e03-136">Description</span></span>                                                                                                                        |
+|-------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------|
+| [<span data-ttu-id="43e03-137">TLS-Verschlüsselungs Sammlungen</span><span class="sxs-lookup"><span data-stu-id="43e03-137">TLS Cipher Suites</span></span>](tls-cipher-suites.md)<br/>                         | <span data-ttu-id="43e03-138">Informationen zu den Verschlüsselungs Sammlungen, die mit dem TLS-Protokoll in Windows Server 2003 und Windows XP verfügbar sind.</span><span class="sxs-lookup"><span data-stu-id="43e03-138">Information about the cipher suites available with the TLS protocol in Windows Server 2003 and Windows XP.</span></span><br/>              |
+| [<span data-ttu-id="43e03-139">Secure Sockets Layer-Protokoll</span><span class="sxs-lookup"><span data-stu-id="43e03-139">Secure Sockets Layer Protocol</span></span>](secure-sockets-layer-protocol.md)<br/> | <span data-ttu-id="43e03-140">Allgemeine Informationen zu SSL 2,0 und 3,0, einschließlich der verfügbaren Verschlüsselungs Sammlungen in Windows Server 2003 und Windows XP.</span><span class="sxs-lookup"><span data-stu-id="43e03-140">General information about SSL 2.0 and 3.0, including the available cipher suites in Windows Server 2003 and Windows XP.</span></span><br/> |
+
+
+
+ 
+
+> [!Note]  
+> <span data-ttu-id="43e03-141">Vor Windows 10 wurden Chiffre Sammlungs Zeichenfolgen mit der elliptischen Kurve angehängt, um die Kurven Priorität zu bestimmen.</span><span class="sxs-lookup"><span data-stu-id="43e03-141">Prior to Windows 10, cipher suite strings were appended with the elliptic curve to determine the curve priority.</span></span> <span data-ttu-id="43e03-142">Windows 10 unterstützt eine Einstellung für die Prioritäts Reihenfolge der elliptischen Kurven, damit das elliptische Kurven Suffix nicht erforderlich ist und von der neuen Priorität der elliptischen Kurven Priorität außer Kraft gesetzt wird, um Organisationen die Verwendung von Gruppenrichtlinien zum Konfigurieren verschiedener Versionen von Windows mit denselben Verschlüsselungs Sammlungen zu ermöglichen.</span><span class="sxs-lookup"><span data-stu-id="43e03-142">Windows 10 supports an elliptic curve priority order setting so the elliptic curve suffix is not required and is overridden by the new elliptic curve priority order, when provided, to allow organizations to use group policy to configure different versions of Windows with the same cipher suites.</span></span>
+
+ 
+
