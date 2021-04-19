@@ -4,12 +4,12 @@ description: Das Szenario für die garantierte Verschlüsselung der IPSec-Richtl
 ms.assetid: 68758f0c-f134-4b7a-820a-313e2a82f280
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7120e9cb794b6010e16dd5f61accb07ca0ab9cb8
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: dbffa3d78a9e178850f3afaa4d6b7fa9831be875
+ms.sourcegitcommit: 78b64f3865e64768b5319d4f010032ee68924a98
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104390268"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107314643"
 ---
 # <a name="guaranteed-encryption"></a>Garantierte Verschlüsselung
 
@@ -35,6 +35,7 @@ Um dieses Beispielprogramm gesteuert zu implementieren, verwenden Sie die folgen
      
 
 2.  Fügen Sie für jeden der in Schritt 1 hinzugefügten Kontexte einen Filter mit den folgenden Eigenschaften hinzu.
+
     | Filter-Eigenschaft        | Wert                                            |
     |------------------------|--------------------------------------------------|
     | Filterbedingungen   | Leer. Der gesamte Datenverkehr entspricht dem Filter.        |
@@ -54,6 +55,7 @@ Um dieses Beispielprogramm gesteuert zu implementieren, verwenden Sie die folgen
      
 
 2.  Fügen Sie für jeden der in Schritt 1 hinzugefügten Kontexte einen Filter mit den folgenden Eigenschaften hinzu.
+
     | Filter-Eigenschaft        | Wert                                            |
     |------------------------|--------------------------------------------------|
     | Filterbedingungen   | Leer. Der gesamte Datenverkehr entspricht dem Filter.        |
@@ -64,6 +66,7 @@ Um dieses Beispielprogramm gesteuert zu implementieren, verwenden Sie die folgen
 **Auf der swpm- \_ Schicht \_ eingehender \_ Transport \_ V {4 \| 6} einrichten eingehender Filterregeln pro Paket**  
 
 1.  Fügen Sie einen Filter mit den folgenden Eigenschaften hinzu. 
+
     | Filter-Eigenschaft                                               | Wert                                                                                              |
     |---------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
     | Bedingung zum \_ Filtern von \_ lokalen IP- \_ \_ Adress \_ Typen für die Bedingung | [Nlatunicast](/windows/win32/api/nldef/ne-nldef-nl_address_type)                                      |
@@ -73,6 +76,7 @@ Um dieses Beispielprogramm gesteuert zu implementieren, verwenden Sie die folgen
 
         
 2.  Ausnehmen von ICMP-Datenverkehr von IPSec durch Hinzufügen eines Filters mit den folgenden Eigenschaften.
+
     | Filter-Eigenschaft                                                   | Wert                                                                      |
     |-------------------------------------------------------------------|----------------------------------------------------------------------------|
     | "F" **\_ Bedingung für die Filterbedingung für die \_ \_ lokale \_ Adress \_ Typen Bedingung** | Nlatunicast                                                                |
@@ -85,6 +89,7 @@ Um dieses Beispielprogramm gesteuert zu implementieren, verwenden Sie die folgen
 **Bei der WPM- \_ Schicht \_ ausgehende \_ Transport \_ V {4 \| 6} Einrichten von ausgehenden Regeln pro Paket Filtern**  
 
 1.  Fügen Sie einen Filter mit den folgenden Eigenschaften hinzu.
+
     | Filter-Eigenschaft                                                   | Wert                                                                                     |
     |-------------------------------------------------------------------|-------------------------------------------------------------------------------------------|
     | "F" **\_ Bedingung für die Filterbedingung für die \_ \_ lokale \_ Adress \_ Typen Bedingung** | Nlatunicast                                                                               |
@@ -94,6 +99,7 @@ Um dieses Beispielprogramm gesteuert zu implementieren, verwenden Sie die folgen
 
         
 2.  Ausnehmen von ICMP-Datenverkehr von IPSec durch Hinzufügen eines Filters mit den folgenden Eigenschaften.
+
     | Filter-Eigenschaft                                                   | Wert                                                                      |
     |-------------------------------------------------------------------|----------------------------------------------------------------------------|
     | "F" **\_ Bedingung für die Filterbedingung für die \_ \_ lokale \_ Adress \_ Typen Bedingung** | Nlatunicast                                                                |
@@ -106,6 +112,7 @@ Um dieses Beispielprogramm gesteuert zu implementieren, verwenden Sie die folgen
 **Auf dem swpm-Schicht-e/a-Abbild \_ \_ \_ \_ \_ akzeptieren \_ V {4 \| 6} eingehende Filterregeln für eingehende Verbindungen pro Verbindung**  
 
 1.  Fügen Sie einen Filter mit den folgenden Eigenschaften hinzu. Dieser Filter lässt nur eingehende Verbindungsversuche zu, wenn Sie durch IPSec gesichert werden. 
+
     | Filter-Eigenschaft                                                   | Wert                                                        |
     |-------------------------------------------------------------------|--------------------------------------------------------------|
     | "F" **\_ Bedingung für die Filterbedingung für die \_ \_ lokale \_ Adress \_ Typen Bedingung** | Nlatunicast                                                  |
@@ -114,6 +121,7 @@ Um dieses Beispielprogramm gesteuert zu implementieren, verwenden Sie die folgen
 
         
 2.  Ausnehmen von ICMP-Datenverkehr von IPSec durch Hinzufügen eines Filters mit den folgenden Eigenschaften.
+
     | Filter-Eigenschaft                                                   | Wert                                                                      |
     |-------------------------------------------------------------------|----------------------------------------------------------------------------|
     | "F" **\_ Bedingung für die Filterbedingung für die \_ \_ lokale \_ Adress \_ Typen Bedingung** | Nlatunicast                                                                |
@@ -123,6 +131,7 @@ Um dieses Beispielprogramm gesteuert zu implementieren, verwenden Sie die folgen
 
         
 3.  Fügen Sie einen Filter mit den folgenden Eigenschaften hinzu. Dieser Filter lässt nur eingehende Verbindungen mit dem TCP-Port 5555 zu, wenn Sie verschlüsselt sind.
+
     | Filter-Eigenschaft                                                   | Wert                                                                                                 |
     |-------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|
     | "F" **\_ Bedingung für die Filterbedingung für die \_ \_ lokale \_ Adress \_ Typen Bedingung** | Nlatunicast                                                                                           |
@@ -137,6 +146,7 @@ Um dieses Beispielprogramm gesteuert zu implementieren, verwenden Sie die folgen
 **Bei der Einrichtung der swpm- \_ Ebene ALE-Authentifizierung \_ \_ \_ Connect \_ V {4 \| 6} richten Sie ausgehende Filterregeln pro Verbindung ein.**
 
 -   Fügen Sie einen Filter mit den folgenden Eigenschaften hinzu. Mit diesem Filter werden nur ausgehende Verbindungen von TCP-Port 5555 zugelassen, wenn Sie verschlüsselt sind.
+
     | Filter-Eigenschaft                                                   | Wert                                                                                                 |
     |-------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|
     | "F" **\_ Bedingung für die Filterbedingung für die \_ \_ lokale \_ Adress \_ Typen Bedingung** | Nlatunicast                                                                                           |
