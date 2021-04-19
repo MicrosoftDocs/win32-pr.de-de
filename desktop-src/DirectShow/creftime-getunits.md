@@ -1,14 +1,14 @@
 ---
-description: Konstruktormethode.
-ms.assetid: c1282676-6f2b-438a-850e-17bb6d7a2c68
-title: Der Konstruktor (Ref time. h)-RT-Parameter ("").
+description: Die getunits-Methode ruft die Verweis Zeit in 100-Nanosecond-Einheiten ab.
+ms.assetid: f27dada1-67a6-424a-8bf5-979ad375736f
+title: Methode "Methode. getunits" (Ref time. h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
 - APIRef
 - kbSyntax
 api_name:
-- CRefTime.CRefTime
+- CRefTime.GetUnits
 api_type:
 - COM
 api_location:
@@ -16,42 +16,33 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: d97175a07565c12033c5e1ea8f20c157657d9501
-ms.sourcegitcommit: 4d4a6e9ad5de37e467cd3164276771b71e1f113f
+ms.openlocfilehash: 6269b9b3aceed9251282dd728e4a48de3f180731
+ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2021
-ms.locfileid: "106389190"
+ms.lasthandoff: 03/22/2021
+ms.locfileid: "106373807"
 ---
-# <a name="creftimecreftime-constructor-reftimeh"></a>"Up"-Konstruktor ("Ref time. h")
+# <a name="creftimegetunits-method"></a>Methode "-Methode" (Methode)
 
-Konstruktormethode.
+Die `GetUnits` -Methode ruft die Verweis Zeit in 100-Nanosecond-Einheiten ab.
 
 ## <a name="syntax"></a>Syntax
 
 
 ```C++
-CRefTime(
-   REFERENCE_TIME rt
-);
+LONGLONG GetUnits();
 ```
 
 
 
 ## <a name="parameters"></a>Parameter
 
-<dl> <dt>
+Diese Methode hat keine Parameter.
 
-*imposante* 
-</dt> <dd>
+## <a name="return-value"></a>Rückgabewert
 
-Zeit in 100-Nanosecond-Einheiten.
-
-</dd> </dl>
-
-## <a name="remarks"></a>Bemerkungen
-
-Die Verweis Zeit ist standardmäßig 0 (null).
+Gibt den Wert von " [**krefitime:: m \_ time**](creftime-m-time.md)" zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
