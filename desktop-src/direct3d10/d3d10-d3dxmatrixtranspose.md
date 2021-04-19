@@ -1,0 +1,92 @@
+---
+description: Gibt die Matrix zurück, die eine Matrix umgibt.
+ms.assetid: 934b17cc-39c4-425c-839b-69e080f0efd7
+title: D3DXMatrixTranspose-Funktion (D3DX10Math. h)
+ms.topic: reference
+ms.date: 05/31/2018
+topic_type:
+- APIRef
+- kbSyntax
+api_name:
+- D3DXMatrixTranspose
+api_type:
+- LibDef
+api_location:
+- D3DX10.lib
+- D3DX10.dll
+ms.openlocfilehash: 0ecc93a560e15b8f0abe4337b866efc292c9355e
+ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "106370462"
+---
+# <a name="d3dxmatrixtranspose-function-d3dx10mathh"></a>D3DXMatrixTranspose-Funktion (D3DX10Math. h)
+
+Gibt die Matrix zurück, die eine Matrix umgibt.
+
+## <a name="syntax"></a>Syntax
+
+
+```C++
+D3DXMATRIX* D3DXMatrixTranspose(
+  _Inout_       D3DXMATRIX *pOut,
+  _In_    const D3DXMATRIX *pM
+);
+```
+
+
+
+## <a name="parameters"></a>Parameter
+
+<dl> <dt>
+
+*Pout* \[ in, out\]
+</dt> <dd>
+
+Typ: **[ **D3DXMATRIX**](../direct3d9/d3dxmatrix.md)\***
+
+Ein Zeiger auf die [**D3DXMATRIX**](d3d10-d3dxmatrix.md) -Struktur, die das Ergebnis des Vorgangs ist.
+
+</dd> <dt>
+
+*pm* \[ in\]
+</dt> <dd>
+
+Typ: **Konstanten [**D3DXMATRIX**](../direct3d9/d3dxmatrix.md) \***
+
+Ein Zeiger auf die Quell-D3DXMATRIX-Struktur.
+
+</dd> </dl>
+
+## <a name="return-value"></a>Rückgabewert
+
+Typ: **[ **D3DXMATRIX**](../direct3d9/d3dxmatrix.md)\***
+
+Ein Zeiger auf die D3DXMATRIX-Struktur, die die Matrix ist, die die Matrix umgibt.
+
+## <a name="remarks"></a>Bemerkungen
+
+Der Rückgabewert für diese Funktion ist derselbe Wert, der im Pout-Parameter zurückgegeben wird. Auf diese Weise kann die D3DXMatrixTranspose-Funktion als Parameter für eine andere Funktion verwendet werden.
+
+## <a name="requirements"></a>Anforderungen
+
+
+
+| Anforderung | Wert |
+|--------------------|-----------------------------------------------------------------------------------------|
+| Header<br/>  | <dl> <dt>D3DX10Math. h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx10. lib</dt> </dl>   |
+
+
+
+## <a name="see-also"></a>Siehe auch
+
+<dl> <dt>
+
+[Mathematische Funktionen](d3d10-graphics-reference-d3dx10-functions-math.md)
+</dt> </dl>
+
+ 
+
+ 
