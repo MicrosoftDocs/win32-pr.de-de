@@ -1,0 +1,26 @@
+---
+description: Microsoft Telefonie modelliert eine Schaltfläche für Smartphones und Lampen als Schaltflächen-Lamp-Paare.
+ms.assetid: 6ac912bb-8d2b-4aa3-a6e8-af86fbaabd58
+title: Schaltflächen (telefonieapi)
+ms.topic: article
+ms.date: 05/31/2018
+ms.openlocfilehash: ddd1fc18e02331f98f4dbb98cfea7d9df2ca7f33
+ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "106355619"
+---
+# <a name="buttons-telephony-api"></a><span data-ttu-id="94793-103">Schaltflächen (telefonieapi)</span><span class="sxs-lookup"><span data-stu-id="94793-103">Buttons (Telephony API)</span></span>
+
+<span data-ttu-id="94793-104">Microsoft Telefonie modelliert die Schaltflächen und Lampen eines Telefons als Schaltflächen-Lamp-Paare.</span><span class="sxs-lookup"><span data-stu-id="94793-104">Microsoft Telephony models a phone's buttons and lamps as button-lamp pairs.</span></span> <span data-ttu-id="94793-105">Eine Schaltfläche, auf der keine Lamp daneben steht, oder eine Lamp ohne Schaltfläche wird mit einem Dummy-Indikator für die fehlende Lamp oder Schaltfläche angegeben.</span><span class="sxs-lookup"><span data-stu-id="94793-105">A button with no lamp next to it, or a lamp with no button is specified using a dummy indicator for the missing lamp or button.</span></span> <span data-ttu-id="94793-106">Eine Schaltfläche mit mehreren Lampen wird mithilfe mehrerer Schaltflächen-Lamp-Paare modelliert.</span><span class="sxs-lookup"><span data-stu-id="94793-106">A button with multiple lamps is modeled by using multiple button-lamp pairs.</span></span>
+
+<span data-ttu-id="94793-107">Die einer Telefon Schaltfläche zugeordneten Informationen können festgelegt und abgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="94793-107">Information associated with a phone button can be set and retrieved.</span></span> <span data-ttu-id="94793-108">Wenn eine Schaltfläche gedrückt wird, sendet der Dienstanbieter eine [**Telefon- \_ Schalt**](/previous-versions/windows/desktop/legacy/ms725254(v=vs.85)) Flächen Meldung an die TAPI-Rückruffunktion.</span><span class="sxs-lookup"><span data-stu-id="94793-108">When a button is pressed, the service provider sends a [**PHONE\_BUTTON**](/previous-versions/windows/desktop/legacy/ms725254(v=vs.85)) message to the TAPI callback function.</span></span> <span data-ttu-id="94793-109">Bei den Parametern dieser Nachricht handelt es sich um ein Handle für das Telefongerät und die Schaltfläche/Lamp-ID der Schaltfläche, die gedrückt wurde.</span><span class="sxs-lookup"><span data-stu-id="94793-109">Parameters of this message are a handle to the phone device and the button/lamp identifier of the button that was pressed.</span></span> <span data-ttu-id="94793-110">Der Tastatur-Schaltfläche "0" bis "9", " \* " und " \# " werden die fixierten Schaltflächen-/Lamp-IDs 0 bis 11 zugewiesen.</span><span class="sxs-lookup"><span data-stu-id="94793-110">The keypad button '0' through '9', '\*', and '\#' are assigned fixed button/lamp identifiers 0 through 11.</span></span>
+
+<span data-ttu-id="94793-111">Die Funktion [**TSPI \_ phonesetbuttoninfo**](/windows/win32/api/tspi/nf-tspi-tspi_phonesetbuttoninfo) legt die Informationen fest, die mit einer Schaltfläche auf einem Telefongerät verknüpft sind.</span><span class="sxs-lookup"><span data-stu-id="94793-111">The function [**TSPI\_phoneSetButtonInfo**](/windows/win32/api/tspi/nf-tspi-tspi_phonesetbuttoninfo) sets the information associated with a button on a phone device.</span></span> <span data-ttu-id="94793-112">[**TSPI \_ phonegetbuttoninfo**](/windows/win32/api/tspi/nf-tspi-tspi_phonegetbuttoninfo) gibt Informationen zurück, die mit einer Schaltfläche auf einem Telefongerät verknüpft sind.</span><span class="sxs-lookup"><span data-stu-id="94793-112">[**TSPI\_phoneGetButtonInfo**](/windows/win32/api/tspi/nf-tspi-tspi_phonegetbuttoninfo) returns information associated with a button on a phone device.</span></span> <span data-ttu-id="94793-113">Der Dienstanbieter sendet eine Telefon- \_ Schaltflächen Meldung an die TAPI-Rückruffunktion, wenn eine Schaltfläche auf dem Telefon gedrückt wird.</span><span class="sxs-lookup"><span data-stu-id="94793-113">The service provider sends a PHONE\_BUTTON message to the TAPI callback function when a button on the phone is pressed.</span></span>
+
+<span data-ttu-id="94793-114">Die einer Schaltfläche zugeordneten Informationen enthalten keine semantische Bedeutung, soweit dies für TSPI relevant ist.</span><span class="sxs-lookup"><span data-stu-id="94793-114">The information associated with a button does not carry any semantic meaning as far as TSPI is concerned.</span></span> <span data-ttu-id="94793-115">Dies ist nützlich für gerätespezifische Anwendungen, die diese Informationen für ein bestimmtes Telefongerät interpretieren, oder für die Anzeige für den Benutzer, z. b. im Hilfesystem einer Anwendung.</span><span class="sxs-lookup"><span data-stu-id="94793-115">It is useful for device-specific applications that interpret this information for a given phone device, or for display to the user, such as in an application's help system.</span></span>
+
+ 
+
+ 
