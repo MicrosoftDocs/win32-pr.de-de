@@ -4,22 +4,22 @@ description: Update der Datenträger Kompatibilität im erweiterten Format (4K)
 ms.assetid: 2C9EB0CF-D27B-457A-8FE6-24824BCC084C
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0321570e5ed1cc09ef213e97bf4681b8ea0caec0
-ms.sourcegitcommit: 773fa6257ead6c74154ad3cf46d21e49adc900aa
+ms.openlocfilehash: fbad505575c4479bd750f09ccd83bc4da4c39667
+ms.sourcegitcommit: 78b64f3865e64768b5319d4f010032ee68924a98
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "103858530"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107314973"
 ---
 # <a name="advanced-format-4k-disk-compatibility-update"></a>Update der Datenträger Kompatibilität im erweiterten Format (4K)
 
 ## <a name="platforms"></a>Plattformen
 
-**Clients**   Windows XP \| Windows Vista Windows \| 7 \| Windows 7 SP1 \| Windows 8  
-**Server**   Windows Server 2003 \| Windows Server 2008 \| Windows Server 2008 R2 \| Windows Server 2008 R2 SP1 \| Windows Server 2012 \| Windows Server 2012 R2 \| Windows Server 2016  
+**Clients**   Windows XP, Windows Vista, Windows 7, Windows 7 SP1, Windows 8  
+**Server**   Windows Server 2003, Windows Server 2008, Windows Server 2008 R2, Windows Server 2008 R2 SP1, Windows Server 2012, Windows Server 2012 R2, Windows Server 2016  
 
 
-## <a name="description"></a>BESCHREIBUNG
+## <a name="description"></a>Beschreibung
 
 Dieser Artikel ist eine aktualisierte Version des Artikels mit dem Titel 512-Byte Emulation (512 e) Disk Compatibility Update, das für Windows 7 SP1 und Windows Server 2008 R2 SP1 veröffentlicht wurde. Dieses Update enthält viele neue Informationen, von denen einige nur für Windows 8 und Windows Server 2012 anwendbar sind.
 
@@ -71,7 +71,7 @@ In dieser Tabelle wird die offizielle Microsoft-Support Richtlinie für verschie
 | 512-Byte Native, 512 n                         | 512 Bytes                    | 512 Bytes                     | Alle Windows-Versionen                                                                                                                                                                                                                                                                                     |
 | Erweitertes Format, 512 e, AF, 512-Byte-Emulation | 512 Bytes                    | 4 KB                          | Windows Vista w/MS KB 2553708 <br/> Windows Server 2008 \* w/MS KB 2553708 <br/> Windows 7 w/MS KB 982018 <br/> Windows Server 2008 R2 * w/MS KB 982018 <br/> Alle Windows-Versionen von Windows 7 SP1 und darüber hinaus. <br/> Alle Serverversionen von Server 2008 R2 SP1 und darüber hinaus. <br/> <br/> \*Mit Ausnahme von Hyper-V. Weitere Informationen finden Sie im Abschnitt ["Anforderungen für die Anwendungsunterstützung für große sektorlaufwerke"](https://support.microsoft.com/help/2510009/microsoft-support-policy-for-4k-sector-hard-drives-in-windows) . |
 | Vorab Format, AF, 4K Native, 4kN            | 4 KB                         | 4 KB                          | Alle Windows-Versionen von Windows 8 und darüber hinaus <br/> Alle Server Versionen von Windows Server 2012 und darüber hinaus <br/>                                                                                                                                                                                                                                                      |
-| Sonstiges                                         | Nicht 4 KB oder 512 Bytes        | Nicht 4 KB oder 512 Bytes         | Nicht unterstützt                                                                                                                                                                                                                                                                                            |
+| Andere                                         | Nicht 4 KB oder 512 Bytes        | Nicht 4 KB oder 512 Bytes         | Nicht unterstützt                                                                                                                                                                                                                                                                                            |
 
 
 

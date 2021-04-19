@@ -4,19 +4,19 @@ ms.assetid: 24617b5f-14f1-4f1b-a288-7d20a8166da0
 title: NLS-Sortier Änderungen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0805eae753c1e312d26f8c84e13d19041458cf26
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: aa4935a6874e28270e73904eb352cd6332e650b7
+ms.sourcegitcommit: 78b64f3865e64768b5319d4f010032ee68924a98
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104530146"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107314953"
 ---
 # <a name="nls-sorting-changes"></a>NLS-Sortier Änderungen
 
 ## <a name="affected-platforms"></a>Betroffene Plattformen
 
- **Clients** -Windows XP \| Windows Vista \| Windows 7  
-**Server** -Windows Server 2003 \| Windows Server 2008 \| Windows Server 2008 R2  
+ **Clients** -Windows XP, Windows Vista, Windows 7  
+**Server** -Windows Server 2003, Windows Server 2008, Windows Server 2008 R2  
 
 
 
@@ -33,7 +33,7 @@ ms.locfileid: "104530146"
 **Häufigkeit** -niedrig (wenige apps betroffen, aber wenn betroffen, immer beschädigt)  
 
 
-## <a name="description"></a>BESCHREIBUNG
+## <a name="description"></a>Beschreibung
 
 Mithilfe der NLS-Funktionen (National Language Support) unterstützen Anwendungen die verschiedenen Sprach-und Gebiets Schema spezifischen Anforderungen von Benutzern auf der ganzen Welt. Neue Windows-Versionen enthalten fast ausnahmslos nls-Änderungen. Diese Änderung wirkt sich auf Sortierung und Sortierung aus, und damit auf Anwendungen mit permanenten Indizes.
 

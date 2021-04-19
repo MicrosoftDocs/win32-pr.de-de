@@ -5,12 +5,12 @@ ms.assetid: 45281b42-5cb2-42f9-9c7c-f3e3174b0f9d
 ms.tgt_platform: multiple
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0e6d0303ee933b81f0c8553b6b0adae64db7f48d
-ms.sourcegitcommit: 3e70ae762629e244028b437420ed50b5850db4e3
+ms.openlocfilehash: 7e1099028bc85dc6492eade0315b7308b4c6aaa9
+ms.sourcegitcommit: 78b64f3865e64768b5319d4f010032ee68924a98
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "103858032"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107314613"
 ---
 # <a name="joining-heterogeneous-data"></a>Beitreten zu heterogenen Daten
 
@@ -69,7 +69,7 @@ Mit SQL Server 7,0, ADSI und der OLE DB-Anbieter ist es möglich, Daten aus Acti
 
     Im vorherigen Beispiel besteht die LDAP-Abfrage aus vier Teilen:
 
-    -   " <LDAP://DC=Fabrikam,DC=COM> " ist der Distinguished Name des Verzeichnis Servers, der durchsucht werden soll.
+    -   " \<LDAP://DC=Fabrikam,DC=COM> " ist der Distinguished Name des Verzeichnis Servers, der durchsucht werden soll.
     -   "(& (objectCategory = Person) (objectClass = User))" ist der LDAP-Suchfilter (siehe [Syntax für Suchfilter](search-filter-syntax.md)).
     -   "Name, ADsPath" sind die Namen (mit dem Format des LDAP-Anzeige namens) der abzurufenden Attribute.
     -   "subtree" gibt den Such [Bereich](scope-of-query.md) an.
@@ -81,9 +81,9 @@ Mit SQL Server 7,0, ADSI und der OLE DB-Anbieter ist es möglich, Daten aus Acti
 [Erstellen und Ausführen einer Ansicht](creating-and-executing-a-view.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

@@ -4,19 +4,19 @@ ms.assetid: 1cb0456d-501a-4272-b89d-35e79d29d13a
 title: Internet Explorer 8-Benutzer-Agent-Zeichenfolge
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7be481cf409468d9d182d37ae7636b167bc71d8e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3aea44572f32e252a4e1d4dc2209e411834c12d4
+ms.sourcegitcommit: 78b64f3865e64768b5319d4f010032ee68924a98
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103865971"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107314793"
 ---
 # <a name="internet-explorer-8---user-agent-string"></a>Internet Explorer 8-Benutzer-Agent-Zeichenfolge
 
 ## <a name="affected-platforms"></a>Betroffene Plattformen
 
- **Clients** -Windows XP \| Windows Vista \| Windows 7  
-**Server** -Windows Server 2003 \| Windows Server 2008 \| Windows Server 2008 R2  
+ **Clients** -Windows XP, Windows Vista, Windows 7  
+**Server** -Windows Server 2003, Windows Server 2008, Windows Server 2008 R2  
 
 
 
@@ -42,7 +42,7 @@ ms.locfileid: "103865971"
 
 
 
-## <a name="description"></a>BESCHREIBUNG
+## <a name="description"></a>Beschreibung
 
 Die Benutzer-Agent-Zeichenfolge ist der Internet Explorer-Bezeichner, der Daten über seine Version und andere Attribute für Webserver bereitstellt. Viele Webanwendungen verlassen sich auf die Benutzer-Agent-Zeichenfolge des IE-Benutzers und greifen darauf zurück. Solche, die dies tun und von einer früheren Versionsnummer abhängen, sind betroffen. Die Zeichenfolge des Benutzer-Agents enthält nun die Zeichenfolge "dreident/4.0", um Unterschiede zwischen der Benutzer-Agent-Zeichenfolge von Internet Explorer 7 und der Zeichenfolge des Benutzer-Agents von Internet Explorer 8 bei Ausführung in der Kompatibilitäts Ansicht von Internet Explorer 7 Weitere Informationen finden Sie Untergrund Legendes zu Benutzer-Agent
 

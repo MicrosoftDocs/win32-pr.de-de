@@ -4,19 +4,19 @@ ms.assetid: 287E25AD-A560-40DA-A4E6-C46A3123914E
 title: Verwenden von .NET Framework 4 mit Anwendungen, die auf früheren Versionen basieren
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9ef252d128ae5d3c8f5b85ef486828fb82e152d7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b30eb8f4be1c50904b8d5760f456f3fe20bdd3da
+ms.sourcegitcommit: 78b64f3865e64768b5319d4f010032ee68924a98
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106363846"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107314943"
 ---
 # <a name="using-net-framework-4-with-applications-built-on-earlier-versions"></a>Verwenden von .NET Framework 4 mit Anwendungen, die auf früheren Versionen basieren
 
 ## <a name="platform"></a>Plattform
 
- **Clients** -Windows XP \| Windows Vista \| Windows 7  
-**Server** -Windows Server 2003 \| Windows Server 2008 \| Windows Server 2008 R2  
+ **Clients** -Windows XP, Windows Vista, Windows 7  
+**Server** -Windows Server 2003, Windows Server 2008, Windows Server 2008 R2  
 
 
 ## <a name="feature-impact"></a>Auswirkungen von Features
@@ -29,7 +29,7 @@ ms.locfileid: "106363846"
 
 
 
-## <a name="description"></a>BESCHREIBUNG
+## <a name="description"></a>Beschreibung
 
 Der .NET Framework 4 ist hochgradig kompatibel mit Anwendungen, die mit früheren .NET Framework Versionen erstellt wurden. Die wichtigsten Änderungen in .NET Framework 4 sind das Verbessern der Sicherheit, der Einhaltung von Standards, der Richtigkeit, Zuverlässigkeit und Leistung.
 
