@@ -1,21 +1,21 @@
 ---
-description: 'Gibt den Download Speicherort für eine <WSDL: Import-> Direktive an, die nicht explizit einen Speicherort angibt.'
+description: Gibt den Downloadspeicherort für eine wsdl:import-Direktive an, die keinen Speicherort explizit angibt.
 ms.assetid: 81d0a30b-8f15-4518-b833-de57e0dae978
-title: importhint-Element
+title: importHint-Element
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ce8da0a7fa45ed00489d405aaba8f1f6d7ab8fdf
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a29fcd65f9af02b8077ba828081ac9ed767d64e3
+ms.sourcegitcommit: 59ec383331366f8a62c94bb88468ca03e95c43f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106347911"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107380654"
 ---
-# <a name="importhint-element"></a>importhint-Element
+# <a name="importhint-element"></a>importHint-Element
 
-Gibt den Download Speicherort für eine <WSDL: Import-> Direktive an, die nicht explizit einen Speicherort angibt.
+Gibt den Downloadspeicherort für eine \<wsdl:import> -Direktive an, die nicht explizit einen Speicherort angibt.
 
-## <a name="usage"></a>Verbrauch
+## <a name="usage"></a>Verwendung
 
 ``` syntax
 <importHint>
@@ -31,10 +31,10 @@ Es gibt keine Attribute.
 
 
 
-| Element                                   | BESCHREIBUNG                                                                                                                       |
+| Element                                   | Beschreibung                                                                                                                       |
 |-------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------|
-| [**location**](location.md)<br/>   | Der Speicherort der zu importierenden Datei. Der Speicherort kann ein relativer Pfad, ein absoluter Pfad oder eine HTTP-URL sein.<br/> <br/> |
-| [**Namespace**](namespace.md)<br/> | Der zu importierende Namespace. Dies sollte dem im <WSDL: Import>-Element angegebenen Namespace entsprechen.<br/> <br/>     |
+| [**Lage**](location.md)<br/>   | Der Speicherort der zu importierende Datei. Der Speicherort kann ein relativer Pfad, ein absoluter Pfad oder eine HTTP-URL sein.<br/> <br/> |
+| [**Namespace**](namespace.md)<br/> | Der zu importierende Namespace. Dies sollte mit dem im -Element angegebenen Namespace \<wsdl:import> übereinstimmen.<br/> <br/>     |
 
 
 
@@ -51,9 +51,9 @@ Es gibt keine Attribute.
 
 
 
-| Element                         | BESCHREIBUNG                                                                       |
+| Element                         | Beschreibung                                                                       |
 |---------------------------------|-----------------------------------------------------------------------------------|
-| [**WSDL**](wsdl.md)<br/> | Gibt eine WSDL-Datei an, die für Vertragsinformationen verarbeitet werden soll.<br/> <br/> |
+| [**Wsdl**](wsdl.md)<br/> | Gibt eine WSDL-Datei an, die für Vertragsinformationen verarbeitet werden soll.<br/> <br/> |
 
 
 

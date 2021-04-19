@@ -4,22 +4,22 @@ ms.assetid: edf719b7-9bd9-4e23-9bba-d0d7c3c5dbf5
 title: Application Verifier (Windows 7 und Windows Server 2008 R2 Anwendungsqualität Cookbook)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: dddbac00c3f16a1072a79aca096c46aaff0d2983
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 946d27ecfef46766fe82cc4df2061c7fa5196a45
+ms.sourcegitcommit: 78b64f3865e64768b5319d4f010032ee68924a98
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103868759"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107314993"
 ---
 # <a name="application-verifier-windows-7-and-windows-server-2008-r2-application-quality-cookbook"></a>Application Verifier (Windows 7 und Windows Server 2008 R2 Anwendungsqualität Cookbook)
 
 ## <a name="affected-platforms"></a>Betroffene Plattformen
 
-**Clients** -Windows XP \| Windows Vista \| Windows 7  
-**Server** -Windows Server 2003 \| Windows Server 2008 \| Windows Server 2008 R2  
+**Clients** -Windows XP, Windows Vista, Windows 7  
+**Server** -Windows Server 2003, Windows Server 2008, Windows Server 2008 R2  
 
 
-## <a name="description"></a>BESCHREIBUNG
+## <a name="description"></a>Beschreibung
 
 Bewerben und erzwingen Sie Application Verifier als Quality Gate für die gesamte Entwicklung. Es umfasst mehrere Verbesserungen:
 
@@ -31,7 +31,7 @@ Diese Änderungen sollten keine negativen Auswirkungen auf Benutzer haben, die d
 
 Obwohl bei der Verwendung dieses diendienstanwender Dienst geringfügig beeinträchtigt wird, sollten die Leistungsstufen akzeptabel bleiben, da Sie in der Regel nicht in Einzelhandelsumgebungen ausgeführt werden.
 
-## <a name="usage"></a>Verbrauch
+## <a name="usage"></a>Verwendung
 
 **Allgemeine Informationen**
 
