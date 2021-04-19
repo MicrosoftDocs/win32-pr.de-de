@@ -1,47 +1,44 @@
 ---
-title: Dialog Feld Funktionen
-description: .
+title: Dialogfeldfunktionen
+description: Dialogfeldfunktionen
 ms.assetid: 7ea6445a-1772-4986-b4b7-27512afa680d
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 789e450e0a6e42157f0036f5d1e805856fcc8b95
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: c44e63184a75a9bc3bddedc4f8c037719689fced
+ms.sourcegitcommit: 57e91b10658c36e28dd8ebe3e77d5b9bec4fbcc2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104039577"
+ms.lasthandoff: 04/15/2021
+ms.locfileid: "107509839"
 ---
-# <a name="dialog-box-functions"></a>Dialog Feld Funktionen
+# <a name="dialog-box-functions"></a>Dialogfeldfunktionen
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [**"Kreatedialog"**](/windows/desktop/api/Winuser/nf-winuser-createdialoga)
--   [**"Kreatedialogindirect"**](/windows/desktop/api/Winuser/nf-winuser-createdialogindirecta)
--   [**"Kreatedialogindirectparam"**](/windows/desktop/api/Winuser/nf-winuser-createdialogindirectparama)
--   [**"Kreatedialogparam"**](/windows/desktop/api/Winuser/nf-winuser-createdialogparama)
--   [**Defdlgproc**](/windows/desktop/api/Winuser/nf-winuser-defdlgprocw)
--   [**Dialogbox**](/windows/desktop/api/Winuser/nf-winuser-dialogboxa)
--   [**Dialogboxindirekte**](/windows/desktop/api/Winuser/nf-winuser-dialogboxindirecta)
--   [**Dialogboxderedereparam**](/windows/desktop/api/Winuser/nf-winuser-dialogboxindirectparama)
--   [**DialogBoxParam**](/windows/desktop/api/Winuser/nf-winuser-dialogboxparama)
--   [*DialogProc*](/windows/win32/api/winuser/nc-winuser-dlgproc)
--   [**EndDialog**](/windows/desktop/api/Winuser/nf-winuser-enddialog)
--   [**GetDialogBaseUnits**](/windows/desktop/api/Winuser/nf-winuser-getdialogbaseunits)
--   [**Getdlgctrlid**](/windows/desktop/api/Winuser/nf-winuser-getdlgctrlid)
--   [**GetDlgItem**](/windows/desktop/api/Winuser/nf-winuser-getdlgitem)
--   [**Getdlgitemint**](/windows/desktop/api/Winuser/nf-winuser-getdlgitemint)
--   [**Getdlgitemtext**](/windows/desktop/api/Winuser/nf-winuser-getdlgitemtexta)
--   [**Getnextdlggroupitem**](/windows/desktop/api/Winuser/nf-winuser-getnextdlggroupitem)
--   [**Getnextdlgtabitem**](/windows/desktop/api/Winuser/nf-winuser-getnextdlgtabitem)
--   [**IsDialogMessage**](/windows/desktop/api/Winuser/nf-winuser-isdialogmessagea)
--   [**Mapdialogrect**](/windows/desktop/api/Winuser/nf-winuser-mapdialogrect)
--   [**MessageBox**](/windows/desktop/api/Winuser/nf-winuser-messagebox)
--   [**Messageboxex**](/windows/desktop/api/Winuser/nf-winuser-messageboxexa)
--   [**Messageboxindirekte**](/windows/desktop/api/Winuser/nf-winuser-messageboxindirecta)
--   [**SendDlgItemMess age**](/windows/desktop/api/Winuser/nf-winuser-senddlgitemmessagea)
--   [**Setdlgitemint**](/windows/desktop/api/Winuser/nf-winuser-setdlgitemint)
--   [**SetDlgItemText**](/windows/desktop/api/Winuser/nf-winuser-setdlgitemtexta)
-
- 
-
- 
+* [**CreateDialog**](/windows/win32/api/Winuser/nf-winuser-createdialoga)
+* [**CreateDialogIndirect**](/windows/win32/api/Winuser/nf-winuser-createdialogindirecta)
+* [**CreateDialogIndirectParam**](/windows/win32/api/Winuser/nf-winuser-createdialogindirectparama)
+* [**CreateDialogParam**](/windows/win32/api/Winuser/nf-winuser-createdialogparama)
+* [**DefDlgProc**](/windows/win32/api/Winuser/nf-winuser-defdlgprocw)
+* [**DialogBox**](/windows/win32/api/Winuser/nf-winuser-dialogboxa)
+* [**DialogBoxIndirect**](/windows/win32/api/Winuser/nf-winuser-dialogboxindirecta)
+* [**DialogBoxIndirectParam**](/windows/win32/api/Winuser/nf-winuser-dialogboxindirectparama)
+* [**DialogBoxParam**](/windows/win32/api/Winuser/nf-winuser-dialogboxparama)
+* [**DLGPROC**](/windows/win32/api/winuser/nc-winuser-dlgproc)
+* [**EndDialog**](/windows/win32/api/Winuser/nf-winuser-enddialog)
+* [**GetDialogBaseUnits**](/windows/win32/api/Winuser/nf-winuser-getdialogbaseunits)
+* [**GetDlgCtrlID**](/windows/win32/api/Winuser/nf-winuser-getdlgctrlid)
+* [**GetDlgItem**](/windows/win32/api/Winuser/nf-winuser-getdlgitem)
+* [**GetDlgItemInt**](/windows/win32/api/Winuser/nf-winuser-getdlgitemint)
+* [**GetDlgItemText**](/windows/win32/api/Winuser/nf-winuser-getdlgitemtexta)
+* [**GetNextDlgGroupItem**](/windows/win32/api/Winuser/nf-winuser-getnextdlggroupitem)
+* [**GetNextDlgTabItem**](/windows/win32/api/Winuser/nf-winuser-getnextdlgtabitem)
+* [**IsDialogMessage**](/windows/win32/api/Winuser/nf-winuser-isdialogmessagea)
+* [**MapDialogRect**](/windows/win32/api/Winuser/nf-winuser-mapdialogrect)
+* [**Messagebox**](/windows/win32/api/Winuser/nf-winuser-messagebox)
+* [**MessageBoxEx**](/windows/win32/api/Winuser/nf-winuser-messageboxexa)
+* [**MessageBoxIndirect**](/windows/win32/api/Winuser/nf-winuser-messageboxindirecta)
+* [**MSGBOXCALLBACK**](/windows/win32/api/winuser/nc-winuser-msgboxcallback)
+* [**SendDlgItemMessage**](/windows/win32/api/Winuser/nf-winuser-senddlgitemmessagea)
+* [**SetDlgItemInt**](/windows/win32/api/Winuser/nf-winuser-setdlgitemint)
+* [**SetDlgItemText**](/windows/win32/api/Winuser/nf-winuser-setdlgitemtexta)
