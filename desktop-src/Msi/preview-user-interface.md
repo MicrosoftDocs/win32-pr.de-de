@@ -1,0 +1,38 @@
+---
+description: Die VBScript-Datei WiDialog.vbs wird in den Windows SDK Komponenten für Windows Installer Entwickler bereitgestellt. Dieses Beispiel zeigt, wie das Skript zum Anzeigen einer Vorschau von Dialogfeldern in einer Windows Installer Datenbank verwendet wird.
+ms.assetid: b3d72ba1-1d19-4460-8b9b-94f72214e8b1
+title: Vorschau der Benutzeroberfläche
+ms.topic: article
+ms.date: 05/31/2018
+ms.openlocfilehash: 7736c442cdfcb22034326ff459eb89fc28b0c9af
+ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "106368806"
+---
+# <a name="preview-user-interface"></a><span data-ttu-id="d5ada-104">Vorschau der Benutzeroberfläche</span><span class="sxs-lookup"><span data-stu-id="d5ada-104">Preview User Interface</span></span>
+
+<span data-ttu-id="d5ada-105">Die VBScript-Datei WiDialog.vbs wird in den [Windows SDK Komponenten für Windows Installer Entwickler](platform-sdk-components-for-windows-installer-developers.md)bereitgestellt.</span><span class="sxs-lookup"><span data-stu-id="d5ada-105">The VBScript file WiDialog.vbs is provided in the [Windows SDK Components for Windows Installer Developers](platform-sdk-components-for-windows-installer-developers.md).</span></span> <span data-ttu-id="d5ada-106">Dieses Beispiel zeigt, wie das Skript zum Anzeigen einer Vorschau von Dialogfeldern in einer Windows Installer Datenbank verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="d5ada-106">This sample shows how script is used to preview dialogs in a Windows Installer database.</span></span>
+
+<span data-ttu-id="d5ada-107">In diesem Beispiel wird Folgendes veranschaulicht:</span><span class="sxs-lookup"><span data-stu-id="d5ada-107">This sample demonstrates:</span></span>
+
+-   <span data-ttu-id="d5ada-108">[**OpenDatabase-Methode (Installer-Objekt)**](installer-opendatabase.md), die [**Methode "samaterecord**](installer-createrecord.md)" und die [**Methode "lasterrorrecord**](installer-lasterrorrecord.md) " des [**Installerobjekts**](installer-object.md)</span><span class="sxs-lookup"><span data-stu-id="d5ada-108">[**OpenDatabase method (Installer Object)**](installer-opendatabase.md), the [**CreateRecord method**](installer-createrecord.md), and the [**LastErrorRecord method**](installer-lasterrorrecord.md) of the [**Installer Object**](installer-object.md)</span></span>
+-   <span data-ttu-id="d5ada-109">[**OpenView-Methode**](database-openview.md) und die [**enableuipreview-Methode**](database-enableuipreview.md) des Database- [**Objekts**](database-object.md)</span><span class="sxs-lookup"><span data-stu-id="d5ada-109">[**OpenView method**](database-openview.md) and the [**EnableUIpreview method**](database-enableuipreview.md) of the [**Database Object**](database-object.md)</span></span>
+-   <span data-ttu-id="d5ada-110">[**Execute-Methode**](view-execute.md) und die [**Fetch-Methode**](view-fetch.md) des View- [**Objekts**](view-object.md)</span><span class="sxs-lookup"><span data-stu-id="d5ada-110">[**Execute method**](view-execute.md) and the [**Fetch method**](view-fetch.md) of the [**View Object**](view-object.md)</span></span>
+-   <span data-ttu-id="d5ada-111">Eigenschaften [**Eigenschaft von StringData**](record-stringdata.md) des [ **Datensatz-Objekts**](record-object.md)</span><span class="sxs-lookup"><span data-stu-id="d5ada-111">[**StringData property**](record-stringdata.md) propertyof the [**Record Object**](record-object.md)</span></span>
+
+<span data-ttu-id="d5ada-112">Für dieses Beispiel ist die CScript.exe oder WScript.exe Version von Windows Script Host erforderlich.</span><span class="sxs-lookup"><span data-stu-id="d5ada-112">This sample requires the CScript.exe or WScript.exe version of Windows Script Host.</span></span> <span data-ttu-id="d5ada-113">Wenn Sie CScript.exe für dieses Beispiel verwenden möchten, geben Sie mithilfe der folgenden Syntax einen Befehl an der Eingabeaufforderung ein.</span><span class="sxs-lookup"><span data-stu-id="d5ada-113">To use CScript.exe for this sample, type a command at the command prompt using the following syntax.</span></span> <span data-ttu-id="d5ada-114">Hilfe wird angezeigt, wenn das erste Argument/?</span><span class="sxs-lookup"><span data-stu-id="d5ada-114">Help is displayed if the first argument is /?</span></span> <span data-ttu-id="d5ada-115">oder, wenn zu wenige Argumente angegeben werden.</span><span class="sxs-lookup"><span data-stu-id="d5ada-115">or if too few arguments are specified.</span></span> <span data-ttu-id="d5ada-116">Um die Ausgabe in eine Datei umzuleiten, beenden Sie die Befehlszeile mit VSB > \[ *Pfad zur Datei* \] .</span><span class="sxs-lookup"><span data-stu-id="d5ada-116">To redirect the output to a file, end the command line with VBS > \[*path to file*\].</span></span> <span data-ttu-id="d5ada-117">Das Beispiel gibt den Wert 0 für Erfolg zurück, 1, wenn Hilfe aufgerufen wird, und 2, wenn das Skript fehlschlägt.</span><span class="sxs-lookup"><span data-stu-id="d5ada-117">The sample returns a value of 0 for success, 1 if help is invoked, and 2 if the script fails.</span></span>
+
+<span data-ttu-id="d5ada-118">**cscript-WiDialog.vbs** *\[ Pfad zu Daten Bank \] \[ dialogamen \]*</span><span class="sxs-lookup"><span data-stu-id="d5ada-118">**cscript WiDialog.vbs** *\[path to database\]\[Dialog names\]*</span></span>
+
+<span data-ttu-id="d5ada-119">Geben Sie den Pfad zu einer Windows Installer-Datenbank an.</span><span class="sxs-lookup"><span data-stu-id="d5ada-119">Specify the path to a Windows Installer database.</span></span> <span data-ttu-id="d5ada-120">Geben Sie den Namen eines Dialogs an.</span><span class="sxs-lookup"><span data-stu-id="d5ada-120">Specify the name of a dialog.</span></span> <span data-ttu-id="d5ada-121">Dieser Name muss in der Dialogfeld Spalte der Dialogfeld [Tabelle](dialog-table.md)aufgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="d5ada-121">This name must be listed in the Dialog column of the [Dialog table](dialog-table.md).</span></span> <span data-ttu-id="d5ada-122">Zum Anzeigen eines Billboard fügen Sie den Namen des Dialog Felds mit dem Namen des Steuer Elements aus der [Tabelle "Control](control-table.md) " an, und fügen Sie diesen an den Namen des Billboard in der Tabelle " [Billboard](billboard-table.md)" an.</span><span class="sxs-lookup"><span data-stu-id="d5ada-122">To view a billboard, append the dialog's name with the control's name from the [Control table](control-table.md) and append this to the name of the billboard in the [Billboard table](billboard-table.md).</span></span> <span data-ttu-id="d5ada-123">Wenn keine Dialoge angegeben sind, werden alle Dialogfelder in der Dialog Feld Tabelle sequenziell angezeigt.</span><span class="sxs-lookup"><span data-stu-id="d5ada-123">If no dialogs are specified, all dialogs in Dialog table are displayed sequentially.</span></span>
+
+<span data-ttu-id="d5ada-124">Weitere Skript Beispiele finden Sie unter [Windows Installer Skript Beispiele](windows-installer-scripting-examples.md).</span><span class="sxs-lookup"><span data-stu-id="d5ada-124">For additional scripting examples, see [Windows Installer Scripting Examples](windows-installer-scripting-examples.md).</span></span> <span data-ttu-id="d5ada-125">Beispiel Hilfsprogramme, die keinen Windows Script Host erfordern, finden Sie unter [Windows Installer-Entwicklungs Tools](windows-installer-development-tools.md).</span><span class="sxs-lookup"><span data-stu-id="d5ada-125">For sample utilities that do not require Windows Script Host, see [Windows Installer Development Tools](windows-installer-development-tools.md).</span></span>
+
+ 
+
+ 
+
+
+
