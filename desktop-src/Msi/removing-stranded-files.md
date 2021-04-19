@@ -1,0 +1,32 @@
+---
+description: Eine Liste möglicher Gründe, aus denen ein Windows Installer der Installation nicht alle Dateien einer Anwendung entfernen konnte.
+ms.assetid: 0a856f0f-a829-478e-a83b-dade7b05b4f2
+title: Entfernen von gestrandeten Dateien
+ms.topic: article
+ms.date: 05/31/2018
+ms.openlocfilehash: 0d5eeceb45c2139d146c32bdf9917e41885688df
+ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "106348088"
+---
+# <a name="removing-stranded-files"></a><span data-ttu-id="10b9f-103">Entfernen von gestrandeten Dateien</span><span class="sxs-lookup"><span data-stu-id="10b9f-103">Removing Stranded Files</span></span>
+
+<span data-ttu-id="10b9f-104">Wenn eine Datei, die auf dem Computer des Benutzers entfernt worden sein soll, nach dem Ausführen einer Deinstallation weiterhin installiert ist, entfernt das Installationsprogramm möglicherweise die Komponente, die die Datei enthält, aus einem oder mehreren der folgenden Gründe:</span><span class="sxs-lookup"><span data-stu-id="10b9f-104">If a file that should have been removed from the user's computer remains installed after running an uninstall, the installer may not be removing the component containing the file for one or more of the following reasons:</span></span>
+
+-   <span data-ttu-id="10b9f-105">Das msidbcomponentattributespermanent-Bit wurde für die Komponente in der Attribut-Spalte der [Komponenten Tabelle](component-table.md)festgelegt.</span><span class="sxs-lookup"><span data-stu-id="10b9f-105">The msidbComponentAttributesPermanent bit was set for the component in the Attributes column of the [Component table](component-table.md).</span></span>
+-   <span data-ttu-id="10b9f-106">Für die Komponente in der ComponentID-Spalte der Component-Tabelle wurde kein Wert eingegeben.</span><span class="sxs-lookup"><span data-stu-id="10b9f-106">No value was entered for the component in the ComponentId column of the Component table.</span></span>
+-   <span data-ttu-id="10b9f-107">Die Komponente wird von einer anderen Anwendung oder einem anderen Feature verwendet, das noch installiert ist.</span><span class="sxs-lookup"><span data-stu-id="10b9f-107">The component is used by another application or feature that is still installed.</span></span>
+-   <span data-ttu-id="10b9f-108">In der Bedingungs Tabelle ist [eine Bedingung angegeben](condition-table.md) , die eine Funktion während der Installation aktiviert und die Funktion während der Neuinstallation deaktiviert.</span><span class="sxs-lookup"><span data-stu-id="10b9f-108">There is a condition specified in the [Condition](condition-table.md) table that enables a feature during installation and disables the feature during uninstallation.</span></span>
+-   <span data-ttu-id="10b9f-109">Die Schlüsseldatei für die Komponente enthält einen früheren Verweis Zähler unter **HKLM** \\ **Software** \\ **Microsoft** \\ **Windows** \\ **CurrentVersion** \\ **SharedDLLs**.</span><span class="sxs-lookup"><span data-stu-id="10b9f-109">The key file for the component has a previous reference count under **HKLM**\\**Software**\\**Microsoft**\\**Windows**\\**CurrentVersion**\\**SharedDLLs**.</span></span>
+-   <span data-ttu-id="10b9f-110">Die Komponente wird im Ordner "System" installiert, und jede Datei in der Komponente enthält einen früheren Verweis Zähler unter " **HKLM** \\ **Software** \\ **Microsoft** \\ **Windows** \\ **CurrentVersion** \\ **SharedDLLs**".</span><span class="sxs-lookup"><span data-stu-id="10b9f-110">The component is installed in the System folder and any file in the component has a previous reference count under **HKLM**\\**Software**\\**Microsoft**\\**Windows**\\**CurrentVersion**\\**SharedDLLs**.</span></span>
+-   <span data-ttu-id="10b9f-111">Der Windows Installer entfernt keine Dateien oder Registrierungsschlüssel, die durch [Windows-Ressourcenschutz](../wfp/windows-resource-protection-portal.md) (WRP) geschützt sind.</span><span class="sxs-lookup"><span data-stu-id="10b9f-111">The Windows Installer does not remove any files or registry keys that are protected by [Windows Resource Protection](../wfp/windows-resource-protection-portal.md) (WRP).</span></span> <span data-ttu-id="10b9f-112">Weitere Informationen finden Sie unter [Verwenden von Windows Installer und Windows-Ressourcenschutz](windows-resource-protection-on-windows-vista.md).</span><span class="sxs-lookup"><span data-stu-id="10b9f-112">For more information, see [Using Windows Installer and Windows Resource Protection](windows-resource-protection-on-windows-vista.md).</span></span> <span data-ttu-id="10b9f-113">Unter Windows Server 2003, Windows XP und Windows 2000 entfernt das Installationsprogramm keine Dateien, die durch den Windows-Datei Schutz (WFP) geschützt sind.</span><span class="sxs-lookup"><span data-stu-id="10b9f-113">On Windows Server 2003, Windows XP, and Windows 2000, the installer does not remove any files that are protected by Windows File Protection (WFP).</span></span> <span data-ttu-id="10b9f-114">Wenn die Schlüssel Pfad Datei oder der Registrierungsschlüssel einer Komponente durch WFP oder WRP geschützt ist, entfernt das Installationsprogramm die Komponente nicht.</span><span class="sxs-lookup"><span data-stu-id="10b9f-114">If a component's key path file or registry key is protected by WFP or WRP, the installer does not remove the component.</span></span>
+    > [!Note]  
+    > <span data-ttu-id="10b9f-115">Da Windows Installer keine von WRP geschützten Ressourcen installiert, aktualisiert oder entfernt, sollten Sie geschützte Ressourcen nicht in ein Installationspaket einschließen.</span><span class="sxs-lookup"><span data-stu-id="10b9f-115">Because Windows Installer does not install, update, or remove any resource that is protected by WRP, you should not include protected resources in an installation package.</span></span> <span data-ttu-id="10b9f-116">Verwenden Sie stattdessen nur die [unterstützten Mechanismen für die Ressourcen Ersetzung](../wfp/supported-file-replacement-mechanisms.md) , die im Abschnitt [Windows-Ressourcenschutz](../wfp/windows-resource-protection-portal.md) beschrieben werden.</span><span class="sxs-lookup"><span data-stu-id="10b9f-116">Instead, use only the [supported resource replacement mechanisms](../wfp/supported-file-replacement-mechanisms.md) described in the [Windows Resource Protection](../wfp/windows-resource-protection-portal.md) section.</span></span>
+
+     
+
+ 
+
+ 
