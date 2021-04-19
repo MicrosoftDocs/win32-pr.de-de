@@ -14,12 +14,12 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 302d820428fafb1561bd38850c4f75240ce9094f
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: d532f3a2a2332874f7b7c22f17992c22984e3f86
+ms.sourcegitcommit: 556bf3a984f2fc4d18e370329c3043bf3329c93f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104355377"
+ms.lasthandoff: 04/09/2021
+ms.locfileid: "107222838"
 ---
 # <a name="xmint4-structure"></a>XMINT4-Struktur
 
@@ -41,7 +41,7 @@ typedef struct _XMINT4 {
 
 
 
-## <a name="members"></a>Member
+## <a name="members"></a>Members
 
 <dl> <dt>
 
@@ -83,7 +83,13 @@ w-Komponente des Vektors.
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="remarks"></a>Bemerkungen
+
+Diese Struktur wird in der ``D3DX\_DXGIFormatConvert.inl`` Kopfzeile im DirectX SDK (Juni 2010) für die Verwendung von C++ definiert. Die neueste Version dieses Headers im nuget-Paket [Microsoft. dxsdk. D3DX](https://www.nuget.org/packages/Microsoft.DXSDK.D3DX) definiert Sie nicht mehr und basiert stattdessen auf [DirectX:: XMINT4](https://docs.microsoft.com/en-us/windows/win32/api/directxmath/ns-directxmath-xmint4) in directxmath.
+
+
+
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
@@ -92,12 +98,3 @@ w-Komponente des Vektors.
 
 [Entpacken und Verpacken des DXGI- \_ Formats für In-Place Bildbearbeitung](dx-graphics-hlsl-unpacking-packing-dxgi-format.md)
 </dt> </dl>
-
- 
-
- 
-
-
-
-
-
