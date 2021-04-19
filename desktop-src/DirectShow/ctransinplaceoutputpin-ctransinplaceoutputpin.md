@@ -1,0 +1,104 @@
+---
+description: Konstruktormethode.
+ms.assetid: fe7b2d62-0e6a-4253-b469-6cede5dc9bb1
+title: Ctransinplaceoutputpin. ctransinplaceoutputpin-Konstruktor (transip. h)
+ms.topic: reference
+ms.date: 05/31/2018
+topic_type:
+- APIRef
+- kbSyntax
+api_name:
+- CTransInPlaceOutputPin.CTransInPlaceOutputPin
+api_type:
+- COM
+api_location:
+- Strmbase.lib
+- Strmbase.dll
+- Strmbasd.lib
+- Strmbasd.dll
+ms.openlocfilehash: c2c9ca668d3780ece082f9cab55db8406af7ad3b
+ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/22/2021
+ms.locfileid: "106366944"
+---
+# <a name="ctransinplaceoutputpinctransinplaceoutputpin-constructor"></a>Ctransinplaceoutputpin. ctransinplaceoutputpin-Konstruktor
+
+Konstruktormethode.
+
+## <a name="syntax"></a>Syntax
+
+
+```C++
+CTransInPlaceOutputPin(
+   TCHAR               *pObjectName,
+   CTransInPlaceFilter *pFilter,
+   HRESULT             *phr,
+   LPCWSTR             pName
+);
+```
+
+
+
+## <a name="parameters"></a>Parameter
+
+<dl> <dt>
+
+*pobjectname* 
+</dt> <dd>
+
+Zeichenfolge, die den debugnamen des-Objekts enthält. Weitere Informationen finden Sie unter [**cbaseobject**](cbaseobject.md).
+
+</dd> <dt>
+
+*pFilter* 
+</dt> <dd>
+
+Ein Zeiger auf den Filter, der diese Pin erstellt hat, wobei es sich um ein [**ctransinplacefilter**](ctransinplacefilter.md) -Objekt handeln muss.
+
+</dd> <dt>
+
+*PHR* 
+</dt> <dd>
+
+Ein Zeiger auf eine Variable, die einen **HRESULT** -Wert empfängt, der angibt, ob die Methode erfolgreich war oder fehlgeschlagen ist. Initialisieren Sie den Wert \_ vor dem Erstellen des-Objekts auf S OK. Der Wert wird nur geändert, wenn ein Fehler auftritt.
+
+</dd> <dt>
+
+*pName* 
+</dt> <dd>
+
+Breit Zeichen-Zeichenfolge, die den Pin-Namen enthält.
+
+</dd> </dl>
+
+## <a name="remarks"></a>Bemerkungen
+
+Der *PName* -Parameter gibt den Pin-Namen an, der von der [**IPin:: querypininfo**](/windows/desktop/api/Strmif/nf-strmif-ipin-querypininfo) -Methode zurückgegeben wird. Die Zeichenfolge wird jedoch nicht für den PIN-Bezeichner verwendet. Der PIN-Bezeichner für diese Klasse ist immer "out". Weitere Informationen finden Sie unter [**QueryId**](ctransforminputpin-queryid.md).
+
+## <a name="requirements"></a>Anforderungen
+
+
+
+| Anforderung | Wert |
+|--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Header<br/>  | <dl> <dt>Transip. h (Include Streams. h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+
+
+
+## <a name="see-also"></a>Siehe auch
+
+<dl> <dt>
+
+[**Ctransinplaceoutputpin-Klasse**](ctransinplaceoutputpin.md)
+</dt> </dl>
+
+ 
+
+ 
+
+
+
+
