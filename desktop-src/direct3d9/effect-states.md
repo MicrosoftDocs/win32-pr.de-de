@@ -4,12 +4,12 @@ ms.assetid: b62a6ccc-a1ea-455c-9659-544d4bcaf6a2
 title: Effekt Zustände (Direct3D 9)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 674e72d818cd280bfe75a2cb02733576bc68319e
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 1e208c0c7c14564a9967562ff2fd04a400cb7901
+ms.sourcegitcommit: 78b64f3865e64768b5319d4f010032ee68924a98
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104041240"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107314763"
 ---
 # <a name="effect-states-direct3d-9"></a>Effekt Zustände (Direct3D 9)
 
@@ -216,51 +216,56 @@ Der Effekt von Datei-gerenderzuständen hat ähnliche Namen wie die Status der F
 <td>Die gleichen Werte wie <a href="/windows/desktop/direct3d9/d3dblend"><strong>D3DBLEND</strong></a> ohne das Präfix D3DBLEND_.</td>
 </tr>
 <tr class="even">
+<td>Srgbschreiteenable</td>
+<td>bool</td>
+<td>Richtig oder falsch: Die gleichen Werte wie D3DRS_SRGBWRITEENABLE.</td>
+</tr>
+<tr class="odd">
 <td>Schablone möglich</td>
 <td>bool</td>
 <td>Richtig oder falsch: Die gleichen Werte wie D3DRS_STENCILENABLE.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Stencilfail</td>
 <td>dword</td>
 <td>Die gleichen Werte wie <a href="d3dstencilcaps.md">D3DSTENCILCAPS</a> ohne das Präfix D3DSTENCILCAP_. Siehe D3DRS_STENCILFAIL.</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Schablone Func</td>
 <td>dword</td>
 <td>Die gleichen Werte wie <a href="/windows/desktop/direct3d9/d3dcmpfunc"><strong>D3DCMPFUNC</strong></a> ohne das Präfix D3DCMP_. Siehe D3DRS_STENCILFUNC.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Schablone Mask</td>
 <td>dword</td>
 <td>Die gleichen Werte wie D3DRS_STENCILMASK.</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Schablone-Pass</td>
 <td>dword</td>
 <td>Die gleichen Werte wie <a href="d3dstencilcaps.md">D3DSTENCILCAPS</a> ohne das Präfix D3DSTENCILCAP_. Siehe D3DRS_STENCILPASS.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Schablone Ref</td>
 <td>INT</td>
 <td>Die gleichen Werte wie D3DRS_STENCILREF.</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Schablone</td>
 <td>dword</td>
 <td>Die gleichen Werte wie D3DRS_STENCILWRITEMASK.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Stencilzfail</td>
 <td>dword</td>
 <td>Die gleichen Werte wie <a href="d3dstencilcaps.md">D3DSTENCILCAPS</a> ohne das Präfix D3DSTENCILCAP_. Siehe D3DRS_STENCILZFAIL.</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>TextureFactor</td>
 <td>dword</td>
 <td>Dieselben Werte wie <a href="d3dcolor.md"><strong>D3DCOLOR</strong></a>. Die gleichen Werte wie D3DRS_TEXTUREFACTOR.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Wrap0 - Wrap15</td>
 <td>dword</td>
 <td>Werte sind identisch mit den Werten, die von D3DRS_WRAP0 verwendet werden. Gültige Werte sind:
@@ -274,17 +279,17 @@ Der Effekt von Datei-gerenderzuständen hat ähnliche Namen wie die Status der F
 <li>W (entspricht D3DWRAP_W)</li>
 </ul></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Zenzierbar</td>
 <td>dword</td>
 <td>Die gleichen Werte wie <a href="/windows/desktop/direct3d9/d3dzbuffertype"><strong>D3DZBUFFERTYPE</strong></a> ohne das Präfix D3DZB_.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Zfunc</td>
 <td>dword</td>
 <td>Die gleichen Werte wie <a href="/windows/desktop/direct3d9/d3dcmpfunc"><strong>D3DCMPFUNC</strong></a> ohne das Präfix D3DCMP_. Siehe D3DRS_ZFUNC.</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Zbeschreib teenable</td>
 <td>bool</td>
 <td>Richtig oder falsch: Siehe D3DRS_ZWRITEENABLE.</td>
@@ -404,7 +409,7 @@ Samplingstufen Zustände werden zum Beispiel für Texturen verwendet. Der sample
 | MinFilter \[ 16\]     | dword                        | Dieselben Werte wie D3DSAMP \_ MinFilter ohne das D3DSAMP- \_ Präfix.                                                                   |
 | MipFilter \[ 16\]     | dword                        | Dieselben Werte wie D3DSAMP \_ MipFilter ohne das D3DSAMP- \_ Präfix.                                                                   |
 | Mipmaplodbias \[ 16\] | float                        | Dieselben Werte wie D3DSAMP \_ mipmaplodbias ohne das D3DSAMP- \_ Präfix.                                                               |
-| Srgbtexture         | float                        | Gleicher Wert wie D3DSAMP \_ srgbtexture ohne das D3DSAMP- \_ Präfix.                                                                  |
+| Srgbtexture         | bool                         | Gleicher Wert wie D3DSAMP \_ srgbtexture ohne das D3DSAMP- \_ Präfix.                                                                   |
 
 
 
