@@ -1,0 +1,58 @@
+---
+description: Ab Windows Vista unterstützt der Dienststeuerungs-Manager (Service Control Manager, SCM) Remote Prozedur Aufrufe über RPC/TCP (Transmission Control Protocol) und Named Pipes (RPC/NP).
+ms.assetid: c51732f6-c22f-4726-afaa-13a8948ac44f
+title: Dienste und RPC/TCP
+ms.topic: article
+ms.date: 05/31/2018
+ms.openlocfilehash: 3fdb2ef3b21f280ba4e5078d302813de41a5a43a
+ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "106363715"
+---
+# <a name="services-and-rpctcp"></a><span data-ttu-id="42ffb-103">Dienste und RPC/TCP</span><span class="sxs-lookup"><span data-stu-id="42ffb-103">Services and RPC/TCP</span></span>
+
+<span data-ttu-id="42ffb-104">Ab Windows Vista unterstützt der Dienststeuerungs-Manager (Service Control Manager, SCM) Remote Prozedur Aufrufe über RPC/TCP (Transmission Control Protocol) und Named Pipes (RPC/NP).</span><span class="sxs-lookup"><span data-stu-id="42ffb-104">Starting with Windows Vista, the service control manager (SCM) supports remote procedure calls over both Transmission Control Protocol (RPC/TCP) and named pipes (RPC/NP).</span></span> <span data-ttu-id="42ffb-105">Client seitige SCM-Funktionen verwenden standardmäßig RPC/TCP.</span><span class="sxs-lookup"><span data-stu-id="42ffb-105">Client-side SCM functions use RPC/TCP by default.</span></span>
+
+<span data-ttu-id="42ffb-106">RPC/TCP ist für die meisten Anwendungen geeignet, die SCM-Funktionen Remote verwenden, z. b. Remote Verwaltung oder Überwachungstools.</span><span class="sxs-lookup"><span data-stu-id="42ffb-106">RPC/TCP is appropriate for most applications that use SCM functions remotely, such as remote administration or monitoring tools.</span></span> <span data-ttu-id="42ffb-107">Aus Kompatibilitätsgründen müssen einige Anwendungen jedoch möglicherweise RPC/TCP deaktivieren, indem Sie die in diesem Thema beschriebenen Registrierungs Werte festlegen.</span><span class="sxs-lookup"><span data-stu-id="42ffb-107">However, for compatibility and performance, some applications might need to disable RPC/TCP by setting the registry values described in this topic.</span></span>
+
+<span data-ttu-id="42ffb-108">Wenn ein Dienst eine Remote-SCM-Funktion aufruft, versucht der Client seitige SCM zunächst, RPC/TCP für die Kommunikation mit dem serverseitigen SCM zu verwenden.</span><span class="sxs-lookup"><span data-stu-id="42ffb-108">When a service calls a remote SCM function, the client-side SCM first attempts to use RPC/TCP to communicate with the server-side SCM.</span></span> <span data-ttu-id="42ffb-109">Wenn auf dem Server eine Version von Windows ausgeführt wird, die RPC/TCP unterstützt und RPC/TCP-Datenverkehr zulässt, wird die RPC/tcpp-Verbindung erfolgreich hergestellt.</span><span class="sxs-lookup"><span data-stu-id="42ffb-109">If the server is running a version of Windows that supports RPC/TCP and allows RPC/TCP traffic, the RPC/TCPP connection will succeed.</span></span> <span data-ttu-id="42ffb-110">Wenn auf dem Server eine Version von Windows ausgeführt wird, die RPC/TCP nicht unterstützt, oder RPC/TCP unterstützt, aber eine Firewall verwendet, die nur Named Pipe-Datenverkehr zulässt, tritt für die RPC-/TCP-Verbindung ein Timeout auf, und der SCM versucht erneut, die Verbindung mit RPC/NP herzustellen.</span><span class="sxs-lookup"><span data-stu-id="42ffb-110">If the server is running a version of Windows that does not support RPC/TCP, or supports RPC/TCP but is operating behind a firewall which allows only named pipe traffic, the RPC/TCP connection times out and the SCM retries the connection with RPC/NP.</span></span> <span data-ttu-id="42ffb-111">Dies ist zwar erfolgreich, kann jedoch einige Zeit in Anspruch nehmen (in der Regel mehr als 20 Sekunden), wodurch die [**OpenSCManager**](/windows/desktop/api/Winsvc/nf-winsvc-openscmanagera) -Funktion blockiert wird.</span><span class="sxs-lookup"><span data-stu-id="42ffb-111">This will succeed eventually but can take some time (typically more than 20 seconds), causing the [**OpenSCManager**](/windows/desktop/api/Winsvc/nf-winsvc-openscmanagera) function to appear blocked.</span></span>
+
+<span data-ttu-id="42ffb-112">TCP führt keine Benutzer Anmelde Informationen ein, die mit einem **net use** -Befehl angegeben werden.</span><span class="sxs-lookup"><span data-stu-id="42ffb-112">TCP does not carry user credentials specified with a **net use** command.</span></span> <span data-ttu-id="42ffb-113">Wenn RPC/TCP aktiviert ist und **sc.exe** verwendet wird, um auf den angegebenen Dienst zuzugreifen, schlägt der Befehl daher möglicherweise fehl, und der Zugriff wird verweigert.</span><span class="sxs-lookup"><span data-stu-id="42ffb-113">Therefore, if RPC/TCP is enabled and **sc.exe** is used to attempt to access the specified service, the command could fail with access denied.</span></span> <span data-ttu-id="42ffb-114">Das Deaktivieren von RPC/TCP auf der Clientseite bewirkt, dass der **sc.exe** Befehl eine Named Pipe verwendet, die Benutzer Anmelde Informationen enthält, sodass der Befehl erfolgreich ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="42ffb-114">Disabling RPC/TCP on the client side causes the **sc.exe** command to use a named pipe that does carry user credentials, so the command will succeed.</span></span> <span data-ttu-id="42ffb-115">Weitere Informationen zu sc.exe finden [Sie Untersteuern eines Dienstanbieter mit SC](controlling-a-service-using-sc.md).</span><span class="sxs-lookup"><span data-stu-id="42ffb-115">For information about sc.exe, see [Controlling a Service Using SC](controlling-a-service-using-sc.md).</span></span>
+
+> [!Note]  
+> <span data-ttu-id="42ffb-116">Ein Dienst sollte keinen expliziten Anmelde Informationen für einen **net use** -Befehl bereitstellen, da diese Anmelde Informationen versehentlich außerhalb der Dienst Grenzen freigegeben werden können.</span><span class="sxs-lookup"><span data-stu-id="42ffb-116">A service should not provide explicit credentials to a **net use** command, because those credentials might be inadvertently shared outside of the service boundaries.</span></span> <span data-ttu-id="42ffb-117">Stattdessen sollte der Dienst [Client](/windows/desktop/SecAuthZ/client-impersonation) Identitätswechsel verwenden, um die Identität des Benutzers anzunehmen.</span><span class="sxs-lookup"><span data-stu-id="42ffb-117">Instead, the service should use [client impersonation](/windows/desktop/SecAuthZ/client-impersonation) to impersonate the user.</span></span>
+
+ 
+
+### <a name="rpctcp-registry-values"></a><span data-ttu-id="42ffb-118">RPC/TCP-Registrierungs Werte</span><span class="sxs-lookup"><span data-stu-id="42ffb-118">RPC/TCP Registry Values</span></span>
+
+<span data-ttu-id="42ffb-119">RPC/TCP wird von den Registrierungs Werten " **scmapiconnectionparam**", " **disablerpcovertcp**" und " **disableremotescmendpoints** " gesteuert, die alle unter dem **HKEY \_ local \_ Machine** \\ **System** \\ **CurrentControlSet** \\ **Control** Key sind.</span><span class="sxs-lookup"><span data-stu-id="42ffb-119">RPC/TCP is controlled by the **SCMApiConnectionParam**, **DisableRPCOverTCP**, and **DisableRemoteScmEndpoints** registry values, which are all under the **HKEY\_LOCAL\_MACHINE**\\**SYSTEM**\\**CurrentControlSet**\\**Control** key.</span></span> <span data-ttu-id="42ffb-120">Alle diese Werte haben einen reg \_ DWORD-Datentyp.</span><span class="sxs-lookup"><span data-stu-id="42ffb-120">All of these values have a REG\_DWORD data type.</span></span> <span data-ttu-id="42ffb-121">In den folgenden Verfahren wird gezeigt, wie Sie diese Registrierungs Werte zum Steuern von RPC/TCP verwenden.</span><span class="sxs-lookup"><span data-stu-id="42ffb-121">The following procedures show how to use these registry values to control RPC/TCP.</span></span>
+
+<span data-ttu-id="42ffb-122">Im folgenden Verfahren wird beschrieben, wie Sie RPC/TCP auf Clientseite deaktivieren.</span><span class="sxs-lookup"><span data-stu-id="42ffb-122">The following procedure describes how to disable RPC/TCP on the client side.</span></span>
+
+<span data-ttu-id="42ffb-123">**So deaktivieren Sie RPC/TCP auf Clientseite**</span><span class="sxs-lookup"><span data-stu-id="42ffb-123">**To disable RPC/TCP on the client side**</span></span>
+
+1.  <span data-ttu-id="42ffb-124">Kombinieren Sie den **scmapiconnectionparam** -Registrierungs Wert mit dem Maskenwert 0x80000000.</span><span class="sxs-lookup"><span data-stu-id="42ffb-124">Combine the **SCMApiConnectionParam** registry value with the mask value 0x80000000.</span></span>
+2.  <span data-ttu-id="42ffb-125">Starten Sie die Anwendung neu, die die [**OpenSCManager**](/windows/desktop/api/Winsvc/nf-winsvc-openscmanagera) -Funktion aufruft.</span><span class="sxs-lookup"><span data-stu-id="42ffb-125">Restart the application that calls the [**OpenSCManager**](/windows/desktop/api/Winsvc/nf-winsvc-openscmanagera) function.</span></span>
+
+<span data-ttu-id="42ffb-126">Im folgenden Verfahren wird beschrieben, wie Sie TCP auf Serverseite deaktivieren.</span><span class="sxs-lookup"><span data-stu-id="42ffb-126">The following procedure describes how to disable TCP on the server side.</span></span>
+
+<span data-ttu-id="42ffb-127">**So deaktivieren Sie TCP auf der Serverseite**</span><span class="sxs-lookup"><span data-stu-id="42ffb-127">**To disable TCP on the server side**</span></span>
+
+1.  <span data-ttu-id="42ffb-128">Legen Sie den Registrierungs Wert **disablerpcovertcp** auf 1 fest.</span><span class="sxs-lookup"><span data-stu-id="42ffb-128">Set the **DisableRPCOverTCP** registry value to 1.</span></span>
+2.  <span data-ttu-id="42ffb-129">Starten Sie den Server neu.</span><span class="sxs-lookup"><span data-stu-id="42ffb-129">Restart the server.</span></span>
+
+<span data-ttu-id="42ffb-130">Im folgenden Verfahren wird beschrieben, wie sowohl RPC/TCP als auch RPC/NP auf dem Server deaktiviert werden (z. b. um die Angriffsfläche zu verringern).</span><span class="sxs-lookup"><span data-stu-id="42ffb-130">The following procedure describes how to disable both RPC/TCP and RPC/NP on the server (for example, to reduce the attack surface).</span></span>
+
+<span data-ttu-id="42ffb-131">**So deaktivieren Sie sowohl RPC/TCP als auch RPC/NP auf dem Server**</span><span class="sxs-lookup"><span data-stu-id="42ffb-131">**To disable both RPC/TCP and RPC/NP on the server**</span></span>
+
+1.  <span data-ttu-id="42ffb-132">Legen Sie den Registrierungs Wert **disableremotescmendpoints** auf 1 fest.</span><span class="sxs-lookup"><span data-stu-id="42ffb-132">Set the **DisableRemoteScmEndpoints** registry value to 1.</span></span>
+2.  <span data-ttu-id="42ffb-133">Starten Sie den Server neu.</span><span class="sxs-lookup"><span data-stu-id="42ffb-133">Restart the server.</span></span>
+
+<span data-ttu-id="42ffb-134">Der **scmapiconnectionparam** -Registrierungs Wert kann auch verwendet werden, um das RPC/TCP-Timeout Intervall (in Millisekunden) anzugeben.</span><span class="sxs-lookup"><span data-stu-id="42ffb-134">The **SCMApiConnectionParam** registry value can also be used to specify the RPC/TCP time-out interval, in milliseconds.</span></span> <span data-ttu-id="42ffb-135">Der Wert 30.000 gibt z. b. ein Timeout Intervall von 30 Sekunden an.</span><span class="sxs-lookup"><span data-stu-id="42ffb-135">For example, a value of 30,000 specifies a time-out interval of 30 seconds.</span></span> <span data-ttu-id="42ffb-136">Der Standardwert ist 21.000 (21 Sekunden).</span><span class="sxs-lookup"><span data-stu-id="42ffb-136">The default is 21,000 (21 seconds).</span></span>
+
+ 
+
+ 

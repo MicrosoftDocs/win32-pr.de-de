@@ -1,0 +1,48 @@
+---
+description: Die Smartcard-Benutzeroberfläche (User Interface, UI) ist ein einzelnes, gängiges Dialogfeld, mit dem der Benutzer eine Smartcard angeben oder suchen kann, die geöffnet werden soll (d. h. eine Verbindung mit einer Anwendung herstellen und diese verwenden)
+ms.assetid: a64a617a-b2ae-471f-a88f-a73f0fc3a791
+title: Smartcard-Benutzeroberfläche
+ms.topic: article
+ms.date: 05/31/2018
+ms.openlocfilehash: fc558446516149529e9a98d28aa9fe94f80b2777
+ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "106350024"
+---
+# <a name="smart-card-user-interface"></a><span data-ttu-id="fd740-103">Smartcard-Benutzeroberfläche</span><span class="sxs-lookup"><span data-stu-id="fd740-103">Smart Card User Interface</span></span>
+
+<span data-ttu-id="fd740-104">Die Smartcard- [*Benutzeroberfläche (User Interface*](../secgloss/u-gly.md) , UI) ist ein einzelnes, [*gängiges Dialogfeld*](../secgloss/s-gly.md) , mit dem der Benutzer eine Smartcard angeben oder suchen kann, die geöffnet werden soll (d. h. eine Verbindung mit einer Anwendung herstellen und diese verwenden)</span><span class="sxs-lookup"><span data-stu-id="fd740-104">The smart card [*user interface*](../secgloss/u-gly.md) (UI) is a single [*common dialog box*](../secgloss/s-gly.md) that lets the user specify or search for a smart card to open (that is, connect to and use in an application).</span></span>
+
+<span data-ttu-id="fd740-105">Im folgenden finden Sie zwei Möglichkeiten, wie Sie das Dialogfeld "Allgemein" verwenden können.</span><span class="sxs-lookup"><span data-stu-id="fd740-105">Following are two ways you can use the common dialog box.</span></span> <span data-ttu-id="fd740-106">Beide gehen davon aus, dass die Benutzeroberfläche des Dialog Felds angezeigt wird.</span><span class="sxs-lookup"><span data-stu-id="fd740-106">Both assume that the dialog box UI will be displayed.</span></span> <span data-ttu-id="fd740-107">Weitere Informationen finden Sie unter [**opencardname**](/windows/desktop/api/Winscard/ns-winscard-opencardnamea).</span><span class="sxs-lookup"><span data-stu-id="fd740-107">For more information, see [**OPENCARDNAME**](/windows/desktop/api/Winscard/ns-winscard-opencardnamea).</span></span>
+
+<span data-ttu-id="fd740-108">**So wählen Sie eine Smartcard aus, die geöffnet werden soll**</span><span class="sxs-lookup"><span data-stu-id="fd740-108">**To select a smart card to open**</span></span>
+
+1.  <span data-ttu-id="fd740-109">Deklarieren Sie eine Variable vom Typ **opencardname**.</span><span class="sxs-lookup"><span data-stu-id="fd740-109">Declare a variable of type **OPENCARDNAME**.</span></span>
+2.  <span data-ttu-id="fd740-110">Geben Sie im Dialogfeld "Allgemein" genügend Informationen an, um die Suche nach einer Smartcard einzuschränken, nach der die aufrufende Anwendung sucht.</span><span class="sxs-lookup"><span data-stu-id="fd740-110">Provide enough information in the common dialog box to narrow the search for a smart card that the calling application is looking for.</span></span> <span data-ttu-id="fd740-111">Dies umfasst das Angeben von **lpstringroupnames**, **lpstrancardnames** und **rgguidinterfaces**.</span><span class="sxs-lookup"><span data-stu-id="fd740-111">This includes specifying **lpstrGroupNames**, **lpstrCardNames**, and **rgguidInterfaces**.</span></span> <span data-ttu-id="fd740-112">Dies umfasst auch die Angabe eines bevorzugten Freigabe Modus und Protokolls, die verwendet werden sollen, wenn das allgemeine Dialogfeld mithilfe der **dwsharemode** -und **dwpreferredprotokolls** -Member der Struktur von [**opencardname**](/windows/desktop/api/Winscard/ns-winscard-opencardnamea) eine Verbindung mit der Karte herstellt.</span><span class="sxs-lookup"><span data-stu-id="fd740-112">This also includes specifying a preferred share mode and protocol to use when the common dialog box connects to the card by using the **dwShareMode** and **dwPreferredProtocols** members of the [**OPENCARDNAME**](/windows/desktop/api/Winscard/ns-winscard-opencardnamea) structure.</span></span>
+3.  <span data-ttu-id="fd740-113">Aufrufen der [**getopencardname**](/windows/desktop/api/Winscard/nf-winscard-getopencardnamea) -Funktion, um dem Benutzer das allgemeine Dialogfeld anzuzeigen.</span><span class="sxs-lookup"><span data-stu-id="fd740-113">Call the [**GetOpenCardName**](/windows/desktop/api/Winscard/nf-winscard-getopencardnamea) function to display the common dialog box to the user.</span></span> <span data-ttu-id="fd740-114">Eine einfache Hilfe Informations Zeile wird angezeigt, und wenn eine der angeforderten Karten gefunden wird, wird die Karte in der Anzeige hervorgehoben.</span><span class="sxs-lookup"><span data-stu-id="fd740-114">A simple help information line will be displayed, and if one of the cards being requested is found, the card will be highlighted in the display.</span></span> <span data-ttu-id="fd740-115">Bei mehreren Kartennamen suchen wird der erste Reader, der eine der bevorzugten Karten enthält, hervorgehoben.</span><span class="sxs-lookup"><span data-stu-id="fd740-115">For multiple card name searches, the first reader that contains one of the preferred cards will be highlighted.</span></span>
+4.  <span data-ttu-id="fd740-116">Der Benutzer wählt dann eine Karte aus, klickt auf **OK** und stellt eine Verbindung mit der Smartcard her.</span><span class="sxs-lookup"><span data-stu-id="fd740-116">The user then selects a card, clicks **OK**, and connects to the smart card.</span></span>
+
+<span data-ttu-id="fd740-117">**So suchen Sie nach einer bestimmten Karte**</span><span class="sxs-lookup"><span data-stu-id="fd740-117">**To search for a specific card**</span></span>
+
+1.  <span data-ttu-id="fd740-118">Deklarieren Sie eine Variable vom Typ **opencardname**.</span><span class="sxs-lookup"><span data-stu-id="fd740-118">Declare a variable of type **OPENCARDNAME**.</span></span>
+2.  <span data-ttu-id="fd740-119">Geben Sie im Dialogfeld "Allgemein" genügend Informationen an, um die Suche nach einer Smartcard einzuschränken, nach der die aufrufende Anwendung sucht.</span><span class="sxs-lookup"><span data-stu-id="fd740-119">Provide enough information in the common dialog box to narrow the search for a smart card that the calling application is looking for.</span></span> <span data-ttu-id="fd740-120">Dies umfasst das Angeben von **lpstringroupnames**, **lpstrancardnames** und **rgguidinterfaces**.</span><span class="sxs-lookup"><span data-stu-id="fd740-120">This includes specifying **lpstrGroupNames**, **lpstrCardNames**, and **rgguidInterfaces**.</span></span>
+3.  <span data-ttu-id="fd740-121">Erstellen Sie die Rückruf Funktionen **Connect**, **Check** und **Disconnect** , und legen Sie die Datenmember **lpfnconnect**, **lpfncheck** und **lpfndisconnect** entsprechend fest.</span><span class="sxs-lookup"><span data-stu-id="fd740-121">Create the **Connect**, **Check**, and **Disconnect** callback functions, and set the **lpfnConnect**, **lpfnCheck**, and **lpfnDisconnect** data members appropriately.</span></span>
+    > [!Note]  
+    > <span data-ttu-id="fd740-122">Alle drei Funktionen und Member müssen verfügbar sein, wenn Sie das allgemeine Dialogfeld auf diese Weise verwenden.</span><span class="sxs-lookup"><span data-stu-id="fd740-122">All three functions and members must be available when using the common dialog box in this way.</span></span>
+
+     
+
+4.  <span data-ttu-id="fd740-123">Aufrufen der Funktion " [**getopencardname**](/windows/desktop/api/Winscard/nf-winscard-getopencardnamea) " (allgemeine Dialogfeld).</span><span class="sxs-lookup"><span data-stu-id="fd740-123">Call the [**GetOpenCardName**](/windows/desktop/api/Winscard/nf-winscard-getopencardnamea) common dialog box function.</span></span>
+5.  <span data-ttu-id="fd740-124">Im Dialogfeld Allgemein wird dann nach den angeforderten Karten gesucht.</span><span class="sxs-lookup"><span data-stu-id="fd740-124">The common dialog box will then search for the requested cards.</span></span> <span data-ttu-id="fd740-125">Wenn ein passender Kartenname oder eine [*ATR-Zeichenfolge*](../secgloss/a-gly.md) gefunden wird, werden die Rückruf Funktionen **Connect**, **Check** und **Disconnect** nacheinander aufgerufen.</span><span class="sxs-lookup"><span data-stu-id="fd740-125">If a matching card name or [*ATR string*](../secgloss/a-gly.md) is found, the **Connect**, **Check**, and **Disconnect** callback functions will be called in sequence.</span></span> <span data-ttu-id="fd740-126">Wenn eine Karte die **Check** -Routine übergibt (d. h., der **Check** -Rückruf gibt **true** zurück), wird diese Karte in der Anzeige für den Benutzer hervorgehoben.</span><span class="sxs-lookup"><span data-stu-id="fd740-126">If a card passes the **Check** routine (that is, the **Check** callback returns **TRUE**), this card is highlighted in the display to the user.</span></span>
+    > [!Note]  
+    > <span data-ttu-id="fd740-127">Wenn mehrere Kartennamen angegeben werden, wird der erste Reader, der eine der angeforderten Karten enthält und die **Check** -Routine übergibt, die ausgewählte Karte.</span><span class="sxs-lookup"><span data-stu-id="fd740-127">If multiple card names are given, the first reader that contains one of the requested cards and passes the **Check** routine will be the selected card.</span></span>
+
+     
+
+6.  <span data-ttu-id="fd740-128">Wenn keine Übereinstimmungen gefunden werden, wird ein gemeinsames Dialogfeld angezeigt.</span><span class="sxs-lookup"><span data-stu-id="fd740-128">If no matches are found, a common dialog box will appear.</span></span>
+
+ 
+
+ 
