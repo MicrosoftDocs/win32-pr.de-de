@@ -1,35 +1,35 @@
 ---
 title: Semantik
-description: Eine Semantik ist eine Zeichenfolge, die an eine Shadereingabe oder-Ausgabe angehängt ist, die Informationen über die beabsichtigte Verwendung eines Parameters überträgt.
+description: Eine Semantik ist eine Zeichenfolge, die an eine Shadereingabe oder -ausgabe angefügt ist und Informationen über die beabsichtigte Verwendung eines Parameters übermittelt.
 ms.assetid: 6f5c504c-1940-4d1c-b594-a2132599376b
 keywords:
-- Binormal, Semantik (DirectX HLSL)
-- Blendindices, Semantik (DirectX HLSL)
-- Blendweight, Semantik (DirectX HLSL)
-- Farbe, Semantik (DirectX HLSL)
-- Nebel, Semantik (DirectX HLSL)
-- Positiont, Semantik (DirectX HLSL)
-- Psize, Semantik (DirectX HLSL)
-- Tangens, Semantik (DirectX HLSL)
-- Mosaik Faktor, Semantik (DirectX HLSL)
-- Texcoord, Semantik (DirectX HLSL)
-- Vface, Semantik (DirectX HLSL)
-- Vpos, Semantik (DirectX HLSL)
+- BINORMAL, Semantik (DirectX HLSL)
+- BLENDINDICES, Semantik (DirectX HLSL)
+- BLENDWEIGHT, Semantik (DirectX HLSL)
+- COLOR, Semantik (DirectX HLSL)
+- SEMANTIC, Semantics (DirectX HLSL)
+- POSITIONT, Semantik (DirectX HLSL)
+- PSIZE, Semantik (DirectX HLSL)
+- TANGENT, Semantik (DirectX HLSL)
+- TESSFACTOR, Semantik (DirectX HLSL)
+- TEXCOORD, Semantik (DirectX HLSL)
+- VFACE, Semantik (DirectX HLSL)
+- VPOS, Semantik (DirectX HLSL)
 - System-Value Semantik
-- System Wert Semantik
-- Clipdistance, Semantik (DirectX HLSL)
+- Systemwertsemantik
+- ClipDistance, Semantik (DirectX HLSL)
 - Abdeckung, Semantik (DirectX HLSL)
-- Culldistance, Semantik (DirectX HLSL)
+- CullDistance, Semantik (DirectX HLSL)
 - Tiefe, Semantik (DirectX HLSL)
-- InstanceId, Semantik (DirectX HLSL)
-- Isfrontface, Semantik (DirectX HLSL)
+- InstanceID, Semantik (DirectX HLSL)
+- IsFrontFace, Semantik (DirectX HLSL)
 - Position, Semantik (DirectX HLSL)
-- Primitiveid, Semantik (DirectX HLSL)
-- Rendertargetarrayindex, Semantik (DirectX HLSL)
+- PrimitiveID, Semantik (DirectX HLSL)
+- RenderTargetArrayIndex, Semantik (DirectX HLSL)
 - Ziel, Semantik (DirectX HLSL)
-- Sampleingedex, Semantik (DirectX HLSL)
-- Vertexid, Semantik (DirectX HLSL)
-- Viewportarrayindex, Semantik (DirectX HLSL)
+- SampleIndex, semantics (DirectX HLSL)
+- VertexID, Semantik (DirectX HLSL)
+- ViewportArrayIndex, Semantik (DirectX HLSL)
 - SV_ClipDistance, Semantik (DirectX HLSL)
 - SV_CullDistance, Semantik (DirectX HLSL)
 - SV_Depth, Semantik (DirectX HLSL)
@@ -62,54 +62,56 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 510f718608363c547c8333279826cc8bac141358
-ms.sourcegitcommit: de72a1294df274b0a71dc0fdc42d757e5f6df0f3
+ms.openlocfilehash: e8979b4e4842a4c84317b456802ed8f1beefea35
+ms.sourcegitcommit: 1d3c59a7066a75facc0565027251cad1ca1dd9c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "104219055"
+ms.lasthandoff: 04/18/2021
+ms.locfileid: "107594165"
 ---
 # <a name="semantics"></a>Semantik
 
-Eine Semantik ist eine Zeichenfolge, die an eine Shadereingabe oder-Ausgabe angehängt ist, die Informationen über die beabsichtigte Verwendung eines Parameters überträgt. Die Semantik ist für alle Variablen erforderlich, die zwischen den shaderstufen weitergegeben werden. Die Syntax zum Hinzufügen einer Semantik zu einer shadervariablen wird hier dargestellt ([Variablen Syntax (DirectX HLSL)](dx-graphics-hlsl-variable-syntax.md)).
+Eine Semantik ist eine Zeichenfolge, die an eine Shadereingabe oder -ausgabe angefügt ist und Informationen über die beabsichtigte Verwendung eines Parameters übermittelt. Semantik ist für alle Variablen erforderlich, die zwischen Shaderstufen übergeben werden. Die Syntax zum Hinzufügen einer Semantik zu einer Shadervariablen ist hier dargestellt ([Variablensyntax (DirectX HLSL)](dx-graphics-hlsl-variable-syntax.md)).
 
-Im Allgemeinen sind die zwischen den Pipeline Stufen übergebenen Daten vollständig generisch und werden vom System nicht eindeutig interpretiert. eine beliebige Semantik ist zulässig, die keine besondere Bedeutung hat. Parameter (in Direct3D 10 und höher), die diese besondere Semantik enthalten, werden als [System-Wert-Semantik](#system-value-semantics)bezeichnet.
+Im Allgemeinen sind Daten, die zwischen Pipelinestufen übergeben werden, vollständig generisch und werden vom System nicht eindeutig interpretiert. Beliebige Semantik ist zulässig, die keine besondere Bedeutung haben. Parameter (in Direct3D 10 und höher), die diese spezielle Semantik enthalten, werden als [Systemwertsemantik](#system-value-semantics)bezeichnet.
 
-## <a name="semantics-supported-in-direct3d-9-and-direct3d-10-and-later"></a>In Direct3D 9 und Direct3D 10 und höher Unterstützte Semantik
+## <a name="semantics-supported-in-direct3d-9-and-direct3d-10-and-later"></a>In Direct3D 9 und Direct3D 10 und höher unterstützte Semantik
 
-Die folgenden Typen von Semantik werden in Direct3D 9 und Direct3D 10 und höher unterstützt.
+Die folgenden Semantiktypen werden sowohl in Direct3D 9 als auch in Direct3D 10 und höher unterstützt.
 
-- [Vertex-Shader-Semantik](#vertex-shader-semantics)
-- [Pixel-Shader-Semantik](#pixel-shader-semantics)
+- [Vertex-Shadersemantik](#vertex-shader-semantics)
+- [Pixelschattensemantik](#pixel-shader-semantics)
 
-### <a name="vertex-shader-semantics"></a>Vertex-Shader-Semantik
+### <a name="vertex-shader-semantics"></a>Vertex-Shadersemantik
 
-Diese Semantik hat eine Bedeutung, wenn Sie an einen Vertex-Shader-Parameter angefügt wird. Diese Semantik wird in Direct3D 9 und Direct3D 10 und höher unterstützt.
+Diese Semantik hat eine Bedeutung, wenn sie an einen Vertex-Shader-Parameter angefügt wird. Diese Semantik wird sowohl in Direct3D 9 als auch in Direct3D 10 und höher unterstützt.
 
-| Eingabe | BESCHREIBUNG | type |
+| Eingabe | BESCHREIBUNG | Typ |
 |-|-|-|
-| Binormal \[ n\] | Binormal | float4 |
-| Blendindices \[ n\] | Blend-Indizes | uint |
-| Blendweight \[ n\] | Blend-Gewichtungen | float |
-| Farbe \[ n\] | Diffuses und Glanz Farbe | float4 |
-| Normaler \[ n\] | Normaler Vektor | float4 |
-| Position \[ n\] | Vertex-Position im Objektbereich. | float4 |
-| Positiont | Transformierte Scheitelpunkt Position. | float4 |
-| Psize \[ n\] | Punktgröße | float |
-| Tangens \[ n\] | Tangens | float4 |
-| Texkoord \[ n\] | Texturkoordinaten | float4 |
-| Output | BESCHREIBUNG | type |
-| Farbe \[ n\] | Diffuse oder Glanz Farbe | float4 |
-| Neben | Scheitelpunkt Nebel | float |
-| Position \[ n\] | Position eines Scheitel Punkts im homogenen Raum. Computeposition im Bildschirmbereich durch aufteilen (x, y, z) durch w. Jeder Vertex-Shader muss einen Parameter mit dieser Semantik schreiben. | float4 |
+| BINORMAL \[ n\] | Binormal | float4 |
+| BLENDINDICES \[ n\] | Indizes mischen | uint |
+| BLENDWEIGHT \[ n\] | Mischungsgewichtungen | float |
+| COLOR \[ n\] | Diffuse und speculare Farbe | float4 |
+| NORMAL \[ n\] | Normaler Vektor | float4 |
+| POSITION \[ n\] | Scheitelpunktposition im Objektbereich. | float4 |
+| POSITIONT | Transformierte Scheitelpunktposition. | float4 |
+| PSIZE \[ n\] | Punktgröße | float |
+| TANGENT \[ n\] | Tangens | float4 |
+| TEXCOORD \[ n\] | Texturkoordinaten | float4 |
+
+| Output | BESCHREIBUNG | Typ |
+|-|-|-|
+| COLOR \[ n\] | Diffuse oder Glanzfarbe | float4 |
+| Nebel | Scheitelpunkt-Scheitelpunkt | float |
+| POSITION \[ n\] | Position eines Scheitelpunkts im homogenen Raum. Berechnen Sie die Position im Bildschirmbereich, indem Sie (x,y,z) durch w dividieren. Jeder Vertex-Shader muss einen Parameter mit dieser Semantik schreiben. | float4 |
 | PSIZE | Punktgröße | float |
-| Mosaik Faktor \[ n\] | Mosaik Faktor | float |
+| TESSFACTOR \[ n\] | Mosaikfaktor | float |
 
-`n` ist eine optionale ganze Zahl zwischen 0 und der Anzahl unterstützter Ressourcen. Beispielsweise POSITION0, TEXCOORD1 usw.
+`n` ist eine optionale ganze Zahl zwischen 0 und der Anzahl der unterstützten Ressourcen. Beispiel: POSITION0, TEXCOORD1 usw.
 
-### <a name="pixel-shader-semantics"></a>Pixel-Shader-Semantik
+### <a name="pixel-shader-semantics"></a>Pixelshadersemantik
 
-Diese Semantik hat eine Bedeutung, wenn Sie an einen Pixel-Shader-Eingabeparameter angefügt wird. Diese Semantik wird in Direct3D 9 und Direct3D 10 und höher unterstützt.
+Diese Semantik hat eine Bedeutung, wenn sie an einen Pixel-Shader-Eingabeparameter angefügt wird. Diese Semantik wird sowohl in Direct3D 9 als auch in Direct3D 10 und höher unterstützt.
 
 <table>
 <colgroup>
@@ -121,141 +123,141 @@ Diese Semantik hat eine Bedeutung, wenn Sie an einen Pixel-Shader-Eingabeparamet
 <tr class="header">
 <th>Eingabe</th>
 <th>BESCHREIBUNG</th>
-<th>type</th>
+<th>Typ</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Farbe [n]</td>
-<td>Diffuses oder Glanz Farben.</td>
+<td>COLOR[n]</td>
+<td>Diffuse oder Glanzfarbe.</td>
 <td>float4</td>
 </tr>
 <tr class="even">
-<td>Texcoord [n]</td>
+<td>TEXCOORD[n]</td>
 <td>Texturkoordinaten</td>
 <td>float4</td>
 </tr>
 <tr class="odd">
-<td>Vface</td>
-<td>Gleit Komma-Skalar, der einen mit der Rückseite ausgerichteten primitiven angibt. Ein negativer Wert steht rückwärts, während ein positiver Wert der Kamera angezeigt wird.
+<td>VFACE</td>
+<td>Gleitkommaskalar, der ein nach hinten gerichtetes Primitiv angibt. Ein negativer Wert wird rückwärts, während ein positiver Wert der Kamera gegenüber steht.
 <blockquote>
 [!Note]<br />
-Diese Semantik ist in <a href="dx-graphics-hlsl-sm3.md">Direct3D 9-Shader-Modell 3,0</a>verfügbar. Verwenden Sie für Direct3D 10 und höher <a href="#semantics-supported-only-for-direct3d-10-and-newer">SV_IsFrontFace</a> .
+Diese Semantik ist in <a href="dx-graphics-hlsl-sm3.md">Direct3D 9 Shader Model 3.0 verfügbar.</a> Verwenden Sie für Direct3D 10 und höher stattdessen <a href="#semantics-supported-only-for-direct3d-10-and-newer">SV_IsFrontFace.</a>
 </blockquote>
 <br/></td>
 <td>float</td>
 </tr>
 <tr class="even">
-<td>Vpos</td>
-<td>Die Pixelposition (x, y) im Bildschirmbereich. Informationen zum Konvertieren eines Direct3D 9-Shaders (der diese Semantik verwendet) in einen Shader für Direct3D 10 und höher finden Sie unter <a href="#direct3d-9-vpos-and-direct3d-10-sv_position">Direct3D 9 vpos und Direct3D 10 SV_Position</a>).</td>
+<td>VPOS</td>
+<td>Die Pixelposition (x,y) im Bildschirmbereich. Informationen zum Konvertieren eines Direct3D 9-Shaders (der diese Semantik verwendet) in einen Direct3D 10- und höher-Shader finden Sie unter <a href="#direct3d-9-vpos-and-direct3d-10-sv_position">Direct3D 9 VPOS und Direct3D 10 SV_Position</a>)</td>
 <td>float2</td>
-</tr>
-<tr class="odd">
-<td>Output</td>
-<td>BESCHREIBUNG</td>
-<td>type</td>
-</tr>
-<tr class="even">
-<td>Farbe [n]</td>
-<td>Ausgabe Farbe</td>
-<td>float4</td>
-</tr>
-<tr class="odd">
-<td>Tiefe [n]</td>
-<td>Ausgabe Tiefe</td>
-<td>float</td>
 </tr>
 </tbody>
 </table>
 
-`n` ist eine optionale ganze Zahl zwischen 0 und der Anzahl unterstützter Ressourcen. Beispielsweise PSIZE0, COLOR1 usw.
+<table>
+<th>Output</th>
+<th>BESCHREIBUNG</th>
+<th>Typ</th>
+</tr>
+<td>COLOR[n]</td>
+<td>Ausgabefarbe</td>
+<td>float4</td>
+</tr>
+<td>DEPTH[n]</td>
+<td>Ausgabetiefe</td>
+<td>float</td>
+</tr>
+</table>
 
-Die Farb Semantik ist nur im Shader-Kompatibilitätsmodus gültig (d. h., wenn der Shader mit d3d10 Shader erstellt wird, um die abwärts \_ \_ Kompatibilität zu aktivieren \_ \_ ).
+`n` ist eine optionale ganze Zahl zwischen 0 und der Anzahl der unterstützten Ressourcen. Beispiel: PSIZE0, COLOR1 usw.
 
-## <a name="semantics-supported-only-for-direct3d-10-and-newer"></a>Die Semantik wird nur für Direct3D 10 und höher unterstützt.
+Die COLOR-Semantik ist nur im Shader-Kompatibilitätsmodus gültig (d. h., wenn der Shader mit D3D10 \_ SHADER \_ ENABLE \_ BACKWARDS COMPATIBILITY erstellt \_ wird).
 
-Die folgenden Typen von Semantik wurden für Direct3D 10 neu eingeführt und sind für Direct3D 9 nicht verfügbar.
+## <a name="semantics-supported-only-for-direct3d-10-and-newer"></a>Semantik wird nur für Direct3D 10 und neuer unterstützt.
 
-- [System-Wert-Semantik](#system-value-semantics)
+Die folgenden Semantiktypen wurden für Direct3D 10 neu eingeführt und sind für Direct3D 9 nicht verfügbar.
+
+- [Systemwertsemantik](#system-value-semantics)
 
 ### <a name="system-value-semantics"></a>System-Value Semantik
 
-Die System-Wert-Semantik ist neu in Direct3D 10. Alle System Werte beginnen mit einem SV- \_ Präfix, ein gängiges Beispiel ist die SV- \_ Position, die von der Raster-Stufe interpretiert wird. Die System Werte sind an anderen Teilen der Pipeline gültig. Beispielsweise kann die SV- \_ Position als Eingabe für einen Vertex-Shader und eine Ausgabe angegeben werden. Pixel-Shader können nur in Parameter mit der SV \_ -Tiefe und der \_ System-Wert-Semantik von SV Target schreiben.
+Die Systemwertsemantik ist neu in Direct3D 10. Alle Systemwerte beginnen mit einem \_ SV-Präfix. Ein gängiges Beispiel ist SV \_ POSITION, das von der Rasterizerphase interpretiert wird. Die Systemwerte sind in anderen Teilen der Pipeline gültig. Die SV-Position kann z. B. \_ als Eingabe für einen Vertex-Shader sowie als Ausgabe angegeben werden. Pixel-Shader können nur in Parameter mit der \_ Systemwertsemantik SV Depth und SV \_ Target schreiben.
 
-Andere System Werte (SV \_ vertexid, SV \_ InstanceId, SV \_ isfrontface) können nur in den ersten aktiven Shader in der Pipeline eingegeben werden, der den jeweiligen Wert interpretieren kann. Anschließend muss die Shader-Funktion die Werte an nachfolgende Stufen übergeben.
+Andere Systemwerte (SV \_ VertexID, SV \_ InstanceID, SV \_ IsFrontFace) können nur in den ersten aktiven Shader in der Pipeline eingegeben werden, der den bestimmten Wert interpretieren kann. Danach muss die Shaderfunktion die Werte an nachfolgende Phasen übergeben.
 
-SV \_ primitiveid ist eine Ausnahme von dieser Regel, die nur in den ersten aktiven Shader in der Pipeline eingegeben werden kann, der den jeweiligen Wert interpretieren kann. die Hardware kann denselben ID-Wert wie die Eingabe für die Hülle-Shader-Stufe, die Domäne-Shader-Stufe und danach die jeweils aktivierte Phase bereitstellen.
+SV PrimitiveID ist eine Ausnahme von dieser Regel, die nur in \_ den ersten aktiven Shader in der Pipeline eingegeben wird, der den bestimmten Wert interpretieren kann. Die Hardware kann den gleichen ID-Wert wie die Eingabe für die Phase des Hüllen-Shaders, den Domänen-Shader und nach der ersten aktivierten Stufe bereitstellen: geometry-shader stage oder pixel-shader stage.
 
-Wenn Mosaik aktiviert ist, sind die Stufen "Hull-Shader" und "Domain-Shader" vorhanden. Für einen bestimmten Patch gilt die gleiche primitiveid für den "Hull-Shader"-Aufruf des Patches und für alle im Mosaik Bereich aufzurufenden Domänen-Shader. Dieselbe primitiveid wird auch an die nächste aktive Phase weitergegeben. Geometry-Shader-Stufe oder Pixel-Shader-Stufe, wenn diese aktiviert ist.
+Wenn das Mosaik aktiviert ist, sind die Stufen "hull-shader" und "domain-shader" vorhanden. Für einen bestimmten Patch gilt die gleiche PrimitiveID für den Hüllen-Shader-Aufruf des Patches und für alle Aufrufe des Domänen-Shaders mit Mosaik. Dieselbe PrimitiveID wird auch an die nächste aktive Phase weitergegeben. geometry-shader stage oder pixel-shader stage ,wenn aktiviert.
 
-Wenn der Geometrie-Shader die SV \_ primitiveid eingibt und NULL oder eine oder mehrere primitive pro Aufruf ausgeben kann, muss der Shader seine eigene Auswahl des SV \_ primitiveid-Werts für jede Ausgabe primitive programmieren, wenn ein weiterer Pixel-Shader den Wert SV \_ primtiveid eingibt.
+Wenn der geometry-Shader SV \_ PrimitiveID eingibt und weil er null oder mindestens einen Primitiven pro Aufruf ausgeben kann, muss der Shader eine eigene Auswahl des SV \_ PrimitiveID-Werts für jedes Primitive ausgeben, wenn ein nachfolgender Pixel-Shader SV \_ PrimtiveID eingibt.
 
-Ein weiteres Beispiel: die "SV \_ primitiveid" kann nicht von der Vertex-Shader-Phase interpretiert werden, da ein Scheitelpunkt ein Member mehrerer primitiver sein kann.
+Als weiteres Beispiel kann SV \_ PrimitiveID nicht von der Vertex-Shader-Stufe interpretiert werden, da ein Scheitelpunkt ein Member mehrerer Primitive sein kann.
 
 Diese Semantik wurde Direct3D 10 hinzugefügt. Sie sind in Direct3D 9 nicht verfügbar.
 
-System-Wert-Semantik für die Raster-Stufe.
+Systemwertsemantik für die Rasterizerphase.
 
-| System-Value Semantik | BESCHREIBUNG | type |
+| System-Value Semantik | Beschreibung | Typ |
 |-|-|-|
-| SV \_ clipdistance \[ n\] | Entfernungs Entfernungs Daten. Bei SV \_ clipdistance-Werten wird davon ausgegangen, dass es sich um einen float32 signed Distance to an eine Ebene handelt. Bei der primitiven Einrichtung werden nur die Rasterung in Pixel aufgerufen, für die die Entfernung der interpoliert Ebenen >= 0 ist. Mehrere Clip-Flächen können gleichzeitig implementiert werden, indem mehrere Komponenten eines oder mehrerer Scheitelpunkt Elemente als SV \_ clipdistance deklariert werden. Die kombinierten Werte für Clip-und Auslesen-Abstände sind höchstens D3D \# \_ Clip-oder auslesen-Entfernungs \_ \_ \_ \_ Komponenten in höchstens D3D Clip- \# \_ \_ oder \_ \_ \_ \_ Auslesen-Entfernungs Register. Verfügbar für alle Shader, die gelesen oder geschrieben werden sollen, mit Ausnahme des Vertex-Shader, der den Wert schreiben, aber nicht als Eingabe annehmen kann.<br/> Das **clipplane** -Attribut funktioniert wie SV \_ clipdistance, funktioniert jedoch auf allen Hardware [Funktionsebenen](../direct3d11/overviews-direct3d-11-devices-downlevel-intro.md) 9 \_ x und höher. Weitere Informationen finden Sie unter [User Clip Plane on Feature Level 9 Hardware](./user-clip-planes-on-10level9.md).<br/> | float |
-| SV \_ culldistance \[ n\] | Entfernungs Entfernungs Daten. Wenn diese Bezeichnung von der Komponente (n) der Vertex-Elemente angenommen wird, wird davon ausgegangen, dass diese Werte als float32 signed Distance to an eine Ebene vorliegen. Primitive werden vollständig verworfen, wenn der Abstand der Ebene für alle Scheitel Punkte im primitiven < 0 ist. Mehrere umfügende Flächen können gleichzeitig verwendet werden, indem mehrere Komponenten eines oder mehrerer Vertex-Elemente als SV \_ culldistance deklariert werden. Die kombinierten Werte für Clip-und Auslesen-Abstände sind höchstens D3D \# \_ Clip-oder auslesen-Entfernungs \_ \_ \_ \_ Komponenten in höchstens D3D Clip- \# \_ \_ oder \_ \_ \_ \_ Auslesen-Entfernungs Register. Verfügbar für alle Shader, die gelesen oder geschrieben werden sollen, mit Ausnahme des Vertex-Shader, der den Wert schreiben, aber nicht als Eingabe annehmen kann.<br/> | float |
-| SV- \_ Abdeckung | Eine Maske, die für Eingabe-, Ausgabe-oder beides eines Pixelshaders angegeben werden kann. <br/> Für die SV- \_ Abdeckung in einem Pixelshader wird die Ausgabe auf PS \_ 4 \_ 1 oder höher unterstützt. <br/> Für die SV- \_ Abdeckung eines Pixelshaders erfordert die Eingabe PS \_ 5 \_ 0 oder höher. <br/> | uint |
-| SV- \_ Tiefe | Tiefen Puffer Daten. Kann von einem Pixelshader geschrieben werden. | float |
-| SV \_ depthgreaterequal | In einem Pixelshader lässt die Auswertungs Tiefe zu, solange der Wert größer oder gleich dem vom Rasterizer festgelegten Wert ist. Ermöglicht das Anpassen der Tiefe, ohne die frühe Z zu deaktivieren. | float |
-| SV \_ depthlessequal | In einem Pixelshader lässt die Auswertungs Tiefe zu, solange der Wert kleiner oder gleich dem Wert ist, der vom Rasterizer bestimmt wird. Ermöglicht das Anpassen der Tiefe, ohne die frühe Z zu deaktivieren. | float |
-| [SV \_ dispatchthreadid](sv-dispatchthreadid.md) | Definiert den globalen Thread Offset innerhalb des dispatchaufrufes pro Dimension der Gruppe. Verfügbar als Eingabe für den Compute-Shader. (schreibgeschützt) | uint3 |
-| [SV \_ domainlocation](sv-domainlocation.md) | Definiert den Speicherort auf der Hülle des aktuellen Domänen Punkts, der ausgewertet wird. Als Eingabe für den Domänen-Shader verfügbar. (schreibgeschützt) | float2 \| 3 |
-| [SV \_ GroupID](sv-groupid.md) | Definiert den Gruppen Offset in einem Dispatch-Befehl pro Dimension des dispatchaufrufes. Verfügbar als Eingabe für den Compute-Shader. (schreibgeschützt) | uint3 |
-| [SV \_ groupIndex](sv-groupindex.md) | Stellt einen vereinfachten Index für einen angegebenen Thread innerhalb einer angegebenen Gruppe bereit. Verfügbar als Eingabe für den Compute-Shader. (schreibgeschützt) | uint |
-| [SV \_ groupthreadid](sv-groupthreadid.md) | Definiert den Thread Offset innerhalb der Gruppe pro Dimension der Gruppe. Verfügbar als Eingabe für den Compute-Shader. (schreibgeschützt) | uint3 |
-| [SV \_ gsinstanceid](sv-gsinstanceid.md) | Definiert die Instanz des Geometry-Shaders. Verfügbar als Eingabe für den Geometry-Shader. Die-Instanz ist erforderlich, da ein Geometry-Shader bis zu 32-mal für denselben Geometry-primitiven aufgerufen werden kann. | uint |
-| SV \_ innercoverage | Stellt unterschätzte konservative rasterisierungsinformationen dar (d. h., ob ein Pixel garantiert vollständig abgedeckt ist). Kann vom Pixelshader gelesen oder geschrieben werden. | |
-| [SV \_ insidetess Factor](sv-insidetessfactor.md) | Definiert den Mosaik Betrag innerhalb einer patchoberfläche. Verfügbar im Hull-Shader zum Schreiben und im Domänen-Shader zum Lesen verfügbar. | float \| float \[ 2\] |
-| SV \_ InstanceId | Pro-Instanz-Bezeichner, der automatisch von der Laufzeit generiert wird (siehe [verwenden System-Generated Werte (Direct3D 10)](../direct3d11/d3d10-graphics-programming-guide-input-assembler-stage-using.md)). Verfügbar für alle Shader. | |
-| SV \_ isfrontface | Gibt an, ob ein Dreieck im Vordergrund steht. Für Linien und Punkte hat isfrontface den Wert true. Bei der Ausnahme handelt es sich um Zeilen, die aus Dreiecke (Wireframe-Modus) gezeichnet werden, wodurch isfrontface auf die gleiche Weise festgelegt wird, wie das Dreieck im Vollbildmodus geren Kann vom Geometry-Shader geschrieben und vom Pixelshader gelesen werden. | bool |
-| [SV \_ outputcontrolpointid](sv-outputcontrolpointid.md) | Definiert den Index der Kontrollpunkt-ID, die durch einen Aufruf des Haupt Einstiegs Punkts des Hull-Shader betrieben wird. Kann nur vom Hull-Shader gelesen werden. | uint |
-| SV- \_ Position | Wenn die SV- \_ Position für die Eingabe in einen Shader deklariert ist, kann Sie einen der beiden folgenden Interpolations Modi angeben: linearnoperspecor linearnoperspectivecentroid, wobei letztere bei der Multisampling-Antialiasing Bereitstellung von Centroid-angedockten xyzw-Werten bewirkt. Wenn die Position in einem Shader verwendet wird, \_ beschreibt die Position des SV den Pixel Speicherort. Verfügbar in allen Shadern, um das Pixel Center mit einem Offset von 0,5 zu erhalten. | float4 |
-| SV \_ primitiveid | Pro primitiver Bezeichner, der automatisch von der Laufzeit generiert wird (siehe [verwenden System-Generated Werte (Direct3D 10)](../direct3d11/d3d10-graphics-programming-guide-input-assembler-stage-using.md)). Kann von den geometry-oder Pixel-Shadern geschrieben und durch die Geometrie-, Pixel-, Hull-oder Domänen-Shader gelesen werden. | uint |
-| SV \_ rendertargetarrayindex | Renderziel-Array Index. Wird auf die Geometrie-Shader-Ausgabe angewendet und gibt den renderzielarray-Slice an, auf den der primitive-Shader verweist. \_Der SV rendertargetarrayindex ist nur gültig, wenn das Renderziel eine Array Ressource ist. Diese Semantik gilt nur für primitive; Wenn ein primitiv mehr als einen Scheitelpunkt hat, wird der Wert aus dem führenden Scheitelpunkt verwendet. Dieser Wert gibt auch an, welches Array Slice einer Tiefe/Schablonen Ansicht für Lese-/Schreibzwecke verwendet wird.<br/> Kann aus dem Geometry-Shader geschrieben und vom Pixelshader gelesen werden.<br/> Wenn [D3D11_FEATURE_DATA_D3D11_OPTIONS3:: vpandrtarrayindexfromanyshaderfeedingrasterizer](/windows/win32/api/d3d11/ns-d3d11-d3d11_feature_data_d3d11_options3) ist `true` , dann \_ wird SV rendertargetarrayindex auf jeden Shader angewendet, der das Rasterizer-Element speist. | uint |
-| SV \_ sampleingedex | Beispiel Daten für den Häufigkeits Index. Verfügbar, das nur vom Pixel-Shader gelesen oder geschrieben werden soll. | uint |
-| SV \_ stencilref | Stellt den aktuellen Pixelshader-Schablonen Verweis Wert dar. Kann nur vom Pixel-Shader geschrieben werden. | uint |
-| SV \_ Target \[ n \] , wobei 0 <= n <= 7 | Der Ausgabewert, der in einem Renderziel gespeichert wird. Der Index gibt an, in welche der 8 möglicherweise gebundenen Renderziele geschrieben werden sollen. Der Wert ist für alle Shader verfügbar. | float \[ 2 \| 3 \| 4\] |
-| [SV-Mosaik \_ Faktor](sv-tessfactor.md) | Definiert den Mosaik Betrag an jedem Rand eines Patches. Verfügbar zum Schreiben im Hull-Shader und lesen im Domänen-Shader. | float \[ 2 \| 3 \| 4\] |
-| SV \_ vertexid | Pro-Vertex-Bezeichner, der automatisch von der Laufzeit generiert wird (siehe [verwenden System-Generated Werte (Direct3D 10)](../direct3d11/d3d10-graphics-programming-guide-input-assembler-stage-using.md)). Nur als Eingabe für den Vertex-Shader verfügbar. | uint |
-| SV \_ viewportarrayindex | Viewport-Array Index. Wird auf die Geometrie-Shader-Ausgabe angewendet und gibt an, welcher Viewport für das primitive verwendet werden soll, das zurzeit geschrieben wird. Kann vom Pixelshader gelesen werden. Der primitive wird transformiert und für den Viewport abgeschnitten, der durch den Index angegeben wird, bevor er an den Rasterizer übergeben wird. Diese Semantik gilt nur für primitive; Wenn ein primitiv mehr als einen Scheitelpunkt hat, wird der Wert aus dem führenden Scheitelpunkt verwendet. <br/> Wenn [D3D11_FEATURE_DATA_D3D11_OPTIONS3:: vpandrtarrayindexfromanyshaderfeedingrasterizer](/windows/win32/api/d3d11/ns-d3d11-d3d11_feature_data_d3d11_options3) ist `true` , dann \_ wird SV viewportarrayindex auf jeden Shader angewendet, der den Rasterizer nährt. | uint |
-| SV \_ shadingrate | Definiert durch Schattierungs Raten [Werte](/windows/win32/api/d3d12/ne-d3d12-d3d12_shading_rate)die Anzahl der Pixel, die von einem Pixelshader-Aufruf für [Variablen Schattierungs Raten der Ebene 2](/windows/win32/api/d3d12/ne-d3d12-d3d12_variable_shading_rate_tier) oder höher geschrieben werden. Kann aus dem Pixelshader gelesen werden. Kann aus einem Scheitelpunkt oder einem Geometry-Shader geschrieben werden. | uint |
+| SV \_ ClipDistance \[ n\] | Clipabstandsdaten. Bei SV ClipDistance-Werten wird jeweils davon ausgegangen, dass es sich um einen \_ Float32-Abstand zu einer Ebene handelt. Das primitive Setup ruft nur die Rasterung in Pixeln auf, für die die interpolierten Ebenenentfernungen >= 0 sind. Mehrere Clipebenen können gleichzeitig implementiert werden, indem mehrere Komponenten eines oder mehrerer Scheitelpunktelemente als SV \_ ClipDistance deklariert werden. Bei den kombinierten Clip- und CULL-Entfernungswerten handelt es sich bei den meisten D3D CLIP- ODER CULL DISTANCE COUNT-Komponenten in den meisten \# \_ \_ \_ \_ \_ D3D CLIP- ODER \# \_ \_ \_ CULL \_ DISTANCE ELEMENT \_ \_ COUNT-Registern. Verfügbar für alle Shader, in die gelesen oder geschrieben werden soll, mit Ausnahme des Vertex-Shaders, der den Wert schreiben, aber nicht als Eingabe verwenden kann.<br/> Das **Clipplanes-Attribut** funktioniert wie SV ClipDistance, funktioniert jedoch auf allen Hardwarefeatures der Ebene \_ 9 x und [](../direct3d11/overviews-direct3d-11-devices-downlevel-intro.md) \_ höher. Weitere Informationen finden Sie unter User clip planes on feature level 9 hardware (Benutzeroberflächenebenen auf Hardware [auf Featureebene 9).](./user-clip-planes-on-10level9.md)<br/> | float |
+| SV \_ CullDistance \[ n\] | Cull-Entfernungsdaten. Wenn Komponenten von Scheitelpunktelement(en) diese Bezeichnung erhalten, werden diese Werte jeweils als float32-Signierter Abstand zu einer Ebene angenommen. Primitive werden vollständig verworfen, wenn die Ebenenentfernung(en) für alle Scheitelungen im Primitiv 0 < ist. Mehrere CULL-Ebenen können gleichzeitig verwendet werden, indem mehrere Komponenten eines oder mehrerer Scheitelpunktelemente als SV \_ CullDistance deklariert werden. Bei den kombinierten Clip- und CULL-Entfernungswerten handelt es sich bei den meisten D3D CLIP- ODER CULL DISTANCE COUNT-Komponenten in den meisten \# \_ \_ \_ \_ \_ D3D CLIP- ODER \# \_ \_ \_ CULL \_ DISTANCE ELEMENT \_ \_ COUNT-Registern. Verfügbar für alle Shader, in die gelesen oder geschrieben werden soll, mit Ausnahme des Vertex-Shaders, der den Wert schreiben, aber nicht als Eingabe verwenden kann.<br/> | float |
+| \_SV-Abdeckung | Eine Maske, die für Eingabe, Ausgabe oder beides eines Pixel-Shaders angegeben werden kann. <br/> Für SV \_ Coverage auf einem Pixel-Shader wird OUTPUT auf PS \_ 4 \_ 1 oder höher unterstützt. <br/> Für SV \_ Coverage auf einem Pixel-Shader erfordert INPUT ps \_ 5 \_ 0 oder höher. <br/> | uint |
+| \_SV-Tiefe | Tiefenpufferdaten. Kann vom Pixel-Shader geschrieben werden. | float |
+| SV \_ DepthGreaterEqual | In einem Pixel-Shader lässt die Ausgabetiefe zu, solange sie größer oder gleich dem vom Rasterizer festgelegten Wert ist. Ermöglicht das Anpassen der Tiefe, ohne das frühe Z zu deaktivieren. | float |
+| SV \_ DepthLessEqual | In einem Pixel-Shader lässt die Ausgabetiefe zu, solange sie kleiner oder gleich dem vom Rasterizer festgelegten Wert ist. Ermöglicht das Anpassen der Tiefe, ohne das frühe Z zu deaktivieren. | float |
+| [SV \_ DispatchThreadID](sv-dispatchthreadid.md) | Definiert den globalen Threadoffset innerhalb des Dispatch-Aufrufs pro Dimension der Gruppe. Verfügbar als Eingabe für den Compute-Shader. (schreibgeschützte) | uint3 |
+| [SV \_ DomainLocation](sv-domainlocation.md) | Definiert den Speicherort auf der Hülle des aktuellen Domänenpunkts, der ausgewertet wird. Verfügbar als Eingabe für den Domänen-Shader. (schreibgeschützte) | float2 \| 3 |
+| [SV \_ GroupID](sv-groupid.md) | Definiert den Gruppenoffset innerhalb eines Dispatchaufrufs pro Dimension des Dispatchaufrufs. Verfügbar als Eingabe für den Compute-Shader. (schreibgeschützt) | uint3 |
+| [SV \_ GroupIndex](sv-groupindex.md) | Stellt einen flachen Index für einen angegebenen Thread innerhalb einer angegebenen Gruppe zur Verfügbar als Eingabe für den Compute-Shader. (schreibgeschützt) | uint |
+| [SV \_ GroupThreadID](sv-groupthreadid.md) | Definiert den Threadoffset innerhalb der Gruppe pro Dimension der Gruppe. Verfügbar als Eingabe für den Compute-Shader. (schreibgeschützt) | uint3 |
+| [SV \_ GSInstanceID](sv-gsinstanceid.md) | Definiert die Instanz des Geometrie-Shaders. Verfügbar als Eingabe für den Geometrie-Shader. Die -Instanz wird benötigt, da ein Geometrie-Shader bis zu 32-mal auf demselben Geometrieprimitiven aufgerufen werden kann. | uint |
+| SV \_ InnerCoverage | Stellt verdeckte konservative Rasterungsinformationen dar (d. h., ob ein Pixel garantiert vollständig abgedeckt ist). Kann vom Pixel-Shader gelesen oder geschrieben werden. | |
+| [SV \_ InsideTessFactor](sv-insidetessfactor.md) | Definiert die Mosaikmenge innerhalb einer Patchoberfläche. Verfügbar im Hüllen-Shader zum Schreiben und im Domänen-Shader zum Lesen. | float \| float \[ 2\] |
+| SV \_ InstanceID | Bezeichner pro Instanz, der automatisch von der Laufzeit generiert wird (siehe [Using System-Generated Values (Direct3D 10) (Verwenden von System-Generated-Werten (Direct3D 10)).](../direct3d11/d3d10-graphics-programming-guide-input-assembler-stage-using.md) Verfügbar für alle Shader. | |
+| SV \_ IsFrontFace | Gibt an, ob ein Dreieck nach vorne gerichtet ist. Für Linien und Punkte hat IsFrontFace den Wert true. Die Ausnahme sind Linien, die aus Dreiecken gezeichnet werden (Wireframe-Modus), wodurch IsFrontFace auf die gleiche Weise wie das Rastern des Dreiecks im Vollbildmodus festgelegt wird. Kann vom Geometry-Shader in geschrieben und vom Pixelshader gelesen werden. | bool |
+| [SV \_ OutputControlPointID](sv-outputcontrolpointid.md) | Definiert den Index der Kontrollpunkt-ID, die durch einen Aufruf des Haupteinstiegspunkts des Hüllen-Shaders betrieben wird. Kann nur vom Hüllen-Shader gelesen werden. | uint |
+| \_SV-Position | Wenn SV \_ Position für die Eingabe für einen Shader deklariert wird, kann einer von zwei Interpolationsmodi angegeben werden: linearNoPerspective oder linearNoPerspectiveCentroid, wobei letzteres bewirkt, dass beim Multisample-Antialiasing mithilfe von "centroid-snapped xyzw" Werte bereitgestellt werden. Bei Verwendung in einem Shader beschreibt SV \_ Position die Pixelposition. Verfügbar in allen Shadern, um die Pixelmitte mit einem Offset von 0,5 abzurufen. | float4 |
+| SV \_ PrimitiveID | Bezeichner pro Primitiver, der automatisch von der Laufzeit generiert wird (siehe [Verwenden von System-Generated Values (Direct3D 10)](../direct3d11/d3d10-graphics-programming-guide-input-assembler-stage-using.md)). Kann von den Geometrie- oder Pixel-Shadern in geschrieben und von den Geometrie-, Pixel-, Hüllen- oder Domänen-Shadern gelesen werden. | uint |
+| SV \_ RenderTargetArrayIndex | Renderzielarrayindex. Wird auf die Ausgabe des Geometrie-Shaders angewendet und gibt den Renderzielarrayslice an, auf den der Pixel-Shader den Primitiven ziehen wird. SV \_ RenderTargetArrayIndex ist nur gültig, wenn das Renderziel eine Arrayressource ist. Diese Semantik gilt nur für Primitive. Wenn ein Primitiver mehr als einen Scheitelpunkt hat, wird der Wert des führenden Scheitelpunkts verwendet. Dieser Wert gibt auch an, welcher Arrayslice einer Tiefen-/Schablonenansicht für Lese-/Schreibzwecke verwendet wird.<br/> Kann aus dem Geometrie-Shader geschrieben und vom Pixel-Shader gelesen werden.<br/> Wenn [D3D11_FEATURE_DATA_D3D11_OPTIONS3::VPAndRTArrayIndexFromAnyShaderFeedingRasterizer](/windows/win32/api/d3d11/ns-d3d11-d3d11_feature_data_d3d11_options3) ist, wird `true` SV RenderTargetArrayIndex auf jeden Shader angewendet, der den Rasterizer \_ einfing. | uint |
+| SV \_ SampleIndex | Beispielhäufigkeitsindexdaten. Verfügbar, um nur vom Pixel-Shader gelesen oder darauf geschrieben werden zu können. | uint |
+| SV \_ StencilRef | Stellt den aktuellen Pixel-Shader-Schablonenverweiswert dar. Kann nur vom Pixel-Shader geschrieben werden. | uint |
+| \_ \[ SV-Ziel n , wobei \] 0 <= n <= 7 | Der Ausgabewert, der in einem Renderziel gespeichert wird. Der Index gibt an, in welche der acht möglicherweise gebundenen Renderziele geschrieben werden soll. Der Wert ist für alle Shader verfügbar. | float \[ 2 \| 3 \| 4\] |
+| [SV \_ TessFactor](sv-tessfactor.md) | Definiert die Mosaikmenge an jedem Rand eines Patches. Verfügbar zum Schreiben im Hüllen-Shader und zum Lesen im Domänen-Shader. | float \[ 2 \| 3 \| 4\] |
+| SV \_ VertexID | Bezeichner pro Scheitelpunkt, der automatisch von der Laufzeit generiert wird (siehe [Using System-Generated Values (Direct3D 10) (Verwenden von System-Generated-Werten (Direct3D 10))](../direct3d11/d3d10-graphics-programming-guide-input-assembler-stage-using.md)). Nur als Eingabe für den Vertex-Shader verfügbar. | uint |
+| SV \_ ViewportArrayIndex | Viewportarrayindex. Wird auf die Geometry-Shaderausgabe angewendet und gibt an, welcher Viewport für den primitiven , der gerade geschrieben wird, verwendet werden soll. Kann vom Pixelshader gelesen werden. Das Primitiv wird transformiert und mit dem Viewport abgeschnitten, der vom Index angegeben wird, bevor er an den Rasterizer übergeben wird. Diese Semantik gilt nur für Primitive. Wenn ein Primitiver über mehr als einen Scheitelpunkt verfügt, wird der Wert des führenden Scheitelpunkts verwendet. <br/> Wenn [D3D11_FEATURE_DATA_D3D11_OPTIONS3::VPAndRTArrayIndexFromAnyShaderFeedingRasterizer](/windows/win32/api/d3d11/ns-d3d11-d3d11_feature_data_d3d11_options3) `true` ist, wird SV \_ ViewportArrayIndex auf jeden Shader angewendet, der den Rasterizer einspeist. | uint |
+| SV \_ ShadingRate | Definiert durch Schattierungsratenwerte die Anzahl der Pixel, die von einem Pixel-Shaderaufruf für Geräte mit [variabler Schattierungsrate (Ebene 2](/windows/win32/api/d3d12/ne-d3d12-d3d12_variable_shading_rate_tier) oder höher) geschrieben wurden. [](/windows/win32/api/d3d12/ne-d3d12-d3d12_shading_rate) Kann aus dem Pixelshader gelesen werden. Kann aus einem Scheitelpunkt- oder Geometrie-Shader geschrieben werden. | uint |
 
-### <a name="limitations-when-writing-sv_depth"></a>Einschränkungen beim Schreiben von SV- \_ Tiefe:
+### <a name="limitations-when-writing-sv_depth"></a>Einschränkungen beim Schreiben von \_ SV-Tiefe:
 
-- Wenn multisamplinggrad (multisampleenable in [**d3d10 \_ Rasterizer \_**](/windows/win32/api/d3d10/ns-d3d10-d3d10_rasterizer_desc)Debug) und das Schreiben eines tiefen Werts (mit einem Pixelshader) verwendet wird, wird auch der einzelne Wert, der **ausgegeben wird,** im [tiefen Test](../direct3d11/d3d10-graphics-programming-guide-depth-stencil.md)verwendet, sodass die Fähigkeit zum Rendern primitiver Kanten bei einer höheren Auflösung bei multisamplinggrad verloren geht.
-- Wenn die dynamische Fluss Steuerung verwendet wird, ist es nicht möglich, zur Kompilierzeit zu bestimmen, ob ein Shader, der die SV-Tiefe in einigen Pfaden schreibt, sicherstellt, dass die \_ SV- \_ Tiefe bei jeder Ausführung geschrieben wird. Wenn beim Deklarieren keine SV-Tiefe geschrieben wird, führt dies zu einem \_ nicht definierten Verhalten (das ggf. das Verwerfen des Pixels einschließt).
-- Alle float32-Werte einschließlich +/-inf und Nan können in die SV-Tiefe geschrieben werden \_ .
-- Das Schreiben von SV- \_ Tiefe ist weiterhin gültig, wenn Sie eine Dual-Source-Farbmischung
+- Wenn Multisampling (MultisampleEnable ist in [**D3D10 \_ RASTERIZER \_ DESC**](/windows/win32/api/d3d10/ns-d3d10-d3d10_rasterizer_desc) **true)** und ein Tiefenwert (mit einem Pixel-Shader) geschrieben wird, wird der einzelne wert auch im [Tiefentest](../direct3d11/d3d10-graphics-programming-guide-depth-stencil.md)verwendet. Daher geht die Möglichkeit zum Rendern primitiver Kanten mit höherer Auflösung verloren, wenn Multisampling durchgeführt wird.
+- Wenn Sie die dynamische Flusssteuerung verwenden, ist es unmöglich, zur Kompilierzeit zu bestimmen, ob ein Shader, der SV Depth in einigen Pfaden schreibt, \_ bei jeder Ausführung garantiert \_ SV-Tiefe schreibt. Fehler beim Schreiben der \_ SV-Tiefe, wenn deklariert wird, führt zu einem nicht definierten Verhalten (das die Verwerfung des Pixels enthalten kann oder nicht).
+- Jeder float32-Wert, einschließlich +/-INF und NaN, kann in SV Depth geschrieben \_ werden.
+- Das Schreiben von \_ SV-Tiefe ist weiterhin gültig, wenn Dual Source Color Blending (Dual Source Color Blending) verwendet wird.
 
 ## <a name="migration-from-direct3d-9-to-direct3d-10-and-later"></a>Migration von Direct3D 9 zu Direct3D 10 und höher
 
-Beim Migrieren von Code von Direct3D 9 zu Direct3D 10 und höher sollten die folgenden Punkte berücksichtigt werden:
+Die folgenden Probleme sollten bei der Migration von Code von Direct3D 9 zu Direct3D 10 und höher berücksichtigt werden:
 
-### <a name="mapping-to-direct3d-9-semantics"></a>Zuordnung zu Direct3D 9-Semantik
+### <a name="mapping-to-direct3d-9-semantics"></a>Zuordnung zur Direct3D 9-Semantik
 
-Einige der Semantik Direct3D 10 und höher werden direkt der Semantik Direct3D 9 zugeordnet.
+Einige der Semantik von Direct3D 10 und höher sind direkt der Direct3D 9-Semantik zuordnen.
 
-| Direct3D 10-Semantik | Direct3D 9 äquivalente Semantik |
+| Direct3D 10-Semantik | Direct3D 9 Equivalent Semantic |
 |-|-|
-| SV- \_ Tiefe | DEPTH |
-| SV- \_ Position | POSITION |
-| SV- \_ Ziel | COLOR |
+| \_SV-Tiefe | DEPTH |
+| \_SV-Position | POSITION |
+| \_SV-Ziel | COLOR |
 
-> [!] Hinweis für Direct3D 9-Entwickler: für Direct3D 9-Ziele muss die Shader-Semantik einer gültigen Direct3D 9-Semantik zugeordnet werden. Aus Gründen der Abwärtskompatibilität werden POSITION0 (und die zugehörigen Variant-Namen) als SV- \_ Ziel behandelt. Farbe wird als SV- \_ Ziel behandelt.
+> [!] Hinweis für Direct3D 9-Entwickler: Für Direct3D 9-Ziele muss die Shadersemantik einer gültigen Direct3D 9-Semantik zuordnen. Für die Abwärtskompatibilität wird POSITION0 (und seine Variantennamen) als \_ SV-Position behandelt, COLOR wird als SV \_ TARGET behandelt.
 
-- [Zuordnung zu Direct3D 9-Semantik](#mapping-to-direct3d-9-semantics)
-- [Direct3D 9 vpos und Direct3D 10 SV \_ Position](#direct3d-9-vpos-and-direct3d-10-sv_position)
-- [Benutzer Clip Flächen in HLSL](#user-clip-planes-in-hlsl)
+- [Zuordnung zur Direct3D 9-Semantik](#mapping-to-direct3d-9-semantics)
+- [Direct3D 9 VPOS und Direct3D 10 SV \_ Position](#direct3d-9-vpos-and-direct3d-10-sv_position)
+- [Benutzeroberflächen in HLSL](#user-clip-planes-in-hlsl)
 
-### <a name="direct3d-9-vpos-and-direct3d-10-sv_position"></a>Direct3D 9 vpos und Direct3D 10 SV \_ Position
+### <a name="direct3d-9-vpos-and-direct3d-10-sv_position"></a>Direct3D 9 VPOS und Direct3D 10 SV \_ Position
 
-Die d3d10 Semantic SV- \_ Position bietet ähnliche Funktionen wie die Semantik des Direct3D 9-Shader Model 3-vpos. Beispielsweise wird in Direct3D 9 die folgende Syntax für einen PixelShader verwendet, der Bildschirmraum Koordinaten verwendet:
+Die semantische SV-Position D3D10 bietet ähnliche Funktionen wie die \_ Direct3D 9-Shadermodell 3-VPOS-Semantik. In Direct3D 9 wird beispielsweise die folgende Syntax für einen Pixel-Shader verwendet, der Bildschirmraumkoordinaten verwendet:
 
 ```HLSL
 float4 psMainD3D9( float4 screenSpace : VPOS ) : COLOR
@@ -264,9 +266,9 @@ float4 psMainD3D9( float4 screenSpace : VPOS ) : COLOR
 }
 ```
 
-Vpos wurde für die Unterstützung von Shader Model 3 hinzugefügt, um Bildschirmraum Koordinaten anzugeben, da die Positions Semantik für Objekt Raumkoordinaten vorgesehen war.
+VPOS wurde für shader model 3-Unterstützung hinzugefügt, um Bildschirmraumkoordinaten anzugeben, da die POSITION-Semantik für Objektraumkoordinaten vorgesehen war.
 
-In Direct3D 10 und höher gibt die SV- \_ Positions Semantik (bei Verwendung im Kontext eines Pixelshaders) Bildschirmraum Koordinaten (Offset um 0,5) an. Daher wäre der Direct3D 9-Shader ungefähr Äquivalent (ohne Berücksichtigung des 0,5-Offsets) für Folgendes:
+In Direct3D 10 und höher gibt die SV-Positionssemantik (bei Verwendung im Kontext eines Pixel-Shaders) Bildschirmraumkoordinaten \_ an (Offset um 0,5). Daher wäre der Direct3D 9-Shader ungefähr gleichwertig (ohne 0,5 Offset) wie folgt:
 
 ```HLSL
 float4 psMainD3D10( float4 screenSpace : SV_Position ) : COLOR
@@ -275,13 +277,13 @@ float4 psMainD3D10( float4 screenSpace : SV_Position ) : COLOR
 }
 ```
 
-Wenn Sie von Direct3D 9 zu Direct3D 10 und höher migrieren, müssen Sie dies beim Übersetzen der Shader beachten.
+Bei der Migration von Direct3D 9 zu Direct3D 10 und höher müssen Sie dies beachten, wenn Sie Ihre Shader übersetzen.
 
-### <a name="user-clip-planes-in-hlsl"></a>Benutzer Clip Flächen in HLSL
+### <a name="user-clip-planes-in-hlsl"></a>Benutzerclipebenen in HLSL
 
-Ab Windows 8 können Sie das **clipplane** -Funktions Attribut in einer HLSL- [Funktionsdeklaration](dx-graphics-hlsl-function-syntax.md) anstelle von SV \_ clipdistance verwenden, damit Ihr Shader auf [Featureebene](../direct3d11/overviews-direct3d-11-devices-downlevel-intro.md) 9 \_ x und auf Featureebene 10 und höher funktioniert. Weitere Informationen finden Sie unter [User Clip Plane on Feature Level 9 Hardware](./user-clip-planes-on-10level9.md).
+Ab Windows 8 können Sie das **Clipplanes-Funktionsattribut** in einer HLSL-Funktionsdeklaration anstelle von SV ClipDistance verwenden, damit Ihr [](dx-graphics-hlsl-function-syntax.md) \_ Shader sowohl auf [Featureebene](../direct3d11/overviews-direct3d-11-devices-downlevel-intro.md) 9 x als auch auf \_ Featureebene 10 und höher funktioniert. Weitere Informationen finden Sie unter [User clip planes on feature level 9 hardware (Benutzer clip planes on feature level 9 hardware ( Benutzer clip planes on feature level 9 hardware](./user-clip-planes-on-10level9.md)).
 
-## <a name="related-topics"></a>Zugehörige Themen
+## <a name="related-topics"></a>Verwandte Themen
 
-* [Sprach Syntax](dx-graphics-hlsl-language-syntax.md)
+* [Sprachsyntax](dx-graphics-hlsl-language-syntax.md)
 * [Variablen (DirectX HLSL)](dx-graphics-hlsl-variables.md)
