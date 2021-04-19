@@ -1,0 +1,137 @@
+---
+description: Ruft die Sicherheits Beschreibung ab, die steuert, wer auf eine DCOM-Anwendung zugreifen kann.
+ms.assetid: 5ddd563b-f731-47ac-8a13-20940adfa86d
+ms.tgt_platform: multiple
+title: Getaccesssecuritydescriptor-Methode der Win32_DCOMApplicationSetting-Klasse
+ms.topic: reference
+ms.date: 05/31/2018
+topic_type:
+- APIRef
+- kbSyntax
+api_name:
+- Win32_DCOMApplicationSetting.GetAccessSecurityDescriptor
+api_type:
+- COM
+api_location:
+- CIMWin32.dll
+ms.openlocfilehash: e8d87150582a425d23988f70f88ea36bc356476a
+ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "106344952"
+---
+# <a name="getaccesssecuritydescriptor-method-of-the-win32_dcomapplicationsetting-class"></a>Getaccesssecuritydescriptor-Methode der Win32 \_ dcomapplicationsetting-Klasse
+
+Die WMI-Methode **getaccesssecuritydescriptor** Ruft die Sicherheits Beschreibung ab, die steuert, wer auf eine DCOM-Anwendung zugreifen kann. Die Sicherheits Beschreibung ist eine Instanz der Win32- [**\_ securityDescriptor**](/previous-versions/windows/desktop/secrcw32prov/win32-securitydescriptor) -Klasse. Das Konto, auf dem das Skript oder die Anwendung ausgeführt wird, das diese Methode aufruft, muss über die Berechtigungen **SeSecurityPrivilege** und **SeRestorePrivilege** verfügen. Weitere Informationen finden Sie unter [Ändern der Zugriffssicherheit für Sicherungs fähige Objekte](/windows/desktop/WmiSdk/changing-access-security-on-securable-objects).
+
+## <a name="syntax"></a>Syntax
+
+
+```mof
+uint32 GetAccessSecurityDescriptor(
+  [out] Win32_SecurityDescriptor Descriptor
+);
+```
+
+
+
+## <a name="parameters"></a>Parameter
+
+<dl> <dt>
+
+*Deskriptor* \[ vorgenommen\]
+</dt> <dd>
+
+Die Sicherheits Beschreibung, die für die DCOM-Anwendung festgelegt werden soll.
+
+</dd> </dl>
+
+## <a name="return-value"></a>Rückgabewert
+
+Gibt einen der Werte zurück, der in der folgenden Liste aufgeführt ist, oder einen anderen Wert, um einen Fehler anzugeben. Weitere Informationen finden Sie unter [WMI-Rückgabe Codes](/windows/desktop/WmiSdk/wmi-return-codes) oder [**WbemErrorEnum**](/windows/desktop/api/wbemdisp/ne-wbemdisp-wbemerrorenum).
+
+<dl> <dt>
+
+**Erfolgreich**
+</dt> <dd>
+
+0
+
+Erfolgreicher Abschluss
+
+</dd> <dt>
+
+**2**
+</dt> <dd>
+
+Der Benutzer hat keinen Zugriff auf die angeforderten Informationen.
+
+</dd> <dt>
+
+**8**
+</dt> <dd>
+
+Unbekannter Fehler.
+
+</dd> <dt>
+
+**9**
+</dt> <dd>
+
+Der Benutzer verfügt nicht über die erforderlichen Berechtigungen zum Ausführen der Methode.
+
+</dd> <dt>
+
+**21**
+</dt> <dd>
+
+Ein im Methoden Aufrufwert angegebener Parameter ist ungültig.
+
+</dd> <dt>
+
+**Andere**
+</dt> <dd>
+
+1 4294967295
+
+</dd> </dl>
+
+## <a name="remarks"></a>Bemerkungen
+
+Die [**Win32- \_ securityDescriptor**](/previous-versions/windows/desktop/secrcw32prov/win32-securitydescriptor) -Instanz stellt einen Datentyp für die [**Sicherheits \_ \_ deskriptorsteuerung**](/windows/desktop/SecAuthZ/security-descriptor-control) dar und enthält eine freigegebene [*Zugriffs Steuerungs Liste*](/windows/desktop/SecGloss/d-gly) (DACL) und eine [*System Zugriffs Steuerungs Liste*](/windows/desktop/SecGloss/s-gly) (SACL). Weitere Informationen finden Sie unter [Access Control Listen](/windows/desktop/SecAuthZ/access-control-lists).
+
+Wenn **SeSecurityPrivilege** beim erhalten einer Sicherheits Beschreibung nicht gewährt oder aktiviert ist, wird nur die DACL in der zurückgegebenen Sicherheits Beschreibung zurückgegeben. Weitere Informationen finden Sie unter [**Berechtigungs Konstanten**](/windows/desktop/WmiSdk/privilege-constants) und [Ausführen privilegierter Vorgänge](/windows/desktop/WmiSdk/executing-privileged-operations).
+
+## <a name="requirements"></a>Anforderungen
+
+
+
+| Anforderung | Wert |
+|-------------------------------------|-----------------------------------------------------------------------------------------|
+| Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
+| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
+
+
+
+## <a name="see-also"></a>Siehe auch
+
+<dl> <dt>
+
+[**Win32- \_ dcomapplicationsetting**](win32-dcomapplicationsetting.md)
+</dt> <dt>
+
+[**Berechtigungs Konstanten**](/windows/desktop/WmiSdk/privilege-constants)
+</dt> <dt>
+
+[WMI-sicherheitsdeskriptorobjekte](/windows/desktop/WmiSdk/wmi-security-descriptor-objects)
+</dt> <dt>
+
+[Ändern der Zugriffssicherheit für Sicherungs fähige Objekte](/windows/desktop/WmiSdk/changing-access-security-on-securable-objects)
+</dt> </dl>
+
+ 
+
