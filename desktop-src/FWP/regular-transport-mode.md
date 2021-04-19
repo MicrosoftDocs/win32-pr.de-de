@@ -4,12 +4,12 @@ description: Im Transportmodus-IPSec-Richtlinien Szenario ist der IPSec-Transpor
 ms.assetid: 303f7cdc-fb7a-4e5c-8291-cadcb45035cb
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: dfb927aff1b3f0e3c7fd13a192f0fcb18fc3ec45
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 8335854c80850e44b860530bbebab05aa3f14273
+ms.sourcegitcommit: 78b64f3865e64768b5319d4f010032ee68924a98
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104390229"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107314933"
 ---
 # <a name="transport-mode"></a>Transportmodus
 
@@ -33,6 +33,7 @@ Um dieses Beispielprogramm gesteuert zu implementieren, verwenden Sie die folgen
      
 
 2.  Fügen Sie für jeden der in Schritt 1 hinzugefügten Kontexte einen Filter mit den folgenden Eigenschaften hinzu. 
+
     | Filter-Eigenschaft        | Wert                                            |
     |------------------------|--------------------------------------------------|
     | Filterbedingungen   | Leer. Der gesamte Datenverkehr entspricht dem Filter.        |
@@ -52,6 +53,7 @@ Um dieses Beispielprogramm gesteuert zu implementieren, verwenden Sie die folgen
      
 
 2.  Fügen Sie für jeden der in Schritt 1 hinzugefügten Kontexte einen Filter mit den folgenden Eigenschaften hinzu. 
+
     | Filter-Eigenschaft        | Wert                                            |
     |------------------------|--------------------------------------------------|
     | Filterbedingungen   | Leer. Der gesamte Datenverkehr entspricht dem Filter.        |
@@ -62,6 +64,7 @@ Um dieses Beispielprogramm gesteuert zu implementieren, verwenden Sie die folgen
 **Auf der swpm- \_ Schicht \_ eingehender \_ Transport \_ V {4 \| 6} einrichten eingehender Filterregeln pro Paket**  
 
 1.  Fügen Sie einen Filter mit den folgenden Eigenschaften hinzu. 
+
     | Filter-Eigenschaft                                                   | Wert                                                         |
     |-------------------------------------------------------------------|---------------------------------------------------------------|
     | "F" **\_ Bedingung für die Filterbedingung für die \_ \_ lokale \_ Adress \_ Typen Bedingung** | [Nlatunicast](/windows/win32/api/nldef/ne-nldef-nl_address_type) |
@@ -70,6 +73,7 @@ Um dieses Beispielprogramm gesteuert zu implementieren, verwenden Sie die folgen
 
         
 2.  Ausnehmen von ICMP-Datenverkehr von IPSec durch Hinzufügen eines Filters mit den folgenden Eigenschaften.
+
     | Filter-Eigenschaft                                                  | Wert                                                                     |
     |------------------------------------------------------------------|---------------------------------------------------------------------------|
     | "F" **\_ Bedingung für die Filterbedingung für die \_ \_ lokale \_ Adress \_ Typen Bedingung** | Nlatunicast                                                               |
@@ -82,6 +86,7 @@ Um dieses Beispielprogramm gesteuert zu implementieren, verwenden Sie die folgen
 **Bei der WPM- \_ Schicht \_ ausgehende \_ Transport \_ V {4 \| 6} Einrichten von ausgehenden Regeln pro Paket Filtern**  
 
 1.  Fügen Sie einen Filter mit den folgenden Eigenschaften hinzu.
+
     | Filter-Eigenschaft                                                   | Wert                                              |
     |-------------------------------------------------------------------|----------------------------------------------------|
     | "F" **\_ Bedingung für die Filterbedingung für die \_ \_ lokale \_ Adress \_ Typen Bedingung** | Nlatunicast                                        |
@@ -90,6 +95,7 @@ Um dieses Beispielprogramm gesteuert zu implementieren, verwenden Sie die folgen
 
         
 2.  Ausnehmen von ICMP-Datenverkehr von IPSec durch Hinzufügen eines Filters mit den folgenden Eigenschaften.
+
     | Filter-Eigenschaft                                                   | Wert                                                                  |
     |-------------------------------------------------------------------|------------------------------------------------------------------------|
     | "F" **\_ Bedingung für die Filterbedingung für die \_ \_ lokale \_ Adress \_ Typen Bedingung** | Nlatunicast                                                            |
