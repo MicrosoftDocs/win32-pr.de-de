@@ -1,9 +1,9 @@
 ---
-title: Fileokstring-Nachricht (kommdlg. h)
-description: Ein Dialogfeld zum Öffnen oder speichern unter sendet die registrierte fileokstring-Nachricht an Ihre Hook-Prozedur, ofnhost-proc, wenn der Benutzer einen Dateinamen angibt, und klickt auf die Schaltfläche OK.
+title: FILEOKSTRING-Nachricht (Commdlg.h)
+description: Ein Dialogfeld Öffnen oder Speichern unter sendet die registrierte FILEOKSTRING-Nachricht an die Hookprozedur OFNHookProc, wenn der Benutzer einen Dateinamen angibt und auf die Schaltfläche OK klickt.
 ms.assetid: 32bf3cc7-76a2-4b78-81d7-682b088c4e14
 keywords:
-- Fileokstring-Meldungs Dialogfelder
+- Dialogfelder für FILEOKSTRING-Meldung
 topic_type:
 - apiref
 api_name:
@@ -16,18 +16,18 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 61208ddebc63f1186c2947416e451231f0bea24e
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: a6fddbb3460f15e1efb946b9bd17f1c85fd031a8
+ms.sourcegitcommit: 8e083a10b3a480dec8a8d74dbd5889f49dea15e4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104478981"
+ms.lasthandoff: 04/17/2021
+ms.locfileid: "107590787"
 ---
-# <a name="fileokstring-message"></a>Fileokstring-Nachricht
+# <a name="fileokstring-message"></a>FILEOKSTRING-Nachricht
 
-\[Ab Windows Vista wurden die Dialogfelder " **Öffnen** " und " **Speichern** unter" im allgemeinen [Element](/previous-versions/windows/desktop/legacy/bb776913(v=vs.85))ersetzt. Es wird empfohlen, dass Sie die allgemeine Element Dialogfeld-API anstelle dieser Dialogfelder aus der allgemeinen Dialogfeld Bibliothek verwenden.\]
+\[Ab Windows Vista wurden die Dialogfelder **Öffnen** und **Speichern unter** allgemein durch das [Dialogfeld "Allgemeines Element"](/windows/win32/shell/common-file-dialog)ersetzt. Es wird empfohlen, die DIALOGFELD-API für allgemeine Elemente anstelle dieser Dialogfelder aus der Common Dialog Box Library zu verwenden.\]
 
-Ein Dialogfeld zum **Öffnen** oder **Speichern** unter sendet die registrierte **fileokstring** -Nachricht an Ihre Hook-Prozedur, [*ofnhost-proc*](/windows/win32/api/commdlg/nc-commdlg-lpofnhookproc), wenn der Benutzer einen Dateinamen angibt, und klickt auf die Schaltfläche **OK** . Die Hook-Prozedur kann den Dateinamen akzeptieren und das Dialogfeld schließen oder den Dateinamen ablehnen und erzwingen, dass das Dialogfeld geöffnet bleibt.
+Ein Dialogfeld **Öffnen** oder **Speichern unter** sendet die registrierte **FILEOKSTRING-Nachricht** an Die Hookprozedur [*OFNHookProc,*](/windows/win32/api/commdlg/nc-commdlg-lpofnhookproc)wenn der Benutzer einen Dateinamen angibt und auf die Schaltfläche **OK** klickt. Die Hookprozedur kann den Dateinamen akzeptieren und zulassen, dass das Dialogfeld geschlossen wird, oder den Dateinamen ablehnen und erzwingen, dass das Dialogfeld geöffnet bleibt.
 
 
 ```C++
@@ -50,19 +50,19 @@ Dieser Parameter wird nicht verwendet.
 *lParam* 
 </dt> <dd>
 
-Ein Zeiger auf eine [**OpenFileName**](/windows/win32/api/commdlg/ns-commdlg-openfilenamea) -Struktur. Der **lpstraufile** -Member dieser Struktur enthält das Laufwerk, den Pfad und den Dateinamen, die vom Benutzer angegeben werden.
+Ein Zeiger auf eine [**OPENFILENAME-Struktur.**](/windows/win32/api/commdlg/ns-commdlg-openfilenamea) Der **lpstrFile-Member** dieser Struktur enthält das Laufwerk, den Pfad und den Dateinamen, die vom Benutzer angegeben werden.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Hook-Prozedur NULL zurückgibt, akzeptiert das Dialogfeld **Öffnen** oder **Speichern** unter den angegebenen Dateinamen und wird geschlossen.
+Wenn die Hookprozedur 0 (null) zurückgibt, akzeptiert das Dialogfeld **Öffnen** oder **Speichern unter** den angegebenen Dateinamen und wird geschlossen.
 
-Wenn die Hook-Prozedur einen Wert ungleich 0 (null) zurückgibt, lehnt das Dialogfeld **Öffnen** oder speichern unter den angegebenen Dateinamen **ab** und bleibt geöffnet.
+Wenn die Hookprozedur einen Wert ungleich 0 (null) zurückgibt, lehnt das Dialogfeld **Öffnen** oder **Speichern unter** den angegebenen Dateinamen ab und bleibt geöffnet.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Die Hook-Prozedur muss die **fileokstring** -Konstante in einem Aufrufen der [**RegisterWindowMessage**](/windows/desktop/api/winuser/nf-winuser-registerwindowmessagea) -Funktion angeben, um den Bezeichner für die vom Dialogfeld gesendete Nachricht abzurufen.
+Die Hookprozedur muss die **FILEOKSTRING-Konstante** in einem Aufruf der [**RegisterWindowMessage-Funktion**](/windows/desktop/api/winuser/nf-winuser-registerwindowmessagea) angeben, um den Bezeichner für die vom Dialogfeld gesendete Nachricht abzurufen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -72,31 +72,31 @@ Die Hook-Prozedur muss die **fileokstring** -Konstante in einem Aufrufen der [**
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Kommdlg. h (Include Windows. h)</dt> </dl> |
-| Unicode- und ANSI-Name<br/>   | **Fileokstringw** (Unicode) und **fileokstraninga** (ANSI)<br/>                                      |
+| Header<br/>                   | <dl> <dt>Commdlg.h (windows.h einschließen)</dt> </dl> |
+| Unicode- und ANSI-Name<br/>   | **FILEOKSTRINGW** (Unicode) und **FILEOKSTRINGA** (ANSI)<br/>                                      |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 **Verweis**
 </dt> <dt>
 
-[**CDN- \_ Datei OK**](cdn-fileok.md)
+[**CDN \_ FILEOK**](cdn-fileok.md)
 </dt> <dt>
 
-[**OpenFileName**](/windows/win32/api/commdlg/ns-commdlg-openfilenamea)
+[**OPENFILENAME**](/windows/win32/api/commdlg/ns-commdlg-openfilenamea)
 </dt> <dt>
 
 [**RegisterWindowMessage**](/windows/desktop/api/winuser/nf-winuser-registerwindowmessagea)
 </dt> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
-[Allgemeine Dialog Feld Bibliothek](common-dialog-box-library.md)
+[Allgemeine Dialogfeldbibliothek](common-dialog-box-library.md)
 </dt> </dl>
 
  

@@ -4,12 +4,12 @@ description: Ein Compute-Shader ist eine programmierbare Shader-Phase, die Micro
 ms.assetid: 02c1f98e-fdd6-49b0-b8b2-efbd472ab599
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 67c890e63b468a993e0d08f678d2276d6ce2adad
-ms.sourcegitcommit: 73417d55867c804274a55abe5ca71bcba7006119
+ms.openlocfilehash: 485e83ab965f14342d235a07810f210e18aadc53
+ms.sourcegitcommit: 556bf3a984f2fc4d18e370329c3043bf3329c93f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "103734753"
+ms.lasthandoff: 04/09/2021
+ms.locfileid: "107222868"
 ---
 # <a name="compute-shader-overview"></a>Übersicht über Compute-Shader
 
@@ -30,7 +30,7 @@ Wenn Sie die Direct3D 11-API und aktualisierte Treiber verwenden, kann die Hardw
 -   Nur eine ungeordnete Zugriffs Ansicht kann an den Shader gebunden werden (D3D11 \_ CS \_ 4 \_ X \_ UAV \_ Register \_ count ist 1).
 -   Nur [rwstructuredbuffer](/windows/desktop/direct3dhlsl/sm5-object-rwstructuredbuffer)s und [rwbyteaddressbuffer](/windows/desktop/direct3dhlsl/sm5-object-rwbyteaddressbuffer)s sind als ungeordnete Zugriffs Sichten verfügbar.
 -   Ein Thread kann nur auf seine eigene Region im groupshared-Speicher zum Schreiben zugreifen, er kann jedoch von einem beliebigen Speicherort aus lesen.
--   [SV \_ GroupIndex](/previous-versions/windows/desktop/legacy/ff471569(v=vs.85)) oder [SV \_ dispatchthreadid](/windows/desktop/direct3dhlsl/sv-dispatchthreadid) muss beim Zugriff auf den **groupshared** -Speicher zum Schreiben verwendet werden.
+-   [SV \_ GroupIndex](/previous-versions/windows/desktop/legacy/ff471569(v=vs.85)) oder [SV \_ groupthreadid](/windows/desktop/direct3dhlsl/sv-groupthreadid) muss beim Zugriff auf den **groupshared** -Speicher zum Schreiben verwendet werden.
 -   **Groupshared** -Speicher ist auf 16 KB pro Gruppe beschränkt.
 -   Ein einzelner Thread ist auf einen 256-Byte-Bereich des **groupshared** -Speichers zum Schreiben beschränkt.
 -   Es sind keine atomarischen Anweisungen verfügbar.
@@ -55,7 +55,7 @@ Beachten Sie beim Verwenden von DirectCompute mit CS \_ 5 \_ 0- [Profilen](/wind
 
 
 
-| Thema                                                                              | BESCHREIBUNG                                                                                                                                                                                                                                                           |
+| Thema                                                                              | Beschreibung                                                                                                                                                                                                                                                           |
 |------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [Neue Ressourcentypen](direct3d-11-advanced-stages-cs-resources.md)<br/>      | In Direct3D 11 wurden mehrere neue Ressourcentypen hinzugefügt.<br/>                                                                                                                                                                                                 |
 | [Zugreifen auf Ressourcen](direct3d-11-advanced-stages-cs-access.md)<br/>        | Es gibt mehrere Möglichkeiten, auf [Ressourcen](overviews-direct3d-11-resources-types.md)zuzugreifen.<br/>                                                                                                                                                                   |
