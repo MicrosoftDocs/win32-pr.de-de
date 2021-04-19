@@ -1,5 +1,5 @@
 ---
-title: Desktopzertifizierungsanforderungen
+title: Desktop Zertifizierungsanforderungen (v3)
 description: Dokument Version 3.3 Dokument Datum, 18. März, in diesem Dokument sind die technischen Anforderungen und Berechtigungs Qualifikationen enthalten, die eine Desktop-App erfüllen muss, um am Windows 8.1 Desktop-App-Zertifizierungsprogramm teilnehmen zu können.
 ms.assetid: BD4765EA-C8A1-4A9F-9C50-479A3612DB85
 ms.topic: article
@@ -9,12 +9,12 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 71a9470605abf266efed516e473a31a497c74b10
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 1a6674b2f1d0d5acc30c12d4bd68a2d0a21724de
+ms.sourcegitcommit: 4d4a6e9ad5de37e467cd3164276771b71e1f113f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104316143"
+ms.lasthandoff: 04/05/2021
+ms.locfileid: "106388889"
 ---
 # <a name="certification-requirements-for-windows-desktop-apps-v33"></a>Zertifizierungsanforderungen für Windows-Desktop-Apps v 3.3
 
