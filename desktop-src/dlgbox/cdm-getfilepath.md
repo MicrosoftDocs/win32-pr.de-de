@@ -1,9 +1,9 @@
 ---
-title: CDM_GETFILEPATH Meldung (kommdlg. h)
-description: Ruft den Pfad und den Dateinamen der ausgewählten Datei in einem Dialogfeld "Öffnen" oder "Speichern unter" im Explorer-Format ab.
+title: CDM_GETFILEPATH Meldung (Commdlg.h)
+description: Ruft den Pfad und den Dateinamen der ausgewählten Datei im Explorer-Stil im Dialogfeld Öffnen oder Speichern unter ab.
 ms.assetid: fad8c5e2-9838-45a8-8c51-4326c989d939
 keywords:
-- Dialog Felder CDM_GETFILEPATH Meldung
+- Dialogfelder für CDM_GETFILEPATH Meldung
 topic_type:
 - apiref
 api_name:
@@ -14,18 +14,18 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f7b7cc278d1d5a2305b3d2a311ce9c82886f9b7a
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: cdb7739cd2ab66362e18cc70f9937e75f80a82d9
+ms.sourcegitcommit: 8e083a10b3a480dec8a8d74dbd5889f49dea15e4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103956944"
+ms.lasthandoff: 04/17/2021
+ms.locfileid: "107590917"
 ---
-# <a name="cdm_getfilepath-message"></a>CDM \_ GetFilePath-Meldung
+# <a name="cdm_getfilepath-message"></a>CDM \_ GETFILEPATH-Nachricht
 
-\[Ab Windows Vista wurden die Dialogfelder " **Öffnen** " und " **Speichern** unter" im allgemeinen [Element](/previous-versions/windows/desktop/legacy/bb776913(v=vs.85))ersetzt. Es wird empfohlen, dass Sie die allgemeine Element Dialogfeld-API anstelle dieser Dialogfelder aus der allgemeinen Dialogfeld Bibliothek verwenden.\]
+\[Ab Windows Vista wurden die Dialogfelder **Öffnen** und **Speichern unter** allgemein durch das [Dialogfeld "Allgemeines Element"](/windows/win32/shell/common-file-dialog)ersetzt. Es wird empfohlen, die DIALOGFELD-API für allgemeine Elemente anstelle dieser Dialogfelder aus der Common Dialog Box Library zu verwenden.\]
 
-Ruft den Pfad und den Dateinamen der ausgewählten Datei in einem Dialogfeld " **Öffnen** " oder "Speichern unter" im Explorer-Format **ab** . Das Dialogfeld muss mit dem **ofn- \_ Explorer** -Flag erstellt worden sein. andernfalls schlägt die Meldung fehl.
+Ruft den Pfad und den Dateinamen der ausgewählten Datei im Explorer-Stil im Dialogfeld **Öffnen** oder **Speichern unter** ab. Das Dialogfeld muss mit dem **\_ OFN-EXPLORER-Flag** erstellt worden sein. Andernfalls schlägt die Meldung fehl.
 
 
 ```C++
@@ -43,20 +43,20 @@ Ruft den Pfad und den Dateinamen der ausgewählten Datei in einem Dialogfeld " *
 *wParam* 
 </dt> <dd>
 
-Die Größe des *LPARAM* -Puffers in Zeichen. Bei der ANSI-Version ist dies die Anzahl der Bytes. bei der Unicode-Version ist dies die Anzahl der Zeichen.
+Die Größe des *lParam-Puffers* in Zeichen. Für die ANSI-Version ist dies die Anzahl der Bytes. für die Unicode-Version ist dies die Anzahl der Zeichen.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Ein Zeiger auf den Puffer, der den Dateinamen und den Pfad empfängt.
+Ein Zeiger auf den Puffer, der den Dateinamen und Pfad empfängt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Nachricht erfolgreich ist, entspricht der Rückgabewert der Größe (in Zeichen) des Datei namens und der Pfad Zeichenfolge, einschließlich des abschließenden NULL-Zeichens. Dies ist entweder die Anzahl von Bytes oder Zeichen, die in den Puffer kopiert werden, oder die erforderliche Puffergröße, wenn der Puffer zu klein ist.
+Wenn die Nachricht erfolgreich ist, entspricht der Rückgabewert der Größe des Dateinamens und der Pfadzeichenfolge in Zeichen, einschließlich des abschließenden NULL-Zeichens. Dies ist entweder die Anzahl von Bytes oder Zeichen, die in den Puffer kopiert werden, oder die erforderliche Puffergröße, wenn der Puffer zu klein ist.
 
 Wenn ein Fehler auftritt, ist der Rückgabewert kleiner als 0 (null).
 
@@ -76,11 +76,11 @@ int CommDlg_OpenSave_GetFilePath(hwnd, lparam, wparam);
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Kommdlg. h (Include Windows. h)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Commdlg.h (windows.h einschließen)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
@@ -93,13 +93,13 @@ int CommDlg_OpenSave_GetFilePath(hwnd, lparam, wparam);
 [**GetSaveFileName**](/windows/desktop/api/Commdlg/nf-commdlg-getsavefilenamea)
 </dt> <dt>
 
-[**OpenFileName**](/windows/win32/api/commdlg/ns-commdlg-openfilenamea)
+[**OPENFILENAME**](/windows/win32/api/commdlg/ns-commdlg-openfilenamea)
 </dt> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
-[Allgemeine Dialog Feld Bibliothek](common-dialog-box-library.md)
+[Allgemeine Dialogfeldbibliothek](common-dialog-box-library.md)
 </dt> </dl>
 
  
