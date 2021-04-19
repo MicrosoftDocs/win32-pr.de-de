@@ -1,0 +1,31 @@
+---
+description: Nachdem ein Ticket Erteilungs Ticket (TGT) und ein Sitzungsschlüssel für den Client eingerichtet wurden, kann der Client einen separaten Sitzungsschlüssel und ein Ticket für den Dienst anfordern.
+ms.assetid: b4f63642-9282-4e11-b40c-eec406b2dd2b
+title: Ticket-Granting-Dienstaustausch
+ms.topic: article
+ms.date: 05/31/2018
+ms.openlocfilehash: d3b227ee551d762abd145ca56c6cced110b6a2dd
+ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "106343803"
+---
+# <a name="ticket-granting-service-exchange"></a><span data-ttu-id="47cab-103">Ticket-Granting-Dienstaustausch</span><span class="sxs-lookup"><span data-stu-id="47cab-103">Ticket-Granting Service Exchange</span></span>
+
+<span data-ttu-id="47cab-104">Nachdem ein Ticket Erteilungs Ticket (TGT) und ein [*Sitzungsschlüssel*](../secgloss/s-gly.md) für den Client eingerichtet wurden, kann der Client einen separaten Sitzungsschlüssel und ein Ticket für den Dienst anfordern.</span><span class="sxs-lookup"><span data-stu-id="47cab-104">After a ticket-granting ticket (TGT) and [*session key*](../secgloss/s-gly.md) have been established for the client, the client can request a separate session key and ticket for the service.</span></span>
+
+<span data-ttu-id="47cab-105">**So fordern Sie ein Ticket für einen anderen Dienst an**</span><span class="sxs-lookup"><span data-stu-id="47cab-105">**To request a ticket for another service**</span></span>
+
+1.  <span data-ttu-id="47cab-106">Der Kerberos-Client auf der Arbeitsstation des Benutzers fordert [*Anmelde*](../secgloss/c-gly.md) Informationen für den Dienst an, indem er an den [*Schlüsselverteilungscenter*](../secgloss/k-gly.md) (KDC) sendet, eine Nachricht vom Typ krb \_ TGS \_ req (Kerberos Ticket-Granting Service Request).</span><span class="sxs-lookup"><span data-stu-id="47cab-106">The Kerberos client on the user's workstation requests [*credentials*](../secgloss/c-gly.md) for the service by sending, to the [*Key Distribution Center*](../secgloss/k-gly.md) (KDC), a message of type KRB\_TGS\_REQ (Kerberos Ticket-Granting Service Request).</span></span> <span data-ttu-id="47cab-107">Diese Nachricht besteht aus der Identität des Diensts, für den der Client Anmelde Informationen anfordert, einer Authentifikator-Nachricht, die mit dem neuen Anmelde [*Sitzungsschlüssel*](../secgloss/s-gly.md)des Benutzers verschlüsselt ist, und dem TGT, der vom [Authentifizierungsdienst Austausch](authentication-service-exchange.md)abgerufen wurde.</span><span class="sxs-lookup"><span data-stu-id="47cab-107">This message consists of the identity of the service for which the client is requesting credentials, an authenticator message encrypted with the user's new logon [*session key*](../secgloss/s-gly.md), and the TGT obtained from the [Authentication Service Exchange](authentication-service-exchange.md).</span></span>
+2.  <span data-ttu-id="47cab-108">Wenn der KDC ein krb- \_ TGS- \_ req empfängt, entschlüsselt der KDC den TGT mit seinem geheimen Schlüssel und extrahiert den Anmelde Sitzungsschlüssel des Benutzers.</span><span class="sxs-lookup"><span data-stu-id="47cab-108">When the KDC receives a KRB\_TGS\_REQ, the KDC decrypts the TGT with its secret key and extracts the user's logon session key.</span></span>
+3.  <span data-ttu-id="47cab-109">Der KDC verwendet den Anmelde [*Sitzungsschlüssel*](../secgloss/s-gly.md) zum Entschlüsseln der Authentifikator-Nachricht des Benutzers und wertet ihn aus.</span><span class="sxs-lookup"><span data-stu-id="47cab-109">The KDC uses the logon [*session key*](../secgloss/s-gly.md) to decrypt the user's authenticator message and evaluates it.</span></span> <span data-ttu-id="47cab-110">Wenn der Authentifikator den Test übergibt, extrahiert der KDC die Autorisierungs Daten des Benutzers aus dem TGT und gibt einen Sitzungsschlüssel aus, den der Benutzer für den angeforderten Server freigeben muss.</span><span class="sxs-lookup"><span data-stu-id="47cab-110">If the authenticator passes the test, the KDC extracts the user's authorization data from the TGT and invents a session key for the user to share with the requested server.</span></span>
+4.  <span data-ttu-id="47cab-111">Der KDC verschlüsselt eine Kopie des Dienst Sitzungsschlüssels mit dem Anmelde Sitzungsschlüssel des Benutzers.</span><span class="sxs-lookup"><span data-stu-id="47cab-111">The KDC encrypts one copy of the service session key with the user's logon session key.</span></span>
+5.  <span data-ttu-id="47cab-112">Der KDC bettet eine andere Kopie des Dienst Sitzungsschlüssels in ein Ticket zusammen mit den Autorisierungs Daten des Benutzers ein und verschlüsselt das Ticket mit dem [*Hauptschlüssel*](../secgloss/m-gly.md)des Servers.</span><span class="sxs-lookup"><span data-stu-id="47cab-112">The KDC embeds another copy of the service session key in a ticket, along with the user's authorization data, and encrypts the ticket with the server's [*master key*](../secgloss/m-gly.md).</span></span>
+6.  <span data-ttu-id="47cab-113">Der KDC sendet diese Anmelde Informationen zurück an den Client, indem er mit einer Nachricht vom Typ krb \_ TGS \_ Rep (Kerberos-Ticket-Granting Dienst Antwort) antwortet.</span><span class="sxs-lookup"><span data-stu-id="47cab-113">The KDC sends these credentials back to the client by replying with a message of type KRB\_TGS\_REP (Kerberos Ticket-Granting Service Reply).</span></span>
+7.  <span data-ttu-id="47cab-114">Wenn der Client die Antwort empfängt, entschlüsselt er den Dienst Sitzungsschlüssel mit dem Anmelde Sitzungsschlüssel des Benutzers und speichert den Dienst Sitzungsschlüssel im Ticket Cache.</span><span class="sxs-lookup"><span data-stu-id="47cab-114">When the client receives the reply, it decrypts the service session key with the user's logon session key and stores the service session key in its ticket cache.</span></span>
+8.  <span data-ttu-id="47cab-115">Der Client extrahiert das Ticket auf den Server und speichert dieses im Ticket Cache.</span><span class="sxs-lookup"><span data-stu-id="47cab-115">The client extracts the ticket to the server and stores that in its ticket cache.</span></span>
+
+ 
+
+ 
