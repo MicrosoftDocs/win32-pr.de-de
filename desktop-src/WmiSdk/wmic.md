@@ -5,12 +5,12 @@ ms.tgt_platform: multiple
 title: wmic
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ed46e8aeab24acb44f51099a6e813e921dd77eaa
-ms.sourcegitcommit: 6515eef99ca0d1bbe3e27d4575e9986f5255f277
+ms.openlocfilehash: 070b21cb21381fb989b81795a6c7e0b787b5c89a
+ms.sourcegitcommit: 556bf3a984f2fc4d18e370329c3043bf3329c93f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/10/2021
-ms.locfileid: "104219405"
+ms.lasthandoff: 04/09/2021
+ms.locfileid: "107222928"
 ---
 # <a name="wmic"></a>wmic
 
@@ -121,7 +121,7 @@ Die Liste enthält die folgenden adversb.
 
 
 
-| Adverbfilter   | BESCHREIBUNG                                                  |
+| Adverbfilter   | Beschreibung                                                  |
 |----------|--------------------------------------------------------------|
 | KURZ    | Der Kernsatz der Eigenschaften.                                  |
 | FULL     | Vollständiger Satz von Eigenschaften. Dies ist das standardmäßige adverbfilter für List. |
@@ -275,7 +275,7 @@ Beispiel: **/User:**_jsmith_
 <span id="_PASSWORD"></span><span id="_password"></span>/Password
 </dt> <dd>
 
-Kennwort, das von WMIC beim Zugriff auf/NPDE-Computer verwendet wird. Das Kennwort ist in der Befehlszeile sichtbar.
+Kennwort, das von WMIC beim Zugriff auf/Node-Computer verwendet wird. Das Kennwort ist in der Befehlszeile sichtbar.
 
 Beispiel: **/Password:**_Password_
 
@@ -363,7 +363,7 @@ Beispiel: **WMIC Exit**
 
 Das [Skript zum Festlegen von IP/Subnetz/Gateway/DNS mithilfe von WMIC](https://Gallery.TechNet.Microsoft.Com/Batch-per-settare-487c1b3f) Sample in der TechNet Gallery beschreibt, wie IP-, Subnetz-, Gateway-und DNS-Einstellungen geändert und aktualisiert werden.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 

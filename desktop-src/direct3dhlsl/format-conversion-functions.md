@@ -9,12 +9,12 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 2842236bfd0a2875576af7235aefa5dce2db8bd6
-ms.sourcegitcommit: cba7f424a292fd7f3a8518947b9466439b455419
+ms.openlocfilehash: 355fb59aa6a94e144daf05942b40d3f685daff51
+ms.sourcegitcommit: 556bf3a984f2fc4d18e370329c3043bf3329c93f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "104993287"
+ms.lasthandoff: 04/09/2021
+ms.locfileid: "107222878"
 ---
 # <a name="format-conversion-functions-hlsl-reference"></a>Formatkonvertierungs Funktionen (HLSL-Referenz)
 
@@ -22,6 +22,8 @@ Der-Abschnitt enthält die Format Konvertierungs Funktionen, die in COMPUTE-und 
 
 -   [Konverterfunktionen](#converter-functions)
 -   [Zugehörige Themen](#related-topics)
+
+> Der D3DX_DXGIFormatConvert. INL-Header wird im Legacy-DirectX-SDK ausgeliefert und ist für die C++-Unterstützung auf xnamath angewiesen. Es ist auch im nuget-Paket [Microsoft. dxsdk. D3DX](https://www.nuget.org/packages/Microsoft.DXSDK.D3DX) enthalten. Die neueste Version verwendet directxmath für die C++-Unterstützung, und alle Funktionen werden im **DirectX** C++-Namespace definiert.
 
 ## <a name="converter-functions"></a>Konverterfunktionen
 
@@ -166,10 +168,6 @@ Der-Abschnitt enthält die Format Konvertierungs Funktionen, die in COMPUTE-und 
 [Entpacken und Verpacken des DXGI- \_ Formats für In-Place Bildbearbeitung](dx-graphics-hlsl-unpacking-packing-dxgi-format.md)
 </dt> </dl>
 
- 
+ 
 
- 
-
-
-
-
+ 
