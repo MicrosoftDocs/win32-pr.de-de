@@ -1,0 +1,28 @@
+---
+description: Die IX509ExtensionMSApplicationPolicies-Schnittstelle stellt die folgenden Methoden zur Verfügung.
+ms.assetid: 71D61D13-28A3-4349-96D4-212039AE33D7
+title: IX509ExtensionMSApplicationPolicies-Methoden
+ms.topic: reference
+ms.date: 05/31/2018
+ms.openlocfilehash: 5096da85bc308ef29326f7eed7064f81cdfe76b7
+ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "106348752"
+---
+# <a name="ix509extensionmsapplicationpolicies-methods"></a><span data-ttu-id="cea12-103">IX509ExtensionMSApplicationPolicies-Methoden</span><span class="sxs-lookup"><span data-stu-id="cea12-103">IX509ExtensionMSApplicationPolicies Methods</span></span>
+
+<span data-ttu-id="cea12-104">Die [**IX509ExtensionMSApplicationPolicies**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509extensionmsapplicationpolicies) -Schnittstelle stellt die folgenden Methoden zur Verfügung.</span><span class="sxs-lookup"><span data-stu-id="cea12-104">The [**IX509ExtensionMSApplicationPolicies**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509extensionmsapplicationpolicies) interface exposes the following methods.</span></span>
+
+## <a name="in-this-section"></a><span data-ttu-id="cea12-105">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="cea12-105">In this section</span></span>
+
+-   [<span data-ttu-id="cea12-106">**Initializedecode-Methode**</span><span class="sxs-lookup"><span data-stu-id="cea12-106">**InitializeDecode Method**</span></span>](/windows/desktop/api/CertEnroll/nf-certenroll-ix509extensionmsapplicationpolicies-initializedecode)
+-   [<span data-ttu-id="cea12-107">**Initializedecode-Methode**</span><span class="sxs-lookup"><span data-stu-id="cea12-107">**InitializeEncode Method**</span></span>](/windows/desktop/api/CertEnroll/nf-certenroll-ix509extensionmsapplicationpolicies-initializeencode)
+
+ 
+
+ 
+
+
+
