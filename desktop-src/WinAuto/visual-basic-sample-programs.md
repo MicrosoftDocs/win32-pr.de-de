@@ -1,0 +1,24 @@
+---
+title: Visual Basic Beispiel Programme
+description: Das Buch Advanced Microsoft Visual Basic 6,0, 2. Edition (Mandelbrot Set International, Ltd.) enthält ein Kapitel, das Microsoft-Active Accessibility erläutert.
+ms.assetid: dd91d9b2-067f-4510-b0a6-be6a511adcc0
+ms.topic: article
+ms.date: 05/31/2018
+ms.openlocfilehash: d994e28f373afc3e54d13d0577208888daf542e9
+ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 09/16/2019
+ms.locfileid: "106341433"
+---
+# <a name="visual-basic-sample-programs"></a>Visual Basic Beispiel Programme
+
+Das Buch *Advanced Microsoft Visual Basic 6,0, 2. Edition* (Mandelbrot Set International, Ltd.) enthält ein Kapitel, das Microsoft-Active Accessibility erläutert. Das Kapitel enthält Beispielcode, in dem veranschaulicht wird, wie wichtige Elemente der Microsoft Active Accessibility-API verwendet werden. (Microsoft Press, ISBN 1-57231-893-7) (Dieses Buch ist möglicherweise nicht in einigen Sprachen und Ländern verfügbar.)
+
+ 
+
+ 
+
+
+
+
