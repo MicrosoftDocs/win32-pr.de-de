@@ -1,0 +1,33 @@
+---
+description: Anwendungen, die Windows Installer 4,0 für die Installation und Wartung unter Windows Vista verwenden, verwenden automatisch den Neustart-Manager, um Systemneustarts zu verringern.
+ms.assetid: 821739ff-f7a7-4192-ad34-254aa7d74d13
+title: Verwenden von Windows Installer mit dem Neustart-Manager
+ms.topic: article
+ms.date: 05/31/2018
+ms.openlocfilehash: 4160b2241c75ec7305accd1ab4d1295a54fa9f65
+ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "106353131"
+---
+# <a name="using-windows-installer-with-restart-manager"></a>Verwenden von Windows Installer mit dem Neustart-Manager
+
+Anwendungen, die Windows Installer 4,0 für die Installation und Wartung unter Windows Vista verwenden, verwenden automatisch den [Neustart-Manager](../rstmgr/restart-manager-portal.md) , um Systemneustarts zu verringern. Das Standardverhalten in Windows Vista besteht darin, Anwendungen herunterzufahren, anstatt das Betriebssystem nach Möglichkeit herunterzufahren und neu zu starten. In Fällen, in denen ein Systemneustart unvermeidlich ist, können Installer die [Neustart-Manager](../rstmgr/restart-manager-portal.md) -API verwenden, um Neustarts so zu planen, dass die Unterbrechung des Arbeits Flusses des Benutzers minimiert wird.
+
+Windows Installer Entwickler können die folgenden Aktionen ausführen, um Ihr Paket für die Zusammenarbeit mit dem [Neustart-Manager](../rstmgr/restart-manager-portal.md)vorzubereiten.
+
+-   Fügen Sie das Dialogfeld [msirmfilesinuse](msirmfilesinuse-dialog.md) zum Paket hinzu. Wenn das Dialogfeld msirmfilesinuse im Paket vorhanden ist, kann der Windows Vista-Benutzer, der eine Installation auf der vollständigen [Benutzeroberflächen Ebene der Benutzeroberfläche](user-interface-levels.md) durchführt, die Option zum automatischen schließen und Neustarten von Anwendungen verwenden. Ein Installationspaket kann Informationen sowohl für das Dialogfeld msirmfilesinuse als auch das Dialogfeld [FilesInUse](filesinuse-dialog.md) enthalten. Das Dialogfeld msirmfilesinuse wird nur angezeigt, wenn das Paket mit mindestens Windows Installer 4,0 unter Windows Vista installiert wird und andernfalls ignoriert wird. Vorhandene Pakete, die nicht über das Dialogfeld msirmfilesinuse verfügen, funktionieren weiterhin mithilfe des Dialog Felds FilesInUse. Eine Anpassungs Transformation kann verwendet werden, um vorhandene Paketen ein msirmfilesinuse-Dialogfeld hinzuzufügen.
+
+    Endbenutzer führen Installationen in der Regel auf der [Ebene der Benutzeroberfläche der Benutzeroberfläche](user-interface-levels.md)aus. Die grundlegende Benutzeroberfläche oder reduzierte Installationen auf Benutzeroberflächen Ebene bieten dem Benutzer die Möglichkeit, den [Neustart-Manager](../rstmgr/restart-manager-portal.md) zu verwenden, um Systemneustarts zu reduzieren, auch wenn das Dialogfeld [msirmfilesinuse](msirmfilesinuse-dialog.md) nicht vorhanden ist. Bei Installationen mit automatischer Benutzeroberflächen Ebene werden Anwendungen und Dienste immer heruntergefahren, und unter Windows Vista sollte immer der Neustart-Manager verwendet werden.
+
+-   Registrieren Sie Anwendungen für einen Neustart mithilfe der [**RegisterApplicationRestart**](/windows/win32/api/winbase/nf-winbase-registerapplicationrestart) -Funktion. Der Neustart-Manager kann nur Anwendungen neu starten, die für den Neustart registriert wurden. Mit dem Neustart-Manager werden registrierte Anwendungen nach der Installation neu gestartet. Wenn für die Installation ein Systemneustart erforderlich ist, startet der Neustart-Manager die registrierte Anwendung nach dem Neustart des Systems neu.
+-   Geben Sie "installlogmode \_ rmfilesinuse" an, wenn Sie einen externen Benutzerschnittstellen Handler mit den Funktionen " [**msisettexternalui**](/windows/desktop/api/Msi/nf-msi-msisetexternaluia) " und " [**msitentexternalu"**](/windows/desktop/api/Msi/nf-msi-msisetexternaluirecord) aktivieren. Windows Installer sendet eine installmessage \_ rmfilesinuse-Nachricht für externe Benutzerschnittstellen Handler, die den Neustart- [Manager](../rstmgr/restart-manager-portal.md)unterstützen. Wenn die Meldung "installmessage rmfilesinuse" von keiner registrierten oder internen Benutzeroberfläche verarbeitet \_ wird, sendet das Installationsprogramm eine installmessage- \_ FilesInUse-Nachricht für Benutzeroberflächen Handler, die das Dialogfeld " [FilesInUse](filesinuse-dialog.md) " unterstützen. Weitere Informationen finden Sie unter [Verwenden des Neustart-Managers mit einer externen Benutzeroberfläche](using-restart-manager-with-an-external-ui-.md).
+-   Benutzerdefinierte Aktionen können Ressourcen hinzufügen, die zu einer [Neustart-Manager](../rstmgr/restart-manager-portal.md) -Sitzung gehören. Die benutzerdefinierte Aktion sollte vor der [InstallValidate](installvalidate-action.md) -Aktion sequenziert werden. Benutzerdefinierte Aktionen können die [**msirestartmanagersessionkey**](msirestartmanagersessionkey.md) -Eigenschaft verwenden, um den Sitzungsschlüssel abzurufen, und sollten die [**rmjoinsession**](/windows/win32/api/restartmanager/nf-restartmanager-rmjoinsession) -und [**RmEndSession**](/windows/win32/api/restartmanager/nf-restartmanager-rmendsession) -Funktionen der Neustart-Manager-API aufrufen. Benutzerdefinierte Aktionen können keine Ressourcen entfernen, die zu einer Neustart-Manager-Sitzung gehören. Benutzerdefinierte Aktionen sollten nicht versuchen, Anwendungen mithilfe der Funktionen [**rmshutdown**](/windows/win32/api/restartmanager/nf-restartmanager-rmshutdown), [**RmGetList**](/windows/win32/api/restartmanager/nf-restartmanager-rmgetlist) und [**rmrestart**](/windows/win32/api/restartmanager/nf-restartmanager-rmrestart) herunterzufahren oder neu zu starten.
+-   Paket Ersteller können eine Bedingung in der [LaunchCondition-Tabelle](launchcondition-table.md) der [**msisystemrebootpending**](msisystemrebootpending.md) -Eigenschaft als Grundlage auswählen, um die Installation des Pakets zu verhindern, wenn ein Systemneustart aussteht.
+-   Paket Ersteller und-Administratoren können die Interaktion des Windows Installer und den Neustart-Manager mithilfe der [**msirestartmanagercontrol**](msirestartmanagercontrol.md)-, [**msidisablermrestart**](msidisablermrestart.md)-und [**msirmshutdown**](msirmshutdown.md) -Eigenschaften und der [disableautomaticapplicationshutdown](disableautomaticapplicationshutdown.md) -Richtlinie steuern.
+-   Anwendungen und Dienste sollten die im Abschnitt [Verwenden von Neustart-Manager](../rstmgr/using-restart-manager.md) der Dokumentation zum [Neustart](../rstmgr/restart-manager-portal.md) -Manager beschriebenen Richtlinien befolgen.
+
+ 
+
+ 
