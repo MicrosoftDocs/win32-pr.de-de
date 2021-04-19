@@ -1,6 +1,6 @@
 ---
-title: 'Samplebias:: samplebias (S, float, float, float)-Funktion'
-description: 'Gibt eine Textur aus, nachdem der Wert "Bias" auf die MipMap-Ebene angewendet wurde, mit einem optionalen Wert, mit dem Sample Level-of-Detail-Werte (LOD) an eine Klammer übergeben werden. | Samplebias:: samplebias (S, float, float, float)-Funktion'
+title: 'Samplebias:: samplebias (S, float, float, float)-Funktion für texturecube'
+description: 'Die samplebias:: samplebias (S, float, float, float)-Funktion für texturecube gibt eine Textur aus, nachdem der Bias-Wert auf die MipMap-Ebene angewendet wurde.'
 ms.assetid: BCDDADD9-D8B0-47C9-A312-5E6AF9C3C07B
 keywords:
 - Samplebias-Funktion HLSL
@@ -13,14 +13,14 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: ae1c14903748f53d9890ff1a4dd9bd806caececf
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 55404f2e32f45e5b19e7b0cd4c109a6d5a8bcc13
+ms.sourcegitcommit: 0e611cdff84ff9f897c59e4e1d2b2d134bc4e133
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104050799"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106370897"
 ---
-# <a name="samplebiassamplebiassfloatfloatfloat-function"></a>Samplebias:: samplebias (S, float, float, float)-Funktion
+# <a name="samplebiassamplebiassfloatfloatfloat-function-for-texturecube"></a>Samplebias:: samplebias (S, float, float, float)-Funktion für texturecube
 
 Gibt eine Textur aus, nachdem der Wert "Bias" auf die MipMap-Ebene angewendet wurde, mit einem optionalen Wert, mit dem Sample Level-of-Detail-Werte (LOD) an eine Klammer übergeben werden.
 
@@ -97,7 +97,7 @@ Typ: **[ **DXGI- \_ Format**](/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi
 
 Das Textur Format, bei dem es sich um einen der im [**DXGI- \_ Format**](/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format)aufgelisteten typisierten Werte handelt.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
