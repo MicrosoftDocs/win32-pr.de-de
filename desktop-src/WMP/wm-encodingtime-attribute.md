@@ -1,0 +1,67 @@
+---
+title: WM/encodingtime-Attribut
+description: Das WM/encodingtime-Attribut ist das Datum und die Uhrzeit, zu denen der Inhalt codiert wurde.
+ms.assetid: 264f379a-0bec-4143-bc23-ab45fb725af6
+keywords:
+- WM/encodingtime-Attribut, Windows Media Player
+topic_type:
+- apiref
+api_name:
+- WM/EncodingTime
+api_type:
+- NA
+ms.topic: reference
+ms.date: 05/31/2018
+ms.openlocfilehash: 659a1ec5b192782370804745da3f232db6e439dd
+ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/22/2021
+ms.locfileid: "106366028"
+---
+# <a name="wmencodingtime-attribute"></a>WM/encodingtime-Attribut
+
+Das **WM/encodingtime-** Attribut ist das Datum und die Uhrzeit, zu denen der Inhalt codiert wurde.
+
+## <a name="applies-to"></a>Gilt für
+
+-   [Audioelemente](audio-item-attributes.md)
+-   [Häufig verwendete Windows Media-Dateiattribute](commonly-used-windows-media-file-attributes.md)
+-   [Wiedergabelisten](playlist-attributes-ref.md)
+-   [Video Elemente](video-item-attributes.md)
+
+## <a name="remarks"></a>Bemerkungen
+
+Dieses Attribut ist sowohl in der Bibliothek als auch in der digitalen Mediendatei gespeichert.
+
+" **Aliationdate** " ist ein Alias für dieses Attribut.
+
+Die SDK-Konstante für das Windows Media-Format für dieses Attribut ist g \_ wszwmencodingtime.
+
+Um zu ermitteln, ob Sie den Wert dieses Attributs ändern können, verwenden Sie die [Media. isread onlyitem](media-isreadonlyitem.md) -Methode.
+
+## <a name="requirements"></a>Anforderungen
+
+
+
+| Anforderung | Wert |
+|--------------------|---------------------------------------------------|
+| Version<br/> | Windows Media Player 9-Serie oder höher<br/> |
+
+
+
+## <a name="see-also"></a>Siehe auch
+
+<dl> <dt>
+
+[**Attribut Verweis**](attribute-reference.md)
+</dt> </dl>
+
+ 
+
+ 
+
+
+
+
+
