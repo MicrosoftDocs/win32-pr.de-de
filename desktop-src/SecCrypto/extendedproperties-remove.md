@@ -1,0 +1,118 @@
+---
+description: Entfernt eine erweiterte Eigenschaft aus der Auflistung.
+ms.assetid: 0329a158-758d-4e73-95a5-bab7307e7d70
+title: ExtendedProperties. Remove-Methode
+ms.topic: reference
+ms.date: 05/31/2018
+topic_type:
+- APIRef
+- kbSyntax
+api_name:
+- ExtendedProperties.Remove
+api_type:
+- COM
+api_location:
+- Capicom.dll
+ms.openlocfilehash: 1774ce0fc8b03bed621c58b0f7a9a0f16a7d4156
+ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/22/2021
+ms.locfileid: "106361969"
+---
+# <a name="extendedpropertiesremove-method"></a>ExtendedProperties. Remove-Methode
+
+\[CAPICOM ist eine nur-32-Bit-Komponente, die für die Verwendung in den folgenden Betriebssystemen verfügbar ist: Windows Server 2008, Windows Vista und Windows XP. Verwenden Sie stattdessen den Platform invoationdienst (PInvoke), um die Win32-API-Funktion [**certgetcertifierecontextproperty**](/windows/desktop/api/Wincrypt/nf-wincrypt-certgetcertificatecontextproperty) aufzurufen und die Eigenschaften abzurufen. Weitere Informationen zu PInvoke finden Sie unter [Tutorial zum Platt Form Aufruf](https://msdn.microsoft.com/library/aa288468.aspx). Die [.net-und CryptoAPI über p/aufrufen: Teil 1](/previous-versions/ms867087(v=msdn.10)#netcryptoapi_topic5) und [.net und CryptoAPI über p/aufrufen: Teil 2](/previous-versions/ms867087(v=msdn.10)#netcryptoapi_topic6) Unterabschnitte der [Erweiterung von .net-Kryptografie mit CAPICOM und p/aufrufen](/previous-versions/ms867087(v=msdn.10)) können ebenfalls hilfreich sein.\]
+
+Mit der **Remove** -Methode wird eine erweiterte Eigenschaft aus der Auflistung entfernt.
+
+## <a name="syntax"></a>Syntax
+
+
+```VB
+ExtendedProperties.Remove( _
+  ByVal propID _
+)
+```
+
+
+
+## <a name="parameters"></a>Parameter
+
+<dl> <dt>
+
+*PROPID* \[ in\]
+</dt> <dd>
+
+Ein Wert der [**CAPICOM \_ PROPID**](capicom-propid.md) -Enumeration, der die CAPICOM-Eigenschaften Bezeichner der erweiterten Eigenschaft definiert, die entfernt werden soll. Dieser Parameter kann einen der folgenden Werte annehmen.
+
+
+
+| Wert                                                                                                                                                                                                                                                           | Bedeutung                                                                                                                                                                                                                                                                                    |
+|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| <span id="CAPICOM_PROPID_UNKNOWN"></span><span id="capicom_propid_unknown"></span><dl> <dt>**CAPICOM \_ PROPID \_ unbekannt**</dt> </dl>                                                                       | Der Typ der Eigenschaft ist nicht bekannt.<br/>                                                                                                                                                                                                                                          |
+| <span id="CAPICOM_PROPID_KEY_PROV_HANDLE"></span><span id="capicom_propid_key_prov_handle"></span><dl> <dt>**CAPICOM \_ PROPID \_ Key \_ Prov \_ handle**</dt> </dl>                                             | Ein Handle für einen Schlüssel Container in einem [*Kryptografiedienstanbieter (kryptografischen Service Provider*](../secgloss/c-gly.md) , CSP).<br/>                                                                                        |
+| <span id="CAPICOM_PROPID_KEY_PROV_INFO"></span><span id="capicom_propid_key_prov_info"></span><dl> <dt>**Proxy Informationen zu CAPICOM \_ PROPID \_ Key \_ \_**</dt> </dl>                                                   | Informationen zu einem Schlüssel Container innerhalb eines CSP.<br/>                                                                                                                                                                                                                                 |
+| <span id="CAPICOM_PROPID_SHA1_HASH"></span><span id="capicom_propid_sha1_hash"></span><dl> <dt>**CAPICOM \_ PROPID \_ SHA1- \_ Hash**</dt> </dl>                                                                | Ein SHA1-Hash Objekt.<br/>                                                                                                                                                                                                                                                             |
+| <span id="CAPICOM_PROPID_HASH_PROP"></span><span id="capicom_propid_hash_prop"></span><dl> <dt>**CAPICOM \_ PROPID- \_ Hash- \_ Prop**</dt> </dl>                                                                | Die Eigenschaften eines Hash Objekts.<br/>                                                                                                                                                                                                                                                |
+| <span id="CAPICOM_PROPID_MD5_HASH"></span><span id="capicom_propid_md5_hash"></span><dl> <dt>**CAPICOM \_ PROPID \_ MD5- \_ Hash**</dt> </dl>                                                                   | Ein MD5-Hash Objekt.<br/>                                                                                                                                                                                                                                                             |
+| <span id="CAPICOM_PROPID_KEY_CONTEXT"></span><span id="capicom_propid_key_context"></span><dl> <dt>**CAPICOM- \_ PROPID- \_ Schlüssel \_ Kontext**</dt> </dl>                                                          | Der Schlüssel [*Kontext*](../secgloss/c-gly.md).<br/>                                                                                                                                                                                                |
+| <span id="CAPICOM_PROPID_KEY_SPEC"></span><span id="capicom_propid_key_spec"></span><dl> <dt>**CAPICOM- \_ PROPID- \_ Schlüssel \_ Spezifikation**</dt> </dl>                                                                   | Die Spezifikationen für einen Schlüssel.<br/>                                                                                                                                                                                                                                                   |
+| <span id="CAPICOM_PROPID_IE30_RESERVED"></span><span id="capicom_propid_ie30_reserved"></span><dl> <dt>**CAPICOM \_ PROPID \_ IE30 \_ reserviert**</dt> </dl>                                                    | Informationen dazu, ob das Objekt in Internet Explorer 3,0 reserviert ist.<br/>                                                                                                                                                                                                      |
+| <span id="CAPICOM_PROPID_PUBKEY_HASH_RESERVED"></span><span id="capicom_propid_pubkey_hash_reserved"></span><dl> <dt>**CAPICOM \_ PROPID \_ Pubkey- \_ Hash \_ reserviert**</dt> </dl>                              | Informationen dazu, ob der Hash des öffentlichen Schlüssels reserviert ist.<br/>                                                                                                                                                                                                               |
+| <span id="CAPICOM_PROPID_ENHKEY_USAGE"></span><span id="capicom_propid_enhkey_usage"></span><dl> <dt>**CAPICOM \_ PROPID \_ enhkey- \_ Verwendung**</dt> </dl>                                                       | [*Erweiterte Schlüssel Verwendung (Enhanced Key Usage*](../secgloss/e-gly.md) , EKU).<br/>                                                                                                                                                              |
+| <span id="CAPICOM_PROPID_CTL_USAGE"></span><span id="capicom_propid_ctl_usage"></span><dl> <dt>**Verwendung von CAPICOM \_ PROPID \_ CTL \_**</dt> </dl>                                                                | Eine CTL ( [*Certificate Trust List*](../secgloss/c-gly.md) )-Verwendung.<br/>                                                                                                                                             |
+| <span id="CAPICOM_PROPID_NEXT_UPDATE_LOCATION"></span><span id="capicom_propid_next_update_location"></span><dl> <dt>**CAPICOM \_ PROPID \_ Nächster \_ Update \_ Speicherort**</dt> </dl>                              | Der Speicherort des nächsten Updates der [*Zertifikat Sperr Liste*](../secgloss/c-gly.md) .<br/>                                                                                               |
+| <span id="CAPICOM_PROPID_FRIENDLY_NAME"></span><span id="capicom_propid_friendly_name"></span><dl> <dt>**CAPICOM- \_ PROPID-Anzeige \_ \_ Name**</dt> </dl>                                                    | Ein lesbarer Name.<br/>                                                                                                                                                                                                                                                          |
+| <span id="CAPICOM_PROPID_PVK_FILE"></span><span id="capicom_propid_pvk_file"></span><dl> <dt>**CAPICOM \_ PROPID \_ PVK- \_ Datei**</dt> </dl>                                                                   | Eine Datei, die einen privaten Schlüssel enthält.<br/>                                                                                                                                                                                                                                             |
+| <span id="CAPICOM_PROPID_DESCRIPTION"></span><span id="capicom_propid_description"></span><dl> <dt>**CAPICOM- \_ PROPID- \_ Beschreibung**</dt> </dl>                                                           | Eine lesbare Beschreibung.<br/>                                                                                                                                                                                                                                                   |
+| <span id="CAPICOM_PROPID_ACCESS_STATE"></span><span id="capicom_propid_access_state"></span><dl> <dt>**CAPICOM- \_ PROPID- \_ Zugriffs \_ Status**</dt> </dl>                                                       | Der Status des Zugriffs.<br/>                                                                                                                                                                                                                                                        |
+| <span id="CAPICOM_PROPID_SIGNATURE_HASH"></span><span id="capicom_propid_signature_hash"></span><dl> <dt>**CAPICOM- \_ PROPID- \_ Signatur \_ Hash**</dt> </dl>                                                 | Ein Hash der Signatur.<br/>                                                                                                                                                                                                                                                        |
+| <span id="CAPICOM_PROPID_SMART_CARD_DATA"></span><span id="capicom_propid_smart_card_data"></span><dl> <dt>**CAPICOM \_ PROPID \_ \_ Smartcard- \_ Daten**</dt> </dl>                                             | Smartcarddaten.<br/>                                                                                                                                                                                                                                                                |
+| <span id="CAPICOM_PROPID_EFS"></span><span id="capicom_propid_efs"></span><dl> <dt>**CAPICOM \_ PROPID \_ EFS**</dt> </dl>                                                                                   | Ein-verschlüsselndes Dateisystem (EFS).<br/>                                                                                                                                                                                                                                                |
+| <span id="CAPICOM_PROPID_FORTEZZA_DATA"></span><span id="capicom_propid_fortezza_data"></span><dl> <dt>**CAPICOM \_ PROPID \_ Fortezza- \_ Daten**</dt> </dl>                                                    | Daten, die mit den kryptografischen Protokollen und Algorithmen erstellt werden, die im Besitz des [*National Institute of Standards and Technology*](../secgloss/n-gly.md) (NIST) sind.<br/> |
+| <span id="CAPICOM_PROPID_ARCHIVED"></span><span id="capicom_propid_archived"></span><dl> <dt>**CAPICOM- \_ PROPID \_ archiviert**</dt> </dl>                                                                    | Informationen dazu, ob das Objekt archiviert wird.<br/>                                                                                                                                                                                                                               |
+| <span id="CAPICOM_PROPID_KEY_IDENTIFIER"></span><span id="capicom_propid_key_identifier"></span><dl> <dt>**CAPICOM- \_ PROPID- \_ Schlüssel \_ Bezeichner**</dt> </dl>                                                 | Ein Schlüssel Bezeichner.<br/>                                                                                                                                                                                                                                                               |
+| <span id="CAPICOM_PROPID_AUTO_ENROLL"></span><span id="capicom_propid_auto_enroll"></span><dl> <dt>**PDB-Registrierung für \_ CAPICOM \_ \_**</dt> </dl>                                                          | Informationen zur automatischen Registrierung für ein Zertifikat.<br/>                                                                                                                                                                                                                                  |
+| <span id="CAPICOM_PROPID_PUBKEY_ALG_PARA"></span><span id="capicom_propid_pubkey_alg_para"></span><dl> <dt>**CAPICOM \_ PROPID \_ Pubkey \_ ALG \_ para**</dt> </dl>                                             | Parameter für einen Algorithmus für öffentliche Schlüssel.<br/>                                                                                                                                                                                                                                          |
+| <span id="CAPICOM_PROPID_CROSS_CERT_DIST_POINTS"></span><span id="capicom_propid_cross_cert_dist_points"></span><dl> <dt>**CAPICOM \_ PROPID- \_ Kreuz \_ Zertifikat-dist- \_ \_ Punkte**</dt> </dl>                       | Informationen, die zum Aktualisieren dynamischer Kreuz Zertifikate verwendet werden.<br/>                                                                                                                                                                                                                          |
+| <span id="CAPICOM_PROPID_ISSUER_PUBLIC_KEY_MD5_HASH"></span><span id="capicom_propid_issuer_public_key_md5_hash"></span><dl> <dt>**MD5- \_ Hash des \_ \_ öffentlichen \_ Schlüssels \_ \_ des CAPICOM PROPID-Ausstellers**</dt> </dl>          | Der MD5-Hash des öffentlichen Schlüssels des Ausstellers.<br/>                                                                                                                                                                                                                                        |
+| <span id="CAPICOM_PROPID_SUBJECT_PUBLIC_KEY_MD5_HASH"></span><span id="capicom_propid_subject_public_key_md5_hash"></span><dl> <dt>**MD5- \_ Hash des \_ \_ öffentlichen \_ Schlüssels \_ \_ für CAPICOM PROPID**</dt> </dl>       | Der MD5-Hash des öffentlichen Schlüssels des Antragstellers.<br/>                                                                                                                                                                                                                                       |
+| <span id="CAPICOM_PROPID_ENROLLMENT"></span><span id="capicom_propid_enrollment"></span><dl> <dt>**CAPICOM- \_ PROPID-Registrierung \_**</dt> </dl>                                                              | Informationen zur Registrierung des Zertifikats.<br/>                                                                                                                                                                                                                                 |
+| <span id="CAPICOM_PROPID_DATE_STAMP"></span><span id="capicom_propid_date_stamp"></span><dl> <dt>**CAPICOM- \_ PROPID- \_ Datums \_ Stempel**</dt> </dl>                                                             | Ein Datumsstempel.<br/>                                                                                                                                                                                                                                                                   |
+| <span id="CAPICOM_PROPID_ISSUER_SERIAL_NUMBER_MD5_HASH"></span><span id="capicom_propid_issuer_serial_number_md5_hash"></span><dl> <dt>**\_ \_ \_ Serien \_ Nummer \_ MD5- \_ Hash des CAPICOM PROPID-Ausstellers**</dt> </dl> | Der MD5-Hash der Seriennummer des Ausstellers.<br/>                                                                                                                                                                                                                                     |
+| <span id="CAPICOM_PROPID_SUBJECT_NAME_MD5_HASH"></span><span id="capicom_propid_subject_name_md5_hash"></span><dl> <dt>**MD5-Hash des CAPICOM PROPID-Antragsteller \_ \_ \_ namens \_ \_**</dt> </dl>                          | Der MD5-Hash des Antragsteller namens.<br/>                                                                                                                                                                                                                                             |
+| <span id="CAPICOM_PROPID_EXTENDED_ERROR_INFO"></span><span id="capicom_propid_extended_error_info"></span><dl> <dt>**Erweiterte CAPICOM \_ PROPID- \_ \_ Fehler \_ Informationen**</dt> </dl>                                 | Erweiterte Informationen zu einem Fehler.<br/>                                                                                                                                                                                                                                            |
+| <span id="CAPICOM_PROPID_RENEWAL"></span><span id="capicom_propid_renewal"></span><dl> <dt>**CAPICOM- \_ PROPID- \_ Erneuerung**</dt> </dl>                                                                       | Informationen zur Erneuerung einer [*Zertifizierungs*](../secgloss/c-gly.md)Stelle.<br/>                                                                                                                     |
+| <span id="CAPICOM_PROPID_ARCHIVED_KEY_HASH"></span><span id="capicom_propid_archived_key_hash"></span><dl> <dt>**der CAPICOM- \_ PROPID- \_ Hash für archivierte \_ Schlüssel \_**</dt> </dl>                                       | Ein archivierter Hash eines Schlüssels.<br/>                                                                                                                                                                                                                                                      |
+| <span id="CAPICOM_PROPID_FIRST_RESERVED"></span><span id="capicom_propid_first_reserved"></span><dl> <dt>**CAPICOM \_ PROPID \_ zuerst \_ reserviert**</dt> </dl>                                                 | Informationen zur ersten Reservierung.<br/>                                                                                                                                                                                                                                        |
+| <span id="CAPICOM_PROPID_LAST_RESERVED"></span><span id="capicom_propid_last_reserved"></span><dl> <dt>**die CAPICOM- \_ PROPID ist \_ zuletzt \_ reserviert.**</dt> </dl>                                                    | Informationen über die letzte Reservierung.<br/>                                                                                                                                                                                                                                  |
+| <span id="CAPICOM_PROPID_FIRST_USER"></span><span id="capicom_propid_first_user"></span><dl> <dt>**CAPICOM \_ PROPID, \_ erster \_ Benutzer**</dt> </dl>                                                             | Informationen zum ersten Benutzer.<br/>                                                                                                                                                                                                                                               |
+| <span id="CAPICOM_PROPID_LAST_USER"></span><span id="capicom_propid_last_user"></span><dl> <dt>**der CAPICOM- \_ PROPID- \_ Letzte \_ Benutzer**</dt> </dl>                                                                | Informationen zum aktuellen Benutzer.<br/>                                                                                                                                                                                                                                         |
+
+
+
+ 
+
+</dd> </dl>
+
+## <a name="return-value"></a>Rückgabewert
+
+Diese Methode gibt keinen Wert zurück.
+
+## <a name="requirements"></a>Anforderungen
+
+
+
+| Anforderung | Wert |
+|----------------------------------|----------------------------------------------------------------------------------------|
+| Ende des Supports (Client)<br/> | Windows Vista<br/>                                                               |
+| Ende des Supports (Server)<br/> | Windows Server 2008<br/>                                                         |
+| Verteilbare Komponente<br/>       | CAPICOM 2,0 oder höher unter Windows Server 2003 und Windows XP<br/>                  |
+| DLL<br/>                   | <dl> <dt>Capicom.dll</dt> </dl> |
+
+
+
+ 
+
+ 
