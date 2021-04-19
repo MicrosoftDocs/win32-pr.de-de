@@ -1,0 +1,85 @@
+---
+description: Der Zähler von pkey \_ Photo \_ Digitalzoom.
+ms.assetid: d497d550-88bf-49dc-99d2-464a7caaac5f
+title: System. Photo. digitalzoomnumerator
+ms.topic: article
+ms.date: 05/31/2018
+ms.openlocfilehash: 373c220fe6261b0fe4d01a79b97f64e8560be7c3
+ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "106348563"
+---
+# <a name="systemphotodigitalzoomnumerator"></a><span data-ttu-id="c6229-103">System. Photo. digitalzoomnumerator</span><span class="sxs-lookup"><span data-stu-id="c6229-103">System.Photo.DigitalZoomNumerator</span></span>
+
+<span data-ttu-id="c6229-104">Der Zähler von pkey \_ Photo \_ Digitalzoom.</span><span class="sxs-lookup"><span data-stu-id="c6229-104">The numerator of PKEY\_Photo\_DigitalZoom.</span></span>
+
+## <a name="windows-10-version-1703-windows-10-version-1607-windows-10-version-1511-windows-10-version-1507-windows-81-windows-8-windows-7-windows-vista"></a><span data-ttu-id="c6229-105">Windows 10, Version 1703, Windows 10, Version 1607, Windows 10, Version 1511, Windows 10, Version 1507, Windows 8.1, Windows 8, Windows 7, Windows Vista</span><span class="sxs-lookup"><span data-stu-id="c6229-105">Windows 10, version 1703, Windows 10, version 1607, Windows 10, version 1511, Windows 10, version 1507, Windows 8.1, Windows 8, Windows 7, Windows Vista</span></span>
+
+```
+propertyDescription
+   name = System.Photo.DigitalZoomNumerator
+   shellPKey = PKEY_Photo_DigitalZoomNumerator
+   formatID = 16CBB924-6500-473B-A5BE-F1599BCBE413
+   propID = 100
+   SearchInfo
+      InInvertedIndex = false
+      IsColumn = false
+   typeInfo
+      type = UInt32
+```
+
+## <a name="remarks"></a><span data-ttu-id="c6229-106">Bemerkungen</span><span class="sxs-lookup"><span data-stu-id="c6229-106">Remarks</span></span>
+
+<span data-ttu-id="c6229-107">Pkey-Werte werden in "propkey. h" definiert.</span><span class="sxs-lookup"><span data-stu-id="c6229-107">PKEY values are defined in Propkey.h.</span></span>
+
+## <a name="related-topics"></a><span data-ttu-id="c6229-108">Zugehörige Themen</span><span class="sxs-lookup"><span data-stu-id="c6229-108">Related topics</span></span>
+
+<dl> <dt>
+
+[<span data-ttu-id="c6229-109">propertydescription</span><span class="sxs-lookup"><span data-stu-id="c6229-109">propertyDescription</span></span>](./propdesc-schema-propertydescription.md)
+</dt> <dt>
+
+[<span data-ttu-id="c6229-110">SearchInfo</span><span class="sxs-lookup"><span data-stu-id="c6229-110">searchInfo</span></span>](./propdesc-schema-searchinfo.md)
+</dt> <dt>
+
+[<span data-ttu-id="c6229-111">Labelinfo</span><span class="sxs-lookup"><span data-stu-id="c6229-111">labelInfo</span></span>](./propdesc-schema-labelinfo.md)
+</dt> <dt>
+
+[<span data-ttu-id="c6229-112">TypeInfo</span><span class="sxs-lookup"><span data-stu-id="c6229-112">typeInfo</span></span>](./propdesc-schema-typeinfo.md)
+</dt> <dt>
+
+[<span data-ttu-id="c6229-113">Display Info</span><span class="sxs-lookup"><span data-stu-id="c6229-113">displayInfo</span></span>](./propdesc-schema-displayinfo.md)
+</dt> <dt>
+
+[<span data-ttu-id="c6229-114">StringFormat</span><span class="sxs-lookup"><span data-stu-id="c6229-114">stringFormat</span></span>](./propdesc-schema-stringformat.md)
+</dt> <dt>
+
+[<span data-ttu-id="c6229-115">BooleanFormat</span><span class="sxs-lookup"><span data-stu-id="c6229-115">booleanFormat</span></span>](./propdesc-schema-booleanformat.md)
+</dt> <dt>
+
+[<span data-ttu-id="c6229-116">NumberFormat</span><span class="sxs-lookup"><span data-stu-id="c6229-116">numberFormat</span></span>](./propdesc-schema-numberformat.md)
+</dt> <dt>
+
+[<span data-ttu-id="c6229-117">dateTimeFormat</span><span class="sxs-lookup"><span data-stu-id="c6229-117">dateTimeFormat</span></span>](./propdesc-schema-datetimeformat.md)
+</dt> <dt>
+
+[<span data-ttu-id="c6229-118">enumeratedlist</span><span class="sxs-lookup"><span data-stu-id="c6229-118">enumeratedList</span></span>](./propdesc-schema-enumeratedlist.md)
+</dt> <dt>
+
+[<span data-ttu-id="c6229-119">DrawControl</span><span class="sxs-lookup"><span data-stu-id="c6229-119">drawControl</span></span>](./propdesc-schema-drawcontrol.md)
+</dt> <dt>
+
+[<span data-ttu-id="c6229-120">editcontrol</span><span class="sxs-lookup"><span data-stu-id="c6229-120">editControl</span></span>](./propdesc-schema-editcontrol.md)
+</dt> <dt>
+
+[<span data-ttu-id="c6229-121">FilterControl</span><span class="sxs-lookup"><span data-stu-id="c6229-121">filterControl</span></span>](./propdesc-schema-filtercontrol.md)
+</dt> <dt>
+
+[<span data-ttu-id="c6229-122">querycontrol</span><span class="sxs-lookup"><span data-stu-id="c6229-122">queryControl</span></span>](./propdesc-schema-querycontrol.md)
+</dt> </dl>
+
+ 
+
+ 

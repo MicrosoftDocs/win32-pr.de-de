@@ -1,0 +1,29 @@
+---
+description: Der Windows Installer kann die Verfügbarkeit einer Anwendung für Benutzer oder andere Anwendungen ankündigen, ohne die Anwendung tatsächlich zu installieren.
+ms.assetid: 67170daa-448a-4a20-b38a-2dd36c95440f
+title: Werbung
+ms.topic: article
+ms.date: 05/31/2018
+ms.openlocfilehash: b0bb31f14fb4cd6f589e94939afdd5575df52c43
+ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "106362426"
+---
+# <a name="advertisement"></a><span data-ttu-id="1a035-103">Werbung</span><span class="sxs-lookup"><span data-stu-id="1a035-103">Advertisement</span></span>
+
+<span data-ttu-id="1a035-104">Der Windows Installer kann die Verfügbarkeit einer Anwendung für Benutzer oder andere Anwendungen ankündigen, ohne die Anwendung tatsächlich zu installieren.</span><span class="sxs-lookup"><span data-stu-id="1a035-104">The Windows Installer can advertise the availability of an application to users or other applications without actually installing the application.</span></span> <span data-ttu-id="1a035-105">Wenn eine Anwendung angekündigt wird, werden dem Benutzer oder anderen Anwendungen nur die Schnittstellen angezeigt, die zum Laden und Starten der Anwendung erforderlich sind.</span><span class="sxs-lookup"><span data-stu-id="1a035-105">If an application is advertised, only the interfaces required for loading and launching the application are presented to the user or other applications.</span></span> <span data-ttu-id="1a035-106">Wenn ein Benutzer oder eine Anwendung eine angekündigte Oberfläche aktiviert, fährt der Installer mit der Installation der erforderlichen Komponenten fort, wie unter [Installation nach Bedarf](installation-on-demand.md)beschrieben.</span><span class="sxs-lookup"><span data-stu-id="1a035-106">If a user or application activates an advertised interface the installer then proceeds to install the necessary components as described in [Installation-On-Demand](installation-on-demand.md).</span></span>
+
+<span data-ttu-id="1a035-107">Die beiden Arten der Werbung sind das zuweisen und veröffentlichen.</span><span class="sxs-lookup"><span data-stu-id="1a035-107">The two types of advertising are assigning and publishing.</span></span> <span data-ttu-id="1a035-108">Eine Anwendung wird für einen Benutzer installiert, wenn die Anwendung dem Benutzer zugewiesen wird.</span><span class="sxs-lookup"><span data-stu-id="1a035-108">An application appears installed to a user when that application is assigned to the user.</span></span> <span data-ttu-id="1a035-109">Das **Startmenü** enthält die entsprechenden Tastenkombinationen, Symbole werden angezeigt, Dateien sind der Anwendung zugeordnet, und Registrierungseinträge spiegeln die Installation der Anwendung wider.</span><span class="sxs-lookup"><span data-stu-id="1a035-109">The **Start** menu contains the appropriate shortcuts, icons are displayed, files are associated with the application, and registry entries reflect the application's installation.</span></span> <span data-ttu-id="1a035-110">Wenn der Benutzer versucht, eine zugewiesene Anwendung zu öffnen, wird er nach Bedarf installiert.</span><span class="sxs-lookup"><span data-stu-id="1a035-110">When the user tries to open an assigned application it is installed upon demand.</span></span>
+
+<span data-ttu-id="1a035-111">Das Installationsprogramm unterstützt die Ankündigung von Anwendungen und Features entsprechend dem Betriebssystem.</span><span class="sxs-lookup"><span data-stu-id="1a035-111">The installer supports the advertisement of applications and features according to the operating system.</span></span> <span data-ttu-id="1a035-112">Der Installer registriert com-Klassen Informationen für zugewiesene Anwendungen ab Windows XP.</span><span class="sxs-lookup"><span data-stu-id="1a035-112">The installer registers COM class information for assigned applications beginning with Windows XP.</span></span> <span data-ttu-id="1a035-113">Dadurch kann das Installationsprogramm die Anwendung bei der Erstellung einer Instanz einer angekündigten Klasse installieren.</span><span class="sxs-lookup"><span data-stu-id="1a035-113">This enables the installer to install the application upon the creation of an instance of an advertised class.</span></span> <span data-ttu-id="1a035-114">Weitere Informationen finden Sie unter [Platt Form Unterstützung für Werbung](platform-support-of-advertisement.md).</span><span class="sxs-lookup"><span data-stu-id="1a035-114">For more information, see [Platform Support of Advertisement](platform-support-of-advertisement.md).</span></span>
+
+<span data-ttu-id="1a035-115">Sie können eine Anwendung auf dem Server ab Windows Server 2003 veröffentlichen.</span><span class="sxs-lookup"><span data-stu-id="1a035-115">You can publish an application from the server beginning with Windows Server 2003.</span></span> <span data-ttu-id="1a035-116">Die veröffentlichte Anwendung wird dann über die Datei Zuordnung oder den MIME-Typ (Mehrzweck-Internet Mail Erweiterung) installiert.</span><span class="sxs-lookup"><span data-stu-id="1a035-116">The published application is then installed through its file association or Multipurpose Internet Mail Extension (MIME) type.</span></span> <span data-ttu-id="1a035-117">Bei der Veröffentlichung wird die Benutzeroberfläche nicht mit den Symbolen der Anwendung aufgefüllt.</span><span class="sxs-lookup"><span data-stu-id="1a035-117">Publishing does not populate the user interface with any of the application's icons.</span></span> <span data-ttu-id="1a035-118">Das Client Betriebssystem kann eine veröffentlichte Anwendung ab Windows XP installieren.</span><span class="sxs-lookup"><span data-stu-id="1a035-118">The client operating system can install a published application beginning with Windows XP.</span></span>
+
+ 
+
+ 
+
+
+
