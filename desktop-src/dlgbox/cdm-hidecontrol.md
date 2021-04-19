@@ -1,9 +1,9 @@
 ---
-title: CDM_HIDECONTROL Meldung (kommdlg. h)
-description: Blendet das angegebene Steuerelement in einem Dialogfeld zum Öffnen oder speichern unter im Explorer-Format aus.
+title: CDM_HIDECONTROL Meldung (Commdlg.h)
+description: Blendet das angegebene Steuerelement im Explorer-Stil im Dialogfeld Öffnen oder Speichern unter aus.
 ms.assetid: 5bf7f861-d38c-491a-89f0-5b3dfce8abfc
 keywords:
-- Dialog Felder CDM_HIDECONTROL Meldung
+- Dialogfelder für CDM_HIDECONTROL Meldung
 topic_type:
 - apiref
 api_name:
@@ -14,18 +14,18 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ff632b7d1e3c24c84f73498846db9e6bfa68fd74
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 7c0f2f41017373d9064da8f1024066f131063d9d
+ms.sourcegitcommit: 8e083a10b3a480dec8a8d74dbd5889f49dea15e4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106346718"
+ms.lasthandoff: 04/17/2021
+ms.locfileid: "107590877"
 ---
-# <a name="cdm_hidecontrol-message"></a>CDM- \_ hidecontrol-Meldung
+# <a name="cdm_hidecontrol-message"></a>CDM \_ HIDECONTROL-Nachricht
 
-\[Ab Windows Vista wurden die Dialogfelder " **Öffnen** " und " **Speichern** unter" im allgemeinen [Element](/previous-versions/windows/desktop/legacy/bb776913(v=vs.85))ersetzt. Es wird empfohlen, dass Sie die allgemeine Element Dialogfeld-API anstelle dieser Dialogfelder aus der allgemeinen Dialogfeld Bibliothek verwenden.\]
+\[Ab Windows Vista wurden die Dialogfelder **Öffnen** und **Speichern unter** allgemein durch das [Dialogfeld "Allgemeines Element"](/windows/win32/shell/common-file-dialog)ersetzt. Es wird empfohlen, die DIALOGFELD-API für allgemeine Elemente anstelle dieser Dialogfelder aus der Common Dialog Box Library zu verwenden.\]
 
-Blendet das angegebene Steuerelement in einem Dialogfeld zum **Öffnen** oder **Speichern** unter im Explorer-Format aus. Das Dialogfeld muss mit dem **ofn- \_ Explorer** -Flag erstellt worden sein. andernfalls schlägt die Meldung fehl.
+Blendet das angegebene Steuerelement im Explorer-Stil im Dialogfeld **Öffnen** oder **Speichern unter** aus. Das Dialogfeld muss mit dem **\_ OFN-EXPLORER-Flag** erstellt worden sein. Andernfalls schlägt die Meldung fehl.
 
 
 ```C++
@@ -43,7 +43,7 @@ Blendet das angegebene Steuerelement in einem Dialogfeld zum **Öffnen** oder **
 *wParam* 
 </dt> <dd>
 
-Der Bezeichner des Steuer Elements, das ausgeblendet werden soll.
+Der Bezeichner des steuerelements, das ausgeblendet werden soll.
 
 </dd> <dt>
 
@@ -74,11 +74,11 @@ void CommDlg_OpenSave_HideControl(hwnd, wparam);
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Kommdlg. h (Include Windows. h)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Commdlg.h (windows.h einschließen)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
@@ -91,13 +91,13 @@ void CommDlg_OpenSave_HideControl(hwnd, wparam);
 [**GetSaveFileName**](/windows/desktop/api/Commdlg/nf-commdlg-getsavefilenamea)
 </dt> <dt>
 
-[**OpenFileName**](/windows/win32/api/commdlg/ns-commdlg-openfilenamea)
+[**OPENFILENAME**](/windows/win32/api/commdlg/ns-commdlg-openfilenamea)
 </dt> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
-[Allgemeine Dialog Feld Bibliothek](common-dialog-box-library.md)
+[Allgemeine Dialogfeldbibliothek](common-dialog-box-library.md)
 </dt> </dl>
 
  
