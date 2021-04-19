@@ -1,21 +1,21 @@
 ---
 description: Gibt eine WSDL-Datei an, die für Vertragsinformationen verarbeitet werden soll.
 ms.assetid: d8f630cd-0541-431b-86a8-792846a85ea0
-title: WSDL-Element
+title: wsdl-Element
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: eb54f946f32fb4962b8384dea7c6cf4b3c0ebe3c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: dbcb96e063a289e16d5e459b59cb8808a763618a
+ms.sourcegitcommit: 59ec383331366f8a62c94bb88468ca03e95c43f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104216151"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107380734"
 ---
-# <a name="wsdl-element"></a>WSDL-Element
+# <a name="wsdl-element"></a>wsdl-Element
 
 Gibt eine WSDL-Datei an, die für Vertragsinformationen verarbeitet werden soll.
 
-## <a name="usage"></a>Verbrauch
+## <a name="usage"></a>Verwendung
 
 ``` syntax
 <wsdl>
@@ -31,11 +31,11 @@ Es gibt keine Attribute.
 
 
 
-| Element                                           | BESCHREIBUNG                                                                                                                                       |
+| Element                                           | Beschreibung                                                                                                                                       |
 |---------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**excludeimport**](excludeimport.md)<br/> | Verhindert die Generierung von Import-Anweisungen für angegebene Ziele, die in einem <WSDL: Import>-Element in einer WSDL-Datei genannt werden. <br/> <br/> |
-| [**importhint**](importhint.md)<br/>       | Gibt den Download Speicherort für eine <WSDL: Import-> Direktive an, die nicht explizit einen Speicherort angibt.<br/> <br/>           |
-| [**path**](path.md)<br/>                   | Die Datei und der Pfad der WSDL-Eingabedatei.<br/> <br/>                                                                                      |
+| [**excludeImport**](excludeimport.md)<br/> | Verhindert die Generierung von Importanweisungen für angegebene Ziele, die in einem \<wsdl:import> -Element in einer WSDL-Datei benannt sind. <br/> <br/> |
+| [**importHint**](importhint.md)<br/>       | Gibt den Downloadspeicherort für eine \<wsdl:import> -Direktive an, die nicht explizit einen Speicherort angibt.<br/> <br/>           |
+| [**Pfad**](path.md)<br/>                   | Datei und Pfad der WSDL-Eingabedatei.<br/> <br/>                                                                                      |
 
 
 
@@ -53,15 +53,15 @@ Es gibt keine Attribute.
 
 
 
-| Element                                     | BESCHREIBUNG                                                                          |
+| Element                                     | Beschreibung                                                                          |
 |---------------------------------------------|--------------------------------------------------------------------------------------|
-| [**wsdcodegen**](wsdcodegen.md)<br/> | Das Stamm Element einer XML-Skriptdatei des WSDAPI-Code-Generators.<br/> <br/> |
+| [**wsdCodeGen**](wsdcodegen.md)<br/> | Das Stammelement einer WSDAPI-Codegenerator-XML-Skriptdatei.<br/> <br/> |
 
 
 
 ## <a name="remarks"></a>Bemerkungen
 
-Alle [**importhint**](importhint.md) -oder [**excludeimport**](excludeimport.md) -Elemente, die nach dem [**path**](path.md) -Element in einer XML-Konfigurationsdatei angezeigt werden, werden ignoriert.
+Alle [**importHint-**](importhint.md) oder [**excludeImport-Elemente,**](excludeimport.md) die nach dem [**Path-Element**](path.md) in einer XML-Konfigurationsdatei angezeigt werden, werden ignoriert.
 
 ## <a name="element-information"></a>Elementinformationen
 

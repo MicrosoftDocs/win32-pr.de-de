@@ -1,5 +1,5 @@
 ---
-title: Treuhändrootca-Element (servervalidationparameters)
+title: Treuhändrootca (servervalidationparameters)-Element (v1)
 description: Zeichnet den Fingerabdruck der Stamm Zertifizierungsstellen (CAS) auf, die vom Client als vertrauenswürdig eingestuft werden. | Treuhändrootca-Element (servervalidationparameters)
 ms.assetid: f0485dcc-8610-4c5b-b4db-6f2a77057489
 keywords:
@@ -14,12 +14,12 @@ ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: e62b691c5075f1a42f87e558a9a1f0795b90e8bb
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 17e1b81e080d48ac8fae4f082c3cf4b46bac858e
+ms.sourcegitcommit: 4d4a6e9ad5de37e467cd3164276771b71e1f113f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "103869684"
+ms.lasthandoff: 04/05/2021
+ms.locfileid: "106389077"
 ---
 # <a name="trustedrootca-servervalidationparameters-element"></a>Treuhändrootca-Element (servervalidationparameters)
 
