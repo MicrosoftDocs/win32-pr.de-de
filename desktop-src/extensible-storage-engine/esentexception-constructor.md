@@ -1,6 +1,6 @@
 ---
 description: Weitere Informationen finden Sie in der Liste der esentexception-Konstruktorüberladungen.
-title: Esentexception-Konstruktor (Microsoft. ISAM. ESENT)
+title: Esentexception-Konstruktor (Microsoft. ISAM. ESENT) Überladungs Liste
 TOCTitle: 'EsentException constructor '
 ms:assetid: Overload:Microsoft.Isam.Esent.EsentException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.esentexception.esentexception(v=EXCHG.10)
@@ -14,12 +14,12 @@ dev_langs:
 - JScript
 - VB
 - other
-ms.openlocfilehash: ed0e600bb3116c12f1dac0c3ee9cc563394c2d6c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e53a1611e052f2582be3b268a9f72b3bc9488a1c
+ms.sourcegitcommit: 4d4a6e9ad5de37e467cd3164276771b71e1f113f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104560425"
+ms.lasthandoff: 04/05/2021
+ms.locfileid: "106388826"
 ---
 # <a name="esentexception-constructor-overload-list"></a>Esentexception-konstruktorüberladungs Liste
 
