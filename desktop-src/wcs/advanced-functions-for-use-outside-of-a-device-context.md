@@ -1,0 +1,59 @@
+---
+title: Erweiterte Funktionen zur Verwendung außerhalb eines Gerätekontexts
+description: Diese Funktionen bieten erweiterte Funktionen für die Farbverwaltung außerhalb der Geräte Kontexte.
+ms.assetid: 2f742743-094a-44b8-816b-24246607caeb
+keywords:
+- Windows Color System (WCS), Funktionen
+- WCS (Windows Color System), Funktionen
+- Bild Farbverwaltung, Funktionen
+- Farbverwaltung, Funktionen
+- Farben, Funktionen
+- WCS-Referenz, Funktionen
+- Referenz für WCs, Funktionen
+ms.localizationpriority: high
+ms.topic: article
+ms.date: 05/31/2018
+ms.openlocfilehash: d04b7afe98f468fd3f580adf3eff145bce3aa1ac
+ms.sourcegitcommit: 3f366316c02c411c4c5e14620a699f6f30608634
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "106353237"
+---
+# <a name="advanced-functions-for-use-outside-of-a-device-context"></a><span data-ttu-id="7ee99-110">Erweiterte Funktionen zur Verwendung außerhalb eines Gerätekontexts</span><span class="sxs-lookup"><span data-stu-id="7ee99-110">Advanced Functions for Use Outside of a Device Context</span></span>
+
+<span data-ttu-id="7ee99-111">Diese Funktionen bieten erweiterte Funktionen für die Farbverwaltung außerhalb der Geräte Kontexte.</span><span class="sxs-lookup"><span data-stu-id="7ee99-111">These functions provide advanced color management capabilities outside of device contexts.</span></span>
+
+
+
+| <span data-ttu-id="7ee99-112">Funktion</span><span class="sxs-lookup"><span data-stu-id="7ee99-112">Function</span></span>                                                           | <span data-ttu-id="7ee99-113">BESCHREIBUNG</span><span class="sxs-lookup"><span data-stu-id="7ee99-113">Description</span></span>                                                                                                                                                              |
+|--------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [<span data-ttu-id="7ee99-114">**PCMSCALLBACKW**</span><span class="sxs-lookup"><span data-stu-id="7ee99-114">**PCMSCALLBACKW**</span></span>](/windows/win32/api/icm/nc-icm-pcmscallbackw) | <span data-ttu-id="7ee99-115">\**PCMSCALLBACKW*\* (oder **applycallbackfunction**) ist eine Rückruffunktion, die Sie implementieren, um die WCS-Konfigurationsdaten zu aktualisieren, während das Dialogfeld, das von der [**setupcolormatchingw**](/windows/win32/api/icm/nf-icm-setupcolormatchingw) -Funktion angezeigt wird, ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="7ee99-115">\**PCMSCALLBACKW*\* (or **ApplyCallbackFunction**) is a callback function that you implement that updates the WCS configuration data while the dialog box displayed by the [**SetupColorMatchingW**](/windows/win32/api/icm/nf-icm-setupcolormatchingw) function is executing.</span></span> |
+| [<span data-ttu-id="7ee99-116">**Checkbitmapbits**</span><span class="sxs-lookup"><span data-stu-id="7ee99-116">**CheckBitmapBits**</span></span>](/windows/win32/api/icm/nf-icm-checkbitmapbits) | <span data-ttu-id="7ee99-117">Überprüft, ob die Pixel in einer angegebenen Bitmap innerhalb des Ausgabe [gamches](g.md) einer angegebenen Transformation liegen.</span><span class="sxs-lookup"><span data-stu-id="7ee99-117">Checks whether the pixels in a specified bitmap lie within the output [gamut](g.md) of a specified transform.</span></span> |
+| [<span data-ttu-id="7ee99-118">**Prüf Farben**</span><span class="sxs-lookup"><span data-stu-id="7ee99-118">**CheckColors**</span></span>](/windows/win32/api/icm/nf-icm-checkbitmapbits) | <span data-ttu-id="7ee99-119">Bestimmt, ob die Farben in einem Array [im Ausgabe Spiel einer angegebenen](g.md) Transformation liegen.</span><span class="sxs-lookup"><span data-stu-id="7ee99-119">Determines whether the colors in an array lie within the output [gamut](g.md) of a specified transform.</span></span> |
+| [<span data-ttu-id="7ee99-120">**Convertcolornametoindex**</span><span class="sxs-lookup"><span data-stu-id="7ee99-120">**ConvertColorNameToIndex**</span></span>](/windows/win32/api/icm/nf-icm-convertcolornametoindex) | <span data-ttu-id="7ee99-121">Konvertiert Farbnamen in einem benannten Farbraum in Indexnummern in einem International Color Consortium (ICC)-Farbprofil.</span><span class="sxs-lookup"><span data-stu-id="7ee99-121">Converts color names in a named color space to index numbers in an International Color Consortium (ICC) color profile.</span></span> |
+| [<span data-ttu-id="7ee99-122">**Convertindexycolorname**</span><span class="sxs-lookup"><span data-stu-id="7ee99-122">**ConvertIndexToColorName**</span></span>](/windows/win32/api/icm/nf-icm-convertindextocolorname) | <span data-ttu-id="7ee99-123">Transformiert Indizes in einem Farbraum in ein Array von Namen in einem benannten Farbraum.</span><span class="sxs-lookup"><span data-stu-id="7ee99-123">Transforms indices in a color space to an array of names in a named color space.</span></span> |
+| [<span data-ttu-id="7ee99-124">**"Kreatecolortransformw"**</span><span class="sxs-lookup"><span data-stu-id="7ee99-124">**CreateColorTransformW**</span></span>](/windows/win32/api/icm/nf-icm-createcolortransformw) | <span data-ttu-id="7ee99-125">Transformiert Indizes in einem Farbraum in ein Array von Namen in einem benannten Farbraum.</span><span class="sxs-lookup"><span data-stu-id="7ee99-125">Transforms indices in a color space to an array of names in a named color space.</span></span> |
+| [<span data-ttu-id="7ee99-126">**"Kreatemultiprofiletransform"**</span><span class="sxs-lookup"><span data-stu-id="7ee99-126">**CreateMultiProfileTransform**</span></span>](/windows/win32/api/icm/nf-icm-createmultiprofiletransform) | <span data-ttu-id="7ee99-127">Akzeptiert ein Array von Profilen oder ein einzelnes [Geräte](d.md) Verknüpfungs Profil und erstellt eine Farb Transformation, mit der Anwendungen eine Farbzuordnung durchführen können.</span><span class="sxs-lookup"><span data-stu-id="7ee99-127">Accepts an array of profiles or a single [device link profile](d.md) and creates a color transform that applications can use to perform color mapping.</span></span> |
+| [<span data-ttu-id="7ee99-128">**Deletecolortransform**</span><span class="sxs-lookup"><span data-stu-id="7ee99-128">**DeleteColorTransform**</span></span>](/windows/win32/api/icm/nf-icm-deletecolortransform) | <span data-ttu-id="7ee99-129">Löscht eine angegebene Farb Transformation.</span><span class="sxs-lookup"><span data-stu-id="7ee99-129">Deletes a given color transform.</span></span> |
+| [<span data-ttu-id="7ee99-130">**Getcmminfo**</span><span class="sxs-lookup"><span data-stu-id="7ee99-130">**GetCMMInfo**</span></span>](/windows/win32/api/icm/nf-icm-getcmminfo) | <span data-ttu-id="7ee99-131">Ruft verschiedene Informationen über das Farb Verwaltungsmodul (Color Management Module, CMM) ab, das die angegebene Farb Transformation erstellt hat.</span><span class="sxs-lookup"><span data-stu-id="7ee99-131">Retrieves various information about the color management module (CMM) that created the specified color transform.</span></span> |
+| [<span data-ttu-id="7ee99-132">**Getnamedprofilinfo**</span><span class="sxs-lookup"><span data-stu-id="7ee99-132">**GetNamedProfileInfo**</span></span>](/windows/win32/api/icm/nf-icm-getnamedprofileinfo) | <span data-ttu-id="7ee99-133">Ruft Informationen über das im ersten Parameter angegebene benannte Farbprofil des International Color Consortium (ICC) ab.</span><span class="sxs-lookup"><span data-stu-id="7ee99-133">Retrieves information about the International Color Consortium (ICC) named color profile that is specified in the first parameter.</span></span> |
+| [<span data-ttu-id="7ee99-134">**Icmprogressproccallback**</span><span class="sxs-lookup"><span data-stu-id="7ee99-134">**ICMProgressProcCallback**</span></span>](icmprogressproccallback.md)         | <span data-ttu-id="7ee99-135">Von der Anwendung bereitgestellte Rückruffunktion zum Melden des Status.</span><span class="sxs-lookup"><span data-stu-id="7ee99-135">Application-supplied callback function to report progress.</span></span> <span data-ttu-id="7ee99-136">Der Name dieser Funktion wird auch von der Anwendung definiert.</span><span class="sxs-lookup"><span data-stu-id="7ee99-136">The name of this function is also defined by the application.</span></span>                                                 |
+| [<span data-ttu-id="7ee99-137">**Selectcmm**</span><span class="sxs-lookup"><span data-stu-id="7ee99-137">**SelectCMM**</span></span>](/windows/win32/api/icm/nf-icm-selectcmm) | <span data-ttu-id="7ee99-138">Ermöglicht es Ihnen, das zu verwendende bevorzugte Farb Verwaltungsmodul (CMM) auszuwählen.</span><span class="sxs-lookup"><span data-stu-id="7ee99-138">Allows you to select the preferred color management module (CMM) to use.</span></span> |
+| [<span data-ttu-id="7ee99-139">**Setupcolormatchingw**</span><span class="sxs-lookup"><span data-stu-id="7ee99-139">**SetupColorMatchingW**</span></span>](/windows/win32/api/icm/nf-icm-setupcolormatchingw)                   | <span data-ttu-id="7ee99-140">Ermöglicht die Benutzersteuerung der Farbverwaltung über ein Dialogfeld.</span><span class="sxs-lookup"><span data-stu-id="7ee99-140">Provides user control over color management by way of a dialog box.</span></span>                                                                                                      |
+| [<span data-ttu-id="7ee99-141">**Translatebitmapbits**</span><span class="sxs-lookup"><span data-stu-id="7ee99-141">**TranslateBitmapBits**</span></span>](/windows/win32/api/icm/nf-icm-translatebitmapbits)                 | <span data-ttu-id="7ee99-142">Konvertiert Bitmapfarben mithilfe einer Farb Transformation.</span><span class="sxs-lookup"><span data-stu-id="7ee99-142">Converts bitmap colors using a color transform.</span></span>                                                                                                                          |
+| [<span data-ttu-id="7ee99-143">**Translatecolors**</span><span class="sxs-lookup"><span data-stu-id="7ee99-143">**TranslateColors**</span></span>](/windows/win32/api/icm/nf-icm-translatecolors) | <span data-ttu-id="7ee99-144">Übersetzt ein Array von Farben aus dem [Quellfarbraum](c.md) in den Ziel Farbraum, wie durch eine Farb Transformation definiert.</span><span class="sxs-lookup"><span data-stu-id="7ee99-144">Translates an array of colors from the source [color space](c.md) to the destination color space as defined by a color transform.</span></span> |
+| [<span data-ttu-id="7ee99-145">**Wcscheckcolors**</span><span class="sxs-lookup"><span data-stu-id="7ee99-145">**WcsCheckColors**</span></span>](/windows/win32/api/icm/nf-icm-wcsassociatecolorprofilewithdevice)                           | <span data-ttu-id="7ee99-146">Bestimmt, ob die Farben in einem Array innerhalb des Ausgabe Farbskala einer angegebenen WCS-Farb Transformation liegen.</span><span class="sxs-lookup"><span data-stu-id="7ee99-146">Determines whether the colors in an array are within the output gamut of a specified WCS color transform.</span></span>                                                                |
+| [<span data-ttu-id="7ee99-147">**Wcstranslatecolors**</span><span class="sxs-lookup"><span data-stu-id="7ee99-147">**WcsTranslateColors**</span></span>](/windows/win32/api/icm/nf-icm-wcstranslatecolors) | <span data-ttu-id="7ee99-148">Übersetzt ein Array von Farben aus dem Quellfarbraum in den Ziel Farbraum, wie durch eine Farb Transformation definiert.</span><span class="sxs-lookup"><span data-stu-id="7ee99-148">Translates an array of colors from the source color space to the destination color space as defined by a color transform.</span></span>                                                |
+
+
+
+ 
+
+ 
+
+ 
+
+
+
+
