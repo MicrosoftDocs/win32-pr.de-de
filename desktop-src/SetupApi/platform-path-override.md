@@ -1,0 +1,27 @@
+---
+description: Platt Form Pfad Überschreibung
+ms.assetid: f430fd9a-f865-4cdb-b0ea-4e6d79913308
+title: Platt Form Pfad Überschreibung
+ms.topic: article
+ms.date: 05/31/2018
+ms.openlocfilehash: 0a9a6ae6795b444c44db91d90ecd93efd19ea9dc
+ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "106357092"
+---
+# <a name="platform-path-override"></a><span data-ttu-id="b9256-103">Platt Form Pfad Überschreibung</span><span class="sxs-lookup"><span data-stu-id="b9256-103">Platform Path Override</span></span>
+
+<span data-ttu-id="b9256-104">Mit der [**setupsetplatformpathoverride**](/windows/desktop/api/Setupapi/nf-setupapi-setupsetplatformpathoverridea) -Funktion wird beim Arbeiten mit INF-Dateien von einem anderen Computer eine Platt Form Pfad-außer Kraft setzung für einen Zielcomputer festgelegt.</span><span class="sxs-lookup"><span data-stu-id="b9256-104">The [**SetupSetPlatformPathOverride**](/windows/desktop/api/Setupapi/nf-setupapi-setupsetplatformpathoverridea) function is used to set a platform path override for a target machine when working with INF files from a different machine.</span></span> <span data-ttu-id="b9256-105">Daher kann Sie auf eine andere Plattform verweisen als auf die, auf der Sie derzeit ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="b9256-105">As such, it can refer to a different platform than the one it is currently running on.</span></span> <span data-ttu-id="b9256-106">Für den Umgang mit Medienquellen kann es auf Plattformen verweisen, die nicht mehr unterstützt werden, wie z. b. Alpha, MIPS und PPC.</span><span class="sxs-lookup"><span data-stu-id="b9256-106">For dealing with media sources, it can refer to platforms that are no longer supported, such as Alpha, MIPS, and PPC.</span></span> <span data-ttu-id="b9256-107">Wenn kein Wert angegeben wird, wird der Platt Form Pfad außer Kraft gesetzt.</span><span class="sxs-lookup"><span data-stu-id="b9256-107">It removes the platform path override if none is specified.</span></span>
+
+<span data-ttu-id="b9256-108">Nachdem eine Platt Form Pfad Außerkraftsetzung durch einen aufzurufenden [**setupsetplatformpathoverride**](/windows/desktop/api/Setupapi/nf-setupapi-setupsetplatformpathoverridea)-Befehl festgelegt wurde, wird die endgültige Komponente des Quell Pfads von jeder Setup Funktion untersucht, die Datei Kopiervorgänge in Warteschlangen</span><span class="sxs-lookup"><span data-stu-id="b9256-108">After a platform path override is set by a call to [**SetupSetPlatformPathOverride**](/windows/desktop/api/Setupapi/nf-setupapi-setupsetplatformpathoverridea), any setup function that queues file copy operations will examine the final component of the source path.</span></span> <span data-ttu-id="b9256-109">Wenn die endgültige Komponente mit dem Namen der Plattform des Benutzers übereinstimmt, wird Sie von der Setup Funktion durch die von **setupsetplatformpathoverride** festgelegte Überschreibungs Zeichenfolge ersetzt.</span><span class="sxs-lookup"><span data-stu-id="b9256-109">If the final component matches the name of the user's platform, the setup function will replace it with the override string set by **SetupSetPlatformPathOverride**.</span></span>
+
+<span data-ttu-id="b9256-110">Wenn Sie z. b. Druckertreiber auf einem MIPS-Server installieren, können Sie Treiber für alle unterstützten Plattformen installieren.</span><span class="sxs-lookup"><span data-stu-id="b9256-110">For example, when installing printer drivers onto a MIPS server, you might want to install drivers for all supported platforms.</span></span> <span data-ttu-id="b9256-111">Wenn Sie die Dateien in die Warteschlange stellen, werden die Dateien, die in den MIPS-abhängigen Abschnitten der INF-Datei angegeben sind, mit Quell Pfaden installiert \\ \\ \\ \\</span><span class="sxs-lookup"><span data-stu-id="b9256-111">Queuing the files normally would install the files specified in the MIPS-dependent sections of the INF file, with source paths such as \\\\root\\source\\mips.</span></span> <span data-ttu-id="b9256-112">Um die Dateien für eine zweite Plattform zu installieren, müssen Sie [**setupsetplatformpathoverride**](/windows/desktop/api/Setupapi/nf-setupapi-setupsetplatformpathoverridea) mit *außer Kraft* Setzung aufrufen, die die Ersatz Plattform angibt.</span><span class="sxs-lookup"><span data-stu-id="b9256-112">To install the files for a second platform, you must call [**SetupSetPlatformPathOverride**](/windows/desktop/api/Setupapi/nf-setupapi-setupsetplatformpathoverridea) with *Override* indicating the replacement platform.</span></span> <span data-ttu-id="b9256-113">Wenn der durch *override* festgestellte Speicherort den Zeichen folgen Wert "Alpha" enthält, wird der Quellpfad von Datei Kopier Vorgängen, die mit einem Quellpfad der Stamm Quelle MIPS an die Warteschlange gesendet werden, \\ \\ \\ \\ in \\ \\ root \\ Source \\ Alpha geändert.</span><span class="sxs-lookup"><span data-stu-id="b9256-113">If the location indicated by *Override* contains the string value "alpha", file copy operations sent to the queue with a source path of \\\\root\\source\\mips would have their source path changed to \\\\root\\source\\alpha.</span></span> <span data-ttu-id="b9256-114">Sie würden diesen Vorgang für jede gewünschte Plattform wiederholen.</span><span class="sxs-lookup"><span data-stu-id="b9256-114">You would repeat this process for each platform of interest.</span></span>
+
+ 
+
+ 
+
+
+

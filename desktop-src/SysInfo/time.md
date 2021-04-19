@@ -1,0 +1,27 @@
+---
+description: Die Datums-und Uhrzeit Funktionen rufen das Datum und die Uhrzeit für das System und die einzelnen Dateien ab und legen Sie fest. In dieser Übersicht wird beschrieben, wie diese Funktionen verwendet werden, um Datumsangaben und Uhrzeiten zu prüfen und zu ändern
+ms.assetid: ffa71fb2-e343-455b-a853-324cc66a40c6
+title: Time
+ms.topic: article
+ms.date: 05/31/2018
+ms.openlocfilehash: 061447a5d703fe6575fa0e3a54194116cc8aa4ae
+ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "106356913"
+---
+# <a name="time"></a><span data-ttu-id="b274a-104">Time</span><span class="sxs-lookup"><span data-stu-id="b274a-104">Time</span></span>
+
+<span data-ttu-id="b274a-105">Die Datums-und Uhrzeit Funktionen rufen das Datum und die Uhrzeit für das System und die einzelnen Dateien ab und legen Sie fest.</span><span class="sxs-lookup"><span data-stu-id="b274a-105">The date and time functions retrieve and set the date and time for the system and individual files.</span></span> <span data-ttu-id="b274a-106">In dieser Übersicht wird beschrieben, wie diese Funktionen verwendet werden, um Datumsangaben und Uhrzeiten zu prüfen und zu ändern</span><span class="sxs-lookup"><span data-stu-id="b274a-106">This overview describes how to use these functions to examine and modify dates and times.</span></span>
+
+-   [<span data-ttu-id="b274a-107">Informationen zu Zeit</span><span class="sxs-lookup"><span data-stu-id="b274a-107">About Time</span></span>](about-time.md)
+-   [<span data-ttu-id="b274a-108">Verwenden der Zeit</span><span class="sxs-lookup"><span data-stu-id="b274a-108">Using Time</span></span>](using-time.md)
+-   [<span data-ttu-id="b274a-109">Zeitverweis</span><span class="sxs-lookup"><span data-stu-id="b274a-109">Time Reference</span></span>](time-reference.md)
+
+ 
+
+ 
+
+
+
