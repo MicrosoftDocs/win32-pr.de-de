@@ -1,0 +1,44 @@
+---
+title: Routen Tabellen und Routen Tabelleneinträge
+description: Der Routing Tabellen-Manager verwaltet unterschiedliche Routen Tabellen für jede Protokollfamilie.
+ms.assetid: 3848d93d-cc54-4a08-bd36-a9700cde6ce0
+ms.topic: article
+ms.date: 05/31/2018
+ms.openlocfilehash: f118ec1d0a6f8fe4ef301654e139f217257c3a0b
+ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 09/16/2019
+ms.locfileid: "106341212"
+---
+# <a name="route-tables-and-route-table-entries"></a><span data-ttu-id="409f8-103">Routen Tabellen und Routen Tabelleneinträge</span><span class="sxs-lookup"><span data-stu-id="409f8-103">Route Tables and Route Table Entries</span></span>
+
+<span data-ttu-id="409f8-104">**Windows Server 2003:** Diese API wurde durch die API für [Routing Table Manager, Version 2](about-routing-table-manager-version-2.md) , ersetzt und ist nicht über Windows Server 2003 verfügbar.</span><span class="sxs-lookup"><span data-stu-id="409f8-104">**Windows Server 2003:** This API has been superseded by the [Routing Table Manager Version 2](about-routing-table-manager-version-2.md) API and will not be available beyond Windows Server 2003.</span></span> <span data-ttu-id="409f8-105">Neue Anwendungen sollten die API für Routing Table Manager Version 2 verwenden.</span><span class="sxs-lookup"><span data-stu-id="409f8-105">New applications should use the Routing Table Manager Version 2 API.</span></span>
+
+<span data-ttu-id="409f8-106">Der Routing Tabellen-Manager verwaltet unterschiedliche Routen Tabellen für jede Protokollfamilie.</span><span class="sxs-lookup"><span data-stu-id="409f8-106">The routing table manager maintains distinct route tables for each protocol family.</span></span> <span data-ttu-id="409f8-107">Zurzeit wird die explizite Unterstützung für die Internet Protocol (IP)-und IPX-Routing Protokoll Familien (Internet Packet Exchange) bereitgestellt.</span><span class="sxs-lookup"><span data-stu-id="409f8-107">Currently, explicit support is provided for the Internet Protocol (IP) and Internet Packet Exchange (IPX) routing protocol families.</span></span> <span data-ttu-id="409f8-108">Unabhängig von der Protokollfamilie enthält jeder Routen Eintrag die folgenden Informationen:</span><span class="sxs-lookup"><span data-stu-id="409f8-108">Regardless of the protocol family, each route entry contains the following information:</span></span>
+
+-   <span data-ttu-id="409f8-109">Zielnetzwerk.</span><span class="sxs-lookup"><span data-stu-id="409f8-109">Destination network.</span></span>
+-   <span data-ttu-id="409f8-110">Der Bezeichner des Protokolls, das die Route hinzugefügt hat.</span><span class="sxs-lookup"><span data-stu-id="409f8-110">Identifier of the protocol that added the route.</span></span>
+-   <span data-ttu-id="409f8-111">Index der Schnittstelle, über die die Route abgerufen wurde.</span><span class="sxs-lookup"><span data-stu-id="409f8-111">Index of interface through which the route was obtained.</span></span> <span data-ttu-id="409f8-112">Dieser Indexwert ist der numerische Wert, der einer Netzwerkschnittstelle (Hardware basiert oder Virtual) zugewiesen ist, die die Daten an das Netzwerk überträgt.</span><span class="sxs-lookup"><span data-stu-id="409f8-112">This index value is the numeric value assigned to a network interface (hardware-based or virtual) that transmits the data onto the network.</span></span> <span data-ttu-id="409f8-113">(Z. b. eine Ethernet-NIC oder eine 802.1 b-Drahtlos Karte.)</span><span class="sxs-lookup"><span data-stu-id="409f8-113">(For example, an Ethernet NIC, or a 802.1b wireless card.)</span></span>
+-   <span data-ttu-id="409f8-114">Adresse des Routers für den nächsten Hop.</span><span class="sxs-lookup"><span data-stu-id="409f8-114">Address of the next hop router.</span></span> <span data-ttu-id="409f8-115">RRAS verwendet diesen Router, um Pakete an das Zielnetzwerk weiterzuleiten, wenn das Netzwerk nicht direkt verbunden ist.</span><span class="sxs-lookup"><span data-stu-id="409f8-115">RRAS uses this router to forward packets to the destination network if the network is not directly connected.</span></span>
+-   <span data-ttu-id="409f8-116">Der Zeitpunkt, zu dem die Route erstellt oder zuletzt aktualisiert wurde.</span><span class="sxs-lookup"><span data-stu-id="409f8-116">The time the route was created or last updated.</span></span>
+-   <span data-ttu-id="409f8-117">Die Zeitspanne, in der diese Route in der Routing Tabelle aufbewahrt wird.</span><span class="sxs-lookup"><span data-stu-id="409f8-117">The amount of time this route is kept in the routing table.</span></span> <span data-ttu-id="409f8-118">Wenn diese Zeitspanne abläuft und die Route nicht aktualisiert wurde, entfernt der Routing Tabellen-Manager die Route aus der Tabelle.</span><span class="sxs-lookup"><span data-stu-id="409f8-118">If this amount of time elapses, and the route has not been updated, the routing table manager removes the route from the table.</span></span> <span data-ttu-id="409f8-119">In diesem Fall wird die Route als veraltet *bezeichnet.*</span><span class="sxs-lookup"><span data-stu-id="409f8-119">In this case, the route is said to have *aged out*.</span></span>
+-   <span data-ttu-id="409f8-120">Spezifische Daten für die Protokollfamilie.</span><span class="sxs-lookup"><span data-stu-id="409f8-120">Data specific to the protocol family.</span></span> <span data-ttu-id="409f8-121">Diese Daten sind für RTMv1 transparent.</span><span class="sxs-lookup"><span data-stu-id="409f8-121">This data is transparent to RTMv1.</span></span> <span data-ttu-id="409f8-122">Wenn sich diese Daten jedoch für eine Route ändern, die als "beste Route" festgelegt ist, sendet der Routing-Tabellen-Manager die Weiterleitungs Änderungs Benachrichtigung.</span><span class="sxs-lookup"><span data-stu-id="409f8-122">However, if this data changes for a route designated as a "best route," the routing table manager sends out route-change notification.</span></span>
+-   <span data-ttu-id="409f8-123">Spezifische Daten für das Routing Protokoll.</span><span class="sxs-lookup"><span data-stu-id="409f8-123">Data specific to the routing protocol.</span></span> <span data-ttu-id="409f8-124">Diese Daten sind vollständig für den Routing Tabellen-Manager transparent, da Änderungen an diesen Daten keine Benachrichtigung über die Routen Änderung verursachen.</span><span class="sxs-lookup"><span data-stu-id="409f8-124">This data is completely transparent to the routing table manager, in that, changes to this data do not cause route change notification.</span></span>
+
+<span data-ttu-id="409f8-125">Die folgenden Werte, die eine Route in der Routing Tabelle eindeutig identifizieren:</span><span class="sxs-lookup"><span data-stu-id="409f8-125">The following values taken together uniquely identify a route in the routing table:</span></span>
+
+-   <span data-ttu-id="409f8-126">Zielnetzwerk</span><span class="sxs-lookup"><span data-stu-id="409f8-126">Destination network</span></span>
+-   <span data-ttu-id="409f8-127">Protokoll Bezeichner</span><span class="sxs-lookup"><span data-stu-id="409f8-127">Protocol identifier</span></span>
+-   <span data-ttu-id="409f8-128">Schnittstellen Index</span><span class="sxs-lookup"><span data-stu-id="409f8-128">Interface index</span></span>
+-   <span data-ttu-id="409f8-129">Adresse des Routers für den nächsten Hop</span><span class="sxs-lookup"><span data-stu-id="409f8-129">Address of next-hop router</span></span>
+
+<span data-ttu-id="409f8-130">Im Allgemeinen erstellt der Routing Tabellen-Manager separate Einträge für Routen, die sich in diesen Parameterwerten unterscheiden.</span><span class="sxs-lookup"><span data-stu-id="409f8-130">In general, the routing table manager creates separate entries for routes that differ in any of these parameter values.</span></span> <span data-ttu-id="409f8-131">Es wird jedoch eine Ausnahme für Routing Protokolle ausgelöst, die nicht mehr als einen Eintrag für jedes Zielnetzwerk aufbewahren.</span><span class="sxs-lookup"><span data-stu-id="409f8-131">However, an exception is made for routing protocols that do not keep more than one entry for each destination network.</span></span> <span data-ttu-id="409f8-132">Bei diesen Protokollen ignoriert der Routing Tabellen-Manager Unterschiede im Schnittstellen Index oder an der Adresse des nächsten Hops.</span><span class="sxs-lookup"><span data-stu-id="409f8-132">For these protocols, the routing table manager ignores differences in interface index or next-hop address.</span></span> <span data-ttu-id="409f8-133">Ein Beispiel für ein solches Protokoll ist die RRAS-Implementierung von Open kürzeste Path First (OSPF).</span><span class="sxs-lookup"><span data-stu-id="409f8-133">An example of such a protocol is the RRAS implementation of Open Shortest Path First (OSPF).</span></span>
+
+ 
+
+ 
+
+
+
+
