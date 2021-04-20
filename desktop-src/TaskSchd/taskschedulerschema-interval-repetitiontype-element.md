@@ -1,6 +1,6 @@
 ---
-title: Interval (repetitiontype)-Element
-description: Gibt die Zeitspanne zwischen den einzelnen Neustarts der Aufgabe an.
+title: Interval (repetitionType)-Element
+description: Gibt die Zeitspanne zwischen jedem Neustart der Aufgabe an.
 ms.assetid: 28c6475a-88e3-44ac-92c7-6f463e8460c9
 keywords:
 - Interval-Element Taskplaner
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 9720bc2257d4c0b45116089bfdd4113335fc6b8c
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: bfb87884438f1a39a5bd6f08eb9bb855311eb5d3
+ms.sourcegitcommit: b3a9abea47dea7374eac0f9a95a652ac6977fb2e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103949643"
+ms.lasthandoff: 04/20/2021
+ms.locfileid: "107734195"
 ---
-# <a name="interval-repetitiontype-element"></a>Interval (repetitiontype)-Element
+# <a name="interval-repetitiontype-element"></a>Interval (repetitionType)-Element
 
-Gibt die Zeitspanne zwischen den einzelnen Neustarts der Aufgabe an. Das Format für diese Zeichenfolge ist P <days> dt <hours> H <minutes> M <seconds> S ("PT5M" ist beispielsweise 5 Minuten, "PT1H" ist 1 Stunde, und "PT20M" beträgt 20 Minuten). Die maximal zulässige Dauer beträgt 31 Tage, und die zulässige Mindestanzahl beträgt 1 Minute.
+Gibt die Zeitspanne zwischen jedem Neustart der Aufgabe an. Das Format für diese Zeichenfolge lautet `P<days>DT<hours>H<minutes>M<seconds>S` (z. B. "PT5M" ist 5 Minuten, "PT1H" ist 1 Stunde und "PT20M" ist 20 Minuten). Die maximal zulässige Zeit beträgt 31 Tage, und die zulässige Mindestzeit beträgt 1 Minute.
 
 ``` syntax
 <xs:element name="Interval">
@@ -41,7 +41,7 @@ Gibt die Zeitspanne zwischen den einzelnen Neustarts der Aufgabe an. Das Format 
 </xs:element>
 ```
 
-Das-Element wird durch den komplexen Typ " [**wiederholtiontype**](taskschedulerschema-repetitiontype-complextype.md) " definiert.
+Das Element wird durch den komplexen [**Wiederholungstyp**](taskschedulerschema-repetitiontype-complextype.md) definiert.
 
 ## <a name="parent-element"></a>Übergeordnetes Element
 
@@ -49,19 +49,19 @@ Das-Element wird durch den komplexen Typ " [**wiederholtiontype**](taskscheduler
 
 | Element                                                                      | Abgeleitet von                                                             | BESCHREIBUNG                                                                                                               |
 |------------------------------------------------------------------------------|--------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------|
-| [**Wiederholen**](taskschedulerschema-repetition-triggerbasetype-element.md) | [**Wiederholungstyp**](taskschedulerschema-repetitiontype-complextype.md) | Gibt an, wie oft die Aufgabe ausgeführt wird und wie lange das Wiederholungsmuster nach dem Start der Aufgabe wiederholt wird.<br/> |
+| [**Wiederholen**](taskschedulerschema-repetition-triggerbasetype-element.md) | [**wiederholungstyp**](taskschedulerschema-repetitiontype-complextype.md) | Gibt an, wie oft der Task ausgeführt wird und wie lange das Wiederholungsmuster wiederholt wird, nachdem der Task gestartet wurde.<br/> |
 
 
 
 ## <a name="remarks"></a>Bemerkungen
 
-Bei der Skripterstellung wird das Intervall des Wiederholungs Musters mithilfe der [**repetitionpattern. Interval**](repetitionpattern-interval.md) -Eigenschaft angegeben.
+Für die Skriptentwicklung wird das Intervall des Wiederholungsmusters mithilfe der [**RepetitionPattern.Interval-Eigenschaft**](repetitionpattern-interval.md) angegeben.
 
-Bei der C++-Entwicklung wird das Intervall des Wiederholungs Musters mithilfe der [**irepetitionpattern:: Interval**](/windows/desktop/api/taskschd/nf-taskschd-irepetitionpattern-get_interval) -Eigenschaft angegeben.
+Für die C++-Entwicklung wird das Intervall des Wiederholungsmusters mithilfe der [**IRepetitionPattern::Interval-Eigenschaft**](/windows/desktop/api/taskschd/nf-taskschd-irepetitionpattern-get_interval) angegeben.
 
 ## <a name="examples"></a>Beispiele
 
-Ein umfassendes Beispiel für den XML-Code für eine Aufgabe, die ein Wiederholungsintervall verwendet, finden Sie unter Beispiel für das [tägliche Beispiel (XML)](daily-trigger-example--xml-.md).
+Ein vollständiges Beispiel für den XML-Code für eine Aufgabe, die ein Wiederholungsintervall verwendet, finden Sie unter Beispiel für [täglichen Trigger (XML).](daily-trigger-example--xml-.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -69,16 +69,16 @@ Ein umfassendes Beispiel für den XML-Code für eine Aufgabe, die ein Wiederholu
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Schema Elemente Taskplaner](task-scheduler-schema-elements.md)
+[Taskplaner Schemaelemente](task-scheduler-schema-elements.md)
 </dt> <dt>
 
 [Aufgabenplanung](task-scheduler-start-page.md)

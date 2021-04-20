@@ -1,11 +1,11 @@
 ---
-title: Monthly-Eigenschaft. randomdelay (Eigenschaft)
-description: Ruft bei der Skripterstellung eine Verzögerungszeit ab, die der Startzeit des Auslösers zufällig hinzugefügt wird, oder legt diese fest. | Monthly-Eigenschaft. randomdelay (Eigenschaft)
+title: MonthlyTrigger.RandomDelay-Eigenschaft
+description: Ruft für die Skripterstellung eine Verzögerungszeit ab, die zufällig zur Startzeit des Triggers hinzugefügt wird, oder legt diese fest. | MonthlyTrigger.RandomDelay-Eigenschaft
 ms.assetid: 5334356f-fef1-4d0e-9879-6ec996b75dff
 keywords:
-- Randomdelay-Eigenschaft Taskplaner
-- Randomdelay-Eigenschaft Taskplaner, Monthly-Auslöserobjekt
-- Monthly-Auslöserobjekt Taskplaner, randomdelay-Eigenschaft
+- RandomDelay-Eigenschaft Taskplaner
+- RandomDelay-Eigenschaft Taskplaner , MonthlyTrigger-Objekt
+- MonthlyTrigger-Objekt Taskplaner , RandomDelay-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a2b290e3a0bae1f8032b19d4d07203a64e1d1686
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: aa7f5c3a1831681cca2b3dc006ffb7a7d44a7a6a
+ms.sourcegitcommit: b3a9abea47dea7374eac0f9a95a652ac6977fb2e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "106365030"
+ms.lasthandoff: 04/20/2021
+ms.locfileid: "107734115"
 ---
-# <a name="monthlytriggerrandomdelay-property"></a>Monthly-Eigenschaft. randomdelay (Eigenschaft)
+# <a name="monthlytriggerrandomdelay-property"></a>MonthlyTrigger.RandomDelay-Eigenschaft
 
-Ruft bei der Skripterstellung eine Verzögerungszeit ab, die der Startzeit des Auslösers zufällig hinzugefügt wird, oder legt diese fest.
+Ruft für die Skripterstellung eine Verzögerungszeit ab, die zufällig zur Startzeit des Triggers hinzugefügt wird, oder legt diese fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -38,7 +38,7 @@ MonthlyTrigger.RandomDelay As String
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Die Verzögerungszeit, die der Startzeit des Auslösers nach dem Zufallsprinzip hinzugefügt wird. Das Format für diese Zeichenfolge ist P <days> dt <hours> H <minutes> M <seconds> S (z. b. P2DT5S ist eine Verzögerung von 2 Tagen, 5 Sekunden).
+Die Verzögerungszeit, die zufällig zur Startzeit des Triggers hinzugefügt wird. Das Format für diese Zeichenfolge lautet `P<days>DT<hours>H<minutes>M<seconds>S` (p2DT5S ist z. B. eine Verzögerung von 2 Tagen und 5 Sekunden).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -46,18 +46,18 @@ Die Verzögerungszeit, die der Startzeit des Auslösers nach dem Zufallsprinzip 
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                    |
-| Typbibliothek<br/>             | <dl> <dt>Taskschd. tlb</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ Vista-Desktop-Apps\]<br/>                                          |
+| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2008-Desktop-Apps\]<br/>                                    |
+| Typbibliothek<br/>             | <dl> <dt>Taskschd.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Taskschd.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Monthly-auslöst**](monthlytrigger.md)
+[**MonthlyTrigger**](monthlytrigger.md)
 </dt> </dl>
 
  

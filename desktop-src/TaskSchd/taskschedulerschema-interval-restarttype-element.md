@@ -1,9 +1,9 @@
 ---
-title: Interval (restarttype)-Element
+title: Interval (restartType)-Element
 description: Gibt an, wie lange der Taskplaner versucht, den Task neu zu starten.
 ms.assetid: 00b8fcbb-5be8-4bf1-92a0-2afd2a50f8e1
 keywords:
-- Interval-Element Taskplaner
+- Interval-Taskplaner
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: c97e754e0b29a43d6ba419bd806404fe1b85b2b6
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 6e731582364df23bdef800ab5d2cf15dd5c882ae
+ms.sourcegitcommit: b3a9abea47dea7374eac0f9a95a652ac6977fb2e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103949517"
+ms.lasthandoff: 04/20/2021
+ms.locfileid: "107734185"
 ---
-# <a name="interval-restarttype-element"></a>Interval (restarttype)-Element
+# <a name="interval-restarttype-element"></a>Interval (restartType)-Element
 
-Gibt an, wie lange der Taskplaner versucht, den Task neu zu starten. Das Format für diese Zeichenfolge ist P <days> dt <hours> H <minutes> M <seconds> S ("PT5M" ist beispielsweise 5 Minuten, "PT1H" ist 1 Stunde, und "PT20M" beträgt 20 Minuten). Die maximal zulässige Dauer beträgt 31 Tage, und die zulässige Mindestanzahl beträgt 1 Minute.
+Gibt an, wie lange der Taskplaner versucht, den Task neu zu starten. Das Format für diese Zeichenfolge ist (z. B. `P<days>DT<hours>H<minutes>M<seconds>S` ist "PT5M" 5 Minuten, "PT1H" ist 1 Stunde und "PT20M" beträgt 20 Minuten). Die maximal zulässige Zeit beträgt 31 Tage, und die zulässige Mindestzeit beträgt 1 Minute.
 
 ``` syntax
 <xs:element name="Interval">
@@ -41,7 +41,7 @@ Gibt an, wie lange der Taskplaner versucht, den Task neu zu starten. Das Format 
 </xs:element>
 ```
 
-Das-Element wird durch den komplexen [**restarttype**](taskschedulerschema-restarttype-complextype.md) -Typ definiert.
+Das -Element wird durch den komplexen [**restartType-Typ**](taskschedulerschema-restarttype-complextype.md) definiert.
 
 ## <a name="parent-element"></a>Übergeordnetes Element
 
@@ -49,17 +49,17 @@ Das-Element wird durch den komplexen [**restarttype**](taskschedulerschema-resta
 
 | Element                                                                               | Abgeleitet von                                                       | BESCHREIBUNG                                                                                                     |
 |---------------------------------------------------------------------------------------|--------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|
-| [**Neustartonfailure**](taskschedulerschema-restartonfailure-settingstype-element.md) | [**neustarttype**](taskschedulerschema-restarttype-complextype.md) | Gibt an, dass der Taskplaner den Task neu starten soll, wenn die Aufgabe aus irgendeinem Grund fehlschlägt.<br/> |
+| [**RestartOnFailure**](taskschedulerschema-restartonfailure-settingstype-element.md) | [**restartType**](taskschedulerschema-restarttype-complextype.md) | Gibt an, dass der Taskplaner versucht, den Task neu zu starten, wenn der Task aus irgendeinem Grund fehlschlägt.<br/> |
 
 
 
 ## <a name="remarks"></a>Bemerkungen
 
-Wenn dieses Element angegeben ist, muss auch das [**count**](taskschedulerschema-count-restarttype-element.md) -Element angegeben werden, um den Taskplaner anzugeben, wie oft versucht werden soll, den Task neu zu starten.
+Wenn dieses Element angegeben wird, muss auch [**das Count-Element**](taskschedulerschema-count-restarttype-element.md) angegeben werden, um dem Benutzer Taskplaner, wie oft versucht werden soll, den Task neu zu starten.
 
-Informationen zur C++-Entwicklung finden Sie unter [**restartinterval-Eigenschaft von itasksettings**](/windows/desktop/api/taskschd/nf-taskschd-itasksettings-get_restartinterval).
+Informationen zur C++-Entwicklung finden Sie unter [**RestartInterval-Eigenschaft von ITaskSettings.**](/windows/desktop/api/taskschd/nf-taskschd-itasksettings-get_restartinterval)
 
-Informationen zur Skript Entwicklung finden Sie unter [**tasksettings. restartinterval**](tasksettings-restartinterval.md).
+Informationen zur Skriptentwicklung finden Sie [**unter TaskSettings.RestartInterval**](tasksettings-restartinterval.md).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -67,16 +67,16 @@ Informationen zur Skript Entwicklung finden Sie unter [**tasksettings. restartin
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Schema Elemente Taskplaner](task-scheduler-schema-elements.md)
+[Taskplaner Schemaelemente](task-scheduler-schema-elements.md)
 </dt> </dl>
 
  

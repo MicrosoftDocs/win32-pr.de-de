@@ -1,11 +1,11 @@
 ---
-title: Repetitionpattern. Interval (Eigenschaft)
-description: Ruft bei der Skripterstellung die Zeitspanne zwischen den einzelnen Neustarts der Aufgabe ab oder legt diese fest.
+title: RepetitionPattern.Interval-Eigenschaft
+description: Bei der Skripterstellung ruft die Zeit zwischen jedem Neustart der Aufgabe ab oder legt diese fest.
 ms.assetid: c48bd304-21f3-435e-99f5-3b2da0078bb8
 keywords:
-- Intervall Eigenschaft Taskplaner
-- Interval-Eigenschaft Taskplaner, repetitionpattern-Objekt
-- Repetitionpattern-Objekt Taskplaner, Intervall Eigenschaft
+- Interval-Taskplaner
+- Interval-Taskplaner , RepetitionPattern-Objekt
+- RepetitionPattern-Objekt Taskplaner , Interval-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1d62bb821f4c5e61d344e21fafa4ba1265c73470
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: c1e81920fffe5c9fd58dd36a028b924f54ebe6dd
+ms.sourcegitcommit: b3a9abea47dea7374eac0f9a95a652ac6977fb2e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104518215"
+ms.lasthandoff: 04/20/2021
+ms.locfileid: "107734175"
 ---
-# <a name="repetitionpatterninterval-property"></a>Repetitionpattern. Interval (Eigenschaft)
+# <a name="repetitionpatterninterval-property"></a>RepetitionPattern.Interval-Eigenschaft
 
-Ruft bei der Skripterstellung die Zeitspanne zwischen den einzelnen Neustarts der Aufgabe ab oder legt diese fest.
+Bei der Skripterstellung ruft die Zeit zwischen jedem Neustart der Aufgabe ab oder legt diese fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -38,13 +38,13 @@ RepetitionPattern.Interval As String
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Die Zeitspanne zwischen den einzelnen Neustarts der Aufgabe. Das Format für diese Zeichenfolge ist P <days> dt <hours> H <minutes> M <seconds> S ("PT5M" ist beispielsweise 5 Minuten, "PT1H" ist 1 Stunde, und "PT20M" beträgt 20 Minuten). Die maximal zulässige Dauer beträgt 31 Tage, und die zulässige Mindestanzahl beträgt 1 Minute.
+Die Zeit zwischen jedem Neustart der Aufgabe. Das Format für diese Zeichenfolge ist (z. B. `P<days>DT<hours>H<minutes>M<seconds>S` ist "PT5M" 5 Minuten, "PT1H" ist 1 Stunde und "PT20M" beträgt 20 Minuten). Die maximal zulässige Zeit beträgt 31 Tage, und die zulässige Mindestzeit beträgt 1 Minute.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Wenn Sie eine Wiederholungs Dauer für eine Aufgabe angeben, müssen Sie auch das Wiederholungsintervall angeben.
+Wenn Sie eine Wiederholungsdauer für eine Aufgabe angeben, müssen Sie auch das Wiederholungsintervall angeben.
 
-Beim Lesen oder Schreiben von XML für eine Aufgabe wird das Wiederholungsintervall im [**Interval**](taskschedulerschema-interval-repetitiontype-element.md) -Element des Taskplaner Schemas angegeben.
+Beim Lesen oder Schreiben von XML für eine Aufgabe wird das Wiederholungsintervall im [**Interval-Element**](taskschedulerschema-interval-repetitiontype-element.md) des Taskplaner angegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -52,14 +52,14 @@ Beim Lesen oder Schreiben von XML für eine Aufgabe wird das Wiederholungsinterv
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                    |
-| Typbibliothek<br/>             | <dl> <dt>Taskschd. tlb</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ Vista-Desktop-Apps\]<br/>                                          |
+| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2008-Desktop-Apps\]<br/>                                    |
+| Typbibliothek<br/>             | <dl> <dt>Taskschd.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Taskschd.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

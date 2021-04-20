@@ -1,9 +1,9 @@
 ---
-title: komplexer timetriggertype-Typ
-description: Definiert den Basistyp für das Time-Auslöserelement.
+title: komplexer timeTriggerType-Typ
+description: Definiert den Basistyp für das TimeTrigger-Element.
 ms.assetid: 3aabfb7a-3e11-4b67-8345-cc5088f11efc
 keywords:
-- komplexer timetriggertype-Typ Taskplaner
+- komplexer timeTriggerType-Typ Taskplaner
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 8ca21464df967ff473a767e814b9ce6969a56c00
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 6f44f0959a9f67e4bfee0b0ef5dd7f095ffbadce
+ms.sourcegitcommit: b3a9abea47dea7374eac0f9a95a652ac6977fb2e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106342187"
+ms.lasthandoff: 04/20/2021
+ms.locfileid: "107734135"
 ---
-# <a name="timetriggertype-complex-type"></a>komplexer timetriggertype-Typ
+# <a name="timetriggertype-complex-type"></a>komplexer timeTriggerType-Typ
 
-Definiert den Basistyp für das [**time-Auslöserelement**](taskschedulerschema-timetrigger-triggergroup-element.md) .
+Definiert den Basistyp für das [**TimeTrigger-Element.**](taskschedulerschema-timetrigger-triggergroup-element.md)
 
 ``` syntax
 <xs:complexType name="timeTriggerType">
@@ -45,15 +45,15 @@ Definiert den Basistyp für das [**time-Auslöserelement**](taskschedulerschema-
 
 
 
-| Element                                                                        | type     | BESCHREIBUNG                                                                                                                                                                                                                                 |
+| Element                                                                        | Typ     | BESCHREIBUNG                                                                                                                                                                                                                                 |
 |--------------------------------------------------------------------------------|----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Randomdelay**](taskschedulerschema-randomdelay-timetriggertype-element.md) | duration | Gibt die Verzögerungszeit an, die der Startzeit des Auslösers nach dem Zufallsprinzip hinzugefügt wird. Das Format für diese Zeichenfolge ist P <days> dt <hours> H <minutes> M <seconds> S (z. b. P2DT5S ist eine Verzögerung von 2 Tagen, 5 Sekunden). <br/> |
+| [**RandomDelay**](taskschedulerschema-randomdelay-timetriggertype-element.md) | duration | Gibt die Verzögerungszeit an, die zufällig zur Startzeit des Triggers hinzugefügt wird. Das Format für diese Zeichenfolge lautet `P<days>DT<hours>H<minutes>M<seconds>S` (p2DT5S ist z. B. eine Verzögerung von 2 Tagen und 5 Sekunden). <br/> |
 
 
 
 ## <a name="remarks"></a>Bemerkungen
 
-Beachten Sie, dass dieses Element keine untergeordneten Elemente zu den durch den komplexen [**triggerbasetype**](taskschedulerschema-triggerbasetype-complextype.md) -Typ definierten Elementen hinzufügt.
+Beachten Sie, dass dieses Element keine untergeordneten Elemente zu den elementen hinzufüge, die vom komplexen [**triggerBaseType-Typ**](taskschedulerschema-triggerbasetype-complextype.md) definiert werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -61,16 +61,16 @@ Beachten Sie, dass dieses Element keine untergeordneten Elemente zu den durch de
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Komplexe Typen von Taskplaner Schemas](task-scheduler-schema-complex-types.md)
+[komplexe Schematypen Taskplaner](task-scheduler-schema-complex-types.md)
 </dt> <dt>
 
 [Aufgabenplanung](task-scheduler-start-page.md)
