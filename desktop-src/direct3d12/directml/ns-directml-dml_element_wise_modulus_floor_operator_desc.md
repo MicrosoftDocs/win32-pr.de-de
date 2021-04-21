@@ -1,7 +1,7 @@
 ---
 UID: NS:directml.DML_ELEMENT_WISE_MODULUS_FLOOR_OPERATOR_DESC
 title: DML_ELEMENT_WISE_MODULUS_FLOOR_OPERATOR_DESC
-description: Berechnet den Modulus mit den gleichen Ergebnissen wie der python-Modulus für jedes Paar entsprechender Elemente aus den Eingabe-Tensoren, wobei das Ergebnis in das entsprechende Element von *outputtensor* platziert wird.
+description: Berechnet den Modulus mit den gleichen Ergebnissen wie der Python-Modulus für jedes Paar der entsprechenden Elemente aus den Eingabe-Tensoren und platziert das Ergebnis in das entsprechende Element von *OutputTensor.*
 helpviewer_keywords:
 - DML_ELEMENT_WISE_MODULUS_FLOOR_OPERATOR_DESC
 - DML_ELEMENT_WISE_MODULUS_FLOOR_OPERATOR_DESC structure
@@ -44,27 +44,27 @@ api_location:
 - DirectML.h
 api_name:
 - DML_ELEMENT_WISE_MODULUS_FLOOR_OPERATOR_DESC
-ms.openlocfilehash: a732a593fb10a5c8e18ec6dd9416ce8d62f43563
-ms.sourcegitcommit: 3bdf30edb314e0fcd17dc4ddbc70e4ec7d3596e6
+ms.openlocfilehash: 8c70bd4649a57270807ac408802fe07edd36d98e
+ms.sourcegitcommit: 8e1f04c7e3c5c850071bac8d173f9441aab0dfed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "106369919"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107803064"
 ---
-# <a name="dml_element_wise_modulus_floor_operator_desc-structure-directmlh"></a>DML_ELEMENT_WISE_MODULUS_FLOOR_OPERATOR_DESC-Struktur (directml. h)
+# <a name="dml_element_wise_modulus_floor_operator_desc-structure-directmlh"></a>DML_ELEMENT_WISE_MODULUS_FLOOR_OPERATOR_DESC-Struktur (directml.h)
 
-Berechnet den Modulus mit den gleichen Ergebnissen wie der python-Modulus für jedes Paar entsprechender Elemente aus den Eingabe-Tensoren, wobei das Ergebnis in das entsprechende Element von *outputtensor* platziert wird.
+Berechnet den Modulus mit den gleichen Ergebnissen wie der Python-Modulus für jedes Paar der entsprechenden Elemente aus den Eingabe-Tensoren und platziert das Ergebnis in das entsprechende Element von *OutputTensor.*
 
-Da der Quotienten auf-INF gerundet wird, hat das Ergebnis dasselbe Vorzeichen wie der Divisor.
+Da der Quotient auf -inf gerundet wird, hat das Ergebnis das gleiche Vorzeichen wie der Divisor.
 
 ```
 f(a, b) = a - (b * floor(a / b))
 ```
 
-Dieser Operator unterstützt die direkte Ausführung. Dies bedeutet, dass *outputtensor* bei der Bindung eine der Eingabe-Tensoren Alias zulässt.
+Dieser Operator unterstützt die direkt ausgeführte Ausführung, d. h., *OutputTensor* darf während der Bindung einen der Eingabe-Tensoren mit einem Alias verbinden.
 
 > [!IMPORTANT]
-> Diese API ist als Teil des eigenständigen Redistributable Package von directml verfügbar (siehe [Microsoft. ai. directml](https://www.nuget.org/packages/Microsoft.AI.DirectML/)). Siehe auch [Versionsverlauf der directml](../dml-version-history.md).
+> Diese API ist als Teil des eigenständigen verteilbaren DirectML-Pakets verfügbar (siehe [Microsoft.AI.DirectML](https://www.nuget.org/packages/Microsoft.AI.DirectML/) Version 1.4 und höher). Siehe auch [DirectML-Versionsverlauf.](../dml-version-history.md)
 
 ## <a name="syntax"></a>Syntax
 ```cpp
@@ -81,48 +81,48 @@ struct DML_ELEMENT_WISE_MODULUS_FLOOR_OPERATOR_DESC {
 
 `ATensor`
 
-Typ: Konstante **[DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
+Typ: **const [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
 
-Ein tensorflow, der die Links neben Eingaben enthält.
+Ein Tensor, der die eingaben auf der linken Seite enthält.
 
 
 `BTensor`
 
-Typ: Konstante **[DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
+Typ: **const [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
 
-Ein tensorflow, der die Eingaben auf der rechten Seite enthält.
+Ein Tensor, der die rechten Eingaben enthält.
 
 
 `OutputTensor`
 
-Typ: Konstante **[DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
+Typ: **const [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
 
-Der Ausgabe Mandanten, in den die Ergebnisse geschrieben werden sollen.
+Der Ausgabe-Tensor, in den die Ergebnisse geschrieben werden sollen.
 
 ## <a name="availability"></a>Verfügbarkeit
-Dieser Operator wurde in eingeführt `DML_FEATURE_LEVEL_2_1` .
+Dieser Operator wurde in `DML_FEATURE_LEVEL_2_1` eingeführt.
 
-## <a name="tensor-constraints"></a>Tensor-Einschränkungen
-*Atensor*, *btensor* und *outputtensor* müssen denselben *Datentyp*, jede *DimensionCount* und jede *Größe* aufweisen.
+## <a name="tensor-constraints"></a>Tensoreinschränkungen
+*ATensor,* *BTensor* und *OutputTensor* müssen die gleichen *Datentypen*, *DimensionCount* und *Größen* aufweisen.
 
 ## <a name="tensor-support"></a>Tensor-Unterstützung
 ### <a name="dml_feature_level_3_0-and-above"></a>DML_FEATURE_LEVEL_3_0 und höher
-| Tensorflow | Typ | Unterstützte Dimensions Anzahl | Unterstützte Datentypen |
+| Tensor | Typ | Unterstützte Dimensionsanzahlen | Unterstützte Datentypen |
 | ------ | ---- | -------------------------- | -------------------- |
-| Atensor | Eingabe | 1 bis 8 | Float32, FLOAT16, Int32, INT16, int8, UInt32, UInt16, Uint8 |
-| Btensor | Eingabe | 1 bis 8 | Float32, FLOAT16, Int32, INT16, int8, UInt32, UInt16, Uint8 |
-| Outputtensor | Ausgabe | 1 bis 8 | Float32, FLOAT16, Int32, INT16, int8, UInt32, UInt16, Uint8 |
+| ATensor | Eingabe | 1 bis 8 | FLOAT32, FLOAT16, INT32, INT16, INT8, UINT32, UINT16, UINT8 |
+| BTensor | Eingabe | 1 bis 8 | FLOAT32, FLOAT16, INT32, INT16, INT8, UINT32, UINT16, UINT8 |
+| OutputTensor | Ausgabe | 1 bis 8 | FLOAT32, FLOAT16, INT32, INT16, INT8, UINT32, UINT16, UINT8 |
 
 ### <a name="dml_feature_level_2_1-and-above"></a>DML_FEATURE_LEVEL_2_1 und höher
-| Tensorflow | Typ | Unterstützte Dimensions Anzahl | Unterstützte Datentypen |
+| Tensor | Typ | Unterstützte Dimensionsanzahl | Unterstützte Datentypen |
 | ------ | ---- | -------------------------- | -------------------- |
-| Atensor | Eingabe | 4 | Float32, FLOAT16, Int32, INT16, int8, UInt32, UInt16, Uint8 |
-| Btensor | Eingabe | 4 | Float32, FLOAT16, Int32, INT16, int8, UInt32, UInt16, Uint8 |
-| Outputtensor | Ausgabe | 4 | Float32, FLOAT16, Int32, INT16, int8, UInt32, UInt16, Uint8 |
+| ATensor | Eingabe | 4 | FLOAT32, FLOAT16, INT32, INT16, INT8, UINT32, UINT16, UINT8 |
+| BTensor | Eingabe | 4 | FLOAT32, FLOAT16, INT32, INT16, INT8, UINT32, UINT16, UINT8 |
+| OutputTensor | Ausgabe | 4 | FLOAT32, FLOAT16, INT32, INT16, INT8, UINT32, UINT16, UINT8 |
 
 
 
 ## <a name="requirements"></a>Anforderungen
 | &nbsp; | &nbsp; |
 | ---- |:---- |
-| **Header** | directml. h |
+| **Header** | directml.h |

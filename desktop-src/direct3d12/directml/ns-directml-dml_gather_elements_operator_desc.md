@@ -1,7 +1,7 @@
 ---
 UID: NS:directml.DML_GATHER_ELEMENTS_OPERATOR_DESC
 title: DML_GATHER_ELEMENTS_OPERATOR_DESC
-description: Sammelt Elemente aus dem eingabetensor entlang der angegebenen Achse, wobei der Indexer-tensorflow verwendet wird, um die Eingabe neu zuzuordnen.
+description: Erfasst Elemente aus dem Eingabe-Tensor entlang der angegebenen Achse mithilfe des Index-Tensors, um die Eingabe neu zuzuordnen.
 helpviewer_keywords:
 - DML_GATHER_ELEMENTS_OPERATOR_DESC
 - DML_GATHER_ELEMENTS_OPERATOR_DESC structure
@@ -44,16 +44,16 @@ api_location:
 - DirectML.h
 api_name:
 - DML_GATHER_ELEMENTS_OPERATOR_DESC
-ms.openlocfilehash: 19a3f19a19d0287dfcbff8b312b1d245fcfe6c09
-ms.sourcegitcommit: 3bdf30edb314e0fcd17dc4ddbc70e4ec7d3596e6
+ms.openlocfilehash: 89a4f2017f6adec8cce206e9261eb0fa6563e94c
+ms.sourcegitcommit: 8e1f04c7e3c5c850071bac8d173f9441aab0dfed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "106357140"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107803021"
 ---
-# <a name="dml_gather_elements_operator_desc-structure-directmlh"></a>DML_GATHER_ELEMENTS_OPERATOR_DESC-Struktur (directml. h)
+# <a name="dml_gather_elements_operator_desc-structure-directmlh"></a>DML_GATHER_ELEMENTS_OPERATOR_DESC-Struktur (directml.h)
 
-Sammelt Elemente aus dem eingabetensor entlang der angegebenen Achse, wobei der Indexer-tensorflow verwendet wird, um die Eingabe neu zuzuordnen. Dieser Operator führt den folgenden Pseudocode mit dem exakten Verhalten aus, das von der Achse, der Anzahl der Eingabe Dimensionen und der Index Dimensions Anzahl abhängig ist.
+Erfasst Elemente aus dem Eingabe-Tensor entlang der angegebenen Achse mithilfe des Index-Tensors, um die Eingabe neu zuzuordnen. Dieser Operator führt den folgenden Pseudocode aus, wobei das genaue Verhalten von der Achse, der Anzahl der Eingabedimensionen und der Indexdimensionsanzahl abhängt.
 
 ```
 output[i, j, k, ...] = input[index[i, j, k, ...], j, k, ...] // if axis == 0
@@ -63,7 +63,7 @@ output[i, j, k, ...] = input[i, j, index[i, j, k, ...], ...] // if axis == 2
 ```
 
 > [!IMPORTANT]
-> Diese API ist als Teil des eigenständigen Redistributable Package von directml verfügbar (siehe [Microsoft. ai. directml](https://www.nuget.org/packages/Microsoft.AI.DirectML/)). Siehe auch [Versionsverlauf der directml](../dml-version-history.md).
+> Diese API ist als Teil des eigenständigen verteilbaren DirectML-Pakets verfügbar (siehe [Microsoft.AI.DirectML](https://www.nuget.org/packages/Microsoft.AI.DirectML/) Version 1.4 und höher). Siehe auch [DirectML-Versionsverlauf.](../dml-version-history.md)
 
 ## <a name="syntax"></a>Syntax
 ```cpp
@@ -81,32 +81,32 @@ struct DML_GATHER_ELEMENTS_OPERATOR_DESC {
 
 `InputTensor`
 
-Typ: Konstante **[DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
+Typ: **const [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
 
-Der zu lesende tensorflow.
+Der Tensor, aus dem gelesen werden soll.
 
 
 `IndicesTensor`
 
-Typ: Konstante **[DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
+Typ: **const [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
 
-Die Indizes in den eingabetensor entlang der aktiven Achse. Die *Größen* müssen für jede Dimension außer der *Achse* mit " *inputtensor. sizes* " verglichen werden.
+Die Indizes in den Eingabe-Tensor entlang der aktiven Achse. Die *Größen* müssen mit *InputTensor.Sizes* für jede Dimension mit Ausnahme *von Achse* übereinstimmen.
 
-Ab `DML_FEATURE_LEVEL_3_0` unterstützt dieser Operator negative Indexwerte, wenn ein ganzzahliger Typ mit Vorzeichen mit diesem Mandanten verwendet wird. Negative Indizes werden als relativ zum Ende der Achsen Dimension interpretiert. Ein Index von-1 bezieht sich z. b. auf das letzte Element in dieser Dimension.
+Ab `DML_FEATURE_LEVEL_3_0` unterstützt dieser Operator negative Indexwerte, wenn ein ganzzahligen Typ mit Vorzeichen mit diesem Tensor verwendet wird. Negative Indizes werden als relativ zum Ende der Achsendimension interpretiert. Beispielsweise bezieht sich ein Index von -1 auf das letzte Element entlang dieser Dimension.
 
 
 `OutputTensor`
 
-Typ: Konstante **[DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
+Typ: **const [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
 
-Der tensorflow, in den die Ergebnisse geschrieben werden sollen. Die *Größen* müssen mit " *indicestensor. sizes*" verglichen werden, und der *Datentyp* muss mit " *inputtensor. DataType*" verglichen werden.
+Der Tensor, in den die Ergebnisse geschrieben werden sollen. Die *Größen* müssen *mit IndizesTensor.Sizes* übereinstimmen, und *DataType* muss mit *InputTensor.DataType* übereinstimmen.
 
 
 `Axis`
 
-Typ: [ **uint**](/windows/desktop/winprog/windows-data-types)
+Typ: [ **UINT**](/windows/desktop/winprog/windows-data-types)
 
-Die Achsen Dimension von *inputtensor* , die zusammengefasst werden soll `[0, *InputTensor.DimensionCount*)` .
+Die Achsendimension von *InputTensor,* die mit erfasst werden soll, im Bereich `[0, *InputTensor.DimensionCount*)` von .
 
 ## <a name="examples"></a>Beispiele
 
@@ -129,30 +129,30 @@ OutputTensor: (Sizes:{2,3}, DataType:UINT32)
 ```
 
 ## <a name="availability"></a>Verfügbarkeit
-Dieser Operator wurde in eingeführt `DML_FEATURE_LEVEL_2_1` .
+Dieser Operator wurde in `DML_FEATURE_LEVEL_2_1` eingeführt.
 
 ## <a name="tensor-constraints"></a>Tensor-Einschränkungen
-* `IndicesTensor`, *Inputtensor* und *outputtensor* müssen dieselbe *DimensionCount* aufweisen.
-* *Inputtensor* und *outputtensor* müssen denselben *Datentyp* aufweisen.
+* `IndicesTensor`, *InputTensor* und *OutputTensor* müssen denselben *DimensionCount aufweisen.*
+* *InputTensor und* *OutputTensor* müssen denselben *Datentyp haben.*
 
 ## <a name="tensor-support"></a>Tensor-Unterstützung
 ### <a name="dml_feature_level_3_0-and-above"></a>DML_FEATURE_LEVEL_3_0 und höher
-| Tensorflow | Typ | Unterstützte Dimensions Anzahl | Unterstützte Datentypen |
+| Tensor | Typ | Unterstützte Dimensionsanzahl | Unterstützte Datentypen |
 | ------ | ---- | -------------------------- | -------------------- |
-| Inputtensor | Eingabe | 1 bis 8 | Float32, FLOAT16, Int32, INT16, int8, UInt32, UInt16, Uint8 |
-| Indikator Geber | Eingabe | 1 bis 8 | Int64, Int32, UINT64, UInt32 |
-| Outputtensor | Ausgabe | 1 bis 8 | Float32, FLOAT16, Int32, INT16, int8, UInt32, UInt16, Uint8 |
+| InputTensor | Eingabe | 1 bis 8 | FLOAT32, FLOAT16, INT32, INT16, INT8, UINT32, UINT16, UINT8 |
+| IndicesTensor | Eingabe | 1 bis 8 | INT64, INT32, UINT64, UINT32 |
+| OutputTensor | Ausgabe | 1 bis 8 | FLOAT32, FLOAT16, INT32, INT16, INT8, UINT32, UINT16, UINT8 |
 
 ### <a name="dml_feature_level_2_1-and-above"></a>DML_FEATURE_LEVEL_2_1 und höher
-| Tensorflow | Typ | Unterstützte Dimensions Anzahl | Unterstützte Datentypen |
+| Tensor | Typ | Unterstützte Dimensionsanzahl | Unterstützte Datentypen |
 | ------ | ---- | -------------------------- | -------------------- |
-| Inputtensor | Eingabe | 4 | Float32, FLOAT16, Int32, INT16, int8, UInt32, UInt16, Uint8 |
-| Indikator Geber | Eingabe | 4 | UINT32 |
-| Outputtensor | Ausgabe | 4 | Float32, FLOAT16, Int32, INT16, int8, UInt32, UInt16, Uint8 |
+| InputTensor | Eingabe | 4 | FLOAT32, FLOAT16, INT32, INT16, INT8, UINT32, UINT16, UINT8 |
+| IndizesTensor | Eingabe | 4 | UINT32 |
+| OutputTensor | Ausgabe | 4 | FLOAT32, FLOAT16, INT32, INT16, INT8, UINT32, UINT16, UINT8 |
 
 
 
 ## <a name="requirements"></a>Anforderungen
 | &nbsp; | &nbsp; |
 | ---- |:---- |
-| **Header** | directml. h |
+| **Header** | directml.h |

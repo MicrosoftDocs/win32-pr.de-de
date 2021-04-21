@@ -1,7 +1,7 @@
 ---
 UID: NS:directml.DML_ELEMENT_WISE_BIT_AND_OPERATOR_DESC
 title: DML_ELEMENT_WISE_BIT_AND_OPERATOR_DESC
-description: Berechnet das bitweise and zwischen jedem entsprechenden Element der Eingabe Tensoren und schreibt das Ergebnis in den Ausgabe Mandanten.
+description: Berechnet das bitweise AND zwischen jedem entsprechenden Element der Eingabe tensors und schreibt das Ergebnis in den Ausgabe-Tensor.
 helpviewer_keywords:
 - DML_ELEMENT_WISE_BIT_AND_OPERATOR_DESC
 - DML_ELEMENT_WISE_BIT_AND_OPERATOR_DESC structure
@@ -45,23 +45,23 @@ api_location:
 - DirectML.h
 api_name:
 - DML_ELEMENT_WISE_BIT_AND_OPERATOR_DESC
-ms.openlocfilehash: 9e8730eef1b2d98c2f3094fb2fa29ecfc571d877
-ms.sourcegitcommit: 3bdf30edb314e0fcd17dc4ddbc70e4ec7d3596e6
+ms.openlocfilehash: 468c1e1dc332bc3c1afac4e0cdb6b0546d0b2b69
+ms.sourcegitcommit: 8e1f04c7e3c5c850071bac8d173f9441aab0dfed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "106354262"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107803246"
 ---
-# <a name="dml_element_wise_bit_and_operator_desc-structure-directmlh"></a>DML_ELEMENT_WISE_BIT_AND_OPERATOR_DESC-Struktur (directml. h)
+# <a name="dml_element_wise_bit_and_operator_desc-structure-directmlh"></a>DML_ELEMENT_WISE_BIT_AND_OPERATOR_DESC-Struktur (directml.h)
 
-Berechnet das bitweise and zwischen jedem entsprechenden Element der Eingabe Tensoren und schreibt das Ergebnis in den Ausgabe Mandanten.
+Berechnet das bitweise AND zwischen jedem entsprechenden Element der Eingabe tensors und schreibt das Ergebnis in den Ausgabe-Tensor.
 
-Der Eingabe-und Ausgabe Mandanten muss dieselbe *DimensionCount*, *Größe* und denselben *Datentyp* aufweisen.
+Der Eingabe- und Ausgabe-Tensor muss über die gleichen *DimensionCount-,* *Sizes-* und *DataType-Datentypen verfügen.*
 
-Dieser Operator unterstützt die direkte Ausführung. Dies bedeutet, dass der ausgabetensor bei der Bindung eine oder mehrere Eingabe-Tensoren als Alias zulässt.
+Dieser Operator unterstützt die direkt ausgeführte Ausführung, d. h., der Ausgabe-Tensor darf während der Bindung einen oder mehrere der Eingabe-Tensoren mit einem Alias verbinden.
 
 > [!IMPORTANT]
-> Diese API ist als Teil des eigenständigen Redistributable Package von directml verfügbar (siehe [Microsoft. ai. directml](https://www.nuget.org/packages/Microsoft.AI.DirectML/)). Siehe auch [Versionsverlauf der directml](../dml-version-history.md).
+> Diese API ist als Teil des eigenständigen verteilbaren DirectML-Pakets verfügbar (siehe [Microsoft.AI.DirectML](https://www.nuget.org/packages/Microsoft.AI.DirectML/) Version 1.4 und höher). Siehe auch [DirectML-Versionsverlauf.](../dml-version-history.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -78,36 +78,36 @@ struct DML_ELEMENT_WISE_BIT_AND_OPERATOR_DESC
 
 `ATensor`
 
-Typ: Konstante **[DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
+Typ: **const [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
 
-Ein tensorflow, der die Links neben Eingaben enthält.
+Ein Tensor, der die eingaben auf der linken Seite enthält.
 
 `BTensor`
 
-Typ: Konstante **[DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
+Typ: **const [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
 
-Ein tensorflow, der die Eingaben auf der rechten Seite enthält.
+Ein Tensor, der die rechten Eingaben enthält.
 
 `OutputTensor`
 
-Typ: Konstante **[DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
+Typ: **const [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
 
-Der Ausgabe Mandanten, in den die Ergebnisse geschrieben werden sollen.
+Der Ausgabe-Tensor, in den die Ergebnisse geschrieben werden sollen.
 
 ## <a name="availability"></a>Verfügbarkeit
-Dieser Operator wurde in eingeführt `DML_FEATURE_LEVEL_3_0` .
+Dieser Operator wurde in `DML_FEATURE_LEVEL_3_0` eingeführt.
 
-## <a name="tensor-constraints"></a>Tensor-Einschränkungen
-*Atensor*, *btensor* und *outputtensor* müssen denselben *Datentyp*, jede *DimensionCount* und jede *Größe* aufweisen.
+## <a name="tensor-constraints"></a>Tensoreinschränkungen
+*ATensor,* *BTensor* und *OutputTensor* müssen die gleichen *Datentypen*, *DimensionCount* und *Größen* aufweisen.
 
 ## <a name="tensor-support"></a>Tensor-Unterstützung
-| Tensorflow | Typ | Unterstützte Dimensions Anzahl | Unterstützte Datentypen |
+| Tensor | Typ | Unterstützte Dimensionsanzahlen | Unterstützte Datentypen |
 | ------ | ---- | -------------------------- | -------------------- |
-| Atensor | Eingabe | 1 bis 8 | UInt32, UInt16, Uint8 |
-| Btensor | Eingabe | 1 bis 8 | UInt32, UInt16, Uint8 |
-| Outputtensor | Ausgabe | 1 bis 8 | UInt32, UInt16, Uint8 |
+| ATensor | Eingabe | 1 bis 8 | UINT32, UINT16, UINT8 |
+| BTensor | Eingabe | 1 bis 8 | UINT32, UINT16, UINT8 |
+| OutputTensor | Ausgabe | 1 bis 8 | UINT32, UINT16, UINT8 |
 
 ## <a name="requirements"></a>Anforderungen
 | &nbsp; | &nbsp; |
 | ---- |:---- |
-| **Header** | directml. h |
+| **Header** | directml.h |

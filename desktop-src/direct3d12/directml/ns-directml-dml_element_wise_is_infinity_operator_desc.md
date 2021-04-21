@@ -1,7 +1,7 @@
 ---
 UID: NS:directml.DML_ELEMENT_WISE_IS_INFINITY_OPERATOR_DESC
 title: DML_ELEMENT_WISE_IS_INFINITY_OPERATOR_DESC
-description: Überprüft jedes Element von *inputtensor* für IEEE-754-inf, INF oder beides, abhängig vom angegebenen *infinitymode*-Element, und platziert das Ergebnis (1 für true, 0 für false) in das entsprechende Element von *outputtensor*.
+description: Überprüft jedes Element von *InputTensor* je nach dem angegebenen *InfinityMode* auf IEEE-754 -inf, inf oder beides und platziert das Ergebnis (1 für true, 0 für false) in das entsprechende Element von *OutputTensor.*
 ms.topic: reference
 tech.root: directml
 ms.date: 10/29/2020
@@ -35,16 +35,16 @@ f1_keywords:
 - directml/DML_ELEMENT_WISE_IS_INFINITY_OPERATOR_DESC
 dev_langs:
 - c++
-ms.openlocfilehash: b4f3f07fcbe303e86b422206a8f07eb75fb09d70
-ms.sourcegitcommit: 3bdf30edb314e0fcd17dc4ddbc70e4ec7d3596e6
+ms.openlocfilehash: 41be7751b542436b481da784c60ae79ad554cd12
+ms.sourcegitcommit: 8e1f04c7e3c5c850071bac8d173f9441aab0dfed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "106354252"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107803100"
 ---
-# <a name="dml_element_wise_is_infinity_operator_desc-structure-directmlh"></a>DML_ELEMENT_WISE_IS_INFINITY_OPERATOR_DESC-Struktur (directml. h)
+# <a name="dml_element_wise_is_infinity_operator_desc-structure-directmlh"></a>DML_ELEMENT_WISE_IS_INFINITY_OPERATOR_DESC -Struktur (directml.h)
 
-Überprüft jedes Element von *inputtensor* für IEEE-754-inf, INF oder beides, abhängig vom angegebenen *infinitymode*-Element, und platziert das Ergebnis (1 für true, 0 für false) in das entsprechende Element von *outputtensor*.
+Überprüft jedes Element von *InputTensor* je nach dem angegebenen *InfinityMode* auf IEEE-754 -inf, inf oder beides und platziert das Ergebnis (1 für true, 0 für false) in das entsprechende Element von *OutputTensor.*
 
 ```
 f(x) = isinf(x) && (
@@ -54,7 +54,7 @@ f(x) = isinf(x) && (
 ```
 
 > [!IMPORTANT]
-> Diese API ist als Teil des eigenständigen Redistributable Package von directml verfügbar (siehe [Microsoft. ai. directml](https://www.nuget.org/packages/Microsoft.AI.DirectML/)). Siehe auch [Versionsverlauf der directml](../dml-version-history.md).
+> Diese API ist als Teil des eigenständigen weiterverteilten DirectML-Pakets verfügbar (siehe [Microsoft.AI.DirectML](https://www.nuget.org/packages/Microsoft.AI.DirectML/) Version 1.4 und höher). Siehe auch [DirectML-Versionsverlauf.](../dml-version-history.md)
 
 ## <a name="syntax"></a>Syntax
 ```cpp
@@ -69,53 +69,53 @@ struct DML_ELEMENT_WISE_IS_INFINITY_OPERATOR_DESC {
 
 `InputTensor`
 
-Typ: Konstante **[DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
+Typ: **const [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
 
-Der eingabetensor, aus dem gelesen wird.
+Der Eingabetensor, aus dem gelesen werden soll.
 
 
 `OutputTensor`
 
-Typ: Konstante **[DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
+Typ: **const [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
 
-Der Ausgabe Mandanten, in den die Ergebnisse geschrieben werden sollen.
+Der Ausgabe tensor, in den die Ergebnisse geschrieben werden.
 
 
 `InfinityMode`
 
 Typ: **[DML_IS_INFINITY_MODE](/windows/win32/api/directml/ne-directml-dml_is_infinity_mode)**
 
-Ein [DML_IS_INFINITY_MODE](/windows/win32/api/directml/ne-directml-dml_is_infinity_mode) der das Vorzeichen der unendlich festgelegt wird, das überprüft werden soll.
+Ein [DML_IS_INFINITY_MODE,](/windows/win32/api/directml/ne-directml-dml_is_infinity_mode) der das Vorzeichen der unendlichen - bestimmt, auf die überprüft werden soll.
 
-* Wenn **DML_IS_INFINITY_MODE_EITHER**, wird "1" zurückgegeben, wenn das Element "-inf" oder "inf" ist, andernfalls "0".
-* Wenn **DML_IS_INFINITY_MODE_POSITIVE**, wird "1" zurückgegeben, wenn das Element "inf" ist, andernfalls "0".
-* Wenn **DML_IS_INFINITY_MODE_NEGATIVE**", wird" 1 "zurückgegeben, wenn das Element"-inf "ist, andernfalls" 0 ".
+* Wenn **DML_IS_INFINITY_MODE_EITHER,** wird 1 zurückgegeben, wenn das Element -inf oder inf ist, andernfalls 0.
+* Wenn **DML_IS_INFINITY_MODE_POSITIVE,** wird 1 zurückgegeben, wenn das Element inf ist, andernfalls 0.
+* Wenn **DML_IS_INFINITY_MODE_NEGATIVE** ist, wird 1 zurückgegeben, wenn das Element -inf ist, andernfalls 0.
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 ## <a name="availability"></a>Verfügbarkeit
-Dieser Operator wurde in eingeführt `DML_FEATURE_LEVEL_2_1` .
+Dieser Operator wurde in `DML_FEATURE_LEVEL_2_1` eingeführt.
 
-## <a name="tensor-constraints"></a>Tensor-Einschränkungen
-*Inputtensor* und *outputtensor* müssen die gleiche *DimensionCount* und *Größe* aufweisen.
+## <a name="tensor-constraints"></a>Tensoreinschränkungen
+*InputTensor und* *OutputTensor* müssen über die gleichen *DimensionCount-* und *Sizes-Größen verfügen.*
 
 ## <a name="tensor-support"></a>Tensor-Unterstützung
 ### <a name="dml_feature_level_3_0-and-above"></a>DML_FEATURE_LEVEL_3_0 und höher
-| Tensorflow | Typ | Unterstützte Dimensions Anzahl | Unterstützte Datentypen |
+| Tensor | Typ | Unterstützte Dimensionsanzahl | Unterstützte Datentypen |
 | ------ | ---- | -------------------------- | -------------------- |
-| Inputtensor | Eingabe | 1 bis 8 | Float32, FLOAT16 |
-| Outputtensor | Ausgabe | 1 bis 8 | UINT8 |
+| InputTensor | Eingabe | 1 bis 8 | FLOAT32, FLOAT16 |
+| OutputTensor | Ausgabe | 1 bis 8 | UINT8 |
 
 ### <a name="dml_feature_level_2_1-and-above"></a>DML_FEATURE_LEVEL_2_1 und höher
-| Tensorflow | Typ | Unterstützte Dimensions Anzahl | Unterstützte Datentypen |
+| Tensor | Typ | Unterstützte Dimensionsanzahl | Unterstützte Datentypen |
 | ------ | ---- | -------------------------- | -------------------- |
-| Inputtensor | Eingabe | 4 | Float32, FLOAT16 |
-| Outputtensor | Ausgabe | 4 | UINT8 |
+| InputTensor | Eingabe | 4 | FLOAT32, FLOAT16 |
+| OutputTensor | Ausgabe | 4 | UINT8 |
 
 
 ## <a name="requirements"></a>Anforderungen
 | &nbsp; | &nbsp; |
 | ---- |:---- |
-| **Unterstützte Mindestversion (Client)** | Windows 10, Version 2004 (10,0; Build 19041) |
-| **Unterstützte Mindestversion (Server)** | Windows Server, Version 2004 (10,0; Build 19041) |
-| **Header** | directml. h |
+| **Unterstützte Mindestversion (Client)** | Windows 10, Version 2004 (10.0; Build 19041) |
+| **Unterstützte Mindestversion (Server)** | Windows Server, Version 2004 (10.0; Build 19041) |
+| **Header** | directml.h |

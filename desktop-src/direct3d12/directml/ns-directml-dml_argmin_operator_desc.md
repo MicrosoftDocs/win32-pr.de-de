@@ -1,7 +1,7 @@
 ---
 UID: NS:directml.DML_ARGMIN_OPERATOR_DESC
 title: DML_ARGMIN_OPERATOR_DESC
-description: Gibt die Indizes der minimal wertigen Elemente innerhalb einer oder mehrerer Dimensionen des Eingabe Mandanten aus.
+description: Gibt die Indizes der Minimalwertelemente innerhalb einer oder mehrere Dimensionen des Eingabetensors aus.
 helpviewer_keywords:
 - DML_ARGMIN_OPERATOR_DESC
 - DML_ARGMIN_OPERATOR_DESC structure
@@ -45,21 +45,21 @@ api_location:
 - DirectML.h
 api_name:
 - DML_ARGMIN_OPERATOR_DESC
-ms.openlocfilehash: 30d281c6ab35675e0cfce80b7eb025292c501041
-ms.sourcegitcommit: 3bdf30edb314e0fcd17dc4ddbc70e4ec7d3596e6
+ms.openlocfilehash: 2e12a81593504a4eb7a0917e545bfa20c70647ff
+ms.sourcegitcommit: 8e1f04c7e3c5c850071bac8d173f9441aab0dfed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "106367261"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107804075"
 ---
-# <a name="dml_argmin_operator_desc-structure-directmlh"></a>DML_ARGMIN_OPERATOR_DESC-Struktur (directml. h)
+# <a name="dml_argmin_operator_desc-structure-directmlh"></a>DML_ARGMIN_OPERATOR_DESC -Struktur (directml.h)
 
-Gibt die Indizes der minimal wertigen Elemente innerhalb einer oder mehrerer Dimensionen des Eingabe Mandanten aus.
+Gibt die Indizes der Minimalwertelemente innerhalb einer oder mehrere Dimensionen des Eingabetensors aus.
 
-Jedes Output-Element ist das Ergebnis der Anwendung einer *argmin* -Reduzierung auf eine Teilmenge des eingabetensors. Die *argmin* -Funktion gibt den Index des Minimalwert Elements innerhalb eines Satzes von Eingabe Elementen aus. Die Eingabeelemente, die an jeder Reduzierung beteiligt sind, werden durch die bereitgestellten Eingabe Achsen bestimmt. Ebenso ist jeder Ausgabe Index in Bezug auf die bereitgestellten Eingabe Achsen. Wenn alle Eingabe Achsen angegeben sind, wendet der Operator eine einzelne *argmin* -Reduzierung an und erzeugt ein einzelnes Output-Element.
+Jedes Ausgabeelement ist das Ergebnis der Anwendung einer *Argminverringerung* auf eine Teilmenge des Eingabetensors. Die *argmin-Funktion* gibt den Index des Minimalwertelements in einem Satz von Eingabeelementen aus. Die an jeder Reduzierung beteiligten Eingabeelemente werden durch die bereitgestellten Eingabeachsen bestimmt. Ebenso gilt jeder Ausgabeindex in Bezug auf die bereitgestellten Eingabeachsen. Wenn alle Eingabeachsen angegeben sind, wendet der Operator eine einzelne *Argminverringerung* an und erzeugt ein einzelnes Ausgabeelement.
 
 > [!IMPORTANT]
-> Diese API ist als Teil des eigenständigen Redistributable Package von directml verfügbar (siehe [Microsoft. ai. directml](https://www.nuget.org/packages/Microsoft.AI.DirectML/)). Siehe auch [Versionsverlauf der directml](../dml-version-history.md).
+> Diese API ist als Teil des eigenständigen weiterverteilten DirectML-Pakets verfügbar (siehe [Microsoft.AI.DirectML](https://www.nuget.org/packages/Microsoft.AI.DirectML/) Version 1.4 und höher). Siehe auch [DirectML-Versionsverlauf.](../dml-version-history.md)
 
 ## <a name="syntax"></a>Syntax
 ```cpp
@@ -77,44 +77,44 @@ struct DML_ARGMIN_OPERATOR_DESC
 
 `InputTensor`
 
-Typ: Konstante **[DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
+Typ: **const [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
 
-Der zu lesende tensorflow.
+Der Tensor, aus dem gelesen werden soll.
 
 `OutputTensor`
 
-Typ: Konstante **[DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
+Typ: **const [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
 
-Der tensorflow, in den die Ergebnisse geschrieben werden sollen. Jedes Output-Element ist das Ergebnis einer *argmin* -Reduzierung für eine Teilmenge von Elementen aus dem *inputtensor*.
+Der Tensor, in den die Ergebnisse geschrieben werden. Jedes Ausgabeelement ist das Ergebnis einer *Argminverringerung* für eine Teilmenge von Elementen aus *dem InputTensor.*
 
-- *DimensionCount* muss mit *inputtensor. DimensionCount* (der Rang des Eingabe Mandanten beibehalten) identisch sein.
-- *Größen* müssen mit " *inputtensor. sizes*" verglichen werden, mit Ausnahme der Dimensionen, die in den reduzierten *Achsen* enthalten sind, die die Größe 1 aufweisen müssen.
+- *DimensionCount* muss mit *InputTensor.DimensionCount übereinstimmen* (der Rang des Eingabetensors wird beibehalten).
+- *Größen müssen* mit *InputTensor.Sizes übereinstimmen,* mit Ausnahme der Dimensionen, die in den reduzierten Achsen enthalten *sind,* die die Größe 1 haben müssen.
 
 `AxisCount`
 
-Typ: **[uint](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[UINT](/windows/win32/winprog/windows-data-types)**
 
-Die Anzahl der zu reduzierenden Achsen. Dieses Feld bestimmt die Größe des *Achsen* Arrays.
+Die Anzahl der zu reduzierenden Achsen. Dieses Feld bestimmt die Größe des *Achsenarrays.*
 
 `Axes`
 
-Typ: \_ Field_size \_ (axiscount) **Konstanten [uint](/windows/desktop/WinProg/windows-data-types) \***
+Typ: \_ Field_size \_ (AxisCount) **const [UINT](/windows/win32/winprog/windows-data-types) \***
 
-Die Achsen, auf die reduziert werden soll. Die Werte müssen im Bereich liegen `[0, InputTensor.DimensionCount - 1]` .
+Die Achsen, entlang derer reduziert werden soll. Werte müssen im Bereich `[0, InputTensor.DimensionCount - 1]` liegen.
 
 `AxisDirection`
 
-DML_AXIS_DIRECTION axisdirection;
+DML_AXIS_DIRECTION AxisDirection;
 
 Typ: **[DML_AXIS_DIRECTION](/windows/win32/api/directml/ne-directml-dml_axis_direction)**
 
 Bestimmt, welcher Index ausgewählt werden soll, wenn mehrere Eingabeelemente denselben Wert aufweisen.
-- **DML_AXIS_DIRECTION_INCREASING** gibt den Index des ersten Elements mit dem Minimalwert zurück (z. b. `argmin({1,2,3,2,1}) = 0` ).
-- **DML_AXIS_DIRECTION_DECREASING** gibt den Index des letzten Minimalwert Elements zurück (z. b. `argmin({1,2,3,2,1}) = 4` ).
+- **DML_AXIS_DIRECTION_INCREASING** gibt den Index des ersten Mindestwertelements zurück (z. B. `argmin({1,2,3,2,1}) = 0` ).
+- **DML_AXIS_DIRECTION_DECREASING** gibt den Index des letzten Mindestwertelements zurück (z. B. `argmin({1,2,3,2,1}) = 4` ).
 
 ## <a name="examples"></a>Beispiele
 
-In den Beispielen in diesem Abschnitt wird der gleiche zweidimensionale Eingabe Mandanten verwendet.
+In den Beispielen in diesem Abschnitt wird der gleiche zweidimensionale Eingabe-Tensor verwendet.
 
 ```
 InputTensor: (Sizes:{3, 3}, DataType:FLOAT32)
@@ -123,7 +123,7 @@ InputTensor: (Sizes:{3, 3}, DataType:FLOAT32)
  [2, 5, 2]]
 ```
 
-### <a name="example-1-applying-argmin-to-columns"></a>Beispiel 1: Anwenden von *argmin* auf Spalten
+### <a name="example-1-applying-argmin-to-columns"></a>Beispiel 1: Anwenden von *Argmin* auf Spalten
 
 ```
 AxisCount: 1
@@ -135,7 +135,7 @@ OutputTensor: (Sizes:{1, 3}, DataType:UINT32)
   2]] // argmin({3, 4, 2})
 ```
 
-### <a name="example-2-applying-argmin-to-rows"></a>Beispiel 2: Anwenden von *argmin* auf Zeilen
+### <a name="example-2-applying-argmin-to-rows"></a>Beispiel 2: Anwenden von *Argmin* auf Zeilen
 
 ```
 AxisCount: 1
@@ -147,7 +147,7 @@ OutputTensor: (Sizes:{3, 1}, DataType:UINT32)
  [0]] // argmin({2, 5, 2})
 ```
 
-### <a name="example-3-applying-argmin-to-all-axes-the-entire-tensor"></a>Beispiel 3: Anwenden von *argmin* auf alle Achsen (der gesamte Tensor)
+### <a name="example-3-applying-argmin-to-all-axes-the-entire-tensor"></a>Beispiel 3: Anwenden von *Argmin* auf alle Achsen (den gesamten Tensor)
 
 ```
 AxisCount: 2
@@ -157,26 +157,26 @@ OutputTensor: (Sizes:{1, 1}, DataType:UINT32)
 [[4]]  // argmin({1, 2, 3, 3, 0, 4, 2, 5, 2})
 ```
 
-## <a name="remarks"></a>Bemerkungen
-Die Ausgabe Mandanten Größen müssen mit den Eingabe-tensorflow-Größen identisch sein, mit Ausnahme der reduzierten Achsen, die 1 sein müssen.
+## <a name="remarks"></a>Hinweise
+Die Ausgabe-Tensorgrößen müssen mit den Eingabe-Tensorgrößen identisch sein, mit Ausnahme der reduzierten Achsen, die 1 sein müssen.
 
-Wenn *axisdirection* [DML_AXIS_DIRECTION_INCREASING](/windows/win32/api/directml/ne-directml-dml_axis_direction)ist, entspricht diese API [DML_REDUCE_OPERATOR_DESC](/windows/win32/api/directml/ns-directml-dml_reduce_operator_desc) mit [DML_REDUCE_FUNCTION_ARGMIN](/windows/win32/api/directml/ne-directml-dml_reduce_function).
+Wenn *AxisDirection* [DML_AXIS_DIRECTION_INCREASING](/windows/win32/api/directml/ne-directml-dml_axis_direction)ist, entspricht diese API [DML_REDUCE_OPERATOR_DESC](/windows/win32/api/directml/ns-directml-dml_reduce_operator_desc) mit [DML_REDUCE_FUNCTION_ARGMIN](/windows/win32/api/directml/ne-directml-dml_reduce_function).
 
-Eine Teilmenge dieser Funktionalität wird durch den [DML_REDUCE_OPERATOR_DESC](/windows/win32/api/directml/ns-directml-dml_reduce_operator_desc) -Operator verfügbar gemacht und auf früheren directml-featureebenen unterstützt.
+Eine Teilmenge dieser Funktionalität wird über den [operator DML_REDUCE_OPERATOR_DESC](/windows/win32/api/directml/ns-directml-dml_reduce_operator_desc) verfügbar gemacht und auf früheren DirectML-Featureebenen unterstützt.
 
 ## <a name="availability"></a>Verfügbarkeit
-Dieser Operator wurde in eingeführt `DML_FEATURE_LEVEL_3_0` .
+Dieser Operator wurde in `DML_FEATURE_LEVEL_3_0` eingeführt.
 
-## <a name="tensor-constraints"></a>Tensor-Einschränkungen
-*Inputtensor* und *outputtensor* müssen dieselbe *DimensionCount* aufweisen.
+## <a name="tensor-constraints"></a>Tensoreinschränkungen
+*InputTensor* und *OutputTensor* müssen über den gleichen *DimensionCount verfügen.*
 
 ## <a name="tensor-support"></a>Tensor-Unterstützung
-| Tensorflow | Typ | Unterstützte Dimensions Anzahl | Unterstützte Datentypen |
+| Tensor | Typ | Unterstützte Dimensionsanzahl | Unterstützte Datentypen |
 | ------ | ---- | -------------------------- | -------------------- |
-| Inputtensor | Eingabe | 1 bis 8 | Float32, FLOAT16, Int32, INT16, int8, UInt32, UInt16, Uint8 |
-| Outputtensor | Ausgabe | 1 bis 8 | Int64, Int32, UINT64, UInt32 |
+| InputTensor | Eingabe | 1 bis 8 | FLOAT32, FLOAT16, INT32, INT16, INT8, UINT32, UINT16, UINT8 |
+| OutputTensor | Ausgabe | 1 bis 8 | INT64, INT32, UINT64, UINT32 |
 
 ## <a name="requirements"></a>Anforderungen
 | &nbsp; | &nbsp; |
 | ---- |:---- |
-| **Header** | directml. h |
+| **Header** | directml.h |

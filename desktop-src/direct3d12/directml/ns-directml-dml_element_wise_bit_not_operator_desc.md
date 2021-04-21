@@ -1,7 +1,7 @@
 ---
 UID: NS:directml.DML_ELEMENT_WISE_BIT_COUNT_OPERATOR_DESC
 title: DML_ELEMENT_WISE_BIT_COUNT_OPERATOR_DESC
-description: Berechnet die bitweise auffüllungs Anzahl (die Anzahl der Bits, die auf 1 festgelegt ist) für jedes Element des Eingabe Mandanten und schreibt das Ergebnis in den Ausgabe Mandanten.
+description: Berechnet die bitweise Aufzählung (die Anzahl von Bits, die auf 1 festgelegt ist) für jedes Element des Eingabetensors und schreibt das Ergebnis in den Ausgabetensor.
 helpviewer_keywords:
 - DML_ELEMENT_WISE_BIT_COUNT_OPERATOR_DESC
 - DML_ELEMENT_WISE_BIT_COUNT_OPERATOR_DESC structure
@@ -45,21 +45,21 @@ api_location:
 - DirectML.h
 api_name:
 - DML_ELEMENT_WISE_BIT_COUNT_OPERATOR_DESC
-ms.openlocfilehash: 4b292b1b6e12f4643e928022f59603fd75e080fb
-ms.sourcegitcommit: 3bdf30edb314e0fcd17dc4ddbc70e4ec7d3596e6
+ms.openlocfilehash: 3c8dddc3159ebcd857c7423b76856fbeba465d2e
+ms.sourcegitcommit: 8e1f04c7e3c5c850071bac8d173f9441aab0dfed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "106363874"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107803229"
 ---
-# <a name="dml_element_wise_bit_count_operator_desc-structure-directmlh"></a>DML_ELEMENT_WISE_BIT_COUNT_OPERATOR_DESC-Struktur (directml. h)
+# <a name="dml_element_wise_bit_count_operator_desc-structure-directmlh"></a>DML_ELEMENT_WISE_BIT_COUNT_OPERATOR_DESC -Struktur (directml.h)
 
-Berechnet die bitweise auffüllungs Anzahl (die Anzahl der Bits, die auf 1 festgelegt ist) für jedes Element des Eingabe Mandanten und schreibt das Ergebnis in den Ausgabe Mandanten.
+Berechnet die bitweise Aufzählung (die Anzahl von Bits, die auf 1 festgelegt ist) für jedes Element des Eingabetensors und schreibt das Ergebnis in den Ausgabetensor.
 
-Der Eingabe-und der Ausgabe Mandanten müssen die gleiche *DimensionCount* und *Größe* aufweisen, auch wenn Sie sich in *DataType* unterscheiden können.
+Der Eingabe- und Ausgabe-Tensor muss über die gleichen *DimensionCount-* und *Sizes-Größen* verfügen, obwohl sie sich in *DataType unterscheiden können.*
 
 > [!IMPORTANT]
-> Diese API ist als Teil des eigenständigen Redistributable Package von directml verfügbar (siehe [Microsoft. ai. directml](https://www.nuget.org/packages/Microsoft.AI.DirectML/)). Siehe auch [Versionsverlauf der directml](../dml-version-history.md).
+> Diese API ist als Teil des eigenständigen weiterverteilten DirectML-Pakets verfügbar (siehe [Microsoft.AI.DirectML](https://www.nuget.org/packages/Microsoft.AI.DirectML/) Version 1.4 und höher). Siehe auch [DirectML-Versionsverlauf.](../dml-version-history.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -75,15 +75,15 @@ struct DML_ELEMENT_WISE_BIT_COUNT_OPERATOR_DESC
 
 `InputTensor`
 
-Typ: Konstante **[DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
+Typ: **const [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
 
-Der eingabetensor, aus dem gelesen wird.
+Der Eingabetensor, aus dem gelesen werden soll.
 
 `OutputTensor`
 
-Typ: Konstante **[DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
+Typ: **const [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
 
-Der Ausgabe Mandanten, in den die Ergebnisse geschrieben werden sollen.
+Der Ausgabe tensor, in den die Ergebnisse geschrieben werden.
 
 ## <a name="example"></a>Beispiel
 
@@ -98,18 +98,18 @@ OutputTensor: (Sizes:{2,2}, DataType:UINT32)
 ```
 
 ## <a name="availability"></a>Verfügbarkeit
-Dieser Operator wurde in eingeführt `DML_FEATURE_LEVEL_3_0` .
+Dieser Operator wurde in `DML_FEATURE_LEVEL_3_0` eingeführt.
 
-## <a name="tensor-constraints"></a>Tensor-Einschränkungen
-*Inputtensor* und *outputtensor* müssen die gleiche *DimensionCount* und *Größe* aufweisen.
+## <a name="tensor-constraints"></a>Tensoreinschränkungen
+*InputTensor und* *OutputTensor* müssen über die gleichen *DimensionCount-* und *Sizes-Größen verfügen.*
 
 ## <a name="tensor-support"></a>Tensor-Unterstützung
-| Tensorflow | Typ | Unterstützte Dimensions Anzahl | Unterstützte Datentypen |
+| Tensor | Typ | Unterstützte Dimensionsanzahl | Unterstützte Datentypen |
 | ------ | ---- | -------------------------- | -------------------- |
-| Inputtensor | Eingabe | 1 bis 8 | UInt32, UInt16, Uint8 |
-| Outputtensor | Ausgabe | 1 bis 8 | UInt32, Uint8 |
+| InputTensor | Eingabe | 1 bis 8 | UINT32, UINT16, UINT8 |
+| OutputTensor | Ausgabe | 1 bis 8 | UINT32, UINT8 |
 
 ## <a name="requirements"></a>Anforderungen
 | &nbsp; | &nbsp; |
 | ---- |:---- |
-| **Header** | directml. h |
+| **Header** | directml.h |

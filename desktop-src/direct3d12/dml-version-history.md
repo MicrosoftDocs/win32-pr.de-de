@@ -1,75 +1,76 @@
 ---
-title: Versionsverlauf der directml
-description: Directml wird als Systemkomponente von Windows 10 bereitgestellt und ist als Teil des Betriebssystems Windows 10 (OS) in Windows 10, Version 1903 (10,0; Build 18362) und neuer.
+title: DirectML-Versionsverlauf
+description: DirectML wird als Systemkomponente von Windows 10 verteilt und ist als Teil des Windows 10-Betriebssystems in Windows 10, Version 1903 (10.0; Build 18362) und neuer.
 ms.localizationpriority: high
 ms.topic: article
 ms.date: 11/05/2020
-ms.openlocfilehash: 04cb7a2c906d7674c793a9a99e21609ea874dbc1
-ms.sourcegitcommit: 3bdf30edb314e0fcd17dc4ddbc70e4ec7d3596e6
+ms.openlocfilehash: f5e0a478b2d4c6728a1cd53388ba09af8e5bbc0e
+ms.sourcegitcommit: 8e1f04c7e3c5c850071bac8d173f9441aab0dfed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "104548765"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107803935"
 ---
-# <a name="directml-version-history"></a>Versionsverlauf der directml
+# <a name="directml-version-history"></a>DirectML-Versionsverlauf
 
-Directml wird als Systemkomponente von Windows 10 bereitgestellt und ist als Teil des Betriebssystems Windows 10 (OS) in Windows 10, Version 1903 (10,0; Build 18362) und neuer.
+DirectML wird als Systemkomponente von Windows 10 verteilt und ist als Teil des Windows 10-Betriebssystems in Windows 10, Version 1903 (10.0; Build 18362) und neuer.
 
-Ab Version 1.4.0 von directml ist directml auch als eigenständiges verteilbares Paket verfügbar (siehe [Microsoft. ai. directml](https://www.nuget.org/packages/Microsoft.AI.DirectML/)), das für Anwendungen nützlich ist, die eine festgelegte Version von directml verwenden möchten, oder bei Ausführung unter älteren Versionen von Windows 10.
+Ab DirectML Version 1.4.0 ist DirectML auch als eigenständiges verteilbares Paket verfügbar (siehe [Microsoft.AI.DirectML).](https://www.nuget.org/packages/Microsoft.AI.DirectML/)Dies ist nützlich für Anwendungen, die eine feste Version von DirectML verwenden möchten, oder bei der Ausführung in älteren Versionen von Windows 10.
 
-Directml folgt den [semantischen Versions](https://semver.org/) Konventionen. Das heißt, dass Versionsnummern dem Formular folgen `major.minor.patch` . Die erste Version von directml hat eine Version von 1.0.0.
+DirectML folgt den [Konventionen für die semantische Versionierung.](https://semver.org/) Das heißt, Versionsnummern folgen dem Formular `major.minor.patch` . Die erste Version von DirectML verfügt über die Version 1.0.0.
 
-## <a name="version-table"></a>Versions Tabelle
+## <a name="version-table"></a>Versionstabelle
 
-|Directml-Version|Unterstützte Funktionsebene (siehe [Verlauf der directml-Funktionsebene](./dml-feature-level-history.md))|DML_TARGET_VERSION|Zuerst verfügbar in|Zuerst verfügbar in (verteilbares Paket)|
+|DirectML-Version|Unterstützt auf Featureebene (siehe [Verlauf der DirectML-Funktionsebene](./dml-feature-level-history.md))|DML_TARGET_VERSION|Zuerst verfügbar in|Zuerst verfügbar in (Redistributable)|
 |-|-|-|-|-|-|
-|1.4.0<sup>1</sup>|DML_FEATURE_LEVEL_3_0|`0x3000`|–|[Directml-1.4.0](https://www.nuget.org/packages/Microsoft.AI.DirectML/)|
-|1.1.0|DML_FEATURE_LEVEL_2_0|`0x2000`|Windows 10, Version 2004 (10,0; Build 19041) (Windows 10 Mai 2020-Update). Als "20h1" bezeichnet.|–|
-|1.0.0|DML_FEATURE_LEVEL_1_0|`0x1000`|Windows 10, Version 1903 (10,0; Build 18362) (Windows 10 Mai 2019-Update). Als "19h1" bezeichnet.|–|
+|1.5.0|DML_FEATURE_LEVEL_3_1|`0x3100`|–|[DirectML-1.5.0](https://www.nuget.org/packages/Microsoft.AI.DirectML/1.5.0)|
+|1.4.0<sup>1</sup>|DML_FEATURE_LEVEL_3_0|`0x3000`|–|[DirectML-1.4.0](https://www.nuget.org/packages/Microsoft.AI.DirectML/1.4.0)|
+|1.1.0|DML_FEATURE_LEVEL_2_0|`0x2000`|Windows 10, Version 2004 (10.0; Build 19041) (Windows 10 Mai 2020 Update). Auch bekannt als "20H1".|–|
+|1.0.0|DML_FEATURE_LEVEL_1_0|`0x1000`|Windows 10, Version 1903 (10.0; Build 18362) (Windows 10 May 2019 Update). Aka "19H1".|–|
 
-<sup>1</sup> die Zwischenversionen von "1.2.0" und "1.3.0" von directml wurden nicht allgemein verfügbar gemacht.
+<sup>1</sup> Die Zwischenversionen 1.2.0 und 1.3.0 von DirectML wurden nicht allgemein verfügbar gemacht.
 
-## <a name="selecting-a-directml-target-version"></a>Auswählen einer Version des directml-Ziels
+## <a name="selecting-a-directml-target-version"></a>Auswählen einer DirectML-Zielversion
 
-Aus praktischer Gründen werden bestimmte Funktionen in der `DirectML.h` Header Datei bedingt basierend auf dem Wert des Makros deklariert `DML_TARGET_VERSION` . Wenn Sie das- `DML_TARGET_VERSION` Makro auf bestimmte Werte festlegen, können Sie Teile von `DirectML.h` aus Ihrer Anwendung ausschließen.
+Der Einfachheit halber werden bestimmte Features in der `DirectML.h` Headerdatei basierend auf dem Wert des Makros bedingt `DML_TARGET_VERSION` deklariert. Indem Sie das `DML_TARGET_VERSION` Makro auf bestimmte Werte festlegen, können Sie Teile von aus Ihrer Anwendung `DirectML.h` ausschließen.
 
-Dies kann hilfreich sein, wenn Sie eine neuere Kopie von verwenden `DirectML.h` , aber eine niedrigere Version der directml-Binärdatei als Ziel verwenden, da dadurch sichergestellt wird, dass jeder Versuch, Features über die ausgewählte Zielebene hinaus zu verwenden, nicht kompiliert wird. Dieser Mechanismus ähnelt dem- `NTDDI_VERSION` Makro (Weitere Informationen finden Sie unter [Makros für bedingte Deklarationen](../winprog/using-the-windows-headers.md#macros-for-conditional-declarations)).
+Dies kann hilfreich sein, wenn Sie eine neuere Kopie von `DirectML.h` verwenden, aber eine niedrigere Version der DirectML-Binärdatei als Ziel verwenden, da dadurch sichergestellt wird, dass jeder Versuch, Features über die ausgewählte Zielebene hinaus zu verwenden, nicht kompiliert wird. Dieser Mechanismus ähnelt dem `NTDDI_VERSION` Makro (siehe [Makros für bedingte Deklarationen).](../winprog/using-the-windows-headers.md#macros-for-conditional-declarations)
 
-Im folgenden finden Sie die gültigen Werte für das `DML_TARGET_VERSION` Makro.
+Hier sind die gültigen Werte für das `DML_TARGET_VERSION` Makro angegeben.
 
 |DML_TARGET_VERSION|Wirkung|
 |-|-|
-|`0x3000`|Alle Features, die eine Version von directml erfordern, die neuer als **1.4.0** ist, werden von ausgeschlossen `DirectML.h` .|
-|`0x2000`|Alle Features, die eine Version von directml, die neuer als **1.1.0** ist, erfordern, sind von ausgeschlossen `DirectML.h` .|
-|`0x1000`|Alle Features, die eine Version von directml, die neuer als **1.0.0** ist, erfordern, werden von ausgeschlossen `DirectML.h` .|
+|`0x3000`|Alle Features, die eine neuere DirectML-Version als **1.4.0** erfordern, werden von `DirectML.h` ausgeschlossen.|
+|`0x2000`|Alle Features, die eine neuere DirectML-Version als **1.1.0** erfordern, werden von `DirectML.h` ausgeschlossen.|
+|`0x1000`|Alle Features, die eine neuere DirectML-Version als **1.0.0** erfordern, werden von `DirectML.h` ausgeschlossen.|
 |*Nicht festgelegt*|Die Zielversion wird automatisch für Sie ausgewählt. Details finden Sie weiter unten.|
 
-Wenn `DML_TARGET_VERSION` nicht festgelegt ist, wird es automatisch von folgendem ausgewählt.
+Wenn `DML_TARGET_VERSION` nicht festgelegt ist, wird es automatisch wie folgt ausgewählt.
 
 * Wenn das `DML_TARGET_VERSION_USE_LATEST` Makro definiert ist, wird die neueste Zielversion ausgewählt.
 * Andernfalls wird die Zielversion basierend auf dem Wert des `NTDDI_VERSION` Makros ausgewählt.
-  *  `NTDDI_WIN10_19H1` ergibt eine Zielversion von `0x1000` .
-  *  `NTDDI_WIN10_VB` ergibt eine Zielversion von `0x2000` .
-  *  Wenn `NTDDI_VERSION` nicht definiert ist, wird die neueste Zielversion ausgewählt (als ob `DML_TARGET_VERSION_USE_LATEST` angegeben).
+  *  `NTDDI_WIN10_19H1` führt zu einer Zielversion von `0x1000` .
+  *  `NTDDI_WIN10_VB` führt zu einer Zielversion von `0x2000` .
+  *  Wenn `NTDDI_VERSION` nicht definiert ist, wird die neueste Zielversion ausgewählt (als `DML_TARGET_VERSION_USE_LATEST` wäre angegeben).
 
 ### <a name="example"></a>Beispiel
 
-Angenommen, eine Anwendung verwendet die Version 10.0.19041.0 (Windows 10, Version 2004) des Windows Software Development Kit (SDK). In der obigen Tabelle ist die Version von directml, die diesem entspricht, 1.1.0, und die entsprechende `DML_TARGET_VERSION` ist `0x2000` .
+Stellen Sie sich eine Anwendung vor, die Version 10.0.19041.0 (Windows 10, Version 2004) des Windows Software Development Kit (SDK) verwendet. In der obigen Tabelle ist die Version von DirectML, der dies entspricht, 1.1.0, und die entsprechende `DML_TARGET_VERSION` ist `0x2000` .
 
-Wenn Sie weder die `DML_TARGET_VERSION` Makros noch die Makros festgelegt `NTDDI_VERSION` haben, wird die ausgewählte Zielversion standardmäßig auf festgelegt `0x2000` , und alles in `DirectML.h` wird zur Verwendung verfügbar sein.
+Wenn Sie weder das noch die Makros festlegen, wird die ausgewählte Zielversion standardmäßig auf festgelegt, und alles in steht `DML_TARGET_VERSION` `NTDDI_VERSION` zur Verwendung zur `0x2000` `DirectML.h` Verfügung.
 
-Wenn Sie möchten, dass Ihre Anwendung unter Windows 10 ausgeführt werden kann, Version 1903 (10,0; Build 18362), dann können Sie `#define DML_TARGET_VERSION 0x1000` den gesamten Inhalt in ausschließen, der `DirectML.h` von der directml-Version 1.0.0 nicht unterstützt wird. Dadurch wird sichergestellt, dass jeder Versuch, Funktionen zu verwenden, die eine höhere Version erfordern, nicht kompiliert werden kann.
+Wenn Ihre Anwendung in der Lage sein soll, auf Windows 10, Version 1903 (10.0; Build 18362), können Sie dann verwenden, wodurch alle Inhalte in ausgeschlossen werden, die von DirectML Version `#define DML_TARGET_VERSION 0x1000` `DirectML.h` 1.0.0 nicht unterstützt werden. Dadurch wird sichergestellt, dass jeder Versuch, Funktionen zu verwenden, die eine höhere Version erfordern, nicht kompiliert werden kann.
 
-## <a name="directml-version-versus-feature-level"></a>Directml-Version und Featureebene
+## <a name="directml-version-versus-feature-level"></a>DirectML-Version im Vergleich zur Featureebene
 
-Die directml-Version (z. b. 1.0.0 oder 1.4.0) beschreibt eine bestimmte Version der directml, einschließlich der zugehörigen `DirectML.h` Header Datei und `.lib` Datei.
+Die DirectML-Version (z.B. 1.0.0 oder 1.4.0) beschreibt eine bestimmte Version von DirectML, einschließlich der zugehörigen Headerdatei und `DirectML.h` `.lib` -datei.
 
-Die Funktionsebene (z. b. `DML_FEATURE_LEVEL_1_0` , oder `DML_FEATURE_LEVEL_2_0` ) beschreibt die Funktionen der zugrunde liegenden Implementierung der API, die von der verwendeten-Version abweichen kann `DirectML.h` .
+Die Featureebene (z. B. oder ) beschreibt die Funktion der zugrunde liegenden Implementierung der API, die von der verwendeten `DML_FEATURE_LEVEL_1_0` `DML_FEATURE_LEVEL_2_0` Version abweichen `DirectML.h` kann.
 
-Beispielsweise kann eine Anwendung, die für ein neueres SDK erstellt wird, aber unter einer älteren Version von Windows ausgeführt wird, ggf. eine niedrigere unterstützte Funktionsebene anzeigen, auch wenn Sie mit dem neuesten SDK kompiliert wird.
+Beispielsweise kann eine Anwendung, die mit einem neueren SDK erstellt wird, aber unter einer älteren Version von Windows ausgeführt wird, (zur Laufzeit) eine niedrigere unterstützte Featureebene sehen, selbst wenn sie mit dem neuesten SDK kompiliert wurde.
 
 ## <a name="see-also"></a>Siehe auch
 
-Verlauf der directml- [Funktionsebene](./dml-feature-level-history.md) 
- [DML_FEATURE_LEVEL-Enumeration](/windows/win32/api/directml/ne-directml-dml_feature_level) 
- [Microsoft. ai. directml Redistributable Package](https://www.nuget.org/packages/Microsoft.AI.DirectML/)
+* [DirectML-Verlauf auf Featureebene](./dml-feature-level-history.md)
+* [DML_FEATURE_LEVEL Enumeration](/windows/win32/api/directml/ne-directml-dml_feature_level)
+* [Verteilbares Microsoft.AI.DirectML-Paket](https://www.nuget.org/packages/Microsoft.AI.DirectML/)

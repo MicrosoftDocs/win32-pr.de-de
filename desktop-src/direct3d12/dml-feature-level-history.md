@@ -1,23 +1,50 @@
 ---
-title: Verlauf der directml-Funktionsebene
+title: DirectML-Verlauf auf Featureebene
 description: TBD
 ms.localizationpriority: high
 ms.topic: article
 ms.date: 11/05/2020
-ms.openlocfilehash: 92f5a004b73d608a3958ae0edfa8c6d6b6a523d6
-ms.sourcegitcommit: 3bdf30edb314e0fcd17dc4ddbc70e4ec7d3596e6
+ms.openlocfilehash: 68633f531c627eed8b02c7f65a248213743ca8bc
+ms.sourcegitcommit: 8e1f04c7e3c5c850071bac8d173f9441aab0dfed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "104548770"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107803790"
 ---
-# <a name="directml-feature-level-history"></a>Verlauf der directml-Funktionsebene
+# <a name="directml-feature-level-history"></a>DirectML-Verlauf auf Featureebene
 
-Allgemeine Informationen zur directml-Version finden Sie unter [directml-Versionsverlauf](./dml-version-history.md).
+Informationen zum allgemeinen DirectML-Versionsverlauf finden Sie unter [DirectML-Versionsverlauf.](./dml-version-history.md)
+
+## <a name="dml_feature_level_3_1"></a>DML_FEATURE_LEVEL_3_1
+
+Eingeführt in DirectML Version 1.5.0.
+
+Unterstützung für die folgenden Operatoren wurde hinzugefügt.
+
+* [DML_OPERATOR_ELEMENT_WISE_ATAN_YX](/windows/win32/api/directml/ne-directml-dml_operator_type)
+* **DML_OPERATOR_ELEMENT_WISE_CLIP_GRAD**
+* **DML_OPERATOR_ELEMENT_WISE_DIFFERENCE_SQUARE**
+* **DML_OPERATOR_LOCAL_RESPONSE_NORMALIZATION_GRAD**
+* **DML_OPERATOR_CUMULATIVE_PRODUCT**
+* **DML_OPERATOR_BATCH_NORMALIZATION_GRAD**
+
+Die maximale Anzahl unterstützter Dimensionen für die folgenden Operatoren wurde von 4 auf 8 erhöht.
+
+* **DML_OPERATOR_BATCH_NORMALIZATION**
+* **DML_OPERATOR_CAST**
+* **DML_OPERATOR_JOIN**
+* **DML_OPERATOR_LP_NORMALIZATION**
+* **DML_OPERATOR_MEAN_VARIANCE_NORMALIZATION1**
+* **DML_OPERATOR_PADDING**
+* **DML_OPERATOR_ACTIVATION_RELU_GRAD**
+* **DML_OPERATOR_SLICE_GRAD**
+* **DML_OPERATOR_TILE**
+* **DML_OPERATOR_TOP_K**
+* **DML_OPERATOR_TOP_K1**
 
 ## <a name="dml_feature_level_3_0"></a>DML_FEATURE_LEVEL_3_0
 
-Eingeführt in directml-Version 1.4.0.
+Eingeführt in DirectML Version 1.4.0.
 
 Unterstützung für die folgenden Operatoren hinzugefügt.
 
@@ -42,31 +69,31 @@ Unterstützung für die folgenden Operatoren hinzugefügt.
 * **DML_OPERATOR_ROI_ALIGN**
 * **DML_OPERATOR_GATHER_ND1**
 
-Folgende Verbesserungen wurden hinzugefügt.
+Die folgenden Erweiterungen wurden hinzugefügt.
 
-* Die maximale Anzahl von tensorflow-Dimensionen wurde von 5 auf 8 erweitert. Siehe [DML_TENSOR_DIMENSION_COUNT_MAX1](./direct3d-directml-constants.md).
-* Der folgenden Operatoren wurde zusätzliche Unterstützung für ganzzahlige Datentypen hinzugefügt.
+* Die maximale Anzahl von Tensordimensionen wurde von 5 auf 8 erhöht. Weitere Informationen finden Sie [unter DML_TENSOR_DIMENSION_COUNT_MAX1](./direct3d-directml-constants.md).
+* Den folgenden Operatoren wurde zusätzliche Unterstützung für integer-Datentypen hinzugefügt.
   * **DML_OPERATOR_ELEMENT_WISE_POW**
   * **DML_OPERATOR_ELEMENT_WISE_CONSTANT_POW**
   * **DML_OPERATOR_MAX_POOLING**, **DML_OPERATOR_MAX_POOLING1** und **DML_OPERATOR_MAX_POOLING2**
-  * **DML_OPERATOR_REDUCE**, wenn Sie **DML_REDUCE_FUNCTION_ARGMIN** oder **DML_REDUCE_FUNCTION_ARGMAX** verwenden
-* Die folgenden 64-Bit-Datentypen wurden hinzugefügt und werden von SELECT-Operatoren unterstützt.
+  * **DML_OPERATOR_REDUCE** bei Verwendung von **DML_REDUCE_FUNCTION_ARGMIN** oder **DML_REDUCE_FUNCTION_ARGMAX**
+* Die folgenden 64-Bit-Datentypen wurden hinzugefügt und werden von Select-Operatoren unterstützt.
   * **DML_TENSOR_DATA_TYPE_FLOAT64**
   * **DML_TENSOR_DATA_TYPE_UINT64**
   * **DML_TENSOR_DATA_TYPE_INT64**
 
-Als veraltet markierte Funktionen.
+Veraltete Funktionalität.
 
-* **DML_REDUCE_FUNCTION_ARGMAX** und **DML_REDUCE_FUNCTION_ARGMIN** wurden als veraltet markiert. Es empfiehlt sich, die eigenständigen **DML_OPERATOR_ARGMIN** und **DML_OPERATOR_ARGMAX** Operatoren an ihrer Stelle zu verwenden.
+* **DML_REDUCE_FUNCTION_ARGMAX** und **DML_REDUCE_FUNCTION_ARGMIN** sind veraltet. Sie sollten die eigenständigen **operatoren DML_OPERATOR_ARGMIN** und **DML_OPERATOR_ARGMAX** an ihrer Stelle verwenden.
 
 ## <a name="dml_feature_level_2_1"></a>DML_FEATURE_LEVEL_2_1
 
-Eingeführt in der directml-Version 1.2.0.
+Eingeführt in DirectML Version 1.2.0.
 
 Die folgenden APIs wurden hinzugefügt.
 
 * [IDMLDevice1-Schnittstelle](./directml/nn-directml-idmldevice1.md)
-* Operator Graph-Unterstützung (siehe [IDMLDevice1:: compilegraph](./directml/nf-directml-idmldevice1-compilegraph.md) )
+* Operatordiagrammunterstützung (siehe [IDMLDevice1::CompileGraph](./directml/nf-directml-idmldevice1-compilegraph.md)
 
 Unterstützung für die folgenden Operatoren hinzugefügt.
 
@@ -95,9 +122,9 @@ Unterstützung für die folgenden Operatoren hinzugefügt.
 * **DML_OPERATOR_CONVOLUTION_INTEGER**
 * **DML_OPERATOR_QUANTIZED_LINEAR_CONVOLUTION**
 
-Folgende Verbesserungen wurden hinzugefügt.
+Die folgenden Erweiterungen wurden hinzugefügt.
 
-* Der folgenden Operatoren wurde zusätzliche Unterstützung für ganzzahlige Datentypen hinzugefügt.
+* Den folgenden Operatoren wurde zusätzliche Unterstützung für integer-Datentypen hinzugefügt.
   * **DML_OPERATOR_ELEMENT_WISE_IDENTITY**
   * **DML_OPERATOR_ELEMENT_WISE_ABS**
   * **DML_OPERATOR_ELEMENT_WISE_ADD**
@@ -125,25 +152,25 @@ Folgende Verbesserungen wurden hinzugefügt.
   * **DML_OPERATOR_TILE**
   * **DML_OPERATOR_TOP_K** und **DML_OPERATOR_TOP_K1**
   * **DML_OPERATOR_ONE_HOT**
-  * **DML_OPERATOR_REDUCE**, wenn Sie eine der folgenden Reduzierungs Funktionen verwenden.
+  * **DML_OPERATOR_REDUCE**, wenn Sie eine der folgenden Reduzierungsfunktionen verwenden.
     * **DML_REDUCE_FUNCTION_ARGMIN**
     * **DML_REDUCE_FUNCTION_ARGMAX**
     * **DML_REDUCE_FUNCTION_MAX**
     * **DML_REDUCE_FUNCTION_MIN**
     * **DML_REDUCE_FUNCTION_MULTIPLY**
     * **DML_REDUCE_FUNCTION_SUM**
-* Einschränkungen der tensorflow-Form für **DML_OPERATOR_GATHER**
+* Gelockerte Tensorformeinschränkungen für **DML_OPERATOR_GATHER**
 
 ## <a name="dml_feature_level_2_0"></a>DML_FEATURE_LEVEL_2_0
 
-Eingeführt in directml, Version 1.1.0.
+Eingeführt in DirectML Version 1.1.0.
 
 Die folgenden APIs wurden hinzugefügt.
 * [DMLCreateDevice1-Funktion](./directml/nf-directml-dmlcreatedevice1.md)
 * [DML_FEATURE_LEVEL-Enumeration](/windows/win32/api/directml/ne-directml-dml_feature_level)
-* Abfragen auf Funktionsebene (siehe [DML_FEATURE_QUERY_FEATURE_LEVELS](/windows/win32/api/directml/ns-directml-dml_feature_query_feature_levels))
+* Abfragen auf Featureebene (siehe [DML_FEATURE_QUERY_FEATURE_LEVELS](/windows/win32/api/directml/ns-directml-dml_feature_query_feature_levels))
 
-Unterstützung für die folgenden Operatoren hinzugefügt.
+Unterstützung für die folgenden Operatoren wurde hinzugefügt.
 
 * **DML_OPERATOR_ELEMENT_WISE_SIGN**
 * **DML_OPERATOR_ELEMENT_WISE_IS_NAN**
@@ -165,10 +192,10 @@ Unterstützung für die folgenden Operatoren hinzugefügt.
 * **DML_OPERATOR_ONE_HOT**
 * **DML_OPERATOR_RESAMPLE**
 
-Folgende Verbesserungen wurden hinzugefügt.
+Die folgenden Erweiterungen wurden hinzugefügt.
 
-* Wenn eine Eingabe Ressource für die Verteilung eines [idmloperatorinitializers](/windows/win32/api/directml/nn-directml-idmloperatorinitializer)gebunden wird, ist es jetzt zulässig, eine Ressource mit [D3D12_HEAP_TYPE_CUSTOM](/windows/win32/api/d3d12/ne-d3d12-d3d12_heap_type) (zusätzlich zu **D3D12_HEAP_TYPE_DEFAULT**) bereitzustellen, solange geeignete Heap Eigenschaften festgelegt sind. Weitere Informationen finden Sie [Unterbindung in directml](./dml-binding.md).
-* Die folgenden logischen booleschen Operatoren unterstützen nun neben der vorhandenen Unterstützung für **UInt32** auch **Uint8** -ausgabetensoren.
+* Beim Binden einer Eingaberessource für die Versendung einer [IDMLOperatorInitializer-Eigenschaft](/windows/win32/api/directml/nn-directml-idmloperatorinitializer)ist es jetzt gesetzlich, eine Ressource mit [D3D12_HEAP_TYPE_CUSTOM](/windows/win32/api/d3d12/ne-d3d12-d3d12_heap_type) (zusätzlich zu **D3D12_HEAP_TYPE_DEFAULT**) zur Verfügung zu stellen, solange auch die entsprechenden Heapeigenschaften festgelegt sind. Weitere Informationen [finden Sie unter Binden in DirectML.](./dml-binding.md)
+* Die folgenden logischen booleschen Operatoren unterstützen nun neben der vorhandenen Unterstützung für **UINT32** UINT8-Ausgabetensoren. 
   * **DML_OPERATOR_ELEMENT_WISE_LOGICAL_AND**
   * **DML_OPERATOR_ELEMENT_WISE_LOGICAL_EQUALS**
   * **DML_OPERATOR_ELEMENT_WISE_LOGICAL_GREATER_THAN**
@@ -176,15 +203,15 @@ Folgende Verbesserungen wurden hinzugefügt.
   * **DML_OPERATOR_ELEMENT_WISE_LOGICAL_NOT**
   * **DML_OPERATOR_ELEMENT_WISE_LOGICAL_OR**
   * **DML_OPERATOR_ELEMENT_WISE_LOGICAL_XOR**
-* 5D-Aktivierungs Funktionen unterstützen jetzt die Verwendung von Fortschritten auf Ihren Eingabe-und Ausgabe Tensoren.
+* 5D-Aktivierungsfunktionen unterstützen jetzt die Verwendung von Schritten bei ihren Eingabe- und Ausgabe-Tensoren.
 
 ## <a name="dml_feature_level_1_0"></a>DML_FEATURE_LEVEL_1_0
 
-Die Funktionsebene, in der directml eingeführt wurde.
+Die Funktionsebene, in der DirectML eingeführt wurde.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Versionsverlauf](./dml-version-history.md) 
- der directml [DML_FEATURE_LEVEL-Enumeration](/windows/win32/api/directml/ne-directml-dml_feature_level) 
- [DMLCreateDevice1-Funktion](./directml/nf-directml-dmlcreatedevice1.md) 
- [DML_FEATURE_QUERY_FEATURE_LEVELS Struktur](/windows/win32/api/directml/ns-directml-dml_feature_query_feature_levels)
+* [DirectML-Versionsverlauf](./dml-version-history.md)
+* [DML_FEATURE_LEVEL-Enumeration](/windows/win32/api/directml/ne-directml-dml_feature_level)
+* [DMLCreateDevice1-Funktion](./directml/nf-directml-dmlcreatedevice1.md)
+* [DML_FEATURE_QUERY_FEATURE_LEVELS-Struktur](/windows/win32/api/directml/ns-directml-dml_feature_query_feature_levels)

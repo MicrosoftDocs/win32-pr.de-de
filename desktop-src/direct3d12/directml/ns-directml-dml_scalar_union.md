@@ -45,18 +45,18 @@ api_location:
 - DirectML.h
 api_name:
 - DML_SCALAR_UNION
-ms.openlocfilehash: 0abef8cd5a694fa82e0e54e334834773f1f75e20
-ms.sourcegitcommit: 3bdf30edb314e0fcd17dc4ddbc70e4ec7d3596e6
+ms.openlocfilehash: d53ec7025d3da5a07a648849e366d436755ad3f1
+ms.sourcegitcommit: 8e1f04c7e3c5c850071bac8d173f9441aab0dfed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "106366535"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107803945"
 ---
-# <a name="dml_scalar_union-union-directmlh"></a>DML_SCALAR_UNION Union (directml. h)
+# <a name="dml_scalar_union-union-directmlh"></a>DML_SCALAR_UNION Union (directml.h)
 Eine Vereinigung von skalaren Typen.
 
 > [!IMPORTANT]
-> Diese API ist als Teil des eigenständigen Redistributable Package von directml verfügbar (siehe [Microsoft. ai. directml](https://www.nuget.org/packages/Microsoft.AI.DirectML/)). Siehe auch [Versionsverlauf der directml](../dml-version-history.md).
+> Diese API ist als Teil des eigenständigen verteilbaren DirectML-Pakets verfügbar (siehe [Microsoft.AI.DirectML](https://www.nuget.org/packages/Microsoft.AI.DirectML/) Version 1.4 und höher). Siehe auch [DirectML-Versionsverlauf.](../dml-version-history.md)
 
 ## <a name="syntax"></a>Syntax
 ```cpp
@@ -126,16 +126,16 @@ Eine 64-Bit-Ganzzahl ohne Vorzeichen.
 
 `Float32`
 
-Eine Gleit Komma Zahl mit einfacher Genauigkeit.
+Eine Gleitkommazahl mit einfacher Genauigkeit.
 
 
 `Float64`
 
-Eine Gleit Komma Zahl mit doppelter Genauigkeit.
+Eine Gleitkommazahl mit doppelter Genauigkeit.
 
 
 
 ## <a name="requirements"></a>Anforderungen
 | &nbsp; | &nbsp; |
 | ---- |:---- |
-| **Header** | directml. h |
+| **Header** | directml.h |

@@ -1,7 +1,7 @@
 ---
 UID: NS:directml.DML_MATRIX_MULTIPLY_INTEGER_OPERATOR_DESC
 title: DML_MATRIX_MULTIPLY_INTEGER_OPERATOR_DESC
-description: Führt eine Matrix Multiplikations Funktion für ganzzahlige Daten aus.
+description: Führt eine Matrixmultiplikationsfunktion für ganzzahlige Daten aus.
 helpviewer_keywords:
 - DML_MATRIX_MULTIPLY_INTEGER_OPERATOR_DESC
 - DML_MATRIX_MULTIPLY_INTEGER_OPERATOR_DESC structure
@@ -46,22 +46,22 @@ api_location:
 - DirectML.h
 api_name:
 - DML_MATRIX_MULTIPLY_INTEGER_OPERATOR_DESC
-ms.openlocfilehash: f6ecccf49b0d7123e6f41321c7ba1bf8e8d4ad87
-ms.sourcegitcommit: 3bdf30edb314e0fcd17dc4ddbc70e4ec7d3596e6
+ms.openlocfilehash: f498e84208da451b5d25ffef90219c0037ce86fb
+ms.sourcegitcommit: 8e1f04c7e3c5c850071bac8d173f9441aab0dfed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "106351188"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107802841"
 ---
-# <a name="dml_matrix_multiply_integer_operator_desc-structure-directmlh"></a>DML_MATRIX_MULTIPLY_INTEGER_OPERATOR_DESC-Struktur (directml. h)
-Führt eine Matrix Multiplikations Funktion für ganzzahlige Daten aus.
+# <a name="dml_matrix_multiply_integer_operator_desc-structure-directmlh"></a>DML_MATRIX_MULTIPLY_INTEGER_OPERATOR_DESC-Struktur (directml.h)
+Führt eine Matrixmultiplikationsfunktion für ganzzahlige Daten aus.
 
-Dieser Operator erfordert, dass die Eingabe-Tensoren der Matrix als 4D-Wert vorliegen, die als formatiert sind `{ BatchCount, ChannelCount, Height, Width }` . Der Matrix Multiplikations Operator führt die BatchCount * ChannelCount-Anzahl unabhängiger Matrix Multiplikationen durch.
+Dieser Operator erfordert, dass die Matrix-Multiplikationseingabe-Tensoren 4D sind, die als formatiert `{ BatchCount, ChannelCount, Height, Width }` sind. Der Matrixmultiplikationsoperator führt BatchCount * ChannelCount anzahl unabhängiger Matrixmultiplikationen aus.
 
-Wenn *atensor* z. b. *Größen* von hat `{ BatchCount, ChannelCount, M, K }` und *btensor* die *Größe* hat `{ BatchCount, ChannelCount, K, N }` und *outputtensor* über *Größen* von verfügt `{ BatchCount, ChannelCount, M, N }` , führt der Matrix Multiplikations Operator BatchCount * ChannelCount unabhängige Matrix Multiplikationen der Dimensionen {m, K} x {K, n} = {M, n} aus.
+Wenn *ATensor* z. *B. Größen* von `{ BatchCount, ChannelCount, M, K }` und *BTensor* *größen* von `{ BatchCount, ChannelCount, K, N }` und *OutputTensor* *Größen* von aufweist, führt `{ BatchCount, ChannelCount, M, N }` der Multiplikationsoperator der Matrix BatchCount * ChannelCount unabhängige Matrixmultiplikationen der Dimensionen {M,K} x {K,N} = {M,N} aus.
 
 > [!IMPORTANT]
-> Diese API ist als Teil des eigenständigen Redistributable Package von directml verfügbar (siehe [Microsoft. ai. directml](https://www.nuget.org/packages/Microsoft.AI.DirectML/)). Siehe auch [Versionsverlauf der directml](../dml-version-history.md).
+> Diese API ist als Teil des eigenständigen verteilbaren DirectML-Pakets verfügbar (siehe [Microsoft.AI.DirectML](https://www.nuget.org/packages/Microsoft.AI.DirectML/) Version 1.4 und höher). Siehe auch [DirectML-Versionsverlauf.](../dml-version-history.md)
 
 ## <a name="syntax"></a>Syntax
 ```cpp
@@ -80,57 +80,57 @@ struct DML_MATRIX_MULTIPLY_INTEGER_OPERATOR_DESC {
 
 `ATensor`
 
-Typ: Konstante **[DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
+Typ: **const [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
 
-Ein tensorflow, der die Daten enthält. Diese Tensor-Dimensionen sollten lauten `{ BatchCount, ChannelCount, M, K }` .
+Ein Tensor, der die A-Daten enthält. Die Dimensionen dieses Tensors sollten `{ BatchCount, ChannelCount, M, K }` sein.
 
 
 `AZeroPointTensor`
 
-Typ: _Maybenull \_ **Konstanten [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
+Typ: _Maybenull \_ **const [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
 
-Ein optionaler tensorflow, der die Daten des atensor-NULL-Punkts enthält. Die erwarteten Dimensionen von `AZeroPointTensor` sind `{ 1, 1, 1, 1 }` , wenn pro tensorflow-Quantifizierung erforderlich ist, oder, `{ 1, 1, M, 1 }` Wenn die pro-Zeilen-Quantifizierung erforderlich ist. Diese nullpunktwerte werden zum decomieren der *atensor* -Werte verwendet.
+Ein optionaler Tensor, der die Nullpunktdaten von ATensor enthält. Die erwarteten Dimensionen von `AZeroPointTensor` sind , wenn eine `{ 1, 1, 1, 1 }` Tensorquantisierung erforderlich ist, oder wenn eine `{ 1, 1, M, 1 }` Zeilen-Quantisierung erforderlich ist. Diese Nullpunktwerte werden zum Dequantisieren der *ATensor-Werte* verwendet.
 
 
 `BTensor`
 
-Typ: Konstante **[DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
+Typ: **const [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
 
-Ein tensorflow, der die B-Daten enthält. Diese Tensor-Dimensionen sollten lauten `{ BatchCount, ChannelCount, K, N }` .
+Ein Tensor, der die B-Daten enthält. Die Dimensionen dieses Tensors sollten `{ BatchCount, ChannelCount, K, N }` sein.
 
 
 `BZeroPointTensor`
 
-Typ: _Maybenull \_ **Konstanten [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
+Typ: _Maybenull \_ **const [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
 
-Ein optionaler tensorflow, der die Daten des *btensor* -NULL-Punkts enthält. Die erwarteten Dimensionen von `BZeroPointTensor` sind `{ 1, 1, 1, 1 }` , wenn pro tensorflow-Quantifizierung erforderlich ist, oder, `{ 1, 1, 1, N }` Wenn pro Spalten Quantifizierung erforderlich ist. Diese nullpunktwerte werden zum decomieren der btensor-Werte verwendet.
+Ein optionaler Tensor, der die Nullpunktdaten von *BTensor* enthält. Die erwarteten Dimensionen von sind `BZeroPointTensor` , wenn eine Tensorquantisierung erforderlich ist, oder , wenn eine `{ 1, 1, 1, 1 }` Quantisierung pro Spalte erforderlich `{ 1, 1, 1, N }` ist. Diese Nullpunktwerte werden zum Dequantisieren der BTensor-Werte verwendet.
 
 
 `OutputTensor`
 
-Typ: Konstante **[DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
+Typ: **const [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
 
-Ein tensorflow, in den die Ergebnisse geschrieben werden sollen. Die Dimensionen dieses Mandanten sind `{ BatchCount, ChannelCount, M, N }` .
+Ein Tensor, in den die Ergebnisse geschrieben werden. Die Dimensionen dieses Tensors sind `{ BatchCount, ChannelCount, M, N }` .
 
 ## <a name="availability"></a>Verfügbarkeit
-Dieser Operator wurde in eingeführt `DML_FEATURE_LEVEL_2_1` .
+Dieser Operator wurde in `DML_FEATURE_LEVEL_2_1` eingeführt.
 
 ## <a name="tensor-constraints"></a>Tensor-Einschränkungen
-* *Atensor* und `AZeroPointTensor` muss denselben *Datentyp* aufweisen.
-* *Btensor* und `BZeroPointTensor` muss denselben *Datentyp* aufweisen.
+* *ATensor und* `AZeroPointTensor` müssen den gleichen Datentyp *haben.*
+* *BTensor und* `BZeroPointTensor` müssen den gleichen Datentyp *haben.*
 
 ## <a name="tensor-support"></a>Tensor-Unterstützung
-| Tensorflow | Typ | Dimensionen | Unterstützte Dimensions Anzahl | Unterstützte Datentypen |
+| Tensor | Typ | Dimensionen | Unterstützte Dimensionsanzahl | Unterstützte Datentypen |
 | ------ | ---- | ---------- | -------------------------- | -------------------- |
-| Atensor | Eingabe | {BatchCount, ChannelCount, M, K} | 4 | Int8, Uint8 |
-| Azeropointtensor | Optionale Eingabe | {1, 1, azeropointcount, 1} | 4 | Int8, Uint8 |
-| Btensor | Eingabe | {BatchCount, ChannelCount, K, N} | 4 | Int8, Uint8 |
-| Bzeropointtensor | Optionale Eingabe | {1, 1, 1, bzeropointcount} | 4 | Int8, Uint8 |
-| Outputtensor | Ausgabe | {BatchCount, ChannelCount, M, N} | 4 | INT32 |
+| ATensor | Eingabe | { BatchCount, ChannelCount, M, K } | 4 | INT8, UINT8 |
+| AZeroPointTensor | Optionale Eingabe | { 1, 1, AZeroPointCount, 1 } | 4 | INT8, UINT8 |
+| BTensor | Eingabe | { BatchCount, ChannelCount, K, N } | 4 | INT8, UINT8 |
+| BZeroPointTensor | Optionale Eingabe | { 1, 1, 1, BZeroPointCount } | 4 | INT8, UINT8 |
+| OutputTensor | Ausgabe | { BatchCount, ChannelCount, M, N } | 4 | INT32 |
 
 
 
 ## <a name="requirements"></a>Anforderungen
 | &nbsp; | &nbsp; |
 | ---- |:---- |
-| **Header** | directml. h |
+| **Header** | directml.h |

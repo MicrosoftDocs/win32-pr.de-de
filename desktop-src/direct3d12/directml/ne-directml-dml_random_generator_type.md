@@ -1,7 +1,7 @@
 ---
 UID: NE:directml.DML_RANDOM_GENERATOR_TYPE
 title: DML_RANDOM_GENERATOR_TYPE
-description: Definiert Konstanten, die Typen von zufälligem Zufallszahlengenerator angeben.
+description: Definiert Konstanten, die Typen des Zufallszahlengenerators angeben.
 helpviewer_keywords:
 - DML_RANDOM_GENERATOR_TYPE
 - DML_RANDOM_GENERATOR_TYPE structure
@@ -45,19 +45,19 @@ api_location:
 - DirectML.h
 api_name:
 - DML_RANDOM_GENERATOR_TYPE
-ms.openlocfilehash: bcb79fe7737e8b9ddb461c8da8a901960a4b23f8
-ms.sourcegitcommit: 3bdf30edb314e0fcd17dc4ddbc70e4ec7d3596e6
+ms.openlocfilehash: c08b5cdc07280a2851636a555415ecce515fa79b
+ms.sourcegitcommit: 8e1f04c7e3c5c850071bac8d173f9441aab0dfed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "106373410"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107803763"
 ---
-# <a name="dml_random_generator_type-enumeration-directmlh"></a>DML_RANDOM_GENERATOR_TYPE-Enumeration (directml. h)
+# <a name="dml_random_generator_type-enumeration-directmlh"></a>DML_RANDOM_GENERATOR_TYPE-Enumeration (directml.h)
 
-Definiert Konstanten, die Typen von zufälligem Zufallszahlengenerator angeben.
+Definiert Konstanten, die Typen des Zufallszahlengenerators angeben.
 
 > [!IMPORTANT]
-> Diese API ist als Teil des eigenständigen Redistributable Package von directml verfügbar (siehe [Microsoft. ai. directml](https://www.nuget.org/packages/Microsoft.AI.DirectML/)). Siehe auch [Versionsverlauf der directml](../dml-version-history.md).
+> Diese API ist als Teil des eigenständigen verteilbaren DirectML-Pakets verfügbar (siehe [Microsoft.AI.DirectML](https://www.nuget.org/packages/Microsoft.AI.DirectML/) Version 1.4 und höher). Siehe auch [DirectML-Versionsverlauf.](../dml-version-history.md)
 
 ## <a name="syntax"></a>Syntax
 ```cpp
@@ -69,12 +69,12 @@ enum DML_RANDOM_GENERATOR_TYPE
 
 ## <a name="constants"></a>Konstanten
 
-| Name | BESCHREIBUNG |
+| Name | Beschreibung |
 | ---- |:---- |
-| DML_RANDOM_GENERATOR_TYPE_PHILOX_4X32_10 | Gibt einen Generator für Pseudozufallszahlen gemäß dem " [philox 4x32-10"-Algorithmus](http://www.thesalmons.org/john/random123/papers/random123sc11.pdf)an. |
+| DML_RANDOM_GENERATOR_TYPE_PHILOX_4X32_10 | Gibt einen Generator für Pseudozufallszahlen gemäß dem [4x32-10-Algorithmus von Lucox](http://www.thesalmons.org/john/random123/papers/random123sc11.pdf)an. |
 
 
 ## <a name="requirements"></a>Anforderungen
 | &nbsp; | &nbsp; |
 | ---- |:---- |
-| **Header** | directml. h |
+| **Header** | directml.h |

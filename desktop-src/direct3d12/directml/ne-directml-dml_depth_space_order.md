@@ -1,7 +1,7 @@
 ---
 UID: NE:directml.DML_DEPTH_SPACE_ORDER
 title: DML_DEPTH_SPACE_ORDER
-description: Definiert Konstanten, die die in den directml-Operatoren angewendete Transformation [DML_OPERATOR_DEPTH_TO_SPACE1](/windows/win32/api/directml/ne-directml-dml_operator_type) und **DML_OPERATOR_SPACE_TO_DEPTH1** steuern.
+description: Definiert Konstanten, die die Transformation steuern, die in den DirectML-Operatoren [DML_OPERATOR_DEPTH_TO_SPACE1](/windows/win32/api/directml/ne-directml-dml_operator_type) und **DML_OPERATOR_SPACE_TO_DEPTH1** angewendet wird.
 ms.topic: reference
 tech.root: directml
 ms.date: 10/29/2020
@@ -39,19 +39,19 @@ api_location:
 - DirectML.h
 api_name:
 - DML_DEPTH_SPACE_ORDER
-ms.openlocfilehash: 21ab43f81a5959fc6722f5f4dedc3f60319ba642
-ms.sourcegitcommit: 3bdf30edb314e0fcd17dc4ddbc70e4ec7d3596e6
+ms.openlocfilehash: 009686adfc054c7b6344f01edafedaf2921693d5
+ms.sourcegitcommit: 8e1f04c7e3c5c850071bac8d173f9441aab0dfed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "106355701"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107803536"
 ---
-# <a name="dml_depth_space_order-enumeration-directmlh"></a>DML_DEPTH_SPACE_ORDER-Enumeration (directml. h)
+# <a name="dml_depth_space_order-enumeration-directmlh"></a>DML_DEPTH_SPACE_ORDER-Enumeration (directml.h)
 
-Definiert Konstanten, die die in den directml-Operatoren angewendete Transformation [DML_OPERATOR_DEPTH_TO_SPACE1](/windows/win32/api/directml/ne-directml-dml_operator_type) und **DML_OPERATOR_SPACE_TO_DEPTH1** steuern. Diese werden in den Strukturen [DML_DEPTH_TO_SPACE1_OPERATOR_DESC](./ns-directml-dml_depth_to_space1_operator_desc.md) und [DML_SPACE_TO_DEPTH1_OPERATOR_DESC](./ns-directml-dml_space_to_depth1_operator_desc.md) verwendet.
+Definiert Konstanten, die die Transformation steuern, die in den DirectML-Operatoren [DML_OPERATOR_DEPTH_TO_SPACE1](/windows/win32/api/directml/ne-directml-dml_operator_type) und **DML_OPERATOR_SPACE_TO_DEPTH1** angewendet wird. Diese werden innerhalb der [DML_DEPTH_TO_SPACE1_OPERATOR_DESC](./ns-directml-dml_depth_to_space1_operator_desc.md) und [DML_SPACE_TO_DEPTH1_OPERATOR_DESC](./ns-directml-dml_space_to_depth1_operator_desc.md) Strukturen verwendet.
 
 > [!IMPORTANT]
-> Diese API ist als Teil des eigenständigen Redistributable Package von directml verfügbar (siehe [Microsoft. ai. directml](https://www.nuget.org/packages/Microsoft.AI.DirectML/)). Siehe auch [Versionsverlauf der directml](../dml-version-history.md).
+> Diese API ist als Teil des eigenständigen verteilbaren DirectML-Pakets verfügbar (siehe [Microsoft.AI.DirectML](https://www.nuget.org/packages/Microsoft.AI.DirectML/) Version 1.4 und höher). Siehe auch [DirectML-Versionsverlauf.](../dml-version-history.md)
 
 ## <a name="syntax"></a>Syntax
 ```cpp
@@ -63,19 +63,19 @@ typedef enum DML_DEPTH_SPACE_ORDER {
 
 ## <a name="constants"></a>Konstanten
 
-| Name | BESCHREIBUNG |
+| Name | Beschreibung |
 | ---- |:---- |
-| DML_DEPTH_SPACE_ORDER_DEPTH_COLUMN_ROW | Bewirkt, dass in [DML_DEPTH_TO_SPACE1_OPERATOR_DESC](./ns-directml-dml_depth_to_space1_operator_desc.md) und [DML_SPACE_TO_DEPTH1_OPERATOR_DESC](./ns-directml-dml_space_to_depth1_operator_desc.md) verwendete Tensoren mit den folgenden Layouts interpretiert werden, bei denen Dimensionen in Klammern zusammengefasst werden.<br><br>- **Tiefen Version**: [Batch, (blockheight, blockWidth, Channels), Höhe, Breite]<br>- **Speicherplatz Version**: [Batch, Channels, (Height, Block Height), (Width, Block Width)] |
-| DML_DEPTH_SPACE_ORDER_COLUMN_ROW_DEPTH | Bewirkt, dass in [DML_DEPTH_TO_SPACE1_OPERATOR_DESC](./ns-directml-dml_depth_to_space1_operator_desc.md) und [DML_SPACE_TO_DEPTH1_OPERATOR_DESC](./ns-directml-dml_space_to_depth1_operator_desc.md) verwendete Tensoren mit den folgenden Layouts interpretiert werden, bei denen Dimensionen in Klammern zusammengefasst werden.<br><br>- **Tiefen Version**: [Batch, (Channels, blockheight, blockWidth), Höhe, Breite]<br>- **Speicherplatz Version**: [Batch, Channels, (Height, Block Height), (Width, Block Width)] |
+| DML_DEPTH_SPACE_ORDER_DEPTH_COLUMN_ROW | Bewirkt, dass tensors, die in [DML_DEPTH_TO_SPACE1_OPERATOR_DESC](./ns-directml-dml_depth_to_space1_operator_desc.md) und [DML_SPACE_TO_DEPTH1_OPERATOR_DESC](./ns-directml-dml_space_to_depth1_operator_desc.md) verwendet werden, mit den folgenden Layouts interpretiert werden, wobei Dimensionen in Klammern zusammengestrichen werden.<br><br>- **Tiefenversion:**[Batch, (BlockHeight, BlockWidth, Channels), Height, Width]<br>- **Space-Version:**[Batch, Channels, (Height, BlockHeight), (Width, BlockWidth)] |
+| DML_DEPTH_SPACE_ORDER_COLUMN_ROW_DEPTH | Bewirkt, dass tensors, die in [DML_DEPTH_TO_SPACE1_OPERATOR_DESC](./ns-directml-dml_depth_to_space1_operator_desc.md) und [DML_SPACE_TO_DEPTH1_OPERATOR_DESC](./ns-directml-dml_space_to_depth1_operator_desc.md) verwendet werden, mit den folgenden Layouts interpretiert werden, wobei Dimensionen in Klammern zusammengestrichen werden.<br><br>- **Tiefenversion:**[Batch, (Channels, BlockHeight, BlockWidth), Height, Width]<br>- **Space-Version:**[Batch, Channels, (Height, BlockHeight), (Width, BlockWidth)] |
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-In den [DML_DEPTH_TO_SPACE1_OPERATOR_DESC](./ns-directml-dml_depth_to_space1_operator_desc.md) -und [DML_SPACE_TO_DEPTH1_OPERATOR_DESC](./ns-directml-dml_space_to_depth1_operator_desc.md) Dokumentation finden Sie Beispiele, die die Auswirkung dieser Werte veranschaulichen.
+Beispiele zur Auswirkung dieser Werte finden Sie in [DML_DEPTH_TO_SPACE1_OPERATOR_DESC](./ns-directml-dml_depth_to_space1_operator_desc.md) und [DML_SPACE_TO_DEPTH1_OPERATOR_DESC](./ns-directml-dml_space_to_depth1_operator_desc.md) Dokumentation.
 
 ## <a name="requirements"></a>Anforderungen
 | &nbsp; | &nbsp; |
 | ---- |:---- |
-| **Header** | directml. h |
+| **Header** | directml.h |
 
 ## <a name="see-also"></a>Siehe auch
 
@@ -83,4 +83,4 @@ In den [DML_DEPTH_TO_SPACE1_OPERATOR_DESC](./ns-directml-dml_depth_to_space1_ope
 * [DML_SPACE_TO_DEPTH1_OPERATOR_DESC](./ns-directml-dml_space_to_depth1_operator_desc.md)
 
 ## <a name="availability"></a>Verfügbarkeit
-Diese Enumeration wurde in eingeführt `DML_FEATURE_LEVEL_2_1` .
+Diese Enumeration wurde in `DML_FEATURE_LEVEL_2_1` eingeführt.

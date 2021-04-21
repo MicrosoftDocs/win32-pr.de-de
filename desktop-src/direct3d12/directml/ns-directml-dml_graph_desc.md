@@ -1,7 +1,7 @@
 ---
 UID: NS:directml.DML_GRAPH_DESC
 title: DML_GRAPH_DESC
-description: Beschreibt ein Diagramm der directml-Operatoren, die zum Kompilieren eines kombinierten, optimierten Operators verwendet werden.
+description: Beschreibt ein Diagramm von DirectML-Operatoren, die zum Kompilieren eines kombinierten, optimierten Operators verwendet werden.
 helpviewer_keywords:
 - DML_GRAPH_DESC
 - DML_GRAPH_DESC structure
@@ -45,19 +45,19 @@ api_location:
 - DirectML.h
 api_name:
 - DML_GRAPH_DESC
-ms.openlocfilehash: e72209d19bb26524576783becbbfbf94566d8370
-ms.sourcegitcommit: 3bdf30edb314e0fcd17dc4ddbc70e4ec7d3596e6
+ms.openlocfilehash: a42996fc9fd7825e13232b245ab764c6439f9489
+ms.sourcegitcommit: 8e1f04c7e3c5c850071bac8d173f9441aab0dfed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "106361110"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107802883"
 ---
-# <a name="dml_graph_desc-structure-directmlh"></a>DML_GRAPH_DESC-Struktur (directml. h)
+# <a name="dml_graph_desc-structure-directmlh"></a>DML_GRAPH_DESC -Struktur (directml.h)
 
-Beschreibt ein Diagramm der directml-Operatoren, die zum Kompilieren eines kombinierten, optimierten Operators verwendet werden. Weitere Informationen finden Sie unter [IDMLDevice1:: compilegraph](/windows/desktop/direct3d12/directml/nf-directml-idmldevice1-compilegraph).
+Beschreibt ein Diagramm von DirectML-Operatoren, die zum Kompilieren eines kombinierten, optimierten Operators verwendet werden. Siehe [IDMLDevice1::CompileGraph](/windows/desktop/direct3d12/directml/nf-directml-idmldevice1-compilegraph).
 
 > [!IMPORTANT]
-> Diese API ist als Teil des eigenständigen Redistributable Package von directml verfügbar (siehe [Microsoft. ai. directml](https://www.nuget.org/packages/Microsoft.AI.DirectML/)). Siehe auch [Versionsverlauf der directml](../dml-version-history.md).
+> Diese API ist als Teil des eigenständigen weiterverteilten DirectML-Pakets verfügbar (siehe [Microsoft.AI.DirectML](https://www.nuget.org/packages/Microsoft.AI.DirectML/) Version 1.4 und höher). Siehe auch [DirectML-Versionsverlauf.](../dml-version-history.md)
 
 ## <a name="syntax"></a>Syntax
 ```cpp
@@ -81,93 +81,93 @@ struct DML_GRAPH_DESC {
 
 `InputCount`
 
-Typ: [ **uint**](/windows/desktop/winprog/windows-data-types)
+Typ: [ **UINT**](/windows/desktop/winprog/windows-data-types)
 
-Die Anzahl der Eingaben des Gesamt Diagramms. Jede Diagramm Eingabe kann mit einer Variablen Anzahl interner Knoten verbunden werden. Daher kann sich dies von *inputedgecount* unterscheiden.
+Die Anzahl der Eingaben des Gesamtdiagramms. Jede Grapheingabe kann mit einer variablen Anzahl interner Knoten verbunden sein, daher kann sich dies von *InputEdgeCount unterscheiden.*
 
 
 `OutputCount`
 
-Typ: [ **uint**](/windows/desktop/winprog/windows-data-types)
+Typ: [ **UINT**](/windows/desktop/winprog/windows-data-types)
 
-Die Anzahl der Ausgaben des gesamten Diagramms. Jede Diagramm Ausgabe kann mit einer Variablen Anzahl interner Knoten verbunden werden. Daher kann sich dies von *outputedgecount* unterscheiden.
+Die Anzahl der Ausgaben des Gesamtdiagramms. Jede Graphausgabe kann mit einer variablen Anzahl interner Knoten verbunden sein, daher kann sich dies von *OutputEdgeCount unterscheiden.*
 
 
 `NodeCount`
 
-Typ: [ **uint**](/windows/desktop/winprog/windows-data-types)
+Typ: [ **UINT**](/windows/desktop/winprog/windows-data-types)
 
 Die Anzahl der internen Knoten im Diagramm.
 
 
 `Nodes`
 
-Type: \_ Field \_ size \_ (NodeCount) **Konstanten [DML_GRAPH_NODE_DESC](./ns-directml-dml_graph_node_desc.md) \***
+Typ: \_ \_ Feldgröße \_ (NodeCount) **const [DML_GRAPH_NODE_DESC](./ns-directml-dml_graph_node_desc.md) \***
 
 Die internen Knoten im Diagramm.
 
 
 `InputEdgeCount`
 
-Typ: [ **uint**](/windows/desktop/winprog/windows-data-types)
+Typ: [ **UINT**](/windows/desktop/winprog/windows-data-types)
 
-Die Anzahl der Verbindungen zwischen Graph-Eingaben und Eingaben interner Knoten im Diagramm.
+Die Anzahl der Verbindungen zwischen Grapheingaben und Eingaben interner Knoten im Diagramm.
 
 
 `InputEdges`
 
-Type: \_ Field \_ size \_ (inputedgecount) **Konstanten [DML_GRAPH_EDGE_DESC](./ns-directml-dml_graph_edge_desc.md) \***
+Typ: \_ \_ Feldgröße \_ (InputEdgeCount) **const [DML_GRAPH_EDGE_DESC](./ns-directml-dml_graph_edge_desc.md) \***
 
-Ein Array von Verbindungen zwischen Graph-Eingaben und Eingaben interner Knoten im Diagramm. Das *typanfeld* innerhalb der einzelnen Elemente sollte auf [DML_GRAPH_EDGE_TYPE_INPUT](./ne-directml-dml_graph_edge_type.md)festgelegt werden.
+Ein Array von Verbindungen zwischen Grapheingaben und Eingaben interner Knoten im Diagramm. Das *Feld Type* innerhalb jedes Elements sollte auf [DML_GRAPH_EDGE_TYPE_INPUT](./ne-directml-dml_graph_edge_type.md)festgelegt werden.
 
 
 `OutputEdgeCount`
 
-Typ: [ **uint**](/windows/desktop/winprog/windows-data-types)
+Typ: [ **UINT**](/windows/desktop/winprog/windows-data-types)
 
-Die Anzahl der Verbindungen zwischen Diagramm Ausgaben und Ausgaben interner Knoten im Diagramm.
+Die Anzahl der Verbindungen zwischen Graphausgaben und Ausgaben interner Knoten im Diagramm.
 
 
 `OutputEdges`
 
-Type: \_ Field \_ size \_ (outputedgecount) **Konstanten [DML_GRAPH_EDGE_DESC](./ns-directml-dml_graph_edge_desc.md) \***
+Typ: \_ \_ Feldgröße \_ (OutputEdgeCount) **const [DML_GRAPH_EDGE_DESC](./ns-directml-dml_graph_edge_desc.md) \***
 
-Ein Array von Verbindungen zwischen Diagramm Ausgaben und Ausgaben interner Knoten im Diagramm. Das *typanfeld* innerhalb der einzelnen Elemente sollte auf [DML_GRAPH_EDGE_TYPE_OUTPUT](./ne-directml-dml_graph_edge_type.md)festgelegt werden.
+Ein Array von Verbindungen zwischen Graphausgaben und Ausgaben interner Knoten im Diagramm. Das *Feld Type* innerhalb jedes Elements sollte auf [DML_GRAPH_EDGE_TYPE_OUTPUT](./ne-directml-dml_graph_edge_type.md)festgelegt werden.
 
 
 `IntermediateEdgeCount`
 
-Typ: [ **uint**](/windows/desktop/winprog/windows-data-types)
+Typ: [ **UINT**](/windows/desktop/winprog/windows-data-types)
 
-Die Anzahl der internen Verbindungen zwischen den Knoten im Diagramm.
+Die Anzahl der internen Verbindungen zwischen Knoten im Diagramm.
 
 
 `IntermediateEdges`
 
-Type: \_ Field \_ size \_ (intermediateedgecount) **Konstanten [DML_GRAPH_EDGE_DESC](./ns-directml-dml_graph_edge_desc.md) \***
+Typ: \_ \_ Feldgröße \_ (IntermediateEdgeCount) **const [DML_GRAPH_EDGE_DESC](./ns-directml-dml_graph_edge_desc.md) \***
 
-Ein Array von Verbindungen zwischen Eingaben und Ausgaben interner Knoten im Diagramm. Das typanfeld innerhalb der einzelnen Elemente sollte auf festgelegt werden [DML_GRAPH_EDGE_TYPE_INTERMEDIATE](./ne-directml-dml_graph_edge_type.md)
+Ein Array von Verbindungen zwischen Eingaben und Ausgaben interner Knoten im Diagramm. Das Feld Typ innerhalb jedes Elements sollte auf [DML_GRAPH_EDGE_TYPE_INTERMEDIATE](./ne-directml-dml_graph_edge_type.md)
 
 
-## <a name="remarks"></a>Bemerkungen
-Das von dieser Struktur beschriebene Diagramm muss ein gerichtetes azyklisches Diagramm sein. Sie müssen eine Verbindung für die Eingabe und die Ausgabe der einzelnen bereitgestellten Knoten definieren, mit Ausnahme von Eingaben und Ausgaben, die für den zugeordneten Operator optional sind.
+## <a name="remarks"></a>Hinweise
+Das von dieser Struktur beschriebene Diagramm muss ein gerichteter azyklischer Graph sein. Sie müssen eine Verbindung für die Ein- und Ausgabe jedes angegebenen Knotens definieren, mit Ausnahme von Eingaben und Ausgaben, die für den zugeordneten Operator optional sind.
 
-Knoten können Operatoren verwenden, die mit dem [DML_TENSOR_FLAG_OWNED_BY_DML](/windows/win32/api/directml/ne-directml-dml_tensor_flags) -Flag für bestimmte Eingaben erstellt wurden. Alle Operator Eingaben, die dieses Flag verwenden, müssen mit Graph-Eingaben verbunden sein. Alle Operator Eingaben, die mit derselben Diagramm Eingabe verbunden sind, müssen dieses Flag gleichwertig verwenden oder weglassen.
+Knoten können Operatoren verwenden, die mit dem [flag DML_TENSOR_FLAG_OWNED_BY_DML](/windows/win32/api/directml/ne-directml-dml_tensor_flags) für bestimmte Eingaben erstellt wurden. Alle Operatoreingaben, die dieses Flag verwenden, müssen mit Grapheingaben verbunden sein. Alle Operatoreingaben, die mit derselben Grapheingabe verbunden sind, müssen dieses Flag entsprechend verwenden oder weglassen.
 
-Es ist für Verbindungs Operatoren zulässig, deren verbundene Eingaben und Ausgaben verschiedene Dimensions Zähler, Größen und Datentypen verwenden. Dies bedeutet, dass das tensorflow-datenblob von jedem Operator anders interpretiert wird. Das *totaltensorsizeinbytes* -Feld der verbundenen tensorflow-Eingaben und-Ausgaben muss jedoch identisch sein. Operatoren sollten nur Regionen von Tensoren lesen, die von früheren Operatoren geschrieben wurden. Alle Leerraum Bereiche in der Ausgabe eines Vorgangs (die sich aus der Verwendung von Fortschritten ergeben) werden nicht garantiert als 0 (null) von Datenstrom Operatoren gelesen.
+Es ist zulässig, Operatoren zu verbinden, deren verbundene Eingaben und Ausgaben unterschiedliche Dimensionsanzahlen, Größen und Datentypen verwenden. Dies bedeutet, dass das Tensordatenblob von jedem Operator unterschiedlich interpretiert wird. Das Feld *TotalTensorSizeInBytes* der verbundenen Tensoreingaben und -ausgaben muss jedoch identisch sein. Operatoren sollten nur Bereiche mit Tensoren lesen, die von früheren Operatoren geschrieben wurden. Alle Auf padding-Bereiche in der Ausgabe eines Vorgangs (die sich aus der Verwendung von Strides ergeben) werden von Downstreamoperatoren nicht als 0 (null) gelesen.
 
 ## <a name="availability"></a>Verfügbarkeit
 
-Diese API wurde in der directml-Version eingeführt `1.1.0` .
+Diese API wurde in der DirectML-Version `1.1.0` eingeführt.
 
 
 ## <a name="requirements"></a>Anforderungen
 | &nbsp; | &nbsp; |
 | ---- |:---- |
-| **Header** | directml. h |
+| **Header** | directml.h |
 
 ## <a name="see-also"></a>Siehe auch
 
-* [IDMLDevice1:: compilegraph-Methode](/windows/desktop/direct3d12/directml/nf-directml-idmldevice1-compilegraph)
-* [DML_GRAPH_NODE_DESC-Struktur](./ns-directml-dml_graph_node_desc.md)
-* [DML_GRAPH_EDGE_DESC-Struktur](./ns-directml-dml_graph_edge_desc.md)
+* [IDMLDevice1::CompileGraph-Methode](/windows/desktop/direct3d12/directml/nf-directml-idmldevice1-compilegraph)
+* [DML_GRAPH_NODE_DESC Struktur](./ns-directml-dml_graph_node_desc.md)
+* [DML_GRAPH_EDGE_DESC Struktur](./ns-directml-dml_graph_edge_desc.md)

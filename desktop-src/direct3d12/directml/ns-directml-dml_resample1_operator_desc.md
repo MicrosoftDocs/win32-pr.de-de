@@ -1,7 +1,7 @@
 ---
 UID: NS:directml.DML_RESAMPLE1_OPERATOR_DESC
 title: DML_RESAMPLE1_OPERATOR_DESC
-description: Gibt Elemente aus der Quell-zum Ziel Mandanten erneut aus, wobei die Skalierungsfaktoren verwendet werden, um die Ziel-tensorflow-Größe zu berechnen. Sie können einen linearen oder nächstgelegenen Interpolations Modus verwenden.
+description: Resamples von Elementen von der Quelle zum Ziel-Tensor unter Verwendung der Skalierungsfaktoren zum Berechnen der Ziel-Tensorgröße. Sie können einen linearen oder nächsten Nachbarinterpolationsmodus verwenden.
 ms.topic: reference
 tech.root: directml
 ms.date: 11/03/2020
@@ -39,20 +39,20 @@ api_name:
 f1_keywords:
 - DML_RESAMPLE1_OPERATOR_DESC
 - directml/DML_RESAMPLE1_OPERATOR_DESC
-ms.openlocfilehash: 669e828c4d8376e081ef6638aba4a13d517afd88
-ms.sourcegitcommit: 3bdf30edb314e0fcd17dc4ddbc70e4ec7d3596e6
+ms.openlocfilehash: ac98813e15ab3dac71a9f8395333160ce37778b0
+ms.sourcegitcommit: 8e1f04c7e3c5c850071bac8d173f9441aab0dfed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "106366539"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107804057"
 ---
-# <a name="dml_resample1_operator_desc-structure-directmlh"></a>DML_RESAMPLE1_OPERATOR_DESC-Struktur (directml. h)
-Gibt Elemente aus der Quell-zum Ziel Mandanten erneut aus, wobei die Skalierungsfaktoren verwendet werden, um die Ziel-tensorflow-Größe zu berechnen. Sie können einen linearen oder nächstgelegenen Interpolations Modus verwenden. Der-Operator unterstützt Interpolationen über mehrere Dimensionen, nicht nur über 2D. Sie können also die gleiche räumliche Größe beibehalten, aber über Kanäle oder Batches hinweg interpolieren. Die Beziehung zwischen der Eingabe-und der Ausgabe Koordinate lautet wie folgt:
+# <a name="dml_resample1_operator_desc-structure-directmlh"></a>DML_RESAMPLE1_OPERATOR_DESC-Struktur (directml.h)
+Resamples von Elementen von der Quelle zum Ziel-Tensor unter Verwendung der Skalierungsfaktoren zum Berechnen der Ziel-Tensorgröße. Sie können einen linearen oder nächsten Nachbarinterpolationsmodus verwenden. Der -Operator unterstützt die Interpolation über mehrere Dimensionen hinweg, nicht nur 2D. Sie können also die gleiche räumliche Größe beibehalten, aber über Kanäle oder Batches hinweg interpolieren. Die Beziehung zwischen den Eingabe- und Ausgabekoordinaten lautet wie folgt.
 
 `OutputTensorX = (InputTensorX + InputPixelOffset) * Scale + OutputPixelOffset`
 
 > [!IMPORTANT]
-> Diese API ist als Teil des eigenständigen Redistributable Package von directml verfügbar (siehe [Microsoft. ai. directml](https://www.nuget.org/packages/Microsoft.AI.DirectML/)). Siehe auch [Versionsverlauf der directml](../dml-version-history.md).
+> Diese API ist als Teil des eigenständigen verteilbaren DirectML-Pakets verfügbar (siehe [Microsoft.AI.DirectML](https://www.nuget.org/packages/Microsoft.AI.DirectML/) Version 1.4 und höher). Siehe auch [DirectML-Versionsverlauf.](../dml-version-history.md)
 
 ## <a name="syntax"></a>Syntax
 ```cpp
@@ -73,74 +73,74 @@ struct DML_RESAMPLE1_OPERATOR_DESC {
 
 `InputTensor`
 
-Typ: Konstante **[DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
+Typ: **const [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
 
-Der tensorflow, der die Eingabedaten enthält.
+Der Tensor, der die Eingabedaten enthält.
 
 
 `OutputTensor`
 
-Typ: Konstante **[DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
+Typ: **const [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
 
-Der tensorflow, in den die Ausgabedaten geschrieben werden sollen.
+Der Tensor, in den die Ausgabedaten geschrieben werden sollen.
 
 
 `InterpolationMode`
 
 Typ: [ **DML_INTERPOLATION_MODE**](/windows/win32/api/directml/ne-directml-dml_interpolation_mode)
 
-Dieses Feld bestimmt die Art der Interpolations, mit der Ausgabe Pixel ausgewählt werden.
+Dieses Feld bestimmt die Art der Interpolation, die zum Auswählen von Ausgabepixeln verwendet wird.
 
-- **DML_INTERPOLATION_MODE_NEAREST_NEIGHBOR**. Verwendet den *nächstgelegenen Nachbar* Algorithmus, der das Eingabe Element auswählt, das dem entsprechenden Pixel Center für jedes Output-Element am nächsten ist.
+- **DML_INTERPOLATION_MODE_NEAREST_NEIGHBOR**. Verwendet den *Nearest* Neighbor-Algorithmus, mit dem das Eingabeelement ausgewählt wird, das dem entsprechenden Pixelmittelpunkt für jedes Ausgabeelement am nächsten ist.
 
-- **DML_INTERPOLATION_MODE_LINEAR**. Verwendet den *vierlinear* -Algorithmus, der das Output-Element berechnet, indem der gewichtete Durchschnitt der zwei nächstgelegenen benachbarten Eingabeelemente pro Dimension ausgeführt wird. Da alle vier Dimensionen neu erstellt werden können, wird der gewichtete Durchschnitt für jedes Output-Element für insgesamt 16 Eingabeelemente berechnet.
+- **DML_INTERPOLATION_MODE_LINEAR**. Verwendet den *Quadrilinear-Algorithmus,* der das Ausgabeelement berechnet, indem der gewichtete Durchschnitt der 2 nächsten benachbarten Eingabeelemente pro Dimension durchgeführt wird. Da alle vier Dimensionen neu berechnet werden können, wird der gewichtete Durchschnitt auf insgesamt 16 Eingabeelementen für jedes Ausgabeelement berechnet.
 
 
 `DimensionCount`
 
-Typ: [ **uint**](/windows/desktop/winprog/windows-data-types)
+Typ: [ **UINT**](/windows/desktop/winprog/windows-data-types)
 
-Die Anzahl der Werte in den Arrays, die *skaliert*, *inputpixeloffsets* und *outputpixeloffsets* auf zeigen. Dieser Wert muss mit der Dimensions Anzahl von *inputtensor* und *outputtensor* identisch sein, die 4 sein muss.
+Die Anzahl der Werte in den Arrays, auf die *Skaliert,* *InputPixelOffsets* und *OutputPixelOffsets* zeigen. Dieser Wert muss mit der Dimensionsanzahl von *InputTensor* und *OutputTensor* übereinstimmen, die 4 sein muss.
 
 
 `Scales`
 
-Type: \_ Field \_ size \_ (DimensionCount) **Konstanten [float](/windows/desktop/WinProg/windows-data-types) \***
+Typ: \_ \_ Feldgröße \_ (DimensionCount) **const [FLOAT](/windows/win32/winprog/windows-data-types) \***
 
-Die Skalierungen, die beim erneuten Sampling der Eingabe angewendet werden, wobei Skalierung > 1 das Image zentral hochskalieren und Skalieren < 1 skalieren Sie das Bild für diese Dimension herunter. Beachten Sie, dass die Skalen nicht exakt sein müssen `OutputSize / InputSize` . Wenn die Eingabe nach der Skalierung größer als die Ausgabe Grenze ist, wird Sie in die Ausgabegröße übertragen. Wenn die Eingabe nach der Skalierung jedoch kleiner als die Ausgabe Grenze ist, werden die Ausgabe Kanten geklammert.
+Die Skalierungen, die beim Erneutampling der Eingabe angewendet werden, wobei > 1 das Bild hochskaliert und < 1 das Bild für diese Dimension herunterskaliert. Beachten Sie, dass die Skalierungen nicht genau sein `OutputSize / InputSize` müssen. Wenn die Eingabe nach der Skalierung größer als die Ausgabegrenze ist, wird sie auf die Ausgabegröße zugeschnitten. Wenn die Eingabe nach der Skalierung hingegen kleiner als die Ausgabegrenze ist, werden die Ausgaberänder gebunden.
 
 
 `InputPixelOffsets`
 
-Type: \_ Field \_ size \_ (DimensionCount) **Konstanten [float](/windows/desktop/WinProg/windows-data-types) \***
+Typ: \_ \_ Feldgröße \_ (DimensionCount) **const [FLOAT](/windows/win32/winprog/windows-data-types) \***
 
-Die Offsets, die vor dem erneuten Sampling auf die Eingabe Pixel angewendet werden sollen. Wenn dieser Wert ist `0` , wird die linke obere Ecke des Pixels anstelle der Mitte verwendet, die in der Regel nicht das erwartete Ergebnis liefert. Um das Bild mithilfe der Mitte der Pixel neu zu formatieren und das gleiche Verhalten wie [DML_RESAMPLE_OPERATOR_DESC](/windows/win32/api/directml/ns-directml-dml_resample_operator_desc)zu erzielen, muss dieser Wert lauten `0.5` .
+Die Offsets, die vor dem Erneutampling auf die Eingabepixel angewendet werden. Wenn dieser Wert ist, wird die linke obere Ecke des Pixels anstelle seines Mittelpunkts verwendet, was in der Regel nicht das `0` erwartete Ergebnis ergeben wird. Um das Bild mithilfe des Mittelpunkts der Pixel neu zu sampeln und das gleiche Verhalten wie [DML_RESAMPLE_OPERATOR_DESC](/windows/win32/api/directml/ns-directml-dml_resample_operator_desc)zu erhalten, muss dieser Wert `0.5` sein.
 
 
 `OutputPixelOffsets`
 
-Type: \_ Field \_ size \_ (DimensionCount) **Konstanten [float](/windows/desktop/WinProg/windows-data-types) \***
+Typ: \_ \_ Feldgröße \_ (DimensionCount) **const [FLOAT](/windows/win32/winprog/windows-data-types) \***
 
-Die Offsets, die nach dem erneuten Sampling auf die Ausgabe Pixel angewendet werden sollen. Wenn dieser Wert ist `0` , wird die linke obere Ecke des Pixels anstelle der Mitte verwendet, die in der Regel nicht das erwartete Ergebnis liefert. Um das Bild mithilfe der Mitte der Pixel neu zu formatieren und das gleiche Verhalten wie [DML_RESAMPLE_OPERATOR_DESC](/windows/win32/api/directml/ns-directml-dml_resample_operator_desc)zu erzielen, muss dieser Wert lauten `-0.5` .
+Die Offsets, die nach dem Resampling auf die Ausgabepixel angewendet werden. Wenn dieser Wert ist, wird die linke obere Ecke des Pixels anstelle seines Mittelpunkts verwendet, was in der Regel nicht das `0` erwartete Ergebnis ergeben wird. Um das Bild mithilfe des Mittelpunkts der Pixel neu zu sampeln und das gleiche Verhalten wie [DML_RESAMPLE_OPERATOR_DESC](/windows/win32/api/directml/ns-directml-dml_resample_operator_desc)zu erhalten, muss dieser Wert `-0.5` sein.
 
 
-## <a name="remarks"></a>Bemerkungen
-Wenn *inputpixeloffsets* auf 0,5 und *outputpixeloffsets* auf-0,5 festgelegt sind, entspricht dieser Operator [DML_RESAMPLE_OPERATOR_DESC](/windows/win32/api/directml/ns-directml-dml_resample_operator_desc).
+## <a name="remarks"></a>Hinweise
+Wenn *inputPixelOffsets* auf 0,5 und *OutputPixelOffsets* auf -0,5 festgelegt sind, entspricht dieser Operator DML_RESAMPLE_OPERATOR_DESC [.](/windows/win32/api/directml/ns-directml-dml_resample_operator_desc)
 
 ## <a name="availability"></a>Verfügbarkeit
-Dieser Operator wurde in eingeführt `DML_FEATURE_LEVEL_2_1` .
+Dieser Operator wurde in `DML_FEATURE_LEVEL_2_1` eingeführt.
 
-## <a name="tensor-constraints"></a>Tensor-Einschränkungen
-*Inputtensor* und *outputtensor* müssen denselben *Datentyp* aufweisen.
+## <a name="tensor-constraints"></a>Tensoreinschränkungen
+*InputTensor* und *OutputTensor* müssen den gleichen *Datentyp aufweisen.*
 
 ## <a name="tensor-support"></a>Tensor-Unterstützung
-| Tensorflow | Typ | Unterstützte Dimensions Anzahl | Unterstützte Datentypen |
+| Tensor | Typ | Unterstützte Dimensionsanzahlen | Unterstützte Datentypen |
 | ------ | ---- | -------------------------- | -------------------- |
-| Inputtensor | Eingabe | 4 | Float32, FLOAT16 |
-| Outputtensor | Ausgabe | 4 | Float32, FLOAT16 |
+| InputTensor | Eingabe | 4 | FLOAT32, FLOAT16 |
+| OutputTensor | Ausgabe | 4 | FLOAT32, FLOAT16 |
 
 
 ## <a name="requirements"></a>Anforderungen
 | &nbsp; | &nbsp; |
 | ---- |:---- |
-| **Header** | directml. h |
+| **Header** | directml.h |

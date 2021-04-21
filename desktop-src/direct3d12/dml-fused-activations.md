@@ -1,33 +1,33 @@
 ---
-title: Verbessern der Leistung mithilfe von Fused-Operatoren
-description: Einige directml-Operatoren unterstützen ein Konzept, das als *Fusion* bezeichnet wird. Die Operator Fusion ist eine Möglichkeit, die Leistung zu verbessern, indem ein Operator (in der Regel eine Aktivierungsfunktion) in einen anderen Operator gemergt wird, sodass Sie zusammen ausgeführt werden, ohne dass ein Roundtrip zum Arbeitsspeicher erforderlich ist.
+title: Verwendung von Fused-Operatoren zur Leistungssteigerung
+description: Einige DirectML-Operatoren unterstützen ein Konzept, das als *Fusion bezeichnet wird.* Operator fusion ist eine Möglichkeit, die Leistung zu verbessern, indem ein Operator (in der Regel eine Aktivierungsfunktion) mit einem anderen Operator zusammengeführt wird, sodass sie zusammen ausgeführt werden, ohne dass ein Roundtrip zum Arbeitsspeicher erforderlich ist.
 ms.localizationpriority: high
 ms.topic: article
 ms.date: 11/05/2020
-ms.openlocfilehash: b692727d52e252bb3752573e692bcf5beda794e2
-ms.sourcegitcommit: 4c00910ed754d7d0a68c9a833751d714c06e3b39
+ms.openlocfilehash: bba4a9d0ef5c69976a5a344432bf82d31b00c0c7
+ms.sourcegitcommit: 8e1f04c7e3c5c850071bac8d173f9441aab0dfed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "104548768"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107803984"
 ---
-# <a name="using-fused-operators-to-improve-performance"></a>Verbessern der Leistung mithilfe von Fused-Operatoren
+# <a name="using-fused-operators-to-improve-performance"></a>Verwendung von Fused-Operatoren zur Leistungssteigerung
 
-Einige directml-Operatoren unterstützen ein Konzept, das als *Fusion* bezeichnet wird. Die Operator Fusion ist eine Möglichkeit, die Leistung zu verbessern, indem ein Operator (in der Regel eine Aktivierungsfunktion) in einen anderen Operator gemergt wird, sodass Sie zusammen ausgeführt werden, ohne dass ein Roundtrip zum Arbeitsspeicher erforderlich ist.
+Einige DirectML-Operatoren unterstützen ein Konzept, das als *Fusion bezeichnet wird.* Operator fusion ist eine Möglichkeit, die Leistung zu verbessern, indem ein Operator (in der Regel eine Aktivierungsfunktion) mit einem anderen Operator zusammengeführt wird, sodass sie zusammen ausgeführt werden, ohne dass ein Roundtrip zum Arbeitsspeicher erforderlich ist.
 
-## <a name="when-to-fuse-activations"></a>Zeitpunkt der Aktivierung von Aktivierungen
+## <a name="when-to-fuse-activations"></a>Wann werden Aktivierungen aktiviert?
 
-Die Aktivierung von aktivierten Aktivierungen ist eine Leistungsoptimierung. Ein sehr gängiges Szenario in vielen Machine Learning-Modellen (ml) ist das Anwenden einer nicht Linearität (eine Aktivierungsfunktion) auf die Ausgabe jeder Ebene im Modell.
+Fused-Aktivierungen sind eine Leistungsoptimierung. Ein sehr häufiges Szenario in vielen Machine Learning-Modellen (ML) besteht in der Anwendung einer Nichtlinearität (einer Aktivierungsfunktion) auf die Ausgabe jeder Ebene im Modell.
 
-Normalerweise ist hierfür ein Roundtrip zum Grafikspeicher erforderlich. Wenn z. b. auf eine Zusammenstellung von einer nicht gecluchten relu-Aktivierung folgt, muss die GPU warten, bis die Ergebnisse der Übertragung in den GPU-Speicher geschrieben wurden, bevor Sie mit dem Berechnen der relu-Aktivierungs Ebene beginnen kann. Wenn die Compute-Arbeitsauslastung der meisten Aktivierungs Funktionen tendenziell gering ist, kann dieser Roundtrip zum Grafikspeicher zu einem großen Leistungsengpass beitragen.
+Normalerweise erfordert dies einen Roundtrip zum Grafikspeicher. Wenn beispielsweise auf eine Konvolution eine nicht fused Relu-Aktivierung folgt, muss die GPU warten, bis die Ergebnisse der Convolution in den GPU-Arbeitsspeicher geschrieben werden, bevor sie mit der Berechnung der Relu-Aktivierungsebene beginnen kann. Da die Computeworkload der meisten Aktivierungsfunktionen tendenziell klein ist, kann dieser Roundtrip zum Grafikspeicher ein großer Leistungsengpass sein.
 
-Die Operator Fusion ermöglicht die Ausführung der Aktivierungsfunktion (relu im obigen Beispiel) als Teil des vorangehenden Operators (z. b.). Dadurch kann die GPU die Aktivierungsfunktion berechnen, ohne darauf zu warten, dass die Ergebnisse des vorangehenden Operators in den Arbeitsspeicher geschrieben werden, &mdash; und die Leistung wird verbessert.
+Operator fusion ermöglicht die Aktivierungsfunktion (im obigen Beispiel Relu) als Teil des vorherigen Operators (z. B. Convolution). Dadurch kann die GPU die Aktivierungsfunktion berechnen, ohne darauf zu warten, dass die Ergebnisse des vorherigen Operators in den Arbeitsspeicher geschrieben werden, was &mdash; die Leistung verbessert.
 
-Da die Aktivierung von aktivierten Aktivierungen das gleiche Ergebnis ergibt, aber in vielen Fällen schneller ist, empfiehlt es sich, Aktivierungs Ebenen auszuschließen, indem Sie Sie nach Möglichkeit in den vorangehenden Operator hineinbringen.
+Da fused-Aktivierungen das gleiche Ergebnis erzeugen, aber in vielen Fällen schneller sind, empfehlen wir Ihnen, Aktivierungsebenen zu beseitigen, indem Sie sie nach Möglichkeit in ihren vorherigen Operator einfingen.
 
-## <a name="how-to-fuse-activations"></a>Vorgehensweise beim vereinen von Aktivierungen
+## <a name="how-to-fuse-activations"></a>How to fuse activations (Zusammensnieren von Aktivierungen)
 
-Operatoren, die die Aktivierung von Aktivierungen unterstützen, verfügen über einen zusätzlichen optionalen Parameter in der Operator Struktur, `const DML_OPERATOR_DESC* FusedActivation` . Beispielsweise unterstützt die Übertragung die Aktivierung, und Sie verfügt über eine entsprechende *fusedactivation* in der Operator Beschreibung (siehe [DML_CONVOLUTION_OPERATOR_DESC](/windows/win32/api/directml/ns-directml-dml_convolution_operator_desc)).
+Operatoren, die fused-Aktivierungen unterstützen, verfügen über einen zusätzlichen optionalen Parameter in ihrer Operatorstruktur, `const DML_OPERATOR_DESC* FusedActivation` . Convolution unterstützt z.B. die Fused-Aktivierung und verfügt über eine entsprechende *FusedActivation* in der Operatorbeschreibung (siehe [DML_CONVOLUTION_OPERATOR_DESC](/windows/win32/api/directml/ns-directml-dml_convolution_operator_desc)).
 
 ```cpp
 struct DML_CONVOLUTION_OPERATOR_DESC
@@ -49,10 +49,10 @@ struct DML_CONVOLUTION_OPERATOR_DESC
 };
 ```
 
-Um eine Aktivierung zu verleihen, erstellen Sie eine [DML_OPERATOR_DESC](/windows/win32/api/directml/ns-directml-dml_operator_desc) , die den Typ der zu verschmelfenden Aktivierung beschreibt. Um z. b. eine relu-Funktion zu vereinen, wäre der richtige Operatortyp [DML_OPERATOR_ACTIVATION_RELU](/windows/win32/api/directml/ne-directml-dml_operator_type).
+Erstellen Sie zum Fuseieren einer Aktivierung eine [DML_OPERATOR_DESC,](/windows/win32/api/directml/ns-directml-dml_operator_desc) die den Typ der Zusicherung beschreibt. Um z. B. eine Relu-Funktion zu fusionieren, wäre der richtige Operatortyp [DML_OPERATOR_ACTIVATION_RELU](/windows/win32/api/directml/ne-directml-dml_operator_type).
 
 > [!NOTE]
-> Beim Erstellen der Operator Beschreibung für die Aktivierungsfunktion müssen die Parameter *inputtensor* und *outputtensor* für die Aktivierungsfunktion auf **null** festgelegt werden.
+> Beim Erstellen der Operatorbeschreibung für die Aktivierungsfunktion müssen Sie die *Parameter InputTensor* und *OutputTensor* für die Aktivierungsfunktion auf **NULL** festlegen.
 
 ## <a name="example"></a>Beispiel
 
@@ -69,9 +69,9 @@ DML_CONVOLUTION_OPERATOR_DESC convDesc;
 convDesc.FusedActivation = &activationDesc;
 ```
 
-Ein umfassendes Beispiel verwendet das [directmlsuperresolution](https://github.com/microsoft/DirectML/tree/master/Samples) -Beispiel, um die Leistung zu verbessern.
+Für ein vollständiges Beispiel verwendet das [DirectMLSuperResolution-Beispiel](https://github.com/microsoft/DirectML/tree/master/Samples) fused-Aktivierungen, um die Leistung zu verbessern.
 
-## <a name="operators-that-support-fused-activation"></a>Operatoren, die die Aktivierung von Fused
+## <a name="operators-that-support-fused-activation"></a>Operatoren, die die fused-Aktivierung unterstützen
 
 * [DML_OPERATOR_CONVOLUTION](/windows/win32/api/directml/ne-directml-dml_operator_type)
 * **DML_OPERATOR_GEMM**
@@ -98,9 +98,9 @@ Ein umfassendes Beispiel verwendet das [directmlsuperresolution](https://github.
 * **DML_OPERATOR_ACTIVATION_SHRINK**
 * **DML_OPERATOR_ACTIVATION_CELU**
 
-Alle Operatoren, die nicht in dieser Liste enthalten sind, werden nicht für die Aktivierung aktiviert.
+Operatoren, die nicht in dieser Liste enthalten sind, werden für die Fused-Aktivierung nicht unterstützt.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Beispiel für directmlsuperresolution](https://github.com/microsoft/DirectML/tree/master/Samples)    
-[DML_CONVOLUTION_OPERATOR_DESC](/windows/win32/api/directml/ns-directml-dml_convolution_operator_desc)
+* [DirectMLSuperResolution-Beispiel](https://github.com/microsoft/DirectML/tree/master/Samples)    
+* [DML_CONVOLUTION_OPERATOR_DESC](/windows/win32/api/directml/ns-directml-dml_convolution_operator_desc)

@@ -1,7 +1,7 @@
 ---
 UID: NS:directml.DML_ADAM_OPTIMIZER_OPERATOR_DESC
 title: DML_ADAM_OPTIMIZER_OPERATOR_DESC
-description: Berechnet aktualisierte Gewichtungen (Parameter) mithilfe der angegebenen Farbverläufe basierend auf dem Adam-Algorithmus (**Ada** ptive **M** oment-Schätzung). Dieser Operator ist ein Optimierer und wird in der Regel im Schritt zum Aktualisieren von Gewichtungen einer Trainings Schleife verwendet, um den gradientenabstieg auszuführen.
+description: Berechnet aktualisierte Gewichtungen (Parameter) mithilfe der angegebenen Farbverläufe basierend auf dem Adam-Algorithmus **(ADA** ptive **M** oment estimation). Dieser Operator ist ein Optimierer und wird in der Regel im Schritt der Gewichtungsaktualisierung einer Trainingsschleife verwendet, um einen Gradientenabstieg durchzuführen.
 helpviewer_keywords:
 - DML_ADAM_OPTIMIZER_OPERATOR_DESC
 - DML_ADAM_OPTIMIZER_OPERATOR_DESC structure
@@ -45,16 +45,16 @@ api_location:
 - DirectML.h
 api_name:
 - DML_ADAM_OPTIMIZER_OPERATOR_DESC
-ms.openlocfilehash: a4acd26f5174bf6c6ae53f5edfdc28cc6c9b1a3d
-ms.sourcegitcommit: 3bdf30edb314e0fcd17dc4ddbc70e4ec7d3596e6
+ms.openlocfilehash: 9943f70bd3d62faf57f4eca83f9f09ce0119881a
+ms.sourcegitcommit: 8e1f04c7e3c5c850071bac8d173f9441aab0dfed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "106354253"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107803525"
 ---
-# <a name="dml_adam_optimizer_operator_desc-structure-directmlh"></a>DML_ADAM_OPTIMIZER_OPERATOR_DESC-Struktur (directml. h)
+# <a name="dml_adam_optimizer_operator_desc-structure-directmlh"></a>DML_ADAM_OPTIMIZER_OPERATOR_DESC-Struktur (directml.h)
 
-Berechnet aktualisierte Gewichtungen (Parameter) mithilfe der angegebenen Farbverläufe basierend auf dem Adam-Algorithmus (**Ada** ptive **M** oment-Schätzung). Dieser Operator ist ein Optimierer und wird in der Regel im Schritt zum Aktualisieren von Gewichtungen einer Trainings Schleife verwendet, um den gradientenabstieg auszuführen.
+Berechnet aktualisierte Gewichtungen (Parameter) mithilfe der angegebenen Farbverläufe basierend auf dem Adam-Algorithmus **(ADA** ptive **M** oment estimation). Dieser Operator ist ein Optimierer und wird in der Regel im Schritt der Gewichtungsaktualisierung einer Trainingsschleife verwendet, um einen Gradientenabstieg durchzuführen.
 
 Dieser Operator führt die folgende Berechnung aus:
 
@@ -79,10 +79,10 @@ OutputFirstMomentTensor = M
 OutputSecondMomentTensor = V
 ```
 
-Zusätzlich zur Berechnung der aktualisierten Gewichtungs Parameter (zurückgegeben in *outputparameterstensor*) gibt dieser Operator auch die aktualisierten ersten und zweiten Moment Schätzungen in *outputfirstmomenttensor* bzw. *outputsecondmomenttensor* zurück. In der Regel sollten Sie diese geschätzten ersten und zweiten Moment Schätzungen speichern und während des nachfolgenden Trainings Schritts als Eingaben angeben.
+Zusätzlich zum Berechnen der aktualisierten Gewichtungsparameter (zurückgegeben in *OutputParametersTensor)* gibt dieser Operator auch die aktualisierten Schätzungen des ersten und zweiten Moments in *OutputFirstMomentTensor* bzw. *OutputSecondMomentTensor* zurück. In der Regel sollten Sie diese Schätzungen für den ersten und zweiten Moment speichern und sie während des nachfolgenden Trainingsschritts als Eingaben bereitstellen.
 
 > [!IMPORTANT]
-> Diese API ist als Teil des eigenständigen Redistributable Package von directml verfügbar (siehe [Microsoft. ai. directml](https://www.nuget.org/packages/Microsoft.AI.DirectML/)). Siehe auch [Versionsverlauf der directml](../dml-version-history.md).
+> Diese API ist als Teil des eigenständigen verteilbaren DirectML-Pakets verfügbar (siehe [Microsoft.AI.DirectML](https://www.nuget.org/packages/Microsoft.AI.DirectML/) Version 1.4 und höher). Siehe auch [DirectML-Versionsverlauf.](../dml-version-history.md)
 
 ## <a name="syntax"></a>Syntax
 ```cpp
@@ -107,125 +107,125 @@ struct DML_ADAM_OPTIMIZER_OPERATOR_DESC
 
 `InputParametersTensor`
 
-Typ: Konstante **[DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
+Typ: **const [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
 
-Ein tensorflow mit den Parametern (Gewichtungen), auf die dieser Optimierer angewendet werden soll. Die Werte für den Verlauf, den ersten und den zweiten Zeitpunkt, den aktuellen Trainingsschritt sowie Hyperparameter *learningrate*, *Beta1* und *Beta2* werden von diesem Operator verwendet, um den gradientenabstieg der Gewichtungswerte in diesem Mandanten auszuführen.
+Ein Tensor, der die Parameter (Gewichtungen) enthält, auf die dieser Optimierer angewendet werden soll. Die Schätzwerte für den Farbverlauf, den ersten und zweiten Moment, den aktuellen Trainingsschritt sowie die Hyperparameter *LearningRate,* *Beta1* und *Beta2* werden von diesem Operator verwendet, um den Gradientenabstieg für die gewichtigen Werte durchzuführen, die in diesem Tensor angegeben sind.
 
 `InputFirstMomentTensor`
 
-Typ: Konstante **[DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
+Typ: **const [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
 
-Ein tensorflow, der die erste Moment Schätzung des Farbverlaufs für jeden Gewichtungswert enthält. Diese Werte werden in der Regel als Ergebnis einer vorherigen Ausführung dieses Operators über den *outputfirstaugentensor* abgerufen.
+Ein Tensor, der die Schätzung des Farbverlaufs für jeden Gewichtungswert des ersten Moments enthält. Diese Werte werden in der Regel als Ergebnis einer vorherigen Ausführung dieses Operators über *outputFirstMomentTensor* abgerufen.
 
-Wenn Sie diesen Optimierer zum ersten Mal auf einen Satz von Gewichtungen anwenden (z. b. während des anfänglichen Trainings Schritts), sollten die Werte dieses Mandanten in der Regel mit 0 (null) initialisiert werden. Bei nachfolgenden Ausführungen sollten die Werte verwendet werden, die in *outputfirstmomenttensor* zurückgegeben werden.
+Wenn sie diesen Optimierer zum ersten Mal auf eine Gruppe von Gewichtungen anwenden (z. B. während des ersten Trainingsschritts), sollten die Werte dieses Tensors in der Regel mit 0 initialisiert werden. Nachfolgende Ausführungen sollten die in *OutputFirstMomentTensor zurückgegebenen Werte verwenden.*
 
-Die *Größen* und der *Datentyp* dieses Mandanten müssen genau mit denen des *Input parameterstensor* übereinstimmen.
+Die *Größen und* der Datentyp *dieses* Tensors müssen genau mit denen des *InputParametersTensor übereinstimmen.*
 
 `InputSecondMomentTensor`
 
-Typ: Konstante **[DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
+Typ: **const [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
 
-Ein tensorflow, der die zweite Schätzung des Farbverlaufs für jeden Gewichtungswert enthält. Diese Werte werden in der Regel als Ergebnis einer vorherigen Ausführung dieses Operators über den *outputsecondmomenttensor* abgerufen.
+Ein Tensor, der den zweiten Moment der Schätzung des Farbverlaufs für jeden Gewichtungswert enthält. Diese Werte werden in der Regel als Ergebnis einer vorherigen Ausführung dieses Operators über *outputSecondMomentTensor erhalten.*
 
-Wenn Sie diesen Optimierer zum ersten Mal auf einen Satz von Gewichtungen anwenden (z. b. während des anfänglichen Trainings Schritts), sollten die Werte dieses Mandanten in der Regel mit 0 (null) initialisiert werden. Bei nachfolgenden Ausführungen sollten die in *outputsecondmomenttensor* zurückgegebenen Werte verwendet werden.
+Wenn sie diesen Optimierer zum ersten Mal auf eine Gruppe von Gewichtungen anwenden (z. B. während des ersten Trainingsschritts), sollten die Werte dieses Tensors in der Regel mit 0 initialisiert werden. Nachfolgende Ausführungen sollten die in *OutputSecondMomentTensor zurückgegebenen Werte verwenden.*
 
-Die *Größen* und der *Datentyp* dieses Mandanten müssen genau mit denen des *Input parameterstensor* übereinstimmen.
+Die *Größen und* der Datentyp *dieses* Tensors müssen genau mit denen des *InputParametersTensor übereinstimmen.*
 
 `GradientTensor`
 
-Typ: Konstante **[DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
+Typ: **const [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
 
-Die Farbverläufe, die auf die Eingabeparameter (Gewichtungen) für den Verlaufs Abstieg angewendet werden sollen. Farbverläufe werden in der Regel während des Trainings in einem Rück propagierungs Durchlauf abgerufen.
+Die Farbverläufe, die auf die Eingabeparameter (Gewichtungen) für den Gradientenabstieg angewendet werden. Farbverläufe werden in der Regel während des Trainings in einem Rückpropagation-Durchgang ermittelt.
 
-Die *Größen* und der *Datentyp* dieses Mandanten müssen genau mit denen des *Input parameterstensor* übereinstimmen.
+Die *Größen und* der Datentyp *dieses* Tensors müssen genau mit denen des *InputParametersTensor übereinstimmen.*
 
 `TrainingStepTensor`
 
-Typ: Konstante **[DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
+Typ: **const [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
 
-Ein skalartensor mit einem einzelnen ganzzahligen Wert, der die aktuelle Anzahl der Trainingsschritte darstellt. Dieser Wert wird zusammen mit *Beta1* und *Beta2* verwendet, um den exponentiellen Zerfall der ersten und zweiten Moment Schätzwerte zu berechnen.
+Ein skalarer Tensor, der einen einzelnen ganzzahligen Wert enthält, der die aktuelle Anzahl von Trainingsschritten darstellt. Dieser Wert wird zusammen *mit Beta1* und *Beta2* verwendet, um den exponentiellen Verfall des ersten und zweiten Moments der Schätzung der Tensoren zu berechnen.
 
-Normalerweise beginnt der Wert für den Trainingsschritt am Anfang des Trainings bei 0 und wird bei jedem aufeinander folgenden Trainingsschritt um 1 erhöht. Dieser Operator aktualisiert nicht den Wert für den Trainingsschritt. Sie sollten dies manuell durchführen, z. b. mit [DML_OPERATOR_ELEMENT_WISE_ADD](/windows/win32/api/directml/ns-directml-dml_element_wise_add_operator_desc).
+In der Regel beginnt der Wert des Trainingsschritts bei 0 am Anfang des Trainings und wird bei jedem nachfolgenden Trainingsschritt um 1 erhöht. Dieser Operator aktualisiert den Wert des Trainingsschritts nicht. Sie sollten dies manuell durchführen, z. B. mit [DML_OPERATOR_ELEMENT_WISE_ADD](/windows/win32/api/directml/ns-directml-dml_element_wise_add_operator_desc).
 
-Dieser tensorflow muss ein Skalar sein (d. h. alle *Größen* gleich 1), und der Datentyp [**DML_TENSOR_DATA_TYPE_UINT32**](/windows/win32/api/directml/ne-directml-dml_tensor_data_type).
+Dieser Tensor muss ein Skalar (d. h. alle *Größen* gleich 1) sein und den Datentyp [**DML_TENSOR_DATA_TYPE_UINT32**](/windows/win32/api/directml/ne-directml-dml_tensor_data_type)aufweisen.
 
 `OutputParametersTensor`
 
-Typ: Konstante **[DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
+Typ: **const [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
 
-Ein ausgabetensor, der die aktualisierten Parameterwerte (Gewichtung) nach dem Anwenden des gradientenauslaufs enthält.
+Ein Ausgabe-Tensor, der die aktualisierten Parameterwerte (Gewichtung) enthält, nachdem der Gradientenabstieg angewendet wurde.
 
-Während der Bindung ist dieser tensorflow berechtigt, einen berechtigten Eingabe Mandanten Alias zu verwenden, der zum Ausführen eines direkten Updates dieses Mandanten verwendet werden kann. Weitere Informationen finden Sie im Abschnitt " [Hinweise](#remarks) ".
+Während der Bindung darf dieser Tensor ein Alias für einen geeigneten Eingabe-Tensor verwenden, der zum Ausführen eines direkt aktualisierten Tensors verwendet werden kann. Weitere Informationen finden Sie im Abschnitt ["Hinweise".](#remarks)
 
-Die *Größen* und der *Datentyp* dieses Mandanten müssen genau mit denen des *Input parameterstensor* übereinstimmen.
+Die *Größen* und *der Datentyp* dieses Tensors müssen genau mit denen des *InputParametersTensor* übereinstimmen.
 
 `OutputFirstMomentTensor`
 
-Typ: Konstante **[DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
+Typ: **const [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
 
-Ein ausgabetensor mit aktualisierten ersten Moment Schätzungen. Sie sollten die Werte dieses Mandanten speichern und während des nachfolgenden Trainings Schritts in *inputfirstmomenttensor* bereitstellen.
+Ein Ausgabe-Tensor, der aktualisierte Schätzungen des ersten Moments enthält. Sie sollten die Werte dieses Tensors speichern und während des nachfolgenden Trainingsschritts in *InputFirstMomentTensor* bereitstellen.
 
-Während der Bindung ist dieser tensorflow berechtigt, einen berechtigten Eingabe Mandanten Alias zu verwenden, der zum Ausführen eines direkten Updates dieses Mandanten verwendet werden kann. Weitere Informationen finden Sie im Abschnitt " [Hinweise](#remarks) ".
+Während der Bindung darf dieser Tensor ein Alias für einen geeigneten Eingabe-Tensor verwenden, der zum Ausführen eines direkt aktualisierten Tensors verwendet werden kann. Weitere Informationen finden Sie im Abschnitt ["Hinweise".](#remarks)
 
-Die *Größen* und der *Datentyp* dieses Mandanten müssen genau mit denen des *Input parameterstensor* übereinstimmen.
+Die *Größen* und *der Datentyp* dieses Tensors müssen genau mit denen des *InputParametersTensor* übereinstimmen.
 
 `OutputSecondMomentTensor`
 
-Typ: Konstante **[DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
+Typ: **const [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
 
-Ein ausgabetensor, der aktualisierte Sekunden Zeitschätzungen enthält. Sie sollten die Werte dieses Mandanten speichern und während des nachfolgenden Trainings Schritts in *inputsecondmomenttensor* bereitstellen.
+Ein Ausgabe-Tensor, der aktualisierte Schätzungen des zweiten Moments enthält. Sie sollten die Werte dieses Tensors speichern und während des nachfolgenden Trainingsschritts in *InputSecondMomentTensor* bereitstellen.
 
-Während der Bindung ist dieser tensorflow berechtigt, einen berechtigten Eingabe Mandanten Alias zu verwenden, der zum Ausführen eines direkten Updates dieses Mandanten verwendet werden kann. Weitere Informationen finden Sie im Abschnitt " [Hinweise](#remarks) ".
+Während der Bindung darf dieser Tensor ein Alias für einen geeigneten Eingabe-Tensor verwenden, der zum Ausführen eines direkt aktualisierten Tensors verwendet werden kann. Weitere Informationen finden Sie im Abschnitt ["Hinweise".](#remarks)
 
-Die *Größen* und der *Datentyp* dieses Mandanten müssen genau mit denen des *Input parameterstensor* übereinstimmen.
+Die *Größen* und *der Datentyp* dieses Tensors müssen genau mit denen des *InputParametersTensor* übereinstimmen.
 
 `LearningRate`
 
 Typ: **float**
 
-Die Lernrate, auch als *Schrittgröße* bezeichnet. Die Lernrate ist ein Hyperparameter, der die Größe des Gewichtungs Updates entlang des Farbverlaufs Vektors bei jedem Trainingsschritt bestimmt.
+Die Lernrate, die auch häufig als *Schrittgröße* bezeichnet wird. Die Lernrate ist ein Hyperparameter, der die Größe der Gewichtungsaktualisierung entlang des Farbverlaufsvektors für jeden Trainingsschritt bestimmt.
 
 `Beta1`
 
 Typ: **float**
 
-Ein Hyperparameter, der die exponentielle Zerfallsrate der ersten Moment Schätzung des Farbverlaufs darstellt. Dieser Wert muss zwischen 0,0 und 1,0 liegen. Ein Wert von 0.9 f ist typisch.
+Ein Hyperparameter, der die exponentielle Abklingrate der Schätzung des ersten Moments des Farbverlaufs darstellt. Dieser Wert sollte zwischen 0,0 und 1,0 liegen. Der Wert 0,9f ist typisch.
 
 `Beta2`
 
 Typ: **float**
 
-Ein Hyperparameter, der die exponentielle Zerfallsrate der zweiten Moment Schätzung des Farbverlaufs darstellt. Dieser Wert muss zwischen 0,0 und 1,0 liegen. Der Wert 0,999 f ist typisch.
+Ein Hyperparameter, der die exponentielle Abklingrate der Schätzung des zweiten Moments des Farbverlaufs darstellt. Dieser Wert sollte zwischen 0,0 und 1,0 liegen. Der Wert 0,999f ist typisch.
 
 `Epsilon`
 
 Typ: **float**
 
-Ein kleiner Wert, der zur Unterstützung der numerischen Stabilität beiträgt, indem Division durch 0 (null) verhindert wird. Bei Gleit Komma Eingaben mit 32 Bit enthalten typische Werte 1E-8 oder `FLT_EPSILON` .
+Ein kleiner Wert, der zur Unterstützung der numerischen Stabilität verwendet wird, indem division-by-zero verhindert wird. Für 32-Bit-Gleitkommaeingaben sind typische Werte 1e-8 oder `FLT_EPSILON` .
 
-## <a name="remarks"></a>Bemerkungen
-Dieser Operator unterstützt die direkte Ausführung. Dies bedeutet, dass jeder Ausgabe Mandanten bei der Bindung einen Alias für einen berechtigten Eingabe Mandanten zulässt. Beispielsweise ist es möglich, dieselbe Ressource sowohl für input *parameterstensor* als auch für *outputparameterstensor* zu binden, um eine direkte Aktualisierung der Eingabeparameter zu erzielen. Alle Eingabe-Tensoren dieses Operators, mit Ausnahme von *trainingsteptensor*, sind auf diese Weise als Alias berechtigt.
+## <a name="remarks"></a>Hinweise
+Dieser Operator unterstützt die ausführungsbasierte Ausführung. Dies bedeutet, dass jeder Ausgabe tensor während der Bindung einen Alias für einen berechtigten Eingabetensor verwenden darf. Beispielsweise ist es möglich, dieselbe Ressource sowohl für *inputParametersTensor* als auch *für OutputParametersTensor* zu binden, um effektiv eine direkt aktualisierten Eingabeparameter zu erzielen. Alle Eingabetensoren dieses Operators, mit Ausnahme von *TrainingStepTensor,* können auf diese Weise als Alias verwendet werden.
 
 ## <a name="availability"></a>Verfügbarkeit
-Dieser Operator wurde in eingeführt `DML_FEATURE_LEVEL_3_0` .
+Dieser Operator wurde in `DML_FEATURE_LEVEL_3_0` eingeführt.
 
 ## <a name="tensor-constraints"></a>Tensor-Einschränkungen
-* *Gradienttensor*, *inputfirstmomenttensor*, *inputparameterstensor*, *inputsecondmomenttensor*, *outputfirstmomenttensor*, *outputparameterstensor*, *outputsecondmomenttensor* und *trainingsteptensor* müssen denselben *Datentyp* aufweisen.
-* *Gradienttensor*, *inputfirstmomenttensor*, *inputparameterstensor*, *inputsecondmomenttensor*, *outputfirstmomenttensor*, *outputparameterstensor* und *outputsecondmomenttensor* müssen die gleichen *Größen* aufweisen.
+* *GradientTensor,* *InputFirstMomentTensor,* *InputParametersTensor,* *InputSecondMomentTensor,* *OutputFirstMomentTensor,* *OutputParametersTensor,* *OutputSecondMomentTensor* und *TrainingStepTensor* müssen denselben *Datentyp haben.*
+* *GradientTensor,* *InputFirstMomentTensor,* *InputParametersTensor,* *InputSecondMomentTensor,* *OutputFirstMomentTensor,* *OutputParametersTensor* und *OutputSecondMomentTensor* müssen die gleichen *Größen haben.*
 
 ## <a name="tensor-support"></a>Tensor-Unterstützung
-| Tensorflow | Typ | Dimensionen | Unterstützte Dimensions Anzahl | Unterstützte Datentypen |
+| Tensor | Typ | Dimensionen | Unterstützte Dimensionsanzahlen | Unterstützte Datentypen |
 | ------ | ---- | ---------- | -------------------------- | -------------------- |
-| Input parameterstensor | Eingabe | {D0, D1, D2, D3} | 4 | Float32, FLOAT16 |
-| Inputfirstmomenttensor | Eingabe | {D0, D1, D2, D3} | 4 | Float32, FLOAT16 |
-| Inputsecondmomenttensor | Eingabe | {D0, D1, D2, D3} | 4 | Float32, FLOAT16 |
-| Gradienttensor | Eingabe | {D0, D1, D2, D3} | 4 | Float32, FLOAT16 |
-| Trainingsteptensor | Eingabe | {1, 1, 1} | 4 | Float32, FLOAT16 |
-| Outputparameterstensor | Ausgabe | {D0, D1, D2, D3} | 4 | Float32, FLOAT16 |
-| Outputfirstmomenttensor | Ausgabe | {D0, D1, D2, D3} | 4 | Float32, FLOAT16 |
-| Outputsecondmomenttensor | Ausgabe | {D0, D1, D2, D3} | 4 | Float32, FLOAT16 |
+| InputParametersTensor | Eingabe | { D0, D1, D2, D3 } | 4 | FLOAT32, FLOAT16 |
+| InputFirstMomentTensor | Eingabe | { D0, D1, D2, D3 } | 4 | FLOAT32, FLOAT16 |
+| InputSecondMomentTensor | Eingabe | { D0, D1, D2, D3 } | 4 | FLOAT32, FLOAT16 |
+| GradientTensor | Eingabe | { D0, D1, D2, D3 } | 4 | FLOAT32, FLOAT16 |
+| TrainingStepTensor | Eingabe | { 1, 1, 1, 1 } | 4 | FLOAT32, FLOAT16 |
+| OutputParametersTensor | Ausgabe | { D0, D1, D2, D3 } | 4 | FLOAT32, FLOAT16 |
+| OutputFirstMomentTensor | Ausgabe | { D0, D1, D2, D3 } | 4 | FLOAT32, FLOAT16 |
+| OutputSecondMomentTensor | Ausgabe | { D0, D1, D2, D3 } | 4 | FLOAT32, FLOAT16 |
 
 ## <a name="requirements"></a>Anforderungen
 | &nbsp; | &nbsp; |
 | ---- |:---- |
-| **Header** | directml. h |
+| **Header** | directml.h |

@@ -1,7 +1,7 @@
 ---
 UID: NS:directml.DML_INPUT_GRAPH_EDGE_DESC
 title: DML_INPUT_GRAPH_EDGE_DESC
-description: 'Beschreibt eine Verbindung innerhalb eines Diagramms von directml-Operatoren, die durch [DML_GRAPH_DESC](/windows/desktop/direct3d12/directml/ns-directml-dml_graph_desc) definiert und an [IDMLDevice1:: compilegraph](/windows/desktop/direct3d12/directml/nf-directml-idmldevice1-compilegraph)übergeben werden. Diese Struktur wird verwendet, um eine Verbindung zwischen einer Diagramm Eingabe und einer Eingabe eines internen Knotens zu definieren.'
+description: Beschreibt eine Verbindung in einem Diagramm von [](/windows/desktop/direct3d12/directml/ns-directml-dml_graph_desc) DirectML-Operatoren, die durch DML_GRAPH_DESC definiert und an [IDMLDevice1::CompileGraph übergeben werden.](/windows/desktop/direct3d12/directml/nf-directml-idmldevice1-compilegraph) Diese Struktur wird verwendet, um eine Verbindung von einer Grapheingabe mit einer Eingabe eines internen Knotens zu definieren.
 helpviewer_keywords:
 - DML_INPUT_GRAPH_EDGE_DESC
 - DML_INPUT_GRAPH_EDGE_DESC structure
@@ -45,18 +45,18 @@ api_location:
 - DirectML.h
 api_name:
 - DML_INPUT_GRAPH_EDGE_DESC
-ms.openlocfilehash: 180bfc89a37aad2ba0b6f287c302aa30b0b04110
-ms.sourcegitcommit: 3bdf30edb314e0fcd17dc4ddbc70e4ec7d3596e6
+ms.openlocfilehash: 00fcece76f4cb7ac46589914df4d74321d957fbc
+ms.sourcegitcommit: 8e1f04c7e3c5c850071bac8d173f9441aab0dfed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "106365214"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107802888"
 ---
-# <a name="dml_input_graph_edge_desc-structure-directmlh"></a>DML_INPUT_GRAPH_EDGE_DESC-Struktur (directml. h)
-Beschreibt eine Verbindung innerhalb eines Diagramms von directml-Operatoren, die durch [DML_GRAPH_DESC](/windows/desktop/direct3d12/directml/ns-directml-dml_graph_desc) definiert und an [IDMLDevice1:: compilegraph](/windows/desktop/direct3d12/directml/nf-directml-idmldevice1-compilegraph)übergeben werden. Diese Struktur wird verwendet, um eine Verbindung zwischen einer Diagramm Eingabe und einer Eingabe eines internen Knotens zu definieren.
+# <a name="dml_input_graph_edge_desc-structure-directmlh"></a>DML_INPUT_GRAPH_EDGE_DESC -Struktur (directml.h)
+Beschreibt eine Verbindung in einem Diagramm von DirectML-Operatoren, die durch DML_GRAPH_DESC definiert und [an](/windows/desktop/direct3d12/directml/ns-directml-dml_graph_desc) [IDMLDevice1::CompileGraph übergeben werden.](/windows/desktop/direct3d12/directml/nf-directml-idmldevice1-compilegraph) Diese Struktur wird verwendet, um eine Verbindung von einer Grapheingabe mit einer Eingabe eines internen Knotens zu definieren.
 
 > [!IMPORTANT]
-> Diese API ist als Teil des eigenständigen Redistributable Package von directml verfügbar (siehe [Microsoft. ai. directml](https://www.nuget.org/packages/Microsoft.AI.DirectML/)). Siehe auch [Versionsverlauf der directml](../dml-version-history.md).
+> Diese API ist als Teil des eigenständigen weiterverteilten DirectML-Pakets verfügbar (siehe [Microsoft.AI.DirectML](https://www.nuget.org/packages/Microsoft.AI.DirectML/) Version 1.4 und höher). Siehe auch [DirectML-Versionsverlauf.](../dml-version-history.md)
 
 ## <a name="syntax"></a>Syntax
 ```cpp
@@ -74,44 +74,44 @@ struct DML_INPUT_GRAPH_EDGE_DESC {
 
 `GraphInputIndex`
 
-Typ: **[uint](/windows/desktop/winprog/windows-data-types)**
+Typ: **[UINT](/windows/desktop/winprog/windows-data-types)**
 
-Der Index der Graph-Eingabe, aus der eine Verbindung mit einer internen Knoten Eingabe angegeben wird.
+Der Index der Grapheingabe, aus der eine Verbindung mit einer internen Knoteneingabe angegeben wird.
 
 
 `ToNodeIndex`
 
-Typ: **[uint](/windows/desktop/winprog/windows-data-types)**
+Typ: **[UINT](/windows/desktop/winprog/windows-data-types)**
 
-Der Index des internen Knotens, auf den die Verbindung aus der Diagramm Eingabe festgelegt wird.
+Der Index des internen Knotens, für den die Verbindung aus der Grapheingabe angegeben wird.
 
 
 `ToNodeInputIndex`
 
-Typ: **[uint](/windows/desktop/winprog/windows-data-types)**
+Typ: **[UINT](/windows/desktop/winprog/windows-data-types)**
 
-Der Index der Eingabe auf dem internen Knoten, an dem die Verbindung angegeben ist.
+Der Index der Eingabe auf dem internen Knoten, auf dem die Verbindung angegeben ist.
 
 
 `Name`
 
-Typ: \_ Field \_ z \_ \_ maybenull \_ **Konstanten \*** Zeichen
+Typ: \_ Feld \_ z \_ \_ Maybenull const \_ **char \***
 
-Ein optionaler Name für die Diagramm Verbindung. Wenn bereitgestellt, kann dies in bestimmten Fehlermeldungen verwendet werden, die von der directml-debugschicht ausgegeben werden.
+Ein optionaler Name für die Graphverbindung. Falls angegeben, kann dies in bestimmten Fehlermeldungen verwendet werden, die von der DirectML-Debugebene ausgegeben werden.
 
 ## <a name="availability"></a>Verfügbarkeit
 
-Diese API wurde in der directml-Version eingeführt `1.1.0` .
+Diese API wurde in der DirectML-Version `1.1.0` eingeführt.
 
 
 
 ## <a name="requirements"></a>Anforderungen
 | &nbsp; | &nbsp; |
 | ---- |:---- |
-| **Header** | directml. h |
+| **Header** | directml.h |
 
 ## <a name="see-also"></a>Siehe auch
 
-* [IDMLDevice1:: compilegraph-Methode](/windows/desktop/direct3d12/directml/nf-directml-idmldevice1-compilegraph)
-* [DML_GRAPH_DESC Struktur](/windows/desktop/direct3d12/directml/ns-directml-dml_graph_desc)
+* [IDMLDevice1::CompileGraph-Methode](/windows/desktop/direct3d12/directml/nf-directml-idmldevice1-compilegraph)
+* [DML_GRAPH_DESC-Struktur](/windows/desktop/direct3d12/directml/ns-directml-dml_graph_desc)
 * [DML_GRAPH_EDGE_DESC Struktur](/windows/desktop/direct3d12/directml/ns-directml-dml_graph_edge_desc)

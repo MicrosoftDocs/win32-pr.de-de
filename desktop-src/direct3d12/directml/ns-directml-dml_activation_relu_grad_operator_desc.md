@@ -1,7 +1,7 @@
 ---
 UID: NS:directml.DML_ACTIVATION_RELU_GRAD_OPERATOR_DESC
 title: DML_ACTIVATION_RELU_GRAD_OPERATOR_DESC
-description: Berechnet backpropagierungs Gradienten für eine korrigierte lineare Einheit (relu).
+description: Berechnet Rückeigenschaftenverläufe für eine regradifizierte lineare Einheit (ReLU).
 helpviewer_keywords:
 - DML_ACTIVATION_RELU_GRAD_OPERATOR_DESC
 - DML_ACTIVATION_RELU_GRAD_OPERATOR_DESC structure
@@ -45,16 +45,16 @@ api_location:
 - DirectML.h
 api_name:
 - DML_ACTIVATION_RELU_GRAD_OPERATOR_DESC
-ms.openlocfilehash: 567a1de50c1c91de83a9fda2978f83af8daf1a6e
-ms.sourcegitcommit: 3bdf30edb314e0fcd17dc4ddbc70e4ec7d3596e6
+ms.openlocfilehash: dea89f0e3366a07ee98f47703f07e2f5a9d4009d
+ms.sourcegitcommit: 8e1f04c7e3c5c850071bac8d173f9441aab0dfed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "106361106"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107803686"
 ---
-# <a name="dml_activation_relu_grad_operator_desc-structure-directmlh"></a>DML_ACTIVATION_RELU_GRAD_OPERATOR_DESC-Struktur (directml. h)
+# <a name="dml_activation_relu_grad_operator_desc-structure-directmlh"></a>DML_ACTIVATION_RELU_GRAD_OPERATOR_DESC -Struktur (directml.h)
 
-Berechnet backpropagierungs Gradienten für eine korrigierte lineare Einheit (relu). Dieser Operator führt die folgende Element Weise Berechnung aus.
+Berechnet Rückeigenschaftenverläufe für eine regradifizierte lineare Einheit (ReLU). Dieser Operator führt die folgende elementweise Berechnung aus.
 
 ```
 X = InputTensor
@@ -63,10 +63,10 @@ dY = InputGradientTensor
 OutputGradientTensor = (X > 0 ? dY : 0)
 ```
 
-Der entsprechende Forward-Pass-Operator ist [DML_ACTIVATION_RELU_OPERATOR_DESC](/windows/win32/api/directml/ns-directml-dml_activation_relu_operator_desc).
+Der entsprechende Forward-Pass-Operator ist [DML_ACTIVATION_RELU_OPERATOR_DESC.](/windows/win32/api/directml/ns-directml-dml_activation_relu_operator_desc)
 
 > [!IMPORTANT]
-> Diese API ist als Teil des eigenständigen Redistributable Package von directml verfügbar (siehe [Microsoft. ai. directml](https://www.nuget.org/packages/Microsoft.AI.DirectML/)). Siehe auch [Versionsverlauf der directml](../dml-version-history.md).
+> Diese API ist als Teil des eigenständigen weiterverteilten DirectML-Pakets verfügbar (siehe [Microsoft.AI.DirectML](https://www.nuget.org/packages/Microsoft.AI.DirectML/) Version 1.4 und höher). Siehe auch [DirectML-Versionsverlauf.](../dml-version-history.md)
 
 ## <a name="syntax"></a>Syntax
 ```cpp
@@ -82,34 +82,34 @@ struct DML_ACTIVATION_RELU_GRAD_OPERATOR_DESC
 
 `InputTensor`
 
-Typ: Konstante **[DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
+Typ: **const [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
 
-Der Eingabe-Tensor (Feature). Dabei handelt es sich in der Regel um die gleiche Eingabe wie bei der Weiterleitung (siehe [DML_ACTIVATION_RELU_OPERATOR_DESC](/windows/win32/api/directml/ns-directml-dml_activation_relu_operator_desc)).
+Der Eingabe-Tensor (Feature). Dies ist in der Regel die gleiche Eingabe, die während des Vorwärtspasses bereitgestellt wurde (siehe [DML_ACTIVATION_RELU_OPERATOR_DESC](/windows/win32/api/directml/ns-directml-dml_activation_relu_operator_desc)).
 
 `InputGradientTensor`
 
-Typ: Konstante **[DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
+Typ: **const [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
 
-Der eingehende gradiententensor. Dies wird in der Regel aus der Ausgabe der Rück Propagierung einer vorangehenden Ebene abgerufen. Die *Größen* und der *Datentyp* dieses Mandanten müssen genau mit denen des *inputtensor* übereinstimmen.
+Der eingehende Farbverlaufs-Tensor. Dies wird in der Regel aus der Ausgabe der Backpropagation einer vorherigen Ebene ermittelt. Die *Größen und* der Datentyp *dieses* Tensors müssen genau mit denen des *InputTensor übereinstimmen.*
 
 `OutputTensor`
 
-Typ: Konstante **[DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
+Typ: **const [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
 
-Ein Ausgabe Mandanten, der die zurückgegebenen Farbverläufe enthält. Die *Größen* und der *Datentyp* dieses Mandanten müssen genau mit denen des *inputtensor* übereinstimmen.
+Ein Ausgabe-Tensor, der die zurückpropagierten Farbverläufe enthält. Die *Größen und* der Datentyp *dieses* Tensors müssen genau mit denen des *InputTensor übereinstimmen.*
 
 ## <a name="availability"></a>Verfügbarkeit
-Dieser Operator wurde in eingeführt `DML_FEATURE_LEVEL_3_0` .
+Dieser Operator wurde in `DML_FEATURE_LEVEL_3_0` eingeführt.
 
-## <a name="tensor-constraints"></a>Tensor-Einschränkungen
-*Inputgradienttensor*, *inputtensor* und *outputgradienttensor* müssen denselben *Datentyp*, jede *DimensionCount* und jede *Größe* aufweisen.
+## <a name="tensor-constraints"></a>Tensoreinschränkungen
+*InputGradientTensor,* *InputTensor* und *OutputGradientTensor* müssen die gleichen *Datentypen,* *DimensionCount* und *Größen aufweisen.*
 
 ## <a name="tensor-support"></a>Tensor-Unterstützung
-| Tensorflow | Typ | Unterstützte Dimensions Anzahl | Unterstützte Datentypen |
+| Tensor | Typ | Unterstützte Dimensionsanzahlen | Unterstützte Datentypen |
 | ------ | ---- | -------------------------- | -------------------- |
-| Inputtensor | Eingabe | 1 bis 8 | Float32, FLOAT16 |
-| Input gradienttensor | Eingabe | 1 bis 8 | Float32, FLOAT16 |
-| Outputgradienttensor | Ausgabe | 1 bis 8 | Float32, FLOAT16 |
+| InputTensor | Eingabe | 1 bis 8 | FLOAT32, FLOAT16 |
+| InputGradientTensor | Eingabe | 1 bis 8 | FLOAT32, FLOAT16 |
+| OutputGradientTensor | Ausgabe | 1 bis 8 | FLOAT32, FLOAT16 |
 
 ## <a name="see-also"></a>Siehe auch
 [DML_ACTIVATION_RELU_OPERATOR_DESC](/windows/win32/api/directml/ns-directml-dml_activation_relu_operator_desc)
@@ -117,4 +117,4 @@ Dieser Operator wurde in eingeführt `DML_FEATURE_LEVEL_3_0` .
 ## <a name="requirements"></a>Anforderungen
 | &nbsp; | &nbsp; |
 | ---- |:---- |
-| **Header** | directml. h |
+| **Header** | directml.h |

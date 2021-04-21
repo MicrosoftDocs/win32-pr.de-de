@@ -1,7 +1,7 @@
 ---
 UID: NE:directml.DML_GRAPH_NODE_TYPE
 title: DML_GRAPH_NODE_TYPE
-description: Definiert Konstanten, die einen Typ von Diagramm Knoten angeben. Weitere Informationen finden Sie unter [DML_GRAPH_NODE_DESC](./ns-directml-dml_graph_node_desc.md) für die Verwendung dieser Enumeration.
+description: Definiert Konstanten, die einen Graphknotentyp angeben. Informationen [zur DML_GRAPH_NODE_DESC](./ns-directml-dml_graph_node_desc.md) Enumeration finden Sie unter DML_GRAPH_NODE_DESC.
 helpviewer_keywords:
 - DML_GRAPH_NODE_TYPE
 - DML_GRAPH_NODE_TYPE structure
@@ -45,19 +45,19 @@ api_location:
 - DirectML.h
 api_name:
 - DML_GRAPH_NODE_TYPE
-ms.openlocfilehash: 1788dfcce20ce2a9e490bf7ed6e8ef84e306d659
-ms.sourcegitcommit: 3bdf30edb314e0fcd17dc4ddbc70e4ec7d3596e6
+ms.openlocfilehash: 0bb0712370da35c4b8c9278ad7721d2ffc7d875d
+ms.sourcegitcommit: 8e1f04c7e3c5c850071bac8d173f9441aab0dfed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "106361742"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107803681"
 ---
-# <a name="dml_graph_node_type-enumeration-directmlh"></a>DML_GRAPH_NODE_TYPE-Enumeration (directml. h)
+# <a name="dml_graph_node_type-enumeration-directmlh"></a>DML_GRAPH_NODE_TYPE -Enumeration (directml.h)
 
-Definiert Konstanten, die einen Typ von Diagramm Knoten angeben. Weitere Informationen finden Sie unter [DML_GRAPH_NODE_DESC](./ns-directml-dml_graph_node_desc.md) für die Verwendung dieser Enumeration.
+Definiert Konstanten, die einen Graphknotentyp angeben. Informationen [zur DML_GRAPH_NODE_DESC](./ns-directml-dml_graph_node_desc.md) Enumeration finden Sie unter DML_GRAPH_NODE_DESC.
 
 > [!IMPORTANT]
-> Diese API ist als Teil des eigenständigen Redistributable Package von directml verfügbar (siehe [Microsoft. ai. directml](https://www.nuget.org/packages/Microsoft.AI.DirectML/)). Siehe auch [Versionsverlauf der directml](../dml-version-history.md).
+> Diese API ist als Teil des eigenständigen weiterverteilten DirectML-Pakets verfügbar (siehe [Microsoft.AI.DirectML](https://www.nuget.org/packages/Microsoft.AI.DirectML/) Version 1.4 und höher). Siehe auch [DirectML-Versionsverlauf.](../dml-version-history.md)
 
 ## <a name="syntax"></a>Syntax
 ```cpp
@@ -69,20 +69,20 @@ typedef enum DML_GRAPH_NODE_TYPE {
 
 ## <a name="constants"></a>Konstanten
 
-| Name | BESCHREIBUNG |
+| Name | Beschreibung |
 | ---- |:---- |
-| DML_GRAPH_NODE_TYPE_INVALID | Gibt einen unbekannten Diagrammtyp an, der nie gültig ist. Die Verwendung dieses Werts führt zu einem Fehler. |
-| DML_GRAPH_NODE_TYPE_OPERATOR | Gibt an, dass der Diagramm Rand von der [DML_OPERATOR_GRAPH_NODE_DESC](./ns-directml-dml_operator_graph_node_desc.md) Struktur beschrieben wird.<br><br># # Verfügbarkeit<br><br>Diese API wurde in der directml-Version eingeführt `1.1.0` . |
+| DML_GRAPH_NODE_TYPE_INVALID | Gibt einen unbekannten Graphenrandtyp an und ist nie gültig. Die Verwendung dieses Werts führt zu einem Fehler. |
+| DML_GRAPH_NODE_TYPE_OPERATOR | Gibt an, dass der Graphrand von der -Struktur [DML_OPERATOR_GRAPH_NODE_DESC](./ns-directml-dml_operator_graph_node_desc.md) wird.<br><br>##-Verfügbarkeit<br><br>Diese API wurde in der DirectML-Version `1.1.0` eingeführt. |
 
 
 ## <a name="requirements"></a>Anforderungen
 | &nbsp; | &nbsp; |
 | ---- |:---- |
-| **Header** | directml. h |
+| **Header** | directml.h |
 
 ## <a name="see-also"></a>Siehe auch
 
-* [IDMLDevice1:: compilegraph-Methode](/windows/desktop/direct3d12/directml/nf-directml-idmldevice1-compilegraph)
-* [DML_GRAPH_DESC Struktur](./ns-directml-dml_graph_desc.md)     
-* [DML_GRAPH_NODE_DESC Struktur](./ns-directml-dml_graph_node_desc.md)
+* [IDMLDevice1::CompileGraph-Methode](/windows/desktop/direct3d12/directml/nf-directml-idmldevice1-compilegraph)
+* [DML_GRAPH_DESC-Struktur](./ns-directml-dml_graph_desc.md)     
+* [DML_GRAPH_NODE_DESC-Struktur](./ns-directml-dml_graph_node_desc.md)
 * [DML_OPERATOR_GRAPH_NODE_DESC](./ns-directml-dml_operator_graph_node_desc.md)

@@ -1,7 +1,7 @@
 ---
 UID: NS:directml.DML_REVERSE_SUBSEQUENCES_OPERATOR_DESC
 title: DML_REVERSE_SUBSEQUENCES_OPERATOR_DESC
-description: Kehrt die Elemente einer *oder mehrerer unter* Sequenzen eines Tensors um. Der Satz von unter Sequenzen, der umgekehrt werden soll, wird basierend auf der angegebenen Achse und den angegebenen Sequenz Längen ausgewählt.
+description: Kehrt die Elemente einer oder mehrerer *Unterabfragen* eines Tensors um. Der Satz von Teilsequenzen, die umgekehrt werden sollen, wird basierend auf der bereitgestellten Achse und sequenzierten Längen ausgewählt.
 helpviewer_keywords:
 - DML_REVERSE_SUBSEQUENCES_OPERATOR_DESC
 - DML_REVERSE_SUBSEQUENCES_OPERATOR_DESC structure
@@ -44,18 +44,18 @@ api_location:
 - DirectML.h
 api_name:
 - DML_REVERSE_SUBSEQUENCES_OPERATOR_DESC
-ms.openlocfilehash: 5baf16c5acd1ce5c5f44e68420e93aabaa276ea7
-ms.sourcegitcommit: 3bdf30edb314e0fcd17dc4ddbc70e4ec7d3596e6
+ms.openlocfilehash: 3deddea3d60db1a8689ceabfac92ff17393b7606
+ms.sourcegitcommit: 8e1f04c7e3c5c850071bac8d173f9441aab0dfed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "106366541"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107803999"
 ---
-# <a name="dml_reverse_subsequences_operator_desc-structure-directmlh"></a>DML_REVERSE_SUBSEQUENCES_OPERATOR_DESC-Struktur (directml. h)
-Kehrt die Elemente einer *oder mehrerer unter* Sequenzen eines Tensors um. Der Satz von unter Sequenzen, der umgekehrt werden soll, wird basierend auf der angegebenen Achse und den angegebenen Sequenz Längen ausgewählt.
+# <a name="dml_reverse_subsequences_operator_desc-structure-directmlh"></a>DML_REVERSE_SUBSEQUENCES_OPERATOR_DESC-Struktur (directml.h)
+Kehrt die Elemente einer oder mehrerer *Unterabfragen* eines Tensors um. Der Satz von Teilsequenzen, die umgekehrt werden sollen, wird basierend auf der bereitgestellten Achse und sequenzierten Längen ausgewählt.
 
 > [!IMPORTANT]
-> Diese API ist als Teil des eigenständigen Redistributable Package von directml verfügbar (siehe [Microsoft. ai. directml](https://www.nuget.org/packages/Microsoft.AI.DirectML/)). Siehe auch [Versionsverlauf der directml](../dml-version-history.md).
+> Diese API ist als Teil des eigenständigen verteilbaren DirectML-Pakets verfügbar (siehe [Microsoft.AI.DirectML](https://www.nuget.org/packages/Microsoft.AI.DirectML/) Version 1.4 und höher). Siehe auch [DirectML-Versionsverlauf.](../dml-version-history.md)
 
 ## <a name="syntax"></a>Syntax
 ```cpp
@@ -73,34 +73,34 @@ struct DML_REVERSE_SUBSEQUENCES_OPERATOR_DESC {
 
 `InputTensor`
 
-Typ: Konstante **[DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
+Typ: **const [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
 
-Der eingabetensor mit Elementen, die umgekehrt werden sollen.
+Der Eingabe-Tensor, der elemente enthält, die umgekehrt werden sollen.
 
 
 `SequenceLengthsTensor`
 
-Typ: Konstante **[DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
+Typ: **const [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
 
-Ein tensorflow, der einen Wert für jede unter Sequenz enthält, die umgekehrt werden soll, wobei die Länge in Elementen dieser unter Sequenz angegeben wird. Nur die Elemente innerhalb der Länge der unter Sequenz werden umgekehrt. die übrigen Elemente auf dieser Achse werden unverändert in die Ausgabe kopiert.
+Ein Tensor, der einen Wert für jede umgekehrte Untersequence enthält, der die Länge in Elementen dieser Unterabfrage anzeige. Nur die Elemente innerhalb der Länge der Unterabfrage werden umgekehrt. die verbleibenden Elemente entlang dieser Achse werden unverändert in die Ausgabe kopiert.
 
-Dieser Mandanten muss die Anzahl und die Größe der Dimensionen gleich dem *inputtensor* aufweisen, *außer* der durch den Parameter *Axis* angegebenen Dimension. Die Größe der *Achsen* Dimension muss 1 sein. Wenn z. b. die Größe von *inputtensor* `{2,3,4,5}` und die *Achse* 1 beträgt, muss die Größe von " *sequencelengthstensor* " lauten `{2,1,4,5}` .
+Dieser Tensor muss die Dimensionsanzahl und -größen aufweisen, die dem *InputTensor* entsprechen, *mit Ausnahme* der Dimension, die durch den *Axis-Parameter* angegeben wird. Die Größe der *Dimension Achse* muss 1 sein. Wenn der *InputTensor* z. B. die Größen `{2,3,4,5}` hat und *Achse* 1 ist, müssen die Größen von *SequenceLengthsTensor* `{2,1,4,5}` sein.
 
-Wenn die Länge einer unter Sequenz die maximale Anzahl von Elementen auf dieser Achse überschreitet, verhält sich dieser Operator so, als ob der Wert an den maximalen Wert gebunden wäre.
+Wenn die Länge einer Unterabfrage die maximale Anzahl von Elementen entlang dieser Achse überschreitet, verhält sich dieser Operator so, als ob der Wert an den Höchstwert geklammert wäre.
 
 
 `OutputTensor`
 
-Typ: Konstante **[DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
+Typ: **const [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
 
-Der Ausgabe Mandanten, in den die Ergebnisse geschrieben werden sollen. Dieser Mandanten muss dieselbe Größe und denselben Datentyp aufweisen wie der *inputtensor*.
+Der Ausgabe-Tensor, in den die Ergebnisse geschrieben werden sollen. Dieser Tensor muss die gleichen Größen und denselben Datentyp wie *inputTensor aufweisen.*
 
 
 `Axis`
 
-Typ: [ **uint**](/windows/desktop/winprog/windows-data-types)
+Typ: [ **UINT**](/windows/desktop/winprog/windows-data-types)
 
-Der Index der Dimension, über die Elemente umgekehrt werden sollen. Dieser Wert muss kleiner als die DimensionCount von " *inputtensor*" sein.
+Der Index der Dimension, um die Elemente umgekehrt werden. Dieser Wert muss kleiner als dimensionCount des *InputTensor-Werts sein.*
 
 ## <a name="examples"></a>Beispiele
 
@@ -125,7 +125,7 @@ OutputTensor: (Sizes:{1,1,3,4}, DataType:FLOAT32)
    [11, 10,  9, 12]]]]
 ```
 
-### <a name="example-2-reversing-along-a-different-axis"></a>Beispiel 2: Umkehren an einer anderen Achse
+### <a name="example-2-reversing-along-a-different-axis"></a>Beispiel 2: Umkehren entlang einer anderen Achse
 
 ```
 InputTensor: (Sizes:{1,1,3,4}, DataType:FLOAT32)
@@ -145,30 +145,30 @@ OutputTensor: (Sizes:{1,1,3,4}, DataType:FLOAT32)
 ```
 
 ## <a name="availability"></a>Verfügbarkeit
-Dieser Operator wurde in eingeführt `DML_FEATURE_LEVEL_2_1` .
+Dieser Operator wurde in `DML_FEATURE_LEVEL_2_1` eingeführt.
 
-## <a name="tensor-constraints"></a>Tensor-Einschränkungen
-* " *Inputtensor*", " *outputtensor*" und " *sequencelengthstensor* " müssen dieselbe *DimensionCount* aufweisen.
-* *Inputtensor* und *outputtensor* müssen denselben *Datentyp* aufweisen.
+## <a name="tensor-constraints"></a>Tensoreinschränkungen
+* *InputTensor,* *OutputTensor* und *SequenceLengthsTensor* müssen denselben *DimensionCount aufweisen.*
+* *InputTensor und* *OutputTensor* müssen denselben *Datentyp haben.*
 
 ## <a name="tensor-support"></a>Tensor-Unterstützung
 ### <a name="dml_feature_level_3_0-and-above"></a>DML_FEATURE_LEVEL_3_0 und höher
-| Tensorflow | Typ | Unterstützte Dimensions Anzahl | Unterstützte Datentypen |
+| Tensor | Typ | Unterstützte Dimensionsanzahl | Unterstützte Datentypen |
 | ------ | ---- | -------------------------- | -------------------- |
-| Inputtensor | Eingabe | 4 bis 5 | Float32, FLOAT16, Int32, INT16, int8, UInt32, UInt16, Uint8 |
-| Sequencelengthstensor | Eingabe | 4 bis 5 | UINT32 |
-| Outputtensor | Ausgabe | 4 bis 5 | Float32, FLOAT16, Int32, INT16, int8, UInt32, UInt16, Uint8 |
+| InputTensor | Eingabe | 4 bis 5 | FLOAT32, FLOAT16, INT32, INT16, INT8, UINT32, UINT16, UINT8 |
+| SequenceLengthsTensor | Eingabe | 4 bis 5 | UINT32 |
+| OutputTensor | Ausgabe | 4 bis 5 | FLOAT32, FLOAT16, INT32, INT16, INT8, UINT32, UINT16, UINT8 |
 
 ### <a name="dml_feature_level_2_1-and-above"></a>DML_FEATURE_LEVEL_2_1 und höher
-| Tensorflow | Typ | Unterstützte Dimensions Anzahl | Unterstützte Datentypen |
+| Tensor | Typ | Unterstützte Dimensionsanzahlen | Unterstützte Datentypen |
 | ------ | ---- | -------------------------- | -------------------- |
-| Inputtensor | Eingabe | 4 | Float32, FLOAT16, Int32, INT16, int8, UInt32, UInt16, Uint8 |
-| Sequencelengthstensor | Eingabe | 4 | UINT32 |
-| Outputtensor | Ausgabe | 4 | Float32, FLOAT16, Int32, INT16, int8, UInt32, UInt16, Uint8 |
+| InputTensor | Eingabe | 4 | FLOAT32, FLOAT16, INT32, INT16, INT8, UINT32, UINT16, UINT8 |
+| SequenceLengthsTensor | Eingabe | 4 | UINT32 |
+| OutputTensor | Ausgabe | 4 | FLOAT32, FLOAT16, INT32, INT16, INT8, UINT32, UINT16, UINT8 |
 
 
 
 ## <a name="requirements"></a>Anforderungen
 | &nbsp; | &nbsp; |
 | ---- |:---- |
-| **Header** | directml. h |
+| **Header** | directml.h |

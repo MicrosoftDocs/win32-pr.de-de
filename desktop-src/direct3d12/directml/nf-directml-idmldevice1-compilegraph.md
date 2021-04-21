@@ -1,7 +1,7 @@
 ---
 UID: NF:directml.IDMLDevice1.CompileGraph
-title: 'IDMLDevice1:: compilegraph'
-description: Kompiliert ein Diagramm von directml-Operatoren in ein Objekt, das an die GPU gesendet werden kann.
+title: IDMLDevice1::CompileGraph
+description: Kompiliert ein Diagramm von DirectML-Operatoren in ein Objekt, das an die GPU gesendet werden kann.
 helpviewer_keywords:
 - CompileGraph
 - CompileGraph method
@@ -50,23 +50,23 @@ api_location:
 - DirectML.dll
 api_name:
 - IDMLDevice1.CompileGraph
-ms.openlocfilehash: 25dbc62fac9cd38d9728a295e336038441aee19f
-ms.sourcegitcommit: 3bdf30edb314e0fcd17dc4ddbc70e4ec7d3596e6
+ms.openlocfilehash: 8a9b4ce9bd8f8bd8b1d6f2a6bbd144009eb0d79d
+ms.sourcegitcommit: 8e1f04c7e3c5c850071bac8d173f9441aab0dfed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "106361741"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107803751"
 ---
-# <a name="idmldevice1compilegraph-method-directmlh"></a>IDMLDevice1:: compilegraph-Methode (directml. h)
+# <a name="idmldevice1compilegraph-method-directmlh"></a>IDMLDevice1::CompileGraph-Methode (directml.h)
 
-Kompiliert ein Diagramm von directml-Operatoren in ein Objekt, das an die GPU gesendet werden kann.
+Kompiliert ein Diagramm von DirectML-Operatoren in ein Objekt, das an die GPU gesendet werden kann.
 
-Ein kompilierter Operator stellt die effiziente, gebackte Form eines Operators dar, der für die Ausführung auf der GPU geeignet ist. Ein kompilierter Operator enthält Status (z. b. Shader und andere Objekte), die für die Ausführung erforderlich sind. Da ein kompilierter Operator die [idmlpable](/windows/win32/api/directml/nn-directml-idmlpageable) -Schnittstelle implementiert, können Sie bei Bedarf einen aus GPU-Speicher entfernen. Weitere Informationen finden Sie unter [IDMLDevice1:: evict](/windows/win32/api/directml/nf-directml-idmldevice-evict) und [IDMLDevice1:: makeresident](/windows/win32/api/directml/nf-directml-idmldevice-makeresident) .
+Ein kompilierter Operator stellt die effiziente, gebackene Form eines Operators dar, der für die Ausführung auf der GPU geeignet ist. Ein kompilierter Operator enthält den Zustand (z. B. Shader und andere Objekte), der für die Ausführung erforderlich ist. Da ein kompilierter Operator die [IDMLPageable-Schnittstelle](/windows/win32/api/directml/nn-directml-idmlpageable) implementiert, können Sie eine schnittstelle aus dem GPU-Speicher aus dem GPU-Speicher ausziehen, wenn Sie möchten. Weitere Informationen finden Sie unter [IDMLDevice1::Evict](/windows/win32/api/directml/nf-directml-idmldevice-evict) und [IDMLDevice1::MakeResident.](/windows/win32/api/directml/nf-directml-idmldevice-makeresident)
 
-Der kompilierte Operator verwendet weder noch die [idmloperator](/windows/win32/api/directml/nn-directml-idmloperator) -Objekte, die innerhalb der Diagramm Beschreibung bereitgestellt werden, nachdem diese Methode zurückgegeben wurde.
+Der kompilierte Operator verwendet die [IDMLOperator-Objekte,](/windows/win32/api/directml/nn-directml-idmloperator) die in der Graphbeschreibung angegeben sind, und verweist nicht darauf, nachdem diese Methode zurückgegeben wurde.
 
 > [!IMPORTANT]
-> Diese API ist als Teil des eigenständigen Redistributable Package von directml verfügbar (siehe [Microsoft. ai. directml](https://www.nuget.org/packages/Microsoft.AI.DirectML/)). Siehe auch [Versionsverlauf der directml](../dml-version-history.md).
+> Diese API ist als Teil des eigenständigen verteilbaren DirectML-Pakets verfügbar (siehe [Microsoft.AI.DirectML](https://www.nuget.org/packages/Microsoft.AI.DirectML/) Version 1.4 und höher). Siehe auch [DirectML-Versionsverlauf.](../dml-version-history.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -85,7 +85,7 @@ HRESULT CompileGraph(
 
 Typ: **[DML_GRAPH_DESC](./ns-directml-dml_graph_desc.md)\***
 
-Eine Beschreibung des zu kompilierenden Diagramms. Siehe [DML_GRAPH_DESC](./ns-directml-dml_graph_desc.md).
+Eine Beschreibung des zu kompilierenden Diagramms. Weitere Informationen finden Sie [unter DML_GRAPH_DESC](./ns-directml-dml_graph_desc.md).
 
 `flags`
 
@@ -95,36 +95,36 @@ Alle Flags zum Steuern der Ausführung dieses Operators.
 
 `riid`
 
-Typ: <b>refID</b>
+Typ: <b>REFIID</b>
 
-Ein Verweis auf die Globally Unique Identifier (GUID) der Schnittstelle, die in <i>PPV</i>zurückgegeben werden soll. Dies wird als GUID von [idmlcompiledoperator](/windows/win32/api/directml/nn-directml-idmlcompiledoperator)erwartet.
+Ein Verweis auf die GUID (Globally Unique Identifier) der Schnittstelle, die in <i>ppv</i>zurückgegeben werden soll. Es wird erwartet, dass dies die GUID von [IDMLCompiledOperator](/windows/win32/api/directml/nn-directml-idmlcompiledoperator)ist.
 
 `ppv`
 
-Typ: <b>void * *</b>
+Typ: <b>void**</b>
 
-Ein Zeiger auf einen Speicherblock, der einen Zeiger auf den kompilierten Operator empfängt. Dies ist die Adresse eines Zeigers auf einen [idmlcompiledoperator](/windows/win32/api/directml/nn-directml-idmlcompiledoperator), der den erstellten kompilierten Operator darstellt.
+Ein Zeiger auf einen Speicherblock, der einen Zeiger auf den kompilierten Operator empfängt. Dies ist die Adresse eines Zeigers auf einen [IDMLCompiledOperator,](/windows/win32/api/directml/nn-directml-idmlcompiledoperator)der den erstellten kompilierten Operator darstellt.
 
 
 ## <a name="return-value"></a>Rückgabewert
 
 Typ: [ **HRESULT**](/windows/desktop/winprog/windows-data-types)
 
-Wenn diese Methode erfolgreich ausgeführt wird, wird **S_OK** zurückgegeben. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, gibt **sie** S_OK. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Graph-API des directml-Operators bietet eine abstrakte Möglichkeit zur effizienten Verwendung von directml über verschiedene Hardware hinweg. Directml wendet Optimierungen auf tensorflow-Ebene an, z. b. die Auswahl des effizientesten tensorflow-Layouts basierend auf dem verwendeten Adapter. Außerdem werden Optimierungen angewendet, z. b. das Entfernen von Join-oder Split-Operatoren.
+Die Graph-API des DirectML-Operators bietet eine abstrakte Möglichkeit, DirectML effizient für verschiedene Hardware zu verwenden. DirectML wendet Optimierungen auf Tensorebene an, z. B. die Auswahl des effizientesten Tensorlayouts basierend auf dem verwendeten Adapter. Außerdem werden Optimierungen angewendet, z. B. das Entfernen von Join- oder Split-Operatoren.
 
-Es wird empfohlen, dass Sie vor dem Aufbau eines directml-Diagramms auf hoher Ebene Optimierungen anwenden. Beispielsweise das Zusammenfassen von-Operatoren mit batchnorm, Konstantenfaltung und allgemeiner Teil Ausdrucks Löschung. Die Optimierungen im Graph-Optimierer von directml dienen dazu, solche geräteunabhängigen Optimierungen zu ergänzen, die in der Regel generisch von Machine Learning-Frameworks verarbeitet werden.
+Es wird empfohlen, vor dem Erstellen eines DirectML-Graphen optimierungen auf hoher Ebene anzuwenden. Beispiel: Fusing Convolution operators with BatchNorm, constant folding, and common subexpression elimination(Fusing convolution operators with BatchNorm, constant folding, and common subexpression elimination). Die Optimierungen innerhalb des DirectML-Graphoptimierers sollen solche geräteunabhängigen Optimierungen ergänzen, die in der Regel generisch von Machine Learning-Frameworks verarbeitet werden.
 
 ## <a name="requirements"></a>Anforderungen
 | &nbsp; | &nbsp; |
 | ---- |:---- |
 | **Zielplattform** | Windows |
-| **Header** | directml. h |
-| **Bibliothek** | Directml. lib |
-| **DLL** | DirectML.dll |
+| **Header** | directml.h |
+| **Bibliothek** | DirectML.lib |
+| **Dll** | DirectML.dll |
 
 ## <a name="see-also"></a>Siehe auch
 

@@ -1,7 +1,7 @@
 ---
 UID: NS:directml.DML_NONZERO_COORDINATES_OPERATOR_DESC
 title: DML_NONZERO_COORDINATES_OPERATOR_DESC
-description: Berechnet die N-dimensionalen Koordinaten aller Elemente ungleich 0 (null) des eingabetensors.
+description: Berechnet die N-dimensionalen Koordinaten aller Nicht-Null-Elemente des Eingabe-Tensors.
 helpviewer_keywords:
 - DML_NONZERO_COORDINATES_OPERATOR_DESC
 - DML_NONZERO_COORDINATES_OPERATOR_DESC structure
@@ -45,23 +45,23 @@ api_location:
 - DirectML.h
 api_name:
 - DML_NONZERO_COORDINATES_OPERATOR_DESC
-ms.openlocfilehash: a662ac3b341c07e512e11dcc15cbc9b11ec5f405
-ms.sourcegitcommit: 3bdf30edb314e0fcd17dc4ddbc70e4ec7d3596e6
+ms.openlocfilehash: 39463ba57bc90b35d5ac5dc7fc43993169137221
+ms.sourcegitcommit: 8e1f04c7e3c5c850071bac8d173f9441aab0dfed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "106354896"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107803393"
 ---
-# <a name="dml_nonzero_coordinates_operator_desc-structure-directmlh"></a>DML_NONZERO_COORDINATES_OPERATOR_DESC-Struktur (directml. h)
+# <a name="dml_nonzero_coordinates_operator_desc-structure-directmlh"></a>DML_NONZERO_COORDINATES_OPERATOR_DESC-Struktur (directml.h)
 
-Berechnet die N-dimensionalen Koordinaten aller Elemente ungleich 0 (null) des eingabetensors.
+Berechnet die N-dimensionalen Koordinaten aller Nicht-Null-Elemente des Eingabe-Tensors.
 
-Dieser Operator erzeugt eine MXN-Matrix mit Werten, wobei jede Zeile M eine N-dimensionale Koordinate eines Werts ungleich 0 (null) aus der Eingabe enthält. Bei Verwendung von **float32** -oder **FLOAT16** -Eingaben werden sowohl negative als auch positive 0 (0,0 f und-0,0 f) für die Zwecke dieses Operators als 0 (null) behandelt.
+Dieser Operator erzeugt eine MxN-Matrix von Werten, wobei jede Zeile M eine N-dimensionale Koordinate eines Werts ungleich 0 (null) aus der Eingabe enthält. Bei Verwendung von **FLOAT32-** oder **FLOAT16-Eingaben** werden sowohl negative als auch positive 0 (0,0f und -0,0f) für die Zwecke dieses Operators als 0 (null) behandelt.
 
-Der Operator erfordert, dass der *outputcoordinatestensor* eine Größe hat, die groß genug ist, um einem Worst-Case-Szenario Rechnung zu tragen, bei dem jedes Element der Eingabe ungleich 0 (null) ist. Dieser Operator gibt die Anzahl von Elementen ungleich 0 (null) über den *outputzählensor* zurück, die Aufrufer überprüfen können, um die Anzahl der Koordinaten zu ermitteln, die in *outputcoordinatestensor* geschrieben werden.
+Der Operator erfordert, dass der *OutputCoordinatesTensor* über eine Größe verfügt, die groß genug ist, um ein Szenario im schlimmsten Fall zu ermöglichen, in dem jedes Element der Eingabe ungleich 0 (null) ist. Dieser Operator gibt die Anzahl von Elementen ungleich 0 (null) über *outputCountTensor* zurück, die Aufrufer überprüfen können, um die Anzahl der Koordinaten zu bestimmen, die in *den OutputCoordinatesTensor* geschrieben wurden.
 
 > [!IMPORTANT]
-> Diese API ist als Teil des eigenständigen Redistributable Package von directml verfügbar (siehe [Microsoft. ai. directml](https://www.nuget.org/packages/Microsoft.AI.DirectML/)). Siehe auch [Versionsverlauf der directml](../dml-version-history.md).
+> Diese API ist als Teil des eigenständigen verteilbaren DirectML-Pakets verfügbar (siehe [Microsoft.AI.DirectML](https://www.nuget.org/packages/Microsoft.AI.DirectML/) Version 1.4 und höher). Siehe auch [DirectML-Versionsverlauf.](../dml-version-history.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -78,34 +78,34 @@ struct DML_NONZERO_COORDINATES_OPERATOR_DESC
 
 `InputTensor`
 
-Typ: Konstante **[DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
+Typ: **const [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
 
-Ein eingabetensor.
+Ein Eingabe-Tensor.
 
 `OutputCountTensor`
 
-Typ: Konstante **[DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
+Typ: **const [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
 
-Ein Ausgabe Mandanten, der die Anzahl der Elemente ungleich 0 (null) im Eingabe Mandanten enthält. Dieser Mandanten muss ein Skalar sein, d &mdash; . h. die Größe dieses Mandanten muss 1 sein. Der Typ dieses Mandanten muss **UInt32** lauten.
+Ein Ausgabe-Tensor, der die Anzahl der Elemente ungleich 0 (null) im Eingabe-Tensor enthält. Dieser Tensor muss ein Skalar &mdash; sein, d.h. die Größen dieses Tensors müssen alle 1 sein. Der Typ dieses Tensors muss **UINT32** sein.
 
 `OutputCoordinatesTensor`
 
-Typ: Konstante **[DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
+Typ: **const [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
 
-Ein Ausgabe-tensorflow, der die N-dimensionalen Koordinaten der Eingabeelemente enthält, die ungleich 0 (null) sind. 
+Ein Ausgabe-Tensor, der die N-dimensionalen Koordinaten der Eingabeelemente enthält, die ungleich 0 (null) sind. 
 
-Dieser tensorflow muss über *Größen* von `{1,1,M,N}` verfügen ( *Wenn DimensionCount* gleich 4 ist), oder `{1,1,1,M,N}` (wenn *DimensionCount* gleich 5 ist), wobei M die Gesamtzahl der Elemente in *inputtensor* ist, und N größer oder gleich dem *effektiven Rang* von *inputtensor* ist, bis zur *DimensionCount* der Eingabe.
+Dieser Tensor muss *größen* von `{1,1,M,N}` (wenn *DimensionCount* 4 ist) oder `{1,1,1,M,N}` (wenn *DimensionCount* gleich 5 ist), wobei M die Gesamtzahl der Elemente im *InputTensor* und N größer oder gleich dem *effektiven Rang* von *InputTensor* bis zur *DimensionCount* der Eingabe ist.
 
-Der effektive Rang eines Mandanten wird durch die *DimensionCount* dieses Mandanten mit Ausnahme der führenden Dimensionen der Größe 1 festgelegt. Ein tensorflow mit Größen von hat beispielsweise `{1,2,3,4}` einen effektiven Rang 3, ebenso wie ein tensorflow mit den Größen von `{1,1,5,5,5}` . Ein tensorflow mit Größen `{1,1,1,1}` hat den gültigen Rang 0.
+Der effektive Rang eines Tensors wird durch *dimensionCount* dieses Tensors ohne führende Dimensionen der Größe 1 bestimmt. Beispielsweise hat ein Tensor mit größen von den effektiven Rang 3, ebenso wie ein `{1,2,3,4}` Tensor mit größen von `{1,1,5,5,5}` . Ein Tensor mit Größen hat `{1,1,1,1}` den effektiven Rang 0.
 
-Stellen Sie sich einen *inputtensor* mit *Größen* von vor `{1,1,12,5}` . Dieser eingabetensor enthält 60 Elemente und hat einen effektiven Rang von 2. In diesem Beispiel weisen alle gültigen Größen von *outputcoordinatestensor* das Format auf `{1,1,60,N}` , wobei N >= 2, aber nicht größer als die *DimensionCount* (in diesem Beispiel 4) ist.
+Stellen Sie sich *einen InputTensor mit* *größen von* `{1,1,12,5}` vor. Dieser Eingabetensor enthält 60 Elemente und hat den effektiven Rang 2. In diesem Beispiel haben alle gültigen Größen von *OutputCoordinatesTensor* das Format , wobei N >= 2, aber nicht größer als `{1,1,60,N}` *DimensionCount* (in diesem Beispiel 4) ist.
 
-Die in diesen Mandanten geschriebenen Koordinaten werden garantiert nach dem aufsteigenden Element Index sortiert. Wenn der Eingabe-tensorflow z. b. drei Werte ungleich NULL bei den Koordinaten {1,0} , {1,2} und enthält {0,5} , werden die Werte, die in den *outputcoordinatestensor* geschrieben werden, gleich sein `[[0,5], [1,0], [1,2]]` .
+Die in diesen Tensor geschriebenen Koordinaten werden garantiert nach dem aufsteigenden Elementindex geordnet. Wenn der Eingabetensor z. B. drei Werte an den Koordinaten , und hat, sind die werte, die in {1,0} {1,2} den {0,5} *OutputCoordinatesTensor* geschrieben werden, `[[0,5], [1,0], [1,2]]` .
 
-Während dieser Mandanten erfordert, dass die Dimension M mit der Anzahl der Elemente im eingabetensor identisch ist, schreibt dieser Operator nur maximal die outputcount-Elemente in diesen Mandanten. Outputcount wird durch den skalaren *outputzählensor* zurückgegeben.
+Während für diesen Tensor die Dimension M der Anzahl der Elemente im Eingabetensor entspricht, schreibt dieser Operator nur maximal OutputCount-Elemente in diesen Tensor. OutputCount wird über den skalaren *OutputCountTensor zurückgegeben.*
 
 > [!NOTE]
-> Die übrigen Elemente dieses Mandanten außerhalb von outputcount sind nach Abschluss dieses Operators nicht definiert. Sie sollten sich nicht auf die Werte dieser Elemente verlassen.
+> Die verbleibenden Elemente dieses Tensors außerhalb von OutputCount sind nach Abschluss dieses Operators nicht definiert. Sie sollten sich nicht auf die Werte dieser Elemente verlassen.
 
 ## <a name="example"></a>Beispiel
 
@@ -129,19 +129,19 @@ OutputCoordinatesTensor: (Sizes:{1,1,8,3}, DataType:UINT32)
 ```
 
 ## <a name="availability"></a>Verfügbarkeit
-Dieser Operator wurde in eingeführt `DML_FEATURE_LEVEL_3_0` .
+Dieser Operator wurde in `DML_FEATURE_LEVEL_3_0` eingeführt.
 
-## <a name="tensor-constraints"></a>Tensor-Einschränkungen
-" *Inputtensor*", " *outputcoordinatestensor*" und "" `OutputCountTensor` müssen dieselbe *DimensionCount* aufweisen.
+## <a name="tensor-constraints"></a>Tensoreinschränkungen
+*InputTensor*, *OutputCoordinatesTensor* und müssen `OutputCountTensor` denselben *DimensionCount aufweisen.*
 
 ## <a name="tensor-support"></a>Tensor-Unterstützung
-| Tensorflow | Typ | Dimensionen | Unterstützte Dimensions Anzahl | Unterstützte Datentypen |
+| Tensor | Typ | Dimensionen | Unterstützte Dimensionsanzahl | Unterstützte Datentypen |
 | ------ | ---- | ---------- | -------------------------- | -------------------- |
-| Inputtensor | Eingabe | {[D0], D1, D2, D3, D4} | 4 bis 5 | Float32, FLOAT16, Int32, INT16, int8, UInt32, UInt16, Uint8 |
-| Outputzählensor | Ausgabe | {[1], 1, 1, 1, 1} | 4 bis 5 | UINT32 |
-| Outputcoordinatestensor | Ausgabe | {[1], 1, 1, M, N} | 4 bis 5 | UINT32 |
+| InputTensor | Eingabe | { [D0], D1, D2, D3, D4 } | 4 bis 5 | FLOAT32, FLOAT16, INT32, INT16, INT8, UINT32, UINT16, UINT8 |
+| OutputCountTensor | Ausgabe | { [1], 1, 1, 1, 1 } | 4 bis 5 | UINT32 |
+| OutputCoordinatesTensor | Ausgabe | { [1], 1, 1, M, N } | 4 bis 5 | UINT32 |
 
 ## <a name="requirements"></a>Anforderungen
 | &nbsp; | &nbsp; |
 | ---- |:---- |
-| **Header** | directml. h |
+| **Header** | directml.h |

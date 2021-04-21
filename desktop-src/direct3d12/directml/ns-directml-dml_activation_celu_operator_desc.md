@@ -1,7 +1,7 @@
 ---
 UID: NS:directml.DML_ACTIVATION_CELU_OPERATOR_DESC
 title: DML_ACTIVATION_CELU_OPERATOR_DESC
-description: Führt die fortlaufend differenzierbare Funktion zur Aktivierung der exponentiellen linearen Einheit (CELU) für jedes Element in *inputtensor* aus, wobei das Ergebnis in das entsprechende Element von *outputtensor* platziert wird.
+description: Führt die AKTIVIERUNGsfunktion der kontinuierlich differenzierbaren exponentiellen linearen Einheit (EXPONENTIAL Linear Unit, CELU) für jedes Element in *InputTensor* aus und platziert das Ergebnis in das entsprechende Element von *OutputTensor.*
 helpviewer_keywords:
 - DML_ACTIVATION_CELU_OPERATOR_DESC
 - DML_ACTIVATION_CELU_OPERATOR_DESC structure
@@ -45,30 +45,30 @@ api_location:
 - DirectML.h
 api_name:
 - DML_ACTIVATION_CELU_OPERATOR_DESC
-ms.openlocfilehash: d474bd44c8a830117bb62927f4bda954a753b612
-ms.sourcegitcommit: 3bdf30edb314e0fcd17dc4ddbc70e4ec7d3596e6
+ms.openlocfilehash: b6497e995601d7e9e01696f39920672674be07c4
+ms.sourcegitcommit: 8e1f04c7e3c5c850071bac8d173f9441aab0dfed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "106369920"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107803730"
 ---
-# <a name="dml_activation_celu_operator_desc-structure-directmlh"></a>DML_ACTIVATION_CELU_OPERATOR_DESC-Struktur (directml. h)
+# <a name="dml_activation_celu_operator_desc-structure-directmlh"></a>DML_ACTIVATION_CELU_OPERATOR_DESC-Struktur (directml.h)
 
-Führt die fortlaufend differenzierbare Funktion zur Aktivierung der exponentiellen linearen Einheit (CELU) für jedes Element in *inputtensor* aus, wobei das Ergebnis in das entsprechende Element von *outputtensor* platziert wird.
+Führt die AKTIVIERUNGsfunktion der kontinuierlich differenzierbaren exponentiellen linearen Einheit (EXPONENTIAL Linear Unit, CELU) für jedes Element in *InputTensor* aus und platziert das Ergebnis in das entsprechende Element von *OutputTensor.*
 
 ```
 f(x) = max(0, x) + min(0, Alpha * (exp(x / Alpha) - 1));
 ```
 
 Hierbei gilt:
-* Exp (x) ist die natürliche exponentiations Funktion
-* Max (a, b) gibt den größeren der beiden Werte a, b
-* min (a, b) gibt den kleineren der beiden Werte a, b zurück.
+* exp(x) ist die funktion "natural exponentiation"
+* max(a,b) gibt den größeren der beiden Werte a,b zurück.
+* min(a,b) gibt den kleineren der beiden Werte a,b zurück.
 
-Dieser Operator unterstützt die direkte Ausführung. Dies bedeutet, dass der ausgabetensor während der Bindung den Alias *inputtensor* zulässt.
+Dieser Operator unterstützt die direkt ausgeführte Ausführung, was bedeutet, dass der Ausgabe-Tensor während der Bindung den Alias *InputTensor* aliasen darf.
 
 > [!IMPORTANT]
-> Diese API ist als Teil des eigenständigen Redistributable Package von directml verfügbar (siehe [Microsoft. ai. directml](https://www.nuget.org/packages/Microsoft.AI.DirectML/)). Siehe auch [Versionsverlauf der directml](../dml-version-history.md).
+> Diese API ist als Teil des eigenständigen verteilbaren DirectML-Pakets verfügbar (siehe [Microsoft.AI.DirectML](https://www.nuget.org/packages/Microsoft.AI.DirectML/) Version 1.4 und höher). Siehe auch [DirectML-Versionsverlauf.](../dml-version-history.md)
 
 ## <a name="syntax"></a>Syntax
 ```cpp
@@ -84,35 +84,35 @@ struct DML_ACTIVATION_CELU_OPERATOR_DESC
 
 `InputTensor`
 
-Typ: Konstante **[DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
+Typ: **const [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
 
-Der eingabetensor, aus dem gelesen wird.
+Der Eingabe-Tensor, aus dem gelesen werden soll.
 
 `OutputTensor`
 
-Typ: Konstante **[DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
+Typ: **const [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
 
-Der Ausgabe Mandanten, in den die Ergebnisse geschrieben werden sollen.
+Der Ausgabe-Tensor, in den die Ergebnisse geschrieben werden sollen.
 
 `Alpha`
 
-Typ: <b> <a href="/windows/desktop/WinProg/windows-data-types">float</a></b>
+Typ: <b> <a href="/windows/win32/winprog/windows-data-types">FLOAT</a></b>
 
-Der Alpha Koeffizient. Ein typischer Standardwert für diesen Wert ist 1,0.
+Der Alphakoeffizienten. Ein typischer Standardwert für diesen Wert ist 1,0.
 
 ## <a name="availability"></a>Verfügbarkeit
-Dieser Operator wurde in eingeführt `DML_FEATURE_LEVEL_3_0` .
+Dieser Operator wurde in `DML_FEATURE_LEVEL_3_0` eingeführt.
 
-## <a name="tensor-constraints"></a>Tensor-Einschränkungen
-*Inputtensor* und *outputtensor* müssen denselben *Datentyp*, jede *DimensionCount* und jede *Größe* aufweisen.
+## <a name="tensor-constraints"></a>Tensoreinschränkungen
+*InputTensor* und *OutputTensor* müssen die gleichen *Datentypen*, *DimensionCount* und *Größen* aufweisen.
 
 ## <a name="tensor-support"></a>Tensor-Unterstützung
-| Tensorflow | Typ | Unterstützte Dimensions Anzahl | Unterstützte Datentypen |
+| Tensor | Typ | Unterstützte Dimensionsanzahl | Unterstützte Datentypen |
 | ------ | ---- | -------------------------- | -------------------- |
-| Inputtensor | Eingabe | 1 bis 8 | Float32, FLOAT16 |
-| Outputtensor | Ausgabe | 1 bis 8 | Float32, FLOAT16 |
+| InputTensor | Eingabe | 1 bis 8 | FLOAT32, FLOAT16 |
+| OutputTensor | Ausgabe | 1 bis 8 | FLOAT32, FLOAT16 |
 
 ## <a name="requirements"></a>Anforderungen
 | &nbsp; | &nbsp; |
 | ---- |:---- |
-| **Header** | directml. h |
+| **Header** | directml.h |

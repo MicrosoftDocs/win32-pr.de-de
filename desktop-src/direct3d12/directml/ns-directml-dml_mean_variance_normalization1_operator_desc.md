@@ -1,7 +1,7 @@
 ---
 UID: NS:directml.DML_MEAN_VARIANCE_NORMALIZATION1_OPERATOR_DESC
 title: DML_MEAN_VARIANCE_NORMALIZATION1_OPERATOR_DESC
-description: Führt eine Mean-Varianz Normalisierungsfunktion für den eingabetensor aus. Dieser Operator berechnet den Mittelwert und die Varianz des Eingabe Mandanten, um die Normalisierung auszuführen.
+description: Führt eine Normalisierungsfunktion für mittlere Varianz für den Eingabetensor aus. Dieser Operator berechnet den Mittelwert und die Varianz des Eingabe tensors, um die Normalisierung durchzuführen.
 helpviewer_keywords:
 - DML_MEAN_VARIANCE_NORMALIZATION1_OPERATOR_DESC
 - DML_MEAN_VARIANCE_NORMALIZATION1_OPERATOR_DESC structure
@@ -44,22 +44,23 @@ api_location:
 - DirectML.h
 api_name:
 - DML_MEAN_VARIANCE_NORMALIZATION1_OPERATOR_DESC
-ms.openlocfilehash: f3302f8081ed4bf64fa858ac3e303519089d01fb
-ms.sourcegitcommit: 3bdf30edb314e0fcd17dc4ddbc70e4ec7d3596e6
+ms.openlocfilehash: 759bf25d4b6a97e70c6de7708a5c9fd0bccae439
+ms.sourcegitcommit: 8e1f04c7e3c5c850071bac8d173f9441aab0dfed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "106373409"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107803397"
 ---
-# <a name="dml_mean_variance_normalization1_operator_desc-structure-directmlh"></a>DML_MEAN_VARIANCE_NORMALIZATION1_OPERATOR_DESC-Struktur (directml. h)
-Führt eine Mean-Varianz Normalisierungsfunktion für den eingabetensor aus. Dieser Operator berechnet den Mittelwert und die Varianz des Eingabe Mandanten, um die Normalisierung auszuführen. Dieser Operator führt die folgende Berechnung aus.
+# <a name="dml_mean_variance_normalization1_operator_desc-structure-directmlh"></a>DML_MEAN_VARIANCE_NORMALIZATION1_OPERATOR_DESC -Struktur (directml.h)
+
+Führt eine Normalisierungsfunktion für mittlere Varianz für den Eingabetensor aus. Dieser Operator berechnet den Mittelwert und die Varianz des Eingabe tensors, um die Normalisierung durchzuführen. Dieser Operator führt die folgende Berechnung aus.
 
 ```
 Output = FusedActivation(Scale * ((Input - Mean) / sqrt(Variance + Epsilon)) + Bias).
 ```
 
 > [!IMPORTANT]
-> Diese API ist als Teil des eigenständigen Redistributable Package von directml verfügbar (siehe [Microsoft. ai. directml](https://www.nuget.org/packages/Microsoft.AI.DirectML/)). Siehe auch [Versionsverlauf der directml](../dml-version-history.md).
+> Diese API ist als Teil des eigenständigen weiterverteilten DirectML-Pakets verfügbar (siehe [Microsoft.AI.DirectML](https://www.nuget.org/packages/Microsoft.AI.DirectML/) Version 1.4 und höher). Siehe auch [DirectML-Versionsverlauf.](../dml-version-history.md)
 
 ## <a name="syntax"></a>Syntax
 ```cpp
@@ -75,98 +76,110 @@ struct DML_MEAN_VARIANCE_NORMALIZATION1_OPERATOR_DESC {
   const DML_OPERATOR_DESC *FusedActivation;
 };
 ```
-
-
-
 ## <a name="members"></a>Member
 
 `InputTensor`
 
-Typ: Konstante **[DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
+Typ: **const [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
 
-Ein tensorflow, der die Eingabedaten enthält. Diese Tensor-Dimensionen sollten lauten `{ BatchCount, ChannelCount, Height, Width }` .
-
+Ein Tensor, der die Eingabedaten enthält. Die Dimensionen dieses Tensors sollten `{ BatchCount, ChannelCount, Height, Width }` sein.
 
 `ScaleTensor`
 
-Type: \_ maybenull \_ **Konstanten [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
+Typ: \_ Maybenull \_ **const [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
 
-Ein optionaler tensorflow, der die Skalierungs Daten enthält. Diese Tensor-Dimensionen sollten lauten `{ BatchCount, ChannelCount, Height, Width }` . Jede Dimension kann durch 1 ersetzt werden, um Sie in dieser Dimension zu übertragen. Dieser tensorflow ist erforderlich, wenn der *biastensor* verwendet wird.
+Ein optionaler Tensor, der die Skalierungsdaten enthält.
 
+Wenn **DML_FEATURE_LEVEL** kleiner als **DML_FEATURE_LEVEL_4_0** ist, sollten die Dimensionen dieses Tensors `{ ScaleBatchCount, ChannelCount, ScaleHeight, ScaleWidth }` sein. Die Dimensionen ScaleBatchCount, ScaleHeight und ScaleWidth sollten entweder *mit InputTensor* übereinstimmen oder auf 1 festgelegt werden, um diese Dimensionen automatisch über die Eingabe zu übertragen.
+
+Wenn **DML_FEATURE_LEVEL** größer oder gleich **DML_FEATURE_LEVEL_4_0** ist, kann jede Dimension auf 1 festgelegt und automatisch so übertragen werden, dass sie *inputTensor entspricht.*
+
+Dieser Tensor ist erforderlich, wenn *der BiasTensor* verwendet wird.
 
 `BiasTensor`
 
-Type: \_ maybenull \_ **Konstanten [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
+Typ: \_ Maybenull \_ **const [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
 
-Ein optionaler tensorflow, der die Daten der Bias enthält. Diese Tensor-Dimensionen sollten lauten `{ BatchCount, ChannelCount, Height, Width }` . Jede Dimension kann durch 1 ersetzt werden, um Sie in dieser Dimension zu übertragen. Dieser tensorflow ist erforderlich, wenn der *scaletensor* verwendet wird.
 
+Ein optionaler Tensor, der die Bias-Daten enthält.
+
+Wenn **DML_FEATURE_LEVEL** kleiner als **DML_FEATURE_LEVEL_4_0** ist, sollten die Dimensionen dieses Tensors `{ BiasBatchCount, ChannelCount, BiasHeight, BiasWidth }` sein. Die Dimensionen BiasBatchCount, BiasHeight und BiasWidth sollten entweder mit *InputTensor* übereinstimmen oder auf 1 festgelegt werden, um diese Dimensionen automatisch über die Eingabe zu übertragen.
+
+Wenn **DML_FEATURE_LEVEL** größer oder gleich **DML_FEATURE_LEVEL_4_0** ist, kann jede Dimension auf 1 festgelegt und automatisch an *InputTensor* gesendet werden.
+
+Dieser Tensor ist erforderlich, wenn *scaleTensor* verwendet wird.
 
 `OutputTensor`
 
-Typ: Konstante **[DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
+Typ: **const [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
 
-Ein tensorflow, in den die Ergebnisse geschrieben werden sollen. Die Dimensionen dieses Mandanten sind `{ BatchCount, ChannelCount, Height, Width }` .
-
+Ein Tensor, in den die Ergebnisse geschrieben werden sollen. Die Dimensionen dieses Tensors sind `{ BatchCount, ChannelCount, Height, Width }` .
 
 `AxisCount`
 
-Typ: <b> <a href="/windows/desktop/WinProg/windows-data-types">uint</a></b>
+Typ: <b> <a href="/windows/win32/winprog/windows-data-types">UINT</a></b>
 
-Die Anzahl der Achsen. Dieses Feld bestimmt die Größe des *Achsen* Arrays.
-
+Die Anzahl der Achsen. Dieses Feld bestimmt die Größe des *Axes-Arrays.*
 
 `Axes`
 
-Type: \_ Field \_ size \_ (axiscount) **Konstanten [uint](/windows/desktop/WinProg/windows-data-types) \*** 
+Typ: \_ \_ Feldgröße \_ (AxisCount) **const [UINT](/windows/win32/winprog/windows-data-types) \*** 
 
-Die Achsen, an denen der Mittelwert und die Varianz berechnet werden sollen.
-
+Die Achsen, entlang derer Mittelwert und Varianz berechnet werden sollen.
 
 `NormalizeVariance`
 
-Typ: <b> <a href="/windows/desktop/WinProg/windows-data-types">bool</a></b>
+Typ: <b> <a href="/windows/win32/winprog/windows-data-types">BOOL</a></b>
 
-**True** , wenn die normalisierungs Ebene Abweichungen in der normalisierungs Berechnung einschließt. Andernfalls **false**. **False** gibt an, dass die normalisierungs Gleichung ist `Output = FusedActivation(Scale * (Input - Mean) + Bias)` .
-
+**TRUE,** wenn die Normalisierungsebene Varianz in die Normalisierungsberechnung einschließt. Andernfalls **FALSE.** False gibt an, dass die Normalisierungsgleichung `Output = FusedActivation(Scale * (Input - Mean) + Bias)` ist.
 
 `Epsilon`
 
-Typ: <b> <a href="/windows/desktop/WinProg/windows-data-types">float</a></b>
+Typ: <b> <a href="/windows/win32/winprog/windows-data-types">FLOAT</a></b>
 
-Der Epsilon-Wert, der verwendet wird, um die Division durch Null zu vermeiden. Der Wert 0,00001 wird als Standardwert empfohlen.
-
+Der epsilon-Wert, der verwendet werden soll, um division durch 0 (null) zu vermeiden. Der Standardwert ist 0,00001.
 
 `FusedActivation`
 
-Type: \_ maybenull \_ **Konstanten [DML_OPERATOR_DESC](/windows/win32/api/directml/ns-directml-dml_operator_desc) \***
+Typ: \_ Maybenull \_ **const [DML_OPERATOR_DESC](/windows/win32/api/directml/ns-directml-dml_operator_desc) \***
 
-Eine optionale, bei der Normalisierung anzuwendende, Fused-Aktivierungs Schicht.
+Eine optionale fused-Aktivierungsebene, die nach der Normalisierung angewendet werden soll.
 
-
-## <a name="remarks"></a>Bemerkungen
-**DML_MEAN_VARIANCE_NORMALIZATION1_OPERATOR_DESC** ist eine supermenge der Funktionen von [DML_MEAN_VARIANCE_NORMALIZATION_OPERATOR_DESC](/windows/win32/api/directml/ns-directml-dml_mean_variance_normalization_operator_desc). Hier ist das Festlegen des **Achsen** Arrays `{ 0, 2, 3 }` auf das Äquivalent der Einstellung von " *Crosschannel* " auf " **false** " in **DML_MEAN_VARIANCE_NORMALIZATION_OPERATOR_DESC**; beim Festlegen des **Achsen** Arrays auf entspricht das Festlegen `{ 1, 2, 3 }` von " *Crosschannel* " auf " **true**".
+## <a name="remarks"></a>Hinweise
+**DML_MEAN_VARIANCE_NORMALIZATION1_OPERATOR_DESC** ist eine Obermenge von Funktionen von [DML_MEAN_VARIANCE_NORMALIZATION_OPERATOR_DESC.](/windows/win32/api/directml/ns-directml-dml_mean_variance_normalization_operator_desc) Hier entspricht das Festlegen des **Axes-Arrays** in DML_MEAN_VARIANCE_NORMALIZATION_OPERATOR_DESC dem Festlegen von `{ 0, 2, 3 }` *CrossChannel* auf **FALSE.** Das Festlegen des **Axes-Arrays** auf entspricht dem Festlegen von  `{ 1, 2, 3 }` *CrossChannel* auf **TRUE.**
 
 ## <a name="availability"></a>Verfügbarkeit
-Dieser Operator wurde in eingeführt `DML_FEATURE_LEVEL_2_1` .
+Dieser Operator wurde in `DML_FEATURE_LEVEL_2_1` eingeführt.
 
 ## <a name="tensor-constraints"></a>Tensor-Einschränkungen
-* *Inputtensor* und *outputtensor* müssen über die gleichen *Größen* verfügen.
-* ' *Biastensor*', ' *inputtensor*', ' *outputtensor*' und ' *scaletensor* ' müssen denselben *Datentyp* aufweisen.
+
+*BiasTensor,* *InputTensor,* *OutputTensor* und *ScaleTensor* müssen denselben *DataType* und *DimensionCount aufweisen.*
 
 ## <a name="tensor-support"></a>Tensor-Unterstützung
-| Tensorflow | Typ | Dimensionen | Unterstützte Dimensions Anzahl | Unterstützte Datentypen |
-| ------ | ---- | ---------- | -------------------------- | -------------------- |
-| Inputtensor | Eingabe | {BatchCount, ChannelCount, Height, Width} | 4 | Float32, FLOAT16 |
-| Scaletensor | Optionale Eingabe | {Scalebatchcount, scalechannelcount, ScaleHeight, ScaleWidth} | 4 | Float32, FLOAT16 |
-| Biastensor | Optionale Eingabe | {Biasbatchcount, biaschannelcount, biasheight, biaswidth} | 4 | Float32, FLOAT16 |
-| Outputtensor | Ausgabe | {BatchCount, ChannelCount, Height, Width} | 4 | Float32, FLOAT16 |
 
+### <a name="dml_feature_level_3_1-and-above"></a>DML_FEATURE_LEVEL_3_1 und höher
+
+| Tensor | Typ | Unterstützte Dimensionsanzahl | Unterstützte Datentypen |
+| ------ | ---- | -------------------------- | -------------------- |
+| InputTensor | Eingabe | 1 bis 8 | FLOAT32, FLOAT16 |
+| ScaleTensor | Optionale Eingabe | 1 bis 8 | FLOAT32, FLOAT16 |
+| BiasTensor | Optionale Eingabe | 1 bis 8 | FLOAT32, FLOAT16 |
+| OutputTensor | Ausgabe | 1 bis 8 | FLOAT32, FLOAT16 |
+
+### <a name="dml_feature_level_2_1-and-above"></a>DML_FEATURE_LEVEL_2_1 und höher
+
+| Tensor | Typ | Unterstützte Dimensionsanzahlen | Unterstützte Datentypen |
+| ------ | ---- | -------------------------- | -------------------- |
+| InputTensor | Eingabe | 4 | FLOAT32, FLOAT16 |
+| ScaleTensor | Optionale Eingabe | 4 | FLOAT32, FLOAT16 |
+| BiasTensor | Optionale Eingabe | 4 | FLOAT32, FLOAT16 |
+| OutputTensor | Ausgabe | 4 | FLOAT32, FLOAT16 |
 
 ## <a name="requirements"></a>Anforderungen
 | &nbsp; | &nbsp; |
 | ---- |:---- |
-| **Header** | directml. h |
+| **Header** | directml.h |
 
 ## <a name="see-also"></a>Siehe auch
 
-[Verwenden von Fused-Operatoren zur Verbesserung der Leistung](../dml-fused-activations.md)
+[Verwenden von fused-Operatoren für verbesserte Leistung](../dml-fused-activations.md)

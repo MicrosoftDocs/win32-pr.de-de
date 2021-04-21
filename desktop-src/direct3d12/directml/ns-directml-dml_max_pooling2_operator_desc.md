@@ -1,7 +1,7 @@
 ---
 UID: NS:directml.DML_MAX_POOLING2_OPERATOR_DESC
 title: DML_MAX_POOLING2_OPERATOR_DESC
-description: Berechnet den maximalen Wert für die Elemente innerhalb des gleitenden Fensters über den Eingabe Mandanten und gibt optional die Indizes der ausgewählten Maximalwerte zurück.
+description: Berechnet den Maximalen Wert für die Elemente innerhalb des gleitenden Fensters über den Eingabe-Tensor und gibt optional die Indizes der ausgewählten Höchstwerte zurück.
 ms.topic: reference
 tech.root: directml
 ms.date: 11/03/2020
@@ -37,18 +37,18 @@ api_name:
 f1_keywords:
 - DML_MAX_POOLING2_OPERATOR_DESC
 - directml/DML_MAX_POOLING2_OPERATOR_DESC
-ms.openlocfilehash: 7d2dc9d28e8afcaa5cc6277e26f1f663f3f6688f
-ms.sourcegitcommit: 3bdf30edb314e0fcd17dc4ddbc70e4ec7d3596e6
+ms.openlocfilehash: 06e4d7eb01abab9c412238e353a73607df02b219
+ms.sourcegitcommit: 8e1f04c7e3c5c850071bac8d173f9441aab0dfed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "106365218"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107803667"
 ---
-# <a name="dml_max_pooling2_operator_desc-structure-directmlh"></a>DML_MAX_POOLING2_OPERATOR_DESC-Struktur (directml. h)
-Berechnet den maximalen Wert für die Elemente innerhalb des gleitenden Fensters über den Eingabe Mandanten und gibt optional die Indizes der ausgewählten Maximalwerte zurück.
+# <a name="dml_max_pooling2_operator_desc-structure-directmlh"></a>DML_MAX_POOLING2_OPERATOR_DESC-Struktur (directml.h)
+Berechnet den Maximalen Wert für die Elemente innerhalb des gleitenden Fensters über den Eingabe-Tensor und gibt optional die Indizes der ausgewählten Höchstwerte zurück.
 
 > [!IMPORTANT]
-> Diese API ist als Teil des eigenständigen Redistributable Package von directml verfügbar (siehe [Microsoft. ai. directml](https://www.nuget.org/packages/Microsoft.AI.DirectML/)). Siehe auch [Versionsverlauf der directml](../dml-version-history.md).
+> Diese API ist als Teil des eigenständigen verteilbaren DirectML-Pakets verfügbar (siehe [Microsoft.AI.DirectML](https://www.nuget.org/packages/Microsoft.AI.DirectML/) Version 1.4 und höher). Siehe auch [DirectML-Versionsverlauf.](../dml-version-history.md)
 
 ## <a name="syntax"></a>Syntax
 ```cpp
@@ -71,16 +71,16 @@ struct DML_MAX_POOLING2_OPERATOR_DESC {
 
 `InputTensor`
 
-Typ: Konstante **[DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
+Typ: **const [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
 
-Ein Eingabe-tensorflow der *Größen* `{ BatchCount, ChannelCount, Height, Width }` , wenn *inputtensor. DimensionCount* den Wert 4 hat, und, `{ BatchCount, ChannelCount, Depth, Height, Weight } ` Wenn *inputtensor. DimensionCount* 5 ist.
+Ein Eingabe tensor von *Größen,* `{ BatchCount, ChannelCount, Height, Width }` wenn *InputTensor.DimensionCount* 4 und `{ BatchCount, ChannelCount, Depth, Height, Weight } ` *InputTensor.DimensionCount* 5 ist.
 
 
 `OutputTensor`
 
-Typ: Konstante **[DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
+Typ: **const [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
 
-Ein Ausgabe Mandanten, in den die Ergebnisse geschrieben werden sollen. Die Größen des Ausgabe Mandanten können wie folgt berechnet werden.
+Ein Ausgabe-Tensor, in den die Ergebnisse geschrieben werden sollen. Die Größen des Ausgabe-Tensors können wie folgt berechnet werden.
 
 ```cpp
 OutputTensor->Sizes[0] = InputTensor->Sizes[0];
@@ -95,82 +95,82 @@ for (UINT i = 0; i < DimensionCount; ++i) {
 
 `OutputIndicesTensor`
 
-Type: \_ maybenull \_ **Konstanten [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
+Typ: \_ Maybenull \_ **const [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
 
-Ein optionaler ausgabetensor von Indizes für den Eingabe-tensorflow- *inputtensor* der maximalen Werte, die in *outputtensor* erstellt und gespeichert werden. Diese Indexwerte sind NULL basiert und behandeln den Eingabe Mandanten als zusammenhängendes eindimensionales Array. Wenn mehrere Elemente innerhalb des gleitenden Fensters denselben Wert aufweisen, werden die nachfolgenden Gleichheits Werte ignoriert, und der Index zeigt auf den ersten gefundenen Wert. Sowohl der *outputtensor* als auch der *outputindicestensor* haben die gleichen tensorflow-Größen.
+Ein optionaler Ausgabe-Tensor von Indizes für den Eingabe tensor *InputTensor* der maximalen Werte, die im *OutputTensor* erstellt und gespeichert werden. Diese Indexwerte sind nullbasiert und behandeln den Eingabe-Tensor als zusammenhängendes eindimensionales Array. Wenn mehrere Elemente innerhalb des gleitenden Fensters den gleichen Wert aufweisen, werden die späteren gleichen Werte ignoriert, und der Index zeigt auf den ersten gefundenen Wert. *OutputTensor* und *OutputIndicesTensor* haben die gleichen Tensorgrößen.
 
 
 `DimensionCount`
 
-Typ: [ **uint**](/windows/desktop/winprog/windows-data-types)
+Typ: [ **UINT**](/windows/desktop/winprog/windows-data-types)
 
-Die Anzahl räumlicher Dimensionen des Input tensorflow *inputtensor*, der auch der Anzahl der Dimensionen des gleitenden Fensters *WindowSize* entspricht. Dieser Wert bestimmt auch die Größe der Felder " *fort* schreiten", " *startpadding*" und " *endpadding* ". Er sollte auf 2 festgelegt werden, wenn *inputtensor* auf 4D festgelegt ist, und 3, wenn es sich um einen 5D-Tensor handelt.
+Die Anzahl der räumlichen Dimensionen des Eingabe tensor *InputTensor*, die auch der Anzahl der Dimensionen des gleitenden *Fensters WindowSize* entspricht. Dieser Wert bestimmt auch die Größe der Arrays *Strides,* *StartPadding* und *EndPadding.* Sie sollte auf 2 festgelegt werden, wenn *InputTensor* 4D ist, und 3, wenn es sich um einen 5D-Tensor handelt.
 
 
 `Strides`
 
-Type: \_ Field \_ size \_ (DimensionCount) <b>Konstanten [uint](/windows/desktop/winprog/windows-data-types) * </b>
+Typ: \_ \_ Feldgröße \_ (DimensionCount) <b>const [UINT](/windows/desktop/winprog/windows-data-types) * </b>
 
-Die Schritte für die Abmessungen des gleitenden Fensters von Größen `{ Height, Width }` , wenn *DimensionCount* auf 2 festgelegt ist, oder, wenn der Wert `{ Depth, Height, Width }` auf 3 festgelegt ist.
+Die Schritte für die Größendimensionen des gleitenden Fensters, wenn DimensionCount auf 2 oder auf `{ Height, Width }`  `{ Depth, Height, Width }` 3 festgelegt ist.
 
 
 `WindowSize`
 
-Type: \_ Field \_ size \_ (DimensionCount) <b>Konstanten [uint](/windows/desktop/winprog/windows-data-types) * </b>
+Typ: \_ \_ Feldgröße \_ (DimensionCount) <b>const [UINT](/windows/desktop/winprog/windows-data-types) * </b>
 
-Die Abmessungen des gleitenden Fensters in `{ Height, Width }` , wenn *DimensionCount* auf 2 festgelegt ist, oder, `{ Depth, Height, Width }` Wenn es auf 3 festgelegt ist.
+Die Dimensionen des gleitenden Fensters in `{ Height, Width }` , *wenn DimensionCount* auf 2 oder `{ Depth, Height, Width }` auf 3 festgelegt ist.
 
 
 `StartPadding`
 
-Type: \_ Field \_ size \_ (DimensionCount) <b>Konstanten [uint](/windows/desktop/winprog/windows-data-types) * </b>
+Typ: \_ \_ Feldgröße \_ (DimensionCount) <b>const [UINT](/windows/desktop/winprog/windows-data-types) * </b>
 
-Die Anzahl der Auffüll Elemente, die auf den Anfang jeder räumlichen Dimension des Eingabe-Tensors *inputtensor* angewendet werden sollen. Die Werte sind in `{ Height, Width }` , wenn *DimensionCount* auf 2 festgelegt ist, oder `{ Depth, Height, Width }` Wenn auf 3 festgelegt.
+Die Anzahl der Auf padding-Elemente, die auf den Anfang jeder räumlichen Dimension des Eingabe tensor *InputTensor angewendet werden sollen.* Die Werte befinden sich in `{ Height, Width }` , *wenn DimensionCount* auf 2 oder `{ Depth, Height, Width }` auf 3 festgelegt ist.
 
 
 `EndPadding`
 
-Type: \_ Field \_ size \_ (DimensionCount) <b>Konstanten [uint](/windows/desktop/winprog/windows-data-types) * </b>
+Typ: \_ \_ Feldgröße \_ (DimensionCount) <b>const [UINT](/windows/desktop/winprog/windows-data-types) * </b>
 
-Die Anzahl der Auffüll Elemente, die auf das Ende jeder räumlichen Dimension des Eingabe-Tensors *inputtensor* angewendet werden sollen. Die Werte sind in `{ Height, Width }` , wenn *DimensionCount* auf 2 festgelegt ist, oder `{ Depth, Height, Width }` Wenn auf 3 festgelegt.
+Die Anzahl der Auf padding-Elemente, die auf das Ende jeder räumlichen Dimension des Eingabe tensor *InputTensor angewendet werden sollen.* Die Werte befinden sich in `{ Height, Width }` , *wenn DimensionCount* auf 2 oder `{ Depth, Height, Width }` auf 3 festgelegt ist.
 
 
 `Dilations`
 
-Type: \_ Field \_ size \_ (DimensionCount) <b>Konstanten [uint](/windows/desktop/winprog/windows-data-types) * </b>
+Typ: \_ \_ Feldgröße \_ (DimensionCount) <b>const [UINT](/windows/desktop/winprog/windows-data-types) * </b>
 
-Die Werte für jede räumliche Dimension des Eingabe Mandanten *, von dem* ein Element im gleitenden Fenster für alle Elemente dieses Werts ausgewählt wird. Die Werte sind in `{ Height, Width }` , wenn *DimensionCount* auf 2 festgelegt ist, oder `{ Depth, Height, Width }` Wenn auf 3 festgelegt.
+Die Werte für jede räumliche Dimension des Eingabe tensor *InputTensor,* mit dem ein Element innerhalb des gleitenden Fensters für jedes Element dieses Werts ausgewählt wird. Die Werte befinden sich in `{ Height, Width }` , *wenn DimensionCount* auf 2 oder `{ Depth, Height, Width }` auf 3 festgelegt ist.
 
 
-## <a name="remarks"></a>Bemerkungen
-**DML_MAX_POOLING2_OPERATOR_DESC** ersetzt die frühere Version [DML_MAX_POOLING_OPERATOR1_DESC](/windows/win32/api/directml/ns-directml-dml_max_pooling1_operator_desc) mit einer zusätzlichen Konstanten Array *Erweiterung*. Die beiden Versionen sind gleichwertig  `{ 1,1 }` , wenn für eine 4D-Eingabe oder `{ 1,1,1 }` für 5D-Eingabe Features festgelegt ist.
+## <a name="remarks"></a>Hinweise
+**DML_MAX_POOLING2_OPERATOR_DESC** ersetzt die frühere Version DML_MAX_POOLING_OPERATOR1_DESC [durch](/windows/win32/api/directml/ns-directml-dml_max_pooling1_operator_desc) eine zusätzliche konstante *Arraydilierung*. Die beiden Versionen sind gleichwertig, *wenn Dilations* für 4D-Eingaben oder `{ 1,1 }` für `{ 1,1,1 }` 5D-Eingabefeatures auf festgelegt ist.
 
 ## <a name="availability"></a>Verfügbarkeit
-Dieser Operator wurde in eingeführt `DML_FEATURE_LEVEL_2_1` .
+Dieser Operator wurde in `DML_FEATURE_LEVEL_2_1` eingeführt.
 
-## <a name="tensor-constraints"></a>Tensor-Einschränkungen
-* ' *Inputtensor*', ' *outputindicestensor*' und ' *outputtensor* ' müssen dieselbe *DimensionCount* aufweisen.
-* *Inputtensor* und *outputtensor* müssen denselben *Datentyp* aufweisen.
+## <a name="tensor-constraints"></a>Tensoreinschränkungen
+* *InputTensor,* *OutputIndicesTensor* und *OutputTensor* müssen denselben *DimensionCount aufweisen.*
+* *InputTensor und* *OutputTensor* müssen denselben *Datentyp haben.*
 
 ## <a name="tensor-support"></a>Tensor-Unterstützung
 ### <a name="dml_feature_level_3_0-and-above"></a>DML_FEATURE_LEVEL_3_0 und höher
-| Tensorflow | Typ | Unterstützte Dimensions Anzahl | Unterstützte Datentypen |
+| Tensor | Typ | Unterstützte Dimensionsanzahlen | Unterstützte Datentypen |
 | ------ | ---- | -------------------------- | -------------------- |
-| Inputtensor | Eingabe | 4 bis 5 | Float32, FLOAT16, int8, Uint8 |
-| Outputtensor | Ausgabe | 4 bis 5 | Float32, FLOAT16, int8, Uint8 |
-| Outputindicestensor | Optionale Ausgabe | 4 bis 5 | UINT32 |
+| InputTensor | Eingabe | 4 bis 5 | FLOAT32, FLOAT16, INT8, UINT8 |
+| OutputTensor | Ausgabe | 4 bis 5 | FLOAT32, FLOAT16, INT8, UINT8 |
+| OutputIndicesTensor | Optionale Ausgabe | 4 bis 5 | UINT32 |
 
 ### <a name="dml_feature_level_2_1-and-above"></a>DML_FEATURE_LEVEL_2_1 und höher
-| Tensorflow | Typ | Unterstützte Dimensions Anzahl | Unterstützte Datentypen |
+| Tensor | Typ | Unterstützte Dimensionsanzahlen | Unterstützte Datentypen |
 | ------ | ---- | -------------------------- | -------------------- |
-| Inputtensor | Eingabe | 4 bis 5 | Float32, FLOAT16 |
-| Outputtensor | Ausgabe | 4 bis 5 | Float32, FLOAT16 |
-| Outputindicestensor | Optionale Ausgabe | 4 bis 5 | UINT32 |
+| InputTensor | Eingabe | 4 bis 5 | FLOAT32, FLOAT16 |
+| OutputTensor | Ausgabe | 4 bis 5 | FLOAT32, FLOAT16 |
+| OutputIndicesTensor | Optionale Ausgabe | 4 bis 5 | UINT32 |
 
 
 ## <a name="requirements"></a>Anforderungen
 | &nbsp; | &nbsp; |
 | ---- |:---- |
-| **Unterstützte Mindestversion (Client)** | Windows 10, Version 2004 (10,0; Build 19041) |
-| **Unterstützte Mindestversion (Server)** | Windows Server, Version 2004 (10,0; Build 19041) |
-| **Header** | directml. h |
+| **Unterstützte Mindestversion (Client)** | Windows 10, Version 2004 (10.0; Build 19041) |
+| **Unterstützte Mindestversion (Server)** | Windows Server, Version 2004 (10.0; Build 19041) |
+| **Header** | directml.h |

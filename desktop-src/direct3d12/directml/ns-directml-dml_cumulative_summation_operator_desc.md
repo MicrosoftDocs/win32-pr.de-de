@@ -1,7 +1,7 @@
 ---
 UID: NS:directml.DML_CUMULATIVE_SUMMATION_OPERATOR_DESC
 title: DML_CUMULATIVE_SUMMATION_OPERATOR_DESC
-description: Fasst die Elemente eines Mandanten auf einer Achse zusammen, wobei der laufende Zähler der Summierungs-in den Ausgabe Mandanten geschrieben wird.
+description: Summiert die Elemente eines Tensors entlang einer Achse und schreibt die laufende Tally der Summierung in den Ausgabe-Tensor.
 helpviewer_keywords:
 - DML_CUMULATIVE_SUMMATION_OPERATOR_DESC
 - DML_CUMULATIVE_SUMMATION_OPERATOR_DESC structure
@@ -45,19 +45,19 @@ api_location:
 - DirectML.h
 api_name:
 - DML_CUMULATIVE_SUMMATION_OPERATOR_DESC
-ms.openlocfilehash: 955e70a8cfbb57995d77d73567238d082b96999b
-ms.sourcegitcommit: 3bdf30edb314e0fcd17dc4ddbc70e4ec7d3596e6
+ms.openlocfilehash: 2862a2add207b0bb6c41f5c1aabbc390797cba23
+ms.sourcegitcommit: 8e1f04c7e3c5c850071bac8d173f9441aab0dfed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "106355095"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107803349"
 ---
-# <a name="dml_cumulative_summation_operator_desc-structure-directmlh"></a>DML_CUMULATIVE_SUMMATION_OPERATOR_DESC-Struktur (directml. h)
+# <a name="dml_cumulative_summation_operator_desc-structure-directmlh"></a>DML_CUMULATIVE_SUMMATION_OPERATOR_DESC-Struktur (directml.h)
 
-Fasst die Elemente eines Mandanten auf einer Achse zusammen, wobei der laufende Zähler der Summierungs-in den Ausgabe Mandanten geschrieben wird.
+Summiert die Elemente eines Tensors entlang einer Achse und schreibt die laufende Tally der Summierung in den Ausgabe-Tensor.
 
 > [!IMPORTANT]
-> Diese API ist als Teil des eigenständigen Redistributable Package von directml verfügbar (siehe [Microsoft. ai. directml](https://www.nuget.org/packages/Microsoft.AI.DirectML/)). Siehe auch [Versionsverlauf der directml](../dml-version-history.md).
+> Diese API ist als Teil des eigenständigen verteilbaren DirectML-Pakets verfügbar (siehe [Microsoft.AI.DirectML](https://www.nuget.org/packages/Microsoft.AI.DirectML/) Version 1.4 und höher). Siehe auch [DirectML-Versionsverlauf.](../dml-version-history.md)
 
 ## <a name="syntax"></a>Syntax
 ```cpp
@@ -70,60 +70,123 @@ struct DML_CUMULATIVE_SUMMATION_OPERATOR_DESC {
 };
 ```
 
-
-
 ## <a name="members"></a>Member
 
 `InputTensor`
 
-Typ: Konstante **[DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
+Typ: **const [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
 
-Der eingabensor, der die zu summierenden Elemente enthält.
-
+Der Eingabe-Tensor, der elemente enthält, die summiert werden sollen.
 
 `OutputTensor`
 
-Typ: Konstante **[DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
+Typ: **const [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
 
-Der Ausgabe Mandanten, in den die resultierenden kumulativen Summen geschrieben werden sollen. Dieser Mandanten muss dieselbe Größe und denselben Datentyp aufweisen wie der *inputtensor*.
-
+Der Ausgabe-Tensor, in den die resultierenden kumulativen Summierungen geschrieben werden sollen. Dieser Tensor muss die gleichen Größen und denselben Datentyp wie *inputTensor aufweisen.*
 
 `Axis`
 
-Typ: [ **uint**](/windows/desktop/winprog/windows-data-types)
+Typ: [ **UINT**](/windows/desktop/winprog/windows-data-types)
 
-Der Index der Dimension, über die Elemente zusammengefasst werden sollen. Dieser Wert muss kleiner als die *DimensionCount* von " *inputtensor*" sein.
-
+Der Index der Dimension, über die Elemente summt werden sollen. Dieser Wert muss kleiner als *dimensionCount* des *InputTensor* sein.
 
 `AxisDirection`
 
 Typ: **[DML_AXIS_DIRECTION](./ne-directml-dml_axis_direction.md)**
 
-Einer der Werte der [DML_AXIS_DIRECTION](./ne-directml-dml_axis_direction.md) Enumeration. Wenn der Wert auf **DML_AXIS_DIRECTION_INCREASING** festgelegt ist, erfolgt die Summe, indem der tensorflow entlang der angegebenen Achse durch den aufsteigenden Element Index durchlaufen wird. Wenn **DML_AXIS_DIRECTION_DECREASING** auf festgelegt ist, ist der umgekehrte Wert true, und die Summe erfolgt durch das Durchlaufen von Elementen nach absteigender Index.
-
+Einer der Werte [](./ne-directml-dml_axis_direction.md) der DML_AXIS_DIRECTION-Enumeration. Wenn auf **DML_AXIS_DIRECTION_INCREASING** festgelegt ist, erfolgt die Summierung durch Durchlaufen des Tensors entlang der angegebenen Achse durch aufsteigenden Elementindex. Wenn auf **DML_AXIS_DIRECTION_DECREASING** festgelegt ist, ist der umgekehrte Wert true, und die Summierung erfolgt durch Durchlaufen von Elementen durch absteigenden Index.
 
 `HasExclusiveSum`
 
+Typ: <b> <a href="/windows/win32/winprog/windows-data-types">BOOL</a></b>
 
+True gibt an, dass der Wert des aktuellen Elements beim Schreiben der ausgeführten Tally in den Ausgabe-Tensor ausgeschlossen wird. False gibt an, dass der Wert des aktuellen Elements in der ausgeführten Tally enthalten ist.
 
+## <a name="examples"></a>Beispiele
 
-## <a name="remarks"></a>Bemerkungen
-Dieser Operator unterstützt die direkte Ausführung, d. h., der *outputtensor* ist berechtigt, den *inputtensor* während der Bindung zu Alias.
+In den Beispielen in diesem Abschnitt wird ein Eingabe tensor mit den folgenden Eigenschaften verwendet.
+
+```
+InputTensor: (Sizes:{1,1,3,4}, DataType:FLOAT32)
+[[[[2, 1, 3, 5],
+   [3, 8, 7, 3],
+   [9, 6, 2, 4]]]]
+```
+
+### <a name="example-1-cumulative-summation-across-horizontal-slivers"></a>Beispiel 1: Kumulative Summe über horizontale Schrägstriche
+
+```
+Axis: 3
+AxisDirection: DML_AXIS_DIRECTION_INCREASING
+HasExclusiveSum: FALSE
+
+OutputTensor: (Sizes:{1,1,3,4}, DataType:FLOAT32)
+[[[[2,  3,  6, 11],     // i.e. [2, 2+1, 2+1+3, 2+1+3+5]
+   [3, 11, 18, 21],     //      [...                   ]
+   [9, 15, 17, 21]]]]   //      [...                   ]
+```
+
+### <a name="example-2-exclusive-sums"></a>Beispiel 2: Exklusive Summen
+
+Das *Festlegen von HasExclusiveSum* auf **TRUE** hat den Effekt, dass der Wert des aktuellen Elements beim Schreiben in den Ausgabemandor von der ausgeführten Zählung ausgenommen wird.
+
+```
+Axis: 3
+AxisDirection: DML_AXIS_DIRECTION_INCREASING
+HasExclusiveSum: TRUE
+
+OutputTensor: (Sizes:{1,1,3,4}, DataType:FLOAT32)
+[[[[0, 2,  3,  6],      // Notice the sum is written before adding the input,
+   [0, 3, 11, 18],      // and the final total is not written to any output.
+   [0, 9, 15, 17]]]]
+```
+
+### <a name="example-3-axis-direction"></a>Beispiel 3: Achsenrichtung
+
+Das Festlegen *von AxisDirection* auf [DML_AXIS_DIRECTION_DECREASING](/windows/win32/api/directml/ne-directml-dml_axis_direction) hat den Effekt, dass die Durchlaufrichtung der Elemente beim Berechnen der ausgeführten Zählung umkehrt.
+
+```
+Axis: 3
+AxisDirection: DML_AXIS_DIRECTION_DECREASING
+HasExclusiveSum: FALSE
+
+OutputTensor: (Sizes:{1,1,3,4}, DataType:FLOAT32)
+[[[[11,  9,  8,  5],    // i.e. [2+1+3+5, 1+3+5, 3+5, 5]
+   [21, 18, 10,  3],    //      [...                   ]
+   [21, 12,  6,  4]]]]  //      [...                   ]
+```
+
+### <a name="example-4-summing-along-a-different-axis"></a>Beispiel 4. Summieren entlang einer anderen Achse
+
+In diesem Beispiel erfolgt die Summe vertikal entlang der Höhenachse (zweite Dimension).
+
+```
+Axis: 2
+AxisDirection: DML_AXIS_DIRECTION_INCREASING
+HasExclusiveSum: FALSE
+
+OutputTensor: (Sizes:{1,1,3,4}, DataType:FLOAT32)
+[[[[ 2,  1,  3,  5],   // i.e. [2,    ...]
+   [ 5,  9, 10,  8],   //      [2+3,  ...]
+   [14, 15, 12, 12]]]] //      [2+3+9 ...]
+```
+
+## <a name="remarks"></a>Hinweise
+Dieser Operator unterstützt die ausführungsbasierte Ausführung, d. h., der *OutputTensor* darf während der Bindung einen Alias für *den InputTensor* verwenden.
 
 ## <a name="availability"></a>Verfügbarkeit
-Dieser Operator wurde in eingeführt `DML_FEATURE_LEVEL_2_1` .
+Dieser Operator wurde in `DML_FEATURE_LEVEL_2_1` eingeführt.
 
-## <a name="tensor-constraints"></a>Tensor-Einschränkungen
-*Inputtensor* und *outputtensor* müssen über denselben *Datentyp* und dieselben *Größen* verfügen.
+## <a name="tensor-constraints"></a>Tensoreinschränkungen
+*InputTensor* und *OutputTensor* müssen den gleichen *Datentyp und* die *gleichen Größen haben.*
 
 ## <a name="tensor-support"></a>Tensor-Unterstützung
-| Tensorflow | Typ | Unterstützte Dimensions Anzahl | Unterstützte Datentypen |
+| Tensor | Typ | Unterstützte Dimensionsanzahl | Unterstützte Datentypen |
 | ------ | ---- | -------------------------- | -------------------- |
-| Inputtensor | Eingabe | 4 | Float32, FLOAT16, UInt32, UInt16 |
-| Outputtensor | Ausgabe | 4 | Float32, FLOAT16, UInt32, UInt16 |
-
+| InputTensor | Eingabe | 4 | FLOAT32, FLOAT16, UINT32, UINT16 |
+| OutputTensor | Ausgabe | 4 | FLOAT32, FLOAT16, UINT32, UINT16 |
 
 ## <a name="requirements"></a>Anforderungen
 | &nbsp; | &nbsp; |
 | ---- |:---- |
-| **Header** | directml. h |
+| **Header** | directml.h |
