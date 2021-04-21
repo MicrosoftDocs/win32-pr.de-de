@@ -1,7 +1,7 @@
 ---
 UID: NS:directml.DML_ELEMENT_WISE_LOGICAL_GREATER_THAN_OR_EQUAL_OPERATOR_DESC
 title: DML_ELEMENT_WISE_LOGICAL_GREATER_THAN_OR_EQUAL_OPERATOR_DESC
-description: Führt einen logischen *größer als oder gleich* für jedes Paar entsprechender Elemente der Eingabe-Tensoren aus, wobei das Ergebnis (1 für true, 0 für false) in das entsprechende Element von *outputtensor* gestellt wird.
+description: Führt ein logisches *größer als oder gleich für* jedes Paar der entsprechenden Elemente der Eingabe tensors aus, wobei das Ergebnis (1 für TRUE, 0 für FALSE) in das entsprechende Element von *OutputTensor* platziert wird.
 helpviewer_keywords:
 - DML_ELEMENT_WISE_LOGICAL_GREATER_THAN_OR_EQUAL_OPERATOR_DESC
 - DML_ELEMENT_WISE_LOGICAL_GREATER_THAN_OR_EQUAL_OPERATOR_DESC structure
@@ -45,25 +45,25 @@ api_location:
 - DirectML.h
 api_name:
 - DML_ELEMENT_WISE_LOGICAL_GREATER_THAN_OR_EQUAL_OPERATOR_DESC
-ms.openlocfilehash: bfe3c3abbabf0bd4f5dfa4d8393f3ed7d74a210f
-ms.sourcegitcommit: 3bdf30edb314e0fcd17dc4ddbc70e4ec7d3596e6
+ms.openlocfilehash: 4c20580a67117e6a605dfb0bf6611aca5cfd9e56
+ms.sourcegitcommit: 8e1f04c7e3c5c850071bac8d173f9441aab0dfed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "106351825"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107803091"
 ---
-# <a name="dml_element_wise_logical_greater_than_or_equal_operator_desc-structure-directmlh"></a><span data-ttu-id="a9d9b-103">DML_ELEMENT_WISE_LOGICAL_GREATER_THAN_OR_EQUAL_OPERATOR_DESC-Struktur (directml. h)</span><span class="sxs-lookup"><span data-stu-id="a9d9b-103">DML_ELEMENT_WISE_LOGICAL_GREATER_THAN_OR_EQUAL_OPERATOR_DESC structure (directml.h)</span></span>
+# <a name="dml_element_wise_logical_greater_than_or_equal_operator_desc-structure-directmlh"></a><span data-ttu-id="54fee-103">DML_ELEMENT_WISE_LOGICAL_GREATER_THAN_OR_EQUAL_OPERATOR_DESC-Struktur (directml.h)</span><span class="sxs-lookup"><span data-stu-id="54fee-103">DML_ELEMENT_WISE_LOGICAL_GREATER_THAN_OR_EQUAL_OPERATOR_DESC structure (directml.h)</span></span>
 
-<span data-ttu-id="a9d9b-104">Führt einen logischen *größer als oder gleich* für jedes Paar entsprechender Elemente der Eingabe-Tensoren aus, wobei das Ergebnis (1 für true, 0 für false) in das entsprechende Element von *outputtensor* gestellt wird.</span><span class="sxs-lookup"><span data-stu-id="a9d9b-104">Performs a logical *greater than or equal to* on each pair of corresponding elements of the input tensors, placing the result (1 for true, 0 for false) into the corresponding element of *OutputTensor*.</span></span>
+<span data-ttu-id="54fee-104">Führt ein logisches *größer als oder gleich für* jedes Paar der entsprechenden Elemente der Eingabe tensors aus, wobei das Ergebnis (1 für TRUE, 0 für FALSE) in das entsprechende Element von *OutputTensor* platziert wird.</span><span class="sxs-lookup"><span data-stu-id="54fee-104">Performs a logical *greater than or equal to* on each pair of corresponding elements of the input tensors, placing the result (1 for true, 0 for false) into the corresponding element of *OutputTensor*.</span></span>
 
 ```
 f(a, b) = (a >= b)
 ```
 
 > [!IMPORTANT]
-> <span data-ttu-id="a9d9b-105">Diese API ist als Teil des eigenständigen Redistributable Package von directml verfügbar (siehe [Microsoft. ai. directml](https://www.nuget.org/packages/Microsoft.AI.DirectML/)).</span><span class="sxs-lookup"><span data-stu-id="a9d9b-105">This API is available as part of the DirectML standalone redistributable package (see [Microsoft.AI.DirectML](https://www.nuget.org/packages/Microsoft.AI.DirectML/).</span></span> <span data-ttu-id="a9d9b-106">Siehe auch [Versionsverlauf der directml](../dml-version-history.md).</span><span class="sxs-lookup"><span data-stu-id="a9d9b-106">Also see [DirectML version history](../dml-version-history.md).</span></span>
+> <span data-ttu-id="54fee-105">Diese API ist als Teil des eigenständigen verteilbaren DirectML-Pakets verfügbar (siehe [Microsoft.AI.DirectML](https://www.nuget.org/packages/Microsoft.AI.DirectML/) Version 1.4 und höher).</span><span class="sxs-lookup"><span data-stu-id="54fee-105">This API is available as part of the DirectML standalone redistributable package (see [Microsoft.AI.DirectML](https://www.nuget.org/packages/Microsoft.AI.DirectML/) version 1.4 and later.</span></span> <span data-ttu-id="54fee-106">Siehe auch [DirectML-Versionsverlauf.](../dml-version-history.md)</span><span class="sxs-lookup"><span data-stu-id="54fee-106">Also see [DirectML version history](../dml-version-history.md).</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="a9d9b-107">Syntax</span><span class="sxs-lookup"><span data-stu-id="a9d9b-107">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="54fee-107">Syntax</span><span class="sxs-lookup"><span data-stu-id="54fee-107">Syntax</span></span>
 
 ```cpp
 struct DML_ELEMENT_WISE_LOGICAL_GREATER_THAN_OR_EQUAL_OPERATOR_DESC
@@ -74,41 +74,41 @@ struct DML_ELEMENT_WISE_LOGICAL_GREATER_THAN_OR_EQUAL_OPERATOR_DESC
 };
 ```
 
-## <a name="members"></a><span data-ttu-id="a9d9b-108">Member</span><span class="sxs-lookup"><span data-stu-id="a9d9b-108">Members</span></span>
+## <a name="members"></a><span data-ttu-id="54fee-108">Member</span><span class="sxs-lookup"><span data-stu-id="54fee-108">Members</span></span>
 
 `ATensor`
 
-<span data-ttu-id="a9d9b-109">Typ: Konstante **[DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***</span><span class="sxs-lookup"><span data-stu-id="a9d9b-109">Type: **const [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc)\***</span></span>
+<span data-ttu-id="54fee-109">Typ: **const [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***</span><span class="sxs-lookup"><span data-stu-id="54fee-109">Type: **const [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc)\***</span></span>
 
-<span data-ttu-id="a9d9b-110">Ein tensorflow, der die Links neben Eingaben enthält.</span><span class="sxs-lookup"><span data-stu-id="a9d9b-110">A tensor containing the left-hand side inputs.</span></span>
+<span data-ttu-id="54fee-110">Ein Tensor, der die eingaben auf der linken Seite enthält.</span><span class="sxs-lookup"><span data-stu-id="54fee-110">A tensor containing the left-hand side inputs.</span></span>
 
 `BTensor`
 
-<span data-ttu-id="a9d9b-111">Typ: Konstante **[DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***</span><span class="sxs-lookup"><span data-stu-id="a9d9b-111">Type: **const [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc)\***</span></span>
+<span data-ttu-id="54fee-111">Typ: **const [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***</span><span class="sxs-lookup"><span data-stu-id="54fee-111">Type: **const [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc)\***</span></span>
 
-<span data-ttu-id="a9d9b-112">Ein tensorflow, der die Eingaben auf der rechten Seite enthält.</span><span class="sxs-lookup"><span data-stu-id="a9d9b-112">A tensor containing the right-hand side inputs.</span></span>
+<span data-ttu-id="54fee-112">Ein Tensor, der die rechten Eingaben enthält.</span><span class="sxs-lookup"><span data-stu-id="54fee-112">A tensor containing the right-hand side inputs.</span></span>
 
 `OutputTensor`
 
-<span data-ttu-id="a9d9b-113">Typ: Konstante **[DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***</span><span class="sxs-lookup"><span data-stu-id="a9d9b-113">Type: **const [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc)\***</span></span>
+<span data-ttu-id="54fee-113">Typ: **const [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***</span><span class="sxs-lookup"><span data-stu-id="54fee-113">Type: **const [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc)\***</span></span>
 
-<span data-ttu-id="a9d9b-114">Der Ausgabe Mandanten, in den die Ergebnisse geschrieben werden sollen.</span><span class="sxs-lookup"><span data-stu-id="a9d9b-114">The output tensor to write the results to.</span></span>
+<span data-ttu-id="54fee-114">Der Ausgabe-Tensor, in den die Ergebnisse geschrieben werden sollen.</span><span class="sxs-lookup"><span data-stu-id="54fee-114">The output tensor to write the results to.</span></span>
 
-## <a name="availability"></a><span data-ttu-id="a9d9b-115">Verfügbarkeit</span><span class="sxs-lookup"><span data-stu-id="a9d9b-115">Availability</span></span>
-<span data-ttu-id="a9d9b-116">Dieser Operator wurde in eingeführt `DML_FEATURE_LEVEL_3_0` .</span><span class="sxs-lookup"><span data-stu-id="a9d9b-116">This operator was introduced in `DML_FEATURE_LEVEL_3_0`.</span></span>
+## <a name="availability"></a><span data-ttu-id="54fee-115">Verfügbarkeit</span><span class="sxs-lookup"><span data-stu-id="54fee-115">Availability</span></span>
+<span data-ttu-id="54fee-116">Dieser Operator wurde in `DML_FEATURE_LEVEL_3_0` eingeführt.</span><span class="sxs-lookup"><span data-stu-id="54fee-116">This operator was introduced in `DML_FEATURE_LEVEL_3_0`.</span></span>
 
-## <a name="tensor-constraints"></a><span data-ttu-id="a9d9b-117">Tensor-Einschränkungen</span><span class="sxs-lookup"><span data-stu-id="a9d9b-117">Tensor constraints</span></span>
-* <span data-ttu-id="a9d9b-118">*Atensor* und *btensor* müssen denselben *Datentyp* aufweisen.</span><span class="sxs-lookup"><span data-stu-id="a9d9b-118">*ATensor* and *BTensor* must have the same *DataType*.</span></span>
-* <span data-ttu-id="a9d9b-119">*Atensor*, *btensor* und *outputtensor* müssen die gleiche *DimensionCount* und *Größe* aufweisen.</span><span class="sxs-lookup"><span data-stu-id="a9d9b-119">*ATensor*, *BTensor*, and *OutputTensor* must have the same *DimensionCount* and *Sizes*.</span></span>
+## <a name="tensor-constraints"></a><span data-ttu-id="54fee-117">Tensoreinschränkungen</span><span class="sxs-lookup"><span data-stu-id="54fee-117">Tensor constraints</span></span>
+* <span data-ttu-id="54fee-118">*ATensor* und *BTensor* müssen den gleichen *Datentyp aufweisen.*</span><span class="sxs-lookup"><span data-stu-id="54fee-118">*ATensor* and *BTensor* must have the same *DataType*.</span></span>
+* <span data-ttu-id="54fee-119">*ATensor,* *BTensor* und *OutputTensor* müssen die gleichen *DimensionCount-* und *Größen aufweisen.*</span><span class="sxs-lookup"><span data-stu-id="54fee-119">*ATensor*, *BTensor*, and *OutputTensor* must have the same *DimensionCount* and *Sizes*.</span></span>
 
-## <a name="tensor-support"></a><span data-ttu-id="a9d9b-120">Tensor-Unterstützung</span><span class="sxs-lookup"><span data-stu-id="a9d9b-120">Tensor support</span></span>
-| <span data-ttu-id="a9d9b-121">Tensorflow</span><span class="sxs-lookup"><span data-stu-id="a9d9b-121">Tensor</span></span> | <span data-ttu-id="a9d9b-122">Typ</span><span class="sxs-lookup"><span data-stu-id="a9d9b-122">Kind</span></span> | <span data-ttu-id="a9d9b-123">Unterstützte Dimensions Anzahl</span><span class="sxs-lookup"><span data-stu-id="a9d9b-123">Supported dimension counts</span></span> | <span data-ttu-id="a9d9b-124">Unterstützte Datentypen</span><span class="sxs-lookup"><span data-stu-id="a9d9b-124">Supported data types</span></span> |
+## <a name="tensor-support"></a><span data-ttu-id="54fee-120">Tensor-Unterstützung</span><span class="sxs-lookup"><span data-stu-id="54fee-120">Tensor support</span></span>
+| <span data-ttu-id="54fee-121">Tensor</span><span class="sxs-lookup"><span data-stu-id="54fee-121">Tensor</span></span> | <span data-ttu-id="54fee-122">Typ</span><span class="sxs-lookup"><span data-stu-id="54fee-122">Kind</span></span> | <span data-ttu-id="54fee-123">Unterstützte Dimensionsanzahlen</span><span class="sxs-lookup"><span data-stu-id="54fee-123">Supported dimension counts</span></span> | <span data-ttu-id="54fee-124">Unterstützte Datentypen</span><span class="sxs-lookup"><span data-stu-id="54fee-124">Supported data types</span></span> |
 | ------ | ---- | -------------------------- | -------------------- |
-| <span data-ttu-id="a9d9b-125">Atensor</span><span class="sxs-lookup"><span data-stu-id="a9d9b-125">ATensor</span></span> | <span data-ttu-id="a9d9b-126">Eingabe</span><span class="sxs-lookup"><span data-stu-id="a9d9b-126">Input</span></span> | <span data-ttu-id="a9d9b-127">1 bis 8</span><span class="sxs-lookup"><span data-stu-id="a9d9b-127">1 to 8</span></span> | <span data-ttu-id="a9d9b-128">Float32, FLOAT16, Int32, INT16, int8, UInt32, UInt16, Uint8</span><span class="sxs-lookup"><span data-stu-id="a9d9b-128">FLOAT32, FLOAT16, INT32, INT16, INT8, UINT32, UINT16, UINT8</span></span> |
-| <span data-ttu-id="a9d9b-129">Btensor</span><span class="sxs-lookup"><span data-stu-id="a9d9b-129">BTensor</span></span> | <span data-ttu-id="a9d9b-130">Eingabe</span><span class="sxs-lookup"><span data-stu-id="a9d9b-130">Input</span></span> | <span data-ttu-id="a9d9b-131">1 bis 8</span><span class="sxs-lookup"><span data-stu-id="a9d9b-131">1 to 8</span></span> | <span data-ttu-id="a9d9b-132">Float32, FLOAT16, Int32, INT16, int8, UInt32, UInt16, Uint8</span><span class="sxs-lookup"><span data-stu-id="a9d9b-132">FLOAT32, FLOAT16, INT32, INT16, INT8, UINT32, UINT16, UINT8</span></span> |
-| <span data-ttu-id="a9d9b-133">Outputtensor</span><span class="sxs-lookup"><span data-stu-id="a9d9b-133">OutputTensor</span></span> | <span data-ttu-id="a9d9b-134">Ausgabe</span><span class="sxs-lookup"><span data-stu-id="a9d9b-134">Output</span></span> | <span data-ttu-id="a9d9b-135">1 bis 8</span><span class="sxs-lookup"><span data-stu-id="a9d9b-135">1 to 8</span></span> | <span data-ttu-id="a9d9b-136">UInt32, Uint8</span><span class="sxs-lookup"><span data-stu-id="a9d9b-136">UINT32, UINT8</span></span> |
+| <span data-ttu-id="54fee-125">ATensor</span><span class="sxs-lookup"><span data-stu-id="54fee-125">ATensor</span></span> | <span data-ttu-id="54fee-126">Eingabe</span><span class="sxs-lookup"><span data-stu-id="54fee-126">Input</span></span> | <span data-ttu-id="54fee-127">1 bis 8</span><span class="sxs-lookup"><span data-stu-id="54fee-127">1 to 8</span></span> | <span data-ttu-id="54fee-128">FLOAT32, FLOAT16, INT32, INT16, INT8, UINT32, UINT16, UINT8</span><span class="sxs-lookup"><span data-stu-id="54fee-128">FLOAT32, FLOAT16, INT32, INT16, INT8, UINT32, UINT16, UINT8</span></span> |
+| <span data-ttu-id="54fee-129">BTensor</span><span class="sxs-lookup"><span data-stu-id="54fee-129">BTensor</span></span> | <span data-ttu-id="54fee-130">Eingabe</span><span class="sxs-lookup"><span data-stu-id="54fee-130">Input</span></span> | <span data-ttu-id="54fee-131">1 bis 8</span><span class="sxs-lookup"><span data-stu-id="54fee-131">1 to 8</span></span> | <span data-ttu-id="54fee-132">FLOAT32, FLOAT16, INT32, INT16, INT8, UINT32, UINT16, UINT8</span><span class="sxs-lookup"><span data-stu-id="54fee-132">FLOAT32, FLOAT16, INT32, INT16, INT8, UINT32, UINT16, UINT8</span></span> |
+| <span data-ttu-id="54fee-133">OutputTensor</span><span class="sxs-lookup"><span data-stu-id="54fee-133">OutputTensor</span></span> | <span data-ttu-id="54fee-134">Ausgabe</span><span class="sxs-lookup"><span data-stu-id="54fee-134">Output</span></span> | <span data-ttu-id="54fee-135">1 bis 8</span><span class="sxs-lookup"><span data-stu-id="54fee-135">1 to 8</span></span> | <span data-ttu-id="54fee-136">UINT32, UINT8</span><span class="sxs-lookup"><span data-stu-id="54fee-136">UINT32, UINT8</span></span> |
 
-## <a name="requirements"></a><span data-ttu-id="a9d9b-137">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="a9d9b-137">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="54fee-137">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="54fee-137">Requirements</span></span>
 | &nbsp; | &nbsp; |
 | ---- |:---- |
-| <span data-ttu-id="a9d9b-138">**Header**</span><span class="sxs-lookup"><span data-stu-id="a9d9b-138">**Header**</span></span> | <span data-ttu-id="a9d9b-139">directml. h</span><span class="sxs-lookup"><span data-stu-id="a9d9b-139">directml.h</span></span> |
+| <span data-ttu-id="54fee-138">**Header**</span><span class="sxs-lookup"><span data-stu-id="54fee-138">**Header**</span></span> | <span data-ttu-id="54fee-139">directml.h</span><span class="sxs-lookup"><span data-stu-id="54fee-139">directml.h</span></span> |

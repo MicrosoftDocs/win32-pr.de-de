@@ -1,7 +1,7 @@
 ---
 UID: NS:directml.DML_MEAN_VARIANCE_NORMALIZATION1_OPERATOR_DESC
 title: DML_MEAN_VARIANCE_NORMALIZATION1_OPERATOR_DESC
-description: Führt eine Mean-Varianz Normalisierungsfunktion für den eingabetensor aus. Dieser Operator berechnet den Mittelwert und die Varianz des Eingabe Mandanten, um die Normalisierung auszuführen.
+description: Führt eine Normalisierungsfunktion für mittlere Varianz für den Eingabetensor aus. Dieser Operator berechnet den Mittelwert und die Varianz des Eingabe tensors, um die Normalisierung durchzuführen.
 helpviewer_keywords:
 - DML_MEAN_VARIANCE_NORMALIZATION1_OPERATOR_DESC
 - DML_MEAN_VARIANCE_NORMALIZATION1_OPERATOR_DESC structure
@@ -44,24 +44,25 @@ api_location:
 - DirectML.h
 api_name:
 - DML_MEAN_VARIANCE_NORMALIZATION1_OPERATOR_DESC
-ms.openlocfilehash: f3302f8081ed4bf64fa858ac3e303519089d01fb
-ms.sourcegitcommit: 3bdf30edb314e0fcd17dc4ddbc70e4ec7d3596e6
+ms.openlocfilehash: 759bf25d4b6a97e70c6de7708a5c9fd0bccae439
+ms.sourcegitcommit: 8e1f04c7e3c5c850071bac8d173f9441aab0dfed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "106373409"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107803397"
 ---
-# <a name="dml_mean_variance_normalization1_operator_desc-structure-directmlh"></a><span data-ttu-id="ca818-104">DML_MEAN_VARIANCE_NORMALIZATION1_OPERATOR_DESC-Struktur (directml. h)</span><span class="sxs-lookup"><span data-stu-id="ca818-104">DML_MEAN_VARIANCE_NORMALIZATION1_OPERATOR_DESC structure (directml.h)</span></span>
-<span data-ttu-id="ca818-105">Führt eine Mean-Varianz Normalisierungsfunktion für den eingabetensor aus.</span><span class="sxs-lookup"><span data-stu-id="ca818-105">Performs a mean variance normalization function on the input tensor.</span></span> <span data-ttu-id="ca818-106">Dieser Operator berechnet den Mittelwert und die Varianz des Eingabe Mandanten, um die Normalisierung auszuführen.</span><span class="sxs-lookup"><span data-stu-id="ca818-106">This operator will calculate the mean and variance of the input tensor to perform normalization.</span></span> <span data-ttu-id="ca818-107">Dieser Operator führt die folgende Berechnung aus.</span><span class="sxs-lookup"><span data-stu-id="ca818-107">This operator performs the following computation.</span></span>
+# <a name="dml_mean_variance_normalization1_operator_desc-structure-directmlh"></a><span data-ttu-id="fd99d-104">DML_MEAN_VARIANCE_NORMALIZATION1_OPERATOR_DESC -Struktur (directml.h)</span><span class="sxs-lookup"><span data-stu-id="fd99d-104">DML_MEAN_VARIANCE_NORMALIZATION1_OPERATOR_DESC structure (directml.h)</span></span>
+
+<span data-ttu-id="fd99d-105">Führt eine Normalisierungsfunktion für mittlere Varianz für den Eingabetensor aus.</span><span class="sxs-lookup"><span data-stu-id="fd99d-105">Performs a mean variance normalization function on the input tensor.</span></span> <span data-ttu-id="fd99d-106">Dieser Operator berechnet den Mittelwert und die Varianz des Eingabe tensors, um die Normalisierung durchzuführen.</span><span class="sxs-lookup"><span data-stu-id="fd99d-106">This operator will calculate the mean and variance of the input tensor to perform normalization.</span></span> <span data-ttu-id="fd99d-107">Dieser Operator führt die folgende Berechnung aus.</span><span class="sxs-lookup"><span data-stu-id="fd99d-107">This operator performs the following computation.</span></span>
 
 ```
 Output = FusedActivation(Scale * ((Input - Mean) / sqrt(Variance + Epsilon)) + Bias).
 ```
 
 > [!IMPORTANT]
-> <span data-ttu-id="ca818-108">Diese API ist als Teil des eigenständigen Redistributable Package von directml verfügbar (siehe [Microsoft. ai. directml](https://www.nuget.org/packages/Microsoft.AI.DirectML/)).</span><span class="sxs-lookup"><span data-stu-id="ca818-108">This API is available as part of the DirectML standalone redistributable package (see [Microsoft.AI.DirectML](https://www.nuget.org/packages/Microsoft.AI.DirectML/).</span></span> <span data-ttu-id="ca818-109">Siehe auch [Versionsverlauf der directml](../dml-version-history.md).</span><span class="sxs-lookup"><span data-stu-id="ca818-109">Also see [DirectML version history](../dml-version-history.md).</span></span>
+> <span data-ttu-id="fd99d-108">Diese API ist als Teil des eigenständigen weiterverteilten DirectML-Pakets verfügbar (siehe [Microsoft.AI.DirectML](https://www.nuget.org/packages/Microsoft.AI.DirectML/) Version 1.4 und höher).</span><span class="sxs-lookup"><span data-stu-id="fd99d-108">This API is available as part of the DirectML standalone redistributable package (see [Microsoft.AI.DirectML](https://www.nuget.org/packages/Microsoft.AI.DirectML/) version 1.4 and later.</span></span> <span data-ttu-id="fd99d-109">Siehe auch [DirectML-Versionsverlauf.](../dml-version-history.md)</span><span class="sxs-lookup"><span data-stu-id="fd99d-109">Also see [DirectML version history](../dml-version-history.md).</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="ca818-110">Syntax</span><span class="sxs-lookup"><span data-stu-id="ca818-110">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="fd99d-110">Syntax</span><span class="sxs-lookup"><span data-stu-id="fd99d-110">Syntax</span></span>
 ```cpp
 struct DML_MEAN_VARIANCE_NORMALIZATION1_OPERATOR_DESC {
   const DML_TENSOR_DESC   *InputTensor;
@@ -75,98 +76,110 @@ struct DML_MEAN_VARIANCE_NORMALIZATION1_OPERATOR_DESC {
   const DML_OPERATOR_DESC *FusedActivation;
 };
 ```
-
-
-
-## <a name="members"></a><span data-ttu-id="ca818-111">Member</span><span class="sxs-lookup"><span data-stu-id="ca818-111">Members</span></span>
+## <a name="members"></a><span data-ttu-id="fd99d-111">Member</span><span class="sxs-lookup"><span data-stu-id="fd99d-111">Members</span></span>
 
 `InputTensor`
 
-<span data-ttu-id="ca818-112">Typ: Konstante **[DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***</span><span class="sxs-lookup"><span data-stu-id="ca818-112">Type: **const [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc)\***</span></span>
+<span data-ttu-id="fd99d-112">Typ: **const [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***</span><span class="sxs-lookup"><span data-stu-id="fd99d-112">Type: **const [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc)\***</span></span>
 
-<span data-ttu-id="ca818-113">Ein tensorflow, der die Eingabedaten enthält.</span><span class="sxs-lookup"><span data-stu-id="ca818-113">A tensor containing the Input data.</span></span> <span data-ttu-id="ca818-114">Diese Tensor-Dimensionen sollten lauten `{ BatchCount, ChannelCount, Height, Width }` .</span><span class="sxs-lookup"><span data-stu-id="ca818-114">This tensor's dimensions should be `{ BatchCount, ChannelCount, Height, Width }`.</span></span>
-
+<span data-ttu-id="fd99d-113">Ein Tensor, der die Eingabedaten enthält.</span><span class="sxs-lookup"><span data-stu-id="fd99d-113">A tensor containing the Input data.</span></span> <span data-ttu-id="fd99d-114">Die Dimensionen dieses Tensors sollten `{ BatchCount, ChannelCount, Height, Width }` sein.</span><span class="sxs-lookup"><span data-stu-id="fd99d-114">This tensor's dimensions should be `{ BatchCount, ChannelCount, Height, Width }`.</span></span>
 
 `ScaleTensor`
 
-<span data-ttu-id="ca818-115">Type: \_ maybenull \_ **Konstanten [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***</span><span class="sxs-lookup"><span data-stu-id="ca818-115">Type: \_Maybenull\_ **const [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc)\***</span></span>
+<span data-ttu-id="fd99d-115">Typ: \_ Maybenull \_ **const [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***</span><span class="sxs-lookup"><span data-stu-id="fd99d-115">Type: \_Maybenull\_ **const [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc)\***</span></span>
 
-<span data-ttu-id="ca818-116">Ein optionaler tensorflow, der die Skalierungs Daten enthält.</span><span class="sxs-lookup"><span data-stu-id="ca818-116">An optional tensor containing the Scale data.</span></span> <span data-ttu-id="ca818-117">Diese Tensor-Dimensionen sollten lauten `{ BatchCount, ChannelCount, Height, Width }` .</span><span class="sxs-lookup"><span data-stu-id="ca818-117">This tensor's dimensions should be `{ BatchCount, ChannelCount, Height, Width }`.</span></span> <span data-ttu-id="ca818-118">Jede Dimension kann durch 1 ersetzt werden, um Sie in dieser Dimension zu übertragen.</span><span class="sxs-lookup"><span data-stu-id="ca818-118">Any dimension can be replaced with 1 to broadcast in that dimension.</span></span> <span data-ttu-id="ca818-119">Dieser tensorflow ist erforderlich, wenn der *biastensor* verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="ca818-119">This tensor is required if the *BiasTensor* is used.</span></span>
+<span data-ttu-id="fd99d-116">Ein optionaler Tensor, der die Skalierungsdaten enthält.</span><span class="sxs-lookup"><span data-stu-id="fd99d-116">An optional tensor containing the Scale data.</span></span>
 
+<span data-ttu-id="fd99d-117">Wenn **DML_FEATURE_LEVEL** kleiner als **DML_FEATURE_LEVEL_4_0** ist, sollten die Dimensionen dieses Tensors `{ ScaleBatchCount, ChannelCount, ScaleHeight, ScaleWidth }` sein.</span><span class="sxs-lookup"><span data-stu-id="fd99d-117">If **DML_FEATURE_LEVEL** is less than **DML_FEATURE_LEVEL_4_0**, then this tensor's dimensions should be `{ ScaleBatchCount, ChannelCount, ScaleHeight, ScaleWidth }`.</span></span> <span data-ttu-id="fd99d-118">Die Dimensionen ScaleBatchCount, ScaleHeight und ScaleWidth sollten entweder *mit InputTensor* übereinstimmen oder auf 1 festgelegt werden, um diese Dimensionen automatisch über die Eingabe zu übertragen.</span><span class="sxs-lookup"><span data-stu-id="fd99d-118">The dimensions ScaleBatchCount, ScaleHeight, and ScaleWidth should either match *InputTensor*, or be set to 1 to automatically broadcast those dimensions across the input.</span></span>
+
+<span data-ttu-id="fd99d-119">Wenn **DML_FEATURE_LEVEL** größer oder gleich **DML_FEATURE_LEVEL_4_0** ist, kann jede Dimension auf 1 festgelegt und automatisch so übertragen werden, dass sie *inputTensor entspricht.*</span><span class="sxs-lookup"><span data-stu-id="fd99d-119">If **DML_FEATURE_LEVEL** is greater than or equal to **DML_FEATURE_LEVEL_4_0**, then any dimension can be set to 1, and be automatically broadcast to match *InputTensor*.</span></span>
+
+<span data-ttu-id="fd99d-120">Dieser Tensor ist erforderlich, wenn *der BiasTensor* verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="fd99d-120">This tensor is required if the *BiasTensor* is used.</span></span>
 
 `BiasTensor`
 
-<span data-ttu-id="ca818-120">Type: \_ maybenull \_ **Konstanten [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***</span><span class="sxs-lookup"><span data-stu-id="ca818-120">Type: \_Maybenull\_ **const [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc)\***</span></span>
+<span data-ttu-id="fd99d-121">Typ: \_ Maybenull \_ **const [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***</span><span class="sxs-lookup"><span data-stu-id="fd99d-121">Type: \_Maybenull\_ **const [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc)\***</span></span>
 
-<span data-ttu-id="ca818-121">Ein optionaler tensorflow, der die Daten der Bias enthält.</span><span class="sxs-lookup"><span data-stu-id="ca818-121">An optional tensor containing the bias data.</span></span> <span data-ttu-id="ca818-122">Diese Tensor-Dimensionen sollten lauten `{ BatchCount, ChannelCount, Height, Width }` .</span><span class="sxs-lookup"><span data-stu-id="ca818-122">This tensor's dimensions should be `{ BatchCount, ChannelCount, Height, Width }`.</span></span> <span data-ttu-id="ca818-123">Jede Dimension kann durch 1 ersetzt werden, um Sie in dieser Dimension zu übertragen.</span><span class="sxs-lookup"><span data-stu-id="ca818-123">Any dimension can be replaced with 1 to broadcast in that dimension.</span></span> <span data-ttu-id="ca818-124">Dieser tensorflow ist erforderlich, wenn der *scaletensor* verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="ca818-124">This tensor is required if the *ScaleTensor* is used.</span></span>
 
+<span data-ttu-id="fd99d-122">Ein optionaler Tensor, der die Bias-Daten enthält.</span><span class="sxs-lookup"><span data-stu-id="fd99d-122">An optional tensor containing the Bias data.</span></span>
+
+<span data-ttu-id="fd99d-123">Wenn **DML_FEATURE_LEVEL** kleiner als **DML_FEATURE_LEVEL_4_0** ist, sollten die Dimensionen dieses Tensors `{ BiasBatchCount, ChannelCount, BiasHeight, BiasWidth }` sein.</span><span class="sxs-lookup"><span data-stu-id="fd99d-123">If **DML_FEATURE_LEVEL** is less than **DML_FEATURE_LEVEL_4_0**, then this tensor's dimensions should be `{ BiasBatchCount, ChannelCount, BiasHeight, BiasWidth }`.</span></span> <span data-ttu-id="fd99d-124">Die Dimensionen BiasBatchCount, BiasHeight und BiasWidth sollten entweder mit *InputTensor* übereinstimmen oder auf 1 festgelegt werden, um diese Dimensionen automatisch über die Eingabe zu übertragen.</span><span class="sxs-lookup"><span data-stu-id="fd99d-124">The dimensions BiasBatchCount, BiasHeight, and BiasWidth should either match *InputTensor*, or be set to 1 to automatically broadcast those dimensions across the input.</span></span>
+
+<span data-ttu-id="fd99d-125">Wenn **DML_FEATURE_LEVEL** größer oder gleich **DML_FEATURE_LEVEL_4_0** ist, kann jede Dimension auf 1 festgelegt und automatisch an *InputTensor* gesendet werden.</span><span class="sxs-lookup"><span data-stu-id="fd99d-125">If **DML_FEATURE_LEVEL** is greater than or equal to **DML_FEATURE_LEVEL_4_0**, then any dimension can be set to 1, and be automatically broadcast to match *InputTensor*.</span></span>
+
+<span data-ttu-id="fd99d-126">Dieser Tensor ist erforderlich, wenn *scaleTensor* verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="fd99d-126">This tensor is required if the *ScaleTensor* is used.</span></span>
 
 `OutputTensor`
 
-<span data-ttu-id="ca818-125">Typ: Konstante **[DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***</span><span class="sxs-lookup"><span data-stu-id="ca818-125">Type: **const [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc)\***</span></span>
+<span data-ttu-id="fd99d-127">Typ: **const [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***</span><span class="sxs-lookup"><span data-stu-id="fd99d-127">Type: **const [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc)\***</span></span>
 
-<span data-ttu-id="ca818-126">Ein tensorflow, in den die Ergebnisse geschrieben werden sollen.</span><span class="sxs-lookup"><span data-stu-id="ca818-126">A tensor to write the results to.</span></span> <span data-ttu-id="ca818-127">Die Dimensionen dieses Mandanten sind `{ BatchCount, ChannelCount, Height, Width }` .</span><span class="sxs-lookup"><span data-stu-id="ca818-127">This tensor's dimensions are `{ BatchCount, ChannelCount, Height, Width }`.</span></span>
-
+<span data-ttu-id="fd99d-128">Ein Tensor, in den die Ergebnisse geschrieben werden sollen.</span><span class="sxs-lookup"><span data-stu-id="fd99d-128">A tensor to write the results to.</span></span> <span data-ttu-id="fd99d-129">Die Dimensionen dieses Tensors sind `{ BatchCount, ChannelCount, Height, Width }` .</span><span class="sxs-lookup"><span data-stu-id="fd99d-129">This tensor's dimensions are `{ BatchCount, ChannelCount, Height, Width }`.</span></span>
 
 `AxisCount`
 
-<span data-ttu-id="ca818-128">Typ: <b> <a href="/windows/desktop/WinProg/windows-data-types">uint</a></b></span><span class="sxs-lookup"><span data-stu-id="ca818-128">Type: <b><a href="/windows/desktop/WinProg/windows-data-types">UINT</a></b></span></span>
+<span data-ttu-id="fd99d-130">Typ: <b> <a href="/windows/win32/winprog/windows-data-types">UINT</a></b></span><span class="sxs-lookup"><span data-stu-id="fd99d-130">Type: <b><a href="/windows/win32/winprog/windows-data-types">UINT</a></b></span></span>
 
-<span data-ttu-id="ca818-129">Die Anzahl der Achsen.</span><span class="sxs-lookup"><span data-stu-id="ca818-129">The number of axes.</span></span> <span data-ttu-id="ca818-130">Dieses Feld bestimmt die Größe des *Achsen* Arrays.</span><span class="sxs-lookup"><span data-stu-id="ca818-130">This field determines the size of the *Axes* array.</span></span>
-
+<span data-ttu-id="fd99d-131">Die Anzahl der Achsen.</span><span class="sxs-lookup"><span data-stu-id="fd99d-131">The number of axes.</span></span> <span data-ttu-id="fd99d-132">Dieses Feld bestimmt die Größe des *Axes-Arrays.*</span><span class="sxs-lookup"><span data-stu-id="fd99d-132">This field determines the size of the *Axes* array.</span></span>
 
 `Axes`
 
-<span data-ttu-id="ca818-131">Type: \_ Field \_ size \_ (axiscount) **Konstanten [uint](/windows/desktop/WinProg/windows-data-types) \***</span><span class="sxs-lookup"><span data-stu-id="ca818-131">Type: \_Field\_size\_(AxisCount) **const [UINT](/windows/desktop/WinProg/windows-data-types)\***</span></span> 
+<span data-ttu-id="fd99d-133">Typ: \_ \_ Feldgröße \_ (AxisCount) **const [UINT](/windows/win32/winprog/windows-data-types) \***</span><span class="sxs-lookup"><span data-stu-id="fd99d-133">Type: \_Field\_size\_(AxisCount) **const [UINT](/windows/win32/winprog/windows-data-types)\***</span></span> 
 
-<span data-ttu-id="ca818-132">Die Achsen, an denen der Mittelwert und die Varianz berechnet werden sollen.</span><span class="sxs-lookup"><span data-stu-id="ca818-132">The axes along which to calculate the Mean and Variance.</span></span>
-
+<span data-ttu-id="fd99d-134">Die Achsen, entlang derer Mittelwert und Varianz berechnet werden sollen.</span><span class="sxs-lookup"><span data-stu-id="fd99d-134">The axes along which to calculate the Mean and Variance.</span></span>
 
 `NormalizeVariance`
 
-<span data-ttu-id="ca818-133">Typ: <b> <a href="/windows/desktop/WinProg/windows-data-types">bool</a></b></span><span class="sxs-lookup"><span data-stu-id="ca818-133">Type: <b><a href="/windows/desktop/WinProg/windows-data-types">BOOL</a></b></span></span>
+<span data-ttu-id="fd99d-135">Typ: <b> <a href="/windows/win32/winprog/windows-data-types">BOOL</a></b></span><span class="sxs-lookup"><span data-stu-id="fd99d-135">Type: <b><a href="/windows/win32/winprog/windows-data-types">BOOL</a></b></span></span>
 
-<span data-ttu-id="ca818-134">**True** , wenn die normalisierungs Ebene Abweichungen in der normalisierungs Berechnung einschließt.</span><span class="sxs-lookup"><span data-stu-id="ca818-134">**TRUE** if the Normalization layer includes Variance in the normalization calculation.</span></span> <span data-ttu-id="ca818-135">Andernfalls **false**.</span><span class="sxs-lookup"><span data-stu-id="ca818-135">Otherwise, **FALSE**.</span></span> <span data-ttu-id="ca818-136">**False** gibt an, dass die normalisierungs Gleichung ist `Output = FusedActivation(Scale * (Input - Mean) + Bias)` .</span><span class="sxs-lookup"><span data-stu-id="ca818-136">If **FALSE**, then normalization equation is `Output = FusedActivation(Scale * (Input - Mean) + Bias)`.</span></span>
-
+<span data-ttu-id="fd99d-136">**TRUE,** wenn die Normalisierungsebene Varianz in die Normalisierungsberechnung einschließt.</span><span class="sxs-lookup"><span data-stu-id="fd99d-136">**TRUE** if the Normalization layer includes Variance in the normalization calculation.</span></span> <span data-ttu-id="fd99d-137">Andernfalls **FALSE.**</span><span class="sxs-lookup"><span data-stu-id="fd99d-137">Otherwise, **FALSE**.</span></span> <span data-ttu-id="fd99d-138">False gibt an, dass die Normalisierungsgleichung `Output = FusedActivation(Scale * (Input - Mean) + Bias)` ist.</span><span class="sxs-lookup"><span data-stu-id="fd99d-138">If **FALSE**, then normalization equation is `Output = FusedActivation(Scale * (Input - Mean) + Bias)`.</span></span>
 
 `Epsilon`
 
-<span data-ttu-id="ca818-137">Typ: <b> <a href="/windows/desktop/WinProg/windows-data-types">float</a></b></span><span class="sxs-lookup"><span data-stu-id="ca818-137">Type: <b><a href="/windows/desktop/WinProg/windows-data-types">FLOAT</a></b></span></span>
+<span data-ttu-id="fd99d-139">Typ: <b> <a href="/windows/win32/winprog/windows-data-types">FLOAT</a></b></span><span class="sxs-lookup"><span data-stu-id="fd99d-139">Type: <b><a href="/windows/win32/winprog/windows-data-types">FLOAT</a></b></span></span>
 
-<span data-ttu-id="ca818-138">Der Epsilon-Wert, der verwendet wird, um die Division durch Null zu vermeiden.</span><span class="sxs-lookup"><span data-stu-id="ca818-138">The epsilon value to use to avoid division by zero.</span></span> <span data-ttu-id="ca818-139">Der Wert 0,00001 wird als Standardwert empfohlen.</span><span class="sxs-lookup"><span data-stu-id="ca818-139">A value of 0.00001 is recommended as default.</span></span>
-
+<span data-ttu-id="fd99d-140">Der epsilon-Wert, der verwendet werden soll, um division durch 0 (null) zu vermeiden.</span><span class="sxs-lookup"><span data-stu-id="fd99d-140">The epsilon value to use to avoid division by zero.</span></span> <span data-ttu-id="fd99d-141">Der Standardwert ist 0,00001.</span><span class="sxs-lookup"><span data-stu-id="fd99d-141">A value of 0.00001 is recommended as default.</span></span>
 
 `FusedActivation`
 
-<span data-ttu-id="ca818-140">Type: \_ maybenull \_ **Konstanten [DML_OPERATOR_DESC](/windows/win32/api/directml/ns-directml-dml_operator_desc) \***</span><span class="sxs-lookup"><span data-stu-id="ca818-140">Type: \_Maybenull\_ **const [DML_OPERATOR_DESC](/windows/win32/api/directml/ns-directml-dml_operator_desc)\***</span></span>
+<span data-ttu-id="fd99d-142">Typ: \_ Maybenull \_ **const [DML_OPERATOR_DESC](/windows/win32/api/directml/ns-directml-dml_operator_desc) \***</span><span class="sxs-lookup"><span data-stu-id="fd99d-142">Type: \_Maybenull\_ **const [DML_OPERATOR_DESC](/windows/win32/api/directml/ns-directml-dml_operator_desc)\***</span></span>
 
-<span data-ttu-id="ca818-141">Eine optionale, bei der Normalisierung anzuwendende, Fused-Aktivierungs Schicht.</span><span class="sxs-lookup"><span data-stu-id="ca818-141">An optional fused activation layer to apply after the normalization.</span></span>
+<span data-ttu-id="fd99d-143">Eine optionale fused-Aktivierungsebene, die nach der Normalisierung angewendet werden soll.</span><span class="sxs-lookup"><span data-stu-id="fd99d-143">An optional fused activation layer to apply after the normalization.</span></span>
 
+## <a name="remarks"></a><span data-ttu-id="fd99d-144">Hinweise</span><span class="sxs-lookup"><span data-stu-id="fd99d-144">Remarks</span></span>
+<span data-ttu-id="fd99d-145">**DML_MEAN_VARIANCE_NORMALIZATION1_OPERATOR_DESC** ist eine Obermenge von Funktionen von [DML_MEAN_VARIANCE_NORMALIZATION_OPERATOR_DESC.](/windows/win32/api/directml/ns-directml-dml_mean_variance_normalization_operator_desc)</span><span class="sxs-lookup"><span data-stu-id="fd99d-145">**DML_MEAN_VARIANCE_NORMALIZATION1_OPERATOR_DESC** is a superset of functionality of [DML_MEAN_VARIANCE_NORMALIZATION_OPERATOR_DESC](/windows/win32/api/directml/ns-directml-dml_mean_variance_normalization_operator_desc).</span></span> <span data-ttu-id="fd99d-146">Hier entspricht das Festlegen des **Axes-Arrays** in DML_MEAN_VARIANCE_NORMALIZATION_OPERATOR_DESC dem Festlegen von `{ 0, 2, 3 }` *CrossChannel* auf **FALSE.** Das Festlegen des **Axes-Arrays** auf entspricht dem Festlegen von  `{ 1, 2, 3 }` *CrossChannel* auf **TRUE.**</span><span class="sxs-lookup"><span data-stu-id="fd99d-146">Here, setting the **Axes** array to `{ 0, 2, 3 }` is the equivalent of setting *CrossChannel* to **FALSE** in **DML_MEAN_VARIANCE_NORMALIZATION_OPERATOR_DESC**; while setting the **Axes** array to `{ 1, 2, 3 }` is equivalent of setting *CrossChannel* to **TRUE**.</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="ca818-142">Bemerkungen</span><span class="sxs-lookup"><span data-stu-id="ca818-142">Remarks</span></span>
-<span data-ttu-id="ca818-143">**DML_MEAN_VARIANCE_NORMALIZATION1_OPERATOR_DESC** ist eine supermenge der Funktionen von [DML_MEAN_VARIANCE_NORMALIZATION_OPERATOR_DESC](/windows/win32/api/directml/ns-directml-dml_mean_variance_normalization_operator_desc).</span><span class="sxs-lookup"><span data-stu-id="ca818-143">**DML_MEAN_VARIANCE_NORMALIZATION1_OPERATOR_DESC** is a superset of functionality of [DML_MEAN_VARIANCE_NORMALIZATION_OPERATOR_DESC](/windows/win32/api/directml/ns-directml-dml_mean_variance_normalization_operator_desc).</span></span> <span data-ttu-id="ca818-144">Hier ist das Festlegen des **Achsen** Arrays `{ 0, 2, 3 }` auf das Äquivalent der Einstellung von " *Crosschannel* " auf " **false** " in **DML_MEAN_VARIANCE_NORMALIZATION_OPERATOR_DESC**; beim Festlegen des **Achsen** Arrays auf entspricht das Festlegen `{ 1, 2, 3 }` von " *Crosschannel* " auf " **true**".</span><span class="sxs-lookup"><span data-stu-id="ca818-144">Here, setting the **Axes** array to `{ 0, 2, 3 }` is the equivalent of setting *CrossChannel* to **FALSE** in **DML_MEAN_VARIANCE_NORMALIZATION_OPERATOR_DESC**; while setting the **Axes** array to `{ 1, 2, 3 }` is equivalent of setting *CrossChannel* to **TRUE**.</span></span>
+## <a name="availability"></a><span data-ttu-id="fd99d-147">Verfügbarkeit</span><span class="sxs-lookup"><span data-stu-id="fd99d-147">Availability</span></span>
+<span data-ttu-id="fd99d-148">Dieser Operator wurde in `DML_FEATURE_LEVEL_2_1` eingeführt.</span><span class="sxs-lookup"><span data-stu-id="fd99d-148">This operator was introduced in `DML_FEATURE_LEVEL_2_1`.</span></span>
 
-## <a name="availability"></a><span data-ttu-id="ca818-145">Verfügbarkeit</span><span class="sxs-lookup"><span data-stu-id="ca818-145">Availability</span></span>
-<span data-ttu-id="ca818-146">Dieser Operator wurde in eingeführt `DML_FEATURE_LEVEL_2_1` .</span><span class="sxs-lookup"><span data-stu-id="ca818-146">This operator was introduced in `DML_FEATURE_LEVEL_2_1`.</span></span>
+## <a name="tensor-constraints"></a><span data-ttu-id="fd99d-149">Tensor-Einschränkungen</span><span class="sxs-lookup"><span data-stu-id="fd99d-149">Tensor constraints</span></span>
 
-## <a name="tensor-constraints"></a><span data-ttu-id="ca818-147">Tensor-Einschränkungen</span><span class="sxs-lookup"><span data-stu-id="ca818-147">Tensor constraints</span></span>
-* <span data-ttu-id="ca818-148">*Inputtensor* und *outputtensor* müssen über die gleichen *Größen* verfügen.</span><span class="sxs-lookup"><span data-stu-id="ca818-148">*InputTensor* and *OutputTensor* must have the same *Sizes*.</span></span>
-* <span data-ttu-id="ca818-149">' *Biastensor*', ' *inputtensor*', ' *outputtensor*' und ' *scaletensor* ' müssen denselben *Datentyp* aufweisen.</span><span class="sxs-lookup"><span data-stu-id="ca818-149">*BiasTensor*, *InputTensor*, *OutputTensor*, and *ScaleTensor* must have the same *DataType*.</span></span>
+<span data-ttu-id="fd99d-150">*BiasTensor,* *InputTensor,* *OutputTensor* und *ScaleTensor* müssen denselben *DataType* und *DimensionCount aufweisen.*</span><span class="sxs-lookup"><span data-stu-id="fd99d-150">*BiasTensor*, *InputTensor*, *OutputTensor*, and *ScaleTensor* must have the same *DataType* and *DimensionCount*.</span></span>
 
-## <a name="tensor-support"></a><span data-ttu-id="ca818-150">Tensor-Unterstützung</span><span class="sxs-lookup"><span data-stu-id="ca818-150">Tensor support</span></span>
-| <span data-ttu-id="ca818-151">Tensorflow</span><span class="sxs-lookup"><span data-stu-id="ca818-151">Tensor</span></span> | <span data-ttu-id="ca818-152">Typ</span><span class="sxs-lookup"><span data-stu-id="ca818-152">Kind</span></span> | <span data-ttu-id="ca818-153">Dimensionen</span><span class="sxs-lookup"><span data-stu-id="ca818-153">Dimensions</span></span> | <span data-ttu-id="ca818-154">Unterstützte Dimensions Anzahl</span><span class="sxs-lookup"><span data-stu-id="ca818-154">Supported dimension counts</span></span> | <span data-ttu-id="ca818-155">Unterstützte Datentypen</span><span class="sxs-lookup"><span data-stu-id="ca818-155">Supported data types</span></span> |
-| ------ | ---- | ---------- | -------------------------- | -------------------- |
-| <span data-ttu-id="ca818-156">Inputtensor</span><span class="sxs-lookup"><span data-stu-id="ca818-156">InputTensor</span></span> | <span data-ttu-id="ca818-157">Eingabe</span><span class="sxs-lookup"><span data-stu-id="ca818-157">Input</span></span> | <span data-ttu-id="ca818-158">{BatchCount, ChannelCount, Height, Width}</span><span class="sxs-lookup"><span data-stu-id="ca818-158">{ BatchCount, ChannelCount, Height, Width }</span></span> | <span data-ttu-id="ca818-159">4</span><span class="sxs-lookup"><span data-stu-id="ca818-159">4</span></span> | <span data-ttu-id="ca818-160">Float32, FLOAT16</span><span class="sxs-lookup"><span data-stu-id="ca818-160">FLOAT32, FLOAT16</span></span> |
-| <span data-ttu-id="ca818-161">Scaletensor</span><span class="sxs-lookup"><span data-stu-id="ca818-161">ScaleTensor</span></span> | <span data-ttu-id="ca818-162">Optionale Eingabe</span><span class="sxs-lookup"><span data-stu-id="ca818-162">Optional input</span></span> | <span data-ttu-id="ca818-163">{Scalebatchcount, scalechannelcount, ScaleHeight, ScaleWidth}</span><span class="sxs-lookup"><span data-stu-id="ca818-163">{ ScaleBatchCount, ScaleChannelCount, ScaleHeight, ScaleWidth }</span></span> | <span data-ttu-id="ca818-164">4</span><span class="sxs-lookup"><span data-stu-id="ca818-164">4</span></span> | <span data-ttu-id="ca818-165">Float32, FLOAT16</span><span class="sxs-lookup"><span data-stu-id="ca818-165">FLOAT32, FLOAT16</span></span> |
-| <span data-ttu-id="ca818-166">Biastensor</span><span class="sxs-lookup"><span data-stu-id="ca818-166">BiasTensor</span></span> | <span data-ttu-id="ca818-167">Optionale Eingabe</span><span class="sxs-lookup"><span data-stu-id="ca818-167">Optional input</span></span> | <span data-ttu-id="ca818-168">{Biasbatchcount, biaschannelcount, biasheight, biaswidth}</span><span class="sxs-lookup"><span data-stu-id="ca818-168">{ BiasBatchCount, BiasChannelCount, BiasHeight, BiasWidth }</span></span> | <span data-ttu-id="ca818-169">4</span><span class="sxs-lookup"><span data-stu-id="ca818-169">4</span></span> | <span data-ttu-id="ca818-170">Float32, FLOAT16</span><span class="sxs-lookup"><span data-stu-id="ca818-170">FLOAT32, FLOAT16</span></span> |
-| <span data-ttu-id="ca818-171">Outputtensor</span><span class="sxs-lookup"><span data-stu-id="ca818-171">OutputTensor</span></span> | <span data-ttu-id="ca818-172">Ausgabe</span><span class="sxs-lookup"><span data-stu-id="ca818-172">Output</span></span> | <span data-ttu-id="ca818-173">{BatchCount, ChannelCount, Height, Width}</span><span class="sxs-lookup"><span data-stu-id="ca818-173">{ BatchCount, ChannelCount, Height, Width }</span></span> | <span data-ttu-id="ca818-174">4</span><span class="sxs-lookup"><span data-stu-id="ca818-174">4</span></span> | <span data-ttu-id="ca818-175">Float32, FLOAT16</span><span class="sxs-lookup"><span data-stu-id="ca818-175">FLOAT32, FLOAT16</span></span> |
+## <a name="tensor-support"></a><span data-ttu-id="fd99d-151">Tensor-Unterstützung</span><span class="sxs-lookup"><span data-stu-id="fd99d-151">Tensor support</span></span>
 
+### <a name="dml_feature_level_3_1-and-above"></a><span data-ttu-id="fd99d-152">DML_FEATURE_LEVEL_3_1 und höher</span><span class="sxs-lookup"><span data-stu-id="fd99d-152">DML_FEATURE_LEVEL_3_1 and above</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="ca818-176">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="ca818-176">Requirements</span></span>
+| <span data-ttu-id="fd99d-153">Tensor</span><span class="sxs-lookup"><span data-stu-id="fd99d-153">Tensor</span></span> | <span data-ttu-id="fd99d-154">Typ</span><span class="sxs-lookup"><span data-stu-id="fd99d-154">Kind</span></span> | <span data-ttu-id="fd99d-155">Unterstützte Dimensionsanzahl</span><span class="sxs-lookup"><span data-stu-id="fd99d-155">Supported dimension counts</span></span> | <span data-ttu-id="fd99d-156">Unterstützte Datentypen</span><span class="sxs-lookup"><span data-stu-id="fd99d-156">Supported data types</span></span> |
+| ------ | ---- | -------------------------- | -------------------- |
+| <span data-ttu-id="fd99d-157">InputTensor</span><span class="sxs-lookup"><span data-stu-id="fd99d-157">InputTensor</span></span> | <span data-ttu-id="fd99d-158">Eingabe</span><span class="sxs-lookup"><span data-stu-id="fd99d-158">Input</span></span> | <span data-ttu-id="fd99d-159">1 bis 8</span><span class="sxs-lookup"><span data-stu-id="fd99d-159">1 to 8</span></span> | <span data-ttu-id="fd99d-160">FLOAT32, FLOAT16</span><span class="sxs-lookup"><span data-stu-id="fd99d-160">FLOAT32, FLOAT16</span></span> |
+| <span data-ttu-id="fd99d-161">ScaleTensor</span><span class="sxs-lookup"><span data-stu-id="fd99d-161">ScaleTensor</span></span> | <span data-ttu-id="fd99d-162">Optionale Eingabe</span><span class="sxs-lookup"><span data-stu-id="fd99d-162">Optional input</span></span> | <span data-ttu-id="fd99d-163">1 bis 8</span><span class="sxs-lookup"><span data-stu-id="fd99d-163">1 to 8</span></span> | <span data-ttu-id="fd99d-164">FLOAT32, FLOAT16</span><span class="sxs-lookup"><span data-stu-id="fd99d-164">FLOAT32, FLOAT16</span></span> |
+| <span data-ttu-id="fd99d-165">BiasTensor</span><span class="sxs-lookup"><span data-stu-id="fd99d-165">BiasTensor</span></span> | <span data-ttu-id="fd99d-166">Optionale Eingabe</span><span class="sxs-lookup"><span data-stu-id="fd99d-166">Optional input</span></span> | <span data-ttu-id="fd99d-167">1 bis 8</span><span class="sxs-lookup"><span data-stu-id="fd99d-167">1 to 8</span></span> | <span data-ttu-id="fd99d-168">FLOAT32, FLOAT16</span><span class="sxs-lookup"><span data-stu-id="fd99d-168">FLOAT32, FLOAT16</span></span> |
+| <span data-ttu-id="fd99d-169">OutputTensor</span><span class="sxs-lookup"><span data-stu-id="fd99d-169">OutputTensor</span></span> | <span data-ttu-id="fd99d-170">Ausgabe</span><span class="sxs-lookup"><span data-stu-id="fd99d-170">Output</span></span> | <span data-ttu-id="fd99d-171">1 bis 8</span><span class="sxs-lookup"><span data-stu-id="fd99d-171">1 to 8</span></span> | <span data-ttu-id="fd99d-172">FLOAT32, FLOAT16</span><span class="sxs-lookup"><span data-stu-id="fd99d-172">FLOAT32, FLOAT16</span></span> |
+
+### <a name="dml_feature_level_2_1-and-above"></a><span data-ttu-id="fd99d-173">DML_FEATURE_LEVEL_2_1 und höher</span><span class="sxs-lookup"><span data-stu-id="fd99d-173">DML_FEATURE_LEVEL_2_1 and above</span></span>
+
+| <span data-ttu-id="fd99d-174">Tensor</span><span class="sxs-lookup"><span data-stu-id="fd99d-174">Tensor</span></span> | <span data-ttu-id="fd99d-175">Typ</span><span class="sxs-lookup"><span data-stu-id="fd99d-175">Kind</span></span> | <span data-ttu-id="fd99d-176">Unterstützte Dimensionsanzahlen</span><span class="sxs-lookup"><span data-stu-id="fd99d-176">Supported dimension counts</span></span> | <span data-ttu-id="fd99d-177">Unterstützte Datentypen</span><span class="sxs-lookup"><span data-stu-id="fd99d-177">Supported data types</span></span> |
+| ------ | ---- | -------------------------- | -------------------- |
+| <span data-ttu-id="fd99d-178">InputTensor</span><span class="sxs-lookup"><span data-stu-id="fd99d-178">InputTensor</span></span> | <span data-ttu-id="fd99d-179">Eingabe</span><span class="sxs-lookup"><span data-stu-id="fd99d-179">Input</span></span> | <span data-ttu-id="fd99d-180">4</span><span class="sxs-lookup"><span data-stu-id="fd99d-180">4</span></span> | <span data-ttu-id="fd99d-181">FLOAT32, FLOAT16</span><span class="sxs-lookup"><span data-stu-id="fd99d-181">FLOAT32, FLOAT16</span></span> |
+| <span data-ttu-id="fd99d-182">ScaleTensor</span><span class="sxs-lookup"><span data-stu-id="fd99d-182">ScaleTensor</span></span> | <span data-ttu-id="fd99d-183">Optionale Eingabe</span><span class="sxs-lookup"><span data-stu-id="fd99d-183">Optional input</span></span> | <span data-ttu-id="fd99d-184">4</span><span class="sxs-lookup"><span data-stu-id="fd99d-184">4</span></span> | <span data-ttu-id="fd99d-185">FLOAT32, FLOAT16</span><span class="sxs-lookup"><span data-stu-id="fd99d-185">FLOAT32, FLOAT16</span></span> |
+| <span data-ttu-id="fd99d-186">BiasTensor</span><span class="sxs-lookup"><span data-stu-id="fd99d-186">BiasTensor</span></span> | <span data-ttu-id="fd99d-187">Optionale Eingabe</span><span class="sxs-lookup"><span data-stu-id="fd99d-187">Optional input</span></span> | <span data-ttu-id="fd99d-188">4</span><span class="sxs-lookup"><span data-stu-id="fd99d-188">4</span></span> | <span data-ttu-id="fd99d-189">FLOAT32, FLOAT16</span><span class="sxs-lookup"><span data-stu-id="fd99d-189">FLOAT32, FLOAT16</span></span> |
+| <span data-ttu-id="fd99d-190">OutputTensor</span><span class="sxs-lookup"><span data-stu-id="fd99d-190">OutputTensor</span></span> | <span data-ttu-id="fd99d-191">Ausgabe</span><span class="sxs-lookup"><span data-stu-id="fd99d-191">Output</span></span> | <span data-ttu-id="fd99d-192">4</span><span class="sxs-lookup"><span data-stu-id="fd99d-192">4</span></span> | <span data-ttu-id="fd99d-193">FLOAT32, FLOAT16</span><span class="sxs-lookup"><span data-stu-id="fd99d-193">FLOAT32, FLOAT16</span></span> |
+
+## <a name="requirements"></a><span data-ttu-id="fd99d-194">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="fd99d-194">Requirements</span></span>
 | &nbsp; | &nbsp; |
 | ---- |:---- |
-| <span data-ttu-id="ca818-177">**Header**</span><span class="sxs-lookup"><span data-stu-id="ca818-177">**Header**</span></span> | <span data-ttu-id="ca818-178">directml. h</span><span class="sxs-lookup"><span data-stu-id="ca818-178">directml.h</span></span> |
+| <span data-ttu-id="fd99d-195">**Header**</span><span class="sxs-lookup"><span data-stu-id="fd99d-195">**Header**</span></span> | <span data-ttu-id="fd99d-196">directml.h</span><span class="sxs-lookup"><span data-stu-id="fd99d-196">directml.h</span></span> |
 
-## <a name="see-also"></a><span data-ttu-id="ca818-179">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="ca818-179">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="fd99d-197">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="fd99d-197">See also</span></span>
 
-[<span data-ttu-id="ca818-180">Verwenden von Fused-Operatoren zur Verbesserung der Leistung</span><span class="sxs-lookup"><span data-stu-id="ca818-180">Using fused operators for improved performance</span></span>](../dml-fused-activations.md)
+[<span data-ttu-id="fd99d-198">Verwenden von fused-Operatoren für verbesserte Leistung</span><span class="sxs-lookup"><span data-stu-id="fd99d-198">Using fused operators for improved performance</span></span>](../dml-fused-activations.md)

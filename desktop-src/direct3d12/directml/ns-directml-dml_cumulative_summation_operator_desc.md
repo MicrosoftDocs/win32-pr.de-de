@@ -1,7 +1,7 @@
 ---
 UID: NS:directml.DML_CUMULATIVE_SUMMATION_OPERATOR_DESC
 title: DML_CUMULATIVE_SUMMATION_OPERATOR_DESC
-description: Fasst die Elemente eines Mandanten auf einer Achse zusammen, wobei der laufende Zähler der Summierungs-in den Ausgabe Mandanten geschrieben wird.
+description: Summiert die Elemente eines Tensors entlang einer Achse und schreibt die laufende Tally der Summierung in den Ausgabe-Tensor.
 helpviewer_keywords:
 - DML_CUMULATIVE_SUMMATION_OPERATOR_DESC
 - DML_CUMULATIVE_SUMMATION_OPERATOR_DESC structure
@@ -45,21 +45,21 @@ api_location:
 - DirectML.h
 api_name:
 - DML_CUMULATIVE_SUMMATION_OPERATOR_DESC
-ms.openlocfilehash: 955e70a8cfbb57995d77d73567238d082b96999b
-ms.sourcegitcommit: 3bdf30edb314e0fcd17dc4ddbc70e4ec7d3596e6
+ms.openlocfilehash: 2862a2add207b0bb6c41f5c1aabbc390797cba23
+ms.sourcegitcommit: 8e1f04c7e3c5c850071bac8d173f9441aab0dfed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "106355095"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107803349"
 ---
-# <a name="dml_cumulative_summation_operator_desc-structure-directmlh"></a><span data-ttu-id="933c5-103">DML_CUMULATIVE_SUMMATION_OPERATOR_DESC-Struktur (directml. h)</span><span class="sxs-lookup"><span data-stu-id="933c5-103">DML_CUMULATIVE_SUMMATION_OPERATOR_DESC structure (directml.h)</span></span>
+# <a name="dml_cumulative_summation_operator_desc-structure-directmlh"></a><span data-ttu-id="b1de4-103">DML_CUMULATIVE_SUMMATION_OPERATOR_DESC-Struktur (directml.h)</span><span class="sxs-lookup"><span data-stu-id="b1de4-103">DML_CUMULATIVE_SUMMATION_OPERATOR_DESC structure (directml.h)</span></span>
 
-<span data-ttu-id="933c5-104">Fasst die Elemente eines Mandanten auf einer Achse zusammen, wobei der laufende Zähler der Summierungs-in den Ausgabe Mandanten geschrieben wird.</span><span class="sxs-lookup"><span data-stu-id="933c5-104">Sums the elements of a tensor along an axis, writing the running tally of the summation into the output tensor.</span></span>
+<span data-ttu-id="b1de4-104">Summiert die Elemente eines Tensors entlang einer Achse und schreibt die laufende Tally der Summierung in den Ausgabe-Tensor.</span><span class="sxs-lookup"><span data-stu-id="b1de4-104">Sums the elements of a tensor along an axis, writing the running tally of the summation into the output tensor.</span></span>
 
 > [!IMPORTANT]
-> <span data-ttu-id="933c5-105">Diese API ist als Teil des eigenständigen Redistributable Package von directml verfügbar (siehe [Microsoft. ai. directml](https://www.nuget.org/packages/Microsoft.AI.DirectML/)).</span><span class="sxs-lookup"><span data-stu-id="933c5-105">This API is available as part of the DirectML standalone redistributable package (see [Microsoft.AI.DirectML](https://www.nuget.org/packages/Microsoft.AI.DirectML/).</span></span> <span data-ttu-id="933c5-106">Siehe auch [Versionsverlauf der directml](../dml-version-history.md).</span><span class="sxs-lookup"><span data-stu-id="933c5-106">Also see [DirectML version history](../dml-version-history.md).</span></span>
+> <span data-ttu-id="b1de4-105">Diese API ist als Teil des eigenständigen verteilbaren DirectML-Pakets verfügbar (siehe [Microsoft.AI.DirectML](https://www.nuget.org/packages/Microsoft.AI.DirectML/) Version 1.4 und höher).</span><span class="sxs-lookup"><span data-stu-id="b1de4-105">This API is available as part of the DirectML standalone redistributable package (see [Microsoft.AI.DirectML](https://www.nuget.org/packages/Microsoft.AI.DirectML/) version 1.4 and later.</span></span> <span data-ttu-id="b1de4-106">Siehe auch [DirectML-Versionsverlauf.](../dml-version-history.md)</span><span class="sxs-lookup"><span data-stu-id="b1de4-106">Also see [DirectML version history](../dml-version-history.md).</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="933c5-107">Syntax</span><span class="sxs-lookup"><span data-stu-id="933c5-107">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="b1de4-107">Syntax</span><span class="sxs-lookup"><span data-stu-id="b1de4-107">Syntax</span></span>
 ```cpp
 struct DML_CUMULATIVE_SUMMATION_OPERATOR_DESC {
   const DML_TENSOR_DESC *InputTensor;
@@ -70,60 +70,123 @@ struct DML_CUMULATIVE_SUMMATION_OPERATOR_DESC {
 };
 ```
 
-
-
-## <a name="members"></a><span data-ttu-id="933c5-108">Member</span><span class="sxs-lookup"><span data-stu-id="933c5-108">Members</span></span>
+## <a name="members"></a><span data-ttu-id="b1de4-108">Member</span><span class="sxs-lookup"><span data-stu-id="b1de4-108">Members</span></span>
 
 `InputTensor`
 
-<span data-ttu-id="933c5-109">Typ: Konstante **[DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***</span><span class="sxs-lookup"><span data-stu-id="933c5-109">Type: **const [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc)\***</span></span>
+<span data-ttu-id="b1de4-109">Typ: **const [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***</span><span class="sxs-lookup"><span data-stu-id="b1de4-109">Type: **const [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc)\***</span></span>
 
-<span data-ttu-id="933c5-110">Der eingabensor, der die zu summierenden Elemente enthält.</span><span class="sxs-lookup"><span data-stu-id="933c5-110">The input tensor containing elements to be summed.</span></span>
-
+<span data-ttu-id="b1de4-110">Der Eingabe-Tensor, der elemente enthält, die summiert werden sollen.</span><span class="sxs-lookup"><span data-stu-id="b1de4-110">The input tensor containing elements to be summed.</span></span>
 
 `OutputTensor`
 
-<span data-ttu-id="933c5-111">Typ: Konstante **[DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***</span><span class="sxs-lookup"><span data-stu-id="933c5-111">Type: **const [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc)\***</span></span>
+<span data-ttu-id="b1de4-111">Typ: **const [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***</span><span class="sxs-lookup"><span data-stu-id="b1de4-111">Type: **const [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc)\***</span></span>
 
-<span data-ttu-id="933c5-112">Der Ausgabe Mandanten, in den die resultierenden kumulativen Summen geschrieben werden sollen.</span><span class="sxs-lookup"><span data-stu-id="933c5-112">The output tensor to write the resulting cumulative summations to.</span></span> <span data-ttu-id="933c5-113">Dieser Mandanten muss dieselbe Größe und denselben Datentyp aufweisen wie der *inputtensor*.</span><span class="sxs-lookup"><span data-stu-id="933c5-113">This tensor must have the same sizes and data type as the *InputTensor*.</span></span>
-
+<span data-ttu-id="b1de4-112">Der Ausgabe-Tensor, in den die resultierenden kumulativen Summierungen geschrieben werden sollen.</span><span class="sxs-lookup"><span data-stu-id="b1de4-112">The output tensor to write the resulting cumulative summations to.</span></span> <span data-ttu-id="b1de4-113">Dieser Tensor muss die gleichen Größen und denselben Datentyp wie *inputTensor aufweisen.*</span><span class="sxs-lookup"><span data-stu-id="b1de4-113">This tensor must have the same sizes and data type as the *InputTensor*.</span></span>
 
 `Axis`
 
-<span data-ttu-id="933c5-114">Typ: [ **uint**](/windows/desktop/winprog/windows-data-types)</span><span class="sxs-lookup"><span data-stu-id="933c5-114">Type: [**UINT**](/windows/desktop/winprog/windows-data-types)</span></span>
+<span data-ttu-id="b1de4-114">Typ: [ **UINT**](/windows/desktop/winprog/windows-data-types)</span><span class="sxs-lookup"><span data-stu-id="b1de4-114">Type: [**UINT**](/windows/desktop/winprog/windows-data-types)</span></span>
 
-<span data-ttu-id="933c5-115">Der Index der Dimension, über die Elemente zusammengefasst werden sollen.</span><span class="sxs-lookup"><span data-stu-id="933c5-115">The index of the dimension to sum elements over.</span></span> <span data-ttu-id="933c5-116">Dieser Wert muss kleiner als die *DimensionCount* von " *inputtensor*" sein.</span><span class="sxs-lookup"><span data-stu-id="933c5-116">This value must be less than the *DimensionCount* of the *InputTensor*.</span></span>
-
+<span data-ttu-id="b1de4-115">Der Index der Dimension, über die Elemente summt werden sollen.</span><span class="sxs-lookup"><span data-stu-id="b1de4-115">The index of the dimension to sum elements over.</span></span> <span data-ttu-id="b1de4-116">Dieser Wert muss kleiner als *dimensionCount* des *InputTensor* sein.</span><span class="sxs-lookup"><span data-stu-id="b1de4-116">This value must be less than the *DimensionCount* of the *InputTensor*.</span></span>
 
 `AxisDirection`
 
-<span data-ttu-id="933c5-117">Typ: **[DML_AXIS_DIRECTION](./ne-directml-dml_axis_direction.md)**</span><span class="sxs-lookup"><span data-stu-id="933c5-117">Type: **[DML_AXIS_DIRECTION](./ne-directml-dml_axis_direction.md)**</span></span>
+<span data-ttu-id="b1de4-117">Typ: **[DML_AXIS_DIRECTION](./ne-directml-dml_axis_direction.md)**</span><span class="sxs-lookup"><span data-stu-id="b1de4-117">Type: **[DML_AXIS_DIRECTION](./ne-directml-dml_axis_direction.md)**</span></span>
 
-<span data-ttu-id="933c5-118">Einer der Werte der [DML_AXIS_DIRECTION](./ne-directml-dml_axis_direction.md) Enumeration.</span><span class="sxs-lookup"><span data-stu-id="933c5-118">One of the values of the [DML_AXIS_DIRECTION](./ne-directml-dml_axis_direction.md) enumeration.</span></span> <span data-ttu-id="933c5-119">Wenn der Wert auf **DML_AXIS_DIRECTION_INCREASING** festgelegt ist, erfolgt die Summe, indem der tensorflow entlang der angegebenen Achse durch den aufsteigenden Element Index durchlaufen wird.</span><span class="sxs-lookup"><span data-stu-id="933c5-119">If set to **DML_AXIS_DIRECTION_INCREASING**, then the summation occurs by traversing the tensor along the specified axis by ascending element index.</span></span> <span data-ttu-id="933c5-120">Wenn **DML_AXIS_DIRECTION_DECREASING** auf festgelegt ist, ist der umgekehrte Wert true, und die Summe erfolgt durch das Durchlaufen von Elementen nach absteigender Index.</span><span class="sxs-lookup"><span data-stu-id="933c5-120">If set to **DML_AXIS_DIRECTION_DECREASING**, the reverse is true, and the summation occurs by traversing elements by descending index.</span></span>
-
+<span data-ttu-id="b1de4-118">Einer der Werte [](./ne-directml-dml_axis_direction.md) der DML_AXIS_DIRECTION-Enumeration.</span><span class="sxs-lookup"><span data-stu-id="b1de4-118">One of the values of the [DML_AXIS_DIRECTION](./ne-directml-dml_axis_direction.md) enumeration.</span></span> <span data-ttu-id="b1de4-119">Wenn auf **DML_AXIS_DIRECTION_INCREASING** festgelegt ist, erfolgt die Summierung durch Durchlaufen des Tensors entlang der angegebenen Achse durch aufsteigenden Elementindex.</span><span class="sxs-lookup"><span data-stu-id="b1de4-119">If set to **DML_AXIS_DIRECTION_INCREASING**, then the summation occurs by traversing the tensor along the specified axis by ascending element index.</span></span> <span data-ttu-id="b1de4-120">Wenn auf **DML_AXIS_DIRECTION_DECREASING** festgelegt ist, ist der umgekehrte Wert true, und die Summierung erfolgt durch Durchlaufen von Elementen durch absteigenden Index.</span><span class="sxs-lookup"><span data-stu-id="b1de4-120">If set to **DML_AXIS_DIRECTION_DECREASING**, the reverse is true, and the summation occurs by traversing elements by descending index.</span></span>
 
 `HasExclusiveSum`
 
+<span data-ttu-id="b1de4-121">Typ: <b> <a href="/windows/win32/winprog/windows-data-types">BOOL</a></b></span><span class="sxs-lookup"><span data-stu-id="b1de4-121">Type: <b><a href="/windows/win32/winprog/windows-data-types">BOOL</a></b></span></span>
 
+<span data-ttu-id="b1de4-122">True gibt an, dass der Wert des aktuellen Elements beim Schreiben der ausgeführten Tally in den Ausgabe-Tensor ausgeschlossen wird.</span><span class="sxs-lookup"><span data-stu-id="b1de4-122">If **TRUE**, then the value of the current element is excluded when writing the running tally to the output tensor.</span></span> <span data-ttu-id="b1de4-123">False gibt an, dass der Wert des aktuellen Elements in der ausgeführten Tally enthalten ist.</span><span class="sxs-lookup"><span data-stu-id="b1de4-123">If **FALSE**, then the value of the current element is included in the running tally.</span></span>
 
+## <a name="examples"></a><span data-ttu-id="b1de4-124">Beispiele</span><span class="sxs-lookup"><span data-stu-id="b1de4-124">Examples</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="933c5-121">Bemerkungen</span><span class="sxs-lookup"><span data-stu-id="933c5-121">Remarks</span></span>
-<span data-ttu-id="933c5-122">Dieser Operator unterstützt die direkte Ausführung, d. h., der *outputtensor* ist berechtigt, den *inputtensor* während der Bindung zu Alias.</span><span class="sxs-lookup"><span data-stu-id="933c5-122">This operator supports in-place execution, meaning that the *OutputTensor* is permitted to alias the *InputTensor* during binding.</span></span>
+<span data-ttu-id="b1de4-125">In den Beispielen in diesem Abschnitt wird ein Eingabe tensor mit den folgenden Eigenschaften verwendet.</span><span class="sxs-lookup"><span data-stu-id="b1de4-125">The examples in this section all use an input tensor with the following properties.</span></span>
 
-## <a name="availability"></a><span data-ttu-id="933c5-123">Verfügbarkeit</span><span class="sxs-lookup"><span data-stu-id="933c5-123">Availability</span></span>
-<span data-ttu-id="933c5-124">Dieser Operator wurde in eingeführt `DML_FEATURE_LEVEL_2_1` .</span><span class="sxs-lookup"><span data-stu-id="933c5-124">This operator was introduced in `DML_FEATURE_LEVEL_2_1`.</span></span>
+```
+InputTensor: (Sizes:{1,1,3,4}, DataType:FLOAT32)
+[[[[2, 1, 3, 5],
+   [3, 8, 7, 3],
+   [9, 6, 2, 4]]]]
+```
 
-## <a name="tensor-constraints"></a><span data-ttu-id="933c5-125">Tensor-Einschränkungen</span><span class="sxs-lookup"><span data-stu-id="933c5-125">Tensor constraints</span></span>
-<span data-ttu-id="933c5-126">*Inputtensor* und *outputtensor* müssen über denselben *Datentyp* und dieselben *Größen* verfügen.</span><span class="sxs-lookup"><span data-stu-id="933c5-126">*InputTensor* and *OutputTensor* must have the same *DataType* and *Sizes*.</span></span>
+### <a name="example-1-cumulative-summation-across-horizontal-slivers"></a><span data-ttu-id="b1de4-126">Beispiel 1:</span><span class="sxs-lookup"><span data-stu-id="b1de4-126">Example 1.</span></span> <span data-ttu-id="b1de4-127">Kumulative Summe über horizontale Schrägstriche</span><span class="sxs-lookup"><span data-stu-id="b1de4-127">Cumulative summation across horizontal slivers</span></span>
 
-## <a name="tensor-support"></a><span data-ttu-id="933c5-127">Tensor-Unterstützung</span><span class="sxs-lookup"><span data-stu-id="933c5-127">Tensor support</span></span>
-| <span data-ttu-id="933c5-128">Tensorflow</span><span class="sxs-lookup"><span data-stu-id="933c5-128">Tensor</span></span> | <span data-ttu-id="933c5-129">Typ</span><span class="sxs-lookup"><span data-stu-id="933c5-129">Kind</span></span> | <span data-ttu-id="933c5-130">Unterstützte Dimensions Anzahl</span><span class="sxs-lookup"><span data-stu-id="933c5-130">Supported dimension counts</span></span> | <span data-ttu-id="933c5-131">Unterstützte Datentypen</span><span class="sxs-lookup"><span data-stu-id="933c5-131">Supported data types</span></span> |
+```
+Axis: 3
+AxisDirection: DML_AXIS_DIRECTION_INCREASING
+HasExclusiveSum: FALSE
+
+OutputTensor: (Sizes:{1,1,3,4}, DataType:FLOAT32)
+[[[[2,  3,  6, 11],     // i.e. [2, 2+1, 2+1+3, 2+1+3+5]
+   [3, 11, 18, 21],     //      [...                   ]
+   [9, 15, 17, 21]]]]   //      [...                   ]
+```
+
+### <a name="example-2-exclusive-sums"></a><span data-ttu-id="b1de4-128">Beispiel 2:</span><span class="sxs-lookup"><span data-stu-id="b1de4-128">Example 2.</span></span> <span data-ttu-id="b1de4-129">Exklusive Summen</span><span class="sxs-lookup"><span data-stu-id="b1de4-129">Exclusive sums</span></span>
+
+<span data-ttu-id="b1de4-130">Das *Festlegen von HasExclusiveSum* auf **TRUE** hat den Effekt, dass der Wert des aktuellen Elements beim Schreiben in den Ausgabemandor von der ausgeführten Zählung ausgenommen wird.</span><span class="sxs-lookup"><span data-stu-id="b1de4-130">Setting *HasExclusiveSum* to **TRUE** has the effect of excluding the current element's value from the running tally when writing to the output tensor.</span></span>
+
+```
+Axis: 3
+AxisDirection: DML_AXIS_DIRECTION_INCREASING
+HasExclusiveSum: TRUE
+
+OutputTensor: (Sizes:{1,1,3,4}, DataType:FLOAT32)
+[[[[0, 2,  3,  6],      // Notice the sum is written before adding the input,
+   [0, 3, 11, 18],      // and the final total is not written to any output.
+   [0, 9, 15, 17]]]]
+```
+
+### <a name="example-3-axis-direction"></a><span data-ttu-id="b1de4-131">Beispiel 3:</span><span class="sxs-lookup"><span data-stu-id="b1de4-131">Example 3.</span></span> <span data-ttu-id="b1de4-132">Achsenrichtung</span><span class="sxs-lookup"><span data-stu-id="b1de4-132">Axis direction</span></span>
+
+<span data-ttu-id="b1de4-133">Das Festlegen *von AxisDirection* auf [DML_AXIS_DIRECTION_DECREASING](/windows/win32/api/directml/ne-directml-dml_axis_direction) hat den Effekt, dass die Durchlaufrichtung der Elemente beim Berechnen der ausgeführten Zählung umkehrt.</span><span class="sxs-lookup"><span data-stu-id="b1de4-133">Setting the *AxisDirection* to [DML_AXIS_DIRECTION_DECREASING](/windows/win32/api/directml/ne-directml-dml_axis_direction) has the effect of reversing the traversal order of elements when computing the running tally.</span></span>
+
+```
+Axis: 3
+AxisDirection: DML_AXIS_DIRECTION_DECREASING
+HasExclusiveSum: FALSE
+
+OutputTensor: (Sizes:{1,1,3,4}, DataType:FLOAT32)
+[[[[11,  9,  8,  5],    // i.e. [2+1+3+5, 1+3+5, 3+5, 5]
+   [21, 18, 10,  3],    //      [...                   ]
+   [21, 12,  6,  4]]]]  //      [...                   ]
+```
+
+### <a name="example-4-summing-along-a-different-axis"></a><span data-ttu-id="b1de4-134">Beispiel 4.</span><span class="sxs-lookup"><span data-stu-id="b1de4-134">Example 4.</span></span> <span data-ttu-id="b1de4-135">Summieren entlang einer anderen Achse</span><span class="sxs-lookup"><span data-stu-id="b1de4-135">Summing along a different axis</span></span>
+
+<span data-ttu-id="b1de4-136">In diesem Beispiel erfolgt die Summe vertikal entlang der Höhenachse (zweite Dimension).</span><span class="sxs-lookup"><span data-stu-id="b1de4-136">In this example, the summation occurs vertically, along the height axis (second dimension).</span></span>
+
+```
+Axis: 2
+AxisDirection: DML_AXIS_DIRECTION_INCREASING
+HasExclusiveSum: FALSE
+
+OutputTensor: (Sizes:{1,1,3,4}, DataType:FLOAT32)
+[[[[ 2,  1,  3,  5],   // i.e. [2,    ...]
+   [ 5,  9, 10,  8],   //      [2+3,  ...]
+   [14, 15, 12, 12]]]] //      [2+3+9 ...]
+```
+
+## <a name="remarks"></a><span data-ttu-id="b1de4-137">Hinweise</span><span class="sxs-lookup"><span data-stu-id="b1de4-137">Remarks</span></span>
+<span data-ttu-id="b1de4-138">Dieser Operator unterstützt die ausführungsbasierte Ausführung, d. h., der *OutputTensor* darf während der Bindung einen Alias für *den InputTensor* verwenden.</span><span class="sxs-lookup"><span data-stu-id="b1de4-138">This operator supports in-place execution, meaning that the *OutputTensor* is permitted to alias the *InputTensor* during binding.</span></span>
+
+## <a name="availability"></a><span data-ttu-id="b1de4-139">Verfügbarkeit</span><span class="sxs-lookup"><span data-stu-id="b1de4-139">Availability</span></span>
+<span data-ttu-id="b1de4-140">Dieser Operator wurde in `DML_FEATURE_LEVEL_2_1` eingeführt.</span><span class="sxs-lookup"><span data-stu-id="b1de4-140">This operator was introduced in `DML_FEATURE_LEVEL_2_1`.</span></span>
+
+## <a name="tensor-constraints"></a><span data-ttu-id="b1de4-141">Tensoreinschränkungen</span><span class="sxs-lookup"><span data-stu-id="b1de4-141">Tensor constraints</span></span>
+<span data-ttu-id="b1de4-142">*InputTensor* und *OutputTensor* müssen den gleichen *Datentyp und* die *gleichen Größen haben.*</span><span class="sxs-lookup"><span data-stu-id="b1de4-142">*InputTensor* and *OutputTensor* must have the same *DataType* and *Sizes*.</span></span>
+
+## <a name="tensor-support"></a><span data-ttu-id="b1de4-143">Tensor-Unterstützung</span><span class="sxs-lookup"><span data-stu-id="b1de4-143">Tensor support</span></span>
+| <span data-ttu-id="b1de4-144">Tensor</span><span class="sxs-lookup"><span data-stu-id="b1de4-144">Tensor</span></span> | <span data-ttu-id="b1de4-145">Typ</span><span class="sxs-lookup"><span data-stu-id="b1de4-145">Kind</span></span> | <span data-ttu-id="b1de4-146">Unterstützte Dimensionsanzahl</span><span class="sxs-lookup"><span data-stu-id="b1de4-146">Supported dimension counts</span></span> | <span data-ttu-id="b1de4-147">Unterstützte Datentypen</span><span class="sxs-lookup"><span data-stu-id="b1de4-147">Supported data types</span></span> |
 | ------ | ---- | -------------------------- | -------------------- |
-| <span data-ttu-id="933c5-132">Inputtensor</span><span class="sxs-lookup"><span data-stu-id="933c5-132">InputTensor</span></span> | <span data-ttu-id="933c5-133">Eingabe</span><span class="sxs-lookup"><span data-stu-id="933c5-133">Input</span></span> | <span data-ttu-id="933c5-134">4</span><span class="sxs-lookup"><span data-stu-id="933c5-134">4</span></span> | <span data-ttu-id="933c5-135">Float32, FLOAT16, UInt32, UInt16</span><span class="sxs-lookup"><span data-stu-id="933c5-135">FLOAT32, FLOAT16, UINT32, UINT16</span></span> |
-| <span data-ttu-id="933c5-136">Outputtensor</span><span class="sxs-lookup"><span data-stu-id="933c5-136">OutputTensor</span></span> | <span data-ttu-id="933c5-137">Ausgabe</span><span class="sxs-lookup"><span data-stu-id="933c5-137">Output</span></span> | <span data-ttu-id="933c5-138">4</span><span class="sxs-lookup"><span data-stu-id="933c5-138">4</span></span> | <span data-ttu-id="933c5-139">Float32, FLOAT16, UInt32, UInt16</span><span class="sxs-lookup"><span data-stu-id="933c5-139">FLOAT32, FLOAT16, UINT32, UINT16</span></span> |
+| <span data-ttu-id="b1de4-148">InputTensor</span><span class="sxs-lookup"><span data-stu-id="b1de4-148">InputTensor</span></span> | <span data-ttu-id="b1de4-149">Eingabe</span><span class="sxs-lookup"><span data-stu-id="b1de4-149">Input</span></span> | <span data-ttu-id="b1de4-150">4</span><span class="sxs-lookup"><span data-stu-id="b1de4-150">4</span></span> | <span data-ttu-id="b1de4-151">FLOAT32, FLOAT16, UINT32, UINT16</span><span class="sxs-lookup"><span data-stu-id="b1de4-151">FLOAT32, FLOAT16, UINT32, UINT16</span></span> |
+| <span data-ttu-id="b1de4-152">OutputTensor</span><span class="sxs-lookup"><span data-stu-id="b1de4-152">OutputTensor</span></span> | <span data-ttu-id="b1de4-153">Ausgabe</span><span class="sxs-lookup"><span data-stu-id="b1de4-153">Output</span></span> | <span data-ttu-id="b1de4-154">4</span><span class="sxs-lookup"><span data-stu-id="b1de4-154">4</span></span> | <span data-ttu-id="b1de4-155">FLOAT32, FLOAT16, UINT32, UINT16</span><span class="sxs-lookup"><span data-stu-id="b1de4-155">FLOAT32, FLOAT16, UINT32, UINT16</span></span> |
 
-
-## <a name="requirements"></a><span data-ttu-id="933c5-140">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="933c5-140">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="b1de4-156">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="b1de4-156">Requirements</span></span>
 | &nbsp; | &nbsp; |
 | ---- |:---- |
-| <span data-ttu-id="933c5-141">**Header**</span><span class="sxs-lookup"><span data-stu-id="933c5-141">**Header**</span></span> | <span data-ttu-id="933c5-142">directml. h</span><span class="sxs-lookup"><span data-stu-id="933c5-142">directml.h</span></span> |
+| <span data-ttu-id="b1de4-157">**Header**</span><span class="sxs-lookup"><span data-stu-id="b1de4-157">**Header**</span></span> | <span data-ttu-id="b1de4-158">directml.h</span><span class="sxs-lookup"><span data-stu-id="b1de4-158">directml.h</span></span> |

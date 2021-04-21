@@ -1,7 +1,7 @@
 ---
 UID: NS:directml.DML_FILL_VALUE_SEQUENCE_OPERATOR_DESC
 title: DML_FILL_VALUE_SEQUENCE_OPERATOR_DESC
-description: Füllt einen tensorflow mit einer Sequenz.
+description: Füllt einen Tensor mit einer Sequenz.
 helpviewer_keywords:
 - DML_FILL_VALUE_SEQUENCE_OPERATOR_DESC
 - DML_FILL_VALUE_SEQUENCE_OPERATOR_DESC structure
@@ -44,16 +44,16 @@ api_location:
 - DirectML.h
 api_name:
 - DML_FILL_VALUE_SEQUENCE_OPERATOR_DESC
-ms.openlocfilehash: ec356568c0860d330234cd990e8cf42ff4ccd120
-ms.sourcegitcommit: 3bdf30edb314e0fcd17dc4ddbc70e4ec7d3596e6
+ms.openlocfilehash: 17b503630db2108dc4d9d2f5c2f32f7e324189d1
+ms.sourcegitcommit: 8e1f04c7e3c5c850071bac8d173f9441aab0dfed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "106357139"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107803025"
 ---
-# <a name="dml_fill_value_sequence_operator_desc-structure-directmlh"></a><span data-ttu-id="fe79b-103">DML_FILL_VALUE_SEQUENCE_OPERATOR_DESC-Struktur (directml. h)</span><span class="sxs-lookup"><span data-stu-id="fe79b-103">DML_FILL_VALUE_SEQUENCE_OPERATOR_DESC structure (directml.h)</span></span>
+# <a name="dml_fill_value_sequence_operator_desc-structure-directmlh"></a><span data-ttu-id="58182-103">DML_FILL_VALUE_SEQUENCE_OPERATOR_DESC-Struktur (directml.h)</span><span class="sxs-lookup"><span data-stu-id="58182-103">DML_FILL_VALUE_SEQUENCE_OPERATOR_DESC structure (directml.h)</span></span>
 
-<span data-ttu-id="fe79b-104">Füllt einen tensorflow mit einer Sequenz.</span><span class="sxs-lookup"><span data-stu-id="fe79b-104">Fills a tensor with a sequence.</span></span> <span data-ttu-id="fe79b-105">Dieser Operator führt den folgenden Pseudocode aus.</span><span class="sxs-lookup"><span data-stu-id="fe79b-105">This operator performs the following pseudocode.</span></span>
+<span data-ttu-id="58182-104">Füllt einen Tensor mit einer Sequenz.</span><span class="sxs-lookup"><span data-stu-id="58182-104">Fills a tensor with a sequence.</span></span> <span data-ttu-id="58182-105">Dieser Operator führt den folgenden Pseudocode aus.</span><span class="sxs-lookup"><span data-stu-id="58182-105">This operator performs the following pseudocode.</span></span>
 
 ```
 for each coordinate in OutputTensor
@@ -63,9 +63,9 @@ endfor
 ```
 
 > [!IMPORTANT]
-> <span data-ttu-id="fe79b-106">Diese API ist als Teil des eigenständigen Redistributable Package von directml verfügbar (siehe [Microsoft. ai. directml](https://www.nuget.org/packages/Microsoft.AI.DirectML/)).</span><span class="sxs-lookup"><span data-stu-id="fe79b-106">This API is available as part of the DirectML standalone redistributable package (see [Microsoft.AI.DirectML](https://www.nuget.org/packages/Microsoft.AI.DirectML/).</span></span> <span data-ttu-id="fe79b-107">Siehe auch [Versionsverlauf der directml](../dml-version-history.md).</span><span class="sxs-lookup"><span data-stu-id="fe79b-107">Also see [DirectML version history](../dml-version-history.md).</span></span>
+> <span data-ttu-id="58182-106">Diese API ist als Teil des eigenständigen verteilbaren DirectML-Pakets verfügbar (siehe [Microsoft.AI.DirectML](https://www.nuget.org/packages/Microsoft.AI.DirectML/) Version 1.4 und höher).</span><span class="sxs-lookup"><span data-stu-id="58182-106">This API is available as part of the DirectML standalone redistributable package (see [Microsoft.AI.DirectML](https://www.nuget.org/packages/Microsoft.AI.DirectML/) version 1.4 and later.</span></span> <span data-ttu-id="58182-107">Siehe auch [DirectML-Versionsverlauf.](../dml-version-history.md)</span><span class="sxs-lookup"><span data-stu-id="58182-107">Also see [DirectML version history](../dml-version-history.md).</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="fe79b-108">Syntax</span><span class="sxs-lookup"><span data-stu-id="fe79b-108">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="58182-108">Syntax</span><span class="sxs-lookup"><span data-stu-id="58182-108">Syntax</span></span>
 ```cpp
 struct DML_FILL_VALUE_SEQUENCE_OPERATOR_DESC {
   const DML_TENSOR_DESC *OutputTensor;
@@ -77,38 +77,38 @@ struct DML_FILL_VALUE_SEQUENCE_OPERATOR_DESC {
 
 
 
-## <a name="members"></a><span data-ttu-id="fe79b-109">Member</span><span class="sxs-lookup"><span data-stu-id="fe79b-109">Members</span></span>
+## <a name="members"></a><span data-ttu-id="58182-109">Member</span><span class="sxs-lookup"><span data-stu-id="58182-109">Members</span></span>
 
 `OutputTensor`
 
-<span data-ttu-id="fe79b-110">Typ: Konstante **[DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***</span><span class="sxs-lookup"><span data-stu-id="fe79b-110">Type: **const [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc)\***</span></span>
+<span data-ttu-id="58182-110">Typ: **const [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***</span><span class="sxs-lookup"><span data-stu-id="58182-110">Type: **const [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc)\***</span></span>
 
-<span data-ttu-id="fe79b-111">Der tensorflow, in den die Ergebnisse geschrieben werden sollen.</span><span class="sxs-lookup"><span data-stu-id="fe79b-111">The tensor to write the results to.</span></span> <span data-ttu-id="fe79b-112">Dieser Mandanten kann eine beliebige Größe aufweisen.</span><span class="sxs-lookup"><span data-stu-id="fe79b-112">This tensor may have any size.</span></span>
+<span data-ttu-id="58182-111">Der Tensor, in den die Ergebnisse geschrieben werden sollen.</span><span class="sxs-lookup"><span data-stu-id="58182-111">The tensor to write the results to.</span></span> <span data-ttu-id="58182-112">Dieser Tensor kann eine beliebige Größe aufweisen.</span><span class="sxs-lookup"><span data-stu-id="58182-112">This tensor may have any size.</span></span>
 
 
 `ValueDataType`
 
-<span data-ttu-id="fe79b-113">Typ: **[DML_TENSOR_DATA_TYPE](/windows/win32/api/directml/ne-directml-dml_tensor_data_type)**</span><span class="sxs-lookup"><span data-stu-id="fe79b-113">Type: **[DML_TENSOR_DATA_TYPE](/windows/win32/api/directml/ne-directml-dml_tensor_data_type)**</span></span>
+<span data-ttu-id="58182-113">Typ: **[DML_TENSOR_DATA_TYPE](/windows/win32/api/directml/ne-directml-dml_tensor_data_type)**</span><span class="sxs-lookup"><span data-stu-id="58182-113">Type: **[DML_TENSOR_DATA_TYPE](/windows/win32/api/directml/ne-directml-dml_tensor_data_type)**</span></span>
 
-<span data-ttu-id="fe79b-114">Der Datentyp des *Wertfelds* , das " *outputtensor. DataType*" entsprechen muss.</span><span class="sxs-lookup"><span data-stu-id="fe79b-114">The data type of *Value* field, which must match *OutputTensor.DataType*.</span></span>
+<span data-ttu-id="58182-114">Der Datentyp  des Wertfelds, das *mit OutputTensor.DataType* übereinstimmen muss.</span><span class="sxs-lookup"><span data-stu-id="58182-114">The data type of *Value* field, which must match *OutputTensor.DataType*.</span></span>
 
 
 `ValueStart`
 
-<span data-ttu-id="fe79b-115">Typ: **[DML_SCALAR_UNION](./ns-directml-dml_scalar_union.md)**</span><span class="sxs-lookup"><span data-stu-id="fe79b-115">Type: **[DML_SCALAR_UNION](./ns-directml-dml_scalar_union.md)**</span></span>
+<span data-ttu-id="58182-115">Typ: **[DML_SCALAR_UNION](./ns-directml-dml_scalar_union.md)**</span><span class="sxs-lookup"><span data-stu-id="58182-115">Type: **[DML_SCALAR_UNION](./ns-directml-dml_scalar_union.md)**</span></span>
 
-<span data-ttu-id="fe79b-116">Der Anfangswert zum Auffüllen des ersten Elements in der Ausgabe mit *valuedatatype* , das festlegt, wie das Feld interpretiert werden soll.</span><span class="sxs-lookup"><span data-stu-id="fe79b-116">The initial value to fill the first element in the output, with *ValueDataType* determining how to interpret the field.</span></span>
+<span data-ttu-id="58182-116">Der Anfangswert zum Füllen des ersten Elements in der Ausgabe, wobei *ValueDataType* bestimmt, wie das Feld interpretiert werden soll.</span><span class="sxs-lookup"><span data-stu-id="58182-116">The initial value to fill the first element in the output, with *ValueDataType* determining how to interpret the field.</span></span>
 
 
 `ValueDelta`
 
-<span data-ttu-id="fe79b-117">Typ: **[DML_SCALAR_UNION](./ns-directml-dml_scalar_union.md)**</span><span class="sxs-lookup"><span data-stu-id="fe79b-117">Type: **[DML_SCALAR_UNION](./ns-directml-dml_scalar_union.md)**</span></span>
+<span data-ttu-id="58182-117">Typ: **[DML_SCALAR_UNION](./ns-directml-dml_scalar_union.md)**</span><span class="sxs-lookup"><span data-stu-id="58182-117">Type: **[DML_SCALAR_UNION](./ns-directml-dml_scalar_union.md)**</span></span>
 
-<span data-ttu-id="fe79b-118">Ein Schritt, der dem Wert für jedes geschriebene Element hinzugefügt werden soll, wobei *valuedatatype* festlegt, wie das Feld interpretiert werden soll.</span><span class="sxs-lookup"><span data-stu-id="fe79b-118">A step to add to the value for each element written, with *ValueDataType* determining how to interpret the field.</span></span>
+<span data-ttu-id="58182-118">Ein Schritt, der dem Wert für jedes geschriebene Element hinzugefügt werden soll, wobei *ValueDataType* bestimmt, wie das Feld interpretiert werden soll.</span><span class="sxs-lookup"><span data-stu-id="58182-118">A step to add to the value for each element written, with *ValueDataType* determining how to interpret the field.</span></span>
 
-## <a name="examples"></a><span data-ttu-id="fe79b-119">Beispiele</span><span class="sxs-lookup"><span data-stu-id="fe79b-119">Examples</span></span>
+## <a name="examples"></a><span data-ttu-id="58182-119">Beispiele</span><span class="sxs-lookup"><span data-stu-id="58182-119">Examples</span></span>
 
-### <a name="example-1-1d-ascending-step"></a><span data-ttu-id="fe79b-120">Beispiel 1:</span><span class="sxs-lookup"><span data-stu-id="fe79b-120">Example 1.</span></span> <span data-ttu-id="fe79b-121">1D aufsteigender Schritt</span><span class="sxs-lookup"><span data-stu-id="fe79b-121">1D ascending step</span></span>
+### <a name="example-1-1d-ascending-step"></a><span data-ttu-id="58182-120">Beispiel 1:</span><span class="sxs-lookup"><span data-stu-id="58182-120">Example 1.</span></span> <span data-ttu-id="58182-121">Aufsteigender 1D-Schritt</span><span class="sxs-lookup"><span data-stu-id="58182-121">1D ascending step</span></span>
 
 ```
 ValueStart = 3
@@ -119,7 +119,7 @@ OutputTensor: (Sizes:{1,1,1,3}, DataType:FLOAT32)
     [[[[3, 5, 7]]]]
 ```
 
-### <a name="example-2-2d-ascending-step"></a><span data-ttu-id="fe79b-122">Beispiel 2:</span><span class="sxs-lookup"><span data-stu-id="fe79b-122">Example 2.</span></span> <span data-ttu-id="fe79b-123">2D-aufsteigender Schritt</span><span class="sxs-lookup"><span data-stu-id="fe79b-123">2D ascending step</span></span>
+### <a name="example-2-2d-ascending-step"></a><span data-ttu-id="58182-122">Beispiel 2:</span><span class="sxs-lookup"><span data-stu-id="58182-122">Example 2.</span></span> <span data-ttu-id="58182-123">Aufsteigender 2D-Schritt</span><span class="sxs-lookup"><span data-stu-id="58182-123">2D ascending step</span></span>
 
 ```
 ValueStart = 10
@@ -131,17 +131,17 @@ OutputTensor: (Sizes:{1,1,2,2}, DataType:UINT8)
        [ 6, 4]]]]
 ```
 
-## <a name="availability"></a><span data-ttu-id="fe79b-124">Verfügbarkeit</span><span class="sxs-lookup"><span data-stu-id="fe79b-124">Availability</span></span>
-<span data-ttu-id="fe79b-125">Dieser Operator wurde in eingeführt `DML_FEATURE_LEVEL_2_1` .</span><span class="sxs-lookup"><span data-stu-id="fe79b-125">This operator was introduced in `DML_FEATURE_LEVEL_2_1`.</span></span>
+## <a name="availability"></a><span data-ttu-id="58182-124">Verfügbarkeit</span><span class="sxs-lookup"><span data-stu-id="58182-124">Availability</span></span>
+<span data-ttu-id="58182-125">Dieser Operator wurde in `DML_FEATURE_LEVEL_2_1` eingeführt.</span><span class="sxs-lookup"><span data-stu-id="58182-125">This operator was introduced in `DML_FEATURE_LEVEL_2_1`.</span></span>
 
-## <a name="tensor-support"></a><span data-ttu-id="fe79b-126">Tensor-Unterstützung</span><span class="sxs-lookup"><span data-stu-id="fe79b-126">Tensor support</span></span>
-| <span data-ttu-id="fe79b-127">Tensorflow</span><span class="sxs-lookup"><span data-stu-id="fe79b-127">Tensor</span></span> | <span data-ttu-id="fe79b-128">Typ</span><span class="sxs-lookup"><span data-stu-id="fe79b-128">Kind</span></span> | <span data-ttu-id="fe79b-129">Unterstützte Dimensions Anzahl</span><span class="sxs-lookup"><span data-stu-id="fe79b-129">Supported dimension counts</span></span> | <span data-ttu-id="fe79b-130">Unterstützte Datentypen</span><span class="sxs-lookup"><span data-stu-id="fe79b-130">Supported data types</span></span> |
+## <a name="tensor-support"></a><span data-ttu-id="58182-126">Tensor-Unterstützung</span><span class="sxs-lookup"><span data-stu-id="58182-126">Tensor support</span></span>
+| <span data-ttu-id="58182-127">Tensor</span><span class="sxs-lookup"><span data-stu-id="58182-127">Tensor</span></span> | <span data-ttu-id="58182-128">Typ</span><span class="sxs-lookup"><span data-stu-id="58182-128">Kind</span></span> | <span data-ttu-id="58182-129">Unterstützte Dimensionsanzahl</span><span class="sxs-lookup"><span data-stu-id="58182-129">Supported dimension counts</span></span> | <span data-ttu-id="58182-130">Unterstützte Datentypen</span><span class="sxs-lookup"><span data-stu-id="58182-130">Supported data types</span></span> |
 | ------ | ---- | -------------------------- | -------------------- |
-| <span data-ttu-id="fe79b-131">Outputtensor</span><span class="sxs-lookup"><span data-stu-id="fe79b-131">OutputTensor</span></span> | <span data-ttu-id="fe79b-132">Ausgabe</span><span class="sxs-lookup"><span data-stu-id="fe79b-132">Output</span></span> | <span data-ttu-id="fe79b-133">4</span><span class="sxs-lookup"><span data-stu-id="fe79b-133">4</span></span> | <span data-ttu-id="fe79b-134">Float32, FLOAT16, Int32, INT16, int8, UInt32, UInt16, Uint8</span><span class="sxs-lookup"><span data-stu-id="fe79b-134">FLOAT32, FLOAT16, INT32, INT16, INT8, UINT32, UINT16, UINT8</span></span> |
+| <span data-ttu-id="58182-131">OutputTensor</span><span class="sxs-lookup"><span data-stu-id="58182-131">OutputTensor</span></span> | <span data-ttu-id="58182-132">Ausgabe</span><span class="sxs-lookup"><span data-stu-id="58182-132">Output</span></span> | <span data-ttu-id="58182-133">4</span><span class="sxs-lookup"><span data-stu-id="58182-133">4</span></span> | <span data-ttu-id="58182-134">FLOAT32, FLOAT16, INT32, INT16, INT8, UINT32, UINT16, UINT8</span><span class="sxs-lookup"><span data-stu-id="58182-134">FLOAT32, FLOAT16, INT32, INT16, INT8, UINT32, UINT16, UINT8</span></span> |
 
 
 
-## <a name="requirements"></a><span data-ttu-id="fe79b-135">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="fe79b-135">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="58182-135">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="58182-135">Requirements</span></span>
 | &nbsp; | &nbsp; |
 | ---- |:---- |
-| <span data-ttu-id="fe79b-136">**Header**</span><span class="sxs-lookup"><span data-stu-id="fe79b-136">**Header**</span></span> | <span data-ttu-id="fe79b-137">directml. h</span><span class="sxs-lookup"><span data-stu-id="fe79b-137">directml.h</span></span> |
+| <span data-ttu-id="58182-136">**Header**</span><span class="sxs-lookup"><span data-stu-id="58182-136">**Header**</span></span> | <span data-ttu-id="58182-137">directml.h</span><span class="sxs-lookup"><span data-stu-id="58182-137">directml.h</span></span> |
