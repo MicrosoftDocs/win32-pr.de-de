@@ -39,19 +39,19 @@ api_location:
 - dwrite_3.h
 api_name:
 - DWRITE_BITMAP_DATA_BGRA32
-ms.openlocfilehash: ea60bbd4933cd890321e0caeb095778922699a46
-ms.sourcegitcommit: 3bdf30edb314e0fcd17dc4ddbc70e4ec7d3596e6
+ms.openlocfilehash: 3d5b2168e5154f2e55b6f5acb83897f68d4a029c
+ms.sourcegitcommit: d7e9a20168111fb608f5fefb092b30f8e093d816
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "106367262"
+ms.lasthandoff: 04/22/2021
+ms.locfileid: "107881829"
 ---
-# <a name="dwrite_bitmap_data_bgra32-structure-dwrite_3h"></a>DWRITE_BITMAP_DATA_BGRA32 Struktur (dwrite_3. h)
+# <a name="dwrite_bitmap_data_bgra32-structure-dwrite_3h"></a>DWRITE_BITMAP_DATA_BGRA32-Struktur (dwrite_3.h)
 
 Stellt Bitmapdaten im BGRA32-Format dar.
 
 > [!IMPORTANT]
-> Diese API ist als Teil der dwrite-Core-Implementierung von [DirectWrite](../direct-write-portal.md)verfügbar. DWriteCore ist eine Form von DirectWrite, die auf Windows-Versionen bis hinunter zu Windows 8 läuft und Ihnen die Möglichkeit eröffnet, es plattformübergreifend zu nutzen. Weitere Informationen und Codebeispiele finden Sie unter [Übersicht über dbeschreib tecore](/windows/win32/DirectWrite/dwrite/dwritecore-overview).
+> Diese API ist als Teil der DWriteCore-Implementierung von [DirectWrite](../direct-write-portal.md)verfügbar. DWriteCore ist eine Form von DirectWrite, die auf Windows-Versionen bis hinunter zu Windows 8 läuft und Ihnen die Möglichkeit eröffnet, es plattformübergreifend zu nutzen. Weitere Informationen und Codebeispiele finden Sie unter [Übersicht über DWriteCore.](/windows/win32/DirectWrite/dwrite/dwritecore-overview)
 
 ## <a name="syntax"></a>Syntax
 
@@ -68,31 +68,31 @@ struct DWRITE_BITMAP_DATA_BGRA32
 
 `width`
 
-Typ: **[UInt32](../../winprog/windows-data-types.md)**
+Typ: **[UINT32](../../winprog/windows-data-types.md)**
 
 Die Breite der Bitmap in Pixel.
 
 
 `height`
 
-Typ: **[UInt32](../../winprog/windows-data-types.md)**
+Typ: **[UINT32](../../winprog/windows-data-types.md)**
 
 Die Höhe der Bitmap in Pixel.
 
 
 `pixels`
 
-Type: \_ Field \_ size \_ (Width * Height)**[UInt32](../../winprog/windows-data-types.md)\***
+Typ: \_ \_ Feldgröße \_ (Breite * Höhe)**[UINT32](../../winprog/windows-data-types.md)\***
 
-Ein Zeiger auf den Speicherort der Bitwerte für die Bitmap.
+Ein Zeiger auf die Position der Bitwerte für die Bitmap.
 
 
 ## <a name="examples"></a>Beispiele
 
-Weitere Informationen finden Sie im Thema [Übersicht über dbeschreib tecore](/windows/win32/DirectWrite/dwrite/dwritecore-overview) und in der Beispiel-App für [dwrite-coregallery](https://github.com/microsoft/Project-Reunion-Samples/tree/main/DWriteCore/DWriteCoreGallery) .
+Weitere Informationen finden Sie im Übersichtsthema [DWriteCore](/windows/win32/DirectWrite/dwrite/dwritecore-overview) und in der [Beispiel-App DWriteCoreGallery.](https://github.com/microsoft/Project-Reunion-Samples/tree/main/DWriteCore/DWriteCoreGallery)
 
 ## <a name="requirements"></a>Anforderungen
 | &nbsp; | &nbsp; |
 | ---- |:---- |
-| **Unterstützte Mindestversion (Client)** | Windows 10, Project Reunion 0,1-Vorabversion [Win32-Apps] |
-| **Header** | dwrite_3. h (dwrite_core. h einschließen) |
+| **Unterstützte Mindestversion (Client)** | Windows 10, Project Reunion [Win32-Apps] |
+| **Header** | dwrite_3.h (include dwrite_core.h) |

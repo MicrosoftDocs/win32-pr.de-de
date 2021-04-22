@@ -1,7 +1,7 @@
 ---
 UID: NF:dwrite_3.IDWriteBitmapRenderTarget2.GetBitmapData
 title: IDWriteBitmapRenderTarget2::GetBitmapData (dwrite_3.h)
-description: Ruft die Pixeldaten aus einem Bitmap-Renderziel ab.
+description: Ruft die Pixeldaten aus einem Bitmaprenderingziel ab.
 tech.root: DirectWrite
 ms.date: 11/11/2020
 ms.topic: reference
@@ -39,19 +39,19 @@ api_location:
 - dwrite.dll
 api_name:
 - IDWriteBitmapRenderTarget2.GetBitmapData
-ms.openlocfilehash: dff9904eef692b3858cc044f7b400a5b3641456a
-ms.sourcegitcommit: 3bdf30edb314e0fcd17dc4ddbc70e4ec7d3596e6
+ms.openlocfilehash: 3dbc87697750ee07939602dc694468aa68f5c66d
+ms.sourcegitcommit: d7e9a20168111fb608f5fefb092b30f8e093d816
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "106373408"
+ms.lasthandoff: 04/22/2021
+ms.locfileid: "107881849"
 ---
-# <a name="idwritebitmaprendertarget2getbitmapdata-method-dwrite_3h"></a>IDWriteBitmapRenderTarget2:: getbitmapdata-Methode (dwrite_3. h)
+# <a name="idwritebitmaprendertarget2getbitmapdata-method-dwrite_3h"></a>IDWriteBitmapRenderTarget2::GetBitmapData-Methode (dwrite_3.h)
 
-Ruft die Pixeldaten aus einem Bitmap-Renderziel ab.
+Ruft die Pixeldaten aus einem Bitmaprenderingziel ab.
 
 > [!IMPORTANT]
-> Diese API ist als Teil der dwrite-Core-Implementierung von [DirectWrite](../direct-write-portal.md)verfügbar. DWriteCore ist eine Form von DirectWrite, die auf Windows-Versionen bis hinunter zu Windows 8 läuft und Ihnen die Möglichkeit eröffnet, es plattformübergreifend zu nutzen. Weitere Informationen und Codebeispiele finden Sie unter [Übersicht über dbeschreib tecore](/windows/win32/DirectWrite/dwrite/dwritecore-overview).
+> Diese API ist als Teil der DWriteCore-Implementierung von [DirectWrite verfügbar.](../direct-write-portal.md) DWriteCore ist eine Form von DirectWrite, die auf Windows-Versionen bis hinunter zu Windows 8 läuft und Ihnen die Möglichkeit eröffnet, es plattformübergreifend zu nutzen. Weitere Informationen und Codebeispiele finden Sie unter [Übersicht über DWriteCore.](/windows/win32/DirectWrite/dwrite/dwritecore-overview)
 
 ## <a name="syntax"></a>Syntax
 
@@ -65,7 +65,7 @@ HRESULT GetBitmapData(
 
 `bitmapData`
 
-Typ: \_ out \_ **[DWRITE_BITMAP_DATA_BGRA32](./ns-dwrite_3-dwrite_bitmap_data_bgra32.md)\***
+Typ: \_ Out \_ **[DWRITE_BITMAP_DATA_BGRA32](./ns-dwrite_3-dwrite_bitmap_data_bgra32.md)\***
 
 Ein Zeiger auf die Pixeldaten.
 
@@ -73,20 +73,20 @@ Ein Zeiger auf die Pixeldaten.
 
 Typ: <b>HRESULT</b>
 
-Wenn diese Methode erfolgreich ausgeführt wird, wird <b xmlns:loc="http://microsoft.com/wdcml/l10n">S_OK</b>zurückgegeben. Andernfalls wird ein <b xmlns:loc="http://microsoft.com/wdcml/l10n">HRESULT</b> -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, gibt <b xmlns:loc="http://microsoft.com/wdcml/l10n">sie</b>S_OK. Andernfalls wird ein <b xmlns:loc="http://microsoft.com/wdcml/l10n">HRESULT-Fehlercode</b> zurückgegeben.
 
 ## <a name="examples"></a>Beispiele
 
-Weitere Informationen finden Sie im Thema [Übersicht über dbeschreib tecore](/windows/win32/DirectWrite/dwrite/dwritecore-overview) und in der Beispiel-App für [dwrite-coregallery](https://github.com/microsoft/Project-Reunion-Samples/tree/main/DWriteCore/DWriteCoreGallery) .
+Weitere Informationen finden [Sie im DWriteCore-Übersichtsthema](/windows/win32/DirectWrite/dwrite/dwritecore-overview) und in der [DWriteCoreGallery-Beispiel-App.](https://github.com/microsoft/Project-Reunion-Samples/tree/main/DWriteCore/DWriteCoreGallery)
 
 ## <a name="requirements"></a>Anforderungen
 | &nbsp; | &nbsp; |
 | ---- |:---- |
-| **Unterstützte Mindestversion (Client)** | Windows 10, Project Reunion 0,1-Vorabversion [Win32-Apps] |
-| **Header** | dwrite_3. h (dwrite_core. h einschließen) |
-| **Bibliothek** | Dwrite. lib |
-| **DLL** | Dwrite.dll |
+| **Unterstützte Mindestversion (Client)** | Windows 10, Project Reunion [Win32-Apps] |
+| **Header** | dwrite_3.h (include dwrite_core.h) |
+| **Bibliothek** | Dwrite.lib |
+| **Dll** | Dwrite.dll |
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [IDWriteBitmapRenderTarget2](/windows/win32/api/dwrite_1/nn-dwrite_3-idwritebitmaprendertarget2)
