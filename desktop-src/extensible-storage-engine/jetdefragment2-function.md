@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JetDefragment2-Funktion'
+description: 'Weitere Informationen zu: JetDefragment2-Funktion'
 title: JetDefragment2-Funktion
 TOCTitle: JetDefragment2 Function
 ms:assetid: cfb190cf-8bd3-4479-a6a1-7c0c9e8c74ca
@@ -20,12 +20,12 @@ api_type:
 api_location:
 - ESENT.DLL
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 8064ae996831f61869d74ff1fd7c0f2222257b85
-ms.sourcegitcommit: 168d11879cb9fd89d26f826482725c0a626be00f
+ms.openlocfilehash: 4bcde8d55032d2e07466668b5a4d96b9a447d843
+ms.sourcegitcommit: 35baf9ba19918a38c4ca8714f88c004af0c6f518
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "106360248"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107838804"
 ---
 # <a name="jetdefragment2-function"></a>JetDefragment2-Funktion
 
@@ -34,17 +34,17 @@ _**Gilt für:** Windows | Windows Server_
 
 ## <a name="jetdefragment2-function"></a>JetDefragment2-Funktion
 
-Die **JetDefragment2** -Funktion startet und beendet datenbankdefragmentierungsaufgaben, die die Datenorganisation innerhalb einer Datenbank verbessern, wobei ein Rückruf Parameter verfügbar ist, um den Fortschritt der Defragmentierung zu melden. Dies erfolgt, um das Daten Bank Wachstum einzuschränken, indem die vorhandene Datenträger Zuordnung effizienter in der Datenbank verwendet wird. Außerdem kann der Arbeits Satz reduziert werden, indem sichergestellt wird, dass die Daten stärker verpackt werden. Schließlich kann die Anwendung die Anwendungsleistung verbessern, indem allgemeine Vorgänge durch eine bessere Datenorganisation beschleunigt werden.
+Die **JetDefragment2-Funktion** startet und beendet Datenbankdefragmentierungsaufgaben, wodurch die Datenorganisation innerhalb einer Datenbank verbessert wird, wobei ein Rückrufparameter verfügbar ist, um den Fortschritt der Defragmentierung zu melden. Dies wird durchgeführt, um das Wachstum der Datenbank zu begrenzen, indem die vorhandene Datenträgerzuordnung innerhalb der Datenbank effizienter verwendet wird. Sie kann auch den Arbeitssatz reduzieren, indem sichergestellt wird, dass die Daten genauer gepackt werden. Schließlich kann sie die Anwendungsleistung verbessern, indem allgemeine Vorgänge durch eine bessere Datenorganisation beschleunigt werden.
 
 **Windows XP:**  **JetDefragment2** wird in Windows XP eingeführt.
 
-**JetDefragment2** enthält außerdem einen Rückruf Funktionsparameter, der verwendet wird, um einen Bericht über den Status des Defragmentierungsvorgangs zu berichten.
+**JetDefragment2** enthält auch einen Rückruffunktionsparameter, der zum Melden des Fortschritts des Defragmentierungsprozesses verwendet wird.
 
-Die Daten Bank Defragmentierung ist ein Online Vorgang und unterbricht keine reguläre Datenbankaktivität, wie z. b. Abfrage Vorgänge oder Datenaktualisierungen. **JetDefragment2** macht auch keine Kopie aller vorhandenen Daten. Stattdessen wird eine Datenbank an Ort und Stelle zerlegt. Schließlich stellt **JetDefragment2** den internen Daten Bank Speicher für die erneute Verwendung wieder her, gibt jedoch keinen zusätzlichen Speicherplatz im Dateisystem des Betriebssystems frei.
+Die Datenbankdefragmentierung ist ein Onlinevorgang und unterbricht keine regulären Datenbankaktivitäten wie Abfragevorgänge oder Datenaktualisierungen. **JetDefragment2** erstellt auch keine Kopie aller vorhandenen Daten. Stattdessen wird eine Datenbank an Ort und Stelle defragmentiert. Schließlich stellt **JetDefragment2** den internen Datenbankspeicherplatz für die Wiederverwendung wieder her, gibt jedoch keinen zusätzlichen Speicherplatz für das Betriebssystemdateisystem frei.
 
-Das resultierende Format der Daten kann viel effizienter sein, ist aber nicht in der Regel optimal. Die Defragmentierung ist auf das Freigeben von Datenbankseiten zur erneuten Verwendung beschränkt, die bereits logisch gelöschte Daten enthalten. Die Defragmentierung sorgt auch dafür, dass Datenbankseiten in einigen Fällen wieder verwendet werden können, indem Daten von zwei Seiten kombiniert werden, wenn Sie auf eine einzelne Seite passen.
+Das resultierende Format der Daten kann viel effizienter sein, ist aber im Allgemeinen nicht optimal. Die Defragmentierung ist auf die Freigabe von Datenbankseiten zur erneuten Verwendung beschränkt, die Daten enthalten, die bereits logisch gelöscht wurden. Durch die Defragmentierung können Datenbankseiten in einigen Fällen auch wiederverwendet werden, indem Daten von zwei Seiten kombiniert werden, wenn sie auf eine einzelne Seite passen.
 
-Dieser Vorgang unterscheidet sich von [jetcompact](./jetcompact-function.md) , wodurch eine Kopie einer schreibgeschützten Datenbank in ein sehr optimales Formular umgewandelt wird.
+Dieser Vorgang unterscheidet sich von [JetCompact,](./jetcompact-function.md) bei dem eine Kopie einer schreibgeschützten Datenbank in eine äußerst optimale Form umgewandelt wird.
 
 ```cpp
 JET_ERR JET_API JetDefragment2(
@@ -60,37 +60,52 @@ JET_ERR JET_API JetDefragment2(
 
 ### <a name="parameters"></a>Parameter
 
-*-sid*
+*sesid*
 
-Die Sitzung, die für diesen-Befehl verwendet werden soll.
+Die Sitzung, die für diesen Aufruf verwendet werden soll.
 
-*DBID*
+*Dbid*
 
-Die zu zerfragmentdatenbank.
+Die zu defragmentierende Datenbank.
 
-*sztablename*
+*szTableName*
 
-Nicht verwendeter Parameter. Die Defragmentierung wird für die gesamte Datenbank ausgeführt, die durch die angegebene Datenbank-ID beschrieben wird.
+Manchmal *ist szTableName* erforderlich, und manchmal ist es verboten:
 
-*pcpass*
+| *grbit* | *szTableName* |
+| --- | --- |
+| `JET_bitDefragmentBTreeBatch` | Muss `NULL`lauten. |
+| `JET_bitDefragmentBTree` | Gibt den Namen der tabelle/BTree an, die defragmentiert werden soll. |
+| *Andere* | Muss `NULL`lauten. |
+ 
+Die Defragmentierung wird für die gesamte Datenbank durchgeführt, die von der angegebenen Datenbank-ID beschrieben wird.
 
-Wenn eine Online Defragmentierung gestartet wird, wird durch diesen optionalen Eingabeparameter die maximale Anzahl von Defragmentierungs Läufen festgelegt. Wenn Sie eine Online Defragmentierung beenden, wird dieser optionale Ausgabepuffer auf die Anzahl der durchgeführten Durchgänge festgelegt.
+*pcPasses*
 
-Wenn dieser Parameter auf NULL festgelegt ist, ist die Anzahl der Online Defragmentierungs Überläufen unbegrenzt.
+Beim Starten einer Onlinedefragmentierungsaufgabe legt dieser optionale Eingabeparameter die maximale Anzahl von Defragmentierungsüberläufen fest. Beim Beenden eines Onlinedefragmentierungs-Task wird dieser optionale Ausgabepuffer auf die Anzahl der ausgeführten Durchläufe festgelegt.
 
-*pcseconds*
+Wenn dieser Parameter auf NULL festgelegt ist, ist die Anzahl der Onlinedefragmentierungsüberläufe unbegrenzt.
 
-Beim Starten einer Online Defragmentierung-Aufgabe legt dieser optionale Eingabeparameter die maximale Zeit für die Defragmentierung fest. Wenn Sie eine Online Defragmentierung beenden, wird dieser optionale Ausgabepuffer auf die für die Defragmentierung verwendete Zeitspanne festgelegt.
+*pcSeconds*
 
-Wenn dieser Parameter auf NULL festgelegt ist oder *pcseconds* auf einen negativen Wert zeigt, ist die maximale Zeit für die Defragmentierung unbegrenzt.
+Beim Starten einer Onlinedefragmentierungsaufgabe legt dieser optionale Eingabeparameter die maximale Zeit für die Defragmentierung fest. Beim Beenden eines Onlinedefragmentierungs-Task wird dieser optionale Ausgabepuffer auf die Dauer festgelegt, die für die Defragmentierung verwendet wird.
+
+Wenn dieser Parameter auf NULL festgelegt ist oder *pcSeconds* auf einen negativen Wert zeigt, ist die maximale Zeit für die Defragmentierung unbegrenzt.
 
 *Rückruf*
 
-Rückruffunktion, die regelmäßig Aufrufe aufruft, um den Fortschritt zu melden.
+Rückruffunktion, die bei der Defragmentierung regelmäßig aufruft, um den Fortschritt zu melden.
+
+| *grbit* | *szTableName* |
+| --- | --- |
+| `JET_bitDefragmentBTreeBatch` | Muss `NULL`lauten. |
+| `JET_bitDefragmentBTree` | Muss `NULL`lauten. |
+| *Andere* | Optional.
+
 
 *grbit*
 
-Eine Gruppe von Bits, die NULL oder mehr der folgenden Optionen angibt.
+Eine Gruppe von Bits, die null oder mehr der folgenden Optionen angibt.
 
 <table>
 <colgroup>
@@ -106,19 +121,23 @@ Eine Gruppe von Bits, die NULL oder mehr der folgenden Optionen angibt.
 <tbody>
 <tr class="odd">
 <td><p>JET_bitDefragmentAvailSpaceTreesOnly</p></td>
-<td><p>Diese Option wird verwendet, um den verfügbaren Speicherplatz der ESE-Daten Bank Speicher Belegung zu defragmentieren. Der Daten Bankbereich ist in zwei Typen unterteilt: eigener Speicherplatz und verfügbarer Speicherplatz. Der Speicherplatz ist einer Tabelle oder einem Index zugeordnet, während der verfügbare Speicherplatz für die Verwendung innerhalb der Tabelle bzw. des Indexes bereit ist. Der verfügbare Speicherplatz ist weitaus dynamischer als das Verhalten und erfordert eine Online Defragmentierung, die größer ist als der Speicherplatz im Besitz von Tabellen oder Indexdaten.</p></td>
+<td><p>Diese Option wird verwendet, um den verfügbaren Speicherplatzteil der ESE-Datenbankspeicherplatzbelegung zu defragmentieren. Der Datenbankspeicherplatz ist in zwei Typen unterteilt: eigener Speicherplatz und verfügbarer Speicherplatz. Der eigene Speicherplatz wird einer Tabelle oder einem Index zugeordnet, während der verfügbare Speicherplatz für die Verwendung innerhalb der Tabelle bzw. des Indexes bereit ist. Der verfügbare Speicherplatz ist im Verhalten viel dynamischer und erfordert eine größere Onlinedefragmentierung als speicherplatz- oder tabellen- oder indexeigene Daten.</p></td>
 </tr>
 <tr class="even">
 <td><p>JET_bitDefragmentBatchStart</p></td>
-<td><p>Diese Option wird verwendet, um eine neue defragmentierungsaufgabe zu starten.</p></td>
+<td><p>Diese Option wird verwendet, um eine neue Defragmentierungsaufgabe zu starten.</p></td>
 </tr>
 <tr class="odd">
 <td><p>JET_bitDefragmentBatchStop</p></td>
-<td><p>Diese Option wird verwendet, um eine vorhandene Defragmentierungs Aufgabe zu beenden.</p></td>
+<td><p>Diese Option wird verwendet, um eine vorhandene gestartete Defragmentierungsaufgabe zu beenden.</p></td>
 </tr>
 <tr class="even">
 <td><p>JET_bitDefragmentBTree</p></td>
-<td><p>Diese Option wird verwendet, um eine B-Struktur zu defragmentieren.</p></td>
+<td><p>Diese Option wird verwendet, um eine durch szTableName angegebene B-Struktur zu defragmentieren.</p></td>
+</tr>
+<tr class="odd">
+<td><p>JET_bitDefragmentBTreeBatch</p></td>
+<td><p>Diese Option wird verwendet, um OLD2 für die gesamte Datenbank aufzurufen.</p></td>
 </tr>
 </tbody>
 </table>
@@ -126,7 +145,7 @@ Eine Gruppe von Bits, die NULL oder mehr der folgenden Optionen angibt.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Diese Funktion gibt den [JET_ERR](./jet-err.md) Datentyp mit einem der folgenden Rückgabecodes zurück. Weitere Informationen zu den möglichen ESE-Fehlern finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md) und [Error Handling Parameters](./error-handling-parameters.md).
+Diese Funktion gibt den [JET_ERR](./jet-err.md) Datentyp mit einem der folgenden Rückgabecodes zurück. Weitere Informationen zu den möglichen ESE-Fehlern finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md) and [Error Handling Parameters](./error-handling-parameters.md).
 
 <table>
 <colgroup>
@@ -146,39 +165,39 @@ Diese Funktion gibt den [JET_ERR](./jet-err.md) Datentyp mit einem der folgenden
 </tr>
 <tr class="even">
 <td><p>JET_errClientRequestToStopJetService</p></td>
-<td><p>Der Vorgang kann nicht ausgeführt werden, da alle Aktivitäten auf der Instanz, die der Sitzung zugeordnet ist, aufgrund eines Aufrufens von <a href="gg269240(v=exchg.10).md">jetstopservice</a>beendet wurden.</p></td>
+<td><p>Es ist nicht möglich, den Vorgang abschließen, da alle Aktivitäten auf der -Instanz, die der Sitzung zugeordnet ist, aufgrund eines Aufrufs von <a href="gg269240(v=exchg.10).md">JetStopService beendet wurden.</a></p></td>
 </tr>
 <tr class="odd">
 <td><p>JET_errDatabaseFileReadOnly</p></td>
-<td><p>Die für die Defragmentierung gewählte Datenbank ist schreibgeschützt und kann in keiner Weise aktualisiert werden, einschließlich der Defragmentierung.</p></td>
+<td><p>Die für die Defragmentierung ausgewählte Datenbank ist schreibgeschützt und kann nicht aktualisiert werden, einschließlich defragmentierung.</p></td>
 </tr>
 <tr class="even">
 <td><p>JET_errDistributedTransactionAlreadyPreparedToCommit</p></td>
-<td><p>Die angegebene Sitzung befindet sich im Status "vorbereitet für Commit" und kann erst dann neue Updates starten, wenn für die aktuelle Transaktion ein Commit oder ein Rollback ausgeführt wird.</p></td>
+<td><p>Die gegebene Sitzung befindet sich im Zustand "Commit vorbereitet" und kann keine neuen Updates starten, bis für die aktuelle Transaktion ein Commit oder Rollback ausgeführt wurde.</p></td>
 </tr>
 <tr class="odd">
 <td><p>JET_errInstanceUnavailable</p></td>
-<td><p>Der Vorgang kann nicht ausgeführt werden, da bei der der Sitzung zugeordneten Instanz ein schwerwiegender Fehler aufgetreten ist, der erfordert, dass der Zugriff auf alle Daten widerrufen wird, um die Integrität der Daten zu schützen. Dieser Fehler wird nur von Windows XP und höheren Versionen zurückgegeben.</p></td>
+<td><p>Der Vorgang kann nicht abgeschlossen werden, da für die der Sitzung zugeordnete Instanz ein schwerwiegender Fehler aufgetreten ist, der erfordert, dass der Zugriff auf alle Daten widerrufen wird, um die Integrität dieser Daten zu schützen. Dieser Fehler wird nur von Windows XP und späteren Versionen zurückgegeben.</p></td>
 </tr>
 <tr class="even">
 <td><p>JET_errInvalidDatabaseId</p></td>
-<td><p>Die angegebene Datenbank-ID stimmt nicht mit einer bekannten Datenbank in der Instanz von identisch.</p></td>
+<td><p>Die gegebene Datenbank-ID passt nicht zu einer bekannten Datenbank in der -Instanz.</p></td>
 </tr>
 <tr class="odd">
 <td><p>JET_errNotInitialized</p></td>
-<td><p>Der Vorgang kann nicht abgeschlossen werden, da die Instanz, die der Sitzung zugeordnet ist, noch nicht initialisiert wurde.</p></td>
+<td><p>Der Vorgang kann nicht abgeschlossen werden, da die der Sitzung zugeordnete Instanz noch nicht initialisiert wurde.</p></td>
 </tr>
 <tr class="even">
 <td><p>JET_errRestoreInProgress</p></td>
-<td><p>Der Vorgang kann nicht abgeschlossen werden, da für die-Instanz, die der Sitzung zugeordnet ist, ein Wiederherstellungs Vorgang ausgeführt wird.</p></td>
+<td><p>Der Vorgang kann nicht abgeschlossen werden, da ein Wiederherstellungsvorgang für die -Instanz durchgeführt wird, die der Sitzung zugeordnet ist.</p></td>
 </tr>
 <tr class="odd">
 <td><p>JET_errSessionSharingViolation</p></td>
-<td><p>Dieselbe Sitzung kann nicht für mehr als einen Thread gleichzeitig verwendet werden. Dieser Fehler wird nur von Windows XP und höheren Versionen zurückgegeben.</p></td>
+<td><p>Dieselbe Sitzung kann nicht gleichzeitig für mehrere Threads verwendet werden. Dieser Fehler wird nur von Windows XP und späteren Versionen zurückgegeben.</p></td>
 </tr>
 <tr class="even">
 <td><p>JET_errTermInProgress</p></td>
-<td><p>Der Vorgang kann nicht ausgeführt werden, da die Instanz, die der Sitzung zugeordnet ist, heruntergefahren wird.</p></td>
+<td><p>Der Vorgang kann nicht abgeschlossen werden, da die der Sitzung zugeordnete Instanz heruntergefahren wird.</p></td>
 </tr>
 <tr class="odd">
 <td><p>JET_errTransReadOnly</p></td>
@@ -186,31 +205,31 @@ Diese Funktion gibt den [JET_ERR](./jet-err.md) Datentyp mit einem der folgenden
 </tr>
 <tr class="even">
 <td><p>JET_errVersionStoreOutOfMemory</p></td>
-<td><p>Dieser Fehler tritt auf, wenn die konfigurierte Größe des Versionsspeicher nicht ausreicht, um alle ausstehenden Updates zu speichern.</p></td>
+<td><p>Dieser Fehler tritt auf, wenn die konfigurierte Größe des Versionsspeichers nicht ausreicht, um alle ausstehenden Updates zu speichern.</p></td>
 </tr>
 <tr class="odd">
 <td><p>JET_wrnDefragAlreadyRunning</p></td>
-<td><p>Die JET_bitDefragmentBatchStart-Option wurde übergeben, aber eine defragmentierungsaufgabe führt bereits Defragmentierung für die angegebene Datenbank aus.</p></td>
+<td><p>Die option JET_bitDefragmentBatchStart wurde übergeben, aber eine Defragmentierungsaufgabe führt bereits die Defragmentierung für die angegebene Datenbank aus.</p></td>
 </tr>
 <tr class="even">
 <td><p>JET_wrnDefragNotRunning</p></td>
-<td><p>Die JET_bitDefragmentBatchStop-Option wurde erfolgreich ausgeführt, aber zurzeit wird keine defragmentierungsaufgabe ausgeführt.</p></td>
+<td><p>Die option JET_bitDefragmentBatchStop wurde übergeben, aber derzeit wird keine Defragmentierungsaufgabe ausgeführt.</p></td>
 </tr>
 </tbody>
 </table>
 
 
-Bei Erfolg wird die angeforderte Aktion zum Starten einer defragmentierungsaufgabe für eine bestimmte Daten mit den angegebenen Optionen ausgeführt, oder die Aktion zum Beenden einer vorhandenen defragmentierungsaufgabe wird ausgeführt.
+Bei Erfolg wird die angeforderte Aktion ausgeführt, entweder eine Defragmentierungsaufgabe für bestimmte Daten mit angegebenen Optionen zu starten, oder die Aktion zum Beenden einer vorhandenen Defragmentierungsaufgabe wird ausgeführt.
 
-Bei einem Fehler wird die angeforderte Aktion zum Starten oder Beenden eines Online defragmentierungsauftrags nicht durchgeführt. Es treten keine anderen Nebeneffekte auf.
+Bei einem Fehler wird die angeforderte Aktion zum Starten oder Beenden eines Onlinedefragmentierungsauftrags nicht ausgeführt. Es treten keine weiteren Nebeneffekte auf.
 
 #### <a name="remarks"></a>Bemerkungen
 
-Die Online Defragmentierung wird sowohl durch eine Parametereinstellung als auch durch diese API gesteuert. Der Standardwert für den Systemparameter ist JET_OnlineDefragAll. Dies bedeutet, dass die Defragmentierung für alle unterstützten Datenstrukturen aktiviert ist. Mithilfe von [jetsetsystemparameter](./jetsetsystemparameter-function.md)ist es jedoch möglich, die Online Defragmentierung zu deaktivieren oder Sie selektiv nur für Daten Bank Raumstrukturen, nur Datenbanken, Streamingdateien oder eine beliebige Kombination dieser Optionen zu aktivieren. Wenn die Systemeinstellung für die Online Defragmentierung auf eine veraltete Einstellung festgelegt ist, wird die Einstellung von **JetDefragment2** als JET_OnlineDefragAll behandelt.
+Die Onlinedefragmentierung wird sowohl durch eine Parametereinstellung als auch durch diese API gesteuert. Der Standardwert des Systemparameters ist JET_OnlineDefragAll. Dies bedeutet, dass die Defragmentierung für alle unterstützten Datenstrukturen aktiviert ist. Bei Verwendung von [JetSetSystemParameter](./jetsetsystemparameter-function.md)ist es jedoch möglich, die Onlinedefragmentierung zu deaktivieren oder sie selektiv nur für Datenbankspeicherplatzstrukturen, nur Datenbanken, nur Streamingdateien oder eine beliebige Kombination dieser Optionen zu aktivieren. Wenn die Systemeinstellung für die Onlinedefragmentierung auf eine veraltete Einstellung festgelegt ist, behandelt **JetDefragment2** die Einstellung als JET_OnlineDefragAll.
 
-Es kann höchstens eine Aufgabe für jede Datenbank ausgeführt werden. Der Task wird in dem Prozess, der ESE gehostet, als Thread ausgeführt.
+Es kann höchstens eine Aufgabe für jede Datenbank ausgeführt werden. Die Aufgabe wird als Thread im Prozess ausgeführt, der ESE hostet.
 
-Die Sitzung, mit der die Online Defragmentierung-Aufgabe gestartet wird, kann anschließend für Daten Bank Vorgänge verwendet werden, während der Defragmentierungstask fortgesetzt wird, da die Defragmentierungs Aufgabe eine eigene Sitzung zuordnet. Die angegebene Sitzung wird nur verwendet, um die Berechtigungen zu überprüfen, die der Startzeit der Aufgabe zugeordnet sind, und wird nicht tatsächlich für die Defragmentierungsvorgänge selbst verwendet.
+Die Zum Starten des Onlinedefragmentierungstasks verwendete Sitzung kann anschließend für Datenbankvorgänge verwendet werden, während der Defragmentierungstask fortgesetzt wird, da der Defragmentierungstask eine eigene Sitzung zuordnet. Die angegebene Sitzung wird nur verwendet, um die Berechtigungen zu überprüfen, die der Startsitzung des Tasks zugeordnet sind, und wird nicht tatsächlich für die Defragmentierungsvorgänge selbst verwendet.
 
 #### <a name="requirements"></a>Anforderungen
 
@@ -230,19 +249,19 @@ Die Sitzung, mit der die Online Defragmentierung-Aufgabe gestartet wird, kann an
 </tr>
 <tr class="odd">
 <td><p><strong>Header</strong></p></td>
-<td><p>In "ESENT. h" deklariert.</p></td>
+<td><p>In Esent.h deklariert.</p></td>
 </tr>
 <tr class="even">
 <td><p><strong>Bibliothek</strong></p></td>
-<td><p>Verwenden Sie ESENT. lib.</p></td>
+<td><p>Verwenden Sie ESENT.lib.</p></td>
 </tr>
 <tr class="odd">
-<td><p><strong>DLL</strong></p></td>
+<td><p><strong>Dll</strong></p></td>
 <td><p>Erfordert ESENT.dll.</p></td>
 </tr>
 <tr class="even">
 <td><p><strong>Unicode</strong></p></td>
-<td><p>Implementiert als <strong>JetDefragment2W</strong> (Unicode) und <strong>JetDefragment2A</strong> (ANSI).</p></td>
+<td><p>Wird als <strong>JetDefragment2W</strong> (Unicode) und <strong>JetDefragment2A</strong> (ANSI) implementiert.</p></td>
 </tr>
 </tbody>
 </table>
@@ -252,7 +271,7 @@ Die Sitzung, mit der die Online Defragmentierung-Aufgabe gestartet wird, kann an
 
 [JET_ERR](./jet-err.md)  
 [JET_SESID](./jet-sesid.md)  
-[Jetcompact](./jetcompact-function.md)  
-[Jetdebug](./jetdefragment-function.md)  
-[Jetsetsystemparameter](./jetsetsystemparameter-function.md)  
-[Jetstopservice](./jetstopservice-function.md)
+[JetCompact](./jetcompact-function.md)  
+[JetDefragment](./jetdefragment-function.md)  
+[JetSetSystemParameter](./jetsetsystemparameter-function.md)  
+[JetStopService](./jetstopservice-function.md)
