@@ -4,37 +4,37 @@ ms.assetid: 25bfbd62-b6be-4d1f-aa4c-77798bbb9fc9
 title: Smart Tee-Filter
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 647e04ef2a24bde43c9d02b7986fd8a645a6b60c
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: c52077066f69e50fbb5218012a402a8d556c15c1
+ms.sourcegitcommit: 63753fcfb0afbbe5ec283fb8316e62c2dc950f66
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104482299"
+ms.lasthandoff: 04/22/2021
+ms.locfileid: "107909298"
 ---
 # <a name="smart-tee-filter"></a>Smart Tee-Filter
 
-Der Smart Tee-Filter wird in Video Erfassungs Diagrammen verwendet, um den Videostream in einen Vorschau Datenstrom und einen Aufzeichnungsdaten Strom aufzuteilen. Dies erfolgt ohne zusätzliches Kopieren von Daten. Die Ausgabe Pins unterstützen alle Medientypen, die von der Downstream-Verbindung unterstützt werden.
+Der Smart Tee-Filter wird in Videoaufnahmediagrammen verwendet, um den Videostream in einen Vorschaustream und einen Erfassungsstream aufzuteilen. Dies erfolgt ohne zusätzliches Kopieren von Daten. Die Ausgabepins unterstützen alle Medientypen, die für die Downstreamverbindung unterstützt werden.
 
-Der Smart Tee-Filter ist nützlich, wenn ein Video Erfassungs Filter keine separaten Pins für Erfassung und Vorschau bereitstellt. Der Smart Tee-Filter liefert nur die Vorschau Daten, wenn dies die Leistungs Erfassung nicht beeinträchtigt. Außerdem werden die Zeitstempel aus dem Vorschau Datenstrom entfernt. Der Erfassungs Diagramm-Generator fügt bei Bedarf automatisch den intelligenten Tee-Filter ein. Weitere Informationen finden Sie unter [Kombinieren von Video Erfassung und Vorschau](combining-video-capture-and-preview.md).
+Der Smart Tee-Filter ist nützlich, wenn ein Videoaufnahmefilter keine separaten Pins für die Erfassung und Vorschau bereitstellt. Der Smart Tee-Filter liefert nur Dann Vorschaudaten, wenn dies die Erfassungsleistung nicht beeinträchtigt. Außerdem werden die Zeitstempel aus dem Vorschaustream entfernt. Der Generator für Erfassungsgraphen fügt bei Bedarf automatisch den Smart Tee-Filter ein. Weitere Informationen finden Sie unter [Kombinieren von Video capture und Preview](combining-video-capture-and-preview.md).
 
-Die folgende Abbildung zeigt ein typisches Erfassungs Diagramm, das den intelligenten Tee-Filter verwendet.
+Die folgende Abbildung zeigt ein typisches Erfassungsdiagramm, das den Smart Tee-Filter verwendet.
 
 ![Verwenden des Smart Tee-Filters](images/smarttee.png)
 
 
 
-|                                          |                                                                                                                |
+| Bezeichnung | Wert |
 |------------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| Filter Schnittstellen                        | [**Ibasefilter**](/windows/desktop/api/Strmif/nn-strmif-ibasefilter)                                                                             |
-| Eingabe-PIN-Medientypen                    | MediaType- \_ Video, mediasubtype \_ null                                                                           |
-| PIN-Eingabeschnittstellen                     | [**IMemInputPin**](/windows/desktop/api/Strmif/nn-strmif-imeminputpin), [**IPin**](/windows/desktop/api/Strmif/nn-strmif-ipin), [**iqualitycontrol**](/windows/desktop/api/Strmif/nn-strmif-iqualitycontrol)         |
-| Ausgabe-PIN-Medientypen                   | MediaType- \_ Video, mediasubtype \_ null                                                                           |
-| PIN-Schnittstellen                    | [**Iamstreamcontrol**](/windows/desktop/api/Strmif/nn-strmif-iamstreamcontrol), [**IPin**](/windows/desktop/api/Strmif/nn-strmif-ipin), [**iqualitycontrol**](/windows/desktop/api/Strmif/nn-strmif-iqualitycontrol) |
-| CLSID Filtern                             | CLSID- \_ smarttee                                                                                                |
-| CLSID der Eigenschaften Seite                      | Keine Eigenschaften Seite.                                                                                              |
+| Filterschnittstellen                        | [**IBaseFilter**](/windows/desktop/api/Strmif/nn-strmif-ibasefilter)                                                                             |
+| Eingabe-Stecknadelmedientypen                    | MEDIATYPE \_ Video, MEDIASUBTYPE \_ NULL                                                                           |
+| Eingabe-Pin-Schnittstellen                     | [**IMemInputPin,**](/windows/desktop/api/Strmif/nn-strmif-imeminputpin) [**IPin,**](/windows/desktop/api/Strmif/nn-strmif-ipin) [**IQualityControl**](/windows/desktop/api/Strmif/nn-strmif-iqualitycontrol)         |
+| Medientypen des Ausgabepins                   | MEDIATYPE \_ Video, MEDIASUBTYPE \_ NULL                                                                           |
+| Ausgabe-PIN-Schnittstellen                    | [**IAMStreamControl**](/windows/desktop/api/Strmif/nn-strmif-iamstreamcontrol), [**IPin**](/windows/desktop/api/Strmif/nn-strmif-ipin), [**IQualityControl**](/windows/desktop/api/Strmif/nn-strmif-iqualitycontrol) |
+| Filtern der CLSID                             | CLSID \_ SmartTee                                                                                                |
+| Eigenschaftenseite CLSID                      | Keine Eigenschaftenseite.                                                                                              |
 | Ausführbare Datei                               | qcap.dll                                                                                                       |
-| [Verdienst](merit.md)                       | das Verdienst wird \_ \_ nicht \_ verwendet.                                                                                            |
-| [Filter Kategorie](filter-categories.md) | CLSID \_ legacyamfiltercategory                                                                                  |
+| [Verdienst](merit.md)                       | NICHT \_ \_ VERWENDEN \_                                                                                            |
+| [Filterkategorie](filter-categories.md) | CLSID \_ LegacyAmFilterCategory                                                                                  |
 
 
 
@@ -42,7 +42,7 @@ Die folgende Abbildung zeigt ein typisches Erfassungs Diagramm, das den intellig
 
 ## <a name="remarks"></a>Bemerkungen
 
-Die Erfassungs-PIN ist die Ausgabe-PIN 0, und die Vorschau-PIN lautet Ausgabe-PIN 1.
+Der Aufnahmepin ist der Ausgabepin 0, und der Vorschaupin ist der Ausgabepin 1.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

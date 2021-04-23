@@ -1,34 +1,34 @@
 ---
-description: Datei Quellen Filter (URL)
+description: Filter für Dateiquelle (URL)
 ms.assetid: 405fd6ea-aa17-4d11-8f07-067468cb090b
-title: Datei Quellen Filter (URL)
+title: Filter für Dateiquelle (URL)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: caea04b74a6880452210f1a43d5dfb29f8753dd3
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: a0ddfa7282adbf5117bd2c52465c6eb30efbd69e
+ms.sourcegitcommit: 63753fcfb0afbbe5ec283fb8316e62c2dc950f66
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104125107"
+ms.lasthandoff: 04/22/2021
+ms.locfileid: "107909238"
 ---
-# <a name="file-source-url-filter"></a>Datei Quellen Filter (URL)
+# <a name="file-source-url-filter"></a>Filter für Dateiquelle (URL)
 
-Der URL-Quell Filter ist ein generischer asynchroner Quell Filter, der mit einer beliebigen Quelldatei verwendet werden kann, die durch eine Uniform Resource Locator (URL) identifiziert werden kann und deren Haupt Datentyp Stream ist. Hierzu gehören AVI-, MOV-, MPEG-und WAV-Dateien. Der downstreamfilter muss ein Parser sein, z. b. der [MPEG-1-streamsplitter](mpeg-1-stream-splitter-filter.md), der [avi-Splitter](avi-splitter-filter.md)oder der QuickTime- [Film Parser](quicktime-movie-parser-filter.md).
+Der Filter URL-Dateiquelle ist ein generischer asynchroner Quellfilter, der mit jeder Quelldatei funktioniert, die durch eine Uniform Resource Locator (URL) identifiziert werden kann und deren Haupttyp des Mediums stream ist. Dies schließt AVI-, MOV-, MPEG- und WAV-Dateien ein. Der Downstreamfilter muss ein Parser sein, z. B. der [MPEG-1-Stream Splitter,](mpeg-1-stream-splitter-filter.md)der [AVI-Splitter](avi-splitter-filter.md)oder der [QuickTime Movie Parser](quicktime-movie-parser-filter.md).
 
 
 
-|                                          |                                                                                                                                      |
+| Bezeichnung | Wert |
 |------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------|
-| Filter Schnittstellen                        | [**Iamopenprogress**](/windows/desktop/api/Strmif/nn-strmif-iamopenprogress), [**ibasefilter**](/windows/desktop/api/Strmif/nn-strmif-ibasefilter), [**IFileSourceFilter**](/windows/desktop/api/Strmif/nn-strmif-ifilesourcefilter)       |
-| Eingabe-PIN-Medientypen                    | Nicht verfügbar                                                                                                                       |
-| PIN-Eingabeschnittstellen                     | Nicht verfügbar                                                                                                                       |
-| Ausgabe-PIN-Medientypen                   | MediaType-Daten \_ Strom. Der Untertyp hängt vom Medienformat ab. (Mediasubtype \_ NULL, wenn der Filter das Format nicht erkennt.)         |
-| PIN-Schnittstellen                    | [**Iamasynkreadertimestampscaling**](/windows/desktop/api/Strmif/nn-strmif-iamasyncreadertimestampscaling), [**iasynkreader**](/windows/desktop/api/Strmif/nn-strmif-iasyncreader), [**IPin**](/windows/desktop/api/Strmif/nn-strmif-ipin) |
-| CLSID Filtern                             | CLSID- \_ urlreader                                                                                                                     |
-| CLSID der Eigenschaften Seite                      | Keine Eigenschaften Seite                                                                                                                     |
+| Filterschnittstellen                        | [**IAMOpenProgress,**](/windows/desktop/api/Strmif/nn-strmif-iamopenprogress) [**IBaseFilter,**](/windows/desktop/api/Strmif/nn-strmif-ibasefilter) [**IFileSourceFilter**](/windows/desktop/api/Strmif/nn-strmif-ifilesourcefilter)       |
+| Eingabepin-Medientypen                    | Nicht zutreffend                                                                                                                       |
+| Eingabepinschnittstellen                     | Nicht zutreffend                                                                                                                       |
+| Ausgabepin-Medientypen                   | \_MEDIATYPE-Stream. Der Untertyp hängt vom Medienformat ab. (MEDIASUBTYPE \_ NULL, wenn der Filter das Format nicht erkennt.)         |
+| Ausgabe-PIN-Schnittstellen                    | [**IAMAsyncReaderTimestampScaling,**](/windows/desktop/api/Strmif/nn-strmif-iamasyncreadertimestampscaling) [**IAsyncReader,**](/windows/desktop/api/Strmif/nn-strmif-iasyncreader) [**IPin**](/windows/desktop/api/Strmif/nn-strmif-ipin) |
+| Filtern der CLSID                             | CLSID \_ URLReader                                                                                                                     |
+| Eigenschaftenseite CLSID                      | Keine Eigenschaftenseite                                                                                                                     |
 | Ausführbare Datei                               | quartz.dll                                                                                                                           |
-| [Verdienst](merit.md)                       | nicht \_ wahrscheinlich                                                                                                                      |
-| [Filter Kategorie](filter-categories.md) | CLSID \_ legacyamfiltercategory                                                                                                        |
+| [Verdienst](merit.md)                       | \_UNWAHRSCHEINLICHE WAHRSCHEINLICHKEIT                                                                                                                      |
+| [Filterkategorie](filter-categories.md) | CLSID \_ LegacyAmFilterCategory                                                                                                        |
 
 
 
@@ -36,7 +36,7 @@ Der URL-Quell Filter ist ein generischer asynchroner Quell Filter, der mit einer
 
 ## <a name="remarks"></a>Bemerkungen
 
-Dieser Filter verwendet Urlmon und unterstützt Codepages.
+Dieser Filter verwendet URLMon und unterstützt Codepages.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

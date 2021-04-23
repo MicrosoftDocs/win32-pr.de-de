@@ -1,37 +1,37 @@
 ---
 description: Der Clip gibt eine Medienquelle an.
 ms.assetid: 40323e64-ad5f-4646-bad7-2a4e7d0ddcf6
-title: Clip-Element
+title: clip-Element
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9fe975113f370b13e50ba695d6fb3388a43c3a74
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 6d937f942ba7b564e65b0e37d9c11929805287da
+ms.sourcegitcommit: 63753fcfb0afbbe5ec283fb8316e62c2dc950f66
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104480995"
+ms.lasthandoff: 04/22/2021
+ms.locfileid: "107908668"
 ---
-# <a name="clip-element"></a>Clip-Element
+# <a name="clip-element"></a>clip-Element
 
 > [!Note]  
-> \[Veraltet. Diese API kann aus zukünftigen Versionen von Windows entfernt werden.\]
+> \[Veraltet. Diese API wird möglicherweise aus zukünftigen Versionen von Windows entfernt.\]
 
  
 
-Der ermittelt `clip` eine Medienquelle.
+Gibt `clip` eine Medienquelle an.
 
-## <a name="attributes"></a>Attribute
+## <a name="attributes"></a>Attributes
 
-[**CLSID**](clsid-attribute.md), [**Framerate**](framerate-attribute.md), [**Lock**](lock-attribute.md), [**mlength**](mlength-attribute.md), [**mstart**](mstart-attribute.md), [**mstopps**](mstop-attribute.md), [**stumm**](mute-attribute.md), [**src**](src-attribute.md), [**Start**](start-attribute.md), [](stop-attribute.md)Start, [**Stream**](stream-attribute.md), [**stretchmode**](stretchmode-attribute.md), [**UserData**](userdata-attribute.md), [**UserID**](userid-attribute.md), [**username**](username-attribute.md)
+[**clsid**](clsid-attribute.md), [**framerate**](framerate-attribute.md), [**lock**](lock-attribute.md), [**mlength**](mlength-attribute.md), [**mstart**](mstart-attribute.md), [**mstop**](mstop-attribute.md), [**mute**](mute-attribute.md), [**src**](src-attribute.md), [**start**](start-attribute.md), [**stop**](stop-attribute.md), [**stream**](stream-attribute.md), [**stretchmode**](stretchmode-attribute.md), [**userdata**](userdata-attribute.md), [**userid**](userid-attribute.md), [**username**](username-attribute.md)
 
-## <a name="parentchild-information"></a>Über-/unterordnungsinformationen
+## <a name="parentchild-information"></a>Informationen zu über- und untergeordneten Daten
 
 
 
-|          |                                  |
+| Bezeichnung | Wert |
 |----------|----------------------------------|
 | Parent   | [**track**](track-element.md)   |
-| Children | [**entsprechende**](effect-element.md) |
+| Children | [**Wirkung**](effect-element.md) |
 
 
 
@@ -39,11 +39,11 @@ Der ermittelt `clip` eine Medienquelle.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Das **CLSID** -Attribut gibt die CLSID eines Quell Filters an, der als Quelle verwendet werden soll. Geben Sie die Attribute **src** und **CLSID** nicht innerhalb desselben `clip` Elements an.
+Das **clsid-Attribut** gibt die CLSID eines Quellfilters an, der als Quelle verwendet werden soll. Geben Sie die **Attribute src** und **clsid nicht** innerhalb desselben Elements `clip` an.
 
-Geben Sie mindestens ein Start Zeit Attribut ("**Start** " oder " **mstart**") und ein Attribut für die Beendigung an ("**Ende** " oder " **mstoppzeit**"). Wenn eines der Start Zeit Attribute nicht angegeben ist, wird es standardmäßig auf 0 (den Anfang der Zeitachse für **Start** oder den Anfang des Clips für **mstart**) festgelegt. Wenn eines der Attribute für die Endzeit nicht angegeben ist, nimmt des eine normale Wiedergabe Rate an und berechnet die nicht angegebene Endzeit entsprechend. Wenn beide Endzeiten angegeben sind, ist die Wiedergabe bei Bedarf schneller oder langsamer als normal.
+Geben Sie mindestens ein Startzeitattribut (**start** oder **mstart**) und ein Stoppzeitattribut (**stop** oder mstop ) **an.** Wenn eines der Startzeitattribute nicht angegeben ist, wird standardmäßig 0 (der Anfang der Zeitachse für **start** oder der Anfang des Clips für **mstart ) verwendet.** Wenn eines der Stoppzeitattribute nicht angegeben ist, geht DES von einer normalen Wiedergaberate aus und berechnet die nicht angegebene Stoppzeit entsprechend. Wenn beide Stoppzeiten angegeben sind, ist die Wiedergabe bei Bedarf schneller oder langsamer als normal.
 
-Im folgenden Beispiel beträgt die Zeitachsen Dauer sieben Sekunden (**Ende** minus **Start**). Es wird davon ausgegangen, dass die Standard Wiedergabe Rate standardmäßig 10 Sekunden beträgt (die Dauer Plus **mstart**).
+Im folgenden Beispiel beträgt die Zeitachse sieben Sekunden (**Stop** minus **Start**). Es wird eine normale Wiedergaberate angenommen, sodass die Medienstoppzeit standardmäßig 10 Sekunden beträgt (Dauer plus **mstart).**
 
 
 ```
@@ -52,7 +52,7 @@ Im folgenden Beispiel beträgt die Zeitachsen Dauer sieben Sekunden (**Ende** mi
 
 
 
-Im nächsten Beispiel wird die Start Zeit der Medien standardmäßig auf 0 (null) eingestellt und die Dauer des Mediums auf 10 Sekunden erzwungen. Die Zeitachsen Dauer beträgt fünf Sekunden, sodass der Clip mit der doppelten Geschwindigkeit wiedergegeben wird.
+Im nächsten Beispiel wird die Medienstartzeit standardmäßig auf 0 festgelegt, sodass die Mediendauer 10 Sekunden beträgt. Die Dauer der Zeitachse beträgt fünf Sekunden, sodass der Clip doppelt so schnell wie gewohnt abspielt.
 
 
 ```
@@ -61,7 +61,7 @@ Im nächsten Beispiel wird die Start Zeit der Medien standardmäßig auf 0 (null
 
 
 
-Wenn das **src** -Attribut ein immer noch Bild angibt, versucht des, eine Reihe von Bildern zu laden, um eine Animation zu erstellen. Wenn das **src** -Attribut z. b. IMAGE001.BMP ist, sucht des nach IMAGE002.BMP, IMAGE003.BMP, IMAGE004.BMP usw. Wenn Sie vorhanden sind, werden Sie in sequenzieller numerischer Reihenfolge mit dem vom **Framerate** -Attribut angegebenen Satz angezeigt.
+Wenn das **src-Attribut** ein Stillbild angibt, versucht DES, eine Reihe von Still-Bildern zu laden, um eine Animation zu erstellen. Wenn das **src-Attribut** beispielsweise IMAGE001.BMP ist, sucht DES nach IMAGE002.BMP, IMAGE003.BMP, IMAGE004.BMP usw. Wenn sie vorhanden sind, werden sie in sequenzieller numerischer Reihenfolge mit der vom **Framerate-Attribut** angegebenen Rate angezeigt.
 
 ## <a name="examples"></a>Beispiele
 

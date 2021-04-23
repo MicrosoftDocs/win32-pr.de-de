@@ -1,26 +1,26 @@
 ---
-description: Medien Eigenschaften Behälter
+description: Medieneigenschafts-Bag
 ms.assetid: 06678d57-c00b-4575-84e7-3d09f65f19ba
-title: Medien Eigenschaften Behälter
+title: Medieneigenschafts-Bag
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c71fd5ac0e0136ad5ee8948d0db6f19e3d5d70fa
-ms.sourcegitcommit: c16214e53680dc71d1c07111b51f72b82a4512d8
+ms.openlocfilehash: 1812d7237fdd58869befec8494b82e34df56b937
+ms.sourcegitcommit: 63753fcfb0afbbe5ec283fb8316e62c2dc950f66
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "104050688"
+ms.lasthandoff: 04/22/2021
+ms.locfileid: "107909638"
 ---
-# <a name="media-property-bag"></a>Medien Eigenschaften Behälter
+# <a name="media-property-bag"></a>Medieneigenschafts-Bag
 
-Das Medien Eigenschaften Behälter-Objekt legt Info-und DISP-Blöcke in AVI-Dateien fest oder ruft Sie ab. Erstellen Sie dieses Objekt durch Aufrufen von **CoCreateInstance**.
+Das Medieneigenschafts-Bag-Objekt legt INFO- und DISP-Block in AVI-Dateien fest oder ruft sie ab. Erstellen Sie dieses Objekt, indem Sie **CoCreateInstance aufrufen.**
 
 
 
-|                  |                                                |
+| Bezeichnung | Wert |
 |------------------|------------------------------------------------|
-| Klassen Bezeichner | CLSID \_ mediapropertybag                        |
-| Schnittstellen       | [**Imediapropertybag**](/windows/desktop/api/Strmif/nn-strmif-imediapropertybag) |
+| Klassenbezeichner | CLSID \_ MediaPropertyBag                        |
+| Schnittstellen       | [**IMediaPropertyBag**](/windows/desktop/api/Strmif/nn-strmif-imediapropertybag) |
 
 
 
@@ -33,7 +33,7 @@ Das Medien Eigenschaften Behälter-Objekt legt Info-und DISP-Blöcke in AVI-Date
 [DirectShow-Objekte](directshow-objects.md)
 </dt> <dt>
 
-[**Ipersistmediapropertybag-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-ipersistmediapropertybag)
+[**IPersistMediaPropertyBag-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-ipersistmediapropertybag)
 </dt> </dl>
 
  

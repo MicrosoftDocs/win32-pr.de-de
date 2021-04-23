@@ -1,36 +1,36 @@
 ---
-description: Filter für Datei Quelle (Async)
+description: Dateiquellenfilter (asynchron)
 ms.assetid: 0cf6e7ab-b1fe-42f9-b682-c5484ef48c71
-title: Filter für Datei Quelle (Async)
+title: Dateiquellenfilter (asynchron)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 403564b751e53f160ab140ac89bfda4fd9576f00
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 1ddeea7398ce332a8b1db444b6b74fe3841f9053
+ms.sourcegitcommit: 63753fcfb0afbbe5ec283fb8316e62c2dc950f66
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104481646"
+ms.lasthandoff: 04/22/2021
+ms.locfileid: "107909698"
 ---
-# <a name="file-source-async-filter"></a>Filter für Datei Quelle (Async)
+# <a name="file-source-async-filter"></a>Dateiquellenfilter (asynchron)
 
-Der asynchrone Datei Quellen Filter öffnet und liest lokale Dateien vieler verschiedener Datenformate und übergibt die Daten an einen Parserfilter.
+Der Filter Asynchrone Dateiquelle wird geöffnet und liest lokale Dateien mit vielen verschiedenen Datenformaten und übergibt die Daten an einen Parserfilter.
 
-Um Mediendateien über HTTP aus dem Internet herunterzuladen, verwenden Sie den Filter für die [Datei Quelle (URL)](file-source--url--filter.md) . Verwenden Sie zum Lesen von ASF-Dateien den [WM-ASF-Reader](wm-asf-reader-filter.md) -Filter.
+Verwenden Sie zum Herunterladen von Mediendateien aus dem Web über HTTP den Filter Dateiquelle [(URL).](file-source--url--filter.md) Verwenden Sie zum Lesen von ASF-Dateien den [WM ASF-Readerfilter.](wm-asf-reader-filter.md)
 
 
 
-|                                          |                                                                                                                                      |
+| Bezeichnung | Wert |
 |------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------|
-| Filter Schnittstellen                        | [**Ibasefilter**](/windows/desktop/api/Strmif/nn-strmif-ibasefilter), [ **IFileSourceFilter**](/windows/desktop/api/Strmif/nn-strmif-ifilesourcefilter)                                                   |
-| Eingabe-PIN-Medientypen                    | Nicht verfügbar                                                                                                                       |
-| PIN-Eingabeschnittstellen                     | Nicht verfügbar                                                                                                                       |
-| Ausgabe-PIN-Medientypen                   | **MediaType \_ Stream**. Der Untertyp hängt vom Medienformat ab. (**Mediasubtype \_ null** , wenn der Filter das Format nicht erkennt). |
-| PIN-Schnittstellen                    | [**Iamasynkreadertimestampscaling**](/windows/desktop/api/Strmif/nn-strmif-iamasyncreadertimestampscaling), [**iasynkreader**](/windows/desktop/api/Strmif/nn-strmif-iasyncreader), [**IPin**](/windows/desktop/api/Strmif/nn-strmif-ipin) |
-| CLSID Filtern                             | **CLSID- \_ asynshader**                                                                                                               |
-| CLSID der Eigenschaften Seite                      | Keine Eigenschaften Seite                                                                                                                     |
+| Filterschnittstellen                        | [**IBaseFilter**](/windows/desktop/api/Strmif/nn-strmif-ibasefilter), [ **IFileSourceFilter**](/windows/desktop/api/Strmif/nn-strmif-ifilesourcefilter)                                                   |
+| Eingabepin-Medientypen                    | Nicht zutreffend                                                                                                                       |
+| Eingabepinschnittstellen                     | Nicht zutreffend                                                                                                                       |
+| Ausgabepin-Medientypen                   | **MEDIATYPE \_ Streamen Sie**. Der Untertyp hängt vom Medienformat ab. (**MEDIASUBTYPE \_ NULL,** wenn der Filter das Format nicht erkennt.) |
+| Ausgabe-PIN-Schnittstellen                    | [**IAMAsyncReaderTimestampScaling,**](/windows/desktop/api/Strmif/nn-strmif-iamasyncreadertimestampscaling) [**IAsyncReader,**](/windows/desktop/api/Strmif/nn-strmif-iasyncreader) [**IPin**](/windows/desktop/api/Strmif/nn-strmif-ipin) |
+| Filtern der CLSID                             | **CLSID \_ AsyncReader**                                                                                                               |
+| Eigenschaftenseite CLSID                      | Keine Eigenschaftenseite                                                                                                                     |
 | Ausführbare Datei                               | quartz.dll                                                                                                                           |
-| [Verdienst](merit.md)                       | **nicht \_ wahrscheinlich**                                                                                                                  |
-| [Filter Kategorie](filter-categories.md) | **CLSID \_ legacyamfiltercategory**                                                                                                    |
+| [Verdienst](merit.md)                       | **\_UNWAHRSCHEINLICHE WAHRSCHEINLICHKEIT**                                                                                                                  |
+| [Filterkategorie](filter-categories.md) | **CLSID \_ LegacyAmFilterCategory**                                                                                                    |
 
 
 

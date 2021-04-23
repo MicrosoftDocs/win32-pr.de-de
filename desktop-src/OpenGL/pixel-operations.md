@@ -1,9 +1,9 @@
 ---
-title: Pixel Vorgänge
-description: Pixel Vorgänge
+title: Pixelvorgänge
+description: Pixelvorgänge
 ms.assetid: e60cc45b-867c-441a-b579-8c7dbd46ecd9
 keywords:
-- Pixel Vorgänge OpenGL
+- Pixelvorgänge OpenGL
 topic_type:
 - apiref
 api_name:
@@ -12,280 +12,280 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: fda15342b246ba979bdbe60184eeb632368f36b4
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 45d36fc22ace4ee18303ce0eb16c5a10f901510f
+ms.sourcegitcommit: 63753fcfb0afbbe5ec283fb8316e62c2dc950f66
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "103857275"
+ms.lasthandoff: 04/22/2021
+ms.locfileid: "107908878"
 ---
-# <a name="pixel-operations"></a>Pixel Vorgänge
+# <a name="pixel-operations"></a>Pixelvorgänge
 
-<dl> <dt><span id="GL_SCISSOR_TEST"></span><span id="gl_scissor_test"></span>GL- \_ Scissor- \_ Test</dt> <dd> 
+<dl> <dt><span id="GL_SCISSOR_TEST"></span><span id="gl_scissor_test"></span>GL \_ SCISSOR \_ TEST</dt> <dd> 
 
-|                  |                                    |
+| Eigenschaft | Wert |
 |------------------|------------------------------------|
 | Beschreibung:     | Scissoring aktiviert                 |
-| Attribut Gruppe: | Scissor/enable                     |
-| Anfangswert:   | GL \_ false                          |
-| Get-Befehl:     | [**glisenabled**](glisenabled.md) |
+| Attributgruppe: | scissor/enable                     |
+| Anfangswert:   | GL \_ FALSE                          |
+| Get-Befehl:     | [**glIsEnabled**](glisenabled.md) |
 
 
 
- 
+ 
 
-</dd> <dt><span id="GL_SCISSOR_BOX"></span><span id="gl_scissor_box"></span>Feld "GL \_ Scissor" \_</dt> <dd> 
+</dd> <dt><span id="GL_SCISSOR_BOX"></span><span id="gl_scissor_box"></span>GL \_ SCISSOR \_ BOX</dt> <dd> 
 
-|                  |                                                                                  |
+| Eigenschaft | Wert |
 |------------------|----------------------------------------------------------------------------------|
 | Beschreibung:     | Scissor-Feld                                                                      |
-| Attribut Gruppe: | Scheren                                                                          |
+| Attributgruppe: | Schere                                                                          |
 | Anfangswert:   |                                                                                  |
-| Get-Befehl:     | [**glgetintegerv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
+| Get-Befehl:     | [**glGetIntegerv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
 
 
 
- 
+ 
 
-</dd> <dt><span id="GL_STENCIL_TEST"></span><span id="gl_stencil_test"></span>GL- \_ Schablonen \_ Test</dt> <dd> 
+</dd> <dt><span id="GL_STENCIL_TEST"></span><span id="gl_stencil_test"></span>\_GL-SCHABLONENTEST \_</dt> <dd> 
 
-|                  |                                    |
+| Eigenschaft | Wert |
 |------------------|------------------------------------|
-| Beschreibung:     | Aktivierte Schablone                 |
-| Attribut Gruppe: | Schablone-Puffer/aktivieren              |
-| Anfangswert:   | GL \_ false                          |
-| Get-Befehl:     | [**glisenabled**](glisenabled.md) |
+| Beschreibung:     | Schablonen aktiviert                 |
+| Attributgruppe: | Schablonenpuffer/Aktivieren              |
+| Anfangswert:   | GL \_ FALSE                          |
+| Get-Befehl:     | [**glIsEnabled**](glisenabled.md) |
 
 
 
- 
+ 
 
-</dd> <dt><span id="GL_STENCIL_FUNC"></span><span id="gl_stencil_func"></span>GL- \_ Schablone \_ Func</dt> <dd> 
+</dd> <dt><span id="GL_STENCIL_FUNC"></span><span id="gl_stencil_func"></span>GL \_ STENCIL \_ FUNC</dt> <dd> 
 
-|                  |                                                                                  |
+| Eigenschaft | Wert |
 |------------------|----------------------------------------------------------------------------------|
-| Beschreibung:     | Schablone-Funktion                                                                 |
-| Attribut Gruppe: | Schablone-Puffer                                                                   |
-| Anfangswert:   | immer GL. \_                                                                       |
-| Get-Befehl:     | [**glgetintegerv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
+| Beschreibung:     | Schablonenfunktion                                                                 |
+| Attributgruppe: | Schablonenpuffer                                                                   |
+| Anfangswert:   | GL \_ ALWAYS                                                                       |
+| Get-Befehl:     | [**glGetIntegerv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
 
 
 
- 
+ 
 
-</dd> <dt><span id="GL_STENCIL_VALUE_MASK"></span><span id="gl_stencil_value_mask"></span>GL- \_ Schablonen \_ Wert \_ Maske</dt> <dd> 
+</dd> <dt><span id="GL_STENCIL_VALUE_MASK"></span><span id="gl_stencil_value_mask"></span>GL \_ STENCIL \_ VALUE \_ MASK</dt> <dd> 
 
-|                  |                                                                                  |
+| Eigenschaft | Wert |
 |------------------|----------------------------------------------------------------------------------|
-| Beschreibung:     | Schablonen Maske                                                                     |
-| Attribut Gruppe: | Schablone-Puffer                                                                   |
-| Anfangswert:   | 1                                                                              |
-| Get-Befehl:     | [**glgetintegerv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
+| Beschreibung:     | Schablonenmaske                                                                     |
+| Attributgruppe: | Schablonenpuffer                                                                   |
+| Anfangswert:   | 1 s                                                                              |
+| Get-Befehl:     | [**glGetIntegerv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
 
 
 
- 
+ 
 
-</dd> <dt><span id="GL_STENCIL_REF"></span><span id="gl_stencil_ref"></span>GL- \_ Schablone \_ Ref</dt> <dd> 
+</dd> <dt><span id="GL_STENCIL_REF"></span><span id="gl_stencil_ref"></span>GL \_ STENCIL \_ REF</dt> <dd> 
 
-|                  |                                                                                  |
+| Eigenschaft | Wert |
 |------------------|----------------------------------------------------------------------------------|
-| Beschreibung:     | Schablonen Referenzwert                                                          |
-| Attribut Gruppe: | Schablone-Puffer                                                                   |
+| Beschreibung:     | Schablonenverweiswert                                                          |
+| Attributgruppe: | Schablonenpuffer                                                                   |
 | Anfangswert:   | 0                                                                                |
-| Get-Befehl:     | [**glgetintegerv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
+| Get-Befehl:     | [**glGetIntegerv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
 
 
 
- 
+ 
 
-</dd> <dt><span id="GL_STENCIL_FAIL"></span><span id="gl_stencil_fail"></span>GL- \_ Schablone \_ schlägt fehl</dt> <dd> 
+</dd> <dt><span id="GL_STENCIL_FAIL"></span><span id="gl_stencil_fail"></span>FEHLER \_ BEI GL-SCHABLONE \_</dt> <dd> 
 
-|                  |                                                                                  |
+| Eigenschaft | Wert |
 |------------------|----------------------------------------------------------------------------------|
-| Beschreibung:     | Schablone-Fehler Aktion                                                              |
-| Attribut Gruppe: | Schablone-Puffer                                                                   |
-| Anfangswert:   | GL \_ beibehalten                                                                         |
-| Get-Befehl:     | [**glgetintegerv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
+| Beschreibung:     | Schablonen-Fehleraktion                                                              |
+| Attributgruppe: | Schablonenpuffer                                                                   |
+| Anfangswert:   | GL \_ KEEP                                                                         |
+| Get-Befehl:     | [**glGetIntegerv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
 
 
 
- 
+ 
 
-</dd> <dt><span id="GL_STENCIL_PASS_DEPTH_FAIL"></span><span id="gl_stencil_pass_depth_fail"></span>Fehler beim Übergeben der GL- \_ Schablone \_ \_ \_</dt> <dd> 
+</dd> <dt><span id="GL_STENCIL_PASS_DEPTH_FAIL"></span><span id="gl_stencil_pass_depth_fail"></span>FEHLER \_ BEI GL-SCHABLONENPASSTIEFE \_ \_ \_</dt> <dd> 
 
-|                  |                                                                                  |
+| Eigenschaft | Wert |
 |------------------|----------------------------------------------------------------------------------|
-| Beschreibung:     | Aktion für Schablone-tiefen Puffer Fehler                                                 |
-| Attribut Gruppe: | Schablone-Puffer                                                                   |
-| Anfangswert:   | GL \_ beibehalten                                                                         |
-| Get-Befehl:     | [**glgetintegerv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
+| Beschreibung:     | Fehleraktion für Schablonentiefepuffer                                                 |
+| Attributgruppe: | Schablonenpuffer                                                                   |
+| Anfangswert:   | GL \_ KEEP                                                                         |
+| Get-Befehl:     | [**glGetIntegerv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
 
 
 
- 
+ 
 
-</dd> <dt><span id="GL_STENCIL_PASS_DEPTH_PASS"></span><span id="gl_stencil_pass_depth_pass"></span>bestandungs Tiefe für GL- \_ Schablone \_ \_ \_</dt> <dd> 
+</dd> <dt><span id="GL_STENCIL_PASS_DEPTH_PASS"></span><span id="gl_stencil_pass_depth_pass"></span>GL \_ STENCIL \_ PASS \_ DEPTH \_ PASS</dt> <dd> 
 
-|                  |                                                                                  |
+| Eigenschaft | Wert |
 |------------------|----------------------------------------------------------------------------------|
-| Beschreibung:     | Aktion für Schablone-tiefen Puffer Durchlauf                                                 |
-| Attribut Gruppe: | Schablone-Puffer                                                                   |
-| Anfangswert:   | GL \_ beibehalten                                                                         |
-| Get-Befehl:     | [**glgetintegerv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
+| Beschreibung:     | Pufferdurchlaufaktion für Schablonentiefe                                                 |
+| Attributgruppe: | Schablonenpuffer                                                                   |
+| Anfangswert:   | GL \_ KEEP                                                                         |
+| Get-Befehl:     | [**glGetIntegerv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
 
 
 
- 
+ 
 
-</dd> <dt><span id="GL_ALPHA_TEST"></span><span id="gl_alpha_test"></span>GL- \_ alpha \_ Test</dt> <dd> 
+</dd> <dt><span id="GL_ALPHA_TEST"></span><span id="gl_alpha_test"></span>GL \_ ALPHA \_ TEST</dt> <dd> 
 
-|                  |                                    |
+| Eigenschaft | Wert |
 |------------------|------------------------------------|
-| Beschreibung:     | Alpha Test aktiviert                 |
-| Attribut Gruppe: | Farb Puffer/-Aktivierung                |
-| Anfangswert:   | GL \_ false                          |
-| Get-Befehl:     | [**glisenabled**](glisenabled.md) |
+| Beschreibung:     | Alphatest aktiviert                 |
+| Attributgruppe: | Farbpuffer/Aktivieren                |
+| Anfangswert:   | GL \_ FALSE                          |
+| Get-Befehl:     | [**glIsEnabled**](glisenabled.md) |
 
 
 
- 
+ 
 
-</dd> <dt><span id="GL_ALPHA_TEST_FUNC"></span><span id="gl_alpha_test_func"></span>GL- \_ alpha \_ Test- \_ Func</dt> <dd> 
+</dd> <dt><span id="GL_ALPHA_TEST_FUNC"></span><span id="gl_alpha_test_func"></span>GL \_ ALPHA \_ TEST \_ FUNC</dt> <dd> 
 
-|                  |                                                                                  |
+| Eigenschaft | Wert |
 |------------------|----------------------------------------------------------------------------------|
-| Beschreibung:     | Alpha-Testfunktion                                                              |
-| Attribut Gruppe: | Farb Puffer                                                                     |
-| Anfangswert:   | immer GL. \_                                                                       |
-| Get-Befehl:     | [**glgetintegerv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
+| Beschreibung:     | Alphatestfunktion                                                              |
+| Attributgruppe: | Farbpuffer                                                                     |
+| Anfangswert:   | GL \_ ALWAYS                                                                       |
+| Get-Befehl:     | [**glGetIntegerv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
 
 
 
- 
+ 
 
-</dd> <dt><span id="GL_ALPHA_TEST_REF"></span><span id="gl_alpha_test_ref"></span>GL- \_ alpha- \_ Test \_ Ref</dt> <dd> 
+</dd> <dt><span id="GL_ALPHA_TEST_REF"></span><span id="gl_alpha_test_ref"></span>GL \_ ALPHA \_ TEST \_ REF</dt> <dd> 
 
-|                  |                                                                                  |
+| Eigenschaft | Wert |
 |------------------|----------------------------------------------------------------------------------|
-| Beschreibung:     | Alpha-Test Verweis Wert                                                       |
-| Attribut Gruppe: | Farb Puffer                                                                     |
+| Beschreibung:     | Alphatestverweiswert                                                       |
+| Attributgruppe: | Farbpuffer                                                                     |
 | Anfangswert:   | 0                                                                                |
-| Get-Befehl:     | [**glgetintegerv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
+| Get-Befehl:     | [**glGetIntegerv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
 
 
 
- 
+ 
 
-</dd> <dt><span id="GL_DEPTH_TEST"></span><span id="gl_depth_test"></span>GL- \_ tiefen \_ Test</dt> <dd> 
+</dd> <dt><span id="GL_DEPTH_TEST"></span><span id="gl_depth_test"></span>GL \_ DEPTH \_ TEST</dt> <dd> 
 
-|                  |                                    |
+| Eigenschaft | Wert |
 |------------------|------------------------------------|
-| Beschreibung:     | Tiefen Puffer aktiviert               |
-| Attribut Gruppe: | tiefen Puffer/aktivieren                |
-| Anfangswert:   | GL \_ false                          |
-| Get-Befehl:     | [**glisenabled**](glisenabled.md) |
+| Beschreibung:     | Tiefenpuffer aktiviert               |
+| Attributgruppe: | Tiefenpuffer/Aktivieren                |
+| Anfangswert:   | GL \_ FALSE                          |
+| Get-Befehl:     | [**glIsEnabled**](glisenabled.md) |
 
 
 
- 
+ 
 
-</dd> <dt><span id="GL_DEPTH_FUNC"></span><span id="gl_depth_func"></span>GL- \_ Tiefe \_ Func</dt> <dd> 
+</dd> <dt><span id="GL_DEPTH_FUNC"></span><span id="gl_depth_func"></span>GL \_ DEPTH \_ FUNC</dt> <dd> 
 
-|                  |                                                                                  |
+| Eigenschaft | Wert |
 |------------------|----------------------------------------------------------------------------------|
-| Beschreibung:     | Tiefen Puffer-Testfunktion                                                       |
-| Attribut Gruppe: | tiefen Puffer                                                                     |
-| Anfangswert:   | GL \_ weniger                                                                         |
-| Get-Befehl:     | [**glgetintegerv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
+| Beschreibung:     | Testfunktion "Tiefenpuffer"                                                       |
+| Attributgruppe: | Tiefenpuffer                                                                     |
+| Anfangswert:   | GL \_ LESS                                                                         |
+| Get-Befehl:     | [**glGetIntegerv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
 
 
 
- 
+ 
 
-</dd> <dt><span id="GL_BLEND"></span><span id="gl_blend"></span>GL \_ Blend</dt> <dd> 
+</dd> <dt><span id="GL_BLEND"></span><span id="gl_blend"></span>GL \_ BLEND</dt> <dd> 
 
-|                  |                                    |
+| Eigenschaft | Wert |
 |------------------|------------------------------------|
 | Beschreibung:     | Blending aktiviert                   |
-| Attribut Gruppe: | Farb Puffer/-Aktivierung                |
-| Anfangswert:   | GL \_ false                          |
-| Get-Befehl:     | [**glisenabled**](glisenabled.md) |
+| Attributgruppe: | Farbpuffer/Aktivieren                |
+| Anfangswert:   | GL \_ FALSE                          |
+| Get-Befehl:     | [**glIsEnabled**](glisenabled.md) |
 
 
 
- 
+ 
 
-</dd> <dt><span id="GL_BLENC_SRC"></span><span id="gl_blenc_src"></span>GL \_ blenc \_ src</dt> <dd> 
+</dd> <dt><span id="GL_BLENC_SRC"></span><span id="gl_blenc_src"></span>GL \_ BLENC \_ SRC</dt> <dd> 
 
-|                  |                                                                                  |
+| Eigenschaft | Wert |
 |------------------|----------------------------------------------------------------------------------|
-| Beschreibung:     | Blending der Quell Funktion                                                         |
-| Attribut Gruppe: | Farb Puffer                                                                     |
-| Anfangswert:   | GL \_ 1                                                                          |
-| Get-Befehl:     | [**glgetintegerv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
+| Beschreibung:     | Blending-Quellfunktion                                                         |
+| Attributgruppe: | Farbpuffer                                                                     |
+| Anfangswert:   | GL \_ ONE                                                                          |
+| Get-Befehl:     | [**glGetIntegerv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
 
 
 
- 
+ 
 
-</dd> <dt><span id="GL_BLEND_DST"></span><span id="gl_blend_dst"></span>GL \_ Blend \_ DST</dt> <dd> 
+</dd> <dt><span id="GL_BLEND_DST"></span><span id="gl_blend_dst"></span>GL \_ BLEND \_ DST</dt> <dd> 
 
-|                  |                                                                                  |
+| Eigenschaft | Wert |
 |------------------|----------------------------------------------------------------------------------|
-| Beschreibung:     | Zielfunktion wird gemischt                                                    |
-| Attribut Gruppe: | Farb Puffer                                                                     |
-| Anfangswert:   | GL \_ null                                                                         |
-| Get-Befehl:     | [**glgetintegerv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
+| Beschreibung:     | Blendingzielfunktion                                                    |
+| Attributgruppe: | Farbpuffer                                                                     |
+| Anfangswert:   | GL \_ ZERO                                                                         |
+| Get-Befehl:     | [**glGetIntegerv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
 
 
 
- 
+ 
 
-</dd> <dt><span id="GL_DITHER"></span><span id="gl_dither"></span>GL \_ .</dt> <dd> 
+</dd> <dt><span id="GL_DITHER"></span><span id="gl_dither"></span>GL \_ DITHER</dt> <dd> 
 
-|                  |                                    |
+| Eigenschaft | Wert |
 |------------------|------------------------------------|
 | Beschreibung:     | Dithering aktiviert                  |
-| Attribut Gruppe: | Farb Puffer/-Aktivierung                |
-| Anfangswert:   | GL \_ true                           |
-| Get-Befehl:     | [**glisenabled**](glisenabled.md) |
+| Attributgruppe: | Farbpuffer/Aktivieren                |
+| Anfangswert:   | GL \_ TRUE                           |
+| Get-Befehl:     | [**glIsEnabled**](glisenabled.md) |
 
 
 
- 
+ 
 
-</dd> <dt><span id="GL_LOGIC_OP"></span><span id="gl_logic_op"></span>GL- \_ Logik- \_ op</dt> <dd> 
+</dd> <dt><span id="GL_LOGIC_OP"></span><span id="gl_logic_op"></span>GL \_ LOGIC \_ OP</dt> <dd> 
 
-|                  |                                    |
+| Eigenschaft | Wert |
 |------------------|------------------------------------|
 | Beschreibung:     | Logischer Vorgang aktiviert          |
-| Attribut Gruppe: | Farb Puffer/-Aktivierung                |
-| Anfangswert:   | GL \_ false                          |
-| Get-Befehl:     | [**glisenabled**](glisenabled.md) |
+| Attributgruppe: | Farbpuffer/Aktivieren                |
+| Anfangswert:   | GL \_ FALSE                          |
+| Get-Befehl:     | [**glIsEnabled**](glisenabled.md) |
 
 
 
- 
+ 
 
-</dd> <dt><span id="GL_LOGIC_OP_MODE"></span><span id="gl_logic_op_mode"></span>GL- \_ Logik- \_ op- \_ Modus</dt> <dd> 
+</dd> <dt><span id="GL_LOGIC_OP_MODE"></span><span id="gl_logic_op_mode"></span>GL \_ LOGIC \_ OP \_ MODE</dt> <dd> 
 
-|                  |                                                                                  |
+| Eigenschaft | Wert |
 |------------------|----------------------------------------------------------------------------------|
-| Beschreibung:     | Logische Vorgangs Funktion                                                       |
-| Attribut Gruppe: | Farb Puffer                                                                     |
-| Anfangswert:   | GL- \_ Kopie                                                                         |
-| Get-Befehl:     | [**glgetintegerv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
+| Beschreibung:     | Logische Vorgangsfunktion                                                       |
+| Attributgruppe: | Farbpuffer                                                                     |
+| Anfangswert:   | GL \_ COPY                                                                         |
+| Get-Befehl:     | [**glGetIntegerv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
 
 
 
- 
+ 
 
 </dd> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

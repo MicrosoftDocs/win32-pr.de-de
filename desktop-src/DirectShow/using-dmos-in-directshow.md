@@ -1,27 +1,27 @@
 ---
-description: Verwenden von dmos in DirectShow
+description: Verwenden von DMOs in DirectShow
 ms.assetid: 47d75b9c-8b0d-4235-8ac1-02ae1502c0e7
-title: Verwenden von dmos in DirectShow
+title: Verwenden von DMOs in DirectShow
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1c90513649756a49067e523390292d4b44e1eac2
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: bdddc643d39798dc09807e9ecfa15c38a6e0c2cf
+ms.sourcegitcommit: 63753fcfb0afbbe5ec283fb8316e62c2dc950f66
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104131885"
+ms.lasthandoff: 04/22/2021
+ms.locfileid: "107908688"
 ---
-# <a name="using-dmos-in-directshow"></a>Verwenden von dmos in DirectShow
+# <a name="using-dmos-in-directshow"></a>Verwenden von DMOs in DirectShow
 
-Anwendungen, die auf DirectShow basieren, können DMOS in einem Filter Diagramm über den [DMO-Wrapper](dmo-wrapper-filter.md) Filter verwenden. Mit diesem Filter wird ein DMO aggregiert und alle Details der Verwendung des DMO behandelt, z. b. das Übergeben von Daten an und aus dem DMO, das Zuordnen von [**imediabuffer**](/previous-versions/windows/desktop/api/Mediaobj/nn-mediaobj-imediabuffer) -Objekten usw.
+Anwendungen, die auf DirectShow basieren, können DMOs in einem Filterdiagramm über den [DMO-Wrapperfilter](dmo-wrapper-filter.md) verwenden. Dieser Filter aggregiert einen DMO und verarbeitet alle Details der Verwendung des DMO, z. B. das Übergeben von Daten an und von DMO, das Zuordnen von [**IMediaBuffer-Objekten**](/previous-versions/windows/desktop/api/Mediaobj/nn-mediaobj-imediabuffer) usw.
 
-Da der DMO durch den Filter aggregiert wird, kann die Anwendung den Filter nach allen vom DMO verfügbar gemachten com-Schnittstellen Abfragen. Die Anwendung sollte den Filter jedoch alle Streamingvorgänge für den DMO verarbeiten lassen. Legen Sie z. b. keine Medientypen fest, verarbeiten Sie alle Puffer, leeren Sie den DMO, Sperren Sie DMO, aktivieren oder deaktivieren Sie die Qualitätskontrolle, oder legen Sie Video Optimierungen fest.
+Da der DMO-Filter aggregiert wird, kann die Anwendung den Filter für alle COM-Schnittstellen abfragen, die von DMO verfügbar sind. Die Anwendung sollte es dem Filter jedoch gestatten, alle Streamingvorgänge auf dem DMO zu verarbeiten. Legen Sie z. B. keine Medientypen fest, verarbeiten Sie puffer, leeren Sie den DMO, sperren Sie den DMO, aktivieren oder deaktivieren Sie die Qualitätskontrolle, oder legen Sie Videooptimierungen fest.
 
-Wenn Sie die Klassen-ID (CLSID) eines bestimmten DMO kennen, das Sie verwenden möchten, können Sie den DMO-Wrapper Filter mit diesem DMO wie folgt initialisieren:
+Wenn Sie den Klassenbezeichner (CLSID) eines bestimmten DMO kennen, den Sie verwenden möchten, können Sie den DMO-Wrapperfilter wie folgt mit diesem DMO initialisieren:
 
-1.  Rufen Sie **cokreateinstance** auf, um den DMO-Wrapper Filter zu erstellen.
-2.  Fragen Sie den DMO-Wrapper Filter für die [**idmowrapperfilter**](/previous-versions/windows/desktop/api/Dmodshow/nn-dmodshow-idmowrapperfilter) -Schnittstelle ab.
-3.  Nennen Sie die [**idmuwrapperfilter:: init**](/previous-versions/windows/desktop/api/Dmodshow/nf-dmodshow-idmowrapperfilter-init) -Methode. Geben Sie die CLSID des DMO und die GUID der Kategorie des DMO an. Eine Liste der DMO-Kategorien finden Sie unter [DMO-GUIDs](dmo-guids.md).
+1.  Rufen **Sie CoCreateInstance auf,** um den DMO-Wrapperfilter zu erstellen.
+2.  Fragen Sie den DMO-Wrapperfilter für die [**IDMOWrapperFilter-Schnittstelle**](/previous-versions/windows/desktop/api/Dmodshow/nn-dmodshow-idmowrapperfilter) ab.
+3.  Rufen Sie die [**IDMOWrapperFilter::Init-Methode**](/previous-versions/windows/desktop/api/Dmodshow/nf-dmodshow-idmowrapperfilter-init) auf. Geben Sie die CLSID des DMO und die GUID der Kategorie des DMO an. Eine Liste der DMO-Kategorien finden Sie unter [DMO-GUIDs.](dmo-guids.md)
 
 Diese Schritte sind im folgenden Code dargestellt:
 
@@ -58,41 +58,41 @@ if (SUCCEEDED(hr))
 
 
 
-Die [**dmuenum**](/previous-versions/windows/desktop/api/Dmoreg/nf-dmoreg-dmoenum) -Funktion Listet DMOS in der Registrierung auf. Diese Funktion verwendet einen anderen Satz von Kategorien-GUIDs, die für DirectShow-Filter verwendet werden.
+Die [**DMOEnum-Funktion**](/previous-versions/windows/desktop/api/Dmoreg/nf-dmoreg-dmoenum) aufzählt DMOs in der Registrierung. Diese Funktion verwendet einen anderen Satz von Kategorie-GUIDs als diejenigen, die für DirectShow-Filter verwendet werden.
 
-**Verwenden des Enumerators für System Geräte mit DMOS**
+**Verwenden des Systemgeräte-Enumerators mit DMOs**
 
-Anstatt ein DMO direkt zu erstellen, können Sie den [Enumerator für System Geräte](system-device-enumerator.md)verwenden, der jede von der **dmoenum** -Methode unterstützte DMO-Kategorie auflisten kann. Der Enumerator für System Geräte enthält auch DMOS, wenn er bestimmte DirectShow-Filter Kategorien auflistet. Die folgende Tabelle zeigt die Zuordnung zwischen DMO-Kategorien und DirectShow-Kategorien.
+Anstatt einen DMO direkt zu erstellen, können Sie den [Systemgeräte-Enumerator](system-device-enumerator.md)verwenden, der jede DMO-Kategorie aufzählen kann, die von der **DMOEnum-Methode unterstützt** wird. Der Systemgeräte-Enumerator enthält auch DMOs, wenn er bestimmte DirectShow-Filterkategorien auflistet. Die folgende Tabelle zeigt die Zuordnung zwischen DMO-Kategorien und DirectShow-Kategorien.
 
 
 
-|                             |                                |
+| Bezeichnung | Wert |
 |-----------------------------|--------------------------------|
 | DMO-Kategorie                | DirectShow-Entsprechung          |
-| dmucategory \_ - \_ Audioencoder | CLSID \_ audiocompressorcategory |
-| dmucategory \_ - \_ Audiodecoder | CLSID \_ legacyamfiltercategory  |
-| dmucategory- \_ Video \_ Encoder | CLSID \_ videocompressorcategory |
-| dmucategory- \_ Video \_ Decoder | CLSID \_ legacyamfiltercategory  |
+| \_DMOCATEGORY-AUDIOENCODER \_ | CLSID \_ AudioCompressorCategory |
+| \_DMOCATEGORY-AUDIODECODER \_ | CLSID \_ LegacyAmFilterCategory  |
+| DMOCATEGORY \_ VIDEO \_ ENCODER | CLSID \_ VideoCompressorCategory |
+| \_DMOCATEGORY-VIDEODECODER \_ | CLSID \_ LegacyAmFilterCategory  |
 
 
 
  
 
-Der Enumerator für System Geräte gibt eine Liste der monikerobjekte zurück. Wenn der Moniker ein DMO darstellt, erstellt die **IMoniker:: BindTo Object** -Methode automatisch den DMO-Wrapper Filter und initialisiert ihn mit diesem DMO. Folglich ist die Tatsache, dass ein DMO beteiligt ist, für die Anwendung transparent. Weitere Informationen zur Verwendung des Enumerators für Systemgeräte finden Sie unter [using the System Device Enumerator](using-the-system-device-enumerator.md).
+Der Systemgeräte-Enumerator gibt eine Liste von Monikerobjekten zurück. Wenn der Moniker einen DMO darstellt, erstellt die **IMoniker::BindToObject-Methode** automatisch den DMO-Wrapperfilter und initialisiert ihn mit diesem DMO. Daher ist die Tatsache, dass ein DMO beteiligt ist, für die Anwendung transparent. Weitere Informationen zur Verwendung des Systemgeräte-Enumerators finden Sie unter [Verwenden des Systemgeräte-Enumerators.](using-the-system-device-enumerator.md)
 
 **Einschränkungen**
 
-Bei der Verwendung von dmos in DirectShow sind einige Einschränkungen zu beachten:
+Es gibt einige Einschränkungen bei der Verwendung von DMOs in DirectShow:
 
--   Der DMO-Wrapper Filter unterstützt keine DMOS mit NULL Eingaben, mehreren Eingaben oder null Ausgaben.
--   Alle Pin-Verbindungen im DMO-Wrapper Filter verwenden die [**IMemInputPin**](/windows/desktop/api/Strmif/nn-strmif-imeminputpin) -Schnittstelle.
--   DirectShow-Bearbeitungs Dienste unterstützen keine DMO-basierten Effekte oder Übergänge.
+-   Der DMO-Wrapperfilter unterstützt keine DMOs mit null Eingaben, mehreren Eingaben oder null Ausgaben.
+-   Alle Pinverbindungen im DMO-Wrapperfilter verwenden die [**IMemInputPin-Schnittstelle.**](/windows/desktop/api/Strmif/nn-strmif-imeminputpin)
+-   DirectShow Editing Services unterstützt keine DMO-basierten Effekte oder Übergänge.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Verwenden von dmos](using-dmos.md)
+[Verwenden von DMOs](using-dmos.md)
 </dt> </dl>
 
  

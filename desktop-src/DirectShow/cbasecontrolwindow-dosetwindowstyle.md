@@ -1,7 +1,7 @@
 ---
-description: Die Methode "dosetwindowstyle" ändert die typischen oder erweiterten Fenster Stile.
+description: Die DoSetWindowStyle-Methode ändert die typischen oder erweiterten Fensterstile.
 ms.assetid: 4a9a97fb-b527-44ce-af8c-e5ea832ed4c4
-title: Cbasecontrolwindow. dosetwindowstyle-Methode (ctlutil. h)
+title: CBaseControlWindow.DoSetWindowStyle-Methode (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: d57d023dff803caf5da7e61dea266670ec8bde5d
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: db88c5818d31d65f361ae1a805bd50c285d4a5c2
+ms.sourcegitcommit: 63753fcfb0afbbe5ec283fb8316e62c2dc950f66
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364831"
+ms.lasthandoff: 04/22/2021
+ms.locfileid: "107909808"
 ---
-# <a name="cbasecontrolwindowdosetwindowstyle-method"></a>Cbasecontrolwindow. dosetwindowstyle-Methode
+# <a name="cbasecontrolwindowdosetwindowstyle-method"></a>CBaseControlWindow.DoSetWindowStyle-Methode
 
-Die- `DoSetWindowStyle` Methode ändert die typischen oder erweiterten Fenster Stile.
+Die `DoSetWindowStyle` -Methode ändert die typischen oder erweiterten Fensterstile.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,21 +46,21 @@ HRESULT DoSetWindowStyle(
 *Stil* 
 </dt> <dd>
 
-Geeignete Fenster Stile.
+Geeignete Fensterstile.
 
 </dd> <dt>
 
-*Windowlong* 
+*WindowLong* 
 </dt> <dd>
 
 Wert, der angibt, welche Stile festgelegt werden sollen. Dies muss eine der folgenden Ressourcen sein:
 
 
 
-|              |                                      |
+| Bezeichnung | Wert |
 |--------------|--------------------------------------|
-| GWL- \_ Stil   | Abrufen der Fenster Stile.          |
-| GWL- \_ ExStyle | Ruft die erweiterten Fenster Stile ab. |
+| \_GWL-STIL   | Rufen Sie die Fensterstile ab.          |
+| GWL \_ EXSTYLE | Rufen Sie die erweiterten Fensterstile ab. |
 
 
 
@@ -70,11 +70,11 @@ Wert, der angibt, welche Stile festgelegt werden sollen. Dies muss eine der folg
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT** -Wert zurück.
+Gibt einen **HRESULT-Wert** zurück.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Diese Member-Funktion Ruft die Win32-Funktion **SetWindowLong** auf, um den Fenster Stil festzulegen, und zeigt dann das Fenster an der aktuellen Position erneut an. Diese Member-Funktion wird durch das [**cbasecontrolwindow::p UT \_ WindowStyle**](cbasecontrolwindow-put-windowstyle.md) -und [**cbasecontrolwindow::p UT \_ windowstyleex**](cbasecontrolwindow-put-windowstyleex.md) -Member-Funktionen aufgerufen.
+Diese Memberfunktion ruft die Win32 **SetWindowLong-Funktion** auf, um den Fensterstil festzulegen, und zeigt das Fenster dann erneut an der aktuellen Position an. Diese Memberfunktion wird von den [**Memberfunktionen CBaseControlWindow::p ut \_ WindowStyle**](cbasecontrolwindow-put-windowstyle.md) und [**CBaseControlWindow::p ut \_ WindowStyleEx**](cbasecontrolwindow-put-windowstyleex.md) aufgerufen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -82,8 +82,8 @@ Diese Member-Funktion Ruft die Win32-Funktion **SetWindowLong** auf, um den Fens
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -91,7 +91,7 @@ Diese Member-Funktion Ruft die Win32-Funktion **SetWindowLong** auf, um den Fens
 
 <dl> <dt>
 
-[**Cbasecontrolwindow-Klasse**](cbasecontrolwindow.md)
+[**CBaseControlWindow-Klasse**](cbasecontrolwindow.md)
 </dt> </dl>
 
  

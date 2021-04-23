@@ -1,7 +1,7 @@
 ---
-description: Der-rendererfilterfilter rendert die Daten vom Typ "MIDI" aus dem-
+description: Der FILTERS-Rendererfilter rendert DIE DATEN aus dem FILTERS Parser-Filter.
 ms.assetid: 2675a21d-41d0-4095-96c4-f12f52c00d5a
-title: MIDI-rendererfilter (Windows. Devices. MIDI. h)
+title: RENDERerfilter FÜR DEN RENDERER (Windows.devices.xp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,31 +13,31 @@ api_type:
 - HeaderDef
 api_location:
 - windows.devices.midi.h
-ms.openlocfilehash: 060bb00629b78fb1edbfbfd193aeaf7514c98ba4
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 5fa27ceda0c249f88f4684979382495167cb9238
+ms.sourcegitcommit: 63753fcfb0afbbe5ec283fb8316e62c2dc950f66
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371480"
+ms.lasthandoff: 04/22/2021
+ms.locfileid: "107909408"
 ---
-# <a name="midi-renderer-filter"></a>MIDI-rendererfilter
+# <a name="midi-renderer-filter"></a>FILTERS-Rendererfilter
 
-Der-rendererfilterfilter rendert die Daten vom Typ "MIDI" [aus dem-](midi-parser-filter.md)
+Der FILTERS-Rendererfilter rendert DIE DATEN aus dem [FILTERS Parser-Filter.](midi-parser-filter.md)
 
 
 
-|                                          |                                                                                                                                                                                                                                                                                                                                                                                      |
+| Bezeichnung | Wert |
 |------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Filter Schnittstellen                        | [**Iamclockslave**](/windows/desktop/api/Strmif/nn-strmif-iamclockslave), [**iamdirectsound**](/previous-versions/windows/desktop/api/Amaudio/nn-amaudio-iamdirectsound), [**iamresourcecontrol**](/windows/desktop/api/Strmif/nn-strmif-iamresourcecontrol), [**ibasefilter**](/windows/desktop/api/Strmif/nn-strmif-ibasefilter), [**ibasicaudio**](/windows/desktop/api/Control/nn-control-ibasicaudio), [**imediaposition**](/windows/desktop/api/Control/nn-control-imediaposition), [**imediaseeking**](/windows/desktop/api/Strmif/nn-strmif-imediaseeking), [**iqualitycontrol**](/windows/desktop/api/Strmif/nn-strmif-iqualitycontrol), [**IReferenceClock**](/windows/desktop/api/Strmif/nn-strmif-ireferenceclock) |
-| Eingabe-PIN-Medientypen                    | MediaType \_ MIDI, mediasubtype \_ null                                                                                                                                                                                                                                                                                                                                                  |
-| PIN-Eingabeschnittstellen                     | [**IMemInputPin**](/windows/desktop/api/Strmif/nn-strmif-imeminputpin), [**IPin**](/windows/desktop/api/Strmif/nn-strmif-ipin), [**iqualitycontrol**](/windows/desktop/api/Strmif/nn-strmif-iqualitycontrol)                                                                                                                                                                                                                                                                               |
-| Ausgabe-PIN-Medientypen                   | Nicht verfügbar                                                                                                                                                                                                                                                                                                                                                                       |
-| PIN-Schnittstellen                    | Nicht verfügbar                                                                                                                                                                                                                                                                                                                                                                       |
-| CLSID Filtern                             | CLSID \_ avimidirendering                                                                                                                                                                                                                                                                                                                                                                 |
-| CLSID der Eigenschaften Seite                      | Keine Eigenschaften Seite                                                                                                                                                                                                                                                                                                                                                                     |
+| Filterschnittstellen                        | [**IAMClockSlave,**](/windows/desktop/api/Strmif/nn-strmif-iamclockslave) [**IAMDirectSound,**](/previous-versions/windows/desktop/api/Amaudio/nn-amaudio-iamdirectsound) [**IAMResourceControl,**](/windows/desktop/api/Strmif/nn-strmif-iamresourcecontrol) [**IBaseFilter,**](/windows/desktop/api/Strmif/nn-strmif-ibasefilter) [**IBasicAudio,**](/windows/desktop/api/Control/nn-control-ibasicaudio) [**IMediaPosition,**](/windows/desktop/api/Control/nn-control-imediaposition) [**IMediaSeeking,**](/windows/desktop/api/Strmif/nn-strmif-imediaseeking) [**IQualityControl,**](/windows/desktop/api/Strmif/nn-strmif-iqualitycontrol) [**IReferenceClock**](/windows/desktop/api/Strmif/nn-strmif-ireferenceclock) |
+| Eingabe-Stecknadelmedientypen                    | \_MEDIATYPE- Und MEDIASUBTYPE \_ NULL-Werte                                                                                                                                                                                                                                                                                                                                                  |
+| Eingabe-Pin-Schnittstellen                     | [**IMemInputPin,**](/windows/desktop/api/Strmif/nn-strmif-imeminputpin) [**IPin,**](/windows/desktop/api/Strmif/nn-strmif-ipin) [**IQualityControl**](/windows/desktop/api/Strmif/nn-strmif-iqualitycontrol)                                                                                                                                                                                                                                                                               |
+| Medientypen des Ausgabepins                   | Nicht zutreffend                                                                                                                                                                                                                                                                                                                                                                       |
+| Ausgabe-Pin-Schnittstellen                    | Nicht zutreffend                                                                                                                                                                                                                                                                                                                                                                       |
+| Filtern von CLSID                             | CLSID \_ AVIMIDIRender                                                                                                                                                                                                                                                                                                                                                                 |
+| CLSID der Eigenschaftenseite                      | Keine Eigenschaftenseite                                                                                                                                                                                                                                                                                                                                                                     |
 | Ausführbare Datei                               | quartz.dll                                                                                                                                                                                                                                                                                                                                                                           |
-| [Verdienst](merit.md)                       | \_bevorzugter Vorteil                                                                                                                                                                                                                                                                                                                                                                     |
-| [Filter Kategorie](filter-categories.md) | CLSID \_ midirenderercategory                                                                                                                                                                                                                                                                                                                                                          |
+| [Verdienst](merit.md)                       | \_VORGEZOGENE VORZEICHEN                                                                                                                                                                                                                                                                                                                                                                     |
+| [Filterkategorie](filter-categories.md) | CLSID- \_ Und -Vererbungskategorie                                                                                                                                                                                                                                                                                                                                                          |
 
 
 
@@ -45,7 +45,7 @@ Der-rendererfilterfilter rendert die Daten vom Typ "MIDI" [aus dem-](midi-parser
 
 ## <a name="remarks"></a>Bemerkungen
 
-Die GUID für den Formattyp ist **null**, aber der Format Block enthält die folgende Struktur:
+Die GUID für den Formattyp ist **NULL,** aber der Formatblock enthält die folgende Struktur:
 
 
 ```C++
@@ -57,9 +57,9 @@ typedef struct _MIDIFORMAT {
 
 
 
-Der **dwdivision** -Member gibt die Zeiteinteilung der Datei an. Die Zeiteinteilung wird in der Kopfzeile einer beliebigen Standard-MIDI-Datei (SMF) im Block angegeben `MThd` . Der MIDI-Renderer legt diese Eigenschaft für den Datenstrom von MIDI fest, indem er die **midistreamproperty** -Funktion aufruft.
+Das **dwDivision-Element** gibt die Zeitdivision der Datei an. Die Zeitdivision wird im Header einer beliebigen STANDARD-FORMAT-Datei (SMF) im `MThd` Block angegeben. Der RENDERING-Renderer legt diese Eigenschaft für denDATENÜBERTRAGUNG-Datenstrom fest, indem er die **funktion "streamsStreamProperty"** aufruft.
 
-Die Beispiele aus dem Code des MIDI-Parsers enthalten eine Sekunde der Daten von MIDI. Der MIDI-Renderer verwendet die **midistreamout** -Funktion, um die Daten des Datenstroms zu Rendering Jedes Beispiel ist ein Synchronisierungs Punkt: der Anfang des Puffers enthält alle Befehle, die erforderlich sind, um den korrekten Zustand für das Rendern dieses Puffers festzulegen.
+Beispiele aus dem FILTER DES PARSER-Parsers enthalten eine Sekunde vonTEN-Daten. Der RENDERING-Renderer verwendet die **funktion "streamStreamOut",** um die DANN-Daten zu rendern. Jedes Beispiel ist ein Synchronisierungspunkt: Der Anfang des Puffers enthält alle Befehle, die zum Festlegen des richtigen Zustands für das Rendern dieses Puffers erforderlich sind.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -67,7 +67,7 @@ Die Beispiele aus dem Code des MIDI-Parsers enthalten eine Sekunde der Daten von
 
 | Anforderung | Wert |
 |-------------------|---------------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Windows. Devices. MIDI. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Windows.devices.format.h</dt> </dl> |
 
 
 

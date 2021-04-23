@@ -1,52 +1,52 @@
 ---
-title: Portieren von Polygonen und vier eckalen
-description: 'Beachten Sie beim Portieren von Polygonen und Vierecken die folgenden Punkte:'
+title: Portieren von Polygonen und Quadrieren
+description: Beachten Sie beim Portieren von Polygonen und Quadrierten die folgenden Punkte.
 ms.assetid: 2b752437-caf9-4336-a906-d06b2aa8bb04
 keywords:
-- IRIS GL portieren, viereckale
-- Portieren von IRIS GL, viereckals
-- Portieren auf OpenGL von IRIS GL, viereckals
-- OpenGL-Portierung von IRIS GL, viereckals
-- Zeichnungsfunktionen, viereckale
-- viereckale
-- IRIS GL portieren, Polygone
-- Portieren von IRIS GL, Polygone
-- Portieren auf OpenGL von IRIS GL, Polygone
-- OpenGL-Portierung von IRIS GL, Polygone
-- Zeichnungsfunktionen, Polygone
-- Polygone, Portieren von IRIS GL
+- IRIS GL-Portierung, Quadrierung
+- Portieren von IRIS GL,quadralrals
+- Portieren von IRIS GL,quadrataterals zu OpenGL
+- OpenGL-Portierung von IRIS GL,quadrataterals
+- Zeichnungsfunktionen,quadralrals
+- quadrals
+- IRIS GL-Portierung, Polygone
+- Portieren von IRIS GL,Polygonen
+- Portieren von IRIS GL,Polygonen zu OpenGL
+- OpenGL-Portierung von IRIS GL,Polygonen
+- Zeichnungsfunktionen,Polygone
+- Polygone,Portieren von IRIS GL
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5c95d654b101c5eeb86cfcc4ea342e8196b8749e
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 7900b44051cab9590be11198c8b01af0b7c10244
+ms.sourcegitcommit: 63753fcfb0afbbe5ec283fb8316e62c2dc950f66
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103712503"
+ms.lasthandoff: 04/22/2021
+ms.locfileid: "107908458"
 ---
-# <a name="porting-polygons-and-quadrilaterals"></a>Portieren von Polygonen und vier eckalen
+# <a name="porting-polygons-and-quadrilaterals"></a>Portieren von Polygonen und Quadrieren
 
-Beachten Sie beim Portieren von Polygonen und Vierecken die folgenden Punkte:
+Beachten Sie beim Portieren von Polygonen und Quadrieren die folgenden Punkte:
 
--   Es gibt keine direkte Entsprechung für die **Konstante (****true**). Stattdessen können Sie die Mosaik Routinen in der-Datei verwenden, die unter Mosaik [Polygone](tessellating-polygons.md)beschrieben wird.
--   Polygon Modi werden unterschiedlich festgelegt.
--   Diese Polygon Zeichnungsfunktionen verfügen über keine direkten Entsprechungen in OpenGL: die **polyfamilie** von Routinen. die **POLF** -Familie von Routinen. **pmv**, **PDR** und **PCLOS**; **rpmv** und **rpdr**; **splf**; und **spclos**.
+-   Es gibt kein direktes Äquivalent für **Konkave**(**TRUE**). Stattdessen können Sie die Mosaikroutinen in der GLU verwenden, die unter [Mosaikpolygone beschrieben sind.](tessellating-polygons.md)
+-   Polygonmodi werden unterschiedlich festgelegt.
+-   Diese Polygonzeichnungsfunktionen haben keine direkten Entsprechungen in OpenGL: die **Polyfamilie** von Routinen; die **Polf-Familie** von Routinen; **pmv**, **pdr** und **pclos**; **rpmv** und **rpdr**; **splf**; und **spclos**.
 
-Wenn Ihr IRIS GL-Code diese Funktionen verwendet, müssen Sie den Code mithilfe von [**glBegin**](glbegin.md)(GL \_ Polygon) neu schreiben.
+Wenn Ihr IRIS GL-Code diese Funktionen verwendet, müssen Sie den Code mit [**glBegin**](glbegin.md)( GL \_ POLYGON ) umschreiben.
 
-In der folgenden Tabelle sind die Funktionen des IRIS GL-Polygons und ihre entsprechenden OpenGL-Funktionen aufgelistet.
+In der folgenden Tabelle sind die IRIS GL-Polygonzeichnungsfunktionen und ihre entsprechenden OpenGL-Funktionen aufgeführt.
 
 
 
 | IRIS GL-Funktion         | OpenGL-Funktion                                                    | Bedeutung                                                 |
 |--------------------------|--------------------------------------------------------------------|---------------------------------------------------------|
-| **bgnpolygonendpolygon** | [**glBegin**](glbegin.md) (GL \_ Polygon)[**glEnd**](glend.md)   | Vertices definieren die Begrenzung eines einfachen, zusammen gevexen Polygons.    |
-|                          | **glBegin**(GL \_ QUADS)**glEnd**<br/>                       | Interpretiert Vierbeiner von Vertices als viereckale.    |
-| **bgnqstripdqstrip**   | [**glBegin**](glbegin.md) (GL \_ Quad \_ Strip)<br/> | Interpretiert Scheitel Punkte als verknüpfte Streifen von Vierecken. |
-|                          | [gledgeflag](gledgeflag-functions.md)                             |                                                         |
-| **polymode**             | [**glpolygonmode**](glpolygonmode.md)                             | Legt den Polygon Zeichnungsmodus fest.                              |
-| **rectrectf**<br/> | [glrect](glrect-functions.md)                                     | Zeichnet ein Rechteck.                                      |
-| **sboxsboxf**<br/> |                                                                    | Zeichnet ein Bildschirm gerichtetes Rechteck.                       |
+| **bgnpolygonendpolygon** | [**glBegin**](glbegin.md) ( GL \_ POLYGON )[**glEnd**](glend.md)   | Scheitelpunkte definieren die Grenze eines einfachen konvexen Polygons.    |
+|                          | **glBegin**( GL \_ QUADS )**glEnd**<br/>                       | Interpretiert Quadruples von Scheitelpunkten als Quaderaterale.    |
+| **bgnqstripendqstrip**   | [**glBegin**](glbegin.md) ( GL \_ QUAD STRIP ) \_ **glEnd**<br/> | Interpretiert Scheitelpunkte als verknüpfte Stripes von Quaderateralen. |
+|                          | [glEdgeFlag](gledgeflag-functions.md)                             |                                                         |
+| **polymode**             | [**glPolygonMode**](glpolygonmode.md)                             | Legt den Polygonzeichnungsmodus fest.                              |
+| **rectrectf**<br/> | [glRect](glrect-functions.md)                                     | Zeichnet ein Rechteck.                                      |
+| **sboxsboxf**<br/> |                                                                    | Zeichnet ein am Bildschirm ausgerichtetes Rechteck.                       |
 
 
 
@@ -54,71 +54,71 @@ In der folgenden Tabelle sind die Funktionen des IRIS GL-Polygons und ihre entsp
 
 ??
 
-## <a name="porting-polygon-modes"></a>Portieren von Polygon Modi
+## <a name="porting-polygon-modes"></a>Portieren von Polygonmodi
 
-Mit der OpenGL-Funktion " [**glpolygonmode**](glpolygonmode.md) " können Sie angeben, für welche Seite eines Polygons der Modus gilt. Die Syntax sieht wie folgt aus:
+Mit der [**OpenGL-Funktion glPolygonMode**](glpolygonmode.md) können Sie angeben, auf welche Seite eines Polygons (die Rückseite oder die Vorderseite) der Modus angewendet wird. Die Syntax sieht wie folgt aus:
 
 ``` syntax
 void glPolygonMode( GLenum face, GLenum mode ); 
  
 ```
 
-Dabei ist "Face" eines von:
+dabei ist das Gesicht eines der:
 
 
 
-|                      |                                                            |
+|GLenum-Wert                      |  Bedeutung                                                          |
 |----------------------|------------------------------------------------------------|
-| GL. \_ Front            | Modus, der sich auf Front-on-Polygone bezieht                |
-| GL \_ zurück             | Modus, der auf Polygone mit Rückstand angewendet wird                 |
-| GL \_ vor \_ und \_ zurück | der Modus, der sowohl für Front-als auch für rückwärts gerichtete Polygone gilt. |
+| GL \_ FRONT            | -Modus, der für nach vorne gerichtete Polygone gilt                |
+| GL \_ BACK             | -Modus, der für nach hinten gerichtete Polygone gilt                 |
+| GL \_ FRONT \_ AND \_ BACK | -Modus, der sowohl für front- als auch für hintere Polygone gilt. |
 
 
 
  
 
-Der GL \_ \_ -Front-und- \_ Back-Modus entspricht der Iris GL **polymode** -Funktion. In der folgenden Tabelle sind die Iris GL-Polygon Modi und ihre entsprechenden OpenGL-Modi aufgeführt.
+Der GL \_ FRONT \_ AND \_ BACK-Modus entspricht der **POLYMODE-Funktion** IRIS GL. In der folgenden Tabelle sind die IRIS GL-Polygonmodi und die entsprechenden OpenGL-Modi aufgeführt.
 
 
 
 | IRIS GL-Modus | OpenGL-Modus | Bedeutung                                       |
 |--------------|-------------|-----------------------------------------------|
-| Pym- \_ Punkt   | GL- \_ Punkt   | Zeichnet Vertices als Punkte.                     |
-| Pym- \_ Linie    | GL- \_ Zeile    | Zeichnet Begrenzungs Kanten als Liniensegmente.        |
-| Pym- \_ Füllung    | Ausfüllen von GL \_    | Zeichnet Polygon-innere, gefüllt.                |
-| Pym- \_ hohl  |             | Füllt nur innere Pixel an den Grenzen. |
+| \_PYM-PUNKT   | GL \_ POINT   | Zeichnet Scheitelpunkte als Punkte.                     |
+| PYM \_ LINE    | GL \_ LINE    | Zeichnet Begrenzungsränder als Liniensegmente.        |
+| PYM \_ FILL    | GL \_ FILL    | Zeichnet polygoneinnere Flächen.                |
+| \_PYM-ENTHMUS  |             | Füllt nur innere Pixel an den Grenzen aus. |
 
 
 
  
 
-## <a name="porting-polygon-stipples"></a>Portieren von Polygon-Stipeln
+## <a name="porting-polygon-stipples"></a>Portieren von Polygonstipples
 
-Beachten Sie beim Portieren von IRIS GL-Polygon-Stipeln die folgenden Punkte:
+Beachten Sie beim Portieren von IRIS GL-Polygonstipples die folgenden Punkte:
 
--   OpenGL verwendet keine Tabellen für Polygon-Stippel. Es wird nur ein stippingmuster beibehalten. Mit Anzeigelisten können Sie unterschiedliche stippmuster speichern.
--   Die Größe des OpenGL-Polygon-stippingbitmusters ist immer ein 32-Bit-32-Bit-Bit
--   Die Stippel Codierung ist von [**glpixelstore**](glpixelstore-functions.md)betroffen.
+-   OpenGL verwendet keine Tabellen für Polygonstipples. es wird nur ein Stipplemuster beibehalten. Sie können Anzeigelisten verwenden, um verschiedene Stipplemuster zu speichern.
+-   Die Bitmapgröße der OpenGL-Polygonstipple ist immer ein 32 x 32-Bit-Muster.
+-   Die Stipplecodierung wird von [**glPixelStore**](glpixelstore-functions.md)beeinflusst.
 
-Weitere Informationen zum Portieren von Polygon-Stipeln finden Sie unter [Portieren von Pixel Vorgängen](porting-pixel-operations.md).
+Weitere Informationen zum Portieren von Polygonstipples finden Sie unter [Portieren von Pixelvorgängen.](porting-pixel-operations.md)
 
-In der folgenden Tabelle sind die Funktionen von IRIS GL Polygon Stippel und ihre entsprechenden OpenGL-Funktionen aufgelistet.
+In der folgenden Tabelle sind IRIS GL-Polygonspitzenfunktionen und die entsprechenden OpenGL-Funktionen aufgeführt.
 
 
 
 | IRIS GL-Funktion | OpenGL-Funktion                                    | Bedeutung                                               |
 |------------------|----------------------------------------------------|-------------------------------------------------------|
-| **defpattern**   | [**glpolygonstippel**](glpolygonstipple.md)       | Legt das Stippel Muster fest.                             |
-| **SetPattern**   |                                                    | OpenGL behält nur ein Polygon-stippingmuster bei.        |
-| **GetPattern**   | [**glgetpolygonstippel**](glgetpolygonstipple.md) | Gibt die Stippel Bitmap zurück (die zum Zurückgeben eines Indexes verwendet wird). |
+| **defpattern**   | [**glPolygonStipple**](glpolygonstipple.md)       | Legt das Stipplemuster fest.                             |
+| **setpattern**   |                                                    | OpenGL behält nur ein Polygonstipplemuster bei.        |
+| **getpattern**   | [**glGetPolygonStipple**](glgetpolygonstipple.md) | Gibt die Ausschnittbitmap zurück (wird verwendet, um einen Index zurückgibt). |
 
 
 
  
 
-In OpenGL aktivieren und deaktivieren Sie Polygon-stippling, indem Sie den GL \_ \_ -Polygon-Stippel als Parameter für [**glEnable**](glenable.md) und [**gldeaktiviert**](gldisable.md)übergeben.
+In OpenGL aktivieren und deaktivieren Sie polygonische Ausschnitte, indem Sie GL POLYGON STIPPLE als Parameter für \_ \_ [**glEnable**](glenable.md) und [**glDisable übergeben.**](gldisable.md)
 
-Im folgenden OpenGL-Codebeispiel wird das Polygon-stippling veranschaulicht:
+Im folgenden OpenGL-Codebeispiel wird das Ausschnitten von Polygonen veranschaulicht:
 
 
 ```C++
@@ -182,29 +182,29 @@ void display(void)
 
 
 
-## <a name="porting-tessellated-polygons"></a>Portieren von Mosaik Polygonen
+## <a name="porting-tessellated-polygons"></a>Portieren von Mosaikpolygonen
 
-In IRIS GL verwenden Sie die **Konfigurations**-und **bgnpolygon-Objekte** (**true**) und dann bgnpolygon. Der OpenGL-glu enthält Funktionen, die Sie zum Zeichnen von zwischen-Polygonen verwenden können.
+In IRIS GL verwenden Sie **concave**(**TRUE**) und dann **bgnpolygon,** um konkave Polygone zu zeichnen. OpenGL GLU enthält Funktionen, mit derenHilfe Sie konkave Polygone zeichnen können.
 
-**So zeichnen Sie ein-und-Polygon-Polygon**
+**So zeichnen Sie ein konkaves Polygon mit OpenGL**
 
-1.  Erstellen Sie ein Mosaik Objekt.
-2.  Definieren Sie Rückrufe, die zum Verarbeiten der vom Mosaik Prozess generierten Dreiecke verwendet werden.
-3.  Geben Sie das zu Mosaik Ende Konstante Polygon an.
+1.  Erstellen Sie ein Mosaikobjekt.
+2.  Definieren Sie Rückrufe, die verwendet werden, um die vom Mosaik generierten Dreiecke zu verarbeiten.
+3.  Geben Sie das konkave Polygon an, für das ein Mosaik erstellt werden soll.
 
-In der folgenden Tabelle werden die OpenGL-Funktionen zum Zeichnen von Mosaik Polygonen aufgelistet.
+In der folgenden Tabelle sind die OpenGL-Funktionen zum Zeichnen von Mosaikpolygonen aufgeführt.
 
 
 
-| OpenGL glu-Funktion                        | Bedeutung                                                            |
+| OpenGL-GLU-Funktion                        | Bedeutung                                                            |
 |--------------------------------------------|--------------------------------------------------------------------|
-| [**glunewtess**](glunewtess.md)           | Erstellt ein neues Mosaik Objekt.                                 |
-| [**gludeletetess**](gludeletetess.md)     | Löscht ein Mosaik Objekt.                                     |
-| [*glutesscallback*](glutess.md)           |                                                                    |
-| [**glubeginpolygon**](glubeginpolygon.md) | Beginnt die Polygon Spezifikation.                                  |
-| [**glutess Vertex**](glutessvertex.md)     | Gibt einen Polygon Scheitelpunkt in einer Kontur an.                           |
-| [**glunextcontour**](glunextcontour.md)   | Gibt an, dass die nächste Reihe von Vertices eine neue Kontur beschreiben. |
-| [**gluendpolygon**](gluendpolygon.md)     | Beendet die Polygon Spezifikation.                                    |
+| [**gluNewTess**](glunewtess.md)           | Erstellt ein neues Mosaikobjekt.                                 |
+| [**gluDeleteTess**](gludeletetess.md)     | Löscht ein Mosaikobjekt.                                     |
+| [*gluTessCallback*](glutess.md)           |                                                                    |
+| [**gluBeginPolygon**](glubeginpolygon.md) | Beginnt die Polygonspezifikation.                                  |
+| [**gluTessVertex**](glutessvertex.md)     | Gibt einen Polygonvertex in einer Kontur an.                           |
+| [**gluNextContour**](glunextcontour.md)   | Gibt an, dass die nächste Reihe von Scheitelpunkten eine neue Kontur beschreibt. |
+| [**gluEndPolygon**](gluendpolygon.md)     | Beendet die Polygonspezifikation.                                    |
 
 
 

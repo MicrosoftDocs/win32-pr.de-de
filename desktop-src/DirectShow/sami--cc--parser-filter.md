@@ -1,38 +1,38 @@
 ---
-description: Sami (CC)-Parserfilter
+description: SAMI-Parserfilter (CC)
 ms.assetid: 9b09dd86-3c22-4565-82a0-106d5ca2e42d
-title: Sami (CC)-Parserfilter
+title: SAMI-Parserfilter (CC)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0e0449bccd41a09fca952b5d84552ef919055526
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: b77f0aa2d913b7f0295a078c8174ae483bb1cb62
+ms.sourcegitcommit: 63753fcfb0afbbe5ec283fb8316e62c2dc950f66
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104522040"
+ms.lasthandoff: 04/22/2021
+ms.locfileid: "107909678"
 ---
-# <a name="sami-cc-parser-filter"></a>Sami (CC)-Parserfilter
+# <a name="sami-cc-parser-filter"></a>SAMI-Parserfilter (CC)
 
-Analysiert Untertitel Daten aus synchronisierten, zugänglichen Medienaustausch Dateien (Sami).
+Analysiert Untertiteldaten aus SAMI-Dateien (Synchronized Accessible Media Interchange).
 
-Sami ist ein Textformat, das HTML ähnelt, und wird zum Codieren zeitbasierter Beschriftungen verwendet. Dieser Filter konvertiert Sami-Daten in einen Textstream. Jede Stichprobe im Stream enthält einen Beschriftungs Eintrag und Formatierungsinformationen. Die Zeitstempel der Stichproben werden aus den Zeit Informationen in der Sami-Datei generiert.
+SAMI ist ein Textformat, das HTML ähnelt und zum Codieren zeitbasierter Beschriftungen verwendet wird. Dieser Filter konvertiert SAMI-Daten in einen Textstream. Jedes Beispiel im Stream enthält einen Beschriftungseintrag sowie Formatinformationen. Die Zeitstempel für die Beispiele werden aus den Zeitinformationen in der SAMI-Datei generiert.
 
-Dieser Filter ist für die Verwendung mit dem [internen rendererfilter für Skript Befehle](internal-script-command-renderer-filter.md) vorgesehen. Der Renderer des internen Skript Befehls empfängt die Textbeispiele und sendet Sie in Form von Ereignis Benachrichtigungen an die Anwendung. Weitere Informationen finden Sie im Abschnitt "Hinweise".
+Dieser Filter ist für die Verwendung mit dem Filter ["Interner Skriptbefehlsrenderer"](internal-script-command-renderer-filter.md) konzipiert. Der Renderer für interne Skriptbefehle empfängt die Textbeispiele und sendet sie in Form von Ereignisbenachrichtigungen an die Anwendung. Weitere Informationen finden Sie im Abschnitt "Hinweise".
 
 
 
-|                                          |                                                                                                          |
+| Bezeichnung | Wert |
 |------------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Filter Schnittstellen                        | [**Iamstreamselect**](/windows/desktop/api/Strmif/nn-strmif-iamstreamselect), [ **ibasefilter**](/windows/desktop/api/Strmif/nn-strmif-ibasefilter)                           |
-| Eingabe-PIN-Medientypen                    | MediaType- \_ Stream                                                                                        |
-| PIN-Eingabeschnittstellen                     | [**IPin**](/windows/desktop/api/Strmif/nn-strmif-ipin), [ **iqualitycontrol**](/windows/desktop/api/Strmif/nn-strmif-iqualitycontrol)                                         |
-| Ausgabe-PIN-Medientypen                   | MediaType \_ Text, mediasubtype \_ null                                                                      |
-| PIN-Schnittstellen                    | [**Imediaseeking**](/windows/desktop/api/Strmif/nn-strmif-imediaseeking), [**IPin**](/windows/desktop/api/Strmif/nn-strmif-ipin), [**iqualitycontrol**](/windows/desktop/api/Strmif/nn-strmif-iqualitycontrol) |
-| CLSID Filtern                             | {33fakfe0-a9be-11D0-A520-00a0d10129c0}                                                                   |
-| CLSID der Eigenschaften Seite                      | Keine Eigenschaften Seite                                                                                         |
+| Filterschnittstellen                        | [**IAMStreamSelect**](/windows/desktop/api/Strmif/nn-strmif-iamstreamselect), [ **IBaseFilter**](/windows/desktop/api/Strmif/nn-strmif-ibasefilter)                           |
+| Eingabe-Stecknadelmedientypen                    | \_MEDIATYPE-Stream                                                                                        |
+| Eingabe-Pin-Schnittstellen                     | [**IPin**](/windows/desktop/api/Strmif/nn-strmif-ipin), [ **IQualityControl**](/windows/desktop/api/Strmif/nn-strmif-iqualitycontrol)                                         |
+| Medientypen des Ausgabepins                   | MEDIATYPE \_ Text, MEDIASUBTYPE \_ NULL                                                                      |
+| Ausgabe-Pin-Schnittstellen                    | [**IMediaSeeking,**](/windows/desktop/api/Strmif/nn-strmif-imediaseeking) [**IPin,**](/windows/desktop/api/Strmif/nn-strmif-ipin) [**IQualityControl**](/windows/desktop/api/Strmif/nn-strmif-iqualitycontrol) |
+| Filtern der CLSID                             | {33FACFE0-A9BE-11D0-A520-00A0D10129C0}                                                                   |
+| Eigenschaftenseite CLSID                      | Keine Eigenschaftenseite                                                                                         |
 | Ausführbare Datei                               | quartz.dll                                                                                               |
-| [Verdienst](merit.md)                       | nicht \_ wahrscheinlich                                                                                          |
-| [Filter Kategorie](filter-categories.md) | CLSID \_ legacyamfiltercategory                                                                            |
+| [Verdienst](merit.md)                       | WAHRSCHEINLICHKEIT \_ UNWAHRSCHEINLICH                                                                                          |
+| [Filterkategorie](filter-categories.md) | CLSID \_ LegacyAmFilterCategory                                                                            |
 
 
 
@@ -40,7 +40,7 @@ Dieser Filter ist für die Verwendung mit dem [internen rendererfilter für Skri
 
 ## <a name="remarks"></a>Bemerkungen
 
-Im folgenden finden Sie eine einfache Sami-Datei:
+Im Folgenden finden Sie eine einfache SAMI-Datei:
 
 
 ```C++
@@ -72,9 +72,9 @@ Im folgenden finden Sie eine einfache Sami-Datei:
 
 
 
-Das **styletag** definiert zwei Spracheinstellungen: Englisch (. UMCC) und Französisch (. Frcc). Außerdem werden zwei Stile definiert: \# Normal und \# greentext. Jedes **synchronisierungstag** definiert die Startzeit für eine Beschriftung in Millisekunden. Die **P** -Tags enthalten den Beschriftungs Text, während das **Class** -Attribut die Spracheinstellung angibt, auf die die Beschriftung angewendet wird.
+Das **STYLE-Tag** definiert zwei Spracheinstellungen: Englisch (. ENCC) und Französisch (. FRCC). Außerdem werden zwei Stile definiert: \# NORMAL und \# GREENTEXT. Jedes **SYNC-Tag** definiert die Startzeit für eine Beschriftung in Millisekunden. Die **P-Tags** enthalten den Beschriftungstext, während das **CLASS-Attribut** die Spracheinstellung angibt, auf die die Beschriftung angewendet wird.
 
-Für jede Sprache und jeden Stil erstellt der Filter einen logischen Datenstrom. Zu jedem Zeitpunkt sind genau ein sprach Datenstrom und ein stilstream aktiviert. Wenn der Filter ein Beispiel generiert, wird die Beschriftung für die aktuelle Sprache ausgewählt und der aktuelle Stil angewendet. Standardmäßig sind die in der Datei deklarierte erste Sprache und der in der Datei deklarierte Stil aktiviert. Eine Anwendung kann die [**iamstreamselect:: enable**](/windows/desktop/api/Strmif/nf-strmif-iamstreamselect-enable) -Methode verwenden, um einen anderen Stream zu aktivieren.
+Für jede Sprache und jeden Stil erstellt der Filter einen logischen Stream. Zu jedem Zeitpunkt sind genau ein Sprachstream und ein Stilstream aktiviert. Wenn der Filter ein Beispiel generiert, wählt er die Beschriftung für die aktuelle Sprache aus und wendet den aktuellen Stil an. Standardmäßig sind die erste Sprache und der erste Stil, die in der Datei deklariert sind, aktiviert. Eine Anwendung kann die [**IAMStreamSelect::Enable-Methode verwenden,**](/windows/desktop/api/Strmif/nf-strmif-iamstreamselect-enable) um einen anderen Stream zu aktivieren.
 
 Mit den Standardeinstellungen erzeugt die erste Beschriftung in der Beispieldatei die folgende Ausgabe:
 
@@ -85,11 +85,11 @@ Mit den Standardeinstellungen erzeugt die erste Beschriftung in der Beispieldate
 
 
 
-Wenn die Ausgabe an den internen Renderer des Skript Befehls weitergeleitet wird, sendet dieser Filter eine Ereignis Benachrichtigung für das [**EC- \_ OLE- \_ Ereignis**](ec-ole-event.md) . Der zweite Ereignis Parameter ist ein BSTR mit dem Beschriftungs Text. Die Anwendung kann das Ereignis abrufen und die Beschriftung anzeigen.
+Wenn die Ausgabe an den Renderer des internen Skriptbefehls gesendet wird, sendet dieser Filter eine [**EC \_ OLE \_ EVENT-Ereignisbenachrichtigung.**](ec-ole-event.md) Der zweite Ereignisparameter ist ein BSTR mit dem Beschriftungstext. Die Anwendung kann das Ereignis abrufen und die Beschriftung anzeigen.
 
-Im folgenden Beispiel wird gezeigt, wie Sie eine Sami-Datei, Datenstrom Informationen, streamingdatenströme und Beschriftungs Text Rendering darstellen. Im Beispiel wird davon ausgegangen, dass die vorherige samische Datei als C: \\ Sami \_ Test \_ file. Sami gespeichert wird.
+Das folgende Beispiel zeigt, wie sie eine SAMI-Datei rendern, Datenstrominformationen abrufen, Streams aktivieren und Beschriftungstext anzeigen. Im Beispiel wird davon ausgegangen, dass die vorherige SAMI-Datei als C: \\ Sami \_ test \_ file.sami gespeichert wird.
 
-Aus Gründen der Kürze wurden in diesem Beispiel hart codierte streamindizes verwendet, wenn die **iamstreamselect:: enable** -Methode aufgerufen wird. Außerdem führt es eine minimale Fehlerüberprüfung durch.
+Aus Gründen der Übersichtlichkeit wurden in diesem Beispiel hart codierte Streamindizes verwendet, wenn die **IAMStreamSelect::Enable-Methode** aufruft. Außerdem wird eine minimale Fehlerüberprüfung durchgeführt.
 
 
 ```C++
@@ -171,7 +171,7 @@ void __cdecl main()
 
 
 
-Dieser Filter verwendet die [**iasynkreader**](/windows/desktop/api/Strmif/nn-strmif-iasyncreader) -Schnittstelle zum Abrufen von Beispielen aus dem Quell Filter. Daher wird die [**IMemInputPin**](/windows/desktop/api/Strmif/nn-strmif-imeminputpin) -Schnittstelle in der eingabepin nicht unterstützt.
+Dieser Filter verwendet die [**IAsyncReader-Schnittstelle,**](/windows/desktop/api/Strmif/nn-strmif-iasyncreader) um Beispiele aus dem Quellfilter zu pullen. Daher wird die [**IMemInputPin-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-imeminputpin) auf dem Eingabepin nicht unterstützt.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

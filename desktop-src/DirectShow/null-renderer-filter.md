@@ -1,7 +1,7 @@
 ---
-description: Der NULL-rendererfilter ist ein Renderer, der alle empfangenen Beispiele verwirft, ohne die Beispiel Daten anzuzeigen oder zu rendern.
+description: Der Nullrendererfilter ist ein Renderer, der jedes empfangene Beispiel verwirft, ohne die Beispieldaten anzuzeigen oder zu rendern.
 ms.assetid: 2954762d-2ae6-4e38-ac88-5390a081897e
-title: NULL-rendererfilter (qedit. h)
+title: NULL-Rendererfilter (Qedit.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,36 +13,36 @@ api_type:
 - HeaderDef
 api_location:
 - Qedit.h
-ms.openlocfilehash: 7ff6c728276ca3fd69c14e304780b1d70c563265
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 64647cbcbcc836c400890fb173a29c76f8723029
+ms.sourcegitcommit: 63753fcfb0afbbe5ec283fb8316e62c2dc950f66
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371418"
+ms.lasthandoff: 04/22/2021
+ms.locfileid: "107908808"
 ---
-# <a name="null-renderer-filter"></a>NULL-rendererfilter
+# <a name="null-renderer-filter"></a>NULL-Rendererfilter
 
 > [!Note]  
 > \[Veraltet. Diese API kann aus zukünftigen Versionen von Windows entfernt werden.\]
 
  
 
-Der NULL-rendererfilter ist ein Renderer, der alle empfangenen Beispiele verwirft, ohne die Beispiel Daten anzuzeigen oder zu rendern.
+Der Nullrendererfilter ist ein Renderer, der jedes empfangene Beispiel verwirft, ohne die Beispieldaten anzuzeigen oder zu rendern.
 
 
 
-|                                          |                                                                                                                      |
+| Bezeichnung | Wert |
 |------------------------------------------|----------------------------------------------------------------------------------------------------------------------|
-| Filter Schnittstellen                        | [**Ibasefilter**](/windows/desktop/api/Strmif/nn-strmif-ibasefilter), [**imediaposition**](/windows/desktop/api/Control/nn-control-imediaposition), [**imediaseeking**](/windows/desktop/api/Strmif/nn-strmif-imediaseeking) |
-| Eingabe-PIN-Medientypen                    | Beliebige Medientyp                                                                                                       |
-| PIN-Eingabeschnittstellen                     | [**IMemInputPin**](/windows/desktop/api/Strmif/nn-strmif-imeminputpin), [**IPin**](/windows/desktop/api/Strmif/nn-strmif-ipin), [**iqualitycontrol**](/windows/desktop/api/Strmif/nn-strmif-iqualitycontrol)               |
-| Ausgabe-PIN-Medientypen                   | Nicht zutreffend                                                                                                      |
-| PIN-Schnittstellen                    | Nicht zutreffend                                                                                                      |
-| CLSID Filtern                             | CLSID- \_ nullrenderer                                                                                                  |
-| CLSID der Eigenschaften Seite                      | Keine Eigenschaften Seite.                                                                                                    |
+| Filterschnittstellen                        | [**IBaseFilter,**](/windows/desktop/api/Strmif/nn-strmif-ibasefilter) [**IMediaPosition,**](/windows/desktop/api/Control/nn-control-imediaposition) [**IMediaSeeking**](/windows/desktop/api/Strmif/nn-strmif-imediaseeking) |
+| Eingabepinmedientypen                    | Beliebiger Medientyp                                                                                                       |
+| Eingabepinschnittstellen                     | [**IMemInputPin,**](/windows/desktop/api/Strmif/nn-strmif-imeminputpin) [**IPin,**](/windows/desktop/api/Strmif/nn-strmif-ipin) [**IQualityControl**](/windows/desktop/api/Strmif/nn-strmif-iqualitycontrol)               |
+| Medientypen des Ausgabepins                   | Nicht zutreffend                                                                                                      |
+| Ausgabepinschnittstellen                    | Nicht zutreffend                                                                                                      |
+| Filtern von CLSID                             | CLSID \_ NullRenderer                                                                                                  |
+| CLSID der Eigenschaftenseite                      | Keine Eigenschaftenseite.                                                                                                    |
 | Ausführbare Datei                               | Qedit.dll                                                                                                            |
-| [Verdienst](merit.md)                       | das Verdienst wird \_ \_ nicht \_ verwendet.                                                                                                  |
-| [Filter Kategorie](filter-categories.md) | CLSID \_ legacyamfiltercategory                                                                                        |
+| [Verdienst](merit.md)                       | NICHT \_ \_ VERWENDEN \_                                                                                                  |
+| [Filterkategorie](filter-categories.md) | CLSID \_ LegacyAmFilterCategory                                                                                        |
 
 
 
@@ -50,9 +50,9 @@ Der NULL-rendererfilter ist ein Renderer, der alle empfangenen Beispiele verwirf
 
 ## <a name="remarks"></a>Bemerkungen
 
-Verwenden Sie diesen Filter, wenn eine Ausgabepin im Diagramm eine Downstreamverbindung erfordert, Sie aber nicht möchten, dass die Daten aus dieser Pin rendertet werden. Indem Sie die Ausgabe-PIN mit dem NULL-Renderer verbinden, vervollständigen Sie die Verbindung, ohne die Daten zu rendern.
+Verwenden Sie diesen Filter, wenn ein Ausgabepin im Diagramm eine Downstreamverbindung erfordert, Sie die Daten jedoch nicht von diesem Pin rendern möchten. Indem Sie den Ausgabepin mit dem NULL-Renderer verbinden, schließen Sie die Verbindung ab, ohne die Daten zu rendern.
 
-Obwohl dieser Filter keine Beispiele renderei, wartet er auf die Präsentationszeit der einzelnen Beispiele, bevor das Beispiel verworfen wird. Daher wird das Diagramm mit dem normalen Satz ausgeführt. Wenn Sie möchten, dass das Diagramm so schnell wie möglich ausgeführt wird, legen Sie die Referenzuhr auf **null** fest. Weitere Informationen finden Sie unter [Festlegen der diagrammuhr](setting-the-graph-clock.md).
+Obwohl dieser Filter keine Stichproben rendert, wartet er auf die Präsentationszeit der einzelnen Stichproben, bevor das Beispiel verworfen wird. Daher wird das Diagramm mit der normalen Rate ausgeführt. Wenn das Diagramm so schnell wie möglich ausgeführt werden soll, legen Sie die Referenzuhr auf **NULL fest.** Weitere Informationen finden Sie unter [Setting the Graph Clock](setting-the-graph-clock.md).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -60,7 +60,7 @@ Obwohl dieser Filter keine Beispiele renderei, wartet er auf die Präsentationsz
 
 | Anforderung | Wert |
 |-------------------|------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>"Qedit. h"</dt> </dl> |
+| Header<br/> | <dl> <dt>Qedit.h</dt> </dl> |
 
 
 
@@ -68,7 +68,7 @@ Obwohl dieser Filter keine Beispiele renderei, wartet er auf die Präsentationsz
 
 <dl> <dt>
 
-[DirectShow-Bearbeitungs Dienste-Objekte](directshow-editing-services-objects.md)
+[DirectShow Editing Services Objects](directshow-editing-services-objects.md)
 </dt> </dl>
 
  

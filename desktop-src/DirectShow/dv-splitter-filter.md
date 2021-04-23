@@ -1,34 +1,34 @@
 ---
-description: DV-Splitter Filter
+description: DV-Splitterfilter
 ms.assetid: 099d1cc7-f0c5-4c50-a1d5-f2defde7e104
-title: DV-Splitter Filter
+title: DV-Splitterfilter
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5e59ada4f18a107f8e1b07571f3907aed5ddf50f
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 74ca8e856f1a49ff22ee05f7dc0ae341fad6aa91
+ms.sourcegitcommit: 63753fcfb0afbbe5ec283fb8316e62c2dc950f66
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104520555"
+ms.lasthandoff: 04/22/2021
+ms.locfileid: "107908408"
 ---
-# <a name="dv-splitter-filter"></a>DV-Splitter Filter
+# <a name="dv-splitter-filter"></a>DV-Splitterfilter
 
-Dieser Filter teilt einen überlappenden digitalen Videodaten Strom (DV) in seine Komponenten Video-und Audiodatenströme auf.
+Dieser Filter teilt einen überlappten digitalen Videodatenstrom (DV) in seine Komponentenvideo- und Audiostreams auf.
 
 
 
-|                                          |                                                                                                                                                    |
+| Bezeichnung | Wert |
 |------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|
-| Filter Schnittstellen                        | [**Ibasefilter**](/windows/desktop/api/Strmif/nn-strmif-ibasefilter), [ **idvsplitter**](/windows/desktop/api/Strmif/nn-strmif-idvsplitter)                                                                             |
-| Eingabe-PIN-Medientypen                    | MediaType \_ interleaved, mediasubtype \_ DVSD, Format \_ dvinfo                                                                                         |
-| PIN-Eingabeschnittstellen                     | [**IMemInputPin**](/windows/desktop/api/Strmif/nn-strmif-imeminputpin), [**IPin**](/windows/desktop/api/Strmif/nn-strmif-ipin), [**iqualitycontrol**](/windows/desktop/api/Strmif/nn-strmif-iqualitycontrol)                                             |
-| Ausgabe-PIN-Medientypen                   | **Video**: MediaType- \_ Video, Format \_ dvinfo<br/> **Audiodatei**: MediaType \_ -Audiodatei, mediasubtype \_ PCM, Format \_ WaveFormatEx<br/>             |
-| PIN-Schnittstellen                    | [**Imediaposition**](/windows/desktop/api/Control/nn-control-imediaposition), [**imediaseeking**](/windows/desktop/api/Strmif/nn-strmif-imediaseeking), [**IPin**](/windows/desktop/api/Strmif/nn-strmif-ipin), [**iqualitycontrol**](/windows/desktop/api/Strmif/nn-strmif-iqualitycontrol) |
-| CLSID Filtern                             | CLSID- \_ dvsplitter                                                                                                                                  |
-| CLSID der Eigenschaften Seite                      | Keine Eigenschaften Seite.                                                                                                                                  |
+| Filterschnittstellen                        | [**IBaseFilter,**](/windows/desktop/api/Strmif/nn-strmif-ibasefilter) [ **IDVSplitter**](/windows/desktop/api/Strmif/nn-strmif-idvsplitter)                                                                             |
+| Eingabepin-Medientypen                    | MEDIATYPE \_ Interleaved, MEDIASUBTYPE \_ dvsd, FORMAT \_ DvInfo                                                                                         |
+| Eingabepinschnittstellen                     | [**IMemInputPin**](/windows/desktop/api/Strmif/nn-strmif-imeminputpin), [**IPin**](/windows/desktop/api/Strmif/nn-strmif-ipin), [**IQualityControl**](/windows/desktop/api/Strmif/nn-strmif-iqualitycontrol)                                             |
+| Ausgabepin-Medientypen                   | **Video**: MEDIATYPE \_ Video, FORMAT \_ DvInfo<br/> **Audio:** MEDIATYPE \_ Audio, MEDIASUBTYPE \_ PCM, FORMAT \_ WaveFormatEx<br/>             |
+| Ausgabe-PIN-Schnittstellen                    | [**IMediaPosition**](/windows/desktop/api/Control/nn-control-imediaposition), [**IMediaSeeking**](/windows/desktop/api/Strmif/nn-strmif-imediaseeking), [**IPin**](/windows/desktop/api/Strmif/nn-strmif-ipin), [**IQualityControl**](/windows/desktop/api/Strmif/nn-strmif-iqualitycontrol) |
+| Filtern der CLSID                             | CLSID \_ DVSplitter                                                                                                                                  |
+| Eigenschaftenseite CLSID                      | Keine Eigenschaftenseite.                                                                                                                                  |
 | Ausführbare Datei                               | qdv.dll                                                                                                                                            |
-| [Verdienst](merit.md)                       | Verdienst \_ Normal                                                                                                                                      |
-| [Filter Kategorie](filter-categories.md) | CLSID \_ legacyamfiltercategory                                                                                                                      |
+| [Verdienst](merit.md)                       | NORMALER WERT \_                                                                                                                                      |
+| [Filterkategorie](filter-categories.md) | CLSID \_ LegacyAmFilterCategory                                                                                                                      |
 
 
 
@@ -36,15 +36,15 @@ Dieser Filter teilt einen überlappenden digitalen Videodaten Strom (DV) in sein
 
 ## <a name="remarks"></a>Bemerkungen
 
-DV-Frames enthalten Audiodateien und Videos im gleichen Frame. Der DV-Splitter Filter extrahiert die Audiodaten und übermittelt sie als einen oder zwei Audiostreams aus den audioausgabepins. Der ursprüngliche DV-Frame wird von der Videoausgabe-Pin als Videoframe übermittelt. Der Medientyp im Videoframe wird von MediaType \_ in MediaType \_ Video geändert, aber andernfalls werden die Daten nicht geändert. Der Medientyp wird geändert, um zu signalisieren, dass die Audiodaten im Frame ignoriert werden sollten. Der DV-Splitter legt keine Medien Zeit in seinen Ausgabe Beispielen fest. Wenn Sie einen downstreamfilter schreiben, der die Medien Zeiten erfordert, können Sie die Uhrzeiten von der Frame Anzahl ableiten.
+DV-Frames enthalten Audio und Video in demselben Frame. Der DV-Splitterfilter extrahiert die Audiodaten und übermittelt sie als einen oder zwei Audiostreams aus den Audioausgabepins. Der ursprüngliche DV-Frame wird vom Videoausgabepin als Videoframe übermittelt. Der Medientyp im Videoframe wird von MEDIATYPE \_ Interleaved in MEDIATYPE \_ Video geändert, andernfalls werden die Daten jedoch nicht geändert. Der Medientyp wird geändert, um zu signalisieren, dass die Audiodaten im Frame ignoriert werden sollen. Der DV-Splitter legt keine Medienzeit für die Ausgabebeispiele fest. Wenn Sie einen Downstreamfilter schreiben, der die Medienzeiten erfordert, können Sie die Zeiten von der Frameanzahl ableiten.
 
-Die Schnittstellen [**imediaposition**](/windows/desktop/api/Control/nn-control-imediaposition) und [**imediaseeking**](/windows/desktop/api/Strmif/nn-strmif-imediaseeking) werden jeweils nur von einer Ausgabe-PIN verfügbar gemacht.
+Nur jeweils ein Ausgabepin macht die Schnittstellen [**IMediaPosition**](/windows/desktop/api/Control/nn-control-imediaposition) und [**IMediaSeeking**](/windows/desktop/api/Strmif/nn-strmif-imediaseeking) verfügbar.
 
-Der DV-Splitter Filter kann dynamische Formatänderungen im Audiostream akzeptieren. Wenn der [AVI MUX](avi-mux-filter.md) -Filter jedoch Downstream ist, wird die Formatänderung abgelehnt. Wenn dies der Fall ist, beendet der DV-Splitter die Erstellung eines Audiostreams. Diese Einschränkung wirkt sich nur auf die Datei Erfassung von Type-2 aus. Bei Type-1-Dateien wird der verschachtelte Stream nicht an erster Stelle aufgeteilt. Für die Vorschau gibt es keinen nachgelagerten AVI MUX-Filter.
+Der DV-Splitterfilter kann dynamische Formatänderungen im Audiostream akzeptieren. Wenn der [AVI Mux-Filter](avi-mux-filter.md) jedoch nachgeschaltet ist, lehnt er die Formatänderung ab. In diesem Fall erzeugt der DV-Splitter keine Audiodatenströme mehr. Diese Einschränkung wirkt sich nur auf die Dateierfassung vom Typ 2 aus. Bei Dateien vom Typ 1 wird der überlappende Stream nicht von Anfang an aufgeteilt. Für die Vorschau ist kein AVI Mux-Filter nachgeschaltet.
 
-Wenn es sich bei der DV-Quelle um eine Live Kamera handelt, gibt es normalerweise keinen Grund, dass das Audioformat geändert werden muss. Das Format kann sich jedoch ändern, wenn Sie von einem VTR-Band übertragen, das mehrere heterogene Quellen enthält.
+Wenn es sich bei der DV-Quelle um eine Livekamera handelt, gibt es normalerweise keinen Grund, das Audioformat zu ändern. Das Format kann sich jedoch ändern, wenn Sie von einem VTR-Band übertragen, das mehrere heterogene Quellen enthält.
 
-Jeder DV-Frame enthält zusätzlich zu den Audiodaten und Videodaten Metadaten. Diese Metadaten können von Frame zu Frame geändert werden. Anwendungen können die Metadaten analysieren, indem Sie entweder die Eingabe Beispiele oder die Videoausgabe Beispiele überprüfen. DirectShow bietet jedoch keine direkte Unterstützung für die bidirekmieren von DV-Metadaten. Weitere Informationen finden Sie unter IEC 61834-4.
+Jeder DV-Frame enthält zusätzlich zu den Audio- und Videodaten Metadaten. Diese Metadaten können sich von Frame zu Frame ändern. Anwendungen können die Metadaten analysieren, indem sie entweder die Eingabebeispiele oder die Videoausgabebeispiele untersuchen. DirectShow bietet jedoch keine direkte Unterstützung für die Analyse von DV-Metadaten. Weitere Informationen finden Sie unter IEC 61834-4.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

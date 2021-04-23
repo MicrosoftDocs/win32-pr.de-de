@@ -1,37 +1,37 @@
 ---
-description: Das Effect-Element definiert ein audiobild oder Videoeffekt Objekt. Ein Effekt wird auf einen einzelnen Stream (z. b. eine Komposition, eine Spur oder eine Quelle) angewendet.
+description: Das Effect-Element definiert ein Audio- oder Videoeffektobjekt. Ein Effekt wird auf einen einzelnen Stream angewendet (z. B. eine Komposition, ein Titel oder eine Quelle).
 ms.assetid: aedb4491-f1f0-44b3-ad88-3fac8c90144d
-title: Effect-Element (gdipluseffects. h)
+title: effect-Element (Gdipluseffects.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9dd31e85407b99c3dffd4417a051be168f7c6d3a
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: d4c925e61578857415bb22248a9ad2b1df27cdac
+ms.sourcegitcommit: 63753fcfb0afbbe5ec283fb8316e62c2dc950f66
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371292"
+ms.lasthandoff: 04/22/2021
+ms.locfileid: "107908658"
 ---
-# <a name="effect-element"></a>Effect-Element
+# <a name="effect-element"></a>effect-Element
 
 > [!Note]  
 > \[Veraltet. Diese API kann aus zukünftigen Versionen von Windows entfernt werden.\]
 
  
 
-Das `effect` -Element definiert ein audiobild oder Videoeffekt Objekt. Ein Effekt wird auf einen einzelnen Stream (z. b. eine Komposition, eine Spur oder eine Quelle) angewendet.
+Das `effect` -Element definiert ein Audio- oder Videoeffektobjekt. Ein Effekt wird auf einen einzelnen Stream angewendet (z. B. eine Komposition, ein Titel oder eine Quelle).
 
-## <a name="attributes"></a>Attribute
+## <a name="attributes"></a>Attributes
 
-[**CLSID**](clsid-attribute.md), [**Lock**](lock-attribute.md), [**stumm**](mute-attribute.md), [**Start**](start-attribute.md), [**Ende**](stop-attribute.md), [**UserData**](userdata-attribute.md), [**UserID**](userid-attribute.md), [**username**](username-attribute.md)
+[**clsid**](clsid-attribute.md), [**lock**](lock-attribute.md), [**mute**](mute-attribute.md), [**start**](start-attribute.md), [**stop**](stop-attribute.md), [**userdata**](userdata-attribute.md), [**userid**](userid-attribute.md), [**username**](username-attribute.md)
 
-## <a name="parentchild-information"></a>Über-/unterordnungsinformationen
+## <a name="parentchild-information"></a>Informationen zu über- und untergeordneten Daten
 
 
 
-|          |                                                                                                                                      |
+| Bezeichnung | Wert |
 |----------|--------------------------------------------------------------------------------------------------------------------------------------|
-| Parent   | [**Composite**](composite-element.md), [**Group**](group-element.md), [**Clip**](clip-element.md), [**Track**](track-element.md) |
-| Children | [**param**](param-element.md)                                                                                                       |
+| Parent   | [**Zusammengesetzt,**](composite-element.md) [**Gruppe,**](group-element.md) [**Clip,**](clip-element.md) [**Track**](track-element.md) |
+| Children | [**Parameter**](param-element.md)                                                                                                       |
 
 
 
@@ -39,7 +39,7 @@ Das `effect` -Element definiert ein audiobild oder Videoeffekt Objekt. Ein Effek
 
 ## <a name="remarks"></a>Bemerkungen
 
-Das **CLSID** -Attribut gibt das untergeordnete Objekt an, das den Effekt erzeugt.
+Das **clsid-Attribut** gibt das Unterobjekt an, das den Effekt erstellt.
 
 ## <a name="examples"></a>Beispiele
 
@@ -56,7 +56,7 @@ Das **CLSID** -Attribut gibt das untergeordnete Objekt an, das den Effekt erzeug
 
 | Anforderung | Wert |
 |-------------------|---------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Gdipluseffects. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Gdipluseffects.h</dt> </dl> |
 
 
 

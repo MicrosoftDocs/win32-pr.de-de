@@ -1,26 +1,26 @@
 ---
-description: Fragt ab, ob es sich bei der Videoausgabe um ein Video mit der standardmäßigen Definition, Analog
+description: Fragt ab, ob es sich bei der Videoausgabe um videobasierte Standarddefinitionen handelt, analoges Komponentenvideo.
 ms.assetid: bd4fc5bc-c45d-4228-9759-6300fdfff6a0
-title: AM_PROPERTY_COPY_ANALOG_COMPONENT-Eigenschaft (dvdmedia. h)
+title: AM_PROPERTY_COPY_ANALOG_COMPONENT-Eigenschaft (Dvdmedia.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6f3998156bf372c39018aa73ba30a661117519c3
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 6448bfbcc07be6ca37189c15c7c605887e6d22b3
+ms.sourcegitcommit: 63753fcfb0afbbe5ec283fb8316e62c2dc950f66
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106373867"
+ms.lasthandoff: 04/22/2021
+ms.locfileid: "107910308"
 ---
-# <a name="am_property_copy_analog_component-property"></a>Eigenschaften \_ \_ Kopie der \_ Analog \_ Component-Eigenschaft
+# <a name="am_property_copy_analog_component-property"></a>AM \_ PROPERTY COPY ANALOG \_ \_ \_ COMPONENT-Eigenschaft
 
-Fragt ab, ob es sich bei der Videoausgabe um ein Video mit der standardmäßigen Definition, Analog
+Fragt ab, ob es sich bei der Videoausgabe um videobasierte Standarddefinitionen handelt, analoges Komponentenvideo.
 
 
 
-|                   |                                       |
+| Bezeichnung | Wert |
 |-------------------|---------------------------------------|
-| Eigenschaftensatz-GUID | AM \_ kspropsetid \_ copyprot             |
-| Eigenschafts-ID       | AM \_ - \_ Eigenschaften \_ Kopier \_ Komponente (analog) |
+| Eigenschaftensatz-GUID | AM \_ KSPROPSETID \_ CopyProt             |
+| Eigenschafts-ID       | \_AM-EIGENSCHAFT \_ – \_ ANALOGE KOMPONENTE \_ KOPIEREN |
 | Datentyp         | **ULONG**                             |
 
 
@@ -31,7 +31,7 @@ Fragt ab, ob es sich bei der Videoausgabe um ein Video mit der standardmäßigen
 
 Diese Eigenschaft ist schreibgeschützt.
 
-Der Wert der-Eigenschaft ist **true** , wenn die Videoausgabe ein analoges Komponenten Video mit einer Auflösung ist, die nicht größer als 480p für NTSC oder 540p für PAL ist. Andernfalls ist der Wert **false**.
+Der Wert der -Eigenschaft ist **TRUE,** wenn die Videoausgabe analoges Komponentenvideo mit einer Auflösung von nicht größer als 480p für NTSC oder 540p für PAL ist. Andernfalls ist der Wert **FALSE.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -39,7 +39,7 @@ Der Wert der-Eigenschaft ist **true** , wenn die Videoausgabe ein analoges Kompo
 
 | Anforderung | Wert |
 |-------------------|---------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Dvdmedia. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Dvdmedia.h</dt> </dl> |
 
 
 
@@ -47,7 +47,7 @@ Der Wert der-Eigenschaft ist **true** , wenn die Videoausgabe ein analoges Kompo
 
 <dl> <dt>
 
-[**Eigenschaften Satz für den DVD-Kopierschutz**](dvd-copy-protection-property-set.md)
+[**DVD Copy Protection-Eigenschaftensatz**](dvd-copy-protection-property-set.md)
 </dt> </dl>
 
  

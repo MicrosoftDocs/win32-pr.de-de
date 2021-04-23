@@ -1,28 +1,28 @@
 ---
-description: Steuern eines Aufzeichnungs Diagramms
+description: Steuern eines Erfassungsdiagramms
 ms.assetid: e7afafca-e993-4096-bad4-399ee6c67fe9
-title: Steuern eines Aufzeichnungs Diagramms
+title: Steuern eines Erfassungsdiagramms
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6366645f14822a770b828e59b2201e378a0e1e8e
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 0089fa11adbc0ac861fb9e8e30e2cd0f56b23680
+ms.sourcegitcommit: 63753fcfb0afbbe5ec283fb8316e62c2dc950f66
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104522032"
+ms.lasthandoff: 04/22/2021
+ms.locfileid: "107909048"
 ---
-# <a name="controlling-a-capture-graph"></a>Steuern eines Aufzeichnungs Diagramms
+# <a name="controlling-a-capture-graph"></a>Steuern eines Erfassungsdiagramms
 
-Die [**IMediaControl**](/windows/desktop/api/Control/nn-control-imediacontrol) -Schnittstelle des Filter Graph-Managers verfügt über Methoden zum Ausführen, beenden und Anhalten des gesamten Diagramms. Wenn das Filter Diagramm jedoch Erfassungs-und Vorschau Datenströme enthält, sollten Sie die beiden Streams wahrscheinlich unabhängig voneinander steuern. Beispielsweise können Sie eine Vorschau des Videos anzeigen, ohne es zu erfassen. Hierfür können Sie die [**ICaptureGraphBuilder2:: controlstream**](/windows/desktop/api/Strmif/nf-strmif-icapturegraphbuilder2-controlstream) -Methode verwenden.
+Die [**IMediaControl-Schnittstelle**](/windows/desktop/api/Control/nn-control-imediacontrol) des Filter graph-Managers verfügt über Methoden zum Ausführen, Beenden und Anhalten des gesamten Graphen. Wenn das Filterdiagramm jedoch Erfassungs- und Vorschaustreams auflistet, möchten Sie die beiden Datenströme wahrscheinlich unabhängig voneinander steuern. Sie können z. B. eine Vorschau des Videos anzeigen, ohne es zu erfassen. Hierzu können Sie die [**ICaptureGraphBuilder2::ControlStream-Methode**](/windows/desktop/api/Strmif/nf-strmif-icapturegraphbuilder2-controlstream) verwenden.
 
 > [!Note]  
-> Diese Methode funktioniert nicht, wenn Sie in einer ASF-Datei (Advanced Systems Format) erfasst wird.
+> Diese Methode funktioniert nicht, wenn sie in einer ASF-Datei (Advanced Systems Format) erfasst wird.
 
  
 
-Steuern des Erfassungsdaten Stroms
+Steuern des Erfassungsstreams
 
-Mit dem folgenden Code wird der Video Erfassungsdaten Strom so festgelegt, dass er vier Sekunden lang ausgeführt wird:
+Der folgende Code legt fest, dass der Videoaufzeichnungsstream vier Sekunden lang ausgeführt wird, beginnend eine Sekunde nach der Ausführung des Diagramms:
 
 
 ```C++
@@ -41,11 +41,11 @@ pControl->Run();
 
 
 
-Der erste Parameter gibt an, welcher Stream als PIN-Kategorie-GUID zu steuern ist. Der zweite Parameter gibt den Medientyp an. Der dritte Parameter ist ein Zeiger auf den Erfassungs Filter. Legen Sie den zweiten und den dritten Parameter auf **null** fest, um alle Aufzeichnungsdaten Ströme im Diagramm zu steuern.
+Der erste Parameter gibt an, welcher Stream als PIN-Kategorie-GUID zu steuern ist. Der zweite Parameter gibt den Medientyp an. Der dritte Parameter ist ein Zeiger auf den Erfassungsfilter. Um alle Erfassungsstreams im Diagramm zu steuern, legen Sie den zweiten und dritten Parameter auf **NULL fest.**
 
-Die folgenden beiden Parameter definieren die Zeiten, zu denen der Stream gestartet und beendet wird, relativ zu dem Zeitpunkt, zu dem die Ausführung des Diagramms beginnt. Nennen Sie [**IMediaControl:: Run**](/windows/desktop/api/Control/nf-control-imediacontrol-run) , um das Diagramm auszuführen. Die **controlstream** -Methode hat keine Auswirkungen, bis Sie das Diagramm ausführen. Wenn das Diagramm bereits ausgeführt wird, werden die Einstellungen sofort wirksam.
+Die nächsten beiden Parameter definieren die Zeiten, zu denen der Stream gestartet und stoppt, relativ zur Zeit, zu der die Ausführung des Diagramms beginnt. Rufen [**Sie IMediaControl::Run auf,**](/windows/desktop/api/Control/nf-control-imediacontrol-run) um den Graphen ausführen zu können. Bis sie das Diagramm ausführen, hat die **ControlStream-Methode** keine Auswirkungen. Wenn das Diagramm bereits ausgeführt wird, werden die Einstellungen sofort wirksam.
 
-Die letzten beiden Parameter werden zum erhalten von Ereignis Benachrichtigungen verwendet, wenn der Stream gestartet und beendet wird. Für jeden Datenstrom, den Sie mit dieser Methode steuern, sendet das Filter Diagramm ein Ereignispaar: das [**EC- \_ \_ streamsteuerelement \_**](ec-stream-control-started.md) wurde beim Start des Streams gestartet, und das EC-Stream-Steuerelement wurde [**\_ \_ \_ beendet**](ec-stream-control-stopped.md) , wenn der Stream beendet wird. Die Werte von **wstartcookie** und **wstopcookie** werden als zweiter Ereignis Parameter verwendet. Daher ist *lParam2* im Start Ereignis mit **wstartcookie identisch**, und *lParam2* im Stop-Ereignis entspricht **wstopcookie**. Der folgende Code zeigt, wie diese Ereignisse angezeigt werden:
+Die letzten beiden Parameter werden zum Abrufen von Ereignisbenachrichtigungen verwendet, wenn der Stream gestartet und beendet wird. Für jeden Stream, den Sie mit dieser Methode steuern, sendet das Filterdiagramm ein Ereignispaar: [**EC \_ STREAM CONTROL \_ \_ STARTED**](ec-stream-control-started.md) beim Start des Streams und [**EC STREAM CONTROL \_ \_ \_ STOPPED,**](ec-stream-control-stopped.md) wenn der Stream beendet wird. Die Werte von **wStartCookie** und **wStopCookie** werden als zweiter Ereignisparameter verwendet. Daher entspricht *lParam2* im Startereignis **wStartCookie** und *lParam2* im Beendigungsereignis **wStopCookie**. Der folgende Code zeigt, wie diese Ereignisse abzurufen sind:
 
 
 ```C++
@@ -68,21 +68,21 @@ while (hr = pEvent->GetEvent(&evCode, &param1, &param2, 0), SUCCEEDED(hr))
 
 
 
-Die **controlstream** -Methode definiert einige besondere Werte für Start-und Endzeit.
+Die **ControlStream-Methode** definiert einige spezielle Werte für die Start- und Beendigungszeiten.
 
 
 
-|             |                                        |                                    |
+| Bezeichnung | Wert |
 |-------------|----------------------------------------|------------------------------------|
-|             | Start                                  | Stop                               |
-| Maxlonglong | Starten Sie diesen Stream nie.               | Beenden Sie nicht, bis das Diagramm angehalten wird. |
-| **NULL**    | Sofort starten, wenn das Diagramm ausgeführt wird. | Sofort beendet werden.                  |
+|             | Starten                                  | Beenden                               |
+| MAXLONGLONG | Starten Sie diesen Stream nie.               | Beenden Sie nicht, bis das Diagramm beendet wird. |
+| **NULL**    | Starten Sie sofort, wenn das Diagramm ausgeführt wird. | Beenden Sie sofort.                  |
 
 
 
  
 
-Mit dem folgenden Code wird der Aufzeichnungsdaten Strom beispielsweise sofort beendet:
+Der folgende Code beendet z. B. den Erfassungsstream sofort:
 
 
 ```C++
@@ -93,11 +93,11 @@ pBuild->ControlStream(&PIN_CATEGORY_CAPTURE, &MEDIATYPE_Video, pCap,
 
 
 
-Obwohl Sie den Erfassungsdaten Strom abbrechen und später neu starten können, wird dadurch eine Lücke in den Zeitstempeln erzeugt. Bei der Wiedergabe erscheint das Video während der Lücke (abhängig vom Dateiformat).
+Sie können den Erfassungsstream zwar beenden und später neu starten, dies führt jedoch zu einer Lücke in den Zeitstempeln. Bei der Wiedergabe wird das Video während der Lücke angehalten (je nach Dateiformat).
 
-Steuern des Vorschau Datenstroms
+Steuern des Vorschaudatenstroms
 
-Um die Vorschau-PIN zu steuern, wenden Sie **controlstream** an, und legen Sie den ersten Parameter auf Pin \_ Category \_ Preview fest. Dies funktioniert genauso wie bei der \_ Erfassung der PIN-Kategorie \_ , mit dem Unterschied, dass Sie keine Verweis Zeiten zum Angeben des Starts und Stopps verwenden können, da die Vorschau Rahmen keine Zeitstempel aufweisen. Daher muss **null** oder maxlonglong verwendet werden. Verwenden Sie **null** , um den Vorschau Datenstrom zu starten:
+Um den Vorschaupin zu steuern, rufen **Sie ControlStream** auf, legen aber den ersten Parameter auf PIN \_ CATEGORY PREVIEW \_ fest. Dies funktioniert genauso wie bei PIN \_ CATEGORY \_ CAPTURE, mit der Ausnahme, dass Sie keine Verweiszeiten verwenden können, um start und stop anzugeben, da die Vorschauframes keine Zeitstempel aufweisen. Daher müssen Sie **NULL** oder MAXLONGLONG verwenden. Verwenden Sie **NULL,** um den Vorschaustream zu starten:
 
 
 ```C++
@@ -109,7 +109,7 @@ pBuild->ControlStream(&PIN_CATEGORY_PREVIEW, &MEDIATYPE_Video, pCap,
 
 
 
-Verwenden Sie maxlonglong, um den Vorschau Datenstrom anzuhalten:
+Verwenden Sie MAXLONGLONG, um den Vorschaustream zu beenden:
 
 
 ```C++
@@ -121,9 +121,9 @@ pBuild->ControlStream(&PIN_CATEGORY_PREVIEW, &MEDIATYPE_Video, pCap,
 
 
 
-Es spielt keine Rolle, ob der Vorschau Datenstrom aus einer Vorschau-PIN im Erfassungs Filter oder aus dem Smart Tee-Filter stammt. Die **controlstream** -Methode funktioniert in jedem Fall.
+Es spielt keine Rolle, ob der Vorschaudatenstrom von einem Vorschaupin im Erfassungsfilter oder vom Smart Tee-Filter stammt. Die **ControlStream-Methode** funktioniert auf beide Weise.
 
-Bei Video Port Pins schlägt die Methode jedoch fehl. In diesem Fall besteht ein anderer Ansatz darin, das Videofenster auszublenden. Fragen Sie das Diagramm nach **IVideoWindow** ab, und verwenden Sie die [**\_ sichtbare IVideoWindow::p UT**](/windows/desktop/api/Control/nf-control-ivideowindow-put_visible) -Methode, um das Fenster anzuzeigen oder auszublenden.
+Bei Videoport-Pins ist die -Methode jedoch fehlgeschlagen. In diesem Fall besteht ein anderer Ansatz im Ausblenden des Videofensters. Fragen Sie das Diagramm **nach IVideoWindow ab,** und verwenden Sie die [**IVideoWindow::p ut \_ Visible-Methode,**](/windows/desktop/api/Control/nf-control-ivideowindow-put_visible) um das Fenster anzuzeigen oder auszublenden.
 
 
 ```C++
@@ -139,13 +139,13 @@ if (SUCCEEDED(hr))
 
 
 
-Wenn Sie [**IVideoWindow::p UT \_ AutoShow**](/windows/desktop/api/Control/nf-control-ivideowindow-put_autoshow) mit dem Wert oafalse vor dem Ausführen des Diagramms aufgerufen haben, blendet der Videorenderer-Filter das Fenster aus, bis Sie andernfalls angeben. Standardmäßig zeigt der Videorenderer das Fenster an, wenn Sie das Diagramm ausführen.
+Wenn Sie [**IVideoWindow::p ut \_ AutoShow**](/windows/desktop/api/Control/nf-control-ivideowindow-put_autoshow) mit dem Wert OAFALSE aufrufen, bevor Sie das Diagramm ausführen, blendet der Videorendererfilter das Fenster aus, bis Sie etwas anderes angeben. Standardmäßig zeigt der Videorenderer das Fenster an, wenn Sie das Diagramm ausführen.
 
-Hinweise zur Datenstrom Steuerung
+Hinweise zum Stream-Steuerelement
 
-Das Standardverhalten für eine PIN besteht darin, bei der Ausführung des Diagramms Beispiele zu liefern. Nehmen Sie beispielsweise an, dass Sie **controlstream** mit PIN \_ Category Capture, \_ aber nicht mit der Vorschau der PIN-Kategorie aufgerufen haben \_ \_ . Wenn Sie das Diagramm ausführen, wird der vorschaustream sofort ausgeführt, während der Erfassungsdaten Strom zu jedem Zeitpunkt ausgeführt wird, den Sie in **controlstream** angegeben haben.
+Das Standardverhalten für eine Stecknadel ist das Ausliefern von Stichproben, wenn der Graph ausgeführt wird. Angenommen, Sie rufen **ControlStream** mit PIN \_ CATEGORY \_ CAPTURE auf, aber nicht mit PIN \_ CATEGORY \_ PREVIEW. Wenn Sie das Diagramm ausführen, wird der Vorschaustream sofort ausgeführt, während der Erfassungsstream zu dem Zeitpunkt ausgeführt wird, den Sie in **ControlStream angegeben haben.**
 
-Wenn Sie mehr als einen Stream erfassen und an einen MUX-Filter senden – wenn Sie z. b. Audiodaten und Videos in einer AVI-Datei erfassen – sollten Sie beide Streams zusammen steuern. Andernfalls blockiert der Mux-Filter möglicherweise das warten auf einen Stream, da er versucht, die beiden Streams zu überdenken. Legen Sie vor dem Ausführen des Diagramms die gleichen Start-und Endzeiten für alle Erfassungsdaten Ströme fest:
+Wenn Sie mehr als einen Stream erfassen und an einen Muxfilter senden , z. B. wenn Sie Audio- und Videodaten in einer AVI-Datei erfassen, sollten Sie beide Streams gemeinsam steuern. Andernfalls kann der Muxfilter das Warten auf einen Stream blockieren, da er versucht, die beiden Streams zu verweben. Legen Sie die gleichen Start- und Stoppzeiten für alle Erfassungsstreams fest, bevor Sie den Graphen ausführen:
 
 
 ```C++
@@ -158,13 +158,13 @@ NULL, NULL,       // All capture streams.
 
 
 
-Intern verwendet die **controlstream** -Methode die [**iamstreamcontrol**](/windows/desktop/api/Strmif/nn-strmif-iamstreamcontrol) -Schnittstelle, die auf den Pins des Erfassungs Filters verfügbar ist, den intelligenten Tee-Filter (falls vorhanden) und ggf. den MUX-Filter. Sie können diese Schnittstelle direkt verwenden, anstatt **controlstream** aufrufen zu müssen, obwohl es keinen besonderen Vorteil gibt.
+Intern verwendet die **ControlStream-Methode** die [**IAMStreamControl-Schnittstelle,**](/windows/desktop/api/Strmif/nn-strmif-iamstreamcontrol) die auf den Pins des Erfassungsfilters, dem Smart Tee-Filter (falls vorhanden) und möglicherweise dem Muxfilter verfügbar gemacht wird. Sie können diese Schnittstelle direkt verwenden, anstatt **ControlStream** auf aufruft, obwohl dies keinen besonderen Vorteil bietet.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Video Erfassung](video-capture.md)
+[Videoaufnahme](video-capture.md)
 </dt> </dl>
 
  

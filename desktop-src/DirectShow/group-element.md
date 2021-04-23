@@ -1,37 +1,37 @@
 ---
 description: Das Group-Element definiert eine Gruppe, das Objekt der obersten Ebene in einer Zeitachse.
 ms.assetid: db2f1fdd-bcb1-4401-91f4-5e167e4da215
-title: Group-Element (DirectShow)
+title: group-Element (DirectShow)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: fe0b8146586d93a53093a68bb1abc08e85c52f14
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 31502cef89c8383e935f409d76b9e31ca53a2da1
+ms.sourcegitcommit: 63753fcfb0afbbe5ec283fb8316e62c2dc950f66
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "103958068"
+ms.lasthandoff: 04/22/2021
+ms.locfileid: "107909248"
 ---
-# <a name="group-element"></a>Group-Element
+# <a name="group-element"></a>group-Element
 
 > [!Note]  
-> \[Veraltet. Diese API kann aus zukünftigen Versionen von Windows entfernt werden.\]
+> \[Veraltet. Diese API wird möglicherweise aus zukünftigen Versionen von Windows entfernt.\]
 
  
 
-Das **Group** -Element definiert eine Gruppe, das Objekt der obersten Ebene in einer Zeitachse.
+Das **Group-Element** definiert eine Gruppe, das Objekt der obersten Ebene in einer Zeitachse.
 
-## <a name="attributes"></a>Attribute
+## <a name="attributes"></a>Attributes
 
-[**Bittiefe**](bitdepth-attribute.md), [**Pufferung**](buffering-attribute.md), [**Framerate**](framerate-attribute.md), [**height**](height-attribute.md), [**Lock**](lock-attribute.md), [**stumm**](mute-attribute.md), [**Name**](name-attribute.md), [**PreviewMode**](previewmode-attribute.md), [**Samplingrate**](samplingrate-attribute.md), [**Type**](type-attribute.md), [**UserData**](userdata-attribute.md), [**UserID**](userid-attribute.md), [**username**](username-attribute.md), [**Width**](width-attribute.md)
+[**bitdepth**](bitdepth-attribute.md), [**buffering**](buffering-attribute.md), [**framerate**](framerate-attribute.md), [**height**](height-attribute.md), [**lock**](lock-attribute.md), [**mute**](mute-attribute.md), [**name**](name-attribute.md), [**previewmode**](previewmode-attribute.md), [**samplingrate**](samplingrate-attribute.md), [**type**](type-attribute.md), [**userdata**](userdata-attribute.md), [**userid**](userid-attribute.md), [**username**](username-attribute.md), [**width**](width-attribute.md)
 
-## <a name="parentchild-information"></a>Über-/unterordnungsinformationen
+## <a name="parentchild-information"></a>Informationen zu über- und untergeordneten Daten
 
 
 
-|          |                                                                                                          |
+| Bezeichnung | Wert |
 |----------|----------------------------------------------------------------------------------------------------------|
-| Parent   | [**Zeitplan**](timeline-element.md)                                                                     |
-| Children | zusammen [**gesetzte**](composite-element.md), [**Effekte**](effect-element.md), nach [**Verfolgung**](track-element.md) |
+| Parent   | [**Zeitachse**](timeline-element.md)                                                                     |
+| Children | [**composite**](composite-element.md), [**effect**](effect-element.md), [**track**](track-element.md) |
 
 
 
@@ -39,7 +39,7 @@ Das **Group** -Element definiert eine Gruppe, das Objekt der obersten Ebene in e
 
 ## <a name="remarks"></a>Bemerkungen
 
-Innerhalb eines- `group` Elements wird die Priorität von geschachtelten Ebenen implizit durch die Reihenfolge bestimmt, in der Sie im-Element angezeigt werden. Die erste Ebene hat Priorität 0, und nachfolgende Ebenen haben höhere Prioritätswerte.
+Innerhalb eines Elements wird die Priorität geschachtelter Ebenen implizit durch die Reihenfolge `group` bestimmt, in der sie im Element angezeigt werden. Die erste Ebene hat Priorität 0, und nachfolgende Ebenen haben höhere Prioritätswerte.
 
 ## <a name="examples"></a>Beispiele
 

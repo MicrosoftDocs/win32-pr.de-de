@@ -1,27 +1,27 @@
 ---
-description: Eigenschaften Satz für externen Geräte Transport
+description: Eigenschaftensatz für den Transport externer Geräte
 ms.assetid: 9c80cf59-054f-49b6-9456-ed5e091cbfaf
-title: Eigenschaften Satz für externen Geräte Transport
+title: Eigenschaftensatz für den Transport externer Geräte
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1e77942157b7cf5f75b883e6953f3a115d1fa9f6
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 85e38217af21ea1839d7c9207a4922bcff00d63a
+ms.sourcegitcommit: 63753fcfb0afbbe5ec283fb8316e62c2dc950f66
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104125600"
+ms.lasthandoff: 04/22/2021
+ms.locfileid: "107909218"
 ---
-# <a name="external-device-transport-property-set"></a>Eigenschaften Satz für externen Geräte Transport
+# <a name="external-device-transport-property-set"></a>Eigenschaftensatz für den Transport externer Geräte
 
-Dieser Eigenschaften Satz steuert den Transport von Daten zu und von einem externen Gerät. In den meisten Fällen sollten diese Eigenschaften nicht direkt von Anwendungen verwendet werden. Verwenden Sie stattdessen die [**IAMExtTransport**](/windows/desktop/api/Strmif/nn-strmif-iamexttransport) -Schnittstelle.
+Dieser Eigenschaftensatz steuert den Transport von Daten zu und von einem externen Gerät. In den meisten Fällen sollten Anwendungen diesen Eigenschaftensatz nicht direkt verwenden. Verwenden Sie stattdessen die [**IAMExtTransport-Schnittstelle.**](/windows/desktop/api/Strmif/nn-strmif-iamexttransport)
 
-In der folgenden Tabelle sind die Eigenschaften aufgelistet, die für Benutzermodusanwendungen relevant sind. Eine umfassende Beschreibung dieses Eigenschaften Satzes finden Sie im Microsoft Windows Driver Development Kit-DDK.
+In der folgenden Tabelle sind die Eigenschaften aufgeführt, die für Benutzermodusanwendungen relevant sind. Eine vollständige Beschreibung dieses Eigenschaftensatzes finden Sie im Microsoft Windows Driver Development Kit DDK.
 
 
 
-|                   |                           |
+| Bezeichnung | Wert |
 |-------------------|---------------------------|
-| Eigenschaftensatz-GUID | propseetid- \_ Ext- \_ Transport |
+| Eigenschaftensatz-GUID | PROPSETID \_ EXT \_ TRANSPORT |
 
 
 
@@ -31,8 +31,8 @@ In der folgenden Tabelle sind die Eigenschaften aufgelistet, die für Benutzermo
 
 | Eigenschafts-ID                                                                           | BESCHREIBUNG                                  |
 |---------------------------------------------------------------------------------------|----------------------------------------------|
-| [**ksproperty \_ extxport- \_ Atn- \_ Suche**](ksproperty-extxport-atn-search.md)           | Sucht nach einer absoluten Spur Nummer (ATN). |
-| [**ksproperty \_ extxport- \_ \_ timecodesuche**](ksproperty-extxport-timecode-search.md) | Sucht nach einem Zeit Code.                    |
+| [**KSPROPERTY \_ EXTXPORT \_ ATN \_ SEARCH**](ksproperty-extxport-atn-search.md)           | Sucht nach einer absoluten Tracknummer (ATN). |
+| [**KSPROPERTY \_ EXTXPORT \_ TIMECODE \_ SEARCH**](ksproperty-extxport-timecode-search.md) | Sucht nach einem Zeitcode.                    |
 
 
 

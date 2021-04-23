@@ -1,31 +1,31 @@
 ---
-description: Gibt die maximale Rate zurück, mit der ein Decoder Daten verarbeiten kann. Der Wert dieser Eigenschaft ist die maximale Wiedergabegeschwindigkeit x 10000 des Decoders. Wenn die maximale Vorwärtsgeschwindigkeit beispielsweise 2,0 beträgt, ist der Wert dieser Eigenschaft 20000.
+description: Gibt die maximale Rate zurück, mit der ein Decoder Daten verarbeiten kann. Der Wert dieser Eigenschaft ist die maximale Wiedergabegeschwindigkeit des Decoders x 10000. Wenn die maximale Vorwärtsgeschwindigkeit beispielsweise 2,0 beträgt, ist der Wert dieser Eigenschaft 20000.
 ms.assetid: 66e6885b-7ad7-4912-85e4-ea36855bfde6
-title: AM_RATE_MaxFullDataRate-Eigenschaft (dvdmedia. h)
+title: AM_RATE_MaxFullDataRate-Eigenschaft (Dvdmedia.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 692d3a9acf3ab175d01cea63e970c8fcdad4b0cb
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: c4e3b1ba4d15268ffb8a32c0e808393b85efe55b
+ms.sourcegitcommit: 63753fcfb0afbbe5ec283fb8316e62c2dc950f66
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365686"
+ms.lasthandoff: 04/22/2021
+ms.locfileid: "107910288"
 ---
-# <a name="am_rate_maxfulldatarate-property"></a>\_ \_ Maxfulldatarate-Eigenschaft für Rate
+# <a name="am_rate_maxfulldatarate-property"></a>AM \_ RATE \_ MaxFullDataRate-Eigenschaft
 
-Gibt die maximale Rate zurück, mit der ein Decoder Daten verarbeiten kann. Der Wert dieser Eigenschaft ist die maximale Wiedergabegeschwindigkeit x 10000 des Decoders. Wenn die maximale Vorwärtsgeschwindigkeit beispielsweise 2,0 beträgt, ist der Wert dieser Eigenschaft 20000.
+Gibt die maximale Rate zurück, mit der ein Decoder Daten verarbeiten kann. Der Wert dieser Eigenschaft ist die maximale Wiedergabegeschwindigkeit des Decoders x 10000. Wenn die maximale Vorwärtsgeschwindigkeit beispielsweise 2,0 beträgt, ist der Wert dieser Eigenschaft 20000.
 
-Der Datentyp für diese Eigenschaft ist " **am \_ maxfulldatarate**", der `typedef` für " **Long**" ist.
+Der Datentyp für diese Eigenschaft ist **AM \_ MaxFullDataRate**, bei dem es sich um einen `typedef` für **LONG** handelt.
 
 Diese Eigenschaft ist schreibgeschützt.
 
 
 
-|                   |                                    |
+| Bezeichnung | Wert |
 |-------------------|------------------------------------|
-| Eigenschaftensatz-GUID | AM \_ kspropltid \_      |
-| Eigenschafts-ID       | \_Rate \_ maxfulldatarate          |
-| Datentyp         | **Am \_ Maxfulldatarate** (**Long**) |
+| Eigenschaftensatz-GUID | AM \_ KSPROPSETID \_ TSRateChange      |
+| Eigenschafts-ID       | AM \_ RATE \_ MaxFullDataRate          |
+| Datentyp         | **AM \_ MaxFullDataRate** (**LONG**) |
 
 
 
@@ -37,7 +37,7 @@ Diese Eigenschaft ist schreibgeschützt.
 
 | Anforderung | Wert |
 |-------------------|---------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Dvdmedia. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Dvdmedia.h</dt> </dl> |
 
 
 
@@ -45,7 +45,7 @@ Diese Eigenschaft ist schreibgeschützt.
 
 <dl> <dt>
 
-[**Eigenschaften Satz für Raten Änderung**](rate-change-property-set.md)
+[**Ratenänderungseigenschaftensatz**](rate-change-property-set.md)
 </dt> </dl>
 
  

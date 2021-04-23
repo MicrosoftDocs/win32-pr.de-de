@@ -1,34 +1,34 @@
 ---
-description: MIDI-Parser-Filter
+description: PARSE-Parserfilter
 ms.assetid: a56576ad-f949-48fa-85e0-3e9898d2970d
-title: MIDI-Parser-Filter
+title: PARSE-Parserfilter
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3b741b2c82eda224a24ffee8a56f8977cbb510f3
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 60ce659559852497b8ec55709e77f9510a1deaf2
+ms.sourcegitcommit: 63753fcfb0afbbe5ec283fb8316e62c2dc950f66
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "103957733"
+ms.lasthandoff: 04/22/2021
+ms.locfileid: "107908428"
 ---
-# <a name="midi-parser-filter"></a>MIDI-Parser-Filter
+# <a name="midi-parser-filter"></a>PARSE-Parserfilter
 
-Der MIDI-Parser-Filter liest die in gefundenen Daten in. Mid und. RMI-Dateien. Der Filter akzeptiert einen Stream aus den Quell Filtern der asynchronen [Datei Quelle](file-source--async--filter.md) oder der [URL-Datei](file-source--url--filter.md) und gibt die für die Wiedergabe verwendeten MIDI-Beispiele an den [**MIDI-Renderer**](midi-renderer-filter.md)
+Der PARSER-Filter liest DIE IN-Daten, die in gefunden werden. MID und . RMI-Dateien. Der Filter akzeptiert einen Stream aus den Filtern [asynchrone Dateiquelle](file-source--async--filter.md) oder [URL-Dateiquelle](file-source--url--filter.md) und gibt FÜR-Beispiele für die Wiedergabe an den [**RENDERer VON RENDERER**](midi-renderer-filter.md) aus.
 
 
 
-|                                          |                                                                                                          |
+| Bezeichnung | Wert |
 |------------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Filter Schnittstellen                        | [**Iammediacontent**](/previous-versions/windows/desktop/api/Qnetwork/nn-qnetwork-iammediacontent), [ **ibasefilter**](/windows/desktop/api/Strmif/nn-strmif-ibasefilter)                           |
-| Eingabe-PIN-Medientypen                    | MediaType \_ Stream, mediasubtype \_ MIDI                                                                    |
-| PIN-Eingabeschnittstellen                     | [**IPin**](/windows/desktop/api/Strmif/nn-strmif-ipin), [ **iqualitycontrol**](/windows/desktop/api/Strmif/nn-strmif-iqualitycontrol)                                         |
-| Ausgabe-PIN-Medientypen                   | MediaType \_ MIDI, mediasubtype \_ null                                                                      |
-| PIN-Schnittstellen                    | [**Imediaseeking**](/windows/desktop/api/Strmif/nn-strmif-imediaseeking), [**iqualitycontrol**](/windows/desktop/api/Strmif/nn-strmif-iqualitycontrol), [**IPin**](/windows/desktop/api/Strmif/nn-strmif-ipin) |
-| CLSID Filtern                             | CLSID- \_ midiparser                                                                                        |
-| CLSID der Eigenschaften Seite                      | Keine Eigenschaften Seite                                                                                         |
+| Filterschnittstellen                        | [**IAMMediaContent,**](/previous-versions/windows/desktop/api/Qnetwork/nn-qnetwork-iammediacontent) [ **IBaseFilter**](/windows/desktop/api/Strmif/nn-strmif-ibasefilter)                           |
+| Eingabe-Stecknadelmedientypen                    | MEDIATYPE \_ Stream, MEDIASUBTYPE \_ Streams                                                                    |
+| Eingabe-Pin-Schnittstellen                     | [**IPin**](/windows/desktop/api/Strmif/nn-strmif-ipin), [ **IQualityControl**](/windows/desktop/api/Strmif/nn-strmif-iqualitycontrol)                                         |
+| Medientypen des Ausgabepins                   | \_MEDIATYPE- Und MEDIASUBTYPE \_ NULL-Werte                                                                      |
+| Ausgabe-Pin-Schnittstellen                    | [**IMediaSeeking,**](/windows/desktop/api/Strmif/nn-strmif-imediaseeking) [**IQualityControl,**](/windows/desktop/api/Strmif/nn-strmif-iqualitycontrol) [**IPin**](/windows/desktop/api/Strmif/nn-strmif-ipin) |
+| Filtern von CLSID                             | \_CLSID-DATEIPARSER                                                                                        |
+| CLSID der Eigenschaftenseite                      | Keine Eigenschaftenseite                                                                                         |
 | Ausführbare Datei                               | quartz.dll                                                                                               |
-| [Verdienst](merit.md)                       | nicht \_ wahrscheinlich                                                                                          |
-| [Filter Kategorie](filter-categories.md) | CLSID \_ legacyamfiltercategory                                                                            |
+| [Verdienst](merit.md)                       | WAHRSCHEINLICHKEIT \_ UNWAHRSCHEINLICH                                                                                          |
+| [Filterkategorie](filter-categories.md) | CLSID \_ LegacyAmFilterCategory                                                                            |
 
 
 
@@ -36,7 +36,7 @@ Der MIDI-Parser-Filter liest die in gefundenen Daten in. Mid und. RMI-Dateien. D
 
 ## <a name="remarks"></a>Bemerkungen
 
-Weitere Informationen finden Sie unter [**MIDI-Renderer**](midi-renderer-filter.md).
+Weitere Informationen finden Sie unter [**RENDERING-Renderer**](midi-renderer-filter.md).
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

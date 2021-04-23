@@ -1,31 +1,31 @@
 ---
 description: Gilt für Windows Vista und höher.
 ms.assetid: 3e342219-341e-49a2-9f8f-4188dd7bf719
-title: AM_RATE_ResetOnTimeDisc-Eigenschaft (dvdmedia. h)
+title: AM_RATE_ResetOnTimeDisc-Eigenschaft (Dvdmedia.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e5c26763d32513652a08d38b52bf6fb745d3d321
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: d465329c2c8de1a66f04a830d183b8cba88c0728
+ms.sourcegitcommit: 63753fcfb0afbbe5ec283fb8316e62c2dc950f66
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371651"
+ms.lasthandoff: 04/22/2021
+ms.locfileid: "107910248"
 ---
-# <a name="am_rate_resetontimedisc-property"></a>\_Ate \_ rementontimedisc (Eigenschaft)
+# <a name="am_rate_resetontimedisc-property"></a>AM \_ RATE \_ ResetOnTimeDisc-Eigenschaft
 
 Gilt für Windows Vista und höher.
 
-Diese Eigenschaft fragt ab, ob der Decoder die Ausgabezeit Stempel erneut mit den Eingabe Zeitstempeln synchronisiert, wenn der Decoder ein Beispiel mit dem Diskontinuität-Flag empfängt.
+Diese Eigenschaft fragt ab, ob der Decoder die Ausgabezeitstempel erneut mit den Eingabezeitstempeln synchronisiert, wenn der Decoder ein Beispiel mit dem Diskontinuitätsflag empfängt.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
 
 
-|                   |                               |
+| Bezeichnung | Wert |
 |-------------------|-------------------------------|
-| Eigenschaftensatz-GUID | AM \_ kspropltid \_ |
-| Eigenschafts-ID       | \_Rate \_ rementimedisc     |
-| Datentyp         | **DWORD**                     |
+| Eigenschaftensatz-GUID | AM \_ KSPROPSETID \_ TSRateChange |
+| Eigenschafts-ID       | AM \_ RATE \_ ResetOnTimeDisc     |
+| Datentyp         | **Dword**                     |
 
 
 
@@ -33,11 +33,11 @@ Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Diese Eigenschaft unterstützt Smooth-Rate-Änderungen. Wenn der Wert dieser Eigenschaft " **true** " ist und der Decoder ein Eingabe Beispiel mit dem "am \_ Sample \_ timediscontinuity"-Flag erhält, sollte der decodierte Frame denselben Zeitstempel wie der Eingabe Rahmen aufweisen.
+Diese Eigenschaft unterstützt Smooth Rate-Änderungen. Wenn der Wert dieser Eigenschaft **TRUE** ist und der Decoder ein Eingabebeispiel mit dem \_ AM SAMPLE \_ TIMEDISCONTINUITY-Flag empfängt, sollte der decodierte Frame den gleichen Zeitstempel wie der Eingaberahmen aufweisen.
 
-Rufen Sie zum Abrufen des am \_ Sample Sample \_ timediscontinuity-Flags [**IMediaSample2:: GetProperties**](/windows/desktop/api/Strmif/nf-strmif-imediasample2-getproperties) für das Beispiel auf. Das-Flag wird im **dwsampleflags** -Member der [**am \_ SAMPLE2 \_ Properties**](/windows/win32/api/strmif/ns-strmif-am_sample2_properties) -Struktur festgelegt.
+Um das AM \_ SAMPLE \_ TIMEDISCONTINUITY-Flag abzurufen, rufen [**Sie IMediaSample2::GetProperties**](/windows/desktop/api/Strmif/nf-strmif-imediasample2-getproperties) für das Beispiel auf. Das Flag wird im **dwSampleFlags-Member** der [**AM \_ SAMPLE2 \_ PROPERTIES-Struktur**](/windows/win32/api/strmif/ns-strmif-am_sample2_properties) festgelegt.
 
-Weitere Informationen finden Sie unter [Verbesserungen der DVD-Wiedergabe in Windows Vista](dvd-playback-enhancements-in-windows-vista.md).
+Weitere Informationen finden Sie unter [DVD Playback Enhancements in Windows Vista](dvd-playback-enhancements-in-windows-vista.md).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -45,7 +45,7 @@ Weitere Informationen finden Sie unter [Verbesserungen der DVD-Wiedergabe in Win
 
 | Anforderung | Wert |
 |-------------------|---------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Dvdmedia. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Dvdmedia.h</dt> </dl> |
 
 
 
@@ -53,7 +53,7 @@ Weitere Informationen finden Sie unter [Verbesserungen der DVD-Wiedergabe in Win
 
 <dl> <dt>
 
-[**Eigenschaften Satz für Raten Änderung**](rate-change-property-set.md)
+[**Ratenänderungseigenschaftensatz**](rate-change-property-set.md)
 </dt> </dl>
 
  

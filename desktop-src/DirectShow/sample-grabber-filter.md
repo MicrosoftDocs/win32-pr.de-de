@@ -1,7 +1,7 @@
 ---
-description: Der Sample Grabber-Filter bietet eine Möglichkeit zum Abrufen von Beispielen beim Durchlaufen des Filter Diagramms.
+description: Der Filter Sample Grabber bietet eine Möglichkeit zum Abrufen von Stichproben, wenn sie durch das Filterdiagramm übergeben werden.
 ms.assetid: 3c2fb52f-2b44-449a-ae96-3cf35a0a401d
-title: Beispiel für einen Grabber Filter (qedit. h)
+title: Beispielgrabfilter (Qedit.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,38 +13,38 @@ api_type:
 - HeaderDef
 api_location:
 - Qedit.h
-ms.openlocfilehash: 18cedd24b0ddcb8f71373641905228f8252ae4ef
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: f0b0ddffe2bc769b7c2371ef93091d8c1daf379c
+ms.sourcegitcommit: 63753fcfb0afbbe5ec283fb8316e62c2dc950f66
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106368303"
+ms.lasthandoff: 04/22/2021
+ms.locfileid: "107909668"
 ---
-# <a name="sample-grabber-filter"></a>Beispiel für einen Grabber Filter
+# <a name="sample-grabber-filter"></a>Beispielgrabfilter
 
 > [!Note]  
-> \[Veraltet. Diese API kann aus zukünftigen Versionen von Windows entfernt werden.\]
+> \[Veraltet. Diese API wird möglicherweise aus zukünftigen Versionen von Windows entfernt.\]
 
  
 
-Der Sample Grabber-Filter bietet eine Möglichkeit zum Abrufen von Beispielen beim Durchlaufen des Filter Diagramms. Es handelt sich um einen Transformations Filter mit einer Eingabe-und einer Ausgabepin. Alle Beispiele bleiben unverändert, sodass Sie Sie in ein Filter Diagramm einfügen können, ohne den Datenstream zu ändern. Die Anwendung kann dann einzelne Beispiele aus dem Filter abrufen, indem Sie Methoden für die [**isamplegrabber**](isamplegrabber.md) -Schnittstelle aufrufen.
+Der Filter Sample Grabber bietet eine Möglichkeit zum Abrufen von Stichproben, wenn sie durch das Filterdiagramm übergeben werden. Es handelt sich um einen Transformationsfilter mit einem Eingabepin und einem Ausgabepin. Alle Stichproben werden unverändert nachgelagert übergibt, sodass Sie sie in ein Filterdiagramm einfügen können, ohne den Datenstrom zu ändern. Ihre Anwendung kann dann einzelne Beispiele aus dem Filter abrufen, indem sie Methoden auf der [**ISampleGrabber-Schnittstelle**](isamplegrabber.md) aufruft.
 
-Wenn Sie Beispiele abrufen möchten, ohne die Daten zu rendern, verbinden Sie den Sample Grabber Filter mit dem Filter [**null-Renderer**](null-renderer-filter.md) .
+Wenn Sie Beispiele abrufen möchten, ohne die Daten zu rendern, verbinden Sie den Sample Grabber-Filter mit dem [**Filter NULL-Renderer.**](null-renderer-filter.md)
 
 
 
-|                                          |                                                                                                                                                    |
+| Bezeichnung | Wert |
 |------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|
-| Filter Schnittstellen                        | [**Ibasefilter**](/windows/desktop/api/Strmif/nn-strmif-ibasefilter), [ **isamplegrabber**](isamplegrabber.md)                                                                       |
-| Eingabe-PIN-Medientypen                    | Ein beliebiger Medientyp.                                                                                                                                    |
-| PIN-Eingabeschnittstellen                     | [**IMemInputPin**](/windows/desktop/api/Strmif/nn-strmif-imeminputpin), [**IPin**](/windows/desktop/api/Strmif/nn-strmif-ipin), [**iqualitycontrol**](/windows/desktop/api/Strmif/nn-strmif-iqualitycontrol)                                             |
-| Ausgabe-PIN-Medientypen                   | Ein beliebiger Medientyp. Entspricht dem Eingabe Medientyp.                                                                                                          |
-| PIN-Schnittstellen                    | [**Imediaposition**](/windows/desktop/api/Control/nn-control-imediaposition), [**imediaseeking**](/windows/desktop/api/Strmif/nn-strmif-imediaseeking), [**IPin**](/windows/desktop/api/Strmif/nn-strmif-ipin), [**iqualitycontrol**](/windows/desktop/api/Strmif/nn-strmif-iqualitycontrol) |
-| CLSID Filtern                             | CLSID- \_ samplegrabber                                                                                                                               |
-| CLSID der Eigenschaften Seite                      | Keine Eigenschaften Seite.                                                                                                                                  |
+| Filtern von Schnittstellen                        | [**IBaseFilter**](/windows/desktop/api/Strmif/nn-strmif-ibasefilter), [ **ISampleGrabber**](isamplegrabber.md)                                                                       |
+| Eingabepin-Medientypen                    | Ein beliebiger Medientyp.                                                                                                                                    |
+| Eingabepinschnittstellen                     | [**IMemInputPin**](/windows/desktop/api/Strmif/nn-strmif-imeminputpin), [**IPin**](/windows/desktop/api/Strmif/nn-strmif-ipin), [**IQualityControl**](/windows/desktop/api/Strmif/nn-strmif-iqualitycontrol)                                             |
+| Ausgabepin-Medientypen                   | Ein beliebiger Medientyp. Entspricht dem Eingabemedientyp.                                                                                                          |
+| Schnittstellen für Ausgabepins                    | [**IMediaPosition,**](/windows/desktop/api/Control/nn-control-imediaposition) [**IMediaSeeking,**](/windows/desktop/api/Strmif/nn-strmif-imediaseeking) [**IPin,**](/windows/desktop/api/Strmif/nn-strmif-ipin) [**IQualityControl**](/windows/desktop/api/Strmif/nn-strmif-iqualitycontrol) |
+| Filtern von CLSID                             | CLSID \_ SampleGrabber                                                                                                                               |
+| CLSID der Eigenschaftenseite                      | Keine Eigenschaftenseite.                                                                                                                                  |
 | Ausführbare Datei                               | Qedit.dll                                                                                                                                          |
-| [Verdienst](merit.md)                       | das Verdienst wird \_ \_ nicht \_ verwendet.                                                                                                                                |
-| [Filter Kategorie](filter-categories.md) | CLSID \_ legacyamfiltercategory                                                                                                                      |
+| [Verdienst](merit.md)                       | NOT USE (NICHT \_ \_ \_ VERWENDEN)                                                                                                                                |
+| [Filterkategorie](filter-categories.md) | CLSID \_ LegacyAmFilterCategory                                                                                                                      |
 
 
 
@@ -52,17 +52,17 @@ Wenn Sie Beispiele abrufen möchten, ohne die Daten zu rendern, verbinden Sie de
 
 ## <a name="remarks"></a>Bemerkungen
 
-Wenn Sie diesen Filter verwenden möchten, fügen Sie ihn dem Filter Diagramm hinzu, und nennen Sie [**isamplegrabber:: setmediatype**](isamplegrabber-setmediatype.md) mit dem gewünschten Medientyp. Diese Methode gibt den Medientyp für die Eingabe-und Ausgabe-PIN-Verbindungen des Filters an. Verbinden Sie den Filter dann mit anderen Filtern im Diagramm.
+Um diesen Filter zu verwenden, fügen Sie ihn dem Filterdiagramm hinzu, und rufen [**Sie ISampleGrabber::SetMediaType**](isamplegrabber-setmediatype.md) mit dem gewünschten Medientyp auf. Diese Methode gibt den Medientyp für die Ein- und Ausgabe-PIN-Verbindungen des Filters an. Verbinden Sie den Filter dann mit anderen Filtern im Diagramm.
 
-Wenn Sie [**isamplegrabber:: setbuffersamples**](isamplegrabber-setbuffersamples.md) mit dem Wert **true** aufrufen, puffert der Filter jedes empfangene Beispiel, bevor es nach unten übergeben wird. Rufen Sie die [**isamplegrabber:: getcurrentbuffer**](isamplegrabber-getcurrentbuffer.md) -Methode auf, um den aktuellen Inhalt des Puffers abzurufen. Alternativ können Sie [**isamplegrabber:: SetCallback**](isamplegrabber-setcallback.md) aufrufen, damit der Filter immer dann eine Rückruffunktion aufruft, wenn er ein Beispiel empfängt.
+Wenn Sie [**ISampleGrabber::SetBufferSamples**](isamplegrabber-setbuffersamples.md) mit dem Wert **TRUE** aufrufen, puffert der Filter jedes empfangene Beispiel, bevor er es nachgeschaltet übergibt. Rufen Sie die [**ISampleGrabber::GetCurrentBuffer-Methode**](isamplegrabber-getcurrentbuffer.md) auf, um den aktuellen Inhalt des Puffers abzurufen. Alternativ können Sie [**ISampleGrabber::SetCallback**](isamplegrabber-setcallback.md) aufrufen, damit der Filter immer dann eine Rückruffunktion aufruft, wenn er ein Beispiel empfängt.
 
-Für den Filter gelten die folgenden Einschränkungen für Videoformate:
+Der Filter weist die folgenden Einschränkungen für Videoformate auf:
 
--   Video Typen mit der Top-Down-Ausrichtung (negative **biheight**) werden nicht unterstützt.
--   Die [**VIDEOINFOHEADER2**](/previous-versions/windows/desktop/api/dvdmedia/ns-dvdmedia-videoinfoheader2) -Format Struktur (formatType entspricht **Format \_ VideoInfo2**) wird nicht unterstützt.
--   Alle Videotypen, bei denen der Surface-Stride nicht mit der Video Breite identisch ist, werden abgelehnt.
+-   Videotypen mit top-down-Ausrichtung (negative **biHeight)** werden nicht unterstützt.
+-   Die [**Formatstruktur VIDEOINFOHEADER2**](/previous-versions/windows/desktop/api/dvdmedia/ns-dvdmedia-videoinfoheader2) wird nicht unterstützt (Formattyp entspricht **FORMAT \_ VideoInfo2**).
+-   Sie lehnt alle Videotypen ab, bei denen der Oberflächenschritt nicht mit der Videobreite übereinstimmt.
 
-Folglich stellt der Sample Grabber für einige Video Typen keine Verbindung mit dem Video Mischungs-Renderer (VMR) her.
+Daher stellt der Sample Grabber für einige Videotypen keine Verbindung mit dem Video Mixing Renderer (VMR) herstellen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -70,7 +70,7 @@ Folglich stellt der Sample Grabber für einige Video Typen keine Verbindung mit 
 
 | Anforderung | Wert |
 |-------------------|------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>"Qedit. h"</dt> </dl> |
+| Header<br/> | <dl> <dt>Qedit.h</dt> </dl> |
 
 
 
@@ -78,10 +78,10 @@ Folglich stellt der Sample Grabber für einige Video Typen keine Verbindung mit 
 
 <dl> <dt>
 
-[DirectShow-Bearbeitungs Dienste-Objekte](directshow-editing-services-objects.md)
+[DirectShow Editing Services Objects](directshow-editing-services-objects.md)
 </dt> <dt>
 
-[Verwenden der Beispiel-Grabber](using-the-sample-grabber.md)
+[Verwenden des Beispielgrabbers](using-the-sample-grabber.md)
 </dt> </dl>
 
  

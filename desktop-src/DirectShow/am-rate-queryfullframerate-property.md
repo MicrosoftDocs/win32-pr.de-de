@@ -1,29 +1,29 @@
 ---
-description: Diese Eigenschaft fragt den Decoder nach der maximalen voll Bild Rate ab, die der Decoder unterstützt. Der Datentyp für diese Eigenschaft ist eine "am \_ queryrate"-Struktur.
+description: Diese Eigenschaft fragt den Decoder nach der maximalen Vollbildrate ab, die der Decoder unterstützt. Der Datentyp für diese Eigenschaft ist eine AM \_ QueryRate-Struktur.
 ms.assetid: 98808ed4-6d34-437b-9729-9cc805bc81f0
-title: AM_RATE_QueryFullFrameRate-Eigenschaft (dvdmedia. h)
+title: AM_RATE_QueryFullFrameRate-Eigenschaft (Dvdmedia.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ab2c99564caa09253198b101a3e2467ec88c7e34
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 70bc096e5b68737ca877a037571223d673284dab
+ms.sourcegitcommit: 63753fcfb0afbbe5ec283fb8316e62c2dc950f66
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371427"
+ms.lasthandoff: 04/22/2021
+ms.locfileid: "107910278"
 ---
-# <a name="am_rate_queryfullframerate-property"></a>Der \_ Rate der \_ queryfullframerate-Eigenschaft
+# <a name="am_rate_queryfullframerate-property"></a>AM \_ RATE \_ QueryFullFrameRate-Eigenschaft
 
-Diese Eigenschaft fragt den Decoder nach der maximalen voll Bild Rate ab, die der Decoder unterstützt. Der Datentyp für diese Eigenschaft ist eine " **am \_ queryrate** "-Struktur.
+Diese Eigenschaft fragt den Decoder nach der maximalen Vollbildrate ab, die der Decoder unterstützt. Der Datentyp für diese Eigenschaft ist eine **AM \_ QueryRate-Struktur.**
 
-Diese Eigenschaft ist für die Version 1,1 dieser Eigenschaften Gruppe definiert. Weitere Informationen finden Sie unter [**\_ Rate \_ userateversion**](am-rate-userateversion-property.md).
+Diese Eigenschaft ist für Version 1.1 dieses Eigenschaftensatzes definiert. siehe [**AM \_ RATE \_ UseRateVersion**](am-rate-userateversion-property.md).
 
 
 
-|                   |                                       |
+| Bezeichnung | Wert |
 |-------------------|---------------------------------------|
-| Eigenschaftensatz-GUID | AM \_ kspropltid \_         |
-| Eigenschafts-ID       | Der \_ Rate der \_ queryfullframerate-Eigenschaft |
-| Datentyp         | [**AM- \_ querytrate**](/previous-versions/windows/desktop/api/Dvdmedia/ns-dvdmedia-am_queryrate) |
+| Eigenschaftensatz-GUID | AM \_ KSPROPSETID \_ TSRateChange         |
+| Eigenschafts-ID       | AM \_ RATE \_ QueryFullFrameRate-Eigenschaft |
+| Datentyp         | [**AM \_ QueryRate**](/previous-versions/windows/desktop/api/Dvdmedia/ns-dvdmedia-am_queryrate) |
 
 
 
@@ -31,7 +31,7 @@ Diese Eigenschaft ist für die Version 1,1 dieser Eigenschaften Gruppe definiert
 
 ## <a name="remarks"></a>Bemerkungen
 
-Wenn die Wiedergabe Rate die maximale Rate des Decoders überschreitet, sendet der Quell Filter Gruppen von kontinuierlichen Samplings, die durch Diskontinuitäten getrennt sind. Die Zeitstempel überspringen die Diskontinuitäten. Der Quell Filter kann dies auch dann tun, wenn die Wiedergabe Rate innerhalb der maximalen Rate des Decoders liegt, da es möglicherweise andere Faktoren gibt, wie z. b. Datenträger-e/a, die die vollständige Wiedergabe Rate einschränken.
+Wenn die Wiedergaberate die maximale Rate des Decoders überschreitet, sendet der Quellfilter Gruppen kontinuierlicher Stichproben, die durch Diskontinuitäten getrennt sind. Die Zeitstempel springen über die Diskontinuitäten. Der Quellfilter kann dies auch dann tun, wenn die Wiedergaberate innerhalb der maximalen Rate des Decoders liegt, da es möglicherweise andere Faktoren gibt, z. B. Datenträger-E/A, die die vollständige Wiedergaberate einschränken.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -39,7 +39,7 @@ Wenn die Wiedergabe Rate die maximale Rate des Decoders überschreitet, sendet d
 
 | Anforderung | Wert |
 |-------------------|---------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Dvdmedia. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Dvdmedia.h</dt> </dl> |
 
 
 
@@ -47,7 +47,7 @@ Wenn die Wiedergabe Rate die maximale Rate des Decoders überschreitet, sendet d
 
 <dl> <dt>
 
-[**Eigenschaften Satz für Raten Änderung**](rate-change-property-set.md)
+[**Ratenänderungseigenschaftensatz**](rate-change-property-set.md)
 </dt> </dl>
 
  

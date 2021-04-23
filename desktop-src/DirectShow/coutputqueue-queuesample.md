@@ -1,7 +1,7 @@
 ---
-description: Die Queue Sample-Methode fügt ein Beispiel in die Warteschlange ein.
+description: Die QueueSample-Methode reiht ein Beispiel in die Warteschlange ein.
 ms.assetid: f34c0689-5afb-4941-bc3a-e4765fbbe525
-title: Coutputqueue. Queue Sample-Methode (outputq. h)
+title: COutputQueue.QueueSample-Methode (Outputq.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 45b1295ea1a9ded145356e6b0495b7b873dff200
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 8efe0ec3b2326d1af0d0075770bdc6443ab9dcad
+ms.sourcegitcommit: 63753fcfb0afbbe5ec283fb8316e62c2dc950f66
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106352835"
+ms.lasthandoff: 04/22/2021
+ms.locfileid: "107910068"
 ---
-# <a name="coutputqueuequeuesample-method"></a>Coutputqueue. queuesample-Methode
+# <a name="coutputqueuequeuesample-method"></a>COutputQueue.QueueSample-Methode
 
-Die- `QueueSample` Methode fügt ein Beispiel in die Warteschlange
+Die `QueueSample` -Methode reiht ein Beispiel in die Warteschlange ein.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,10 +42,10 @@ void QueueSample(
 
 <dl> <dt>
 
-*psample* 
+*pSample* 
 </dt> <dd>
 
-Zeiger auf die [**imediasample**](/windows/desktop/api/Strmif/nn-strmif-imediasample) -Schnittstelle des Beispiels.
+Zeiger auf die [**IMediaSample-Schnittstelle des**](/windows/desktop/api/Strmif/nn-strmif-imediasample) Beispiels.
 
 </dd> </dl>
 
@@ -55,25 +55,25 @@ Diese Methode gibt keinen Wert zurück.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Diese Methode fügt dem Ende der Warteschlange ein Beispiel hinzu. Halten Sie den kritischen Abschnitt vor dem Aufruf dieser Methode ein, und rufen Sie ihn nur auf, wenn das Objekt einen Thread zum Übermitteln von Beispielen verwendet. Um zu ermitteln, ob das Objekt einen Thread verwendet, nennen Sie die [**coutputqueue:: IsQueued**](coutputqueue-isqueued.md) -Methode.
+Diese Methode fügt dem Ende der Warteschlange ein Beispiel hinzu. Halten Sie den kritischen Abschnitt vor dem Aufrufen dieser Methode, und rufen Sie ihn nur auf, wenn das -Objekt einen Thread verwendet, um Beispiele zu liefern. Um zu bestimmen, ob das Objekt einen Thread verwendet, rufen Sie die [**COutputQueue::IsQueued-Methode**](coutputqueue-isqueued.md) auf.
 
-Diese Methode kann auch verwendet werden, um Steuerungs Meldungen in der Warteschlange zu platzieren. Eine Kontroll Meldung ist eine definierte Konstante (in einen langen \_ ptr-Typ umgewandelt), die den Thread anweist, eine Aktion auszuführen. Die **coutputqueue** -Klasse definiert die in der folgenden Tabelle gezeigten Steuer Meldungen.
+Diese Methode kann auch verwendet werden, um Steuernachrichten in die Warteschlange zu stellen. Eine Steuermeldung ist eine definierte Konstante (in einen LONG PTR-Typ wandelt), die den Thread anweisen, \_ eine Aktion durchzuführen. Die **COutputQueue-Klasse** definiert die in der folgenden Tabelle gezeigten Steuerungsmeldungen.
 
 
 
-|               |                                        |
+| Bezeichnung | Wert |
 |---------------|----------------------------------------|
 | `Message`       | Aktion                                 |
-| EOS- \_ Paket   | Übermitteln Sie eine Benachrichtigung zum Ende des Datenstroms. |
-| neues \_ Segment  | Übermitteln Sie ein neues Segment.                 |
-| Paket zurücksetzen \_ | Setzt den Status der Warteschlange zurück.          |
-| \_Paket senden  | Senden eines partiellen Batches von Beispielen.       |
+| PAKET VOM \_ PAKET "EOS"   | Stellen Sie eine Benachrichtigung über das Ende des Datenstroms zu. |
+| NEUES \_ SEGMENT  | Geben Sie ein neues Segment an.                 |
+| PAKET \_ ZURÜCKSETZEN | Setzen Sie den Status der Warteschlange zurück.          |
+| PAKET \_ SENDEN  | Senden Sie einen Teilbatch von Beispielen.       |
 
 
 
  
 
-Dabei handelt es sich um eine geschützte Methode, die von der **coutputqueue** -Klasse intern verwendet wird.
+Dies ist eine geschützte Methode, die von der **COutputQueue-Klasse** intern verwendet wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -81,8 +81,8 @@ Dabei handelt es sich um eine geschützte Methode, die von der **coutputqueue** 
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Outputq. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Outputq.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -90,7 +90,7 @@ Dabei handelt es sich um eine geschützte Methode, die von der **coutputqueue** 
 
 <dl> <dt>
 
-[**Coutputqueue-Klasse**](coutputqueue.md)
+[**COutputQueue-Klasse**](coutputqueue.md)
 </dt> </dl>
 
  

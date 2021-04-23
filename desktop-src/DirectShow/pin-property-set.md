@@ -1,25 +1,25 @@
 ---
-description: PIN-Eigenschaften Satz
+description: Pin-Eigenschaftssatz
 ms.assetid: 0c01bd51-353d-4f48-b33c-796f740915e2
-title: PIN-Eigenschaften Satz
+title: Pin-Eigenschaftssatz
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7bc2d3ed55d7fed70d37a92427d1288ed58aef65
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: e53955ba1f075094c4fb2f6324ed143ca54f72c2
+ms.sourcegitcommit: 63753fcfb0afbbe5ec283fb8316e62c2dc950f66
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104392505"
+ms.lasthandoff: 04/22/2021
+ms.locfileid: "107909618"
 ---
-# <a name="pin-property-set"></a>PIN-Eigenschaften Satz
+# <a name="pin-property-set"></a>Pin-Eigenschaftssatz
 
-Der PIN-Eigenschaften Satz gibt die PIN-Kategorie für eine PIN in einem Filter zurück. Die Kategorie wird vom Filter festgelegt, wenn die PIN erstellt wird. die Kategorie gibt an, welche Art von Daten die PIN übermittelt oder von dieser Pin empfangen wird.
+Der Pin-Eigenschaftensatz gibt die Pinkategorie für eine Stecknadel in einem Filter zurück. Die Kategorie wird vom Filter festgelegt, wenn er die Stecknadel erstellt. Die Kategorie gibt an, welche Art von Daten der Pin von diesem Pin übermittelt oder empfängt.
 
 
 
-|                   |                      |
+| Bezeichnung | Wert |
 |-------------------|----------------------|
-| Eigenschaftensatz-GUID | **Ampropeltid- \_ PIN** |
+| Eigenschaftensatz-GUID | **AMPROPSETID \_ Pin** |
 
 
 
@@ -29,31 +29,31 @@ Der PIN-Eigenschaften Satz gibt die PIN-Kategorie für eine PIN in einem Filter 
 
 | Eigenschafts-ID                   | BESCHREIBUNG                      |
 |-------------------------------|----------------------------------|
-| **amproperty- \_ Pin- \_ Kategorie** | Gibt die Kategorie einer PIN an. |
+| **\_AMPROPERTY-PIN-KATEGORIE \_** | Gibt die Kategorie eines Stecknadels an. |
 
 
 
  
 
-DirectShow definiert die folgenden Pin-Kategorien in der Header Datei "UUIDs. h".
+DirectShow definiert die folgenden Pinkategorien in der Headerdatei "Uuids.h".
 
 
 
 | Kategorie-GUID                     | BESCHREIBUNG                                                                                                                                                                                                                                                                                                             |
 |-----------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **PIN- \_ Kategorie \_ Analog gvideoin**  | Eingabepin des Erfassungs Filters, der die Analogie annimmt und Sie standardisiert.                                                                                                                                                                                                                                                     |
-| **Erfassung der PIN- \_ Kategorie \_**        | PIN erfassen.                                                                                                                                                                                                                                                                                                            |
-| **PIN- \_ Kategorie \_ CC**             | PIN, die Untertitel Daten aus Zeile 21 bereitstellt.                                                                                                                                                                                                                                                                      |
-| **PIN- \_ Kategorie \_ EDS**            | PIN, die erweiterte Data Services bereitstellt (Zeile 21, sogar Felder).                                                                                                                                                                                                                                                            |
-| **anheften der \_ Kategorie \_**          | PIN, die Nordamerika-Videotext-Standard Daten bereitstellt.                                                                                                                                                                                                                                                                   |
-| **\_Kategorie \_ Vorschau anheften**        | Vorschau der PIN.                                                                                                                                                                                                                                                                                                            |
-| **PIN- \_ Kategorie \_ immer noch**          | PIN, die ein Bild enthält. Die Erfassungs-PIN des Filters muss verbunden sein, bevor die PIN mit dem Bild "immer noch" verbunden ist.                                                                                                                                                                                                    |
-| **Kategorieinformationen für die PIN \_ \_**       | PIN, die Teletext bereitstellt (eine Untertitel Variante).                                                                                                                                                                                                                                                                   |
-| **\_ \_ Zeit Leitzahl der PIN-Kategorie**       | PIN, die Zeit Code Daten bereitstellt.                                                                                                                                                                                                                                                                                            |
-| **PIN- \_ Kategorie \_ VBI**            | Pin zur Bereitstellung vertikaler blankinginterval-Daten.                                                                                                                                                                                                                                                                          |
-| **PIN- \_ Kategorie \_ Videoport**      | Die Video Ausgabe-PIN, die mit der Eingabe-PIN NULL auf dem [Überlagerungs Mixer](overlay-mixer-filter.md)verbunden werden soll                                                                                                                                                                                                                    |
-| **PIN- \_ Kategorie \_ Videoport \_ VBI** | Anheften an den [VBI Surface Allocator](vbi-surface-allocator.md), den VBI Surface Allocator-Filter, der benötigt wird, um den korrekten Videospeicher für Dinge wie Untertitel Überschriften in Szenarios zuzuordnen, in denen ein Videoport verwendet wird. Dieser Filter wird von PCI-, IEEE 1394-und USB-Szenarien nicht verwendet. |
-| **Pinname \_ Video \_ CC \_ Capture**   | Hardware Aufteilung mit Untertitel                                                                                                                                                                                                                                                                                  |
+| **PINKATEGORIE \_ \_ ANALOGVIDEOIN**  | Eingabepin des Erfassungsfilters, der analog verwendet und digitalisiert.                                                                                                                                                                                                                                                     |
+| **AUFNAHME DER \_ \_ PINKATEGORIE**        | Aufnahmepin.                                                                                                                                                                                                                                                                                                            |
+| **PINKATEGORIE \_ \_ CC**             | Heften Sie die Untertiteldaten aus Zeile 21 an.                                                                                                                                                                                                                                                                      |
+| **\_EDS DER \_ PIN-KATEGORIE**            | Pin für erweiterte Data Services (Zeile 21, sogar Felder).                                                                                                                                                                                                                                                            |
+| **\_ \_ PIN-KATEGORIE -HEFTE**          | Heften Sie die Daten des Us-amerikanischen Videotext-Standards an.                                                                                                                                                                                                                                                                   |
+| **\_VORSCHAU DER PIN-KATEGORIE \_**        | Vorschau-Stecknadel.                                                                                                                                                                                                                                                                                                            |
+| **PIN \_ CATEGORY \_ STILL**          | Stecknadel, die ein Standbild bereitstellt. Der Erfassungspin des Filters muss verbunden sein, bevor der Pin für das Standbild verbunden ist.                                                                                                                                                                                                    |
+| **PIN \_ CATEGORY \_ TELETEXT**       | Anheften der Bereitstellung von Teletext (eine Untertitelvariante).                                                                                                                                                                                                                                                                   |
+| **PIN \_ CATEGORY \_ TIMECODE**       | Anheften der Bereitstellung von Zeitcodedaten.                                                                                                                                                                                                                                                                                            |
+| **PIN \_ CATEGORY \_ VBI**            | Stecknadel, die Daten zum vertikalen Leerungsintervall bereitstellt.                                                                                                                                                                                                                                                                          |
+| **PIN \_ CATEGORY \_ VIDEOPORT**      | Videoausgabepin, der mit dem Eingabepin 0 (null) auf dem [Overlay-Mixer](overlay-mixer-filter.md)verbunden werden soll.                                                                                                                                                                                                                    |
+| **PIN \_ CATEGORY \_ VIDEOPORT \_ VBI** | Stecknadel für die Verbindung mit der [VBI-Oberflächenbelegung](vbi-surface-allocator.md), dem VBI-Oberflächenbelegungsfilter, der benötigt wird, um den richtigen Videospeicher für Dinge wie Untertitelüberlagerungen in Szenarien zuzuweisen, in denen ein Videoport verwendet wird. PCI-, IEEE 1394- und USB-Szenarien verwenden diesen Filter nicht. |
+| **PINNAME \_ VIDEO \_ CC \_ CAPTURE**   | Hardwareslicing-Pin für Untertitel                                                                                                                                                                                                                                                                                  |
 
 
 
@@ -63,7 +63,7 @@ Diese Eigenschaft ist schreibgeschützt.
 
 ### <a name="example-code"></a>Beispielcode
 
-Der folgende Code zeigt, wie Sie überprüfen können, ob eine PIN diesen Eigenschaften Satz unterstützt, und wenn dies der Fall ist, wie Sie die PIN-Kategorie abrufen:
+Der folgende Code zeigt, wie Sie überprüfen, ob ein Pin diesen Eigenschaftensatz unterstützt, und wenn ja, wie Sie die Pinkategorie abrufen:
 
 
 ```C++
@@ -92,7 +92,7 @@ HRESULT GetPinCategory(IPin *pPin, GUID *pPinCategory)
 
 
 > [!Note]  
-> In diesem Beispiel wird die Funktion " [saferelease](../medfound/saferelease.md) " verwendet, um Schnittstellen Zeiger freizugeben.
+> In diesem Beispiel wird die [SafeRelease-Funktion](../medfound/saferelease.md) verwendet, um Schnittstellenzeiger freizugeben.
 
  
 
@@ -100,13 +100,13 @@ HRESULT GetPinCategory(IPin *pPin, GUID *pPinCategory)
 
 <dl> <dt>
 
-[PIN-Anforderungen für Erfassungs Filter](pin-requirements-for-capture-filters.md)
+[Anheftanforderungen für Erfassungsfilter](pin-requirements-for-capture-filters.md)
 </dt> <dt>
 
 [Eigenschaftensätze](property-sets.md)
 </dt> <dt>
 
-[Arbeiten mit PIN-Kategorien](working-with-pin-categories.md)
+[Arbeiten mit Pinkategorien](working-with-pin-categories.md)
 </dt> </dl>
 
  

@@ -1,9 +1,9 @@
 ---
-title: Pixel Zustandsvariablen
-description: Pixel Zustandsvariablen
+title: Pixelzustandsvariablen
+description: Pixelzustandsvariablen
 ms.assetid: 79aeda3c-6d97-43fa-83f3-be400ba9990b
 keywords:
-- Pixel Zustandsvariablen OpenGL
+- Pixelzustandsvariablen OpenGL
 topic_type:
 - apiref
 api_name:
@@ -12,319 +12,319 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 81f19c075cdc9bba75e7bdf83696c409b23d7261
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 42ae0aa6fab7bb567f67055f0398a74549e519b6
+ms.sourcegitcommit: 63753fcfb0afbbe5ec283fb8316e62c2dc950f66
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "104312281"
+ms.lasthandoff: 04/22/2021
+ms.locfileid: "107908818"
 ---
-# <a name="pixel-state-variables"></a>Pixel Zustandsvariablen
+# <a name="pixel-state-variables"></a>Pixelzustandsvariablen
 
-<dl> <dt><span id="GL_UNPACK_SWAP_BYTES"></span><span id="gl_unpack_swap_bytes"></span>Auslagerungs Bytes von GL \_ Entpacken \_ \_</dt> <dd> 
+<dl> <dt><span id="GL_UNPACK_SWAP_BYTES"></span><span id="gl_unpack_swap_bytes"></span>GL \_ UNPACK \_ SWAP \_ BYTES</dt> <dd> 
 
-|                  |                                        |
+| Eigenschaft | Wert |
 |------------------|----------------------------------------|
-| Beschreibung:     | Wert von GL Entpack-Auslagerungs \_ \_ \_ Bytes       |
-| Attribut Gruppe: |                                        |
-| Anfangswert:   | GL \_ false                              |
-| Get-Befehl:     | [**glgetbooleanv**](glgetbooleanv.md) |
+| Beschreibung:     | Wert von GL \_ UNPACK \_ SWAP \_ BYTES       |
+| Attributgruppe: |                                        |
+| Anfangswert:   | GL \_ FALSE                              |
+| Get-Befehl:     | [**glGetBooleanv**](glgetbooleanv.md) |
 
 
 
- 
+ 
 
-</dd> <dt><span id="GL_UNPACK_LSB_FIRST"></span><span id="gl_unpack_lsb_first"></span>\_zuerst GL Entpacken von \_ lsb \_</dt> <dd> 
+</dd> <dt><span id="GL_UNPACK_LSB_FIRST"></span><span id="gl_unpack_lsb_first"></span>GL \_ UNPACK \_ LSB \_ FIRST</dt> <dd> 
 
-|                  |                                                                                  |
+| Eigenschaft | Wert |
 |------------------|----------------------------------------------------------------------------------|
-| Beschreibung:     | Erster Wert von GL \_ Entpack \_ lsb \_                                                  |
-| Attribut Gruppe: |                                                                                  |
-| Anfangswert:   | GL \_ false                                                                        |
-| Get-Befehl:     | [**glgetbooleanv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
+| Beschreibung:     | Wert von GL \_ UNPACK \_ LSB \_ FIRST                                                  |
+| Attributgruppe: |                                                                                  |
+| Anfangswert:   | GL \_ FALSE                                                                        |
+| Get-Befehl:     | [**glGetBooleanv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
 
 
 
- 
+ 
 
-</dd> <dt><span id="GL_UNPACK_ROW_LENGTH"></span><span id="gl_unpack_row_length"></span>\_ \_ Zeilenlänge von GL entpacken \_</dt> <dd> 
+</dd> <dt><span id="GL_UNPACK_ROW_LENGTH"></span><span id="gl_unpack_row_length"></span>GL \_ UNPACK \_ ROW \_ LENGTH</dt> <dd> 
 
-|                  |                                                                                  |
+| Eigenschaft | Wert |
 |------------------|----------------------------------------------------------------------------------|
-| Beschreibung:     | Wert der \_ \_ Zeilenlänge von GL entpacken \_                                                 |
-| Attribut Gruppe: |                                                                                  |
+| Beschreibung:     | Wert von GL \_ UNPACK \_ ROW \_ LENGTH                                                 |
+| Attributgruppe: |                                                                                  |
 | Anfangswert:   | 0                                                                                |
-| Get-Befehl:     | [**glgetintegerv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
+| Get-Befehl:     | [**glGetIntegerv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
 
 
 
- 
+ 
 
-</dd> <dt><span id="GL_UNPACK_SKIP_ROWS"></span><span id="gl_unpack_skip_rows"></span>GL \_ Entpacken \_ von \_ Zeilen überspringen</dt> <dd> 
+</dd> <dt><span id="GL_UNPACK_SKIP_ROWS"></span><span id="gl_unpack_skip_rows"></span>GL \_ UNPACK \_ SKIP \_ ROWS</dt> <dd> 
 
-|                  |                                                                                  |
+| Eigenschaft | Wert |
 |------------------|----------------------------------------------------------------------------------|
-| Beschreibung:     | Wert von GL \_ entpackt \_ Zeilen überspringen \_                                                  |
-| Attribut Gruppe: |                                                                                  |
+| Beschreibung:     | Wert von GL \_ UNPACK \_ SKIP \_ ROWS                                                  |
+| Attributgruppe: |                                                                                  |
 | Anfangswert:   | 0                                                                                |
-| Get-Befehl:     | [**glgetintegerv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
+| Get-Befehl:     | [**glGetIntegerv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
 
 
 
- 
+ 
 
-</dd> <dt><span id="GL_UNPACK_SKIP_PIXELS"></span><span id="gl_unpack_skip_pixels"></span>Entpacken von GL- \_ Entpacken \_ \_</dt> <dd> 
+</dd> <dt><span id="GL_UNPACK_SKIP_PIXELS"></span><span id="gl_unpack_skip_pixels"></span>GL \_ ENTPACKEN SKIP \_ \_ PIXELS</dt> <dd> 
 
-|                  |                                                                                  |
+| Eigenschaft | Wert |
 |------------------|----------------------------------------------------------------------------------|
-| Beschreibung:     | Wert von GL \_ unpack \_ Skip \_ Pixels                                                |
-| Attribut Gruppe: |                                                                                  |
+| Beschreibung:     | Wert von GL \_ UNPACK \_ SKIP \_ PIXELS                                                |
+| Attributgruppe: |                                                                                  |
 | Anfangswert:   | 0                                                                                |
-| Get-Befehl:     | [**glgetintegerv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
+| Get-Befehl:     | [**glGetIntegerv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
 
 
 
- 
+ 
 
-</dd> <dt><span id="GL_UNPACK_ALIGNMENT"></span><span id="gl_unpack_alignment"></span>Ausrichtung des GL- \_ entpakets \_</dt> <dd> 
+</dd> <dt><span id="GL_UNPACK_ALIGNMENT"></span><span id="gl_unpack_alignment"></span>GL \_ ENTPACKEN DER \_ AUSRICHTUNG</dt> <dd> 
 
-|                  |                                                                                  |
+| Eigenschaft | Wert |
 |------------------|----------------------------------------------------------------------------------|
-| Beschreibung:     | Wert der Ausrichtung von GL \_ Entpacken \_                                                   |
-| Attribut Gruppe: |                                                                                  |
+| Beschreibung:     | Wert von GL \_ UNPACK \_ ALIGNMENT                                                   |
+| Attributgruppe: |                                                                                  |
 | Anfangswert:   | 4                                                                                |
-| Get-Befehl:     | [**glgetintegerv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
+| Get-Befehl:     | [**glGetIntegerv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
 
 
 
- 
+ 
 
-</dd> <dt><span id="GL_PACK_SWAP_BYTES"></span><span id="gl_pack_swap_bytes"></span>Auslagerungs Bytes von GL \_ Pack \_ \_</dt> <dd> 
+</dd> <dt><span id="GL_PACK_SWAP_BYTES"></span><span id="gl_pack_swap_bytes"></span>GL \_ PACK \_ SWAP \_ BYTES</dt> <dd> 
 
-|                  |                                                                                  |
+| Eigenschaft | Wert |
 |------------------|----------------------------------------------------------------------------------|
-| Beschreibung:     | Wert des Auslagerungs Bytes von GL \_ Pack \_ \_                                                   |
-| Attribut Gruppe: |                                                                                  |
-| Anfangswert:   | GL \_ false                                                                        |
-| Get-Befehl:     | [**glgetbooleanv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
+| Beschreibung:     | Wert von GL \_ PACK \_ SWAP \_ BYTES                                                   |
+| Attributgruppe: |                                                                                  |
+| Anfangswert:   | GL \_ FALSE                                                                        |
+| Get-Befehl:     | [**glGetBooleanv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
 
 
 
- 
+ 
 
-</dd> <dt><span id="GL_PACK_LSB_FIRST"></span><span id="gl_pack_lsb_first"></span>\_zuerst GL Pack- \_ lsb \_</dt> <dd> 
+</dd> <dt><span id="GL_PACK_LSB_FIRST"></span><span id="gl_pack_lsb_first"></span>GL \_ PACK \_ LSB \_ FIRST</dt> <dd> 
 
-|                  |                                                                                  |
+| Eigenschaft | Wert |
 |------------------|----------------------------------------------------------------------------------|
-| Beschreibung:     | Erster Wert von GL \_ Pack \_ lsb \_                                                    |
-| Attribut Gruppe: |                                                                                  |
-| Anfangswert:   | GL \_ false                                                                        |
-| Get-Befehl:     | [**glgetbooleanv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
+| Beschreibung:     | Wert von GL \_ PACK \_ LSB \_ FIRST                                                    |
+| Attributgruppe: |                                                                                  |
+| Anfangswert:   | GL \_ FALSE                                                                        |
+| Get-Befehl:     | [**glGetBooleanv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
 
 
 
- 
+ 
 
-</dd> <dt><span id="GL_PACK_ROW_LENGTH"></span><span id="gl_pack_row_length"></span>Länge der GL- \_ Paket \_ Zeile \_</dt> <dd> 
+</dd> <dt><span id="GL_PACK_ROW_LENGTH"></span><span id="gl_pack_row_length"></span>GL \_ PACK \_ ROW \_ LENGTH</dt> <dd> 
 
-|                  |                                                                                  |
+| Eigenschaft | Wert |
 |------------------|----------------------------------------------------------------------------------|
-| Beschreibung:     | Wert der \_ \_ Zeilen \_ Länge des GL-Pakets                                                   |
-| Attribut Gruppe: |                                                                                  |
+| Beschreibung:     | Wert von GL \_ PACK \_ ROW \_ LENGTH                                                   |
+| Attributgruppe: |                                                                                  |
 | Anfangswert:   | 0                                                                                |
-| Get-Befehl:     | [**glgetintegerv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
+| Get-Befehl:     | [**glGetIntegerv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
 
 
 
- 
+ 
 
-</dd> <dt><span id="GL_PACK_SKIP_ROWS"></span><span id="gl_pack_skip_rows"></span>GL- \_ Paket, \_ Zeilen überspringen \_</dt> <dd> 
+</dd> <dt><span id="GL_PACK_SKIP_ROWS"></span><span id="gl_pack_skip_rows"></span>GL \_ PACK \_ SKIP \_ ROWS</dt> <dd> 
 
-|                  |                                                                                  |
+| Eigenschaft | Wert |
 |------------------|----------------------------------------------------------------------------------|
-| Beschreibung:     | Wert des GL- \_ Pakets \_ Skip \_ Rows                                                    |
-| Attribut Gruppe: |                                                                                  |
+| Beschreibung:     | Wert von GL \_ PACK \_ SKIP \_ ROWS                                                    |
+| Attributgruppe: |                                                                                  |
 | Anfangswert:   | 0                                                                                |
-| Get-Befehl:     | [**glgetintegerv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
+| Get-Befehl:     | [**glGetIntegerv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
 
 
 
- 
+ 
 
-</dd> <dt><span id="GL_PACK_SKIP_PIXELS"></span><span id="gl_pack_skip_pixels"></span>GL. über \_ \_ springen von \_ Pixeln</dt> <dd> 
+</dd> <dt><span id="GL_PACK_SKIP_PIXELS"></span><span id="gl_pack_skip_pixels"></span>GL \_ PACK \_ SKIP \_ PIXELS</dt> <dd> 
 
-|                  |                                                                                  |
+| Eigenschaft | Wert |
 |------------------|----------------------------------------------------------------------------------|
-| Beschreibung:     | Wert des GL- \_ Pakets \_ Skip \_ Pixels                                                  |
-| Attribut Gruppe: |                                                                                  |
+| Beschreibung:     | Wert von GL \_ PACK \_ SKIP \_ PIXELS                                                  |
+| Attributgruppe: |                                                                                  |
 | Anfangswert:   | 0                                                                                |
-| Get-Befehl:     | [**glgetintegerv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
+| Get-Befehl:     | [**glGetIntegerv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
 
 
 
- 
+ 
 
-</dd> <dt><span id="GL_PACK_ALIGNMENT"></span><span id="gl_pack_alignment"></span>GL- \_ Paket \_ Ausrichtung</dt> <dd> 
+</dd> <dt><span id="GL_PACK_ALIGNMENT"></span><span id="gl_pack_alignment"></span>GL \_ PACK \_ ALIGNMENT</dt> <dd> 
 
-|                  |                                                                                  |
+| Eigenschaft | Wert |
 |------------------|----------------------------------------------------------------------------------|
-| Beschreibung:     | Wert der GL- \_ Paket \_ Ausrichtung                                                     |
-| Attribut Gruppe: |                                                                                  |
+| Beschreibung:     | Wert von GL \_ PACK \_ ALIGNMENT                                                     |
+| Attributgruppe: |                                                                                  |
 | Anfangswert:   | 4                                                                                |
-| Get-Befehl:     | [**glgetintegerv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
+| Get-Befehl:     | [**glGetIntegerv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
 
 
 
- 
+ 
 
-</dd> <dt><span id="GL_MAP_COLOR"></span><span id="gl_map_color"></span>GL- \_ Karten \_ Farbe</dt> <dd> 
+</dd> <dt><span id="GL_MAP_COLOR"></span><span id="gl_map_color"></span>GL \_ MAP \_ COLOR</dt> <dd> 
 
-|                  |                                                                                  |
+| Eigenschaft | Wert |
 |------------------|----------------------------------------------------------------------------------|
 | Beschreibung:     | True, wenn Farben zugeordnet sind                                                        |
-| Attribut Gruppe: | Pixel                                                                            |
-| Anfangswert:   | GL \_ false                                                                        |
-| Get-Befehl:     | [**glgetbooleanv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
+| Attributgruppe: | Pixel                                                                            |
+| Anfangswert:   | GL \_ FALSE                                                                        |
+| Get-Befehl:     | [**glGetBooleanv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
 
 
 
- 
+ 
 
-</dd> <dt><span id="GL_MAP_STENCIL"></span><span id="gl_map_stencil"></span>GL- \_ Karten \_ Schablone</dt> <dd> 
+</dd> <dt><span id="GL_MAP_STENCIL"></span><span id="gl_map_stencil"></span>GL \_ MAP \_ STENCIL</dt> <dd> 
 
-|                  |                                                                                  |
+| Eigenschaft | Wert |
 |------------------|----------------------------------------------------------------------------------|
-| Beschreibung:     | True, wenn Schablonen Werte zugeordnet werden.                                                |
-| Attribut Gruppe: | Pixel                                                                            |
-| Anfangswert:   | GL \_ false                                                                        |
-| Get-Befehl:     | [**glgetbooleanv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
+| Beschreibung:     | TRUE, wenn Schablonenwerte zugeordnet werden                                                |
+| Attributgruppe: | Pixel                                                                            |
+| Anfangswert:   | GL \_ FALSE                                                                        |
+| Get-Befehl:     | [**glGetBooleanv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
 
 
 
- 
+ 
 
-</dd> <dt><span id="GL_INDEX_SHIFT"></span><span id="gl_index_shift"></span>GL- \_ Index \_ Verschiebung</dt> <dd> 
+</dd> <dt><span id="GL_INDEX_SHIFT"></span><span id="gl_index_shift"></span>GL \_ INDEX \_ SHIFT</dt> <dd> 
 
-|                  |                                                                                  |
+| Eigenschaft | Wert |
 |------------------|----------------------------------------------------------------------------------|
-| Beschreibung:     | Wert der GL- \_ Index \_ Verschiebung                                                        |
-| Attribut Gruppe: | Pixel                                                                            |
+| Beschreibung:     | Wert von GL \_ INDEX \_ SHIFT                                                        |
+| Attributgruppe: | Pixel                                                                            |
 | Anfangswert:   | 0                                                                                |
-| Get-Befehl:     | [**glgetintegerv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
+| Get-Befehl:     | [**glGetIntegerv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
 
 
 
- 
+ 
 
-</dd> <dt><span id="GL_INDEX_OFFSET"></span><span id="gl_index_offset"></span>GL- \_ Index \_ Offset</dt> <dd> 
+</dd> <dt><span id="GL_INDEX_OFFSET"></span><span id="gl_index_offset"></span>GL \_ INDEX \_ OFFSET</dt> <dd> 
 
-|                  |                                                                                  |
+| Eigenschaft | Wert |
 |------------------|----------------------------------------------------------------------------------|
-| Beschreibung:     | Wert des GL- \_ Index \_ Offsets                                                       |
-| Attribut Gruppe: | Pixel                                                                            |
+| Beschreibung:     | Wert von GL \_ INDEX \_ OFFSET                                                       |
+| Attributgruppe: | Pixel                                                                            |
 | Anfangswert:   | 0                                                                                |
-| Get-Befehl:     | [**glgetintegerv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
+| Get-Befehl:     | [**glGetIntegerv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
 
 
 
- 
+ 
 
-</dd> <dt><span id="GL_x_SCALE"></span><span id="gl_x_scale"></span><span id="GL_X_SCALE"></span>GL \_ *x* \_ skalieren</dt> <dd> 
+</dd> <dt><span id="GL_x_SCALE"></span><span id="gl_x_scale"></span><span id="GL_X_SCALE"></span>GL \_ *x* \_ SCALE</dt> <dd> 
 
-|                  |                                                                                |
+| Eigenschaft | Wert |
 |------------------|--------------------------------------------------------------------------------|
-| Beschreibung:     | Wert der GL \_ *x*- \_ Skala; ist GL \_ red, GL \_ Blue, GL \_ Alpha oder GL- \_ Tiefe         |
-| Attribut Gruppe: | Pixel                                                                          |
+| Beschreibung:     | Wert von GL \_ *x* \_ SCALE; ist GL \_ RED, GL \_ BLUE, GL ALPHA oder GL \_ \_ DEPTH         |
+| Attributgruppe: | Pixel                                                                          |
 | Anfangswert:   | 1                                                                              |
-| Get-Befehl:     | [**glgetfloatv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
+| Get-Befehl:     | [**glGetFloatv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
 
 
 
- 
+ 
 
-</dd> <dt><span id="GL_x_BIAS"></span><span id="gl_x_bias"></span><span id="GL_X_BIAS"></span>GL \_ *x*- \_ Bias</dt> <dd> 
+</dd> <dt><span id="GL_x_BIAS"></span><span id="gl_x_bias"></span><span id="GL_X_BIAS"></span>GL \_ *x* \_ BIAS</dt> <dd> 
 
-|                  |                                                                                |
+| Eigenschaft | Wert |
 |------------------|--------------------------------------------------------------------------------|
-| Beschreibung:     | Wert von GL \_ *x*- \_ Bias; *x* ist GL \_ Red GL \_ Blue, GL \_ Alpha oder GL- \_ Tiefe       |
-| Attribut Gruppe: | Pixel                                                                          |
+| Beschreibung:     | Wert von GL \_ *x* \_ BIAS; *x* ist GL \_ RED GL \_ BLUE, GL ALPHA oder GL \_ \_ DEPTH       |
+| Attributgruppe: | Pixel                                                                          |
 | Anfangswert:   | 0                                                                              |
-| Get-Befehl:     | [**glgetfloatv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
+| Get-Befehl:     | [**glGetFloatv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
 
 
 
- 
+ 
 
-</dd> <dt><span id="GL_ZOOM_X"></span><span id="gl_zoom_x"></span>GL \_ Zoom \_ X</dt> <dd> 
+</dd> <dt><span id="GL_ZOOM_X"></span><span id="gl_zoom_x"></span>GL \_ ZOOM \_ X</dt> <dd> 
 
-|                  |                                                                                |
+| Eigenschaft | Wert |
 |------------------|--------------------------------------------------------------------------------|
-| Beschreibung:     | *x*   Zoomfaktor                                                                |
-| Attribut Gruppe: | Pixel                                                                          |
+| Beschreibung:     | *x-Zoomfaktor*                                                                |
+| Attributgruppe: | Pixel                                                                          |
 | Anfangswert:   | 1.0                                                                            |
-| Get-Befehl:     | [**glgetfloatv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
+| Get-Befehl:     | [**glGetFloatv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
 
 
 
- 
+ 
 
-</dd> <dt><span id="GL_ZOOM_Y"></span><span id="gl_zoom_y"></span>GL \_ Zoom \_ Y</dt> <dd> 
+</dd> <dt><span id="GL_ZOOM_Y"></span><span id="gl_zoom_y"></span>GL \_ ZOOM \_ Y</dt> <dd> 
 
-|                  |                                                                                |
+| Eigenschaft | Wert |
 |------------------|--------------------------------------------------------------------------------|
-| Beschreibung:     | *j*   Zoomfaktor                                                                |
-| Attribut Gruppe: | Pixel                                                                          |
+| Beschreibung:     | *y* Zoomfaktor                                                                |
+| Attributgruppe: | Pixel                                                                          |
 | Anfangswert:   | 1.0                                                                            |
-| Get-Befehl:     | [**glgetfloatv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
+| Get-Befehl:     | [**glGetFloatv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
 
 
 
- 
+ 
 
 </dd> <dt><span id="GL_x"></span><span id="gl_x"></span><span id="GL_X"></span>GL \_ *x*</dt> <dd> 
 
-|                  |                                        |
+| Eigenschaft | Wert |
 |------------------|----------------------------------------|
-| Beschreibung:     | **glpixelmap** -Übersetzungstabellen      |
-| Attribut Gruppe: | Pixel                                  |
-| Anfangswert:   | 0 (null)                                    |
-| Get-Befehl:     | [**glgetpixelmap**](glgetpixelmap.md) |
+| Beschreibung:     | **glPixelMap-Übersetzungstabellen**      |
+| Attributgruppe: | Pixel                                  |
+| Anfangswert:   | 0(e)                                    |
+| Get-Befehl:     | [**glGetPixelMap**](glgetpixelmap.md) |
 
 
 
- 
+ 
 
-</dd> <dt><span id="GL_x_SIZE"></span><span id="gl_x_size"></span><span id="GL_X_SIZE"></span>GL \_ *x* \_ Größe</dt> <dd> 
+</dd> <dt><span id="GL_x_SIZE"></span><span id="gl_x_size"></span><span id="GL_X_SIZE"></span>GL \_ *x* \_ SIZE</dt> <dd> 
 
-|                  |                                                                                  |
+| Eigenschaft | Wert |
 |------------------|----------------------------------------------------------------------------------|
 | Beschreibung:     | Größe der Tabelle *x*                                                                |
-| Attribut Gruppe: | Pixel                                                                            |
+| Attributgruppe: | Pixel                                                                            |
 | Anfangswert:   | 1                                                                                |
-| Get-Befehl:     | [**glgetintegerv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
+| Get-Befehl:     | [**glGetIntegerv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
 
 
 
- 
+ 
 
-</dd> <dt><span id="GL_READ_BUFFER"></span><span id="gl_read_buffer"></span>GL- \_ Lese \_ Puffer</dt> <dd> 
+</dd> <dt><span id="GL_READ_BUFFER"></span><span id="gl_read_buffer"></span>GL \_ READ \_ BUFFER</dt> <dd> 
 
-|                  |                                                                                  |
+| Eigenschaft | Wert |
 |------------------|----------------------------------------------------------------------------------|
-| Beschreibung:     | Lesen des Quell Puffers                                                               |
-| Attribut Gruppe: | Pixel                                                                            |
+| Beschreibung:     | Quellpuffer lesen                                                               |
+| Attributgruppe: | Pixel                                                                            |
 | Anfangswert:   |                                                                                  |
-| Get-Befehl:     | [**glgetintegerv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
+| Get-Befehl:     | [**glGetIntegerv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
 
 
 
- 
+ 
 
 </dd> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

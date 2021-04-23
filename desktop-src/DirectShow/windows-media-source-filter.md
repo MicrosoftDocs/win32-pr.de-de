@@ -1,43 +1,43 @@
 ---
-description: Windows Media-Quell Filter
+description: Windows-Medienquellenfilter
 ms.assetid: e59b3086-4f62-4541-8bef-b0581f01906f
-title: Windows Media-Quell Filter
+title: Windows-Medienquellenfilter
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: fe60a038cfd5109a5c55ca6c40640d39b2426d3a
-ms.sourcegitcommit: c16214e53680dc71d1c07111b51f72b82a4512d8
+ms.openlocfilehash: fa8e2c2f2e575a70d85fdce3d9b8d643e270f721
+ms.sourcegitcommit: 63753fcfb0afbbe5ec283fb8316e62c2dc950f66
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "104218975"
+ms.lasthandoff: 04/22/2021
+ms.locfileid: "107908998"
 ---
-# <a name="windows-media-source-filter"></a>Windows Media-Quell Filter
+# <a name="windows-media-source-filter"></a>Windows-Medienquellenfilter
 
-Dieser Filter ist der Legacy-Quell Filter für Windows Media®-Inhalt. Sie wird von Windows Media Player 6,4 verwendet. Im Allgemeinen ist die einfachste und zuverlässigste Methode zur Verwendung dieses Filters die Verwendung des ActiveX-Steuer Elements Windows Media Player 6,4. Viele der Methoden, die von diesem Filter verfügbar gemacht werden, werden auch über das ActiveX-Steuerelement verfügbar gemacht. Weitere Informationen finden Sie unter Windows Media Player SDK.
+Dieser Filter ist der Legacyquellfilter für Windows Media®Inhalt. Sie wird von Windows Media Player 6.4 verwendet. Im Allgemeinen ist die einfachste und zuverlässigste Möglichkeit, diesen Filter zu verwenden, die Verwendung des activeX-Steuerelements Windows Media Player 6.4. Viele der von diesem Filter verfügbar gemachten Methoden werden auch über das ActiveX-Steuerelement verfügbar gemacht. Weitere Informationen finden Sie im Windows Media Player SDK.
 
-Wenn diesem Filter der Name einer lokalen ASF-Datei oder eine URL für eine Remote Datei zugewiesen wird, liest er die Datei, analysiert die komprimierten Streams und erstellt eine Ausgabe-PIN für jede einzelne Datei. Dieser Filter verwendet nicht das Windows Media-Format-SDK. Es verwendet die installierbaren Codec-Versionen der Windows Media-Decoders, nicht die DMO-Versionen. Die audioausgabepin stellt immer eine Verbindung mit dem ASF-ACM-HandlerFilter her, und die Videopin stellt immer eine Verbindung mit dem ASF-ICM (ICM bezieht sich in diesem Fall auf den ursprünglichen Namen des Video Komprimierungs-Managers.) Der Filter unterstützt keine Suchvorgänge.
+Wenn dieser Filter den Namen einer lokalen ASF-Datei oder einer URL für eine Remotedatei erhält, liest er die Datei, analysiert die komprimierten Datenströme und erstellt einen Ausgabepin für jeden. Dieser Filter verwendet nicht das Windows Media Format SDK. Es werden die installierbaren Codecversionen der Windows Media-Decoder verwendet, nicht die DMO-Versionen. Der Audioausgabepin stellt immer eine Verbindung mit dem ASF-ACM-Handlerfilter her, und der Videopin stellt immer eine Verbindung mit dem ASF-ICM-Handler her. (ICM bezieht sich in diesem Fall auf den ursprünglichen Namen des Videokomprimierungs-Managers.) Der Filter unterstützt keine Suchabfragen.
 
-Das folgende Diagramm zeigt ein Filter Diagramm mit diesem Filter.
+Das folgende Diagramm zeigt ein Filterdiagramm mit diesem Filter.
 
-![Diagramm für Windows Media-Quell Filter](images/wms-wmv-graph.png)
+![Windows-Medienquellfilterdiagramm](images/wms-wmv-graph.png)
 
-Um die Abwärtskompatibilität mit Windows Media Player 6,4 zu gewährleisten, ist dieser Filter der Standard Quell Filter für Dateien mit den Dateierweiterungen. WMA,. WMV und. ASF. Bei der Wiedergabe von Dateien sollten neuere Anwendungen den [WM-ASF-Reader](wm-asf-reader-filter.md) -Filter verwenden. Der WM-ASF-Reader unterstützt die Wiedergabe von gestreuten Inhalten jedoch nicht.
+Um die Abwärtskompatibilität mit Windows Media Player 6.4 aufrechtzuerhalten, ist dieser Filter der Standardquellfilter für Dateien mit WMA-, WMV- und ASF-Dateierweiterungen. Für die Dateiwiedergabe sollten neuere Anwendungen den [WM ASF-Readerfilter](wm-asf-reader-filter.md) verwenden. Der WM ASF-Reader unterstützt jedoch keine Wiedergabe von gestreamten Inhalten.
 
-Die einfachste Möglichkeit für eine Anwendung, auf Windows Media basierende Inhalte zu übertragen, ist die Verwendung des Windows Media Player SDK. Eine andere Möglichkeit ist die Verwendung des Windows Media SDK-SDKs. Es wird nicht empfohlen, einen benutzerdefinierten Player auf der Grundlage des Windows-Quell Filters für Medien zu erstellen.
+Die einfachste Möglichkeit für eine Anwendung, gestreamte Windows Media-basierte Inhalte wiederzuspielen, ist die Verwendung des Windows Media Player SDK. Eine weitere Option ist die Verwendung des Windows Media Format SDK. Es wird nicht empfohlen, einen benutzerdefinierten Player basierend auf dem Windows Media Source-Filter zu erstellen.
 
 
 
-|                                          |                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| Bezeichnung | Wert |
 |------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Filter Schnittstellen                        | [**Ibasefilter**](/windows/desktop/api/Strmif/nn-strmif-ibasefilter), [**iamchannelinfo**](/previous-versions/windows/desktop/api/Qnetwork/nn-qnetwork-iamchannelinfo), [**iamextendedseeking**](/previous-versions/windows/desktop/api/Qnetwork/nn-qnetwork-iamextendedseeking), [**iammediacontent**](/previous-versions/windows/desktop/api/Qnetwork/nn-qnetwork-iammediacontent), [**iamopenprogress**](/windows/desktop/api/Strmif/nn-strmif-iamopenprogress), [**iamnetshowconfig**](/previous-versions/windows/desktop/api/Qnetwork/nn-qnetwork-iamnetshowconfig), [**iamnetshowex-**](/previous-versions/windows/desktop/api/Qnetwork/nn-qnetwork-iamnetshowexprops)Eigenschaften, [**iamnetshowpreroll**](/previous-versions/windows/desktop/api/Qnetwork/nn-qnetwork-iamnetshowpreroll), [**iamnetworkstatus**](/previous-versions/windows/desktop/api/Qnetwork/nn-qnetwork-iamnetworkstatus), [**IFileSourceFilter**](/windows/desktop/api/Strmif/nn-strmif-ifilesourcefilter) |
-| Eingabe-PIN-Medientypen                    | Nicht zutreffend                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| PIN-Eingabeschnittstellen                     | Nicht zutreffend                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| Ausgabe-PIN-Medientypen                   | Variiert je nach den Datenströmen innerhalb der ASF-Datei.                                                                                                                                                                                                                                                                                                                                                                                                               |
-| PIN-Schnittstellen                    | [**Imediaseeking**](/windows/desktop/api/Strmif/nn-strmif-imediaseeking)                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| CLSID Filtern                             | Siehe Hinweise                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| Filtern von Schnittstellen                        | [**IBaseFilter**](/windows/desktop/api/Strmif/nn-strmif-ibasefilter), [**IAMChannelInfo**](/previous-versions/windows/desktop/api/Qnetwork/nn-qnetwork-iamchannelinfo), [**IAMExtendedSeeking**](/previous-versions/windows/desktop/api/Qnetwork/nn-qnetwork-iamextendedseeking), [**IAMMediaContent**](/previous-versions/windows/desktop/api/Qnetwork/nn-qnetwork-iammediacontent), [**IAMOpenProgress**](/windows/desktop/api/Strmif/nn-strmif-iamopenprogress), [**IAMNetShowConfig**](/previous-versions/windows/desktop/api/Qnetwork/nn-qnetwork-iamnetshowconfig), [**IAMNetShowExProps**](/previous-versions/windows/desktop/api/Qnetwork/nn-qnetwork-iamnetshowexprops), [**IAMNetShowPreroll**](/previous-versions/windows/desktop/api/Qnetwork/nn-qnetwork-iamnetshowpreroll), [**IAMNetworkStatus**](/previous-versions/windows/desktop/api/Qnetwork/nn-qnetwork-iamnetworkstatus), [**IFileSourceFilter**](/windows/desktop/api/Strmif/nn-strmif-ifilesourcefilter) |
+| Eingabepin-Medientypen                    | Nicht zutreffend                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| Eingabepinschnittstellen                     | Nicht zutreffend                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| Ausgabepin-Medientypen                   | Variiert abhängig von den Streams in der ASF-Datei.                                                                                                                                                                                                                                                                                                                                                                                                               |
+| Schnittstellen für Ausgabepins                    | [**IMediaSeeking**](/windows/desktop/api/Strmif/nn-strmif-imediaseeking)                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| Filtern der CLSID                             | Weitere Informationen finden Sie unter Hinweise.                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | Ausführbare Datei                               | dxmasf.dll                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| [Verdienst](merit.md)                       | Verdienst \_ Normal                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| [Filter Kategorie](filter-categories.md) | CLSID \_ legacyamfiltercategory                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| [Verdienst](merit.md)                       | MERIT \_ NORMAL                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| [Filterkategorie](filter-categories.md) | CLSID \_ LegacyAmFilterCategory                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 
 
 
@@ -45,7 +45,7 @@ Die einfachste Möglichkeit für eine Anwendung, auf Windows Media basierende In
 
 ## <a name="remarks"></a>Bemerkungen
 
-Die CLSID des Filters ist nicht in "qnetwork. h" definiert. Verwenden Sie dieses Makro in ihrer eigenen Header Datei:
+Die CLSID des Filters ist in qnetwork.h nicht definiert. Verwenden Sie dieses Makro in Ihrer eigenen Headerdatei:
 
 
 ```C++
@@ -66,7 +66,7 @@ DEFINE_GUID(CLSID_NetShowSource,
 [Lesen von ASF-Dateien in DirectShow](reading-asf-files-in-directshow.md)
 </dt> <dt>
 
-[WM-ASF-Lesefilter](wm-asf-reader-filter.md)
+[WM ASF-Leserfilter](wm-asf-reader-filter.md)
 </dt> </dl>
 
  

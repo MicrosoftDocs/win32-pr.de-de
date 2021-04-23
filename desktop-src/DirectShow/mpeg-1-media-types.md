@@ -1,143 +1,143 @@
 ---
-description: In diesem Abschnitt sind die Medientypen aufgeführt, die für MPEG-1-Daten verwendet werden.
+description: In diesem Abschnitt werden die Medientypen aufgeführt, die für MPEG-1-Daten verwendet werden.
 ms.assetid: 4ea1cb84-0558-4c4a-9483-1b0f2a8f76f8
 title: MPEG-1-Medientypen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 35d1ff7c121c52db39d574f9bbae3650b04312e9
-ms.sourcegitcommit: c16214e53680dc71d1c07111b51f72b82a4512d8
+ms.openlocfilehash: 0e44db1f4423365efb7814d61b35c1985142aa14
+ms.sourcegitcommit: 63753fcfb0afbbe5ec283fb8316e62c2dc950f66
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "106354270"
+ms.lasthandoff: 04/22/2021
+ms.locfileid: "107910028"
 ---
 # <a name="mpeg-1-media-types"></a>MPEG-1-Medientypen
 
-In diesem Abschnitt sind die Medientypen aufgeführt, die für MPEG-1-Daten verwendet werden.
+In diesem Abschnitt werden die Medientypen aufgeführt, die für MPEG-1-Daten verwendet werden.
 
 ## <a name="mpeg-1-system-stream"></a>MPEG-1-Systemdatenstrom
 
 
 
-|                       |                                                 |
+| Bezeichnung | Wert |
 |-----------------------|-------------------------------------------------|
-| Haupttyp            | MediaType- \_ Stream                               |
-| Subtype               | Mediasubtype \_ MPEG1System                       |
-| Formattyp           | Formatieren von \_ mpegstreams                             |
-| Format Struktur      | [**AM \_ mpegsystemtype**](/previous-versions/windows/desktop/api/mpegtype/ns-mpegtype-am_mpegsystemtype) |
-| Medien Beispiel Inhalt | Bytestream; keine Ausrichtung                       |
+| Haupttyp            | \_MEDIATYPE-Stream                               |
+| Subtype               | MEDIASUBTYPE \_ MPEG1System                       |
+| Formattyp           | FORMAT \_ MPEGStreams                             |
+| Formatstruktur      | [**AM \_ MPEGSYSTEMTYPE**](/previous-versions/windows/desktop/api/mpegtype/ns-mpegtype-am_mpegsystemtype) |
+| Medienbeispielinhalt | Bytestream; Keine Ausrichtung                       |
 
 
 
  
 
-## <a name="mpeg-1-system-stream-from-video-cd"></a>MPEG-1-System Datenstrom von Video-CD
+## <a name="mpeg-1-system-stream-from-video-cd"></a>MPEG-1-Systemstream aus Video-CD
 
 
 
-|                       |                            |
+| Bezeichnung | Wert |
 |-----------------------|----------------------------|
-| Haupttyp            | MediaType- \_ Stream          |
-| Subtype               | Mediasubtype \_ MPEG1VideoCD |
-| Formattyp           | GUID \_ null                 |
-| Format Struktur      | Keine                       |
-| Medien Beispiel Inhalt | Bytestream; keine Ausrichtung. |
+| Haupttyp            | \_MEDIATYPE-Stream          |
+| Subtype               | MEDIASUBTYPE \_ MPEG1VideoCD |
+| Formattyp           | GUID \_ NULL                 |
+| Formatstruktur      | Keine                       |
+| Medienbeispielinhalt | Bytestream; keine Ausrichtung. |
 
 
 
  
 
-## <a name="mpeg-1-audio-packet"></a>MPEG-1-audiopaket
+## <a name="mpeg-1-audio-packet"></a>MPEG-1-Audiopaket
 
 
 
-|                       |                                                |
+| Bezeichnung | Wert |
 |-----------------------|------------------------------------------------|
-| Haupttyp            | MediaType \_ -Audiodatei                               |
-| Subtype               | Mediasubtype \_ MPEG1Packet                      |
-| Formattyp           | Formatieren von \_ WaveFormatEx                           |
-| Format Struktur      | [**MPEG1WAVEFORMAT**](/windows/desktop/api/mmreg/ns-mmreg-mpeg1waveformat)     |
-| Medien Beispiel Inhalt | Einzelnes MPEG-1-Paket, einschließlich Paket Header. |
+| Haupttyp            | MEDIATYPE \_ Audio                               |
+| Subtype               | MEDIASUBTYPE \_ MPEG1Packet                      |
+| Formattyp           | FORMAT \_ WaveFormatEx                           |
+| Formatstruktur      | [**MPEG1WAVEFORMAT**](/windows/desktop/api/mmreg/ns-mmreg-mpeg1waveformat)     |
+| Medienbeispielinhalt | Einzelnes MPEG-1-Paket, einschließlich Paketheader. |
 
 
 
  
 
-## <a name="mpeg-1-audio-payload"></a>MPEG-1-audionutzlast
+## <a name="mpeg-1-audio-payload"></a>MPEG-1-Audionutzlast
 
 
 
-|                       |                                            |
+| Bezeichnung | Wert |
 |-----------------------|--------------------------------------------|
-| Haupttyp            | MediaType \_ -Audiodatei                           |
-| Subtype               | Mediasubtype \_ MPEG1Payload                 |
-| Formattyp           | Formatieren von \_ WaveFormatEx                       |
-| Format Struktur      | [**MPEG1WAVEFORMAT**](/windows/desktop/api/mmreg/ns-mmreg-mpeg1waveformat) |
-| Medien Beispiel Inhalt | Byte ausgerichtete MPEG-1-Audiodaten.            |
+| Haupttyp            | MEDIATYPE \_ Audio                           |
+| Subtype               | MEDIASUBTYPE \_ MPEG1Payload                 |
+| Formattyp           | FORMAT \_ WaveFormatEx                       |
+| Formatstruktur      | [**MPEG1WAVEFORMAT**](/windows/desktop/api/mmreg/ns-mmreg-mpeg1waveformat) |
+| Medienbeispielinhalt | Mpeg-1-Audiodaten mit Byte-Ausrichtung.            |
 
 
 
  
 
-## <a name="mpeg-1-video-packet"></a>MPEG-1-Video Paket
+## <a name="mpeg-1-video-packet"></a>MPEG-1-Videopaket
 
 
 
-|                       |                                                |
+| Bezeichnung | Wert |
 |-----------------------|------------------------------------------------|
-| Haupttyp            | MediaType- \_ Video                               |
-| Subtype               | Mediasubtype \_ MPEG1Packet                      |
-| Formattyp           | Formatieren von \_ MPEGVideo                              |
-| Format Struktur      | [**MPEG1VIDEOINFO**](/previous-versions/windows/desktop/api/amvideo/ns-amvideo-mpeg1videoinfo)       |
-| Medien Beispiel Inhalt | Einzelnes MPEG-1-Paket, einschließlich Paket Header. |
+| Haupttyp            | \_MEDIATYPE-Video                               |
+| Subtype               | MEDIASUBTYPE \_ MPEG1Packet                      |
+| Formattyp           | FORMAT \_ MPEGVideo                              |
+| Formatstruktur      | [**MPEG1VIDEOINFO**](/previous-versions/windows/desktop/api/amvideo/ns-amvideo-mpeg1videoinfo)       |
+| Medienbeispielinhalt | Einzelnes MPEG-1-Paket, einschließlich Paketheader. |
 
 
 
  
 
-## <a name="mpeg-1-video-payload"></a>MPEG-1-Video Nutzlast
+## <a name="mpeg-1-video-payload"></a>MPEG-1-Videonutzlast
 
 
 
-|                       |                                          |
+| Bezeichnung | Wert |
 |-----------------------|------------------------------------------|
-| Haupttyp            | MediaType- \_ Video                         |
-| Subtype               | Mediasubtype \_ MPEG1Payload               |
-| Formattyp           | Formatieren von \_ MPEGVideo                        |
-| Format Struktur      | [**MPEG1VIDEOINFO**](/previous-versions/windows/desktop/api/amvideo/ns-amvideo-mpeg1videoinfo) |
-| Medien Beispiel Inhalt | Byte ausgerichtete MPEG-1-Videodaten.          |
+| Haupttyp            | \_MEDIATYPE-Video                         |
+| Subtype               | MEDIASUBTYPE \_ MPEG1Payload               |
+| Formattyp           | FORMAT \_ MPEGVideo                        |
+| Formatstruktur      | [**MPEG1VIDEOINFO**](/previous-versions/windows/desktop/api/amvideo/ns-amvideo-mpeg1videoinfo) |
+| Medienbeispielinhalt | Bytebündige MPEG-1-Videodaten.          |
 
 
 
  
 
-## <a name="mpeg-1-native-video-stream"></a>Nativer MPEG-1-Videostream
+## <a name="mpeg-1-native-video-stream"></a>MPEG-1 Nativer Videostream
 
 
 
-|                       |                                                |
+| Bezeichnung | Wert |
 |-----------------------|------------------------------------------------|
-| Haupttyp            | MediaType- \_ Stream                              |
-| Subtype               | Mediasubtype \_ MPEG1Video                      |
-| Formattyp           | GUID \_ null                                     |
-| Format Struktur      | Keine                                           |
-| Medien Beispiel Inhalt | Array von Videodaten Strom bytes (keine Systemebene). |
+| Haupttyp            | \_MEDIATYPE-Stream                              |
+| Subtype               | MEDIASUBTYPE \_ MPEG1Video                      |
+| Formattyp           | GUID \_ NULL                                     |
+| Formatstruktur      | Keine                                           |
+| Medienbeispielinhalt | Array von Videostreambytes (keine Systemebene). |
 
 
 
  
 
-## <a name="mpeg-1-native-audio-stream"></a>MPEG-1 nativer Audiodatenstrom
+## <a name="mpeg-1-native-audio-stream"></a>MPEG-1 Nativer Audiostream
 
 
 
-|                       |                                                |
+| Bezeichnung | Wert |
 |-----------------------|------------------------------------------------|
-| Haupttyp            | MediaType- \_ Stream                              |
-| Subtype               | Mediasubtype \_ MPEG1Audio                      |
-| Formattyp           | GUID \_ null                                     |
-| Format Struktur      | Keine                                           |
-| Medien Beispiel Inhalt | Array von Audiodatenstrom-bytes (keine Systemebene). |
+| Haupttyp            | \_MEDIATYPE-Stream                              |
+| Subtype               | MEDIASUBTYPE \_ MPEG1Audio                      |
+| Formattyp           | GUID \_ NULL                                     |
+| Formatstruktur      | Keine                                           |
+| Medienbeispielinhalt | Array von Audiostreambytes (keine Systemebene). |
 
 
 
@@ -145,26 +145,26 @@ In diesem Abschnitt sind die Medientypen aufgeführt, die für MPEG-1-Daten verw
 
 ## <a name="remarks"></a>Bemerkungen
 
-Die DirectShow-MPEG-1-Filter unterstützen diese Typen wie folgt.
+Die DirectShow MPEG-1-Filter unterstützen diese Typen wie folgt.
 
 
 
-| Filter               | Richtung | Unterstützte Medientypen                                                                                             |
+| Filter               | Direction | Unterstützte Medientypen                                                                                             |
 |----------------------|-----------|-------------------------------------------------------------------------------------------------------------------|
-| MPEG-1-Splitter      | Eingabe     | MPEG-1-System-streammpeg-1-Systemdaten Strom von Video-CD<br/>                                                 |
-| MPEG-1-Splitter      | Ausgabe    | MPEG-1-audiopacketmpeg-1-audionutzlast<br/> MPEG-1-Video Paket<br/> MPEG-1-Video Nutzlast<br/> |
-| Software-Audiocodec | Eingabe     | MPEG-1-audiopacketmpeg-1-audionutzlast<br/>                                                                |
-| Software Videocodec | Eingabe     | MPEG-1 Video packetmpeg-1 Video Nutzlast<br/>                                                                |
-| Software-Audiocodec | Ausgabe    | PCM-Audiodatei                                                                                                         |
-| Software Videocodec | Ausgabe    | Unkomprimiertes Video (im y41p, im YUY2, UYVY, RGB-24, RGB-32, RGB-565, RGB-555, RGB-8)                                    |
+| MPEG-1-Splitter      | Eingabe     | MPEG-1-SystemstreamMPEG-1-Systemstream aus Video-CD<br/>                                                 |
+| MPEG-1-Splitter      | Output    | MPEG-1-AudiopaketMPEG-1 Audionutzlast<br/> MPEG-1-Videopaket<br/> MPEG-1-Videonutzlast<br/> |
+| Softwareaudiocodec | Eingabe     | MPEG-1-AudiopaketMPEG-1 Audionutzlast<br/>                                                                |
+| Softwarevideocodec | Eingabe     | MPEG-1-VideopaketMPEG-1 Videonutzlast<br/>                                                                |
+| Softwareaudiocodec | Output    | PCM-Audio                                                                                                         |
+| Softwarevideocodec | Output    | Unkomprimiertes Video (Y41P, YUY2, UYCLIP, RGB-24, RGB-32, RGB-565, RGB-555, RGB-8)                                    |
 
 
 
  
 
-MPEG-1 Video Packet-und Payload-Medientypen enthalten einen Complete Sequence-Header, damit Daten von der Mitte einer Datei wiedergegeben werden können, ohne dass ein Sequenz Header erforderlich ist, um die Video Wiedergabe zu initialisieren.
+MPEG-1 Video-Paket- und Nutzlastmedientypen enthalten einen vollständigen Sequenzheader, sodass Daten aus der Mitte einer Datei abgespielt werden können, ohne dass ein Sequenzheader zum Initialisieren der Videowiedergabe erforderlich ist.
 
-Der Videosequenz Header wird an den Video Datentyp für MPEG-Video angehängt, sodass die Wiedergabe von der Mitte eines Streams beginnen kann. Die Länge dieses Felds beträgt 140 bytes. Sie enthält den Sequenz Header-Startcode (0x000001b3) am Anfang, zusammen mit allen quantifisierungsmatrizen, die im ersten gefundenen Sequenz Header gefunden wurden.
+Der Videosequenzheader wird an den Videodatentyp für MPEG-Video angefügt, damit die Wiedergabe von der Mitte eines Streams aus beginnen kann. Die Länge dieses Felds beträgt bis zu 140 Bytes. Sie enthält den Startcode (0x000001B3) des Sequenzheaders am Anfang sowie alle Quantisierungsmatrizen, die im ersten gefundenen Sequenzheader gefunden wurden.
 
  
 

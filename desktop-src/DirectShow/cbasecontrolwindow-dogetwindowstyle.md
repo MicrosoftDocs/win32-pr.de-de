@@ -1,7 +1,7 @@
 ---
-description: Die dogetwindowstyle-Methode ruft die aktuellen normalen oder erweiterten Fenster Stile ab.
+description: Die DoGetWindowStyle-Methode ruft die aktuellen normalen oder erweiterten Fensterstile ab.
 ms.assetid: 1a854896-4bcb-49d0-92e4-40d1923712f9
-title: Cbasecontrolwindow. dogetwindowstyle-Methode (ctlutil. h)
+title: CBaseControlWindow.DoGetWindowStyle-Methode (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 2667e4cbeef2d40bdc5bff8381ee3f07b3d0942f
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: d970ee52203c5c8dfe8a897c5612604becc2b2e1
+ms.sourcegitcommit: 63753fcfb0afbbe5ec283fb8316e62c2dc950f66
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367022"
+ms.lasthandoff: 04/22/2021
+ms.locfileid: "107909818"
 ---
-# <a name="cbasecontrolwindowdogetwindowstyle-method"></a>Cbasecontrolwindow. dogetwindowstyle-Methode
+# <a name="cbasecontrolwindowdogetwindowstyle-method"></a>CBaseControlWindow.DoGetWindowStyle-Methode
 
-Die- `DoGetWindowStyle` Methode ruft die aktuellen normalen oder erweiterten Fenster Stile ab.
+Die `DoGetWindowStyle` -Methode ruft die aktuellen normalen oder erweiterten Fensterstile ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,21 +46,21 @@ HRESULT DoGetWindowStyle(
 *pStyle* 
 </dt> <dd>
 
-Ein Zeiger auf eine Variable, die die Stil Informationen empfängt.
+Zeiger auf eine Variable, die die Formatinformationen empfängt.
 
 </dd> <dt>
 
-*Windowlong* 
+*WindowLong* 
 </dt> <dd>
 
-Ein Wert, der angibt, welche Stile abgerufen werden sollen. Dies muss eine der folgenden Ressourcen sein:
+Wert, der an gibt, welche Stile abgerufen werden. Dies muss eine der folgenden Ressourcen sein:
 
 
 
-|              |                                      |
+| Bezeichnung | Wert |
 |--------------|--------------------------------------|
-| GWL- \_ Stil   | Abrufen der Fenster Stile.          |
-| GWL- \_ ExStyle | Ruft die erweiterten Fenster Stile ab. |
+| \_GWL-STIL   | Rufen Sie die Fensterstile ab.          |
+| GWL \_ EXSTYLE | Rufen Sie die erweiterten Fensterstile ab. |
 
 
 
@@ -70,11 +70,11 @@ Ein Wert, der angibt, welche Stile abgerufen werden sollen. Dies muss eine der f
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT** -Wert zurück.
+Gibt einen **HRESULT-Wert** zurück.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Diese Member-Funktion Ruft die Win32 **GetWindowLong** -Funktion auf, um den Fenster Stil abzurufen. Sie wird von den Element Funktionen [**cbasecontrolwindow:: get \_ WindowStyle**](cbasecontrolwindow-get-windowstyle.md) und [**cbasecontrolwindow:: get \_ windowstyleex**](cbasecontrolwindow-get-windowstyleex.md) aufgerufen.
+Diese Memberfunktion ruft die Win32 **GetWindowLong-Funktion** auf, um den Fensterstil abzurufen. Sie wird von den [**Memberfunktionen CBaseControlWindow::get \_ WindowStyle**](cbasecontrolwindow-get-windowstyle.md) und [**CBaseControlWindow::get \_ WindowStyleEx**](cbasecontrolwindow-get-windowstyleex.md) aufgerufen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -82,8 +82,8 @@ Diese Member-Funktion Ruft die Win32 **GetWindowLong** -Funktion auf, um den Fen
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (einschließlich Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -91,7 +91,7 @@ Diese Member-Funktion Ruft die Win32 **GetWindowLong** -Funktion auf, um den Fen
 
 <dl> <dt>
 
-[**Cbasecontrolwindow-Klasse**](cbasecontrolwindow.md)
+[**CBaseControlWindow-Klasse**](cbasecontrolwindow.md)
 </dt> </dl>
 
  
