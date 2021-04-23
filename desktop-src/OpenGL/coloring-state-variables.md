@@ -1,9 +1,9 @@
 ---
-title: Farb Statusvariablen
-description: Farb Statusvariablen
+title: Farbzustandsvariablen
+description: Farbzustandsvariablen
 ms.assetid: 783a798a-f45c-4262-99b8-badd15f52cd5
 keywords:
-- Farb Zustandsvariablen OpenGL
+- Farbzustandsvariablen OpenGL
 topic_type:
 - apiref
 api_name:
@@ -12,124 +12,124 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8d02a151b676e6f8fdd4ad98270ca4924e596bb9
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: fb41866aa194461fd4edf72fdba8f4dad5de8766
+ms.sourcegitcommit: 63753fcfb0afbbe5ec283fb8316e62c2dc950f66
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "106342322"
+ms.lasthandoff: 04/22/2021
+ms.locfileid: "107909288"
 ---
-# <a name="coloring-state-variables"></a>Farb Statusvariablen
+# <a name="coloring-state-variables"></a>Farbzustandsvariablen
 
-<dl> <dt><span id="GL_FOG_COLOR"></span><span id="gl_fog_color"></span>GL- \_ Nebel \_ Farbe</dt> <dd> 
+<dl> <dt><span id="GL_FOG_COLOR"></span><span id="gl_fog_color"></span>GL \_ FOG \_ COLOR</dt> <dd> 
 
-|                  |                                                                                |
+| Eigenschaft | Wert |
 |------------------|--------------------------------------------------------------------------------|
-| Beschreibung:     | Nebelfarbe                                                                      |
-| Attribut Gruppe: | Nebel                                                                            |
-| Anfangswert:   | 0, 0, 0, 0                                                                        |
-| Get-Befehl:     | [**glgetfloatv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
+| Beschreibung:     | Farbe des Farbtons                                                                      |
+| Attributgruppe: | Nebel                                                                            |
+| Anfangswert:   | 0,0,0,0                                                                        |
+| Get-Befehl:     | [**glGetFloatv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
 
 
 
- 
+ 
 
-</dd> <dt><span id="GL_FOG_INDEX"></span><span id="gl_fog_index"></span>GL- \_ Nebel \_ Index</dt> <dd> 
+</dd> <dt><span id="GL_FOG_INDEX"></span><span id="gl_fog_index"></span>\_ \_ GLBULS INDEX</dt> <dd> 
 
-|                  |                                                                                |
+| Eigenschaft | Wert |
 |------------------|--------------------------------------------------------------------------------|
-| Beschreibung:     | Nebelindex                                                                      |
-| Attribut Gruppe: | Nebel                                                                            |
+| Beschreibung:     | Index der Indizes                                                                      |
+| Attributgruppe: | Nebel                                                                            |
 | Anfangswert:   | 0                                                                              |
-| Get-Befehl:     | [**glgetfloatv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
+| Get-Befehl:     | [**glGetFloatv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
 
 
 
- 
+ 
 
-</dd> <dt><span id="GL_FOG_DENSITY"></span><span id="gl_fog_density"></span>GL- \_ Nebel \_ Dichte</dt> <dd> 
+</dd> <dt><span id="GL_FOG_DENSITY"></span><span id="gl_fog_density"></span>\_GL-DICHTE \_</dt> <dd> 
 
-|                  |                                                                                |
+| Eigenschaft | Wert |
 |------------------|--------------------------------------------------------------------------------|
-| Beschreibung:     | Exponentielle Nebeldichte                                                        |
-| Attribut Gruppe: | Nebel                                                                            |
+| Beschreibung:     | Exponentielle Dichte                                                        |
+| Attributgruppe: | Nebel                                                                            |
 | Anfangswert:   | 1.0                                                                            |
-| Get-Befehl:     | [**glgetfloatv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
+| Get-Befehl:     | [**glGetFloatv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
 
 
 
- 
+ 
 
-</dd> <dt><span id="GL_FOG_START"></span><span id="gl_fog_start"></span>GL. \_ Nebel \_ Anfang</dt> <dd> 
+</dd> <dt><span id="GL_FOG_START"></span><span id="gl_fog_start"></span>GL \_ FOG \_ START</dt> <dd> 
 
-|                  |                                                                                |
+| Eigenschaft | Wert |
 |------------------|--------------------------------------------------------------------------------|
-| Beschreibung:     | Linearer Nebel Anfang                                                               |
-| Attribut Gruppe: | Nebel                                                                            |
+| Beschreibung:     | Linearer Linearer Start                                                               |
+| Attributgruppe: | Nebel                                                                            |
 | Anfangswert:   | 0,0                                                                            |
-| Get-Befehl:     | [**glgetfloatv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
+| Get-Befehl:     | [**glGetFloatv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
 
 
 
- 
+ 
 
-</dd> <dt><span id="GL_FOG_END"></span><span id="gl_fog_end"></span>GL- \_ Nebel \_ Ende</dt> <dd> 
+</dd> <dt><span id="GL_FOG_END"></span><span id="gl_fog_end"></span>\_GL-END \_</dt> <dd> 
 
-|                  |                                                                                |
+| Eigenschaft | Wert |
 |------------------|--------------------------------------------------------------------------------|
-| Beschreibung:     | Lineare Nebel Ende                                                                 |
-| Attribut Gruppe: | Nebel                                                                            |
+| Beschreibung:     | Lineares Ende                                                                 |
+| Attributgruppe: | Nebel                                                                            |
 | Anfangswert:   | 1.0                                                                            |
-| Get-Befehl:     | [**glgetfloatv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
+| Get-Befehl:     | [**glGetFloatv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
 
 
 
- 
+ 
 
-</dd> <dt><span id="GL_FOG_MODE"></span><span id="gl_fog_mode"></span>GL- \_ Nebel \_ Modus</dt> <dd> 
+</dd> <dt><span id="GL_FOG_MODE"></span><span id="gl_fog_mode"></span>\_GL-MODUS \_</dt> <dd> 
 
-|                  |                                                                                  |
+| Eigenschaft | Wert |
 |------------------|----------------------------------------------------------------------------------|
-| Beschreibung:     | Nebelmodus                                                                         |
-| Attribut Gruppe: | Nebel                                                                              |
-| Anfangswert:   | GL- \_ Exp                                                                          |
-| Get-Befehl:     | [**glgetintegerv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
+| Beschreibung:     | Modus "Mode"                                                                         |
+| Attributgruppe: | Nebel                                                                              |
+| Anfangswert:   | GL \_ EXP                                                                          |
+| Get-Befehl:     | [**glGetIntegerv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
 
 
 
- 
+ 
 
-</dd> <dt><span id="GL_FOG"></span><span id="gl_fog"></span>GL- \_ Nebel</dt> <dd> 
+</dd> <dt><span id="GL_FOG"></span><span id="gl_fog"></span>GL \_ VERSCHENKTE</dt> <dd> 
 
-|                  |                                    |
+| Eigenschaft | Wert |
 |------------------|------------------------------------|
-| Beschreibung:     | True, wenn der Nebel aktiviert ist                |
-| Attribut Gruppe: | Nebel/aktivieren                         |
-| Anfangswert:   | GL \_ false                          |
-| Get-Befehl:     | [**glisenabled**](glisenabled.md) |
+| Beschreibung:     | True, wenn "1" aktiviert ist                |
+| Attributgruppe: | und aktivieren                         |
+| Anfangswert:   | GL \_ FALSE                          |
+| Get-Befehl:     | [**glIsEnabled**](glisenabled.md) |
 
 
 
- 
+ 
 
-</dd> <dt><span id="GL_SHADE_MODEL"></span><span id="gl_shade_model"></span>GL- \_ Schatten \_ Modell</dt> <dd> 
+</dd> <dt><span id="GL_SHADE_MODEL"></span><span id="gl_shade_model"></span>GL \_ SHADE \_ MODEL</dt> <dd> 
 
-|                  |                                                                                  |
+| Eigenschaft | Wert |
 |------------------|----------------------------------------------------------------------------------|
-| Beschreibung:     | **glshademodel** -Einstellung                                                         |
-| Attribut Gruppe: | Belichtung                                                                         |
-| Anfangswert:   | GL \_ glatt                                                                       |
-| Get-Befehl:     | [**glgetintegerv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
+| Beschreibung:     | **glShadeModel-Einstellung**                                                         |
+| Attributgruppe: | Belichtung                                                                         |
+| Anfangswert:   | GL \_ SMOOTH                                                                       |
+| Get-Befehl:     | [**glGetIntegerv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
 
 
 
- 
+ 
 
 </dd> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

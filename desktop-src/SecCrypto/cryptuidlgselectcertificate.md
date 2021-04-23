@@ -1,24 +1,26 @@
 ---
-description: Zeigt ein Dialogfeld an, in dem Benutzer ein Zertifikat auswählen können.
+description: Zeigt ein Dialogfeld an, in dem ein Benutzer ein Zertifikat auswählen kann.
 ms.assetid: 242c19a7-179b-4fc0-a050-a1b598566a6b
 title: CryptUIDlgSelectCertificate-Funktion
 ms.topic: reference
 ms.date: 05/29/2020
-ms.openlocfilehash: 65d9993cd1e035473e731056d33b7a391ef47b5c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8f015796671990491407d91cbd51761816c5434b
+ms.sourcegitcommit: 435ea8f5bf06808ffa7dce39afb0ee6de842ba2f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104218187"
+ms.lasthandoff: 04/23/2021
+ms.locfileid: "107925691"
 ---
 # <a name="cryptuidlgselectcertificate-function"></a>CryptUIDlgSelectCertificate-Funktion
 
-Die Funktion **cryptuidlgselectcertificate** zeigt ein Dialogfeld an, in dem Benutzer ein Zertifikat auswählen können.
+Die **CryptUIDlgSelectCertificate-Funktion** zeigt ein Dialogfeld an, in dem ein Benutzer ein Zertifikat auswählen kann.
 
 ## <a name="syntax"></a>Syntax
 
 
 ```C++
+PCCERT_CONTEXT WINAPI CryptUIDlgSelectCertificate(
+  _In_  PCCRYPTUI_SELECTCERTIFICATE_STRUCT pcsc
 );
 ```
 
@@ -28,24 +30,24 @@ Die Funktion **cryptuidlgselectcertificate** zeigt ein Dialogfeld an, in dem Ben
 
 <dl> <dt>
 
-*pcsc* \[ in\]
+*pcsc* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf eine [**cryptui \_ selectcertificate \_**](cryptui-selectcertificate-struct.md) -Struktur Struktur, die Informationen über das anzuzeigende Dialogfeld enthält.
+Ein Zeiger auf eine [**CRYPTUI \_ SELECTCERTIFICATE-STRUKTUR, \_**](cryptui-selectcertificate-struct.md) die Informationen über das anzuzeigende Dialogfeld enthält.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Ein Zeiger auf eine [**CERT- \_ Kontext**](/windows/win32/api/Wincrypt/ns-wincrypt-cert_context) Struktur, die das vom Benutzer ausgewählte Zertifikat darstellt. Nachdem Sie dieses Zertifikat verwendet haben, müssen Sie diesen Zeiger an die [**certfreecertifiskiecontext**](/windows/win32/api/wincrypt/nf-wincrypt-certfreecertificatecontext) -Funktion übergeben, um den Verweis Zähler des Zertifikat Kontexts zu verringern.
+Ein Zeiger auf eine [**CERT \_ CONTEXT-Struktur,**](/windows/win32/api/Wincrypt/ns-wincrypt-cert_context) die das vom Benutzer ausgewählte Zertifikat darstellt. Wenn Sie mit der Verwendung dieses Zertifikats fertig sind, müssen Sie diesen Zeiger an die [**CertFreeCertificateContext-Funktion**](/windows/win32/api/wincrypt/nf-wincrypt-certfreecertificatecontext) übergeben, um den Verweiszähler des Zertifikatkontexts zu dekrementieren.
 
-Wenn der **dwFlags** -Member der *pcsc* -Struktur das **cryptui selectcert-Flag für die \_ \_ Mehrfachauswahl** nicht enthält, bedeutet der Rückgabewert **null** , dass der Benutzer das Dialogfeld geschlossen hat, ohne ein Zertifikat auszuwählen.
+Wenn der **dwFlags-Member** der *pcsc-Struktur* das **CRYPTUI \_ SELECTCERT \_ MULTISELECT-Flag** nicht enthält, bedeutet ein Rückgabewert von **NULL,** dass der Benutzer das Dialogfeld geschlossen hat, ohne ein Zertifikat auszuwählen.
 
-Wenn der **dwFlags** -Member der *pcsc* -Struktur das **cryptui selectcert-Flag für die \_ \_ Mehrfachauswahl** enthält, gibt diese Funktion immer **null** zurück. Die ausgewählten Zertifikate sind im Zertifikat Speicher enthalten, der durch das **hselectedcertstore** -Mitglied von *pcsc* repräsentiert wird. Wenn die Anzahl der Zertifikate im Speicher vor und nach dem Aufruf von **cryptuidlgselectcertificate** identisch ist, hat der Benutzer das Dialogfeld geschlossen, ohne Zertifikate auszuwählen.
+Wenn der **dwFlags-Member** der *pcsc-Struktur* das **CRYPTUI \_ SELECTCERT \_ MULTISELECT-Flag** enthält, gibt diese Funktion immer **NULL** zurück. Die ausgewählten Zertifikate werden im Zertifikatspeicher enthalten sein, der durch das **hSelectedCertStore-Element** von *pcsc* dargestellt wird. Wenn die Anzahl der Zertifikate im Speicher vor und nach dem Aufruf von **CryptUIDlgSelectCertificate** gleich ist, hat der Benutzer das Dialogfeld geschlossen, ohne Zertifikate auszuwählen.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Wenn der **dwFlags** -Member der " [**cryptui \_ selectcertificate \_ struct**](cryptui-selectcertificate-struct.md) "-Struktur auf " **cryptui \_ selectcert \_ Legacy**" festgelegt ist, wird das Dialogfeld "Legacy" angezeigt. Andernfalls wird das aktuelle Zertifikat Auswahl Dialogfeld angezeigt.
+Wenn der **dwFlags-Member** der [**CRYPTUI \_ SELECTCERTIFICATE-Struktur \_**](cryptui-selectcertificate-struct.md) auf **CRYPTUI \_ SELECTCERT \_ LEGACY** festgelegt ist, wird das Legacydialogfeld angezeigt. Andernfalls wird das aktuelle Dialogfeld für die Zertifikatauswahl angezeigt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -53,12 +55,12 @@ Wenn der **dwFlags** -Member der " [**cryptui \_ selectcertificate \_ struct**](
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                                       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                              |
-| Ende des Supports<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                                       |
-| Bibliothek<br/>                  | <dl> <dt>Cryptui. lib</dt> </dl>            |
+| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ XP-Desktop-Apps\]<br/>                                                       |
+| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2003-Desktop-Apps\]<br/>                                              |
+| Ende des Supports<br/> | Nur Windows \[ 7-Desktop-Apps\]<br/>                                                       |
+| Bibliothek<br/>                  | <dl> <dt>Cryptui.lib</dt> </dl>            |
 | DLL<br/>                      | <dl> <dt>Cryptui.dll</dt> </dl>            |
-| Unicode- und ANSI-Name<br/>   | **Cryptuidlgselectcertifi| EW** (Unicode) und **cryptuidlgselectcertifi-EA** (ANSI)<br/> |
+| Unicode- und ANSI-Name<br/>   | **CryptUIDlgSelectCertificateW** (Unicode) und **CryptUIDlgSelectCertificateA** (ANSI)<br/> |
 
 
 
@@ -66,12 +68,10 @@ Wenn der **dwFlags** -Member der " [**cryptui \_ selectcertificate \_ struct**](
 
 <dl> <dt>
 
-[**cryptui \_ selectcertificate- \_ Struktur**](cryptui-selectcertificate-struct.md)
+[**CRYPTUI \_ \_ SELECTCERTIFICATE-STRUKTUR**](cryptui-selectcertificate-struct.md)
 </dt> </dl>
 
-�
 
-�
 
 
 

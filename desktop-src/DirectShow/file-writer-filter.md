@@ -1,41 +1,41 @@
 ---
-description: Dateiwriter-Filter
+description: File Writer-Filter
 ms.assetid: 2bfbea8a-679f-4656-9ff3-fdf34aa0eb26
-title: Dateiwriter-Filter
+title: File Writer-Filter
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f438f13f8d63b2856efd147c57ba6f071af26ff8
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: e991536d505ee1bdfcaaaca5ce8660c4480decf6
+ms.sourcegitcommit: 63753fcfb0afbbe5ec283fb8316e62c2dc950f66
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104213971"
+ms.lasthandoff: 04/22/2021
+ms.locfileid: "107909688"
 ---
-# <a name="file-writer-filter"></a>Dateiwriter-Filter
+# <a name="file-writer-filter"></a>File Writer-Filter
 
-Der dateiwriter-Filter kann verwendet werden, um Dateien unabhängig vom Format auf die Festplatte zu schreiben. Der Filter schreibt einfach auf die Festplatte, die er in der Eingabe-PIN empfängt, sodass er mit einem Multiplexer verbunden werden muss, der die Datei ordnungsgemäß formatieren kann. Sie können eine neue Ausgabedatei mit dem dateiwriter erstellen oder eine vorhandene Datei angeben. Wenn die Datei bereits vorhanden ist, wird Sie vollständig mit den neuen Daten überschrieben.
+Der File Writer-Filter kann verwendet werden, um Dateien unabhängig vom Format auf den Datenträger zu schreiben. Der Filter schreibt einfach auf den Datenträger, was er auf seinem Eingabepin empfängt, sodass er mit einem Multiplexer verbunden werden muss, der die Datei ordnungsgemäß formatieren kann. Sie können eine neue Ausgabedatei mit dem Dateiwriter erstellen oder eine vorhandene Datei angeben. Wenn die Datei bereits vorhanden ist, wird sie vollständig mit den neuen Daten überschrieben.
 
-Der dateiwriter-Filter verwendet die Zeitstempel des Eingabedaten Stroms als Dateioffsets und bietet zufälligen Zugriff auf die Datei. Es unterstützt **IStream** , um das Lesen und Schreiben der Datei Kopfzeile nach dem Beenden des Diagramms zuzulassen. Um die Leistung zu verbessern, unterstützt es auch nicht gepufferte Schreibvorgänge und verarbeitet die entsprechende Puffer Aushandlung.
+Der Dateiwriterfilter verwendet die Zeitstempel des Eingabestreams als Dateioffsets und bietet zufälligen Zugriff auf die Datei. IStream  wird unterstützt, um das Lesen und Schreiben des Dateiheaders zu ermöglichen, nachdem das Diagramm beendet wurde. Zur Verbesserung der Leistung werden auch nicht gepufferte überlappende Schreibvorgänge unterstützt und die entsprechende Pufferaushandlung verarbeitet.
 
 > [!Note]  
-> Verwenden Sie zum Schreiben von ASF-Dateien den [WM-ASF-Writer](wm-asf-writer-filter.md) -Filter.
+> Verwenden Sie zum Schreiben von ASF-Dateien den [WM ASF](wm-asf-writer-filter.md) Writer-Filter.
 
  
 
 
 
-|                                          |                                                                                                                                                                                                    |
+| Bezeichnung | Wert |
 |------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Filter Schnittstellen                        | [**Iamfilterfehlflags**](/windows/desktop/api/Strmif/nn-strmif-iamfiltermiscflags), [**ibasefilter**](/windows/desktop/api/Strmif/nn-strmif-ibasefilter), [**ifilesinkfilter**](/windows/desktop/api/Strmif/nn-strmif-ifilesinkfilter), [**IFileSinkFilter2**](/windows/desktop/api/Strmif/nn-strmif-ifilesinkfilter2), **IPersistStream** |
-| Eingabe-PIN-Medientypen                    | MediaType \_ Stream, mediasubtype \_ null                                                                                                                                                              |
-| PIN-Eingabeschnittstellen                     | [**IMemInputPin**](/windows/desktop/api/Strmif/nn-strmif-imeminputpin), [**IPin**](/windows/desktop/api/Strmif/nn-strmif-ipin), [**iqualitycontrol**](/windows/desktop/api/Strmif/nn-strmif-iqualitycontrol), **IStream**                                                                                |
-| Ausgabe-PIN-Medientypen                   | Nicht verfügbar                                                                                                                                                                                     |
-| PIN-Schnittstellen                    | Nicht verfügbar                                                                                                                                                                                     |
-| CLSID Filtern                             | CLSID- \_ FileWriter                                                                                                                                                                                  |
-| CLSID der Eigenschaften Seite                      | Keine Eigenschaften Seite                                                                                                                                                                                   |
+| Filterschnittstellen                        | [**IAMFilterMiscFlags,**](/windows/desktop/api/Strmif/nn-strmif-iamfiltermiscflags) [**IBaseFilter,**](/windows/desktop/api/Strmif/nn-strmif-ibasefilter) [**IFileSinkFilter,**](/windows/desktop/api/Strmif/nn-strmif-ifilesinkfilter) [**IFileSinkFilter2,**](/windows/desktop/api/Strmif/nn-strmif-ifilesinkfilter2) **IPersistStream** |
+| Eingabe-Stecknadelmedientypen                    | \_MEDIATYPE-Stream, MEDIASUBTYPE \_ NULL                                                                                                                                                              |
+| Eingabe-Pin-Schnittstellen                     | [**IMemInputPin,**](/windows/desktop/api/Strmif/nn-strmif-imeminputpin) [**IPin,**](/windows/desktop/api/Strmif/nn-strmif-ipin) [**IQualityControl,**](/windows/desktop/api/Strmif/nn-strmif-iqualitycontrol) **IStream**                                                                                |
+| Medientypen des Ausgabepins                   | Nicht zutreffend                                                                                                                                                                                     |
+| Ausgabe-Pin-Schnittstellen                    | Nicht zutreffend                                                                                                                                                                                     |
+| Filtern von CLSID                             | CLSID \_ FileWriter                                                                                                                                                                                  |
+| Eigenschaftenseite CLSID                      | Keine Eigenschaftenseite                                                                                                                                                                                   |
 | Ausführbare Datei                               | qcap.dll                                                                                                                                                                                           |
-| [Verdienst](merit.md)                       | das Verdienst wird \_ \_ nicht \_ verwendet.                                                                                                                                                                                |
-| [Filter Kategorie](filter-categories.md) | CLSID \_ legacyamfiltercategory                                                                                                                                                                      |
+| [Verdienst](merit.md)                       | NICHT \_ \_ VERWENDEN \_                                                                                                                                                                                |
+| [Filterkategorie](filter-categories.md) | CLSID \_ LegacyAmFilterCategory                                                                                                                                                                      |
 
 
 

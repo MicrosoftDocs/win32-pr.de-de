@@ -1,26 +1,26 @@
 ---
-description: Enumerator für System Geräte
+description: Systemgeräte-Enumerator
 ms.assetid: ea98be7f-580d-4986-bd6b-d254a2c075e8
-title: Enumerator für System Geräte
+title: Systemgeräte-Enumerator
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 731530726048e8b5a19ebc8a7162160740f1f695
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2b80f7157843f11af307e6573abe3c76f30f23e5
+ms.sourcegitcommit: 63753fcfb0afbbe5ec283fb8316e62c2dc950f66
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103865792"
+ms.lasthandoff: 04/22/2021
+ms.locfileid: "107908438"
 ---
-# <a name="system-device-enumerator"></a>Enumerator für System Geräte
+# <a name="system-device-enumerator"></a>Systemgeräte-Enumerator
 
-Der Enumerator für System Geräte listet Filter und Hardware Geräte auf, die auf dem System installiert sind. Anwendungen können diese Komponente verwenden, um Filter und Geräte in einer bestimmten Kategorie zu suchen. Erstellen Sie dieses Objekt durch Aufrufen von **CoCreateInstance**.
+Der Systemgeräte-Enumerator listet Filter und Hardwaregeräte auf, die auf dem System installiert sind. Anwendungen können diese Komponente verwenden, um Filter und Geräte in einer bestimmten Kategorie zu suchen. Erstellen Sie dieses Objekt, indem **Sie CoCreateInstance** aufrufen.
 
 
 
-|                  |                                          |
+| Bezeichnung | Wert |
 |------------------|------------------------------------------|
-| Klassen Bezeichner | CLSID- \_ systemdeviceaufumum                  |
-| Schnittstellen       | [**Ikreatedevenum**](/windows/desktop/api/Strmif/nn-strmif-icreatedevenum) |
+| Klassenbezeichner | CLSID \_ SystemDeviceEnum                  |
+| Schnittstellen       | [**ICreateDevEnum**](/windows/desktop/api/Strmif/nn-strmif-icreatedevenum) |
 
 
 
@@ -33,10 +33,10 @@ Der Enumerator für System Geräte listet Filter und Hardware Geräte auf, die a
 [DirectShow-Objekte](directshow-objects.md)
 </dt> <dt>
 
-[Auflisten von Geräten und Filtern](enumerating-devices-and-filters.md)
+[Aufzählen von Geräten und Filtern](enumerating-devices-and-filters.md)
 </dt> <dt>
 
-[Filter Kategorien](filter-categories.md)
+[Filterkategorien](filter-categories.md)
 </dt> </dl>
 
  

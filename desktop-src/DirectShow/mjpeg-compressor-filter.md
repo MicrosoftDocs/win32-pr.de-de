@@ -1,34 +1,34 @@
 ---
-description: MJPEG-Daemon-Filter
+description: MJPEG-Filter
 ms.assetid: de30a2c4-3e51-4f2b-b3f9-ed78e2d6512d
-title: MJPEG-Daemon-Filter
+title: MJPEG-Filter
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a20c559bb889750959a4868fa08c03b3eb12dfb5
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 02928df4d09b50c0ac152aed99ed87dc6362fb70
+ms.sourcegitcommit: 63753fcfb0afbbe5ec283fb8316e62c2dc950f66
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "106346200"
+ms.lasthandoff: 04/22/2021
+ms.locfileid: "107910008"
 ---
-# <a name="mjpeg-compressor-filter"></a>MJPEG-Daemon-Filter
+# <a name="mjpeg-compressor-filter"></a>MJPEG-Filter
 
-Dieser Filter komprimiert einen nicht komprimierten Videostream mithilfe der Motion JPEG-Komprimierung.
+Dieser Filter komprimiert einen unkomprimierten Videostream mithilfe der JPEG-Komprimierung für Bewegung.
 
 
 
-|                                          |                                                                                                                                                                                                                                                    |
+| Bezeichnung | Wert |
 |------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Filter Schnittstellen                        | [**Ibasefilter**](/windows/desktop/api/Strmif/nn-strmif-ibasefilter), **IPersistStream**                                                                                                                                                                                             |
-| Eingabe-PIN-Medientypen                    | MediaType- \_ Video, mediasubtype \_ null                                                                                                                                                                                                               |
-| PIN-Eingabeschnittstellen                     | [**IMemInputPin**](/windows/desktop/api/Strmif/nn-strmif-imeminputpin), [**IPin**](/windows/desktop/api/Strmif/nn-strmif-ipin), [**iqualitycontrol**](/windows/desktop/api/Strmif/nn-strmif-iqualitycontrol)                                                                                                                                             |
-| Ausgabe-PIN-Medientypen                   | MediaType- \_ Video, mediasubtype \_ mjpg                                                                                                                                                                                                               |
-| PIN-Schnittstellen                    | [**Iamstreamconfig**](/windows/desktop/api/Strmif/nn-strmif-iamstreamconfig), [**IAMVideoCompression**](/windows/desktop/api/Strmif/nn-strmif-iamvideocompression), [**imediaposition**](/windows/desktop/api/Control/nn-control-imediaposition), [**imediaseeking**](/windows/desktop/api/Strmif/nn-strmif-imediaseeking), [**IPin**](/windows/desktop/api/Strmif/nn-strmif-ipin), [**iqualitycontrol**](/windows/desktop/api/Strmif/nn-strmif-iqualitycontrol) |
-| CLSID Filtern                             | CLSID- \_ mjpgenc                                                                                                                                                                                                                                     |
-| CLSID der Eigenschaften Seite                      | Keine Eigenschaften Seite                                                                                                                                                                                                                                   |
+| Filterschnittstellen                        | [**IBaseFilter**](/windows/desktop/api/Strmif/nn-strmif-ibasefilter), **IPersistStream**                                                                                                                                                                                             |
+| Eingabe-Stecknadelmedientypen                    | MEDIATYPE \_ VIDEO, MEDIASUBTYPE \_ NULL                                                                                                                                                                                                               |
+| Eingabe-Pin-Schnittstellen                     | [**IMemInputPin,**](/windows/desktop/api/Strmif/nn-strmif-imeminputpin) [**IPin,**](/windows/desktop/api/Strmif/nn-strmif-ipin) [**IQualityControl**](/windows/desktop/api/Strmif/nn-strmif-iqualitycontrol)                                                                                                                                             |
+| Medientypen des Ausgabepins                   | MEDIATYPE \_ Video, MEDIASUBTYPE \_ MJPG                                                                                                                                                                                                               |
+| Ausgabe-Pin-Schnittstellen                    | [**IAMStreamConfig,**](/windows/desktop/api/Strmif/nn-strmif-iamstreamconfig) [**IAMVideoCompression,**](/windows/desktop/api/Strmif/nn-strmif-iamvideocompression) [**IMediaPosition,**](/windows/desktop/api/Control/nn-control-imediaposition) [**IMediaSeeking,**](/windows/desktop/api/Strmif/nn-strmif-imediaseeking) [**IPin,**](/windows/desktop/api/Strmif/nn-strmif-ipin) [**IQualityControl**](/windows/desktop/api/Strmif/nn-strmif-iqualitycontrol) |
+| Filtern von CLSID                             | CLSID \_ MJPGEnc                                                                                                                                                                                                                                     |
+| CLSID der Eigenschaftenseite                      | Keine Eigenschaftenseite                                                                                                                                                                                                                                   |
 | Ausführbare Datei                               | quartz.dll                                                                                                                                                                                                                                         |
-| [Verdienst](merit.md)                       | das Verdienst wird \_ \_ nicht \_ verwendet.                                                                                                                                                                                                                                |
-| [Filter Kategorie](filter-categories.md) | CLSID \_ videocompressorcategory                                                                                                                                                                                                                     |
+| [Verdienst](merit.md)                       | NICHT \_ \_ VERWENDEN \_                                                                                                                                                                                                                                |
+| [Filterkategorie](filter-categories.md) | CLSID \_ VideoCompressorCategory                                                                                                                                                                                                                     |
 
 
 
@@ -36,7 +36,7 @@ Dieser Filter komprimiert einen nicht komprimierten Videostream mithilfe der Mot
 
 ## <a name="remarks"></a>Bemerkungen
 
-Dieser Filter codiert mithilfe des Medien Untertyps mediasubtype \_ mjpg, der dem FourCC-Code ' mjpg ' entspricht.
+Dieser Filter codiert mithilfe des Medienuntertyps MEDIASUBTYPE MJPG, der dem \_ FOURCC-Code "MJPG" entspricht.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
