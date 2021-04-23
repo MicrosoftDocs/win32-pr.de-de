@@ -1,47 +1,47 @@
 ---
 description: Das Group-Element definiert eine Gruppe, das Objekt der obersten Ebene in einer Zeitachse.
 ms.assetid: db2f1fdd-bcb1-4401-91f4-5e167e4da215
-title: Group-Element (DirectShow)
+title: group-Element (DirectShow)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: fe0b8146586d93a53093a68bb1abc08e85c52f14
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 31502cef89c8383e935f409d76b9e31ca53a2da1
+ms.sourcegitcommit: 63753fcfb0afbbe5ec283fb8316e62c2dc950f66
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "103958068"
+ms.lasthandoff: 04/22/2021
+ms.locfileid: "107909248"
 ---
-# <a name="group-element"></a><span data-ttu-id="6d2f8-103">Group-Element</span><span class="sxs-lookup"><span data-stu-id="6d2f8-103">group Element</span></span>
+# <a name="group-element"></a><span data-ttu-id="f9bbf-103">group-Element</span><span class="sxs-lookup"><span data-stu-id="f9bbf-103">group Element</span></span>
 
 > [!Note]  
-> <span data-ttu-id="6d2f8-104">\[Veraltet.</span><span class="sxs-lookup"><span data-stu-id="6d2f8-104">\[Deprecated.</span></span> <span data-ttu-id="6d2f8-105">Diese API kann aus zukünftigen Versionen von Windows entfernt werden.\]</span><span class="sxs-lookup"><span data-stu-id="6d2f8-105">This API may be removed from future releases of Windows.\]</span></span>
+> <span data-ttu-id="f9bbf-104">\[Veraltet.</span><span class="sxs-lookup"><span data-stu-id="f9bbf-104">\[Deprecated.</span></span> <span data-ttu-id="f9bbf-105">Diese API wird möglicherweise aus zukünftigen Versionen von Windows entfernt.\]</span><span class="sxs-lookup"><span data-stu-id="f9bbf-105">This API may be removed from future releases of Windows.\]</span></span>
 
  
 
-<span data-ttu-id="6d2f8-106">Das **Group** -Element definiert eine Gruppe, das Objekt der obersten Ebene in einer Zeitachse.</span><span class="sxs-lookup"><span data-stu-id="6d2f8-106">The **group** element defines a group, the top-level object in a timeline.</span></span>
+<span data-ttu-id="f9bbf-106">Das **Group-Element** definiert eine Gruppe, das Objekt der obersten Ebene in einer Zeitachse.</span><span class="sxs-lookup"><span data-stu-id="f9bbf-106">The **group** element defines a group, the top-level object in a timeline.</span></span>
 
-## <a name="attributes"></a><span data-ttu-id="6d2f8-107">Attribute</span><span class="sxs-lookup"><span data-stu-id="6d2f8-107">Attributes</span></span>
+## <a name="attributes"></a><span data-ttu-id="f9bbf-107">Attributes</span><span class="sxs-lookup"><span data-stu-id="f9bbf-107">Attributes</span></span>
 
-<span data-ttu-id="6d2f8-108">[**Bittiefe**](bitdepth-attribute.md), [**Pufferung**](buffering-attribute.md), [**Framerate**](framerate-attribute.md), [**height**](height-attribute.md), [**Lock**](lock-attribute.md), [**stumm**](mute-attribute.md), [**Name**](name-attribute.md), [**PreviewMode**](previewmode-attribute.md), [**Samplingrate**](samplingrate-attribute.md), [**Type**](type-attribute.md), [**UserData**](userdata-attribute.md), [**UserID**](userid-attribute.md), [**username**](username-attribute.md), [**Width**](width-attribute.md)</span><span class="sxs-lookup"><span data-stu-id="6d2f8-108">[**bitdepth**](bitdepth-attribute.md), [**buffering**](buffering-attribute.md), [**framerate**](framerate-attribute.md), [**height**](height-attribute.md), [**lock**](lock-attribute.md), [**mute**](mute-attribute.md), [**name**](name-attribute.md), [**previewmode**](previewmode-attribute.md), [**samplingrate**](samplingrate-attribute.md), [**type**](type-attribute.md), [**userdata**](userdata-attribute.md), [**userid**](userid-attribute.md), [**username**](username-attribute.md), [**width**](width-attribute.md)</span></span>
+<span data-ttu-id="f9bbf-108">[**bitdepth**](bitdepth-attribute.md), [**buffering**](buffering-attribute.md), [**framerate**](framerate-attribute.md), [**height**](height-attribute.md), [**lock**](lock-attribute.md), [**mute**](mute-attribute.md), [**name**](name-attribute.md), [**previewmode**](previewmode-attribute.md), [**samplingrate**](samplingrate-attribute.md), [**type**](type-attribute.md), [**userdata**](userdata-attribute.md), [**userid**](userid-attribute.md), [**username**](username-attribute.md), [**width**](width-attribute.md)</span><span class="sxs-lookup"><span data-stu-id="f9bbf-108">[**bitdepth**](bitdepth-attribute.md), [**buffering**](buffering-attribute.md), [**framerate**](framerate-attribute.md), [**height**](height-attribute.md), [**lock**](lock-attribute.md), [**mute**](mute-attribute.md), [**name**](name-attribute.md), [**previewmode**](previewmode-attribute.md), [**samplingrate**](samplingrate-attribute.md), [**type**](type-attribute.md), [**userdata**](userdata-attribute.md), [**userid**](userid-attribute.md), [**username**](username-attribute.md), [**width**](width-attribute.md)</span></span>
 
-## <a name="parentchild-information"></a><span data-ttu-id="6d2f8-109">Über-/unterordnungsinformationen</span><span class="sxs-lookup"><span data-stu-id="6d2f8-109">Parent/Child Information</span></span>
+## <a name="parentchild-information"></a><span data-ttu-id="f9bbf-109">Informationen zu über- und untergeordneten Daten</span><span class="sxs-lookup"><span data-stu-id="f9bbf-109">Parent/Child Information</span></span>
 
 
 
-|          |                                                                                                          |
+| <span data-ttu-id="f9bbf-110">Bezeichnung</span><span class="sxs-lookup"><span data-stu-id="f9bbf-110">Label</span></span> | <span data-ttu-id="f9bbf-111">Wert</span><span class="sxs-lookup"><span data-stu-id="f9bbf-111">Value</span></span> |
 |----------|----------------------------------------------------------------------------------------------------------|
-| <span data-ttu-id="6d2f8-110">Parent</span><span class="sxs-lookup"><span data-stu-id="6d2f8-110">Parent</span></span>   | [<span data-ttu-id="6d2f8-111">**Zeitplan**</span><span class="sxs-lookup"><span data-stu-id="6d2f8-111">**timeline**</span></span>](timeline-element.md)                                                                     |
-| <span data-ttu-id="6d2f8-112">Children</span><span class="sxs-lookup"><span data-stu-id="6d2f8-112">Children</span></span> | <span data-ttu-id="6d2f8-113">zusammen [**gesetzte**](composite-element.md), [**Effekte**](effect-element.md), nach [**Verfolgung**](track-element.md)</span><span class="sxs-lookup"><span data-stu-id="6d2f8-113">[**composite**](composite-element.md), [**effect**](effect-element.md), [**track**](track-element.md)</span></span> |
+| <span data-ttu-id="f9bbf-112">Parent</span><span class="sxs-lookup"><span data-stu-id="f9bbf-112">Parent</span></span>   | [<span data-ttu-id="f9bbf-113">**Zeitachse**</span><span class="sxs-lookup"><span data-stu-id="f9bbf-113">**timeline**</span></span>](timeline-element.md)                                                                     |
+| <span data-ttu-id="f9bbf-114">Children</span><span class="sxs-lookup"><span data-stu-id="f9bbf-114">Children</span></span> | <span data-ttu-id="f9bbf-115">[**composite**](composite-element.md), [**effect**](effect-element.md), [**track**](track-element.md)</span><span class="sxs-lookup"><span data-stu-id="f9bbf-115">[**composite**](composite-element.md), [**effect**](effect-element.md), [**track**](track-element.md)</span></span> |
 
 
 
  
 
-## <a name="remarks"></a><span data-ttu-id="6d2f8-114">Bemerkungen</span><span class="sxs-lookup"><span data-stu-id="6d2f8-114">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="f9bbf-116">Bemerkungen</span><span class="sxs-lookup"><span data-stu-id="f9bbf-116">Remarks</span></span>
 
-<span data-ttu-id="6d2f8-115">Innerhalb eines- `group` Elements wird die Priorität von geschachtelten Ebenen implizit durch die Reihenfolge bestimmt, in der Sie im-Element angezeigt werden.</span><span class="sxs-lookup"><span data-stu-id="6d2f8-115">Within a `group` element, the priority of nested layers is determined implicitly by the order they appear within the element.</span></span> <span data-ttu-id="6d2f8-116">Die erste Ebene hat Priorität 0, und nachfolgende Ebenen haben höhere Prioritätswerte.</span><span class="sxs-lookup"><span data-stu-id="6d2f8-116">The first layer has priority 0, and subsequent layers have increasing priority values.</span></span>
+<span data-ttu-id="f9bbf-117">Innerhalb eines Elements wird die Priorität geschachtelter Ebenen implizit durch die Reihenfolge `group` bestimmt, in der sie im Element angezeigt werden.</span><span class="sxs-lookup"><span data-stu-id="f9bbf-117">Within a `group` element, the priority of nested layers is determined implicitly by the order they appear within the element.</span></span> <span data-ttu-id="f9bbf-118">Die erste Ebene hat Priorität 0, und nachfolgende Ebenen haben höhere Prioritätswerte.</span><span class="sxs-lookup"><span data-stu-id="f9bbf-118">The first layer has priority 0, and subsequent layers have increasing priority values.</span></span>
 
-## <a name="examples"></a><span data-ttu-id="6d2f8-117">Beispiele</span><span class="sxs-lookup"><span data-stu-id="6d2f8-117">Examples</span></span>
+## <a name="examples"></a><span data-ttu-id="f9bbf-119">Beispiele</span><span class="sxs-lookup"><span data-stu-id="f9bbf-119">Examples</span></span>
 
 
 ```XML
@@ -50,11 +50,11 @@ ms.locfileid: "103958068"
 
 
 
-## <a name="see-also"></a><span data-ttu-id="6d2f8-118">Weitere Informationen</span><span class="sxs-lookup"><span data-stu-id="6d2f8-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f9bbf-120">Weitere Informationen</span><span class="sxs-lookup"><span data-stu-id="f9bbf-120">See also</span></span>
 
 <dl> <dt>
 
-[<span data-ttu-id="6d2f8-119">XTL-Elemente</span><span class="sxs-lookup"><span data-stu-id="6d2f8-119">XTL Elements</span></span>](xtl-elements.md)
+[<span data-ttu-id="f9bbf-121">XTL-Elemente</span><span class="sxs-lookup"><span data-stu-id="f9bbf-121">XTL Elements</span></span>](xtl-elements.md)
 </dt> </dl>
 
  

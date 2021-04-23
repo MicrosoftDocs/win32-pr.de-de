@@ -1,25 +1,25 @@
 ---
-description: Wenn der DVD-Navigator-Filter in den Karaoke-Modus wechselt, wird der Audiodecoder über die Eigenschaft "am \_ Eigenschaft \_ dvdkaraoke enable" informiert \_ .
+description: Wenn der FILTER DVD Navigator in den Modus "Dvdoke" wechselt, wird der Audiodecoder über die EIGENSCHAFT AM \_ PROPERTY \_ DVDKARAOKE \_ ENABLE informiert.
 ms.assetid: 78b2998b-d8b3-424d-85bc-872e64eb4a4f
-title: DVD-Karaoke-Eigenschaften Satz (dvdmedia. h)
+title: DVD-Dvd–Dvd-Eigenschaftssatz (Dvdmedia.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 396e9fe53ad35dac0c3c0f54a8e04a6fbe698fc1
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 2918513de06a657436ed99e67f672fe74a113b78
+ms.sourcegitcommit: 63753fcfb0afbbe5ec283fb8316e62c2dc950f66
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371002"
+ms.lasthandoff: 04/22/2021
+ms.locfileid: "107909068"
 ---
-# <a name="dvd-karaoke-property-set"></a><span data-ttu-id="cc8bf-103">DVD-Karaoke-Eigenschaften Satz</span><span class="sxs-lookup"><span data-stu-id="cc8bf-103">DVD Karaoke Property Set</span></span>
+# <a name="dvd-karaoke-property-set"></a><span data-ttu-id="d67db-103">DVD-Eigenschaftssatz "Dvd- UndOke"</span><span class="sxs-lookup"><span data-stu-id="d67db-103">DVD Karaoke Property Set</span></span>
 
-<span data-ttu-id="cc8bf-104">Wenn der [DVD-Navigator](dvd-navigator-filter.md) -Filter in den Karaoke-Modus wechselt, wird der Audiodecoder über die Eigenschaft " **am \_ Eigenschaft \_ dvdkaraoke \_ enable** " informiert.</span><span class="sxs-lookup"><span data-stu-id="cc8bf-104">When the [DVD Navigator](dvd-navigator-filter.md) filter goes into karaoke mode, it informs the audio decoder through the **AM\_PROPERTY\_DVDKARAOKE\_ENABLE** property.</span></span> <span data-ttu-id="cc8bf-105">Der Decoder sollte dann die Audiokanäle 2 bis 5 stumm schalten, bis er vom DVD-Navigator eine **am \_ Eigenschaft \_ dvdkaraoke- \_ Daten** Eigenschaft mit einem Zeiger auf eine [**am \_ dvdkaraokedata**](/previous-versions/windows/desktop/api/dvdmedia/ns-dvdmedia-am_dvdkaraokedata) -Datenstruktur empfängt, die angibt, wie die zusätzlichen Kanäle gemischt werden sollen.</span><span class="sxs-lookup"><span data-stu-id="cc8bf-105">The decoder should then mute audio channels 2 through 5 until it receives from the DVD Navigator an **AM\_PROPERTY\_DVDKARAOKE\_DATA** property with a pointer to an [**AM\_DvdKaraokeData**](/previous-versions/windows/desktop/api/dvdmedia/ns-dvdmedia-am_dvdkaraokedata) data structure indicating how the auxiliary channels are to be mixed.</span></span>
+<span data-ttu-id="d67db-104">Wenn der [FILTER DVD Navigator](dvd-navigator-filter.md) in den Modus "Dvdoke" wechselt, wird der Audiodecoder über die EIGENSCHAFT AM PROPERTY **\_ \_ DVDKARAOKE \_ ENABLE informiert.**</span><span class="sxs-lookup"><span data-stu-id="d67db-104">When the [DVD Navigator](dvd-navigator-filter.md) filter goes into karaoke mode, it informs the audio decoder through the **AM\_PROPERTY\_DVDKARAOKE\_ENABLE** property.</span></span> <span data-ttu-id="d67db-105">Der Decoder sollte dann audio channels 2 bis 5 stummschalten, bis er vom DVD-Navigator eine **AM \_ PROPERTY \_ DVDKARAOKE \_ DATA-Eigenschaft** mit einem Zeiger auf eine [**AM \_ DvdKaraokeData-Datenstruktur**](/previous-versions/windows/desktop/api/dvdmedia/ns-dvdmedia-am_dvdkaraokedata) empfängt, die angibt, wie die Hilfskanäle gemischt werden sollen.</span><span class="sxs-lookup"><span data-stu-id="d67db-105">The decoder should then mute audio channels 2 through 5 until it receives from the DVD Navigator an **AM\_PROPERTY\_DVDKARAOKE\_DATA** property with a pointer to an [**AM\_DvdKaraokeData**](/previous-versions/windows/desktop/api/dvdmedia/ns-dvdmedia-am_dvdkaraokedata) data structure indicating how the auxiliary channels are to be mixed.</span></span>
 
 
 
-|                   |                             |
+| <span data-ttu-id="d67db-106">Bezeichnung</span><span class="sxs-lookup"><span data-stu-id="d67db-106">Label</span></span> | <span data-ttu-id="d67db-107">Wert</span><span class="sxs-lookup"><span data-stu-id="d67db-107">Value</span></span> |
 |-------------------|-----------------------------|
-| <span data-ttu-id="cc8bf-106">Eigenschaftensatz-GUID</span><span class="sxs-lookup"><span data-stu-id="cc8bf-106">Property Set GUID</span></span> | <span data-ttu-id="cc8bf-107">AM \_ kspropabtid \_ dvdkaraoke</span><span class="sxs-lookup"><span data-stu-id="cc8bf-107">AM\_KSPROPSETID\_DvdKaraoke</span></span> |
+| <span data-ttu-id="d67db-108">Eigenschaftensatz-GUID</span><span class="sxs-lookup"><span data-stu-id="d67db-108">Property Set GUID</span></span> | <span data-ttu-id="d67db-109">AM \_ KSPROPSETID \_ DvdKaraoke</span><span class="sxs-lookup"><span data-stu-id="d67db-109">AM\_KSPROPSETID\_DvdKaraoke</span></span> |
 
 
 
@@ -27,30 +27,30 @@ ms.locfileid: "106371002"
 
 
 
-| <span data-ttu-id="cc8bf-108">Eigenschafts-ID</span><span class="sxs-lookup"><span data-stu-id="cc8bf-108">Property ID</span></span>                      | <span data-ttu-id="cc8bf-109">BESCHREIBUNG</span><span class="sxs-lookup"><span data-stu-id="cc8bf-109">Description</span></span>                                                                                                                                                                                                                                                                                                 |
+| <span data-ttu-id="d67db-110">Eigenschafts-ID</span><span class="sxs-lookup"><span data-stu-id="d67db-110">Property ID</span></span>                      | <span data-ttu-id="d67db-111">BESCHREIBUNG</span><span class="sxs-lookup"><span data-stu-id="d67db-111">Description</span></span>                                                                                                                                                                                                                                                                                                 |
 |----------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span data-ttu-id="cc8bf-110">AM- \_ Eigenschaft \_ dvdkaraoke \_ enable</span><span class="sxs-lookup"><span data-stu-id="cc8bf-110">AM\_PROPERTY\_DVDKARAOKE\_ENABLE</span></span> | <span data-ttu-id="cc8bf-111">Boolescher Wert.</span><span class="sxs-lookup"><span data-stu-id="cc8bf-111">BOOLEAN value.</span></span> <span data-ttu-id="cc8bf-112">Der DVD-Navigator sendet dem Decoder eine "am- \_ Eigenschaft \_ dvdkaraoke \_ enable" mit dem Wert " **true** ", um das Karaoke-downmischungs-und " **false** " zu aktivieren.</span><span class="sxs-lookup"><span data-stu-id="cc8bf-112">The DVD Navigator sends the decoder an AM\_PROPERTY\_DVDKARAOKE\_ENABLE with a value of **TRUE** to enable karaoke downmixing or **FALSE** to disable it.</span></span>                                                                                                                                    |
-| <span data-ttu-id="cc8bf-113">AM- \_ Eigenschaft \_ dvdkaraoke- \_ Daten</span><span class="sxs-lookup"><span data-stu-id="cc8bf-113">AM\_PROPERTY\_DVDKARAOKE\_DATA</span></span>   | <span data-ttu-id="cc8bf-114">Der DVD-Navigator sendet dem Decoder eine "am \_ Eigenschaft \_ dvdkaraoke"- \_ Dateneigenschaft mit einem Zeiger auf eine " [**am \_ dvdkaraokedata**](/previous-versions/windows/desktop/api/dvdmedia/ns-dvdmedia-am_dvdkaraokedata) "-Struktur, um die downmischungs Konfiguration zu ändern, d. h. um bestimmte Karaoke-Kanäle ein-oder auszuschalten und Sie an den rechten oder linken Ausgabekanal weiterzuleiten.</span><span class="sxs-lookup"><span data-stu-id="cc8bf-114">The DVD Navigator sends the decoder an AM\_PROPERTY\_DVDKARAOKE\_DATA property with a pointer to an [**AM\_DvdKaraokeData**](/previous-versions/windows/desktop/api/dvdmedia/ns-dvdmedia-am_dvdkaraokedata) structure to change the downmix configuration; that is, to turn certain karaoke channels on or off and direct them to the right or left output channel.</span></span> |
+| <span data-ttu-id="d67db-112">AM \_ PROPERTY \_ DVDKARAOKE \_ ENABLE</span><span class="sxs-lookup"><span data-stu-id="d67db-112">AM\_PROPERTY\_DVDKARAOKE\_ENABLE</span></span> | <span data-ttu-id="d67db-113">BOOLESCHER WERT.</span><span class="sxs-lookup"><span data-stu-id="d67db-113">BOOLEAN value.</span></span> <span data-ttu-id="d67db-114">Der DVD-Navigator sendet dem Decoder eine AM \_ PROPERTY \_ DVDKARAOKE \_ ENABLE-Eigenschaft mit dem Wert **TRUE,** um die Downmixing-Funktion zu aktivieren, oder **FALSE,** um sie zu deaktivieren.</span><span class="sxs-lookup"><span data-stu-id="d67db-114">The DVD Navigator sends the decoder an AM\_PROPERTY\_DVDKARAOKE\_ENABLE with a value of **TRUE** to enable karaoke downmixing or **FALSE** to disable it.</span></span>                                                                                                                                    |
+| <span data-ttu-id="d67db-115">\_AM-EIGENSCHAFT \_ DVDKARAOKE-DATEN \_</span><span class="sxs-lookup"><span data-stu-id="d67db-115">AM\_PROPERTY\_DVDKARAOKE\_DATA</span></span>   | <span data-ttu-id="d67db-116">Der DVD-Navigator sendet dem Decoder eine AM \_ PROPERTY \_ DVDKARAOKE \_ DATA-Eigenschaft mit einem Zeiger auf eine [**AM \_ DvdKaraokeData-Struktur,**](/previous-versions/windows/desktop/api/dvdmedia/ns-dvdmedia-am_dvdkaraokedata) um die Downmixkonfiguration zu ändern, d. h., um bestimmteLaufkanäle ein- oder auszuschalten und an den rechten oder linken Ausgabekanal weiterzuleiten.</span><span class="sxs-lookup"><span data-stu-id="d67db-116">The DVD Navigator sends the decoder an AM\_PROPERTY\_DVDKARAOKE\_DATA property with a pointer to an [**AM\_DvdKaraokeData**](/previous-versions/windows/desktop/api/dvdmedia/ns-dvdmedia-am_dvdkaraokedata) structure to change the downmix configuration; that is, to turn certain karaoke channels on or off and direct them to the right or left output channel.</span></span> |
 
 
 
  
 
-## <a name="requirements"></a><span data-ttu-id="cc8bf-115">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="cc8bf-115">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="d67db-117">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="d67db-117">Requirements</span></span>
 
 
 
-| <span data-ttu-id="cc8bf-116">Anforderung</span><span class="sxs-lookup"><span data-stu-id="cc8bf-116">Requirement</span></span> | <span data-ttu-id="cc8bf-117">Wert</span><span class="sxs-lookup"><span data-stu-id="cc8bf-117">Value</span></span> |
+| <span data-ttu-id="d67db-118">Anforderung</span><span class="sxs-lookup"><span data-stu-id="d67db-118">Requirement</span></span> | <span data-ttu-id="d67db-119">Wert</span><span class="sxs-lookup"><span data-stu-id="d67db-119">Value</span></span> |
 |-------------------|---------------------------------------------------------------------------------------|
-| <span data-ttu-id="cc8bf-118">Header</span><span class="sxs-lookup"><span data-stu-id="cc8bf-118">Header</span></span><br/> | <dl> <span data-ttu-id="cc8bf-119"><dt>Dvdmedia. h</dt></span><span class="sxs-lookup"><span data-stu-id="cc8bf-119"><dt>Dvdmedia.h</dt></span></span> </dl> |
+| <span data-ttu-id="d67db-120">Header</span><span class="sxs-lookup"><span data-stu-id="d67db-120">Header</span></span><br/> | <dl> <span data-ttu-id="d67db-121"><dt>Dvdmedia.h</dt></span><span class="sxs-lookup"><span data-stu-id="d67db-121"><dt>Dvdmedia.h</dt></span></span> </dl> |
 
 
 
-## <a name="see-also"></a><span data-ttu-id="cc8bf-120">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="cc8bf-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d67db-122">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="d67db-122">See also</span></span>
 
 <dl> <dt>
 
-[<span data-ttu-id="cc8bf-121">Eigenschaftensätze</span><span class="sxs-lookup"><span data-stu-id="cc8bf-121">Property Sets</span></span>](property-sets.md)
+[<span data-ttu-id="d67db-123">Eigenschaftensätze</span><span class="sxs-lookup"><span data-stu-id="d67db-123">Property Sets</span></span>](property-sets.md)
 </dt> </dl>
 
  

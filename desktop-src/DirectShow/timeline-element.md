@@ -1,7 +1,7 @@
 ---
-description: Das Timeline-Element definiert die Zeitachse. Dieses Element ist der Stamm Knoten in der XML-Datei.
+description: Das Timeline-Element definiert die Zeitachse. Dieses Element ist der Stammknoten in der XML-Datei.
 ms.assetid: db1da09f-d9b2-43fa-8dec-e3dc11cbfafa
-title: Timeline-Element (Windows. UI. XAML. Media. Animation. h)
+title: timeline-Element (Windows.ui.xaml.media.animation.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,40 +13,40 @@ api_type:
 - HeaderDef
 api_location:
 - windows.ui.xaml.media.animation.h
-ms.openlocfilehash: ebbbbdf80ce750f0354eafa3b692be8ed4c9df35
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 97e87dbbcfbcefb8968f6bbe43e9df94277e3d7a
+ms.sourcegitcommit: 63753fcfb0afbbe5ec283fb8316e62c2dc950f66
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364834"
+ms.lasthandoff: 04/22/2021
+ms.locfileid: "107908798"
 ---
-# <a name="timeline-element"></a><span data-ttu-id="4153a-104">Timeline-Element</span><span class="sxs-lookup"><span data-stu-id="4153a-104">timeline Element</span></span>
+# <a name="timeline-element"></a><span data-ttu-id="89b4f-104">timeline-Element</span><span class="sxs-lookup"><span data-stu-id="89b4f-104">timeline Element</span></span>
 
 > [!Note]  
-> <span data-ttu-id="4153a-105">\[Veraltet.</span><span class="sxs-lookup"><span data-stu-id="4153a-105">\[Deprecated.</span></span> <span data-ttu-id="4153a-106">Diese API kann aus zukünftigen Versionen von Windows entfernt werden.\]</span><span class="sxs-lookup"><span data-stu-id="4153a-106">This API may be removed from future releases of Windows.\]</span></span>
+> <span data-ttu-id="89b4f-105">\[Veraltet.</span><span class="sxs-lookup"><span data-stu-id="89b4f-105">\[Deprecated.</span></span> <span data-ttu-id="89b4f-106">Diese API kann aus zukünftigen Versionen von Windows entfernt werden.\]</span><span class="sxs-lookup"><span data-stu-id="89b4f-106">This API may be removed from future releases of Windows.\]</span></span>
 
  
 
-<span data-ttu-id="4153a-107">Das- `timeline` Element definiert die Zeitachse.</span><span class="sxs-lookup"><span data-stu-id="4153a-107">The `timeline` element defines the timeline.</span></span> <span data-ttu-id="4153a-108">Dieses Element ist der Stamm Knoten in der XML-Datei.</span><span class="sxs-lookup"><span data-stu-id="4153a-108">This element is the root node in the XML file.</span></span>
+<span data-ttu-id="89b4f-107">Das `timeline` -Element definiert die Zeitachse.</span><span class="sxs-lookup"><span data-stu-id="89b4f-107">The `timeline` element defines the timeline.</span></span> <span data-ttu-id="89b4f-108">Dieses Element ist der Stammknoten in der XML-Datei.</span><span class="sxs-lookup"><span data-stu-id="89b4f-108">This element is the root node in the XML file.</span></span>
 
-## <a name="attributes"></a><span data-ttu-id="4153a-109">Attribute</span><span class="sxs-lookup"><span data-stu-id="4153a-109">Attributes</span></span>
+## <a name="attributes"></a><span data-ttu-id="89b4f-109">Attributes</span><span class="sxs-lookup"><span data-stu-id="89b4f-109">Attributes</span></span>
 
-<span data-ttu-id="4153a-110">[**defaultfx**](defaultfx-attribute.md), [**defaulttrans**](defaulttrans-attribute.md), [**enablefx**](enablefx-attribute.md), [**enabletrans**](enabletrans-attribute.md), [**Framerate**](framerate-attribute.md)</span><span class="sxs-lookup"><span data-stu-id="4153a-110">[**defaultfx**](defaultfx-attribute.md), [**defaulttrans**](defaulttrans-attribute.md), [**enablefx**](enablefx-attribute.md), [**enabletrans**](enabletrans-attribute.md), [**framerate**](framerate-attribute.md)</span></span>
+<span data-ttu-id="89b4f-110">[**defaultfx**](defaultfx-attribute.md), [**defaulttrans**](defaulttrans-attribute.md), [**enablefx**](enablefx-attribute.md), [**enabletrans**](enabletrans-attribute.md), [**framerate**](framerate-attribute.md)</span><span class="sxs-lookup"><span data-stu-id="89b4f-110">[**defaultfx**](defaultfx-attribute.md), [**defaulttrans**](defaulttrans-attribute.md), [**enablefx**](enablefx-attribute.md), [**enabletrans**](enabletrans-attribute.md), [**framerate**](framerate-attribute.md)</span></span>
 
-## <a name="parentchild-information"></a><span data-ttu-id="4153a-111">Über-/unterordnungsinformationen</span><span class="sxs-lookup"><span data-stu-id="4153a-111">Parent/Child Information</span></span>
+## <a name="parentchild-information"></a><span data-ttu-id="89b4f-111">Informationen zu über- und untergeordneten Daten</span><span class="sxs-lookup"><span data-stu-id="89b4f-111">Parent/Child Information</span></span>
 
 
 
-|          |                                                       |
+| <span data-ttu-id="89b4f-112">Bezeichnung</span><span class="sxs-lookup"><span data-stu-id="89b4f-112">Label</span></span> | <span data-ttu-id="89b4f-113">Wert</span><span class="sxs-lookup"><span data-stu-id="89b4f-113">Value</span></span> |
 |----------|-------------------------------------------------------|
-| <span data-ttu-id="4153a-112">Parent</span><span class="sxs-lookup"><span data-stu-id="4153a-112">Parent</span></span>   | <span data-ttu-id="4153a-113">Keine.</span><span class="sxs-lookup"><span data-stu-id="4153a-113">None.</span></span> <span data-ttu-id="4153a-114">Dieses Element muss der Stamm Knoten in der Datei sein.</span><span class="sxs-lookup"><span data-stu-id="4153a-114">This element must be the root node in the file.</span></span> |
-| <span data-ttu-id="4153a-115">Children</span><span class="sxs-lookup"><span data-stu-id="4153a-115">Children</span></span> | [<span data-ttu-id="4153a-116">**Kreis**</span><span class="sxs-lookup"><span data-stu-id="4153a-116">**group**</span></span>](group-element.md)                        |
+| <span data-ttu-id="89b4f-114">Parent</span><span class="sxs-lookup"><span data-stu-id="89b4f-114">Parent</span></span>   | <span data-ttu-id="89b4f-115">Keine.</span><span class="sxs-lookup"><span data-stu-id="89b4f-115">None.</span></span> <span data-ttu-id="89b4f-116">Dieses Element muss der Stammknoten in der Datei sein.</span><span class="sxs-lookup"><span data-stu-id="89b4f-116">This element must be the root node in the file.</span></span> |
+| <span data-ttu-id="89b4f-117">Children</span><span class="sxs-lookup"><span data-stu-id="89b4f-117">Children</span></span> | [<span data-ttu-id="89b4f-118">**Gruppe**</span><span class="sxs-lookup"><span data-stu-id="89b4f-118">**group**</span></span>](group-element.md)                        |
 
 
 
  
 
-## <a name="examples"></a><span data-ttu-id="4153a-117">Beispiele</span><span class="sxs-lookup"><span data-stu-id="4153a-117">Examples</span></span>
+## <a name="examples"></a><span data-ttu-id="89b4f-119">Beispiele</span><span class="sxs-lookup"><span data-stu-id="89b4f-119">Examples</span></span>
 
 
 ```XML
@@ -55,21 +55,21 @@ ms.locfileid: "106364834"
 
 
 
-## <a name="requirements"></a><span data-ttu-id="4153a-118">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="4153a-118">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="89b4f-120">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="89b4f-120">Requirements</span></span>
 
 
 
-| <span data-ttu-id="4153a-119">Anforderung</span><span class="sxs-lookup"><span data-stu-id="4153a-119">Requirement</span></span> | <span data-ttu-id="4153a-120">Wert</span><span class="sxs-lookup"><span data-stu-id="4153a-120">Value</span></span> |
+| <span data-ttu-id="89b4f-121">Anforderung</span><span class="sxs-lookup"><span data-stu-id="89b4f-121">Requirement</span></span> | <span data-ttu-id="89b4f-122">Wert</span><span class="sxs-lookup"><span data-stu-id="89b4f-122">Value</span></span> |
 |-------------------|--------------------------------------------------------------------------------------------------------------|
-| <span data-ttu-id="4153a-121">Header</span><span class="sxs-lookup"><span data-stu-id="4153a-121">Header</span></span><br/> | <dl> <span data-ttu-id="4153a-122"><dt>Windows. UI. XAML. Media. Animation. h</dt></span><span class="sxs-lookup"><span data-stu-id="4153a-122"><dt>Windows.ui.xaml.media.animation.h</dt></span></span> </dl> |
+| <span data-ttu-id="89b4f-123">Header</span><span class="sxs-lookup"><span data-stu-id="89b4f-123">Header</span></span><br/> | <dl> <span data-ttu-id="89b4f-124"><dt>Windows.ui.xaml.media.animation.h</dt></span><span class="sxs-lookup"><span data-stu-id="89b4f-124"><dt>Windows.ui.xaml.media.animation.h</dt></span></span> </dl> |
 
 
 
-## <a name="see-also"></a><span data-ttu-id="4153a-123">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="4153a-123">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="89b4f-125">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="89b4f-125">See also</span></span>
 
 <dl> <dt>
 
-[<span data-ttu-id="4153a-124">XTL-Elemente</span><span class="sxs-lookup"><span data-stu-id="4153a-124">XTL Elements</span></span>](xtl-elements.md)
+[<span data-ttu-id="89b4f-126">XTL-Elemente</span><span class="sxs-lookup"><span data-stu-id="89b4f-126">XTL Elements</span></span>](xtl-elements.md)
 </dt> </dl>
 
  

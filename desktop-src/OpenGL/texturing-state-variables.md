@@ -1,9 +1,9 @@
 ---
-title: Texturierungsstatusvariablen
-description: Texturierungsstatusvariablen
+title: Texturieren von Zustandsvariablen
+description: Texturieren von Zustandsvariablen
 ms.assetid: 2d9d3d8b-ecaa-412c-8105-ae2ca801784e
 keywords:
-- Texturing-Zustandsvariablen OpenGL
+- Texturierungszustandsvariablen OpenGL
 topic_type:
 - apiref
 api_name:
@@ -12,228 +12,228 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 73a9894e9f3723cca957fdeeb2882ede8f689ee7
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: ff468c701100cc598a519ed3aa290913016a559e
+ms.sourcegitcommit: 63753fcfb0afbbe5ec283fb8316e62c2dc950f66
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "106342316"
+ms.lasthandoff: 04/22/2021
+ms.locfileid: "107908648"
 ---
-# <a name="texturing-state-variables"></a><span data-ttu-id="dd791-104">Texturierungsstatusvariablen</span><span class="sxs-lookup"><span data-stu-id="dd791-104">Texturing State Variables</span></span>
+# <a name="texturing-state-variables"></a><span data-ttu-id="ca989-104">Texturieren von Zustandsvariablen</span><span class="sxs-lookup"><span data-stu-id="ca989-104">Texturing State Variables</span></span>
 
-<dl> <span data-ttu-id="dd791-105"><dt><span id="GL_TEXTURE_x"></span><span id="gl_texture_x"></span><span id="GL_TEXTURE_X"></span>GL \_ Textur \_ *x*</dt> </span><span class="sxs-lookup"><span data-stu-id="dd791-105"><dt><span id="GL_TEXTURE_x"></span><span id="gl_texture_x"></span><span id="GL_TEXTURE_X"></span>GL\_TEXTURE\_*x*</dt> </span></span><dd> 
+<dl> <span data-ttu-id="ca989-105"><dt><span id="GL_TEXTURE_x"></span><span id="gl_texture_x"></span><span id="GL_TEXTURE_X"></span>GL \_ TEXTURE \_ *x*</dt> </span><span class="sxs-lookup"><span data-stu-id="ca989-105"><dt><span id="GL_TEXTURE_x"></span><span id="gl_texture_x"></span><span id="GL_TEXTURE_X"></span>GL\_TEXTURE\_*x*</dt> </span></span><dd> 
 
-|                  |                                                       |
+| <span data-ttu-id="ca989-106">Eigenschaft</span><span class="sxs-lookup"><span data-stu-id="ca989-106">Property</span></span> | <span data-ttu-id="ca989-107">Wert</span><span class="sxs-lookup"><span data-stu-id="ca989-107">Value</span></span> |
 |------------------|-------------------------------------------------------|
-| <span data-ttu-id="dd791-106">Beschreibung:</span><span class="sxs-lookup"><span data-stu-id="dd791-106">Description:</span></span>     | <span data-ttu-id="dd791-107">True, wenn die *x*   -D-Texturierung aktiviert ist (*x* ist 1-d oder 2D).</span><span class="sxs-lookup"><span data-stu-id="dd791-107">True if *x* - D texturing enabled (*x* is 1-D or 2-D)</span></span> |
-| <span data-ttu-id="dd791-108">Attribut Gruppe:</span><span class="sxs-lookup"><span data-stu-id="dd791-108">Attribute group:</span></span> | <span data-ttu-id="dd791-109">Textur/aktivieren</span><span class="sxs-lookup"><span data-stu-id="dd791-109">texture/enable</span></span>                                        |
-| <span data-ttu-id="dd791-110">Anfangswert:</span><span class="sxs-lookup"><span data-stu-id="dd791-110">Initial value:</span></span>   | <span data-ttu-id="dd791-111">GL \_ false</span><span class="sxs-lookup"><span data-stu-id="dd791-111">GL\_FALSE</span></span>                                             |
-| <span data-ttu-id="dd791-112">Get-Befehl:</span><span class="sxs-lookup"><span data-stu-id="dd791-112">Get command:</span></span>     | [<span data-ttu-id="dd791-113">**glisenabled**</span><span class="sxs-lookup"><span data-stu-id="dd791-113">**glIsEnabled**</span></span>](glisenabled.md)                    |
+| <span data-ttu-id="ca989-108">Beschreibung:</span><span class="sxs-lookup"><span data-stu-id="ca989-108">Description:</span></span>     | <span data-ttu-id="ca989-109">True, wenn *x* – D Texturierung aktiviert ist (*x* ist 1D oder 2D)</span><span class="sxs-lookup"><span data-stu-id="ca989-109">True if *x* - D texturing enabled (*x* is 1-D or 2-D)</span></span> |
+| <span data-ttu-id="ca989-110">Attributgruppe:</span><span class="sxs-lookup"><span data-stu-id="ca989-110">Attribute group:</span></span> | <span data-ttu-id="ca989-111">textur/enable</span><span class="sxs-lookup"><span data-stu-id="ca989-111">texture/enable</span></span>                                        |
+| <span data-ttu-id="ca989-112">Anfangswert:</span><span class="sxs-lookup"><span data-stu-id="ca989-112">Initial value:</span></span>   | <span data-ttu-id="ca989-113">GL \_ FALSE</span><span class="sxs-lookup"><span data-stu-id="ca989-113">GL\_FALSE</span></span>                                             |
+| <span data-ttu-id="ca989-114">Get-Befehl:</span><span class="sxs-lookup"><span data-stu-id="ca989-114">Get command:</span></span>     | [<span data-ttu-id="ca989-115">**glIsEnabled**</span><span class="sxs-lookup"><span data-stu-id="ca989-115">**glIsEnabled**</span></span>](glisenabled.md)                    |
 
 
 
- 
+ 
 
-<span data-ttu-id="dd791-114"></dd> <dt><span id="GL_TEXTURE"></span><span id="gl_texture"></span>GL- \_ Textur</dt> </span><span class="sxs-lookup"><span data-stu-id="dd791-114"></dd> <dt><span id="GL_TEXTURE"></span><span id="gl_texture"></span>GL\_TEXTURE</dt> </span></span><dd> 
+<span data-ttu-id="ca989-116"></dd> <dt><span id="GL_TEXTURE"></span><span id="gl_texture"></span>GL \_ TEXTURE</dt> </span><span class="sxs-lookup"><span data-stu-id="ca989-116"></dd> <dt><span id="GL_TEXTURE"></span><span id="gl_texture"></span>GL\_TEXTURE</dt> </span></span><dd> 
 
-|                  |                                              |
+| <span data-ttu-id="ca989-117">Eigenschaft</span><span class="sxs-lookup"><span data-stu-id="ca989-117">Property</span></span> | <span data-ttu-id="ca989-118">Wert</span><span class="sxs-lookup"><span data-stu-id="ca989-118">Value</span></span> |
 |------------------|----------------------------------------------|
-| <span data-ttu-id="dd791-115">Beschreibung:</span><span class="sxs-lookup"><span data-stu-id="dd791-115">Description:</span></span>     | <span data-ttu-id="dd791-116">*x*   -D Textur Bild auf Detailebene *i*</span><span class="sxs-lookup"><span data-stu-id="dd791-116">*x* - D texture image at level of detail *i*</span></span> |
-| <span data-ttu-id="dd791-117">Attribut Gruppe:</span><span class="sxs-lookup"><span data-stu-id="dd791-117">Attribute group:</span></span> |                                              |
-| <span data-ttu-id="dd791-118">Anfangswert:</span><span class="sxs-lookup"><span data-stu-id="dd791-118">Initial value:</span></span>   |                                              |
-| <span data-ttu-id="dd791-119">Get-Befehl:</span><span class="sxs-lookup"><span data-stu-id="dd791-119">Get command:</span></span>     | [<span data-ttu-id="dd791-120">**glgetteximage**</span><span class="sxs-lookup"><span data-stu-id="dd791-120">**glGetTexImage**</span></span>](glgetteximage.md)       |
+| <span data-ttu-id="ca989-119">Beschreibung:</span><span class="sxs-lookup"><span data-stu-id="ca989-119">Description:</span></span>     | <span data-ttu-id="ca989-120">*x* – D Texturbild auf Detailebene *i*</span><span class="sxs-lookup"><span data-stu-id="ca989-120">*x* - D texture image at level of detail *i*</span></span> |
+| <span data-ttu-id="ca989-121">Attributgruppe:</span><span class="sxs-lookup"><span data-stu-id="ca989-121">Attribute group:</span></span> |                                              |
+| <span data-ttu-id="ca989-122">Anfangswert:</span><span class="sxs-lookup"><span data-stu-id="ca989-122">Initial value:</span></span>   |                                              |
+| <span data-ttu-id="ca989-123">Get-Befehl:</span><span class="sxs-lookup"><span data-stu-id="ca989-123">Get command:</span></span>     | [<span data-ttu-id="ca989-124">**glGetTexImage**</span><span class="sxs-lookup"><span data-stu-id="ca989-124">**glGetTexImage**</span></span>](glgetteximage.md)       |
 
 
 
- 
+ 
 
-<span data-ttu-id="dd791-121"></dd> <dt><span id="GL_TEXTURE_WIDTH"></span><span id="gl_texture_width"></span>GL- \_ Textur \_ Breite</dt> </span><span class="sxs-lookup"><span data-stu-id="dd791-121"></dd> <dt><span id="GL_TEXTURE_WIDTH"></span><span id="gl_texture_width"></span>GL\_TEXTURE\_WIDTH</dt> </span></span><dd> 
+<span data-ttu-id="ca989-125"></dd> <dt><span id="GL_TEXTURE_WIDTH"></span><span id="gl_texture_width"></span>GL \_ TEXTURE \_ WIDTH</dt> </span><span class="sxs-lookup"><span data-stu-id="ca989-125"></dd> <dt><span id="GL_TEXTURE_WIDTH"></span><span id="gl_texture_width"></span>GL\_TEXTURE\_WIDTH</dt> </span></span><dd> 
 
-|                  |                                                          |
+| <span data-ttu-id="ca989-126">Eigenschaft</span><span class="sxs-lookup"><span data-stu-id="ca989-126">Property</span></span> | <span data-ttu-id="ca989-127">Wert</span><span class="sxs-lookup"><span data-stu-id="ca989-127">Value</span></span> |
 |------------------|----------------------------------------------------------|
-| <span data-ttu-id="dd791-122">Beschreibung:</span><span class="sxs-lookup"><span data-stu-id="dd791-122">Description:</span></span>     | <span data-ttu-id="dd791-123">*x*   -D *Textur Bild*   Breite</span><span class="sxs-lookup"><span data-stu-id="dd791-123">*x* - D texture image *i* 's width</span></span>                       |
-| <span data-ttu-id="dd791-124">Attribut Gruppe:</span><span class="sxs-lookup"><span data-stu-id="dd791-124">Attribute group:</span></span> |                                                          |
-| <span data-ttu-id="dd791-125">Anfangswert:</span><span class="sxs-lookup"><span data-stu-id="dd791-125">Initial value:</span></span>   | <span data-ttu-id="dd791-126">0</span><span class="sxs-lookup"><span data-stu-id="dd791-126">0</span></span>                                                        |
-| <span data-ttu-id="dd791-127">Get-Befehl:</span><span class="sxs-lookup"><span data-stu-id="dd791-127">Get command:</span></span>     | [<span data-ttu-id="dd791-128">**glgettexlevelparameter**</span><span class="sxs-lookup"><span data-stu-id="dd791-128">**glGetTexLevelParameter**</span></span>](glgettexlevelparameter.md) |
+| <span data-ttu-id="ca989-128">Beschreibung:</span><span class="sxs-lookup"><span data-stu-id="ca989-128">Description:</span></span>     | <span data-ttu-id="ca989-129">*x* – D Texturbild *i* es width</span><span class="sxs-lookup"><span data-stu-id="ca989-129">*x* - D texture image *i* 's width</span></span>                       |
+| <span data-ttu-id="ca989-130">Attributgruppe:</span><span class="sxs-lookup"><span data-stu-id="ca989-130">Attribute group:</span></span> |                                                          |
+| <span data-ttu-id="ca989-131">Anfangswert:</span><span class="sxs-lookup"><span data-stu-id="ca989-131">Initial value:</span></span>   | <span data-ttu-id="ca989-132">0</span><span class="sxs-lookup"><span data-stu-id="ca989-132">0</span></span>                                                        |
+| <span data-ttu-id="ca989-133">Get-Befehl:</span><span class="sxs-lookup"><span data-stu-id="ca989-133">Get command:</span></span>     | [<span data-ttu-id="ca989-134">**glGetTexLevelParameter**</span><span class="sxs-lookup"><span data-stu-id="ca989-134">**glGetTexLevelParameter**</span></span>](glgettexlevelparameter.md) |
 
 
 
- 
+ 
 
-<span data-ttu-id="dd791-129"></dd> <dt><span id="GL_TEXTURE_HEIGHT"></span><span id="gl_texture_height"></span>GL- \_ Textur \_ Höhe</dt> </span><span class="sxs-lookup"><span data-stu-id="dd791-129"></dd> <dt><span id="GL_TEXTURE_HEIGHT"></span><span id="gl_texture_height"></span>GL\_TEXTURE\_HEIGHT</dt> </span></span><dd> 
+<span data-ttu-id="ca989-135"></dd> <dt><span id="GL_TEXTURE_HEIGHT"></span><span id="gl_texture_height"></span>GL \_ \_ TEXTURHÖHE</dt> </span><span class="sxs-lookup"><span data-stu-id="ca989-135"></dd> <dt><span id="GL_TEXTURE_HEIGHT"></span><span id="gl_texture_height"></span>GL\_TEXTURE\_HEIGHT</dt> </span></span><dd> 
 
-|                  |                                                          |
+| <span data-ttu-id="ca989-136">Eigenschaft</span><span class="sxs-lookup"><span data-stu-id="ca989-136">Property</span></span> | <span data-ttu-id="ca989-137">Wert</span><span class="sxs-lookup"><span data-stu-id="ca989-137">Value</span></span> |
 |------------------|----------------------------------------------------------|
-| <span data-ttu-id="dd791-130">Beschreibung:</span><span class="sxs-lookup"><span data-stu-id="dd791-130">Description:</span></span>     | <span data-ttu-id="dd791-131">*x*   -D *Textur Bild meine*   Höhe</span><span class="sxs-lookup"><span data-stu-id="dd791-131">*x* - D texture image *i* 's height</span></span>                      |
-| <span data-ttu-id="dd791-132">Attribut Gruppe:</span><span class="sxs-lookup"><span data-stu-id="dd791-132">Attribute group:</span></span> |                                                          |
-| <span data-ttu-id="dd791-133">Anfangswert:</span><span class="sxs-lookup"><span data-stu-id="dd791-133">Initial value:</span></span>   | <span data-ttu-id="dd791-134">0</span><span class="sxs-lookup"><span data-stu-id="dd791-134">0</span></span>                                                        |
-| <span data-ttu-id="dd791-135">Get-Befehl:</span><span class="sxs-lookup"><span data-stu-id="dd791-135">Get command:</span></span>     | [<span data-ttu-id="dd791-136">**glgettexlevelparameter**</span><span class="sxs-lookup"><span data-stu-id="dd791-136">**glGetTexLevelParameter**</span></span>](glgettexlevelparameter.md) |
+| <span data-ttu-id="ca989-138">Beschreibung:</span><span class="sxs-lookup"><span data-stu-id="ca989-138">Description:</span></span>     | <span data-ttu-id="ca989-139">*x* – D Texturbild *i* es height</span><span class="sxs-lookup"><span data-stu-id="ca989-139">*x* - D texture image *i* 's height</span></span>                      |
+| <span data-ttu-id="ca989-140">Attributgruppe:</span><span class="sxs-lookup"><span data-stu-id="ca989-140">Attribute group:</span></span> |                                                          |
+| <span data-ttu-id="ca989-141">Anfangswert:</span><span class="sxs-lookup"><span data-stu-id="ca989-141">Initial value:</span></span>   | <span data-ttu-id="ca989-142">0</span><span class="sxs-lookup"><span data-stu-id="ca989-142">0</span></span>                                                        |
+| <span data-ttu-id="ca989-143">Get-Befehl:</span><span class="sxs-lookup"><span data-stu-id="ca989-143">Get command:</span></span>     | [<span data-ttu-id="ca989-144">**glGetTexLevelParameter**</span><span class="sxs-lookup"><span data-stu-id="ca989-144">**glGetTexLevelParameter**</span></span>](glgettexlevelparameter.md) |
 
 
 
- 
+ 
 
-<span data-ttu-id="dd791-137"></dd> <dt><span id="GL_TEXTURE_BORDER"></span><span id="gl_texture_border"></span>GL- \_ Textur Rahmen \_</dt> </span><span class="sxs-lookup"><span data-stu-id="dd791-137"></dd> <dt><span id="GL_TEXTURE_BORDER"></span><span id="gl_texture_border"></span>GL\_TEXTURE\_BORDER</dt> </span></span><dd> 
+<span data-ttu-id="ca989-145"></dd> <dt><span id="GL_TEXTURE_BORDER"></span><span id="gl_texture_border"></span>GL \_ TEXTURE \_ BORDER</dt> </span><span class="sxs-lookup"><span data-stu-id="ca989-145"></dd> <dt><span id="GL_TEXTURE_BORDER"></span><span id="gl_texture_border"></span>GL\_TEXTURE\_BORDER</dt> </span></span><dd> 
 
-|                  |                                                          |
+| <span data-ttu-id="ca989-146">Eigenschaft</span><span class="sxs-lookup"><span data-stu-id="ca989-146">Property</span></span> | <span data-ttu-id="ca989-147">Wert</span><span class="sxs-lookup"><span data-stu-id="ca989-147">Value</span></span> |
 |------------------|----------------------------------------------------------|
-| <span data-ttu-id="dd791-138">Beschreibung:</span><span class="sxs-lookup"><span data-stu-id="dd791-138">Description:</span></span>     | <span data-ttu-id="dd791-139">*x*   -D Textur Bild *i* Rahmen  </span><span class="sxs-lookup"><span data-stu-id="dd791-139">*x* - D texture image *i* 's border</span></span>                      |
-| <span data-ttu-id="dd791-140">Attribut Gruppe:</span><span class="sxs-lookup"><span data-stu-id="dd791-140">Attribute group:</span></span> |                                                          |
-| <span data-ttu-id="dd791-141">Anfangswert:</span><span class="sxs-lookup"><span data-stu-id="dd791-141">Initial value:</span></span>   | <span data-ttu-id="dd791-142">0</span><span class="sxs-lookup"><span data-stu-id="dd791-142">0</span></span>                                                        |
-| <span data-ttu-id="dd791-143">Get-Befehl:</span><span class="sxs-lookup"><span data-stu-id="dd791-143">Get command:</span></span>     | [<span data-ttu-id="dd791-144">**glgettexlevelparameter**</span><span class="sxs-lookup"><span data-stu-id="dd791-144">**glGetTexLevelParameter**</span></span>](glgettexlevelparameter.md) |
+| <span data-ttu-id="ca989-148">Beschreibung:</span><span class="sxs-lookup"><span data-stu-id="ca989-148">Description:</span></span>     | <span data-ttu-id="ca989-149">*x* – D Texturbild *i* es border</span><span class="sxs-lookup"><span data-stu-id="ca989-149">*x* - D texture image *i* 's border</span></span>                      |
+| <span data-ttu-id="ca989-150">Attributgruppe:</span><span class="sxs-lookup"><span data-stu-id="ca989-150">Attribute group:</span></span> |                                                          |
+| <span data-ttu-id="ca989-151">Anfangswert:</span><span class="sxs-lookup"><span data-stu-id="ca989-151">Initial value:</span></span>   | <span data-ttu-id="ca989-152">0</span><span class="sxs-lookup"><span data-stu-id="ca989-152">0</span></span>                                                        |
+| <span data-ttu-id="ca989-153">Get-Befehl:</span><span class="sxs-lookup"><span data-stu-id="ca989-153">Get command:</span></span>     | [<span data-ttu-id="ca989-154">**glGetTexLevelParameter**</span><span class="sxs-lookup"><span data-stu-id="ca989-154">**glGetTexLevelParameter**</span></span>](glgettexlevelparameter.md) |
 
 
 
- 
+ 
 
-<span data-ttu-id="dd791-145"></dd> <dt><span id="GL_TEXTURE_COMPONENTS"></span><span id="gl_texture_components"></span>GL- \_ Textur \_ Komponenten</dt> </span><span class="sxs-lookup"><span data-stu-id="dd791-145"></dd> <dt><span id="GL_TEXTURE_COMPONENTS"></span><span id="gl_texture_components"></span>GL\_TEXTURE\_COMPONENTS</dt> </span></span><dd> 
+<span data-ttu-id="ca989-155"></dd> <dt><span id="GL_TEXTURE_COMPONENTS"></span><span id="gl_texture_components"></span>\_ \_ GL-TEXTURKOMPONENTEN</dt> </span><span class="sxs-lookup"><span data-stu-id="ca989-155"></dd> <dt><span id="GL_TEXTURE_COMPONENTS"></span><span id="gl_texture_components"></span>GL\_TEXTURE\_COMPONENTS</dt> </span></span><dd> 
 
-|                  |                                                          |
+| <span data-ttu-id="ca989-156">Eigenschaft</span><span class="sxs-lookup"><span data-stu-id="ca989-156">Property</span></span> | <span data-ttu-id="ca989-157">Wert</span><span class="sxs-lookup"><span data-stu-id="ca989-157">Value</span></span> |
 |------------------|----------------------------------------------------------|
-| <span data-ttu-id="dd791-146">Beschreibung:</span><span class="sxs-lookup"><span data-stu-id="dd791-146">Description:</span></span>     | <span data-ttu-id="dd791-147">Textur Bild Komponenten</span><span class="sxs-lookup"><span data-stu-id="dd791-147">Texture image components</span></span>                                 |
-| <span data-ttu-id="dd791-148">Attribut Gruppe:</span><span class="sxs-lookup"><span data-stu-id="dd791-148">Attribute group:</span></span> |                                                          |
-| <span data-ttu-id="dd791-149">Anfangswert:</span><span class="sxs-lookup"><span data-stu-id="dd791-149">Initial value:</span></span>   | <span data-ttu-id="dd791-150">1</span><span class="sxs-lookup"><span data-stu-id="dd791-150">1</span></span>                                                        |
-| <span data-ttu-id="dd791-151">Get-Befehl:</span><span class="sxs-lookup"><span data-stu-id="dd791-151">Get command:</span></span>     | [<span data-ttu-id="dd791-152">**glgettexlevelparameter**</span><span class="sxs-lookup"><span data-stu-id="dd791-152">**glGetTexLevelParameter**</span></span>](glgettexlevelparameter.md) |
+| <span data-ttu-id="ca989-158">Beschreibung:</span><span class="sxs-lookup"><span data-stu-id="ca989-158">Description:</span></span>     | <span data-ttu-id="ca989-159">Texturbildkomponenten</span><span class="sxs-lookup"><span data-stu-id="ca989-159">Texture image components</span></span>                                 |
+| <span data-ttu-id="ca989-160">Attributgruppe:</span><span class="sxs-lookup"><span data-stu-id="ca989-160">Attribute group:</span></span> |                                                          |
+| <span data-ttu-id="ca989-161">Anfangswert:</span><span class="sxs-lookup"><span data-stu-id="ca989-161">Initial value:</span></span>   | <span data-ttu-id="ca989-162">1</span><span class="sxs-lookup"><span data-stu-id="ca989-162">1</span></span>                                                        |
+| <span data-ttu-id="ca989-163">Get-Befehl:</span><span class="sxs-lookup"><span data-stu-id="ca989-163">Get command:</span></span>     | [<span data-ttu-id="ca989-164">**glGetTexLevelParameter**</span><span class="sxs-lookup"><span data-stu-id="ca989-164">**glGetTexLevelParameter**</span></span>](glgettexlevelparameter.md) |
 
 
 
- 
+ 
 
-<span data-ttu-id="dd791-153"></dd> <dt><span id="GL_TEXTURE_BORDER_COLOR"></span><span id="gl_texture_border_color"></span>Rahmenfarbe des GL- \_ Textur Rahmens \_ \_</dt> </span><span class="sxs-lookup"><span data-stu-id="dd791-153"></dd> <dt><span id="GL_TEXTURE_BORDER_COLOR"></span><span id="gl_texture_border_color"></span>GL\_TEXTURE\_BORDER\_COLOR</dt> </span></span><dd> 
+<span data-ttu-id="ca989-165"></dd> <dt><span id="GL_TEXTURE_BORDER_COLOR"></span><span id="gl_texture_border_color"></span>GL \_ TEXTURE \_ BORDER \_ COLOR</dt> </span><span class="sxs-lookup"><span data-stu-id="ca989-165"></dd> <dt><span id="GL_TEXTURE_BORDER_COLOR"></span><span id="gl_texture_border_color"></span>GL\_TEXTURE\_BORDER\_COLOR</dt> </span></span><dd> 
 
-|                  |                                                |
+| <span data-ttu-id="ca989-166">Eigenschaft</span><span class="sxs-lookup"><span data-stu-id="ca989-166">Property</span></span> | <span data-ttu-id="ca989-167">Wert</span><span class="sxs-lookup"><span data-stu-id="ca989-167">Value</span></span> |
 |------------------|------------------------------------------------|
-| <span data-ttu-id="dd791-154">Beschreibung:</span><span class="sxs-lookup"><span data-stu-id="dd791-154">Description:</span></span>     | <span data-ttu-id="dd791-155">Textur Rahmenfarbe</span><span class="sxs-lookup"><span data-stu-id="dd791-155">Texture border color</span></span>                           |
-| <span data-ttu-id="dd791-156">Attribut Gruppe:</span><span class="sxs-lookup"><span data-stu-id="dd791-156">Attribute group:</span></span> | <span data-ttu-id="dd791-157">Struktur</span><span class="sxs-lookup"><span data-stu-id="dd791-157">texture</span></span>                                        |
-| <span data-ttu-id="dd791-158">Anfangswert:</span><span class="sxs-lookup"><span data-stu-id="dd791-158">Initial value:</span></span>   | <span data-ttu-id="dd791-159">0, 0, 0, 0</span><span class="sxs-lookup"><span data-stu-id="dd791-159">0, 0, 0, 0</span></span>                                     |
-| <span data-ttu-id="dd791-160">Get-Befehl:</span><span class="sxs-lookup"><span data-stu-id="dd791-160">Get command:</span></span>     | [<span data-ttu-id="dd791-161">**glgettexparameter**</span><span class="sxs-lookup"><span data-stu-id="dd791-161">**glGetTexParameter**</span></span>](glgettexparameter.md) |
+| <span data-ttu-id="ca989-168">Beschreibung:</span><span class="sxs-lookup"><span data-stu-id="ca989-168">Description:</span></span>     | <span data-ttu-id="ca989-169">Texturrahmenfarbe</span><span class="sxs-lookup"><span data-stu-id="ca989-169">Texture border color</span></span>                           |
+| <span data-ttu-id="ca989-170">Attributgruppe:</span><span class="sxs-lookup"><span data-stu-id="ca989-170">Attribute group:</span></span> | <span data-ttu-id="ca989-171">Struktur</span><span class="sxs-lookup"><span data-stu-id="ca989-171">texture</span></span>                                        |
+| <span data-ttu-id="ca989-172">Anfangswert:</span><span class="sxs-lookup"><span data-stu-id="ca989-172">Initial value:</span></span>   | <span data-ttu-id="ca989-173">0, 0, 0, 0</span><span class="sxs-lookup"><span data-stu-id="ca989-173">0, 0, 0, 0</span></span>                                     |
+| <span data-ttu-id="ca989-174">Get-Befehl:</span><span class="sxs-lookup"><span data-stu-id="ca989-174">Get command:</span></span>     | [<span data-ttu-id="ca989-175">**glGetTexParameter**</span><span class="sxs-lookup"><span data-stu-id="ca989-175">**glGetTexParameter**</span></span>](glgettexparameter.md) |
 
 
 
- 
+ 
 
-<span data-ttu-id="dd791-162"></dd> <dt><span id="GL_TEXTURE_MIN_FILTER"></span><span id="gl_texture_min_filter"></span>GL- \_ Textur- \_ Min- \_ Filter</dt> </span><span class="sxs-lookup"><span data-stu-id="dd791-162"></dd> <dt><span id="GL_TEXTURE_MIN_FILTER"></span><span id="gl_texture_min_filter"></span>GL\_TEXTURE\_MIN\_FILTER</dt> </span></span><dd> 
+<span data-ttu-id="ca989-176"></dd> <dt><span id="GL_TEXTURE_MIN_FILTER"></span><span id="gl_texture_min_filter"></span>GL \_ TEXTURE \_ MIN \_ FILTER</dt> </span><span class="sxs-lookup"><span data-stu-id="ca989-176"></dd> <dt><span id="GL_TEXTURE_MIN_FILTER"></span><span id="gl_texture_min_filter"></span>GL\_TEXTURE\_MIN\_FILTER</dt> </span></span><dd> 
 
-|                  |                                                |
+| <span data-ttu-id="ca989-177">Eigenschaft</span><span class="sxs-lookup"><span data-stu-id="ca989-177">Property</span></span> | <span data-ttu-id="ca989-178">Wert</span><span class="sxs-lookup"><span data-stu-id="ca989-178">Value</span></span> |
 |------------------|------------------------------------------------|
-| <span data-ttu-id="dd791-163">Beschreibung:</span><span class="sxs-lookup"><span data-stu-id="dd791-163">Description:</span></span>     | <span data-ttu-id="dd791-164">Textur Minimierung-Funktion</span><span class="sxs-lookup"><span data-stu-id="dd791-164">Texture minification function</span></span>                  |
-| <span data-ttu-id="dd791-165">Attribut Gruppe:</span><span class="sxs-lookup"><span data-stu-id="dd791-165">Attribute group:</span></span> | <span data-ttu-id="dd791-166">Struktur</span><span class="sxs-lookup"><span data-stu-id="dd791-166">texture</span></span>                                        |
-| <span data-ttu-id="dd791-167">Anfangswert:</span><span class="sxs-lookup"><span data-stu-id="dd791-167">Initial value:</span></span>   | <span data-ttu-id="dd791-168">\_nächste nächste \_ MipMap ( \_ linear)</span><span class="sxs-lookup"><span data-stu-id="dd791-168">GL\_NEAREST\_MIPMAP\_LINEAR</span></span>                    |
-| <span data-ttu-id="dd791-169">Get-Befehl:</span><span class="sxs-lookup"><span data-stu-id="dd791-169">Get command:</span></span>     | [<span data-ttu-id="dd791-170">**glgettexparameter**</span><span class="sxs-lookup"><span data-stu-id="dd791-170">**glGetTexParameter**</span></span>](glgettexparameter.md) |
+| <span data-ttu-id="ca989-179">Beschreibung:</span><span class="sxs-lookup"><span data-stu-id="ca989-179">Description:</span></span>     | <span data-ttu-id="ca989-180">Texturverkleinerungsfunktion</span><span class="sxs-lookup"><span data-stu-id="ca989-180">Texture minification function</span></span>                  |
+| <span data-ttu-id="ca989-181">Attributgruppe:</span><span class="sxs-lookup"><span data-stu-id="ca989-181">Attribute group:</span></span> | <span data-ttu-id="ca989-182">Struktur</span><span class="sxs-lookup"><span data-stu-id="ca989-182">texture</span></span>                                        |
+| <span data-ttu-id="ca989-183">Anfangswert:</span><span class="sxs-lookup"><span data-stu-id="ca989-183">Initial value:</span></span>   | <span data-ttu-id="ca989-184">GL \_ NEAREST \_ MIPMAP \_ LINEAR</span><span class="sxs-lookup"><span data-stu-id="ca989-184">GL\_NEAREST\_MIPMAP\_LINEAR</span></span>                    |
+| <span data-ttu-id="ca989-185">Get-Befehl:</span><span class="sxs-lookup"><span data-stu-id="ca989-185">Get command:</span></span>     | [<span data-ttu-id="ca989-186">**glGetTexParameter**</span><span class="sxs-lookup"><span data-stu-id="ca989-186">**glGetTexParameter**</span></span>](glgettexparameter.md) |
 
 
 
- 
+ 
 
-<span data-ttu-id="dd791-171"></dd> <dt><span id="GL_TEXTURE_MAG_FILTER"></span><span id="gl_texture_mag_filter"></span>GL- \_ Textur- \_ mag- \_ Filter</dt> </span><span class="sxs-lookup"><span data-stu-id="dd791-171"></dd> <dt><span id="GL_TEXTURE_MAG_FILTER"></span><span id="gl_texture_mag_filter"></span>GL\_TEXTURE\_MAG\_FILTER</dt> </span></span><dd> 
+<span data-ttu-id="ca989-187"></dd> <dt><span id="GL_TEXTURE_MAG_FILTER"></span><span id="gl_texture_mag_filter"></span>GL \_ TEXTURE \_ MAG \_ FILTER</dt> </span><span class="sxs-lookup"><span data-stu-id="ca989-187"></dd> <dt><span id="GL_TEXTURE_MAG_FILTER"></span><span id="gl_texture_mag_filter"></span>GL\_TEXTURE\_MAG\_FILTER</dt> </span></span><dd> 
 
-|                  |                                                |
+| <span data-ttu-id="ca989-188">Eigenschaft</span><span class="sxs-lookup"><span data-stu-id="ca989-188">Property</span></span> | <span data-ttu-id="ca989-189">Wert</span><span class="sxs-lookup"><span data-stu-id="ca989-189">Value</span></span> |
 |------------------|------------------------------------------------|
-| <span data-ttu-id="dd791-172">Beschreibung:</span><span class="sxs-lookup"><span data-stu-id="dd791-172">Description:</span></span>     | <span data-ttu-id="dd791-173">Textur Vergrößerungsfunktion</span><span class="sxs-lookup"><span data-stu-id="dd791-173">Texture magnification function</span></span>                 |
-| <span data-ttu-id="dd791-174">Attribut Gruppe:</span><span class="sxs-lookup"><span data-stu-id="dd791-174">Attribute group:</span></span> | <span data-ttu-id="dd791-175">Struktur</span><span class="sxs-lookup"><span data-stu-id="dd791-175">texture</span></span>                                        |
-| <span data-ttu-id="dd791-176">Anfangswert:</span><span class="sxs-lookup"><span data-stu-id="dd791-176">Initial value:</span></span>   | <span data-ttu-id="dd791-177">GL \_ linear</span><span class="sxs-lookup"><span data-stu-id="dd791-177">GL\_LINEAR</span></span>                                     |
-| <span data-ttu-id="dd791-178">Get-Befehl:</span><span class="sxs-lookup"><span data-stu-id="dd791-178">Get command:</span></span>     | [<span data-ttu-id="dd791-179">**glgettexparameter**</span><span class="sxs-lookup"><span data-stu-id="dd791-179">**glGetTexParameter**</span></span>](glgettexparameter.md) |
+| <span data-ttu-id="ca989-190">Beschreibung:</span><span class="sxs-lookup"><span data-stu-id="ca989-190">Description:</span></span>     | <span data-ttu-id="ca989-191">Texturvergrößerungsfunktion</span><span class="sxs-lookup"><span data-stu-id="ca989-191">Texture magnification function</span></span>                 |
+| <span data-ttu-id="ca989-192">Attributgruppe:</span><span class="sxs-lookup"><span data-stu-id="ca989-192">Attribute group:</span></span> | <span data-ttu-id="ca989-193">Struktur</span><span class="sxs-lookup"><span data-stu-id="ca989-193">texture</span></span>                                        |
+| <span data-ttu-id="ca989-194">Anfangswert:</span><span class="sxs-lookup"><span data-stu-id="ca989-194">Initial value:</span></span>   | <span data-ttu-id="ca989-195">GL \_ LINEAR</span><span class="sxs-lookup"><span data-stu-id="ca989-195">GL\_LINEAR</span></span>                                     |
+| <span data-ttu-id="ca989-196">Get-Befehl:</span><span class="sxs-lookup"><span data-stu-id="ca989-196">Get command:</span></span>     | [<span data-ttu-id="ca989-197">**glGetTexParameter**</span><span class="sxs-lookup"><span data-stu-id="ca989-197">**glGetTexParameter**</span></span>](glgettexparameter.md) |
 
 
 
- 
+ 
 
-<span data-ttu-id="dd791-180"></dd> <dt><span id="GL_TEXTURE_WRAP__x"></span><span id="gl_texture_wrap__x"></span><span id="GL_TEXTURE_WRAP__X"></span>GL- \_ Textur Umbruch \_ \_ *x*</dt> </span><span class="sxs-lookup"><span data-stu-id="dd791-180"></dd> <dt><span id="GL_TEXTURE_WRAP__x"></span><span id="gl_texture_wrap__x"></span><span id="GL_TEXTURE_WRAP__X"></span>GL\_TEXTURE\_WRAP\_ *x*</dt> </span></span><dd> 
+<span data-ttu-id="ca989-198"></dd> <dt><span id="GL_TEXTURE_WRAP__x"></span><span id="gl_texture_wrap__x"></span><span id="GL_TEXTURE_WRAP__X"></span>GL \_ TEXTURE \_ WRAP \_ *x*</dt> </span><span class="sxs-lookup"><span data-stu-id="ca989-198"></dd> <dt><span id="GL_TEXTURE_WRAP__x"></span><span id="gl_texture_wrap__x"></span><span id="GL_TEXTURE_WRAP__X"></span>GL\_TEXTURE\_WRAP\_ *x*</dt> </span></span><dd> 
 
-|                  |                                                |
+| <span data-ttu-id="ca989-199">Eigenschaft</span><span class="sxs-lookup"><span data-stu-id="ca989-199">Property</span></span> | <span data-ttu-id="ca989-200">Wert</span><span class="sxs-lookup"><span data-stu-id="ca989-200">Value</span></span> |
 |------------------|------------------------------------------------|
-| <span data-ttu-id="dd791-181">Beschreibung:</span><span class="sxs-lookup"><span data-stu-id="dd791-181">Description:</span></span>     | <span data-ttu-id="dd791-182">Textur Umbruch Modus (*x*   ist S oder T)</span><span class="sxs-lookup"><span data-stu-id="dd791-182">Texture wrap mode (*x* is S or T)</span></span>              |
-| <span data-ttu-id="dd791-183">Attribut Gruppe:</span><span class="sxs-lookup"><span data-stu-id="dd791-183">Attribute group:</span></span> | <span data-ttu-id="dd791-184">Struktur</span><span class="sxs-lookup"><span data-stu-id="dd791-184">texture</span></span>                                        |
-| <span data-ttu-id="dd791-185">Anfangswert:</span><span class="sxs-lookup"><span data-stu-id="dd791-185">Initial value:</span></span>   | <span data-ttu-id="dd791-186">GL. \_ Wiederholung</span><span class="sxs-lookup"><span data-stu-id="dd791-186">GL\_REPEAT</span></span>                                     |
-| <span data-ttu-id="dd791-187">Get-Befehl:</span><span class="sxs-lookup"><span data-stu-id="dd791-187">Get command:</span></span>     | [<span data-ttu-id="dd791-188">**glgettexparameter**</span><span class="sxs-lookup"><span data-stu-id="dd791-188">**glGetTexParameter**</span></span>](glgettexparameter.md) |
+| <span data-ttu-id="ca989-201">Beschreibung:</span><span class="sxs-lookup"><span data-stu-id="ca989-201">Description:</span></span>     | <span data-ttu-id="ca989-202">Texturumbruchmodus (*x* ist S oder T)</span><span class="sxs-lookup"><span data-stu-id="ca989-202">Texture wrap mode (*x* is S or T)</span></span>              |
+| <span data-ttu-id="ca989-203">Attributgruppe:</span><span class="sxs-lookup"><span data-stu-id="ca989-203">Attribute group:</span></span> | <span data-ttu-id="ca989-204">Struktur</span><span class="sxs-lookup"><span data-stu-id="ca989-204">texture</span></span>                                        |
+| <span data-ttu-id="ca989-205">Anfangswert:</span><span class="sxs-lookup"><span data-stu-id="ca989-205">Initial value:</span></span>   | <span data-ttu-id="ca989-206">GL \_ REPEAT</span><span class="sxs-lookup"><span data-stu-id="ca989-206">GL\_REPEAT</span></span>                                     |
+| <span data-ttu-id="ca989-207">Get-Befehl:</span><span class="sxs-lookup"><span data-stu-id="ca989-207">Get command:</span></span>     | [<span data-ttu-id="ca989-208">**glGetTexParameter**</span><span class="sxs-lookup"><span data-stu-id="ca989-208">**glGetTexParameter**</span></span>](glgettexparameter.md) |
 
 
 
- 
+ 
 
-<span data-ttu-id="dd791-189"></dd> <dt><span id="GL_TEXTURE_ENV_MODE"></span><span id="gl_texture_env_mode"></span>GL- \_ Textur \_ env- \_ Modus</dt> </span><span class="sxs-lookup"><span data-stu-id="dd791-189"></dd> <dt><span id="GL_TEXTURE_ENV_MODE"></span><span id="gl_texture_env_mode"></span>GL\_TEXTURE\_ENV\_MODE</dt> </span></span><dd> 
+<span data-ttu-id="ca989-209"></dd> <dt><span id="GL_TEXTURE_ENV_MODE"></span><span id="gl_texture_env_mode"></span>GL \_ TEXTURE \_ ENV \_ MODE</dt> </span><span class="sxs-lookup"><span data-stu-id="ca989-209"></dd> <dt><span id="GL_TEXTURE_ENV_MODE"></span><span id="gl_texture_env_mode"></span>GL\_TEXTURE\_ENV\_MODE</dt> </span></span><dd> 
 
-|                  |                                      |
+| <span data-ttu-id="ca989-210">Eigenschaft</span><span class="sxs-lookup"><span data-stu-id="ca989-210">Property</span></span> | <span data-ttu-id="ca989-211">Wert</span><span class="sxs-lookup"><span data-stu-id="ca989-211">Value</span></span> |
 |------------------|--------------------------------------|
-| <span data-ttu-id="dd791-190">Beschreibung:</span><span class="sxs-lookup"><span data-stu-id="dd791-190">Description:</span></span>     | <span data-ttu-id="dd791-191">Textur-Anwendungsfunktion</span><span class="sxs-lookup"><span data-stu-id="dd791-191">Texture application function</span></span>         |
-| <span data-ttu-id="dd791-192">Attribut Gruppe:</span><span class="sxs-lookup"><span data-stu-id="dd791-192">Attribute group:</span></span> | <span data-ttu-id="dd791-193">Struktur</span><span class="sxs-lookup"><span data-stu-id="dd791-193">texture</span></span>                              |
-| <span data-ttu-id="dd791-194">Anfangswert:</span><span class="sxs-lookup"><span data-stu-id="dd791-194">Initial value:</span></span>   | <span data-ttu-id="dd791-195">GL \_ modulate</span><span class="sxs-lookup"><span data-stu-id="dd791-195">GL\_MODULATE</span></span>                         |
-| <span data-ttu-id="dd791-196">Get-Befehl:</span><span class="sxs-lookup"><span data-stu-id="dd791-196">Get command:</span></span>     | [<span data-ttu-id="dd791-197">**glgettexenviv**</span><span class="sxs-lookup"><span data-stu-id="dd791-197">**glGetTexEnviv**</span></span>](glgettexenv.md) |
+| <span data-ttu-id="ca989-212">Beschreibung:</span><span class="sxs-lookup"><span data-stu-id="ca989-212">Description:</span></span>     | <span data-ttu-id="ca989-213">Texturanwendungsfunktion</span><span class="sxs-lookup"><span data-stu-id="ca989-213">Texture application function</span></span>         |
+| <span data-ttu-id="ca989-214">Attributgruppe:</span><span class="sxs-lookup"><span data-stu-id="ca989-214">Attribute group:</span></span> | <span data-ttu-id="ca989-215">Struktur</span><span class="sxs-lookup"><span data-stu-id="ca989-215">texture</span></span>                              |
+| <span data-ttu-id="ca989-216">Anfangswert:</span><span class="sxs-lookup"><span data-stu-id="ca989-216">Initial value:</span></span>   | <span data-ttu-id="ca989-217">GL \_ MODULATE</span><span class="sxs-lookup"><span data-stu-id="ca989-217">GL\_MODULATE</span></span>                         |
+| <span data-ttu-id="ca989-218">Get-Befehl:</span><span class="sxs-lookup"><span data-stu-id="ca989-218">Get command:</span></span>     | [<span data-ttu-id="ca989-219">**glGetTexEnviv**</span><span class="sxs-lookup"><span data-stu-id="ca989-219">**glGetTexEnviv**</span></span>](glgettexenv.md) |
 
 
 
- 
+ 
 
-<span data-ttu-id="dd791-198"></dd> <dt><span id="GL_TEXTURE_ENV_COLOR"></span><span id="gl_texture_env_color"></span>GL- \_ Textur Gesamt \_ \_ Farbe</dt> </span><span class="sxs-lookup"><span data-stu-id="dd791-198"></dd> <dt><span id="GL_TEXTURE_ENV_COLOR"></span><span id="gl_texture_env_color"></span>GL\_TEXTURE\_ENV\_COLOR</dt> </span></span><dd> 
+<span data-ttu-id="ca989-220"></dd> <dt><span id="GL_TEXTURE_ENV_COLOR"></span><span id="gl_texture_env_color"></span>GL \_ TEXTURE \_ ENV \_ COLOR</dt> </span><span class="sxs-lookup"><span data-stu-id="ca989-220"></dd> <dt><span id="GL_TEXTURE_ENV_COLOR"></span><span id="gl_texture_env_color"></span>GL\_TEXTURE\_ENV\_COLOR</dt> </span></span><dd> 
 
-|                  |                                      |
+| <span data-ttu-id="ca989-221">Eigenschaft</span><span class="sxs-lookup"><span data-stu-id="ca989-221">Property</span></span> | <span data-ttu-id="ca989-222">Wert</span><span class="sxs-lookup"><span data-stu-id="ca989-222">Value</span></span> |
 |------------------|--------------------------------------|
-| <span data-ttu-id="dd791-199">Beschreibung:</span><span class="sxs-lookup"><span data-stu-id="dd791-199">Description:</span></span>     | <span data-ttu-id="dd791-200">Textur Umgebungs Farbe</span><span class="sxs-lookup"><span data-stu-id="dd791-200">Texture environment color</span></span>            |
-| <span data-ttu-id="dd791-201">Attribut Gruppe:</span><span class="sxs-lookup"><span data-stu-id="dd791-201">Attribute group:</span></span> | <span data-ttu-id="dd791-202">Struktur</span><span class="sxs-lookup"><span data-stu-id="dd791-202">texture</span></span>                              |
-| <span data-ttu-id="dd791-203">Anfangswert:</span><span class="sxs-lookup"><span data-stu-id="dd791-203">Initial value:</span></span>   | <span data-ttu-id="dd791-204">0, 0, 0, 0</span><span class="sxs-lookup"><span data-stu-id="dd791-204">0, 0, 0, 0</span></span>                           |
-| <span data-ttu-id="dd791-205">Get-Befehl:</span><span class="sxs-lookup"><span data-stu-id="dd791-205">Get command:</span></span>     | [<span data-ttu-id="dd791-206">**glgettexendvfv**</span><span class="sxs-lookup"><span data-stu-id="dd791-206">**glGetTexEnvfv**</span></span>](glgettexenv.md) |
+| <span data-ttu-id="ca989-223">Beschreibung:</span><span class="sxs-lookup"><span data-stu-id="ca989-223">Description:</span></span>     | <span data-ttu-id="ca989-224">Texturumgebungsfarbe</span><span class="sxs-lookup"><span data-stu-id="ca989-224">Texture environment color</span></span>            |
+| <span data-ttu-id="ca989-225">Attributgruppe:</span><span class="sxs-lookup"><span data-stu-id="ca989-225">Attribute group:</span></span> | <span data-ttu-id="ca989-226">Struktur</span><span class="sxs-lookup"><span data-stu-id="ca989-226">texture</span></span>                              |
+| <span data-ttu-id="ca989-227">Anfangswert:</span><span class="sxs-lookup"><span data-stu-id="ca989-227">Initial value:</span></span>   | <span data-ttu-id="ca989-228">0, 0, 0, 0</span><span class="sxs-lookup"><span data-stu-id="ca989-228">0, 0, 0, 0</span></span>                           |
+| <span data-ttu-id="ca989-229">Get-Befehl:</span><span class="sxs-lookup"><span data-stu-id="ca989-229">Get command:</span></span>     | [<span data-ttu-id="ca989-230">**glGetTexEnvfv**</span><span class="sxs-lookup"><span data-stu-id="ca989-230">**glGetTexEnvfv**</span></span>](glgettexenv.md) |
 
 
 
- 
+ 
 
-<span data-ttu-id="dd791-207"></dd> <dt><span id="GL_TEXTURE_GEN__x"></span><span id="gl_texture_gen__x"></span><span id="GL_TEXTURE_GEN__X"></span>GL \_ Textur \_ gen \_ *x*</dt> </span><span class="sxs-lookup"><span data-stu-id="dd791-207"></dd> <dt><span id="GL_TEXTURE_GEN__x"></span><span id="gl_texture_gen__x"></span><span id="GL_TEXTURE_GEN__X"></span>GL\_TEXTURE\_GEN\_ *x*</dt> </span></span><dd> 
+<span data-ttu-id="ca989-231"></dd> <dt><span id="GL_TEXTURE_GEN__x"></span><span id="gl_texture_gen__x"></span><span id="GL_TEXTURE_GEN__X"></span>GL \_ TEXTURE \_ GEN \_ *x*</dt> </span><span class="sxs-lookup"><span data-stu-id="ca989-231"></dd> <dt><span id="GL_TEXTURE_GEN__x"></span><span id="gl_texture_gen__x"></span><span id="GL_TEXTURE_GEN__X"></span>GL\_TEXTURE\_GEN\_ *x*</dt> </span></span><dd> 
 
-|                  |                                          |
+| <span data-ttu-id="ca989-232">Eigenschaft</span><span class="sxs-lookup"><span data-stu-id="ca989-232">Property</span></span> | <span data-ttu-id="ca989-233">Wert</span><span class="sxs-lookup"><span data-stu-id="ca989-233">Value</span></span> |
 |------------------|------------------------------------------|
-| <span data-ttu-id="dd791-208">Beschreibung:</span><span class="sxs-lookup"><span data-stu-id="dd791-208">Description:</span></span>     | <span data-ttu-id="dd791-209">TEXGEN ist aktiviert (*x*   ist S, T, R oder Q).</span><span class="sxs-lookup"><span data-stu-id="dd791-209">Texgen is enabled (*x* is S, T, R, or Q)</span></span> |
-| <span data-ttu-id="dd791-210">Attribut Gruppe:</span><span class="sxs-lookup"><span data-stu-id="dd791-210">Attribute group:</span></span> | <span data-ttu-id="dd791-211">Textur/aktivieren</span><span class="sxs-lookup"><span data-stu-id="dd791-211">texture/enable</span></span>                           |
-| <span data-ttu-id="dd791-212">Anfangswert:</span><span class="sxs-lookup"><span data-stu-id="dd791-212">Initial value:</span></span>   | <span data-ttu-id="dd791-213">GL \_ false</span><span class="sxs-lookup"><span data-stu-id="dd791-213">GL\_FALSE</span></span>                                |
-| <span data-ttu-id="dd791-214">Get-Befehl:</span><span class="sxs-lookup"><span data-stu-id="dd791-214">Get command:</span></span>     | [<span data-ttu-id="dd791-215">**glisenabled**</span><span class="sxs-lookup"><span data-stu-id="dd791-215">**glIsEnabled**</span></span>](glisenabled.md)       |
+| <span data-ttu-id="ca989-234">Beschreibung:</span><span class="sxs-lookup"><span data-stu-id="ca989-234">Description:</span></span>     | <span data-ttu-id="ca989-235">Texgen ist aktiviert (*x* ist S, T, R oder Q)</span><span class="sxs-lookup"><span data-stu-id="ca989-235">Texgen is enabled (*x* is S, T, R, or Q)</span></span> |
+| <span data-ttu-id="ca989-236">Attributgruppe:</span><span class="sxs-lookup"><span data-stu-id="ca989-236">Attribute group:</span></span> | <span data-ttu-id="ca989-237">textur/enable</span><span class="sxs-lookup"><span data-stu-id="ca989-237">texture/enable</span></span>                           |
+| <span data-ttu-id="ca989-238">Anfangswert:</span><span class="sxs-lookup"><span data-stu-id="ca989-238">Initial value:</span></span>   | <span data-ttu-id="ca989-239">GL \_ FALSE</span><span class="sxs-lookup"><span data-stu-id="ca989-239">GL\_FALSE</span></span>                                |
+| <span data-ttu-id="ca989-240">Get-Befehl:</span><span class="sxs-lookup"><span data-stu-id="ca989-240">Get command:</span></span>     | [<span data-ttu-id="ca989-241">**glIsEnabled**</span><span class="sxs-lookup"><span data-stu-id="ca989-241">**glIsEnabled**</span></span>](glisenabled.md)       |
 
 
 
- 
+ 
 
-<span data-ttu-id="dd791-216"></dd> <dt><span id="GL_EYE_PLANE"></span><span id="gl_eye_plane"></span>GL- \_ Augen \_ Ebene</dt> </span><span class="sxs-lookup"><span data-stu-id="dd791-216"></dd> <dt><span id="GL_EYE_PLANE"></span><span id="gl_eye_plane"></span>GL\_EYE\_PLANE</dt> </span></span><dd> 
+<span data-ttu-id="ca989-242"></dd> <dt><span id="GL_EYE_PLANE"></span><span id="gl_eye_plane"></span>GL \_ EYE \_ PLANE</dt> </span><span class="sxs-lookup"><span data-stu-id="ca989-242"></dd> <dt><span id="GL_EYE_PLANE"></span><span id="gl_eye_plane"></span>GL\_EYE\_PLANE</dt> </span></span><dd> 
 
-|                  |                                      |
+| <span data-ttu-id="ca989-243">Eigenschaft</span><span class="sxs-lookup"><span data-stu-id="ca989-243">Property</span></span> | <span data-ttu-id="ca989-244">Wert</span><span class="sxs-lookup"><span data-stu-id="ca989-244">Value</span></span> |
 |------------------|--------------------------------------|
-| <span data-ttu-id="dd791-217">Beschreibung:</span><span class="sxs-lookup"><span data-stu-id="dd791-217">Description:</span></span>     | <span data-ttu-id="dd791-218">Formel für die Formel der TEXGEN-Ebene</span><span class="sxs-lookup"><span data-stu-id="dd791-218">Texgen plane equation coefficients</span></span>   |
-| <span data-ttu-id="dd791-219">Attribut Gruppe:</span><span class="sxs-lookup"><span data-stu-id="dd791-219">Attribute group:</span></span> | <span data-ttu-id="dd791-220">Struktur</span><span class="sxs-lookup"><span data-stu-id="dd791-220">texture</span></span>                              |
-| <span data-ttu-id="dd791-221">Anfangswert:</span><span class="sxs-lookup"><span data-stu-id="dd791-221">Initial value:</span></span>   |                                      |
-| <span data-ttu-id="dd791-222">Get-Befehl:</span><span class="sxs-lookup"><span data-stu-id="dd791-222">Get command:</span></span>     | [<span data-ttu-id="dd791-223">**glgettexgenfv**</span><span class="sxs-lookup"><span data-stu-id="dd791-223">**glGetTexGenfv**</span></span>](glgettexgen.md) |
+| <span data-ttu-id="ca989-245">Beschreibung:</span><span class="sxs-lookup"><span data-stu-id="ca989-245">Description:</span></span>     | <span data-ttu-id="ca989-246">Koeffizienten der Texgenebenengleichung</span><span class="sxs-lookup"><span data-stu-id="ca989-246">Texgen plane equation coefficients</span></span>   |
+| <span data-ttu-id="ca989-247">Attributgruppe:</span><span class="sxs-lookup"><span data-stu-id="ca989-247">Attribute group:</span></span> | <span data-ttu-id="ca989-248">Struktur</span><span class="sxs-lookup"><span data-stu-id="ca989-248">texture</span></span>                              |
+| <span data-ttu-id="ca989-249">Anfangswert:</span><span class="sxs-lookup"><span data-stu-id="ca989-249">Initial value:</span></span>   |                                      |
+| <span data-ttu-id="ca989-250">Get-Befehl:</span><span class="sxs-lookup"><span data-stu-id="ca989-250">Get command:</span></span>     | [<span data-ttu-id="ca989-251">**glGetTexGenfv**</span><span class="sxs-lookup"><span data-stu-id="ca989-251">**glGetTexGenfv**</span></span>](glgettexgen.md) |
 
 
 
- 
+ 
 
-<span data-ttu-id="dd791-224"></dd> <dt><span id="GL_OBJECT_PLANE"></span><span id="gl_object_plane"></span>GL- \_ Objekt \_ Ebene</dt> </span><span class="sxs-lookup"><span data-stu-id="dd791-224"></dd> <dt><span id="GL_OBJECT_PLANE"></span><span id="gl_object_plane"></span>GL\_OBJECT\_PLANE</dt> </span></span><dd> 
+<span data-ttu-id="ca989-252"></dd> <dt><span id="GL_OBJECT_PLANE"></span><span id="gl_object_plane"></span>\_ \_ GL-OBJEKTEBENE</dt> </span><span class="sxs-lookup"><span data-stu-id="ca989-252"></dd> <dt><span id="GL_OBJECT_PLANE"></span><span id="gl_object_plane"></span>GL\_OBJECT\_PLANE</dt> </span></span><dd> 
 
-|                  |                                      |
+| <span data-ttu-id="ca989-253">Eigenschaft</span><span class="sxs-lookup"><span data-stu-id="ca989-253">Property</span></span> | <span data-ttu-id="ca989-254">Wert</span><span class="sxs-lookup"><span data-stu-id="ca989-254">Value</span></span> |
 |------------------|--------------------------------------|
-| <span data-ttu-id="dd791-225">Beschreibung:</span><span class="sxs-lookup"><span data-stu-id="dd791-225">Description:</span></span>     | <span data-ttu-id="dd791-226">Lineare Koeffizienten für TEXGEN-Objekte</span><span class="sxs-lookup"><span data-stu-id="dd791-226">Texgen object linear coefficients</span></span>    |
-| <span data-ttu-id="dd791-227">Attribut Gruppe:</span><span class="sxs-lookup"><span data-stu-id="dd791-227">Attribute group:</span></span> | <span data-ttu-id="dd791-228">Struktur</span><span class="sxs-lookup"><span data-stu-id="dd791-228">texture</span></span>                              |
-| <span data-ttu-id="dd791-229">Anfangswert:</span><span class="sxs-lookup"><span data-stu-id="dd791-229">Initial value:</span></span>   |                                      |
-| <span data-ttu-id="dd791-230">Get-Befehl:</span><span class="sxs-lookup"><span data-stu-id="dd791-230">Get command:</span></span>     | [<span data-ttu-id="dd791-231">**glgettexgenfv**</span><span class="sxs-lookup"><span data-stu-id="dd791-231">**glGetTexGenfv**</span></span>](glgettexgen.md) |
+| <span data-ttu-id="ca989-255">Beschreibung:</span><span class="sxs-lookup"><span data-stu-id="ca989-255">Description:</span></span>     | <span data-ttu-id="ca989-256">Lineare Koeffizienten des Texgen-Objekts</span><span class="sxs-lookup"><span data-stu-id="ca989-256">Texgen object linear coefficients</span></span>    |
+| <span data-ttu-id="ca989-257">Attributgruppe:</span><span class="sxs-lookup"><span data-stu-id="ca989-257">Attribute group:</span></span> | <span data-ttu-id="ca989-258">Struktur</span><span class="sxs-lookup"><span data-stu-id="ca989-258">texture</span></span>                              |
+| <span data-ttu-id="ca989-259">Anfangswert:</span><span class="sxs-lookup"><span data-stu-id="ca989-259">Initial value:</span></span>   |                                      |
+| <span data-ttu-id="ca989-260">Get-Befehl:</span><span class="sxs-lookup"><span data-stu-id="ca989-260">Get command:</span></span>     | [<span data-ttu-id="ca989-261">**glGetTexGenfv**</span><span class="sxs-lookup"><span data-stu-id="ca989-261">**glGetTexGenfv**</span></span>](glgettexgen.md) |
 
 
 
- 
+ 
 
-<span data-ttu-id="dd791-232"></dd> <dt><span id="GL_TEXTURE_GEN_MODE"></span><span id="gl_texture_gen_mode"></span>GL- \_ Textur \_ gen- \_ Modus</dt> </span><span class="sxs-lookup"><span data-stu-id="dd791-232"></dd> <dt><span id="GL_TEXTURE_GEN_MODE"></span><span id="gl_texture_gen_mode"></span>GL\_TEXTURE\_GEN\_MODE</dt> </span></span><dd> 
+<span data-ttu-id="ca989-262"></dd> <dt><span id="GL_TEXTURE_GEN_MODE"></span><span id="gl_texture_gen_mode"></span>GL \_ TEXTURE \_ GEN \_ MODE</dt> </span><span class="sxs-lookup"><span data-stu-id="ca989-262"></dd> <dt><span id="GL_TEXTURE_GEN_MODE"></span><span id="gl_texture_gen_mode"></span>GL\_TEXTURE\_GEN\_MODE</dt> </span></span><dd> 
 
-|                  |                                      |
+| <span data-ttu-id="ca989-263">Eigenschaft</span><span class="sxs-lookup"><span data-stu-id="ca989-263">Property</span></span> | <span data-ttu-id="ca989-264">Wert</span><span class="sxs-lookup"><span data-stu-id="ca989-264">Value</span></span> |
 |------------------|--------------------------------------|
-| <span data-ttu-id="dd791-233">Beschreibung:</span><span class="sxs-lookup"><span data-stu-id="dd791-233">Description:</span></span>     | <span data-ttu-id="dd791-234">Für TEXGEN verwendete Funktion</span><span class="sxs-lookup"><span data-stu-id="dd791-234">Function used for texgen</span></span>             |
-| <span data-ttu-id="dd791-235">Attribut Gruppe:</span><span class="sxs-lookup"><span data-stu-id="dd791-235">Attribute group:</span></span> | <span data-ttu-id="dd791-236">Struktur</span><span class="sxs-lookup"><span data-stu-id="dd791-236">texture</span></span>                              |
-| <span data-ttu-id="dd791-237">Anfangswert:</span><span class="sxs-lookup"><span data-stu-id="dd791-237">Initial value:</span></span>   | <span data-ttu-id="dd791-238">GL- \_ Eye \_ linear</span><span class="sxs-lookup"><span data-stu-id="dd791-238">GL\_EYE\_LINEAR</span></span>                      |
-| <span data-ttu-id="dd791-239">Get-Befehl:</span><span class="sxs-lookup"><span data-stu-id="dd791-239">Get command:</span></span>     | [<span data-ttu-id="dd791-240">**glgettexgeniv**</span><span class="sxs-lookup"><span data-stu-id="dd791-240">**glGetTexGeniv**</span></span>](glgettexgen.md) |
+| <span data-ttu-id="ca989-265">Beschreibung:</span><span class="sxs-lookup"><span data-stu-id="ca989-265">Description:</span></span>     | <span data-ttu-id="ca989-266">Für Texgen verwendete Funktion</span><span class="sxs-lookup"><span data-stu-id="ca989-266">Function used for texgen</span></span>             |
+| <span data-ttu-id="ca989-267">Attributgruppe:</span><span class="sxs-lookup"><span data-stu-id="ca989-267">Attribute group:</span></span> | <span data-ttu-id="ca989-268">Struktur</span><span class="sxs-lookup"><span data-stu-id="ca989-268">texture</span></span>                              |
+| <span data-ttu-id="ca989-269">Anfangswert:</span><span class="sxs-lookup"><span data-stu-id="ca989-269">Initial value:</span></span>   | <span data-ttu-id="ca989-270">GL \_ EYE \_ LINEAR</span><span class="sxs-lookup"><span data-stu-id="ca989-270">GL\_EYE\_LINEAR</span></span>                      |
+| <span data-ttu-id="ca989-271">Get-Befehl:</span><span class="sxs-lookup"><span data-stu-id="ca989-271">Get command:</span></span>     | [<span data-ttu-id="ca989-272">**glGetTexGeniv**</span><span class="sxs-lookup"><span data-stu-id="ca989-272">**glGetTexGeniv**</span></span>](glgettexgen.md) |
 
 
 
- 
+ 
 
 </dd> </dl>
 
- 
+ 
 
- 
+ 
 
 
 
