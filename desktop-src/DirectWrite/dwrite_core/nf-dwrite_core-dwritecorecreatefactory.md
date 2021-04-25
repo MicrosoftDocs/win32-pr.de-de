@@ -39,21 +39,21 @@ api_location:
 - dwrite_core.h
 api_name:
 - DWriteCoreCreateFactory
-ms.openlocfilehash: 6606ad884fd65195e9922d348cc4fe565b95f2ee
-ms.sourcegitcommit: d7e9a20168111fb608f5fefb092b30f8e093d816
+ms.openlocfilehash: 43e43e00385e10f0da0ba459cdc16e84562b72ec
+ms.sourcegitcommit: 7024106e3420607420bb04c3f88d9bb4827038c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2021
-ms.locfileid: "107882137"
+ms.lasthandoff: 04/25/2021
+ms.locfileid: "107955023"
 ---
-# <a name="dwritecorecreatefactory-function-dwrite_coreh"></a><span data-ttu-id="99fa4-103">DWriteCoreCreateFactory-Funktion (dwrite_core.h)</span><span class="sxs-lookup"><span data-stu-id="99fa4-103">DWriteCoreCreateFactory function (dwrite_core.h)</span></span>
+# <a name="dwritecorecreatefactory-function-dwrite_coreh"></a><span data-ttu-id="1b1f4-103">DWriteCoreCreateFactory-Funktion (dwrite_core.h)</span><span class="sxs-lookup"><span data-stu-id="1b1f4-103">DWriteCoreCreateFactory function (dwrite_core.h)</span></span>
 
-<span data-ttu-id="99fa4-104">Erstellt ein Factoryobjekt, das für die nachfolgende Erstellung einzelner DWriteCore-Objekte verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="99fa4-104">Creates a factory object that is used for subsequent creation of individual DWriteCore objects.</span></span>
+<span data-ttu-id="1b1f4-104">Erstellt ein Factoryobjekt, das für die nachfolgende Erstellung einzelner DWriteCore-Objekte verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="1b1f4-104">Creates a factory object that is used for subsequent creation of individual DWriteCore objects.</span></span>
 
 > [!IMPORTANT]
-> <span data-ttu-id="99fa4-105">Diese API ist als Teil der DWriteCore-Implementierung von [DirectWrite](../direct-write-portal.md)verfügbar.</span><span class="sxs-lookup"><span data-stu-id="99fa4-105">This API is available as part of the DWriteCore implementation of [DirectWrite](../direct-write-portal.md).</span></span> <span data-ttu-id="99fa4-106">DWriteCore ist eine Form von DirectWrite, die auf Windows-Versionen bis hinunter zu Windows 8 läuft und Ihnen die Möglichkeit eröffnet, es plattformübergreifend zu nutzen.</span><span class="sxs-lookup"><span data-stu-id="99fa4-106">DWriteCore is a form of DirectWrite that runs on versions of Windows down to Windows 8, and opens the door for you to use it cross-platform.</span></span> <span data-ttu-id="99fa4-107">Weitere Informationen und Codebeispiele finden Sie unter [Übersicht über DWriteCore.](/windows/win32/DirectWrite/dwrite/dwritecore-overview)</span><span class="sxs-lookup"><span data-stu-id="99fa4-107">For more info, and code examples, see [DWriteCore overview](/windows/win32/DirectWrite/dwrite/dwritecore-overview).</span></span>
+> <span data-ttu-id="1b1f4-105">Diese API ist als Teil der DWriteCore-Implementierung von [DirectWrite](../direct-write-portal.md)verfügbar.</span><span class="sxs-lookup"><span data-stu-id="1b1f4-105">This API is available as part of the DWriteCore implementation of [DirectWrite](../direct-write-portal.md).</span></span> <span data-ttu-id="1b1f4-106">DWriteCore ist eine Form von DirectWrite, die auf Windows-Versionen bis hinunter zu Windows 8 läuft und Ihnen die Möglichkeit eröffnet, es plattformübergreifend zu nutzen.</span><span class="sxs-lookup"><span data-stu-id="1b1f4-106">DWriteCore is a form of DirectWrite that runs on versions of Windows down to Windows 8, and opens the door for you to use it cross-platform.</span></span> <span data-ttu-id="1b1f4-107">Weitere Informationen und Codebeispiele finden Sie unter [Übersicht über DWriteCore.](/windows/win32/directwrite/dwritecore-overview)</span><span class="sxs-lookup"><span data-stu-id="1b1f4-107">For more info, and code examples, see [DWriteCore overview](/windows/win32/directwrite/dwritecore-overview).</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="99fa4-108">Syntax</span><span class="sxs-lookup"><span data-stu-id="99fa4-108">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="1b1f4-108">Syntax</span><span class="sxs-lookup"><span data-stu-id="1b1f4-108">Syntax</span></span>
 ```cpp
 HRESULT DWRITE_EXPORT DWriteCoreCreateFactory(
     _In_ DWRITE_FACTORY_TYPE factoryType,
@@ -62,42 +62,42 @@ HRESULT DWRITE_EXPORT DWriteCoreCreateFactory(
 );
 ```
 
-## <a name="parameters"></a><span data-ttu-id="99fa4-109">Parameter</span><span class="sxs-lookup"><span data-stu-id="99fa4-109">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="1b1f4-109">Parameter</span><span class="sxs-lookup"><span data-stu-id="1b1f4-109">Parameters</span></span>
 
 `factoryType`
 
-<span data-ttu-id="99fa4-110">Typ: <b> <a href="/windows/win32/api/dwrite/ne-dwrite-dwrite_factory_type">DWRITE_FACTORY_TYPE</a></b></span><span class="sxs-lookup"><span data-stu-id="99fa4-110">Type: <b><a href="/windows/win32/api/dwrite/ne-dwrite-dwrite_factory_type">DWRITE_FACTORY_TYPE</a></b></span></span>
+<span data-ttu-id="1b1f4-110">Typ: <b> <a href="/windows/win32/api/dwrite/ne-dwrite-dwrite_factory_type">DWRITE_FACTORY_TYPE</a></b></span><span class="sxs-lookup"><span data-stu-id="1b1f4-110">Type: <b><a href="/windows/win32/api/dwrite/ne-dwrite-dwrite_factory_type">DWRITE_FACTORY_TYPE</a></b></span></span>
 
-<span data-ttu-id="99fa4-111">Ein -Wert, der angibt, ob das Factoryobjekt freigegeben, isoliert oder eingeschränkt wird.</span><span class="sxs-lookup"><span data-stu-id="99fa4-111">A value that specifies whether the factory object will be shared, isolated, or restricted.</span></span>
+<span data-ttu-id="1b1f4-111">Ein -Wert, der angibt, ob das Factoryobjekt freigegeben, isoliert oder eingeschränkt wird.</span><span class="sxs-lookup"><span data-stu-id="1b1f4-111">A value that specifies whether the factory object will be shared, isolated, or restricted.</span></span>
 
 `iid`
 
-<span data-ttu-id="99fa4-112">Typ: <b>REFIID</b></span><span class="sxs-lookup"><span data-stu-id="99fa4-112">Type: <b>REFIID</b></span></span>
+<span data-ttu-id="1b1f4-112">Typ: <b>REFIID</b></span><span class="sxs-lookup"><span data-stu-id="1b1f4-112">Type: <b>REFIID</b></span></span>
 
-<span data-ttu-id="99fa4-113">Ein GUID-Wert, der die DirectWrite-Factoryschnittstelle identifiziert, z. B. __uuidof(<a href="/windows/win32/api/dwrite/nn-dwrite-idwritefactory">IDWriteFactory</a>).</span><span class="sxs-lookup"><span data-stu-id="99fa4-113">A GUID value that identifies the DirectWrite factory interface, such as __uuidof(<a href="/windows/win32/api/dwrite/nn-dwrite-idwritefactory">IDWriteFactory</a>).</span></span>
+<span data-ttu-id="1b1f4-113">Ein GUID-Wert, der die DirectWrite-Factoryschnittstelle identifiziert, z. B. __uuidof(<a href="/windows/win32/api/dwrite/nn-dwrite-idwritefactory">IDWriteFactory</a>).</span><span class="sxs-lookup"><span data-stu-id="1b1f4-113">A GUID value that identifies the DirectWrite factory interface, such as __uuidof(<a href="/windows/win32/api/dwrite/nn-dwrite-idwritefactory">IDWriteFactory</a>).</span></span>
 
 `factory`
 
-<span data-ttu-id="99fa4-114">Typ: <b>IUnknown\*\*</b></span><span class="sxs-lookup"><span data-stu-id="99fa4-114">Type: <b>IUnknown\*\*</b></span></span>
+<span data-ttu-id="1b1f4-114">Typ: <b>IUnknown\*\*</b></span><span class="sxs-lookup"><span data-stu-id="1b1f4-114">Type: <b>IUnknown\*\*</b></span></span>
 
-<span data-ttu-id="99fa4-115">Eine Adresse eines Zeigers auf das neu erstellte DirectWrite-Factoryobjekt.</span><span class="sxs-lookup"><span data-stu-id="99fa4-115">An address of a pointer to the newly created DirectWrite factory object.</span></span>
+<span data-ttu-id="1b1f4-115">Eine Adresse eines Zeigers auf das neu erstellte DirectWrite-Factoryobjekt.</span><span class="sxs-lookup"><span data-stu-id="1b1f4-115">An address of a pointer to the newly created DirectWrite factory object.</span></span>
 
-## <a name="return-value"></a><span data-ttu-id="99fa4-116">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="99fa4-116">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="1b1f4-116">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="1b1f4-116">Return value</span></span>
 
-<span data-ttu-id="99fa4-117">Typ: <b>HRESULT</b></span><span class="sxs-lookup"><span data-stu-id="99fa4-117">Type: <b>HRESULT</b></span></span>
+<span data-ttu-id="1b1f4-117">Typ: <b>HRESULT</b></span><span class="sxs-lookup"><span data-stu-id="1b1f4-117">Type: <b>HRESULT</b></span></span>
 
-<span data-ttu-id="99fa4-118">Wenn diese Methode erfolgreich ist, wird <b xmlns:loc="http://microsoft.com/wdcml/l10n">S_OK</b>zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="99fa4-118">If this method succeeds, it returns <b xmlns:loc="http://microsoft.com/wdcml/l10n">S_OK</b>.</span></span> <span data-ttu-id="99fa4-119">Andernfalls wird ein <b xmlns:loc="http://microsoft.com/wdcml/l10n">HRESULT-Fehlercode</b> zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="99fa4-119">Otherwise, it returns an <b xmlns:loc="http://microsoft.com/wdcml/l10n">HRESULT</b> error code.</span></span>
+<span data-ttu-id="1b1f4-118">Wenn diese Methode erfolgreich ist, wird <b xmlns:loc="http://microsoft.com/wdcml/l10n">S_OK</b>zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="1b1f4-118">If this method succeeds, it returns <b xmlns:loc="http://microsoft.com/wdcml/l10n">S_OK</b>.</span></span> <span data-ttu-id="1b1f4-119">Andernfalls wird ein <b xmlns:loc="http://microsoft.com/wdcml/l10n">HRESULT-Fehlercode</b> zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="1b1f4-119">Otherwise, it returns an <b xmlns:loc="http://microsoft.com/wdcml/l10n">HRESULT</b> error code.</span></span>
 
-## <a name="examples"></a><span data-ttu-id="99fa4-120">Beispiele</span><span class="sxs-lookup"><span data-stu-id="99fa4-120">Examples</span></span>
+## <a name="examples"></a><span data-ttu-id="1b1f4-120">Beispiele</span><span class="sxs-lookup"><span data-stu-id="1b1f4-120">Examples</span></span>
 
-<span data-ttu-id="99fa4-121">Weitere Informationen finden Sie im Übersichtsthema [DWriteCore](/windows/win32/DirectWrite/dwrite/dwritecore-overview) und in der [Beispiel-App DWriteCoreGallery.](https://github.com/microsoft/Project-Reunion-Samples/tree/main/DWriteCore/DWriteCoreGallery)</span><span class="sxs-lookup"><span data-stu-id="99fa4-121">See the [DWriteCore overview](/windows/win32/DirectWrite/dwrite/dwritecore-overview) topic, and the [DWriteCoreGallery](https://github.com/microsoft/Project-Reunion-Samples/tree/main/DWriteCore/DWriteCoreGallery) sample app.</span></span>
+<span data-ttu-id="1b1f4-121">Weitere Informationen finden Sie im Übersichtsthema [DWriteCore](/windows/win32/directwrite/dwritecore-overview) und in der [Beispiel-App DWriteCoreGallery.](https://github.com/microsoft/Project-Reunion-Samples/tree/main/DWriteCore/DWriteCoreGallery)</span><span class="sxs-lookup"><span data-stu-id="1b1f4-121">See the [DWriteCore overview](/windows/win32/directwrite/dwritecore-overview) topic, and the [DWriteCoreGallery](https://github.com/microsoft/Project-Reunion-Samples/tree/main/DWriteCore/DWriteCoreGallery) sample app.</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="99fa4-122">Bemerkungen</span><span class="sxs-lookup"><span data-stu-id="99fa4-122">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="1b1f4-122">Hinweise</span><span class="sxs-lookup"><span data-stu-id="1b1f4-122">Remarks</span></span>
 
-<span data-ttu-id="99fa4-123">Dies entspricht funktional der [DWriteCreateFactory-Funktion,](/windows/win32/api/dwrite/nf-dwrite-dwritecreatefactory) die von der Systemversion von DirectWrite exportiert wird.</span><span class="sxs-lookup"><span data-stu-id="99fa4-123">This is functionally the same as the [DWriteCreateFactory](/windows/win32/api/dwrite/nf-dwrite-dwritecreatefactory) function exported by the system version of DirectWrite.</span></span> <span data-ttu-id="99fa4-124">Die DWriteCore-Funktion hat einen anderen Namen, um Mehrdeutigkeiten zu vermeiden.</span><span class="sxs-lookup"><span data-stu-id="99fa4-124">The DWriteCore function has a different name to avoid ambiguity.</span></span>
+<span data-ttu-id="1b1f4-123">Dies entspricht funktional der [DWriteCreateFactory-Funktion,](/windows/win32/api/dwrite/nf-dwrite-dwritecreatefactory) die von der Systemversion von DirectWrite exportiert wird.</span><span class="sxs-lookup"><span data-stu-id="1b1f4-123">This is functionally the same as the [DWriteCreateFactory](/windows/win32/api/dwrite/nf-dwrite-dwritecreatefactory) function exported by the system version of DirectWrite.</span></span> <span data-ttu-id="1b1f4-124">Die DWriteCore-Funktion hat einen anderen Namen, um Mehrdeutigkeiten zu vermeiden.</span><span class="sxs-lookup"><span data-stu-id="1b1f4-124">The DWriteCore function has a different name to avoid ambiguity.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="99fa4-125">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="99fa4-125">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="1b1f4-125">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="1b1f4-125">Requirements</span></span>
 | &nbsp; | &nbsp; |
 | ---- |:---- |
-| <span data-ttu-id="99fa4-126">**Unterstützte Mindestversion (Client)**</span><span class="sxs-lookup"><span data-stu-id="99fa4-126">**Minimum supported client**</span></span> | <span data-ttu-id="99fa4-127">Windows 10, Project Reunion [Win32-Apps]</span><span class="sxs-lookup"><span data-stu-id="99fa4-127">Windows 10, Project Reunion [Win32 apps]</span></span> |
-| <span data-ttu-id="99fa4-128">**Header**</span><span class="sxs-lookup"><span data-stu-id="99fa4-128">**Header**</span></span> | <span data-ttu-id="99fa4-129">dwrite.h (include dwrite_core.h)</span><span class="sxs-lookup"><span data-stu-id="99fa4-129">dwrite.h (include dwrite_core.h)</span></span> |
+| <span data-ttu-id="1b1f4-126">**Unterstützte Mindestversion (Client)**</span><span class="sxs-lookup"><span data-stu-id="1b1f4-126">**Minimum supported client**</span></span> | <span data-ttu-id="1b1f4-127">Windows 10, Project Reunion [Win32-Apps]</span><span class="sxs-lookup"><span data-stu-id="1b1f4-127">Windows 10, Project Reunion [Win32 apps]</span></span> |
+| <span data-ttu-id="1b1f4-128">**Header**</span><span class="sxs-lookup"><span data-stu-id="1b1f4-128">**Header**</span></span> | <span data-ttu-id="1b1f4-129">dwrite.h (include dwrite_core.h)</span><span class="sxs-lookup"><span data-stu-id="1b1f4-129">dwrite.h (include dwrite_core.h)</span></span> |
