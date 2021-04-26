@@ -1,42 +1,42 @@
 ---
-description: Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie in der PrintSchema-Spezifikation.
+description: Dieses Thema ist nicht aktuell. Aktuelle Informationen finden Sie unter Print Schema Specification(Spezifikation des Druckschemas).
 ms.assetid: ccc2ad1c-b0c2-4c45-bc95-7c15426c2534
 title: PageScalingScaleHeight
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4f3f91f6b188dadbd86a18152be5228b62d21ab4
-ms.sourcegitcommit: de72a1294df274b0a71dc0fdc42d757e5f6df0f3
+ms.openlocfilehash: 92d718d80f6b3cc369ddcb5c088a1299d639634b
+ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "106367290"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "107997477"
 ---
-# <a name="pagescalingscaleheight"></a><span data-ttu-id="f0509-104">PageScalingScaleHeight</span><span class="sxs-lookup"><span data-stu-id="f0509-104">PageScalingScaleHeight</span></span>
+# <a name="pagescalingscaleheight"></a><span data-ttu-id="fc445-104">PageScalingScaleHeight</span><span class="sxs-lookup"><span data-stu-id="fc445-104">PageScalingScaleHeight</span></span>
 
-<span data-ttu-id="f0509-105">Dieses Thema ist nicht aktuell.</span><span class="sxs-lookup"><span data-stu-id="f0509-105">This topic is not current.</span></span> <span data-ttu-id="f0509-106">Die aktuellsten Informationen finden Sie in der [PrintSchema-Spezifikation](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip).</span><span class="sxs-lookup"><span data-stu-id="f0509-106">For the most current information, see the [Print Schema Specification](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip).</span></span>
+<span data-ttu-id="fc445-105">Dieses Thema ist nicht aktuell.</span><span class="sxs-lookup"><span data-stu-id="fc445-105">This topic is not current.</span></span> <span data-ttu-id="fc445-106">Die aktuellsten Informationen finden Sie unter Print Schema Specification (Spezifikation des [Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)</span><span class="sxs-lookup"><span data-stu-id="fc445-106">For the most current information, see the [Print Schema Specification](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip).</span></span>
 
-<span data-ttu-id="f0509-107">Gibt den Skalierungsfaktor in der imageablesizeheight-Richtung für die benutzerdefinierte Skalierung an.</span><span class="sxs-lookup"><span data-stu-id="f0509-107">Specifies the scaling factor in the ImageableSizeHeight direction for custom scaling.</span></span>
+<span data-ttu-id="fc445-107">Gibt den Skalierungsfaktor in der Richtung ImageableSizeHeight für die benutzerdefinierte Skalierung an.</span><span class="sxs-lookup"><span data-stu-id="fc445-107">Specifies the scaling factor in the ImageableSizeHeight direction for custom scaling.</span></span>
 
--   [<span data-ttu-id="f0509-108">Elementinformationen</span><span class="sxs-lookup"><span data-stu-id="f0509-108">Element Information</span></span>](#element-information)
--   [<span data-ttu-id="f0509-109">Strukturieren von Inhalt</span><span class="sxs-lookup"><span data-stu-id="f0509-109">Structure Content</span></span>](#structure-content)
+-   [<span data-ttu-id="fc445-108">Elementinformationen</span><span class="sxs-lookup"><span data-stu-id="fc445-108">Element Information</span></span>](#element-information)
+-   [<span data-ttu-id="fc445-109">Strukturieren von Inhalt</span><span class="sxs-lookup"><span data-stu-id="fc445-109">Structure Content</span></span>](#structure-content)
 
-## <a name="element-information"></a><span data-ttu-id="f0509-110">Elementinformationen</span><span class="sxs-lookup"><span data-stu-id="f0509-110">Element Information</span></span>
+## <a name="element-information"></a><span data-ttu-id="fc445-110">Elementinformationen</span><span class="sxs-lookup"><span data-stu-id="fc445-110">Element Information</span></span>
 
 
 
-| <span data-ttu-id="f0509-111">Name</span><span class="sxs-lookup"><span data-stu-id="f0509-111">Name</span></span>                       |                                                         |
+| <span data-ttu-id="fc445-111">Name</span><span class="sxs-lookup"><span data-stu-id="fc445-111">Name</span></span> | <span data-ttu-id="fc445-112">Wert</span><span class="sxs-lookup"><span data-stu-id="fc445-112">Value</span></span> |
 |----------------------------|---------------------------------------------------------|
-| <span data-ttu-id="f0509-112">Elementtyp</span><span class="sxs-lookup"><span data-stu-id="f0509-112">Element Type</span></span> <br/>   | <span data-ttu-id="f0509-113">ParameterDef</span><span class="sxs-lookup"><span data-stu-id="f0509-113">ParameterDef</span></span><br/>                                 |
-| <span data-ttu-id="f0509-114">Bereichs Präfix</span><span class="sxs-lookup"><span data-stu-id="f0509-114">Scoping Prefix</span></span> <br/> | <span data-ttu-id="f0509-115">Seite</span><span class="sxs-lookup"><span data-stu-id="f0509-115">Page</span></span><br/>                                         |
-| <span data-ttu-id="f0509-116">Notizen</span><span class="sxs-lookup"><span data-stu-id="f0509-116">Notes</span></span> <br/>          | <span data-ttu-id="f0509-117">Verknüpft mit PageScaling-Element, benutzerdefinierte Option</span><span class="sxs-lookup"><span data-stu-id="f0509-117">Linked to PageScaling element, Custom option</span></span><br/> |
+| <span data-ttu-id="fc445-113">Elementtyp</span><span class="sxs-lookup"><span data-stu-id="fc445-113">Element Type</span></span> <br/>   | <span data-ttu-id="fc445-114">ParameterDef</span><span class="sxs-lookup"><span data-stu-id="fc445-114">ParameterDef</span></span><br/>                                 |
+| <span data-ttu-id="fc445-115">Bereichspräfix</span><span class="sxs-lookup"><span data-stu-id="fc445-115">Scoping Prefix</span></span> <br/> | <span data-ttu-id="fc445-116">Seite</span><span class="sxs-lookup"><span data-stu-id="fc445-116">Page</span></span><br/>                                         |
+| <span data-ttu-id="fc445-117">Hinweise</span><span class="sxs-lookup"><span data-stu-id="fc445-117">Notes</span></span> <br/>          | <span data-ttu-id="fc445-118">Mit PageScaling-Element verknüpft, Option "Benutzerdefiniert"</span><span class="sxs-lookup"><span data-stu-id="fc445-118">Linked to PageScaling element, Custom option</span></span><br/> |
 
 
 
  
 
-## <a name="structure-content"></a><span data-ttu-id="f0509-118">Strukturieren von Inhalt</span><span class="sxs-lookup"><span data-stu-id="f0509-118">Structure Content</span></span>
+## <a name="structure-content"></a><span data-ttu-id="fc445-119">Strukturieren von Inhalt</span><span class="sxs-lookup"><span data-stu-id="fc445-119">Structure Content</span></span>
 
-<span data-ttu-id="f0509-119">Die XML-Struktur dieses Elements lautet:</span><span class="sxs-lookup"><span data-stu-id="f0509-119">The XML structure of this element is:</span></span>
+<span data-ttu-id="fc445-120">Die XML-Struktur dieses Elements lautet:</span><span class="sxs-lookup"><span data-stu-id="fc445-120">The XML structure of this element is:</span></span>
 
 ``` syntax
 <psf:ParameterDef name="psk:PageScalingScaleHeight">
@@ -65,31 +65,31 @@ ms.locfileid: "106367290"
       
 ```
 
-## <a name="structure-properties"></a><span data-ttu-id="f0509-120">Struktur Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="f0509-120">Structure Properties</span></span>
+## <a name="structure-properties"></a><span data-ttu-id="fc445-121">Struktureigenschaften</span><span class="sxs-lookup"><span data-stu-id="fc445-121">Structure Properties</span></span>
 
-<span data-ttu-id="f0509-121">In der folgenden Tabelle werden die Merkmale der Variablen beschrieben, die in der XML-Struktur definiert sind.</span><span class="sxs-lookup"><span data-stu-id="f0509-121">The following table outlines the characteristics of the variables defined in the XML structure.</span></span>
+<span data-ttu-id="fc445-122">In der folgenden Tabelle werden die Merkmale der in der XML-Struktur definierten Variablen beschrieben.</span><span class="sxs-lookup"><span data-stu-id="fc445-122">The following table outlines the characteristics of the variables defined in the XML structure.</span></span>
 
 
 
-| <span data-ttu-id="f0509-122">Eigenschaft</span><span class="sxs-lookup"><span data-stu-id="f0509-122">Property</span></span>                | <span data-ttu-id="f0509-123">xsi:type</span><span class="sxs-lookup"><span data-stu-id="f0509-123">xsi:type</span></span>           | <span data-ttu-id="f0509-124">Wert</span><span class="sxs-lookup"><span data-stu-id="f0509-124">Value</span></span>                      |
+| <span data-ttu-id="fc445-123">Eigenschaft</span><span class="sxs-lookup"><span data-stu-id="fc445-123">Property</span></span>                | <span data-ttu-id="fc445-124">xsi:type</span><span class="sxs-lookup"><span data-stu-id="fc445-124">xsi:type</span></span>           | <span data-ttu-id="fc445-125">Wert</span><span class="sxs-lookup"><span data-stu-id="fc445-125">Value</span></span>                      |
 |-------------------------|--------------------|----------------------------|
-| <span data-ttu-id="f0509-125">DataType</span><span class="sxs-lookup"><span data-stu-id="f0509-125">DataType</span></span><br/>     | <span data-ttu-id="f0509-126">String</span><span class="sxs-lookup"><span data-stu-id="f0509-126">String</span></span><br/>  | <span data-ttu-id="f0509-127">xs:integer</span><span class="sxs-lookup"><span data-stu-id="f0509-127">xs:integer</span></span><br/>      |
-| <span data-ttu-id="f0509-128">DefaultValue</span><span class="sxs-lookup"><span data-stu-id="f0509-128">DefaultValue</span></span><br/> | <span data-ttu-id="f0509-129">Integer</span><span class="sxs-lookup"><span data-stu-id="f0509-129">Integer</span></span><br/> | <span data-ttu-id="f0509-130">nicht definiert</span><span class="sxs-lookup"><span data-stu-id="f0509-130">undefined</span></span><br/>       |
-| <span data-ttu-id="f0509-131">MaxValue</span><span class="sxs-lookup"><span data-stu-id="f0509-131">MaxValue</span></span><br/>     | <span data-ttu-id="f0509-132">Integer</span><span class="sxs-lookup"><span data-stu-id="f0509-132">Integer</span></span><br/> | <span data-ttu-id="f0509-133">nicht definiert</span><span class="sxs-lookup"><span data-stu-id="f0509-133">undefined</span></span><br/>       |
-| <span data-ttu-id="f0509-134">MinValue</span><span class="sxs-lookup"><span data-stu-id="f0509-134">MinValue</span></span><br/>     | <span data-ttu-id="f0509-135">Integer</span><span class="sxs-lookup"><span data-stu-id="f0509-135">Integer</span></span><br/> | <span data-ttu-id="f0509-136">1</span><span class="sxs-lookup"><span data-stu-id="f0509-136">1</span></span><br/>               |
-| <span data-ttu-id="f0509-137">Obligatorisch.</span><span class="sxs-lookup"><span data-stu-id="f0509-137">Mandatory</span></span><br/>    | <span data-ttu-id="f0509-138">String</span><span class="sxs-lookup"><span data-stu-id="f0509-138">String</span></span><br/>  | <span data-ttu-id="f0509-139">PSK: bedingt</span><span class="sxs-lookup"><span data-stu-id="f0509-139">psk:Conditional</span></span><br/> |
-| <span data-ttu-id="f0509-140">Mehrere</span><span class="sxs-lookup"><span data-stu-id="f0509-140">Multiple</span></span><br/>     | <span data-ttu-id="f0509-141">Integer</span><span class="sxs-lookup"><span data-stu-id="f0509-141">Integer</span></span><br/> | <span data-ttu-id="f0509-142">1</span><span class="sxs-lookup"><span data-stu-id="f0509-142">1</span></span><br/>               |
-| <span data-ttu-id="f0509-143">UnitType</span><span class="sxs-lookup"><span data-stu-id="f0509-143">UnitType</span></span><br/>     | <span data-ttu-id="f0509-144">String</span><span class="sxs-lookup"><span data-stu-id="f0509-144">String</span></span><br/>  | <span data-ttu-id="f0509-145">Prozent</span><span class="sxs-lookup"><span data-stu-id="f0509-145">percent</span></span><br/>         |
+| <span data-ttu-id="fc445-126">DataType</span><span class="sxs-lookup"><span data-stu-id="fc445-126">DataType</span></span><br/>     | <span data-ttu-id="fc445-127">Zeichenfolge</span><span class="sxs-lookup"><span data-stu-id="fc445-127">String</span></span><br/>  | <span data-ttu-id="fc445-128">xs:integer</span><span class="sxs-lookup"><span data-stu-id="fc445-128">xs:integer</span></span><br/>      |
+| <span data-ttu-id="fc445-129">DefaultValue</span><span class="sxs-lookup"><span data-stu-id="fc445-129">DefaultValue</span></span><br/> | <span data-ttu-id="fc445-130">Integer</span><span class="sxs-lookup"><span data-stu-id="fc445-130">Integer</span></span><br/> | <span data-ttu-id="fc445-131">nicht definiert</span><span class="sxs-lookup"><span data-stu-id="fc445-131">undefined</span></span><br/>       |
+| <span data-ttu-id="fc445-132">MaxValue</span><span class="sxs-lookup"><span data-stu-id="fc445-132">MaxValue</span></span><br/>     | <span data-ttu-id="fc445-133">Integer</span><span class="sxs-lookup"><span data-stu-id="fc445-133">Integer</span></span><br/> | <span data-ttu-id="fc445-134">nicht definiert</span><span class="sxs-lookup"><span data-stu-id="fc445-134">undefined</span></span><br/>       |
+| <span data-ttu-id="fc445-135">Minvalue</span><span class="sxs-lookup"><span data-stu-id="fc445-135">MinValue</span></span><br/>     | <span data-ttu-id="fc445-136">Integer</span><span class="sxs-lookup"><span data-stu-id="fc445-136">Integer</span></span><br/> | <span data-ttu-id="fc445-137">1</span><span class="sxs-lookup"><span data-stu-id="fc445-137">1</span></span><br/>               |
+| <span data-ttu-id="fc445-138">Obligatorisch.</span><span class="sxs-lookup"><span data-stu-id="fc445-138">Mandatory</span></span><br/>    | <span data-ttu-id="fc445-139">Zeichenfolge</span><span class="sxs-lookup"><span data-stu-id="fc445-139">String</span></span><br/>  | <span data-ttu-id="fc445-140">psk:Conditional</span><span class="sxs-lookup"><span data-stu-id="fc445-140">psk:Conditional</span></span><br/> |
+| <span data-ttu-id="fc445-141">Mehrere</span><span class="sxs-lookup"><span data-stu-id="fc445-141">Multiple</span></span><br/>     | <span data-ttu-id="fc445-142">Integer</span><span class="sxs-lookup"><span data-stu-id="fc445-142">Integer</span></span><br/> | <span data-ttu-id="fc445-143">1</span><span class="sxs-lookup"><span data-stu-id="fc445-143">1</span></span><br/>               |
+| <span data-ttu-id="fc445-144">Unittype</span><span class="sxs-lookup"><span data-stu-id="fc445-144">UnitType</span></span><br/>     | <span data-ttu-id="fc445-145">Zeichenfolge</span><span class="sxs-lookup"><span data-stu-id="fc445-145">String</span></span><br/>  | <span data-ttu-id="fc445-146">Prozent</span><span class="sxs-lookup"><span data-stu-id="fc445-146">percent</span></span><br/>         |
 
 
 
  
 
-## <a name="related-topics"></a><span data-ttu-id="f0509-146">Zugehörige Themen</span><span class="sxs-lookup"><span data-stu-id="f0509-146">Related topics</span></span>
+## <a name="related-topics"></a><span data-ttu-id="fc445-147">Zugehörige Themen</span><span class="sxs-lookup"><span data-stu-id="fc445-147">Related topics</span></span>
 
 <dl> <dt>
 
-[<span data-ttu-id="f0509-147">Druck Schema Spezifikation</span><span class="sxs-lookup"><span data-stu-id="f0509-147">Print Schema Specification</span></span>](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
+[<span data-ttu-id="fc445-148">Spezifikation des Druckschemas</span><span class="sxs-lookup"><span data-stu-id="fc445-148">Print Schema Specification</span></span>](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 </dt> </dl>
 
  

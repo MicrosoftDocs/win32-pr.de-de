@@ -1,42 +1,42 @@
 ---
-description: Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie in der PrintSchema-Spezifikation.
+description: Dieses Thema ist nicht aktuell. Aktuelle Informationen finden Sie unter Print Schema Specification(Spezifikation des Druckschemas).
 ms.assetid: ad33b2cd-8409-4782-8eb9-5f12aca8405b
-title: Jobprimarybannersheetsource
+title: JobPrimaryBannerSheetSource
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1c86e840c3507fce80bda0f4c31efe8b0d714242
-ms.sourcegitcommit: de72a1294df274b0a71dc0fdc42d757e5f6df0f3
+ms.openlocfilehash: 556390d58df3073263a6a6b666d98c48ceed6469
+ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "104351878"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "107997737"
 ---
-# <a name="jobprimarybannersheetsource"></a><span data-ttu-id="f93a3-104">Jobprimarybannersheetsource</span><span class="sxs-lookup"><span data-stu-id="f93a3-104">JobPrimaryBannerSheetSource</span></span>
+# <a name="jobprimarybannersheetsource"></a><span data-ttu-id="e934f-104">JobPrimaryBannerSheetSource</span><span class="sxs-lookup"><span data-stu-id="e934f-104">JobPrimaryBannerSheetSource</span></span>
 
-<span data-ttu-id="f93a3-105">Dieses Thema ist nicht aktuell.</span><span class="sxs-lookup"><span data-stu-id="f93a3-105">This topic is not current.</span></span> <span data-ttu-id="f93a3-106">Die aktuellsten Informationen finden Sie in der [PrintSchema-Spezifikation](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip).</span><span class="sxs-lookup"><span data-stu-id="f93a3-106">For the most current information, see the [Print Schema Specification](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip).</span></span>
+<span data-ttu-id="e934f-105">Dieses Thema ist nicht aktuell.</span><span class="sxs-lookup"><span data-stu-id="e934f-105">This topic is not current.</span></span> <span data-ttu-id="e934f-106">Die aktuellsten Informationen finden Sie unter Print Schema Specification (Spezifikation des [Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)</span><span class="sxs-lookup"><span data-stu-id="e934f-106">For the most current information, see the [Print Schema Specification](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip).</span></span>
 
-<span data-ttu-id="f93a3-107">Gibt die Quelle für ein primäres benutzerdefiniertes Banner Blatt für den Auftrag an.</span><span class="sxs-lookup"><span data-stu-id="f93a3-107">Specifies the source for a primary custom banner sheet for the job.</span></span>
+<span data-ttu-id="e934f-107">Gibt die Quelle für ein primäres benutzerdefiniertes Bannerblatt für den Auftrag an.</span><span class="sxs-lookup"><span data-stu-id="e934f-107">Specifies the source for a primary custom banner sheet for the job.</span></span>
 
--   [<span data-ttu-id="f93a3-108">Elementinformationen</span><span class="sxs-lookup"><span data-stu-id="f93a3-108">Element Information</span></span>](#element-information)
--   [<span data-ttu-id="f93a3-109">Strukturieren von Inhalt</span><span class="sxs-lookup"><span data-stu-id="f93a3-109">Structure Content</span></span>](#structure-content)
+-   [<span data-ttu-id="e934f-108">Elementinformationen</span><span class="sxs-lookup"><span data-stu-id="e934f-108">Element Information</span></span>](#element-information)
+-   [<span data-ttu-id="e934f-109">Strukturieren von Inhalt</span><span class="sxs-lookup"><span data-stu-id="e934f-109">Structure Content</span></span>](#structure-content)
 
-## <a name="element-information"></a><span data-ttu-id="f93a3-110">Elementinformationen</span><span class="sxs-lookup"><span data-stu-id="f93a3-110">Element Information</span></span>
+## <a name="element-information"></a><span data-ttu-id="e934f-110">Elementinformationen</span><span class="sxs-lookup"><span data-stu-id="e934f-110">Element Information</span></span>
 
 
 
-| <span data-ttu-id="f93a3-111">Name</span><span class="sxs-lookup"><span data-stu-id="f93a3-111">Name</span></span>                       |                                             |
+| <span data-ttu-id="e934f-111">Name</span><span class="sxs-lookup"><span data-stu-id="e934f-111">Name</span></span> | <span data-ttu-id="e934f-112">Wert</span><span class="sxs-lookup"><span data-stu-id="e934f-112">Value</span></span> |
 |----------------------------|---------------------------------------------|
-| <span data-ttu-id="f93a3-112">Elementtyp</span><span class="sxs-lookup"><span data-stu-id="f93a3-112">Element Type</span></span> <br/>   | <span data-ttu-id="f93a3-113">ParameterDef</span><span class="sxs-lookup"><span data-stu-id="f93a3-113">ParameterDef</span></span><br/>                     |
-| <span data-ttu-id="f93a3-114">Bereichs Präfix</span><span class="sxs-lookup"><span data-stu-id="f93a3-114">Scoping Prefix</span></span> <br/> | <span data-ttu-id="f93a3-115">Auftrag</span><span class="sxs-lookup"><span data-stu-id="f93a3-115">Job</span></span><br/>                              |
-| <span data-ttu-id="f93a3-116">Notizen</span><span class="sxs-lookup"><span data-stu-id="f93a3-116">Notes</span></span> <br/>          | <span data-ttu-id="f93a3-117">Verknüpft mit jobbannersheet-Element</span><span class="sxs-lookup"><span data-stu-id="f93a3-117">Linked to JobBannerSheet element</span></span><br/> |
+| <span data-ttu-id="e934f-113">Elementtyp</span><span class="sxs-lookup"><span data-stu-id="e934f-113">Element Type</span></span> <br/>   | <span data-ttu-id="e934f-114">ParameterDef</span><span class="sxs-lookup"><span data-stu-id="e934f-114">ParameterDef</span></span><br/>                     |
+| <span data-ttu-id="e934f-115">Bereichspräfix</span><span class="sxs-lookup"><span data-stu-id="e934f-115">Scoping Prefix</span></span> <br/> | <span data-ttu-id="e934f-116">Auftrag</span><span class="sxs-lookup"><span data-stu-id="e934f-116">Job</span></span><br/>                              |
+| <span data-ttu-id="e934f-117">Hinweise</span><span class="sxs-lookup"><span data-stu-id="e934f-117">Notes</span></span> <br/>          | <span data-ttu-id="e934f-118">Verknüpft mit dem JobBannerSheet-Element</span><span class="sxs-lookup"><span data-stu-id="e934f-118">Linked to JobBannerSheet element</span></span><br/> |
 
 
 
  
 
-## <a name="structure-content"></a><span data-ttu-id="f93a3-118">Strukturieren von Inhalt</span><span class="sxs-lookup"><span data-stu-id="f93a3-118">Structure Content</span></span>
+## <a name="structure-content"></a><span data-ttu-id="e934f-119">Strukturieren von Inhalt</span><span class="sxs-lookup"><span data-stu-id="e934f-119">Structure Content</span></span>
 
-<span data-ttu-id="f93a3-119">Die XML-Struktur dieses Elements lautet:</span><span class="sxs-lookup"><span data-stu-id="f93a3-119">The XML structure of this element is:</span></span>
+<span data-ttu-id="e934f-120">Die XML-Struktur dieses Elements lautet:</span><span class="sxs-lookup"><span data-stu-id="e934f-120">The XML structure of this element is:</span></span>
 
 ``` syntax
 <psf:ParameterDef name="psk:JobPrimaryBannerSheetSource">
@@ -62,30 +62,30 @@ ms.locfileid: "104351878"
       
 ```
 
-## <a name="structure-properties"></a><span data-ttu-id="f93a3-120">Struktur Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="f93a3-120">Structure Properties</span></span>
+## <a name="structure-properties"></a><span data-ttu-id="e934f-121">Struktureigenschaften</span><span class="sxs-lookup"><span data-stu-id="e934f-121">Structure Properties</span></span>
 
-<span data-ttu-id="f93a3-121">In der folgenden Tabelle werden die Merkmale der Variablen beschrieben, die in der XML-Struktur definiert sind.</span><span class="sxs-lookup"><span data-stu-id="f93a3-121">The following table outlines the characteristics of the variables defined in the XML structure.</span></span>
+<span data-ttu-id="e934f-122">In der folgenden Tabelle werden die Merkmale der in der XML-Struktur definierten Variablen beschrieben.</span><span class="sxs-lookup"><span data-stu-id="e934f-122">The following table outlines the characteristics of the variables defined in the XML structure.</span></span>
 
 
 
-| <span data-ttu-id="f93a3-122">Eigenschaft</span><span class="sxs-lookup"><span data-stu-id="f93a3-122">Property</span></span>                | <span data-ttu-id="f93a3-123">xsi:type</span><span class="sxs-lookup"><span data-stu-id="f93a3-123">xsi:type</span></span>           | <span data-ttu-id="f93a3-124">Wert</span><span class="sxs-lookup"><span data-stu-id="f93a3-124">Value</span></span>                      |
+| <span data-ttu-id="e934f-123">Eigenschaft</span><span class="sxs-lookup"><span data-stu-id="e934f-123">Property</span></span>                | <span data-ttu-id="e934f-124">xsi:type</span><span class="sxs-lookup"><span data-stu-id="e934f-124">xsi:type</span></span>           | <span data-ttu-id="e934f-125">Wert</span><span class="sxs-lookup"><span data-stu-id="e934f-125">Value</span></span>                      |
 |-------------------------|--------------------|----------------------------|
-| <span data-ttu-id="f93a3-125">DataType</span><span class="sxs-lookup"><span data-stu-id="f93a3-125">DataType</span></span><br/>     | <span data-ttu-id="f93a3-126">Zeichenfolge</span><span class="sxs-lookup"><span data-stu-id="f93a3-126">string</span></span><br/>  | <span data-ttu-id="f93a3-127">xs:string</span><span class="sxs-lookup"><span data-stu-id="f93a3-127">xs:string</span></span><br/>       |
-| <span data-ttu-id="f93a3-128">DefaultValue</span><span class="sxs-lookup"><span data-stu-id="f93a3-128">DefaultValue</span></span><br/> | <span data-ttu-id="f93a3-129">Zeichenfolge</span><span class="sxs-lookup"><span data-stu-id="f93a3-129">string</span></span><br/>  | <span data-ttu-id="f93a3-130">nicht definiert</span><span class="sxs-lookup"><span data-stu-id="f93a3-130">undefined</span></span><br/>       |
-| <span data-ttu-id="f93a3-131">MaxLength</span><span class="sxs-lookup"><span data-stu-id="f93a3-131">MaxLength</span></span><br/>    | <span data-ttu-id="f93a3-132">integer</span><span class="sxs-lookup"><span data-stu-id="f93a3-132">integer</span></span><br/> | <span data-ttu-id="f93a3-133">nicht definiert</span><span class="sxs-lookup"><span data-stu-id="f93a3-133">undefined</span></span><br/>       |
-| <span data-ttu-id="f93a3-134">MinLength</span><span class="sxs-lookup"><span data-stu-id="f93a3-134">MinLength</span></span><br/>    | <span data-ttu-id="f93a3-135">integer</span><span class="sxs-lookup"><span data-stu-id="f93a3-135">integer</span></span><br/> | <span data-ttu-id="f93a3-136">1</span><span class="sxs-lookup"><span data-stu-id="f93a3-136">1</span></span><br/>               |
-| <span data-ttu-id="f93a3-137">Obligatorisch.</span><span class="sxs-lookup"><span data-stu-id="f93a3-137">Mandatory</span></span><br/>    | <span data-ttu-id="f93a3-138">Zeichenfolge</span><span class="sxs-lookup"><span data-stu-id="f93a3-138">string</span></span><br/>  | <span data-ttu-id="f93a3-139">PSK: bedingt</span><span class="sxs-lookup"><span data-stu-id="f93a3-139">psk:Conditional</span></span><br/> |
-| <span data-ttu-id="f93a3-140">UnitType</span><span class="sxs-lookup"><span data-stu-id="f93a3-140">UnitType</span></span><br/>     | <span data-ttu-id="f93a3-141">Zeichenfolge</span><span class="sxs-lookup"><span data-stu-id="f93a3-141">string</span></span><br/>  | <span data-ttu-id="f93a3-142">Buchstaben</span><span class="sxs-lookup"><span data-stu-id="f93a3-142">characters</span></span><br/>      |
+| <span data-ttu-id="e934f-126">DataType</span><span class="sxs-lookup"><span data-stu-id="e934f-126">DataType</span></span><br/>     | <span data-ttu-id="e934f-127">Zeichenfolge</span><span class="sxs-lookup"><span data-stu-id="e934f-127">string</span></span><br/>  | <span data-ttu-id="e934f-128">xs:string</span><span class="sxs-lookup"><span data-stu-id="e934f-128">xs:string</span></span><br/>       |
+| <span data-ttu-id="e934f-129">DefaultValue</span><span class="sxs-lookup"><span data-stu-id="e934f-129">DefaultValue</span></span><br/> | <span data-ttu-id="e934f-130">Zeichenfolge</span><span class="sxs-lookup"><span data-stu-id="e934f-130">string</span></span><br/>  | <span data-ttu-id="e934f-131">nicht definiert</span><span class="sxs-lookup"><span data-stu-id="e934f-131">undefined</span></span><br/>       |
+| <span data-ttu-id="e934f-132">MaxLength</span><span class="sxs-lookup"><span data-stu-id="e934f-132">MaxLength</span></span><br/>    | <span data-ttu-id="e934f-133">integer</span><span class="sxs-lookup"><span data-stu-id="e934f-133">integer</span></span><br/> | <span data-ttu-id="e934f-134">nicht definiert</span><span class="sxs-lookup"><span data-stu-id="e934f-134">undefined</span></span><br/>       |
+| <span data-ttu-id="e934f-135">Minlength</span><span class="sxs-lookup"><span data-stu-id="e934f-135">MinLength</span></span><br/>    | <span data-ttu-id="e934f-136">integer</span><span class="sxs-lookup"><span data-stu-id="e934f-136">integer</span></span><br/> | <span data-ttu-id="e934f-137">1</span><span class="sxs-lookup"><span data-stu-id="e934f-137">1</span></span><br/>               |
+| <span data-ttu-id="e934f-138">Obligatorisch.</span><span class="sxs-lookup"><span data-stu-id="e934f-138">Mandatory</span></span><br/>    | <span data-ttu-id="e934f-139">Zeichenfolge</span><span class="sxs-lookup"><span data-stu-id="e934f-139">string</span></span><br/>  | <span data-ttu-id="e934f-140">psk:Conditional</span><span class="sxs-lookup"><span data-stu-id="e934f-140">psk:Conditional</span></span><br/> |
+| <span data-ttu-id="e934f-141">Unittype</span><span class="sxs-lookup"><span data-stu-id="e934f-141">UnitType</span></span><br/>     | <span data-ttu-id="e934f-142">Zeichenfolge</span><span class="sxs-lookup"><span data-stu-id="e934f-142">string</span></span><br/>  | <span data-ttu-id="e934f-143">Buchstaben</span><span class="sxs-lookup"><span data-stu-id="e934f-143">characters</span></span><br/>      |
 
 
 
  
 
-## <a name="related-topics"></a><span data-ttu-id="f93a3-143">Zugehörige Themen</span><span class="sxs-lookup"><span data-stu-id="f93a3-143">Related topics</span></span>
+## <a name="related-topics"></a><span data-ttu-id="e934f-144">Zugehörige Themen</span><span class="sxs-lookup"><span data-stu-id="e934f-144">Related topics</span></span>
 
 <dl> <dt>
 
-[<span data-ttu-id="f93a3-144">Druck Schema Spezifikation</span><span class="sxs-lookup"><span data-stu-id="f93a3-144">Print Schema Specification</span></span>](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
+[<span data-ttu-id="e934f-145">Spezifikation des Druckschemas</span><span class="sxs-lookup"><span data-stu-id="e934f-145">Print Schema Specification</span></span>](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 </dt> </dl>
 
  

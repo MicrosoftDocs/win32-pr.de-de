@@ -1,6 +1,6 @@
 ---
-title: dcl_semantics (SM3-PS ASM)
-description: Deklarieren Sie die Zuordnung zwischen der Vertex-Shader-Ausgabe und der Pixel-Shadereingabe.
+title: dcl_semantics (sm3 – ps asm)
+description: Deklarieren Sie die Zuordnung zwischen der Vertex-Shaderausgabe und der Pixel-Shadereingabe.
 ms.assetid: 4f4dc6fe-0efa-4d84-aefd-583e90ab9a61
 ms.topic: reference
 ms.date: 05/31/2018
@@ -9,51 +9,51 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 944ddd2b581c6179ac4a3fe22f2b687f85aecfdc
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
-ms.translationtype: HT
+ms.openlocfilehash: 178b31a386a7ae4aa266ac33ddbb1ee5c842f2d1
+ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104101958"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "107997167"
 ---
-# <a name="dcl_semantics-sm3---ps-asm"></a><span data-ttu-id="7cee9-103">DCL \_ -Semantik (SM3-PS ASM)</span><span class="sxs-lookup"><span data-stu-id="7cee9-103">dcl\_semantics (sm3 - ps asm)</span></span>
+# <a name="dcl_semantics-sm3---ps-asm"></a><span data-ttu-id="4796d-103">\_dcl-Semantik (sm3 – ps asm)</span><span class="sxs-lookup"><span data-stu-id="4796d-103">dcl\_semantics (sm3 - ps asm)</span></span>
 
-<span data-ttu-id="7cee9-104">Deklarieren Sie die Zuordnung zwischen der Vertex-Shader-Ausgabe und der Pixel-Shadereingabe.</span><span class="sxs-lookup"><span data-stu-id="7cee9-104">Declare the association between vertex shader output and pixel shader input.</span></span>
+<span data-ttu-id="4796d-104">Deklarieren Sie die Zuordnung zwischen der Vertex-Shaderausgabe und der Pixel-Shadereingabe.</span><span class="sxs-lookup"><span data-stu-id="4796d-104">Declare the association between vertex shader output and pixel shader input.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="7cee9-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="7cee9-105">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="4796d-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="4796d-105">Syntax</span></span>
 
 
 
 |                                                   |
 |---------------------------------------------------|
-| <span data-ttu-id="7cee9-106">DCL- \_ Semantik \[ \_ Schwerpunkt \] DST \[ . Write \_ Mask\]</span><span class="sxs-lookup"><span data-stu-id="7cee9-106">dcl\_semantics \[\_centroid\] dst\[.write\_mask\]</span></span> |
+| <span data-ttu-id="4796d-106">dcl \_ semantics \[ \_ schwerpunktid \] dst \[ .write \_ mask\]</span><span class="sxs-lookup"><span data-stu-id="4796d-106">dcl\_semantics \[\_centroid\] dst\[.write\_mask\]</span></span> |
 
 
 
- 
+ 
 
-<span data-ttu-id="7cee9-107">Hierbei gilt:</span><span class="sxs-lookup"><span data-stu-id="7cee9-107">Where:</span></span>
+<span data-ttu-id="4796d-107">Hierbei gilt:</span><span class="sxs-lookup"><span data-stu-id="4796d-107">Where:</span></span>
 
--   <span data-ttu-id="7cee9-108">\_Semantik: identifiziert die beabsichtigte Datenverwendung und kann beliebige Werte in [**D3DDECLUSAGE**](/windows/desktop/direct3d9/d3ddeclusage) (ohne das \_ Präfix D3DDECLUSAGE) sein.</span><span class="sxs-lookup"><span data-stu-id="7cee9-108">\_semantics: Identifies the intended data usage, and may be any of the values in [**D3DDECLUSAGE**](/windows/desktop/direct3d9/d3ddeclusage) (without the D3DDECLUSAGE\_ prefix).</span></span> <span data-ttu-id="7cee9-109">Außerdem kann ein ganzzahliger Index an die Semantik angehängt werden, um Parameter zu unterscheiden, die eine ähnliche Semantik verwenden.</span><span class="sxs-lookup"><span data-stu-id="7cee9-109">Additionally, an integer index can be appended to the semantic to distinguish parameters that use similar semantics.</span></span>
--   <span data-ttu-id="7cee9-110">\[\_Schwerpunkt [](dx9-graphics-reference-asm-ps-instructions-modifiers-ps-2-0.md) \] ist ein optionaler Anweisungs Modifizierer.</span><span class="sxs-lookup"><span data-stu-id="7cee9-110">\[\_[Centroid](dx9-graphics-reference-asm-ps-instructions-modifiers-ps-2-0.md)\] is an optional instruction modifier.</span></span> <span data-ttu-id="7cee9-111">Sie wird in DCL \_ -Verwendungs Anweisungen unterstützt, die die Eingabe Register deklarieren, und in den Anweisungen für die Textur Suche.</span><span class="sxs-lookup"><span data-stu-id="7cee9-111">It is is supported on dcl\_usage instructions that declare the input registers and on texture lookup instructions.</span></span> <span data-ttu-id="7cee9-112">Dem Schwerpunkt wird kein Leerzeichen angefügt.</span><span class="sxs-lookup"><span data-stu-id="7cee9-112">The centroid is appended with no space.</span></span>
--   <span data-ttu-id="7cee9-113">DST: Ziel Register.</span><span class="sxs-lookup"><span data-stu-id="7cee9-113">dst: destination register.</span></span> <span data-ttu-id="7cee9-114">Siehe [PS \_ 3 \_ 0-Register](dx9-graphics-reference-asm-ps-registers-ps-3-0.md).</span><span class="sxs-lookup"><span data-stu-id="7cee9-114">See [ps\_3\_0 Registers](dx9-graphics-reference-asm-ps-registers-ps-3-0.md).</span></span>
--   <span data-ttu-id="7cee9-115">Schreib \_ Maske: dasselbe Ausgabe Register kann mehrmals deklariert werden, jedes Mal mit einer eindeutigen Schreib Maske (damit eine andere Semantik auf einzelne Komponenten angewendet werden kann).</span><span class="sxs-lookup"><span data-stu-id="7cee9-115">write\_mask: The same output register may be declared multiple times, each time with a unique write mask (so different semantics can be applied to individual components).</span></span> <span data-ttu-id="7cee9-116">Die gleiche Semantik kann jedoch nicht mehrmals in einer Deklaration verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="7cee9-116">However, the same semantic cannot be used multiple times in a declaration.</span></span> <span data-ttu-id="7cee9-117">Dies bedeutet, dass Vektoren vier Komponenten oder weniger sein müssen und nicht über vier Komponenten Register Grenzen (einzelne Ausgabe Register) hinausgehen können.</span><span class="sxs-lookup"><span data-stu-id="7cee9-117">This means that vectors must be four components or less, and cannot go across four-component register boundaries (individual output registers).</span></span> <span data-ttu-id="7cee9-118">Wenn die \_ Psize-Semantik verwendet wird, sollte Sie über eine vollständige Schreib Maske verfügen, da Sie als Skalar angesehen wird.</span><span class="sxs-lookup"><span data-stu-id="7cee9-118">When the \_psize semantic is used, it should have a full write mask because it is considered a scalar.</span></span> <span data-ttu-id="7cee9-119">Wenn die \_ Positions Semantik verwendet wird, sollte Sie über eine vollständige Schreib Maske verfügen, da alle vier Komponenten geschrieben werden müssen.</span><span class="sxs-lookup"><span data-stu-id="7cee9-119">When the \_position semantic is used, it should have full write mask because all four components have to be written.</span></span>
+-   <span data-ttu-id="4796d-108">\_semantics: Identifiziert die beabsichtigte Datenverwendung und kann einer der Werte in [**D3DDECLUSAGE**](/windows/desktop/direct3d9/d3ddeclusage) sein (ohne das Präfix D3DDECLUSAGE). \_</span><span class="sxs-lookup"><span data-stu-id="4796d-108">\_semantics: Identifies the intended data usage, and may be any of the values in [**D3DDECLUSAGE**](/windows/desktop/direct3d9/d3ddeclusage) (without the D3DDECLUSAGE\_ prefix).</span></span> <span data-ttu-id="4796d-109">Darüber hinaus kann ein ganzzahliger Index an die Semantik angefügt werden, um Parameter zu unterscheiden, die eine ähnliche Semantik verwenden.</span><span class="sxs-lookup"><span data-stu-id="4796d-109">Additionally, an integer index can be appended to the semantic to distinguish parameters that use similar semantics.</span></span>
+-   <span data-ttu-id="4796d-110">\[\_[Schwerpunkt](dx9-graphics-reference-asm-ps-instructions-modifiers-ps-2-0.md) \] ist ein optionaler Anweisungsmodifizierer.</span><span class="sxs-lookup"><span data-stu-id="4796d-110">\[\_[Centroid](dx9-graphics-reference-asm-ps-instructions-modifiers-ps-2-0.md)\] is an optional instruction modifier.</span></span> <span data-ttu-id="4796d-111">Sie wird in \_ dcl-Verwendungsanweisungen unterstützt, die die Eingaberegister deklarieren, und in Anweisungen zur Textursuche.</span><span class="sxs-lookup"><span data-stu-id="4796d-111">It is is supported on dcl\_usage instructions that declare the input registers and on texture lookup instructions.</span></span> <span data-ttu-id="4796d-112">Der Schwerpunkt wird ohne Leerzeichen angefügt.</span><span class="sxs-lookup"><span data-stu-id="4796d-112">The centroid is appended with no space.</span></span>
+-   <span data-ttu-id="4796d-113">dst: Zielregister.</span><span class="sxs-lookup"><span data-stu-id="4796d-113">dst: destination register.</span></span> <span data-ttu-id="4796d-114">Siehe [ps \_ 3 \_ 0 Registers](dx9-graphics-reference-asm-ps-registers-ps-3-0.md).</span><span class="sxs-lookup"><span data-stu-id="4796d-114">See [ps\_3\_0 Registers](dx9-graphics-reference-asm-ps-registers-ps-3-0.md).</span></span>
+-   <span data-ttu-id="4796d-115">\_Schreibmaske: Das gleiche Ausgaberegister kann jedes Mal mit einer eindeutigen Schreibmaske deklariert werden (sodass verschiedene Semantik auf einzelne Komponenten angewendet werden kann).</span><span class="sxs-lookup"><span data-stu-id="4796d-115">write\_mask: The same output register may be declared multiple times, each time with a unique write mask (so different semantics can be applied to individual components).</span></span> <span data-ttu-id="4796d-116">Dieselbe Semantik kann jedoch nicht mehrmals in einer Deklaration verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="4796d-116">However, the same semantic cannot be used multiple times in a declaration.</span></span> <span data-ttu-id="4796d-117">Dies bedeutet, dass Vektoren mindestens vier Komponenten sein müssen und nicht über Vier-Komponenten-Registergrenzen (einzelne Ausgaberegister) hinausgehen können.</span><span class="sxs-lookup"><span data-stu-id="4796d-117">This means that vectors must be four components or less, and cannot go across four-component register boundaries (individual output registers).</span></span> <span data-ttu-id="4796d-118">Wenn die \_ Psize-Semantik verwendet wird, sollte sie über eine vollständige Schreibmaske verfügen, da sie als Skalar gilt.</span><span class="sxs-lookup"><span data-stu-id="4796d-118">When the \_psize semantic is used, it should have a full write mask because it is considered a scalar.</span></span> <span data-ttu-id="4796d-119">Wenn die \_ Positionssemantik verwendet wird, sollte sie über eine vollständige Schreibmaske verfügen, da alle vier Komponenten geschrieben werden müssen.</span><span class="sxs-lookup"><span data-stu-id="4796d-119">When the \_position semantic is used, it should have full write mask because all four components have to be written.</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="7cee9-120">Bemerkungen</span><span class="sxs-lookup"><span data-stu-id="7cee9-120">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="4796d-120">Hinweise</span><span class="sxs-lookup"><span data-stu-id="4796d-120">Remarks</span></span>
 
 
 
-| <span data-ttu-id="7cee9-121">Pixel-Shader-Versionen</span><span class="sxs-lookup"><span data-stu-id="7cee9-121">Pixel shader versions</span></span> | <span data-ttu-id="7cee9-122">1\_1</span><span class="sxs-lookup"><span data-stu-id="7cee9-122">1\_1</span></span> | <span data-ttu-id="7cee9-123">1\_2</span><span class="sxs-lookup"><span data-stu-id="7cee9-123">1\_2</span></span> | <span data-ttu-id="7cee9-124">1 \_ 3</span><span class="sxs-lookup"><span data-stu-id="7cee9-124">1\_3</span></span> | <span data-ttu-id="7cee9-125">1\_4</span><span class="sxs-lookup"><span data-stu-id="7cee9-125">1\_4</span></span> | <span data-ttu-id="7cee9-126">2 \_ 0</span><span class="sxs-lookup"><span data-stu-id="7cee9-126">2\_0</span></span> | <span data-ttu-id="7cee9-127">2 \_ x</span><span class="sxs-lookup"><span data-stu-id="7cee9-127">2\_x</span></span> | <span data-ttu-id="7cee9-128">2 \_ SW</span><span class="sxs-lookup"><span data-stu-id="7cee9-128">2\_sw</span></span> | <span data-ttu-id="7cee9-129">3 \_ 0</span><span class="sxs-lookup"><span data-stu-id="7cee9-129">3\_0</span></span> | <span data-ttu-id="7cee9-130">3 \_ SW</span><span class="sxs-lookup"><span data-stu-id="7cee9-130">3\_sw</span></span> |
+| <span data-ttu-id="4796d-121">Pixelshaderversionen</span><span class="sxs-lookup"><span data-stu-id="4796d-121">Pixel shader versions</span></span> | <span data-ttu-id="4796d-122">1\_1</span><span class="sxs-lookup"><span data-stu-id="4796d-122">1\_1</span></span> | <span data-ttu-id="4796d-123">1\_2</span><span class="sxs-lookup"><span data-stu-id="4796d-123">1\_2</span></span> | <span data-ttu-id="4796d-124">1 \_ 3</span><span class="sxs-lookup"><span data-stu-id="4796d-124">1\_3</span></span> | <span data-ttu-id="4796d-125">1\_4</span><span class="sxs-lookup"><span data-stu-id="4796d-125">1\_4</span></span> | <span data-ttu-id="4796d-126">2 \_ 0</span><span class="sxs-lookup"><span data-stu-id="4796d-126">2\_0</span></span> | <span data-ttu-id="4796d-127">2 \_ x</span><span class="sxs-lookup"><span data-stu-id="4796d-127">2\_x</span></span> | <span data-ttu-id="4796d-128">2 \_ sw</span><span class="sxs-lookup"><span data-stu-id="4796d-128">2\_sw</span></span> | <span data-ttu-id="4796d-129">3 \_ 0</span><span class="sxs-lookup"><span data-stu-id="4796d-129">3\_0</span></span> | <span data-ttu-id="4796d-130">3 \_ sw</span><span class="sxs-lookup"><span data-stu-id="4796d-130">3\_sw</span></span> |
 |-----------------------|------|------|------|------|------|------|-------|------|-------|
-| <span data-ttu-id="7cee9-131">DCL- \_ Verwendung</span><span class="sxs-lookup"><span data-stu-id="7cee9-131">dcl\_usage</span></span>            |      |      |      |      |      |      |       | <span data-ttu-id="7cee9-132">x</span><span class="sxs-lookup"><span data-stu-id="7cee9-132">x</span></span>    | <span data-ttu-id="7cee9-133">x</span><span class="sxs-lookup"><span data-stu-id="7cee9-133">x</span></span>     |
+| <span data-ttu-id="4796d-131">dcl \_ usage</span><span class="sxs-lookup"><span data-stu-id="4796d-131">dcl\_usage</span></span>            |      |      |      |      |      |      |       | <span data-ttu-id="4796d-132">x</span><span class="sxs-lookup"><span data-stu-id="4796d-132">x</span></span>    | <span data-ttu-id="4796d-133">x</span><span class="sxs-lookup"><span data-stu-id="4796d-133">x</span></span>     |
 
 
 
- 
+ 
 
-<span data-ttu-id="7cee9-134">Alle DCL- \_ Verwendungs Anweisungen müssen vor der ersten ausführbaren Anweisung angezeigt werden.</span><span class="sxs-lookup"><span data-stu-id="7cee9-134">All dcl\_usage instructions must appear before the first executable instruction.</span></span>
+<span data-ttu-id="4796d-134">Alle \_ dcl-Verwendungsanweisungen müssen vor der ersten ausführbaren Anweisung angezeigt werden.</span><span class="sxs-lookup"><span data-stu-id="4796d-134">All dcl\_usage instructions must appear before the first executable instruction.</span></span>
 
-## <a name="declaration-examples"></a><span data-ttu-id="7cee9-135">Deklarations Beispiele</span><span class="sxs-lookup"><span data-stu-id="7cee9-135">Declaration Examples</span></span>
+## <a name="declaration-examples"></a><span data-ttu-id="4796d-135">Deklarationsbeispiele</span><span class="sxs-lookup"><span data-stu-id="4796d-135">Declaration Examples</span></span>
 
 
 ```
@@ -82,16 +82,16 @@ texld r1, v1.zw, s1
 
 
 
-## <a name="related-topics"></a><span data-ttu-id="7cee9-136">Zugehörige Themen</span><span class="sxs-lookup"><span data-stu-id="7cee9-136">Related topics</span></span>
+## <a name="related-topics"></a><span data-ttu-id="4796d-136">Zugehörige Themen</span><span class="sxs-lookup"><span data-stu-id="4796d-136">Related topics</span></span>
 
 <dl> <dt>
 
-[<span data-ttu-id="7cee9-137">Pixelshaderanweisungen</span><span class="sxs-lookup"><span data-stu-id="7cee9-137">Pixel Shader Instructions</span></span>](dx9-graphics-reference-asm-ps-instructions.md)
+[<span data-ttu-id="4796d-137">Anweisungen für Pixel-Shader</span><span class="sxs-lookup"><span data-stu-id="4796d-137">Pixel Shader Instructions</span></span>](dx9-graphics-reference-asm-ps-instructions.md)
 </dt> <dt>
 
-<span data-ttu-id="7cee9-138">[Beispiel für AntiAlias](https://msdn.microsoft.com/library/Ee415231(v=VS.85).aspx)</span><span class="sxs-lookup"><span data-stu-id="7cee9-138">[Antialias Sample](https://msdn.microsoft.com/library/Ee415231(v=VS.85).aspx)</span></span>
+<span data-ttu-id="4796d-138">[Antialias-Beispiel](https://msdn.microsoft.com/library/Ee415231(v=VS.85).aspx)</span><span class="sxs-lookup"><span data-stu-id="4796d-138">[Antialias Sample](https://msdn.microsoft.com/library/Ee415231(v=VS.85).aspx)</span></span>
 </dt> </dl>
 
- 
+ 
 
- 
+ 
