@@ -1,19 +1,19 @@
 ---
-description: Generiert C-Definitionen für Namespace Tabellen.
+description: Generiert C-Definitionen für Namespacetabellen.
 ms.assetid: 0de06ee1-1291-4f18-9514-cca443a3e300
-title: namespacedefinitions-Element
+title: namespaceDefinitions-Element
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: edc03a20441ebf0b05e9d3d0ba525aaaccf24a45
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 59ff40fb7d0d7209a85c46b50435cb3702e3a59a
+ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103755320"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "107994297"
 ---
-# <a name="namespacedefinitions-element"></a>namespacedefinitions-Element
+# <a name="namespacedefinitions-element"></a>namespaceDefinitions-Element
 
-Generiert C-Definitionen für Namespace Tabellen.
+Generiert C-Definitionen für Namespacetabellen.
 
 ## <a name="usage"></a>Verbrauch
 
@@ -35,19 +35,19 @@ Es gibt keine untergeordneten Elemente.
 
 | Element                         | BESCHREIBUNG                                                    |
 |---------------------------------|----------------------------------------------------------------|
-| [**Datei**](file.md)<br/> | Gibt eine Datei aus dem Code-Generator aus.<br/> <br/> |
+| [**Datei**](file.md)<br/> | Gibt eine Datei aus dem Codegenerator aus.<br/> <br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Element wird im Allgemeinen in C-Quelldateien verwendet, um die Namespace Tabellen bereitzustellen, die von [**Namespacedeklarationen**](namespacedeclarations.md)deklariert wurden.
+Dieses Element wird im Allgemeinen in C-Quelldateien verwendet, um die Namespacetabellen bereitzustellen, die von [**namespaceDeclarations**](namespacedeclarations.md)deklariert wurden.
 
 ## <a name="element-information"></a>Elementinformationen
 
 
 
-|                                     |               |
+| Bezeichnung | Wert |
 |-------------------------------------|---------------|
 | Unterstützte Mindestversion (System)<br/> | Windows Vista |
 | Kann leer bleiben                        | Ja           |

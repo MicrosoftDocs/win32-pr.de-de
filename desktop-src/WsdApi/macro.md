@@ -1,19 +1,19 @@
 ---
-description: Definiert Text oder CDATA, der vom Include-Element wieder verwendet werden soll.
+description: Definiert Text oder CDATA, der vom include-Element wiederverwendet werden soll.
 ms.assetid: bf5cc1e2-b08e-45b6-8e07-5c69865b695b
-title: Macro-Element
+title: macro-Element
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d8759d4afb61883b8bf41472f276882643cfa552
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6f794566b0fd789c463d404289644976c8301a2e
+ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104216310"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "107994327"
 ---
-# <a name="macro-element"></a>Macro-Element
+# <a name="macro-element"></a>macro-Element
 
-Definiert Text oder CDATA, der vom [**include**](include.md) -Element wieder verwendet werden soll.
+Definiert Text oder CDATA, der vom [**include-Element**](include.md) wiederverwendet werden soll.
 
 ## <a name="usage"></a>Verbrauch
 
@@ -28,7 +28,7 @@ Definiert Text oder CDATA, der vom [**include**](include.md) -Element wieder ver
 
 | Attribut           | type                         | Erforderlich       | BESCHREIBUNG                                   |
 |---------------------|------------------------------|----------------|-----------------------------------------------|
-| **name**<br/> | Zeichen \_ Folge<br/> | Ja<br/> | Der Name des Makros.<br/> <br/> |
+| **name**<br/> | Zeichenfolge \_<br/> | Ja<br/> | Der Name des Makros.<br/> <br/> |
 
 
 
@@ -42,15 +42,15 @@ Es gibt keine untergeordneten Elemente.
 
 | Element                                     | BESCHREIBUNG                                                                         |
 |---------------------------------------------|-------------------------------------------------------------------------------------|
-| [**wsdcodegen**](wsdcodegen.md)<br/> | Das Stamm Element einer XML-Skriptdatei des WSDAPI-Code-Generators.<br/> <br/> |
+| [**wsdCodeGen**](wsdcodegen.md)<br/> | Das Stammelement einer WSDAPI-Codegenerator-XML-Skriptdatei.<br/> <br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wsdcodegen definiert ein Makro mit dem Namen " **donotmodify**". Wenn dieses Makro enthalten ist, enthält der generierte Code einen Kommentar Block mit hoher Sichtbarkeit, der Entwicklern anweist, den generierten Code nicht zu ändern.
+WsdCodeGen definiert ein Makro namens **DoNotModify.** Wenn dieses Makro enthalten ist, enthält der generierte Code einen Kommentarblock mit hoher Sichtbarkeit, der Entwickler anweist, den generierten Code nicht zu ändern.
 
-Der folgende XML-Code zeigt, wie das **donotmodify** -Makro eingeschlossen wird. Diese XML-Datei kann einer XML-Konfigurationsdatei für wsdcodegen hinzugefügt werden.
+Der folgende XML-Code zeigt, wie das **DoNotModify-Makro** eingeschlossen wird. Dieser XML-Code kann einer XML-Konfigurationsdatei für WsdCodeGen hinzugefügt werden.
 
 ``` syntax
 <include macro="DoNotModify">
@@ -60,7 +60,7 @@ Der folgende XML-Code zeigt, wie das **donotmodify** -Makro eingeschlossen wird.
 
 
 
-|                                     |               |
+| Bezeichnung | Wert |
 |-------------------------------------|---------------|
 | Unterstützte Mindestversion (System)<br/> | Windows Vista |
 | Kann leer bleiben                        | Ja           |

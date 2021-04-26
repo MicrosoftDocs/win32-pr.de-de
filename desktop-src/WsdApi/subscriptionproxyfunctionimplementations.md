@@ -1,19 +1,19 @@
 ---
-description: Generiert Implementierungen für Abonnement-/Abonnement-Proxyfunktionen für Porttyp-Benachrichtigungs Vorgänge.
+description: Generiert Implementierungen für Abonnieren/Kündigen von Proxyfunktionen für Benachrichtigungsvorgänge für Porttypen.
 ms.assetid: aa26a3f1-df1e-4caa-9ada-6f4a6627b6b8
-title: abonnemenproxyfunctionimplementierungen-Element
+title: subscriptionProxyFunctionImplementations-Element
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: fb57fa21910f9b39440257bc72918519b35c6a57
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d9a3cba202c05d3f8b43b31c292dad8d601dc4e4
+ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104129100"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "107995317"
 ---
-# <a name="subscriptionproxyfunctionimplementations-element"></a>abonnemenproxyfunctionimplementierungen-Element
+# <a name="subscriptionproxyfunctionimplementations-element"></a>subscriptionProxyFunctionImplementations-Element
 
-Generiert Implementierungen für Abonnement-/Abonnement-Proxyfunktionen für Porttyp-Benachrichtigungs Vorgänge.
+Generiert Implementierungen für Abonnieren/Kündigen von Proxyfunktionen für Benachrichtigungsvorgänge für Porttypen.
 
 ## <a name="usage"></a>Verbrauch
 
@@ -30,7 +30,7 @@ Generiert Implementierungen für Abonnement-/Abonnement-Proxyfunktionen für Por
 
 | Attribut                 | type               | Erforderlich      | BESCHREIBUNG                                                                                                                   |
 |---------------------------|--------------------|---------------|-------------------------------------------------------------------------------------------------------------------------------|
-| **Extensible**<br/> | boolean<br/> | Nein<br/> | Die Möglichkeit, Erweiterbarkeits Punkte Funktionen und Schnittstellen hinzuzufügen. Dieser Wert ist immer auf "true" festgelegt.<br/> <br/> |
+| **Extensible**<br/> | boolean<br/> | Nein<br/> | Die Möglichkeit, Erweiterbarkeitspunkte zu Funktionen und Schnittstellen hinzuzufügen. Dieser Wert ist immer auf TRUE festgelegt.<br/> <br/> |
 
 
 
@@ -40,10 +40,10 @@ Generiert Implementierungen für Abonnement-/Abonnement-Proxyfunktionen für Por
 
 | Element                                                           | BESCHREIBUNG                                                                                            |
 |-------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------|
-| [**notificationinterface**](notificationinterface.md)<br/> | Gibt den Namen der Benachrichtigungs Schnittstelle an, die mit Ereignis Abonnements verwendet wird.<br/> <br/> |
-| [**Betriebs**](operation.md)<br/>                         | Gibt einen Vorgang an, für den Code generiert werden soll.<br/> <br/>                       |
-| [**PortType**](porttype.md)<br/>                           | Gibt den Porttyp an, für den Code generiert werden soll.<br/> <br/>                      |
-| [**proxyClass**](proxyclass.md)<br/>                       | Gibt den Namen der Client seitigen Proxy Klasse an.<br/> <br/>                              |
+| [**notificationInterface**](notificationinterface.md)<br/> | Gibt den Namen der Benachrichtigungsschnittstelle an, die mit Ereignisabonnements verwendet wird.<br/> <br/> |
+| [**Vorgang**](operation.md)<br/>                         | Gibt einen Vorgang an, für den Code generiert werden soll.<br/> <br/>                       |
+| [**Porttype**](porttype.md)<br/>                           | Gibt den Porttyp an, für den Code generiert werden soll.<br/> <br/>                      |
+| [**proxyClass**](proxyclass.md)<br/>                       | Gibt den Namen der clientseitigen Proxyklasse an.<br/> <br/>                              |
 
 
 
@@ -64,7 +64,7 @@ Generiert Implementierungen für Abonnement-/Abonnement-Proxyfunktionen für Por
 
 | Element                         | BESCHREIBUNG                                                    |
 |---------------------------------|----------------------------------------------------------------|
-| [**Datei**](file.md)<br/> | Gibt eine Datei aus dem Code-Generator aus.<br/> <br/> |
+| [**Datei**](file.md)<br/> | Gibt eine Datei aus dem Codegenerator aus.<br/> <br/> |
 
 
 
@@ -72,7 +72,7 @@ Generiert Implementierungen für Abonnement-/Abonnement-Proxyfunktionen für Por
 
 
 
-|                                     |               |
+| Bezeichnung | Wert |
 |-------------------------------------|---------------|
 | Unterstützte Mindestversion (System)<br/> | Windows Vista |
 | Kann leer bleiben                        | Ja           |

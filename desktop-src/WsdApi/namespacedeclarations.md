@@ -1,19 +1,19 @@
 ---
-description: Generiert C-Deklarationen für Namespace Tabellen.
+description: Generiert C-Deklarationen für Namespacetabellen.
 ms.assetid: 21b76829-01c4-4228-a714-6319e5eb1c61
-title: namespacedeklarationselement
+title: namespaceDeclarations-Element
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: df827ade45d5fba3247397e2a4dc7ec905ff7405
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3e98d9c0cf1556e21d92fe7ea1ba222e861f00ac
+ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106347607"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "107994257"
 ---
-# <a name="namespacedeclarations-element"></a>namespacedeklarationselement
+# <a name="namespacedeclarations-element"></a>namespaceDeclarations-Element
 
-Generiert C-Deklarationen für Namespace Tabellen.
+Generiert C-Deklarationen für Namespacetabellen.
 
 ## <a name="usage"></a>Verbrauch
 
@@ -35,19 +35,19 @@ Es gibt keine untergeordneten Elemente.
 
 | Element                         | BESCHREIBUNG                                                    |
 |---------------------------------|----------------------------------------------------------------|
-| [**Datei**](file.md)<br/> | Gibt eine Datei aus dem Code-Generator aus.<br/> <br/> |
+| [**Datei**](file.md)<br/> | Gibt eine Datei aus dem Codegenerator aus.<br/> <br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Auf Namespace Tabellen wird durch typtabellen und anderen generierten Code verwiesen, sodass dieses Element zum Generieren von Includedateien verwendet wird.
+Auf Namespacetabellen wird von Typtabellen und anderem generierten Code verwiesen, sodass dieses Element zum Generieren von Includedateien verwendet wird.
 
 ## <a name="element-information"></a>Elementinformationen
 
 
 
-|                                     |               |
+| Bezeichnung | Wert |
 |-------------------------------------|---------------|
 | Unterstützte Mindestversion (System)<br/> | Windows Vista |
 | Kann leer bleiben                        | Ja           |

@@ -1,19 +1,19 @@
 ---
-description: Generiert C-Strukturdefinitionen für Nachrichten Typen.
+description: Generiert C-Strukturdefinitionen für Nachrichtentypen.
 ms.assetid: 68459b22-0f35-444a-969e-29695e735774
-title: messagestructuredefinitions-Element
+title: messageStructureDefinitions-Element
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8840e4493cb97d33cb0dac8ce1ace97cc1789e4d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7a116658fc7ce7f985b7b717c7a7b4ce38be4637
+ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106354627"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "107993667"
 ---
-# <a name="messagestructuredefinitions-element"></a>messagestructuredefinitions-Element
+# <a name="messagestructuredefinitions-element"></a>messageStructureDefinitions-Element
 
-Generiert C-Strukturdefinitionen für Nachrichten Typen.
+Generiert C-Strukturdefinitionen für Nachrichtentypen.
 
 ## <a name="usage"></a>Verbrauch
 
@@ -33,8 +33,8 @@ Es gibt keine Attribute.
 
 | Element                                   | BESCHREIBUNG                                                                       |
 |-------------------------------------------|-----------------------------------------------------------------------------------|
-| [**Betriebs**](operation.md)<br/> | Gibt einen Vorgang an, für den Code generiert werden soll.<br/> <br/>  |
-| [**PortType**](porttype.md)<br/>   | Gibt den Porttyp an, für den Code generiert werden soll.<br/> <br/> |
+| [**Vorgang**](operation.md)<br/> | Gibt einen Vorgang an, für den Code generiert werden soll.<br/> <br/>  |
+| [**Porttype**](porttype.md)<br/>   | Gibt den Porttyp an, für den Code generiert werden soll.<br/> <br/> |
 
 
 
@@ -53,19 +53,19 @@ Es gibt keine Attribute.
 
 | Element                         | BESCHREIBUNG                                                    |
 |---------------------------------|----------------------------------------------------------------|
-| [**Datei**](file.md)<br/> | Gibt eine Datei aus dem Code-Generator aus.<br/> <br/> |
+| [**Datei**](file.md)<br/> | Gibt eine Datei aus dem Codegenerator aus.<br/> <br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Auf Nachrichten Strukturen wird durch generierten Proxy-und Stubcode verwiesen. Dieses Element wird zum Generieren von Include-Dateien verwendet.
+Auf Nachrichtenstrukturen wird durch generierten Proxy- und Stubcode verwiesen. Dieses Element wird verwendet, um Includedateien zu generieren.
 
 ## <a name="element-information"></a>Elementinformationen
 
 
 
-|                                     |               |
+| Bezeichnung | Wert |
 |-------------------------------------|---------------|
 | Unterstützte Mindestversion (System)<br/> | Windows Vista |
 | Kann leer bleiben                        | Ja           |

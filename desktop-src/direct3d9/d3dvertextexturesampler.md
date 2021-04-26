@@ -1,31 +1,30 @@
 ---
-description: Vertex-Textur Sampler-Konstanten.
+description: Vertextextur-Samplerkonst constants.
 ms.assetid: 1347c3d6-67f6-4cea-9a93-9fc754755b47
 title: D3DVERTEXTEXTURESAMPLER
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f2cb7597af2e97a353eabc1671fdfa713f5b5e51
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: b94ef68fd6228b615073c03fc578fc69591711f5
+ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106344204"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "107995087"
 ---
 # <a name="d3dvertextexturesampler"></a>D3DVERTEXTEXTURESAMPLER
 
-Vertex-Textur Sampler-Konstanten.
+Vertextextur-Samplerkonst constants.
 
-Mit diesen Konstanten werden die von Vertex-Shadern verwendeten Textur Samplern identifiziert.
+Diese Konstanten identifizieren die Texturs sampler, die von Vertex-Shadern verwendet werden.
 
 
 
-|                          |                    |
+| \#Definieren                 | BESCHREIBUNG        |
 |--------------------------|--------------------|
-| \#definieren                 | BESCHREIBUNG        |
-| D3DVERTEXTEXTURESAMPLER0 | (D3DDMAPSAMPLER + 1) |
-| D3DVERTEXTEXTURESAMPLER1 | (D3DDMAPSAMPLER + 2) |
-| D3DVERTEXTEXTURESAMPLER2 | (D3DDMAPSAMPLER + 3) |
-| D3DVERTEXTEXTURESAMPLER3 | (D3DDMAPSAMPLER + 4) |
+| D3DVERTEXTEXTURESAMPLER0 | (D3DDMAPSAMPLER+1) |
+| D3DVERTEXTEXTURESAMPLER1 | (D3DDMAPSAMPLER+2) |
+| D3DVERTEXTEXTURESAMPLER2 | (D3DDMAPSAMPLER+3) |
+| D3DVERTEXTEXTURESAMPLER3 | (D3DDMAPSAMPLER+4) |
 
 
 
@@ -33,14 +32,13 @@ Mit diesen Konstanten werden die von Vertex-Shadern verwendeten Textur Samplern 
 
 ## <a name="d3ddmapsampler"></a>D3DDMAPSAMPLER
 
-Dies ist eine interne Konstante, die vom Textur Sampler im Mosaik Prozess verwendet wird.
+Dies ist eine interne Konstante, die vom Texturs sampler im Mosaik verwendet wird.
 
 
 
-|                |                                                       |
+| \#Definieren       | BESCHREIBUNG                                           |
 |----------------|-------------------------------------------------------|
-| \#definieren       | BESCHREIBUNG                                           |
-| D3DDMAPSAMPLER | 256. Dies ist die maximale Anzahl von Textur-Samplern. |
+| D3DDMAPSAMPLER | 256. Dies ist die maximale Anzahl von Texturs samplern. |
 
 
 
@@ -52,8 +50,8 @@ Dies ist eine interne Konstante, die vom Textur Sampler im Mosaik Prozess verwen
 
 |                          |             |
 |--------------------------|-------------|
-| Header                   | d3d9types. h |
-| Mindestens Betriebssystem | Windows 98  |
+| Header                   | d3d9types.h |
+| Mindestbetriebssystem | Windows 98  |
 
 
 

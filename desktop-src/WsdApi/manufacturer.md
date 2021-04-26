@@ -1,17 +1,17 @@
 ---
 description: Gibt den Namen des Herstellers an.
 ms.assetid: 7d73a4fe-6fd1-4d99-80fb-9aa5ddcdca12
-title: Hersteller Element
+title: manufacturer-Element
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a40c4365a49eaabc58d8dad52f6aca4adc3f4bf4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5b86be60b262b37fe328a685fde5228db0c9e9a8
+ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106349618"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "107994337"
 ---
-# <a name="manufacturer-element"></a>Hersteller Element
+# <a name="manufacturer-element"></a>manufacturer-Element
 
 Gibt den Namen des Herstellers an.
 
@@ -35,7 +35,7 @@ Es gibt keine untergeordneten Elemente.
 
 | Element                                                   | BESCHREIBUNG                                                                                          |
 |-----------------------------------------------------------|------------------------------------------------------------------------------------------------------|
-| [**thismodelmetadata**](thismodelmetadata.md)<br/> | Definiert die Hersteller-und Modell Metadaten für das zu implementierende Gerät.<br/> <br/> |
+| [**thisModelMetadata**](thismodelmetadata.md)<br/> | Definiert die Hersteller- und Modellmetadaten für das zu implementierende Gerät.<br/> <br/> |
 
 
 
@@ -43,7 +43,7 @@ Es gibt keine untergeordneten Elemente.
 
 
 
-|                                     |               |
+| Bezeichnung | Wert |
 |-------------------------------------|---------------|
 | Unterstützte Mindestversion (System)<br/> | Windows Vista |
 | Kann leer bleiben                        | Ja           |

@@ -1,19 +1,19 @@
 ---
-description: Generiert IDL-Deklarationen für Abonnement-/abonnementproxyfunktionen für Port-Benachrichtigungs Vorgänge.
+description: Generiert IDL-Deklarationen für Subscribe/Unsubscribe-Proxyfunktionen für Porttypbenachrichtigungsvorgänge.
 ms.assetid: 240ef2b3-ed72-45bb-b653-441c4e5540b5
-title: abonnemenidlfunctiondeklarationselement
+title: subscriptionIdlFunctionDeclarations-Element
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8e1eba60e327778efb1589436a09e62d043d2960
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6f4d738dd06ccbf034702cbb7d6494a28a229d07
+ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103867603"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "107995367"
 ---
-# <a name="subscriptionidlfunctiondeclarations-element"></a>abonnemenidlfunctiondeklarationselement
+# <a name="subscriptionidlfunctiondeclarations-element"></a>subscriptionIdlFunctionDeclarations-Element
 
-Generiert IDL-Deklarationen für Abonnement-/abonnementproxyfunktionen für Port-Benachrichtigungs Vorgänge.
+Generiert IDL-Deklarationen für Subscribe/Unsubscribe-Proxyfunktionen für Porttypbenachrichtigungsvorgänge.
 
 ## <a name="usage"></a>Verbrauch
 
@@ -30,7 +30,7 @@ Generiert IDL-Deklarationen für Abonnement-/abonnementproxyfunktionen für Port
 
 | Attribut                 | type               | Erforderlich      | BESCHREIBUNG                                                                                                                   |
 |---------------------------|--------------------|---------------|-------------------------------------------------------------------------------------------------------------------------------|
-| **Extensible**<br/> | boolean<br/> | Nein<br/> | Die Möglichkeit, Erweiterbarkeits Punkte Funktionen und Schnittstellen hinzuzufügen. Dieser Wert ist immer auf "true" festgelegt.<br/> <br/> |
+| **Extensible**<br/> | boolean<br/> | Nein<br/> | Die Möglichkeit, Erweiterungspunkte zu Funktionen und Schnittstellen hinzuzufügen. Dieser Wert ist immer auf TRUE festgelegt.<br/> <br/> |
 
 
 
@@ -40,9 +40,9 @@ Generiert IDL-Deklarationen für Abonnement-/abonnementproxyfunktionen für Port
 
 | Element                                                           | BESCHREIBUNG                                                                                            |
 |-------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------|
-| [**notificationinterface**](notificationinterface.md)<br/> | Gibt den Namen der Benachrichtigungs Schnittstelle an, die mit Ereignis Abonnements verwendet wird.<br/> <br/> |
-| [**Betriebs**](operation.md)<br/>                         | Gibt einen Vorgang an, für den Code generiert werden soll.<br/> <br/>                       |
-| [**PortType**](porttype.md)<br/>                           | Gibt den Porttyp an, für den Code generiert werden soll.<br/> <br/>                      |
+| [**notificationInterface**](notificationinterface.md)<br/> | Gibt den Namen der Benachrichtigungsschnittstelle an, die mit Ereignisabonnements verwendet wird.<br/> <br/> |
+| [**Vorgang**](operation.md)<br/>                         | Gibt einen Vorgang an, für den Code generiert werden soll.<br/> <br/>                       |
+| [**Porttype**](porttype.md)<br/>                           | Gibt den Porttyp an, für den Code generiert werden soll.<br/> <br/>                      |
 
 
 
@@ -62,7 +62,7 @@ Generiert IDL-Deklarationen für Abonnement-/abonnementproxyfunktionen für Port
 
 | Element                         | BESCHREIBUNG                                                    |
 |---------------------------------|----------------------------------------------------------------|
-| [**Datei**](file.md)<br/> | Gibt eine Datei aus dem Code-Generator aus.<br/> <br/> |
+| [**Datei**](file.md)<br/> | Gibt eine Datei aus dem Codegenerator aus.<br/> <br/> |
 
 
 
@@ -70,7 +70,7 @@ Generiert IDL-Deklarationen für Abonnement-/abonnementproxyfunktionen für Port
 
 
 
-|                                     |               |
+| Bezeichnung | Wert |
 |-------------------------------------|---------------|
 | Unterstützte Mindestversion (System)<br/> | Windows Vista |
 | Kann leer bleiben                        | Ja           |

@@ -1,19 +1,19 @@
 ---
-description: Definiert die Anzahl der zu generierenden Code Schicht.
+description: Definiert die Anzahl der zu erstellenden Codeebenen.
 ms.assetid: ad67a6fb-4bb6-4550-a9e9-f5219f3868c6
-title: layernumber-Element
+title: layerNumber-Element
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5c22a20db7817e449b05c943c9016b6002f35b54
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 33c33ee4468ab81f030bfd8b49dfe104bbe76248
+ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104216311"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "107995487"
 ---
-# <a name="layernumber-element"></a>layernumber-Element
+# <a name="layernumber-element"></a>layerNumber-Element
 
-Definiert die Anzahl der zu generierenden Code Schicht.
+Definiert die Anzahl der zu erstellenden Codeebenen.
 
 ## <a name="usage"></a>Verbrauch
 
@@ -35,23 +35,23 @@ Es gibt keine untergeordneten Elemente.
 
 | Element                                     | BESCHREIBUNG                                                                          |
 |---------------------------------------------|--------------------------------------------------------------------------------------|
-| [**wsdcodegen**](wsdcodegen.md)<br/> | Das Stamm Element einer XML-Skriptdatei des WSDAPI-Code-Generators.<br/> <br/> |
+| [**wsdCodeGen**](wsdcodegen.md)<br/> | Das Stammelement einer XML-Skriptdatei des WSDAPI-Codegenerators.<br/> <br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Ebenennummern werden in Lauf Zeit Tabellen verwendet, um eine Codeebene für eine andere zu unterscheiden. WSDAPI selbst verwendet generierten Code mit einer Ebenennummer von 0.
+Ebenennummern werden in Laufzeittabellen verwendet, um eine Codeebene für eine andere zu unterscheiden. WSDAPI selbst verwendet generierten Code mit der Ebenennummer 0.
 
-Normalerweise ist dieser Wert 1, was darauf hinweist, dass der generierte Code über WSDAPI und keine andere Ebene geschichtet ist. In einigen Fällen können höhere Zahlen verwendet werden. Wenn ein Unternehmen z. b. Code für eine Geräteklasse (nummerierte Schicht 1) erstellt, möchte ein bestimmter Hardwarehersteller möglicherweise eine weitere Ebene mit der nummerierten Ebene 2 hinzufügen.
+In der Regel ist dieser Wert 1, was angibt, dass der generierte Code über WSDAPI und keiner anderen Ebene liegt. In einigen Fällen können höhere Zahlen verwendet werden. Wenn beispielsweise ein Unternehmen Code für eine Geräteklasse (nummerierte Ebene 1) erzeugt, möchte ein bestimmter Hardwareanbieter möglicherweise eine zusätzliche ebene nummerierte Ebene 2 hinzufügen.
 
-Zulässige Werte, außer im Fall von WSDAPI, sind größer als 0 und kleiner als 16.
+Rechtliche Werte, mit Ausnahme von WSDAPI selbst, sind größer als 0 und kleiner als 16.
 
 ## <a name="element-information"></a>Elementinformationen
 
 
 
-|                                     |               |
+| Bezeichnung | Wert |
 |-------------------------------------|---------------|
 | Unterstützte Mindestversion (System)<br/> | Windows Vista |
 | Kann leer bleiben                        | Ja           |

@@ -1,19 +1,19 @@
 ---
-description: Definiert die Hersteller-und Modell Metadaten für das zu implementierende Gerät. Dieses Element wird nur für Geräte Implementierungen (Hosts) verwendet.
+description: Definiert die Hersteller- und Modellmetadaten für das zu implementierte Gerät. Dieses Element wird nur für Geräteimplementierungen (Hosts) verwendet.
 ms.assetid: 2ebd3092-39aa-469c-a8c9-23f373ba0e66
-title: thismodelmetadata-Element
+title: thisModelMetadata-Element
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1c1a35d6449d4e8bba0ecf79e7dc87b00dee894b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 872bcdfcf3f93bfc8fe307684c31cdebb2000b05
+ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103867600"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "107995337"
 ---
-# <a name="thismodelmetadata-element"></a>thismodelmetadata-Element
+# <a name="thismodelmetadata-element"></a>thisModelMetadata-Element
 
-Definiert die Hersteller-und Modell Metadaten für das zu implementierende Gerät. Dieses Element wird nur für Geräte Implementierungen (Hosts) verwendet.
+Definiert die Hersteller- und Modellmetadaten für das zu implementierte Gerät. Dieses Element wird nur für Geräteimplementierungen (Hosts) verwendet.
 
 ## <a name="usage"></a>Verbrauch
 
@@ -33,15 +33,15 @@ Es gibt keine Attribute.
 
 | Element                                                     | BESCHREIBUNG                                                                                                                                                                        |
 |-------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Bauers**](manufacturer.md)<br/>             | Der Name des Herstellers. In den Metadaten muss mindestens einer der [**Hersteller**](manufacturer.md) oder [**manufacturerls**](manufacturerls.md) vorhanden sein.<br/> <br/> |
-| [**manufacturerls**](manufacturerls.md)<br/>         | Lokalisierte Version des Hersteller namens.<br/> <br/>                                                                                                                 |
-| [**ManufacturerUrl**](manufacturerurl.md)<br/>       | Die URL-Adresse des Herstellers.<br/> <br/>                                                                                                                                   |
-| [**modelName**](modelname.md)<br/>                   | Der Name des Geräts. In den Metadaten muss mindestens eine von [**modelname**](modelname.md) oder [**modelnamels**](modelnamels.md) vorhanden sein.<br/> <br/>                   |
-| [**modelnamels**](modelnamels.md)<br/>               | Lokalisierte Version des Geräte namens.<br/> <br/>                                                                                                                       |
-| [**modelnumber**](modelnumber.md)<br/>               | Modellnummer des Geräts.<br/> <br/>                                                                                                                                 |
-| [**modelurl**](modelurl.md)<br/>                     | Die URL-Adresse für das Gerätemodell.<br/> <br/>                                                                                                                           |
-| [**Pnpxde vicecategory**](pnpxdevicecategory.md)<br/> | PnP-X-Kategorie, zu der das Gerät gehört. <br/> <br/>                                                                                                                |
-| [**presentationurl**](presentationurl.md)<br/>       | Die URL-Adresse der Präsentationsdaten des Geräte Modells.<br/> <br/>                                                                                                        |
+| [**Hersteller**](manufacturer.md)<br/>             | Name des Herstellers. Mindestens eine von [**manufacturer oder**](manufacturer.md) [**manufacturerLS**](manufacturerls.md) muss in den Metadaten vorhanden sein.<br/> <br/> |
+| [**manufacturerLS**](manufacturerls.md)<br/>         | Lokalisierte Version des Herstellernamens.<br/> <br/>                                                                                                                 |
+| [**manufacturerURL**](manufacturerurl.md)<br/>       | URL-Adresse des Herstellers.<br/> <br/>                                                                                                                                   |
+| [**modelName**](modelname.md)<br/>                   | Der Name des Geräts. In den Metadaten [**muss mindestens modelName**](modelname.md) oder [**modelNameLS**](modelnamels.md) vorhanden sein.<br/> <br/>                   |
+| [**modelNameLS**](modelnamels.md)<br/>               | Lokalisierte Version des Gerätenamens.<br/> <br/>                                                                                                                       |
+| [**modelNumber**](modelnumber.md)<br/>               | Modellnummer des Geräts.<br/> <br/>                                                                                                                                 |
+| [**modelURL**](modelurl.md)<br/>                     | URL-Adresse für das Gerätemodell.<br/> <br/>                                                                                                                           |
+| [**PnPXDeviceCategory**](pnpxdevicecategory.md)<br/> | PnP-X-Kategorie, zu der das Gerät gehört. <br/> <br/>                                                                                                                |
+| [**presentationURL**](presentationurl.md)<br/>       | URL-Adresse der Präsentationsdaten des Gerätemodells.<br/> <br/>                                                                                                        |
 
 
 
@@ -67,23 +67,23 @@ Es gibt keine Attribute.
 
 | Element                                     | BESCHREIBUNG                                                                          |
 |---------------------------------------------|--------------------------------------------------------------------------------------|
-| [**wsdcodegen**](wsdcodegen.md)<br/> | Das Stamm Element einer XML-Skriptdatei des WSDAPI-Code-Generators.<br/> <br/> |
+| [**wsdCodeGen**](wsdcodegen.md)<br/> | Das Stammelement einer WSDAPI-Codegenerator-XML-Skriptdatei.<br/> <br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Hersteller Metadaten stimmen mit dem im Geräte Profil beschriebenen Abschnitt der Hersteller Metadaten überein (Weitere Informationen finden Sie im Geräte Profil). Der Herstellername oder mindestens eine lokalisierte Version des Hersteller namens muss angegeben werden. Der Modellname oder mindestens eine lokalisierte Version des Modell namens muss angegeben werden.
+Die Herstellermetadaten entsprechen dem Abschnitt mit den Herstellermetadaten, der im Geräteprofil beschrieben ist (details finden Sie im Geräteprofil). Der Herstellername oder mindestens eine lokalisierte Version des Herstellernamens muss angegeben werden. Der Modellname oder mindestens eine lokalisierte Version des Modellnamens muss angegeben werden.
 
-Anschließend wird das [**thisModelMetadataDefinition**](thismodelmetadatadefinition.md) -Element verwendet, um eine C-Konstante zu generieren, die diese Informationen enthält.
+Das [**thisModelMetadataDefinition-Element**](thismodelmetadatadefinition.md) wird anschließend verwendet, um eine C-Konstante zu generieren, die diese Informationen enthält.
 
-Wenn ein [**pnpxenvicecategory**](pnpxdevicecategory.md) -Element vorhanden ist, muss mindestens ein [**gehosteter**](hosted.md) -Element sowohl [**pnpxhardwareid**](pnpxhardwareid.md) -als auch [**pnpxcompatibleid-**](pnpxcompatibleid.md) Elemente enthalten. Ebenso muss, wenn **pnpxhardwareid** -und **pnpxcompatibleid-** Elemente in einem **gehosteten** Element vorhanden sind, ein **pnpxenvicecategory** -Element im **thismodelmetadata** -Element vorhanden sein.
+Wenn ein [**PnPXDeviceCategory-Element**](pnpxdevicecategory.md) vorhanden ist, muss mindestens ein [**gehostetes**](hosted.md) Element sowohl [**PnPXHardwareId-**](pnpxhardwareid.md) als auch [**PnPXCompatibleId-Elemente**](pnpxcompatibleid.md) enthalten. Wenn **PnPXHardwareId-** und **PnPXCompatibleId-Elemente** in einem **gehosteten** Element vorhanden sind, muss ein **PnPXDeviceCategory-Element** innerhalb des **thisModelMetadata-Elements** vorhanden sein.
 
 ## <a name="element-information"></a>Elementinformationen
 
 
 
-|                                     |               |
+| Bezeichnung | Wert |
 |-------------------------------------|---------------|
 | Unterstützte Mindestversion (System)<br/> | Windows Vista |
 | Kann leer bleiben                        | Nein            |

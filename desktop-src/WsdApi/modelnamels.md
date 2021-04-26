@@ -1,19 +1,19 @@
 ---
-description: Gibt eine lokalisierte Version des Geräte namens an.
+description: Gibt eine lokalisierte Version des Gerätenamens an.
 ms.assetid: 67ebbca0-bdb2-4a6e-98d8-3d8d1029884f
-title: modelnamels-Element
+title: modelNameLS-Element
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8e71be6ee3a2e1104858c0f51a4ff68a5cf8cb89
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e47d2f83d1b636efc30e98dff8c46600bcee555d
+ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106345866"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "107995497"
 ---
-# <a name="modelnamels-element"></a>modelnamels-Element
+# <a name="modelnamels-element"></a>modelNameLS-Element
 
-Gibt eine lokalisierte Version des Geräte namens an.
+Gibt eine lokalisierte Version des Gerätenamens an.
 
 ## <a name="usage"></a>Verbrauch
 
@@ -29,8 +29,8 @@ Gibt eine lokalisierte Version des Geräte namens an.
 
 | Attribut               | type                                   | Erforderlich       | Beschreibung                                                      |
 |-------------------------|----------------------------------------|----------------|------------------------------------------------------------------|
-| **Data**<br/>     | lokalisierte Modell namens Zeichenfolge<br/> | Ja<br/> | Der lokalisierte Modellname.<br/> <br/>                 |
-| **Sprache**<br/> | Zeichenfolge der sprach Kennung<br/>  | Ja<br/> | Die Sprache des lokalisierten Modell namens.<br/> <br/> |
+| **Data**<br/>     | Lokalisierte Modellnamenzeichenfolge<br/> | Ja<br/> | Der lokalisierte Modellname.<br/> <br/>                 |
+| **Sprache**<br/> | Sprachbezeichnerzeichenfolge<br/>  | Ja<br/> | Die Sprache des lokalisierten Modellnamens.<br/> <br/> |
 
 
 
@@ -44,7 +44,7 @@ Es gibt keine untergeordneten Elemente.
 
 | Element                                                   | BESCHREIBUNG                                                                                          |
 |-----------------------------------------------------------|------------------------------------------------------------------------------------------------------|
-| [**thismodelmetadata**](thismodelmetadata.md)<br/> | Definiert die Hersteller-und Modell Metadaten für das zu implementierende Gerät.<br/> <br/> |
+| [**thisModelMetadata**](thismodelmetadata.md)<br/> | Definiert die Hersteller- und Modellmetadaten für das zu implementierte Gerät.<br/> <br/> |
 
 
 
@@ -52,7 +52,7 @@ Es gibt keine untergeordneten Elemente.
 
 
 
-|                                     |               |
+| Bezeichnung | Wert |
 |-------------------------------------|---------------|
 | Unterstützte Mindestversion (System)<br/> | Windows Vista |
 | Kann leer bleiben                        | Ja           |

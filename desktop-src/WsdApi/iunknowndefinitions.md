@@ -1,19 +1,19 @@
 ---
-description: Generiert Implementierungen für die Funktionen QueryInterface, adressf und Release.
+description: Generiert Implementierungen für die Funktionen QueryInterface, AddRef und Release.
 ms.assetid: 4b6abd0b-7570-4ae0-a727-cdb6cec58daf
-title: Iunknowndefinitions-Element
+title: IUnknownDefinitions-Element
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 57ca92338e3dc97a12e04228510fc17eb2ef2483
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: cb3a4f76145e585411e64c10ea7af922db931846
+ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106348912"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "107995147"
 ---
-# <a name="iunknowndefinitions-element"></a>Iunknowndefinitions-Element
+# <a name="iunknowndefinitions-element"></a>IUnknownDefinitions-Element
 
-Generiert Implementierungen für die Funktionen QueryInterface, adressf und Release.
+Generiert Implementierungen für die Funktionen QueryInterface, AddRef und Release.
 
 ## <a name="usage"></a>Verbrauch
 
@@ -31,8 +31,8 @@ Generiert Implementierungen für die Funktionen QueryInterface, adressf und Rele
 
 | Attribut                  | type                         | Erforderlich       | BESCHREIBUNG                                                |
 |----------------------------|------------------------------|----------------|------------------------------------------------------------|
-| **proxyClass**<br/>  | Zeichen \_ Folge<br/> | Ja<br/> | Der Name der implementierenden Klasse.<br/> <br/> |
-| **Ref-Datei**<br/> | Zeichen \_ Folge<br/> | Ja<br/> | Der Verweis Zähler-Variablenname.<br/> <br/>  |
+| **proxyClass**<br/>  | \_Zeichenfolge<br/> | Ja<br/> | Der Name der implementierenden Klasse.<br/> <br/> |
+| **refCountVar**<br/> | \_Zeichenfolge<br/> | Ja<br/> | Der Name der Verweisanzahlvariablen.<br/> <br/>  |
 
 
 
@@ -58,7 +58,7 @@ interface
 
 | Element                         | BESCHREIBUNG                                                    |
 |---------------------------------|----------------------------------------------------------------|
-| [**Datei**](file.md)<br/> | Gibt eine Datei aus dem Code-Generator aus.<br/> <br/> |
+| [**Datei**](file.md)<br/> | Gibt eine Datei aus dem Codegenerator aus.<br/> <br/> |
 
 
 
@@ -66,7 +66,7 @@ interface
 
 
 
-|                                     |               |
+| Bezeichnung | Wert |
 |-------------------------------------|---------------|
 | Unterstützte Mindestversion (System)<br/> | Windows Vista |
 | Kann leer bleiben                        | Nein            |

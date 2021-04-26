@@ -1,44 +1,43 @@
 ---
-description: Funktionsflags für Pixelshader.
+description: Pixelshaderfunktionsflags.
 ms.assetid: 41a8939f-eba5-47ca-8628-94b606b6f43d
 title: D3DD3DPSHADERCAPS2_0
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e8a6da0dfc3fd09ce54e52b633066c6da09660c5
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: fa2326b8f5066d34087fb543c7771a0cd547b98f
+ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104127533"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "107995267"
 ---
 # <a name="d3dd3dpshadercaps2_0"></a>D3DD3DPSHADERCAPS2 \_ 0
 
-Funktionsflags für Pixelshader.
+Pixelshaderfunktionsflags.
 
 
 
-|                                              |                |                                                                                                                                                                                                                   |
+| \#Definieren                                     | Wert          | BESCHREIBUNG                                                                                                                                                                                                       |
 |----------------------------------------------|----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| \#definieren                                     | Wert          | BESCHREIBUNG                                                                                                                                                                                                       |
-| D3DD3DPSHADERCAPS2 \_ 0, \_ willkürliche aryswizzle      | (1 << 0) | Willkürliche swizzelnder werden unterstützt.                                                                                                                                                                                 |
-| D3DD3DPSHADERCAPS2 \_ 0 \_ gradientinstructions  | (1 << 1) | Farbverlaufs Anweisungen werden unterstützt.                                                                                                                                                                              |
-| D3DD3DPSHADERCAPS2 \_ 0- \_ Prädikat           | (1 << 2) | Das Anweisungs Prädikat wird unterstützt. Weitere Informationen finden Sie unter [SETP \_ Comp-PS](../direct3dhlsl/setp-comp---ps.md).                                                                                                                         |
-| D3DD3DPSHADERCAPS2 \_ 0 \_ nodependentleslimit  | (1 << 3) | Es gibt keine Beschränkung für die Anzahl der abhängigen Lesevorgänge pro Anweisung.                                                                                                                                               |
-| D3DD3DPSHADERCAPS2 \_ 0 \_ notexinstructionlimit | (1 << 4) | Es gibt keine Beschränkung für die Anzahl der TeX-Anweisungen.                                                                                                                                                              |
-| D3DPS20 \_ Max \_ dynamicflowcontroltiefe        | 24             | Die maximale Schachtelungs Ebene der dynamischen Fluss Steuerungs Anweisungen (Break, breakc, IFC).                                                                                                                           |
-| D3DPS20 \_ Min \_ dynamicflowcontroltiefe        | 0              | Die minimale Schachtelungs Ebene der dynamischen Fluss Steuerungs Anweisungen (Break, breakc, IFC).                                                                                                                           |
-| D3DPS20 \_ Max. \_ numTemps                       | 32             | Der Treiber unterstützt höchstens dieses viele temporäre Register.                                                                                                                                                     |
-| D3DPS20 \_ Min. \_ numTemps                       | 12             | Der Treiber unterstützt mindestens dieses viele temporäre Register.                                                                                                                                                    |
-| D3DPS20 \_ Max \_ staticflowcontroltiefe         | 4              | Die maximale [Schachtelungs Schachtelung der Schleifen-vs](../direct3dhlsl/loop---vs.md) / [-](../direct3dhlsl/rep---vs.md) und [](../direct3dhlsl/call---vs.md) / [callnz-bool-vs-](../direct3dhlsl/callnz-bool---vs.md) Anweisungen. |
-| D3DPS20 \_ Min \_ staticflowcontroltiefe         | 1              | Die minimale Tiefe der [Schachtelung der Schleifen-vs](../direct3dhlsl/loop---vs.md) / [-](../direct3dhlsl/rep---vs.md) und [](../direct3dhlsl/call---vs.md) / [callnz-bool-vs-](../direct3dhlsl/callnz-bool---vs.md) Anweisungen. |
-| D3DPS20 \_ Max. \_ numinstructionslots            | 512            | Der Treiber unterstützt höchstens diese zahlreichen Anweisungen.                                                                                                                                                           |
-| D3DPS20 \_ Min. \_ numinstructionslots            | 96             | Der Treiber unterstützt mindestens diese Anzahl von Anweisungen.                                                                                                                                                          |
+| D3DD3DPSHADERCAPS2 \_ 0 \_ ARBITRARYSWIZZLE      | (1 << 0) | Beliebiges Swizzling wird unterstützt.                                                                                                                                                                                 |
+| D3DD3DPSHADERCAPS2 \_ 0 \_ GRADIENTINSTRUCTIONS  | (1 << 1) | Farbverlaufsanweisungen werden unterstützt.                                                                                                                                                                              |
+| D3DD3DPSHADERCAPS2 \_ \_ 0-PRÄDIKATION           | (1 << 2) | Anweisungsprädikation wird unterstützt. Siehe [setp \_ comp - ps](../direct3dhlsl/setp-comp---ps.md).                                                                                                                         |
+| D3DD3DPSHADERCAPS2 \_ 0 \_ NODEPENDENTREADLIMIT  | (1 << 3) | Es gibt keine Beschränkung für die Anzahl abhängiger Lesefunktionen pro Anweisung.                                                                                                                                               |
+| D3DD3DPSHADERCAPS2 \_ 0 \_ NOTEXINSTRUCTIONLIMIT | (1 << 4) | Es gibt keine Beschränkung für die Anzahl von Texanweisungen.                                                                                                                                                              |
+| D3DPS20 \_ MAX \_ DYNAMICFLOWCONTROLDEPTH        | 24             | Die maximale Schachtelungsebene von Anweisungen für die dynamische Flusssteuerung (Break, Breakc, ifc).                                                                                                                           |
+| D3DPS20 \_ MIN \_ DYNAMICFLOWCONTROLDEPTH        | 0              | Die minimale Schachtelungsebene der Anweisungen für die dynamische Flusssteuerung (Break, Breakc, ifc).                                                                                                                           |
+| D3DPS20 \_ MAX \_ NUMTEMPS                       | 32             | Der Treiber unterstützt nur diese vielen temporären Registrierungen.                                                                                                                                                     |
+| D3DPS20 \_ \_ MIN. NUMTEMPS                       | 12             | Der Treiber unterstützt mindestens diese vielen temporären Registrierungen.                                                                                                                                                    |
+| D3DPS20 \_ MAX \_ STATICFLOWCONTROLDEPTH         | 4              | Die maximale Tiefe der Schachtelung der Schleife [– vs](../direct3dhlsl/loop---vs.md)rep / [– vs](../direct3dhlsl/rep---vs.md) und call – [vs](../direct3dhlsl/call---vs.md) / [callnz bool – vs](../direct3dhlsl/callnz-bool---vs.md) instructions. |
+| D3DPS20 \_ \_ MIN. STATICFLOWCONTROLDEPTH         | 1              | Die minimale Tiefe der Schachtelung der Schleife [– vs](../direct3dhlsl/loop---vs.md)rep / [– vs](../direct3dhlsl/rep---vs.md) und call – [vs](../direct3dhlsl/call---vs.md) / [callnz bool – vs](../direct3dhlsl/callnz-bool---vs.md) instructions. |
+| D3DPS20 \_ MAX \_ NUMINSTRUCTIONSLOTS            | 512            | Der Treiber unterstützt alle diese vielen Anweisungen.                                                                                                                                                           |
+| D3DPS20 \_ MIN \_ NUMINSTRUCTIONSLOTS            | 96             | Der Treiber unterstützt mindestens diese vielen Anweisungen.                                                                                                                                                          |
 
 
 
  
 
-Diese Konstanten werden vom D3DPSHADERCAPS2 0- \_ Member von [**D3DCAPS9**](/windows/desktop/api/D3D9Caps/ns-d3d9caps-d3dcaps9)verwendet.
+Diese Konstanten werden vom D3DPSHADERCAPS2 \_ 0-Member von [**D3DCAPS9 verwendet.**](/windows/desktop/api/D3D9Caps/ns-d3d9caps-d3dcaps9)
 
 ## <a name="constant-information"></a>Konstante Informationen
 
@@ -46,8 +45,8 @@ Diese Konstanten werden vom D3DPSHADERCAPS2 0- \_ Member von [**D3DCAPS9**](/win
 
 |                          |            |
 |--------------------------|------------|
-| Header                   | d3d9caps. h |
-| Mindestens Betriebssystem | Windows 98 |
+| Header                   | d3d9caps.h |
+| Mindestbetriebssystem | Windows 98 |
 
 
 

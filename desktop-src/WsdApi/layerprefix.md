@@ -1,19 +1,19 @@
 ---
-description: Definiert das Präfix, das im generierten Code verwendet werden soll, um die Eindeutigkeit generierter Symbole sicherzustellen.
+description: Definiert das Präfix, das im generierten Code verwendet werden soll, um die Eindeutigkeit der generierten Symbole sicherzustellen.
 ms.assetid: 50cb443a-15ae-4f8f-b5f7-b8708810a6c3
-title: layerprefix-Element
+title: layerPrefix-Element
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3b712edee4b33c7158280b9d310624371fd58688
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 98970013c72600affd7d4d9e7a71781f477cd87d
+ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104131140"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "107994697"
 ---
-# <a name="layerprefix-element"></a>layerprefix-Element
+# <a name="layerprefix-element"></a>layerPrefix-Element
 
-Definiert das Präfix, das im generierten Code verwendet werden soll, um die Eindeutigkeit generierter Symbole sicherzustellen.
+Definiert das Präfix, das im generierten Code verwendet werden soll, um die Eindeutigkeit der generierten Symbole sicherzustellen.
 
 ## <a name="usage"></a>Verbrauch
 
@@ -35,13 +35,13 @@ Es gibt keine untergeordneten Elemente.
 
 | Element                                     | BESCHREIBUNG                                                                          |
 |---------------------------------------------|--------------------------------------------------------------------------------------|
-| [**wsdcodegen**](wsdcodegen.md)<br/> | Das Stamm Element einer XML-Skriptdatei des WSDAPI-Code-Generators.<br/> <br/> |
+| [**wsdCodeGen**](wsdcodegen.md)<br/> | Das Stammelement einer WSDAPI-Codegenerator-XML-Skriptdatei.<br/> <br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Jedes Code Generator Skript sollte eine eindeutige Präfix Zeichenfolge für die erstellten Module definieren. Die Bild Rahmen Skripts verwenden z. b. das Präfix "pfdemo".
+Jedes Codegeneratorskript sollte eine eindeutige Präfixzeichenfolge für die erstellten Module definieren. Beispielsweise verwenden die Picture Frame-Skripts das Präfix "PFDEMO".
 
 WSDAPI verwendet das Präfix "WSD".
 
@@ -49,7 +49,7 @@ WSDAPI verwendet das Präfix "WSD".
 
 
 
-|                                     |               |
+| Bezeichnung | Wert |
 |-------------------------------------|---------------|
 | Unterstützte Mindestversion (System)<br/> | Windows Vista |
 | Kann leer bleiben                        | Ja           |

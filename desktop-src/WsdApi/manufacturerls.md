@@ -1,19 +1,19 @@
 ---
-description: Gibt eine lokalisierte Version des Hersteller namens an.
+description: Gibt eine lokalisierte Version des Herstellernamens an.
 ms.assetid: e87de50f-60ec-4c18-b21c-81f7b6928752
-title: manufacturerls-Element
+title: manufacturerLS-Element
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ea756e9c2a55c9bc062b6ddd8566ea5443c6ed80
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5d24950355c5439d9a99c4ef451f1330772f3459
+ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106350586"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "107993677"
 ---
-# <a name="manufacturerls-element"></a>manufacturerls-Element
+# <a name="manufacturerls-element"></a>manufacturerLS-Element
 
-Gibt eine lokalisierte Version des Hersteller namens an.
+Gibt eine lokalisierte Version des Herstellernamens an.
 
 ## <a name="usage"></a>Verbrauch
 
@@ -29,8 +29,8 @@ Gibt eine lokalisierte Version des Hersteller namens an.
 
 | Attribut               | type                                          | Erforderlich       | Beschreibung                                                             |
 |-------------------------|-----------------------------------------------|----------------|-------------------------------------------------------------------------|
-| **Data**<br/>     | lokalisierte Zeichenfolge des Hersteller namens<br/> | Ja<br/> | Der lokalisierte Herstellername.<br/> <br/>                 |
-| **Sprache**<br/> | Zeichenfolge der sprach Kennung<br/>         | Ja<br/> | Die Sprache des lokalisierten Hersteller namens.<br/> <br/> |
+| **Data**<br/>     | Lokalisierte Name-Zeichenfolge des Herstellers<br/> | Ja<br/> | Der lokalisierte Herstellername.<br/> <br/>                 |
+| **Sprache**<br/> | Sprachbezeichnerzeichenfolge<br/>         | Ja<br/> | Die Sprache des lokalisierten Herstellernamens.<br/> <br/> |
 
 
 
@@ -44,7 +44,7 @@ Es gibt keine untergeordneten Elemente.
 
 | Element                                                   | BESCHREIBUNG                                                                                          |
 |-----------------------------------------------------------|------------------------------------------------------------------------------------------------------|
-| [**thismodelmetadata**](thismodelmetadata.md)<br/> | Definiert die Hersteller-und Modell Metadaten für das zu implementierende Gerät.<br/> <br/> |
+| [**thisModelMetadata**](thismodelmetadata.md)<br/> | Definiert die Hersteller- und Modellmetadaten für das zu implementierte Gerät.<br/> <br/> |
 
 
 
@@ -52,7 +52,7 @@ Es gibt keine untergeordneten Elemente.
 
 
 
-|                                     |               |
+| Bezeichnung | Wert |
 |-------------------------------------|---------------|
 | Unterstützte Mindestversion (System)<br/> | Windows Vista |
 | Kann leer bleiben                        | Ja           |

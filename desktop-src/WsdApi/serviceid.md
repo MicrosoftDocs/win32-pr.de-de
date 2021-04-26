@@ -1,19 +1,19 @@
 ---
-description: Ein URI, der den Dienst Bezeichner darstellt.
+description: Ein URI, der den Dienstbezeichner darstellt.
 ms.assetid: ef676f02-56a7-4b3a-9ca3-e7fa3c494ec7
-title: Serviceid-Element
+title: ServiceID-Element
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 305e97250b0b33d276dced4b5d454aec9298387c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c4c8b02fa8ecfa936aa658a1f18242e4f14eb0dd
+ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106351094"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "107995107"
 ---
-# <a name="serviceid-element"></a>Serviceid-Element
+# <a name="serviceid-element"></a>ServiceID-Element
 
-Ein URI, der den Dienst Bezeichner darstellt.
+Ein URI, der den Dienstbezeichner darstellt.
 
 ## <a name="usage"></a>Verbrauch
 
@@ -35,8 +35,8 @@ Es gibt keine untergeordneten Elemente.
 
 | Element                             | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                          |
 |-------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Host**](host.md)<br/>     | Definiert die **serviceid** -und [**types**](types.md) -Elemente für den Dienst Host. Wenn Sie nicht explizit bereitgestellt werden, stellt WSDAPI keine Standarddaten als Antwort auf Metadatenanforderungen bereit.<br/> <br/>                                                                                                                     |
-| [**gehostet**](hosted.md)<br/> | Definiert die **serviceid** -und [**types**](types.md) -Elemente für die Dienste, die von diesem Dienst Host bereitgestellt werden. Jeder von diesem Dienst Host bereitgestellte Dienst sollte über eigene [**gehostete**](hosted.md) Element Informationen verfügen, um sicherzustellen, dass der Dienst in Antworten auf Metadatenanforderungen ordnungsgemäß veröffentlicht wird.<br/> <br/> |
+| [**Host**](host.md)<br/>     | Definiert die **Elemente ServiceID** und [**Types**](types.md) für den Diensthost. Wenn sie nicht explizit angegeben wird, stellt WSDAPI als Reaktion auf Metadatenanforderungen keine Standarddaten bereit.<br/> <br/>                                                                                                                     |
+| [**Gehostet**](hosted.md)<br/> | Definiert die **Elemente ServiceID** und [**Types**](types.md) für die von diesem Diensthost bereitgestellten Dienste. Jeder von diesem Diensthost bereitgestellte Dienst sollte über eigene Informationen zu [**gehosteten**](hosted.md) Elementen verfügen, um sicherzustellen, dass der Dienst ordnungsgemäß als Antwort auf Metadatenanforderungen veröffentlicht wird.<br/> <br/> |
 
 
 
@@ -44,7 +44,7 @@ Es gibt keine untergeordneten Elemente.
 
 
 
-|                                     |               |
+| Bezeichnung | Wert |
 |-------------------------------------|---------------|
 | Unterstützte Mindestversion (System)<br/> | Windows Vista |
 | Kann leer bleiben                        | Ja           |

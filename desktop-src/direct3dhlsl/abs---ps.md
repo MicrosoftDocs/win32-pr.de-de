@@ -1,6 +1,6 @@
 ---
-title: ABS-PS
-description: Berechnet den absoluten Wert. | ABS-PS
+title: abs - ps
+description: Berechnet den absoluten Wert. | abs - ps
 ms.assetid: e97db550-2a03-421a-86f4-a6fc5f8e0bca
 ms.topic: reference
 ms.date: 05/31/2018
@@ -9,14 +9,14 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 070a513aaa0d336d5ac404b1748fdd162edfd532
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: e3e7af7b2d30e9d9f2092cb6671610f008ec781d
+ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104352158"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "107994877"
 ---
-# <a name="abs---ps"></a>ABS-PS
+# <a name="abs---ps"></a>abs - ps
 
 Berechnet den absoluten Wert.
 
@@ -26,7 +26,7 @@ Berechnet den absoluten Wert.
 
 |              |
 |--------------|
-| ABS DST, src |
+| abs dst, src |
 
 
 
@@ -34,16 +34,15 @@ Berechnet den absoluten Wert.
 
 where
 
--   DST ist das Ziel Register.
--   src ist ein Quell Register.
+-   dst ist das Zielregister.
+-   src ist ein Quellregister.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 
 
-|                       |      |      |      |      |      |      |       |      |       |
+| Pixel-Shaderversionen | 1\_1 | 1\_2 | 1 \_ 3 | 1\_4 | 2 \_ 0 | 2 \_ x | 2 \_ sw | 3 \_ 0 | 3 \_ sw |
 |-----------------------|------|------|------|------|------|------|-------|------|-------|
-| Pixel-Shader-Versionen | 1\_1 | 1\_2 | 1 \_ 3 | 1\_4 | 2 \_ 0 | 2 \_ x | 2 \_ SW | 3 \_ 0 | 3 \_ SW |
 | abs                   |      |      |      |      | x    | x    | x     | x    | x     |
 
 
@@ -62,13 +61,13 @@ dest.w = abs(src.w)
 
 
 
-## <a name="instruction-information"></a>Anweisungs Informationen
+## <a name="instruction-information"></a>Anweisungsinformationen
 
 
 
 |                          |            |
 |--------------------------|------------|
-| Mindestens Betriebssystem | Windows 98 |
+| Mindestbetriebssystem | Windows 98 |
 
 
 
@@ -78,7 +77,7 @@ dest.w = abs(src.w)
 
 <dl> <dt>
 
-[Pixelshaderanweisungen](dx9-graphics-reference-asm-ps-instructions.md)
+[Anweisungen für Pixel-Shader](dx9-graphics-reference-asm-ps-instructions.md)
 </dt> </dl>
 
  

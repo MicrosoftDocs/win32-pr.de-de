@@ -1,19 +1,19 @@
 ---
-description: Generiert IDL-Deklarationen für Proxy Funktionen für Porttyp Vorgänge.
+description: Generiert IDL-Deklarationen für Proxyfunktionen für Porttypvorgänge.
 ms.assetid: e56fdd68-b72d-4167-9e4c-b5bbf103880b
-title: idlfunction-Deklarationen-Element
+title: idlFunctionDeclarations-Element
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1afa43676898231f739804185b8bf5d6e2b4faf8
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: bf4d1648ac6d9c3ac6900826ebe90a64418822b6
+ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106358816"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "107994737"
 ---
-# <a name="idlfunctiondeclarations-element"></a>idlfunction-Deklarationen-Element
+# <a name="idlfunctiondeclarations-element"></a>idlFunctionDeclarations-Element
 
-Generiert IDL-Deklarationen für Proxy Funktionen für Porttyp Vorgänge.
+Generiert IDL-Deklarationen für Proxyfunktionen für Porttypvorgänge.
 
 ## <a name="usage"></a>Verbrauch
 
@@ -33,12 +33,12 @@ Es gibt keine Attribute.
 
 | Element                                   | BESCHREIBUNG                                                                                                             |
 |-------------------------------------------|-------------------------------------------------------------------------------------------------------------------------|
-| [**async**](async.md)<br/>         | Gibt an, ob asynchrone Vorgänge in den generierten Proxy Funktionen enthalten sind.<br/> <br/>         |
-| [**EventArg**](eventarg.md)<br/>   | Gibt an, ob Verwandte Ereignis Argumente in den generierten Funktionen enthalten sind.<br/> <br/>               |
-| [**Fall**](events.md)<br/>       | Gibt an, ob verwandte Ereignisse in den generierten Funktionen enthalten sind.<br/> <br/>                        |
-| [**faultinfo**](faultinfo.md)<br/> | Gibt an, ob Parameter, die zum Übergeben von Fehlerinformationen verwendet werden, in generierte Funktionen eingeschlossen werden<br/> <br/> |
-| [**Betriebs**](operation.md)<br/> | Gibt einen Vorgang an, für den Code generiert werden soll.<br/> <br/>                                        |
-| [**PortType**](porttype.md)<br/>   | Gibt den Porttyp an, für den Code generiert werden soll.<br/> <br/>                                       |
+| [**async**](async.md)<br/>         | Gibt an, ob asynchrone Vorgänge in den generierten Proxyfunktionen enthalten sind.<br/> <br/>         |
+| [**eventArg**](eventarg.md)<br/>   | Gibt an, ob verwandte Ereignisargumente in den generierten Funktionen enthalten sind.<br/> <br/>               |
+| [**Ereignisse**](events.md)<br/>       | Gibt an, ob verwandte Ereignisse in den generierten Funktionen enthalten sind.<br/> <br/>                        |
+| [**faultInfo**](faultinfo.md)<br/> | Gibt an, ob Parameter, die zum Übergeben von Fehlerinformationen verwendet werden, in generierten Funktionen enthalten sind.<br/> <br/> |
+| [**Vorgang**](operation.md)<br/> | Gibt einen Vorgang an, für den Code generiert werden soll.<br/> <br/>                                        |
+| [**Porttype**](porttype.md)<br/>   | Gibt den Porttyp an, für den Code generiert werden soll.<br/> <br/>                                       |
 
 
 
@@ -61,13 +61,13 @@ Es gibt keine Attribute.
 
 | Element                         | BESCHREIBUNG                                                    |
 |---------------------------------|----------------------------------------------------------------|
-| [**Datei**](file.md)<br/> | Gibt eine Datei aus dem Code-Generator aus.<br/> <br/> |
+| [**Datei**](file.md)<br/> | Gibt eine Datei aus dem Codegenerator aus.<br/> <br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Element generiert Deklarationen von Element Funktionen, die den Vorgängen entsprechen, die durch den Vertrag aufgerufen werden. Diese Deklarationen sind in einer für die Verwendung durch den Mittel l-Compiler geeigneten Form und werden im Allgemeinen in IDL-Dateien verwendet.
+Dieses Element generiert Deklarationen von Memberfunktionen, die vorgängen entsprechen, die vom Vertrag aufgerufen werden. Diese Deklarationen sind in einer Für den MIDL-Compiler geeigneten Form und werden im Allgemeinen in IDL-Dateien verwendet.
 
 Beispiel:
 
@@ -79,7 +79,7 @@ Beispiel:
 
 
 
-|                                     |               |
+| Bezeichnung | Wert |
 |-------------------------------------|---------------|
 | Unterstützte Mindestversion (System)<br/> | Windows Vista |
 | Kann leer bleiben                        | Ja           |

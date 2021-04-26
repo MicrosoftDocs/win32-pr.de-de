@@ -1,21 +1,21 @@
 ---
-description: Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie in der PrintSchema-Spezifikation.
+description: Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter Spezifikation des Druckschemas.
 ms.assetid: f6fa0421-a125-4ead-a540-d2f7327a26b6
-title: Pagescalingoffertheight
+title: PageScalingOffsetHeight
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a475f7fa68cd961d9d7a7f42e40fc9ea80a72a4e
-ms.sourcegitcommit: de72a1294df274b0a71dc0fdc42d757e5f6df0f3
+ms.openlocfilehash: 1a91178f1506196ab505a90de8bf3a3163fa8a3c
+ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "104393870"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "107993738"
 ---
-# <a name="pagescalingoffsetheight"></a>Pagescalingoffertheight
+# <a name="pagescalingoffsetheight"></a>PageScalingOffsetHeight
 
-Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie in der [PrintSchema-Spezifikation](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip).
+Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter [Print Schema Specification (Spezifikation des Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 
-Gibt den Skalierungs Offset in der imageablesizeheight-Richtung für die benutzerdefinierte Skalierung an.
+Gibt den Skalierungsoffset in der Richtung ImageableSizeHeight für die benutzerdefinierte Skalierung an.
 
 -   [Elementinformationen](#element-information)
 -   [Strukturieren von Inhalt](#structure-content)
@@ -24,11 +24,11 @@ Gibt den Skalierungs Offset in der imageablesizeheight-Richtung für die benutze
 
 
 
-| Name                       |                                                         |
+| Name | Wert |
 |----------------------------|---------------------------------------------------------|
 | Elementtyp <br/>   | ParameterDef<br/>                                 |
-| Bereichs Präfix <br/> | Seite<br/>                                         |
-| Notizen <br/>          | Verknüpft mit PageScaling-Element, benutzerdefinierte Option<br/> |
+| Bereichspräfix <br/> | Seite<br/>                                         |
+| Hinweise <br/>          | Mit PageScaling-Element verknüpft, Option "Benutzerdefiniert"<br/> |
 
 
 
@@ -36,7 +36,7 @@ Gibt den Skalierungs Offset in der imageablesizeheight-Richtung für die benutze
 
 ## <a name="structure-content"></a>Strukturieren von Inhalt
 
-Die XML-Struktur dieses Elements lautet:
+Die XML-Struktur dieses Elements ist:
 
 ``` syntax
 <psf:ParameterDef name="psk:PageScalingOffsetHeight">
@@ -65,7 +65,7 @@ Die XML-Struktur dieses Elements lautet:
       
 ```
 
-## <a name="structure-properties"></a>Struktur Eigenschaften
+## <a name="structure-properties"></a>Struktureigenschaften
 
 In der folgenden Tabelle werden die Merkmale der Variablen beschrieben, die in der XML-Struktur definiert sind.
 
@@ -76,10 +76,10 @@ In der folgenden Tabelle werden die Merkmale der Variablen beschrieben, die in d
 | DataType<br/>     | Zeichenfolge<br/>  | xs:integer<br/>      |
 | DefaultValue<br/> | integer<br/> | nicht definiert<br/>       |
 | MaxValue<br/>     | integer<br/> | nicht definiert<br/>       |
-| MinValue<br/>     | integer<br/> | nicht definiert<br/>       |
-| Obligatorisch.<br/>    | Zeichenfolge<br/>  | PSK: bedingt<br/> |
+| Minvalue<br/>     | integer<br/> | nicht definiert<br/>       |
+| Obligatorisch.<br/>    | Zeichenfolge<br/>  | psk:Conditional<br/> |
 | Mehrere<br/>     | integer<br/> | 1<br/>               |
-| UnitType<br/>     | Zeichenfolge<br/>  | Mikrometern<br/>         |
+| Unittype<br/>     | Zeichenfolge<br/>  | Mikron<br/>         |
 
 
 
@@ -89,7 +89,7 @@ In der folgenden Tabelle werden die Merkmale der Variablen beschrieben, die in d
 
 <dl> <dt>
 
-[Druck Schema Spezifikation](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
+[Spezifikation des Druckschemas](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 </dt> </dl>
 
  

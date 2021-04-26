@@ -1,43 +1,42 @@
 ---
-description: Die folgenden Flags werden verwendet, um anzugeben, auf welchen Kanälen in einer Textur gearbeitet werden soll.
+description: Die folgenden Flags werden verwendet, um anzugeben, welche Kanäle in einer Textur verwendet werden sollen.
 ms.assetid: b592b42a-0af1-49df-b159-4b84e4e12c95
 title: D3DX_CHANNEL
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 19efe9490501fe8116059dc6ea865d8b8931d18a
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: e870f01fd21fdb63f62278a3a5cac3b4da077e1e
+ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104523523"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "107995687"
 ---
-# <a name="d3dx_channel"></a>D3DX- \_ Kanal
+# <a name="d3dx_channel"></a>\_D3DX-KANAL
 
-Die folgenden Flags werden verwendet, um anzugeben, auf welchen Kanälen in einer Textur gearbeitet werden soll.
+Die folgenden Flags werden verwendet, um anzugeben, welche Kanäle in einer Textur verwendet werden sollen.
 
 
 
-|                          |                                                                               |
+| \#Definieren                 | BESCHREIBUNG                                                                   |
 |--------------------------|-------------------------------------------------------------------------------|
-| \#definieren                 | BESCHREIBUNG                                                                   |
-| D3DX \_ Kanal \_ rot       | Gibt an, dass der rote Kanal verwendet werden soll.                                     |
-| D3DX \_ Kanal \_ blau      | Gibt an, dass der blaue Kanal verwendet werden soll.                                    |
-| D3DX \_ Kanal \_ grün     | Gibt an, dass der grüne Kanal verwendet werden soll.                                   |
-| D3DX \_ Channel \_ Alpha     | Gibt an, dass der Alphakanal verwendet werden soll.                                   |
-| D3DX \_ Kanal- \_ Leuchtkraft | Gibt an, dass die Leuchtkraft der roten, grünen und blauen Kanäle verwendet werden sollen. |
+| D3DX \_ CHANNEL \_ RED       | Gibt an, dass der rote Kanal verwendet werden soll.                                     |
+| D3DX-KANAL \_ \_ BLAU      | Gibt an, dass der blaue Kanal verwendet werden soll.                                    |
+| D3DX-KANAL \_ \_ GRÜN     | Gibt an, dass der grüne Kanal verwendet werden soll.                                   |
+| D3DX-KANAL \_ \_ ALPHA     | Gibt an, dass der Alphakanal verwendet werden soll.                                   |
+| D3DX \_ CHANNEL \_ LUMINANCE | Gibt die Leuchtdichten der roten, grünen und blauen Kanäle an, die verwendet werden sollen. |
 
 
 
  
 
-## <a name="constant-information"></a>Konstante Informationen
+## <a name="constant-information"></a>Konstanteninformationen
 
 
 
 |                          |            |
 |--------------------------|------------|
-| Header                   | d3dx9tex. h |
-| Mindestens Betriebssystem | Windows 98 |
+| Header                   | d3dx9tex.h |
+| Mindestbetriebssystem | Windows 98 |
 
 
 

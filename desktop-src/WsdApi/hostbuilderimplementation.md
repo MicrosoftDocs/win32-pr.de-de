@@ -1,19 +1,19 @@
 ---
-description: Generiert eine Funktion, mit der ein typisierter Host erstellt wird.
+description: Generiert eine Funktion, die einen typierten Host erstellt.
 ms.assetid: 2b4a4016-cc5d-4912-8e08-ce3a11ab0a06
-title: hostbuilderimplementation-Element
+title: hostBuilderImplementation-Element
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7c9cfabb9ab4193162044420fc3980f0bbeeb55a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 97d333287acd199f4fe2aa8967a1b8d6458ff3ae
+ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106345867"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "107994917"
 ---
-# <a name="hostbuilderimplementation-element"></a>hostbuilderimplementation-Element
+# <a name="hostbuilderimplementation-element"></a>hostBuilderImplementation-Element
 
-Generiert eine Funktion, mit der ein typisierter Host erstellt wird.
+Generiert eine Funktion, die einen typierten Host erstellt.
 
 ## <a name="usage"></a>Verbrauch
 
@@ -33,7 +33,7 @@ Es gibt keine Attribute.
 
 | Element                                           | BESCHREIBUNG                                                      |
 |---------------------------------------------------|------------------------------------------------------------------|
-| [**hostedservice "**](hostedservice.md)<br/> | Der Dienst, der für den Host eingeschlossen werden soll. <br/> <br/> |
+| [**hostedService**](hostedservice.md)<br/> | Der Dienst, der für den Host eingeschlossen werden soll. <br/> <br/> |
 
 
 
@@ -49,7 +49,7 @@ hostedService+
 
 | Element                         | BESCHREIBUNG                                                    |
 |---------------------------------|----------------------------------------------------------------|
-| [**Datei**](file.md)<br/> | Gibt eine Datei aus dem Code-Generator aus.<br/> <br/> |
+| [**Datei**](file.md)<br/> | Gibt eine Datei aus dem Codegenerator aus.<br/> <br/> |
 
 
 
@@ -57,7 +57,7 @@ hostedService+
 
 
 
-|                                     |               |
+| Bezeichnung | Wert |
 |-------------------------------------|---------------|
 | Unterstützte Mindestversion (System)<br/> | Windows Vista |
 | Kann leer bleiben                        | Nein            |

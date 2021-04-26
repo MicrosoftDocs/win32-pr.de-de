@@ -1,19 +1,19 @@
 ---
-description: Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie in der PrintSchema-Spezifikation.
+description: Dieses Thema ist nicht aktuell. Aktuelle Informationen finden Sie unter Print Schema Specification(Spezifikation des Druckschemas).
 ms.assetid: 6319e8fc-787f-4bc8-8436-1b498b3882d2
 title: DocumentCopiesAllPages
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f8941f8a6f1f7ef8ec554fa0eba937ddd6f686ad
-ms.sourcegitcommit: de72a1294df274b0a71dc0fdc42d757e5f6df0f3
+ms.openlocfilehash: 723242ddd127113b573f167e6902b27fcca9665a
+ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "104351798"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "107993987"
 ---
 # <a name="documentcopiesallpages"></a>DocumentCopiesAllPages
 
-Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie in der [PrintSchema-Spezifikation](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip).
+Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie unter Print Schema Specification (Spezifikation des [Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 
 Gibt die Anzahl der Kopien eines Dokuments an.
 
@@ -24,10 +24,10 @@ Gibt die Anzahl der Kopien eines Dokuments an.
 
 
 
-| Name                       |                         |
+| Name | Wert |
 |----------------------------|-------------------------|
 | Elementtyp <br/>   | ParameterDef<br/> |
-| Bereichs Präfix <br/> | Dokument<br/>     |
+| Bereichspräfix <br/> | Dokument<br/>     |
 | Hinweise <br/>          | Keine<br/>         |
 
 
@@ -65,9 +65,9 @@ Die XML-Struktur dieses Elements lautet:
       
 ```
 
-## <a name="structure-properties"></a>Struktur Eigenschaften
+## <a name="structure-properties"></a>Struktureigenschaften
 
-In der folgenden Tabelle werden die Merkmale der Variablen beschrieben, die in der XML-Struktur definiert sind.
+In der folgenden Tabelle werden die Merkmale der in der XML-Struktur definierten Variablen beschrieben.
 
 
 
@@ -76,10 +76,10 @@ In der folgenden Tabelle werden die Merkmale der Variablen beschrieben, die in d
 | DataType<br/>     | Zeichenfolge<br/>  | xs:integer<br/>        |
 | DefaultValue<br/> | integer<br/> | 1<br/>                 |
 | MaxValue<br/>     | integer<br/> | nicht definiert<br/>         |
-| MinValue<br/>     | integer<br/> | 1<br/>                 |
-| Obligatorisch.<br/>    | Zeichenfolge<br/>  | PSK: nicht bedingt<br/> |
+| Minvalue<br/>     | integer<br/> | 1<br/>                 |
+| Obligatorisch.<br/>    | Zeichenfolge<br/>  | psk:Bedingungslos<br/> |
 | Mehrere<br/>     | integer<br/> | 1<br/>                 |
-| UnitType<br/>     | Zeichenfolge<br/>  | Uni<br/>            |
+| Unittype<br/>     | Zeichenfolge<br/>  | Kopien<br/>            |
 
 
 
@@ -89,7 +89,7 @@ In der folgenden Tabelle werden die Merkmale der Variablen beschrieben, die in d
 
 <dl> <dt>
 
-[Druck Schema Spezifikation](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
+[Spezifikation des Druckschemas](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 </dt> </dl>
 
  

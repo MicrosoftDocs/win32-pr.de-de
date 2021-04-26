@@ -1,17 +1,17 @@
 ---
 description: Beschreibt den Host und die gehosteten Metadaten für das Gerät.
 ms.assetid: 1dde01bf-2cc1-4074-a82b-c5946339233b
-title: relationshipmetadata-Element
+title: relationshipMetadata-Element
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2a42fff2f6f7b58b8d6a7c7c3573bc9d8398e8bc
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b744cc9ff91b83bdeedfda893ae0c1fd268db748
+ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106357485"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "107995727"
 ---
-# <a name="relationshipmetadata-element"></a>relationshipmetadata-Element
+# <a name="relationshipmetadata-element"></a>relationshipMetadata-Element
 
 Beschreibt den Host und die gehosteten Metadaten für das Gerät.
 
@@ -35,7 +35,7 @@ Es gibt keine untergeordneten Elemente.
 
 | Element                                     | BESCHREIBUNG                                                                          |
 |---------------------------------------------|--------------------------------------------------------------------------------------|
-| [**wsdcodegen**](wsdcodegen.md)<br/> | Das Stamm Element einer XML-Skriptdatei des WSDAPI-Code-Generators.<br/> <br/> |
+| [**wsdCodeGen**](wsdcodegen.md)<br/> | Das Stammelement einer XML-Skriptdatei des WSDAPI-Codegenerators.<br/> <br/> |
 
 
 
@@ -43,7 +43,7 @@ Es gibt keine untergeordneten Elemente.
 
 
 
-|                                     |               |
+| Bezeichnung | Wert |
 |-------------------------------------|---------------|
 | Unterstützte Mindestversion (System)<br/> | Windows Vista |
 | Kann leer bleiben                        | Ja           |

@@ -1,19 +1,19 @@
 ---
-description: Generiert C-Struktur Deklarationen für bekannte Typen.
+description: Generiert C-Strukturdeklarationen für bekannte Typen.
 ms.assetid: bfef9302-eea6-4957-b67d-d497f5db99a5
-title: struct-Deklarations Element
+title: structDeclarations-Element
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f466713930516e37166ff86f7462bae74dedd6c3
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e80f5a30ffb5de0d30a4b66a1b3b9204fce43c4e
+ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106369851"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "107994667"
 ---
-# <a name="structdeclarations-element"></a>struct-Deklarations Element
+# <a name="structdeclarations-element"></a>structDeclarations-Element
 
-Generiert C-Struktur Deklarationen für bekannte Typen.
+Generiert C-Strukturdeklarationen für bekannte Typen.
 
 ## <a name="usage"></a>Verbrauch
 
@@ -35,19 +35,19 @@ Es gibt keine untergeordneten Elemente.
 
 | Element                         | BESCHREIBUNG                                                    |
 |---------------------------------|----------------------------------------------------------------|
-| [**Datei**](file.md)<br/> | Gibt eine Datei aus dem Code-Generator aus.<br/> <br/> |
+| [**Datei**](file.md)<br/> | Gibt eine Datei aus dem Codegenerator aus.<br/> <br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Auf Strukturen für bekannte Typen wird von einem Großteil des generierten Codes und des Anwendungs Codes verwiesen. Dieses Element wird zum Generieren von Include-Dateien verwendet.
+Auf Strukturen für bekannte Typen wird von einem Großteil des generierten Codes und von Anwendungscode verwiesen. Dieses Element wird verwendet, um Includedateien zu generieren.
 
 ## <a name="element-information"></a>Elementinformationen
 
 
 
-|                                     |               |
+| Bezeichnung | Wert |
 |-------------------------------------|---------------|
 | Unterstützte Mindestversion (System)<br/> | Windows Vista |
 | Kann leer bleiben                        | Ja           |

@@ -1,19 +1,19 @@
 ---
-description: Gibt einen qualifizierten Namen im-Namespace an.
+description: Gibt einen qualifizierten Namen im Namespace an.
 ms.assetid: cba708cc-1a4a-4e46-9376-065d3c879c38
-title: Name-Element
+title: name-Element
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: cc89f45b85c66c69ac1f380825db61c1e4ff93c1
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5e6997f75ce554e6a91fb594b8b31afa22696dda
+ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106359460"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "107994267"
 ---
-# <a name="name-element"></a>Name-Element
+# <a name="name-element"></a>name-Element
 
-Gibt einen qualifizierten Namen im-Namespace an.
+Gibt einen qualifizierten Namen im Namespace an.
 
 ## <a name="usage"></a>Verbrauch
 
@@ -43,7 +43,7 @@ Es gibt keine untergeordneten Elemente.
 
 
 
-|                                     |               |
+| Bezeichnung | Wert |
 |-------------------------------------|---------------|
 | Unterstützte Mindestversion (System)<br/> | Windows Vista |
 | Kann leer bleiben                        | Ja           |

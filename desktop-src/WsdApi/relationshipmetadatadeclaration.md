@@ -1,19 +1,19 @@
 ---
-description: Generiert eine vorwärts Deklaration für die hostmetadatenelemente, die im hostmetadata-Element angegeben sind.
+description: Generiert eine Vorwärtsdeklaration für die im hostMetadata-Element angegebenen Hostingmetadaten.
 ms.assetid: 595adb84-e1a7-4636-b61f-eb0a4b3057b9
 title: relationshipMetadataDeclaration-Element
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 05a12d893cc79b609e43d5d40bf2df3d6ca888c3
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9d6963cf69ef5d6622d5eacfc98bbb24c734cc39
+ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104218286"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "107995097"
 ---
 # <a name="relationshipmetadatadeclaration-element"></a>relationshipMetadataDeclaration-Element
 
-Generiert eine vorwärts Deklaration für die hostmetadatenelemente, die im [**hostmetadata**](hostmetadata.md) -Element angegeben sind. Diese Deklaration wird in einer Header Datei verwendet.
+Generiert eine Vorwärtsdeklaration für die im [**hostMetadata-Element**](hostmetadata.md) angegebenen Hostingmetadaten. Diese Deklaration wird in einer Headerdatei verwendet.
 
 ## <a name="usage"></a>Verbrauch
 
@@ -35,19 +35,19 @@ Es gibt keine untergeordneten Elemente.
 
 | Element                         | BESCHREIBUNG                                                    |
 |---------------------------------|----------------------------------------------------------------|
-| [**Datei**](file.md)<br/> | Gibt eine Datei aus dem Code-Generator aus.<br/> <br/> |
+| [**Datei**](file.md)<br/> | Gibt eine Datei aus dem Codegenerator aus.<br/> <br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Beim Initialisieren des Hosts wird von der Anwendung auf hostingmetadaten verwiesen. Dieses Element wird zum Generieren von Include-Dateien verwendet, die im Quellcode der Anwendung enthalten sind.
+Auf Hostingmetadaten verweist die Anwendung, wenn sie den Host initialisiert. Dieses Element wird verwendet, um Includedateien zu generieren, die im Quellcode der Anwendung enthalten sind.
 
 ## <a name="element-information"></a>Elementinformationen
 
 
 
-|                                     |               |
+| Bezeichnung | Wert |
 |-------------------------------------|---------------|
 | Unterstützte Mindestversion (System)<br/> | Windows Vista |
 | Kann leer bleiben                        | Ja           |

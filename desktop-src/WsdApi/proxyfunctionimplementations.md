@@ -1,19 +1,19 @@
 ---
-description: Generiert Implementierungen für Proxy Funktionen für Porttyp Vorgänge.
+description: Generiert Implementierungen für Proxyfunktionen für Porttypvorgänge.
 ms.assetid: 9505ee5f-fdb9-41b8-9537-0c5d29f90168
-title: proxyfunctionimplementierungen-Element
+title: proxyFunctionImplementations-Element
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 53a27e217cfa3d0a9efd204a1b18c7b2f0ca16f9
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3e9f03834ca59ede41f2f3c3dff00d7dacdd54db
+ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103867344"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "107995757"
 ---
-# <a name="proxyfunctionimplementations-element"></a>proxyfunctionimplementierungen-Element
+# <a name="proxyfunctionimplementations-element"></a>proxyFunctionImplementations-Element
 
-Generiert Implementierungen für Proxy Funktionen für Porttyp Vorgänge.
+Generiert Implementierungen für Proxyfunktionen für Porttypvorgänge.
 
 ## <a name="usage"></a>Verbrauch
 
@@ -33,12 +33,12 @@ Es gibt keine Attribute.
 
 | Element                                     | BESCHREIBUNG                                                                                                             |
 |---------------------------------------------|-------------------------------------------------------------------------------------------------------------------------|
-| [**async**](async.md)<br/>           | Gibt an, ob asynchrone Vorgänge in den generierten Proxy Funktionen enthalten sind.<br/> <br/>         |
-| [**Fall**](events.md)<br/>         | Gibt an, ob verwandte Ereignisse in den generierten Funktionen enthalten sind.<br/> <br/>                        |
-| [**faultinfo**](faultinfo.md)<br/>   | Gibt an, ob Parameter, die zum Übergeben von Fehlerinformationen verwendet werden, in generierte Funktionen eingeschlossen werden<br/> <br/> |
-| [**Betriebs**](operation.md)<br/>   | Gibt einen Vorgang an, für den Code generiert werden soll.<br/> <br/>                                        |
-| [**PortType**](porttype.md)<br/>     | Gibt den Porttyp an, für den Code generiert werden soll.<br/> <br/>                                       |
-| [**proxyClass**](proxyclass.md)<br/> | Gibt den Namen der Client seitigen Proxy Klasse an.<br/> <br/>                                               |
+| [**async**](async.md)<br/>           | Gibt an, ob asynchrone Vorgänge in den generierten Proxyfunktionen enthalten sind.<br/> <br/>         |
+| [**Ereignisse**](events.md)<br/>         | Gibt an, ob verwandte Ereignisse in den generierten Funktionen enthalten sind.<br/> <br/>                        |
+| [**faultInfo**](faultinfo.md)<br/>   | Gibt an, ob Parameter, die zum Übergeben von Fehlerinformationen verwendet werden, in generierten Funktionen enthalten sind.<br/> <br/> |
+| [**Vorgang**](operation.md)<br/>   | Gibt einen Vorgang an, für den Code generiert werden soll.<br/> <br/>                                        |
+| [**Porttype**](porttype.md)<br/>     | Gibt den Porttyp an, für den Code generiert werden soll.<br/> <br/>                                       |
+| [**proxyClass**](proxyclass.md)<br/> | Gibt den Namen der clientseitigen Proxyklasse an.<br/> <br/>                                               |
 
 
 
@@ -61,7 +61,7 @@ Es gibt keine Attribute.
 
 | Element                         | BESCHREIBUNG                                                    |
 |---------------------------------|----------------------------------------------------------------|
-| [**Datei**](file.md)<br/> | Gibt eine Datei aus dem Code-Generator aus.<br/> <br/> |
+| [**Datei**](file.md)<br/> | Gibt eine Datei aus dem Codegenerator aus.<br/> <br/> |
 
 
 
@@ -69,7 +69,7 @@ Es gibt keine Attribute.
 
 
 
-|                                     |               |
+| Bezeichnung | Wert |
 |-------------------------------------|---------------|
 | Unterstützte Mindestversion (System)<br/> | Windows Vista |
 | Kann leer bleiben                        | Ja           |

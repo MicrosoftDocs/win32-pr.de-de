@@ -3,12 +3,12 @@ description: Eine Liste der qualifizierten XSD-Namen.
 title: Types-Element
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5384c1b246278fd8011e5730c296ca9422a2208f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0c29a94f7ad4816f7b737261bf52b064a5dd68f9
+ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106348252"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "107994118"
 ---
 # <a name="types-element"></a>Types-Element
 
@@ -34,8 +34,8 @@ Es gibt keine untergeordneten Elemente.
 
 | Element                             | BESCHREIBUNG                                                            |
 |-------------------------------------|------------------------------------------------------------------------|
-| [**Host**](host.md)<br/>     | Identifiziert den Dienst Host.<br/> <br/>                    |
-| [**gehostet**](hosted.md)<br/> | Identifiziert einen Dienst, der von einem Dienst Host definiert wird.<br/> <br/> |
+| [**Host**](host.md)<br/>     | Identifiziert den Diensthost.<br/> <br/>                    |
+| [**Gehostet**](hosted.md)<br/> | Identifiziert einen von einem Diensthost definierten Dienst.<br/> <br/> |
 
 
 
@@ -43,7 +43,7 @@ Es gibt keine untergeordneten Elemente.
 
 
 
-|                                     |               |
+| Bezeichnung | Wert |
 |-------------------------------------|---------------|
 | Unterstützte Mindestversion (System)<br/> | Windows Vista |
 | Kann leer bleiben                        | Ja           |

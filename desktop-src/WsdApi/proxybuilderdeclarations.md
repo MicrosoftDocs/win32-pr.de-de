@@ -1,17 +1,17 @@
 ---
 description: Generiert Deklarationen für Funktionen, die typisierte Proxys erstellen.
 ms.assetid: 50182e77-a768-439f-bdbb-4f0d48aa4447
-title: proxybuilderdeklarationselement
+title: proxyBuilderDeclarations-Element
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d87cca5baed970ad865add83d775901f65ca24b9
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: cebf09ecd444ee5d5a3a91b0bb8544888ca989d7
+ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106354625"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "107994157"
 ---
-# <a name="proxybuilderdeclarations-element"></a>proxybuilderdeklarationselement
+# <a name="proxybuilderdeclarations-element"></a>proxyBuilderDeclarations-Element
 
 Generiert Deklarationen für Funktionen, die typisierte Proxys erstellen.
 
@@ -33,7 +33,7 @@ Es gibt keine Attribute.
 
 | Element                                     | BESCHREIBUNG                                                                        |
 |---------------------------------------------|------------------------------------------------------------------------------------|
-| [**proxyClass**](proxyclass.md)<br/> | Der Klassenname, der aus der Proxy Generatorfunktion generiert werden soll.<br/> <br/> |
+| [**proxyClass**](proxyclass.md)<br/> | Der Klassenname, der aus der Proxy-Generatorfunktion generiert werden soll.<br/> <br/> |
 
 
 
@@ -49,7 +49,7 @@ proxyClass
 
 | Element                         | BESCHREIBUNG                                                    |
 |---------------------------------|----------------------------------------------------------------|
-| [**Datei**](file.md)<br/> | Gibt eine Datei aus dem Code-Generator aus.<br/> <br/> |
+| [**Datei**](file.md)<br/> | Gibt eine Datei aus dem Codegenerator aus.<br/> <br/> |
 
 
 
@@ -57,7 +57,7 @@ proxyClass
 
 
 
-|                                     |               |
+| Bezeichnung | Wert |
 |-------------------------------------|---------------|
 | Unterstützte Mindestversion (System)<br/> | Windows Vista |
 | Kann leer bleiben                        | Nein            |

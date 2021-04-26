@@ -1,19 +1,19 @@
 ---
-description: Gibt eine XSD-Datei an, die für Vertragsinformationen verarbeitet werden soll.
+description: Gibt eine XSD-Datei an, die für Vertragsinformationen zu verarbeiten ist.
 ms.assetid: 6fe40e77-d23f-4ae9-a4d6-1f567a0fffe7
-title: XSD-Element
+title: xsd-Element
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9628a078129446f51729c92c447f8da5736dab88
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 851ce31230ff88ea2465040c33dc131e0902392c
+ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103865336"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "107994547"
 ---
-# <a name="xsd-element"></a>XSD-Element
+# <a name="xsd-element"></a>xsd-Element
 
-Gibt eine XSD-Datei an, die für Vertragsinformationen verarbeitet werden soll.
+Gibt eine XSD-Datei an, die für Vertragsinformationen zu verarbeiten ist.
 
 ## <a name="usage"></a>Verbrauch
 
@@ -30,7 +30,7 @@ Gibt eine XSD-Datei an, die für Vertragsinformationen verarbeitet werden soll.
 
 | Attribut           | type                       | Erforderlich       | BESCHREIBUNG                                                 |
 |---------------------|----------------------------|----------------|-------------------------------------------------------------|
-| **path**<br/> | Pfadnamen-Zeichenfolge<br/> | Ja<br/> | Die Datei und der Pfad der XSD-Eingabedatei.<br/> <br/> |
+| **path**<br/> | pathname string<br/> | Ja<br/> | Datei und Pfad der XSD-Eingabedatei.<br/> <br/> |
 
 
 
@@ -40,7 +40,7 @@ Gibt eine XSD-Datei an, die für Vertragsinformationen verarbeitet werden soll.
 
 | Element                               | BESCHREIBUNG                                                          |
 |---------------------------------------|----------------------------------------------------------------------|
-| [**TypeUri**](typeuri.md)<br/> | Gibt einen Typ an, der aus einer XSD-Datei aufgenommen werden soll.<br/> <br/> |
+| [**typeUri**](typeuri.md)<br/> | Gibt einen Typ an, der aus einer XSD-Datei enthalten sein soll.<br/> <br/> |
 
 
 
@@ -56,19 +56,19 @@ typeUri*
 
 | Element                                     | BESCHREIBUNG                                                                          |
 |---------------------------------------------|--------------------------------------------------------------------------------------|
-| [**wsdcodegen**](wsdcodegen.md)<br/> | Das Stamm Element einer XML-Skriptdatei des WSDAPI-Code-Generators.<br/> <br/> |
+| [**wsdCodeGen**](wsdcodegen.md)<br/> | Das Stammelement einer XML-Skriptdatei des WSDAPI-Codegenerators.<br/> <br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Dateinamen Zeichenfolge sollte auch Informationen zum kompletten Pfad enthalten.
+Die Dateinamenzeichenfolge sollte auch vollständige Pfadinformationen enthalten.
 
 ## <a name="element-information"></a>Elementinformationen
 
 
 
-|                                     |               |
+| Bezeichnung | Wert |
 |-------------------------------------|---------------|
 | Unterstützte Mindestversion (System)<br/> | Windows Vista |
 | Kann leer bleiben                        | Ja           |

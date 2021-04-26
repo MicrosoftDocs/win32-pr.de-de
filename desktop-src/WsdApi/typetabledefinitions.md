@@ -1,19 +1,19 @@
 ---
-description: Generiert C-Konstanten für XML-Schema Tabellen für bekannte Typen.
+description: Generiert C-Konstanten für XML-Schematabellen für bekannte Typen.
 ms.assetid: caba3776-fdc2-4a08-8e4c-d8e3b583d7ba
-title: typetabledefinitions-Element
+title: typeTableDefinitions-Element
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3ccc8d150c0e983583d5b8055e57177aacdeb58c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ed400e9c0d293599ad686354b6493fd7d04b866f
+ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103753657"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "107995297"
 ---
-# <a name="typetabledefinitions-element"></a>typetabledefinitions-Element
+# <a name="typetabledefinitions-element"></a>typeTableDefinitions-Element
 
-Generiert C-Konstanten für XML-Schema Tabellen für bekannte Typen.
+Generiert C-Konstanten für XML-Schematabellen für bekannte Typen.
 
 ## <a name="usage"></a>Verbrauch
 
@@ -35,19 +35,19 @@ Es gibt keine untergeordneten Elemente.
 
 | Element                         | BESCHREIBUNG                                                    |
 |---------------------------------|----------------------------------------------------------------|
-| [**Datei**](file.md)<br/> | Gibt eine Datei aus dem Code-Generator aus.<br/> <br/> |
+| [**Datei**](file.md)<br/> | Gibt eine Datei aus dem Codegenerator aus.<br/> <br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Element wird im Allgemeinen in C-Quelldateien verwendet, um die von [**typetabledeklarationen**](typetabledeclarations.md)deklarierten XML-Schema Tabellen bereitzustellen.
+Dieses Element wird im Allgemeinen in C-Quelldateien verwendet, um die xml-Schematabellen bereitzustellen, die von [**typeTableDeclarations**](typetabledeclarations.md)deklariert werden.
 
 ## <a name="element-information"></a>Elementinformationen
 
 
 
-|                                     |               |
+| Bezeichnung | Wert |
 |-------------------------------------|---------------|
 | Unterstützte Mindestversion (System)<br/> | Windows Vista |
 | Kann leer bleiben                        | Ja           |

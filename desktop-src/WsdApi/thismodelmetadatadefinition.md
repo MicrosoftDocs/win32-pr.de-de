@@ -1,19 +1,19 @@
 ---
-description: Generiert eine C-Konstante für die im thismodelmetadata-Element angegebenen Hersteller Metadaten.
+description: Generiert eine C-Konstante für die im thisModelMetadata-Element angegebenen Herstellermetadaten.
 ms.assetid: f51da261-ca56-40e5-a6e0-47544d15d6e5
 title: thisModelMetadataDefinition-Element
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: dda691d8fdea6b0773672b20a13eb4267e7100b5
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7951d6ce0385c976714b57511b4c0e18458f133d
+ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106350430"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "107995307"
 ---
 # <a name="thismodelmetadatadefinition-element"></a>thisModelMetadataDefinition-Element
 
-Generiert eine C-Konstante für die im [**thismodelmetadata**](thismodelmetadata.md) -Element angegebenen Hersteller Metadaten. Diese Definition wird in einer Quelldatei verwendet.
+Generiert eine C-Konstante für die im [**thisModelMetadata-Element**](thismodelmetadata.md) angegebenen Herstellermetadaten. Diese Definition wird in einer Quelldatei verwendet.
 
 ## <a name="usage"></a>Verbrauch
 
@@ -35,7 +35,7 @@ Es gibt keine untergeordneten Elemente.
 
 | Element                         | BESCHREIBUNG                                                    |
 |---------------------------------|----------------------------------------------------------------|
-| [**Datei**](file.md)<br/> | Gibt eine Datei aus dem Code-Generator aus.<br/> <br/> |
+| [**Datei**](file.md)<br/> | Gibt eine Datei aus dem Codegenerator aus.<br/> <br/> |
 
 
 
@@ -43,7 +43,7 @@ Es gibt keine untergeordneten Elemente.
 
 
 
-|                                     |               |
+| Bezeichnung | Wert |
 |-------------------------------------|---------------|
 | Unterstützte Mindestversion (System)<br/> | Windows Vista |
 | Kann leer bleiben                        | Ja           |

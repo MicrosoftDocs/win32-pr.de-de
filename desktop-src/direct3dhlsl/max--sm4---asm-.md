@@ -1,23 +1,23 @@
 ---
-title: Max (SM4-ASM)
-description: Der Komponenten Weise Gleit Komma Wert.
+title: max (sm4 - asm)
+description: Komponentenweiser Float-Höchstwert.
 ms.assetid: 005468AA-577E-441F-ACD5-37A691E62CDD
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0f24618897eacf250f2b924f6dde3745a32a7172
-ms.sourcegitcommit: fe03c5d92ca6a0d66a114b2303e99c0a19241ffb
+ms.openlocfilehash: f64d88c581828f2563f6d5d8a6c57de6400f9bbf
+ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "104389501"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "107994727"
 ---
-# <a name="max-sm4---asm"></a>Max (SM4-ASM)
+# <a name="max-sm4---asm"></a>max (sm4 - asm)
 
-Der Komponenten Weise Gleit Komma Wert.
+Komponentenweiser Float-Höchstwert.
 
 
 
-| Max \[ \_ \] . Sat dest \[ . mask \] , \[ - \] src0 \[ \_ ABS \] \[ . Swizzle \] , \[ - \] Quelle1 \[ \_ ABS \] \[ . Swizzle \] , |
+| max \[ \_ sat \] dest \[ .mask \] , \[ - \] src0 \[ \_ abs \] \[ .swizzle \] , \[ - \] src1 abs \[ \_ \] \[ .swizzle \] , |
 |---------------------------------------------------------------------------------------------|
 
 
@@ -28,39 +28,38 @@ Der Komponenten Weise Gleit Komma Wert.
 
 | Element                                                            | BESCHREIBUNG                                                                                               |
 |-----------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|
-| <span id="dest"></span><span id="DEST"></span>*dest*<br/> | \[im \] Ergebnis des Vorgangs. <br/> *dest*  =  *src0*  >=  *Quelle1* ? *src0* : *Quelle1*<br/> |
-| <span id="src0"></span><span id="SRC0"></span>*src0*<br/> | \[in \] den Komponenten, die mit *Quelle1* verglichen werden sollen.<br/>                                                    |
-| <span id="src1"></span><span id="SRC1"></span>*Quelle1*<br/> | \[in \] den Komponenten, die mit *src0* verglichen werden sollen.<br/>                                                    |
+| <span id="dest"></span><span id="DEST"></span>*Dest*<br/> | \[in \] Das Ergebnis des Vorgangs. <br/> *dest*  =  *src0*  >=  *src1* ? *src0* : *src1*<br/> |
+| <span id="src0"></span><span id="SRC0"></span>*src0*<br/> | \[in \] Die Komponenten, die mit *src1* verglichen werden sollen.<br/>                                                    |
+| <span id="src1"></span><span id="SRC1"></span>*src1*<br/> | \[in \] Die Komponenten, die mit *src0* verglichen werden sollen.<br/>                                                    |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
->= wird anstelle von > verwendet, sodass, wenn min (x, y) = x, dann Max (x, y) = y ist.
+>= wird anstelle von > verwendet, sodass bei min(x,y) = x dann max(x,y) = y.
 
-Nan hat eine besondere Behandlung. Wenn ein Quell Operand NaN ist, wird der andere Quell Operand zurückgegeben, und die Auswahl erfolgt pro Komponente. Wenn beide Nan sind, wird eine Nan-Darstellung zurückgegeben.
+NaN verfügt über eine spezielle Behandlung. Wenn ein Quelloperand NaN ist, wird der andere Quelloperand zurückgegeben, und die Auswahl erfolgt pro Komponente. Wenn beide NaN sind, wird eine beliebige NaN-Darstellung zurückgegeben.
 
-Denorms werden vor dem Vergleich mit einem Vorzeichen geleert. Das in *dest* geschriebene Ergebnis wird jedoch möglicherweise nicht denorm geleert.
+Denormen werden mit vor dem Vergleich beibehaltenem Vorzeichen geleert. Das in *dest* geschriebene Ergebnis kann jedoch denormiert werden.
 
-In der folgenden Tabelle werden die Ergebnisse angezeigt, die bei der Ausführung der Anweisung mit verschiedenen Klassen von Zahlen erzielt wurden, vorausgesetzt, dass weder ein Überlauf noch ein Unterlauf auftritt F bedeutet eine begrenzte reelle Zahl.
+Die folgende Tabelle zeigt die Ergebnisse, die beim Ausführen der Anweisung mit verschiedenen Klassen von Zahlen erzielt werden, vorausgesetzt, dass weder Überlauf noch Unterlauf auftreten. F bedeutet endliche reale Zahl.
 
 
 
-|                    |          |              |          |         |
+| **src0 src1->** | **-inf** | **F**        | **+inf** | **NaN** |
 |--------------------|----------|--------------|----------|---------|
-| **src0 Quelle1->** | **-INF** | **F**        | **+ INF** | **NaN** |
-| **-INF**           | -inf     | src1         | +inf     | -inf    |
-| **F**              | src0     | src0 oder Quelle1 | +inf     | src0    |
-| **+ INF**           | +inf     | +inf         | +inf     | +inf    |
+| **-inf**           | -inf     | src1         | +inf     | -inf    |
+| **F**              | src0     | src0 oder src1 | +inf     | src0    |
+| **+inf**           | +inf     | +inf         | +inf     | +inf    |
 | **NaN**            | -inf     | src1         | +inf     | NaN     |
 
 
 
  
 
-Diese Anweisung gilt für die folgenden Shader-Phasen:
+Diese Anweisung gilt für die folgenden Shaderstufen:
 
 
 
@@ -72,20 +71,20 @@ Diese Anweisung gilt für die folgenden Shader-Phasen:
 
  
 
-## <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+## <a name="minimum-shader-model"></a>Minimales Shadermodell
 
-Diese Funktion wird in den folgenden shadermodellen unterstützt.
+Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 
 
 | Shadermodell                                              | Unterstützt |
 |-----------------------------------------------------------|-----------|
-| [Shader-Modell 5](d3d11-graphics-reference-sm5.md)        | ja       |
-| [Shadermodell 4,1](dx-graphics-hlsl-sm4.md)              | ja       |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md)        | ja       |
+| [Shadermodell 4.1](dx-graphics-hlsl-sm4.md)              | ja       |
 | [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | ja       |
-| [Shader-Modell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | nein        |
-| [Shader-Modell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | nein        |
-| [Shader-Modell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | nein        |
+| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | nein        |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | nein        |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | nein        |
 
 
 
