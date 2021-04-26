@@ -1,6 +1,6 @@
 ---
-title: ABS-PS
-description: Berechnet den absoluten Wert. | ABS-PS
+title: abs - ps
+description: Berechnet den absoluten Wert. | abs - ps
 ms.assetid: e97db550-2a03-421a-86f4-a6fc5f8e0bca
 ms.topic: reference
 ms.date: 05/31/2018
@@ -9,48 +9,47 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 070a513aaa0d336d5ac404b1748fdd162edfd532
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: e3e7af7b2d30e9d9f2092cb6671610f008ec781d
+ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104352158"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "107994877"
 ---
-# <a name="abs---ps"></a><span data-ttu-id="868aa-104">ABS-PS</span><span class="sxs-lookup"><span data-stu-id="868aa-104">abs - ps</span></span>
+# <a name="abs---ps"></a><span data-ttu-id="fd4f4-104">abs - ps</span><span class="sxs-lookup"><span data-stu-id="fd4f4-104">abs - ps</span></span>
 
-<span data-ttu-id="868aa-105">Berechnet den absoluten Wert.</span><span class="sxs-lookup"><span data-stu-id="868aa-105">Computes absolute value.</span></span>
+<span data-ttu-id="fd4f4-105">Berechnet den absoluten Wert.</span><span class="sxs-lookup"><span data-stu-id="fd4f4-105">Computes absolute value.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="868aa-106">Syntax</span><span class="sxs-lookup"><span data-stu-id="868aa-106">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="fd4f4-106">Syntax</span><span class="sxs-lookup"><span data-stu-id="fd4f4-106">Syntax</span></span>
 
 
 
 |              |
 |--------------|
-| <span data-ttu-id="868aa-107">ABS DST, src</span><span class="sxs-lookup"><span data-stu-id="868aa-107">abs dst, src</span></span> |
+| <span data-ttu-id="fd4f4-107">abs dst, src</span><span class="sxs-lookup"><span data-stu-id="fd4f4-107">abs dst, src</span></span> |
 
 
 
  
 
-<span data-ttu-id="868aa-108">where</span><span class="sxs-lookup"><span data-stu-id="868aa-108">where</span></span>
+<span data-ttu-id="fd4f4-108">where</span><span class="sxs-lookup"><span data-stu-id="fd4f4-108">where</span></span>
 
--   <span data-ttu-id="868aa-109">DST ist das Ziel Register.</span><span class="sxs-lookup"><span data-stu-id="868aa-109">dst is the destination register.</span></span>
--   <span data-ttu-id="868aa-110">src ist ein Quell Register.</span><span class="sxs-lookup"><span data-stu-id="868aa-110">src is a source register.</span></span>
+-   <span data-ttu-id="fd4f4-109">dst ist das Zielregister.</span><span class="sxs-lookup"><span data-stu-id="fd4f4-109">dst is the destination register.</span></span>
+-   <span data-ttu-id="fd4f4-110">src ist ein Quellregister.</span><span class="sxs-lookup"><span data-stu-id="fd4f4-110">src is a source register.</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="868aa-111">Bemerkungen</span><span class="sxs-lookup"><span data-stu-id="868aa-111">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="fd4f4-111">Hinweise</span><span class="sxs-lookup"><span data-stu-id="fd4f4-111">Remarks</span></span>
 
 
 
-|                       |      |      |      |      |      |      |       |      |       |
+| <span data-ttu-id="fd4f4-112">Pixel-Shaderversionen</span><span class="sxs-lookup"><span data-stu-id="fd4f4-112">Pixel shader versions</span></span> | <span data-ttu-id="fd4f4-113">1\_1</span><span class="sxs-lookup"><span data-stu-id="fd4f4-113">1\_1</span></span> | <span data-ttu-id="fd4f4-114">1\_2</span><span class="sxs-lookup"><span data-stu-id="fd4f4-114">1\_2</span></span> | <span data-ttu-id="fd4f4-115">1 \_ 3</span><span class="sxs-lookup"><span data-stu-id="fd4f4-115">1\_3</span></span> | <span data-ttu-id="fd4f4-116">1\_4</span><span class="sxs-lookup"><span data-stu-id="fd4f4-116">1\_4</span></span> | <span data-ttu-id="fd4f4-117">2 \_ 0</span><span class="sxs-lookup"><span data-stu-id="fd4f4-117">2\_0</span></span> | <span data-ttu-id="fd4f4-118">2 \_ x</span><span class="sxs-lookup"><span data-stu-id="fd4f4-118">2\_x</span></span> | <span data-ttu-id="fd4f4-119">2 \_ sw</span><span class="sxs-lookup"><span data-stu-id="fd4f4-119">2\_sw</span></span> | <span data-ttu-id="fd4f4-120">3 \_ 0</span><span class="sxs-lookup"><span data-stu-id="fd4f4-120">3\_0</span></span> | <span data-ttu-id="fd4f4-121">3 \_ sw</span><span class="sxs-lookup"><span data-stu-id="fd4f4-121">3\_sw</span></span> |
 |-----------------------|------|------|------|------|------|------|-------|------|-------|
-| <span data-ttu-id="868aa-112">Pixel-Shader-Versionen</span><span class="sxs-lookup"><span data-stu-id="868aa-112">Pixel shader versions</span></span> | <span data-ttu-id="868aa-113">1\_1</span><span class="sxs-lookup"><span data-stu-id="868aa-113">1\_1</span></span> | <span data-ttu-id="868aa-114">1\_2</span><span class="sxs-lookup"><span data-stu-id="868aa-114">1\_2</span></span> | <span data-ttu-id="868aa-115">1 \_ 3</span><span class="sxs-lookup"><span data-stu-id="868aa-115">1\_3</span></span> | <span data-ttu-id="868aa-116">1\_4</span><span class="sxs-lookup"><span data-stu-id="868aa-116">1\_4</span></span> | <span data-ttu-id="868aa-117">2 \_ 0</span><span class="sxs-lookup"><span data-stu-id="868aa-117">2\_0</span></span> | <span data-ttu-id="868aa-118">2 \_ x</span><span class="sxs-lookup"><span data-stu-id="868aa-118">2\_x</span></span> | <span data-ttu-id="868aa-119">2 \_ SW</span><span class="sxs-lookup"><span data-stu-id="868aa-119">2\_sw</span></span> | <span data-ttu-id="868aa-120">3 \_ 0</span><span class="sxs-lookup"><span data-stu-id="868aa-120">3\_0</span></span> | <span data-ttu-id="868aa-121">3 \_ SW</span><span class="sxs-lookup"><span data-stu-id="868aa-121">3\_sw</span></span> |
-| <span data-ttu-id="868aa-122">abs</span><span class="sxs-lookup"><span data-stu-id="868aa-122">abs</span></span>                   |      |      |      |      | <span data-ttu-id="868aa-123">x</span><span class="sxs-lookup"><span data-stu-id="868aa-123">x</span></span>    | <span data-ttu-id="868aa-124">x</span><span class="sxs-lookup"><span data-stu-id="868aa-124">x</span></span>    | <span data-ttu-id="868aa-125">x</span><span class="sxs-lookup"><span data-stu-id="868aa-125">x</span></span>     | <span data-ttu-id="868aa-126">x</span><span class="sxs-lookup"><span data-stu-id="868aa-126">x</span></span>    | <span data-ttu-id="868aa-127">x</span><span class="sxs-lookup"><span data-stu-id="868aa-127">x</span></span>     |
+| <span data-ttu-id="fd4f4-122">abs</span><span class="sxs-lookup"><span data-stu-id="fd4f4-122">abs</span></span>                   |      |      |      |      | <span data-ttu-id="fd4f4-123">x</span><span class="sxs-lookup"><span data-stu-id="fd4f4-123">x</span></span>    | <span data-ttu-id="fd4f4-124">x</span><span class="sxs-lookup"><span data-stu-id="fd4f4-124">x</span></span>    | <span data-ttu-id="fd4f4-125">x</span><span class="sxs-lookup"><span data-stu-id="fd4f4-125">x</span></span>     | <span data-ttu-id="fd4f4-126">x</span><span class="sxs-lookup"><span data-stu-id="fd4f4-126">x</span></span>    | <span data-ttu-id="fd4f4-127">x</span><span class="sxs-lookup"><span data-stu-id="fd4f4-127">x</span></span>     |
 
 
 
  
 
-<span data-ttu-id="868aa-128">Diese Anweisung funktioniert wie hier gezeigt.</span><span class="sxs-lookup"><span data-stu-id="868aa-128">This instruction works as shown here.</span></span>
+<span data-ttu-id="fd4f4-128">Diese Anweisung funktioniert wie hier gezeigt.</span><span class="sxs-lookup"><span data-stu-id="fd4f4-128">This instruction works as shown here.</span></span>
 
 
 ```
@@ -62,23 +61,23 @@ dest.w = abs(src.w)
 
 
 
-## <a name="instruction-information"></a><span data-ttu-id="868aa-129">Anweisungs Informationen</span><span class="sxs-lookup"><span data-stu-id="868aa-129">Instruction Information</span></span>
+## <a name="instruction-information"></a><span data-ttu-id="fd4f4-129">Anweisungsinformationen</span><span class="sxs-lookup"><span data-stu-id="fd4f4-129">Instruction Information</span></span>
 
 
 
 |                          |            |
 |--------------------------|------------|
-| <span data-ttu-id="868aa-130">Mindestens Betriebssystem</span><span class="sxs-lookup"><span data-stu-id="868aa-130">Minimum operating system</span></span> | <span data-ttu-id="868aa-131">Windows 98</span><span class="sxs-lookup"><span data-stu-id="868aa-131">Windows 98</span></span> |
+| <span data-ttu-id="fd4f4-130">Mindestbetriebssystem</span><span class="sxs-lookup"><span data-stu-id="fd4f4-130">Minimum operating system</span></span> | <span data-ttu-id="fd4f4-131">Windows 98</span><span class="sxs-lookup"><span data-stu-id="fd4f4-131">Windows 98</span></span> |
 
 
 
  
 
-## <a name="related-topics"></a><span data-ttu-id="868aa-132">Zugehörige Themen</span><span class="sxs-lookup"><span data-stu-id="868aa-132">Related topics</span></span>
+## <a name="related-topics"></a><span data-ttu-id="fd4f4-132">Zugehörige Themen</span><span class="sxs-lookup"><span data-stu-id="fd4f4-132">Related topics</span></span>
 
 <dl> <dt>
 
-[<span data-ttu-id="868aa-133">Pixelshaderanweisungen</span><span class="sxs-lookup"><span data-stu-id="868aa-133">Pixel Shader Instructions</span></span>](dx9-graphics-reference-asm-ps-instructions.md)
+[<span data-ttu-id="fd4f4-133">Anweisungen für Pixel-Shader</span><span class="sxs-lookup"><span data-stu-id="fd4f4-133">Pixel Shader Instructions</span></span>](dx9-graphics-reference-asm-ps-instructions.md)
 </dt> </dl>
 
  

@@ -1,21 +1,21 @@
 ---
-description: Definiert die hostingmetadaten für das zu implementierende Gerät. Dieses Element wird nur für Geräte Implementierungen (Hosts) verwendet.
+description: Definiert die Hostingmetadaten für das zu implementierende Gerät. Dieses Element wird nur für Geräteimplementierungen (Hosts) verwendet.
 ms.assetid: ca7bc5ea-8ab2-4233-86d2-5b793021b8ee
-title: hostmetadata-Element
+title: hostMetadata-Element
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: becd6bc3eab6b1aa1d95414c6348288e0d29dbd0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d9cf6fa139a2723ed90dfe281fc7b054016386fa
+ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106359536"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "107994797"
 ---
-# <a name="hostmetadata-element"></a><span data-ttu-id="4f334-104">hostmetadata-Element</span><span class="sxs-lookup"><span data-stu-id="4f334-104">hostMetadata element</span></span>
+# <a name="hostmetadata-element"></a><span data-ttu-id="8b1f1-104">hostMetadata-Element</span><span class="sxs-lookup"><span data-stu-id="8b1f1-104">hostMetadata element</span></span>
 
-<span data-ttu-id="4f334-105">Definiert die hostingmetadaten für das zu implementierende Gerät.</span><span class="sxs-lookup"><span data-stu-id="4f334-105">Defines the hosting metadata for the device to be implemented.</span></span> <span data-ttu-id="4f334-106">Dieses Element wird nur für Geräte Implementierungen (Hosts) verwendet.</span><span class="sxs-lookup"><span data-stu-id="4f334-106">This element is used for device implementations (hosts) only.</span></span>
+<span data-ttu-id="8b1f1-105">Definiert die Hostingmetadaten für das zu implementierende Gerät.</span><span class="sxs-lookup"><span data-stu-id="8b1f1-105">Defines the hosting metadata for the device to be implemented.</span></span> <span data-ttu-id="8b1f1-106">Dieses Element wird nur für Geräteimplementierungen (Hosts) verwendet.</span><span class="sxs-lookup"><span data-stu-id="8b1f1-106">This element is used for device implementations (hosts) only.</span></span>
 
-## <a name="usage"></a><span data-ttu-id="4f334-107">Verbrauch</span><span class="sxs-lookup"><span data-stu-id="4f334-107">Usage</span></span>
+## <a name="usage"></a><span data-ttu-id="8b1f1-107">Verbrauch</span><span class="sxs-lookup"><span data-stu-id="8b1f1-107">Usage</span></span>
 
 ``` syntax
 <hostMetadata>
@@ -23,22 +23,22 @@ ms.locfileid: "106359536"
 </hostMetadata>
 ```
 
-## <a name="attributes"></a><span data-ttu-id="4f334-108">Attribute</span><span class="sxs-lookup"><span data-stu-id="4f334-108">Attributes</span></span>
+## <a name="attributes"></a><span data-ttu-id="8b1f1-108">Attribute</span><span class="sxs-lookup"><span data-stu-id="8b1f1-108">Attributes</span></span>
 
-<span data-ttu-id="4f334-109">Es gibt keine Attribute.</span><span class="sxs-lookup"><span data-stu-id="4f334-109">There are no attributes.</span></span>
+<span data-ttu-id="8b1f1-109">Es gibt keine Attribute.</span><span class="sxs-lookup"><span data-stu-id="8b1f1-109">There are no attributes.</span></span>
 
-## <a name="child-elements"></a><span data-ttu-id="4f334-110">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="4f334-110">Child elements</span></span>
+## <a name="child-elements"></a><span data-ttu-id="8b1f1-110">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="8b1f1-110">Child elements</span></span>
 
 
 
-| <span data-ttu-id="4f334-111">Element</span><span class="sxs-lookup"><span data-stu-id="4f334-111">Element</span></span>                             | <span data-ttu-id="4f334-112">BESCHREIBUNG</span><span class="sxs-lookup"><span data-stu-id="4f334-112">Description</span></span>                                                                                                                                                                                                                                                                                                                                           |
+| <span data-ttu-id="8b1f1-111">Element</span><span class="sxs-lookup"><span data-stu-id="8b1f1-111">Element</span></span>                             | <span data-ttu-id="8b1f1-112">BESCHREIBUNG</span><span class="sxs-lookup"><span data-stu-id="8b1f1-112">Description</span></span>                                                                                                                                                                                                                                                                                                                                           |
 |-------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [<span data-ttu-id="4f334-113">**Host**</span><span class="sxs-lookup"><span data-stu-id="4f334-113">**host**</span></span>](host.md)<br/>     | <span data-ttu-id="4f334-114">Definiert die serviceid-und [**types**](types.md) -Elemente für den Dienst Host.</span><span class="sxs-lookup"><span data-stu-id="4f334-114">Defines the ServiceID and [**Types**](types.md) elements for the service host.</span></span> <span data-ttu-id="4f334-115">Wenn Sie nicht explizit bereitgestellt werden, stellt WSDAPI keine Standarddaten als Antwort auf Metadatenanforderungen bereit.</span><span class="sxs-lookup"><span data-stu-id="4f334-115">If not provided explicitly, WSDAPI will not supply any default data in response to metadata requests.</span></span><br/> <br/>                                                                                                                                          |
-| [<span data-ttu-id="4f334-116">**gehostet**</span><span class="sxs-lookup"><span data-stu-id="4f334-116">**hosted**</span></span>](hosted.md)<br/> | <span data-ttu-id="4f334-117">Definiert die [**serviceid**](serviceid.md) -und [**types**](types.md) -Elemente für die Dienste, die von diesem Dienst Host bereitgestellt werden.</span><span class="sxs-lookup"><span data-stu-id="4f334-117">Defines the [**ServiceID**](serviceid.md) and [**Types**](types.md) elements for the services provided by this service host.</span></span> <span data-ttu-id="4f334-118">Jeder von diesem Dienst Host bereitgestellte Dienst sollte über eigene [**gehostete**](hosted.md) Element Informationen verfügen, um sicherzustellen, dass der Dienst in Antworten auf Metadatenanforderungen ordnungsgemäß veröffentlicht wird.</span><span class="sxs-lookup"><span data-stu-id="4f334-118">Each service provided by this service host should have its own [**hosted**](hosted.md) element information to ensure that the service is published properly in responses to metadata requests.</span></span><br/> <br/> |
+| [<span data-ttu-id="8b1f1-113">**Host**</span><span class="sxs-lookup"><span data-stu-id="8b1f1-113">**host**</span></span>](host.md)<br/>     | <span data-ttu-id="8b1f1-114">Definiert die Elemente ServiceID und [**Types**](types.md) für den Diensthost.</span><span class="sxs-lookup"><span data-stu-id="8b1f1-114">Defines the ServiceID and [**Types**](types.md) elements for the service host.</span></span> <span data-ttu-id="8b1f1-115">Wenn sie nicht explizit angegeben wird, stellt WSDAPI als Reaktion auf Metadatenanforderungen keine Standarddaten bereit.</span><span class="sxs-lookup"><span data-stu-id="8b1f1-115">If not provided explicitly, WSDAPI will not supply any default data in response to metadata requests.</span></span><br/> <br/>                                                                                                                                          |
+| [<span data-ttu-id="8b1f1-116">**Gehostet**</span><span class="sxs-lookup"><span data-stu-id="8b1f1-116">**hosted**</span></span>](hosted.md)<br/> | <span data-ttu-id="8b1f1-117">Definiert die [**Elemente ServiceID**](serviceid.md) und [**Types**](types.md) für die von diesem Diensthost bereitgestellten Dienste.</span><span class="sxs-lookup"><span data-stu-id="8b1f1-117">Defines the [**ServiceID**](serviceid.md) and [**Types**](types.md) elements for the services provided by this service host.</span></span> <span data-ttu-id="8b1f1-118">Jeder von diesem Diensthost bereitgestellte Dienst sollte über eigene [**Gehostete**](hosted.md) Elementinformationen verfügen, um sicherzustellen, dass der Dienst ordnungsgemäß als Antwort auf Metadatenanforderungen veröffentlicht wird.</span><span class="sxs-lookup"><span data-stu-id="8b1f1-118">Each service provided by this service host should have its own [**hosted**](hosted.md) element information to ensure that the service is published properly in responses to metadata requests.</span></span><br/> <br/> |
 
 
 
-### <a name="child-element-sequence"></a><span data-ttu-id="4f334-119">Sequenz untergeordneter Elemente</span><span class="sxs-lookup"><span data-stu-id="4f334-119">Child element sequence</span></span>
+### <a name="child-element-sequence"></a><span data-ttu-id="8b1f1-119">Sequenz untergeordneter Elemente</span><span class="sxs-lookup"><span data-stu-id="8b1f1-119">Child element sequence</span></span>
 
 ``` syntax
 (
@@ -47,30 +47,30 @@ ms.locfileid: "106359536"
 )
 ```
 
-## <a name="parent-elements"></a><span data-ttu-id="4f334-120">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="4f334-120">Parent elements</span></span>
+## <a name="parent-elements"></a><span data-ttu-id="8b1f1-120">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="8b1f1-120">Parent elements</span></span>
 
 
 
-| <span data-ttu-id="4f334-121">Element</span><span class="sxs-lookup"><span data-stu-id="4f334-121">Element</span></span>                                                         | <span data-ttu-id="4f334-122">BESCHREIBUNG</span><span class="sxs-lookup"><span data-stu-id="4f334-122">Description</span></span>                                                                   |
+| <span data-ttu-id="8b1f1-121">Element</span><span class="sxs-lookup"><span data-stu-id="8b1f1-121">Element</span></span>                                                         | <span data-ttu-id="8b1f1-122">BESCHREIBUNG</span><span class="sxs-lookup"><span data-stu-id="8b1f1-122">Description</span></span>                                                                   |
 |-----------------------------------------------------------------|-------------------------------------------------------------------------------|
-| [<span data-ttu-id="4f334-123">**relationshipmetadata**</span><span class="sxs-lookup"><span data-stu-id="4f334-123">**relationshipMetadata**</span></span>](relationshipmetadata.md)<br/> | <span data-ttu-id="4f334-124">Beschreibt den Host und die gehosteten Metadaten für das Gerät.</span><span class="sxs-lookup"><span data-stu-id="4f334-124">Describes the host and hosted metadata for the device.</span></span><br/> <br/> |
+| [<span data-ttu-id="8b1f1-123">**relationshipMetadata**</span><span class="sxs-lookup"><span data-stu-id="8b1f1-123">**relationshipMetadata**</span></span>](relationshipmetadata.md)<br/> | <span data-ttu-id="8b1f1-124">Beschreibt die Host- und gehosteten Metadaten für das Gerät.</span><span class="sxs-lookup"><span data-stu-id="8b1f1-124">Describes the host and hosted metadata for the device.</span></span><br/> <br/> |
 
 
 
-## <a name="remarks"></a><span data-ttu-id="4f334-125">Bemerkungen</span><span class="sxs-lookup"><span data-stu-id="4f334-125">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="8b1f1-125">Hinweise</span><span class="sxs-lookup"><span data-stu-id="8b1f1-125">Remarks</span></span>
 
-<span data-ttu-id="4f334-126">Die hostingmetadaten werden in diesem Element in einem Formular angezeigt, das dem im Geräte Profil angegebenen Formular ähnelt.</span><span class="sxs-lookup"><span data-stu-id="4f334-126">The hosting metadata appears in this element in a form similar to the one specified in the device profile.</span></span> <span data-ttu-id="4f334-127">**hostmetadata** unterscheiden sich geringfügig von dem im Geräte Profil beschriebenen Format, dass die einzige unterstützte Verweis Eigenschaft die Dienst-ID ist.</span><span class="sxs-lookup"><span data-stu-id="4f334-127">**hostMetadata** is slightly different from the format described in the device profile in that the only reference property it supports is the service ID.</span></span>
+<span data-ttu-id="8b1f1-126">Die Hostingmetadaten werden in diesem Element in einer Form angezeigt, die der im Geräteprofil angegebenen ähnelt.</span><span class="sxs-lookup"><span data-stu-id="8b1f1-126">The hosting metadata appears in this element in a form similar to the one specified in the device profile.</span></span> <span data-ttu-id="8b1f1-127">**hostMetadata** unterscheidet sich geringfügig vom im Geräteprofil beschriebenen Format, da die einzige referenz-Eigenschaft, die sie unterstützt, die Dienst-ID ist.</span><span class="sxs-lookup"><span data-stu-id="8b1f1-127">**hostMetadata** is slightly different from the format described in the device profile in that the only reference property it supports is the service ID.</span></span>
 
-<span data-ttu-id="4f334-128">Anschließend wird das [**relationshipMetadataDefinition**](relationshipmetadatadefinition.md) -Element verwendet, um eine C-Konstante zu generieren, die diese Informationen enthält.</span><span class="sxs-lookup"><span data-stu-id="4f334-128">The [**relationshipMetadataDefinition**](relationshipmetadatadefinition.md) element is used subsequently to generate a C constant containing this information.</span></span>
+<span data-ttu-id="8b1f1-128">Das [**relationshipMetadataDefinition-Element**](relationshipmetadatadefinition.md) wird anschließend verwendet, um eine C-Konstante zu generieren, die diese Informationen enthält.</span><span class="sxs-lookup"><span data-stu-id="8b1f1-128">The [**relationshipMetadataDefinition**](relationshipmetadatadefinition.md) element is used subsequently to generate a C constant containing this information.</span></span>
 
-## <a name="element-information"></a><span data-ttu-id="4f334-129">Elementinformationen</span><span class="sxs-lookup"><span data-stu-id="4f334-129">Element information</span></span>
+## <a name="element-information"></a><span data-ttu-id="8b1f1-129">Elementinformationen</span><span class="sxs-lookup"><span data-stu-id="8b1f1-129">Element information</span></span>
 
 
 
-|                                     |               |
+| <span data-ttu-id="8b1f1-130">Bezeichnung</span><span class="sxs-lookup"><span data-stu-id="8b1f1-130">Label</span></span> | <span data-ttu-id="8b1f1-131">Wert</span><span class="sxs-lookup"><span data-stu-id="8b1f1-131">Value</span></span> |
 |-------------------------------------|---------------|
-| <span data-ttu-id="4f334-130">Unterstützte Mindestversion (System)</span><span class="sxs-lookup"><span data-stu-id="4f334-130">Minimum supported system</span></span><br/> | <span data-ttu-id="4f334-131">Windows Vista</span><span class="sxs-lookup"><span data-stu-id="4f334-131">Windows Vista</span></span> |
-| <span data-ttu-id="4f334-132">Kann leer bleiben</span><span class="sxs-lookup"><span data-stu-id="4f334-132">Can be empty</span></span>                        | <span data-ttu-id="4f334-133">Nein</span><span class="sxs-lookup"><span data-stu-id="4f334-133">No</span></span>            |
+| <span data-ttu-id="8b1f1-132">Unterstützte Mindestversion (System)</span><span class="sxs-lookup"><span data-stu-id="8b1f1-132">Minimum supported system</span></span><br/> | <span data-ttu-id="8b1f1-133">Windows Vista</span><span class="sxs-lookup"><span data-stu-id="8b1f1-133">Windows Vista</span></span> |
+| <span data-ttu-id="8b1f1-134">Kann leer bleiben</span><span class="sxs-lookup"><span data-stu-id="8b1f1-134">Can be empty</span></span>                        | <span data-ttu-id="8b1f1-135">Nein</span><span class="sxs-lookup"><span data-stu-id="8b1f1-135">No</span></span>            |
 
 
 
