@@ -1,19 +1,19 @@
 ---
-description: Generiert C-Konstanten für XML-Schema Tabellen für Nachrichten Typen.
+description: Generiert C-Konstanten für XML-Schematabellen für Nachrichtentypen.
 ms.assetid: 0b322acb-3326-42a2-a852-07251585b314
-title: messagetypedefinitions-Element
+title: messageTypeDefinitions-Element
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d3f86043cc28b527778c91772ad731d3a271921f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 54f1b6563254a93122960b4a990fe0bd18ab1453
+ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104215427"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "107998707"
 ---
-# <a name="messagetypedefinitions-element"></a>messagetypedefinitions-Element
+# <a name="messagetypedefinitions-element"></a>messageTypeDefinitions-Element
 
-Generiert C-Konstanten für XML-Schema Tabellen für Nachrichten Typen.
+Generiert C-Konstanten für XML-Schematabellen für Nachrichtentypen.
 
 ## <a name="usage"></a>Verbrauch
 
@@ -33,8 +33,8 @@ Es gibt keine Attribute.
 
 | Element                                   | BESCHREIBUNG                                                                       |
 |-------------------------------------------|-----------------------------------------------------------------------------------|
-| [**Betriebs**](operation.md)<br/> | Gibt einen Vorgang an, für den Code generiert werden soll.<br/> <br/>  |
-| [**PortType**](porttype.md)<br/>   | Gibt den Porttyp an, für den Code generiert werden soll.<br/> <br/> |
+| [**Vorgang**](operation.md)<br/> | Gibt einen Vorgang an, für den Code generiert werden soll.<br/> <br/>  |
+| [**Porttype**](porttype.md)<br/>   | Gibt den Porttyp an, für den Code generiert werden soll.<br/> <br/> |
 
 
 
@@ -53,19 +53,19 @@ Es gibt keine Attribute.
 
 | Element                         | BESCHREIBUNG                                                    |
 |---------------------------------|----------------------------------------------------------------|
-| [**Datei**](file.md)<br/> | Gibt eine Datei aus dem Code-Generator aus.<br/> <br/> |
+| [**Datei**](file.md)<br/> | Gibt eine Datei aus dem Codegenerator aus.<br/> <br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Element wird im Allgemeinen in C-Quelldateien verwendet, um die von [**messagetypedeklarationen**](messagetypedeclarations.md)deklarierten Schema Tabellen bereitzustellen.
+Dieses Element wird im Allgemeinen in C-Quelldateien verwendet, um die Schematabellen zur Verfügung zu stellen, die von [**messageTypeDeclarations deklariert werden.**](messagetypedeclarations.md)
 
 ## <a name="element-information"></a>Elementinformationen
 
 
 
-|                                     |               |
+| Bezeichnung | Wert |
 |-------------------------------------|---------------|
 | Unterstützte Mindestversion (System)<br/> | Windows Vista |
 | Kann leer bleiben                        | Ja           |

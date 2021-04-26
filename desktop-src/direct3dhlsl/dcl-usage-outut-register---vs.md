@@ -1,6 +1,6 @@
 ---
-title: dcl_usage Ausgabe (SM1, SM2, SM3-vs ASM)
-description: Die verschiedenen Typen von Ausgabe Registern wurden in zwölf Ausgabe Register reduziert (zwei für Farbe, acht für die Textur, eine für die Position und eine für den Nebel und die Punktgröße).
+title: dcl_usage Ausgabe (sm1, sm2, sm3 – vs asm)
+description: Die verschiedenen Arten von Ausgaberegistern wurden in zwölf Ausgaberegister reduziert (zwei für Farbe, acht für Textur, eins für die Position und eins für Dies und Punktgröße).
 ms.assetid: 500ca6b3-0f8a-446e-b1b9-edc51f006ad4
 ms.topic: reference
 ms.date: 05/31/2018
@@ -9,56 +9,56 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: c653c5af43bd3392f97e30571ac56ded66cbfc04
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 314c9c9a9a9e62915e9224b3cf165bc54d09a516
+ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104993526"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "107999167"
 ---
-# <a name="dcl_usage-output-sm1-sm2-sm3---vs-asm"></a>DCL- \_ Verwendungs Ausgabe (SM1, SM2, SM3-vs ASM)
+# <a name="dcl_usage-output-sm1-sm2-sm3---vs-asm"></a>dcl \_ usage output (sm1, sm2, sm3 - vs asm)
 
-Die verschiedenen Typen von Ausgabe Registern wurden in zwölf Ausgabe Register reduziert (zwei für Farbe, acht für die Textur, eine für die Position und eine für den Nebel und die Punktgröße). Diese können für alle Elemente verwendet werden, die der Benutzer für den Pixelshader interpolieren möchte: Texturkoordinaten, Farben, Nebel usw.
+Die verschiedenen Arten von Ausgaberegistern wurden in zwölf Ausgaberegister reduziert (zwei für Farbe, acht für Textur, eins für die Position und eins für Dies und Punktgröße). Diese können für alles verwendet werden, was der Benutzer für den Pixelshader interpolieren möchte: Texturkoordinaten, Farben, Oberflächen usw.
 
-Ausgabe Register erfordern Deklarationen, die Semantik einschließen. Beispielsweise werden die alten Positions-und Punktgrößen Register durch Deklarieren eines Ausgabe Registers mit einer Position oder einer Semantik für die Punktgröße ersetzt.
+Ausgaberegister erfordern Deklarationen, die Semantik enthalten. Beispielsweise werden die alten Register für Position und Punktgröße ersetzt, indem ein Ausgaberegister mit einer Position oder einer Punktgrößensemantik deklariert wird.
 
-Von den zwölf Ausgabe Registern verfügen alle zehn (nicht notwendigerweise o0 bis O9) über vier Komponenten (xyzw), eine andere muss als Position deklariert werden (und müssen auch alle vier Komponenten enthalten), und optional kann auch eine skalare Punktgröße sein.
+Von den zwölf Ausgaberegistern verfügen alle zehn (nicht unbedingt o0 bis o9) über vier Komponenten (xyzw), eine andere muss als Position deklariert werden (und muss auch alle vier Komponenten enthalten), und optional kann eine weitere Skalarpunktgröße sein.
 
 ## <a name="syntax"></a>Syntax
 
-Die Syntax zum Deklarieren von Ausgabe Registern ähnelt den Deklarationen für das Eingabe Register:
+Die Syntax zum Deklarieren von Ausgaberegistern ähnelt den Deklarationen für das Eingaberegister:
 
 
 
 |                                  |
 |----------------------------------|
-| DCL- \_ Semantik o \[ . Schreib \_ Maske\] |
+| dcl \_ semantics o \[ .write \_ mask\] |
 
 
 
- 
+ 
 
 Hierbei gilt:
 
--   die DCL- \_ Semantik kann denselben Satz von Semantik wie für die Eingabe Deklaration verwenden. Semantik Namen stammen aus [**D3DDECLUSAGE**](/windows/desktop/direct3d9/d3ddeclusage) (und sind mit einem Index gekoppelt, z. b. Position3). Es muss immer ein Ausgabe Register mit der positiont0 Semantic vorhanden sein, wenn es nicht für die Verarbeitung von Scheitel Punkten verwendet wird. Die Semantik positiont0 Semantic und pointsize0 sind die einzigen, die die Bedeutung haben, die über die einfache Verknüpfung von Scheitel Punkten zu Pixel-Shadern hinausgehen. Für Shader mit Fluss Steuerung wird angenommen, dass die schlechteste Fall Ausgabe deklariert wird. Es gibt keine Standardwerte, wenn ein Shader nicht tatsächlich angibt, was er deklariert (aufgrund der Fluss Steuerung).
--   o ist ein Ausgabe Register. Siehe [Ausgabe \_ Register](dx9-graphics-reference-asm-vs-registers-vs-3-0.md).
--   \_die Schreib Maske gibt das gleiche Ausgabe Register an, das mehrmals deklariert werden kann (damit unterschiedliche Semantik auf einzelne Komponenten angewendet werden kann), und zwar jedes Mal mit einer eindeutigen Schreib Maske. Die gleiche Semantik kann jedoch nicht mehrmals in einer Deklaration verwendet werden. Dies bedeutet, dass Vektoren vier Komponenten oder weniger sein müssen und nicht über vier Komponenten Register Grenzen (einzelne Register) hinausgehen können. Wenn die Semantik für die Punktgröße verwendet wird, sollte Sie über eine vollständige Schreib Maske verfügen, da Sie als Skalar angesehen wird. Wenn die Positions Semantik verwendet wird, sollte Sie über eine vollständige Schreib Maske verfügen, da alle vier Komponenten geschrieben werden müssen.
+-   Die \_ dcl-Semantik kann den gleichen Semantiksatz wie für die Eingabedeklaration verwenden. Semantische Namen stammen aus [**D3DDECLUSAGE**](/windows/desktop/direct3d9/d3ddeclusage) (und werden mit einem Index gekoppelt, z.B. position3). Es muss immer ein Ausgaberegister mit der Semantik positiont0 vorhanden sein, wenn es nicht für die Verarbeitung von Scheitelpunkten verwendet wird. Die Positiont0-Semantik und die Pointsize0-Semantik sind die einzigen, die eine Bedeutung haben, die über die einfache Verknüpfung von Scheitelpunkt- zu Pixel-Shadern hinausgeht. Bei Shadern mit Flusssteuerung wird davon ausgegangen, dass die Ausgabe im schlechtesten Fall deklariert wird. Es gibt keine Standardwerte, wenn ein Shader nicht tatsächlich ausgibt, was er deklariert (aufgrund der Flusssteuerung).
+-   o ist ein Ausgaberegister. Weitere Informationen finden Sie [ \_ unter Ausgaberegister.](dx9-graphics-reference-asm-vs-registers-vs-3-0.md)
+-   Die Schreibmaske gibt dasselbe Ausgaberegister an, das mehrmals deklariert werden kann (sodass unterschiedliche Semantik auf einzelne Komponenten angewendet werden kann), jedes Mal mit einer eindeutigen \_ Schreibmaske. Die gleiche Semantik kann jedoch nicht mehrmals in einer Deklaration verwendet werden. Dies bedeutet, dass Vektoren vier Komponenten oder weniger sein müssen und nicht über Vier-Komponenten-Registergrenzen (einzelne Register) hinweg gehen können. Wenn die Semantik der Punktgröße verwendet wird, sollte sie über eine vollständige Schreibmaske verfügen, da sie als Skalar betrachtet wird. Wenn die Positionssemantik verwendet wird, sollte sie über eine vollständige Schreibmaske verfügen, da alle vier Komponenten geschrieben werden müssen.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 
 
-| Vertex-Shader-Versionen | 3 \_ 0 | 3 \_ SW |
+| Vertex-Shaderversionen | 3 \_ 0 | 3 \_ sw |
 |------------------------|------|-------|
-| DCL- \_ Verwendung             | x    | x     |
+| dcl \_ usage             | x    | x     |
 
 
 
- 
+ 
 
-Alle [DCL- \_ Verwendungs](dcl-usage-input-register---vs.md) Anweisungen müssen vor der ersten ausführbaren Anweisung angezeigt werden.
+Alle [ \_ dcl-Verwendungsanweisungen](dcl-usage-input-register---vs.md) müssen vor der ersten ausführbaren Anweisung angezeigt werden.
 
-## <a name="declaration-examples"></a>Deklarations Beispiele
+## <a name="declaration-examples"></a>Deklarationsbeispiele
 
 
 ```
@@ -87,9 +87,9 @@ dcl_psize      o6      // Pointsize cannot have a mask
 
 <dl> <dt>
 
-[Vertex-shaderanweisungen](dx9-graphics-reference-asm-vs-instructions.md)
+[Vertex-Shader-Anweisungen](dx9-graphics-reference-asm-vs-instructions.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

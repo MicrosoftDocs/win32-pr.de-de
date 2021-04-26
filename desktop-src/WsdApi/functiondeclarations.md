@@ -1,19 +1,19 @@
 ---
-description: Generiert Implementierungs Deklarationen für Proxy Funktionen für Porttyp Vorgänge.
+description: Generiert Implementierungsdeklarationen für Proxyfunktionen für Porttypvorgänge.
 ms.assetid: 6ba7dbb6-6598-4569-97e1-d703e4b896c7
-title: functiondeklarationen-Element
+title: functionDeclarations-Element
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6b82aca30f94fc8fcec80701a74b56e83ab674c0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 508cbac6d220c0ebdee0c6306d5f8a8ab5f26770
+ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104216168"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "107998817"
 ---
-# <a name="functiondeclarations-element"></a>functiondeklarationen-Element
+# <a name="functiondeclarations-element"></a>functionDeclarations-Element
 
-Generiert Implementierungs Deklarationen für Proxy Funktionen für Porttyp Vorgänge.
+Generiert Implementierungsdeklarationen für Proxyfunktionen für Porttypvorgänge.
 
 ## <a name="usage"></a>Verbrauch
 
@@ -33,11 +33,11 @@ Es gibt keine Attribute.
 
 | Element                                   | BESCHREIBUNG                                                                                                             |
 |-------------------------------------------|-------------------------------------------------------------------------------------------------------------------------|
-| [**async**](async.md)<br/>         | Gibt an, ob asynchrone Vorgänge in den generierten Proxy Funktionen enthalten sind.<br/> <br/>         |
-| [**Fall**](events.md)<br/>       | Gibt an, ob verwandte Ereignisse in den generierten Funktionen enthalten sind.<br/> <br/>                        |
-| [**faultinfo**](faultinfo.md)<br/> | Gibt an, ob Parameter, die zum Übergeben von Fehlerinformationen verwendet werden, in generierte Funktionen eingeschlossen werden<br/> <br/> |
-| [**Betriebs**](operation.md)<br/> | Gibt einen Vorgang an, für den Code generiert werden soll.<br/> <br/>                                        |
-| [**PortType**](porttype.md)<br/>   | Gibt den Porttyp an, für den Code generiert werden soll.<br/> <br/>                                       |
+| [**async**](async.md)<br/>         | Gibt an, ob asynchrone Vorgänge in den generierten Proxyfunktionen enthalten sind.<br/> <br/>         |
+| [**Ereignisse**](events.md)<br/>       | Gibt an, ob verwandte Ereignisse in den generierten Funktionen enthalten sind.<br/> <br/>                        |
+| [**faultInfo**](faultinfo.md)<br/> | Gibt an, ob Parameter, die zum Übergeben von Fehlerinformationen verwendet werden, in generierten Funktionen enthalten sind.<br/> <br/> |
+| [**Vorgang**](operation.md)<br/> | Gibt einen Vorgang an, für den Code generiert werden soll.<br/> <br/>                                        |
+| [**Porttype**](porttype.md)<br/>   | Gibt den Porttyp an, für den Code generiert werden soll.<br/> <br/>                                       |
 
 
 
@@ -59,13 +59,13 @@ Es gibt keine Attribute.
 
 | Element                         | BESCHREIBUNG                                                    |
 |---------------------------------|----------------------------------------------------------------|
-| [**Datei**](file.md)<br/> | Gibt eine Datei aus dem Code-Generator aus.<br/> <br/> |
+| [**Datei**](file.md)<br/> | Gibt eine Datei aus dem Codegenerator aus.<br/> <br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Element generiert Deklarationen von Element Funktionen, die den Vorgängen entsprechen, die durch den Vertrag aufgerufen werden. Diese Deklarationen sind in einer für die Verwendung durch einen C++-Compiler geeigneten Form und werden im Allgemeinen in cpp-Dateien verwendet.
+Dieses Element generiert Deklarationen von Memberfunktionen, die vorgängen entsprechen, die vom Vertrag aufgerufen werden. Diese Deklarationen sind in einer Form, die für die Verwendung durch einen C++-Compiler geeignet ist, und werden im Allgemeinen in CPP-Dateien verwendet.
 
 Beispiel:
 
@@ -77,7 +77,7 @@ Beispiel:
 
 
 
-|                                     |               |
+| Bezeichnung | Wert |
 |-------------------------------------|---------------|
 | Unterstützte Mindestversion (System)<br/> | Windows Vista |
 | Kann leer bleiben                        | Ja           |

@@ -1,70 +1,67 @@
 ---
-description: Flexible Scheitelpunkt Format Konstanten oder FVF-Codes werden verwendet, um den Inhalt von Vertices zu beschreiben, die in einem einzelnen Datenstrom verschachtelt sind, der von der Pipeline mit fester Funktionsweise verarbeitet wird.
+description: Flexible Vertexformatkonstanten oder FVF-Codes werden verwendet, um den Inhalt von Scheitelpunkten zu beschreiben, die sich in einem einzelnen Datenstrom überlappen, der von der Pipeline mit festen Funktionen verarbeitet wird.
 ms.assetid: 85d9f5b2-8e4a-4f92-a587-eae5b293778c
 title: D3DFVF
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0d4bfc1dcabdb6991b49af967bb596fd4c1e3bdd
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 25a12b4f6008023a388bd204440a0b544db85c19
+ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106344619"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "107999437"
 ---
 # <a name="d3dfvf"></a>D3DFVF
 
-Flexible Scheitelpunkt Format Konstanten oder FVF-Codes werden verwendet, um den Inhalt von Vertices zu beschreiben, die in einem einzelnen Datenstrom verschachtelt sind, der von der Pipeline mit fester Funktionsweise verarbeitet wird.
+Flexible Vertexformatkonstanten oder FVF-Codes werden verwendet, um den Inhalt von Scheitelpunkten zu beschreiben, die sich in einem einzelnen Datenstrom überlappen, der von der Pipeline mit festen Funktionen verarbeitet wird.
 
-## <a name="vertex-data-flags"></a>Vertex-datenflags
+## <a name="vertex-data-flags"></a>Vertexdatenflags
 
-Die folgenden Flags beschreiben ein Scheitelpunkt Format. Weitere Informationen zu Scheitelpunkt Formaten finden Sie unter [Fixed Function f VF Codes (Direct3D 9)](fixed-function-fvf-codes.md).
+Die folgenden Flags beschreiben ein Scheitelpunktformat. Informationen zu Scheitelpunktformaten finden Sie unter [FVF-Codes für feste Funktionen (Direct3D 9).](fixed-function-fvf-codes.md)
 
 
 
-|                                     |                                                                                                                                                                                                                                                                                                                                                                         |                                                                                                           |
+| \#Definieren                            | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                                             | Datenreihenfolge und -typ                                                                                       |
 |-------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|
-| \#definieren                            | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                                             | Datenreihen Folge und Typ                                                                                       |
-| D3DFVF \_ diffuses                     | Das Vertex-Format enthält eine diffuse Farbkomponente.                                                                                                                                                                                                                                                                                                                       | DWORD in ARGB-Reihenfolge. Siehe [**D3DCOLOR \_ ARGB**](d3dcolor-argb.md).                                         |
-| D3DFVF \_ Normal                      | Das Vertex-Format enthält einen Scheitelpunkt-normal Vektor. Dieses Flag kann nicht mit dem D3DFVF \_ xyzrhw-Flag verwendet werden.                                                                                                                                                                                                                                                                   | float, float, float                                                                                       |
-| D3DFVF \_ Psize                       | Das in der Punktgröße angegebene Scheitelpunkt Format. Diese Größe wird in Kamera Raumeinheiten für Scheitel Punkte ausgedrückt, die nicht transformiert und beleuchtet werden, sowie in Einheiten für Geräteraum für Transformierte und beleuchtete Scheitel Punkte.                                                                                                                                                                          | float                                                                                                     |
-| D3DFVF \_ Glanz                    | Das Vertex-Format enthält eine Glanz Farben Komponente.                                                                                                                                                                                                                                                                                                                      | DWORD in ARGB-Reihenfolge. Siehe [**D3DCOLOR \_ ARGB**](d3dcolor-argb.md).                                         |
-| D3DFVF \_ XYZ                         | Das Vertex-Format schließt die Position eines nicht transformierten Scheitel Punkts ein. Dieses Flag kann nicht mit dem D3DFVF \_ xyzrhw-Flag verwendet werden.                                                                                                                                                                                                                                                  | float, float, float.                                                                                      |
-| D3DFVF \_ xyzrhw                      | Das Vertex-Format schließt die Position eines transformierten Scheitel Punkts ein. Dieses Flag kann nicht mit den \_ normalen Flags D3DFVF XYZ oder D3DFVF verwendet werden \_ .                                                                                                                                                                                                                                     | float, float, float, float.                                                                               |
-| D3DFVF \_ XYZB1 bis D3DFVF \_ XYZB5 | Das Vertex-Format enthält Positionsdaten und eine entsprechende Anzahl von Gewichtungs Werten (Beta), die für multimatrix-Vertex-Mischungs Vorgänge verwendet werden. Derzeit kann Direct3D mit bis zu drei Gewichtungs Werten und vier Mischungs Matrizen kombiniert werden. Weitere Informationen zum Verwenden von Mischungs Matrizen finden Sie unter [indiziertes Vertex-Blending (Direct3D 9)](indexed-vertex-blending.md). | 1, 2 oder 3 Gleit Komma Zahlen. Wenn D3DFVF \_ lastbeta \_ UBYTE4 verwendet wird, wird das letzte Mischungs Gewicht als DWORD behandelt. |
-| D3DFVF \_ xyzw                        | Das Vertex-Format enthält transformierte und abgeschnitten-Daten (x, y, z, w). ProcessVertices Ruft den clippernicht auf, sondern gibt Daten in Clip Koordinaten aus. Diese Konstante ist für die programmierbare Scheitelpunkt Pipeline konzipiert und kann nur mit verwendet werden.                                                                                                                 | float, float, float, float                                                                                |
+| D3DFVF \_ DIFFUSE                     | Das Scheitelpunktformat enthält eine diffuse Farbkomponente.                                                                                                                                                                                                                                                                                                                       | DWORD in ARGB-Reihenfolge. Siehe [**D3DCOLOR \_ ARGB**](d3dcolor-argb.md).                                         |
+| D3DFVF \_ NORMAL                      | Das Scheitelpunktformat enthält einen Vertexnorm normaler Vektor. Dieses Flag kann nicht mit dem D3DFVF \_ XYZRHW-Flag verwendet werden.                                                                                                                                                                                                                                                                   | float, float, float                                                                                       |
+| D3DFVF \_ PSIZE                       | In Punktgröße angegebenes Scheitelpunktformat. Diese Größe wird in Kameraraumeinheiten für Scheitelpunkte ausgedrückt, die nicht transformiert und beleuchtet werden, und in Geräteraumeinheiten für transformierte und beleuchtete Scheitelpunkte.                                                                                                                                                                          | float                                                                                                     |
+| D3DFVF \_ SPECULAR                    | Das Scheitelpunktformat enthält eine Specular-Farbkomponente.                                                                                                                                                                                                                                                                                                                      | DWORD in ARGB-Reihenfolge. Siehe [**D3DCOLOR \_ ARGB**](d3dcolor-argb.md).                                         |
+| D3DFVF \_ XYZ                         | Das Scheitelpunktformat enthält die Position eines nicht übersetzten Scheitelpunkts. Dieses Flag kann nicht mit dem Flag D3DFVF \_ XYZRHW verwendet werden.                                                                                                                                                                                                                                                  | float, float, float.                                                                                      |
+| D3DFVF \_ XYZRHW                      | Das Scheitelpunktformat enthält die Position eines transformierten Scheitelpunkts. Dieses Flag kann nicht mit den Flags D3DFVF \_ XYZ oder D3DFVF \_ NORMAL verwendet werden.                                                                                                                                                                                                                                     | float, float, float, float.                                                                               |
+| D3DFVF \_ XYZB1 bis D3DFVF \_ XYZB5 | Das Vertexformat enthält Positionsdaten und eine entsprechende Anzahl von Gewichtungswerten (Beta), die für Multimatrix-Vertexblendingvorgänge verwendet werden. Derzeit kann Direct3D mit bis zu drei Gewichtungswerten und vier Mischungsmatrizen kombiniert werden. Weitere Informationen zur Verwendung von Blendingmatrizen finden Sie unter [Indiziertes Vertexblending (Direct3D 9).](indexed-vertex-blending.md) | 1, 2 oder 3 gleitkomma. Wenn D3DFVF LASTBETA UBYTE4 verwendet wird, wird die letzte \_ \_ Mischungsgewichtung als DWORD behandelt. |
+| D3DFVF \_ XYZW                        | Das Scheitelpunktformat enthält transformierte und abgeschnittene Daten (x, y, z, w). ProcessVertices ruft den Clipper nicht auf, sondern gibt Daten in Clipkoordinaten aus. Diese Konstante ist für die programmierbare Scheitelpunktpipeline konzipiert und kann nur mit dieser verwendet werden.                                                                                                                 | float, float, float, float                                                                                |
 
 
 
  
 
-## <a name="texture-flags"></a>Textur-Flags
+## <a name="texture-flags"></a>Texturflags
 
-Die folgenden Flags beschreiben die Textur-Flags, die von der Pipeline mit fester Funktionsweise verwendet werden.
+Die folgenden Flags beschreiben Texturflags, die von der Pipeline mit festen Funktionen verwendet werden.
 
 
 
-|                                   |                                                                                                                                                                                                                                                                                    |
+| \#Definieren                          | BESCHREIBUNG                                                                                                                                                                                                                                                                        |
 |-----------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| \#definieren                          | BESCHREIBUNG                                                                                                                                                                                                                                                                        |
-| D3DFVF \_ TEX0-D3DFVF \_ TEX8       | Anzahl der Texturkoordinaten Sätze für diesen Scheitelpunkt. Die tatsächlichen Werte für diese Flags sind nicht sequenziell.                                                                                                                                                                           |
-| D3DFVF \_ texcoordsizen (coordindex) | Definieren Sie ein Texturkoordinaten DataSet. n gibt die Dimension der Texturkoordinaten an. coordindex gibt eine Texturkoordinaten Index-Nummer an. Weitere Informationen finden Sie unter [**D3DFVF \_ texcoordsizen**](d3dfvf-texcoordsizen.md) und [Texturkoordinaten und Textur Stufen](texture-coordinates.md). |
+| D3DFVF \_ TEX0 – D3DFVF \_ TEX8       | Anzahl der Texturkoordinatensätze für diesen Scheitelpunkt. Die tatsächlichen Werte für diese Flags sind nicht sequenziell.                                                                                                                                                                           |
+| D3DFVF \_ TEXCOORDSIZEN(coordIndex) | Definieren Sie ein Texturkoordinaten-Dataset. n gibt die Dimension der Texturkoordinaten an. coordIndex gibt die Nummer des Texturkoordinatenindexes an. Weitere Informationen finden Sie unter [**D3DFVF \_ TEXCOORDSIZEN**](d3dfvf-texcoordsizen.md) und [Texturkoordinaten und Texturstufen.](texture-coordinates.md) |
 
 
 
  
 
-## <a name="mask-flags"></a>Masken-Flags
+## <a name="mask-flags"></a>Maskierungsflags
 
-Die folgenden Flags beschreiben Masken-Flags, die von der Pipeline mit fester Funktionsweise verwendet werden.
+Die folgenden Flags beschreiben mask-Flags, die von der Fixed-Function-Pipeline verwendet werden.
 
 
 
-|                                      |                                                       |
+| \#Definieren                             | BESCHREIBUNG                                           |
 |--------------------------------------|-------------------------------------------------------|
-| \#definieren                             | BESCHREIBUNG                                           |
-| D3DFVF \_ Positions \_ Maske               | Maske für Positions Bits.                               |
-| D3DFVF \_ RESERVED0, D3DFVF \_ "reserved2" | Masken Werte für reservierte Bits in der "f". Darf nicht verwendet werden. |
-| D3DFVF \_ texcount- \_ Maske               | Maskenwert für Texturflagbits.                     |
+| D3DFVF \_ \_ POSITIONSMASKE               | Maske für Positionsbits.                               |
+| D3DFVF \_ RESERVED0, D3DFVF \_ RESERVED2 | Maskieren Sie Werte für reservierte Bits in der FVF. Darf nicht verwendet werden. |
+| D3DFVF \_ TEXCOUNT \_ MASK               | Mask-Wert für Texturflagbits.                     |
 
 
 
@@ -72,7 +69,7 @@ Die folgenden Flags beschreiben Masken-Flags, die von der Pipeline mit fester Fu
 
 ## <a name="miscellaneous-flags"></a>Verschiedene Flags
 
-Die folgenden Flags beschreiben eine Vielzahl von Flags, die von der Pipeline mit fester Funktionsweise verwendet werden.
+Die folgenden Flags beschreiben eine Vielzahl von Flags, die von der Fixed Function-Pipeline verwendet werden.
 
 
 
@@ -83,16 +80,16 @@ Die folgenden Flags beschreiben eine Vielzahl von Flags, die von der Pipeline mi
 </colgroup>
 <tbody>
 <tr class="odd">
-<td>#definieren</td>
+<td>#Definieren</td>
 <td>BESCHREIBUNG</td>
 </tr>
 <tr class="even">
 <td>D3DFVF_LASTBETA_D3DCOLOR</td>
-<td>Das letzte Beta-Feld in den Scheitelpunkt Positionsdaten ist vom Typ D3DCOLOR. Die Daten in den Beta-Feldern werden bei der Matrix Palette zum Angeben von Matrix Indizes verwendet.</td>
+<td>Das letzte Betafeld in den Scheitelpunktpositionsdaten ist vom Typ D3DCOLOR. Die Daten in den Betafeldern werden mit Matrixpaletten-Skinning verwendet, um Matrixindizes anzugeben.</td>
 </tr>
 <tr class="odd">
 <td>D3DFVF_LASTBETA_UBYTE4</td>
-<td>Das letzte Beta-Feld in den Scheitelpunkt Positionsdaten ist vom Typ UBYTE4. Die Daten in den Beta-Feldern werden bei der Matrix Palette zum Angeben von Matrix Indizes verwendet. <span data-codelanguage=""></span>
+<td>Das letzte Betafeld in den Scheitelpunktpositionsdaten ist vom Typ UBYTE4. Die Daten in den Betafeldern werden mit Matrixpaletten-Skinning verwendet, um Matrixindizes anzugeben. <span data-codelanguage=""></span>
 <table>
 <colgroup>
 <col style="width: 100%" />
@@ -117,7 +114,7 @@ struct VERTEXPOSITION
 </tbody>
 </table>
 
-<p>Da der Wert D3DFVF_XYZB5 für "f. D3DFVF_LASTBETA_UBYTE4. Gewichtung und matrixindizes sind in der Beta Version [5] enthalten, in der D3DFVF_LASTBETA_UBYTE4 das letzte DWORD in der Beta Version [5] als Typ "UBYTE4" interpretieren.</p></td>
+<p>Die FVF wird als deklariert: D3DFVF_XYZB5 | D3DFVF_LASTBETA_UBYTE4. Weight und MatrixIndices sind in beta[5] enthalten, wobei D3DFVF_LASTBETA_UBYTE4 besagt, dass das letzte DWORD in beta[5] als Typ UBYTE4 interpretiert werden soll.</p></td>
 </tr>
 <tr class="even">
 <td>D3DFVF_TEXCOUNT_SHIFT</td>
@@ -152,7 +149,7 @@ dwFVF = dwNumTextures << D3DFVF_TEXCOUNT_SHIFT;
 
 ### <a name="examples"></a>Beispiele
 
-In den folgenden Beispielen werden andere gängige Flag-Kombinationen gezeigt.
+In den folgenden Beispielen werden andere gängige Flagkombinationen gezeigt.
 
 
 ```
@@ -203,8 +200,8 @@ dwFVF = ( D3DFVF_XYZ | D3DFVF_NORMAL | D3DFVF_DIFFUSE |
 
 |                          |             |
 |--------------------------|-------------|
-| Header                   | d3d9types. h |
-| Mindestens Betriebssystem | Windows 98  |
+| Header                   | d3d9types.h |
+| Mindestbetriebssystem | Windows 98  |
 
 
 
@@ -217,10 +214,10 @@ dwFVF = ( D3DFVF_XYZ | D3DFVF_NORMAL | D3DFVF_DIFFUSE |
 [Direct3D-Konstanten](dx9-graphics-reference-d3d-constants.md)
 </dt> <dt>
 
-[Code der Fixed-Funktion (Direct3D 9)](fixed-function-fvf-codes.md)
+[FVF-Codes der Funktion korrigiert (Direct3D 9)](fixed-function-fvf-codes.md)
 </dt> <dt>
 
-[Geometrie Mischung (Direct3D 9)](geometry-blending.md)
+[Geometriemischung (Direct3D 9)](geometry-blending.md)
 </dt> </dl>
 
  

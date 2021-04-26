@@ -1,6 +1,6 @@
 ---
 title: SV_TessFactor
-description: Definiert den Mosaik Betrag an jedem Rand eines Patches.
+description: Definiert den Mosaikbetrag an jedem Rand eines Patches.
 ms.assetid: 970ff744-da5b-4933-866c-dd38b85fb48d
 keywords:
 - SV_TessFactor HLSL
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 8fa49b19109985b590747098826199b33a32dd2d
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 808365fbcba4a1180c1838b94a6c098aa4c6f9ac
+ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "104976216"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "107999057"
 ---
-# <a name="sv_tessfactor"></a>SV-Mosaik \_ Faktor
+# <a name="sv_tessfactor"></a>SV \_ TessFactor
 
-Definiert den Mosaik Betrag an jedem Rand eines Patches.
+Definiert den Mosaikbetrag an jedem Rand eines Patches.
 
 ## <a name="type"></a>Typ
 
@@ -30,45 +30,44 @@ Definiert den Mosaik Betrag an jedem Rand eines Patches.
 
 |            |                |
 |------------|----------------|
-| Typ       | Eingabe Topologie |
+| Typ       | Eingabetopologie |
 | float \[ 4\] | Quad-Patch     |
-| float \[ 3\] | Tri-Patch      |
-| float \[ 2\] | Isolation        |
+| float \[ 3\] | Tri Patch      |
+| float \[ 2\] | Isoline        |
 
 
 
- 
+ 
 
-Mosaik Faktoren müssen als Array deklariert werden. Sie können nicht in einen einzigen Vektor gepackt werden.
+Mosaikfaktoren müssen als Array deklariert werden. sie können nicht in einen einzelnen Vektor gepackt werden.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Wert für den Mosaik Faktor muss während der Patch-konstantenfunktion des Hull-Shaders definiert werden.
+Der Wert für den Mosaikfaktor muss während der Patchkonstantenfunktion des Hüllen-Shaders definiert werden.
 
-Erforderlicher Ausgabewert für den Hull-Shader bei Verwendung von Quad-oder Tri-Patches. Bei diesem Wert handelt es sich auch um einen erforderlichen Eingabe Wert für den Domänen-Shader, um die Daten Signaturen der patchkonstanten zwischen den Mosaik Stufen abzugleichen.
+Erforderlicher Ausgabewert für den Hüllen-Shader bei Verwendung von Quad- oder Tri-Patches. Dieser Wert ist auch ein erforderlicher Eingabewert für den Domänen-Shader, um die patchkonstanten Datensignaturen zwischen den Mosaikstufen abzugleichen.
 
-Bei einer Isolationsstufe ist der erste Wert in SV \_ Tess Factor der Mosaik Faktor für die Zeilen Dichte, der zweite Wert ist der Mosaik Faktor für die Zeilen Genauigkeit.
+Bei einer Isolinie ist der erste Wert in SV \_ TessFactor der Mosaikfaktor für die Liniendichte, der zweite Wert der Mosaikfaktor für Liniendetails.
 
-### <a name="tri-patch-tessellation-factors"></a>Drei Patch-Mosaik Faktoren
+### <a name="tri-patch-tessellation-factors"></a>Tri Patch Tessellation Factors
 
-Die erste Komponente stellt den Tesselations Faktor für den u = = 0-Rand des Patches bereit. Die zweite Komponente stellt den Tesselations Faktor für den v = = 0-Rand des Patches bereit. Die dritte Komponente stellt den Tesselations Faktor für den w = = 0-Rand des Patches bereit.
+Die erste Komponente stellt den Mosaikfaktor für den u==0-Rand des Patches bereit. Die zweite Komponente stellt den Mosaikfaktor für den v==0-Rand des Patches bereit. Die dritte Komponente stellt den Mosaikfaktor für den w==0-Rand des Patches dar.
 
-### <a name="quad-patch-tessellation-factors"></a>Vier patchmosaik Faktoren
+### <a name="quad-patch-tessellation-factors"></a>Quad Patch Tessellation Factors
 
-Die erste Komponente stellt den Tesselations Faktor für den u = = 0-Rand des Patches bereit. Die zweite Komponente stellt den Tesselations Faktor für den v = = 0-Rand des Patches bereit. Die dritte Komponente stellt den Tesselations Faktor für den u = = 1-Rand des Patches bereit. Die vierte Komponente stellt den Tesselations Faktor für den v = = 1-Rand des Patches bereit. Die Reihenfolge der Kanten ist im Uhrzeigersinn, beginnend ab dem "u = = 0"-Rand, der linken Seite des Patches und vom "v = = 0"-Rand, der am Anfang des Patches steht.
+Die erste Komponente stellt den Mosaikfaktor für den u==0-Rand des Patches dar. Die zweite Komponente stellt den Mosaikfaktor für den v==0-Rand des Patches dar. Die dritte Komponente stellt den Mosaikfaktor für den u==1-Rand des Patches dar. Die vierte Komponente stellt den Mosaikfaktor für den v==1-Rand des Patches dar. Die Reihenfolge der Ränder ist im Uhrzeigersinn, beginnend mit der Kante u==0, die die linke Seite des Patches ist, und von der v==0-Kante, die der obere Rand des Patches ist.
 
-Diese Funktion wird in den folgenden Typen von Shadern unterstützt:
+Diese Funktion wird in den folgenden Shadertypen unterstützt:
 
 
 
-|        |      |        |          |       |         |
+| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
 |        | x    | x      |          |       |         |
 
 
 
- 
+ 
 
 ## <a name="see-also"></a>Weitere Informationen
 
@@ -77,12 +76,12 @@ Diese Funktion wird in den folgenden Typen von Shadern unterstützt:
 [Semantik](dx-graphics-hlsl-semantics.md)
 </dt> <dt>
 
-[Shader-Modell 5](d3d11-graphics-reference-sm5.md)
+[Shadermodell 5](d3d11-graphics-reference-sm5.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

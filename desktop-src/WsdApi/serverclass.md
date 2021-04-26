@@ -1,19 +1,19 @@
 ---
-description: Gibt den Namen der Host seitigen Serverklasse an.
+description: Gibt den Namen der hostseitigen Serverklasse an.
 ms.assetid: b0d9a126-0f69-4d07-ae18-07aa49ee2666
-title: ServerClass-Element
+title: serverClass-Element
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6b232f83bf223d31e88e78bb15f4e71f4524a38a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: be84aad9c5b84d6cfb992a0e3ff51e19bc9d8f14
+ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103960729"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "107998697"
 ---
-# <a name="serverclass-element"></a>ServerClass-Element
+# <a name="serverclass-element"></a>serverClass-Element
 
-Gibt den Namen der Host seitigen Serverklasse an.
+Gibt den Namen der hostseitigen Serverklasse an.
 
 ## <a name="usage"></a>Verbrauch
 
@@ -35,7 +35,7 @@ Es gibt keine untergeordneten Elemente.
 
 | Element                                               | BESCHREIBUNG                                                                                   |
 |-------------------------------------------------------|-----------------------------------------------------------------------------------------------|
-| [**stubdefinitionen**](stubdefinitions.md)<br/> | Generiert Implementierungen für Stub-Funktionen für Porttyp Vorgänge.<br/> <br/> |
+| [**stubDefinitions**](stubdefinitions.md)<br/> | Generiert Implementierungen für Stubfunktionen für Porttypvorgänge.<br/> <br/> |
 
 
 
@@ -43,7 +43,7 @@ Es gibt keine untergeordneten Elemente.
 
 
 
-|                                     |               |
+| Bezeichnung | Wert |
 |-------------------------------------|---------------|
 | Unterstützte Mindestversion (System)<br/> | Windows Vista |
 | Kann leer bleiben                        | Ja           |

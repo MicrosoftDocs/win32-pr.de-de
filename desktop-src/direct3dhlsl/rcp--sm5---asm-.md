@@ -1,23 +1,23 @@
 ---
-title: rcp (SM5-ASM)
-description: Komponenten weiser Wechsel.
+title: rcp (sm5 - asm)
+description: Komponentenweise reziprok.
 ms.assetid: 499A14D6-36DB-4860-94D1-887D931E60D4
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: abbaa2ffc29a4c3373009d9dec1b895710186e67
-ms.sourcegitcommit: fe03c5d92ca6a0d66a114b2303e99c0a19241ffb
+ms.openlocfilehash: aa37499a981bae86333b071c2e96a37ccb8ac1a6
+ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "104516514"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "107998247"
 ---
-# <a name="rcp-sm5---asm"></a>rcp (SM5-ASM)
+# <a name="rcp-sm5---asm"></a>rcp (sm5 - asm)
 
-Komponenten weiser Wechsel.
+Komponentenweise reziprok.
 
 
 
-| RCP \[ \_ Sat \] dest \[ . mask \] , \[ - \] src0 \[ \_ ABS \] \[ . Swizzle\] |
+| rcp \[ \_ sat \] dest \[ .mask \] , \[ - \] src0 \[ \_ abs \] \[ .swizzle\] |
 |------------------------------------------------------------|
 
 
@@ -28,37 +28,36 @@ Komponenten weiser Wechsel.
 
 | Element                                                            | BESCHREIBUNG                                                                         |
 |-----------------------------------------------------------------|-------------------------------------------------------------------------------------|
-| <span id="dest"></span><span id="DEST"></span>*dest*<br/> | \[in \] der Adresse der Ergebnisse<br/> *dest*  =  **1.0 f**  /  *src0*.<br/> |
-| <span id="src0"></span><span id="SRC0"></span>*src0*<br/> | \[in \] der Zahl, von der die gegenseitige übernommen wird.<br/>                             |
+| <span id="dest"></span><span id="DEST"></span>*Dest*<br/> | \[in \] Die Adresse der Ergebnisse<br/> *dest*  =  **1.0f**  /  *src0*.<br/> |
+| <span id="src0"></span><span id="SRC0"></span>*src0*<br/> | \[in \] Die Zahl, von der der Kehrwert annimmt wird.<br/>                             |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Verwenden Sie diese Anweisung für die gegenseitige geringere Genauigkeit, unabhängig von den strengen Anforderungen für die Teilung.
+Verwenden Sie diese Anweisung, um die Genauigkeit des Kehrwerts zu verringern, unabhängig von den strengen Anforderungen für die Division.
 
-Der maximale relative Fehler ist 2-21. (Die Fehlertoleranz stimmt nur mit RSQ überein.)
+Der maximale relative Fehler ist 2–21. (Die Fehlertoleranz stimmt nur mit rsq überein))
 
-In der folgenden Tabelle werden die Ergebnisse angezeigt, die beim Ausführen der Anweisung mit verschiedenen Klassen von Zahlen abgerufen wurden.
+Die folgende Tabelle zeigt die Ergebnisse, die beim Ausführen der Anweisung mit verschiedenen Zahlenklassen erzielt werden.
 
 
 
-|        |          |        |             |        |        |             |        |          |         |
+| *src*  | **-inf** | **-F** | **-denorm** | **-0** | **+0** | **+denorm** | **+F** | **+inf** | **NaN** |
 |--------|----------|--------|-------------|--------|--------|-------------|--------|----------|---------|
-| *src*  | **-INF** | **-F** | **-denorm** | **-0** | **+0** | **+ denorm** | **+ F** | **+ INF** | **NaN** |
-| *dest* | -0       | -F     | -inf        | -inf   | +inf   | +inf        | + F     | +0       | NaN     |
+| *Dest* | -0       | -F     | -inf        | -inf   | +inf   | +inf        | +F     | +0       | NaN     |
 
 
 
  
 
-Diese Anweisung gilt für die folgenden Shader-Phasen:
+Diese Anweisung gilt für die folgenden Shaderstufen:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 | X      | X    | X      | X        | X     | X       |
 
@@ -66,20 +65,20 @@ Diese Anweisung gilt für die folgenden Shader-Phasen:
 
  
 
-## <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+## <a name="minimum-shader-model"></a>Minimales Shadermodell
 
-Diese Anweisung wird in den folgenden shadermodellen unterstützt:
+Diese Anweisung wird in den folgenden Shadermodellen unterstützt:
 
 
 
 | Shadermodell                                              | Unterstützt |
 |-----------------------------------------------------------|-----------|
-| [Shader-Modell 5](d3d11-graphics-reference-sm5.md)        | ja       |
-| [Shadermodell 4,1](dx-graphics-hlsl-sm4.md)              | nein        |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md)        | ja       |
+| [Shadermodell 4.1](dx-graphics-hlsl-sm4.md)              | nein        |
 | [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | nein        |
-| [Shader-Modell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | nein        |
-| [Shader-Modell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | nein        |
-| [Shader-Modell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | nein        |
+| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | nein        |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | nein        |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | nein        |
 
 
 

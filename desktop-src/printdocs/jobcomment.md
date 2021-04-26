@@ -1,21 +1,21 @@
 ---
-description: Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie in der PrintSchema-Spezifikation.
+description: Dieses Thema ist nicht aktuell. Aktuelle Informationen finden Sie unter Print Schema Specification(Spezifikation des Druckschemas).
 ms.assetid: 100fe310-8e64-453f-8eaf-10abaf8b10b7
-title: Jobcomment
+title: JobComment
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a8ebfbd2e62c18153dd0930197b6f49cbb3480d6
-ms.sourcegitcommit: de72a1294df274b0a71dc0fdc42d757e5f6df0f3
+ms.openlocfilehash: 5210b80d4f81771dfa98d79d4ecf187b3ef145f5
+ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "106355735"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "107998347"
 ---
-# <a name="jobcomment"></a>Jobcomment
+# <a name="jobcomment"></a>JobComment
 
-Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie in der [PrintSchema-Spezifikation](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip).
+Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie unter Print Schema Specification (Spezifikation des [Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 
-Gibt einen Kommentar an, der dem Auftrag zugeordnet ist. Beispiel: "Bitte übermitteln Sie den Raum 1234, wenn dies abgeschlossen ist".
+Gibt einen Kommentar an, der dem Auftrag zugeordnet ist. Beispiel: "Please deliver to room 1234 when completed".
 
 -   [Elementinformationen](#element-information)
 -   [Strukturieren von Inhalt](#structure-content)
@@ -24,10 +24,10 @@ Gibt einen Kommentar an, der dem Auftrag zugeordnet ist. Beispiel: "Bitte überm
 
 
 
-| Name                       |                         |
+| Name | Wert |
 |----------------------------|-------------------------|
 | Elementtyp <br/>   | ParameterDef<br/> |
-| Bereichs Präfix <br/> | Auftrag<br/>          |
+| Bereichspräfix <br/> | Auftrag<br/>          |
 | Hinweise <br/>          | Keine<br/>         |
 
 
@@ -36,7 +36,7 @@ Gibt einen Kommentar an, der dem Auftrag zugeordnet ist. Beispiel: "Bitte überm
 
 ## <a name="structure-content"></a>Strukturieren von Inhalt
 
-Die XML-Struktur dieses Elements lautet wie folgt:
+Die XML-Struktur dieses Elements sieht wie folgt aus:
 
 ``` syntax
 <psf:ParameterDef name="psk:JobComment">
@@ -61,9 +61,9 @@ Die XML-Struktur dieses Elements lautet wie folgt:
 </psf:ParameterDef>
 ```
 
-## <a name="structure-properties"></a>Struktur Eigenschaften
+## <a name="structure-properties"></a>Struktureigenschaften
 
-In der folgenden Tabelle werden die Merkmale der Variablen beschrieben, die in der XML-Struktur definiert sind.
+In der folgenden Tabelle werden die Merkmale der in der XML-Struktur definierten Variablen beschrieben.
 
 
 
@@ -72,9 +72,9 @@ In der folgenden Tabelle werden die Merkmale der Variablen beschrieben, die in d
 | DataType<br/>     | Zeichenfolge<br/>  | xs:string<br/>       |
 | DefaultValue<br/> | Zeichenfolge<br/>  | nicht definiert<br/>       |
 | MaxLength<br/>    | integer<br/> | nicht definiert<br/>       |
-| MinLength<br/>    | integer<br/> | 1<br/>               |
-| Obligatorisch.<br/>    | Zeichenfolge<br/>  | PSK: bedingt<br/> |
-| UnitType<br/>     | Zeichenfolge<br/>  | Buchstaben<br/>      |
+| Minlength<br/>    | integer<br/> | 1<br/>               |
+| Obligatorisch.<br/>    | Zeichenfolge<br/>  | psk:Conditional<br/> |
+| Unittype<br/>     | Zeichenfolge<br/>  | Buchstaben<br/>      |
 
 
 
@@ -84,7 +84,7 @@ In der folgenden Tabelle werden die Merkmale der Variablen beschrieben, die in d
 
 <dl> <dt>
 
-[Druck Schema Spezifikation](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
+[Spezifikation des Druckschemas](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 </dt> </dl>
 
  

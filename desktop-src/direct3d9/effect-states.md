@@ -1,19 +1,19 @@
 ---
-description: Mithilfe von Effekt Zuständen werden Pipeline Zustände als Vorbereitung für die Vertex-und Pixel Verarbeitung initialisiert.
+description: Effektzustände werden verwendet, um Pipelinezustände als Vorbereitung für die Scheitelpunkt- und Pixelverarbeitung zu initialisieren.
 ms.assetid: b62a6ccc-a1ea-455c-9659-544d4bcaf6a2
-title: Effekt Zustände (Direct3D 9)
+title: Auswirkungszustände (Direct3D 9)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1e208c0c7c14564a9967562ff2fd04a400cb7901
-ms.sourcegitcommit: 78b64f3865e64768b5319d4f010032ee68924a98
+ms.openlocfilehash: 1fe92661fda82bd7dfa47ead0061ef8606e422a2
+ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "107314763"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "107998867"
 ---
-# <a name="effect-states-direct3d-9"></a>Effekt Zustände (Direct3D 9)
+# <a name="effect-states-direct3d-9"></a>Auswirkungszustände (Direct3D 9)
 
-Mithilfe von Effekt Zuständen werden Pipeline Zustände als Vorbereitung für die Vertex-und Pixel Verarbeitung initialisiert.
+Effektzustände werden verwendet, um Pipelinezustände als Vorbereitung für die Scheitelpunkt- und Pixelverarbeitung zu initialisieren.
 
 
 ```
@@ -24,52 +24,51 @@ effect state [ [index] ] = expression;
 
 Hierbei gilt:
 
--   Effekt Zustand: vergleichbar mit den herkömmlichen Pipeline Zuständen fester Funktionen. Eine komplette Liste der Zustände finden Sie unten.
--   \[\[ \] Index \] -Optionaler ganzzahliger Index. Der Index identifiziert einen bestimmten Zustand innerhalb eines Arrays von Effekt Zuständen. Die äußeren Klammern zeigen an, dass ein Index optional ist. Wenn ein Index verwendet wird, achten Sie darauf, die inneren Klammern zu verwenden.
--   Ausdrucks Zustands Zuweisungs Ausdruck. Weitere Informationen finden Sie unter [Ausdrücke (Direct3D 9)](expressions.md).
+-   effect state: Ähnelt den herkömmlichen festen Funktionspipelinezuständen. Eine vollständige Liste der Zustände finden Sie unten.
+-   \[\[ \] Index \] – Optionaler ganzzahliger Index. Der Index identifiziert einen bestimmten Zustand innerhalb eines Arrays von Effektzuständen. Die äußeren Klammern geben an, dass ein Index optional ist. Wenn ein Index verwendet wird, achten Sie darauf, die inneren Klammern zu verwenden.
+-   expression: Zustandszuweisungsausdruck. Siehe [Ausdrücke (Direct3D 9).](expressions.md)
 
-Jeder Status weist einen systemeigenen Datentyp auf. Dies ist der Datentyp, in dem der Zustand Werte erwartet, wenn der Effekt Sie zuweist. Die Datentypen, die von den einzelnen Zuständen erwartet werden, sind unten aufgeführt.
+Jeder Zustand verfügt über einen nativen Datentyp. Dies ist der Datentyp, von dem der Zustand erwartet, dass werte in sind, wenn sie durch den Effekt zugewiesen werden. Die Datentypen, die von den einzelnen Bundesstaaten erwartet werden, sind unten aufgeführt.
 
-Beachten Sie, dass die Effect-Schnittstelle versucht, Werte so früh wie möglich in den entsprechenden Typ umzuwandeln. Literalwerte können zur Kompilierzeit umgewandelt werden. Nicht Literale (d. h. reguläre Variablen) müssen umgewandelt werden, wenn die entsprechenden Set-Methoden aufgerufen werden. Beispielsweise wandelt die Effect-Schnittstelle Werte um, die bei Bedarf mithilfe von [**SetBool**](id3dxbaseeffect--setbool.md), [**SetValue**](id3dxbaseeffect--setvalue.md)und anderen ähnlichen Funktionen festgelegt werden. Um eine bessere Leistung zu erzielen, stellen Sie sicher, dass die an die Effekt Schnittstelle über gebenden Werte bereits den richtigen Typ haben und keine Umwandlung benötigen. Wenn die Laufzeit einen Wert nicht umwandeln kann, wird ein Fehler zurückgegeben.
+Beachten Sie, dass die Effektschnittstelle versucht, Werte so früh wie möglich in den entsprechenden Typ zu casten. Literalwerte können zur Kompilierzeit castt werden. Nichtliterale (d. h. reguläre Variablen) müssen beim Aufgerufenen der entsprechenden Set-Methoden umgewertet werden. Beispielsweise werden von der Effektschnittstelle werte, die mit [**SetBool,**](id3dxbaseeffect--setbool.md) [**SetValue und**](id3dxbaseeffect--setvalue.md)anderen ähnlichen Funktionen festgelegt wurden, bei Bedarf um. Stellen Sie für eine bessere Leistung sicher, dass die an die Effektschnittstelle übergebenen Werte bereits den richtigen Typ haben und keine Umwandlung benötigen. Wenn die Laufzeit einen Wert nicht umwandlungen kann, wird ein Fehler zurückgegeben.
 
-Die Auswirkung der Zustände kann in die folgenden Kategorien unterteilt werden:
+Die Auswirkungszustände können in die folgenden Kategorien unterteilt werden:
 
--   [Helle Zustände](#light-states)
--   [Material Zustände](#material-states)
--   [Rendering-Zustände](#render-states)
-    -   [Pixelpipe-renderzustände](#pixel-pipe-render-states)
-    -   [Vertexpipe-Rendering-Zustände](#vertex-pipe-render-states)
+-   [Lichtzustände](#light-states)
+-   [Materialzustände](#material-states)
+-   [Renderzustände](#render-states)
+    -   [Pixel Pipe Render States](#pixel-pipe-render-states)
+    -   [Vertexpipe-Renderzustände](#vertex-pipe-render-states)
 -   [Samplerzustände](#sampler-states)
--   [Sampler-Phasen Status](#sampler-stage-states)
--   [Shader-Zustände](#shader-states)
--   [Shader-konstantenzustände](#shader-constant-states)
--   [Textur Zustände](#texture-states)
--   [Textur Stufen Zustände](#texture-stage-states)
--   [Transformations Zustände](#transform-states)
+-   [Sampler-Phasenzustände](#sampler-stage-states)
+-   [Shaderzustände](#shader-states)
+-   [Shaderkonstantenzustände](#shader-constant-states)
+-   [Texturzustände](#texture-states)
+-   [Zustände der Texturphase](#texture-stage-states)
+-   [Transformationszustände](#transform-states)
 
-## <a name="light-states"></a>Helle Zustände
+## <a name="light-states"></a>Lichtzustände
 
-Um die beste Leistung für das Anwenden eines Effekts zu ermöglichen, sollten alle Komponenten eines Lichts oder eines Materials in der Effekt Datei angegeben werden. Wenn Sie nicht deklarieren, werden Sie auf einen Standardwert festgelegt, da Direct3D keine Möglichkeit hat, helle Zustände einzeln festzulegen.
+Um die beste Leistung beim Anwenden eines Effekts zu erzielen, sollten alle Komponenten eines Lichts oder Materials in der Effektdatei angegeben werden. Zustände, die Sie nicht deklarieren können, werden auf einen Standardwert festgelegt, da Direct3D keine Möglichkeit hat, lichte Zustände einzeln festzulegen.
 
 
 
-|                        |        |                                                                                                                     |
+| Lichtzustand            | type   | Werte                                                                                                              |
 |------------------------|--------|---------------------------------------------------------------------------------------------------------------------|
-| Heller Zustand            | type   | Werte                                                                                                              |
-| Lightambient \[ n\]      | float4 | Siehe Ambient-Member von [**D3DLIGHT9**](d3dlight9.md).                                                           |
-| LightAttenuation0 \[ n\] | float  | Weitere Informationen finden Sie unter Attenuation0-Member von [**D3DLIGHT9**](d3dlight9.md).                                                      |
-| LightAttenuation1 \[ n\] | float  | Weitere Informationen finden Sie unter Attenuation1-Member von [**D3DLIGHT9**](d3dlight9.md).                                                      |
-| LightAttenuation2 \[ n\] | float  | Weitere Informationen finden Sie unter Attenuation2-Member von [**D3DLIGHT9**](d3dlight9.md).                                                      |
-| Lightdiffuse \[ n\]      | float4 | Siehe den diffusen Member von [**D3DLIGHT9**](d3dlight9.md).                                                           |
-| Lightdirection \[ n\]    | float3 | Weitere Informationen finden Sie in der Direction-Member von [**D3DLIGHT9**](d3dlight9.md).                                                         |
-| Lightenable \[ n\]       | bool   | **True** oder **false**. Siehe das benable-Argument in [**lightenable**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-lightenable).            |
-| Lightf-Zuweisung \[ n\]      | float  | [**D3DCOLORVALUE**](d3dcolorvalue.md). Siehe den fzuweisung-Member von [**D3DLIGHT9**](d3dlight9.md).                   |
-| Lightphi \[ n\]          | float  | Siehe den Phi-Member von [**D3DLIGHT9**](d3dlight9.md).                                                               |
-| Lightposition \[ n\]     | float3 | Siehe Positions Element von [**D3DLIGHT9**](d3dlight9.md).                                                          |
-| Lightrange \[ n\]        | float  | Siehe den Range-Member von [**D3DLIGHT9**](d3dlight9.md).                                                             |
-| Lightspecarität \[ n\]     | float4 | Weitere Informationen finden Sie unter dem Glanz Element von [**D3DLIGHT9**](d3dlight9.md).                                                          |
-| Lighttheita \[ n\]        | float  | Weitere Informationen finden Sie unter der [**D3DLIGHT9**](d3dlight9.md)-Member.                                                             |
-| LightType \[ n\]         | dword  | Gleicher Wert wie das Array von bis zu n [**D3DLIGHTTYPE**](./d3dlighttype.md) -Werten ohne das D3DLIGHT- \_ Präfix. |
+| LightAmbient \[ n\]      | float4 | Weitere Informationen finden Sie unter Ambient-Member von [**D3DLIGHT9.**](d3dlight9.md)                                                           |
+| LightAttenuation0 \[ n\] | float  | Weitere Informationen finden Sie unter dem Attenuation0-Member von [**D3DLIGHT9.**](d3dlight9.md)                                                      |
+| LightAttenuation1 \[ n\] | float  | Siehe attenuation1 member of D3DLIGHT9 (Attenuation1-Member [**von D3DLIGHT9).**](d3dlight9.md)                                                      |
+| LightAttenuation2 \[ n\] | float  | Weitere Informationen finden Sie unter dem Attenuation2-Member von [**D3DLIGHT9.**](d3dlight9.md)                                                      |
+| LightDiffuse \[ n\]      | float4 | Siehe den diffusen Member von [**D3DLIGHT9.**](d3dlight9.md)                                                           |
+| LightDirection \[ n\]    | float3 | Weitere Informationen finden Sie unter dem Direction-Member [**von D3DLIGHT9.**](d3dlight9.md)                                                         |
+| LightEnable \[ n\]       | bool   | **TRUE** oder **FALSE**. Weitere Informationen finden Sie unter dem bEnable-Argument in [**LightEnable**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-lightenable).            |
+| LightFalloff \[ n\]      | float  | [**D3DCOLORVALUE**](d3dcolorvalue.md). Weitere Informationen finden Sie unter dem Falloff-Member [**von D3DLIGHT9.**](d3dlight9.md)                   |
+| LightPhi \[ n\]          | float  | Weitere Informationen finden Sie unter dem Phi-Member [**von D3DLIGHT9.**](d3dlight9.md)                                                               |
+| LightPosition \[ n\]     | float3 | Weitere Informationen finden Sie unter Dem Position-Member [**von D3DLIGHT9.**](d3dlight9.md)                                                          |
+| LightRange \[ n\]        | float  | Weitere Informationen finden Sie im Range-Member von [**D3DLIGHT9.**](d3dlight9.md)                                                             |
+| LightSpeular \[ n\]     | float4 | Weitere Informationen finden Sie im Specular-Member von [**D3DLIGHT9.**](d3dlight9.md)                                                          |
+| LightTheta \[ n\]        | float  | Weitere Informationen finden Sie im Theta-Member von [**D3DLIGHT9.**](d3dlight9.md)                                                             |
+| LightType \[ n\]         | dword  | Der gleiche Wert wie das Array mit bis zu n [**D3DLIGHTTYPE-Werten**](./d3dlighttype.md) ohne das \_ Präfix D3DLIGHT. |
 
 
 
@@ -87,22 +86,21 @@ LightAmbient[0] = float4<0.7f, 0.0f, 0.0f, 1.0f>;
 
 
 
-Dadurch wird die Beleuchtung aktiviert, Punktbeleuchtung durch den Typ festgelegt, die helle Position auf float3<10.0 f, 1.0 f, 23,0 f> festgelegt und die Umgebungs Farbe auf float4<0,7 f, 0,0 f, 0,0 f, 1.0 f> festgelegt.
+Dadurch wird die Beleuchtung aktiviert, die Punktbeleuchtung auf den Typ festgelegt, die Lichtposition auf float3<10,0f, 1,0f, 23,0f> und die Umgebungsfarbe auf float4<0,7f, 0,0f, 0,0f, 1,0f> festgelegt.
 
-## <a name="material-states"></a>Material Zustände
+## <a name="material-states"></a>Materialzustände
 
-Wenn Sie nicht deklarieren, werden Sie auf einen Standardwert festgelegt, da Direct3D keine Möglichkeit hat, Materialzustände einzeln festzulegen.
+Zustände, die Sie nicht deklarieren können, werden auf einen Standardwert festgelegt, da Direct3D keine Möglichkeit hat, Materialzustände einzeln festzulegen.
 
 
 
-|                  |        |                                                |
+| Materialzustand   | type   | Werte                                         |
 |------------------|--------|------------------------------------------------|
-| Material Zustand   | type   | Werte                                         |
-| Optionen materialambient  | float4 | Gleicher Wert wie [ **Ambient**](d3dmaterial9.md)  |
-| Material diffuse  | float4 | Gleicher Wert wie [ **diffuses**](d3dmaterial9.md)  |
-| MaterialEmissive | float4 | Gleicher Wert wie [ **emissive**](d3dmaterial9.md) |
-| Materialpower    | float  | Gleicher Wert wie [ **Power**](d3dmaterial9.md)    |
-| MaterialSpecular | float4 | Gleicher [  Wert wie Glanz](d3dmaterial9.md) |
+| MaterialAmbient  | float4 | Gleicher Wert wie [ **Ambient**](d3dmaterial9.md)  |
+| MaterialDiffuse  | float4 | Gleicher Wert wie [ **Diffuse**](d3dmaterial9.md)  |
+| MaterialEmissive | float4 | Gleicher Wert wie [ **Emissive**](d3dmaterial9.md) |
+| MaterialPower    | float  | Gleicher Wert wie [ **Power**](d3dmaterial9.md)    |
+| MaterialSpecular | float4 | Identischer Wert wie [ **Specular**](d3dmaterial9.md) |
 
 
 
@@ -118,18 +116,18 @@ MaterialPower = 3.0f;
 
 
 
-Dadurch wird die diffuse Farbe auf float4<0,7 f, 0,0 f, 0,0 f, 1.0 f> festgelegt und die Leistungsfähigkeit der Materialien 3.0 f festgelegt.
+Dadurch wird die diffuse Farbe auf float4<0,7f, 0,0f, 0,0f, 1,0f> festgelegt und die Leistung des Materials auf 3,0f festgelegt.
 
-## <a name="render-states"></a>Rendering-Zustände
+## <a name="render-states"></a>Renderzustände
 
-Es gibt zwei Arten von Rendering-Zuständen:
+Es gibt zwei Arten von Renderzuständen:
 
--   [Pixelpipe-renderzustände](#pixel-pipe-render-states)
--   [Vertexpipe-Rendering-Zustände](#vertex-pipe-render-states)
+-   [Renderzustände der Pixelpipe](#pixel-pipe-render-states)
+-   [Vertexpipe-Renderzustände](#vertex-pipe-render-states)
 
-### <a name="pixel-pipe-render-states"></a>Pixelpipe-renderzustände
+### <a name="pixel-pipe-render-states"></a>Renderzustände der Pixelpipe
 
-Der Effekt von Datei-gerenderzuständen hat ähnliche Namen wie die Status der Fixed-Funktions Pipeline, häufig wird das Präfix entfernt.
+Renderzustände von Effect-Dateien haben Namen, die den festen Funktionspipelinezuständen ähneln, häufig mit entferntem Präfix.
 
 
 
@@ -141,132 +139,132 @@ Der Effekt von Datei-gerenderzuständen hat ähnliche Namen wie die Status der F
 </colgroup>
 <tbody>
 <tr class="odd">
-<td>Rendering-Zustand</td>
+<td>Renderzustand</td>
 <td>type</td>
 <td>Werte</td>
 </tr>
 <tr class="even">
 <td>AlphaBlendEnable</td>
 <td>bool</td>
-<td>Richtig oder falsch: Die gleichen Werte wie D3DRS_ALPHABLENDENABLE in <a href="/windows/desktop/direct3d9/d3drenderstatetype"><strong>D3DRENDERSTATETYPE</strong></a>.</td>
+<td>Richtig oder falsch. Die gleichen Werte wie D3DRS_ALPHABLENDENABLE in <a href="/windows/desktop/direct3d9/d3drenderstatetype"><strong>D3DRENDERSTATETYPE</strong></a>.</td>
 </tr>
 <tr class="odd">
-<td>Alphafunc</td>
+<td>AlphaFunc</td>
 <td>dword</td>
-<td>Die gleichen Werte wie <a href="/windows/desktop/direct3d9/d3dcmpfunc"><strong>D3DCMPFUNC</strong></a> ohne das Präfix D3DCMP_. Siehe D3DRS_ALPHAFUNC.</td>
+<td>Identische Werte <a href="/windows/desktop/direct3d9/d3dcmpfunc"><strong>wie D3DCMPFUNC</strong></a> ohne D3DCMP_ Präfix. Siehe D3DRS_ALPHAFUNC.</td>
 </tr>
 <tr class="even">
-<td>Alpha Aref</td>
+<td>AlphaRef</td>
 <td>dword</td>
 <td>Die gleichen Werte wie D3DRS_ALPHAREF.</td>
 </tr>
 <tr class="odd">
-<td>Alpha atestenable</td>
+<td>AlphaTestEnable</td>
 <td>dword</td>
-<td>Richtig oder falsch: Siehe D3DRS_ALPHATESTENABLE.</td>
+<td>Richtig oder falsch. Siehe D3DRS_ALPHATESTENABLE.</td>
 </tr>
 <tr class="even">
-<td>Blendop</td>
+<td>BlendOp</td>
 <td>dword</td>
-<td>Die gleichen Werte wie <a href="/windows/desktop/direct3d9/d3dblendop"><strong>D3DBLENDOP</strong></a> ohne das Präfix D3DBLENDOP_.</td>
+<td>Die gleichen Werte wie <a href="/windows/desktop/direct3d9/d3dblendop"><strong>D3DBLENDOP</strong></a> ohne das präfix D3DBLENDOP_.</td>
 </tr>
 <tr class="odd">
-<td>Colorschreiteenable</td>
+<td>ColorWriteEnable</td>
 <td>dword</td>
-<td>Bitweise Kombination von rot | Grün | Blau | Alpha. Siehe D3DRS_COLORWRITEENABLE.</td>
+<td>Bitweise Kombination von RED| GREEN| BLUE| Alpha. Weitere Informationen finden Sie unter D3DRS_COLORWRITEENABLE.</td>
 </tr>
 <tr class="even">
-<td>Depthbias</td>
+<td>DepthBias</td>
 <td>float</td>
 <td>Die gleichen Werte wie D3DRS_DEPTHBIAS.</td>
 </tr>
 <tr class="odd">
-<td>Destblend</td>
+<td>DestBlend</td>
 <td>dword</td>
-<td>Die gleichen Werte wie <a href="/windows/desktop/direct3d9/d3dblend"><strong>D3DBLEND</strong></a> ohne das Präfix D3DBLEND_.</td>
+<td>Die gleichen Werte wie <a href="/windows/desktop/direct3d9/d3dblend"><strong>D3DBLEND</strong></a> ohne das präfix D3DBLEND_.</td>
 </tr>
 <tr class="even">
-<td>Ditherenable</td>
+<td>DitherEnable</td>
 <td>bool</td>
-<td>Richtig oder falsch: Die gleichen Werte wie D3DRS_DITHERENABLE.</td>
+<td>Richtig oder falsch. Die gleichen Werte wie D3DRS_DITHERENABLE.</td>
 </tr>
 <tr class="odd">
-<td>FillMode</td>
+<td>Fillmode</td>
 <td>dword</td>
-<td>Die gleichen Werte wie <a href="/windows/desktop/direct3d9/d3dfillmode"><strong>D3DFILLMODE</strong></a> ohne das Präfix D3DFILL_.</td>
+<td>Die gleichen Werte wie <a href="/windows/desktop/direct3d9/d3dfillmode"><strong>D3DFILLMODE</strong></a> ohne das präfix D3DFILL_.</td>
 </tr>
 <tr class="even">
-<td>Lastpixel</td>
+<td>LastPixel</td>
 <td>dword</td>
-<td>Richtig oder falsch: Siehe D3DRS_LASTPIXEL.</td>
+<td>Richtig oder falsch. Weitere Informationen finden Sie unter D3DRS_LASTPIXEL.</td>
 </tr>
 <tr class="odd">
-<td>SHADEMODE</td>
+<td>ShadeMode</td>
 <td>dword</td>
-<td>Die gleichen Werte wie <a href="/windows/desktop/direct3d9/d3dshademode"><strong>D3DSHADEMODE</strong></a> ohne das Präfix D3DSHADE_.</td>
+<td>Die gleichen Werte wie <a href="/windows/desktop/direct3d9/d3dshademode"><strong>D3DSHADEMODE</strong></a> ohne das präfix D3DSHADE_.</td>
 </tr>
 <tr class="even">
-<td>Slopescaledepthbias</td>
+<td>SlopeScaleDepthBias</td>
 <td>float</td>
 <td>Die gleichen Werte wie D3DRS_SLOPESCALEDEPTHBIAS.</td>
 </tr>
 <tr class="odd">
-<td>Srcblend</td>
+<td>SrcBlend</td>
 <td>dword</td>
-<td>Die gleichen Werte wie <a href="/windows/desktop/direct3d9/d3dblend"><strong>D3DBLEND</strong></a> ohne das Präfix D3DBLEND_.</td>
+<td>Die gleichen Werte wie <a href="/windows/desktop/direct3d9/d3dblend"><strong>D3DBLEND</strong></a> ohne das präfix D3DBLEND_.</td>
 </tr>
 <tr class="even">
-<td>Srgbschreiteenable</td>
+<td>SRGBWriteEnable</td>
 <td>bool</td>
-<td>Richtig oder falsch: Die gleichen Werte wie D3DRS_SRGBWRITEENABLE.</td>
+<td>Richtig oder falsch. Die gleichen Werte wie D3DRS_SRGBWRITEENABLE.</td>
 </tr>
 <tr class="odd">
-<td>Schablone möglich</td>
+<td>StencilEnable</td>
 <td>bool</td>
-<td>Richtig oder falsch: Die gleichen Werte wie D3DRS_STENCILENABLE.</td>
+<td>Richtig oder falsch. Die gleichen Werte wie D3DRS_STENCILENABLE.</td>
 </tr>
 <tr class="even">
-<td>Stencilfail</td>
+<td>StencilFail</td>
 <td>dword</td>
-<td>Die gleichen Werte wie <a href="d3dstencilcaps.md">D3DSTENCILCAPS</a> ohne das Präfix D3DSTENCILCAP_. Siehe D3DRS_STENCILFAIL.</td>
+<td>Dieselben Werte wie <a href="d3dstencilcaps.md">D3DSTENCILCAPS</a> ohne D3DSTENCILCAP_ Präfix. Siehe D3DRS_STENCILFAIL.</td>
 </tr>
 <tr class="odd">
-<td>Schablone Func</td>
+<td>StencilFunc</td>
 <td>dword</td>
-<td>Die gleichen Werte wie <a href="/windows/desktop/direct3d9/d3dcmpfunc"><strong>D3DCMPFUNC</strong></a> ohne das Präfix D3DCMP_. Siehe D3DRS_STENCILFUNC.</td>
+<td>Identische Werte <a href="/windows/desktop/direct3d9/d3dcmpfunc"><strong>wie D3DCMPFUNC</strong></a> ohne D3DCMP_ Präfix. Siehe D3DRS_STENCILFUNC.</td>
 </tr>
 <tr class="even">
-<td>Schablone Mask</td>
+<td>Schablonenmaske</td>
 <td>dword</td>
 <td>Die gleichen Werte wie D3DRS_STENCILMASK.</td>
 </tr>
 <tr class="odd">
-<td>Schablone-Pass</td>
+<td>StencilPass</td>
 <td>dword</td>
-<td>Die gleichen Werte wie <a href="d3dstencilcaps.md">D3DSTENCILCAPS</a> ohne das Präfix D3DSTENCILCAP_. Siehe D3DRS_STENCILPASS.</td>
+<td>Dieselben Werte wie <a href="d3dstencilcaps.md">D3DSTENCILCAPS</a> ohne D3DSTENCILCAP_ Präfix. Siehe D3DRS_STENCILPASS.</td>
 </tr>
 <tr class="even">
-<td>Schablone Ref</td>
+<td>StencilRef</td>
 <td>INT</td>
 <td>Die gleichen Werte wie D3DRS_STENCILREF.</td>
 </tr>
 <tr class="odd">
-<td>Schablone</td>
+<td>StencilWriteMask</td>
 <td>dword</td>
 <td>Die gleichen Werte wie D3DRS_STENCILWRITEMASK.</td>
 </tr>
 <tr class="even">
-<td>Stencilzfail</td>
+<td>StencilZFail</td>
 <td>dword</td>
-<td>Die gleichen Werte wie <a href="d3dstencilcaps.md">D3DSTENCILCAPS</a> ohne das Präfix D3DSTENCILCAP_. Siehe D3DRS_STENCILZFAIL.</td>
+<td>Die gleichen Werte wie <a href="d3dstencilcaps.md">D3DSTENCILCAPS</a> ohne das präfix D3DSTENCILCAP_. Weitere Informationen finden Sie unter D3DRS_STENCILZFAIL.</td>
 </tr>
 <tr class="odd">
 <td>TextureFactor</td>
 <td>dword</td>
-<td>Dieselben Werte wie <a href="d3dcolor.md"><strong>D3DCOLOR</strong></a>. Die gleichen Werte wie D3DRS_TEXTUREFACTOR.</td>
+<td>Die gleichen Werte wie <a href="d3dcolor.md"><strong>D3DCOLOR.</strong></a> Die gleichen Werte wie D3DRS_TEXTUREFACTOR.</td>
 </tr>
 <tr class="even">
-<td>Wrap0 - Wrap15</td>
+<td>Wrap0 – Wrap15</td>
 <td>dword</td>
 <td>Werte sind identisch mit den Werten, die von D3DRS_WRAP0 verwendet werden. Gültige Werte sind:
 <ul>
@@ -280,19 +278,19 @@ Der Effekt von Datei-gerenderzuständen hat ähnliche Namen wie die Status der F
 </ul></td>
 </tr>
 <tr class="odd">
-<td>Zenzierbar</td>
+<td>ZEnable</td>
 <td>dword</td>
-<td>Die gleichen Werte wie <a href="/windows/desktop/direct3d9/d3dzbuffertype"><strong>D3DZBUFFERTYPE</strong></a> ohne das Präfix D3DZB_.</td>
+<td>Die gleichen Werte wie <a href="/windows/desktop/direct3d9/d3dzbuffertype"><strong>D3DSILUFFERTYPE</strong></a> ohne das präfix D3DZB_.</td>
 </tr>
 <tr class="even">
-<td>Zfunc</td>
+<td>ZFunc</td>
 <td>dword</td>
-<td>Die gleichen Werte wie <a href="/windows/desktop/direct3d9/d3dcmpfunc"><strong>D3DCMPFUNC</strong></a> ohne das Präfix D3DCMP_. Siehe D3DRS_ZFUNC.</td>
+<td>Die gleichen Werte wie <a href="/windows/desktop/direct3d9/d3dcmpfunc"><strong>D3DCMPFUNC</strong></a> ohne das präfix D3DCMP_. Weitere Informationen finden Sie unter D3DRS_ZFUNC.</td>
 </tr>
 <tr class="odd">
-<td>Zbeschreib teenable</td>
+<td>ZWriteEnable</td>
 <td>bool</td>
-<td>Richtig oder falsch: Siehe D3DRS_ZWRITEENABLE.</td>
+<td>Richtig oder falsch. Siehe D3DRS_ZWRITEENABLE.</td>
 </tr>
 </tbody>
 </table>
@@ -311,52 +309,51 @@ FillMode = WIREFRAME;
 
 
 
-Dadurch wird die Alpha Mischung aktiviert, und alle Geometrien werden im Wireframe dargestellt.
+Dadurch wird alpha blending aktiviert, und alle Geometrien werden im Drahtmodell gerendert.
 
-### <a name="vertex-pipe-render-states"></a>Vertexpipe-Rendering-Zustände
+### <a name="vertex-pipe-render-states"></a>Vertexpipe-Renderzustände
 
-Der Effekt von Datei-gerenderzuständen hat ähnliche Namen wie die Status der Fixed-Funktions Pipeline, häufig wird das Präfix entfernt.
+Renderzustände von Effect-Dateien haben Namen, die den festen Funktionspipelinezuständen ähneln, häufig mit entferntem Präfix.
 
 
 
-|                          |        |                                                                                                                                               |
+| Renderzustand             | type   | Werte                                                                                                                                        |
 |--------------------------|--------|-----------------------------------------------------------------------------------------------------------------------------------------------|
-| Rendering-Zustand             | type   | Werte                                                                                                                                        |
 | Umgebend                  | float4 | Dieselben Werte wie D3DRS \_ AMBIENT.                                                                                                                |
-| AmbientMaterialSource    | dword  | Dieselben Werte wie [**D3DMATERIALCOLORSOURCE**](./d3dmaterialcolorsource.md) ohne das D3DMCS- \_ Präfix. Weitere Informationen finden Sie unter D3DRS \_ AmbientMaterialSource.  |
-| Freistellen                 | bool   | Richtig oder falsch: Die gleichen Werte wie D3DRS \_ Clipping.                                                                                                |
-| Clipplaneenable          | dword  | Bitweise Kombination von D3DCLIPPLANE0-D3DCLIPPLANE5-Makros. Weitere Informationen finden Sie unter [**D3DCLIPPLANEn**](d3dclipplanen.md) und D3DRS \_ clipplaneenable.           |
-| ColorVertex              | bool   | Richtig oder falsch: Die gleichen Werte wie D3DRS \_ ColorVertex.                                                                                             |
-| CullMode                 | dword  | Dieselben Werte wie [**D3DCULL**](./d3dcull.md) ohne das D3DCULL- \_ Präfix.                                                                 |
-| DiffuseMaterialSource    | dword  | Dieselben Werte wie [**D3DMATERIALCOLORSOURCE**](./d3dmaterialcolorsource.md) ohne das D3DMCS- \_ Präfix. Weitere Informationen finden Sie unter D3DRS \_ DiffuseMaterialSource.  |
-| Emissivematerialsource   | dword  | Dieselben Werte wie [**D3DMATERIALCOLORSOURCE**](./d3dmaterialcolorsource.md) ohne das D3DMCS- \_ Präfix. Siehe D3DRS \_ emissivematerialsource. |
-| Fogcolor                 | dword  | Dieselben Werte wie [**D3DCOLOR**](d3dcolor.md). Siehe D3DRS \_ fogcolor.                                                                             |
-| Fogdensity               | float  | Die gleichen Werte wie D3DRS \_ fogdensity.                                                                                                             |
-| Fogenable                | bool   | Richtig oder falsch: Die gleichen Werte wie D3DRS \_ fogenable.                                                                                               |
-| Fogend                   | float  | Die gleichen Werte wie D3DRS \_ fogend.                                                                                                                 |
-| Fogstart                 | float  | Die gleichen Werte wie D3DRS \_ fogstart.                                                                                                               |
-| Fogtablemode             | dword  | Dieselben Werte wie [**D3DFOGMODE**](./d3dfogmode.md). Weitere Informationen finden Sie \_ unter D3DRS fogtablemode in [**D3DRENDERSTATETYPE**](./d3drenderstatetype.md).     |
-| Fogvertexmode            | dword  | Dieselben Werte wie [**D3DFOGMODE**](./d3dfogmode.md) ohne das D3DFOG- \_ Präfix.                                                            |
-| Indexedvertexblendenable | bool   | Richtig oder falsch: Dieselben Werte wie D3DRS \_ indexedvertexblendenable.                                                                                |
-| Beleuchtung                 | bool   | Richtig oder falsch: Die gleichen Werte wie die D3DRS- \_ Beleuchtung.                                                                                                |
-| Localviewer              | bool   | Richtig oder falsch: Die gleichen Werte wie D3DRS \_ localviewer.                                                                                             |
-| Multisampleantialias     | bool   | Dieselben Werte wie D3DRS \_ multisampleantialias.                                                                                                   |
-| Multisamplemask          | dword  | Dieselben Werte wie D3DRS \_ multisamplemask.                                                                                                        |
-| Normalizenormals         | bool   | Richtig oder falsch: Dieselben Werte wie D3DRS \_ normalizenormals.                                                                                        |
-| Patchsegmente            | float  | Die gleichen Werte wie nsegmente im [**setnpatchmode**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-setnpatchmode).                                                         |
-| Pointscale \_ A            | float  | Die gleichen Werte wie D3DRS \_ pointscale \_ A.                                                                                                          |
-| Pointscale \_ B            | float  | Dieselben Werte wie D3DRS \_ pointscale \_ B.                                                                                                          |
-| Pointscale \_ C            | float  | Dieselben Werte wie D3DRS \_ pointscale \_ C.                                                                                                          |
-| Pointscaleenable         | bool   | Dieselben Werte wie D3DRS \_ pointscaleenable.                                                                                                       |
-| PointSize                | float  | Die gleichen Werte wie D3DRS \_ pointsize.                                                                                                              |
-| Pointsize (min.) \_           | float  | Dieselben Werte wie D3DRS \_ pointsize \_ Min.                                                                                                         |
-| Pointsize- \_ Maximalwert           | float  | Die gleichen Werte wie D3DRS \_ pointsize \_ Max ohne das D3DRS- \_ Präfix.                                                                              |
-| Pointspriteenable        | bool   | Richtig oder falsch: Dieselben Werte wie D3DRS \_ pointspriteenable.                                                                                       |
-| RangeFogEnable           | bool   | Richtig oder falsch: Dieselben Werte wie D3DRS \_ RANGEFOGENABLE.                                                                                          |
-| Specularenable           | bool   | Richtig oder falsch: Dieselben Werte wie D3DRS \_ specularenable.                                                                                          |
-| SpecularMaterialSource   | dword  | Dieselben Werte wie [**D3DMATERIALCOLORSOURCE**](./d3dmaterialcolorsource.md) ohne das D3DMCS- \_ Präfix. Siehe D3DRS \_ SpecularMaterialSource. |
-| Tweumfactor              | float  | Dieselben Werte wie D3DRS \_ tweumfactor.                                                                                                            |
-| Vertexblend              | dword  | Dieselben Werte wie [**D3DVERTEXBLENDFLAGS**](./d3dvertexblendflags.md) ohne das D3DVBF- \_ Präfix. Weitere Informationen finden Sie unter D3DRS \_ vertexblend.                  |
+| AmbientMaterialSource    | dword  | Dieselben Werte wie [**D3DMATERIALCOLORSOURCE**](./d3dmaterialcolorsource.md) ohne das Präfix D3DMCS. \_ Siehe D3DRS \_ AMBIENTMATERIALSOURCE.  |
+| Freistellen                 | bool   | Richtig oder falsch. Identische Werte wie D3DRS \_ CLIPPING.                                                                                                |
+| ClipPlaneEnable          | dword  | Bitweise Kombination der Makros D3DCLIPPLANE0 – D3DCLIPPLANE5. Siehe [**D3DCLIPPLANEn**](d3dclipplanen.md) und D3DRS \_ CLIPPLANEENABLE.           |
+| ColorVertex              | bool   | Richtig oder falsch. Dieselben Werte wie D3DRS \_ COLORVERTEX.                                                                                             |
+| CullMode                 | dword  | Identische Werte [**wie D3DCULL**](./d3dcull.md) ohne das Präfix D3DCULL. \_                                                                 |
+| DiffuseMaterialSource    | dword  | Dieselben Werte wie [**D3DMATERIALCOLORSOURCE**](./d3dmaterialcolorsource.md) ohne das Präfix D3DMCS. \_ Siehe D3DRS \_ DIFFUSEMATERIALSOURCE.  |
+| EmissiveMaterialSource   | dword  | Die gleichen Werte wie [**D3DMATERIALCOLORSOURCE**](./d3dmaterialcolorsource.md) ohne das \_ D3DMCS-Präfix. Siehe D3DRS \_ EMISSIVEMATERIALSOURCE. |
+| ColorColor                 | dword  | Die gleichen Werte wie [**D3DCOLOR.**](d3dcolor.md) Weitere Informationen finden Sie unter \_ D3DRSCOLOR.                                                                             |
+| Überdungsalität               | float  | Die gleichen Werte wie D3DRS- \_ UND -WERTE.                                                                                                             |
+| Aufschn.                | bool   | Richtig oder falsch. Identische Werte wie D3DRS– \_ VERWERTBAR.                                                                                               |
+| Adrend                   | float  | Die gleichen Werte wie D3DRS– \_ MSIEND.                                                                                                                 |
+| Überlaufstart                 | float  | Die gleichen Werte wie \_ D3DRS–WERTSTART.                                                                                                               |
+| StandbyTableMode             | dword  | Die gleichen Werte wie [**D3DFOGMODE.**](./d3dfogmode.md) Weitere Informationen finden Sie unter D3DRSTABLEMODE \_ in [**D3DRENDERSTATETYPE.**](./d3drenderstatetype.md)     |
+| TexVertexMode            | dword  | Die gleichen Werte wie [**D3DFOGMODE**](./d3dfogmode.md) ohne das \_ D3DFOG-Präfix.                                                            |
+| IndexedVertexBlendEnable | bool   | Richtig oder falsch. Identische Werte wie D3DRS \_ INDEXEDVERTEXBLENDENABLE.                                                                                |
+| Beleuchtung                 | bool   | Richtig oder falsch. Identische Werte wie D3DRS \_ LIGHTING.                                                                                                |
+| LocalViewer              | bool   | Richtig oder falsch. Identische Werte wie D3DRS \_ LOCALVIEWER.                                                                                             |
+| MultiSampleAntialias     | bool   | Identische Werte wie D3DRS \_ MULTISAMPLEANTIALIAS.                                                                                                   |
+| MultiSampleMask          | dword  | Identische Werte wie D3DRS \_ MULTISAMPLEMASK.                                                                                                        |
+| NormalizeNormals         | bool   | Richtig oder falsch. Identische Werte wie D3DRS \_ NORMALIZENORMALS.                                                                                        |
+| PatchSegments            | float  | Die gleichen Werte wie nSegments in [**SetNPatchMode**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-setnpatchmode).                                                         |
+| PointScale \_ A            | float  | Identische Werte wie D3DRS \_ POINTSCALE \_ A.                                                                                                          |
+| PointScale \_ B            | float  | Identische Werte wie D3DRS \_ POINTSCALE \_ B.                                                                                                          |
+| PointScale \_ C            | float  | Identische Werte wie D3DRS \_ POINTSCALE \_ C.                                                                                                          |
+| PointScaleEnable         | bool   | Identische Werte wie D3DRS \_ POINTSCALEENABLE.                                                                                                       |
+| PointSize                | float  | Die gleichen Werte wie D3DRS \_ POINTSIZE.                                                                                                              |
+| PointSize \_ Min           | float  | Die gleichen Werte wie D3DRS \_ POINTSIZE \_ MIN.                                                                                                         |
+| PointSize \_ Max           | float  | Die gleichen Werte wie D3DRS \_ POINTSIZE \_ MAX ohne das \_ D3DRS-Präfix.                                                                              |
+| PointSpriteEnable        | bool   | Richtig oder falsch. Die gleichen Werte wie D3DRS \_ POINTSPRITEENABLE.                                                                                       |
+| RangeFogEnable           | bool   | Richtig oder falsch. Die gleichen Werte wie D3DRS \_ RANGEFOGENABLE.                                                                                          |
+| SpecularEnable           | bool   | Richtig oder falsch. Die gleichen Werte wie D3DRS \_ SPECULARENABLE.                                                                                          |
+| SpecularMaterialSource   | dword  | Die gleichen Werte wie [**D3DMATERIALCOLORSOURCE**](./d3dmaterialcolorsource.md) ohne das \_ D3DMCS-Präfix. Siehe D3DRS \_ SPECULARMATERIALSOURCE. |
+| TweenFactor              | float  | Die gleichen Werte wie D3DRS \_ TWEENFACTOR.                                                                                                            |
+| VertexBlend              | dword  | Die gleichen Werte wie [**D3DVERTEXBLENDFLAGS**](./d3dvertexblendflags.md) ohne das Präfix D3DVBF. \_ Siehe D3DRS \_ VERTEXBLEND.                  |
 
 
 
@@ -373,43 +370,41 @@ FogColor = 0xff0000;
 
 
 
-Dadurch wird die Ambient-Farbe float4<0,7 f, 0,0 f, 0,0 f, 1.0 f>, der Modus für die Hintergrund Erkennung wird gegen den Uhrzeigersinn festgelegt, und die Nebelfarbe wird auf Rot festgelegt.
+Dadurch wird die Umgebungsfarbe float4<0,7f, 0,0f, 0,0f, 1,0f>, der Hinterface-Cullingmodus auf gegen den Uhrzeigersinn festgelegt und die Farbe der Farbe auf Rot festgelegt.
 
 ## <a name="sampler-states"></a>Samplerzustände
 
-Ein samplerzustand stellt ein Sampler-Objekt dar.
+Ein Samplerzustand stellt ein Samplerobjekt dar.
 
 
 
-|         |         |                                     |
-|---------|---------|-------------------------------------|
 | State   | type    | Werte                              |
-| Sampler | Sammel | **Null** oder ein samplerstatusblock. |
+|---------|---------|-------------------------------------|
+| Sampler | Sampler | **NULL** oder ein Samplerzustandsblock. |
 
 
 
  
 
-## <a name="sampler-stage-states"></a>Sampler-Phasen Status
+## <a name="sampler-stage-states"></a>Sampler-Phasenzustände
 
-Samplingstufen Zustände werden zum Beispiel für Texturen verwendet. Der samplerzustand bestimmt Filterungs-und Darstellungsmodi.
+Samplerphasenzustände werden verwendet, um Texturen zu beproben. Der Zustand des Samplers bestimmt Filtertypen und Textur-Adressierungsmodi.
 
 
 
-|                     |                              |                                                                                                                                   |
+| Samplerzustand       | type                         | Werte                                                                                                                            |
 |---------------------|------------------------------|-----------------------------------------------------------------------------------------------------------------------------------|
-| Samplerstatus       | type                         | Werte                                                                                                                            |
-| Adresssu \[ 16\]      | dword                        | Dieselben Werte wie [**D3DTEXTUREADDRESS**](./d3dtextureaddress.md) ohne das D3DTADDRESS- \_ Präfix. Weitere Informationen finden Sie unter D3DSAMP \_ adressssu.      |
-| Adressssv \[ 16\]      | dword                        | Dieselben Werte wie [**D3DTEXTUREADDRESS**](./d3dtextureaddress.md) ohne das D3DTADDRESS- \_ Präfix. Siehe D3DSAMP \_ adressssv.      |
-| AddressW \[ 16\]      | dword                        | Dieselben Werte wie [**D3DTEXTUREADDRESS**](./d3dtextureaddress.md) ohne das D3DTADDRESS- \_ Präfix. Siehe D3DSAMP \_ AddressW.      |
-| BorderColor \[ 16\]   | [**D3DCOLOR**](d3dcolor.md) | Dieselben Werte wie [**D3DTEXTUREFILTERTYPE**](./d3dtexturefiltertype.md) ohne das D3DTEXF- \_ Präfix. Siehe D3DSAMP \_ BorderColor. |
-| MagFilter \[ 16\]     | dword                        | Dieselben Werte wie [**D3DTEXTUREFILTERTYPE**](./d3dtexturefiltertype.md) ohne das D3DTEXF- \_ Präfix. Siehe D3DSAMP \_ MagFilter.   |
-| MaxAnisotropy \[ 16\] | dword                        | Dieselben Werte wie D3DSAMP \_ MaxAnisotropy ohne das D3DSAMP- \_ Präfix.                                                               |
-| MaxMipLevel \[ 16\]   | INT                          | Dieselben Werte wie D3DSAMP \_ MaxMipLevel ohne das D3DSAMP- \_ Präfix.                                                                 |
-| MinFilter \[ 16\]     | dword                        | Dieselben Werte wie D3DSAMP \_ MinFilter ohne das D3DSAMP- \_ Präfix.                                                                   |
-| MipFilter \[ 16\]     | dword                        | Dieselben Werte wie D3DSAMP \_ MipFilter ohne das D3DSAMP- \_ Präfix.                                                                   |
-| Mipmaplodbias \[ 16\] | float                        | Dieselben Werte wie D3DSAMP \_ mipmaplodbias ohne das D3DSAMP- \_ Präfix.                                                               |
-| Srgbtexture         | bool                         | Gleicher Wert wie D3DSAMP \_ srgbtexture ohne das D3DSAMP- \_ Präfix.                                                                   |
+| AddressU \[ 16\]      | dword                        | Identische Werte [**wie D3DTEXTUREADDRESS ohne**](./d3dtextureaddress.md) das Präfix D3DTADDRESS. \_ Siehe D3DSAMP \_ ADDRESSU.      |
+| AddressV \[ 16\]      | dword                        | Identische Werte [**wie D3DTEXTUREADDRESS ohne**](./d3dtextureaddress.md) das Präfix D3DTADDRESS. \_ Siehe D3DSAMP \_ ADDRESSV.      |
+| AddressW \[ 16\]      | dword                        | Identische Werte [**wie D3DTEXTUREADDRESS ohne**](./d3dtextureaddress.md) das Präfix D3DTADDRESS. \_ Siehe D3DSAMP \_ ADDRESSW.      |
+| BorderColor \[ 16\]   | [**D3DCOLOR**](d3dcolor.md) | Die gleichen Werte wie [**D3DTEXTUREFILTERTYPE**](./d3dtexturefiltertype.md) ohne das Präfix D3DTEXF. \_ Siehe D3DSAMP \_ BORDERCOLOR. |
+| MagFilter \[ 16\]     | dword                        | Die gleichen Werte wie [**D3DTEXTUREFILTERTYPE**](./d3dtexturefiltertype.md) ohne das Präfix D3DTEXF. \_ Siehe D3DSAMP \_ MAGFILTER.   |
+| MaxAnisotropie \[ 16\] | dword                        | Die gleichen Werte wie D3DSAMP \_ MAXANISOTROPY ohne das \_ D3DSAMP-Präfix.                                                               |
+| MaxMipLevel \[ 16\]   | INT                          | Die gleichen Werte wie D3DSAMP \_ MAXMIPLEVEL ohne das \_ D3DSAMP-Präfix.                                                                 |
+| MinFilter \[ 16\]     | dword                        | Die gleichen Werte wie D3DSAMP \_ MINFILTER ohne das \_ Präfix D3DSAMP.                                                                   |
+| MipFilter \[ 16\]     | dword                        | Die gleichen Werte wie D3DSAMP \_ MIPFILTER ohne das \_ Präfix D3DSAMP.                                                                   |
+| MipMapLodBias \[ 16\] | float                        | Die gleichen Werte wie D3DSAMP \_ MIPMAPLODBIAS ohne das \_ D3DSAMP-Präfix.                                                               |
+| SRGBTexture         | bool                         | Der gleiche Wert wie D3DSAMP \_ SRGBTEXTURE ohne das \_ Präfix D3DSAMP.                                                                   |
 
 
 
@@ -426,19 +421,18 @@ AddressW[0] = CLAMP;
 
 
 
-Dadurch werden UVW-Werte auf einen Wert zwischen 0 und 1 Klammern.
+Dadurch werden UVW-Werte zwischen 0 und 1 klammern.
 
-## <a name="shader-states"></a>Shader-Zustände
+## <a name="shader-states"></a>Shaderzustände
 
-Es gibt nur zwei Effekt-shaderzustände: eine, die einem Vertex-Shader-Objekt zugeordnet ist, und die andere, die einem Pixel-Shader-Objekt zugeordnet ist.
+Es gibt nur zwei Effekt-Shaderzustände: einen, der einem Vertex-Shaderobjekt zugeordnet ist, und den anderen, der einem Pixelshaderobjekt zugeordnet ist.
 
 
 
-|              |              |                                                                             |
+| Shaderzustand | type         | Werte                                                                      |
 |--------------|--------------|-----------------------------------------------------------------------------|
-| Shader-Status | type         | Werte                                                                      |
-| Pixelshader  | Pixelshader  | **Null**, ein assemblyblock, ein Kompilierungs Ziel oder ein Pixel-Shader-Parameter. |
-| Titellink | Titellink | **Null**, ein assemblyblock, ein Kompilierungs Ziel oder ein Pixel-Shader-Parameter. |
+| Pixelshader  | Pixelshader  | **NULL,** ein Assemblyblock, ein Kompilierungsziel oder ein Shaderparameter für Pixel. |
+| VertexShader | vertexshader | **NULL,** ein Assemblyblock, ein Kompilierungsziel oder ein Shaderparameter für Pixel. |
 
 
 
@@ -454,97 +448,93 @@ PixelShader  = NULL;
 
 
 
-Hierdurch wird vstexture, ein weiter oben in der FX-Datei definiertes Vertex-Shader, mit der Vertex-Shader-Version 1,1 kompiliert und dann als Vertexshader für den kompilierten Shader festgelegt. Der Pixelshader wird **null** zugewiesen.
+Dadurch wird VSTexture, ein vertex-Shader, der zuvor in der FX-Datei definiert wurde, in die Vertex-Shaderversion 1.1 kompiliert und diesen kompilierten Shader dann als Vertex-Shader festgelegt. Der Pixel-Shader ist NULL **zugewiesen.**
 
-## <a name="shader-constant-states"></a>Shader-konstantenzustände
+## <a name="shader-constant-states"></a>Shader-Konstantenzustände
 
-Shaderkonstantenzustände werden verwendet, um auf Shader-Konstante Parameter zuzugreifen.
+Shader-Konstantenzustände werden verwendet, um auf shader-Konstantenparameter zu zugreifen.
 
 
 
-|                       |                 |                                              |
+| Shaderkonst konstanter Zustand | type            | Werte                                       |
 |-----------------------|-----------------|----------------------------------------------|
-| Shader-konstantenzustand | type            | Werte                                       |
-| Pixelshaderconstant   | float \[ m \[ n\]\] | m x n Array von Gleit Komma Zahlen; m und n sind optional. |
-| PixelShaderConstant1  | float4          | Ein 4D-float-Wert.                                |
-| PixelShaderConstant2  | float4x2        | Zwei 4D-Gleit Komma Zahlen.                               |
-| PixelShaderConstant3  | float4x3        | Drei 4D-Gleit Komma Zahlen.                             |
-| PixelShaderConstant4  | float4x4        | Vier 4D-Gleit Komma Zahlen.                              |
-| Pixelshaderconstantb  | Boolescher \[ m \[ n\]\]  | m x n Array von bools; m und n sind optional.  |
-| Pixelshaderconstanti  | int \[ m \[ n\]\]   | m x n Array von int. m und n sind optional.   |
-| Pixelshaderconstantf  | float \[ m \[ n\]\] | m x n Array von Gleit Komma Zahlen. m und n sind optional. |
-| Vertexshaderconstant  | float \[ m \[ n\]\] | m x n Array von Gleit Komma Zahlen. m und n sind optional. |
-| VertexShaderConstant1 | float4          | Ein 4D-float-Wert.                                |
-| VertexShaderConstant2 | float4x2        | Zwei 4D-Gleit Komma Zahlen.                               |
-| VertexShaderConstant3 | float4x3        | Drei 4D-Gleit Komma Zahlen.                             |
-| VertexShaderConstant4 | float4x4        | Vier 4D-Gleit Komma Zahlen.                              |
-| Vertexshaderconstantb | Boolescher \[ m \[ n\]\]  | m x n Array von bools. m und n sind optional.  |
-| Vertexshaderconstanti | int \[ m \[ n\]\]   | m x n Array von int. m und n sind optional.   |
-| Vertexshaderconstantf | float \[ m \[ n\]\] | m x n Array von Gleit Komma Zahlen. m und n sind optional. |
+| PixelShaderConstant   | float \[ m \[ n\]\] | m x n Array von floats; m und n sind optional. |
+| PixelShaderConstant1  | float4          | Ein 4D-Gleitkomma.                                |
+| PixelShaderConstant2  | float4x2        | Zwei 4D-Gleitkommakomma-                               |
+| PixelShaderConstant3  | float4x3        | Drei 4D-Gleitkomma-                             |
+| PixelShaderConstant4  | float4x4        | Vier 4D-Gleitkommawerts.                              |
+| PixelShaderConstantB  | bool \[ m \[ n\]\]  | m x n array of bools; m und n sind optional.  |
+| PixelShaderConstantI  | int \[ m \[ n\]\]   | m x n Array von Ints. m und n sind optional.   |
+| PixelShaderConstantF  | float \[ m \[ n\]\] | m x n array of floats. m und n sind optional. |
+| VertexShaderConstant  | float \[ m \[ n\]\] | m x n array of floats. m und n sind optional. |
+| VertexShaderConstant1 | float4          | Ein 4D-Gleitkomma.                                |
+| VertexShaderConstant2 | float4x2        | Zwei 4D-Gleitkommakomma-                               |
+| VertexShaderConstant3 | float4x3        | Drei 4D-Gleitkommakomma-                             |
+| VertexShaderConstant4 | float4x4        | Vier 4D-Gleitkommakomma.                              |
+| VertexShaderConstantB | bool \[ m \[ n\]\]  | m x n-Array mit booleschen Daten. m und n sind optional.  |
+| VertexShaderConstantI | int \[ m \[ n\]\]   | m x n Array von Ints. m und n sind optional.   |
+| VertexShaderConstantF | float \[ m \[ n\]\] | m x n array of floats. m und n sind optional. |
 
 
 
  
 
-## <a name="texture-states"></a>Textur Zustände
+## <a name="texture-states"></a>Texturzustände
 
-Textur Zustände initialisieren Texturen, die vom Multitextur-Blender verwendet werden.
+Texturzustände initialisieren Texturen, die vom Mehrtexturblender verwendet werden.
 
 
 
-|               |         |                                   |
+| Texturzustand | type    | Werte                            |
 |---------------|---------|-----------------------------------|
-| Textur Zustand | type    | Werte                            |
-| Textur \[ 8\]  | Struktur | **Null** oder ein Textur Parameter. |
+| Textur \[ 8\]  | Struktur | **NULL** oder ein Texturparameter. |
 
 
 
  
 
-## <a name="texture-stage-states"></a>Textur Stufen Zustände
+## <a name="texture-stage-states"></a>Zustände der Texturphase
 
-Textur Stufen Zustände richten Texturen und die Textur Stufen im Multitextur-Blender ein.
+Texturphasenzustände richten Texturen und die Texturstufen im Multitexture Blender ein.
 
 
 
-|                            |       |                                                                                                                                                           |
+| Zustand der Texturphase        | type  | Werte                                                                                                                                                    |
 |----------------------------|-------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Textur Phasen Status        | type  | Werte                                                                                                                                                    |
-| Alphaop \[ 8\]               | dword | Identisch mit [**D3DTEXTUREOP**](./d3dtextureop.md) ohne das D3DTOP- \_ Präfix. Siehe D3DTSS \_ alphaop.                                                      |
-| AlphaArg0 \[ 8\]             | dword | Identisch mit [D3DTA](d3dta.md) ohne das D3DTA- \_ Präfix. Siehe D3DTSS \_ ALPHAARG0.                                                                             |
-| AlphaArg1 \[ 8\]             | dword | Identisch mit [D3DTA](d3dta.md) ohne das D3DTA- \_ Präfix. Siehe D3DTSS \_ ALPHAARG1.                                                                             |
-| AlphaArg2 \[ 8\]             | dword | Identisch mit [D3DTA](d3dta.md) ohne das D3DTA- \_ Präfix. Siehe D3DTSS \_ ALPHAARG2.                                                                             |
-| ColorArg0 \[ 8\]             | dword | Identisch mit [D3DTA](d3dta.md) ohne das D3DTA- \_ Präfix. Siehe D3DTSS \_ COLORARG0.                                                                             |
-| ColorArg1 \[ 8\]             | dword | Identisch mit [D3DTA](d3dta.md) ohne das D3DTA- \_ Präfix. Siehe D3DTSS \_ COLORARG1.                                                                             |
-| ColorArg2 \[ 8\]             | dword | Identisch mit [D3DTA](d3dta.md) ohne das D3DTA- \_ Präfix. Siehe D3DTSS \_ COLORARG2.                                                                             |
-| Colorop \[ 8\]               | dword | Identisch mit [**D3DTEXTUREOP**](./d3dtextureop.md) ohne das D3DTOP- \_ Präfix. Siehe D3DTSS \_ colorop.                                                      |
-| Bumpendvlscale \[ 8\]         | float | Dieselben Werte wie D3DTSS \_ bumpeinvlscale ohne das D3DTSS \_ TCI-Präfix.                                                                                      |
-| Bumpenvloffset \[ 8\]        | float | Die gleichen Werte wie D3DTSS \_ bumpenvloffset ohne das D3DTSS \_ TCI-Präfix.                                                                                     |
-| BumpEnvMat00 \[ 8\]          | float | Dieselben Werte wie D3DTSS \_ BUMPENVMAT00.                                                                                                                      |
-| BumpEnvMat01 \[ 8\]          | float | Dieselben Werte wie D3DTSS \_ BUMPENVMAT01.                                                                                                                      |
-| BumpEnvMat10 \[ 8\]          | float | Dieselben Werte wie D3DTSS \_ BUMPENVMAT10.                                                                                                                      |
-| BumpEnvMat11 \[ 8\]          | float | Dieselben Werte wie D3DTSS \_ BUMPENVMAT11.                                                                                                                      |
-| Resultarg \[ 8\]             | dword | Identisch mit [D3DTA](d3dta.md) ohne das D3DTA- \_ Präfix. Siehe D3DTSS \_ resultarg.                                                                             |
-| Texcoordindex \[ 8\]         | dword | Dieselben Werte wie D3DTSS \_ texcoordindex ohne das D3DTSS \_ TCI-Präfix.                                                                                      |
-| Texturetransformflags \[ 8\] | dword | Die gleichen Werte wie [**D3DTEXTURETRANSFORMFLAGS**](./d3dtexturetransformflags.md) -Werte ohne das D3DTTFF- \_ Präfix. Weitere Informationen finden Sie unter D3DTSS \_ texturetransformflags. |
+| AlphaOp \[ 8\]               | dword | Entspricht [**D3DTEXTUREOP**](./d3dtextureop.md) ohne das \_ Präfix D3DTOP. Siehe D3DTSS \_ ALPHAOP.                                                      |
+| AlphaArg0 \[ 8\]             | dword | Identisch mit [D3DTA](d3dta.md) ohne das D3DTA-Präfix. \_ Siehe D3DTSS \_ ALPHAARG0.                                                                             |
+| AlphaArg1 \[ 8\]             | dword | Identisch mit [D3DTA](d3dta.md) ohne das D3DTA-Präfix. \_ Siehe D3DTSS \_ ALPHAARG1.                                                                             |
+| AlphaArg2 \[ 8\]             | dword | Identisch mit [D3DTA](d3dta.md) ohne das Präfix D3DTA. \_ Siehe D3DTSS \_ ALPHAARG2.                                                                             |
+| ColorArg0 \[ 8\]             | dword | Identisch mit [D3DTA](d3dta.md) ohne das Präfix D3DTA. \_ Siehe D3DTSS \_ COLORARG0.                                                                             |
+| ColorArg1 \[ 8\]             | dword | Identisch mit [D3DTA](d3dta.md) ohne das Präfix D3DTA. \_ Siehe D3DTSS \_ COLORARG1.                                                                             |
+| ColorArg2 \[ 8\]             | dword | Identisch mit [D3DTA](d3dta.md) ohne das Präfix D3DTA. \_ Siehe D3DTSS \_ COLORARG2.                                                                             |
+| ColorOp \[ 8\]               | dword | Identisch mit [**D3DTEXTUREOP**](./d3dtextureop.md) ohne das Präfix D3DTOP. \_ Siehe D3DTSS \_ COLOROP.                                                      |
+| BumpEnvLScale \[ 8\]         | float | Dieselben Werte wie D3DTSS \_ BUMPENVLSCALE ohne das \_ TCI-Präfix D3DTSS.                                                                                      |
+| BumpEnvLOffset \[ 8\]        | float | Dieselben Werte wie D3DTSS \_ BUMPENVLOFFSET ohne das D3DTSS-TCI-Präfix. \_                                                                                     |
+| BumpEnvMat00 \[ 8\]          | float | Identische Werte wie D3DTSS \_ BUMPENVMAT00.                                                                                                                      |
+| BumpEnvMat01 \[ 8\]          | float | Die gleichen Werte wie D3DTSS \_ BUMPENVMAT01.                                                                                                                      |
+| BumpEnvMat10 \[ 8\]          | float | Die gleichen Werte wie D3DTSS \_ BUMPENVMAT10.                                                                                                                      |
+| BumpEnvMat11 \[ 8\]          | float | Die gleichen Werte wie D3DTSS \_ BUMPENVMAT11.                                                                                                                      |
+| ResultArg \[ 8\]             | dword | Identisch mit [D3DTA](d3dta.md) ohne das D3DTA-Präfix. \_ Siehe D3DTSS \_ RESULTARG.                                                                             |
+| TexCoordIndex \[ 8\]         | dword | Die gleichen Werte wie D3DTSS \_ TEXCOORDINDEX ohne das \_ TCI-Präfix D3DTSS.                                                                                      |
+| TextureTransformFlags \[ 8\] | dword | Die gleichen Werte wie [**D3DTEXTURETRANSFORMFLAGS-Werte**](./d3dtexturetransformflags.md) ohne das \_ D3DTTFF-Präfix. Siehe D3DTSS \_ TEXTURETRANSFORMFLAGS. |
 
 
 
  
 
-## <a name="transform-states"></a>Transformations Zustände
+## <a name="transform-states"></a>Transformationszustände
 
-Legen Sie Transformations Zustände fest, um Transformations Matrizen zu initialisieren. Effekte verwenden für die Effizienz die Umsetzung von Matrizen. Sie können die bereitgestellten Matrizen für einen Effekt bereitstellen, oder die Matrizen werden von einem Effekt automatisch ausgetauscht, bevor Sie verwendet werden.
+Legen Sie Transformationszustände fest, um Transformationsmatrizen zu initialisieren. Effekte verwenden transponierte Matrizen zur Effizienz. Sie können transponierte Matrizen für einen Effekt bereitstellen, oder ein Effekt transponiert die Matrizen automatisch, bevor sie verwendet werden.
 
 
 
-|                       |          |                                                                                                                                 |
+| Zustand transformieren       | type     | Werte                                                                                                                          |
 |-----------------------|----------|---------------------------------------------------------------------------------------------------------------------------------|
-| Transformations Status       | type     | Werte                                                                                                                          |
-| Projectiontransform   | float4x4 | Eine 4 x 4-Matrix von Gleit Komma Zahlen. Die gleichen Werte wie \_ die D3DTS-Projektion ohne das D3DTS- \_ Präfix.                                            |
-| TextureTransform \[ 8\] | float4x4 | Eine 4 x 4-Matrix von Gleit Komma Zahlen. Dieselben Werte wie [**D3DTRANSFORMSTATETYPE**](./d3dtransformstatetype.md) ohne das D3DTS- \_ Präfix. |
-| ViewTransform         | float4x4 | Eine 4 x 4-Matrix von Gleit Komma Zahlen. Die gleichen Werte wie \_ die D3DTS View ohne das D3DTS- \_ Präfix.                                                  |
-| Worldtransform        | float4x4 | Eine 4 x 4-Matrix von Gleit Komma Zahlen.                                                                                                         |
+| ProjectionTransform   | float4x4 | Eine 4x4-Matrix von Gleitkommaen. Identische Werte wie D3DTS \_ PROJECTION ohne das Präfix D3DTS. \_                                            |
+| TextureTransform \[ 8\] | float4x4 | Eine 4x4-Matrix von Gleitkommaen. Dieselben Werte wie [**D3DTRANSFORMSTATETYPE**](./d3dtransformstatetype.md) ohne das D3DTS-Präfix. \_ |
+| ViewTransform         | float4x4 | Eine 4x4-Matrix von Gleitkommaen. Identische Werte wie D3DTS \_ VIEW ohne das Präfix D3DTS. \_                                                  |
+| WorldTransform        | float4x4 | Eine 4x4-Matrix von Gleitkommaen.                                                                                                         |
 
 
 
@@ -554,7 +544,7 @@ Legen Sie Transformations Zustände fest, um Transformations Matrizen zu initial
 
 <dl> <dt>
 
-[Effekt Format](dx9-graphics-reference-effects-file-format.md)
+[Effect-Format](dx9-graphics-reference-effects-file-format.md)
 </dt> </dl>
 
  

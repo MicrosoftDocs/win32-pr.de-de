@@ -1,6 +1,6 @@
 ---
 title: SV_GroupID
-description: Indizes für die Thread Gruppe, in der ein Compute-Shader ausgeführt wird.
+description: Indizes für die Threadgruppe, in der ein Compute-Shader ausgeführt wird.
 ms.assetid: 1b90ca74-a2b6-4a5f-aa4a-1ec879360593
 keywords:
 - SV_GroupID HLSL
@@ -13,18 +13,18 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: a2588474a4c6f2cfc6d616cdb70940277389fd1f
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: cf96e1db7dbb93c88ec741e309413dea3df2b01d
+ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104101787"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "107996997"
 ---
 # <a name="sv_groupid"></a>SV \_ GroupID
 
-Indizes für die Thread Gruppe, in der ein Compute-Shader ausgeführt wird. Die Indizes gelten für die gesamte Gruppe und nicht für einen einzelnen Thread. Mögliche Werte variieren in dem Bereich, der als Parameter an [**Dispatch**](/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-dispatch)weitergegeben wird. Der Aufruf von Dispatch (2, 1, 1) führt beispielsweise zu möglichen Werten von 0, 0, 0 und 1, 0, 0.
+Indizes für die Threadgruppe, in der ein Compute-Shader ausgeführt wird. Die Indizes gelten für die gesamte Gruppe und nicht für einen einzelnen Thread. Mögliche Werte variieren im Bereich, der als Parameter an [**Dispatch übergeben wird.**](/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-dispatch) Beispielsweise führt der Aufruf von Dispatch(2,1,1) zu möglichen Werten von 0,0,0 und 1,0,0.
 
-Definiert den Gruppen Offset in einem [**Dispatch**](/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-dispatch) -Befehl pro Dimension des dispatchaufrufes.
+Definiert den Gruppenoffset innerhalb eines [**Dispatchaufrufs**](/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-dispatch) pro Dimension des Dispatchaufrufs.
 
 ## <a name="type"></a>Typ
 
@@ -37,28 +37,27 @@ Definiert den Gruppen Offset in einem [**Dispatch**](/windows/desktop/api/d3d11/
 
 
 
- 
+ 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieser System Wert ist optional.
+Dieser Systemwert ist optional.
 
-Die folgende Abbildung zeigt die Beziehung zwischen den Parametern, die an [**Dispatch**](/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-dispatch)weitergeleitet werden. Dispatch (5, 3, 2), die im [numThreads](sm5-attributes-numthreads.md) -Attribut angegebenen Werte, numThreads (10, 8, 3) und Werte, die an den Compute-Shader für die Thread bezogenen System Werte ([SV \_ groupIndex](sv-groupindex.md),[SV \_ dispatchthreadid](sv-dispatchthreadid.md),[SV \_ groupthreadid](sv-groupthreadid.md), SV \_ GroupID) weitergegeben werden.
+Die folgende Abbildung zeigt die Beziehung zwischen den an [**Dispatch,**](/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-dispatch)Dispatch(5,3,2) übergebenen Parametern, den im [numthreads-Attribut](sm5-attributes-numthreads.md) angegebenen Werten, numthreads(10,8,3) und Werten, die für die threadbezogenen Systemwerte an den Compute-Shader übergeben werden ([SV \_ GroupIndex,](sv-groupindex.md)[SV \_ DispatchThreadID, SV](sv-dispatchthreadid.md)[ \_ GroupThreadID,](sv-groupthreadid.md)SV \_ GroupID).
 
-![Darstellung der Beziehung zwischen Dispatch, Thread Gruppen und Threads](images/threadgroupids.png)
+![Abbildung der Beziehung zwischen Dispatch, Threadgruppen und Threads](images/threadgroupids.png)
 
-Diese Funktion wird in den folgenden Typen von Shadern unterstützt:
+Diese Funktion wird in den folgenden Shadertypen unterstützt:
 
 
 
-|        |      |        |          |       |         |
+| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
 |        |      |        |          |       | x       |
 
 
 
- 
+ 
 
 ## <a name="see-also"></a>Weitere Informationen
 
@@ -67,9 +66,9 @@ Diese Funktion wird in den folgenden Typen von Shadern unterstützt:
 [Semantik](dx-graphics-hlsl-semantics.md)
 </dt> <dt>
 
-[Shader-Modell 5](d3d11-graphics-reference-sm5.md)
+[Shadermodell 5](d3d11-graphics-reference-sm5.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

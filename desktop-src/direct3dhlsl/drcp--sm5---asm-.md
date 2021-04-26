@@ -1,23 +1,23 @@
 ---
-title: DRCP (SM5-ASM)
-description: Berechnet eine gegenseitige Komponenten Weise doppelte Genauigkeit.
+title: drcp (sm5 – asm)
+description: Berechnet einen komponentenweisen Kehrwert mit doppelter Genauigkeit.
 ms.assetid: 499A14D6-36DB-4860-94D1-887D931E60D4
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4b678f4e8b3464817215de9132298fdde1f6feec
-ms.sourcegitcommit: fe03c5d92ca6a0d66a114b2303e99c0a19241ffb
+ms.openlocfilehash: 770159f5007b08f5482ba8b58634b44e7f3e6ef0
+ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "104313692"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "107998337"
 ---
-# <a name="drcp-sm5---asm"></a>DRCP (SM5-ASM)
+# <a name="drcp-sm5---asm"></a>drcp (sm5 – asm)
 
-Berechnet eine gegenseitige Komponenten Weise doppelte Genauigkeit.
+Berechnet einen komponentenweisen Kehrwert mit doppelter Genauigkeit.
 
 
 
-| RCP \[ \_ Sat \] dest \[ . mask \] , \[ - \] src0 \[ \_ ABS \] \[ . Swizzle\] |
+| rcp \[ \_ sat \] dest \[ .mask \] , \[ - \] src0 \[ \_ abs \] \[ .swizzle\] |
 |------------------------------------------------------------|
 
 
@@ -28,43 +28,42 @@ Berechnet eine gegenseitige Komponenten Weise doppelte Genauigkeit.
 
 | Element                                                            | BESCHREIBUNG                                                                                                                     |
 |-----------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------|
-| <span id="dest"></span><span id="DEST"></span>*dest*<br/> | \[in \] der Adresse der Ergebnisse<br/> *dest*  =  **1,0**  /  *src0*. Der Ergebniswert muss auf 1,0 ULP genau sein.<br/> |
-| <span id="src0"></span><span id="SRC0"></span>*src0*<br/> | \[in \] der Zahl, von der die gegenseitige übernommen wird.<br/>                                                                         |
+| <span id="dest"></span><span id="DEST"></span>*Dest*<br/> | \[in \] Die Adresse der Ergebnisse<br/> *dest*  =  **1.0**  /  *src0*. Der Ergebniswert muss auf 1,0 ULP genau sein.<br/> |
+| <span id="src0"></span><span id="SRC0"></span>*src0*<br/> | \[in \] Die Zahl, von der der Kehrwert annimmt wird.<br/>                                                                         |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die DRCP-Anweisung wird vom HLSL-Compiler nur ausgegeben, wenn Sie explizit über die systeminterne Funktion RCP () aufgerufen wird, wenn ein Double als Argument verwendet wird. Die Genauigkeit dieser Anweisung muss 1,0 ULP sein.
+Die DRCP-Anweisung wird vom HLSL-Compiler nur ausgegeben, wenn sie explizit über die systeminterne rcp()-Anweisung aufgerufen wird, wenn ein Double als Argument verwendet wird. Die Genauigkeit dieser Anweisung muss 1,0 ULP sein.
 
-Shader, die diese Anweisung verwenden, werden mit einem shaderflag gekennzeichnet, das dazu führt, dass Sie nicht gebunden werden, es sei denn, die folgenden Bedingungen sind erfüllt.
+Shader, die diese Anweisung verwenden, werden mit einem Shaderflag gekennzeichnet, das dazu führt, dass sie nicht gebunden werden, es sei denn, alle folgenden Bedingungen sind erfüllt.
 
--   Das System unterstützt DirectX 11,1.
--   Das System enthält einen WDDM 1,2-Treiber.
--   Der Treiber meldet die Unterstützung für diese Anweisung über **D3D11 \_ Feature \_ Data \_ D3D11 \_ options. "Extendeddoublesshaderinstructions** " ist auf " **true**" festgelegt.
+-   Das System unterstützt DirectX 11.1.
+-   Das System enthält einen WDDM 1.2-Treiber.
+-   Der Treiber meldet Unterstützung für diese Anweisung über **D3D11 \_ FEATURE \_ DATA \_ D3D11 \_ OPTIONS. ExtendedDoublesShaderInstructions** ist auf **TRUE** festgelegt.
 
-In der folgenden Tabelle werden die Ergebnisse angezeigt, die bei der Ausführung der Anweisung mit verschiedenen Klassen von Zahlen erzielt wurden, vorausgesetzt, dass weder ein Überlauf noch ein Unterlauf auftritt
+Die folgende Tabelle zeigt die Ergebnisse, die beim Ausführen der Anweisung mit verschiedenen Klassen von Zahlen erzielt werden, vorausgesetzt, dass weder Überlauf noch Unterlauf auftreten.
 
-In dieser Tabelle steht F für eine endliche reelle Zahl.
+In dieser Tabelle bedeutet F endliche reelle Zahl.
 
 
 
-|               |          |        |        |        |        |          |         |
+| **Src**->  | **-inf** | **-F** | **-0** | **+0** | **+F** | **+inf** | **NaN** |
 |---------------|----------|--------|--------|--------|--------|----------|---------|
-| **src**->  | **-INF** | **-F** | **-0** | **+0** | **+ F** | **+ INF** | **NaN** |
-| **dest**-> | -0       | -F     | -inf   | +inf   | + F     | +0       | NaN     |
+| **Dest**-> | -0       | -F     | -inf   | +inf   | +F     | +0       | NaN     |
 
 
 
  
 
-Diese Anweisung gilt für die folgenden Shader-Phasen:
+Diese Anweisung gilt für die folgenden Shaderstufen:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 | X      | X    | X      | X        | X     | X       |
 
@@ -72,20 +71,20 @@ Diese Anweisung gilt für die folgenden Shader-Phasen:
 
  
 
-## <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+## <a name="minimum-shader-model"></a>Minimales Shadermodell
 
-Diese Anweisung wird in den folgenden shadermodellen unterstützt:
+Diese Anweisung wird in den folgenden Shadermodellen unterstützt:
 
 
 
 | Shadermodell                                              | Unterstützt |
 |-----------------------------------------------------------|-----------|
-| [Shader-Modell 5](d3d11-graphics-reference-sm5.md)        | ja       |
-| [Shadermodell 4,1](dx-graphics-hlsl-sm4.md)              | nein        |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md)        | ja       |
+| [Shadermodell 4.1](dx-graphics-hlsl-sm4.md)              | nein        |
 | [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | nein        |
-| [Shader-Modell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | nein        |
-| [Shader-Modell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | nein        |
-| [Shader-Modell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | nein        |
+| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | nein        |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | nein        |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | nein        |
 
 
 

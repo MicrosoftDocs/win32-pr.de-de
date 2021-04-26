@@ -4,12 +4,12 @@ ms.assetid: 3e314f73-2653-481a-ac7d-1ce7db0591e2
 title: Andere Direct3D-Konstanten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 990dc0a2ef06850fb9fc0839fd7a0be361832d65
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: eb289cb080519fab661d7a43f59bca3d8a9db3a0
+ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "106344580"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "107998607"
 ---
 # <a name="other-direct3d-constants"></a>Andere Direct3D-Konstanten
 
@@ -19,44 +19,43 @@ ms.locfileid: "106344580"
 
 |                     |
 |---------------------|
-| \#definieren            |
-| D3D \_ SDK- \_ Version   |
-| D3D9b \_ SDK- \_ Version |
+| \#Definieren            |
+| D3D \_ \_ SDK-VERSION   |
+| D3D9b \_ \_ SDK-VERSION |
 
 
 
  
 
-Diese \# Definitionen werden in d3d9. h deklariert.
+Diese \# Definitionen werden in d3d9.h deklariert.
 
 ## <a name="other-constants"></a>Andere Konstanten
 
-In der folgenden Tabelle werden Konstanten aufgelistet, die intern verwendet werden:
+In der folgenden Tabelle sind konstanten Konstanten aufgeführt, die intern verwendet werden:
 
 
 
-|                                       |                                                   |                                                                    |
+| \#Definieren                              | Wert                                             | BESCHREIBUNG                                                        |
 |---------------------------------------|---------------------------------------------------|--------------------------------------------------------------------|
-| \#definieren                              | Wert                                             | BESCHREIBUNG                                                        |
-| D3D \_ Max. \_ gleichzeitige \_ Rendertargets | 4                                                 | Die maximale Anzahl von Rendertargets.                               |
-| D3DDMAPSAMPLER                        | 256                                               | Die maximale Anzahl von Verschiebungs Zuordnungs Beispielen.                    |
-| D3DDP \_ maxtexcoord                    | 8                                                 | Die maximale Anzahl von Texturkoordinaten.                         |
-| MAXD3DDECLLENGTH                      | 64 (enthält kein "End"-markervertex-Element) | Maximale Anzahl von Elementen in einer Scheitelpunkt Deklaration.                |
-| MAXD3DDECLUSAGEINDEX                  | 15                                                | Der maximale Index (0-15), der in einer Scheitelpunkt Deklaration verwendet werden kann. |
+| D3D \_ \_ MAX. \_ GLEICHZEITIGE RENDERTARGETS | 4                                                 | Die maximale Anzahl von Rendertargets.                               |
+| D3DDMAPSAMPLER                        | 256                                               | Die maximale Anzahl von Verschiebungszuordnungsbeispielen.                    |
+| D3DDP \_ MAXTEXCOORD                    | 8                                                 | Die maximale Anzahl von Texturkoordinaten.                         |
+| MAXD3DDECLLENGTH                      | 64 (enthält kein Vertexelement für end-Marker) | Maximale Anzahl von Elementen in einer Scheitelpunktdeklaration.                |
+| MAXD3DDECLUSAGEINDEX                  | 15                                                | Der maximale Index (0-15), der in einer Scheitelpunktdeklaration verwendet werden kann. |
 
 
 
  
 
-Diese \# Definitionen werden in d3d9types. h deklariert.
+Diese \# Definitionen werden in d3d9types.h deklariert.
 
-## <a name="constant-information"></a>Konstante Informationen
+## <a name="constant-information"></a>Konstanteninformationen
 
 
 
 |                          |            |
 |--------------------------|------------|
-| Mindestens Betriebssystem | Windows 98 |
+| Mindestbetriebssystem | Windows 98 |
 
 
 
