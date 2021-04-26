@@ -1,19 +1,19 @@
 ---
-description: Gibt an, ob Stub-Funktions Verweise in den Vorgangs Strukturen in den Porttyp Definitionen für Benachrichtigungs Vorgänge enthalten sein sollen.
+description: Gibt an, ob Stubfunktionsverweise in die Vorgangsstrukturen in den Porttypdefinitionen für Benachrichtigungsvorgänge eingeschlossen werden sollen.
 ms.assetid: 8a2fd7b2-e37b-465a-ba83-a68877a2e0c3
-title: eventstubfunction-Element
+title: eventStubFunction-Element
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9fe353f43d02eec68f29f3075cc445c1314c9762
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 80777a53d37e7651559a09b8e8445d4314aaca63
+ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106353546"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "107995887"
 ---
-# <a name="eventstubfunction-element"></a>eventstubfunction-Element
+# <a name="eventstubfunction-element"></a>eventStubFunction-Element
 
-Gibt an, ob Stub-Funktions Verweise in den Vorgangs Strukturen in den Porttyp Definitionen für Benachrichtigungs Vorgänge enthalten sein sollen.
+Gibt an, ob Stubfunktionsverweise in die Vorgangsstrukturen in den Porttypdefinitionen für Benachrichtigungsvorgänge eingeschlossen werden sollen.
 
 ## <a name="usage"></a>Verbrauch
 
@@ -35,21 +35,21 @@ Es gibt keine untergeordneten Elemente.
 
 | Element                                                       | BESCHREIBUNG                                                  |
 |---------------------------------------------------------------|--------------------------------------------------------------|
-| [**porttypeer Definitionen**](porttypedefinitions.md)<br/> | Generiert C-Konstanten für Porttypen.<br/> <br/> |
+| [**portTypeDefinitions**](porttypedefinitions.md)<br/> | Generiert C-Konstanten für Porttypen.<br/> <br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Stub-Funktions Verweise sind in Client Szenarien für Benachrichtigungs Vorgänge (Ereignisse) enthalten.
+Stubfunktionsverweise befinden sich in Clientszenarien für Benachrichtigungsvorgänge (Ereignisse).
 
-Gültige Werte für dieses Element sind 1 (true-/stubfunktionsverweise eingeschlossen) und 0 (false/keine Stub-Funktions Verweise eingeschlossen).
+Gültige Werte für dieses Element sind 1 (TRUE/Stubfunktionsverweise eingeschlossen) und 0 (FALSE/keine Stubfunktionsverweise enthalten).
 
 ## <a name="element-information"></a>Elementinformationen
 
 
 
-|                                     |               |
+| Bezeichnung | Wert |
 |-------------------------------------|---------------|
 | Unterstützte Mindestversion (System)<br/> | Windows Vista |
 | Kann leer bleiben                        | Ja           |

@@ -1,23 +1,23 @@
 ---
-description: Verhindert die Generierung von Import-Anweisungen für angegebene Ziele, die in einem wsdl:import-Element in einer WSDL-Datei benannt sind.
+description: Verhindert die Generierung von Importanweisungen für angegebene Ziele, die in einem wsdl:import-Element in einer WSDL-Datei benannt sind.
 ms.assetid: 9a50ee38-fadf-4112-8430-cb5a07ae04ce
 title: excludeImport-Element
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: cf511a24ad4007deb886900843991364fcf03a5a
-ms.sourcegitcommit: 59ec383331366f8a62c94bb88468ca03e95c43f8
+ms.openlocfilehash: e14d79576151fbb3dc266621c3fa34816cea55e5
+ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "107380774"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "107995877"
 ---
 # <a name="excludeimport-element"></a>excludeImport-Element
 
-Verhindert die Generierung von Import-Anweisungen für angegebene Ziele, die in einem \<wsdl:import> -Element in einer WSDL-Datei benannt sind. Dies kann verwendet werden, um zu halten, dass WsdCodeGen bekannte Ziele wie die WS-Addressing- und WS-Eventing-Spezifikationen importiert, obwohl in der WSDL auf diese Ziele verwiesen wird.
+Verhindert die Generierung von Importanweisungen für angegebene Ziele, die in einem \<wsdl:import> -Element in einer WSDL-Datei benannt sind. Dadurch kann verhindert werden, dass WsdCodeGen bekannte Ziele importiert, z. B. die WS-Addressing und WS-Eventing Spezifikationen, obwohl auf diese Ziele in der WSDL verwiesen wird.
 
-Der Wert dieses Elements muss auf den Namespace mit dem Namen im \<wsdl:import> auszuschließenden Element festgelegt werden.
+Der Wert dieses Elements muss auf den Namespace mit dem Namen im auszuschließenden Element festgelegt \<wsdl:import> werden.
 
-## <a name="usage"></a>Verwendung
+## <a name="usage"></a>Verbrauch
 
 ``` syntax
 <excludeImport/>
@@ -35,9 +35,9 @@ Es gibt keine untergeordneten Elemente.
 
 
 
-| Element                         | Beschreibung                                                                       |
+| Element                         | BESCHREIBUNG                                                                       |
 |---------------------------------|-----------------------------------------------------------------------------------|
-| [**Wsdl**](wsdl.md)<br/> | Gibt eine WSDL-Datei an, die für Vertragsinformationen zu verarbeiten ist.<br/> <br/> |
+| [**Wsdl**](wsdl.md)<br/> | Gibt eine WSDL-Datei an, die für Vertragsinformationen verarbeitet werden soll.<br/> <br/> |
 
 
 
@@ -45,7 +45,7 @@ Es gibt keine untergeordneten Elemente.
 
 
 
-|                                     |               |
+| Bezeichnung | Wert |
 |-------------------------------------|---------------|
 | Unterstützte Mindestversion (System)<br/> | Windows Vista |
 | Kann leer bleiben                        | Ja           |

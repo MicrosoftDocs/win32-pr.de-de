@@ -1,17 +1,17 @@
 ---
 description: Gibt an, ob verwandte Ereignisse in den generierten Funktionen enthalten sind.
 ms.assetid: 23ca463c-b305-496b-a1e3-58dbb793f17e
-title: Events-Element
+title: events-Element
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2571cc8e9820ca38beb649b3c227fb1c01f61c50
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6883f1bcca9b62c3d8b60ca86f47b0e688d513c2
+ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104215433"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "107995928"
 ---
-# <a name="events-element"></a>Events-Element
+# <a name="events-element"></a>events-Element
 
 Gibt an, ob verwandte Ereignisse in den generierten Funktionen enthalten sind.
 
@@ -35,23 +35,23 @@ Es gibt keine untergeordneten Elemente.
 
 | Element                                                                         | BESCHREIBUNG                                                                                                |
 |---------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------|
-| [**functiondeklarationen**](functiondeclarations.md)<br/>                 | Generiert Implementierungs Deklarationen für Proxy Funktionen für Porttyp Vorgänge.<br/> <br/> |
-| [**idlfunctiondeklarationen**](idlfunctiondeclarations.md)<br/>           | Generiert IDL-Deklarationen für Proxy Funktionen für Porttyp Vorgänge.<br/> <br/>            |
-| [**proxyfunctionimplementierungen**](proxyfunctionimplementations.md)<br/> | Generiert Implementierungen für Proxy Funktionen für Porttyp Vorgänge.<br/> <br/>             |
-| [**stubdeklarationen**](stubdeclarations.md)<br/>                         | Generiert Deklarationen für Stub-Funktionen für Porttyp Vorgänge.<br/> <br/>                 |
-| [**stubdefinitionen**](stubdefinitions.md)<br/>                           | Generiert Implementierungen für Stub-Funktionen für Porttyp Vorgänge.<br/> <br/>              |
+| [**functionDeclarations**](functiondeclarations.md)<br/>                 | Generiert Implementierungsdeklarationen für Proxyfunktionen für Porttypvorgänge.<br/> <br/> |
+| [**idlFunctionDeclarations**](idlfunctiondeclarations.md)<br/>           | Generiert IDL-Deklarationen für Proxyfunktionen für Porttypvorgänge.<br/> <br/>            |
+| [**proxyFunctionImplementations**](proxyfunctionimplementations.md)<br/> | Generiert Implementierungen für Proxyfunktionen für Porttypvorgänge.<br/> <br/>             |
+| [**stubDeclarations**](stubdeclarations.md)<br/>                         | Generiert Deklarationen für Stubfunktionen für Porttypvorgänge.<br/> <br/>                 |
+| [**stubDefinitions**](stubdefinitions.md)<br/>                           | Generiert Implementierungen für Stubfunktionen für Porttypvorgänge.<br/> <br/>              |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Mögliche Werte sind 1 (enthaltene Ereignisse) und 0 (Standard, ausgeschlossene Ereignisse).
+Mögliche Werte sind 1 (ereignisse eingeschlossen) und 0 (Standard, ausgeschlossene Ereignisse).
 
 ## <a name="element-information"></a>Elementinformationen
 
 
 
-|                                     |               |
+| Bezeichnung | Wert |
 |-------------------------------------|---------------|
 | Unterstützte Mindestversion (System)<br/> | Windows Vista |
 | Kann leer bleiben                        | Ja           |

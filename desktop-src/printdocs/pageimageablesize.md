@@ -1,29 +1,29 @@
 ---
-description: Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie in der PrintSchema-Spezifikation.
+description: Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter Spezifikation des Druckschemas.
 ms.assetid: 6b81814f-2d9e-4862-8633-6ba016c11dac
 title: PageImageableSize
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 26dca243defc08b43a79e897bfa91913a954bf37
-ms.sourcegitcommit: 7b8f6151ebe247536304866459b2973276271d4d
+ms.openlocfilehash: f1eef9012a7fda3eed6afd16add1d483c35c1111
+ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "104560731"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "107996107"
 ---
 # <a name="pageimageablesize"></a>PageImageableSize
 
-Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie in der [PrintSchema-Spezifikation](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip).
+Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter [Print Schema Specification (Spezifikation des Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 
-Beschreibt das Abbild Canvas für Layout und Rendering. Dies wird auf der Grundlage von PageMediaSize und PageOrientation gemeldet.
+Beschreibt den bildierten Zeichenbereich für Layout und Rendering. Dies wird basierend auf PageMediaSize und PageOrientation gemeldet.
 
-Die folgenden Diagramme veranschaulichen die Verwendung der PageImageableSize-Variablen auf der Grundlage von PageOrientation.
+Die folgenden Diagramme veranschaulichen die Verwendung von PageImageableSize-Variablen basierend auf PageOrientation.
 
-![ein Diagramm, das Seiten Messungen anzeigt](images/local-1641910626-image.png)
+![Diagramm, das Seitenmessungen zeigt](images/local-1641910626-image.png)
 
 -   [Elementinformationen](#element-information)
 -   [Strukturelle Inhalte](#structural-content)
--   [Inhalt der Extensible Markup Language (XML)](#extensible-markup-language-xml-content)
+-   [Extensible Markup Language (XML) Content](#extensible-markup-language-xml-content)
 
 ## <a name="element-information"></a>Elementinformationen
 
@@ -31,9 +31,9 @@ Die folgenden Diagramme veranschaulichen die Verwendung der PageImageableSize-Va
 
 |                            |                     |
 |----------------------------|---------------------|
-| Name                       |                     |
+| Name | Wert |
 | Elementtyp<br/>    | Eigenschaft<br/> |
-| Bereichs Präfix <br/> | Seite<br/>     |
+| Bereichspräfix <br/> | Seite<br/>     |
 | Hinweise <br/>          | Keine<br/>     |
 
 
@@ -42,7 +42,7 @@ Die folgenden Diagramme veranschaulichen die Verwendung der PageImageableSize-Va
 
 ## <a name="structural-content"></a>Strukturelle Inhalte
 
-Die XML-Struktur dieses Elements lautet:
+Die XML-Struktur dieses Elements ist:
 
 ``` syntax
 <psf:Property name="psk:PageImageableSize">
@@ -78,20 +78,20 @@ In der folgenden Tabelle werden die Merkmale der Variablen beschrieben, die in d
 
 | Name                                    | Datentyp          | Einheit               | Unterstützte Werte                       | Zusammenfassung                                                                                                                    |
 |-----------------------------------------|--------------------|--------------------|----------------------------------------|----------------------------------------------------------------------------------------------------------------------------|
-| \_Imageablesizewidthvalue\_<br/>  | integer<br/> | Mikrometern<br/> | Größer 0<br/>             | Gibt die horizontale Dimension der Anwendungs Mediengröße in Relation zur PageOrientation an.<br/>               |
-| \_Imageablesizeheightvalue\_<br/> | integer<br/> | Mikrometern<br/> | Größer 0<br/>             | Gibt die vertikale Dimension der Anwendungs Mediengröße in Relation zur PageOrientation an.<br/>                 |
-| \_Originwidthvalue\_<br/>         | integer<br/> | Mikrometern<br/> | Größer oder gleich 0 (null).<br/> | Gibt den horizontalen Ursprung des Druck Bereichs in Bezug auf die Größe des Anwendungs Mediums an.<br/>                   |
-| \_Originheightvalue\_<br/>        | integer<br/> | Mikrometern<br/> | Größer oder gleich 0 (null).<br/> | Gibt den vertikalen Ursprung des Druck Bereichs in Bezug auf die Größe des Anwendungs Mediums an.<br/>                     |
-| \_Extentwidthvalue\_<br/>         | integer<br/> | Mikrometern<br/> | Größer 0<br/>             | Gibt den horizontalen Abstand zwischen dem Ursprung und dem Begrenzungs Grenzwert der Größe der Anwendungs Medien an.<br/>      |
-| \_Extentheightvalue\_<br/>        | integer<br/> | Mikrometern<br/> | Größer 0<br/>             | Gibt den vertikalen Abstand zwischen dem Ursprung und dem Begrenzungs Grenzwert der Mediengröße der Canvas-Anwendung an.<br/> |
+| \_ImageableSizeWidthValue\_<br/>  | integer<br/> | Mikron<br/> | Größer 0<br/>             | Gibt die horizontale Dimension der Anwendungsmediengröße relativ zur PageOrientation an.<br/>               |
+| \_ImageableSizeHeightValue\_<br/> | integer<br/> | Mikron<br/> | Größer 0<br/>             | Gibt die vertikale Dimension der Mediengröße der Anwendung relativ zur PageOrientation an.<br/>                 |
+| \_OriginWidthValue\_<br/>         | integer<br/> | Mikron<br/> | Größer oder gleich 0.<br/> | Gibt den horizontalen Ursprung des bildbaren Bereichs relativ zur Größe der Anwendungsmedien an.<br/>                   |
+| \_OriginHeightValue\_<br/>        | integer<br/> | Mikron<br/> | Größer oder gleich 0.<br/> | Gibt den vertikalen Ursprung des bildbaren Bereichs relativ zur Größe der Anwendungsmedien an.<br/>                     |
+| \_ExtentWidthValue\_<br/>         | integer<br/> | Mikron<br/> | Größer 0<br/>             | Gibt den horizontalen Abstand zwischen dem Ursprung und der Begrenzungsgrenze der Größe der Anwendungsmedien an.<br/>      |
+| \_ExtentHeightValue\_<br/>        | integer<br/> | Mikron<br/> | Größer 0<br/>             | Gibt den vertikalen Abstand zwischen dem Ursprung und der Begrenzungsgrenze der Mediengröße der Canvasanwendung an.<br/> |
 
 
 
  
 
-## <a name="extensible-markup-language-xml-content"></a>Inhalt der Extensible Markup Language (XML)
+## <a name="extensible-markup-language-xml-content"></a>Extensible Markup Language -Inhalt (XML)
 
-Die Schlüsselwörter der öffentlichen Druck Schemas werden im- https://schemas.microsoft.com/windows/2003/08/printing/printschemakeywords Namespace definiert. Der Inhalt des öffentlichen Extensible Markup Language (XML) für dieses Schlüsselwort wird unten definiert:
+Die Schlüsselwörter für das öffentliche Druckschema werden im https://schemas.microsoft.com/windows/2003/08/printing/printschemakeywords -Namespace definiert. Der Inhalt des öffentlichen Extensible Markup Language (XML) für dieses Schlüsselwort ist unten definiert:
 
 ``` syntax
 <psf:Property name="psk:PageImageableSize">
@@ -123,7 +123,7 @@ Die Schlüsselwörter der öffentlichen Druck Schemas werden im- https://schemas
 
 <dl> <dt>
 
-[Druck Schema Spezifikation](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
+[Spezifikation des Druckschemas](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 </dt> </dl>
 
  

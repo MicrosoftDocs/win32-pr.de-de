@@ -1,69 +1,69 @@
 ---
 title: Keywords
-description: Die Microsoft High Level Shader Language (HLSL) erkennt die Wörter in diesem Abschnitt als Schlüsselwörter. Schlüsselwörter sind vordefinierte, reservierte Bezeichner, die besondere Bedeutungen haben. Sie können nicht als Bezeichner in Ihrer APP verwendet werden.
+description: Die Microsoft High Level Shader Language (HLSL) erkennt die Wörter in diesem Abschnitt als Schlüsselwörter. Schlüsselwörter sind vordefinierte, reservierte Bezeichner, die besondere Bedeutungen haben. Sie können sie nicht als Bezeichner in Ihrer App verwenden.
 ms.assetid: 474e32ac-8e73-47f2-91ad-f64677fcb216
 keywords:
 - HLSL-Schlüsselwörter
-- Blendstate, HLSL-Schlüsselwort
+- BlendState, HLSL-Schlüsselwort
 - Bool, HLSL-Schlüsselwort
 - Break, HLSL-Schlüsselwort
 - Buffer, HLSL-Schlüsselwort
 - CBuffer, HLSL-Schlüsselwort
-- Class, HLSL-Schlüsselwort
+- Klasse, HLSL-Schlüsselwort
 - Compile, HLSL-Schlüsselwort
-- Schlüsselwort "Konstanten", "HLSL"
+- Const, HLSL-Schlüsselwort
 - Continue, HLSL-Schlüsselwort
-- Depthstencilstate, HLSL-Schlüsselwort
-- Depthstencilview, HLSL-Schlüsselwort
-- Verwerfen, HLSL-Schlüsselwort
+- DepthStencilState, HLSL-Schlüsselwort
+- DepthStencilView, HLSL-Schlüsselwort
+- Discard, HLSL-Schlüsselwort
 - Do, HLSL-Schlüsselwort
 - Double, HLSL-Schlüsselwort
-- Else, HLSL-Schlüsselwort
+- Andernfalls HLSL-Schlüsselwort
 - Export, HLSL-Schlüsselwort
 - Extern, HLSL-Schlüsselwort
 - False, HLSL-Schlüsselwort
 - Float, HLSL-Schlüsselwort
 - For, HLSL-Schlüsselwort
-- Geometryshader, HLSL-Schlüsselwort
+- GeometryShader, HLSL-Schlüsselwort
 - Half, HLSL-Schlüsselwort
 - If, HLSL-Schlüsselwort
 - In, HLSL-Schlüsselwort
 - Inline, HLSL-Schlüsselwort
-- INOUT, HLSL-Schlüsselwort
+- Inout, HLSL-Schlüsselwort
 - Int, HLSL-Schlüsselwort
-- Interface, HLSL-Schlüsselwort
+- Schnittstelle, HLSL-Schlüsselwort
 - Line, HLSL-Schlüsselwort
 - Lineadj, HLSL-Schlüsselwort
 - Matrix, HLSL-Schlüsselwort
 - Namespace, HLSL-Schlüsselwort
-- Nointerpolations, HLSL-Schlüsselwort
+- Nointerpolation, HLSL-Schlüsselwort
 - Out, HLSL-Schlüsselwort
 - Pass, HLSL-Schlüsselwort
-- Pixelshader, HLSL-Schlüsselwort
-- Genaues, HLSL-Schlüsselwort
+- PixelShader, HLSL-Schlüsselwort
+- Präzises HLSL-Schlüsselwort
 - Point, HLSL-Schlüsselwort
-- Rasterizerstate, HLSL-Schlüsselwort
-- Rendertargetview, HLSL-Schlüsselwort
-- Return, HLSL-Schlüsselwort
+- RasterizerState, HLSL-Schlüsselwort
+- RenderTargetView, HLSL-Schlüsselwort
+- Rückgabe, HLSL-Schlüsselwort
 - Register, HLSL-Schlüsselwort
 - Sampler, HLSL-Schlüsselwort
 - Sampler1D, HLSL-Schlüsselwort
 - Sampler2D, HLSL-Schlüsselwort
 - Sampler3D, HLSL-Schlüsselwort
-- Samplercube, HLSL-Schlüsselwort
+- SamplerCUBE, HLSL-Schlüsselwort
 - Sampler_State, HLSL-Schlüsselwort
-- Samplercomparisonstate, HLSL-Schlüsselwort
+- SamplerComparisonState, HLSL-Schlüsselwort
 - Shared, HLSL-Schlüsselwort
 - Stateblock, HLSL-Schlüsselwort
 - Stateblock_state, HLSL-Schlüsselwort
 - Static, HLSL-Schlüsselwort
 - String, HLSL-Schlüsselwort
-- Struct, HLSL-Schlüsselwort
+- Struktur, HLSL-Schlüsselwort
 - Switch, HLSL-Schlüsselwort
 - TBuffer, HLSL-Schlüsselwort
 - Technik, HLSL-Schlüsselwort
 - Technique10, HLSL-Schlüsselwort
-- Texture, HLSL-Schlüsselwort
+- texture, HLSL-Schlüsselwort
 - Texture1D, HLSL-Schlüsselwort
 - Texture1DArray, HLSL-Schlüsselwort
 - Texture2D, HLSL-Schlüsselwort
@@ -71,15 +71,15 @@ keywords:
 - Texture2DMS, HLSL-Schlüsselwort
 - Texture2DMSArray, HLSL-Schlüsselwort
 - Texture3D, HLSL-Schlüsselwort
-- Texturecube, HLSL-Schlüsselwort
-- Texturecubearray, HLSL-Schlüsselwort
+- TextureCube, HLSL-Schlüsselwort
+- TextureCubeArray, HLSL-Schlüsselwort
 - True, HLSL-Schlüsselwort
 - Typedef, HLSL-Schlüsselwort
 - Dreieck, HLSL-Schlüsselwort
-- "\"Trangleadj\", HLSL-Schlüsselwort"
+- Triangleadj, HLSL-Schlüsselwort
 - Uniform, HLSL-Schlüsselwort
-- Vector, HLSL-Schlüsselwort
-- Vertexshader, HLSL-Schlüsselwort
+- Vektor, HLSL-Schlüsselwort
+- VertexShader, HLSL-Schlüsselwort
 - Void, HLSL-Schlüsselwort
 - Volatile, HLSL-Schlüsselwort
 - While, HLSL-Schlüsselwort
@@ -90,56 +90,56 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 2d313608b11caf7c0606923fd242ea6ca856f610
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 83b5bd4af52c116e4a5f47bc62d0dda0e5c488d8
+ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103729936"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "107997157"
 ---
 # <a name="keywords"></a>Keywords
 
-Die Microsoft High Level Shader Language (HLSL) erkennt die Wörter in diesem Abschnitt als Schlüsselwörter. Schlüsselwörter sind vordefinierte, reservierte Bezeichner, die besondere Bedeutungen haben. Sie können nicht als Bezeichner in Ihrer APP verwendet werden.
+Die Microsoft High Level Shader Language (HLSL) erkennt die Wörter in diesem Abschnitt als Schlüsselwörter. Schlüsselwörter sind vordefinierte, reservierte Bezeichner, die besondere Bedeutungen haben. Sie können sie nicht als Bezeichner in Ihrer App verwenden.
 
 
 
 |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 |----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Appendstructuredbuffer**](sm5-object-appendstructuredbuffer.md), ASM, ASM- \_ Fragment                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| Blendstate, [bool](dx-graphics-hlsl-scalar.md), [break](dx-graphics-hlsl-break.md), [**buffer**](dx-graphics-hlsl-buffer.md), [**byteaddressbuffer**](sm5-object-byteaddressbuffer.md)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| Case, [cBuffer](dx-graphics-hlsl-constants.md), [Schwerpunkt](dx-graphics-hlsl-struct.md), [Class](overviews-direct3d-11-hlsl-dynamic-linking-class.md), [Column \_ Major](dx-graphics-hlsl-variable-syntax.md), [Compile](dx-graphics-hlsl-shader.md), [**Compile \_ Fragment**](fragment-declaration-syntax.md), **compileshader**, Konstanten, [Continue](dx-graphics-hlsl-continue.md), computeshader, [**consumestructuredbuffer**](sm5-object-consumestructuredbuffer.md)                                                                                                                                                                                                                                                                                                                              |
-| Default, depthstencilstate, depthstencilview, [verwerfen](dx-graphics-hlsl-discard.md), [do](dx-graphics-hlsl-do.md), [Double](dx-graphics-hlsl-scalar.md), [domainshader](dx-graphics-hlsl-shader.md), DWORD                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| [else](dx-graphics-hlsl-if.md), [Export](#export), [extern](dx-graphics-hlsl-variable-syntax.md)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| false, [float](dx-graphics-hlsl-scalar.md), [for](dx-graphics-hlsl-for.md), fxgroup                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| [Geometryshader](dx-graphics-hlsl-shader.md), [groupshared](dx-graphics-hlsl-variable-syntax.md)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| [Hälfte](dx-graphics-hlsl-scalar.md), [hullshader](dx-graphics-hlsl-shader.md)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| [if](dx-graphics-hlsl-if.md), [in](dx-graphics-hlsl-function-parameters.md), [Inline](dx-graphics-hlsl-function-syntax.md), [INOUT](dx-graphics-hlsl-function-parameters.md), [**inputpatch**](sm5-object-inputpatch.md), [int](dx-graphics-hlsl-scalar.md), [Interface](overviews-direct3d-11-hlsl-dynamic-linking-class.md)                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| [Line, lineadj](dx-graphics-hlsl-geometry-shader.md), [linear](dx-graphics-hlsl-struct.md), [LineStream](dx-graphics-hlsl-so-type.md)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| [Matrix](dx-graphics-hlsl-matrix.md), [min16float](dx-graphics-hlsl-scalar.md), [min10float](dx-graphics-hlsl-scalar.md), [min16int](dx-graphics-hlsl-scalar.md), [min12int](dx-graphics-hlsl-scalar.md), [min16uint](dx-graphics-hlsl-scalar.md)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| Namespace, [nointerpolations](dx-graphics-hlsl-struct.md), [noperspektive](dx-graphics-hlsl-struct.md), NULL                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| [out](dx-graphics-hlsl-function-parameters.md), [ **outputpatch**](sm5-object-outputpatch.md)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| [**packoffset**](dx-graphics-hlsl-variable-packoffset.md), Pass, [pixelfragment](fragment-declaration-syntax.md), [Pixelshader](dx-graphics-hlsl-shader.md), [Point](dx-graphics-hlsl-geometry-shader.md), [pointstream](dx-graphics-hlsl-so-type.md), [präzise](dx-graphics-hlsl-variable-syntax.md)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| Rasterizerstate, rendertargetview, [Return](dx-graphics-hlsl-return.md), [Register](dx-graphics-hlsl-variable-register.md), [Row \_ Major](dx-graphics-hlsl-variable-syntax.md), [**rwbuffer**](sm5-object-rwbuffer.md), [**rwbyteaddressbuffer**](sm5-object-rwbyteaddressbuffer.md), [**rwstructuredbuffer**](sm5-object-rwstructuredbuffer.md), [**RWTexture1D**](sm5-object-rwtexture1d.md), [**RWTexture1DArray**](sm5-object-rwtexture1darray.md), [**RWTexture2D**](sm5-object-rwtexture2d.md), [**RWTexture2DArray**](sm5-object-rwtexture2darray.md), [**RWTexture3D**](sm5-object-rwtexture3d.md)                                                                                                                                                                                     |
-| [Sample](dx-graphics-hlsl-struct.md), [Sampler, samplerstate, samplercomparisonstate](dx-graphics-hlsl-sampler.md), [Shared](dx-graphics-hlsl-variable-syntax.md), [snorm](dx-graphics-hlsl-scalar.md), stateblock, stateblock \_ State, static, [String](dx-graphics-hlsl-scalar.md), [struct](dx-graphics-hlsl-struct.md), [Switch](dx-graphics-hlsl-switch.md), [**structuredbuffer**](sm5-object-structuredbuffer.md)                                                                                                                                                                                                                                                                                                                                                                          |
-| [tBuffer](dx-graphics-hlsl-constants.md), Technique, [technique10](/windows/desktop/direct3d10/d3d10-effect-technique-syntax), [technique11](/windows/desktop/direct3d10/d3d10-effect-technique-syntax), [Texture](dx-graphics-hlsl-texture.md), [Texture1D](sm5-object-texture1d.md), [Texture1DArray](sm5-object-texture1darray.md), [Texture2D](sm5-object-texture2d.md), [Texture2DArray](sm5-object-texture2darray.md), [Texture2DMS](sm5-object-texture2dms.md), [Texture2DMSArray](sm5-object-texture2dmsarray.md), [Texture3D](sm5-object-texture3d.md), [texturecube](dx-graphics-hlsl-to-type.md), [texturecubearray](dx-graphics-hlsl-to-type.md), true, [typedef](dx-graphics-hlsl-user-defined.md), [Dreieck, triangleadj](dx-graphics-hlsl-geometry-shader.md), [trianglestream](dx-graphics-hlsl-so-type.md) |
-| [uint](dx-graphics-hlsl-scalar.md), [Uniform](dx-graphics-hlsl-function-parameters.md), [unorm](dx-graphics-hlsl-scalar.md), Ganzzahl ohne Vorzeichen                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| [Vector](dx-graphics-hlsl-vector.md), [vertexfragment](fragment-declaration-syntax.md), [Vertexshader](dx-graphics-hlsl-shader.md), void, [volatile](dx-graphics-hlsl-variable-syntax.md)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| [**AppendStructuredBuffer,**](sm5-object-appendstructuredbuffer.md)asm, asm \_ fragment                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| BlendState, [bool](dx-graphics-hlsl-scalar.md), [break](dx-graphics-hlsl-break.md), [**Buffer**](dx-graphics-hlsl-buffer.md), [**ByteAddressBuffer**](sm5-object-byteaddressbuffer.md)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| case, [cbuffer](dx-graphics-hlsl-constants.md), [schwerpunktid](dx-graphics-hlsl-struct.md), [class](overviews-direct3d-11-hlsl-dynamic-linking-class.md), [column \_ major](dx-graphics-hlsl-variable-syntax.md), [compile](dx-graphics-hlsl-shader.md), [**compile \_ fragment**](fragment-declaration-syntax.md), **CompileShader**, const, [continue](dx-graphics-hlsl-continue.md), ComputeShader, [**ConsumeStructuredBuffer**](sm5-object-consumestructuredbuffer.md)                                                                                                                                                                                                                                                                                                                              |
+| default, DepthStencilState, DepthStencilView, [discard](dx-graphics-hlsl-discard.md), [do](dx-graphics-hlsl-do.md), [double](dx-graphics-hlsl-scalar.md), [DomainShader](dx-graphics-hlsl-shader.md), dword                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| [else](dx-graphics-hlsl-if.md), [export](#export), [extern](dx-graphics-hlsl-variable-syntax.md)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| false, [float](dx-graphics-hlsl-scalar.md) [, für](dx-graphics-hlsl-for.md), fxgroup                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| [GeometryShader](dx-graphics-hlsl-shader.md), [groupshared](dx-graphics-hlsl-variable-syntax.md)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| [half](dx-graphics-hlsl-scalar.md), [Hullshader](dx-graphics-hlsl-shader.md)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| [, wenn](dx-graphics-hlsl-if.md) [, in](dx-graphics-hlsl-function-parameters.md), [inline](dx-graphics-hlsl-function-syntax.md), [inout](dx-graphics-hlsl-function-parameters.md), [**InputPatch**](sm5-object-inputpatch.md), [int](dx-graphics-hlsl-scalar.md), [interface](overviews-direct3d-11-hlsl-dynamic-linking-class.md)                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| [line, lineadj,](dx-graphics-hlsl-geometry-shader.md) [linear,](dx-graphics-hlsl-struct.md) [LineStream](dx-graphics-hlsl-so-type.md)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| [matrix](dx-graphics-hlsl-matrix.md), [min16float](dx-graphics-hlsl-scalar.md), [min10float](dx-graphics-hlsl-scalar.md), [min16int](dx-graphics-hlsl-scalar.md), [min12int](dx-graphics-hlsl-scalar.md), [min16uint](dx-graphics-hlsl-scalar.md)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| namespace, [nointerpolation](dx-graphics-hlsl-struct.md), [noperspective](dx-graphics-hlsl-struct.md), NULL                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| [out](dx-graphics-hlsl-function-parameters.md), [ **OutputPatch**](sm5-object-outputpatch.md)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| [**packoffset**](dx-graphics-hlsl-variable-packoffset.md), pass, [pixelfragment](fragment-declaration-syntax.md), [PixelShader](dx-graphics-hlsl-shader.md), [point](dx-graphics-hlsl-geometry-shader.md), [PointStream](dx-graphics-hlsl-so-type.md), [precise](dx-graphics-hlsl-variable-syntax.md)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| RasterizerState, RenderTargetView, [return](dx-graphics-hlsl-return.md), [register](dx-graphics-hlsl-variable-register.md), [row \_ major](dx-graphics-hlsl-variable-syntax.md), [**RWBuffer**](sm5-object-rwbuffer.md), [**RWByteAddressBuffer**](sm5-object-rwbyteaddressbuffer.md), [**RWStructuredBuffer**](sm5-object-rwstructuredbuffer.md), [**RWTexture1D**](sm5-object-rwtexture1d.md), [**RWTexture1DArray**](sm5-object-rwtexture1darray.md), [**RWTexture2D**](sm5-object-rwtexture2d.md), [**RWTexture2DArray**](sm5-object-rwtexture2darray.md), [**RWTexture3D**](sm5-object-rwtexture3d.md)                                                                                                                                                                                     |
+| [Sample](dx-graphics-hlsl-struct.md), [sampler, SamplerState, SamplerComparisonState](dx-graphics-hlsl-sampler.md), [shared](dx-graphics-hlsl-variable-syntax.md), [snorm](dx-graphics-hlsl-scalar.md), stateblock, stateblock \_ state, static, [string](dx-graphics-hlsl-scalar.md), [struct](dx-graphics-hlsl-struct.md), [switch](dx-graphics-hlsl-switch.md), [**StructuredBuffer**](sm5-object-structuredbuffer.md)                                                                                                                                                                                                                                                                                                                                                                          |
+| [tbuffer](dx-graphics-hlsl-constants.md), [technique10](/windows/desktop/direct3d10/d3d10-effect-technique-syntax), [technique11](/windows/desktop/direct3d10/d3d10-effect-technique-syntax), [texture](dx-graphics-hlsl-texture.md), [Texture1D](sm5-object-texture1d.md), [Texture1DArray](sm5-object-texture1darray.md), [Texture2D](sm5-object-texture2d.md), [Texture2DArray](sm5-object-texture2darray.md), [Texture2DMS](sm5-object-texture2dms.md), [Texture2DMSArray](sm5-object-texture2dmsarray.md), [Texture3D](sm5-object-texture3d.md), [TextureCube](dx-graphics-hlsl-to-type.md), [TextureCubeArray](dx-graphics-hlsl-to-type.md), true, [typedef](dx-graphics-hlsl-user-defined.md), [triangle, triangleadj](dx-graphics-hlsl-geometry-shader.md), [TriangleStream](dx-graphics-hlsl-so-type.md) |
+| [uint](dx-graphics-hlsl-scalar.md), [uniform](dx-graphics-hlsl-function-parameters.md), [unorm](dx-graphics-hlsl-scalar.md), unsigned                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| [vector](dx-graphics-hlsl-vector.md), [vertexfragment](fragment-declaration-syntax.md), [VertexShader](dx-graphics-hlsl-shader.md), void, [volatile](dx-graphics-hlsl-variable-syntax.md)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | [while](dx-graphics-hlsl-while.md)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 
 
 
- 
+ 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese numerischen Typen haben skalare, Vektor-und Matrix-Schlüsselwort Erweiterungen:
+Diese numerischen Typen verfügen über Skalar-, Vektor- und Matrixschlüsselworterweiterungen:
 
 -   float, int, uint, bool
 -   min10float, min16float
 -   min12int, min16int
 -   min16uint
 
-Die Erweiterungen dieser numerischen Typen folgen diesem Muster, bei dem float als Beispiel verwendet wird:
+Die Erweiterungen dieser numerischen Typen folgen diesem Muster, das float als Beispiel verwendet:
 
 -   Skalar
 
@@ -159,11 +159,11 @@ Die Erweiterungen dieser numerischen Typen folgen diesem Muster, bei dem float a
     float4x1, float4x2, float4x3, float4x4  
     </dl>
 
-HLSL unterstützt aus Legacy Gründen die [Textur](dx-graphics-hlsl-texture.md) und den [Sampler](dx-graphics-hlsl-sampler.md) von Kleinbuchstaben. Stattdessen wird für Ihre neuen apps empfohlen, die neuen Textur Objekte von HLSL ([Texture2D](sm5-object-texture2d.md), [Texture3D](sm5-object-texture3d.md)usw.) und[samplerobjekte (samplerstate und samplercomparisonstate](dx-graphics-hlsl-sampler.md)) zu verwenden.
+HLSL unterstützt aus Legacygründen Die [Textur](dx-graphics-hlsl-texture.md) und [den Sampler](dx-graphics-hlsl-sampler.md) in Klein case. Stattdessen wird empfohlen, für Ihre neuen Apps die neuen Texturobjekte von HLSL ([Texture2D,](sm5-object-texture2d.md) [Texture3D](sm5-object-texture3d.md)und so weiter) und Samplerobjekte ([SamplerState und SamplerComparisonState](dx-graphics-hlsl-sampler.md)) zu verwenden.
 
 ### <a name="export"></a>Export
 
-Verwenden Sie **exportieren** , um die in einer Bibliothek Verpacken Funktionen zu markieren.
+Verwenden **Sie export,** um Funktionen zu markieren, die Sie in eine Bibliothek packen.
 
 Beispiel:
 
@@ -174,14 +174,14 @@ export float identity(float x)
 }
 ```
 
-Indem Sie die **Identity** -Funktion mit dem **Export** Schlüsselwort markieren, machen Sie die **Identitäts** Funktion für eine spätere Verknüpfung in einer Bibliothek verfügbar. Ohne die **Export** Markierung ist die **Identity** -Funktion nicht für die spätere Verknüpfung verfügbar.
+Indem Sie die **Identitätsfunktion** mit dem **Exportschlüsselwort** markieren, stellen Sie die **Identitätsfunktion** über eine Bibliothek zur späteren Verknüpfung zur Verfügung. Ohne die **Exportmarkierung** ist **die Identitätsfunktion** nicht für spätere Verknüpfungen verfügbar.
 
-Der Compiler ignoriert das **Export** Schlüsselwort für die nicht-Bibliotheks Kompilierung.
+Der Compiler ignoriert das **Exportschlüsselwort** für die Kompilierung ohne Bibliothek.
 
 > [!Note]  
-> Das **Export** Schlüsselwort erfordert den D3dcompiler- \_47.dll oder eine spätere Version der dll.
+> Das **Exportschlüsselwort** erfordert die D3dcompiler-47.dll \_ oder eine neuere Version der DLL.
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -190,6 +190,6 @@ Der Compiler ignoriert das **Export** Schlüsselwort für die nicht-Bibliotheks 
 [Anhang (DirectX HLSL)](dx-graphics-hlsl-appendix.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

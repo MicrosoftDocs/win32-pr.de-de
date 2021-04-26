@@ -1,19 +1,19 @@
 ---
-description: Definiert das Präfix, dem der Namespace zugeordnet werden soll, um den XML-Code lesbarer zu machen.
+description: Definiert das Präfix, dem der Namespace zugeordnet werden soll, damit der XML-Code besser lesbar ist.
 ms.assetid: 955f4785-5657-4a89-9728-bce99a0a4234
-title: preferredprefix-Element
+title: preferredPrefix-Element
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b71f124756f29aaf29ba30d254f9b03ab4495f58
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 98fa0310872a43811ceb626ae0684fa45a2f6666
+ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106356644"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "107996477"
 ---
-# <a name="preferredprefix-element"></a>preferredprefix-Element
+# <a name="preferredprefix-element"></a>preferredPrefix-Element
 
-Definiert das Präfix, dem der Namespace zugeordnet werden soll, um den XML-Code lesbarer zu machen.
+Definiert das Präfix, dem der Namespace zugeordnet werden soll, damit der XML-Code besser lesbar ist.
 
 ## <a name="usage"></a>Verbrauch
 
@@ -39,9 +39,9 @@ Es gibt keine untergeordneten Elemente.
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Element überschreibt das Standard-URI-Präfix, das für generierten Code verwendet wird. Ein medienbezogener Namespace könnte z. b. das bevorzugte Präfix "AV" (für Audiodaten und Visualisierungen) enthalten.
+Dieses Element überschreibt das Standard-URI-Präfix, das für generierten Code verwendet wird. Beispielsweise kann ein medienbezogener Namespace das bevorzugte Präfix "av" (für Audio/Visual) aufweisen.
 
 Standardmäßig erstellt der generierte Code ein bevorzugtes Präfix aus dem URI.
 
@@ -49,7 +49,7 @@ Standardmäßig erstellt der generierte Code ein bevorzugtes Präfix aus dem URI
 
 
 
-|                                     |               |
+| Bezeichnung | Wert |
 |-------------------------------------|---------------|
 | Unterstützte Mindestversion (System)<br/> | Windows Vista |
 | Kann leer bleiben                        | Ja           |

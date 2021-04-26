@@ -1,6 +1,6 @@
 ---
-title: texld-ps_1_4
-description: Lädt das Ziel Register mit Farbdaten (RGBA), wobei der Inhalt des Quell Registers als Texturkoordinaten verwendet wird. Die Stichproben Textur ist die Textur, die der Ziel Registernummer zugeordnet ist.
+title: texld – ps_1_4
+description: Lädt das Zielregister mit Farbdaten (RGBA), die mit dem Inhalt des Quellregisters als Texturkoordinaten entnommen wurden. Die Textur mit Stichproben ist die Textur, die der Zielregisternummer zugeordnet ist.
 ms.assetid: 1970aed4-4da7-40a1-960d-fba4dfd8c433
 ms.topic: reference
 ms.date: 05/31/2018
@@ -9,70 +9,69 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 23827dffc396a40be134be4db3996d2e9f498288
-ms.sourcegitcommit: fe03c5d92ca6a0d66a114b2303e99c0a19241ffb
+ms.openlocfilehash: ca305b16db0f390354962a3e959f08b6e956f2ef
+ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "104993143"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "107996867"
 ---
-# <a name="texld---ps_1_4"></a>texld-PS \_ 1 \_ 4
+# <a name="texld---ps_1_4"></a>texld - ps \_ 1 \_ 4
 
-Lädt das Ziel Register mit Farbdaten (RGBA), wobei der Inhalt des Quell Registers als Texturkoordinaten verwendet wird. Die Stichproben Textur ist die Textur, die der Ziel Registernummer zugeordnet ist.
+Lädt das Zielregister mit Farbdaten (RGBA), die mit dem Inhalt des Quellregisters als Texturkoordinaten entnommen wurden. Die Textur mit Stichproben ist die Textur, die der Zielregisternummer zugeordnet ist.
 
 
 
-| texld DST, src |
+| texld dst, src |
 |----------------|
 
 
 
- 
+ 
 
 ## <a name="registers"></a>Register
 
 
 
-| Argument | BESCHREIBUNG          | Register |     |     |     | Version      |
+|          |                      | vn        | Cn  | Tn  | Rn  |              |
 |----------|----------------------|-----------|-----|-----|-----|--------------|
-|          |                      | VN        | 2.300  | TN  | Mar  |              |
-| DST      | Ziel Register |           |     |     | x   | 1\_4         |
-| src      | Quell Register      |           |     | x   |     | 1 \_ 4 Phase 1 |
-|          |                      |           |     | x   | x   | 1 \_ 4-Phase   |
+| dst      | Zielregister |           |     |     | x   | 1\_4         |
+| src      | Quellregister      |           |     | x   |     | 1 \_ 4. Phase 1 |
+|          |                      |           |     | x   | x   | 1 \_ 4 Phase   |
 
 
 
- 
+ 
 
-Wenn Sie r (n) als Quell Register verwenden, müssen die ersten drei Komponenten (XYZ) in der vorherigen Phase des Shaders initialisiert worden sein.
+Wenn Sie r(n) als Quellregister verwenden, müssen die ersten drei Komponenten (XYZ) in der vorherigen Phase des Shaders initialisiert worden sein.
 
-Weitere Informationen zu Registern finden Sie unter [PS \_ 1 \_ 1 \_ \_ PS \_ 1 \_ 2 \_ \_ PS \_ 1 \_ 3 \_ \_ PS \_ 1 \_ 4 Registern](dx9-graphics-reference-asm-ps-registers-ps-1-x.md).
+Weitere Informationen zu Registern finden Sie unter [ps \_ 1 \_ 1 \_ \_ ps \_ 1 \_ 2 ps \_ \_ \_ 1 \_ 3 ps \_ \_ \_ 1 \_ 4 Register.](dx9-graphics-reference-asm-ps-registers-ps-1-x.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Anweisung gibt eine Stichprobe der Textur in der Textur Phase aus, die der Ziel Registernummer zugeordnet ist. Die Textur wird mithilfe von Texturkoordinaten Daten aus dem Quell Register entnommen.
+Diese Anweisung erfasst die Textur in der Texturphase, die der Zielregisternummer zugeordnet ist. Die Textur wird mithilfe von Texturkoordinatendaten aus dem Quellregister entnommen.
 
-Die Syntax für die Anweisungen texld und texcrd macht die Unterstützung für eine Projective Teilung mit einem Textur Register-Modifizierer verfügbar. Für die Pixel-Shader-Version 1,4 \_ wird das Flag D3DTTFF projiziertes Textur Transform immer ignoriert.
+Die Syntax für die Texld- und Texcrd-Anweisungen macht Unterstützung für eine projektive Division mit einem Texturregistermodifizierer verfügbar. Für die Pixelshaderversion 1.4 wird das D3DTTFF \_ PROJECTED-Texturtransformationsflag immer ignoriert.
 
 Regeln für die Verwendung von texld:
 
-1.  Der gleiche. XYZ-oder. xyw-Modifizierer muss auf jeden Lesevorgang eines einzelnen t (n)-Registers in texcrd-oder texld-Anweisungen angewendet werden. Wenn ". xyw" für t (n)-Registrierungs Lesevorgänge verwendet wird, kann dies mit anderen Lesevorgängen desselben t-Registers (n) mithilfe von. xyw DW gemischt werden \_ .
-2.  Der- \_ Modifizierer für die DZ-Quelle ist nur für texld mit r (n)-Quell Register gültig (daher nur Phase 2).
-3.  Der- \_ Modifizierer für die DZ-Quelle darf nicht mehr als zwei Mal pro Shader verwendet werden.
+1.  Der gleiche .xyz- oder .xyw-Modifizierer muss auf jeden Lese- eines einzelnen t(n)-Registers in texcrd- oder texld-Anweisungen angewendet werden. Wenn .xyw für t(n)-Registerleseungen verwendet wird, kann dies mit anderen Lesezeichen desselben t(n)-Registers mit .xyw dw kombiniert \_ werden.
+2.  Der \_ dz-Quellmodifizierer ist nur für texld mit r(n) source register (also nur Phase 2) gültig.
+3.  Der \_ dz-Quellmodifizierer kann nicht mehr als zweimal pro Shader verwendet werden.
 
 
 
-| Pixel-Shader-Versionen | 1\_1 | 1\_2 | 1 \_ 3 | 1\_4 | 2 \_ 0 | 2 \_ x | 2 \_ SW | 3 \_ 0 | 3 \_ SW |
+| Pixelshaderversionen | 1\_1 | 1\_2 | 1 \_ 3 | 1\_4 | 2 \_ 0 | 2 \_ x | 2 \_ sw | 3 \_ 0 | 3 \_ sw |
 |-----------------------|------|------|------|------|------|------|-------|------|-------|
 | texld                 |      |      |      | x    |      |      |       |      |       |
 
 
 
- 
+ 
 
 ## <a name="examples"></a>Beispiele
 
-Die texld-Anweisung bietet eine gewisse Kontrolle darüber, welche Komponenten der Quell Textur Daten verwendet werden. Der vollständige Satz zulässiger Syntax für texld folgt und enthält alle gültigen Quell Registrierungs Modifizierern, Selektoren und Schreib Masken Kombinationen.
+Die texld-Anweisung bietet eine gewisse Kontrolle darüber, welche Komponenten der Quelltexturkoordinatendaten verwendet werden. Der vollständige Satz zulässiger Syntax für texld folgt und enthält alle gültigen Quellregistermodifizierer, Selektoren und Schreibmaskenkombinationen.
 
 
 ```
@@ -149,9 +148,9 @@ texld  r(n), r(n)_dz
 [Pixelshaderanweisungen](dx9-graphics-reference-asm-ps-instructions.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

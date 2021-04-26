@@ -1,21 +1,21 @@
 ---
-description: Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie in der PrintSchema-Spezifikation.
+description: Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter Spezifikation des Druckschemas.
 ms.assetid: 334503d7-c044-41f7-b6aa-892b002b7a4e
 title: DocumentInputBin
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 95a4459f621ac4455a69e891c2eeda6f785b6d8b
-ms.sourcegitcommit: 7b8f6151ebe247536304866459b2973276271d4d
+ms.openlocfilehash: 57890492ed5f0b575e6d462351282dd199f34f45
+ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "106357177"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "107997767"
 ---
 # <a name="documentinputbin"></a>DocumentInputBin
 
-Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie in der [PrintSchema-Spezifikation](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip).
+Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter [Print Schema Specification (Spezifikation des Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 
-Beschreibt den installierten Eingabe Korb in einem Gerät oder die vollständige Liste der unterstützten Container für ein Gerät. Die Schlüsselwörter "JobInputBin", "DocumentInputBin" und "PageInputBin" schließen sich gegenseitig aus. Beide sollten nicht gleichzeitig in einem PrintTicket-oder Druckfunktionen-Dokument angegeben werden.
+Beschreibt den installierten Eingabebehälter in einem Gerät oder die vollständige Liste der unterstützten Behälter für ein Gerät. Die Schlüsselwörter JobInputBin, DocumentInputBin und PageInputBin schließen sich gegenseitig aus. Beides sollte nicht gleichzeitig in einem PrintTicket- oder Druckfunktionen-Dokument angegeben werden.
 
 -   [Elementinformationen](#element-information)
 
@@ -27,11 +27,11 @@ Beschreibt den installierten Eingabe Korb in einem Gerät oder die vollständige
 
 
 
-| Name                       |                                                                                                                                |
+| Name | Wert |
 |----------------------------|--------------------------------------------------------------------------------------------------------------------------------|
 | Elementtyp <br/>   | Funktion<br/>                                                                                                             |
-| Bereichs Präfix <br/> | Dokument<br/>                                                                                                            |
-| Notizen <br/>          | Unterstützte Behälter, die derzeit nicht installiert sind, sollten im printfunktionalitäten-Dokument als eingeschränkt gekennzeichnet werden.<br/> |
+| Bereichspräfix <br/> | Dokument<br/>                                                                                                            |
+| Hinweise <br/>          | Unterstützte, derzeit nicht installierte Bins sollten im PrintCapabilities-Dokument als eingeschränkt gekennzeichnet werden.<br/> |
 
 
 
@@ -39,7 +39,7 @@ Beschreibt den installierten Eingabe Korb in einem Gerät oder die vollständige
 
 ## <a name="structural-content"></a>Strukturelle Inhalte
 
-Die XML-Struktur dieses Elements lautet:
+Die XML-Struktur dieses Elements ist:
 
 ``` syntax
 <psf:Feature name="psk:DocumentInputBin">
@@ -92,25 +92,25 @@ In der folgenden Tabelle werden die Merkmale der Variablen beschrieben, die in d
 
 | Name                                   | Datentyp          | Einheit                  | Unterstützte Werte                                                                                                                                                                      | Zusammenfassung                                                                             |
 |----------------------------------------|--------------------|-----------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------|
-| \_Optionsname\_<br/>              | Zeichenfolge<br/>  | Buchstaben<br/> | Gültiger, voll qualifizierter Name, wie von [Namespaces in XML](https://www.w3.org/TR/1999/REC-xml-names-19990114/)definiert. Wenn kein Namespace angegeben wird, wird der Standard Namespace angenommen.<br/> | Der Name der Option.<br/>                                                  |
-| \_Identityoptionvalue\_<br/>     | Zeichenfolge<br/>  | –<br/>        | TRUE, FALSE<br/>                                                                                                                                                               | Definiert eine Option, die diese Funktion deaktiviert, wenn Sie ausgewählt wird.<br/>        |
-| \_Envelopeoptionvalue\_<br/>     | Zeichenfolge<br/>  | –<br/>        | TRUE, FALSE<br/>                                                                                                                                                               | Definiert eine Option, die diese Funktion deaktiviert, wenn Sie ausgewählt wird.<br/>        |
-| \_Bintypevalue\_<br/>            | Zeichenfolge<br/>  | –<br/>        | Continuousfeed, Sheetfeed.<br/>                                                                                                                                                 | Gibt den Typ der bin an.<br/>                                           |
-| \_Feedtypevalue\_<br/>           | Zeichenfolge<br/>  | –<br/>        | Automatisch, manuell.<br/>                                                                                                                                                         | Gibt den Feed-Mechanismus der bin an.<br/>                                 |
-| \_Mediacapacityvalue\_<br/>      | integer<br/> | Glas<br/>     | Die maximale ganzzahlige Einschränkung ist vom Gerät zugelassen.<br/>                                                                                                                              | Gibt an, ob der bin ein hoher Kapazitäts-bin (qualitativ) ist.<br/>          |
-| \_Mediasizeautosenendvalue\_<br/> | Zeichenfolge<br/>  | –<br/>        | Unterstützt, keine.<br/>                                                                                                                                                           | Gibt die Mediengröße für die automatische Sense-Funktion des Geräts an.<br/>            |
-| \_Mediatypeer autosensvalue\_<br/> | Zeichenfolge<br/>  | –<br/>        | Unterstützt, keine.<br/>                                                                                                                                                           | Gibt die Medien Kapazität in der Anzahl der Seiten (vollständig) des bin an.<br/> |
-| \_Mediapathvalue\_<br/>          | Zeichenfolge<br/>  | –<br/>        | Direkt, Serpentine.<br/>                                                                                                                                                      | Gibt die Merkmale des Medien Pfads an.<br/>                         |
-| \_Feedwert\_<br/>           | Zeichenfolge<br/>  | –<br/>        | FaceUp, Facedown<br/>                                                                                                                                                           | Gibt an, ob Medien gedruckt werden sollen.<br/>           |
-| \_Feeddirectionvalue\_<br/>      | Zeichenfolge<br/>  | –<br/>        | Longedgefirst, shortedgefirst<br/>                                                                                                                                              | Gibt an, ob die Medien zuerst den langen Edge-oder kurzen Edge-Wert aufweisen.<br/>      |
+| \_Optionname\_<br/>              | Zeichenfolge<br/>  | Buchstaben<br/> | Gültiger vollqualifizierter Name, wie durch [Namespaces in XML definiert.](https://www.w3.org/TR/1999/REC-xml-names-19990114/) Wenn kein Namespace angegeben wird, wird der Standardnamespace angenommen.<br/> | Der Name der Option.<br/>                                                  |
+| \_IdentityOptionValue\_<br/>     | Zeichenfolge<br/>  | –<br/>        | TRUE, FALSE<br/>                                                                                                                                                               | Definiert eine Option, die diese Funktion deaktiviert, wenn sie ausgewählt wird.<br/>        |
+| \_EnvelopeOptionValue\_<br/>     | Zeichenfolge<br/>  | –<br/>        | TRUE, FALSE<br/>                                                                                                                                                               | Definiert eine Option, die diese Funktion deaktiviert, wenn sie ausgewählt wird.<br/>        |
+| \_BinTypeValue\_<br/>            | Zeichenfolge<br/>  | –<br/>        | ContinuousFeed, SheetFeed.<br/>                                                                                                                                                 | Gibt den Typ des Papierkorbs an.<br/>                                           |
+| \_FeedTypeValue\_<br/>           | Zeichenfolge<br/>  | –<br/>        | Automatisch, Manuell.<br/>                                                                                                                                                         | Gibt den Feedmechanismus des Papierkorbs an.<br/>                                 |
+| \_MediaCapacityValue\_<br/>      | integer<br/> | Blätter<br/>     | Maximal zulässige ganzzahlige Einschränkung des Geräts.<br/>                                                                                                                              | Gibt an, ob es sich bei dem Container um einen Container mit hoher Kapazität (qualitativ) handelt.<br/>          |
+| \_MediaSizeAutoSenseValue\_<br/> | Zeichenfolge<br/>  | –<br/>        | Unterstützt, Keine.<br/>                                                                                                                                                           | Gibt die Funktion zur automatischen Empfindlichkeit der Mediengröße des Geräts an.<br/>            |
+| \_MediaTypeAutoSenseValue\_<br/> | Zeichenfolge<br/>  | –<br/>        | Unterstützt, Keine.<br/>                                                                                                                                                           | Gibt die Medienkapazität in der Anzahl der Seiten (vollständige Ebene) des Papierkorbs an.<br/> |
+| \_MediaPathValue\_<br/>          | Zeichenfolge<br/>  | –<br/>        | Gerade, Serpentine.<br/>                                                                                                                                                      | Gibt die Merkmale des Medienpfads an.<br/>                         |
+| \_FeedFaceValue\_<br/>           | Zeichenfolge<br/>  | –<br/>        | FaceUp, FaceDown<br/>                                                                                                                                                           | Gibt an, ob Medien nach oben oder nach unten gedruckt werden sollen.<br/>           |
+| \_FeedDirectionValue\_<br/>      | Zeichenfolge<br/>  | –<br/>        | LongEdgeFirst, ShortEdgeFirst<br/>                                                                                                                                              | Gibt an, ob das Medium zuerst einen langen Edge oder einen kurzen Rand einfährt.<br/>      |
 
 
 
  
 
-## <a name="extensible-markup-language-xml-content"></a>Inhalt der Extensible Markup Language (XML)
+## <a name="extensible-markup-language-xml-content"></a>Extensible Markup Language (XML) Content
 
-Die Schlüsselwörter der öffentlichen Druck Schemas werden im- https://schemas.microsoft.com/windows/2003/08/printing/printschemakeywords Namespace definiert. Der Inhalt des öffentlichen Extensible Markup Language (XML) für dieses Schlüsselwort wird unten definiert:
+Die Schlüsselwörter des öffentlichen Druckschemas werden im -Namespace https://schemas.microsoft.com/windows/2003/08/printing/printschemakeywords definiert. Der öffentliche Extensible Markup Language (XML) für dieses Schlüsselwort ist unten definiert:
 
 ``` syntax
 <psf:Feature name="psk:DocumentInputBin">
@@ -274,7 +274,7 @@ Die Schlüsselwörter der öffentlichen Druck Schemas werden im- https://schemas
 
 <dl> <dt>
 
-[Druck Schema Spezifikation](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
+[Spezifikation des Druckschemas](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 </dt> </dl>
 
  

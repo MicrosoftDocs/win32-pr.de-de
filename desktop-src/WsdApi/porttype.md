@@ -4,12 +4,12 @@ ms.assetid: 8a7762ae-2e39-46e1-b49f-09cae1af9b0d
 title: portType-Element
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5a466ccdcfda133a2a314609e9698cd37c6bf31c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a98f02fc5a18e330bb5617b52563adc79a039831
+ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106362498"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "107996537"
 ---
 # <a name="porttype-element"></a>portType-Element
 
@@ -35,23 +35,23 @@ Es gibt keine untergeordneten Elemente.
 
 | Element                                                                                                 | BESCHREIBUNG                                                                                                                                   |
 |---------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
-| [**functiondeklarationen**](functiondeclarations.md)<br/>                                         | Generiert Implementierungs Deklarationen für Proxy Funktionen für Porttyp Vorgänge.<br/> <br/>                                    |
-| [**idlfunctiondeklarationen**](idlfunctiondeclarations.md)<br/>                                   | Generiert IDL-Deklarationen für Proxy Funktionen für Porttyp Vorgänge.<br/> <br/>                                               |
-| [**messagestructuredefinitions**](messagestructuredefinitions.md)<br/>                           | Generiert C-Strukturdefinitionen für Nachrichten Typen.<br/> <br/>                                                                   |
-| [**messagetypedeklarationen**](messagetypedeclarations.md)<br/>                                   | Generiert C-Konstante Deklarationen für XML-Schema Tabellen für Nachrichten Typen.<br/> <br/>                                             |
-| [**messagetypedefinitions**](messagetypedefinitions.md)<br/>                                     | Generiert C-Konstanten für XML-Schema Tabellen für Nachrichten Typen.<br/> <br/>                                                         |
-| [**porttypeer-Deklarationen**](porttypedeclarations.md)<br/>                                         | Generiert C-Konstante Deklarationen für Porttypen.<br/> <br/>                                                                      |
-| [**porttypeer Definitionen**](porttypedefinitions.md)<br/>                                           | Generiert C-Konstanten für Porttypen.<br/> <br/>                                                                                  |
-| [**proxyfunctionimplementierungen**](proxyfunctionimplementations.md)<br/>                         | Generiert Implementierungen für Proxy Funktionen für Porttyp Vorgänge.<br/> <br/>                                                |
-| [**stubdeklarationen**](stubdeclarations.md)<br/>                                                 | Generiert Deklarationen für Stub-Funktionen für Porttyp Vorgänge.<br/> <br/>                                                    |
-| [**stubdefinitionen**](stubdefinitions.md)<br/>                                                   | Generiert Implementierungen für Stub-Funktionen für Porttyp Vorgänge.<br/> <br/>                                                 |
-| [**"abonnemenfunctiondeklarationen"**](subscriptionfunctiondeclarations.md)<br/>                 | Generiert Implementierungs Deklarationen für Abonnement-/abonnementproxyfunktionen für Porttyp-Benachrichtigungs Vorgänge.<br/> <br/> |
-| [**"abonnemenidlfunctiondeklarationen"**](subscriptionidlfunctiondeclarations.md)<br/>           | Generiert IDL-Deklarationen für Abonnement-/abonnementproxyfunktionen für Port-Benachrichtigungs Vorgänge.<br/> <br/>            |
-| [**abonnemenproxyfunctionimplementierungen**](subscriptionproxyfunctionimplementations.md)<br/> | Generiert Implementierungen für Abonnement-/Abonnement-Proxyfunktionen für Porttyp-Benachrichtigungs Vorgänge.<br/> <br/>             |
+| [**functionDeclarations**](functiondeclarations.md)<br/>                                         | Generiert Implementierungsdeklarationen für Proxyfunktionen für Porttypvorgänge.<br/> <br/>                                    |
+| [**idlFunctionDeclarations**](idlfunctiondeclarations.md)<br/>                                   | Generiert IDL-Deklarationen für Proxyfunktionen für Porttypvorgänge.<br/> <br/>                                               |
+| [**messageStructureDefinitions**](messagestructuredefinitions.md)<br/>                           | Generiert C-Strukturdefinitionen für Nachrichtentypen.<br/> <br/>                                                                   |
+| [**messageTypeDeclarations**](messagetypedeclarations.md)<br/>                                   | Generiert C-Konstantendeklarationen für XML-Schematabellen für Nachrichtentypen.<br/> <br/>                                             |
+| [**messageTypeDefinitions**](messagetypedefinitions.md)<br/>                                     | Generiert C-Konstanten für XML-Schematabellen für Nachrichtentypen.<br/> <br/>                                                         |
+| [**portTypeDeclarations**](porttypedeclarations.md)<br/>                                         | Generiert C-Konstantendeklarationen für Porttypen.<br/> <br/>                                                                      |
+| [**portTypeDefinitions**](porttypedefinitions.md)<br/>                                           | Generiert C-Konstanten für Porttypen.<br/> <br/>                                                                                  |
+| [**proxyFunctionImplementations**](proxyfunctionimplementations.md)<br/>                         | Generiert Implementierungen für Proxyfunktionen für Porttypvorgänge.<br/> <br/>                                                |
+| [**stubDeclarations**](stubdeclarations.md)<br/>                                                 | Generiert Deklarationen für Stubfunktionen für Porttypvorgänge.<br/> <br/>                                                    |
+| [**stubDefinitions**](stubdefinitions.md)<br/>                                                   | Generiert Implementierungen für Stubfunktionen für Porttypvorgänge.<br/> <br/>                                                 |
+| [**subscriptionFunctionDeclarations**](subscriptionfunctiondeclarations.md)<br/>                 | Generiert Implementierungsdeklarationen für Abonnieren/Kündigen von Proxyfunktionen für Porttypbenachrichtigungsvorgänge.<br/> <br/> |
+| [**subscriptionIdlFunctionDeclarations**](subscriptionidlfunctiondeclarations.md)<br/>           | Generiert IDL-Deklarationen für Abonnement-/Abonnementproxyfunktionen für Porttypbenachrichtigungsvorgänge.<br/> <br/>            |
+| [**subscriptionProxyFunctionImplementations**](subscriptionproxyfunctionimplementations.md)<br/> | Generiert Implementierungen für Abonnieren/Kündigen von Proxyfunktionen für Benachrichtigungsvorgänge für Porttypen.<br/> <br/>             |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Standardmäßig wird Code für alle Porttypen in WSDL-Eingabedateien generiert.
 
@@ -59,7 +59,7 @@ Standardmäßig wird Code für alle Porttypen in WSDL-Eingabedateien generiert.
 
 
 
-|                                     |               |
+| Bezeichnung | Wert |
 |-------------------------------------|---------------|
 | Unterstützte Mindestversion (System)<br/> | Windows Vista |
 | Kann leer bleiben                        | Ja           |

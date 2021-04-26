@@ -1,19 +1,19 @@
 ---
-description: Generiert eine vorwärts Deklaration für die C-Konstante für die im thismodelmetadata-Element angegebenen Hersteller Metadaten.
+description: Generiert eine Vorwärtsdeklaration für die C-Konstante für die Herstellermetadaten, die im thisModelMetadata-Element angegeben sind.
 ms.assetid: 589cddb2-29a6-4ad7-9102-56c17fcc16e3
 title: thisModelMetadataDeclaration-Element
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0e5156f052c06c3c0e5094ef727070cb6d223683
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e7620f61d33318df2ccd187cb51e1ec7e598e471
+ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106344437"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "107995327"
 ---
 # <a name="thismodelmetadatadeclaration-element"></a>thisModelMetadataDeclaration-Element
 
-Generiert eine vorwärts Deklaration für die C-Konstante für die im [**thismodelmetadata**](thismodelmetadata.md) -Element angegebenen Hersteller Metadaten. Diese Deklaration wird in einer Header Datei verwendet.
+Generiert eine Vorwärtsdeklaration für die C-Konstante für die Herstellermetadaten, die im [**thisModelMetadata-Element angegeben**](thismodelmetadata.md) sind. Diese Deklaration wird in einer Headerdatei verwendet.
 
 ## <a name="usage"></a>Verbrauch
 
@@ -35,7 +35,7 @@ Es gibt keine untergeordneten Elemente.
 
 | Element                         | BESCHREIBUNG                                                    |
 |---------------------------------|----------------------------------------------------------------|
-| [**Datei**](file.md)<br/> | Gibt eine Datei aus dem Code-Generator aus.<br/> <br/> |
+| [**Datei**](file.md)<br/> | Gibt eine Datei aus dem Codegenerator aus.<br/> <br/> |
 
 
 
@@ -43,7 +43,7 @@ Es gibt keine untergeordneten Elemente.
 
 
 
-|                                     |               |
+| Bezeichnung | Wert |
 |-------------------------------------|---------------|
 | Unterstützte Mindestversion (System)<br/> | Windows Vista |
 | Kann leer bleiben                        | Ja           |

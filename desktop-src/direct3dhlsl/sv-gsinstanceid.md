@@ -1,6 +1,6 @@
 ---
 title: SV_GSInstanceID
-description: Definiert die Instanz des Geometry-Shaders.
+description: Definiert die Instanz des geometry-Shaders.
 ms.assetid: 66d1706f-3c14-46db-a791-dc3de9831cc9
 keywords:
 - SV_GSInstanceID HLSL
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: b326bcd55778ff0e99f03554616fb4e2c72ff849
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: a4d7900c843ed0cb3815f1c9b72f0c52a31486db
+ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "103948260"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "107997677"
 ---
-# <a name="sv_gsinstanceid"></a>SV \_ gsinstanceid
+# <a name="sv_gsinstanceid"></a>SV \_ GSInstanceID
 
-Definiert die [Instanz](sm5-attributes-instance.md) des Geometry-Shaders.
+Definiert die [Instanz](sm5-attributes-instance.md) des geometry-Shaders.
 
 ## <a name="type"></a>Typ
 
@@ -35,24 +35,23 @@ Definiert die [Instanz](sm5-attributes-instance.md) des Geometry-Shaders.
 
 
 
- 
+ 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieser System Wert ist optional.
+Dieser Systemwert ist optional.
 
-Diese Funktion wird in den folgenden Typen von Shadern unterstützt:
+Diese Funktion wird in den folgenden Shadertypen unterstützt:
 
 
 
-|        |      |        |          |       |         |
+| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
 |        |      |        | x        |       |         |
 
 
 
- 
+ 
 
 ## <a name="see-also"></a>Weitere Informationen
 
@@ -61,12 +60,12 @@ Diese Funktion wird in den folgenden Typen von Shadern unterstützt:
 [Semantik](dx-graphics-hlsl-semantics.md)
 </dt> <dt>
 
-[Shader-Modell 5](d3d11-graphics-reference-sm5.md)
+[Shadermodell 5](d3d11-graphics-reference-sm5.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

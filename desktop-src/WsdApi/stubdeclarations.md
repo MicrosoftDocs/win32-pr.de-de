@@ -1,19 +1,19 @@
 ---
-description: Generiert Deklarationen für Stub-Funktionen für Porttyp Vorgänge.
+description: Generiert Deklarationen für Stubfunktionen für Porttypvorgänge.
 ms.assetid: d43baeff-c941-4ce9-a6ae-8aa61ef44048
-title: Stub-Deklarations Element
+title: stubDeclarations-Element
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2ceaa8871928031edff90db0491483cfd06bdcc1
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1543883b4d41e7571cd4a4725e2aeab181530d30
+ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106363812"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "107996407"
 ---
-# <a name="stubdeclarations-element"></a>Stub-Deklarations Element
+# <a name="stubdeclarations-element"></a>stubDeclarations-Element
 
-Generiert Deklarationen für Stub-Funktionen für Porttyp Vorgänge.
+Generiert Deklarationen für Stubfunktionen für Porttypvorgänge.
 
 ## <a name="usage"></a>Verbrauch
 
@@ -33,9 +33,9 @@ Es gibt keine Attribute.
 
 | Element                                   | BESCHREIBUNG                                                                                      |
 |-------------------------------------------|--------------------------------------------------------------------------------------------------|
-| [**events**](events.md)<br/>       | Gibt an, ob verwandte Ereignisse in den generierten Funktionen enthalten sind.<br/> <br/> |
-| [**Betriebs**](operation.md)<br/> | Gibt einen Vorgang an, für den Code generiert werden soll.<br/> <br/>                 |
-| [**PortType**](porttype.md)<br/>   | Gibt den Porttyp an, für den Code generiert werden soll.<br/> <br/>                |
+| [**events**](events.md)<br/>       | Gibt an, ob verknüpfte Ereignisse in den generierten Funktionen enthalten sind.<br/> <br/> |
+| [**Vorgang**](operation.md)<br/> | Gibt einen Vorgang an, für den Code generiert werden soll.<br/> <br/>                 |
+| [**Porttype**](porttype.md)<br/>   | Gibt den Porttyp an, für den Code generiert werden soll.<br/> <br/>                |
 
 
 
@@ -55,7 +55,7 @@ Es gibt keine Attribute.
 
 | Element                         | BESCHREIBUNG                                                    |
 |---------------------------------|----------------------------------------------------------------|
-| [**Datei**](file.md)<br/> | Gibt eine Datei aus dem Code-Generator aus.<br/> <br/> |
+| [**Datei**](file.md)<br/> | Gibt eine Datei aus dem Codegenerator aus.<br/> <br/> |
 
 
 
@@ -63,7 +63,7 @@ Es gibt keine Attribute.
 
 
 
-|                                     |               |
+| Bezeichnung | Wert |
 |-------------------------------------|---------------|
 | Unterstützte Mindestversion (System)<br/> | Windows Vista |
 | Kann leer bleiben                        | Ja           |

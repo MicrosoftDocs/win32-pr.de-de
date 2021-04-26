@@ -1,6 +1,6 @@
 ---
-title: ABS-vs
-description: Berechnet den absoluten Wert. | ABS-vs
+title: abs – vs
+description: Berechnet den absoluten Wert. | abs – vs
 ms.assetid: d3b4cf06-dc87-4c71-aa2d-5ade4cf98caa
 ms.topic: reference
 ms.date: 05/31/2018
@@ -9,14 +9,14 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 07667954de97e2a1da3999237930fb33796d9030
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: e4d73ee738f575d93c2316e4ec47dced7cb128d3
+ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104219128"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "107994747"
 ---
-# <a name="abs---vs"></a>ABS-vs
+# <a name="abs---vs"></a>abs – vs
 
 Berechnet den absoluten Wert.
 
@@ -26,7 +26,7 @@ Berechnet den absoluten Wert.
 
 |              |
 |--------------|
-| ABS DST, src |
+| abs dst, src |
 
 
 
@@ -34,16 +34,15 @@ Berechnet den absoluten Wert.
 
 where
 
--   DST ist das Ziel Register.
--   src ist ein Quell Register.
+-   dst ist das Zielregister.
+-   src ist ein Quellregister.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 
 
-|                        |      |      |      |       |      |       |
+| Vertex-Shaderversionen | 1\_1 | 2 \_ 0 | 2 \_ x | 2 \_ sw | 3 \_ 0 | 3 \_ sw |
 |------------------------|------|------|------|-------|------|-------|
-| Vertex-Shader-Versionen | 1\_1 | 2 \_ 0 | 2 \_ x | 2 \_ SW | 3 \_ 0 | 3 \_ SW |
 | abs                    |      | x    | x    | x     | x    | x     |
 
 
@@ -66,7 +65,7 @@ dest.w = abs(src.w)
 
 <dl> <dt>
 
-[Vertex-shaderanweisungen](dx9-graphics-reference-asm-vs-instructions.md)
+[Vertex-Shader-Anweisungen](dx9-graphics-reference-asm-vs-instructions.md)
 </dt> </dl>
 
  

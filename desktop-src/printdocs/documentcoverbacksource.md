@@ -1,21 +1,21 @@
 ---
-description: Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie in der PrintSchema-Spezifikation.
+description: Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter Spezifikation des Druckschemas.
 ms.assetid: 43a0c881-75cc-4fbc-a0c3-b3eab9dfe4df
-title: Documentcoverbacksource
+title: DocumentCoverBackSource
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6a605bd22424de61eebfaf48b18acf8e57eab523
-ms.sourcegitcommit: de72a1294df274b0a71dc0fdc42d757e5f6df0f3
+ms.openlocfilehash: 6547ac2dc2c3f91ea4d0ebeea87622c790ae7d4d
+ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "106355737"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "107996277"
 ---
-# <a name="documentcoverbacksource"></a>Documentcoverbacksource
+# <a name="documentcoverbacksource"></a>DocumentCoverBackSource
 
-Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie in der [PrintSchema-Spezifikation](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip).
+Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter [Print Schema Specification (Spezifikation des Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 
-Gibt die Quelle für ein benutzerdefiniertes Back-Cover-Blatt an.
+Gibt die Quelle für ein benutzerdefiniertes Hintergrundblatt an.
 
 -   [Elementinformationen](#element-information)
 -   [Strukturieren von Inhalt](#structure-content)
@@ -24,11 +24,11 @@ Gibt die Quelle für ein benutzerdefiniertes Back-Cover-Blatt an.
 
 
 
-| Name                       |                                                |
+| Name | Wert |
 |----------------------------|------------------------------------------------|
 | Elementtyp <br/>   | ParameterDef<br/>                        |
-| Bereichs Präfix <br/> | Dokument<br/>                            |
-| Notizen <br/>          | Verknüpft mit documentcoverback-Element<br/> |
+| Bereichspräfix <br/> | Dokument<br/>                            |
+| Hinweise <br/>          | Mit DocumentCoverBack-Element verknüpft<br/> |
 
 
 
@@ -36,7 +36,7 @@ Gibt die Quelle für ein benutzerdefiniertes Back-Cover-Blatt an.
 
 ## <a name="structure-content"></a>Strukturieren von Inhalt
 
-Die XML-Struktur dieses Elements lautet:
+Die XML-Struktur dieses Elements ist:
 
 ``` syntax
 <psf:ParameterDef name="psk:DocumentCoverBackSource">
@@ -61,7 +61,7 @@ Die XML-Struktur dieses Elements lautet:
 </psf:ParameterDef>      
 ```
 
-## <a name="structure-properties"></a>Struktur Eigenschaften
+## <a name="structure-properties"></a>Struktureigenschaften
 
 In der folgenden Tabelle werden die Merkmale der Variablen beschrieben, die in der XML-Struktur definiert sind.
 
@@ -72,9 +72,9 @@ In der folgenden Tabelle werden die Merkmale der Variablen beschrieben, die in d
 | DataType<br/>     | Zeichenfolge<br/>  | xs:string<br/>       |
 | DefaultValue<br/> | Zeichenfolge<br/>  | nicht definiert<br/>       |
 | MaxLength<br/>    | integer<br/> | nicht definiert<br/>       |
-| MinLength<br/>    | integer<br/> | 1<br/>               |
-| Obligatorisch.<br/>    | Zeichenfolge<br/>  | PSK: bedingt<br/> |
-| UnitType<br/>     | Zeichenfolge<br/>  | Buchstaben<br/>      |
+| Minlength<br/>    | integer<br/> | 1<br/>               |
+| Obligatorisch.<br/>    | Zeichenfolge<br/>  | psk:Conditional<br/> |
+| Unittype<br/>     | Zeichenfolge<br/>  | Buchstaben<br/>      |
 
 
 
@@ -84,7 +84,7 @@ In der folgenden Tabelle werden die Merkmale der Variablen beschrieben, die in d
 
 <dl> <dt>
 
-[Druck Schema Spezifikation](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
+[Spezifikation des Druckschemas](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 </dt> </dl>
 
  

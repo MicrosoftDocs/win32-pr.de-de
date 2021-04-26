@@ -1,19 +1,19 @@
 ---
-description: Generiert C-Deklarationen für Werte aller Enumerationstypen.
+description: Generiert C-Deklarationen für Werte aller aufzählten Typen.
 ms.assetid: 2808edf6-662d-41ee-8e76-f0ee13fe720b
-title: enumerationvaluedeklarationselement
+title: enumerationValueDeclarations-Element
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 00dc712baa958551bcf87adc019fda0f87bf85e3
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 96c8571c0fbcfbea8964fb5197deca145ba494d8
+ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106349912"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "107996707"
 ---
-# <a name="enumerationvaluedeclarations-element"></a>enumerationvaluedeklarationselement
+# <a name="enumerationvaluedeclarations-element"></a>enumerationValueDeclarations-Element
 
-Generiert C-Deklarationen für Werte aller Enumerationstypen.
+Generiert C-Deklarationen für Werte aller aufzählten Typen.
 
 ## <a name="usage"></a>Verbrauch
 
@@ -35,7 +35,7 @@ Es gibt keine untergeordneten Elemente.
 
 | Element                         | BESCHREIBUNG                                                    |
 |---------------------------------|----------------------------------------------------------------|
-| [**Datei**](file.md)<br/> | Gibt eine Datei aus dem Code-Generator aus.<br/> <br/> |
+| [**Datei**](file.md)<br/> | Gibt eine Datei aus dem Codegenerator aus.<br/> <br/> |
 
 
 
@@ -43,7 +43,7 @@ Es gibt keine untergeordneten Elemente.
 
 
 
-|                                     |               |
+| Bezeichnung | Wert |
 |-------------------------------------|---------------|
 | Unterstützte Mindestversion (System)<br/> | Windows Vista |
 | Kann leer bleiben                        | Ja           |

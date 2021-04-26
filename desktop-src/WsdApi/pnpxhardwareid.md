@@ -1,19 +1,19 @@
 ---
-description: Gibt den PnP-X-Hardware Bezeichner des Dienstanbieter an.
+description: Gibt den PnP-X-Hardwarebezeichner des Diensts an.
 ms.assetid: aa4c935f-0d60-4603-ae96-d5cabdf9af00
-title: Pnpxhardwareid-Element
+title: PnPXHardwareId-Element
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 55e5e38b669a289545225df96fad05e55069b474
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c0ffc389ca6df363439dd6463b3f86ca756359e8
+ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106347910"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "107996527"
 ---
-# <a name="pnpxhardwareid-element"></a>Pnpxhardwareid-Element
+# <a name="pnpxhardwareid-element"></a>PnPXHardwareId-Element
 
-Gibt den PnP-X-Hardware Bezeichner des Dienstanbieter an. PNP stimmt mit diesem Element mit den Hardware Beschreibungen überein, die im \[ Abschnitt "pnpxdevice" \] der INF-Datei des Geräts bereitgestellt werden. Basierend auf diesen Informationen wählt der PnP-Dienst den am besten geeigneten Gerätetreiber aus und lädt ihn.
+Gibt den PnP-X-Hardwarebezeichner des Diensts an. PnP gleicht dieses Element mit den Hardwarebeschreibungen ab, die im \[ Abschnitt PnpxDevice \] der INF-Datei des Geräts angegeben sind. Basierend auf diesen Informationen wählt der PnP-Dienst den am besten geeigneten Gerätetreiber aus und lädt diesen.
 
 ## <a name="usage"></a>Verbrauch
 
@@ -35,19 +35,19 @@ Es gibt keine untergeordneten Elemente.
 
 | Element                             | BESCHREIBUNG                                                                            |
 |-------------------------------------|----------------------------------------------------------------------------------------|
-| [**gehostet**](hosted.md)<br/> | Definiert die Elemente für die Dienste, die vom Dienst Host definiert werden. <br/> <br/> |
+| [**Gehostet**](hosted.md)<br/> | Definiert Elemente für die vom Diensthost definierten Dienste. <br/> <br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn Sie mehr als eine Hardware-ID angeben möchten, trennen Sie die Bezeichner durch ein Leerzeichen, z. b. "PnPX \_ SampleService \_ HWID \_ 1 PnPX \_ SampleService \_ HWID \_ 2 PnPX \_ SampleService1 \_ HWID \_ 3".
+Um mehr als eine Hardware-ID anzugeben, trennen Sie die Bezeichner durch ein Leerzeichen, z.B. "PnPX \_ SampleService \_ HWID \_ 1 PnPX \_ SampleService \_ HWID \_ 2 PnPX \_ SampleService1 \_ HWID \_ 3".
 
 ## <a name="element-information"></a>Elementinformationen
 
 
 
-|                                     |               |
+| Bezeichnung | Wert |
 |-------------------------------------|---------------|
 | Unterstützte Mindestversion (System)<br/> | Windows Vista |
 | Kann leer bleiben                        | Ja           |

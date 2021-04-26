@@ -1,6 +1,6 @@
 ---
-title: dcl_semantics (SM3-PS ASM)
-description: Deklarieren Sie die Zuordnung zwischen der Vertex-Shader-Ausgabe und der Pixel-Shadereingabe.
+title: dcl_semantics (sm3 – ps asm)
+description: Deklarieren Sie die Zuordnung zwischen der Vertex-Shaderausgabe und der Pixel-Shadereingabe.
 ms.assetid: 4f4dc6fe-0efa-4d84-aefd-583e90ab9a61
 ms.topic: reference
 ms.date: 05/31/2018
@@ -9,16 +9,16 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 944ddd2b581c6179ac4a3fe22f2b687f85aecfdc
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
-ms.translationtype: HT
+ms.openlocfilehash: 178b31a386a7ae4aa266ac33ddbb1ee5c842f2d1
+ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104101958"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "107997167"
 ---
-# <a name="dcl_semantics-sm3---ps-asm"></a>DCL \_ -Semantik (SM3-PS ASM)
+# <a name="dcl_semantics-sm3---ps-asm"></a>\_dcl-Semantik (sm3 – ps asm)
 
-Deklarieren Sie die Zuordnung zwischen der Vertex-Shader-Ausgabe und der Pixel-Shadereingabe.
+Deklarieren Sie die Zuordnung zwischen der Vertex-Shaderausgabe und der Pixel-Shadereingabe.
 
 ## <a name="syntax"></a>Syntax
 
@@ -26,34 +26,34 @@ Deklarieren Sie die Zuordnung zwischen der Vertex-Shader-Ausgabe und der Pixel-S
 
 |                                                   |
 |---------------------------------------------------|
-| DCL- \_ Semantik \[ \_ Schwerpunkt \] DST \[ . Write \_ Mask\] |
+| dcl \_ semantics \[ \_ schwerpunktid \] dst \[ .write \_ mask\] |
 
 
 
- 
+ 
 
 Hierbei gilt:
 
--   \_Semantik: identifiziert die beabsichtigte Datenverwendung und kann beliebige Werte in [**D3DDECLUSAGE**](/windows/desktop/direct3d9/d3ddeclusage) (ohne das \_ Präfix D3DDECLUSAGE) sein. Außerdem kann ein ganzzahliger Index an die Semantik angehängt werden, um Parameter zu unterscheiden, die eine ähnliche Semantik verwenden.
--   \[\_Schwerpunkt [](dx9-graphics-reference-asm-ps-instructions-modifiers-ps-2-0.md) \] ist ein optionaler Anweisungs Modifizierer. Sie wird in DCL \_ -Verwendungs Anweisungen unterstützt, die die Eingabe Register deklarieren, und in den Anweisungen für die Textur Suche. Dem Schwerpunkt wird kein Leerzeichen angefügt.
--   DST: Ziel Register. Siehe [PS \_ 3 \_ 0-Register](dx9-graphics-reference-asm-ps-registers-ps-3-0.md).
--   Schreib \_ Maske: dasselbe Ausgabe Register kann mehrmals deklariert werden, jedes Mal mit einer eindeutigen Schreib Maske (damit eine andere Semantik auf einzelne Komponenten angewendet werden kann). Die gleiche Semantik kann jedoch nicht mehrmals in einer Deklaration verwendet werden. Dies bedeutet, dass Vektoren vier Komponenten oder weniger sein müssen und nicht über vier Komponenten Register Grenzen (einzelne Ausgabe Register) hinausgehen können. Wenn die \_ Psize-Semantik verwendet wird, sollte Sie über eine vollständige Schreib Maske verfügen, da Sie als Skalar angesehen wird. Wenn die \_ Positions Semantik verwendet wird, sollte Sie über eine vollständige Schreib Maske verfügen, da alle vier Komponenten geschrieben werden müssen.
+-   \_semantics: Identifiziert die beabsichtigte Datenverwendung und kann einer der Werte in [**D3DDECLUSAGE**](/windows/desktop/direct3d9/d3ddeclusage) sein (ohne das Präfix D3DDECLUSAGE). \_ Darüber hinaus kann ein ganzzahliger Index an die Semantik angefügt werden, um Parameter zu unterscheiden, die eine ähnliche Semantik verwenden.
+-   \[\_[Schwerpunkt](dx9-graphics-reference-asm-ps-instructions-modifiers-ps-2-0.md) \] ist ein optionaler Anweisungsmodifizierer. Sie wird in \_ dcl-Verwendungsanweisungen unterstützt, die die Eingaberegister deklarieren, und in Anweisungen zur Textursuche. Der Schwerpunkt wird ohne Leerzeichen angefügt.
+-   dst: Zielregister. Siehe [ps \_ 3 \_ 0 Registers](dx9-graphics-reference-asm-ps-registers-ps-3-0.md).
+-   \_Schreibmaske: Das gleiche Ausgaberegister kann jedes Mal mit einer eindeutigen Schreibmaske deklariert werden (sodass verschiedene Semantik auf einzelne Komponenten angewendet werden kann). Dieselbe Semantik kann jedoch nicht mehrmals in einer Deklaration verwendet werden. Dies bedeutet, dass Vektoren mindestens vier Komponenten sein müssen und nicht über Vier-Komponenten-Registergrenzen (einzelne Ausgaberegister) hinausgehen können. Wenn die \_ Psize-Semantik verwendet wird, sollte sie über eine vollständige Schreibmaske verfügen, da sie als Skalar gilt. Wenn die \_ Positionssemantik verwendet wird, sollte sie über eine vollständige Schreibmaske verfügen, da alle vier Komponenten geschrieben werden müssen.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 
 
-| Pixel-Shader-Versionen | 1\_1 | 1\_2 | 1 \_ 3 | 1\_4 | 2 \_ 0 | 2 \_ x | 2 \_ SW | 3 \_ 0 | 3 \_ SW |
+| Pixelshaderversionen | 1\_1 | 1\_2 | 1 \_ 3 | 1\_4 | 2 \_ 0 | 2 \_ x | 2 \_ sw | 3 \_ 0 | 3 \_ sw |
 |-----------------------|------|------|------|------|------|------|-------|------|-------|
-| DCL- \_ Verwendung            |      |      |      |      |      |      |       | x    | x     |
+| dcl \_ usage            |      |      |      |      |      |      |       | x    | x     |
 
 
 
- 
+ 
 
-Alle DCL- \_ Verwendungs Anweisungen müssen vor der ersten ausführbaren Anweisung angezeigt werden.
+Alle \_ dcl-Verwendungsanweisungen müssen vor der ersten ausführbaren Anweisung angezeigt werden.
 
-## <a name="declaration-examples"></a>Deklarations Beispiele
+## <a name="declaration-examples"></a>Deklarationsbeispiele
 
 
 ```
@@ -86,12 +86,12 @@ texld r1, v1.zw, s1
 
 <dl> <dt>
 
-[Pixelshaderanweisungen](dx9-graphics-reference-asm-ps-instructions.md)
+[Anweisungen für Pixel-Shader](dx9-graphics-reference-asm-ps-instructions.md)
 </dt> <dt>
 
-[Beispiel für AntiAlias](https://msdn.microsoft.com/library/Ee415231(v=VS.85).aspx)
+[Antialias-Beispiel](https://msdn.microsoft.com/library/Ee415231(v=VS.85).aspx)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

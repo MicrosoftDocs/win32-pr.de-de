@@ -1,19 +1,19 @@
 ---
-description: Weist den Code Generator an, eine Datei zu generieren, und gibt den Namen der Ausgabedatei an.
+description: Leitet den Codegenerator an, eine Datei zu generieren, und gibt den Namen der Ausgabedatei an.
 ms.assetid: d2ee6886-995f-453d-8121-f849b2d910ec
 title: file-Element
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8bc20f7d6853ccd52b231e19c99d60fe4b71d15b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 41970da9cc6e389f4e45c5e55901ce8eb2e7797f
+ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106358817"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "107995867"
 ---
 # <a name="file-element"></a>file-Element
 
-Weist den Code Generator an, eine Datei zu generieren, und gibt den Namen der Ausgabedatei an.
+Leitet den Codegenerator an, eine Datei zu generieren, und gibt den Namen der Ausgabedatei an.
 
 ## <a name="usage"></a>Verbrauch
 
@@ -30,7 +30,7 @@ Weist den Code Generator an, eine Datei zu generieren, und gibt den Namen der Au
 
 | Attribut           | type                       | Erforderlich       | BESCHREIBUNG                                                                                                                         |
 |---------------------|----------------------------|----------------|-------------------------------------------------------------------------------------------------------------------------------------|
-| **name**<br/> | Pfadnamen-Zeichenfolge<br/> | Ja<br/> | Der Ausgabe Dateiname für den generierten Inhalt. Die Dateinamen Zeichenfolge muss Informationen zum kompletten Pfad enthalten.<br/> <br/> |
+| **name**<br/> | pathname string<br/> | Ja<br/> | Der Ausgabedateiname für den generierten Inhalt. Die Dateinamenzeichenfolge sollte vollständige Pfadinformationen enthalten.<br/> <br/> |
 
 
 
@@ -40,42 +40,42 @@ Weist den Code Generator an, eine Datei zu generieren, und gibt den Namen der Au
 
 | Element                                                                                                 | BESCHREIBUNG                                                                                                                                                                                                           |
 |---------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **CDATA**<br/>                                                                                    | Text-und CDATA-Abschnitte werden ohne Änderung in die Datei kopiert. Der Quellcode, der keine Funktion der Vertrags Eingabedaten ist, kann Ausgabedateien mithilfe von Text-und CDATA-Abschnitten hinzugefügt werden.<br/> <br/> |
-| [**enumerationvaluedeklarationen**](enumerationvaluedeclarations.md)<br/>                         | Generiert C-Deklarationen für Werte aller Enumerationstypen.<br/> <br/>                                                                                                                                   |
-| [**eventsourcebuilderdeklarationen**](eventsourcebuilderdeclarations.md)<br/>                     | Generiert Deklarationen für Funktionen, die Ereignis Quell Klassen erstellen.<br/> <br/>                                                                                                                         |
-| [**eventsourcebuilderimplementierungen**](eventsourcebuilderimplementations.md)<br/>               | Generiert Funktionen, die Ereignis Quell Klassen erstellen.<br/> <br/>                                                                                                                                          |
-| [**functiondeklarationen**](functiondeclarations.md)<br/>                                         | Generiert Implementierungs Deklarationen für Proxy Funktionen für Porttyp Vorgänge.<br/> <br/>                                                                                                            |
-| [**hostbuilderdeclaration**](hostbuilderdeclaration.md)<br/>                                     | Generiert eine Deklaration für eine Funktion, mit der ein typisierter Host erstellt wird.<br/> <br/>                                                                                                                              |
-| [**hostbuilderimplementation**](hostbuilderimplementation.md)<br/>                               | Generiert eine Funktion, mit der ein typisierter Host erstellt wird.<br/> <br/>                                                                                                                                                |
-| [**idlfunctiondeklarationen**](idlfunctiondeclarations.md)<br/>                                   | Generiert IDL-Deklarationen für Proxy Funktionen für Porttyp Vorgänge.<br/> <br/>                                                                                                                       |
-| [**darunter**](include.md)<br/>                                                                   | Schließt den Inhalt eines Makros oder einer Datei in die generierte Ausgabe ein.<br/> <br/>                                                                                                                              |
-| [**Iunknowndeklarationen**](iunknowndeclarations.md)<br/>                                         | Generiert Deklarationen für QueryInterface, adressf und Release.<br/> <br/>                                                                                                                                 |
-| [**Iunknowndefinitions**](iunknowndefinitions.md)<br/>                                           | Generiert Implementierungen für QueryInterface, adressf und Release.<br/> <br/>                                                                                                                              |
-| [**literalinclude**](literalinclude.md)<br/>                                                     | Fügt eine C-oder IDL-include-Anweisung in den generierten Code ein. <br/> <br/>                                                                                                                                    |
-| [**messagestructuredefinitions**](messagestructuredefinitions.md)<br/>                           | Generiert C-Strukturdefinitionen für Nachrichten Typen.<br/> <br/>                                                                                                                                           |
-| [**messagetypedeklarationen**](messagetypedeclarations.md)<br/>                                   | Generiert C-Konstante Deklarationen für XML-Schema Tabellen für Nachrichten Typen.<br/> <br/>                                                                                                                     |
-| [**messagetypedefinitions**](messagetypedefinitions.md)<br/>                                     | Generiert C-Konstanten für XML-Schema Tabellen für Nachrichten Typen.<br/> <br/>                                                                                                                                 |
-| [**Namespacedeklarationen**](namespacedeclarations.md)<br/>                                       | Generiert C-Deklarationen für Namespace Tabellen.<br/> <br/>                                                                                                                                                 |
-| [**namespacedefinitions**](namespacedefinitions.md)<br/>                                         | Generiert C-Definitionen für Namespace Tabellen.<br/> <br/>                                                                                                                                                  |
-| [**porttypeer-Deklarationen**](porttypedeclarations.md)<br/>                                         | Generiert C-Konstante Deklarationen für Porttypen.<br/> <br/>                                                                                                                                              |
-| [**porttypeer Definitionen**](porttypedefinitions.md)<br/>                                           | Generiert C-Konstanten für Porttypen.<br/> <br/>                                                                                                                                                          |
-| [**proxybuilderdeklarationen**](proxybuilderdeclarations.md)<br/>                                 | Generiert Deklarationen für Funktionen zum Erstellen typisierter Proxys.<br/> <br/>                                                                                                                                  |
-| [**proxybuilderimplementierungen**](proxybuilderimplementations.md)<br/>                           | Generiert Funktionen zum Erstellen typisierter Proxys.<br/> <br/>                                                                                                                                                   |
-| [**proxyfunctionimplementierungen**](proxyfunctionimplementations.md)<br/>                         | Generiert Implementierungen für Proxy Funktionen für Porttyp Vorgänge.<br/> <br/>                                                                                                                        |
-| [**relationshipMetadataDeclaration**](relationshipmetadatadeclaration.md)<br/>                   | Generiert eine vorwärts Deklaration für die hostmetadatenelemente, die im [**hostmetadata**](hostmetadata.md) -Element angegeben sind. <br/> <br/>                                                                       |
-| [**relationshipMetadataDefinition**](relationshipmetadatadefinition.md)<br/>                     | Generiert eine C-Konstantendefinition für die hostmetadatenelemente, die im [**hostmetadata**](hostmetadata.md) -Element angegeben sind. <br/> <br/>                                                                     |
-| [**structdeklarationen**](structdeclarations.md)<br/>                                             | Generiert C-Struktur Deklarationen für bekannte Typen.<br/> <br/>                                                                                                                                            |
-| [**structdefinitions**](structdefinitions.md)<br/>                                               | Generiert C-Strukturdefinitionen für bekannte Typen.<br/> <br/>                                                                                                                                             |
-| [**stubdeklarationen**](stubdeclarations.md)<br/>                                                 | Generiert Deklarationen für Stub-Funktionen für Porttyp Vorgänge.<br/> <br/>                                                                                                                            |
-| [**stubdefinitionen**](stubdefinitions.md)<br/>                                                   | Generiert Implementierungen für Stub-Funktionen für Porttyp Vorgänge.<br/> <br/>                                                                                                                         |
-| [**"abonnemenfunctiondeklarationen"**](subscriptionfunctiondeclarations.md)<br/>                 | Generiert Implementierungs Deklarationen für Abonnement-/abonnementproxyfunktionen für Porttyp-Benachrichtigungs Vorgänge.<br/> <br/>                                                                         |
-| [**"abonnemenidlfunctiondeklarationen"**](subscriptionidlfunctiondeclarations.md)<br/>           | Generiert IDL-Deklarationen für Abonnement-/abonnementproxyfunktionen für Port-Benachrichtigungs Vorgänge.<br/> <br/>                                                                                    |
-| [**abonnemenproxyfunctionimplementierungen**](subscriptionproxyfunctionimplementations.md)<br/> | Generiert Implementierungen für Abonnement-/Abonnement-Proxyfunktionen für Porttyp-Benachrichtigungs Vorgänge.<br/> <br/>                                                                                     |
-| **text**<br/>                                                                                     | Text-und CDATA-Abschnitte werden ohne Änderung in die Datei kopiert. Der Quellcode, der keine Funktion der Vertrags Eingabedaten ist, kann Ausgabedateien mithilfe von Text-und CDATA-Abschnitten hinzugefügt werden.<br/> <br/> |
-| [**thisModelMetadataDeclaration**](thismodelmetadatadeclaration.md)<br/>                         | Generiert eine vorwärts Deklaration für die C-Konstante für die im [**thismodelmetadata**](thismodelmetadata.md) -Element angegebenen Hersteller Metadaten.<br/> <br/>                                      |
-| [**thisModelMetadataDefinition**](thismodelmetadatadefinition.md)<br/>                           | Generiert eine C-Konstante für die im [**thismodelmetadata**](thismodelmetadata.md) -Element angegebenen Hersteller Metadaten.<br/> <br/>                                                                  |
-| [**typetable-Deklarationen**](typetabledeclarations.md)<br/>                                       | Generiert C-Konstante Deklarationen für XML-Schema Tabellen für bekannte Typen.<br/> <br/>                                                                                                                       |
-| [**typetabledefinitions**](typetabledefinitions.md)<br/>                                         | Generiert C-Konstanten für XML-Schema Tabellen für bekannte Typen.<br/> <br/>                                                                                                                                   |
+| **Cdata**<br/>                                                                                    | Text- und CDATA-Abschnitte werden ohne Änderung in die Datei kopiert. Quellcode, der keine Funktion der Vertragseingabedaten ist, kann Ausgabedateien mithilfe von Text- und CDATA-Abschnitten hinzugefügt werden.<br/> <br/> |
+| [**enumerationValueDeclarations**](enumerationvaluedeclarations.md)<br/>                         | Generiert C-Deklarationen für Werte aller aufzählten Typen.<br/> <br/>                                                                                                                                   |
+| [**eventSourceBuilderDeclarations**](eventsourcebuilderdeclarations.md)<br/>                     | Generiert Deklarationen für Funktionen, die Ereignisquellenklassen erstellen.<br/> <br/>                                                                                                                         |
+| [**eventSourceBuilderImplementations**](eventsourcebuilderimplementations.md)<br/>               | Generiert Funktionen, die Ereignisquellenklassen erstellen.<br/> <br/>                                                                                                                                          |
+| [**functionDeclarations**](functiondeclarations.md)<br/>                                         | Generiert Implementierungsdeklarationen für Proxyfunktionen für Porttypvorgänge.<br/> <br/>                                                                                                            |
+| [**hostBuilderDeclaration**](hostbuilderdeclaration.md)<br/>                                     | Generiert eine Deklaration für eine Funktion, die einen typierten Host erstellt.<br/> <br/>                                                                                                                              |
+| [**hostBuilderImplementation**](hostbuilderimplementation.md)<br/>                               | Generiert eine Funktion, die einen typierten Host erstellt.<br/> <br/>                                                                                                                                                |
+| [**idlFunctionDeclarations**](idlfunctiondeclarations.md)<br/>                                   | Generiert IDL-Deklarationen für Proxyfunktionen für Porttypvorgänge.<br/> <br/>                                                                                                                       |
+| [**include**](include.md)<br/>                                                                   | Schließt den Inhalt eines Makros oder einer Datei in die generierte Ausgabe ein.<br/> <br/>                                                                                                                              |
+| [**IUnknownDeclarations**](iunknowndeclarations.md)<br/>                                         | Generiert Deklarationen für QueryInterface, AddRef und Release.<br/> <br/>                                                                                                                                 |
+| [**IUnknownDefinitions**](iunknowndefinitions.md)<br/>                                           | Generiert Implementierungen für QueryInterface, AddRef und Release.<br/> <br/>                                                                                                                              |
+| [**literalInclude**](literalinclude.md)<br/>                                                     | Platziert eine C- oder IDL-Include-Anweisung im generierten Code. <br/> <br/>                                                                                                                                    |
+| [**messageStructureDefinitions**](messagestructuredefinitions.md)<br/>                           | Generiert C-Strukturdefinitionen für Nachrichtentypen.<br/> <br/>                                                                                                                                           |
+| [**messageTypeDeclarations**](messagetypedeclarations.md)<br/>                                   | Generiert C-Konstantendeklarationen für XML-Schematabellen für Nachrichtentypen.<br/> <br/>                                                                                                                     |
+| [**messageTypeDefinitions**](messagetypedefinitions.md)<br/>                                     | Generiert C-Konstanten für XML-Schematabellen für Nachrichtentypen.<br/> <br/>                                                                                                                                 |
+| [**namespaceDeclarations**](namespacedeclarations.md)<br/>                                       | Generiert C-Deklarationen für Namespacetabellen.<br/> <br/>                                                                                                                                                 |
+| [**namespaceDefinitions**](namespacedefinitions.md)<br/>                                         | Generiert C-Definitionen für Namespacetabellen.<br/> <br/>                                                                                                                                                  |
+| [**portTypeDeclarations**](porttypedeclarations.md)<br/>                                         | Generiert C-Konstantendeklarationen für Porttypen.<br/> <br/>                                                                                                                                              |
+| [**portTypeDefinitions**](porttypedefinitions.md)<br/>                                           | Generiert C-Konstanten für Porttypen.<br/> <br/>                                                                                                                                                          |
+| [**proxyBuilderDeclarations**](proxybuilderdeclarations.md)<br/>                                 | Generiert Deklarationen für Funktionen, um typierte Proxys zu erstellen.<br/> <br/>                                                                                                                                  |
+| [**proxyBuilderImplementations**](proxybuilderimplementations.md)<br/>                           | Generiert Funktionen, um typierte Proxys zu erstellen.<br/> <br/>                                                                                                                                                   |
+| [**proxyFunctionImplementations**](proxyfunctionimplementations.md)<br/>                         | Generiert Implementierungen für Proxyfunktionen für Porttypvorgänge.<br/> <br/>                                                                                                                        |
+| [**relationshipMetadataDeclaration**](relationshipmetadatadeclaration.md)<br/>                   | Generiert eine Vorwärtsdeklaration für die Hostingmetadaten, die im [**hostMetadata-Element angegeben**](hostmetadata.md) sind. <br/> <br/>                                                                       |
+| [**relationshipMetadataDefinition**](relationshipmetadatadefinition.md)<br/>                     | Generiert eine C-Konstantendefinition für die Hostingmetadaten, die im [**hostMetadata-Element angegeben**](hostmetadata.md) sind. <br/> <br/>                                                                     |
+| [**structDeclarations**](structdeclarations.md)<br/>                                             | Generiert C-Strukturdeklarationen für bekannte Typen.<br/> <br/>                                                                                                                                            |
+| [**structDefinitions**](structdefinitions.md)<br/>                                               | Generiert C-Strukturdefinitionen für bekannte Typen.<br/> <br/>                                                                                                                                             |
+| [**stubDeclarations**](stubdeclarations.md)<br/>                                                 | Generiert Deklarationen für Stubfunktionen für Porttypvorgänge.<br/> <br/>                                                                                                                            |
+| [**stubDefinitions**](stubdefinitions.md)<br/>                                                   | Generiert Implementierungen für Stubfunktionen für Porttypvorgänge.<br/> <br/>                                                                                                                         |
+| [**subscriptionFunctionDeclarations**](subscriptionfunctiondeclarations.md)<br/>                 | Generiert Implementierungsdeklarationen für Subscribe/Unsubscribe-Proxyfunktionen für Porttypbenachrichtigungsvorgänge.<br/> <br/>                                                                         |
+| [**subscriptionIdlFunctionDeclarations**](subscriptionidlfunctiondeclarations.md)<br/>           | Generiert IDL-Deklarationen für Subscribe/Unsubscribe-Proxyfunktionen für Porttypbenachrichtigungsvorgänge.<br/> <br/>                                                                                    |
+| [**subscriptionProxyFunctionImplementations**](subscriptionproxyfunctionimplementations.md)<br/> | Generiert Implementierungen für Subscribe/Unsubscribe-Proxyfunktionen für Porttypbenachrichtigungsvorgänge.<br/> <br/>                                                                                     |
+| **text**<br/>                                                                                     | Die Abschnitte Text und CDATA werden ohne Änderungen in die Datei kopiert. Quellcode, der keine Funktion der Vertragseingabedaten ist, kann Ausgabedateien mithilfe von Text- und CDATA-Abschnitten hinzugefügt werden.<br/> <br/> |
+| [**thisModelMetadataDeclaration**](thismodelmetadatadeclaration.md)<br/>                         | Generiert eine Vorwärtsdeklaration für die C-Konstante für die im [**thisModelMetadata-Element**](thismodelmetadata.md) angegebenen Herstellermetadaten.<br/> <br/>                                      |
+| [**thisModelMetadataDefinition**](thismodelmetadatadefinition.md)<br/>                           | Generiert eine C-Konstante für die im [**thisModelMetadata-Element**](thismodelmetadata.md) angegebenen Herstellermetadaten.<br/> <br/>                                                                  |
+| [**typeTableDeclarations**](typetabledeclarations.md)<br/>                                       | Generiert C-Konstantendeklarationen für XML-Schematabellen für bekannte Typen.<br/> <br/>                                                                                                                       |
+| [**typeTableDefinitions**](typetabledefinitions.md)<br/>                                         | Generiert C-Konstanten für XML-Schematabellen für bekannte Typen.<br/> <br/>                                                                                                                                   |
 
 
 
@@ -128,19 +128,19 @@ Weist den Code Generator an, eine Datei zu generieren, und gibt den Namen der Au
 
 | Element                                     | BESCHREIBUNG                                                                          |
 |---------------------------------------------|--------------------------------------------------------------------------------------|
-| [**wsdcodegen**](wsdcodegen.md)<br/> | Das Stamm Element einer XML-Skriptdatei des WSDAPI-Code-Generators.<br/> <br/> |
+| [**wsdCodeGen**](wsdcodegen.md)<br/> | Das Stammelement einer WSDAPI-Codegenerator-XML-Skriptdatei.<br/> <br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Name der Datei wird durch den Wert des Namens Attributs oder untergeordneten Elements bestimmt. Der Inhalt der Datei wird von den anderen untergeordneten Elementen, Text und CDATA im **File** -Element bestimmt. Text und CDATA werden unverändert in die Datei kopiert. Untergeordnete Elemente werden durch generierten Code ersetzt. Text, CDATA und untergeordnete Elemente können in beliebiger Reihenfolge auftreten und können unbegrenzt wiederholt werden.
+Der Name der Datei wird durch den Wert des Namensattributs oder untergeordneten Elements bestimmt. Der Inhalt der Datei wird durch die anderen untergeordneten Elemente text und CDATA im **Dateielement** bestimmt. Text und CDATA werden unverändert in die Datei kopiert. Untergeordnete Elemente werden durch generierten Code ersetzt. Text, CDATA und untergeordnete Elemente können in beliebiger Reihenfolge auftreten und unbegrenzt wiederholt werden.
 
 ## <a name="element-information"></a>Elementinformationen
 
 
 
-|                                     |               |
+| Bezeichnung | Wert |
 |-------------------------------------|---------------|
 | Unterstützte Mindestversion (System)<br/> | Windows Vista |
 | Kann leer bleiben                        | Nein            |

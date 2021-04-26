@@ -1,39 +1,39 @@
 ---
-description: Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie in der PrintSchema-Spezifikation.
+description: Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter Spezifikation des Druckschemas.
 ms.assetid: 941515a8-ba3f-47b9-9f3f-08a48122661a
 title: DocumentNUp
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 08fdf22fa557ce1da4fde20ad1d8ea14625a1b77
-ms.sourcegitcommit: 7b8f6151ebe247536304866459b2973276271d4d
+ms.openlocfilehash: ab531a2095e83aa35f3dff450270c2a5b4520d62
+ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "104219107"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "107996287"
 ---
 # <a name="documentnup"></a>DocumentNUp
 
-Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie in der [PrintSchema-Spezifikation](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip).
+Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter [Print Schema Specification (Spezifikation des Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 
-Beschreibt die Ausgabe und das Format mehrerer logischer Seiten an ein einzelnes physisches Blatt. Jedes Dokument wird separat kompiliert. "DocumentNUp" und "jobnupalldocumentsangrenzende" schließen sich gegenseitig aus. Der Treiber kann die Einschränkungs Behandlung zwischen diesen Schlüsselwörtern bestimmen.
+Beschreibt die Ausgabe und das Format mehrerer logischer Seiten auf einem einzelnen physischen Blatt. Jedes Dokument wird separat kompiliert. DocumentNUp und JobNUpAllDocuments Schließen sich gegenseitig aus. Der Treiber muss die Einschränkungsbehandlung zwischen diesen Schlüsselwörtern bestimmen.
 
-Das folgende Diagramm veranschaulicht ein Beispiel mit Dokument 1, das drei Seiten enthält, und Dokument 2, das zwei Seiten enthält. Jedes Dokument wird separat duplext. Die unten gezeigte Präsentations Richtung ist die Option RightBottom.
+Das folgende Diagramm veranschaulicht ein Beispiel mit Dokument 1 mit drei Seiten und Dokument 2 mit zwei Seiten. Jedes Dokument wird separat verduplext. Die unten gezeigte Darstellungsrichtung ist die RightBottom-Option.
 
-![ein Diagramm, das zeigt, wie Dokument Seiten basierend auf der DocumentNUp-Einstellung auf einem einzelnen Blatt angelegt werden](images/local-1663869164-docduplex1.gif)
+![Diagramm, das zeigt, wie Dokumentseiten basierend auf der Documentnupeinstellung auf einem einzelnen Blatt dargestellt werden](images/local-1663869164-docduplex1.gif)
 
 -   [Elementinformationen](#element-information)
 -   [Strukturelle Inhalte](#structural-content)
--   [Inhalt der Extensible Markup Language (XML)](#extensible-markup-language-xml-content)
+-   [Extensible Markup Language (XML) Content](#extensible-markup-language-xml-content)
 
 ## <a name="element-information"></a>Elementinformationen
 
 
 
-| Name                       |                                                                                                                                                 |
+| Name | Wert |
 |----------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|
 | Elementtyp <br/>   | Funktion<br/>                                                                                                                              |
-| Bereichs Präfix <br/> | Dokument<br/>                                                                                                                             |
-| Notizen <br/>          | Top, Bottom, Left und Right sind relativ zu PageImageableSize, wobei TopLeft durch den Ursprung der x-Achse und der y-Achse gekennzeichnet wird.<br/> |
+| Bereichspräfix <br/> | Dokument<br/>                                                                                                                             |
+| Hinweise <br/>          | Top, Bottom, Left und Right sind relativ zu PageImageableSize, wobei TopLeft durch den Ursprung der x-Achse und y-Achse bezeichnet wird.<br/> |
 
 
 
@@ -65,24 +65,24 @@ Die XML-Struktur dieses Elements lautet wie folgt:
 
 ## <a name="structure-variables"></a>Strukturvariablen
 
-In der folgenden Tabelle werden die Merkmale der Variablen beschrieben, die in der XML-Struktur definiert sind.
+In der folgenden Tabelle werden die Merkmale der in der XML-Struktur definierten Variablen beschrieben.
 
 
 
 | Name                                           | Datentyp          | Einheit                     | Unterstützte Werte                                                                                                                                                                      | Zusammenfassung                                                                                                                              |
 |------------------------------------------------|--------------------|--------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------|
-| \_Optionsname\_<br/>                      | Zeichenfolge<br/>  | Buchstaben<br/>    | Gültiger, voll qualifizierter Name, wie von [Namespaces in XML](https://www.w3.org/TR/1999/REC-xml-names-19990114/)definiert. Wenn kein Namespace angegeben wird, wird der Standard Namespace angenommen.<br/> | Der Name der Option.<br/>                                                                                                   |
-| \_Identityoptionvalue\_<br/>             | Zeichenfolge<br/>  | –<br/>           | TRUE, FALSE<br/>                                                                                                                                                               | Definiert eine Option, die diese Funktion deaktiviert, wenn Sie ausgewählt wird.<br/>                                                         |
-| \_Pagespersheetvalue\_<br/>              | integer<br/> | Logische Seiten<br/> | Alle ganzzahligen Werte (größer als null).<br/>                                                                                                                                          | Gibt die Anzahl der logischen Seiten pro physikalischer Tabelle an. Die unterstützte Menge kann eine beliebige Gruppe von Ganzzahlen sein, z.b. {1,2,4,6,8,9,16}.<br/> |
-| \_Presentationdirectionoptionname\_<br/> | Zeichenfolge<br/>  | Buchstaben<br/>    | Gültiger, voll qualifizierter Name, wie von [Namespaces in XML](https://www.w3.org/TR/1999/REC-xml-names-19990114/)definiert. Wenn kein Namespace angegeben wird, wird der Standard Namespace angenommen.<br/> | Der Name der Option.<br/>                                                                                                   |
+| \_Optionname\_<br/>                      | Zeichenfolge<br/>  | Buchstaben<br/>    | Gültiger vollqualifizierte Name, wie von [Namespaces in XML](https://www.w3.org/TR/1999/REC-xml-names-19990114/)definiert. Wenn kein Namespace angegeben ist, wird der Standardnamespace angenommen.<br/> | Der Name der Option.<br/>                                                                                                   |
+| \_IdentityOptionValue\_<br/>             | Zeichenfolge<br/>  | –<br/>           | TRUE, FALSE<br/>                                                                                                                                                               | Definiert eine Option, die diese Funktion deaktiviert, wenn sie ausgewählt wird.<br/>                                                         |
+| \_PagesPerSheetValue\_<br/>              | integer<br/> | Logische Seiten<br/> | Alle ganzen Zahlen (größer als Null).<br/>                                                                                                                                          | Gibt die Anzahl logischer Seiten pro physischem Blatt an. Der unterstützte Satz kann ein beliebiger Satz von ganzen Zahlen sein, z. B. {1,2,4,6,8,9,16}.<br/> |
+| \_PresentationDirectionOptionName\_<br/> | Zeichenfolge<br/>  | Buchstaben<br/>    | Gültiger vollqualifizierte Name, wie von [Namespaces in XML](https://www.w3.org/TR/1999/REC-xml-names-19990114/)definiert. Wenn kein Namespace angegeben ist, wird der Standardnamespace angenommen.<br/> | Der Name der Option.<br/>                                                                                                   |
 
 
 
  
 
-## <a name="extensible-markup-language-xml-content"></a>Inhalt der Extensible Markup Language (XML)
+## <a name="extensible-markup-language-xml-content"></a>Extensible Markup Language -Inhalt (XML)
 
-Die Schlüsselwörter der öffentlichen Druck Schemas werden im- https://schemas.microsoft.com/windows/2003/08/printing/printschemakeywords Namespace definiert. Der Inhalt des öffentlichen Extensible Markup Language (XML) für dieses Schlüsselwort wird unten definiert:
+Die Schlüsselwörter für das öffentliche Druckschema werden im https://schemas.microsoft.com/windows/2003/08/printing/printschemakeywords -Namespace definiert. Der Inhalt des öffentlichen Extensible Markup Language (XML) für dieses Schlüsselwort ist unten definiert:
 
 ``` syntax
 <psf:Feature name="psk:DocumentNUp">
@@ -120,7 +120,7 @@ Die Schlüsselwörter der öffentlichen Druck Schemas werden im- https://schemas
 
 <dl> <dt>
 
-[Druck Schema Spezifikation](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
+[Spezifikation des Druckschemas](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 </dt> </dl>
 
  

@@ -1,51 +1,50 @@
 ---
-description: Die folgenden Flags werden verwendet, um anzugeben, auf welchen Kanälen in einer Textur gearbeitet werden soll.
+description: Die folgenden Flags werden verwendet, um anzugeben, welche Kanäle in einer Textur verwendet werden sollen.
 ms.assetid: 0317b857-2512-4ad7-b6e3-82afdda7ea10
 title: D3DX_FILTER
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 128525de2e403c11239c300372b79bd8ee8c1277
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 3e6e1ab3ab51a73277da685b7ac562e84d1b94a9
+ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104481307"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "107997327"
 ---
-# <a name="d3dx_filter"></a>D3DX- \_ Filter
+# <a name="d3dx_filter"></a>\_D3DX-FILTER
 
-Die folgenden Flags werden verwendet, um anzugeben, auf welchen Kanälen in einer Textur gearbeitet werden soll.
+Die folgenden Flags werden verwendet, um anzugeben, welche Kanäle in einer Textur verwendet werden sollen.
 
 
 
-|                         |                                                                                                                                                                                                             |
+| \#Definieren                | BESCHREIBUNG                                                                                                                                                                                                 |
 |-------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| \#definieren                | BESCHREIBUNG                                                                                                                                                                                                 |
-| D3DX \_ Filter \_ None      | Es findet keine Skalierung oder Filterung statt. Es wird davon ausgegangen, dass Pixel außerhalb der Begrenzungen des Quell Bilds transparent schwarz sind.                                                                                 |
-| D3DX- \_ Filter \_ Punkt     | Jedes Zielpixel wird berechnet, indem das nächste Pixel aus dem Quell Image entnommen wird.                                                                                                                     |
-| D3DX- \_ Filter \_ linear    | Jedes Zielpixel wird berechnet, indem die vier nächsten Pixel aus dem Quell Image entnommen werden. Dieser Filter funktioniert am besten, wenn die Skala auf beiden Achsen kleiner als zwei ist.                                          |
-| D3DX \_ Filter \_ Dreieck  | Jedes Pixel im Quell Image trägt gleichermaßen dem Ziel Image bei. Dies ist der langsamste der Filter.                                                                                           |
-| D3DX \_ Filter \_ Feld       | Jedes Pixel wird berechnet, indem das Feld 2 x 2 (x2) aus dem Quell Abbild durchläuft. Dieser Filter kann nur verwendet werden, wenn die Abmessungen des Ziels die Hälfte der der Quelle sind, wie es bei MipMaps der Fall ist. |
-| D3DX \_ Filter \_ Spiegelung \_ U | Pixel am Rand der Textur auf der u-Achse sollten gespiegelt, nicht umschließt werden.                                                                                                                           |
-| D3DX \_ Filter \_ Spiegelung \_ V | Pixel am Rand der Textur auf der v-Achse sollten gespiegelt und nicht umschließt werden.                                                                                                                           |
-| D3DX \_ Filter \_ Spiegelung \_ | Pixel am Rand der Textur auf der w-Achse sollten gespiegelt, nicht umschließt werden.                                                                                                                           |
-| D3DX- \_ Filter \_ Spiegelung    | Die Angabe dieses Flags ist identisch mit dem Angeben der D3DX \_ Filter \_ Mirror \_ U, D3DX \_ Filter \_ Spiegel \_ V und D3DX \_ Filter \_ Mirror \_ W-Flags.                                                                     |
-| D3DX \_ Filter \_ Dither    | Das resultierende Bild muss mit einem 4 x 4-geordneten Dithering-Algorithmus ausgeblendet werden.                                                                                                                                  |
-| D3DX \_ \_ sRGB Filtern \_ in  | Die Eingabedaten befinden sich im sRGB-Farbraum (Gamma 2,2).                                                                                                                                                              |
-| D3DX \_ filtert \_ sRGB \_ out | Die Ausgabedaten befinden sich im sRGB-Farbraum (Gamma 2,2).                                                                                                                                                         |
-| D3DX \_ \_ sRGB Filtern      | Identisch \_ \_ mit der Angabe von D3DX Filter sRGB \_ in \| D3DX \_ Filter \_ sRGB \_ out.                                                                                                                                       |
+| D3DX \_ FILTER \_ NONE      | Es erfolgt keine Skalierung oder Filterung. Pixel außerhalb der Grenzen des Quellbilds werden als transparent schwarz angenommen.                                                                                 |
+| D3DX-FILTERPUNKT \_ \_     | Jedes Zielpixel wird durch Sampling des nächstgelegenen Pixels aus dem Quellbild berechnet.                                                                                                                     |
+| D3DX-FILTER \_ \_ LINEAR    | Jedes Zielpixel wird durch Sampling der vier nächstgelegenen Pixel aus dem Quellbild berechnet. Dieser Filter funktioniert am besten, wenn die Skalierung auf beiden Achsen kleiner als zwei ist.                                          |
+| \_D3DX-FILTERDREIECK \_  | Jedes Pixel im Quellbild trägt gleichermaßen zum Zielbild bei. Dies ist die langsamste der Filter.                                                                                           |
+| D3DX-FILTERFELD \_ \_       | Jedes Pixel wird berechnet, indem ein 2x2(x2)-Feld aus Pixeln aus dem Quellbild durchschnittlich berechnet wird. Dieser Filter funktioniert nur, wenn die Dimensionen des Ziels die Hälfte der Quelldimensionen sind, wie dies bei Mipmaps der Fall ist. |
+| D3DX-FILTERSPIEGELUNG \_ \_ \_ U | Pixel am Rand der Textur auf der U-Achse sollten gespiegelt und nicht umschlossen werden.                                                                                                                           |
+| \_D3DX-FILTERSPIEGELUNG \_ \_ V | Pixel am Rand der Textur auf der V-Achse sollten gespiegelt und nicht umschlossen werden.                                                                                                                           |
+| \_D3DX-FILTERSPIEGELUNG \_ \_ W | Pixel am Rand der Textur auf der W-Achse sollten gespiegelt und nicht umschlossen werden.                                                                                                                           |
+| \_D3DX-FILTERSPIEGELUNG \_    | Die Angabe dieses Flags entspricht der Angabe der W-Flags D3DX \_ FILTER \_ MIRROR \_ U, D3DX FILTER MIRROR V und \_ \_ \_ D3DX \_ FILTER \_ \_ MIRROR.                                                                     |
+| D3DX \_ FILTER \_ DITHER    | Das resultierende Bild muss mithilfe eines 4x4-geordneten Ditheralgorithmus geblendet werden.                                                                                                                                  |
+| D3DX \_ FILTER \_ SRGB \_ IN  | Die Eingabedaten sind im Farbraum sRGB (gamma 2.2) enthalten.                                                                                                                                                              |
+| D3DX \_ FILTER \_ SRGB \_ OUT | Die Ausgabedaten sind im Farbraum sRGB (Gamma 2,2) enthalten.                                                                                                                                                         |
+| D3DX \_ FILTER \_ SRGB      | Entspricht der Angabe von D3DX \_ FILTER \_ SRGB \_ IN \| D3DX \_ FILTER \_ SRGB \_ OUT.                                                                                                                                       |
 
 
 
  
 
-Jeder gültige Filter muss genau eines der folgenden Flags enthalten: D3DX \_ Filter \_ None, D3DX \_ Filter \_ Point, D3DX \_ Filter \_ linear, D3DX \_ Filter \_ Dreieck oder D3DX \_ Filter \_ Box. Außerdem können Sie mit dem-Operator oder dem-Operator NULL oder mehr der folgenden optionalen Flags mit einem gültigen Filter angeben: D3DX \_ Filter \_ Mirror \_ U, D3DX \_ Filter \_ Mirror \_ V, D3DX \_ Filter \_ Mirror \_ W, D3DX \_ Filter \_ Mirror, D3DX \_ Filter \_ Dither, D3DX \_ Filter \_ sRGB \_ in, D3DX \_ Filter \_ sRGB \_ out oder D3DX \_ Filter \_ sRGB.
+Jeder gültige Filter muss genau eines der folgenden Flags enthalten: D3DX \_ FILTER \_ NONE, D3DX \_ FILTER \_ POINT, D3DX \_ FILTER \_ LINEAR, D3DX \_ FILTER TRIANGLE oder \_ D3DX \_ FILTER \_ BOX. Darüber hinaus können Sie den OR-Operator verwenden, um null oder mehr der folgenden optionalen Flags mit einem gültigen Filter anzugeben: D3DX \_ FILTER \_ MIRROR \_ U, D3DX \_ FILTER MIRROR \_ \_ V, D3DX \_ FILTER MIRROR \_ \_ W, D3DX \_ FILTER \_ MIRROR, D3DX \_ FILTER \_ DITHER, D3DX \_ FILTER \_ SRGB \_ IN, D3DX \_ FILTER \_ SRGB OUT oder \_ D3DX \_ FILTER \_ SRGB.
 
-Das angeben \_ von D3DX default für diesen Parameter entspricht in der Regel der Angabe von D3DX \_ Filter \_ Dreieck \| D3DX \_ Filter \_ Dither. D3DX \_ Default kann jedoch unterschiedliche Bedeutungen haben, je nachdem, welche Methode den Filter verwendet. Beispiel:
+Die Angabe von D3DX \_ DEFAULT für diesen Parameter entspricht in der Regel der Angabe von D3DX FILTER TRIANGLE \_ \_ \| D3DX \_ FILTER \_ DITHER. D3DX DEFAULT kann jedoch \_ unterschiedliche Bedeutungen haben, je nachdem, welche Methode den Filter verwendet. Beispiel:
 
--   Bei Verwendung von [**D3DXCreateTextureFromFileEx**](d3dxcreatetexturefromfileex.md)wird D3DX \_ standardmäßig D3DX \_ Filter \_ Dreieck \| D3DX \_ Filter \_ Dither zugeordnet.
--   Wenn Sie [**D3DXFilterTexture**](d3dxfiltertexture.md)verwenden, \_ wird D3DX standardmäßig D3DX \_ Filter Box zugeordnet, \_ Wenn die Textur Größe eine Potenz von zwei ist, und D3DX \_ Filter \_ Box \| D3DX \_ Filter \_ anderenfalls.
+-   Bei Verwendung von [**D3DXCreateTextureFromFileEx**](d3dxcreatetexturefromfileex.md)wird D3DX \_ DEFAULT D3DX \_ FILTER TRIANGLE \_ \| D3DX \_ FILTER \_ DITHER zugeordnet.
+-   Bei Verwendung von [**D3DXFilterTexture**](d3dxfiltertexture.md)wird D3DX DEFAULT D3DX FILTER BOX zugestellt, wenn die Texturgröße eine Zweierleistung hat, andernfalls \_ \_ \_ D3DX \_ FILTER BOX \_ \| D3DX \_ FILTER \_ DITHER.
 
-Verweisen Sie auf jede Methode, um Informationen dazu zu finden, wie D3DX \_ default Filter zugeordnet ist.
+Verweisen Sie auf jede Methode, um nach Informationen zur Zuordnung des D3DX \_ DEFAULT-Filters zu prüfen.
 
 ## <a name="constant-information"></a>Konstante Informationen
 
@@ -53,8 +52,8 @@ Verweisen Sie auf jede Methode, um Informationen dazu zu finden, wie D3DX \_ def
 
 |                          |            |
 |--------------------------|------------|
-| Header                   | d3dx9tex. h |
-| Mindestens Betriebssystem | Windows 98 |
+| Header                   | d3dx9tex.h |
+| Mindestbetriebssystem | Windows 98 |
 
 
 

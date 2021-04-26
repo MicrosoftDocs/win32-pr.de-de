@@ -1,17 +1,17 @@
 ---
 description: Gibt die URL-Adresse für das Gerätemodell an.
 ms.assetid: 817a291c-34de-4780-b8b5-0f428864fa7d
-title: modelurl-Element
+title: modelURL-Element
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4b1026b784f766d4a10d4f368929202b652180ea
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 980ebd9b97a44372cda68b58add59258ff96a244
+ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104528583"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "107994347"
 ---
-# <a name="modelurl-element"></a>modelurl-Element
+# <a name="modelurl-element"></a>modelURL-Element
 
 Gibt die URL-Adresse für das Gerätemodell an.
 
@@ -35,7 +35,7 @@ Es gibt keine untergeordneten Elemente.
 
 | Element                                                   | BESCHREIBUNG                                                                                          |
 |-----------------------------------------------------------|------------------------------------------------------------------------------------------------------|
-| [**thismodelmetadata**](thismodelmetadata.md)<br/> | Definiert die Hersteller-und Modell Metadaten für das zu implementierende Gerät.<br/> <br/> |
+| [**thisModelMetadata**](thismodelmetadata.md)<br/> | Definiert die Hersteller- und Modellmetadaten für das zu implementierende Gerät.<br/> <br/> |
 
 
 
@@ -43,7 +43,7 @@ Es gibt keine untergeordneten Elemente.
 
 
 
-|                                     |               |
+| Bezeichnung | Wert |
 |-------------------------------------|---------------|
 | Unterstützte Mindestversion (System)<br/> | Windows Vista |
 | Kann leer bleiben                        | Ja           |

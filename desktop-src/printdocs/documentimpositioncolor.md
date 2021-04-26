@@ -1,21 +1,21 @@
 ---
-description: Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie in der PrintSchema-Spezifikation.
+description: Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter Spezifikation des Druckschemas.
 ms.assetid: e1cb7e46-3078-46bf-a8c8-e10f6b9dd222
-title: Documentimpositioncolor
+title: DocumentImpositionColor
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ea74db8ac616bc9ca6b7f6cde22f62bea742e7fb
-ms.sourcegitcommit: de72a1294df274b0a71dc0fdc42d757e5f6df0f3
+ms.openlocfilehash: 228d1efded114c9471a55c4f88ca6e51ed6337ca
+ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "106371839"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "107997867"
 ---
-# <a name="documentimpositioncolor"></a>Documentimpositioncolor
+# <a name="documentimpositioncolor"></a>DocumentImpositionColor
 
-Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie in der [PrintSchema-Spezifikation](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip).
+Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter [Print Schema Specification (Spezifikation des Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 
-Anwendungs Inhalt mit der angegebenen benannten Farbe muss in allen Farb Trennzeichen angezeigt werden.
+Anwendungsinhalt mit der angegebenen benannten Farbe MUSS in allen Farbtrennungen angezeigt werden.
 
 -   [Elementinformationen](#element-information)
 -   [Strukturieren von Inhalt](#structure-content)
@@ -24,10 +24,10 @@ Anwendungs Inhalt mit der angegebenen benannten Farbe muss in allen Farb Trennze
 
 
 
-| Name                       |                         |
+| Name | Wert |
 |----------------------------|-------------------------|
 | Elementtyp <br/>   | ParameterDef<br/> |
-| Bereichs Präfix <br/> | Dokument<br/>     |
+| Bereichspräfix <br/> | Dokument<br/>     |
 | Hinweise <br/>          | Keine<br/>         |
 
 
@@ -36,7 +36,7 @@ Anwendungs Inhalt mit der angegebenen benannten Farbe muss in allen Farb Trennze
 
 ## <a name="structure-content"></a>Strukturieren von Inhalt
 
-Die XML-Struktur dieses Elements lautet:
+Die XML-Struktur dieses Elements ist:
 
 ``` syntax
 <psf:ParameterDef name="psk:DocumentImpositionColor">
@@ -61,7 +61,7 @@ Die XML-Struktur dieses Elements lautet:
 </psf:ParameterDef>
 ```
 
-## <a name="structure-properties"></a>Struktur Eigenschaften
+## <a name="structure-properties"></a>Struktureigenschaften
 
 In der folgenden Tabelle werden die Merkmale der Variablen beschrieben, die in der XML-Struktur definiert sind.
 
@@ -72,9 +72,9 @@ In der folgenden Tabelle werden die Merkmale der Variablen beschrieben, die in d
 | DataType<br/>     | Zeichenfolge<br/>  | xs:string<br/>       |
 | DefaultValue<br/> | Zeichenfolge<br/>  | nicht definiert<br/>       |
 | MaxLength<br/>    | integer<br/> | nicht definiert<br/>       |
-| MinLength<br/>    | integer<br/> | 1<br/>               |
-| Obligatorisch.<br/>    | Zeichenfolge<br/>  | PSK: bedingt<br/> |
-| UnitType<br/>     | Zeichenfolge<br/>  | Buchstaben<br/>      |
+| Minlength<br/>    | integer<br/> | 1<br/>               |
+| Obligatorisch.<br/>    | Zeichenfolge<br/>  | psk:Conditional<br/> |
+| Unittype<br/>     | Zeichenfolge<br/>  | Buchstaben<br/>      |
 
 
 
@@ -84,7 +84,7 @@ In der folgenden Tabelle werden die Merkmale der Variablen beschrieben, die in d
 
 <dl> <dt>
 
-[Druck Schema Spezifikation](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
+[Spezifikation des Druckschemas](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 </dt> </dl>
 
  

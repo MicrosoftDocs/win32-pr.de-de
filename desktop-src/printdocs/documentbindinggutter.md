@@ -1,21 +1,21 @@
 ---
-description: Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie in der PrintSchema-Spezifikation.
+description: Dieses Thema ist nicht aktuell. Aktuelle Informationen finden Sie unter Print Schema Specification(Spezifikation des Druckschemas).
 ms.assetid: 903ad358-a060-4c8f-b72e-5ec2eb898248
-title: Documentbindingmötter
+title: DocumentBindingGutter
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4cf00f146373502564d559d00f66dedd24abf5b9
-ms.sourcegitcommit: de72a1294df274b0a71dc0fdc42d757e5f6df0f3
+ms.openlocfilehash: 2372636ea22610e6a209cfad3f1fe6297be34833
+ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "104219083"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "107997187"
 ---
-# <a name="documentbindinggutter"></a>Documentbindingmötter
+# <a name="documentbindinggutter"></a>DocumentBindingGutter
 
-Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie in der [PrintSchema-Spezifikation](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip).
+Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie unter Print Schema Specification (Spezifikation des [Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 
-Gibt die Breite des Bindungs bundlers an.
+Gibt die Breite des Bindungsstegs an.
 
 -   [Elementinformationen](#element-information)
 -   [Strukturieren von Inhalt](#structure-content)
@@ -24,11 +24,11 @@ Gibt die Breite des Bindungs bundlers an.
 
 
 
-| Name                       |                                              |
+| Name | Wert |
 |----------------------------|----------------------------------------------|
 | Elementtyp <br/>   | ParameterDef<br/>                      |
-| Bereichs Präfix <br/> | Dokument<br/>                          |
-| Notizen <br/>          | Verknüpft mit documentbinding-Element<br/> |
+| Bereichspräfix <br/> | Dokument<br/>                          |
+| Hinweise <br/>          | Verknüpft mit dem DocumentBinding-Element<br/> |
 
 
 
@@ -65,9 +65,9 @@ Die XML-Struktur dieses Elements lautet:
       
 ```
 
-## <a name="structure-properties"></a>Struktur Eigenschaften
+## <a name="structure-properties"></a>Struktureigenschaften
 
-In der folgenden Tabelle werden die Merkmale der Variablen beschrieben, die in der XML-Struktur definiert sind.
+In der folgenden Tabelle werden die Merkmale der in der XML-Struktur definierten Variablen beschrieben.
 
 
 
@@ -76,10 +76,10 @@ In der folgenden Tabelle werden die Merkmale der Variablen beschrieben, die in d
 | DataType<br/>     | Zeichenfolge<br/>  | xs:integer<br/>      |
 | DefaultValue<br/> | integer<br/> | nicht definiert<br/>       |
 | MaxValue<br/>     | integer<br/> | nicht definiert<br/>       |
-| MinValue<br/>     | integer<br/> | nicht definiert<br/>       |
-| Obligatorisch.<br/>    | String<br/>  | PSK: bedingt<br/> |
+| Minvalue<br/>     | integer<br/> | nicht definiert<br/>       |
+| Obligatorisch.<br/>    | Zeichenfolge<br/>  | psk:Conditional<br/> |
 | Mehrere<br/>     | integer<br/> | 1<br/>               |
-| UnitType<br/>     | Zeichenfolge<br/>  | Mikrometern<br/>         |
+| Unittype<br/>     | Zeichenfolge<br/>  | Mikron<br/>         |
 
 
 
@@ -89,7 +89,7 @@ In der folgenden Tabelle werden die Merkmale der Variablen beschrieben, die in d
 
 <dl> <dt>
 
-[Druck Schema Spezifikation](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
+[Spezifikation des Druckschemas](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 </dt> </dl>
 
  

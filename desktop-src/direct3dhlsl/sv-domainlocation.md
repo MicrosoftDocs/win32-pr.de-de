@@ -1,6 +1,6 @@
 ---
 title: SV_DomainLocation
-description: Definiert den Speicherort auf der Hülle des aktuellen Domänen Punkts, der ausgewertet wird.
+description: Definiert den Speicherort auf der Hülle des aktuellen Domänenpunkts, der ausgewertet wird.
 ms.assetid: 907f568c-7c45-41e5-96c4-6e6b816a4a53
 keywords:
 - SV_DomainLocation HLSL
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 3c5195881df438c94cdaed7de8484d0df65e4d54
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: cb9265734663881981f1626db6e23c6b7dd9415a
+ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "104389336"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "107996507"
 ---
-# <a name="sv_domainlocation"></a>SV \_ domainlocation
+# <a name="sv_domainlocation"></a>SV \_ DomainLocation
 
-Definiert den Speicherort auf der Hülle des aktuellen Domänen Punkts, der ausgewertet wird.
+Definiert den Speicherort auf der Hülle des aktuellen Domänenpunkts, der ausgewertet wird.
 
 ## <a name="type"></a>Typ
 
@@ -30,31 +30,30 @@ Definiert den Speicherort auf der Hülle des aktuellen Domänen Punkts, der ausg
 
 |        |                |
 |--------|----------------|
-| Typ   | Eingabe Topologie |
+| Typ   | Eingabetopologie |
 | float2 | Quad-Patch     |
-| float3 | Tri-Patch      |
-| float2 | Isolation        |
+| float3 | Tri Patch      |
+| float2 | Isoline        |
 
 
 
- 
+ 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieser System Wert ist erforderlich.
+Dieser Systemwert ist erforderlich.
 
-Diese Funktion wird in den folgenden Typen von Shadern unterstützt:
+Diese Funktion wird in den folgenden Shadertypen unterstützt:
 
 
 
-|        |      |        |          |       |         |
+| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
 |        |      | x      |          |       |         |
 
 
 
- 
+ 
 
 ## <a name="see-also"></a>Weitere Informationen
 
@@ -63,12 +62,12 @@ Diese Funktion wird in den folgenden Typen von Shadern unterstützt:
 [Semantik](dx-graphics-hlsl-semantics.md)
 </dt> <dt>
 
-[Shader-Modell 5](d3d11-graphics-reference-sm5.md)
+[Shadermodell 5](d3d11-graphics-reference-sm5.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

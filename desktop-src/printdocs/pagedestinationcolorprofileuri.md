@@ -1,21 +1,21 @@
 ---
-description: Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie in der PrintSchema-Spezifikation.
+description: Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter Spezifikation des Druckschemas.
 ms.assetid: b2a4a4d2-a8bc-48dc-ad56-20380f5f91c9
-title: Pagedestinationcolorprofileuri
+title: PageDestinationColorProfileURI
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8fff2ca269eaed9331f6c2077e6b396cca5a01c4
-ms.sourcegitcommit: de72a1294df274b0a71dc0fdc42d757e5f6df0f3
+ms.openlocfilehash: b321cba1608b1098dcc91f3800ef11f4968fb3f2
+ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "106353648"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "107996097"
 ---
-# <a name="pagedestinationcolorprofileuri"></a>Pagedestinationcolorprofileuri
+# <a name="pagedestinationcolorprofileuri"></a>PageDestinationColorProfileURI
 
-Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie in der [PrintSchema-Spezifikation](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip).
+Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter [Print Schema Specification (Spezifikation des Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 
-Gibt einen relativen URI-Verweis auf ein in einem XPS-Dokument enthaltenes ICC-Profil an. Die Verarbeitung dieser Option hängt von der Einstellung der pagedevicecolorspaceusage-Funktion ab. Es wird davon ausgegangen, dass alle Elemente, die dieses Profil verwenden, sich bereits im entsprechenden Geräte Farbraum befinden und im Treiber oder Gerät nicht farblich verwaltet werden.
+Gibt einen relativen URI-Verweis auf ein INTS-Profil an, das in einem XPS-Dokument enthalten ist. Die Verarbeitung dieser Option hängt von der Einstellung des Features PageDeviceColorSpaceUsage ab. Es wird davon ausgegangen, dass sich alle Elemente, die dieses Profil verwenden, bereits im entsprechenden Gerätefarbraum befinden und nicht im Treiber oder Gerät farblich verwaltet werden.
 
 -   [Elementinformationen](#element-information)
 -   [Strukturieren von Inhalt](#structure-content)
@@ -24,11 +24,11 @@ Gibt einen relativen URI-Verweis auf ein in einem XPS-Dokument enthaltenes ICC-P
 
 
 
-| Name                       |                                                          |
+| Name | Wert |
 |----------------------------|----------------------------------------------------------|
 | Elementtyp <br/>   | ParameterDef<br/>                                  |
-| Bereichs Präfix <br/> | Seite<br/>                                          |
-| Notizen <br/>          | Verknüpft mit pagedestinationcolorprofile-Element<br/> |
+| Bereichspräfix <br/> | Seite<br/>                                          |
+| Hinweise <br/>          | Mit PageDestinationColorProfile-Element verknüpft<br/> |
 
 
 
@@ -36,7 +36,7 @@ Gibt einen relativen URI-Verweis auf ein in einem XPS-Dokument enthaltenes ICC-P
 
 ## <a name="structure-content"></a>Strukturieren von Inhalt
 
-Die XML-Struktur dieses Elements lautet:
+Die XML-Struktur dieses Elements ist:
 
 ``` syntax
 <psf:ParameterDef name="psk:PageDestinationColorProfileURI">
@@ -62,7 +62,7 @@ Die XML-Struktur dieses Elements lautet:
       
 ```
 
-## <a name="structure-properties"></a>Struktur Eigenschaften
+## <a name="structure-properties"></a>Struktureigenschaften
 
 In der folgenden Tabelle werden die Merkmale der Variablen beschrieben, die in der XML-Struktur definiert sind.
 
@@ -73,9 +73,9 @@ In der folgenden Tabelle werden die Merkmale der Variablen beschrieben, die in d
 | DataType<br/>     | Zeichenfolge<br/>  | xs:string<br/>       |
 | DefaultValue<br/> | Zeichenfolge<br/>  | nicht definiert<br/>       |
 | MaxLength<br/>    | integer<br/> | nicht definiert<br/>       |
-| MinLength<br/>    | integer<br/> | 1<br/>               |
-| Obligatorisch.<br/>    | Zeichenfolge<br/>  | PSK: bedingt<br/> |
-| UnitType<br/>     | Zeichenfolge<br/>  | Buchstaben<br/>      |
+| Minlength<br/>    | integer<br/> | 1<br/>               |
+| Obligatorisch.<br/>    | Zeichenfolge<br/>  | psk:Conditional<br/> |
+| Unittype<br/>     | Zeichenfolge<br/>  | Buchstaben<br/>      |
 
 
 
@@ -85,7 +85,7 @@ In der folgenden Tabelle werden die Merkmale der Variablen beschrieben, die in d
 
 <dl> <dt>
 
-[Druck Schema Spezifikation](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
+[Spezifikation des Druckschemas](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 </dt> </dl>
 
  

@@ -1,19 +1,19 @@
 ---
-description: Generiert Deklarationen für die Funktionen QueryInterface, adressf und Release.
+description: Generiert Deklarationen für die Funktionen QueryInterface, AddRef und Release.
 ms.assetid: 347978e3-87f2-4a8b-969d-c196d1815881
-title: Iunknowndeklarationsdeselement
+title: IUnknownDeclarations-Element
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e15911166af637416758650378bf37dd0cb37697
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f4b8682b7286c5c99253df1ee1ae0efd235d5b8f
+ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104131768"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "107996697"
 ---
-# <a name="iunknowndeclarations-element"></a>Iunknowndeklarationsdeselement
+# <a name="iunknowndeclarations-element"></a>IUnknownDeclarations-Element
 
-Generiert Deklarationen für die Funktionen QueryInterface, adressf und Release.
+Generiert Deklarationen für die Funktionen QueryInterface, AddRef und Release.
 
 ## <a name="usage"></a>Verbrauch
 
@@ -35,7 +35,7 @@ Es gibt keine untergeordneten Elemente.
 
 | Element                         | BESCHREIBUNG                                                    |
 |---------------------------------|----------------------------------------------------------------|
-| [**Datei**](file.md)<br/> | Gibt eine Datei aus dem Code-Generator aus.<br/> <br/> |
+| [**Datei**](file.md)<br/> | Gibt eine Datei aus dem Codegenerator aus.<br/> <br/> |
 
 
 
@@ -43,7 +43,7 @@ Es gibt keine untergeordneten Elemente.
 
 
 
-|                                     |               |
+| Bezeichnung | Wert |
 |-------------------------------------|---------------|
 | Unterstützte Mindestversion (System)<br/> | Windows Vista |
 | Kann leer bleiben                        | Ja           |

@@ -1,21 +1,21 @@
 ---
-description: Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie in der PrintSchema-Spezifikation.
+description: Dieses Thema ist nicht aktuell. Aktuelle Informationen finden Sie unter Print Schema Specification(Spezifikation des Druckschemas).
 ms.assetid: 0de776f3-ae09-49f4-a829-b3c0e2ab5bbc
 title: PageScalingScaleWidth
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f7918f1a466621377e57190e0b967980fec1a07e
-ms.sourcegitcommit: de72a1294df274b0a71dc0fdc42d757e5f6df0f3
+ms.openlocfilehash: e4ef53d9fe2906ae04cd1e7e3ea1513a631bc162
+ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "106363054"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "107997457"
 ---
 # <a name="pagescalingscalewidth"></a>PageScalingScaleWidth
 
-Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie in der [PrintSchema-Spezifikation](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip).
+Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie unter Print Schema Specification (Spezifikation des [Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 
-Gibt den Skalierungsfaktor in der imageablesizewidth-Richtung für die benutzerdefinierte Skalierung an.
+Gibt den Skalierungsfaktor in der Richtung ImageableSizeWidth für die benutzerdefinierte Skalierung an.
 
 -   [Elementinformationen](#element-information)
 -   [Strukturieren von Inhalt](#structure-content)
@@ -24,11 +24,11 @@ Gibt den Skalierungsfaktor in der imageablesizewidth-Richtung für die benutzerd
 
 
 
-| Name                       |                                                         |
+| Name | Wert |
 |----------------------------|---------------------------------------------------------|
 | Elementtyp <br/>   | ParameterDef<br/>                                 |
-| Bereichs Präfix <br/> | Seite<br/>                                         |
-| Notizen <br/>          | Verknüpft mit PageScaling-Element, benutzerdefinierte Option<br/> |
+| Bereichspräfix <br/> | Seite<br/>                                         |
+| Hinweise <br/>          | Mit PageScaling-Element verknüpft, Option "Benutzerdefiniert"<br/> |
 
 
 
@@ -65,21 +65,21 @@ Die XML-Struktur dieses Elements lautet:
       
 ```
 
-## <a name="structure-properties"></a>Struktur Eigenschaften
+## <a name="structure-properties"></a>Struktureigenschaften
 
-In der folgenden Tabelle werden die Merkmale der Variablen beschrieben, die in der XML-Struktur definiert sind.
+In der folgenden Tabelle werden die Merkmale der in der XML-Struktur definierten Variablen beschrieben.
 
 
 
 | Eigenschaft                | xsi:type           | Wert                      |
 |-------------------------|--------------------|----------------------------|
-| DataType<br/>     | String<br/>  | xs:integer<br/>      |
+| DataType<br/>     | Zeichenfolge<br/>  | xs:integer<br/>      |
 | DefaultValue<br/> | Integer<br/> | nicht definiert<br/>       |
 | MaxValue<br/>     | Integer<br/> | nicht definiert<br/>       |
-| MinValue<br/>     | Integer<br/> | 1<br/>               |
-| Obligatorisch.<br/>    | String<br/>  | PSK: bedingt<br/> |
+| Minvalue<br/>     | Integer<br/> | 1<br/>               |
+| Obligatorisch.<br/>    | Zeichenfolge<br/>  | psk:Conditional<br/> |
 | Mehrere<br/>     | Integer<br/> | 1<br/>               |
-| UnitType<br/>     | String<br/>  | Mikrometern<br/>         |
+| Unittype<br/>     | Zeichenfolge<br/>  | Mikron<br/>         |
 
 
 
@@ -89,7 +89,7 @@ In der folgenden Tabelle werden die Merkmale der Variablen beschrieben, die in d
 
 <dl> <dt>
 
-[Druck Schema Spezifikation](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
+[Spezifikation des Druckschemas](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 </dt> </dl>
 
  

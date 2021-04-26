@@ -1,6 +1,6 @@
 ---
 title: SV_OutputControlPointID
-description: Definiert den Index der Kontrollpunkt-ID, die durch einen Aufruf des Haupt Einstiegs Punkts des Hull-Shader betrieben wird.
+description: Definiert den Index der Kontrollpunkt-ID, die durch einen Aufruf des Haupteinstiegspunkts des Hüllen-Shaders betrieben wird.
 ms.assetid: 0b4c070f-1c7b-4739-af32-16410d3c5abd
 keywords:
 - SV_OutputControlPointID HLSL
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: e828d8c9e4060888c914b9e6951a5baa06e33023
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: aa6ac503eb99b24bee8e869676812c473ab42bf5
+ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "103718918"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "107996907"
 ---
-# <a name="sv_outputcontrolpointid"></a>SV \_ outputcontrolpointid
+# <a name="sv_outputcontrolpointid"></a>SV \_ OutputControlPointID
 
-Definiert den Index der Kontrollpunkt-ID, die durch einen Aufruf des Haupt Einstiegs Punkts des Hull-Shader betrieben wird.
+Definiert den Index der Kontrollpunkt-ID, die durch einen Aufruf des Haupteinstiegspunkts des Hüllen-Shaders betrieben wird.
 
 ## <a name="type"></a>Typ
 
@@ -35,24 +35,23 @@ Definiert den Index der Kontrollpunkt-ID, die durch einen Aufruf des Haupt Einst
 
 
 
- 
+ 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieser System Wert ist optional.
+Dieser Systemwert ist optional.
 
-Diese Funktion wird in den folgenden Typen von Shadern unterstützt:
+Diese Funktion wird in den folgenden Shadertypen unterstützt:
 
 
 
-|        |      |        |          |       |         |
+| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
 |        | x    |        |          |       |         |
 
 
 
- 
+ 
 
 ## <a name="see-also"></a>Weitere Informationen
 
@@ -61,12 +60,12 @@ Diese Funktion wird in den folgenden Typen von Shadern unterstützt:
 [Semantik](dx-graphics-hlsl-semantics.md)
 </dt> <dt>
 
-[Shader-Modell 5](d3d11-graphics-reference-sm5.md)
+[Shadermodell 5](d3d11-graphics-reference-sm5.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

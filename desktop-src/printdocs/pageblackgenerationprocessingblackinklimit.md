@@ -1,21 +1,21 @@
 ---
-description: Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie in der PrintSchema-Spezifikation.
+description: Dieses Thema ist nicht aktuell. Aktuelle Informationen finden Sie unter Print Schema Specification(Spezifikation des Druckschemas).
 ms.assetid: 96b48917-1fbc-467f-b2b4-1a9673f1ee99
-title: Pgeblackgenerationprocessingblackinklimit
+title: PageBlackGenerationProcessingBlackInkLimit
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5f565b6190f9bda11727efde6e799b6fb979cecc
-ms.sourcegitcommit: de72a1294df274b0a71dc0fdc42d757e5f6df0f3
+ms.openlocfilehash: 3052d8cec8fd46c2f7607e6366aa6868cccbdbda
+ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "106363049"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "107996187"
 ---
-# <a name="pageblackgenerationprocessingblackinklimit"></a>Pgeblackgenerationprocessingblackinklimit
+# <a name="pageblackgenerationprocessingblackinklimit"></a>PageBlackGenerationProcessingBlackInkLimit
 
-Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie in der [PrintSchema-Spezifikation](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip).
+Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie unter Print Schema Specification (Spezifikation des [Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 
-Anwendungs Inhalt mit der angegebenen benannten Farbe muss in allen Farb Trennzeichen angezeigt werden.
+Anwendungsinhalt mit der angegebenen benannten Farbe MUSS bei allen Farbtrennungen angezeigt werden.
 
 -   [Elementinformationen](#element-information)
 -   [Strukturieren von Inhalt](#structure-content)
@@ -24,11 +24,11 @@ Anwendungs Inhalt mit der angegebenen benannten Farbe muss in allen Farb Trennze
 
 
 
-| Name                       |                                                            |
+| Name | Wert |
 |----------------------------|------------------------------------------------------------|
 | Elementtyp <br/>   | ParameterDef<br/>                                    |
-| Bereichs Präfix <br/> | Seite<br/>                                            |
-| Notizen <br/>          | Verknüpft mit dem Element "pgeblackgenerationprocessing"<br/> |
+| Bereichspräfix <br/> | Seite<br/>                                            |
+| Hinweise <br/>          | Verknüpft mit dem PageBlackGenerationProcessing-Element<br/> |
 
 
 
@@ -64,9 +64,9 @@ Die XML-Struktur dieses Elements lautet:
 </psf:ParameterDef>
 ```
 
-## <a name="structure-properties"></a>Struktur Eigenschaften
+## <a name="structure-properties"></a>Struktureigenschaften
 
-In der folgenden Tabelle werden die Merkmale der Variablen beschrieben, die in der XML-Struktur definiert sind.
+In der folgenden Tabelle werden die Merkmale der in der XML-Struktur definierten Variablen beschrieben.
 
 
 
@@ -75,10 +75,10 @@ In der folgenden Tabelle werden die Merkmale der Variablen beschrieben, die in d
 | DataType<br/>     | Zeichenfolge<br/>  | xs:integer<br/>      |
 | DefaultValue<br/> | Zeichenfolge<br/>  | nicht definiert<br/>       |
 | MaxValue<br/>     | integer<br/> | 100<br/>             |
-| MinValue<br/>     | integer<br/> | 0<br/>               |
+| Minvalue<br/>     | integer<br/> | 0<br/>               |
 | Mehrere<br/>     | integer<br/> | 1<br/>               |
-| Obligatorisch.<br/>    | Zeichenfolge<br/>  | PSK: bedingt<br/> |
-| UnitType<br/>     | Zeichenfolge<br/>  | Prozent<br/>         |
+| Obligatorisch.<br/>    | Zeichenfolge<br/>  | psk:Conditional<br/> |
+| Unittype<br/>     | Zeichenfolge<br/>  | Prozent<br/>         |
 
 
 
@@ -88,7 +88,7 @@ In der folgenden Tabelle werden die Merkmale der Variablen beschrieben, die in d
 
 <dl> <dt>
 
-[Druck Schema Spezifikation](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
+[Spezifikation des Druckschemas](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 </dt> </dl>
 
  

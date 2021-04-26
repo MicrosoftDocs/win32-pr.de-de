@@ -1,21 +1,21 @@
 ---
-description: Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie in der PrintSchema-Spezifikation.
+description: Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter Spezifikation des Druckschemas.
 ms.assetid: 73840548-f68b-4af8-acb4-6f7faa2e8879
-title: Documentoutputbin
+title: DocumentOutputBin
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 444ca63fee0b76f17909b1aa08e65cd468537dee
-ms.sourcegitcommit: 7b8f6151ebe247536304866459b2973276271d4d
+ms.openlocfilehash: 96f6d16ca000e76b01cd2c3165054d7acc81351b
+ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "104219095"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "107997137"
 ---
-# <a name="documentoutputbin"></a>Documentoutputbin
+# <a name="documentoutputbin"></a>DocumentOutputBin
 
-Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie in der [PrintSchema-Spezifikation](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip).
+Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter [Print Schema Specification (Spezifikation des Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 
-Beschreibt die vollständige Liste der unterstützten Container für das Gerät. Ermöglicht die Angabe des Ausgabe bin pro Dokument. Die Schlüsselwörter "joboutputbin", "documentoutputbin" und "pageoutputbin" schließen sich gegenseitig aus. nur eine sollte in einem PrintTicket-oder Druck Funktions Dokument angegeben werden.
+Beschreibt die vollständige Liste der unterstützten Behälter für das Gerät. Ermöglicht die Angabe des Ausgabebehälters pro Dokument. Die Schlüsselwörter JobOutputBin, DocumentOutputBin und PageOutputBin schließen sich gegenseitig aus, nur eines sollte in einem PrintTicket- oder Druckfunktionen-Dokument angegeben werden.
 
 -   [Elementinformationen](#element-information)
 
@@ -27,10 +27,10 @@ Beschreibt die vollständige Liste der unterstützten Container für das Gerät.
 
 
 
-| Name                       |                     |
+| Name | Wert |
 |----------------------------|---------------------|
 | Elementtyp <br/>   | Funktion<br/>  |
-| Bereichs Präfix <br/> | Dokument<br/> |
+| Bereichspräfix <br/> | Dokument<br/> |
 | Hinweise <br/>          | Keine<br/>     |
 
 
@@ -39,7 +39,7 @@ Beschreibt die vollständige Liste der unterstützten Container für das Gerät.
 
 ## <a name="structural-content"></a>Strukturelle Inhalte
 
-Die XML-Struktur dieses Elements lautet:
+Die XML-Struktur dieses Elements ist:
 
 ``` syntax
 <psf:Feature name="psk:DocumentOutputBin">
@@ -69,18 +69,18 @@ In der folgenden Tabelle werden die Merkmale der Variablen beschrieben, die in d
 
 | Name                                   | Datentyp          | Einheit                  | Unterstützte Werte                                                                                                                                                             | Zusammenfassung                                                                             |
 |----------------------------------------|--------------------|-----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------|
-| \_Optionsname\_<br/>              | Zeichenfolge<br/>  | Buchstaben<br/> | Gültiger voll qualifizierter Name, wie durch definiert https://www.w3.org/TR/1999/REC-xml-names-19990114/\#dt-qname . Wenn kein Namespace angegeben wird, wird der Standard Namespace angenommen.<br/> | Der Name der Option.<br/>                                                  |
-| \_Identityoptionvalue\_<br/>     | Zeichenfolge<br/>  | –<br/>        | TRUE, FALSE<br/>                                                                                                                                                      | Definiert eine Option, die diese Funktion deaktiviert, wenn Sie ausgewählt wird.<br/>        |
-| \_Bintypevalue\_<br/>            | Zeichenfolge<br/>  | –<br/>        | Mailbox, Sorter, Stack, Finisher, None.<br/>                                                                                                                         | Gibt den allgemeinen Typ der bin an.<br/>                                   |
-| \_Mediasheetcapacityvalue\_<br/> | integer<br/> | Glas<br/>     | Größer 0<br/>                                                                                                                                                   | Gibt die Medien Kapazität in der Anzahl der Seiten (vollständig) des bin an.<br/> |
+| \_Optionname\_<br/>              | Zeichenfolge<br/>  | Buchstaben<br/> | Gültiger vollqualifizierter Name, wie durch https://www.w3.org/TR/1999/REC-xml-names-19990114/\#dt-qname definiert. Wenn kein Namespace angegeben wird, wird der Standardnamespace angenommen.<br/> | Der Name der Option.<br/>                                                  |
+| \_IdentityOptionValue\_<br/>     | Zeichenfolge<br/>  | –<br/>        | TRUE, FALSE<br/>                                                                                                                                                      | Definiert eine Option, durch die diese Funktion deaktiviert wird, wenn sie ausgewählt wird.<br/>        |
+| \_BinTypeValue\_<br/>            | Zeichenfolge<br/>  | –<br/>        | MailBox, Sorter, Stacker, Finisher, None.<br/>                                                                                                                         | Gibt den allgemeinen Typ des Papierkorbs an.<br/>                                   |
+| \_MediaSheetCapacityValue\_<br/> | integer<br/> | Blätter<br/>     | Größer 0<br/>                                                                                                                                                   | Gibt die Medienkapazität in der Anzahl der Seiten (vollständige Ebene) des Papierkorbs an.<br/> |
 
 
 
  
 
-## <a name="extensible-markup-language-xml-content"></a>Inhalt der Extensible Markup Language (XML)
+## <a name="extensible-markup-language-xml-content"></a>Extensible Markup Language -Inhalt (XML)
 
-Die Schlüsselwörter der öffentlichen Druck Schemas werden im- https://schemas.microsoft.com/windows/2003/08/printing/printschemakeywords Namespace definiert. Der Inhalt des öffentlichen Extensible Markup Language (XML) für dieses Schlüsselwort wird unten definiert:
+Die Schlüsselwörter für das öffentliche Druckschema werden im https://schemas.microsoft.com/windows/2003/08/printing/printschemakeywords -Namespace definiert. Der Inhalt des öffentlichen Extensible Markup Language (XML) für dieses Schlüsselwort ist unten definiert:
 
 ``` syntax
 <psf:Feature name="psk:DocumentOutputBin">
@@ -104,7 +104,7 @@ Die Schlüsselwörter der öffentlichen Druck Schemas werden im- https://schemas
 
 <dl> <dt>
 
-[Druck Schema Spezifikation](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
+[Spezifikation des Druckschemas](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 </dt> </dl>
 
  

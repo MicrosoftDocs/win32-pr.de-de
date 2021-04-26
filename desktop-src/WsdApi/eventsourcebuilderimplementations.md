@@ -1,19 +1,19 @@
 ---
-description: Generiert Funktionen, die Ereignis Quell Klassen erstellen.
+description: Generiert Funktionen, die Ereignisquellklassen erstellen.
 ms.assetid: 002e5b2c-8853-4500-bf53-71f839da97f3
-title: eventsourcebuilderimplementierungen-Element
+title: eventSourceBuilderImplementations-Element
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c50ffcbf24ace4b624748c1a3e91b39c34587d7a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 4eb9e3482c7a3746bf065a8c20cec551d3154942
+ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103864000"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "107995897"
 ---
-# <a name="eventsourcebuilderimplementations-element"></a>eventsourcebuilderimplementierungen-Element
+# <a name="eventsourcebuilderimplementations-element"></a>eventSourceBuilderImplementations-Element
 
-Generiert Funktionen, die Ereignis Quell Klassen erstellen.
+Generiert Funktionen, die Ereignisquellklassen erstellen.
 
 ## <a name="usage"></a>Verbrauch
 
@@ -33,7 +33,7 @@ Es gibt keine Attribute.
 
 | Element                                     | BESCHREIBUNG                                                                           |
 |---------------------------------------------|---------------------------------------------------------------------------------------|
-| [**proxyClass**](proxyclass.md)<br/> | Klassenname, der aus der Ereignis Quellen-Generator-Funktion generiert werden soll.<br/> <br/> |
+| [**proxyClass**](proxyclass.md)<br/> | Klassenname, der aus der Funktion des Ereignisquellgenerators generiert werden soll.<br/> <br/> |
 
 
 
@@ -49,7 +49,7 @@ proxyClass
 
 | Element                         | BESCHREIBUNG                                                    |
 |---------------------------------|----------------------------------------------------------------|
-| [**Datei**](file.md)<br/> | Gibt eine Datei aus dem Code-Generator aus.<br/> <br/> |
+| [**Datei**](file.md)<br/> | Gibt eine Datei aus dem Codegenerator aus.<br/> <br/> |
 
 
 
@@ -57,7 +57,7 @@ proxyClass
 
 
 
-|                                     |               |
+| Bezeichnung | Wert |
 |-------------------------------------|---------------|
 | Unterstützte Mindestversion (System)<br/> | Windows Vista |
 | Kann leer bleiben                        | Nein            |

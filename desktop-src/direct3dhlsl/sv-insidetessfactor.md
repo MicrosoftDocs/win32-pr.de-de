@@ -1,6 +1,6 @@
 ---
 title: SV_InsideTessFactor
-description: Definiert den Mosaik Betrag innerhalb einer patchoberfläche.
+description: Definiert den Mosaikbetrag innerhalb einer Patchoberfläche.
 ms.assetid: f0762aca-d84d-44c0-a163-9737ef92c1e5
 keywords:
 - SV_InsideTessFactor HLSL
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 4a05cabbb9410136d2bd82ee272ad92ff1b1f430
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 4d047f7961868de020ac50ffce22b6ce02d078a5
+ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "104976209"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "107996917"
 ---
-# <a name="sv_insidetessfactor"></a>SV \_ insidetess Factor
+# <a name="sv_insidetessfactor"></a>SV \_ InsideTessFactor
 
-Definiert den Mosaik Betrag innerhalb einer patchoberfläche.
+Definiert den Mosaikbetrag innerhalb einer Patchoberfläche.
 
 ## <a name="type"></a>Typ
 
@@ -30,35 +30,34 @@ Definiert den Mosaik Betrag innerhalb einer patchoberfläche.
 
 |            |                |
 |------------|----------------|
-| Typ       | Eingabe Topologie |
+| Typ       | Eingabetopologie |
 | float \[ 2\] | Quad-Patch     |
-| float      | Tri-Patch      |
-| unused     | Isolation        |
+| float      | Tri Patch      |
+| unused     | Isoline        |
 
 
 
- 
+ 
 
-Mosaik Faktoren müssen als Array deklariert werden. Sie können nicht in einen einzigen Vektor gepackt werden.
+Mosaikfaktoren müssen als Array deklariert werden. sie können nicht in einen einzelnen Vektor gepackt werden.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieser Wert muss während der Funktion Patch Constant des Hull-Shaders definiert werden.
+Dieser Wert muss während der Patchkonstantenfunktion des Hüllen-Shaders definiert werden.
 
-Erforderlicher Ausgabewert für den Hull-Shader bei Verwendung von Quad-oder Tri-Patches. Bei diesem Wert handelt es sich um eine erforderliche Eingabe für den Domänen-Shader, damit die Hardware die Signaturen über den Mosaik Prozess abgleichen kann.
+Erforderlicher Ausgabewert für den Hüllen-Shader bei Verwendung von Quad- oder Tri-Patches. Dieser Wert ist eine erforderliche Eingabe für den Domänen-Shader, damit die Hardware mit den Signaturen über den Mosaikator übereinstimmt.
 
-Diese Funktion wird in den folgenden Typen von Shadern unterstützt:
+Diese Funktion wird in den folgenden Shadertypen unterstützt:
 
 
 
-|        |      |        |          |       |         |
+| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
 |        | x    | x      |          |       |         |
 
 
 
- 
+ 
 
 ## <a name="see-also"></a>Weitere Informationen
 
@@ -67,12 +66,12 @@ Diese Funktion wird in den folgenden Typen von Shadern unterstützt:
 [Semantik](dx-graphics-hlsl-semantics.md)
 </dt> <dt>
 
-[Shader-Modell 5](d3d11-graphics-reference-sm5.md)
+[Shadermodell 5](d3d11-graphics-reference-sm5.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

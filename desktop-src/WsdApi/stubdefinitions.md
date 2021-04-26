@@ -1,19 +1,19 @@
 ---
-description: Generiert Implementierungen für Stub-Funktionen für Porttyp Vorgänge.
+description: Generiert Implementierungen für Stubfunktionen für Porttypvorgänge.
 ms.assetid: 69899302-db54-493b-90de-596750be566f
-title: stubdefinitions-Element
+title: stubDefinitions-Element
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c6676cfc6cf55aa9c9961bd614506500d847def0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 42c60b071c901538122751f6e92cfd7049f7be88
+ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106347620"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "107994687"
 ---
-# <a name="stubdefinitions-element"></a>stubdefinitions-Element
+# <a name="stubdefinitions-element"></a>stubDefinitions-Element
 
-Generiert Implementierungen für Stub-Funktionen für Porttyp Vorgänge.
+Generiert Implementierungen für Stubfunktionen für Porttypvorgänge.
 
 ## <a name="usage"></a>Verbrauch
 
@@ -33,14 +33,14 @@ Es gibt keine Attribute.
 
 | Element                                                         | BESCHREIBUNG                                                                                                             |
 |-----------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------|
-| [**deallokator**](deallocator.md)<br/>                   | Gibt den Typ der dezuweisung an, der von einer stubfunktion verwendet werden soll.<br/> <br/>                                 |
-| [**EventArg**](eventarg.md)<br/>                         | Gibt an, ob Verwandte Ereignis Argumente in den generierten Funktionen enthalten sind.<br/> <br/>               |
-| [**Fall**](events.md)<br/>                             | Gibt an, ob verwandte Ereignisse in den generierten Funktionen enthalten sind.<br/> <br/>                        |
-| [**faultinfo**](faultinfo.md)<br/>                       | Gibt an, ob Parameter, die zum Übergeben von Fehlerinformationen verwendet werden, in generierte Funktionen eingeschlossen werden<br/> <br/> |
-| [**Betriebs**](operation.md)<br/>                       | Gibt einen Vorgang an, für den Code generiert werden soll.<br/> <br/>                                        |
-| [**operationentzuordcator**](operationdeallocator.md)<br/> | Gibt den Typ der dezuweisung an, der von der Stub-Funktion eines Vorgangs verwendet werden soll.<br/> <br/>                    |
-| [**PortType**](porttype.md)<br/>                         | Gibt den Porttyp an, für den Code generiert werden soll.<br/> <br/>                                       |
-| [**Server Class**](serverclass.md)<br/>                   | Gibt den Namen der Host seitigen Serverklasse an.<br/> <br/>                                                |
+| [**Deallocator**](deallocator.md)<br/>                   | Gibt den Typ des Deallocators an, der von einer Stubfunktion verwendet werden soll.<br/> <br/>                                 |
+| [**eventArg**](eventarg.md)<br/>                         | Gibt an, ob verwandte Ereignisargumente in den generierten Funktionen enthalten sind.<br/> <br/>               |
+| [**Ereignisse**](events.md)<br/>                             | Gibt an, ob verwandte Ereignisse in den generierten Funktionen enthalten sind.<br/> <br/>                        |
+| [**faultInfo**](faultinfo.md)<br/>                       | Gibt an, ob Parameter, die zum Übergeben von Fehlerinformationen verwendet werden, in generierten Funktionen enthalten sind.<br/> <br/> |
+| [**Vorgang**](operation.md)<br/>                       | Gibt einen Vorgang an, für den Code generiert werden soll.<br/> <br/>                                        |
+| [**operationDeallocator**](operationdeallocator.md)<br/> | Gibt den Typ des Deallocators an, der von der Stubfunktion eines Vorgangs verwendet werden soll.<br/> <br/>                    |
+| [**Porttype**](porttype.md)<br/>                         | Gibt den Porttyp an, für den Code generiert werden soll.<br/> <br/>                                       |
+| [**serverClass**](serverclass.md)<br/>                   | Gibt den Namen der hostseitigen Serverklasse an.<br/> <br/>                                                |
 
 
 
@@ -65,7 +65,7 @@ Es gibt keine Attribute.
 
 | Element                         | BESCHREIBUNG                                                    |
 |---------------------------------|----------------------------------------------------------------|
-| [**Datei**](file.md)<br/> | Gibt eine Datei aus dem Code-Generator aus.<br/> <br/> |
+| [**Datei**](file.md)<br/> | Gibt eine Datei aus dem Codegenerator aus.<br/> <br/> |
 
 
 
@@ -73,7 +73,7 @@ Es gibt keine Attribute.
 
 
 
-|                                     |               |
+| Bezeichnung | Wert |
 |-------------------------------------|---------------|
 | Unterstützte Mindestversion (System)<br/> | Windows Vista |
 | Kann leer bleiben                        | Nein            |

@@ -1,21 +1,21 @@
 ---
-description: Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie in der PrintSchema-Spezifikation.
+description: Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter Spezifikation des Druckschemas.
 ms.assetid: a1a684ce-5615-4ff7-a7aa-5c9f786f84ed
-title: Pagemediasizepswidth
+title: PageMediaSizePSWidth
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a7fef8b9e3740c5f12045e449f2a6b8100d7fc1d
-ms.sourcegitcommit: de72a1294df274b0a71dc0fdc42d757e5f6df0f3
+ms.openlocfilehash: 2f4399b75f047c2705983c893075995800396120
+ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "106363046"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "107997547"
 ---
-# <a name="pagemediasizepswidth"></a>Pagemediasizepswidth
+# <a name="pagemediasizepswidth"></a>PageMediaSizePSWidth
 
-Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie in der [PrintSchema-Spezifikation](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip).
+Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter [Print Schema Specification (Spezifikation des Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 
-Gibt die Breite der Seite senkrecht zur Richtung der Feed-Ausrichtung an (Reference [PostScript Printer Description File Format Specification](https://www.adobe.com/products/postscript/pdfs/PLRM.pdf)).
+Gibt die Breite der Seite an, die der Ausrichtungsrichtung des Feeds entspricht (Referenz [zur Spezifikation des Dateiformats der PostScript-Druckerbeschreibung](https://www.adobe.com/products/postscript/pdfs/PLRM.pdf)).
 
 -   [Elementinformationen](#element-information)
 -   [Strukturieren von Inhalt](#structure-content)
@@ -24,11 +24,11 @@ Gibt die Breite der Seite senkrecht zur Richtung der Feed-Ausrichtung an (Refere
 
 
 
-| Name                       |                                                             |
+| Name | Wert |
 |----------------------------|-------------------------------------------------------------|
 | Elementtyp <br/>   | ParameterDef<br/>                                     |
-| Bereichs Präfix <br/> | Seite<br/>                                             |
-| Notizen <br/>          | Verknüpft mit PageMediaSize-Element, customps-Option<br/> |
+| Bereichspräfix <br/> | Seite<br/>                                             |
+| Hinweise <br/>          | Mit PageMediaSize-Element verknüpft, CustomPS-Option<br/> |
 
 
 
@@ -36,7 +36,7 @@ Gibt die Breite der Seite senkrecht zur Richtung der Feed-Ausrichtung an (Refere
 
 ## <a name="structure-content"></a>Strukturieren von Inhalt
 
-Die XML-Struktur dieses Elements lautet:
+Die XML-Struktur dieses Elements ist:
 
 ``` syntax
 <psf:ParameterDef name="psk:PageMediaSizePSWidth">
@@ -65,7 +65,7 @@ Die XML-Struktur dieses Elements lautet:
       
 ```
 
-## <a name="structure-properties"></a>Struktur Eigenschaften
+## <a name="structure-properties"></a>Struktureigenschaften
 
 In der folgenden Tabelle werden die Merkmale der Variablen beschrieben, die in der XML-Struktur definiert sind.
 
@@ -76,10 +76,10 @@ In der folgenden Tabelle werden die Merkmale der Variablen beschrieben, die in d
 | DataType<br/>     | Zeichenfolge<br/>  | xs:integer<br/>      |
 | DefaultValue<br/> | integer<br/> | nicht definiert<br/>       |
 | MaxValue<br/>     | integer<br/> | nicht definiert<br/>       |
-| MinValue<br/>     | integer<br/> | nicht definiert<br/>       |
-| Obligatorisch.<br/>    | Zeichenfolge<br/>  | PSK: bedingt<br/> |
+| Minvalue<br/>     | integer<br/> | nicht definiert<br/>       |
+| Obligatorisch.<br/>    | Zeichenfolge<br/>  | psk:Conditional<br/> |
 | Mehrere<br/>     | integer<br/> | 1<br/>               |
-| UnitType<br/>     | Zeichenfolge<br/>  | Mikrometern<br/>         |
+| Unittype<br/>     | Zeichenfolge<br/>  | Mikron<br/>         |
 
 
 
@@ -89,10 +89,10 @@ In der folgenden Tabelle werden die Merkmale der Variablen beschrieben, die in d
 
 <dl> <dt>
 
-[Datei Format Spezifikation für PostScript-Drucker Beschreibung](https://www.adobe.com/products/postscript/pdfs/PLRM.pdf)
+[Spezifikation des Dateiformats der PostScript-Druckerbeschreibung](https://www.adobe.com/products/postscript/pdfs/PLRM.pdf)
 </dt> <dt>
 
-[Druck Schema Spezifikation](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
+[Spezifikation des Druckschemas](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 </dt> </dl>
 
  

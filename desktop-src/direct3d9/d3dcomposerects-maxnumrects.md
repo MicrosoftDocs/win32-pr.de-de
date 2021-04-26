@@ -1,26 +1,25 @@
 ---
-description: Gibt die maximale Anzahl von Rechtecke an, die beim Erstellen von Glyphen in composerects verwendet werden.
+description: Gibt die maximale Anzahl von Rechtecke an, die beim Zusammenstellen von Glyphen in ComposeRects verwendet werden.
 ms.assetid: baf38e21-96b9-496f-8bec-7d2e28c1676d
 title: D3DCOMPOSERECTS_MAXNUMRECTS
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 05312eb1bedc862805d3924f1946dcc73f817606
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: a44538f279275875686951faadfec4b3b47161c6
+ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104041478"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "107996377"
 ---
-# <a name="d3dcomposerects_maxnumrects"></a>D3DCOMPOSERECTS \_ maxnumrects
+# <a name="d3dcomposerects_maxnumrects"></a>D3DCOMPOSERECTS \_ MAXNUMRECTS
 
-Gibt die maximale Anzahl von Rechtecke an, die beim Erstellen von Glyphen in [**composerects**](/windows/desktop/api/d3d9/nf-d3d9-idirect3ddevice9ex-composerects)verwendet werden.
+Gibt die maximale Anzahl von Rechtecke an, die beim Zusammenstellen von Glyphen in [**ComposeRects verwendet werden.**](/windows/desktop/api/d3d9/nf-d3d9-idirect3ddevice9ex-composerects)
 
 
 
-|                              |                                                                                                                                      |
+| \#Definieren                     | BESCHREIBUNG                                                                                                                          |
 |------------------------------|--------------------------------------------------------------------------------------------------------------------------------------|
-| \#definieren                     | BESCHREIBUNG                                                                                                                          |
-| D3DCOMPOSERECTS \_ maxnumrects | Maximale Anzahl der Rechteck Symbole, die in einer Text Zeichenfolge zusammengesetzt werden sollen. Siehe [**composerects**](/windows/desktop/api/d3d9/nf-d3d9-idirect3ddevice9ex-composerects). |
+| D3DCOMPOSERECTS \_ MAXNUMRECTS | Maximale Anzahl von Rechteck-Glyphen, die in einer Textzeichenfolge zusammen erstellt werden. Weitere Informationen [**finden Sie unter ComposeRects**](/windows/desktop/api/d3d9/nf-d3d9-idirect3ddevice9ex-composerects). |
 
 
 
@@ -32,8 +31,8 @@ Gibt die maximale Anzahl von Rechtecke an, die beim Erstellen von Glyphen in [**
 
 |                          |             |
 |--------------------------|-------------|
-| Header                   | d3d9types. h |
-| Mindestens Betriebssystem |             |
+| Header                   | d3d9types.h |
+| Mindestbetriebssystem |             |
 
 
 

@@ -1,21 +1,21 @@
 ---
-description: Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie in der PrintSchema-Spezifikation.
+description: Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter Spezifikation des Druckschemas.
 ms.assetid: ba62f902-9bc9-4492-ab53-4a4ddbc23530
-title: "\"Pgeblackgenerationprocessinggraycomponentreplacementextent\""
+title: PageBlackGenerationProcessingGrayComponentReplacementExtent
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 58c71700b23459c087361e9e28ac0c43120aff90
-ms.sourcegitcommit: de72a1294df274b0a71dc0fdc42d757e5f6df0f3
+ms.openlocfilehash: 6f9a790d66d1f7806a7ef86ee4a85f62225aa836
+ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "103869656"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "107997707"
 ---
-# <a name="pageblackgenerationprocessinggraycomponentreplacementextent"></a>"Pgeblackgenerationprocessinggraycomponentreplacementextent"
+# <a name="pageblackgenerationprocessinggraycomponentreplacementextent"></a>PageBlackGenerationProcessingGrayComponentReplacementExtent
 
-Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie in der [PrintSchema-Spezifikation](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip).
+Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter [Print Schema Specification (Spezifikation des Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 
-Beschreibt die übergeordneten Objekte (in den Farben), für die GCR gilt. 0% = Uniform Component Replace, 100% = graue Komponenten Ersetzung.
+Beschreibt die über neutrale Werte hinaus (in gitterfarbenen Farben), die gcr angewendet wird. 0 % = Austausch von einheitlichen Komponenten, 100 % = Grauer Komponentenaustausch.
 
 -   [Elementinformationen](#element-information)
 -   [Strukturieren von Inhalt](#structure-content)
@@ -24,11 +24,11 @@ Beschreibt die übergeordneten Objekte (in den Farben), für die GCR gilt. 0% = 
 
 
 
-| Name                       |                                                            |
+| Name | Wert |
 |----------------------------|------------------------------------------------------------|
 | Elementtyp <br/>   | ParameterDef<br/>                                    |
-| Bereichs Präfix <br/> | Seite<br/>                                            |
-| Notizen <br/>          | Verknüpft mit dem Element "pgeblackgenerationprocessing"<br/> |
+| Bereichspräfix <br/> | Seite<br/>                                            |
+| Hinweise <br/>          | Mit PageBlackGenerationProcessing-Element verknüpft<br/> |
 
 
 
@@ -36,7 +36,7 @@ Beschreibt die übergeordneten Objekte (in den Farben), für die GCR gilt. 0% = 
 
 ## <a name="structure-content"></a>Strukturieren von Inhalt
 
-Die XML-Struktur dieses Elements lautet:
+Die XML-Struktur dieses Elements ist:
 
 ``` syntax
 <psf:ParameterDef name="psk:PageBlackGenerationProcessingGrayComponentReplacementExtent">
@@ -64,7 +64,7 @@ Die XML-Struktur dieses Elements lautet:
 </psf:ParameterDef>
 ```
 
-## <a name="structure-properties"></a>Struktur Eigenschaften
+## <a name="structure-properties"></a>Struktureigenschaften
 
 In der folgenden Tabelle werden die Merkmale der Variablen beschrieben, die in der XML-Struktur definiert sind.
 
@@ -75,10 +75,10 @@ In der folgenden Tabelle werden die Merkmale der Variablen beschrieben, die in d
 | DataType<br/>     | Zeichenfolge<br/>  | xs:integer<br/>      |
 | DefaultValue<br/> | Zeichenfolge<br/>  | nicht definiert<br/>       |
 | MaxValue<br/>     | integer<br/> | 100<br/>             |
-| MinValue<br/>     | integer<br/> | 0<br/>               |
+| Minvalue<br/>     | integer<br/> | 0<br/>               |
 | Mehrere<br/>     | integer<br/> | 1<br/>               |
-| Obligatorisch.<br/>    | Zeichenfolge<br/>  | PSK: bedingt<br/> |
-| UnitType<br/>     | Zeichenfolge<br/>  | Prozent<br/>         |
+| Obligatorisch.<br/>    | Zeichenfolge<br/>  | psk:Conditional<br/> |
+| Unittype<br/>     | Zeichenfolge<br/>  | Prozent<br/>         |
 
 
 
@@ -88,7 +88,7 @@ In der folgenden Tabelle werden die Merkmale der Variablen beschrieben, die in d
 
 <dl> <dt>
 
-[Druck Schema Spezifikation](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
+[Spezifikation des Druckschemas](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 </dt> </dl>
 
  

@@ -1,21 +1,21 @@
 ---
-description: Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie in der PrintSchema-Spezifikation.
+description: Dieses Thema ist nicht aktuell. Aktuelle Informationen finden Sie unter Print Schema Specification(Spezifikation des Druckschemas).
 ms.assetid: f94c1450-9648-4aee-8f88-2a9213eba4a9
-title: "\"Pgewatermarktransparenz\""
+title: PageWatermarkTransparency
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7f0e96382656b1092a0dbc71352e788208f70b34
-ms.sourcegitcommit: de72a1294df274b0a71dc0fdc42d757e5f6df0f3
+ms.openlocfilehash: e8d46a03cfb1b2129f4c89a6ea7c751e23cd565e
+ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "106364300"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "107996877"
 ---
-# <a name="pagewatermarktransparency"></a>"Pgewatermarktransparenz"
+# <a name="pagewatermarktransparency"></a>PageWatermarkTransparency
 
-Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie in der [PrintSchema-Spezifikation](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip).
+Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie unter Print Schema Specification (Spezifikation des [Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 
-Gibt die Transparenz für das Wasserzeichen an. Vollständig nicht transparent wäre der Wert 0.
+Gibt die Transparenz für das Wasserzeichen an. Vollständig undurchsichtig würde den Wert 0 haben.
 
 -   [Elementinformationen](#element-information)
 -   [Strukturieren von Inhalt](#structure-content)
@@ -24,11 +24,11 @@ Gibt die Transparenz für das Wasserzeichen an. Vollständig nicht transparent w
 
 
 
-| Name                       |                                            |
+| Name | Wert |
 |----------------------------|--------------------------------------------|
 | Elementtyp <br/>   | ParameterDef<br/>                    |
-| Bereichs Präfix <br/> | Seite<br/>                            |
-| Notizen <br/>          | Mit dem Element "pgewatermark" verknüpft<br/> |
+| Bereichspräfix <br/> | Seite<br/>                            |
+| Hinweise <br/>          | Verknüpft mit dem PageWatermark-Element<br/> |
 
 
 
@@ -36,7 +36,7 @@ Gibt die Transparenz für das Wasserzeichen an. Vollständig nicht transparent w
 
 ## <a name="structure-content"></a>Strukturieren von Inhalt
 
-Die XML-Struktur dieses Elements lautet wie folgt:
+Die XML-Struktur dieses Elements sieht wie folgt aus:
 
 ``` syntax
 <psf:ParameterDef name="psk:PageWatermarkTransparency">
@@ -64,9 +64,9 @@ Die XML-Struktur dieses Elements lautet wie folgt:
 </psf:ParameterDef>
 ```
 
-## <a name="structure-properties"></a>Struktur Eigenschaften
+## <a name="structure-properties"></a>Struktureigenschaften
 
-In der folgenden Tabelle werden die Merkmale der Variablen beschrieben, die in der XML-Struktur definiert sind.
+In der folgenden Tabelle werden die Merkmale der in der XML-Struktur definierten Variablen beschrieben.
 
 
 
@@ -75,10 +75,10 @@ In der folgenden Tabelle werden die Merkmale der Variablen beschrieben, die in d
 | DataType<br/>     | Zeichenfolge<br/>  | xs:integer<br/>      |
 | DefaultValue<br/> | integer<br/> | 0<br/>               |
 | MaxValue<br/>     | integer<br/> | 100<br/>             |
-| MinValue<br/>     | integer<br/> | 0<br/>               |
+| Minvalue<br/>     | integer<br/> | 0<br/>               |
 | Mehrere<br/>     | integer<br/> | 1<br/>               |
-| Obligatorisch.<br/>    | Zeichenfolge<br/>  | PSK: bedingt<br/> |
-| UnitType<br/>     | Zeichenfolge<br/>  | Prozent<br/>         |
+| Obligatorisch.<br/>    | Zeichenfolge<br/>  | psk:Conditional<br/> |
+| Unittype<br/>     | Zeichenfolge<br/>  | Prozent<br/>         |
 
 
 
@@ -88,7 +88,7 @@ In der folgenden Tabelle werden die Merkmale der Variablen beschrieben, die in d
 
 <dl> <dt>
 
-[Druck Schema Spezifikation](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
+[Spezifikation des Druckschemas](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 </dt> </dl>
 
  

@@ -1,6 +1,6 @@
 ---
 title: SV_InnerCoverage
-description: SV \_ inputcoverage stellt unterschätzte konservative rasterisierungsinformationen dar (d. h., ob ein Pixel garantiert vollständig abgedeckt ist).
+description: SV InputCoverage stellt verdeckte konservative Rasterungsinformationen dar (d. h., ob ein Pixel garantiert vollständig \_ abgedeckt ist).
 ms.assetid: 5BB3C3FB-E5ED-4395-B389-300DE67C984B
 keywords:
 - SV_InnerCoverage HLSL
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a2f1393a6a11a95c8c08746f57083fe193791a60
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
-ms.translationtype: HT
+ms.openlocfilehash: e1ac278f0524446b5171ef278e169fbe7c3a082f
+ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104993550"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "107996967"
 ---
-# <a name="sv_innercoverage"></a>SV \_ innercoverage
+# <a name="sv_innercoverage"></a>SV \_ InnerCoverage
 
-SV \_ inputcoverage stellt unterschätzte konservative rasterisierungsinformationen dar (d. h., ob ein Pixel garantiert vollständig abgedeckt ist).
+SV InputCoverage stellt verdeckte konservative Rasterungsinformationen dar (d. h., ob ein Pixel garantiert vollständig \_ abgedeckt ist).
 
 ## <a name="type"></a>Typ
 
@@ -34,29 +34,29 @@ SV \_ inputcoverage stellt unterschätzte konservative rasterisierungsinformatio
 
 
 
- 
+ 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieser vom systemgenerierte Wert ist für die Unterstützung der Ebene 3 erforderlich und nur in dieser Ebene verfügbar. Diese Eingabe schließt sich mit der SV \_ -Abdeckung gegenseitig aus. beide können nicht verwendet werden.
+Dieser vom System generierte Wert ist für die Unterstützung der Ebene 3 erforderlich und nur in dieser Ebene verfügbar. Diese Eingabe schließen sich mit SV \_ Coverage gegenseitig aus. Beides kann nicht verwendet werden.
 
-Für den Zugriff auf die SV \_ innercoverage muss Sie als einzelne Komponente aus einem der Pixel-Shader-Eingabe Register deklariert werden. Der Interpolations Modus für die Deklaration muss konstant sein (Interpolation ist nicht anwendbar).
+Für den Zugriff auf SV InnerCoverage muss es als einzelne Komponente aus einem der \_ Pixel-Shader-Eingaberegister deklariert werden. Der Interpolationsmodus für die Deklaration muss konstant sein (interpolation does not apply).
 
-Die konservative rasterisierung ist in D3D 11.3 und D3D12 verfügbar. Weitere Informationen finden Sie unter:
+Die konservative Rasterung ist sowohl in D3D11.3 als auch in D3D12 verfügbar. Weitere Informationen finden Sie unter:
 
--   [D3D 11.3 konservative rasterisierung](/windows/desktop/direct3d11/conservative-rasterization)
--   [D3D12 konservative rasterisierung](/windows/desktop/direct3d12/conservative-rasterization)
+-   [D3D11.3 Konservative Rasterung](/windows/desktop/direct3d11/conservative-rasterization)
+-   [D3D12 Konservative Rasterung](/windows/desktop/direct3d12/conservative-rasterization)
 
 ## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Shader-Modell 5](d3d11-graphics-reference-sm5.md)
+[Shadermodell 5](d3d11-graphics-reference-sm5.md)
 </dt> <dt>
 
-[Shader-Modell 5,1 System Werte](shader-model-5-1-system-values.md)
+[Shadermodell 5.1 Systemwerte](shader-model-5-1-system-values.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

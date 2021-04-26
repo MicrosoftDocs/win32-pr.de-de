@@ -1,29 +1,29 @@
 ---
-description: Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie in der PrintSchema-Spezifikation.
+description: Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter Spezifikation des Druckschemas.
 ms.assetid: cf35bb37-bf67-4e86-bfef-9838606982a5
-title: PageScaling
+title: Pagescaling
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 41af04cc5657360fcc8d4b15812e9c2dd6b9fb06
-ms.sourcegitcommit: 7b8f6151ebe247536304866459b2973276271d4d
+ms.openlocfilehash: e32beceead1c0dc867a2bb7b24d476ef05bf8820
+ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "106363063"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "107997497"
 ---
-# <a name="pagescaling"></a>PageScaling
+# <a name="pagescaling"></a>Pagescaling
 
-Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie in der [PrintSchema-Spezifikation](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip).
+Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter [Print Schema Specification (Spezifikation des Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 
-Beschreibt die Skalierungs Merkmale der Ausgabe. Bestimmte Optionen dieses Features erfordern, dass der Consumer die Merkmale der "Anwendungs Inhalts Dimensionen" bestimmen kann. Wenn keine Möglichkeit besteht, diese Merkmale zu ermitteln, sollte der Consumer standardmäßig die Identitäts Option festlegen. Folgende Merkmale sind zu finden:
+Beschreibt die Skalierungsmerkmale der Ausgabe. Bestimmte Optionen dieses Features erfordern, dass der Consumer die Merkmale der "Anwendungsinhaltsdimensionen" bestimmen kann. Wenn diese Merkmale nicht bestimmt werden können, sollte der Consumer standardmäßig die Identitätsoption verwenden. Dies sind die folgenden Merkmale:
 
 
 
 |                          |                                                                                                                                                                                                                                                       |
 |--------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Größe des Anwendungs Mediums   | Die Dimensionen des Mediums, das vom Anwendungs Layout definiert wird. Die Größe der Anwendungs Medien entspricht möglicherweise einer vom Consumer unterstützten PageMediaSize.<br/>                                                                          |
-| Anwendungs Inhalts Größe | Die Dimensionen des Mediums, das vom Anwendungs Layout definiert wird. Die Größe der Anwendungs Medien entspricht möglicherweise einer vom Consumer unterstützten PageMediaSize.<br/>                                                                          |
-| Größe der APP-Größe   | Der Offset und der Umfang des Bereichs der Anwendungs bluten, ein Überlauf Feld, das von der Anwendung für die Registrierung und das Layout verwendet wird, in Bezug auf die Größe des Anwendungs Mediums. Der geblendende Bereich ist groß oder gleich der Größe des Anwendungs Mediums.<br/> |
+| Größe der Anwendungsmedien   | Die Vom Anwendungslayout definierten Mediendimensionen. Die Größe der Anwendungsmedien entspricht möglicherweise einer PageMediaSize, die vom Consumer unterstützt wird.<br/>                                                                          |
+| Größe des Anwendungsinhalts | Die Vom Anwendungslayout definierten Mediendimensionen. Die Größe der Anwendungsmedien entspricht möglicherweise einer PageMediaSize, die vom Consumer unterstützt wird.<br/>                                                                          |
+| Application Bleed Size   | Der Offset und der Umfang des Überlaufbereichs der Anwendung, ein Überlauffeld, das von der Anwendung für die Registrierung und das Layout in Bezug auf die Größe der Anwendungsmedien verwendet wird. Der Überleerungsbereich ist größer oder gleich der Mediengröße der Anwendung.<br/> |
 
 
 
@@ -31,23 +31,23 @@ Beschreibt die Skalierungs Merkmale der Ausgabe. Bestimmte Optionen dieses Featu
 
 -   [Elementinformationen](#element-information)
 -   [Strukturelle Inhalte](#structural-content)
--   [Inhalt der Extensible Markup Language (XML)](#extensible-markup-language-xml-content)
+-   [Extensible Markup Language -Inhalt (XML)](#extensible-markup-language-xml-content)
 
 ## <a name="element-information"></a>Elementinformationen
 
 
 
-| Name                       |                                                                                                                                                                                                       |
+| Name | Wert |
 |----------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Elementtyp <br/>   | Funktion<br/>                                                                                                                                                                                    |
-| Bereichs Präfix <br/> | Seite<br/>                                                                                                                                                                                       |
-| Notizen <br/>          | "Top", "Bottom", "Left" und "Right" sind relativ zu "PageImageableSize". Die Koordinaten sind relativ zu PageImageableSize, wobei der Ursprung von relativ zum Ursprung von PageImageableSize ist.<br/> |
+| Bereichspräfix <br/> | Seite<br/>                                                                                                                                                                                       |
+| Hinweise <br/>          | Top, Bottom, Left und Right sind relativ zu PageImageableSize. Koordinaten sind relativ zu PageImageableSize, wobei der Ursprung von relativ zum Ursprung von PageImageableSize ist.<br/> |
 
 
 
  
 
-## <a name="structural-content"></a>Strukturelle Inhalte
+## <a name="structural-content"></a>Strukturell
 
 Die XML-Struktur dieses Elements lautet:
 
@@ -109,22 +109,22 @@ Die XML-Struktur dieses Elements lautet:
 
 ## <a name="structure-variables"></a>Strukturvariablen
 
-In der folgenden Tabelle werden die Merkmale der Variablen beschrieben, die in der XML-Struktur definiert sind.
+In der folgenden Tabelle werden die Merkmale der in der XML-Struktur definierten Variablen beschrieben.
 
 
 
 | Name                               | Datentyp         | Einheit                  | Unterstützte Werte                                                                                                                                                                      | Zusammenfassung                                                                      |
 |------------------------------------|-------------------|-----------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------|
-| \_Optionsname\_<br/>          | Zeichenfolge<br/> | Buchstaben<br/> | Gültiger, voll qualifizierter Name, wie von [Namespaces in XML](https://www.w3.org/TR/1999/REC-xml-names-19990114/)definiert. Wenn kein Namespace angegeben wird, wird der Standard Namespace angenommen.<br/> | Der Name der Option.<br/>                                           |
-| \_Identityoptionvalue\_<br/> | Zeichenfolge<br/> | –<br/>        | TRUE, FALSE<br/>                                                                                                                                                               | Definiert eine Option, die diese Funktion deaktiviert, wenn Sie ausgewählt wird.<br/> |
+| \_Optionname\_<br/>          | Zeichenfolge<br/> | Buchstaben<br/> | Gültiger vollqualifizierte Name, wie von [Namespaces in XML](https://www.w3.org/TR/1999/REC-xml-names-19990114/)definiert. Wenn kein Namespace angegeben ist, wird der Standardnamespace angenommen.<br/> | Der Name der Option.<br/>                                           |
+| \_IdentityOptionValue\_<br/> | Zeichenfolge<br/> | –<br/>        | TRUE, FALSE<br/>                                                                                                                                                               | Definiert eine Option, die diese Funktion deaktiviert, wenn sie ausgewählt wird.<br/> |
 
 
 
  
 
-## <a name="extensible-markup-language-xml-content"></a>Inhalt der Extensible Markup Language (XML)
+## <a name="extensible-markup-language-xml-content"></a>Extensible Markup Language -Inhalt (XML)
 
-Die Schlüsselwörter der öffentlichen Druck Schemas werden im- https://schemas.microsoft.com/windows/2003/08/printing/printschemakeywords Namespace definiert. Der Inhalt des öffentlichen Extensible Markup Language (XML) für dieses Schlüsselwort wird unten definiert:
+Die Schlüsselwörter für das öffentliche Druckschema werden im https://schemas.microsoft.com/windows/2003/08/printing/printschemakeywords -Namespace definiert. Der Inhalt des öffentlichen Extensible Markup Language (XML) für dieses Schlüsselwort ist unten definiert:
 
 ``` syntax
 <psf:Feature name="psk:PageScaling">
@@ -198,7 +198,7 @@ Die Schlüsselwörter der öffentlichen Druck Schemas werden im- https://schemas
 
 <dl> <dt>
 
-[Druck Schema Spezifikation](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
+[Spezifikation des Druckschemas](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 </dt> </dl>
 
  

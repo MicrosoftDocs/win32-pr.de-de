@@ -1,6 +1,6 @@
 ---
 title: SV_DispatchThreadID
-description: Indizes, für die der kombinierte Thread und die Thread Gruppe, in der ein Compute-Shader ausgeführt wird.
+description: Indizes, für die kombinierter Thread und Threadgruppe ein Compute-Shader ausgeführt wird.
 ms.assetid: bad697f6-26d9-47cd-93e5-127621a161e8
 keywords:
 - SV_DispatchThreadID HLSL
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: d55fcf7e291c561ecb51dd32dfac135c563974c7
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: e9653d98ebbfef6dd25bb137af3358a14d177f3e
+ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104549872"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "107996517"
 ---
-# <a name="sv_dispatchthreadid"></a>SV \_ dispatchthreadid
+# <a name="sv_dispatchthreadid"></a>SV \_ DispatchThreadID
 
-Indizes, für die der kombinierte Thread und die Thread Gruppe, in der ein Compute-Shader ausgeführt wird. SV \_ dispatchthreadid ist die Summe von SV \_ GroupID \* numThreads und groupthreadid. Sie variiert in dem Bereich, der in [**Dispatch**](/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-dispatch) und [numThreads](sm5-attributes-numthreads.md)angegeben ist. Wenn z. b. Dispatch (2, 2, 2) auf einem Compute-Shader mit numThreads (3, 3, 3) aufgerufen wird, weist SV \_ dispatchthreadid einen Bereich von 0.. 5 für jede Dimension auf.
+Indizes, für die kombinierter Thread und Threadgruppe ein Compute-Shader ausgeführt wird. SV \_ DispatchThreadID ist die Summe aus SV \_ GroupID \* numthreads und GroupThreadID. Sie variiert im bereich, der in [**Dispatch**](/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-dispatch) und [numthreads angegeben ist.](sm5-attributes-numthreads.md) Wenn z. B. Dispatch(2,2,2) für einen Compute-Shader mit numthreads(3,3,3) SV DispatchThreadID aufgerufen wird, hat für jede Dimension einen Bereich \_ von 0,5.
 
 ## <a name="type"></a>Typ
 
@@ -35,28 +35,27 @@ Indizes, für die der kombinierte Thread und die Thread Gruppe, in der ein Compu
 
 
 
- 
+ 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieser System Wert ist optional.
+Dieser Systemwert ist optional.
 
-Die folgende Abbildung zeigt die Beziehung zwischen den Parametern, die an [**Dispatch**](/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-dispatch)weitergeleitet werden. Dispatch (5, 3, 2), die im [numThreads](sm5-attributes-numthreads.md) -Attribut angegebenen Werte, numThreads (10, 8, 3) und Werte, die an den Compute-Shader für die Thread bezogenen System Werte ([SV \_ groupIndex](sv-groupindex.md), SV \_ dispatchthreadid,[SV \_ groupthreadid](sv-groupthreadid.md),[SV \_ GroupID](sv-groupid.md)) weitergegeben werden.
+Die folgende Abbildung zeigt die Beziehung zwischen den Parametern, die an [**Dispatch**](/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-dispatch), Dispatch(5,3,2), die im [numthreads-Attribut](sm5-attributes-numthreads.md) angegebenen Werte, numthreads(10,8,3) und Werte übergeben werden, die an den Compute-Shader für die threadbezogenen Systemwerte übergeben werden ([SV \_ GroupIndex](sv-groupindex.md), SV \_ DispatchThreadID,[SV \_ GroupThreadID](sv-groupthreadid.md),[SV \_ GroupID](sv-groupid.md)).
 
-![Darstellung der Beziehung zwischen Dispatch, Thread Gruppen und Threads](images/threadgroupids.png)
+![Abbildung der Beziehung zwischen Dispatch, Threadgruppen und Threads](images/threadgroupids.png)
 
-Diese Funktion wird in den folgenden Typen von Shadern unterstützt:
+Diese Funktion wird in den folgenden Shadertypen unterstützt:
 
 
 
-|        |      |        |          |       |         |
+| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
 |        |      |        |          |       | x       |
 
 
 
- 
+ 
 
 ## <a name="see-also"></a>Weitere Informationen
 
@@ -65,9 +64,9 @@ Diese Funktion wird in den folgenden Typen von Shadern unterstützt:
 [Semantik](dx-graphics-hlsl-semantics.md)
 </dt> <dt>
 
-[Shader-Modell 5](d3d11-graphics-reference-sm5.md)
+[Shadermodell 5](d3d11-graphics-reference-sm5.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

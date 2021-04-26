@@ -1,17 +1,17 @@
 ---
 description: Gibt einen Vorgang an, für den Code generiert werden soll.
 ms.assetid: d198197e-d146-4f1b-99df-944822e83357
-title: Operation-Element
+title: operation-Element
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0bdd8324553e046000f467c103afd6ac0464cbc0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5c0e4562241f5f437554d0af28dc8bca482512ea
+ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104042050"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "107994316"
 ---
-# <a name="operation-element"></a>Operation-Element
+# <a name="operation-element"></a>operation-Element
 
 Gibt einen Vorgang an, für den Code generiert werden soll.
 
@@ -35,38 +35,38 @@ Es gibt keine untergeordneten Elemente.
 
 | Element                                                                                                 | BESCHREIBUNG                                                                                                                                   |
 |---------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
-| [**functiondeklarationen**](functiondeclarations.md)<br/>                                         | Generiert Implementierungs Deklarationen für Proxy Funktionen für Porttyp Vorgänge.<br/> <br/>                                    |
-| [**idlfunctiondeklarationen**](idlfunctiondeclarations.md)<br/>                                   | Generiert IDL-Deklarationen für Proxy Funktionen für Porttyp Vorgänge.<br/> <br/>                                               |
-| [**messagestructuredefinitions**](messagestructuredefinitions.md)<br/>                           | Generiert C-Strukturdefinitionen für Nachrichten Typen.<br/> <br/>                                                                   |
-| [**messagetypedeklarationen**](messagetypedeclarations.md)<br/>                                   | Generiert C-Konstante Deklarationen für XML-Schema Tabellen für Nachrichten Typen.<br/> <br/>                                             |
-| [**messagetypedefinitions**](messagetypedefinitions.md)<br/>                                     | Generiert C-Konstanten für XML-Schema Tabellen für Nachrichten Typen.<br/> <br/>                                                         |
-| [**porttypeer-Deklarationen**](porttypedeclarations.md)<br/>                                         | Generiert C-Konstante Deklarationen für Porttypen.<br/> <br/>                                                                      |
-| [**porttypeer Definitionen**](porttypedefinitions.md)<br/>                                           | Generiert C-Konstanten für Porttypen.<br/> <br/>                                                                                  |
-| [**proxyfunctionimplementierungen**](proxyfunctionimplementations.md)<br/>                         | Generiert Implementierungen für Proxy Funktionen für Porttyp Vorgänge.<br/> <br/>                                                |
-| [**stubdeklarationen**](stubdeclarations.md)<br/>                                                 | Generiert Deklarationen für Stub-Funktionen für Porttyp Vorgänge.<br/> <br/>                                                    |
-| [**stubdefinitionen**](stubdefinitions.md)<br/>                                                   | Generiert Implementierungen für Stub-Funktionen für Porttyp Vorgänge.<br/> <br/>                                                 |
-| [**"abonnemenfunctiondeklarationen"**](subscriptionfunctiondeclarations.md)<br/>                 | Generiert Implementierungs Deklarationen für Abonnement-/abonnementproxyfunktionen für Porttyp-Benachrichtigungs Vorgänge.<br/> <br/> |
-| [**"abonnemenidlfunctiondeklarationen"**](subscriptionidlfunctiondeclarations.md)<br/>           | Generiert IDL-Deklarationen für Abonnement-/abonnementproxyfunktionen für Port-Benachrichtigungs Vorgänge.<br/> <br/>            |
-| [**abonnemenproxyfunctionimplementierungen**](subscriptionproxyfunctionimplementations.md)<br/> | Generiert Implementierungen für Abonnement-/Abonnement-Proxyfunktionen für Porttyp-Benachrichtigungs Vorgänge.<br/> <br/>             |
+| [**functionDeclarations**](functiondeclarations.md)<br/>                                         | Generiert Implementierungsdeklarationen für Proxyfunktionen für Porttypvorgänge.<br/> <br/>                                    |
+| [**idlFunctionDeclarations**](idlfunctiondeclarations.md)<br/>                                   | Generiert IDL-Deklarationen für Proxyfunktionen für Porttypvorgänge.<br/> <br/>                                               |
+| [**messageStructureDefinitions**](messagestructuredefinitions.md)<br/>                           | Generiert C-Strukturdefinitionen für Nachrichtentypen.<br/> <br/>                                                                   |
+| [**messageTypeDeclarations**](messagetypedeclarations.md)<br/>                                   | Generiert C-Konstantendeklarationen für XML-Schematabellen für Nachrichtentypen.<br/> <br/>                                             |
+| [**messageTypeDefinitions**](messagetypedefinitions.md)<br/>                                     | Generiert C-Konstanten für XML-Schematabellen für Nachrichtentypen.<br/> <br/>                                                         |
+| [**portTypeDeclarations**](porttypedeclarations.md)<br/>                                         | Generiert C-Konstantendeklarationen für Porttypen.<br/> <br/>                                                                      |
+| [**portTypeDefinitions**](porttypedefinitions.md)<br/>                                           | Generiert C-Konstanten für Porttypen.<br/> <br/>                                                                                  |
+| [**proxyFunctionImplementations**](proxyfunctionimplementations.md)<br/>                         | Generiert Implementierungen für Proxyfunktionen für Porttypvorgänge.<br/> <br/>                                                |
+| [**stubDeclarations**](stubdeclarations.md)<br/>                                                 | Generiert Deklarationen für Stubfunktionen für Porttypvorgänge.<br/> <br/>                                                    |
+| [**stubDefinitions**](stubdefinitions.md)<br/>                                                   | Generiert Implementierungen für Stubfunktionen für Porttypvorgänge.<br/> <br/>                                                 |
+| [**subscriptionFunctionDeclarations**](subscriptionfunctiondeclarations.md)<br/>                 | Generiert Implementierungsdeklarationen für Subscribe/Unsubscribe-Proxyfunktionen für Porttypbenachrichtigungsvorgänge.<br/> <br/> |
+| [**subscriptionIdlFunctionDeclarations**](subscriptionidlfunctiondeclarations.md)<br/>           | Generiert IDL-Deklarationen für Subscribe/Unsubscribe-Proxyfunktionen für Porttypbenachrichtigungsvorgänge.<br/> <br/>            |
+| [**subscriptionProxyFunctionImplementations**](subscriptionproxyfunctionimplementations.md)<br/> | Generiert Implementierungen für Subscribe/Unsubscribe-Proxyfunktionen für Porttypbenachrichtigungsvorgänge.<br/> <br/>             |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Es kann eine beliebige Anzahl von Vorgängen angegeben werden. Wenn keine Vorgänge angegeben werden, wird der Code für alle Vorgänge in allen relevanten Porttypen generiert. Wenn Sie das **Operation** -Element verwenden, werden die generierten Methoden auf die im-Vorgang enthaltenen Methoden beschränkt.
+Eine beliebige Anzahl von Vorgängen kann angegeben werden. Wenn keine Vorgänge angegeben werden, wird Code für alle Vorgänge in allen relevanten Porttypen generiert. Durch  die Verwendung des Vorgangselements werden die generierten Methoden auf die im Vorgang enthaltenen Methoden beschränkt.
 
-Ein Drucker unterstützt z. b. die folgenden Vorgänge:
+Beispielsweise unterstützt ein Drucker diese Vorgänge unter anderem:
 
--   **Printjobbypost**
--   **Printjobbyreference**
+-   **PrintJobByPost**
+-   **PrintJobByReference**
 -   **CancelJob**
--   **Getjobelements**
--   **Getactivejobs**
--   **Getjobhistory**
--   **Abonniert.**
--   **Unabonniert betoprinterconfigchange**
+-   **GetJobElements**
+-   **GetActiveJobs**
+-   **GetJobHistory**
+-   **SubscribeToPrinterConfigChange**
+-   **UnsubscribeToPrinterConfigChange**
 
-Wenn Sie jedoch nur die Methoden im Zusammenhang mit den **printjobbypost** -und **getjobelements** -Vorgängen einschließen möchten, verwendet das Code Generierungs Skript die [**idlfunctionscripts**](idlfunctiondeclarations.md) -Elemente wie folgt:
+Das Codegenerierungsskript verwendet die [**idlFunctionDeclarations-Elemente**](idlfunctiondeclarations.md) wie folgt, um nur die Methoden im Zusammenhang mit den **Vorgängen PrintJobByPost** und **GetJobElements** zu enthalten:
 
 ``` syntax
 <idlFunctionDeclarations>
@@ -75,13 +75,13 @@ Wenn Sie jedoch nur die Methoden im Zusammenhang mit den **printjobbypost** -und
 </idlFunctionDeclarations>
 ```
 
-Dadurch werden IDL-Funktions Deklarationen für alle Methoden generiert, die den beiden Vorgängen zugeordnet sind (z. b. **beginprintjobbypost**, **endprintjobbypost**, **begingetjobelements** und **endgetjobelements**).
+Dadurch werden idl-Funktionsdeklarationen für alle Methoden generiert, die den beiden Vorgängen zugeordnet sind (z. B. **BeginPrintJobByPost,** **EndPrintJobByPost,** **BeginGetJobElements** und **EndGetJobElements).**
 
 ## <a name="element-information"></a>Elementinformationen
 
 
 
-|                                     |               |
+| Bezeichnung | Wert |
 |-------------------------------------|---------------|
 | Unterstützte Mindestversion (System)<br/> | Windows Vista |
 | Kann leer bleiben                        | Ja           |

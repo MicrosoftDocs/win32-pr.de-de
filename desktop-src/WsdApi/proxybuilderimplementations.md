@@ -1,19 +1,19 @@
 ---
-description: Generiert Funktionen zum Erstellen typisierter Proxys.
+description: Generiert Funktionen, um typierte Proxys zu erstellen.
 ms.assetid: 75a686ba-8112-4093-8a1b-13419018aa3a
-title: proxybuilderimplementierungen-Element
+title: proxyBuilderImplementations-Element
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8d2cb64a6ea87b1083871931359a4f7c01ece9b3
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9ad22348b33c60689adf60c029e3a08c2f4d417c
+ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106352234"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "107996467"
 ---
-# <a name="proxybuilderimplementations-element"></a>proxybuilderimplementierungen-Element
+# <a name="proxybuilderimplementations-element"></a>proxyBuilderImplementations-Element
 
-Generiert Funktionen zum Erstellen typisierter Proxys.
+Generiert Funktionen, um typierte Proxys zu erstellen.
 
 ## <a name="usage"></a>Verbrauch
 
@@ -33,9 +33,9 @@ Es gibt keine Attribute.
 
 | Element                                     | BESCHREIBUNG                                                                                                                                                     |
 |---------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**codeName**](codename.md)<br/>     | Der Name, der für den Porttyp im generierten Code verwendet werden soll. Standardmäßig wird der Codename aus dem qualifizierten Namen des Porttyps generiert.<br/> <br/> |
-| [**PortType**](porttype.md)<br/>     | Der Porttyp, für den Code generiert werden soll.<br/> <br/>                                                                                             |
-| [**proxyClass**](proxyclass.md)<br/> | Der Klassenname, der aus der Proxy Generatorfunktion generiert werden soll.<br/> <br/>                                                                                  |
+| [**Codename**](codename.md)<br/>     | Der Name, der für den Porttyp im generierten Code verwendet werden soll. Standardmäßig wird der Codename aus dem qualifizierten Namen des Porttyps generiert.<br/> <br/> |
+| [**Porttype**](porttype.md)<br/>     | Porttyp, für den Code generiert werden soll.<br/> <br/>                                                                                             |
+| [**proxyClass**](proxyclass.md)<br/> | Klassenname, der aus der Proxy-Generatorfunktion generiert werden soll.<br/> <br/>                                                                                  |
 
 
 
@@ -55,7 +55,7 @@ Es gibt keine Attribute.
 
 | Element                         | BESCHREIBUNG                                                    |
 |---------------------------------|----------------------------------------------------------------|
-| [**Datei**](file.md)<br/> | Gibt eine Datei aus dem Code-Generator aus.<br/> <br/> |
+| [**Datei**](file.md)<br/> | Gibt eine Datei aus dem Codegenerator aus.<br/> <br/> |
 
 
 
@@ -63,7 +63,7 @@ Es gibt keine Attribute.
 
 
 
-|                                     |               |
+| Bezeichnung | Wert |
 |-------------------------------------|---------------|
 | Unterstützte Mindestversion (System)<br/> | Windows Vista |
 | Kann leer bleiben                        | Nein            |
