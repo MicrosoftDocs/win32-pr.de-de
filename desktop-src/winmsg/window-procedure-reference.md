@@ -1,19 +1,19 @@
 ---
-description: .
+description: Referenz zu Fensterprozeduren
 ms.assetid: eb2fa11b-5e89-4963-bb34-a205a49389bd
-title: Fenster Prozedur Referenz
+title: Referenz zu Fensterprozeduren
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: edf3e66e7d806c9653524c72bed0c2c207c9883a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: faf6ef9a6e213ebabf40251f5bf2788a99cd16d5
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106349239"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108083248"
 ---
-# <a name="window-procedure-reference"></a><span data-ttu-id="c5b44-103">Fenster Prozedur Referenz</span><span class="sxs-lookup"><span data-stu-id="c5b44-103">Window Procedure Reference</span></span>
+# <a name="window-procedure-reference"></a><span data-ttu-id="aaecf-103">Referenz zu Fensterprozeduren</span><span class="sxs-lookup"><span data-stu-id="aaecf-103">Window Procedure Reference</span></span>
 
--   [<span data-ttu-id="c5b44-104">Fenster Prozedur Funktionen</span><span class="sxs-lookup"><span data-stu-id="c5b44-104">Window Procedure Functions</span></span>](window-procedure-functions.md)
+-   [<span data-ttu-id="aaecf-104">Fensterprozedurfunktionen</span><span class="sxs-lookup"><span data-stu-id="aaecf-104">Window Procedure Functions</span></span>](window-procedure-functions.md)
 
  
 

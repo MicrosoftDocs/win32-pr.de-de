@@ -1,11 +1,11 @@
 ---
-title: Webviewfoldercontents. popupitemmenu-Methode (Shldisp. h)
-description: Erstellt ein Kontextmenü für das angegebene Element und gibt die ausgewählte Befehls Zeichenfolge zurück.
+title: WebViewFolderContents.PopupItemMenu-Methode (Shldisp.h)
+description: 'WebViewFolderContents.PopupItemMenu-Methode: Erstellt ein Kontextmenü für das angegebene Element und gibt die ausgewählte Befehlszeichenfolge zurück.'
 ms.assetid: 3c07500c-2fe9-4976-a1a8-b128e75f9325
 keywords:
-- Popupitemmenu-Methode Legacy-Windows-Umgebungs Features
-- Popupitemmenu-Methode Legacy-Windows-Umgebungs Funktionen, webviewfoldercontents-Objekt
-- Webviewfoldercontents-Objekt Legacy Funktionen der Windows-Umgebung, Methode "popupitemmenu"
+- PopupItemMenu-Methode Legacy-Windows-Umgebungsfeatures
+- PopupItemMenu-Methode Legacy-Windows-Umgebungsfeatures , WebViewFolderContents-Objekt
+- WebViewFolderContents-Objekt Legacy-Windows-Umgebungsfeatures , PopupItemMenu-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,18 +16,18 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 41753814f103998185acc798a37447f22356d2aa
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: c879e10097b334f0c2d4f98b1b76289d20ee4a93
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103740128"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108102638"
 ---
-# <a name="webviewfoldercontentspopupitemmenu-method"></a><span data-ttu-id="7232f-106">Webviewfoldercontents. popupitemmenu-Methode</span><span class="sxs-lookup"><span data-stu-id="7232f-106">WebViewFolderContents.PopupItemMenu method</span></span>
+# <a name="webviewfoldercontentspopupitemmenu-method"></a><span data-ttu-id="2c54a-106">WebViewFolderContents.PopupItemMenu-Methode</span><span class="sxs-lookup"><span data-stu-id="2c54a-106">WebViewFolderContents.PopupItemMenu method</span></span>
 
-<span data-ttu-id="7232f-107">Erstellt ein Kontextmenü für das angegebene Element und gibt die ausgewählte Befehls Zeichenfolge zurück.</span><span class="sxs-lookup"><span data-stu-id="7232f-107">Creates a shortcut menu for the specified item and returns the selected command string.</span></span>
+<span data-ttu-id="2c54a-107">Erstellt ein Kontextmenü für das angegebene Element und gibt die ausgewählte Befehlszeichenfolge zurück.</span><span class="sxs-lookup"><span data-stu-id="2c54a-107">Creates a shortcut menu for the specified item and returns the selected command string.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="7232f-108">Syntax</span><span class="sxs-lookup"><span data-stu-id="7232f-108">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="2c54a-108">Syntax</span><span class="sxs-lookup"><span data-stu-id="2c54a-108">Syntax</span></span>
 
 
 ```JScript
@@ -40,46 +40,46 @@ retVal = WebViewFolderContents.PopupItemMenu(
 
 
 
-## <a name="parameters"></a><span data-ttu-id="7232f-109">Parameter</span><span class="sxs-lookup"><span data-stu-id="7232f-109">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="2c54a-109">Parameter</span><span class="sxs-lookup"><span data-stu-id="2c54a-109">Parameters</span></span>
 
 <dl> <dt>
 
-<span data-ttu-id="7232f-110">*vitem* \[ in\]</span><span class="sxs-lookup"><span data-stu-id="7232f-110">*vItem* \[in\]</span></span>
+<span data-ttu-id="2c54a-110">*vItem* \[ In\]</span><span class="sxs-lookup"><span data-stu-id="2c54a-110">*vItem* \[in\]</span></span>
 </dt> <dd>
 
-<span data-ttu-id="7232f-111">Typ: **Variant**</span><span class="sxs-lookup"><span data-stu-id="7232f-111">Type: **Variant**</span></span>
+<span data-ttu-id="2c54a-111">Typ: **Variant**</span><span class="sxs-lookup"><span data-stu-id="2c54a-111">Type: **Variant**</span></span>
 
-<span data-ttu-id="7232f-112">Das [**folderItem**](../shell/folderitem.md) -Objekt, für das das Kontextmenü erstellt wird.</span><span class="sxs-lookup"><span data-stu-id="7232f-112">The [**FolderItem**](../shell/folderitem.md) object for which the shortcut menu will be created.</span></span>
+<span data-ttu-id="2c54a-112">Das [**FolderItem-Objekt,**](../shell/folderitem.md) für das das Kontextmenü erstellt wird.</span><span class="sxs-lookup"><span data-stu-id="2c54a-112">The [**FolderItem**](../shell/folderitem.md) object for which the shortcut menu will be created.</span></span>
 
 </dd> <dt>
 
-<span data-ttu-id="7232f-113">*VX* \[ in, optional\]</span><span class="sxs-lookup"><span data-stu-id="7232f-113">*vx* \[in, optional\]</span></span>
+<span data-ttu-id="2c54a-113">*vx* \[ in, optional\]</span><span class="sxs-lookup"><span data-stu-id="2c54a-113">*vx* \[in, optional\]</span></span>
 </dt> <dd>
 
-<span data-ttu-id="7232f-114">Typ: **Variant**</span><span class="sxs-lookup"><span data-stu-id="7232f-114">Type: **Variant**</span></span>
+<span data-ttu-id="2c54a-114">Typ: **Variant**</span><span class="sxs-lookup"><span data-stu-id="2c54a-114">Type: **Variant**</span></span>
 
-<span data-ttu-id="7232f-115">Die horizontale Position des Menüs in Bildschirm Koordinaten.</span><span class="sxs-lookup"><span data-stu-id="7232f-115">The horizontal position of the menu, in screen coordinates.</span></span>
+<span data-ttu-id="2c54a-115">Die horizontale Position des Menüs in Bildschirmkoordinaten.</span><span class="sxs-lookup"><span data-stu-id="2c54a-115">The horizontal position of the menu, in screen coordinates.</span></span>
 
 </dd> <dt>
 
-<span data-ttu-id="7232f-116">*Vy* \[ in, optional\]</span><span class="sxs-lookup"><span data-stu-id="7232f-116">*vy* \[in, optional\]</span></span>
+<span data-ttu-id="2c54a-116">*vy* \[ in, optional\]</span><span class="sxs-lookup"><span data-stu-id="2c54a-116">*vy* \[in, optional\]</span></span>
 </dt> <dd>
 
-<span data-ttu-id="7232f-117">Typ: **Variant**</span><span class="sxs-lookup"><span data-stu-id="7232f-117">Type: **Variant**</span></span>
+<span data-ttu-id="2c54a-117">Typ: **Variant**</span><span class="sxs-lookup"><span data-stu-id="2c54a-117">Type: **Variant**</span></span>
 
-<span data-ttu-id="7232f-118">Die vertikale Position des Menüs in Bildschirm Koordinaten.</span><span class="sxs-lookup"><span data-stu-id="7232f-118">The vertical position of the menu, in screen coordinates.</span></span>
+<span data-ttu-id="2c54a-118">Die vertikale Position des Menüs in Bildschirmkoordinaten.</span><span class="sxs-lookup"><span data-stu-id="2c54a-118">The vertical position of the menu, in screen coordinates.</span></span>
 
 </dd> </dl>
 
-## <a name="return-value"></a><span data-ttu-id="7232f-119">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="7232f-119">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="2c54a-119">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="2c54a-119">Return value</span></span>
 
-<span data-ttu-id="7232f-120">Geben Sie Folgendes ein: \**[BSTR](/previous-versions/windows/desktop/automat/bstr) \** _</span><span class="sxs-lookup"><span data-stu-id="7232f-120">Type: \**[BSTR](/previous-versions/windows/desktop/automat/bstr)\** _</span></span>
+<span data-ttu-id="2c54a-120">Typ: **[BSTR](/previous-versions/windows/desktop/automat/bstr)\***</span><span class="sxs-lookup"><span data-stu-id="2c54a-120">Type: **[BSTR](/previous-versions/windows/desktop/automat/bstr)\***</span></span>
 
-<span data-ttu-id="7232f-121">Wenn diese Methode zurückgegeben wird, enthält Sie die Befehls Zeichenfolge.</span><span class="sxs-lookup"><span data-stu-id="7232f-121">When this method returns, contains the command string.</span></span>
+<span data-ttu-id="2c54a-121">Diese Methode gibt die Befehlszeichenfolge zurück.</span><span class="sxs-lookup"><span data-stu-id="2c54a-121">When this method returns, contains the command string.</span></span>
 
-## <a name="examples"></a><span data-ttu-id="7232f-122">Beispiele</span><span class="sxs-lookup"><span data-stu-id="7232f-122">Examples</span></span>
+## <a name="examples"></a><span data-ttu-id="2c54a-122">Beispiele</span><span class="sxs-lookup"><span data-stu-id="2c54a-122">Examples</span></span>
 
-<span data-ttu-id="7232f-123">Das folgende Beispiel zeigt die ordnungsgemäße Verwendung von _ *popupitemmenu*\* für JScript Embedded in HTML.</span><span class="sxs-lookup"><span data-stu-id="7232f-123">The following example shows the proper use of _ *PopupItemMenu*\* for JScript embedded in HTML.</span></span>
+<span data-ttu-id="2c54a-123">Das folgende Beispiel zeigt die ordnungsgemäße Verwendung von **PopupItemMenu** für JScript, das in HTML eingebettet ist.</span><span class="sxs-lookup"><span data-stu-id="2c54a-123">The following example shows the proper use of **PopupItemMenu** for JScript embedded in HTML.</span></span>
 
 
 ```HTML
@@ -115,17 +115,17 @@ retVal = WebViewFolderContents.PopupItemMenu(
 
 
 
-## <a name="requirements"></a><span data-ttu-id="7232f-124">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="7232f-124">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="2c54a-124">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="2c54a-124">Requirements</span></span>
 
 
 
-| <span data-ttu-id="7232f-125">Anforderung</span><span class="sxs-lookup"><span data-stu-id="7232f-125">Requirement</span></span> | <span data-ttu-id="7232f-126">Wert</span><span class="sxs-lookup"><span data-stu-id="7232f-126">Value</span></span> |
+| <span data-ttu-id="2c54a-125">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="2c54a-125">Requirement</span></span> | <span data-ttu-id="2c54a-126">Wert</span><span class="sxs-lookup"><span data-stu-id="2c54a-126">Value</span></span> |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| <span data-ttu-id="7232f-127">Unterstützte Mindestversion (Client)</span><span class="sxs-lookup"><span data-stu-id="7232f-127">Minimum supported client</span></span><br/> | <span data-ttu-id="7232f-128">Windows 2000 Professional, Windows XP \[ Desktop-Apps\]</span><span class="sxs-lookup"><span data-stu-id="7232f-128">Windows 2000 Professional, Windows XP \[desktop apps only\]</span></span><br/>                                         |
-| <span data-ttu-id="7232f-129">Unterstützte Mindestversion (Server)</span><span class="sxs-lookup"><span data-stu-id="7232f-129">Minimum supported server</span></span><br/> | <span data-ttu-id="7232f-130">Windows 2000 Server \[nur Desktop-Apps\]</span><span class="sxs-lookup"><span data-stu-id="7232f-130">Windows 2000 Server \[desktop apps only\]</span></span><br/>                                                           |
-| <span data-ttu-id="7232f-131">Header</span><span class="sxs-lookup"><span data-stu-id="7232f-131">Header</span></span><br/>                   | <dl> <span data-ttu-id="7232f-132"><dt>Shldisp. h</dt></span><span class="sxs-lookup"><span data-stu-id="7232f-132"><dt>Shldisp.h</dt></span></span> </dl>                           |
-| <span data-ttu-id="7232f-133">IDL</span><span class="sxs-lookup"><span data-stu-id="7232f-133">IDL</span></span><br/>                      | <dl> <span data-ttu-id="7232f-134"><dt>Shldisp. idl</dt></span><span class="sxs-lookup"><span data-stu-id="7232f-134"><dt>Shldisp.idl</dt></span></span> </dl>                         |
-| <span data-ttu-id="7232f-135">DLL</span><span class="sxs-lookup"><span data-stu-id="7232f-135">DLL</span></span><br/>                      | <dl> <span data-ttu-id="7232f-136"><dt>Shell32.dll (Version 4,71 oder höher)</dt></span><span class="sxs-lookup"><span data-stu-id="7232f-136"><dt>Shell32.dll (version 4.71 or later)</dt></span></span> </dl> |
+| <span data-ttu-id="2c54a-127">Unterstützte Mindestversion (Client)</span><span class="sxs-lookup"><span data-stu-id="2c54a-127">Minimum supported client</span></span><br/> | <span data-ttu-id="2c54a-128">Windows 2000 Professional, nur Windows \[ XP-Desktop-Apps\]</span><span class="sxs-lookup"><span data-stu-id="2c54a-128">Windows 2000 Professional, Windows XP \[desktop apps only\]</span></span><br/>                                         |
+| <span data-ttu-id="2c54a-129">Unterstützte Mindestversion (Server)</span><span class="sxs-lookup"><span data-stu-id="2c54a-129">Minimum supported server</span></span><br/> | <span data-ttu-id="2c54a-130">Windows 2000 Server \[nur Desktop-Apps\]</span><span class="sxs-lookup"><span data-stu-id="2c54a-130">Windows 2000 Server \[desktop apps only\]</span></span><br/>                                                           |
+| <span data-ttu-id="2c54a-131">Header</span><span class="sxs-lookup"><span data-stu-id="2c54a-131">Header</span></span><br/>                   | <dl> <span data-ttu-id="2c54a-132"><dt>Shldisp.h</dt></span><span class="sxs-lookup"><span data-stu-id="2c54a-132"><dt>Shldisp.h</dt></span></span> </dl>                           |
+| <span data-ttu-id="2c54a-133">Idl</span><span class="sxs-lookup"><span data-stu-id="2c54a-133">IDL</span></span><br/>                      | <dl> <span data-ttu-id="2c54a-134"><dt>Shldisp.idl</dt></span><span class="sxs-lookup"><span data-stu-id="2c54a-134"><dt>Shldisp.idl</dt></span></span> </dl>                         |
+| <span data-ttu-id="2c54a-135">DLL</span><span class="sxs-lookup"><span data-stu-id="2c54a-135">DLL</span></span><br/>                      | <dl> <span data-ttu-id="2c54a-136"><dt>Shell32.dll (Version 4.71 oder höher)</dt></span><span class="sxs-lookup"><span data-stu-id="2c54a-136"><dt>Shell32.dll (version 4.71 or later)</dt></span></span> </dl> |
 
 
 

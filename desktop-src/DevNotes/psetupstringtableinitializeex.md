@@ -1,7 +1,7 @@
 ---
-description: Initialisiert eine Zeichen folgen Tabelle.
+description: 'pSetupStringTableInitializeEx-Funktion: Initialisiert eine Zeichenfolgentabelle.'
 ms.assetid: 184df85a-6d59-42c5-8ec1-f0c046091645
-title: psetupstringtableinitializeex-Funktion
+title: pSetupStringTableInitializeEx-Funktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,20 +13,20 @@ api_type:
 - DllExport
 api_location:
 - Setupapi.dll
-ms.openlocfilehash: d40f221656da4cada610e7254b392bb2bd627a14
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 78ee96e7e366fdff821e8202300ff28de0a14af3
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106373630"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108096648"
 ---
-# <a name="psetupstringtableinitializeex-function"></a><span data-ttu-id="a4b1a-103">psetupstringtableinitializeex-Funktion</span><span class="sxs-lookup"><span data-stu-id="a4b1a-103">pSetupStringTableInitializeEx function</span></span>
+# <a name="psetupstringtableinitializeex-function"></a><span data-ttu-id="3e742-103">pSetupStringTableInitializeEx-Funktion</span><span class="sxs-lookup"><span data-stu-id="3e742-103">pSetupStringTableInitializeEx function</span></span>
 
-<span data-ttu-id="a4b1a-104">\[Diese Funktion ist in Windows Vista oder Windows Server 2008 nicht verfügbar.\]</span><span class="sxs-lookup"><span data-stu-id="a4b1a-104">\[This function is not available in Windows Vista or Windows Server 2008.\]</span></span>
+<span data-ttu-id="3e742-104">\[Diese Funktion ist in Windows Vista oder Windows Server 2008 nicht verfügbar.\]</span><span class="sxs-lookup"><span data-stu-id="3e742-104">\[This function is not available in Windows Vista or Windows Server 2008.\]</span></span>
 
-<span data-ttu-id="a4b1a-105">Initialisiert eine Zeichen folgen Tabelle.</span><span class="sxs-lookup"><span data-stu-id="a4b1a-105">Initializes a string table.</span></span>
+<span data-ttu-id="3e742-105">Initialisiert eine Zeichenfolgentabelle.</span><span class="sxs-lookup"><span data-stu-id="3e742-105">Initializes a string table.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="a4b1a-106">Syntax</span><span class="sxs-lookup"><span data-stu-id="a4b1a-106">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="3e742-106">Syntax</span><span class="sxs-lookup"><span data-stu-id="3e742-106">Syntax</span></span>
 
 
 ```C++
@@ -38,35 +38,35 @@ PVOID pSetupStringTableInitializeEx(
 
 
 
-## <a name="parameters"></a><span data-ttu-id="a4b1a-107">Parameter</span><span class="sxs-lookup"><span data-stu-id="a4b1a-107">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="3e742-107">Parameter</span><span class="sxs-lookup"><span data-stu-id="3e742-107">Parameters</span></span>
 
 <dl> <dt>
 
-<span data-ttu-id="a4b1a-108">*Extradatasize* \[ in\]</span><span class="sxs-lookup"><span data-stu-id="a4b1a-108">*ExtraDataSize* \[in\]</span></span>
+<span data-ttu-id="3e742-108">*ExtraDataSize* \[ In\]</span><span class="sxs-lookup"><span data-stu-id="3e742-108">*ExtraDataSize* \[in\]</span></span>
 </dt> <dd>
 
-<span data-ttu-id="a4b1a-109">Größe des zusätzlichen Datenobjekts.</span><span class="sxs-lookup"><span data-stu-id="a4b1a-109">Size of extra data object.</span></span>
+<span data-ttu-id="3e742-109">Größe des zusätzlichen Datenobjekts.</span><span class="sxs-lookup"><span data-stu-id="3e742-109">Size of extra data object.</span></span>
 
 </dd> <dt>
 
-<span data-ttu-id="a4b1a-110">*Reserviert* \[ in\]</span><span class="sxs-lookup"><span data-stu-id="a4b1a-110">*Reserved* \[in\]</span></span>
+<span data-ttu-id="3e742-110">*Reserviert* \[ In\]</span><span class="sxs-lookup"><span data-stu-id="3e742-110">*Reserved* \[in\]</span></span>
 </dt> <dd>
 
-<span data-ttu-id="a4b1a-111">Reserviert.</span><span class="sxs-lookup"><span data-stu-id="a4b1a-111">Reserved.</span></span>
+<span data-ttu-id="3e742-111">Reserviert.</span><span class="sxs-lookup"><span data-stu-id="3e742-111">Reserved.</span></span>
 
 </dd> </dl>
 
-## <a name="remarks"></a><span data-ttu-id="a4b1a-112">Bemerkungen</span><span class="sxs-lookup"><span data-stu-id="a4b1a-112">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="3e742-112">Bemerkungen</span><span class="sxs-lookup"><span data-stu-id="3e742-112">Remarks</span></span>
 
-<span data-ttu-id="a4b1a-113">Dieser Funktion ist keine Import Bibliothek oder Header Datei zugeordnet. Sie müssen ihn mithilfe der [**LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) -Funktion und der [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) -Funktion aufrufen.</span><span class="sxs-lookup"><span data-stu-id="a4b1a-113">This function has no associated import library or header file; you must call it using the [**LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) and [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) functions.</span></span>
+<span data-ttu-id="3e742-113">Dieser Funktion ist keine Importbibliothek oder Headerdatei zugeordnet. Sie müssen sie mithilfe der [**Funktionen LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) und [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) aufrufen.</span><span class="sxs-lookup"><span data-stu-id="3e742-113">This function has no associated import library or header file; you must call it using the [**LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) and [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) functions.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="a4b1a-114">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="a4b1a-114">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="3e742-114">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="3e742-114">Requirements</span></span>
 
 
 
-| <span data-ttu-id="a4b1a-115">Anforderung</span><span class="sxs-lookup"><span data-stu-id="a4b1a-115">Requirement</span></span> | <span data-ttu-id="a4b1a-116">Wert</span><span class="sxs-lookup"><span data-stu-id="a4b1a-116">Value</span></span> |
+| <span data-ttu-id="3e742-115">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="3e742-115">Requirement</span></span> | <span data-ttu-id="3e742-116">Wert</span><span class="sxs-lookup"><span data-stu-id="3e742-116">Value</span></span> |
 |----------------|-----------------------------------------------------------------------------------------|
-| <span data-ttu-id="a4b1a-117">DLL</span><span class="sxs-lookup"><span data-stu-id="a4b1a-117">DLL</span></span><br/> | <dl> <span data-ttu-id="a4b1a-118"><dt>Setupapi.dll</dt></span><span class="sxs-lookup"><span data-stu-id="a4b1a-118"><dt>Setupapi.dll</dt></span></span> </dl> |
+| <span data-ttu-id="3e742-117">DLL</span><span class="sxs-lookup"><span data-stu-id="3e742-117">DLL</span></span><br/> | <dl> <span data-ttu-id="3e742-118"><dt>Setupapi.dll</dt></span><span class="sxs-lookup"><span data-stu-id="3e742-118"><dt>Setupapi.dll</dt></span></span> </dl> |
 
 
 

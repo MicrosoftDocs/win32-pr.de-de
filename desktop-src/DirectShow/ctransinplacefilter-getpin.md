@@ -1,7 +1,7 @@
 ---
-description: Die getpin-Methode ruft eine PIN ab.
+description: 'CTransInPlaceFilter.GetPin-Methode: Die GetPin-Methode ruft einen Pin ab.'
 ms.assetid: d8e4973b-2af4-4141-ab2e-ea2159cd51be
-title: Ctransinplacefilter. getpin-Methode (transip. h)
+title: CTransInPlaceFilter.GetPin-Methode (Transip.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,18 +16,18 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: ae93b663af5427bc61367ae03a3abd6790b8634a
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 1075f2a14c58b085b73f2e4283458286c118a7ae
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106354708"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108084768"
 ---
-# <a name="ctransinplacefiltergetpin-method"></a><span data-ttu-id="e92af-103">Ctransinplacefilter. getpin-Methode</span><span class="sxs-lookup"><span data-stu-id="e92af-103">CTransInPlaceFilter.GetPin method</span></span>
+# <a name="ctransinplacefiltergetpin-method"></a><span data-ttu-id="13e31-103">CTransInPlaceFilter.GetPin-Methode</span><span class="sxs-lookup"><span data-stu-id="13e31-103">CTransInPlaceFilter.GetPin method</span></span>
 
-<span data-ttu-id="e92af-104">Die- `GetPin` Methode ruft eine PIN ab.</span><span class="sxs-lookup"><span data-stu-id="e92af-104">The `GetPin` method retrieves a pin.</span></span>
+<span data-ttu-id="13e31-104">Die `GetPin` -Methode ruft einen Pin ab.</span><span class="sxs-lookup"><span data-stu-id="13e31-104">The `GetPin` method retrieves a pin.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="e92af-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="e92af-105">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="13e31-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="13e31-105">Syntax</span></span>
 
 
 ```C++
@@ -38,45 +38,45 @@ virtual CBasePin* GetPin(
 
 
 
-## <a name="parameters"></a><span data-ttu-id="e92af-106">Parameter</span><span class="sxs-lookup"><span data-stu-id="e92af-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="13e31-106">Parameter</span><span class="sxs-lookup"><span data-stu-id="13e31-106">Parameters</span></span>
 
 <dl> <dt>
 
-<span data-ttu-id="e92af-107">*n*</span><span class="sxs-lookup"><span data-stu-id="e92af-107">*n*</span></span> 
+<span data-ttu-id="13e31-107">*n*</span><span class="sxs-lookup"><span data-stu-id="13e31-107">*n*</span></span> 
 </dt> <dd>
 
-<span data-ttu-id="e92af-108">Nummer der angegebenen PIN, indiziert von 0 (null).</span><span class="sxs-lookup"><span data-stu-id="e92af-108">Number of the specified pin, indexed from zero.</span></span> <span data-ttu-id="e92af-109">Bei diesem Filter ist Pin 0 die Eingabe-PIN, und Pin 1 ist die Ausgabe-PIN.</span><span class="sxs-lookup"><span data-stu-id="e92af-109">On this filter, pin 0 is the input pin, and pin 1 is the output pin.</span></span>
+<span data-ttu-id="13e31-108">Die Nummer des angegebenen Pins, indiziert von 0 (null).</span><span class="sxs-lookup"><span data-stu-id="13e31-108">Number of the specified pin, indexed from zero.</span></span> <span data-ttu-id="13e31-109">Bei diesem Filter ist Pin 0 der Eingabepin und Pin 1 der Ausgabepin.</span><span class="sxs-lookup"><span data-stu-id="13e31-109">On this filter, pin 0 is the input pin, and pin 1 is the output pin.</span></span>
 
 </dd> </dl>
 
-## <a name="return-value"></a><span data-ttu-id="e92af-110">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="e92af-110">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="13e31-110">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="13e31-110">Return value</span></span>
 
-<span data-ttu-id="e92af-111">Gibt einen Zeiger auf das [**cbasepin**](cbasepin.md) -Objekt zurück, das die PIN implementiert, oder **null** , wenn die Methode fehlschlägt.</span><span class="sxs-lookup"><span data-stu-id="e92af-111">Returns a pointer to the [**CBasePin**](cbasepin.md) object that implements the pin, or **NULL** if the method fails.</span></span>
+<span data-ttu-id="13e31-111">Gibt einen Zeiger auf das [**CBasePin-Objekt**](cbasepin.md) zurück, das den Pin implementiert, oder **NULL,** wenn die Methode fehlschlägt.</span><span class="sxs-lookup"><span data-stu-id="13e31-111">Returns a pointer to the [**CBasePin**](cbasepin.md) object that implements the pin, or **NULL** if the method fails.</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="e92af-112">Bemerkungen</span><span class="sxs-lookup"><span data-stu-id="e92af-112">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="13e31-112">Bemerkungen</span><span class="sxs-lookup"><span data-stu-id="13e31-112">Remarks</span></span>
 
-<span data-ttu-id="e92af-113">Diese Methode überschreibt die [**ctransformfilter:: getpin**](ctransformfilter-getpin.md) -Methode.</span><span class="sxs-lookup"><span data-stu-id="e92af-113">This method overrides the [**CTransformFilter::GetPin**](ctransformfilter-getpin.md) method.</span></span> <span data-ttu-id="e92af-114">Wenn die-Methode zum ersten Mal aufgerufen wird, werden beide Pins erstellt.</span><span class="sxs-lookup"><span data-stu-id="e92af-114">The first time the method is called, it creates both pins.</span></span>
+<span data-ttu-id="13e31-113">Diese Methode überschreibt die [**CTransformFilter::GetPin-Methode.**](ctransformfilter-getpin.md)</span><span class="sxs-lookup"><span data-stu-id="13e31-113">This method overrides the [**CTransformFilter::GetPin**](ctransformfilter-getpin.md) method.</span></span> <span data-ttu-id="13e31-114">Wenn die -Methode zum ersten Mal aufgerufen wird, werden beide Pins erstellt.</span><span class="sxs-lookup"><span data-stu-id="13e31-114">The first time the method is called, it creates both pins.</span></span>
 
-<span data-ttu-id="e92af-115">Diese Methode erhöht nicht den Verweis Zähler für die zurückgegebene PIN, sodass die zurückgegebene Pin keinen ausstehenden Verweis Zähler enthält.</span><span class="sxs-lookup"><span data-stu-id="e92af-115">This method does not increment the reference count on the returned pin, so the returned pin does not have an outstanding reference count.</span></span> <span data-ttu-id="e92af-116">Wenn der Aufrufer einen Verweis auf die PIN aufbewahren muss, sollte die **IUnknown:: adressf** -Methode für die PIN aufgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="e92af-116">If the caller needs to keep a reference on the pin, it should call the **IUnknown::AddRef** method on the pin.</span></span>
+<span data-ttu-id="13e31-115">Diese Methode erhöht den Verweiszähler für den zurückgegebenen Pin nicht, sodass der zurückgegebene Pin keinen ausstehenden Verweiszähler hat.</span><span class="sxs-lookup"><span data-stu-id="13e31-115">This method does not increment the reference count on the returned pin, so the returned pin does not have an outstanding reference count.</span></span> <span data-ttu-id="13e31-116">Wenn der Aufrufer einen Verweis auf der Stecknadel behalten muss, sollte er die **IUnknown::AddRef-Methode** auf dem Pin aufrufen.</span><span class="sxs-lookup"><span data-stu-id="13e31-116">If the caller needs to keep a reference on the pin, it should call the **IUnknown::AddRef** method on the pin.</span></span>
 
-<span data-ttu-id="e92af-117">Wenn der Filter die standardmäßigen [**ctransinplaceinputpin**](ctransinplaceinputpin.md) -und [**ctransinplaceoutputpin**](ctransinplaceoutputpin.md) -Pins verwendet, muss diese Methode wahrscheinlich nicht außer Kraft gesetzt werden.</span><span class="sxs-lookup"><span data-stu-id="e92af-117">If the filter uses the default [**CTransInPlaceInputPin**](ctransinplaceinputpin.md) and [**CTransInPlaceOutputPin**](ctransinplaceoutputpin.md) pins, you probably do not need to override this method.</span></span> <span data-ttu-id="e92af-118">Wenn der Filter Pins verwendet, mit denen diese Klassen erweitert werden, müssen Sie diese Methode jedoch außer Kraft setzen, um Pins dieses Typs zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="e92af-118">If the filter uses pins that extend those classes, however, you must override this method to create pins of that type.</span></span>
+<span data-ttu-id="13e31-117">Wenn der Filter die Standardpins [**CTransInPlaceInputPin**](ctransinplaceinputpin.md) und [**CTransInPlaceOutputPin**](ctransinplaceoutputpin.md) verwendet, müssen Sie diese Methode wahrscheinlich nicht überschreiben.</span><span class="sxs-lookup"><span data-stu-id="13e31-117">If the filter uses the default [**CTransInPlaceInputPin**](ctransinplaceinputpin.md) and [**CTransInPlaceOutputPin**](ctransinplaceoutputpin.md) pins, you probably do not need to override this method.</span></span> <span data-ttu-id="13e31-118">Wenn der Filter jedoch Pins verwendet, die diese Klassen erweitern, müssen Sie diese Methode überschreiben, um Pins dieses Typs zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="13e31-118">If the filter uses pins that extend those classes, however, you must override this method to create pins of that type.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="e92af-119">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="e92af-119">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="13e31-119">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="13e31-119">Requirements</span></span>
 
 
 
-| <span data-ttu-id="e92af-120">Anforderung</span><span class="sxs-lookup"><span data-stu-id="e92af-120">Requirement</span></span> | <span data-ttu-id="e92af-121">Wert</span><span class="sxs-lookup"><span data-stu-id="e92af-121">Value</span></span> |
+| <span data-ttu-id="13e31-120">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="13e31-120">Requirement</span></span> | <span data-ttu-id="13e31-121">Wert</span><span class="sxs-lookup"><span data-stu-id="13e31-121">Value</span></span> |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span data-ttu-id="e92af-122">Header</span><span class="sxs-lookup"><span data-stu-id="e92af-122">Header</span></span><br/>  | <dl> <span data-ttu-id="e92af-123"><dt>Transip. h (Include Streams. h)</dt></span><span class="sxs-lookup"><span data-stu-id="e92af-123"><dt>Transip.h (include Streams.h)</dt></span></span> </dl>                                                                                   |
-| <span data-ttu-id="e92af-124">Bibliothek</span><span class="sxs-lookup"><span data-stu-id="e92af-124">Library</span></span><br/> | <dl> <span data-ttu-id="e92af-125">" <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt></span><span class="sxs-lookup"><span data-stu-id="e92af-125"><dt>Strmbase.lib (retail builds); </dt> <dt>Strmbasd.lib (debug builds)</dt></span></span> </dl> |
+| <span data-ttu-id="13e31-122">Header</span><span class="sxs-lookup"><span data-stu-id="13e31-122">Header</span></span><br/>  | <dl> <span data-ttu-id="13e31-123"><dt>Transip.h (einschließlich Streams.h)</dt></span><span class="sxs-lookup"><span data-stu-id="13e31-123"><dt>Transip.h (include Streams.h)</dt></span></span> </dl>                                                                                   |
+| <span data-ttu-id="13e31-124">Bibliothek</span><span class="sxs-lookup"><span data-stu-id="13e31-124">Library</span></span><br/> | <dl> <span data-ttu-id="13e31-125"><dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt></span><span class="sxs-lookup"><span data-stu-id="13e31-125"><dt>Strmbase.lib (retail builds); </dt> <dt>Strmbasd.lib (debug builds)</dt></span></span> </dl> |
 
 
 
-## <a name="see-also"></a><span data-ttu-id="e92af-126">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="e92af-126">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="13e31-126">Weitere Informationen</span><span class="sxs-lookup"><span data-stu-id="13e31-126">See also</span></span>
 
 <dl> <dt>
 
-[<span data-ttu-id="e92af-127">**Ctransinplacefilter-Klasse**</span><span class="sxs-lookup"><span data-stu-id="e92af-127">**CTransInPlaceFilter Class**</span></span>](ctransinplacefilter.md)
+[<span data-ttu-id="13e31-127">**CTransInPlaceFilter-Klasse**</span><span class="sxs-lookup"><span data-stu-id="13e31-127">**CTransInPlaceFilter Class**</span></span>](ctransinplacefilter.md)
 </dt> </dl>
 
  
