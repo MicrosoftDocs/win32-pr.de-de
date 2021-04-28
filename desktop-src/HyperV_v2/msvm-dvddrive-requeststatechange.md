@@ -1,5 +1,5 @@
 ---
-description: Fordert eine Statusänderung an.
+description: RequestStateChange-Methode der Msvm_DVDDrive - Fordert eine Zustandsänderung an.
 ms.assetid: b36d19ea-35fc-4989-9ee9-199b8166674e
 title: RequestStateChange-Methode der Msvm_DVDDrive-Klasse
 ms.topic: reference
@@ -13,18 +13,18 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 602e928e1951aabdf020313f3e0939ecd7dfb31d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: dfe3d4f7b823c42866f72aa928227c6a49c610c0
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106363342"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108111988"
 ---
-# <a name="requeststatechange-method-of-the-msvm_dvddrive-class"></a><span data-ttu-id="42638-103">RequestStateChange-Methode der MSVM- \_ dvddrive-Klasse</span><span class="sxs-lookup"><span data-stu-id="42638-103">RequestStateChange method of the Msvm\_DVDDrive class</span></span>
+# <a name="requeststatechange-method-of-the-msvm_dvddrive-class"></a><span data-ttu-id="12577-103">RequestStateChange-Methode der Msvm \_ DVDDrive-Klasse</span><span class="sxs-lookup"><span data-stu-id="12577-103">RequestStateChange method of the Msvm\_DVDDrive class</span></span>
 
-<span data-ttu-id="42638-104">Fordert eine Statusänderung an.</span><span class="sxs-lookup"><span data-stu-id="42638-104">Requests a state change.</span></span>
+<span data-ttu-id="12577-104">Fordert eine Zustandsänderung an.</span><span class="sxs-lookup"><span data-stu-id="12577-104">Requests a state change.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="42638-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="42638-105">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="12577-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="12577-105">Syntax</span></span>
 
 
 ```mof
@@ -37,139 +37,139 @@ uint32 RequestStateChange(
 
 
 
-## <a name="parameters"></a><span data-ttu-id="42638-106">Parameter</span><span class="sxs-lookup"><span data-stu-id="42638-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="12577-106">Parameter</span><span class="sxs-lookup"><span data-stu-id="12577-106">Parameters</span></span>
 
 <dl> <dt>
 
-<span data-ttu-id="42638-107">*Requestedstate* \[ in\]</span><span class="sxs-lookup"><span data-stu-id="42638-107">*RequestedState* \[in\]</span></span>
+<span data-ttu-id="12577-107">*RequestedState* \[ In\]</span><span class="sxs-lookup"><span data-stu-id="12577-107">*RequestedState* \[in\]</span></span>
 </dt> <dd>
 
-<span data-ttu-id="42638-108">Der neue Zustand.</span><span class="sxs-lookup"><span data-stu-id="42638-108">The new state.</span></span> <span data-ttu-id="42638-109">Die Informationen werden in der **requestedstate** -Eigenschaft der-Instanz abgelegt, wenn der Rückgabecode der **requestStateChange** -Methode 0 oder 4096 ist.</span><span class="sxs-lookup"><span data-stu-id="42638-109">The info is placed in the **RequestedState** property of the instance if the return code of the **RequestStateChange** method is 0 or 4096.</span></span> <span data-ttu-id="42638-110">Weitere Informationen finden Sie in der Beschreibung der Eigenschaften **enabledstate** und **requestedstate** für das-Element.</span><span class="sxs-lookup"><span data-stu-id="42638-110">For more info, see the description of the **EnabledState** and **RequestedState** properties for the element.</span></span> <span data-ttu-id="42638-111">Dabei muss es sich um einen der folgenden Werte handeln:</span><span class="sxs-lookup"><span data-stu-id="42638-111">This must be one of the following values.</span></span>
+<span data-ttu-id="12577-108">Der neue Zustand.</span><span class="sxs-lookup"><span data-stu-id="12577-108">The new state.</span></span> <span data-ttu-id="12577-109">Die Informationen werden in der **RequestedState-Eigenschaft** der -Instanz platziert, wenn der Rückgabecode der **RequestStateChange-Methode** 0 oder 4096 ist.</span><span class="sxs-lookup"><span data-stu-id="12577-109">The info is placed in the **RequestedState** property of the instance if the return code of the **RequestStateChange** method is 0 or 4096.</span></span> <span data-ttu-id="12577-110">Weitere Informationen finden Sie in der Beschreibung der **Eigenschaften EnabledState** und **RequestedState** für das Element.</span><span class="sxs-lookup"><span data-stu-id="12577-110">For more info, see the description of the **EnabledState** and **RequestedState** properties for the element.</span></span> <span data-ttu-id="12577-111">Dies muss einer der folgenden Werte sein.</span><span class="sxs-lookup"><span data-stu-id="12577-111">This must be one of the following values.</span></span>
 
 <dt>
 
 <span id="Enabled"></span><span id="enabled"></span><span id="ENABLED"></span>
 
-<span data-ttu-id="42638-112">**Aktiviert** (2)</span><span class="sxs-lookup"><span data-stu-id="42638-112">**Enabled** (2)</span></span>
+<span data-ttu-id="12577-112">**Aktiviert** (2)</span><span class="sxs-lookup"><span data-stu-id="12577-112">**Enabled** (2)</span></span>
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Disabled"></span><span id="disabled"></span><span id="DISABLED"></span>
 
-<span data-ttu-id="42638-113">**Deaktiviert** (3)</span><span class="sxs-lookup"><span data-stu-id="42638-113">**Disabled** (3)</span></span>
+<span data-ttu-id="12577-113">**Deaktiviert** (3)</span><span class="sxs-lookup"><span data-stu-id="12577-113">**Disabled** (3)</span></span>
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Shut_Down"></span><span id="shut_down"></span><span id="SHUT_DOWN"></span>
 
-<span data-ttu-id="42638-114">**Herunter** fahren (4)</span><span class="sxs-lookup"><span data-stu-id="42638-114">**Shut Down** (4)</span></span>
+<span data-ttu-id="12577-114">**Herunterfahren** (4)</span><span class="sxs-lookup"><span data-stu-id="12577-114">**Shut Down** (4)</span></span>
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Offline"></span><span id="offline"></span><span id="OFFLINE"></span>
 
-<span data-ttu-id="42638-115">**Offline** (6)</span><span class="sxs-lookup"><span data-stu-id="42638-115">**Offline** (6)</span></span>
+<span data-ttu-id="12577-115">**Offline** (6)</span><span class="sxs-lookup"><span data-stu-id="12577-115">**Offline** (6)</span></span>
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Test"></span><span id="test"></span><span id="TEST"></span>
 
-<span data-ttu-id="42638-116">**Test** (7)</span><span class="sxs-lookup"><span data-stu-id="42638-116">**Test** (7)</span></span>
+<span data-ttu-id="12577-116">**Test** (7)</span><span class="sxs-lookup"><span data-stu-id="12577-116">**Test** (7)</span></span>
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Defer"></span><span id="defer"></span><span id="DEFER"></span>
 
-<span data-ttu-id="42638-117">Zurück **stellen (8** )</span><span class="sxs-lookup"><span data-stu-id="42638-117">**Defer** (8)</span></span>
+<span data-ttu-id="12577-117">**Zurückern** (8)</span><span class="sxs-lookup"><span data-stu-id="12577-117">**Defer** (8)</span></span>
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Quiesce"></span><span id="quiesce"></span><span id="QUIESCE"></span>
 
-<span data-ttu-id="42638-118">Still **legung (9** )</span><span class="sxs-lookup"><span data-stu-id="42638-118">**Quiesce** (9)</span></span>
+<span data-ttu-id="12577-118">**Ruhe** (9)</span><span class="sxs-lookup"><span data-stu-id="12577-118">**Quiesce** (9)</span></span>
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Reboot"></span><span id="reboot"></span><span id="REBOOT"></span>
 
-<span data-ttu-id="42638-119">**Neustart** (10)</span><span class="sxs-lookup"><span data-stu-id="42638-119">**Reboot** (10)</span></span>
+<span data-ttu-id="12577-119">**Neustart** (10)</span><span class="sxs-lookup"><span data-stu-id="12577-119">**Reboot** (10)</span></span>
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Reset"></span><span id="reset"></span><span id="RESET"></span>
 
-<span data-ttu-id="42638-120">**Zurücksetzen** (11)</span><span class="sxs-lookup"><span data-stu-id="42638-120">**Reset** (11)</span></span>
+<span data-ttu-id="12577-120">**Zurücksetzen** (11)</span><span class="sxs-lookup"><span data-stu-id="12577-120">**Reset** (11)</span></span>
 
 
 </dt> <dd></dd> <dt>
 
 <span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>
 
-<span data-ttu-id="42638-121">**DMTF reserviert** (..)</span><span class="sxs-lookup"><span data-stu-id="42638-121">**DMTF Reserved** (..)</span></span>
+<span data-ttu-id="12577-121">**DMTF Reserved** (..)</span><span class="sxs-lookup"><span data-stu-id="12577-121">**DMTF Reserved** (..)</span></span>
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Vendor_Reserved"></span><span id="vendor_reserved"></span><span id="VENDOR_RESERVED"></span>
 
-<span data-ttu-id="42638-122">**Anbieter reserviert** (32768.65535)</span><span class="sxs-lookup"><span data-stu-id="42638-122">**Vendor Reserved** (32768..65535)</span></span>
+<span data-ttu-id="12577-122">**Reservierter Anbieter** (32768..65535)</span><span class="sxs-lookup"><span data-stu-id="12577-122">**Vendor Reserved** (32768..65535)</span></span>
 
 
 </dt> <dd></dd> </dl> </dd> <dt>
 
-<span data-ttu-id="42638-123">*Auftrag* \[ vorgenommen\]</span><span class="sxs-lookup"><span data-stu-id="42638-123">*Job* \[out\]</span></span>
+<span data-ttu-id="12577-123">*Auftrag* \[ out\]</span><span class="sxs-lookup"><span data-stu-id="12577-123">*Job* \[out\]</span></span>
 </dt> <dd>
 
-<span data-ttu-id="42638-124">Kann einen Verweis auf den erstellten [**CIM- \_ bettejob**](cim-concretejob.md) enthalten, um den durch den Methodenaufruf initiierten Zustandsübergang zu verfolgen.</span><span class="sxs-lookup"><span data-stu-id="42638-124">May contain a reference to the [**CIM\_ConcreteJob**](cim-concretejob.md) created to track the state transition initiated by the method invocation.</span></span>
+<span data-ttu-id="12577-124">Kann einen Verweis auf den [**CIM \_ ConcreteJob**](cim-concretejob.md) enthalten, der erstellt wurde, um den Zustandsübergang nachzuverfolgen, der durch den Methodenaufruf initiiert wurde.</span><span class="sxs-lookup"><span data-stu-id="12577-124">May contain a reference to the [**CIM\_ConcreteJob**](cim-concretejob.md) created to track the state transition initiated by the method invocation.</span></span>
 
 </dd> <dt>
 
-<span data-ttu-id="42638-125">*Timeoutperiod* \[ in\]</span><span class="sxs-lookup"><span data-stu-id="42638-125">*TimeoutPeriod* \[in\]</span></span>
+<span data-ttu-id="12577-125">*TimeoutPeriod* \[ In\]</span><span class="sxs-lookup"><span data-stu-id="12577-125">*TimeoutPeriod* \[in\]</span></span>
 </dt> <dd>
 
-<span data-ttu-id="42638-126">Ein Timeout Zeitraum, der die maximale Zeitspanne angibt, die der Client für den Übergang in den neuen Zustand erwartet.</span><span class="sxs-lookup"><span data-stu-id="42638-126">A timeout period that specifies the maximum amount of time that the client expects the transition to the new state to take.</span></span> <span data-ttu-id="42638-127">Das Intervall Format muss zum Angeben des Timeout Zeitraums verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="42638-127">The interval format must be used to specify the timeout period.</span></span> <span data-ttu-id="42638-128">Der Wert 0 oder **null** zeigt an, dass der Client keine Zeitanforderungen für den Übergang hat.</span><span class="sxs-lookup"><span data-stu-id="42638-128">A value of 0 or **Null** indicates that the client has no time requirements for the transition.</span></span> <span data-ttu-id="42638-129">Wenn diese Eigenschaft nicht 0 oder **null** enthält und die Implementierung diesen Parameter nicht unterstützt, muss der Rückgabecode 4098 (**use of Timeout Parameter not supported**) zurückgegeben werden.</span><span class="sxs-lookup"><span data-stu-id="42638-129">If this property does not contain 0 or **Null** and the implementation does not support this parameter, a return code of 4098 (**Use Of Timeout Parameter Not Supported**) must be returned.</span></span>
+<span data-ttu-id="12577-126">Ein Timeoutzeitraum, der die maximale Zeitspanne angibt, die der Client für den Übergang in den neuen Zustand erwartet.</span><span class="sxs-lookup"><span data-stu-id="12577-126">A timeout period that specifies the maximum amount of time that the client expects the transition to the new state to take.</span></span> <span data-ttu-id="12577-127">Das Intervallformat muss verwendet werden, um den Timeoutzeitraum anzugeben.</span><span class="sxs-lookup"><span data-stu-id="12577-127">The interval format must be used to specify the timeout period.</span></span> <span data-ttu-id="12577-128">Der Wert 0 oder **NULL** gibt an, dass der Client keine Zeitanforderungen für den Übergang hat.</span><span class="sxs-lookup"><span data-stu-id="12577-128">A value of 0 or **Null** indicates that the client has no time requirements for the transition.</span></span> <span data-ttu-id="12577-129">Wenn diese Eigenschaft nicht 0 oder **NULL** enthält und die Implementierung diesen Parameter nicht unterstützt, muss der Rückgabecode 4098 (**Use Of Timeout Parameter Not Supported**) zurückgegeben werden.</span><span class="sxs-lookup"><span data-stu-id="12577-129">If this property does not contain 0 or **Null** and the implementation does not support this parameter, a return code of 4098 (**Use Of Timeout Parameter Not Supported**) must be returned.</span></span>
 
 </dd> </dl>
 
-## <a name="return-value"></a><span data-ttu-id="42638-130">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="42638-130">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="12577-130">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="12577-130">Return value</span></span>
 
-<span data-ttu-id="42638-131">Diese Methode gibt einen der folgenden Werte zurück:</span><span class="sxs-lookup"><span data-stu-id="42638-131">This method returns one of the following values:</span></span>
+<span data-ttu-id="12577-131">Diese Methode gibt einen der folgenden Werte zurück:</span><span class="sxs-lookup"><span data-stu-id="12577-131">This method returns one of the following values:</span></span>
 
 <dl> <dt>
 
-<span data-ttu-id="42638-132">**Abgeschlossen ohne Fehler** (0)</span><span class="sxs-lookup"><span data-stu-id="42638-132">**Completed with No Error** (0)</span></span>
+<span data-ttu-id="12577-132">**Abgeschlossen ohne Fehler** (0)</span><span class="sxs-lookup"><span data-stu-id="12577-132">**Completed with No Error** (0)</span></span>
 </dt> <dt>
 
-<span data-ttu-id="42638-133">**Nicht unterstützt** (1)</span><span class="sxs-lookup"><span data-stu-id="42638-133">**Not supported** (1)</span></span>
+<span data-ttu-id="12577-133">**Nicht unterstützt** (1)</span><span class="sxs-lookup"><span data-stu-id="12577-133">**Not supported** (1)</span></span>
 </dt> </dl>
 
-## <a name="requirements"></a><span data-ttu-id="42638-134">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="42638-134">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="12577-134">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="12577-134">Requirements</span></span>
 
 
 
-| <span data-ttu-id="42638-135">Anforderung</span><span class="sxs-lookup"><span data-stu-id="42638-135">Requirement</span></span> | <span data-ttu-id="42638-136">Wert</span><span class="sxs-lookup"><span data-stu-id="42638-136">Value</span></span> |
+| <span data-ttu-id="12577-135">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="12577-135">Requirement</span></span> | <span data-ttu-id="12577-136">Wert</span><span class="sxs-lookup"><span data-stu-id="12577-136">Value</span></span> |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| <span data-ttu-id="42638-137">Unterstützte Mindestversion (Client)</span><span class="sxs-lookup"><span data-stu-id="42638-137">Minimum supported client</span></span><br/> | <span data-ttu-id="42638-138">Windows 8.1</span><span class="sxs-lookup"><span data-stu-id="42638-138">Windows 8.1</span></span><br/>                                                                                  |
-| <span data-ttu-id="42638-139">Unterstützte Mindestversion (Server)</span><span class="sxs-lookup"><span data-stu-id="42638-139">Minimum supported server</span></span><br/> | <span data-ttu-id="42638-140">Windows Server 2012 R2</span><span class="sxs-lookup"><span data-stu-id="42638-140">Windows Server 2012 R2</span></span><br/>                                                                       |
-| <span data-ttu-id="42638-141">Namespace</span><span class="sxs-lookup"><span data-stu-id="42638-141">Namespace</span></span><br/>                | <span data-ttu-id="42638-142">\\Stammvirtualisierung \\ v2</span><span class="sxs-lookup"><span data-stu-id="42638-142">Root\\virtualization\\v2</span></span><br/>                                                                     |
-| <span data-ttu-id="42638-143">MOF</span><span class="sxs-lookup"><span data-stu-id="42638-143">MOF</span></span><br/>                      | <dl> <span data-ttu-id="42638-144"><dt>Windowsvirtualization. v2. MOF</dt></span><span class="sxs-lookup"><span data-stu-id="42638-144"><dt>WindowsVirtualization.V2.mof</dt></span></span> </dl> |
-| <span data-ttu-id="42638-145">DLL</span><span class="sxs-lookup"><span data-stu-id="42638-145">DLL</span></span><br/>                      | <dl> <span data-ttu-id="42638-146"><dt>Vmms.exe</dt></span><span class="sxs-lookup"><span data-stu-id="42638-146"><dt>Vmms.exe</dt></span></span> </dl>                     |
+| <span data-ttu-id="12577-137">Unterstützte Mindestversion (Client)</span><span class="sxs-lookup"><span data-stu-id="12577-137">Minimum supported client</span></span><br/> | <span data-ttu-id="12577-138">Windows 8.1</span><span class="sxs-lookup"><span data-stu-id="12577-138">Windows 8.1</span></span><br/>                                                                                  |
+| <span data-ttu-id="12577-139">Unterstützte Mindestversion (Server)</span><span class="sxs-lookup"><span data-stu-id="12577-139">Minimum supported server</span></span><br/> | <span data-ttu-id="12577-140">Windows Server 2012 R2</span><span class="sxs-lookup"><span data-stu-id="12577-140">Windows Server 2012 R2</span></span><br/>                                                                       |
+| <span data-ttu-id="12577-141">Namespace</span><span class="sxs-lookup"><span data-stu-id="12577-141">Namespace</span></span><br/>                | <span data-ttu-id="12577-142">\\Root-Virtualisierung \\ v2</span><span class="sxs-lookup"><span data-stu-id="12577-142">Root\\virtualization\\v2</span></span><br/>                                                                     |
+| <span data-ttu-id="12577-143">MOF</span><span class="sxs-lookup"><span data-stu-id="12577-143">MOF</span></span><br/>                      | <dl> <span data-ttu-id="12577-144"><dt>WindowsVirtualization.V2.mof</dt></span><span class="sxs-lookup"><span data-stu-id="12577-144"><dt>WindowsVirtualization.V2.mof</dt></span></span> </dl> |
+| <span data-ttu-id="12577-145">DLL</span><span class="sxs-lookup"><span data-stu-id="12577-145">DLL</span></span><br/>                      | <dl> <span data-ttu-id="12577-146"><dt>Vmms.exe</dt></span><span class="sxs-lookup"><span data-stu-id="12577-146"><dt>Vmms.exe</dt></span></span> </dl>                     |
 
 
 
-## <a name="see-also"></a><span data-ttu-id="42638-147">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="42638-147">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="12577-147">Weitere Informationen</span><span class="sxs-lookup"><span data-stu-id="12577-147">See also</span></span>
 
 <dl> <dt>
 
-[<span data-ttu-id="42638-148">**MSVM \_ dvddrive**</span><span class="sxs-lookup"><span data-stu-id="42638-148">**Msvm\_DVDDrive**</span></span>](msvm-dvddrive.md)
+[<span data-ttu-id="12577-148">**Msvm \_ DVDDrive**</span><span class="sxs-lookup"><span data-stu-id="12577-148">**Msvm\_DVDDrive**</span></span>](msvm-dvddrive.md)
 </dt> </dl>
 
  
