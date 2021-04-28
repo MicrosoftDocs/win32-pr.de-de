@@ -1,7 +1,7 @@
 ---
-description: Ruft die Anzahl der abtasteten Scheitel Punkte (oder Texels) ab.
+description: 'ID3DXPRTBuffer::GetNumSamples-Methode: Ruft die Anzahl der Scheitelpunkte (oder Texel) ab, die als Stichprobe entnommen wurden.'
 ms.assetid: fdcb9f09-29fb-409d-b2c0-78ebf311f48b
-title: 'ID3DXPRTBuffer:: getnumsamples-Methode (D3DX9Mesh. h)'
+title: ID3DXPRTBuffer::GetNumSamples-Methode (D3DX9Mesh.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 370adbafa09f14fe6b8088b1472681d2795be3b6
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: b6889b710b92d52a48884098e68c58286c400330
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103961764"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108107298"
 ---
-# <a name="id3dxprtbuffergetnumsamples-method"></a>ID3DXPRTBuffer:: getnumsamples-Methode
+# <a name="id3dxprtbuffergetnumsamples-method"></a>ID3DXPRTBuffer::GetNumSamples-Methode
 
-Ruft die Anzahl der abtasteten Scheitel Punkte (oder Texels) ab.
+Ruft die Anzahl der Scheitelpunkte (oder Texel) ab, die als Stichprobe entnommen wurden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,22 +40,22 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Gibt die Anzahl der abtasteten Scheitel Punkte (oder Texels) zurück.
+Gibt die Anzahl der Scheitelpunkte (oder Texel) zurück, die als Stichprobe entnommen wurden.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Mesh. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX9Mesh.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

@@ -1,7 +1,7 @@
 ---
-description: Die inaktive Methode benachrichtigt die PIN, dass der Filter nicht mehr aktiv ist.
+description: 'CBasePin.Inactive-Methode: Die Inaktive Methode benachrichtigt den Pin, dass der Filter nicht mehr aktiv ist.'
 ms.assetid: 71847578-2271-4243-87c4-9f14b33f770c
-title: Cbasepin. ininaktive Methode (amfilter. h)
+title: CBasePin.Inactive-Methode (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 431b243107c365b5d9fda729fff2de80d9193c7c
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 7c0d9ec403b53c3197c001e966ce7efd5eb8bed2
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370180"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108099338"
 ---
-# <a name="cbasepininactive-method"></a>Cbasepin. inaktive-Methode
+# <a name="cbasepininactive-method"></a>CBasePin.Inactive-Methode
 
-Die- `Inactive` Methode benachrichtigt die PIN, dass der Filter nicht mehr aktiv ist.
+Die `Inactive` -Methode benachrichtigt den Pin, dass der Filter nicht mehr aktiv ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,28 +46,28 @@ Gibt S \_ OK zurück.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Wenn der Filter angehalten wird, ruft die [**cbasefilter**](cbasefilter.md) -Klasse diese Methode auf allen verbundenen Pins des Filters auf.
+Wenn der Filter beendet wird, ruft die [**CBaseFilter-Klasse**](cbasefilter.md) diese Methode für alle verbundenen Pins des Filters auf.
 
-Diese Methode führt in der Basisklasse keine Aktion aus. Abgeleitete Klassen sollten diese Methode überschreiben, um alle Ressourcen freizugeben, die von der [**cbasepin:: Active**](cbasepin-active.md) -Methode abgerufen werden. beispielsweise, um die Zuweisungen der PIN zu decoden.
+Diese Methode führt in der Basisklasse nichts aus. Abgeleitete Klassen sollten diese Methode überschreiben, um alle Ressourcen frei zu lassen, die von der [**CBasePin::Active-Methode erhalten**](cbasepin-active.md) wurden. Zum Beispiel zum Decommit der Zuweisungen des Pins.
 
-Der interne Zustand des Filter Graph-Managers wird erst aktualisiert, nachdem diese Methode zurückgegeben wurde. Testen Sie daher nicht den Status dieser Methode.
+Der interne Zustand des Filterdiagramm-Managers wird erst aktualisiert, nachdem diese Methode zurückgegeben wurde. Testen Sie daher nicht den Zustand dieser Methode.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (streams.h enthalten)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbasepin-Klasse**](cbasepin.md)
+[**CBasePin-Klasse**](cbasepin.md)
 </dt> </dl>
 
  

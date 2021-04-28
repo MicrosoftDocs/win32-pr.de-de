@@ -1,7 +1,7 @@
 ---
-description: Beschreibt einen 16-Bit-Gleit Komma Vektor.
+description: 'D3DXFLOAT16-Struktur (D3DX10Math.h): Beschreibt einen 16-Bit-Gleitkommavektor.'
 ms.assetid: 2aaca07b-66eb-4845-9d22-692be02234ac
-title: D3DXFLOAT16-Struktur (D3DX10Math. h)
+title: D3DXFLOAT16-Struktur (D3DX10Math.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - D3DX10Math.h
-ms.openlocfilehash: c6b478cb6651df496a3895e35e88b99e99d42a17
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 01ad9bf268a1ae8ec26685e521e5dad5e6a898bb
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106363997"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108103508"
 ---
-# <a name="d3dxfloat16-structure-d3dx10mathh"></a>D3DXFLOAT16-Struktur (D3DX10Math. h)
+# <a name="d3dxfloat16-structure-d3dx10mathh"></a>D3DXFLOAT16-Struktur (D3DX10Math.h)
 
-Beschreibt einen 16-Bit-Gleit Komma Vektor.
+Beschreibt einen 16-Bit-Gleitkommavektor.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,7 +42,7 @@ typedef struct D3DXFLOAT16 {
 **Wert**
 </dt> <dd>
 
-Typ: **[ **Word**](../winprog/windows-data-types.md)**
+Typ: **[ **WORD**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
@@ -54,13 +54,13 @@ Die 16-Bit-Daten.
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------|-----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3DX10Math. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3DX10Math.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

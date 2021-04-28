@@ -1,7 +1,7 @@
 ---
-description: Transformiert eine Ebene um eine Matrix. Die Eingabe Matrix ist die umgekehrte Umwandlung der eigentlichen Transformation.
+description: 'D3DXPlaneTransform-Funktion (D3DX10Math.h): Transformiert eine Ebene durch eine Matrix. Die Eingabematrix ist die umgekehrte Transponieren der tatsächlichen Transformation.'
 ms.assetid: ded06eac-4086-47e8-bc55-c37959afc22d
-title: D3DXPlaneTransform-Funktion (D3DX10Math. h)
+title: D3DXPlaneTransform-Funktion (D3DX10Math.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: 1b3c3390d84cd0d9c876afac6243ab90ca515e11
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 9b1d16ba2a29d42614c388a6207503ad32dd5e0f
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104355596"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108108788"
 ---
-# <a name="d3dxplanetransform-function-d3dx10mathh"></a>D3DXPlaneTransform-Funktion (D3DX10Math. h)
+# <a name="d3dxplanetransform-function-d3dx10mathh"></a>D3DXPlaneTransform-Funktion (D3DX10Math.h)
 
-Transformiert eine Ebene um eine Matrix. Die Eingabe Matrix ist die umgekehrte Umwandlung der eigentlichen Transformation.
+Transformiert eine Ebene durch eine Matrix. Die Eingabematrix ist die umgekehrte Transponieren der tatsächlichen Transformation.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,30 +42,30 @@ D3DXPLANE* D3DXPlaneTransform(
 
 <dl> <dt>
 
-*Pout* \[ in, out\]
+*pOut* \[ in, out\]
 </dt> <dd>
 
 Typ: **[ **D3DXPLANE**](../direct3d9/d3dxplane.md)\***
 
-Zeiger auf den [**D3DXPLANE**](d3d10-d3dxplane.md) , der die resultierende transformierte Ebene enthält. Weitere Informationen sind im Beispiel enthalten.
+Zeiger auf die [**D3DXPLANE,die**](d3d10-d3dxplane.md) die resultierende transformierte Ebene enthält. Weitere Informationen sind im Beispiel enthalten.
 
 </dd> <dt>
 
-*PP* \[ in\]
+*pP* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXPLANE**](../direct3d9/d3dxplane.md) \***
+Typ: **const [**D3DXPLANE**](../direct3d9/d3dxplane.md) \***
 
-Ein Zeiger auf die Eingabe D3DXPLANE-Struktur, die die zu transformierende Ebene enthält. Der Vektor (a, b, c), der die Ebene beschreibt, muss normalisiert werden, bevor diese Funktion aufgerufen wird. Weitere Informationen sind im Beispiel enthalten.
+Zeiger auf die D3DXPLANE-Eingabestruktur, die die ebene enthält, die transformiert wird. Der Vektor (a,b,c), der die Ebene beschreibt, muss normalisiert werden, bevor diese Funktion aufgerufen wird. Weitere Informationen sind im Beispiel enthalten.
 
 </dd> <dt>
 
-*pm* \[ in\]
+*pM* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXMATRIX**](../direct3d9/d3dxmatrix.md) \***
+Typ: **const [**D3DXMATRIX**](../direct3d9/d3dxmatrix.md) \***
 
-Ein Zeiger auf die Quell- [**D3DXMATRIX**](d3d10-d3dxmatrix.md) -Struktur, die die Transformations Werte enthält. Diese Matrix muss die umgekehrte Umwandlung der Transformations Werte enthalten.
+Zeiger auf die [**D3DXMATRIX-Quellstruktur,**](d3d10-d3dxmatrix.md) die die Transformationswerte enthält. Diese Matrix muss die umgekehrte Transponieren der Transformationswerte enthalten.
 
 </dd> </dl>
 
@@ -73,13 +73,13 @@ Ein Zeiger auf die Quell- [**D3DXMATRIX**](d3d10-d3dxmatrix.md) -Struktur, die d
 
 Typ: **[ **D3DXPLANE**](../direct3d9/d3dxplane.md)\***
 
-Zeiger auf eine D3DXPLANE-Struktur, die die transformierte Ebene darstellt. Dabei handelt es sich um denselben Wert, der im Pout-Parameter zurückgegeben wird, sodass diese Funktion als Parameter für eine andere Funktion verwendet werden kann.
+Zeiger auf eine D3DXPLANE-Struktur, die die transformierte Ebene darstellt. Dies ist der gleiche Wert, der im pOut-Parameter zurückgegeben wird, sodass diese Funktion als Parameter für eine andere Funktion verwendet werden kann.
 
 ## <a name="remarks"></a>Bemerkungen
 
 ### <a name="examples"></a>Beispiele
 
-In diesem Beispiel wird eine Ebene durch Anwenden einer nicht einheitlichen Skala transformiert.
+In diesem Beispiel wird eine Ebene transformiert, indem eine nicht einheitliche Skala angewendet wird.
 
 
 ```
@@ -96,22 +96,22 @@ D3DXPlaneTransform(&planeNew, &plane, &matrix);
 
 
 
-Eine Ebene wird von AX + by + CZ + DW = 0 beschrieben. Die erste Ebene wird mit (a, b, c, d) = (0, 1, 1, 0) erstellt. Dies ist eine Ebene, die von y + z = 0 beschrieben wird. Nach dem Skalieren enthält die neue Ebene (a, b, c, d) = (0, 0.353 f, 0.235 f, 0), die die neue Ebene anzeigt, die von 0.353 y + 0.235 z = 0 beschrieben wird.
+Eine Ebene wird durch ax + by + soll + dw = 0 beschrieben werden. Die erste Ebene wird mit (a,b,c,d) = (0,1,1,0) erstellt. Dabei handelt es sich um eine Ebene, die durch y + z = 0 beschrieben wird. Nach der Skalierung enthält die neue Ebene (a,b,c,d) = (0, 0,353f, 0,235f, 0), die die neue Ebene anzeigt, die durch 0,353y + 0,235z = 0 beschrieben werden soll.
 
-Der-Parameter pm enthält die umgekehrte Umwandlung der Transformationsmatrix. Die umgekehrte Umwandlung ist für diese Methode erforderlich, damit der normale Vektor der transformierten Ebene ebenfalls ordnungsgemäß transformiert werden kann.
+Der Parameter pM enthält die umgekehrte Transponierung der Transformationsmatrix. Die umgekehrte Transponieren ist für diese Methode erforderlich, damit auch der normale Vektor der transformierten Ebene ordnungsgemäß transformiert werden kann.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX10Math. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx10. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX10Math.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

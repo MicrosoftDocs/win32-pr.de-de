@@ -1,8 +1,8 @@
 ---
-description: Versucht, den Dienst, auf den verwiesen wird, im Zustand "fortgesetzt"
+description: 'ResumeService-Methode der Win32_Service -Klasse (CIMWin32 WMI-Anbieter): Versucht, den Dienst, auf den verwiesen wird, im fortgesetzten Zustand zu platzieren.'
 ms.assetid: 3b4228bf-9ff5-44ab-bfe2-f7dd8fb62007
 ms.tgt_platform: multiple
-title: ResumeService-Methode der Win32_Service-Klasse (cimwin32-WMI-Anbieter)
+title: ResumeService-Methode der Win32_Service -Klasse (CIMWin32-WMI-Anbieter)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,18 +14,18 @@ api_type:
 - COM
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: ed4141b02d6e08bd4b106d2c1f72ce3fe0620fc7
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 73c21f282577207b63bcfa2d624c59ddfa3c9bcb
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103861671"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108090978"
 ---
-# <a name="resumeservice-method-of-the-win32_service-class-cimwin32-wmi-providers"></a>ResumeService-Methode der Win32_Service-Klasse (cimwin32-WMI-Anbieter)
+# <a name="resumeservice-method-of-the-win32_service-class-cimwin32-wmi-providers"></a>ResumeService-Methode der Win32_Service -Klasse (CIMWin32-WMI-Anbieter)
 
-Die **ResumeService** - [WMI-Klassen](/windows/desktop/WmiSdk/retrieving-a-class) Methode versucht, den Dienst, auf den verwiesen wird, in den Status "fortgesetzt"
+Die **ResumeService** [WMI-Klassenmethode](/windows/desktop/WmiSdk/retrieving-a-class) versucht, den Dienst, auf den verwiesen wird, im fortgesetzten Zustand zu platzieren.
 
-In diesem Thema wird die MOF-Syntax (Managed Object Format) verwendet. Weitere Informationen zum Verwenden dieser Methode finden Sie unter [Aufrufen einer Methode](/windows/desktop/WmiSdk/calling-a-method).
+In diesem Thema wird Managed Object Format -Syntax (MOF) verwendet. Weitere Informationen zur Verwendung dieser Methode finden Sie unter [Aufrufen einer Methode.](/windows/desktop/WmiSdk/calling-a-method)
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,7 +42,7 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen der in der folgenden Liste aufgeführten Werte oder einen anderen Wert zurück, um einen Fehler anzugeben. Weitere Fehlercodes finden Sie unter [**WMI-Fehler Konstanten**](/windows/desktop/WmiSdk/wmi-error-constants) oder [**WbemErrorEnum**](/windows/desktop/api/wbemdisp/ne-wbemdisp-wbemerrorenum). Allgemeine **HRESULT** -Werte finden Sie unter [System Fehler Codes](/windows/desktop/Debug/system-error-codes).
+Gibt einen der in der folgenden Liste aufgeführten Werte oder einen anderen Wert zurück, um einen Fehler anzugeben. Weitere Fehlercodes finden Sie unter [**WMI-Fehlerkonstistenzen**](/windows/desktop/WmiSdk/wmi-error-constants) oder [**WbemErrorEnum**](/windows/desktop/api/wbemdisp/ne-wbemdisp-wbemerrorenum). Allgemeine **HRESULT-Werte** finden Sie unter [Systemfehlercodes](/windows/desktop/Debug/system-error-codes).
 
 <dl> <dt>
 
@@ -63,7 +63,7 @@ Die Anforderung wird nicht unterstützt.
 **2**
 </dt> <dd>
 
-Der Benutzer verfügte nicht über die erforderlichen Zugriffsrechte.
+Der Benutzer hatte nicht den erforderlichen Zugriff.
 
 </dd> <dt>
 
@@ -84,7 +84,7 @@ Der angeforderte Steuerungscode ist nicht gültig, oder es ist für den Dienst n
 **5**
 </dt> <dd>
 
-Der angeforderte Steuerungs Code kann nicht an den Dienst gesendet werden, weil der Status des Diensts ([**Win32- \_ baseservice**](win32-baseservice.md).**State** -Eigenschaft) ist gleich 0, 1 oder 2.
+Der angeforderte Steuerungscode kann nicht an den Dienst gesendet werden, da der Zustand des Diensts ([**Win32 \_ BaseService ) ist.**](win32-baseservice.md)**State-Eigenschaft)** ist gleich 0, 1 oder 2.
 
 </dd> <dt>
 
@@ -105,14 +105,14 @@ Der Dienst hat auf die Startanforderung nicht rechtzeitig reagiert.
 **8**
 </dt> <dd>
 
-Unbekannter Fehler beim Starten des Dienstanbieter.
+Unbekannter Fehler beim Starten des Diensts.
 
 </dd> <dt>
 
 **9**
 </dt> <dd>
 
-Der Verzeichnispfad zur ausführbaren Dienst Datei wurde nicht gefunden.
+Der Verzeichnispfad zur ausführbaren Dienstdatei wurde nicht gefunden.
 
 </dd> <dt>
 
@@ -133,7 +133,7 @@ Die Datenbank zum Hinzufügen eines neuen Diensts ist gesperrt.
 **12**
 </dt> <dd>
 
-Eine Abhängigkeit, von der dieser Dienst abhängt, wurde aus dem System entfernt.
+Eine Abhängigkeit, von der dieser Dienst abhängig ist, wurde aus dem System entfernt.
 
 </dd> <dt>
 
@@ -168,42 +168,42 @@ Dieser Dienst wird aus dem System entfernt.
 **17**
 </dt> <dd>
 
-Der Dienst hat keinen Ausführungs Thread.
+Der Dienst verfügt über keinen Ausführungsthread.
 
 </dd> <dt>
 
-**Jahren**
+**18**
 </dt> <dd>
 
-Der Dienst weist zirkuläre Abhängigkeiten auf, wenn er gestartet wird.
+Der Dienst verfügt beim Start über zirkuläre Abhängigkeiten.
 
 </dd> <dt>
 
 **19**
 </dt> <dd>
 
-Ein Dienst wird unter dem gleichen Namen ausgeführt.
+Ein Dienst wird unter demselben Namen ausgeführt.
 
 </dd> <dt>
 
 **20**
 </dt> <dd>
 
-Der Dienst Name enthält ungültige Zeichen.
+Der Dienstname enthält ungültige Zeichen.
 
 </dd> <dt>
 
 **21**
 </dt> <dd>
 
-An den Dienst wurden ungültige Parameter übermittelt.
+Ungültige Parameter wurden an den Dienst übergeben.
 
 </dd> <dt>
 
 **22**
 </dt> <dd>
 
-Das Konto, unter dem dieser Dienst ausgeführt wird, ist entweder ungültig oder verfügt nicht über die Berechtigungen zum Ausführen des Dienstanbieter.
+Das Konto, unter dem dieser Dienst ausgeführt wird, ist entweder ungültig oder verfügt nicht über die Berechtigungen zum Ausführen des Diensts.
 
 </dd> <dt>
 
@@ -223,21 +223,21 @@ Der Dienst ist im System derzeitig angehalten.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Obwohl es möglicherweise keinen praktischen Unterschied zwischen einem beendeten Dienst und einem angehaltenen Dienst gibt, werden die beiden Zustände anders als der SCM angezeigt. Ein angehaltener Dienst ist ein Dienst, der nicht ausgeführt wird und die gesamte Dienst Start Prozedur durchlaufen muss. Ein angehaltene Dienst wird jedoch weiterhin ausgeführt, aber seine funktionstüchtig ist angehalten. Aus diesem Grund muss ein angehaltene Dienst nicht die gesamte Dienst Start Prozedur durchlaufen, sondern erfordert ein anderes Verfahren, um die Funktionsweise fortzusetzen.
+Obwohl es möglicherweise keinen praktischen Unterschied zwischen einem beendeten und einem angehaltenen Dienst zu geben scheint, werden die beiden Zustände im SCM anders angezeigt. Ein beendeter Dienst ist ein Dienst, der nicht ausgeführt wird und die gesamte Dienststartprozedur durchgehen muss. Ein angehaltener Dienst wird jedoch noch ausgeführt, hat aber seine Funktion angehalten. Aus diesem Grund muss ein angehaltener Dienst nicht die gesamte Dienststartprozedur durchgehen, sondern benötigt ein anderes Verfahren, um wieder funktionsfähig zu sein.
 
-Sie müssen die richtige-Methode verwenden, um einen Dienst zu starten, der angehalten wurde, oder um einen Dienst fortzusetzen, der angehalten wurde. Die [**Win32- \_ Dienst**](win32-service.md) Methoden " [**StartService**](startservice-method-in-class-win32-service.md) " und " **ResumeService** " sollten in den folgenden Situationen verwendet werden:
+Sie müssen die richtige Methode verwenden, um einen beendeten Dienst zu starten oder einen angehaltenen Dienst wieder aufzunehmen. Die [**Win32-Dienstmethoden \_**](win32-service.md) [**StartService**](startservice-method-in-class-win32-service.md) und **ResumeService** sollten in den folgenden Situationen verwendet werden:
 
--   Wenn ein Dienst aktuell beendet ist, müssen Sie ihn mit der [**Start Service**](startservice-method-in-class-win32-service.md) -Methode neu starten. **ResumeService** kann einen Dienst nicht starten, der zurzeit beendet ist.
--   Wenn ein Dienst angehalten wird, müssen Sie **ResumeService** verwenden. Wenn Sie die [**Start Service**](startservice-method-in-class-win32-service.md) -Methode für einen angehaltenen Dienst verwenden, erhalten Sie die Meldung "der Dienst wird bereits ausgeführt." Der Dienst bleibt jedoch angehalten, bis der Steuerungs Code zum Fortsetzen des dienstandens an ihn gesendet wird.
+-   Wenn ein Dienst derzeit beendet wird, müssen Sie ihn mithilfe der [**StartService-Methode**](startservice-method-in-class-win32-service.md) neu starten. **ResumeService** kann keinen Dienst starten, der derzeit beendet ist.
+-   Wenn ein Dienst angehalten wird, müssen Sie **ResumeService verwenden.** Wenn Sie die [**StartService-Methode**](startservice-method-in-class-win32-service.md) für einen angehaltenen Dienst verwenden, erhalten Sie die Meldung "Der Dienst wird bereits ausgeführt." Der Dienst bleibt jedoch angehalten, bis der Code zum Fortsetzen der Dienststeuerung an ihn gesendet wird.
 
 ## <a name="examples"></a>Beispiele
 
-Das Beispiel zum fort [setzen von Autostart-Diensten mit angehaltenen](https://Gallery.TechNet.Microsoft.Com/413f2896-e7f3-4b3e-96cb-5abdc9bb6c36) VBScript startet alle automatischen Start Dienste neu, die angehalten wurden.
+Im [Beispiel AutoStart-Dienste fortsetzen,](https://Gallery.TechNet.Microsoft.Com/413f2896-e7f3-4b3e-96cb-5abdc9bb6c36) bei denen es sich um angehaltene VBScript-Dienste handelt, werden alle angehaltenen Automatischstartdienste neu gestartet.
 
-Im folgenden VBScript-Codebeispiel wird beschrieben, wie Sie einen angehaltenen Dienst aus Instanzen des [**Win32- \_ Dienstanbieter**](win32-service.md)fortsetzen.
+Im folgenden VBScript-Codebeispiel wird beschrieben, wie ein angehaltener Dienst von Instanzen des [**Win32-Diensts fortgesetzt \_ wird.**](win32-service.md)
 
 > [!Note]  
-> Der Dienst muss angehalten und bereits ausgeführt werden.
+> Der Dienst muss das Anhalten unterstützen und bereits ausgeführt werden.
 
  
 
@@ -265,10 +265,10 @@ next
 
 
 
-Im folgenden perl-Codebeispiel wird beschrieben, wie ein angehaltene Dienst von Instanzen des [**Win32- \_ Dienstanbieter**](win32-service.md)fortgesetzt wird.
+Im folgenden Perl-Codebeispiel wird beschrieben, wie ein angehaltener Dienst von Instanzen des [**Win32-Diensts fortgesetzt \_ wird.**](win32-service.md)
 
 > [!Note]  
-> Der Dienst muss angehalten und bereits ausgeführt werden.
+> Der Dienst muss das Anhalten unterstützen und bereits ausgeführt werden.
 
  
 
@@ -324,27 +324,27 @@ else
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
 | Namespace<br/>                | Root\\CIMv2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [Betriebssystemklassen](/previous-versions//aa392727(v=vs.85))
 </dt> <dt>
 
-[**Win32- \_ Dienst**](win32-service.md)
+[**Win32-Dienst \_**](win32-service.md)
 </dt> <dt>
 
-[WMI-Tasks: Dienste](/windows/desktop/WmiSdk/wmi-tasks--services)
+[WMI-Aufgaben: Dienste](/windows/desktop/WmiSdk/wmi-tasks--services)
 </dt> </dl>
 
  

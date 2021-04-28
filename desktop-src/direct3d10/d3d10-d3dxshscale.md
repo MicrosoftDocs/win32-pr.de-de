@@ -1,7 +1,7 @@
 ---
-description: 'Skaliert einen kugelförmigen Vektor (SH). Anders ausgedrückt: Pout \[ i \] = PA \[ i \] \* Scale.'
+description: 'D3DXSHScale-Funktion (D3DX10.h): Skaliert einen pherischen Vektor (SH) anders ausgedrückt: pOut \[ i \] = pA i \[ \] \* Scale.'
 ms.assetid: e323d238-f635-4780-982d-8798ba178f31
-title: D3DXSHScale-Funktion (d3dx10. h)
+title: D3DXSHScale-Funktion (D3DX10.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: 7aa7ee66b29c7d9816708a8625bb568426a62b57
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 0fab96575e5542eaaed725a88f9ba52c3289a4ad
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106363999"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108108498"
 ---
-# <a name="d3dxshscale-function-d3dx10h"></a>D3DXSHScale-Funktion (d3dx10. h)
+# <a name="d3dxshscale-function-d3dx10h"></a>D3DXSHScale-Funktion (D3DX10.h)
 
-Skaliert einen kugelförmigen Vektor (SH). Anders ausgedrückt: Pout \[ i \] = PA \[ i \] \* Scale.
+Skaliert einen Sh-Vektor (PhericalIcal). anders ausgedrückt: pOut \[ i \] = pA i \[ \] \* Scale.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,67 +43,67 @@ FLOAT* D3DXSHScale(
 
 <dl> <dt>
 
-*Pout* \[ in\]
+*pOut* \[ In\]
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)\***
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)\***
 
-Zeiger auf Ausgabe Koeffizienten für die sphärischen (SH). Die Auswertung generiert die Koeffizienten der Bestellung. Siehe Hinweise.
+Zeiger auf SH-Ausgabekoeffizienten (Spherical- und Pherical-Rumpf). Die Auswertung generiert Order Koeffizienten. Siehe Hinweise.
 
 </dd> <dt>
 
-*Reihenfolge* \[ in\]
+*Bestellung* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Die Reihenfolge der SH-Evaluierung. Muss im Bereich von D3DXSH \_ minorder bis D3DXSH \_ maxorder (einschließlich) liegen. Die Auswertung generiert die Koeffizienten der Bestellung. Der Bewertungs Grad ist Order-1.
+Reihenfolge der SH-Auswertung. Muss im Bereich von D3DXSH \_ MINORDER bis D3DXSH \_ MAXORDER (einschließlich) liegen. Die Auswertung generiert Order Koeffizienten. Der Grad der Auswertung ist Order - 1.
 
 </dd> <dt>
 
-*pIn* \[ in\]
+*pIn* \[ In\]
 </dt> <dd>
 
-Typ: Konstante **[**float**](../winprog/windows-data-types.md) \***
+Typ: **const [**FLOAT**](../winprog/windows-data-types.md) \***
 
-Zeiger auf den zu skalierbaren SH-Vektor.
+Zeiger auf den zu skalierenden SH-Vektor.
 
 </dd> <dt>
 
-*Skalieren* \[ in\]
+*Skalieren* \[ In\]
 </dt> <dd>
 
-Typ: Konstante **[**float**](../winprog/windows-data-types.md)**
+Typ: **const [**FLOAT**](../winprog/windows-data-types.md)**
 
-Zeiger auf den Skalierungs Wert.
+Zeiger auf den Skalierungswert.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Typ: **[ **float**](../winprog/windows-data-types.md)\***
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)\***
 
-Zeiger auf SH-Ausgabe Koeffizienten.
+Zeiger auf SH-Ausgabekoeffizienten.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Jeder Koeffizient der Basis Funktion "ylm" wird am Speicherort l ² + m + l gespeichert, wobei Folgendes gilt:
+Jeder Koeffizient der Basisfunktion "Ylm" wird an der Speicherposition ljs + m + l gespeichert, wobei Folgendes gilt:
 
--   l ist der Grad der Basis Funktion.
--   m ist der Basis Funktions Index für den angegebenen l-Wert und reicht von-l bis l (einschließlich).
+-   l ist der Grad der Basisfunktion.
+-   m ist der Basisfunktionsindex für den angegebenen l-Wert und reicht von -l bis l einschließlich.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx10. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>D3dx10. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>D3DX10.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

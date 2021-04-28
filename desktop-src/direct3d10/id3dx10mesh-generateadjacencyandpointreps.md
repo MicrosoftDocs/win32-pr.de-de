@@ -1,7 +1,7 @@
 ---
-description: Generieren Sie eine Liste mit Gitter Kanten sowie eine Liste der Flächen, die die einzelnen Kanten gemeinsam verwenden.
+description: 'ID3DX10Mesh::GenerateAdjaencyAndPointReps-Methode: Generieren Sie eine Liste von Gitternetzkanten sowie eine Liste von Gesichtern, die die einzelnen Kanten gemeinsam nutzen.'
 ms.assetid: 3932e2b1-031d-4962-ad90-6e9da8cf2e0e
-title: 'ID3DX10Mesh:: generateaccessumcyandpointreps-Methode (d3dx10. h)'
+title: ID3DX10Mesh::GenerateAdjaencyAndPointReps-Methode (D3DX10.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: c46cf83931c95116132798ca971f9d4e61da2af8
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: e496f96f36805d411c71e9aba1e2560b0dcbe3c6
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104530992"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108083978"
 ---
-# <a name="id3dx10meshgenerateadjacencyandpointreps-method"></a>ID3DX10Mesh:: generateaccessumcyandpointreps-Methode
+# <a name="id3dx10meshgenerateadjacencyandpointreps-method"></a>ID3DX10Mesh::GenerateAdjaencyAndPointReps-Methode
 
-Generieren Sie eine Liste mit Gitter Kanten sowie eine Liste der Flächen, die die einzelnen Kanten gemeinsam verwenden.
+Generieren Sie eine Liste von Gitternetzrändern sowie eine Liste von Gesichtern, die die einzelnen Kanten gemeinsam nutzen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,12 +40,12 @@ HRESULT GenerateAdjacencyAndPointReps(
 
 <dl> <dt>
 
-*Epsilon* \[ in\]
+*Epsilon* \[ In\]
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-Gibt an, dass Scheitel Punkte, die sich an einer Position um weniger als Epsilon unterscheiden, als Coincident behandelt werden sollen.
+Gibt an, dass Scheitelpunkte, die sich in der Position um weniger als epsilon unterscheiden, als zufällig behandelt werden sollen.
 
 </dd> </dl>
 
@@ -53,26 +53,26 @@ Gibt an, dass Scheitel Punkte, die sich an einer Position um weniger als Epsilon
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Der Rückgabewert ist einer der Werte, die in [Direct3D 10-Rückgabe Codes](d3d10-graphics-reference-returnvalues.md)aufgelistet sind.
+Der Rückgabewert ist einer der In [Direct3D 10-Rückgabecodes aufgeführten](d3d10-graphics-reference-returnvalues.md)Werte.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Nachdem eine Anwendung Informationen zu einem Mesh generiert hat, können die Mesh-Daten optimiert werden, um die Leistung zu verbessern.
+Nachdem eine Anwendung Adjazenzinformationen für ein Gitternetz generiert hat, können die Gitternetzdaten optimiert werden, um eine bessere Zeichnungsleistung zu erzielen.
 
-Die Reihenfolge der Einträge im Anfügungs Puffer wird durch die Reihenfolge der Scheitelpunkt Indizes im Index Puffer bestimmt. Das angrenzende Dreieck 0 entspricht immer dem Rand zwischen den Indizes der Ecken 0 und 1. Das angrenzende Dreieck 1 entspricht immer dem Rand zwischen den Indizes der Ecken 1 und 2, während das angrenzende Dreieck 2 dem Rand zwischen den Indizes der Ecken 2 und 0 entspricht.
+Die Reihenfolge der Einträge im Adjazenzpuffer wird durch die Reihenfolge der Scheitelpunktindizes im Indexpuffer bestimmt. Das angrenzende Dreieck 0 entspricht immer dem Rand zwischen den Indizes der Ecken 0 und 1. Das angrenzende Dreieck 1 entspricht immer dem Rand zwischen den Indizes der Ecken 1 und 2, während das angrenzende Dreieck 2 dem Rand zwischen den Indizes der Ecken 2 und 0 entspricht.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx10. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>D3dx10. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>D3DX10.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

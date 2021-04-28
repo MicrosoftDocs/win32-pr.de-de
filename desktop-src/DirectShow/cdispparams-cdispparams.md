@@ -1,7 +1,7 @@
 ---
-description: Konstruktormethode.
+description: CDispParams.CDispParams-Konstruktor – Konstruktormethode.
 ms.assetid: da67a5e4-b4a1-4a38-93fe-0965695e93f5
-title: Cdisppara AMS. cdispparameams-Konstruktor (ctlutil. h)
+title: CDispParams.CDispParams-Konstruktor (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,14 +16,14 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: f3beeb0a6e3a18c3fac6606385d9206938bbc1cd
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 42f55a57a0f9e06d3001c2638d457fe0b82a914d
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106368606"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108095788"
 ---
-# <a name="cdispparamscdispparams-constructor"></a>Cdisppara AMS. cdispparameams-Konstruktor
+# <a name="cdispparamscdispparams-constructor"></a>CDispParams.CDispParams-Konstruktor
 
 Konstruktormethode.
 
@@ -43,17 +43,17 @@ CDispParams(
 
 <dl> <dt>
 
-*"nargs"* 
+*nArgs* 
 </dt> <dd>
 
-Anzahl von Argumenten, die an die Methode oder Eigenschaft übermittelt werden.
+Anzahl von Argumenten, die an die Methode oder Eigenschaft übergeben werden.
 
 </dd> <dt>
 
-*Argumente* 
+*pArgs* 
 </dt> <dd>
 
-Zeiger auf die Liste der Argumente. In der Liste wird jedes Argument mit dem Variant-Typ gespeichert.
+Zeiger auf die Liste der Argumente. In der Liste wird jedes Argument mit seinem Variant-Typ gespeichert.
 
 </dd> </dl>
 
@@ -61,18 +61,18 @@ Zeiger auf die Liste der Argumente. In der Liste wird jedes Argument mit dem Var
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cdispparameams-Klasse**](cdispparams.md)
+[**CDispParams-Klasse**](cdispparams.md)
 </dt> </dl>
 
  

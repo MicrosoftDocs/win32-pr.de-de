@@ -1,7 +1,7 @@
 ---
-description: Erstellt einen Effekt Compiler aus einer Beschreibung des ASCII-Effekts.
+description: 'D3DXCreateEffectCompiler-Funktion: Erstellt einen Effektcompiler aus einer ASCII-Effektbeschreibung.'
 ms.assetid: 96e883f4-4055-4b8b-940a-164bbf893af4
-title: D3DXCreateEffectCompiler-Funktion (D3DX9Effect. h)
+title: D3DXCreateEffectCompiler-Funktion (D3DX9Effect.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3dx9.lib
 - D3dx9.dll
-ms.openlocfilehash: 513b11ba12abe05126c122f8bc9bfcfa978df3fa
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 38ab58ed15609d468d25f4406353448e4fd6adb4
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103762282"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108115768"
 ---
 # <a name="d3dxcreateeffectcompiler-function"></a>D3DXCreateEffectCompiler-Funktion
 
-Erstellt einen Effekt Compiler aus einer Beschreibung des ASCII-Effekts.
+Erstellt einen Effektcompiler aus einer ASCII-Effektbeschreibung.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,39 +46,39 @@ HRESULT D3DXCreateEffectCompiler(
 
 <dl> <dt>
 
-*pSrcData* \[ in\]
+*pSrcData* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPCSTR**](../winprog/windows-data-types.md)**
 
-Zeiger auf einen Puffer, der eine Beschreibung des Effekts enthält.
+Zeiger auf einen Puffer, der eine Effektbeschreibung enthält.
 
 </dd> <dt>
 
-*Srcdatalen* \[ in\]
+*SrcDataLen* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Länge in Byte der Effekt Daten.
+Länge der Effect-Daten in Bytes.
 
 </dd> <dt>
 
-*pdefinitionen* \[ in\]
+*pDefine* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXMACRO**](d3dxmacro.md) \***
+Typ: **const [**D3DXMACRO**](d3dxmacro.md) \***
 
-Ein optionales **null** terminiertes Array von [**D3DXMACRO**](d3dxmacro.md) -Strukturen, die Präprozessordefinitionen beschreiben. Dieser Wert kann **null** sein.
+Ein optionales Mit **NULL** endendes Array von [**D3DXMACRO-Strukturen,**](d3dxmacro.md) die Präprozessordefinitionen beschreiben. Dieser Wert kann **NULL** sein.
 
 </dd> <dt>
 
-*pinclude* \[ in\]
+*pInclude* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXINCLUDE**](id3dxinclude.md)**
 
-Optionaler Schnittstellen Zeiger, [**ID3DXInclude**](id3dxinclude.md), der zum Verarbeiten von include-Direktiven verwendet werden soll \# . Wenn dieser Wert **null** ist, \# wird includes bei der Kompilierung aus einer Datei berücksichtigt, oder es wird ein Fehler ausgelöst, wenn eine Kompilierung aus einer Ressource oder einem Arbeitsspeicher erfolgt.
+Optionaler Schnittstellenzeiger [**ID3DXInclude**](id3dxinclude.md), der für die Behandlung von \# Includedirektiven verwendet werden soll. Wenn dieser Wert **NULL** ist, \# wird includes entweder beim Kompilieren aus einer Datei berücksichtigt oder verursacht bei der Kompilierung aus einer Ressource oder aus dem Arbeitsspeicher einen Fehler.
 
 </dd> <dt>
 
@@ -87,25 +87,25 @@ Optionaler Schnittstellen Zeiger, [**ID3DXInclude**](id3dxinclude.md), der zum V
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
-Kompilierungsoptionen, die durch verschiedene Flags identifiziert werden (siehe [D3DXSHADER Flags](d3dxshader-flags.md)). Der Direct3D 10 HLSL-Compiler ist nun der Standard. Ausführliche Informationen finden Sie unter [Effect-Compiler-Tool](../direct3dtools/fxc.md) .
+Durch verschiedene Flags identifizierte Kompilierungsoptionen (siehe [D3DXSHADER-Flags).](d3dxshader-flags.md) Der Direct3D 10 HLSL-Compiler ist jetzt die Standardeinstellung. Weitere [Informationen finden Sie unter Effect-Compiler Tool](../direct3dtools/fxc.md) .
 
 </dd> <dt>
 
-*ppeer-ectcompiler* \[ vorgenommen\]
+*ppEffectCompiler* \[ out\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXEFFECTCOMPILER**](id3dxeffectcompiler.md)\***
 
-Adresse eines Zeigers auf eine [**ID3DXEffectCompiler**](id3dxeffectcompiler.md) -Schnittstelle, die den Effekt Compiler enthält.
+Adresse eines Zeigers auf eine [**ID3DXEffectCompiler-Schnittstelle,**](id3dxeffectcompiler.md) die den Effektcompiler enthält.
 
 </dd> <dt>
 
-*ppparsererrors* \[ vorgenommen\]
+*ppParseErrors* \[ out\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXBUFFER**](id3dxbuffer.md)\***
 
-Adresse eines Zeigers auf eine [**ID3DXBuffer**](id3dxbuffer.md) -Schnittstelle, die Fehlermeldungen enthält, die während der Kompilierung aufgetreten sind. Dieser Parameter kann auf **null** festgelegt werden, um Fehlermeldungen zu ignorieren.
+Adresse eines Zeigers auf eine [**ID3DXBuffer-Schnittstelle,**](id3dxbuffer.md) die alle Fehlermeldungen enthält, die während der Kompilierung aufgetreten sind. Dieser Parameter kann auf NULL festgelegt **werden,** um Fehlermeldungen zu ignorieren.
 
 </dd> </dl>
 
@@ -113,24 +113,24 @@ Adresse eines Zeigers auf eine [**ID3DXBuffer**](id3dxbuffer.md) -Schnittstelle,
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden sein: D3DERR \_ invalidcall, E \_ oudefmemory.
+Wenn die Funktion erfolgreich ist, ist der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden sein: D3DERR \_ INVALIDCALL, E \_ OUTOFMEMORY.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Effect. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>     |
+| Header<br/>  | <dl> <dt>D3DX9Effect.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Effekt Funktionen](dx9-graphics-reference-effects-functions.md)
+[Effect-Funktionen](dx9-graphics-reference-effects-functions.md)
 </dt> <dt>
 
 [**D3DXCreateEffectCompilerFromFile**](d3dxcreateeffectcompilerfromfile.md)

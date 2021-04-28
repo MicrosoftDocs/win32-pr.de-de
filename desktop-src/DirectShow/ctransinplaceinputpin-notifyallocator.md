@@ -1,7 +1,7 @@
 ---
-description: 'Die notifyzucator-Methode gibt eine Zuweisung für die Verbindung an. Mit dieser Methode wird die IMemInputPin:: notifyzucator-Methode implementiert.'
+description: 'CTransInPlaceInputPin.NotifyAllocator-Methode: Die NotifyAllocator-Methode gibt eine Zuweisung für die Verbindung an. Diese Methode implementiert die IMemInputPin::NotifyAllocator-Methode.'
 ms.assetid: adc1c5b6-99da-4140-b644-7b98f6b8bad4
-title: Ctransinplaceinputpin. notifyzucator-Methode (transip. h)
+title: CTransInPlaceInputPin.NotifyAllocator-Methode (Transip.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 74578243ce780e09d7435f9dd4b70bd9497e1e97
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: ca15be5dc1893a393e6052832cc7522f27355eeb
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106357596"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108094748"
 ---
-# <a name="ctransinplaceinputpinnotifyallocator-method"></a>Ctransinplaceinputpin. notifyzucator-Methode
+# <a name="ctransinplaceinputpinnotifyallocator-method"></a>CTransInPlaceInputPin.NotifyAllocator-Methode
 
-Die- `NotifyAllocator` Methode gibt eine Zuweisung für die Verbindung an. Mit dieser Methode wird die [**IMemInputPin:: notifyzucator**](/windows/desktop/api/Strmif/nf-strmif-imeminputpin-notifyallocator) -Methode implementiert.
+Die `NotifyAllocator` -Methode gibt eine Zuweisung für die Verbindung an. Diese Methode implementiert die [**IMemInputPin::NotifyAllocator-Methode.**](/windows/desktop/api/Strmif/nf-strmif-imeminputpin-notifyallocator)
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,31 +43,31 @@ HRESULT NotifyAllocator(
 
 <dl> <dt>
 
-*pallocator* 
+*pAllocator* 
 </dt> <dd>
 
-Ein Zeiger auf die [**imemfercator**](/windows/desktop/api/Strmif/nn-strmif-imemallocator) -Schnittstelle des Zuordners.
+Zeiger auf die [**IMemAllocator-Schnittstelle der Zuweisung.**](/windows/desktop/api/Strmif/nn-strmif-imemallocator)
 
 </dd> <dt>
 
-*nur Bread* 
+*bReadOnly* 
 </dt> <dd>
 
-Flag, das angibt, ob Beispiele aus dieser Zuweisung schreibgeschützt sind. **True** gibt an, dass die Beispiele schreibgeschützt sind.
+Flag, das angibt, ob Beispiele aus dieser Zuweisung schreibgeschützt sind. True **gibt an,** dass Beispiele schreibgeschützt sind.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT** -Wert zurück. Mögliche Werte sind in der folgenden Tabelle aufgeführt.
+Gibt einen **HRESULT-Wert** zurück. Mögliche Werte sind die in der folgenden Tabelle gezeigten Werte.
 
 
 
 | Rückgabecode                                                                               | Beschreibung                          |
 |-------------------------------------------------------------------------------------------|--------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>      | Erfolg<br/>                   |
-| <dl> <dt>**E \_ fehlschlagen**</dt> </dl>    | Fehler<br/>                   |
-| <dl> <dt>**E- \_ Zeiger**</dt> </dl> | **Null** -Zeigerargument<br/> |
+| <dl> <dt>**E \_ FAIL**</dt> </dl>    | Fehler<br/>                   |
+| <dl> <dt>**\_E-ZEIGER**</dt> </dl> | **NULL-Zeigerargument**<br/> |
 
 
 
@@ -75,31 +75,31 @@ Gibt einen **HRESULT** -Wert zurück. Mögliche Werte sind in der folgenden Tabe
 
 ## <a name="remarks"></a>Bemerkungen
 
-Der Filter versucht, die gleiche Zuweisung für beide Pin-Verbindungen zu verwenden.
+Der Filter versucht, dieselbe Zuweisung für beide Pinverbindungen zu verwenden.
 
--   Wenn die Ausgabe-PIN nicht verbunden ist, akzeptiert die Eingabe-PIN automatisch die Zuweisung. Wenn die Ausgabe-PIN verbunden ist, stellt der Filter erneut eine Verbindung mit der eingabepin her. An diesem Punkt versucht der Filter erneut, eine einzelne Zuweisung zu verwenden.
--   Wenn die Ausgabe-PIN verbunden ist, akzeptiert die Eingabe-PIN die Zuweisung. Die Ausgabe-PIN verwendet auch die gleiche Zuweisung. Er ruft `NotifyAllocator` für die downstreameingabepin auf.
+-   Wenn der Ausgabepin nicht verbunden ist, akzeptiert der Eingabepin automatisch die Zuweisung. Wenn der Ausgabepin verbunden ist, verbindet der Filter den Eingabepin erneut. An diesem Punkt versucht der Filter erneut, eine einzelne Zuweisung zu verwenden.
+-   Wenn der Ausgabepin verbunden ist, akzeptiert der Eingabepin die Zuweisung. Der Ausgabepin verwendet auch die gleiche Zuweisung. Er ruft `NotifyAllocator` auf dem nachgeschalteten Eingabepin auf.
 
-Der vorherige Fall hat die folgende Ausnahme:
+Der vorherige Fall weist die folgende Ausnahme auf:
 
--   Wenn die vorgeschlagene Zuweisung schreibgeschützt ist (d. h., der *bReadOnly* -Parameter ist **true**) und der Filter die Beispiele ändern muss, muss der Filter zwei verschiedene Zuweisungen verwenden. Wenn der upstreamfilter in diesem Fall vorschlägt, die Zuweisung des downstreamfilters zu verwenden, gibt die Methode E \_ Fail zurück.
+-   Wenn die vorgeschlagene Zuweisung schreibgeschützt ist (d. h., der *bReadOnly-Parameter* ist **TRUE),** und der Filter die Stichproben ändern muss, muss der Filter zwei verschiedene Zuweisungen verwenden. Wenn der Upstreamfilter in diesem Fall die Verwendung der Zuweisung des Downstreamfilters vorschlägt, gibt die Methode E \_ FAIL zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Transip. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Transip.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Ctransinplaceinputpin-Klasse**](ctransinplaceinputpin.md)
+[**CTransInPlaceInputPin-Klasse**](ctransinplaceinputpin.md)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
-description: Die m \_ pFilter-Member-Variable ist ein Zeiger auf den besitzenden Filter.
+description: 'CImageAllocator::m_pFilter Member: Die m pFilter-Membervariable ist ein Zeiger \_ auf den besitzenden Filter.'
 ms.assetid: 57ba31bb-e047-4046-a58d-6ca39d6093f8
-title: 'Cimagezuordcator:: m_pFilter Member (winutil. h)'
+title: CImageAllocator::m_pFilter Member (Winutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 325450d44a649008a4a4f16297ad52404c242c52
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: f62a7e9ce7a9449072cfdd318330f5bfae0bbb16
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371206"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108085658"
 ---
-# <a name="cimageallocatorm_pfilter-member"></a>Cimagezuordcator:: m \_ pFilter-Member
+# <a name="cimageallocatorm_pfilter-member"></a>CImageAllocator::m \_ pFilter-Member
 
-Die `m_pFilter` Member-Variable ist ein Zeiger auf den besitzenden Filter.
+Die `m_pFilter` Membervariable ist ein Zeiger auf den besitzenden Filter.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,18 +40,18 @@ CBaseFilter *m_pFilter;
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Winutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Winutil.h (einschließlich Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cimagezuordcator-Klasse**](cimageallocator.md)
+[**CImageAllocator-Klasse**](cimageallocator.md)
 </dt> </dl>
 
  

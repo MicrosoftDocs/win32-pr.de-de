@@ -1,8 +1,8 @@
 ---
-description: Die Methode "Take Ownership" der WMI-Klasse ruft den Besitz der logischen Datei ab, die im Objekt Pfad angegeben ist.
+description: 'TakeOwnerShip-Methode der Win32_Directory-Klasse: Die TakeOwnerShip-WMI-Klassenmethode erhält den Besitz der logischen Datei, die im Objektpfad angegeben ist.'
 ms.assetid: 1112823b-0bb6-4dc0-a5c4-8d3839a47a3a
 ms.tgt_platform: multiple
-title: TakeOwnership-Methode der Win32_Directory-Klasse
+title: TakeOwnerShip-Methode der Win32_Directory-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,18 +14,18 @@ api_type:
 - COM
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: c06441b7728ed8b9178e889cbd60c047f0f3a497
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 178f1bf523d939883a7fc18b5bdbd7142cc4f824
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104523011"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108086028"
 ---
-# <a name="takeownership-method-of-the-win32_directory-class"></a>TakeOwnership-Methode der Win32- \_ Verzeichnis Klasse
+# <a name="takeownership-method-of-the-win32_directory-class"></a>TakeOwnerShip-Methode der Win32 \_ Directory-Klasse
 
-Die Methode " **Take Ownership** " der [WMI-Klasse](/windows/desktop/WmiSdk/retrieving-a-class) Ruft den Besitz der logischen Datei ab, die im Objekt Pfad angegeben ist. Wenn die logische Datei tatsächlich ein Verzeichnis ist, wird der **Take Ownership** rekursiv durchlaufen und übernimmt den Besitz aller Dateien und Unterverzeichnisse, die das Verzeichnis enthält.
+Die [WMI-Klassenmethode](/windows/desktop/WmiSdk/retrieving-a-class) **TakeOwnerShip** erhält den Besitz der logischen Datei, die im Objektpfad angegeben ist. Wenn die logische Datei tatsächlich ein Verzeichnis ist, verhält **sich TakeOwnerShip** rekursiv und übernimmt den Besitz aller Dateien und Unterverzeichnisse, die das Verzeichnis enthält.
 
-In diesem Thema wird die MOF-Syntax (Managed Object Format) verwendet. Weitere Informationen zur Verwendung dieser Methode finden Sie unter [Aufrufen einer Methode](/windows/desktop/WmiSdk/calling-a-method).
+In diesem Thema wird Managed Object Format -Syntax (MOF) verwendet. Weitere Informationen zur Verwendung dieser Methode finden Sie unter [Aufrufen einer Methode.](/windows/desktop/WmiSdk/calling-a-method)
 
 ## <a name="syntax"></a>Syntax
 
@@ -63,7 +63,7 @@ Der Zugriff wurde verweigert.
 **8**
 </dt> <dd>
 
-Ein nicht angegebener Fehler ist aufgetreten.
+Es ist ein nicht angegebener Fehler aufgetreten.
 
 </dd> <dt>
 
@@ -112,7 +112,7 @@ Das Verzeichnis ist nicht leer.
 **15**
 </dt> <dd>
 
-Es ist eine Freigabe Verletzung aufgetreten.
+Es ist ein Freigabeverstoß vor worden.
 
 </dd> <dt>
 
@@ -126,7 +126,7 @@ Die angegebene Startdatei war ungültig.
 **17**
 </dt> <dd>
 
-Eine für den Vorgang erforderliche Berechtigung wird nicht aufrechterhalten.
+Für den Vorgang ist keine Berechtigung erforderlich.
 
 </dd> <dt>
 
@@ -139,7 +139,7 @@ Ein angegebener Parameter ist ungültig.
 
 ## <a name="examples"></a>Beispiele
 
-Der folgende Visual Basic Skriptcode Ruft die [**TakeOwnership**](takeownership-method-in-class-cim-directory.md) -Methode auf, um den Besitz des Ordners "C: Temp" zu übernehmen \\ .
+Der folgende Visual Basic Script-Code ruft die [**TakeOwnerShip-Methode**](takeownership-method-in-class-cim-directory.md) auf, um den Besitz des Ordners C: \\ temp zu übernehmen.
 
 
 ```VB
@@ -166,24 +166,24 @@ wscript.echo objOutParams.ReturnValue
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [Betriebssystemklassen](/previous-versions//aa392727(v=vs.85))
 </dt> <dt>
 
-[**Win32- \_ Verzeichnis**](win32-directory.md)
+[**\_Win32-Verzeichnis**](win32-directory.md)
 </dt> </dl>
 
  

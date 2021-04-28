@@ -1,118 +1,118 @@
 ---
-description: .
+description: Bewährte Methoden für die Energieeffizienz
 ms.assetid: 355abd0e-928e-442e-a724-855d9dd946fc
 title: Bewährte Methoden für die Energieeffizienz
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 04a9980d199e2d95c6dbd01c642a1f00f45e584c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 67d9a348b9df49531358de2db50acc0936622c36
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106352577"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108088388"
 ---
 # <a name="best-practices-for-energy-efficiency"></a>Bewährte Methoden für die Energieeffizienz
 
 ## <a name="platform"></a>Plattform
 
- **Clients** – Windows XP Windows \| Vista \| Windows 7  
+ **Clients** – Windows XP \| Windows Vista Windows \| 7  
 
 ## <a name="description"></a>BESCHREIBUNG
 
-Windows-basierte Laptops müssen die gesetzlichen Anforderungen an die Energieeffizienz erfüllen, wie z. b. die der USA Umweltschutzbehörde (EPA) Energy Star Program. Außerdem haben Umfragen ergeben, dass die Dauer der Dauer des Akkus länger dauert als die meisten Kunden, die in Laptops benötigt werden. Um Kundenanforderungen gerecht zu werden, müssen Windows-Laptops ständig in den folgenden Bereichen fortfahren:
+Windows-basierte Laptops müssen gesetzliche Anforderungen an die Energieeffizienz erfüllen, z. B. die anforderungen des Energy Star-Programms der USA Environmental Protection Agency (WPA). Darüber hinaus haben Umfragen ergeben, dass die längere Akkulaufzeit weiterhin das ist, was Die Verbraucher am meisten wünschen und in Laptops benötigen. Um die Verbraucheranforderungen zu erfüllen, müssen Windows-Laptops in den folgenden Bereichen kontinuierlich weiterentwickelt werden:
 
--   Energieeffizienz in allen Verwendungs Szenarien, einschließlich Leerlauf, produktionsworkloads, DVD-und Medienwiedergabe und Branchen Benchmarks
--   Akku Lebensdauer für mobile PCs – für Hardwareplattformen und für Windows
+-   Energieeffizienz in allen Nutzungsszenarien, einschließlich Leerlauf, Produktivitätsworkloads, DVD- und Medienwiedergabe und Branchenbenchmarks
+-   Akkulebensdauer mobiler PCs – für Hardwareplattformen und für Windows
 
-Die Windows-Plattform ist äußerst zuverlässig und ermöglicht eine schnelle und leistungsfähige Leistung. Erweiterungen, die für mobile PC-Systeme bereitgestellt werden, wie z. b. Dienste, System Steuerungs Applets, Treiber und andere Software, können sich jedoch erheblich auf die Leistung, Zuverlässigkeit und Energieeffizienz auswirken.
+Die Windows-Plattform ist äußerst zuverlässig und ermöglicht eine schnelle Ein- und Aus-Leistung. Erweiterungen, die mit mobilen PC-Systemen wie Diensten, Taskleisten-Applets, Treibern und anderer Software bereitgestellt werden, können sich jedoch erheblich auf Leistung, Zuverlässigkeit und Energieeffizienz auswirken.
 
-Energieeffizienz ist ein komplexes Problem, bei dem Faktoren betroffen sind, die sich auf alle Elemente des PC-Ökosystems auswirken. Kleinere Verbesserungen in mehreren Szenarien können die Energieeffizienz verbessern, aber eine einzelne Anwendung, ein leistungsfähiges Gerät oder ein Feature mit schlechter Leistung kann den Energieverbrauch erheblich steigern.
+Energieeffizienz ist ein komplexes Problem mit Faktoren, die von allen Elementen des PC-Ökosystems betroffen sind und sich darauf auswirken. Kleine Verbesserungen in mehreren Szenarien können die Energieeffizienz verbessern, aber eine einzelne schlecht leistungsfähige Anwendung, ein Gerät oder ein Systemfeature kann den Energieverbrauch erheblich erhöhen.
 
-Hardware und Geräte bilden die Grundlage für die Energieeffizienz. Anwendungs-und Dienst Software müssen jedoch auch effizient sein, damit das System eine optimale Akku Lebensdauer erzielen kann. Jede Softwarekomponente im System, einschließlich des Betriebssystems und der durch den Wert hinzugefügten Anwendungen und Dienste, muss den grundlegenden Effizienz Richtlinien entsprechen. Eine einzelne Anwendung oder ein fehlerhafter Dienst kann jegliche Energieeffizienz erzielen, die der neueste Prozessor, die Geräte oder die Platt Form Hardware erreicht hat. Ausführlichere Informationen zur Akku Lebensdauer und Energieeffizienz finden Sie im [Handbuch zur Akku Lebensdauer](https://docs.microsoft.com/windows-hardware/design/component-guidelines/battery-and-charging#).
+Hardware und Geräte bilden die Grundlage für die Energieeffizienz. Anwendungs- und Dienstsoftware muss jedoch auch effizient sein, damit das System eine optimale Akkulebensdauer erzielen kann. Jede Softwarekomponente im System, einschließlich des Betriebssystems und mehrwertige Anwendungen und Dienste, muss den grundlegenden Effizienzrichtlinien entsprechen. Eine einzelne fehlerhafte Anwendung oder ein einzelner Dienst kann jegliche Energieeffizienzsteigerungen beseitigen, die der neueste Prozessor, die neuesten Geräte oder die neueste Plattformhardware erzielt hat. Ausführlichere Informationen zur Akkulebensdauer und Energieeffizienz finden Sie im Handbuch zu Lösungen für die [Akkulebensdauer.](https://docs.microsoft.com/windows-hardware/design/component-guidelines/battery-and-charging#)
 
-Die wichtigsten Probleme und Komponenten, die sich auf die Akku Lebensdauer auf einem mobilen PC auswirken, sind folgende:
+Die Hauptprobleme und Komponenten, die sich auf die Akkulaufzeit auf einem mobilen PC auswirken, sind:
 
-**Akku Merkmale**
+**Akkumerkmale**
 
--   Größe, Typ und Qualität der Akkukapazität wirken sich auf die Akku Lebensdauer aus
--   Je größer der Akku, desto größer das Netzteil.
--   Größere Akkus sind teurer und schwerer. Benutzer bevorzugen leichtere Systeme
+-   Größe, Typ und Qualität der Akkukapazität wirken sich auf die Akkulebensdauer aus
+-   Je größer der Akku, desto größer die Stromversorgung
+-   Größere Akkus sind teurer und umfangreicher. Benutzer bevorzugen einfachere Systeme
 
 **Hardwarekomponenten**
 
--   Häufigkeit und Tiefe der Hardware in niedrigere Energiezustände
--   Hardware Unterstützung von niedrigeren Energiezuständen
--   Treiber Optimierung für Energieeffizienz
+-   Häufigkeit und Tiefe, mit der Hardware in niedrigere Leistungszustände gelangen kann
+-   Hardwareunterstützung für niedrigere Leistungszustände
+-   Treiberoptimierung für Energieeffizienz
 
-**Betriebs System – gesteuerte Energie Verwaltung**
+**Vom Betriebssystem gesteuerte Energieverwaltung**
 
--   Effizienz von Windows-Code im Vergleich zur Auslastung im Leerlauf
--   Die Zusammenarbeit aller Komponenten mit Windows-gesteuerter Energie Verwaltung
--   Ordnungsgemäße Konfiguration des Betriebssystems zur Optimierung der Energie Verwaltung durch Energierichtlinien Einstellungen
+-   Effizienz von Windows-Code während einer Auslastung im Vergleich zu im Leerlauf
+-   Zusammenarbeitsebene aller Komponenten mit windowsgesteuerter Energieverwaltung
+-   Ordnungsgemäße Konfiguration des Betriebssystems zur Optimierung der Energieverwaltung durch Energierichtlinieneinstellungen
 
-**Anwendungs Software und-Dienste**
+**Anwendungssoftware und -dienste**
 
--   Effizienz von Anwendungen, Treibern und Diensten im Vergleich zum Leerlauf
--   Anwendungsebene der Anwendungen mit Windows – gesteuerte Energie Verwaltung
--   Software Gewährung des Systems oder der Geräte, die in den Energiespar Zustand "Leerlauf" eingegeben werden sollen
+-   Effizienz von Anwendungen, Treibern und Diensten bei einer Last im Vergleich zum Leerlauf
+-   Zusammenarbeitsebene von Anwendungen mit windowsgesteuerter Energieverwaltung
+-   Softwarezutritt des Systems oder der Geräte in den Leerlaufzustand mit geringer Leistung
 
-Eine einzelne Anwendung oder Dienst Komponente kann verhindern, dass ein System die optimale Akku Lebensdauer erkennt. Obwohl Windows viele Energie Konfigurationsoptionen bereitstellt, sind vorinstallierte Software-oder Energierichtlinien Einstellungen auf vielen Systemen nicht für die Host Hardwareplattform optimiert.
+Eine einzelne Anwendung oder Dienstkomponente kann verhindern, dass ein System eine optimale Akkulaufzeit realisiert. Obwohl Windows viele Energiekonfigurationsoptionen bietet, sind vorinstallierte Software- oder Energierichtlinieneinstellungen auf vielen Systemen nicht für die Hosthardwareplattform optimiert.
 
-Eine gängige Methode zum Auswerten der Akku Lebensdauer von vorinstallierter Software besteht darin, den Stromverbrauch des Systems mit einer Neuinstallation von Windows im Vergleich zu einer Windows-Installation zu vergleichen, die zusätzliche Software und Dienste umfasst. Obwohl es sich bei einer Neuinstallation nicht um die typische Plattform handelt, die von OEMs an Kunden ausgeliefert wird, kann der Stromverbrauchs Vergleich einen Einblick in die Energieeffizienz der vorinstallierten Software bieten.
+Eine gängige Methode zum Auswerten der Auswirkungen vorinstallierter Software auf die Akkulebensdauer ist der Vergleich des Energieverbrauchs des Systems mit einer Neuinstallation von Windows im Vergleich zu einer Windows-Installation, die Mehrwertsoftware und -dienste umfasst. Obwohl eine Neuinstallation nicht die typische Plattform darstellt, die OEMs an Kunden liefern, kann der Vergleich des Stromverbrauchs Einblicke in die Energieeffizienz von vorinstallierten Software bieten.
 
 ## <a name="best-practices"></a>Bewährte Methoden
 
-Um sicherzustellen, dass Ihre Anwendung auf Windows-Plattformen optimiert ist, befolgen Sie die folgenden bewährten Methoden, wenn Sie Anwendungen oder Dienste entwerfen:
+Um sicherzustellen, dass Ihre Anwendung auf Windows-Plattformen optimiert ist, befolgen Sie beim Entwerfen von Anwendungen oder Diensten die folgenden bewährten Methoden:
 
--   **Vermeiden Sie die Verwendung von periodischen Zeit Gebern mit hoher Auflösung.**
+-   **Vermeiden der Verwendung von periodischen Zeitgebern mit hoher Auflösung**
 
-<dl> Verwenden von periodischen Zeit Gebern mit hoher Auflösung (<10 ms) reduces the efficiency of processor power-management technologies.  
+<dl> Verwenden von periodischen Zeitgebern mit hoher Auflösung (<10 ms) reduces the efficiency of processor power-management technologies.  
 </dl>
 
--   **In Leistungsoptimierungen investieren**
+-   **Investitionen in Leistungsoptimierungen**
 
-<dl> Jede Leistungsoptimierung ist eine Optimierung der Akku Lebensdauer. Durch die Reduzierung der erforderlichen Ressourcen, z. b. die Verwendung der geringeren Prozessorzeit oder der Datenträger Lesevorgänge bei der Batch Verarbeitung/Cluster Verarbeitung, kann sich die System Hardware in den Leerlauf versetzen und in den Modus  
+<dl> Jede Leistungsoptimierung ist eine Optimierung der Akkulebensdauer. Reduzierung der erforderlichen Ressourcen, z. B. durch weniger Prozessorzeit oder Batchverarbeitung/Clustering von Datenträgerlesedaten, ermöglicht es, dass die Systemhardware in den Leerlauf versetzt wird und in den Energiesparmodus versetzt wird.  
 </dl>
 
--   **Anpassen an die Benutzer Energierichtlinie**
+-   **Anpassen an die Benutzerleistungsrichtlinie**
 
-<dl> Windows Vista und höher erleichtern es dem Benutzer, die Gesamtenergieeinsparung oder das Leistungsverhalten des Systems auszuwählen. Ihre Anwendung sollte auf Änderungen der Energierichtlinie reagieren und die Ressourcennutzung reduzieren oder die Leistung entsprechend steigern. Beispielsweise sollte eine Anwendung Hintergrund Aktivitäten wie z. b. Indizierung oder Systemüberprüfung deaktivieren, wenn der Benutzer einen Energiespar Energie Sparplan ausgewählt hat.  
+<dl> Windows Vista und höher erleichtern dem Benutzer die Auswahl des gesamten Energiespar- oder Leistungsverhaltens des Systems. Ihre Anwendung sollte auf Änderungen in der Energierichtlinie reagieren und die Ressourcennutzung reduzieren oder die Leistung entsprechend erhöhen. Beispielsweise sollte eine Anwendung Hintergrundaktivitäten wie Indizierung oder Systemüberprüfung deaktivieren, wenn der Benutzer einen Energiesparplan ausgewählt hat.  
 </dl>
 
--   **Reduzieren der Ressourcennutzung, wenn sich das System im Akku Betrieb befindet**
+-   **Reduzieren des Ressourcenverbrauchs, wenn das System im Akkubetrieb ist**
 
-<dl> Ihre Anwendung sollte den Ressourcenverbrauch reduzieren, z. b. die Häufigkeit des Aktualisierungs Intervalls, wenn sich das System in der Akkuleistung befindet.  
+<dl> Ihre Anwendung sollte die Ressourcennutzung reduzieren , z. B. die Aktualisierungshäufigkeit im Hintergrund, wenn das System im Akkubetrieb ist.  
 </dl>
 
--   **Nicht in der angezeigten Anzeige Rendering**
+-   **Nicht in der Anzeige rendern, wenn sie deaktiviert ist**
 
-<dl> Die System Anzeige ist möglicherweise deaktiviert, um Energieeinsparungen zu erzielen. Die Anwendung sollte keine unnötige Grafik Rendering durchführen, wenn die Anzeige deaktiviert ist, da dadurch Systemressourcen und eine Stromversorgung verschwendet werden.  
+<dl> Die Systemanzeige kann aus Gründen der Stromeinsparung deaktiviert sein. Ihre Anwendung sollte kein unnötiges Grafikrendering durchführen, wenn die Anzeige ausgeschaltet ist, da dadurch Systemressourcen und Energie verschwendet werden.  
 </dl>
 
--   **Vermeiden von Abfragen und Gliederung in engen Schleifen**
+-   **Vermeiden von Abruf und Spinnen in engen Schleifen**
 
-<dl> Hohe Prozessorauslastung reduziert die Effektivität von Technologien zur Prozessor Energie Verwaltung, wie z. b. Prozessor-Leerlauf Zustände und Prozessor Leistungszustände.  
+<dl> Eine hohe Prozessorauslastung reduziert die Effektivität von Technologien zur Prozessorleistungsverwaltung, z. B. Prozessor-Leerlaufzustände und Prozessorleistungszustände.  
 </dl>
 
--   **Verhindern, dass das System die Anzeige oder die Leerlaufzeit in den Standbymodus schaltet**
+-   **Verhindern Sie nicht, dass das System die Anzeige ausschalten oder in den Ruhezustand versetzt wird.**
 
-<dl> Die Anwendung sollte mit der SetThreadExecutionState-API über die SetThreadExecutionState-API verfügen. Das System sollte diese Anforderungen nur dann stellen, wenn kritische Vorgänge das System vor dem Ausschalten der Anzeige oder dem automatischen Wechsel in den Standbymodus verzögern müssen.  
+<dl> Ihre Anwendung sollte mit der SetThreadExecutionState-API mit vorsichtsvollen Power Requests vorgehen. Das System sollte diese Anforderungen nur stellen, wenn kritische Vorgänge das System am Ausschalten der Anzeige oder am automatischen Eintritt in den Ruhezustand verzögern müssen.  
 </dl>
 
--   **Antworten auf häufige Ereignisse der Energie Verwaltung**
+-   **Reagieren auf allgemeine Energieverwaltungsereignisse**
 
-<dl> Die Anwendung sollte sich für allgemeine Energie Verwaltungs Ereignisse registrieren und auf diese reagieren, wie z. b. Änderungen an der System Energiequelle und Einschalt-und Ausschalten von Benachrichtigungen für die Anzeige.  
+<dl> Ihre Anwendung sollte sich für allgemeine Energieverwaltungsereignisse registrieren und darauf reagieren, z. B. Änderungen an der Systemstromquelle und Ein- und Ausschalten-Benachrichtigungen für die Anzeige.  
 </dl>
 
--   **Aktivieren Sie die Debugprotokollierung nicht standardmäßig. Verwenden Sie stattdessen die Ereignis Ablauf Verfolgung für Windows.**
+-   **Aktivieren Sie die Debugprotokollierung nicht standardmäßig. Verwenden Sie stattdessen die Ereignisablaufverfolgung für Windows.**
 
-<dl> Eine regelmäßige Debugprotokollierung kann die Datenträger-Spin-Down  
+<dl> Die regelmäßige Debugprotokollierung kann das Herunterspinnen von Datenträgern verhindern.  
 </dl>
 
 ## <a name="links-to-other-resources"></a>Links zu anderen Ressourcen
 
--   [Leitfaden zu den Akku lebenslösungen](https://docs.microsoft.com/windows-hardware/design/component-guidelines/battery-and-charging#)
--   [Energieeffizienz Portal](https://www.microsoft.com/whdc/system/pnppwr/mobilepwr.mspx)
+-   [Leitfaden für Akkulebensdauerlösungen](https://docs.microsoft.com/windows-hardware/design/component-guidelines/battery-and-charging#)
+-   [Energieeffizienzportal](https://www.microsoft.com/whdc/system/pnppwr/mobilepwr.mspx)
 -   [Windows Performance Toolkit](https://www.microsoft.com/whdc/system/sysperf/perftools.mspx)
 
  

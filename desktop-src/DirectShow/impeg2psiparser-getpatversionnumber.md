@@ -1,7 +1,7 @@
 ---
-description: Die Implementierung dieser Methode wird als Beispielcode mit dem DirectShow SDK bereitgestellt. Es handelt sich nicht um eine unterstützte DirectShow-API.
+description: 'IMpeg2PsiParser::GetPatVersionNumber-Methode: Die Implementierung dieser Methode wird als Beispielcode mit dem DirectShow SDK bereitgestellt. Es handelt sich nicht um eine unterstützte DirectShow-API.'
 ms.assetid: 2f5ad9bf-3d70-491a-ab45-15cd922a02d4
-title: 'IMpeg2PsiParser:: getpatversionnumber-Methode'
+title: IMpeg2PsiParser::GetPatVersionNumber-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,18 +12,18 @@ api_name:
 api_type:
 - COM
 api_location: ''
-ms.openlocfilehash: 6117060cf0c8d3c56d03e5838376485244fde8d9
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 978da4c7076bcf8ffe91bc2b9a4b2077d9d3d48a
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104392449"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108089148"
 ---
-# <a name="impeg2psiparsergetpatversionnumber-method"></a>IMpeg2PsiParser:: getpatversionnumber-Methode
+# <a name="impeg2psiparsergetpatversionnumber-method"></a>IMpeg2PsiParser::GetPatVersionNumber-Methode
 
 Die Implementierung dieser Methode wird als Beispielcode mit dem DirectShow SDK bereitgestellt. Es handelt sich nicht um eine unterstützte DirectShow-API.
 
-Die- `GetPatVersionNumber` Methode ruft das Feld mit der Versions \_ Nummer von Pat ab. Ein Transportstream enthält höchstens einen Pat. Die Versionsnummer wird jedes Mal inkrementiert, wenn sich die Informationen in der Tabelle ändern.
+Die `GetPatVersionNumber` -Methode ruft das Feld mit \_ der Versionsnummer aus dem PAT ab. Ein Transportstream enthält mindestens ein PAT. Die Versionsnummer wird erhöht, wenn sich die Informationen in der Tabelle ändern.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,16 +40,16 @@ HRESULT GetPatVersionNumber(
 
 <dl> <dt>
 
-*ppatversion* \[ vorgenommen\]
+*pPatVersion* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf eine Variable, die das Feld mit der Versions \_ Nummer empfängt.
+Zeiger auf eine Variable, die das Versionsnummerfeld \_ empfängt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt einen **HRESULT** -Wert zurück. Mögliche Werte sind u. a. die in der folgenden Tabelle aufgeführten Werte.
+Die -Methode gibt einen **HRESULT-Wert** zurück. Mögliche Werte sind, aber nicht beschränkt auf, die in der folgenden Tabelle gezeigten Werte.
 
 
 
@@ -61,14 +61,14 @@ Die-Methode gibt einen **HRESULT** -Wert zurück. Mögliche Werte sind u. a. die
 
  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**IMpeg2PsiParser-Schnittstelle**](impeg2psiparser.md)
 </dt> <dt>
 
-[Beispiel für PSI-Parser-Filter](psi-parser-filter-sample.md)
+[BEISPIEL FÜR PSI-Parserfilter](psi-parser-filter-sample.md)
 </dt> </dl>
 
  

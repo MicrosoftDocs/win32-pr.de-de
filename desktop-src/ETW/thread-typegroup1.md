@@ -1,5 +1,5 @@
 ---
-description: Diese Klasse ist die Ereignistyp Klasse für Ereignisse zum Starten und Beenden von Threads. Die folgende Syntax wird durch den MOF-Code vereinfacht.
+description: 'Thread_TypeGroup1 Klasse: Diese Klasse ist die Ereignistypklasse für Threadstart- und -endereignisse. Die folgende Syntax wird durch MOF-Code vereinfacht.'
 ms.assetid: d9e3e33a-0e59-4753-a8d8-5320cbae9d95
 title: Thread_TypeGroup1-Klasse
 ms.topic: reference
@@ -26,18 +26,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 75352efbe044f5fee837c496c394fe28e2dbbbfb
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9693bef4449cc076710a74dd9cef88ae608754b3
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104130705"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108105708"
 ---
 # <a name="thread_typegroup1-class"></a>Thread \_ TypeGroup1-Klasse
 
-Diese Klasse ist die Ereignistyp Klasse für Ereignisse zum Starten und Beenden von Threads.
+Diese Klasse ist die Ereignistypklasse für Threadstart- und -endereignisse.
 
-Die folgende Syntax wird durch den MOF-Code vereinfacht.
+Die folgende Syntax wird durch MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -64,26 +64,26 @@ class Thread_TypeGroup1 : Thread
 
 ## <a name="members"></a>Member
 
-Die **Thread \_ TypeGroup1** -Klasse verfügt über diese Typen von Membern:
+Die **Thread \_ TypeGroup1-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **Thread \_ TypeGroup1** -Klasse verfügt über diese Eigenschaften.
+Die **Thread \_ TypeGroup1-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 Affinität
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (7), Zeiger
+Qualifizierer: WmiDataId(7), Zeiger
 </dt> </dl>
 
 Der Satz von Prozessoren, auf denen der Thread ausgeführt werden darf.
@@ -93,223 +93,223 @@ Der Satz von Prozessoren, auf denen der Thread ausgeführt werden darf.
 BasePriority
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8**
+Datentyp: **uint8**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (11)
+Qualifizierer: WmiDataId(11)
 </dt> </dl>
 
-Die Zeit Planungs Modul Priorität des Threads (siehe die [**SetThreadPriority**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-setthreadpriority) -Funktion).
+Die Schedulerpriorität des Threads (siehe [**SetThreadPriority-Funktion).**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-setthreadpriority)
 
 </dd> <dt>
 
-Iopriority
+IoPriority
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8**
+Datentyp: **uint8**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (13)
+Qualifizierer: WmiDataId(13)
 </dt> </dl>
 
-Ein e/a-Prioritäts Hinweis zum Planen von IOS, der vom Thread generiert wird
+Ein E/A-Prioritätshinweis zum Planen von E/A-Daten, die vom Thread generiert werden.
 
 </dd> <dt>
 
-Pagepriority
+PagePriority
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8**
+Datentyp: **uint8**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (12)
+Qualifizierer: WmiDataId(12)
 </dt> </dl>
 
-Ein Speicherseiten Prioritäts Hinweis für Speicherseiten, auf die der Thread zugreift.
+Ein Speicherseitenprioritätshinweis für Speicherseiten, auf die der Thread zugreift.
 
 </dd> <dt>
 
 ProcessId
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (1), Format ("x")
+Qualifizierer: WmiDataId(1), Format("x")
 </dt> </dl>
 
-Prozess Bezeichner des am Ereignis beteiligten Threads.
+Prozessbezeichner des am Ereignis beteiligten Threads.
 
 </dd> <dt>
 
 StackBase
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (3), Zeiger
+Qualifizierer: WmiDataId(3), Zeiger
 </dt> </dl>
 
-Basisadresse des Thread Stapels.
+Basisadresse des Stapels des Threads.
 
 </dd> <dt>
 
 StackLimit
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (4), Zeiger
+Qualifizierer: WmiDataId(4), Zeiger
 </dt> </dl>
 
-Grenzwert für den Thread Stapel.
+Der Grenzwert des Stapels des Threads.
 
 </dd> <dt>
 
-Subprocesstag
+SubProcessTag
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (10), Format ("x")
+Qualifizierer: WmiDataId(10), Format("x")
 </dt> </dl>
 
-Identifiziert den Dienst, wenn der Thread einem Dienst gehört. andernfalls 0 (null).
+Identifiziert den Dienst, wenn sich der Thread im Besitz eines Diensts befindet. andernfalls 0 (null).
 
 </dd> <dt>
 
-Tebbase
+TebBase
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (9), Zeiger
+Qualifizierer: WmiDataId(9), Zeiger
 </dt> </dl>
 
-Basisadresse für Thread Umgebungsblock.
+Basisadresse des Threadumgebungsblocks.
 
 </dd> <dt>
 
-Threadflags
+ThreadFlags
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8**
+Datentyp: **uint8**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (14)
+Qualifizierer: WmiDataId(14)
 </dt> </dl>
 
 Nicht verwendet.
 
 </dd> <dt>
 
-Tthreadid
+TThreadId
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (2), Format ("x")
+Qualifizierer: WmiDataId(2), Format("x")
 </dt> </dl>
 
-Thread Bezeichner des am Ereignis beteiligten Threads.
+Threadbezeichner des Threads, der am Ereignis beteiligt ist.
 
 </dd> <dt>
 
-Userstackbase
+UserStackBase
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (5), Zeiger
+Qualifizierer: WmiDataId(5), Zeiger
 </dt> </dl>
 
-Basisadresse für den benutzermodusstapel des Threads.
+Basisadresse des Benutzermodusstapels des Threads.
 
 </dd> <dt>
 
-Userstacklimit
+UserStackLimit
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (6), Zeiger
+Qualifizierer: WmiDataId(6), Zeiger
 </dt> </dl>
 
-Limit für den benutzermodusstapel des Threads.
+Limit des Benutzermodusstapels des Threads.
 
 </dd> <dt>
 
 Win32StartAddr
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (8), Zeiger
+Qualifizierer: WmiDataId(8), Zeiger
 </dt> </dl>
 
-Die Startadresse der Funktion, die von diesem Thread ausgeführt werden soll.
+Startadresse der Funktion, die von diesem Thread ausgeführt werden soll.
 
 </dd> </dl>
 
 ## <a name="remarks"></a>Bemerkungen
 
-Die Ereignis Typen DCStart und DCEnd zählen die Threads, die derzeit zum Zeitpunkt der Kernel Sitzung ausgeführt werden.
+Die DCStart- und DCEnd-Ereignistypen zählen die Threads auf, die derzeit zum Zeitpunkt des Starts bzw. Endes der Kernelsitzung ausgeführt werden.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
@@ -317,7 +317,7 @@ Die Ereignis Typen DCStart und DCEnd zählen die Threads, die derzeit zum Zeitpu
 
 <dl> <dt>
 
-[**Aden**](thread.md)
+[**Thread**](thread.md)
 </dt> </dl>
 
  

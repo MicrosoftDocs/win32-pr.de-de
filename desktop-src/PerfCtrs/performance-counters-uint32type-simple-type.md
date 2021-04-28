@@ -1,7 +1,7 @@
 ---
-description: Definiert einen ganzzahligen Typ ohne Vorzeichen.
+description: 'UInt32Type Simple Type (Leistungsindikatoren): Definiert einen Ganzzahltyp ohne Vorzeichen.'
 ms.assetid: 48df484d-d663-42fa-aaec-51c463bb5350
-title: UInt32Type Simple Type (Leistungsindikatoren)
+title: Einfacher UInt32Type-Typ (Leistungsindikatoren)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -9,14 +9,14 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 4c32901167bcf181e5400ddb1d3b91ed7383965c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 32f8a4bbf00f569ba98dfc031f62717b1afc8734
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106348611"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108114578"
 ---
-# <a name="uint32type-simple-type-performance-counters"></a>UInt32Type Simple Type (Leistungsindikatoren)
+# <a name="uint32type-simple-type-performance-counters"></a>Einfacher UInt32Type-Typ (Leistungsindikatoren)
 
 Definiert einen ganzzahligen Typ ohne Vorzeichen.
 
@@ -36,10 +36,10 @@ Sie können den Wert als 4-Byte-Ganzzahl oder Hexadezimalwert im Bereich von 0 b
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 

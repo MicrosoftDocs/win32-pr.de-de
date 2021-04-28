@@ -1,5 +1,5 @@
 ---
-description: Diese Klasse ist die übergeordnete Klasse für Thread Ereignisse. Die folgende Syntax wird durch den MOF-Code vereinfacht.
+description: 'Thread_V0 Klasse: Diese Klasse ist die übergeordnete Klasse für Threadereignisse. Die folgende Syntax wird durch MOF-Code vereinfacht.'
 ms.assetid: 7ae2556b-49d4-4c70-9f29-49a3ca96f5bf
 title: Thread_V0-Klasse
 ms.topic: reference
@@ -12,18 +12,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: c708640ea6851f67183841b124279ca0739a168c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 652f5b8ad796fedd45e5ac627fc855796def3646
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104977464"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108105698"
 ---
-# <a name="thread_v0-class"></a>Thread \_ v0-Klasse
+# <a name="thread_v0-class"></a>Thread \_ V0-Klasse
 
-Diese Klasse ist die übergeordnete Klasse für Thread Ereignisse.
+Diese Klasse ist die übergeordnete Klasse für Threadereignisse.
 
-Die folgende Syntax wird durch den MOF-Code vereinfacht.
+Die folgende Syntax wird durch MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -36,13 +36,13 @@ class Thread_V0 : MSNT_SystemTrace
 
 ## <a name="members"></a>Member
 
-Die **Thread \_** -Klasse "v0" definiert keine Member.
+Die **Thread \_ V0-Klasse** definiert keine Member.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/> |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>       |
@@ -53,16 +53,16 @@ Die **Thread \_** -Klasse "v0" definiert keine Member.
 
 <dl> <dt>
 
-[**MSNT \_ systemtrace**](msnt-systemtrace.md)
+[**MSNT \_ SystemTrace**](msnt-systemtrace.md)
 </dt> <dt>
 
-[**Aden**](thread.md)
+[**Thread**](thread.md)
 </dt> <dt>
 
-[**Thread \_ v0 \_ TypeGroup1**](thread-v0-typegroup1.md)
+[**Thread \_ V0 \_ TypeGroup1**](thread-v0-typegroup1.md)
 </dt> <dt>
 
-[**Thread \_ v1**](thread-v1.md)
+[**Thread \_ V1**](thread-v1.md)
 </dt> </dl>
 
  

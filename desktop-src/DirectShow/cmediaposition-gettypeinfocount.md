@@ -1,7 +1,7 @@
 ---
-description: Die GetTypeInfoCount-Methode ruft die Anzahl der Schnittstellen für Typinformationen ab, die das Objekt bereitstellt.
+description: 'CMediaPosition.GetTypeInfoCount-Methode: Die GetTypeInfoCount-Methode ruft die Anzahl der Typinformationsschnittstellen ab, die das Objekt bereitstellt.'
 ms.assetid: c98368f2-ae0c-4301-be30-7332b19f53ee
-title: Cmediaposition. GetTypeInfoCount-Methode (ctlutil. h)
+title: CMediaPosition.GetTypeInfoCount-Methode (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 7cac543c49b7f2f6b9dc3357bbb1c691477d9b62
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 8cfc54f414a6722f7f69a0330fad2d1a0cfab425
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371172"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108095478"
 ---
-# <a name="cmediapositiongettypeinfocount-method"></a>Cmediaposition. GetTypeInfoCount-Methode
+# <a name="cmediapositiongettypeinfocount-method"></a>CMediaPosition.GetTypeInfoCount-Methode
 
-Die- `GetTypeInfoCount` Methode ruft die Anzahl der Schnittstellen für Typinformationen ab, die das Objekt bereitstellt.
+Die `GetTypeInfoCount` -Methode ruft die Anzahl der Typinformationsschnittstellen ab, die das -Objekt bereitstellt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,7 +45,7 @@ HRESULT GetTypeInfoCount(
 *pctinfo* 
 </dt> <dd>
 
-Ein Zeiger auf eine Variable, die die Anzahl der vom-Objekt bereitgestellten Type-Information-Schnittstellen empfängt. Wenn die Methode zurückgibt, ist der Wert 1.
+Zeiger auf eine Variable, die die Anzahl der vom -Objekt bereitgestellten Typinformationsschnittstellen empfängt. Wenn die Methode zurückgegeben wird, ist der Wert 1.
 
 </dd> </dl>
 
@@ -58,7 +58,7 @@ Gibt einen der folgenden Werte zurück.
 | Rückgabecode                                                                               | Beschreibung                           |
 |-------------------------------------------------------------------------------------------|---------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>      | Erfolg.<br/>                   |
-| <dl> <dt>**E- \_ Zeiger**</dt> </dl> | **Null** -Zeigerargument.<br/> |
+| <dl> <dt>**E \_ POINTER**</dt> </dl> | **NULL-Zeigerargument.**<br/> |
 
 
 
@@ -68,18 +68,18 @@ Gibt einen der folgenden Werte zurück.
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cmediaposition-Klasse**](cmediaposition.md)
+[**CMediaPosition-Klasse**](cmediaposition.md)
 </dt> </dl>
 
  

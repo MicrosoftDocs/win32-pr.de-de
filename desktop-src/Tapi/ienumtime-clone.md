@@ -1,21 +1,21 @@
 ---
-description: Die Clone-Methode erstellt einen weiteren Enumerator, der den gleichen Enumerationszustand wie der aktuelle Enumerator enthält.
+description: 'IEnumTime::Clone-Methode: Die Clone-Methode erstellt einen weiteren Enumerator, der den gleichen Enumerationszustand wie der aktuelle enthält.'
 ms.assetid: 0e9973de-d179-4a2d-a9bd-6d5f2523da52
-title: 'Ienumtime:: Clone-Methode (sdpblb. h)'
+title: IEnumTime::Clone-Methode (Sdpblb.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7a030fcd90006047e35d9f661f2878dfbc42c112
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 406dac1fad611ee5d3cb6c8b6ef32dfdb62cc963
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369238"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108090738"
 ---
-# <a name="ienumtimeclone-method"></a>Ienumtime:: Clone-Methode
+# <a name="ienumtimeclone-method"></a>IEnumTime::Clone-Methode
 
-\[ Rendezvous-Steuerelemente und Schnittstellen für die IP-telefoniekonferenz sind nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet eine ähnliche Funktionalität.\]
+\[ Rendezvous-IP-Telefoniekonferenz-Steuerelemente und -Schnittstellen sind nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet ähnliche Funktionen.\]
 
-Die **Clone** -Methode erstellt einen weiteren Enumerator, der den gleichen Enumerationszustand wie der aktuelle Enumerator enthält.
+Die **Clone-Methode** erstellt einen weiteren Enumerator, der den gleichen Enumerationszustand wie der aktuelle enthält.
 
 ## <a name="syntax"></a>Syntax
 
@@ -32,10 +32,10 @@ HRESULT Clone(
 
 <dl> <dt>
 
-*ppum* \[ vorgenommen\]
+*ppEnum* \[ out\]
 </dt> <dd>
 
-Zeiger auf das neue [**ienumtime**](ienumtime.md) -Objekt.
+Zeiger auf das neue [**IEnumTime-Objekt.**](ienumtime.md)
 
 </dd> </dl>
 
@@ -48,9 +48,9 @@ Diese Methode kann einen dieser Werte zurückgeben.
 | Wert                                                                                         | Bedeutung                                                         |
 |-----------------------------------------------------------------------------------------------|-----------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>          | Methode war erfolgreich.<br/>                                    |
-| <dl> <dt>**E- \_ Zeiger**</dt> </dl>     | Der *ppum* -Parameter ist kein gültiger Zeiger.<br/>       |
-| <dl> <dt>**E \_ outo-Memory**</dt> </dl> | Zum Ausführen des Vorgangs ist nicht genügend Arbeitsspeicher vorhanden.<br/> |
-| <dl> <dt>**E \_ unerwartet**</dt> </dl>  | Aus unbekannten Gründen fehlgeschlagen.<br/>                          |
+| <dl> <dt>**E \_ POINTER**</dt> </dl>     | Der *ppEnum-Parameter* ist kein gültiger Zeiger.<br/>       |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl> | Es ist nicht genügend Arbeitsspeicher zum Ausführen des Vorgangs vorhanden.<br/> |
+| <dl> <dt>**E \_ UNEXPECTED**</dt> </dl>  | Fehler aus unbekannten Gründen.<br/>                          |
 
 
 
@@ -58,26 +58,26 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
 ## <a name="remarks"></a>Bemerkungen
 
-TAPI Ruft die **adressf** -Methode für die [**ienumtime**](ienumtime.md) -Schnittstelle auf, die von **ienumtime:: Clone** zurückgegeben wurde. Die Anwendung muss Release auf der **ienumtime** -Schnittstelle aufzurufen, um Ressourcen frei **zugeben** , die ihr zugeordnet sind.
+TAPI ruft die **AddRef-Methode** für die [**IEnumTime-Schnittstelle**](ienumtime.md) auf, die von **IEnumTime::Clone** zurückgegeben wird. Die Anwendung muss **Release** auf der **IEnumTime-Schnittstelle** aufrufen, um zugeordnete Ressourcen freizugeben.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------|---------------------------------------------------------------------------------------|
-| TAPI-Version<br/> | Erfordert TAPI 3,0 oder höher<br/>                                                 |
-| Header<br/>       | <dl> <dt>Sdpblb. h</dt> </dl>   |
-| Bibliothek<br/>      | <dl> <dt>UUID. lib</dt> </dl>   |
+| TAPI-Version<br/> | Erfordert TAPI 3.0 oder höher<br/>                                                 |
+| Header<br/>       | <dl> <dt>Sdpblb.h</dt> </dl>   |
+| Bibliothek<br/>      | <dl> <dt>Uuid.lib</dt> </dl>   |
 | DLL<br/>          | <dl> <dt>Sdpblb.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Ienumtime**](ienumtime.md)
+[**IEnumTime**](ienumtime.md)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
-description: Ruft die Anzahl der Gesichter im Mesh ab.
+description: 'ID3DXBaseMesh::GetNumFaces-Methode: Ruft die Anzahl der Gesichter im Netz ab.'
 ms.assetid: 3f7cffd4-97ae-4f1c-9f91-931b85f07734
-title: 'ID3DXBaseMesh:: getnumfaces-Methode (D3DX9Mesh. h)'
+title: ID3DXBaseMesh::GetNumFaces-Methode (D3DX9Mesh.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: e4647e432e79dc3065cc8e6d1f0617e6364049ff
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 9adc36e4d34909481c61d1c62e4233a1f6f92a87
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106355027"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108115418"
 ---
-# <a name="id3dxbasemeshgetnumfaces-method"></a>ID3DXBaseMesh:: getnumfaces-Methode
+# <a name="id3dxbasemeshgetnumfaces-method"></a>ID3DXBaseMesh::GetNumFaces-Methode
 
-Ruft die Anzahl der Gesichter im Mesh ab.
+Ruft die Anzahl der Gesichter im Gitternetz ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,20 +42,20 @@ Diese Methode hat keine Parameter.
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
-Gibt die Anzahl der Gesichter im Mesh zurück.
+Gibt die Anzahl der Gesichter im Gitternetz zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Mesh. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX9Mesh.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

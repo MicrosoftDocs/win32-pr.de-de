@@ -1,7 +1,7 @@
 ---
-description: Entfernt die Einstellungen virtueller Ressourcen aus einer Konfiguration des virtuellen Systems.
+description: 'RemoveBootSourceSettings-Methode der Msvm_VirtualSystemManagementService-Klasse: Entfernt Einstellungen für virtuelle Ressourcen aus einer Konfiguration des virtuellen Systems.'
 ms.assetid: 0deb7719-e605-4ba5-9bb2-037d0cafee24
-title: Removebootsourcesettings-Methode der Msvm_VirtualSystemManagementService-Klasse
+title: RemoveBootSourceSettings-Methode der Msvm_VirtualSystemManagementService-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 2693be33d291ea5a975119a5478af580ef2bb3f4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5407e56b761dd545d20b89e0a28742f9c542b15a
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106344664"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108109398"
 ---
-# <a name="removebootsourcesettings-method-of-the-msvm_virtualsystemmanagementservice-class"></a>Removebootsourcesettings-Methode der MSVM \_ virtualsystemmanagementservice-Klasse
+# <a name="removebootsourcesettings-method-of-the-msvm_virtualsystemmanagementservice-class"></a>RemoveBootSourceSettings-Methode der Msvm \_ VirtualSystemManagementService-Klasse
 
-Entfernt die Einstellungen virtueller Ressourcen aus einer Konfiguration des virtuellen Systems.
+Entfernt Einstellungen für virtuelle Ressourcen aus einer Konfiguration des virtuellen Systems.
 
-Wenn Sie auf Teile einer "aktuellen" virtuellen Systemkonfiguration angewendet werden, werden möglicherweise als Nebeneffekt Ressourcen des aktiven virtuellen Systems entfernt.
+Wenn sie auf Teile einer "aktuellen" Konfiguration des virtuellen Systems angewendet werden, können ressourcen des aktiven virtuellen Systems als Nebeneffekt entfernt werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,17 +42,17 @@ uint32 RemoveBootSourceSettings(
 
 <dl> <dt>
 
-*Bootsourcesettings* \[ in\]
+*BootSourceSettings* \[ In\]
 </dt> <dd>
 
-Verweis auf ein Array von [**CIM \_ SettingData**](cim-settingdata.md) , das die zu entfernenden Start Quell Einstellungen beschreibt.
+Verweis auf ein Array von [**CIM \_ SettingData,**](cim-settingdata.md) das die zu entfernende Startquelleinstellung beschreibt.
 
 </dd> <dt>
 
-*Auftrag* \[ vorgenommen\]
+*Auftrag* \[ out\]
 </dt> <dd>
 
-Wenn der Vorgang asynchron ausgeführt wird, gibt diese Methode 4096 zurück, und dieser Parameter enthält einen Verweis auf ein Objekt, das von [**CIM \_ concretejob**](/previous-versions//cc136808(v=vs.85))abgeleitet wird.
+Wenn der Vorgang asynchron ausgeführt wird, gibt diese Methode 4096 zurück, und dieser Parameter enthält einen Verweis auf ein objekt, das von [**CIM \_ ConcreteJob**](/previous-versions//cc136808(v=vs.85))abgeleitet wurde.
 
 </dd> </dl>
 
@@ -68,7 +68,7 @@ Diese Methode gibt einen der folgenden Werte zurück:
 **Nicht unterstützt** (1)
 </dt> <dt>
 
-Fehler **(2** )
+**Fehler** (2)
 </dt> <dt>
 
 **Timeout** (3)
@@ -77,40 +77,40 @@ Fehler **(2** )
 **Ungültiger Parameter** (4)
 </dt> <dt>
 
-**Ungültiger Status** (5)
+**Ungültiger Zustand** (5)
 </dt> <dt>
 
-**DMTF reserviert** (..)
+**DMTF Reserved** (..)
 </dt> <dt>
 
-Über **prüfte Methoden Parameter-Auftrag gestartet** (4096)
+**Methodenparameter überprüft** – Auftrag gestartet (4096)
 </dt> <dt>
 
-**Reservierte Methode** (4097.32767)
+**Reservierte Methode** (4097..32767)
 </dt> <dt>
 
-**Hersteller spezifisch** (32768.65535)
+**Herstellerspezifisch** (32768..65535)
 </dt> </dl>
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                             |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 10 \[ Desktop-Apps\]<br/>                                                             |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2016<br/>                                                                          |
 | Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**MSVM \_ virtualsystemmanagementservice**](msvm-virtualsystemmanagementservice.md)
+[**Msvm \_ VirtualSystemManagementService**](msvm-virtualsystemmanagementservice.md)
 </dt> </dl>
 
  

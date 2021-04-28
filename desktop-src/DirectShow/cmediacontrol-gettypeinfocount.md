@@ -1,7 +1,7 @@
 ---
-description: Ruft die Anzahl der von einem-Objekt bereitgestellten Typ-Informations Schnittstellen ab.
+description: 'CMediaControl.GetTypeInfoCount-Methode: Ruft die Anzahl der Typinformationsschnittstellen ab, die von einem -Objekt bereitgestellt werden.'
 ms.assetid: 29575325-8f97-4f39-8272-86a917d9144f
-title: Cmediacontrol. gettypanfocount-Methode (ctlutil. h)
+title: CMediaControl.GetTypeInfoCount-Methode (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: f2454e503a045a02db20c0dc457b6367f6d3b427
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 7b46838278414442d6c6fc64687fe21e02732e83
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365629"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108095588"
 ---
-# <a name="cmediacontrolgettypeinfocount-method"></a>Cmediacontrol. gettypanfocount-Methode
+# <a name="cmediacontrolgettypeinfocount-method"></a>CMediaControl.GetTypeInfoCount-Methode
 
-Ruft die Anzahl der von einem-Objekt bereitgestellten Typ-Informations Schnittstellen ab.
+Ruft die Anzahl der Typinformationsschnittstellen ab, die von einem -Objekt bereitgestellt werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,30 +45,30 @@ HRESULT GetTypeInfoCount(
 *pctinfo* 
 </dt> <dd>
 
-Ein Zeiger auf die Anzahl der vom Objekt bereitgestellten Schnittstellen vom Typ "Information". Wenn das Objekt Typinformationen bereitstellt, ist diese Zahl 1. Andernfalls ist die Zahl 0 (null).
+Zeiger auf die Anzahl der Typinformationsschnittstellen, die das -Objekt bereitstellt. Wenn das Objekt Typinformationen bereitstellt, ist diese Zahl 1. Andernfalls ist die Zahl 0.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen E- \_ Zeiger zurück, wenn *pctinfo* ungültig ist; andernfalls gibt S \_ OK zurück.
+Gibt E \_ POINTER zurück, wenn *pctinfo* ungültig ist, andernfalls S \_ OK.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cmediacontrol-Klasse**](cmediacontrol.md)
+[**CMediaControl-Klasse**](cmediacontrol.md)
 </dt> </dl>
 
  

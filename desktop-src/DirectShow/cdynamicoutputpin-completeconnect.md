@@ -1,7 +1,7 @@
 ---
-description: Die completeconnect-Methode schließt eine Verbindung mit einer Eingabe-PIN ab.
+description: 'CDynamicOutputPin.CompleteConnect-Methode: Die CompleteConnect-Methode schließt eine Verbindung mit einem Eingabepin ab.'
 ms.assetid: c23195e7-8d66-4217-bd59-8889459ce4f1
-title: Cdynamicoutputpin. completeconnect-Methode (amfilter. h)
+title: CDynamicOutputPin.CompleteConnect-Methode (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 31afa592701b881d39ab4948514aacfe50b345b4
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 5fa15c84b9d9e0b686e17110c656b74161687705
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367142"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108095738"
 ---
-# <a name="cdynamicoutputpincompleteconnect-method"></a>Cdynamicoutputpin. completeconnect-Methode
+# <a name="cdynamicoutputpincompleteconnect-method"></a>CDynamicOutputPin.CompleteConnect-Methode
 
-Die- `CompleteConnect` Methode schließt eine Verbindung mit einer Eingabe-PIN ab.
+Die `CompleteConnect` -Methode schließt eine Verbindung mit einem Eingabepin ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,37 +42,37 @@ virtual HRESULT CompleteConnect(
 
 <dl> <dt>
 
-*preceivepin* 
+*pReceivePin* 
 </dt> <dd>
 
-Ein Zeiger auf die [**IPin**](/windows/desktop/api/Strmif/nn-strmif-ipin) -Schnittstelle der Eingabe-PIN.
+Zeiger auf die [**IPin-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-ipin) des Eingabepins.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt \_ bei Erfolg S OK oder einen **HRESULT** -Wert zurück, der die Ursache des Fehlers angibt.
+Gibt bei Erfolg S \_ OK oder einen **HRESULT-Wert** zurück, der die Ursache des Fehlers angibt.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Diese Methode überschreibt die [**cbaseoutputpin:: completeconnect**](cbaseoutputpin-completeconnect.md) -Methode. Zur Unterstützung dynamischer Neuverbindungen führt diese Methode einen Commit für die Zuweisung aus, wenn der Filter aktiv ist. In der Basisklasse können Verbindungen nur auftreten, wenn der Filter angehalten wird, sodass für die Zuweisung immer ein Commit in der [**cbaseoutputpin:: Active**](cbaseoutputpin-active.md) -Methode ausgeführt wird.
+Diese Methode überschreibt die [**CBaseOutputPin::CompleteConnect-Methode.**](cbaseoutputpin-completeconnect.md) Um dynamische Wiederherstellungsverknüpfungen zu unterstützen, committet diese Methode die Zuweisung, wenn der Filter aktiv ist. In der Basisklasse können Verbindungen nur auftreten, wenn der Filter beendet wird, sodass für die Zuweisung immer ein Commit in der [**CBaseOutputPin::Active-Methode**](cbaseoutputpin-active.md) ausgeführt wird.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (streams.h einschließen)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cdynamicoutputpin-Klasse**](cdynamicoutputpin.md)
+[**CDynamicOutputPin-Klasse**](cdynamicoutputpin.md)
 </dt> </dl>
 
  

@@ -1,5 +1,5 @@
 ---
-description: Fordert eine zurück Setzung an.
+description: 'Reset-Methode der Msvm_SyntheticDisplayController-Klasse: Fordert eine Zurücksetzung an.'
 ms.assetid: 6fa327e8-0296-40f6-9ee6-6e447e31cce3
 title: Reset-Methode der Msvm_SyntheticDisplayController-Klasse
 ms.topic: reference
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 1f6eacdcf7c2371ad3ed11250d143f6681af99a3
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f52463aa570942e7696aa0c8fea55bbb848fcc99
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104215370"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108109578"
 ---
-# <a name="reset-method-of-the-msvm_syntheticdisplaycontroller-class"></a>Reset-Methode der MSVM \_ syntheticdisplaycontroller-Klasse
+# <a name="reset-method-of-the-msvm_syntheticdisplaycontroller-class"></a>Reset-Methode der Msvm \_ SyntheticDisplayController-Klasse
 
-Fordert eine zurück Setzung an.
+Fordert eine Zurücksetzung an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -53,21 +53,21 @@ Diese Methode gibt einen der folgenden Werte zurück:
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8.1<br/>                                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2<br/>                                                                       |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**MSVM \_ syntheticdisplaycontroller**](msvm-syntheticdisplaycontroller.md)
+[**Msvm \_ SyntheticDisplayController**](msvm-syntheticdisplaycontroller.md)
 </dt> </dl>
 
  

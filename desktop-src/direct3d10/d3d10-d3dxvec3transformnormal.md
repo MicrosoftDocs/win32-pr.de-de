@@ -1,7 +1,7 @@
 ---
-description: Wandelt den 3D-Vektor normal um die angegebene Matrix um.
+description: 'D3DXVec3TransformNormal-Funktion (D3DX10Math.h): Transformiert den 3D-Vektor normal durch die angegebene Matrix.'
 ms.assetid: 8068b80f-6222-4f23-8b1c-2ff5592fa898
-title: D3DXVec3TransformNormal-Funktion (D3DX10Math. h)
+title: D3DXVec3TransformNormal-Funktion (D3DX10Math.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - D3DX10Math.h
-ms.openlocfilehash: 602f366d3d7ccbcd37804226323d5584eed034f9
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 0fc1456b89f3e11f2076a8e7b6b960d15e9c7083
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104355297"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108103058"
 ---
-# <a name="d3dxvec3transformnormal-function-d3dx10mathh"></a>D3DXVec3TransformNormal-Funktion (D3DX10Math. h)
+# <a name="d3dxvec3transformnormal-function-d3dx10mathh"></a>D3DXVec3TransformNormal-Funktion (D3DX10Math.h)
 
-Wandelt den 3D-Vektor normal um die angegebene Matrix um.
+Transformiert den 3D-Vektor normal durch die angegebene Matrix.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,30 +41,30 @@ D3DXVECTOR3* D3DXVec3TransformNormal(
 
 <dl> <dt>
 
-*Pout* \[ in, out\]
+*pOut* \[ in, out\]
 </dt> <dd>
 
 Typ: **[ **D3DXVECTOR3**](../direct3d9/d3dxvector3.md)\***
 
-Zeiger auf das [**D3DXVECTOR3**](d3d10-d3dxvector3.md) , das das Ergebnis des Vorgangs ist.
+Zeiger auf [**D3DXVECTOR3,**](d3d10-d3dxvector3.md) das das Ergebnis des Vorgangs ist.
 
 </dd> <dt>
 
-*PV* \[ in\]
+*pV* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXVECTOR3**](../direct3d9/d3dxvector3.md) \***
+Typ: **const [**D3DXVECTOR3**](../direct3d9/d3dxvector3.md) \***
 
-Ein Zeiger auf die Quell-D3DXVECTOR3-Struktur.
+Zeiger auf die D3DXVECTOR3-Quellstruktur.
 
 </dd> <dt>
 
-*pm* \[ in\]
+*pM* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXMATRIX**](../direct3d9/d3dxmatrix.md) \***
+Typ: **const [**D3DXMATRIX**](../direct3d9/d3dxmatrix.md) \***
 
-Ein Zeiger auf die Quell- [**D3DXMATRIX**](d3d10-d3dxmatrix.md) -Struktur.
+Zeiger auf die [**D3DXMATRIX-Quellstruktur.**](d3d10-d3dxmatrix.md)
 
 </dd> </dl>
 
@@ -76,23 +76,23 @@ Zeiger auf eine D3DXVECTOR3-Struktur, die der transformierte Vektor ist.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Diese Funktion transformiert den Vektor (PV->x, PV->y, PV->z, 0) durch die Matrix, auf die von pm gezeigt wird.
+Diese Funktion transformiert den Vektor (pV->x, pV->y, pV->z, 0) durch die Matrix, auf die pM zeigt.
 
-Wenn Sie eine normale Transformation durchführen möchten, sollte die Matrix, die Sie an diese Funktion übergeben, die Umwandlung der Umkehrung der Matrix sein, die zum Transformieren eines Punkts verwendet werden soll.
+Wenn Sie einen normalen transformieren möchten, sollte die Matrix, die Sie an diese Funktion übergeben, die Transponieren der Umkehrung der Matrix sein, die Sie zum Transformieren eines Punkts verwenden würden.
 
-Der Rückgabewert für diese Funktion ist derselbe Wert, der im Pout-Parameter zurückgegeben wird. Auf diese Weise kann die **D3DXVec3TransformNormal** -Funktion als Parameter für eine andere Funktion verwendet werden.
+Der Rückgabewert für diese Funktion ist der gleiche Wert, der im pOut-Parameter zurückgegeben wird. Auf diese Weise kann die **D3DXVec3TransformNormal-Funktion** als Parameter für eine andere Funktion verwendet werden.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------|-----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3DX10Math. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3DX10Math.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

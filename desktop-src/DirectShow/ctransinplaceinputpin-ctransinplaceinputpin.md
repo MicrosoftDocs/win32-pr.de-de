@@ -1,7 +1,7 @@
 ---
-description: Konstruktormethode.
+description: CTransInPlaceInputPin.CTransInPlaceInputPin-Konstruktor – Konstruktormethode.
 ms.assetid: db0a3f78-ddb9-43b5-aab5-da2faaebb527
-title: Ctransinplaceinputpin. ctransinplaceinputpin-Konstruktor (transip. h)
+title: CTransInPlaceInputPin.CTransInPlaceInputPin-Konstruktor (Transip.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,14 +16,14 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: a801b2c4286f903ef450cac2fd76252f451f9add
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 6f97c89142e43691c91b2a4c0d04721d9112ed49
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372301"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108084758"
 ---
-# <a name="ctransinplaceinputpinctransinplaceinputpin-constructor"></a>Ctransinplaceinputpin. ctransinplaceinputpin-Konstruktor
+# <a name="ctransinplaceinputpinctransinplaceinputpin-constructor"></a>CTransInPlaceInputPin.CTransInPlaceInputPin-Konstruktor
 
 Konstruktormethode.
 
@@ -45,54 +45,54 @@ CTransInPlaceInputPin(
 
 <dl> <dt>
 
-*pobjectname* 
+*pObjectName* 
 </dt> <dd>
 
-Zeichenfolge, die den debugnamen des-Objekts enthält. Weitere Informationen finden Sie unter [**cbaseobject**](cbaseobject.md).
+Eine Zeichenfolge, die den Debugnamen des Objekts enthält. Weitere Informationen finden Sie unter [**CBaseObject**](cbaseobject.md).
 
 </dd> <dt>
 
 *pFilter* 
 </dt> <dd>
 
-Ein Zeiger auf den Filter, der diese Pin erstellt hat, wobei es sich um ein [**ctransinplacefilter**](ctransinplacefilter.md) -Objekt handeln muss.
+Zeiger auf den Filter, der diesen Pin erstellt hat, der ein [**CTransInPlaceFilter-Objekt sein**](ctransinplacefilter.md) muss.
 
 </dd> <dt>
 
-*PHR* 
+*Phr* 
 </dt> <dd>
 
-Ein Zeiger auf eine Variable, die einen **HRESULT** -Wert empfängt, der angibt, ob die Methode erfolgreich war oder fehlgeschlagen ist. Initialisieren Sie den Wert \_ vor dem Erstellen des-Objekts auf S OK. Der Wert wird nur geändert, wenn ein Fehler auftritt.
+Zeiger auf eine Variable, die einen **HRESULT-Wert** empfängt, der den Erfolg oder Fehler der Methode angibt. Initialisieren Sie den Wert auf S \_ OK, bevor Sie das -Objekt erstellen. Der Wert wird nur geändert, wenn ein Fehler auftritt.
 
 </dd> <dt>
 
 *pName* 
 </dt> <dd>
 
-Breit Zeichen-Zeichenfolge, die den Pin-Namen enthält.
+Breitzeichenzeichenfolge, die den Pinnamen enthält.
 
 </dd> </dl>
 
 ## <a name="remarks"></a>Bemerkungen
 
-Der *PName* -Parameter gibt den Pin-Namen an, der von der [**IPin:: querypininfo**](/windows/desktop/api/Strmif/nf-strmif-ipin-querypininfo) -Methode zurückgegeben wird. Diese Zeichenfolge wird jedoch nicht für den PIN-Bezeichner verwendet. Der PIN-Bezeichner für diese Klasse ist immer in. Weitere Informationen finden Sie unter [**ctransforminputpin:: QueryId**](ctransforminputpin-queryid.md).
+Der *pName-Parameter* gibt den Pinnamen an, der von der [**IPin::QueryPinInfo-Methode zurückgegeben**](/windows/desktop/api/Strmif/nf-strmif-ipin-querypininfo) wird. Diese Zeichenfolge wird jedoch nicht für den Pinbezeichner verwendet. Der Pinbezeichner für diese Klasse ist immer In. Weitere Informationen finden Sie unter [**CTransformInputPin::QueryId**](ctransforminputpin-queryid.md).
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Transip. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Transip.h (einschließlich Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Ctransinplaceinputpin-Klasse**](ctransinplaceinputpin.md)
+[**CTransInPlaceInputPin-Klasse**](ctransinplaceinputpin.md)
 </dt> </dl>
 
  

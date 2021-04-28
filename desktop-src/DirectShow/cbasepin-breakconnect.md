@@ -1,7 +1,7 @@
 ---
-description: Die breakconnect-Methode gibt die PIN von einer Verbindung frei.
+description: 'CBasePin.BreakConnect-Methode: Die BreakConnect-Methode gibt den Pin von einer Verbindung frei.'
 ms.assetid: a1f299e1-30bf-4d55-84cf-73acccf38151
-title: Cbasepin. breakconnect-Methode (amfilter. h)
+title: CBasePin.BreakConnect-Methode (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 8964ea76e48e4753f42923663ab45962cd672e6e
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: a9a099b1001c2b8c30398ca350e05d15562a8bc2
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106354793"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108099438"
 ---
-# <a name="cbasepinbreakconnect-method"></a>Cbasepin. breakconnect-Methode
+# <a name="cbasepinbreakconnect-method"></a>CBasePin.BreakConnect-Methode
 
-Die- `BreakConnect` Methode gibt die PIN von einer Verbindung frei.
+Die `BreakConnect` -Methode gibt den Pin von einer Verbindung frei.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,28 +46,28 @@ Gibt S \_ OK zurück.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Diese Methode wird während der PIN-Trennung durch die [**cbasepin::D isconnect**](cbasepin-disconnect.md) -Methode aufgerufen. Sie wird auch während eines Verbindungsversuchs aufgerufen, wenn die [**cbasepin:: checkConnect**](cbasepin-checkconnect.md) -Methode fehlschlägt.
+Diese Methode wird während der Verbindungstrennung durch die [**CBasePin::D isconnect-Methode**](cbasepin-disconnect.md) aufgerufen. Sie wird auch während eines Verbindungsversuchs aufgerufen, wenn die [**CBasePin::CheckConnect-Methode**](cbasepin-checkconnect.md) fehlschlägt.
 
-Diese Methode muss alle Ressourcen freigeben, die von der **checkConnect** -Methode abgerufen wurden. Wenn **checkConnect** z. b. Arbeitsspeicher belegt, `BreakConnect` sollte den Arbeitsspeicher freigeben. Wenn **Check Connect** die Verbindungs-PIN für eine Schnittstelle abfragt, `BreakConnect` sollte die Schnittstelle freigeben.
+Diese Methode muss alle Ressourcen freigeben, die von der **CheckConnect-Methode** abgerufen wurden. Wenn z. B. **CheckConnect** Arbeitsspeicher zuweist, `BreakConnect` sollte den Arbeitsspeicher freigeben. Wenn **CheckConnect** den Verbindungsanschluss für eine Schnittstelle abfragt, `BreakConnect` sollte die Schnittstelle freigeben.
 
-Beachten Sie, dass `BreakConnect` ohne einen entsprechenden Aufruf von **completeconnect** aufgerufen werden kann. Daher können Sie nicht davon ausgehen, dass **completeconnect** bereits zuvor aufgerufen wurde.
+Beachten Sie, dass `BreakConnect` ohne einen entsprechenden Aufruf von **CompleteConnect** aufgerufen werden kann. Daher können Sie nicht davon ausgehen, dass **CompleteConnect** zuvor aufgerufen wurde.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (streams.h einschließen)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbasepin-Klasse**](cbasepin.md)
+[**CBasePin-Klasse**](cbasepin.md)
 </dt> </dl>
 
  

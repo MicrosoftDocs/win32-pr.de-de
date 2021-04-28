@@ -1,6 +1,6 @@
 ---
-description: Fordert einen Zeiger auf ein angegebenes Objekt an.
-title: SMC_GETSFOBJECT Meldung (shobjidl. h)
+description: 'SMC_GETSFOBJECT Meldung: Fordert einen Zeiger auf ein angegebenes Objekt an.'
+title: SMC_GETSFOBJECT Nachricht (Shobjidl.h)
 ms.topic: reference
 ms.date: 05/31/2018
 ms.assetid: a8478f10-77ce-4e71-a5dc-89d8a90cf513
@@ -13,14 +13,14 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: c7fb57ea8e3f02ce4e773e187310530c14d65515
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 612b43c193cd1919db4a5cf9dba3a8fdba1c81c7
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104216826"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108086608"
 ---
-# <a name="smc_getsfobject-message"></a>SMC \_ gezfobject-Nachricht
+# <a name="smc_getsfobject-message"></a>SMC \_ GETSFOBJECT-Nachricht
 
 Fordert einen Zeiger auf ein angegebenes Objekt an.
 
@@ -38,14 +38,14 @@ SMC_GETSFOBJECT
 
 <dl> <dt>
 
-*IID* 
+*Iid* 
 </dt> <dd>
 
-Die dem angeforderten Objekt zugeordnete IID.
+Die IID, die dem angeforderten Objekt zugeordnet ist.
 
 </dd> <dt>
 
-*teuren* 
+*Pv* 
 </dt> <dd>
 
 Ein void-Zeiger, der einen Zeiger auf die angeforderte Schnittstelle empfängt.
@@ -54,28 +54,28 @@ Ein void-Zeiger, der einen Zeiger auf die angeforderte Schnittstelle empfängt.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt "S OK" zurück \_ .
+Geben Sie S \_ OK zurück.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Diese Benachrichtigung wird von der [**ishellmenucallback:: callbacksm**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ishellmenucallback-callbacksm) -Methode empfangen. Sie ähnelt der Verwendung von [**SMC \_ GetObject**](smc-getobject.md) , wird jedoch für shellordnerelemente verwendet. Erstellen Sie das angeforderte Objekt, und weisen Sie der angeforderten Schnittstelle einen Zeiger auf *PV* zu.
+Diese Benachrichtigung wird von der [**IShellMenuCallback::CallbackSM-Methode**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ishellmenucallback-callbacksm) empfangen. Es ähnelt [**SMC \_ GETOBJECT,**](smc-getobject.md) wird aber für Shell-Ordnerelemente verwendet. Erstellen Sie das angeforderte Objekt, und weisen Sie pv einen Zeiger *auf* die angeforderte Schnittstelle zu.
 
 Die folgenden Schnittstellen können angefordert werden.
 
--   [**IStream**](/windows/win32/api/objidl/nn-objidl-istream)
--   [**Ishellmenu**](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellmenu)
--   [**Ishellmenucallback**](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellmenucallback)
+-   [**Istream**](/windows/win32/api/objidl/nn-objidl-istream)
+-   [**IShellMenu**](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellmenu)
+-   [**IShellMenuCallback**](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellmenucallback)
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>Shobjidl. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Shobjidl. idl</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Shobjidl.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>Shobjidl.idl</dt> </dl> |
 
 
 

@@ -1,7 +1,7 @@
 ---
-description: Dreht eine Quaternion über eine beliebige Achse.
+description: 'D3DXQuaternionRotationAxis-Funktion (D3DX10Math.h): Rotiert eine Quaternion um eine beliebige Achse.'
 ms.assetid: 9673ef89-458f-4a25-960e-8f03179e78ba
-title: D3DXQuaternionRotationAxis-Funktion (D3DX10Math. h)
+title: D3DXQuaternionRotationAxis-Funktion (D3DX10Math.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: 739f128ca1a56eed15ebc2528036875eaf2bb9b8
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 509df80023427a20125e1b5603e85424851a640e
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106370455"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108108768"
 ---
-# <a name="d3dxquaternionrotationaxis-function-d3dx10mathh"></a>D3DXQuaternionRotationAxis-Funktion (D3DX10Math. h)
+# <a name="d3dxquaternionrotationaxis-function-d3dx10mathh"></a>D3DXQuaternionRotationAxis-Funktion (D3DX10Math.h)
 
-Dreht eine Quaternion über eine beliebige Achse.
+Dreht eine Quaternion um eine beliebige Achse.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,30 +42,30 @@ D3DXQUATERNION* D3DXQuaternionRotationAxis(
 
 <dl> <dt>
 
-*Pout* \[ in, out\]
+*pOut* \[ in, out\]
 </dt> <dd>
 
 Typ: **[ **D3DXQUATERNION**](../direct3d9/d3dxquaternion.md)\***
 
-Zeiger auf das [**D3DXQUATERNION**](d3d10-d3dxquaternion.md) , das das Ergebnis des Vorgangs ist.
+Zeiger auf das [**D3DXQUATERNION-Steuerelement,**](d3d10-d3dxquaternion.md) das das Ergebnis des Vorgangs ist.
 
 </dd> <dt>
 
-*PV* \[ in\]
+*pV* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXVECTOR3**](../direct3d9/d3dxvector3.md) \***
+Typ: **const [**D3DXVECTOR3**](../direct3d9/d3dxvector3.md) \***
 
-Ein Zeiger auf den [**D3DXVECTOR3**](d3d10-d3dxvector3.md) , der die Achse identifiziert, für die die Quaternion gedreht werden soll.
+Zeiger auf [**D3DXVECTOR3,**](d3d10-d3dxvector3.md) der die Achse identifiziert, um die die Quaternion gedreht werden soll.
 
 </dd> <dt>
 
-*Winkel* \[ in\]
+*Winkel* \[ In\]
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-Winkel der Drehung im Bogenmaße. Winkel werden im Uhrzeigersinn gemessen, wenn Sie entlang der Drehungs Achse zum Ursprung suchen.
+Drehwinkel im Bogenmaß. Winkel werden im Uhrzeigersinn gemessen, wenn sie entlang der Drehachse zum Ursprung hin betrachtet werden.
 
 </dd> </dl>
 
@@ -73,26 +73,26 @@ Winkel der Drehung im Bogenmaße. Winkel werden im Uhrzeigersinn gemessen, wenn 
 
 Typ: **[ **D3DXQUATERNION**](../direct3d9/d3dxquaternion.md)\***
 
-Ein Zeiger auf eine D3DXQUATERNION-Struktur, gedreht um die angegebene Achse.
+Zeiger auf eine D3DXQUATERNION-Struktur, die um die angegebene Achse gedreht wurde.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Der Rückgabewert für diese Funktion ist derselbe Wert, der im Pout-Parameter zurückgegeben wird. Auf diese Weise kann die D3DXQuaternionRotationAxis-Funktion als Parameter für eine andere Funktion verwendet werden.
+Der Rückgabewert für diese Funktion ist der gleiche Wert, der im pOut-Parameter zurückgegeben wird. Auf diese Weise kann die D3DXQuaternionRotationAxis-Funktion als Parameter für eine andere Funktion verwendet werden.
 
-Verwenden Sie [**D3DXQuaternionNormalize**](d3d10-d3dxquaternionnormalize.md) für eine beliebige Quaternion-Eingabe, die nicht bereits normalisiert ist.
+Verwenden [**Sie D3DXQuaternionNormalize**](d3d10-d3dxquaternionnormalize.md) für alle Quaternioneingaben, die noch nicht normalisiert sind.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX10Math. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx10. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX10Math.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

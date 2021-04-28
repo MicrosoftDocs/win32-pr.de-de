@@ -1,7 +1,7 @@
 ---
-description: Die Disconnect-Methode unterbricht die aktuelle PIN-Verbindung. Diese Methode implementiert die IPin::D isconnect-Methode.
+description: 'CBasePin.Disconnect-Methode: Die Disconnect-Methode unterbricht die aktuelle Pinverbindung. Diese Methode implementiert die IPin::D isconnect-Methode.'
 ms.assetid: 04e07978-fca5-419f-8807-fd7a6846eff9
-title: Cbasepin. Disconnect-Methode (amfilter. h)
+title: CBasePin.Disconnect-Methode (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 98cbf894767eeb89042134344df218f2c18bc1be
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: bda01d02db2a93a90c63f206b723a55df2373418
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106354648"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108096008"
 ---
-# <a name="cbasepindisconnect-method"></a>Cbasepin. Disconnect-Methode
+# <a name="cbasepindisconnect-method"></a>CBasePin.Disconnect-Methode
 
-Die- `Disconnect` Methode unterbricht die aktuelle PIN-Verbindung. Diese Methode implementiert die [**IPin::D isconnect**](/windows/desktop/api/Strmif/nf-strmif-ipin-disconnect) -Methode.
+Die `Disconnect` -Methode unterbricht die aktuelle Stecknadelverbindung. Diese Methode implementiert die [**IPin::D isconnect-Methode.**](/windows/desktop/api/Strmif/nf-strmif-ipin-disconnect)
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,15 +42,15 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT** -Wert zurück. Mögliche Werte sind die in der folgenden Tabelle aufgeführten Werte.
+Gibt einen **HRESULT-Wert** zurück. Mögliche Werte sind die werte in der folgenden Tabelle.
 
 
 
 | Rückgabecode                                                                                         | Beschreibung                                                                        |
 |-----------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------|
-| <dl> <dt>**S \_ false**</dt> </dl>             | Die PIN war nicht verbunden.<br/>                                              |
+| <dl> <dt>**S \_ FALSE**</dt> </dl>             | Die Stecknadel war nicht verbunden.<br/>                                              |
 | <dl> <dt>**S \_ OK**</dt> </dl>                | Erfolg.<br/>                                                                |
-| <dl> <dt>**VFW \_ E \_ nicht \_ angehalten**</dt> </dl> | Der Filter ist aktiv, und die PIN unterstützt keine dynamische erneute Verbindung.<br/> |
+| <dl> <dt>**VFW \_ E \_ NICHT \_ BEENDET**</dt> </dl> | Der Filter ist aktiv, und der Pin unterstützt keine dynamische Wiederherstellung der Verbindung.<br/> |
 
 
 
@@ -58,24 +58,24 @@ Gibt einen **HRESULT** -Wert zurück. Mögliche Werte sind die in der folgenden 
 
 ## <a name="remarks"></a>Bemerkungen
 
-Die Basisklasse delegiert den größten Teil der Arbeit an die [**cbasepin::D isconnectinternal**](cbasepin-disconnectinternal.md) -Methode.
+Die Basisklasse delegiert den Großteil der Arbeit an die [**CBasePin::D isconnectInternal-Methode.**](cbasepin-disconnectinternal.md)
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (streams.h einschließen)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbasepin-Klasse**](cbasepin.md)
+[**CBasePin-Klasse**](cbasepin.md)
 </dt> </dl>
 
  

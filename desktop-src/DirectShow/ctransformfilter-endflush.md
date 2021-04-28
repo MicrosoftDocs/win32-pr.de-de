@@ -1,7 +1,7 @@
 ---
-description: Die endflush-Methode beendet einen Löschvorgang.
+description: 'CTransformFilter.EndFlush-Methode: Die EndFlush-Methode beendet einen Leerungsvorgang.'
 ms.assetid: ebb6beec-84e2-49a7-9771-bbd191faada7
-title: Ctransformfilter. endflush-Methode (Transfrm. h)
+title: CTransformFilter.EndFlush-Methode (Transfrm.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 348675f1369ec9b0deb5415ad14a864a8befef73
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 9a4f38a6897443763f676951f193fab5606ad2a8
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372402"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108085059"
 ---
-# <a name="ctransformfilterendflush-method"></a>Ctransformfilter. endflush-Methode
+# <a name="ctransformfilterendflush-method"></a>CTransformFilter.EndFlush-Methode
 
-Die- `EndFlush` Methode beendet einen Löschvorgang.
+Die `EndFlush` -Methode beendet einen Leerungsvorgang.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,30 +42,30 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt S \_ OK oder einen anderen **HRESULT** -Wert zurück.
+Gibt S \_ OK oder einen anderen **HRESULT-Wert** zurück.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Am Ende eines Leerungs Vorgangs ruft die [**ctransforminputpin:: endflush**](ctransforminputpin-endflush.md) -Methode der Eingabe-PIN diese Methode auf. Diese Methode übergibt den- `EndFlush` Rückruf.
+Am Ende eines Leerungsvorgang ruft die [**CTransformInputPin::EndFlush-Methode**](ctransforminputpin-endflush.md) des Eingabepins diese Methode auf. Diese Methode übergibt den `EndFlush` Aufruf downstream.
 
-Wenn die abgeleitete Klasse einen Arbeits Thread zum Übermitteln von Beispielen verwendet, muss Sie alle in der Warteschlange befindlichen Daten vor dem Senden des `EndFlush` Aufrufers verwerfen. Weitere Informationen finden Sie unter [Datenfluss für Filter Entwickler](data-flow-for-filter-developers.md).
+Wenn die abgeleitete Klasse einen Arbeitsthread zum Senden von Beispielen verwendet, muss sie alle Daten in der Warteschlange verwerfen, bevor der Aufruf `EndFlush` nachgeschaltet wird. Weitere Informationen finden Sie unter [Datenfluss für Filterentwickler.](data-flow-for-filter-developers.md)
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Transfrm. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Transfrm.h (streams.h enthalten)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Ctransformfilter-Klasse**](ctransformfilter.md)
+[**CTransformFilter-Klasse**](ctransformfilter.md)
 </dt> </dl>
 
  

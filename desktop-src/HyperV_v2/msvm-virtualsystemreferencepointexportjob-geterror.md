@@ -1,7 +1,7 @@
 ---
-description: Ruft den Fehler ab.
+description: 'GetError-Methode der Msvm_VirtualSystemReferencePointExportJob Klasse: Ruft den Fehler ab.'
 ms.assetid: a30cb74a-4e41-4981-b355-6f46b4b75ce6
-title: GetError-Methode der Msvm_VirtualSystemReferencePointExportJob-Klasse
+title: GetError-Methode der Msvm_VirtualSystemReferencePointExportJob Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,14 +13,14 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: b26995171059389f7f7afb3fb90e3506b39affd5
-ms.sourcegitcommit: c16214e53680dc71d1c07111b51f72b82a4512d8
+ms.openlocfilehash: d1311e4e56b6396266ece72277e8ddadcdb9d835
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "104050676"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108109338"
 ---
-# <a name="geterror-method-of-the-msvm_virtualsystemreferencepointexportjob-class"></a>GetError-Methode der MSVM \_ virtualsystemreferencepointexportjob-Klasse
+# <a name="geterror-method-of-the-msvm_virtualsystemreferencepointexportjob-class"></a>GetError-Methode der Msvm \_ VirtualSystemReferencePointExportJob-Klasse
 
 Ruft den Fehler ab.
 
@@ -39,7 +39,7 @@ uint32 GetError(
 
 <dl> <dt>
 
-*Fehler* \[ vorgenommen\]
+*Fehler* \[ out\]
 </dt> <dd>
 
 Der abgerufene Fehler.
@@ -48,14 +48,14 @@ Der abgerufene Fehler.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Bei Erfolg wird 0 zurückgegeben. Andernfalls enthält einen Fehler.
+Bei Erfolg gibt eine 0 zurück. andernfalls enthält einen Fehler.
 
 <dl> <dt>
 
 **Abgeschlossen ohne Fehler** (0)
 </dt> <dt>
 
-Fehler **(32768** )
+**Fehler** (32768)
 </dt> <dt>
 
 **Zugriff verweigert** (32769)
@@ -64,49 +64,49 @@ Fehler **(32768** )
 **Nicht unterstützt** (32770)
 </dt> <dt>
 
-Der **Status ist "Unknown** " (32771).
+**Status ist unbekannt** (32771)
 </dt> <dt>
 
 **Timeout** (32772)
 </dt> <dt>
 
-**Ungültiger Parameter** (32773)
+**Ungültiger** Parameter (32773)
 </dt> <dt>
 
-Das **System wird verwendet** (32774).
+**System wird verwendet** (32774)
 </dt> <dt>
 
-**Ungültiger Status für diesen Vorgang** (32775).
+**Ungültiger Zustand für diesen Vorgang** (32775)
 </dt> <dt>
 
-**Falscher Datentyp** (32776).
+**Falscher Datentyp** (32776)
 </dt> <dt>
 
-Das **System ist nicht verfügbar** (32777).
+**System ist nicht verfügbar** (32777)
 </dt> <dt>
 
-**Nicht** genügend Arbeitsspeicher (32778)
+**Nicht genügend Arbeitsspeicher** (32778)
 </dt> </dl>
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 10, Version 1703, \[ nur Desktop-Apps\]<br/>                                               |
+| Unterstützte Mindestversion (Client)<br/> | Windows 10, version 1703 desktop apps only (Nur \[ Desktop-Apps der Version 1703)\]<br/>                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2016<br/>                                                                          |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**MSVM \_ virtualsystemreferencepointexportjob**](msvm-virtualsystemreferencepointexportjob.md)
+[**Msvm \_ VirtualSystemReferencePointExportJob**](msvm-virtualsystemreferencepointexportjob.md)
 </dt> </dl>
 
  
