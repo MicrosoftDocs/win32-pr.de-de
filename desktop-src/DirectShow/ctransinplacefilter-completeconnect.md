@@ -1,7 +1,7 @@
 ---
-description: Die completeconnect-Methode schließt eine PIN-Verbindung ab.
+description: 'CTransInPlaceFilter.CompleteConnect-Methode: Die CompleteConnect-Methode schließt eine Pinverbindung ab.'
 ms.assetid: 0c02c455-dbd0-4606-b1b1-f965c2a5805b
-title: Ctransinplacefilter. completeconnect-Methode (transip. h)
+title: CTransInPlaceFilter.CompleteConnect-Methode (Transip.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 4fdc9d1d5567cda2e4b0fd4a351136405493ef61
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: d9cc0bc839a4e35c4ce896acdf50da10f0c2bb0c
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372734"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108084788"
 ---
-# <a name="ctransinplacefiltercompleteconnect-method"></a>Ctransinplacefilter. completeconnect-Methode
+# <a name="ctransinplacefiltercompleteconnect-method"></a>CTransInPlaceFilter.CompleteConnect-Methode
 
-Die- `CompleteConnect` Methode schließt eine PIN-Verbindung ab.
+Die `CompleteConnect` -Methode schließt eine Stecknadelverbindung ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,27 +46,27 @@ HRESULT CompleteConnect(
 *direction* 
 </dt> <dd>
 
-Member des enumerierten Typs der [**Pin- \_ Richtung**](/windows/win32/api/strmif/ne-strmif-pin_direction) , der angibt, welche PIN im Filter die Verbindung herstellen soll.
+Member des [**aufzählten PIN \_ DIRECTION-Typs,**](/windows/win32/api/strmif/ne-strmif-pin_direction) der an gibt, welcher Pin im Filter die Verbindung hergestellt wird.
 
 </dd> <dt>
 
-*preceivepin* 
+*pReceivePin* 
 </dt> <dd>
 
-Zeiger auf die [**IPin**](/windows/desktop/api/Strmif/nn-strmif-ipin) -Schnittstelle der anderen PIN bei diesem Verbindungsversuch.
+Zeiger auf die [**IPin-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-ipin) des anderen Pins in diesem Verbindungsversuch.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt ein **HRESULT** zurück. Mögliche Werte sind in der folgenden Tabelle aufgeführt.
+Gibt ein **HRESULT zurück.** Mögliche Werte sind die in der folgenden Tabelle gezeigten Werte.
 
 
 
 | Rückgabecode                                                                                           | Beschreibung                                     |
 |-------------------------------------------------------------------------------------------------------|-------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>                  | Erfolg.<br/>                             |
-| <dl> <dt>**VFW \_ E \_ nicht \_ im \_ Diagramm**</dt> </dl> | Der Filter befindet sich nicht in einem Filter Diagramm.<br/> |
+| <dl> <dt>**VFW \_ E \_ NOT \_ IN \_ GRAPH**</dt> </dl> | Der Filter befindet sich nicht in einem Filterdiagramm.<br/> |
 
 
 
@@ -74,31 +74,31 @@ Gibt ein **HRESULT** zurück. Mögliche Werte sind in der folgenden Tabelle aufg
 
 ## <a name="remarks"></a>Bemerkungen
 
-Diese Methode überschreibt die [**ctransformfilter:: completeconnect**](ctransformfilter-completeconnect.md) -Methode.
+Diese Methode überschreibt die [**CTransformFilter::CompleteConnect-Methode.**](ctransformfilter-completeconnect.md)
 
-Das Verhalten des Filters hängt von der Reihenfolge der PIN-Verbindungen ab:
+Das Verhalten des Filters hängt von der Reihenfolge der Pinverbindungen ab:
 
--   Wenn die Eingabe-PIN zuerst verbunden ist, verwendet die Verbindung eine temporäre Zuweisung. Wenn die Ausgabe-PIN verbunden ist, verbindet der Filter die eingabepin erneut. Das erneute Verbinden der Eingabe-PIN bewirkt, dass der upstreamfilter die Zuweisung erneut ausgehandelt. An diesem Punkt schlägt die Eingabe-PIN eine Zuweisung vom downstreamfilter vor. Weitere Informationen finden Sie unter [**ctransinplaceinputpin:: getallocator**](ctransinplaceinputpin-getallocator.md).
--   Wenn die Ausgabe-PIN zuerst verbunden ist, wählt die Ausgabepin keinen Zuweiser aus. Wenn die eingabepin verbunden ist, aushandelte Sie eine Zuweisung für beide Verbindungen. Wenn die Eingabe-und Ausgabemedien Typen nicht identisch sind, verbindet der Filter die Ausgabe-PIN mit dem Eingabetyp erneut.
+-   Wenn der Eingabepin zuerst verbunden ist, verwendet die Verbindung eine temporäre Zuweisung. Wenn der Ausgabepin verbunden ist, verbindet der Filter den Eingabepin erneut. Das erneute Verbinden des Eingabepins führt dazu, dass der Upstreamfilter die Zuweisung neu aushandelt. An diesem Punkt schlägt der Eingabepin eine Zuweisung aus dem Downstreamfilter vor. Weitere Informationen finden Sie unter [**CTransInPlaceInputPin::GetAllocator**](ctransinplaceinputpin-getallocator.md).
+-   Wenn der Ausgabepin zuerst verbunden wird, wählt der Ausgabepin keine Zuweisung aus. Wenn der Eingabepin verbunden ist, handelt er eine Zuweisung für beide Verbindungen aus. Wenn die Eingabe- und Ausgabemedientypen nicht identisch sind, verbindet der Filter den Ausgabepin mithilfe des Eingabetyps erneut.
 
-Der Filter führt alle Pin-Neuverbindungen durch Aufrufen der [**cbasefilter:: reconnectpin**](cbasefilter-reconnectpin.md) -Methode aus. Die **reconnectpin** -Methode wiederum ruft die [**IFilterGraph2:: reconnectex**](/windows/desktop/api/Strmif/nf-strmif-ifiltergraph2-reconnectex) -Methode für den Filter Graph-Manager auf.
+Der Filter führt alle Stecknadelwiederherstellungen durch Aufrufen der [**CBaseFilter::ReconnectPin-Methode**](cbasefilter-reconnectpin.md) aus. Die **ReconnectPin-Methode** ruft wiederum die [**IFilterGraph2::ReconnectEx-Methode**](/windows/desktop/api/Strmif/nf-strmif-ifiltergraph2-reconnectex) im Filtergraph-Manager auf.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Transip. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Transip.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Ctransinplacefilter-Klasse**](ctransinplacefilter.md)
+[**CTransInPlaceFilter-Klasse**](ctransinplacefilter.md)
 </dt> </dl>
 
  

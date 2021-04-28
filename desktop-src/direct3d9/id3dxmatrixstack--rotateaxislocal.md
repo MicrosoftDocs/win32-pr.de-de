@@ -1,7 +1,7 @@
 ---
-description: Rotiert (relativ zum lokalen Koordinaten Bereich des Objekts) um eine beliebige Achse.
+description: ID3DXMATRIXStack::RotateAxisLocal-Methode (D3dx9math.h) – Rotiert (relativ zum lokalen Koordinatenraum des Objekts) um eine beliebige Achse.
 ms.assetid: c7ef11e9-f4c4-4801-8f25-190066baeb52
-title: 'ID3DXMATRIXStack:: rotateaxislocal-Methode (D3dx9math. h)'
+title: ID3DXMATRIXStack::RotateAxisLocal-Methode (D3dx9math.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 8488f6314eb926495baa2e42df9ea01616131507
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 0bfcfd7301f90dcf49b03e7bbb3fd7e3b0de6c3e
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106366444"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108093468"
 ---
-# <a name="id3dxmatrixstackrotateaxislocal-method-d3dx9mathh"></a>ID3DXMATRIXStack:: rotateaxislocal-Methode (D3dx9math. h)
+# <a name="id3dxmatrixstackrotateaxislocal-method-d3dx9mathh"></a>ID3DXMATRIXStack::RotateAxisLocal-Methode (D3dx9math.h)
 
-Rotiert (relativ zum lokalen Koordinaten Bereich des Objekts) um eine beliebige Achse.
+Dreht (relativ zum lokalen Koordinatenraum des Objekts) um eine beliebige Achse.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,21 +41,21 @@ HRESULT RotateAxisLocal(
 
 <dl> <dt>
 
-*PV* \[ in\]
+*pV* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXVECTOR3**](d3dxvector3.md) \***
+Typ: **const [**D3DXVECTOR3**](d3dxvector3.md) \***
 
-Zeiger auf die beliebige Achse der Drehung. Siehe [**D3DXVECTOR3**](d3dxvector3.md).
+Zeiger auf die beliebige Drehachse. Siehe [**D3DXVECTOR3**](d3dxvector3.md).
 
 </dd> <dt>
 
-*Winkel* \[ in\]
+*Winkel* \[ In\]
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-Drehwinkel für die beliebige Achse im Bogenmaße. Winkel werden bei der Betrachtung der beliebigen Achse zum Ursprung gegen den Uhrzeigersinn gemessen.
+Drehwinkel um die beliebige Achse im Bogenmaß. Winkel werden gegen den Uhrzeigersinn gemessen, wenn entlang der beliebigen Achse zum Ursprung gesucht wird.
 
 </dd> </dl>
 
@@ -63,11 +63,11 @@ Drehwinkel für die beliebige Achse im Bogenmaße. Winkel werden bei der Betrach
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert "D3DERR \_ invalidcall" lauten.
+Wenn die Methode erfolgreich ist, ist der Rückgabewert D3D \_ OK. Wenn bei der Methode ein Fehler auftritt, kann der Rückgabewert D3DERR \_ INVALIDCALL sein.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Diese Methode fügt die Drehung dem Matrix Stapel mit der berechneten Rotations Matrix hinzu, die der folgenden ähnelt:
+Diese Methode fügt die Drehung dem Matrixstapel mit der berechneten Rotationsmatrix ähnlich der folgenden hinzu:
 
 
 ```
@@ -78,20 +78,20 @@ m_stack[m_currentPos] = tmp * m_stack[m_currentPos];
 
 
 
-Da die Drehung linksbündig mit dem Matrix Stapel multipliziert wird, ist die Drehung relativ zum lokalen Koordinaten Bereich des Objekts.
+Da die Drehung links multipliziert mit dem Matrixstapel ist, ist die Drehung relativ zum lokalen Koordinatenraum des Objekts.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9math. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3dx9math.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
@@ -101,13 +101,13 @@ Da die Drehung linksbündig mit dem Matrix Stapel multipliziert wird, ist die Dr
 [**D3DXMatrixRotationAxis**](d3dxmatrixrotationaxis.md)
 </dt> <dt>
 
-[**ID3DXMATRIXStack:: rotateaxis**](id3dxmatrixstack--rotateaxis.md)
+[**ID3DXMATRIXStack::RotateAxis**](id3dxmatrixstack--rotateaxis.md)
 </dt> <dt>
 
-[**ID3DXMATRIXStack:: rotateyawpitchroll**](id3dxmatrixstack--rotateyawpitchroll.md)
+[**ID3DXMATRIXStack::RotateYawPitchRoll**](id3dxmatrixstack--rotateyawpitchroll.md)
 </dt> <dt>
 
-[**ID3DXMATRIXStack:: rotateyawpitchrolllocal**](id3dxmatrixstack--rotateyawpitchrolllocal.md)
+[**ID3DXMATRIXStack::RotateYawPitchRollLocal**](id3dxmatrixstack--rotateyawpitchrolllocal.md)
 </dt> </dl>
 
  

@@ -1,28 +1,28 @@
 ---
-title: Unformatierte Eingabe Strukturen
-description: .
+title: Unformatieren von Eingabestrukturen
+description: Unformatieren von Eingabestrukturen
 ms.assetid: e6ea3fde-98a0-4eab-888d-647a6b0eb1e2
 ms.topic: article
 ms.date: 03/25/2020
-ms.openlocfilehash: 21e710db829d9d7cc8e2c0512a75f9b74a062e2d
-ms.sourcegitcommit: 49fcf18843e2325d01a489e2d969c786381ba04b
+ms.openlocfilehash: 1fe86112465cd94150c0b628e67ded393c69290c
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "104101314"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108087678"
 ---
-# <a name="raw-input-structures"></a>Unformatierte Eingabe Strukturen
+# <a name="raw-input-structures"></a>Unformatieren von Eingabestrukturen
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
-- [**Rawhid**](/windows/win32/api/winuser/ns-winuser-rawhid)
-- [**Rawinput**](/windows/win32/api/winuser/ns-winuser-rawinput)
-- [**RAWINPUTDEVICE**](/windows/win32/api/winuser/ns-winuser-rawinputdevice)
-- [**Rawinputdevicelist**](/windows/win32/api/winuser/ns-winuser-rawinputdevicelist)
-- [**Rawinpuderader**](/windows/win32/api/winuser/ns-winuser-rawinputheader)
-- [**Rawkeyboard**](/windows/win32/api/winuser/ns-winuser-rawkeyboard)
-- [**Rawmouse**](/windows/win32/api/winuser/ns-winuser-rawmouse)
-- [**Info zum RID- \_ Gerät \_**](/windows/win32/api/winuser/ns-winuser-rid_device_info)
-- [**Rid- \_ Geräte \_ Informationen \_ verborgen**](/windows/win32/api/winuser/ns-winuser-rid_device_info_hid)
-- [**\_ \_ Info \_ Tastatur für Rid-Gerät**](/windows/win32/api/winuser/ns-winuser-rid_device_info_keyboard)
-- [**Info-Maus des RID- \_ Geräts \_ \_**](/windows/win32/api/winuser/ns-winuser-rid_device_info_mouse)
+- [**RAWHID**](/windows/win32/api/winuser/ns-winuser-rawhid)
+- [**RAWINPUT**](/windows/win32/api/winuser/ns-winuser-rawinput)
+- [**Rawinputdevice**](/windows/win32/api/winuser/ns-winuser-rawinputdevice)
+- [**RAWINPUTDEVICELIST**](/windows/win32/api/winuser/ns-winuser-rawinputdevicelist)
+- [**RAWINPUTHEADER**](/windows/win32/api/winuser/ns-winuser-rawinputheader)
+- [**RAWKEYBOARD**](/windows/win32/api/winuser/ns-winuser-rawkeyboard)
+- [**RAWMOUSE**](/windows/win32/api/winuser/ns-winuser-rawmouse)
+- [**\_ \_ RID-GERÄTEINFORMATIONEN**](/windows/win32/api/winuser/ns-winuser-rid_device_info)
+- [**RID \_ DEVICE \_ INFO \_ HID**](/windows/win32/api/winuser/ns-winuser-rid_device_info_hid)
+- [**TASTATUR FÜR \_ \_ \_ RID-GERÄTEINFORMATIONEN**](/windows/win32/api/winuser/ns-winuser-rid_device_info_keyboard)
+- [**RID \_ DEVICE \_ INFO \_ MOUSE**](/windows/win32/api/winuser/ns-winuser-rid_device_info_mouse)

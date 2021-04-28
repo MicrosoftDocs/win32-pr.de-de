@@ -1,7 +1,7 @@
 ---
-description: Die completeconnect-Methode schließt eine Verbindung mit einer anderen Pin ab.
+description: 'CTransformOutputPin.CompleteConnect-Methode: Die CompleteConnect-Methode schließt eine Verbindung mit einem anderen Pin ab.'
 ms.assetid: 14bc48bc-ddfb-4491-8d5b-9e5ac601ba04
-title: Ctransformoutputpin. completeconnect-Methode (Transfrm. h)
+title: CTransformOutputPin.CompleteConnect-Methode (Transfrm.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 8d0c9c9fc7096191d7cdedffa21e2639fa0750ca
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 7ab3d7e56473094b31c0d97d0e15c083ff61a21d
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106362150"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108094918"
 ---
-# <a name="ctransformoutputpincompleteconnect-method"></a>Ctransformoutputpin. completeconnect-Methode
+# <a name="ctransformoutputpincompleteconnect-method"></a>CTransformOutputPin.CompleteConnect-Methode
 
-Die- `CompleteConnect` Methode schließt eine Verbindung mit einer anderen Pin ab.
+Die `CompleteConnect` -Methode schließt eine Verbindung mit einem anderen Pin ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,29 +42,29 @@ HRESULT CompleteConnect(
 
 <dl> <dt>
 
-*preceivepin* 
+*pReceivePin* 
 </dt> <dd>
 
-Ein Zeiger auf die [**IPin**](/windows/desktop/api/Strmif/nn-strmif-ipin) -Schnittstelle der anderen Pin.
+Zeiger auf die [**IPin-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-ipin) des anderen Pins.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt S \_ OK oder einen anderen **HRESULT** -Wert zurück.
+Gibt S \_ OK oder einen anderen **HRESULT-Wert** zurück.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Diese Methode überschreibt die [**cbaseoutputpin:: completeconnect**](cbaseoutputpin-completeconnect.md) -Methode. Er ruft die [**ctransformfilter:: completeconnect**](ctransformfilter-completeconnect.md) -Methode des Filters auf, die \_ in der Basisklasse "s OK" zurückgibt. Die abgeleitete Klasse kann die **ctransformfilter:: completeconnect** -Methode überschreiben, um zusätzliche Überprüfungen auszuführen.
+Diese Methode überschreibt die [**CBaseOutputPin::CompleteConnect-Methode.**](cbaseoutputpin-completeconnect.md) Sie ruft die [**CTransformFilter::CompleteConnect-Methode**](ctransformfilter-completeconnect.md) des Filters auf, die S \_ OK in der Basisklasse zurückgibt. Die abgeleitete Klasse kann die **CTransformFilter::CompleteConnect-Methode** überschreiben, um zusätzliche Überprüfungen durchzuführen.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Transfrm. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Transfrm.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 

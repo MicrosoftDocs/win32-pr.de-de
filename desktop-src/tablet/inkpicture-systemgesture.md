@@ -1,19 +1,19 @@
 ---
-description: Tritt auf, wenn eine System Bewegung erkannt wird.
+description: 'InkPicture.SystemGesture-Ereignis: Tritt auf, wenn eine Systemgeste erkannt wird.'
 ms.assetid: 36e2ac5a-dc91-47c2-a8e5-e555437c0a5d
-title: InkPicture.Systemgesten-Ereignis (msink AUT. h)
+title: InkPicture.SystemGesture-Ereignis (Msinkaut.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 918198e4d18a854bb4238ce9d878dc70ab1f2f82
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1cde11b73b6b0d3861a79538a7f9ee19487b6384
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106352344"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108113688"
 ---
-# <a name="inkpicturesystemgesture-event"></a>InkPicture.Systemgesten-Ereignis
+# <a name="inkpicturesystemgesture-event"></a>InkPicture.SystemGesture-Ereignis
 
-Tritt auf, wenn eine System Bewegung erkannt wird.
+Tritt ein, wenn eine Systemgeste erkannt wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -36,52 +36,52 @@ void SystemGesture(
 
 <dl> <dt>
 
-*Cursor* \[ in\]
+*Cursor* \[ In\]
 </dt> <dd>
 
-Das [**iinkcursor**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkcursor) -Objekt, das das **systemgesten** -Ereignis generiert hat.
+Das [**IInkCursor-Objekt,**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkcursor) das das **SystemGesture-Ereignis generiert** hat.
 
 </dd> <dt>
 
 *ID* \[ in\]
 </dt> <dd>
 
-Der Wert der System Geste.
+Der Wert der Systemgeste.
 
 </dd> <dt>
 
 *X* \[ in\]
 </dt> <dd>
 
-Die x-Koordinate der Position der Bewegung.
+Die x-Koordinate der Position der Geste.
 
 </dd> <dt>
 
-*J* \[ in\]
+*Y* \[ in\]
 </dt> <dd>
 
-Die y-Koordinate der Position der Bewegung.
+Die y-Koordinate der Position der Geste.
 
 </dd> <dt>
 
-*Modifizierer* \[ in\]
-</dt> <dd>
-
-Reserviert.
-
-</dd> <dt>
-
-*Zeichen* \[ in\]
+*Modifizierer* \[ In\]
 </dt> <dd>
 
 Reserviert.
 
 </dd> <dt>
 
-*Cursor Mode* \[ in\]
+*Zeichen* \[ In\]
 </dt> <dd>
 
-Ein Wert, der angibt, ob sich das [**iinkcursor**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkcursor) -Objekt im normalen Modus oder im Radierermodus befindet. 1 ist für den normalen Modus und 2 für den Radierermodus.
+Reserviert.
+
+</dd> <dt>
+
+*CursorMode* \[ In\]
+</dt> <dd>
+
+Ein -Wert, der angibt, ob sich [**das IInkCursor-Objekt**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkcursor) im normalen Modus oder Radierermodus befindet. 1 ist für den normalen Modus und 2 für radierermodus.
 
 </dd> </dl>
 
@@ -91,37 +91,37 @@ Dieses Ereignis gibt keinen Wert zurück.
 
 ## <a name="remarks"></a>Bemerkungen
 
-System Gesten enthalten Informationen über das [**iinkcursor**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkcursor) -Objekt, das zum Erstellen der Geste verwendet wird. Außerdem stellen Sie Verknüpfungen zu Kombinationen von Mausereignissen bereit und bieten Möglichkeiten, Mausereignisse zu erkennen, die weniger Auswirkungen auf die Leistung haben.
+Systemgesten enthalten Informationen zum [**IInkCursor-Objekt,**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkcursor) das zum Erstellen der Geste verwendet wird. Sie bieten auch Verknüpfungen zu Kombinationen von Mausereignissen und sind Möglichkeiten, Mausereignisse mit geringeren Auswirkungen auf die Leistung zu erkennen.
 
-Anstatt z. b. nach einem [**MouseUp-Ereignis \[ \]**](inkpicture-mouseup.md)InkPicture-Steuer / [**\[ \]**](inkpicture-mousedown.md) Element paar-Ereignisse zu suchen, bei denen keine anderen Mausereignisse dazwischen auftreten, können Sie nach der TAP-oder RightTap-System Geste suchen.
+Anstatt beispielsweise nach einem [**MouseUp Event \[ InkPicture Control \]**](inkpicture-mouseup.md) / [**MouseDown Event \[ InkPicture Control-Paar \]**](inkpicture-mousedown.md) von Ereignissen zu suchen, bei dem keine anderen Mausereignisse dazwischen auftreten, können Sie nach den Systemgesten Tap oder RightTap suchen.
 
-Ein weiteres Beispiel: anstatt das [**MouseDown \[ \]**](inkpicture-mousedown.md)-Ereignis InkPicture-Steuerelement / [**\[ \] MouseMove-Ereignis InkPicture**](inkpicture-mousemove.md) zu überwachen und zahlreiche **MouseMove- \[ Ereignisbild-Steuer \]** Elemente zu erhalten, können Sie die System Gesten von Drag oder RightDrag ansehen, solange Sie nicht an den (x, y)-Koordinaten jeder Position der Maus interessiert sind. Dies ermöglicht es Ihnen, anstelle von zahlreichen **mousmove- \[ ereignissteuerungsmeldungen \]** nur eine Nachricht zu empfangen.
+Ein weiteres Beispiel: Anstatt auf [**MouseDown Event \[ InkPicture Control \]**](inkpicture-mousedown.md) / [**MouseMove Event \[ InkPicture \] Control-Ereignisse**](inkpicture-mousemove.md) zu lauschen und zahlreiche **MouseMove Event \[ InkPicture Control-Meldungen \]** zu erhalten, können Sie auf die Drag- oder RightDrag-Systemgesten achten, solange Sie nicht an den (x, y) Koordinaten jeder Position der Maus interessiert sind. Dadurch können Sie anstelle zahlreicher **MouseMove Event \[ InkPicture \] Control-Meldungen** nur eine Nachricht empfangen.
 
-Eine Liste der spezifischen System Gesten finden Sie unter der [**inksystemgesten**](/windows/desktop/api/msinkaut/ne-msinkaut-inksystemgesture) -Enumerationstyp. Weitere Informationen zu System Gesten finden Sie unter [Verwenden von Gesten](using-gestures.md) und [Befehlseingaben auf dem Tablet PC](/previous-versions//dd314533(v=vs.85)).
+Eine Liste der spezifischen Systemgesten finden Sie unter [**InkSystemGesture-Enumerationstyp.**](/windows/desktop/api/msinkaut/ne-msinkaut-inksystemgesture) Weitere Informationen zu Systemgesten finden Sie unter Verwenden von Gesten und [Befehlseingaben auf dem Tablet PC.](/previous-versions//dd314533(v=vs.85)) [](using-gestures.md)
 
-Diese Ereignismethode wird in den Schnittstellen **\_ iinkcollectorevents**, **\_ iinkoverlayevents** und **\_ iinkpictureevents** Dispatch-only (Dispinterfaces) mit der ID DISPID \_ icesystemgesten definiert.
+Diese Ereignismethode wird in den Dispatch-Only-Schnittstellen **\_ IInkCollectorEvents**, **\_ IInkOverlayEvents** und **\_ IInkPictureEvents** (dispinterfaces) mit der ID DISPID \_ ICESystemGesture definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                       |
+| Unterstützte Mindestversion (Client)<br/> | Nur Desktop-Apps der Windows XP Tablet PC Edition \[\]<br/>                                                       |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                           |
-| Header<br/>                   | <dl> <dt>Msink AUT. h (erfordert auch msink AUT \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Msinkaut.h (erfordert auch Msinkaut \_ i.c)</dt> </dl> |
 | Bibliothek<br/>                  | <dl> <dt>InkObj.dll</dt> </dl>                               |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[InkPicture](inkpicture-control-reference.md)
+[Inkpicture](inkpicture-control-reference.md)
 </dt> <dt>
 
-[**Inksystemgesten-Enumeration**](/windows/desktop/api/msinkaut/ne-msinkaut-inksystemgesture)
+[**InkSystemGesture-Enumeration**](/windows/desktop/api/msinkaut/ne-msinkaut-inksystemgesture)
 </dt> <dt>
 
 [Verwenden von Gesten](using-gestures.md)

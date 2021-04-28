@@ -1,10 +1,10 @@
 ---
-description: Nicht verwendet.
+description: '<span id="vspixengine.isingleeventrequest_requestasync_dword_dword_dword_arr_iframeeventscallback_ptr_dword_dword"></span>ISingleEventRequest::RequestAsync-Methode: Nicht verwendet.'
 MS-HAID: vspixengine.ISingleEventRequest\_RequestAsync\_DWORD\_DWORD\_DWORD\_arr\_IFrameEventsCallback\_ptr\_DWORD\_DWORD
 MSHAttr:
 - PreferredSiteName:MSDN
 - PreferredLib:/library/windows/desktop
-title: 'Isingleeventrequest:: requestasync-Methode'
+title: ISingleEventRequest::RequestAsync-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 ms.assetid: C85CAF18-6953-4C5D-9491-5F5A5F28C580
@@ -17,14 +17,14 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: 6e6c78a7402082e4ca5222038bd3f5bd63c3cf7b
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 6365614d8a787ea4b252e04ae4e03c4e69ac2283
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104521520"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108107038"
 ---
-# <a name="span-idvspixengineisingleeventrequest_requestasync_dword_dword_dword_arr_iframeeventscallback_ptr_dword_dwordspanisingleeventrequestrequestasync-method"></a><span id="vspixengine.isingleeventrequest_requestasync_dword_dword_dword_arr_iframeeventscallback_ptr_dword_dword"></span>Isingleeventrequest:: requestasync-Methode
+# <a name="span-idvspixengineisingleeventrequest_requestasync_dword_dword_dword_arr_iframeeventscallback_ptr_dword_dwordspanisingleeventrequestrequestasync-method"></a><span id="vspixengine.isingleeventrequest_requestasync_dword_dword_dword_arr_iframeeventscallback_ptr_dword_dword"></span>ISingleEventRequest::RequestAsync-Methode
 
 Nicht verwendet.
 
@@ -44,35 +44,35 @@ HRESULT RequestAsync(
 
 ## <a name="parameters"></a>Parameter
 
-*EventID*   
+*Eventid*   
 Nicht verwendet.
 
-*NumColumns*   
+*numColumns*   
 Nicht verwendet.
 
-*count1- \_ Spalten*   
+*\_count1-Spalten*   
 Nicht verwendet.
 
 *requestCallback*   
 Nicht verwendet.
 
-*requestcookie*   
+*requestCookie*   
 Nicht verwendet.
 
-*progressintervalmsekunden*   
+*progressIntervalMsecs*   
 Nicht verwendet.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
-<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine. h</td></tr></tbody></table>
+<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine.h</td></tr></tbody></table>
 
 ## <a name="span-idsee_alsospansee-also"></a><span id="see_also"></span>Siehe auch
 
-[**Isingleeventrequest**](/windows/desktop/direct3dtools/isingleeventrequest)
+[**ISingleEventRequest**](/windows/desktop/direct3dtools/isingleeventrequest)
 
  
 

@@ -1,22 +1,22 @@
 ---
-description: .
+description: 'Internet Explorer 8: Schutz der Datenausführung/NX'
 ms.assetid: 56a4889c-5dcf-416f-b46e-5c48277d5636
-title: Internet Explorer 8-Datenausführungsschutz/NX
+title: 'Internet Explorer 8: Schutz der Datenausführung/NX'
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: fc73fcd70a244288aceaead426bf09f07656740d
-ms.sourcegitcommit: 78b64f3865e64768b5319d4f010032ee68924a98
+ms.openlocfilehash: eb0208cc20e78c30f42b09af78460990be20b002
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "107314773"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108088248"
 ---
-# <a name="internet-explorer-8---data-execution-protectionnx"></a>Internet Explorer 8-Datenausführungsschutz/NX
+# <a name="internet-explorer-8---data-execution-protectionnx"></a>Internet Explorer 8: Schutz der Datenausführung/NX
 
 ## <a name="affected-platforms"></a>Betroffene Plattformen
 
- **Clients** -Windows XP, Windows Vista, Windows 7  
-**Server** -Windows Server 2003, Windows Server 2008, Windows Server 2008 R2  
+ **Clients:** Windows XP, Windows Vista, Windows 7  
+**Server:** Windows Server 2003, Windows Server 2008, Windows Server 2008 R2  
 
 
 
@@ -28,55 +28,55 @@ ms.locfileid: "107314773"
 
 
 > [!Note]  
-> Internet Explorer 8 aktiviert den DEP/NX-Schutz, wenn er unter einem Betriebssystem mit der neuesten Service Pack ausgeführt wird. Für Windows XP SP3, Windows Server 2003 SP3, Windows Vista SP1 und Windows Server 2008 ist DEP/NX in Internet Explorer 8 standardmäßig aktiviert.
+> Internet Explorer 8 aktiviert den DEP-/NX-Schutz, wenn er auf einem Betriebssystem mit dem neuesten Service Pack ausgeführt wird. Für Windows XP SP3, Windows Server 2003 SP3, Windows Vista SP1 und Windows Server 2008 ist DEP/NX standardmäßig in Internet Explorer 8 aktiviert.
 
  
 
-## <a name="feature-impact"></a>Auswirkungen von Features
+## <a name="feature-impact"></a>Auswirkungen auf Features
 
-**Schweregrad** -Mittel  
-**Häufigkeit** -niedrig  
+**Schweregrad –** Mittel  
+**Häufigkeit** : Niedrig  
 
 > [!Note]  
-> In der Regel stürzt jede Anwendung, die in Internet Explorer ausgeführt wird und nicht mit DEP/NX kompatibel ist, beim Start ab und funktioniert nicht. Internet Explorer stürzt beim Starten ab, wenn Add-ons, die nicht mit DEP/NX kompatibel sind, installiert sind.
+> In der Regel stürzt jede Anwendung, die in Internet Explorer ausgeführt wird und nicht mit DEP/NX kompatibel ist, beim Start ab und funktioniert nicht. Internet Explorer können beim Start abstürzen, wenn Add-Ons installiert sind, die nicht mit DEP/NX kompatibel sind.
 
  
 
-## <a name="description"></a>Beschreibung
+## <a name="description"></a>BESCHREIBUNG
 
-DEP/NX ist ein Sicherheits Feature, mit dem speicherbezogene Sicherheitsrisiken verringert werden können. Ab Internet Explorer 8 aktivieren alle Internet Explorer-Prozesse die DEP/NX-Funktion standardmäßig.
+DEP/NX ist ein Sicherheitsfeature, mit dem speicherbezogene Sicherheitsrisiken entschärft werden können. Ab Internet Explorer 8 aktivieren alle Internet Explorer Prozesse standardmäßig das DEP/NX-Feature.
 
-## <a name="manifestation-of-impact"></a>Erscheinung der Auswirkung
+## <a name="manifestation-of-impact"></a>Wirkungserz weiter
 
-Der Windows-Kernel überwacht die Ausführung eines Programms. Wenn der Kernel einen Versuch erkennt, Code auf einer Speicherseite auszuführen, der nicht als ausführbare Datei gekennzeichnet ist, stoppt der Kernel die Ausführung des Programms, was zu einem Absturz führt. Dies ist eine Sicherheitsmaßnahme, mit der sichergestellt wird, dass speicherbezogene Sicherheitsrisiken (z. b. Pufferüberläufe) in der Anwendung nicht ausgenutzt werden können, um beliebigen Code auszuführen.
+Der Windows-Kernel überwacht die Ausführung eines Programms. Wenn der Kernel einen Versuch erkennt, Code von einer Speicherseite auszuführen, die nicht als ausführbare Datei gekennzeichnet ist, hält der Kernel die Ausführung des Programms an, was zu einem "Absturz" führt. Dies ist eine Sicherheitsmaßnahme, um sicherzustellen, dass speicherbezogene Sicherheitsrisiken (z. B. Pufferüberläufe) in der Anwendung nicht ausgenutzt werden können, um beliebigen Code auszuführen.
 
 ## <a name="end-user-mitigation"></a>End-User Entschärfung
 
--   Installieren Sie eine neuere Version des Add-on oder Frameworks, das mit DEP/NX kompatibel ist.
--   Führen Sie Internet Explorer mit erhöhten Rechten als Administrator aus, und deaktivieren Sie DEP/NX mithilfe des Kontrollkästchens **Speicherschutz aktivieren, um Online Angriffe zu** minimieren auf der Registerkarte "Erweiterte **Internet Optionen**"  /   .
+-   Installieren Sie eine neuere Version des Add-Ons oder Frameworks, die MIT DEP/NX kompatibel ist.
+-   Führen Internet Explorer mit erhöhten Rechten als Administrator aus, und deaktivieren Sie dann DEP/NX mithilfe des **Kontrollkästchens** Speicherschutz aktivieren, um Onlineangriffe zu minimieren auf der Registerkarte **Internetoptionen**  /  **Erweitert.**
 
-## <a name="developer-solution"></a>Entwickler Lösung
+## <a name="developer-solution"></a>Entwicklerlösung
 
-Kompilieren Sie Anwendungen mithilfe der neuesten Versionen von Frameworks, die mit DEP kompatibel sind.
+Kompilieren Sie Anwendungen mithilfe der neuesten Versionen von Frameworks, die DEP-kompatibel sind.
 
 ## <a name="leveraging-feature-capabilities"></a>Nutzen von Featurefunktionen
 
--   Verwenden der/NXCOMPAT-Linkeroption zum Angeben der DEP/NX-Kompatibilität
--   Wählen Sie Ihren Code in andere verfügbare Schutzmaßnahmen wie Stack Defense (/GS), sichere Ausnahmebehandlung (/SAFESEH) und ASLR (/DynamicBase) aus.
+-   Verwenden Sie die /NXCOMPAT-Linkeroption, um die DEP/NX-Kompatibilität anzugeben.
+-   Verwenden Sie Ihren Code für andere verfügbare Verteidigungen wie Stapelschutz (/GS), sichere Ausnahmebehandlung (/SafeSEH) und ASLR (/DynamicBase).
 
-## <a name="compatibility-performance-reliability-and-usability-testing"></a>Tests der Kompatibilität, Leistung, Zuverlässigkeit und Benutzerfreundlichkeit
+## <a name="compatibility-performance-reliability-and-usability-testing"></a>Kompatibilitäts-, Leistungs-, Zuverlässigkeits- und Nutzbarkeitstests
 
--   Testen Sie Ihren Code mit DEP/NX, der mithilfe der neuesten Version von Internet Explorer unter Windows Vista SP1 oder höher aktiviert wurde.
--   Testen Sie mit Internet Explorer 7 unter Windows Vista nach dem Aktivieren der DEP/NX-Option. Um DEP/NX für Internet Explorer 7 zu aktivieren, führen Sie Internet Explorer als Administrator aus, und legen Sie dann das entsprechende Kontrollkästchen auf der Registerkarte Extras > Internet Optionen > erweitert fest.
--   Führen Sie das Internet Explorer Compatibility Test Tool (iectt) aus, das mit dem Anwendungskompatibilitäts-Toolkit (Act) bereitgestellt wird, um mögliche Probleme aufgrund von DEP/NX-Änderungen zu ermitteln.
+-   Testen Sie Ihren Code mit aktivierter DEP/NX-Internet Explorer version unter Windows Vista SP1 oder höher.
+-   Testen Sie Internet Explorer 7 unter Windows Vista, nachdem Sie die DEP/NX-Option aktivieren. Um DEP/NX für Internet Explorer 7 zu aktivieren, führen Sie Internet Explorer als Administrator aus, und aktivieren Sie dann das entsprechende Kontrollkästchen auf der Registerkarte Extras > Internetoptionen > Erweitert.
+-   Führen Sie das Internet Explorer Compatibility Test Tool (IECTT) aus, das mit dem Application Compatibility Toolkit (ACT) bereitgestellt wird, um mögliche Probleme aufgrund der DEP/NX-Änderungen zu ermitteln.
 
 ## <a name="links-to-other-resources"></a>Links zu anderen Ressourcen
 
--   [Internet Explorer 8 Sicherheitsteil I: DEP/NX-Speicherschutz](/archive/blogs/ie/)
+-   [Internet Explorer 8 Security Part I: DEP/NX Memory Protection](/archive/blogs/ie/)
 -   [Datenausführungsverhinderung](../memory/data-execution-prevention.md)
--   [Neue NX-APIs, die zu Windows Vista SP1, Windows XP SP3 und Windows Server 2008 R2 hinzugefügt wurden](/archive/blogs/michael_howard/)
--   [Anwendungskompatibilitäts-Toolkit Download](/windows-hardware/get-started/adk-install)
--   [Bekannte Probleme mit der Internet Explorer-Sicherheitsfunktion](/previous-versions/windows/it-pro/windows-7/cc722079(v=ws.10))
+-   [Neue NX-APIs zu Windows Vista SP1, Windows XP SP3 und Windows Server 2008 R2 hinzugefügt](/archive/blogs/michael_howard/)
+-   [Download des Anwendungskompatibilitätstoolkits](/windows-hardware/get-started/adk-install)
+-   [Bekannte Internet Explorer Sicherheitsfeatures](/previous-versions/windows/it-pro/windows-7/cc722079(v=ws.10))
 
  
 

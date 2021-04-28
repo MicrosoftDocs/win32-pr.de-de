@@ -1,7 +1,7 @@
 ---
-description: Definiert einen Vektor.
+description: 'D3DVECTOR-Struktur (D3D9Types.h): Definiert einen Vektor.'
 ms.assetid: 7091617b-935b-466e-8270-90240a1adaee
-title: D3DVECTOR-Struktur (D3D9Types. h)
+title: D3DVECTOR-Struktur (D3D9Types.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,14 +13,14 @@ api_type:
 - HeaderDef
 api_location:
 - D3D9Types.h
-ms.openlocfilehash: 255270e82b967944ae70e593710550163b8bb788
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 8fc8d78490f192f5cbf222251d763ac73e862e78
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104219588"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108107708"
 ---
-# <a name="d3dvector-structure-d3d9typesh"></a>D3DVECTOR-Struktur (D3D9Types. h)
+# <a name="d3dvector-structure-d3d9typesh"></a>D3DVECTOR-Struktur (D3D9Types.h)
 
 Definiert einen Vektor.
 
@@ -48,7 +48,7 @@ Typ: **float**
 
 </dd> <dd>
 
-Ein Gleit Komma Wert, der den Vektor beschreibt.
+Gleitkommawert, der den Vektor beschreibt.
 
 </dd> <dt>
 
@@ -59,7 +59,7 @@ Typ: **float**
 
 </dd> <dd>
 
-Ein Gleit Komma Wert, der den Vektor beschreibt.
+Gleitkommawert, der den Vektor beschreibt.
 
 </dd> <dt>
 
@@ -70,7 +70,7 @@ Typ: **float**
 
 </dd> <dd>
 
-Ein Gleit Komma Wert, der den Vektor beschreibt.
+Gleitkommawert, der den Vektor beschreibt.
 
 </dd> </dl>
 
@@ -78,13 +78,13 @@ Ein Gleit Komma Wert, der den Vektor beschreibt.
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------|----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3D9Types. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3D9Types.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

@@ -1,26 +1,26 @@
 ---
-title: Unformatierte Eingabe Benachrichtigungen
-description: .
+title: Unformatte Eingabebenachrichtigungen
+description: Unformatte Eingabebenachrichtigungen
 ms.assetid: 6e4705b2-1beb-4652-a621-5297e0ed504a
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f1f5e396800c7ab1f369f0d49cb735c43122654a
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 2489e36196e5f9db83075cdecbd16986da648ad5
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104388326"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108087768"
 ---
-# <a name="raw-input-notifications"></a>Unformatierte Eingabe Benachrichtigungen
+# <a name="raw-input-notifications"></a>Unformatte Eingabebenachrichtigungen
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [**WM- \_ Eingabe**](wm-input.md)
--   [**WM- \_ Eingabe \_ Geräte \_ Änderung**](wm-input-device-change.md)
+-   [**\_WM-EINGABE**](wm-input.md)
+-   [**\_ \_ WM-EINGABEGERÄTEÄNDERUNG \_**](wm-input-device-change.md)
 
- 
+ 
 
- 
+ 
 
 
 

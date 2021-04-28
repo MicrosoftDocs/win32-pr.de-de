@@ -1,7 +1,7 @@
 ---
-description: Konstruktormethode.
+description: CBasePropertyPage.CBasePropertyPage-Konstruktor – Konstruktormethode.
 ms.assetid: 5d9863e7-fdd9-4df2-a603-34a240a2286c
-title: Cbasepropertypage. cbasepropertypage-Konstruktor (cprop. h)
+title: CBasePropertyPage.CBasePropertyPage-Konstruktor (Cprop.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,14 +16,14 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 915bc42cfb7f152cc061dab76caede6c998edf8b
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 95821062b6b1199ea98a5329934d76e2197901d4
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106359224"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108119948"
 ---
-# <a name="cbasepropertypagecbasepropertypage-constructor"></a>Cbasepropertypage. cbasepropertypage-Konstruktor
+# <a name="cbasepropertypagecbasepropertypage-constructor"></a>CBasePropertyPage.CBasePropertyPage-Konstruktor
 
 Konstruktormethode.
 
@@ -48,28 +48,28 @@ CBasePropertyPage(
 *pName* 
 </dt> <dd>
 
-Eine Zeichenfolge, die den Namen des Objekts zu Debuggingzwecken enthält. Weitere Informationen finden Sie unter [**cbaseobject:: cbaseobject**](cbaseobject-cbaseobject.md).
+Zeichenfolge, die den Namen des Objekts zu Debugzwecken enthält. Weitere Informationen finden Sie unter [**CBaseObject::CBaseObject**](cbaseobject-cbaseobject.md).
 
 </dd> <dt>
 
-*Kro* 
+*Punk* 
 </dt> <dd>
 
-Zeiger auf die Aggregations- **IUnknown** -Schnittstelle.
+Zeiger auf die aggregierende **IUnknown-Schnittstelle.**
 
 </dd> <dt>
 
-*DialogID* 
+*DialogId* 
 </dt> <dd>
 
-Die Ressourcen-ID für das Dialogfeld.
+Ressourcen-ID für das Dialogfeld.
 
 </dd> <dt>
 
 *TitleId* 
 </dt> <dd>
 
-Die Ressourcen-ID für die Zeichenfolge, die den Dialogfeld Titel enthält.
+Ressourcen-ID für die Zeichenfolge, die den Titel des Dialogfelds enthält.
 
 </dd> </dl>
 
@@ -87,18 +87,18 @@ CMyProp::CMyProp(IUnknown *pUnk) :
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Cprop. h (Include Streams. h)</dt> </dl>                                                                                     |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Cprop.h (include Streams.h)</dt> </dl>                                                                                     |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbasepropertypage-Klasse**](cbasepropertypage.md)
+[**CBasePropertyPage-Klasse**](cbasepropertypage.md)
 </dt> </dl>
 
  

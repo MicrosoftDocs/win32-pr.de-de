@@ -1,31 +1,31 @@
 ---
-description: .
+description: Warum benötigen Sie Kompatibilitätsansicht?
 ms.assetid: 5B8D3A76-F30B-4F17-9257-0B6ED7F2D753
-title: Warum benötigen Sie eine Kompatibilitäts Ansicht?
+title: Warum benötigen Sie Kompatibilitätsansicht?
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 74fd1902ad77af863e61be36800a8c4f9eabf227
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9991e9dc0c2edcd66ae6655c094f17b240be985a
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106362967"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108113378"
 ---
-# <a name="why-do-you-need-compatibility-view"></a>Warum benötigen Sie eine Kompatibilitäts Ansicht?
+# <a name="why-do-you-need-compatibility-view"></a>Warum benötigen Sie Kompatibilitätsansicht?
 
-Die Funktion Kompatibilitäts Ansicht folgt einem Satz von Regeln, um Inhalte ordnungsgemäß anzuzeigen, ohne dass eine Benutzer-(oder eine IT-Administrator Aktion) nach Möglichkeit benötigt wird. Mithilfe der Kompatibilitäts Ansicht können Entwickler den Browser anweisen, welches Renderingmodul verwendet werden soll, und Benutzern das Überschreiben der Auswahl-und switchmodi des Browsers ermöglichen Wenn der Entwickler und IT-Experte nicht angeben, welcher Renderingmodus verwendet werden soll, wird dem Benutzer das Symbol "unterbrochene Seite" am rechten Ende der Adressleiste angezeigt, wie in der folgenden Abbildung dargestellt.
+Das Kompatibilitätsansicht-Feature folgt einer Reihe von Regeln, um Inhalte ordnungsgemäß anzuzeigen, ohne dass nach Möglichkeit Benutzer- (oder IT-Administrator)-Aktionen erforderlich sind. Kompatibilitätsansicht können Entwickler den Browser anweisen, welche Rendering-Engine verwendet werden soll, und ermöglicht es Benutzern, die Auswahl- und Wechselmodi des Browsers außer Kraft zu setzen. Wenn entwickler und IT-Fachkraft nicht angeben, welcher Renderingmodus verwendet werden soll, wird dem Benutzer das Symbol "Fehlerhafte Seite" am rechten Ende der Adressleiste angezeigt, wie in der folgenden Abbildung dargestellt.
 
-![Abbildung des Symbols für eine beschädigte Seite neben der Adressleiste](images/iecompatview.png)
+![Abbildung des fehlerhaften Seitensymbols neben der Adressleiste](images/iecompatview.png)
 
-Wenn ein Benutzer auf das Symbol klickt, schaltet Windows Internet Explorer 8 die Renderingmodi um, und die Seite wird sofort erneut geladen.
+Wenn ein Benutzer auf das Symbol klickt, wechselt Windows Internet Explorer 8 den Renderingmodus, und die Seite wird sofort neu geladen.
 
-Benutzer sehen dieses Symbol nicht immer. Dabei handelt es sich um eine sekundäre Lösung anstelle des primären Anwendungs Kompatibilitäts Mechanismus. Windows Internet Explorer zeigt dieses Symbol nur an, wenn eine Änderung in der Kompatibilitäts Ansicht sinnvoll ist, z. b. Wenn ein Benutzer die Seiten im Standardmodus anweist. In allen anderen Fällen, z. b. Wenn ein Benutzer Seiten im quiranmodus oder Ansichten für Intranetzone anzeigt, wird das Symbol nicht angezeigt. Weitere Informationen zur Kompatibilitäts Ansicht und zum Anzeigen des Symbols finden Sie unter Einführung in die [Kompatibilitäts Ansicht](/archive/blogs/ie/).
+Benutzern wird dieses Symbol nicht immer angezeigt. Es handelt sich um eine sekundäre Lösung anstelle des primären Anwendungskompatibilitätsmechanismus. Windows Internet Explorer zeigt dieses Symbol nur an, wenn eine Änderung in Kompatibilitätsansicht sinnvoll ist, z. B. wenn ein Benutzer Standardmodusseiten anzeigt. In allen anderen Fällen, z. B. wenn ein Benutzer Seiten im quirks-Modus oder Intranetzonensites betrachtet, wird das Symbol nicht angezeigt. Weitere Informationen zum Kompatibilitätsansicht und zum Anzeigen des Symbols finden Sie unter [Introducing Kompatibilitätsansicht](/archive/blogs/ie/).
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Beheben von Kompatibilitätsproblemen in Webanwendungen mithilfe der Kompatibilitäts Ansicht](remediating-web-applications-and-add-ons.md)
+[Beheben von Kompatibilitätsproblemen in Webanwendungen mit Kompatibilitätsansicht](remediating-web-applications-and-add-ons.md)
 </dt> </dl>
 
  

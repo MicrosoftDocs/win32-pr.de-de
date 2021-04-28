@@ -1,7 +1,7 @@
 ---
-description: Ruft die Breite der Textur in Pixel ab.
+description: 'ID3DXPRTBuffer::GetWidth-Methode: Ruft die Breite der Textur in Pixel ab.'
 ms.assetid: 0180e6e0-aef2-425d-b9d3-d3f7a64f8d5b
-title: 'ID3DXPRTBuffer:: getWidth-Methode (D3DX9Mesh. h)'
+title: ID3DXPRTBuffer::GetWidth-Methode (D3DX9Mesh.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,14 +14,14 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 0a26d17a90f3870ceb8daa03c59f0e23bb411ea5
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 4b6ce05d3a5d9c1831d0ed2900a4820fd72f7afb
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106363988"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108093248"
 ---
-# <a name="id3dxprtbuffergetwidth-method"></a>ID3DXPRTBuffer:: getWidth-Methode
+# <a name="id3dxprtbuffergetwidth-method"></a>ID3DXPRTBuffer::GetWidth-Methode
 
 Ruft die Breite der Textur in Pixel ab.
 
@@ -40,7 +40,7 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
 Gibt die Breite der Textur in Pixel zurück.
 
@@ -48,21 +48,21 @@ Gibt die Breite der Textur in Pixel zurück.
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Mesh. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX9Mesh.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [ID3DXPRTBuffer](id3dxprtbuffer.md)
 </dt> <dt>
 
-[**ID3DXPRTBuffer:: GetHeight**](id3dxprtbuffer--getheight.md)
+[**ID3DXPRTBuffer::GetHeight**](id3dxprtbuffer--getheight.md)
 </dt> </dl>
 
  

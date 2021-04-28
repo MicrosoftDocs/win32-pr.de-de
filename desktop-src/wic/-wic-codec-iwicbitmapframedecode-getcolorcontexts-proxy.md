@@ -1,5 +1,5 @@
 ---
-description: Proxy Funktion für die getcolorkontexte-Methode.
+description: 'IWICBitmapFrameDecode_GetColorContexts_Proxy-Funktion: Proxyfunktion für die GetColorContexts-Methode.'
 ms.assetid: 1925a64e-558d-4931-a3c3-b35d2b92a292
 title: IWICBitmapFrameDecode_GetColorContexts_Proxy-Funktion
 ms.topic: reference
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - Windowscodecs.dll
 - Wincodec.lib
-ms.openlocfilehash: 8e22166e98e4ef276a6bf1d72dfc860cf8fb511e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 99fb6caa9b9e654be0adc1235cad0e79a7fa1ef3
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214546"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108100578"
 ---
-# <a name="iwicbitmapframedecode_getcolorcontexts_proxy-function"></a>IWICBitmapFrameDecode \_ getcolorkontexte- \_ Proxy Funktion
+# <a name="iwicbitmapframedecode_getcolorcontexts_proxy-function"></a>IWICBitmapFrameDecode \_ \_ GetColorContexts-Proxyfunktion
 
-Proxy Funktion für die [**getcolorkontexte**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapframedecode-getcolorcontexts) -Methode.
+Proxyfunktion für die [**GetColorContexts-Methode.**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapframedecode-getcolorcontexts)
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,49 +43,49 @@ HRESULT IWICBitmapFrameDecode_GetColorContexts_Proxy(
 
 <dl> <dt>
 
-*Dies \_ PTR* \[ in\]
+*THIS \_ PTR* \[ in\]
 </dt> <dd>
 
-Typ: **[**IWICBitmapFrameDecode**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapframedecode) \** _
+Typ: **[ **IWICBitmapFrameDecode**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapframedecode)\***
 
-Zeiger auf dieses [_ *IWICBitmapFrameDecode* *](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapframedecode) -Objekt.
+Zeiger auf dieses [**IWICBitmapFrameDecode-Objekt.**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapframedecode)
 
 </dd> <dt>
 
-*ccount* \[ in\]
+*cCount* \[ In\]
 </dt> <dd>
 
-Typ: **uint**
+Typ: **UINT**
 
-Die Anzahl der abzurufenden Farb Kontexte.
+Die Anzahl der abzurufenden Farbkontexte.
 
-Dieser Wert muss die Größe von (oder kleiner als) sein, die für *ppicolorkontexte* verfügbar ist.
+Dieser Wert muss die Größe von oder kleiner als die größe sein, die *ppIColorContexts zur Verfügung steht.*
 
 </dd> <dt>
 
-*ppicolorkontexte* \[ in, out\]
+*ppIColorContexts* \[ in, out\]
 </dt> <dd>
 
 Typ: **[ **IWICColorContext**](/windows/desktop/api/Wincodec/nn-wincodec-iwiccolorcontext)\*\***
 
-Ein Zeiger, der einen Zeiger auf die [**IWICColorContext**](/windows/desktop/api/Wincodec/nn-wincodec-iwiccolorcontext) -Objekte empfängt.
+Ein Zeiger, der einen Zeiger auf die [**IWICColorContext-Objekte**](/windows/desktop/api/Wincodec/nn-wincodec-iwiccolorcontext) empfängt.
 
 </dd> <dt>
 
-*pcActualCount* \[ vorgenommen\]
+*pcActualCount* \[ out\]
 </dt> <dd>
 
-Typ: **uint \** _
+Typ: **UINT \***
 
-Ein Zeiger, der die Anzahl der Farb Kontexte im Bild Rahmen empfängt.
+Ein Zeiger, der die Anzahl von Farbkontexten empfängt, die im Bildrahmen enthalten sind.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Type: _ *HRESULT**
+Typ: **HRESULT**
 
-Wenn diese Funktion erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Funktion erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="remarks"></a>Bemerkungen
 
@@ -93,11 +93,11 @@ Wenn diese Funktion erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. 
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows XP mit SP2, nur Windows Vista \[ -Desktop-Apps\]<br/>                                                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                                                                             |
-| DLL<br/>                      | <dl> <dt>Windowscodecs.dll; </dt> <dt>Wincodec. lib</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows XP mit SP2, nur Windows \[ Vista-Desktop-Apps\]<br/>                                                                                              |
+| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2008-Desktop-Apps\]<br/>                                                                                                             |
+| DLL<br/>                      | <dl> <dt>Windowscodecs.dll; </dt> <dt>Wincodec.lib</dt> </dl> |
 
 
 

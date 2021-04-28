@@ -1,7 +1,7 @@
 ---
-description: Die Implementierung dieser Methode wird als Beispielcode mit dem DirectShow SDK bereitgestellt. Es handelt sich nicht um eine unterstützte DirectShow-API.
+description: 'IMpeg2PsiParser::GetPmtVersionNumber-Methode: Die Implementierung dieser Methode wird als Beispielcode mit dem DirectShow SDK bereitgestellt. Es handelt sich nicht um eine unterstützte DirectShow-API.'
 ms.assetid: 50113d6b-4e10-4dc9-aaef-f67c6918a2de
-title: 'IMpeg2PsiParser:: getpmtversionnumber-Methode'
+title: IMpeg2PsiParser::GetPmtVersionNumber-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,18 +12,18 @@ api_name:
 api_type:
 - COM
 api_location: ''
-ms.openlocfilehash: 3af4b20067af52216181848f4cc63ac5a7784ba9
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 6f4fd8d0eba88ba1df54a1cc058bc0a2951b9a19
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "106338855"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108084558"
 ---
-# <a name="impeg2psiparsergetpmtversionnumber-method"></a>IMpeg2PsiParser:: getpmtversionnumber-Methode
+# <a name="impeg2psiparsergetpmtversionnumber-method"></a>IMpeg2PsiParser::GetPmtVersionNumber-Methode
 
 Die Implementierung dieser Methode wird als Beispielcode mit dem DirectShow SDK bereitgestellt. Es handelt sich nicht um eine unterstützte DirectShow-API.
 
-Die- `GetPmtVersionNumber` Methode ruft das Feld mit der Versions \_ Nummer von einem angegebenen PMT ab. Die Versionsnummer wird jedes Mal inkrementiert, wenn sich die Programmdefinition ändert.
+Die `GetPmtVersionNumber` -Methode ruft das Versionsnummerfeld \_ aus einem angegebenen PMT ab. Die Versionsnummer wird erhöht, wenn sich die Definition des Programms ändert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,23 +41,23 @@ HRESULT GetPmtVersionNumber(
 
 <dl> <dt>
 
-*wprogramnumber* \[ in\]
+*wProgramNumber* \[ In\]
 </dt> <dd>
 
-Gibt das Programm \_ Nummern Feld des Programms an, wie in Pat angegeben.
+Gibt das \_ Programmnummerfeld des Programms an, wie im PAT angegeben.
 
 </dd> <dt>
 
-*ppmtversion* \[ vorgenommen\]
+*pPmtVersion* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf eine Variable, die das Feld mit der Versions \_ Nummer empfängt.
+Zeiger auf eine Variable, die das Versionsnummerfeld \_ empfängt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt einen **HRESULT** -Wert zurück. Mögliche Werte sind u. a. die in der folgenden Tabelle aufgeführten Werte.
+Die -Methode gibt einen **HRESULT-Wert** zurück. Mögliche Werte sind, aber nicht beschränkt auf, die in der folgenden Tabelle gezeigten Werte.
 
 
 
@@ -71,19 +71,19 @@ Die-Methode gibt einen **HRESULT** -Wert zurück. Mögliche Werte sind u. a. die
 
 ## <a name="remarks"></a>Bemerkungen
 
-Verwenden Sie die **getrecordprogramnumber** -Methode, um die Programmnummer abzurufen.
+Verwenden Sie **die GetRecordProgramNumber-Methode,** um die Programmnummer zu erhalten.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**IMpeg2PsiParser-Schnittstelle**](impeg2psiparser.md)
 </dt> <dt>
 
-[**IMpeg2PsiParser:: getrecordprogramnumber**](impeg2psiparser-getrecordprogramnumber.md)
+[**IMpeg2PsiParser::GetRecordProgramNumber**](impeg2psiparser-getrecordprogramnumber.md)
 </dt> <dt>
 
-[Beispiel für PSI-Parser-Filter](psi-parser-filter-sample.md)
+[BEISPIEL FÜR PSI-Parserfilter](psi-parser-filter-sample.md)
 </dt> </dl>
 
  

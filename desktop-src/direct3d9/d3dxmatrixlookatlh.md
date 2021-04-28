@@ -1,7 +1,7 @@
 ---
-description: Erstellt eine Links bündige Matrix.
+description: 'D3DXMatrixLookAtLH-Funktion (D3dx9math.h): Erstellt eine linkshändige Look-At-Matrix.'
 ms.assetid: bf34d3d8-725d-4fc1-b4c8-6c98f9dac329
-title: D3DXMatrixLookAtLH-Funktion (D3dx9math. h)
+title: D3DXMatrixLookAtLH-Funktion (D3dx9math.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 97fa7acdf467761bd3b3cfbc023662e9b3368b98
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 94a423e700c4a42e2ae7f7e522d83a5a4bd9bf3a
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106363167"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108107588"
 ---
-# <a name="d3dxmatrixlookatlh-function-d3dx9mathh"></a>D3DXMatrixLookAtLH-Funktion (D3dx9math. h)
+# <a name="d3dxmatrixlookatlh-function-d3dx9mathh"></a>D3DXMatrixLookAtLH-Funktion (D3dx9math.h)
 
-Erstellt eine Links bündige Matrix.
+Erstellt eine linkshändige Look-At-Matrix.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,39 +43,39 @@ D3DXMATRIX* D3DXMatrixLookAtLH(
 
 <dl> <dt>
 
-*Pout* \[ in, out\]
+*pOut* \[ in, out\]
 </dt> <dd>
 
 Typ: **[ **D3DXMATRIX**](d3dxmatrix.md)\***
 
-Ein Zeiger auf die [**D3DXMATRIX**](d3dxmatrix.md) -Struktur, die das Ergebnis des Vorgangs ist.
+Zeiger auf die [**D3DXMATRIX-Struktur,**](d3dxmatrix.md) die das Ergebnis des Vorgangs ist.
 
 </dd> <dt>
 
-*Peer* \[ in\]
+*pEye* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXVECTOR3**](d3dxvector3.md) \***
+Typ: **const [**D3DXVECTOR3**](d3dxvector3.md) \***
 
-Ein Zeiger auf die [**D3DXVECTOR3**](d3dxvector3.md) -Struktur, die den Augen Punkt definiert. Dieser Wert wird bei der Übersetzung verwendet.
+Zeiger auf die [**D3DXVECTOR3-Struktur,**](d3dxvector3.md) die den Augenpunkt definiert. Dieser Wert wird bei der Übersetzung verwendet.
 
 </dd> <dt>
 
-*pAt* \[ in\]
+*pAt* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXVECTOR3**](d3dxvector3.md) \***
+Typ: **const [**D3DXVECTOR3**](d3dxvector3.md) \***
 
-Ein Zeiger auf die [**D3DXVECTOR3**](d3dxvector3.md) -Struktur, die das Erscheinungsbild der Kamera definiert.
+Zeiger auf die [**D3DXVECTOR3-Struktur,**](d3dxvector3.md) die das Kamera-Look-at-Ziel definiert.
 
 </dd> <dt>
 
-*PUP* \[ in\]
+*pUp* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXVECTOR3**](d3dxvector3.md) \***
+Typ: **const [**D3DXVECTOR3**](d3dxvector3.md) \***
 
-Ein Zeiger auf die [**D3DXVECTOR3**](d3dxvector3.md) -Struktur, die den aktuellen Globus definiert, normalerweise \[ 0, 1, 0 \] .
+Zeiger auf die [**D3DXVECTOR3-Struktur,**](d3dxvector3.md) die den Up der aktuellen Welt definiert, in der Regel \[ 0, 1, 0 \] .
 
 </dd> </dl>
 
@@ -83,11 +83,11 @@ Ein Zeiger auf die [**D3DXVECTOR3**](d3dxvector3.md) -Struktur, die den aktuelle
 
 Typ: **[ **D3DXMATRIX**](d3dxmatrix.md)\***
 
-Zeiger auf eine [**D3DXMATRIX**](d3dxmatrix.md) -Struktur, bei der es sich um eine Links übergebene Matrix handelt.
+Zeiger auf eine [**D3DXMATRIX-Struktur,**](d3dxmatrix.md) die eine linkshändige Look-at-Matrix ist.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Der Rückgabewert für diese Funktion ist derselbe Wert, der im *Pout* -Parameter zurückgegeben wird. Auf diese Weise kann die **D3DXMatrixLookAtLH** -Funktion als Parameter für eine andere Funktion verwendet werden.
+Der Rückgabewert für diese Funktion ist der gleiche Wert, der im *pOut-Parameter* zurückgegeben wird. Auf diese Weise kann die **D3DXMatrixLookAtLH-Funktion** als Parameter für eine andere Funktion verwendet werden.
 
 Diese Funktion verwendet die folgende Formel, um die zurückgegebene Matrix zu berechnen.
 
@@ -109,14 +109,14 @@ yaxis = cross(zaxis, xaxis)
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9math. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3dx9math.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

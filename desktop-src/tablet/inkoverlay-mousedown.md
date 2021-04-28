@@ -1,19 +1,19 @@
 ---
-description: Tritt auf, wenn sich der Mauszeiger über dem InkCollector-oder InkOverlay-Objekt befindet und eine Maustaste gedrückt wird.
+description: 'InkOverlay.MouseDown-Ereignis: Tritt auf, wenn sich der Mauszeiger über dem InkCollector- oder InkOverlay-Objekt befindet und eine Maustaste gedrückt wird.'
 ms.assetid: 95c3b1ae-0e77-4ca2-ab73-a0e97ab115b5
-title: InkOverlay. moutardown-Ereignis (msink AUT. h)
+title: InkOverlay.MouseDown-Ereignis (Msinkaut.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c011de55543bee08aeda1a8a986b597523ad805d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3ff1e4bff715a6585ee607de766c809579f527aa
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106351028"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108086818"
 ---
-# <a name="inkoverlaymousedown-event"></a>InkOverlay. moutardown-Ereignis
+# <a name="inkoverlaymousedown-event"></a>InkOverlay.MouseDown-Ereignis
 
-Tritt auf, wenn sich der Mauszeiger über dem [**InkCollector**](inkcollector-class.md) -oder [**InkOverlay**](inkoverlay-class.md) -Objekt befindet und eine Maustaste gedrückt wird.
+Tritt ein, wenn sich der Mauszeiger über dem [**InkCollector-**](inkcollector-class.md) oder [**InkOverlay-Objekt**](inkoverlay-class.md) befindet und eine Maustaste gedrückt wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -34,28 +34,28 @@ void MouseDown(
 
 <dl> <dt>
 
-*Schaltfläche* \[ in\]
+*Schaltfläche* \[ In\]
 </dt> <dd>
 
-Die Maustaste, die gedrückt wurde.
+Die gedrückte Maustaste.
 
 </dd> <dt>
 
-*UMSCHALT* \[ in\]
+*Umschalten* \[ In\]
 </dt> <dd>
 
 Der Zustand der UMSCHALTTASTE.
 
 </dd> <dt>
 
-*px* \[ in\]
+*pX* \[ In\]
 </dt> <dd>
 
 Die X-Koordinate eines Mausklicks in Pixel.
 
 </dd> <dt>
 
-*pY* \[ in\]
+*pY* \[ In\]
 </dt> <dd>
 
 Die Y-Koordinate eines Mausklicks in Pixel.
@@ -65,7 +65,7 @@ Die Y-Koordinate eines Mausklicks in Pixel.
 *Abbrechen* \[ in, out\]
 </dt> <dd>
 
-**Variant \_ TRUE** , wenn das Ereignis für das übergeordnete Steuerelement abgebrochen werden soll. Andernfalls ist der Wert **\_ false**. Der Standardwert ist **Variant \_ false** .
+**VARIANT \_ TRUE,** um das Ereignis für das übergeordnete Steuerelement abzubrechen; Andernfalls **VARIANT \_ FALSE**. Der Standardwert ist **VARIANT \_ FALSE.**
 
 </dd> </dl>
 
@@ -75,47 +75,47 @@ Dieses Ereignis gibt keinen Wert zurück.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Um die Echtzeitleistung zu verbessern, blenden Sie den Mauszeiger in den [**MouseDown**](inkcollector-mousedown.md) -und [**MouseUp**](inkcollector-mouseup.md) -Ereignis Handlern aus, oder zeigen Sie ihn an.
+Um die Leistung von Ink-Echtzeit zu verbessern, blenden Sie den Mauszeiger in den [**MouseDown-**](inkcollector-mousedown.md) und [**MouseUp-Ereignishandlern**](inkcollector-mouseup.md) aus oder ein.
 
 > [!Note]  
-> Die Eigenschaften px und pY befinden sich in Pixel und nicht in den HIMETRIC-Einheiten, die dem frei Handbereich zugeordnet sind. Dies liegt daran, dass dieses Ereignis das verknüpfte Maus Ereignis einer Anwendung, für die ein Stift nicht gilt, ersetzt und dieser Anwendungstyp nur Pixel versteht.
+> Die Eigenschaften pX und pY sind in Pixel und nicht die HIMETRIC-Einheiten, die dem Freihandraum zugeordnet sind. Dies liegt daran, dass dieses Ereignis das zugehörige Mausereignis einer Anwendung ohne Stift ersetzt und diese Art von Anwendung nur Pixel versteht.
 
  
 
 > [!Note]  
-> Einige Steuerelemente basieren auf einer bestimmten Beziehung zwischen [**mouledown**](inkcollector-mousedown.md)-, [**mousermove**](inkcollector-mousemove.md)-und [**mouberup**](inkcollector-mouseup.md) -Ereignissen. Das Abbrechen einiger dieser Ereignisse kann zu unerwarteten Ergebnissen führen.
+> Einige Steuerelemente basieren auf einer bestimmten Beziehung zwischen [**MouseDown-,**](inkcollector-mousedown.md) [**MouseMove-**](inkcollector-mousemove.md)und [**MouseUp-Ereignissen.**](inkcollector-mouseup.md) Das Abbrechen einiger dieser Ereignisse kann unerwartete Ergebnisse haben.
 
  
 
-Diese Ereignismethode wird in den \_ \_ Dispatch-only-Schnittstellen iinkcollectorevents, iinkoverlayevents und \_ iinkpictureevents (Dispinterfaces) mit der ID DISPID \_ ipemousedown definiert.
+Diese Ereignismethode wird in den \_ \_ Dispatch-Only-Schnittstellen IInkCollectorEvents, IInkOverlayEvents und \_ IInkPictureEvents (dispinterfaces) mit der ID DISPID \_ IPEMouseDown definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                       |
+| Unterstützte Mindestversion (Client)<br/> | Nur Desktop-Apps der Windows XP Tablet PC Edition \[\]<br/>                                                       |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                           |
-| Header<br/>                   | <dl> <dt>Msink AUT. h (erfordert auch msink AUT \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Msinkaut.h (erfordert auch Msinkaut \_ i.c)</dt> </dl> |
 | Bibliothek<br/>                  | <dl> <dt>InkObj.dll</dt> </dl>                               |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**InkOverlay-Klasse**](inkoverlay-class.md)
 </dt> <dt>
 
-[**Inkmouerbutton-Enumeration**](/windows/desktop/api/msinkaut/ne-msinkaut-inkmousebutton)
+[**InkMouseButton-Enumeration**](/windows/desktop/api/msinkaut/ne-msinkaut-inkmousebutton)
 </dt> <dt>
 
-[**Inkshiftkeymodifierflags-Enumeration**](/windows/desktop/api/msinkaut/ne-msinkaut-inkshiftkeymodifierflags)
+[**InkShiftKeyModifierFlags-Enumeration**](/windows/desktop/api/msinkaut/ne-msinkaut-inkshiftkeymodifierflags)
 </dt> <dt>
 
-[**Mouberup-Ereignis**](inkcollector-mouseup.md)
+[**MouseUp-Ereignis**](inkcollector-mouseup.md)
 </dt> </dl>
 
  

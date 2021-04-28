@@ -1,7 +1,7 @@
 ---
-description: Konstruktormethode.
+description: 'CABThread.WEBCAMThread-Konstruktor : Konstruktormethode.'
 ms.assetid: 0057adfe-e397-476b-90f9-7edbf7377b65
-title: Camthread. camthread-Konstruktor (wxutil. h)
+title: CABThread.MSIThread-Konstruktor (Wxutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,14 +16,14 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: abaac0c3b0330cd41db7ecd21f894733de10a1b4
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 0c4b9c5f80e131ce089b6a2da924e9cca41a84f6
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372235"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108096408"
 ---
-# <a name="camthreadcamthread-constructor"></a>Camthread. camthread-Konstruktor
+# <a name="camthreadcamthread-constructor"></a>CABThread.CABThread-Konstruktor
 
 Konstruktormethode.
 
@@ -42,35 +42,35 @@ CAMThread(
 
 <dl> <dt>
 
-*PHR* 
+*Phr* 
 </dt> <dd>
 
-Zeiger auf einen **HRESULT** -Wert. Wenn der Konstruktor ausfällt, empfängt dieser Parameter einen Fehlercode. Wenn dies auftritt, befindet sich das Objekt nicht in einem gültigen Zustand.
+Zeiger auf einen **HRESULT-Wert.** Wenn der Konstruktor fehlschlägt, empfängt dieser Parameter einen Fehlercode. In diesem Fall befindet sich das Objekt nicht in einem gültigen Zustand.
 
-Aus Gründen der Abwärtskompatibilität mit früheren Versionen von "straumbase. lib" ist dieser Parameter standardmäßig **null**. Die Übergabe eines Werts ungleich **null** wird jedoch bevorzugt, sodass der Aufrufer den Status des Objekts überprüfen kann.
+Aus Gründen der Abwärtskompatibilität mit früheren Versionen von strmbase.lib wird dieser Parameter standardmäßig auf **NULL** gesetzt. Die Übergabe eines Werts ungleich **NULL** wird jedoch bevorzugt, damit der Aufrufer den Status des Objekts überprüfen kann.
 
 </dd> </dl>
 
 ## <a name="remarks"></a>Bemerkungen
 
-Die Konstruktormethode erstellt nicht den Thread. Um den Thread zu erstellen, rufen Sie die Methode " [**camthread:: Create**](camthread-create.md) " auf.
+Die Konstruktormethode erstellt den Thread nicht. Um den Thread zu erstellen, rufen Sie die [**METHODE TARThread::Create**](camthread-create.md) auf.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Wxutil. h (Include Streams. h)</dt> </dl>                                                                                    |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Wxutil.h (include Streams.h)</dt> </dl>                                                                                    |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Camthread-Klasse**](camthread.md)
+[**WEBCAMThread-Klasse**](camthread.md)
 </dt> </dl>
 
  

@@ -1,17 +1,17 @@
 ---
-description: Dieses Ereignis wird nicht unterstützt.
+description: 'EC_RENDER_FINISHED: Dieses Ereignis wird nicht unterstützt.'
 ms.assetid: a7d207c0-3d93-468a-b463-1eab68b286a2
-title: EC_RENDER_FINISHED (DShow. h)
+title: EC_RENDER_FINISHED (Dshow.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 167ed535a872b28f8632def4eb06f7c541377f82
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 10b2b6b113b1aa60d5e354fe51beb95995f2337e
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106355257"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108119638"
 ---
-# <a name="ec_render_finished"></a>EC- \_ Rendering \_ abgeschlossen
+# <a name="ec_render_finished"></a>EC \_ RENDER \_ FINISHED (EC-RENDER ABGESCHLOSSEN)
 
 Dieses Ereignis wird nicht unterstützt.
 
@@ -19,20 +19,20 @@ Dieses Ereignis wird nicht unterstützt.
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------|------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>DShow. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Dshow.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Ereignis Benachrichtigungs Codes](event-notification-codes.md)
+[Ereignisbenachrichtigungscodes](event-notification-codes.md)
 </dt> <dt>
 
-[Ereignis Benachrichtigung in DirectShow](event-notification-in-directshow.md)
+[Ereignisbenachrichtigung in DirectShow](event-notification-in-directshow.md)
 </dt> </dl>
 
  

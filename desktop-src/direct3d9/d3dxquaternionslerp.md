@@ -1,7 +1,7 @@
 ---
-description: Interpoliert zwischen zwei Quaternionen mit der Methode der sphärischen linearen Interpolation.
+description: 'D3DXQuaternionSlerp-Funktion (D3dx9math.h): Interpoliert mithilfe der pherischen linearen Interpolation zwischen zwei Quaternionen.'
 ms.assetid: 94a989c8-fa6b-4852-9aa3-e55ad814ffd7
-title: D3DXQuaternionSlerp-Funktion (D3dx9math. h)
+title: D3DXQuaternionSlerp-Funktion (D3dx9math.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,14 +14,14 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: f0f43e22ddc46007c6f589dfc5fd8b45aa885643
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: fb9110da7fae4ebbf4609d361124dbbcdedfe59b
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106354360"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108093938"
 ---
-# <a name="d3dxquaternionslerp-function-d3dx9mathh"></a>D3DXQuaternionSlerp-Funktion (D3dx9math. h)
+# <a name="d3dxquaternionslerp-function-d3dx9mathh"></a>D3DXQuaternionSlerp-Funktion (D3dx9math.h)
 
 Interpoliert zwischen zwei Quaternionen mit der Methode der sphärischen linearen Interpolation.
 
@@ -43,39 +43,39 @@ D3DXQUATERNION* D3DXQuaternionSlerp(
 
 <dl> <dt>
 
-*Pout* \[ in, out\]
+*pOut* \[ in, out\]
 </dt> <dd>
 
 Typ: **[ **D3DXQUATERNION**](d3dxquaternion.md)\***
 
-Ein Zeiger auf die [**D3DXQUATERNION**](d3dxquaternion.md) -Struktur, die das Ergebnis des Vorgangs ist.
+Zeiger auf die [**D3DXQUATERNION-Struktur,**](d3dxquaternion.md) die das Ergebnis des Vorgangs ist.
 
 </dd> <dt>
 
-*pQ1* \[ in\]
+*pQ1* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXQUATERNION**](d3dxquaternion.md) \***
+Typ: **const [**D3DXQUATERNION**](d3dxquaternion.md) \***
 
-Zeiger auf eine Quell- [**D3DXQUATERNION**](d3dxquaternion.md) -Struktur.
+Zeiger auf eine [**D3DXQUATERNION-Quellstruktur.**](d3dxquaternion.md)
 
 </dd> <dt>
 
-*pQ2* \[ in\]
+*pQ2* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXQUATERNION**](d3dxquaternion.md) \***
+Typ: **const [**D3DXQUATERNION**](d3dxquaternion.md) \***
 
-Zeiger auf eine Quell- [**D3DXQUATERNION**](d3dxquaternion.md) -Struktur.
+Zeiger auf eine [**D3DXQUATERNION-Quellstruktur.**](d3dxquaternion.md)
 
 </dd> <dt>
 
 *t* \[ in\]
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
--Parameter, der angibt, wie weit zwischen den Quaternionen interpolieren werden soll.
+Parameter, der angibt, wie weit zwischen den Quaternionen interpoliert werden soll.
 
 </dd> </dl>
 
@@ -83,26 +83,26 @@ Typ: **[ **float**](../winprog/windows-data-types.md)**
 
 Typ: **[ **D3DXQUATERNION**](d3dxquaternion.md)\***
 
-Zeiger auf eine [**D3DXQUATERNION**](d3dxquaternion.md) -Struktur, die das Ergebnis der interpolung ist.
+Zeiger auf eine [**D3DXQUATERNION-Struktur,**](d3dxquaternion.md) die das Ergebnis der Interpolation ist.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Der Rückgabewert für diese Funktion ist derselbe Wert, der im *Pout* -Parameter zurückgegeben wird. Auf diese Weise kann die **D3DXQuaternionSlerp** -Funktion als Parameter für eine andere Funktion verwendet werden.
+Der Rückgabewert für diese Funktion ist der gleiche Wert, der im *pOut-Parameter zurückgegeben* wird. Auf diese Weise kann die **D3DXQuaternionSlerp-Funktion** als Parameter für eine andere Funktion verwendet werden.
 
-Verwenden Sie [**D3DXQuaternionNormalize**](d3dxquaternionnormalize.md) für eine beliebige Quaternion-Eingabe, die nicht bereits normalisiert ist.
+Verwenden [**Sie D3DXQuaternionNormalize**](d3dxquaternionnormalize.md) für alle Quaternioneingaben, die noch nicht normalisiert sind.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9math. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3dx9math.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
