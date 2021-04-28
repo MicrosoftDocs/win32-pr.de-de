@@ -1,7 +1,7 @@
 ---
-description: Führt mithilfe der angegebenen 2D-Vektoren eine aufgenommene Spline-Interpolierung aus.
+description: 'D3DXVec2Hermite-Funktion (D3dx9math.h): Führt eine Hermite-Splineinterpolation mit den angegebenen 2D-Vektoren aus.'
 ms.assetid: 30eb9490-bc01-4449-adfb-1c552e8ad3e7
-title: D3DXVec2Hermite-Funktion (D3dx9math. h)
+title: D3DXVec2Hermite-Funktion (D3dx9math.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: d55b5453067f83544da5084f3e79ce70275362c5
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 88073e23826362e1f9a753f411ac89ac1e272fc6
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106373508"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108097988"
 ---
-# <a name="d3dxvec2hermite-function-d3dx9mathh"></a>D3DXVec2Hermite-Funktion (D3dx9math. h)
+# <a name="d3dxvec2hermite-function-d3dx9mathh"></a>D3DXVec2Hermite-Funktion (D3dx9math.h)
 
-Führt mithilfe der angegebenen 2D-Vektoren eine aufgenommene Spline-Interpolierung aus.
+Führt eine Hermite-Splineinterpolation unter Verwendung der angegebenen 2D-Vektoren aus.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,55 +45,55 @@ D3DXVECTOR2* D3DXVec2Hermite(
 
 <dl> <dt>
 
-*Pout* \[ in, out\]
+*pOut* \[ in, out\]
 </dt> <dd>
 
 Typ: **[ **D3DXVECTOR2**](d3dxvector2.md)\***
 
-Ein Zeiger auf die [**D3DXVECTOR2**](d3dxvector2.md) -Struktur, die das Ergebnis des Vorgangs ist.
+Zeiger auf die [**D3DXVECTOR2-Struktur,**](d3dxvector2.md) die das Ergebnis des Vorgangs ist.
 
 </dd> <dt>
 
-*pV1* \[ in\]
+*pV1* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXVECTOR2**](d3dxvector2.md) \***
+Typ: **const [**D3DXVECTOR2**](d3dxvector2.md) \***
 
-Zeiger auf eine Quell- [**D3DXVECTOR2**](d3dxvector2.md) -Struktur, ein Positions Vektor.
+Zeiger auf eine [**D3DXVECTOR2-Quellstruktur,**](d3dxvector2.md) einen Positionsvektor.
 
 </dd> <dt>
 
-*pT1* \[ in\]
+*pT1* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXVECTOR2**](d3dxvector2.md) \***
+Typ: **const [**D3DXVECTOR2**](d3dxvector2.md) \***
 
-Zeiger auf eine [**D3DXVECTOR2**](d3dxvector2.md) -Quell Struktur, ein Tangens Vektor.
+Zeiger auf eine [**D3DXVECTOR2-Quellstruktur,**](d3dxvector2.md) einen Tangensvektor.
 
 </dd> <dt>
 
-*pV2* \[ in\]
+*pV2* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXVECTOR2**](d3dxvector2.md) \***
+Typ: **const [**D3DXVECTOR2**](d3dxvector2.md) \***
 
-Zeiger auf eine Quell- [**D3DXVECTOR2**](d3dxvector2.md) -Struktur, ein Positions Vektor.
+Zeiger auf eine [**D3DXVECTOR2-Quellstruktur,**](d3dxvector2.md) einen Positionsvektor.
 
 </dd> <dt>
 
-*PT2* \[ in\]
+*pT2* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXVECTOR2**](d3dxvector2.md) \***
+Typ: **const [**D3DXVECTOR2**](d3dxvector2.md) \***
 
-Zeiger auf eine [**D3DXVECTOR2**](d3dxvector2.md) -Quell Struktur, ein Tangens Vektor.
+Zeiger auf eine [**D3DXVECTOR2-Quellstruktur,**](d3dxvector2.md) einen Tangensvektor.
 
 </dd> <dt>
 
 *s* \[ in\]
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
 Gewichtungsfaktor. Siehe Hinweise.
 
@@ -103,23 +103,23 @@ Gewichtungsfaktor. Siehe Hinweise.
 
 Typ: **[ **D3DXVECTOR2**](d3dxvector2.md)\***
 
-Ein Zeiger auf eine [**D3DXVECTOR2**](d3dxvector2.md) -Struktur, die das Ergebnis der Hermite-Spline-interpolung ist.
+Zeiger auf eine [**D3DXVECTOR2-Struktur,**](d3dxvector2.md) die das Ergebnis der Hermite-Splineinterpolation ist.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Die **D3DXVec2Hermite** -Funktion interpoliert von (positiona, tangenta) bis (positionb, tangentb) mithilfe der herdie Spline-Interpolation.
+Die **D3DXVec2Hermite-Funktion** interpoliert mithilfe der Hermite-Splineinterpolation von (positionA, tangentA) nach (positionB, tangentB).
 
-Die Spline-interpolung ist eine Generalisierung der Easy-in-Easy-out-Spline. Die-Rampe ist eine Funktion von Q (s) mit den folgenden Eigenschaften.
+Die Splineinterpolation ist eine Verallgemeinerung des Splines mit einfacherEntschärfung. Die Rampe ist eine Funktion von Q(s) mit den folgenden Eigenschaften.
 
-Q (s) = As ³ + b ² + CS + D (und somit q ' (s) = 3AS ² + 2B + C)
+Q(s) = Assstelle + Bssstelle + Cs + D (und daher Q(s) = 3Aszept + 2Bs + C)
 
-a) q (0) = v1, also q ' (0) = T1
+a) Q(0) = v1, also Q'(0) = t1
 
-b) q (1) = v2, also q ' (1) = T2
+b) Q(1) = v2, also Q'(1) = t2
 
-v1 ist der Inhalt von pV1, v2 im Inhalt von pV2, T1 ist der Inhalt von pT1, und T2 ist der Inhalt von PT2.
+v1 ist der Inhalt von pV1, v2 im Inhalt von pV2, t1 ist der Inhalt von pT1 und t2 ist der Inhalt von pT2.
 
-Diese Eigenschaften werden verwendet, um für A, B, C, D zu lösen.
+Diese Eigenschaften werden für A, B, C, D verwendet.
 
 ``` syntax
 D = v1  (from a)
@@ -128,7 +128,7 @@ C = t1  (from a)
 A + B = v2 - v1 - t1 (substituting for C and D)
 ```
 
-Binden Sie die Lösungen für A, B, C und D ein, um Q (s) zu generieren.
+Schließen Sie die Lösungen für A, B, C und D ein, um Q(s) zu generieren.
 
 ``` syntax
 A = 2v1 - 2v2 + t2 + t1 
@@ -139,28 +139,28 @@ D = v1
 
 Dies ergibt:
 
-Q (s) = (2v1-2v2 + T2 + T1) s ³ + (3v2-3v1-2t1-T2) s ² + T1S + v1
+Q(s) = (2v1 - 2v2 + t2 + t1)ssstelle + (3v2 - 3v1 - 2t1 - t2)stif + t1s + v1
 
-Diese können wie folgt neu angeordnet werden:
+Dies kann wie hier angezeigt neu angeordnet werden:
 
-Q (s) = (2S ³-3S ² + 1) v1 + (-2S ³ + 3S ²) v2 + (s ³-2S ² + s) T1 + (s ³-s ²) T2
+Q(s) = (2ssstelle – 3ssstelle + 1)v1 + (-2ssstelle + 3ssstelle)v2 + (ssstelle – 2ssstelle + s)t1 + (ssstelle – ssstelle)t2
 
-Hermite-Splines sind zum Steuern der Animation nützlich, da die Kurve alle Steuerungs Punkte durchläuft. Da die Position und der Tangens an den Enden der einzelnen Segmente explizit angegeben werden, ist es einfach, eine C2-kontinuierliche Kurve zu erstellen, solange Sie sicherstellen, dass die Anfangsposition und der Tangens mit den Endwerten des letzten Segments übereinstimmen.
+Hermite-Splines sind nützlich zum Steuern der Animation, da die Kurve alle Kontrollpunkte durchläuft. Da die Position und der Tangens explizit an den Enden jedes Segments angegeben werden, ist es außerdem einfach, eine kontinuierliche C2-Kurve zu erstellen, solange Sie sicherstellen, dass Ihre Anfangsposition und der Tangens mit den Endwerten des letzten Segments übereinstimmen.
 
-Der Rückgabewert für diese Funktion ist derselbe Wert, der im Pout-Parameter zurückgegeben wird. Auf diese Weise kann die **D3DXVec2Hermite** -Funktion als Parameter für eine andere Funktion verwendet werden.
+Der Rückgabewert für diese Funktion ist der gleiche Wert, der im pOut-Parameter zurückgegeben wird. Auf diese Weise kann die **D3DXVec2Hermite-Funktion** als Parameter für eine andere Funktion verwendet werden.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9math. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3dx9math.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

@@ -1,7 +1,7 @@
 ---
-description: Ruft die Anzahl der Rückruf Schlüssel im Animations Satz ab.
+description: 'ID3DXCompressedAnimationSet::GetNumCallbackKeys-Methode: Ruft die Anzahl der Rückrufschlüssel im Animationssatz ab.'
 ms.assetid: 0c952a86-d252-4f65-95e1-2d1e1f6b7143
-title: 'ID3DXCompressedAnimationSet:: getnumcallbackkeys-Methode (D3dx9anim. h)'
+title: ID3DXCompressedAnimationSet::GetNumCallbackKeys-Methode (D3dx9anim.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: b1119d39dbfa159464ace16a256dd80dd7751672
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: da9add6b52ae79632f6fa4bb67e9a2d524d1dace
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103961626"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108115308"
 ---
-# <a name="id3dxcompressedanimationsetgetnumcallbackkeys-method"></a>ID3DXCompressedAnimationSet:: getnumcallbackkeys-Methode
+# <a name="id3dxcompressedanimationsetgetnumcallbackkeys-method"></a>ID3DXCompressedAnimationSet::GetNumCallbackKeys-Methode
 
-Ruft die Anzahl der Rückruf Schlüssel im Animations Satz ab.
+Ruft die Anzahl der Rückrufschlüssel im Animationssatz ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,22 +40,22 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Anzahl der Rückruf Schlüssel im Animations Satz.
+Anzahl der Rückrufschlüssel im Animationssatz.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9anim. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3dx9anim.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

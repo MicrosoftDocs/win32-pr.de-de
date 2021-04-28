@@ -1,7 +1,7 @@
 ---
-description: Erstellt eine Ebene von einem Punkt und einem normalen.
+description: 'D3DXPlaneFromPointNormal-Funktion (D3dx9math.h): Erstellt eine Ebene von einem Punkt und einer Normalen.'
 ms.assetid: af396bbb-09b7-492f-a25f-9c950da7e605
-title: D3DXPlaneFromPointNormal-Funktion (D3dx9math. h)
+title: D3DXPlaneFromPointNormal-Funktion (D3dx9math.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 8eeb8ea3a1725e0bf615be888d8e862c97730a2c
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: e34765d150932d6a7b3b0293e603237ffb2b45ad
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106364343"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108098088"
 ---
-# <a name="d3dxplanefrompointnormal-function-d3dx9mathh"></a>D3DXPlaneFromPointNormal-Funktion (D3dx9math. h)
+# <a name="d3dxplanefrompointnormal-function-d3dx9mathh"></a>D3DXPlaneFromPointNormal-Funktion (D3dx9math.h)
 
-Erstellt eine Ebene von einem Punkt und einem normalen.
+Erstellt eine Ebene aus einem Punkt und einer Normalen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,30 +42,30 @@ D3DXPLANE* D3DXPlaneFromPointNormal(
 
 <dl> <dt>
 
-*Pout* \[ in, out\]
+*pOut* \[ in, out\]
 </dt> <dd>
 
 Typ: **[ **D3DXPLANE**](d3dxplane.md)\***
 
-Ein Zeiger auf die [**D3DXPLANE**](d3dxplane.md) -Struktur, die das Ergebnis des Vorgangs ist.
+Zeiger auf die [**D3DXPLANE-Struktur,**](d3dxplane.md) die das Ergebnis des Vorgangs ist.
 
 </dd> <dt>
 
-*PPoint* \[ in\]
+*pPoint* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXVECTOR3**](d3dxvector3.md) \***
+Typ: **const [**D3DXVECTOR3**](d3dxvector3.md) \***
 
-Zeiger auf eine [**D3DXVECTOR3**](d3dxvector3.md) -Struktur, die den zum Erstellen der Ebene verwendeten Punkt definiert.
+Zeiger auf eine [**D3DXVECTOR3-Struktur,**](d3dxvector3.md) die den Punkt definiert, der zum Erstellen der Ebene verwendet wird.
 
 </dd> <dt>
 
-*pnormal* \[ in\]
+*pNormal* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXVECTOR3**](d3dxvector3.md) \***
+Typ: **const [**D3DXVECTOR3**](d3dxvector3.md) \***
 
-Zeiger auf eine [**D3DXVECTOR3**](d3dxvector3.md) -Struktur, die das normale definiert, das zum Erstellen der Ebene verwendet wird.
+Zeiger auf eine [**D3DXVECTOR3-Struktur,**](d3dxvector3.md) die die zum Erstellen der Ebene verwendete Normalstruktur definiert.
 
 </dd> </dl>
 
@@ -73,24 +73,24 @@ Zeiger auf eine [**D3DXVECTOR3**](d3dxvector3.md) -Struktur, die das normale def
 
 Typ: **[ **D3DXPLANE**](d3dxplane.md)\***
 
-Ein Zeiger auf die [**D3DXPLANE**](d3dxplane.md) -Struktur, die aus dem Punkt und der normalen erstellt wurde.
+Zeiger auf die [**D3DXPLANE-Struktur,**](d3dxplane.md) die vom Punkt und der Normalität erstellt wurde.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Der Rückgabewert für diese Funktion ist derselbe Wert, der im *Pout* -Parameter zurückgegeben wird. Auf diese Weise kann die **D3DXPlaneFromPointNormal** -Funktion als Parameter für eine andere Funktion verwendet werden.
+Der Rückgabewert für diese Funktion ist der gleiche Wert, der im *pOut-Parameter* zurückgegeben wird. Auf diese Weise kann die **D3DXPlaneFromPointNormal-Funktion** als Parameter für eine andere Funktion verwendet werden.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9math. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3dx9math.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

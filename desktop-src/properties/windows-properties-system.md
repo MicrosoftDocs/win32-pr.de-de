@@ -1,42 +1,42 @@
 ---
-description: .
+description: Windows-Eigenschaftensystem
 ms.assetid: c2094bbe-a4ca-4f30-b16e-14dced2912bc
-title: Windows-Eigenschaften System
+title: Windows-Eigenschaftensystem
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f4e96f931d37ef698339f9219a0dc8db43a6003e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c49e44c988d3a91572be1b42d5fbaf75e664d7f0
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106343268"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108089878"
 ---
-# <a name="windows-property-system"></a>Windows-Eigenschaften System
+# <a name="windows-property-system"></a>Windows-Eigenschaftensystem
 
 ## <a name="purpose"></a>Zweck
 
-Das Windows-Eigenschaften System ist ein erweiterbares Lese-/Schreibsystem mit Daten Definitionen, das eine einheitliche Methode zum Ausdrücken von Metadaten über shellelemente bietet. Mit dem Windows-Eigenschaften System in Windows Vista und höher können Sie Metadaten für shellelemente speichern und abrufen. Ein shellelement ist ein beliebiges einzelnes Element, z. b. eine Datei, ein Ordner, eine e-Mail oder ein Kontakt. Eine Eigenschaft ist ein einzelner Metadatenelement, das einem shellelement zugeordnet ist.
+Der Windows-Eigenschaftensystem ist ein erweiterbares Lese-/Schreibsystem von Datendefinitionen, das eine einheitliche Möglichkeit bietet, Metadaten zu Shellelementen auszudrücken. Mit dem Windows-Eigenschaftensystem in Windows Vista und höher können Sie Metadaten für Shell-Elemente speichern und abrufen. Ein Shellelement ist ein beliebiger Einzelner Inhalt, z. B. eine Datei, ein Ordner, eine E-Mail oder ein Kontakt. Eine Eigenschaft ist ein einzelnes Metadatenelement, das einem Shellelement zugeordnet ist.
 
 ## <a name="developer-audience"></a>Entwicklergruppe
 
-Bevor Sie mit dem Lesen der Windows-System-SDK-Dokumentation beginnen, sollten Sie über grundlegende Kenntnisse der folgenden Kenntnisse verfügen:
+Bevor Sie mit dem Lesen der Windows-Eigenschaftensystem SDK-Dokumentation beginnen, sollten Sie über grundlegende Kenntnisse der folgenden Punkte verfügen:
 
 -   Component Object Model (COM)
--   Shell-Namespace Programmierung
+-   Programmierung von Shellnamespaces
 
-Eine Einführung in com finden Sie unter [com-Grundlagen](../com/com-fundamentals.md). Eine Einführung in die Programmierung von Shell-Namespaces finden Sie unter [Getting Started with the Shell Namespace](../shell/namespace-intro.md).
+Eine Einführung in COM finden Sie unter [COM-Grundlagen.](../com/com-fundamentals.md) Eine Einführung in die Programmierung von Shellnamespaces finden Sie unter [Erste Schritte mit dem Shellnamespace](../shell/namespace-intro.md).
 
-Informationen zur Verwendung des Windows-Eigenschaften Systems finden Sie unter [Übersicht über das Eigenschaften System: Entwicklungsszenarien](property-system-overview.md).
+Informationen zur Verwendung der Windows-Eigenschaftensystem finden Sie unter [Übersicht über das Eigenschaftensystem: Entwicklungsszenarien.](property-system-overview.md)
 
 ## <a name="run-time-requirements"></a>Laufzeitanforderungen
 
-Die unterstützte Laufzeitumgebung für die Verwendung des Windows-Eigenschaften Systems ist Windows Vista oder höher und das Windows Software Development Kit (SDK). Windows XP und Microsoft Windows Desktop Search (WDS) 3,0 oder höher enthalten ebenfalls eine Teilmenge des Windows-Eigenschaften Systems. Informationen zum Herunterladen von Windows 7 oder zum aktualisierten Windows Vista SDK finden Sie in der [Windows SDK](https://msdn.microsoft.com/windowsvista/bb980924.aspx).
+Die unterstützte Laufzeitumgebung für die Verwendung des Windows-Eigenschaftensystem ist Windows Vista oder höher und die Windows Software Development Kit (SDK). Windows XP und Microsoft Windows Desktop Search (WDS) 3.0 oder höher enthalten auch eine Teilmenge der Windows-Eigenschaftensystem. Informationen zum Herunterladen des Windows 7- oder aktualisierten Windows Vista SDK finden Sie im [Windows SDK](https://msdn.microsoft.com/windowsvista/bb980924.aspx).
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
 -   [Übersicht über das Eigenschaftensystem](property-system-overview.md)
--   [Entwicklerhandbuch für Windows-Eigenschaften System](property-system-developer-s-guide.md)
--   [Eigenschaften System Referenz](property-system-reference.md)
+-   [entwicklerhandbuch für Windows-Eigenschaftensystem](property-system-developer-s-guide.md)
+-   [Referenz zum Eigenschaftensystem](property-system-reference.md)
 -   [Eigenschaftensystem-Codebeispiele](property-system-code-samples.md)
 
  

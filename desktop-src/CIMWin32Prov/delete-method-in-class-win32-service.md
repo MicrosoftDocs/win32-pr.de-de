@@ -1,8 +1,8 @@
 ---
-description: Der Lösch&\# 8194; WMI-Klassenmethode löscht einen vorhandenen Dienst.
+description: Delete-Methode der Win32_Service -Klasse (CIMWin32 WMI-Anbieter) – Der Delete&\# 8194; Die WMI-Klassenmethode löscht einen vorhandenen Dienst.
 ms.assetid: aa4e7630-3b19-47dd-acd1-4d1735acb819
 ms.tgt_platform: multiple
-title: Delete-Methode der Win32_Service-Klasse (cimwin32-WMI-Anbieter)
+title: Delete-Methode der Win32_Service -Klasse (CIMWin32-WMI-Anbieter)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,18 +14,18 @@ api_type:
 - COM
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: d06301c3620e144d72c2d4c4f3d8bc90e642374a
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 4031184e23e99fc54237ed0b0b4196fe6c075c5b
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214178"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108089578"
 ---
-# <a name="delete-method-of-the-win32_service-class-cimwin32-wmi-providers"></a>Delete-Methode der Win32_Service-Klasse (cimwin32-WMI-Anbieter)
+# <a name="delete-method-of-the-win32_service-class-cimwin32-wmi-providers"></a>Delete-Methode der Win32_Service -Klasse (CIMWin32-WMI-Anbieter)
 
-Mit der **Delete** [WMI-Klassen](/windows/desktop/WmiSdk/retrieving-a-class) Methode wird ein vorhandener Dienst gelöscht.
+Die **Delete** [WMI-Klassenmethode](/windows/desktop/WmiSdk/retrieving-a-class) löscht einen vorhandenen Dienst.
 
-In diesem Thema wird die MOF-Syntax (Managed Object Format) verwendet. Weitere Informationen zum Verwenden dieser Methode finden Sie unter [Aufrufen einer Methode](/windows/desktop/WmiSdk/calling-a-method).
+In diesem Thema wird Managed Object Format -Syntax (MOF) verwendet. Weitere Informationen zur Verwendung dieser Methode finden Sie unter [Aufrufen einer Methode.](/windows/desktop/WmiSdk/calling-a-method)
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,7 +42,7 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen der in der folgenden Liste aufgeführten Werte oder einen anderen Wert zurück, um einen Fehler anzugeben. Weitere Fehlercodes finden Sie unter [**WMI-Fehler Konstanten**](/windows/desktop/WmiSdk/wmi-error-constants) oder [**WbemErrorEnum**](/windows/desktop/api/wbemdisp/ne-wbemdisp-wbemerrorenum). Allgemeine **HRESULT** -Werte finden Sie unter [System Fehler Codes](/windows/desktop/Debug/system-error-codes).
+Gibt einen der in der folgenden Liste aufgeführten Werte oder einen anderen Wert zurück, um auf einen Fehler hindeuten zu können. Weitere Fehlercodes finden Sie unter [**WMI-Fehlerkonstistenzen**](/windows/desktop/WmiSdk/wmi-error-constants) oder [**WbemErrorEnum**](/windows/desktop/api/wbemdisp/ne-wbemdisp-wbemerrorenum). Allgemeine **HRESULT-Werte** finden Sie unter [Systemfehlercodes](/windows/desktop/Debug/system-error-codes).
 
 <dl> <dt>
 
@@ -63,7 +63,7 @@ Die Anforderung wird nicht unterstützt.
 **2**
 </dt> <dd>
 
-Der Benutzer verfügte nicht über die erforderlichen Zugriffsrechte.
+Der Benutzer hatte nicht den erforderlichen Zugriff.
 
 </dd> <dt>
 
@@ -84,7 +84,7 @@ Der angeforderte Steuerungscode ist nicht gültig, oder es ist für den Dienst n
 **5**
 </dt> <dd>
 
-Der angeforderte Steuerungs Code kann nicht an den Dienst gesendet werden, weil der Status des Diensts ([**Win32- \_ baseservice**](win32-baseservice.md).**State** -Eigenschaft) ist gleich 0, 1 oder 2.
+Der angeforderte Steuerungscode kann nicht an den Dienst gesendet werden, da der Zustand des Diensts ([**Win32 \_ BaseService ) ist.**](win32-baseservice.md)**State-Eigenschaft)** ist gleich 0, 1 oder 2.
 
 </dd> <dt>
 
@@ -105,14 +105,14 @@ Der Dienst hat auf die Startanforderung nicht rechtzeitig reagiert.
 **8**
 </dt> <dd>
 
-Unbekannter Fehler beim Starten des Dienstanbieter.
+Unbekannter Fehler beim Starten des Diensts.
 
 </dd> <dt>
 
 **9**
 </dt> <dd>
 
-Der Verzeichnispfad zur ausführbaren Dienst Datei wurde nicht gefunden.
+Der Verzeichnispfad zur ausführbaren Dienstdatei wurde nicht gefunden.
 
 </dd> <dt>
 
@@ -133,7 +133,7 @@ Die Datenbank zum Hinzufügen eines neuen Diensts ist gesperrt.
 **12**
 </dt> <dd>
 
-Eine Abhängigkeit, von der dieser Dienst abhängt, wurde aus dem System entfernt.
+Eine Abhängigkeit, von der dieser Dienst abhängig ist, wurde aus dem System entfernt.
 
 </dd> <dt>
 
@@ -168,42 +168,42 @@ Dieser Dienst wird aus dem System entfernt.
 **17**
 </dt> <dd>
 
-Der Dienst hat keinen Ausführungs Thread.
+Der Dienst verfügt über keinen Ausführungsthread.
 
 </dd> <dt>
 
-**Jahren**
+**18**
 </dt> <dd>
 
-Der Dienst weist zirkuläre Abhängigkeiten auf, wenn er gestartet wird.
+Der Dienst verfügt beim Start über zirkuläre Abhängigkeiten.
 
 </dd> <dt>
 
 **19**
 </dt> <dd>
 
-Ein Dienst wird unter dem gleichen Namen ausgeführt.
+Ein Dienst wird unter demselben Namen ausgeführt.
 
 </dd> <dt>
 
 **20**
 </dt> <dd>
 
-Der Dienst Name enthält ungültige Zeichen.
+Der Dienstname enthält ungültige Zeichen.
 
 </dd> <dt>
 
 **21**
 </dt> <dd>
 
-An den Dienst wurden ungültige Parameter übermittelt.
+Ungültige Parameter wurden an den Dienst übergeben.
 
 </dd> <dt>
 
 **22**
 </dt> <dd>
 
-Das Konto, unter dem dieser Dienst ausgeführt wird, ist entweder ungültig oder verfügt nicht über die Berechtigungen zum Ausführen des Dienstanbieter.
+Das Konto, unter dem dieser Dienst ausgeführt wird, ist entweder ungültig oder verfügt nicht über die Berechtigungen zum Ausführen des Diensts.
 
 </dd> <dt>
 
@@ -223,27 +223,27 @@ Der Dienst ist im System derzeitig angehalten.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Wenn sich Ihre Organisation ändert, können Sie bestimmte Dienste von bestimmten Computern entfernen. Interne Dienste und Dienste von Drittanbietern können mithilfe von WMI entfernt werden, während die Betriebssystem Dienste mithilfe von Sysocmgr.exe entfernt werden können.
+Wenn sich Ihre Organisation ändert, können Sie bestimmte Dienste von bestimmten Computern entfernen. In- und Drittanbieterdienste können mithilfe von WMI entfernt werden, während Betriebssystemdienste mithilfe von Sysocmgr.exe entfernt werden können.
 
-Beachten Sie beim Vorbereiten des Entfernens der Dienste die folgenden Informationen:
+Beachten Sie beim Vorbereiten des Entfernens von Diensten die folgenden Informationen:
 
--   Dienste müssen beendet werden, bevor Sie Sie entfernen. Wenn der Dienst ausgeführt wird, während Sie den DELETE-Befehl ausgeben, wird der Dienst zum Löschen markiert, er wird jedoch weiterhin ausgeführt, bis er beendet wird und alle geöffneten Handles geschlossen sind.
+-   Dienste müssen beendet werden, bevor Sie sie entfernen. Wenn der Dienst ausgeführt wird, wenn Sie den Löschbefehl ausstellen, wird der Dienst zum Löschen markiert, aber er wird weiterhin ausgeführt, bis er beendet wird und alle geöffneten Handles geschlossen werden.
 
-    Wenn der Dienst nie beendet wird, wird der Dienst nie gelöscht.
+    Wenn der Dienst nie beendet wird, wird dieser Dienst nie gelöscht.
 
--   Wenn Sie einen Dienst entfernen, wird die ausführbare Datei des dienstanders nicht entfernt.
+-   Durch das Entfernen eines Diensts wird die ausführbare Datei des Diensts nicht entfernt.
 
-    Wenn Sie einen Dienst mithilfe von WMI entfernen, werden die zugehörigen Registrierungseinträge unter HKEY \_ local \_ Machine \\ System \\ CurrentControlSet \\ Services gelöscht. Daher wird der Dienst nicht mehr installiert und ist nicht über das Dienste-Snap-in verfügbar. Die ausführbare Datei wird von WMI jedoch nicht gelöscht, was bedeutet, dass Sie den Dienst problemlos neu installieren können. Zum Löschen der ausführbaren Datei müssen Sie den Pfadnamen abrufen und die Datei dann löschen.
+    Wenn Sie einen Dienst mithilfe von WMI entfernen, werden die zugehörigen Registrierungseinträge unter HKEY \_ LOCAL \_ MACHINE SYSTEM \\ \\ CurrentControlSet \\ Services gelöscht. Daher ist der Dienst nicht mehr installiert und über das Dienst-Snap-In nicht verfügbar. WMI löscht die ausführbare Datei jedoch nicht, was bedeutet, dass Sie den Dienst problemlos neu installieren können. Um die ausführbare Datei zu löschen, müssen Sie den Pfadnamen abrufen und dann die Datei löschen.
 
--   Wenn Sie einen Windows 2000-Basis Dienst (z. b. DHCP) mithilfe von WMI entfernen, werden die Registrierungseinträge für diesen Dienst gelöscht. die Verknüpfung wird jedoch nicht aus dem Menü "Verwaltung" entfernt, oder der Dienst wird aus dem Assistenten für Windows-Komponenten entfernt. Dies kann alle Benutzer verwirren, die versuchen, die Konfiguration des Computers zu bestimmen.
+-   Wenn Sie einen Windows 2000-Basisdienst (z. B. DHCP) mithilfe von WMI entfernen, werden die Registrierungseinträge für diesen Dienst gelöscht, aber die Verknüpfung wird nicht aus dem Menü Verwaltung entfernt, und der Dienst wird nicht aus dem Windows-Komponenten-Assistenten entfernt. Dies kann jeden verwirren, der versucht, zu bestimmen, wie der Computer konfiguriert wurde.
 
-    Wenn Sie den DHCP-Dienst beispielsweise mithilfe eines WMI-Skripts entfernen, wird der DHCP-Dienst nicht mehr im Dienste-Snap-in aufgeführt. Eine nicht funktionsfähige Verknüpfung mit der DHCP-Konsole verbleibt jedoch im Menü "Verwaltung", und wenn Sie den Assistenten für Windows-Komponenten starten, bedeutet dies, dass der DHCP-Dienst installiert ist.
+    Wenn Sie beispielsweise den DHCP-Dienst mithilfe eines WMI-Skripts entfernen, wird der DHCP-Dienst nicht mehr im Dienst-Snap-In aufgeführt. Eine nicht funktionierende Verknüpfung mit der DHCP-Konsole verbleibt jedoch im Menü Verwaltung. Wenn Sie den Windows-Komponenten-Assistenten starten, wird angezeigt, dass der DHCP-Dienst installiert ist.
 
-    Aus diesem Grund sollten Sie immer Sysocmgr.exe verwenden, um Windows 2000-Dienste Programm gesteuert zu entfernen.
+    Aus diesem Grund sollten Sie immer Sysocmgr.exe verwenden, um Windows 2000-Dienste programmgesteuert zu entfernen.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden VBScript-Codebeispiel wird beschrieben, wie ein Dienst gelöscht wird.
+Im folgenden VBScript-Codebeispiel wird das Löschen eines Diensts beschrieben.
 
 
 ```VB
@@ -260,7 +260,7 @@ Next
 
 
 
-Im folgenden perl-Codebeispiel wird beschrieben, wie ein Dienst gelöscht wird.
+Im folgenden Perl-Codebeispiel wird das Löschen eines Diensts beschrieben.
 
 
 ```
@@ -297,27 +297,27 @@ else
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [Betriebssystemklassen](/previous-versions//aa392727(v=vs.85))
 </dt> <dt>
 
-[**Win32- \_ Dienst**](win32-service.md)
+[**Win32-Dienst \_**](win32-service.md)
 </dt> <dt>
 
-[WMI-Tasks: Dienste](/windows/desktop/WmiSdk/wmi-tasks--services)
+[WMI-Aufgaben: Dienste](/windows/desktop/WmiSdk/wmi-tasks--services)
 </dt> </dl>
 
  

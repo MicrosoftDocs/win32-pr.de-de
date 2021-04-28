@@ -1,7 +1,7 @@
 ---
-description: Legt die Attribut Tabelle für ein Mesh und die Anzahl der in der Tabelle gespeicherten Einträge fest.
+description: 'ID3DX10Mesh::SetAttributeTable-Methode: Legt die Attributtabelle für ein Mesh und die Anzahl der in der Tabelle gespeicherten Einträge fest.'
 ms.assetid: 629fd31b-d88a-4650-82ed-ab7c40690986
-title: ID3DX10Mesh::-Methode (d3dx10. h)
+title: ID3DX10Mesh::SetAttributeTable-Methode (D3DX10.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: 808349b3f7456ebf3f8e1c3a7f9fdf2236db4beb
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 4e06b181bb512e16e9caaa0d233ebbd3472bfcf8
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104219609"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108084008"
 ---
-# <a name="id3dx10meshsetattributetable-method"></a>ID3DX10Mesh::-Methode
+# <a name="id3dx10meshsetattributetable-method"></a>ID3DX10Mesh::SetAttributeTable-Methode
 
-Legt die Attribut Tabelle für ein Mesh und die Anzahl der in der Tabelle gespeicherten Einträge fest.
+Legt die Attributtabelle für ein Gitternetz und die Anzahl der in der Tabelle gespeicherten Einträge fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,21 +41,21 @@ HRESULT SetAttributeTable(
 
 <dl> <dt>
 
-*pattribtable* \[ in\]
+*pAttribTable* \[ In\]
 </dt> <dd>
 
-Type: **Konstanten [**d3dx10 \_ Attribut \_ Bereich**](d3dx10-attribute-range.md) \***
+Typ: **const [**D3DX10 \_ ATTRIBUTE \_ RANGE**](d3dx10-attribute-range.md) \***
 
-Ein Zeiger auf ein Array von d3dx10- \_ Attribut \_ Bereichs Strukturen, die die Einträge in der Tabelle des Mesh-Attributs darstellen.
+Zeiger auf ein Array von D3DX10 \_ ATTRIBUTE \_ RANGE-Strukturen, die die Einträge in der Gitternetzattributtabelle darstellen.
 
 </dd> <dt>
 
-"" "" "".  \[ in\]
+*cAttribTableSize* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Anzahl von Attributen in der Tabelle "Mesh-Attribut".
+Anzahl der Attribute in der Gitternetzattributtabelle.
 
 </dd> </dl>
 
@@ -63,24 +63,24 @@ Anzahl von Attributen in der Tabelle "Mesh-Attribut".
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Der Rückgabewert ist einer der Werte, die in [Direct3D 10-Rückgabe Codes](d3d10-graphics-reference-returnvalues.md)aufgelistet sind.
+Der Rückgabewert ist einer der Unter [Direct3D 10-Rückgabecodes aufgeführten Werte.](d3d10-graphics-reference-returnvalues.md)
 
 ## <a name="remarks"></a>Bemerkungen
 
-Wenn eine Anwendung die Informationen in einer Attribut Tabelle nachverfolgt und die Tabelle als Ergebnis von Änderungen an Attributen oder Gesichtern neu anordnet, ermöglicht diese Methode der Anwendung, die Attribut Tabellen zu aktualisieren, anstatt ID3DX10Mesh:: optimiert erneut aufzurufende.
+Wenn eine Anwendung die Informationen in einer Attributtabelle nachverfolgt und die Tabelle infolge von Änderungen an Attributen oder Gesichtern neu ansortiert, ermöglicht diese Methode der Anwendung, die Attributtabellen zu aktualisieren, anstatt ID3DX10Mesh::Optimize erneut auf aufruft.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx10. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>D3dx10. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>D3DX10.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

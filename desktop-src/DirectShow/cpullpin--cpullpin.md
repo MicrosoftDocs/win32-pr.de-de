@@ -1,7 +1,7 @@
 ---
-description: Dekonstruktormethode.
+description: CPullPin.~CPullPin-Destruktor – Destruktormethode.
 ms.assetid: 06167630-3b75-4433-8b2f-2127ffb4d389
-title: Cpullpin. ~ cpullpin-Debuggen (pullpin. h)
+title: CPullPin.~CPullPin-Destruktor (Pullpin.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: ecf825348672728d3083a2ce9ae4e44c1ea17bca
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: e8f0b72716dcbfb438a84eb1ce852f8fc07f2898
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106356495"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108085488"
 ---
-# <a name="cpullpincpullpin-destructor"></a>Cpullpin. ~ cpullpin-Dekonstruktor
+# <a name="cpullpincpullpin-destructor"></a>CPullPin.~CPullPin-Destruktor
 
-Dekonstruktormethode.
+Destruktormethode.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,18 +40,18 @@ Dekonstruktormethode.
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Pullpin. h</dt> </dl>                                                                                                       |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Pullpin.h</dt> </dl>                                                                                                       |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cpullpin-Klasse**](cpullpin.md)
+[**CPullPin-Klasse**](cpullpin.md)
 </dt> </dl>
 
  

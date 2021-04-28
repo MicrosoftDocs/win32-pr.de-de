@@ -1,5 +1,5 @@
 ---
-description: Proxy Funktion für die SetPalette-Methode.
+description: 'IWICBitmapEncoder_SetPalette_Proxy-Funktion: Proxyfunktion für die SetPalette-Methode.'
 ms.assetid: d8e2c36e-6886-4959-b2a2-469bebfe1cdc
 title: IWICBitmapEncoder_SetPalette_Proxy-Funktion
 ms.topic: reference
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - Windowscodecs.dll
 - Wincodec.lib
-ms.openlocfilehash: 128953cd56c3bea17ec9761a2acf2b8bc89cacfa
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8503698a1e91b86698ba288e56cc65e4447c906e
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104525928"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108091178"
 ---
-# <a name="iwicbitmapencoder_setpalette_proxy-function"></a>Iwicbitmapcoder \_ SetPalette- \_ Proxy Funktion
+# <a name="iwicbitmapencoder_setpalette_proxy-function"></a>IWICBitmapEncoder \_ \_ SetPalette-Proxyfunktion
 
-Proxy Funktion für die [**SetPalette**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapencoder-setpalette) -Methode.
+Proxyfunktion für die [**SetPalette-Methode.**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapencoder-setpalette)
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,21 +41,21 @@ HRESULT IWICBitmapEncoder_SetPalette_Proxy(
 
 <dl> <dt>
 
-*Dies \_ PTR* \[ in\]
+*THIS \_ PTR* \[ in\]
 </dt> <dd>
 
-Typ: **[**iwicbitmapcoder**](/windows/desktop/api/wincodec/nn-wincodec-iwicbitmapencoder) \** _
+Typ: **[ **IWICBitmapEncoder**](/windows/desktop/api/wincodec/nn-wincodec-iwicbitmapencoder)\***
 
-Zeiger auf dieses [_ *iwicbitmapcoder* *](/windows/desktop/api/wincodec/nn-wincodec-iwicbitmapencoder) -Objekt.
+Zeiger auf dieses [**IWICBitmapEncoder-Objekt.**](/windows/desktop/api/wincodec/nn-wincodec-iwicbitmapencoder)
 
 </dd> <dt>
 
-*pipalette* \[ in\]
+*pIPalette* \[ In\]
 </dt> <dd>
 
-Typ: **[**iwicpalette**](/windows/desktop/api/Wincodec/nn-wincodec-iwicpalette) \** _
+Typ: **[ **IWICPalette**](/windows/desktop/api/Wincodec/nn-wincodec-iwicpalette)\***
 
-Die [_ *iwicpalette* *](/windows/desktop/api/Wincodec/nn-wincodec-iwicpalette) , die als globale Palette verwendet werden soll.
+Die [**IWICPalette,**](/windows/desktop/api/Wincodec/nn-wincodec-iwicpalette) die als globale Palette verwendet werden soll.
 
 </dd> </dl>
 
@@ -63,7 +63,7 @@ Die [_ *iwicpalette* *](/windows/desktop/api/Wincodec/nn-wincodec-iwicpalette) ,
 
 Typ: **HRESULT**
 
-Wenn diese Funktion erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Funktion erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="remarks"></a>Bemerkungen
 
@@ -71,11 +71,11 @@ Wenn diese Funktion erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. 
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows XP mit SP2, nur Windows Vista \[ -Desktop-Apps\]<br/>                                                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                                                                             |
-| DLL<br/>                      | <dl> <dt>Windowscodecs.dll; </dt> <dt>Wincodec. lib</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows XP mit SP2, nur Windows \[ Vista-Desktop-Apps\]<br/>                                                                                              |
+| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2008-Desktop-Apps\]<br/>                                                                                                             |
+| DLL<br/>                      | <dl> <dt>Windowscodecs.dll; </dt> <dt>Wincodec.lib</dt> </dl> |
 
 
 

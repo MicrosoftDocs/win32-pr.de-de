@@ -1,7 +1,7 @@
 ---
-description: Assemblieren Sie einen Shader.
+description: 'D3DXAssembleShader-Funktion: Stellt einen Shader zusammen.'
 ms.assetid: 24c3dcae-9397-4856-b072-0ae340157bf9
-title: D3DXAssembleShader-Funktion (D3DX9Shader. h)
+title: D3DXAssembleShader-Funktion (D3DX9Shader.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: f7268d394021c7dc1be665f8ed8781a827d1fcdb
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 891281ebc3db970ca61132fe49ba98531ca1d879
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106370437"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108116048"
 ---
 # <a name="d3dxassembleshader-function"></a>D3DXAssembleShader-Funktion
 
-Assemblieren Sie einen Shader.
+Stellen Sie einen Shader zusammen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,39 +46,39 @@ HRESULT D3DXAssembleShader(
 
 <dl> <dt>
 
-*pSrcData* \[ in\]
+*pSrcData* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPCSTR**](../winprog/windows-data-types.md)**
 
-Zeiger auf einen Arbeitsspeicher Puffer, der die Shader-Daten enthält.
+Zeiger auf einen Speicherpuffer, der die Shaderdaten enthält.
 
 </dd> <dt>
 
-*Srcdatalen* \[ in\]
+*SrcDataLen* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Länge der Effekt Daten in Bytes.
+Länge der Effektdaten in Bytes.
 
 </dd> <dt>
 
-*pdefinitionen* \[ in\]
+*pDefdefine* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXMACRO**](d3dxmacro.md) \***
+Typ: **const [**D3DXMACRO**](d3dxmacro.md) \***
 
-Ein optionales **null** terminiertes Array von [**D3DXMACRO**](d3dxmacro.md) -Strukturen. Dieser Wert kann **null** sein.
+Ein optionales **null-terminiertes** Array [**von D3DXMACRO-Strukturen.**](d3dxmacro.md) Dieser Wert kann NULL **sein.**
 
 </dd> <dt>
 
-*pinclude* \[ in\]
+*pInclude* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXINCLUDE**](id3dxinclude.md)**
 
-Optionaler Schnittstellen Zeiger, [**ID3DXInclude**](id3dxinclude.md), der zum Verarbeiten von include-Direktiven verwendet werden soll \# . Wenn dieser Wert **null** ist, \# wird includes bei der Kompilierung aus einer Datei berücksichtigt, oder es wird ein Fehler ausgelöst, wenn eine Kompilierung aus einer Ressource oder einem Arbeitsspeicher erfolgt.
+Optionaler Schnittstellenzeiger [**ID3DXInclude**](id3dxinclude.md), der für die Behandlung von Include-Direktiven \# verwendet werden soll. Wenn dieser Wert **NULL ist,** wird includes entweder beim Kompilieren aus einer Datei oder beim Kompilieren aus einer Ressource oder einem Arbeitsspeicher \# zu einem Fehler führen.
 
 </dd> <dt>
 
@@ -87,25 +87,25 @@ Optionaler Schnittstellen Zeiger, [**ID3DXInclude**](id3dxinclude.md), der zum V
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
-Kompilierungsoptionen, die durch verschiedene Flags identifiziert werden. Der Direct3D 10 HLSL-Compiler ist nun der Standard. Weitere Informationen finden Sie unter [D3DXSHADER-Flags](d3dxshader-flags.md) .
+Kompilierungsoptionen, die durch verschiedene Flags identifiziert werden. Der Direct3D 10 HLSL-Compiler ist jetzt die Standardeinstellung. Weitere Informationen finden Sie unter [D3DXSHADER-Flags.](d3dxshader-flags.md)
 
 </dd> <dt>
 
-*ppshader* \[ vorgenommen\]
+*ppShader* \[ out\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXBUFFER**](id3dxbuffer.md)\***
 
-Gibt einen Puffer zurück, der den erstellten Shader enthält. Dieser Puffer enthält den kompilierten Shader-Code sowie alle eingebetteten Debug-und Symboltabellen Informationen.
+Gibt einen Puffer zurück, der den erstellten Shader enthält. Dieser Puffer enthält den kompilierten Shadercode sowie alle eingebetteten Debug- und Symboltabelleninformationen.
 
 </dd> <dt>
 
-*pperrormsgs* \[ vorgenommen\]
+*ppErrorMsgs* \[ out\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXBUFFER**](id3dxbuffer.md)\***
 
-Gibt einen Puffer zurück, der eine Auflistung von Fehlern und Warnungen enthält, die während der Kompilierung gefunden wurden. Dies sind die gleichen Meldungen, die der Debugger anzeigt, wenn er im Debugmodus ausgeführt wird. Dieser Wert kann **null** sein.
+Gibt einen Puffer zurück, der eine Liste von Fehlern und Warnungen enthält, die während der Kompilierung aufgetreten sind. Dies sind die gleichen Meldungen, die der Debugger anzeigt, wenn er im Debugmodus ausgeführt wird. Dieser Wert kann **NULL** sein.
 
 </dd> </dl>
 
@@ -113,20 +113,20 @@ Gibt einen Puffer zurück, der eine Auflistung von Fehlern und Warnungen enthäl
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden sein: D3DERR \_ invalidcall, D3DXERR \_ InvalidData, E \_ oudefmemory.
+Wenn die Funktion erfolgreich ausgeführt wird, lautet der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: D3DERR \_ INVALIDCALL, D3DXERR \_ INVALIDDATA, E \_ OUTOFMEMORY.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Shader. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>     |
+| Header<br/>  | <dl> <dt>D3DX9Shader.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

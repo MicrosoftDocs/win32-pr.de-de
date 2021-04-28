@@ -1,7 +1,7 @@
 ---
-description: Konstruktormethode.
+description: 'CPersistStream.CPersistStream-Konstruktor : Konstruktormethode.'
 ms.assetid: 48143a61-5ba7-4bf9-bffa-244f2769144d
-title: Cpersiststream. cpersiststream-Konstruktor (pStream. h)
+title: CPersistStream.CPersistStream-Konstruktor (Pstream.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,14 +16,14 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 7cdb736a191f64099b8c0310a5b3ac3dad3cbe0d
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 9e3be9233d76929ebfcb79121c60ef6c1af35b56
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106354215"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108085608"
 ---
-# <a name="cpersiststreamcpersiststream-constructor"></a>Cpersiststream. cpersiststream-Konstruktor
+# <a name="cpersiststreamcpersiststream-constructor"></a>CPersistStream.CPersistStream-Konstruktor
 
 Konstruktormethode.
 
@@ -43,17 +43,17 @@ CPersistStream(
 
 <dl> <dt>
 
-*Kro* 
+*Punk* 
 </dt> <dd>
 
-Ein Zeiger auf die **IUnknown** -Schnittstelle des Delegatenobjekts.
+Zeiger auf die **IUnknown-Schnittstelle** des delegierenden Objekts.
 
 </dd> <dt>
 
-*PHR* 
+*Phr* 
 </dt> <dd>
 
-Zeiger auf den allgemeinen com-Rückgabewert. Dieser Wert wird nur geändert, wenn diese Funktion fehlschlägt.
+Zeiger auf den allgemeinen COM-Rückgabewert. Dieser Wert wird nur geändert, wenn diese Funktion fehlschlägt.
 
 </dd> </dl>
 
@@ -61,18 +61,18 @@ Zeiger auf den allgemeinen com-Rückgabewert. Dieser Wert wird nur geändert, we
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>PStream. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Pstream.h (einschließlich Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cpersiststream-Klasse**](cpersiststream.md)
+[**CPersistStream-Klasse**](cpersiststream.md)
 </dt> </dl>
 
  

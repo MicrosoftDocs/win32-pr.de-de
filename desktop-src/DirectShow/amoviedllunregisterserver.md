@@ -1,7 +1,7 @@
 ---
-description: Veraltet. Verwenden Sie stattdessen AMovieDllRegisterServer2.
+description: 'AMovieDllUnregisterServer-Funktion: Veraltet. Verwenden Sie stattdessen AMovieDllRegisterServer2.'
 ms.assetid: 80f52109-6239-4e3d-a395-eb69f5278cd2
-title: Amoviedllunregisterserver-Funktion (dllsetup. h)
+title: AMovieDllUnregisterServer-Funktion (Dllsetup.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 4cab526a69f14cdd4c4f48767ca34722f61002eb
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: df7fb34246249298efc143b7ccc8e6332540867c
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106359737"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108099928"
 ---
-# <a name="amoviedllunregisterserver-function"></a>Amoviedllunregisterserver-Funktion
+# <a name="amoviedllunregisterserver-function"></a>AMovieDllUnregisterServer-Funktion
 
-Veraltet. Verwenden Sie stattdessen [**AMovieDllRegisterServer2**](amoviedllregisterserver2.md) .
+Veraltet. Verwenden [**Sie stattdessen AMovieDllRegisterServer2.**](amoviedllregisterserver2.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,24 +42,24 @@ Diese Funktion besitzt keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Funktion erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Funktion erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Dllsetup. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Dllsetup.h (streams.h enthalten)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**DLL-Setup Funktionen**](dll-setup-functions.md)
+[**DLL-Setupfunktionen**](dll-setup-functions.md)
 </dt> </dl>
 
  

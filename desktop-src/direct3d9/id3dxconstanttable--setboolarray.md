@@ -1,7 +1,7 @@
 ---
-description: Legt ein Array von booleschen Werten fest.
+description: 'ID3DXConstantTable::SetBoolArray-Methode: Legt ein Array boolescher Werte fest.'
 ms.assetid: 323ad654-81e3-4986-a667-8333dd44a2d1
-title: 'ID3DXConstantTable:: setboolarray-Methode (D3DX9Shader. h)'
+title: ID3DXConstantTable::SetBoolArray-Methode (D3DX9Shader.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,14 +14,14 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: d573a2c44b54809ec259a0ceb5abab02ef37df34
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: c967ffd1a6601144787621628ed1b019e775eddd
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106367375"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108115208"
 ---
-# <a name="id3dxconstanttablesetboolarray-method"></a>ID3DXConstantTable:: setboolarray-Methode
+# <a name="id3dxconstanttablesetboolarray-method"></a>ID3DXConstantTable::SetBoolArray-Methode
 
 Legt ein Array von booleschen Werten fest.
 
@@ -43,16 +43,16 @@ HRESULT SetBoolArray(
 
 <dl> <dt>
 
-*pdevice* \[ in\]
+*pDevice* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPDIRECT3DDEVICE9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3ddevice9)**
 
-Zeiger auf eine [**IDirect3DDevice9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3ddevice9) -Schnittstelle, die das Gerät darstellt, das der Konstanten Tabelle zugeordnet ist.
+Zeiger auf eine [**IDirect3DDevice9-Schnittstelle,**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3ddevice9) die das Gerät darstellt, das der Konstantentabelle zugeordnet ist.
 
 </dd> <dt>
 
-*hconstant* \[ in\]
+*hConstant* \[ In\]
 </dt> <dd>
 
 Typ: **[D3DXHANDLE](dx9-graphics-reference-effects-constants.md)**
@@ -61,21 +61,21 @@ Eindeutiger Bezeichner für das Array von Konstanten. Siehe [D3DXHANDLE](dx9-gra
 
 </dd> <dt>
 
-*PB* \[ in\]
+*pB* \[ In\]
 </dt> <dd>
 
-Typ: Konstante **[**bool**](../winprog/windows-data-types.md) \***
+Typ: **const [**BOOL**](../winprog/windows-data-types.md) \***
 
 Array von booleschen Werten.
 
 </dd> <dt>
 
-*Anzahl* \[ in\]
+*Anzahl* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Anzahl von booleschen Werten im Array.
+Anzahl der booleschen Werte im Array.
 
 </dd> </dl>
 
@@ -83,20 +83,20 @@ Anzahl von booleschen Werten im Array.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert "D3DERR \_ invalidcall" lauten.
+Wenn die Methode erfolgreich ist, ist der Rückgabewert D3D \_ OK. Wenn bei der Methode ein Fehler auftritt, kann der Rückgabewert D3DERR \_ INVALIDCALL sein.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Shader. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>     |
+| Header<br/>  | <dl> <dt>D3DX9Shader.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

@@ -1,7 +1,7 @@
 ---
-description: Erstellt ein Ordner Objekt für den angegebenen Ordner und gibt dieses zurück.
+description: 'IShellDispatch.NameSpace-Methode: Erstellt ein Folder-Objekt für den angegebenen Ordner und gibt es zurück.'
 ms.assetid: CEA73705-1C27-4138-86C4-1715016E2ED8
-title: Ishelldispatch. Namespace-Methode (Shldisp. h)
+title: IShellDispatch.NameSpace-Methode (Shldisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Shell32.dll
-ms.openlocfilehash: 069752a5e81949889dce5539e3f23960a12c9736
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d1db0a3969350b4be4bc32e027bf2000036e099f
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104527344"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108100518"
 ---
-# <a name="ishelldispatchnamespace-method"></a>Ishelldispatch. Namespace-Methode
+# <a name="ishelldispatchnamespace-method"></a>IShellDispatch.NameSpace-Methode
 
-Erstellt ein [**Ordner**](folder.md) Objekt für den angegebenen Ordner und gibt dieses zurück.
+Erstellt ein [**Folder-Objekt für**](folder.md) den angegebenen Ordner und gibt es zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,12 +49,12 @@ IShellDispatch.NameSpace( _
 
 <dl> <dt>
 
-*vdir* \[ in\]
+*vDir* \[ In\]
 </dt> <dd>
 
 Typ: **Variant**
 
-Der Ordner, für den das [**Ordner**](folder.md) Objekt erstellt werden soll. Dabei kann es sich um eine Zeichenfolge handeln, die den Pfad des Ordners oder einen der [**shellspecialfolderconstants**](/windows/desktop/api/Shldisp/ne-shldisp-shellspecialfolderconstants) -Werte angibt. Beachten Sie, dass die in **shellspecialfolderconstants** gefundenen Konstanten Namen in Visual Basic verfügbar sind, jedoch nicht in VBScript oder JScript. In diesen Fällen müssen die numerischen Werte an ihrer Stelle verwendet werden.
+Der Ordner, für den das Ordnerobjekt [**erstellt werden**](folder.md) soll. Dies kann eine Zeichenfolge sein, die den Pfad des Ordners oder einen der [**ShellSpecialFolderConstants-Werte angibt.**](/windows/desktop/api/Shldisp/ne-shldisp-shellspecialfolderconstants) Beachten Sie, dass die konstanten Namen in **ShellSpecialFolderConstants** in Visual Basic, aber nicht in VBScript oder JScript verfügbar sind. In diesen Fällen müssen die numerischen Werte an ihrer Stelle verwendet werden.
 
 </dd> </dl>
 
@@ -64,23 +64,23 @@ Der Ordner, für den das [**Ordner**](folder.md) Objekt erstellt werden soll. Da
 
 Typ: **[ **Ordner**](folder.md)\*\***
 
-Objekt Verweis auf das [**Ordner**](folder.md) Objekt für den angegebenen Ordner. Wenn der Ordner nicht erfolgreich erstellt wurde, gibt dieser Wert **null** zurück.
+Objektverweis auf das [**Folder-Objekt**](folder.md) für den angegebenen Ordner. Wenn der Ordner nicht erfolgreich erstellt wurde, gibt dieser Wert **NULL zurück.**
 
 ### <a name="vb"></a>VB
 
 Typ: **[ **Ordner**](folder.md)\*\***
 
-Objekt Verweis auf das [**Ordner**](folder.md) Objekt für den angegebenen Ordner. Wenn der Ordner nicht erfolgreich erstellt wurde, gibt dieser Wert **null** zurück.
+Objektverweis auf das [**Folder-Objekt**](folder.md) für den angegebenen Ordner. Wenn der Ordner nicht erfolgreich erstellt wurde, gibt dieser Wert **NULL zurück.**
 
 ## <a name="remarks"></a>Bemerkungen
 
-Diese Methode wird implementiert, und der Zugriff erfolgt über die [**Shell. Namespace**](shell-namespace.md) -Methode.
+Diese Methode wird implementiert und über die [**Shell.NameSpace-Methode aufgerufen.**](shell-namespace.md)
 
 ## <a name="examples"></a>Beispiele
 
-In den folgenden Beispielen wird die Verwendung von [**Namespace**](shell-namespace.md) in JScript, VBScript und Visual Basic veranschaulicht.
+Die folgenden Beispiele zeigen die Verwendung von [**NameSpace**](shell-namespace.md) in JScript, VBScript und Visual Basic.
 
-JScript
+Jscript:
 
 
 ```JScript
@@ -102,7 +102,7 @@ JScript
 
 
 
-VBScript
+Vbscript:
 
 
 ```VB
@@ -148,17 +148,17 @@ End Sub
 
 
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, Windows XP \[ Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, nur Windows \[ XP-Desktop-Apps\]<br/>                                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                           |
-| Header<br/>                   | <dl> <dt>Shldisp. h</dt> </dl>                           |
-| IDL<br/>                      | <dl> <dt>Shldisp. idl</dt> </dl>                         |
-| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4,71 oder höher)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>                           |
+| Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                         |
+| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4.71 oder höher)</dt> </dl> |
 
 
 

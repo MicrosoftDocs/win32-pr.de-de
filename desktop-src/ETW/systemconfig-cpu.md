@@ -1,5 +1,5 @@
 ---
-description: Diese Klasse ist die Ereignistyp Klasse für CPU-Konfigurations Ereignisse.
+description: 'SystemConfig_CPU-Klasse: Diese Klasse ist die Ereignistypklasse für CPU-Konfigurationsereignisse.'
 ms.assetid: 5a24be04-9e5e-4ba9-baaf-b58b79ad947b
 title: SystemConfig_CPU-Klasse
 ms.topic: reference
@@ -20,18 +20,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: d08d0eeac9aa2287576bbb6dfe0e8ce41f116e8b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 07efa01bf58aeadfdfe12cd5db4d010a7f6dbca0
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104980072"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108106118"
 ---
-# <a name="systemconfig_cpu-class"></a>SystemConfig- \_ CPU-Klasse
+# <a name="systemconfig_cpu-class"></a>\_SystemConfig-CPU-Klasse
 
-Diese Klasse ist die Ereignistyp Klasse für CPU-Konfigurations Ereignisse.
+Diese Klasse ist die Ereignistypklasse für CPU-Konfigurationsereignisse.
 
-Die folgende Syntax wird durch den MOF-Code vereinfacht.
+Die folgende Syntax wird aus MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,42 +52,42 @@ class SystemConfig_CPU : SystemConfig
 
 ## <a name="members"></a>Member
 
-Die **System config- \_ CPU** -Klasse verfügt über diese Typen von Membern:
+Die **\_ SystemConfig-CPU-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **System config- \_ CPU** -Klasse verfügt über diese Eigenschaften.
+Die **\_ SystemConfig-CPU-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**"Zuweisung"-Granularität**
+**AllocationGranularity**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (5)
+Qualifizierer: **WmiDataId** (5)
 </dt> </dl>
 
-Die Granularität, mit der der virtuelle Arbeitsspeicher zugewiesen wird.
+Granularität, mit der virtueller Arbeitsspeicher zugeordnet wird.
 
 </dd> <dt>
 
 **Computername**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **char16** Array
+Datentyp: **char16-Array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (6), **Max** (256), **Format ("s")**
+Qualifizierer: **WmiDataId** (6), **Max** (256), **Format(s)**
 </dt> </dl>
 
 Name des Computers
@@ -97,61 +97,61 @@ Name des Computers
 **DomainName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **char16** Array
+Datentyp: **char16-Array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (7), **Max** (132), **Format ("s")**
+Qualifizierer: **WmiDataId** (7), **Max** (132), **Format(s)**
 </dt> </dl>
 
-Der Name der Domäne, in der der Computer Mitglied ist.
+Name der Domäne, in der der Computer Mitglied ist.
 
 </dd> <dt>
 
-**Hyperthreadingflag**
+**HyperThreadingFlag**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (8), Zeiger
+Qualifizierer: **WmiDataId** (8), Zeiger
 </dt> </dl>
 
-Gibt an, ob die Hyper-Threading-Option für einen Prozessor aktiviert oder deaktiviert ist. Jedes Bit reflektiert den Hyperthreading Zustand einer CPU auf dem Computer.
+Gibt an, ob die Hyperthreadingoption für einen Prozessor ein- oder ausgeschaltet ist. Jedes Bit spiegelt den Hyperthreadingstatus einer CPU auf dem Computer wider.
 
 </dd> <dt>
 
-**Memsize**
+**MemSize**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (3)
+Qualifizierer: **WmiDataId** (3)
 </dt> </dl>
 
-Gesamtmenge des für das Betriebssystem verfügbaren physischen Speichers.
+Gesamtmenge des für das Betriebssystem verfügbaren physischen Arbeitsspeichers.
 
 </dd> <dt>
 
-**Suhr**
+**Mhz**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (1)
+Qualifizierer: **WmiDataId** (1)
 </dt> </dl>
 
 Maximale Geschwindigkeit des Prozessors in Megahertz.
@@ -161,43 +161,43 @@ Maximale Geschwindigkeit des Prozessors in Megahertz.
 **NumberOfProcessors**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (2)
+Qualifizierer: **WmiDataId** (2)
 </dt> </dl>
 
 Anzahl der Prozessoren auf dem Computer.
 
 </dd> <dt>
 
-**PageSize**
+**Pagesize**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (4)
+Qualifizierer: **WmiDataId** (4)
 </dt> </dl>
 
-Größe einer Auslagerungs Seite (in Bytes).
+Größe einer Auslagerungsseite in Bytes.
 
 </dd> </dl>
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 

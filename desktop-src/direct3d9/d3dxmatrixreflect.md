@@ -1,7 +1,7 @@
 ---
-description: Erstellt eine Matrix, die das Koordinatensystem über eine Ebene wieder gibt.
+description: 'D3DXMatrixReflect-Funktion (D3dx9math.h): Erstellt eine Matrix, die das Koordinatensystem einer Ebene widerspiegelt.'
 ms.assetid: f6dc3834-42f2-4ad0-8098-8c5e25e10d58
-title: D3DXMatrixReflect-Funktion (D3dx9math. h)
+title: D3DXMatrixReflect-Funktion (D3dx9math.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 2e54c5f93164e5fccee0d74199a1843a1476e69a
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: e4118a5f0a1cd997d5fab5fecebae449d4c30b09
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103961548"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108118218"
 ---
-# <a name="d3dxmatrixreflect-function-d3dx9mathh"></a>D3DXMatrixReflect-Funktion (D3dx9math. h)
+# <a name="d3dxmatrixreflect-function-d3dx9mathh"></a>D3DXMatrixReflect-Funktion (D3dx9math.h)
 
-Erstellt eine Matrix, die das Koordinatensystem über eine Ebene wieder gibt.
+Erstellt eine Matrix, die das Koordinatensystem über eine Ebene widerspiegelt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,21 +41,21 @@ D3DXMATRIX* D3DXMatrixReflect(
 
 <dl> <dt>
 
-*Pout* \[ in, out\]
+*pOut* \[ in, out\]
 </dt> <dd>
 
 Typ: **[ **D3DXMATRIX**](d3dxmatrix.md)\***
 
-Ein Zeiger auf die [**D3DXMATRIX**](d3dxmatrix.md) -Struktur, die das Ergebnis des Vorgangs ist.
+Zeiger auf die [**D3DXMATRIX-Struktur,**](d3dxmatrix.md) die das Ergebnis des Vorgangs ist.
 
 </dd> <dt>
 
-*pplane* \[ in\]
+*pPlane* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXPLANE**](d3dxplane.md) \***
+Typ: **const [**D3DXPLANE**](d3dxplane.md) \***
 
-Ein Zeiger auf die Quell- [**D3DXPLANE**](d3dxplane.md) -Struktur.
+Zeiger auf die [**D3DXPLANE-Quellstruktur.**](d3dxplane.md)
 
 </dd> </dl>
 
@@ -63,13 +63,13 @@ Ein Zeiger auf die Quell- [**D3DXPLANE**](d3dxplane.md) -Struktur.
 
 Typ: **[ **D3DXMATRIX**](d3dxmatrix.md)\***
 
-Zeiger auf eine [**D3DXMATRIX**](d3dxmatrix.md) -Struktur, die das Koordinatensystem über die Quell Ebene wieder gibt.
+Zeiger auf eine [**D3DXMATRIX-Struktur,**](d3dxmatrix.md) die das Koordinatensystem über die Quellebene widerspiegelt.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Diese Funktion normalisiert die Gleichung der Ebene, bevor die reflektierte Matrix erstellt wird.
+Diese Funktion normalisiert die Ebenengleichung, bevor sie die reflektierte Matrix erstellt.
 
-Der Rückgabewert für diese Funktion ist derselbe Wert, der im *Pout* -Parameter zurückgegeben wird. Auf diese Weise kann die **D3DXMatrixReflect** -Funktion als Parameter für eine andere Funktion verwendet werden.
+Der Rückgabewert für diese Funktion ist der gleiche Wert, der im *pOut-Parameter zurückgegeben* wird. Auf diese Weise kann die **D3DXMatrixReflect-Funktion** als Parameter für eine andere Funktion verwendet werden.
 
 Diese Funktion verwendet die folgende Formel, um die zurückgegebene Matrix zu berechnen.
 
@@ -89,14 +89,14 @@ P = normalize(Plane);
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9math. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3dx9math.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

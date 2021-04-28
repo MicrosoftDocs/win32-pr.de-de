@@ -1,17 +1,17 @@
 ---
-description: Dieses Ereignis wird nicht unterstützt.
+description: 'EC_BANDWIDTHCHANGE: Dieses Ereignis wird nicht unterstützt.'
 ms.assetid: 280c9222-8627-4b0c-a109-5b84cc0527ae
-title: EC_BANDWIDTHCHANGE (DShow. h)
+title: EC_BANDWIDTHCHANGE (Dshow.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6b0c61188101d3b59424e2ccee922c96915a7352
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 0a314e4831abe811352d66e6160f59829b8e0728
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370717"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108094648"
 ---
-# <a name="ec_bandwidthchange"></a>EC \_ bandwidthchange
+# <a name="ec_bandwidthchange"></a>EC \_ BANDWIDTHCHANGE
 
 Dieses Ereignis wird nicht unterstützt.
 
@@ -19,20 +19,20 @@ Dieses Ereignis wird nicht unterstützt.
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------|------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>DShow. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Dshow.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Ereignis Benachrichtigungs Codes](event-notification-codes.md)
+[Ereignisbenachrichtigungscodes](event-notification-codes.md)
 </dt> <dt>
 
-[Ereignis Benachrichtigung in DirectShow](event-notification-in-directshow.md)
+[Ereignisbenachrichtigung in DirectShow](event-notification-in-directshow.md)
 </dt> </dl>
 
  

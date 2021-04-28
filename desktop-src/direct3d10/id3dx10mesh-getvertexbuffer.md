@@ -1,7 +1,7 @@
 ---
-description: Ruft den dem Mesh zugeordneten Vertex-Puffer ab.
+description: 'ID3DX10Mesh::GetVertexBuffer-Methode: Ruft den Vertexpuffer ab, der dem Gitternetz zugeordnet ist.'
 ms.assetid: c69a712b-8964-4a5b-a136-3f24060b7fd8
-title: 'ID3DX10Mesh:: getvertexbuffer-Methode (d3dx10. h)'
+title: ID3DX10Mesh::GetVertexBuffer-Methode (D3DX10.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: b78db368f2467c25b4bb4218a314a22027d5d3f1
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 8a63b08cf978a65e1fa9999c79b8033436b41fa2
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106361228"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108108078"
 ---
-# <a name="id3dx10meshgetvertexbuffer-method"></a>ID3DX10Mesh:: getvertexbuffer-Methode
+# <a name="id3dx10meshgetvertexbuffer-method"></a>ID3DX10Mesh::GetVertexBuffer-Methode
 
-Ruft den dem Mesh zugeordneten Vertex-Puffer ab.
+Ruft den Vertexpuffer ab, der dem Gitternetz zugeordnet ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,21 +41,21 @@ HRESULT GetVertexBuffer(
 
 <dl> <dt>
 
-*ibuffer* \[ in\]
+*iBuffer* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Der abzuzurufendene Vertex-Puffer. Dabei handelt es sich um einen Indexwert.
+Der abzurufende Scheitelpunktpuffer. Dies ist ein Indexwert.
 
 </dd> <dt>
 
-*ppvertexbuffer* \[ vorgenommen\]
+*ppVertexBuffer* \[ out\]
 </dt> <dd>
 
 Typ: **[ **ID3DX10MeshBuffer**](id3dx10meshbuffer.md)\*\***
 
-Der Scheitelpunkt Puffer. Siehe [ **ID3DX10MeshBuffer**](id3dx10meshbuffer.md)
+Der Scheitelpunktpuffer. Siehe [ **ID3DX10MeshBuffer**](id3dx10meshbuffer.md)
 
 </dd> </dl>
 
@@ -63,20 +63,20 @@ Der Scheitelpunkt Puffer. Siehe [ **ID3DX10MeshBuffer**](id3dx10meshbuffer.md)
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Der Rückgabewert ist einer der Werte, die in [Direct3D 10-Rückgabe Codes](d3d10-graphics-reference-returnvalues.md)aufgelistet sind.
+Der Rückgabewert ist einer der In [Direct3D 10-Rückgabecodes aufgeführten](d3d10-graphics-reference-returnvalues.md)Werte.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx10. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>D3dx10. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>D3DX10.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

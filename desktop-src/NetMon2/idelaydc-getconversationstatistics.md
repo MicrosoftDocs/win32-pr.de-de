@@ -1,7 +1,7 @@
 ---
-description: Die getconversation ationstatistics-Methode ruft Sitzungs-und Stations Informationen zur aktuellen Erfassung ab.
+description: 'IDelaydC::GetConversationStatistics-Methode: Die GetConversationStatistics-Methode ruft Sitzungs- und Stationsinformationen zur aktuellen Erfassung ab.'
 ms.assetid: 0164fa0e-90f2-4b97-be9d-55d172f8112d
-title: 'Idelta-DC:: getconversation ationstatistics-Methode (Netmon. h)'
+title: IDelaydC::GetConversationStatistics-Methode (Netmon.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - Ndisnpp.dll
 - Rmtnpp.dll
-ms.openlocfilehash: aaba5ccfbab48639f53395519f001f5f8e85e483
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d4d4c1bb1ad7ecb45b640c16322e297f9f640ef1
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106343039"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108103808"
 ---
-# <a name="idelaydcgetconversationstatistics-method"></a>Idelta aydc:: getconversation ationstatistics-Methode
+# <a name="idelaydcgetconversationstatistics-method"></a>IDelaydC::GetConversationStatistics-Methode
 
-Die **getconversation ationstatistics** -Methode ruft [*Sitzungs*](s.md) -und [*Stations Informationen*](s.md) zur aktuellen Erfassung ab.
+Die **GetConversationStatistics-Methode** ruft [*Sitzungs-*](s.md) und [*Stationsinformationen zur*](s.md) aktuellen Erfassung ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,44 +44,44 @@ HRESULT STDMETHODCALLTYPE GetConversationStatistics(
 
 <dl> <dt>
 
-*nsitzungen* \[ vorgenommen\]
+*nSessions* \[ out\]
 </dt> <dd>
 
-Zeiger auf ein DWORD, das die Anzahl der für die aktuelle Erfassung aufgezeichneten [*Sitzungen*](s.md) enthält.
+Zeiger auf ein DWORD, das die Anzahl der [*für*](s.md) die aktuelle Erfassung aufgezeichneten Sitzungen enthält.
 
 </dd> <dt>
 
-*lpsessionstats* \[ vorgenommen\]
+*lpSessionStats* \[ out\]
 </dt> <dd>
 
-Zeiger auf eine [sessionstats](sessionstats.md) -Struktur.
+Zeiger auf eine [SESSIONSTATS-Struktur.](sessionstats.md)
 
 </dd> <dt>
 
-*nstations* \[ vorgenommen\]
+*nStations* \[ out\]
 </dt> <dd>
 
-Zeiger auf ein DWORD, das die Anzahl der [*Stationen*](s.md) enthält, die für die aktuelle Erfassung aufgezeichnet wurden.
+Zeiger auf ein DWORD, das die Anzahl der für die [*aktuelle*](s.md) Erfassung aufgezeichneten Stationen enthält.
 
 </dd> <dt>
 
-*lpstationstats* \[ vorgenommen\]
+*lpStationStats* \[ out\]
 </dt> <dd>
 
-Zeiger auf eine [stationstats](stationstats.md) -Struktur.
+Zeiger auf eine [STATIONSTATS-Struktur.](stationstats.md)
 
 </dd> <dt>
 
-*f/oder Lese* \[ Vorgänge in\]
+*fClearAfterReading* \[ In\]
 </dt> <dd>
 
-Flag, das verwendet wird, um Netzwerkmonitor anzuweisen, den internen Speicher der [sessionstats](sessionstats.md) -und [stationstats](stationstats.md) -Strukturen zu löschen, nachdem die aktuellen Informationen abgerufen wurden.
+Flag, das verwendet wird, Netzwerkmonitor, den internen Speicher der [SESSIONSTATS-](sessionstats.md) und [STATIONSTATS-Strukturen](stationstats.md) zu löschen, nachdem die aktuellen Informationen abgerufen wurden.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Methode erfolgreich ist, ist der Rückgabewert nmerr \_ Success.
+Wenn die Methode erfolgreich ist, ist der Rückgabewert NMERR \_ SUCCESS.
 
 Wenn die Methode nicht erfolgreich ist, ist der Rückgabewert einer der folgenden Fehlercodes:
 
@@ -89,10 +89,10 @@ Wenn die Methode nicht erfolgreich ist, ist der Rückgabewert einer der folgende
 
 | Rückgabecode                                                                                                   | Beschreibung                                                                                                                                                                                                                            |
 |---------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**nmerr \_ nicht \_ verbunden**</dt> </dl>          | Der npp ist nicht mit dem Netzwerk verbunden. Wenden Sie [idelta-DC:: Connect](idelaydc-connect.md) an, um die NPP mit dem Netzwerk zu verbinden.<br/>                                                                                                  |
-| <dl> <dt>**nmerr wird \_ nicht \_ erfasst**</dt> </dl>          | Der NPP erfasst keine Daten. Wenden Sie [idelta-DC:: Start](idelaydc-start.md) an, um die Erfassung zu starten.<br/>                                                                                                                             |
-| <dl> <dt>**nmerr \_ nicht \_ verzögert**</dt> </dl>            | Der npp ist mit dem Netzwerk verbunden, jedoch nicht mit der [idelta aydc:: Connect](idelaydc-connect.md) -Methode.<br/>                                                                                                                      |
-| <dl> <dt>**nmerr \_ keine \_ Konversations \_ Statistik**</dt> </dl> | Die Konfiguration für diese Verbindung ist so festgelegt, dass keine Konversations Statistiken gespeichert werden. Wenn Sie die Konversations Statistik speichern möchten, legen Sie die Erfassung fest, legen Sie im konfigurationsblob NoConversation ationstats = Yes fest, und starten Sie die Erfassung erneut.<br/> |
+| <dl> <dt>**NMERR \_ NICHT \_ VERBUNDEN**</dt> </dl>          | Der NPP ist nicht mit dem Netzwerk verbunden. Rufen [Sie IDelaydC::Connect auf,](idelaydc-connect.md) um das NPP mit dem Netzwerk zu verbinden.<br/>                                                                                                  |
+| <dl> <dt>**NMERR NOT CAPTURING (NMERR \_ WIRD NICHT \_ ERFASST)**</dt> </dl>          | Das NPP erfasst keine Daten. Rufen Sie [IDelaydC::Start](idelaydc-start.md) auf, um die Erfassung zu starten.<br/>                                                                                                                             |
+| <dl> <dt>**NMERR \_ NICHT \_ VERZÖGERT**</dt> </dl>            | Das NPP ist mit dem Netzwerk verbunden, jedoch nicht mit der [IDelaydC::Connect-Methode.](idelaydc-connect.md)<br/>                                                                                                                      |
+| <dl> <dt>**NMERR \_ NO \_ CONVERSATION \_ STATS**</dt> </dl> | Die Konfiguration für diese Verbindung ist so festgelegt, dass keine Konversationsstatistiken gespeichert werden. Um Konversationsstatistiken zu speichern, beenden Sie die Erfassung, legen Sie NoConversationStats = YES im Konfigurations-BLOB fest, und starten Sie dann die Erfassung neu.<br/> |
 
 
 
@@ -100,43 +100,43 @@ Wenn die Methode nicht erfolgreich ist, ist der Rückgabewert einer der folgende
 
 ## <a name="remarks"></a>Bemerkungen
 
-Diese Methode kann nur aufgerufen werden, während die Datenerfassung ausgeführt wird. Wenn die aktuelle Erfassung angehalten ist, werden Aufrufe dieser Methode nicht erfolgreich ausgeführt. Um eine Aufzeichnung zu starten, müssen Sie die [idelta-DC:: Start](idelaydc-start.md) -Methode abrufen.
+Diese Methode kann nur aufgerufen werden, während die Datenerfassung ausgeführt wird. Wenn die aktuelle Erfassung angehalten wird, sind Aufrufe dieser Methode nicht erfolgreich. Um eine Erfassung zu starten, rufen Sie die [IDelaydC::Start-Methode](idelaydc-start.md) auf.
 
-Um andere Statistik Typen abzurufen, rufen Sie [idelta aydc:: gettotalstatistics](idelaydc-gettotalstatistics.md)auf.
+Um andere Arten von Statistiken abzurufen, rufen [Sie IDelaydC::GetTotalStatistics auf.](idelaydc-gettotalstatistics.md)
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                                                                     |
-| Header<br/>                   | <dl> <dt>Netmon. h</dt> </dl>                                                                      |
+| Header<br/>                   | <dl> <dt>Netmon.h</dt> </dl>                                                                      |
 | DLL<br/>                      | <dl> <dt>Ndisnpp.dll; </dt> <dt>Rmtnpp.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Idelta-DC](idelaydc.md)
+[IDelaydC](idelaydc.md)
 </dt> <dt>
 
-[Idelta aydc:: Connect](idelaydc-connect.md)
+[IDelaydC::Connect](idelaydc-connect.md)
 </dt> <dt>
 
-[Idelta-DC:: gettotalstatistics](idelaydc-gettotalstatistics.md)
+[IDelaydC::GetTotalStatistics](idelaydc-gettotalstatistics.md)
 </dt> <dt>
 
-[Idelta aydc:: Start](idelaydc-start.md)
+[IDelaydC::Start](idelaydc-start.md)
 </dt> <dt>
 
-[Sessionstats](sessionstats.md)
+[SESSIONSTATS](sessionstats.md)
 </dt> <dt>
 
-[Stationstats](stationstats.md)
+[STATIONSTATS](stationstats.md)
 </dt> </dl>
 
  

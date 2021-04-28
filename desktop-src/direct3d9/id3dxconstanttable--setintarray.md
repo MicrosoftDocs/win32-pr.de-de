@@ -1,7 +1,7 @@
 ---
-description: Legt ein Array von ganzen Zahlen fest.
+description: 'ID3DXConstantTable::SetIntArray-Methode: Legt ein Array von ganzen Zahlen fest.'
 ms.assetid: 15add9df-966d-45aa-b29c-d4bed2a125f4
-title: 'ID3DXConstantTable:: tartintarray-Methode (D3DX9Shader. h)'
+title: ID3DXConstantTable::SetIntArray-Methode (D3DX9Shader.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,14 +14,14 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 9f89de7d784ce355570d369606bfa67ddd6f5acf
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 5f674bc730398c386856314a7e7305f33f3e7fa1
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106351955"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108115108"
 ---
-# <a name="id3dxconstanttablesetintarray-method"></a>ID3DXConstantTable:: tartintarray-Methode
+# <a name="id3dxconstanttablesetintarray-method"></a>ID3DXConstantTable::SetIntArray-Methode
 
 Legt ein Array von ganzen Zahlen fest.
 
@@ -43,16 +43,16 @@ HRESULT SetIntArray(
 
 <dl> <dt>
 
-*pdevice* \[ in\]
+*pDevice* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPDIRECT3DDEVICE9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3ddevice9)**
 
-Zeiger auf eine [**IDirect3DDevice9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3ddevice9) -Schnittstelle, die das Gerät darstellt, das der Konstanten Tabelle zugeordnet ist.
+Zeiger auf eine [**IDirect3DDevice9-Schnittstelle,**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3ddevice9) die das Gerät darstellt, das der Konstantentabelle zugeordnet ist.
 
 </dd> <dt>
 
-*hconstant* \[ in\]
+*hConstant* \[ In\]
 </dt> <dd>
 
 Typ: **[D3DXHANDLE](dx9-graphics-reference-effects-constants.md)**
@@ -61,21 +61,21 @@ Eindeutiger Bezeichner für das Array von Konstanten. Siehe [D3DXHANDLE](dx9-gra
 
 </dd> <dt>
 
-*PN* \[ in\]
+*pn* \[ In\]
 </dt> <dd>
 
-Typ: Konstante **[**int**](../winprog/windows-data-types.md) \***
+Typ: **const [**INT**](../winprog/windows-data-types.md) \***
 
 Array von ganzen Zahlen.
 
 </dd> <dt>
 
-*Anzahl* \[ in\]
+*Anzahl* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Anzahl von ganzen Zahlen im Array.
+Anzahl der ganzen Zahlen im Array.
 
 </dd> </dl>
 
@@ -83,20 +83,20 @@ Anzahl von ganzen Zahlen im Array.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert "D3DERR \_ invalidcall" lauten.
+Wenn die Methode erfolgreich ist, ist der Rückgabewert D3D \_ OK. Wenn bei der Methode ein Fehler auftritt, kann der Rückgabewert D3DERR \_ INVALIDCALL sein.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Shader. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>     |
+| Header<br/>  | <dl> <dt>D3DX9Shader.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

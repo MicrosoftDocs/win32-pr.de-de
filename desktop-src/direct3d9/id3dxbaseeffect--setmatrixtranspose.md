@@ -1,7 +1,7 @@
 ---
-description: Legt eine übersetzte Matrix fest.
+description: 'ID3DXBaseEffect::SetMatrixTranspose-Methode: Legt eine transponierte Matrix fest.'
 ms.assetid: d340b058-6ba5-43ec-b398-111064965730
-title: 'ID3DXBaseEffect:: setmatrixtransform-Methode (D3DX9Shader. h)'
+title: ID3DXBaseEffect::SetMatrixTranspose-Methode (D3DX9Shader.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3dx9.lib
 - D3dx9.dll
-ms.openlocfilehash: f62847f7b15899389cbd5f207ce810b0ed0dd119
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 384d4a7ed5e1b769218b9290ed6cc0f7f060bd66
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106354978"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108107398"
 ---
-# <a name="id3dxbaseeffectsetmatrixtranspose-method"></a>ID3DXBaseEffect:: setmatrixtransform-Methode
+# <a name="id3dxbaseeffectsetmatrixtranspose-method"></a>ID3DXBaseEffect::SetMatrixTranspose-Methode
 
-Legt eine übersetzte Matrix fest.
+Legt eine transponierte Matrix fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,21 +41,21 @@ HRESULT SetMatrixTranspose(
 
 <dl> <dt>
 
-*hparameter* \[ in\]
+*hParameter* \[ In\]
 </dt> <dd>
 
 Typ: **[D3DXHANDLE](dx9-graphics-reference-effects-constants.md)**
 
-Eindeutiger Bezeichner. Weitere Informationen finden Sie unter [Handles (Direct3D 9)](handles.md).
+Eindeutiger Bezeichner. Siehe [Handles (Direct3D 9)](handles.md).
 
 </dd> <dt>
 
-*pmatrix* \[ in\]
+*pMatrix* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXMATRIX**](d3dxmatrix.md) \***
+Typ: **const [**D3DXMATRIX**](d3dxmatrix.md) \***
 
-Zeiger auf eine umgesetzte Matrix. Siehe [**D3DXMATRIX**](d3dxmatrix.md).
+Zeiger auf eine transponierte Matrix. Siehe [**D3DXMATRIX**](d3dxmatrix.md).
 
 </dd> </dl>
 
@@ -63,33 +63,33 @@ Zeiger auf eine umgesetzte Matrix. Siehe [**D3DXMATRIX**](d3dxmatrix.md).
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert "D3DERR \_ invalidcall" lauten.
+Wenn die Methode erfolgreich ist, lautet der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert D3DERR \_ INVALIDCALL sein.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Eine umgesetzte Matrix enthält Spalten Hauptdaten. Das heißt, jeder Vektor ist in einer Spalte enthalten.
+Eine transponierte Matrix enthält Spaltenhauptdaten. Das heißt, jeder Vektor ist in einer Spalte enthalten.
 
-Wenn die Ziel Matrix kleiner als die Quell Matrix ist, werden die zusätzlichen Komponenten der Quell Matrix ignoriert.
+Wenn die Zielmatrix kleiner als die Quellmatrix ist, werden die zusätzlichen Komponenten der Quellmatrix ignoriert.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Shader. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>     |
+| Header<br/>  | <dl> <dt>D3DX9Shader.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [ID3DXBaseEffect](id3dxbaseeffect.md)
 </dt> <dt>
 
-[**Getmatrixtransform**](id3dxbaseeffect--getmatrixtranspose.md)
+[**GetMatrixTranspose**](id3dxbaseeffect--getmatrixtranspose.md)
 </dt> </dl>
 
  

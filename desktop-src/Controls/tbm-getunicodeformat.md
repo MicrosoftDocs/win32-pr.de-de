@@ -1,9 +1,9 @@
 ---
-title: TBM_GETUNICODEFORMAT Meldung (kommstrg. h)
-description: Ruft das Unicode-Zeichenformat Flag für das-Steuerelement ab.
+title: TBM_GETUNICODEFORMAT Meldung (Commctrl.h)
+description: 'TBM_GETUNICODEFORMAT Meldung: Ruft das Unicode-Zeichenformatflag für das Steuerelement ab.'
 ms.assetid: cecd7e55-f482-4381-bde8-a60b8c5173eb
 keywords:
-- Windows-Steuerelemente für TBM_GETUNICODEFORMAT Meldung
+- TBM_GETUNICODEFORMAT Meldung Windows-Steuerelemente
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5a9fafad2504e51a65b879e58298c5cd06f1f345
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 82e7424a4e561ee8f8be79135309089fe4bb0bf9
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103858909"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108104088"
 ---
-# <a name="tbm_getunicodeformat-message"></a>TBM \_ getunicodeformat-Meldung
+# <a name="tbm_getunicodeformat-message"></a>TBM \_ GETUNICODEFORMAT-Nachricht
 
-Ruft das Unicode-Zeichenformat Flag für das-Steuerelement ab.
+Ruft das Unicode-Zeichenformatflag für das Steuerelement ab.
 
 ## <a name="parameters"></a>Parameter
 
@@ -37,29 +37,29 @@ Ruft das Unicode-Zeichenformat Flag für das-Steuerelement ab.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt das Unicode-formatflag für das-Steuerelement zurück. Wenn dieser Wert ungleich 0 (null) ist, verwendet das Steuerelement Unicode-Zeichen. Wenn dieser Wert 0 (null) ist, verwendet das Steuerelement ANSI-Zeichen.
+Gibt das Unicode-Formatflag für das Steuerelement zurück. Wenn dieser Wert ungleich 0 (null) ist, verwendet das Steuerelement Unicode-Zeichen. Wenn dieser Wert 0 (null) ist, verwendet das Steuerelement ANSI-Zeichen.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Eine Erörterung dieser Nachricht finden Sie in den Hinweisen für [**ccm \_ getunicodeformat**](ccm-getunicodeformat.md) .
+Eine Erläuterung dieser Meldung finden Sie in den Hinweisen zu [**CCM \_ GETUNICODEFORMAT.**](ccm-getunicodeformat.md)
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**TBM- \_ Code Format**](tbm-setunicodeformat.md)
+[**TBM \_ SETUNICODEFORMAT**](tbm-setunicodeformat.md)
 </dt> </dl>
 
  

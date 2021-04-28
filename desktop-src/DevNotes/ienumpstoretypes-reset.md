@@ -1,7 +1,7 @@
 ---
-description: Setzt auf den Anfang der enumerationssequenz zurück.
+description: 'IEnumPStoreTypes::Reset-Methode: Setzt auf den Anfang der Enumerationssequenz zurück.'
 ms.assetid: 35f14aa5-92cb-4ad8-b80c-2550dedb7a7f
-title: 'Iumumpstoretypes:: Reset-Methode (pstore. h)'
+title: IEnumPStoreTypes::Reset-Methode (Pstore.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - COM
 api_location:
 - Pstorec.dll
-ms.openlocfilehash: 60aeb1f68bcbf18e903472fa736b5714076dfbfa
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 55953a67d19ac94f792769974d860bae9b57f1ea
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106360290"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108089318"
 ---
-# <a name="ienumpstoretypesreset-method"></a>Iumumpstoretypes:: Reset-Methode
+# <a name="ienumpstoretypesreset-method"></a>IEnumPStoreTypes::Reset-Methode
 
-\[Geschützter Speicher (pstore) ist für die Verwendung in Windows Server 2003 und Windows XP verfügbar. Sie steht nur für schreibgeschützte Vorgänge in Windows Server 2008 und Windows Vista zur Verfügung, ist aber möglicherweise in nachfolgenden Versionen nicht verfügbar. Pstore verwendet eine ältere Implementierung des Schutzes von Daten. Entwicklern wird dringend empfohlen, den stärkeren Datenschutz zu nutzen, der von den Funktionen [**CryptProtectData**](/windows/win32/api/dpapi/nf-dpapi-cryptprotectdata) und [**CryptUnprotectData**](/windows/win32/api/dpapi/nf-dpapi-cryptunprotectdata) bereitgestellt wird.\]
+\[Geschützter Speicher (Pstore) ist für die Verwendung in Windows Server 2003 und Windows XP verfügbar. Sie ist nur für schreibgeschützte Vorgänge in Windows Server 2008 und Windows Vista verfügbar, ist in nachfolgenden Versionen jedoch möglicherweise nicht verfügbar. Pstore verwendet eine ältere Implementierung des Datenschutzes. Entwicklern wird dringend empfohlen, den verstärkten Datenschutz zu nutzen, der von den Funktionen [**CryptProtectData**](/windows/win32/api/dpapi/nf-dpapi-cryptprotectdata) und [**CryptUnprotectData**](/windows/win32/api/dpapi/nf-dpapi-cryptunprotectdata) bereitgestellt wird.\]
 
-Setzt auf den Anfang der enumerationssequenz zurück.
+Setzt auf den Anfang der Enumerationssequenz zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,24 +41,24 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Rückgabewert ist ein **HRESULT** -Wert.
+Der Rückgabewert ist ein **HRESULT-Wert.**
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------|----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Pstore. h</dt> </dl>    |
+| Header<br/> | <dl> <dt>Pstore.h</dt> </dl>    |
 | DLL<br/>    | <dl> <dt>Pstorec.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iumumpstoretypes**](ienumpstoretypes.md)
+[**IEnumPStoreTypes**](ienumpstoretypes.md)
 </dt> </dl>
 
  

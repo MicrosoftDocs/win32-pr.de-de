@@ -1,7 +1,7 @@
 ---
-description: Konstruktormethode.
+description: CBaseControlWindow.CBaseControlWindow-Konstruktor – Konstruktormethode.
 ms.assetid: 575f7f94-5f55-4834-bdb6-0db877187388
-title: Cbasecontrolwindow. cbasecontrolwindow-Konstruktor (ctlutil. h)
+title: CBaseControlWindow.CBaseControlWindow-Konstruktor (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,14 +16,14 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 9eb3e50daef8ec4ad11bf96a8f0b605f4c8fe679
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 47c8277a76dbf0fbb9e05262eea5b419466044cc
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364858"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108096338"
 ---
-# <a name="cbasecontrolwindowcbasecontrolwindow-constructor"></a>Cbasecontrolwindow. cbasecontrolwindow-Konstruktor
+# <a name="cbasecontrolwindowcbasecontrolwindow-constructor"></a>CBaseControlWindow.CBaseControlWindow-Konstruktor
 
 Konstruktormethode.
 
@@ -49,11 +49,11 @@ CBaseControlWindow(
 *pFilter* 
 </dt> <dd>
 
-Zeiger auf das besitzende Medienfilter Objekt.
+Zeiger auf das besitzende Medienfilterobjekt.
 
 </dd> <dt>
 
-*pinterfakelock* 
+*pInterfaceLock* 
 </dt> <dd>
 
 Zeiger auf den kritischen Abschnitt, der zum Sperren verwendet werden soll.
@@ -67,17 +67,17 @@ Zeiger auf die Objektbeschreibung.
 
 </dd> <dt>
 
-*Kro* 
+*Punk* 
 </dt> <dd>
 
-Ein Zeiger auf die steuernde **IUnknown** -Schnittstelle, wenn das Objekt Teil eines Aggregats ist. Andernfalls muss **null** sein.
+Zeiger auf die steuernde **IUnknown-Schnittstelle,** wenn das Objekt Teil eines Aggregats ist; Andernfalls muss **NULL** sein.
 
 </dd> <dt>
 
-*PHR* 
+*Phr* 
 </dt> <dd>
 
-Ein Zeiger auf eine Variable, die einen HRESULT-Wert empfängt, der angibt, ob die Konstruktormethode erfolgreich war oder fehlgeschlagen ist.
+Zeiger auf eine Variable, die einen HRESULT-Wert empfängt, der den Erfolg oder Fehler der Konstruktormethode angibt.
 
 </dd> </dl>
 
@@ -85,18 +85,18 @@ Ein Zeiger auf eine Variable, die einen HRESULT-Wert empfängt, der angibt, ob d
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbasecontrolwindow-Klasse**](cbasecontrolwindow.md)
+[**CBaseControlWindow-Klasse**](cbasecontrolwindow.md)
 </dt> </dl>
 
  

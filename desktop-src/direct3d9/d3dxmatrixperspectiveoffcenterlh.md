@@ -1,7 +1,7 @@
 ---
-description: Erstellt eine angepasste, Links übergebene perspektivische Projektions Matrix.
+description: 'D3DXMatrixPerspectiveOffCenterLH-Funktion (D3dx9math.h): Erstellt eine benutzerdefinierte, linkshändige Perspektivische Projektionsmatrix.'
 ms.assetid: de2732dd-a4f2-47bc-9509-de16f1ca85c2
-title: D3DXMatrixPerspectiveOffCenterLH-Funktion (D3dx9math. h)
+title: D3DXMatrixPerspectiveOffCenterLH-Funktion (D3dx9math.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 15743af16be84587fd8dc03e845ffcd8bd8dbc2b
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 404147cfbab0b4fedb7c7356dc1c31d3e203eb5f
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106373480"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108118288"
 ---
-# <a name="d3dxmatrixperspectiveoffcenterlh-function-d3dx9mathh"></a>D3DXMatrixPerspectiveOffCenterLH-Funktion (D3dx9math. h)
+# <a name="d3dxmatrixperspectiveoffcenterlh-function-d3dx9mathh"></a>D3DXMatrixPerspectiveOffCenterLH-Funktion (D3dx9math.h)
 
-Erstellt eine angepasste, Links übergebene perspektivische Projektions Matrix.
+Erstellt eine angepasste, linkshändige Perspektivprojektionsmatrix.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,66 +46,66 @@ D3DXMATRIX* D3DXMatrixPerspectiveOffCenterLH(
 
 <dl> <dt>
 
-*Pout* \[ in, out\]
+*pOut* \[ in, out\]
 </dt> <dd>
 
 Typ: **[ **D3DXMATRIX**](d3dxmatrix.md)\***
 
-Ein Zeiger auf die [**D3DXMATRIX**](d3dxmatrix.md) -Struktur, die das Ergebnis des Vorgangs ist.
+Zeiger auf die [**D3DXMATRIX-Struktur,**](d3dxmatrix.md) die das Ergebnis des Vorgangs ist.
 
 </dd> <dt>
 
 *l* \[ in\]
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-Minimaler x-Wert des Ansichts Volumes.
+Minimaler x-Wert des Ansichtsvolumens.
 
 </dd> <dt>
 
 *r* \[ in\]
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-Maximaler x-Wert des Ansichts Volumes.
+Maximaler x-Wert des Ansichtsvolumens.
 
 </dd> <dt>
 
 *b* \[ in\]
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-Minimaler y-Wert des Ansichts Volumes.
+Minimaler y-Wert des Ansichtsvolumens.
 
 </dd> <dt>
 
 *t* \[ in\]
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-Maximaler y-Wert des Ansichts Volumes.
-
-</dd> <dt>
-
-*Zn* \[ in\]
-</dt> <dd>
-
-Typ: **[ **float**](../winprog/windows-data-types.md)**
-
-Der minimale z-Wert des Ansichts Volumes.
+Maximaler y-Wert des Ansichtsvolumens.
 
 </dd> <dt>
 
-*ZF* \[ in\]
+*zn* \[ In\]
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-Maximaler z-Wert des Ansichts Volumes.
+Minimaler Z-Wert des Ansichtsvolumes.
+
+</dd> <dt>
+
+*NSD* \[ In\]
+</dt> <dd>
+
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
+
+Maximaler Z-Wert des Ansichtsvolumes.
 
 </dd> </dl>
 
@@ -113,13 +113,13 @@ Maximaler z-Wert des Ansichts Volumes.
 
 Typ: **[ **D3DXMATRIX**](d3dxmatrix.md)\***
 
-Zeiger auf eine [**D3DXMATRIX**](d3dxmatrix.md) -Struktur, die eine angepasste, Links übergebene perspektivische Projektions Matrix ist.
+Zeiger auf eine [**D3DXMATRIX-Struktur,**](d3dxmatrix.md) die eine angepasste, linkshändige Projektionsmatrix für die Perspektive ist.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Alle Parameter der **D3DXMatrixPerspectiveOffCenterLH** -Funktion sind Abstände im Kamerabereich. Die Parameter beschreiben die Dimensionen des Ansichts Volumes.
+Alle Parameter der **D3DXMatrixPerspectiveOffCenterLH-Funktion** sind Entfernungen im Kameraraum. Die Parameter beschreiben die Dimensionen des Ansichtsvolumes.
 
-Der Rückgabewert für diese Funktion ist derselbe Wert, der im *Pout* -Parameter zurückgegeben wird. Auf diese Weise kann die **D3DXMatrixPerspectiveOffCenterLH** -Funktion als Parameter für eine andere Funktion verwendet werden.
+Der Rückgabewert für diese Funktion ist der gleiche Wert, der im *pOut-Parameter* zurückgegeben wird. Auf diese Weise kann die **D3DXMatrixPerspectiveOffCenterLH-Funktion** als Parameter für eine andere Funktion verwendet werden.
 
 Diese Funktion verwendet die folgende Formel, um die zurückgegebene Matrix zu berechnen.
 
@@ -137,14 +137,14 @@ Diese Funktion verwendet die folgende Formel, um die zurückgegebene Matrix zu b
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9math. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3dx9math.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

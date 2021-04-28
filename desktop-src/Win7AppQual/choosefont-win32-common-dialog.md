@@ -1,22 +1,22 @@
 ---
-description: .
+description: Dialogfeld "ChooseFont() Win32 Common"
 ms.assetid: ee1df9f2-585f-4208-ad49-a0f6ba76f53a
-title: Ausgewählter Win32-Dialog Feld ()
+title: Dialogfeld "ChooseFont() Win32 Common"
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4e55a31d1f4d5530e04fe455135952eb94cc4bda
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a4dd8eb6ec226f8dbf5220f5a90dac802cf149dd
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106352760"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108088608"
 ---
-# <a name="choosefont-win32-common-dialog"></a>Ausgewählter Win32-Dialog Feld ()
+# <a name="choosefont-win32-common-dialog"></a>Dialogfeld "ChooseFont() Win32 Common"
 
 ## <a name="affected-platforms"></a>Betroffene Plattformen
 
-**Clients** -Windows 7  
-**Server** -Windows Server 2008 R2  
+**Clients** – Windows 7  
+**Server** – Windows Server 2008 R2  
 
 
 
@@ -26,60 +26,60 @@ ms.locfileid: "106352760"
 
 
 
-## <a name="feature-impact"></a>Auswirkungen von Features
+## <a name="feature-impact"></a>Auswirkungen auf Das Feature
 
-**Schweregrad** -niedrig  
-**Frequency** -Medium  
+**Schweregrad –** Niedrig  
+**Häufigkeit** – Mittel  
 
 
 
 
 ## <a name="description"></a>BESCHREIBUNG
 
-Windows 7 enthält mehrere Updates für das allgemeine Win32-Dialogfeld (). Diese werden in zwei Kategorien unterteilt:
+Windows 7 enthält mehrere Updates des allgemeinen Dialogfelds ChooseFont() Win32. Diese lassen sich in zwei Kategorien unterteilen:
 
--   Visuelle Aktualisierung des Dialog Felds
--   Unterstützung für neue Funktionen zum Anzeigen/Ausblenden von Schriftarten
+-   Visuelle Aktualisierung des Dialogfelds
+-   Unterstützung für neue Funktion zum Ein-/Ausblenden von Schriftarten
 
-Die **Dialogfeld Aktualisierung** aktualisiert die Standardvorlage, damit das Dialogfeld mit anderen Dialog Layouts in Windows in Einklang gebracht wird. Es führt WYSIWYG in die Schriftart Anzeigelisten ein, um Benutzern die Auswahl von Schriftarten zu erleichtern. Außerdem ist ein Link zu den Schriftarten cpl enthalten, um Benutzern, die Ihre Schriftart Listen anpassen möchten, einen einfachen Zugriff zu ermöglichen.
+Die **Dialogaktualisierung** aktualisiert die Standardvorlage, um den Dialog stärker mit anderen Dialoglayouts in Windows in Einklang zu bringen. Es führt WYSIWYG in die Schriftartanzeigelisten ein, um Benutzern die Auswahl von Schriftarten zu erleichtern. Es enthält auch einen Link zur Schriftarten-CPL, um Benutzern, die ihre Schriftartlisten anpassen möchten, einfachen Zugriff zu bieten.
 
-**Schriftarten anzeigen/ausblenden** ist ein neues Feature für die Windows 7-Plattform, bei dem Schriftarten, die nicht für die Spracheinstellungen des aktuellen Benutzers geeignet sind (Eingabemethoden) standardmäßig nicht in den Schriftart Auswahllisten angezeigt werden. Benutzer können die Schriftarten anpassen, die in der Schriftarten-cpl angezeigt werden sollen, oder Sie können diese Funktion deaktivieren.
+**Schriftarten ein-/ausblenden** ist ein neues Windows 7-Plattformfeature, bei dem Schriftarten, die nicht für die Spracheinstellungen des aktuellen Benutzers geeignet sind (Eingabemethoden), nicht standardmäßig in Schriftartauswahllisten angezeigt werden. Benutzer können die Schriftarten anpassen, die in der Schriftarten-CPL angezeigt werden sollen, oder diese Funktion deaktivieren.
 
-## <a name="manifestation-of-impact"></a>Erscheinung der Auswirkung
+## <a name="manifestation-of-impact"></a>Wirkungserz weiter
 
-**Visuelle Aktualisierung des Dialog Felds**
+**Visuelle Aktualisierung des Dialogfelds**
 
-Wir haben zwei neue Vorlagen in Windows 7 eingeführt (eine für Anwendungen, die Version 6 oder höher von comctl32.dll laden, und eine andere für Anwendungen, die frühere Versionen laden).
+Wir haben zwei neue Vorlagen in Windows 7 eingeführt (eine für Anwendungen, die Version 6 oder höher von comctl32.dll und eine für Anwendungen, die frühere Versionen laden).
 
--   Aus Gründen der Anwendungs Kompatibilität werden diese neuen Vorlagen nur für Anwendungen geladen, die nicht mit der Nachrichten Warteschlange "choosefont" kompatibel sind. Anwendungen, die die Nachrichten Warteschlange anschließen, sehen weiterhin das alte Dialogfeld Layout.
--   Anwendungen, die ihre eigenen Vorlagen bereitstellen, werden Sie weiterhin verwenden können.
+-   Aus Gründen der Anwendungskompatibilität werden diese neuen Vorlagen nur für Anwendungen geladen, die nicht mit der ChooseFont-Nachrichtenwarteschlange in eine Warteschlange einhängen. Anwendungen, die die Nachrichtenwarteschlange einhängen, sehen weiterhin das alte Dialoglayout.
+-   Anwendungen, die eigene Vorlagen bereitstellen, können sie weiterhin verwenden.
 
-Anwendungen, die die neuen Vorlagen nicht erhalten, sehen keine Dialog layoutlayoutänderungen von Vista. Sie sollten jedoch immer noch die neue WYSIWYG-Schriftart Vorschau erhalten.
+Anwendungen, die die neuen Vorlagen nicht erhalten, sehen keine Änderungen am Dialogfeldlayout von Vista. Sie sollten jedoch weiterhin die neue WYSIWYG-Schriftartvorschau erhalten.
 
-**Schriftarten anzeigen/ausblenden**
+**Ein-/Ausblenden von Schriftarten**
 
-Für alle Versionen von Choice Font werden im Dialogfeld die Schriftart Einstellungen für das Anzeigen/Ausblenden des aktuellen Benutzers verwendet, um die anzuzeigende Schriftart Liste zu ermitteln. Dies führt dazu, dass in den meisten Fällen weniger Schriftart Listen angezeigt werden.
+Für alle Versionen von ChooseFont verwendet das Dialogfeld die Ein-/Ausblenden-Schriftarteinstellungen des aktuellen Benutzers, um die anzuzeigende Schriftartliste zu bestimmen. Dies führt dazu, dass in den meisten Instanzen weniger Schriftartlisten angezeigt werden.
 
 ## <a name="end-user-mitigation"></a>Entschärfung durch Endbenutzer
 
-**Schriftarten anzeigen/ausblenden:** Um das Ausblenden der Schriftart zu deaktivieren, sollten Benutzer in der Schriftarten-cpl zur Seite Schriftart Einstellungen wechseln und die Option "
+**Schriftarten ein-/ausblenden:** Um das Ausblenden von Schriftarten zu deaktivieren, sollten Benutzer zur Seite Schriftarteinstellungen in der Schriftart-CPL wechseln und die Auswahl von aufheben.
 
 Kontrollkästchen "Schriftarten basierend auf Spracheinstellungen ausblenden"
 
-## <a name="developer-mitigation"></a>Entwickler Entschärfung
+## <a name="developer-mitigation"></a>Entschärfung für Entwickler
 
--   **Visuelle Aktualisierung:** Anwendungsentwickler, die eigene Vorlagen bereitstellen, können diese aktualisieren, damit Sie mit der entsprechenden neuen Vorlage für Windows 7 übereinstimmen. Die neuen Vorlagen sind in der Vorlagen Datei Font. DLG verfügbar.
+-   **Visuelle Aktualisierung:** Anwendungsentwickler, die ihre eigenen Vorlagen bereitstellen, möchten diese möglicherweise aktualisieren, um mit der entsprechenden neuen Windows 7-Vorlage in Einklang zu stehen. Die neuen Vorlagen sind in der Vorlagendatei Font.dlg verfügbar.
 
-    **Hinweis:** Die neue veröffentlichte Vorlage enthält ein zusätzliches Syslink-Steuerelement, das eine Verknüpfung bereitstellt, mit der Benutzer die Schriftarten-cpl starten können, um weitere Schriftarten anzuzeigen. Das Link Steuerelement erfordert Version 6 der allgemeinen Windows-Steuerelement Bibliothek (comctl32.dll). Entwickler sollten ein Manifest oder eine Direktive bereitstellen, das die Verwendung von Version 6 der DLL angibt, falls verfügbar. Verwenden Sie stattdessen den Steuer Objekttyp "PUSHBUTTON", wenn eine Anwendung eine frühere Version der allgemeinen Steuerelement Bibliothek verwendet.
+    **Hinweis:** Die neue veröffentlichte Vorlage enthält ein zusätzliches SysLink-Steuerelement, das eine Verknüpfung bietet, mit der Benutzer die Schriftart-CPL starten können, um weitere Schriftarten anzuzeigen. Für das Link-Steuerelement ist Version 6 der allgemeinen Windows-Steuerelementbibliothek (Common Control Library, comctl32.dll) comctl32.dll. Entwickler sollten ein Manifest oder eine Direktive bereitstellen, das die Verwendung von Version 6 der DLL angibt, falls verfügbar. Wenn eine Anwendung eine frühere Version der allgemeinen Steuerelementbibliothek verwendet, verwenden Sie stattdessen den Steuerelementtyp "PUSHBUTTON".
 
--   **Schriftarten anzeigen/ausblenden:** Entwickler können diese Funktion deaktivieren, indem Sie ein zusätzliches Flag (CF \_ inactivefonts) im Flags-Member der choosefont-Struktur bereitstellen. Das Festlegen dieses Flags bewirkt, dass alle installierten Schriftarten in der Schriftart Liste angezeigt werden.
--   **Schriftarten anzeigen/ausblenden:** Anwendungen, die Hilfe Inhalte zur Auswahl von Informationen bereitstellen, möchten möglicherweise Inhalt hinzufügen, um zu erklären, warum die Schriftart Liste reduziert ist, und die Benutzer an die Schriftarten-cpl weiterleiten, um deren Schriftart
+-   **Schriftarten ein-/ausblenden:** Entwickler können dieses Feature deaktivieren, indem sie ein zusätzliches Flag (CF \_ INACTIVEFONTS) im Flags-Member der CHOOSEFONT-Struktur bereitstellen. Wenn Sie dieses Flag festlegen, werden alle installierten Schriftarten in der Schriftartenliste angezeigt.
+-   **Schriftarten ein-/ausblenden:** Anwendungen, die ChooseFont-Hilfeinhalte bereitstellen, möchten möglicherweise Inhalte hinzufügen, um zu erläutern, warum die Schriftartliste reduziert wird, und Benutzer an die Schriftarten-CPL leiten, um ihre Schriftartlisten anzupassen.
 
-## <a name="compatibility-performance-reliability-and-usability-testing"></a>Tests der Kompatibilität, Leistung, Zuverlässigkeit und Benutzerfreundlichkeit
+## <a name="compatibility-performance-reliability-and-usability-testing"></a>Kompatibilitäts-, Leistungs-, Zuverlässigkeits- und Benutzerfreundlichkeitstests
 
-Entwickler, deren Anwendungen die ausgewählte Meldungs Warteschlange zum Anpassen des Dialog Felds anschließen, sollten überprüfen, ob Ihre Anwendungen alle vorhandenen Funktionen beibehalten.
+Entwickler, deren Anwendungen die ChooseFont-Nachrichtenwarteschlange verknüpfen, um das Dialogfeld anzupassen, sollten überprüfen, ob ihre Anwendungen alle vorhandenen Funktionen beibehalten.
 
-Anwendungen, die die Schriftart Liste stark mithilfe von Flags kürzen, sollten sicherstellen, dass die Liste der dargestellten Schriftart weiterhin akzeptabel ist.
+Anwendungen, die die Schriftartliste mit Flags stark kürzen, sollten sicherstellen, dass die angezeigte Schriftartliste akzeptabel bleibt.
 
  
 

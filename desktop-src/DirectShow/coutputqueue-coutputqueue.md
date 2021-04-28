@@ -1,7 +1,7 @@
 ---
-description: Konstruktormethode.
+description: 'COutputQueue.COutputQueue-Konstruktor : Konstruktormethode.'
 ms.assetid: 672c0337-0c36-4f53-9125-d02fe8b36b1c
-title: Coutputqueue. coutputqueue-Konstruktor (outputq. h)
+title: COutputQueue.COutputQueue-Konstruktor (Outputq.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,14 +16,14 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: de4d8fe0d0a7c3dcf90e67f80a939f6294cb3d5b
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 17a795bf4ec33ec904b83f6621fc0bc4f43b4b15
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361583"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108095328"
 ---
-# <a name="coutputqueuecoutputqueue-constructor"></a>Coutputqueue. coutputqueue-Konstruktor
+# <a name="coutputqueuecoutputqueue-constructor"></a>COutputQueue.COutputQueue-Konstruktor
 
 Konstruktormethode.
 
@@ -49,52 +49,52 @@ COutputQueue(
 
 <dl> <dt>
 
-*pinputpin* 
+*pInputPin* 
 </dt> <dd>
 
-Ein Zeiger auf die [**IPin**](/windows/desktop/api/Strmif/nn-strmif-ipin) -Schnittstelle der Eingabe-PIN. Das-Objekt stellt Beispiele für diese PIN bereit.
+Zeiger auf die [**IPin-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-ipin) des Eingabepins. Das -Objekt liefert Beispiele an diesen Pin.
 
 </dd> <dt>
 
-*PHR* 
+*Phr* 
 </dt> <dd>
 
-Zeiger auf einen **HRESULT** -Rückgabecode. Legen Sie \_ vor dem Aufrufen dieser Methode den Wert auf S OK fest. Bei der Rückgabe erhält *PHR* einen Wert, der angibt, ob die Methode erfolgreich war oder fehlgeschlagen ist.
+Zeiger auf einen **HRESULT-Rückgabecode.** Legen Sie den Wert auf S \_ OK fest, bevor Sie diese Methode aufrufen. Bei der Rückgabe *empfängt phr* einen Wert, der den Erfolg oder Fehler der Methode angibt.
 
 </dd> <dt>
 
-*Bauto* 
+*bAuto* 
 </dt> <dd>
 
-Flag, das angibt, ob das Objekt entscheidet, wann eine Warteschlange erstellt werden soll. **True** gibt an, dass das Objekt nur dann eine Warteschlange erstellt, wenn die Eingabe-PIN blockiert werden kann. Wenn **false**, gibt der *bqueue* -Parameter an, ob eine Warteschlange erstellt werden soll.
+Flag, das angibt, ob das Objekt entscheidet, wann eine Warteschlange erstellt werden soll. True **gibt an,** dass das -Objekt nur dann eine Warteschlange erstellt, wenn der Eingabepin blockiert werden kann. False **gibt** mit dem *Parameter bQueue* an, ob eine Warteschlange erstellt werden soll.
 
 </dd> <dt>
 
-*bqueue* 
+*bQueue* 
 </dt> <dd>
 
-Wenn *Bauto* **true** ist, wird dieser Parameter ignoriert. Wenn *Bauto* auf **false** festgelegt ist, gibt dieses Flag an, ob eine Warteschlange erstellt werden soll.
+Wenn *bAuto* **true ist,** wird dieser Parameter ignoriert. Wenn *bAuto* **FALSE ist,** gibt dieses Flag an, ob eine Warteschlange erstellt werden soll.
 
 </dd> <dt>
 
-*lbatchsize* 
+*lBatchSize* 
 </dt> <dd>
 
-Maximale Anzahl von Samplings, die in einem Batch geliefert werden sollen.
+Maximale Anzahl von Stichproben, die in einem Batch zu liefern sind.
 
 </dd> <dt>
 
-*bbatchexact* 
+*bBatchExact* 
 </dt> <dd>
 
-Flag, das angibt, ob genaue Batch Größen verwendet werden sollen. **True** gibt an, dass das Objekt vor der Übermittlung an die eingabepin auf *lbatchsize* -Beispiele wartet. **False** gibt an, dass das-Objekt beim Empfang von Beispielen Beispiele liefert.
+Flag, das angibt, ob genaue Batchgrößen verwendet werden. True **gibt an,** dass das Objekt auf *lBatchSize-Stichproben* wartet, bevor sie an den Eingabepin zu liefern sind. False **gibt an,** dass das Objekt Stichproben liefert, während es sie empfängt.
 
 </dd> <dt>
 
-*llistsize* 
+*lListSize* 
 </dt> <dd>
 
-Cache Größe für die Warteschlange. Der Standardwert, defaultcache, ist eine Konstante, die für die [**cbaselist**](cbaselist.md) -Klasse definiert ist.
+Cachegröße für die Warteschlange. Der Standardwert DEFAULTCACHE ist eine Konstante, die für die [**CBaseList-Klasse definiert**](cbaselist.md) ist.
 
 </dd> <dt>
 
@@ -107,28 +107,28 @@ Priorität des Threads, der Beispiele liefert.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Wenn " *Bauto* " den Wert " **true**" hat, ruft das Objekt die [**IMemInputPin:: receivecanblock**](/windows/desktop/api/Strmif/nf-strmif-imeminputpin-receivecanblock) -Methode für die downstreampin auf. Wenn **receivecanblock** S OK zurückgibt \_ (was bedeutet, dass die PIN bei [**IMemInputPin:: Receive**](/windows/desktop/api/Strmif/nf-strmif-imeminputpin-receive) -aufrufen blockieren kann), erstellt das Objekt einen Thread zum Bereitstellung von Beispielen. Andernfalls wird kein Thread erstellt.
+Wenn *bAuto* **true ist,** ruft das Objekt die [**IMemInputPin::ReceiveCanBlock-Methode**](/windows/desktop/api/Strmif/nf-strmif-imeminputpin-receivecanblock) auf dem Downstreampin auf. Wenn **ReceiveCanBlock** S OK zurückgibt (d. h., der Pin könnte bei \_ [**IMemInputPin::Receive-Aufrufen**](/windows/desktop/api/Strmif/nf-strmif-imeminputpin-receive) blockiert werden), erstellt das Objekt einen Thread für die Bereitstellung von Beispielen. Andernfalls wird kein Thread erstellt.
 
-Wenn *Bauto* auf **false** festgelegt ist, bestimmt der Wert von *bqueue* , ob ein Thread erstellt wird.
+Wenn *bAuto* **FALSE ist,** bestimmt der Wert *von bQueue,* ob ein Thread erstellt werden soll.
 
-Wenn das Objekt einen Thread erstellt, wird das Thread Handle der [**coutputqueue:: m \_ hThread**](coutputqueue-m-hthread.md) -Element Variablen zugewiesen. Die Thread Prozedur ist [**coutputqueue:: initialthread proc**](coutputqueue-initialthreadproc.md), und der Thread Parameter ist ein Zeiger auf dieses. Das-Objekt erstellt außerdem eine Warteschlange für die Aufnahme von Beispielen, die von der [**coutputqueue:: m \_ List**](coutputqueue-m-list.md) -Element Variable angegeben wird.
+Wenn das -Objekt einen Thread erstellt, wird das Threadhandles der [**Membervariablen COutputQueue::m \_ hThread**](coutputqueue-m-hthread.md) zugewiesen. Die Threadprozedur [**ist COutputQueue::InitialThreadProc,**](coutputqueue-initialthreadproc.md)und der Threadparameter ist ein Zeiger darauf. Das -Objekt erstellt auch eine Warteschlange zum Enthalten von Stichproben, die von der [**Membervariablen COutputQueue::m \_ List**](coutputqueue-m-list.md) angegeben wird.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Outputq. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Outputq.h (einschließlich Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Coutputqueue-Klasse**](coutputqueue.md)
+[**COutputQueue-Klasse**](coutputqueue.md)
 </dt> </dl>
 
  

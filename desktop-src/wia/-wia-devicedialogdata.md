@@ -1,7 +1,7 @@
 ---
-description: Definiert die Daten, die zum Abrufen eines Geräte Dialogfelds erforderlich sind.
+description: 'DEVICEDIALOGDATA-Struktur: Definiert die Daten, die zum Aufrufen eines Gerätedialogs erforderlich sind.'
 ms.assetid: 424defa6-1452-4a8b-bacc-738209c236c3
-title: Devicedialogdata-Struktur (wiadefd. h)
+title: DEVICEDIALOGDATA-Struktur (Wiadefd.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - Wiadefd.h
-ms.openlocfilehash: 621cab4f56b39ac900048018463935b55f0eddec
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ad7b08f5396a7a6e9b1f74df3dd409303b2d548d
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104529156"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108104268"
 ---
-# <a name="devicedialogdata-structure"></a>Devicedialogdata-Struktur
+# <a name="devicedialogdata-structure"></a>DEVICEDIALOGDATA-Struktur
 
-Definiert die Daten, die zum Abrufen eines Geräte Dialogfelds erforderlich sind.
+Definiert die Daten, die zum Aufrufen eines Gerätedialogfelds erforderlich sind.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,7 +45,7 @@ typedef struct {
 
 <dl> <dt>
 
-**CBSIZE**
+**cbSize**
 </dt> <dd>
 
 Typ: **DWORD**
@@ -63,18 +63,18 @@ Typ: **HWND**
 
 </dd> <dd>
 
-Gibt das Handle für das übergeordnete Fenster des Dialog Felds an.
+Gibt das Handle für das übergeordnete Fenster des Dialogfelds an.
 
 </dd> <dt>
 
-**piwiaitemroot**
+**pIWiaItemRoot**
 </dt> <dd>
 
-Typ: **[**iwiaitem**](/windows/desktop/api/wia_xp/nn-wia_xp-iwiaitem) \** _
+Typ: **[ **IWiaItem**](/windows/desktop/api/wia_xp/nn-wia_xp-iwiaitem)\***
 
 </dd> <dd>
 
-Verweist auf eine [_ *iwiaitem* *](/windows/desktop/api/wia_xp/nn-wia_xp-iwiaitem) -Schnittstelle, die das gültige Stamm Element in der Anwendungs Elementstruktur darstellt.
+Zeigt auf eine [**IWiaItem-Schnittstelle,**](/windows/desktop/api/wia_xp/nn-wia_xp-iwiaitem) die das gültige Stammelement in der Anwendungselementstruktur darstellt.
 
 </dd> <dt>
 
@@ -85,15 +85,15 @@ Typ: **DWORD**
 
 </dd> <dd>
 
-Gibt einen Satz von Flags an, die den Vorgang des Dialog Felds steuern. Kann auf einen der folgenden Werte festgelegt werden:
+Gibt einen Satz von Flags an, die den Vorgang des Dialogfelds steuern. Kann auf einen der folgenden Werte festgelegt werden:
 
 
 
 | Flag                                 | Bedeutung                                                                                                                                                                                     |
 |--------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 0                                    | Standardverhalten.                                                                                                                                                                           |
-| WIA- \_ Geräte \_ Dialogfeld, \_ einzelnes \_ Bild   | Beschränken Sie die Bildauswahl auf ein einzelnes Bild im Dialogfeld Geräte Abbild Erfassung.                                                                                                      |
-| Dialog Feld "WIA- \_ Gerät" \_ \_ verwenden \_ allgemeine \_ Benutzeroberfläche | Verwenden Sie die Benutzeroberfläche des Systems, falls verfügbar, anstelle der vom Hersteller bereitgestellten Benutzeroberfläche. Wenn die Benutzeroberfläche des Systems nicht verfügbar ist, wird die Benutzeroberfläche des Anbieters verwendet. Wenn keine Benutzeroberfläche verfügbar ist, gibt die Funktion E \_ notimpl zurück. |
+| \_WIA-GERÄTEDIALOGFELD \_ \_ – \_ EINZELNES IMAGE   | Beschränken Sie die Bildauswahl auf ein einzelnes Bild im Dialogfeld "Gerätebilderfassung".                                                                                                      |
+| DIALOGFELD \_ "WIA-GERÄT" \_ VERWENDEN DER ALLGEMEINEN \_ \_ \_ BENUTZEROBERFLÄCHE | Verwenden Sie die Systembenutzeroberfläche (falls verfügbar) anstelle der vom Anbieter bereitgestellten Benutzeroberfläche. Wenn die Systembenutzeroberfläche nicht verfügbar ist, wird die Benutzeroberfläche des Anbieters verwendet. Wenn keine der Benutzeroberflächen verfügbar ist, gibt die Funktion E \_ NOTIMPL zurück. |
 
 
 
@@ -101,36 +101,36 @@ Gibt einen Satz von Flags an, die den Vorgang des Dialog Felds steuern. Kann auf
 
 </dd> <dt>
 
-**lintent**
+**lIntent**
 </dt> <dd>
 
-Type: **Long**
+Typ: **LONG**
 
 </dd> <dd>
 
-Gibt an, welche Art von Daten das Image darstellen soll. Eine Liste der Abbild Intent-Werte finden Sie unter [**Bild beabsichtigte Konstanten**](-wia-imageintentconstants.md).
+Gibt an, welche Art von Daten das Bild darstellen soll. Eine Liste der Bildabsichtwerte finden Sie unter [**Bildabsichtkonstanten.**](-wia-imageintentconstants.md)
 
 </dd> <dt>
 
-**litemcount**
+**lItemCount**
 </dt> <dd>
 
-Type: **Long**
+Typ: **LONG**
 
 </dd> <dd>
 
-Empfängt die Anzahl von Elementen im Array, die durch den **ppwiaitem** -Parameter angegeben werden.
+Empfängt die Anzahl der Elemente im Array, die durch den **ppWiaItem-Parameter** angegeben werden.
 
 </dd> <dt>
 
-**ppwiaitem**
+**ppWiaItem**
 </dt> <dd>
 
-Typ: **[ **iwiaitem**](/windows/desktop/api/wia_xp/nn-wia_xp-iwiaitem)\*\***
+Typ: **[ **IWiaItem**](/windows/desktop/api/wia_xp/nn-wia_xp-iwiaitem)\*\***
 
 </dd> <dd>
 
-Empfängt die Adresse eines Arrays von Zeigern auf [**iwiaitem**](/windows/desktop/api/wia_xp/nn-wia_xp-iwiaitem) -Schnittstellen.
+Empfängt die Adresse eines Arrays von Zeigern auf [**IWiaItem-Schnittstellen.**](/windows/desktop/api/wia_xp/nn-wia_xp-iwiaitem)
 
 </dd> </dl>
 
@@ -138,11 +138,11 @@ Empfängt die Adresse eines Arrays von Zeigern auf [**iwiaitem**](/windows/deskt
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                 |
-| Header<br/>                   | <dl> <dt>Wiadefd. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ Vista-Desktop-Apps\]<br/>                                       |
+| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2008-Desktop-Apps\]<br/>                                 |
+| Header<br/>                   | <dl> <dt>Wiadefd.h</dt> </dl> |
 
 
 

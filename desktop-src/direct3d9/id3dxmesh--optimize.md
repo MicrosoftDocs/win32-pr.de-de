@@ -1,7 +1,7 @@
 ---
-description: Generiert ein neues Mesh mit neu bestellten Gesichtern und Scheitel Punkten, um die Zeichnungs Leistung zu optimieren.
+description: 'ID3DXMesh::Optimize-Methode: Generiert ein neues Gitternetz mit neu angeordneten Gesichtern und Scheitelungen, um die Zeichnungsleistung zu optimieren.'
 ms.assetid: 6a9bf7b9-2cb9-4b42-92d9-2a121ff79284
-title: 'ID3DXMesh:: optimiert-Methode (D3DX9Mesh. h)'
+title: ID3DXMesh::Optimize-Methode (D3DX9Mesh.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 7752e08236094d7038a5e77ac1a679f787305022
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: debec1c0ee54e612ab0de832dbc5c2481dcefad8
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103961770"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108093308"
 ---
-# <a name="id3dxmeshoptimize-method"></a>ID3DXMesh:: optimiert-Methode
+# <a name="id3dxmeshoptimize-method"></a>ID3DXMesh::Optimize-Methode
 
-Generiert ein neues Mesh mit neu bestellten Gesichtern und Scheitel Punkten, um die Zeichnungs Leistung zu optimieren.
+Generiert ein neues Gitternetz mit neu angeordneten Gesichtern und Scheitelungen, um die Zeichnungsleistung zu optimieren.
 
 ## <a name="syntax"></a>Syntax
 
@@ -50,52 +50,52 @@ HRESULT Optimize(
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
-Gibt den Typ der auszuführenden Optimierung an. Dieser Parameter kann auf eine Kombination aus einem oder mehreren Flags aus [**D3DXMESHOPT**](./d3dxmeshopt.md) und [**D3DXMESH**](./d3dxmesh.md) festgelegt werden (mit Ausnahme von D3DXMESH \_ 32 Bit, D3DXMESH \_ IB \_ Write only und D3DXMESH \_ Write).
+Gibt den Typ der durchzuführenden Optimierung an. Dieser Parameter kann auf eine Kombination aus mindestens einem Flag von [**D3DXMESHOPT**](./d3dxmeshopt.md) und [**D3DXMESH**](./d3dxmesh.md) festgelegt werden (außer D3DXMESH \_ 32BIT, D3DXMESH \_ IB WRITEONLY und \_ D3DXMESH \_ WRITEONLY).
 
 </dd> <dt>
 
-*padjackocyin* \[ in\]
+*pAdjacencyIn* \[ In\]
 </dt> <dd>
 
-Typ: Konstante **[**DWORD**](../winprog/windows-data-types.md) \***
+Typ: **const [**DWORD**](../winprog/windows-data-types.md) \***
 
-Ein Zeiger auf ein Array von drei DWORDs pro Gesicht, das die drei Nachbarn für jedes Gesicht im quellmesh angibt. Wenn der Rand keine angrenzenden Gesichter hat, ist der Wert 0xFFFFFFFF. Siehe Hinweise.
-
-</dd> <dt>
-
-*padjacumcyout* \[ in, out\]
-</dt> <dd>
-
-Typ: **[ **DWORD**](../winprog/windows-data-types.md)\***
-
-Ein Zeiger auf ein Array von drei DWORDs pro Gesicht, das die drei Nachbarn für jedes Gesicht im optimierten Mesh angibt. Wenn der Rand keine angrenzenden Gesichter hat, ist der Wert 0xFFFFFFFF.
+Zeiger auf ein Array von drei DWORDs pro Gesicht, das die drei Nachbarn für jedes Gesicht im Quellgitter angibt. Wenn der Rand keine angrenzenden Gesichter hat, wird der Wert 0xffffffff. Siehe Hinweise.
 
 </dd> <dt>
 
-*pfakeremap* \[ in, out\]
+*pAdjacencyOut* \[ in, out\]
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)\***
 
-Ein Array von DWords, eines pro Gesicht, das die ursprüngliche Gitterfläche angibt, die den einzelnen Flächen im optimierten Mesh entspricht. Wenn der für dieses Argument angegebene Wert **null** ist, werden keine Gesichts Umwandlungs Daten zurückgegeben.
+Zeiger auf ein Array von drei DWORDs pro Gesicht, das die drei Nachbarn für jedes Gesicht im optimierten Gitter angibt. Wenn der Rand keine angrenzenden Gesichter hat, wird der Wert 0xffffffff.
 
 </dd> <dt>
 
-*ppvertexremap* \[ vorgenommen\]
+*pFaceRemap* \[ in, out\]
+</dt> <dd>
+
+Typ: **[ **DWORD**](../winprog/windows-data-types.md)\***
+
+Ein Array von DWORDs pro Gesicht, das das ursprüngliche Gitternetzgesicht identifiziert, das jedem Gesicht im optimierten Gitter entspricht. Wenn der für dieses Argument angegebene Wert **NULL ist,** werden keine Gesichtszuordnungsdaten zurückgegeben.
+
+</dd> <dt>
+
+*ppVertexRemap* \[ out\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXBUFFER**](id3dxbuffer.md)\***
 
-Adresse eines Zeigers auf eine [**ID3DXBuffer**](id3dxbuffer.md) -Schnittstelle, die ein DWORD für jeden Scheitelpunkt enthält, der angibt, wie die neuen Scheitel Punkten den alten Scheitel Punkten zugeordnet werden. Diese Neuzuordnung ist nützlich, wenn Sie externe Daten basierend auf der neuen Scheitelpunkt Zuordnung ändern müssen.
+Adresse eines Zeigers auf eine [**ID3DXBuffer-Schnittstelle,**](id3dxbuffer.md) die ein DWORD für jeden Scheitelpunkt enthält, der angibt, wie die neuen Scheitelpunkte den alten Scheitelpunkten zugeordnet werden. Diese Neuzuordnung ist nützlich, wenn Sie externe Daten basierend auf der neuen Scheitelpunktzuordnung ändern müssen.
 
 </dd> <dt>
 
-*ppoptmesh* \[ vorgenommen\]
+*ppOptMesh* \[ out\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXMESH**](id3dxmesh.md)\***
 
-Adresse eines Zeigers auf eine [**ID3DXMesh**](id3dxmesh.md) -Schnittstelle, die das optimierte Mesh darstellt.
+Adresse eines Zeigers auf eine [**ID3DXMesh-Schnittstelle,**](id3dxmesh.md) die das optimierte Gitternetz darstellt.
 
 </dd> </dl>
 
@@ -103,33 +103,33 @@ Adresse eines Zeigers auf eine [**ID3DXMesh**](id3dxmesh.md) -Schnittstelle, die
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden sein: D3DERR \_ invalidcall, E \_ outo fmemory.
+Wenn die Methode erfolgreich ist, lautet der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: D3DERR \_ INVALIDCALL, E \_ OUTOFMEMORY.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Diese Methode generiert ein neues Mesh. Bevor Sie optimieren ausführen, muss eine Anwendung durch Aufrufen von [**ID3DXBaseMesh:: generateency**](id3dxbasemesh--generateadjacency.md)einen Ereignis Puffer generieren. Der zutreffende Puffer enthält Informationen zu den Daten, z. b. eine Liste der Kanten und die Gesichter, die nebeneinander angeordnet sind.
+Diese Methode generiert ein neues Gitternetz. Vor dem Ausführen von Optimize muss eine Anwendung einen Adjazenzpuffer generieren, indem [**ID3DXBaseMesh::GenerateAdjaency**](id3dxbasemesh--generateadjacency.md)aufgerufen wird. Der Adjazenzpuffer enthält Adjazenzdaten, z. B. eine Liste von Kanten und den nebeneinander liegenden Gesichtern.
 
-Diese Methode ähnelt der [**ID3DXBaseMesh:: clonemesh**](id3dxbasemesh--clonemesh.md) -Methode, mit der Ausnahme, dass Sie beim Erzeugen des neuen Klon des Netzes eine Optimierung durchführen kann. Das Ausgabe Mesh erbt alle Erstellungs Parameter des eingabemesh.
+Diese Methode ist der [**ID3DXBaseMesh::CloneMesh-Methode**](id3dxbasemesh--clonemesh.md) sehr ähnlich, mit der Ausnahme, dass sie beim Generieren des neuen Klons des Gitternetzes Optimierungen ausführen kann. Das Ausgabegitternetz erbt alle Erstellungsparameter des Eingabegitters.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Mesh. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX9Mesh.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [ID3DXMesh](id3dxmesh.md)
 </dt> <dt>
 
-[**ID3DXMesh:: optimizeingeplace**](id3dxmesh--optimizeinplace.md)
+[**ID3DXMesh::OptimizeInplace**](id3dxmesh--optimizeinplace.md)
 </dt> </dl>
 
  
