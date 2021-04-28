@@ -1,40 +1,40 @@
 ---
-description: Mit der Windows-API (Application Programming Interface) können Sie Desktop-und Server Anwendungen entwickeln, die unter allen Windows-Versionen erfolgreich ausgeführt werden, und dabei die Features und Funktionen nutzen, die für jede Version eindeutig sind.
+description: Mit der Windows-API (Application Programming Interface, Anwendungsprogrammierschnittstelle) können Sie Desktop- und Serveranwendungen entwickeln, die unter allen Versionen von Windows erfolgreich ausgeführt werden können, während Sie gleichzeitig die Features und Funktionen nutzen, die für jede Version eindeutig sind.
 ms.assetid: 00b345ad-4c53-4fa5-8b7a-d3b3377cb30a
 title: API-Index
 ms.topic: article
 ms.date: 04/19/2019
 ms.custom: 19H1
-ms.openlocfilehash: 66e4be746ee8d62f2458eb85c84ca901d4f0c5ef
-ms.sourcegitcommit: 0c786b1682063d0cae0fc43180945183fa2c7981
+ms.openlocfilehash: 0c72c14bffa43150357d6bfe0d025d515fef9f2f
+ms.sourcegitcommit: 133954d5dbcd5b2b3b50c8efd16cd101278fc1db
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "104391218"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108172492"
 ---
-# <a name="api-index-for-desktop-windows-applications"></a>API-Index für Windows-Desktop Anwendungen
+# <a name="api-index-for-desktop-windows-applications"></a>API-Index für Windows-Desktopanwendungen
 
-Dieser Artikel enthält Links zur Referenz Dokumentation für APIs, die in Desktop-Windows-Apps verwendet werden können.
+Dieser Artikel enthält Links zur Referenzdokumentation für APIs, die in Windows-Desktop-Apps verwendet werden können.
 
 ## <a name="win32-windows-api"></a>Win32 (Windows-API)
 
-Die Win32-API (auch als Windows-API bezeichnet) ist die Native Plattform für Windows-apps. Diese API eignet sich am besten für Desktop-Apps, die direkten Zugriff auf System Features und Hardware benötigen. Die Windows-API kann in allen Desktop-Apps verwendet werden, und die gleichen Funktionen werden im Allgemeinen auf 32-Bit-und 64-Bit-Fenstern unterstützt.
+Die Win32-API (auch als Windows-API bezeichnet) ist die native Plattform für Windows-Apps. Diese API eignet sich am besten für Desktop-Apps, die direkten Zugriff auf Systemfeatures und Hardware benötigen. Die Windows-API kann in allen Desktop-Apps verwendet werden, und die gleichen Funktionen werden in der Regel unter 32-Bit- und 64-Bit-Windows unterstützt.
 
-* [Win32-API-Referenz nach Funktion](windows-api-list.md)
-* [Win32-API-Verweis per Header](/windows/win32/api/)
+* [Win32-API-Referenz nach Feature](windows-api-list.md)
+* [Win32-API-Verweis nach Header](/windows/win32/api/)
 * [Win32- und COM-APIs für UWP-Apps](/uwp/win32-and-com/win32-and-com-for-uwp-apps)
 * [Übergeordnete Windows-Bibliothek](windows-umbrella-libraries.md)
 * [Windows-API-Sätze](windows-apisets.md)
 
 ## <a name="windows-runtime-winrt"></a>Windows-Runtime (WinRT)
 
-WinRT ist die führende Plattform für Windows 10-apps und-Spiele, einschließlich Desktop-Apps. Die WinRT-API eignet sich sowohl für Native C++ als auch für verwaltete Desktop-Apps, die eine ausgereifte Benutzeroberfläche, Formatvorlagen Anpassung und grafikintensive Szenarios erfordern.
+WinRT ist die führende Edgeplattform für Windows 10 Apps und Spiele, einschließlich Desktop-Apps. Die WinRT-API eignet sich sowohl für native C++- als auch für verwaltete Desktop-Apps, die eine anspruchsvolle Benutzeroberfläche, Stilanpassung und grafikintensive Szenarien erfordern.
 
 * [WinRT-API-Referenz](/uwp/api/)
-* [WinRT-APIs, die von Win32-, WPF-und Windows Forms Desktop-Apps aufgerufen werden können](uwp-apis-callable-from-a-classic-desktop-app.md)
+* [WinRT-APIs, die über eine Desktop-App aufgerufen werden können](uwp-apis-callable-from-a-classic-desktop-app.md)
 
 ## <a name="net"></a>.NET
 
-Die .NET-Klassenbibliotheken ermöglichen den Zugriff auf die Windows-System-und Benutzeroberflächen Features für verwaltete Desktop-Apps, einschließlich WPF-und Windows Forms-apps.
+Die .NET-Klassenbibliotheken bieten Zugriff auf Windows-System- und UI-Features für verwaltete Desktop-Apps, einschließlich WPF- und Windows Forms-Apps.
 
 * [.NET API](/dotnet/api/index)

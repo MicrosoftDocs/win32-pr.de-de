@@ -1,28 +1,18 @@
 ---
-description: Die allgemeine Regel ist, dass eine Desktop-App eine Windows-Runtime (WinRT)-API aufgerufen werden kann. Einige APIs, einschließlich der XAML-UI-APIs, erfordern jedoch, dass die aufrufenden App über eine Paket Identität verfügt.
+description: Die allgemeine Regel ist, dass eine Desktop-App eine winRT-API (Windows-Runtime) aufrufen kann. Einige APIs, einschließlich der XAML-UI-APIs, erfordern jedoch, dass die aufrufende App über eine Paketidentität verfügt.
 ms.assetid: F3808C28-72DE-49B5-A389-EB085EFC02CC
-title: WinRT-APIs, die von einer Desktop-App aufgerufen werden können
+title: WinRT-APIs, die über eine Desktop-App aufgerufen werden können
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9083fbfb16391c626f49b79176fed7a81068c028
-ms.sourcegitcommit: 0c786b1682063d0cae0fc43180945183fa2c7981
+ms.openlocfilehash: 36f99cca14c066f372ad7fd417e04137a62ae628
+ms.sourcegitcommit: 133954d5dbcd5b2b3b50c8efd16cd101278fc1db
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "104039833"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108172482"
 ---
-# <a name="calling-winrt-apis-from-a-desktop-app"></a>Aufrufen von WinRT-APIs aus einer Desktop-App
+# <a name="winrt-apis-callable-from-a-desktop-app"></a>WinRT-APIs, die über eine Desktop-App aufgerufen werden können
 
-Die allgemeine Regel ist, dass eine Desktop-App eine WinRT-API aufgerufen werden kann. Einige APIs, einschließlich der XAML-UI-APIs, erfordern jedoch, dass die aufrufenden App über eine Paket Identität verfügt. UWP-apps verfügen über ein klar definiertes App-Modell, und Sie verfügen über eine Paket Identität. Die anderen Typen von Desktop-apps haben weder ein klar definiertes App-Modell noch eine Paket Identität. Wenn also eine API eine Paket Identität erfordert, kann Sie von einer WPF-, Windows Forms-oder Win32-app nur aufgerufen werden, wenn die APP [in einem msix-Paket verpackt ist](/windows/msix/desktop/desktop-to-uwp-root).
+Die meisten [winRT-APIs (Windows-Runtime)](/uwp/api/) können von Desktop-Apps (.NET und native c++) verwendet werden. Einige WinRT-Klassen sind jedoch für konzipiert und werden nur für die Verwendung in UWP-Apps unterstützt. Dazu gehören [CoreDispatcher,](/uwp/api/Windows.UI.Core.CoreDispatcher) [CoreWindow,](/uwp/api/Windows.UI.Core.CoreWindow) [ApplicationView](/uwp/api/windows.ui.viewmanagement.applicationview)und einige verwandte Klassen. Andere WinRT-Klassen funktionieren in Desktop-Apps mit Ausnahme bestimmter Member.
 
-## <a name="the-dualapipartition-attribute"></a>Das dualapipartition-Attribut
-
-Dies ist der Prozess, der immer dann befolgt werden soll, wenn ein bestimmter WinRT-Vorgang von Ihrer Desktop-App aus aufgerufen werden soll. Durch diesen Vorgang wird die Frage beantwortet, ob die API von einer Desktop-App aufgerufen werden darf. Besuchen Sie zunächst die [Windows-API-Referenz für Windows-Runtime-apps](/uwp/), suchen Sie das Referenz Thema für die Klasse oder die Member-API, an der Sie interessiert sind, und überprüfen Sie, ob das [**dualapipartition**](/uwp/api/Windows.Foundation.Metadata.DualApiPartitionAttribute) -Attribut im Abschnitt Attribute aufgeführt ist.
-
-## <a name="if-the-dualapipartition-attribute-is-listed"></a>Wenn das dualapipartition-Attribut aufgelistet ist
-
-Wenn das Attribut "dualapipartition" aufgeführt wird, benötigt die API nicht, dass die aufrufende App über eine Paket Identität verfügt, und die API kann von jeder Desktop-App aus aufgerufen werden. [**Windows. Devices. geoloation. GeoLocator**](/uwp/api/Windows.Devices.Geolocation.Geolocator) ist ein Beispiel. eine APP muss nicht eindeutig identifiziert werden, um Standort Aufgaben ausführen zu können.
-
-## <a name="if-the-dualapipartition-attribute-is-not-listed"></a>Wenn das dualapipartition-Attribut nicht aufgeführt ist
-
-Wenn das Attribut "dualapipartition" nicht aufgeführt ist, benötigt die API die aufrufenden App für eine Paket Identität. Daher ist eine WPF-, Windows Forms-oder Win32-APP nicht berechtigt, die API aufzurufen, es sei denn, die APP wurde in eine UWP-App konvertiert. [**Windows. UI. XAML. Controls. Button**](/uwp/api/Windows.UI.Xaml.Controls.Button) ist ein Beispiel.
+Weitere Informationen finden Sie unter [Windows-Runtime-APIs, die in Desktop-Apps nicht unterstützt werden.](/windows/apps/desktop/modernize/desktop-to-uwp-supported-api) Sofern verfügbar, werden in diesem Artikel alternative APIs vorgeschlagen, um die gleiche Funktionalität wie die nicht unterstützten APIs zu erreichen.
