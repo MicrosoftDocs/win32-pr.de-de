@@ -1,7 +1,7 @@
 ---
-description: Konstruktormethode.
+description: CBaseStreamControl.CBaseStreamControl-Konstruktor – Konstruktormethode.
 ms.assetid: c0eff80f-04d3-4919-bb27-1b76c1bd1cce
-title: Cbasestreamcontrol. cbasestreamcontrol-Konstruktor ("stranmctl. h")
+title: CBaseStreamControl.CBaseStreamControl-Konstruktor (Strmctl.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,14 +16,14 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: d325a48476fe2a80b7424850eb71a9d667cb60e1
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 4c6521bec65e0182b8eb48eb5d3efe9ea609c6a7
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106356403"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108095848"
 ---
-# <a name="cbasestreamcontrolcbasestreamcontrol-constructor"></a>Cbasestreamcontrol. cbasestreamcontrol-Konstruktor
+# <a name="cbasestreamcontrolcbasestreamcontrol-constructor"></a>CBaseStreamControl.CBaseStreamControl-Konstruktor
 
 Konstruktormethode.
 
@@ -42,10 +42,10 @@ CBaseStreamControl(
 
 <dl> <dt>
 
-*PHR* 
+*Phr* 
 </dt> <dd>
 
-Zeiger auf einen **HRESULT** -Wert. Wenn der Konstruktor ausfällt, empfängt dieser Parameter einen Fehlercode. Wenn dies auftritt, befindet sich das Objekt nicht in einem gültigen Zustand.
+Zeiger auf einen **HRESULT-Wert.** Wenn der Konstruktor fehlschlägt, empfängt dieser Parameter einen Fehlercode. In diesem Fall befindet sich das Objekt nicht in einem gültigen Zustand.
 
 </dd> </dl>
 
@@ -53,18 +53,18 @@ Zeiger auf einen **HRESULT** -Wert. Wenn der Konstruktor ausfällt, empfängt di
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>"Strauch. h" (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Strmctl.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbasestreamcontrol-Klasse**](cbasestreamcontrol.md)
+[**CBaseStreamControl-Klasse**](cbasestreamcontrol.md)
 </dt> </dl>
 
  

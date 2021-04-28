@@ -1,7 +1,7 @@
 ---
-description: Aktiviert und deaktiviert die Auflistung von Metriken.
+description: 'ControlMetricsByClass-Methode der CIM_MetricService-Klasse: Aktiviert und deaktiviert die Sammlung von Metriken.'
 ms.assetid: 1a53c7a7-c0fc-49d7-ad1b-d185d776ede5
-title: Controlmetricsbyclass-Methode der CIM_MetricService-Klasse
+title: ControlMetricsByClass-Methode der CIM_MetricService-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 46e961b298c212a7635599818fb1f7079805372d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: fda8407d49ed3eec7ff86abc94ced6b63d2d77c6
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106362264"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108109708"
 ---
-# <a name="controlmetricsbyclass-method-of-the-cim_metricservice-class"></a>Controlmetricsbyclass-Methode der CIM \_ metricservice-Klasse
+# <a name="controlmetricsbyclass-method-of-the-cim_metricservice-class"></a>ControlMetricsByClass-Methode der CIM \_ MetricService-Klasse
 
-Aktiviert und deaktiviert die Auflistung von Metriken. **Controlmetricsbyclass** wird verwendet, um die Sammlung der einzelnen metrikmetriken für alle Instanzen einer Klasse oder die Auflistung einer bestimmten Metrik für alle Instanzen einer Klasse zu steuern.
+Aktiviert und deaktiviert die Sammlung von Metriken. **ControlMetricsByClass** wird verwendet, um die Auflistung der einzelnen Metriktypen für alle Instanzen einer Klasse oder die Sammlung einer bestimmten Metrik für alle Instanzen einer Klasse zu steuern.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,24 +41,24 @@ uint32 ControlMetricsByClass(
 
 <dl> <dt>
 
-*Betreff* \[ in\]
+*Betreff* \[ In\]
 </dt> <dd>
 
-Identifiziert die [**CIM \_ managedelta ement**](cim-managedelement.md) -Klasse, für die Metriken gesteuert werden.
+Identifiziert die [**CIM \_ ManagedElement-Klasse,**](cim-managedelement.md) für die Metriken gesteuert werden.
 
 </dd> <dt>
 
-*Definition* \[ in\]
+*Definition* \[ In\]
 </dt> <dd>
 
-Gibt eine [**CIM- \_ basemetricdefinition**](cim-basemetricdefinition.md) an, für die Metriken gesteuert werden.
+Identifiziert eine [**CIM \_ BaseMetricDefinition,**](cim-basemetricdefinition.md) für die Metriken gesteuert werden.
 
 </dd> <dt>
 
-*Metriccollectionaktivierte* \[ in\]
+*MetricCollectionEnabled* \[ In\]
 </dt> <dd>
 
-Gibt den für die Metriken auszuführenden gewünschten Vorgang an.
+Gibt den gewünschten Vorgang an, der für die Metriken ausgeführt werden soll.
 
 <dt>
 
@@ -85,21 +85,21 @@ Gibt den für die Metriken auszuführenden gewünschten Vorgang an.
 
 <span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>
 
-**DMTF reserviert** (..)
+**DMTF Reserved** (..)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Vendor_Reserved"></span><span id="vendor_reserved"></span><span id="VENDOR_RESERVED"></span>
 
-**Anbieter reserviert** (32768.65535)
+**Reservierter Anbieter** (32768..65535)
 
 
 </dt> <dd></dd> </dl> </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg 0 (null) zurück. Andernfalls wird ein Fehler zurückgegeben.
+Gibt bei Erfolg den Wert 0 zurück. andernfalls wird ein Fehler zurückgegeben.
 
 <dl> <dt>
 
@@ -109,34 +109,34 @@ Gibt bei Erfolg 0 (null) zurück. Andernfalls wird ein Fehler zurückgegeben.
 **Nicht unterstützt** (1)
 </dt> <dt>
 
-Fehler **(2** )
+**Fehler** (2)
 </dt> <dt>
 
 **Reservierte Methode** (..)
 </dt> <dt>
 
-**Hersteller spezifisch** (32768.65535)
+**Herstellerspezifisch** (32768..65535)
 </dt> </dl>
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8.1<br/>                                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2<br/>                                                                       |
 | Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**CIM- \_ metricservice**](cim-metricservice.md)
+[**CIM \_ MetricService**](cim-metricservice.md)
 </dt> </dl>
 
  

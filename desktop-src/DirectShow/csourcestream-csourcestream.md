@@ -1,7 +1,7 @@
 ---
-description: Konstruktormethode.
+description: 'CSourceStream.CSourceStream-Konstruktor : Konstruktormethode.'
 ms.assetid: 9078b2f5-b11e-4780-8143-6738e9df4f4b
-title: Csourcestream. csourcestream-Konstruktor (Source. h)
+title: CSourceStream.CSourceStream-Konstruktor (Source.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,14 +16,14 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: a8671e939364d1c0cd22796b1518313002b5eb33
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 75d94bb89ca109c2a7974c294153d46235f92f23
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358048"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108085188"
 ---
-# <a name="csourcestreamcsourcestream-constructor"></a>Csourcestream. csourcestream-Konstruktor
+# <a name="csourcestreamcsourcestream-constructor"></a>CSourceStream.CSourceStream-Konstruktor
 
 Konstruktormethode.
 
@@ -45,58 +45,58 @@ CSourceStream(
 
 <dl> <dt>
 
-*pobjectname* 
+*pObjectName* 
 </dt> <dd>
 
-Zeiger auf eine Zeichenfolge, die den debugnamen der PIN enthält.
+Zeiger auf eine Zeichenfolge, die den Debugnamen des Pins enthält.
 
 </dd> <dt>
 
-*PHR* 
+*Phr* 
 </dt> <dd>
 
-Ein Zeiger auf eine Variable, die einen **HRESULT** -Wert empfängt, der angibt, ob die Methode erfolgreich war oder fehlgeschlagen ist. Initialisieren Sie den Wert \_ vor dem Erstellen des-Objekts auf S OK. Der Wert wird nur geändert, wenn ein Fehler auftritt.
+Zeiger auf eine Variable, die einen **HRESULT-Wert** empfängt, der den Erfolg oder Fehler der Methode angibt. Initialisieren Sie den Wert vor dem Erstellen des -Objekts mit S \_ OK. Der Wert wird nur geändert, wenn ein Fehler auftritt.
 
 </dd> <dt>
 
-*PMS* 
+*Pms* 
 </dt> <dd>
 
-Zeiger auf den [**CSource**](csource.md) -Filter, der diese Pin erstellt hat.
+Zeiger auf den [**CSource-Filter,**](csource.md) der diese Stecknadel erstellt hat.
 
 </dd> <dt>
 
 *pName* 
 </dt> <dd>
 
-Zeiger auf eine Zeichenfolge, die den Namen der PIN enthält.
+Zeiger auf eine Zeichenfolge, die den Namen der Stecknadel enthält.
 
 </dd> </dl>
 
 ## <a name="remarks"></a>Bemerkungen
 
-Die im *pobjectname* -Parameter angegebene Zeichenfolge wird nur für Debugzwecke verwendet. Weitere Informationen finden Sie unter [**cbaseobject**](cbaseobject.md).
+Die im *pObjectName-Parameter* angegebene Zeichenfolge wird nur zu Debugzwecken verwendet. Weitere Informationen finden Sie unter [**CBaseObject.**](cbaseobject.md)
 
-Die im *PName* -Parameter angegebene Zeichenfolge ist der Name, der von der [**IPin:: querypininfo**](/windows/desktop/api/Strmif/nf-strmif-ipin-querypininfo) -Methode zurückgegeben wird. Die- `CSourceStream` Klasse verwendet diesen Namen nicht für den PIN-Bezeichner, der von der [**csourcestream:: QueryId**](csourcestream-queryid.md) -Methode zurückgegeben wird. Stattdessen berechnet **QueryId** einen PIN-Bezeichner basierend auf der PIN-Nummer. (PIN-Bezeichner unterstützen die Diagramm Persistenz. Weitere Informationen finden Sie unter [**IPin:: QueryId**](/windows/desktop/api/Strmif/nf-strmif-ipin-queryid).)
+Die im *pName-Parameter* angegebene Zeichenfolge ist der Name, der von der [**IPin::QueryPinInfo-Methode**](/windows/desktop/api/Strmif/nf-strmif-ipin-querypininfo) zurückgegeben wird. Die `CSourceStream` -Klasse verwendet diesen Namen nicht für den pin-Bezeichner, der von der [**CSourceStream::QueryId-Methode**](csourcestream-queryid.md) zurückgegeben wird. Stattdessen berechnet **QueryId** einen Pinbezeichner basierend auf der Pinnummer. (Stecknadelbezeichner unterstützen die Graphpersistenz. Weitere Informationen finden Sie unter [**IPin::QueryId**](/windows/desktop/api/Strmif/nf-strmif-ipin-queryid).)
 
-Der Konstruktor fügt die PIN automatisch dem besitzenden Filter hinzu, indem [**CSource:: addpin**](csource-addpin.md)aufgerufen wird.
+Der Konstruktor fügt den Pin automatisch dem besitzenden Filter hinzu, indem er [**CSource::AddPin aufruft.**](csource-addpin.md)
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Source. h (Include Streams. h)</dt> </dl>                                                                                    |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Source.h (include Streams.h)</dt> </dl>                                                                                    |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Csourcestream-Klasse**](csourcestream.md)
+[**CSourceStream-Klasse**](csourcestream.md)
 </dt> </dl>
 
  

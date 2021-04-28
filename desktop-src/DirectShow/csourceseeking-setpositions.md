@@ -1,7 +1,7 @@
 ---
-description: 'Die setpositions-Methode legt die aktuelle Position und die Position des Stopps fest. Diese Methode implementiert die imediaseeking:: setpositions-Methode.'
+description: 'CSourceSeeking.SetPositions-Methode: Die SetPositions-Methode legt die aktuelle Position und die Stoppposition fest. Diese Methode implementiert die IMediaSeeking::SetPositions-Methode.'
 ms.assetid: 4359fe1f-f922-4a4d-beaa-8e13c72f407c
-title: Csourceseeking. setpositions-Methode (ctlutil. h)
+title: CSourceSeeking.SetPositions-Methode (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 342ca7d85fe9358b914709b7887216b62e03521d
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: b09dd92b97166b8d973328ec95e466abbda116bd
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106357691"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108085168"
 ---
-# <a name="csourceseekingsetpositions-method"></a>Csourceseeking. setpositions-Methode
+# <a name="csourceseekingsetpositions-method"></a>CSourceSeeking.SetPositions-Methode
 
-Die `SetPositions` -Methode legt die aktuelle Position und die Position des Stopps fest. Diese Methode implementiert die [**imediaseeking:: setpositions**](/windows/desktop/api/Strmif/nf-strmif-imediaseeking-setpositions) -Methode.
+Die `SetPositions` -Methode legt die aktuelle Position und die Stoppposition fest. Diese Methode implementiert die [**IMediaSeeking::SetPositions-Methode.**](/windows/desktop/api/Strmif/nf-strmif-imediaseeking-setpositions)
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,45 +45,45 @@ HRESULT SetPositions(
 
 <dl> <dt>
 
-*pcurrent* 
+*pCurrent* 
 </dt> <dd>
 
-Ein Zeiger auf eine Variable, die die aktuelle Position angibt.
+Zeiger auf eine Variable, die die aktuelle Position angibt.
 
 </dd> <dt>
 
-*Currentflags* 
+*CurrentFlags* 
 </dt> <dd>
 
-Bitweise Kombination von-Flags. Siehe Hinweise.
+Bitweise Kombination von Flags. Siehe Hinweise.
 
 </dd> <dt>
 
-*pstopps* 
+*Pstop* 
 </dt> <dd>
 
-Ein Zeiger auf eine Variable, die die Endzeit in Einheiten des aktuellen Zeit Formats angibt.
+Zeiger auf eine Variable, die die Stoppzeit in Einheiten des aktuellen Zeitformats angibt.
 
 </dd> <dt>
 
-*Stopflags* 
+*StopFlags* 
 </dt> <dd>
 
-Bitweise Kombination von-Flags. Siehe Hinweise.
+Bitweise Kombination von Flags. Siehe Hinweise.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT** -Wert zurück. Mögliche Werte sind die in der folgenden Tabelle aufgeführten Werte.
+Gibt einen **HRESULT-Wert** zurück. Mögliche Werte sind die in der folgenden Tabelle aufgeführten Werte.
 
 
 
 | Rückgabecode                                                                                  | Beschreibung                          |
 |----------------------------------------------------------------------------------------------|--------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>         | Erfolg<br/>                   |
-| <dl> <dt>**E \_ invalidArg**</dt> </dl> | Ungültige Flags.<br/>             |
-| <dl> <dt>**E- \_ Zeiger**</dt> </dl>    | **Null** -Zeigerargument<br/> |
+| <dl> <dt>**E \_ INVALIDARG**</dt> </dl> | Ungültige Flags<br/>             |
+| <dl> <dt>**\_E-ZEIGER**</dt> </dl>    | **NULL-Zeigerargument**<br/> |
 
 
 
@@ -93,31 +93,31 @@ Gibt einen **HRESULT** -Wert zurück. Mögliche Werte sind die in der folgenden 
 
 Die folgenden Flags werden unterstützt:
 
--   \_Suchen von \_ noposior
--   \_Sucht nach \_ absolutepositionierung
--   \_Suche nach \_ relativepositionierung
--   \_ \_ Inkrementalpositionierung suchen (nur *Pend* )
+-   AM \_ SEEKING \_ NoPositioning
+-   AM \_ SEEKING \_ AbsolutePositioning
+-   AM \_ SEEKING \_ RelativePositioning
+-   AM \_ SEEKING \_ IncrementalPositioning ( nur *pStop)*
 
-Weitere Informationen finden Sie unter [**imediaseeking:: setpositions**](/windows/desktop/api/Strmif/nf-strmif-imediaseeking-setpositions).
+Weitere Informationen finden Sie unter [**IMediaSeeking::SetPositions.**](/windows/desktop/api/Strmif/nf-strmif-imediaseeking-setpositions)
 
-Diese Methode aktualisiert die Werte der [**csourceseeking:: m \_ rtstart**](csourceseeking-m-rtstart.md) -und [**csourceseeking:: m \_ rtstoppt**](csourceseeking-m-rtstop.md) -Element Variablen und ruft dann die reinen virtuellen Methoden [**csourceseeking:: changestart**](csourceseeking-changestart.md) und [**csourceseeking:: changestoppt**](csourceseeking-changestop.md)auf.
+Diese Methode aktualisiert die Werte der Membervariablen [**CSourceSeeking::m \_ rtStart**](csourceseeking-m-rtstart.md) und [**CSourceSeeking::m \_ rtStop**](csourceseeking-m-rtstop.md) und ruft dann die reinen virtuellen Methoden [**CSourceSeeking::ChangeStart**](csourceseeking-changestart.md) und [**CSourceSeeking::ChangeStop**](csourceseeking-changestop.md)auf.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Csourceseeking-Klasse**](csourceseeking.md)
+[**CSourceSeeking-Klasse**](csourceseeking.md)
 </dt> </dl>
 
  

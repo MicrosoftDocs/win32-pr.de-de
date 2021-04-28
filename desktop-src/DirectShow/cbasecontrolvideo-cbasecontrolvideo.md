@@ -1,7 +1,7 @@
 ---
-description: Konstruktormethode.
+description: 'CBaseControlVideo.CBaseControlVideo-Konstruktor : Konstruktormethode.'
 ms.assetid: 925c6c45-0990-4044-aca1-34f343f438b5
-title: Cbasecontrolvideo. cbasecontrolvideo-Konstruktor (ctlutil. h)
+title: CBaseControlVideo.CBaseControlVideo-Konstruktor (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,14 +16,14 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: dea0548079f8eb703f0c17557cab6a5e634cf242
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 389c05b5254326d2966799b857107e79792610e9
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106356457"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108096348"
 ---
-# <a name="cbasecontrolvideocbasecontrolvideo-constructor"></a>Cbasecontrolvideo. cbasecontrolvideo-Konstruktor
+# <a name="cbasecontrolvideocbasecontrolvideo-constructor"></a>CBaseControlVideo.CBaseControlVideo-Konstruktor
 
 Konstruktormethode.
 
@@ -49,11 +49,11 @@ CBaseControlVideo(
 *pFilter* 
 </dt> <dd>
 
-Zeiger auf das besitzende Medienfilter Objekt.
+Zeiger auf das besitzende Medienfilterobjekt.
 
 </dd> <dt>
 
-*pinterfakelock* 
+*pInterfaceLock* 
 </dt> <dd>
 
 Zeiger auf den kritischen Abschnitt, der zum Sperren verwendet werden soll.
@@ -67,42 +67,42 @@ Zeiger auf die Objektbeschreibung.
 
 </dd> <dt>
 
-*Kro* 
+*Punk* 
 </dt> <dd>
 
-Ein Zeiger auf die steuernde **IUnknown** -Schnittstelle, wenn das Objekt Teil eines Aggregats ist. Andernfalls muss **null** sein.
+Zeiger auf die steuernde **IUnknown-Schnittstelle,** wenn das Objekt Teil eines Aggregats ist; andernfalls muss NULL **sein.**
 
 </dd> <dt>
 
-*PHR* 
+*Phr* 
 </dt> <dd>
 
-Ein Zeiger auf eine Variable, die einen HRESULT-Wert empfängt, der angibt, ob die Konstruktormethode erfolgreich war oder fehlgeschlagen ist.
+Zeiger auf eine Variable, die einen HRESULT-Wert empfängt, der den Erfolg oder Fehler der Konstruktormethode angibt.
 
 </dd> </dl>
 
 ## <a name="remarks"></a>Bemerkungen
 
-Das-Objekt implementiert die [**ibasicvideo**](/windows/desktop/api/Control/nn-control-ibasicvideo) -Steuerelement Schnittstelle.
+Das -Objekt implementiert die [**IBasicVideo-Steuerelementschnittstelle.**](/windows/desktop/api/Control/nn-control-ibasicvideo)
 
-Alle Schnittstellen Methoden aus [**ibasicvideo**](/windows/desktop/api/Control/nn-control-ibasicvideo) , die von dieser Klasse implementiert werden, erfordern, dass der Filter ordnungsgemäß verbunden ist. Aus diesem Grund wird der Klasse eine PIN übergeben, mit der Sie synchronisiert werden soll. Wenn eine Schnittstellen Methode aufgerufen wird, bestimmt das Objekt, dass die PIN noch verbunden ist.
+Alle Schnittstellenmethoden von [**IBasicVideo,**](/windows/desktop/api/Control/nn-control-ibasicvideo) die diese Klasse implementiert, erfordern, dass der Filter ordnungsgemäß verbunden ist. Aus diesem Grund wird der Klasse ein Pin übergeben, mit dem sie synchronisiert werden soll. Jedes Mal, wenn eine Schnittstellenmethode aufgerufen wird, bestimmt das -Objekt, dass die Stecknadel weiterhin verbunden ist.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (einschließlich Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbasecontrolvideo-Klasse**](cbasecontrolvideo.md)
+[**CBaseControlVideo-Klasse**](cbasecontrolvideo.md)
 </dt> </dl>
 
  

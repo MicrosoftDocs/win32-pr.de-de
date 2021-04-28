@@ -1,7 +1,7 @@
 ---
-description: Enthält eine Liste der Profile, die auf Domänen-oder Computer Ebene angewendet werden sollen.
+description: 'profileList(WLANPolicy)-Element: Enthält eine Liste von Profilen, die auf Domänen- oder Computerebene angewendet werden sollen.'
 ms.assetid: b78cb095-a1da-4b1b-91d3-c5085325be05
-title: ProfileList-Element (wlanpolicy)
+title: profileList-Element (WLANPolicy)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,18 +12,18 @@ api_name:
 api_type:
 - Schema
 api_location: ''
-ms.openlocfilehash: 9c11fbeb41b43faa31b170dcc856bb0823631001
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 4c7478f38ba7336738325bac6872866cd570288b
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106366135"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108109198"
 ---
-# <a name="profilelist-wlanpolicy-element"></a>ProfileList-Element (wlanpolicy)
+# <a name="profilelist-wlanpolicy-element"></a>profileList-Element (WLANPolicy)
 
-Das ProfileList-Element (wlanpolicy) enthält eine Liste von Profilen, die auf Domänen-oder Computer Ebene angewendet werden sollen. Dieses Element ist optional. Wenn dieses Element vorhanden ist, muss es mindestens ein Profil enthalten.
+Das ProfileList-Element (WLANPolicy) enthält eine Liste von Profilen, die auf Domänen- oder Computerebene angewendet werden sollen. Dieses Element ist optional. Wenn dieses Element vorhanden ist, muss es mindestens ein Profil enthalten.
 
-Profile müssen auf dem WLAN- [ \_ Profil Schema](wlan-profileschema-schema.md)mit einem Stamm Element von [**wlanprofile**](wlan-profileschema-wlanprofile-element.md)basieren.
+Profile sollten auf dem WLAN-Profilschema [ \_ mit](wlan-profileschema-schema.md)dem Stammelement [**WLANProfile basieren.**](wlan-profileschema-wlanprofile-element.md)
 
 ``` syntax
 <xs:element name="profileList">
@@ -39,33 +39,33 @@ Profile müssen auf dem WLAN- [ \_ Profil Schema](wlan-profileschema-schema.md)m
 </xs:element>
 ```
 
-Das **ProfileList** -Element wird durch das [**wlanpolicy**](wlan-policyschema-wlanpolicy-element.md) -Element definiert.
+Das **profileList-Element** wird durch das [**WLANPolicy-Element**](wlan-policyschema-wlanpolicy-element.md) definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-**Definitions Kontext des Elements im Schema**
+**Definitionskontext des Elements im Schema**
 </dt> <dt>
 
-[**Wlanpolicy**](wlan-policyschema-wlanpolicy-element.md)
+[**WLANPolicy**](wlan-policyschema-wlanpolicy-element.md)
 </dt> <dt>
 
-**Mögliches unmittelbar übergeordnetes Element in der Schema Instanz**
+**Mögliches unmittelbar übergeordnetes Element in der Schemainstanz**
 </dt> <dt>
 
-[**Wlanpolicy**](wlan-policyschema-wlanpolicy-element.md)
+[**WLANPolicy**](wlan-policyschema-wlanpolicy-element.md)
 </dt> </dl>
 
  

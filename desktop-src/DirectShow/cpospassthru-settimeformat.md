@@ -1,7 +1,7 @@
 ---
-description: 'Die settimeformat-Methode legt das Zeitformat fest. Diese Methode implementiert die imediaseeking:: settimeformat-Methode.'
+description: 'CPosPassThru.SetTimeFormat-Methode: Die SetTimeFormat-Methode legt das Zeitformat fest. Diese Methode implementiert die IMediaSeeking::SetTimeFormat-Methode.'
 ms.assetid: f6fc456d-51cf-4b2e-9248-afed9073d440
-title: Cpospassthru. settimeformat-Methode (ctlutil. h)
+title: CPosPassThru.SetTimeFormat-Methode (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: b843e67a827e4bbd7471bb42df31033e314d9158
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 81798ccbb51056353c62cd94f821b3567d78a484
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106373773"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108085468"
 ---
-# <a name="cpospassthrusettimeformat-method"></a>Cpospassthru. settimeformat-Methode
+# <a name="cpospassthrusettimeformat-method"></a>CPosPassThru.SetTimeFormat-Methode
 
-Die settimeformat-Methode legt das Zeitformat fest. Diese Methode implementiert die [**imediaseeking:: settimeformat**](/windows/desktop/api/Strmif/nf-strmif-imediaseeking-settimeformat) -Methode.
+Die SetTimeFormat-Methode legt das Zeitformat fest. Diese Methode implementiert die [**IMediaSeeking::SetTimeFormat-Methode.**](/windows/desktop/api/Strmif/nf-strmif-imediaseeking-settimeformat)
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,36 +42,36 @@ HRESULT SetTimeFormat(
 
 <dl> <dt>
 
-*pformat* 
+*pFormat* 
 </dt> <dd>
 
-Zeiger auf eine Zeitformat-GUID.
+Zeiger auf eine GUID im Zeitformat.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt den **HRESULT** -Wert aus der verbundenen PIN zurück.
+Gibt den **HRESULT-Wert** aus dem verbundenen Pin zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cpospassthru-Klasse**](cpospassthru.md)
+[**CPosPassThru-Klasse**](cpospassthru.md)
 </dt> <dt>
 
-[**Zeit Format-GUIDs**](time-format-guids.md)
+[**Zeitformat-GUIDs**](time-format-guids.md)
 </dt> </dl>
 
  

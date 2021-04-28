@@ -1,7 +1,7 @@
 ---
-description: Verwenden Sie diese Methode, um alle Verweise auf Videospeicher Ressourcen freizugeben und alle stateblocks zu löschen. Diese Methode sollte immer dann aufgerufen werden, wenn ein Gerät verloren geht oder ein Gerät zurückgesetzt wird.
+description: 'ID3DXFont::OnLostDevice-Methode: Verwenden Sie diese Methode, um alle Verweise auf Videospeicherressourcen frei zu geben und alle Zustandsblocks zu löschen. Diese Methode sollte immer dann aufgerufen werden, wenn ein Gerät verloren geht oder bevor ein Gerät zurücksetzungen.'
 ms.assetid: 1abc4e01-65c6-4034-8cbb-891a2234ad33
-title: 'ID3DXFont:: OnLostDevice-Methode (D3dx9core. h)'
+title: ID3DXFont::OnLostDevice-Methode (D3dx9core.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: ae2dc711ffe57a2605a0cc43c7ba673d444105f4
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 9c484d7867745805e29bda88e2f8d49ca8bc21be
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106354383"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108090368"
 ---
-# <a name="id3dxfontonlostdevice-method"></a>ID3DXFont:: OnLostDevice-Methode
+# <a name="id3dxfontonlostdevice-method"></a>ID3DXFont::OnLostDevice-Methode
 
-Verwenden Sie diese Methode, um alle Verweise auf Videospeicher Ressourcen freizugeben und alle stateblocks zu löschen. Diese Methode sollte immer dann aufgerufen werden, wenn ein Gerät verloren geht oder ein Gerät zurückgesetzt wird.
+Verwenden Sie diese Methode, um alle Verweise auf Videospeicherressourcen frei zu geben und alle Zustandsblocks zu löschen. Diese Methode sollte immer dann aufgerufen werden, wenn ein Gerät verloren geht oder bevor ein Gerät zurücksetzungen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,24 +42,24 @@ Diese Methode hat keine Parameter.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert "D3DERR \_ invalidcall" lauten.
+Wenn die Methode erfolgreich ist, ist der Rückgabewert S \_ OK. Wenn bei der Methode ein Fehler auftritt, kann der Rückgabewert D3DERR \_ INVALIDCALL sein.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Diese Methode sollte immer dann aufgerufen werden, wenn das Gerät verloren geht oder bevor der Benutzer die [**zurück**](/windows/desktop/api)Setzung aufruft. Auch wenn das Gerät nicht verloren gegangen ist, ist **OnLostDevice** für das Freigeben von stateblocks und anderen Ressourcen zuständig, die vor dem Zurücksetzen des Geräts möglicherweise freigegeben werden müssen. Folglich kann das Schriftart Objekt nicht erneut verwendet werden, bevor **Reset** und dann [**OnResetDevice**](id3dxfont--onresetdevice.md)aufgerufen werden.
+Diese Methode sollte immer aufgerufen werden, wenn das Gerät verloren geht oder bevor der Benutzer Reset [**aufruft.**](/windows/desktop/api) Auch wenn das Gerät nicht tatsächlich verloren gegangen ist, ist **OnLostDevice** für die Freigabe von Zustandsblocks und anderen Ressourcen verantwortlich, die möglicherweise freigegeben werden müssen, bevor das Gerät zurück gesetzt wird. Daher kann das Schriftartobjekt vor dem Aufruf von **Reset** und [**onResetDevice nicht erneut verwendet werden.**](id3dxfont--onresetdevice.md)
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9core. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3dx9core.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

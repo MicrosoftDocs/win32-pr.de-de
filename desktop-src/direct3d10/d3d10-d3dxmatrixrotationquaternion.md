@@ -1,7 +1,7 @@
 ---
-description: Erstellt eine Rotations Matrix aus einer Quaternion.
+description: 'D3DXMatrixRotationQuaternion-Funktion (D3DX10Math.h): Erstellt eine Rotationsmatrix aus einer Quaternion.'
 ms.assetid: dcbf8696-b959-4475-a250-6094dd5fe358
-title: D3DXMatrixRotationQuaternion-Funktion (D3DX10Math. h)
+title: D3DXMatrixRotationQuaternion-Funktion (D3DX10Math.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: 44cd4a5982b322c2d207263fb490c898ed9fa76e
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 7d95d28b7f7106df9ddfb43a9175f5c19292d52c
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106355223"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108103428"
 ---
-# <a name="d3dxmatrixrotationquaternion-function-d3dx10mathh"></a>D3DXMatrixRotationQuaternion-Funktion (D3DX10Math. h)
+# <a name="d3dxmatrixrotationquaternion-function-d3dx10mathh"></a>D3DXMatrixRotationQuaternion-Funktion (D3DX10Math.h)
 
-Erstellt eine Rotations Matrix aus einer Quaternion.
+Erstellt eine Rotationsmatrix aus einer Quaternion.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,21 +41,21 @@ D3DXMATRIX* D3DXMatrixRotationQuaternion(
 
 <dl> <dt>
 
-*Pout* \[ in, out\]
+*pOut* \[ in, out\]
 </dt> <dd>
 
 Typ: **[ **D3DXMATRIX**](../direct3d9/d3dxmatrix.md)\***
 
-Ein Zeiger auf die [**D3DXMATRIX**](d3d10-d3dxmatrix.md) -Struktur, die das Ergebnis des Vorgangs ist.
+Zeiger auf die [**D3DXMATRIX-Struktur,**](d3d10-d3dxmatrix.md) die das Ergebnis des Vorgangs ist.
 
 </dd> <dt>
 
-*PQ* \[ in\]
+*pQ* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXQUATERNION**](../direct3d9/d3dxquaternion.md) \***
+Typ: **const [**D3DXQUATERNION**](../direct3d9/d3dxquaternion.md) \***
 
-Ein Zeiger auf die Quell-D3DXQUATERNION-Struktur.
+Zeiger auf die D3DXQUATERNION-Quellstruktur.
 
 </dd> </dl>
 
@@ -63,26 +63,26 @@ Ein Zeiger auf die Quell-D3DXQUATERNION-Struktur.
 
 Typ: **[ **D3DXMATRIX**](../direct3d9/d3dxmatrix.md)\***
 
-Zeiger auf eine D3DXMATRIX-Struktur, die aus der Quell-Quaternion erstellt wurde.
+Zeiger auf eine D3DXMATRIX-Struktur, die aus der Quellquaternion erstellt wurde.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Der Rückgabewert für diese Funktion ist derselbe Wert, der im Pout-Parameter zurückgegeben wird. Auf diese Weise kann die D3DXMatrixRotationQuaternion-Funktion als Parameter für eine andere Funktion verwendet werden.
+Der Rückgabewert für diese Funktion ist der gleiche Wert, der im pOut-Parameter zurückgegeben wird. Auf diese Weise kann die D3DXMatrixRotationQuaternion-Funktion als Parameter für eine andere Funktion verwendet werden.
 
-Informationen dazu, wie Sie Quaternion-Werte aus einem Richtungsvektor (x, y, z) und einem Drehwinkel berechnen, finden Sie unter [**D3DXQUATERNION**](d3d10-d3dxquaternion.md).
+Informationen zum Berechnen von Quaternionwerten aus einem Richtungsvektor ( x, y, z ) und einem Drehwinkel finden Sie unter [**D3DXQUATERNION**](d3d10-d3dxquaternion.md).
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX10Math. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx10. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX10Math.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

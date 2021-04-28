@@ -1,7 +1,7 @@
 ---
-description: Konstruktormethode.
+description: 'CBaseList.CBaseList-Konstruktor: Konstruktormethode.'
 ms.assetid: 2982f53a-c222-4a9d-812a-42897ca4cb5c
-title: Cbaselist. cbaselist-Konstruktor (wxlist. h)
+title: CBaseList.CBaseList-Konstruktor (Wxlist.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,14 +16,14 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 3afc0a4acf54e186e122f676ac14e9e80aaeafdb
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 66aad24fe2d5176c684d4d78be27833e3be2f909
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358111"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108096327"
 ---
-# <a name="cbaselistcbaselist-constructor"></a>Cbaselist. cbaselist-Konstruktor
+# <a name="cbaselistcbaselist-constructor"></a>CBaseList.CBaseList-Konstruktor
 
 Konstruktormethode.
 
@@ -51,24 +51,24 @@ Zeiger auf den Namen der Liste.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Aus Effizienzgründen verwaltet die- `CBaseList` Klasse einen Cache von Listen Knoten. Für diese Version des Konstruktors wird eine Standard Cache Größe verwendet.
+Zur Effizienz verwaltet `CBaseList` die -Klasse einen Cache von Listenknoten. Diese Version des Konstruktors verwendet eine Standardcachegröße.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Wxlist. h (Include Streams. h)</dt> </dl>                                                                                    |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Wxlist.h (streams.h enthalten)</dt> </dl>                                                                                    |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbaselist-Klasse**](cbaselist.md)
+[**CBaseList-Klasse**](cbaselist.md)
 </dt> </dl>
 
  

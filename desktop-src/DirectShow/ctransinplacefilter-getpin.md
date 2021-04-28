@@ -1,7 +1,7 @@
 ---
-description: Die getpin-Methode ruft eine PIN ab.
+description: 'CTransInPlaceFilter.GetPin-Methode: Die GetPin-Methode ruft einen Pin ab.'
 ms.assetid: d8e4973b-2af4-4141-ab2e-ea2159cd51be
-title: Ctransinplacefilter. getpin-Methode (transip. h)
+title: CTransInPlaceFilter.GetPin-Methode (Transip.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: ae93b663af5427bc61367ae03a3abd6790b8634a
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 1075f2a14c58b085b73f2e4283458286c118a7ae
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106354708"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108084768"
 ---
-# <a name="ctransinplacefiltergetpin-method"></a>Ctransinplacefilter. getpin-Methode
+# <a name="ctransinplacefiltergetpin-method"></a>CTransInPlaceFilter.GetPin-Methode
 
-Die- `GetPin` Methode ruft eine PIN ab.
+Die `GetPin` -Methode ruft einen Pin ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,38 +45,38 @@ virtual CBasePin* GetPin(
 *n* 
 </dt> <dd>
 
-Nummer der angegebenen PIN, indiziert von 0 (null). Bei diesem Filter ist Pin 0 die Eingabe-PIN, und Pin 1 ist die Ausgabe-PIN.
+Die Nummer des angegebenen Pins, indiziert von 0 (null). Bei diesem Filter ist Pin 0 der Eingabepin und Pin 1 der Ausgabepin.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen Zeiger auf das [**cbasepin**](cbasepin.md) -Objekt zurück, das die PIN implementiert, oder **null** , wenn die Methode fehlschlägt.
+Gibt einen Zeiger auf das [**CBasePin-Objekt**](cbasepin.md) zurück, das den Pin implementiert, oder **NULL,** wenn die Methode fehlschlägt.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Diese Methode überschreibt die [**ctransformfilter:: getpin**](ctransformfilter-getpin.md) -Methode. Wenn die-Methode zum ersten Mal aufgerufen wird, werden beide Pins erstellt.
+Diese Methode überschreibt die [**CTransformFilter::GetPin-Methode.**](ctransformfilter-getpin.md) Wenn die -Methode zum ersten Mal aufgerufen wird, werden beide Pins erstellt.
 
-Diese Methode erhöht nicht den Verweis Zähler für die zurückgegebene PIN, sodass die zurückgegebene Pin keinen ausstehenden Verweis Zähler enthält. Wenn der Aufrufer einen Verweis auf die PIN aufbewahren muss, sollte die **IUnknown:: adressf** -Methode für die PIN aufgerufen werden.
+Diese Methode erhöht den Verweiszähler für den zurückgegebenen Pin nicht, sodass der zurückgegebene Pin keinen ausstehenden Verweiszähler hat. Wenn der Aufrufer einen Verweis auf der Stecknadel behalten muss, sollte er die **IUnknown::AddRef-Methode** auf dem Pin aufrufen.
 
-Wenn der Filter die standardmäßigen [**ctransinplaceinputpin**](ctransinplaceinputpin.md) -und [**ctransinplaceoutputpin**](ctransinplaceoutputpin.md) -Pins verwendet, muss diese Methode wahrscheinlich nicht außer Kraft gesetzt werden. Wenn der Filter Pins verwendet, mit denen diese Klassen erweitert werden, müssen Sie diese Methode jedoch außer Kraft setzen, um Pins dieses Typs zu erstellen.
+Wenn der Filter die Standardpins [**CTransInPlaceInputPin**](ctransinplaceinputpin.md) und [**CTransInPlaceOutputPin**](ctransinplaceoutputpin.md) verwendet, müssen Sie diese Methode wahrscheinlich nicht überschreiben. Wenn der Filter jedoch Pins verwendet, die diese Klassen erweitern, müssen Sie diese Methode überschreiben, um Pins dieses Typs zu erstellen.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Transip. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Transip.h (einschließlich Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Ctransinplacefilter-Klasse**](ctransinplacefilter.md)
+[**CTransInPlaceFilter-Klasse**](ctransinplacefilter.md)
 </dt> </dl>
 
  

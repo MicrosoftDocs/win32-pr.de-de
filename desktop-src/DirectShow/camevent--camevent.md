@@ -1,7 +1,7 @@
 ---
-description: Dekonstruktormethode.
+description: TAREVENT.~DESTRUKtor – Destruktormethode.
 ms.assetid: 3be76b8f-1141-439e-8837-9edba02707b0
-title: Camevent. ~ camevent-debugtor (wxutil. h)
+title: XXEvent.~DESTRUKtor FÜR DASEVENT (Wxutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: df14e32df85d10210530cd4c59c3bbe542af6f03
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 70db4419e6e9ca1c077fb60e7adc671e16cceca6
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370511"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108096548"
 ---
-# <a name="cameventcamevent-destructor"></a>Camevent. ~ camevent-Dekonstruktor
+# <a name="cameventcamevent-destructor"></a>CABEvent.~CABEvent-Destruktor
 
-Dekonstruktormethode.
+Destruktormethode.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,18 +40,18 @@ Dekonstruktormethode.
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Wxutil. h (Include Streams. h)</dt> </dl>                                                                                    |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Wxutil.h (include Streams.h)</dt> </dl>                                                                                    |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Camevent-Klasse**](camevent.md)
+[**WEBCAMEvent-Klasse**](camevent.md)
 </dt> </dl>
 
  

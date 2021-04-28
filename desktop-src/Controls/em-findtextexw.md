@@ -1,9 +1,9 @@
 ---
-title: EM_FINDTEXTEXW Meldung (RichEdit. h)
-description: Findet Unicode-Text in einem Rich-Edit-Steuerelement.
+title: EM_FINDTEXTEXW (Richedit.h)
+description: 'EM_FINDTEXTEXW Meldung: Sucht Unicode-Text in einem Rich-Edit-Steuerelement.'
 ms.assetid: 7b90ef06-0395-430e-8b5d-b392481a5f70
 keywords:
-- Windows-Steuerelemente für EM_FINDTEXTEXW Meldung
+- EM_FINDTEXTEXW Meldung Windows-Steuerelemente
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: aaf0857e47c6e98f4be6867ca66baef3472766a2
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 5278726ca4d3e4748e96d8095a411bcebd5637ba
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103957006"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108109808"
 ---
-# <a name="em_findtextexw-message"></a>EM \_ findtextexw-Meldung
+# <a name="em_findtextexw-message"></a>EM \_ FINDTEXTEXW-Nachricht
 
-Findet Unicode-Text in einem Rich-Edit-Steuerelement.
+Sucht Unicode-Text in einem Rich-Edit-Steuerelement.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,18 +32,18 @@ Findet Unicode-Text in einem Rich-Edit-Steuerelement.
 *wParam* 
 </dt> <dd>
 
-Gibt das Verhalten des Such Vorgangs an. Dieser Parameter kann einen oder mehrere der folgenden Werte aufweisen.
+Gibt das Verhalten des Suchvorgang an. Dieser Parameter kann einen oder mehrere der folgenden Werte sein.
 
 
 
 | Wert                                                                                                                                                                     | Bedeutung                                                                                                                                                                                                                                                                         |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="FR_DOWN"></span><span id="fr_down"></span><dl> <dt>**Fr \_ nach unten**</dt> </dl>                               | Microsoft Rich Edit 2,0 und höher: Wenn diese Einstellung festgelegt ist, wird die Suche von **FINDTEXTEX. chrg. cpmin**; weiterleiten. Wenn nicht festgelegt, wird die Suche rückwärts von **FINDTEXTEX. chrg. cpmin** durchgesetzt. <br/> Microsoft Rich Edit 1,0: das FR- \_ down-Flag wird ignoriert. Die Suche erfolgt immer weiter.<br/> |
-| <span id="FR_MATCHALEFHAMZA"></span><span id="fr_matchalefhamza"></span><dl> <dt>**Fr \_ MatchAlefHamza**</dt> </dl> | Wenn festgelegt, unterscheidet die Suche zwischen Alefs und unterschiedlichen Akzenten. Wenn diese Einstellung nicht festgelegt ist, werden alle arabischen und hebräischen Alefs mit unterschiedlichen Akzenten mit dem Alef-Zeichen übereinstimmen. <br/>                                                                                           |
-| <span id="FR_MATCHCASE"></span><span id="fr_matchcase"></span><dl> <dt>**Fr \_ MatchCase**</dt> </dl>                | Wenn festgelegt, wird bei der Suche die Groß-/Kleinschreibung beachtet. Wenn nicht festgelegt, wird bei der Suche die Groß-/Kleinschreibung nicht beachtet.<br/>                                                                                                                                                                |
-| <span id="FR_MATCHDIAC"></span><span id="fr_matchdiac"></span><dl> <dt>**Fr \_ matchdiac**</dt> </dl>                | Wenn festgelegt, berücksichtigt der Suchvorgang Diakritische Markierungen. Wenn nicht festgelegt, werden die diakritischen Zeichen Arabisch und Hebräisch ignoriert. <br/>                                                                                                                                              |
-| <span id="FR_MATCHKASHIDA"></span><span id="fr_matchkashida"></span><dl> <dt>**Fr \_ MatchKashida**</dt> </dl>       | Wenn festgelegt, berücksichtigt der Suchvorgang Kashidas. Wenn nicht festgelegt, werden arabische und hebräische Kashidas ignoriert. <br/>                                                                                                                                                                |
-| <span id="FR_WHOLEWORD"></span><span id="fr_wholeword"></span><dl> <dt>**"# \_ wholeword"**</dt> </dl>                | Wenn festgelegt, sucht der Vorgang nur nach ganzen Wörtern, die der Such Zeichenfolge entsprechen. Wenn nicht festgelegt, sucht der Vorgang auch nach Word-Fragmenten, die der Such Zeichenfolge entsprechen.<br/>                                                                                           |
+| <span id="FR_DOWN"></span><span id="fr_down"></span><dl> <dt>**FR \_ DOWN**</dt> </dl>                               | Microsoft Rich Edit 2.0 und höher: Wenn festgelegt, wird die Suche von **FINDTEXTEX.hlg.cpMin weitergeleitet.** Wenn dies nicht festgelegt ist, befindet sich die Suche rückwärts von **FINDTEXTEX.chrg.cpMin.** <br/> Microsoft Rich Edit 1.0: Das FR \_ DOWN-Flag wird ignoriert. Die Suche ist immer vorwärts.<br/> |
+| <span id="FR_MATCHALEFHAMZA"></span><span id="fr_matchalefhamza"></span><dl> <dt>**FR \_ MATCHALEFHAMZA**</dt> </dl> | Wenn festgelegt, unterscheidet die Suche zwischen Alefs mit unterschiedlichen Akzenten. Wenn dies nicht festgelegt ist, werden arabische und hebräische Alefs mit unterschiedlichen Akzenten durch das Alef-Zeichen übereinstimmen. <br/>                                                                                           |
+| <span id="FR_MATCHCASE"></span><span id="fr_matchcase"></span><dl> <dt>**FR \_ MATCHCASE**</dt> </dl>                | Wenn festgelegt, wird beim Suchvorgang die Kleinschreibung beachtet. Wenn dies nicht festgelegt ist, wird beim Suchvorgang die Groß-/Kleinschreibung nicht beachtet.<br/>                                                                                                                                                                |
+| <span id="FR_MATCHDIAC"></span><span id="fr_matchdiac"></span><dl> <dt>**FR \_ MATCHDMATCH**</dt> </dl>                | Wenn festgelegt, berücksichtigt der Suchvorgang diakritische Markierungen. Wenn dies nicht festgelegt ist, werden arabische und hebräische diakritische Markierungen ignoriert. <br/>                                                                                                                                              |
+| <span id="FR_MATCHKASHIDA"></span><span id="fr_matchkashida"></span><dl> <dt>**FR \_ MATCHKDDADA**</dt> </dl>       | Wenn diese Einstellung festgelegt ist, berücksichtigt der Suchvorgang K msidas. Wenn sie nicht festgelegt ist, werden arabische und hebräische K msidas ignoriert. <br/>                                                                                                                                                                |
+| <span id="FR_WHOLEWORD"></span><span id="fr_wholeword"></span><dl> <dt>**FR \_ WHOLEWORD**</dt> </dl>                | Wenn diese Einstellung festgelegt ist, sucht der Vorgang nur nach ganzen Wörtern, die mit der Suchzeichenfolge übereinstimmen. Wenn diese Einstellung nicht festgelegt ist, sucht der Vorgang auch nach Wortfragmenten, die mit der Suchzeichenfolge übereinstimmen.<br/>                                                                                           |
 
 
 
@@ -54,41 +54,41 @@ Gibt das Verhalten des Such Vorgangs an. Dieser Parameter kann einen oder mehrer
 *lParam* 
 </dt> <dd>
 
-Eine [**findtextexw**](/windows/desktop/api/Richedit/ns-richedit-findtextexa) -Struktur, die Informationen über den Suchvorgang enthält.
+Eine [**FINDTEXTEXW-Struktur,**](/windows/desktop/api/Richedit/ns-richedit-findtextexa) die Informationen zum Suchvorgang enthält.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Ziel Zeichenfolge gefunden wird, ist der Rückgabewert die null basierte Position des ersten Zeichens der Entsprechung. Wenn das Ziel nicht gefunden wird, ist der Rückgabewert-1.
+Wenn die Zielzeichenfolge gefunden wird, ist der Rückgabewert die nullbasierte Position des ersten Zeichens der Übereinstimmung. Wenn das Ziel nicht gefunden wird, lautet der Rückgabewert -1.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Verwenden Sie diese Meldung, um Unicode-Zeichen folgen zu suchen Verwenden Sie für ANSI; [**EM \_ FINDTEXTEX**](em-findtextex.md).
+Verwenden Sie diese Meldung, um Unicode-Zeichenfolgen zu suchen. Verwenden Sie für ANSI; [**EM \_ FINDTEXTEX**](em-findtextex.md).
 
-Der **cpmin** -Member von **FINDTEXTEX. chrg** gibt immer den Anfangspunkt der Suche an, und **cpmax** gibt den Endpunkt an. Bei der Rückwärtssuche muss **cpmin** größer oder gleich **cpmax** sein. Bei der Suche wird durch den Wert-1 in **cpmax** der Suchbereich auf das Ende des Texts erweitert.
+Der **cpMin-Member** von **FINDTEXTEX.chg** gibt immer den Startpunkt der Suche und **cpMax** den Endpunkt an. Beim Rückwärtssuchen muss **cpMin** gleich oder größer als **cpMax** sein. Bei der Vorwärtssuche erweitert der Wert -1 in **cpMax** den Suchbereich bis zum Ende des Texts.
 
-Wenn bei der Suche eine Übereinstimmung gefunden wird, gibt der **chrgtext** -Member der [**FINDTEXTEX**](/windows/desktop/api/Richedit/ns-richedit-findtextexa) -Struktur den Bereich von Zeichen Positionen zurück, der den übereinstimmenden Text enthält.
+Wenn der Suchvorgang eine Übereinstimmung findet, gibt der **chgText-Member** der [**FINDTEXTEX-Struktur**](/windows/desktop/api/Richedit/ns-richedit-findtextexa) den Bereich der Zeichenpositionen zurück, der den übereinstimmenden Text enthält.
 
-**EM \_ Findtextexw** verwendet die [**findtextexw**](/windows/desktop/api/Richedit/ns-richedit-findtextexa) -Struktur, während [**EM \_ findtextw**](em-findtextw.md) die [**findtextw**](/windows/win32/api/richedit/ns-richedit-findtexta) -Struktur verwendet. Der Unterschied besteht darin, dass **EM \_ findtextexw** den Textbereich meldet, der gefunden wurde.
+**EM \_ FINDTEXTEXW** verwendet die [**FINDTEXTEXW-Struktur,**](/windows/desktop/api/Richedit/ns-richedit-findtextexa) [**während EM \_ FINDTEXTW**](em-findtextw.md) die [**FINDTEXTW-Struktur**](/windows/win32/api/richedit/ns-richedit-findtexta) verwendet. Der Unterschied besteht darin, dass **EM \_ FINDTEXTEXW** den gefundenen Textbereich meldet.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>RichEdit. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Richedit.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**EM \_ findtextw**](em-findtextw.md)
+[**EM \_ FINDTEXTW**](em-findtextw.md)
 </dt> </dl>
 
  

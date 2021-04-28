@@ -1,7 +1,7 @@
 ---
-description: Transformiert den Vektor (x, y, z, 1) durch eine angegebene Matrix.
+description: D3DXVec3Transform-Funktion (D3dx9math.h) – Transformationsvektor (x, y, z, 1) durch eine bestimmte Matrix.
 ms.assetid: 5b290c4c-22f1-4086-8e5e-f995757ef193
-title: D3DXVec3Transform-Funktion (D3dx9math. h)
+title: D3DXVec3Transform-Funktion (D3dx9math.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: b653eeb7ea3797a3c385efda73ac974e2f4fbd97
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 5128be3fd9e0409b403006fdb1de3c9c48f6aee4
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104355967"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108115638"
 ---
-# <a name="d3dxvec3transform-function-d3dx9mathh"></a>D3DXVec3Transform-Funktion (D3dx9math. h)
+# <a name="d3dxvec3transform-function-d3dx9mathh"></a>D3DXVec3Transform-Funktion (D3dx9math.h)
 
-Transformiert den Vektor (x, y, z, 1) durch eine angegebene Matrix.
+Transformiert vektor (x, y, z, 1) durch eine bestimmte Matrix.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,30 +42,30 @@ D3DXVECTOR4* D3DXVec3Transform(
 
 <dl> <dt>
 
-*Pout* \[ in, out\]
+*pOut* \[ in, out\]
 </dt> <dd>
 
 Typ: **[ **D3DXVECTOR4**](d3dxvector4.md)\***
 
-Ein Zeiger auf die [**D3DXVECTOR4**](d3dxvector4.md) -Struktur, die das Ergebnis des Vorgangs ist.
+Zeiger auf die [**D3DXVECTOR4-Struktur,**](d3dxvector4.md) die das Ergebnis des Vorgangs ist.
 
 </dd> <dt>
 
-*PV* \[ in\]
+*pV* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXVECTOR3**](d3dxvector3.md) \***
+Typ: **const [**D3DXVECTOR3**](d3dxvector3.md) \***
 
-Ein Zeiger auf die Quell- [**D3DXVECTOR3**](d3dxvector3.md) -Struktur.
+Zeiger auf die [**D3DXVECTOR3-Quellstruktur.**](d3dxvector3.md)
 
 </dd> <dt>
 
-*pm* \[ in\]
+*pM* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXMATRIX**](d3dxmatrix.md) \***
+Typ: **const [**D3DXMATRIX**](d3dxmatrix.md) \***
 
-Ein Zeiger auf die Quell- [**D3DXMATRIX**](d3dxmatrix.md) -Struktur.
+Zeiger auf die [**D3DXMATRIX-Quellstruktur.**](d3dxmatrix.md)
 
 </dd> </dl>
 
@@ -73,26 +73,26 @@ Ein Zeiger auf die Quell- [**D3DXMATRIX**](d3dxmatrix.md) -Struktur.
 
 Typ: **[ **D3DXVECTOR4**](d3dxvector4.md)\***
 
-Zeiger auf eine [**D3DXVECTOR4**](d3dxvector4.md) -Struktur, die der transformierte Vektor ist.
+Zeiger auf eine [**D3DXVECTOR4-Struktur,**](d3dxvector4.md) die der transformierte Vektor ist.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Diese Funktion wandelt den Vektor, *PV* (x, y, z, 1), durch die Matrix *pm* um.
+Diese Funktion transformiert den Vektor *pV* (x, y, z, 1) durch die *Matrix pM.*
 
-Der Rückgabewert für diese Funktion ist derselbe Wert, der im *Pout* -Parameter zurückgegeben wird. Auf diese Weise kann die **D3DXVec3Transform** -Funktion als Parameter für eine andere Funktion verwendet werden.
+Der Rückgabewert für diese Funktion ist der gleiche Wert, der im *pOut-Parameter zurückgegeben* wird. Auf diese Weise kann die **D3DXVec3Transform-Funktion** als Parameter für eine andere Funktion verwendet werden.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9math. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3dx9math.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

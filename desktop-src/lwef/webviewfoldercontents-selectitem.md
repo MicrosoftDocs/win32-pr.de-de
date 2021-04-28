@@ -1,11 +1,11 @@
 ---
-title: Webviewfoldercontents. SelectItem-Methode (Shldisp. h)
-description: Legt den Auswahl Zustand eines Elements in der Ansicht fest.
+title: WebViewFolderContents.SelectItem-Methode (Shldisp.h)
+description: 'WebViewFolderContents.SelectItem-Methode: Legt den Auswahlzustand eines Elements in der Ansicht fest.'
 ms.assetid: c0e163ee-1951-476c-807a-781e26766d99
 keywords:
-- SelectItem-Methode Legacy Windows-Umgebungs Features
-- SelectItem-Methode Legacy-Windows-Umgebungs Features, webviewfoldercontents-Objekt
-- Webviewfoldercontents-Objekt Legacy Funktionen der Windows-Umgebung, SelectItem-Methode
+- SelectItem-Methode – Ältere Windows-Umgebungsfeatures
+- SelectItem-Methode Legacy-Windows-Umgebungsfeatures, WebViewFolderContents-Objekt
+- WebViewFolderContents-Objekt Legacy-Windows-Umgebungsfeatures, SelectItem-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e491fb27db2d6e1e9b449be4aa2924684021539a
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 66e2d05c010199f05826df7ed4591e8c7c1723e2
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106339935"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108102609"
 ---
-# <a name="webviewfoldercontentsselectitem-method"></a>Webviewfoldercontents. SelectItem-Methode
+# <a name="webviewfoldercontentsselectitem-method"></a>WebViewFolderContents.SelectItem-Methode
 
-Legt den Auswahl Zustand eines Elements in der Ansicht fest.
+Legt den Auswahlzustand eines Elements in der Ansicht fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,21 +43,21 @@ WebViewFolderContents.SelectItem(
 
 <dl> <dt>
 
-*vitem* \[ in\]
+*vItem* \[ In\]
 </dt> <dd>
 
-Typ: **Variant \** _
+Typ: **\* Variant**
 
-Das [_ *folderItem* *](../shell/folderitem.md) -Objekt, für das der Auswahl Zustand festgelegt wird.
+Das [**FolderItem-Objekt,**](../shell/folderitem.md) für das der Auswahlzustand festgelegt wird.
 
 </dd> <dt>
 
-*dwFlags* \[ in\]
+*dwFlags* \[ In\]
 </dt> <dd>
 
-Type: **Integer**
+Typ: **Ganze Zahl**
 
-Ein Satz von Flags, die den neuen Auswahl Zustand angeben. Dabei kann es sich um einen oder mehrere der folgenden Werte handeln:
+Ein Satz von Flags, die den neuen Auswahlzustand angeben. Dies kann einer oder mehrere der folgenden Werte sein.
 
 <dt>
 
@@ -101,7 +101,7 @@ Versetzen Sie das Element in den Bearbeitungsmodus.
 
 </dt> <dd>
 
-Deaktivieren Sie alle Elemente außer dem angegebenen Element.
+Deaktivieren Sie alle außer dem angegebenen Element.
 
 </dd> <dt>
 
@@ -123,7 +123,7 @@ Stellen Sie sicher, dass das Element in der Ansicht angezeigt wird.
 
 </dt> <dd>
 
-Gibt dem Element den Fokus.
+Geben Sie dem Element den Fokus.
 
 </dd> </dl> </dd> </dl>
 
@@ -133,7 +133,7 @@ Diese Methode gibt keinen Wert zurück.
 
 ## <a name="examples"></a>Beispiele
 
-Das folgende Beispiel zeigt die ordnungsgemäße Verwendung dieser Methode für JScript Embedded in HTML.
+Das folgende Beispiel zeigt die ordnungsgemäße Verwendung dieser Methode für JScript, das in HTML eingebettet ist.
 
 
 ```HTML
@@ -171,13 +171,13 @@ Das folgende Beispiel zeigt die ordnungsgemäße Verwendung dieser Methode für 
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, Windows XP \[ Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, nur Windows \[ XP-Desktop-Apps\]<br/>                                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                           |
-| Header<br/>                   | <dl> <dt>Shldisp. h</dt> </dl>                           |
-| IDL<br/>                      | <dl> <dt>Shldisp. idl</dt> </dl>                         |
-| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4,71 oder höher)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>                           |
+| Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                         |
+| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4.71 oder höher)</dt> </dl> |
 
 
 

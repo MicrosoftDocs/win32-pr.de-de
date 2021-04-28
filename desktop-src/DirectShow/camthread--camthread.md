@@ -1,7 +1,7 @@
 ---
-description: Dekonstruktormethode.
+description: CABThread.~CABThread-Destruktor – Destruktormethode.
 ms.assetid: eed6c566-8a03-4a97-9d99-8e500ce2954c
-title: Camthread. ~ camthread-debugtor (wxutil. h)
+title: CABThread.~HIDThread-Destruktor (Wxutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: b0b0a4dde858811a75347105b9fccd2f499c4faa
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 84a40205fc93677f20256676ad09a18357d46acb
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361545"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108096438"
 ---
-# <a name="camthreadcamthread-destructor"></a>Camthread. ~ camthread-Dekonstruktor
+# <a name="camthreadcamthread-destructor"></a>CABThread.~CABThread-Destruktor
 
-Dekonstruktormethode.
+Destruktormethode.
 
 ## <a name="syntax"></a>Syntax
 
@@ -38,24 +38,24 @@ virtual ~CAMThread();
 
 ## <a name="remarks"></a>Bemerkungen
 
-Der Dekonstruktor Ruft die Methode " [**camthread:: Close**](camthread-close.md) " auf, die darauf wartet, dass der Thread beendet wird.
+Der Destruktor ruft die [**METHODE CABThread::Close**](camthread-close.md) auf, die darauf wartet, dass der Thread beendet wird.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Wxutil. h (Include Streams. h)</dt> </dl>                                                                                    |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Wxutil.h (include Streams.h)</dt> </dl>                                                                                    |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Camthread-Klasse**](camthread.md)
+[**WEBCAMThread-Klasse**](camthread.md)
 </dt> </dl>
 
  

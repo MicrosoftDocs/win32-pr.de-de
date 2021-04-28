@@ -1,7 +1,7 @@
 ---
-description: Ruft ein untergeordnetes-Objekt in diesem Datei Datenobjekt ab.
+description: 'ID3DXFileData::GetChild-Methode: Ruft ein untergeordnetes Objekt in diesem Dateidatenobjekt ab.'
 ms.assetid: 0c4f1efa-f096-443d-a482-a3c5a9138c3d
-title: 'ID3DXFileData:: GetChild-Methode (D3DX9Xof. h)'
+title: ID3DXFileData::GetChild-Methode (D3DX9Xof.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3dx9.lib
 - D3dx9.dll
-ms.openlocfilehash: 37982ca1e4801b7d70bec503ff9510fc66772651
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 7fe6c0393e5cfb9ed8aeaf5808d33175e7f9bfe5
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103961662"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108090378"
 ---
-# <a name="id3dxfiledatagetchild-method"></a>ID3DXFileData:: GetChild-Methode
+# <a name="id3dxfiledatagetchild-method"></a>ID3DXFileData::GetChild-Methode
 
-Ruft ein untergeordnetes-Objekt in diesem Datei Datenobjekt ab.
+Ruft ein untergeordnetes Objekt in diesem Dateidatenobjekt ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,21 +41,21 @@ HRESULT GetChild(
 
 <dl> <dt>
 
-*uichild* \[ in\]
+*uiChild* \[ In\]
 </dt> <dd>
 
-Typ: **[ **Größe \_ T**](../winprog/windows-data-types.md)**
+Typ: **[ **SIZE \_ T**](../winprog/windows-data-types.md)**
 
 ID des abzurufenden untergeordneten Objekts.
 
 </dd> <dt>
 
-*ppchild* \[ in\]
+*ppChild* \[ In\]
 </dt> <dd>
 
 Typ: **[ **ID3DXFileData**](id3dxfiledata.md)\*\***
 
-Adresse eines Zeigers, der den Schnittstellen Zeiger des untergeordneten Objekts empfängt.
+Adresse eines Zeigers zum Empfangen des Schnittstellenzeigers des untergeordneten Objekts.
 
 </dd> </dl>
 
@@ -63,20 +63,20 @@ Adresse eines Zeigers, der den Schnittstellen Zeiger des untergeordneten Objekts
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: D3DXFERR \_ badvalue, D3DXFERR \_ nomoreobjects.
+Wenn die Methode erfolgreich ist, ist der Rückgabewert S \_ OK. Wenn bei der Methode ein Fehler auftritt, kann der Rückgabewert einer der folgenden Werte sein: D3DXFERR \_ BADVALUE, D3DXFERR \_ NOMOREOBJECTS.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Xof. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>  |
+| Header<br/>  | <dl> <dt>D3DX9Xof.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>  |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

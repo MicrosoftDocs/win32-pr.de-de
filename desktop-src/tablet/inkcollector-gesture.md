@@ -1,17 +1,17 @@
 ---
-description: Tritt auf, wenn eine anwendungsspezifische Geste erkannt wird.
+description: 'InkCollector.Gesture-Ereignis: Tritt auf, wenn eine anwendungsspezifische Geste erkannt wird.'
 ms.assetid: 5830f7f8-2870-4194-ab3e-b63b71e97063
-title: InkCollector. Gesten-Ereignis (msink AUT. h)
+title: InkCollector.Gesture-Ereignis (Msinkaut.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: fb68add1a3fbba5781624f1df98c3a637745b95a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0bfc2fea09060dbb206cd7681bcecfbedbc7a6b4
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106350421"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108110188"
 ---
-# <a name="inkcollectorgesture-event"></a>InkCollector. Gesten-Ereignis
+# <a name="inkcollectorgesture-event"></a>InkCollector.Gesture-Ereignis
 
 Tritt auf, wenn eine anwendungsspezifische Geste erkannt wird.
 
@@ -33,33 +33,33 @@ void Gesture(
 
 <dl> <dt>
 
-*Cursor* \[ in\]
+*Cursor* \[ In\]
 </dt> <dd>
 
-Das [**iinkcursor**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkcursor) -Objekt, das das **Gesten** Ereignis generiert hat.
+Das [**IInkCursor-Objekt,**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkcursor) das das Gestenereignis **generiert** hat.
 
 </dd> <dt>
 
-*Striche* \[ in\]
+*Striche* \[ In\]
 </dt> <dd>
 
-Die [iinkstrokes](/previous-versions/windows/desktop/legacy/ms703293(v=vs.85)) -Auflistung, die die Erkennung als Geste zurückgegeben hat.
+Die [IInkStrokes-Auflistung,](/previous-versions/windows/desktop/legacy/ms703293(v=vs.85)) die von der -Erkannte als Geste zurückgegeben wurde.
 
 </dd> <dt>
 
-*Gesten* \[ in\]
+*Gesten* \[ In\]
 </dt> <dd>
 
-Ein Array von [**iinkgesten**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkgesture) -Objekten, in der Reihenfolge der Sicherheit, von der Erkennung.
+Ein Array von [**IInkGesture-Objekten**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkgesture) in der Reihenfolge der Konfidenz aus der -Erkannte.
 
-Weitere Informationen zur VARIANT-Struktur finden Sie unter [Verwenden der com-Bibliothek](using-the-com-library.md).
+Weitere Informationen zur VARIANT-Struktur finden Sie unter [Verwenden der COM-Bibliothek](using-the-com-library.md).
 
 </dd> <dt>
 
 *Abbrechen* \[ in, out\]
 </dt> <dd>
 
-**Variant \_ TRUE** , wenn diese Geste abgebrochen werden soll. Andernfalls ist der Wert **\_ false**.
+**VARIANT \_ TRUE,** wenn diese Geste abgebrochen werden soll; andernfalls **VARIANT \_ FALSE**.
 
 </dd> </dl>
 
@@ -69,52 +69,52 @@ Dieses Ereignis gibt keinen Wert zurück.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Diese Ereignismethode wird in den \_ Schnittstellen iinkcollectorevents, \_ iinkoverlayevents und \_ iinkpictureevents Dispatch-only (Dispinterfaces) mit der ID DISPID \_ icegesten definiert.
+Diese Ereignismethode wird in den \_ Dispatch-Schnittstellen IInkCollectorEvents, \_ IInkOverlayEvents und \_ IInkPictureEvents (dispinterfaces) mit der ID DISPID \_ ICEGesture definiert.
 
-Wenn die [**CollectionMode**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkcollector-get_collectionmode) -Eigenschaft auf [**GestureOnly**](/windows/desktop/api/msinkaut/ne-msinkaut-inkcollectionmode)festgelegt ist, ist das Timeout zwischen dem Zeitpunkt, zu dem ein Benutzer eine Geste hinzufügt, und dem Auftreten des **Gesten** Ereignisses ein fester Wert, den Sie nicht Programm gesteuert ändern können. Die Gestenerkennung ist schneller im **inkandgesten** -Modus.
+Wenn [**die CollectionMode-Eigenschaft**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkcollector-get_collectionmode) auf [**GestureOnly**](/windows/desktop/api/msinkaut/ne-msinkaut-inkcollectionmode)festgelegt ist, ist das Timeout zwischen dem Zeitpunkt, zu dem ein Benutzer eine Geste hinzufügt, und dem Auftreten des **Gestenereigniss** ein fester Wert, den Sie nicht programmgesteuert ändern können. Die Gestenerkennung ist im **InkAndGesture-Modus** schneller.
 
-So verhindern Sie die Sammlung von frei Hand Eingaben im [**inkandgesten**](/windows/desktop/api/msinkaut/ne-msinkaut-inkcollectionmode) -Modus:
+So verhindern Sie die Sammlung von Ink-Daten im [**InkAndGesture-Modus:**](/windows/desktop/api/msinkaut/ne-msinkaut-inkcollectionmode)
 
--   Legen Sie [**CollectionMode**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkcollector-get_collectionmode) auf [**inkandgeste**](/windows/desktop/api/msinkaut/ne-msinkaut-inkcollectionmode)fest.
--   Löschen Sie den Strich im [**Stroke**](inkcollector-stroke.md) -Ereignis.
--   Verarbeiten Sie die Geste im **Gesten** Ereignis.
+-   Legen [**Sie CollectionMode**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkcollector-get_collectionmode) auf [**InkAndGesture fest.**](/windows/desktop/api/msinkaut/ne-msinkaut-inkcollectionmode)
+-   Löschen Sie den Strich im [**Stroke-Ereignis.**](inkcollector-stroke.md)
+-   Verarbeiten Sie die Geste im **Gestenereignis.**
 
-Legen Sie die [**DynamicRendering**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkoverlay-get_dynamicrendering) -Eigenschaft auf **false** fest, um den Fluss von frei Hand Eingaben zu verhindern.
+Um den Fluss von Ink während der Gesturierung zu verhindern, legen Sie [**die DynamicRendering-Eigenschaft**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkoverlay-get_dynamicrendering) auf **FALSE** fest.
 
-Zusätzlich zum Einfügen von frei Hand Eingaben wird das **Gesten** Ereignis ausgelöst, wenn Sie sich im SELECT-oder Erase-Modus befinden. Sie sind verantwortlich für die Nachverfolgung des Bearbeitungsmodus und sollten den Modus vor der Interpretation des Ereignisses beachten.
+Zusätzlich zum Einfügen von Ink wird das **Gestenereignis** im Auswahl- oder Löschmodus ausgelöst. Sie sind für die Nachverfolgung des Bearbeitungsmodus verantwortlich und sollten den Modus kennen, bevor Sie das Ereignis interpretieren.
 
 > [!Note]  
-> Um Gesten zu erkennen, müssen Sie ein Objekt oder ein Steuerelement verwenden, das frei Hand Eingaben erfassen kann.
+> Um Gesten zu erkennen, müssen Sie ein Objekt oder Steuerelement verwenden, das Ink erfassen kann.
 
  
 
-Anwendungs Gesten werden als Gesten definiert, die in der Anwendung unterstützt werden.
+Anwendungsgesten werden als Gesten definiert, die in Ihrer Anwendung unterstützt werden.
 
-Damit dieses Ereignis auftritt, muss das Objekt oder Steuerelement für eine Reihe von Anwendungs Gesten von Interesse sein. Um die Objekte oder Steuerelemente festzulegen, die für einen Satz von Gesten relevant sind, müssen Sie die [**SetGestureStatus**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkcollector-setgesturestatus) -Methode des Objekts oder Steuer Elements aufrufen.
+Damit dieses Ereignis eintritt, muss das Objekt oder Steuerelement an einer Reihe von Anwendungsgesten interessiert sein. Um die Objekte oder Steuerelemente festzulegen, die für eine Reihe von Gesten von Interesse sind, rufen Sie die [**SetGestureStatus-Methode**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkcollector-setgesturestatus) des Objekts oder Steuerelements auf.
 
-Eine Liste der spezifischen Anwendungs Gesten finden Sie unter dem [**Enumerationstyp inkapplicationgesten**](/windows/desktop/api/msinkaut/ne-msinkaut-inkapplicationgesture) .
+Eine Liste der spezifischen Anwendungsgesten finden Sie unter [**InkApplicationGesture-Enumerationstyp.**](/windows/desktop/api/msinkaut/ne-msinkaut-inkapplicationgesture)
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                       |
+| Unterstützte Mindestversion (Client)<br/> | Nur Desktop-Apps der Windows XP Tablet PC Edition \[\]<br/>                                                       |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                           |
-| Header<br/>                   | <dl> <dt>Msink AUT. h (erfordert auch msink AUT \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Msinkaut.h (erfordert auch Msinkaut \_ i.c)</dt> </dl> |
 | Bibliothek<br/>                  | <dl> <dt>InkObj.dll</dt> </dl>                               |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**InkCollector-Klasse**](inkcollector-class.md)
 </dt> <dt>
 
-[**Inkapplicationgesten-Enumeration**](/windows/desktop/api/msinkaut/ne-msinkaut-inkapplicationgesture)
+[**InkApplicationGesture-Enumeration**](/windows/desktop/api/msinkaut/ne-msinkaut-inkapplicationgesture)
 </dt> <dt>
 
 [**SetGestureStatus-Methode**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkcollector-setgesturestatus)

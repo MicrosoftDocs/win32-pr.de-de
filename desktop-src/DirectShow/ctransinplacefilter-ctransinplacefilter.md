@@ -1,7 +1,7 @@
 ---
-description: Konstruktormethode.
+description: 'CTransInPlaceFilter.CTransInPlaceFilter-Konstruktor : Konstruktormethode.'
 ms.assetid: f0d30125-5d16-470c-a5fb-a7df96814dad
-title: Ctransinplacefilter. ctransinplacefilter-Konstruktor (transip. h)
+title: CTransInPlaceFilter.CTransInPlaceFilter-Konstruktor (Transip.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,14 +16,14 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 091ea6e6a52d4cc9221ddb29db34b4823111a395
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: d6b14af4b0d1f33933db8ca2fd1835e9711edad9
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365806"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108084778"
 ---
-# <a name="ctransinplacefilterctransinplacefilter-constructor"></a>Ctransinplacefilter. ctransinplacefilter-Konstruktor
+# <a name="ctransinplacefilterctransinplacefilter-constructor"></a>CTransInPlaceFilter.CTransInPlaceFilter-Konstruktor
 
 Konstruktormethode.
 
@@ -46,38 +46,38 @@ CTransInPlaceFilter(
 
 <dl> <dt>
 
-*pobjectname* 
+*pObjectName* 
 </dt> <dd>
 
-Zeichenfolge, die den debugnamen des Filters enthält. Weitere Informationen finden Sie unter [**cbaseobject**](cbaseobject.md).
+Eine Zeichenfolge, die den Debugnamen des Filters enthält. Weitere Informationen finden Sie unter [**CBaseObject**](cbaseobject.md).
 
 </dd> <dt>
 
 *lpUnk* 
 </dt> <dd>
 
-Zeiger auf den Besitzer dieses Objekts. Wenn das Objekt aggregiert wird, übergeben Sie einen Zeiger an die **IUnknown** -Schnittstelle des Aggregations Objekts. Andernfalls legen Sie diesen Parameter auf **null** fest.
+Zeiger auf den Besitzer dieses Objekts. Wenn das Objekt aggregiert wird, übergeben Sie einen Zeiger auf die **IUnknown-Schnittstelle des aggregierenden** Objekts. Legen Sie andernfalls diesen Parameter auf **NULL fest.**
 
 </dd> <dt>
 
-*CLSID* 
+*Clsid* 
 </dt> <dd>
 
-Klassen Bezeichner des Filters.
+Klassenbezeichner des Filters.
 
 </dd> <dt>
 
-*PHR* 
+*Phr* 
 </dt> <dd>
 
 Ignoriert.
 
 </dd> <dt>
 
-*bmodifiesdata* 
+*bModifiesData* 
 </dt> <dd>
 
-Boolescher Wert, der angibt, ob der Filter die Eingabedaten ändert. **True** gibt an, dass der Filter die Daten ändert. Andernfalls übergibt der Filter die Daten unverändert.
+Boolescher Wert, der angibt, ob der Filter die Eingabedaten ändert. True **gibt an,** dass der Filter die Daten ändert. Andernfalls übergibt der Filter die Daten unverändert nachgelagert.
 
 </dd> </dl>
 
@@ -85,18 +85,18 @@ Boolescher Wert, der angibt, ob der Filter die Eingabedaten ändert. **True** gi
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Transip. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Transip.h (einschließlich Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Ctransinplacefilter-Klasse**](ctransinplacefilter.md)
+[**CTransInPlaceFilter-Klasse**](ctransinplacefilter.md)
 </dt> </dl>
 
  

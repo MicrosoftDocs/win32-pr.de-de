@@ -1,7 +1,7 @@
 ---
-description: Zeigt ein Dialogfeld an, in dem der Benutzer ein Hardware Gerät für die Abbild Erfassung auswählen kann.
+description: 'IWiaDevMgr2::SelectDeviceDlg-Methode: Zeigt ein Dialogfeld an, in dem der Benutzer ein Hardwaregerät für die Imageerfassung auswählen kann.'
 ms.assetid: cd020dc6-fddf-4d7f-aa57-eae94953ef4e
-title: 'IWiaDevMgr2:: SelectDeviceDlg-Methode (WIA. h)'
+title: IWiaDevMgr2::SelectDeviceDlg-Methode (Wia.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Wia.h
-ms.openlocfilehash: cb41ec8e94782ee4d7408c53e2d4e098d986fe83
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 60ec24f264b8fe0424f17fc32deaf803e55c3346
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106358465"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108091258"
 ---
-# <a name="iwiadevmgr2selectdevicedlg-method"></a>IWiaDevMgr2:: SelectDeviceDlg-Methode
+# <a name="iwiadevmgr2selectdevicedlg-method"></a>IWiaDevMgr2::SelectDeviceDlg-Methode
 
-Zeigt ein Dialogfeld an, in dem der Benutzer ein Hardware Gerät für die Abbild Erfassung auswählen kann.
+Zeigt ein Dialogfeld an, in dem der Benutzer ein Hardwaregerät für die Imageerfassung auswählen kann.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,36 +43,36 @@ HRESULT SelectDeviceDlg(
 
 <dl> <dt>
 
-*hwndParent* \[ in\]
+*hwndParent* \[ In\]
 </dt> <dd>
 
 Typ: **HWND**
 
-Gibt das übergeordnete Fenster des Dialog Felds **Gerät auswählen** an.
+Gibt das übergeordnete Fenster des Dialogfelds **Gerät auswählen** an.
 
 </dd> <dt>
 
-*LDE vicetype* \[ in\]
+*lDeviceType* \[ In\]
 </dt> <dd>
 
-Type: **Long**
+Typ: **LONG**
 
-Gibt an, welcher Typ von WIA 2,0-Gerät verwendet werden soll. Eine Liste der möglichen Werte finden Sie unter [WIA Device Type specifier](-wia-wia-device-type-specifiers.md) .
+Gibt an, welcher WiA 2.0-Gerätetyp verwendet werden soll. Eine Liste der möglichen Werte finden Sie unter [WIA-Gerätetypspezifizierer.](-wia-wia-device-type-specifiers.md)
 
 </dd> <dt>
 
-*lFlags* \[ in\]
+*lFlags* \[ In\]
 </dt> <dd>
 
-Type: **Long**
+Typ: **LONG**
 
-Gibt das Verhalten des Dialog Felds an. Der Wert kann einer der folgenden Werte sein:
+Gibt das Verhalten des Dialogfelds an. Der Wert kann einer der folgenden Sein:
 
 <dt>
 
 <span id="0"></span>
 
-<span id="0"></span>**1,0**
+<span id="0"></span>**0**
 
 
 </dt> <dd>
@@ -83,30 +83,30 @@ Verwendet das Standardverhalten.
 
 <span id="WIA_SELECT_DEVICE_NODEFAULT"></span><span id="wia_select_device_nodefault"></span>
 
-<span id="WIA_SELECT_DEVICE_NODEFAULT"></span><span id="wia_select_device_nodefault"></span>**WIA \_ Select \_ Device \_ NODEFAULT**
+<span id="WIA_SELECT_DEVICE_NODEFAULT"></span><span id="wia_select_device_nodefault"></span>**WIA \_ SELECT \_ DEVICE \_ NODEFAULT**
 
 
 </dt> <dd>
 
-Zeigt das Dialogfeld an, obwohl nur ein entsprechendes Gerät vorhanden ist.
+Zeigt das Dialogfeld an, obwohl nur ein übereinstimmendes Gerät vorhanden ist.
 
 </dd> </dl> </dd> <dt>
 
-*pbstraude viceid* \[ in, out\]
+*pbstrDeviceID* \[ in, out\]
 </dt> <dd>
 
-Geben Sie Folgendes ein: **BSTR \** _
+Typ: **BSTR \***
 
-Bei der Ausgabe empfängt eine Zeichenfolge, die die Bezeichnerzeichenfolge des Geräts enthält. Übergeben Sie bei der Eingabe die Adresse eines Zeigers, wenn diese Informationen benötigt werden, oder _ *null**, wenn er nicht benötigt wird.
+Empfängt bei der Ausgabe eine Zeichenfolge, die die Bezeichnerzeichenfolge des Geräts enthält. Übergeben Sie bei der Eingabe die Adresse eines Zeigers, wenn diese Informationen benötigt werden, oder **NULL,** wenn sie nicht benötigt werden.
 
 </dd> <dt>
 
-*ppitemroot* \[ Out, retval\]
+*ppItemRoot* \[ out, retval\]
 </dt> <dd>
 
 Typ: **[ **IWiaItem2**](-wia-iwiaitem2.md)\*\***
 
-Empfängt die Adresse eines Zeigers auf die [**IWiaItem2**](-wia-iwiaitem2.md) -Schnittstelle des Stamm Elements der hierarchischen Struktur, die das ausgewählte WIA 2,0-Gerät darstellt. Wenn kein Gerät gefunden wird, wird **null** empfangen.
+Empfängt die Adresse eines Zeigers auf die [**IWiaItem2-Schnittstelle**](-wia-iwiaitem2.md) des Stammelements der hierarchischen Struktur, das das ausgewählte WIA 2.0-Gerät darstellt. Wenn kein Gerät gefunden wird, empfängt es **NULL.**
 
 </dd> </dl>
 
@@ -121,8 +121,8 @@ Diese Methode kann einen dieser Werte zurückgeben.
 | Rückgabecode                                                                                                  | Beschreibung                                                                                            |
 |--------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>                         | Das Gerät wurde erfolgreich ausgewählt. <br/>                                                          |
-| <dl> <dt>**S \_ false**</dt> </dl>                      | Der Benutzer hat das Dialogfeld abgebrochen. <br/>                                                              |
-| <dl> <dt>**WIA \_ S \_ kein \_ Gerät \_ verfügbar**</dt> </dl> | Keine WIA 2,0-Hardware Geräte entsprechen den Spezifikationen im *ldebug Type* -Parameter. <br/> |
+| <dl> <dt>**S \_ FALSE**</dt> </dl>                      | Der Benutzer hat das Dialogfeld abgebrochen. <br/>                                                              |
+| <dl> <dt>**WIA \_ S KEIN GERÄT \_ \_ \_ VERFÜGBAR**</dt> </dl> | Keine WIA 2.0-Hardwaregeräte entsprechen den Im *lDeviceType-Parameter angegebenen* Spezifikationen. <br/> |
 
 
 
@@ -130,14 +130,14 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Mit dieser Methode wird das Dialogfeld **Gerät auswählen** erstellt und angezeigt, sodass der Benutzer ein WIA 2,0-Gerät für die Abbild Erfassung auswählen kann. Wenn ein Gerät erfolgreich ausgewählt wurde, erstellt die **IWiaDevMgr2:: SelectDeviceDlg** -Methode eine hierarchische Struktur von [**IWiaItem2**](-wia-iwiaitem2.md) -Objekten für das Gerät. Es speichert einen Zeiger auf die **IWiaItem2** -Schnittstelle des Stamm Elements im Parameter *ppitemroot*.
+Diese Methode erstellt und zeigt das **Dialogfeld Gerät** auswählen an, damit der Benutzer ein WIA 2.0-Gerät für die Bilderfassung auswählen kann. Wenn ein Gerät erfolgreich ausgewählt wurde, erstellt die **IWiaDevMgr2::SelectDeviceDlg-Methode** eine hierarchische Struktur von [**IWiaItem2-Objekten**](-wia-iwiaitem2.md) für das Gerät. Er speichert einen Zeiger auf die **IWiaItem2-Schnittstelle** des Stammelements im *Parameter ppItemRoot*.
 
-Die Anwendung kann die Geräte, die dem Benutzer angezeigt werden, auf bestimmte Typen beschränken, indem Sie die Gerätetypen über den *ltovicetype* -Parameter angeben. Wenn nur ein Gerät der Spezifikation entspricht, wird von **IWiaDevMgr2:: selectde vicedlg** das Dialogfeld **Gerät auswählen** nicht angezeigt. Stattdessen wird die [**IWiaItem2**](-wia-iwiaitem2.md) -Struktur für das Gerät erstellt und ein Zeiger auf die **IWiaItem2** -Schnittstelle des Stamm Elements im Parameter *ppitemroot* gespeichert. Sie können dieses Verhalten überschreiben und **IWiaDevMgr2:: SelectDeviceDlg** erzwingen, um das Dialogfeld anzuzeigen, indem Sie WIA \_ Select \_ Device \_ NODEFAULT als Wert für den *lFlags* -Parameter angeben. Wenn mehr als ein WIA 2,0-Gerät mit der Spezifikation übereinstimmt, werden alle übereinstimmenden Geräte im Dialogfeld **Gerät auswählen** angezeigt, sodass der Benutzer eine Auswahl treffen kann.
+Die Anwendung kann die dem Benutzer angezeigten Geräte auf bestimmte Typen beschränken, indem sie die Gerätetypen über den *Parameter lDeviceType* angibt. Wenn nur ein Gerät die Spezifikation erfüllt, zeigt **IWiaDevMgr2::SelectDeviceDlg** das Dialogfeld **Gerät** auswählen nicht an. Stattdessen wird die [**IWiaItem2-Struktur**](-wia-iwiaitem2.md) für das Gerät erstellt und ein Zeiger auf die **IWiaItem2-Schnittstelle** des Stammelements im Parameter *ppItemRoot gespeichert.* Sie können dieses Verhalten überschreiben und **IWiaDevMgr2::SelectDeviceDlg** zwingen, das Dialogfeld anzuzeigen, indem Sie WIA SELECT DEVICE NODEFAULT als Wert für den \_ \_ \_ *lFlags-Parameter* angeben. Wenn mehr als ein WIA 2.0-Gerät mit der Spezifikation übereinstimmt, werden alle übereinstimmenden Geräte im Dialogfeld **Gerät auswählen** angezeigt, damit der Benutzer eines auswählen kann.
 
-Anwendungen müssen die [IUnknown:: Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) -Methode für die Schnittstellen Zeiger aufrufen, die Sie über den *ppitemroot* -Parameter empfangen.
+Anwendungen müssen die [IUnknown::Release-Methode](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) für die Schnittstellenzeiger aufrufen, die sie über den *ppItemRoot-Parameter* empfangen.
 
 > [!Note]  
-> Es wird empfohlen, dass Anwendungen die Geräte-und Abbild Auswahl über ein Menü Element namens **von Scanner** im Menü **Datei** verfügbar machen.
+> Es wird empfohlen, dass Anwendungen die Geräte- und Bildauswahl über ein Menüelement mit dem Namen **Von Scanner** im Menü **Datei** verfügbar machen.
 
  
 
@@ -145,12 +145,12 @@ Anwendungen müssen die [IUnknown:: Release](/windows/win32/api/unknwn/nf-unknwn
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                     |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                               |
-| Header<br/>                   | <dl> <dt>WIA. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>WIA. idl</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ Vista-Desktop-Apps\]<br/>                                     |
+| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2008-Desktop-Apps\]<br/>                               |
+| Header<br/>                   | <dl> <dt>Wia.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>Wia.idl</dt> </dl> |
 
 
 

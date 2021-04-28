@@ -1,26 +1,26 @@
 ---
-description: .
+description: Überprüfen der unterstützten DXVA-HD-Formate
 ms.assetid: 43ae9f70-34a1-48ca-be61-e974e2daebd7
-title: Überprüfen unterstützter DXVA-HD-Formate
+title: Überprüfen der unterstützten DXVA-HD-Formate
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e7560d574cee5fca21ab8de78b01b87af1de5a64
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d07d47043ed200d256e2bef8fa2c9ab6717f3b82
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104484123"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108090008"
 ---
-# <a name="checking-supported-dxva-hd-formats"></a>Überprüfen unterstützter DXVA-HD-Formate
+# <a name="checking-supported-dxva-hd-formats"></a>Überprüfen der unterstützten DXVA-HD-Formate
 
-## <a name="checking-supported-input-formats"></a>Unterstützte Eingabeformate werden überprüft
+## <a name="checking-supported-input-formats"></a>Überprüfen der unterstützten Eingabeformate
 
-Gehen Sie folgendermaßen vor, um eine Liste der Eingabeformate zu erhalten, die vom Microsoft DirectX Video Acceleration High Definition-Gerät (DXVA-HD) unterstützt werden:
+Gehen Sie wie folgt vor, um eine Liste der Eingabeformate zu erhalten, die vom DXVA-HD-Gerät (Microsoft DirectX Video Acceleration High Definition) unterstützt werden:
 
-1.  Wenden Sie [**idxvahd \_ Device:: getvideoprocesordevicecaps**](/windows/desktop/api/dxvahd/nf-dxvahd-idxvahd_device-getvideoprocessordevicecaps) an, um die Gerätefunktionen abzurufen.
-2.  Überprüfen Sie den **inputformatcount** -Member der [**dxvahd \_ vpdevcaps-**](/windows/desktop/api/dxvahd/ns-dxvahd-dxvahd_vpdevcaps) Struktur. Dieser Member gibt die Anzahl der unterstützten Eingabeformate an.
-3.  Weisen Sie ein Array von **D3DFORMAT** -Werten der Größe **inputformatcount** zu.
-4.  Übergeben Sie dieses Array an die [**idxvahd \_ Device:: getvideoprocess orinputformats**](/windows/desktop/api/dxvahd/nf-dxvahd-idxvahd_device-getvideoprocessorinputformats) -Methode. Die-Methode füllt das Array mit einer Liste von Eingabe Formaten.
+1.  Rufen [**Sie IDXVAHD \_ Device::GetVideoProcessorDeviceCaps**](/windows/desktop/api/dxvahd/nf-dxvahd-idxvahd_device-getvideoprocessordevicecaps) auf, um die Gerätefunktionen zu erhalten.
+2.  Überprüfen Sie **das InputFormatCount-Member** der [**DXVAHD \_ VPDEVCAPS-Struktur.**](/windows/desktop/api/dxvahd/ns-dxvahd-dxvahd_vpdevcaps) Dieser Member gibt die Anzahl der unterstützten Eingabeformate an.
+3.  Ordnen Sie ein Array von **D3DFORMAT-Werten** der Größe **InputFormatCount zu.**
+4.  Übergeben Sie dieses Array an die [**IDXVAHD \_ Device::GetVideoProcessorInputFormats-Methode.**](/windows/desktop/api/dxvahd/nf-dxvahd-idxvahd_device-getvideoprocessorinputformats) Die Methoden füllen das Array mit einer Liste von Eingabeformaten aus.
 
 Diese Schritte sind im folgenden Code dargestellt:
 
@@ -71,14 +71,14 @@ done:
 
 
 
-## <a name="checking-supported-output-formats"></a>Überprüfen unterstützter Ausgabeformate
+## <a name="checking-supported-output-formats"></a>Überprüfen der unterstützten Ausgabeformate
 
-Gehen Sie folgendermaßen vor, um eine Liste der Ausgabeformate zu erhalten, die vom DXVA-HD-Gerät unterstützt werden:
+Gehen Sie wie folgt vor, um eine Liste der Ausgabeformate zu erhalten, die das DXVA-HD-Gerät unterstützt:
 
-1.  Wenden Sie [**idxvahd \_ Device:: getvideoprocesordevicecaps**](/windows/desktop/api/dxvahd/nf-dxvahd-idxvahd_device-getvideoprocessordevicecaps) an, um die Gerätefunktionen abzurufen.
-2.  Überprüfen Sie den **outputformatcount** -Member der [**dxvahd \_ vpdevcaps-**](/windows/desktop/api/dxvahd/ns-dxvahd-dxvahd_vpdevcaps) Struktur. Dieser Member gibt die Anzahl der unterstützten Eingabeformate an.
-3.  Weisen Sie ein Array von **D3DFORMAT** -Werten der Größe **outputformatcount** zu.
-4.  Übergeben Sie dieses Array an die [**idxvahd \_ Device:: getvideoprocess oroutputformats**](/windows/desktop/api/dxvahd/nf-dxvahd-idxvahd_device-getvideoprocessoroutputformats) -Methode. Die-Methode füllt das Array mit einer Liste von Ausgabeformaten.
+1.  Rufen [**Sie IDXVAHD \_ Device::GetVideoProcessorDeviceCaps**](/windows/desktop/api/dxvahd/nf-dxvahd-idxvahd_device-getvideoprocessordevicecaps) auf, um die Gerätefunktionen zu erhalten.
+2.  Überprüfen Sie **das OutputFormatCount-Member** der [**DXVAHD \_ VPDEVCAPS-Struktur.**](/windows/desktop/api/dxvahd/ns-dxvahd-dxvahd_vpdevcaps) Dieser Member gibt die Anzahl der unterstützten Eingabeformate an.
+3.  Ordnen Sie ein Array **von D3DFORMAT-Werten** der Größe **OutputFormatCount zu.**
+4.  Übergeben Sie dieses Array an die [**IDXVAHD \_ Device::GetVideoProcessorOutputFormats-Methode.**](/windows/desktop/api/dxvahd/nf-dxvahd-idxvahd_device-getvideoprocessoroutputformats) Die Methoden füllen das Array mit einer Liste von Ausgabeformaten aus.
 
 Diese Schritte sind im folgenden Code dargestellt:
 

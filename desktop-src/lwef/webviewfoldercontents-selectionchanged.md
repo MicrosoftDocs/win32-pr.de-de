@@ -1,9 +1,9 @@
 ---
-title: Webviewfoldercontents. SelectionChanged-Ereignis (Shldisp. h)
-description: Tritt auf, wenn sich der Auswahl Zustand eines Elements oder der Elemente in der Ansicht geändert hat.
+title: WebViewFolderContents.SelectionChanged-Ereignis (Shldisp.h)
+description: 'WebViewFolderContents.SelectionChanged-Ereignis: Tritt auf, wenn sich der Auswahlzustand eines Elements oder elements in der Ansicht geändert hat.'
 ms.assetid: 46dfceec-aa81-4950-81e5-526a6e621271
 keywords:
-- SelectionChanged-Ereignis Legacy-Windows-Umgebungs Features
+- SelectionChanged-Ereignis Legacy-Windows-Umgebungsfeatures
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c8421e9d06ff9fd24256da8a23cdd100b5749968
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: ea6176cb2a1703d48cd2ddec8069c65d7efc978f
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104518749"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108102658"
 ---
-# <a name="webviewfoldercontentsselectionchanged-event"></a>Webviewfoldercontents. SelectionChanged-Ereignis
+# <a name="webviewfoldercontentsselectionchanged-event"></a>WebViewFolderContents.SelectionChanged-Ereignis
 
-Tritt auf, wenn sich der Auswahl Zustand eines Elements oder der Elemente in der Ansicht geändert hat.
+Tritt ein, wenn sich der Auswahlzustand eines Elements oder elements in der Ansicht geändert hat.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,7 +46,7 @@ Dieser Ereignishandler verfügt über keine Parameter.
 
 ## <a name="examples"></a>Beispiele
 
-Das folgende Beispiel zeigt die ordnungsgemäße Verwendung dieses Ereignisses für JScript Embedded in HTML.
+Das folgende Beispiel zeigt die ordnungsgemäße Verwendung dieses Ereignisses für JScript, das in HTML eingebettet ist.
 
 
 ```HTML
@@ -82,13 +82,13 @@ Das folgende Beispiel zeigt die ordnungsgemäße Verwendung dieses Ereignisses f
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, Windows XP \[ Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Client)<br/> | Nur Windows 2000 Professional- und Windows \[ XP-Desktop-Apps\]<br/>                                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                           |
-| Header<br/>                   | <dl> <dt>Shldisp. h</dt> </dl>                           |
-| IDL<br/>                      | <dl> <dt>Shldisp. idl</dt> </dl>                         |
-| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4,71 oder höher)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>                           |
+| Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                         |
+| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4.71 oder höher)</dt> </dl> |
 
 
 

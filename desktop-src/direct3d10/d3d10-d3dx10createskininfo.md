@@ -1,7 +1,7 @@
 ---
-description: Erstellt ein leeres Skin-Mesh-Objekt mit einem Deklarator.
+description: 'D3DX10CreateSkinInfo-Funktion: Erstellt mithilfe eines Deklarators ein leeres Skin mesh-Objekt.'
 ms.assetid: 5356cfe5-de90-462d-9722-72f3618decfb
-title: D3DX10CreateSkinInfo-Funktion (D3DX10Mesh. h)
+title: D3DX10CreateSkinInfo-Funktion (D3DX10Mesh.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: a68da20c2e2e15e3b73d55ee1df70518bba46200
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 17d6ec99d3f43c41d56deebef81a021c81ec1d69
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106365124"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108103598"
 ---
 # <a name="d3dx10createskininfo-function"></a>D3DX10CreateSkinInfo-Funktion
 
-Erstellt ein leeres Skin-Mesh-Objekt mit einem Deklarator.
+Erstellt ein leeres Skin mesh-Objekt mithilfe eines Deklarators.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,12 +40,12 @@ HRESULT D3DX10CreateSkinInfo(
 
 <dl> <dt>
 
-*ppskininfo* \[ vorgenommen\]
+*ppSkinInfo* \[ out\]
 </dt> <dd>
 
 Typ: **[ **LPD3DX10SKININFO**](id3dx10skininfo.md)\***
 
-Adresse eines Zeigers auf eine [**ID3DX10SkinInfo-Schnittstelle**](id3dx10skininfo.md), die das erstellte Skin-Mesh-Objekt darstellt.
+Adresse eines Zeigers auf eine [**ID3DX10SkinInfo-Schnittstelle,**](id3dx10skininfo.md)die das erstellte Skin mesh-Objekt darstellt.
 
 </dd> </dl>
 
@@ -53,24 +53,24 @@ Adresse eines Zeigers auf eine [**ID3DX10SkinInfo-Schnittstelle**](id3dx10skinin
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert lauten: E \_ outo-Memory.
+Wenn die Funktion erfolgreich ist, ist der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert E \_ OUTOFMEMORY sein.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Verwenden Sie [**ID3DX10SkinInfo:: setboneinfluence**](id3dx10skininfo-setboneinfluence.md) , um das leere Skin-Mesh-Objekt aufzufüllen, das von dieser Methode zurückgegeben wird.
+Verwenden Sie [**ID3DX10SkinInfo::SetBoneInfluence,**](id3dx10skininfo-setboneinfluence.md) um das leere Skin mesh-Objekt, das von dieser Methode zurückgegeben wird, zu füllen.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX10Mesh. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx10. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX10Mesh.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

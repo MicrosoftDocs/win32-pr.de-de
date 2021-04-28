@@ -1,7 +1,7 @@
 ---
-description: Konstruktormethode.
+description: 'CBaseMediaFilter.CBaseMediaFilter-Konstruktor : Konstruktormethode.'
 ms.assetid: 91290f58-a77b-447f-aa2a-bbee067f5a98
-title: Cbasemediafilter. cbasemediafilter-Konstruktor (amfilter. h)
+title: CBaseMediaFilter.CBaseMediaFilter-Konstruktor (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,14 +16,14 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 8498e9da88804291fc5cdb900ff1dbda212e8b0f
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: f123c7af29c6420de6004132180eba8dbf33fa72
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106351220"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108096318"
 ---
-# <a name="cbasemediafiltercbasemediafilter-constructor"></a>Cbasemediafilter. cbasemediafilter-Konstruktor
+# <a name="cbasemediafiltercbasemediafilter-constructor"></a>CBaseMediaFilter.CBaseMediaFilter-Konstruktor
 
 Konstruktormethode.
 
@@ -52,52 +52,52 @@ Zeiger auf eine Zeichenfolge, die den Namen des Objekts enthält.
 
 </dd> <dt>
 
-*Kro* 
+*Punk* 
 </dt> <dd>
 
-Zeiger auf den Besitzer dieses Objekts. Wenn das Objekt aggregiert wird, übergeben Sie einen Zeiger an die **IUnknown** -Schnittstelle des Aggregations Objekts. Andernfalls legen Sie diesen Parameter auf **null** fest.
+Zeiger auf den Besitzer dieses Objekts. Wenn das Objekt aggregiert wird, übergeben Sie einen Zeiger auf die **IUnknown-Schnittstelle des aggregierenden** Objekts. Legen Sie andernfalls diesen Parameter auf **NULL fest.**
 
 </dd> <dt>
 
 *Plock* 
 </dt> <dd>
 
-Zeiger auf eine [**ccritsec**](ccritsec.md) -Sperre, mit der Zustandsänderungen serialisiert werden.
+Zeiger auf eine [**CCritSec-Sperre,**](ccritsec.md) die zum Serialisieren von Zustandsänderungen verwendet wird.
 
 </dd> <dt>
 
-*CLSID* 
+*Clsid* 
 </dt> <dd>
 
-Klassen Bezeichner des-Objekts.
+Klassenbezeichner des Objekts.
 
 </dd> </dl>
 
 ## <a name="remarks"></a>Bemerkungen
 
-Wenn ein anderes Objekt das Objekt enthält oder aggregiert `CBaseMediaFilter` , kann die **ccritsec** -Sperre für das Objekt extern sein `CBaseMediaFilter` . Übergeben Sie in diesem Fall einen Zeiger auf die Sperre in *Plock*.
+Wenn ein anderes Objekt das Objekt enthält oder aggregiert, kann `CBaseMediaFilter` die **CCritSec-Sperre** für das Objekt extern `CBaseMediaFilter` sein. Übergeben Sie in diesem Fall einen Zeiger auf die Sperre in *pLock*.
 
-Andernfalls können Sie folgende Aktionen ausführen:
+Andernfalls können Sie:
 
--   Leiten Sie eine Klasse ab, die sowohl `CBaseMediaFilter` als auch **ccritsec** erbt. Übergeben Sie für *Plock* den this-Zeiger.
--   Leiten Sie eine Klasse ab, die erbt `CBaseMediaFilter` und eine **ccritsec** -Element Variable enthält. Übergeben Sie für *Plock* die Adresse dieser Variablen.
+-   Leiten Sie eine Klasse ab, die sowohl als auch `CBaseMediaFilter` **CCritSec erbt.** Übergeben *Sie für pLock* den this-Zeiger.
+-   Leiten Sie eine Klasse ab, die eine `CBaseMediaFilter` **CCritSec-Membervariable erbt und** enthält. Übergeben Sie für *pLock* die Adresse dieser Variablen.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (streams.h einschließen)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbasemediafilter-Klasse**](cbasemediafilter.md)
+[**CBaseMediaFilter-Klasse**](cbasemediafilter.md)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
-description: Ruft Informationen zu einem bestimmten Rückruf im Animations Satz ab.
+description: 'ID3DXKeyframedAnimationSet::GetCallbackKey-Methode: Ruft Informationen zu einem bestimmten Rückruf im Animationssatz ab.'
 ms.assetid: a1d3ca96-2852-420a-aa5c-a434970e5523
-title: 'ID3DXKeyframedAnimationSet:: getcallbackkey-Methode (D3dx9anim. h)'
+title: ID3DXKeyframedAnimationSet::GetCallbackKey-Methode (D3dx9anim.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 95a3f5a97b84862a66d18b60a3776e183df36444
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: f3ebbf93bd482a2259ffdaaf272c65b5e86d5270
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106353768"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108090318"
 ---
-# <a name="id3dxkeyframedanimationsetgetcallbackkey-method"></a>ID3DXKeyframedAnimationSet:: getcallbackkey-Methode
+# <a name="id3dxkeyframedanimationsetgetcallbackkey-method"></a>ID3DXKeyframedAnimationSet::GetCallbackKey-Methode
 
-Ruft Informationen zu einem bestimmten Rückruf im Animations Satz ab.
+Ruft Informationen zu einem bestimmten Rückruf im Animationssatz ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,19 +41,19 @@ HRESULT GetCallbackKey(
 
 <dl> <dt>
 
-*Animation* \[ in\]
+*Animation* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Animations Index.
+Animationsindex.
 
 </dd> <dt>
 
-*pcallbackkeys* \[ vorgenommen\]
+*pCallbackKeys* \[ out\]
 </dt> <dd>
 
-Typ: **[ **LPD3DXKEY- \_ Rückruf**](d3dxkey-callback.md)**
+Typ: **[ **LPD3DXKEY \_ CALLBACK**](d3dxkey-callback.md)**
 
 Zeiger auf die [**Rückruffunktion**](d3dxkey-callback.md).
 
@@ -63,20 +63,20 @@ Zeiger auf die [**Rückruffunktion**](d3dxkey-callback.md).
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, wird der folgende Wert zurückgegeben: D3DERR \_ invalidcall.
+Wenn die Methode erfolgreich ist, lautet der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, wird der folgende Wert zurückgegeben: D3DERR \_ INVALIDCALL.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9anim. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3dx9anim.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

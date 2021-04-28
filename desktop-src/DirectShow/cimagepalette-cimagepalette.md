@@ -1,7 +1,7 @@
 ---
-description: Konstruktormethode.
+description: 'CImagePalette.CImagePalette-Konstruktor: Konstruktormethode.'
 ms.assetid: 50fa573c-a244-4a1e-9fd9-2b33a3427c84
-title: Cimagepalette. cimagepalette-Konstruktor (winutil. h)
+title: CImagePalette.CImagePalette-Konstruktor (Winutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,14 +16,14 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 38b5766617e1d17fa3917048c2fb845b5194cc42
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 5021b165a8fa47bedc7961657d7cdbfa07af301d
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106366875"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108085678"
 ---
-# <a name="cimagepalettecimagepalette-constructor"></a>Cimagepalette. cimagepalette-Konstruktor
+# <a name="cimagepalettecimagepalette-constructor"></a>CImagePalette.CImagePalette-Konstruktor
 
 Konstruktormethode.
 
@@ -44,24 +44,24 @@ CImagePalette(
 
 <dl> <dt>
 
-*pbasefilter* 
+*pBaseFilter* 
 </dt> <dd>
 
 Zeiger auf den besitzenden Filter.
 
 </dd> <dt>
 
-*pbasewindow* 
+*pBaseWindow* 
 </dt> <dd>
 
-Zeiger auf ein **cbasewindow** -Objekt, das das Fenster verwaltet, in dem die Palette realisiert wird. Dieser Parameter kann **NULL** sein.
+Zeiger auf ein **CBaseWindow-Objekt,** das das Fenster verwaltet, in dem die Palette realisiert wird. Dieser Parameter kann **NULL** sein.
 
 </dd> <dt>
 
-*pdrawimage* 
+*pDrawImage* 
 </dt> <dd>
 
-Zeiger auf ein **cdrawimage** -Objekt, das das Videobild zeichnet. Dieser Parameter kann **NULL** sein.
+Zeiger auf ein **CDrawImage-Objekt,** das das Videobild zeichnet. Dieser Parameter kann **NULL** sein.
 
 </dd> </dl>
 
@@ -69,18 +69,18 @@ Zeiger auf ein **cdrawimage** -Objekt, das das Videobild zeichnet. Dieser Parame
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Winutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Winutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cimagepalette-Klasse**](cimagepalette.md)
+[**CImagePalette-Klasse**](cimagepalette.md)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
-description: Beendet den Dienst.
+description: 'StopService-Methode der Msvm_VirtualSystemManagementService Klasse : Beendet den Dienst.'
 ms.assetid: 215a9e6d-8f31-43a6-abf5-4eb72432e09f
-title: Stop Service-Methode der Msvm_VirtualSystemManagementService-Klasse
+title: StopService-Methode der Msvm_VirtualSystemManagementService Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,14 +13,14 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: ce9ac3e0aafa23d82c961e40b32d93c58de93aae
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9ca47b0133944763bff2474a6511b7981b4c1884
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103750176"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108109388"
 ---
-# <a name="stopservice-method-of-the-msvm_virtualsystemmanagementservice-class"></a>Stop Service-Methode der MSVM \_ virtualsystemmanagementservice-Klasse
+# <a name="stopservice-method-of-the-msvm_virtualsystemmanagementservice-class"></a>StopService-Methode der Msvm \_ VirtualSystemManagementService-Klasse
 
 Beendet den Dienst.
 
@@ -53,21 +53,21 @@ Diese Methode gibt einen der folgenden Werte zurück:
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8.1<br/>                                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2<br/>                                                                       |
 | Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**MSVM \_ virtualsystemmanagementservice**](msvm-virtualsystemmanagementservice.md)
+[**Msvm \_ VirtualSystemManagementService**](msvm-virtualsystemmanagementservice.md)
 </dt> </dl>
 
  

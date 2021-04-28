@@ -1,14 +1,14 @@
 ---
-title: Getsecuritydescriptor-Methode der Win32_Service-Klasse (Remotedesktopdienste)
-description: Gibt die Sicherheits Beschreibung zurück, die den Zugriff auf den Dienst steuert.
+title: GetSecurityDescriptor-Methode der Win32_Service -Klasse (Remotedesktopdienste)
+description: 'GetSecurityDescriptor-Methode der Win32_Service -Klasse (Remotedesktopdienste): Gibt den Sicherheitsdeskriptor zurück, der den Zugriff auf den Dienst steuert.'
 ms.assetid: 9898091A-5BE2-42A0-BF81-13AB74696ACB
 ms.tgt_platform: multiple
 keywords:
-- Skripterstellung Windows-Verwaltungsinstrumentation, Sicherheit
-- Sicherheits Windows-Verwaltungsinstrumentation, Skripterstellung
-- Getsecuritydescriptor-Methode Remotedesktopdienste
-- Getsecuritydescriptor-Methode Remotedesktopdienste, Win32_Service-Klasse
-- Win32_Service-Klasse Remotedesktopdienste, getsecuritydescriptor-Methode
+- Scripting Windows-Verwaltungsinstrumentation , Sicherheit
+- Sicherheit Windows-Verwaltungsinstrumentation , Skripterstellung
+- GetSecurityDescriptor-Remotedesktopdienste
+- GetSecurityDescriptor-Methode Remotedesktopdienste , Win32_Service-Klasse
+- Win32_Service klasse Remotedesktopdienste , GetSecurityDescriptor-Methode
 topic_type:
 - apiref
 api_name:
@@ -19,16 +19,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: cf8dc271d5498163352af10bcb0b9c55e2e81fb7
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: ea5b8a9b945048f947aa273e1ccc1f4514469681
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103949736"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108090648"
 ---
-# <a name="getsecuritydescriptor-method-of-the-win32_service-class-remote-desktop-services"></a>Getsecuritydescriptor-Methode der Win32_Service-Klasse (Remotedesktopdienste)
+# <a name="getsecuritydescriptor-method-of-the-win32_service-class-remote-desktop-services"></a>GetSecurityDescriptor-Methode der Win32_Service -Klasse (Remotedesktopdienste)
 
-Die **getsecuritydescriptor** -Methode gibt die Sicherheits Beschreibung zurück, die den Zugriff auf den Dienst steuert. Der Deskriptor wird als eine Instanz von [**Win32 \_ securityDescriptor**](/previous-versions/windows/desktop/secrcw32prov/win32-securitydescriptor)zurückgegeben.
+Die **GetSecurityDescriptor-Methode** gibt den Sicherheitsdeskriptor zurück, der den Zugriff auf den Dienst steuert. Der Deskriptor wird als Instanz von [**Win32 \_ SecurityDescriptor zurückgegeben.**](/previous-versions/windows/desktop/secrcw32prov/win32-securitydescriptor)
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,16 +45,16 @@ uint32 GetSecurityDescriptor(
 
 <dl> <dt>
 
-*Deskriptor* \[ vorgenommen\]
+*Deskriptor* \[ out\]
 </dt> <dd>
 
-Die Sicherheits Beschreibung, die dem Dienst zugeordnet ist.
+Der dem Dienst zugeordnete Sicherheitsdeskriptor.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen der Werte zurück, der in der folgenden Liste aufgeführt ist, oder einen anderen Wert, um einen Fehler anzugeben. Weitere Fehlercodes finden Sie unter [**WMI-Fehler Konstanten**](/windows/desktop/WmiSdk/wmi-error-constants) oder [**WbemErrorEnum**](/windows/desktop/api/wbemdisp/ne-wbemdisp-wbemerrorenum). Allgemeine **HRESULT** -Werte finden Sie unter [System Fehler Codes](/windows/desktop/Debug/system-error-codes).
+Gibt einen der in der folgenden Liste aufgeführten Werte oder einen anderen Wert zurück, um einen Fehler anzugeben. Weitere Fehlercodes finden Sie unter [**WMI-Fehlerkonstistenzen**](/windows/desktop/WmiSdk/wmi-error-constants) oder [**WbemErrorEnum**](/windows/desktop/api/wbemdisp/ne-wbemdisp-wbemerrorenum). Allgemeine **HRESULT-Werte** finden Sie unter [Systemfehlercodes](/windows/desktop/Debug/system-error-codes).
 
 <dl> <dt>
 
@@ -75,7 +75,7 @@ Die Anforderung wird nicht unterstützt.
 **2**
 </dt> <dd>
 
-Der Benutzer verfügte nicht über die erforderlichen Zugriffsrechte.
+Der Benutzer hatte nicht den erforderlichen Zugriff.
 
 </dd> <dt>
 
@@ -96,7 +96,7 @@ Der angeforderte Steuerungscode ist nicht gültig, oder es ist für den Dienst n
 **5**
 </dt> <dd>
 
-Der angeforderte Steuerungs Code kann nicht an den Dienst gesendet werden, weil der Status des Diensts ([**Win32- \_ baseservice**](/windows/desktop/CIMWin32Prov/win32-baseservice).**State** -Eigenschaft) ist gleich 0, 1 oder 2.
+Der angeforderte Steuerungscode kann nicht an den Dienst gesendet werden, da der Zustand des Diensts ([**Win32 \_ BaseService ) ist.**](/windows/desktop/CIMWin32Prov/win32-baseservice)**State-Eigenschaft)** ist gleich 0, 1 oder 2.
 
 </dd> <dt>
 
@@ -117,14 +117,14 @@ Der Dienst hat auf die Startanforderung nicht rechtzeitig reagiert.
 **8**
 </dt> <dd>
 
-Unbekannter Fehler beim Starten des Dienstanbieter.
+Unbekannter Fehler beim Starten des Diensts.
 
 </dd> <dt>
 
 **9**
 </dt> <dd>
 
-Der Verzeichnispfad zur ausführbaren Dienst Datei wurde nicht gefunden.
+Der Verzeichnispfad zur ausführbaren Dienstdatei wurde nicht gefunden.
 
 </dd> <dt>
 
@@ -145,7 +145,7 @@ Die Datenbank zum Hinzufügen eines neuen Diensts ist gesperrt.
 **12**
 </dt> <dd>
 
-Eine Abhängigkeit, von der dieser Dienst abhängt, wurde aus dem System entfernt.
+Eine Abhängigkeit, von der dieser Dienst abhängig ist, wurde aus dem System entfernt.
 
 </dd> <dt>
 
@@ -180,42 +180,42 @@ Dieser Dienst wird aus dem System entfernt.
 **17**
 </dt> <dd>
 
-Der Dienst hat keinen Ausführungs Thread.
+Der Dienst verfügt über keinen Ausführungsthread.
 
 </dd> <dt>
 
-**Jahren**
+**18**
 </dt> <dd>
 
-Der Dienst weist zirkuläre Abhängigkeiten auf, wenn er gestartet wird.
+Der Dienst weist beim Start zirkuläre Abhängigkeiten auf.
 
 </dd> <dt>
 
 **19**
 </dt> <dd>
 
-Ein Dienst wird unter dem gleichen Namen ausgeführt.
+Ein Dienst wird unter demselben Namen ausgeführt.
 
 </dd> <dt>
 
 **20**
 </dt> <dd>
 
-Der Dienst Name enthält ungültige Zeichen.
+Der Dienstname weist ungültige Zeichen auf.
 
 </dd> <dt>
 
 **21**
 </dt> <dd>
 
-An den Dienst wurden ungültige Parameter übermittelt.
+Ungültige Parameter wurden an den Dienst übergeben.
 
 </dd> <dt>
 
 **22**
 </dt> <dd>
 
-Das Konto, unter dem dieser Dienst ausgeführt wird, ist entweder ungültig oder verfügt nicht über die Berechtigungen zum Ausführen des Dienstanbieter.
+Das Konto, unter dem dieser Dienst ausgeführt wird, ist entweder ungültig oder verfügt nicht über die Berechtigungen zum Ausführen des Diensts.
 
 </dd> <dt>
 
@@ -235,13 +235,13 @@ Der Dienst ist im System derzeitig angehalten.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Die [**Win32- \_ securityDescriptor**](/previous-versions/windows/desktop/secrcw32prov/win32-securitydescriptor) -Instanz stellt einen Datentyp für die [**Sicherheits \_ \_ deskriptorsteuerung**](/windows/desktop/SecAuthZ/security-descriptor-control) dar und enthält eine freigegebene [*Zugriffs Steuerungs Liste*](/windows/desktop/SecGloss/d-gly) (DACL) und eine [*System Zugriffs Steuerungs Liste*](/windows/desktop/SecGloss/s-gly) (SACL). Weitere Informationen finden Sie unter [Access Control Listen](/windows/desktop/SecAuthZ/access-control-lists).
+Die [**Win32 \_ SecurityDescriptor-Instanz**](/previous-versions/windows/desktop/secrcw32prov/win32-securitydescriptor) stellt einen [**SECURITY \_ DESCRIPTOR \_ CONTROL-Datentyp**](/windows/desktop/SecAuthZ/security-descriptor-control) dar und enthält eine [*DACL (Discretionary Access Control List)*](/windows/desktop/SecGloss/d-gly) und eine SACL [*(System Access Control List).*](/windows/desktop/SecGloss/s-gly) Weitere Informationen finden Sie unter [Access Control Lists](/windows/desktop/SecAuthZ/access-control-lists).
 
-Wenn **SeSecurityPrivilege** beim erhalten einer Sicherheits Beschreibung nicht gewährt oder aktiviert ist, wird nur die DACL in der zurückgegebenen Sicherheits Beschreibung zurückgegeben. Weitere Informationen finden Sie unter [**Berechtigungs Konstanten**](/windows/desktop/WmiSdk/privilege-constants) und [Ausführen privilegierter Vorgänge](/windows/desktop/WmiSdk/executing-privileged-operations).
+Wenn **seSecurityPrivilege** beim Abrufen eines Sicherheitsdeskriptors nicht gewährt oder aktiviert wird, wird nur die DACL in der zurückgegebenen Sicherheitsbeschreibung zurückgegeben. Weitere Informationen finden Sie unter [**Berechtigungskonstanten**](/windows/desktop/WmiSdk/privilege-constants) und [Ausführen privilegierter Vorgänge.](/windows/desktop/WmiSdk/executing-privileged-operations)
 
 ## <a name="examples"></a>Beispiele
 
-Wenn Sie eine Sicherheits Beschreibung in VBScript abrufen, achten Sie darauf, dass Sie "Sicherheit" ausführen und als Administrator ausführen, wie im folgenden Code Ausschnitt gezeigt. Andernfalls löst der Code möglicherweise einen Berechtigungs Fehler aus.
+Achten Sie beim Abrufen eines Sicherheitsdeskriptors in VBScript darauf, "Sicherheit" zu verwenden und als Administrator auszuführen, wie im folgenden Codeausschnitt gezeigt. Andernfalls kann Ihr Code einen Berechtigungsfehler auslösen.
 
 
 ```VB
@@ -251,7 +251,7 @@ Set objWMIService = GetObject("winmgmts:" _
 
 
 
-Legen Sie auf ähnliche Weise in VB.net "enableprivileges = true" fest, und führen Sie die Anwendung als Administrator aus.
+Achten Sie in VB.NET auf "EnablePrivileges = True", und führen Sie die Anwendung als Administrator aus.
 
 
 ```VB
@@ -265,33 +265,33 @@ Scope.Options.EnablePrivileges = True
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
 | Namespace<br/>                | Root \\ CIMv2 \\ TerminalServices<br/>                                                |
-| MOF<br/>                      | <dl> <dt>Tscsgwmi. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>TSCfgWmi.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>TSCfgWmi.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Win32- \_ Dienst**](/windows/desktop/CIMWin32Prov/win32-service)
+[**\_Win32-Dienst**](/windows/desktop/CIMWin32Prov/win32-service)
 </dt> <dt>
 
-[**Win32 \_ Terminalservice**](win32-terminalservice.md)
+[**Win32 \_ TerminalService**](win32-terminalservice.md)
 </dt> <dt>
 
-[**Berechtigungs Konstanten**](/windows/desktop/WmiSdk/privilege-constants)
+[**Berechtigungskonst constants**](/windows/desktop/WmiSdk/privilege-constants)
 </dt> <dt>
 
-[WMI-sicherheitsdeskriptorobjekte](/windows/desktop/WmiSdk/wmi-security-descriptor-objects)
+[WMI-Sicherheitsdeskriptorobjekte](/windows/desktop/WmiSdk/wmi-security-descriptor-objects)
 </dt> <dt>
 
-[Ändern der Zugriffssicherheit für Sicherungs fähige Objekte](/windows/desktop/WmiSdk/changing-access-security-on-securable-objects)
+[Ändern der Zugriffssicherheit für sicherungsfähige Objekte](/windows/desktop/WmiSdk/changing-access-security-on-securable-objects)
 </dt> <dt>
 
 [Benutzerkontensteuerung und WMI](/windows/desktop/WmiSdk/user-account-control-and-wmi)

@@ -1,7 +1,7 @@
 ---
-description: Berechnet ein gerichtetes Begrenzungsfeld für eine Koordinatenachse.
+description: 'D3DXComputeBoundingBox-Funktion (D3DX9Mesh.h): Berechnet ein koordinatenachsenorientiertes Begrenzungsfeld.'
 ms.assetid: 74e1b84e-1264-49eb-9172-7842af7e25e0
-title: D3DXComputeBoundingBox-Funktion (D3DX9Mesh. h)
+title: D3DXComputeBoundingBox-Funktion (D3DX9Mesh.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: df0376428153cfc02e499c9e26226cce81154023
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 39fdf4123781b84d87ec1c9d790eb5ffae058892
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104219555"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108115828"
 ---
-# <a name="d3dxcomputeboundingbox-function-d3dx9meshh"></a>D3DXComputeBoundingBox-Funktion (D3DX9Mesh. h)
+# <a name="d3dxcomputeboundingbox-function-d3dx9meshh"></a>D3DXComputeBoundingBox-Funktion (D3DX9Mesh.h)
 
-Berechnet ein gerichtetes Begrenzungsfeld für eine Koordinatenachse.
+Berechnet ein koordinatenachsenorientiertes Begrenzungsfeld.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,48 +44,48 @@ HRESULT D3DXComputeBoundingBox(
 
 <dl> <dt>
 
-*Pfirsich Position* \[ in\]
+*pFirstPosition* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXVECTOR3**](d3dxvector3.md) \***
+Typ: **const [**D3DXVECTOR3**](d3dxvector3.md) \***
 
 Zeiger auf die erste Position.
 
 </dd> <dt>
 
-*Numvertices* \[ in\]
+*NumVertices* \[ In\]
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
-Anzahl der Scheitel Punkte.
+Anzahl der Scheitelpunkte.
 
 </dd> <dt>
 
-*dwstride* \[ in\]
+*dwStride* \[ In\]
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
-Anzahl oder Anzahl von Bytes zwischen Scheitel Punkten.
+Anzahl oder Anzahl der Bytes zwischen Scheitelpunkten.
 
 </dd> <dt>
 
-*Pmin* \[ vorgenommen\]
+*pMin* \[ out\]
 </dt> <dd>
 
 Typ: **[ **D3DXVECTOR3**](d3dxvector3.md)\***
 
-Ein Zeiger auf eine [**D3DXVECTOR3**](d3dxvector3.md) -Struktur, die die zurückgegebene untere linke Ecke des umgebenden Felds beschreibt. Siehe Hinweise.
+Zeiger auf eine [**D3DXVECTOR3-Struktur,**](d3dxvector3.md) die die zurückgegebene linke untere Ecke des umgebenden Felds beschreibt. Siehe Hinweise.
 
 </dd> <dt>
 
-*pmax* \[ vorgenommen\]
+*pMax* \[ out\]
 </dt> <dd>
 
 Typ: **[ **D3DXVECTOR3**](d3dxvector3.md)\***
 
-Zeiger auf eine [**D3DXVECTOR3**](d3dxvector3.md) -Struktur, die die zurückgegebene obere rechte Ecke des Begrenzungs Rahmens beschreibt. Siehe Hinweise.
+Zeiger auf eine [**D3DXVECTOR3-Struktur,**](d3dxvector3.md) die die zurückgegebene rechte obere Ecke des umgebenden Felds beschreibt. Siehe Hinweise.
 
 </dd> </dl>
 
@@ -93,7 +93,7 @@ Zeiger auf eine [**D3DXVECTOR3**](d3dxvector3.md) -Struktur, die die zurückgege
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden sein: D3DERR \_ invalidcall.
+Wenn die Funktion erfolgreich ist, ist der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden sein: D3DERR \_ INVALIDCALL.
 
 ## <a name="remarks"></a>Bemerkungen
 
@@ -101,14 +101,14 @@ Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK.
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Mesh. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX9Mesh.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

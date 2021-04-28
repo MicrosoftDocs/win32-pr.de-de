@@ -1,56 +1,56 @@
 ---
-title: Zugriffstasten Tabellen
-description: .
+title: Zugriffstastentabellen
+description: Zugriffstastentabellen
 ms.assetid: 4F2CFD7C-90D3-4C3F-9A42-05B915914EF6
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9929445809bee71f273b6bd2334e182de59edbfa
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 2951ee99a31a977e0909de5639fa3110cea10e0b
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104039000"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108090818"
 ---
-# <a name="accelerator-tables"></a>Zugriffstasten Tabellen
+# <a name="accelerator-tables"></a>Zugriffstastentabellen
 
-Anwendungen definieren häufig Tastenkombinationen, wie z. b. STRG + O für den Befehl zum Öffnen von Dateien. Sie können Tastenkombinationen implementieren, indem Sie einzelne [**WM- \_ KeyDown**](/windows/desktop/inputdev/wm-keydown) -Meldungen verarbeiten, aber Zugriffstasten Tabellen bieten eine bessere Lösung:
+Anwendungen definieren häufig Tastenkombinationen, z. B. STRG+O für den Befehl Datei öffnen. Sie können Tastenkombinationen implementieren, indem Sie einzelne [**WM \_ KEYDOWN-Nachrichten**](/windows/desktop/inputdev/wm-keydown) behandeln, aber Zugriffstastentabellen bieten eine bessere Lösung für:
 
--   Erfordert weniger Codierungen.
--   Konsolidiert all Ihre Verknüpfungen in einer Datendatei.
--   Unterstützt die Lokalisierung in andere Sprachen.
--   Ermöglicht es Verknüpfungen und Menübefehlen, dieselbe Anwendungslogik zu verwenden.
+-   Erfordert weniger Codierung.
+-   Konsolidiert alle Tastenkombinationen in einer Datendatei.
+-   Unterstützt die Lokalisierung in anderen Sprachen.
+-   Aktiviert Verknüpfungen und Menübefehle, um dieselbe Anwendungslogik zu verwenden.
 
-Eine Zugriffstasten *Tabelle* ist eine Daten Ressource, die Tastenkombinationen wie STRG + O zu Anwendungs Befehlen zuordnet. Bevor wir uns mit der Verwendung einer Zugriffstasten Tabelle beschäftigen, benötigen wir eine kurze Einführung in die Ressourcen. Eine *Ressource* ist ein Daten-BLOB, das in eine Anwendungs Binärdatei (exe oder dll) integriert ist. In Ressourcen werden Daten gespeichert, die von der Anwendung benötigt werden, z. b. Menüs, Cursor, Symbole, Bilder, Text Zeichenfolgen oder beliebige benutzerdefinierte Anwendungsdaten. Die Anwendung lädt die Ressourcen Daten zur Laufzeit aus der Binärdatei. Gehen Sie folgendermaßen vor, um Ressourcen in eine Binärdatei einzuschließen:
+Eine *Zugriffstastentabelle* ist eine Datenressource, die Tastenkombinationen wie STRG+O Anwendungsbefehlen zu ordnet. Bevor wir sehen, wie sie eine Zugriffstastentabelle verwenden, benötigen wir eine kurze Einführung in Ressourcen. Eine *Ressource* ist ein Datenblob, das in eine Anwendungsbin binär (EXE oder DLL) integriert ist. Ressourcen speichern Daten, die von der Anwendung benötigt werden, z. B. Menüs, Cursor, Symbole, Bilder, Textzeichenfolgen oder benutzerdefinierte Anwendungsdaten. Die Anwendung lädt die Ressourcendaten zur Laufzeit aus der Binärdatei. Gehen Sie wie folgt vor, um Ressourcen in eine Binärdatei ein-/aus zu schließen:
 
-1.  Erstellen Sie eine Ressourcen Definitionsdatei (RC-Datei). Diese Datei definiert die Typen von Ressourcen und deren Bezeichner. Die Ressourcen Definitionsdatei kann Verweise auf andere Dateien enthalten. Beispielsweise wird eine Symbol Ressource in der RC-Datei deklariert, aber das Symbolbild wird in einer separaten Datei gespeichert.
-2.  Verwenden Sie den Microsoft Windows-Ressourcen Compiler (RC), um die Ressourcen Definitionsdatei in eine kompilierte Ressourcen Datei (. res) zu kompilieren. Der RC-Compiler wird mit Visual Studio und dem Windows SDK bereitgestellt.
-3.  Verknüpfen Sie die kompilierte Ressourcen Datei mit der Binärdatei.
+1.  Erstellen Sie eine Ressourcendefinitionsdatei (RC). Diese Datei definiert die Ressourcentypen und deren Bezeichner. Die Ressourcendefinitionsdatei kann Verweise auf andere Dateien enthalten. Beispielsweise wird eine Symbolressource in der RC-Datei deklariert, aber das Symbolbild wird in einer separaten Datei gespeichert.
+2.  Verwenden Sie den Microsoft Windows-Ressourcencompiler (RC), um die Ressourcendefinitionsdatei in eine kompilierte Ressourcendatei (.res) zu kompilieren. Der RC-Compiler wird mit Visual Studio und auch dem Windows SDK.
+3.  Verknüpfen Sie die kompilierte Ressourcendatei mit der Binärdatei.
 
-Diese Schritte entsprechen ungefähr dem Kompilierungs-/Linkprozess für Code Dateien. Visual Studio bietet eine Reihe von Ressourcen-Editoren, mit denen Sie problemlos Ressourcen erstellen und ändern können. (Diese Tools sind in den Express-Editionen von Visual Studio nicht verfügbar.) Eine RC-Datei ist einfach eine Textdatei, und die Syntax wird auf MSDN dokumentiert. Daher ist es möglich, eine RC-Datei mit einem beliebigen Text-Editor zu erstellen. Weitere Informationen finden Sie unter Informationen [zu Ressourcen Dateien](/windows/desktop/menurc/about-resource-files).
+Diese Schritte entsprechen in etwa dem Kompilierungs-/Linkprozess für Codedateien. Visual Studio stellt eine Reihe von Ressourcen-Editoren zur Verfügung, die das Erstellen und Ändern von Ressourcen ermöglichen. (Diese Tools sind in den Express-Editionen von Visual Studio.) Eine RC-Datei ist jedoch einfach eine Textdatei, und die Syntax ist auf MSDN dokumentiert, sodass es möglich ist, eine RC-Datei mit einem beliebigen Text-Editor zu erstellen. Weitere Informationen finden Sie unter [Informationen zu Ressourcendateien.](/windows/desktop/menurc/about-resource-files)
 
-## <a name="defining-an-accelerator-table"></a>Definieren einer Zugriffstasten Tabelle
+## <a name="defining-an-accelerator-table"></a>Definieren einer Zugriffstastentabelle
 
-Eine Zugriffstasten Tabelle ist eine Tabelle mit Tastenkombinationen. Jede Verknüpfung wird definiert durch:
+Eine Zugriffstastentabelle ist eine Tabelle mit Tastenkombinationen. Jede Verknüpfung wird definiert durch:
 
--   Ein numerischer Bezeichner. Diese Nummer identifiziert den Anwendungs Befehl, der von der Verknüpfung aufgerufen wird.
--   Das ASCII-Zeichen oder der Code für den virtuellen Schlüssel der Verknüpfung.
--   Optionale Modifizierertasten: alt, UMSCHALT oder STRG.
+-   Ein numerischer Bezeichner. Diese Zahl gibt den Anwendungsbefehl an, der von der Verknüpfung aufgerufen wird.
+-   Das ASCII-Zeichen oder der Virtuelle Schlüsselcode der Verknüpfung.
+-   Optionale Modifizierertasten: ALT, UMSCHALT ODER STRG.
 
-Die Zugriffstasten Tabelle selbst hat einen numerischen Bezeichner, der die Tabelle in der Liste der Anwendungs Ressourcen identifiziert. Erstellen wir eine Zugriffstasten Tabelle für ein einfaches Zeichnungsprogramm. Dieses Programm verfügt über zwei Modi: den Zeichnungsmodus und den Auswahlmodus. Im Draw-Modus kann der Benutzer Formen zeichnen. Im Auswahlmodus kann der Benutzer Formen auswählen. Für dieses Programm möchten wir die folgenden Tastenkombinationen definieren.
+Die Zugriffstastentabelle selbst verfügt über einen numerischen Bezeichner, der die Tabelle in der Liste der Anwendungsressourcen identifiziert. Erstellen Sie eine Zugriffstastentabelle für ein einfaches Zeichenprogramm. Dieses Programm hat zwei Modi: den Draw-Modus und den Auswahlmodus. Im Draw-Modus kann der Benutzer Formen zeichnen. Im Auswahlmodus kann der Benutzer Formen auswählen. Für dieses Programm möchten wir die folgenden Tastenkombinationen definieren.
 
 
 
-| Abkürzung | Get-Help                   |
+| Verknüpfung | Get-Help                   |
 |----------|---------------------------|
 | STRG+M   | Umschalten zwischen Modi.     |
-| F1       | Wechseln Sie in den Zeichnungsmodus.      |
+| F1       | Wechseln Sie in den Zeichnen-Modus.      |
 | F2       | Wechseln Sie in den Auswahlmodus. |
 
 
 
- 
+ 
 
-Definieren Sie zunächst numerische Bezeichner für die Tabelle und für die Anwendungs Befehle. Diese Werte sind willkürlich. Sie können symbolische Konstanten für die Bezeichner zuweisen, indem Sie Sie in einer Header Datei definieren. Beispiel:
+Definieren Sie zunächst numerische Bezeichner für die Tabelle und für die Anwendungsbefehle. Diese Werte sind willkürlich. Sie können symbolische Konstanten für die Bezeichner zuweisen, indem Sie sie in einer Headerdatei definieren. Beispiel:
 
 
 ```C++
@@ -62,7 +62,7 @@ Definieren Sie zunächst numerische Bezeichner für die Tabelle und für die Anw
 
 
 
-In diesem Beispiel identifiziert der Wert `IDR_ACCEL1` die Zugriffstasten Tabelle, und die nächsten drei Konstanten definieren die Anwendungs Befehle. Gemäß der Konvention wird eine Header Datei, die Ressourcen Konstanten definiert, häufig als "Resource. h" bezeichnet. In der nächsten Liste wird die Ressourcen Definitionsdatei angezeigt.
+In diesem Beispiel identifiziert der Wert `IDR_ACCEL1` die Zugriffstastentabelle, und die nächsten drei Konstanten definieren die Anwendungsbefehle. Standardmäßig wird eine Headerdatei, die Ressourcenkonstanten definiert, häufig resource.h genannt. In der nächsten Auflistung wird die Ressourcendefinitionsdatei angezeigt.
 
 
 ```C++
@@ -80,16 +80,16 @@ IDR_ACCEL1 ACCELERATORS
 
 Die Tastenkombinationen werden innerhalb der geschweiften Klammern definiert. Jede Verknüpfung enthält die folgenden Einträge.
 
--   Der Code des virtuellen Schlüssels oder das ASCII-Zeichen, das die Verknüpfung aufruft.
--   Der Anwendungs Befehl. Beachten Sie, dass im Beispiel symbolische Konstanten verwendet werden. Die Ressourcen Definitionsdatei enthält die Datei "Resource. h", in der diese Konstanten definiert sind.
--   Das Schlüsselwort **VIRTKEY** bedeutet, dass der erste Eintrag ein Code für den virtuellen Schlüssel ist. Die andere Option ist die Verwendung von ASCII-Zeichen.
--   Optionale modifiziererer: alt, Steuerelement oder UMSCHALT.
+-   Der Code mit virtuellem Schlüssel oder ASCII-Zeichen, das die Verknüpfung aufruft.
+-   Der Anwendungsbefehl. Beachten Sie, dass im Beispiel symbolische Konstanten verwendet werden. Die Ressourcendefinitionsdatei enthält resource.h, wobei diese Konstanten definiert sind.
+-   Das Schlüsselwort **VIRTKEY** bedeutet, dass der erste Eintrag ein Virtueller Schlüsselcode ist. Die andere Option ist die Verwendung von ASCII-Zeichen.
+-   Optionale Modifizierer: ALT, CONTROL oder SHIFT.
 
-Wenn Sie ASCII-Zeichen für Verknüpfungen verwenden, ist ein Kleinbuchstabe eine andere Verknüpfung als ein Großbuchstabe. (Wenn Sie z. b. "a" eingeben, wird möglicherweise ein anderer Befehl als "a" aufgerufen.) Das mag Benutzer verwirrend sein, daher ist es in der Regel besser, anstelle von ASCII-Zeichen anstelle von ASCII-Zeichencode für Verknüpfungen zu verwenden.
+Wenn Sie ASCII-Zeichen für Tastenkombinationen verwenden, ist ein Kleinbuchstaben eine andere Verknüpfung als ein Großbuchstaben. (Wenn Sie z. B. "a" eingeben, kann ein anderer Befehl als die Eingabe von "A" aufgerufen werden.) Das kann benutzerverwendigend sein. Daher ist es im Allgemeinen besser, Codes mit virtuellen Schlüsseln anstelle von ASCII-Zeichen für Tastenkombinationen zu verwenden.
 
-## <a name="loading-the-accelerator-table"></a>Laden der Zugriffstasten Tabelle
+## <a name="loading-the-accelerator-table"></a>Laden der Zugriffstastentabelle
 
-Die Ressource für die Zugriffstasten Tabelle muss geladen werden, bevor Sie vom Programm verwendet werden kann. Wenn Sie eine Zugriffstasten Tabelle laden möchten, können Sie die [**loadaccelerators**](/windows/desktop/api/winuser/nf-winuser-loadacceleratorsa) -Funktion abrufen.
+Die Ressource für die Zugriffstastentabelle muss geladen werden, bevor das Programm sie verwenden kann. Um eine Zugriffstastentabelle zu laden, rufen Sie die [**LoadAccelerators-Funktion**](/windows/desktop/api/winuser/nf-winuser-loadacceleratorsa) auf.
 
 
 ```C++
@@ -98,13 +98,13 @@ Die Ressource für die Zugriffstasten Tabelle muss geladen werden, bevor Sie vom
 
 
 
-Diese Funktion wird aufgerufen, bevor Sie die Nachrichten Schleife eingeben. Der erste Parameter ist das Handle für das Modul. (Dieser Parameter wird an Ihre [**WinMain**](/windows/desktop/api/winbase/nf-winbase-winmain) -Funktion übergeben. Weitere Informationen finden Sie unter [WinMain: der Einstiegspunkt der Anwendung](winmain--the-application-entry-point.md).) Der zweite Parameter ist der Ressourcen Bezeichner. Die-Funktion gibt ein Handle für die Ressource zurück. Denken Sie daran, dass ein Handle ein nicht transparenter Typ ist, der auf ein Objekt verweist, das vom System verwaltet wird. Wenn die Funktion fehlschlägt, wird **null** zurückgegeben.
+Rufen Sie diese Funktion auf, bevor Sie die Meldungsschleife eingeben. Der erste Parameter ist das Handle für das Modul. (Dieser Parameter wird an Ihre [**WinMain-Funktion**](/windows/desktop/api/winbase/nf-winbase-winmain) übergeben. Weitere Informationen finden Sie unter [WinMain: Der Anwendungseinstiegspunkt](winmain--the-application-entry-point.md).) Der zweite Parameter ist der Ressourcenbezeichner. Die Funktion gibt ein Handle an die Ressource zurück. Denken Sie daran, dass ein Handle ein nicht transparenter Typ ist, der auf ein vom System verwaltetes Objekt verweist. Wenn die Funktion fehlschlägt, gibt sie **NULL zurück.**
 
-Sie können eine Zugriffstasten Tabelle freigeben, indem Sie [**DestroyAcceleratorTable**](/windows/desktop/api/winuser/nf-winuser-destroyacceleratortable)aufrufen. Das System gibt die Tabelle jedoch automatisch frei, wenn das Programm beendet wird. Daher müssen Sie diese Funktion nur dann aufzurufen, wenn Sie eine Tabelle durch eine andere ersetzen. Ein interessantes Beispiel hierfür finden Sie im Thema Erstellen von [Benutzer bearbeitbaren Accelerators](/windows/desktop/menurc/using-keyboard-accelerators).
+Sie können eine Zugriffstastentabelle durch Aufrufen [**von DestroyAcceleratorTable veröffentlichen.**](/windows/desktop/api/winuser/nf-winuser-destroyacceleratortable) Allerdings gibt das System die Tabelle automatisch frei, wenn das Programm beendet wird. Daher müssen Sie diese Funktion nur aufrufen, wenn Sie eine Tabelle durch eine andere ersetzen. Ein interessantes Beispiel hierfür finden Sie im Thema Creating User Editable Accelerators (Erstellen von [bearbeitbaren Beschleunigern für Benutzer).](/windows/desktop/menurc/using-keyboard-accelerators)
 
-## <a name="translating-key-strokes-into-commands"></a>Übersetzen von Tastenkombinationen in Befehle
+## <a name="translating-key-strokes-into-commands"></a>Übersetzen von Tastenstrichen in Befehle
 
-Eine Zugriffstasten Tabelle funktioniert durch Übersetzen von Tastenkombinationen in [**WM- \_ Befehls**](/windows/desktop/menurc/wm-command) Nachrichten. Der *wParam* -Parameter des **WM- \_ Befehls** enthält den numerischen Bezeichner des Befehls. Beispielsweise wird der Schlüssel Strich STRG + M mithilfe der zuvor gezeigten Tabelle in eine **WM- \_ Befehls** Meldung mit dem Wert übersetzt `ID_TOGGLE_MODE` . Um dies zu erreichen, ändern Sie die Nachrichten Schleife wie folgt:
+Eine Zugriffstastentabelle übersetzt Schlüsselstriche in [**WM \_ COMMAND-Meldungen.**](/windows/desktop/menurc/wm-command) Der *wParam-Parameter* von **WM \_ COMMAND** enthält den numerischen Bezeichner des Befehls. Wenn Sie beispielsweise die zuvor gezeigte Tabelle verwenden, wird der Tastenstrich STRG+M in eine **WM \_ COMMAND-Meldung** mit dem Wert `ID_TOGGLE_MODE` übersetzt. Um dies zu ermöglichen, ändern Sie die Nachrichtenschleife wie folgt:
 
 
 ```C++
@@ -121,9 +121,9 @@ Eine Zugriffstasten Tabelle funktioniert durch Übersetzen von Tastenkombination
 
 
 
-Dieser Code fügt der [**TranslateAccelerator**](/windows/desktop/api/winuser/nf-winuser-translateacceleratora) -Funktion innerhalb der Nachrichten Schleife einen aufzurufenden Code hinzu. Die **TranslateAccelerator** -Funktion untersucht die einzelnen Fenster Meldungen und sucht nach Schlüsseln nach Schlüsseln. Wenn der Benutzer eine der Tastenkombinationen drückt, die in der Zugriffstasten Tabelle aufgeführt sind, sendet **TranslateAccelerator** eine [**WM- \_ Befehls**](/windows/desktop/menurc/wm-command) Meldung an das Fenster. Die Funktion sendet den **WM- \_ Befehl** durch direktes Aufrufen der Fenster Prozedur. Wenn **TranslateAccelerator** einen Schlüssel Strich erfolgreich übersetzt, gibt die Funktion einen Wert ungleich 0 (null) zurück, was bedeutet, dass Sie die normale Verarbeitung der Nachricht überspringen sollten. Andernfalls gibt **TranslateAccelerator** 0 (null) zurück. Übergeben Sie in diesem Fall die Fenster Meldung wie üblich an [**translatemess Age**](/windows/desktop/api/winuser/nf-winuser-translatemessage) und [**DispatchMessage**](/windows/desktop/api/winuser/nf-winuser-dispatchmessage).
+Dieser Code fügt einen Aufruf der [**TranslateAccelerator-Funktion**](/windows/desktop/api/winuser/nf-winuser-translateacceleratora) innerhalb der Nachrichtenschleife hinzu. Die **TranslateAccelerator-Funktion** untersucht jede Fenstermeldung und sucht nach Key-Down-Meldungen. Wenn der Benutzer eine der in der Zugriffstastentabelle aufgeführten Tastenkombinationen drückt, sendet **TranslateAccelerator** eine [**WM \_ COMMAND-Meldung**](/windows/desktop/menurc/wm-command) an das Fenster. Die Funktion sendet **WM \_ COMMAND,** indem sie die Fensterprozedur direkt aufruft. Wenn **TranslateAccelerator** einen Schlüsselstrich erfolgreich übersetzt, gibt die Funktion einen Wert ungleich 0 (null) zurück. Das bedeutet, dass Sie die normale Verarbeitung für die Nachricht überspringen sollten. Andernfalls gibt **TranslateAccelerator** 0 (null) zurück. Übergeben Sie in diesem Fall die Fenstermeldung wie gewohnt an [**TranslateMessage**](/windows/desktop/api/winuser/nf-winuser-translatemessage) und [**DispatchMessage.**](/windows/desktop/api/winuser/nf-winuser-dispatchmessage)
 
-Im folgenden wird erläutert, wie das Zeichnungsprogramm die [**WM- \_ Befehls**](/windows/desktop/menurc/wm-command) Nachricht verarbeiten kann:
+Im Folgenden wird erläutert, wie das Zeichnungsprogramm die [**WM \_ COMMAND-Meldung**](/windows/desktop/menurc/wm-command) behandeln kann:
 
 
 ```C++
@@ -155,12 +155,12 @@ Im folgenden wird erläutert, wie das Zeichnungsprogramm die [**WM- \_ Befehls**
 
 
 
-Dieser Code setzt voraus, dass `SetMode` eine Funktion ist, die von der Anwendung definiert wird, um zwischen den beiden Modi zu wechseln. Die Details zur Handhabung der einzelnen Befehle hängen offensichtlich von Ihrem Programm ab.
+In diesem Code wird davon ausgegangen, dass `SetMode` eine funktion ist, die von der Anwendung definiert wird, um zwischen den beiden Modi zu wechseln. Die Details dazu, wie Sie jeden Befehl behandeln würden, hängen natürlich von Ihrem Programm ab.
 
 ## <a name="next"></a>Nächste
 
-[Festlegen des Cursor Bilds](setting-the-cursor-image.md)
+[Festlegen des Cursorbilds](setting-the-cursor-image.md)
 
- 
+ 
 
- 
+ 

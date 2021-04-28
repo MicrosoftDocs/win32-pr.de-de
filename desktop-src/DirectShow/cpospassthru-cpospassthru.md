@@ -1,7 +1,7 @@
 ---
-description: Konstruktormethode.
+description: 'CPosPassThru.CPosPassThru-Konstruktor : Konstruktormethode.'
 ms.assetid: b258401c-158b-4eb8-8736-1e1ad9a8403a
-title: Cpospassthru. cpospassthru-Konstruktor
+title: CPosPassThru.CPosPassThru-Konstruktor
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,14 +12,14 @@ api_name:
 api_type:
 - COM
 api_location: ''
-ms.openlocfilehash: ba49bd1e2f65cf0d2a8a398ecab167e74dc35ad4
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 2a6c49b305b3c6638aeaaee1480d0b561fd8c99a
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "106343545"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108085598"
 ---
-# <a name="cpospassthrucpospassthru-constructor"></a>Cpospassthru. cpospassthru-Konstruktor
+# <a name="cpospassthrucpospassthru-constructor"></a>CPosPassThru.CPosPassThru-Konstruktor
 
 Konstruktormethode.
 
@@ -45,28 +45,28 @@ CPosPassThru(
 *pName* 
 </dt> <dd>
 
-Zeiger auf den Namen des Objekts, zu Debuggingzwecken. Weisen Sie diesen Parameter im statischen Arbeitsspeicher zu.
+Zeiger auf den Namen des Objekts zu Debugzwecken. Ordnen Sie diesen Parameter im statischen Speicher zu.
 
 </dd> <dt>
 
-*Kro* 
+*Punk* 
 </dt> <dd>
 
-Zeiger auf den Besitzer dieses Objekts. Wenn das Objekt aggregiert wird, übergeben Sie einen Zeiger an die **IUnknown** -Schnittstelle des Aggregations Objekts. Andernfalls legen Sie diesen Parameter auf **null** fest.
+Zeiger auf den Besitzer dieses Objekts. Wenn das Objekt aggregiert wird, übergeben Sie einen Zeiger auf die **IUnknown-Schnittstelle des aggregierenden** Objekts. Legen Sie andernfalls diesen Parameter auf **NULL fest.**
 
 </dd> <dt>
 
-*PHR* 
+*Phr* 
 </dt> <dd>
 
-Zeiger auf einen **HRESULT** -Wert. Ignoriert.
+Zeiger auf einen **HRESULT-Wert.** Ignoriert.
 
 </dd> <dt>
 
-*ppin* 
+*pPin* 
 </dt> <dd>
 
-Ein Zeiger auf die [**IPin**](/windows/desktop/api/Strmif/nn-strmif-ipin) -Schnittstelle der Eingabe-PIN des Filters.
+Zeiger auf die [**IPin-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-ipin) des Eingabepins des Filters.
 
 </dd> <dt>
 

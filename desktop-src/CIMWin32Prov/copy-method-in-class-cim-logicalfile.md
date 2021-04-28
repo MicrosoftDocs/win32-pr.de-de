@@ -1,5 +1,5 @@
 ---
-description: Die Copy-Methode kopiert die logische Datei (oder das Verzeichnis), die im Objekt Pfad angegeben ist, in den Speicherort, der durch den Eingabeparameter angegeben wird.
+description: 'Copy-Methode der CIM_LogicalFile-Klasse: Die Copy-Methode kopiert die logische Datei (oder das Verzeichnis), die im Objektpfad angegeben ist, an den speicherort, der durch den Eingabeparameter angegeben wird.'
 ms.assetid: 643946e4-5d32-4839-ae1f-80ec7cede429
 ms.tgt_platform: multiple
 title: Copy-Methode der CIM_LogicalFile-Klasse
@@ -14,23 +14,23 @@ api_type:
 - COM
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 4a69107bd173be0aa853c1541a1e1365148c2e59
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 10ba9c28bde9d909d947e5a73241ce1aa8f1e956
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104041448"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108089728"
 ---
 # <a name="copy-method-of-the-cim_logicalfile-class"></a>Copy-Methode der CIM \_ LogicalFile-Klasse
 
-Die **Copy** -Methode kopiert die logische Datei (oder das Verzeichnis), die im Objekt Pfad angegeben ist, in den Speicherort, der durch den Eingabeparameter angegeben wird.
+Die **Copy-Methode** kopiert die logische Datei (oder das Verzeichnis), die im Objektpfad angegeben ist, an den Speicherort, der durch den Eingabeparameter angegeben wird.
 
 > [!IMPORTANT]
-> Die Klassen der DMTF-CIM (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt zurzeit nur die [CIM 2. x-Versions Schemas](https://dmtf.org/standards/cim/schemas).
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF (Distributed Management Task Force) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 
-In diesem Thema wird die MOF-Syntax (Managed Object Format) verwendet. Weitere Informationen zum Verwenden dieser Methode finden Sie unter [Aufrufen einer Methode](/windows/desktop/WmiSdk/calling-a-method).
+In diesem Thema wird die MOF-Syntax (Managed Object Format) verwendet. Weitere Informationen zur Verwendung dieser Methode finden Sie unter [Aufrufen einer Methode.](/windows/desktop/WmiSdk/calling-a-method)
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,18 +47,18 @@ uint32 Copy(
 
 <dl> <dt>
 
-*Dateiname* \[ in\]
+*FileName* \[ In\]
 </dt> <dd>
 
-Der voll qualifizierte Name der Zieldatei (oder des Verzeichnisses).
+Vollqualifizierte Name der Zieldatei (oder des Verzeichnisses).
 
-Beispiel: "c: \\ Temp \\ NewDirectory"
+Beispiel: "c: \\ temp \\ newdirectory"
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg den Wert 0 (null) zurück, und jede andere Zahl gibt einen Fehler an.
+Gibt bei Erfolg den Wert 0 (null) und eine beliebige andere Zahl zurück, um einen Fehler anzugeben.
 
 <dl> <dt>
 
@@ -76,16 +76,16 @@ Erfolg.
 
 2
 
-Zugriff verweigert.
+Der Zugriff wurde verweigert.
 
 </dd> <dt>
 
-**Nicht spezifizierter Fehler**
+**Nicht angegebener Fehler**
 </dt> <dd>
 
 8
 
-Nicht spezifizierter Fehler.
+Nicht angegebener Fehler.
 
 </dd> <dt>
 
@@ -98,7 +98,7 @@ Ungültiges Objekt.
 
 </dd> <dt>
 
-**Objekt ist bereits vorhanden.**
+**Objekt ist bereits vorhanden**
 </dt> <dd>
 
 10
@@ -112,7 +112,7 @@ Das Objekt ist bereits vorhanden.
 
 11
 
-Das Dateisystem ist nicht NTFS.
+Dateisystem nicht NTFS.
 
 </dd> <dt>
 
@@ -121,7 +121,7 @@ Das Dateisystem ist nicht NTFS.
 
 12
 
-Plattform nicht Windows.
+Plattform, nicht Windows.
 
 </dd> <dt>
 
@@ -130,7 +130,7 @@ Plattform nicht Windows.
 
 13
 
-Das Laufwerk ist nicht identisch.
+Laufwerk nicht identisch.
 
 </dd> <dt>
 
@@ -143,7 +143,7 @@ Das Laufwerk ist nicht identisch.
 
 </dd> <dt>
 
-**Freigabe Verletzung**
+**Freigabeverletzung**
 </dt> <dd>
 
 15
@@ -161,12 +161,12 @@ Ungültige Startdatei.
 
 </dd> <dt>
 
-**Berechtigung nicht aufrechterhalten**
+**Nicht privileg**
 </dt> <dd>
 
 17
 
-Die Berechtigung wurde nicht aufrechterhalten.
+Die Berechtigung wurde nicht gehalten.
 
 </dd> <dt>
 
@@ -181,25 +181,25 @@ Ungültiger Parameter.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Diese Methode wird zurzeit nicht von WMI implementiert. Um diese Methode verwenden zu können, müssen Sie Sie in Ihrem eigenen Anbieter implementieren.
+Diese Methode wird derzeit nicht von WMI implementiert. Um diese Methode zu verwenden, müssen Sie sie in Ihrem eigenen Anbieter implementieren.
 
-Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Beschreibungen abgeleitet. Microsoft hat möglicherweise Änderungen an den korrekten geringfügigen Fehlern vorgenommen, den Microsoft SDK-Dokumentations Standards entsprechen oder weitere Informationen bereitstellen.
+Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von DMTF veröffentlicht wurden. Microsoft hat möglicherweise Änderungen vorgenommen, um kleinere Fehler zu beheben, die Dokumentationsstandards des Microsoft SDK zu erfüllen oder weitere Informationen zur Verfügung zu stellen.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
