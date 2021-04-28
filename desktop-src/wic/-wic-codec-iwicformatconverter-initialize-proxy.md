@@ -1,5 +1,5 @@
 ---
-description: Proxy Funktion für die Initialize-Methode.
+description: 'IWICFormatConverter_Initialize_Proxy-Funktion: Proxyfunktion für die Initialize-Methode.'
 ms.assetid: 26112d52-95e2-4c67-83fc-cf5e28712730
 title: IWICFormatConverter_Initialize_Proxy-Funktion
 ms.topic: reference
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - Windowscodecs.dll
 - Wincodec.lib
-ms.openlocfilehash: 6450c1a508507db73e44ef8b88b4f94970ac6004
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d70d852adc8f810438ce46dc30345e68fa27e0fd
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104217666"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108097158"
 ---
-# <a name="iwicformatconverter_initialize_proxy-function"></a>IWICFormatConverter \_ Initialisieren der \_ Proxy Funktion
+# <a name="iwicformatconverter_initialize_proxy-function"></a>IWICFormatConverter-Funktion \_ "Proxy initialisieren" \_
 
-Proxy Funktion für die [**Initialize**](/windows/desktop/api/Wincodec/nf-wincodec-iwicformatconverter-initialize) -Methode.
+Proxyfunktion für die [**Initialize-Methode.**](/windows/desktop/api/Wincodec/nf-wincodec-iwicformatconverter-initialize)
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,66 +46,66 @@ HRESULT IWICFormatConverter_Initialize_Proxy(
 
 <dl> <dt>
 
-*Dies \_ PTR* \[ in\]
+*DIES \_ PTR* \[ in\]
 </dt> <dd>
 
-Typ: **[**IWICFormatConverter**](/windows/desktop/api/Wincodec/nn-wincodec-iwicformatconverter) \** _
+Typ: **[ **IWICFormatConverter**](/windows/desktop/api/Wincodec/nn-wincodec-iwicformatconverter)\***
 
-Zeiger auf dieses [_ *IWICFormatConverter* *](/windows/desktop/api/Wincodec/nn-wincodec-iwicformatconverter) -Objekt.
+Zeiger auf dieses [**IWICFormatConverter-Objekt.**](/windows/desktop/api/Wincodec/nn-wincodec-iwicformatconverter)
 
 </dd> <dt>
 
-*pisource* \[ in\]
+*pISource* \[ In\]
 </dt> <dd>
 
-Typ: **[**IWICBitmapSource**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapsource) \** _
+Typ: **[ **IWICBitmapSource**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapsource)\***
 
-Die zu konvertierende Eingabe Bitmap.
+Die zu konvertierende Eingabebitmap
 
 </dd> <dt>
 
-_dstFormat * \[ in\]
+*dstFormat* \[ In\]
 </dt> <dd>
 
-Typ: **reberwicpixelformatguid**
+Typ: **REFWICPixelFormatGUID**
 
-Die GUID des Ziel Pixel Formats.
+Die Zielpixelformat-GUID.
 
 </dd> <dt>
 
-*Dithering* \[ in\]
+*Dither* \[ In\]
 </dt> <dd>
 
-Typ: **[ **wicbitmapdithertype**](/windows/desktop/api/Wincodec/ne-wincodec-wicbitmapdithertype)**
+Typ: **[ **WICBitmapDitherType**](/windows/desktop/api/Wincodec/ne-wincodec-wicbitmapdithertype)**
 
-Der für die Konvertierung verwendete [**wicbitmapdithertype**](/windows/desktop/api/Wincodec/ne-wincodec-wicbitmapdithertype) .
+Der für die Konvertierung verwendete [**WICBitmapDitherType.**](/windows/desktop/api/Wincodec/ne-wincodec-wicbitmapdithertype)
 
 </dd> <dt>
 
-*pipalette* \[ in\]
+*pIPalette* \[ In\]
 </dt> <dd>
 
-Typ: **[**iwicpalette**](/windows/desktop/api/Wincodec/nn-wincodec-iwicpalette) \** _
+Typ: **[ **IWICPalette**](/windows/desktop/api/Wincodec/nn-wincodec-iwicpalette)\***
 
-Die für die Konvertierung zu verwendende Palette.
+Die Palette, die für die Konvertierung verwendet werden soll.
 
 </dd> <dt>
 
-_alphaThresholdPercent * \[ in\]
+*alphaThresholdPercent* \[ In\]
 </dt> <dd>
 
-Typ: **Double**
+Typ: **double**
 
-Der für die Konvertierung zu verwendende Alpha Schwellenwert.
+Der Alphaschwellenwert, der für die Konvertierung verwendet werden soll.
 
 </dd> <dt>
 
-*palettetranslation* \[ in\]
+*paletteTranslate* \[ In\]
 </dt> <dd>
 
-Typ: **[ **wicbitmappalettetype**](/windows/desktop/api/Wincodec/ne-wincodec-wicbitmappalettetype)**
+Typ: **[ **WICBitmapPaletteType**](/windows/desktop/api/Wincodec/ne-wincodec-wicbitmappalettetype)**
 
-Der palettenübersetzungs Typ, der für die Konvertierung verwendet werden soll.
+Der Für die Konvertierung zu verwendende Palettenübersetzungstyp.
 
 </dd> </dl>
 
@@ -113,7 +113,7 @@ Der palettenübersetzungs Typ, der für die Konvertierung verwendet werden soll.
 
 Typ: **HRESULT**
 
-Wenn diese Funktion erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Funktion erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="remarks"></a>Bemerkungen
 
@@ -121,11 +121,11 @@ Wenn diese Funktion erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. 
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows XP mit SP2, nur Windows Vista \[ -Desktop-Apps\]<br/>                                                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                                                                             |
-| DLL<br/>                      | <dl> <dt>Windowscodecs.dll; </dt> <dt>Wincodec. lib</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows XP mit SP2, nur Windows \[ Vista-Desktop-Apps\]<br/>                                                                                              |
+| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2008-Desktop-Apps\]<br/>                                                                                                             |
+| DLL<br/>                      | <dl> <dt>Windowscodecs.dll; </dt> <dt>Wincodec.lib</dt> </dl> |
 
 
 

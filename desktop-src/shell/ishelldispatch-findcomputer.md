@@ -1,28 +1,16 @@
 ---
-description: 'Zeigt das Dialogfeld Suchergebnisse: Computer an. Im Dialogfeld wird das Ergebnis der Suche nach einem angegebenen Computer angezeigt.'
-ms.assetid: 9B687A8A-BB29-49a0-8AE3-11A75FAF3257
-title: Ishelldispatch. findcomputer-Methode (Shldisp. h)
-ms.topic: reference
-ms.date: 05/31/2018
-topic_type:
+description: IShellDispatch.FindComputer-Methode: Zeigt das Dialogfeld Suchergebnisse: Computer an. Im Dialogfeld wird das Ergebnis der Suche nach einem angegebenen Computer angezeigt."
+ms.assetid: 9B687A8A-BB29-49a0-8AE3-11A75FAF3257 title: IShellDispatch.FindComputer method (Shldisp.h) ms.topic: reference ms.date: 05/31/2018 topic_type: 
 - APIRef
-- kbSyntax
-api_name:
-- IShellDispatch.FindComputer
-api_type:
-- COM
-api_location:
+- kbSyntax api_name: 
+- IShellDispatch.FindComputer api_type: 
+- COM-api_location: 
 - Shell32.dll
-ms.openlocfilehash: 3ad928b6860a85126a714a08f3bc3df9d4aff67c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104978112"
 ---
-# <a name="ishelldispatchfindcomputer-method"></a>Ishelldispatch. findcomputer-Methode
 
-Zeigt das Dialogfeld **Suchergebnisse: Computer** an. Im Dialogfeld wird das Ergebnis der Suche nach einem angegebenen Computer angezeigt.
+# <a name="ishelldispatchfindcomputer-method"></a>IShellDispatch.FindComputer-Methode
+
+Zeigt das **Dialogfeld Suchergebnisse: Computer** an. Im Dialogfeld wird das Ergebnis der Suche nach einem angegebenen Computer angezeigt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -57,13 +45,13 @@ Diese Methode gibt keinen Wert zurück.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Diese Methode wird implementiert und über die [**Shell. findcomputer**](shell-findcomputer.md) -Methode aufgerufen.
+Diese Methode wird implementiert und über die [**Shell.FindComputer-Methode**](shell-findcomputer.md) aufgerufen.
 
 ## <a name="examples"></a>Beispiele
 
-In den folgenden Beispielen wird die Verwendung von **findcomputer** in JScript, VBScript und Visual Basic veranschaulicht.
+Die folgenden Beispiele zeigen die Verwendung von **FindComputer** in JScript, VBScript und Visual Basic.
 
-JScript
+Jscript:
 
 
 ```JScript
@@ -79,7 +67,7 @@ JScript
 
 
 
-VBScript
+Vbscript:
 
 
 ```VB
@@ -115,23 +103,23 @@ End Sub
 
 
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, Windows XP \[ Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Client)<br/> | Nur Windows 2000 Professional- und Windows \[ XP-Desktop-Apps\]<br/>                                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                           |
-| Header<br/>                   | <dl> <dt>Shldisp. h</dt> </dl>                           |
-| IDL<br/>                      | <dl> <dt>Shldisp. idl</dt> </dl>                         |
-| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4,71 oder höher)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>                           |
+| Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                         |
+| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4.71 oder höher)</dt> </dl> |
 
 
 
- 
+ 
 
- 
+ 
 
 
 

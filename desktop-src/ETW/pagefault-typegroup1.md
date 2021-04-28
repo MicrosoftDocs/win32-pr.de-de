@@ -1,5 +1,5 @@
 ---
-description: Diese Klasse ist die Ereignistyp Klasse für Seiten Fehlerereignisse. Die folgende Syntax wird durch den MOF-Code vereinfacht.
+description: 'PageFault_TypeGroup1 Klasse: Diese Klasse ist die Ereignistypklasse für Seitenfehlerereignisse. Die folgende Syntax wird durch MOF-Code vereinfacht.'
 ms.assetid: 59cb1091-af21-4fe6-87b8-17a262cc4467
 title: PageFault_TypeGroup1-Klasse
 ms.topic: reference
@@ -14,18 +14,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 4bf1f49c909833d75af844c8f2f943a01b6a5d6d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 4a69e74a086ecd594d83c932beea4fd7d62724db
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104216773"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108106408"
 ---
-# <a name="pagefault_typegroup1-class"></a>Pagefault \_ TypeGroup1-Klasse
+# <a name="pagefault_typegroup1-class"></a>PageFault \_ TypeGroup1-Klasse
 
-Diese Klasse ist die Ereignistyp Klasse für Seiten Fehlerereignisse.
+Diese Klasse ist die Ereignistypklasse für Seitenfehlerereignisse.
 
-Die folgende Syntax wird durch den MOF-Code vereinfacht.
+Die folgende Syntax wird durch MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,60 +40,60 @@ class PageFault_TypeGroup1 : PageFault_V2
 
 ## <a name="members"></a>Member
 
-Die **Pagefault \_ TypeGroup1** -Klasse verfügt über diese Typen von Membern:
+Die **PageFault \_ TypeGroup1-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **Pagefault \_ TypeGroup1** -Klasse verfügt über diese Eigenschaften.
+Die **PageFault \_ TypeGroup1-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-Programm Counter
+ProgramCounter
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (2), Zeiger
+Qualifizierer: WmiDataId(2), Zeiger
 </dt> </dl>
 
-Zeiger auf die aktuell ausgeführte Anweisung.
+Zeiger auf die aktuelle Anweisung, die ausgeführt wird.
 
 </dd> <dt>
 
 VirtualAddress
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (1), Zeiger
+Qualifizierer: WmiDataId(1), Zeiger
 </dt> </dl>
 
-Die virtuelle Adresse der Seite, die den Seiten Fehler verursacht hat.
+Virtuelle Adresse der Seite, die den Seitenfehler verursacht hat.
 
 </dd> </dl>
 
 ## <a name="remarks"></a>Bemerkungen
 
-Ein Seiten Fehler tritt auf, wenn eine im Arbeitsspeicher-Cache gesuchte Seite dort nicht gefunden wird und von einer anderen Stelle im Arbeitsspeicher (einem Soft-Fehler) oder vom Datenträger abgerufen werden muss (ein harter Fehler).
+Ein Seitenfehler tritt auf, wenn eine seite, die im Arbeitsspeichercache gesucht wird, dort nicht gefunden wird und von einer anderen Stelle im Arbeitsspeicher (ein weicher Fehler) oder vom Datenträger (ein harter Fehler) abgerufen werden muss.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
@@ -101,7 +101,7 @@ Ein Seiten Fehler tritt auf, wenn eine im Arbeitsspeicher-Cache gesuchte Seite d
 
 <dl> <dt>
 
-[**Pagefault \_ v2**](pagefault-v2.md)
+[**PageFault \_ V2**](pagefault-v2.md)
 </dt> </dl>
 
  

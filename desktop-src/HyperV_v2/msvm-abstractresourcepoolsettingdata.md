@@ -1,5 +1,5 @@
 ---
-description: Stellt die Einstellungen einer MSVM- \_ resourcepool-Instanz dar, die nicht zugeordnet sind.
+description: 'Msvm_AbstractResourcePoolSettingData Klasse: Stellt die Einstellungen einer Msvm \_ ResourcePool-Instanz dar, die nicht zuordnungsbezogen sind.'
 ms.assetid: c5954a92-8942-4b45-aae2-6936328dab1a
 title: Msvm_AbstractResourcePoolSettingData-Klasse
 ms.topic: reference
@@ -25,18 +25,18 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 9109bd428797c8c4f1073577e015bf4b9eddcc07
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: dca3da14ac74a8d6fab1ba96db98f9e2eccd74ea
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103960072"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108112118"
 ---
-# <a name="msvm_abstractresourcepoolsettingdata-class"></a>MSVM \_ abstractresourcepoolsettingdata-Klasse
+# <a name="msvm_abstractresourcepoolsettingdata-class"></a>Msvm \_ AbstractResourcePoolSettingData-Klasse
 
-Stellt die Einstellungen einer [**MSVM- \_ resourcepool**](msvm-resourcepool.md) -Instanz dar, die nicht zugeordnet sind.
+Stellt die Einstellungen einer [**Msvm \_ ResourcePool-Instanz**](msvm-resourcepool.md) dar, die nicht zuordnungsbezogen sind.
 
-Die folgende Syntax wird Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften.
+Die folgende Syntax ist Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften.
 
 ## <a name="syntax"></a>Syntax
 
@@ -61,13 +61,13 @@ class Msvm_AbstractResourcePoolSettingData : CIM_SettingData
 
 ## <a name="members"></a>Member
 
-Die **MSVM \_ abstractresourcepoolsettingdata** -Klasse verfügt über diese Typen von Membern:
+Die **Msvm \_ AbstractResourcePoolSettingData-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSVM \_ abstractresourcepoolsettingdata** -Klasse verfügt über diese Eigenschaften.
+Die **Msvm \_ AbstractResourcePoolSettingData-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
@@ -80,7 +80,7 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine kurze Beschreibung des-Objekts. Diese Eigenschaft wird von [**CIM \_ managedelta**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
+Eine kurze Beschreibung des -Objekts. Diese Eigenschaft wird von [**CIM \_ ManagedElement geerbt.**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)
 
 </dd> <dt>
 
@@ -93,7 +93,7 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine Beschreibung des -Objekts. Diese Eigenschaft wird von [**CIM \_ managedelta**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
+Eine Beschreibung des -Objekts. Diese Eigenschaft wird von [**CIM \_ ManagedElement geerbt.**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)
 
 </dd> <dt>
 
@@ -106,7 +106,7 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ein Anzeige Name für das-Objekt. Diese Eigenschaft wird von [**CIM \_ managedelta**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
+Ein Anzeigename für das Objekt. Diese Eigenschaft wird von [**CIM \_ ManagedElement geerbt.**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)
 
 </dd> <dt>
 
@@ -122,20 +122,20 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: **Schlüssel**
 </dt> </dl>
 
-Identifiziert eine Instanz dieser Klasse eindeutig. Diese Eigenschaft wird von [**CIM \_ SettingData**](/previous-versions//cc136911(v=vs.85))geerbt.
+Identifiziert eine Instanz dieser Klasse eindeutig. Diese Eigenschaft wird von [**CIM \_ SettingData geerbt.**](/previous-versions//cc136911(v=vs.85))
 
 </dd> <dt>
 
-**Loadbalancingbehavior**
+**LoadBalancingBehavior**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt die Zuordnungs Strategie an, die vom Ressourcenpool verwendet wird, um die Ressourcennutzung über die aggregierten Ressourcen hinweg auszugleichen.
+Gibt die Zuordnungsstrategie an, die vom Ressourcenpool verwendet werden soll, um die Ressourcennutzung über die aggregierten Ressourcen hinweg auszugleichen.
 
 <dt>
 
@@ -176,19 +176,19 @@ Gibt die Zuordnungs Strategie an, die vom Ressourcenpool verwendet wird, um die 
 
 </dd> <dt>
 
-**Mappingbehavior**
+**MappingBehavior**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**modelcorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ resourcezucationsettingdata**](cim-resourceallocationsettingdata.md)".**Mappingbehavior**")
+Qualifizierer: [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ ResourceAllocationSettingData**](cim-resourceallocationsettingdata.md).**MappingBehavior**")
 </dt> </dl>
 
-Gibt an, ob der Ressourcenpool versuchen kann, andere Host Ressourcen zu verwenden, um die Zuordnungs Anforderung zu erfüllen, wenn die gewünschten Ressourcen nicht zugewiesen werden können.
+Gibt an, ob der Ressourcenpool versuchen kann, andere Hostressourcen zu verwenden, um die Zuordnungsanforderung zu erfüllen, wenn die gewünschten Ressourcen nicht zugeordnet werden können.
 
 <dt>
 
@@ -208,14 +208,14 @@ Gibt an, ob der Ressourcenpool versuchen kann, andere Host Ressourcen zu verwend
 
 <span id="Dedicated"></span><span id="dedicated"></span><span id="DEDICATED"></span>
 
-**Dediziert** (3)
+**Dedicated** (3)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Soft_Affinity"></span><span id="soft_affinity"></span><span id="SOFT_AFFINITY"></span>
 
-**Weiche Affinität** (4)
+**Soft Affinity** (4)
 
 
 </dt> <dd></dd> <dt>
@@ -229,33 +229,33 @@ Gibt an, ob der Ressourcenpool versuchen kann, andere Host Ressourcen zu verwend
 
 <span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>
 
-**DMTF reserviert** (..)
+**DMTF Reserved** (..)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Vendor_Reserved"></span><span id="vendor_reserved"></span><span id="VENDOR_RESERVED"></span>
 
-**Hersteller reserviert** (32767.65535)
+**Reservierter Anbieter** (32767..65535)
 
 
 </dt> <dd></dd> </dl>
 
 </dd> <dt>
 
-**Mappingorder**
+**MappingOrder**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**modelcorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**MSVM \_ resourcepoolsettingdata**](msvm-resourcepoolsettingdata.md).**Mappingbehavior**")
+Qualifizierer: [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**Msvm \_ ResourcePoolSettingData**](msvm-resourcepoolsettingdata.md).**MappingBehavior**")
 </dt> </dl>
 
-Gibt die Reihenfolge an, in der die über diesen Pool verfügbaren Host Ressourcen ausgewählt werden, wenn versucht wird, eine Zuordnungs Anforderung zu erfüllen, und die angeforderte Host Ressource ist nicht verfügbar, oder es wurde keine Host Ressource angegeben.
+Gibt die Reihenfolge an, in der über diesen Pool verfügbare Hostressourcen ausgewählt werden, wenn versucht wird, eine Zuordnungsanforderung zu erfüllen, und die angeforderte Hostressource nicht verfügbar ist oder keine Hostressource angegeben ist.
 
 </dd> <dt>
 
@@ -268,11 +268,11 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Vom Endbenutzer bereitgestellte Notizen zu diesem Ressourcenpool.
+Vom Endbenutzer bereitgestellte Hinweise zu diesem Ressourcenpool.
 
 </dd> <dt>
 
-**Otherresourcetype**
+**OtherResourceType**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -281,14 +281,14 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**modelcorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ resourcepool**](cim-resourcepool.md)".**Otherresourcetype**")
+Qualifizierer: [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ ResourcePool**](cim-resourcepool.md).**OtherResourceType**")
 </dt> </dl>
 
-Eine Zeichenfolge, die den Ressourcentyp beschreibt, wenn ein klar definierter Wert nicht verfügbar ist und **ResourceType** auf 0 (sonstige) festgelegt ist.
+Eine Zeichenfolge, die den Ressourcentyp beschreibt, wenn ein klar definierter Wert nicht verfügbar ist und **ResourceType** auf 0 (Sonstige) festgelegt ist.
 
 </dd> <dt>
 
-**Poolid**
+**PoolID**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -297,10 +297,10 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**modelcorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ resourcepool**](cim-resourcepool.md)".**Poolid**")
+Qualifizierer: [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ ResourcePool**](cim-resourcepool.md).**PoolID**")
 </dt> </dl>
 
-Ein Bezeichner für den Pool. Diese Eigenschaft wird verwendet, um die Korrelation Zwischenspeichern und Wiederherstellen von Konfigurationsdaten im zugrunde liegenden permanenten Speicher bereitzustellen.
+Ein Bezeichner für den Pool. Diese Eigenschaft wird verwendet, um die Korrelation zwischen dem Speichern und Wiederherstellen von Konfigurationsdaten im zugrunde liegenden persistenten Speicher zu ermöglichen.
 
 </dd> <dt>
 
@@ -313,23 +313,23 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**modelcorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ resourcepool**](cim-resourcepool.md)".**Resourcesubtype**")
+Qualifizierer: [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ ResourcePool**](cim-resourcepool.md).**ResourceSubType**")
 </dt> </dl>
 
-Eine Zeichenfolge, die einen Implementierungs spezifischen Untertyp für diesen Pool beschreibt. Dies kann z. b. verwendet werden, um unterschiedliche Modelle desselben Ressourcentyps zu unterscheiden.
+Eine Zeichenfolge, die einen implementierungsspezifischen Untertyp für diesen Pool beschreibt. Dies kann beispielsweise verwendet werden, um verschiedene Modelle desselben Ressourcentyps zu unterscheiden.
 
 </dd> <dt>
 
 **ResourceType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**modelcorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ resourcepool**](cim-resourcepool.md)".**ResourceType**")
+Qualifizierer: [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ ResourcePool**](cim-resourcepool.md).**ResourceType**")
 </dt> </dl>
 
 Der Typ der Ressource, die dieser Ressourcenpool zuordnen kann.
@@ -338,14 +338,14 @@ Der Typ der Ressource, die dieser Ressourcenpool zuordnen kann.
 
 <span id="Other"></span><span id="other"></span><span id="OTHER"></span>
 
-**Sonstige** (1)
+**Andere** (1)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Computer_System"></span><span id="computer_system"></span><span id="COMPUTER_SYSTEM"></span>
 
-**Computer System** (2)
+**Computersystem** (2)
 
 
 </dt> <dd></dd> <dt>
@@ -359,7 +359,7 @@ Der Typ der Ressource, die dieser Ressourcenpool zuordnen kann.
 
 <span id="Memory"></span><span id="memory"></span><span id="MEMORY"></span>
 
-Arbeits **Speicher** (4)
+**Arbeitsspeicher** (4)
 
 
 </dt> <dd></dd> <dt>
@@ -380,7 +380,7 @@ Arbeits **Speicher** (4)
 
 <span id="FC_HBA"></span><span id="fc_hba"></span>
 
-**FC-HBA** (7)
+**FC HBA** (7)
 
 
 </dt> <dd></dd> <dt>
@@ -408,21 +408,21 @@ Arbeits **Speicher** (4)
 
 <span id="Other_Network_Adapter"></span><span id="other_network_adapter"></span><span id="OTHER_NETWORK_ADAPTER"></span>
 
-**Anderer Netzwerk Adapter** (11)
+**Anderer Netzwerkadapter** (11)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="I_O_Slot"></span><span id="i_o_slot"></span><span id="I_O_SLOT"></span>
 
-E **/a-Slot** (12)
+**E/A-Slot** (12)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="I_O_Device"></span><span id="i_o_device"></span><span id="I_O_DEVICE"></span>
 
-E **/a-Gerät** (13)
+**E/A-Gerät** (13)
 
 
 </dt> <dd></dd> <dt>
@@ -450,7 +450,7 @@ E **/a-Gerät** (13)
 
 <span id="Disk_Drive"></span><span id="disk_drive"></span><span id="DISK_DRIVE"></span>
 
-**Laufwerk (17** )
+**Laufwerk** (17)
 
 
 </dt> <dd></dd> <dt>
@@ -464,7 +464,7 @@ E **/a-Gerät** (13)
 
 <span id="Storage_Extent"></span><span id="storage_extent"></span><span id="STORAGE_EXTENT"></span>
 
-**Speicher** Block (19)
+**Speicherumfang** (19)
 
 
 </dt> <dd></dd> <dt>
@@ -478,14 +478,14 @@ E **/a-Gerät** (13)
 
 <span id="Serial_port"></span><span id="serial_port"></span><span id="SERIAL_PORT"></span>
 
-**Seriellen Anschluss** (21)
+**Serieller Anschluss** (21)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Parallel_port"></span><span id="parallel_port"></span><span id="PARALLEL_PORT"></span>
 
-**Paralleler Anschluss** (22)
+**Paralleler Port** (22)
 
 
 </dt> <dd></dd> <dt>
@@ -506,28 +506,28 @@ E **/a-Gerät** (13)
 
 <span id="IEEE_1394_Controller"></span><span id="ieee_1394_controller"></span><span id="IEEE_1394_CONTROLLER"></span>
 
-**IEEE 1394-Controller** (25)
+**IEEE 1394 Controller** (25)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Partitionable_Unit"></span><span id="partitionable_unit"></span><span id="PARTITIONABLE_UNIT"></span>
 
-**Partitionier Bare Einheit** (26)
+**Partitionierbare Einheit** (26)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Base_Partitionable_Unit"></span><span id="base_partitionable_unit"></span><span id="BASE_PARTITIONABLE_UNIT"></span>
 
-**Partitionier bare Basiseinheit** (27)
+**Partitionierbare Basiseinheit** (27)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Power"></span><span id="power"></span><span id="POWER"></span>
 
-**Energie** (28)
+**Stromversorgung** (28)
 
 
 </dt> <dd></dd> <dt>
@@ -548,21 +548,21 @@ E **/a-Gerät** (13)
 
 <span id="Logical_Disk"></span><span id="logical_disk"></span><span id="LOGICAL_DISK"></span>
 
-**Logischer** Datenträger (31)
+**Logischer Datenträger** (31)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Storage_Volume"></span><span id="storage_volume"></span><span id="STORAGE_VOLUME"></span>
 
-**Speicher Volume** (32)
+**Speichervolume** (32)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Ethernet_Connection"></span><span id="ethernet_connection"></span><span id="ETHERNET_CONNECTION"></span>
 
-**Ethernet-Verbindung** (33)
+**Ethernetverbindung** (33)
 
 
 </dt> <dd></dd> <dt>
@@ -576,7 +576,7 @@ E **/a-Gerät** (13)
 
 <span id="Vendor_Reserved"></span><span id="vendor_reserved"></span><span id="VENDOR_RESERVED"></span>
 
-**Anbieter reserviert** (0X8000.. 0xFFFF
+**Reservierter Anbieter** (0x8000. 0xFFFF)
 
 
 </dt> <dd></dd> </dl>
@@ -587,12 +587,12 @@ E **/a-Gerät** (13)
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 8 \[ Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2012-Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 

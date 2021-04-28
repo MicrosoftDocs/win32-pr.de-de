@@ -1,7 +1,7 @@
 ---
-description: Beschreibt Farbwerte.
+description: 'D3DXCOLOR-Struktur (D3DX10Math.h): Beschreibt Farbwerte.'
 ms.assetid: bb5e36c8-4f24-41b5-84e7-3034e497721d
-title: D3DXCOLOR-Struktur (D3DX10Math. h)
+title: D3DXCOLOR-Struktur (D3DX10Math.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,14 +13,14 @@ api_type:
 - HeaderDef
 api_location:
 - D3DX10Math.h
-ms.openlocfilehash: 436a20fa8ed6f57062f268be2b71f7e350cb2854
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 9e919f86cebba1526908020881b73c01e02b7df3
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106355041"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108103558"
 ---
-# <a name="d3dxcolor-structure-d3dx10mathh"></a>D3DXCOLOR-Struktur (D3DX10Math. h)
+# <a name="d3dxcolor-structure-d3dx10mathh"></a>D3DXCOLOR-Struktur (D3DX10Math.h)
 
 Beschreibt Farbwerte.
 
@@ -45,7 +45,7 @@ typedef struct D3DXCOLOR {
 **r**
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
@@ -56,7 +56,7 @@ Rote Komponente der Farbe.
 **g**
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
@@ -67,7 +67,7 @@ Grüne Komponente der Farbe.
 **b**
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
@@ -75,14 +75,14 @@ Blaue Komponente der Farbe.
 
 </dd> <dt>
 
-**ein**
+**Eine**
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Alpha Komponente der Farbe.
+Alphakomponente der Farbe.
 
 </dd> </dl>
 
@@ -90,13 +90,13 @@ Alpha Komponente der Farbe.
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------|-----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3DX10Math. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3DX10Math.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

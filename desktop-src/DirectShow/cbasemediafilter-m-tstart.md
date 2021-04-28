@@ -1,7 +1,7 @@
 ---
-description: Die Verweis Zeit, die der streamzeit 0 entspricht.
+description: 'CBaseMediaFilter::m_tStart-Member: Die Referenzzeit, die der Streamzeit 0 entspricht.'
 ms.assetid: e80d2fe0-48fb-494e-9450-b5cae2ec9c9f
-title: 'Cbasemediafilter:: m_tStart Member (amfilter. h)'
+title: CBaseMediaFilter::m_tStart-Member (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: b733f29f01bb5faeb391d0ff36fd1beaca05adb1
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: bdea1f0cdf804c870a712991a09b2a8325d3c34e
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361282"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108099608"
 ---
-# <a name="cbasemediafilterm_tstart-member"></a>Cbasemediafilter:: m \_ tSTART-Member
+# <a name="cbasemediafilterm_tstart-member"></a>CBaseMediaFilter::m \_ tStart-Member
 
-Die Verweis Zeit, die der streamzeit 0 entspricht.
+Die Referenzzeit, die der Streamzeit 0 entspricht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,18 +40,18 @@ CRefTime m_tStart;
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (streams.h einschließen)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbasemediafilter-Klasse**](cbasemediafilter.md)
+[**CBaseMediaFilter-Klasse**](cbasemediafilter.md)
 </dt> </dl>
 
  

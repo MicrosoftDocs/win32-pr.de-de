@@ -1,6 +1,6 @@
 ---
-description: Zeigt die geöffneten Fenster in einem 3D-Stapel an, den Sie durchlaufen können.
-title: 'Shell:: windowswitcher-Methode (Shldisp. h)'
+description: 'Shell::WindowSwitcher-Methode: Zeigt Ihre geöffneten Fenster in einem 3D-Stapel an, den Sie durchblättern können.'
+title: Shell::WindowSwitcher-Methode (Shldisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 api_location:
 - Shldisp.h
 ms.assetid: 89825430-C28E-4d38-A8F7-69A1408DDD73
-ms.openlocfilehash: 970e0b15ddeba2cd7e804ca998bdf201a442bc73
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c21c7a287ef6b90e15d690314c3491cad711bce4
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104980600"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108104048"
 ---
-# <a name="shellwindowswitcher-method"></a>Shell:: windowswitcher-Methode
+# <a name="shellwindowswitcher-method"></a>Shell::WindowSwitcher-Methode
 
-Zeigt die geöffneten Fenster in einem 3D-Stapel an, den Sie durchlaufen können.
+Zeigt Ihre geöffneten Fenster in einem 3D-Stapel an, den Sie durchblättern können.
 
 ## <a name="syntax"></a>Syntax
 
@@ -55,16 +55,16 @@ Diese Methode gibt keinen Wert zurück.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                         |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                   |
-| Header<br/>                   | <dl> <dt>Shldisp. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Shldisp. idl</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ Vista-Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2008-Desktop-Apps\]<br/>                                   |
+| Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl> |
 
 
 

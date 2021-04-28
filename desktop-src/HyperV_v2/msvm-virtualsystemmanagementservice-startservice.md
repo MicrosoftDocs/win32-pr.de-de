@@ -1,7 +1,7 @@
 ---
-description: Startet den Dienst.
+description: 'StartService-Methode der Msvm_VirtualSystemManagementService-Klasse: Startet den Dienst.'
 ms.assetid: 1a1819de-823e-4e97-9c04-fcaeea2c67d9
-title: Start Service-Methode der Msvm_VirtualSystemManagementService-Klasse
+title: StartService-Methode der Msvm_VirtualSystemManagementService-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,14 +13,14 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 887999e19276c29a9501ddd5d86fba45bdbaeb92
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6ebb07240fdd95d98269056eca4eefe691f52077
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104525196"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108118638"
 ---
-# <a name="startservice-method-of-the-msvm_virtualsystemmanagementservice-class"></a>Start Service-Methode der MSVM \_ virtualsystemmanagementservice-Klasse
+# <a name="startservice-method-of-the-msvm_virtualsystemmanagementservice-class"></a>StartService-Methode der Msvm \_ VirtualSystemManagementService-Klasse
 
 Startet den Dienst.
 
@@ -53,21 +53,21 @@ Diese Methode gibt einen der folgenden Werte zurück:
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8.1<br/>                                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2<br/>                                                                       |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**MSVM \_ virtualsystemmanagementservice**](msvm-virtualsystemmanagementservice.md)
+[**Msvm \_ VirtualSystemManagementService**](msvm-virtualsystemmanagementservice.md)
 </dt> </dl>
 
  

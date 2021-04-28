@@ -1,7 +1,7 @@
 ---
-description: Ändert die Einstellungen der virtuellen Ressource.
+description: 'ModifyResourceSettings-Methode der CIM_VirtualSystemManagementService Klasse: Ändert einstellungen für virtuelle Ressourcen.'
 ms.assetid: 4942f167-0e53-4ae2-b973-4a06b636b44a
-title: Modifyresourcesettings-Methode der CIM_VirtualSystemManagementService-Klasse
+title: ModifyResourceSettings-Methode der CIM_VirtualSystemManagementService Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: e27729429d02c2412e05344779cc40461dbd9dfe
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 26971c80ce6f7d0ffcdcef069d76aef5fdc15138
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104485363"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108112288"
 ---
-# <a name="modifyresourcesettings-method-of-the-cim_virtualsystemmanagementservice-class"></a>Modifyresourcesettings-Methode der CIM \_ virtualsystemmanagementservice-Klasse
+# <a name="modifyresourcesettings-method-of-the-cim_virtualsystemmanagementservice-class"></a>ModifyResourceSettings-Methode der CIM \_ VirtualSystemManagementService-Klasse
 
-Ändert die Einstellungen der virtuellen Ressource.
+Ändert die Einstellungen für virtuelle Ressourcen.
 
-Wenn Sie auf Teile einer "aktuellen" virtuellen Systemkonfiguration angewendet werden, können die Ressourcen des aktiven virtuellen Systems ggf. geändert werden.
+Wenn sie auf Teile einer "aktuellen" Konfiguration des virtuellen Systems angewendet werden, können Als Nebeneffekt Ressourcen des aktiven virtuellen Systems geändert werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,30 +43,30 @@ uint32 ModifyResourceSettings(
 
 <dl> <dt>
 
-*Resourcesettings* \[ in\]
+*ResourceSettings* \[ In\]
 </dt> <dd>
 
-Ein Array von Zeichen folgen, die jeweils eine eingebettete Instanz der Klasse [**CIM \_ resourcezucationsettingdata**](cim-resourceallocationsettingdata.md) enthalten, die Änderungen an den virtuellen Aspekten einer vorhandenen virtuellen Ressource beschreibt. Alle Instanzen müssen über eine gültige **InstanceId** verfügen, um die zu ändernde virtuelle Ressourcen Einstellung zu identifizieren.
+Array von Zeichenfolgen, die jeweils eine eingebettete Instanz der [**Klasse CIM \_ ResourceAllocationSettingData**](cim-resourceallocationsettingdata.md) enthalten, die Änderungen an den virtuellen Aspekten einer vorhandenen virtuellen Ressource beschreibt. Alle Instanzen müssen über eine gültige **InstanceID** verfügen, um die zu ändernde Einstellung der virtuellen Ressource zu identifizieren.
 
 </dd> <dt>
 
-*Resultingresourcesettings* \[ vorgenommen\]
+*ResultingResourceSettings* \[ out\]
 </dt> <dd>
 
-Array von Verweisen auf Instanzen der Klasse [**CIM \_ resourcezucationsettingdata**](cim-resourceallocationsettingdata.md) , die virtuelle Aspekte der geänderten virtuellen Ressourcen darstellen.
+Array von Verweisen auf Instanzen der Klasse [**CIM \_ ResourceAllocationSettingData,**](cim-resourceallocationsettingdata.md) die virtuelle Aspekte der geänderten virtuellen Ressourcen darstellen.
 
 </dd> <dt>
 
-*Auftrag* \[ vorgenommen\]
+*Auftrag* \[ out\]
 </dt> <dd>
 
-Wenn der Vorgang lange ausgeführt wird, wird optional ein Auftrag zurückgegeben. In diesem Fall sind die Instanzen der Klasse " [**CIM \_ resourcezucationsettingdata**](cim-resourceallocationsettingdata.md) ", die die geänderten Ressourcen Einstellungen darstellen, über Association CIM "Configuration Manager" aus der Instanz der Klasse " [**CIM \_ virtualsystemsettingdata**](cim-virtualsystemsettingdata.md) " verfügbar, die die betroffene virtuelle Systemkonfiguration darstellt. **\_**
+Wenn der Vorgang lange ausgeführt wird, wird optional ein Auftrag zurückgegeben. In diesem Fall sind die Instanzen der [**Klasse CIM \_ ResourceAllocationSettingData,**](cim-resourceallocationsettingdata.md) die die geänderten Ressourceneinstellungen darstellen, über die Zuordnung **CIM \_ ConreteComponent aus** der Instanz der Klasse CIM [**\_ VirtualSystemSettingData**](cim-virtualsystemsettingdata.md) verfügbar, die die betroffene konfiguration des virtuellen Systems darstellt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg 0 (null) zurück. Andernfalls wird ein Fehler zurückgegeben.
+Gibt bei Erfolg eine 0 zurück. andernfalls gibt einen Fehler zurück.
 
 <dl> <dt>
 
@@ -76,7 +76,7 @@ Gibt bei Erfolg 0 (null) zurück. Andernfalls wird ein Fehler zurückgegeben.
 **Nicht unterstützt** (1)
 </dt> <dt>
 
-Fehler **(2** )
+**Fehler** (2)
 </dt> <dt>
 
 **Timeout** (3)
@@ -85,43 +85,43 @@ Fehler **(2** )
 **Ungültiger Parameter** (4)
 </dt> <dt>
 
-**Ungültiger Status** (5)
+**Ungültiger Zustand** (5)
 </dt> <dt>
 
-Nicht **kompatible Parameter** (6)
+**Inkompatible Parameter** (6)
 </dt> <dt>
 
-**DMTF reserviert** (..)
+**DMTF Reserved** (..)
 </dt> <dt>
 
-Über **prüfte Methoden Parameter-Auftrag gestartet** (4096)
+**Methodenparameter überprüft** – Auftrag gestartet (4096)
 </dt> <dt>
 
-**Reservierte Methode** (4097.32767)
+**Reservierte Methode** (4097..32767)
 </dt> <dt>
 
-**Hersteller spezifisch** (32768.65535)
+**Herstellerspezifisch** (32768..65535)
 </dt> </dl>
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8.1<br/>                                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2<br/>                                                                       |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**CIM \_ virtualsystemmanagementservice**](cim-virtualsystemmanagementservice.md)
+[**CIM \_ VirtualSystemManagementService**](cim-virtualsystemmanagementservice.md)
 </dt> </dl>
 
  

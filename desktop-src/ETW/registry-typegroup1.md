@@ -1,5 +1,5 @@
 ---
-description: Diese Klasse ist die Ereignistyp Klasse für Registrierungs Ereignisse. Die folgende Syntax wird durch den MOF-Code vereinfacht.
+description: 'Registry_TypeGroup1 Klasse: Diese Klasse ist die Ereignistypklasse für Registrierungsereignisse. Die folgende Syntax wird durch MOF-Code vereinfacht.'
 ms.assetid: 8d0e9d97-3837-46da-a217-13e943580352
 title: Registry_TypeGroup1-Klasse
 ms.topic: reference
@@ -17,18 +17,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: bfbf0157141473be4cc2460659912dc662ef7c75
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d86412a950246bee4f9a692ab80e91b99d945c20
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104977816"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108106248"
 ---
-# <a name="registry_typegroup1-class"></a>Registry \_ TypeGroup1-Klasse
+# <a name="registry_typegroup1-class"></a>Klasse \_ "Registry TypeGroup1"
 
-Diese Klasse ist die Ereignistyp Klasse für Registrierungs Ereignisse.
+Diese Klasse ist die Ereignistypklasse für Registrierungsereignisse.
 
-Die folgende Syntax wird durch den MOF-Code vereinfacht.
+Die folgende Syntax wird durch MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,33 +46,33 @@ class Registry_TypeGroup1 : Registry
 
 ## <a name="members"></a>Member
 
-Die **\_ TypeGroup1-Registrierungs** Klasse verfügt über diese Typen von Membern:
+Die **Klasse \_ "Registry TypeGroup1"** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **\_ TypeGroup1-Registrierungs** Klasse verfügt über diese Eigenschaften.
+Die **Klasse \_ Registry TypeGroup1** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 Index
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (3)
+Qualifizierer: WmiDataId(3)
 </dt> </dl>
 
-Der Unterschlüssel Index für den Registrierungsvorgang (z. b. enumeratekey).
+Der Unterschlüsselindex für den Registrierungsvorgang (z. B. EnumerateKey).
 
 </dd> <dt>
 
-Initialtime
+InitialTime
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint64**
@@ -81,23 +81,23 @@ Datentyp: **sint64**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (1)
+Qualifizierer: WmiDataId(1)
 </dt> </dl>
 
-Anfängliche Zeit des Registrierungsvorgangs.
+Anfangszeit des Registrierungsvorgang.
 
 </dd> <dt>
 
 KeyHandle
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (4), Zeiger
+Qualifizierer: WmiDataId(4), Zeiger
 </dt> </dl>
 
 Handle für den Registrierungsschlüssel.
@@ -113,7 +113,7 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (5), stringbeendigung ("nullterminiert"), Format ("w")
+Qualifizierer: WmiDataId(5), StringTermination("NullTerminated"), Format("w")
 </dt> </dl>
 
 Der Name des Registrierungsschlüssels
@@ -123,27 +123,27 @@ Der Name des Registrierungsschlüssels
 Status
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (2), Zeiger
+Qualifizierer: WmiDataId(2), Zeiger
 </dt> </dl>
 
-Der NTSTATUS-Wert des Registrierungsvorgangs.
+NTSTATUS-Wert des Registrierungsvorgangs.
 
 </dd> </dl>
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 

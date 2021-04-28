@@ -1,7 +1,7 @@
 ---
-description: Konstruktormethode.
+description: CBaseOutputPin.CBaseOutputPin-Konstruktor – Konstruktormethode.
 ms.assetid: 1105c951-a51d-49ab-a69d-f3d482d61233
-title: Cbaseoutputpin. cbaseoutputpin-Konstruktor (amfilter. h)
+title: CBaseOutputPin.CBaseOutputPin-Konstruktor (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,14 +16,14 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 0461c5056ee48caa19f21d1fcb8fcf1636157d9f
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 9901591be32d431ebe53a2098456446a0126d26b
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371502"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108099568"
 ---
-# <a name="cbaseoutputpincbaseoutputpin-constructor"></a>Cbaseoutputpin. cbaseoutputpin-Konstruktor
+# <a name="cbaseoutputpincbaseoutputpin-constructor"></a>CBaseOutputPin.CBaseOutputPin-Konstruktor
 
 Konstruktormethode.
 
@@ -46,61 +46,61 @@ CBaseOutputPin(
 
 <dl> <dt>
 
-*pobjectname* 
+*pObjectName* 
 </dt> <dd>
 
-Zeichenfolge, die den debugnamen des-Objekts enthält. Weitere Informationen finden Sie unter [**cbaseobject**](cbaseobject.md).
+Zeichenfolge, die den Debugnamen des Objekts enthält. Weitere Informationen finden Sie unter [**CBaseObject.**](cbaseobject.md)
 
 </dd> <dt>
 
 *pFilter* 
 </dt> <dd>
 
-Zeiger auf den Filter, der diese Pin erstellt hat.
+Zeiger auf den Filter, der diese Stecknadel erstellt hat.
 
 </dd> <dt>
 
 *Plock* 
 </dt> <dd>
 
-Zeiger auf eine [**ccritsec**](ccritsec.md) -Sperre, mit der Zustandsänderungen serialisiert werden. Dabei kann es sich um denselben kritischen Abschnitt handeln wie die Filter Sperre, [**cbasefilter:: m \_ Plock**](cbasefilter-m-plock.md).
+Zeiger auf eine [**CCritSec-Sperre,**](ccritsec.md) die zum Serialisieren von Zustandsänderungen verwendet wird. Dies kann derselbe kritische Abschnitt wie die Filtersperre [**CBaseFilter::m \_ pLock**](cbasefilter-m-plock.md)sein.
 
 </dd> <dt>
 
-*PHR* 
+*Phr* 
 </dt> <dd>
 
-Ein Zeiger auf eine Variable, die einen **HRESULT** -Wert empfängt, der angibt, ob die Methode erfolgreich war oder fehlgeschlagen ist.
+Zeiger auf eine Variable, die einen **HRESULT-Wert** empfängt, der den Erfolg oder Fehler der Methode angibt.
 
 </dd> <dt>
 
 *pName* 
 </dt> <dd>
 
-Breit Zeichen-Zeichenfolge, die den Pin-Namen (auch als PIN-Bezeichner verwendet) enthält.
+Breitzeichenzeichenfolge, die den Pinnamen enthält (wird auch als Stecknadelbezeichner verwendet).
 
 </dd> </dl>
 
 ## <a name="remarks"></a>Bemerkungen
 
-Alle Parameter werden direkt an den [**cbasepin**](cbasepin.md) -Konstruktor übergeben.
+Alle Parameter werden direkt an den [**CBasePin-Konstruktor**](cbasepin.md) übergeben.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (streams.h einschließen)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbaseoutputpin-Klasse**](cbaseoutputpin.md)
+[**CBaseOutputPin-Klasse**](cbaseoutputpin.md)
 </dt> </dl>
 
  

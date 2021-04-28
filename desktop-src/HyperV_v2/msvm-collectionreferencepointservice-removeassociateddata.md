@@ -1,7 +1,7 @@
 ---
-description: Entfernt das dem Bezugspunkt zugeordnete Datenprotokoll.
+description: RemoveAssociatedData-Methode der Msvm_CollectionReferencePointService - Entfernt das dem Verweispunkt zugeordnete Datenprotokoll.
 ms.assetid: 42242b76-9123-41a7-b8b1-82d2e827ea53
-title: Removeassociateddata-Methode der Msvm_CollectionReferencePointService-Klasse
+title: RemoveAssociatedData-Methode der Msvm_CollectionReferencePointService Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: aec1ac249616c08c6abf1f156ad5a3416c8afaff
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 66a5cf068545f31f9919a9da60a1b09b32f78e4d
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106359491"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108119228"
 ---
-# <a name="removeassociateddata-method-of-the-msvm_collectionreferencepointservice-class"></a>Removeassociateddata-Methode der MSVM \_ collectionreferencepointservice-Klasse
+# <a name="removeassociateddata-method-of-the-msvm_collectionreferencepointservice-class"></a>RemoveAssociatedData-Methode der Msvm \_ CollectionReferencePointService-Klasse
 
-Entfernt das dem Bezugspunkt zugeordnete Datenprotokoll.
+Entfernt das dem Referenzpunkt zugeordnete Datenprotokoll.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,14 +40,14 @@ uint32 RemoveAssociatedData(
 
 <dl> <dt>
 
-*Affectedreferencepointcollection* \[ in\]
+*AffectedReferencePointCollection* \[ In\]
 </dt> <dd>
 
-Verweis auf die betroffene Verweis Punkt Auflistung des virtuellen Systems.
+Verweis auf die betroffene Auflistung des Referenzpunkts des virtuellen Systems.
 
 </dd> <dt>
 
-*Auftrag* \[ vorgenommen\]
+*Auftrag* \[ out\]
 </dt> <dd>
 
 Wenn der Vorgang lange ausgeführt wird, kann optional ein Auftrag zurückgegeben werden.
@@ -56,7 +56,7 @@ Wenn der Vorgang lange ausgeführt wird, kann optional ein Auftrag zurückgegebe
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn erfolgreich, wird entweder 0 (kein Fehler) oder 4096 (Auftrag gestartet) zurückgegeben. Andernfalls wird ein Fehler zurückgegeben.
+Bei Erfolg wird entweder 0 (kein Fehler) oder 4096 (Auftrag gestartet) zurückgegeben. Andernfalls wird ein Fehler zurückgegeben.
 
 <dl> <dt>
 
@@ -66,7 +66,7 @@ Wenn erfolgreich, wird entweder 0 (kein Fehler) oder 4096 (Auftrag gestartet) zu
 **Nicht unterstützt** (1)
 </dt> <dt>
 
-Fehler **(2** )
+**Fehler** (2)
 </dt> <dt>
 
 **Timeout** (3)
@@ -75,43 +75,43 @@ Fehler **(2** )
 **Ungültiger Parameter** (4)
 </dt> <dt>
 
-**Ungültiger Status** (5)
+**Ungültiger Zustand** (5)
 </dt> <dt>
 
 **Ungültiger Typ** (6)
 </dt> <dt>
 
-**DMTF reserviert** (..)
+**DMTF Reserved** (..)
 </dt> <dt>
 
-Über **prüfte Methoden Parameter-Auftrag gestartet** (4096)
+**Überprüfte Methodenparameter – Auftrag gestartet** (4096)
 </dt> <dt>
 
-**Reservierte Methode** (4097.32767)
+**Reservierte Methode** (4097..32767)
 </dt> <dt>
 
-**Hersteller spezifisch** (32768.65535)
+**Herstellerspezifisch** (32768..65535)
 </dt> </dl>
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                             |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 10 \[ Desktop-Apps\]<br/>                                                             |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2016<br/>                                                                          |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**MSVM \_ collectionreferencepointservice**](msvm-collectionreferencepointservice.md)
+[**Msvm \_ CollectionReferencePointService**](msvm-collectionreferencepointservice.md)
 </dt> </dl>
 
  
