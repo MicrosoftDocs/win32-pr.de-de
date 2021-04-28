@@ -1,7 +1,7 @@
 ---
-description: Die Pause-Methode hält den Filter an. Diese Methode implementiert die imediafilter::P ause-Methode.
+description: 'CBaseFilter.Pause-Methode: Die Pause-Methode hält den Filter an. Diese Methode implementiert die IMediaFilter::P ause-Methode.'
 ms.assetid: cfb7d532-6c00-49a1-a48d-4dadaca39a0f
-title: Cbasefilter. Pause-Methode (amfilter. h)
+title: CBaseFilter.Pause-Methode (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,18 +16,18 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 43a90e78084f2320d0df7da806b6138571c9a5bf
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: ee91393a574d0135e66e5a9c1e1e6b0325a0b4de
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106366865"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108120088"
 ---
-# <a name="cbasefilterpause-method"></a><span data-ttu-id="1273f-104">Cbasefilter. Pause-Methode</span><span class="sxs-lookup"><span data-stu-id="1273f-104">CBaseFilter.Pause method</span></span>
+# <a name="cbasefilterpause-method"></a><span data-ttu-id="cf683-104">CBaseFilter.Pause-Methode</span><span class="sxs-lookup"><span data-stu-id="cf683-104">CBaseFilter.Pause method</span></span>
 
-<span data-ttu-id="1273f-105">Die `Pause` Methode hält den Filter an.</span><span class="sxs-lookup"><span data-stu-id="1273f-105">The `Pause` method pauses the filter.</span></span> <span data-ttu-id="1273f-106">Diese Methode implementiert die [**imediafilter::P ause**](/windows/desktop/api/Strmif/nf-strmif-imediafilter-pause) -Methode.</span><span class="sxs-lookup"><span data-stu-id="1273f-106">This method implements the [**IMediaFilter::Pause**](/windows/desktop/api/Strmif/nf-strmif-imediafilter-pause) method.</span></span>
+<span data-ttu-id="cf683-105">Die `Pause` -Methode hält den Filter an.</span><span class="sxs-lookup"><span data-stu-id="cf683-105">The `Pause` method pauses the filter.</span></span> <span data-ttu-id="cf683-106">Diese Methode implementiert die [**IMediaFilter::P ause-Methode.**](/windows/desktop/api/Strmif/nf-strmif-imediafilter-pause)</span><span class="sxs-lookup"><span data-stu-id="cf683-106">This method implements the [**IMediaFilter::Pause**](/windows/desktop/api/Strmif/nf-strmif-imediafilter-pause) method.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="1273f-107">Syntax</span><span class="sxs-lookup"><span data-stu-id="1273f-107">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="cf683-107">Syntax</span><span class="sxs-lookup"><span data-stu-id="cf683-107">Syntax</span></span>
 
 
 ```C++
@@ -36,34 +36,34 @@ HRESULT Pause();
 
 
 
-## <a name="parameters"></a><span data-ttu-id="1273f-108">Parameter</span><span class="sxs-lookup"><span data-stu-id="1273f-108">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="cf683-108">Parameter</span><span class="sxs-lookup"><span data-stu-id="cf683-108">Parameters</span></span>
 
-<span data-ttu-id="1273f-109">Diese Methode hat keine Parameter.</span><span class="sxs-lookup"><span data-stu-id="1273f-109">This method has no parameters.</span></span>
+<span data-ttu-id="cf683-109">Diese Methode hat keine Parameter.</span><span class="sxs-lookup"><span data-stu-id="cf683-109">This method has no parameters.</span></span>
 
-## <a name="return-value"></a><span data-ttu-id="1273f-110">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="1273f-110">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="cf683-110">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="cf683-110">Return value</span></span>
 
-<span data-ttu-id="1273f-111">Gibt \_ bei Erfolg S OK oder einen **HRESULT** -Wert zurück, der die Ursache des Fehlers angibt.</span><span class="sxs-lookup"><span data-stu-id="1273f-111">Returns S\_OK if successful, or an **HRESULT** value indicating the cause of the error.</span></span>
+<span data-ttu-id="cf683-111">Gibt S \_ OK zurück, wenn erfolgreich, oder ein **HRESULT-Wert,** der die Ursache des Fehlers angibt.</span><span class="sxs-lookup"><span data-stu-id="cf683-111">Returns S\_OK if successful, or an **HRESULT** value indicating the cause of the error.</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="1273f-112">Bemerkungen</span><span class="sxs-lookup"><span data-stu-id="1273f-112">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="cf683-112">Bemerkungen</span><span class="sxs-lookup"><span data-stu-id="cf683-112">Remarks</span></span>
 
-<span data-ttu-id="1273f-113">Diese Methode ruft die [**cbasepin:: Active**](cbasepin-active.md) -Methode für jeden verbundenen Pins des Filters auf.</span><span class="sxs-lookup"><span data-stu-id="1273f-113">This method calls the [**CBasePin::Active**](cbasepin-active.md) method on each of the filter's connected pins.</span></span>
+<span data-ttu-id="cf683-113">Diese Methode ruft die [**CBasePin::Active-Methode**](cbasepin-active.md) für jeden verbundenen Pin des Filters auf.</span><span class="sxs-lookup"><span data-stu-id="cf683-113">This method calls the [**CBasePin::Active**](cbasepin-active.md) method on each of the filter's connected pins.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="1273f-114">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="1273f-114">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="cf683-114">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="cf683-114">Requirements</span></span>
 
 
 
-| <span data-ttu-id="1273f-115">Anforderung</span><span class="sxs-lookup"><span data-stu-id="1273f-115">Requirement</span></span> | <span data-ttu-id="1273f-116">Wert</span><span class="sxs-lookup"><span data-stu-id="1273f-116">Value</span></span> |
+| <span data-ttu-id="cf683-115">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="cf683-115">Requirement</span></span> | <span data-ttu-id="cf683-116">Wert</span><span class="sxs-lookup"><span data-stu-id="cf683-116">Value</span></span> |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span data-ttu-id="1273f-117">Header</span><span class="sxs-lookup"><span data-stu-id="1273f-117">Header</span></span><br/>  | <dl> <span data-ttu-id="1273f-118"><dt>Amfilter. h (Include Streams. h)</dt></span><span class="sxs-lookup"><span data-stu-id="1273f-118"><dt>Amfilter.h (include Streams.h)</dt></span></span> </dl>                                                                                  |
-| <span data-ttu-id="1273f-119">Bibliothek</span><span class="sxs-lookup"><span data-stu-id="1273f-119">Library</span></span><br/> | <dl> <span data-ttu-id="1273f-120">" <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt></span><span class="sxs-lookup"><span data-stu-id="1273f-120"><dt>Strmbase.lib (retail builds); </dt> <dt>Strmbasd.lib (debug builds)</dt></span></span> </dl> |
+| <span data-ttu-id="cf683-117">Header</span><span class="sxs-lookup"><span data-stu-id="cf683-117">Header</span></span><br/>  | <dl> <span data-ttu-id="cf683-118"><dt>Amfilter.h (streams.h enthalten)</dt></span><span class="sxs-lookup"><span data-stu-id="cf683-118"><dt>Amfilter.h (include Streams.h)</dt></span></span> </dl>                                                                                  |
+| <span data-ttu-id="cf683-119">Bibliothek</span><span class="sxs-lookup"><span data-stu-id="cf683-119">Library</span></span><br/> | <dl> <span data-ttu-id="cf683-120"><dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt></span><span class="sxs-lookup"><span data-stu-id="cf683-120"><dt>Strmbase.lib (retail builds); </dt> <dt>Strmbasd.lib (debug builds)</dt></span></span> </dl> |
 
 
 
-## <a name="see-also"></a><span data-ttu-id="1273f-121">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="1273f-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="cf683-121">Weitere Informationen</span><span class="sxs-lookup"><span data-stu-id="cf683-121">See also</span></span>
 
 <dl> <dt>
 
-[<span data-ttu-id="1273f-122">**Cbasefilter-Klasse**</span><span class="sxs-lookup"><span data-stu-id="1273f-122">**CBaseFilter Class**</span></span>](cbasefilter.md)
+[<span data-ttu-id="cf683-122">**CBaseFilter-Klasse**</span><span class="sxs-lookup"><span data-stu-id="cf683-122">**CBaseFilter Class**</span></span>](cbasefilter.md)
 </dt> </dl>
 
  
