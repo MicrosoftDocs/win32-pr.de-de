@@ -1,7 +1,7 @@
 ---
-description: Gibt den Typ der auszuführenden Mesh-Optimierung an.
+description: 'D3DXMESHOPT-Enumeration: Gibt den Typ der durchzuführenden Meshoptimierung an.'
 ms.assetid: 32ef227a-b299-47c4-96b8-c0ea7bf549e1
-title: D3DXMESHOPT-Enumeration (D3dx9mesh. h)
+title: D3DXMESHOPT-Enumeration (D3dx9mesh.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - d3dx9mesh.h
-ms.openlocfilehash: e7d4f9f4ae36cec74ea86fcb50a194ac66d0add7
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: db7c2a2411d1c846c7369fc1d925a8e5569df3b1
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106361202"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108114348"
 ---
 # <a name="d3dxmeshopt-enumeration"></a>D3DXMESHOPT-Enumeration
 
-Gibt den Typ der auszuführenden Mesh-Optimierung an.
+Gibt den Typ der durchzuführenden Meshoptimierung an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,72 +46,72 @@ enum _D3DXMESHOPT {
 
 <dl> <dt>
 
-<span id="D3DXMESHOPT_COMPACT"></span><span id="d3dxmeshopt_compact"></span>**D3DXMESHOPT \_ Compact**
+<span id="D3DXMESHOPT_COMPACT"></span><span id="d3dxmeshopt_compact"></span>**D3DXMESHOPT \_ COMPACT**
 </dt> <dd>
 
-Ordnet Gesichter neu an, um nicht verwendete Vertices und Gesichter zu entfernen.
+Ordnet Gesichter neu an, um nicht verwendete Scheitelpunkte und Gesichter zu entfernen.
 
 </dd> <dt>
 
-<span id="D3DXMESHOPT_ATTRSORT"></span><span id="d3dxmeshopt_attrsort"></span>**D3DXMESHOPT \_ attrsort**
+<span id="D3DXMESHOPT_ATTRSORT"></span><span id="d3dxmeshopt_attrsort"></span>**D3DXMESHOPT \_ ATTRSORT**
 </dt> <dd>
 
-Ordnet Gesichter neu an, um weniger Attribut Bündel Statusänderungen und erweiterte [**ID3DXBaseMesh zu optimieren::D rawsubset**](id3dxbasemesh--drawsubset.md) Performance.
+Ordnet Gesichter neu an, um die Leistung von [**ID3DXBaseMesh::D rawSubset**](id3dxbasemesh--drawsubset.md) zu optimieren, um weniger Änderungen am Attributbündelzustand zu erzielen.
 
 </dd> <dt>
 
-<span id="D3DXMESHOPT_VERTEXCACHE"></span><span id="d3dxmeshopt_vertexcache"></span>**D3DXMESHOPT \_ vertexcache**
+<span id="D3DXMESHOPT_VERTEXCACHE"></span><span id="d3dxmeshopt_vertexcache"></span>**D3DXMESHOPT \_ VERTEXCACHE**
 </dt> <dd>
 
-Ordnet Gesichter neu an, um die Cache Treffer Rate von Vertex-Caches zu erhöhen.
+Ordnet Gesichter neu an, um die Cachetrefferrate von Scheitelpunktcaches zu erhöhen.
 
 </dd> <dt>
 
-<span id="D3DXMESHOPT_STRIPREORDER"></span><span id="d3dxmeshopt_stripreorder"></span>**D3DXMESHOPT \_ stripreorder**
+<span id="D3DXMESHOPT_STRIPREORDER"></span><span id="d3dxmeshopt_stripreorder"></span>**D3DXMESHOPT \_ STRIPREORDER**
 </dt> <dd>
 
-Ordnet Flächen neu an, um die Länge der angrenzenden Dreiecke zu maximieren
+Ordnet Gesichter neu an, um die Länge benachbarter Dreiecke zu maximieren.
 
 </dd> <dt>
 
-<span id="D3DXMESHOPT_IGNOREVERTS"></span><span id="d3dxmeshopt_ignoreverts"></span>**D3DXMESHOPT \_ ignoreverts**
+<span id="D3DXMESHOPT_IGNOREVERTS"></span><span id="d3dxmeshopt_ignoreverts"></span>**D3DXMESHOPT \_ IGNOREVERTS**
 </dt> <dd>
 
-Nur Gesichter optimieren; Optimieren Sie die Vertices nicht.
+Nur die Gesichter optimieren; optimieren Sie die Scheitelpunkte nicht.
 
 </dd> <dt>
 
-<span id="D3DXMESHOPT_DONOTSPLIT"></span><span id="d3dxmeshopt_donotsplit"></span>**D3DXMESHOPT \_ donotsplit**
+<span id="D3DXMESHOPT_DONOTSPLIT"></span><span id="d3dxmeshopt_donotsplit"></span>**D3DXMESHOPT \_ DONOTSPLIT**
 </dt> <dd>
 
-Bei der Attribut Sortierung werden Vertices, die von Attribut Gruppen gemeinsam verwendet werden, nicht aufgeteilt.
+Teilen Sie beim Sortieren von Attributen keine Scheitelpunkte, die von Attributgruppen gemeinsam genutzt werden.
 
 </dd> <dt>
 
-<span id="D3DXMESHOPT_DEVICEINDEPENDENT"></span><span id="d3dxmeshopt_deviceindependent"></span>**D3DXMESHOPT-Geräte \_ abhängige Geräte**
+<span id="D3DXMESHOPT_DEVICEINDEPENDENT"></span><span id="d3dxmeshopt_deviceindependent"></span>**D3DXMESHOPT \_ DEVICEINDEPENDENT**
 </dt> <dd>
 
-Wirkt sich auf die Scheitelpunkt Cache Größe aus. Die Verwendung dieses Flags gibt eine Standard Cache Größe an, die auf Legacy Hardware gut funktioniert.
+Wirkt sich auf die Größe des Scheitelpunktcaches aus. Die Verwendung dieses Flags gibt eine Standardgröße des Scheitelpunktcaches an, die auf Legacyhardware gut funktioniert.
 
 </dd> </dl>
 
 ## <a name="remarks"></a>Bemerkungen
 
-Die \_ Optimierungs Flags "D3DXMESHOPT stripreorder" und "D3DXMESHOPT \_ vertexcache" schließen sich gegenseitig aus.
+Die Optimierungsflags D3DXMESHOPT \_ STRIPREORDER und D3DXMESHOPT \_ VERTEXCACHE schließen sich gegenseitig aus.
 
-Das \_ Flag D3DXMESHOPT sharevb wurde aus dieser Enumeration entfernt. Verwenden Sie \_ stattdessen die D3DXMESH vb- \_ Freigabe in [**D3DXMESH**](./d3dxmesh.md).
+Das SHAREVB-Flag D3DXMESHOPT \_ wurde aus dieser Enumeration entfernt. Verwenden Sie stattdessen D3DXMESH \_ VB \_ SHARE in [**D3DXMESH**](./d3dxmesh.md).
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------|----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3dx9mesh. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3dx9mesh.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

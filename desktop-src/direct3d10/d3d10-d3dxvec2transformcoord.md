@@ -1,7 +1,7 @@
 ---
-description: Transformiert einen 2D-Vektor durch eine angegebene Matrix und projiziert das Ergebnis zurück in w = 1.
+description: 'D3DXVec2TransformCoord-Funktion (D3DX10Math.h): Transformiert einen 2D-Vektor durch eine bestimmte Matrix und pro projectiert das Ergebnis zurück in w = 1.'
 ms.assetid: bb24204f-0c8e-4dc5-bcae-12e3033d1a39
-title: D3DXVec2TransformCoord-Funktion (D3DX10Math. h)
+title: D3DXVec2TransformCoord-Funktion (D3DX10Math.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: 0d7e93c2b3a78160f2f1f1ad3342575b4369a057
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 95321d377ad5af29075764e2c2d9386abf5b1441
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106365121"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108108338"
 ---
-# <a name="d3dxvec2transformcoord-function-d3dx10mathh"></a>D3DXVec2TransformCoord-Funktion (D3DX10Math. h)
+# <a name="d3dxvec2transformcoord-function-d3dx10mathh"></a>D3DXVec2TransformCoord-Funktion (D3DX10Math.h)
 
-Transformiert einen 2D-Vektor durch eine angegebene Matrix und projiziert das Ergebnis zurück in w = 1.
+Transformiert einen 2D-Vektor durch eine bestimmte Matrix und projektiert das Ergebnis zurück in w = 1.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,30 +42,30 @@ D3DXVECTOR2* D3DXVec2TransformCoord(
 
 <dl> <dt>
 
-*Pout* \[ in, out\]
+*pOut* \[ in, out\]
 </dt> <dd>
 
 Typ: **[ **D3DXVECTOR2**](../direct3d9/d3dxvector2.md)\***
 
-Zeiger auf das [**D3DXVECTOR2**](d3d10-d3dxvector2.md) , das das Ergebnis des Vorgangs ist.
+Zeiger auf den [**D3DXVECTOR2,**](d3d10-d3dxvector2.md) der das Ergebnis des Vorgangs ist.
 
 </dd> <dt>
 
-*PV* \[ in\]
+*pV* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXVECTOR2**](../direct3d9/d3dxvector2.md) \***
+Typ: **const [**D3DXVECTOR2**](../direct3d9/d3dxvector2.md) \***
 
-Ein Zeiger auf die Quell-D3DXVECTOR2-Struktur.
+Zeiger auf die D3DXVECTOR2-Quellstruktur.
 
 </dd> <dt>
 
-*pm* \[ in\]
+*pM* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXMATRIX**](../direct3d9/d3dxmatrix.md) \***
+Typ: **const [**D3DXMATRIX**](../direct3d9/d3dxmatrix.md) \***
 
-Ein Zeiger auf die Quell- [**D3DXMATRIX**](d3d10-d3dxmatrix.md) -Struktur.
+Zeiger auf die [**D3DXMATRIX-Quellstruktur.**](d3d10-d3dxmatrix.md)
 
 </dd> </dl>
 
@@ -77,22 +77,22 @@ Zeiger auf eine D3DXVECTOR2-Struktur, die der transformierte Vektor ist.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Diese Funktion transformiert den Vektor, PV (x, y, 0, 1), durch die Matrix, pm und projiziert das Ergebnis zurück in w = 1.
+Diese Funktion transformiert den Vektor pV (x, y, 0, 1) durch die Matrix, pM, und pro projectiert das Ergebnis zurück in w=1.
 
-Der Rückgabewert für diese Funktion ist derselbe Wert, der im Pout-Parameter zurückgegeben wird. Auf diese Weise kann die D3DXVec2TransformCoord-Funktion als Parameter für eine andere Funktion verwendet werden.
+Der Rückgabewert für diese Funktion ist der gleiche Wert, der im pOut-Parameter zurückgegeben wird. Auf diese Weise kann die D3DXVec2TransformCoord-Funktion als Parameter für eine andere Funktion verwendet werden.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX10Math. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx10. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX10Math.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

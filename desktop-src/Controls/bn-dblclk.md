@@ -1,9 +1,9 @@
 ---
-title: BN_DBLCLK Benachrichtigungs Code (Winuser. h)
-description: Wird gesendet, wenn der Benutzer auf eine Schaltfläche doppelklickt.
+title: BN_DBLCLK Benachrichtigungscode (Winuser.h)
+description: 'BN_DBLCLK Benachrichtigungscode: Wird gesendet, wenn der Benutzer auf eine Schaltfläche doppelklickt.'
 ms.assetid: 60cc033f-8b84-4aa5-b625-fdee9deb4757
 keywords:
-- Windows-Steuerelemente für BN_DBLCLK Benachrichtigungs
+- windows-Steuerelemente für BN_DBLCLK Benachrichtigungscode
 topic_type:
 - apiref
 api_name:
@@ -14,18 +14,18 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f04c6bf52e213056d85d3a6d038bedb83754a27e
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: fdb403f37b8fee9ea36023a7cd2511bbaaa2af81
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040373"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108096848"
 ---
-# <a name="bn_dblclk-notification-code"></a>Mrd. \_ dblclk-Benachrichtigungs Code
+# <a name="bn_dblclk-notification-code"></a>BN \_ DBLCLK-Benachrichtigungscode
 
-Wird gesendet, wenn der Benutzer auf eine Schaltfläche doppelklickt. Dieser Benachrichtigungs Code wird automatisch für die Schaltflächen " [**\_ Benutzer Schaltfläche**](button-styles.md)", " [**SB \_ RadioButton**](button-styles.md)" und " [**b \_**](button-styles.md) Andere Schaltflächen Typen senden \_ nur dann eine Milliarde dblclk, wenn Sie über das Format "Schriftarten [**\_ Benachrichtigen**](button-styles.md) " verfügen
+Wird gesendet, wenn der Benutzer auf eine Schaltfläche doppelklickt. Dieser Benachrichtigungscode wird automatisch für die Schaltflächen [**BS \_ USERBUTTON,**](button-styles.md) [**BS \_ RADIOBUTTON**](button-styles.md)und [**BS \_ OWNERDRAW**](button-styles.md) gesendet. Andere Schaltflächentypen senden BN \_ DBLCLK nur, wenn sie den [**BS \_ NOTIFY-Stil**](button-styles.md) aufweisen.
 
-Das übergeordnete Fenster der Schaltfläche empfängt diesen Benachrichtigungs Code über die [**WM- \_ Befehls**](/windows/desktop/menurc/wm-command) Meldung.
+Das übergeordnete Fenster der Schaltfläche empfängt diesen Benachrichtigungscode über die [**WM \_ COMMAND-Meldung.**](/windows/desktop/menurc/wm-command)
 
 
 ```C++
@@ -44,7 +44,7 @@ BN_DBLCLK
 *wParam* 
 </dt> <dd>
 
-Das [**LoWord**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) enthält den Steuerelement Bezeichner der Schaltfläche. Das [**HIWORD**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) gibt den Benachrichtigungs Code an.
+[**LOWORD**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) enthält den Steuerelementbezeichner der Schaltfläche. [**Hiword**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) gibt den Benachrichtigungscode an.
 
 </dd> <dt>
 
@@ -57,37 +57,37 @@ Ein Handle für die Schaltfläche.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Der BN- \_ dblclk-Wert ist identisch mit dem über die [Milliarde \_ doublegeklickt](bn-doubleclicked.md) -Benachrichtigungs Code.
+BN \_ DBLCLK ist identisch mit dem [BN DOUBLECLICKED-Benachrichtigungscode. \_ ](bn-doubleclicked.md)
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2003-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Winuser.h (windows.h einschließen)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 **Verweis**
 </dt> <dt>
 
-[auf BN \_ geklickt](bn-clicked.md)
+[BN \_ GEKLICKT](bn-clicked.md)
 </dt> <dt>
 
-[BN- \_ Doppelklick](bn-doubleclicked.md)
+[BN \_ DOUBLECLICKED](bn-doubleclicked.md)
 </dt> <dt>
 
 **Andere Ressourcen**
 </dt> <dt>
 
-[**WM- \_ Befehl**](/windows/desktop/menurc/wm-command)
+[**\_WM-BEFEHL**](/windows/desktop/menurc/wm-command)
 </dt> </dl>
 
  

@@ -1,9 +1,9 @@
 ---
-title: EM_SETRECT Meldung (Winuser. h)
-description: Legt das Formatierungs Rechteck eines mehrzeiligen Bearbeitungs Steuer Elements fest.
+title: EM_SETRECT (Winuser.h)
+description: 'EM_SETRECT Meldung: Legt das Formatierungsrechteck eines mehrzweckigen Bearbeitungssteuer steuerelements fest.'
 ms.assetid: 4f576e94-3bd3-4416-a960-b7f22da963ea
 keywords:
-- Windows-Steuerelemente für EM_SETRECT Meldung
+- EM_SETRECT Meldung Windows-Steuerelemente
 topic_type:
 - apiref
 api_name:
@@ -14,18 +14,18 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a12b171478b0cb9d47496d20d4d1b6b1e8ddd29a
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 042428a236b8e9a23f03cdcceaf5d76eb977efd8
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040545"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108085968"
 ---
-# <a name="em_setrect-message"></a>EM- \_ SetRect-Nachricht
+# <a name="em_setrect-message"></a>EM \_ SETRECT-Nachricht
 
-Legt das [Formatierungs Rechteck](about-edit-controls.md) eines mehrzeiligen Bearbeitungs Steuer Elements fest. Das Formatierungs Rechteck ist das einschränkende Rechteck, in das das Steuerelement den Text zeichnet. Das Begrenzungs Rechteck ist unabhängig von der Größe des Bearbeitungs Steuer Elements.
+Legt das [Formatierungsrechteck eines](about-edit-controls.md) mehrzweckigen Bearbeitungssteuer steuerelements fest. Das Formatierungrechteck ist das einschränkende Rechteck, in das das Steuerelement den Text zeichnet. Das einschränkende Rechteck ist unabhängig von der Größe des Bearbeitungssteuerfensters.
 
-Diese Meldung wird nur von mehrzeiligen Bearbeitungs Steuerelementen verarbeitet. Sie können diese Nachricht entweder an ein Bearbeitungs Steuerelement oder ein Rich Edit-Steuerelement senden.
+Diese Meldung wird nur von mehrline-Bearbeitungssteuerelementen verarbeitet. Sie können diese Nachricht entweder an ein Bearbeitungssteuer steuerelement oder an ein Rich Edit-Steuerelement senden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -34,16 +34,16 @@ Diese Meldung wird nur von mehrzeiligen Bearbeitungs Steuerelementen verarbeitet
 *wParam* 
 </dt> <dd>
 
-**Rich Edit 2,0 und höher:** Gibt an, ob *LPARAM* absolute oder relative Koordinaten angibt. Der Wert 0 (null) gibt absolute Koordinaten an. Der Wert 1 gibt Offsets relativ zum aktuellen Formatierungs Rechteck an. (Die Offsets können positiv oder negativ sein.)
+**Rich Edit 2.0 und höher:** Gibt an, *ob lParam* absolute oder relative Koordinaten angibt. Der Wert 0 (null) gibt absolute Koordinaten an. Der Wert 1 gibt Offsets relativ zum aktuellen Formatierungsrechteck an. (Die Offsets können positiv oder negativ sein.)
 
-**Bearbeitungs Steuerelemente und umfangreiche Bearbeitung 1,0:** Dieser Parameter wird nicht verwendet und muss NULL sein.
+**Steuerelemente bearbeiten und Rich Edit 1.0:** Dieser Parameter wird nicht verwendet und muss 0 (null) sein.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Ein Zeiger auf eine [**Rect**](/previous-versions//dd162897(v=vs.85)) -Struktur, die die neuen Abmessungen des Rechtecks angibt. Wenn dieser Parameter **null** ist, wird das Formatierungs Rechteck auf seine Standardwerte festgelegt.
+Ein Zeiger auf eine [**RECT-Struktur,**](/previous-versions//dd162897(v=vs.85)) die die neuen Dimensionen des Rechtecks angibt. Wenn dieser Parameter **NULL ist,** wird das Formatierungsrechteck auf seine Standardwerte festgelegt.
 
 </dd> </dl>
 
@@ -53,41 +53,41 @@ Diese Meldung gibt keinen Wert zurück.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Das Festlegen von *LPARAM* auf **null** hat keine Auswirkungen, wenn ein Finger Eingabegerät installiert ist, oder wenn **EM \_ SetRect** von einem Thread gesendet wird, auf dem ein Hook installiert ist (siehe [**SetWindowsHookEx**](/windows/desktop/api/winuser/nf-winuser-setwindowshookexa)). In diesen Fällen sollte *LPARAM* einen gültigen Zeiger auf eine [**Rect**](/previous-versions//dd162897(v=vs.85)) -Struktur enthalten.
+Das *Festlegen von lParam* auf **NULL** hat keine Auswirkungen, wenn ein Touchgerät installiert ist oder **EM \_ SETRECT** von einem Thread gesendet wird, auf dem ein Hook installiert ist (siehe [**SetWindowsHookEx**](/windows/desktop/api/winuser/nf-winuser-setwindowshookexa)). In diesen Fällen sollte *lParam* einen gültigen Zeiger auf eine [**RECT-Struktur**](/previous-versions//dd162897(v=vs.85)) enthalten.
 
-Die **EM- \_ SetRect** -Meldung bewirkt, dass der Text des Bearbeitungs Steuer Elements neu gezeichnet wird. Um die Größe des Formatierungs Rechtecks zu ändern, ohne den Text neu zu zeichnen, verwenden Sie die Nachricht [**EM \_ setrectnp**](em-setrectnp.md) .
+Die **EM \_ SETRECT-Meldung** bewirkt, dass der Text des Bearbeitungssteuerfelds neu gezeichnet wird. Verwenden Sie die [**EM \_ SETRECTNP-Meldung,**](em-setrectnp.md) um die Größe des Formatierungsrechtecks zu ändern, ohne den Text neu zu zeichnen.
 
-Wenn ein Bearbeitungs Steuerelement erstmalig erstellt wird, wird das Formatierungs Rechteck auf eine Standardgröße festgelegt. Sie können die Nachricht **EM \_ SetRect** verwenden, um das Formatierungs Rechteck größer oder kleiner als das Bearbeitungs Steuerelement Fenster zu machen.
+Wenn ein Bearbeitungssteuerelement zum ersten Mal erstellt wird, wird das Formatierungsrechteck auf eine Standardgröße festgelegt. Sie können die **EM \_ SETRECT-Nachricht** verwenden, um das Formatierungsrechteck größer oder kleiner als das Bearbeitungssteuerelementfenster zu machen.
 
-Wenn das Bearbeitungs Steuerelement keine horizontale Schiebe Leiste hat und das Formatierungs Rechteck auf größer als das Bearbeitungs Steuerelement festgelegt ist, werden Textzeilen, die die Breite des Bearbeitungs Steuer Elements überschreiten (jedoch kleiner als die Breite des Formatierungs Rechtecks), abgeschnitten anstatt umschließen.
+Wenn das Bearbeitungssteuerelement keine horizontale Bildlaufleiste aufweist und das Formatierungsrechteck größer als das Bearbeitungssteuerelementfenster ist, werden Textzeilen, die die Breite des Bearbeitungssteuerelementfensters überschreiten (aber kleiner als die Breite des Formatierungsrechtecks sind), abgeschnitten und nicht umschlossen.
 
-Wenn das Bearbeitungs Steuerelement einen Rahmen enthält, wird das Formatierungs Rechteck um die Größe des Rahmens reduziert. Wenn Sie das von einer [**EM \_ GetRect**](em-getrect.md) -Nachricht zurückgegebene Rechteck anpassen, müssen Sie die Größe des Rahmens entfernen, bevor Sie das Rechteck mit der **EM- \_ SetRect** -Nachricht verwenden.
+Wenn das Bearbeitungssteuerelement einen Rahmen enthält, wird das Formatierungsrechteck um die Größe des Rahmens reduziert. Wenn Sie das von einer [**EM \_ GETRECT-Nachricht**](em-getrect.md) zurückgegebene Rechteck anpassen, müssen Sie die Größe des Rahmens entfernen, bevor Sie das Rechteck mit der **EM \_ SETRECT-Nachricht** verwenden.
 
-Umfassende **Bearbeitung:** Wird in Microsoft Rich Edit 1,0 und höher unterstützt. Das Formatierungs Rechteck enthält nicht die Auswahl Leiste, bei der es sich um einen nicht markierten Bereich links neben den einzelnen Absätzen handelt. Wenn der Benutzer in der Auswahl Leiste auf klickt, wird die entsprechende Zeile ausgewählt. Informationen zur Kompatibilität von Rich-Edit-Versionen mit den verschiedenen Systemversionen finden Sie unter Informationen [zu Rich Edit](about-rich-edit-controls.md)-Steuerelementen.
+**Rich Edit:** Wird in Microsoft Rich Edit 1.0 und höher unterstützt. Das Formatierungsrechteck enthält nicht die Auswahlleiste, bei der es sich um einen nicht markierten Bereich links neben jedem Absatz handelt. Wenn der Benutzer auf die Auswahlleiste klickt, wird die entsprechende Zeile ausgewählt. Informationen zur Kompatibilität von Rich Edit-Versionen mit den verschiedenen Systemversionen finden Sie unter [Informationen zu Rich Edit-Steuerelementen.](about-rich-edit-controls.md)
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2003-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Winuser.h (windows.h einschließen)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 **Verweis**
 </dt> <dt>
 
-[**EM \_ GetRect**](em-getrect.md)
+[**EM \_ GETRECT**](em-getrect.md)
 </dt> <dt>
 
-[**EM \_ setrectnp**](em-setrectnp.md)
+[**EM \_ SETRECTNP**](em-setrectnp.md)
 </dt> <dt>
 
 **Andere Ressourcen**

@@ -1,7 +1,7 @@
 ---
-description: Lädt die erste Frame Hierarchie aus einer x-Datei.
+description: 'D3DXLoadMeshHierarchyFromXInMemory-Funktion: Lädt die erste Framehierarchie aus einer X-Datei.'
 ms.assetid: 428e5cfb-d6a5-4a7f-b082-2d8898e65490
-title: D3DXLoadMeshHierarchyFromXInMemory-Funktion (D3dx9anim. h)
+title: D3DXLoadMeshHierarchyFromXInMemory-Funktion (D3dx9anim.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 91cf119fc8907701f87ebb5bda1bb0bf45294aba
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 551810c839e619985d9a380197553f5fe4fc9be8
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106371946"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108098208"
 ---
 # <a name="d3dxloadmeshhierarchyfromxinmemory-function"></a>D3DXLoadMeshHierarchyFromXInMemory-Funktion
 
-Lädt die erste Frame Hierarchie aus einer x-Datei.
+Lädt die erste Framehierarchie aus einer X-Datei.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,75 +47,75 @@ HRESULT D3DXLoadMeshHierarchyFromXInMemory(
 
 <dl> <dt>
 
-*pmemory* \[ in\]
+*pMemory* \[ In\]
 </dt> <dd>
 
-Geben Sie Folgendes ein: **[ **lpcvoid**](../winprog/windows-data-types.md)**
+Typ: **[ **LPCVOID**](../winprog/windows-data-types.md)**
 
-Zeiger auf einen Puffer, der die Mesh-Hierarchie enthält.
+Zeiger auf einen Puffer, der die Gitternetzhierarchie enthält.
 
 </dd> <dt>
 
-*Sizeofmemory* \[ in\]
-</dt> <dd>
-
-Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
-
-Größe des pmemory-Puffers in Bytes.
-
-</dd> <dt>
-
-*MeshOptions* \[ in\]
+*SizeOfMemory* \[ In\]
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
-Eine Kombination aus einem oder mehreren Flags aus der [**D3DXMESH**](./d3dxmesh.md) -Enumeration, die Erstellungs Optionen für das Mesh angeben.
+Größe des pMemory-Puffers in Bytes.
 
 </dd> <dt>
 
-*pdevice* \[ in\]
+*MeshOptions* \[ In\]
+</dt> <dd>
+
+Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
+
+Kombination von mindestens einem Flag aus der [**D3DXMESH-Enumeration,**](./d3dxmesh.md) die Erstellungsoptionen für das Gitternetz angeben.
+
+</dd> <dt>
+
+*pDevice* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPDIRECT3DDEVICE9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3ddevice9)**
 
-Zeiger auf eine [**IDirect3DDevice9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3ddevice9) -Schnittstelle, das dem Mesh zugeordnete Geräte Objekt.
+Zeiger auf eine [**IDirect3DDevice9-Schnittstelle,**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3ddevice9) das dem Gittermodell zugeordnete Geräteobjekt.
 
 </dd> <dt>
 
-*palloc* \[ in\]
+*pAlloc* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXALLOCATEHIERARCHY**](id3dxallocatehierarchy.md)**
 
-Zeiger auf eine [**ID3DXAllocateHierarchy**](id3dxallocatehierarchy.md) -Schnittstelle.
+Zeiger auf eine [**ID3DXAllocateHierarchy-Schnittstelle.**](id3dxallocatehierarchy.md)
 
 </dd> <dt>
 
-*puserdataloader* \[ in\]
+*pUserDataLoader* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXLOADUSERDATA**](id3dxloaduserdata.md)**
 
-Von der Anwendung bereitgestellte Schnittstelle, die das Laden von Benutzerdaten ermöglicht Siehe [**ID3DXLoadUserData**](id3dxloaduserdata.md).
+Von der Anwendung bereitgestellte Schnittstelle, die das Laden von Benutzerdaten ermöglicht. Siehe [**ID3DXLoadUserData.**](id3dxloaduserdata.md)
 
 </dd> <dt>
 
-*ppframeheirarerig* \[ vorgenommen\]
+*ppFrameHeirarchy* \[ out\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXFRAME**](d3dxframe.md)\***
 
-Gibt einen Zeiger auf die geladene Frame Hierarchie zurück. Siehe [**D3DXFRAME**](d3dxframe.md).
+Gibt einen Zeiger auf die geladene Rahmenhierarchie zurück. Siehe [**D3DXFRAME**](d3dxframe.md).
 
 </dd> <dt>
 
-*ppanimcontroller* \[ vorgenommen\]
+*ppAnimController* \[ out\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXANIMATIONCONTROLLER**](id3dxanimationcontroller.md)\***
 
-Gibt einen Zeiger auf den Animations Controller zurück, der der Animation in der x-Datei entspricht. Dies wird mit Standardspuren und-Ereignissen erstellt. Siehe [**ID3DXAnimationController**](id3dxanimationcontroller.md).
+Gibt einen Zeiger auf den Animationscontroller zurück, der der Animation in der X-Datei entspricht. Dies wird mit Standardspuren und Ereignissen erstellt. Siehe [**ID3DXAnimationController.**](id3dxanimationcontroller.md)
 
 </dd> </dl>
 
@@ -123,28 +123,28 @@ Gibt einen Zeiger auf den Animations Controller zurück, der der Animation in de
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: D3DERR \_ invalidcall, E \_ outo fmemory.
+Wenn die Funktion erfolgreich ausgeführt wird, lautet der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: D3DERR \_ INVALIDCALL, E \_ OUTOFMEMORY.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Alle Netzen in der Datei werden in einem Ausgabe Mesh reduziert. Wenn die Datei eine Frame Hierarchie enthält, werden alle Transformationen auf das Mesh angewendet.
+Alle Gitternetze in der Datei werden in ein Ausgabegitternetz reduziert. Wenn die Datei eine Rahmenhierarchie enthält, werden alle Transformationen auf das Gitternetz angewendet.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9anim. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3dx9anim.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Animations Funktionen](dx9-graphics-reference-d3dx-functions-animation.md)
+[Animationsfunktionen](dx9-graphics-reference-d3dx-functions-animation.md)
 </dt> </dl>
 
  

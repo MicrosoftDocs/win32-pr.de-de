@@ -1,7 +1,7 @@
 ---
-description: Diese API ist nicht für alle apps verfügbar. Wenn Ihre APP nicht speziell von Microsoft bereitgestellt wird, schlagen Aufrufe dieser APIs zur Laufzeit fehl.
+description: 'IFeedbackHubAppInfo-Schnittstelle: Diese API ist nicht für alle Apps verfügbar. Sofern Ihre App nicht speziell von Microsoft bereitgestellt wird, können Aufrufe dieser APIs zur Laufzeit nicht ausgeführt werden.'
 ms.assetid: 9A3D38AA-75AF-4719-AEDB-BDC31079F57B
-title: Ifeedbackhubappinfo-Schnittstelle
+title: IFeedbackHubAppInfo-Schnittstelle
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,29 +12,29 @@ api_name:
 api_type:
 - COM
 api_location: ''
-ms.openlocfilehash: 33e7ac1d393d197a6e78112f150295927061f907
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 4ebe6a1402a3d524b7f94b5febfdde7bbaf18dc0
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103860562"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108096728"
 ---
-# <a name="ifeedbackhubappinfo-interface"></a>Ifeedbackhubappinfo-Schnittstelle
+# <a name="ifeedbackhubappinfo-interface"></a>IFeedbackHubAppInfo-Schnittstelle
 
-Diese API ist nicht für alle apps verfügbar. Wenn Ihre APP nicht speziell von Microsoft bereitgestellt wird, schlagen Aufrufe dieser APIs zur Laufzeit fehl.
+Diese API ist nicht für alle Apps verfügbar. Sofern Ihre App nicht speziell von Microsoft bereitgestellt wird, können Aufrufe dieser APIs zur Laufzeit nicht ausgeführt werden.
 
 ## <a name="members"></a>Member
 
-Die **ifeedbackhubappinfo** -Schnittstelle erbt von der [**IUnknown**](/windows/win32/api/unknwn/nn-unknwn-iunknown) -Schnittstelle, verfügt jedoch nicht über zusätzliche Member.
+Die **IFeedbackHubAppInfo-Schnittstelle** erbt von der [**IUnknown-Schnittstelle,**](/windows/win32/api/unknwn/nn-unknwn-iunknown) verfügt jedoch nicht über zusätzliche Member.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2016 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 10 \[ Desktop-Apps\]<br/>          |
+| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2016-Desktop-Apps\]<br/> |
 
 
 

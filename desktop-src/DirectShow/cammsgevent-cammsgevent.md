@@ -1,7 +1,7 @@
 ---
-description: Konstruktormethode.
+description: 'OEMMsgEvent.OEMMsgEvent-Konstruktor : Konstruktormethode.'
 ms.assetid: 7871a624-70c0-4f21-b62a-2c4c2eaa762b
-title: Cammsgevent. cammsgevent-Konstruktor (wxutil. h)
+title: OEMMsgEvent.OEMMsgEvent-Konstruktor (Wxutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,14 +16,14 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 0d207afae53a715728d8307656b0c2427ce9574c
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: dac72ecb97a1ea1fd2594af9c11b8a03078cf2cb
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358763"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108096534"
 ---
-# <a name="cammsgeventcammsgevent-constructor"></a>Cammsgevent. cammsgevent-Konstruktor
+# <a name="cammsgeventcammsgevent-constructor"></a>OEMMsgEvent.OEMMsgEvent-Konstruktor
 
 Konstruktormethode.
 
@@ -42,12 +42,12 @@ CAMMsgEvent(
 
 <dl> <dt>
 
-*PHR* 
+*Phr* 
 </dt> <dd>
 
-Zeiger auf einen **HRESULT** -Wert. Wenn der Konstruktor ausfällt, empfängt dieser Parameter einen Fehlercode. Wenn dies auftritt, befindet sich das Objekt nicht in einem gültigen Zustand.
+Zeiger auf einen **HRESULT-Wert.** Wenn der Konstruktor fehlschlägt, empfängt dieser Parameter einen Fehlercode. In diesem Fall befindet sich das Objekt nicht in einem gültigen Zustand.
 
-Aus Gründen der Abwärtskompatibilität mit früheren Versionen von "straumbase. lib" ist dieser Parameter standardmäßig **null**. Die Übergabe eines Werts ungleich **null** wird jedoch bevorzugt, sodass der Aufrufer den Status des Objekts überprüfen kann.
+Aus Gründen der Abwärtskompatibilität mit früheren Versionen von strmbase.lib wird dieser Parameter standardmäßig auf **NULL festgelegt.** Die Übergabe eines Werts, der nicht **NULL** ist, wird jedoch bevorzugt, damit der Aufrufer den Status des Objekts überprüfen kann.
 
 </dd> </dl>
 
@@ -55,18 +55,18 @@ Aus Gründen der Abwärtskompatibilität mit früheren Versionen von "straumbase
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Wxutil. h (Include Streams. h)</dt> </dl>                                                                                    |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Wxutil.h (streams.h enthalten)</dt> </dl>                                                                                    |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cammsgevent-Klasse**](cammsgevent.md)
+[**CAMMsgEvent-Klasse**](cammsgevent.md)
 </dt> </dl>
 
  

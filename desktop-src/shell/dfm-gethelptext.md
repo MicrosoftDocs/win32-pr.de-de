@@ -1,6 +1,6 @@
 ---
-description: Ermöglicht dem Rückruf Objekt, eine Hilfe Text Zeichenfolge anzugeben.
-title: DFM_GETHELPTEXT Meldung (shlobj. h)
+description: 'DFM_GETHELPTEXT Meldung: Ermöglicht dem Rückrufobjekt das Angeben einer Hilfetextzeichenfolge.'
+title: DFM_GETHELPTEXT (Shlobj.h)
 ms.topic: reference
 ms.date: 05/31/2018
 ms.assetid: 40ed981b-6d03-4c4f-9e70-1a01d49edcb0
@@ -14,16 +14,16 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: b9aefb1c3a12ff00294ccc536464794a17fccfc1
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2428fe6696ff5949a0b25487437c8f3408b95f65
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104525364"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108097068"
 ---
-# <a name="dfm_gethelptext-message"></a>DFM- \_ GetHelpText-Nachricht
+# <a name="dfm_gethelptext-message"></a>DFM \_ GETHELPTEXT-Nachricht
 
-Ermöglicht dem Rückruf Objekt, eine Hilfe Text Zeichenfolge anzugeben.
+Ermöglicht dem Rückrufobjekt das Angeben einer Hilfetextzeichenfolge.
 
 
 ```C++
@@ -42,36 +42,36 @@ DFM_GETHELPTEXT
 
 <dl> <dt>
 
-*idcmd \_ cchmax* \[ in\]
+*idCmd \_ cchMax* \[ in\]
 </dt> <dd>
 
-Das nieder wertige Wort dieses Parameters enthält die Befehls-ID. Das höchst wertige Wort enthält die Anzahl der Zeichen im *pszText* -Puffer.
+Das niedrige Wort dieses Parameters enthält die Befehls-ID. Das obere Wort enthält die Anzahl der Zeichen im *pszText-Puffer.*
 
 </dd> <dt>
 
-*pszText* \[ vorgenommen\]
+*pszText* \[ out\]
 </dt> <dd>
 
-Eine mit NULL endende ANSI-Zeichenfolge, die den Hilfe Text enthält.
+Eine AUF NULL beendete ANSI-Zeichenfolge, die den Hilfetext enthält.
 
 </dd> </dl>
 
 ## <a name="remarks"></a>Bemerkungen
 
-Diese Nachricht wird entweder an die Rückruffunktion oder an das Rückruf Objekt gesendet, je nachdem, wie das standardmäßige Kontextmenü Objekt erstellt wird. Es gibt zwei APIs für die Erstellung, [**cdeffoldermenu \_ Create2**](/windows/desktop/api/shlobj_core/nf-shlobj_core-cdeffoldermenu_create2), [**shkreatedefaultcontextmenu**](/windows/desktop/api/shlobj_core/nf-shlobj_core-shcreatedefaultcontextmenu).
+Diese Meldung wird entweder an die Rückruffunktion oder das Rückrufobjekt gesendet, je nachdem, wie das Standardkontextmenüobjekt erstellt wird. Es gibt zwei APIs für die Erstellung: [**CDefFolderMenu \_ Create2**](/windows/desktop/api/shlobj_core/nf-shlobj_core-cdeffoldermenu_create2), [**SHCreateDefaultContextMenu**](/windows/desktop/api/shlobj_core/nf-shlobj_core-shcreatedefaultcontextmenu).
 
-[**DFM \_ Invokecommandex**](dfm-invokecommandex.md) ist eine erweiterte Version dieser Nachricht und bietet weitere Informationen für den Rückruf. Verwenden Sie **DFM \_ invokecommandex** , wenn die zusätzlichen Informationen, die von dieser Schnittstelle bereitgestellt werden, in der Implementierung benötigt werden.
+[**DFM \_ INVOKECOMMANDEX**](dfm-invokecommandex.md) ist eine erweiterte Version dieser Nachricht und stellt weitere Informationen für den Rückruf zur Verfügung. Verwenden **Sie DFM \_ INVOKECOMMANDEX,** wenn die zusätzlichen Informationen, die von dieser Schnittstelle bereitgestellt werden, in Ihrer Implementierung benötigt werden.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|-------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                      |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>Shlobj. h</dt> </dl> |
-| Unicode- und ANSI-Name<br/>   | **DFM \_ GetHelpText** (ANSI)<br/>                                              |
+| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ Vista-Desktop-Apps\]<br/>                                      |
+| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2008-Desktop-Apps\]<br/>                                |
+| Header<br/>                   | <dl> <dt>Shlobj.h</dt> </dl> |
+| Unicode- und ANSI-Name<br/>   | **DFM \_ GETHELPTEXT** (ANSI)<br/>                                              |
 
 
 

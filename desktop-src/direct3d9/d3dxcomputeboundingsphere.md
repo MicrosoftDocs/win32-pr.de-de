@@ -1,7 +1,7 @@
 ---
-description: Berechnet eine umgebende Kugel für das Mesh.
+description: 'D3DXComputeBoundingSphere-Funktion (D3DX9Mesh.h): Berechnet eine Begrenzungskugel für das Gitternetz.'
 ms.assetid: efa1365b-fe3a-4165-a3cb-bc1cd2ba03c0
-title: D3DXComputeBoundingSphere-Funktion (D3DX9Mesh. h)
+title: D3DXComputeBoundingSphere-Funktion (D3DX9Mesh.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: c9e6a0c9fb67abe8a98ccf8b3f9b895fd63fc3e6
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: dbfccb13dfe15b06de98ddba114cdc62c5f4ec05
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106366653"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108115818"
 ---
-# <a name="d3dxcomputeboundingsphere-function-d3dx9meshh"></a>D3DXComputeBoundingSphere-Funktion (D3DX9Mesh. h)
+# <a name="d3dxcomputeboundingsphere-function-d3dx9meshh"></a>D3DXComputeBoundingSphere-Funktion (D3DX9Mesh.h)
 
-Berechnet eine umgebende Kugel für das Mesh.
+Berechnet eine Begrenzungskugel für das Gitternetz.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,48 +44,48 @@ HRESULT D3DXComputeBoundingSphere(
 
 <dl> <dt>
 
-*Pfirsich Position* \[ in\]
+*pFirstPosition* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXVECTOR3**](d3dxvector3.md) \***
+Typ: **const [**D3DXVECTOR3**](d3dxvector3.md) \***
 
 Zeiger auf die erste Position.
 
 </dd> <dt>
 
-*Numvertices* \[ in\]
+*NumVertices* \[ In\]
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
-Anzahl der Scheitel Punkte.
+Anzahl der Scheitelzeichen.
 
 </dd> <dt>
 
-*dwstride* \[ in\]
+*dwStride* \[ In\]
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
-Anzahl von Bytes zwischen Positions Vektoren. Verwenden Sie [**getnumbytespertex**](id3dxbasemesh--getnumbytespervertex.md), [**D3DXGetFVFVertexSize**](d3dxgetfvfvertexsize.md)oder [**D3DXGetDeclVertexSize**](d3dxgetdeclvertexsize.md) , um den Scheitelpunkt zu erhalten.
+Anzahl von Bytes zwischen Positionsvektoren. Verwenden [**Sie GetNumBytesPerVertex,**](id3dxbasemesh--getnumbytespervertex.md) [**D3DXGetFVFVertexSize**](d3dxgetfvfvertexsize.md)oder [**D3DXGetDeclVertexSize,**](d3dxgetdeclvertexsize.md) um das Scheitelpunkt-Stride zu erhalten.
 
 </dd> <dt>
 
-*pcenter* \[ vorgenommen\]
+*pCenter* \[ out\]
 </dt> <dd>
 
 Typ: **[ **D3DXVECTOR3**](d3dxvector3.md)\***
 
-[**D3DXVECTOR3**](d3dxvector3.md) -Struktur, die das Koordinaten Zentrum der zurückgegebenen Begrenzungs Kugel definiert.
+[**D3DXVECTOR3-Struktur,**](d3dxvector3.md) die den Koordinatenmittelbereich der zurückgegebenen Begrenzungskugel definiert.
 
 </dd> <dt>
 
-*pradius* \[ vorgenommen\]
+*pRadius* \[ out\]
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)\***
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)\***
 
-Der Radius der zurückgegebenen Begrenzungs Kugel.
+Radius der zurückgegebenen Begrenzungskugel.
 
 </dd> </dl>
 
@@ -93,20 +93,20 @@ Der Radius der zurückgegebenen Begrenzungs Kugel.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden sein: D3DERR \_ invalidcall.
+Wenn die Funktion erfolgreich ausgeführt wird, lautet der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden Sein: D3DERR \_ INVALIDCALL.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Mesh. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX9Mesh.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

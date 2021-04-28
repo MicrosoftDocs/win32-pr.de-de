@@ -1,7 +1,7 @@
 ---
-description: Führt eine Catmull-Rom interpolung mithilfe der angegebenen 4D-Vektoren aus.
+description: 'D3DXVec4CatmullRom-Funktion (D3dx9math.h): Führt unter Verwendung der angegebenen 4D-Vektoren eine Catmull-Rom Interpolation durch.'
 ms.assetid: 24c26e70-b02c-4621-8b7e-db16f99dddb5
-title: D3DXVec4CatmullRom-Funktion (D3dx9math. h)
+title: D3DXVec4CatmullRom-Funktion (D3dx9math.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 5411274c0b7dab1dacce38a00ab1621a2fff33bc
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 06ba24374ee2ad4e6fd008d90c55d2990dc166f6
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104050952"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108115528"
 ---
-# <a name="d3dxvec4catmullrom-function-d3dx9mathh"></a>D3DXVec4CatmullRom-Funktion (D3dx9math. h)
+# <a name="d3dxvec4catmullrom-function-d3dx9mathh"></a>D3DXVec4CatmullRom-Funktion (D3dx9math.h)
 
-Führt eine Catmull-Rom interpolung mithilfe der angegebenen 4D-Vektoren aus.
+Führt eine Catmull-Rom Interpolation unter Verwendung der angegebenen 4D-Vektoren aus.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,55 +45,55 @@ D3DXVECTOR4* D3DXVec4CatmullRom(
 
 <dl> <dt>
 
-*Pout* \[ in, out\]
+*pOut* \[ in, out\]
 </dt> <dd>
 
 Typ: **[ **D3DXVECTOR4**](d3dxvector4.md)\***
 
-Ein Zeiger auf die [**D3DXVECTOR4**](d3dxvector4.md) -Struktur, die das Ergebnis des Vorgangs ist.
+Zeiger auf die [**D3DXVECTOR4-Struktur,**](d3dxvector4.md) die das Ergebnis des Vorgangs ist.
 
 </dd> <dt>
 
-*pV0* \[ in\]
+*pV0* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXVECTOR4**](d3dxvector4.md) \***
+Typ: **const [**D3DXVECTOR4**](d3dxvector4.md) \***
 
-Zeiger auf eine Quell- [**D3DXVECTOR4**](d3dxvector4.md) -Struktur, ein Positions Vektor.
+Zeiger auf eine [**D3DXVECTOR4-Quellstruktur,**](d3dxvector4.md) einen Positionsvektor.
 
 </dd> <dt>
 
-*pV1* \[ in\]
+*pV1* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXVECTOR4**](d3dxvector4.md) \***
+Typ: **const [**D3DXVECTOR4**](d3dxvector4.md) \***
 
-Zeiger auf eine Quell- [**D3DXVECTOR4**](d3dxvector4.md) -Struktur, ein Positions Vektor.
+Zeiger auf eine [**D3DXVECTOR4-Quellstruktur,**](d3dxvector4.md) einen Positionsvektor.
 
 </dd> <dt>
 
-*pV2* \[ in\]
+*pV2* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXVECTOR4**](d3dxvector4.md) \***
+Typ: **const [**D3DXVECTOR4**](d3dxvector4.md) \***
 
-Zeiger auf eine Quell- [**D3DXVECTOR4**](d3dxvector4.md) -Struktur, ein Positions Vektor.
+Zeiger auf eine [**D3DXVECTOR4-Quellstruktur,**](d3dxvector4.md) einen Positionsvektor.
 
 </dd> <dt>
 
-*pV3* \[ in\]
+*pV3* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXVECTOR4**](d3dxvector4.md) \***
+Typ: **const [**D3DXVECTOR4**](d3dxvector4.md) \***
 
-Zeiger auf eine Quell- [**D3DXVECTOR4**](d3dxvector4.md) -Struktur, ein Positions Vektor.
+Zeiger auf eine [**D3DXVECTOR4-Quellstruktur,**](d3dxvector4.md) einen Positionsvektor.
 
 </dd> <dt>
 
 *s* \[ in\]
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
 Gewichtungsfaktor. Siehe Hinweise.
 
@@ -103,11 +103,11 @@ Gewichtungsfaktor. Siehe Hinweise.
 
 Typ: **[ **D3DXVECTOR4**](d3dxvector4.md)\***
 
-Zeiger auf eine [**D3DXVECTOR4**](d3dxvector4.md) -Struktur, die das Ergebnis der Catmull-Rom interpolung ist.
+Zeiger auf eine [**D3DXVECTOR4-Struktur,**](d3dxvector4.md) die das Ergebnis der Catmull-Rom ist.
 
 ## <a name="remarks"></a>Bemerkungen
 
-In den vier Punkten (P1, P2, P3, P4) finden Sie eine f (s)-Funktion wie folgt:
+Suchen Sie bei vier Punkten (p1, p2, p3, p4) eine Funktion Q(s) so, dass:
 
 
 ```
@@ -119,7 +119,7 @@ Q(s) is parallel to the line joining p2 to p4 when s is 1.
 
 
 
-Die Catmull-Rom Spline kann von der Hermite Spline abgeleitet werden, indem Sie Folgendes festlegen:
+Die Catmull-Rom spline kann durch Festlegen von vom Hermite-Spline abgeleitet werden:
 
 
 ```
@@ -137,11 +137,11 @@ v1 ist der Inhalt von pV0.
 
 v2 im Inhalt von pV1.
 
-P3 ist der Inhalt von pV2.
+p3 ist der Inhalt von pV2.
 
-P4 ist der Inhalt von pV3.
+p4 ist der Inhalt von pV3.
 
-Verwenden der Hermite-Spline-Gleichung:
+Verwenden der Splinegleichung "Hermite":
 
 
 ```
@@ -150,7 +150,7 @@ Q(s) = (2s3 - 3s2 + 1)v1 + (-2s3 + 3s2)v2 + (s3 - 2s2 + s)t1 + (s3 - s2)t2
 
 
 
-und ersetzen Sie durch die Ergebnisse v1, v2, T1, T2:
+und der Ersatz für v1, v2, t1, t2 ergibt:
 
 
 ```
@@ -159,7 +159,7 @@ Q(s) = (2s3 - 3s2 + 1)p2 + (-2s3 + 3s2)p3 + (s3 - 2s2 + s)(p3 - p1) / 2 + (s3 - 
 
 
 
-Dies kann wie folgt neu angeordnet werden:
+Dies kann neu angeordnet werden wie:
 
 
 ```
@@ -172,14 +172,14 @@ Q(s) = [(-s3 + 2s2 - s)p1 + (3s3 - 5s2 + 2)p2 + (-3s3 + 4s2 + s)p3 + (s3 - s2)p4
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9math. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3dx9math.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

@@ -1,7 +1,7 @@
 ---
-description: Konstruktormethode.
+description: 'COARefTime.COARefTime-Konstruktor (Ctlutil.h): Konstruktormethode.'
 ms.assetid: 6c300f14-5edf-431c-a882-251e87d4de21
-title: Coaref time. coaref Time-Konstruktor (ctlutil. h)-d-Parameter
+title: COARefTime.COARefTime-Konstruktor (Ctlutil.h) – d Parameter
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,14 +16,14 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: ee664cbafde48aa0bb579d34937ed80a42b28487
-ms.sourcegitcommit: 4d4a6e9ad5de37e467cd3164276771b71e1f113f
+ms.openlocfilehash: 3d817128ee7a1e67fa1786a568d48e10e8b08b8e
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2021
-ms.locfileid: "106389057"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108095358"
 ---
-# <a name="coareftimecoareftime-constructor-ctlutilh"></a>Coaref time. coaref Time-Konstruktor (ctlutil. h)
+# <a name="coareftimecoareftime-constructor-ctlutilh"></a>COARefTime.COARefTime-Konstruktor (Ctlutil.h)
 
 Konstruktormethode.
 
@@ -45,7 +45,7 @@ COARefTime(
 *d* 
 </dt> <dd>
 
-ein **Double** -Wert, der die Verweis Zeit in Sekunden angibt.
+**double-Wert,** der die Referenzzeit in Sekunden angibt.
 
 </dd> </dl>
 
@@ -53,18 +53,18 @@ ein **Double** -Wert, der die Verweis Zeit in Sekunden angibt.
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Coaref Time-Klasse**](coareftime.md)
+[**COARefTime-Klasse**](coareftime.md)
 </dt> </dl>
 
  

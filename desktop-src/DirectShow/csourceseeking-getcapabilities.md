@@ -1,7 +1,7 @@
 ---
-description: 'Die getfunktionalitäten-Methode ruft alle Suchfunktionen des Streams ab. Diese Methode implementiert die imediaseeking:: getfunktionalitäten-Methode.'
+description: 'CSourceSeeking.GetCapabilities-Methode: Die GetCapabilities-Methode ruft alle Suchfunktionen des Streams ab. Diese Methode implementiert die IMediaSeeking::GetCapabilities-Methode.'
 ms.assetid: a2ff7ea2-09bd-49a7-8e1b-d6360939036e
-title: Csourceseeking. getSources-Methode (ctlutil. h)
+title: CSourceSeeking.GetCapabilities-Methode (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: eda23944fd039576bb5de74fbb7c32e375415670
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: f1f354381c4c99cf880c75cbbc4b13355e386030
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106354647"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108098778"
 ---
-# <a name="csourceseekinggetcapabilities-method"></a>Csourceseeking. getSources-Methode
+# <a name="csourceseekinggetcapabilities-method"></a>CSourceSeeking.GetCapabilities-Methode
 
-Die- `GetCapabilities` Methode ruft alle Suchfunktionen des Streams ab. Diese Methode implementiert die [**imediaseeking:: getfunktionalitäten**](/windows/desktop/api/Strmif/nf-strmif-imediaseeking-getcapabilities) -Methode.
+Die `GetCapabilities` -Methode ruft alle Suchfunktionen des Streams ab. Diese Methode implementiert die [**IMediaSeeking::GetCapabilities-Methode.**](/windows/desktop/api/Strmif/nf-strmif-imediaseeking-getcapabilities)
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,23 +42,23 @@ HRESULT GetCapabilities(
 
 <dl> <dt>
 
-*pfunktionen* 
+*pCapabilities* 
 </dt> <dd>
 
-Ein Zeiger auf eine Variable, die eine bitweise Kombination von für Suchvorgänge [**\_ \_ suchbare \_**](/windows/win32/api/strmif/ne-strmif-am_seeking_seeking_capabilities) Flags empfängt.
+Zeiger auf eine Variable, die eine bitweise Kombination von [**AM \_ SEEKING SEEKING \_ \_ CAPABILITIES-Flags**](/windows/win32/api/strmif/ne-strmif-am_seeking_seeking_capabilities) empfängt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen der **HRESULT** -Werte zurück, die in der folgenden Tabelle aufgeführt sind.
+Gibt einen der in der folgenden Tabelle aufgeführten **HRESULT-Werte** zurück.
 
 
 
 | Rückgabecode                                                                               | Beschreibung                       |
 |-------------------------------------------------------------------------------------------|-----------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>      | Erfolg<br/>                |
-| <dl> <dt>**E- \_ Zeiger**</dt> </dl> | **Null** -Zeiger Wert<br/> |
+| <dl> <dt>**\_E-ZEIGER**</dt> </dl> | **NULL-Zeigerwert**<br/> |
 
 
 
@@ -66,24 +66,24 @@ Gibt einen der **HRESULT** -Werte zurück, die in der folgenden Tabelle aufgefü
 
 ## <a name="remarks"></a>Bemerkungen
 
-Die Suchfunktionen werden von der Element Variablen [**csourceseeking:: m \_ dwseekingcaps**](csourceseeking-m-dwseekingcaps.md) angegeben.
+Die Suchfunktionen werden von der [**CSourceSeeking::m \_ dwSeekingCaps-Membervariablen**](csourceseeking-m-dwseekingcaps.md) angegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (einschließlich Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Csourceseeking-Klasse**](csourceseeking.md)
+[**CSourceSeeking-Klasse**](csourceseeking.md)
 </dt> </dl>
 
  

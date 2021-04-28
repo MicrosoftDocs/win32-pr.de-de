@@ -1,7 +1,7 @@
 ---
-description: Beschreibt einen 16-Bit-Gleit Komma Vektor.
+description: 'D3DXFLOAT16-Struktur (D3dx9math.h): Beschreibt einen 16-Bit-Gleitkommavektor.'
 ms.assetid: f823a327-f07a-44e9-b58a-7865e11e80eb
-title: D3DXFLOAT16-Struktur (D3dx9math. h)
+title: D3DXFLOAT16-Struktur (D3dx9math.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - d3dx9math.h
-ms.openlocfilehash: 4b469c770b811ed11ec21b21d2b449df1fd75b1c
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: dc878575de4338a2a399f329362d79ff2e7654f0
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106355189"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108094268"
 ---
-# <a name="d3dxfloat16-structure-d3dx9mathh"></a>D3DXFLOAT16-Struktur (D3dx9math. h)
+# <a name="d3dxfloat16-structure-d3dx9mathh"></a>D3DXFLOAT16-Struktur (D3dx9math.h)
 
-Beschreibt einen 16-Bit-Gleit Komma Vektor.
+Beschreibt einen 16-Bit-Gleitkommavektor.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,7 +42,7 @@ typedef struct D3DXFLOAT16 {
 **Wert**
 </dt> <dd>
 
-Typ: **[ **Word**](../winprog/windows-data-types.md)**
+Typ: **[ **WORD**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
@@ -52,19 +52,19 @@ Die 16-Bit-Daten.
 
 ## <a name="remarks"></a>Bemerkungen
 
-C++-Programmierer können das Überladen von Operatoren und die Typumwandlung mit den [**D3DXFLOAT16-Erweiterungen**](d3dxfloat16-extensions.md)nutzen, die überladene Konstruktoren und Zuweisungs-, unäre und binäre (einschließlich Gleichheits-) Operatoren implementieren.
+C++-Programmierer können die Vorteile der Operatorüberladung und Typcasting mit den [**D3DXFLOAT16-Erweiterungen**](d3dxfloat16-extensions.md)nutzen, die überladene Konstruktoren und Zuweisungs-, unäre und binäre Operatoren (einschließlich Gleichheitsoperatoren) implementieren.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------|----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3dx9math. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3dx9math.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

@@ -1,17 +1,17 @@
 ---
-title: Temperatur-und tint-Effekt
-description: .
+title: Temperature and Tönungseffekt
+description: Temperatur- und Tönungseffekt
 ms.assetid: 8df72105-26ea-2dea-a4de-ef06902b7e0b
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7a8a483b926b26c115002b2bb352d8e3120e7479
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: bc2c3628e1fdcb1c72a84a9e08736e4215d55514
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103858902"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108096638"
 ---
-# <a name="temperature-and-tint-effect"></a>Temperatur-und Tönungs-Effekt
+# <a name="temperature-and-tint-effect"></a>Temperatur- und Tönungseffekt
 
 Die CLSID für diesen Effekt ist CLSID \_ D2D1TemperatureTint.
 
@@ -30,20 +30,20 @@ m_d2dContext->DrawImage(temperatureTintEffect.Get());
 m_d2dContext->EndDraw();
 ```
 
-## <a name="effect-properties"></a>Effekt Eigenschaften
+## <a name="effect-properties"></a>Effect-Eigenschaften
 
-Die Eigenschaften für den Temperatur-und Tönungs-Effekt werden von der [**D2D1 \_ temperatureandtint- \_ Prop**](/windows/desktop/api/d2d1effects_2/ne-d2d1effects_2-d2d1_temperatureandtint_prop) -Enumeration definiert.
+Die Eigenschaften für den Temperatur- und Tönungseffekt werden durch die [**D2D1 \_ TEMPERATUREANDTINT \_ PROP-Enumeration**](/windows/desktop/api/d2d1effects_2/ne-d2d1effects_2-d2d1_temperatureandtint_prop) definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------------|---------------------------------------------------|
-| Unterstützte Mindestversion (Client) | Windows 10 \[ Desktop Apps- \| Windows Store-Apps\] |
-| Unterstützte Mindestversion (Server) | Windows 10 \[ Desktop Apps- \| Windows Store-Apps\] |
-| Header                   | d2d1effects \_ 2. h                                  |
-| Bibliothek                  | d2d1. lib, dxguid. lib                              |
+| Unterstützte Mindestversion (Client) | Windows 10 desktop \[ apps \| Windows Store-Apps\] |
+| Unterstützte Mindestversion (Server) | Windows 10 desktop \[ apps \| Windows Store-Apps\] |
+| Header                   | d2d1effects \_ 2.h                                  |
+| Bibliothek                  | d2d1.lib, dxguid.lib                              |
 
 
 

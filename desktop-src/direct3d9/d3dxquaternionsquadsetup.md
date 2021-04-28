@@ -1,7 +1,7 @@
 ---
-description: Richtet Steuerungs Punkte für die sphärische Quadrangle-interpolung ein.
+description: 'D3DXQuaternionSquadSetup-Funktion (D3dx9math.h): Richtet Steuerungspunkte für die sphärische Quadrangleinterpolation ein.'
 ms.assetid: f800d457-8546-49a1-800e-e5c27af96710
-title: D3DXQuaternionSquadSetup-Funktion (D3dx9math. h)
+title: D3DXQuaternionSquadSetup-Funktion (D3dx9math.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 04bae9dafbb9df90fdcccee830a1eecb64c1430f
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 1dcaa90380ec703b4b56458906ab8bd965d7568c
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106373505"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108093948"
 ---
-# <a name="d3dxquaternionsquadsetup-function-d3dx9mathh"></a>D3DXQuaternionSquadSetup-Funktion (D3dx9math. h)
+# <a name="d3dxquaternionsquadsetup-function-d3dx9mathh"></a>D3DXQuaternionSquadSetup-Funktion (D3dx9math.h)
 
-Richtet Steuerungs Punkte für die sphärische Quadrangle-interpolung ein.
+Richtet Steuerungspunkte für die sphärische Quadrangleinterpolation ein.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,66 +46,66 @@ void D3DXQuaternionSquadSetup(
 
 <dl> <dt>
 
-*Auslagern* \[ vorgenommen\]
+*pAOut* \[ out\]
 </dt> <dd>
 
 Typ: **[ **D3DXQUATERNION**](d3dxquaternion.md)\***
 
-Zeiger auf "aout".
+Zeiger auf AOut.
 
 </dd> <dt>
 
-*pbout* \[ vorgenommen\]
+*pBOut* \[ out\]
 </dt> <dd>
 
 Typ: **[ **D3DXQUATERNION**](d3dxquaternion.md)\***
 
-Zeiger auf "BOut".
+Zeiger auf BOut.
 
 </dd> <dt>
 
-*pcout* \[ vorgenommen\]
+*pCOut* \[ out\]
 </dt> <dd>
 
 Typ: **[ **D3DXQUATERNION**](d3dxquaternion.md)\***
 
-Zeiger auf "cout".
+Zeiger auf COut.
 
 </dd> <dt>
 
-*pQ0* \[ in\]
+*pQ0* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXQUATERNION**](d3dxquaternion.md) \***
+Typ: **const [**D3DXQUATERNION**](d3dxquaternion.md) \***
 
-Zeiger auf den Eingabe Steuerungspunkt, q0.
+Zeiger auf den Eingabesteuerpunkt Q0.
 
 </dd> <dt>
 
-*pQ1* \[ in\]
+*pQ1* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXQUATERNION**](d3dxquaternion.md) \***
+Typ: **const [**D3DXQUATERNION**](d3dxquaternion.md) \***
 
-Zeiger auf den Eingabe Steuerungspunkt (Q1).
+Zeiger auf den Eingabesteuerpunkt Q1.
 
 </dd> <dt>
 
-*pQ2* \[ in\]
+*pQ2* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXQUATERNION**](d3dxquaternion.md) \***
+Typ: **const [**D3DXQUATERNION**](d3dxquaternion.md) \***
 
-Zeiger auf den Eingabe Steuerungspunkt (Q2).
+Zeiger auf den Eingabesteuerungspunkt Q2.
 
 </dd> <dt>
 
-*pQ3* \[ in\]
+*pQ3* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXQUATERNION**](d3dxquaternion.md) \***
+Typ: **const [**D3DXQUATERNION**](d3dxquaternion.md) \***
 
-Zeiger auf den Eingabe Steuerungspunkt (Q3).
+Zeiger auf den Eingabesteuerungspunkt Q3.
 
 </dd> </dl>
 
@@ -115,7 +115,7 @@ Keine.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Diese Funktion nimmt vier Steuerungs Punkte an, die für die Eingaben pQ0, pQ1, pQ2 und pQ3 bereitgestellt werden. Die-Funktion ändert dann diese Werte, um eine Kurve zu finden, die entlang des kürzesten Pfads verläuft. Die Werte von Q0, Q2 und Q3 werden wie unten dargestellt berechnet.
+Diese Funktion nimmt vier Kontrollpunkte an, die für die Eingaben pQ0, pQ1, pQ2 und pQ3 bereitgestellt werden. Die Funktion ändert dann diese Werte, um eine Kurve zu finden, die entlang des kürzesten Pfads fließt. Die Werte für q0, q2 und q3 werden wie unten dargestellt berechnet.
 
 
 ```
@@ -126,24 +126,24 @@ q3 = |Q2 + Q3| < |Q2 - Q3| ? -Q3 : Q3
 
 
 
-Wenn Sie die neuen Q-Werte berechnet haben, werden die Werte für "aout", "BOut" und "cout" wie folgt berechnet:
+Nachdem die neuen Q-Werte berechnet wurden, werden die Werte für AOut, BOut und COut wie folgt berechnet:
 
-Aout = Q1 \* e<sup> \[ -0,25 \ \* (\ LN \[ Exp (Q1) \* Q2 \] \ + \ LN \[ Exp (Q1) \* q0 \] \) \ \] </sup>
+AOut = q1 \* e<sup> \[ -0,25\ \* (\ Ln \[ Exp(q1) \* q2 \] \ +\ Ln \[ Exp(q1) \* q0 \ \] )\ \] </sup>
 
-BOut = Q2 \* e<sup> \[ -0,25 \ \* (\ LN \[ Exp (Q2) \* Q3 \] \ + \ LN \[ Exp (Q2) \* Q1 \] \) \ \] </sup>
+BOut = q2 \* e<sup> \[ -0,25\ \* (\ Ln \[ Exp(q2) \* q3 \] \ +\ Ln \[ Exp(q2) \* q1 \ \] )\ \] </sup>
 
-Cout = Q2
+COut = q2
 
 > [!Note]  
-> LN ist die API-Methode [**D3DXQuaternionLn**](d3dxquaternionln.md) und Exp ist die API-Methode [**D3DXQuaternionExp**](d3dxquaternionexp.md).
+> Ln ist die API-Methode [**D3DXQuaternionLn,**](d3dxquaternionln.md) und Exp ist die API-Methode [**D3DXQuaternionExp.**](d3dxquaternionexp.md)
 
  
 
-Verwenden Sie [**D3DXQuaternionNormalize**](d3dxquaternionnormalize.md) für eine beliebige Quaternion-Eingabe, die nicht bereits normalisiert ist.
+Verwenden [**Sie D3DXQuaternionNormalize**](d3dxquaternionnormalize.md) für alle Quaternioneingaben, die noch nicht normalisiert sind.
 
 ### <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird gezeigt, wie ein Satz von Quaternion-Schlüsseln (q0, Q1, Q2, Q3) zum Berechnen der inneren Quadranten Punkte (a, B, C) verwendet wird. Dadurch wird sichergestellt, dass die Tangenten in angrenzenden Segmenten kontinuierlich sind.
+Das folgende Beispiel zeigt, wie Sie einen Satz von Quaternionsschlüsseln (Q0, Q1, Q2, Q3) verwenden, um die inneren Quadranglepunkte (A, B, C) zu berechnen. Dadurch wird sichergestellt, dass die Tangenten über angrenzende Segmente hinweg kontinuierlich sind.
 
 
 ```
@@ -173,10 +173,10 @@ D3DXQuaternionSquad(&Qt, &Q1, &A, &B, &C, time);
 
 > [!Note]
 >
-> -   C ist +/-Q2, abhängig vom Ergebnis der Funktion.
-> -   Qt ist das Ergebnis der-Funktion.
+> -   C ist abhängig vom Ergebnis der Funktion +/- Q2.
+> -   Qt ist das Ergebnis der Funktion.
 >
-> Das Ergebnis ist eine Drehung von 45 Grad um die z-Achse für time = 0,5.
+> Das Ergebnis ist eine Drehung um 45 Grad um die Z-Achse für die Zeit = 0,5.
 
  
 
@@ -184,14 +184,14 @@ D3DXQuaternionSquad(&Qt, &Q1, &A, &B, &C, time);
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9math. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3dx9math.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

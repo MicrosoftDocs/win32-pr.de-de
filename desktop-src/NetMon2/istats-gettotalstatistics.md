@@ -1,7 +1,7 @@
 ---
-description: Die gettotalstatistics-Methode ruft die Gesamtstatistik für die aktuelle Erfassung ab.
+description: 'IStats::GetTotalStatistics-Methode: Die GetTotalStatistics-Methode ruft die Gesamtstatistik für die aktuelle Erfassung ab.'
 ms.assetid: 494634f6-a9b3-4a50-8920-2387be9ba30f
-title: 'IStats:: gettotalstatistics-Methode (Netmon. h)'
+title: IStats::GetTotalStatistics-Methode (Netmon.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - Ndisnpp.dll
 - Rmtnpp.dll
-ms.openlocfilehash: 51cdbfdcc796aa7d8091e8da5837809efaa63379
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e6566a58212e8f20d0d999302f41ab97cb9f005e
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106353622"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108098408"
 ---
-# <a name="istatsgettotalstatistics-method"></a>IStats:: gettotalstatistics-Methode
+# <a name="istatsgettotalstatistics-method"></a>IStats::GetTotalStatistics-Methode
 
-Die **gettotalstatistics** -Methode ruft die [*Gesamtstatistik*](t.md) für die aktuelle [*Erfassung*](c.md)ab.
+Die **GetTotalStatistics-Methode** ruft die [*Gesamtstatistik für*](t.md) die aktuelle Erfassung [*ab.*](c.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,23 +41,23 @@ HRESULT STDMETHODCALLTYPE GetTotalStatistics(
 
 <dl> <dt>
 
-*lpstats* \[ vorgenommen\]
+*lpStats* \[ out\]
 </dt> <dd>
 
-Zeiger auf eine [Statistik](statistics.md)Struktur, die die Gesamtstatistik für die Erfassung bereitstellt. Es liegt in der Verantwortung des Aufrufers, den von der **Statistik** Struktur genutzten Arbeitsspeicher zuzuordnen und freizugeben.
+Zeiger auf eine [STATISTICS-Struktur,](statistics.md)die die Gesamtstatistik für die Erfassung enthält. Der Aufrufer ist dafür verantwortlich, den von der STATISTICS-Struktur verwendeten Arbeitsspeicher zu reservieren **und frei** zu geben.
 
 </dd> <dt>
 
-*f/oder Lese* \[ Vorgänge in\]
+*fClearAfterReading* \[ In\]
 </dt> <dd>
 
-Flag, mit dem Netzwerkmonitor wird, wie der interne Speicher der gesamten Statistik behandelt werden soll. Die Einstellung true weist Netzwerkmonitor an, den internen Speicher der gesamten Statistik zu löschen, nachdem die aktuellen Informationen abgerufen wurden.
+Flag, das verwendet wird, Netzwerkmonitor, wie der interne Speicher der Gesamtstatistik behandelt werden soll. Die Einstellung TRUE weist Netzwerkmonitor, den internen Speicher der Gesamtstatistik zu löschen, nachdem die aktuellen Informationen abgerufen wurden.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Methode erfolgreich ist, ist der Rückgabewert nmerr \_ Success.
+Wenn die Methode erfolgreich ist, ist der Rückgabewert NMERR \_ SUCCESS.
 
 Wenn die Methode nicht erfolgreich ist, ist der Rückgabewert einer der folgenden Fehlercodes:
 
@@ -65,9 +65,9 @@ Wenn die Methode nicht erfolgreich ist, ist der Rückgabewert einer der folgende
 
 | Rückgabecode                                                                                            | Beschreibung                                                                                                                                  |
 |--------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**nmerr \_ nicht \_ verbunden**</dt> </dl>   | Der npp ist nicht mit dem Netzwerk verbunden. Wenden Sie die [iStats:: Connect](istats-connect.md) -Methode an, um die NPP mit dem Netzwerk zu verbinden.<br/> |
-| <dl> <dt>**nmerr \_ nicht \_ \_ nur Statistiken**</dt> </dl> | Der npp ist mit dem Netzwerk verbunden, jedoch nicht mit der [iStats:: Connect](istats-connect.md) -Methode.<br/>                                |
-| <dl> <dt>**nmerr wird \_ nicht \_ erfasst**</dt> </dl>   | Der NPP erfasst keine Daten. Um mit dem Erfassen von Daten zu beginnen, müssen Sie die [iStats:: Start](istats-start.md) -Methode<br/>                         |
+| <dl> <dt>**NMERR \_ NICHT \_ VERBUNDEN**</dt> </dl>   | Der NPP ist nicht mit dem Netzwerk verbunden. Rufen Sie [die IStats::Connect-Methode auf,](istats-connect.md) um die NPP mit dem Netzwerk zu verbinden.<br/> |
+| <dl> <dt>**NMERR \_ NICHT \_ NUR STATISTIKEN \_**</dt> </dl> | Der NPP ist mit dem Netzwerk verbunden, aber nicht mit der [IStats::Connect-Methode.](istats-connect.md)<br/>                                |
+| <dl> <dt>**NMERR NOT CAPTURING (NMERR \_ WIRD NICHT \_ ERFASST)**</dt> </dl>   | Der NPP erfasst keine Daten. Rufen Sie die [IStats::Start-Methode auf,](istats-start.md) um mit dem Erfassen von Daten zu beginnen.<br/>                         |
 
 
 
@@ -75,40 +75,40 @@ Wenn die Methode nicht erfolgreich ist, ist der Rückgabewert einer der folgende
 
 ## <a name="remarks"></a>Bemerkungen
 
-Diese Methode gibt nur Daten zurück, während eine Erfassung ausgeführt wird, einschließlich der Pause, während die Erfassung angehalten wird.
+Diese Methode gibt Daten nur zurück, während eine Erfassung in Bearbeitung ist, einschließlich, während die Erfassung angehalten wird.
 
-Netzwerkmonitor speichert auch [*Konversations Statistiken*](c.md), die durch Aufrufen der [iStats:: getconversation ationstatistics](istats-getconversationstatistics.md) -Methode abgerufen werden können.
+Netzwerkmonitor werden [*auch*](c.md)Konversationsstatistiken gespeichert, die durch Aufrufen der [IStats::GetConversationStatistics-Methode abgerufen werden](istats-getconversationstatistics.md) können.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                                                                     |
-| Header<br/>                   | <dl> <dt>Netmon. h</dt> </dl>                                                                      |
+| Header<br/>                   | <dl> <dt>Netmon.h</dt> </dl>                                                                      |
 | DLL<br/>                      | <dl> <dt>Ndisnpp.dll; </dt> <dt>Rmtnpp.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [IStats](istats.md)
 </dt> <dt>
 
-[IStats:: Connect](istats-connect.md)
+[IStats::Connect](istats-connect.md)
 </dt> <dt>
 
-[IStats:: getconversation ationstatistics](istats-getconversationstatistics.md)
+[IStats::GetConversationStatistics](istats-getconversationstatistics.md)
 </dt> <dt>
 
-[IStats:: Start,](istats-start.md)
+[IStats::Start,](istats-start.md)
 </dt> <dt>
 
-[Kam](statistics.md)
+[Statistiken](statistics.md)
 </dt> </dl>
 
  

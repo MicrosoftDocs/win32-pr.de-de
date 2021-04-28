@@ -1,7 +1,7 @@
 ---
-description: Gibt den Namen des höchsten HLSL-Profils (High-Level Shader Language) zurück, das von einem bestimmten Gerät unterstützt wird.
+description: 'D3DXGetPixelShaderProfile-Funktion: Gibt den Namen des höchsten HLSL-Profils (High-Level Shader Language) zurück, das von einem bestimmten Gerät unterstützt wird.'
 ms.assetid: a6c1be4e-f6f5-4f08-b6a7-b9c621e5f19b
-title: D3DXGetPixelShaderProfile-Funktion (D3DX9Shader. h)
+title: D3DXGetPixelShaderProfile-Funktion (D3DX9Shader.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,12 +14,12 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: ad1f430a95b1ff2173dceb1e0561dccf3d0ee88d
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 7d24e19d49a8a96f91847892f519ef6c06d25ef5
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103961600"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108114437"
 ---
 # <a name="d3dxgetpixelshaderprofile-function"></a>D3DXGetPixelShaderProfile-Funktion
 
@@ -40,7 +40,7 @@ LPCSTR D3DXGetPixelShaderProfile(
 
 <dl> <dt>
 
-*pdevice* \[ in\]
+*pDevice* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPDIRECT3DDEVICE9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3ddevice9)**
@@ -55,11 +55,11 @@ Typ: **[ **LPCSTR**](../winprog/windows-data-types.md)**
 
 Der HLSL-Profilname.
 
-Wenn das Gerät keine Pixel-Shader unterstützt, gibt die Funktion **null** zurück.
+Wenn das Gerät keine Pixelshader unterstützt, gibt die Funktion **NULL** zurück.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Ein Shader-Profil gibt die zu verwendende Assembly-Shader-Version und die Funktionen an, die dem HLSL-Compiler beim Kompilieren eines Shaders zur Verfügung stehen. In der folgenden Tabelle sind die unterstützten Pixel-shaderprofile aufgeführt.
+Ein Shaderprofil gibt die zu verwendende Assembly-Shaderversion und die Funktionen an, die dem HLSL-Compiler beim Kompilieren eines Shaders zur Verfügung stehen. In der folgenden Tabelle sind die unterstützten Pixel-Shaderprofile aufgeführt.
 
 
 
@@ -70,7 +70,7 @@ Ein Shader-Profil gibt die zu verwendende Assembly-Shader-Version und die Funkti
 </colgroup>
 <thead>
 <tr class="header">
-<th>Shader-Profil</th>
+<th>Shaderprofil</th>
 <th>BESCHREIBUNG</th>
 </tr>
 </thead>
@@ -93,26 +93,26 @@ Ein Shader-Profil gibt die zu verwendende Assembly-Shader-Version und die Funkti
 </tr>
 <tr class="odd">
 <td>ps_2_0</td>
-<td>Kompilieren Sie in PS_2_0 Version.</td>
+<td>Kompilieren Sie in ps_2_0 Version.</td>
 </tr>
 <tr class="even">
 <td>ps_2_a</td>
-<td>Identisch mit dem PS_2_0 Profil mit den folgenden zusätzlichen Funktionen, die für den Compiler als Ziel verfügbar sind:
+<td>Entspricht dem ps_2_0 Profil mit den folgenden zusätzlichen Funktionen, die der Compiler als Ziel hat:
 <ul>
-<li>Die Anzahl der temporären Register (r #) ist größer als oder gleich 22.</li>
-<li>Beliebiger Quellpfad.</li>
-<li>Farbverlaufs Anweisungen: DSX, DSY.</li>
-<li>Prädikation übersprungen.</li>
-<li>Keine abhängige Textur Lese Begrenzung.</li>
-<li>Keine Beschränkung für die Anzahl der Textur Anweisungen.</li>
+<li>Die Anzahl temporärer Register (r#) ist größer oder gleich 22.</li>
+<li>Beliebige Quellwizzle.</li>
+<li>Farbverlaufsanweisungen: dsx, dsy.</li>
+<li>Prädikation:</li>
+<li>Kein Leselimit für abhängige Textur.</li>
+<li>Keine Beschränkung für die Anzahl der Texturanweisungen.</li>
 </ul></td>
 </tr>
 <tr class="odd">
 <td>ps_2_b</td>
-<td>Identisch mit dem PS_2_0 Profil mit den folgenden zusätzlichen Funktionen, die für den Compiler als Ziel verfügbar sind:
+<td>Entspricht dem ps_2_0 Profil mit den folgenden zusätzlichen Funktionen, die der Compiler als Ziel hat:
 <ul>
-<li>Die Anzahl der temporären Register (r #) ist größer als oder gleich 32.</li>
-<li>Keine Beschränkung für die Anzahl der Textur Anweisungen.</li>
+<li>Die Anzahl temporärer Register (r#) ist größer oder gleich 32.</li>
+<li>Keine Beschränkung für die Anzahl der Texturanweisungen.</li>
 </ul></td>
 </tr>
 <tr class="even">
@@ -126,20 +126,20 @@ Ein Shader-Profil gibt die zu verwendende Assembly-Shader-Version und die Funkti
 
  
 
-Weitere Informationen zu den Unterschieden zwischen shaderversionen finden Sie [unter Unterschiede bei Pixel-Shadern](../direct3dhlsl/dx9-graphics-reference-asm-ps-differences.md).
+Weitere Informationen zu den Unterschieden zwischen Shaderversionen finden Sie unter [Pixelshader-Unterschiede.](../direct3dhlsl/dx9-graphics-reference-asm-ps-differences.md)
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Shader. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>     |
+| Header<br/>  | <dl> <dt>D3DX9Shader.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

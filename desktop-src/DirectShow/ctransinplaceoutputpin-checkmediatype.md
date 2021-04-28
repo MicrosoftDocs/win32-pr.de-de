@@ -1,7 +1,7 @@
 ---
-description: Die checkmediatype-Methode bestimmt, ob die PIN einen bestimmten Medientyp akzeptiert.
+description: 'CTransInPlaceOutputPin.CheckMediaType-Methode: Die CheckMediaType-Methode bestimmt, ob der Pin einen bestimmten Medientyp akzeptiert.'
 ms.assetid: be720021-ef7b-4281-a9f4-93abbdafc75d
-title: Ctransinplaceoutputpin. checkmediatype-Methode (transip. h)
+title: CTransInPlaceOutputPin.CheckMediaType-Methode (Transip.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: b0a422851bc7e09075076decc39d57b85d1052ab
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 66cd29758e0b2d63db88db8b998cc79ec12efdd9
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367611"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108094718"
 ---
-# <a name="ctransinplaceoutputpincheckmediatype-method"></a>Ctransinplaceoutputpin. checkmediatype-Methode
+# <a name="ctransinplaceoutputpincheckmediatype-method"></a>CTransInPlaceOutputPin.CheckMediaType-Methode
 
-Die- `CheckMediaType` Methode bestimmt, ob die PIN einen bestimmten Medientyp akzeptiert.
+Die `CheckMediaType` -Methode bestimmt, ob der Pin einen bestimmten Medientyp akzeptiert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,23 +42,23 @@ HRESULT CheckMediaType(
 
 <dl> <dt>
 
-*PMT* 
+*Pmt* 
 </dt> <dd>
 
-Zeiger auf ein [**cmediatype**](cmediatype.md) -Objekt, das den vorgeschlagenen Medientyp enthält.
+Zeiger auf ein [**CMediaType-Objekt,**](cmediatype.md) das den vorgeschlagenen Medientyp enthält.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT** -Wert zurück. Mögliche Werte sind in der folgenden Tabelle aufgeführt.
+Gibt einen **HRESULT-Wert** zurück. Mögliche Werte sind die in der folgenden Tabelle gezeigten Werte.
 
 
 
 | Rückgabecode                                                                                                | Beschreibung                         |
 |------------------------------------------------------------------------------------------------------------|-------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>                       | Erfolg.<br/>                 |
-| <dl> <dt>**VFW \_ E- \_ Typ \_ nicht \_ akzeptiert**</dt> </dl> | Der Medientyp wurde nicht akzeptiert.<br/> |
+| <dl> <dt>**VFW \_ \_ E-TYP \_ NICHT \_ AKZEPTIERT**</dt> </dl> | Der Medientyp wird nicht akzeptiert.<br/> |
 
 
 
@@ -66,26 +66,26 @@ Gibt einen **HRESULT** -Wert zurück. Mögliche Werte sind in der folgenden Tabe
 
 ## <a name="remarks"></a>Bemerkungen
 
-Diese Methode überschreibt die [**ctransformoutputpin:: checkmediatype**](ctransformoutputpin-checkmediatype.md) -Methode.
+Diese Methode überschreibt die [**CTransformOutputPin::CheckMediaType-Methode.**](ctransformoutputpin-checkmediatype.md)
 
-Wenn der Filter bereits Streaming ist und zwei Zuweisungen verwendet, lehnt diese Methode alle Formatänderungen ab. Andernfalls ruft diese Methode die [**ctransformfilter:: checkinputtype**](ctransformfilter-checkinputtype.md) -Methode des Filters auf, um den Medientyp zu überprüfen. Wenn die eingabepin verbunden ist, wird auch die [**IPin:: queryaccept**](/windows/desktop/api/Strmif/nf-strmif-ipin-queryaccept) -Methode für die upstreamausgabepin aufgerufen.
+Wenn der Filter bereits streamingt und zwei Zuweisungen verwendet, lehnt diese Methode formatierte Änderungen ab. Andernfalls ruft diese Methode die [**CTransformFilter::CheckInputType-Methode**](ctransformfilter-checkinputtype.md) des Filters auf, um den Medientyp zu überprüfen. Wenn der Eingabepin verbunden ist, ruft er auch die [**IPin::QueryAccept-Methode**](/windows/desktop/api/Strmif/nf-strmif-ipin-queryaccept) auf dem Upstreamausgabepin auf.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Transip. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Transip.h (einschließlich Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Ctransinplaceoutputpin-Klasse**](ctransinplaceoutputpin.md)
+[**CTransInPlaceOutputPin-Klasse**](ctransinplaceoutputpin.md)
 </dt> </dl>
 
  

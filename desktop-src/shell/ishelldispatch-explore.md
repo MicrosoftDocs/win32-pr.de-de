@@ -1,7 +1,7 @@
 ---
-description: Öffnet einen angegebenen Ordner in einem Windows-Explorer-Fenster.
+description: 'IShellDispatch.Explore-Methode: Öffnet einen angegebenen Ordner in einem Windows-Explorer Fenster.'
 ms.assetid: DB434D02-56B2-4e8f-9E43-BBF47C7BE377
-title: Ishelldispatch. explore-Methode (Shldisp. h)
+title: IShellDispatch.Explore-Methode (Shldisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Shell32.dll
-ms.openlocfilehash: 1ae29b4962dcac1be0b7ea23808e36ce005cb62c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e693985cf7d8d83bd5a00595c42cd4427b0ebd5b
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104978113"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108100558"
 ---
-# <a name="ishelldispatchexplore-method"></a>Ishelldispatch. explore-Methode
+# <a name="ishelldispatchexplore-method"></a>IShellDispatch.Explore-Methode
 
-Öffnet einen angegebenen Ordner in einem Windows-Explorer-Fenster.
+Öffnet einen angegebenen Ordner in einem Windows-Explorer Fenster.
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,12 +49,12 @@ IShellDispatch.Explore( _
 
 <dl> <dt>
 
-*vdir* \[ in\]
+*vDir* \[ In\]
 </dt> <dd>
 
 Typ: **Variant**
 
-Der Ordner, der angezeigt werden soll. Dabei kann es sich um eine Zeichenfolge handeln, die den Pfad des Ordners oder einen der [**shellspecialfolderconstants**](/windows/desktop/api/Shldisp/ne-shldisp-shellspecialfolderconstants) -Werte angibt. Beachten Sie, dass die in **shellspecialfolderconstants** gefundenen Konstanten Namen in Visual Basic verfügbar sind, jedoch nicht in VBScript oder JScript. In diesen Fällen müssen die numerischen Werte an ihrer Stelle verwendet werden.
+Der anzuzeigende Ordner. Dies kann eine Zeichenfolge sein, die den Pfad des Ordners oder einen der [**ShellSpecialFolderConstants-Werte angibt.**](/windows/desktop/api/Shldisp/ne-shldisp-shellspecialfolderconstants) Beachten Sie, dass die konstanten Namen in **ShellSpecialFolderConstants** in Visual Basic, aber nicht in VBScript oder JScript verfügbar sind. In diesen Fällen müssen die numerischen Werte an ihrer Stelle verwendet werden.
 
 </dd> </dl>
 
@@ -70,13 +70,13 @@ Diese Methode gibt keinen Wert zurück.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Diese Methode ist implementiert, und der Zugriff erfolgt über die [**Shell. explore**](shell-explore.md) -Methode.
+Diese Methode wird implementiert und über die [**Shell.Explore-Methode**](shell-explore.md) aufgerufen.
 
 ## <a name="examples"></a>Beispiele
 
-In den folgenden Beispielen wird die Verwendung von unter **Suchen** in JScript, VBScript und Visual Basic veranschaulicht.
+Die folgenden Beispiele zeigen die Verwendung von **Explore** in JScript, VBScript und Visual Basic.
 
-JScript
+Jscript:
 
 
 ```JScript
@@ -92,7 +92,7 @@ JScript
 
 
 
-VBScript
+Vbscript:
 
 
 ```VB
@@ -128,17 +128,17 @@ End Sub
 
 
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, Windows XP \[ Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Client)<br/> | Nur Windows 2000 Professional- und Windows \[ XP-Desktop-Apps\]<br/>                                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                           |
-| Header<br/>                   | <dl> <dt>Shldisp. h</dt> </dl>                           |
-| IDL<br/>                      | <dl> <dt>Shldisp. idl</dt> </dl>                         |
-| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4,71 oder höher)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>                           |
+| Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                         |
+| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4.71 oder höher)</dt> </dl> |
 
 
 

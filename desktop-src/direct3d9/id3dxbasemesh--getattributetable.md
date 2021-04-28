@@ -1,7 +1,7 @@
 ---
-description: Ruft entweder eine Attribut Tabelle für ein Mesh oder die Anzahl der in einer Attribut Tabelle gespeicherten Einträge für ein Mesh ab.
+description: 'ID3DXBaseMesh::GetAttributeTable-Methode: Ruft entweder eine Attributtabelle für ein Gitternetz oder die Anzahl von Einträgen ab, die in einer Attributtabelle für ein Gitternetz gespeichert sind.'
 ms.assetid: 15b24137-0ff9-4299-971b-90fa4ef2686d
-title: 'ID3DXBaseMesh:: GetAttributeTable-Methode (D3DX9Mesh. h)'
+title: ID3DXBaseMesh::GetAttributeTable-Methode (D3DX9Mesh.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 70c93c8f477655200418793f53706731b42a47ac
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 7f5d27de884f72b46db900487e26f1099bf30949
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106370442"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108115448"
 ---
-# <a name="id3dxbasemeshgetattributetable-method"></a>ID3DXBaseMesh:: GetAttributeTable-Methode
+# <a name="id3dxbasemeshgetattributetable-method"></a>ID3DXBaseMesh::GetAttributeTable-Methode
 
-Ruft entweder eine Attribut Tabelle für ein Mesh oder die Anzahl der in einer Attribut Tabelle gespeicherten Einträge für ein Mesh ab.
+Ruft entweder eine Attributtabelle für ein Gitternetz oder die Anzahl der Einträge ab, die in einer Attributtabelle für ein Gitternetz gespeichert sind.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,21 +41,21 @@ HRESULT GetAttributeTable(
 
 <dl> <dt>
 
-*pattribtable* \[ in, out\]
+*pAttribTable* \[ in, out\]
 </dt> <dd>
 
 Typ: **[ **D3DXATTRIBUTERANGE**](d3dxattributerange.md)\***
 
-Zeiger auf ein Array von [**D3DXATTRIBUTERANGE**](d3dxattributerange.md) -Strukturen, das die Einträge in der Attribut Tabelle des Mesh darstellt. Geben Sie **null** an, um den Wert für pattribtablesize abzurufen.
+Zeiger auf ein Array von [**D3DXATTRIBUTERANGE-Strukturen,**](d3dxattributerange.md) das die Einträge in der Attributtabelle des Gitters darstellt. Geben Sie **NULL** an, um den Wert für pAttribTableSize abzurufen.
 
 </dd> <dt>
 
-*pattribtablesize* \[ in, out\]
+*pAttribTableSize* \[ in, out\]
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)\***
 
-Ein Zeiger auf die Anzahl der in pattribtable gespeicherten Einträge oder ein Wert, der mit der Anzahl der in der Attribut Tabelle für das Mesh gespeicherten Einträge aufgefüllt werden soll.
+Zeiger auf die Anzahl der in pAttribTable gespeicherten Einträge oder auf einen Wert, der mit der Anzahl von Einträgen gefüllt werden soll, die in der Attributtabelle für das Gitternetz gespeichert sind.
 
 </dd> </dl>
 
@@ -63,26 +63,26 @@ Ein Zeiger auf die Anzahl der in pattribtable gespeicherten Einträge oder ein W
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert "D3DERR \_ invalidcall" lauten.
+Wenn die Methode erfolgreich ist, lautet der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert D3DERR \_ INVALIDCALL sein.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Eine Attribut Tabelle wird von [**ID3DXMesh:: optimiert**](id3dxmesh--optimize.md) erstellt und D3DXMESHOPT \_ attrsort für den flags-Parameter übergeben.
+Eine Attributtabelle wird von [**ID3DXMesh::Optimize**](id3dxmesh--optimize.md) erstellt und D3DXMESHOPT \_ ATTRSORT für den Flags-Parameter übergeben.
 
-Eine Attribut Tabelle wird verwendet, um Bereiche des Netzes zu identifizieren, die mit unterschiedlichen Texturen, renderzuständen, Materialien usw. gezeichnet werden müssen. Außerdem kann die Anwendung die Attribut Tabelle verwenden, um Teile eines Netzes auszublenden, indem beim Zeichnen des Frames kein angegebener Attribut Bezeichner gezeichnet wird.
+Eine Attributtabelle wird verwendet, um Bereiche des Gitternetzes zu identifizieren, die mit unterschiedlichen Texturen, Renderzuständen, Materialien usw. gezeichnet werden müssen. Darüber hinaus kann die Anwendung die Attributtabelle verwenden, um Teile eines Gitternetzes auszublenden, indem beim Zeichnen des Rahmens kein angegebener Attributbezeichner gezeichnet wird.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Mesh. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX9Mesh.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

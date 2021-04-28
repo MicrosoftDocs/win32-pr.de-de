@@ -1,7 +1,7 @@
 ---
-description: Die Methode "Peer-ID" gibt einen Zeiger auf die Zuweisung der PIN zurück. Die-Methode erhöht nicht den Verweis Zähler für die-Schnittstelle.
+description: 'CTransInPlaceInputPin.PeekAllocator-Methode: Die PeekAllocator-Methode gibt einen Zeiger auf die Zuweisung des Pins zurück. Die -Methode erhöht den Verweiszähler für die Schnittstelle nicht.'
 ms.assetid: 67f1b872-4ae2-4fbe-9240-801ef8ae1e5b
-title: Ctransinplaceinputpin. Peer-zuordcator-Methode (transip. h)
+title: CTransInPlaceInputPin.PeekAllocator-Methode (Transip.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 22358dd776a0536cfbae819ec7cace02dd1775a3
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: f7a5f7cb0fbe754890b1d7930bb54c6fca47afa5
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106366945"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108084668"
 ---
-# <a name="ctransinplaceinputpinpeekallocator-method"></a>Ctransinplaceinputpin. Peer-zuordcator-Methode
+# <a name="ctransinplaceinputpinpeekallocator-method"></a>CTransInPlaceInputPin.PeekAllocator-Methode
 
-Die `PeekAllocator` -Methode gibt einen Zeiger auf die Zuweisung der PIN zurück. Die-Methode erhöht nicht den Verweis Zähler für die-Schnittstelle.
+Die `PeekAllocator` -Methode gibt einen Zeiger auf die Zuweisung des Pins zurück. Die -Methode erhöht den Verweiszähler für die Schnittstelle nicht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,24 +42,24 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt die [**cbaseingeputpin:: m \_ pallocator**](cbaseinputpin-m-pallocator.md) -Member-Variable zurück.
+Gibt die [**CBaseInputPin::m \_ pAllocator-Membervariable**](cbaseinputpin-m-pallocator.md) zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Transip. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Transip.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Ctransinplaceinputpin-Klasse**](ctransinplaceinputpin.md)
+[**CTransInPlaceInputPin-Klasse**](ctransinplaceinputpin.md)
 </dt> </dl>
 
  
