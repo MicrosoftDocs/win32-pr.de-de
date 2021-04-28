@@ -1,7 +1,7 @@
 ---
-description: 'Die findpin-Methode ruft die PIN mit dem angegebenen Bezeichner ab. Diese Methode implementiert die ibasefilter:: findpin-Methode.'
+description: 'CBaseFilter.FindPin-Methode: Die FindPin-Methode ruft den Pin mit dem angegebenen Bezeichner ab. Diese Methode implementiert die IBaseFilter::FindPin-Methode.'
 ms.assetid: 152e4ff3-2809-4c57-b9c8-f51fc50b3703
-title: Cbasefilter. findpin-Methode (amfilter. h)
+title: CBaseFilter.FindPin-Methode (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 98b49c547ec59a74185f7f719da660220de8480f
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 2bbef9b051a42597b2585a432f544eead4e2e0a1
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106360927"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108099818"
 ---
-# <a name="cbasefilterfindpin-method"></a>Cbasefilter. findpin-Methode
+# <a name="cbasefilterfindpin-method"></a>CBaseFilter.FindPin-Methode
 
-Die- `FindPin` Methode ruft die PIN mit dem angegebenen Bezeichner ab. Diese Methode implementiert die [**ibasefilter:: findpin**](/windows/desktop/api/Strmif/nf-strmif-ibasefilter-findpin) -Methode.
+Die `FindPin` -Methode ruft den Pin mit dem angegebenen Bezeichner ab. Diese Methode implementiert die [**IBaseFilter::FindPin-Methode.**](/windows/desktop/api/Strmif/nf-strmif-ibasefilter-findpin)
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,28 +46,28 @@ HRESULT FindPin(
 *Id* 
 </dt> <dd>
 
-Zeiger auf eine Konstante, mit NULL endender Unicode-Zeichenfolge, die die PIN identifiziert.
+Zeiger auf eine konstante, mit NULL endende Unicode-Zeichenfolge, die den Pin identifiziert.
 
 </dd> <dt>
 
-*pppin* 
+*ppPin* 
 </dt> <dd>
 
-Adresse einer Variablen, die einen Zeiger auf die [**IPin**](/windows/desktop/api/Strmif/nn-strmif-ipin) -Schnittstelle der PIN empfängt.
+Adresse einer Variablen, die einen Zeiger auf die [**IPin-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-ipin) des Pins empfängt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen der folgenden **HRESULT** -Werte zurück.
+Gibt einen der folgenden **HRESULT-Werte** zurück.
 
 
 
 | Rückgabecode                                                                                       | Beschreibung                               |
 |---------------------------------------------------------------------------------------------------|-------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>              | Erfolg.<br/>                       |
-| <dl> <dt>**E- \_ Zeiger**</dt> </dl>         | **Null** -Zeigerargument.<br/>     |
-| <dl> <dt>**VFW \_ E \_ nicht \_ gefunden**</dt> </dl> | Es konnte keine passende Pin gefunden werden.<br/> |
+| <dl> <dt>**E \_ POINTER**</dt> </dl>         | **NULL-Zeigerargument.**<br/>     |
+| <dl> <dt>**VFW \_ E \_ NICHT \_ GEFUNDEN**</dt> </dl> | Ein übereinstimmender Pin wurde nicht gefunden.<br/> |
 
 
 
@@ -75,26 +75,26 @@ Gibt einen der folgenden **HRESULT** -Werte zurück.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Diese Methode ruft die [**cbasepin:: Name**](cbasepin-name.md) -Methode auf, um den Namen jeder PIN mit der durch den *ID* -Parameter angegebenen Zeichenfolge zu vergleichen.
+Diese Methode ruft die [**CBasePin::Name-Methode**](cbasepin-name.md) auf, um den Namen jedes Pins mit der zeichenfolge zu vergleichen, die durch den *Id-Parameter* angegeben wird.
 
-Wenn die Methode erfolgreich ausgeführt wird, hat die **IPin** -Schnittstelle einen ausstehenden Verweis Zähler. Stellen Sie sicher, dass Sie Sie freigeben, wenn Sie dies erledigt haben.
+Wenn die Methode erfolgreich ist, verfügt die **IPin-Schnittstelle** über einen ausstehenden Verweiszähler. Stellen Sie sicher, dass Sie es freigeben, wenn Sie fertig sind.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (streams.h einschließen)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbasefilter-Klasse**](cbasefilter.md)
+[**CBaseFilter-Klasse**](cbasefilter.md)
 </dt> </dl>
 
  

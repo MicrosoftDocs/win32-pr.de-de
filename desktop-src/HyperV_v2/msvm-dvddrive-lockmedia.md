@@ -1,7 +1,7 @@
 ---
-description: Sperrt oder gibt die Medien frei.
+description: LockMedia-Methode der Msvm_DVDDrive - Sperrt oder gibt die Medien frei.
 ms.assetid: 924bc20a-901b-4618-be49-eaacf80c9465
-title: Lockmedia-Methode der Msvm_DVDDrive-Klasse
+title: LockMedia-Methode der Msvm_DVDDrive-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,14 +13,14 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 650a868d8e25e2ccc47271e49634827fe7d3d967
-ms.sourcegitcommit: c16214e53680dc71d1c07111b51f72b82a4512d8
+ms.openlocfilehash: e00780fbeeeec60563b31008c8e5979a09f9d173
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "104132193"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108119148"
 ---
-# <a name="lockmedia-method-of-the-msvm_dvddrive-class"></a>Lockmedia-Methode der MSVM- \_ dvddrive-Klasse
+# <a name="lockmedia-method-of-the-msvm_dvddrive-class"></a>LockMedia-Methode der Msvm \_ DVDDrive-Klasse
 
 Sperrt oder gibt die Medien frei.
 
@@ -39,10 +39,10 @@ uint32 LockMedia(
 
 <dl> <dt>
 
-*Sperre* \[ in\]
+*Sperre* \[ In\]
 </dt> <dd>
 
-" **true** ", um die Medien zu sperren. **false** zum Freigeben der Medien.
+**TRUE,** um das Medium zu sperren; **FALSE,** um die Medien frei zu geben.
 
 </dd> </dl>
 
@@ -62,21 +62,21 @@ Diese Methode gibt einen der folgenden Werte zurück:
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8.1<br/>                                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2<br/>                                                                       |
 | Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**MSVM \_ dvddrive**](msvm-dvddrive.md)
+[**Msvm \_ DVDDrive**](msvm-dvddrive.md)
 </dt> </dl>
 
  

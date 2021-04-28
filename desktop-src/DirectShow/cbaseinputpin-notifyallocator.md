@@ -1,7 +1,7 @@
 ---
-description: 'Die notifyzucator-Methode gibt eine Zuweisung für die Verbindung an. Mit dieser Methode wird die IMemInputPin:: notifyzucator-Methode implementiert.'
+description: 'CBaseInputPin.NotifyAllocator-Methode: Die NotifyAllocator-Methode gibt eine Zuweisung für die Verbindung an. Diese Methode implementiert die IMemInputPin::NotifyAllocator-Methode.'
 ms.assetid: 16167bd5-2d33-4329-87ec-6a6c578e0060
-title: Cbaseingeputpin. notifyzucator-Methode (amfilter. h)
+title: CBaseInputPin.NotifyAllocator-Methode (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: ce5bc3cfe165b1adb6b5b970ca43d31c8ace98f2
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: c63e448d0cf2d287a441a4983f6a2e06bd9b8151
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106355996"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108099715"
 ---
-# <a name="cbaseinputpinnotifyallocator-method"></a>Cbaseingeputpin. notifyzucator-Methode
+# <a name="cbaseinputpinnotifyallocator-method"></a>CBaseInputPin.NotifyAllocator-Methode
 
-Die- `NotifyAllocator` Methode gibt eine Zuweisung für die Verbindung an. Mit dieser Methode wird die [**IMemInputPin:: notifyzucator**](/windows/desktop/api/Strmif/nf-strmif-imeminputpin-notifyallocator) -Methode implementiert.
+Die `NotifyAllocator` -Methode gibt eine Zuweisung für die Verbindung an. Diese Methode implementiert die [**IMemInputPin::NotifyAllocator-Methode.**](/windows/desktop/api/Strmif/nf-strmif-imeminputpin-notifyallocator)
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,17 +43,17 @@ HRESULT NotifyAllocator(
 
 <dl> <dt>
 
-*pallocator* 
+*pAllocator* 
 </dt> <dd>
 
-Ein Zeiger auf die [**imemfercator**](/windows/desktop/api/Strmif/nn-strmif-imemallocator) -Schnittstelle des Zuordners.
+Zeiger auf die [**IMemAllocator-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-imemallocator) der Zuweisung.
 
 </dd> <dt>
 
-*nur Bread* 
+*bReadOnly* 
 </dt> <dd>
 
-Flag, das angibt, ob Beispiele aus dieser Zuweisung schreibgeschützt sind. **True** gibt an, dass die Beispiele schreibgeschützt sind.
+Flag, das angibt, ob Beispiele aus dieser Zuweisung schreibgeschützt sind. True gibt an, dass Beispiele schreibgeschützt sind.
 
 </dd> </dl>
 
@@ -63,24 +63,24 @@ Gibt S \_ OK zurück.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Während der Pin-Verbindung wählt die Ausgabe-PIN eine Zuweisung aus und ruft diese Methode auf, um die Eingabe-PIN zu benachrichtigen. Die Ausgabepin kann die Zuweisung verwenden, die die Eingabe-PIN in der [**IMemInputPin:: getallocator**](/windows/desktop/api/Strmif/nf-strmif-imeminputpin-getallocator) -Methode vorgeschlagen hat, oder Sie kann Ihre eigene Zuweisung bereitstellen.
+Während der Stecknadelverbindung wählt der Ausgabepin eine Zuweisung aus und ruft diese Methode auf, um den Eingabepin zu benachrichtigen. Der Ausgabepin kann die Zuweisung verwenden, die der Eingabepin in der [**IMemInputPin::GetAllocator-Methode**](/windows/desktop/api/Strmif/nf-strmif-imeminputpin-getallocator) vorgeschlagen hat, oder er kann einen eigenen Allocator bereitstellen.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (streams.h einschließen)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbaseingeputpin-Klasse**](cbaseinputpin.md)
+[**CBaseInputPin-Klasse**](cbaseinputpin.md)
 </dt> </dl>
 
  

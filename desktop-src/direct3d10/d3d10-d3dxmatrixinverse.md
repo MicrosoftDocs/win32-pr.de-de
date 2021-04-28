@@ -1,7 +1,7 @@
 ---
-description: Berechnet den umgekehrten einer Matrix.
+description: 'D3DXMatrixInverse-Funktion (D3DX10Math.h): Berechnet die Umkehrung einer Matrix.'
 ms.assetid: 928a201b-814d-41cc-bfab-d2f8a12addeb
-title: D3DXMatrixInverse-Funktion (D3DX10Math. h)
+title: D3DXMatrixInverse-Funktion (D3DX10Math.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: cc075609ea118e12b46846f649d689f6fbc2caf7
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 6b42cf0ae3f9ee1154d385600b00a2dcb10c4fd9
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104531043"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108113198"
 ---
-# <a name="d3dxmatrixinverse-function-d3dx10mathh"></a>D3DXMatrixInverse-Funktion (D3DX10Math. h)
+# <a name="d3dxmatrixinverse-function-d3dx10mathh"></a>D3DXMatrixInverse-Funktion (D3DX10Math.h)
 
-Berechnet den umgekehrten einer Matrix.
+Berechnet die Umkehrung einer Matrix.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,30 +42,30 @@ D3DXMATRIX* D3DXMatrixInverse(
 
 <dl> <dt>
 
-*Pout* \[ in, out\]
+*pOut* \[ in, out\]
 </dt> <dd>
 
 Typ: **[ **D3DXMATRIX**](../direct3d9/d3dxmatrix.md)\***
 
-Ein Zeiger auf die [**D3DXMATRIX**](d3d10-d3dxmatrix.md) -Struktur, die das Ergebnis des Vorgangs ist.
+Zeiger auf die [**D3DXMATRIX-Struktur,**](d3d10-d3dxmatrix.md) die das Ergebnis des Vorgangs ist.
 
 </dd> <dt>
 
-*pdeterminant* \[ in, out\]
+*pDeterminant* \[ in, out\]
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)\***
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)\***
 
-Ein Zeiger auf einen float-Wert, der den Determinanten der Matrix enthält. Wenn die Determinante nicht benötigt wird, legen Sie diesen Parameter auf **null** fest.
+Zeiger auf einen FLOAT-Wert, der die Determinante der Matrix enthält. Wenn die Determinante nicht benötigt wird, legen Sie diesen Parameter auf **NULL fest.**
 
 </dd> <dt>
 
-*pm* \[ in\]
+*pM* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXMATRIX**](../direct3d9/d3dxmatrix.md) \***
+Typ: **const [**D3DXMATRIX**](../direct3d9/d3dxmatrix.md) \***
 
-Ein Zeiger auf die Quell-D3DXMATRIX-Struktur.
+Zeiger auf die D3DXMATRIX-Quellstruktur.
 
 </dd> </dl>
 
@@ -73,22 +73,22 @@ Ein Zeiger auf die Quell-D3DXMATRIX-Struktur.
 
 Typ: **[ **D3DXMATRIX**](../direct3d9/d3dxmatrix.md)\***
 
-Zeiger auf eine D3DXMATRIX-Struktur, die die Umkehrung der Matrix ist. Wenn die Matrix Inversion fehlschlägt, wird **null** zurückgegeben.
+Zeiger auf eine D3DXMATRIX-Struktur, die die Umkehrung der Matrix darstellt. Wenn die Matrixinversion fehlschlägt, **wird NULL** zurückgegeben.
 
-Der Rückgabewert für diese Funktion ist derselbe Wert, der im Pout-Parameter zurückgegeben wird. Auf diese Weise kann die D3DXMatrixInverse-Funktion als Parameter für eine andere Funktion verwendet werden.
+Der Rückgabewert für diese Funktion ist der gleiche Wert, der im pOut-Parameter zurückgegeben wird. Auf diese Weise kann die D3DXMatrixInverse-Funktion als Parameter für eine andere Funktion verwendet werden.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX10Math. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx10. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX10Math.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

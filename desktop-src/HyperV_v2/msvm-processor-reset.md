@@ -1,7 +1,7 @@
 ---
-description: Fordert eine zurück Setzung an.
+description: Reset-Methode der Msvm_Processor - Fordert eine Zurücksetzung an.
 ms.assetid: c69b5c65-8f00-48ed-8602-7e0c5a76653d
-title: Reset-Methode der Msvm_Processor-Klasse
+title: Reset-Methode der Msvm_Processor Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: aaa0c74ac71e4c3d1be4b9580353c15f5ed94dca
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: eecd8f240f2d5c7dc1c2c1b98c0503f54a5c8050
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106363507"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108111568"
 ---
-# <a name="reset-method-of-the-msvm_processor-class"></a>Reset-Methode der MSVM- \_ Prozessor Klasse
+# <a name="reset-method-of-the-msvm_processor-class"></a>Reset-Methode der Msvm \_ Processor-Klasse
 
-Fordert eine zurück Setzung an.
+Fordert eine Zurücksetzung an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -53,21 +53,21 @@ Diese Methode gibt einen der folgenden Werte zurück:
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8.1<br/>                                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2<br/>                                                                       |
 | Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**MSVM- \_ Prozessor**](msvm-processor.md)
+[**Msvm-Prozessor \_**](msvm-processor.md)
 </dt> </dl>
 
  

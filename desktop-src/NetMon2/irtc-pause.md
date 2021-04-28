@@ -1,7 +1,7 @@
 ---
-description: Die Pause-Methode hält die aktuelle Erfassung an.
+description: 'IRTC::P ause-Methode: Die Pause-Methode hält die aktuelle Erfassung an.'
 ms.assetid: 8c7b310e-de04-4bd8-9c96-3c5948e610be
-title: Untc::P ause-Methode (Netmon. h)
+title: IRTC::P ause-Methode (Netmon.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - Ndisnpp.dll
 - Rmtnpp.dll
-ms.openlocfilehash: d2593c380d0fea52d030586da2f473a3f3fa9446
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d42af1912365a4237889e4e46d0fb3343377c772
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104215471"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108110678"
 ---
-# <a name="irtcpause-method"></a>Untc::P ause-Methode
+# <a name="irtcpause-method"></a>IRTC::P ause-Methode
 
-Die **Pause** -Methode hält die aktuelle Erfassung an.
+Die **Pause-Methode** hält die aktuelle Erfassung an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,7 +40,7 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Methode erfolgreich ist, ist der Rückgabewert nmerr \_ Success.
+Wenn die Methode erfolgreich ist, lautet der Rückgabewert NMERR \_ SUCCESS.
 
 Wenn die Methode nicht erfolgreich ist, ist der Rückgabewert einer der folgenden Fehlercodes:
 
@@ -48,10 +48,10 @@ Wenn die Methode nicht erfolgreich ist, ist der Rückgabewert einer der folgende
 
 | Rückgabecode                                                                                           | Beschreibung                                                                                                                   |
 |-------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**nmerr- \_ Erfassung \_ angehalten**</dt> </dl> | Die Erfassung wurde bereits angehalten.<br/>                                                                                     |
-| <dl> <dt>**nmerr wird \_ nicht \_ erfasst**</dt> </dl>  | Der NPP erfasst keine Daten. Wenden Sie zum Starten der Erfassung den Befehl " [irren:: Start](irtc-start.md) " an.<br/>                            |
-| <dl> <dt>**nmerr \_ nicht \_ verbunden**</dt> </dl>  | Der npp ist nicht mit dem Netzwerk verbunden. Wenden [Sie](irtc-connect.md) sich an, um den NPP mit dem Netzwerk zu verbinden.<br/> |
-| <dl> <dt>**nmerr \_ nicht in \_ Echtzeit**</dt> </dl>   | Der npp ist mit dem Netzwerk verbunden, jedoch nicht mit der Methode " [iritc:: Connect](irtc-connect.md) ".<br/>                     |
+| <dl> <dt>**NMERR \_ CAPTURE \_ PAUSED**</dt> </dl> | Die Erfassung ist bereits angehalten.<br/>                                                                                     |
+| <dl> <dt>**NMERR \_ NICHT \_ ERFASSEN**</dt> </dl>  | Das NPP erfasst keine Daten. Rufen Sie [IRTC::Start](irtc-start.md) auf, um die Erfassung zu starten.<br/>                            |
+| <dl> <dt>**NMERR \_ NICHT \_ VERBUNDEN**</dt> </dl>  | Das NPP ist nicht mit dem Netzwerk verbunden. Rufen Sie [IRTC::Connect](irtc-connect.md) auf, um das NPP mit dem Netzwerk zu verbinden.<br/> |
+| <dl> <dt>**NMERR \_ NOT \_ REALTIME**</dt> </dl>   | Das NPP ist mit dem Netzwerk verbunden, jedoch nicht mit der [IRTC::Connect-Methode.](irtc-connect.md)<br/>                     |
 
 
 
@@ -59,42 +59,42 @@ Wenn die Methode nicht erfolgreich ist, ist der Rückgabewert einer der folgende
 
 ## <a name="remarks"></a>Bemerkungen
 
-Während sich die Erfassung in einem angehaltenen Zustand befindet, werden neue Frames erst aufgezeichnet, wenn die Methode " [iritc:: Resume](irtc-resume.md) " aufgerufen wird, um die Erfassung neu zu starten.
+Während sich die Erfassung in einem angehaltenen Zustand befindet, werden neue Frames erst erfasst, wenn die [IRTC::Resume-Methode](irtc-resume.md) aufgerufen wird, um die Erfassung neu zu starten.
 
-Wenn Sie die Methode **IRTC::P ause** und **IRTC:: Resume** zum Steuern der Erfassung verwenden, werden Netzwerkmonitor weiterhin [*Konversations Statistiken*](c.md) hinzufügen, sobald die Erfassung ausgeführt wird.
+Wenn Sie die **Methoden IRTC::P ause** und **IRTC::Resume** verwenden, um die Erfassung zu steuern, fügt Netzwerkmonitor bei jeder Ausführung der Erfassung [*weiterhin Konversationsstatistiken*](c.md) hinzu.
 
-Zum Neustarten des Aufzeichnungs Aufrufes " [untc:: Resume](irtc-resume.md)". Um die Erfassung zu verhindern, nennen Sie " [irren:: Ende](irtc-stop.md)".
+Um den Aufzeichnungsaufruf neu zu starten, rufen [Sie IRTC::Resume auf.](irtc-resume.md) Um die Erfassung zu beenden, rufen Sie [IRTC::Stop](irtc-stop.md)auf.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                                                                     |
-| Header<br/>                   | <dl> <dt>Netmon. h</dt> </dl>                                                                      |
+| Header<br/>                   | <dl> <dt>Netmon.h</dt> </dl>                                                                      |
 | DLL<br/>                      | <dl> <dt>Ndisnpp.dll; </dt> <dt>Rmtnpp.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-["Iran"](irtc.md)
+[IRTC](irtc.md)
 </dt> <dt>
 
-[Iran:: Connect](irtc-connect.md)
+[IRTC::Connect](irtc-connect.md)
 </dt> <dt>
 
-[Iran:: Resume](irtc-resume.md)
+[IRTC::Resume](irtc-resume.md)
 </dt> <dt>
 
-["Iran:: Start"](irtc-start.md)
+[IRTC::Start](irtc-start.md)
 </dt> <dt>
 
-[Iran:: Beendigung](irtc-stop.md)
+[IRTC::Stop](irtc-stop.md)
 </dt> </dl>
 
  

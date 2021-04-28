@@ -1,7 +1,7 @@
 ---
-description: Die gettotalstatistics-Methode ruft die Gesamtstatistik für die aktuelle Erfassung ab.
+description: 'IRTC::GetTotalStatistics-Methode: Die GetTotalStatistics-Methode ruft die Gesamtstatistik für die aktuelle Erfassung ab.'
 ms.assetid: e5098984-c69e-4cd5-9143-d85dfcbd7b92
-title: 'Untc:: gettotalstatistics-Methode (Netmon. h)'
+title: IRTC::GetTotalStatistics-Methode (Netmon.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - Ndisnpp.dll
 - Rmtnpp.dll
-ms.openlocfilehash: 27128048b4326aae14ae6a2e2e6c0540b1105538
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8ed659efe388f4eb9c9ac8afd6aa2c74fd0af7d3
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106358826"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108110688"
 ---
-# <a name="irtcgettotalstatistics-method"></a>Untc:: gettotalstatistics-Methode
+# <a name="irtcgettotalstatistics-method"></a>IRTC::GetTotalStatistics-Methode
 
-Die **gettotalstatistics** -Methode ruft die [*Gesamtstatistik*](t.md) für die aktuelle [*Erfassung*](c.md)ab.
+Die **GetTotalStatistics-Methode** ruft die [*Gesamtstatistik*](t.md) für die aktuelle [*Erfassung*](c.md)ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,23 +41,23 @@ HRESULT STDMETHODCALLTYPE GetTotalStatistics(
 
 <dl> <dt>
 
-*lpstats* \[ vorgenommen\]
+*lpStats* \[ out\]
 </dt> <dd>
 
-Zeiger auf eine [Statistik](statistics.md) Struktur, die die Gesamtstatistik für die Erfassung bereitstellt. Die Aufrufer sind dafür verantwortlich, den von der **Statistik** Struktur genutzten Arbeitsspeicher zuzuordnen und freizugeben.
+Zeiger auf eine [STATISTICS-Struktur,](statistics.md) die die Gesamtstatistik für die Erfassung bereitstellt. Es liegt in der Verantwortung der Aufrufer, den von der **STATISTICS-Struktur** verwendeten Arbeitsspeicher zuzuordnen und freizugeben.
 
 </dd> <dt>
 
-*f/oder Lese* \[ Vorgänge in\]
+*fClearAfterReading* \[ In\]
 </dt> <dd>
 
-Flag, mit dem Netzwerkmonitor wird, wie der interne Speicher der gesamten Statistik behandelt werden soll. Die Einstellung **true** weist Netzwerkmonitor an, den internen Speicher der gesamten Statistik zu löschen, nachdem die aktuellen Informationen abgerufen wurden.
+Flag, das verwendet wird, um Netzwerkmonitor zu informieren, wie der interne Speicher der Gesamtstatistik behandelt werden soll. Die Einstellung **TRUE** weist Netzwerkmonitor an, den internen Speicher der Gesamtstatistik zu löschen, nachdem die aktuellen Informationen abgerufen wurden.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Methode erfolgreich ist, ist der Rückgabewert nmerr \_ Success.
+Wenn die Methode erfolgreich ist, lautet der Rückgabewert NMERR \_ SUCCESS.
 
 Wenn die Methode nicht erfolgreich ist, ist der Rückgabewert einer der folgenden Fehlercodes:
 
@@ -65,9 +65,9 @@ Wenn die Methode nicht erfolgreich ist, ist der Rückgabewert einer der folgende
 
 | Rückgabecode                                                                                          | Beschreibung                                                                                                                   |
 |------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**nmerr \_ nicht \_ verbunden**</dt> </dl> | Der npp ist nicht mit dem Netzwerk verbunden. Wenden [Sie](irtc-connect.md) sich an, um den NPP mit dem Netzwerk zu verbinden.<br/> |
-| <dl> <dt>**nmerr \_ nicht in \_ Echtzeit**</dt> </dl>  | Der npp ist mit dem Netzwerk verbunden, jedoch nicht mit der Methode " [iritc:: Connect](irtc-connect.md) ".<br/>                     |
-| <dl> <dt>**nmerr wird \_ nicht \_ erfasst**</dt> </dl> | Der NPP erfasst keine Daten. Nennen Sie " [untc:: Start](irtc-start.md) ", um die Datenerfassung zu starten<br/>                         |
+| <dl> <dt>**NMERR \_ NICHT \_ VERBUNDEN**</dt> </dl> | Das NPP ist nicht mit dem Netzwerk verbunden. Rufen Sie [IRTC::Connect](irtc-connect.md) auf, um das NPP mit dem Netzwerk zu verbinden.<br/> |
+| <dl> <dt>**NMERR \_ NOT \_ REALTIME**</dt> </dl>  | Das NPP ist mit dem Netzwerk verbunden, jedoch nicht mit der [IRTC::Connect-Methode.](irtc-connect.md)<br/>                     |
+| <dl> <dt>**NMERR \_ NICHT \_ ERFASSEN**</dt> </dl> | Das NPP erfasst keine Daten. Rufen Sie [IRTC::Start](irtc-start.md) auf, um mit der Erfassung von Daten zu beginnen.<br/>                         |
 
 
 
@@ -75,40 +75,40 @@ Wenn die Methode nicht erfolgreich ist, ist der Rückgabewert einer der folgende
 
 ## <a name="remarks"></a>Bemerkungen
 
-Diese Methode gibt nur Daten zurück, während eine Erfassung ausgeführt wird, einschließlich der Pause, während die Erfassung angehalten wird.
+Diese Methode gibt Daten nur zurück, während eine Erfassung in Bearbeitung ist, einschließlich, während die Erfassung angehalten wird.
 
-Netzwerkmonitor speichert auch [*Konversations Statistiken*](c.md). Um Konversations Statistiken abzurufen, rufen Sie die Methode " [iritc:: getconversation ationstatistics](irtc-getconversationstatistics.md) " auf.
+Netzwerkmonitor speichert auch [*Konversationsstatistiken.*](c.md) Rufen Sie zum Abrufen von Konversationsstatistiken die [IRTC::GetConversationStatistics-Methode](irtc-getconversationstatistics.md) auf.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                                                                     |
-| Header<br/>                   | <dl> <dt>Netmon. h</dt> </dl>                                                                      |
+| Header<br/>                   | <dl> <dt>Netmon.h</dt> </dl>                                                                      |
 | DLL<br/>                      | <dl> <dt>Ndisnpp.dll; </dt> <dt>Rmtnpp.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-["Iran"](irtc.md)
+[IRTC](irtc.md)
 </dt> <dt>
 
-[Iran:: Connect](irtc-connect.md)
+[IRTC::Connect](irtc-connect.md)
 </dt> <dt>
 
-["Irren:: getconversation ationstatistics"](irtc-getconversationstatistics.md)
+[IRTC::GetConversationStatistics](irtc-getconversationstatistics.md)
 </dt> <dt>
 
-["Iran:: Start"](irtc-start.md)
+[IRTC::Start](irtc-start.md)
 </dt> <dt>
 
-[Kam](statistics.md)
+[Statistiken](statistics.md)
 </dt> </dl>
 
  

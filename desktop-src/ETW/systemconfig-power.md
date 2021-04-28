@@ -1,5 +1,5 @@
 ---
-description: Diese Klasse ist die Ereignistyp Klasse für Energie Konfigurations Ereignisse. Die folgende Syntax wird durch den MOF-Code vereinfacht.
+description: 'SystemConfig_Power Klasse: Diese Klasse ist die Ereignistypklasse für Energiekonfigurationsereignisse. Die folgende Syntax wird durch MOF-Code vereinfacht.'
 ms.assetid: 7065b0b0-9a1d-4fce-a494-5762d5efb239
 title: SystemConfig_Power-Klasse
 ms.topic: reference
@@ -20,18 +20,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: d27586451f944ac9c94e9ec2d204035c21f37679
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d7338faad8c313847ad7db7aaac5d4000abba5be
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104977473"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108106068"
 ---
-# <a name="systemconfig_power-class"></a>SystemConfig- \_ Power Class
+# <a name="systemconfig_power-class"></a>SystemConfig \_ Power Class
 
-Diese Klasse ist die Ereignistyp Klasse für Energie Konfigurations Ereignisse.
+Diese Klasse ist die Ereignistypklasse für Energiekonfigurationsereignisse.
 
-Die folgende Syntax wird durch den MOF-Code vereinfacht.
+Die folgende Syntax wird durch MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,26 +52,26 @@ class SystemConfig_Power : SystemConfig
 
 ## <a name="members"></a>Member
 
-Die **System config- \_ Power** Class verfügt über diese Typen von Membern:
+Die **SystemConfig \_ Power-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **System config- \_ Power** Class verfügt über diese Eigenschaften.
+Die **SystemConfig \_ Power-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 Pad1
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8**
+Datentyp: **uint8**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (6)
+Qualifizierer: WmiDataId(6)
 </dt> </dl>
 
 Nicht verwendet.
@@ -81,13 +81,13 @@ Nicht verwendet.
 Pad2
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8**
+Datentyp: **uint8**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (7)
+Qualifizierer: WmiDataId(7)
 </dt> </dl>
 
 Nicht verwendet.
@@ -97,13 +97,13 @@ Nicht verwendet.
 Pad3
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8**
+Datentyp: **uint8**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (8)
+Qualifizierer: WmiDataId(8)
 </dt> </dl>
 
 Nicht verwendet.
@@ -113,13 +113,13 @@ Nicht verwendet.
 s1
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8**
+Datentyp: **uint8**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (1)
+Qualifizierer: WmiDataId(1)
 </dt> </dl>
 
 True gibt an, dass das System den Ruhezustand S1 unterstützt.
@@ -129,75 +129,75 @@ True gibt an, dass das System den Ruhezustand S1 unterstützt.
 s2
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8**
+Datentyp: **uint8**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (2)
+Qualifizierer: WmiDataId(2)
 </dt> </dl>
 
-True gibt an, dass das System den Ruhezustand S2 unterstützt.
+True gibt an, dass das System den Standbyzustand S2 unterstützt.
 
 </dd> <dt>
 
 s3
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8**
+Datentyp: **uint8**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (3)
+Qualifizierer: WmiDataId(3)
 </dt> </dl>
 
-True gibt an, dass das System den Ruhezustand S3 unterstützt.
+True gibt an, dass das System den Standbyzustand S3 unterstützt.
 
 </dd> <dt>
 
-verkehrt
+s4
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8**
+Datentyp: **uint8**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (4)
+Qualifizierer: WmiDataId(4)
 </dt> </dl>
 
-True gibt an, dass das System den Ruhezustand S4 unterstützt.
+True gibt an, dass das System den Standbyzustand S4 unterstützt.
 
 </dd> <dt>
 
-S5
+s5
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8**
+Datentyp: **uint8**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (5)
+Qualifizierer: WmiDataId(5)
 </dt> </dl>
 
-True gibt an, dass das System den Ruhezustand S5 unterstützt.
+True gibt an, dass das System den Standbyzustand S5 unterstützt.
 
 </dd> </dl>
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 

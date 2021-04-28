@@ -1,5 +1,5 @@
 ---
-description: Diese Klasse ist die Ereignistyp Klasse für Registrierungs Ereignisse. Die folgende Syntax wird durch den MOF-Code vereinfacht.
+description: 'Registry_V0_TypeGroup1-Klasse: Diese Klasse ist die Ereignistypklasse für Registrierungsereignisse. Die folgende Syntax wird aus MOF-Code vereinfacht.'
 ms.assetid: 93031f3e-963f-46a6-9355-988eefd94836
 title: Registry_V0_TypeGroup1-Klasse
 ms.topic: reference
@@ -16,18 +16,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 9a72a0d6ddfe5e441b21dff4ba58fa3bb37457a6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 86f6d695afa2e05c87a076cf88ed8023e9416beb
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104977632"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108106188"
 ---
-# <a name="registry_v0_typegroup1-class"></a>Registry \_ v0 \_ TypeGroup1-Klasse
+# <a name="registry_v0_typegroup1-class"></a>Registry \_ V0 \_ TypeGroup1-Klasse
 
-Diese Klasse ist die Ereignistyp Klasse für Registrierungs Ereignisse.
+Diese Klasse ist die Ereignistypklasse für Registrierungsereignisse.
 
-Die folgende Syntax wird durch den MOF-Code vereinfacht.
+Die folgende Syntax wird aus MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,17 +44,17 @@ class Registry_V0_TypeGroup1 : Registry_V0
 
 ## <a name="members"></a>Member
 
-Die **Registrierungs Klasse " \_ v0 \_ TypeGroup1** " verfügt über diese Typen von Membern:
+Die **Klasse Registry \_ V0 \_ TypeGroup1** verfügt über folgende Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **Registrierungs Klasse " \_ v0 \_ TypeGroup1** " verfügt über diese Eigenschaften.
+Die **Klasse Registry \_ V0 \_ TypeGroup1** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-Verweilzeit
+ElapsedTime
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint64**
@@ -63,7 +63,7 @@ Datentyp: **sint64**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (3)
+Qualifizierer: WmiDataId(3)
 </dt> </dl>
 
 Verstrichene Zeit des Registrierungsvorgangs.
@@ -73,13 +73,13 @@ Verstrichene Zeit des Registrierungsvorgangs.
 KeyHandle
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (2), Zeiger
+Qualifizierer: WmiDataId(2), Zeiger
 </dt> </dl>
 
 Handle für den Registrierungsschlüssel.
@@ -89,13 +89,13 @@ Handle für den Registrierungsschlüssel.
 KeyName
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **String**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (4), stringbeendigung ("nullterminiert"), Format ("w")
+Qualifizierer: WmiDataId(4), StringTermination("NullTerminated"), Format("w")
 </dt> </dl>
 
 Der Name des Registrierungsschlüssels
@@ -105,27 +105,27 @@ Der Name des Registrierungsschlüssels
 Status
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (1), Zeiger
+Qualifizierer: WmiDataId(1), Zeiger
 </dt> </dl>
 
-Der NTSTATUS-Wert des Registrierungsvorgangs.
+NTSTATUS-Wert des Registrierungsvorgang.
 
 </dd> </dl>
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ XP-Desktop-Apps\]<br/>          |
+| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2003-Desktop-Apps\]<br/> |
 
 
 
@@ -133,7 +133,7 @@ Der NTSTATUS-Wert des Registrierungsvorgangs.
 
 <dl> <dt>
 
-[**Registrierung \_ v0**](registry-v0.md)
+[**Registrierung \_ V0**](registry-v0.md)
 </dt> </dl>
 
  

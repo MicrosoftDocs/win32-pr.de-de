@@ -1,23 +1,23 @@
 ---
-title: Tastatureingabe Konstanten
-description: .
+title: Tastatureingabekonst constants (Tastatureingabekonst constants)
+description: Tastatureingabekonst constants (Tastatureingabekonst constants)
 ms.assetid: 839c1c17-2c44-4ce0-a5e4-3613acea51ed
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6189722f80604769d14aa95fc59ca2e85b1b745a
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: d74d402d1bf9fd0bfc565a618a214c4f9ed6fcbf
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103709395"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108112958"
 ---
-# <a name="keyboard-input-constants"></a>Tastatureingabe Konstanten
+# <a name="keyboard-input-constants"></a>Tastatureingabekonst constants (Tastatureingabekonst constants)
 
--   [Codes von virtuellen Schlüsseln](virtual-key-codes.md)
+-   [Codes für virtuelle Schlüssel](virtual-key-codes.md)
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,5 +1,5 @@
 ---
-description: Diese Klasse ist die Ereignistyp Klasse für UDP/IP-Ereignisse. Die folgende Syntax wird durch den MOF-Code vereinfacht.
+description: 'UdpIp_V0_TypeGroup1 Klasse: Diese Klasse ist die Ereignistypklasse für UDP/IP-Ereignisse. Die folgende Syntax wird durch MOF-Code vereinfacht.'
 ms.assetid: 834a761a-089b-4b93-9a6a-a1edf752b582
 title: UdpIp_V0_TypeGroup1-Klasse
 ms.topic: reference
@@ -19,18 +19,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 2813476bc2c820d1872e787dc047fafccd3b7d52
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 78243a49e4504fd9e132407feebe98d9b48f7bdd
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103960359"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108105498"
 ---
-# <a name="udpip_v0_typegroup1-class"></a>Udpip \_ v0 \_ TypeGroup1-Klasse
+# <a name="udpip_v0_typegroup1-class"></a>UdpIp \_ V0 \_ TypeGroup1-Klasse
 
-Diese Klasse ist die Ereignistyp Klasse für UDP/IP-Ereignisse.
+Diese Klasse ist die Ereignistypklasse für UDP/IP-Ereignisse.
 
-Die folgende Syntax wird durch den MOF-Code vereinfacht.
+Die folgende Syntax wird durch MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -50,42 +50,42 @@ class UdpIp_V0_TypeGroup1 : UdpIp_V0
 
 ## <a name="members"></a>Member
 
-Die **udpip \_ v0 \_ TypeGroup1** -Klasse verfügt über diese Typen von Membern:
+Die **Klasse UdpIp \_ V0 \_ TypeGroup1** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **udpip \_ v0 \_ TypeGroup1** -Klasse verfügt über diese Eigenschaften.
+Die **Klasse UdpIp \_ V0 \_ TypeGroup1** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 context
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (1), Zeiger
+Qualifizierer: WmiDataId(1), Zeiger
 </dt> </dl>
 
-Prozess Bezeichner für das Adress Objekt, von dem die Anforderung stammt oder empfangen wurde.
+Prozessbezeichner für das Adressobjekt, das die Anforderung erstellt oder empfangen hat.
 
 </dd> <dt>
 
 daddr
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Object**
+Datentyp: **Objekt**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (5), Erweiterung ("ipaddr")
+Qualifizierer: WmiDataId(5), Extension("IPAddr")
 </dt> </dl>
 
 Ziel-IP-Adresse.
@@ -95,90 +95,90 @@ Ziel-IP-Adresse.
 dport
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Object**
+Datentyp: **Objekt**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (6), Erweiterung ("Port")
+Qualifizierer: WmiDataId(6), Extension("Port")
 </dt> </dl>
 
-Die Ziel Portnummer.
+Zielportnummer.
 
 </dd> <dt>
 
 dsize
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (7)
+Qualifizierer: WmiDataId(7)
 </dt> </dl>
 
-Größe des Ziel Pakets.
+Größe des Zielpakets.
 
 </dd> <dt>
 
 saddr
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Object**
+Datentyp: **object**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (2), Erweiterung ("ipaddr")
+Qualifizierer: WmiDataId(2), Extension("IPAddr")
 </dt> </dl>
 
 Quell-IP-Adresse.
 
 </dd> <dt>
 
-size
+Größe
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (4)
+Qualifizierer: WmiDataId(4)
 </dt> </dl>
 
 Größe des Quellpakets.
 
 </dd> <dt>
 
-Reit
+Sport
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Object**
+Datentyp: **object**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (3), Erweiterung ("Port")
+Qualifizierer: WmiDataId(3), Extension("Port")
 </dt> </dl>
 
-Quell Portnummer.
+Quellportnummer.
 
 </dd> </dl>
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|---------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ XP-Desktop-Apps\]<br/> |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                   |
 
 
@@ -187,7 +187,7 @@ Quell Portnummer.
 
 <dl> <dt>
 
-[**Udpip \_ v0**](udpip-v0.md)
+[**UdpIp \_ V0**](udpip-v0.md)
 </dt> </dl>
 
  

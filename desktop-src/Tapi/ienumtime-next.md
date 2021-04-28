@@ -1,21 +1,21 @@
 ---
-description: Die Next-Methode ruft die nächste angegebene Anzahl von Elementen in der enumerationssequenz ab.
+description: 'IEnumTime::Next-Methode: Die Next-Methode ruft die nächste angegebene Anzahl von Elementen in der Enumerationssequenz ab.'
 ms.assetid: e8ca77b8-0322-43b4-9996-26f584cf878a
-title: 'Ienumtime:: Next-Methode (sdpblb. h)'
+title: IEnumTime::Next-Methode (Sdpblb.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: fce3d88bc88e808c35ec64f827fd5925ddfe57f9
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 1487136b0e3e41ba11a23ba92500d2aa0758df79
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371378"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108118388"
 ---
-# <a name="ienumtimenext-method"></a>Ienumtime:: Next-Methode
+# <a name="ienumtimenext-method"></a>IEnumTime::Next-Methode
 
-\[ Rendezvous-Steuerelemente und Schnittstellen für die IP-telefoniekonferenz sind nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet eine ähnliche Funktionalität.\]
+\[ Rendezvous IP-Telefoniekonferenz-Steuerelemente und -Schnittstellen sind nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet ähnliche Funktionen.\]
 
-Die **Next** -Methode ruft die nächste angegebene Anzahl von Elementen in der enumerationssequenz ab.
+Die **Next-Methode** ruft die nächste angegebene Anzahl von Elementen in der Enumerationssequenz ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -34,24 +34,24 @@ HRESULT Next(
 
 <dl> <dt>
 
-*celt* \[ in\]
+*celt* \[ In\]
 </dt> <dd>
 
 Anzahl der angeforderten Elemente.
 
 </dd> <dt>
 
-*PVal* \[ vorgenommen\]
+*pVal* \[ out\]
 </dt> <dd>
 
-Zeiger auf die [**ittime**](ittime.md) -Schnittstelle.
+Zeiger auf die [**ITTime-Schnittstelle.**](ittime.md)
 
 </dd> <dt>
 
-*pceltfetch* \[ vorgenommen\]
+*pceltFetched* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf die Anzahl der tatsächlich bereitgestellten Elemente. Kann **null** sein, wenn *celt* 1 ist.
+Zeiger auf die Anzahl der tatsächlich bereitgestellten Elemente. Kann NULL **sein,** *wenn celt* gleich 1 ist.
 
 </dd> </dl>
 
@@ -63,9 +63,9 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
 | Wert                                                                                     | Bedeutung                                                       |
 |-------------------------------------------------------------------------------------------|---------------------------------------------------------------|
-| <dl> <dt>**S \_ OK**</dt> </dl>      | Von der Methode wurde *die Anzahl der* Elemente zurückgegeben.<br/>         |
-| <dl> <dt>**S \_ false**</dt> </dl>   | Die Anzahl der verbleibenden Elemente war kleiner als *celt*.<br/> |
-| <dl> <dt>**E- \_ Zeiger**</dt> </dl> | Der *PVal* -Parameter ist kein gültiger Zeiger.<br/>       |
+| <dl> <dt>**S \_ OK**</dt> </dl>      | Die Methode hat *die Anzahl der* Elemente zurückgegeben.<br/>         |
+| <dl> <dt>**S \_ FALSE**</dt> </dl>   | Die Anzahl der verbleibenden Elemente war kleiner *als celt.*<br/> |
+| <dl> <dt>**\_E-ZEIGER**</dt> </dl> | Der *pVal-Parameter* ist kein gültiger Zeiger.<br/>       |
 
 
 
@@ -73,26 +73,26 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
 ## <a name="remarks"></a>Bemerkungen
 
-TAPI Ruft die **adressf** -Methode für die [**ittime**](ittime.md) -Schnittstelle auf, die von **ienumtime:: Next** zurückgegeben wurde. Die Anwendung muss Release auf der **ittime** -Schnittstelle aufzurufen, um die damit verbundenen Ressourcen frei **zugeben** .
+TAPI ruft die **AddRef-Methode** für die [**ITTime-Schnittstelle**](ittime.md) auf, die von **IEnumTime::Next** zurückgegeben wird. Die Anwendung muss **Release** auf der **ITTime-Schnittstelle** aufrufen, um zugeordnete Ressourcen freizugeben.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------|---------------------------------------------------------------------------------------|
-| TAPI-Version<br/> | Erfordert TAPI 3,0 oder höher<br/>                                                 |
-| Header<br/>       | <dl> <dt>Sdpblb. h</dt> </dl>   |
-| Bibliothek<br/>      | <dl> <dt>UUID. lib</dt> </dl>   |
+| TAPI-Version<br/> | Erfordert TAPI 3.0 oder höher<br/>                                                 |
+| Header<br/>       | <dl> <dt>Sdpblb.h</dt> </dl>   |
+| Bibliothek<br/>      | <dl> <dt>Uuid.lib</dt> </dl>   |
 | DLL<br/>          | <dl> <dt>Sdpblb.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Ienumtime**](ienumtime.md)
+[**IEnumTime**](ienumtime.md)
 </dt> </dl>
 
  

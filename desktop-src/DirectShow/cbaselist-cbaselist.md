@@ -1,7 +1,7 @@
 ---
-description: Konstruktormethode.
+description: 'CBaseList.CBaseList(TCHAR, \* INT)-Konstruktor : Konstruktormethode.'
 ms.assetid: 2d48cb66-45d2-4d2d-ba7e-ae759b6d2aa4
-title: Cbaselist. cbaselist (TCHAR *, int)-Konstruktor (wxlist. h)
+title: CBaseList.CBaseList(TCHAR*, INT)-Konstruktor (Wxlist.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,14 +16,14 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 9c947c8ffa6b61f919d03470b386ffa82945f3b2
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: cf745e22ffccb342d945a024760f8c72fdb35ce9
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106355904"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108099638"
 ---
-# <a name="cbaselistcbaselisttchar-int-constructor"></a>Cbaselist. cbaselist (TCHAR \* , int)-Konstruktor
+# <a name="cbaselistcbaselisttchar-int-constructor"></a>CBaseList.CBaseList(TCHAR, \* INT)-Konstruktor
 
 Konstruktormethode.
 
@@ -50,33 +50,33 @@ Zeiger auf den Namen der Liste.
 
 </dd> <dt>
 
-*IItems* 
+*iItems* 
 </dt> <dd>
 
-Größe des Knoten Caches.
+Größe des Knotencaches.
 
 </dd> </dl>
 
 ## <a name="remarks"></a>Bemerkungen
 
-Aus Effizienzgründen verwaltet die- `CBaseList` Klasse einen Cache von Listen Knoten. Wenn Sie ungefähr wissen, wie viele Elemente in der Liste enthalten sein werden, verwenden Sie diese Version des Konstruktors.
+Zur Effizienz verwaltet `CBaseList` die -Klasse einen Cache von Listenknoten. Wenn Sie ungefähr wissen, wie viele Elemente die Liste enthalten wird, verwenden Sie diese Version des Konstruktors.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Wxlist. h (Include Streams. h)</dt> </dl>                                                                                    |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Wxlist.h (streams.h enthalten)</dt> </dl>                                                                                    |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbaselist-Klasse**](cbaselist.md)
+[**CBaseList-Klasse**](cbaselist.md)
 </dt> </dl>
 
  

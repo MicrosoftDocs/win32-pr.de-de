@@ -1,5 +1,5 @@
 ---
-description: Diese Klasse ist die übergeordnete Klasse für Registrierungs Ereignisse. Die folgende Syntax wird durch den MOF-Code vereinfacht.
+description: 'Registry_V0-Klasse: Diese Klasse ist die übergeordnete Klasse für Registrierungsereignisse. Die folgende Syntax wird aus MOF-Code vereinfacht.'
 ms.assetid: 879ac606-f451-4d5d-bf78-3e7fd3093189
 title: Registry_V0-Klasse
 ms.topic: reference
@@ -12,18 +12,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 7a58427dbb01519b9850461b21fb7dd75a1daf20
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ee3aa8d5e4f7b7cb557af5eeb4a02c9a10dafbbf
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103862872"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108106178"
 ---
-# <a name="registry_v0-class"></a>Registrierungs \_ Klasse "v0"
+# <a name="registry_v0-class"></a>Registry \_ V0-Klasse
 
-Diese Klasse ist die übergeordnete Klasse für Registrierungs Ereignisse.
+Diese Klasse ist die übergeordnete Klasse für Registrierungsereignisse.
 
-Die folgende Syntax wird durch den MOF-Code vereinfacht.
+Die folgende Syntax wird aus MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -36,16 +36,16 @@ class Registry_V0 : MSNT_SystemTrace
 
 ## <a name="members"></a>Member
 
-Die **Registrierungs \_** Klasse "v0" definiert keine Member.
+Die **Registry \_ V0-Klasse** definiert keine Member.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ XP-Desktop-Apps\]<br/>          |
+| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2003-Desktop-Apps\]<br/> |
 
 
 
@@ -53,16 +53,16 @@ Die **Registrierungs \_** Klasse "v0" definiert keine Member.
 
 <dl> <dt>
 
-[**MSNT \_ systemtrace**](msnt-systemtrace.md)
+[**MSNT \_ SystemTrace**](msnt-systemtrace.md)
 </dt> <dt>
 
 [**Registrierung**](registry.md)
 </dt> <dt>
 
-[**Registrierung \_ v0 \_ TypeGroup1**](registry-v0-typegroup1.md)
+[**Registry \_ V0 \_ TypeGroup1**](registry-v0-typegroup1.md)
 </dt> <dt>
 
-[**Registrierung \_ v1**](registry-v1.md)
+[**Registrierung \_ V1**](registry-v1.md)
 </dt> </dl>
 
  

@@ -1,29 +1,29 @@
 ---
-title: Tastatureingabe Referenz
-description: .
+title: Referenz zur Tastatureingabe
+description: Referenz zur Tastatureingabe
 ms.assetid: 02216e50-35b6-49f6-b6fa-645e745e4bd6
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e9d3e2252472d953e6f37b1b61b9e9f7a4e83027
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 98b59208fb7d18c81e28bce28e8e9eb1ff4346bc
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104388140"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108112908"
 ---
-# <a name="keyboard-input-reference"></a>Tastatureingabe Referenz
+# <a name="keyboard-input-reference"></a>Referenz zur Tastatureingabe
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [Tastatureingabe Funktionen](keyboard-input-functions.md)
--   [Tastatureingabe Meldungen](keyboard-input-messages.md)
--   [Tastatureingabe Benachrichtigungen](keyboard-input-notifications.md)
--   [Tastatureingabe Strukturen](keyboard-input-structures.md)
--   [Tastatureingabe Konstanten](keyboard-input-constants.md)
+-   [Tastatureingabefunktionen](keyboard-input-functions.md)
+-   [Tastatureingabemeldungen](keyboard-input-messages.md)
+-   [Tastatureingabebenachrichtigungen](keyboard-input-notifications.md)
+-   [Tastatureingabestrukturen](keyboard-input-structures.md)
+-   [Tastatureingabekonstanten](keyboard-input-constants.md)
 
- 
+ 
 
- 
+ 
 
 
 

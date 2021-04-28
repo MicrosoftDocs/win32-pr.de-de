@@ -1,7 +1,7 @@
 ---
-description: Die completeconnect-Methode schließt eine PIN-Verbindung ab.
+description: 'CTransformFilter.CompleteConnect-Methode: Die CompleteConnect-Methode schließt eine Pinverbindung ab.'
 ms.assetid: b687d2ee-4aee-4fae-bc2f-23ee037d0e6d
-title: Ctransformfilter. completeconnect-Methode (Transfrm. h)
+title: CTransformFilter.CompleteConnect-Methode (Transfrm.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 630950cf9b05c08412394bf9270f2369b3f3b94b
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: d2251ba45c7a39ec9bf205fdd6643e02392e40e5
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106357724"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108095168"
 ---
-# <a name="ctransformfiltercompleteconnect-method"></a>Ctransformfilter. completeconnect-Methode
+# <a name="ctransformfiltercompleteconnect-method"></a>CTransformFilter.CompleteConnect-Methode
 
-Die- `CompleteConnect` Methode schließt eine PIN-Verbindung ab.
+Die `CompleteConnect` -Methode schließt eine Stecknadelverbindung ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,14 +46,14 @@ virtual HRESULT CompleteConnect(
 *direction* 
 </dt> <dd>
 
-Member des enumerierten Typs der [**Pin- \_ Richtung**](/windows/win32/api/strmif/ne-strmif-pin_direction) , der angibt, welche PIN im Filter die Verbindung herstellen soll.
+Member des [**aufzählten PIN \_ DIRECTION-Typs,**](/windows/win32/api/strmif/ne-strmif-pin_direction) der an gibt, welcher Pin im Filter die Verbindung hergestellt wird.
 
 </dd> <dt>
 
-*preceivepin* 
+*pReceivePin* 
 </dt> <dd>
 
-Zeiger auf die [**IPin**](/windows/desktop/api/Strmif/nn-strmif-ipin) -Schnittstelle der anderen PIN bei diesem Verbindungsversuch.
+Zeiger auf die [**IPin-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-ipin) des anderen Pins in diesem Verbindungsversuch.
 
 </dd> </dl>
 
@@ -63,24 +63,24 @@ Gibt S \_ OK zurück.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Die [**ctransforminputpin:: completeconnect**](ctransforminputpin-completeconnect.md) -Methode und die [**ctransformoutputpin:: completeconnect**](ctransformoutputpin-completeconnect.md) -Methode ruft diese Methode während des PIN-Verbindungsprozesses auf. Diese Methode führt keine Aktion in der Basisklasse durch, aber die abgeleitete Klasse kann Sie überschreiben.
+Die [**Methoden CTransformInputPin::CompleteConnect**](ctransforminputpin-completeconnect.md) und [**CTransformOutputPin::CompleteConnect**](ctransformoutputpin-completeconnect.md) rufen diese Methode während des Pinverbindungsprozesses auf. Diese Methode führt in der Basisklasse nichts aus, aber die abgeleitete Klasse kann sie überschreiben.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Transfrm. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Transfrm.h (streams.h enthalten)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Ctransformfilter-Klasse**](ctransformfilter.md)
+[**CTransformFilter-Klasse**](ctransformfilter.md)
 </dt> </dl>
 
  

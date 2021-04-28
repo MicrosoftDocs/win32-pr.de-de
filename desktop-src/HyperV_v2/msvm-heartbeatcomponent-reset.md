@@ -1,5 +1,5 @@
 ---
-description: Fordert eine zurück Setzung an.
+description: 'Reset-Methode der Msvm_HeartbeatComponent-Klasse: Fordert eine Zurücksetzung an.'
 ms.assetid: 60dacd80-72f9-456f-9378-6cdc7b5cc964
 title: Reset-Methode der Msvm_HeartbeatComponent-Klasse
 ms.topic: reference
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 77483aa454e8697b3b20230fedfbc83013cdd97d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f2657d890d66b18c212db7ca08164809a27dda54
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103862939"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108111798"
 ---
-# <a name="reset-method-of-the-msvm_heartbeatcomponent-class"></a>Reset-Methode der MSVM- \_ Klasse "heartbeatcomponent"
+# <a name="reset-method-of-the-msvm_heartbeatcomponent-class"></a>Reset-Methode der Msvm \_ HeartbeatComponent-Klasse
 
-Fordert eine zurück Setzung an.
+Fordert eine Zurücksetzung an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -53,21 +53,21 @@ Diese Methode gibt einen der folgenden Werte zurück:
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8.1<br/>                                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2<br/>                                                                       |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**MSVM \_ heartbeatcomponent**](msvm-heartbeatcomponent.md)
+[**Msvm \_ HeartbeatComponent**](msvm-heartbeatcomponent.md)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
-description: Ruft ein benutzerdefiniertes Gerätesymbol ab.
+description: 'IWiaUIExtension2::GetDeviceIcon-Methode: Ruft ein benutzerdefiniertes Gerätesymbol ab.'
 ms.assetid: ea768dd1-22fe-4a0f-8851-b152e28d65fb
-title: 'IWiaUIExtension2:: getdeviceicon-Methode (wiadevd. h)'
+title: IWiaUIExtension2::GetDeviceIcon-Methode (Wiadevd.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,14 +13,14 @@ api_type:
 - COM
 api_location:
 - Wiadevd.h
-ms.openlocfilehash: d071332a1947c4eb6398235d6941a6843a4fa54c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: fe1498a804de5adeeea459464e95640b3b81ef06
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104526444"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108116618"
 ---
-# <a name="iwiauiextension2getdeviceicon-method"></a>IWiaUIExtension2:: getdeviceicon-Methode
+# <a name="iwiauiextension2getdeviceicon-method"></a>IWiaUIExtension2::GetDeviceIcon-Methode
 
 Ruft ein benutzerdefiniertes Gerätesymbol ab.
 
@@ -41,7 +41,7 @@ HRESULT GetDeviceIcon(
 
 <dl> <dt>
 
-*bstraude viceid* \[ in\]
+*bstrDeviceId* \[ In\]
 </dt> <dd>
 
 Typ: **BSTR**
@@ -50,21 +50,21 @@ Gibt die Geräte-ID des WIA-Geräts an, für das das Symbol abgerufen werden sol
 
 </dd> <dt>
 
-*phicon* \[ vorgenommen\]
+*phIcon* \[ out\]
 </dt> <dd>
 
-Typ: **HICON \** _
+Typ: **HICON \***
 
-Verweist auf einen Speicherort, der ein Handle für das Symbol für das Gerät empfängt.
+Zeigt auf eine Speicherposition, die ein Handle für das Symbol für das Gerät erhält.
 
 </dd> <dt>
 
-_nSize * \[ in\]
+*nSize* \[ In\]
 </dt> <dd>
 
-Typ: **ulong**
+Typ: **ULONG**
 
-Gibt die gewünschte Symbolgröße in Pixel an. Es wird davon ausgegangen, dass das Symbol quadratisch ist, und nSize gibt sowohl die Breite als auch die Höhe des angeforderten Symbols an.
+Gibt die gewünschte Symbolgröße in Pixel an. Das Symbol wird als quadratisch angenommen, und nSize gibt sowohl die Breite als auch die Höhe des angeforderten Symbols an.
 
 </dd> </dl>
 
@@ -72,15 +72,15 @@ Gibt die gewünschte Symbolgröße in Pixel an. Es wird davon ausgegangen, dass 
 
 Typ: **HRESULT**
 
-Wenn die Methode erfolgreich ausgeführt wird, gibt Sie S \_ OK zurück. Wenn die Methode fehlschlägt, wird ein entsprechender Fehlercode zurückgegeben. In der folgenden Tabelle sind einige der möglichen Rückgabestatus Codes aufgeführt.
+Wenn die Methode erfolgreich ist, wird S \_ OK zurückgegeben. Wenn die Methode fehlschlägt, wird ein entsprechender Fehlercode zurückgegeben. In der folgenden Tabelle sind einige der möglichen Rückgabestatuscodes aufgeführt.
 
 
 
 | Fehlercode    | BESCHREIBUNG                                                                                                  |
 |---------------|--------------------------------------------------------------------------------------------------------------|
-| E \_ invalidArg | Der Parameter "bstrintoviceid" oder "phicon" ist **null**, oder bstrintoviceid verweist nicht auf eine gültige WIA-Geräte-ID-Zeichenfolge. |
-| E \_ fehlschlagen       | Es ist keine Symbol Ressource verfügbar.                                                                               |
-| E \_ notimpl    | Es ist kein Symbol der angeforderten Größe verfügbar.                                                                  |
+| E \_ INVALIDARG | Der Parameter bstrDeviceId oder phIcon ist **NULL,** oder bstrDeviceId verweist nicht auf eine gültige WIA-Geräte-ID-Zeichenfolge. |
+| E \_ FAIL       | Es ist keine Symbolressource verfügbar.                                                                               |
+| E \_ NOTIMPL    | Es ist kein Symbol der angeforderten Größe verfügbar.                                                                  |
 
 
 
@@ -90,11 +90,11 @@ Wenn die Methode erfolgreich ausgeführt wird, gibt Sie S \_ OK zurück. Wenn di
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                 |
-| Header<br/>                   | <dl> <dt>Wiadevd. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ XP-Desktop-Apps\]<br/>                                          |
+| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2003-Desktop-Apps\]<br/>                                 |
+| Header<br/>                   | <dl> <dt>Wiadevd.h</dt> </dl> |
 
 
 
