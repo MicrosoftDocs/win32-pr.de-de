@@ -1,22 +1,22 @@
 ---
-description: .
+description: Referenz zum Eigenschaftensystem
 ms.assetid: 8f2df462-c22d-4059-8599-4eefd24560f1
-title: Eigenschaften System Referenz
+title: Referenz zum Eigenschaftensystem
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a6c381b1f2ae39c598e84723e31e124c53d97947
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e55f3146b9431aa901f867fb545e27a9f6dfd446
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106348054"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108087387"
 ---
-# <a name="property-system-reference"></a>Eigenschaften System Referenz
+# <a name="property-system-reference"></a>Referenz zum Eigenschaftensystem
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
 -   [Windows-Eigenschaften](props.md)
--   [Eigenschafts Beschreibungs Schema](property-description-schema.md)
+-   [Eigenschaftenbeschreibungsschema](property-description-schema.md)
 -   [Schnittstellen](interfaces.md)
 -   [Funktionen](functions.md)
 -   [Strukturen](structures.md)
@@ -29,7 +29,7 @@ ms.locfileid: "106348054"
 [Übersicht über das Eigenschaftensystem](property-system-overview.md)
 </dt> <dt>
 
-[Entwicklerhandbuch für Windows-Eigenschaften System](property-system-developer-s-guide.md)
+[entwicklerhandbuch für Windows-Eigenschaftensystem](property-system-developer-s-guide.md)
 </dt> <dt>
 
 [Eigenschaftensystem-Codebeispiele](property-system-code-samples.md)

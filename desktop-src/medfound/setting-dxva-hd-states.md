@@ -1,71 +1,71 @@
 ---
-description: .
+description: Festlegen von DXVA-HD-Zuzuständen
 ms.assetid: 7f339ee8-01e6-4bbb-8563-020ff0e02499
-title: Festlegen von DXVA-HD-Zuständen
+title: Festlegen von DXVA-HD-Zuzuständen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e539796aa5d3997b35739e75c80b438a7b5da50b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 91766e3eb10399d908ab361e13db4b94fe07b653
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106347854"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108092698"
 ---
-# <a name="setting-dxva-hd-states"></a>Festlegen von DXVA-HD-Zuständen
+# <a name="setting-dxva-hd-states"></a>Festlegen von DXVA-HD-Zuzuständen
 
-Während der Videoverarbeitung behält das Microsoft DirectX Video Acceleration High Definition-Gerät (DXVA-HD) einen persistenten Zustand von einem Frame zum nächsten bei. Jeder Status weist einen dokumentierten Standardwert auf. Nachdem Sie das Gerät konfiguriert haben, legen Sie alle Zustände fest, die Sie von den Standardeinstellungen ändern möchten. Aktualisieren Sie vor dem Verarbeiten der einzelnen Frames alle Zustände, die sich ändern sollten.
+Während der Videoverarbeitung behält das Gerät DXVA-HD (Microsoft DirectX Video Acceleration High Definition) einen persistenten Zustand von einem Frame zum nächsten bei. Jeder Zustand verfügt über einen dokumentierten Standardwert. Nachdem Sie das Gerät konfiguriert haben, legen Sie alle Zustände fest, die Sie von den Standardwerten ändern möchten. Bevor Sie die einzelnen Frames verarbeiten, aktualisieren Sie alle Zustände, die sich ändern sollten.
 
 > [!Note]  
-> Dieser Entwurf unterscheidet sich von DXVA-VP. In DXVA-VP muss die Anwendung alle VP-Parameter für jeden Frame angeben.
+> Dieser Entwurf unterscheidet sich von DXVA-VP. In DXVA-VP muss die Anwendung alle VP-Parameter mit jedem Frame angeben.
 
  
 
-Gerätezustände werden in zwei Kategorien unterteilt:
+Gerätezustände lassen sich in zwei Kategorien unterteilen:
 
--   *Streamzustände* wenden jeden Eingabedaten Strom separat an. Sie können für jeden Stream verschiedene Einstellungen anwenden.
--   *Blit* -Zustände gelten global für den gesamten Video Verarbeitungs Blit.
+-   *Streamzustände* wenden jeden Eingabestream separat an. Sie können auf jeden Stream unterschiedliche Einstellungen anwenden.
+-   *Blit-Zustände* gelten global für den gesamten Blit-Videoverarbeitungs-Blit.
 
-Die folgenden streamzustände sind definiert.
+Die folgenden Streamzustände werden definiert.
 
 
 
-| Streamstatus                                   | BESCHREIBUNG                                                                                                     |
+| Streamzustand                                   | BESCHREIBUNG                                                                                                     |
 |------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|
-| **Dxvahd \_ - \_ streamstatus \_ D3DFORMAT**           | Eingabe Videoformat.                                                                                             |
-| **dxvahd \_ Stream \_ State- \_ Frame \_ Format**       | Zeilen Sprung.                                                                                                    |
-| **dxvahd-Daten \_ Strom- \_ Zustands \_ Eingabe- \_ Farbraum \_** | Eingabefarbraum. Dieser Zustand gibt den RGB-Farbbereich und die YCbCr-Übertragungs Matrix für den Eingabestream an. |
-| **dxvahd-Daten \_ Strom- \_ Status- \_ Ausgabe \_ Rate**        | Ausgabe Frame Rate. Dieser Zustand steuert die Konvertierung von Frameraten.                                                   |
-| **dxvahd \_ Stream- \_ Zustands \_ Quelle \_ Rect**        | Quell Rechteck.                                                                                               |
-| **dxvahd \_ Stream \_ State \_ \_ Rect**   | Ziel Rechteck.                                                                                          |
-| **dxvahd \_ Stream \_ State \_ Alpha**               | Planar alpha.                                                                                                   |
-| **dxvahd-Daten \_ Strom- \_ Status \_ Palette**             | Farbpalette. Dieser Zustand gilt nur für Paletten-Eingabeformate.                                             |
-| **dxvahd- \_ streamstatuszustandsschlüssel \_ \_ \_**           | Luma-Taste.                                                                                                       |
-| **dxvahd-Daten \_ Strom- \_ Status \_ Seiten \_ Verhältnis**       | Pixel Seitenverhältnis.                                                                                             |
-| **Dxvahd \_ Stream \_ State \_ Filter \_ xxxx**        | Bild Filtereinstellungen. Der Treiber kann Helligkeit, Kontrast und andere Bild Filter unterstützen.                    |
+| **DXVAHD \_ STREAM \_ STATE \_ D3DFORMAT**           | Eingabevideoformat.                                                                                             |
+| **DXVAHD \_ STREAM \_ STATE \_ FRAME \_ FORMAT**       | Interlacing.                                                                                                    |
+| **DXVAHD \_ STREAM \_ STATE \_ INPUT \_ COLOR \_ SPACE** | Eingabefarbraum. Dieser Zustand gibt den RGB-Farbbereich und die YCbCr-Übertragungsmatrix für den Eingabestream an. |
+| **DXVAHD \_ STREAM \_ STATE \_ OUTPUT \_ RATE**        | Ausgabebildrate. Dieser Zustand steuert die Frameratenkonvertierung.                                                   |
+| **DXVAHD \_ STREAM \_ STATE \_ SOURCE \_ RECT**        | Quellrechteck.                                                                                               |
+| **DXVAHD \_ STREAM \_ STATE \_ DESTINATION \_ RECT**   | Zielrechteck.                                                                                          |
+| **DXVAHD \_ STREAM \_ STATE \_ ALPHA**               | Planares Alpha.                                                                                                   |
+| **\_DXVAHD-STREAMSTATUSPALETTE \_ \_**             | Farbpalette. Dieser Zustand gilt nur für palettierte Eingabeformate.                                             |
+| **DXVAHD \_ STREAM \_ STATE \_ LUMA \_ KEY**           | Luma-Taste.                                                                                                       |
+| **DXVAHD \_ STREAM \_ STATE \_ ASPECT \_ RATIO**       | Pixel-Seitenverhältnis.                                                                                             |
+| **DXVAHD \_ STREAM \_ STATE \_ FILTER \_ Xxxx**        | Bildfiltereinstellungen. Der Treiber kann Helligkeit, Kontrast und andere Bildfilter unterstützen.                    |
 
 
 
  
 
-Die folgenden Blit-Zustände sind definiert:
+Die folgenden Blitzustände sind definiert:
 
 
 
-| Blit-Status                                   | BESCHREIBUNG                                                                  |
+| Blitzustand                                   | BESCHREIBUNG                                                                  |
 |----------------------------------------------|------------------------------------------------------------------------------|
-| **dxvahd \_ blt- \_ Zustands \_ Ziel \_ Rect**         | Ziel Rechteck.                                                            |
-| **dxvahd \_ blt- \_ Status \_ Hintergrund \_ Farbe**    | Hintergrundfarbe.                                                            |
-| **dxvahd \_ blt- \_ Zustands \_ Ausgabe \_ Farbraum \_** | Ausgabe Farbraum.                                                          |
-| **dxvahd \_ blt \_ State \_ alpha \_ Fill**          | Alpha Füllmodus.                                                             |
-| **dxvahd \_ blt- \_ Zustands \_ Einschränkung**         | Einschränkungen. Mit diesem Status wird gesteuert, ob die Ausgabe des Geräts herabgestuft wird. |
+| **DXVAHD \_ BLT \_ STATE \_ TARGET \_ RECT**         | Zielrechteck.                                                            |
+| **DXVAHD \_ BLT \_ STATE \_ BACKGROUND \_ COLOR**    | Hintergrundfarbe.                                                            |
+| **DXVAHD \_ BLT \_ STATE \_ OUTPUT \_ COLOR \_ SPACE** | Ausgabefarbraum.                                                          |
+| **DXVAHD \_ BLT \_ STATE \_ ALPHA \_ FILL**          | Alphafüllmodus.                                                             |
+| **DXVAHD \_ BLT \_ STATE \_ CONSTRICTION**         | Verengung. Dieser Zustand steuert, ob das Gerät die Ausgabe heruntersampelt. |
 
 
 
  
 
-Um einen streamstatus festzulegen, müssen Sie die [**idxvahd \_ videoprocessor:: setvideoprocessstreamstate**](/windows/desktop/api/dxvahd/nf-dxvahd-idxvahd_videoprocessor-setvideoprocessstreamstate) -Methode aufrufen. Um einen Blit-Status festzulegen, müssen Sie die [**idxvahd \_ videoprocessor:: setvideoprocessbltstate**](/windows/desktop/api/dxvahd/nf-dxvahd-idxvahd_videoprocessor-setvideoprocessbltstate) -Methode aufrufen. Bei beiden Methoden gibt ein Enumerationswert den festzulegenden Zustand an. Die Zustandsdaten werden mithilfe einer Zustands spezifischen Datenstruktur angegeben, die von der Anwendung in einen **void \*** -Typ umgewandelt wird.
+Rufen Sie zum Festlegen eines Streamzustands die [**IDXVAHD \_ VideoProcessor::SetVideoProcessStreamState-Methode**](/windows/desktop/api/dxvahd/nf-dxvahd-idxvahd_videoprocessor-setvideoprocessstreamstate) auf. Rufen Sie zum Festlegen eines Blitzustands die [**IDXVAHD \_ VideoProcessor::SetVideoProcessBltState-Methode**](/windows/desktop/api/dxvahd/nf-dxvahd-idxvahd_videoprocessor-setvideoprocessbltstate) auf. In beiden Methoden gibt ein -Enumerationswert den festgelegten Zustand an. Die Zustandsdaten werden mithilfe einer zustandsspezifischen Datenstruktur angegeben, die von der Anwendung in einen void-Typ **umgeformt \*** wird.
 
-Im folgenden Codebeispiel werden das Eingabeformat und das Ziel Rechteck für Stream 0 festgelegt, und die Hintergrundfarbe wird auf schwarz festgelegt.
+Im folgenden Codebeispiel werden das Eingabeformat und das Zielrechteck für Stream 0 und die Hintergrundfarbe auf Schwarz fest.
 
 
 ```C++

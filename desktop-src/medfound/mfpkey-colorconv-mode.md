@@ -1,23 +1,23 @@
 ---
-description: Gibt an, ob der Eingabedaten Strom mit Zeilen Sprung verknüpft ist.
+description: 'MFPKEY_COLORCONV_MODE-Eigenschaft: Gibt an, ob der Eingabestream übersprungen wird.'
 ms.assetid: d0d93151-5b0d-44a7-8497-f11b3e23a031
-title: MFPKEY_COLORCONV_MODE-Eigenschaft (wmcodecdsp. h)
+title: MFPKEY_COLORCONV_MODE-Eigenschaft (Wmcodecdsp.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6dd8c01a6dce595eb270b734947492deea014259
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a8c3f2d6256c4d7a9410264fb18703eea251e9c6
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103755496"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108087578"
 ---
-# <a name="mfpkey_colorconv_mode-property"></a>Mfpkey \_ Color-v- \_ Modus (Eigenschaft)
+# <a name="mfpkey_colorconv_mode-property"></a>MFPKEY \_ COLORCONV \_ MODE-Eigenschaft
 
-Gibt an, ob der Eingabedaten Strom mit Zeilen Sprung verknüpft ist.
+Gibt an, ob der Eingabestream übersprungen wird.
 
 ## <a name="constant-for-ipropertybag"></a>Konstante für IPropertyBag
 
-Nur mit [**IPropertyStore**](/windows/win32/api/propsys/nn-propsys-ipropertystore)verfügbar.
+Nur mithilfe von [**IPropertyStore**](/windows/win32/api/propsys/nn-propsys-ipropertystore)verfügbar.
 
 ## <a name="data-type"></a>Datentyp
 
@@ -29,7 +29,7 @@ Wird vom DSP aus dem Quellvideo berechnet.
 
 ## <a name="applies-to"></a>Gilt für
 
--   [Farb Konverter-DSP](colorconverter.md)
+-   [Farbkonverter-DSP](colorconverter.md)
 
 ## <a name="remarks"></a>Bemerkungen
 
@@ -46,25 +46,25 @@ Verwenden Sie einen der folgenden Werte.
 
  
 
-Wenn diese Eigenschaft nicht festgelegt ist, verwendet der DSP den Eingabe Medientyp, um zu bestimmen, ob das Video mit Zeilen Sprung verknüpft ist. Sie können diese Eigenschaft festlegen, um die Medientyp Einstellung außer Kraft zu setzen.
+Wenn diese Eigenschaft nicht festgelegt ist, verwendet der DSP den Eingabemedientyp, um zu bestimmen, ob das Video übersprungen wird. Sie können diese Eigenschaft festlegen, um die Medientypeinstellung zu überschreiben.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                             |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>Wmcodecdsp. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ XP-Desktop-Apps\]<br/>                                             |
+| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2003-Desktop-Apps\]<br/>                                    |
+| Header<br/>                   | <dl> <dt>Wmcodecdsp.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Eigenschaften von Media Foundation](media-foundation-properties.md)
+[Media Foundation-Eigenschaften](media-foundation-properties.md)
 </dt> </dl>
 
  

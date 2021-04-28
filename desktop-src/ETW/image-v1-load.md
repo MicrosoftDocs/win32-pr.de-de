@@ -1,5 +1,5 @@
 ---
-description: Diese Klasse ist die Ereignistyp Klasse für Bild Lade Ereignisse. Die folgende Syntax wird durch den MOF-Code vereinfacht.
+description: 'Image_V1_Load-Klasse: Diese Klasse ist die Ereignistypklasse für Bildladeereignisse. Die folgende Syntax wird aus MOF-Code vereinfacht.'
 ms.assetid: 43bf0b2b-3ab4-4561-b48c-65fbace38a79
 title: Image_V1_Load-Klasse
 ms.topic: reference
@@ -16,18 +16,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: bd0a2a61b263ce78c2cf28cdf1cd5df4b702140d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2e8a8c31cee7e45311887c16a1d10545e6a38e41
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104977120"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108106498"
 ---
-# <a name="image_v1_load-class"></a>Image \_ v1- \_ Lade Klasse
+# <a name="image_v1_load-class"></a>Image \_ V1 \_ Load-Klasse
 
-Diese Klasse ist die Ereignistyp Klasse für Bild Lade Ereignisse.
+Diese Klasse ist die Ereignistypklasse für Bildladeereignisse.
 
-Die folgende Syntax wird durch den MOF-Code vereinfacht.
+Die folgende Syntax wird aus MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,90 +44,90 @@ class Image_V1_Load : Image_V1
 
 ## <a name="members"></a>Member
 
-Die **\_ \_ Load** -Klasse von Image v1 verfügt über diese Typen von Membern:
+Die **Image \_ V1 \_ Load-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **\_ \_ Load** -Klasse von Image v1 verfügt über diese Eigenschaften.
+Die **Image \_ V1 \_ Load-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 FileName
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **String**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (4), stringbeendigung ("nullterminiert"), Format ("w")
+Qualifizierer: WmiDataId(4), StringTermination("NullTerminated"), Format("w")
 </dt> </dl>
 
-Dateiname und Erweiterung der zu ladenden DLL oder des zu ladenden ausführbaren Images.
+Dateiname und Erweiterung der zu ladende DLL oder des ausführbaren Images.
 
 </dd> <dt>
 
-ImageBase
+Imagebase
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (1), Zeiger
+Qualifizierer: WmiDataId(1), Zeiger
 </dt> </dl>
 
-Die Basisadresse der Anwendung, in der das Image geladen wird.
+Basisadresse der Anwendung, in die das Image geladen wird.
 
 </dd> <dt>
 
-ImageSize
+Imagesize
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (2), Zeiger
+Qualifizierer: WmiDataId(2), Zeiger
 </dt> </dl>
 
-Größe des geladenen Bilds.
+Größe des geladenen Images.
 
-Wenn diese Eigenschaft genutzt wird, ist die Größe des Datentyps für diese Eigenschaft tatsächlich " \_ t". Der Zeiger Qualifizierer wird verwendet, um zu bestimmen, ob die Größe \_ t 4 Bytes oder 8 Bytes beträgt.
+Beim Verwenden dieser Eigenschaft ist der Datentyp für diese Eigenschaft tatsächlich die Größe \_ t. Der Zeigerqualifizierer wird verwendet, um zu bestimmen, ob die Größe \_ t 4 Byte oder 8 Bytes beträgt.
 
 </dd> <dt>
 
 ProcessId
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (3)
+Qualifizierer: WmiDataId(3)
 </dt> </dl>
 
-Identifiziert den Prozess, in den das Bild geladen wird.
+Identifiziert den Prozess, in den das Image geladen wird.
 
 </dd> </dl>
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ XP-Desktop-Apps\]<br/>          |
+| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2003-Desktop-Apps\]<br/> |
 
 
 
@@ -135,7 +135,7 @@ Identifiziert den Prozess, in den das Bild geladen wird.
 
 <dl> <dt>
 
-[**Bild \_ v1**](image-v1.md)
+[**Image \_ V1**](image-v1.md)
 </dt> </dl>
 
  

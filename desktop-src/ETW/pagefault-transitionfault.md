@@ -1,5 +1,5 @@
 ---
-description: Diese Klasse ist die Ereignistyp Klasse für Seiten Fehlerereignisse. Die folgende Syntax wird durch den MOF-Code vereinfacht.
+description: 'PageFault_TransitionFault Klasse: Diese Klasse ist die Ereignistypklasse für Seitenfehlerereignisse. Die folgende Syntax wird durch MOF-Code vereinfacht.'
 ms.assetid: cc2b7a93-6974-4872-98f3-d6cb81861ae5
 title: PageFault_TransitionFault-Klasse
 ms.topic: reference
@@ -14,18 +14,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 4721e2d342750b12baa58bb69f72606511c14143
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6c8ee12cf201b9ee83d231bf1f5e499550aa3cd6
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103866424"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108106458"
 ---
-# <a name="pagefault_transitionfault-class"></a>Pagefault \_ transitionfault-Klasse
+# <a name="pagefault_transitionfault-class"></a>PageFault \_ TransitionFault-Klasse
 
-Diese Klasse ist die Ereignistyp Klasse für Seiten Fehlerereignisse.
+Diese Klasse ist die Ereignistypklasse für Seitenfehlerereignisse.
 
-Die folgende Syntax wird durch den MOF-Code vereinfacht.
+Die folgende Syntax wird durch MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,53 +40,53 @@ class PageFault_TransitionFault : PageFault_V2
 
 ## <a name="members"></a>Member
 
-Die **Pagefault \_ transitionfault** -Klasse verfügt über diese Typen von Membern:
+Die **PageFault \_ TransitionFault-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **Pagefault \_ transitionfault** -Klasse verfügt über diese Eigenschaften.
+Die **PageFault \_ TransitionFault-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-Programm Counter
+ProgramCounter
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (2), Zeiger
+Qualifizierer: WmiDataId(2), Zeiger
 </dt> </dl>
 
-Zeiger auf die aktuell ausgeführte Anweisung.
+Zeiger auf die aktuelle Anweisung, die ausgeführt wird.
 
 </dd> <dt>
 
 VirtualAddress
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (1), Zeiger
+Qualifizierer: WmiDataId(1), Zeiger
 </dt> </dl>
 
-Die virtuelle Adresse der Seite, die den Seiten Fehler verursacht hat.
+Virtuelle Adresse der Seite, die den Seitenfehler verursacht hat.
 
 </dd> </dl>
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/> |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>       |
@@ -97,7 +97,7 @@ Die virtuelle Adresse der Seite, die den Seiten Fehler verursacht hat.
 
 <dl> <dt>
 
-[**Pagefault \_ v2**](pagefault-v2.md)
+[**PageFault \_ V2**](pagefault-v2.md)
 </dt> </dl>
 
  

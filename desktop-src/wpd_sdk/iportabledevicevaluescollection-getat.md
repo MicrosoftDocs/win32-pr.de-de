@@ -1,7 +1,7 @@
 ---
-description: Die GetAt-Methode ruft ein Element durch einen NULL basierten Index aus der Auflistung ab.
+description: 'IPortableDeviceValuesCollection::GetAt-Methode: Die GetAt-Methode ruft ein Element von einem nullbasierten Index aus der Auflistung ab.'
 ms.assetid: b219b052-a74b-466a-a2ee-d2e9c466f393
-title: 'Iportabledevicevaluescollection:: GetAt-Methode (portabledevicetypes. h)'
+title: IPortableDeviceValuesCollection::GetAt-Methode (PortableDeviceTypes.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - PortableDeviceGUIDs.lib
 - PortableDeviceGUIDs.dll
-ms.openlocfilehash: ffbc65f39aab63189aa451005008f585c46bd8d7
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 2ad10a7b9cc3c252a0cee4cb71df05cb108e0a18
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106373590"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108083256"
 ---
-# <a name="iportabledevicevaluescollectiongetat-method"></a>Iportabledevicevaluescollection:: GetAt-Methode
+# <a name="iportabledevicevaluescollectiongetat-method"></a>IPortableDeviceValuesCollection::GetAt-Methode
 
-Die **GetAt** -Methode ruft ein Element durch einen NULL basierten Index aus der Auflistung ab.
+Die **GetAt-Methode** ruft ein Element von einem nullbasierten Index aus der Auflistung ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,32 +41,32 @@ HRESULT GetAt(
 
 <dl> <dt>
 
-*dwIndex* \[ in\]
+*dwIndex* \[ In\]
 </dt> <dd>
 
-**DWORD** , das einen NULL basierten Index in der Auflistung angibt.
+**DWORD,** das einen nullbasierten Index in der Auflistung angibt.
 
 </dd> <dt>
 
-*ppvalues* \[ vorgenommen\]
+*ppValues* \[ out\]
 </dt> <dd>
 
-Adresse einer Variablen, die einen Zeiger auf eine [**iportableendvicevalues**](iportabledevicevalues.md) -Schnittstelle aus der Auflistung empfängt. Der Aufrufer ist für das Aufrufen der **Freigabe** auf dieser Schnittstelle verantwortlich, wenn er damit abgeschlossen ist.
+Adresse einer Variablen, die einen Zeiger auf eine [**IPortableDeviceValues-Schnittstelle**](iportabledevicevalues.md) aus der Auflistung empfängt. Der Aufrufer ist für den Aufruf von **Release auf** dieser Schnittstelle verantwortlich, wenn er damit fertig ist.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
+Die -Methode gibt ein **HRESULT zurück.** Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
 
 
 
 | Rückgabecode                                                                                  | Beschreibung                                                                      |
 |----------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>         | Die Methode wurde erfolgreich ausgeführt.<br/>                                                 |
-| <dl> <dt>**E \_ invalidArg**</dt> </dl> | Der null basierte Index, der in der Übergabe war, liegt außerhalb des zulässigen Bereichs.<br/>             |
-| <dl> <dt>**E- \_ Zeiger**</dt> </dl>    | Ein erforderliches Zeigerargument war **null**.<br/>                             |
-| <dl> <dt>**E \_ unerwartet**</dt> </dl> | Die-Auflistung enthält einen **null** - **iportableendvicevalues** -Zeiger.<br/> |
+| <dl> <dt>**E \_ INVALIDARG**</dt> </dl> | Der nullbasierte Index, der übergeben wurde, lag nicht im Bereich.<br/>             |
+| <dl> <dt>**\_E-ZEIGER**</dt> </dl>    | Ein erforderliches Zeigerargument war **NULL.**<br/>                             |
+| <dl> <dt>**E \_ UNEXPECTED**</dt> </dl> | Die Auflistung enthält einen  **NULL-IPortableDeviceValues-Zeiger.**<br/> |
 
 
 
@@ -80,18 +80,18 @@ Alle Änderungen, die an Werten in der abgerufenen Schnittstelle vorgenommen wer
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|----------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Portablede vicetypes. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>Portabledeviceguids. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>PortableDeviceTypes.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>PortableDeviceGUIDs.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iportableabvicevaluescollection-Schnittstelle**](iportabledevicevaluescollection.md)
+[**IPortableDeviceValuesCollection-Schnittstelle**](iportabledevicevaluescollection.md)
 </dt> </dl>
 
  

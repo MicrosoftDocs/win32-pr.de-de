@@ -1,48 +1,48 @@
 ---
-description: .
+description: 'Microsoft Message Queuing (MSMQ): Entfernen des Windows 2000-Clientsupportdiensts'
 ms.assetid: e29b477e-f7e9-413c-8eb9-2e764b7dd910
-title: Microsoft Message Queuing (MSMQ)-Entfernen des Windows 2000-Client Unterstützungs Dienstanbieter
+title: 'Microsoft Message Queuing (MSMQ): Entfernen des Windows 2000-Clientsupportdiensts'
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 54688ee4ad24eb691c95e4d70ce0acb881e212eb
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 4be68d40271153567bdaf6b04d73218aaf3d3977
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104050306"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108088148"
 ---
-# <a name="microsoft-message-queuing-msmq---removal-of-windows-2000-client-support-service"></a>Microsoft Message Queuing (MSMQ)-Entfernen des Windows 2000-Client Unterstützungs Dienstanbieter
+# <a name="microsoft-message-queuing-msmq---removal-of-windows-2000-client-support-service"></a>Microsoft Message Queuing (MSMQ): Entfernen des Windows 2000-Clientsupportdiensts
 
 ## <a name="affected-platforms"></a>Betroffene Plattformen
 
-**Server** -Windows Server 2008 R2  
+**Server** – Windows Server 2008 R2  
 
 
 
-## <a name="feature-impact"></a>Auswirkungen von Features
+## <a name="feature-impact"></a>Auswirkungen auf Das Feature
 
- **Schweregrad** -hoch  
-**Häufigkeit** -niedrig  
+ **Schweregrad –** Hoch  
+**Häufigkeit** : Niedrig  
 
 ## <a name="description"></a>BESCHREIBUNG
 
-Der Windows 2000-Client Support Dienst ist eine optionale Komponente des Message Queuing Servers, den Sie auf einem Windows 2003-oder Windows 2008-Domänen Controller Computer installieren können. Dieser Dienst ermöglicht den Betrieb von Windows 2000-Clients in einem Domänen integrierten Modus mit jedem Message Queuing Server, der auf Windows 2003/2008-Computern installiert ist. MSMQ-Clients, die unter Windows XP aufwärts betrieben werden, benötigen diesen Dienst nicht.
+Der Windows 2000-Clientsupportdienst ist eine optionale Komponente des Message Queuing-Servers, die Sie auf einem Windows 2003- oder Windows 2008-Domänencontrollercomputer installieren können. Dieser Dienst ermöglicht Windows 2000-Clients den Betrieb in einem domänenintegrierten Modus mit einem beliebigen Message Queuing Server, der auf Windows 2003/2008-Computern installiert ist. MSMQ-Clients, die unter Windows XP aufwärts arbeiten, benötigen diesen Dienst nicht.
 
-### <a name="manifestation-of-impact"></a>Erscheinung der Auswirkung
+### <a name="manifestation-of-impact"></a>Wirkungserz weiter
 
-Diese Änderung wirkt sich auf Windows 2000 aus, wenn Sie in einer Windows 7-Domäne interagiert, in der alle Domänen Controller Windows Server 2008 R2 sind. Wenn ein Kunde ein Upgrade auf die Windows 7-Domäne durchführt, können die vorhandenen MSMQ-Anwendungen auf allen Windows 2000-Computern in der Domäne nicht in einem Domänen integrierten Modus ausgeführt werden, es sei denn, diese Clients führen ein Upgrade auf eine höhere Windows-Version durch.
+Diese Änderung wirkt sich auf Windows 2000 aus, wenn in einer Windows 7-Domäne interoperiert wird, in der alle Domänencontroller Windows Server 2008 R2 sind. Wenn ein Kunde ein Upgrade auf die Windows 7-Domäne vorliegt, können die vorhandenen MSMQ-Anwendungen auf allen Windows 2000-Computern in der Domäne nicht in einem in die Domäne integrierten Modus ausgeführt werden, es sei denn, diese Clients führen ein Upgrade auf eine höhere Windows-Version durch.
 
 ### <a name="mitigation"></a>Minderung
 
-Benutzer mit Windows 2000-Client Computern in einer Windows 7-Domäne können einen Windows 2003/2008-Domänen Controller in der Domäne konfigurieren und den MSMQ Windows 2000-Client Unterstützungsdienst auf diesem Domänen Controller installieren.
+Benutzer mit Windows 2000-Clientcomputern in einer Windows 7-Domäne können einen Windows 2003/2008-Domänencontroller in der Domäne konfigurieren und den MSMQ Windows 2000-Clientsupportdienst auf diesem Domänencontroller installieren.
 
 ### <a name="leveraging-feature-capabilities"></a>Nutzen von Featurefunktionen
 
-Benutzer mit Windows 2000-Client Computern, auf denen MSMQ ausgeführt wird, sollten auf eine höhere Windows-Version aktualisieren, um die Active Directory basierte Implementierung des MSMQ-Servers zu nutzen.
+Benutzer mit Windows 2000-Clientcomputern, auf denen MSMQ ausgeführt wird, sollten ein Upgrade auf eine höhere Windows-Version durchführen, um die Active Directory-basierte Implementierung des MSMQ-Servers nutzen zu können.
 
-### <a name="compatibility-performance-reliability-and-usability-testing"></a>Tests der Kompatibilität, Leistung, Zuverlässigkeit und Benutzerfreundlichkeit
+### <a name="compatibility-performance-reliability-and-usability-testing"></a>Kompatibilitäts-, Leistungs-, Zuverlässigkeits- und Benutzerfreundlichkeitstests
 
-Benutzer mit Windows 2000-Client Computern, auf denen MSMQ in einer Windows 7-Domäne mit einem oder mehreren untergeordneten Domänen Controllern ausgeführt wird, sollten überprüfen, ob Ihre Anwendungen in dieser gemischten Domäne funktionsfähig sind.
+Benutzer, die über Windows 2000-Clientcomputer verfügen, auf denen MSMQ in einer Windows 7-Domäne mit einem oder mehreren downleveln Domänencontrollern ausgeführt wird, sollten überprüfen, ob ihre Anwendungen in dieser gemischten Domäne funktionieren.
 
  
 

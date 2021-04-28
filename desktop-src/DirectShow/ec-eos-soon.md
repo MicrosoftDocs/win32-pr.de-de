@@ -1,17 +1,17 @@
 ---
-description: Dieses Ereignis wird nicht unterstützt.
+description: 'EC_EOS_SOON: Dieses Ereignis wird nicht unterstützt.'
 ms.assetid: 431bdfb4-fb05-4bd8-8692-96d2027ec73c
-title: EC_EOS_SOON (DShow. h)
+title: EC_EOS_SOON (Dshow.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: bd31e11439ae22c647eb52bd1c860db33fdff751
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 547bb1eea2e13dbacf735ac9c1a887b7101b9c1c
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367158"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108119748"
 ---
-# <a name="ec_eos_soon"></a>EC \_ EOS in \_ Kürze
+# <a name="ec_eos_soon"></a>EC \_ EOS \_ SOON
 
 Dieses Ereignis wird nicht unterstützt.
 
@@ -19,20 +19,20 @@ Dieses Ereignis wird nicht unterstützt.
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------|------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>DShow. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Dshow.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Ereignis Benachrichtigungs Codes](event-notification-codes.md)
+[Ereignisbenachrichtigungscodes](event-notification-codes.md)
 </dt> <dt>
 
-[Ereignis Benachrichtigung in DirectShow](event-notification-in-directshow.md)
+[Ereignisbenachrichtigung in DirectShow](event-notification-in-directshow.md)
 </dt> </dl>
 
  

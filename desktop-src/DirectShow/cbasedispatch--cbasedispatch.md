@@ -1,7 +1,7 @@
 ---
-description: Dekonstruktormethode.
+description: CBaseDispatch.~CBaseDispatch-Destruktor – Destruktormethode.
 ms.assetid: b3256b3f-20c5-4611-abbe-d0c5ee470922
-title: Cbasedispatch. ~ cbasedispatch-debugtor (ctlutil. h)
+title: CBaseDispatch.~CBaseDispatch-Destruktor (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 68ca35245e207be09a236d69d7f507f3bbd946f8
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 0984a4a7e1bf69c4d650963b8e50431fdd0b3107
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369561"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108099908"
 ---
-# <a name="cbasedispatchcbasedispatch-destructor"></a>Cbasedispatch. ~ cbasedispatch-Dekonstruktor
+# <a name="cbasedispatchcbasedispatch-destructor"></a>CBaseDispatch.~CBaseDispatch-Destruktor
 
-Dekonstruktormethode.
+Destruktormethode.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,18 +40,18 @@ Dekonstruktormethode.
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (einschließlich Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbasedispatch-Klasse**](cbasedispatch.md)
+[**CBaseDispatch-Klasse**](cbasedispatch.md)
 </dt> </dl>
 
  

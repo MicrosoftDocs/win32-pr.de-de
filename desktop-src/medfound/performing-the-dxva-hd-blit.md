@@ -1,17 +1,17 @@
 ---
-description: .
+description: Ausführen von DXVA-HD Blit
 ms.assetid: fc68704e-68d5-4767-b464-e45ab4c86058
-title: Ausführen von DXVA-HD-Blit
+title: Ausführen von DXVA-HD Blit
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 56c3e72a4c8cf550cfce4864e9efb51e98be6d42
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 37474cdb61136e3e201674695674ccb67abf03a9
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106345198"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108092708"
 ---
-# <a name="performing-the-dxva-hd-blit"></a>Ausführen von DXVA-HD-Blit
+# <a name="performing-the-dxva-hd-blit"></a>Ausführen von DXVA-HD Blit
 
 
 ```C++

@@ -1,38 +1,38 @@
 ---
-title: Ressourcen Strukturen (Menüs und andere Ressourcen)
-description: .
+title: Ressourcenstrukturen (Menüs und andere Ressourcen)
+description: Ressourcenstrukturen (Menüs und andere Ressourcen)
 ms.assetid: 3b0eecd7-9de0-4897-9833-386c30bc511e
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 29259fc7f273aacde6fa8892a09f695311bfdfe0
-ms.sourcegitcommit: 8fa6614b715bddf14648cce36d2df22e5232801a
+ms.openlocfilehash: 3fa2863750e441caba9302da39a9fefab7ff0e4c
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "103739440"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108092678"
 ---
-# <a name="resource-structures-menus-and-other-resources"></a>Ressourcen Strukturen (Menüs und andere Ressourcen)
+# <a name="resource-structures-menus-and-other-resources"></a>Ressourcenstrukturen (Menüs und andere Ressourcen)
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [**Acceltableentry**](acceltableentry.md)
--   [**Cursor Verzeichnis**](cursordir.md)
--   [**Cursor Form**](/windows/win32/api/winuser/ns-winuser-cursorshape)
--   [**Direntry**](direntry.md)
--   [**Fontdirentry**](fontdirentry.md)
--   [**Fontgrouphdr**](fontgrouphdr.md)
--   [**Iconresdir**](iconresdir.md)
--   [**Localheader**](localheader.md)
--   [**Menuheader**](menuheader.md)
--   [**Menuhelpid**](menuhelpid.md)
--   [**Nachrichten \_ Ressourcen \_ Block**](/windows/desktop/api/Winnt/ns-winnt-message_resource_block)
--   [**Nachrichten \_ Ressourcen \_ Daten**](/windows/desktop/api/Winnt/ns-winnt-message_resource_data)
--   [**Nachrichten \_ Ressourcen \_ Eintrag**](/windows/desktop/api/Winnt/ns-winnt-message_resource_entry)
--   [**"Nwheader"**](newheader.md)
--   [**Normalmenuitem**](normalmenuitem.md)
--   [**Popupmenuitem**](popupmenuitem.md)
--   [**Resdir**](resdir.md)
--   [**Resourceheader**](resourceheader.md)
+-   [**ACCELTABLEENTRY**](acceltableentry.md)
+-   [**CURSORDIR**](cursordir.md)
+-   [**CURSORSHAPE**](/windows/win32/api/winuser/ns-winuser-cursorshape)
+-   [**DIRENTRY**](direntry.md)
+-   [**FONTDIRENTRY**](fontdirentry.md)
+-   [**FONTGROUPHDR**](fontgrouphdr.md)
+-   [**ICONRESDIR**](iconresdir.md)
+-   [**LOCALHEADER**](localheader.md)
+-   [**MENUHEADER**](menuheader.md)
+-   [**MENUHELPID**](menuhelpid.md)
+-   [**MESSAGE \_ RESOURCE \_ BLOCK**](/windows/desktop/api/Winnt/ns-winnt-message_resource_block)
+-   [**\_ \_ NACHRICHTENRESSOURCENDATEN**](/windows/desktop/api/Winnt/ns-winnt-message_resource_data)
+-   [**\_EINTRAG DER NACHRICHTENRESSOURCE \_**](/windows/desktop/api/Winnt/ns-winnt-message_resource_entry)
+-   [**NEWHEADER**](newheader.md)
+-   [**NORMALMENUITEM**](normalmenuitem.md)
+-   [**POPUPMENUITEM**](popupmenuitem.md)
+-   [**RESDIR**](resdir.md)
+-   [**RESOURCEHEADER**](resourceheader.md)
 
  
 

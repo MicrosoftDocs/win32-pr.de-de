@@ -1,7 +1,7 @@
 ---
-description: Konstruktormethode.
+description: 'CCmdQueue.CCmdQueue-Konstruktor : Konstruktormethode.'
 ms.assetid: 9961a8fe-db72-4be6-8f72-68b74f82e4d4
-title: Ccmdqueue. ccmdqueue-Konstruktor (winutil. h)
+title: CCmdQueue.CCmdQueue-Konstruktor (Winutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,14 +16,14 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 9469aa4ff9311efa096a66ee637512a2a812b54e
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 7f4dd94e7ef2ac3970fe652f4b7a3ad7117f047e
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106352836"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108119828"
 ---
-# <a name="ccmdqueueccmdqueue-constructor"></a>Ccmdqueue. ccmdqueue-Konstruktor
+# <a name="ccmdqueueccmdqueue-constructor"></a>CCmdQueue.CCmdQueue-Konstruktor
 
 Konstruktormethode.
 
@@ -38,24 +38,24 @@ CCmdQueue();
 
 ## <a name="parameters"></a>Parameter
 
-Dieser Konstruktor weist keine Parameter auf.
+Dieser Konstruktor verfügt über keine Parameter.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Winutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Winutil.h (einschließlich Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Ccmdqueue-Klasse**](ccmdqueue.md)
+[**CCmdQueue-Klasse**](ccmdqueue.md)
 </dt> </dl>
 
  

@@ -1,6 +1,6 @@
 ---
-description: Ruft ein folderitems-Objekt ab, das alle ausgewählten Elemente in der Ansicht darstellt.
-title: Shellfolderview. SelectedItems-Methode (Shldisp. h)
+description: 'ShellFolderView.SelectedItems-Methode: Ruft ein FolderItems-Objekt ab, das alle ausgewählten Elemente in der Ansicht darstellt.'
+title: ShellFolderView.SelectedItems-Methode (Shldisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 api_location:
 - Shell32.dll
 ms.assetid: 1ee3bf2e-f9c9-47d9-a0f2-efedd69770c5
-ms.openlocfilehash: c6ade3a6e25d5de6bfa1661207473dac72ace2bf
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 54cf67f1b75ae9d6423b02d0cacdde032ad2e018
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104994999"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108083378"
 ---
-# <a name="shellfolderviewselecteditems-method"></a>Shellfolderview. SelectedItems-Methode
+# <a name="shellfolderviewselecteditems-method"></a>ShellFolderView.SelectedItems-Methode
 
-Ruft ein [**folderitems**](folderitems.md) -Objekt ab, das alle ausgewählten Elemente in der Ansicht darstellt.
+Ruft ein [**FolderItems-Objekt**](folderitems.md) ab, das alle ausgewählten Elemente in der Ansicht darstellt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,17 +39,17 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Type: **[ **folderitems**](folderitems.md)\*\***
+Typ: **[ **FolderItems**](folderitems.md)\*\***
 
-Ein Objekt Verweis auf das [**folderitems**](folderitems.md) -Objekt.
+Ein Objektverweis auf das [**FolderItems-Objekt.**](folderitems.md)
 
 ## <a name="remarks"></a>Bemerkungen
 
-**SelectedItems** kann nur auf dem lokalen System aufgerufen werden. Es funktioniert nicht, wenn es auf einer Webseite über HTTP oder UNC ausgeführt wird.
+**SelectedItems** kann nur auf dem lokalen System aufgerufen werden. Sie funktioniert nicht, wenn sie auf einer Webseite über HTTP oder UNC ausgeführt wird.
 
 ## <a name="examples"></a>Beispiele
 
-Das folgende Beispiel zeigt die ordnungsgemäße Verwendung dieser Methode in JScript Embedded in HTML.
+Das folgende Beispiel zeigt die ordnungsgemäße Verwendung dieser Methode in JScript, eingebettet in HTML.
 
 
 ```JScript
@@ -97,17 +97,17 @@ Das folgende Beispiel zeigt die ordnungsgemäße Verwendung dieser Methode in JS
 
 
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, Windows XP \[ Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Client)<br/> | Nur Windows 2000 Professional- und Windows \[ XP-Desktop-Apps\]<br/>                                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                           |
-| Header<br/>                   | <dl> <dt>Shldisp. h</dt> </dl>                           |
-| IDL<br/>                      | <dl> <dt>Shldisp. idl</dt> </dl>                         |
-| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4,71 oder höher)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>                           |
+| Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                         |
+| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4.71 oder höher)</dt> </dl> |
 
 
 
