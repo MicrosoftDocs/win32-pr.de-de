@@ -1,7 +1,7 @@
 ---
-description: Ruft die Anzahl der abtasteten Scheitel Punkte (oder Texels) ab.
+description: 'ID3DXPRTCompBuffer::GetNumSamples-Methode: Ruft die Anzahl der Scheitelpunkte (oder Texel) ab, die als Stichprobe entnommen wurden.'
 ms.assetid: aed87618-03b8-4130-86bb-68eee66b287c
-title: 'ID3DXPRTCompBuffer:: getnumsamples-Methode (D3DX9Mesh. h)'
+title: ID3DXPRTCompBuffer::GetNumSamples-Methode (D3DX9Mesh.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,18 +14,18 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: a1e4fcf82d066011ca743d810b321c0a94d60751
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 8bf2f35ab431ee03034269367c1ba31a9e94b7c4
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103762297"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108093148"
 ---
-# <a name="id3dxprtcompbuffergetnumsamples-method"></a><span data-ttu-id="081ed-103">ID3DXPRTCompBuffer:: getnumsamples-Methode</span><span class="sxs-lookup"><span data-stu-id="081ed-103">ID3DXPRTCompBuffer::GetNumSamples method</span></span>
+# <a name="id3dxprtcompbuffergetnumsamples-method"></a><span data-ttu-id="fc717-103">ID3DXPRTCompBuffer::GetNumSamples-Methode</span><span class="sxs-lookup"><span data-stu-id="fc717-103">ID3DXPRTCompBuffer::GetNumSamples method</span></span>
 
-<span data-ttu-id="081ed-104">Ruft die Anzahl der abtasteten Scheitel Punkte (oder Texels) ab.</span><span class="sxs-lookup"><span data-stu-id="081ed-104">Retrieves the number of vertices (or texels) sampled.</span></span>
+<span data-ttu-id="fc717-104">Ruft die Anzahl der Scheitelpunkte (oder Texel) ab, die als Stichprobe entnommen wurden.</span><span class="sxs-lookup"><span data-stu-id="fc717-104">Retrieves the number of vertices (or texels) sampled.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="081ed-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="081ed-105">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="fc717-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="fc717-105">Syntax</span></span>
 
 
 ```C++
@@ -34,32 +34,32 @@ UINT GetNumSamples();
 
 
 
-## <a name="parameters"></a><span data-ttu-id="081ed-106">Parameter</span><span class="sxs-lookup"><span data-stu-id="081ed-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="fc717-106">Parameter</span><span class="sxs-lookup"><span data-stu-id="fc717-106">Parameters</span></span>
 
-<span data-ttu-id="081ed-107">Diese Methode hat keine Parameter.</span><span class="sxs-lookup"><span data-stu-id="081ed-107">This method has no parameters.</span></span>
+<span data-ttu-id="fc717-107">Diese Methode hat keine Parameter.</span><span class="sxs-lookup"><span data-stu-id="fc717-107">This method has no parameters.</span></span>
 
-## <a name="return-value"></a><span data-ttu-id="081ed-108">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="081ed-108">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="fc717-108">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="fc717-108">Return value</span></span>
 
-<span data-ttu-id="081ed-109">Typ: **[ **uint**](../winprog/windows-data-types.md)**</span><span class="sxs-lookup"><span data-stu-id="081ed-109">Type: **[**UINT**](../winprog/windows-data-types.md)**</span></span>
+<span data-ttu-id="fc717-109">Typ: **[ **UINT**](../winprog/windows-data-types.md)**</span><span class="sxs-lookup"><span data-stu-id="fc717-109">Type: **[**UINT**](../winprog/windows-data-types.md)**</span></span>
 
-<span data-ttu-id="081ed-110">Gibt die Anzahl der abtasteten Scheitel Punkte (oder Texels) zurück.</span><span class="sxs-lookup"><span data-stu-id="081ed-110">Returns the number of vertices (or texels) sampled.</span></span>
+<span data-ttu-id="fc717-110">Gibt die Anzahl der Scheitelpunkte (oder Texel) zurück, die als Stichprobe entnommen wurden.</span><span class="sxs-lookup"><span data-stu-id="fc717-110">Returns the number of vertices (or texels) sampled.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="081ed-111">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="081ed-111">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="fc717-111">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="fc717-111">Requirements</span></span>
 
 
 
-| <span data-ttu-id="081ed-112">Anforderung</span><span class="sxs-lookup"><span data-stu-id="081ed-112">Requirement</span></span> | <span data-ttu-id="081ed-113">Wert</span><span class="sxs-lookup"><span data-stu-id="081ed-113">Value</span></span> |
+| <span data-ttu-id="fc717-112">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="fc717-112">Requirement</span></span> | <span data-ttu-id="fc717-113">Wert</span><span class="sxs-lookup"><span data-stu-id="fc717-113">Value</span></span> |
 |--------------------|----------------------------------------------------------------------------------------|
-| <span data-ttu-id="081ed-114">Header</span><span class="sxs-lookup"><span data-stu-id="081ed-114">Header</span></span><br/>  | <dl> <span data-ttu-id="081ed-115"><dt>D3DX9Mesh. h</dt></span><span class="sxs-lookup"><span data-stu-id="081ed-115"><dt>D3DX9Mesh.h</dt></span></span> </dl> |
-| <span data-ttu-id="081ed-116">Bibliothek</span><span class="sxs-lookup"><span data-stu-id="081ed-116">Library</span></span><br/> | <dl> <span data-ttu-id="081ed-117"><dt>D3dx9. lib</dt></span><span class="sxs-lookup"><span data-stu-id="081ed-117"><dt>D3dx9.lib</dt></span></span> </dl>   |
+| <span data-ttu-id="fc717-114">Header</span><span class="sxs-lookup"><span data-stu-id="fc717-114">Header</span></span><br/>  | <dl> <span data-ttu-id="fc717-115"><dt>D3DX9Mesh.h</dt></span><span class="sxs-lookup"><span data-stu-id="fc717-115"><dt>D3DX9Mesh.h</dt></span></span> </dl> |
+| <span data-ttu-id="fc717-116">Bibliothek</span><span class="sxs-lookup"><span data-stu-id="fc717-116">Library</span></span><br/> | <dl> <span data-ttu-id="fc717-117"><dt>D3dx9.lib</dt></span><span class="sxs-lookup"><span data-stu-id="fc717-117"><dt>D3dx9.lib</dt></span></span> </dl>   |
 
 
 
-## <a name="see-also"></a><span data-ttu-id="081ed-118">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="081ed-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="fc717-118">Weitere Informationen</span><span class="sxs-lookup"><span data-stu-id="fc717-118">See also</span></span>
 
 <dl> <dt>
 
-[<span data-ttu-id="081ed-119">ID3DXPRTCompBuffer</span><span class="sxs-lookup"><span data-stu-id="081ed-119">ID3DXPRTCompBuffer</span></span>](id3dxprtcompbuffer.md)
+[<span data-ttu-id="fc717-119">ID3DXPRTCompBuffer</span><span class="sxs-lookup"><span data-stu-id="fc717-119">ID3DXPRTCompBuffer</span></span>](id3dxprtcompbuffer.md)
 </dt> </dl>
 
  

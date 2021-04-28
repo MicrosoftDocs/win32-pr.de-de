@@ -1,7 +1,7 @@
 ---
-description: Beschreibt Farbwerte.
+description: 'D3DXCOLOR-Struktur (D3DX10Math.h): Beschreibt Farbwerte.'
 ms.assetid: bb5e36c8-4f24-41b5-84e7-3034e497721d
-title: D3DXCOLOR-Struktur (D3DX10Math. h)
+title: D3DXCOLOR-Struktur (D3DX10Math.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - HeaderDef
 api_location:
 - D3DX10Math.h
-ms.openlocfilehash: 436a20fa8ed6f57062f268be2b71f7e350cb2854
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 9e919f86cebba1526908020881b73c01e02b7df3
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106355041"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108103558"
 ---
-# <a name="d3dxcolor-structure-d3dx10mathh"></a><span data-ttu-id="b405b-103">D3DXCOLOR-Struktur (D3DX10Math. h)</span><span class="sxs-lookup"><span data-stu-id="b405b-103">D3DXCOLOR structure (D3DX10Math.h)</span></span>
+# <a name="d3dxcolor-structure-d3dx10mathh"></a><span data-ttu-id="60b23-103">D3DXCOLOR-Struktur (D3DX10Math.h)</span><span class="sxs-lookup"><span data-stu-id="60b23-103">D3DXCOLOR structure (D3DX10Math.h)</span></span>
 
-<span data-ttu-id="b405b-104">Beschreibt Farbwerte.</span><span class="sxs-lookup"><span data-stu-id="b405b-104">Describes color values.</span></span>
+<span data-ttu-id="60b23-104">Beschreibt Farbwerte.</span><span class="sxs-lookup"><span data-stu-id="60b23-104">Describes color values.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="b405b-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="b405b-105">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="60b23-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="60b23-105">Syntax</span></span>
 
 
 ```C++
@@ -38,69 +38,69 @@ typedef struct D3DXCOLOR {
 
 
 
-## <a name="members"></a><span data-ttu-id="b405b-106">Member</span><span class="sxs-lookup"><span data-stu-id="b405b-106">Members</span></span>
+## <a name="members"></a><span data-ttu-id="60b23-106">Member</span><span class="sxs-lookup"><span data-stu-id="60b23-106">Members</span></span>
 
 <dl> <dt>
 
-<span data-ttu-id="b405b-107">**r**</span><span class="sxs-lookup"><span data-stu-id="b405b-107">**r**</span></span>
+<span data-ttu-id="60b23-107">**r**</span><span class="sxs-lookup"><span data-stu-id="60b23-107">**r**</span></span>
 </dt> <dd>
 
-<span data-ttu-id="b405b-108">Typ: **[ **float**](../winprog/windows-data-types.md)**</span><span class="sxs-lookup"><span data-stu-id="b405b-108">Type: **[**FLOAT**](../winprog/windows-data-types.md)**</span></span>
+<span data-ttu-id="60b23-108">Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**</span><span class="sxs-lookup"><span data-stu-id="60b23-108">Type: **[**FLOAT**](../winprog/windows-data-types.md)**</span></span>
 
 </dd> <dd>
 
-<span data-ttu-id="b405b-109">Rote Komponente der Farbe.</span><span class="sxs-lookup"><span data-stu-id="b405b-109">Red component of the color.</span></span>
+<span data-ttu-id="60b23-109">Rote Komponente der Farbe.</span><span class="sxs-lookup"><span data-stu-id="60b23-109">Red component of the color.</span></span>
 
 </dd> <dt>
 
-<span data-ttu-id="b405b-110">**g**</span><span class="sxs-lookup"><span data-stu-id="b405b-110">**g**</span></span>
+<span data-ttu-id="60b23-110">**g**</span><span class="sxs-lookup"><span data-stu-id="60b23-110">**g**</span></span>
 </dt> <dd>
 
-<span data-ttu-id="b405b-111">Typ: **[ **float**](../winprog/windows-data-types.md)**</span><span class="sxs-lookup"><span data-stu-id="b405b-111">Type: **[**FLOAT**](../winprog/windows-data-types.md)**</span></span>
+<span data-ttu-id="60b23-111">Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**</span><span class="sxs-lookup"><span data-stu-id="60b23-111">Type: **[**FLOAT**](../winprog/windows-data-types.md)**</span></span>
 
 </dd> <dd>
 
-<span data-ttu-id="b405b-112">Grüne Komponente der Farbe.</span><span class="sxs-lookup"><span data-stu-id="b405b-112">Green component of the color.</span></span>
+<span data-ttu-id="60b23-112">Grüne Komponente der Farbe.</span><span class="sxs-lookup"><span data-stu-id="60b23-112">Green component of the color.</span></span>
 
 </dd> <dt>
 
-<span data-ttu-id="b405b-113">**b**</span><span class="sxs-lookup"><span data-stu-id="b405b-113">**b**</span></span>
+<span data-ttu-id="60b23-113">**b**</span><span class="sxs-lookup"><span data-stu-id="60b23-113">**b**</span></span>
 </dt> <dd>
 
-<span data-ttu-id="b405b-114">Typ: **[ **float**](../winprog/windows-data-types.md)**</span><span class="sxs-lookup"><span data-stu-id="b405b-114">Type: **[**FLOAT**](../winprog/windows-data-types.md)**</span></span>
+<span data-ttu-id="60b23-114">Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**</span><span class="sxs-lookup"><span data-stu-id="60b23-114">Type: **[**FLOAT**](../winprog/windows-data-types.md)**</span></span>
 
 </dd> <dd>
 
-<span data-ttu-id="b405b-115">Blaue Komponente der Farbe.</span><span class="sxs-lookup"><span data-stu-id="b405b-115">Blue component of the color.</span></span>
+<span data-ttu-id="60b23-115">Blaue Komponente der Farbe.</span><span class="sxs-lookup"><span data-stu-id="60b23-115">Blue component of the color.</span></span>
 
 </dd> <dt>
 
-<span data-ttu-id="b405b-116">**ein**</span><span class="sxs-lookup"><span data-stu-id="b405b-116">**a**</span></span>
+<span data-ttu-id="60b23-116">**Eine**</span><span class="sxs-lookup"><span data-stu-id="60b23-116">**a**</span></span>
 </dt> <dd>
 
-<span data-ttu-id="b405b-117">Typ: **[ **float**](../winprog/windows-data-types.md)**</span><span class="sxs-lookup"><span data-stu-id="b405b-117">Type: **[**FLOAT**](../winprog/windows-data-types.md)**</span></span>
+<span data-ttu-id="60b23-117">Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**</span><span class="sxs-lookup"><span data-stu-id="60b23-117">Type: **[**FLOAT**](../winprog/windows-data-types.md)**</span></span>
 
 </dd> <dd>
 
-<span data-ttu-id="b405b-118">Alpha Komponente der Farbe.</span><span class="sxs-lookup"><span data-stu-id="b405b-118">Alpha component of the color.</span></span>
+<span data-ttu-id="60b23-118">Alphakomponente der Farbe.</span><span class="sxs-lookup"><span data-stu-id="60b23-118">Alpha component of the color.</span></span>
 
 </dd> </dl>
 
-## <a name="requirements"></a><span data-ttu-id="b405b-119">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="b405b-119">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="60b23-119">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="60b23-119">Requirements</span></span>
 
 
 
-| <span data-ttu-id="b405b-120">Anforderung</span><span class="sxs-lookup"><span data-stu-id="b405b-120">Requirement</span></span> | <span data-ttu-id="b405b-121">Wert</span><span class="sxs-lookup"><span data-stu-id="b405b-121">Value</span></span> |
+| <span data-ttu-id="60b23-120">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="60b23-120">Requirement</span></span> | <span data-ttu-id="60b23-121">Wert</span><span class="sxs-lookup"><span data-stu-id="60b23-121">Value</span></span> |
 |-------------------|-----------------------------------------------------------------------------------------|
-| <span data-ttu-id="b405b-122">Header</span><span class="sxs-lookup"><span data-stu-id="b405b-122">Header</span></span><br/> | <dl> <span data-ttu-id="b405b-123"><dt>D3DX10Math. h</dt></span><span class="sxs-lookup"><span data-stu-id="b405b-123"><dt>D3DX10Math.h</dt></span></span> </dl> |
+| <span data-ttu-id="60b23-122">Header</span><span class="sxs-lookup"><span data-stu-id="60b23-122">Header</span></span><br/> | <dl> <span data-ttu-id="60b23-123"><dt>D3DX10Math.h</dt></span><span class="sxs-lookup"><span data-stu-id="60b23-123"><dt>D3DX10Math.h</dt></span></span> </dl> |
 
 
 
-## <a name="see-also"></a><span data-ttu-id="b405b-124">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="b405b-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="60b23-124">Weitere Informationen</span><span class="sxs-lookup"><span data-stu-id="60b23-124">See also</span></span>
 
 <dl> <dt>
 
-[<span data-ttu-id="b405b-125">D3DX-Strukturen</span><span class="sxs-lookup"><span data-stu-id="b405b-125">D3DX Structures</span></span>](d3d10-graphics-reference-d3dx10-structures.md)
+[<span data-ttu-id="60b23-125">D3DX-Strukturen</span><span class="sxs-lookup"><span data-stu-id="60b23-125">D3DX Structures</span></span>](d3d10-graphics-reference-d3dx10-structures.md)
 </dt> </dl>
 
  
