@@ -1,7 +1,7 @@
 ---
-description: Legt einen ganzzahligen Wert fest.
+description: 'ID3DXConstantTable::SetInt-Methode: Legt einen ganzzahligen Wert fest.'
 ms.assetid: b57d30b5-c2b5-469e-a267-24e6e712d645
-title: 'ID3DXConstantTable:: abtint-Methode (D3DX9Shader. h)'
+title: ID3DXConstantTable::SetInt-Methode (D3DX9Shader.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,14 +14,14 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: a0aa0a213f9f4704a5d557db66aaf360f8baa727
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: f218a0cd1a0e1858f24ec8cbccb4848c37121086
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106365317"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108115128"
 ---
-# <a name="id3dxconstanttablesetint-method"></a>ID3DXConstantTable:: abtint-Methode
+# <a name="id3dxconstanttablesetint-method"></a>ID3DXConstantTable::SetInt-Methode
 
 Legt einen ganzzahligen Wert fest.
 
@@ -42,16 +42,16 @@ HRESULT SetInt(
 
 <dl> <dt>
 
-*pdevice* \[ in\]
+*pDevice* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPDIRECT3DDEVICE9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3ddevice9)**
 
-Zeiger auf eine [**IDirect3DDevice9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3ddevice9) -Schnittstelle, die das Gerät darstellt, das der Konstanten Tabelle zugeordnet ist.
+Zeiger auf eine [**IDirect3DDevice9-Schnittstelle,**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3ddevice9) die das Gerät darstellt, das der Konstantentabelle zugeordnet ist.
 
 </dd> <dt>
 
-*hconstant* \[ in\]
+*hConstant* \[ In\]
 </dt> <dd>
 
 Typ: **[D3DXHANDLE](dx9-graphics-reference-effects-constants.md)**
@@ -63,7 +63,7 @@ Eindeutiger Bezeichner für die Konstante. Siehe [D3DXHANDLE](dx9-graphics-refer
 *n* \[ in\]
 </dt> <dd>
 
-Typ: **[ **int**](../winprog/windows-data-types.md)**
+Typ: **[ **INT**](../winprog/windows-data-types.md)**
 
 Eine ganze Zahl.
 
@@ -73,20 +73,20 @@ Eine ganze Zahl.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert "D3DERR \_ invalidcall" lauten.
+Wenn die Methode erfolgreich ist, ist der Rückgabewert D3D \_ OK. Wenn bei der Methode ein Fehler auftritt, kann der Rückgabewert D3DERR \_ INVALIDCALL sein.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Shader. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>     |
+| Header<br/>  | <dl> <dt>D3DX9Shader.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

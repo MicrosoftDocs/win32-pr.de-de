@@ -1,7 +1,7 @@
 ---
-description: Stellt eine benutzerdefinierte Benutzeroberfläche bereit, die die standardmäßige Systembenutzer Oberfläche ersetzt.
+description: 'IWiaUIExtension2::D eviceDialog-Methode: Stellt eine benutzerdefinierte Benutzeroberfläche bereit, die die Standardsystem-Benutzeroberfläche ersetzt.'
 ms.assetid: 0d70392d-294a-42bf-adc5-1006f83d7e21
-title: IWiaUIExtension2::D evicedialog-Methode (wiadevd. h)
+title: IWiaUIExtension2::D eviceDialog-Methode (Wiadevd.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Wiadevd.h
-ms.openlocfilehash: 142ec77572708063e24b38d342fb49f69c7651c5
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 94e717184c936ae85ba1cf345a13b44f9bbdce4d
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214649"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108116648"
 ---
-# <a name="iwiauiextension2devicedialog-method"></a>IWiaUIExtension2::D evicedialog-Methode
+# <a name="iwiauiextension2devicedialog-method"></a>IWiaUIExtension2::D eviceDialog-Methode
 
-Stellt eine benutzerdefinierte Benutzeroberfläche bereit, die die standardmäßige Systembenutzer Oberfläche ersetzt.
+Stellt eine benutzerdefinierte Benutzeroberfläche bereit, die die Standard-Benutzeroberfläche des Systems ersetzt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,12 +39,12 @@ HRESULT DeviceDialog(
 
 <dl> <dt>
 
-*pdevicedialogdata* \[ in\]
+*pDeviceDialogData* \[ In\]
 </dt> <dd>
 
-Typ: **PDEVICEDIALOGDATA2 \** _
+Typ: **PDEVICEDIALOGDATA2 \***
 
-Verweist auf eine [_ *DEVICEDIALOGDATA2* *](-wia-devicedialogdata2.md) -Struktur, die alle Daten enthält, die zum Implementieren des Geräte Dialogfelds erforderlich sind.
+Verweist auf eine [**DEVICEDIALOGDATA2-Struktur,**](-wia-devicedialogdata2.md) die alle Daten enthält, die zum Implementieren des Gerätedialogs erforderlich sind.
 
 </dd> </dl>
 
@@ -52,14 +52,14 @@ Verweist auf eine [_ *DEVICEDIALOGDATA2* *](-wia-devicedialogdata2.md) -Struktur
 
 Typ: **HRESULT**
 
-Wenn die Methode erfolgreich ausgeführt wird, gibt Sie S \_ OK zurück. Wenn der Benutzer das Dialogfeld abbricht, gibt die Methode den Wert "false" zurück \_ . Wenn die Methode fehlschlägt, wird ein entsprechender Fehlercode zurückgegeben. In der folgenden Tabelle sind einige der möglichen Rückgabestatus Codes aufgeführt.
+Wenn die Methode erfolgreich ist, wird S \_ OK zurückgegeben. Wenn der Benutzer den Dialog abbricht, gibt die Methode S \_ FALSE zurück. Wenn bei der Methode ein Fehler auftritt, wird ein entsprechender Fehlercode zurückgegeben. Die folgende Tabelle zeigt einige der möglichen Rückgabestatuscodes.
 
 
 
 | Fehlercode    | BESCHREIBUNG                              |
 |---------------|------------------------------------------|
-| E \_ invalidArg | Pdevicedialogdata des Parameters ist **null**. |
-| E \_ notimpl    | Die Methode ist nicht implementiert.           |
+| E \_ INVALIDARG | Der Parameter pDeviceDialogData ist **NULL.** |
+| E \_ NOTIMPL    | Die Methode ist nicht implementiert.           |
 
 
 
@@ -67,17 +67,17 @@ Wenn die Methode erfolgreich ausgeführt wird, gibt Sie S \_ OK zurück. Wenn de
 
 ## <a name="remarks"></a>Bemerkungen
 
-Wenn Sie die [**IWiaUIExtension2**](-wia-iwiauiextension2.md) -Schnittstelle implementieren und die Systembenutzer Oberfläche nicht ersetzen möchten, muss diese Methode trotzdem implementiert werden, aber Sie sollte nicht mehr als "E \_ notimpl" zurückgeben.
+Wenn Sie die [**IWiaUIExtension2-Schnittstelle**](-wia-iwiauiextension2.md) implementieren und die Systemoberfläche nicht ersetzen möchten, muss diese Methode weiterhin implementiert werden, sollte aber nur E \_ NOTIMPL zurückgeben.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                 |
-| Header<br/>                   | <dl> <dt>Wiadevd. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ Vista-Desktop-Apps\]<br/>                                       |
+| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2008-Desktop-Apps\]<br/>                                 |
+| Header<br/>                   | <dl> <dt>Wiadevd.h</dt> </dl> |
 
 
 

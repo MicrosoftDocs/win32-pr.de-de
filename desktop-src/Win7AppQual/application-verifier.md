@@ -1,138 +1,138 @@
 ---
-description: .
+description: Application Verifier (Cookbook zur Anwendungsqualität unter Windows 7 und Windows Server 2008 R2)
 ms.assetid: edf719b7-9bd9-4e23-9bba-d0d7c3c5dbf5
-title: Application Verifier (Windows 7 und Windows Server 2008 R2 Anwendungsqualität Cookbook)
+title: Application Verifier (Cookbook zur Anwendungsqualität unter Windows 7 und Windows Server 2008 R2)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 946d27ecfef46766fe82cc4df2061c7fa5196a45
-ms.sourcegitcommit: 78b64f3865e64768b5319d4f010032ee68924a98
+ms.openlocfilehash: bac2a8bc900ea9d1f35ae228371226355657b930
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "107314993"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108088688"
 ---
-# <a name="application-verifier-windows-7-and-windows-server-2008-r2-application-quality-cookbook"></a>Application Verifier (Windows 7 und Windows Server 2008 R2 Anwendungsqualität Cookbook)
+# <a name="application-verifier-windows-7-and-windows-server-2008-r2-application-quality-cookbook"></a>Application Verifier (Cookbook zur Anwendungsqualität unter Windows 7 und Windows Server 2008 R2)
 
 ## <a name="affected-platforms"></a>Betroffene Plattformen
 
-**Clients** -Windows XP, Windows Vista, Windows 7  
-**Server** -Windows Server 2003, Windows Server 2008, Windows Server 2008 R2  
+**Clients:** Windows XP, Windows Vista, Windows 7  
+**Server:** Windows Server 2003, Windows Server 2008, Windows Server 2008 R2  
 
 
-## <a name="description"></a>Beschreibung
+## <a name="description"></a>BESCHREIBUNG
 
-Bewerben und erzwingen Sie Application Verifier als Quality Gate für die gesamte Entwicklung. Es umfasst mehrere Verbesserungen:
+Fördern und erzwingen Application Verifier als Qualitätsgate für die entwicklung. Dies umfasst mehrere Verbesserungen:
 
--   Wir haben zusätzliche Überprüfungen zur Behandlung von Problemen bereitgestellt, die das Windows-Fehlerberichterstattung Team während der Verwendung des Thread Pools erkannt hat.
--   Wir haben 32-und 64-Bit-Versionen des Pakets kombiniert, um Änderungen in Windows 7 zu beheben, einschließlich der Anforderungen zum Testen von 32-Bit-Komponenten unter einer 64-Bit-Version von Windows sowie zur allgemeinen Vereinfachung.
--   Wir haben zusätzliche Überprüfungen für Multithreadanwendungen, das Ausführen von 32-Bit-Anwendungen auf 64-Bit-Windows und viele Fehlerbehebungen umfasst.
+-   Wir haben zusätzliche Überprüfungen durchgeführt, um Probleme zu beheben, die Windows-Fehlerberichterstattung Threadpoolverwendung festgestellt haben.
+-   Wir haben 32- und 64-Bit-Versionen des Pakets kombiniert, um Änderungen in Windows 7 zu erfüllen, einschließlich der Anforderungen zum Testen von 32-Bit-Komponenten unter einer 64-Bit-Version von Windows sowie zur allgemeinen Vereinfachung.
+-   Wir haben zusätzliche Überprüfungen für Multithreadanwendungen, das Ausführen von 32-Bit-Anwendungen unter 64-Bit-Windows sowie viele Fehlerbehebungen durchgeführt.
 
-Diese Änderungen sollten keine negativen Auswirkungen auf Benutzer haben, die die Thread Überprüfungen nicht aktivieren. Personen, die zusätzliche Unterstützung bei der Ermittlung und Diagnose vorhandener Probleme bei der Thread Pool Verwendung erhalten. Unabhängig davon, ob Sie Thread Überprüfungen aktivieren, profitieren Sie von den anderen Verbesserungen und Fehlerbehebungen in diesem Dienst.
+Diese Änderungen sollten keine negativen Auswirkungen auf Benutzer haben, die die Threadüberprüfungen nicht aktivieren. Diejenigen, die dies tun, sollten zusätzliche Unterstützung bei der Ermittlung und Diagnose vorhandener Probleme bei der Threadpoolverwendung erhalten. Unabhängig davon, ob Sie Threadüberprüfungen aktivieren, profitieren Sie von den anderen Verbesserungen und Fehlerbehebungen in diesem Dienst.
 
-Obwohl bei der Verwendung dieses diendienstanwender Dienst geringfügig beeinträchtigt wird, sollten die Leistungsstufen akzeptabel bleiben, da Sie in der Regel nicht in Einzelhandelsumgebungen ausgeführt werden.
+Bei der Verwendung dieses Diensts gibt es zwar geringfügige Leistungssentwerte, die Leistungsstufen sollten jedoch akzeptabel bleiben, da sie in der Regel nicht in Einzelhandelsumgebungen ausgeführt werden.
 
-## <a name="usage"></a>Verwendung
+## <a name="usage"></a>Verbrauch
 
 **Allgemeine Informationen**
 
-So bieten Sie zuverlässige Windows-Anwendungen an:
+So stellen Sie zuverlässige Windows-Anwendungen zur Verfügung:
 
-1.  Testen Sie Anwendungen, die in nicht verwaltetem (nativem) Code geschrieben wurden, mit Application Verifier unter dem Debugger und mit dem vollständigen Heap, bevor Sie Sie für Kunden freigeben.
-2.  Führen Sie die von Application Verifier bereitgestellten Schritte aus, um fehlgeleiteten-Bedingungen aufzulösen.
-3.  Nachdem die Anwendung veröffentlicht wurde, überwachen Sie regelmäßig die von Windows-Fehlerberichterstattung gesammelten Anwendungsfehler Berichte.
+1.  Testen Sie Anwendungen, die in nicht verwaltetem (nativem) Code mit Application Verifier debugger und mit einem Ganzseiten-Heap geschrieben wurden, bevor Sie sie für Kunden freigeben.
+2.  Führen Sie die schritte aus, die Application Verifier, um fehleranstrante Bedingungen zu beheben.
+3.  Nachdem Ihre Anwendung freigegeben wurde, überwachen Sie regelmäßig die von der Anwendung erfassten Anwendungsfehlerberichte Windows-Fehlerberichterstattung.
 
-Thread Pool Überprüfungen werden standardmäßig unter der Überschrift "Grundlagen" aktiviert. Da dies in der Standardeinstellung enthalten ist, müssen Benutzer nur Application Verifier in Ihrem Code mit den Standardeinstellungen ausführen, um die neuen Überprüfungen zu nutzen.
+Threadpoolüberprüfungen sind standardmäßig unter der Überprüfungsüberschrift "Grundlagen" aktiviert. Da dies in der Standardeinstellung enthalten ist, müssen Benutzer nur Application Verifier für ihren Code mit den Standardeinstellungen ausführen, um die neuen Überprüfungen zu nutzen.
 
 **Details**
 
-Sie sollten Application Verifier mindestens mit der ausgewählten Einstellung Grundlagen ausführen. Dies ist für WinLogo und winqual erforderlich. Die Einstellung Grundlagen prüft folgendes:
+Sie sollten mindestens Application Verifier ausführen, wobei die Einstellung Grundlagen ausgewählt ist. Dies ist für WinLogo und WinQual erforderlich. Die Einstellung Grundlagen überprüft Folgendes:
 
--   **Ausnahmen: Details zum Ende** : stellt sicher, dass Anwendungen Zugriffs Verletzungen nicht mithilfe der strukturierten Ausnahmebehandlung ausblenden.
--   **Behandelt stoppdetails** -Tests, um sicherzustellen, dass die Anwendung nicht versucht, ungültige Handles zu verwenden.
--   **Details zum Ende von Heaps** : überprüft auf Probleme mit der Arbeitsspeicher Beschädigung im Heap.
--   **Details zu Eingabe-/ausgabestopps** : überwacht die Ausführung asynchroner e/a und führt verschiedene Überprüfungen durch.
--   **Details** zu "Details zum Ende"-erkennt Verluste durch Nachverfolgen der von einer DLL erstellten Ressourcen, die nicht durch den Zeitpunkt der dll-Entladung freigegeben wurden.
--   Sperr **Details für Sperren** : überprüft die korrekte Verwendung für kritische Abschnitte.
--   **Details** zum Arbeitsspeicher-Ende: stellt sicher, dass die APIs für Manipulationen virtueller Bereiche ordnungsgemäß verwendet werden (z. b. virtualbelegc, MapViewOfFile).
--   **TLS-Enddetails** : stellt sicher, dass die lokalen Thread Speicher-APIs ordnungsgemäß verwendet werden
--   **Thread Pool-Enddetails** : sicherstellen der korrekten Verwendung von Thread Pool-APIs und Erzwingen von Konsistenzprüfungen für Worker-Thread-Zustände nach einem Rückruf
+-   **Details zum Beenden von Ausnahmen:** Stellt sicher, dass Anwendungen Zugriffsverletzungen nicht mithilfe der strukturierten Ausnahmebehandlung ausblenden.
+-   **Behandelt Beendigungsdetails–** Testet, um sicherzustellen, dass die Anwendung nicht versucht, ungültige Handles zu verwenden.
+-   **Heaps Stop Details** – Checks for memory corruptions issues in the heap (Details zum Beenden von Heaps– Überprüfungen auf Speicherbeschädigungen im Heap)
+-   Details zum Beenden der **Eingabe/Ausgabe:** Überwacht die Ausführung asynchroner E/A-Vorgänge und führt verschiedene Überprüfungen durch.
+-   **Details zum Beenden** von Datenverlusten: Erkennt Lecks, indem die von einer DLL erzeugten Ressourcen nachzuverfolgen sind, die zum Zeitpunkt des Entladens der DLL nicht freigegeben wurden.
+-   **Details zum Beenden** von Sperren: Überprüft die richtige Verwendung für kritische Abschnitte
+-   **Details zum Beenden** des Arbeitsspeichers: Stellt sicher, dass APIs für die Bearbeitung des virtuellen Speicherplatzes ordnungsgemäß verwendet werden (z. B. VirtualAlloc, MapViewOfFile).
+-   **TLS-Beendigungsdetails:** Stellt sicher, dass lokale Threadspeicher-APIs ordnungsgemäß verwendet werden.
+-   **Threadpool-Beendigungsdetails:** Stellt die korrekte Verwendung von Threadpool-APIs sicher und erzwingt Konsistenzprüfungen für Workerthreadzustände nach einem Rückruf.
 
-Wenn Ihre Anwendung von einer "Pre-Vista"-Anwendung migriert wird, sollten Sie die "luapriv" (auch als UAC-Prüfungen bezeichnet) nutzen. Der Berechtigungs Prätor "eingeschränkte Benutzerkonten" (luapriv) hat zwei primäre Ziele:
+Wenn Ihre Anwendung von einer "Pre-Vista"-Anwendung migriert wird, sollten Sie "LuaPriv" (auch als UAC-Überprüfungen bezeichnet) nutzen. Der Berechtigungsvorhersager für eingeschränkte Benutzerkonten (LuaPriv) hat zwei Hauptziele:
 
--   Vorher **sage**: Wenn Sie eine Anwendung mit Administratorrechten ausführen, prognostizieren Sie vorher, ob diese Anwendung ebenfalls funktioniert, wenn Sie mit weniger Berechtigungen ausgeführt wird (in der Regel als normaler Benutzer). Wenn die Anwendung z. b. in Dateien schreibt, die nur Administratoren Zugriff gewähren, kann diese Anwendung nicht in dieselbe Datei schreiben, wenn Sie als nicht Administrator ausgeführt wird.
--   **Diagnose**: identifizieren Sie bei Ausführung mit nicht-Administrator Berechtigungen potenzielle Probleme, die möglicherweise bereits mit der aktuellen Ausführung vorhanden sind. Wenn das vorherige Beispiel fortgesetzt wird und die Anwendung versucht, in eine Datei zu schreiben, die nur Administratoren von Administrator Gruppen Zugriff gewährt, erhält die Anwendung den Fehler "Zugriff \_ verweigert". Wenn die Anwendung nicht ordnungsgemäß funktioniert, ist dieser Vorgang möglicherweise der Übeltäter.
+-   **Vorhersage:** Bei der Ausführung einer Anwendung mit Administratorrechten können Sie vorhersagen, ob diese Anwendung auch funktioniert, wenn sie mit weniger Berechtigungen ausgeführt wird (im Allgemeinen als normaler Benutzer). Wenn die Anwendung z. B. in Dateien schreibt, die nur Administratorzugriff zulassen, kann diese Anwendung nicht in dieselbe Datei schreiben, wenn sie als Nichtadministrator ausgeführt wird.
+-   **Diagnose:** Identifizieren Sie bei der Ausführung mit Nichtadministratorberechtigungen potenzielle Probleme, die bei der aktuellen Ausführung möglicherweise bereits vorhanden sind. Wenn die Anwendung im vorherigen Beispiel versucht, in eine Datei zu schreiben, die nur Mitgliedern der Administratorgruppe Zugriff gewährt, erhält die Anwendung den Fehler ACCESS \_ DENIED. Wenn die Anwendung nicht ordnungsgemäß funktioniert, kann dieser Vorgang der Grund dafür sein.
 
-Luapriv identifiziert die folgenden Arten von Problemen:
+LuaPriv identifiziert die folgenden Arten von Problemen:
 
 
 
-| **Mögliches Problem**       | **Beschreibung**                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| **Potenzielles Problem**       | **Beschreibung**                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 |---------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Eingeschränkte Namespaces     | Wenn Sie ein benanntes Synchronisierungs Objekt (Ereignis, Semaphore, Mutex usw.) ohne Namespace erstellen, kann die Ausführung ohne Berechtigungen für einige Betriebssysteme erschwert werden, weil das Betriebssystem das Objekt in einem eingeschränkten Namespace platzieren kann. Das Erstellen eines solchen Objekts in einem eingeschränkten Namespace (z. b. dem globalen Namespace) erfordert SeCreateGlobalPrivilege, das nur Administratoren gewährt wird.<br/> Luapriv Flags beide diese Probleme, wenn Sie erkannt werden.<br/> |
-| Prüfungen durch einen festen Administrator | Einige Anwendungen befragen das Sicherheits Token des Benutzers, um herauszufinden, wie viel Berechtigungen er hat. In diesen Fällen kann die Anwendung das Verhalten ändern, je nachdem, wie viel Leistung der Benutzer hat. <br/> Luapriv Flags-API-Aufrufe, die diese Informationen zurückgeben.<br/>                                                                                                                                                                                                |
-| Anfordern von Berechtigungen     | Eine Anwendung versucht möglicherweise, ein sicherheitsrelevantes Privileg (z. b. SeTcbPrivilege oder SeSecurityPrivilege) zu aktivieren, bevor Sie einen Vorgang ausführt, für den Sie erforderlich ist. <br/> Luapriv-Flags versuchen, sicherheitsrelevante Berechtigungen zu aktivieren. <br/>                                                                                                                                                                                                                               |
-| Fehlende Berechtigungen        | Wenn eine Anwendung versucht, eine Berechtigung zu aktivieren, die der Benutzer nicht besitzt, weist dies wahrscheinlich darauf hin, dass die Anwendung die Berechtigung erwartet, was zu Verhaltens unterschieden führen kann. <br/> Fehler bei luapriv-Flags bei Berechtigungsanforderungen. <br/>                                                                                                                                                                                                                                       |
-| INI-File Vorgänge       | Versuche zum Schreiben in zugeordnete ini-Dateien ("Beschreib teprivateprofilesection" und ähnliche APIs) können als nicht Administrator Benutzer fehlschlagen. <br/> Luapriv Flags solche Vorgänge.<br/>                                                                                                                                                                                                                                                                                                            |
-| Zugriff verweigert             | Wenn die Anwendung versucht, auf ein Objekt zuzugreifen (Datei, Registrierungsschlüssel usw.), der Versuch jedoch aufgrund unzureichenden Zugriffs fehlschlägt, erwartet die Anwendung wahrscheinlich, dass Sie mit mehr Berechtigungen ausgeführt wird. <br/> Luapriv Flags Object-Open-Versuche, bei denen der Zugriff \_ verweigert wird, und ähnliche Fehler.<br/>                                                                                                                                                               |
-| Verweigern von ACEs                 | Wenn ein Objekt deny-ACEs in der DACL aufweist, wird der Zugriff auf bestimmte Entitäten explizit verweigert. <br/> Dies ist nicht üblich, und die Vorhersage ist schwierig, sodass die luapriv-Flags ACEs ablehnen, wenn Sie gefunden werden.<br/>                                                                                                                                                                                                                                                                     |
-| Zugriff eingeschränkt         | Wenn eine Anwendung versucht, ein Objekt für Rechte zu öffnen, die nicht normalen Benutzern gewährt werden (z. b. Wenn Sie versuchen, in eine Datei zu schreiben, die nur von Administratoren bearbeitet werden kann), funktioniert die Anwendung wahrscheinlich nicht, wenn Sie als normaler Benutzer ausgeführt wird. <br/> Luapriv Flags solche Vorgänge.<br/>                                                                                                                                                                      |
-| maximal \_ zulässig          | Wenn eine Anwendung ein Objekt für maximal zulässige Berechtigungen öffnet \_ , erfolgt die tatsächliche Zugriffs Überprüfung für das Objekt an anderer Stelle. Die meisten Codes, die dies tun, funktionieren nicht ordnungsgemäß und funktionieren fast sicherlich anders, wenn Sie ohne Berechtigungen ausgeführt werden. <br/> Luapriv markiert daher alle Vorfälle von maximal zulässigen Vorfällen \_ . <br/>                                                                                                                                                            |
+| Eingeschränkte Namespaces     | Das Erstellen eines benannten Synchronisierungsobjekts (Event, Semaphore, Mutex usw.) ohne Namespace kann die Ausführung ohne Berechtigungen auf einigen Betriebssystemen erschweren, da das Betriebssystem das Objekt möglicherweise in einem eingeschränkten Namespace platzieren möchte. Das Erstellen eines solchen Objekts in einem eingeschränkten Namespace (z. B. dem globalen Namespace) erfordert SeCreateGlobalPrivilege, das nur Administratoren gewährt wird.<br/> LuaPriv kennzeichnet beide Probleme, wenn sie erkannt werden.<br/> |
+| Harte Administratorüberprüfungen | Einige Anwendungen abfragen das Sicherheitstoken des Benutzers, um herauszufinden, über wie viele Berechtigungen er verfügt. In diesen Fällen kann die Anwendung ihr Verhalten ändern, je nachdem, über welche Leistungsfähigkeit der Benutzer verfügt. <br/> LuaPriv kennzeichnet API-Aufrufe, die diese Informationen zurückgeben.<br/>                                                                                                                                                                                                |
+| Anfordern von Berechtigungen     | Eine Anwendung versucht möglicherweise, eine sicherheitsrelevante Berechtigung (z. B. SeTcbPrivilege oder SeSecurityPrivilege) zu aktivieren, bevor sie einen Vorgang ausführt, der sie erfordert. <br/> LuaPriv-Flags versuchen, sicherheitsrelevante Berechtigungen zu aktivieren. <br/>                                                                                                                                                                                                                               |
+| Fehlende Berechtigungen        | Wenn eine Anwendung versucht, eine Berechtigung zu aktivieren, über die der Benutzer nicht verfügt, signalisiert sie wahrscheinlich, dass die Anwendung die Berechtigung erwartet, was zu Verhaltensunterschieden führen kann. <br/> LuaPriv kennzeichnet fehlgeschlagene Berechtigungsanforderungen. <br/>                                                                                                                                                                                                                                       |
+| INI-File-Vorgänge       | Versuche, in zugeordnete INI-Dateien (WritePrivateProfileSection und ähnliche APIs) zu schreiben, können als Benutzer ohne Administratorrechte fehlschlagen. <br/> LuaPriv kennzeichnet solche Vorgänge.<br/>                                                                                                                                                                                                                                                                                                            |
+| Zugriff verweigert             | Wenn die Anwendung versucht, auf ein Objekt (Datei, Registrierungsschlüssel usw.) zu zugreifen, der Versuch jedoch aufgrund unzureichenden Zugriffs fehlschlägt, erwartet die Anwendung wahrscheinlich, dass sie mit mehr Berechtigungen ausgeführt wird, als sie besitzt. <br/> LuaPriv kennzeichnet objektoffene Versuche, die mit ACCESS DENIED und \_ ähnlichen Fehlern fehlschlagen.<br/>                                                                                                                                                               |
+| Verweigern von ACEs                 | Wenn ein Objekt aces verweigern in seiner DACL enthält, verweigert es explizit den Zugriff auf bestimmte Entitäten. <br/> Dies ist ungewöhnlich und erschwert die Vorhersage, daher kennzeichnet LuaPriv ACEs verweigern, wenn sie gefunden werden.<br/>                                                                                                                                                                                                                                                                     |
+| Zugriff eingeschränkt         | Wenn eine Anwendung versucht, ein Objekt für Rechte zu öffnen, die normalen Benutzern nicht gewährt werden (z. B. wenn versucht wird, in eine Datei zu schreiben, die nur von Administratoren geschrieben werden kann), funktioniert die Anwendung wahrscheinlich nicht gleich, wenn sie als normaler Benutzer ausgeführt wird. <br/> LuaPriv kennzeichnet solche Vorgänge.<br/>                                                                                                                                                                      |
+| MAXIMAL \_ ZULÄSSIG          | Wenn eine Anwendung ein Objekt für MAXIMUM ALLOWED öffnet, erfolgt die tatsächliche Zugriffsüberprüfung für das \_ Objekt an anderer Stelle. Der meiste Code, der dies tut, funktioniert nicht ordnungsgemäß und funktioniert bei der Ausführung ohne Berechtigungen mit sicherheit unterschiedlich. <br/> LuaPriv kennzeichnet daher alle Incidents von MAXIMUM \_ ALLOWED. <br/>                                                                                                                                                            |
 
 
 
  
 
-Häufig übersehene Probleme werden bei den folgenden Überprüfungen aufgezeichnet:
+Häufig übersehene Probleme werden in den nebulous Misc Checks erfasst:
 
--   Gefährliche APIs-Enddetails
--   Details zu geänderten Stapel Stopps
+-   Details zum Beenden von gefährlichen APIs
+-   Details zum Beenden von dirty stacks
 -   Zeitrollover
 
-Wir haben einen neuen Druck-Verifier hinzugefügt. Diese Ebene hilft dabei, Probleme zu finden und zu beheben, die möglicherweise auftreten, wenn eine Anwendung das Druck Subsystem aufruft. Print Verifier zielt auf die beiden Ebenen des Druck Subsystems, der printapi-Schicht und der PrintDriver-Ebene ab.
+Wir haben eine neue Druckverifizierer hinzugefügt. Diese Ebene hilft beim Suchen und Beheben von Problemen, die beim Aufrufen des Drucksubsystems durch eine Anwendung entstehen können. Die Drucküberprüfung ist auf die beiden Ebenen des Drucksubsystems ausgerichtet, die PrintAPI-Ebene und die PrintDriver-Ebene.
 
-*API-Ebene drucken*
+*Drucken einer API-Ebene*
 
-Print Verifier testet die Schnittstelle zwischen einem Programm und winspool. drv und prntvpt.dll und testet die Schnittstellen dieser DLLs. Die Regeln zum Aufrufen von Funktionen in dieser Schnittstelle finden Sie im MSDN-Hilfe Abschnitt für APIs, die von winspool. drv und prntvpt.dll exportiert werden.
+Die Drucküberprüfung testet die Schnittstelle zwischen einem Programm und Winspool.drv und prntvpt.dll und testet die Schnittstellen dieser DLLs. Sie können die Regeln zum Aufrufen von Funktionen in dieser Schnittstelle im MSDN-Hilfeabschnitt für APIs überprüfen, die von winspool.drv und prntvpt.dll exportiert werden.
 
-*Drucktreiber Ebene*
+*Drucktreiberebene*
 
-Außerdem testet die Druck Überprüfung die Schnittstelle zwischen einem Kern Druckertreiber, z. b. UNIDRV.DLL, UNIDRUI.DLL, PSCRIPT5.DLL, PS5UI.DLL oder MXDWDRV.DLL und den Druckertreiber-Plug-ins. Informationen zu dieser Schnittstelle finden Sie im MSDN und im WDK.
+Die Drucküberprüfung testet auch die Schnittstelle zwischen einem Hauptdrucktreiber wie UNIDRV.DLL, UNIDRUI.DLL, PSCRIPT5.DLL, PS5UI.DLL oder MXDWDRV.DLL und den Druckertreiber-Plug-Ins. Informationen zu dieser Schnittstelle finden Sie im MSDN und im WDK.
 
-Beachten Sie, dass einige dieser Überprüfungen nur für Windows 7 gelten, andere unter Windows 7.
+Beachten Sie, dass einige dieser Überprüfungen nur für Windows 7 gelten, während andere unter Windows 7 einfach besser funktionieren.
 
-In der Regel führen nur Debugversionen den Application Verifier aus, sodass die Leistung im Allgemeinen kein Problem ist. Wenn Leistungsprobleme bei der Verwendung dieser oder einer anderen Application Verifier Prüfung auftreten, führen Sie eine Überprüfung gleichzeitig aus, bis Sie alle erforderlichen Überprüfungen durchgeführt haben.
+In der Regel wird die Application Verifier nur von Debugversionen ausgeführt, sodass die Leistung im Allgemeinen kein Problem ist. Wenn durch die Verwendung dieser oder einer anderen Application Verifier Überprüfung Leistungsprobleme auftreten, führen Sie eine Überprüfung nach der anderen aus, bis Sie alle erforderlichen Überprüfungen durchgeführt haben.
 
-Fast 10% der Anwendungs Abstürze auf Windows-Systemen sind auf eine Heap Beschädigung zurückzuführen. Diese Abstürze können nach dem Fakt fast nicht debuggt werden. Die beste Möglichkeit, diese Probleme zu vermeiden, besteht darin, die in Application Verifier gefundenen seitenheapfeatures zu testen. Es gibt zwei Arten von Seiten Heaps: "Full" und "Light". Der Standardwert ist "Full". Dadurch wird erzwungen, dass ein Debugger beim Erkennen von Beschädigungen sofort beendet wird. Diese Funktion muss im Debugger ausgeführt werden. Es ist jedoch auch die größte Ressourcen anspruchsvolle. Wenn ein Benutzer über zeitliche Probleme verfügt und bereits ein Szenario unter "Full" Page Heap ausgeführt hat, werden diese Probleme wahrscheinlich durch die Festlegung auf "Light" behoben. Außerdem stürzt der helle Seiten Heap erst ab, wenn der Prozess beendet wird. Es stellt eine Stapel Überwachung für die Zuordnung bereit, kann aber erheblich länger dauern, als die vollständige Entsprechung zu nutzen.
+Fast 10 % der Anwendungsabstürze auf Windows-Systemen sind auf Heapbeschädigungen zurückzuführen. Diese Abstürze können nach dem Fakt nahezu unmöglich gedebuggt werden. Die beste Möglichkeit, diese Probleme zu vermeiden, besteht darin, mit den Funktionen des Seitenheaps in Application Verifier zu testen. Es gibt zwei Varianten von Seitenheap: "Full" und "Light". Full ist die Standardeinstellung. erzwingen, dass ein Debugger sofort beendet wird, wenn eine Beschädigung erkannt wird. Dieses Feature MUSS unter dem Debugger ausgeführt werden. Dies ist jedoch auch die ressourcenstärkste Ressource. Wenn ein Benutzer Zeitsteuerungsprobleme hat und bereits ein Szenario unter "Vollständiger" Seitenheap ausgeführt hat, werden diese Probleme wahrscheinlich behoben, wenn er auf "Light" festgelegt ist. Darüber hinaus stürzt der Light Page Heap erst ab, wenn der Prozess beendet wird. Sie stellt zwar eine Stapelüberwachung für die Zuordnung bereit, kann jedoch erheblich länger für die Diagnose als die Nutzung der vollständigen Entsprechung dauern.
 
-Überwachen Sie den Zuverlässigkeits Status der Anwendungen über das winqual-Webportal. In diesem Portal werden die Fehlerberichte angezeigt, die über Windows-Fehlerberichterstattung gesammelt wurden. Daher ist es einfach, die häufigsten Fehler zu identifizieren. Weitere Informationen hierzu finden Sie unter Windows-Fehlerberichterstattung: Getting Started. Microsoft berechnet diesen Dienst nicht.
+Überwachen Sie den Zuverlässigkeitsstatus der Anwendungen über das Winqual-Webportal. In diesem Portal werden die über die Windows-Fehlerberichterstattung erfassten Fehlerberichte angezeigt, sodass die häufigsten Fehler leicht identifiziert werden können. Weitere Informationen finden Sie unter Windows-Fehlerberichterstattung: Erste Schritte. Microsoft berechnet für diesen Dienst keine Gebühren.
 
-Um winqual zu nutzen, müssen Sie folgende Schritte ausführen:
+Um WinQual nutzen zu können, müssen Sie:
 
-1.  Registrieren Sie Ihr Unternehmen für winqual, das eine VeriSign-ID erfordert. Windows 7-Informationen zu winqual finden Sie im Entwickler Portal unter Windows Vista SP1 \\ Windows Server 2008. In Kürze wird ein Windows 7-Speicherort angezeigt.
-2.  Ordnen Sie die ISV-Anwendungen einem Produktnamen und dem ISV-Namen zu, mit dem die Fehlerberichte mit dem Unternehmen verknüpft werden. Andere ISVs können Ihre Fehlerberichte nicht anzeigen.
-3.  Verwenden Sie das Portal, um die wichtigsten Probleme zu identifizieren. ISVs können auch Antworten erstellen, die Kunden informieren, welche Schritte nach einem Fehler ausgeführt werden müssen. Das Antwortsystem unterstützt weltweit mehr als 10 Sprachen.
+1.  Registrieren Sie Ihr Unternehmen für WinQual, für das eine VeriSign-ID erforderlich ist. Windows 7-Informationen zu WinQual finden Sie im Entwicklerportal unter Windows Vista SP1 \\ Windows Server 2008. Es wird bald einen Windows 7-Speicherort haben.
+2.  Ordnen Sie die ISV-Anwendungen einem Produktnamen und dem ISV-Namen zu, der die Fehlerberichte mit dem Unternehmen verknüpft. Andere ISVs können Ihre Fehlerberichte nicht anzeigen.
+3.  Verwenden Sie das Portal, um die wichtigsten Probleme zu identifizieren. ISVs können auch Antworten erstellen, die Kunden darüber informieren, welche Schritte nach einem Fehler erforderlich sind. Das Antwortsystem unterstützt mehr als 10 Sprachen weltweit.
 
-Ein weiterer Hinweis: Application Verifier ist nur so gut wie die Codepfade, für die Sie ihn ausführen. Der Wert, mit dem dieses Tool mit einem Code Coverage Tool kombiniert werden kann, kann nicht überschrieben werden.
+Ein weiterer Hinweis: Application Verifier ist nur so gut wie die Codepfade, für die Sie es ausführen. Der Wert der Kombination dieses Tools mit einem Code Coverage-Tool kann nicht überbewertet werden.
 
 ## <a name="links-to-other-resources"></a>Links zu anderen Ressourcen
 
-**Debuggingtools für Windows:**
+**Debugtools für Windows:**
 
--   [Übersicht und Download Site](https://msdn.microsoft.com/windows/hardware/bg127145)
--   [MSDN-Online Dokumentation](/windows-hardware/drivers/debugger/)
+-   [Übersicht und Downloadwebsite](https://msdn.microsoft.com/windows/hardware/bg127145)
+-   [MSDN-Onlinedokumentation](/windows-hardware/drivers/debugger/)
 
 **Application Verifier:**
 
 -   [Übersicht](/previous-versions/ms220948(v=vs.80))
 -   [Download](https://www.microsoft.com/downloads/details.aspx?FamilyID=c4a25ab9-649d-4a1b-b4a7-c9d8b095df18&amp;DisplayLang=en)
--   [Application Verifier für Microsoft Visual Studio 2008/.NET Framework 3,5](/previous-versions/ms220948(v=vs.80))
+-   [Application Verifier für Microsoft Visual Studio 2008/.NET Framework 3.5](/previous-versions/ms220948(v=vs.80))
 
-    **Hinweis:** die Application Verifier Version, die in Visual Studio ausgeliefert wird, ist veraltet. Verwenden Sie nach Möglichkeit stattdessen das eigenständige Paket. Aus diesem Grund werden in zukünftigen Versionen von Visual Studio keine eingebetteten Application Verifier mehr angezeigt.
+    **Hinweis:** Die Application Verifier Version, die in Visual Studio enthalten ist, ist recht veraltet. Verwenden Sie nach Möglichkeit stattdessen das eigenständige Paket. Aus diesem Grund verfügen zukünftige Versionen von Visual Studio nicht mehr über eingebettete Application Verifier.
 
-**WinQual**
+**WinQual:**
 
 -   [Windows Quality Online Services (Winqual)](/windows-hardware/drivers/dashboard/winqual-submission-tool--winqualexe-)
--   [Windows-Fehlerberichterstattung: "Getting Started"](../wer/using-wer.md)
+-   [Windows-Fehlerberichterstattung: Erste Schritte](../wer/using-wer.md)
 
  
 

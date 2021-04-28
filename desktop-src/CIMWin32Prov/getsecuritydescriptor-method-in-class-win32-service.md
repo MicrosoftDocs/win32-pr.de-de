@@ -1,8 +1,8 @@
 ---
-description: Gibt die Sicherheits Beschreibung zurück, die den Zugriff auf den Dienst steuert.
+description: 'GetSecurityDescriptor-Methode der Win32_Service-Klasse (CIMWin32-WMI-Anbieter): Gibt den Sicherheitsdeskriptor zurück, der den Zugriff auf den Dienst steuert.'
 ms.assetid: 99c8346e-e8d6-4f3c-bbdc-437dcf852b2a
 ms.tgt_platform: multiple
-title: Getsecuritydescriptor-Methode der Win32_Service-Klasse (cimwin32-WMI-Anbieter)
+title: GetSecurityDescriptor-Methode der Win32_Service-Klasse (CIMWin32-WMI-Anbieter)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 - COM
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 5bf8dee49893a5a1d3b628e72b0b0746a6215fb0
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 44c19f22cf57a811a7caebfbcc9bf4202c8d2ad7
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104041395"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108096988"
 ---
-# <a name="getsecuritydescriptor-method-of-the-win32_service-class-cimwin32-wmi-providers"></a>Getsecuritydescriptor-Methode der Win32_Service-Klasse (cimwin32-WMI-Anbieter)
+# <a name="getsecuritydescriptor-method-of-the-win32_service-class-cimwin32-wmi-providers"></a>GetSecurityDescriptor-Methode der Win32_Service-Klasse (CIMWin32-WMI-Anbieter)
 
-Die **getsecuritydescriptor** -Methode gibt die Sicherheits Beschreibung zurück, die den Zugriff auf den Dienst steuert. Der Deskriptor wird als eine Instanz von [**Win32 \_ securityDescriptor**](/previous-versions/windows/desktop/secrcw32prov/win32-securitydescriptor)zurückgegeben.
+Die **GetSecurityDescriptor-Methode** gibt den Sicherheitsdeskriptor zurück, der den Zugriff auf den Dienst steuert. Der Deskriptor wird als Instanz von [**Win32 \_ SecurityDescriptor**](/previous-versions/windows/desktop/secrcw32prov/win32-securitydescriptor)zurückgegeben.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,16 +40,16 @@ uint32 GetSecurityDescriptor(
 
 <dl> <dt>
 
-*Deskriptor* \[ vorgenommen\]
+*Deskriptor* \[ out\]
 </dt> <dd>
 
-Die Sicherheits Beschreibung, die dem Dienst zugeordnet ist.
+Der dem Dienst zugeordnete Sicherheitsdeskriptor.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen der Werte zurück, der in der folgenden Liste aufgeführt ist, oder einen anderen Wert, um einen Fehler anzugeben. Weitere Fehlercodes finden Sie unter [**WMI-Fehler Konstanten**](/windows/desktop/WmiSdk/wmi-error-constants) oder [**WbemErrorEnum**](/windows/desktop/api/wbemdisp/ne-wbemdisp-wbemerrorenum). Allgemeine **HRESULT** -Werte finden Sie unter [System Fehler Codes](/windows/desktop/Debug/system-error-codes).
+Gibt einen der in der folgenden Liste aufgeführten Werte oder einen anderen Wert zurück, um einen Fehler anzugeben. Weitere Fehlercodes finden Sie unter [**WMI-Fehlerkonstanten**](/windows/desktop/WmiSdk/wmi-error-constants) oder [**WbemErrorEnum.**](/windows/desktop/api/wbemdisp/ne-wbemdisp-wbemerrorenum) Allgemeine **HRESULT-Werte** finden Sie unter [Systemfehlercodes.](/windows/desktop/Debug/system-error-codes)
 
 <dl> <dt>
 
@@ -76,7 +76,7 @@ Die Anforderung wird nicht unterstützt.
 
 2
 
-Der Benutzer verfügte nicht über die erforderlichen Zugriffsrechte.
+Der Benutzer hatte nicht den erforderlichen Zugriff.
 
 </dd> <dt>
 
@@ -103,7 +103,7 @@ Der angeforderte Steuerungscode ist nicht gültig, oder es ist für den Dienst n
 
 5
 
-Der angeforderte Steuerungs Code kann nicht an den Dienst gesendet werden, weil der Status des Diensts ([**Win32- \_ baseservice**](win32-baseservice.md).**State** -Eigenschaft) ist gleich 0, 1 oder 2.
+Der angeforderte Steuerungscode kann nicht an den Dienst gesendet werden, da der Zustand des Diensts ([**Win32 \_ BaseService**](win32-baseservice.md)) ist.**State-Eigenschaft)** ist gleich 0, 1 oder 2.
 
 </dd> <dt>
 
@@ -125,21 +125,21 @@ Der Dienst hat auf die Startanforderung nicht rechtzeitig reagiert.
 
 </dd> <dt>
 
-**Unbekannter Fehler.**
+**Unbekannter Fehler**
 </dt> <dd>
 
 8
 
-Unbekannter Fehler beim Starten des Dienstanbieter.
+Unbekannter Fehler beim Starten des Diensts.
 
 </dd> <dt>
 
-**Fehlende Berechtigungen**
+**Berechtigung fehlt**
 </dt> <dd>
 
 9
 
-Der Verzeichnispfad zur ausführbaren Dienst Datei wurde nicht gefunden.
+Der Verzeichnispfad zur ausführbaren Dienstdatei wurde nicht gefunden.
 
 </dd> <dt>
 
@@ -211,7 +211,7 @@ Dieser Dienst wird aus dem System entfernt.
 
 17
 
-Der Dienst hat keinen Ausführungs Thread.
+Der Dienst verfügt über keinen Ausführungsthread.
 
 </dd> <dt>
 
@@ -220,7 +220,7 @@ Der Dienst hat keinen Ausführungs Thread.
 
 18
 
-Der Dienst weist zirkuläre Abhängigkeiten auf, wenn er gestartet wird.
+Der Dienst weist beim Start zirkuläre Abhängigkeiten auf.
 
 </dd> <dt>
 
@@ -229,7 +229,7 @@ Der Dienst weist zirkuläre Abhängigkeiten auf, wenn er gestartet wird.
 
 19
 
-Ein Dienst wird unter dem gleichen Namen ausgeführt.
+Ein Dienst wird unter demselben Namen ausgeführt.
 
 </dd> <dt>
 
@@ -238,7 +238,7 @@ Ein Dienst wird unter dem gleichen Namen ausgeführt.
 
 20
 
-Der Dienst Name enthält ungültige Zeichen.
+Der Dienstname enthält ungültige Zeichen.
 
 </dd> <dt>
 
@@ -247,7 +247,7 @@ Der Dienst Name enthält ungültige Zeichen.
 
 21
 
-An den Dienst wurden ungültige Parameter übermittelt.
+Ungültige Parameter wurden an den Dienst übergeben.
 
 </dd> <dt>
 
@@ -256,7 +256,7 @@ An den Dienst wurden ungültige Parameter übermittelt.
 
 22
 
-Das Konto, unter dem dieser Dienst ausgeführt wird, ist entweder ungültig oder verfügt nicht über die Berechtigungen zum Ausführen des Dienstanbieter.
+Das Konto, unter dem dieser Dienst ausgeführt wird, ist entweder ungültig oder verfügt nicht über die Berechtigungen zum Ausführen des Diensts.
 
 </dd> <dt>
 
@@ -287,13 +287,13 @@ Der Dienst ist im System derzeitig angehalten.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Die [**Win32- \_ securityDescriptor**](/previous-versions/windows/desktop/secrcw32prov/win32-securitydescriptor) -Instanz stellt einen Datentyp für die [**Sicherheits \_ \_ deskriptorsteuerung**](/windows/desktop/SecAuthZ/security-descriptor-control) dar und enthält eine freigegebene [*Zugriffs Steuerungs Liste*](/windows/desktop/SecGloss/d-gly) (DACL) und eine [*System Zugriffs Steuerungs Liste*](/windows/desktop/SecGloss/s-gly) (SACL). Weitere Informationen finden Sie unter [Access Control Listen](/windows/desktop/SecAuthZ/access-control-lists).
+Die [**Win32 \_ SecurityDescriptor-Instanz**](/previous-versions/windows/desktop/secrcw32prov/win32-securitydescriptor) stellt einen [**SECURITY \_ DESCRIPTOR \_ CONTROL-Datentyp**](/windows/desktop/SecAuthZ/security-descriptor-control) dar und enthält eine DACL (Discretionary [*Access Control List)*](/windows/desktop/SecGloss/d-gly) und eine Systemzugriffssteuerungsliste (SACL). [](/windows/desktop/SecGloss/s-gly) Weitere Informationen finden Sie unter [Access Control Listen.](/windows/desktop/SecAuthZ/access-control-lists)
 
-Wenn **SeSecurityPrivilege** beim erhalten einer Sicherheits Beschreibung nicht gewährt oder aktiviert ist, wird nur die DACL in der zurückgegebenen Sicherheits Beschreibung zurückgegeben. Weitere Informationen finden Sie unter [**Berechtigungs Konstanten**](/windows/desktop/WmiSdk/privilege-constants) und [Ausführen privilegierter Vorgänge](/windows/desktop/WmiSdk/executing-privileged-operations).
+Wenn **seSecurityPrivilege** beim Abrufen eines Sicherheitsdeskriptors nicht gewährt oder aktiviert wird, wird nur die DACL in der zurückgegebenen Sicherheitsbeschreibung zurückgegeben. Weitere Informationen finden Sie unter [**Privilege Constants**](/windows/desktop/WmiSdk/privilege-constants) und [Executing Privileged Operations](/windows/desktop/WmiSdk/executing-privileged-operations).
 
 ## <a name="examples"></a>Beispiele
 
-Wenn Sie eine Sicherheits Beschreibung in VBScript abrufen, achten Sie darauf, dass Sie "Sicherheit" ausführen und als Administrator ausführen, wie im folgenden Code Ausschnitt gezeigt. Andernfalls löst der Code möglicherweise einen Berechtigungs Fehler aus.
+Achten Sie beim Abrufen eines Sicherheitsdeskriptors in VBScript darauf, dass Sie "Sicherheit" verwenden und als Administrator ausführen, wie im folgenden Codeausschnitt gezeigt. Andernfalls löst Ihr Code möglicherweise einen Berechtigungsfehler aus.
 
 
 ```VB
@@ -303,7 +303,7 @@ Set objWMIService = GetObject("winmgmts:" _
 
 
 
-Legen Sie auf ähnliche Weise in VB.net "enableprivileges = true" fest, und führen Sie die Anwendung als Administrator aus.
+Ebenso müssen Sie in VB.NET sicherstellen, dass Sie "EnablePrivileges = True" festlegen und die Anwendung als Administrator ausführen.
 
 
 ```VB
@@ -317,30 +317,30 @@ Scope.Options.EnablePrivileges = True
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Win32- \_ Dienst**](win32-service.md)
+[**Win32-Dienst \_**](win32-service.md)
 </dt> <dt>
 
-[**Berechtigungs Konstanten**](/windows/desktop/WmiSdk/privilege-constants)
+[**Berechtigungskonst constants**](/windows/desktop/WmiSdk/privilege-constants)
 </dt> <dt>
 
-[WMI-sicherheitsdeskriptorobjekte](/windows/desktop/WmiSdk/wmi-security-descriptor-objects)
+[WMI-Sicherheitsdeskriptorobjekte](/windows/desktop/WmiSdk/wmi-security-descriptor-objects)
 </dt> <dt>
 
-[Ändern der Zugriffssicherheit für Sicherungs fähige Objekte](/windows/desktop/WmiSdk/changing-access-security-on-securable-objects)
+[Ändern der Zugriffssicherheit für sicherungsfähige Objekte](/windows/desktop/WmiSdk/changing-access-security-on-securable-objects)
 </dt> <dt>
 
 [Benutzerkontensteuerung und WMI](/windows/desktop/WmiSdk/user-account-control-and-wmi)

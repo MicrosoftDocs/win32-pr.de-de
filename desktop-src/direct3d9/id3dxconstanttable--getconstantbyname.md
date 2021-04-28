@@ -1,7 +1,7 @@
 ---
-description: Ruft eine Konstante ab, indem Ihr Name gesucht wird.
+description: 'ID3DXConstantTable::GetConstantByName-Methode: Ruft eine Konstante ab, indem ihr Name gesucht wird.'
 ms.assetid: 785a2d4f-6391-4419-a0b8-d8244a03ceae
-title: 'ID3DXConstantTable:: getconstantbyname-Methode (D3DX9Shader. h)'
+title: ID3DXConstantTable::GetConstantByName-Methode (D3DX9Shader.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 3df4fc2cf44e035daf208d5dd14602e89b528ed1
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 88461a45bf484a72c085f1776eb923a8534b8be3
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106363979"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108115248"
 ---
-# <a name="id3dxconstanttablegetconstantbyname-method"></a>ID3DXConstantTable:: getconstantbyname-Methode
+# <a name="id3dxconstanttablegetconstantbyname-method"></a>ID3DXConstantTable::GetConstantByName-Methode
 
-Ruft eine Konstante ab, indem Ihr Name gesucht wird.
+Ruft eine Konstante ab, indem ihr Name gesucht wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,21 +41,21 @@ D3DXHANDLE GetConstantByName(
 
 <dl> <dt>
 
-*hconstant* \[ in\]
+*hConstant* \[ In\]
 </dt> <dd>
 
 Typ: **[D3DXHANDLE](dx9-graphics-reference-effects-constants.md)**
 
-Eindeutiger Bezeichner für die übergeordnete Datenstruktur. Wenn die Konstante ein Parameter der obersten Ebene ist (es gibt keine übergeordnete Datenstruktur), verwenden Sie **null**.
+Eindeutiger Bezeichner für die übergeordnete Datenstruktur. Wenn die Konstante ein Parameter der obersten Ebene ist (es gibt keine übergeordnete Datenstruktur), verwenden Sie **NULL.**
 
 </dd> <dt>
 
-*PName* \[ in\]
+*pName* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPCSTR**](../winprog/windows-data-types.md)**
 
-Der Name der Konstanten.
+Name der Konstante.
 
 </dd> </dl>
 
@@ -63,20 +63,20 @@ Der Name der Konstanten.
 
 Typ: **[D3DXHANDLE](dx9-graphics-reference-effects-constants.md)**
 
-Gibt einen eindeutigen Bezeichner für die Konstante zurück.
+Gibt einen eindeutigen Bezeichner an die Konstante zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Shader. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>     |
+| Header<br/>  | <dl> <dt>D3DX9Shader.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

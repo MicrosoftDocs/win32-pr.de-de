@@ -1,7 +1,7 @@
 ---
-description: Die getcontrolstate-Methode ruft den Status der Erfassung ab, der angibt, ob die Erfassung ausgeführt wird oder angehalten wird.
+description: 'IDelaydC::GetControlState-Methode: Die GetControlState-Methode ruft den Zustand der Erfassung ab, der angibt, ob die Erfassung ausgeführt oder angehalten wird.'
 ms.assetid: 21b7faaa-591f-4e15-b4e9-453ea690ab4a
-title: 'Idelta-DC:: getcontrolstate-Methode (Netmon. h)'
+title: IDelaydC::GetControlState-Methode (Netmon.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - Ndisnpp.dll
 - Rmtnpp.dll
-ms.openlocfilehash: 8f5c3f084db788844f061ba2005d9c3ca38acef0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 825112ec9a33ef176d5a69765837214249e33102
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103958705"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108110768"
 ---
-# <a name="idelaydcgetcontrolstate-method"></a>Idelta aydc:: getcontrolstate-Methode
+# <a name="idelaydcgetcontrolstate-method"></a>IDelaydC::GetControlState-Methode
 
-Die **getcontrolstate** -Methode ruft den Status der [*Erfassung*](c.md)ab, der angibt, ob die Erfassung ausgeführt wird oder angehalten wird.
+Die **GetControlState-Methode** ruft den Zustand der [*Erfassung*](c.md)ab, der angibt, ob die Erfassung ausgeführt oder angehalten wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,14 +41,14 @@ HRESULT STDMETHODCALLTYPE GetControlState(
 
 <dl> <dt>
 
-*Isrunnning* \[ vorgenommen\]
+*IsRunnning* \[ out\]
 </dt> <dd>
 
-Indikator, dass die aktuelle Erfassung ausgeführt wird, einschließlich, wenn die Erfassung angehalten wurde.
+Indikator, dass die aktuelle Erfassung ausgeführt wird, einschließlich, wenn die Erfassung angehalten wird.
 
 </dd> <dt>
 
-*IsPaused* \[ vorgenommen\]
+*IsPaused* \[ out\]
 </dt> <dd>
 
 Indikator, dass die aktuelle Erfassung angehalten wurde.
@@ -57,7 +57,7 @@ Indikator, dass die aktuelle Erfassung angehalten wurde.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Methode erfolgreich ist, ist der Rückgabewert nmerr \_ Success.
+Wenn die Methode erfolgreich ist, lautet der Rückgabewert NMERR \_ SUCCESS.
 
 Wenn die Methode nicht erfolgreich ist, ist der Rückgabewert einer der folgenden Fehlercodes:
 
@@ -65,8 +65,8 @@ Wenn die Methode nicht erfolgreich ist, ist der Rückgabewert einer der folgende
 
 | Rückgabecode                                                                                          | Beschreibung                                                                                                                           |
 |------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**nmerr \_ nicht \_ verbunden**</dt> </dl> | Der npp ist nicht mit dem Netzwerk verbunden. Wenden Sie [idelta-DC:: Connect](idelaydc-connect.md) an, um die NPP mit dem Netzwerk zu verbinden.<br/> |
-| <dl> <dt>**nmerr \_ nicht \_ verzögert**</dt> </dl>   | Der npp ist mit dem Netzwerk verbunden, jedoch nicht mit der [idelta aydc:: Connect](idelaydc-connect.md) -Methode.<br/>                     |
+| <dl> <dt>**NMERR \_ NICHT \_ VERBUNDEN**</dt> </dl> | Das NPP ist nicht mit dem Netzwerk verbunden. Rufen Sie [IDelaydC::Connect](idelaydc-connect.md) auf, um die NPP mit dem Netzwerk zu verbinden.<br/> |
+| <dl> <dt>**NMERR \_ NICHT \_ VERZÖGERT**</dt> </dl>   | Das NPP ist mit dem Netzwerk verbunden, jedoch nicht mit der [IDelaydC::Connect-Methode.](idelaydc-connect.md)<br/>                     |
 
 
 
@@ -74,40 +74,40 @@ Wenn die Methode nicht erfolgreich ist, ist der Rückgabewert einer der folgende
 
 ## <a name="remarks"></a>Bemerkungen
 
-Diese Methode kann jedes Mal aufgerufen werden, wenn die NPP über die [idelta-DC](idelaydc.md) -Schnittstelle mit dem Netzwerk verbunden ist. Mit dieser Methode können Sie herausfinden, ob eine Erfassung ausgeführt wird, ob die Erfassung angehalten wurde oder ob die Erfassung angehalten wurde, aber der npp ist nicht getrennt.
+Diese Methode kann jedes Mal aufgerufen werden, wenn das NPP mit dem Netzwerk verbunden ist, indem die [IDelaydC-Schnittstelle](idelaydc.md) verwendet wird. Sie können diese Methode verwenden, um herauszufinden, ob eine Erfassung ausgeführt wird, ob die Erfassung angehalten wurde oder ob die Erfassung beendet wurde, das NPP jedoch nicht getrennt ist.
 
-Die Methoden, die zum Starten, anhalten und Abbrechen der Erfassung verwendet werden, werden in der Liste siehe auch unten aufgeführt.
+Die Methoden zum Starten, Anhalten und Beenden der Erfassung sind unten in der Liste Siehe auch aufgeführt.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                                                                     |
-| Header<br/>                   | <dl> <dt>Netmon. h</dt> </dl>                                                                      |
+| Header<br/>                   | <dl> <dt>Netmon.h</dt> </dl>                                                                      |
 | DLL<br/>                      | <dl> <dt>Ndisnpp.dll; </dt> <dt>Rmtnpp.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Idelta-DC](idelaydc.md)
+[IDelaydC](idelaydc.md)
 </dt> <dt>
 
-[Idelta aydc:: Connect](idelaydc-connect.md)
+[IDelaydC::Connect](idelaydc-connect.md)
 </dt> <dt>
 
-[Idelta aydc::P ause](idelaydc-pause.md)
+[IDelaydC::P ause](idelaydc-pause.md)
 </dt> <dt>
 
-[Idelta aydc:: Start](idelaydc-start.md)
+[IDelaydC::Start](idelaydc-start.md)
 </dt> <dt>
 
-[Idelta aydc:: Beendigung](idelaydc-stop.md)
+[IDelaydC::Stop](idelaydc-stop.md)
 </dt> </dl>
 
  

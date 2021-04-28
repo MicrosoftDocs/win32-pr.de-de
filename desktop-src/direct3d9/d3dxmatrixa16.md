@@ -1,7 +1,7 @@
 ---
-description: Eine 4 x 4-Matrix mit 16 Bytes, die Methoden und Operator Überladungen enthält.
+description: 'D3DXMATRIXA16-Struktur (D3dx9math.h): Eine 4x4-, 16-Byte-ausgerichtete Matrix, die Methoden und Operatorüberladungen enthält.'
 ms.assetid: c7082fe5-f98b-4ab7-b8c2-7cdbab4848ad
-title: D3DXMATRIXA16-Struktur (D3dx9math. h)
+title: D3DXMATRIXA16-Struktur (D3dx9math.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - d3dx9math.h
-ms.openlocfilehash: 57d2e5e796b929c87d4724d298758f26088918c4
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 7bb14f23d041ec2634b9710d5620382d8b93da2b
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103762006"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108094208"
 ---
-# <a name="d3dxmatrixa16-structure-d3dx9mathh"></a>D3DXMATRIXA16-Struktur (D3dx9math. h)
+# <a name="d3dxmatrixa16-structure-d3dx9mathh"></a>D3DXMATRIXA16-Struktur (D3dx9math.h)
 
-Eine 4 x 4-Matrix mit 16 Bytes, die Methoden und Operator Überladungen enthält.
+Eine 4x4-, 16-Byte-ausgerichtete Matrix, die Methoden und Operatorüberladungen enthält.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,22 +39,22 @@ typedef struct D3DXMATRIXA16 {
 
 <dl> <dt>
 
-**\_angesprochenen**
+**\_Ij**
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Die Komponente (i, j) der Matrix, bei der es sich um die Zeilennummer und j um die Spaltennummer handelt. 34 bedeutet beispielsweise, dass das \_ gleiche wie \[ ein ₃ ₄ \] , die Komponente in der dritten Zeile und vierten Spalte ist.
+Die Komponente (i, j) der Matrix, wobei i die Zeilennummer und j die Spaltennummer ist. 34 bedeutet z. \_ B. das gleiche wie \[ a₃₄ \] , die Komponente in der dritten Zeile und vierten Spalte.
 
 </dd> </dl>
 
 ## <a name="remarks"></a>Bemerkungen
 
-Bei der Verwendung durch D3DX Math-Funktionen wurde eine aus 16 Bytes ausgerichtete Matrix optimiert, um die Leistung von Intel Pentium 4-Prozessoren zu verbessern. Matrizen werden unabhängig von ihrem Speicherort ausgerichtet: auf dem Programm Stapel, im Heap oder im globalen Gültigkeitsbereich. Die Ausrichtung erfolgt mithilfe \_ \_ von "declspec (align (16))", die mit Visual C++ .net und nur mit Visual C++ 6,0 funktioniert, wenn das Prozessor Paket installiert ist. Leider gibt es keine Möglichkeit, das Prozessor Paket zu erkennen, sodass die Byte Ausrichtung standardmäßig nur mit Visual C++ .NET aktiviert ist.
+Eine 16-Byte-ausgerichtete Matrix, die von mathematischen D3DX-Funktionen verwendet wird, wurde für eine verbesserte Leistung auf Intel Pentium 4-Prozessoren optimiert. Matrizen werden unabhängig davon ausgerichtet, wo sie erstellt werden: auf dem Programmstapel, im Heap oder im globalen Bereich. Die Ausrichtung erfolgt mit \_ \_ declspec(align(16)), die nur mit Visual C++ .NET und mit Visual C++ 6.0 funktioniert, wenn das Prozessorpaket installiert ist. Leider gibt es keine Möglichkeit, das Prozessorpaket zu erkennen, sodass die Byteausrichtung standardmäßig nur mit Visual C++ .NET aktiviert ist.
 
-Vektoren und Quaternionen sind in D3DX nicht Byte bündig ausgerichtet. Wenn Sie Vektoren und Quaternionen mit D3DX Math-Funktionen verwenden, verwenden \_ Sie declspec (align (16)), um Byte ausgerichtete Vektoren und Quaternionen zu generieren, da Sie erheblich besser funktionieren. Die Definition von \_ declspec wird hier dargestellt.
+Vektoren und Quaternionen werden in D3DX nicht bytebündig ausgerichtet. Wenn Sie Vektoren und Quaternionen mit mathematischen D3DX-Funktionen verwenden, verwenden Sie \_ declspec(align(16)), um bytebündige Vektoren und Quaternionen zu generieren, da sie erheblich besser funktionieren. Die Definition von \_ declspec ist hier dargestellt.
 
 
 ```
@@ -63,11 +63,11 @@ Vektoren und Quaternionen sind in D3DX nicht Byte bündig ausgerichtet. Wenn Sie
 
 
 
-Andere Compiler interpretieren D3DXMATRIXA16 als D3DXMATRIX. Die Verwendung dieser Struktur für einen Compiler, der die Matrix nicht tatsächlich ausgerichtet, kann problematisch sein, da Sie keine Fehler verfügbar macht, die die Ausrichtung ignorieren. Wenn sich z. b. ein D3DXMATRIXA16-Objekt innerhalb einer Struktur oder Klasse befindet, wird eine [**memcpy**](https://msdn.microsoft.com/library/dswaw1wk(v=VS.71).aspx) möglicherweise mit einer dichten Verpackung ausgeführt (wobei 16-Byte-Begrenzungen ignoriert werden). Dies würde zu Buildunterbrechungen führen, wenn der Compiler einige aufeinander folgende Matrizen hinzufügen würde.
+Andere Compiler interpretieren D3DXMATRIXA16 als D3DXMATRIX. Die Verwendung dieser Struktur auf einem Compiler, der die Matrix nicht tatsächlich ausrichtet, kann problematisch sein, da sie keine Fehler verfügbar macht, die die Ausrichtung ignorieren. Wenn sich z. B. ein D3DXMATRIXA16-Objekt innerhalb einer Struktur oder Klasse befindet, kann ein [**Memcpy**](https://msdn.microsoft.com/library/dswaw1wk(v=VS.71).aspx) mit engem Packen (ohne 16-Byte-Grenzen) erfolgen. Dies würde zu Buildunterbrechungen führen, wenn der Compiler irgendwann eine Matrixausrichtung hinzufügen würde.
 
 ### <a name="d3dxmatrixa16"></a>D3DXMATRIXA16
 
-**D3DXMATRIXA16** verfügt über die folgenden C++-Erweiterungen.
+**D3DXMATRIXA16 verfügt** über die folgenden C++-Erweiterungen.
 
 
 ```
@@ -101,13 +101,13 @@ typedef D3DX_ALIGN16 _D3DXMATRIXA16 D3DXMATRIXA16, *LPD3DXMATRIXA16;
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------|----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3dx9math. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3dx9math.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

@@ -1,7 +1,7 @@
 ---
-description: Füllt ein Array mit Rückruf Schlüsseldaten, die für die Keyframe-Animation verwendet werden.
+description: 'ID3DXKeyframedAnimationSet::GetCallbackKeys-Methode: Füllt ein Array mit Rückrufschlüsseldaten auf, die für die Keyframeanimation verwendet werden.'
 ms.assetid: 2a2aa04a-a889-415b-8aa2-cc5f2bed1f9a
-title: 'ID3DXKeyframedAnimationSet:: getcallbackkeys-Methode (D3dx9anim. h)'
+title: ID3DXKeyframedAnimationSet::GetCallbackKeys-Methode (D3dx9anim.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: d3f8dbc771fcdde6d1c07a1bf810b322b0a70a30
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 5f3bdb7049de3b5d6aad10b5ff5100d01d05e3ee
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104219457"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108093718"
 ---
-# <a name="id3dxkeyframedanimationsetgetcallbackkeys-method"></a>ID3DXKeyframedAnimationSet:: getcallbackkeys-Methode
+# <a name="id3dxkeyframedanimationsetgetcallbackkeys-method"></a>ID3DXKeyframedAnimationSet::GetCallbackKeys-Methode
 
-Füllt ein Array mit Rückruf Schlüsseldaten, die für die Keyframe-Animation verwendet werden.
+Füllt ein Array mit Rückrufschlüsseldaten, die für die Keyframe-Animation verwendet werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,12 +40,12 @@ HRESULT GetCallbackKeys(
 
 <dl> <dt>
 
-*pcallbackkeys* \[ vorgenommen\]
+*pCallbackKeys* \[ out\]
 </dt> <dd>
 
-Typ: **[ **LPD3DXKEY- \_ Rückruf**](d3dxkey-callback.md)**
+Typ: **[ **LPD3DXKEY \_ CALLBACK**](d3dxkey-callback.md)**
 
-Zeiger auf ein vom Benutzer zugeordneter Array von [**D3DXKEY- \_ Rückruf**](d3dxkey-callback.md) Strukturen, die die Methode mit Rückruf Daten ausfüllen soll.
+Zeiger auf ein vom Benutzer zugewiesenes Array von [**D3DXKEY \_ CALLBACK-Strukturen,**](d3dxkey-callback.md) die von der -Methode mit Rückrufdaten auffüllt werden.
 
 </dd> </dl>
 
@@ -53,27 +53,27 @@ Zeiger auf ein vom Benutzer zugeordneter Array von [**D3DXKEY- \_ Rückruf**](d3
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, wird der folgende Wert zurückgegeben: D3DERR \_ invalidcall.
+Wenn die Methode erfolgreich ist, ist der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, wird der folgende Wert zurückgegeben: D3DERR \_ INVALIDCALL.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9anim. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3dx9anim.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [ID3DXKeyframedAnimationSet](id3dxkeyframedanimationset.md)
 </dt> <dt>
 
-[**ID3DXKeyframedAnimationSet:: getnumcallbackkeys**](id3dxkeyframedanimationset--getnumcallbackkeys.md)
+[**ID3DXKeyframedAnimationSet::GetNumCallbackKeys**](id3dxkeyframedanimationset--getnumcallbackkeys.md)
 </dt> </dl>
 
  

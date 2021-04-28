@@ -1,7 +1,7 @@
 ---
-description: Entfernt die aktuelle Matrix vom oberen Rand des Stapels.
+description: 'ID3DXMATRIXStack::P op-Methode (D3dx9math.h): Entfernt die aktuelle Matrix vom anfang des Stapels.'
 ms.assetid: 4c542012-058a-4818-8ec4-27e7d3357ca3
-title: ID3DXMATRIXStack::P op-Methode (D3dx9math. h)
+title: ID3DXMATRIXStack::P op-Methode (D3dx9math.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 229892ab9b6a1ec75396b24cd9313e27667d0acf
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: c8d9185d10b9ef98a1fc3499f49c2ccc9c17a366
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104050840"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108093502"
 ---
-# <a name="id3dxmatrixstackpop-method-d3dx9mathh"></a>ID3DXMATRIXStack::P op-Methode (D3dx9math. h)
+# <a name="id3dxmatrixstackpop-method-d3dx9mathh"></a>ID3DXMATRIXStack::P op-Methode (D3dx9math.h)
 
-Entfernt die aktuelle Matrix vom oberen Rand des Stapels.
+Entfernt die aktuelle Matrix vom anfang des Stapels.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,34 +42,34 @@ Diese Methode hat keine Parameter.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK.
+Wenn die Methode erfolgreich ist, ist der Rückgabewert D3D \_ OK.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Beachten Sie, dass diese Methode die Anzahl der Elemente im Stapel um 1 verringert, wodurch die aktuelle Matrix aus dem Stapel Rand entfernt und eine Matrix an den Anfang des Stapels herauf gestuft wird. Wenn die aktuelle Anzahl der Elemente auf dem Stapel 0 ist, wird diese Methode zurückgegeben, ohne eine Aktion auszuführen. Wenn die aktuelle Anzahl der Elemente auf dem Stapel 1 ist, wird der Stapel von dieser Methode geleert.
+Beachten Sie, dass diese Methode die Anzahl der Elemente im Stapel um 1 dekrementiert, indem die aktuelle Matrix effektiv von der obersten Seite des Stapels entfernt und eine Matrix an den Anfang des Stapels hoch gerechnet wird. Wenn die aktuelle Anzahl von Elementen im Stapel 0 beträgt, gibt diese Methode zurück, ohne eine Aktion ausführen zu müssen. Wenn die aktuelle Anzahl von Elementen im Stapel 1 beträgt, leert diese Methode den Stapel.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9math. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3dx9math.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [ID3DXMATRIXStack](id3dxmatrixstack.md)
 </dt> <dt>
 
-[**ID3DXMATRIXStack:: GetTop**](id3dxmatrixstack--gettop.md)
+[**ID3DXMATRIXStack::GetTop**](id3dxmatrixstack--gettop.md)
 </dt> <dt>
 
-[**ID3DXMATRIXStack::P USH**](id3dxmatrixstack--push.md)
+[**ID3DXMATRIXStack::P ush**](id3dxmatrixstack--push.md)
 </dt> </dl>
 
  

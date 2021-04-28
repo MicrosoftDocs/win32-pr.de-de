@@ -1,7 +1,7 @@
 ---
-description: Die Methode "beenden" beendet die aktuelle Erfassung.
+description: 'IStats::Stop-Methode: Die Stop-Methode beendet die aktuelle Erfassung.'
 ms.assetid: 3aeeb29e-e174-46a2-82bb-44c466b8db98
-title: 'IStats:: stopmethode (Netmon. h)'
+title: IStats::Stop-Methode (Netmon.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - Ndisnpp.dll
 - Rmtnpp.dll
-ms.openlocfilehash: 7b7b58527e7bde0c3bbdec4fc162b705dd178c10
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ef51aff870a3193963b3802332112c51f1024826
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106345772"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108114608"
 ---
-# <a name="istatsstop-method"></a>IStats:: stopmethode
+# <a name="istatsstop-method"></a>IStats::Stop-Methode
 
-Die Methode " **Beenden** " beendet die aktuelle Erfassung.
+Die **Stop-Methode** beendet die aktuelle Erfassung.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,7 +40,7 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Methode erfolgreich ist, ist der Rückgabewert nmerr \_ Success.
+Wenn die Methode erfolgreich ist, ist der Rückgabewert NMERR \_ SUCCESS.
 
 Wenn die Methode nicht erfolgreich ist, ist der Rückgabewert einer der folgenden Fehlercodes:
 
@@ -48,9 +48,9 @@ Wenn die Methode nicht erfolgreich ist, ist der Rückgabewert einer der folgende
 
 | Rückgabecode                                                                                            | Beschreibung                                                                                                                                  |
 |--------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**nmerr \_ nicht \_ verbunden**</dt> </dl>   | Der npp ist nicht mit dem Netzwerk verbunden. Wenden Sie die [iStats:: Connect](istats-connect.md) -Methode an, um die NPP mit dem Netzwerk zu verbinden.<br/> |
-| <dl> <dt>**nmerr wird \_ nicht \_ erfasst**</dt> </dl>   | Der NPP erfasst keine Daten. Ruft die [iStats:: Start](istats-start.md) -Methode auf, um die Erfassung zu starten.<br/>                            |
-| <dl> <dt>**nmerr \_ nicht \_ \_ nur Statistiken**</dt> </dl> | Der npp ist mit dem Netzwerk verbunden, jedoch nicht mit der [iStats:: Connect](istats-connect.md) -Methode.<br/>                                |
+| <dl> <dt>**NMERR \_ NICHT \_ VERBUNDEN**</dt> </dl>   | Der NPP ist nicht mit dem Netzwerk verbunden. Rufen Sie [die IStats::Connect-Methode auf,](istats-connect.md) um die NPP mit dem Netzwerk zu verbinden.<br/> |
+| <dl> <dt>**NMERR NOT CAPTURING (NMERR \_ WIRD NICHT \_ ERFASST)**</dt> </dl>   | Der NPP erfasst keine Daten. Rufen Sie die [IStats::Start-Methode auf,](istats-start.md) um die Erfassung zu starten.<br/>                            |
+| <dl> <dt>**NMERR \_ NICHT \_ NUR STATISTIKEN \_**</dt> </dl> | Der NPP ist mit dem Netzwerk verbunden, aber nicht mit der [IStats::Connect-Methode.](istats-connect.md)<br/>                                |
 
 
 
@@ -58,35 +58,35 @@ Wenn die Methode nicht erfolgreich ist, ist der Rückgabewert einer der folgende
 
 ## <a name="remarks"></a>Bemerkungen
 
-Wenn Sie die Erfassung nach dem Aufrufen von **iStats:: beenden** neu starten, stellen Sie sicher, dass Sie jedes Mal, wenn Sie [iStats:: Start](istats-start.md) aufrufen, die [iStats:: Configure](istats-configure.md) -Methode aufrufen, um die Erfassung neu zu starten.
+Stellen Sie beim Neustarten der Erfassung nach dem Aufruf von **IStats::Stop** sicher, dass Sie jedes Mal die [IStats::Configure-Methode](istats-configure.md) aufrufen, wenn Sie [IStats::Start](istats-start.md) aufrufen, um die Erfassung neu zu starten.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                                                                     |
-| Header<br/>                   | <dl> <dt>Netmon. h</dt> </dl>                                                                      |
+| Header<br/>                   | <dl> <dt>Netmon.h</dt> </dl>                                                                      |
 | DLL<br/>                      | <dl> <dt>Ndisnpp.dll; </dt> <dt>Rmtnpp.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [IStats](istats.md)
 </dt> <dt>
 
-[IStats:: Connect](istats-connect.md)
+[IStats::Connect](istats-connect.md)
 </dt> <dt>
 
-[IStats:: Configure](istats-configure.md)
+[IStats::Configure](istats-configure.md)
 </dt> <dt>
 
-[IStats:: Start](istats-start.md)
+[IStats::Start](istats-start.md)
 </dt> </dl>
 
  

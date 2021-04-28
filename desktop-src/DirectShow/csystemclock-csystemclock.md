@@ -1,7 +1,7 @@
 ---
-description: Konstruktormethode.
+description: 'CSystemClock.CSystemClock-Konstruktor : Konstruktormethode.'
 ms.assetid: facc2c9d-034a-4fed-b6fe-77a40e36c305
-title: Csystemclock. csystemclock-Konstruktor (sysclock. h)
+title: CSystemClock.CSystemClock-Konstruktor (Sysclock.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,14 +16,14 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: fea99d95aa4c1b1cadefbb95384fb871374362f6
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 11ba7449b086f84dc2caff19da922c03f9c7103b
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371222"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108095198"
 ---
-# <a name="csystemclockcsystemclock-constructor"></a>Csystemclock. csystemclock-Konstruktor
+# <a name="csystemclockcsystemclock-constructor"></a>CSystemClock.CSystemClock-Konstruktor
 
 Konstruktormethode.
 
@@ -47,21 +47,21 @@ CSystemClock(
 *pName* 
 </dt> <dd>
 
-Zeichenfolge, die den debugnamen des-Objekts enthält. Weitere Informationen finden Sie unter [**cbaseobject**](cbaseobject.md).
+Eine Zeichenfolge, die den Debugnamen des Objekts enthält. Weitere Informationen finden Sie unter [**CBaseObject**](cbaseobject.md).
 
 </dd> <dt>
 
-*Kro* 
+*Punk* 
 </dt> <dd>
 
-Zeiger auf den Besitzer dieses Objekts. Wenn das Objekt aggregiert wird, übergeben Sie einen Zeiger an die **IUnknown** -Schnittstelle des Aggregations Objekts. Andernfalls legen Sie diesen Parameter auf **null** fest.
+Zeiger auf den Besitzer dieses Objekts. Wenn das Objekt aggregiert wird, übergeben Sie einen Zeiger auf die **IUnknown-Schnittstelle des aggregierenden** Objekts. Legen Sie andernfalls diesen Parameter auf **NULL fest.**
 
 </dd> <dt>
 
-*PHR* 
+*Phr* 
 </dt> <dd>
 
-Zeiger auf den **HRESULT** -Wert. Wenn ein Fehler auftritt, gibt die Methode einen Fehlercode in diesem Parameter zurück.
+Zeiger auf den **HRESULT-Wert.** Wenn ein Fehler auftritt, gibt die Methode einen Fehlercode in diesem Parameter zurück.
 
 </dd> </dl>
 
@@ -69,10 +69,10 @@ Zeiger auf den **HRESULT** -Wert. Wenn ein Fehler auftritt, gibt die Methode ein
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Sysclock. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Sysclock.h (einschließlich Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 

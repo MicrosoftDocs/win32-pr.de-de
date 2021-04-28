@@ -1,7 +1,7 @@
 ---
-description: Ruft Informationen zu einem bestimmten Rückruf im Animations Satz ab.
+description: 'ID3DXAnimationSet::GetCallback-Methode: Ruft Informationen zu einem bestimmten Rückruf im Animationssatz ab.'
 ms.assetid: e8388bfc-5438-4216-a98f-dd0dbca12c87
-title: 'ID3DXAnimationSet:: getCallback-Methode (D3dx9anim. h)'
+title: ID3DXAnimationSet::GetCallback-Methode (D3dx9anim.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: f4cde6c9d51fd29c0412f33b34ca7bea8260dfea
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 563c1007cc471ab10a9609e776da69b7c5ed493b
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104219699"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108097538"
 ---
-# <a name="id3dxanimationsetgetcallback-method"></a>ID3DXAnimationSet:: getCallback-Methode
+# <a name="id3dxanimationsetgetcallback-method"></a>ID3DXAnimationSet::GetCallback-Methode
 
-Ruft Informationen zu einem bestimmten Rückruf im Animations Satz ab.
+Ruft Informationen zu einem bestimmten Rückruf im Animationssatz ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,12 +43,12 @@ HRESULT GetCallback(
 
 <dl> <dt>
 
-*Position* \[ in\]
+*Position* \[ In\]
 </dt> <dd>
 
-Typ: **[ **Double**](../winprog/windows-data-types.md)**
+Typ: **[ **DOUBLE**](../winprog/windows-data-types.md)**
 
-Die Position, an der Rückrufe gesucht werden sollen.
+Position, an der Rückrufe zu finden sind.
 
 </dd> <dt>
 
@@ -57,25 +57,25 @@ Die Position, an der Rückrufe gesucht werden sollen.
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
-Rückruf Suchflags. Dieser Parameter kann auf eine Kombination aus einem oder mehreren Flags aus [**D3DXCALLBACK- \_ \_ Suchflags**](./d3dxcallback-search-flags.md)festgelegt werden.
+Rückrufsuchflags. Dieser Parameter kann auf eine Kombination aus mindestens einem Flag aus [**D3DXCALLBACK-SUCHFLAgs \_ \_ festgelegt werden.**](./d3dxcallback-search-flags.md)
 
 </dd> <dt>
 
-*pcallbackposition* \[ vorgenommen\]
+*pCallbackPosition* \[ out\]
 </dt> <dd>
 
-Typ: **[ **Double**](../winprog/windows-data-types.md)\***
+Typ: **[ **DOUBLE**](../winprog/windows-data-types.md)\***
 
-Ein Zeiger auf die Position des Rückrufs.
+Zeiger auf die Position des Rückrufs.
 
 </dd> <dt>
 
-*ppcallbackdata* \[ vorgenommen\]
+*ppCallbackData* \[ out\]
 </dt> <dd>
 
 Typ: **[ **LPVOID**](../winprog/windows-data-types.md)\***
 
-Adresse des Rückruf Daten Zeigers.
+Adresse des Rückrufdatenzeigers.
 
 </dd> </dl>
 
@@ -83,20 +83,20 @@ Adresse des Rückruf Daten Zeigers.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Die Rückgabewerte dieser Methode werden von einem Anwendungsprogrammierer implementiert. Wenn kein Fehler auftritt, programmieren Sie im Allgemeinen die-Methode, um D3D OK zurückzugeben \_ . Andernfalls programmieren Sie die-Methode, um eine entsprechende Fehlermeldung von [D3DERR](d3derr.md) oder [**D3DXERR**](./d3dxerr.md)zurückzugeben.
+Die Rückgabewerte dieser Methode werden von einem Anwendungsprogrammierer implementiert. Wenn kein Fehler auftritt, programmieren Sie im Allgemeinen die -Methode so, dass D3D \_ OK zurückgegeben wird. Programmieren Sie andernfalls die -Methode so, dass eine entsprechende Fehlermeldung von [D3DERR](d3derr.md) oder [**D3DXERR zurückgegeben wird.**](./d3dxerr.md)
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9anim. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3dx9anim.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

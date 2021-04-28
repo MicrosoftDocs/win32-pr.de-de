@@ -1,7 +1,7 @@
 ---
-description: Transformiert ein Array (x, y, 0, 1) durch eine angegebene Matrix.
+description: 'D3DXVec2TransformArray-Funktion (D3DX10Math.h): Transformiert ein Array (x, y, 0, 1) durch eine angegebene Matrix.'
 ms.assetid: 66c8909c-6c20-4b32-9546-fcf2d0e824fa
-title: D3DXVec2TransformArray-Funktion (D3DX10Math. h)
+title: D3DXVec2TransformArray-Funktion (D3DX10Math.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,14 +14,14 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: c5aef5ecaa720e8c859d37f03ce88223187d16f0
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: cec42fcbe53d3a8aa160f6864af70cbf441a19ab
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103870115"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108108368"
 ---
-# <a name="d3dxvec2transformarray-function-d3dx10mathh"></a>D3DXVec2TransformArray-Funktion (D3DX10Math. h)
+# <a name="d3dxvec2transformarray-function-d3dx10mathh"></a>D3DXVec2TransformArray-Funktion (D3DX10Math.h)
 
 Transformiert ein Array (x, y, 0, 1) durch eine angegebene Matrix.
 
@@ -45,55 +45,55 @@ D3DXVECTOR4* D3DXVec2TransformArray(
 
 <dl> <dt>
 
-*Pout* \[ in, out\]
+*pOut* \[ in, out\]
 </dt> <dd>
 
 Typ: **[ **D3DXVECTOR4**](../direct3d9/d3dxvector4.md)\***
 
-Ein Zeiger auf die [**D3DXVECTOR4**](d3d10-d3dxvector4.md) -Struktur, die das Ergebnis des Vorgangs ist.
+Zeiger auf die [**D3DXVECTOR4-Struktur,**](d3d10-d3dxvector4.md) die das Ergebnis des Vorgangs ist.
 
 </dd> <dt>
 
-*Outstride* \[ in\]
+*OutStride* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Schritt zwischen Vektoren im Ausgabedatenstrom.
+Schreitet zwischen Vektoren im Ausgabedatenstrom.
 
 </dd> <dt>
 
-*PV* \[ in\]
+*pV* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXVECTOR2**](../direct3d9/d3dxvector2.md) \***
+Typ: **const [**D3DXVECTOR2**](../direct3d9/d3dxvector2.md) \***
 
-Zeiger auf den Quell- [**D3DXVECTOR2**](d3d10-d3dxvector2.md).
+Zeiger auf die [**D3DXVECTOR2-Quelle.**](d3d10-d3dxvector2.md)
 
 </dd> <dt>
 
-*Vstride* \[ in\]
+*VStride* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Schritt zwischen Vektoren im Eingabedaten Strom.
+Schreitet zwischen Vektoren im Eingabedatenstrom.
 
 </dd> <dt>
 
-*pm* \[ in\]
+*pM* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXMATRIX**](../direct3d9/d3dxmatrix.md) \***
+Typ: **const [**D3DXMATRIX**](../direct3d9/d3dxmatrix.md) \***
 
-Ein Zeiger auf die Quell- [**D3DXMATRIX**](d3d10-d3dxmatrix.md) -Struktur.
+Zeiger auf die [**D3DXMATRIX-Quellstruktur.**](d3d10-d3dxmatrix.md)
 
 </dd> <dt>
 
 *n* \[ in\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
 Anzahl der Elemente im Array.
 
@@ -107,22 +107,22 @@ Zeiger auf eine D3DXVECTOR4-Struktur, die das transformierte Array ist.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Diese Funktion wandelt das Array PV (x, y, 0, 1) durch die Matrix pm um.
+Diese Funktion transformiert den Array-pV (x, y, 0, 1) durch die Matrix pM.
 
-Der Rückgabewert für diese Funktion ist derselbe Wert, der im Pout-Parameter zurückgegeben wird. Auf diese Weise kann die [**D3DXVec2Transform**](d3d10-d3dxvec2transform.md) -Funktion als Parameter für eine andere Funktion verwendet werden.
+Der Rückgabewert für diese Funktion ist der gleiche Wert, der im pOut-Parameter zurückgegeben wird. Auf diese Weise kann die [**D3DXVec2Transform-Funktion**](d3d10-d3dxvec2transform.md) als Parameter für eine andere Funktion verwendet werden.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX10Math. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx10. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX10Math.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

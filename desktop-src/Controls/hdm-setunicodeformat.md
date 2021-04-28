@@ -1,9 +1,9 @@
 ---
-title: HDM_SETUNICODEFORMAT Meldung (kommstrg. h)
-description: Legt das Unicode-Zeichenformat Flag für das-Steuerelement fest.
+title: HDM_SETUNICODEFORMAT Meldung (Commctrl.h)
+description: 'HDM_SETUNICODEFORMAT Meldung: Legt das Unicode-Zeichenformatflag für das Steuerelement fest.'
 ms.assetid: 18161fe5-c779-4be0-9e7a-1b5948e42b80
 keywords:
-- Windows-Steuerelemente für HDM_SETUNICODEFORMAT Meldung
+- HDM_SETUNICODEFORMAT Meldung Windows-Steuerelemente
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f3fe3497413b265510426fab4ef2e71666f46312
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: d32ffa5f7f90ab266c52c67899dbff3be0d51123
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104476971"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108085958"
 ---
-# <a name="hdm_setunicodeformat-message"></a>HDM-Meldung "* * \_ Format"
+# <a name="hdm_setunicodeformat-message"></a>HDM \_ SETUNICODEFORMAT-Nachricht
 
-Legt das Unicode-Zeichenformat Flag für das-Steuerelement fest. Mit dieser Meldung können Sie den Zeichensatz ändern, der vom Steuerelement zur Laufzeit verwendet wird, anstatt das Steuerelement neu erstellen zu müssen. Sie können diese Nachricht explizit senden oder den [**Header " \_**](/windows/desktop/api/Commctrl/nf-commctrl-header_setunicodeformat) *.
+Legt das UNICODE-Zeichenformatflag für das Steuerelement fest. Mit dieser Meldung können Sie den vom Steuerelement zur Laufzeit verwendeten Zeichensatz ändern, anstatt das Steuerelement neu erstellen zu müssen. Sie können diese Nachricht explizit senden oder das [**\_ HeadersetUnicodeFormat-Makro**](/windows/desktop/api/Commctrl/nf-commctrl-header_setunicodeformat) verwenden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,7 +32,7 @@ Legt das Unicode-Zeichenformat Flag für das-Steuerelement fest. Mit dieser Meld
 *wParam* 
 </dt> <dd>
 
-Der Zeichensatz, der vom-Steuerelement verwendet wird. Wenn dieser Wert ungleich 0 (null) ist, verwendet das Steuerelement Unicode-Zeichen. Wenn dieser Wert 0 (null) ist, verwendet das Steuerelement ANSI-Zeichen.
+Der Zeichensatz, der vom -Steuerelement verwendet wird. Wenn dieser Wert ungleich 0 (null) ist, verwendet das Steuerelement Unicode-Zeichen. Wenn dieser Wert 0 (null) ist, verwendet das Steuerelement ANSI-Zeichen.
 
 </dd> <dt>
 
@@ -41,29 +41,29 @@ Der Zeichensatz, der vom-Steuerelement verwendet wird. Wenn dieser Wert ungleich
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt das vorherige Unicode-formatflag für das-Steuerelement zurück.
+Gibt das vorherige Unicode-Formatflag für das Steuerelement zurück.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Eine Erörterung dieser Nachricht finden Sie in den Hinweisen zu [**ccm- \_ Code Format**](ccm-setunicodeformat.md) .
+Eine Erläuterung dieser Meldung finden Sie in den Hinweisen zu [**CCM \_ SETUNICODEFORMAT.**](ccm-setunicodeformat.md)
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**HDM \_ getunicodeformat**](hdm-getunicodeformat.md)
+[**HDM \_ GETUNICODEFORMAT**](hdm-getunicodeformat.md)
 </dt> </dl>
 
  
