@@ -1,7 +1,7 @@
 ---
-description: Eine 4X4-Matrix, die Methoden und Operator Überladungen enthält.
+description: 'D3DXMATRIX-Struktur (D3DX10Math.h): Eine 4x4-Matrix, die Methoden und Operatorüberladungen enthält.'
 ms.assetid: c354d28b-bb08-41c5-bb59-90a912181f0f
-title: D3DXMATRIX-Struktur (D3DX10Math. h)
+title: D3DXMATRIX-Struktur (D3DX10Math.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - HeaderDef
 api_location:
 - D3DX10Math.h
-ms.openlocfilehash: cae887e2e9a8782cdc7ba159db203c929006c58a
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: ba1b9533fe5dfa2cfd163a1f92b34a43d7dbd741
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106355833"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108113228"
 ---
-# <a name="d3dxmatrix-structure-d3dx10mathh"></a><span data-ttu-id="8b6ba-103">D3DXMATRIX-Struktur (D3DX10Math. h)</span><span class="sxs-lookup"><span data-stu-id="8b6ba-103">D3DXMATRIX structure (D3DX10Math.h)</span></span>
+# <a name="d3dxmatrix-structure-d3dx10mathh"></a><span data-ttu-id="f8ac9-103">D3DXMATRIX-Struktur (D3DX10Math.h)</span><span class="sxs-lookup"><span data-stu-id="f8ac9-103">D3DXMATRIX structure (D3DX10Math.h)</span></span>
 
-<span data-ttu-id="8b6ba-104">Eine 4X4-Matrix, die Methoden und Operator Überladungen enthält.</span><span class="sxs-lookup"><span data-stu-id="8b6ba-104">A 4x4 matrix that contains methods and operator overloads.</span></span>
+<span data-ttu-id="f8ac9-104">Eine 4x4-Matrix, die Methoden und Operatorüberladungen enthält.</span><span class="sxs-lookup"><span data-stu-id="f8ac9-104">A 4x4 matrix that contains methods and operator overloads.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="8b6ba-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="8b6ba-105">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="f8ac9-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="f8ac9-105">Syntax</span></span>
 
 
 ```C++
@@ -35,30 +35,30 @@ typedef struct D3DXMATRIX {
 
 
 
-## <a name="members"></a><span data-ttu-id="8b6ba-106">Member</span><span class="sxs-lookup"><span data-stu-id="8b6ba-106">Members</span></span>
+## <a name="members"></a><span data-ttu-id="f8ac9-106">Member</span><span class="sxs-lookup"><span data-stu-id="f8ac9-106">Members</span></span>
 
 <dl> <dt>
 
-<span data-ttu-id="8b6ba-107">**\_angesprochenen**</span><span class="sxs-lookup"><span data-stu-id="8b6ba-107">**\_ij**</span></span>
+<span data-ttu-id="f8ac9-107">**\_Ij**</span><span class="sxs-lookup"><span data-stu-id="f8ac9-107">**\_ij**</span></span>
 </dt> <dd>
 
-<span data-ttu-id="8b6ba-108">Typ: **[ **float**](../winprog/windows-data-types.md)**</span><span class="sxs-lookup"><span data-stu-id="8b6ba-108">Type: **[**FLOAT**](../winprog/windows-data-types.md)**</span></span>
+<span data-ttu-id="f8ac9-108">Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**</span><span class="sxs-lookup"><span data-stu-id="f8ac9-108">Type: **[**FLOAT**](../winprog/windows-data-types.md)**</span></span>
 
 </dd> <dd>
 
-<span data-ttu-id="8b6ba-109">Die Komponente (i, j) der Matrix, bei der es sich um die Zeilennummer und j um die Spaltennummer handelt.</span><span class="sxs-lookup"><span data-stu-id="8b6ba-109">The (i, j) component of the matrix, where i is the row number and j is the column number.</span></span> <span data-ttu-id="8b6ba-110">34 bedeutet beispielsweise, dass das \_ gleiche wie \[ ein ₃ ₄ \] , die Komponente in der dritten Zeile und vierten Spalte ist.</span><span class="sxs-lookup"><span data-stu-id="8b6ba-110">For example, \_34 means the same as \[a₃₄\], the component in the third row and fourth column.</span></span>
+<span data-ttu-id="f8ac9-109">Die Komponente (i, j) der Matrix, wobei i die Zeilennummer und j die Spaltennummer ist.</span><span class="sxs-lookup"><span data-stu-id="f8ac9-109">The (i, j) component of the matrix, where i is the row number and j is the column number.</span></span> <span data-ttu-id="f8ac9-110">34 bedeutet z. \_ B. das gleiche wie \[ a₃₄ \] , die Komponente in der dritten Zeile und vierten Spalte.</span><span class="sxs-lookup"><span data-stu-id="f8ac9-110">For example, \_34 means the same as \[a₃₄\], the component in the third row and fourth column.</span></span>
 
 </dd> </dl>
 
-## <a name="remarks"></a><span data-ttu-id="8b6ba-111">Bemerkungen</span><span class="sxs-lookup"><span data-stu-id="8b6ba-111">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="f8ac9-111">Bemerkungen</span><span class="sxs-lookup"><span data-stu-id="f8ac9-111">Remarks</span></span>
 
-<span data-ttu-id="8b6ba-112">C-Programmierer können die D3DXMATRIX-Struktur nicht verwenden. Sie müssen die D3DMATRIX-Struktur verwenden.</span><span class="sxs-lookup"><span data-stu-id="8b6ba-112">C programmers cannot use the D3DXMATRIX structure, they must use the D3DMATRIX structure.</span></span> <span data-ttu-id="8b6ba-113">C++-Programmierer können überladene Konstruktoren und Zuweisungs-, unäre und binäre (einschließlich Gleichheits-) Operatoren nutzen.</span><span class="sxs-lookup"><span data-stu-id="8b6ba-113">C++ programmers can take advantage of overloaded constructors and assignment, unary, and binary (including equality) operators.</span></span>
+<span data-ttu-id="f8ac9-112">C-Programmierer können die D3DXMATRIX-Struktur nicht verwenden, sie müssen die D3DMATRIX-Struktur verwenden.</span><span class="sxs-lookup"><span data-stu-id="f8ac9-112">C programmers cannot use the D3DXMATRIX structure, they must use the D3DMATRIX structure.</span></span> <span data-ttu-id="f8ac9-113">C++-Programmierer können überladene Konstruktoren und Zuweisungsoperatoren, unäre und binäre Operatoren (einschließlich Gleichheit) nutzen.</span><span class="sxs-lookup"><span data-stu-id="f8ac9-113">C++ programmers can take advantage of overloaded constructors and assignment, unary, and binary (including equality) operators.</span></span>
 
-<span data-ttu-id="8b6ba-114">In D3DX kann das \_ 34-Element einer Projektions Matrix keine negative Zahl sein.</span><span class="sxs-lookup"><span data-stu-id="8b6ba-114">In D3DX, the \_34 element of a projection matrix cannot be a negative number.</span></span> <span data-ttu-id="8b6ba-115">Wenn die Anwendung an diesem Speicherort einen negativen Wert verwenden muss, sollte Sie stattdessen die gesamte Projektions Matrix um-1 skalieren.</span><span class="sxs-lookup"><span data-stu-id="8b6ba-115">If your application needs to use a negative value in this location, it should scale the entire projection matrix by -1 instead.</span></span>
+<span data-ttu-id="f8ac9-114">In D3DX darf das \_ 34-Element einer Projektionsmatrix keine negative Zahl sein.</span><span class="sxs-lookup"><span data-stu-id="f8ac9-114">In D3DX, the \_34 element of a projection matrix cannot be a negative number.</span></span> <span data-ttu-id="f8ac9-115">Wenn Ihre Anwendung an dieser Position einen negativen Wert verwenden muss, sollte stattdessen die gesamte Projektionsmatrix um -1 skaliert werden.</span><span class="sxs-lookup"><span data-stu-id="f8ac9-115">If your application needs to use a negative value in this location, it should scale the entire projection matrix by -1 instead.</span></span>
 
-### <a name="d3dxmatrix-extensions"></a><span data-ttu-id="8b6ba-116">D3DXMATRIX-Erweiterungen</span><span class="sxs-lookup"><span data-stu-id="8b6ba-116">D3DXMATRIX Extensions</span></span>
+### <a name="d3dxmatrix-extensions"></a><span data-ttu-id="f8ac9-116">D3DXMATRIX-Erweiterungen</span><span class="sxs-lookup"><span data-stu-id="f8ac9-116">D3DXMATRIX Extensions</span></span>
 
-<span data-ttu-id="8b6ba-117">**D3DXMATRIX** verfügt über die folgenden C++-Erweiterungen.</span><span class="sxs-lookup"><span data-stu-id="8b6ba-117">**D3DXMATRIX** has the following C++ extensions.</span></span>
+<span data-ttu-id="f8ac9-117">**D3DXMATRIX** verfügt über die folgenden C++-Erweiterungen.</span><span class="sxs-lookup"><span data-stu-id="f8ac9-117">**D3DXMATRIX** has the following C++ extensions.</span></span>
 
 
 ```
@@ -117,21 +117,21 @@ typedef struct _D3DMATRIX D3DXMATRIX, *LPD3DXMATRIX;
 
 
 
-## <a name="requirements"></a><span data-ttu-id="8b6ba-118">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="8b6ba-118">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="f8ac9-118">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="f8ac9-118">Requirements</span></span>
 
 
 
-| <span data-ttu-id="8b6ba-119">Anforderung</span><span class="sxs-lookup"><span data-stu-id="8b6ba-119">Requirement</span></span> | <span data-ttu-id="8b6ba-120">Wert</span><span class="sxs-lookup"><span data-stu-id="8b6ba-120">Value</span></span> |
+| <span data-ttu-id="f8ac9-119">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="f8ac9-119">Requirement</span></span> | <span data-ttu-id="f8ac9-120">Wert</span><span class="sxs-lookup"><span data-stu-id="f8ac9-120">Value</span></span> |
 |-------------------|-----------------------------------------------------------------------------------------|
-| <span data-ttu-id="8b6ba-121">Header</span><span class="sxs-lookup"><span data-stu-id="8b6ba-121">Header</span></span><br/> | <dl> <span data-ttu-id="8b6ba-122"><dt>D3DX10Math. h</dt></span><span class="sxs-lookup"><span data-stu-id="8b6ba-122"><dt>D3DX10Math.h</dt></span></span> </dl> |
+| <span data-ttu-id="f8ac9-121">Header</span><span class="sxs-lookup"><span data-stu-id="f8ac9-121">Header</span></span><br/> | <dl> <span data-ttu-id="f8ac9-122"><dt>D3DX10Math.h</dt></span><span class="sxs-lookup"><span data-stu-id="f8ac9-122"><dt>D3DX10Math.h</dt></span></span> </dl> |
 
 
 
-## <a name="see-also"></a><span data-ttu-id="8b6ba-123">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="8b6ba-123">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f8ac9-123">Weitere Informationen</span><span class="sxs-lookup"><span data-stu-id="f8ac9-123">See also</span></span>
 
 <dl> <dt>
 
-[<span data-ttu-id="8b6ba-124">D3DX-Strukturen</span><span class="sxs-lookup"><span data-stu-id="8b6ba-124">D3DX Structures</span></span>](d3d10-graphics-reference-d3dx10-structures.md)
+[<span data-ttu-id="f8ac9-124">D3DX-Strukturen</span><span class="sxs-lookup"><span data-stu-id="f8ac9-124">D3DX Structures</span></span>](d3d10-graphics-reference-d3dx10-structures.md)
 </dt> </dl>
 
  

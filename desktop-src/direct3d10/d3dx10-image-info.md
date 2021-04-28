@@ -1,7 +1,7 @@
 ---
-description: Gibt eine Beschreibung des ursprünglichen Inhalts einer Bilddatei zurück.
+description: 'D3DX10_IMAGE_INFO struktur: Gibt eine Beschreibung des ursprünglichen Inhalts einer Bilddatei zurück.'
 ms.assetid: 40d89166-cc11-490d-867c-ae5db23a0784
-title: D3DX10_IMAGE_INFO-Struktur (d3dx10. h)
+title: D3DX10_IMAGE_INFO -Struktur (D3DX10.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - HeaderDef
 api_location:
 - D3DX10.h
-ms.openlocfilehash: bf240296610c083e0d042d187ae29054461193a8
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 228ddf777217e9e61369b0a7fc3b3eb1ca012b1d
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104354437"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108105478"
 ---
-# <a name="d3dx10_image_info-structure"></a><span data-ttu-id="f24c3-103">D3dx10 \_ Image- \_ Informationsstruktur</span><span class="sxs-lookup"><span data-stu-id="f24c3-103">D3DX10\_IMAGE\_INFO structure</span></span>
+# <a name="d3dx10_image_info-structure"></a><span data-ttu-id="12839-103">D3DX10 \_ IMAGE \_ INFO-Struktur</span><span class="sxs-lookup"><span data-stu-id="12839-103">D3DX10\_IMAGE\_INFO structure</span></span>
 
-<span data-ttu-id="f24c3-104">Gibt eine Beschreibung des ursprünglichen Inhalts einer Bilddatei zurück.</span><span class="sxs-lookup"><span data-stu-id="f24c3-104">Returns a description of the original contents of an image file.</span></span>
+<span data-ttu-id="12839-104">Gibt eine Beschreibung des ursprünglichen Inhalts einer Bilddatei zurück.</span><span class="sxs-lookup"><span data-stu-id="12839-104">Returns a description of the original contents of an image file.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="f24c3-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="f24c3-105">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="12839-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="12839-105">Syntax</span></span>
 
 
 ```C++
@@ -43,124 +43,124 @@ typedef struct D3DX10_IMAGE_INFO {
 
 
 
-## <a name="members"></a><span data-ttu-id="f24c3-106">Member</span><span class="sxs-lookup"><span data-stu-id="f24c3-106">Members</span></span>
+## <a name="members"></a><span data-ttu-id="12839-106">Member</span><span class="sxs-lookup"><span data-stu-id="12839-106">Members</span></span>
 
 <dl> <dt>
 
-<span data-ttu-id="f24c3-107">**Width**</span><span class="sxs-lookup"><span data-stu-id="f24c3-107">**Width**</span></span>
+<span data-ttu-id="12839-107">**Width**</span><span class="sxs-lookup"><span data-stu-id="12839-107">**Width**</span></span>
 </dt> <dd>
 
-<span data-ttu-id="f24c3-108">Typ: **[ **uint**](../winprog/windows-data-types.md)**</span><span class="sxs-lookup"><span data-stu-id="f24c3-108">Type: **[**UINT**](../winprog/windows-data-types.md)**</span></span>
+<span data-ttu-id="12839-108">Typ: **[ **UINT**](../winprog/windows-data-types.md)**</span><span class="sxs-lookup"><span data-stu-id="12839-108">Type: **[**UINT**](../winprog/windows-data-types.md)**</span></span>
 
 </dd> <dd>
 
-<span data-ttu-id="f24c3-109">Breite des ursprünglichen Bilds in Pixel.</span><span class="sxs-lookup"><span data-stu-id="f24c3-109">Width of original image in pixels.</span></span>
+<span data-ttu-id="12839-109">Breite des ursprünglichen Bilds in Pixel.</span><span class="sxs-lookup"><span data-stu-id="12839-109">Width of original image in pixels.</span></span>
 
 </dd> <dt>
 
-<span data-ttu-id="f24c3-110">**Height**</span><span class="sxs-lookup"><span data-stu-id="f24c3-110">**Height**</span></span>
+<span data-ttu-id="12839-110">**Height**</span><span class="sxs-lookup"><span data-stu-id="12839-110">**Height**</span></span>
 </dt> <dd>
 
-<span data-ttu-id="f24c3-111">Typ: **[ **uint**](../winprog/windows-data-types.md)**</span><span class="sxs-lookup"><span data-stu-id="f24c3-111">Type: **[**UINT**](../winprog/windows-data-types.md)**</span></span>
+<span data-ttu-id="12839-111">Typ: **[ **UINT**](../winprog/windows-data-types.md)**</span><span class="sxs-lookup"><span data-stu-id="12839-111">Type: **[**UINT**](../winprog/windows-data-types.md)**</span></span>
 
 </dd> <dd>
 
-<span data-ttu-id="f24c3-112">Höhe des ursprünglichen Bilds in Pixel.</span><span class="sxs-lookup"><span data-stu-id="f24c3-112">Height of original image in pixels.</span></span>
+<span data-ttu-id="12839-112">Höhe des ursprünglichen Bilds in Pixel.</span><span class="sxs-lookup"><span data-stu-id="12839-112">Height of original image in pixels.</span></span>
 
 </dd> <dt>
 
-<span data-ttu-id="f24c3-113">**Tiefe**</span><span class="sxs-lookup"><span data-stu-id="f24c3-113">**Depth**</span></span>
+<span data-ttu-id="12839-113">**Tiefe**</span><span class="sxs-lookup"><span data-stu-id="12839-113">**Depth**</span></span>
 </dt> <dd>
 
-<span data-ttu-id="f24c3-114">Typ: **[ **uint**](../winprog/windows-data-types.md)**</span><span class="sxs-lookup"><span data-stu-id="f24c3-114">Type: **[**UINT**](../winprog/windows-data-types.md)**</span></span>
+<span data-ttu-id="12839-114">Typ: **[ **UINT**](../winprog/windows-data-types.md)**</span><span class="sxs-lookup"><span data-stu-id="12839-114">Type: **[**UINT**](../winprog/windows-data-types.md)**</span></span>
 
 </dd> <dd>
 
-<span data-ttu-id="f24c3-115">Tiefe des ursprünglichen Bilds in Pixel.</span><span class="sxs-lookup"><span data-stu-id="f24c3-115">Depth of original image in pixels.</span></span>
+<span data-ttu-id="12839-115">Tiefe des ursprünglichen Bilds in Pixel.</span><span class="sxs-lookup"><span data-stu-id="12839-115">Depth of original image in pixels.</span></span>
 
 </dd> <dt>
 
-<span data-ttu-id="f24c3-116">**ArraySize**</span><span class="sxs-lookup"><span data-stu-id="f24c3-116">**ArraySize**</span></span>
+<span data-ttu-id="12839-116">**ArraySize**</span><span class="sxs-lookup"><span data-stu-id="12839-116">**ArraySize**</span></span>
 </dt> <dd>
 
-<span data-ttu-id="f24c3-117">Typ: **[ **uint**](../winprog/windows-data-types.md)**</span><span class="sxs-lookup"><span data-stu-id="f24c3-117">Type: **[**UINT**](../winprog/windows-data-types.md)**</span></span>
+<span data-ttu-id="12839-117">Typ: **[ **UINT**](../winprog/windows-data-types.md)**</span><span class="sxs-lookup"><span data-stu-id="12839-117">Type: **[**UINT**](../winprog/windows-data-types.md)**</span></span>
 
 </dd> <dd>
 
-<span data-ttu-id="f24c3-118">Größe des Textur Arrays.</span><span class="sxs-lookup"><span data-stu-id="f24c3-118">Size of the texture array.</span></span> <span data-ttu-id="f24c3-119">*ArraySize* ist 1 für ein einzelnes Image.</span><span class="sxs-lookup"><span data-stu-id="f24c3-119">*ArraySize* will be 1 for a single image.</span></span>
+<span data-ttu-id="12839-118">Größe des Texturarrays.</span><span class="sxs-lookup"><span data-stu-id="12839-118">Size of the texture array.</span></span> <span data-ttu-id="12839-119">*ArraySize ist* für ein einzelnes Bild 1.</span><span class="sxs-lookup"><span data-stu-id="12839-119">*ArraySize* will be 1 for a single image.</span></span>
 
 </dd> <dt>
 
-<span data-ttu-id="f24c3-120">**MipLevels**</span><span class="sxs-lookup"><span data-stu-id="f24c3-120">**MipLevels**</span></span>
+<span data-ttu-id="12839-120">**MipLevels**</span><span class="sxs-lookup"><span data-stu-id="12839-120">**MipLevels**</span></span>
 </dt> <dd>
 
-<span data-ttu-id="f24c3-121">Typ: **[ **uint**](../winprog/windows-data-types.md)**</span><span class="sxs-lookup"><span data-stu-id="f24c3-121">Type: **[**UINT**](../winprog/windows-data-types.md)**</span></span>
+<span data-ttu-id="12839-121">Typ: **[ **UINT**](../winprog/windows-data-types.md)**</span><span class="sxs-lookup"><span data-stu-id="12839-121">Type: **[**UINT**](../winprog/windows-data-types.md)**</span></span>
 
 </dd> <dd>
 
-<span data-ttu-id="f24c3-122">Anzahl von MipMap-Ebenen im ursprünglichen Bild.</span><span class="sxs-lookup"><span data-stu-id="f24c3-122">Number of mipmap levels in original image.</span></span>
+<span data-ttu-id="12839-122">Anzahl der Mipmapebenen im originalen Bild.</span><span class="sxs-lookup"><span data-stu-id="12839-122">Number of mipmap levels in original image.</span></span>
 
 </dd> <dt>
 
-<span data-ttu-id="f24c3-123">**Fehlflags**</span><span class="sxs-lookup"><span data-stu-id="f24c3-123">**MiscFlags**</span></span>
+<span data-ttu-id="12839-123">**MiscFlags**</span><span class="sxs-lookup"><span data-stu-id="12839-123">**MiscFlags**</span></span>
 </dt> <dd>
 
-<span data-ttu-id="f24c3-124">Typ: **[ **uint**](../winprog/windows-data-types.md)**</span><span class="sxs-lookup"><span data-stu-id="f24c3-124">Type: **[**UINT**](../winprog/windows-data-types.md)**</span></span>
+<span data-ttu-id="12839-124">Typ: **[ **UINT**](../winprog/windows-data-types.md)**</span><span class="sxs-lookup"><span data-stu-id="12839-124">Type: **[**UINT**](../winprog/windows-data-types.md)**</span></span>
 
 </dd> <dd>
 
-<span data-ttu-id="f24c3-125">Verschiedene Ressourcen Eigenschaften (siehe [**d3d10 \_ Resource \_ misc- \_ Flag**](/windows/desktop/api/D3D10/ne-d3d10-d3d10_resource_misc_flag)).</span><span class="sxs-lookup"><span data-stu-id="f24c3-125">Miscellaneous resource properties (see [**D3D10\_RESOURCE\_MISC\_FLAG**](/windows/desktop/api/D3D10/ne-d3d10-d3d10_resource_misc_flag)).</span></span>
+<span data-ttu-id="12839-125">Verschiedene Ressourceneigenschaften (siehe [**D3D10 \_ RESOURCE \_ MISC \_ FLAG**](/windows/desktop/api/D3D10/ne-d3d10-d3d10_resource_misc_flag)).</span><span class="sxs-lookup"><span data-stu-id="12839-125">Miscellaneous resource properties (see [**D3D10\_RESOURCE\_MISC\_FLAG**](/windows/desktop/api/D3D10/ne-d3d10-d3d10_resource_misc_flag)).</span></span>
 
 </dd> <dt>
 
-<span data-ttu-id="f24c3-126">**Format**</span><span class="sxs-lookup"><span data-stu-id="f24c3-126">**Format**</span></span>
+<span data-ttu-id="12839-126">**Format**</span><span class="sxs-lookup"><span data-stu-id="12839-126">**Format**</span></span>
 </dt> <dd>
 
-<span data-ttu-id="f24c3-127">Typ: **[ **DXGI- \_ Format**](/windows/win32/api/dxgiformat/ne-dxgiformat-dxgi_format)**</span><span class="sxs-lookup"><span data-stu-id="f24c3-127">Type: **[**DXGI\_FORMAT**](/windows/win32/api/dxgiformat/ne-dxgiformat-dxgi_format)**</span></span>
+<span data-ttu-id="12839-127">Typ: **[ **DXGI \_ FORMAT**](/windows/win32/api/dxgiformat/ne-dxgiformat-dxgi_format)**</span><span class="sxs-lookup"><span data-stu-id="12839-127">Type: **[**DXGI\_FORMAT**](/windows/win32/api/dxgiformat/ne-dxgiformat-dxgi_format)**</span></span>
 
 </dd> <dd>
 
-<span data-ttu-id="f24c3-128">Ein Wert aus dem enumerierten [**DXGI- \_ Formattyp**](/windows/win32/api/dxgiformat/ne-dxgiformat-dxgi_format) , der die Daten im ursprünglichen Bild am ehesten beschreibt.</span><span class="sxs-lookup"><span data-stu-id="f24c3-128">A value from the [**DXGI\_FORMAT**](/windows/win32/api/dxgiformat/ne-dxgiformat-dxgi_format) enumerated type that most closely describes the data in the original image.</span></span>
+<span data-ttu-id="12839-128">Ein Wert aus dem enumerierten [**DXGI \_ FORMAT-Typ,**](/windows/win32/api/dxgiformat/ne-dxgiformat-dxgi_format) der die Daten im ursprünglichen Bild am genauesten beschreibt.</span><span class="sxs-lookup"><span data-stu-id="12839-128">A value from the [**DXGI\_FORMAT**](/windows/win32/api/dxgiformat/ne-dxgiformat-dxgi_format) enumerated type that most closely describes the data in the original image.</span></span>
 
 </dd> <dt>
 
-<span data-ttu-id="f24c3-129">**Resourcedimension**</span><span class="sxs-lookup"><span data-stu-id="f24c3-129">**ResourceDimension**</span></span>
+<span data-ttu-id="12839-129">**ResourceDimension**</span><span class="sxs-lookup"><span data-stu-id="12839-129">**ResourceDimension**</span></span>
 </dt> <dd>
 
-<span data-ttu-id="f24c3-130">Type: **[ **d3d10- \_ Ressourcen \_ Dimension**](/windows/desktop/api/D3D10/ne-d3d10-d3d10_resource_dimension)**</span><span class="sxs-lookup"><span data-stu-id="f24c3-130">Type: **[**D3D10\_RESOURCE\_DIMENSION**](/windows/desktop/api/D3D10/ne-d3d10-d3d10_resource_dimension)**</span></span>
+<span data-ttu-id="12839-130">Typ: **[ **D3D10 \_ RESOURCE \_ DIMENSION**](/windows/desktop/api/D3D10/ne-d3d10-d3d10_resource_dimension)**</span><span class="sxs-lookup"><span data-stu-id="12839-130">Type: **[**D3D10\_RESOURCE\_DIMENSION**](/windows/desktop/api/D3D10/ne-d3d10-d3d10_resource_dimension)**</span></span>
 
 </dd> <dd>
 
-<span data-ttu-id="f24c3-131">Stellt den Typ der Textur dar, die in der Datei gespeichert ist.</span><span class="sxs-lookup"><span data-stu-id="f24c3-131">Represents the type of the texture stored in the file.</span></span> <span data-ttu-id="f24c3-132">Siehe [**d3d10 \_ Resource- \_ Dimension**](/windows/desktop/api/D3D10/ne-d3d10-d3d10_resource_dimension).</span><span class="sxs-lookup"><span data-stu-id="f24c3-132">See [**D3D10\_RESOURCE\_DIMENSION**](/windows/desktop/api/D3D10/ne-d3d10-d3d10_resource_dimension).</span></span>
+<span data-ttu-id="12839-131">Stellt den Typ der in der Datei gespeicherten Textur dar.</span><span class="sxs-lookup"><span data-stu-id="12839-131">Represents the type of the texture stored in the file.</span></span> <span data-ttu-id="12839-132">Weitere Informationen finden Sie unter [**D3D10 \_ RESOURCE \_ DIMENSION**](/windows/desktop/api/D3D10/ne-d3d10-d3d10_resource_dimension).</span><span class="sxs-lookup"><span data-stu-id="12839-132">See [**D3D10\_RESOURCE\_DIMENSION**](/windows/desktop/api/D3D10/ne-d3d10-d3d10_resource_dimension).</span></span>
 
 </dd> <dt>
 
-<span data-ttu-id="f24c3-133">**Imagefileformat**</span><span class="sxs-lookup"><span data-stu-id="f24c3-133">**ImageFileFormat**</span></span>
+<span data-ttu-id="12839-133">**ImageFileFormat**</span><span class="sxs-lookup"><span data-stu-id="12839-133">**ImageFileFormat**</span></span>
 </dt> <dd>
 
-<span data-ttu-id="f24c3-134">Type: **[ **d3dx10 \_ Image \_ file \_ Format**](d3dx10-image-file-format.md)**</span><span class="sxs-lookup"><span data-stu-id="f24c3-134">Type: **[**D3DX10\_IMAGE\_FILE\_FORMAT**](d3dx10-image-file-format.md)**</span></span>
+<span data-ttu-id="12839-134">Typ: **[ **D3DX10 \_ IMAGE \_ FILE \_ FORMAT**](d3dx10-image-file-format.md)**</span><span class="sxs-lookup"><span data-stu-id="12839-134">Type: **[**D3DX10\_IMAGE\_FILE\_FORMAT**](d3dx10-image-file-format.md)**</span></span>
 
 </dd> <dd>
 
-<span data-ttu-id="f24c3-135">Stellt das Format der Bilddatei dar.</span><span class="sxs-lookup"><span data-stu-id="f24c3-135">Represents the format of the image file.</span></span> <span data-ttu-id="f24c3-136">Siehe [**d3dx10 \_ Image \_ file \_ Format**](d3dx10-image-file-format.md).</span><span class="sxs-lookup"><span data-stu-id="f24c3-136">See [**D3DX10\_IMAGE\_FILE\_FORMAT**](d3dx10-image-file-format.md).</span></span>
+<span data-ttu-id="12839-135">Stellt das Format der Bilddatei dar.</span><span class="sxs-lookup"><span data-stu-id="12839-135">Represents the format of the image file.</span></span> <span data-ttu-id="12839-136">Weitere Informationen finden Sie unter [**D3DX10 \_ IMAGE \_ FILE \_ FORMAT**](d3dx10-image-file-format.md).</span><span class="sxs-lookup"><span data-stu-id="12839-136">See [**D3DX10\_IMAGE\_FILE\_FORMAT**](d3dx10-image-file-format.md).</span></span>
 
 </dd> </dl>
 
-## <a name="requirements"></a><span data-ttu-id="f24c3-137">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="f24c3-137">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="12839-137">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="12839-137">Requirements</span></span>
 
 
 
-| <span data-ttu-id="f24c3-138">Anforderung</span><span class="sxs-lookup"><span data-stu-id="f24c3-138">Requirement</span></span> | <span data-ttu-id="f24c3-139">Wert</span><span class="sxs-lookup"><span data-stu-id="f24c3-139">Value</span></span> |
+| <span data-ttu-id="12839-138">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="12839-138">Requirement</span></span> | <span data-ttu-id="12839-139">Wert</span><span class="sxs-lookup"><span data-stu-id="12839-139">Value</span></span> |
 |-------------------|-------------------------------------------------------------------------------------|
-| <span data-ttu-id="f24c3-140">Header</span><span class="sxs-lookup"><span data-stu-id="f24c3-140">Header</span></span><br/> | <dl> <span data-ttu-id="f24c3-141"><dt>D3dx10. h</dt></span><span class="sxs-lookup"><span data-stu-id="f24c3-141"><dt>D3DX10.h</dt></span></span> </dl> |
+| <span data-ttu-id="12839-140">Header</span><span class="sxs-lookup"><span data-stu-id="12839-140">Header</span></span><br/> | <dl> <span data-ttu-id="12839-141"><dt>D3DX10.h</dt></span><span class="sxs-lookup"><span data-stu-id="12839-141"><dt>D3DX10.h</dt></span></span> </dl> |
 
 
 
-## <a name="see-also"></a><span data-ttu-id="f24c3-142">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="f24c3-142">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="12839-142">Weitere Informationen</span><span class="sxs-lookup"><span data-stu-id="12839-142">See also</span></span>
 
 <dl> <dt>
 
-[<span data-ttu-id="f24c3-143">D3DX-Strukturen</span><span class="sxs-lookup"><span data-stu-id="f24c3-143">D3DX Structures</span></span>](d3d10-graphics-reference-d3dx10-structures.md)
+[<span data-ttu-id="12839-143">D3DX-Strukturen</span><span class="sxs-lookup"><span data-stu-id="12839-143">D3DX Structures</span></span>](d3d10-graphics-reference-d3dx10-structures.md)
 </dt> </dl>
 
  
