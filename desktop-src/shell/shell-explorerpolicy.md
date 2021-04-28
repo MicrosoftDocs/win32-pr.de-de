@@ -1,7 +1,7 @@
 ---
-description: Ruft den Wert für eine angegebene Windows Internet Explorer-Richtlinie ab.
+description: 'Shell.ExplorerPolicy-Methode: Ruft den Wert für eine angegebene Windows-Internet Explorer ab.'
 ms.assetid: 47E17F6A-ED43-44cd-AF77-A6E49865E1B5
-title: Shell. explorerpolicy-Methode (Shldisp. h)
+title: Shell.ExplorerPolicy-Methode (Shldisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - COM
 api_location:
 - Shell32.dll
-ms.openlocfilehash: fea5192990b8c19c8ddfe8ffad6efe21b98625c6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 765e1dc46edbe5a27292c5d8ff940e29b269f8dc
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104980864"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108083698"
 ---
-# <a name="shellexplorerpolicy-method"></a><span data-ttu-id="9dffc-103">Shell. explorerpolicy-Methode</span><span class="sxs-lookup"><span data-stu-id="9dffc-103">Shell.ExplorerPolicy method</span></span>
+# <a name="shellexplorerpolicy-method"></a><span data-ttu-id="19a2b-103">Shell.ExplorerPolicy-Methode</span><span class="sxs-lookup"><span data-stu-id="19a2b-103">Shell.ExplorerPolicy method</span></span>
 
-<span data-ttu-id="9dffc-104">Ruft den Wert für eine angegebene Windows Internet Explorer-Richtlinie ab.</span><span class="sxs-lookup"><span data-stu-id="9dffc-104">Gets the value for a specified Windows Internet Explorer policy.</span></span>
+<span data-ttu-id="19a2b-104">Ruft den Wert für eine angegebene Windows-Internet Explorer ab.</span><span class="sxs-lookup"><span data-stu-id="19a2b-104">Gets the value for a specified Windows Internet Explorer policy.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="9dffc-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="9dffc-105">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="19a2b-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="19a2b-105">Syntax</span></span>
 
 
 ```JScript
@@ -45,44 +45,44 @@ Shell.ExplorerPolicy( _
 
 
 
-## <a name="parameters"></a><span data-ttu-id="9dffc-106">Parameter</span><span class="sxs-lookup"><span data-stu-id="9dffc-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="19a2b-106">Parameter</span><span class="sxs-lookup"><span data-stu-id="19a2b-106">Parameters</span></span>
 
 <dl> <dt>
 
-<span data-ttu-id="9dffc-107">*bstraupolicyname* \[ in\]</span><span class="sxs-lookup"><span data-stu-id="9dffc-107">*bstrPolicyName* \[in\]</span></span>
+<span data-ttu-id="19a2b-107">*bstrPolicyName* \[ In\]</span><span class="sxs-lookup"><span data-stu-id="19a2b-107">*bstrPolicyName* \[in\]</span></span>
 </dt> <dd>
 
-<span data-ttu-id="9dffc-108">Typ: **[ **BSTR**](/previous-versions/windows/desktop/automat/bstr)**</span><span class="sxs-lookup"><span data-stu-id="9dffc-108">Type: **[**BSTR**](/previous-versions/windows/desktop/automat/bstr)**</span></span>
+<span data-ttu-id="19a2b-108">Typ: **[ **BSTR**](/previous-versions/windows/desktop/automat/bstr)**</span><span class="sxs-lookup"><span data-stu-id="19a2b-108">Type: **[**BSTR**](/previous-versions/windows/desktop/automat/bstr)**</span></span>
 
-<span data-ttu-id="9dffc-109">Eine **Zeichenfolge** , die den Namen der Richtlinie angibt.</span><span class="sxs-lookup"><span data-stu-id="9dffc-109">A **String** that specifies the name of the policy.</span></span>
+<span data-ttu-id="19a2b-109">Eine **Zeichenfolge,** die den Namen der Richtlinie angibt.</span><span class="sxs-lookup"><span data-stu-id="19a2b-109">A **String** that specifies the name of the policy.</span></span>
 
 </dd> </dl>
 
-## <a name="return-value"></a><span data-ttu-id="9dffc-110">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="9dffc-110">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="19a2b-110">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="19a2b-110">Return value</span></span>
 
-### <a name="jscript"></a><span data-ttu-id="9dffc-111">JScript</span><span class="sxs-lookup"><span data-stu-id="9dffc-111">JScript</span></span>
+### <a name="jscript"></a><span data-ttu-id="19a2b-111">JScript</span><span class="sxs-lookup"><span data-stu-id="19a2b-111">JScript</span></span>
 
-<span data-ttu-id="9dffc-112">Typ: \**Variant \** _</span><span class="sxs-lookup"><span data-stu-id="9dffc-112">Type: \**Variant\** _</span></span>
+<span data-ttu-id="19a2b-112">Typ: **\* Variant**</span><span class="sxs-lookup"><span data-stu-id="19a2b-112">Type: **Variant\***</span></span>
 
-<span data-ttu-id="9dffc-113">Der Wert, der dem angegebenen Richtlinien Namen zugeordnet ist.</span><span class="sxs-lookup"><span data-stu-id="9dffc-113">The value associated with the specified policy name.</span></span>
+<span data-ttu-id="19a2b-113">Der wert, der dem angegebenen Richtliniennamen zugeordnet ist.</span><span class="sxs-lookup"><span data-stu-id="19a2b-113">The value associated with the specified policy name.</span></span>
 
-### <a name="vb"></a><span data-ttu-id="9dffc-114">VB</span><span class="sxs-lookup"><span data-stu-id="9dffc-114">VB</span></span>
+### <a name="vb"></a><span data-ttu-id="19a2b-114">VB</span><span class="sxs-lookup"><span data-stu-id="19a2b-114">VB</span></span>
 
-<span data-ttu-id="9dffc-115">Typ: _*Variant \**_</span><span class="sxs-lookup"><span data-stu-id="9dffc-115">Type: _*Variant\**_</span></span>
+<span data-ttu-id="19a2b-115">Typ: **\* Variant**</span><span class="sxs-lookup"><span data-stu-id="19a2b-115">Type: **Variant\***</span></span>
 
-<span data-ttu-id="9dffc-116">Der Wert, der dem angegebenen Richtlinien Namen zugeordnet ist.</span><span class="sxs-lookup"><span data-stu-id="9dffc-116">The value associated with the specified policy name.</span></span>
+<span data-ttu-id="19a2b-116">Der wert, der dem angegebenen Richtliniennamen zugeordnet ist.</span><span class="sxs-lookup"><span data-stu-id="19a2b-116">The value associated with the specified policy name.</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="9dffc-117">Bemerkungen</span><span class="sxs-lookup"><span data-stu-id="9dffc-117">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="19a2b-117">Bemerkungen</span><span class="sxs-lookup"><span data-stu-id="19a2b-117">Remarks</span></span>
 
-<span data-ttu-id="9dffc-118">Netzwerkadministratoren können die Computerumgebung Ihrer Benutzer durch Festlegen von Richtlinien steuern und verwalten.</span><span class="sxs-lookup"><span data-stu-id="9dffc-118">Network Administrators can control and manage the computing environment of their users by setting policies.</span></span>
+<span data-ttu-id="19a2b-118">Netzwerkadministratoren können die Computerumgebung ihrer Benutzer steuern und verwalten, indem sie Richtlinien festlegen.</span><span class="sxs-lookup"><span data-stu-id="19a2b-118">Network Administrators can control and manage the computing environment of their users by setting policies.</span></span>
 
-<span data-ttu-id="9dffc-119">Der angegebene Wertname muss im Unterschlüssel "_ \*HKEY \_ Current \_ User **\\** Software **\\** Microsoft **\\** Windows **\\** CurrentVersion **\\** Policies **\\** Explorer\*\*" angegeben werden.</span><span class="sxs-lookup"><span data-stu-id="9dffc-119">The specified value name must be within the _ *HKEY\_CURRENT\_USER **\\** Software **\\** Microsoft **\\** Windows **\\** CurrentVersion **\\** Policies **\\** Explorer*\* subkey.</span></span> <span data-ttu-id="9dffc-120">Wenn der Wertname nicht vorhanden ist, gibt die Methode **null** zurück.</span><span class="sxs-lookup"><span data-stu-id="9dffc-120">If the value name does not exist then the method returns **null**.</span></span>
+<span data-ttu-id="19a2b-119">Der angegebene Wertname muss innerhalb des **Unterschlüssels HKEY \_ CURRENT \_ USER** \\ **Software** \\ **Microsoft** \\ **Windows** \\ **CurrentVersion** \\ **Policies** \\ **Explorer** sein.</span><span class="sxs-lookup"><span data-stu-id="19a2b-119">The specified value name must be within the **HKEY\_CURRENT\_USER**\\**Software**\\**Microsoft**\\**Windows**\\**CurrentVersion**\\**Policies**\\**Explorer** subkey.</span></span> <span data-ttu-id="19a2b-120">Wenn der Wertname nicht vorhanden ist, gibt die Methode NULL **zurück.**</span><span class="sxs-lookup"><span data-stu-id="19a2b-120">If the value name does not exist then the method returns **null**.</span></span>
 
-## <a name="examples"></a><span data-ttu-id="9dffc-121">Beispiele</span><span class="sxs-lookup"><span data-stu-id="9dffc-121">Examples</span></span>
+## <a name="examples"></a><span data-ttu-id="19a2b-121">Beispiele</span><span class="sxs-lookup"><span data-stu-id="19a2b-121">Examples</span></span>
 
-<span data-ttu-id="9dffc-122">In den folgenden Beispielen wird die ordnungsgemäße Verwendung von **explorerpolicy** für JScript, VBScript und Visual Basic veranschaulicht.</span><span class="sxs-lookup"><span data-stu-id="9dffc-122">The following examples show the proper use of **ExplorerPolicy** for JScript, VBScript, and Visual Basic.</span></span>
+<span data-ttu-id="19a2b-122">Die folgenden Beispiele zeigen die ordnungsgemäße Verwendung von **ExplorerPolicy** für JScript, VBScript und Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="19a2b-122">The following examples show the proper use of **ExplorerPolicy** for JScript, VBScript, and Visual Basic.</span></span>
 
-<span data-ttu-id="9dffc-123">JScript</span><span class="sxs-lookup"><span data-stu-id="9dffc-123">JScript:</span></span>
+<span data-ttu-id="19a2b-123">Jscript:</span><span class="sxs-lookup"><span data-stu-id="19a2b-123">JScript:</span></span>
 
 
 ```JScript
@@ -100,7 +100,7 @@ Shell.ExplorerPolicy( _
 
 
 
-<span data-ttu-id="9dffc-124">VBScript</span><span class="sxs-lookup"><span data-stu-id="9dffc-124">VBScript:</span></span>
+<span data-ttu-id="19a2b-124">Vbscript:</span><span class="sxs-lookup"><span data-stu-id="19a2b-124">VBScript:</span></span>
 
 
 ```VB
@@ -119,7 +119,7 @@ Shell.ExplorerPolicy( _
 
 
 
-<span data-ttu-id="9dffc-125">Visual Basic:</span><span class="sxs-lookup"><span data-stu-id="9dffc-125">Visual Basic:</span></span>
+<span data-ttu-id="19a2b-125">Visual Basic:</span><span class="sxs-lookup"><span data-stu-id="19a2b-125">Visual Basic:</span></span>
 
 
 ```VB
@@ -136,17 +136,17 @@ End Sub
 
 
 
-## <a name="requirements"></a><span data-ttu-id="9dffc-126">Requirements (Anforderungen)</span><span class="sxs-lookup"><span data-stu-id="9dffc-126">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="19a2b-126">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="19a2b-126">Requirements</span></span>
 
 
 
-| <span data-ttu-id="9dffc-127">Anforderung</span><span class="sxs-lookup"><span data-stu-id="9dffc-127">Requirement</span></span> | <span data-ttu-id="9dffc-128">Wert</span><span class="sxs-lookup"><span data-stu-id="9dffc-128">Value</span></span> |
+| <span data-ttu-id="19a2b-127">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="19a2b-127">Requirement</span></span> | <span data-ttu-id="19a2b-128">Wert</span><span class="sxs-lookup"><span data-stu-id="19a2b-128">Value</span></span> |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| <span data-ttu-id="9dffc-129">Unterstützte Mindestversion (Client)</span><span class="sxs-lookup"><span data-stu-id="9dffc-129">Minimum supported client</span></span><br/> | <span data-ttu-id="9dffc-130">Nur Windows XP \[ -Desktop-Apps\]</span><span class="sxs-lookup"><span data-stu-id="9dffc-130">Windows XP \[desktop apps only\]</span></span><br/>                                                                   |
-| <span data-ttu-id="9dffc-131">Unterstützte Mindestversion (Server)</span><span class="sxs-lookup"><span data-stu-id="9dffc-131">Minimum supported server</span></span><br/> | <span data-ttu-id="9dffc-132">Nur Windows Server 2003 \[ -Desktop-Apps\]</span><span class="sxs-lookup"><span data-stu-id="9dffc-132">Windows Server 2003 \[desktop apps only\]</span></span><br/>                                                          |
-| <span data-ttu-id="9dffc-133">Header</span><span class="sxs-lookup"><span data-stu-id="9dffc-133">Header</span></span><br/>                   | <dl> <span data-ttu-id="9dffc-134"><dt>Shldisp. h</dt></span><span class="sxs-lookup"><span data-stu-id="9dffc-134"><dt>Shldisp.h</dt></span></span> </dl>                          |
-| <span data-ttu-id="9dffc-135">IDL</span><span class="sxs-lookup"><span data-stu-id="9dffc-135">IDL</span></span><br/>                      | <dl> <span data-ttu-id="9dffc-136"><dt>Shldisp. idl</dt></span><span class="sxs-lookup"><span data-stu-id="9dffc-136"><dt>Shldisp.idl</dt></span></span> </dl>                        |
-| <span data-ttu-id="9dffc-137">DLL</span><span class="sxs-lookup"><span data-stu-id="9dffc-137">DLL</span></span><br/>                      | <dl> <span data-ttu-id="9dffc-138"><dt>Shell32.dll (Version 6,0 oder höher)</dt></span><span class="sxs-lookup"><span data-stu-id="9dffc-138"><dt>Shell32.dll (version 6.0 or later)</dt></span></span> </dl> |
+| <span data-ttu-id="19a2b-129">Unterstützte Mindestversion (Client)</span><span class="sxs-lookup"><span data-stu-id="19a2b-129">Minimum supported client</span></span><br/> | <span data-ttu-id="19a2b-130">Nur Windows \[ XP-Desktop-Apps\]</span><span class="sxs-lookup"><span data-stu-id="19a2b-130">Windows XP \[desktop apps only\]</span></span><br/>                                                                   |
+| <span data-ttu-id="19a2b-131">Unterstützte Mindestversion (Server)</span><span class="sxs-lookup"><span data-stu-id="19a2b-131">Minimum supported server</span></span><br/> | <span data-ttu-id="19a2b-132">Nur Windows Server \[ 2003-Desktop-Apps\]</span><span class="sxs-lookup"><span data-stu-id="19a2b-132">Windows Server 2003 \[desktop apps only\]</span></span><br/>                                                          |
+| <span data-ttu-id="19a2b-133">Header</span><span class="sxs-lookup"><span data-stu-id="19a2b-133">Header</span></span><br/>                   | <dl> <span data-ttu-id="19a2b-134"><dt>Shldisp.h</dt></span><span class="sxs-lookup"><span data-stu-id="19a2b-134"><dt>Shldisp.h</dt></span></span> </dl>                          |
+| <span data-ttu-id="19a2b-135">Idl</span><span class="sxs-lookup"><span data-stu-id="19a2b-135">IDL</span></span><br/>                      | <dl> <span data-ttu-id="19a2b-136"><dt>Shldisp.idl</dt></span><span class="sxs-lookup"><span data-stu-id="19a2b-136"><dt>Shldisp.idl</dt></span></span> </dl>                        |
+| <span data-ttu-id="19a2b-137">DLL</span><span class="sxs-lookup"><span data-stu-id="19a2b-137">DLL</span></span><br/>                      | <dl> <span data-ttu-id="19a2b-138"><dt>Shell32.dll (Version 6.0 oder höher)</dt></span><span class="sxs-lookup"><span data-stu-id="19a2b-138"><dt>Shell32.dll (version 6.0 or later)</dt></span></span> </dl> |
 
 
 

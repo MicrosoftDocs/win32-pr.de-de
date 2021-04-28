@@ -1,19 +1,19 @@
 ---
-description: .
+description: System.Sensitivity
 ms.assetid: ad20504c-4920-4d72-86ef-04c82d71be70
-title: System. Sensitivität
+title: System.Sensitivity
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 507064ab361e33a3f1b04a221da87bd89a423e16
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1ca07ace0be48de932dc7f9b4bbff8a91400fdd3
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106358996"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108091558"
 ---
-# <a name="systemsensitivity"></a><span data-ttu-id="fb144-103">System. Sensitivität</span><span class="sxs-lookup"><span data-stu-id="fb144-103">System.Sensitivity</span></span>
+# <a name="systemsensitivity"></a><span data-ttu-id="2da63-103">System.Sensitivity</span><span class="sxs-lookup"><span data-stu-id="2da63-103">System.Sensitivity</span></span>
 
-## <a name="windows-10-version-1703-windows-10-version-1607-windows-10-version-1511-windows-10-version-1507-windows-81-windows-8-windows-7"></a><span data-ttu-id="fb144-104">Windows 10, Version 1703, Windows 10, Version 1607, Windows 10, Version 1511, Windows 10, Version 1507, Windows 8.1, Windows 8, Windows 7</span><span class="sxs-lookup"><span data-stu-id="fb144-104">Windows 10, version 1703, Windows 10, version 1607, Windows 10, version 1511, Windows 10, version 1507, Windows 8.1, Windows 8, Windows 7</span></span>
+## <a name="windows-10-version-1703-windows-10-version-1607-windows-10-version-1511-windows-10-version-1507-windows-81-windows-8-windows-7"></a><span data-ttu-id="2da63-104">Windows 10, Version 1703, Windows 10, Version 1607, Windows 10, Version 1511, Windows 10, Version 1507, Windows 8.1, Windows 8, Windows 7</span><span class="sxs-lookup"><span data-stu-id="2da63-104">Windows 10, version 1703, Windows 10, version 1607, Windows 10, version 1511, Windows 10, version 1507, Windows 8.1, Windows 8, Windows 7</span></span>
 
 ```
 propertyDescription
@@ -50,7 +50,7 @@ propertyDescription
             defineToken = SENSITIVITY_PROP_CONFIDENTIAL
 ```
 
-## <a name="windows-vista"></a><span data-ttu-id="fb144-105">Windows Vista</span><span class="sxs-lookup"><span data-stu-id="fb144-105">Windows Vista</span></span>
+## <a name="windows-vista"></a><span data-ttu-id="2da63-105">Windows Vista</span><span class="sxs-lookup"><span data-stu-id="2da63-105">Windows Vista</span></span>
 
 ```
 propertyDescription
@@ -82,54 +82,54 @@ propertyDescription
             defineName = SENSITIVITY_PROP_CONFIDENTIAL
 ```
 
-## <a name="remarks"></a><span data-ttu-id="fb144-106">Bemerkungen</span><span class="sxs-lookup"><span data-stu-id="fb144-106">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="2da63-106">Bemerkungen</span><span class="sxs-lookup"><span data-stu-id="2da63-106">Remarks</span></span>
 
-<span data-ttu-id="fb144-107">Pkey-Werte werden in "propkey. h" definiert.</span><span class="sxs-lookup"><span data-stu-id="fb144-107">PKEY values are defined in Propkey.h.</span></span>
+<span data-ttu-id="2da63-107">PKEY-Werte werden in Propkey.h definiert.</span><span class="sxs-lookup"><span data-stu-id="2da63-107">PKEY values are defined in Propkey.h.</span></span>
 
-## <a name="related-topics"></a><span data-ttu-id="fb144-108">Zugehörige Themen</span><span class="sxs-lookup"><span data-stu-id="fb144-108">Related topics</span></span>
+## <a name="related-topics"></a><span data-ttu-id="2da63-108">Zugehörige Themen</span><span class="sxs-lookup"><span data-stu-id="2da63-108">Related topics</span></span>
 
 <dl> <dt>
 
-[<span data-ttu-id="fb144-109">propertydescription</span><span class="sxs-lookup"><span data-stu-id="fb144-109">propertyDescription</span></span>](./propdesc-schema-propertydescription.md)
+[<span data-ttu-id="2da63-109">propertyDescription</span><span class="sxs-lookup"><span data-stu-id="2da63-109">propertyDescription</span></span>](./propdesc-schema-propertydescription.md)
 </dt> <dt>
 
-[<span data-ttu-id="fb144-110">SearchInfo</span><span class="sxs-lookup"><span data-stu-id="fb144-110">searchInfo</span></span>](./propdesc-schema-searchinfo.md)
+[<span data-ttu-id="2da63-110">searchInfo</span><span class="sxs-lookup"><span data-stu-id="2da63-110">searchInfo</span></span>](./propdesc-schema-searchinfo.md)
 </dt> <dt>
 
-[<span data-ttu-id="fb144-111">Labelinfo</span><span class="sxs-lookup"><span data-stu-id="fb144-111">labelInfo</span></span>](./propdesc-schema-labelinfo.md)
+[<span data-ttu-id="2da63-111">labelInfo</span><span class="sxs-lookup"><span data-stu-id="2da63-111">labelInfo</span></span>](./propdesc-schema-labelinfo.md)
 </dt> <dt>
 
-[<span data-ttu-id="fb144-112">TypeInfo</span><span class="sxs-lookup"><span data-stu-id="fb144-112">typeInfo</span></span>](./propdesc-schema-typeinfo.md)
+[<span data-ttu-id="2da63-112">Typeinfo</span><span class="sxs-lookup"><span data-stu-id="2da63-112">typeInfo</span></span>](./propdesc-schema-typeinfo.md)
 </dt> <dt>
 
-[<span data-ttu-id="fb144-113">Display Info</span><span class="sxs-lookup"><span data-stu-id="fb144-113">displayInfo</span></span>](./propdesc-schema-displayinfo.md)
+[<span data-ttu-id="2da63-113">displayInfo</span><span class="sxs-lookup"><span data-stu-id="2da63-113">displayInfo</span></span>](./propdesc-schema-displayinfo.md)
 </dt> <dt>
 
-[<span data-ttu-id="fb144-114">StringFormat</span><span class="sxs-lookup"><span data-stu-id="fb144-114">stringFormat</span></span>](./propdesc-schema-stringformat.md)
+[<span data-ttu-id="2da63-114">Stringformat</span><span class="sxs-lookup"><span data-stu-id="2da63-114">stringFormat</span></span>](./propdesc-schema-stringformat.md)
 </dt> <dt>
 
-[<span data-ttu-id="fb144-115">BooleanFormat</span><span class="sxs-lookup"><span data-stu-id="fb144-115">booleanFormat</span></span>](./propdesc-schema-booleanformat.md)
+[<span data-ttu-id="2da63-115">booleanFormat</span><span class="sxs-lookup"><span data-stu-id="2da63-115">booleanFormat</span></span>](./propdesc-schema-booleanformat.md)
 </dt> <dt>
 
-[<span data-ttu-id="fb144-116">NumberFormat</span><span class="sxs-lookup"><span data-stu-id="fb144-116">numberFormat</span></span>](./propdesc-schema-numberformat.md)
+[<span data-ttu-id="2da63-116">Numberformat</span><span class="sxs-lookup"><span data-stu-id="2da63-116">numberFormat</span></span>](./propdesc-schema-numberformat.md)
 </dt> <dt>
 
-[<span data-ttu-id="fb144-117">dateTimeFormat</span><span class="sxs-lookup"><span data-stu-id="fb144-117">dateTimeFormat</span></span>](./propdesc-schema-datetimeformat.md)
+[<span data-ttu-id="2da63-117">dateTimeFormat</span><span class="sxs-lookup"><span data-stu-id="2da63-117">dateTimeFormat</span></span>](./propdesc-schema-datetimeformat.md)
 </dt> <dt>
 
-[<span data-ttu-id="fb144-118">enumeratedlist</span><span class="sxs-lookup"><span data-stu-id="fb144-118">enumeratedList</span></span>](./propdesc-schema-enumeratedlist.md)
+[<span data-ttu-id="2da63-118">enumeratedList</span><span class="sxs-lookup"><span data-stu-id="2da63-118">enumeratedList</span></span>](./propdesc-schema-enumeratedlist.md)
 </dt> <dt>
 
-[<span data-ttu-id="fb144-119">DrawControl</span><span class="sxs-lookup"><span data-stu-id="fb144-119">drawControl</span></span>](./propdesc-schema-drawcontrol.md)
+[<span data-ttu-id="2da63-119">drawControl</span><span class="sxs-lookup"><span data-stu-id="2da63-119">drawControl</span></span>](./propdesc-schema-drawcontrol.md)
 </dt> <dt>
 
-[<span data-ttu-id="fb144-120">editcontrol</span><span class="sxs-lookup"><span data-stu-id="fb144-120">editControl</span></span>](./propdesc-schema-editcontrol.md)
+[<span data-ttu-id="2da63-120">editControl</span><span class="sxs-lookup"><span data-stu-id="2da63-120">editControl</span></span>](./propdesc-schema-editcontrol.md)
 </dt> <dt>
 
-[<span data-ttu-id="fb144-121">FilterControl</span><span class="sxs-lookup"><span data-stu-id="fb144-121">filterControl</span></span>](./propdesc-schema-filtercontrol.md)
+[<span data-ttu-id="2da63-121">Filtercontrol</span><span class="sxs-lookup"><span data-stu-id="2da63-121">filterControl</span></span>](./propdesc-schema-filtercontrol.md)
 </dt> <dt>
 
-[<span data-ttu-id="fb144-122">querycontrol</span><span class="sxs-lookup"><span data-stu-id="fb144-122">queryControl</span></span>](./propdesc-schema-querycontrol.md)
+[<span data-ttu-id="2da63-122">queryControl</span><span class="sxs-lookup"><span data-stu-id="2da63-122">queryControl</span></span>](./propdesc-schema-querycontrol.md)
 </dt> </dl>
 
  
