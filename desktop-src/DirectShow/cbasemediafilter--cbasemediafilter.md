@@ -1,7 +1,7 @@
 ---
-description: Dekonstruktormethode.
+description: CBaseMediaFilter.~CBaseMediaFilter-Destruktor – Destruktormethode.
 ms.assetid: f6e272c3-bb6c-4730-aa2b-a94bc5971db6
-title: Cbasemediafilter. ~ cbasemediafilter-debugtor (amfilter. h)
+title: CBaseMediaFilter.~CBaseMediaFilter-Destruktor (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 292e668d047d8e41766a3a5a8e6c5ef73a37c0dc
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 93e5b967d0e2f41671f5924f7e92d06bae36ec1c
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370578"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108099628"
 ---
-# <a name="cbasemediafiltercbasemediafilter-destructor"></a>Cbasemediafilter. ~ cbasemediafilter-Dekonstruktor
+# <a name="cbasemediafiltercbasemediafilter-destructor"></a>CBaseMediaFilter.~CBaseMediaFilter-Destruktor
 
-Dekonstruktormethode.
+Destruktormethode.
 
 ## <a name="syntax"></a>Syntax
 
@@ -38,24 +38,24 @@ Dekonstruktormethode.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Beendet das Objekt immer, bevor es zerstört wird.
+Beenden Sie das Objekt immer, bevor Sie es zerstören.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (streams.h einschließen)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbasemediafilter-Klasse**](cbasemediafilter.md)
+[**CBaseMediaFilter-Klasse**](cbasemediafilter.md)
 </dt> </dl>
 
  

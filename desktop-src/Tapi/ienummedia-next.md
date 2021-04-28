@@ -1,21 +1,21 @@
 ---
-description: Die Next-Methode ruft die nächste angegebene Anzahl von Elementen in der enumerationssequenz ab.
+description: 'IEnumMedia::Next-Methode: Die Next-Methode ruft die nächste angegebene Anzahl von Elementen in der Enumerationssequenz ab.'
 ms.assetid: 39c6d082-415f-4375-8cad-6d4c734d277f
-title: 'Ienummedia:: Next-Methode (sdpblb. h)'
+title: IEnumMedia::Next-Methode (Sdpblb.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f04b92220d8fe93058533427ff8cc7bcc7ad7a02
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 711e9c844c46aab6ca90988d4e456e926716b201
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365814"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108113438"
 ---
-# <a name="ienummedianext-method"></a>Ienummedia:: Next-Methode
+# <a name="ienummedianext-method"></a>IEnumMedia::Next-Methode
 
-\[ Rendezvous-Steuerelemente und Schnittstellen für die IP-telefoniekonferenz sind nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet eine ähnliche Funktionalität.\]
+\[ Rendezvous IP-Telefoniekonferenz-Steuerelemente und -Schnittstellen sind nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet ähnliche Funktionen.\]
 
-Die **Next** -Methode ruft die nächste angegebene Anzahl von Elementen in der enumerationssequenz ab.
+Die **Next-Methode** ruft die nächste angegebene Anzahl von Elementen in der Enumerationssequenz ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -34,24 +34,24 @@ HRESULT Next(
 
 <dl> <dt>
 
-*celt* \[ in\]
+*celt* \[ In\]
 </dt> <dd>
 
 Anzahl der angeforderten Elemente.
 
 </dd> <dt>
 
-*PVal* \[ vorgenommen\]
+*pVal* \[ out\]
 </dt> <dd>
 
-Zeiger auf die [**ITmedia**](itmedia.md) -Schnittstelle.
+Zeiger auf die [**ITMedia-Schnittstelle.**](itmedia.md)
 
 </dd> <dt>
 
-*pceltfetch* \[ vorgenommen\]
+*pceltFetched* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf die Anzahl der tatsächlich bereitgestellten Elemente. Kann **null** sein, wenn es sich um einen *celt* handelt.
+Zeiger auf die Anzahl der tatsächlich bereitgestellten Elemente. Kann NULL **sein,** *wenn celt* eins ist.
 
 </dd> </dl>
 
@@ -63,9 +63,9 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
 | Wert                                                                                     | Bedeutung                                                       |
 |-------------------------------------------------------------------------------------------|---------------------------------------------------------------|
-| <dl> <dt>**S \_ OK**</dt> </dl>      | Von der Methode wurde *die Anzahl der* Elemente zurückgegeben.<br/>         |
-| <dl> <dt>**S \_ false**</dt> </dl>   | Die Anzahl der verbleibenden Elemente war kleiner als *celt*.<br/> |
-| <dl> <dt>**E- \_ Zeiger**</dt> </dl> | Der *PVal* -Parameter ist kein gültiger Zeiger.<br/>       |
+| <dl> <dt>**S \_ OK**</dt> </dl>      | Die Methode hat *die Anzahl der* Elemente zurückgegeben.<br/>         |
+| <dl> <dt>**S \_ FALSE**</dt> </dl>   | Die Anzahl der verbleibenden Elemente war kleiner *als celt.*<br/> |
+| <dl> <dt>**\_E-ZEIGER**</dt> </dl> | Der *pVal-Parameter* ist kein gültiger Zeiger.<br/>       |
 
 
 
@@ -73,26 +73,26 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
 ## <a name="remarks"></a>Bemerkungen
 
-TAPI Ruft die **adressf** -Methode auf der [**ITmedia**](itmedia.md) -Schnittstelle auf, die von **ienummedia:: Next** zurückgegeben wurde. Die Anwendung muss Release auf der **ITmedia** -Schnittstelle aufzurufen, um Ressourcen frei **zugeben** , die ihr zugeordnet sind.
+TAPI ruft die **AddRef-Methode** auf der [**ITMedia-Schnittstelle**](itmedia.md) auf, die von **IEnumMedia::Next** zurückgegeben wird. Die Anwendung muss **Release** auf der **ITMedia-Schnittstelle** aufrufen, um zugeordnete Ressourcen freizugeben.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------|---------------------------------------------------------------------------------------|
-| TAPI-Version<br/> | Erfordert TAPI 3,0 oder höher<br/>                                                 |
-| Header<br/>       | <dl> <dt>Sdpblb. h</dt> </dl>   |
-| Bibliothek<br/>      | <dl> <dt>UUID. lib</dt> </dl>   |
+| TAPI-Version<br/> | Erfordert TAPI 3.0 oder höher<br/>                                                 |
+| Header<br/>       | <dl> <dt>Sdpblb.h</dt> </dl>   |
+| Bibliothek<br/>      | <dl> <dt>Uuid.lib</dt> </dl>   |
 | DLL<br/>          | <dl> <dt>Sdpblb.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Ienummedia**](ienummedia.md)
+[**IEnumMedia**](ienummedia.md)
 </dt> </dl>
 
  

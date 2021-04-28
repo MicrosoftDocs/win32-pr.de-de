@@ -1,9 +1,9 @@
 ---
-title: NM_KEYDOWN (Symbolleisten-) Benachrichtigungs Code (kommstrg. h)
-description: Wird von einem Steuerelement gesendet, wenn das Steuerelement den Tastaturfokus besitzt und der Benutzer eine Taste drückt. Dieser Benachrichtigungs Code wird in Form einer WM-Benachrichtigungs \_ Meldung gesendet.
+title: NM_KEYDOWN (Symbolleiste) Benachrichtigungscode (Commctrl.h)
+description: 'NM_KEYDOWN Benachrichtigungscode (Symbolleiste): Wird von einem Steuerelement gesendet, wenn das Steuerelement den Tastaturfokus besitzt und der Benutzer eine Taste drückt. Dieser Benachrichtigungscode wird in Form einer WM \_ NOTIFY-Nachricht gesendet.'
 ms.assetid: bdfcf9da-118b-4fe6-9a0a-6329eb9196ef
 keywords:
-- NM_KEYDOWN (Symbolleiste) Benachrichtigungs Code Windows-Steuerelemente
+- NM_KEYDOWN (Symbolleiste) Benachrichtigungscode Windows-Steuerelemente
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e7326946a8234122c81b2fd057dab0ad313d49a4
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 1d53818cf417e1efac686e94d3b4ef5919f819ed
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040094"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108112358"
 ---
-# <a name="nm_keydown-toolbar-notification-code"></a>NM- \_ KeyDown-Benachrichtigungs Code (Symbolleiste)
+# <a name="nm_keydown-toolbar-notification-code"></a>NM \_ KEYDOWN-Benachrichtigungscode (Symbolleiste)
 
-Wird von einem Steuerelement gesendet, wenn das Steuerelement den Tastaturfokus besitzt und der Benutzer eine Taste drückt. Dieser Benachrichtigungs Code wird in Form einer WM- [**\_ Benachrichtigungs**](wm-notify.md) Meldung gesendet.
+Wird von einem Steuerelement gesendet, wenn das Steuerelement den Tastaturfokus besitzt und der Benutzer eine Taste drückt. Dieser Benachrichtigungscode wird in Form einer [**WM \_ NOTIFY-Nachricht**](wm-notify.md) gesendet.
 
 
 ```C++
@@ -41,27 +41,27 @@ NM_KEYDOWN
 *lParam* 
 </dt> <dd>
 
-Ein Zeiger auf eine [**nmkey**](/windows/win32/api/commctrl/ns-commctrl-nmkey) -Struktur, die zusätzliche Informationen über den Schlüssel enthält, der den Benachrichtigungs Code verursacht hat.
+Zeiger auf eine [**NMKEY-Struktur,**](/windows/win32/api/commctrl/ns-commctrl-nmkey) die zusätzliche Informationen über den Schlüssel enthält, der den Benachrichtigungscode verursacht hat.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen Wert ungleich 0 (null) zurück, um zu verhindern, dass das Steuerelement den Schlüssel verarbeitet, andernfalls
+Gibt einen Wert ungleich 0 (null) zurück, um zu verhindern, dass das Steuerelement den Schlüssel verarbeitet, andernfalls 0 (null).
 
 ## <a name="remarks"></a>Bemerkungen
 
-Derzeit sendet nur das Symbolleisten-Steuerelement diesen Benachrichtigungs Code.
+Derzeit sendet nur das Symbolleisten-Steuerelement diesen Benachrichtigungscode.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

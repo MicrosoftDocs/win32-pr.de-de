@@ -1,7 +1,7 @@
 ---
-description: Die GetCount-Methode ruft die Anzahl der Elemente in der Auflistung ab.
+description: 'IPortableDeviceValuesCollection::GetCount-Methode: Die GetCount-Methode ruft die Anzahl der Elemente in der Auflistung ab.'
 ms.assetid: c7b80a54-9e74-42d9-9155-cfcb2a92d324
-title: 'Iportabledevicevaluescollection:: GetCount-Methode (portabledevicetypes. h)'
+title: IPortableDeviceValuesCollection::GetCount-Methode (PortableDeviceTypes.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - PortableDeviceGUIDs.lib
 - PortableDeviceGUIDs.dll
-ms.openlocfilehash: 5d1eabdcf73d65b42ccff980b15bb15514c3b322
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 8304184f3323feb92a14b523dc629c6ae45f6a85
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106353810"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108083178"
 ---
-# <a name="iportabledevicevaluescollectiongetcount-method"></a>Iportabledevicevaluescollection:: GetCount-Methode
+# <a name="iportabledevicevaluescollectiongetcount-method"></a>IPortableDeviceValuesCollection::GetCount-Methode
 
-Die **GetCount** -Methode ruft die Anzahl der Elemente in der Auflistung ab.
+Die **GetCount-Methode** ruft die Anzahl der Elemente in der Auflistung ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,23 +40,23 @@ HRESULT GetCount(
 
 <dl> <dt>
 
-*pcelems* \[ in\]
+*pcElems* \[ In\]
 </dt> <dd>
 
-Zeiger auf ein **DWORD** , das die Anzahl der **iportabledevicevalues** -Schnittstellen in der Auflistung enthält.
+Zeiger auf ein **DWORD,** das die Anzahl der **IPortableDeviceValues-Schnittstellen** in der Auflistung enthält.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
+Die -Methode gibt ein **HRESULT zurück.** Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
 
 
 
 | Rückgabecode                                                                               | Beschreibung                                          |
 |-------------------------------------------------------------------------------------------|------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>      | Die Methode wurde erfolgreich ausgeführt.<br/>                     |
-| <dl> <dt>**E- \_ Zeiger**</dt> </dl> | Ein erforderliches Zeigerargument war **null**.<br/> |
+| <dl> <dt>**\_E-ZEIGER**</dt> </dl> | Ein erforderliches Zeigerargument war **NULL.**<br/> |
 
 
 
@@ -66,18 +66,18 @@ Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzi
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|----------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Portablede vicetypes. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>Portabledeviceguids. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>PortableDeviceTypes.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>PortableDeviceGUIDs.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iportableabvicevaluescollection-Schnittstelle**](iportabledevicevaluescollection.md)
+[**IPortableDeviceValuesCollection-Schnittstelle**](iportabledevicevaluescollection.md)
 </dt> </dl>
 
  

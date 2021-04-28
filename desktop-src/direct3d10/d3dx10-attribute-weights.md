@@ -1,7 +1,7 @@
 ---
-description: Gibt Gitter Gewichtungs Attribute an.
+description: 'D3DX10_ATTRIBUTE_WEIGHTS Struktur: Gibt Die Attribute für die Netzgewichtung an.'
 ms.assetid: 554bb8f2-9e92-4e9e-b500-c3cc47d57830
-title: D3DX10_ATTRIBUTE_WEIGHTS-Struktur (d3dx10. h)
+title: D3DX10_ATTRIBUTE_WEIGHTS-Struktur (D3DX10.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - D3DX10.h
-ms.openlocfilehash: 4f137c1ecc29c184c4dec3995fb0202741ce9f09
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: ab163149493ad73f892a251a691ad82544d7f382
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104355107"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108094352"
 ---
-# <a name="d3dx10_attribute_weights-structure"></a>D3dx10- \_ Attribut \_ Gewichtungs Struktur
+# <a name="d3dx10_attribute_weights-structure"></a>D3DX10 \_ ATTRIBUTE \_ WEIGHTS-Struktur
 
-Gibt Gitter Gewichtungs Attribute an.
+Gibt Gitternetzgewichtungsattribute an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,7 +49,7 @@ typedef struct D3DX10_ATTRIBUTE_WEIGHTS {
 **Position**
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
@@ -60,18 +60,18 @@ Position
 **Grenze**
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Blend-Gewichtung.
+Mischungsgewichtung.
 
 </dd> <dt>
 
 **Normal**
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
@@ -82,29 +82,29 @@ Normal.
 **Diffus**
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Diffuses Beleuchtungs Wert.
+Diffuser Beleuchtungswert.
 
 </dd> <dt>
 
 **Glänzend**
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Glanzlicht Wert.
+Glanzlichtwert.
 
 </dd> <dt>
 
 **Texcoord**
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
@@ -112,21 +112,21 @@ Acht Texturkoordinaten.
 
 </dd> <dt>
 
-**Tangens**
+**Tangente**
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Tangens.
+Tangente.
 
 </dd> <dt>
 
 **Binormal**
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
@@ -136,9 +136,9 @@ Binormal.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Diese Struktur beschreibt, wie bei einem Vereinfachungs Vorgang Scheitelpunkt Daten bei der Berechnung relativer Kosten zwischen reduzierenden Kanten berücksichtigt werden. Wenn das normale Feld z. b. 0,0 ist, ignoriert der Vereinfachungs Vorgang die normale Scheitelpunkt Komponente bei der Berechnung des Fehlers für das reduzieren. Wenn das normale Feld jedoch 1,0 ist, wird für den Vereinfachungs Vorgang die normale Scheitelpunkt Komponente verwendet. Wenn das normale Feld 2,0 ist, doppelte die Fehler Menge. Wenn das normale Feld 4,0 ist, vervierfachen Sie die Anzahl der Fehler, usw.
+Diese Struktur beschreibt, wie bei einem Vereinfachungsvorgang Scheitelpunktdaten berücksichtigt werden, wenn relative Kosten zwischen reduzierenden Kanten berechnet werden. Wenn das Feld Normal z. B. 0,0 ist, ignoriert der Vereinfachungsvorgang die normale Scheitelpunktkomponente, wenn der Fehler für das Reduzieren berechnet wird. Wenn das Feld Normal jedoch 1,0 ist, verwendet der Vereinfachungsvorgang die Scheitelpunktnorm normal-Komponente. Wenn das Feld Normal den Wert 2.0 hat, sollten Sie die Anzahl der Fehler verdoppelt. Wenn das Feld Normal 4.0 ist, verffachen Sie die Anzahl der Fehler, und so weiter.
 
-Der LPD3DX- \_ Attribut \_ Gewichtungs Typ wird als Zeiger auf die D3DX- \_ Attribut \_ Gewichtungs Struktur definiert.
+Der TYP LPD3DX ATTRIBUTE WEIGHTS wird als Zeiger auf die \_ \_ D3DX \_ ATTRIBUTE \_ WEIGHTS-Struktur definiert.
 
 
 ```
@@ -151,13 +151,13 @@ Der LPD3DX- \_ Attribut \_ Gewichtungs Typ wird als Zeiger auf die D3DX- \_ Attr
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------|-------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3dx10. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3DX10.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

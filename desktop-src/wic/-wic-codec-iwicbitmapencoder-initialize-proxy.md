@@ -1,5 +1,5 @@
 ---
-description: Proxy Funktion für die Initialize-Methode.
+description: IWICBitmapEncoder_Initialize_Proxy- Proxyfunktion für die Initialize-Methode.
 ms.assetid: 0db79eb4-dcb2-491a-9bea-a0dec418f80f
 title: IWICBitmapEncoder_Initialize_Proxy-Funktion
 ms.topic: reference
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - Windowscodecs.dll
 - Wincodec.lib
-ms.openlocfilehash: c1a2e684059b75e41c1d89e2d3dd5379cc208b56
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d346d1379ae92f19a530c65daff07cb98b2e0e50
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106352470"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108100618"
 ---
-# <a name="iwicbitmapencoder_initialize_proxy-function"></a>Iwicbitmapcoder- \_ \_ Proxy Funktion initialisieren
+# <a name="iwicbitmapencoder_initialize_proxy-function"></a>IWICBitmapEncoder Initialize \_ \_ Proxy-Funktion
 
-Proxy Funktion für die [**Initialize**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapencoder-initialize) -Methode.
+Proxyfunktion für die [**Initialize-Methode.**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapencoder-initialize)
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,30 +42,30 @@ HRESULT IWICBitmapEncoder_Initialize_Proxy(
 
 <dl> <dt>
 
-*Dies \_ PTR* \[ in\]
+*THIS \_ PTR* \[ in\]
 </dt> <dd>
 
-Typ: **[**iwicbitmapcoder**](/windows/desktop/api/wincodec/nn-wincodec-iwicbitmapencoder) \** _
+Typ: **[ **IWICBitmapEncoder**](/windows/desktop/api/wincodec/nn-wincodec-iwicbitmapencoder)\***
 
-Zeiger auf dieses [_ *iwicbitmapcoder* *](/windows/desktop/api/wincodec/nn-wincodec-iwicbitmapencoder) -Objekt.
+Zeiger auf dieses [**IWICBitmapEncoder-Objekt.**](/windows/desktop/api/wincodec/nn-wincodec-iwicbitmapencoder)
 
 </dd> <dt>
 
-*pIStream* \[ in\]
+*pIStream* \[ In\]
 </dt> <dd>
 
-Typ: **[IStream](/windows/desktop/api/objidl/nn-objidl-istream) \** _
+Typ: **[IStream](/windows/desktop/api/objidl/nn-objidl-istream)\***
 
 Der Ausgabestream.
 
 </dd> <dt>
 
-_cacheOption * \[ in\]
+*cacheOption* \[ In\]
 </dt> <dd>
 
-Typ: **[ **wicbitmapcodercacheoption**](/windows/desktop/api/Wincodec/ne-wincodec-wicbitmapencodercacheoption)**
+Typ: **[ **WICBitmapEncoderCacheOption**](/windows/desktop/api/Wincodec/ne-wincodec-wicbitmapencodercacheoption)**
 
-Die bei der Initialisierung verwendete [**wicbitmapcodercacheoption**](/windows/desktop/api/Wincodec/ne-wincodec-wicbitmapencodercacheoption) .
+Die bei der Initialisierung verwendete [**WICBitmapEncoderCacheOption.**](/windows/desktop/api/Wincodec/ne-wincodec-wicbitmapencodercacheoption)
 
 </dd> </dl>
 
@@ -73,7 +73,7 @@ Die bei der Initialisierung verwendete [**wicbitmapcodercacheoption**](/windows/
 
 Typ: **HRESULT**
 
-Wenn diese Funktion erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Funktion erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="remarks"></a>Bemerkungen
 
@@ -81,11 +81,11 @@ Wenn diese Funktion erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. 
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows XP mit SP2, nur Windows Vista \[ -Desktop-Apps\]<br/>                                                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                                                                             |
-| DLL<br/>                      | <dl> <dt>Windowscodecs.dll; </dt> <dt>Wincodec. lib</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows XP mit SP2, nur Windows \[ Vista-Desktop-Apps\]<br/>                                                                                              |
+| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2008-Desktop-Apps\]<br/>                                                                                                             |
+| DLL<br/>                      | <dl> <dt>Windowscodecs.dll; </dt> <dt>Wincodec.lib</dt> </dl> |
 
 
 

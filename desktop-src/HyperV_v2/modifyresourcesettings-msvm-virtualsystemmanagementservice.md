@@ -1,7 +1,7 @@
 ---
-description: Ändert die Einstellungen der virtuellen Ressource.
+description: 'ModifyResourceSettings-Methode der Msvm_VirtualSystemManagementService Klasse: Ändert einstellungen für virtuelle Ressourcen.'
 ms.assetid: 3fb2a65f-9f40-4eb9-99e8-8fe1451427d9
-title: Modifyresourcesettings-Methode der Msvm_VirtualSystemManagementService-Klasse
+title: ModifyResourceSettings-Methode der Msvm_VirtualSystemManagementService Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 872e81926f717671b741a89c9bf954e452803b36
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 09ca0bb9fea02b6acc5599d9f907b1e60fdbd9ec
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103867063"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108119338"
 ---
-# <a name="modifyresourcesettings-method-of-the-msvm_virtualsystemmanagementservice-class"></a>Modifyresourcesettings-Methode der MSVM \_ virtualsystemmanagementservice-Klasse
+# <a name="modifyresourcesettings-method-of-the-msvm_virtualsystemmanagementservice-class"></a>ModifyResourceSettings-Methode der Msvm \_ VirtualSystemManagementService-Klasse
 
-Ändert die Einstellungen der virtuellen Ressource. Wenn Sie auf Teile einer aktuellen VM-Konfiguration angewendet werden, können die Ressourcen der aktiven virtuellen Maschine als Nebeneffekt geändert werden.
+Ändert die Einstellungen für virtuelle Ressourcen. Wenn sie auf Teile einer aktuellen Konfiguration eines virtuellen Computers angewendet werden, können die Ressourcen des aktiven virtuellen Computers als Nebeneffekt geändert werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,24 +41,24 @@ uint32 ModifyResourceSettings(
 
 <dl> <dt>
 
-*Resourcesettings* \[ in\]
+*ResourceSettings* \[ In\]
 </dt> <dd>
 
-Ein Array von Zeichen folgen, die eine eingebettete Instanz einer von [**CIM \_ resourcezucationsettingdata**](/previous-versions/windows/desktop/clushyperv/cim-resourceallocationsettingdata)abgeleiteten Klasse enthalten, die die geänderten Aspekte vorhandener virtueller Ressourcen enthält. Die **InstanceId-** Eigenschaft der einzelnen Instanzen identifiziert die zu ändernde virtuelle Ressourcen Einstellung.
+Ein Array von Zeichenfolgen, die eine eingebettete Instanz einer von [**CIM \_ ResourceAllocationSettingData**](/previous-versions/windows/desktop/clushyperv/cim-resourceallocationsettingdata)abgeleiteten Klasse enthalten, die die geänderten Aspekte vorhandener virtueller Ressourcen enthalten. Die **InstanceID-Eigenschaft** jeder Instanz identifiziert die zu ändernde Einstellung der virtuellen Ressource.
 
 </dd> <dt>
 
-*Resultingresourcesettings* \[ vorgenommen\]
+*ResultingResourceSettings* \[ out\]
 </dt> <dd>
 
-Ein Array von Verweisen auf Instanzen von Objekten, die von [**CIM \_ resourcezucationsettingdata abgeleitet werden**](/previous-versions/windows/desktop/clushyperv/cim-resourceallocationsettingdata) und die virtuellen Aspekte der geänderten virtuellen Ressourcen darstellen.
+Ein Array von Verweisen auf Instanzen von Objekten, die von [**CIM \_ ResourceAllocationSettingData**](/previous-versions/windows/desktop/clushyperv/cim-resourceallocationsettingdata) abgeleitet wurden und virtuelle Aspekte der geänderten virtuellen Ressourcen darstellen.
 
 </dd> <dt>
 
-*Auftrag* \[ vorgenommen\]
+*Auftrag* \[ out\]
 </dt> <dd>
 
-Wenn der Vorgang asynchron ausgeführt wird, gibt diese Methode 4096 zurück, und dieser Parameter enthält einen Verweis auf ein Objekt, das von [**CIM \_ concretejob**](/previous-versions//cc136808(v=vs.85))abgeleitet wird.
+Wenn der Vorgang asynchron ausgeführt wird, gibt diese Methode 4096 zurück, und dieser Parameter enthält einen Verweis auf ein Objekt, das von [**CIM \_ ConcreteJob abgeleitet wurde.**](/previous-versions//cc136808(v=vs.85))
 
 </dd> </dl>
 
@@ -74,7 +74,7 @@ Diese Methode gibt einen der folgenden Werte zurück.
 **Nicht unterstützt** (1)
 </dt> <dt>
 
-Fehler **(2** )
+**Fehler** (2)
 </dt> <dt>
 
 **Timeout** (3)
@@ -83,46 +83,46 @@ Fehler **(2** )
 **Ungültiger Parameter** (4)
 </dt> <dt>
 
-**Ungültiger Status** (5)
+**Ungültiger Zustand** (5)
 </dt> <dt>
 
-Nicht **kompatible Parameter** (6)
+**Inkompatible** Parameter (6)
 </dt> <dt>
 
-**DMTF reserviert** (..)
+**DMTF Reserved** (..)
 </dt> <dt>
 
-Über **prüfte Methoden Parameter-Auftrag gestartet** (4096)
+**Methodenparameter überprüft** – Auftrag gestartet (4096)
 </dt> <dt>
 
-**Reservierte Methode** (4097.32767)
+**Reservierte Methode** (4097..32767)
 </dt> <dt>
 
-**Hersteller spezifisch** (32768.65535)
+**Herstellerspezifisch** (32768..65535)
 </dt> </dl>
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 8 \[ Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2012-Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Modifyvirtualsystemresources (v1)**](/previous-versions/windows/desktop/virtual/modifyvirtualsystemresources-msvm-virtualsystemmanagementservice)
+[**ModifyVirtualSystemResources (V1)**](/previous-versions/windows/desktop/virtual/modifyvirtualsystemresources-msvm-virtualsystemmanagementservice)
 </dt> <dt>
 
-[**MSVM \_ virtualsystemmanagementservice**](msvm-virtualsystemmanagementservice.md)
+[**Msvm \_ VirtualSystemManagementService**](msvm-virtualsystemmanagementservice.md)
 </dt> </dl>
 
  

@@ -1,9 +1,9 @@
 ---
-title: TVM_SETUNICODEFORMAT Meldung (kommstrg. h)
-description: Legt das Unicode-Zeichenformat Flag für das-Steuerelement fest.
+title: TVM_SETUNICODEFORMAT (Commctrl.h)
+description: 'TVM_SETUNICODEFORMAT Meldung: Legt das Unicode-Zeichenformatflag für das Steuerelement fest.'
 ms.assetid: e4b58ae5-6217-4a2e-80e5-3ba9e578859a
 keywords:
-- Windows-Steuerelemente für TVM_SETUNICODEFORMAT Meldung
+- TVM_SETUNICODEFORMAT Meldung Windows-Steuerelemente
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 25082347710a40f592cfd4087b19916b56cf0d11
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: b49fcdd22cff0ac91885ef8f54d49922f9c677e9
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103957213"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108116548"
 ---
-# <a name="tvm_setunicodeformat-message"></a>TVM-Meldung "-". \_
+# <a name="tvm_setunicodeformat-message"></a>TVM \_ SETUNICODEFORMAT-Nachricht
 
-Legt das Unicode-Zeichenformat Flag für das-Steuerelement fest. Mit dieser Meldung können Sie den Zeichensatz ändern, der vom Steuerelement zur Laufzeit verwendet wird, anstatt das Steuerelement neu erstellen zu müssen. Sie können diese Nachricht explizit senden oder das TreeView-Makro "*- [**\_ Code Format**](/windows/desktop/api/Commctrl/nf-commctrl-treeview_setunicodeformat) " verwenden.
+Legt das Unicode-Zeichenformatflag für das Steuerelement fest. Mit dieser Meldung können Sie den vom Steuerelement zur Laufzeit verwendeten Zeichensatz ändern, anstatt das Steuerelement neu erstellen zu müssen. Sie können diese Nachricht explizit senden oder das [**TreeView \_ SetUnicodeFormat-Makro**](/windows/desktop/api/Commctrl/nf-commctrl-treeview_setunicodeformat) verwenden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,7 +32,7 @@ Legt das Unicode-Zeichenformat Flag für das-Steuerelement fest. Mit dieser Meld
 *wParam* 
 </dt> <dd>
 
-Bestimmt den Zeichensatz, der vom-Steuerelement verwendet wird. Wenn dieser Wert ungleich 0 (null) ist, verwendet das Steuerelement Unicode-Zeichen. Wenn dieser Wert 0 (null) ist, verwendet das Steuerelement ANSI-Zeichen.
+Bestimmt den Zeichensatz, der vom -Steuerelement verwendet wird. Wenn dieser Wert ungleich 0 (null) ist, verwendet das Steuerelement Unicode-Zeichen. Wenn dieser Wert 0 (null) ist, verwendet das Steuerelement ANSI-Zeichen.
 
 </dd> <dt>
 
@@ -41,29 +41,29 @@ Bestimmt den Zeichensatz, der vom-Steuerelement verwendet wird. Wenn dieser Wert
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt das vorherige Unicode-formatflag für das-Steuerelement zurück.
+Gibt das vorherige Unicode-Formatflag für das Steuerelement zurück.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Eine Erörterung dieser Nachricht finden Sie in den Hinweisen zu [**ccm- \_ Code Format**](ccm-setunicodeformat.md) .
+Eine Erläuterung dieser Meldung finden Sie in den Anmerkungen zu [**CCM \_ SETUNICODEFORMAT.**](ccm-setunicodeformat.md)
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**TVM \_ getunicodeformat**](tvm-getunicodeformat.md)
+[**TVM \_ GETUNICODEFORMAT**](tvm-getunicodeformat.md)
 </dt> </dl>
 
  

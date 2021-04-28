@@ -1,7 +1,7 @@
 ---
-description: Lädt die angegebene Matrix in die aktuelle Matrix.
+description: 'ID3DXMATRIXStack::LoadMatrix-Methode (D3DX10.h): Lädt die gegebene Matrix in die aktuelle Matrix.'
 ms.assetid: b898f344-db90-48e0-b457-0eb8d7b31dca
-title: 'ID3DXMATRIXStack:: loadmatrix-Methode (d3dx10. h)'
+title: ID3DXMATRIXStack::LoadMatrix-Methode (D3DX10.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: ce6b99abf4c9a82a8b9d1c7643a1098d19e18c15
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 20c80f578abd5e35c89f3ecccedd2ab7fd59e812
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104356016"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108107958"
 ---
-# <a name="id3dxmatrixstackloadmatrix-method-d3dx10h"></a>ID3DXMATRIXStack:: loadmatrix-Methode (d3dx10. h)
+# <a name="id3dxmatrixstackloadmatrix-method-d3dx10h"></a>ID3DXMATRIXStack::LoadMatrix-Methode (D3DX10.h)
 
-Lädt die angegebene Matrix in die aktuelle Matrix.
+Lädt die gegebene Matrix in die aktuelle Matrix.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,12 +40,12 @@ HRESULT LoadMatrix(
 
 <dl> <dt>
 
-*pm* \[ in\]
+*pM* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXMATRIX**](../direct3d9/d3dxmatrix.md) \***
+Typ: **const [**D3DXMATRIX**](../direct3d9/d3dxmatrix.md) \***
 
-Ein Zeiger auf die D3DXMATRIX-Struktur, die in die aktuelle Matrix geladen wurde.
+Zeiger auf die in die aktuelle Matrix geladene D3DXMATRIX-Struktur.
 
 </dd> </dl>
 
@@ -53,24 +53,24 @@ Ein Zeiger auf die D3DXMATRIX-Struktur, die in die aktuelle Matrix geladen wurde
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert "D3DERR \_ invalidcall" lauten.
+Wenn die Methode erfolgreich ist, ist der Rückgabewert D3D \_ OK. Wenn bei der Methode ein Fehler auftritt, kann der Rückgabewert D3DERR \_ INVALIDCALL sein.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Beachten Sie, dass diese Methode dem Stapel kein Element hinzufügt. Stattdessen wird die aktuelle Matrix durch die angegebene Matrix ersetzt.
+Beachten Sie, dass diese Methode dem Stapel kein Element hinzufüge. stattdessen wird die aktuelle Matrix durch die angegebene Matrix ersetzt.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx10. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>D3dx10. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>D3DX10.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

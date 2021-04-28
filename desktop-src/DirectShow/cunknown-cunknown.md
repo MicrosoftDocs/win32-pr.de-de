@@ -1,7 +1,7 @@
 ---
-description: Konstruktormethode.
+description: 'CUnknown.CUnknown-Konstruktor : Konstruktormethode.'
 ms.assetid: dafe0d5c-b4c8-4efb-8c47-a8c5db6e8aed
-title: Cunknown. cunknown-Konstruktor (ComBase. h)
+title: CUnknown.CUnknown-Konstruktor (Combase.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,14 +16,14 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: b500e7f12a2242b6c05367bc061f50680d2d608b
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 32859871f8ef69ce357fe204f0741356314fbb06
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106356386"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108084608"
 ---
-# <a name="cunknowncunknown-constructor"></a>Cunknown. cunknown-Konstruktor
+# <a name="cunknowncunknown-constructor"></a>CUnknown.CUnknown-Konstruktor
 
 Konstruktormethode.
 
@@ -46,29 +46,29 @@ CUnknown(
 *pName* 
 </dt> <dd>
 
-Zeichenfolge, die den Namen des Objekts enthält. wird im [**cbaseobject**](cbaseobject.md) -Konstruktor für das Debuggen verwendet.
+Eine Zeichenfolge, die den Namen des Objekts enthält. wird im [**CBaseObject-Konstruktor zum**](cbaseobject.md) Debuggen verwendet.
 
 </dd> <dt>
 
-*Kro* 
+*Punk* 
 </dt> <dd>
 
-Zeiger auf den Besitzer dieses Objekts. Wenn das Objekt aggregiert wird, übergeben Sie einen Zeiger an die IUnknown-Schnittstelle des Aggregations Objekts. Andernfalls legen Sie diesen Parameter auf **null** fest.
+Zeiger auf den Besitzer dieses Objekts. Wenn das Objekt aggregiert wird, übergeben Sie einen Zeiger auf die IUnknown-Schnittstelle des aggregierenden Objekts. Legen Sie andernfalls diesen Parameter auf **NULL fest.**
 
 </dd> </dl>
 
 ## <a name="remarks"></a>Bemerkungen
 
-Das Objekt wird mit einem Verweis Zähler von NULL initialisiert.
+Das -Objekt wird mit einem Verweiszähler von 0 (null) initialisiert.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>ComBase. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Combase.h (einschließlich Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 

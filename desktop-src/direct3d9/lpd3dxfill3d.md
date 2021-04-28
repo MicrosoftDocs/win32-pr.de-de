@@ -1,19 +1,19 @@
 ---
-description: Der Funktionstyp, der von den Textur Füll Funktionen verwendet wird.
+description: 'LPD3DXFILL3D: Funktionstyp, der von den Texturfüllfunktionen verwendet wird.'
 ms.assetid: ab2f3005-150f-46e1-b75b-75c39e7feed1
 title: LPD3DXFILL3D
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 97342895cb119a786aa71626aeea6d93650c6dc8
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: a6c711459cffa3430b31ba7c91d77cc9519e6a43
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104482054"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108114308"
 ---
 # <a name="lpd3dxfill3d"></a>LPD3DXFILL3D
 
-Der Funktionstyp, der von den Textur Füll Funktionen verwendet wird.
+Funktionstyp, der von den Texturfüllfunktionen verwendet wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -31,13 +31,13 @@ typedef VOID (WINAPI *LPD3DXFILL2D)(
 
 ## <a name="parameters"></a>Parameter
 
-Pout-Zeiger auf einen Vektor, den die Funktion verwendet, um das Ergebnis zurückzugeben. X, Y, Z und W werden R, G, B bzw. zugeordnet.
+pOut: Zeiger auf einen Vektor, der von der Funktion verwendet wird, um das Ergebnis zurückzugeben. X, Y, Z und W werden R, G, B bzw. A zugeordnet.
 
-ptexcoord-Zeiger auf einen Vektor, der die Koordinaten des Texels enthält, das derzeit ausgewertet wird. Texturkoordinaten Komponenten für Textur-und volumetexturen reichen von 0 bis 1. Texturkoordinaten Komponenten für cubetexturen reichen von-1 bis 1.
+pTexCoord: Zeiger auf einen Vektor, der die Koordinaten des gerade ausgewerteten Texels enthält. Texturkoordinatenkomponenten für Textur- und Volumentexturen liegen zwischen 0 und 1. Texturkoordinatenkomponenten für Cubetexturen reichen von -1 bis 1.
 
-ptexelsize: Zeiger auf einen Vektor, der die Abmessungen des aktuellen Texels enthält.
+pTexelSize: Zeiger auf einen Vektor, der die Abmessungen des aktuellen Texels enthält.
 
-pData-Zeiger auf Benutzerdaten.
+pData: Zeiger auf Benutzerdaten.
 
 ## <a name="return-value"></a>Rückgabewert
 
@@ -45,15 +45,15 @@ Kein Rückgabewert.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Achten Sie darauf, beim Deklarieren der Rückruffunktion die Aufruf Konvention für [**Windows-Datentypen**](../winprog/windows-data-types.md) anzugeben. Andernfalls können Stapel Überläufe auftreten.
+Achten Sie darauf, beim Deklarieren der Rückruffunktion die Aufrufkonvention für [**Windows-Datentypen**](../winprog/windows-data-types.md) anzugeben. Andernfalls können Stapelüberläufe auftreten.
 
 
 
 |                          |            |
 |--------------------------|------------|
-| Header                   | d3dx9tex. h |
-| Importbibliothek           | d3dx9. lib  |
-| Mindestens Betriebs System | Windows 98 |
+| Header                   | d3dx9tex.h |
+| Importbibliothek           | d3dx9.lib  |
+| Mindestbetriebssystem | Windows 98 |
 
 
 

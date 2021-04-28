@@ -1,7 +1,7 @@
 ---
-description: Ruft ein Ordner Objekt ab, das die Ansicht darstellt.
+description: 'ShellFolderView.Folder-Eigenschaft: Ruft ein Folder-Objekt ab, das die Sicht darstellt.'
 ms.assetid: 8f3e7827-f2a0-4ce9-b3e9-e6316ec58863
-title: Shellfolderview. Folder-Eigenschaft (Shldisp. h)
+title: ShellFolderView.Folder-Eigenschaft (Shldisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Shell32.dll
-ms.openlocfilehash: 40590064048ba5410dc9341791aec443f16d68e4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
-ms.translationtype: HT
+ms.openlocfilehash: 370fddc1428c8f77edb77cdac2dc04123fc5211f
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104217695"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108083418"
 ---
-# <a name="shellfolderviewfolder-property"></a>Shellfolderview. Folder (Eigenschaft)
+# <a name="shellfolderviewfolder-property"></a>ShellFolderView.Folder-Eigenschaft
 
-Ruft ein [**Ordner**](folder.md) Objekt ab, das die Ansicht darstellt.
+Ruft ein [**Folder-Objekt**](folder.md) ab, das die Sicht darstellt.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -37,15 +37,15 @@ Folder = ShellFolderView.Folder
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Objekt, das das [**Ordner**](folder.md) Objekt empfängt.
+Objekt, das das [**Folder-Objekt**](folder.md) empfängt.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Der **Ordner** kann nur auf dem lokalen System aufgerufen werden. Es funktioniert nicht, wenn es auf einer Webseite über HTTP oder UNC ausgeführt wird.
+**Der Ordner** kann nur auf dem lokalen System aufgerufen werden. Sie funktioniert nicht, wenn sie auf einer Webseite über HTTP oder UNC ausgeführt wird.
 
 ## <a name="examples"></a>Beispiele
 
-Das folgende Beispiel zeigt die ordnungsgemäße Verwendung dieser Eigenschaft für JScript Embedded in HTML.
+Das folgende Beispiel zeigt die ordnungsgemäße Verwendung dieser Eigenschaft für JScript, das in HTML eingebettet ist.
 
 
 ```JScript
@@ -93,17 +93,17 @@ Das folgende Beispiel zeigt die ordnungsgemäße Verwendung dieser Eigenschaft f
 
 
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, Windows XP \[ Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, nur Windows \[ XP-Desktop-Apps\]<br/>                                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                           |
-| Header<br/>                   | <dl> <dt>Shldisp. h</dt> </dl>                           |
-| IDL<br/>                      | <dl> <dt>Shldisp. idl</dt> </dl>                         |
-| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4,71 oder höher)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>                           |
+| Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                         |
+| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4.71 oder höher)</dt> </dl> |
 
 
 

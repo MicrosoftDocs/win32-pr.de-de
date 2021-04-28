@@ -1,7 +1,7 @@
 ---
-description: Fordert eine zurück Setzung an.
+description: Reset-Methode der Msvm_ExternalFcPort - Fordert eine Zurücksetzung an.
 ms.assetid: 5bd615c6-a87c-404d-a482-277fa02a8510
-title: Reset-Methode der Msvm_ExternalFcPort-Klasse
+title: Reset-Methode der Msvm_ExternalFcPort Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: ab7fe72365fa6b14d28030cd9c9415760cefc830
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 91674f0dd12e8e84337b2c5557b9ff1ffa83a991
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103862943"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108119038"
 ---
-# <a name="reset-method-of-the-msvm_externalfcport-class"></a>Reset-Methode der MSVM \_ externalfcport-Klasse
+# <a name="reset-method-of-the-msvm_externalfcport-class"></a>Reset-Methode der Msvm \_ ExternalFcPort-Klasse
 
-Fordert eine zurück Setzung an.
+Fordert eine Zurücksetzung an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -53,21 +53,21 @@ Diese Methode gibt einen der folgenden Werte zurück:
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8.1<br/>                                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2<br/>                                                                       |
 | Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**MSVM \_ externalfcport**](msvm-externalfcport.md)
+[**Msvm \_ ExternalFcPort**](msvm-externalfcport.md)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
-description: Zeigt das Dialogfeld Windows Herunterfahren an. Dies ist das gleiche wie beim Klicken auf das Startmenü und beim Auswählen von "Herunterfahren".
+description: 'IShellDispatch.ShutdownWindows-Methode: Zeigt das Dialogfeld Windows herunterfahren an. Dies ist identisch mit dem Klicken auf das Startmenü und dem Auswählen von Herunterfahren.'
 ms.assetid: 3C4F6579-6398-4af4-8911-FE22555B0ABC
-title: Ishelldispatch. shutdownwindows-Methode (Shldisp. h)
+title: IShellDispatch.ShutdownWindows-Methode (Shldisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Shell32.dll
-ms.openlocfilehash: 9c111e1b740857337953cdcdf81735a8c0568ba5
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5146e17d17ba0f082ad2d80f91ae05c176cf44ed
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104993839"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108100468"
 ---
-# <a name="ishelldispatchshutdownwindows-method"></a>Ishelldispatch. shutdownwindows-Methode
+# <a name="ishelldispatchshutdownwindows-method"></a>IShellDispatch.ShutdownWindows-Methode
 
-Zeigt das Dialogfeld **Windows herunter** fahren an. Dies ist das gleiche wie beim Klicken auf das **Startmenü** und beim Auswählen von " **herunter** fahren".
+Zeigt das **Dialogfeld Windows herunterfahren** an. Dies ist identisch mit dem Klicken auf das **Startmenü** und dem Auswählen **von Herunterfahren.**
 
 ## <a name="syntax"></a>Syntax
 
@@ -57,13 +57,13 @@ Diese Methode gibt keinen Wert zurück.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Diese Methode ist implementiert, und der Zugriff erfolgt über die [**Shell. shutdownwindows**](shell-shutdownwindows.md) -Methode.
+Diese Methode wird implementiert und über die [**Shell.ShutdownWindows-Methode aufgerufen.**](shell-shutdownwindows.md)
 
 ## <a name="examples"></a>Beispiele
 
-Das folgende Beispiel zeigt die Verwendung von **shutdownwindows** in JScript, VBScript und Visual Basic.
+Das folgende Beispiel zeigt die Verwendung von **ShutdownWindows** in JScript, VBScript und Visual Basic.
 
-JScript
+Jscript:
 
 
 ```JScript
@@ -79,7 +79,7 @@ JScript
 
 
 
-VBScript
+Vbscript:
 
 
 ```VB
@@ -113,17 +113,17 @@ End Sub
 
 
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, Windows XP \[ Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Client)<br/> | Nur Windows 2000 Professional- und Windows \[ XP-Desktop-Apps\]<br/>                                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                           |
-| Header<br/>                   | <dl> <dt>Shldisp. h</dt> </dl>                           |
-| IDL<br/>                      | <dl> <dt>Shldisp. idl</dt> </dl>                         |
-| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4,71 oder höher)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>                           |
+| Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                         |
+| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4.71 oder höher)</dt> </dl> |
 
 
 

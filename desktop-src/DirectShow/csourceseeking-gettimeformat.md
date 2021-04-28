@@ -1,7 +1,7 @@
 ---
-description: 'Die getTimeFormat-Methode ruft das aktuelle Zeitformat ab. Diese Methode implementiert die imediaseeking:: getTimeFormat-Methode.'
+description: 'CSourceSeeking.GetTimeFormat-Methode: Die GetTimeFormat-Methode ruft das aktuelle Zeitformat ab. Diese Methode implementiert die IMediaSeeking::GetTimeFormat-Methode.'
 ms.assetid: c90804f7-9a0a-423c-8b26-87abf15eddc5
-title: Csourceseeking. getTimeFormat-Methode (ctlutil. h)
+title: CSourceSeeking.GetTimeFormat-Methode (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: ce53f4a6cabcc5face6c332666701dc208c3f8bf
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 4a56f9a490699d68d7a043e9385ad458562058f5
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372121"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108085218"
 ---
-# <a name="csourceseekinggettimeformat-method"></a>Csourceseeking. getTimeFormat-Methode
+# <a name="csourceseekinggettimeformat-method"></a>CSourceSeeking.GetTimeFormat-Methode
 
-Die- `GetTimeFormat` Methode ruft das aktuelle Zeitformat ab. Diese Methode implementiert die [**imediaseeking:: getTimeFormat**](/windows/desktop/api/Strmif/nf-strmif-imediaseeking-gettimeformat) -Methode.
+Die `GetTimeFormat` -Methode ruft das aktuelle Zeitformat ab. Diese Methode implementiert die [**IMediaSeeking::GetTimeFormat-Methode.**](/windows/desktop/api/Strmif/nf-strmif-imediaseeking-gettimeformat)
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,23 +42,23 @@ HRESULT GetTimeFormat(
 
 <dl> <dt>
 
-*pformat* 
+*pFormat* 
 </dt> <dd>
 
-Ein Zeiger auf eine Variable, die eine Zeitformat-GUID empfängt. Siehe [**Zeit Format-GUIDs**](time-format-guids.md).
+Zeiger auf eine Variable, die eine Zeitformat-GUID empfängt. Weitere Informationen finden Sie unter [**Zeitformat-GUIDs.**](time-format-guids.md)
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen der **HRESULT** -Werte zurück, die in der folgenden Tabelle aufgeführt sind.
+Gibt einen der in der folgenden Tabelle aufgeführten **HRESULT-Werte** zurück.
 
 
 
 | Rückgabecode                                                                               | Beschreibung                       |
 |-------------------------------------------------------------------------------------------|-----------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>      | Erfolg<br/>                |
-| <dl> <dt>**E- \_ Zeiger**</dt> </dl> | **Null** -Zeiger Wert<br/> |
+| <dl> <dt>**E \_ POINTER**</dt> </dl> | **NULL-Zeigerwert**<br/> |
 
 
 
@@ -66,24 +66,24 @@ Gibt einen der **HRESULT** -Werte zurück, die in der folgenden Tabelle aufgefü
 
 ## <a name="remarks"></a>Bemerkungen
 
-Das einzige von der Basisklasse unterstützte Zeitformat ist die Zeit \_ Format \_ Medien \_ Zeit (100-Nanosecond-Einheiten).
+Das einzige zeitformat, das von der Basisklasse unterstützt wird, ist TIME FORMAT MEDIA TIME (Einheiten von \_ \_ \_ 100 Nanosekunden).
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Csourceseeking-Klasse**](csourceseeking.md)
+[**CSourceSeeking-Klasse**](csourceseeking.md)
 </dt> </dl>
 
  

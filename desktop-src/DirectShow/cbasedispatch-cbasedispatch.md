@@ -1,7 +1,7 @@
 ---
-description: Konstruktormethode.
+description: 'CBaseDispatch.CBaseDispatch-Konstruktor : Konstruktormethode.'
 ms.assetid: c88638ca-929e-4135-b15c-110229f4a4de
-title: Cbasedispatch. cbasedispatch-Konstruktor (ctlutil. h)
+title: CBaseDispatch.CBaseDispatch-Konstruktor (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,14 +16,14 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 92fdec191beff1385577ce5e7e8323dbeef7769c
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: e41ffe3b766cf553691f7bf7de354fa7d6bfb479
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106359238"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108120128"
 ---
-# <a name="cbasedispatchcbasedispatch-constructor"></a>Cbasedispatch. cbasedispatch-Konstruktor
+# <a name="cbasedispatchcbasedispatch-constructor"></a>CBaseDispatch.CBaseDispatch-Konstruktor
 
 Konstruktormethode.
 
@@ -38,24 +38,24 @@ CBaseDispatch();
 
 ## <a name="parameters"></a>Parameter
 
-Dieser Konstruktor weist keine Parameter auf.
+Dieser Konstruktor verfügt über keine Parameter.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (einschließlich Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbasedispatch-Klasse**](cbasedispatch.md)
+[**CBaseDispatch-Klasse**](cbasedispatch.md)
 </dt> </dl>
 
  

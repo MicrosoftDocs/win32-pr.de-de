@@ -1,5 +1,5 @@
 ---
-description: Diese Klasse ist die übergeordnete Klasse für Prozess Ereignisse. Die folgende Syntax wird durch den MOF-Code vereinfacht.
+description: 'Process_V0 Klasse: Diese Klasse ist die übergeordnete Klasse für Prozessereignisse. Die folgende Syntax wird durch MOF-Code vereinfacht.'
 ms.assetid: 29ecf04c-4be1-451e-b140-4ffed337cfed
 title: Process_V0-Klasse
 ms.topic: reference
@@ -12,18 +12,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: e43f09dffd49b3cdc372b77e48bae0e73b39687e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0e284840a078b2dac782aecaacae5490f4a06b27
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104978888"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108106348"
 ---
-# <a name="process_v0-class"></a>Process \_ v0-Klasse
+# <a name="process_v0-class"></a>Process \_ V0-Klasse
 
-Diese Klasse ist die übergeordnete Klasse für Prozess Ereignisse.
+Diese Klasse ist die übergeordnete Klasse für Prozessereignisse.
 
-Die folgende Syntax wird durch den MOF-Code vereinfacht.
+Die folgende Syntax wird durch MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -36,13 +36,13 @@ class Process_V0 : MSNT_SystemTrace
 
 ## <a name="members"></a>Member
 
-Die **Process \_ v0** -Klasse definiert keine Member.
+Die **Process \_ V0-Klasse** definiert keine Member.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/> |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>       |
@@ -53,16 +53,16 @@ Die **Process \_ v0** -Klasse definiert keine Member.
 
 <dl> <dt>
 
-[**MSNT \_ systemtrace**](msnt-systemtrace.md)
+[**MSNT \_ SystemTrace**](msnt-systemtrace.md)
 </dt> <dt>
 
 [**Prozess**](process.md)
 </dt> <dt>
 
-[**Prozess \_ v0 \_ TypeGroup1**](process-v0-typegroup1.md)
+[**Verarbeiten \_ von V0 \_ TypeGroup1**](process-v0-typegroup1.md)
 </dt> <dt>
 
-[**Prozess \_ v1**](process-v1.md)
+[**Prozess \_ V1**](process-v1.md)
 </dt> </dl>
 
  

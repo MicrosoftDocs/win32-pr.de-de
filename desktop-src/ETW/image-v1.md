@@ -1,5 +1,5 @@
 ---
-description: Diese Klasse ist die übergeordnete Klasse für Bild Lade Ereignisse. Die folgende Syntax wird durch den MOF-Code vereinfacht.
+description: 'Image_V1 Klasse: Diese Klasse ist die übergeordnete Klasse für Bildladeereignisse. Die folgende Syntax wird durch MOF-Code vereinfacht.'
 ms.assetid: 78c68080-90fc-4ebf-aa8a-4e03ce629d54
 title: Image_V1-Klasse
 ms.topic: reference
@@ -12,18 +12,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 77481c671e89b47143aed110d4cf7e8f2712a0a4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: aafb2b7307e72e97ba1508aa80638af7565f2867
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104131220"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108106468"
 ---
-# <a name="image_v1-class"></a>Image \_ v1-Klasse
+# <a name="image_v1-class"></a>Image \_ V1-Klasse
 
-Diese Klasse ist die übergeordnete Klasse für Bild Lade Ereignisse.
+Diese Klasse ist die übergeordnete Klasse für Bildladeereignisse.
 
-Die folgende Syntax wird durch den MOF-Code vereinfacht.
+Die folgende Syntax wird durch MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -36,16 +36,16 @@ class Image_V1 : MSNT_SystemTrace
 
 ## <a name="members"></a>Member
 
-Die **Image \_ v1** -Klasse definiert keine Member.
+Die **Image \_ V1-Klasse** definiert keine Member.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ XP-Desktop-Apps\]<br/>          |
+| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2003-Desktop-Apps\]<br/> |
 
 
 
@@ -53,16 +53,16 @@ Die **Image \_ v1** -Klasse definiert keine Member.
 
 <dl> <dt>
 
-[**MSNT \_ systemtrace**](msnt-systemtrace.md)
+[**MSNT \_ SystemTrace**](msnt-systemtrace.md)
 </dt> <dt>
 
 [**Image**](image.md)
 </dt> <dt>
 
-[**Bild \_ v0**](image-v0.md)
+[**Image \_ V0**](image-v0.md)
 </dt> <dt>
 
-[**Bild \_ v1- \_ Auslastung**](image-v1-load.md)
+[**Image \_ V1– \_ Laden**](image-v1-load.md)
 </dt> </dl>
 
  

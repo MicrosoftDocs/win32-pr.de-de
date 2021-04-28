@@ -1,7 +1,7 @@
 ---
-description: Die completeconnect-Methode schließt eine Verbindung mit einer Eingabe-PIN ab.
+description: 'CBaseOutputPin.CompleteConnect-Methode: Die CompleteConnect-Methode schließt eine Verbindung mit einem Eingabepin ab.'
 ms.assetid: 44c28c71-2c69-40ca-9bc4-c10394475a0f
-title: Cbaseoutputpin. completeconnect-Methode (amfilter. h)
+title: CBaseOutputPin.CompleteConnect-Methode (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 4614e8531a21d88a1c2f4cfd75fcbe05a9210f13
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: cd4bc52db99b88c4d6f16c549fbb558bb6423730
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369124"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108099538"
 ---
-# <a name="cbaseoutputpincompleteconnect-method"></a>Cbaseoutputpin. completeconnect-Methode
+# <a name="cbaseoutputpincompleteconnect-method"></a>CBaseOutputPin.CompleteConnect-Methode
 
-Die- `CompleteConnect` Methode schließt eine Verbindung mit einer Eingabe-PIN ab.
+Die `CompleteConnect` -Methode schließt eine Verbindung mit einem Eingabepin ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,37 +42,37 @@ virtual HRESULT CompleteConnect(
 
 <dl> <dt>
 
-*preceivepin* 
+*pReceivePin* 
 </dt> <dd>
 
-Zeiger auf die eingabepin.
+Zeiger auf den Eingabepin.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt \_ bei Erfolg S OK oder einen **HRESULT** -Wert zurück, der die Ursache des Fehlers angibt.
+Gibt S \_ OK zurück, wenn erfolgreich, oder ein **HRESULT-Wert,** der die Ursache des Fehlers angibt.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Diese Methode überschreibt die [**cbasepin:: completeconnect**](cbasepin-completeconnect.md) -Methode. Sie ruft die [**decidezuordcator**](cbaseoutputpin-decideallocator.md) -Methode auf, die die für diese Verbindung zu verwendende Speicherzuweisung auswählt.
+Diese Methode überschreibt die [**CBasePin::CompleteConnect-Methode.**](cbasepin-completeconnect.md) Sie ruft die [**DecideAllocator-Methode**](cbaseoutputpin-decideallocator.md) auf, die die Speicherzuweisung auswählt, die für diese Verbindung verwendet werden soll.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (streams.h enthalten)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbaseoutputpin-Klasse**](cbaseoutputpin.md)
+[**CBaseOutputPin-Klasse**](cbaseoutputpin.md)
 </dt> </dl>
 
  

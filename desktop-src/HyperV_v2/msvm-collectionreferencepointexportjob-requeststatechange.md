@@ -1,5 +1,5 @@
 ---
-description: Fordert eine Statusänderung an.
+description: 'RequestStateChange-Methode der Msvm_CollectionReferencePointExportJob-Klasse: Fordert eine Zustandsänderung an.'
 ms.assetid: 34d70ff2-4545-4ab7-8c84-6532c342768b
 title: RequestStateChange-Methode der Msvm_CollectionReferencePointExportJob-Klasse
 ms.topic: reference
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: a3e8b3f3a7249896f023734d049fa3fa772514f5
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 84956e206654de022c3151aa5a442651f9c2375a
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106353914"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108119238"
 ---
-# <a name="requeststatechange-method-of-the-msvm_collectionreferencepointexportjob-class"></a>RequestStateChange-Methode der MSVM \_ collectionreferencepointexportjob-Klasse
+# <a name="requeststatechange-method-of-the-msvm_collectionreferencepointexportjob-class"></a>RequestStateChange-Methode der Msvm \_ CollectionReferencePointExportJob-Klasse
 
-Fordert eine Statusänderung an.
+Fordert eine Zustandsänderung an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,7 +40,7 @@ uint32 RequestStateChange(
 
 <dl> <dt>
 
-*Requestedstate* \[ in\]
+*RequestedState* \[ In\]
 </dt> <dd>
 
 RequestStateChange ändert den Status eines Auftrags. Die folgenden Werte sind möglich:
@@ -54,24 +54,24 @@ RequestStateChange ändert den Status eines Auftrags. Die folgenden Werte sind m
 
 </dt> <dd>
 
-Ändert den Zustand in "wird ausgeführt".
+Ändert den Status in "Wird ausgeführt".
 
 </dd> <dt>
 
 <span id="Suspend"></span><span id="suspend"></span><span id="SUSPEND"></span>
 
-<span id="Suspend"></span><span id="suspend"></span><span id="SUSPEND"></span>**Aussetzen** (3)
+<span id="Suspend"></span><span id="suspend"></span><span id="SUSPEND"></span>**Anhalten** (3)
 
 
 </dt> <dd>
 
-Beendet den Auftrag vorübergehend. Die Absicht besteht darin, den Auftrag mit "Start" neu zu starten. Möglicherweise ist es möglich, den Zustand "Dienst" in den Status "angehalten" einzugeben. (Dies ist Auftrags spezifisch.)
+Beendet den Auftrag vorübergehend. Die Absicht besteht darin, den Auftrag anschließend mit "Start" neu zu starten. Es kann möglich sein, den Status "Dienst" zu erhalten, während er angehalten wird. (Dies ist auftragsspezifisch.)
 
 </dd> <dt>
 
 <span id="Terminate"></span><span id="terminate"></span><span id="TERMINATE"></span>
 
-<span id="Terminate"></span><span id="terminate"></span><span id="TERMINATE"></span>**Beenden** (4)
+<span id="Terminate"></span><span id="terminate"></span><span id="TERMINATE"></span>**Terminate** (4)
 
 
 </dt> <dd>
@@ -87,7 +87,7 @@ Beendet den Auftrag ordnungsgemäß, speichert Daten, behält den Zustand bei un
 
 </dt> <dd>
 
-Beendet den Auftrag sofort, ohne dass es erforderlich ist, Daten zu speichern oder den Zustand beizubehalten.
+Beendet den Auftrag sofort, ohne dass Daten gespeichert oder der Zustand beibehalten werden muss.
 
 </dd> <dt>
 
@@ -98,34 +98,34 @@ Beendet den Auftrag sofort, ohne dass es erforderlich ist, Daten zu speichern od
 
 </dt> <dd>
 
-Versetzt den Auftrag in einen herstellerspezifischen Dienst Zustand. Möglicherweise ist es möglich, den Auftrag neu zu starten.
+Versetzt den Auftrag in einen anbieterspezifischen Dienststatus. Möglicherweise kann der Auftrag neu gestartet werden.
 
 </dd> <dt>
 
 <span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>
 
-<span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>**DMTF reserviert** (7.. 32767)
+<span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>**DMTF Reserved** (7..32767)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Vendor_Reserved"></span><span id="vendor_reserved"></span><span id="VENDOR_RESERVED"></span>
 
-<span id="Vendor_Reserved"></span><span id="vendor_reserved"></span><span id="VENDOR_RESERVED"></span>**Anbieter reserviert** (32768.65535)
+<span id="Vendor_Reserved"></span><span id="vendor_reserved"></span><span id="VENDOR_RESERVED"></span>**Reservierter Anbieter** (32768..65535)
 
 
 </dt> <dd></dd> </dl> </dd> <dt>
 
-*Timeoutperiod* \[ in\]
+*TimeoutPeriod* \[ In\]
 </dt> <dd>
 
-Ein Timeout Zeitraum, der die maximale Zeitspanne angibt, die der Client für den Übergang in den neuen Zustand erwartet. Das Intervall Format muss zum Angeben des Timeout Zeitraums verwendet werden. Der Wert 0 oder **null** zeigt an, dass der Client keine Zeitanforderungen für den Übergang hat. Wenn diese Eigenschaft nicht 0 oder **null** enthält und die Implementierung diesen Parameter nicht unterstützt, muss der Rückgabecode 4098 (**use of Timeout Parameter not supported**) zurückgegeben werden.
+Ein Timeoutzeitraum, der die maximale Zeitspanne angibt, die der Client für den Übergang in den neuen Zustand erwartet. Das Intervallformat muss verwendet werden, um den Timeoutzeitraum anzugeben. Der Wert 0 oder **NULL gibt an,** dass der Client keine Zeitanforderungen für den Übergang hat. Wenn diese Eigenschaft nicht 0 oder **NULL** enthält und die Implementierung diesen Parameter nicht unterstützt, muss der Rückgabecode 4098 (**Use Of Timeout Parameter Not Supported**) zurückgegeben werden.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg 0 zurück. Andernfalls wird einer der folgenden Fehler zurückgegeben.
+Gibt bei Erfolg 0 zurück. andernfalls gibt einen der folgenden Fehler zurück.
 
 <dl> <dt>
 
@@ -169,21 +169,21 @@ Gibt bei Erfolg 0 zurück. Andernfalls wird einer der folgenden Fehler zurückge
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 10, Version 1703, \[ nur Desktop-Apps\]<br/>                                               |
+| Unterstützte Mindestversion (Client)<br/> | Windows 10, version 1703 desktop apps only (Nur \[ Desktop-Apps der Version 1703)\]<br/>                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2016<br/>                                                                          |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**MSVM \_ collectionreferencepointexportjob**](msvm-collectionreferencepointexportjob.md)
+[**Msvm \_ CollectionReferencePointExportJob**](msvm-collectionreferencepointexportjob.md)
 </dt> </dl>
 
  

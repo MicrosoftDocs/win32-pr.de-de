@@ -1,7 +1,7 @@
 ---
-description: Ruft ein folderItem-Objekt ab, das das Element darstellt, das den Eingabefokus besitzt.
+description: 'ShellFolderView.FocusedItem-Eigenschaft: Ruft ein FolderItem-Objekt ab, das das Element mit dem Eingabefokus darstellt.'
 ms.assetid: ca88801d-c8fa-4c1c-9294-f52eada40ff6
-title: Shellfolderview. FocusedItem-Eigenschaft (Shldisp. h)
+title: ShellFolderView.FocusedItem-Eigenschaft (Shldisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Shell32.dll
-ms.openlocfilehash: 26f0f24cddd3b9299ec70b41160579659c71b5bb
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 4f661f555f1492a3323fa3749a8dffd6f00f411d
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104217697"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108104008"
 ---
-# <a name="shellfolderviewfocuseditem-property"></a>Shellfolderview. FocusedItem (Eigenschaft)
+# <a name="shellfolderviewfocuseditem-property"></a>ShellFolderView.FocusedItem (Eigenschaft)
 
-Ruft ein [**folderItem**](folderitem.md) -Objekt ab, das das Element darstellt, das den Eingabefokus besitzt.
+Ruft ein [**FolderItem-Objekt**](folderitem.md) ab, das das Element mit dem Eingabefokus darstellt.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -37,15 +37,15 @@ objFocusedItem = ShellFolderView.FocusedItem
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Eine Variable vom Typ [**IDispatch**](/windows/win32/api/oaidl/nn-oaidl-idispatch) , die das Objekt mit dem Fokus Element empfängt.
+Eine Variable vom Typ [**IDispatch,**](/windows/win32/api/oaidl/nn-oaidl-idispatch) die das fokussierte Elementobjekt empfängt.
 
 ## <a name="remarks"></a>Bemerkungen
 
-**FocusedItem** kann nur auf dem lokalen System aufgerufen werden. Es funktioniert nicht, wenn es auf einer Webseite über HTTP oder UNC ausgeführt wird.
+**FocusedItem** kann nur auf dem lokalen System aufgerufen werden. Sie funktioniert nicht, wenn sie auf einer Webseite über HTTP oder UNC ausgeführt wird.
 
 ## <a name="examples"></a>Beispiele
 
-Das folgende Beispiel zeigt die ordnungsgemäße Verwendung dieser Methode in JScript Embedded in HTML.
+Das folgende Beispiel zeigt die ordnungsgemäße Verwendung dieser Methode in JScript, eingebettet in HTML.
 
 
 ```JScript
@@ -93,17 +93,17 @@ Das folgende Beispiel zeigt die ordnungsgemäße Verwendung dieser Methode in JS
 
 
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, Windows XP \[ Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Client)<br/> | Nur Windows 2000 Professional- und Windows \[ XP-Desktop-Apps\]<br/>                                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                           |
-| Header<br/>                   | <dl> <dt>Shldisp. h</dt> </dl>                           |
-| IDL<br/>                      | <dl> <dt>Shldisp. idl</dt> </dl>                         |
-| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4,71 oder höher)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>                           |
+| Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                         |
+| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4.71 oder höher)</dt> </dl> |
 
 
 

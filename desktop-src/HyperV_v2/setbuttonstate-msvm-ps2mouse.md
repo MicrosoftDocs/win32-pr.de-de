@@ -1,5 +1,5 @@
 ---
-description: Legt den aktuellen Zustand der angegebenen Geräte Schaltfläche fest.
+description: 'SetButtonState-Methode der Msvm_Ps2Mouse-Klasse: Legt den aktuellen Zustand der angegebenen Geräteschaltfläche fest.'
 ms.assetid: 312A2B8B-D518-4797-9B50-F12493598CD6
 title: SetButtonState-Methode der Msvm_Ps2Mouse-Klasse
 ms.topic: reference
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 34475edfa27d08cbe9de488502686a84e4391eb8
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ea6a984b84c7ee17436a7fb4738433edce6d68d8
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106360522"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108118528"
 ---
-# <a name="setbuttonstate-method-of-the-msvm_ps2mouse-class"></a>SetButtonState-Methode der Ps2Mouse-Klasse von MSVM \_
+# <a name="setbuttonstate-method-of-the-msvm_ps2mouse-class"></a>SetButtonState-Methode der Msvm \_ Ps2Mouse-Klasse
 
-Legt den aktuellen Zustand der angegebenen Geräte Schaltfläche fest.
+Legt den aktuellen Zustand der angegebenen Geräteschaltfläche fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,39 +40,39 @@ uint32 SetButtonState(
 
 <dl> <dt>
 
-*ButtonIndex* \[ in\]
+*buttonIndex* \[ In\]
 </dt> <dd>
 
-Typ: **UInt32**
+Typ: **uint32**
 
-Der auf 1 basierende Index der Schaltfläche, die geändert werden soll.
+Der 1-basierte Index der zu ändernden Schaltfläche.
 
 </dd> <dt>
 
-*ButtonState* \[ in\]
+*buttonState* \[ In\]
 </dt> <dd>
 
-Typ: **booleschen**
+Typ: **boolescher Wert**
 
-Der neue Status der Schaltfläche. Ein **true** -Wert bedeutet, dass die Schaltfläche nicht angezeigt wird.
+Der neue Nach-unten-Zustand der Schaltfläche. Ein **True-Wert** bedeutet, dass die Schaltfläche nicht angezeigt wird.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Typ: **UInt32**
+Typ: **uint32**
 
-Der Rückgabewert 0 (null) gibt den Erfolg an. Ein Wert ungleich NULL gibt an, dass der Zustand der Schaltfläche nicht geändert werden konnte.
+Der Rückgabewert 0 (null) gibt den Erfolg an. Ein Wert ungleich 0 (null) gibt an, dass der Schaltflächenzustand nicht geändert werden kann.
 
 <dl> <dt>
 
 **Abgeschlossen ohne Fehler** (0)
 </dt> <dt>
 
-Über **prüfte Methoden Parameter-Auftrag gestartet** (4096)
+**Methodenparameter überprüft** – Auftrag gestartet (4096)
 </dt> <dt>
 
-Fehler **(32768** )
+**Fehler** (32768)
 </dt> <dt>
 
 **Zugriff verweigert** (32769)
@@ -81,53 +81,53 @@ Fehler **(32768** )
 **Nicht unterstützt** (32770)
 </dt> <dt>
 
-Der **Status ist "Unknown** " (32771).
+**Status ist unbekannt** (32771)
 </dt> <dt>
 
 **Timeout** (32772)
 </dt> <dt>
 
-**Ungültiger Parameter** (32773)
+**Ungültiger** Parameter (32773)
 </dt> <dt>
 
-Das **System wird verwendet** (32774).
+**System wird verwendet** (32774)
 </dt> <dt>
 
-**Ungültiger Status für diesen Vorgang** (32775).
+**Ungültiger Zustand für diesen Vorgang** (32775)
 </dt> <dt>
 
-**Falscher Datentyp** (32776).
+**Falscher Datentyp** (32776)
 </dt> <dt>
 
-Das **System ist nicht verfügbar** (32777).
+**System ist nicht verfügbar** (32777)
 </dt> <dt>
 
-**Nicht** genügend Arbeitsspeicher (32778)
+**Nicht genügend Arbeitsspeicher** (32778)
 </dt> </dl>
 
 ## <a name="remarks"></a>Bemerkungen
 
-Der Zugriff auf die [**MSVM- \_ Ps2Mouse**](msvm-ps2mouse.md) -Klasse kann durch die UAC-Filterung eingeschränkt werden. Weitere Informationen finden Sie unter [Benutzerkontensteuerung und WMI](/windows/desktop/WmiSdk/user-account-control-and-wmi).
+Der Zugriff auf die [**Msvm \_ Ps2Mouse-Klasse**](msvm-ps2mouse.md) kann durch UAC-Filterung eingeschränkt werden. Weitere Informationen finden Sie unter [Benutzerkontensteuerung und WMI.](/windows/desktop/WmiSdk/user-account-control-and-wmi)
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 8 \[ Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2012-Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**MSVM \_ Ps2Mouse**](msvm-ps2mouse.md)
+[**Msvm \_ Ps2Mouse**](msvm-ps2mouse.md)
 </dt> </dl>
 
  

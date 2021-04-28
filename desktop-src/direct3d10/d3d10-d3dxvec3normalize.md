@@ -1,7 +1,7 @@
 ---
-description: Gibt die normalisierte Version eines 3D-Vektors zurück.
+description: 'D3DXVec3Normalize-Funktion (D3DX10Math.h): Gibt die normalisierte Version eines 3D-Vektors zurück.'
 ms.assetid: 420321a2-0c3b-419c-9620-acf184e7b4f0
-title: D3DXVec3Normalize-Funktion (D3DX10Math. h)
+title: D3DXVec3Normalize-Funktion (D3DX10Math.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,14 +13,14 @@ api_type:
 - HeaderDef
 api_location:
 - D3DX10Math.h
-ms.openlocfilehash: 413b807c53e0b46b115af2aa283e4902a45f5979
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 3f1317b1b8887b9ff306fcaed2cb6da2d077010f
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103870164"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108108178"
 ---
-# <a name="d3dxvec3normalize-function-d3dx10mathh"></a>D3DXVec3Normalize-Funktion (D3DX10Math. h)
+# <a name="d3dxvec3normalize-function-d3dx10mathh"></a>D3DXVec3Normalize-Funktion (D3DX10Math.h)
 
 Gibt die normalisierte Version eines 3D-Vektors zurück.
 
@@ -40,21 +40,21 @@ D3DXVECTOR3* D3DXVec3Normalize(
 
 <dl> <dt>
 
-*Pout* \[ in, out\]
+*pOut* \[ in, out\]
 </dt> <dd>
 
 Typ: **[ **D3DXVECTOR3**](../direct3d9/d3dxvector3.md)\***
 
-Zeiger auf das [**D3DXVECTOR3**](d3d10-d3dxvector3.md) , das das Ergebnis des Vorgangs ist.
+Zeiger auf [**D3DXVECTOR3,**](d3d10-d3dxvector3.md) das das Ergebnis des Vorgangs ist.
 
 </dd> <dt>
 
-*PV* \[ in\]
+*pV* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXVECTOR3**](../direct3d9/d3dxvector3.md) \***
+Typ: **const [**D3DXVECTOR3**](../direct3d9/d3dxvector3.md) \***
 
-Ein Zeiger auf die Quell-D3DXVECTOR3-Struktur.
+Zeiger auf die D3DXVECTOR3-Quellstruktur.
 
 </dd> </dl>
 
@@ -66,19 +66,19 @@ Zeiger auf eine D3DXVECTOR3-Struktur, die die normalisierte Version des angegebe
 
 ## <a name="remarks"></a>Bemerkungen
 
-Der Rückgabewert für diese Funktion ist derselbe Wert, der im Pout-Parameter zurückgegeben wird. Auf diese Weise kann die D3DXVec3Normalize-Funktion als Parameter für eine andere Funktion verwendet werden.
+Der Rückgabewert für diese Funktion ist der gleiche Wert, der im pOut-Parameter zurückgegeben wird. Auf diese Weise kann die D3DXVec3Normalize-Funktion als Parameter für eine andere Funktion verwendet werden.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------|-----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3DX10Math. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3DX10Math.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

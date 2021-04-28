@@ -1,7 +1,7 @@
 ---
-description: Reserviert.
+description: 'LocationDisp.DispCivicAddressReport.DetailLevel-Eigenschaft : Reserviert.'
 ms.assetid: 3f206db7-fccf-4b95-bff7-856dc53caf5a
-title: LocationDisp. dispcivicaddressreport. DetailLevel-Eigenschaft
+title: LocationDisp.DispCivicAddressReport.DetailLevel-Eigenschaft
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,16 +12,16 @@ api_name:
 api_type:
 - COM
 api_location: ''
-ms.openlocfilehash: 54cb58df259f63567f018a7b59d6b7547a291bca
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d987b93fbf091c7849eda0dc1949f58a97c653b1
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103960353"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108110898"
 ---
-# <a name="locationdispdispcivicaddressreportdetaillevel-property"></a>LocationDisp. dispcivicaddressreport. DetailLevel-Eigenschaft
+# <a name="locationdispdispcivicaddressreportdetaillevel-property"></a>LocationDisp.DispCivicAddressReport.DetailLevel-Eigenschaft
 
-\[Das Location-API-Objektmodell ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt "Anforderungen" angegeben sind. Es kann in nachfolgenden Versionen geändert oder entfernt werden. Verwenden Sie stattdessen die [W3C-geolozierungs-API](/previous-versions/windows/internet-explorer/ie-developer/samples/gg589513(v=vs.85)), um auf den Standort von einer Website zuzugreifen. Verwenden Sie die [**Windows. Devices. Geolokation**](/uwp/api/Windows.Devices.Geolocation) -API, um auf den Speicherort einer Desktop Anwendung zuzugreifen.\]
+\[Das Objektmodell der Standort-API ist für die Verwendung in den im Abschnitt Anforderungen angegebenen Betriebssystemen verfügbar. Es kann in nachfolgenden Versionen geändert oder entfernt werden. Verwenden Sie stattdessen die [W3C-Geolocation-API,](/previous-versions/windows/internet-explorer/ie-developer/samples/gg589513(v=vs.85))um von einer Website aus auf den Standort zuzugreifen. Verwenden Sie die [**Windows.Devices.Geolocation-API,**](/uwp/api/Windows.Devices.Geolocation) um von einer Desktopanwendung aus auf den Standort zuzugreifen.\]
 
 Reserviert.
 
@@ -42,15 +42,15 @@ Reserviert.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Überprüfen Sie einfach den Inhalt des Felds, um zu bestimmen, ob ein Bericht mit einer öffentlichen Adresse gültige Daten für ein bestimmtes Feld enthält. Wenn das Feld einen Wert enthält, können Sie davon ausgehen, dass das Feld die genauesten verfügbaren Informationen enthält.
+Überprüfen Sie einfach den Inhalt des Felds, um zu bestimmen, ob ein Bericht zu einer Stadtadresse gültige Daten für ein bestimmtes Feld enthält. Wenn das Feld einen Wert enthält, können Sie davon ausgehen, dass das Feld die genauesten verfügbaren Informationen enthält.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|--------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ 7-Desktop-Apps\]<br/> |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                  |
 
 

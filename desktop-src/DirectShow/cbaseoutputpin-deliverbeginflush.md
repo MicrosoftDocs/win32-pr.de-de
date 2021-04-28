@@ -1,7 +1,7 @@
 ---
-description: Die deliverbeginflush-Methode fordert die verbundene Eingabe-PIN an, um einen Leerungs Vorgang zu starten.
+description: 'CBaseOutputPin.DeliverBeginFlush-Methode: Die DeliverBeginFlush-Methode fordert den verbundenen Eingabepin an, um einen Leerungsvorgang zu starten.'
 ms.assetid: 0d7c7bd7-2a7a-42a4-a0de-60205b62e49c
-title: Cbaseoutputpin. deliverbeginflush-Methode (amfilter. h)
+title: CBaseOutputPin.DeliverBeginFlush-Methode (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: dad764ceaa6cc57c8c5b7ee288859926b6c63f02
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 22dbd2bccf33d9f203d1505106184500b8cae3ba
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370308"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108099518"
 ---
-# <a name="cbaseoutputpindeliverbeginflush-method"></a>Cbaseoutputpin. deliverbeginflush-Methode
+# <a name="cbaseoutputpindeliverbeginflush-method"></a>CBaseOutputPin.DeliverBeginFlush-Methode
 
-Die- `DeliverBeginFlush` Methode fordert die verbundene Eingabe-PIN an, um einen Leerungs Vorgang zu starten.
+Die `DeliverBeginFlush` -Methode fordert den verbundenen Eingabepin an, um einen Leerungsvorgang zu starten.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,14 +42,14 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT** -Wert zurück. Mögliche Werte sind die in der folgenden Tabelle aufgeführten Werte.
+Gibt einen **HRESULT-Wert** zurück. Mögliche Werte sind die in der folgenden Tabelle aufgeführten Werte.
 
 
 
 | Rückgabecode                                                                                           | Beschreibung                      |
 |-------------------------------------------------------------------------------------------------------|----------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>                  | Erfolg.<br/>              |
-| <dl> <dt>**VFW \_ E \_ nicht \_ verbunden**</dt> </dl> | Die PIN ist nicht verbunden.<br/> |
+| <dl> <dt>**VFW \_ E \_ NICHT \_ VERBUNDEN**</dt> </dl> | Pin ist nicht verbunden.<br/> |
 
 
 
@@ -57,24 +57,24 @@ Gibt einen **HRESULT** -Wert zurück. Mögliche Werte sind die in der folgenden 
 
 ## <a name="remarks"></a>Bemerkungen
 
-Diese Methode ruft die [**IPin:: beginflush**](/windows/desktop/api/Strmif/nf-strmif-ipin-beginflush) -Methode für die Eingabe-PIN auf.
+Diese Methode ruft die [**IPin::BeginFlush-Methode**](/windows/desktop/api/Strmif/nf-strmif-ipin-beginflush) auf dem Eingabepin auf.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (streams.h einschließen)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbaseoutputpin-Klasse**](cbaseoutputpin.md)
+[**CBaseOutputPin-Klasse**](cbaseoutputpin.md)
 </dt> </dl>
 
  

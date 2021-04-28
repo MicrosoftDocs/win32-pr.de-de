@@ -1,7 +1,7 @@
 ---
-description: Die currentmediatype-Methode ruft den Medientyp für die aktuelle PIN-Verbindung ab.
+description: 'CTransformOutputPin.CurrentMediaType-Methode: Die CurrentMediaType-Methode ruft den Medientyp für die aktuelle Pinverbindung ab.'
 ms.assetid: 1c42664d-160a-4f76-9d7a-40414c5c1704
-title: Ctransformoutputpin. currentmediatype-Methode (Transfrm. h)
+title: CTransformOutputPin.CurrentMediaType-Methode (Transfrm.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: ee9ee15c3cda2baf8ab8d6e9cb0ec3c797e91a1b
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 0cb40310afb1c22d00a5394c0a0667fc8d22eb03
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106373902"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108094908"
 ---
-# <a name="ctransformoutputpincurrentmediatype-method"></a>Ctransformoutputpin. currentmediatype-Methode
+# <a name="ctransformoutputpincurrentmediatype-method"></a>CTransformOutputPin.CurrentMediaType-Methode
 
-Die- `CurrentMediaType` Methode ruft den Medientyp für die aktuelle PIN-Verbindung ab.
+Die `CurrentMediaType` -Methode ruft den Medientyp für die aktuelle Pinverbindung ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,16 +42,16 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen Verweis auf die [**cbasepin:: m \_ MT**](cbasepin-m-mt.md) -Member-Variable zurück.
+Gibt einen Verweis auf die [**CBasePin::m \_ mt-Membervariable**](cbasepin-m-mt.md) zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Transfrm. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Transfrm.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 

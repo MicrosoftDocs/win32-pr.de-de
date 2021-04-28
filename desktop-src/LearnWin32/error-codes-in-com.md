@@ -1,28 +1,28 @@
 ---
-title: Fehler Codes in com
-description: .
+title: Fehlercodes in COM
+description: Fehlercodes in COM
 ms.assetid: ed430863-f416-4611-81b4-0c31d819944a
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f082afbabf367179b02c0fb3b0fc979dcda664a4
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 733cbe0799a22b0f0c01ee9cb226ad7e0b8660da
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "103725385"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108103958"
 ---
-# <a name="error-codes-in-com"></a>Fehler Codes in com
+# <a name="error-codes-in-com"></a>Fehlercodes in COM
 
-Um den Erfolg oder Misserfolg anzuzeigen, geben com-Methoden und-Funktionen einen Wert vom Typ **HRESULT** zurück. Ein **HRESULT** ist eine 32-Bit-Ganzzahl. Das höchst wertige Bit des **HRESULT** signalisiert Erfolg oder Fehler. NULL (0) gibt den Erfolg an, und 1 gibt einen Fehler an.
+Com-Methoden und -Funktionen geben einen Wert vom Typ **HRESULT** zurück, um einen Erfolg oder Fehler anzugeben. Ein **HRESULT** ist eine 32-Bit-Ganzzahl. Das hochgeordnete Bit des **HRESULT** signalisiert Erfolg oder Fehler. Null (0) gibt den Erfolg an, und 1 gibt einen Fehler an.
 
-Dies erzeugt die folgenden numerischen Bereiche:
+Dadurch werden die folgenden numerischen Bereiche erzeugt:
 
--   Erfolgs Codes: 0x0 – 0x7FFFFFFF.
--   Fehlercodes: 0x80000000 – 0xFFFFFFFF.
+-   Erfolgscodes: 0x0-0x7FFFFFFF.
+-   Fehlercodes: 0x80000000–0xFFFFFFFF.
 
-Eine kleine Anzahl von com-Methoden gibt keinen **HRESULT** -Wert zurück. Beispielsweise geben die Methoden " [**adressf**](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref) " und " [**Release**](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release) " nicht signierte Long-Werte zurück. Jede com-Methode, die einen Fehlercode zurückgibt, bewirkt jedoch, dass ein **HRESULT** -Wert zurückgegeben wird.
+Eine kleine Anzahl von COM-Methoden gibt keinen **HRESULT-Wert** zurück. Beispielsweise geben die [**Methoden AddRef**](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref) und [**Release**](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release) lange Werte ohne Vorzeichen zurück. Jede COM-Methode, die einen Fehlercode zurückgibt, gibt jedoch einen **HRESULT-Wert** zurück.
 
-Um zu überprüfen, ob eine com-Methode erfolgreich ist, überprüfen Sie das höchst wertige Bit des zurückgegebenen **HRESULT**. Die Windows SDK-Header bieten zwei Makros, die dies vereinfachen: das Makro " [**erfolgreich**](/windows/desktop/api/winerror/nf-winerror-succeeded) " und das [**fehlgeschlagene**](/windows/desktop/api/winerror/nf-winerror-failed) Makro. Das Makro " **erfolgreich** " gibt **true** zurück, wenn ein **HRESULT** ein Erfolgs Code ist, und **false** , wenn es sich um einen Fehlercode handelt. Im folgenden Beispiel wird überprüft, ob [**CoInitializeEx**](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializeex) erfolgreich ist.
+Um zu überprüfen, ob eine COM-Methode erfolgreich ist, untersuchen Sie das obere Bit des zurückgegebenen **HRESULT.** Die Windows SDK-Header stellen zwei Makros bereit, die dies vereinfachen: das [**SUCCEEDED-Makro**](/windows/desktop/api/winerror/nf-winerror-succeeded) und das [**FAILED-Makro.**](/windows/desktop/api/winerror/nf-winerror-failed) Das **SUCCEEDED-Makro** gibt **TRUE** zurück, wenn ein **HRESULT** ein Erfolgscode ist, und **FALSE,** wenn es sich um einen Fehlercode handelt. Im folgenden Beispiel wird überprüft, ob [**CoInitializeEx**](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializeex) erfolgreich ist.
 
 
 ```C++
@@ -41,7 +41,7 @@ else
 
 
 
-Manchmal ist es bequemer, die umgekehrte Bedingung zu testen. Das [**fehlgeschlagene**](/windows/desktop/api/winerror/nf-winerror-failed) Makro bewirkt, dass das Gegenteil von [**erfolgreich war**](/windows/desktop/api/winerror/nf-winerror-succeeded). Sie gibt **true** für einen Fehlercode und **false** für einen Erfolgs Code zurück.
+Manchmal ist es praktischer, die umgekehrte Bedingung zu testen. Das [**FAILED-Makro**](/windows/desktop/api/winerror/nf-winerror-failed) führt das Gegenteil von [**SUCCEEDED aus.**](/windows/desktop/api/winerror/nf-winerror-succeeded) Sie gibt **TRUE** für einen Fehlercode und **FALSE** für einen Erfolgscode zurück.
 
 
 ```C++
@@ -60,12 +60,12 @@ else
 
 
 
-Später in diesem Modul betrachten wir einige praktische Ratschläge, wie Sie Ihren Code für die Behandlung von com-Fehlern strukturieren. (Siehe [Fehlerbehandlung in com](error-handling-in-com.md).)
+Später in diesem Modul werden einige praktische Hinweise zur Strukturierung Ihres Codes zur Handhabung von COM-Fehlern behandelt. (Siehe [Fehlerbehandlung in COM](error-handling-in-com.md).)
 
 ## <a name="next"></a>Nächste
 
-[Erstellen eines Objekts in com](creating-an-object-in-com.md)
+[Erstellen eines Objekts in COM](creating-an-object-in-com.md)
 
- 
+ 
 
- 
+ 

@@ -1,7 +1,7 @@
 ---
-description: 'Die getrate-Methode ruft die Wiedergabe Rate ab. Diese Methode implementiert die imediaseeking:: getrate-Methode.'
+description: 'CSourceSeeking.GetRate-Methode: Die GetRate-Methode ruft die Wiedergaberate ab. Diese Methode implementiert die IMediaSeeking::GetRate-Methode.'
 ms.assetid: e5c3ef27-6f57-4c74-b197-a3c4efb31239
-title: Csourceseeking. getrate-Methode (ctlutil. h)
+title: CSourceSeeking.GetRate-Methode (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: b14cad0b043193f7ee410455aaa399e3bcb26715
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: fef379ef06cd0982f1eb5742ac2624d706ed73a8
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106366751"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108085228"
 ---
-# <a name="csourceseekinggetrate-method"></a>Csourceseeking. getrate-Methode
+# <a name="csourceseekinggetrate-method"></a>CSourceSeeking.GetRate-Methode
 
-Die- `GetRate` Methode ruft die Wiedergabe Rate ab. Diese Methode implementiert die [**imediaseeking:: getrate**](/windows/desktop/api/Strmif/nf-strmif-imediaseeking-getrate) -Methode.
+Die `GetRate` -Methode ruft die Wiedergaberate ab. Diese Methode implementiert die [**IMediaSeeking::GetRate-Methode.**](/windows/desktop/api/Strmif/nf-strmif-imediaseeking-getrate)
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,23 +42,23 @@ HRESULT GetRate(
 
 <dl> <dt>
 
-*pdrate* 
+*pdRate* 
 </dt> <dd>
 
-Ein Zeiger auf eine Variable, die die Wiedergabe Rate empfängt.
+Zeiger auf eine Variable, die die Wiedergaberate empfängt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen der **HRESULT** -Werte zurück, die in der folgenden Tabelle aufgeführt sind.
+Gibt einen der in der folgenden Tabelle aufgeführten **HRESULT-Werte** zurück.
 
 
 
 | Rückgabecode                                                                               | Beschreibung                       |
 |-------------------------------------------------------------------------------------------|-----------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>      | Erfolg<br/>                |
-| <dl> <dt>**E- \_ Zeiger**</dt> </dl> | **Null** -Zeiger Wert<br/> |
+| <dl> <dt>**E \_ POINTER**</dt> </dl> | **NULL-Zeigerwert**<br/> |
 
 
 
@@ -66,24 +66,24 @@ Gibt einen der **HRESULT** -Werte zurück, die in der folgenden Tabelle aufgefü
 
 ## <a name="remarks"></a>Bemerkungen
 
-Die Wiedergabe Rate wird von der Element Variablen [**csourceseeking:: m \_ drateseeking**](csourceseeking-m-drateseeking.md) angegeben.
+Die Wiedergaberate wird durch die [**Membervariable CSourceSeeking::m \_ dRateSeeking**](csourceseeking-m-drateseeking.md) angegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Csourceseeking-Klasse**](csourceseeking.md)
+[**CSourceSeeking-Klasse**](csourceseeking.md)
 </dt> </dl>
 
  

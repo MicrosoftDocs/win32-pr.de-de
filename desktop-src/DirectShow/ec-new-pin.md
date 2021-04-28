@@ -1,17 +1,17 @@
 ---
-description: Dieses Ereignis wird nicht unterstützt.
+description: 'EC_NEW_PIN: Dieses Ereignis wird nicht unterstützt.'
 ms.assetid: 1a1d4db3-f80a-4dd2-9033-104627d103a5
-title: EC_NEW_PIN (DShow. h)
+title: EC_NEW_PIN (Dshow.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9e7c5d641d92c8a6d46de2773e4802b9775f45c2
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 35b253f87281c32ce5b5b0cb2653201b8df70d30
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361009"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108119658"
 ---
-# <a name="ec_new_pin"></a>neue EC- \_ \_ PIN
+# <a name="ec_new_pin"></a>EC \_ NEW \_ PIN
 
 Dieses Ereignis wird nicht unterstützt.
 
@@ -19,20 +19,20 @@ Dieses Ereignis wird nicht unterstützt.
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------|------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>DShow. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Dshow.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Ereignis Benachrichtigungs Codes](event-notification-codes.md)
+[Ereignisbenachrichtigungscodes](event-notification-codes.md)
 </dt> <dt>
 
-[Ereignis Benachrichtigung in DirectShow](event-notification-in-directshow.md)
+[Ereignisbenachrichtigung in DirectShow](event-notification-in-directshow.md)
 </dt> </dl>
 
  

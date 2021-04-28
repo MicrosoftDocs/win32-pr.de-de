@@ -1,7 +1,7 @@
 ---
-description: Die getmediatime-Methode ruft die Zeitstempel im aktuellen Beispiel ab.
+description: 'CPosPassThru.GetMediaTime-Methode: Die GetMediaTime-Methode ruft die Zeitstempel für das aktuelle Beispiel ab.'
 ms.assetid: 36f3b6d3-b884-4168-94f3-f334a5056c7d
-title: Cpospassthru. getmediatime-Methode (ctlutil. h)
+title: CPosPassThru.GetMediaTime-Methode (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: b2748d986f121a38041155dcd43f13a647916486
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 328a0ae09c80a687863cfedb994f5a80cebebf14
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364602"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108095258"
 ---
-# <a name="cpospassthrugetmediatime-method"></a>Cpospassthru. getmediatime-Methode
+# <a name="cpospassthrugetmediatime-method"></a>CPosPassThru.GetMediaTime-Methode
 
-Die- `GetMediaTime` Methode ruft die Zeitstempel im aktuellen Beispiel ab.
+Die `GetMediaTime` -Methode ruft die Zeitstempel für das aktuelle Beispiel ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,44 +43,44 @@ virtual HRESULT GetMediaTime(
 
 <dl> <dt>
 
-*pstarttime* 
+*pStartTime* 
 </dt> <dd>
 
-Ein Zeiger auf eine Variable, die die Startzeit in Einheiten des aktuellen Zeit Formats empfängt.
+Zeiger auf eine Variable, die die Startzeit in Einheiten des aktuellen Zeitformats empfängt.
 
 </dd> <dt>
 
-*Zeit* 
+*pEndTime* 
 </dt> <dd>
 
-Ein Zeiger auf eine Variable, die die Endzeit in Einheiten des aktuellen Zeit Formats empfängt.
+Zeiger auf eine Variable, die die Endzeit in Einheiten des aktuellen Zeitformats empfängt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt "E Fail" zurück \_ .
+Gibt E \_ FAIL zurück.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Überschreiben Sie diese Methode, wenn der Filter die Zeitstempel der empfangenen Beispiele zwischenspeichert.
+Überschreiben Sie diese Methode, wenn Ihr Filter die Zeitstempel für die empfangenen Beispiele zwischenspeichert.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (einschließlich Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cpospassthru-Klasse**](cpospassthru.md)
+[**CPosPassThru-Klasse**](cpospassthru.md)
 </dt> </dl>
 
  

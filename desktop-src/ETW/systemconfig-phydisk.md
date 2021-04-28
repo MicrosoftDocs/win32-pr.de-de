@@ -1,5 +1,5 @@
 ---
-description: Diese Klasse ist die Ereignistyp Klasse für Ereignisse für die Konfiguration von physischen Datenträgern.
+description: 'SystemConfig_PhyDisk Klasse: Diese Klasse ist die Ereignistypklasse für physische Datenträgerkonfigurationsereignisse.'
 ms.assetid: 850a6b2c-69e6-47ae-95ff-585fcc70c1c8
 title: SystemConfig_PhyDisk-Klasse
 ms.topic: reference
@@ -27,18 +27,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: d868e3943f22a71b4513f4f77841ddea9204ffea
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 52ab249ab5087a1528317687d90f6d8fa665bc1a
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104977480"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108106098"
 ---
-# <a name="systemconfig_phydisk-class"></a>SystemConfig- \_ Klasse "phydisk"
+# <a name="systemconfig_phydisk-class"></a>SystemConfig \_ PhyDisk-Klasse
 
-Diese Klasse ist die Ereignistyp Klasse für Ereignisse für die Konfiguration von physischen Datenträgern.
+Diese Klasse ist die Ereignistypklasse für physische Datenträgerkonfigurationsereignisse.
 
-Die folgende Syntax wird durch den MOF-Code vereinfacht.
+Die folgende Syntax wird durch MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -66,106 +66,106 @@ class SystemConfig_PhyDisk : SystemConfig
 
 ## <a name="members"></a>Member
 
-Die Klasse " **SystemConfig \_ phydisk** " verfügt über diese Typen von Membern:
+Die **SystemConfig \_ PhyDisk-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die Klasse " **SystemConfig \_ phydisk** " verfügt über diese Eigenschaften.
+Die **SystemConfig \_ PhyDisk-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Bootdriveletter**
+**BootDriveLetter**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **char16** Array
+Datentyp: **char16-Array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (14), **Max** (3), **Format ("s")**
+Qualifizierer: **WmiDataId** (14), **Max** (3), **Format("s")**
 </dt> </dl>
 
-Laufwerk Buchstabe des Start Laufwerks in der Form " <letter> :".
+Laufwerkbuchstaben des Startlaufwerks im Folgenden: <letter> ":".
 
 </dd> <dt>
 
-**Bytespersektor**
+**BytesPerSector**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (2)
+Qualifizierer: **WmiDataId** (2)
 </dt> </dl>
 
-Anzahl von Bytes in den einzelnen Sektoren für das physische Laufwerk.
+Anzahl von Bytes in jedem Sektor für das physische Laufwerk.
 
 </dd> <dt>
 
-**Rad**
+**Zylinder**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (5)
+Qualifizierer: **WmiDataId** (5)
 </dt> </dl>
 
-Die Gesamtanzahl der Zylinder auf dem physischen Laufwerk. Hinweis: der Wert für diese Eigenschaft wird durch erweiterte Funktionen der BIOS-Interruptzeit 13 h abgerufen. Der Wert kann ungenau sein, wenn das Laufwerk ein Übersetzungs Schema verwendet, um Datenträger Größen mit hoher Kapazität zu unterstützen. Informieren Sie sich beim Hersteller über genaue Laufwerk Spezifikationen.
+Gesamtanzahl der Zylinder auf dem physischen Laufwerk. Hinweis: Der Wert für diese Eigenschaft wird über erweiterte Funktionen des BIOS-Interrupts 13h ermittelt. Der Wert kann ungenau sein, wenn das Laufwerk ein Übersetzungsschema verwendet, um Datenträgergrößen mit hoher Kapazität zu unterstützen. Wenden Sie sich an den Hersteller, um genaue Laufwerkspezifikationen zu erhalten.
 
 </dd> <dt>
 
-**Disknumber**
+**DiskNumber**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (1)
+Qualifizierer: **WmiDataId** (1)
 </dt> </dl>
 
-Index Nummer des Datenträgers, der diese Partition enthält.
+Indexnummer des Datenträgers, der diese Partition enthält.
 
 </dd> <dt>
 
 **Manufacturer**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **char16** Array
+Datentyp: **char16-Array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (10), **Max** (256), **Format ("s")**
+Qualifizierer: **WmiDataId** (10), **Max** (256), **Format(s)**
 </dt> </dl>
 
-Der Name des Laufwerks Herstellers.
+Name des Laufwerkherstellers.
 
 </dd> <dt>
 
 **Pad**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8**
+Datentyp: **uint8**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (13)
+Qualifizierer: **WmiDataId** (13)
 </dt> </dl>
 
 Nicht verwendet.
@@ -175,45 +175,45 @@ Nicht verwendet.
 **PartitionCount**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (11)
+Qualifizierer: **WmiDataId** (11)
 </dt> </dl>
 
 Anzahl der Partitionen auf diesem physischen Laufwerk, die vom Betriebssystem erkannt werden.
 
 </dd> <dt>
 
-**Scsilun**
+**SCSILun**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (9)
+Qualifizierer: **WmiDataId** (9)
 </dt> </dl>
 
-SCSI-logische Gerätenummer (LUN) des SCSI-Adapters.
+SCSI Logical Unit Number (LUN) des SCSI-Adapters.
 
 </dd> <dt>
 
-**Scsipath**
+**SCSIPath**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (7)
+Qualifizierer: **WmiDataId** (7)
 </dt> </dl>
 
 SCSI-Busnummer des SCSI-Adapters.
@@ -223,61 +223,61 @@ SCSI-Busnummer des SCSI-Adapters.
 **SCSIPort**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (6)
+Qualifizierer: **WmiDataId** (6)
 </dt> </dl>
 
 SCSI-Nummer des SCSI-Adapters.
 
 </dd> <dt>
 
-**Scsitarget**
+**SCSITarget**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (8)
+Qualifizierer: **WmiDataId** (8)
 </dt> </dl>
 
 Enthält die Nummer des Zielgeräts.
 
 </dd> <dt>
 
-**Sector-Spur**
+**SectorsPerTrack**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (3)
+Qualifizierer: **WmiDataId** (3)
 </dt> </dl>
 
 Anzahl der Sektoren in jeder Spur für dieses physische Laufwerk.
 
 </dd> <dt>
 
-**Schonen**
+**Ersatz**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **char16** Array
+Datentyp: **char16-Array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (15), **Max** (2), **Format ("s")**
+Qualifizierer: **WmiDataId** (15), **Max** (2), **Format("s")**
 </dt> </dl>
 
 Nicht verwendet.
@@ -287,43 +287,43 @@ Nicht verwendet.
 **TracksPerCylinder**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (4)
+Qualifizierer: **WmiDataId** (4)
 </dt> </dl>
 
-Anzahl der Spuren in jedem Zylinder auf dem physischen Laufwerk. Hinweis: der Wert für diese Eigenschaft wird durch erweiterte Funktionen der BIOS-Interruptzeit 13 h abgerufen. Der Wert kann ungenau sein, wenn das Laufwerk ein Übersetzungs Schema verwendet, um Datenträger Größen mit hoher Kapazität zu unterstützen. Informieren Sie sich beim Hersteller über genaue Laufwerk Spezifikationen.
+Anzahl der Spuren in jedem Zylinder auf dem physischen Laufwerk. Hinweis: Der Wert für diese Eigenschaft wird über erweiterte Funktionen des BIOS-Interrupts 13h ermittelt. Der Wert kann ungenau sein, wenn das Laufwerk ein Übersetzungsschema verwendet, um Datenträgergrößen mit hoher Kapazität zu unterstützen. Wenden Sie sich an den Hersteller, um genaue Laufwerkspezifikationen zu erhalten.
 
 </dd> <dt>
 
-**Schreibzugriff aktiviert**
+**WriteCacheEnabled**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8**
+Datentyp: **uint8**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (12)
+Qualifizierer: **WmiDataId** (12)
 </dt> </dl>
 
-True, wenn der Schreib Cache aktiviert ist.
+True, wenn der Schreibcache aktiviert ist.
 
 </dd> </dl>
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 

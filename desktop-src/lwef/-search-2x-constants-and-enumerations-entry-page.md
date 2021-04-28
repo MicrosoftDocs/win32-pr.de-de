@@ -1,33 +1,33 @@
 ---
 title: WDS 2. x-Konstanten und -Enumerationen
-description: .
+description: WDS 2. x-Konstanten und -Enumerationen
 ms.assetid: f100a3f4-4880-409b-8ced-f22a457a0e0c
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6b3678c15bf530d5fcc3705b3b814eb28e34e5ae
-ms.sourcegitcommit: a716ca2a6a22a400f02c6b31699cf4da83ee3619
+ms.openlocfilehash: b51a2b87563fe7f3fa4aed1bd7c8c24238a036dd
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "103734881"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108114198"
 ---
 # <a name="wds-2x-constants-and-enumerations"></a>WDS 2. x-Konstanten und -Enumerationen
 
 > [!NOTE]
-> Windows-Desktop Suche 2. x ist eine veraltete Technologie, die ursprünglich als Add-in für Windows XP und Windows Server 2003 verfügbar war. Verwenden Sie in späteren Versionen stattdessen [Windows Search](../search/-search-3x-wds-overview.md) .
+> Windows Desktop Search 2.x ist eine veraltete Technologie, die ursprünglich als Add-In für Windows XP und Windows Server 2003 verfügbar war. Verwenden Sie in späteren [Versionen Windows Search.](../search/-search-3x-wds-overview.md)
 
 
-[**Changeadviumcodes**](/previous-versions//aa965736(v=vs.85))
+[**ChangeAdviseCodes**](/previous-versions//aa965736(v=vs.85))
 
-[**Columnsortor**](/windows/win32/api/mmcobj/ne-mmcobj-_columnsortorder)
+[**ColumnSortOrder**](/windows/win32/api/mmcobj/ne-mmcobj-_columnsortorder)
 
-[**Headerdisplaystyle**](-search-2x-headerdisplaystyleenum.md)
+[**HeaderDisplayStyle**](-search-2x-headerdisplaystyleenum.md)
 
-[**Previewdisplaystyle**](-search-2x-previewdisplaystyleenum.md)
+[**PreviewDisplayStyle**](-search-2x-previewdisplaystyleenum.md)
 
-[**Resultendisplaystyle**](-search-2x-resultsdisplaystyle.md)
+[**ResultsDisplayStyle**](-search-2x-resultsdisplaystyle.md)
 
-[**ViewContent**](-search-2x-viewcontents.md)
+[**ViewContents**](-search-2x-viewcontents.md)
 
  
 

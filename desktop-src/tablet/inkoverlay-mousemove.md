@@ -1,19 +1,19 @@
 ---
-description: Tritt auf, wenn der Mauszeiger über das InkCollector-oder InkOverlay-Objekt bewegt wird.
+description: 'InkOverlay.MouseMove-Ereignis: Tritt auf, wenn der Mauszeiger über das InkCollector- oder InkOverlay-Objekt bewegt wird.'
 ms.assetid: b25aeead-9fb1-4221-82fa-ce2d81f5fed8
-title: InkOverlay. moutarmove-Ereignis (msink AUT. h)
+title: InkOverlay.MouseMove-Ereignis (Msinkaut.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a9ddefd5f3b3f75b03488f74bdbd4aee222a89d9
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5f8290a11b00dcf97b3f3d8568ebe9890f715454
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104218050"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108116908"
 ---
-# <a name="inkoverlaymousemove-event"></a>InkOverlay. moutarmove-Ereignis
+# <a name="inkoverlaymousemove-event"></a>InkOverlay.MouseMove-Ereignis
 
-Tritt auf, wenn der Mauszeiger über das [**InkCollector**](inkcollector-class.md) -oder [**InkOverlay**](inkoverlay-class.md) -Objekt bewegt wird.
+Tritt ein, wenn der Mauszeiger über das [**InkCollector-**](inkcollector-class.md) oder [**InkOverlay-Objekt**](inkoverlay-class.md) bewegt wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -34,28 +34,28 @@ void MouseMove(
 
 <dl> <dt>
 
-*Schaltfläche* \[ in\]
+*Schaltfläche* \[ In\]
 </dt> <dd>
 
-Die Maustaste, die gedrückt wurde.
+Die gedrückte Maustaste.
 
 </dd> <dt>
 
-*UMSCHALT* \[ in\]
+*Umschalten* \[ In\]
 </dt> <dd>
 
 Der Zustand der UMSCHALTTASTE.
 
 </dd> <dt>
 
-*px* \[ in\]
+*pX* \[ In\]
 </dt> <dd>
 
 Die x-Koordinate eines Mausklicks in Pixel.
 
 </dd> <dt>
 
-*pY* \[ in\]
+*pY* \[ In\]
 </dt> <dd>
 
 Die y-Koordinate eines Mausklicks in Pixel.
@@ -65,7 +65,7 @@ Die y-Koordinate eines Mausklicks in Pixel.
 *Abbrechen* \[ in, out\]
 </dt> <dd>
 
-Ob das Ereignis für das übergeordnete Steuerelement abgebrochen werden soll. Der Standardwert ist **false**. er gibt an, dass das Ereignis nicht abgebrochen werden soll.
+Gibt an, ob das Ereignis für das übergeordnete Steuerelement abgebrochen werden soll. Der Standardwert ist **FALSE,** der angibt, dass das Ereignis nicht abgebrochen werden soll.
 
 </dd> </dl>
 
@@ -76,41 +76,41 @@ Dieses Ereignis gibt keinen Wert zurück.
 ## <a name="remarks"></a>Bemerkungen
 
 > [!Note]  
-> Die Eigenschaften *px* und *pY* befinden sich in Pixel und nicht in den HIMETRIC-Einheiten, die dem frei Handbereich zugeordnet sind. Dies liegt daran, dass dieses Ereignis das verknüpfte Maus Ereignis einer Anwendung, für die ein Stift nicht gilt, ersetzt und dieser Anwendungstyp nur Pixel versteht.
+> Die Eigenschaften *pX* und *pY* sind in Pixel und nicht die HIMETRIC-Einheiten, die dem Freihandraum zugeordnet sind. Dies liegt daran, dass dieses Ereignis das zugehörige Mausereignis einer Anwendung ohne Stift ersetzt und diese Art von Anwendung nur Pixel versteht.
 
  
 
 > [!Note]  
-> Einige Steuerelemente basieren auf einer bestimmten Beziehung zwischen [**mouledown**](inkcollector-mousedown.md)-, [**mousermove**](inkcollector-mousemove.md)-und [**mouberup**](inkcollector-mouseup.md) -Ereignissen. Das Abbrechen einiger dieser Ereignisse kann zu unerwarteten Ergebnissen führen.
+> Einige Steuerelemente basieren auf einer bestimmten Beziehung zwischen [**MouseDown-,**](inkcollector-mousedown.md) [**MouseMove-**](inkcollector-mousemove.md)und [**MouseUp-Ereignissen.**](inkcollector-mouseup.md) Das Abbrechen einiger dieser Ereignisse kann unerwartete Ergebnisse haben.
 
  
 
-Diese Ereignismethode wird in den \_ \_ Dispatch-only-Schnittstellen iinkcollectorevents, iinkoverlayevents und \_ iinkpictureevents (Dispinterfaces) mit der ID DISPID \_ ipemousemove definiert.
+Diese Ereignismethode wird in den \_ Dispatch-Schnittstellen IInkCollectorEvents, \_ IInkOverlayEvents und \_ IInkPictureEvents (dispinterfaces) mit der ID DISPID \_ IPEMouseMove definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                       |
+| Unterstützte Mindestversion (Client)<br/> | Nur Desktop-Apps für Windows XP Tablet PC \[ Edition\]<br/>                                                       |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                           |
-| Header<br/>                   | <dl> <dt>Msink AUT. h (erfordert auch msink AUT \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Msinkaut.h (erfordert auch Msinkaut \_ i.c)</dt> </dl> |
 | Bibliothek<br/>                  | <dl> <dt>InkObj.dll</dt> </dl>                               |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**InkOverlay-Klasse**](inkoverlay-class.md)
 </dt> <dt>
 
-[**Inkmouerbutton-Enumeration**](/windows/desktop/api/msinkaut/ne-msinkaut-inkmousebutton)
+[**InkMouseButton-Enumeration**](/windows/desktop/api/msinkaut/ne-msinkaut-inkmousebutton)
 </dt> <dt>
 
-[**Inkshiftkeymodifierflags-Enumeration**](/windows/desktop/api/msinkaut/ne-msinkaut-inkshiftkeymodifierflags)
+[**InkShiftKeyModifierFlags-Enumeration**](/windows/desktop/api/msinkaut/ne-msinkaut-inkshiftkeymodifierflags)
 </dt> </dl>
 
  

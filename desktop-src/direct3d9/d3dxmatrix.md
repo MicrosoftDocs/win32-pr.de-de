@@ -1,7 +1,7 @@
 ---
-description: Eine 4X4-Matrix, die Methoden und Operator Überladungen enthält.
+description: 'D3DXMATRIX-Struktur (D3dx9math.h): Eine 4x4-Matrix, die Methoden und Operatorüberladungen enthält.'
 ms.assetid: 0911088b-50cf-4c4a-996e-351386fc359b
-title: D3DXMATRIX-Struktur (D3dx9math. h)
+title: D3DXMATRIX-Struktur (D3dx9math.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - d3dx9math.h
-ms.openlocfilehash: 2b09691ff27307e041a79b57e9d32c7e74e5eef1
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: fad44c13f7b856270fe6475f9e099f6e1714e064
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106355003"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108094218"
 ---
-# <a name="d3dxmatrix-structure-d3dx9mathh"></a>D3DXMATRIX-Struktur (D3dx9math. h)
+# <a name="d3dxmatrix-structure-d3dx9mathh"></a>D3DXMATRIX-Struktur (D3dx9math.h)
 
-Eine 4X4-Matrix, die Methoden und Operator Überladungen enthält.
+Eine 4x4-Matrix, die Methoden und Operatorüberladungen enthält.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,26 +39,26 @@ typedef struct D3DXMATRIX {
 
 <dl> <dt>
 
-**\_angesprochenen**
+**\_Ij**
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Die Komponente (i, j) der Matrix, bei der es sich um die Zeilennummer und j um die Spaltennummer handelt. 34 bedeutet beispielsweise, dass das \_ gleiche wie \[ ein ₃ ₄ \] , die Komponente in der dritten Zeile und vierten Spalte ist.
+Die Komponente (i, j) der Matrix, wobei i die Zeilennummer und j die Spaltennummer ist. 34 bedeutet z. B. dasselbe wie a₃₄ , die Komponente in der \_ dritten Zeile und vierten \[ \] Spalte.
 
 </dd> </dl>
 
 ## <a name="remarks"></a>Bemerkungen
 
-C-Programmierer können die D3DXMATRIX-Struktur nicht verwenden. Sie müssen die [**D3DMATRIX**](d3dmatrix.md) -Struktur verwenden. C++-Programmierer können überladene Konstruktoren und Zuweisungs-, unäre und binäre (einschließlich Gleichheits-) Operatoren nutzen.
+C-Programmierer können die D3DXMATRIX-Struktur nicht verwenden. Sie müssen die [**D3DMATRIX-Struktur**](d3dmatrix.md) verwenden. C++-Programmierer können überladene Konstruktoren und Zuweisungsoperatoren, unäre operatoren und binäre Operatoren (einschließlich Gleichheit) nutzen.
 
-In D3DX kann das \_ 34-Element einer Projektions Matrix keine negative Zahl sein. Wenn die Anwendung an diesem Speicherort einen negativen Wert verwenden muss, sollte Sie stattdessen die gesamte Projektions Matrix um-1 skalieren.
+In D3DX darf \_ das 34-Element einer Projektionsmatrix keine negative Zahl sein. Wenn Ihre Anwendung an dieser Position einen negativen Wert verwenden muss, sollte sie stattdessen die gesamte Projektionsmatrix um -1 skalieren.
 
 ### <a name="d3dxmatrix-extensions"></a>D3DXMATRIX-Erweiterungen
 
-**D3DXMATRIX** verfügt über die folgenden C++-Erweiterungen.
+**D3DXMATRIX verfügt** über die folgenden C++-Erweiterungen.
 
 
 ```
@@ -120,13 +120,13 @@ typedef struct _D3DMATRIX D3DXMATRIX, *LPD3DXMATRIX;
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------|----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3dx9math. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3dx9math.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

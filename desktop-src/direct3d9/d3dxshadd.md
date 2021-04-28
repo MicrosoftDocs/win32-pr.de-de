@@ -1,7 +1,7 @@
 ---
-description: 'Fügt zwei kugelförmige (SH) Vektoren hinzu. Anders ausgedrückt: Pout \[ i \] = PA \[ i \] + PB \[ i \] .'
+description: 'D3DXSHAdd-Funktion (D3dx9math.h) – Fügt zwei SH-Vektoren (PhericalIcalIcal, Pherical- Enzyprischen) hinzu; anders ausgedrückt: pOut \[ i \] = pA i + \[ \] pB i \[ \] .'
 ms.assetid: 12775c90-ed9d-4931-a449-2571816dd079
-title: D3DXSHAdd-Funktion (D3dx9math. h)
+title: D3DXSHAdd-Funktion (D3dx9math.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 6b8f65a14cf745e8b378728d4fa6e0a234284d2d
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 7333d1803b9f7ea7b056ff78ffd053bd6086184b
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106361856"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108117958"
 ---
-# <a name="d3dxshadd-function-d3dx9mathh"></a>D3DXSHAdd-Funktion (D3dx9math. h)
+# <a name="d3dxshadd-function-d3dx9mathh"></a>D3DXSHAdd-Funktion (D3dx9math.h)
 
-Fügt zwei kugelförmige (SH) Vektoren hinzu. Anders ausgedrückt: Pout \[ i \] = PA \[ i \] + PB \[ i \] .
+Fügt zwei SH-Vektoren (PhericalIcal) hinzu. anders ausgedrückt: pOut \[ i \] = pA i + \[ \] pB i \[ \] .
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,37 +43,37 @@ FLOAT* D3DXSHAdd(
 
 <dl> <dt>
 
-*Pout* \[ vorgenommen\]
+*pOut* \[ out\]
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)\***
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)\***
 
-Zeiger auf SH-Ausgabe Koeffizienten. Die Auswertung generiert die Koeffizienten der Bestellung. Siehe Hinweise.
+Zeiger auf SH-Ausgabekoeffizienten. Die Auswertung generiert Order Koeffizienten. Siehe Hinweise.
 
 </dd> <dt>
 
-*Reihenfolge* \[ in\]
+*Bestellung* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Die Reihenfolge der SH-Evaluierung. Muss im Bereich von [D3DXSH \_ minorder](other-d3dx-constants.md) bis D3DXSH \_ maxorder (einschließlich) liegen. Die Auswertung generiert die Koeffizienten der Bestellung. Der Bewertungs Grad ist Order-1.
+Reihenfolge der SH-Auswertung. Muss im Bereich von [D3DXSH \_ MINORDER](other-d3dx-constants.md) bis D3DXSH \_ MAXORDER (einschließlich) liegen. Die Auswertung generiert Order Koeffizienten. Der Grad der Auswertung ist Order - 1.
 
 </dd> <dt>
 
-*PA* \[ in\]
+*pA* \[ In\]
 </dt> <dd>
 
-Typ: Konstante **[**float**](../winprog/windows-data-types.md) \***
+Typ: **const [**FLOAT**](../winprog/windows-data-types.md) \***
 
-Zeiger zum ersten SH-Vektor.
+Zeiger auf den ersten SH-Vektor.
 
 </dd> <dt>
 
-*PB* \[ in\]
+*pB* \[ In\]
 </dt> <dd>
 
-Typ: Konstante **[**float**](../winprog/windows-data-types.md) \***
+Typ: **const [**FLOAT**](../winprog/windows-data-types.md) \***
 
 Zeiger auf den zweiten SH-Vektor.
 
@@ -81,36 +81,36 @@ Zeiger auf den zweiten SH-Vektor.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Typ: **[ **float**](../winprog/windows-data-types.md)\***
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)\***
 
-Zeiger auf SH-Ausgabe Koeffizienten.
+Zeiger auf SH-Ausgabekoeffizienten.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Jeder Koeffizient der Basis Funktion "ylm" wird am Speicherort l ² + m + l gespeichert, wobei Folgendes gilt:
+Jeder Koeffizient der Basisfunktion "Ylm" wird an der Speicherposition ljs + m + l gespeichert, wobei Folgendes gilt:
 
--   l ist der Grad der Basis Funktion.
--   m ist der Basis Funktions Index für den angegebenen l-Wert und reicht von-l bis l (einschließlich).
+-   l ist der Grad der Basisfunktion.
+-   m ist der Basisfunktionsindex für den angegebenen l-Wert und reicht von -l bis l einschließlich.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9math. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3dx9math.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [Mathematische Funktionen](dx9-graphics-reference-d3dx-functions-math.md)
 </dt> <dt>
 
-[Voraus berechnete Strahlungs Übertragung (Direct3D 9)](precomputed-radiance-transfer.md)
+[Vorausberechnen der Übertragungsstärke (Direct3D 9)](precomputed-radiance-transfer.md)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
-description: Diese Klasse ist die übergeordnete Klasse für Registrierungs Ereignisse. Die folgende Syntax wird durch den MOF-Code vereinfacht.
+description: 'Registrierungsklasse: Diese Klasse ist die übergeordnete Klasse für Registrierungsereignisse. Die folgende Syntax wird durch MOF-Code vereinfacht.'
 ms.assetid: 362d7653-1ba0-45b7-80f3-0fccca0badf1
-title: Registrierungs Klasse
+title: Registrierungsklasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,18 +12,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 6799756ebfe573fad6a32a191e79c3c2b745f563
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 23cd59e8d6afeb7578bd65625741caaae8156066
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104129696"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108106128"
 ---
-# <a name="registry-class"></a>Registrierungs Klasse
+# <a name="registry-class"></a>Registrierungsklasse
 
-Diese Klasse ist die übergeordnete Klasse für Registrierungs Ereignisse.
+Diese Klasse ist die übergeordnete Klasse für Registrierungsereignisse.
 
-Die folgende Syntax wird durch den MOF-Code vereinfacht.
+Die folgende Syntax wird durch MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -36,49 +36,49 @@ class Registry : MSNT_SystemTrace
 
 ## <a name="members"></a>Member
 
-Die **Registry** -Klasse definiert keine Member.
+Die **Registry-Klasse** definiert keine Member.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Um Registrierungs Ereignisse in einer NT-Kernel Protokollierungs Sitzung zu aktivieren, geben Sie die **ereignisablaufverfolgungsflag- \_ \_ \_ Registrierung** im **enableflags** -Member einer [**Ereignis Ablauf \_ Verfolgungs \_ Eigenschaften**](/windows/win32/api/evntrace/ns-evntrace-event_trace_properties) -Struktur beim Aufrufen der [**starttrace**](/windows/win32/api/evntrace/nf-evntrace-starttracea) -Funktion an
+Um Registrierungsereignisse in einer NT-Kernelprotokollierungssitzung zu aktivieren, geben Sie die **EVENT \_ TRACE FLAG \_ \_ REGISTRY** im **EnableFlags-Member** einer [**EVENT TRACE \_ \_ PROPERTIES-Struktur**](/windows/win32/api/evntrace/ns-evntrace-event_trace_properties) an, wenn Sie die [**StartTrace-Funktion**](/windows/win32/api/evntrace/nf-evntrace-starttracea) aufrufen.
 
-Consumer der Ereignis Ablauf Verfolgung können eine spezielle Verarbeitung für Registrierungs Ereignisse implementieren, indem Sie die Funktion [**settracecallback**](/windows/win32/api/evntrace/nf-evntrace-settracecallback) aufrufen und [**registryguid**](nt-kernel-logger-constants.md) als *pguid* -Parameter angeben. Verwenden Sie die folgenden Ereignis Typen, um das tatsächliche Registrierungs Ereignis beim Verarbeiten von Ereignissen zu identifizieren.
+Ereignisverfolgungsverbraucher können eine spezielle Verarbeitung für Registrierungsereignisse implementieren, indem sie die [**SetTraceCallback-Funktion**](/windows/win32/api/evntrace/nf-evntrace-settracecallback) aufrufen und [**RegistryGuid**](nt-kernel-logger-constants.md) als *pGuid-Parameter* angeben. Verwenden Sie die folgenden Ereignistypen, um das tatsächliche Registrierungsereignis beim Nutzen von Ereignissen zu identifizieren.
 
 
 
 | Ereignistyp                                                                       | BESCHREIBUNG                                                                                                                                                                                                           |
 |----------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Ereignis \_ Ablaufverfolgungstyp \_ \_ regcreate**(Ereignistyp Wert ist 10)<br/>             | Schlüsselereignis erstellen. Die " [**Registry \_ TypeGroup1**](registry-typegroup1.md) MOF"-Klasse definiert die Ereignisdaten für dieses Ereignis.                                                                                            |
-| **Ereignis \_ Ablaufverfolgungstyp \_ \_ RegDelete**(Ereignistyp Wert ist 12)<br/>             | Schlüsselereignis löschen. Die " [**Registry \_ TypeGroup1**](registry-typegroup1.md) MOF"-Klasse definiert die Ereignisdaten für dieses Ereignis.                                                                                            |
-| **Ereignis \_ Ablaufverfolgungstyp \_ \_ RegDeleteValue**(Ereignistyp Wert ist 15)<br/>        | Ereignis zum Löschen von Werten. Die " [**Registry \_ TypeGroup1**](registry-typegroup1.md) MOF"-Klasse definiert die Ereignisdaten für dieses Ereignis.                                                                                          |
-| **Ereignis \_ Ablaufverfolgungstyp \_ \_ regenenumeratekey**(Ereignistyp Wert ist 17)<br/>       | Listet das Schlüsselereignis auf. Die " [**Registry \_ TypeGroup1**](registry-typegroup1.md) MOF"-Klasse definiert die Ereignisdaten für dieses Ereignis.                                                                                         |
-| **Ereignis \_ Ablaufverfolgungstyp \_ \_ regenenumeratevaluekey**(Ereignistyp Wert ist 18)<br/>  | Enumerate Value Key-Ereignis. Die " [**Registry \_ TypeGroup1**](registry-typegroup1.md) MOF"-Klasse definiert die Ereignisdaten für dieses Ereignis.                                                                                   |
-| **Ereignis \_ Ablaufverfolgungstyp \_ \_ regleerung**(Ereignistyp Wert ist 21)<br/>              | Schlüsselereignis leeren. Die " [**Registry \_ TypeGroup1**](registry-typegroup1.md) MOF"-Klasse definiert die Ereignisdaten für dieses Ereignis.                                                                                             |
-| **Ereignis \_ Ablaufverfolgungstyp \_ \_ regkcbdmp**(Ereignistyp Wert ist 22)<br/>             | Schlüsselereignis erstellen. Wird generiert, wenn ein Registrierungsvorgang Handles anstelle von Zeichen folgen verwendet, um auf Unterschlüssel zu verweisen. Die " [**Registry \_ TypeGroup1**](registry-typegroup1.md) MOF"-Klasse definiert die Ereignisdaten für dieses Ereignis. |
-| **Ereignis \_ Ablaufverfolgungstyp \_ \_ regopen**(Ereignistyp Wert ist 11)<br/>               | Öffnen Sie das Schlüsselereignis. Die " [**Registry \_ TypeGroup1**](registry-typegroup1.md) MOF"-Klasse definiert die Ereignisdaten für dieses Ereignis.                                                                                              |
-| **Ereignis \_ Ablaufverfolgungstyp \_ \_ regquery**(Ereignistyp Wert ist 13)<br/>              | Abfrage Schlüsselereignis. Die " [**Registry \_ TypeGroup1**](registry-typegroup1.md) MOF"-Klasse definiert die Ereignisdaten für dieses Ereignis.                                                                                             |
-| **Ereignis \_ Ablaufverfolgungstyp \_ \_ regquerymultiplevalue**(Ereignistyp Wert ist 19)<br/> | Ereignisse mit mehreren Werten Abfragen. Die " [**Registry \_ TypeGroup1**](registry-typegroup1.md) MOF"-Klasse definiert die Ereignisdaten für dieses Ereignis.                                                                                  |
-| **Ereignis \_ Ablaufverfolgungstyp \_ \_ RegQueryValue**(Ereignistyp Wert ist 16)<br/>         | Abfrage Wert Ereignis. Die " [**Registry \_ TypeGroup1**](registry-typegroup1.md) MOF"-Klasse definiert die Ereignisdaten für dieses Ereignis.                                                                                           |
-| **Ereignis \_ Ablaufverfolgungstyp \_ \_ regsetinformation**(Ereignistyp Wert ist 20)<br/>     | Legen Sie das Informations Ereignis fest. Die " [**Registry \_ TypeGroup1**](registry-typegroup1.md) MOF"-Klasse definiert die Ereignisdaten für dieses Ereignis.                                                                                       |
-| **Ereignis \_ Ablaufverfolgungstyp \_ \_ RegSetValue**(Ereignistyp Wert ist 14)<br/>           | Legen Sie ein Wert Ereignis fest. Die " [**Registry \_ TypeGroup1**](registry-typegroup1.md) MOF"-Klasse definiert die Ereignisdaten für dieses Ereignis.                                                                                             |
-| Ereignistyp Wert, 23                                                             | Schlüsselereignis löschen. Wird generiert, wenn ein Registrierungsvorgang Handles anstelle von Zeichen folgen verwendet, um auf Unterschlüssel zu verweisen. Die " [**Registry \_ TypeGroup1**](registry-typegroup1.md) MOF"-Klasse definiert die Ereignisdaten für dieses Ereignis. |
-| Ereignistyp Wert, 24                                                             | Listet die Registrierungsschlüssel auf, die am Anfang der Sitzung geöffnet sind. Die " [**Registry \_ TypeGroup1**](registry-typegroup1.md) MOF"-Klasse definiert die Ereignisdaten für dieses Ereignis.                                           |
-| Ereignistyp Wert, 25                                                             | Listet die Registrierungsschlüssel auf, die am Ende der Sitzung geöffnet sind. Die " [**Registry \_ TypeGroup1**](registry-typegroup1.md) MOF"-Klasse definiert die Ereignisdaten für dieses Ereignis.                                                  |
-| Ereignistyp Wert, 26                                                             | Die " [**Registry \_ TypeGroup1**](registry-typegroup1.md) MOF"-Klasse definiert die Ereignisdaten für dieses Ereignis.                                                                                                              |
-| Ereignistyp Wert, 27                                                             | Öffnen Sie das Schlüsselereignis. Die " [**Registry \_ TypeGroup1**](registry-typegroup1.md) MOF"-Klasse definiert die Ereignisdaten für dieses Ereignis.                                                                                              |
+| **EVENT \_ TRACE \_ TYPE \_ REGCREATE**(Ereignistypwert ist 10)<br/>             | Erstellen sie ein Schlüsselereignis. Die [**\_ MOF-Klasse Registry TypeGroup1**](registry-typegroup1.md) definiert die Ereignisdaten für dieses Ereignis.                                                                                            |
+| **EVENT \_ TRACE \_ TYPE \_ REGDELETE**(Ereignistypwert ist 12)<br/>             | Löschen sie das Schlüsselereignis. Die [**\_ MOF-Klasse Registry TypeGroup1**](registry-typegroup1.md) definiert die Ereignisdaten für dieses Ereignis.                                                                                            |
+| **EVENT \_ TRACE \_ TYPE \_ REGDELETEVALUE**(Ereignistypwert ist 15)<br/>        | Löschen eines Wertereignis. Die [**\_ MOF-Klasse Registry TypeGroup1**](registry-typegroup1.md) definiert die Ereignisdaten für dieses Ereignis.                                                                                          |
+| **EVENT \_ TRACE \_ TYPE \_ REGENUMERATEKEY**(Ereignistypwert ist 17)<br/>       | Enumerate key event (Schlüsselereignis aufzählen). Die [**\_ MOF-Klasse Registry TypeGroup1**](registry-typegroup1.md) definiert die Ereignisdaten für dieses Ereignis.                                                                                         |
+| **EVENT \_ TRACE \_ TYPE \_ REGENUMERATEVALUEKEY**(Ereignistypwert ist 18)<br/>  | Aufzählen des Schlüsselereigniswerts. Die [**\_ MOF-Klasse Registry TypeGroup1**](registry-typegroup1.md) definiert die Ereignisdaten für dieses Ereignis.                                                                                   |
+| **EVENT \_ TRACE \_ TYPE \_ REGFLUSH**(Ereignistypwert ist 21)<br/>              | Ereignis zum Leeren des Schlüssels. Die [**\_ MOF-Klasse Registry TypeGroup1**](registry-typegroup1.md) definiert die Ereignisdaten für dieses Ereignis.                                                                                             |
+| **EVENT \_ TRACE \_ TYPE \_ REGKCBDMP**(Ereignistypwert ist 22)<br/>             | Erstellen sie ein Schlüsselereignis. Wird generiert, wenn ein Registrierungsvorgang Handles anstelle von Zeichenfolgen verwendet, um auf Unterschlüssel zu verweisen. Die [**\_ MOF-Klasse Registry TypeGroup1**](registry-typegroup1.md) definiert die Ereignisdaten für dieses Ereignis. |
+| **EVENT \_ TRACE \_ TYPE \_ REGOPEN**(Ereignistypwert ist 11)<br/>               | Open Key-Ereignis. Die [**\_ MOF-Klasse Registry TypeGroup1**](registry-typegroup1.md) definiert die Ereignisdaten für dieses Ereignis.                                                                                              |
+| **EVENT \_ TRACE \_ TYPE \_ REGQUERY**(Ereignistypwert ist 13)<br/>              | Abfrageschlüsselereignis. Die [**\_ MOF-Klasse Registry TypeGroup1**](registry-typegroup1.md) definiert die Ereignisdaten für dieses Ereignis.                                                                                             |
+| **EVENT \_ TRACE \_ TYPE \_ REGQUERYMULTIPLEVALUE**(Ereignistypwert ist 19)<br/> | Abfragen eines Ereignisses mit mehreren Werts. Die [**MOF-Klasse Registry \_ TypeGroup1**](registry-typegroup1.md) definiert die Ereignisdaten für dieses Ereignis.                                                                                  |
+| **EVENT \_ TRACE \_ TYPE \_ REGQUERYVALUE**(Ereignistypwert ist 16)<br/>         | Abfragewertereignis. Die [**MOF-Klasse Registry \_ TypeGroup1**](registry-typegroup1.md) definiert die Ereignisdaten für dieses Ereignis.                                                                                           |
+| **EVENT \_ TRACE \_ TYPE \_ REGSETINFORMATION**(Ereignistypwert ist 20)<br/>     | Ereignis zum Festlegen von Informationen. Die [**MOF-Klasse Registry \_ TypeGroup1**](registry-typegroup1.md) definiert die Ereignisdaten für dieses Ereignis.                                                                                       |
+| **EVENT \_ TRACE \_ TYPE \_ REGSETVALUE**(Ereignistypwert ist 14)<br/>           | Festlegen des Wertereignisses. Die [**MOF-Klasse Registry \_ TypeGroup1**](registry-typegroup1.md) definiert die Ereignisdaten für dieses Ereignis.                                                                                             |
+| Ereignistypwert, 23                                                             | Delete Key-Ereignis. Wird generiert, wenn ein Registrierungsvorgang Handles anstelle von Zeichenfolgen verwendet, um auf Unterschlüssel zu verweisen. Die [**MOF-Klasse Registry \_ TypeGroup1**](registry-typegroup1.md) definiert die Ereignisdaten für dieses Ereignis. |
+| Ereignistypwert, 24                                                             | Listet die Registrierungsschlüssel auf, die am Anfang der Sitzung geöffnet sind. Die [**MOF-Klasse Registry \_ TypeGroup1**](registry-typegroup1.md) definiert die Ereignisdaten für dieses Ereignis.                                           |
+| Ereignistypwert, 25                                                             | Listet die Registrierungsschlüssel auf, die am Ende der Sitzung geöffnet sind. Die [**MOF-Klasse Registry \_ TypeGroup1**](registry-typegroup1.md) definiert die Ereignisdaten für dieses Ereignis.                                                  |
+| Ereignistypwert, 26                                                             | Die [**MOF-Klasse Registry \_ TypeGroup1**](registry-typegroup1.md) definiert die Ereignisdaten für dieses Ereignis.                                                                                                              |
+| Ereignistypwert, 27                                                             | Open Key-Ereignis. Die [**MOF-Klasse Registry \_ TypeGroup1**](registry-typegroup1.md) definiert die Ereignisdaten für dieses Ereignis.                                                                                              |
 
 
 
  
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
@@ -86,16 +86,16 @@ Consumer der Ereignis Ablauf Verfolgung können eine spezielle Verarbeitung für
 
 <dl> <dt>
 
-[**MSNT \_ systemtrace**](msnt-systemtrace.md)
+[**MSNT \_ SystemTrace**](msnt-systemtrace.md)
 </dt> <dt>
 
-[**Registrierungs \_ TypeGroup1**](registry-typegroup1.md)
+[**\_RegistrierungstypGruppe1**](registry-typegroup1.md)
 </dt> <dt>
 
-[**Registrierung \_ v0**](registry-v0.md)
+[**Registrierung \_ V0**](registry-v0.md)
 </dt> <dt>
 
-[**Registrierung \_ v1**](registry-v1.md)
+[**Registrierung \_ V1**](registry-v1.md)
 </dt> </dl>
 
  
