@@ -1,19 +1,19 @@
 ---
-description: Diese Vorlage wird pro Mesh instanziiert und enthält Informationen darüber, welche Scheitel Punkte im Mesh Duplikate zueinander sind.
+description: 'FaceAdencyency: Diese Vorlage wird pro Gitternetz instanziiert und enthält Informationen darüber, welche Scheitelpunkte im Netz Duplikate voneinander sind.'
 ms.assetid: dd30b3d6-767a-4d87-9b5c-1324738bcbb2
-title: Facefaceency
+title: FaceAdencyency
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1a2fd0f0b2bb328aa8b5ec39e7481c0b7fd766fc
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 0508b822f45c6796a793dc4b17caeaa1e30b4c3d
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "103745569"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108090508"
 ---
-# <a name="faceadjacency"></a>Facefaceency
+# <a name="faceadjacency"></a>FaceAdencyency
 
-Diese Vorlage wird pro Mesh instanziiert und enthält Informationen darüber, welche Scheitel Punkte im Mesh Duplikate zueinander sind. Dupliziert das Ergebnis, wenn sich ein Scheitelpunkt auf einer Glättungs Gruppe oder Material Grenze befindet. Der Zweck dieser Vorlage besteht darin, dem Lade Modul zu gestatten, zu bestimmen, welche Scheitel Punkte, die verschiedene Peripherie Parameter aufweisen, tatsächlich die gleichen vertexen im Modell sind. Bestimmte Anwendungen (z. b. die Mesh-Vereinfachung) können diese Informationen nutzen.
+Diese Vorlage wird pro Gitternetz instanziiert und enthält Informationen darüber, welche Scheitelpunkte im Netz Duplikate voneinander sind. Duplikate ergeben sich, wenn sich ein Scheitelpunkt an einer Glättungsgruppe oder Materialgrenze befindet. Der Zweck dieser Vorlage besteht darin, dem Ladeprogramm zu ermöglichen, zu bestimmen, welche Scheitelpunkte mit unterschiedlichen Peripherieparametern tatsächlich die gleichen Scheitelpunkte im Modell sind. Bestimmte Anwendungen (z. B. Mesh-Vereinfachung) können diese Informationen nutzen.
 
 ``` syntax
 template FaceAdjacency
@@ -26,10 +26,10 @@ template FaceAdjacency
 
 Hierbei gilt:
 
--   nindizes: Anzahl der Indizes im Mesh.
--   Indizes \[ nindizes \] -Array von Indizes.
+-   nIndices: Anzahl der Indizes im Gitternetz.
+-   indizes \[ nIndices: \] Array von Indizes.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

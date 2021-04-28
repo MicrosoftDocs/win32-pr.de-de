@@ -1,8 +1,8 @@
 ---
-description: Ändert die Sicherheits Berechtigungen für die im Objekt Pfad angegebene Datei für den logischen Verzeichniseintrag.
+description: 'ChangeSecurityPermissions-Methode der Win32_Directory-Klasse: Ändert die Sicherheitsberechtigungen für die im Objektpfad angegebene logische Verzeichniseintragsdatei.'
 ms.assetid: de2b3269-61e0-484c-8bea-00578422491f
 ms.tgt_platform: multiple
-title: Changesecurrityberechtigungs-Methode der Win32_Directory-Klasse
+title: ChangeSecurityPermissions-Methode der Win32_Directory-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,18 +14,18 @@ api_type:
 - COM
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: d5f7b82f37fcbf7aeab541351752f8f6a75816f3
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 98c6026497496ab758c71a8a0403557ad2cacc7f
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104482790"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108091058"
 ---
-# <a name="changesecuritypermissions-method-of-the-win32_directory-class"></a>Changesecurrityberechtigungs-Methode der Win32- \_ Verzeichnis Klasse
+# <a name="changesecuritypermissions-method-of-the-win32_directory-class"></a>ChangeSecurityPermissions-Methode der Win32 \_ Directory-Klasse
 
-Die **WMI-Klassenmethode changesecurrityberechtigungs** Änderungen ändern die Sicherheits Berechtigungen für die im Objekt Pfad angegebene Datei für den logischen Verzeichniseintrag. Wenn es sich bei der logischen Datei um ein Verzeichnis handelt, ist **changesekurityberechtigungen** rekursiv und ändert die Sicherheits Berechtigungen aller Dateien und Unterverzeichnisse, die im Verzeichnis enthalten sind. Die **changesecurrityberechtigungs** Klasse gibt einen ganzzahligen Wert von 0 (null) zurück, wenn die Berechtigungen geändert werden, und eine andere Zahl, um einen Fehler anzugeben.
+Die **WMI-Klassenmethode ChangeSecurityPermissions** ändert die Sicherheitsberechtigungen für die im Objektpfad angegebene logische Verzeichniseintragsdatei. Wenn die logische Datei ein Verzeichnis ist, ist **ChangeSecurityPermissions** rekursiv und ändert die Sicherheitsberechtigungen aller Dateien und Unterverzeichnisse, die das Verzeichnis enthält. Die **ChangeSecurityPermissions-Klasse** gibt einen ganzzahligen Wert von 0 (null) zurück, wenn die Berechtigungen geändert werden, und eine andere Zahl, um einen Fehler anzugeben.
 
-In diesem Thema wird die MOF-Syntax (Managed Object Format) verwendet. Weitere Informationen zum Verwenden dieser Methode finden Sie unter [Aufrufen einer Methode](/windows/desktop/WmiSdk/calling-a-method).
+In diesem Thema wird die MOF-Syntax (Managed Object Format) verwendet. Weitere Informationen zur Verwendung dieser Methode finden Sie unter [Aufrufen einer Methode.](/windows/desktop/WmiSdk/calling-a-method)
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,17 +43,17 @@ uint32 ChangeSecurityPermissions(
 
 <dl> <dt>
 
-*SecurityDescriptor* \[ in\]
+*SecurityDescriptor* \[ In\]
 </dt> <dd>
 
-Ein Ausdruck, der zu einer Instanz von [**Win32 \_ securityDescriptor**](/previous-versions/windows/desktop/secrcw32prov/win32-securitydescriptor)aufgelöst wird. Dieser Deskriptor enthält neue Sicherheits Berechtigungen für die Instanz von [**Win32 \_ Page File**](win32-pagefile.md).
+Ausdruck, der in eine Instanz von [**Win32 \_ SecurityDescriptor**](/previous-versions/windows/desktop/secrcw32prov/win32-securitydescriptor)aufgelöst wird. Dieser Deskriptor enthält neue Sicherheitsberechtigungen für die Instanz von [**Win32 \_ PageFile**](win32-pagefile.md).
 
 </dd> <dt>
 
-*Option* \[ in\]
+*Option* \[ In\]
 </dt> <dd>
 
-Sicherheits Berechtigung, die geändert werden soll. Wenn Sie z. b. den Besitzer und die DACL-Sicherheit (die Zugriffs Steuerungs Liste) ändern möchten, verwenden Sie Folgendes:
+Zu ändernde Sicherheitsberechtigungen. Verwenden Sie beispielsweise Folgendes, um die Sicherheit der Besitzer- und der Dacl-Zugriffssteuerungsliste (Discretionary Access Control List, DACL) zu ändern:
 
 `Option = 1 + 4`
 
@@ -65,7 +65,7 @@ Oder
 
 <span id="CHANGE_OWNER_SECURITY_INFORMATION"></span><span id="change_owner_security_information"></span>
 
-<span id="CHANGE_OWNER_SECURITY_INFORMATION"></span><span id="change_owner_security_information"></span>**Ändern \_ \_Sicherheits \_ Informationen** für den Besitzer (1)
+<span id="CHANGE_OWNER_SECURITY_INFORMATION"></span><span id="change_owner_security_information"></span>**CHANGE \_ \_ \_ BESITZERSICHERHEITSINFORMATIONEN** (1)
 
 
 </dt> <dd>
@@ -76,7 +76,7 @@ Oder
 
 <span id="CHANGE_GROUP_SECURITY_INFORMATION"></span><span id="change_group_security_information"></span>
 
-<span id="CHANGE_GROUP_SECURITY_INFORMATION"></span><span id="change_group_security_information"></span>**Ändern \_ Gruppen \_ Sicherheits \_ Informationen** (2)
+<span id="CHANGE_GROUP_SECURITY_INFORMATION"></span><span id="change_group_security_information"></span>**CHANGE \_ \_ \_ GRUPPENSICHERHEITSINFORMATIONEN** (2)
 
 
 </dt> <dd>
@@ -87,23 +87,23 @@ Oder
 
 <span id="CHANGE_DACL_SECURITY_INFORMATION"></span><span id="change_dacl_security_information"></span>
 
-<span id="CHANGE_DACL_SECURITY_INFORMATION"></span><span id="change_dacl_security_information"></span>**Ändern \_ DACL- \_ Sicherheits \_ Informationen** (4)
+<span id="CHANGE_DACL_SECURITY_INFORMATION"></span><span id="change_dacl_security_information"></span>**CHANGE \_ \_DACL-SICHERHEITSINFORMATIONEN \_** (4)
 
 
 </dt> <dd>
 
-Ändern Sie die freigegebene DACL der logischen Datei.
+Ändern Sie die DACL der logischen Datei.
 
 </dd> <dt>
 
 <span id="CHANGE_SACL_SECURITY_INFORMATION"></span><span id="change_sacl_security_information"></span>
 
-<span id="CHANGE_SACL_SECURITY_INFORMATION"></span><span id="change_sacl_security_information"></span>**Ändern \_ SACL- \_ Sicherheits \_ Informationen** (8)
+<span id="CHANGE_SACL_SECURITY_INFORMATION"></span><span id="change_sacl_security_information"></span>**CHANGE \_ \_SACL-SICHERHEITSINFORMATIONEN \_** (8)
 
 
 </dt> <dd>
 
-Ändern Sie die System Zugriffs Steuerungs Liste (SACL) der logischen Datei.
+Ändern Sie die Systemzugriffssteuerungsliste (SACL) der logischen Datei.
 
 </dd> </dl> </dd> </dl>
 
@@ -127,16 +127,16 @@ Die Anforderung ist erfolgreich.
 
 2
 
-Zugriff verweigert.“
+Der Zugriff wird verweigert.
 
 </dd> <dt>
 
-**Nicht spezifizierter Fehler**
+**Nicht angegebener Fehler**
 </dt> <dd>
 
 8
 
-Ein nicht angegebener Fehler ist aufgetreten.
+Es ist ein nicht angegebener Fehler aufgetreten.
 
 </dd> <dt>
 
@@ -149,7 +149,7 @@ Der angegebene Name ist ungültig.
 
 </dd> <dt>
 
-**Objekt ist bereits vorhanden.**
+**Objekt ist bereits vorhanden**
 </dt> <dd>
 
 10
@@ -194,12 +194,12 @@ Das Verzeichnis ist nicht leer.
 
 </dd> <dt>
 
-**Freigabe Verletzung**
+**Verletzung der Freigabe**
 </dt> <dd>
 
 15
 
-Eine Freigabe Verletzung ist aufgetreten.
+Es liegt ein Freigabeverstoß vor.
 
 </dd> <dt>
 
@@ -212,12 +212,12 @@ Die angegebene Startdatei ist ungültig.
 
 </dd> <dt>
 
-**Berechtigung nicht aufrechterhalten**
+**Nicht privileg**
 </dt> <dd>
 
 17
 
-Eine für den Vorgang erforderliche Berechtigung wird nicht aufrechterhalten.
+Für den Vorgang ist keine Berechtigung erforderlich.
 
 </dd> <dt>
 
@@ -234,24 +234,24 @@ Ein angegebener Parameter ist ungültig.
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [Betriebssystemklassen](/previous-versions//aa392727(v=vs.85))
 </dt> <dt>
 
-[**Win32- \_ Verzeichnis**](win32-directory.md)
+[**Win32-Verzeichnis \_**](win32-directory.md)
 </dt> </dl>
 
  

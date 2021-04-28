@@ -1,7 +1,7 @@
 ---
-description: Ruft den Scheitelpunkt Wert fester Funktion ab.
+description: 'ID3DXSkinInfo::GetFVF-Methode: Ruft den festen Vertexwert der Funktion ab.'
 ms.assetid: 9b80c4b9-2e5b-4965-99b9-ad6c459ef413
-title: 'ID3DXSkinInfo:: getf VF-Methode (D3DX9Mesh. h)'
+title: ID3DXSkinInfo::GetFVF-Methode (D3DX9Mesh.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 6d48cd9cea6efd6cb43e6da6877a7aaf42909c71
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 3415f86f778fbb6fb3592927277e399584bc49a9
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104354067"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108107158"
 ---
-# <a name="id3dxskininfogetfvf-method"></a>ID3DXSkinInfo:: getf VF-Methode
+# <a name="id3dxskininfogetfvf-method"></a>ID3DXSkinInfo::GetFVF-Methode
 
-Ruft den Scheitelpunkt Wert fester Funktion ab.
+Ruft den vertex-Wert der festen Funktion ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,31 +42,31 @@ Diese Methode hat keine Parameter.
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
-Gibt die flexiblen Vertexformatcodes (FVF) zurück.
+Gibt die Codes des flexiblen Vertexformats (FVF) zurück.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Diese Methode kann 0 zurückgeben, wenn das Vertex-Format nicht direkt einem FVF-Code zugeordnet werden kann. Dies geschieht bei einem Mesh, das aus einer Scheitelpunkt Deklaration erstellt wurde, die nicht die gleiche Reihenfolge und dieselben Elemente hat, die von den f
+Diese Methode kann 0 zurückgeben, wenn das Scheitelpunktformat nicht direkt einem FVF-Code zugeordnet werden kann. Dies tritt bei einem Gitternetz auf, das aus einer Scheitelpunktdeklaration erstellt wurde, die nicht die gleiche Reihenfolge und dieselben Elemente aufwies, die von den FVF-Codes unterstützt werden.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Mesh. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX9Mesh.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [ID3DXSkinInfo](id3dxskininfo.md)
 </dt> <dt>
 
-[**ID3DXSkinInfo:: setf VF**](id3dxskininfo--setfvf.md)
+[**ID3DXSkinInfo::SetFVF**](id3dxskininfo--setfvf.md)
 </dt> </dl>
 
  

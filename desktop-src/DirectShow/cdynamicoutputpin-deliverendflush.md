@@ -1,7 +1,7 @@
 ---
-description: Die deliverendflush-Methode fordert die verbundene Eingabe-PIN an, um einen Leerungs Vorgang zu beenden.
+description: 'CDynamicOutputPin.DeliverEndFlush-Methode: Die DeliverEndFlush-Methode fordert den verbundenen Eingabepin an, um einen Leerungsvorgang zu beenden.'
 ms.assetid: e37bf06a-6cdc-4f14-bf2e-7a7d7004cff6
-title: Cdynamicoutputpin. deliverendflush-Methode (amfilter. h)
+title: CDynamicOutputPin.DeliverEndFlush-Methode (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 2666681dcd5637a8e919ced2c61d6536663d7b30
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: c8b6952ff50dc2266655c58bd5c2e1ed13105598
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367546"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108095708"
 ---
-# <a name="cdynamicoutputpindeliverendflush-method"></a>Cdynamicoutputpin. deliverendflush-Methode
+# <a name="cdynamicoutputpindeliverendflush-method"></a>CDynamicOutputPin.DeliverEndFlush-Methode
 
-Die- `DeliverEndFlush` Methode fordert die verbundene Eingabe-PIN an, um einen Leerungs Vorgang zu beenden.
+Die `DeliverEndFlush` -Methode fordert den verbundenen Eingabepin an, um einen Leerungsvorgang zu beenden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,28 +42,28 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt \_ bei Erfolg S OK oder einen **HRESULT** -Wert zurück, der die Ursache des Fehlers angibt.
+Gibt S \_ OK zurück, wenn erfolgreich, oder einen **HRESULT-Wert,** der die Ursache des Fehlers angibt.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Diese Methode überschreibt die [**cbaseoutputpin::D eliverendflush**](cbaseoutputpin-deliverendflush.md) -Methode. Das Ereignis [**cdynamicoutputpin:: m \_ hstopevent**](cdynamicoutputpin-m-hstopevent.md) wird zurückgesetzt.
+Diese Methode überschreibt die [**CBaseOutputPin::D eliverEndFlush-Methode.**](cbaseoutputpin-deliverendflush.md) Das Ereignis [**CDynamicOutputPin::m \_ hStopEvent**](cdynamicoutputpin-m-hstopevent.md) wird zurückgesetzt.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (streams.h enthalten)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cdynamicoutputpin-Klasse**](cdynamicoutputpin.md)
+[**CDynamicOutputPin-Klasse**](cdynamicoutputpin.md)
 </dt> </dl>
 
  

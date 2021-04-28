@@ -1,7 +1,7 @@
 ---
-description: Die GetTypeInfo-Methode ruft die Typinformationen für das-Objekt ab, die dann zum Abrufen der Typinformationen für eine Schnittstelle verwendet werden können.
+description: 'CBaseDispatch.GetTypeInfo-Methode: Die GetTypeInfo-Methode ruft die Typinformationen für das Objekt ab, die dann zum Abrufen der Typinformationen für eine Schnittstelle verwendet werden können.'
 ms.assetid: aa06b97c-541b-44fc-bdef-97fd1f014e85
-title: Cbasedispatch. gettypeingefo-Methode (ctlutil. h)
+title: CBaseDispatch.GetTypeInfo-Methode (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 1f63d79327d2f2bf2a60f06e0290aa34891e78ff
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: a9b1e21133b4fa561c743fefc6282c777b444e6f
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369694"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108120118"
 ---
-# <a name="cbasedispatchgettypeinfo-method"></a>Cbasedispatch. gettypeingefo-Methode
+# <a name="cbasedispatchgettypeinfo-method"></a>CBaseDispatch.GetTypeInfo-Methode
 
-Die- `GetTypeInfo` Methode ruft die Typinformationen für das-Objekt ab, die dann zum Abrufen der Typinformationen für eine Schnittstelle verwendet werden können.
+Die `GetTypeInfo` -Methode ruft die Typinformationen für das -Objekt ab, die dann verwendet werden können, um die Typinformationen für eine Schnittstelle abzurufen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,14 +48,14 @@ HRESULT GetTypeInfo(
 *riid* 
 </dt> <dd>
 
-Verweis auf einen Schnittstellen Bezeichner (IID), der die-Schnittstelle angibt.
+Verweis auf einen Schnittstellenbezeichner (IID), der die Schnittstelle angibt.
 
 </dd> <dt>
 
 *itinfo* 
 </dt> <dd>
 
-Typinformationen, die zurückgegeben werden. Muss Null sein.
+Geben Sie informationen ein, die sie zurückgeben. Muss Null sein.
 
 </dd> <dt>
 
@@ -69,21 +69,21 @@ Gebietsschemabezeichner
 *pptinfo* 
 </dt> <dd>
 
-Adresse einer Variablen, die einen **itypeingefo** -Zeiger empfängt.
+Adresse einer Variablen, die einen **ITypeInfo-Zeiger** empfängt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT** -Wert zurück. Die folgenden Werte sind möglich.
+Gibt einen **HRESULT-Wert** zurück. Die folgenden Werte sind möglich.
 
 
 
 | Rückgabecode                                                                                             | Beschreibung                                    |
 |---------------------------------------------------------------------------------------------------------|------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>                    | Erfolg.<br/>                            |
-| <dl> <dt>**E- \_ Zeiger**</dt> </dl>               | **Null** -Zeigerargument.<br/>          |
-| <dl> <dt>**Geben Sie \_ E \_ elementnotfound ein.**</dt> </dl> | Der *itinfo* -Parameter ist nicht 0 (null).<br/> |
+| <dl> <dt>**\_E-ZEIGER**</dt> </dl>               |  NULL-Zeigerargument.<br/>          |
+| <dl> <dt>**TYP \_ E \_ ELEMENTNOTFOUND**</dt> </dl> | Der *itinfo-Parameter* ist nicht 0 (null).<br/> |
 
 
 
@@ -91,24 +91,24 @@ Gibt einen **HRESULT** -Wert zurück. Die folgenden Werte sind möglich.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Diese Methode verhält sich wie die **IDispatch:: gettypeingefo** -Methode. Sie enthält jedoch den zusätzlichen Parameter *riid*, der die Schnittstelle angibt, für die Typinformationen abgerufen werden sollen.
+Diese Methode verhält sich wie die **IDispatch::GetTypeInfo-Methode.** Sie enthält jedoch einen zusätzlichen Parameter, *riid,* der die Schnittstelle angibt, für die Typinformationen abgerufen werden.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (einschließlich Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbasedispatch-Klasse**](cbasedispatch.md)
+[**CBaseDispatch-Klasse**](cbasedispatch.md)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
-description: Fügt der Liste der zuletzt verwendeten (MRU) eine Datei hinzu.
+description: 'IShellDispatch3.AddToRecent-Methode: Fügt der Liste der zuletzt verwendeten Dateien (MRU) eine Datei hinzu.'
 ms.assetid: aa5aef31-7f3f-4cc4-949d-1484de243ef3
-title: IShellDispatch3. addtorecent-Methode (Shldisp. h)
+title: IShellDispatch3.AddToRecent-Methode (Shldisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Shell32.dll
-ms.openlocfilehash: 3f52e6b90b7be078cc8177e9c3fe3093ba5c681e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8d31d05e9eef889d9018e4806cf4c882dba3060e
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103753072"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108116928"
 ---
-# <a name="ishelldispatch3addtorecent-method"></a>IShellDispatch3. addtorecent-Methode
+# <a name="ishelldispatch3addtorecent-method"></a>IShellDispatch3.AddToRecent-Methode
 
-Fügt der Liste der zuletzt verwendeten (MRU) eine Datei hinzu.
+Fügt der Liste der zuletzt verwendeten Dateien (MRU) eine Datei hinzu.
 
 ## <a name="syntax"></a>Syntax
 
@@ -51,23 +51,23 @@ IShellDispatch3.AddToRecent( _
 
 <dl> <dt>
 
-*varFile* \[ in\]
+*varFile* \[ In\]
 </dt> <dd>
 
 Typ: **Variant**
 
-Eine **Zeichenfolge** , die den Pfad der Datei enthält, die der Liste der zuletzt verwendeten Dokumente hinzugefügt werden soll.
+Eine **Zeichenfolge,** die den Pfad der Datei enthält, die der Liste der zuletzt verwendeten Dokumente hinzugefügt werden soll.
 
-**Windows Vista**: Legen Sie diesen Parameter auf **null** fest, um den Ordner zuletzt verwendete Dokumente zu löschen.
+**Windows Vista:** Legen Sie diesen Parameter auf **NULL fest,** um den Ordner der letzten Dokumente zu löschen.
 
 </dd> <dt>
 
-*bstrincategory* \[ in, optional\]
+*bstrCategory* \[ in, optional\]
 </dt> <dd>
 
 Typ: **[ **BSTR**](/previous-versions/windows/desktop/automat/bstr)**
 
-Eine **Zeichenfolge** , die den Namen der Kategorie enthält, in der die Datei platziert werden soll.
+Eine **Zeichenfolge,** die den Namen der Kategorie enthält, in der die Datei gespeichert werden soll.
 
 </dd> </dl>
 
@@ -83,9 +83,9 @@ Diese Methode gibt keinen Wert zurück.
 
 ## <a name="examples"></a>Beispiele
 
-In den folgenden Beispielen wird die Verwendung von **addtor ecent** für JScript, VBScript und Visual Basic veranschaulicht.
+Die folgenden Beispiele zeigen die Verwendung von **AddToRecent** für JScript, VBScript und Visual Basic.
 
-JScript
+Jscript:
 
 
 ```JScript
@@ -113,7 +113,7 @@ JScript
 
 
 
-VBScript
+Vbscript:
 
 
 ```VB
@@ -174,17 +174,17 @@ End Sub
 
 
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                                                   |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                          |
-| Header<br/>                   | <dl> <dt>Shldisp. h</dt> </dl>                          |
-| IDL<br/>                      | <dl> <dt>Shldisp. idl</dt> </dl>                        |
-| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 6,0 oder höher)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ XP-Desktop-Apps\]<br/>                                                                   |
+| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2003-Desktop-Apps\]<br/>                                                          |
+| Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>                          |
+| Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                        |
+| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 6.0 oder höher)</dt> </dl> |
 
 
 

@@ -1,7 +1,7 @@
 ---
-description: Ruft den Wert für eine angegebene Windows Internet Explorer-Richtlinie ab.
+description: 'Shell.ExplorerPolicy-Methode: Ruft den Wert für eine angegebene Windows-Internet Explorer ab.'
 ms.assetid: 47E17F6A-ED43-44cd-AF77-A6E49865E1B5
-title: Shell. explorerpolicy-Methode (Shldisp. h)
+title: Shell.ExplorerPolicy-Methode (Shldisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Shell32.dll
-ms.openlocfilehash: fea5192990b8c19c8ddfe8ffad6efe21b98625c6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 765e1dc46edbe5a27292c5d8ff940e29b269f8dc
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104980864"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108083698"
 ---
-# <a name="shellexplorerpolicy-method"></a>Shell. explorerpolicy-Methode
+# <a name="shellexplorerpolicy-method"></a>Shell.ExplorerPolicy-Methode
 
-Ruft den Wert für eine angegebene Windows Internet Explorer-Richtlinie ab.
+Ruft den Wert für eine angegebene Windows-Internet Explorer ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,12 +49,12 @@ Shell.ExplorerPolicy( _
 
 <dl> <dt>
 
-*bstraupolicyname* \[ in\]
+*bstrPolicyName* \[ In\]
 </dt> <dd>
 
 Typ: **[ **BSTR**](/previous-versions/windows/desktop/automat/bstr)**
 
-Eine **Zeichenfolge** , die den Namen der Richtlinie angibt.
+Eine **Zeichenfolge,** die den Namen der Richtlinie angibt.
 
 </dd> </dl>
 
@@ -62,27 +62,27 @@ Eine **Zeichenfolge** , die den Namen der Richtlinie angibt.
 
 ### <a name="jscript"></a>JScript
 
-Typ: **Variant \** _
+Typ: **\* Variant**
 
-Der Wert, der dem angegebenen Richtlinien Namen zugeordnet ist.
+Der wert, der dem angegebenen Richtliniennamen zugeordnet ist.
 
 ### <a name="vb"></a>VB
 
-Typ: _*Variant \**_
+Typ: **\* Variant**
 
-Der Wert, der dem angegebenen Richtlinien Namen zugeordnet ist.
+Der wert, der dem angegebenen Richtliniennamen zugeordnet ist.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Netzwerkadministratoren können die Computerumgebung Ihrer Benutzer durch Festlegen von Richtlinien steuern und verwalten.
+Netzwerkadministratoren können die Computerumgebung ihrer Benutzer steuern und verwalten, indem sie Richtlinien festlegen.
 
-Der angegebene Wertname muss im Unterschlüssel "_ *HKEY \_ Current \_ User **\\** Software **\\** Microsoft **\\** Windows **\\** CurrentVersion **\\** Policies **\\** Explorer**" angegeben werden. Wenn der Wertname nicht vorhanden ist, gibt die Methode **null** zurück.
+Der angegebene Wertname muss innerhalb des **Unterschlüssels HKEY \_ CURRENT \_ USER** \\ **Software** \\ **Microsoft** \\ **Windows** \\ **CurrentVersion** \\ **Policies** \\ **Explorer** sein. Wenn der Wertname nicht vorhanden ist, gibt die Methode NULL **zurück.**
 
 ## <a name="examples"></a>Beispiele
 
-In den folgenden Beispielen wird die ordnungsgemäße Verwendung von **explorerpolicy** für JScript, VBScript und Visual Basic veranschaulicht.
+Die folgenden Beispiele zeigen die ordnungsgemäße Verwendung von **ExplorerPolicy** für JScript, VBScript und Visual Basic.
 
-JScript
+Jscript:
 
 
 ```JScript
@@ -100,7 +100,7 @@ JScript
 
 
 
-VBScript
+Vbscript:
 
 
 ```VB
@@ -136,17 +136,17 @@ End Sub
 
 
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                                                   |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                          |
-| Header<br/>                   | <dl> <dt>Shldisp. h</dt> </dl>                          |
-| IDL<br/>                      | <dl> <dt>Shldisp. idl</dt> </dl>                        |
-| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 6,0 oder höher)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ XP-Desktop-Apps\]<br/>                                                                   |
+| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2003-Desktop-Apps\]<br/>                                                          |
+| Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>                          |
+| Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                        |
+| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 6.0 oder höher)</dt> </dl> |
 
 
 

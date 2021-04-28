@@ -1,9 +1,9 @@
 ---
-title: TBM_SETUNICODEFORMAT Meldung (kommstrg. h)
-description: Legt das Unicode-Zeichenformat Flag für das-Steuerelement fest. Mit dieser Meldung können Sie den Zeichensatz ändern, der vom Steuerelement zur Laufzeit verwendet wird, anstatt das Steuerelement neu erstellen zu müssen.
+title: TBM_SETUNICODEFORMAT (Commctrl.h)
+description: 'TBM_SETUNICODEFORMAT Meldung: Legt das Unicode-Zeichenformatflag für das Steuerelement fest. Mit dieser Meldung können Sie den vom Steuerelement zur Laufzeit verwendeten Zeichensatz ändern, anstatt das Steuerelement neu erstellen zu müssen.'
 ms.assetid: c50a49e8-6042-490d-bb7b-baf917d5c30a
 keywords:
-- Windows-Steuerelemente für TBM_SETUNICODEFORMAT Meldung
+- TBM_SETUNICODEFORMAT Meldung Windows-Steuerelemente
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: adb64c8fcb3464067e9522695930f4f9d0771357
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: f076efe2a575eff131c9bc2a1fe3df9ecab0fe68
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106339548"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108104038"
 ---
-# <a name="tbm_setunicodeformat-message"></a>TBM-Nachricht "*- \_ Code Format"
+# <a name="tbm_setunicodeformat-message"></a>TBM \_ SETUNICODEFORMAT-Nachricht
 
-Legt das Unicode-Zeichenformat Flag für das-Steuerelement fest. Mit dieser Meldung können Sie den Zeichensatz ändern, der vom Steuerelement zur Laufzeit verwendet wird, anstatt das Steuerelement neu erstellen zu müssen.
+Legt das Unicode-Zeichenformatflag für das Steuerelement fest. Mit dieser Meldung können Sie den vom Steuerelement zur Laufzeit verwendeten Zeichensatz ändern, anstatt das Steuerelement neu erstellen zu müssen.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,7 +32,7 @@ Legt das Unicode-Zeichenformat Flag für das-Steuerelement fest. Mit dieser Meld
 *wParam* 
 </dt> <dd>
 
-Bestimmt den Zeichensatz, der vom-Steuerelement verwendet wird. Wenn dieser Wert ungleich 0 (null) ist, verwendet das Steuerelement Unicode-Zeichen. Wenn dieser Wert 0 (null) ist, verwendet das Steuerelement ANSI-Zeichen.
+Bestimmt den Zeichensatz, der vom -Steuerelement verwendet wird. Wenn dieser Wert ungleich 0 (null) ist, verwendet das Steuerelement Unicode-Zeichen. Wenn dieser Wert 0 (null) ist, verwendet das Steuerelement ANSI-Zeichen.
 
 </dd> <dt>
 
@@ -41,29 +41,29 @@ Bestimmt den Zeichensatz, der vom-Steuerelement verwendet wird. Wenn dieser Wert
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt das vorherige Unicode-formatflag für das-Steuerelement zurück.
+Gibt das vorherige Unicode-Formatflag für das Steuerelement zurück.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Eine Erörterung dieser Nachricht finden Sie in den Hinweisen zu [**ccm- \_ Code Format**](ccm-setunicodeformat.md) .
+Eine Erläuterung dieser Meldung finden Sie in den Anmerkungen zu [**CCM \_ SETUNICODEFORMAT.**](ccm-setunicodeformat.md)
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**TBM \_ getunicodeformat**](tbm-getunicodeformat.md)
+[**TBM \_ GETUNICODEFORMAT**](tbm-getunicodeformat.md)
 </dt> </dl>
 
  

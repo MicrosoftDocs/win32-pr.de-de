@@ -1,7 +1,7 @@
 ---
-description: Die aktive Methode benachrichtigt die PIN, dass der Filter jetzt aktiv ist.
+description: 'CBasePin.Active-Methode: Die Active-Methode benachrichtigt den Pin, dass der Filter jetzt aktiv ist.'
 ms.assetid: 1054f8cf-a5fb-4de6-abf2-c3740ce47787
-title: Cbasepin. Active-Methode (amfilter. h)
+title: CBasePin.Active-Methode (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 4a89c0c75671e6eb29b6ddb260c5f5ec0c385399
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 8ccee76dbf89cf82abcd8d4758305ddec91f1afa
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369180"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108096107"
 ---
-# <a name="cbasepinactive-method"></a>Cbasepin. Active-Methode
+# <a name="cbasepinactive-method"></a>CBasePin.Active-Methode
 
-Die- `Active` Methode benachrichtigt die PIN, dass der Filter jetzt aktiv ist.
+Die `Active` -Methode benachrichtigt den Pin, dass der Filter jetzt aktiv ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,28 +46,28 @@ Gibt S \_ OK zurück.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Wenn der Filter von "angehalten" in "angehalten" wechselt, ruft die [**cbasefilter**](cbasefilter.md) -Klasse diese Methode auf allen verbundenen Pins des Filters auf.
+Wenn der Filter von angehalten in angehalten wechselt, ruft die [**CBaseFilter-Klasse**](cbasefilter.md) diese Methode für alle verbundenen Pins des Filters auf.
 
-Diese Methode führt in der Basisklasse keine Aktion aus. Abgeleitete Klassen können diese Methode überschreiben. Beispielsweise kann eine PIN einen Commit für Zuordnungen durchsetzen oder Hardware Ressourcen abrufen.
+Diese Methode führt in der Basisklasse nichts aus. Abgeleitete Klassen können diese Methode überschreiben. Beispielsweise kann ein Pin Zuweisungen committen oder Hardwareressourcen abrufen.
 
-Der interne Zustand des Filter Graph-Managers wird erst aktualisiert, nachdem diese Element Funktion zurückgegeben wurde. Testen Sie daher nicht den Status dieser Methode.
+Der interne Zustand des Filtergraph-Managers wird erst aktualisiert, nachdem diese Memberfunktion zurückgegeben wurde. Testen Sie daher nicht den Zustand dieser Methode.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (streams.h einschließen)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbasepin-Klasse**](cbasepin.md)
+[**CBasePin-Klasse**](cbasepin.md)
 </dt> </dl>
 
  

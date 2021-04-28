@@ -1,7 +1,7 @@
 ---
-description: Diese Struktur enthält Informationen zur Gerätefirmware.
+description: 'STORAGE_HW_FIRMWARE_INFO_QUERY struktur: Diese Struktur enthält Informationen zur Gerätefirmware.'
 ms.assetid: 1A2D30F3-F2DE-40CB-BFFC-8BAD19793AE1
-title: STORAGE_HW_FIRMWARE_INFO_QUERY Struktur (winioctl. h)
+title: STORAGE_HW_FIRMWARE_INFO_QUERY -Struktur (Winioctl.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,14 +13,14 @@ api_type:
 - HeaderDef
 api_location:
 - winioctl.h.h
-ms.openlocfilehash: c5c4294a733a57a6735691a134f997189736def0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ffda37d918406a696a29a9bf2903424523c3b830
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106358907"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108119398"
 ---
-# <a name="storage_hw_firmware_info_query-structure"></a>\_ \_ \_ \_ Abfrage Struktur der Speicher-HW-Firmware
+# <a name="storage_hw_firmware_info_query-structure"></a>ABFRAGEstruktur \_ der SPEICHER-HW-FIRMWAREINFO \_ \_ \_
 
 Diese Struktur enthält Informationen zur Gerätefirmware.
 
@@ -45,27 +45,27 @@ typedef struct _STORAGE_HW_FIRMWARE_INFO_QUERY {
 **Version**
 </dt> <dd>
 
-Die Version dieser-Struktur. Dieser Wert sollte auf sizeof (Speicher \_ HW \_ Firmware \_ Info \_ Query) festgelegt werden.
+Die Version dieser -Struktur. Dies sollte auf sizeof (STORAGE \_ HW \_ FIRMWARE INFO \_ QUERY) festgelegt \_ werden.
 
 </dd> <dt>
 
 **Größe**
 </dt> <dd>
 
-Die Größe dieser-Struktur als Puffer.
+Die Größe dieser Struktur als Puffer.
 
 </dd> <dt>
 
 **Flags**
 </dt> <dd>
 
-Die der Abfrage zugeordneten Flags. Im folgenden finden Sie Flags, die in diesem Member festgelegt werden können.
+Die der Abfrage zugeordneten Flags. Im Folgenden finden Sie Flags, die in diesem Member festgelegt werden können.
 
 
 
 | Flag                                             | Beschreibung                                                                        |
 |--------------------------------------------------|------------------------------------------------------------------------------------|
-| speicherhw-firmwareanforderungs- \_ \_ \_ \_ Flag \_ Controller | Gibt an, dass das Ziel der Anforderung nicht das Hand-Objekt selbst ist. |
+| STORAGE \_ HW \_ FIRMWARE \_ REQUEST \_ FLAG \_ CONTROLLER | Gibt an, dass das Ziel der Anforderung nicht die Hand/das Objekt des Geräts selbst ist. |
 
 
 
@@ -84,37 +84,37 @@ Für die zukünftige Verwendung reserviert.
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|-------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                                 |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2016 \[ -Desktop-Apps\]<br/>                                                        |
-| Header<br/>                   | <dl> <dt>Winioctl. h. h (Include Windows. h)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 10 \[ Desktop-Apps\]<br/>                                                                 |
+| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2016-Desktop-Apps\]<br/>                                                        |
+| Header<br/>                   | <dl> <dt>Winioctl.h.h (einschließlich Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**IOCTL- \_ Speicher \_ Firmware \_ aktivieren**](/windows/desktop/api/WinIoctl/ni-winioctl-ioctl_storage_firmware_activate)
+[**IOCTL \_ STORAGE \_ FIRMWARE \_ ACTIVATE**](/windows/desktop/api/WinIoctl/ni-winioctl-ioctl_storage_firmware_activate)
 </dt> <dt>
 
-[**Aktivieren der Speicher- \_ HW- \_ Firmware \_**](/windows/desktop/api/winioctl/ns-winioctl-storage_hw_firmware_activate)
+[**STORAGE \_ HW \_ FIRMWARE \_ ACTIVATE**](/windows/desktop/api/winioctl/ns-winioctl-storage_hw_firmware_activate)
 </dt> <dt>
 
-[**Download der IOCTL- \_ Speicher \_ Firmware \_**](/windows/desktop/api/WinIoctl/ni-winioctl-ioctl_storage_firmware_download)
+[**HERUNTERLADEN DER \_ \_ IOCTL-SPEICHERFIRMWARE \_**](/windows/desktop/api/WinIoctl/ni-winioctl-ioctl_storage_firmware_download)
 </dt> <dt>
 
-[**speicherhw- \_ \_ Firmwaredownload \_**](/windows/desktop/api/winioctl/ns-winioctl-storage_hw_firmware_download)
+[**DOWNLOAD DER \_ SPEICHER-HW-FIRMWARE \_ \_**](/windows/desktop/api/winioctl/ns-winioctl-storage_hw_firmware_download)
 </dt> <dt>
 
-[**IOCTL- \_ Speicher \_ Firmware \_ get \_ Info**](/windows/desktop/api/WinIoctl/ni-winioctl-ioctl_storage_firmware_get_info)
+[**\_IOCTL-SPEICHERFIRMWARE \_ \_ – \_ GET-INFORMATIONEN**](/windows/desktop/api/WinIoctl/ni-winioctl-ioctl_storage_firmware_get_info)
 </dt> <dt>
 
-[**Firmware-Informationen zur Speicher- \_ HW \_ \_**](storage-hw-firmware-info.md)
+[**\_ \_ SPEICHER-HW-FIRMWAREINFORMATIONEN \_**](storage-hw-firmware-info.md)
 </dt> <dt>
 
-[**\_Informationen zum \_ Firmware- \_ Slot \_ für Speicher HW**](storage-hw-firmware-slot-info.md)
+[**INFORMATIONEN ZUM \_ SPEICHER-HW-FIRMWARESLOT \_ \_ \_**](storage-hw-firmware-slot-info.md)
 </dt> </dl>
 
  

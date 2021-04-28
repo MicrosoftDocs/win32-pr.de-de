@@ -1,7 +1,7 @@
 ---
-description: Beschreibt eine Ebene.
+description: 'D3DXPLANE-Struktur (D3DX10Math.h): Beschreibt eine Ebene.'
 ms.assetid: c6da7343-a4f3-4cac-855b-14bd70c0d3c2
-title: D3DXPLANE-Struktur (D3DX10Math. h)
+title: D3DXPLANE-Struktur (D3DX10Math.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,14 +13,14 @@ api_type:
 - HeaderDef
 api_location:
 - D3DX10Math.h
-ms.openlocfilehash: 9949aec16e90a53e01e536255c20f442052bb98b
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 440246fb47a851f9f5339c72a484a2cb59e8f662
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104355656"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108103328"
 ---
-# <a name="d3dxplane-structure-d3dx10mathh"></a>D3DXPLANE-Struktur (D3DX10Math. h)
+# <a name="d3dxplane-structure-d3dx10mathh"></a>D3DXPLANE-Struktur (D3DX10Math.h)
 
 Beschreibt eine Ebene.
 
@@ -42,65 +42,65 @@ typedef struct D3DXPLANE {
 
 <dl> <dt>
 
-**ein**
+**Eine**
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Der Koeffizient der Clippingebene in der Gleichung der allgemeinen Ebene. Siehe Hinweise.
+Der Koeffizient der Clippingebene in der allgemeinen Ebenengleichung. Siehe Hinweise.
 
 </dd> <dt>
 
 **b**
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Der b-Koeffizient der Clippingebene in der Gleichung der allgemeinen Ebene. Siehe Hinweise.
+Der b-Koeffizient der Clippingebene in der allgemeinen Ebenengleichung. Siehe Hinweise.
 
 </dd> <dt>
 
 **c**
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Der c-Koeffizient der Clippingebene in der Gleichung der allgemeinen Ebene. Siehe Hinweise.
+Der c-Koeffizient der Clippingebene in der allgemeinen Ebenengleichung. Siehe Hinweise.
 
 </dd> <dt>
 
 **d**
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Der d-Koeffizient der Clippingebene in der Gleichung der allgemeinen Ebene. Siehe Hinweise.
+Der d-Koeffizient der Clippingebene in der allgemeinen Ebenengleichung. Siehe Hinweise.
 
 </dd> </dl>
 
 ## <a name="remarks"></a>Bemerkungen
 
-Die Member der **D3DXPLANE** -Struktur haben die Form der allgemeinen ebenengleichung. Sie passen in die Gleichung der allgemeinen Ebene, sodass AX + by + CZ + DW = 0 ist.
+Die Elemente der **D3DXPLANE-Struktur** haben die Form der allgemeinen Ebenengleichung. Sie passen in die allgemeine Ebenengleichung, sodass ax + by + alle + dw = 0 ist.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------|-----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3DX10Math. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3DX10Math.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

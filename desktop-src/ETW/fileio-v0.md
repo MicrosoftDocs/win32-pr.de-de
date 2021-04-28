@@ -1,5 +1,5 @@
 ---
-description: Diese Klasse ist die übergeordnete Klasse für Datei-e/a-Ereignisse. Die folgende Syntax wird durch den MOF-Code vereinfacht.
+description: 'FileIo_V0-Klasse: Diese Klasse ist die übergeordnete Klasse für Datei-E/A-Ereignisse. Die folgende Syntax wird aus MOF-Code vereinfacht.'
 ms.assetid: c88242ec-de74-4b5b-8fdd-ec99e0d4a59e
 title: FileIo_V0-Klasse
 ms.topic: reference
@@ -12,18 +12,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 46f4db6d7923ac3403e730c258510b572a8726aa
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ffb2f616c5273f92571f4bf4a6bab1b3cdac733e
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104980360"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108106578"
 ---
-# <a name="fileio_v0-class"></a>Klasse "fleio \_ v0"
+# <a name="fileio_v0-class"></a>FileIo \_ V0-Klasse
 
-Diese Klasse ist die übergeordnete Klasse für Datei-e/a-Ereignisse.
+Diese Klasse ist die übergeordnete Klasse für Datei-E/A-Ereignisse.
 
-Die folgende Syntax wird durch den MOF-Code vereinfacht.
+Die folgende Syntax wird aus MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -36,13 +36,13 @@ class FileIo_V0 : MSNT_SystemTrace
 
 ## <a name="members"></a>Member
 
-Die Klasse " **fleio \_ v0** " definiert keine Member.
+Die **FileIo \_ V0-Klasse** definiert keine Member.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/> |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>       |
@@ -53,16 +53,16 @@ Die Klasse " **fleio \_ v0** " definiert keine Member.
 
 <dl> <dt>
 
-[**MSNT \_ systemtrace**](msnt-systemtrace.md)
+[**MSNT \_ SystemTrace**](msnt-systemtrace.md)
 </dt> <dt>
 
 [**FileIo**](fileio.md)
 </dt> <dt>
 
-[**Name von "fleio \_ v0" \_**](fileio-v0-name.md)
+[**FileIo \_ \_ V0-Name**](fileio-v0-name.md)
 </dt> <dt>
 
-[**Fleio \_ v1**](fileio-v1.md)
+[**FileIo \_ V1**](fileio-v1.md)
 </dt> </dl>
 
  

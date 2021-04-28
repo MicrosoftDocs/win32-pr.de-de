@@ -1,7 +1,7 @@
 ---
-description: Enthält die Anzahl der Elemente in der Auflistung.
+description: 'ShellWindows.Count-Eigenschaft: Enthält die Anzahl der Elemente in der Auflistung.'
 ms.assetid: 0113cc32-2197-4004-99a1-89fe10828e5f
-title: Shellwindows. Count-Eigenschaft (Exdisp. h)
+title: ShellWindows.Count-Eigenschaft (Exdisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,14 +13,14 @@ api_type:
 - COM
 api_location:
 - Shell32.dll
-ms.openlocfilehash: a8d5b9e605650ba7d3cb6036e8abfac58c0b8597
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b2b33dc11e6bf909043ac5391965e1ebd225d376
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104980713"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108103938"
 ---
-# <a name="shellwindowscount-property"></a>Shellwindows. Count (Eigenschaft)
+# <a name="shellwindowscount-property"></a>ShellWindows.Count-Eigenschaft
 
 Enthält die Anzahl der Elemente in der Auflistung.
 
@@ -37,13 +37,13 @@ iCount = ShellWindows.Count
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Eine **ganze** Zahl, die einen Wert für die **count** -Eigenschaft enthält.
+Eine **ganze Zahl,** die einen Wert für die **Count-Eigenschaft** enthält.
 
 ## <a name="examples"></a>Beispiele
 
-Das folgende Beispiel zeigt die **Anzahl** in Verwendung. Die richtige Verwendung wird für JScript, VBScript und Visual Basic angezeigt.
+Im folgenden Beispiel wird Count in use **(Anzahl** in Verwendung) gezeigt. Die richtige Verwendung wird für JScript, VBScript und Visual Basic angezeigt.
 
-JScript
+Jscript:
 
 
 ```JScript
@@ -67,7 +67,7 @@ JScript
 
 
 
-VBScript
+Vbscript:
 
 
 ```VB
@@ -116,16 +116,16 @@ End Sub
 
 
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, Windows XP \[ Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, nur Windows \[ XP-Desktop-Apps\]<br/>                                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                           |
-| Header<br/>                   | <dl> <dt>Exdisp. h</dt> </dl>                            |
-| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4,71 oder höher)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Exdisp.h</dt> </dl>                            |
+| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4.71 oder höher)</dt> </dl> |
 
 
 

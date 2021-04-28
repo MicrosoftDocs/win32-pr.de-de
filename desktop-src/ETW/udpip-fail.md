@@ -1,5 +1,5 @@
 ---
-description: Diese Klasse ist die Ereignistyp Klasse für TCP/IP-Fehlerereignisse. Die folgende Syntax wird durch den MOF-Code vereinfacht.
+description: 'UdpIp_Fail Klasse: Diese Klasse ist die Ereignistypklasse für TCP/IP-Fehlerereignisse. Die folgende Syntax wird durch MOF-Code vereinfacht.'
 ms.assetid: 552e63ef-70e4-4bc4-be33-bd77bd5acd61
 title: UdpIp_Fail-Klasse
 ms.topic: reference
@@ -14,18 +14,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: aef0194d296395501500022bf4cae8b9c8a8f188
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f923f26e1371d11e27bfd58bcb69c053bfb5f1a3
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104980904"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108105508"
 ---
-# <a name="udpip_fail-class"></a>Udpip-Fehler \_ Klasse
+# <a name="udpip_fail-class"></a>UdpIp \_ Fail-Klasse
 
-Diese Klasse ist die Ereignistyp Klasse für TCP/IP-Fehlerereignisse.
+Diese Klasse ist die Ereignistypklasse für TCP/IP-Fehlerereignisse.
 
-Die folgende Syntax wird durch den MOF-Code vereinfacht.
+Die folgende Syntax wird durch MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,45 +40,45 @@ class UdpIp_Fail : UdpIp
 
 ## <a name="members"></a>Member
 
-Die **udpip \_** -Fehler Klasse verfügt über diese Typen von Membern:
+Die **UdpIp \_ Fail-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **udpip \_** -Fehler Klasse verfügt über diese Eigenschaften.
+Die **UdpIp \_ Fail-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **FailureCode**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Ursache für den Fehler. Kann einen der folgenden Codes aufweisen:
+Die Ursache für den Fehler. Kann einer der folgenden Codes sein:
 
 <dl> <dt>
 
-<span id="ERROR_INSUFFICIENT_RESOURCES"></span><span id="error_insufficient_resources"></span>**Fehler \_ Unzureichende \_ Ressourcen** (1)
+<span id="ERROR_INSUFFICIENT_RESOURCES"></span><span id="error_insufficient_resources"></span>**FEHLER \_ UNZUREICHENDE \_ RESSOURCEN** (1)
 </dt> <dt>
 
-<span id="ERROR_TOO_MANY_ADDRESSES"></span><span id="error_too_many_addresses"></span>**Fehler \_ Zu \_ viele \_ Adressen** (2)
+<span id="ERROR_TOO_MANY_ADDRESSES"></span><span id="error_too_many_addresses"></span>**FEHLER \_ ZU \_ VIELE \_ ADRESSEN** (2)
 </dt> <dt>
 
-<span id="ERROR_ADDRESS_EXISTS"></span><span id="error_address_exists"></span>**Fehler \_ Adresse ist \_ vorhanden** (3)
+<span id="ERROR_ADDRESS_EXISTS"></span><span id="error_address_exists"></span>**FEHLER \_ ADDRESS \_ EXISTS** (3)
 </dt> <dt>
 
-<span id="ERROR_INVALID_ADDRESS"></span><span id="error_invalid_address"></span>**Fehler \_ Ungültige \_ Adresse** (4)
+<span id="ERROR_INVALID_ADDRESS"></span><span id="error_invalid_address"></span>**FEHLER \_ UNGÜLTIGE \_ ADRESSE** (4)
 </dt> <dt>
 
-<span id="ERROR_OTHER"></span><span id="error_other"></span>**Fehler \_ Sonstige** (5)
+<span id="ERROR_OTHER"></span><span id="error_other"></span>**FEHLER \_ OTHER** (5)
 </dt> <dt>
 
-<span id="ERROR_TIMEWAIT_ADDRESS_EXIST"></span><span id="error_timewait_address_exist"></span>**Fehler \_ Timewait- \_ Adresse ist \_ vorhanden** (6)
+<span id="ERROR_TIMEWAIT_ADDRESS_EXIST"></span><span id="error_timewait_address_exist"></span>**FEHLER \_ TIMEWAIT \_ ADDRESS \_ EXIST** (6)
 </dt> </dl>
 
 </dd> <dt>
@@ -86,7 +86,7 @@ Die Ursache für den Fehler. Kann einen der folgenden Codes aufweisen:
 **Proto**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -98,8 +98,8 @@ Identifiziert das Protokoll. Folgenden Werte sind möglich:
 
 | Wert                                                                                                                                                                                                  | Bedeutung                                                            |
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------|
-| <span id="AF_INET"></span><span id="af_inet"></span><dl> <dt>**AF \_ INET**</dt> <dt>2</dt> </dl>     | Die IPv4-Adressfamilie (Internet Protokollversion 4).<br/>  |
-| <span id="AF_INET6"></span><span id="af_inet6"></span><dl> <dt>**AF \_ Inet6**</dt> <dt>23</dt> </dl> | Die IPv6-Adressfamilie (Internet Protokollversion 6).<br/> |
+| <span id="AF_INET"></span><span id="af_inet"></span><dl> <dt>**AF \_ INET**</dt> <dt>2</dt> </dl>     | Die IPv4-Adressfamilie (Internetprotokoll, Version 4).<br/>  |
+| <span id="AF_INET6"></span><span id="af_inet6"></span><dl> <dt>**AF \_ INET6**</dt> <dt>23</dt> </dl> | Die IPv6-Adressfamilie (Internet Protocol Version 6).<br/> |
 
 
 
@@ -107,14 +107,14 @@ Identifiziert das Protokoll. Folgenden Werte sind möglich:
 
 </dd> </dl>
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
@@ -122,7 +122,7 @@ Identifiziert das Protokoll. Folgenden Werte sind möglich:
 
 <dl> <dt>
 
-[**Udpip**](udpip.md)
+[**UdpIp**](udpip.md)
 </dt> </dl>
 
  

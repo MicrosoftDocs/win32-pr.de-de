@@ -1,7 +1,7 @@
 ---
-description: Fordert eine zurück Setzung an.
+description: Reset-Methode der Msvm_S3DisplayController - Fordert eine Zurücksetzung an.
 ms.assetid: bd28a4be-7dec-4520-a917-3fcbb566b1d8
-title: Reset-Methode der Msvm_S3DisplayController-Klasse
+title: Reset-Methode der Msvm_S3DisplayController Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 9949240cb8c8c3c9085f6ee89b90ffc1a209322e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 492a420384b760500c54e1c3c481638bcd2ee7d4
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106356285"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108118778"
 ---
-# <a name="reset-method-of-the-msvm_s3displaycontroller-class"></a>Reset-Methode der MSVM \_ S3DisplayController-Klasse
+# <a name="reset-method-of-the-msvm_s3displaycontroller-class"></a>Reset-Methode der Msvm \_ S3DisplayController-Klasse
 
-Fordert eine zurück Setzung an.
+Fordert eine Zurücksetzung an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -53,21 +53,21 @@ Diese Methode gibt einen der folgenden Werte zurück:
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8.1<br/>                                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2<br/>                                                                       |
 | Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**MSVM \_ S3DisplayController**](msvm-s3displaycontroller.md)
+[**Msvm \_ S3DisplayController**](msvm-s3displaycontroller.md)
 </dt> </dl>
 
  

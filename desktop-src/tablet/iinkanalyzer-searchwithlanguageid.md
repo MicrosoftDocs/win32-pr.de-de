@@ -1,7 +1,7 @@
 ---
-description: Stellt eine Fuzzysuche, bei der die Groß-/Kleinschreibung beachtet wird, nach analysierten Schreibvorgängen und analysierten Zeichnungs Strichen mit erkannten Typen bereit.
+description: 'IInkAnalyzer::SearchWithLanguageId-Methode: Stellt eine fuzzybasierte Suche nach analysierten Schreibstrichen und analysierten Zeichnungsstrichen mit erkannten Typen ohne Unterschiedliche Groß-/Kleinschreibung zur Kenntnis.'
 ms.assetid: dfd481f9-38fd-433f-b1fc-697c735c13da
-title: 'Iinkanalyzer:: searchwithlanguageid-Methode (iacom. h)'
+title: IInkAnalyzer::SearchWithLanguageId-Methode (IACom.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - IACom.dll
-ms.openlocfilehash: 829878a6fd326abb8a685b644cfc222ba6921385
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 201469933da10b0d68a4d3a50e63c42f8d01d2dd
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103751793"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108083658"
 ---
-# <a name="iinkanalyzersearchwithlanguageid-method"></a>Iinkanalyzer:: searchwithlanguageid-Methode
+# <a name="iinkanalyzersearchwithlanguageid-method"></a>IInkAnalyzer::SearchWithLanguageId-Methode
 
-Stellt eine Fuzzysuche, bei der die Groß-/Kleinschreibung beachtet wird, nach analysierten Schreibvorgängen und analysierten Zeichnungs Strichen mit erkannten Typen bereit.
+Stellt eine fuzzybasierte Suche nach analysierten Schreibstrichen und analysierten Zeichnungsstrichen mit erkannten Typen ohne Unterschiedliche Groß-/Kleinschreibung zur Unterstützung der Groß-/Kleinschreibung zur Lage.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,84 +44,84 @@ HRESULT SearchWithLanguageId(
 
 <dl> <dt>
 
-*bstrauphrattomatch* \[ in\]
+*bstrPhraseToMatch* \[ In\]
 </dt> <dd>
 
-Der Ausdruck, der in den Alternativen für die aktuell analysierten Striche zu finden ist.
+Der Ausdruck, der in den Alternativen für die derzeit analysierten Striche gefunden wird.
 
 </dd> <dt>
 
-*lsearchstringlanguageid* \[ in\]
+*lSearchStringLanguageId* \[ In\]
 </dt> <dd>
 
-Die LCID, die der bestandenen Zeichenfolge zugeordnet ist. Wird zum internen Konvertieren der Groß-/Kleinschreibung verwendet
+Die LCID, die der übergebenen Zeichenfolge zugeordnet ist. Wird verwendet, um die Groß-/Kleinschreibung intern zu konvertieren, um Vergleiche ohne Unterscheidung nach Groß-/Kleinschreibung zu unterstützen.
 
 </dd> <dt>
 
-*pulsearchresultcount* \[ in, out\]
+*pulSearchResultCount* \[ in, out\]
 </dt> <dd>
 
 Die maximale Anzahl von Ergebnissen, die von der Suche zurückgegeben werden.
 
 </dd> <dt>
 
-*ppulstrokezähltperresult* \[ vorgenommen\]
+*ppulStrokeCountPerResult* \[ out\]
 </dt> <dd>
 
-Zeiger auf ein Array mit der Anzahl der Striche in jedem Suchergebnis.
+Zeiger auf ein Array der Anzahl von Strichen in jedem Suchergebnis.
 
 </dd> <dt>
 
-*pulstrokeidscount* \[ in, out\]
+*pulStrokeIdsCount* \[ in, out\]
 </dt> <dd>
 
-Die Anzahl der Strich-IDs in *ppulstrokeids*.
+Die Anzahl der Strich-IDs in *ppulStrokeIds*.
 
 </dd> <dt>
 
-*ppulstrokeids* \[ vorgenommen\]
+*ppulStrokeIds* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf ein Array von Strich-IDs, das einen Satz von Strichen darstellt.
+Zeiger auf ein Array von Strich-IDs, die einen Satz von Strichen darstellen.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstellen-Ink-Analyse](classes-and-interfaces---ink-analysis.md).
+Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstellen – Ink-Analyse](classes-and-interfaces---ink-analysis.md).
 
 ## <a name="remarks"></a>Bemerkungen
 
-Bei dieser Suche werden Teil Zeichenfolgen mit mehreren Wörtern und einzelnen Wörtern gefunden. Sowohl alternative Erkennungsergebnisse als auch alternative Segmentationen werden durchsucht.
+Bei dieser Suche werden Teilzeichenfolgen mit mehreren Wörtern und einzelnen Wörtern gefunden. Sowohl alternative Erkennungsergebnisse als auch alternative Segmentierungen werden durchsucht.
 
-Alle eingehenden Zeichen folgen werden für Vergleiche in eine einzelne Schreibweise konvertiert, wobei die LCID des aktuellen Threads verwendet wird, um diese Konvertierung durchzuführen, um kulturelle Fälle zu berücksichtigen.
+Alle eingehenden Zeichenfolgen werden für den Vergleich mithilfe der LCID des aktuellen Threads in eine einzelne Zeichenfolge konvertiert, um diese Konvertierung zur Einhaltung von Kulturfallkonventionen zu ermöglichen.
 
-Die Übergabe Zeichenfolge wird als Ausdruck behandelt. Wörter und Zeichen müssen in alterantes für die Striche in der angegebenen Reihenfolge angezeigt werden. Das erste und das letzte Wort des Ausdrucks können als Teil Zeichenfolgen abgeglichen werden (das erste Wort, das am Ende einer alternativen angezeigt wird, und das letzte Wort, das bei der beginginging-Darstellung auftritt), aber alle anderen Wörter (die innerhalb des Ausdrucks) müssen als ganze Wörter angezeigt werden.
+Die übergebene Zeichenfolge wird als Ausdruck behandelt. Wörter und Zeichen müssen in den Alterantes für die Striche in der angegebenen Reihenfolge angezeigt werden. Das erste und das letzte Wort des Ausdrucks können als Teilzeichenfolgen übereinstimmen (das erste Wort, das am Ende eines alternativen Worts und das letzte Wort, das beim Umhügen eines Worts angezeigt wird), aber alle anderen Wörter (die innerhalb des Ausdrucks) müssen als ganze Wörter angezeigt werden.
 
-Wenn die übergebene Zeichenfolge keine Leerzeichen zwischen Zeichen enthält, kann die Teil Zeichenfolge an einer beliebigen Stelle innerhalb eines einzelnen Worts in einer alternativen gefunden werden.
+Wenn die übergebene Zeichenfolge keine Leerzeichen zwischen Zeichen enthält, kann die Teilzeichenfolge an einer beliebigen Stelle innerhalb eines einzelnen Worts in einem alternativen Gefunden werden.
 
-Die Ergebnisse der Suche werden nur durch das vorhanden sein oder Fehlen von Leerzeichen zwischen Zeichen geändert. Leerzeichen, die nicht von Zeichen umgeben sind, werden ignoriert. Der Typ des Leerraums wird ignoriert (ein Tabstopp-oder Leerzeichen zwischen Zeichen gibt das gleiche Ergebnis aus). Die Menge an Leerzeichen ist nicht von Bedeutung-ein Leerzeichen oder zwei Leerzeichen zwischen Zeichen haben das gleiche Ergebnis.
+Nur das Vorhandensein oder Fehlen von Leerzeichen zwischen Zeichen ändert die Ergebnisse der Suche. Leerzeichen, die nicht von Zeichen umgeben sind, werden ignoriert. Der Typ des Leerraums wird ignoriert (eine Registerkarte oder ein Leerzeichen zwischen Zeichen führt zu demselben Ergebnis). Die Menge an Leerzeichen spielt keine Rolle. Ein oder zwei Leerzeichen zwischen Zeichen führen zu demselben Ergebnis.
 
-Die Suche generiert keine Ereignisse von "PopulateContextNode". Nur die Striche, die bereits aufgefüllt wurden, werden durchsucht.
+Die Suche generiert keine PopulateContextNode-Ereignisse. Nur die Striche, die bereits aufgefüllt wurden, werden durchsucht.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                 |
+| Unterstützte Mindestversion (Client)<br/> | Nur Desktop-Apps für Windows XP Tablet PC \[ Edition\]<br/>                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                     |
-| Header<br/>                   | <dl> <dt>Iacom. h (erfordert auch iacom \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>IACom.h (erfordert auch IACom \_ i.c)</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>IACom.dll</dt> </dl>                          |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iinkanalyzer**](iinkanalyzer.md)
+[**IInkAnalyzer**](iinkanalyzer.md)
 </dt> </dl>
 
  

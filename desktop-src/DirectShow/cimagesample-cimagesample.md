@@ -1,7 +1,7 @@
 ---
-description: Konstruktormethode.
+description: 'CImageSample.CImageSample-Konstruktor: Konstruktormethode.'
 ms.assetid: d7550c38-d728-41b2-80a6-20728abf6012
-title: Cimagesample. cimagesample-Konstruktor (winutil. h)
+title: CImageSample.CImageSample-Konstruktor (Winutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,14 +16,14 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 805be59cfc899b6461fa8c761eebb5821118640f
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: ecab52e347e03b698adccb79b77da879d26612b4
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106350786"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108095608"
 ---
-# <a name="cimagesamplecimagesample-constructor"></a>Cimagesample. cimagesample-Konstruktor
+# <a name="cimagesamplecimagesample-constructor"></a>CImageSample.CImageSample-Konstruktor
 
 Konstruktormethode.
 
@@ -46,10 +46,10 @@ CImageSample(
 
 <dl> <dt>
 
-*pallocator* 
+*pAllocator* 
 </dt> <dd>
 
-Ein Zeiger auf die Zuweisung, die dieses Beispiel erstellt hat.
+Zeiger auf die Zuweisung, die dieses Beispiel erstellt hat.
 
 </dd> <dt>
 
@@ -60,7 +60,7 @@ Ignoriert.
 
 </dd> <dt>
 
-*PHR* 
+*Phr* 
 </dt> <dd>
 
 Ignoriert.
@@ -70,7 +70,7 @@ Ignoriert.
 *pBuffer* 
 </dt> <dd>
 
-Zeiger auf einen vom Aufrufer zugeordneten Speicherpuffer mit einer Größen *Länge*. Der Puffer sollte eine GDI-geräteunabhängige Bitmap (DIB) enthalten.
+Zeiger auf einen vom Aufrufer zugeordneten Speicherpuffer der *Größe*. Der Puffer sollte eine geräteunabhängige GDI-Bitmap (DIB) enthalten.
 
 </dd> <dt>
 
@@ -83,24 +83,24 @@ Die Länge des Puffers.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Die Klasse [**cimagezuordcator**](cimageallocator.md) erstellt mithilfe eines Datei Zuordnungsobjekts, das von der Auslagerungs Datei des Betriebssystems unterstützt wird, ein DIB. Das Handle für das Datei Zuordnung-Objekt wird im **hmapping** -Member der **m \_ dibdata** -Struktur gespeichert.
+Die [**CImageAllocator-Klasse**](cimageallocator.md) erstellt einen DIB mithilfe eines Dateizuordnungsobjekts, das von der Auslagerungsdatei des Betriebssystems erstellt wird. Das Handle für das Dateizuordnungsobjekt wird im **hMapping-Member** der **m \_ DibData-Struktur** gespeichert.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Winutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Winutil.h (einschließlich Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cimagesample-Klasse**](cimagesample.md)
+[**CImageSample-Klasse**](cimagesample.md)
 </dt> </dl>
 
  

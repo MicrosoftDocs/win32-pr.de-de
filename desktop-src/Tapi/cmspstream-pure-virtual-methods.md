@@ -1,25 +1,25 @@
 ---
-description: Diese Methoden müssen von abgeleiteten Klassen überschrieben werden.
+description: 'CMSPStream Pure Virtual Methods : Diese Methoden müssen von abgeleiteten Klassen überschrieben werden.'
 ms.assetid: 6f21ba58-984d-4d45-834d-5b2252e33517
-title: Reine virtuelle cmspstream-Methoden
+title: CMSPStream – reine virtuelle Methoden
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 945c4179e87f0a8a67fec1a71054fb8cfdf8193f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: fa026060d9c52682b835efe9b2df39b7e6bd1f3e
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106348721"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108094448"
 ---
-# <a name="cmspstream-pure-virtual-methods"></a>Reine virtuelle cmspstream-Methoden
+# <a name="cmspstream-pure-virtual-methods"></a>CMSPStream – reine virtuelle Methoden
 
 Diese Methoden müssen von abgeleiteten Klassen überschrieben werden.
 
 
 
-| Reine virtuelle cmspstream-Methoden        | BESCHREIBUNG                                                                                                                                                                                               |
+| REINE VIRTUELLE CMSPStream-Methoden        | BESCHREIBUNG                                                                                                                                                                                               |
 |----------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**\_Name erhalten**](/windows/win32/api/tapi3if/nf-tapi3if-itstream-get_name) | Ruft den Namen des Streams ab. Die abgeleitete Streamklasse sollte einen Namen bereitstellen, der es einem Benutzer ermöglicht, aussagekräftige Unterschiede zwischen Streams zu treffen, wenn dies für in der Benutzeroberfläche der Anwendung aufgerufen wird. |
+| [**get \_ Name**](/windows/win32/api/tapi3if/nf-tapi3if-itstream-get_name) | Ruft den Namen des Streams ab. Die abgeleitete Streamklasse sollte einen Namen bereitstellen, der es einem Benutzer ermöglicht, sinnvolle Unterscheidungen zwischen Streams vorzunehmen, wenn dies auf der Benutzeroberfläche der Anwendung aufgerufen wird. |
 
 
 
@@ -29,7 +29,7 @@ Diese Methoden müssen von abgeleiteten Klassen überschrieben werden.
 
 <dl> <dt>
 
-[**Cmspstream**](/windows/desktop/api/Mspstrm/nl-mspstrm-cmspstream)
+[**CMSPStream**](/windows/desktop/api/Mspstrm/nl-mspstrm-cmspstream)
 </dt> </dl>
 
  

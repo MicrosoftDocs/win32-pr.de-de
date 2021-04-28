@@ -1,7 +1,7 @@
 ---
-description: 'Die Benachrichtigungs Methode benachrichtigt die PIN, dass eine Qualitätsänderung angefordert wird. Diese Methode implementiert die iqualitycontrol:: Notify-Methode.'
+description: 'CBaseInputPin.Notify-Methode: Die Notify-Methode benachrichtigt den Pin, dass eine Qualitätsänderung angefordert wird. Diese Methode implementiert die IQualityControl::Notify-Methode.'
 ms.assetid: 76124321-0d2d-4fee-a08a-4db23078e8df
-title: Cbasonputpin. Notify-Methode (amfilter. h)
+title: CBaseInputPin.Notify-Methode (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: a5ae7ca47c5adc11c87a739e8736ba327dc0b65f
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 610888193762618d427a0329a27d3019bd625e69
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358679"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108119998"
 ---
-# <a name="cbaseinputpinnotify-method"></a>Cbasinput PIN. Notify-Methode
+# <a name="cbaseinputpinnotify-method"></a>CBaseInputPin.Notify-Methode
 
-Die- `Notify` Methode benachrichtigt die PIN, dass eine Qualitätsänderung angefordert wird. Diese Methode implementiert die [**iqualitycontrol:: notify**](/windows/desktop/api/Strmif/nf-strmif-iqualitycontrol-notify) -Methode.
+Die `Notify` -Methode benachrichtigt den Pin, dass eine Qualitätsänderung angefordert wird. Diese Methode implementiert die [**IQualityControl::Notify-Methode.**](/windows/desktop/api/Strmif/nf-strmif-iqualitycontrol-notify)
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,17 +43,17 @@ HRESULT Notify(
 
 <dl> <dt>
 
-*pself* 
+*pSelf* 
 </dt> <dd>
 
-Zeiger auf den Filter, der die Qualitäts Steuerungs Meldung sendet.
+Zeiger auf den Filter, der die Qualitätskontrollnachricht sendet.
 
 </dd> <dt>
 
-*Q1* 
+*Q* 
 </dt> <dd>
 
-[**Qualitäts**](/windows/win32/api/strmif/ns-strmif-quality) Struktur, die die Qualitäts Steuerungs Meldung enthält.
+[**Qualitätsstruktur,**](/windows/win32/api/strmif/ns-strmif-quality) die die Qualitätskontrollmeldung enthält.
 
 </dd> </dl>
 
@@ -63,27 +63,27 @@ Gibt S \_ OK zurück.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Filter übergeben in der Regel Qualitäts Steuerungs Meldungen an eine upstreamausgabepin und nicht an eine Eingabe-PIN. Daher gibt diese Methode S OK zurück, \_ ohne etwas zu tun.
+Filter übergeben in der Regel Qualitätskontrollmeldungen an einen Upstreamausgabepin, nicht an einen Eingabepin. Daher gibt diese Methode S \_ OK zurück, ohne etwas zu tun.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (streams.h enthalten)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbaseingeputpin-Klasse**](cbaseinputpin.md)
+[**CBaseInputPin-Klasse**](cbaseinputpin.md)
 </dt> <dt>
 
-[Qualitäts Steuerungs Verwaltung](quality-control-management.md)
+[Qualitätskontrollverwaltung](quality-control-management.md)
 </dt> </dl>
 
  

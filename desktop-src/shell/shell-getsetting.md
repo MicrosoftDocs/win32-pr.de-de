@@ -1,7 +1,7 @@
 ---
-description: Ruft eine globale shelleinstellung ab.
+description: 'Shell.GetSetting-Methode: Ruft eine globale Shelleinstellung ab.'
 ms.assetid: 3E8C7C6A-5696-4756-B4BF-902FA2420AE9
-title: Shell. GetSetting-Methode (Shldisp. h)
+title: Shell.GetSetting-Methode (Shldisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Shell32.dll
-ms.openlocfilehash: df87c0c99129a8ececa3c25321a192e25c71c07e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: dc8fe6277208808ad5f5b182f3eee416daf4a5d0
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103865267"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108083738"
 ---
-# <a name="shellgetsetting-method"></a>Shell. GetSetting-Methode
+# <a name="shellgetsetting-method"></a>Shell.GetSetting-Methode
 
-Ruft eine globale shelleinstellung ab.
+Ruft eine globale Shelleinstellung ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,29 +49,29 @@ Shell.GetSetting( _
 
 <dl> <dt>
 
-*lsetting* \[ in\]
+*lSetting* \[ In\]
 </dt> <dd>
 
-Type: **Long**
+Typ: **long**
 
-Ein-Wert, der die abzurufende aktuelle shelleinstellung angibt. In jedem-Befehl kann nur eine Einstellung abgerufen werden. Die folgenden Werte werden von dieser Methode erkannt.
+Ein -Wert, der die aktuelle abzurufende Shelleinstellung angibt. In jedem Aufruf kann nur eine Einstellung abgerufen werden. Die folgenden Werte werden von dieser Methode erkannt.
 
 <dt>
 
 <span id="SSF_AUTOCHECKSELECT"></span><span id="ssf_autocheckselect"></span>
 
-<span id="SSF_AUTOCHECKSELECT"></span><span id="ssf_autocheckselect"></span>**SSF \_ Autocheckselect** (0x00800000)
+<span id="SSF_AUTOCHECKSELECT"></span><span id="ssf_autocheckselect"></span>**SSF \_ AUTOCHECKSELECT** (0x00800000)
 
 
 </dt> <dd>
 
-**Windows Vista und** höher. Der Status der Option **Kontrollkästchen zum Auswählen von Elementen verwenden** . Diese Option wird automatisch aktiviert, wenn für das System ein Stift Eingabegerät konfiguriert ist.
+**Windows Vista und höher.** Der Status der Option **Elemente mithilfe der Kontrollkästchen** auswählen. Diese Option wird automatisch aktiviert, wenn für das System ein Stifteingabegerät konfiguriert ist.
 
 </dd> <dt>
 
 <span id="SSF_DESKTOPHTML"></span><span id="ssf_desktophtml"></span>
 
-<span id="SSF_DESKTOPHTML"></span><span id="ssf_desktophtml"></span>**SSF \_ Desktophtml** (0x00000200)
+<span id="SSF_DESKTOPHTML"></span><span id="ssf_desktophtml"></span>**SSF \_ DESKTOPHTML** (0x00000200)
 
 
 </dt> <dd>
@@ -82,29 +82,29 @@ Nicht verwendet.
 
 <span id="SSF_DONTPRETTYPATH"></span><span id="ssf_dontprettypath"></span>
 
-<span id="SSF_DONTPRETTYPATH"></span><span id="ssf_dontprettypath"></span>**SSF \_ Dontprettypath** (0x00000800)
+<span id="SSF_DONTPRETTYPATH"></span><span id="ssf_dontprettypath"></span>**SSF \_ DONTPRETTYPATH** (0x00000800)
 
 
 </dt> <dd>
 
-Der Status der Option **alle Großbuchstaben zulassen** . Ab Windows Vista ist diese Ordner Option nicht mehr verfügbar.
+Der Status der Option **Alle Großbuchstaben zulassen.** Ab Windows Vista ist diese Ordneroption nicht mehr verfügbar.
 
 </dd> <dt>
 
 <span id="SSF_DOUBLECLICKINWEBVIEW"></span><span id="ssf_doubleclickinwebview"></span>
 
-<span id="SSF_DOUBLECLICKINWEBVIEW"></span><span id="ssf_doubleclickinwebview"></span>**SSF \_ Doubleclickinwebview** (0x00000080)
+<span id="SSF_DOUBLECLICKINWEBVIEW"></span><span id="ssf_doubleclickinwebview"></span>**SSF \_ DOUBLECLICKINWEBVIEW** (0x00000080)
 
 
 </dt> <dd>
 
-Der Zustand des **Doppelklick-Elements, um ein Element (mit einem Mausklick ausgewählt) zu öffnen** .
+Der Status der Option **Doppelklicken, um ein Element zu öffnen (einfaches Klicken zum Auswählen).**
 
 </dd> <dt>
 
 <span id="SSF_FILTER"></span><span id="ssf_filter"></span>
 
-<span id="SSF_FILTER"></span><span id="ssf_filter"></span>**SSF \_ Filter** (0x00010000 bis)
+<span id="SSF_FILTER"></span><span id="ssf_filter"></span>**SSF \_ FILTER** (0x00010000)
 
 
 </dt> <dd>
@@ -115,7 +115,7 @@ Nicht verwendet.
 
 <span id="SSF_HIDDENFILEEXTS"></span><span id="ssf_hiddenfileexts"></span>
 
-<span id="SSF_HIDDENFILEEXTS"></span><span id="ssf_hiddenfileexts"></span>**SSF \_ Hiddenfileexts** (0x00000004)
+<span id="SSF_HIDDENFILEEXTS"></span><span id="ssf_hiddenfileexts"></span>**SSF \_ HIDDENFILEEXTS** (0x00000004)
 
 
 </dt> <dd>
@@ -126,73 +126,73 @@ Nicht verwendet.
 
 <span id="SSF_HIDEICONS"></span><span id="ssf_hideicons"></span>
 
-<span id="SSF_HIDEICONS"></span><span id="ssf_hideicons"></span>**SSF \_ Hideicons** (0x00004000)
+<span id="SSF_HIDEICONS"></span><span id="ssf_hideicons"></span>**SSF \_ HIDEICONS** (0x00004000)
 
 
 </dt> <dd>
 
-Der Status der Symbol Anzeige in der Listenansicht von Windows-Explorer. Wenn diese Option aktiviert ist, werden keine Symbole in der Listenansicht angezeigt.
+Der Status des Symbols, der in der listenansicht Windows-Explorer angezeigt wird. Wenn diese Option aktiv ist, werden in der Listenansicht keine Symbole angezeigt.
 
 </dd> <dt>
 
 <span id="SSF_ICONSONLY"></span><span id="ssf_iconsonly"></span>
 
-<span id="SSF_ICONSONLY"></span><span id="ssf_iconsonly"></span>**SSF \_ Iconsonly** (0x01000000)
+<span id="SSF_ICONSONLY"></span><span id="ssf_iconsonly"></span>**SSF \_ ICONSONLY** (0x01000000)
 
 
 </dt> <dd>
 
-**Windows Vista und** höher. Der Status des anzeigen Amens wird in der Listenansicht von Windows-Explorer angezeigt. Wenn diese Option aktiviert ist, werden Symbole in der Listenansicht angezeigt, aber keine anzeigen Amen.
+**Windows Vista und höher.** Der Status des Anzeigenamens, der in der Windows-Explorer Listenansicht angezeigt wird. Wenn diese Option aktiv ist, werden Symbole in der Listenansicht angezeigt, Anzeigenamen jedoch nicht.
 
 </dd> <dt>
 
 <span id="SSF_MAPNETDRVBUTTON"></span><span id="ssf_mapnetdrvbutton"></span>
 
-<span id="SSF_MAPNETDRVBUTTON"></span><span id="ssf_mapnetdrvbutton"></span>**SSF \_ Mapnetdrvbutton** (0x00001000)
+<span id="SSF_MAPNETDRVBUTTON"></span><span id="ssf_mapnetdrvbutton"></span>**SSF \_ MAPNETDRVBUTTON** (0x00001000)
 
 
 </dt> <dd>
 
-Der Status der **Schaltfläche Zuordnungs Netzwerklaufwerk anzeigen in der Symbol** leisten Option. Ab Windows Vista steht diese Option nicht mehr zur Verfügung.
+Der Status der **Schaltfläche Kartennetzwerklaufwerk anzeigen in der Symbolleistenoption.** Ab Windows Vista ist diese Option nicht mehr verfügbar.
 
 </dd> <dt>
 
 <span id="SSF_NOCONFIRMRECYCLE"></span><span id="ssf_noconfirmrecycle"></span>
 
-<span id="SSF_NOCONFIRMRECYCLE"></span><span id="ssf_noconfirmrecycle"></span>**SSF \_ Noconfirmrecycle** (0x00008000)
+<span id="SSF_NOCONFIRMRECYCLE"></span><span id="ssf_noconfirmrecycle"></span>**SSF \_ NOCONFIRMRECYCLE** (0x00008000)
 
 
 </dt> <dd>
 
-Der Status der Option zum Anzeigen von **Lösch Dialogfeld** für den Papierkorb.
+Der Status der **Bestätigungsdialogoption Löschbestätigung anzeigen** des Papierkorb.
 
 </dd> <dt>
 
 <span id="SSF_NONETCRAWLING"></span><span id="ssf_nonetcrawling"></span>
 
-<span id="SSF_NONETCRAWLING"></span><span id="ssf_nonetcrawling"></span>**SSF \_ Nonetcrawlen** (0x00100000)
+<span id="SSF_NONETCRAWLING"></span><span id="ssf_nonetcrawling"></span>**SSF \_ NONETCRAWLING** (0x00100000)
 
 
 </dt> <dd>
 
-Der Status der Option **Netzwerkordner und Drucker automatisch suchen** . Ab Windows Vista steht diese Option nicht mehr zur Verfügung.
+Der Status der Option **Automatisch nach Netzwerkordnern und Druckern suchen.** Ab Windows Vista ist diese Option nicht mehr verfügbar.
 
 </dd> <dt>
 
 <span id="SSF_SEPPROCESS"></span><span id="ssf_sepprocess"></span>
 
-<span id="SSF_SEPPROCESS"></span><span id="ssf_sepprocess"></span>**SSF \_ Sepprocess** (0x00080000)
+<span id="SSF_SEPPROCESS"></span><span id="ssf_sepprocess"></span>**SSF \_ SEPPROCESS** (0x00080000)
 
 
 </dt> <dd>
 
-Der Zustand der **Fenster "Ordner starten" in einer separaten Prozess** Option.
+Der Status der **Ordnerfenster in einem separaten Prozess starten.**
 
 </dd> <dt>
 
 <span id="SSF_SERVERADMINUI"></span><span id="ssf_serveradminui"></span>
 
-<span id="SSF_SERVERADMINUI"></span><span id="ssf_serveradminui"></span>**SSF \_ Serveradminui** (0x00000004)
+<span id="SSF_SERVERADMINUI"></span><span id="ssf_serveradminui"></span>**SSF \_ SERVERADMINUI** (0x00000004)
 
 
 </dt> <dd>
@@ -203,62 +203,62 @@ Nicht verwendet.
 
 <span id="SSF_SHOWALLOBJECTS"></span><span id="ssf_showallobjects"></span>
 
-<span id="SSF_SHOWALLOBJECTS"></span><span id="ssf_showallobjects"></span>**SSF \_ Showallobjects** (0x00000001)
+<span id="SSF_SHOWALLOBJECTS"></span><span id="ssf_showallobjects"></span>**SSF \_ SHOWALLOBJECTS** (0x00000001)
 
 
 </dt> <dd>
 
-Der Status der ausgeblendeten **Dateien und Ordner** .
+Der Status der Option **Ausgeblendete Dateien und** Ordner.
 
 </dd> <dt>
 
 <span id="SSF_SHOWATTRIBCOL"></span><span id="ssf_showattribcol"></span>
 
-<span id="SSF_SHOWATTRIBCOL"></span><span id="ssf_showattribcol"></span>**SSF \_ ShowAttribCol** (0x00000100)
+<span id="SSF_SHOWATTRIBCOL"></span><span id="ssf_showattribcol"></span>**SSF \_ SHOWATTRIBCOL** (0x00000100)
 
 
 </dt> <dd>
 
-Der Status der Option **Dateiattribute in Detail Ansicht anzeigen** . Ab Windows Vista steht diese Option nicht mehr zur Verfügung.
+Der Status der Option **Dateiattribute in Detailansicht** anzeigen. Ab Windows Vista ist diese Option nicht mehr verfügbar.
 
 </dd> <dt>
 
 <span id="SSF_SHOWCOMPCOLOR"></span><span id="ssf_showcompcolor"></span>
 
-<span id="SSF_SHOWCOMPCOLOR"></span><span id="ssf_showcompcolor"></span>**SSF \_ Showcompcolor** (0x00000008)
+<span id="SSF_SHOWCOMPCOLOR"></span><span id="ssf_showcompcolor"></span>**SSF \_ SHOWCOMPCOLOR** (0x00000008)
 
 
 </dt> <dd>
 
-Der Status der Option **verschlüsselte oder komprimierte NTFS-Dateien in Farbe anzeigen** .
+Der Status der Option **Verschlüsselte oder komprimierte NTFS-Dateien in Farbe** anzeigen.
 
 </dd> <dt>
 
 <span id="SSF_SHOWEXTENSIONS"></span><span id="ssf_showextensions"></span>
 
-<span id="SSF_SHOWEXTENSIONS"></span><span id="ssf_showextensions"></span>**SSF \_ Showextensions** (0x00000002)
+<span id="SSF_SHOWEXTENSIONS"></span><span id="ssf_showextensions"></span>**SSF \_ SHOWEXTENSIONS** (0x00000002)
 
 
 </dt> <dd>
 
-Der Status der Option **Erweiterungen für bekannte Dateitypen ausblenden** .
+Der Status der Option **Erweiterungen für bekannte Dateitypen ausblenden.**
 
 </dd> <dt>
 
 <span id="SSF_SHOWINFOTIP"></span><span id="ssf_showinfotip"></span>
 
-<span id="SSF_SHOWINFOTIP"></span><span id="ssf_showinfotip"></span>**SSF \_ ShowInfoTip** (0x00002000)
+<span id="SSF_SHOWINFOTIP"></span><span id="ssf_showinfotip"></span>**SSF \_ SHOWINFOTIP** (0x00002000)
 
 
 </dt> <dd>
 
-Der Status der Option **Popup Beschreibung für Ordner und Desktop Elemente anzeigen** .
+Der Status der Option **Popupbeschreibung für Ordner** und Desktopelemente anzeigen.
 
 </dd> <dt>
 
 <span id="SSF_SHOWSTARTPAGE"></span><span id="ssf_showstartpage"></span>
 
-<span id="SSF_SHOWSTARTPAGE"></span><span id="ssf_showstartpage"></span>**SSF \_ Showstartpage** (0x00400000)
+<span id="SSF_SHOWSTARTPAGE"></span><span id="ssf_showstartpage"></span>**SSF \_ SHOWSTARTPAGE** (0x00400000)
 
 
 </dt> <dd>
@@ -269,40 +269,40 @@ Nicht verwendet.
 
 <span id="SSF_SHOWSUPERHIDDEN"></span><span id="ssf_showsuperhidden"></span>
 
-<span id="SSF_SHOWSUPERHIDDEN"></span><span id="ssf_showsuperhidden"></span>**SSF \_ ShowSuperHidden** (0x00040000)
+<span id="SSF_SHOWSUPERHIDDEN"></span><span id="ssf_showsuperhidden"></span>**SSF \_ SHOWSUPERHIDDEN** (0x00040000)
 
 
 </dt> <dd>
 
-Der Status der Option **geschützte Betriebssystemdateien ausblenden** .
+Der Status der Option **Geschützte Betriebssystemdateien ausblenden.**
 
 </dd> <dt>
 
 <span id="SSF_SHOWSYSFILES"></span><span id="ssf_showsysfiles"></span>
 
-<span id="SSF_SHOWSYSFILES"></span><span id="ssf_showsysfiles"></span>**SSF \_ Showsysfiles** (0x00000020)
+<span id="SSF_SHOWSYSFILES"></span><span id="ssf_showsysfiles"></span>**SSF \_ SHOWSYSFILES** (0x00000020)
 
 
 </dt> <dd>
 
-Der Status der ausgeblendeten **Dateien und Ordner** . In Windows Vista und höher entspricht dies SSF \_ showallobjects. In Windows-Versionen vor Windows Vista bezog sich dieser Wert auf den Zustand der Option nicht ausgeblendete **Dateien und Ordner anzeigen** .
+Der Status der Option **Ausgeblendete Dateien und** Ordner. In Windows Vista und höher entspricht dies SSF \_ SHOWALLOBJECTS. In Windows-Versionen vor Windows Vista wurde dieser Wert auf den Status der Option **Ausgeblendete** Dateien und Ordner nicht anzeigen verwiesen.
 
 </dd> <dt>
 
 <span id="SSF_SHOWTYPEOVERLAY"></span><span id="ssf_showtypeoverlay"></span>
 
-<span id="SSF_SHOWTYPEOVERLAY"></span><span id="ssf_showtypeoverlay"></span>**SSF \_ Showtypeoverlay** (0x02000000)
+<span id="SSF_SHOWTYPEOVERLAY"></span><span id="ssf_showtypeoverlay"></span>**SSF \_ SHOWTYPEOVERLAY** (0x02000000)
 
 
 </dt> <dd>
 
-**Windows Vista und** höher. Der Status des **Symbols für die Anzeige Datei in der Miniatur** Ansicht. Wenn diese Option aktiviert ist, wird eine Dateityp Überlagerung angewendet, wenn eine Datei eine Miniaturansicht bereitstellt.
+**Windows Vista und höher.** Der Status der Option **Dateisymbol für Miniaturansichten** anzeigen. Wenn diese Option aktiv ist, wird eine Dateitypüberlagerung angewendet, wenn eine Datei eine Miniaturansichtsdarstellung liefert.
 
 </dd> <dt>
 
 <span id="SSF_SORTCOLUMNS"></span><span id="ssf_sortcolumns"></span>
 
-<span id="SSF_SORTCOLUMNS"></span><span id="ssf_sortcolumns"></span>**SSF \_ SortColumns** (0x00000010)
+<span id="SSF_SORTCOLUMNS"></span><span id="ssf_sortcolumns"></span>**SSF \_ SORTCOLUMNS** (0x00000010)
 
 
 </dt> <dd>
@@ -313,23 +313,23 @@ Nicht verwendet.
 
 <span id="SSF_STARTPANELON"></span><span id="ssf_startpanelon"></span>
 
-<span id="SSF_STARTPANELON"></span><span id="ssf_startpanelon"></span>**SSF \_ Startpanelon** (0x00200000)
+<span id="SSF_STARTPANELON"></span><span id="ssf_startpanelon"></span>**SSF \_ STARTPANELON** (0x00200000)
 
 
 </dt> <dd>
 
-Der Status der Anzeigeoption von Windows XP, die zwischen dem Windows XP-Stil und dem klassischen Stil auswählt. Ab Windows Vista steht diese Option nicht mehr zur Verfügung.
+Der Status der Windows XP-Anzeigeoption, die zwischen dem Windows XP-Stil und dem klassischen Stil auswählt. Ab Windows Vista ist diese Option nicht mehr verfügbar.
 
 </dd> <dt>
 
 <span id="SSF_WEBVIEW"></span><span id="ssf_webview"></span>
 
-<span id="SSF_WEBVIEW"></span><span id="ssf_webview"></span>**SSF \_ WebView** (0x00020000)
+<span id="SSF_WEBVIEW"></span><span id="ssf_webview"></span>**SSF \_ WEBVIEW** (0x00020000)
 
 
 </dt> <dd>
 
-Der Zustand der **Anzeige als webansichts Option**. Ab Windows Vista steht diese Option nicht mehr zur Verfügung.
+Der Status der **Option Als Webansicht anzeigen.** Ab Windows Vista ist diese Option nicht mehr verfügbar.
 
 </dd> <dt>
 
@@ -340,7 +340,7 @@ Der Zustand der **Anzeige als webansichts Option**. Ab Windows Vista steht diese
 
 </dt> <dd>
 
-Der Status der **klassischen Stil** Option. Ab Windows Vista steht diese Option nicht mehr zur Verfügung.
+Der Status der Option **"Klassischer Stil".** Ab Windows Vista ist diese Option nicht mehr verfügbar.
 
 </dd> </dl> </dd> </dl>
 
@@ -348,21 +348,21 @@ Der Status der **klassischen Stil** Option. Ab Windows Vista steht diese Option 
 
 ### <a name="jscript"></a>JScript
 
-Typ: **Variant \_ bool \** _
+Typ: **VARIANT \_ BOOL \***
 
-Legen Sie auf _ *true** fest, wenn die Einstellung vorhanden ist. andernfalls **false**.
+Legen Sie auf **TRUE** fest, wenn die Einstellung vorhanden ist. andernfalls **FALSE.**
 
 ### <a name="vb"></a>VB
 
-Typ: **Variant \_ bool \** _
+Typ: **VARIANT \_ BOOL \***
 
-Legen Sie auf _ *true** fest, wenn die Einstellung vorhanden ist. andernfalls **false**.
+Legen Sie auf **TRUE** fest, wenn die Einstellung vorhanden ist. andernfalls **FALSE.**
 
 ## <a name="examples"></a>Beispiele
 
-In den folgenden Beispielen wird die Verwendung von **GetSetting** für JScript, VBScript und Visual Basic veranschaulicht.
+Die folgenden Beispiele zeigen die Verwendung von **GetSetting** für JScript, VBScript und Visual Basic.
 
-JScript
+Jscript:
 
 
 ```JScript
@@ -381,7 +381,7 @@ JScript
 
 
 
-VBScript
+Vbscript:
 
 
 ```VB
@@ -426,17 +426,17 @@ End Sub
 
 
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                                                   |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                          |
-| Header<br/>                   | <dl> <dt>Shldisp. h</dt> </dl>                          |
-| IDL<br/>                      | <dl> <dt>Shldisp. idl</dt> </dl>                        |
-| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 6,0 oder höher)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ XP-Desktop-Apps\]<br/>                                                                   |
+| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2003-Desktop-Apps\]<br/>                                                          |
+| Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>                          |
+| Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                        |
+| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 6.0 oder höher)</dt> </dl> |
 
 
 

@@ -1,7 +1,7 @@
 ---
-description: Wertet ein Licht aus, bei dem es sich um einen Kegel konstanter Intensität handelt.
+description: 'D3DXSHEvalConeLight-Funktion (D3dx9math.h): Wertet ein Licht aus, das ein Kegel konstanter Intensität ist, und gibt shherische (Spherical Sply)-Daten zurück.'
 ms.assetid: 13088e3b-76ae-43ef-886e-686f1f18a31d
-title: D3DXSHEvalConeLight-Funktion (D3dx9math. h)
+title: D3DXSHEvalConeLight-Funktion (D3dx9math.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 2400fe0430e008ea1b704ee4daef51eeee7bd7a9
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 31c90e705a0bb4e82813fff42673e143c5acf171
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104563274"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108117948"
 ---
-# <a name="d3dxshevalconelight-function-d3dx9mathh"></a>D3DXSHEvalConeLight-Funktion (D3dx9math. h)
+# <a name="d3dxshevalconelight-function-d3dx9mathh"></a>D3DXSHEvalConeLight-Funktion (D3dx9math.h)
 
-Wertet ein Licht aus, bei dem es sich um einen Kegel konstanter Intensität handelt.
+Wertet ein Licht aus, das ein Kegel konstanter Intensität ist, und gibt SH-Daten zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,84 +48,84 @@ HRESULT D3DXSHEvalConeLight(
 
 <dl> <dt>
 
-*Reihenfolge* \[ in\]
+*Bestellung* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Die Reihenfolge der SH-Evaluierung. Muss im Bereich von [D3DXSH \_ minorder](other-d3dx-constants.md) bis D3DXSH \_ maxorder (einschließlich) liegen. Die Auswertung generiert die Koeffizienten der Bestellung. Der Bewertungs Grad ist Order-1.
+Reihenfolge der SH-Auswertung. Muss im Bereich von [D3DXSH \_ MINORDER](other-d3dx-constants.md) bis D3DXSH \_ MAXORDER (einschließlich) liegen. Die Auswertung generiert Order²-Koeffizienten. Der Grad der Auswertung ist "Order - 1".
 
 </dd> <dt>
 
-*pdir* \[ in\]
+*pDir* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXVECTOR3**](d3dxvector3.md) \***
+Typ: **const [**D3DXVECTOR3**](d3dxvector3.md) \***
 
-Ein Zeiger auf den Achsen Richtungsvektor (x, y, z), in dem die sh-Basisfunktionen ausgewertet werden. Siehe Hinweise.
+Zeiger auf den Achsenrichtungsvektor (x, y, z), in dem die SH-Basisfunktionen ausgewertet werden sollen. Siehe Hinweise.
 
 </dd> <dt>
 
-*RADIUS* \[ in\]
+*Radius* \[ In\]
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-Der Radius des Kegel im Bogenmaße.
+Kegelradius im Bogenmaß.
 
 </dd> <dt>
 
-*Rintensität* \[ in\]
+*RIntensity* \[ In\]
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
 Die rote Intensität des Lichts.
 
 </dd> <dt>
 
-*Gintensity* \[ in\]
+*GIntensity* \[ In\]
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
 Die grüne Intensität des Lichts.
 
 </dd> <dt>
 
-*Bintensity* \[ in\]
+*BIntensity* \[ In\]
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
 Die blaue Intensität des Lichts.
 
 </dd> <dt>
 
-*Proxy* \[ vorgenommen\]
+*pROut* \[ out\]
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)\***
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)\***
 
-Zeiger auf den Ausgabe-SH-Vektor für die rote Komponente.
+Zeiger auf den SH-Ausgabevektor für die rote Komponente.
 
 </dd> <dt>
 
-*pgout* \[ vorgenommen\]
+*pGOut* \[ out\]
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)\***
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)\***
 
-Zeiger auf den Ausgabe-SH-Vektor für die grüne Komponente.
+Zeiger auf den SH-Ausgabevektor für die grüne Komponente.
 
 </dd> <dt>
 
-*pbout* \[ vorgenommen\]
+*pBOut* \[ out\]
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)\***
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)\***
 
-Zeiger auf den Ausgabe-SH-Vektor für die blaue Komponente.
+Zeiger auf den SH-Ausgabevektor für die blaue Komponente.
 
 </dd> </dl>
 
@@ -133,39 +133,39 @@ Zeiger auf den Ausgabe-SH-Vektor für die blaue Komponente.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert lauten: D3DERR \_ invalidcall.
+Wenn die Funktion erfolgreich ist, ist der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert D3DERR \_ INVALIDCALL sein.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Wertet ein Licht aus, bei dem es sich um einen Kegel konstanter Intensität handelt Der Ausgabe Vektor wird berechnet, sodass die Ausgangs Kraft eines Punkts, der sich direkt unterhalb des Lichts (in der Kegel Richtung eines diffuses Objekts mit einem Albedo-Wert von 1) befindet, 1,0 ist, wenn das Intensität-Verhältnis von R/G/B gleich 1 ist. Dadurch werden drei Spektral Beispiele berechnet. " *Prout* " wird zurückgegeben, während " *pgout* " und " *pbout* " zurückgegeben werden können.
+Wertet ein Licht aus, das ein Kegel mit konstanter Intensität ist und sh-Daten zurückgibt. Der Ausgabevektor wird so berechnet, dass, wenn das Intensitätsverhältnis R/G/B gleich 1 ist, die Beendigungsausgabe eines Punkts direkt unter dem Licht (ausgerichtet in der Kegelrichtung bei einem diffusen Objekt mit einem Albedo von 1) 1,0 wäre. Dadurch werden drei Beispielbeispiele berechnet: *pROut* wird zurückgegeben, während *pGOut* und *pBOut* zurückgegeben werden können.
 
-In der Kugel mit Einheiten RADIUS, wie in der folgenden Abbildung gezeigt, kann die Richtung einfach mit der TA angegeben werden, dem Winkel zur z-Achse in der [rechten Hand Richtung](coordinate-systems.md)und dem Phi, dem Winkel von z.
+Auf der Kugel mit Einheitenradius kann die Richtung wie in der folgenden Abbildung dargestellt einfach mit theta, dem Winkel um die [Z-Achse in rechtshändiger Richtung](coordinate-systems.md)und phi, dem Winkel von z, angegeben werden.
 
-![Abbildung einer Kugel mit Einheiten RADIUS](images/spherical-coordinates.png)
+![Abbildung einer Kugel mit Einheitenradius](images/spherical-coordinates.png)
 
-Die folgenden Gleichungen zeigen die Beziehung zwischen kartesischen Koordinaten (x, y, z) und sphärischen Koordinaten (Orta, Phi) in der Einheits Kugel. Der Winkel der Spitze variiert im Bereich von 0 bis 2 PI, während sich der Wert von "0" bis "Pi" unterscheidet.
+Die folgenden Gleichungen zeigen die Beziehung zwischen kartesischen Koordinaten (x, y, z) und sphärischen Koordinaten (Theta, Phi) auf der Einheitenkugel. Der Winkel theta variiert im Bereich von 0 bis 2 Pi, während phi von 0 bis Pi variiert.
 
-![Gleichungen der Beziehung zwischen kartesischen und kugelförmigen Koordinaten](images/spherical-coordinates-equations.png)
+![Gleichungen der Beziehung zwischen kartesischen und sphärischen Koordinaten](images/spherical-coordinates-equations.png)
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9math. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3dx9math.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [Mathematische Funktionen](dx9-graphics-reference-d3dx-functions-math.md)
 </dt> <dt>
 
-[Voraus berechnete Strahlungs Übertragung (Direct3D 9)](precomputed-radiance-transfer.md)
+[Vorausberechnen der Übertragungsstärke (Direct3D 9)](precomputed-radiance-transfer.md)
 </dt> </dl>
 
  

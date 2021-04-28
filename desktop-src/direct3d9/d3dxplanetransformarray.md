@@ -1,7 +1,7 @@
 ---
-description: Transformiert ein Array von Ebenen durch eine Matrix. Die Vektoren, die die einzelnen Ebenen beschreiben, müssen normalisiert werden.
+description: 'D3DXPlaneTransformArray-Funktion (D3dx9math.h): Transformiert ein Array von Ebenen durch eine Matrix. Die Vektoren, die jede Ebene beschreiben, müssen normalisiert werden.'
 ms.assetid: e82e830b-efbb-4bdc-b370-7bfa4326a669
-title: D3DXPlaneTransformArray-Funktion (D3dx9math. h)
+title: D3DXPlaneTransformArray-Funktion (D3dx9math.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: a9a213b17aca9999ef0028fdceb4bb4321d47660
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: bdbc845eda69d22f6e7097131f71b074a9b53985
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106354346"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108094128"
 ---
-# <a name="d3dxplanetransformarray-function-d3dx9mathh"></a>D3DXPlaneTransformArray-Funktion (D3dx9math. h)
+# <a name="d3dxplanetransformarray-function-d3dx9mathh"></a>D3DXPlaneTransformArray-Funktion (D3dx9math.h)
 
-Transformiert ein Array von Ebenen durch eine Matrix. Die Vektoren, die die einzelnen Ebenen beschreiben, müssen normalisiert werden.
+Transformiert ein Array von Ebenen durch eine Matrix. Die Vektoren, die jede Ebene beschreiben, müssen normalisiert werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,55 +45,55 @@ D3DXPLANE* D3DXPlaneTransformArray(
 
 <dl> <dt>
 
-*Pout* \[ in, out\]
+*pOut* \[ in, out\]
 </dt> <dd>
 
 Typ: **[ **D3DXPLANE**](d3dxplane.md)\***
 
-Ein Zeiger auf die [**D3DXPLANE**](d3dxplane.md) -Struktur, die die resultierende transformierte Ebene enthält. Siehe Beispiel.
+Zeiger auf die [**D3DXPLANE-Struktur,**](d3dxplane.md) die die resultierende transformierte Ebene enthält. Siehe Beispiel.
 
 </dd> <dt>
 
-*Outstride* \[ vorgenommen\]
+*OutStride* \[ out\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Der Schritt der einzelnen transformierten Ebenen.
+Der Schritt jeder transformierten Ebene.
 
 </dd> <dt>
 
-*PP* \[ in\]
+*pP* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXPLANE**](d3dxplane.md) \***
+Typ: **const [**D3DXPLANE**](d3dxplane.md) \***
 
-Ein Zeiger auf die [**D3DXPLANE**](d3dxplane.md) -Eingabe Struktur, die das zu transformierenden Array von Ebenen enthält. Der Vektor (a, b, c), der die Ebene beschreibt, muss normalisiert werden, bevor diese Funktion aufgerufen wird. Siehe Beispiel.
+Zeiger auf die [**D3DXPLANE-Eingabestruktur,**](d3dxplane.md) die das Array der zu transformierten Ebenen enthält. Der Vektor (a,b,c), der die Ebene beschreibt, muss normalisiert werden, bevor diese Funktion aufgerufen wird. Siehe Beispiel.
 
 </dd> <dt>
 
-*Pstride* \[ in\]
+*PStride* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Der Stride der einzelnen nicht transformierten Ebenen.
+Der Schritt jeder nicht transformierten Ebene.
 
 </dd> <dt>
 
-*pm* \[ in\]
+*pM* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXMATRIX**](d3dxmatrix.md) \***
+Typ: **const [**D3DXMATRIX**](d3dxmatrix.md) \***
 
-Ein Zeiger auf die Quell- [**D3DXMATRIX**](d3dxmatrix.md) -Struktur, die die umgekehrte Umwandlung der Transformations Werte enthält.
+Zeiger auf die [**D3DXMATRIX-Quellstruktur,**](d3dxmatrix.md) die die umgekehrte Transponierung der Transformationswerte enthält.
 
 </dd> <dt>
 
 *n* \[ in\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
 Die Anzahl der zu transformierenden Ebenen.
 
@@ -103,7 +103,7 @@ Die Anzahl der zu transformierenden Ebenen.
 
 Typ: **[ **D3DXPLANE**](d3dxplane.md)\***
 
-Zeiger auf eine [**D3DXPLANE**](d3dxplane.md) -Struktur, die die transformierte Ebene darstellt. Dabei handelt es sich um denselben Wert, der im *Pout* -Parameter zurückgegeben wird, sodass diese Funktion als Parameter für eine andere Funktion verwendet werden kann.
+Zeiger auf eine [**D3DXPLANE-Struktur,**](d3dxplane.md) die die transformierte Ebene darstellt. Dies ist der gleiche Wert, der im *pOut-Parameter* zurückgegeben wird, sodass diese Funktion als Parameter für eine andere Funktion verwendet werden kann.
 
 ## <a name="remarks"></a>Bemerkungen
 
@@ -131,22 +131,22 @@ D3DXPlaneTransformArray( &planeNew, sizeof (D3DXPLANE), &plane,
 
 
 
-Eine Ebene wird von AX + by + CZ + DW = 0 beschrieben. Die erste Ebene wird mit (a, b, c, d) = (0, 1, 1, 0) erstellt. Dies ist eine Ebene, die von y + z = 0 beschrieben wird. Nach dem Skalieren enthält die neue Ebene (a, b, c, d) = (0, 0.353 f, 0.235 f, 0), die die neue Ebene anzeigt, die von 0.353 y + 0.235 z = 0 beschrieben wird.
+Eine Ebene wird durch ax + by + dw + dw = 0 beschrieben. Die erste Ebene wird mit (a,b,c,d) = (0,1,1,0) erstellt. Dies ist eine Ebene, die von y + z = 0 beschrieben wird. Nach der Skalierung enthält die neue Ebene (a,b,c,d) = (0, 0,353f, 0,235f, 0), die die neue Ebene zeigt, die von 0,353y + 0,235z = 0 beschrieben werden soll.
 
-Der-Parameter *pm* enthält die umgekehrte Umwandlung der Transformationsmatrix. Die umgekehrte Umwandlung ist für diese Methode erforderlich, damit der normale Vektor der transformierten Ebene ebenfalls ordnungsgemäß transformiert werden kann.
+Der Parameter *pM* enthält die umgekehrte Transponierung der Transformationsmatrix. Die umgekehrte Transponierung ist für diese Methode erforderlich, damit auch der normale Vektor der transformierten Ebene ordnungsgemäß transformiert werden kann.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9math. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3dx9math.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

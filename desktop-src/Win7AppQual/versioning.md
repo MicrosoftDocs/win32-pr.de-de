@@ -1,25 +1,25 @@
 ---
-description: .
+description: Versionierung (Cookbook zur Anwendungsqualität für Windows 7 und Windows Server 2008 R2)
 ms.assetid: d1014801-a93a-40e8-ae96-31784c192753
-title: Versionsverwaltung (Windows 7 und Windows Server 2008 R2 Anwendungsqualität Cookbook)
+title: Versionierung (Cookbook zur Anwendungsqualität für Windows 7 und Windows Server 2008 R2)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e2da50dae53fd2309f1a5de10996c57a2b4ac29c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b9c3bc1f63dc236c706fd8d9bd6a6053371dd363
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106355467"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108103698"
 ---
-# <a name="versioning-windows-7-and-windows-server-2008-r2-application-quality-cookbook"></a>Versionsverwaltung (Windows 7 und Windows Server 2008 R2 Anwendungsqualität Cookbook)
+# <a name="versioning-windows-7-and-windows-server-2008-r2-application-quality-cookbook"></a>Versionierung (Windows 7 und Windows Server 2008 R2 Application Quality Cookbook)
 
-Eines der häufigsten Anwendungs Kompatibilitätsprobleme bei Windows Internet Explorer sind die Zeichen Folgen des Benutzer-Agents (UA) und Versions Vektoren. Windows Internet Explorer 8 führt eine neue UA-Zeichenfolge ein, um Anwendungen bei der Ermittlung zu unterstützen, welche Version Benutzer ausführen. Zusätzlich zum einfachen erhöhen des MSIE-Werts, der Internet Explorer in der UA-Zeichenfolge zugeordnet ist, fügt Internet Explorer 8 einen Wert für den Wert "Wert/4.0" hinzu, um zu ermitteln, ob Internet Explorer 8 im Kompatibilitäts Ansichtsmodus ausgeführt wird. Diese Änderungen sowie hart codierte Versions Prüfungen können möglicherweise Kompatibilitätsprobleme zwischen Browsern mit sich bringen.
+Eines der häufigsten Anwendungskompatibilitätsprobleme für Windows Internet Explorer sind Benutzer-Agent-Zeichenfolgen (UA) und Versionsvektoren. Windows Internet Explorer 8 führt eine neue UA-Zeichenfolge ein, mit der Anwendungen erkennen können, welche Version von Benutzern ausgeführt wird. Zusätzlich zum einfachen Erhöhen des MSIE-Werts, der Internet Explorer in der UA-Zeichenfolge zugeordnet ist, fügt Internet Explorer 8 einen Trident/4.0-Wert hinzu, damit Sie erkennen können, ob Internet Explorer 8 im Kompatibilitätsansicht Modus ausgeführt wird. Diese Änderungen sowie hartcodierte Versionsüberprüfungen können zu Kompatibilitätsproblemen zwischen Browsern führen.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Entwerfen von Updates, die sich auf die Kompatibilität zwischen Browsern auswirken](design-updates-that-impact-compatibility-between-browsers.md)
+[Entwurfsupdates, die sich auf die Kompatibilität zwischen Browsern auswirken](design-updates-that-impact-compatibility-between-browsers.md)
 </dt> </dl>
 
  

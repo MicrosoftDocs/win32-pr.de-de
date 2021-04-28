@@ -1,7 +1,7 @@
 ---
-description: Enthält ein-Objekt für jeden Benutzer in der Rolle, mit der die Auflistung verknüpft ist.
+description: 'UsersInPartitionRole-Auflistung: Enthält ein Objekt für jeden Benutzer in der Rolle, mit der die Auflistung verknüpft ist.'
 ms.assetid: c6aebf7a-04d1-4c7c-a015-bc6fb4841c4a
-title: Usersinpartitionrole-Auflistung
+title: UsersInPartitionRole-Auflistung
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,38 +12,38 @@ api_name:
 api_type:
 - COM
 api_location: ''
-ms.openlocfilehash: fce1577636a7b2e678bdade9c32f706c7ccbf158
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 2a4c134ebead08ef576337528a8ef75d8b8be21a
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104127008"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108105548"
 ---
-# <a name="usersinpartitionrole-collection"></a>Usersinpartitionrole-Auflistung
+# <a name="usersinpartitionrole-collection"></a>UsersInPartitionRole-Auflistung
 
-Enthält ein-Objekt für jeden Benutzer in der Rolle, mit der die Auflistung verknüpft ist.
+Enthält ein -Objekt für jeden Benutzer in der Rolle, mit der die Auflistung verknüpft ist.
 
-Diese Auflistung unterstützt die [**Add**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogcollection-add) -und [**Remove**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogcollection-remove) -Methoden des [**comadmincatalogcollection**](comadmincatalogcollection.md) -Objekts.
+Diese Auflistung unterstützt die [**Add-**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogcollection-add) und [**Remove-Methoden**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogcollection-remove) des [**COMAdminCatalogCollection-Objekts.**](comadmincatalogcollection.md)
 
 ## <a name="members"></a>Member
 
-Die **usersinpartitionrole** -Auflistung erbt von der [**IUnknown**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) -Schnittstelle, verfügt jedoch nicht über zusätzliche Member.
+Die **UsersInPartitionRole-Auflistung** erbt von der [**IUnknown-Schnittstelle,**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) verfügt aber nicht über zusätzliche Member.
 
 ## <a name="related-collections"></a>Verwandte Auflistungen
 
 Sie können von dieser Sammlung zu einer der folgenden Sammlungen navigieren:
 
 -   [**ErrorInfo**](errorinfo.md)
--   [**PropertyInfo**](propertyinfo.md)
--   [**Relatedcollectioninfo**](relatedcollectioninfo.md)
+-   [**Propertyinfo**](propertyinfo.md)
+-   [**RelatedCollectionInfo**](relatedcollectioninfo.md)
 
-Sie können von den folgenden Sammlungen aus zu dieser Sammlung navigieren:
+Sie können aus den folgenden Sammlungen zu dieser Sammlung navigieren:
 
--   [**Rolesforpartition**](rolesforpartition.md)
+-   [**RolesForPartition**](rolesforpartition.md)
 
 ## <a name="properties"></a>Eigenschaften
 
-Die folgenden Eigenschaften werden vom [**COMAdminCatalogObject**](comadmincatalogobject.md) -Objekt in der-Auflistung unterstützt:
+Die folgenden Eigenschaften werden vom [**COMAdminCatalogObject-Objekt**](comadmincatalogobject.md) in der Auflistung unterstützt:
 
 -   [Benutzer](#usersinpartitionrole-collection)
 
@@ -53,21 +53,21 @@ Die folgenden Eigenschaften werden vom [**COMAdminCatalogObject**](comadmincatal
 
 | Eingabe | Wert |
 |----------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| BESCHREIBUNG    | Der Benutzername. Diese Eigenschaft wird zurückgegeben, wenn die [**Schlüssel**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogobject-get_key) -oder [**Name**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogobject-get_name) -Eigenschaften Methode für ein Objekt dieser Auflistung aufgerufen wird. |
+| BESCHREIBUNG    | Der Benutzername. Diese Eigenschaft wird zurückgegeben, wenn die [**Key-**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogobject-get_key) oder [**Name-Eigenschaftsmethode**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogobject-get_name) für ein Objekt dieser Auflistung aufgerufen wird. |
 | Access         | WriteOnce                                                                                                                                                                             |
 | type           | String                                                                                                                                                                                |
 | Standard        | "Neuer Benutzer"                                                                                                                                                                            |
-| Minimalsystem | Windows Server 2003                                                                                                                                                                   |
+| Mindestsystem | Windows Server 2003                                                                                                                                                                   |
 
 
 
  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Com+-Verwaltungs Sammlungen](com--administration-collections.md)
+[COM+-Verwaltungssammlungen](com--administration-collections.md)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
-description: Fehler werden durch negative Werte dargestellt und können nicht kombiniert werden.
+description: 'D3DXERR-Enumeration: Fehler werden durch negative Werte dargestellt und können nicht kombiniert werden.'
 ms.assetid: 2318278e-e1e1-4cd8-a5ce-5c99f3bc47ba
-title: D3DXERR-Enumeration (D3dx9. h)
+title: D3DXERR-Enumeration (D3dx9.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - d3dx9.h
-ms.openlocfilehash: 0d4ef0fddf70effd63a0fcdc42b46889a879c13a
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 1c1dd03500a493b30d7c1d3bfdfdf800b65a6d82
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104219517"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108094304"
 ---
 # <a name="d3dxerr-enumeration"></a>D3DXERR-Enumeration
 
-Fehler werden durch negative Werte dargestellt und können nicht kombiniert werden. Im folgenden finden Sie eine Liste von Werten, die von Methoden zurückgegeben werden können, die in der D3DX Utility Library enthalten sind. In den einzelnen Methodenbeschreibungen finden Sie Listen der Werte, die von den einzelnen Methoden zurückgegeben werden können. Diese Listen sind nicht notwendigerweise vollständig.
+Fehler werden durch negative Werte dargestellt und können nicht kombiniert werden. Im Folgenden finden Sie eine Liste der Werte, die von Methoden zurückgegeben werden können, die in der D3DX-Hilfsprogrammbibliothek enthalten sind. Listen der Werte, die von den einzelnen Methoden zurückgegeben werden können, finden Sie in den beschreibungen der einzelnen Methoden. Diese Listen sind nicht unbedingt umfassend.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,63 +48,63 @@ enum _D3DXERR {
 
 <dl> <dt>
 
-<span id="D3DXERR_CANNOTMODIFYINDEXBUFFER"></span><span id="d3dxerr_cannotmodifyindexbuffer"></span>**D3DXERR \_ cannotmodifyindexbuffer**
+<span id="D3DXERR_CANNOTMODIFYINDEXBUFFER"></span><span id="d3dxerr_cannotmodifyindexbuffer"></span>**D3DXERR \_ CANNOTMODIFYINDEXBUFFER**
 </dt> <dd>
 
-Der Index Puffer kann nicht geändert werden.
+Der Indexpuffer kann nicht geändert werden.
 
 </dd> <dt>
 
-<span id="D3DXERR_INVALIDMESH"></span><span id="d3dxerr_invalidmesh"></span>**D3DXERR \_ invalidmesh**
+<span id="D3DXERR_INVALIDMESH"></span><span id="d3dxerr_invalidmesh"></span>**D3DXERR \_ INVALIDMESH**
 </dt> <dd>
 
-Das Mesh ist ungültig.
+Das Gitternetz ist ungültig.
 
 </dd> <dt>
 
-<span id="D3DXERR_CANNOTATTRSORT"></span><span id="d3dxerr_cannotattrsort"></span>**D3DXERR \_ cannotattrsort**
+<span id="D3DXERR_CANNOTATTRSORT"></span><span id="d3dxerr_cannotattrsort"></span>**D3DXERR \_ CANNOTATTRSORT**
 </dt> <dd>
 
-Die Attribut Sortierung (D3DXMESHOPT \_ attrsort) wird nicht als Optimierungstechnik unterstützt.
+Die Attributsortierung (D3DXMESHOPT \_ ATTRSORT) wird als Optimierungstechnik nicht unterstützt.
 
 </dd> <dt>
 
-<span id="D3DXERR_SKINNINGNOTSUPPORTED"></span><span id="d3dxerr_skinningnotsupported"></span>**D3DXERR \_ skinningnotsupported**
+<span id="D3DXERR_SKINNINGNOTSUPPORTED"></span><span id="d3dxerr_skinningnotsupported"></span>**D3DXERR \_ SKINNINGNOTSUPPORTED**
 </dt> <dd>
 
-Das Skinning wird nicht unterstützt.
+Skinning wird nicht unterstützt.
 
 </dd> <dt>
 
-<span id="D3DXERR_TOOMANYINFLUENCES"></span><span id="d3dxerr_toomanyinfluences"></span>**D3DXERR- \_ Informationen**
+<span id="D3DXERR_TOOMANYINFLUENCES"></span><span id="d3dxerr_toomanyinfluences"></span>**D3DXERR \_ TOOMANYINFLUENCES**
 </dt> <dd>
 
-Es wurden zu viele Einflüsse angegeben.
+Es wurden zu viele Einflussfaktoren angegeben.
 
 </dd> <dt>
 
-<span id="D3DXERR_INVALIDDATA"></span><span id="d3dxerr_invaliddata"></span>**D3DXERR \_ InvalidData**
+<span id="D3DXERR_INVALIDDATA"></span><span id="d3dxerr_invaliddata"></span>**D3DXERR \_ INVALIDDATA**
 </dt> <dd>
 
 Die Daten sind ungültig.
 
 </dd> <dt>
 
-<span id="D3DXERR_LOADEDMESHASNODATA"></span><span id="d3dxerr_loadedmeshasnodata"></span>**D3DXERR \_ loadedmeshasnodata**
+<span id="D3DXERR_LOADEDMESHASNODATA"></span><span id="d3dxerr_loadedmeshasnodata"></span>**D3DXERR \_ LOADEDMESHASNODATA**
 </dt> <dd>
 
-Das Mesh weist keine Daten auf.
+Das Gitternetz verfügt über keine Daten.
 
 </dd> <dt>
 
-<span id="D3DXERR_DUPLICATENAMEDFRAGMENT"></span><span id="d3dxerr_duplicatenamedfragment"></span>**D3DXERR \_ duplialisienamedfragment**
+<span id="D3DXERR_DUPLICATENAMEDFRAGMENT"></span><span id="d3dxerr_duplicatenamedfragment"></span>**D3DXERR \_ DUPLICATENAMEDFRAGMENT**
 </dt> <dd>
 
 Ein Fragment mit diesem Namen ist bereits vorhanden.
 
 </dd> <dt>
 
-<span id="D3DXERR_CANNOTREMOVELASTITEM"></span><span id="d3dxerr_cannotremovelastitem"></span>**D3DXERR \_ cannotremuvelastitem**
+<span id="D3DXERR_CANNOTREMOVELASTITEM"></span><span id="d3dxerr_cannotremovelastitem"></span>**D3DXERR \_ CANNOTREMOVELASTITEM**
 </dt> <dd>
 
 Das letzte Element kann nicht gelöscht werden.
@@ -113,7 +113,7 @@ Das letzte Element kann nicht gelöscht werden.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Der Einrichtungs Code- \_ fakdd wird zum Generieren von Fehlercodes verwendet, wie in den folgenden Makros.
+Der Einrichtungscode \_ FACDD wird zum Generieren von Fehlercodes verwendet, wie in den folgenden Makros zu sehen.
 
 
 ```
@@ -132,13 +132,13 @@ enum _D3DXERR {
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------|------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3dx9. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3dx9.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

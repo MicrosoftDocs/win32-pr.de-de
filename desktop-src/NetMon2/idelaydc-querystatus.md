@@ -1,7 +1,7 @@
 ---
-description: Die QueryStatus-Methode ruft den Status des NPP ab.
+description: 'IDelaydC::QueryStatus-Methode: Die QueryStatus-Methode ruft den Status des NPP ab.'
 ms.assetid: b035d495-a078-4436-9501-0a30fbfa7268
-title: 'Idelta-DC:: QueryStatus-Methode (Netmon. h)'
+title: IDelaydC::QueryStatus-Methode (Netmon.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - Ndisnpp.dll
 - Rmtnpp.dll
-ms.openlocfilehash: cff92dfec95555076f9edba5a1b591f0ef905c1a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 13d1e34b57302d263b81ed64df0b136dc01177b2
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106356654"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108118458"
 ---
-# <a name="idelaydcquerystatus-method"></a>Idelta aydc:: QueryStatus-Methode
+# <a name="idelaydcquerystatus-method"></a>IDelaydC::QueryStatus-Methode
 
-Die **QueryStatus** -Methode ruft den Status des NPP ab.
+Die **QueryStatus-Methode** ruft den Status des NPP ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,16 +40,16 @@ HRESULT STDMETHODCALLTYPE QueryStatus(
 
 <dl> <dt>
 
-*pnetworkstatus* \[ vorgenommen\]
+*pNetworkStatus* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf eine zurückgegebene [networkstatus](networkstatus.md) -Struktur, die den aktuellen Zustand (aufzeichnen, angehalten, beendet usw.) des NPP angibt. Es liegt in ihrer Verantwortung, den der **Network Status** -Struktur zugeordneten Arbeitsspeicher zuzuordnen und freizugeben.
+Zeiger auf eine zurückgegebene [NETWORKSTATUS-Struktur,](networkstatus.md) die den aktuellen Zustand des NPP angibt (Erfassen, Anhalten, Beendeten und so weiter). Es liegt in Ihrer Verantwortung, den der **NETWORKSTATUS-Struktur** zugeordneten Arbeitsspeicher zu reservieren und frei zu geben.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Methode erfolgreich ist, ist der Rückgabewert nmerr \_ Success.
+Wenn die Methode erfolgreich ist, ist der Rückgabewert NMERR \_ SUCCESS.
 
 Wenn die Methode nicht erfolgreich ist, ist der Rückgabewert der folgende Fehlercode:
 
@@ -57,7 +57,7 @@ Wenn die Methode nicht erfolgreich ist, ist der Rückgabewert der folgende Fehle
 
 | Rückgabecode                                                                                              | Beschreibung                                                                                                                                                                                                |
 |----------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**Ungültiger nmerr- \_ \_ Parameter**</dt> </dl> | Der *pnetworkstatus* -Parameter verweist nicht auf eine gültige [networkstatus](networkstatus.md) -Struktur. Weisen Sie für diese Struktur Arbeitsspeicher zu, und nennen Sie die **idelta-DC:: QueryStatus** -Methode erneut.<br/> |
+| <dl> <dt>**NMERR \_ INVALID \_ PARAMETER**</dt> </dl> | Der *pNetworkStatus-Parameter* zeigt nicht auf eine gültige [NETWORKSTATUS-Struktur.](networkstatus.md) Ordnen Sie Arbeitsspeicher für diese Struktur zu, und rufen Sie **erneut die IDelaydC::QueryStatus-Methode** auf.<br/> |
 
 
 
@@ -65,34 +65,34 @@ Wenn die Methode nicht erfolgreich ist, ist der Rückgabewert der folgende Fehle
 
 ## <a name="remarks"></a>Bemerkungen
 
-Diese Methode kann jederzeit aufgerufen werden, nachdem " [comatenppinterface](createnppinterface.md) " aufgerufen wurde. Es kann aufgerufen werden, um festzustellen, ob der NPP mit dem Netzwerk verbunden ist, um den Status der aktuellen Erfassung zu ermitteln und um zu ermitteln, ob Trigger ausstehend sind.
+Diese Methode kann jederzeit aufgerufen werden, nachdem [CreateNPPInterface](createnppinterface.md) aufgerufen wurde. Sie kann aufgerufen werden, um zu überprüfen, ob die NPP mit dem Netzwerk verbunden ist, um den Status der aktuellen Erfassung zu finden und um zu überprüfen, ob Trigger ausstehen.
 
-Bevor Sie diese Methode aufrufen, müssen Sie den für die [networkstatus](networkstatus.md) -Struktur benötigten Arbeitsspeicher zuordnen und diesen Arbeitsspeicher freigeben, wenn die Struktur nicht mehr benötigt wird.
+Bevor Sie diese Methode aufrufen, müssen Sie den für die [NETWORKSTATUS-Struktur](networkstatus.md) erforderlichen Arbeitsspeicher zuordnen und den Arbeitsspeicher frei geben, wenn die Struktur nicht mehr benötigt wird.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                                                                     |
-| Header<br/>                   | <dl> <dt>Netmon. h</dt> </dl>                                                                      |
+| Header<br/>                   | <dl> <dt>Netmon.h</dt> </dl>                                                                      |
 | DLL<br/>                      | <dl> <dt>Ndisnpp.dll; </dt> <dt>Rmtnpp.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Idelta-DC](idelaydc.md)
+[IDelaydC](idelaydc.md)
 </dt> <dt>
 
-["Kreatenppinterface"](createnppinterface.md)
+[CreateNPPInterface](createnppinterface.md)
 </dt> <dt>
 
-[Vornehmen](networkstatus.md)
+[Networkstatus](networkstatus.md)
 </dt> </dl>
 
  

@@ -1,19 +1,19 @@
 ---
-title: Schreiben der Fenster Prozedur
-description: .
+title: Schreiben der Fensterprozedur
+description: Schreiben der Fensterprozedur
 ms.assetid: f022bb88-6e4c-4ec4-9eef-f125ad92167e
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 71f11b22ba5dd0653905ca4e2bdb546d106183fc
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 832aba88211a7decf20c233f5d9ab4fbeb1b1c27
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "106339480"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108105718"
 ---
-# <a name="writing-the-window-procedure"></a>Schreiben der Fenster Prozedur
+# <a name="writing-the-window-procedure"></a>Schreiben der Fensterprozedur
 
-Die [**DispatchMessage**](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) -Funktion Ruft die Fenster Prozedur des Fensters auf, das das Ziel der Nachricht ist. Die Fenster Prozedur weist die folgende Signatur auf.
+Die [**DispatchMessage-Funktion**](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) ruft die Fensterprozedur des Fensters auf, das das Ziel der Nachricht ist. Die Fensterprozedur weist die folgende Signatur auf.
 
 ```C++
 LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam);
@@ -21,13 +21,13 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam);
 
 Es gibt vier Parameter:
 
-- *HWND* ist ein Handle für das Fenster.
-- die *Umschlag* Sequenz ist der Nachrichten Code. Beispielsweise gibt die [**WM- \_ Größen**](/windows/desktop/winmsg/wm-size) Meldung an, dass die Größe des Fensters angepasst wurde.
-- *wParam* und *LPARAM* enthalten zusätzliche Daten, die sich auf die Nachricht beziehen. Die genaue Bedeutung hängt vom Nachrichten Code ab.
+- *hwnd* ist ein Handle für das Fenster.
+- *uMsg* ist der Nachrichtencode. Beispielsweise gibt die [**WM \_ SIZE-Meldung**](/windows/desktop/winmsg/wm-size) an, dass die Größe des Fensters geändert wurde.
+- *wParam* und *lParam* enthalten zusätzliche Daten, die sich auf die Nachricht beziehen. Die genaue Bedeutung hängt vom Nachrichtencode ab.
 
-**LRESULT** ist ein ganzzahliger Wert, den das Programm an Windows zurückgibt. Sie enthält die Antwort des Programms auf eine bestimmte Nachricht. Die Bedeutung dieses Werts hängt vom Nachrichten Code ab. **Callback** ist die Aufruf Konvention für die Funktion.
+**LRESULT** ist ein ganzzahliger Wert, den Ihr Programm an Windows zurückgibt. Sie enthält die Antwort Ihres Programms auf eine bestimmte Nachricht. Die Bedeutung dieses Werts hängt vom Nachrichtencode ab. **CALLBACK** ist die Aufrufkonvention für die Funktion.
 
-Eine typische Fenster Prozedur ist einfach eine große Switch-Anweisung, die den Nachrichten Code schaltet. Fügen Sie für jede zu behandelnde Nachricht Fälle hinzu.
+Eine typische Fensterprozedur ist einfach eine große switch-Anweisung, die den Nachrichtencode einschaltet. Fügen Sie Fälle für jede Nachricht hinzu, die Sie behandeln möchten.
 
 ```C++
 switch (uMsg)
@@ -38,14 +38,14 @@ switch (uMsg)
 }
 ```
 
-Zusätzliche Daten für die Nachricht sind in den *LPARAM* -und *wParam* -Parametern enthalten. Beide Parameter sind ganzzahlige Werte die Größe einer Zeiger Breite (32 Bits oder 64 Bits). Die Bedeutung der einzelnen hängt vom Nachrichten Code (*Umschlag*) ab. Für jede Nachricht müssen Sie den Nachrichten Code auf MSDN suchen und die Parameter in den richtigen Datentyp umwandeln. Normalerweise handelt es sich bei den Daten entweder um einen numerischen Wert oder um einen Zeiger auf eine-Struktur. Einige Nachrichten enthalten keine Daten.
+Zusätzliche Daten für die Nachricht sind in den *Parametern lParam* und *wParam* enthalten. Beide Parameter sind ganzzahlige Werte der Größe einer Zeigerbreite (32 Bits oder 64 Bits). Die Bedeutung der einzelnen Hängt vom Nachrichtencode *(uMsg*) ab. Für jede Nachricht müssen Sie den Nachrichtencode auf MSDN suchen und die Parameter in den richtigen Datentyp umschreiben. In der Regel sind die Daten entweder ein numerischer Wert oder ein Zeiger auf eine Struktur. Einige Nachrichten enthalten keine Daten.
 
-In der Dokumentation für die WM- [**\_ Größe**](/windows/desktop/winmsg/wm-size) wird beispielsweise Folgendes angezeigt:
+In der Dokumentation für die [**WM \_ SIZE-Meldung**](/windows/desktop/winmsg/wm-size) wird beispielsweise Folgendes angezeigt:
 
-- *wParam* ist ein Flag, das angibt, ob das Fenster minimiert, maximiert oder verkleinert wurde.
-- *LPARAM* enthält die neue Breite und Höhe des Fensters als 16-Bit-Werte, die in 1 32-oder 64-Bit-Zahlen verpackt sind. Sie müssen einige Bitverschiebungen durchführen, um diese Werte zu erhalten. Glücklicherweise enthält die Header Datei WINDEF. h Hilfsmakros, die dies tun.
+- *wParam ist* ein Flag, das angibt, ob das Fenster minimiert, maximiert oder die Größe geändert wurde.
+- *lParam* enthält die neue Breite und Höhe des Fensters als 16-Bit-Werte, die in eine 32- oder 64-Bit-Zahl gepackt sind. Sie müssen einige Bitverschiebungen durchführen, um diese Werte zu erhalten. Glücklicherweise enthält die Headerdatei WinDef.h Hilfsmakros, die dies tun.
 
-Eine typische Fenster Prozedur verarbeitet Dutzende von Nachrichten, sodass Sie sehr lange anwachsen kann. Eine Möglichkeit, Ihren Code modularerer zu gestalten, besteht darin, die Logik für die Verarbeitung der einzelnen Nachrichten in einer separaten Funktion zu platzieren. Wandeln Sie in der Fenster Prozedur die *wParam* -und *LPARAM* -Parameter in den richtigen Datentyp um, und übergeben Sie diese Werte an die-Funktion. Um z. b. die [**WM- \_ Größen**](/windows/desktop/winmsg/wm-size) Meldung zu verarbeiten, würde die Fenster Prozedur wie folgt aussehen:
+Eine typische Fensterprozedur verarbeitet Dutzende von Nachrichten, sodass sie sehr lang werden kann. Eine Möglichkeit, Ihren Code modularer zu machen, besteht in der Logik für die Behandlung jeder Nachricht in einer separaten Funktion. Geben Sie in der Fensterprozedur die *Parameter wParam* und *lParam* in den richtigen Datentyp um, und übergeben Sie diese Werte an die Funktion. Um beispielsweise die WM [**\_ SIZE-Meldung zu**](/windows/desktop/winmsg/wm-size) verarbeiten, sieht die Fensterprozedur wie die folgende aus:
 
 ```C++
 LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
@@ -70,26 +70,26 @@ void OnSize(HWND hwnd, UINT flag, int width, int height)
 }
 ```
 
-Die [**LoWord**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) -und [**HIWORD**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) -Makros erhalten die 16-Bit-Werte für Breite und Höhe von *LPARAM*. (In der MSDN-Dokumentation finden Sie Informationen zu den einzelnen Nachrichten Codes.) Die Fenster Prozedur extrahiert die Breite und Höhe und übergibt diese Werte dann an die `OnSize` Funktion.
+Die [**MAKROs LOWORD**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) und [**HIWORD**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) erhalten die Werte für Breite und Höhe von 16 Bit aus *lParam.* (Sie können diese Art von Details in der MSDN-Dokumentation für jeden Meldungscode nachschauen.) Die Fensterprozedur extrahiert die Breite und Höhe und übergibt diese Werte dann an die `OnSize` Funktion.
 
-## <a name="default-message-handling"></a>Standardmäßige Nachrichten Behandlung
+## <a name="default-message-handling"></a>Standardnachrichtenbehandlung
 
-Wenn Sie eine bestimmte Nachricht in der Fenster Prozedur nicht verarbeiten, übergeben Sie die Nachrichten Parameter direkt an die [**defwindowproc**](/windows/desktop/api/winuser/nf-winuser-defwindowproca) -Funktion. Diese Funktion führt die Standardaktion für die Nachricht aus, die je nach Nachrichtentyp variiert.
+Wenn Sie eine bestimmte Nachricht in Ihrer Fensterprozedur nicht verarbeiten, übergeben Sie die Nachrichtenparameter direkt an die [**DefWindowProc-Funktion.**](/windows/desktop/api/winuser/nf-winuser-defwindowproca) Diese Funktion führt die Standardaktion für die Nachricht aus, die je nach Nachrichtentyp variiert.
 
 ```C++
 return DefWindowProc(hwnd, uMsg, wParam, lParam);
 ```
 
-## <a name="avoiding-bottlenecks-in-your-window-procedure"></a>Vermeiden von Engpässen in der Fenster Prozedur
+## <a name="avoiding-bottlenecks-in-your-window-procedure"></a>Vermeiden von Engpässen in der Fensterprozedur
 
-Während die Fenster Prozedur ausgeführt wird, werden alle anderen Nachrichten für Windows, die im gleichen Thread erstellt wurden, blockiert. Vermeiden Sie daher eine lange Verarbeitung in der Fenster Prozedur. Angenommen, das Programm öffnet eine TCP-Verbindung und wartet unbegrenzt, bis der Server antwortet. Wenn Sie dies innerhalb der Fenster Prozedur tun, antwortet die Benutzeroberfläche erst, wenn die Anforderung abgeschlossen ist. Während dieser Zeit kann das Fenster keine Maus-oder Tastatureingaben verarbeiten, sich selbst neu zeichnen oder sogar schließen.
+Während die Fensterprozedur ausgeführt wird, werden alle anderen Meldungen für Fenster blockiert, die im selben Thread erstellt wurden. Vermeiden Sie daher eine lange Verarbeitung innerhalb der Fensterprozedur. Angenommen, Ihr Programm öffnet eine TCP-Verbindung und wartet unbegrenzt, bis der Server antwortet. Wenn Sie dies innerhalb der Fensterprozedur tun, antwortet Die Benutzeroberfläche erst, wenn die Anforderung abgeschlossen ist. Während dieser Zeit kann das Fenster keine Maus- oder Tastatureingaben verarbeiten, sich selbst neu malen oder sogar schließen.
 
-Stattdessen sollten Sie die Arbeit in einen anderen Thread verschieben. verwenden Sie dazu eine der in Windows integrierten Multitasking-Funktionen:
+Stattdessen sollten Sie die Arbeit in einen anderen Thread verschieben, indem Sie eine der in Windows integrierten Multitasking-Einrichtungen verwenden:
 
 - Erstellen Sie einen neuen Thread.
 - Verwenden von Threadpools.
-- Verwenden Sie asynchrone e/a-Aufrufe.
-- Verwenden Sie asynchrone Prozedur Aufrufe.
+- Verwenden Sie asynchrone E/A-Aufrufe.
+- Verwenden Sie asynchrone Prozeduraufrufe.
 
 ## <a name="next"></a>Nächste
 

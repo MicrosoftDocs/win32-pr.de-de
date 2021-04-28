@@ -1,9 +1,9 @@
 ---
-title: TB_SETHOTITEM Meldung (kommstrg. h)
-description: Legt das heiße Element in einer Symbolleiste fest.
+title: TB_SETHOTITEM (Commctrl.h)
+description: 'TB_SETHOTITEM Meldung: Legt das heiße Element in einer Symbolleiste fest.'
 ms.assetid: 15005741-29d2-48c6-b5f0-15178a49b917
 keywords:
-- Windows-Steuerelemente für TB_SETHOTITEM Meldung
+- TB_SETHOTITEM Meldung Windows-Steuerelemente
 topic_type:
 - apiref
 api_name:
@@ -14,14 +14,14 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c477a445cb6aae78dd5d31e8d23b8ec3be8c61ab
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: a90e5b38675d33a361857c4303fa2a89f22cff29
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103859098"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108104178"
 ---
-# <a name="tb_sethotitem-message"></a>TB-Nachricht "nach \_ richten"
+# <a name="tb_sethotitem-message"></a>TB \_ SETHOTITEM-Nachricht
 
 Legt das heiße Element in einer Symbolleiste fest.
 
@@ -32,7 +32,7 @@ Legt das heiße Element in einer Symbolleiste fest.
 *wParam* 
 </dt> <dd>
 
-Der Index des Elements, das heiß gemacht wird. Wenn dieser Wert-1 ist, ist keines der Elemente heiß.
+Index des Elements, das als "Hot" (Heiß) verwendet wird. Wenn dieser Wert -1 ist, ist keines der Elemente heiß.
 
 </dd> <dt>
 
@@ -41,21 +41,21 @@ Der Index des Elements, das heiß gemacht wird. Wenn dieser Wert-1 ist, ist kein
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt den Index des vorherigen aktiven Elements oder-1 zurück, wenn kein heißes Element vorhanden war.
+Gibt den Index des vorherigen heißen Elements zurück, oder -1, wenn kein heißes Element vorkommt.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Das Verhalten dieser Nachricht ist nicht für Symbolleisten definiert, die nicht den [**\_ flachen tbstyle**](toolbar-control-and-button-styles.md) -Stil aufweisen.
+Das Verhalten dieser Meldung ist nicht für Symbolleisten definiert, die nicht das [**TBSTYLE \_ FLAT-Format**](toolbar-control-and-button-styles.md) haben.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

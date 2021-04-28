@@ -1,7 +1,7 @@
 ---
-description: Berechnet die Achse und den Drehwinkel einer Quaternion.
+description: 'D3DXQuaternionToAxisAngle-Funktion (D3dx9math.h): Berechnet die Achse und den Drehwinkel einer Quaternion.'
 ms.assetid: 6efd0a68-7641-403e-8ae2-c715b705b36e
-title: D3DXQuaternionToAxisAngle-Funktion (D3dx9math. h)
+title: D3DXQuaternionToAxisAngle-Funktion (D3dx9math.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,14 +14,14 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: ecf8e6d1b1383a6e698f742351ee19ae75fd5bdc
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 8613a9d14c5e33b0f9f4e719a02ac9a6d70d1119
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106373504"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108117978"
 ---
-# <a name="d3dxquaterniontoaxisangle-function-d3dx9mathh"></a>D3DXQuaternionToAxisAngle-Funktion (D3dx9math. h)
+# <a name="d3dxquaterniontoaxisangle-function-d3dx9mathh"></a>D3DXQuaternionToAxisAngle-Funktion (D3dx9math.h)
 
 Berechnet die Achse und den Drehwinkel einer Quaternion.
 
@@ -42,30 +42,30 @@ void D3DXQuaternionToAxisAngle(
 
 <dl> <dt>
 
-*PQ* \[ in\]
+*pQ* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXQUATERNION**](d3dxquaternion.md) \***
+Typ: **const [**D3DXQUATERNION**](d3dxquaternion.md) \***
 
-Ein Zeiger auf die Quell- [**D3DXQUATERNION**](d3dxquaternion.md) -Struktur.
+Zeiger auf die [**D3DXQUATERNION-Quellstruktur.**](d3dxquaternion.md)
 
 </dd> <dt>
 
-ein-.  \[ in, out\]
+*pAxis* \[ in, out\]
 </dt> <dd>
 
 Typ: **[ **D3DXVECTOR3**](d3dxvector3.md)\***
 
-Diese Funktion gibt einen Zeiger auf eine [**D3DXVECTOR3**](d3dxvector3.md) -Struktur zurück, die die Achse der Drehung der Quaternion identifiziert.
+Diese Funktion gibt einen Zeiger auf eine [**D3DXVECTOR3-Struktur**](d3dxvector3.md) zurück, die die Drehachse der Quaternion identifiziert.
 
 </dd> <dt>
 
-*Schwenken* \[ in, out\]
+*pAngle* \[ in, out\]
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)\***
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)\***
 
-Diese Funktion gibt einen Zeiger auf einen float-Wert zurück, der den Drehwinkel der Quaternion im Bogenmaße identifiziert.
+Diese Funktion gibt einen Zeiger auf einen FLOAT-Wert zurück, der den Drehwinkel der Quaternion im Bogenmaß identifiziert.
 
 </dd> </dl>
 
@@ -75,20 +75,20 @@ Kein Rückgabewert.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Verwenden Sie [**D3DXQuaternionNormalize**](d3dxquaternionnormalize.md) für eine beliebige Quaternion-Eingabe, die nicht bereits normalisiert ist.
+Verwenden Sie [**D3DXQuaternionNormalize**](d3dxquaternionnormalize.md) für alle Quaternioneingaben, die nicht bereits normalisiert sind.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9math. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3dx9math.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

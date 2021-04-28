@@ -1,7 +1,7 @@
 ---
-description: Ruft zusätzliche Informationen zu einem Fehler ab.
+description: 'GetErrorEx-Methode der Msvm_VirtualSystemReferencePointExportJob-Klasse: Ruft zusätzliche Informationen zu einem Fehler ab.'
 ms.assetid: 63ce4762-e5ce-405f-b5fc-74e505b0eaf1
-title: Geterrorex-Methode der Msvm_VirtualSystemReferencePointExportJob-Klasse
+title: GetErrorEx-Methode der Msvm_VirtualSystemReferencePointExportJob-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 4c6c392adb2b638c2d638b758696252adcb54d7e
-ms.sourcegitcommit: c16214e53680dc71d1c07111b51f72b82a4512d8
+ms.openlocfilehash: 80e0850018b20497dbc42bbdbb802ffe4317489b
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "106367271"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108118608"
 ---
-# <a name="geterrorex-method-of-the-msvm_virtualsystemreferencepointexportjob-class"></a>Geterrorex-Methode der MSVM \_ virtualsystemreferencepointexportjob-Klasse
+# <a name="geterrorex-method-of-the-msvm_virtualsystemreferencepointexportjob-class"></a>GetErrorEx-Methode der Msvm \_ VirtualSystemReferencePointExportJob-Klasse
 
-Ruft zusätzliche Informationen zu einem Fehler ab. Wenn der Auftrag ausgeführt wird oder ohne Fehler beendet wurde, gibt **geterrorex** keine **geterrorex** -Instanz zurück. Wenn der Auftrag jedoch aufgrund eines internen Problems fehlgeschlagen ist oder der Auftrag von einem Client beendet wurde, gibt **geterrorex** mindestens eine [**MSVM- \_ Fehler**](msvm-error.md) Instanz zurück.
+Ruft zusätzliche Informationen zu einem Fehler ab. Wenn der Auftrag ausgeführt wird oder ohne Fehler beendet wurde, gibt **GetErrorEx** keine **GetErrorEx-Instanz** zurück. Wenn der Auftrag jedoch aufgrund eines internen Problems fehlgeschlagen ist oder weil der Auftrag von einem Client beendet wurde, gibt **GetErrorEx** eine oder mehrere [**Msvm-Fehlerinstanzen \_**](msvm-error.md) zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,23 +39,23 @@ uint32 GetErrorEx(
 
 <dl> <dt>
 
-*Fehler* \[ vorgenommen\]
+*Fehler* \[ out\]
 </dt> <dd>
 
-Wenn der Betriebsstatus des Auftrags nicht "OK" ist, gibt dieser Parameter ein Array von [**MSVM- \_ Fehler**](msvm-error.md) Instanzen zurück. Andernfalls enthält dieser Parameter **null**, wenn der Auftrag "OK" ist.
+Wenn der Betriebsstatus des Auftrags nicht "OK" lautet, gibt dieser Parameter ein Array von [**\_ Msvm-Fehlerinstanzen**](msvm-error.md) zurück. Andernfalls enthält dieser Parameter **NULL,** wenn der Auftrag "OK" ist.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Bei Erfolg wird 0 zurückgegeben. Andernfalls wird ein Fehler zurückgegeben.
+Bei Erfolg wird 0 zurückgegeben. andernfalls wird ein Fehler zurückgegeben.
 
 <dl> <dt>
 
 **Abgeschlossen ohne Fehler** (0)
 </dt> <dt>
 
-Fehler **(32768** )
+**Fehler** (32768)
 </dt> <dt>
 
 **Zugriff verweigert** (32769)
@@ -64,7 +64,7 @@ Fehler **(32768** )
 **Nicht unterstützt** (32770)
 </dt> <dt>
 
-Der **Status ist "Unknown** " (32771).
+**Status ist unbekannt** (32771)
 </dt> <dt>
 
 **Timeout** (32772)
@@ -73,40 +73,40 @@ Der **Status ist "Unknown** " (32771).
 **Ungültiger Parameter** (32773)
 </dt> <dt>
 
-Das **System wird verwendet** (32774).
+**System wird verwendet** (32774)
 </dt> <dt>
 
-**Ungültiger Status für diesen Vorgang** (32775).
+**Ungültiger Zustand für diesen Vorgang** (32775)
 </dt> <dt>
 
-**Falscher Datentyp** (32776).
+**Falscher Datentyp** (32776)
 </dt> <dt>
 
-Das **System ist nicht verfügbar** (32777).
+**System ist nicht verfügbar** (32777)
 </dt> <dt>
 
-**Nicht** genügend Arbeitsspeicher (32778)
+**Nicht genügend Arbeitsspeicher** (32778)
 </dt> </dl>
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 10, Version 1703, \[ nur Desktop-Apps\]<br/>                                               |
+| Unterstützte Mindestversion (Client)<br/> | Windows 10, version 1703 desktop apps only (Nur \[ Desktop-Apps der Version 1703)\]<br/>                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2016<br/>                                                                          |
 | Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**MSVM \_ virtualsystemreferencepointexportjob**](msvm-virtualsystemreferencepointexportjob.md)
+[**Msvm \_ VirtualSystemReferencePointExportJob**](msvm-virtualsystemreferencepointexportjob.md)
 </dt> </dl>
 
  

@@ -1,26 +1,26 @@
 ---
-title: Einstieg in die Entwicklung von Benutzeroberflächen für Windows-apps
-description: .
+title: Los geht's Entwickeln der Benutzeroberfläche für Windows-Apps
+description: Erste Schritte Entwickeln von Benutzeroberflächen für Windows-Anwendungen
 ms.assetid: 29d6f67b-46fa-4f39-a319-306c832eff9a
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d0c3d1a182aef6354901f0fa71f94b39ecdc58f2
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: c10b7e6bd21b782e31c9285c9840b7247a12e606
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103729112"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108091078"
 ---
-# <a name="getting-started-developing-user-interfaces-for-windows-applications"></a>Einstieg in die Entwicklung von Benutzeroberflächen für Windows-Anwendungen
+# <a name="getting-started-developing-user-interfaces-for-windows-applications"></a>Erste Schritte Entwickeln von Benutzeroberflächen für Windows-Anwendungen
 
 ## <a name="purpose"></a>Zweck
 
-Die folgenden Abschnitte bieten allgemeine Anleitungen für Entwickler, die die Benutzeroberfläche einer Windows-Anwendung entwerfen, implementieren und testen.
+Die folgenden Abschnitte bieten entwicklern, die die Benutzeroberfläche einer Windows-Anwendung entwerfen, implementieren und testen, allgemeine Anleitungen.
 
-Zusätzlich zu den grundlegenden Entwurfs Prinzipien für die Benutzeroberfläche werden zahlreiche Empfehlungen und Vorschläge bereitgestellt, mit deren Hilfe Entwickler eine Benutzeroberfläche bereitstellen können, die so einfach, effizient und unterhaltsam wie möglich ist.
+Zusätzlich zu den grundlegenden Entwurfsprinzipien der Benutzeroberfläche werden zahlreiche Empfehlungen und Vorschläge bereitgestellt, die Entwicklern dabei helfen, eine benutzerfreundliche, möglichst einfache, effiziente und unkomplizierte Benutzeroberfläche zu bieten.
 
 > [!Note]  
-> Diese Richtlinien sind nicht als umfassend gedacht und unterliegen dem spezifischen Bereich und der Funktionalität einer Anwendung. Umfassendere Richtlinien finden Sie in den [Windows-Richtlinien](../uxguide/guidelines.md)für die benutzerfreundliche Interaktion.
+> Diese Richtlinien sind nicht als umfassend gedacht und unterliegen dem spezifischen Umfang und der Funktionalität einer Anwendung. Umfassendere Richtlinien finden Sie unter [Windows User Experience Interaction Guidelines (Richtlinien für die Interaktion mit der Windows-Benutzeroberfläche).](../uxguide/guidelines.md)
 
  
 
@@ -30,12 +30,12 @@ Zusätzlich zu den grundlegenden Entwurfs Prinzipien für die Benutzeroberfläch
 
 | Thema                                                                            | BESCHREIBUNG                                                                                                                                                                                     |
 |----------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Übersicht über den Entwicklungsprozess der Benutzeroberfläche](the-process.md)<br/> | In diesem Abschnitt werden die drei Phasen des Entwurfs von Benutzeroberflächen beschrieben und die Aufgaben eingeführt, die in der Regel mit den einzelnen Phasen verknüpft sind.<br/>                                              |
-| [Entwerfen einer Benutzeroberfläche](designing-a-user-interface.md)<br/>          | In diesem Abschnitt werden einige der Aufgaben im Zusammenhang mit dem Entwerfen einer Benutzeroberfläche für eine Windows-Anwendung ausführlich beschrieben.<br/>                                                                         |
-| [Implementieren einer Benutzeroberfläche](implementing-a-user-interface.md)<br/>    | In diesem Abschnitt werden einige der Aufgaben beschrieben, die mit der Implementierung einer Benutzeroberfläche für eine Windows-Anwendung verknüpft sind.<br/>                                                                    |
-| [Testen einer Benutzeroberfläche](testing-a-user-interface.md)<br/>              | In diesem Abschnitt werden einige der Aufgaben im Zusammenhang mit dem Testen einer Benutzeroberfläche für eine Windows-Anwendung ausführlich beschrieben.<br/>                                                                           |
-| [Sicherheitsüberlegungen: Windows-Benutzeroberfläche](sec-ui.md)<br/>         | Dieses Thema enthält Informationen zu Sicherheitsüberlegungen in der Windows-Benutzeroberfläche.<br/>                                                                                         |
-| [Andere Ressourcen](other-resources.md)<br/>                                | Dieser Abschnitt enthält eine Liste der empfohlenen Bücher und Ressourcen, die sich auf das Design der Benutzeroberfläche beziehen. (Diese Bücher und Ressourcen sind möglicherweise nicht in einigen Sprachen und Ländern verfügbar.) <br/> |
+| [Übersicht über den Benutzeroberfläche Entwicklungsprozess](the-process.md)<br/> | In diesem Abschnitt werden die drei Phasen des Benutzeroberflächenentwurfs beschrieben und die Aufgaben erläutert, die in der Regel den einzelnen Phasen zugeordnet sind.<br/>                                              |
+| [Entwerfen eines Benutzeroberfläche](designing-a-user-interface.md)<br/>          | In diesem Abschnitt werden einige der Aufgaben im Zusammenhang mit dem Entwerfen einer Benutzeroberfläche für eine Windows-Anwendung ausführlich beschrieben.<br/>                                                                         |
+| [Implementieren eines Benutzeroberfläche](implementing-a-user-interface.md)<br/>    | In diesem Abschnitt werden einige der Aufgaben beschrieben, die mit der Implementierung einer Benutzeroberfläche für eine Windows-Anwendung verbunden sind.<br/>                                                                    |
+| [Testen eines Benutzeroberfläche](testing-a-user-interface.md)<br/>              | In diesem Abschnitt werden einige der Aufgaben im Zusammenhang mit dem Testen einer Benutzeroberfläche für eine Windows-Anwendung ausführlich beschrieben.<br/>                                                                           |
+| [Sicherheitsüberlegungen: Windows Benutzeroberfläche](sec-ui.md)<br/>         | Dieses Thema enthält Informationen zu Sicherheitsüberlegungen im Windows Benutzeroberfläche.<br/>                                                                                         |
+| [Andere Ressourcen](other-resources.md)<br/>                                | Dieser Abschnitt enthält eine Liste der empfohlenen Bücher und Ressourcen im Zusammenhang mit dem Entwurf der Benutzeroberfläche. (Diese Bücher und Ressourcen sind in einigen Sprachen und Ländern möglicherweise nicht verfügbar.) <br/> |
 
 
 

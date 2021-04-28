@@ -1,7 +1,7 @@
 ---
-description: Konstruktormethode.
+description: 'CMsgThread.CMsgThread-Konstruktor : Konstruktormethode.'
 ms.assetid: 3f758c45-21ec-4728-ba7d-41da7b2fa02f
-title: Cmsgthread. cmsgthread-Konstruktor (msgthrd. h)
+title: CMsgThread.CMsgThread-Konstruktor (Msgthrd.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,14 +16,14 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: e77d3a84e349ab370b6319cd973f6ba86d632366
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 08d76ebecd09d95b7ba0fca22b300c1e402f5302
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370738"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108095368"
 ---
-# <a name="cmsgthreadcmsgthread-constructor"></a>Cmsgthread. cmsgthread-Konstruktor
+# <a name="cmsgthreadcmsgthread-constructor"></a>CMsgThread.CMsgThread-Konstruktor
 
 Konstruktormethode.
 
@@ -38,28 +38,28 @@ CMsgThread();
 
 ## <a name="parameters"></a>Parameter
 
-Dieser Konstruktor weist keine Parameter auf.
+Dieser Konstruktor verfügt über keine Parameter.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Beim Konstruieren eines Nachrichten Thread Objekts wird der Thread nicht automatisch erstellt. Sie müssen die Member-Funktion [**cmsgthread:: foratethread**](cmsgthread-createthread.md) aufrufen, um den Thread zu erstellen.
+Beim Erstellen eines Nachrichtenthreadobjekts wird der Thread nicht automatisch erstellt. Sie müssen die [**CMsgThread::CreateThread-Memberfunktion**](cmsgthread-createthread.md) aufrufen, um den Thread zu erstellen.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Msgthrd. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Msgthrd.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cmsgthread-Klasse**](cmsgthread.md)
+[**CMsgThread-Klasse**](cmsgthread.md)
 </dt> </dl>
 
  

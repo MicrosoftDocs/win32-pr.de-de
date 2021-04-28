@@ -1,7 +1,7 @@
 ---
-description: Diese Schnittstelle wird von der Anwendung implementiert, um alle zusätzlichen in x-Dateien eingebetteten Benutzerdaten zu speichern.
+description: 'ID3DXLoadUserData-Schnittstelle: Diese Schnittstelle wird von der Anwendung implementiert, um zusätzliche Benutzerdaten zu speichern, die in X-Dateien eingebettet sind.'
 ms.assetid: 0d656f99-c24c-4326-bc6f-c0e7874c0fb2
-title: ID3DXLoadUserData-Schnittstelle (D3dx9anim. h)
+title: ID3DXLoadUserData-Schnittstelle (D3dx9anim.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,34 +14,34 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: fcb07ba9351e5f6c23dd86c8147151932b3972ea
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 83d603d2ec5fde00ef0b29d84368e04a1276f992
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106373493"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108093628"
 ---
 # <a name="id3dxloaduserdata-interface"></a>ID3DXLoadUserData-Schnittstelle
 
-Diese Schnittstelle wird von der Anwendung implementiert, um alle zusätzlichen in x-Dateien eingebetteten Benutzerdaten zu speichern. Eine Instanz dieser Schnittstelle wird an [**D3DXLoadMeshHierarchyFromX**](d3dxloadmeshhierarchyfromx.md)und D3DX Ruft die entsprechende Methode für diese Schnittstelle immer dann auf, wenn die entsprechenden Daten gefunden werden. Beispielsweise wird für jedes Frame Objekt in der x-Datei [**ID3DXLoadUserData:: loadframechilddata**](id3dxloaduserdata--loadframechilddata.md) aufgerufen und die untergeordneten Daten übermittelt.
+Diese Schnittstelle wird von der Anwendung implementiert, um zusätzliche Benutzerdaten zu speichern, die in X-Dateien eingebettet sind. Eine Instanz dieser Schnittstelle wird [**an D3DXLoadMeshHierarchyFromX**](d3dxloadmeshhierarchyfromx.md)übergeben, und D3DX ruft jedes Mal die entsprechende Methode auf dieser Schnittstelle auf, wenn die entsprechenden Daten gefunden werden. Beispielsweise wird für jedes Frameobjekt in der X-Datei [**ID3DXLoadUserData::LoadFrameChildData**](id3dxloaduserdata--loadframechilddata.md) aufgerufen und die untergeordneten Daten übergeben.
 
 ## <a name="members"></a>Member
 
-Die **ID3DXLoadUserData** -Schnittstelle erbt von der [**IUnknown**](/windows/win32/api/unknwn/nn-unknwn-iunknown) -Schnittstelle. **ID3DXLoadUserData** verfügt auch über die folgenden Typen von Membern:
+Die **ID3DXLoadUserData-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/win32/api/unknwn/nn-unknwn-iunknown) **ID3DXLoadUserData** verfügt auch über diese Membertypen:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **ID3DXLoadUserData** -Schnittstelle verfügt über diese Methoden.
+Die **ID3DXLoadUserData-Schnittstelle** verfügt über diese Methoden.
 
 
 
 | Methode                                                              | BESCHREIBUNG                                      |
 |:--------------------------------------------------------------------|:-------------------------------------------------|
-| [**Loadframechilddata**](id3dxloaduserdata--loadframechilddata.md) | Laden von untergeordneten Frame-Daten aus einer x-Datei.<br/> |
-| [**Loadmeshchilddata**](id3dxloaduserdata--loadmeshchilddata.md)   | Laden von untergeordneten Mesh-Daten aus einer x-Datei.<br/>  |
-| [**Loadtopleveldata**](id3dxloaduserdata--loadtopleveldata.md)     | Laden von Daten der obersten Ebene aus einer x-Datei.<br/>   |
+| [**LoadFrameChildData**](id3dxloaduserdata--loadframechilddata.md) | Laden sie untergeordnete Framedaten aus einer X-Datei.<br/> |
+| [**LoadMeshChildData**](id3dxloaduserdata--loadmeshchilddata.md)   | Laden von untergeordneten Meshdaten aus einer X-Datei.<br/>  |
+| [**LoadTopLevelData**](id3dxloaduserdata--loadtopleveldata.md)     | Laden sie Daten der obersten Ebene aus einer X-Datei.<br/>   |
 
 
 
@@ -49,7 +49,7 @@ Die **ID3DXLoadUserData** -Schnittstelle verfügt über diese Methoden.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Der LPD3DXLOADUSERDATA-Typ wird als Zeiger auf diese Schnittstelle definiert.
+Der LPD3DXLOADUSERDATA-Typ ist als Zeiger auf diese Schnittstelle definiert.
 
 
 ```
@@ -63,14 +63,14 @@ typedef interface ID3DXLoadUserData *LPD3DXLOADUSERDATA;
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9anim. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3dx9anim.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

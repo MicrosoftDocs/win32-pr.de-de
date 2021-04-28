@@ -1,7 +1,7 @@
 ---
-description: Der Computer wird von seiner Docking Station eingelesen. Dies ist das gleiche wie beim Klicken auf das Startmenü und beim Auswählen von ausgelösten PCs, wenn Ihr Computer diesen Befehl unterstützt.
+description: 'Shell.EjectPC-Methode: Wirft den Computer aus seiner Andockstation aus. Dies entspricht dem Klicken auf das Startmenü und dem Auswählen von Eject PC, wenn Ihr Computer diesen Befehl unterstützt.'
 ms.assetid: eaba3dce-8fea-453f-90c2-4a9b5cb05ecc
-title: Shell. ejectpc-Methode (Shldisp. h)
+title: Shell.EjectPC-Methode (Shldisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Shell32.dll
-ms.openlocfilehash: 355d75b2ffaca9c9f90e66fbc535333a84bfa45d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5ec08aaa82d2f752fa06537434adede86b9d5a3a
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104979905"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108104348"
 ---
-# <a name="shellejectpc-method"></a>Shell. ejectpc-Methode
+# <a name="shellejectpc-method"></a>Shell.EjectPC-Methode
 
-Der Computer wird von seiner Docking Station eingelesen. Dies ist das gleiche wie beim Klicken auf das **Startmenü** und beim Auswählen von **ausgelösten PCs**, wenn Ihr Computer diesen Befehl unterstützt.
+Wirft den Computer aus seiner Andockstation. Dies entspricht dem Klicken auf das **Startmenü** und dem Auswählen von **Eject PC**, wenn Ihr Computer diesen Befehl unterstützt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -57,9 +57,9 @@ Diese Methode gibt keinen Wert zurück.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird **ejectpc** verwendet. Die richtige Verwendung wird für JScript, VBScript und Visual Basic angezeigt.
+Im folgenden Beispiel wird **EjectPC** verwendet. Die richtige Verwendung wird für JScript, VBScript und Visual Basic.
 
-JScript
+Jscript:
 
 
 ```JScript
@@ -75,7 +75,7 @@ JScript
 
 
 
-VBScript
+Vbscript:
 
 
 ```VB
@@ -109,17 +109,17 @@ End Sub
 
 
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, Windows XP \[ Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Client)<br/> | Nur Windows 2000 Professional- und Windows \[ XP-Desktop-Apps\]<br/>                                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                           |
-| Header<br/>                   | <dl> <dt>Shldisp. h</dt> </dl>                           |
-| IDL<br/>                      | <dl> <dt>Shldisp. idl</dt> </dl>                         |
-| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4,71 oder höher)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>                           |
+| Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                         |
+| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4.71 oder höher)</dt> </dl> |
 
 
 

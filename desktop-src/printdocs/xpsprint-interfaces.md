@@ -1,23 +1,23 @@
 ---
-description: .
+description: XPS-Druck-API-Schnittstellen
 ms.assetid: f575109e-e9c4-4db5-945c-7c96b6b5d613
-title: XPS-druckapi-Schnittstellen
+title: XPS-Druck-API-Schnittstellen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 828e999417354678d77ad1de8c29beb5956f7762
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 47cd01c169c82a9e3210f281ec6c44fa206c40b5
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103755216"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108105188"
 ---
-# <a name="xps-print-api-interfaces"></a>XPS-druckapi-Schnittstellen
+# <a name="xps-print-api-interfaces"></a>XPS-Druck-API-Schnittstellen
 
-\[Die in diesem Abschnitt beschriebenen Schnittstellen sind veraltet. Client Anwendungen sollten stattdessen die [API zum Drucken von Dokument Paketen](./tailored-app-printing-api.md) verwenden.\]
+\[Die in diesem Abschnitt beschriebenen Schnittstellen sind veraltet. Clientanwendungen sollten stattdessen die [Druckdokumentpaket-API](./tailored-app-printing-api.md) verwenden.\]
 
-\[Ixpsprintjob wird nicht unterstützt und kann in Zukunft geändert oder nicht verfügbar sein. \]
+\[IXpsPrintJob wird nicht unterstützt und kann in Zukunft geändert oder nicht mehr verfügbar sein. \]
 
-\[Ixpsprintjobstream wird nicht unterstützt und kann in Zukunft geändert oder nicht verfügbar sein. \]
+\[IXpsPrintJobStream wird nicht unterstützt und kann in Zukunft geändert oder nicht mehr verfügbar sein. \]
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
@@ -25,8 +25,8 @@ ms.locfileid: "103755216"
 
 | Schnittstelle                                                   | BESCHREIBUNG                                                                               |
 |-------------------------------------------------------------|-------------------------------------------------------------------------------------------|
-| [**Ixpsprintjob**](/windows/desktop/api/XpsPrint/nn-xpsprint-ixpsprintjob)<br/>             | Ermöglicht den Zugriff auf einen Druckauftrag, der gerade ausgeführt wird.<br/>                  |
-| [**Ixpsprintjobstream**](/windows/desktop/api/XpsPrint/nn-xpsprint-ixpsprintjobstream)<br/> | Eine schreibgeschützte Datenstrom Schnittstelle, in die eine Anwendung Druckauftrags Daten schreibt.<br/> |
+| [**IXpsPrintJob**](/windows/desktop/api/XpsPrint/nn-xpsprint-ixpsprintjob)<br/>             | Ermöglicht den Zugriff auf einen Druckauftrag, der gerade in Bearbeitung ist.<br/>                  |
+| [**IXpsPrintJobStream**](/windows/desktop/api/XpsPrint/nn-xpsprint-ixpsprintjobstream)<br/> | Eine datenübertragungsbasierte Schnittstelle, in die eine Anwendung Druckauftragsdaten schreibt.<br/> |
 
 
 

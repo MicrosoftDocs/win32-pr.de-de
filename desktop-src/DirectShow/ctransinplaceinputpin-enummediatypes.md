@@ -1,7 +1,7 @@
 ---
-description: 'Die enummediatypes-Methode listet die bevorzugten Medientypen der PIN auf. Diese Methode implementiert die IPin:: enummediatypes-Methode.'
+description: 'CTransInPlaceInputPin.EnumMediaTypes-Methode: Die EnumMediaTypes-Methode aufzählt die bevorzugten Medientypen des Pins. Diese Methode implementiert die IPin::EnumMediaTypes-Methode.'
 ms.assetid: 0c28b4b0-a45f-400f-a6d7-7668458f9642
-title: Ctransinplaceinputpin. enummediatypes-Methode (transip. h)
+title: CTransInPlaceInputPin.EnumMediaTypes-Methode (Transip.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: ffa634fa695eb0007b49fc1c36c730c7fbde361b
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 9f9e05d0e9db50cabc700da7b3803c1606efab78
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365984"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108094758"
 ---
-# <a name="ctransinplaceinputpinenummediatypes-method"></a>Ctransinplaceinputpin. enummediatypes-Methode
+# <a name="ctransinplaceinputpinenummediatypes-method"></a>CTransInPlaceInputPin.EnumMediaTypes-Methode
 
-Die `EnumMediaTypes` -Methode listet die bevorzugten Medientypen der PIN auf. Diese Methode implementiert die [**IPin:: enummediatypes**](/windows/desktop/api/Strmif/nf-strmif-ipin-enummediatypes) -Methode.
+Die `EnumMediaTypes` -Methode aufzählt die bevorzugten Medientypen des Pins. Diese Methode implementiert die [**IPin::EnumMediaTypes-Methode.**](/windows/desktop/api/Strmif/nf-strmif-ipin-enummediatypes)
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,22 +45,22 @@ HRESULT EnumMediaTypes(
 *ppEnum* 
 </dt> <dd>
 
-Empfängt einen Zeiger auf die [**ienummediatypes**](/windows/desktop/api/Strmif/nn-strmif-ienummediatypes) -Schnittstelle.
+Empfängt einen Zeiger auf die [**IEnumMediaTypes-Schnittstelle.**](/windows/desktop/api/Strmif/nn-strmif-ienummediatypes)
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT** -Wert zurück. Mögliche Werte sind in der folgenden Tabelle aufgeführt.
+Gibt einen **HRESULT-Wert** zurück. Mögliche Werte sind die in der folgenden Tabelle gezeigten Werte.
 
 
 
 | Rückgabecode                                                                                           | Beschreibung                                 |
 |-------------------------------------------------------------------------------------------------------|---------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>                  | Erfolg.<br/>                         |
-| <dl> <dt>**E \_ outo-Memory**</dt> </dl>         | Nicht genügend Arbeitsspeicher.<br/>             |
-| <dl> <dt>**E- \_ Zeiger**</dt> </dl>             | **Null** -Zeiger.<br/>                |
-| <dl> <dt>**VFW \_ E \_ nicht \_ verbunden**</dt> </dl> | Die Ausgabe-PIN ist nicht verbunden.<br/> |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl>         | Nicht genügend Arbeitsspeicher.<br/>             |
+| <dl> <dt>**\_E-ZEIGER**</dt> </dl>             | **NULL-Zeiger.**<br/>                |
+| <dl> <dt>**VFW \_ E \_ NICHT \_ VERBUNDEN**</dt> </dl> | Der Ausgabepin ist nicht verbunden.<br/> |
 
 
 
@@ -68,24 +68,24 @@ Gibt einen **HRESULT** -Wert zurück. Mögliche Werte sind in der folgenden Tabe
 
 ## <a name="remarks"></a>Bemerkungen
 
-Diese Methode gibt die **ienummediatypes** -Schnittstelle von der Downstream-Eingabe-PIN zurück.
+Diese Methode gibt die **IEnumMediaTypes-Schnittstelle** vom Downstreameingabepin zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Transip. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Transip.h (einschließlich Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Ctransinplaceinputpin-Klasse**](ctransinplaceinputpin.md)
+[**CTransInPlaceInputPin-Klasse**](ctransinplaceinputpin.md)
 </dt> </dl>
 
  

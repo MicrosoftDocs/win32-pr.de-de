@@ -1,29 +1,29 @@
 ---
-title: Windows Connect jetzt
-description: .
+title: Windows-Sofortverbindung
+description: Windows-Sofortverbindung
 ms.assetid: c551b8ae-2b87-4661-8d86-22010d18e058
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6556282495d62a915aa90b94d55ac7edd62cefd9
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 96f3f7d5e4bb1fbe7dea30847c1483688f093f1d
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103711850"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108091248"
 ---
-# <a name="windows-connect-now"></a>Windows Connect jetzt
+# <a name="windows-connect-now"></a>Windows-Sofortverbindung
 
 ## <a name="purpose"></a>Zweck
 
-Windows Connect Now (WCN) ermöglicht mobilen und eingebetteten Geräten, 802,11 Zugriffs Punkten (APS) und Computern das sichere verbinden und Austauschen von Einstellungen untereinander. WCN ist für den Benutzer "Home" oder "Small Business" konzipiert und stellt einen angemessenen Kompromiss zwischen benutzerfreundlicher und stabiler Sicherheit dar.
+Windows-Sofortverbindung (WCN) ermöglicht mobilen und eingebetteten Geräten, 802.11 Zugriffspunkten (Access Points, APs) und Computern das sichere Verbinden und Austauschen von Einstellungen untereinander. WCN ist für heim- oder kleine Geschäftskunden konzipiert und bietet einen angemessenen Kompromiss zwischen Benutzerfreundlichkeit und stabiler Sicherheit.
 
 ## <a name="developer-audience"></a>Entwicklergruppe
 
-Die Windows Connect Now-API ist für die Verwendung mit C/C++ konzipiert.
+Die Windows-Sofortverbindung-API ist für die Verwendung mit C/C++ konzipiert.
 
 ## <a name="run-time-requirements"></a>Laufzeitanforderungen
 
-Windows Connect wird jetzt ab Windows 7 unterstützt.
+Windows-Sofortverbindung wird ab Windows 7 unterstützt.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
@@ -31,8 +31,8 @@ Windows Connect wird jetzt ab Windows 7 unterstützt.
 
 | Thema                                                                         | BESCHREIBUNG                                                                                                             |
 |-------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------|
-| [Informationen zu Windows Connect Now](about-windows-connect-now.md)<br/>         | Eine kurze Übersicht über die Windows Connect Now-API.<br/>                                                             |
-| [Windows Connect Now-Referenz](windows-connect-now-reference.md)<br/> | Ausführliche Beschreibungen der Programmier Elemente, die in der Windows Connect Now-API (wcnapi) enthalten sind.<br/> |
+| [Informationen Windows-Sofortverbindung](about-windows-connect-now.md)<br/>         | Eine kurze Übersicht über die Windows-Sofortverbindung-API.<br/>                                                             |
+| [Windows-Sofortverbindung Referenz](windows-connect-now-reference.md)<br/> | Ausführliche Beschreibungen der Programmierelemente, die in der Windows-Sofortverbindung-API (WCNAPI) enthalten sind.<br/> |
 
 
 

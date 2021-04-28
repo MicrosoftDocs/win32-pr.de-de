@@ -1,7 +1,7 @@
 ---
-description: Ruft entweder eine Attribut Tabelle für ein Mesh oder die Anzahl der in einer Attribut Tabelle gespeicherten Einträge für ein Mesh ab.
+description: 'ID3DX10Mesh::GetAttributeTable-Methode: Ruft entweder eine Attributtabelle für ein Gitternetz oder die Anzahl von Einträgen ab, die in einer Attributtabelle für ein Gitternetz gespeichert sind.'
 ms.assetid: cee49eba-c113-49f5-a702-c366401f1f2d
-title: 'ID3DX10Mesh:: GetAttributeTable-Methode (d3dx10. h)'
+title: ID3DX10Mesh::GetAttributeTable-Methode (D3DX10.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: 4ff00f3c5d036b3b463bc7c6622de75361b196e6
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: e7fc503af1a290b27fea81d0c2aba6b84393323b
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106366670"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108083988"
 ---
-# <a name="id3dx10meshgetattributetable-method"></a>ID3DX10Mesh:: GetAttributeTable-Methode
+# <a name="id3dx10meshgetattributetable-method"></a>ID3DX10Mesh::GetAttributeTable-Methode
 
-Ruft entweder eine Attribut Tabelle für ein Mesh oder die Anzahl der in einer Attribut Tabelle gespeicherten Einträge für ein Mesh ab.
+Ruft entweder eine Attributtabelle für ein Gitternetz oder die Anzahl von Einträgen ab, die in einer Attributtabelle für ein Gitternetz gespeichert sind.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,21 +41,21 @@ HRESULT GetAttributeTable(
 
 <dl> <dt>
 
-*pattribtable* \[ in\]
+*pAttribTable* \[ In\]
 </dt> <dd>
 
-Type: **[ **d3dx10- \_ Attribut \_ Bereich**](d3dx10-attribute-range.md)\***
+Typ: **[ **D3DX10-ATTRIBUTBEREICH \_ \_**](d3dx10-attribute-range.md)\***
 
-Ein Zeiger auf ein Array von \_ d3dx10 \_ -Attribut Bereichs Strukturen, die die Einträge in der Attribut Tabelle des Mesh darstellen. Geben Sie **null** an, um den Wert für pattribtablesize abzurufen.
+Zeiger auf ein Array von D3DX10 ATTRIBUTE RANGE-Strukturen, die die Einträge \_ in der \_ Attributtabelle des Gitters darstellen. Geben **Sie NULL** an, um den Wert für pAttribTableSize abzurufen.
 
 </dd> <dt>
 
-*pattribtablesize* \[ in\]
+*pAttribTableSize* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)\***
+Typ: **[ **UINT**](../winprog/windows-data-types.md)\***
 
-Ein Zeiger auf die Anzahl der in pattribtable gespeicherten Einträge oder ein Wert, der mit der Anzahl der in der Attribut Tabelle für das Mesh gespeicherten Einträge aufgefüllt werden soll.
+Zeiger auf die Anzahl der in pAttribTable gespeicherten Einträge oder auf einen Wert, der mit der Anzahl von Einträgen aufgefüllt werden soll, die in der Attributtabelle für das Gitternetz gespeichert sind.
 
 </dd> </dl>
 
@@ -63,24 +63,24 @@ Ein Zeiger auf die Anzahl der in pattribtable gespeicherten Einträge oder ein W
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Der Rückgabewert ist einer der Werte, die in [Direct3D 10-Rückgabe Codes](d3d10-graphics-reference-returnvalues.md)aufgelistet sind.
+Der Rückgabewert ist einer der Unter [Direct3D 10-Rückgabecodes aufgeführten Werte.](d3d10-graphics-reference-returnvalues.md)
 
 ## <a name="remarks"></a>Bemerkungen
 
-Eine Attribut Tabelle wird verwendet, um Bereiche des Netzes zu identifizieren, die mit unterschiedlichen Texturen, renderzuständen, Materialien usw. gezeichnet werden müssen. Außerdem kann die Anwendung die Attribut Tabelle verwenden, um Teile eines Netzes auszublenden, indem beim Zeichnen des Frames kein angegebener Attribut Bezeichner gezeichnet wird.
+Eine Attributtabelle wird verwendet, um Bereiche des Gitters zu identifizieren, die mit unterschiedlichen Texturen, Renderzuständen, Materialien und so weiter gezeichnet werden müssen. Darüber hinaus kann die Anwendung die Attributtabelle verwenden, um Teile eines Gitters auszublenden, indem beim Zeichnen des Rahmens kein angegebener Attributbezeichner gezeichnunget wird.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx10. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>D3dx10. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>D3DX10.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

@@ -1,7 +1,7 @@
 ---
-description: Zeigt das Dialogfeld Windows Herunterfahren an. Dies ist das gleiche wie beim Klicken auf das Startmenü und beim Auswählen von "Herunterfahren".
+description: 'Shell.ShutdownWindows-Methode: Zeigt das Dialogfeld Windows herunterfahren an. Dies entspricht dem Klicken auf den Startmenü und dem Auswählen von Herunterfahren.'
 ms.assetid: 6fa8e2e0-a58f-4837-89f5-898cece2d80a
-title: Shell. shutdownwindows-Methode (Shldisp. h)
+title: Shell.ShutdownWindows-Methode (Shldisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Shell32.dll
-ms.openlocfilehash: 804a1e211e191206d20f83d85dee2202492bfd27
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2a3c0746caccb360f6f7f0156b72a57ed0a2d2b8
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104216598"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108083668"
 ---
-# <a name="shellshutdownwindows-method"></a>Shell. shutdownwindows-Methode
+# <a name="shellshutdownwindows-method"></a>Shell.ShutdownWindows-Methode
 
-Zeigt das Dialogfeld **Windows herunter** fahren an. Dies ist das gleiche wie beim Klicken auf das **Startmenü** und beim Auswählen von " **herunter** fahren".
+Zeigt das Dialogfeld **Windows herunterfahren** an. Dies entspricht dem Klicken auf das **Menü Start** und der Auswahl von **Herunterfahren.**
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,9 +47,9 @@ Diese Methode hat keine Parameter.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird die Verwendung von **shutdownwindows** veranschaulicht. Die richtige Verwendung wird für JScript, VBScript und Visual Basic angezeigt.
+Im folgenden Beispiel **wird ShutdownWindows** verwendet. Die richtige Verwendung wird für JScript, VBScript und Visual Basic angezeigt.
 
-JScript
+Jscript:
 
 
 ```JScript
@@ -65,7 +65,7 @@ JScript
 
 
 
-VBScript
+Vbscript:
 
 
 ```VB
@@ -98,17 +98,17 @@ End Sub
 
 
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, Windows XP \[ Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, nur Windows \[ XP-Desktop-Apps\]<br/>                                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                           |
-| Header<br/>                   | <dl> <dt>Shldisp. h</dt> </dl>                           |
-| IDL<br/>                      | <dl> <dt>Shldisp. idl</dt> </dl>                         |
-| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4,71 oder höher)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>                           |
+| Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                         |
+| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4.71 oder höher)</dt> </dl> |
 
 
 

@@ -1,5 +1,5 @@
 ---
-description: Diese Klasse ist die übergeordnete Klasse für Prozess Ereignisse. Die folgende Syntax wird durch den MOF-Code vereinfacht.
+description: 'Process_V1-Klasse: Diese Klasse ist die übergeordnete Klasse für Prozessereignisse. Die folgende Syntax wird aus MOF-Code vereinfacht.'
 ms.assetid: e517cd2d-5870-4666-93e9-6870b2f4a447
 title: Process_V1-Klasse
 ms.topic: reference
@@ -12,18 +12,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 4d4146fd92dee5053f39a6279586823e8eae9777
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: cc0b72c476890cc81d083208a8ff3489e5609fda
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104980400"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108106318"
 ---
-# <a name="process_v1-class"></a>Process \_ v1-Klasse
+# <a name="process_v1-class"></a>Process \_ V1-Klasse
 
-Diese Klasse ist die übergeordnete Klasse für Prozess Ereignisse.
+Diese Klasse ist die übergeordnete Klasse für Prozessereignisse.
 
-Die folgende Syntax wird durch den MOF-Code vereinfacht.
+Die folgende Syntax wird aus MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -36,16 +36,16 @@ class Process_V1 : MSNT_SystemTrace
 
 ## <a name="members"></a>Member
 
-Die **Process \_ v1** -Klasse definiert keine Member.
+Die **Process \_ V1-Klasse** definiert keine Member.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ XP-Desktop-Apps\]<br/>          |
+| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2003-Desktop-Apps\]<br/> |
 
 
 
@@ -53,16 +53,16 @@ Die **Process \_ v1** -Klasse definiert keine Member.
 
 <dl> <dt>
 
-[**MSNT \_ systemtrace**](msnt-systemtrace.md)
+[**MSNT \_ SystemTrace**](msnt-systemtrace.md)
 </dt> <dt>
 
 [**Prozess**](process.md)
 </dt> <dt>
 
-[**Prozess \_ v0**](process-v0.md)
+[**Verarbeiten \_ von V0**](process-v0.md)
 </dt> <dt>
 
-[**Prozess \_ v1 \_ TypeGroup1**](process-v1-typegroup1.md)
+[**Process \_ V1 \_ TypeGroup1**](process-v1-typegroup1.md)
 </dt> </dl>
 
  

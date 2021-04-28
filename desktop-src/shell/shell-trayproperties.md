@@ -1,7 +1,7 @@
 ---
-description: Zeigt das Dialogfeld Eigenschaften von Taskleiste und Startmenü an. Diese Methode hat denselben Effekt, wenn Sie mit der rechten Maustaste auf die Taskleiste klicken und Eigenschaften auswählen.
+description: 'Shell.TrayProperties-Methode: Zeigt das Dialogfeld Taskleiste und Eigenschaften des Startmenüs an. Diese Methode hat die gleiche Wirkung wie das Klicken mit der rechten Maustaste auf die Taskleiste und das Auswählen von Eigenschaften.'
 ms.assetid: 0d82d847-9e6f-461e-b938-fe8fd49a636f
-title: Shell. trayproperties-Methode (Shldisp. h)
+title: Shell.TrayProperties-Methode (Shldisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Shell32.dll
-ms.openlocfilehash: da3fbfdb2b6aa2517b275041856920c6b2cd1bb0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e09f6833fbf07c99fdbce9c02b020bcbb5361408
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104980601"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108104098"
 ---
-# <a name="shelltrayproperties-method"></a>Shell. trayproperties-Methode
+# <a name="shelltrayproperties-method"></a>Shell.TrayProperties-Methode
 
-Zeigt das Dialogfeld **Eigenschaften von Taskleiste und Startmenü** an. Diese Methode hat denselben Effekt, wenn Sie mit der rechten Maustaste auf die Taskleiste klicken und **Eigenschaften** auswählen.
+Zeigt das **Dialogfeld Taskleiste und Eigenschaften des Startmenüs** an. Diese Methode hat die gleiche Wirkung wie das Klicken mit der rechten Maustaste auf die Taskleiste und das Auswählen von **Eigenschaften.**
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,9 +47,9 @@ Diese Methode hat keine Parameter.
 
 ## <a name="examples"></a>Beispiele
 
-Das folgende Beispiel zeigt die Verwendung von **trayproperties** . Die richtige Verwendung wird für JScript, VBScript und Visual Basic angezeigt.
+Im folgenden Beispiel wird **TrayProperties** verwendet. Die richtige Verwendung wird für JScript, VBScript und Visual Basic.
 
-JScript
+Jscript:
 
 
 ```JScript
@@ -65,7 +65,7 @@ JScript
 
 
 
-VBScript
+Vbscript:
 
 
 ```VB
@@ -99,17 +99,17 @@ End Sub
 
 
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, Windows XP \[ Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Client)<br/> | Nur Windows 2000 Professional- und Windows \[ XP-Desktop-Apps\]<br/>                                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                           |
-| Header<br/>                   | <dl> <dt>Shldisp. h</dt> </dl>                           |
-| IDL<br/>                      | <dl> <dt>Shldisp. idl</dt> </dl>                         |
-| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4,71 oder höher)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>                           |
+| Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                         |
+| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4.71 oder höher)</dt> </dl> |
 
 
 

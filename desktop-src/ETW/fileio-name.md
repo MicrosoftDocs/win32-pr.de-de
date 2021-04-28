@@ -1,5 +1,5 @@
 ---
-description: Diese Klasse ist die Ereignistyp Klasse für Datei-e/a-Ereignisse. Die folgende Syntax wird durch den MOF-Code vereinfacht.
+description: 'FileIo_Name Klasse: Diese Klasse ist die Ereignistypklasse für Datei-E/A-Ereignisse. Die folgende Syntax wird durch MOF-Code vereinfacht.'
 ms.assetid: ed72daa3-06c0-46f1-bb9d-c0b343228f28
 title: FileIo_Name-Klasse
 ms.topic: reference
@@ -14,18 +14,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: a25c96a8a3db11f577e7780d9f12448a8a0039dc
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9fabfbcfa318ad809b5cb2f66d72f19abf21112d
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104977520"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108106588"
 ---
-# <a name="fileio_name-class"></a>\_Klasse "Klasse Name"
+# <a name="fileio_name-class"></a>\_FileIo-Name-Klasse
 
-Diese Klasse ist die Ereignistyp Klasse für Datei-e/a-Ereignisse.
+Diese Klasse ist die Ereignistypklasse für Datei-E/A-Ereignisse.
 
-Die folgende Syntax wird durch den MOF-Code vereinfacht.
+Die folgende Syntax wird durch MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,13 +40,13 @@ class FileIo_Name : FileIo
 
 ## <a name="members"></a>Member
 
-Die Klasse " **fleio \_ Name** " enthält diese Typen von Membern:
+Die **FileIo \_ Name-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die Klasse " **fleio \_ Name** " verfügt über diese Eigenschaften.
+Die **FileIo \_ Name-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
@@ -59,41 +59,41 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (2), stringbeendigung ("nullterminiert"), Format ("w")
+Qualifizierer: WmiDataId(2), StringTermination("NullTerminated"), Format("w")
 </dt> </dl>
 
-Vollständiger Pfad zur Datei, ohne den Laufwerk Buchstaben.
+Vollständiger Pfad zur Datei, ohne den Laufwerkbuchstaben.
 
 </dd> <dt>
 
-File Object
+FileObject
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (1), Zeiger
+Qualifizierer: WmiDataId(1), Zeiger
 </dt> </dl>
 
-Vergleichen Sie den Wert dieses Zeigers mit dem **FileObject** -Zeiger Wert in einem [**diskio \_ TypeGroup1**](diskio-typegroup1.md) -Ereignis, um den Typ des e/a-Vorgangs zu bestimmen.
+Übereinstimmung mit dem Wert dieses Zeigers auf den **FileObject-Zeigerwert** in einem [**DiskIo \_ TypeGroup1-Ereignis,**](diskio-typegroup1.md) um den Typ des E/A-Vorgangs zu bestimmen.
 
 </dd> </dl>
 
 ## <a name="remarks"></a>Bemerkungen
 
-**Windows Server 2003:** Zum Abrufen des Laufwerk Buchstabens für den Dateinamen Pfad verwenden Sie den **FileObject** -Eigenschafts Wert, um dem entsprechenden [diskio \_ TypeGroup1](diskio-typegroup1.md) -Ereignis zuzuordnen. Verwenden Sie aus dem diskio \_ TypeGroup1-Ereignis **die disknumber** -und **Byteoffset** -Eigenschaftswerte, um das entsprechende [SystemConfig \_ logdisk](systemconfig-logdisk.md) -Ereignis zuzuordnen (**Byteoffset** wird **Startoffset** zugeordnet). Die " **driveletterstring** "-Eigenschaft enthält den Laufwerk Buchstaben.
+**Windows Server 2003:** Um den Laufwerkbuchstaben für den Dateinamenpfad abzurufen, verwenden Sie den **FileObject-Eigenschaftswert,** um dem entsprechenden [DiskIo \_ TypeGroup1-Ereignis zu](diskio-typegroup1.md) zuordnen. Verwenden Sie aus dem DiskIo \_ TypeGroup1-Ereignis die **Eigenschaftswerte DiskNumber** und **ByteOffset,** um dem entsprechenden [SystemConfig \_ LogDisk-Ereignis](systemconfig-logdisk.md) **(ByteOffset** wird **StartOffset** zu zuordnen). Die **DriveLetterString-Eigenschaft** enthält den Laufwerkbuchstaben.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 

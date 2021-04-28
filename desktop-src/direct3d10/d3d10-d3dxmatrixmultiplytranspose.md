@@ -1,7 +1,7 @@
 ---
-description: Berechnet das übersetzte Produkt von zwei Matrizen.
+description: 'D3DXMatrixMultiplyTranspose-Funktion (D3DX10Math.h): Berechnet das transponierte Produkt zweier Matrizen.'
 ms.assetid: 3db4138c-407c-47b5-b8b9-04af8771e98e
-title: D3DXMatrixMultiplyTranspose-Funktion (D3DX10Math. h)
+title: D3DXMatrixMultiplyTranspose-Funktion (D3DX10Math.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: 187912a4117ab502ea7b0b1b3fc1ea105ecbc3e7
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: fcf3d5578aa6e2ad13bd3f91dfd2206d6eaf0b13
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106371940"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108103417"
 ---
-# <a name="d3dxmatrixmultiplytranspose-function-d3dx10mathh"></a>D3DXMatrixMultiplyTranspose-Funktion (D3DX10Math. h)
+# <a name="d3dxmatrixmultiplytranspose-function-d3dx10mathh"></a>D3DXMatrixMultiplyTranspose-Funktion (D3DX10Math.h)
 
-Berechnet das übersetzte Produkt von zwei Matrizen.
+Berechnet das transponierte Produkt zweier Matrizen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,30 +42,30 @@ D3DXMATRIX* D3DXMatrixMultiplyTranspose(
 
 <dl> <dt>
 
-*Pout* \[ in, out\]
+*pOut* \[ in, out\]
 </dt> <dd>
 
 Typ: **[ **D3DXMATRIX**](../direct3d9/d3dxmatrix.md)\***
 
-Ein Zeiger auf die [**D3DXMATRIX**](d3d10-d3dxmatrix.md) -Struktur, die das Ergebnis des Vorgangs ist.
+Zeiger auf die [**D3DXMATRIX-Struktur,**](d3d10-d3dxmatrix.md) die das Ergebnis des Vorgangs ist.
 
 </dd> <dt>
 
-*pM1* \[ in\]
+*pM1* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXMATRIX**](../direct3d9/d3dxmatrix.md) \***
+Typ: **const [**D3DXMATRIX**](../direct3d9/d3dxmatrix.md) \***
 
-Zeiger auf eine Quell-D3DXMATRIX-Struktur (auf der linken Seite).
+Zeiger auf eine D3DXMATRIX-Quellstruktur (linke Seite).
 
 </dd> <dt>
 
-*pM2* \[ in\]
+*pM2* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXMATRIX**](../direct3d9/d3dxmatrix.md) \***
+Typ: **const [**D3DXMATRIX**](../direct3d9/d3dxmatrix.md) \***
 
-Zeiger auf eine Quell-D3DXMATRIX-Struktur (auf der rechten Seite).
+Zeiger auf eine D3DXMATRIX-Quellstruktur (rechte Seite).
 
 </dd> </dl>
 
@@ -73,28 +73,28 @@ Zeiger auf eine Quell-D3DXMATRIX-Struktur (auf der rechten Seite).
 
 Typ: **[ **D3DXMATRIX**](../direct3d9/d3dxmatrix.md)\***
 
-Zeiger auf eine D3DXMATRIX-Struktur, die das Produkt von zwei Matrizen ist.
+Zeiger auf eine D3DXMATRIX-Struktur, die das Produkt zweier Matrizen ist.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Das Ergebnis ist die Umsetzung des Produkts von zwei Transformations Matrizen: Out = T (M1 \* m2).
+Das Ergebnis ist die transponierte des Produkts von zwei Transformationsmatrizen, Out = T(M1 \* M2).
 
-Der Rückgabewert für diese Funktion ist derselbe Wert, der im Pout-Parameter zurückgegeben wird. Auf diese Weise kann die D3DXMatrixMultiplyTranspose-Funktion als Parameter für eine andere Funktion verwendet werden.
+Der Rückgabewert für diese Funktion ist der gleiche Wert, der im pOut-Parameter zurückgegeben wird. Auf diese Weise kann die D3DXMatrixMultiplyTranspose-Funktion als Parameter für eine andere Funktion verwendet werden.
 
-Diese Funktion ist nützlich, um Matrizen als Konstanten für Scheitelpunkt-und Pixel-Shader festzulegen.
+Diese Funktion ist nützlich, um Matrizen als Konstanten für Vertex- und Pixel-Shader festlegen.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX10Math. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx10. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX10Math.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

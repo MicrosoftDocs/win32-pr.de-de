@@ -1,7 +1,7 @@
 ---
-description: Konstruktormethode.
+description: 'CBaseWindow.CBaseWindow-Konstruktor : Konstruktormethode.'
 ms.assetid: 9f0b91c4-0364-4c73-b97f-86703ca3ef74
-title: Cbasewindow. cbasewindow-Konstruktor (winutil. h)
+title: CBaseWindow.CBaseWindow-Konstruktor (Winutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,14 +16,14 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: a1741f8596210afac676a7e81f57b46e18fbba9b
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 05205750810294076bf005d0e5b73fda6b2143d5
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106359252"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108095818"
 ---
-# <a name="cbasewindowcbasewindow-constructor"></a>Cbasewindow. cbasewindow-Konstruktor
+# <a name="cbasewindowcbasewindow-constructor"></a>CBaseWindow.CBaseWindow-Konstruktor
 
 Konstruktormethode.
 
@@ -43,42 +43,42 @@ CBaseWindow(
 
 <dl> <dt>
 
-*bdogetdc* 
+*bDoGetDC* 
 </dt> <dd>
 
 Boolescher Wert, der angibt, ob der Gerätekontext abgerufen werden soll.
 
 </dd> <dt>
 
-*bpostto Destroy* 
+*bPostToDestroy* 
 </dt> <dd>
 
-Boolescher Wert, der die [**cbasewindow:: m \_ bdopostdedestroy**](cbasewindow-m-bdoposttodestroy.md) -Element Variable angibt.
+Boolescher Wert, der die [**Membervariable CBaseWindow::m \_ bDoPostToDestroy**](cbasewindow-m-bdoposttodestroy.md) angibt.
 
 </dd> </dl>
 
 ## <a name="remarks"></a>Bemerkungen
 
-Nachdem Sie das-Objekt erstellt haben, rufen Sie die [**cbasewindow::P Analyse Window**](cbasewindow-preparewindow.md) -Methode auf, um das-Fenster zu erstellen. **Preparewindow** ist eine virtuelle Methode. [**Cbasewindow:: initialicwindow**](cbasewindow-initialisewindow.md)wird auch als virtuelle Methode aufgerufen. Diese Methoden werden vom-Konstruktor getrennt, sodass abgeleitete Klassen Sie ggf. überschreiben können.
+Nachdem Sie das -Objekt erstellt haben, rufen Sie die [**CBaseWindow::P repareWindow-Methode**](cbasewindow-preparewindow.md) auf, um das Fenster zu erstellen. **PrepareWindow** ist eine virtuelle Methode. Sie ruft [**CBaseWindow::InitialiseWindow**](cbasewindow-initialisewindow.md)auf, ebenfalls eine virtuelle Methode. Diese Methoden werden vom Konstruktor getrennt, sodass abgeleitete Klassen sie bei Bedarf überschreiben können.
 
-Wenn der Wert des *bdogetdc* -Parameters " **true**" ist, ruft das- `CBaseWindow` Objekt ein Handle für den Gerätekontext des Fensters ab und speichert es in der [**cbasewindow:: m-Element Variablen ( \_ hdc**](cbasewindow-m-hdc.md) ). Das-Objekt erstellt außerdem einen kompatiblen Arbeitsspeicher-DC, der in der Element Variablen [**cbasewindow:: m \_ memorydc**](cbasewindow-m-memorydc.md) gespeichert wird. Diese Aktionen treten in der **initialierwindow** -Methode auf.
+Wenn der Wert des *bDoGetDC-Parameters* **TRUE** ist, ruft das `CBaseWindow` -Objekt ein Handle für den Gerätekontext (DC) des Fensters ab und speichert es in der [**CBaseWindow::m \_ hdc-Membervariablen.**](cbasewindow-m-hdc.md) Das -Objekt erstellt auch einen kompatiblen Speicherdomänencontroller, der in der [**Membervariablen CBaseWindow::m \_ MemoryDC**](cbasewindow-m-memorydc.md) gespeichert wird. Diese Aktionen treten in der **InitialiseWindow-Methode** auf.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Winutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Winutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbasewindow-Klasse**](cbasewindow.md)
+[**CBaseWindow-Klasse**](cbasewindow.md)
 </dt> </dl>
 
  

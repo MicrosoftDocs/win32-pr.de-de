@@ -1,7 +1,7 @@
 ---
-description: Berechnet den Bezeichner.
+description: 'D3DXQuaternionExp-Funktion (D3DX10Math.h): Berechnet das Exponentielle.'
 ms.assetid: bd70c432-ac61-4c38-b10b-3b103e49ead8
-title: D3DXQuaternionExp-Funktion (D3DX10Math. h)
+title: D3DXQuaternionExp-Funktion (D3DX10Math.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,14 +14,14 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: d00292cc073679e3e90c2470630ba1851d0d3cd8
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 7c022b9df4302683a184b4fc8329561b22d341d5
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103762174"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108103218"
 ---
-# <a name="d3dxquaternionexp-function-d3dx10mathh"></a>D3DXQuaternionExp-Funktion (D3DX10Math. h)
+# <a name="d3dxquaternionexp-function-d3dx10mathh"></a>D3DXQuaternionExp-Funktion (D3DX10Math.h)
 
 Berechnet den Bezeichner.
 
@@ -41,21 +41,21 @@ D3DXQUATERNION* D3DXQuaternionExp(
 
 <dl> <dt>
 
-*Pout* \[ in, out\]
+*pOut* \[ in, out\]
 </dt> <dd>
 
 Typ: **[ **D3DXQUATERNION**](../direct3d9/d3dxquaternion.md)\***
 
-Zeiger auf das [**D3DXQUATERNION**](d3d10-d3dxquaternion.md) , das das Ergebnis des Vorgangs ist.
+Zeiger auf das [**D3DXQUATERNION-Steuerelement,**](d3d10-d3dxquaternion.md) das das Ergebnis des Vorgangs ist.
 
 </dd> <dt>
 
-*PQ* \[ in\]
+*pQ* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXQUATERNION**](../direct3d9/d3dxquaternion.md) \***
+Typ: **const [**D3DXQUATERNION**](../direct3d9/d3dxquaternion.md) \***
 
-Ein Zeiger auf die Quell-D3DXQUATERNION-Struktur.
+Zeiger auf die D3DXQUATERNION-Quellstruktur.
 
 </dd> </dl>
 
@@ -63,11 +63,11 @@ Ein Zeiger auf die Quell-D3DXQUATERNION-Struktur.
 
 Typ: **[ **D3DXQUATERNION**](../direct3d9/d3dxquaternion.md)\***
 
-Zeiger auf eine D3DXQUATERNION-Struktur, die das Exponentialwert ist.
+Zeiger auf eine D3DXQUATERNION-Struktur, die exponentiell ist.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Diese Methode konvertiert eine reine Quaternion in eine Einheits Quaternion. D3DXQuaternionExp erwartet eine reine Quaternion, bei der w in der Berechnung ignoriert wird (w = = 0).
+Diese Methode konvertiert eine reine Quaternion in eine Einheiten quaternion. D3DXQuaternionExp erwartet eine reine Quaternion, bei der w in der Berechnung ignoriert wird (w == 0).
 
 
 ```
@@ -80,26 +80,26 @@ exp(Q) = (cos(theta), sin(theta) * v)
 
 
 
-Dabei ist v der Vektor Teil einer Quaternion.
+Wobei v der Vektorteil einer Quaternion ist.
 
-Der Rückgabewert für diese Funktion ist derselbe Wert, der im Pout-Parameter zurückgegeben wird. Auf diese Weise kann die D3DXQuaternionExp-Funktion als Parameter für eine andere Funktion verwendet werden.
+Der Rückgabewert für diese Funktion ist der gleiche Wert, der im pOut-Parameter zurückgegeben wird. Auf diese Weise kann die D3DXQuaternionExp-Funktion als Parameter für eine andere Funktion verwendet werden.
 
-Die [**D3DXQuaternionSquadSetup**](d3d10-d3dxquaternionsquadsetup.md) -Methode kann auch zum Einrichten der Steuerungs Punkte einer Quaternion verwendet werden.
+Die [**D3DXQuaternionSquadSetup-Methode**](d3d10-d3dxquaternionsquadsetup.md) kann auch zum Einrichten der Kontrollpunkte einer Quaternion verwendet werden.
 
-Verwenden Sie [**D3DXQuaternionNormalize**](d3d10-d3dxquaternionnormalize.md) für eine beliebige Quaternion-Eingabe, die nicht bereits normalisiert ist.
+Verwenden [**Sie D3DXQuaternionNormalize**](d3d10-d3dxquaternionnormalize.md) für alle Quaternioneingaben, die noch nicht normalisiert sind.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX10Math. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx10. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX10Math.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

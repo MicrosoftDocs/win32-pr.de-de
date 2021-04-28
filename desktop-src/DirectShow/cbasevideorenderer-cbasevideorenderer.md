@@ -1,7 +1,7 @@
 ---
-description: Konstruktormethode.
+description: 'CBaseVideoRenderer.CBaseVideoRenderer-Konstruktor : Konstruktormethode.'
 ms.assetid: 9b69632b-7932-4a9b-bd68-69b06dd8a5ec
-title: Cbasevideorenderer. cbasevideorenderer-Konstruktor (renbase. h)
+title: CBaseVideoRenderer.CBaseVideoRenderer-Konstruktor (Renbase.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,14 +16,14 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 27ed49be63d9c2c05e12a2ac92ae33f64705460b
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: c0ae558238b94402150e5cb15373d202065e485e
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370109"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108095838"
 ---
-# <a name="cbasevideorenderercbasevideorenderer-constructor"></a>Cbasevideorenderer. cbasevideorenderer-Konstruktor
+# <a name="cbasevideorenderercbasevideorenderer-constructor"></a>CBaseVideoRenderer.CBaseVideoRenderer-Konstruktor
 
 Konstruktormethode.
 
@@ -45,31 +45,31 @@ CBaseVideoRenderer(
 
 <dl> <dt>
 
-*Renderclass* 
+*RenderClass* 
 </dt> <dd>
 
-Klassen Bezeichner für diesen Renderer.
+Klassenbezeichner für diesen Renderer.
 
 </dd> <dt>
 
 *pName* 
 </dt> <dd>
 
-Zeiger auf eine Beschreibung, die für Debugzwecke verwendet wird.
+Zeiger auf eine Beschreibung, die zu Debugzwecken verwendet wird.
 
 </dd> <dt>
 
-*Kro* 
+*Punk* 
 </dt> <dd>
 
-Zeiger auf das aggregierte Besitzer Objekt.
+Zeiger auf das aggregierte Besitzerobjekt.
 
 </dd> <dt>
 
-*PHR* 
+*Phr* 
 </dt> <dd>
 
-Zeiger auf einen **HRESULT** -Wert.
+Zeiger auf einen **HRESULT-Wert.**
 
 </dd> </dl>
 
@@ -77,18 +77,18 @@ Zeiger auf einen **HRESULT** -Wert.
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Renbase. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Renbase.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbasevideorenderer-Klasse**](cbasevideorenderer.md)
+[**CBaseVideoRenderer-Klasse**](cbasevideorenderer.md)
 </dt> </dl>
 
  

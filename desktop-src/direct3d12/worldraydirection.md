@@ -1,7 +1,7 @@
 ---
-description: Die Welt Raum Richtung für das aktuelle Ray.
+description: 'WorldRayDirection: Die Raumrichtung für den aktuellen Strahl.'
 ms.assetid: ''
-title: Worldraydirection
+title: WorldRayDirection
 ms.localizationpriority: low
 ms.topic: reference
 ms.date: 05/31/2018
@@ -12,16 +12,16 @@ api_name:
 - WorldRayDirection
 api_type:
 - NA
-ms.openlocfilehash: 508e24d73c0336f7615c9eca3d1da35cfcce9514
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 9d38ab75d0f0708f70624284483a0222eadf9591
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106341154"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108105288"
 ---
-# <a name="worldraydirection"></a>Worldraydirection
+# <a name="worldraydirection"></a>WorldRayDirection
 
-Die Welt Raum Richtung für das aktuelle Ray.
+Die Raumrichtung für den aktuellen Strahl.
 
 ## <a name="syntax"></a>Syntax
 
@@ -34,7 +34,7 @@ float3 WorldRayDirection();
 
 ## <a name="remarks"></a>Bemerkungen
 
-Diese Funktion kann von den folgenden Raytracing-shadertypen aufgerufen werden:
+Diese Funktion kann von den folgenden Raytracing-Shadertypen aufgerufen werden:
 
 * [**Any Hit-Shader**](any-hit-shader.md)
 * [**Closest Hit-Shader**](closest-hit-shader.md)
@@ -45,7 +45,7 @@ Diese Funktion kann von den folgenden Raytracing-shadertypen aufgerufen werden:
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

@@ -1,7 +1,7 @@
 ---
-description: Zeiger auf den besitzenden Filter.
+description: 'CTransformInputPin::m_pTransformFilter Member : Zeiger auf den besitzenden Filter.'
 ms.assetid: 209b1d64-27ae-4f40-83a1-5485a470aef9
-title: 'Ctransforminputpin:: m_pTransformFilter Member (Transfrm. h)'
+title: CTransformInputPin::m_pTransformFilter-Member (Transfrm.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,14 +16,14 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 9aed0efeb73492c65990c17e47423ed5a8fcfe1c
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 8dc532977c34f897f248cb3011584ffd936e4fb8
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106351348"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108095018"
 ---
-# <a name="ctransforminputpinm_ptransformfilter-member"></a>Ctransforminputpin:: m \_ ptransformfilter-Member
+# <a name="ctransforminputpinm_ptransformfilter-member"></a>CTransformInputPin::m \_ pTransformFilter-Member
 
 Zeiger auf den besitzenden Filter.
 
@@ -40,10 +40,10 @@ CTransformFilter *m_pTransformFilter;
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Transfrm. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Transfrm.h (streams.h enthalten)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 

@@ -1,7 +1,7 @@
 ---
-description: Die checkConnect-Methode bestimmt, ob eine PIN-Verbindung geeignet ist.
+description: 'CTransformOutputPin.CheckConnect-Methode: Die CheckConnect-Methode bestimmt, ob eine Pinverbindung geeignet ist.'
 ms.assetid: 3dae5c6d-720e-4445-b601-3bdfe32f4c21
-title: Ctransformoutputpin. checkConnect-Methode (Transfrm. h)
+title: CTransformOutputPin.CheckConnect-Methode (Transfrm.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: b9a20eb8d3e20679cb8805d3a1cd8e167ef0bfd5
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 190acd2fbab5206b114b57719d350e3ad5eac0c2
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106356030"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108094948"
 ---
-# <a name="ctransformoutputpincheckconnect-method"></a>Ctransformoutputpin. checkConnect-Methode
+# <a name="ctransformoutputpincheckconnect-method"></a>CTransformOutputPin.CheckConnect-Methode
 
-Die- `CheckConnect` Methode bestimmt, ob eine PIN-Verbindung geeignet ist.
+Die `CheckConnect` -Methode bestimmt, ob eine Stecknadelverbindung geeignet ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,23 +42,23 @@ HRESULT CheckConnect(
 
 <dl> <dt>
 
-*ppin* 
+*pPin* 
 </dt> <dd>
 
-Ein Zeiger auf die [**IPin**](/windows/desktop/api/Strmif/nn-strmif-ipin) -Schnittstelle der Ausgabe-PIN.
+Zeiger auf die [**IPin-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-ipin) des Ausgabepins.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT** -Wert zurück. Die folgenden Werte sind möglich.
+Gibt einen **HRESULT-Wert** zurück. Die folgenden Werte sind möglich.
 
 
 
 | Rückgabecode                                                                                  | Beschreibung                                         |
 |----------------------------------------------------------------------------------------------|-----------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>         | Erfolg.<br/>                                 |
-| <dl> <dt>**E \_ unerwartet**</dt> </dl> | Die Eingabe-PIN des Filters ist nicht verbunden.<br/> |
+| <dl> <dt>**E \_ UNEXPECTED**</dt> </dl> | Der Eingabepin des Filters ist nicht verbunden.<br/> |
 
 
 
@@ -66,16 +66,16 @@ Gibt einen **HRESULT** -Wert zurück. Die folgenden Werte sind möglich.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Diese Methode überschreibt die [**cbaseoutputpin:: checkConnect**](cbaseoutputpin-checkconnect.md) -Methode. Er ruft die [**ctransformfilter:: checkConnect**](ctransformfilter-checkconnect.md) -Methode des Filters auf, die \_ in der Basisklasse den Wert s OK zurückgibt. Die abgeleitete Klasse kann die **ctransformfilter:: checkConnect** -Methode überschreiben, um zusätzliche Überprüfungen auszuführen.
+Diese Methode überschreibt die [**CBaseOutputPin::CheckConnect-Methode.**](cbaseoutputpin-checkconnect.md) Sie ruft die [**CTransformFilter::CheckConnect-Methode**](ctransformfilter-checkconnect.md) des Filters auf, die \_ S OK in der Basisklasse zurückgibt. Die abgeleitete Klasse kann die **CTransformFilter::CheckConnect-Methode** überschreiben, um zusätzliche Überprüfungen durchzuführen.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Transfrm. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Transfrm.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 

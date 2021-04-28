@@ -1,5 +1,5 @@
 ---
-description: Diese Klasse ist die übergeordnete Klasse für UDP/IP-Ereignisse. Die folgende Syntax wird durch den MOF-Code vereinfacht.
+description: 'UdpIp_V1 Klasse: Diese Klasse ist die übergeordnete Klasse für UDP/IP-Ereignisse. Die folgende Syntax wird durch MOF-Code vereinfacht.'
 ms.assetid: 31672a5a-05b2-4382-b793-7a793d985951
 title: UdpIp_V1-Klasse
 ms.topic: reference
@@ -12,18 +12,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 4c57caf9b6f5df963723ee1999e7068b2b2fe5ed
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5035cd764c1b3a7eb0943622897d97684ec8bd61
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104977104"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108105398"
 ---
-# <a name="udpip_v1-class"></a>Udpip \_ v1-Klasse
+# <a name="udpip_v1-class"></a>UdpIp \_ V1-Klasse
 
 Diese Klasse ist die übergeordnete Klasse für UDP/IP-Ereignisse.
 
-Die folgende Syntax wird durch den MOF-Code vereinfacht.
+Die folgende Syntax wird durch MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -36,20 +36,20 @@ class UdpIp_V1 : MSNT_SystemTrace
 
 ## <a name="members"></a>Member
 
-Die **udpip \_ v1** -Klasse definiert keine Member.
+Die **UdpIp \_ V1-Klasse** definiert keine Member.
 
 ## <a name="remarks"></a>Bemerkungen
 
-**Windows Server 2003:** Enthält den eventversion (1)-Klassen Qualifizierer.
+**Windows Server 2003:** Enthält den EventVersion(1)-Klassenqualifizierer.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ XP-Desktop-Apps\]<br/>          |
+| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2003-Desktop-Apps\]<br/> |
 
 
 
@@ -57,16 +57,16 @@ Die **udpip \_ v1** -Klasse definiert keine Member.
 
 <dl> <dt>
 
-[**MSNT \_ systemtrace**](msnt-systemtrace.md)
+[**MSNT \_ SystemTrace**](msnt-systemtrace.md)
 </dt> <dt>
 
-[**Udpip**](udpip.md)
+[**UdpIp**](udpip.md)
 </dt> <dt>
 
-[**Udpip \_ v0**](udpip-v0.md)
+[**UdpIp \_ V0**](udpip-v0.md)
 </dt> <dt>
 
-[**Udpip \_ v1 \_ TypeGroup1**](udpip-v1-typegroup1.md)
+[**UdpIp \_ V1 \_ TypeGroup1**](udpip-v1-typegroup1.md)
 </dt> </dl>
 
  

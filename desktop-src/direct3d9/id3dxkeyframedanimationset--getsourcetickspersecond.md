@@ -1,7 +1,7 @@
 ---
-description: Ruft die Anzahl der pro Sekunde auftretenden Animations Tastatur-Frame Ticks ab.
+description: 'ID3DXKeyframedAnimationSet::GetSourceTicksPerSecond-Methode: Ruft die Anzahl der Animations-Keyframe-Ticks ab, die pro Sekunde auftreten.'
 ms.assetid: b3e8d399-f1a7-4bc6-a35c-373b686aa24a
-title: 'ID3DXKeyframedAnimationSet:: getsourcetickspersecond-Methode (D3dx9anim. h)'
+title: ID3DXKeyframedAnimationSet::GetSourceTicksPerSecond-Methode (D3dx9anim.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 3dba26b20f8e405c25a5cc5a659896ae8a49c683
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: d28837ed2abbab5846c8a5609ab7ff59ac0d49c4
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106371944"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108093698"
 ---
-# <a name="id3dxkeyframedanimationsetgetsourcetickspersecond-method"></a>ID3DXKeyframedAnimationSet:: getsourcetickspersecond-Methode
+# <a name="id3dxkeyframedanimationsetgetsourcetickspersecond-method"></a>ID3DXKeyframedAnimationSet::GetSourceTicksPerSecond-Methode
 
-Ruft die Anzahl der pro Sekunde auftretenden Animations Tastatur-Frame Ticks ab.
+Ruft die Anzahl der Animations-Keyframe-Ticks ab, die pro Sekunde auftreten.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,22 +40,22 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Typ: **[ **Double**](../winprog/windows-data-types.md)**
+Typ: **[ **DOUBLE**](../winprog/windows-data-types.md)**
 
-Anzahl der Animations Tastatur-Frame Ticks, die pro Sekunde auftreten.
+Anzahl der Animations-Keyframe-Ticks, die pro Sekunde auftreten.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9anim. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3dx9anim.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
