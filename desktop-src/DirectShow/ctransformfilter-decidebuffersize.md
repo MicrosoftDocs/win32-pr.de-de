@@ -1,7 +1,7 @@
 ---
-description: Die decidebuffersize-Methode legt die Puffer Anforderungen der Ausgabe-PIN fest.
+description: 'CTransformFilter.DecideBufferSize-Methode: Die DecideBufferSize-Methode legt die Pufferanforderungen des Ausgabepins fest.'
 ms.assetid: 33e41668-b4f6-4142-b22e-2ddfb96332df
-title: Ctransformfilter. decidebuffersize-Methode (Transfrm. h)
+title: CTransformFilter.DecideBufferSize-Methode (Transfrm.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 71a506a9c9cd16a014418b24ad3fbd1186d6f48f
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: f3276170f1256bba41aa075b0e5f06fb7becbcd2
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371148"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108095148"
 ---
-# <a name="ctransformfilterdecidebuffersize-method"></a>Ctransformfilter. decidebuffersize-Methode
+# <a name="ctransformfilterdecidebuffersize-method"></a>CTransformFilter.DecideBufferSize-Methode
 
-Die `DecideBufferSize` -Methode legt die Puffer Anforderungen der Ausgabe-PIN fest.
+Die `DecideBufferSize` -Methode legt die Pufferanforderungen des Ausgabepins fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,44 +43,44 @@ virtual HRESULT DecideBufferSize(
 
 <dl> <dt>
 
-*palloc* 
+*pAlloc* 
 </dt> <dd>
 
-Zeiger auf die [**imemzuordcator**](/windows/desktop/api/Strmif/nn-strmif-imemallocator) -Schnittstelle für die Zuweisung der Ausgabe-PIN.
+Zeiger auf die [**IMemAllocator-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-imemallocator) auf der Zuweisung des Ausgabepins.
 
 </dd> <dt>
 
-*ppropinputrequest* 
+*ppropInputRequest* 
 </dt> <dd>
 
-Ein Zeiger auf eine [**\_ zuordnereigenschafts**](/windows/win32/api/strmif/ns-strmif-allocator_properties) Struktur, die Puffer Anforderungen aus der nachgeschalteten Eingabe-PIN enthält.
+Zeiger auf eine [**ALLOCATOR \_ PROPERTIES-Struktur,**](/windows/win32/api/strmif/ns-strmif-allocator_properties) die Pufferanforderungen des downstream-Eingabepins enthält.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt S \_ OK oder einen anderen **HRESULT** -Wert zurück.
+Gibt S \_ OK oder einen anderen **HRESULT-Wert** zurück.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Die [**ctransformoutputpin::D ecidebuffersize**](ctransformoutputpin-decidebuffersize.md) -Methode der Ausgabe-PIN ruft diese Methode auf. Diese Methode muss von der abgeleiteten Klasse implementiert werden. Weitere Informationen finden Sie unter [**cbaseoutputpin::D ecidebuffersize**](cbaseoutputpin-decidebuffersize.md).
+Die [**CTransformOutputPin::D ecideBufferSize-Methode**](ctransformoutputpin-decidebuffersize.md) des Ausgabepins ruft diese Methode auf. Die abgeleitete Klasse muss diese Methode implementieren. Weitere Informationen finden Sie unter [**CBaseOutputPin::D ecideBufferSize**](cbaseoutputpin-decidebuffersize.md).
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Transfrm. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Transfrm.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Ctransformfilter-Klasse**](ctransformfilter.md)
+[**CTransformFilter-Klasse**](ctransformfilter.md)
 </dt> </dl>
 
  

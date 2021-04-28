@@ -1,7 +1,7 @@
 ---
-description: Erstellt eine rechtshändige perspektivische Projektionsmatrix.
+description: 'D3DXMatrixPerspectiveRH-Funktion (D3DX10Math.h): Erstellt eine rechtshändige Perspektivische Projektionsmatrix.'
 ms.assetid: 324c8a21-24ef-4b3a-aac1-a753e26076d4
-title: D3DXMatrixPerspectiveRH-Funktion (D3DX10Math. h)
+title: D3DXMatrixPerspectiveRH-Funktion (D3DX10Math.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,14 +14,14 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: eb1c2b4b876fb2dda842912d2f18f845a3167406
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 03ffd99d016023612daa3de96ae29275d71074a0
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106351981"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108109008"
 ---
-# <a name="d3dxmatrixperspectiverh-function-d3dx10mathh"></a>D3DXMatrixPerspectiveRH-Funktion (D3DX10Math. h)
+# <a name="d3dxmatrixperspectiverh-function-d3dx10mathh"></a>D3DXMatrixPerspectiveRH-Funktion (D3DX10Math.h)
 
 Erstellt eine rechtshändige perspektivische Projektionsmatrix.
 
@@ -44,48 +44,48 @@ D3DXMATRIX* D3DXMatrixPerspectiveRH(
 
 <dl> <dt>
 
-*Pout* \[ in, out\]
+*pOut* \[ in, out\]
 </dt> <dd>
 
 Typ: **[ **D3DXMATRIX**](../direct3d9/d3dxmatrix.md)\***
 
-Ein Zeiger auf die [**D3DXMATRIX**](d3d10-d3dxmatrix.md) -Struktur, die das Ergebnis des Vorgangs ist.
+Zeiger auf die [**D3DXMATRIX-Struktur,**](d3d10-d3dxmatrix.md) die das Ergebnis des Vorgangs ist.
 
 </dd> <dt>
 
 *w* \[ in\]
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-Breite des Ansichts Volumes auf der Nahsicht Ebene.
+Breite des Ansichtsvolumens auf der Nahansichtsebene.
 
 </dd> <dt>
 
 *h* \[ in\]
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-Höhe des Ansichts Volumes auf der nahen Ansichts Ebene.
-
-</dd> <dt>
-
-*Zn* \[ in\]
-</dt> <dd>
-
-Typ: **[ **float**](../winprog/windows-data-types.md)**
-
-Z-Wert der nahen Ansichts Ebene.
+Höhe des Ansichtsvolumens auf der Nahansichtsebene.
 
 </dd> <dt>
 
-*ZF* \[ in\]
+*zn* \[ In\]
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-Z-Wert der weit entfernten Ansichts Ebene.
+Z-Wert der Nahansichtsebene.
+
+</dd> <dt>
+
+*( )* \[ In\]
+</dt> <dd>
+
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
+
+Z-Wert der fernen Ansichtsebene.
 
 </dd> </dl>
 
@@ -93,13 +93,13 @@ Z-Wert der weit entfernten Ansichts Ebene.
 
 Typ: **[ **D3DXMATRIX**](../direct3d9/d3dxmatrix.md)\***
 
-Zeiger auf eine D3DXMATRIX-Struktur, bei der es sich um eine rechts übergebene Perspektiven Projektions Matrix handelt.
+Zeiger auf eine D3DXMATRIX-Struktur, bei der es sich um eine rechtshändige Perspektivprojektionsmatrix handelt.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Alle Parameter der D3DXMatrixPerspectiveRH-Funktion sind Abstände im Kamerabereich. Die Parameter beschreiben die Dimensionen des Ansichts Volumes.
+Alle Parameter der D3DXMatrixPerspectiveRH-Funktion sind Entfernungen im Kameraraum. Die Parameter beschreiben die Dimensionen des Ansichtsvolumes.
 
-Der Rückgabewert für diese Funktion ist derselbe Wert, der im Pout-Parameter zurückgegeben wird. Auf diese Weise kann die D3DXMatrixPerspectiveRH-Funktion als Parameter für eine andere Funktion verwendet werden.
+Der Rückgabewert für diese Funktion ist der gleiche Wert, der im pOut-Parameter zurückgegeben wird. Auf diese Weise kann die D3DXMatrixPerspectiveRH-Funktion als Parameter für eine andere Funktion verwendet werden.
 
 Diese Funktion verwendet die folgende Formel, um die zurückgegebene Matrix zu berechnen.
 
@@ -117,14 +117,14 @@ Diese Funktion verwendet die folgende Formel, um die zurückgegebene Matrix zu b
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX10Math. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx10. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX10Math.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

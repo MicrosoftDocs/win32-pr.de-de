@@ -1,7 +1,7 @@
 ---
-description: Diese API ist nicht für alle apps verfügbar. Wenn Ihre APP nicht speziell von Microsoft bereitgestellt wird, schlagen Aufrufe dieser APIs zur Laufzeit fehl.
+description: 'IFeedbackHubAppInfo::GetAumidFromAppListEntry-Methode: Diese API ist nicht für alle Apps verfügbar. Sofern Ihre App nicht speziell von Microsoft bereitgestellt wird, schlagen Aufrufe dieser APIs zur Laufzeit fehl.'
 ms.assetid: F205911F-7AA3-464F-A408-3BF549E1112A
-title: 'Ifeedbackhubappinfo:: GetAumidFromAppListEntry-Methode'
+title: IFeedbackHubAppInfo::GetAumidFromAppListEntry-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,16 +12,16 @@ api_name:
 api_type:
 - COM
 api_location: ''
-ms.openlocfilehash: 6e58fcacde643ad7e87ea3d418f21cf4faf57b16
-ms.sourcegitcommit: 7b8f6151ebe247536304866459b2973276271d4d
+ms.openlocfilehash: 2da6b428db156ddf18483951701216942aebbeaf
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "104351938"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108089298"
 ---
-# <a name="ifeedbackhubappinfogetaumidfromapplistentry-method"></a>Ifeedbackhubappinfo:: GetAumidFromAppListEntry-Methode
+# <a name="ifeedbackhubappinfogetaumidfromapplistentry-method"></a>IFeedbackHubAppInfo::GetAumidFromAppListEntry-Methode
 
-Diese API ist nicht für alle apps verfügbar. Wenn Ihre APP nicht speziell von Microsoft bereitgestellt wird, schlagen Aufrufe dieser APIs zur Laufzeit fehl.
+Diese API ist nicht für alle Apps verfügbar. Sofern Ihre App nicht speziell von Microsoft bereitgestellt wird, schlagen Aufrufe dieser APIs zur Laufzeit fehl.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,17 +39,17 @@ virtual void GetAumidFromAppListEntry(
 
 <dl> <dt>
 
-*applistentry* \[ in, optional\]
+*appListEntry* \[ in, optional\]
 </dt> <dd>
 
-Diese API ist nicht für alle apps verfügbar. Wenn Ihre APP nicht speziell von Microsoft bereitgestellt wird, schlagen Aufrufe dieser APIs zur Laufzeit fehl.
+Diese API ist nicht für alle Apps verfügbar. Sofern Ihre App nicht speziell von Microsoft bereitgestellt wird, schlagen Aufrufe dieser APIs zur Laufzeit fehl.
 
 </dd> <dt>
 
-*Wert* \[ Out, optional\]
+*wert* \[ out, optional\]
 </dt> <dd>
 
-Diese API ist nicht für alle apps verfügbar. Wenn Ihre APP nicht speziell von Microsoft bereitgestellt wird, schlagen Aufrufe dieser APIs zur Laufzeit fehl.
+Diese API ist nicht für alle Apps verfügbar. Sofern Ihre App nicht speziell von Microsoft bereitgestellt wird, schlagen Aufrufe dieser APIs zur Laufzeit fehl.
 
 </dd> </dl>
 
@@ -61,18 +61,18 @@ Diese Methode gibt keinen Wert zurück.
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2016 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 10 \[ Desktop-Apps\]<br/>          |
+| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2016-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Ifeedbackhubappinfo**](ifeebackhubappinfo.md)
+[**IFeedbackHubAppInfo**](ifeebackhubappinfo.md)
 </dt> </dl>
 
  

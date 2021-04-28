@@ -1,7 +1,7 @@
 ---
-description: Dekonstruktormethode.
+description: CTransformFilter.~CTransformFilter-Destruktor – Destruktormethode.
 ms.assetid: 17f4dacb-a262-44de-9bef-55da87e07a63
-title: Ctransformfilter. ~ ctransformfilter-debugtor (Transfrm. h)
+title: CTransformFilter.~CTransformFilter-Destruktor (Transfrm.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 529d80ab4453ee2e6b2b09485966e58c4551fc7c
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 0ae8142dd6fccc0acd6d69b524a232bddaf701b6
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106351400"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108085178"
 ---
-# <a name="ctransformfilterctransformfilter-destructor"></a>Ctransformfilter. ~ ctransformfilter-Dekonstruktor
+# <a name="ctransformfilterctransformfilter-destructor"></a>CTransformFilter.~CTransformFilter-Destruktor
 
-Dekonstruktormethode.
+Destruktormethode.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,18 +40,18 @@ Dekonstruktormethode.
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Transfrm. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Transfrm.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Ctransformfilter-Klasse**](ctransformfilter.md)
+[**CTransformFilter-Klasse**](ctransformfilter.md)
 </dt> </dl>
 
  

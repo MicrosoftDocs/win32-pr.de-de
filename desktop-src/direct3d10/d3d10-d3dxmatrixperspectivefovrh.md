@@ -1,7 +1,7 @@
 ---
-description: Erstellt eine rechtshändige perspektivische Projektionsmatrix auf der Grundlage eines Sichtfelds.
+description: 'D3DXMatrixPerspectiveFovRH-Funktion (D3DX10Math.h): Erstellt eine rechtshändige Perspektivprojektionsmatrix basierend auf einem Sichtfeld.'
 ms.assetid: a75e6666-e6c0-4a54-bc88-835fa012542f
-title: D3DXMatrixPerspectiveFovRH-Funktion (D3DX10Math. h)
+title: D3DXMatrixPerspectiveFovRH-Funktion (D3DX10Math.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,14 +14,14 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: baad02b5840af8e244cd562def4aeb8f9ac2988a
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 38d48789bab9b968b6bcf657459c408abdba774b
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103961680"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108109108"
 ---
-# <a name="d3dxmatrixperspectivefovrh-function-d3dx10mathh"></a>D3DXMatrixPerspectiveFovRH-Funktion (D3DX10Math. h)
+# <a name="d3dxmatrixperspectivefovrh-function-d3dx10mathh"></a>D3DXMatrixPerspectiveFovRH-Funktion (D3DX10Math.h)
 
 Erstellt eine rechtshändige perspektivische Projektionsmatrix auf der Grundlage eines Sichtfelds.
 
@@ -44,48 +44,48 @@ D3DXMATRIX* D3DXMatrixPerspectiveFovRH(
 
 <dl> <dt>
 
-*Pout* \[ in, out\]
+*pOut* \[ in, out\]
 </dt> <dd>
 
 Typ: **[ **D3DXMATRIX**](../direct3d9/d3dxmatrix.md)\***
 
-Ein Zeiger auf die [**D3DXMATRIX**](d3d10-d3dxmatrix.md) -Struktur, die das Ergebnis des Vorgangs ist.
+Zeiger auf die [**D3DXMATRIX-Struktur,**](d3d10-d3dxmatrix.md) die das Ergebnis des Vorgangs ist.
 
 </dd> <dt>
 
-*fovy* \[ in\]
+*folow* \[ In\]
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-Feld der Ansicht in y-Richtung im Bogenmaße.
+Sichtfeld in y-Richtung im Bogenmaß.
 
 </dd> <dt>
 
-*Aspekt* \[ in\]
+*Aspect* \[ In\]
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-Seitenverhältnis, definiert als Breite des Ansichts Raums dividiert durch Höhe.
+Seitenverhältnis, definiert als Ansichtsraumbreite dividiert durch Höhe.
 
 </dd> <dt>
 
-*Zn* \[ in\]
+*zn* \[ In\]
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-Z-Wert der nahen Ansichts Ebene.
+Z-Wert der Nahansichtsebene.
 
 </dd> <dt>
 
-*ZF* \[ in\]
+*( )* \[ In\]
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-Z-Wert der weit entfernten Ansichts Ebene.
+Z-Wert der fernen Ansichtsebene.
 
 </dd> </dl>
 
@@ -93,11 +93,11 @@ Z-Wert der weit entfernten Ansichts Ebene.
 
 Typ: **[ **D3DXMATRIX**](../direct3d9/d3dxmatrix.md)\***
 
-Zeiger auf eine D3DXMATRIX-Struktur, bei der es sich um eine rechts übergebene Perspektiven Projektions Matrix handelt.
+Zeiger auf eine D3DXMATRIX-Struktur, bei der es sich um eine rechtshändige Perspektivprojektionsmatrix handelt.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Der Rückgabewert für diese Funktion ist derselbe Wert, der im Pout-Parameter zurückgegeben wird. Auf diese Weise kann die D3DXMatrixPerspectiveFovRH-Funktion als Parameter für eine andere Funktion verwendet werden.
+Der Rückgabewert für diese Funktion ist der gleiche Wert, der im pOut-Parameter zurückgegeben wird. Auf diese Weise kann die D3DXMatrixPerspectiveFovRH-Funktion als Parameter für eine andere Funktion verwendet werden.
 
 Diese Funktion berechnet die zurückgegebene Matrix wie gezeigt.
 
@@ -119,14 +119,14 @@ xScale = yScale / aspect ratio
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX10Math. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx10. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX10Math.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

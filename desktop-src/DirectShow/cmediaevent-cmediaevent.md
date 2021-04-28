@@ -1,7 +1,7 @@
 ---
-description: Konstruktormethode.
+description: 'CMediaEvent.CMediaEvent-Konstruktor : Konstruktormethode.'
 ms.assetid: 7f7a0a9f-e531-4e22-8601-b84ab088e9e7
-title: Cmediaevent. cmediaevent-Konstruktor (ctlutil. h)
+title: CMediaEvent.CMediaEvent-Konstruktor (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,14 +16,14 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 77b87fa589728592874b0dea96f7b6efca501471
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 36cd82b086241012542701001c4de1fe16ac2d8e
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106354168"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108095558"
 ---
-# <a name="cmediaeventcmediaevent-constructor"></a>Cmediaevent. cmediaevent-Konstruktor
+# <a name="cmediaeventcmediaevent-constructor"></a>CMediaEvent.CMediaEvent-Konstruktor
 
 Konstruktormethode.
 
@@ -46,11 +46,11 @@ CMediaEvent(
 *pName* 
 </dt> <dd>
 
-Zeiger auf den Namen des Objekts zu Debuggingzwecken.
+Zeiger auf den Namen des Objekts zu Debugzwecken.
 
 </dd> <dt>
 
-*Kro* 
+*Punk* 
 </dt> <dd>
 
 Zeiger auf den Besitzer dieses Objekts.
@@ -59,24 +59,24 @@ Zeiger auf den Besitzer dieses Objekts.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Weisen Sie den *PName* -Parameter im statischen Arbeitsspeicher zu. Dieser Name wird beim Erstellen und Löschen des Objekts im Terminal Debuggen angezeigt.
+Ordnen Sie den *pName-Parameter* im statischen Speicher zu. Dieser Name wird beim Erstellen und Löschen des Objekts im Debugterminal angezeigt.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (einschließlich Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cmediaevent-Klasse**](cmediaevent.md)
+[**CMediaEvent-Klasse**](cmediaevent.md)
 </dt> </dl>
 
  

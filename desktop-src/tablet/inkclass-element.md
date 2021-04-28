@@ -1,19 +1,19 @@
 ---
-description: Stellt die gesammelten Hand Striche innerhalb eines frei Hand Raums dar.
+description: 'InkClass-Element: Stellt die gesammelten Freihandstriche innerhalb eines Freihandraums dar.'
 ms.assetid: 7c064ff9-e0d9-4be4-be83-c10bbfd71134
-title: Inkclass-Element
+title: InkClass-Element
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4ffd2e720483bf7153b59e5876cf2f3d0e2aad6a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 78faa7a0d331ba6e904154891d7f53d8a143115d
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104525958"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108110338"
 ---
-# <a name="inkclass-element"></a>Inkclass-Element
+# <a name="inkclass-element"></a>InkClass-Element
 
-Stellt die gesammelten Hand Striche innerhalb eines frei Hand Raums dar.
+Stellt die gesammelten Freihandstriche innerhalb eines Freihandraums dar.
 
 ## <a name="definition"></a>Definition
 
@@ -40,8 +40,8 @@ Keine
 |              |                                            |
 |--------------|--------------------------------------------|
 | Elementtyp | **xs:string**                              |
-| Namespace    | urn: Schemas-Microsoft-com: TabletPC: RichInk |
-| Schemaname  | Journal Leser                             |
+| Namespace    | urn:schemas-microsoft-com:tabletpc:richink |
+| Schemaname  | Journalreader                             |
 
 
 

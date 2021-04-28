@@ -1,10 +1,10 @@
 ---
-title: TM_PROPS-Enumeration
-description: Wird derzeit nicht unterstützt.
+title: TM_PROPS Enumeration
+description: 'TM_PROPS Enumeration: Derzeit nicht unterstützt.'
 ms.assetid: 34b9e158-1d40-4d70-8b83-c13ac16fb7d2
 keywords:
-- TM_PROPS enumerationswindows-Steuerelemente
-- BP_ANIMATIONSTYLE enumerationswindows-Steuerelemente
+- TM_PROPS enumeration Windows-Steuerelemente
+- BP_ANIMATIONSTYLE enumeration Windows-Steuerelemente
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,20 +12,20 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: faf1277c08133f316a62f5d5b022cf1bcebe91c0
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 0d487e700e8cd3a03efdc78108e4b107084402f7
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "103718011"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108096808"
 ---
-# <a name="tm_props-enumeration"></a>TM-Eigenschaften \_ Enumeration
+# <a name="tm_props-enumeration"></a>TM \_ PROPS-Enumeration
 
 Diese Enumeration wird nicht unterstützt.
 
- 
+ 
 
- 
+ 
 
 
 

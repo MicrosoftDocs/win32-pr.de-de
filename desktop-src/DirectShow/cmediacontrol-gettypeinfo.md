@@ -1,7 +1,7 @@
 ---
-description: Ruft ein Type-Information-Objekt ab, das die Typinformationen für eine Schnittstelle abrufen kann.
+description: 'CMediaControl.GetTypeInfo-Methode: Ruft ein Typinformationsobjekt ab, das die Typinformationen für eine Schnittstelle abrufen kann.'
 ms.assetid: 2014485f-d937-415d-a2fc-0c69269b5237
-title: Cmediacontrol. gettypeingefo-Methode (ctlutil. h)
+title: CMediaControl.GetTypeInfo-Methode (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: fe393922206744c23b534bf8d701d6292736c65a
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 857dbdeee9a2add9ab77cae0ff97d69699d2dd2e
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358095"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108099128"
 ---
-# <a name="cmediacontrolgettypeinfo-method"></a>Cmediacontrol. gettypan FO-Methode
+# <a name="cmediacontrolgettypeinfo-method"></a>CMediaControl.GetTypeInfo-Methode
 
-Ruft ein Type-Information-Objekt ab, das die Typinformationen für eine Schnittstelle abrufen kann.
+Ruft ein Typinformationsobjekt ab, das die Typinformationen für eine Schnittstelle abrufen kann.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,44 +47,44 @@ HRESULT GetTypeInfo(
 *itinfo* 
 </dt> <dd>
 
-Typinformationen, die zurückgegeben werden. Übergeben Sie NULL, um Typinformationen für die **IDispatch** -Implementierung abzurufen.
+Geben Sie informationen ein, die sie zurückgeben. Übergeben Sie 0 (null), um Typinformationen für die **IDispatch-Implementierung** abzurufen.
 
 </dd> <dt>
 
 *lcid* 
 </dt> <dd>
 
-Die Gebiets Schema-ID für die Typinformationen. Bei Klassen, die lokalisierte Elementnamen unterstützen, kann ein Objekt möglicherweise unterschiedliche Typinformationen für verschiedene Sprachen zurückgeben. Für Klassen, die keine lokalisierten Elementnamen unterstützen, kann dieser Parameter ignoriert werden.
+Die Locale ID für die Typinformationen. Für Klassen, die lokalisierte Membernamen unterstützen, kann ein Objekt möglicherweise unterschiedliche Typinformationen für verschiedene Sprachen zurückgeben. Für Klassen, die lokalisierte Membernamen nicht unterstützen, kann dieser Parameter ignoriert werden.
 
 </dd> <dt>
 
 *pptinfo* 
 </dt> <dd>
 
-Adresse eines Zeigers auf das angeforderte Type-Information-Objekt.
+Adresse eines Zeigers auf das angeforderte Typinformationsobjekt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen E-Zeiger zurück, \_ Wenn *pptinfo* ungültig ist. Gibt den Typ \_ E \_ elementnotfound zurück, wenn *itinfo* nicht 0 (null) ist. Gibt S \_ OK zurück, wenn erfolgreich ist. Andernfalls wird ein **HRESULT** von einem der Aufrufe zurückgegeben, um den Typ abzurufen.
+Gibt einen \_ E-ZEIGER zurück, *wenn pptinfo* ungültig ist. Gibt TYPE \_ E \_ ELEMENTNOTFOUND zurück, *wenn itinfo* nicht 0 (null) ist. Gibt S \_ OK zurück, wenn erfolgreich ist. Andernfalls gibt ein **HRESULT aus** einem der Aufrufe zurück, um den Typ abzurufen.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (einschließlich Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cmediacontrol-Klasse**](cmediacontrol.md)
+[**CMediaControl-Klasse**](cmediacontrol.md)
 </dt> </dl>
 
  

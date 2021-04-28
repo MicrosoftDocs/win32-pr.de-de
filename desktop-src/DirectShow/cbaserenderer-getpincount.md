@@ -1,7 +1,7 @@
 ---
-description: Die getpincount-Methode ruft die Anzahl der Pins ab.
+description: 'CBaseRenderer.GetPinCount-Methode: Die GetPinCount-Methode ruft die Anzahl der Pins ab.'
 ms.assetid: 518de15d-2ecf-425e-b4cd-14aaaf938417
-title: Cbaserderderer. getpincount-Methode (renbase. h)
+title: CBaseRenderer.GetPinCount-Methode (Renbase.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 71b3703389019e2217a595884ac983e90835cdac
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 569a8dd4352edb0c4660fecd3e77fdfaec0ec4c4
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106373646"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108095888"
 ---
-# <a name="cbaserenderergetpincount-method"></a>Cbaserderderer. getpincount-Methode
+# <a name="cbaserenderergetpincount-method"></a>CBaseRenderer.GetPinCount-Methode
 
-Die- `GetPinCount` Methode ruft die Anzahl der Pins ab.
+Die `GetPinCount` -Methode ruft die Anzahl der Pins ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,24 +46,24 @@ Gibt 1 zurück.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Diese Methode implementiert die [**cbasefilter:: getpincount**](cbasefilter-getpincount.md) -Methode, die rein virtuell in der **cbasefilter** -Klasse ist.
+Diese Methode implementiert die [**CBaseFilter::GetPinCount-Methode,**](cbasefilter-getpincount.md) die in der **CBaseFilter-Klasse** rein virtuell ist.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Renbase. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Renbase.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbaserderderer-Klasse**](cbaserenderer.md)
+[**CBaseRenderer-Klasse**](cbaserenderer.md)
 </dt> </dl>
 
  

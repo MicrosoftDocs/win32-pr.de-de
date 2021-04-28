@@ -1,7 +1,7 @@
 ---
-description: 'Die getallocator-Methode ruft die von dieser Pin vorgeschlagene Speicherzuweisung ab. Diese Methode implementiert die IMemInputPin:: getallocator-Methode.'
+description: 'CBaseInputPin.GetAllocator-Methode: Die GetAllocator-Methode ruft die von dieser Stecknadel vorgeschlagene Speicherzuweisung ab. Diese Methode implementiert die IMemInputPin::GetAllocator-Methode.'
 ms.assetid: 07bc77f8-a877-4403-b424-20bda715a818
-title: Cbasinput PIN. getallocator-Methode (amfilter. h)
+title: CBaseInputPin.GetAllocator-Methode (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 098738fc63ba1834b1eefb4b2518e3309db35c43
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 72aaf6bb4c1ff8bf108086a8a42a618267c4bc06
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106368336"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108099709"
 ---
-# <a name="cbaseinputpingetallocator-method"></a>Cbasinput PIN. getallocator-Methode
+# <a name="cbaseinputpingetallocator-method"></a>CBaseInputPin.GetAllocator-Methode
 
-Die- `GetAllocator` Methode ruft die von dieser Pin vorgeschlagene Speicherzuweisung ab. Diese Methode implementiert die [**IMemInputPin:: getallocator**](/windows/desktop/api/Strmif/nf-strmif-imeminputpin-getallocator) -Methode.
+Die `GetAllocator` -Methode ruft die von dieser Stecknadel vorgeschlagene Speicherbelegung ab. Diese Methode implementiert die [**IMemInputPin::GetAllocator-Methode.**](/windows/desktop/api/Strmif/nf-strmif-imeminputpin-getallocator)
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,39 +42,39 @@ HRESULT GetAllocator(
 
 <dl> <dt>
 
-*ppzuzuweisung* 
+*ppAllocator* 
 </dt> <dd>
 
-Adresse einer Variablen, die einen Zeiger auf die [**imemfercator**](/windows/desktop/api/Strmif/nn-strmif-imemallocator) -Schnittstelle des Zuordners empfängt.
+Adresse einer Variablen, die einen Zeiger auf die [**IMemAllocator-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-imemallocator) der Zuweisung empfängt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt " \_ OK" zurück, wenn erfolgreich, oder einen Fehlercode aus der **cokreateinzustance** -Funktion.
+Gibt bei Erfolg S \_ OK oder einen Fehlercode aus der **CoCreateInstance-Funktion** zurück.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Diese Methode erstellt ein [**cmemzuordcator**](cmemallocator.md) -Objekt. Überschreiben Sie diese Methode, wenn der Filter eine Zuweisung aus einer downstreampin oder eine benutzerdefinierte Zuweisung verwendet.
+Diese Methode erstellt ein [**CMemAllocator-Objekt.**](cmemallocator.md) Überschreiben Sie diese Methode, wenn Ihr Filter eine Zuweisung aus einem Downstreampin oder eine benutzerdefinierte Zuweisung verwendet.
 
-Wenn die Methode erfolgreich ausgeführt wird, hat die **imemzuordcator** -Schnittstelle einen ausstehenden Verweis Zähler. Stellen Sie sicher, dass Sie Sie freigeben, wenn Sie dies erledigt haben.
+Wenn die Methode erfolgreich ist, verfügt die **IMemAllocator-Schnittstelle** über einen ausstehenden Verweiszähler. Stellen Sie sicher, dass Sie es freigeben, wenn Sie fertig sind.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (streams.h einschließen)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbaseingeputpin-Klasse**](cbaseinputpin.md)
+[**CBaseInputPin-Klasse**](cbaseinputpin.md)
 </dt> </dl>
 
  

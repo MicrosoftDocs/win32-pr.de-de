@@ -1,7 +1,7 @@
 ---
-description: Die m \_ pFilter-Member-Variable ist ein Zeiger auf den besitzenden Filter.
+description: 'CImagePalette::m_pFilter Member: Die m \_ pFilter-Membervariable ist ein Zeiger auf den besitzenden Filter.'
 ms.assetid: f1a75a75-5f5c-420d-a7ab-5f0f03c6afb1
-title: 'Cimagepalette:: m_pFilter Member (winutil. h)'
+title: CImagePalette::m_pFilter-Member (Winutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 80609ec003580ac54ef7685edaa6ea6520a17f5d
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 883fa5bc1aeac57bfa861385cb2d10c563341d52
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106360301"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108099198"
 ---
-# <a name="cimagepalettem_pfilter-member"></a>Cimagepalette:: m \_ pFilter-Member
+# <a name="cimagepalettem_pfilter-member"></a>CImagePalette::m \_ pFilter-Member
 
-Die `m_pFilter` Member-Variable ist ein Zeiger auf den besitzenden Filter.
+Die `m_pFilter` Membervariable ist ein Zeiger auf den besitzenden Filter.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,18 +40,18 @@ CBaseFilter *m_pFilter;
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Winutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Winutil.h (einschließlich Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cimagepalette-Klasse**](cimagepalette.md)
+[**CImagePalette-Klasse**](cimagepalette.md)
 </dt> </dl>
 
  

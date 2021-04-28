@@ -1,7 +1,7 @@
 ---
-description: 'Die converttimeformat-Methode konvertiert von einem Zeitformat in ein anderes. Diese Methode implementiert die imediaseeking:: converttimeformat-Methode.'
+description: 'CPosPassThru.ConvertTimeFormat-Methode: Die ConvertTimeFormat-Methode konvertiert von einem Zeitformat in ein anderes. Diese Methode implementiert die IMediaSeeking::ConvertTimeFormat-Methode.'
 ms.assetid: e766d112-ee41-4c64-a735-b6317093518a
-title: Cpospassthru. converttimeformat-Methode (ctlutil. h)
+title: CPosPassThru.ConvertTimeFormat-Methode (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: bcce3e24c46e3e59c6bad6b4fbd60b139806de73
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: fc463cb6dc891e677266289971a1dac8b335a8c7
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367663"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108098958"
 ---
-# <a name="cpospassthruconverttimeformat-method"></a>Cpospassthru. converttimeformat-Methode
+# <a name="cpospassthruconverttimeformat-method"></a>CPosPassThru.ConvertTimeFormat-Methode
 
-Die- `ConvertTimeFormat` Methode konvertiert von einem Zeitformat in ein anderes. Diese Methode implementiert die [**imediaseeking:: converttimeformat**](/windows/desktop/api/Strmif/nf-strmif-imediaseeking-converttimeformat) -Methode.
+Die `ConvertTimeFormat` -Methode konvertiert von einem Zeitformat in ein anderes. Diese Methode implementiert die [**IMediaSeeking::ConvertTimeFormat-Methode.**](/windows/desktop/api/Strmif/nf-strmif-imediaseeking-converttimeformat)
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,57 +45,57 @@ HRESULT ConvertTimeFormat(
 
 <dl> <dt>
 
-*pTARGET* 
+*pTarget* 
 </dt> <dd>
 
-Ein Zeiger auf eine Variable, die die konvertierte Zeit empfängt.
+Zeiger auf eine Variable, die die konvertierte Zeit empfängt.
 
 </dd> <dt>
 
-*ptargetformat* 
+*pTargetFormat* 
 </dt> <dd>
 
-Ein Zeiger auf die Zeitformat-GUID des Ziel Formats. Wenn der Wert **null** ist, wird das aktuelle Format verwendet.
+Zeiger auf die GUID des Zeitformats des Zielformats. Bei **NULL** wird das aktuelle Format verwendet.
 
 </dd> <dt>
 
 *Quelle* 
 </dt> <dd>
 
-Zeitwert, der konvertiert werden soll.
+Der zu konvertierende Zeitwert.
 
 </dd> <dt>
 
-*psourceformat* 
+*pSourceFormat* 
 </dt> <dd>
 
-Ein Zeiger auf die Zeitformat-GUID des zu konvertierenden Formats. Wenn der Wert **null** ist, wird das aktuelle Format verwendet.
+Zeiger auf die Guid des Zeitformats des zu konvertierende Formats. Bei **NULL** wird das aktuelle Format verwendet.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt den **HRESULT** -Wert aus der verbundenen PIN zurück.
+Gibt den **HRESULT-Wert** aus dem verbundenen Pin zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cpospassthru-Klasse**](cpospassthru.md)
+[**CPosPassThru-Klasse**](cpospassthru.md)
 </dt> <dt>
 
-[**Zeit Format-GUIDs**](time-format-guids.md)
+[**Zeitformat-GUIDs**](time-format-guids.md)
 </dt> </dl>
 
  

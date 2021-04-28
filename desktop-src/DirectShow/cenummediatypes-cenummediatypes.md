@@ -1,7 +1,7 @@
 ---
-description: Konstruktormethode.
+description: CEnumMediaTypes.CEnumMediaTypes-Konstruktor – Konstruktormethode.
 ms.assetid: fae2e05c-3f7b-4511-9b9d-5a37ea03f851
-title: Cenenmediatypes. cenenmediatypes-Konstruktor (amfilter. h)
+title: CEnumMediaTypes.CEnumMediaTypes-Konstruktor (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,14 +16,14 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 3e17357d90c57f1a7d489d07fa56206343f50788
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 2d243ed25cc48c5d30d467f97e2ec20e1f0f2b58
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106355956"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108095678"
 ---
-# <a name="cenummediatypescenummediatypes-constructor"></a>Cenenmediatypes. cenenmediatypes-Konstruktor
+# <a name="cenummediatypescenummediatypes-constructor"></a>CEnumMediaTypes.CEnumMediaTypes-Konstruktor
 
 Konstruktormethode.
 
@@ -43,40 +43,40 @@ CEnumMediaTypes(
 
 <dl> <dt>
 
-*ppin* 
+*pPin* 
 </dt> <dd>
 
-Ein Zeiger auf die PIN, auf der die Enumeration ausgeführt werden soll.
+Zeiger auf den Stecknadel, an dem die Enumeration ausgeführt werden soll.
 
 </dd> <dt>
 
-*Datentypen* 
+*pEnumMediaTypes* 
 </dt> <dd>
 
-Ein Zeiger auf die [**ienummediatypes**](/windows/desktop/api/Strmif/nn-strmif-ienummediatypes) -Schnittstelle eines Enumerators, der geklont werden soll, oder **null**.
+Zeiger auf die [**IEnumMediaTypes-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-ienummediatypes) eines zu klonenden Enumerators oder **NULL.**
 
 </dd> </dl>
 
 ## <a name="remarks"></a>Bemerkungen
 
-Wenn " *pummediatypes* " **null** ist, initialisiert diese Methode den Enumerator bis zum Anfang der enumerationssequenz. Andernfalls dupliziert Sie den internen Zustand des Enumerators, der durch " *pummediatypes*" angegeben wird.
+Wenn *pEnumMediaTypes* **NULL** ist, initialisiert diese Methode den Enumerator am Anfang der Enumerationssequenz. Andernfalls wird der interne Zustand des durch *pEnumMediaTypes* angegebenen Enumerators dupliziert.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (streams.h einschließen)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cenum mediatypes-Klasse**](cenummediatypes.md)
+[**CEnumMediaTypes-Klasse**](cenummediatypes.md)
 </dt> </dl>
 
  

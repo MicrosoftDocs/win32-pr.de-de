@@ -1,7 +1,7 @@
 ---
-description: Konstruktormethode.
+description: 'CBaseObject.CBaseObject-Konstruktor : Konstruktormethode.'
 ms.assetid: 20c3c4af-b22f-4b74-a6b6-5ee309de4eef
-title: Cbaseobject. cbaseobject-Konstruktor (ComBase. h)
+title: CBaseObject.CBaseObject-Konstruktor (Combase.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,14 +16,14 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 4b13fe906af1900dbf067e8aa9273d811b3c1ef3
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 14fa2d3d38d42fa0feb387b477205cc51e0b6b87
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369552"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108099618"
 ---
-# <a name="cbaseobjectcbaseobject-constructor"></a>Cbaseobject. cbaseobject-Konstruktor
+# <a name="cbaseobjectcbaseobject-constructor"></a>CBaseObject.CBaseObject-Konstruktor
 
 Konstruktormethode.
 
@@ -45,15 +45,15 @@ CBaseObject(
 *pName* 
 </dt> <dd>
 
-Eine Zeichenfolge, die den Namen des Objekts zu Debuggingzwecken enthält.
+Zeichenfolge, die den Namen des Objekts zu Debugzwecken enthält.
 
 </dd> </dl>
 
 ## <a name="remarks"></a>Bemerkungen
 
-Diese Methode erhöht die Anzahl von aktiven Objekten. (Siehe [**cbaseobject:: objeczactive**](cbaseobject-objectsactive.md).)
+Diese Methode erhöht die Anzahl der aktiven Objekte. (Siehe [**CBaseObject::ObjectsActive**](cbaseobject-objectsactive.md).)
 
-Weisen Sie den *PName* -Parameter im statischen Arbeitsspeicher zu:
+Ordnen Sie den *pName-Parameter* im statischen Speicher zu:
 
 
 ```C++
@@ -67,24 +67,24 @@ CBaseObject *pObject = new CObject(ObjectName);
 
 
 
-Das [**Name**](name.md) -Makro wird in Einzelhandels Builds in **null** kompiliert, sodass statische Zeichen folgen nur in Debugbuilds angezeigt werden. Weitere Informationen finden Sie unter [**dbgdumpobjectregiester**](dbgdumpobjectregister.md).
+Das [**NAME-Makro**](name.md) wird in Verkaufsbuilds zu **NULL** kompiliert, sodass statische Zeichenfolgen nur in Debugbuilds angezeigt werden. Weitere Informationen finden Sie unter [**DbgDumpObjectRegister**](dbgdumpobjectregister.md).
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>ComBase. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Combase.h (einschließlich Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbaseobject-Klasse**](cbaseobject.md)
+[**CBaseObject-Klasse**](cbaseobject.md)
 </dt> </dl>
 
  

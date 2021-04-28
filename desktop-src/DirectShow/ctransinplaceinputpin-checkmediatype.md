@@ -1,7 +1,7 @@
 ---
-description: Die checkmediatype-Methode bestimmt, ob die PIN einen bestimmten Medientyp akzeptiert.
+description: 'CTransInPlaceInputPin.CheckMediaType-Methode: Die CheckMediaType-Methode bestimmt, ob der Pin einen bestimmten Medientyp akzeptiert.'
 ms.assetid: 2d5f784a-8970-487d-94ef-d96d04f8eb2e
-title: Ctransinplaceinputpin. checkmediatype-Methode (transip. h)
+title: CTransInPlaceInputPin.CheckMediaType-Methode (Transip.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 22f271759bc0ade6b820aed2039bbc16a2cf4a31
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 5de3cec87d740db42824b0d7abf1ee4bfc6aeecb
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106354085"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108094798"
 ---
-# <a name="ctransinplaceinputpincheckmediatype-method"></a>Ctransinplaceinputpin. checkmediatype-Methode
+# <a name="ctransinplaceinputpincheckmediatype-method"></a>CTransInPlaceInputPin.CheckMediaType-Methode
 
-Die- `CheckMediaType` Methode bestimmt, ob die PIN einen bestimmten Medientyp akzeptiert.
+Die `CheckMediaType` -Methode bestimmt, ob der Pin einen bestimmten Medientyp akzeptiert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,37 +42,37 @@ HRESULT CheckMediaType(
 
 <dl> <dt>
 
-*PMT* 
+*Pmt* 
 </dt> <dd>
 
-Zeiger auf ein [**cmediatype**](cmediatype.md) -Objekt, das den vorgeschlagenen Medientyp enthält.
+Zeiger auf ein [**CMediaType-Objekt,**](cmediatype.md) das den vorgeschlagenen Medientyp enthält.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt S \_ OK zurück, wenn der vorgeschlagene Medientyp zulässig ist. Andernfalls gibt S \_ false oder einen Fehlercode zurück.
+Gibt S \_ OK zurück, wenn der vorgeschlagene Medientyp akzeptabel ist. Andernfalls wird S \_ FALSE oder ein Fehlercode zurückgegeben.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Diese Methode überschreibt die [**ctransforminputpin:: checkmediatype**](ctransforminputpin-checkmediatype.md) -Methode. Die [**ctransformfilter:: checkinputtype**](ctransformfilter-checkinputtype.md) -Methode des Filters wird aufgerufen, um den Eingabetyp zu überprüfen. Wenn die Ausgabe-PIN verbunden ist, ruft diese Methode auch die [**IPin:: queryaccept**](/windows/desktop/api/Strmif/nf-strmif-ipin-queryaccept) -Methode für die downstreameingabepin auf.
+Diese Methode überschreibt die [**CTransformInputPin::CheckMediaType-Methode.**](ctransforminputpin-checkmediatype.md) Sie ruft die [**CTransformFilter::CheckInputType-Methode**](ctransformfilter-checkinputtype.md) des Filters auf, um den Eingabetyp zu überprüfen. Wenn der Ausgabepin verbunden ist, ruft diese Methode auch die [**IPin::QueryAccept-Methode**](/windows/desktop/api/Strmif/nf-strmif-ipin-queryaccept) auf dem Downstreameingabepin auf.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Transip. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Transip.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Ctransinplaceinputpin-Klasse**](ctransinplaceinputpin.md)
+[**CTransInPlaceInputPin-Klasse**](ctransinplaceinputpin.md)
 </dt> </dl>
 
  

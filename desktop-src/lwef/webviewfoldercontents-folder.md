@@ -1,11 +1,11 @@
 ---
 title: WebViewFolderContents.Folder-Eigenschaft (Shldisp.h)
-description: Ruft ein Ordner Objekt ab, das die Ansicht darstellt.
+description: 'WebViewFolderContents.Folder-Eigenschaft: Ruft ein Folder-Objekt ab, das die Ansicht darstellt.'
 ms.assetid: 1d81c27a-1e48-4c0a-b74d-c63af43a909d
 keywords:
-- Ordner Eigenschaft Legacy-Windows-Umgebungs Features
-- Ordner Eigenschaft Legacy Windows-Umgebungs Funktionen, webviewfoldercontents-Objekt
-- Webviewfoldercontents-Objekt Legacy-Windows-Umgebungs Features, Ordner Eigenschaft
+- Ordnereigenschaft Legacy-Windows-Umgebungsfeatures
+- Ordnereigenschaft Legacy-Windows-Umgebungsfeatures , WebViewFolderContents-Objekt
+- WebViewFolderContents-Objekt Legacy-Windows-Umgebungsfeatures , Folder-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4c0640d4e29b903b32a6c9ed1e0b1de9f458b132
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: e88fd7a54971fa088bdddbc78d3d8df4af610875
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104475423"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108102698"
 ---
-# <a name="webviewfoldercontentsfolder-property"></a>Webviewfoldercontents. Folder-Eigenschaft
+# <a name="webviewfoldercontentsfolder-property"></a>WebViewFolderContents.Folder-Eigenschaft
 
-Ruft ein [**Ordner**](../shell/folder.md) Objekt ab, das die Ansicht darstellt.
+Ruft ein [**Folder-Objekt**](../shell/folder.md) ab, das die Sicht darstellt.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -40,11 +40,11 @@ Folder = WebViewFolderContents.Folder
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Ein Objekt, das das [**Ordner**](../shell/folder.md) Objekt empfängt.
+Ein -Objekt, das das [**Folder-Objekt**](../shell/folder.md) empfängt.
 
 ## <a name="examples"></a>Beispiele
 
-Das folgende Beispiel zeigt die ordnungsgemäße Verwendung dieser Eigenschaft in JScript Embedded in HTML.
+Das folgende Beispiel zeigt die ordnungsgemäße Verwendung dieser Eigenschaft in JScript, eingebettet in HTML.
 
 
 ```HTML
@@ -82,13 +82,13 @@ Das folgende Beispiel zeigt die ordnungsgemäße Verwendung dieser Eigenschaft i
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, Windows XP \[ Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, nur Windows \[ XP-Desktop-Apps\]<br/>                                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                           |
-| Header<br/>                   | <dl> <dt>Shldisp. h</dt> </dl>                           |
-| IDL<br/>                      | <dl> <dt>Shldisp. idl</dt> </dl>                         |
-| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4,71 oder höher)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>                           |
+| Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                         |
+| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4.71 oder höher)</dt> </dl> |
 
 
 

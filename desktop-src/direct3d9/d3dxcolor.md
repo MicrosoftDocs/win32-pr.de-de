@@ -1,7 +1,7 @@
 ---
-description: Beschreibt Farbwerte.
+description: 'D3DXCOLOR-Struktur (D3dx9math.h): Beschreibt Farbwerte.'
 ms.assetid: 53d3176a-f727-498e-8bea-0e30e0a1c66e
-title: D3DXCOLOR-Struktur (D3dx9math. h)
+title: D3DXCOLOR-Struktur (D3dx9math.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,14 +13,14 @@ api_type:
 - HeaderDef
 api_location:
 - d3dx9math.h
-ms.openlocfilehash: c7e5c1ac12341ccf6272714511959ee9a131ba4a
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 58b02abc49b695169674a2579b73dc2359801a73
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106350693"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108115928"
 ---
-# <a name="d3dxcolor-structure-d3dx9mathh"></a>D3DXCOLOR-Struktur (D3dx9math. h)
+# <a name="d3dxcolor-structure-d3dx9mathh"></a>D3DXCOLOR-Struktur (D3dx9math.h)
 
 Beschreibt Farbwerte.
 
@@ -45,7 +45,7 @@ typedef struct D3DXCOLOR {
 **r**
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
@@ -56,7 +56,7 @@ Rote Komponente der Farbe.
 **g**
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
@@ -67,7 +67,7 @@ Grüne Komponente der Farbe.
 **b**
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
@@ -75,32 +75,32 @@ Blaue Komponente der Farbe.
 
 </dd> <dt>
 
-**ein**
+**Eine**
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Alpha Komponente der Farbe.
+Alphakomponente der Farbe.
 
 </dd> </dl>
 
 ## <a name="remarks"></a>Bemerkungen
 
-C++-Programmierer können das Überladen von Operatoren und die Typumwandlung mit den [**D3DXCOLOR-Erweiterungen**](d3dxcolor-extensions.md)nutzen, die überladene Konstruktoren implementieren, sowie Zuweisungs-, unäre und binäre (einschließlich Gleichheits-) Operatoren.
+C++-Programmierer können die Operatorüberladung und Typcasting mit den [**D3DXCOLOR-Erweiterungen**](d3dxcolor-extensions.md)nutzen, die überladene Konstruktoren sowie Zuweisungs-, unäre und binäre Operatoren (einschließlich Gleichheit) implementieren.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------|----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3dx9math. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3dx9math.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

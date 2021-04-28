@@ -1,7 +1,7 @@
 ---
-description: Bestimmt das Produkt der berechneten Übersetzungs Matrix, die durch die angegebenen Faktoren (x, y und z) und die aktuelle Matrix bestimmt wird.
+description: 'ID3DXMATRIXStack::TranslateLocal-Methode (D3DX10.h): Bestimmt das Produkt der berechneten Übersetzungsmatrix, die durch die angegebenen Faktoren (x, y und z) und die aktuelle Matrix bestimmt wird.'
 ms.assetid: 96399801-dd80-4e9a-a5c3-c5d41eb9368a
-title: 'ID3DXMATRIXStack:: translatelocal-Methode (d3dx10. h)'
+title: ID3DXMATRIXStack::TranslateLocal-Methode (D3DX10.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: 65a627141f552107d88c3f43988daa0d316a0bef
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 80fabea58bd30b0db9b3ff41b522614007fe4b7d
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106367400"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108107748"
 ---
-# <a name="id3dxmatrixstacktranslatelocal-method-d3dx10h"></a>ID3DXMATRIXStack:: translatelocal-Methode (d3dx10. h)
+# <a name="id3dxmatrixstacktranslatelocal-method-d3dx10h"></a>ID3DXMATRIXStack::TranslateLocal-Methode (D3DX10.h)
 
-Bestimmt das Produkt der berechneten Übersetzungs Matrix, die durch die angegebenen Faktoren (x, y und z) und die aktuelle Matrix bestimmt wird.
+Bestimmt das Produkt der berechneten Übersetzungsmatrix, die durch die angegebenen Faktoren (x, y und z) und die aktuelle Matrix bestimmt wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,27 +45,27 @@ HRESULT TranslateLocal(
 *x* \[ in\]
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-Der Übersetzungs Faktor in der x-Richtung.
+Der Übersetzungsfaktor in x-Richtung.
 
 </dd> <dt>
 
-*j* \[ in\]
+*y* \[ in\]
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-Der Übersetzungs Faktor in y-Richtung.
+Der Übersetzungsfaktor in der y-Richtung.
 
 </dd> <dt>
 
 *z* \[ in\]
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-Der Übersetzungs Faktor in der z-Richtung.
+Der Übersetzungsfaktor in der Z-Richtung.
 
 </dd> </dl>
 
@@ -73,11 +73,11 @@ Der Übersetzungs Faktor in der z-Richtung.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK.
+Wenn die Methode erfolgreich ist, ist der Rückgabewert D3D \_ OK.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Mit dieser Methode wird die aktuelle Matrix mit der berechneten Übersetzungs Matrix Links multipliziert (die Transformation ist der lokale Ursprung des Objekts).
+Diese Methode multipliziert die aktuelle Matrix mit der berechneten Übersetzungsmatrix (die Transformation bezieht sich auf den lokalen Ursprung des Objekts).
 
 
 ```
@@ -92,14 +92,14 @@ m_stack[m_currentPos] = tmp * m_stack[m_currentPos];
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx10. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>D3dx10. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>D3DX10.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
