@@ -1,7 +1,7 @@
 ---
-description: Dekonstruktormethode.
+description: CGenericList.~CGenericList-Destruktor – Destruktormethode.
 ms.assetid: a5594dd2-b29b-49d6-b4de-5074ba3d0ce3
-title: Cgenericlist. ~ cgenericlist-Debuggen (wxlist. h)
+title: CGenericList.~CGenericList-Destruktor (Wxlist.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,18 +16,18 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 3a1acdb5a414c73c452614fb82134f9063fc93be
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 3045ea4ebe89656f1ffd76e231e8fc22e95c0b93
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358625"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108099188"
 ---
-# <a name="cgenericlistcgenericlist-destructor"></a><span data-ttu-id="9dd7e-103">Cgenericlist. ~ cgenericlist-Dekonstruktor</span><span class="sxs-lookup"><span data-stu-id="9dd7e-103">CGenericList.~CGenericList destructor</span></span>
+# <a name="cgenericlistcgenericlist-destructor"></a><span data-ttu-id="a365f-103">CGenericList.~CGenericList-Destruktor</span><span class="sxs-lookup"><span data-stu-id="a365f-103">CGenericList.~CGenericList destructor</span></span>
 
-<span data-ttu-id="9dd7e-104">Dekonstruktormethode.</span><span class="sxs-lookup"><span data-stu-id="9dd7e-104">Destructor method.</span></span>
+<span data-ttu-id="a365f-104">Destruktormethode.</span><span class="sxs-lookup"><span data-stu-id="a365f-104">Destructor method.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="9dd7e-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="9dd7e-105">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="a365f-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="a365f-105">Syntax</span></span>
 
 
 ```C++
@@ -36,22 +36,22 @@ ms.locfileid: "106358625"
 
 
 
-## <a name="requirements"></a><span data-ttu-id="9dd7e-106">Requirements (Anforderungen)</span><span class="sxs-lookup"><span data-stu-id="9dd7e-106">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="a365f-106">Requirements (Anforderungen)</span><span class="sxs-lookup"><span data-stu-id="a365f-106">Requirements</span></span>
 
 
 
-| <span data-ttu-id="9dd7e-107">Anforderung</span><span class="sxs-lookup"><span data-stu-id="9dd7e-107">Requirement</span></span> | <span data-ttu-id="9dd7e-108">Wert</span><span class="sxs-lookup"><span data-stu-id="9dd7e-108">Value</span></span> |
+| <span data-ttu-id="a365f-107">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="a365f-107">Requirement</span></span> | <span data-ttu-id="a365f-108">Wert</span><span class="sxs-lookup"><span data-stu-id="a365f-108">Value</span></span> |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span data-ttu-id="9dd7e-109">Header</span><span class="sxs-lookup"><span data-stu-id="9dd7e-109">Header</span></span><br/>  | <dl> <span data-ttu-id="9dd7e-110"><dt>Wxlist. h (Include Streams. h)</dt></span><span class="sxs-lookup"><span data-stu-id="9dd7e-110"><dt>Wxlist.h (include Streams.h)</dt></span></span> </dl>                                                                                    |
-| <span data-ttu-id="9dd7e-111">Bibliothek</span><span class="sxs-lookup"><span data-stu-id="9dd7e-111">Library</span></span><br/> | <dl> <span data-ttu-id="9dd7e-112">" <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt></span><span class="sxs-lookup"><span data-stu-id="9dd7e-112"><dt>Strmbase.lib (retail builds); </dt> <dt>Strmbasd.lib (debug builds)</dt></span></span> </dl> |
+| <span data-ttu-id="a365f-109">Header</span><span class="sxs-lookup"><span data-stu-id="a365f-109">Header</span></span><br/>  | <dl> <span data-ttu-id="a365f-110"><dt>Wxlist.h (streams.h enthalten)</dt></span><span class="sxs-lookup"><span data-stu-id="a365f-110"><dt>Wxlist.h (include Streams.h)</dt></span></span> </dl>                                                                                    |
+| <span data-ttu-id="a365f-111">Bibliothek</span><span class="sxs-lookup"><span data-stu-id="a365f-111">Library</span></span><br/> | <dl> <span data-ttu-id="a365f-112"><dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt></span><span class="sxs-lookup"><span data-stu-id="a365f-112"><dt>Strmbase.lib (retail builds); </dt> <dt>Strmbasd.lib (debug builds)</dt></span></span> </dl> |
 
 
 
-## <a name="see-also"></a><span data-ttu-id="9dd7e-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="9dd7e-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a365f-113">Weitere Informationen</span><span class="sxs-lookup"><span data-stu-id="a365f-113">See also</span></span>
 
 <dl> <dt>
 
-[<span data-ttu-id="9dd7e-114">**Cgenericlist-Klasse**</span><span class="sxs-lookup"><span data-stu-id="9dd7e-114">**CGenericList Class**</span></span>](cgenericlist.md)
+[<span data-ttu-id="a365f-114">**CGenericList-Klasse**</span><span class="sxs-lookup"><span data-stu-id="a365f-114">**CGenericList Class**</span></span>](cgenericlist.md)
 </dt> </dl>
 
  
