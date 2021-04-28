@@ -1,7 +1,7 @@
 ---
-description: Die getcontrolstate-Methode ruft den Status der Erfassung ab, der angibt, ob die Erfassung ausgeführt wird oder angehalten wird.
+description: 'IStats::GetControlState-Methode: Die GetControlState-Methode ruft den Zustand der Erfassung ab, der angibt, ob die Erfassung ausgeführt oder angehalten wird.'
 ms.assetid: 0faf2300-d9ff-4fe0-9d50-18beafd1daea
-title: 'IStats:: getcontrolstate-Methode (Netmon. h)'
+title: IStats::GetControlState-Methode (Netmon.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - Ndisnpp.dll
 - Rmtnpp.dll
-ms.openlocfilehash: a83b5d20461b28b7022bfdc3ddbf3d5d92149c26
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 25532293335756a872ef5104d5eef66027fe2ae4
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106366270"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108098468"
 ---
-# <a name="istatsgetcontrolstate-method"></a>IStats:: getcontrolstate-Methode
+# <a name="istatsgetcontrolstate-method"></a>IStats::GetControlState-Methode
 
-Die **getcontrolstate** -Methode ruft den Status der [*Erfassung*](c.md)ab, der angibt, ob die Erfassung ausgeführt wird oder angehalten wird.
+Die **GetControlState-Methode** ruft den Zustand der [*Erfassung*](c.md)ab, der angibt, ob die Erfassung ausgeführt oder angehalten wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,14 +41,14 @@ HRESULT STDMETHODCALLTYPE GetControlState(
 
 <dl> <dt>
 
-*Isrunnning* \[ vorgenommen\]
+*IsRunnning* \[ out\]
 </dt> <dd>
 
-Indikator, dass die aktuelle Erfassung ausgeführt wird, einschließlich, wenn die Erfassung angehalten wurde.
+Indikator, dass die aktuelle Erfassung ausgeführt wird, einschließlich, wenn die Erfassung angehalten wird.
 
 </dd> <dt>
 
-*IsPaused* \[ vorgenommen\]
+*IsPaused* \[ out\]
 </dt> <dd>
 
 Indikator, dass die aktuelle Erfassung angehalten wurde.
@@ -57,7 +57,7 @@ Indikator, dass die aktuelle Erfassung angehalten wurde.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Methode erfolgreich ist, ist der Rückgabewert nmerr \_ Success.
+Wenn die Methode erfolgreich ist, lautet der Rückgabewert NMERR \_ SUCCESS.
 
 Wenn die Methode nicht erfolgreich ist, ist der Rückgabewert einer der folgenden Fehlercodes:
 
@@ -65,8 +65,8 @@ Wenn die Methode nicht erfolgreich ist, ist der Rückgabewert einer der folgende
 
 | Rückgabecode                                                                                            | Beschreibung                                                                                                                       |
 |--------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**nmerr \_ nicht \_ verbunden**</dt> </dl>   | Der npp ist nicht mit dem Netzwerk verbunden. Wenden Sie [iStats:: Connect](istats-connect.md) an, um die NPP mit dem Netzwerk zu verbinden.<br/> |
-| <dl> <dt>**nmerr \_ nicht \_ \_ nur Statistiken**</dt> </dl> | Der npp ist mit dem Netzwerk verbunden, jedoch nicht mit der [iStats:: Connect](istats-connect.md) -Methode.<br/>                     |
+| <dl> <dt>**NMERR \_ NICHT \_ VERBUNDEN**</dt> </dl>   | Das NPP ist nicht mit dem Netzwerk verbunden. Rufen Sie [IStats::Connect](istats-connect.md) auf, um die NPP mit dem Netzwerk zu verbinden.<br/> |
+| <dl> <dt>**NMERR \_ NOT \_ STATS \_ ONLY**</dt> </dl> | Das NPP ist mit dem Netzwerk verbunden, jedoch nicht mit der [IStats::Connect-Methode.](istats-connect.md)<br/>                     |
 
 
 
@@ -74,38 +74,38 @@ Wenn die Methode nicht erfolgreich ist, ist der Rückgabewert einer der folgende
 
 ## <a name="remarks"></a>Bemerkungen
 
-Diese Methode kann jedes Mal aufgerufen werden, wenn der NPP mit dem Netzwerk verbunden ist. Mit dieser Methode können Sie herausfinden, ob eine Erfassung ausgeführt wird, ob die Erfassung angehalten wurde oder ob die Erfassung angehalten wurde, aber der npp ist nicht getrennt.
+Diese Methode kann jedes Mal aufgerufen werden, wenn das NPP mit dem Netzwerk verbunden ist. Sie können diese Methode verwenden, um herauszufinden, ob eine Erfassung ausgeführt wird, ob die Erfassung angehalten wurde oder ob die Erfassung beendet wurde, das NPP jedoch nicht getrennt ist.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                                                                     |
-| Header<br/>                   | <dl> <dt>Netmon. h</dt> </dl>                                                                      |
+| Header<br/>                   | <dl> <dt>Netmon.h</dt> </dl>                                                                      |
 | DLL<br/>                      | <dl> <dt>Ndisnpp.dll; </dt> <dt>Rmtnpp.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [IStats](istats.md)
 </dt> <dt>
 
-[IStats:: Connect](istats-connect.md)
+[IStats::Connect](istats-connect.md)
 </dt> <dt>
 
 [IStats::P ause](istats-pause.md)
 </dt> <dt>
 
-[Istatus SC:: Start](istats-start.md)
+[IStatsC::Start](istats-start.md)
 </dt> <dt>
 
-[Istatusc:: Beendigung](istats-stop.md)
+[IStatsC::Stop](istats-stop.md)
 </dt> </dl>
 
  

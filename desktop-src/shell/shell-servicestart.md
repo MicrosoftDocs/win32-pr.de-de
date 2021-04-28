@@ -1,7 +1,7 @@
 ---
-description: Startet einen benannten Dienst.
+description: 'Shell.ServiceStart-Methode: Startet einen benannten Dienst.'
 ms.assetid: 72214E80-38A2-4a57-B555-942902BAFC3D
-title: Shell. Servicestart-Methode (Shldisp. h)
+title: Shell.ServiceStart-Methode (Shldisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,14 +13,14 @@ api_type:
 - COM
 api_location:
 - Shell32.dll
-ms.openlocfilehash: 8cd3b910306fc995d15e9731823614717450ef55
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9c88b1980d215ad088a4a24362f17147b5d6e432
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103865260"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108083748"
 ---
-# <a name="shellservicestart-method"></a>Shell. Servicestart-Methode
+# <a name="shellservicestart-method"></a>Shell.ServiceStart-Methode
 
 Startet einen benannten Dienst.
 
@@ -51,21 +51,21 @@ Shell.ServiceStart( _
 
 <dl> <dt>
 
-*sservicename* \[ in\]
+*sServiceName* \[ In\]
 </dt> <dd>
 
 Typ: **[ **BSTR**](/previous-versions/windows/desktop/automat/bstr)**
 
-Eine **Zeichenfolge** , die den Namen des Dienstanbieter enthält.
+Eine **Zeichenfolge,** die den Namen des Diensts enthält.
 
 </dd> <dt>
 
-*vpersistent* \[ in\]
+*vPersistent* \[ In\]
 </dt> <dd>
 
 Typ: **Variant**
 
-Legen Sie diese Einstellung auf " **true** " fest, damit der Dienst vom Dienststeuerungs-Manager beim Systemstart automatisch gestartet wird. Legen Sie auf **false** fest, um die Dienst Konfiguration unverändert zu lassen.
+Legen Sie diese Einstellung auf **TRUE** fest, damit der Dienst während des Systemstarts automatisch vom Dienststeuerungs-Manager gestartet wird. Legen Sie diese Einstellung auf **FALSE** fest, um die Dienstkonfiguration unverändert zu lassen.
 
 </dd> </dl>
 
@@ -73,27 +73,27 @@ Legen Sie diese Einstellung auf " **true** " fest, damit der Dienst vom Dienstst
 
 ### <a name="jscript"></a>JScript
 
-Typ: **Variant \** _
+Typ: **\* Variant**
 
-Gibt _ *true** zurück, wenn erfolgreich; andernfalls **false**.
+Gibt **true** zurück, wenn erfolgreich. andernfalls **FALSE.**
 
 ### <a name="vb"></a>VB
 
-Typ: **Variant \** _
+Typ: **\* Variant**
 
-Gibt _ *true** zurück, wenn erfolgreich; andernfalls **false**.
+Gibt **true** zurück, wenn erfolgreich. andernfalls **FALSE.**
 
 ## <a name="remarks"></a>Bemerkungen
 
-Die Methode gibt **false** zurück, wenn der Dienst bereits gestartet wurde. Bevor Sie diese Methode aufrufen, können Sie [**Shell. isservicerunning**](./shell-isservicerunning.md) aufrufen, um den Status des Dienstanbieter zu ermitteln.
+Die Methode gibt **FALSE** zurück, wenn der Dienst bereits gestartet wurde. Vor dem Aufrufen dieser Methode können Sie [**Shell.IsServiceRunning**](./shell-isservicerunning.md) aufrufen, um den Status des Diensts zu ermitteln.
 
-Diese Methode ist zurzeit nicht in Microsoft Visual Basic verfügbar.
+Diese Methode ist derzeit in Microsoft Visual Basic nicht verfügbar.
 
 ## <a name="examples"></a>Beispiele
 
-In den folgenden Beispielen wird veranschaulicht, wie **Servicestart** verwendet wird, um den Messenger-Dienst zu starten. Die Verwendung wird für JScript und VBScript angezeigt.
+In den folgenden Beispielen wird die Verwendung von **ServiceStart** zum Starten des Messenger-Diensts gezeigt. Die Verwendung wird für JScript und VBScript angezeigt.
 
-JScript
+Jscript:
 
 
 ```JScript
@@ -109,7 +109,7 @@ JScript
 
 
 
-VBScript
+Vbscript:
 
 
 ```VB
@@ -129,17 +129,17 @@ VBScript
 
 
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, Windows XP \[ Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                          |
-| Header<br/>                   | <dl> <dt>Shldisp. h</dt> </dl>                          |
-| IDL<br/>                      | <dl> <dt>Shldisp. idl</dt> </dl>                        |
-| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 5,0 oder höher)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Nur Windows 2000 Professional- und Windows \[ XP-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2003-Desktop-Apps\]<br/>                                                          |
+| Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>                          |
+| Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                        |
+| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 5.0 oder höher)</dt> </dl> |
 
 
 

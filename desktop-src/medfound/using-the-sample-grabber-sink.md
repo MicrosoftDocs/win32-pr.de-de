@@ -1,26 +1,26 @@
 ---
-description: .
+description: Verwenden der Beispielgrabbersenke
 ms.assetid: AC5970A2-6F12-448D-A444-40020C5C2607
-title: Verwenden der "Sample Grabber"-Senke
+title: Verwenden der Beispielgrabbersenke
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e7e7f0d64dfeb1cf5fd977e312b34aec49cad254
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 043f64d8fdc3ac3084d2c59be8917acbbd32dde5
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104528562"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108110500"
 ---
-# <a name="using-the-sample-grabber-sink"></a>Verwenden der "Sample Grabber"-Senke
+# <a name="using-the-sample-grabber-sink"></a>Verwenden der Beispielgrabbersenke
 
-Bei der Beispiel-Sink-Senke handelt es sich um eine Medien Senke, die die empfangenen Daten an eine Anwendungs Rückruf Schnittstelle weiterleitet.
+Die Sample Grabber-Senke ist eine Mediensenke, die die empfangenen Daten an eine Anwendungsrückrufschnittstelle weiterleitet.
 
 > [!Note]  
-> Der [Quell Leser](source-reader.md) ist eine Alternative zur Beispiel-Sink-Senke und verfügt über ein einfacheres progamingmodell.
+> Der [Quellleser](source-reader.md) ist eine Alternative zur Sample Grabber-Senke und verfügt über ein einfacheres Progammingmodell.
 
  
 
-## <a name="1-implement-the-callback-interface"></a>1. Implementieren der Rückruf Schnittstelle
+## <a name="1-implement-the-callback-interface"></a>1. Implementieren der Rückrufschnittstelle
 
 
 ```C++
@@ -57,7 +57,7 @@ public:
 
 
 
-## <a name="2-create-the-sample-grabber-sink"></a>2. Erstellen der Beispiel-Senke-Senke
+## <a name="2-create-the-sample-grabber-sink"></a>2. Erstellen der Beispielgrabbersenke
 
 
 ```C++
@@ -138,7 +138,7 @@ done:
 
 
 
-## <a name="4-run-the-media-session"></a>4. führen Sie die Medien Sitzung aus.
+## <a name="4-run-the-media-session"></a>4. Ausführen der Mediensitzung
 
 
 ```C++
@@ -185,7 +185,7 @@ done:
 
 ## <a name="example-code"></a>Beispielcode
 
-Dies ist der komplette Beispielcode für dieses Thema.
+Hier ist der vollständige Beispielcode für dieses Thema.
 
 
 ```C++
@@ -586,10 +586,10 @@ STDMETHODIMP SampleGrabberCB::OnShutdown()
 
 <dl> <dt>
 
-[Medien Sitzung](media-session.md)
+[Mediensitzung](media-session.md)
 </dt> <dt>
 
-[**Imbersamplegrabbersinkcallback**](/windows/desktop/api/mfidl/nn-mfidl-imfsamplegrabbersinkcallback)
+[**IMFSampleGrabberSinkCallback**](/windows/desktop/api/mfidl/nn-mfidl-imfsamplegrabbersinkcallback)
 </dt> </dl>
 
  

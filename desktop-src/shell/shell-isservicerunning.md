@@ -1,7 +1,7 @@
 ---
-description: Gibt einen Wert zurück, der angibt, ob ein bestimmter Dienst ausgeführt wird.
+description: 'Shell.IsServiceRunning-Methode: Gibt einen Wert zurück, der angibt, ob ein bestimmter Dienst ausgeführt wird.'
 ms.assetid: FDC41C2D-7462-458f-BBE6-D97260C26B6C
-title: Shell. isservicerunning-Methode (Shldisp. h)
+title: Shell.IsServiceRunning-Methode (Shldisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,14 +13,14 @@ api_type:
 - COM
 api_location:
 - Shell32.dll
-ms.openlocfilehash: c3a65be4955c6f49e8e6baa49cd9dedb82fc5cc8
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 01af900bb7930ec7b6dde0b0700c83f211733dc3
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103865263"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108083718"
 ---
-# <a name="shellisservicerunning-method"></a>Shell. isservicerunning-Methode
+# <a name="shellisservicerunning-method"></a>Shell.IsServiceRunning-Methode
 
 Gibt einen Wert zurück, der angibt, ob ein bestimmter Dienst ausgeführt wird.
 
@@ -49,12 +49,12 @@ Shell.IsServiceRunning( _
 
 <dl> <dt>
 
-*sservicename* \[ in\]
+*sServiceName* \[ In\]
 </dt> <dd>
 
 Typ: **[ **BSTR**](/previous-versions/windows/desktop/automat/bstr)**
 
-Eine **Zeichenfolge** , die den Namen des Dienstanbieter enthält.
+Eine **Zeichenfolge,** die den Namen des Diensts enthält.
 
 </dd> </dl>
 
@@ -62,25 +62,25 @@ Eine **Zeichenfolge** , die den Namen des Dienstanbieter enthält.
 
 ### <a name="jscript"></a>JScript
 
-Typ: **Variant \** _
+Typ: **\* Variant**
 
-Gibt _ *true** zurück, wenn der von *sservicename* angegebene Dienst ausgeführt wird. andernfalls **false**.
+Gibt **TRUE zurück,** wenn der von *sServiceName angegebene Dienst* ausgeführt wird. andernfalls **FALSE.**
 
 ### <a name="vb"></a>VB
 
-Typ: **Variant \** _
+Typ: **\* Variant**
 
-Gibt _ *true** zurück, wenn der von *sservicename* angegebene Dienst ausgeführt wird. andernfalls **false**.
+Gibt **TRUE zurück,** wenn der von *sServiceName angegebene Dienst* ausgeführt wird. andernfalls **FALSE.**
 
 ## <a name="remarks"></a>Bemerkungen
 
-Diese Methode ist zurzeit nicht in Microsoft Visual Basic verfügbar.
+Diese Methode ist derzeit in Microsoft Visual Basic.
 
 ## <a name="examples"></a>Beispiele
 
-In den folgenden Beispielen wird die Verwendung von **isservicerunning** veranschaulicht, um zu bestimmen, ob der Themes-Dienst für eine Anwendung ausgeführt wird. Die Verwendung wird für JScript und VBScript angezeigt.
+Die folgenden Beispiele zeigen die Verwendung von **IsServiceRunning,** um zu bestimmen, ob der Themes-Dienst für eine Anwendung ausgeführt wird. Die Verwendung wird für JScript und VBScript angezeigt.
 
-JScript
+Jscript:
 
 
 ```JScript
@@ -95,7 +95,7 @@ function fnIsServiceRunningJ()
 
 
 
-VBScript
+Vbscript:
 
 
 ```VB
@@ -113,17 +113,17 @@ end function
 
 
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, Windows XP \[ Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                          |
-| Header<br/>                   | <dl> <dt>Shldisp. h</dt> </dl>                          |
-| IDL<br/>                      | <dl> <dt>Shldisp. idl</dt> </dl>                        |
-| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 5,0 oder höher)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Nur Windows 2000 Professional- und Windows \[ XP-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2003-Desktop-Apps\]<br/>                                                          |
+| Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>                          |
+| Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                        |
+| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 5.0 oder höher)</dt> </dl> |
 
 
 

@@ -1,7 +1,7 @@
 ---
-description: Die checkmediatype-Methode bestimmt, ob die PIN einen bestimmten Medientyp akzeptiert.
+description: 'CTransformOutputPin.CheckMediaType-Methode: Die CheckMediaType-Methode bestimmt, ob der Pin einen bestimmten Medientyp akzeptiert.'
 ms.assetid: 9e31480b-129c-4741-846a-854c70c65606
-title: Ctransformoutputpin. checkmediatype-Methode (Transfrm. h)
+title: CTransformOutputPin.CheckMediaType-Methode (Transfrm.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: c3c2bc617a5ff56a8b82184700af85e2634960ae
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 7dc0edc642687518979eab1d47c69af039bc3173
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365399"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108084908"
 ---
-# <a name="ctransformoutputpincheckmediatype-method"></a>Ctransformoutputpin. checkmediatype-Methode
+# <a name="ctransformoutputpincheckmediatype-method"></a>CTransformOutputPin.CheckMediaType-Methode
 
-Die- `CheckMediaType` Methode bestimmt, ob die PIN einen bestimmten Medientyp akzeptiert.
+Die `CheckMediaType` -Methode bestimmt, ob der Pin einen bestimmten Medientyp akzeptiert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,23 +42,23 @@ HRESULT CheckMediaType(
 
 <dl> <dt>
 
-*MTiN* 
+*Mtin* 
 </dt> <dd>
 
-Zeiger auf ein [**cmediatype**](cmediatype.md) -Objekt, das den vorgeschlagenen Medientyp enthält.
+Zeiger auf ein [**CMediaType-Objekt,**](cmediatype.md) das den vorgeschlagenen Medientyp enthält.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT** -Wert zurück. Die folgenden Werte sind möglich.
+Gibt einen **HRESULT-Wert** zurück. Die folgenden Werte sind möglich.
 
 
 
 | Rückgabecode                                                                                  | Beschreibung                                         |
 |----------------------------------------------------------------------------------------------|-----------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>         | Erfolg.<br/>                                 |
-| <dl> <dt>**E \_ invalidArg**</dt> </dl> | Die Eingabe-PIN des Filters ist nicht verbunden.<br/> |
+| <dl> <dt>**E \_ INVALIDARG**</dt> </dl> | Der Eingabepin des Filters ist nicht verbunden.<br/> |
 
 
 
@@ -66,16 +66,16 @@ Gibt einen **HRESULT** -Wert zurück. Die folgenden Werte sind möglich.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Diese Methode implementiert die rein virtuelle [**cbasepin:: checkmediatype**](cbasepin-checkmediatype.md) -Methode. Die Methode schlägt fehl, wenn die Eingabe-PIN des Filters nicht verbunden ist. Andernfalls wird die [**ctransformfilter:: checktransform**](ctransformfilter-checktransform.md) -Methode des Filters aufgerufen, die ebenfalls rein virtuell ist. Die abgeleitete Klasse des Filters muss **checktransform** implementieren, das bestimmt, ob der vorgeschlagene Ausgabe Medientyp mit dem Eingabe Medientyp kompatibel ist.
+Diese Methode implementiert die rein virtuelle [**CBasePin::CheckMediaType-Methode.**](cbasepin-checkmediatype.md) Die Methode schlägt fehl, wenn der Eingabepin des Filters nicht verbunden ist. Andernfalls wird die [**CTransformFilter::CheckTransform-Methode**](ctransformfilter-checktransform.md) des Filters aufgerufen, die ebenfalls rein virtuell ist. Die abgeleitete Klasse des Filters muss **CheckTransform** implementieren, wodurch bestimmt wird, ob der vorgeschlagene Ausgabemedientyp mit dem Eingabemedientyp kompatibel ist.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Transfrm. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Transfrm.h (streams.h enthalten)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 

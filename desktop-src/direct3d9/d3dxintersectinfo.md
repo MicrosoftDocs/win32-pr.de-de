@@ -1,7 +1,7 @@
 ---
-description: Beschreibt eine Schnittmenge an Ray-Dreiecks.
+description: 'D3DXINTERSECTINFO-Struktur: Beschreibt eine Strahldreieck-Schnittmenge.'
 ms.assetid: b6f50fc0-2c8a-4efa-a144-bd0851f8b0ca
-title: D3DXINTERSECTINFO-Struktur (D3dx9mesh. h)
+title: D3DXINTERSECTINFO-Struktur (D3dx9mesh.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - d3dx9mesh.h
-ms.openlocfilehash: 31a98e9a7095e81e962b2996dedb9bdf5871533d
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: f4a63c7f4a479bfbe9dcb49f485ce0acb8db6486
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106355009"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108098288"
 ---
 # <a name="d3dxintersectinfo-structure"></a>D3DXINTERSECTINFO-Struktur
 
-Beschreibt eine Schnittmenge an Ray-Dreiecks.
+Beschreibt eine Schnittmenge eines Strahldreiecks.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,7 +42,7 @@ typedef struct D3DXINTERSECTINFO {
 
 <dl> <dt>
 
-**Fakeidex**
+**FaceIndex**
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
@@ -56,51 +56,51 @@ Index des Dreiecks, das auf den Strahl trifft.
 **U**
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Die barzentrische Koordinate innerhalb des Dreiecks, an dem sich der Strahl schneidet.
+Barycentric-Koordinate innerhalb des Dreiecks, in dem sich der Strahl überschneidet.
 
 </dd> <dt>
 
 **B**
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Die barzentrische Koordinate innerhalb des Dreiecks, an dem sich der Strahl schneidet.
+Barycentric-Koordinate innerhalb des Dreiecks, in dem sich der Strahl überschneidet.
 
 </dd> <dt>
 
-**Dirigent**
+**Dist**
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Abstand entlang des Strahls, an dem die Schnittmenge aufgetreten ist.
+Abstand entlang des Strahls, in dem die Schnittmenge aufgetreten ist.
 
 </dd> </dl>
 
 ## <a name="remarks"></a>Bemerkungen
 
-In den Scheitel Punkten des Dreiecks wird ein Punkt innerhalb eines Dreiecks definiert. Eine ausführlichere Beschreibung von baryzentrischen Koordinaten finden Sie in [der Beschreibung von mathworld in der Beschreibung der baryzentrierten Koordinaten](https://mathworld.wolfram.com/BarycentricCoordinates.html).
+Barycentric-Koordinaten definieren einen Punkt innerhalb eines Dreiecks in Bezug auf die Scheitelpunkte des Dreiecks. Eine ausführlichere Beschreibung der baryzentrischen Koordinaten finden Sie unter [Mathworld es Barycentric Coordinates Description](https://mathworld.wolfram.com/BarycentricCoordinates.html).
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------|----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3dx9mesh. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3dx9mesh.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

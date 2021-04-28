@@ -1,19 +1,19 @@
 ---
-description: Tritt auf, wenn ein Cursor in den physischen Erkennungsbereich (Near) des Tablet-Kontexts eintritt.
+description: 'InkPicture.CursorInRange-Ereignis: Tritt ein, wenn ein Cursor in den physischen Erkennungsbereich (Näherung) des Tabletkontexts eintritt.'
 ms.assetid: e921e175-a2cf-45e6-bb81-dc82e384d3b1
-title: InkPicture. Cursor Event Range-Ereignis (msink AUT. h)
+title: InkPicture.CursorInRange-Ereignis (Msinkaut.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ab0dead1fa5bd89452af15a19f36a132c6843d67
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d05d703022e8d97df0d8d74a73e20af3d91b8531
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106350060"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108086578"
 ---
-# <a name="inkpicturecursorinrange-event"></a>InkPicture. Cursor Event Range-Ereignis
+# <a name="inkpicturecursorinrange-event"></a>InkPicture.CursorInRange-Ereignis
 
-Tritt auf, wenn ein Cursor in den physischen Erkennungsbereich (Near) des Tablet-Kontexts eintritt.
+Tritt ein, wenn ein Cursor in den physischen Erkennungsbereich (Näherung) des Tabletkontexts eintritt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -32,26 +32,26 @@ void CursorInRange(
 
 <dl> <dt>
 
-*Cursor* \[ in\]
+*Cursor* \[ In\]
 </dt> <dd>
 
-Das [**iinkcursor**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkcursor) -Objekt, das das **CursorInRange** -Ereignis generiert hat.
+Das [**IInkCursor-Objekt,**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkcursor) das das **CursorInRange-Ereignis** generiert hat.
 
 </dd> <dt>
 
-*NewCursor* \[ in\]
+*NewCursor* \[ In\]
 </dt> <dd>
 
-**Variant \_ TRUE** , wenn dieser frei Hand Sammler das erste Mal mit dem [**iinkcursor**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkcursor) -Objekt kontaktiert hat, das das **CursorInRange** -Ereignis generiert hat. Andernfalls ist der Wert **\_ false**.
+**VARIANT \_ TRUE,** wenn dieser Freihandsammler zum ersten Mal Kontakt mit dem [**IInkCursor-Objekt**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkcursor) hat, das das **CursorInRange-Ereignis** generiert hat. Andernfalls **VARIANT \_ FALSE**.
 
 </dd> <dt>
 
-*Buttonsstate* \[ in\]
+*ButtonsState* \[ In\]
 </dt> <dd>
 
-Der Zustand der Schaltflächen für den Cursor, der das **CursorInRange** -Ereignis generiert hat.
+Der Zustand der Schaltflächen für den Cursor, der das **CursorInRange-Ereignis** generiert hat.
 
-Weitere Informationen zur VARIANT-Struktur finden Sie unter [Verwenden der com-Bibliothek](using-the-com-library.md).
+Weitere Informationen zur VARIANT-Struktur finden Sie unter [Verwenden der COM-Bibliothek.](using-the-com-library.md)
 
 </dd> </dl>
 
@@ -61,37 +61,37 @@ Dieses Ereignis gibt keinen Wert zurück.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Diese Ereignismethode wird in **\_ iinkcollectorevents**, **\_ iinkoverlayevents** und **\_ iinkpictureevents** Dispatch-only Interface (Dispinterfaces) mit der ID DISPID \_ icecursorinrange definiert.
+Diese Ereignismethode wird in der **\_ IInkCollectorEvents-,** **\_ IInkOverlayEvents-** und **\_ IInkPictureEvents-Dispatch-Only-Schnittstelle** (dispinterfaces) mit der ID DISPID \_ ICECursorInRange definiert.
 
-Das Ereignis **Cursor** wird auch dann ausgelöst, wenn es sich im Modus auswählen oder löschen befindet, nicht nur im frei Hand Modus. Dies erfordert, dass Sie den Bearbeitungsmodus überwachen (den Sie für die Festlegung verantwortlich sind) und den Modus beachten, bevor Sie das Ereignis interpretieren. Der Vorteil dieser Anforderung ist, dass die Innovationen auf der Plattform durch ein höheres Bewusstsein für Platt Form Ereignisse verstärkt werden.
+Das **CursorInRange-Ereignis** wird auch dann ausgelöst, wenn es sich im Auswahl- oder Löschmodus befindet, nicht nur im Ink-Modus. Dies erfordert, dass Sie den Bearbeitungsmodus überwachen (den Sie festlegen müssen) und den Modus kennen, bevor Sie das Ereignis interpretieren. Der Vorteil dieser Anforderung ist eine größere Innovationsfähigkeit auf der Plattform durch ein höheres Bewusstsein für Plattformereignisse.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                       |
+| Unterstützte Mindestversion (Client)<br/> | Nur Desktop-Apps der Windows XP Tablet PC Edition \[\]<br/>                                                       |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                           |
-| Header<br/>                   | <dl> <dt>Msink AUT. h (erfordert auch msink AUT \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Msinkaut.h (erfordert auch Msinkaut \_ i.c)</dt> </dl> |
 | Bibliothek<br/>                  | <dl> <dt>InkObj.dll</dt> </dl>                               |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[InkPicture](inkpicture-control-reference.md)
+[Inkpicture](inkpicture-control-reference.md)
 </dt> <dt>
 
-[**Cursor-Ereignis**](inkpicture-cursoroutofrange.md)
+[**CursorOutOfRange-Ereignis**](inkpicture-cursoroutofrange.md)
 </dt> <dt>
 
-[**Inkcurrsorbuttonstate-Enumeration**](/windows/desktop/api/msinkaut/ne-msinkaut-inkcursorbuttonstate)
+[**InkCursorButtonState-Enumeration**](/windows/desktop/api/msinkaut/ne-msinkaut-inkcursorbuttonstate)
 </dt> <dt>
 
-[**Iinkcursor-Schnittstelle**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkcursor)
+[**IInkCursor-Schnittstelle**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkcursor)
 </dt> </dl>
 
  

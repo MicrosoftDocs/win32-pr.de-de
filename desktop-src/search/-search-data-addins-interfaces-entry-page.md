@@ -1,42 +1,42 @@
 ---
-description: .
+description: Daten-Add-In-Schnittstellen
 ms.assetid: 2e9748be-7d76-4424-8daf-c94a327d85ac
-title: Add-in-Schnittstellen für Daten
+title: Daten-Add-In-Schnittstellen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 02159fba5603574f601cac359ac684f37efe97ea
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d90aa1ce8c3c0d498f4a01f1b00c0d8674ee9610
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103862176"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108104648"
 ---
-# <a name="data-add-in-interfaces"></a>Add-in-Schnittstellen für Daten
+# <a name="data-add-in-interfaces"></a>Daten-Add-In-Schnittstellen
 
 
-Dieser Windows Search-Referenz Abschnitt besteht aus den folgenden Daten-Add-in-Schnittstellen:
+Dieser Windows Search besteht aus den folgenden Daten-Add-In-Schnittstellen:
 
-[**Isimplecommandcreator**](/windows/desktop/api/indexsrv/nn-indexsrv-isimplecommandcreator)
+[**ISimpleCommandCreator**](/windows/desktop/api/indexsrv/nn-indexsrv-isimplecommandcreator)
 
-[**Icolumnmapper**](/windows/desktop/api/indexsrv/nn-indexsrv-icolumnmapper)
+[**IColumnMapper**](/windows/desktop/api/indexsrv/nn-indexsrv-icolumnmapper)
 
-[**Icolumnmappercreator**](/windows/desktop/api/indexsrv/nn-indexsrv-icolumnmappercreator)
+[**IColumnMapperCreator**](/windows/desktop/api/indexsrv/nn-indexsrv-icolumnmappercreator)
 
-[**IFilter**](/windows/win32/api/filter/nn-filter-ifilter)
+[**Ifilter**](/windows/win32/api/filter/nn-filter-ifilter)
 
-[**Iloadfilter**](/windows/desktop/api/filtereg/nn-filtereg-iloadfilter)
+[**ILoadFilter**](/windows/desktop/api/filtereg/nn-filtereg-iloadfilter)
 
-[**Iphrasesink**](/windows/win32/api/indexsrv/nn-indexsrv-iphrasesink)
+[**IPhraseSink**](/windows/win32/api/indexsrv/nn-indexsrv-iphrasesink)
 
 [**ISearchLanguageSupport**](/windows/desktop/api/Searchapi/nn-searchapi-isearchlanguagesupport)
 
-[**Istemmer**](/windows/desktop/api/Indexsrv/nn-indexsrv-istemmer)
+[**IStberg**](/windows/desktop/api/Indexsrv/nn-indexsrv-istemmer)
 
-[**Iwordbreaker**](/windows/desktop/api/Indexsrv/nn-indexsrv-iwordbreaker)
+[**IWordBreaker**](/windows/desktop/api/Indexsrv/nn-indexsrv-iwordbreaker)
 
-[**Iwordformsink**](/windows/desktop/api/Indexsrv/nn-indexsrv-iwordformsink)
+[**IWordFormSink**](/windows/desktop/api/Indexsrv/nn-indexsrv-iwordformsink)
 
-[**Iwordsink**](iwordsink.md)
+[**IWordSink**](iwordsink.md)
 
  
 

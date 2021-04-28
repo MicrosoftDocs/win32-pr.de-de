@@ -1,7 +1,7 @@
 ---
-description: Konstruktormethode.
+description: 'CTransformFilter.CTransformFilter-Konstruktor : Konstruktormethode.'
 ms.assetid: a64c3e29-91f2-455f-aac1-1e4ecce6958d
-title: Ctransformfilter. ctransformfilter-Konstruktor (Transfrm. h)
+title: CTransformFilter.CTransformFilter-Konstruktor (Transfrm.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,14 +16,14 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 39569dff69c2ab1ebb635cb69a4c71602a7400d8
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: fce67bbe22361bdbae0cd3e51768e0cf0743d97d
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106359413"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108098718"
 ---
-# <a name="ctransformfilterctransformfilter-constructor"></a>Ctransformfilter. ctransformfilter-Konstruktor
+# <a name="ctransformfilterctransformfilter-constructor"></a>CTransformFilter.CTransformFilter-Konstruktor
 
 Konstruktormethode.
 
@@ -44,47 +44,47 @@ CTransformFilter(
 
 <dl> <dt>
 
-*pobjectname* 
+*pObjectName* 
 </dt> <dd>
 
-Zeichenfolge, die den debugnamen des Filters enthält. Weitere Informationen finden Sie unter [**cbaseobject**](cbaseobject.md).
+Zeichenfolge, die den Debugnamen des Filters enthält. Weitere Informationen finden Sie unter [**CBaseObject.**](cbaseobject.md)
 
 </dd> <dt>
 
 *lpUnk* 
 </dt> <dd>
 
-Zeiger auf den Besitzer dieses Objekts. Wenn das Objekt aggregiert wird, übergeben Sie einen Zeiger an die **IUnknown** -Schnittstelle des Aggregations Objekts. Andernfalls legen Sie diesen Parameter auf **null** fest.
+Zeiger auf den Besitzer dieses Objekts. Wenn das Objekt aggregiert wird, übergeben Sie einen Zeiger auf die **IUnknown-Schnittstelle** des aggregierenden Objekts. Legen Sie andernfalls diesen Parameter auf **NULL** fest.
 
 </dd> <dt>
 
-*CLSID* 
+*Clsid* 
 </dt> <dd>
 
-Klassen Bezeichner des Filters.
+Klassenbezeichner des Filters.
 
 </dd> </dl>
 
 ## <a name="remarks"></a>Bemerkungen
 
-Der Konstruktor erstellt nicht die Pins des Filters. Dies geschieht beim ersten Aufrufen der [**getpin**](ctransformfilter-getpin.md) -Methode. Der Konstruktor initialisiert die [**m \_ pinput**](ctransformfilter-m-pinput.md) -und [**m \_ poutput**](ctransformfilter-m-poutput.md) -Element Variablen auf **null**.
+Der Konstruktor erstellt keine Pins des Filters. Dies geschieht beim ersten Aufruf der [**GetPin-Methode.**](ctransformfilter-getpin.md) Der Konstruktor initialisiert die Membervariablen [**m \_ pInput**](ctransformfilter-m-pinput.md) und [**m \_ pOutput**](ctransformfilter-m-poutput.md) mit **NULL.**
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Transfrm. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Transfrm.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Ctransformfilter-Klasse**](ctransformfilter.md)
+[**CTransformFilter-Klasse**](ctransformfilter.md)
 </dt> </dl>
 
  

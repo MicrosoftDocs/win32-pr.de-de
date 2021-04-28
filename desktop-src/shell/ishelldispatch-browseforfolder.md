@@ -1,7 +1,7 @@
 ---
-description: Erstellt ein Dialogfeld, das dem Benutzer ermöglicht, einen Ordner auszuwählen, und gibt dann das Ordner Objekt des ausgewählten Ordners zurück.
+description: 'IShellDispatch.BrowseForFolder-Methode: Erstellt ein Dialogfeld, in dem der Benutzer einen Ordner auswählen und dann das Ordnerobjekt des ausgewählten Ordners zurückgibt.'
 ms.assetid: 578C51C1-F59B-4604-A09B-62BA61225ABB
-title: Ishelldispatch. browsforfolder-Methode (Shldisp. h)
+title: IShellDispatch.BrowseForFolder-Methode (Shldisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Shell32.dll
-ms.openlocfilehash: 4e603bb08b4b98ba4008aa4ea162c9b59e5d42da
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ee6202c7029e2c27684e15d96dd6c38680cb0678
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104130101"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108086688"
 ---
-# <a name="ishelldispatchbrowseforfolder-method"></a>Ishelldispatch. browsforfolder-Methode
+# <a name="ishelldispatchbrowseforfolder-method"></a>IShellDispatch.BrowseForFolder-Methode
 
-Erstellt ein Dialogfeld, das dem Benutzer ermöglicht, einen Ordner auszuwählen, und gibt dann das [**Ordner**](folder.md) Objekt des ausgewählten Ordners zurück.
+Erstellt ein Dialogfeld, in dem der Benutzer einen Ordner auswählen und dann das Ordnerobjekt des ausgewählten [**Ordners zurückgibt.**](folder.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -55,39 +55,39 @@ IShellDispatch.BrowseForFolder( _
 
 <dl> <dt>
 
-*HWND* \[ in\]
+*Hwnd* \[ In\]
 </dt> <dd>
 
-Type: **Integer**
+Typ: **Integer**
 
-Das Handle für das übergeordnete Fenster des Dialog Felds. Dieser Wert kann auch 0 sein.
+Das Handle für das übergeordnete Fenster des Dialogfelds. Dieser Wert kann auch 0 sein.
 
 </dd> <dt>
 
-*stitle* \[ in\]
+*sTitle* \[ In\]
 </dt> <dd>
 
 Typ: **[ **BSTR**](/previous-versions/windows/desktop/automat/bstr)**
 
-Ein **Zeichen** folgen Wert, der den Titel darstellt, der im Dialogfeld **Durchsuchen** angezeigt wird.
+Ein **Zeichenfolgenwert,** der den im Dialogfeld Durchsuchen **angezeigten Titel** darstellt.
 
 </dd> <dt>
 
-*ioptions* \[ in\]
+*iOptions* \[ In\]
 </dt> <dd>
 
-Type: **Integer**
+Typ: **Integer**
 
-Ein **ganzzahliger** Wert, der die Optionen für die Methode enthält. Dies kann 0 (null) sein oder eine Kombination der Werte sein, die unter dem **ulflags** -Member der [**Browseinfo**](/windows/desktop/api/shlobj_core/ns-shlobj_core-browseinfoa) -Struktur aufgeführt sind.
+Ein **Ganzzahlwert,** der die Optionen für die Methode enthält. Dies kann 0 (null) oder eine Kombination der Werte sein, die unter dem **ulFlags-Element** der [**BROWSEINFO-Struktur aufgeführt**](/windows/desktop/api/shlobj_core/ns-shlobj_core-browseinfoa) sind.
 
 </dd> <dt>
 
-*vrootfolder* \[ in, optional\]
+*vRootFolder* \[ in, optional\]
 </dt> <dd>
 
 Typ: **Variant**
 
-Der Stamm Ordner, der im Dialogfeld verwendet werden soll. Der Benutzer kann nicht in der Struktur nach oben navigieren als in diesem Ordner. Wenn dieser Wert nicht angegeben wird, ist der Stamm Ordner, der im Dialogfeld verwendet wird, der Desktop. Bei diesem Wert kann es sich um eine Zeichenfolge handeln, die den Pfad des Ordners oder einen der [**shellspecialfolderconstants**](/windows/desktop/api/Shldisp/ne-shldisp-shellspecialfolderconstants) -Werte angibt. Beachten Sie, dass die in **shellspecialfolderconstants** gefundenen Konstanten Namen in Visual Basic verfügbar sind, jedoch nicht in VBScript oder JScript. In diesen Fällen müssen die numerischen Werte an ihrer Stelle verwendet werden.
+Der Stammordner, der im Dialogfeld verwendet werden soll. Der Benutzer kann in der Struktur nicht höher als in diesem Ordner suchen. Wenn dieser Wert nicht angegeben wird, ist der Stammordner, der im Dialogfeld verwendet wird, der Desktop. Dieser Wert kann eine Zeichenfolge sein, die den Pfad des Ordners oder einen der [**ShellSpecialFolderConstants-Werte angibt.**](/windows/desktop/api/Shldisp/ne-shldisp-shellspecialfolderconstants) Beachten Sie, dass die konstanten Namen in **ShellSpecialFolderConstants** in Visual Basic, aber nicht in VBScript oder JScript verfügbar sind. In diesen Fällen müssen die numerischen Werte an ihrer Stelle verwendet werden.
 
 </dd> </dl>
 
@@ -95,25 +95,25 @@ Der Stamm Ordner, der im Dialogfeld verwendet werden soll. Der Benutzer kann nic
 
 ### <a name="jscript"></a>JScript
 
-Typ: **Ordner \* \***
+Typ: **\* \* FOLDER**
 
-Ein Objekt Verweis auf das [**Ordner**](folder.md) Objekt des ausgewählten Ordners.
+Ein Objektverweis auf das [**Folder-Objekt**](folder.md) des ausgewählten Ordners.
 
 ### <a name="vb"></a>VB
 
-Typ: **Ordner \* \***
+Typ: **\* \* FOLDER**
 
-Ein Objekt Verweis auf das [**Ordner**](folder.md) Objekt des ausgewählten Ordners.
+Ein Objektverweis auf das [**Folder-Objekt**](folder.md) des ausgewählten Ordners.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Diese Methode wird implementiert und über die [**Shell. browsforfolder**](shell-browseforfolder.md) -Methode aufgerufen.
+Diese Methode wird implementiert und über die [**Shell.BrowseForFolder-Methode**](shell-browseforfolder.md) aufgerufen.
 
 ## <a name="examples"></a>Beispiele
 
-In den folgenden Beispielen wird **browsforfolder** verwendet, um ein Durchsuchen-Fenster mit dem Titel "example" im Windows-Ordner anzuzeigen. Die Verwendung wird für JScript, VBScript und Visual Basic angezeigt.
+In den folgenden Beispielen wird **BrowseForFolder** verwendet, um ein Suchfenster mit dem Titel "Beispiel" anzuzeigen, das sich im Windows-Ordner befindet. Die Verwendung wird für JScript, VBScript und Visual Basic angezeigt.
 
-JScript
+Jscript:
 
 
 ```JScript
@@ -135,7 +135,7 @@ JScript
 
 
 
-VBScript
+Vbscript:
 
 
 ```VB
@@ -181,17 +181,17 @@ End Sub
 
 
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, Windows XP \[ Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, nur Windows \[ XP-Desktop-Apps\]<br/>                                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                           |
-| Header<br/>                   | <dl> <dt>Shldisp. h</dt> </dl>                           |
-| IDL<br/>                      | <dl> <dt>Shldisp. idl</dt> </dl>                         |
-| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4,71 oder höher)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>                           |
+| Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                         |
+| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4.71 oder höher)</dt> </dl> |
 
 
 

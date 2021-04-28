@@ -1,7 +1,7 @@
 ---
-description: Der Computer wird von seiner Docking Station eingelesen. Dies ist das gleiche wie beim Klicken auf das Startmenü und beim Auswählen von ausgelösten PCs, wenn Ihr Computer diesen Befehl unterstützt.
+description: 'IShellDispatch.EjectPC-Methode: Wirft den Computer von seiner Andockstation aus. Dies entspricht dem Klicken auf die Startmenü und dem Auswählen von PC auswerfen, wenn Ihr Computer diesen Befehl unterstützt.'
 ms.assetid: 34448D82-187C-40aa-90B4-A4111B33048B
-title: Ishelldispatch. ejectpc-Methode (Shldisp. h)
+title: IShellDispatch.EjectPC-Methode (Shldisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Shell32.dll
-ms.openlocfilehash: d85dd8c007338dca3d68183bc9ba3fbd333195ee
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ac42e1a4331a553a03bac3da50a187e06c90859c
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214874"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108086638"
 ---
-# <a name="ishelldispatchejectpc-method"></a>Ishelldispatch. ejectpc-Methode
+# <a name="ishelldispatchejectpc-method"></a>IShellDispatch.EjectPC-Methode
 
-Der Computer wird von seiner Docking Station eingelesen. Dies ist das gleiche wie beim Klicken auf das **Startmenü** und beim Auswählen von **ausgelösten PCs**, wenn Ihr Computer diesen Befehl unterstützt.
+Wirft den Computer von seiner Andockstation aus. Dies entspricht dem Klicken auf das **Startmenü** und der Auswahl von **PC auswerfen,** wenn Ihr Computer diesen Befehl unterstützt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -57,13 +57,13 @@ Diese Methode gibt keinen Wert zurück.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Diese Methode wird implementiert und über die [**Shell. ejectpc**](shell-ejectpc.md) -Methode aufgerufen.
+Diese Methode wird implementiert und über die [**Shell.EjectPC-Methode**](shell-ejectpc.md) aufgerufen.
 
 ## <a name="examples"></a>Beispiele
 
-In den folgenden Beispielen wird die Verwendung von **ejectpc** in JScript, VBScript und Visual Basic veranschaulicht.
+Die folgenden Beispiele zeigen die Verwendung von **EjectPC** in JScript, VBScript und Visual Basic.
 
-JScript
+Jscript:
 
 
 ```JScript
@@ -79,7 +79,7 @@ JScript
 
 
 
-VBScript
+Vbscript:
 
 
 ```VB
@@ -113,17 +113,17 @@ End Sub
 
 
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, Windows XP \[ Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, nur Windows \[ XP-Desktop-Apps\]<br/>                                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                           |
-| Header<br/>                   | <dl> <dt>Shldisp. h</dt> </dl>                           |
-| IDL<br/>                      | <dl> <dt>Shldisp. idl</dt> </dl>                         |
-| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4,71 oder höher)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>                           |
+| Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                         |
+| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4.71 oder höher)</dt> </dl> |
 
 
 

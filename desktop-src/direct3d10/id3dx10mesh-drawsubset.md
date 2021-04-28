@@ -1,7 +1,7 @@
 ---
-description: Zeichnet eine Teilmenge eines Mesh.
+description: 'ID3DX10Mesh::D rawSubset-Methode: Zeichnet eine Teilmenge eines Gitters.'
 ms.assetid: e785949e-fcda-4ef9-b50a-193cd954e97d
-title: ID3DX10Mesh::D rawsubset-Methode (d3dx10. h)
+title: ID3DX10Mesh::D rawSubset-Methode (D3DX10.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: 80beceebeead84a782cc7852ac0d2fe15ad61ff3
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 8441bfe4c5d965733a40816ff2def1015f3eb79c
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106365095"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108084038"
 ---
-# <a name="id3dx10meshdrawsubset-method"></a>ID3DX10Mesh::D rawsubset-Methode
+# <a name="id3dx10meshdrawsubset-method"></a>ID3DX10Mesh::D rawSubset-Methode
 
-Zeichnet eine Teilmenge eines Mesh.
+Zeichnet eine Teilmenge eines Gitters.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,12 +40,12 @@ HRESULT DrawSubset(
 
 <dl> <dt>
 
-*Atungbid* \[ in\]
+*AttribId* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Gibt an, welche Teilmenge des Mesh gezeichnet werden soll. Dieser Wert wird verwendet, um Gesichter in einem Mesh als zu einer oder mehreren Attribut Gruppen gehörenden zu unterscheiden.
+Gibt an, welche Teilmenge des Gitters ge zeichnen werden soll. Dieser Wert wird verwendet, um Gesichter in einem Gitternetz als einer oder mehrere Attributgruppen zu unterscheiden.
 
 </dd> </dl>
 
@@ -53,24 +53,24 @@ Gibt an, welche Teilmenge des Mesh gezeichnet werden soll. Dieser Wert wird verw
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Der Rückgabewert ist einer der Werte, die in [Direct3D 10-Rückgabe Codes](d3d10-graphics-reference-returnvalues.md)aufgelistet sind.
+Der Rückgabewert ist einer der Unter [Direct3D 10-Rückgabecodes aufgeführten Werte.](d3d10-graphics-reference-returnvalues.md)
 
 ## <a name="remarks"></a>Bemerkungen
 
-Eine Attribut Tabelle wird verwendet, um Bereiche des Netzes zu identifizieren, die mit unterschiedlichen Texturen, renderzuständen, Materialien usw. gezeichnet werden müssen. Außerdem kann die Anwendung die Attribut Tabelle verwenden, um Teile eines Netzes auszublenden, indem beim Zeichnen des Frames kein angegebener Attribut Bezeichner (atungbid) gezeichnet wird.
+Eine Attributtabelle wird verwendet, um Bereiche des Gitters zu identifizieren, die mit unterschiedlichen Texturen, Renderzuständen, Materialien und so weiter gezeichnet werden müssen. Darüber hinaus kann die Anwendung die Attributtabelle verwenden, um Teile eines Gitters auszublenden, indem beim Zeichnen des Rahmens kein angegebener Attributbezeichner (AttribId) gezeichnunget wird.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx10. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>D3dx10. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>D3DX10.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

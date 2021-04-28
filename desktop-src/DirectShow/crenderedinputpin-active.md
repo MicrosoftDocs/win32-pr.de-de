@@ -1,7 +1,7 @@
 ---
-description: 'Die aktive Methode benachrichtigt die PIN, dass der Filter jetzt aktiv ist. Diese Methode überschreibt die cbasepin:: Active-Methode.'
+description: 'CRenderedInputPin.Active-Methode: Die Active-Methode benachrichtigt den Pin, dass der Filter jetzt aktiv ist. Diese Methode überschreibt die CBasePin::Active-Methode.'
 ms.assetid: e98ca947-df2f-41a7-9785-b35bd1dde1e6
-title: Crenderedinputpin. Active-Methode (amextra. h)
+title: CRenderedInputPin.Active-Methode (Amextra.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 9ae56439f5e19aa5c039ac81bdd8a7aafe0f2174
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: d8c9b06f41454d2cb9a7ac35dd7e8f8b335632f9
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106351362"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108098928"
 ---
-# <a name="crenderedinputpinactive-method"></a>Crenderedinputpin. Active-Methode
+# <a name="crenderedinputpinactive-method"></a>CRenderedInputPin.Active-Methode
 
-Die- `Active` Methode benachrichtigt die PIN, dass der Filter jetzt aktiv ist. Diese Methode überschreibt die [**cbasepin:: Active**](cbasepin-active.md) -Methode.
+Die `Active` -Methode benachrichtigt den Pin, dass der Filter jetzt aktiv ist. Diese Methode überschreibt die [**CBasePin::Active-Methode.**](cbasepin-active.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,24 +42,24 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt \_ bei Erfolg S OK oder andernfalls einen Fehlercode zurück.
+Gibt S \_ OK zurück, wenn erfolgreich, andernfalls ein Fehlercode.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amextra. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amextra.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Crenderedinputpin-Klasse**](crenderedinputpin.md)
+[**CRenderedInputPin-Klasse**](crenderedinputpin.md)
 </dt> </dl>
 
  

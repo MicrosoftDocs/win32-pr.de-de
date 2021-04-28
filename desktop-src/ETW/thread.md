@@ -1,5 +1,5 @@
 ---
-description: Diese Klasse ist die übergeordnete Klasse für Thread Ereignisse. Die folgende Syntax wird durch den MOF-Code vereinfacht.
+description: 'Threadklasse: Diese Klasse ist die übergeordnete Klasse für Threadereignisse. Die folgende Syntax wird durch MOF-Code vereinfacht.'
 ms.assetid: 0bf14240-3b8d-4eb5-b751-7b2e23b55762
 title: Thread-Klasse
 ms.topic: reference
@@ -12,18 +12,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: c4af87462607b675e46b3459a811925fbefe3ed5
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 121a8d4aa04017011648d80329ee02396582987a
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104218861"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108105528"
 ---
 # <a name="thread-class"></a>Thread-Klasse
 
-Diese Klasse ist die übergeordnete Klasse für Thread Ereignisse.
+Diese Klasse ist die übergeordnete Klasse für Threadereignisse.
 
-Die folgende Syntax wird durch den MOF-Code vereinfacht.
+Die folgende Syntax wird durch MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -36,37 +36,37 @@ class Thread : MSNT_SystemTrace
 
 ## <a name="members"></a>Member
 
-Die **Thread** Klasse definiert keine Member.
+Die **Thread-Klasse** definiert keine Member.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Um Thread Ereignisse in einer NT-Kernel Protokollierungs Sitzung zu aktivieren, geben Sie das **ereignisablaufverfolgungsflag \_ \_ \_ Thread** -Flag im **enableflags** -Member einer [**Ereignis Ablauf \_ Verfolgungs \_ Eigenschaften**](/windows/win32/api/evntrace/ns-evntrace-event_trace_properties) -Struktur beim Aufrufen der [**starttrace**](/windows/win32/api/evntrace/nf-evntrace-starttracea) -Funktion an.
+Um Threadereignisse in einer NT-Kernelprotokollierungssitzung zu aktivieren, geben Sie beim Aufrufen der [**StartTrace-Funktion**](/windows/win32/api/evntrace/nf-evntrace-starttracea) das **FLAG EVENT TRACE FLAG \_ \_ \_ THREAD** im **EnableFlags-Member** einer [**EVENT TRACE \_ \_ PROPERTIES-Struktur**](/windows/win32/api/evntrace/ns-evntrace-event_trace_properties) an.
 
-Ereignisablaufverfolgungs-Consumer können eine spezielle Verarbeitung für Thread Ereignisse implementieren, indem Sie die [**settracecallback**](/windows/win32/api/evntrace/nf-evntrace-settracecallback) -Funktion aufrufen und [**threadguid**](nt-kernel-logger-constants.md) als *pguid* -Parameter angeben. Verwenden Sie die folgenden Ereignis Typen, um das tatsächliche Thread Ereignis zu identifizieren, wenn Ereignisse verwendet werden.
+Ereignisverfolgungsverbraucher können eine spezielle Verarbeitung für Threadereignisse implementieren, indem sie die [**SetTraceCallback-Funktion**](/windows/win32/api/evntrace/nf-evntrace-settracecallback) aufrufen und [**ThreadGuid**](nt-kernel-logger-constants.md) als *pGuid-Parameter* angeben. Verwenden Sie die folgenden Ereignistypen, um das tatsächliche Threadereignis beim Verwenden von Ereignissen zu identifizieren.
 
 
 
 | Ereignistyp                                                      | BESCHREIBUNG                                                                                                                                                                                                                   |
 |-----------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Ereignis \_ Ablaufverfolgungstyp \_ \_ Ende**(Ereignistyp Wert ist 2)<br/>   | End Thread Ereignis. Die [**Thread \_ TypeGroup1**](thread-typegroup1.md) MOF-Klasse definiert die Ereignisdaten für dieses Ereignis.                                                                                                        |
-| **Ereignis \_ \_ \_ Start** Ablaufverfolgungstyp (Ereignistyp Wert ist 1)<br/> | Starten Sie das Thread Ereignis. Die [**Thread \_ TypeGroup1**](thread-typegroup1.md) MOF-Klasse definiert die Ereignisdaten für dieses Ereignis.                                                                                                      |
-| Ereignistyp Wert, 3                                             | Ereignis für Daten Sammlungs Thread starten. Listet Threads auf, die derzeit zum Zeitpunkt des Starts der Kernel Sitzung ausgeführt werden. Die [**Thread \_ TypeGroup1**](thread-typegroup1.md) MOF-Klasse definiert die Ereignisdaten für dieses Ereignis. |
-| Wert für Ereignistyp, 4                                             | Ereignis zum Beenden der Daten Sammlungs Thread. Listet Threads auf, die zurzeit ausgeführt werden, wenn die Kernel Sitzung beendet wird. Die [**Thread \_ TypeGroup1**](thread-typegroup1.md) MOF-Klasse definiert die Ereignisdaten für dieses Ereignis.     |
+| **EVENT \_ TRACE \_ TYPE \_ END**(Ereignistypwert ist 2)<br/>   | Endthreadereignis. Die [**\_ MOF-Klasse Thread TypeGroup1**](thread-typegroup1.md) definiert die Ereignisdaten für dieses Ereignis.                                                                                                        |
+| **EVENT \_ TRACE \_ TYPE \_ START**(Ereignistypwert ist 1)<br/> | Threadereignis starten. Die [**\_ MOF-Klasse Thread TypeGroup1**](thread-typegroup1.md) definiert die Ereignisdaten für dieses Ereignis.                                                                                                      |
+| Ereignistypwert, 3                                             | Starten des Datensammlungsthread-Ereignisses. Aufzählen von Threads, die derzeit zum Zeitpunkt des Starts der Kernelsitzung ausgeführt werden. Die [**\_ MOF-Klasse Thread TypeGroup1**](thread-typegroup1.md) definiert die Ereignisdaten für dieses Ereignis. |
+| Ereignistypwert, 4                                             | Enddatensammlungsthreadereignis. Listet Threads auf, die derzeit zum Zeitpunkt des Beendens der Kernelsitzung ausgeführt werden. Die [**MOF-Klasse Thread \_ TypeGroup1**](thread-typegroup1.md) definiert die Ereignisdaten für dieses Ereignis.     |
 
 
 
  
 
-Prozess-und Thread Start Ereignisse können im Kontext des übergeordneten Prozesses oder Threads protokolliert werden. Folglich entsprechen die **ProcessID** -und **ThreadId** -Member des [**Ereignis Ablauf \_ Verfolgungs \_ Headers**](/windows/win32/api/evntrace/ns-evntrace-event_trace_header) möglicherweise nicht dem Prozess und dem Thread, der erstellt wird. Aus diesem Grund enthalten diese Ereignisse die Prozess-und Thread Bezeichner in den Ereignisdaten (zusätzlich zu den in der Ereignis Kopfzeile).
+Prozess- und Threadstartereignisse können im Kontext des übergeordneten Prozesses oder Threads protokolliert werden. Daher entsprechen die **ProcessId-** und **ThreadId-Member** von [**EVENT TRACE \_ \_ HEADER**](/windows/win32/api/evntrace/ns-evntrace-event_trace_header) möglicherweise nicht dem Prozess und Thread, der erstellt wird. Aus diesem Grund enthalten diese Ereignisse die Prozess- und Threadbezeichner in den Ereignisdaten (zusätzlich zu denen im Ereignisheader).
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
@@ -74,19 +74,19 @@ Prozess-und Thread Start Ereignisse können im Kontext des übergeordneten Proze
 
 <dl> <dt>
 
-[**MSNT \_ systemtrace**](msnt-systemtrace.md)
+[**MSNT \_ SystemTrace**](msnt-systemtrace.md)
 </dt> <dt>
 
-[**Thread \_ TypeGroup1**](thread-typegroup1.md)
+[**\_ThreadtypGruppe1**](thread-typegroup1.md)
 </dt> <dt>
 
-[**Thread \_ v0**](thread-v0.md)
+[**Thread \_ V0**](thread-v0.md)
 </dt> <dt>
 
-[**Thread \_ v1**](thread-v1.md)
+[**Thread \_ V1**](thread-v1.md)
 </dt> <dt>
 
-[**Thread \_ v2**](thread-v2.md)
+[**Thread \_ V2**](thread-v2.md)
 </dt> </dl>
 
  

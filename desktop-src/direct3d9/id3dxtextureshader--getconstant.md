@@ -1,7 +1,7 @@
 ---
-description: Ruft eine Konstante ab, indem ihr Index gesucht wird.
+description: 'ID3DXTextureShader::GetConstant-Methode: Ruft eine Konstante ab, indem ihr Index gesucht wird.'
 ms.assetid: 7d3ab655-b50d-41ab-a4ca-c7b534e00e3f
-title: 'ID3DXTextureShader:: getconstant-Methode (D3DX9Shader. h)'
+title: ID3DXTextureShader::GetConstant-Methode (D3DX9Shader.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,14 +14,14 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 24f3f78d5970d5e3beda119ca40a565f45d0d950
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: edcc4b6a7f34c12be7013f2ae1e0b2e6d991a5d6
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106365335"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108117668"
 ---
-# <a name="id3dxtextureshadergetconstant-method"></a>ID3DXTextureShader:: getconstant-Methode
+# <a name="id3dxtextureshadergetconstant-method"></a>ID3DXTextureShader::GetConstant-Methode
 
 Ruft eine Konstante ab, indem ihr Index gesucht wird.
 
@@ -41,21 +41,21 @@ D3DXHANDLE GetConstant(
 
 <dl> <dt>
 
-*hconstant* \[ in\]
+*hConstant* \[ In\]
 </dt> <dd>
 
 Typ: **[D3DXHANDLE](dx9-graphics-reference-effects-constants.md)**
 
-Ein [handle](handles.md) für die übergeordnete Datenstruktur. Wenn die Konstante ein Parameter der obersten Ebene ist (es gibt keine übergeordnete Datenstruktur), verwenden Sie **null**.
+Ein [Handle](handles.md) für die übergeordnete Datenstruktur. Wenn die Konstante ein Parameter der obersten Ebene ist (es gibt keine übergeordnete Datenstruktur), verwenden Sie **NULL.**
 
 </dd> <dt>
 
-*Index* \[ in\]
+*Index* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-NULL basierter Index der Konstanten.
+Nullbasierter Index der Konstante.
 
 </dd> </dl>
 
@@ -63,24 +63,24 @@ NULL basierter Index der Konstanten.
 
 Typ: **[D3DXHANDLE](dx9-graphics-reference-effects-constants.md)**
 
-Gibt einen eindeutigen Bezeichner für die Konstante zurück.
+Gibt einen eindeutigen Bezeichner an die Konstante zurück.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Um eine Konstante von einem Array von Konstanten zu erhalten, verwenden Sie [**ID3DXTextureShader:: getconstantelements**](id3dxtextureshader--getconstantelement.md).
+Um eine Konstante aus einem Array von Konstanten zu erhalten, verwenden Sie [**ID3DXTextureShader::GetConstantElement**](id3dxtextureshader--getconstantelement.md).
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Shader. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>     |
+| Header<br/>  | <dl> <dt>D3DX9Shader.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

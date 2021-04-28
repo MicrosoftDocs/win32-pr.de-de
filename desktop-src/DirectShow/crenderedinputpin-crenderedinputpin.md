@@ -1,7 +1,7 @@
 ---
-description: Konstruktormethode.
+description: CRenderedInputPin.CRenderedInputPin-Konstruktor – Konstruktormethode.
 ms.assetid: bf335750-b776-47bc-978d-e84e8b5259f7
-title: Crenderedinputpin. crenderedinputpin-Konstruktor (amextra. h)
+title: CRenderedInputPin.CRenderedInputPin-Konstruktor (Amextra.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,14 +16,14 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: ee1ec8944d56d2aa6f46e59ac5034969ca77ea19
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 4bd8e864531604fb36c2abe0bcd57ac5b3a9c869
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106366743"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108085398"
 ---
-# <a name="crenderedinputpincrenderedinputpin-constructor"></a>Crenderedinputpin. crenderedinputpin-Konstruktor
+# <a name="crenderedinputpincrenderedinputpin-constructor"></a>CRenderedInputPin.CRenderedInputPin-Konstruktor
 
 Konstruktormethode.
 
@@ -46,38 +46,38 @@ CRenderedInputPin(
 
 <dl> <dt>
 
-*pobjectname* 
+*pObjectName* 
 </dt> <dd>
 
-Zeichenfolge, die den debugnamen des-Objekts enthält. Weitere Informationen finden Sie unter [**cbaseobject-Klasse**](cbaseobject.md).
+Eine Zeichenfolge, die den Debugnamen des Objekts enthält. Weitere Informationen finden Sie unter [**CBaseObject-Klasse**](cbaseobject.md).
 
 </dd> <dt>
 
 *pFilter* 
 </dt> <dd>
 
-Zeiger auf den Filter, der diese Pin erstellt hat.
+Zeiger auf den Filter, der diesen Pin erstellt hat.
 
 </dd> <dt>
 
 *Plock* 
 </dt> <dd>
 
-Zeiger auf eine [**ccritsec**](ccritsec.md) -Sperre, mit der Zustandsänderungen serialisiert werden. Dabei kann es sich um denselben kritischen Abschnitt handeln wie die Filter Sperre, [**cbasefilter:: m \_ Plock**](cbasefilter-m-plock.md).
+Zeiger auf eine [**CCritSec-Sperre,**](ccritsec.md) die zum Serialisieren von Zustandsänderungen verwendet wird. Dies kann derselbe kritische Abschnitt wie die Filtersperre [**CBaseFilter::m \_ pLock sein.**](cbasefilter-m-plock.md)
 
 </dd> <dt>
 
-*PHR* 
+*Phr* 
 </dt> <dd>
 
-Ein Zeiger auf eine Variable, die einen **HRESULT** -Wert empfängt, der angibt, ob die Methode erfolgreich war oder fehlgeschlagen ist.
+Zeiger auf eine Variable, die einen **HRESULT-Wert** empfängt, der den Erfolg oder Fehler der Methode angibt.
 
 </dd> <dt>
 
 *pName* 
 </dt> <dd>
 
-Breit Zeichen-Zeichenfolge, die den Pin-Namen (auch als PIN-Bezeichner verwendet) enthält.
+Breitzeichenfolge mit dem Pinnamen (wird auch als Pinbezeichner verwendet).
 
 </dd> </dl>
 
@@ -85,18 +85,18 @@ Breit Zeichen-Zeichenfolge, die den Pin-Namen (auch als PIN-Bezeichner verwendet
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amextra. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amextra.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Crenderedinputpin-Klasse**](crenderedinputpin.md)
+[**CRenderedInputPin-Klasse**](crenderedinputpin.md)
 </dt> </dl>
 
  

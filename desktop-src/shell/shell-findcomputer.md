@@ -1,26 +1,14 @@
 ---
-description: 'Zeigt das Dialogfeld Suchergebnisse: Computer an. Im Dialogfeld wird das Ergebnis der Suche nach einem angegebenen Computer angezeigt.'
-ms.assetid: 0304b955-afde-4de4-824a-9ec9c9530360
-title: Shell. findcomputer-Methode (Shldisp. h)
-ms.topic: reference
-ms.date: 05/31/2018
-topic_type:
+description: Shell.FindComputer-Methode: Zeigt das Dialogfeld Suchergebnisse: Computer an. Im Dialogfeld wird das Ergebnis der Suche nach einem angegebenen Computer angezeigt."
+ms.assetid: 0304b955-afde-4de4-824a-9ec9c9530360 title: Shell.FindComputer method (Shldisp.h) ms.topic: reference ms.date: 05/31/2018 topic_type: 
 - APIRef
-- kbSyntax
-api_name:
-- Shell.FindComputer
-api_type:
-- COM
-api_location:
+- kbSyntax api_name: 
+- Shell.FindComputer api_type: 
+- COM-api_location: 
 - Shell32.dll
-ms.openlocfilehash: 3824eeb98bfac11e007d1bf7dd9f89153a7b73ba
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
-ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104980641"
 ---
-# <a name="shellfindcomputer-method"></a>Shell. findcomputer-Methode
+
+# <a name="shellfindcomputer-method"></a>Shell.FindComputer-Methode
 
 Zeigt das Dialogfeld **Suchergebnisse: Computer** an. Im Dialogfeld wird das Ergebnis der Suche nach einem angegebenen Computer angezeigt.
 
@@ -57,9 +45,9 @@ Diese Methode gibt keinen Wert zurück.
 
 ## <a name="examples"></a>Beispiele
 
-Das folgende Beispiel zeigt, wie **findcomputer** verwendet wird. Das Ergebnis dieses Codes ist das gleiche wie beim Drücken der **Start** Schaltfläche, beim Klicken auf **Suchen**, beim Klicken auf die Option **Drucker, Computer oder Personen** und anschließendes Klicken **auf einen Computer im Netzwerk**. Die richtige Verwendung wird für JScript, VBScript und Visual Basic angezeigt.
+Das folgende Beispiel zeigt die Verwendung von **FindComputer.** Das Ergebnis dieses Codes entspricht dem Drücken der Schaltfläche **Start,** klicken Sie auf **Suchen**, klicken Sie auf die Option **Drucker, Computer oder Personen, und** klicken Sie dann **auf Ein Computer im Netzwerk.** Die richtige Verwendung wird für JScript, VBScript und Visual Basic angezeigt.
 
-JScript
+Jscript:
 
 
 ```JScript
@@ -75,7 +63,7 @@ JScript
 
 
 
-VBScript
+Vbscript:
 
 
 ```VB
@@ -111,23 +99,23 @@ End Sub
 
 
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, Windows XP \[ Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, nur Windows \[ XP-Desktop-Apps\]<br/>                                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                           |
-| Header<br/>                   | <dl> <dt>Shldisp. h</dt> </dl>                           |
-| IDL<br/>                      | <dl> <dt>Shldisp. idl</dt> </dl>                         |
-| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4,71 oder höher)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>                           |
+| Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                         |
+| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4.71 oder höher)</dt> </dl> |
 
 
 
- 
+ 
 
- 
+ 
 
 
 

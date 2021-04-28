@@ -1,7 +1,7 @@
 ---
-description: 'Die settimeformat-Methode legt das Zeitformat fest. Diese Methode implementiert die imediaseeking:: settimeformat-Methode.'
+description: 'CSourceSeeking.SetTimeFormat-Methode: Die SetTimeFormat-Methode legt das Zeitformat fest. Diese Methode implementiert die IMediaSeeking::SetTimeFormat-Methode.'
 ms.assetid: dbc7c950-8cc2-4f8e-adfa-8f5cdc1b56c7
-title: Csourceseeking. settimeformat-Methode (ctlutil. h)
+title: CSourceSeeking.SetTimeFormat-Methode (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 61ab0cdf7c954e0fa5f370127f00529bb9ef7b16
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: fdb3889ecfa5bdcd49b4054822a2b2d09df58fa6
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364497"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108085198"
 ---
-# <a name="csourceseekingsettimeformat-method"></a>Csourceseeking. settimeformat-Methode
+# <a name="csourceseekingsettimeformat-method"></a>CSourceSeeking.SetTimeFormat-Methode
 
-Die- `SetTimeFormat` Methode legt das Zeitformat fest. Diese Methode implementiert die [**imediaseeking:: settimeformat**](/windows/desktop/api/Strmif/nf-strmif-imediaseeking-settimeformat) -Methode.
+Die `SetTimeFormat` -Methode legt das Zeitformat fest. Diese Methode implementiert die [**IMediaSeeking::SetTimeFormat-Methode.**](/windows/desktop/api/Strmif/nf-strmif-imediaseeking-settimeformat)
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,24 +42,24 @@ HRESULT SetTimeFormat(
 
 <dl> <dt>
 
-*pformat* 
+*pFormat* 
 </dt> <dd>
 
-Zeiger auf eine Zeitformat-GUID. Siehe [**Zeit Format-GUIDs**](time-format-guids.md).
+Zeiger auf eine GUID im Zeitformat. Weitere Informationen finden Sie unter [**Zeitformat-GUIDs.**](time-format-guids.md)
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen der **HRESULT** -Werte zurück, die in der folgenden Tabelle aufgeführt sind.
+Gibt einen der in der folgenden Tabelle aufgeführten **HRESULT-Werte** zurück.
 
 
 
 | Rückgabecode                                                                                  | Beschreibung                                   |
 |----------------------------------------------------------------------------------------------|-----------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>         | Erfolg.<br/>                           |
-| <dl> <dt>**E \_ invalidArg**</dt> </dl> | Das angegebene Format wird nicht unterstützt.<br/> |
-| <dl> <dt>**E- \_ Zeiger**</dt> </dl>    | **Null** -Zeigerargument.<br/>         |
+| <dl> <dt>**E \_ INVALIDARG**</dt> </dl> | Das angegebene Format wird nicht unterstützt.<br/> |
+| <dl> <dt>**E \_ POINTER**</dt> </dl>    | **NULL-Zeigerargument.**<br/>         |
 
 
 
@@ -67,24 +67,24 @@ Gibt einen der **HRESULT** -Werte zurück, die in der folgenden Tabelle aufgefü
 
 ## <a name="remarks"></a>Bemerkungen
 
-Das einzige von der Basisklasse unterstützte Zeitformat ist die Zeit \_ Format \_ Medien \_ Zeit (100-Nanosecond-Einheiten).
+Das einzige zeitformat, das von der Basisklasse unterstützt wird, ist TIME FORMAT MEDIA TIME (Einheiten von \_ \_ \_ 100 Nanosekunden).
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Csourceseeking-Klasse**](csourceseeking.md)
+[**CSourceSeeking-Klasse**](csourceseeking.md)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
-description: Beschreibt eine Schnittmenge an Ray-Dreiecks.
+description: 'D3DX10_INTERSECT_INFO-Struktur: Beschreibt eine Schnittmenge von Strahldreiecken.'
 ms.assetid: 21658b74-6f1d-4a16-a8b3-0c7bb6edf899
-title: D3DX10_INTERSECT_INFO-Struktur (d3dx10. h)
+title: D3DX10_INTERSECT_INFO-Struktur (D3DX10.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - D3DX10.h
-ms.openlocfilehash: 87490e734299cba57952bb43d1ee4ffad8e014c8
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 203daa48e766edd545bf232c4f8d94c4f17b5b2a
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103762114"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108105458"
 ---
-# <a name="d3dx10_intersect_info-structure"></a>D3dx10 \_ Intersect- \_ Informationsstruktur
+# <a name="d3dx10_intersect_info-structure"></a>D3DX10 \_ INTERSECT \_ INFO-Struktur
 
-Beschreibt eine Schnittmenge an Ray-Dreiecks.
+Beschreibt eine Schnittmenge eines Strahldreiecks.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,10 +42,10 @@ typedef struct D3DX10_INTERSECT_INFO {
 
 <dl> <dt>
 
-**Fakeidex**
+**FaceIndex**
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
@@ -56,51 +56,51 @@ Index des Dreiecks, das auf den Strahl trifft.
 **U**
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Die barzentrische Koordinate innerhalb des Dreiecks, an dem sich der Strahl schneidet.
+Barycentric-Koordinate innerhalb des Dreiecks, in dem sich der Strahl überschneidet.
 
 </dd> <dt>
 
 **B**
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Die barzentrische Koordinate innerhalb des Dreiecks, an dem sich der Strahl schneidet.
+Barycentric-Koordinate innerhalb des Dreiecks, in dem sich der Strahl überschneidet.
 
 </dd> <dt>
 
-**Dirigent**
+**Dist**
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Abstand entlang des Strahls, an dem die Schnittmenge aufgetreten ist.
+Abstand entlang des Strahls, in dem die Schnittmenge aufgetreten ist.
 
 </dd> </dl>
 
 ## <a name="remarks"></a>Bemerkungen
 
-In den Scheitel Punkten des Dreiecks wird ein Punkt innerhalb eines Dreiecks definiert. Eine ausführlichere Beschreibung von baryzentrischen Koordinaten finden Sie in [der Beschreibung von mathworld in der Beschreibung der baryzentrierten Koordinaten](https://mathworld.wolfram.com/BarycentricCoordinates.html).
+Barycentric-Koordinaten definieren einen Punkt innerhalb eines Dreiecks in Bezug auf die Scheitelpunkte des Dreiecks. Eine ausführlichere Beschreibung der baryzentrischen Koordinaten finden Sie unter [Mathworld es Barycentric Coordinates Description](https://mathworld.wolfram.com/BarycentricCoordinates.html).
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------|-------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3dx10. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3DX10.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

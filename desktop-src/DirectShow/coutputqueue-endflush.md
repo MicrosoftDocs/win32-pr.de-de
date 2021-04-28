@@ -1,7 +1,7 @@
 ---
-description: Die endflush-Methode beendet einen Löschvorgang.
+description: 'COutputQueue.EndFlush-Methode: Die EndFlush-Methode beendet einen Leerungsvorgang.'
 ms.assetid: 9171a62a-9072-49a3-8e83-f66d7e1483da
-title: Coutputqueue. endflush-Methode (outputq. h)
+title: COutputQueue.EndFlush-Methode (Outputq.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: e18afec866176147c5c75a57fca522c4ebc5fcf6
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 37701526de66c8cd679f6849703c4eb2a1feb3ee
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106359663"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108099008"
 ---
-# <a name="coutputqueueendflush-method"></a>Coutputqueue. endflush-Methode
+# <a name="coutputqueueendflush-method"></a>COutputQueue.EndFlush-Methode
 
-Die- `EndFlush` Methode beendet einen Löschvorgang.
+Die `EndFlush` -Methode beendet einen Leerungsvorgang.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,24 +46,24 @@ Diese Methode gibt keinen Wert zurück.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Wenn das Objekt einen Thread verwendet, wartet diese Methode auf das [**coutputqueue:: m \_ evflushcomplete**](coutputqueue-m-evflushcomplete.md) -Ereignis. Der Thread signalisiert dieses Ereignis, nachdem alle ausstehenden Stichproben freigegeben wurden. Wenn das Objekt keinen Thread verwendet, ruft diese Methode die [**coutputqueue:: freesamples**](coutputqueue-freesamples.md) -Methode auf. Dann ruft die- `EndFlush` Methode die [**IPin:: endflush**](/windows/desktop/api/Strmif/nf-strmif-ipin-endflush) -Methode für die Eingabe-PIN auf.
+Wenn das Objekt einen Thread verwendet, wartet diese Methode auf das [**Ereignis COutputQueue::m \_ evFlushComplete.**](coutputqueue-m-evflushcomplete.md) Der Thread signalisiert dieses Ereignis, nachdem alle ausstehenden Stichproben frei gegeben wurden. Wenn das Objekt keinen Thread verwendet, ruft diese Methode die [**COutputQueue::FreeSamples-Methode**](coutputqueue-freesamples.md) auf. Anschließend ruft die `EndFlush` -Methode die [**IPin::EndFlush-Methode**](/windows/desktop/api/Strmif/nf-strmif-ipin-endflush) auf dem Eingabepin auf.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Outputq. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Outputq.h (einschließlich Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Coutputqueue-Klasse**](coutputqueue.md)
+[**COutputQueue-Klasse**](coutputqueue.md)
 </dt> </dl>
 
  

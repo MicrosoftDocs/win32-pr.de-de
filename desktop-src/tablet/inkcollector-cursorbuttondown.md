@@ -1,19 +1,19 @@
 ---
-description: Tritt auf, wenn die InkCollector-Klasse eine nicht herunter gebrannte Cursor Schaltfläche erkennt.
+description: 'InkCollector.CursorButtonDown-Ereignis: Tritt auf, wenn die InkCollector-Klasse eine schaltfläche erkennt, die heruntergefahren ist.'
 ms.assetid: 65e7f68b-f911-4634-b850-178eb6eaf86e
-title: InkCollector. currsorbuttondown-Ereignis (msink AUT. h)
+title: InkCollector.CursorButtonDown-Ereignis (Msinkaut.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e3994782d1266af5060bad28dd2221fe1ba18874
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: bd1a820445a1ba3ed07dad8a22a11ad86e8da96f
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104343299"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108110328"
 ---
-# <a name="inkcollectorcursorbuttondown-event"></a>InkCollector. currsorbuttondown-Ereignis
+# <a name="inkcollectorcursorbuttondown-event"></a>InkCollector.CursorButtonDown-Ereignis
 
-Tritt auf, wenn die [**InkCollector-Klasse**](inkcollector-class.md) eine nicht herunter gebrannte Cursor Schaltfläche erkennt.
+Tritt ein, wenn [**die InkCollector-Klasse**](inkcollector-class.md) eine Cursorschaltfläche erkennt, die nicht mehr angezeigt wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -31,14 +31,14 @@ void CursorButtonDown(
 
 <dl> <dt>
 
-*Cursor* \[ in\]
+*Cursor* \[ In\]
 </dt> <dd>
 
-Das [**iinkcursor**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkcursor) -Objekt, das das **CursorButtonDown** -Ereignis generiert hat.
+Das [**IInkCursor-Objekt,**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkcursor) das das **CursorButtonDown-Ereignis generiert** hat.
 
 </dd> <dt>
 
-*Schaltfläche* \[ in\]
+*Schaltfläche* \[ In\]
 </dt> <dd>
 
 Die Schaltfläche, die gedrückt wurde.
@@ -51,42 +51,42 @@ Dieses Ereignis gibt keinen Wert zurück.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Eine Schaltfläche auf einer Stift Spitze ist nicht mehr angezeigt, wenn der Benutzer den Stift auf den Digitalisierer senkt und die Ablauf Verfolgung für einen Strich startet. Wenn die Schaltfläche gedrückt wird, wird eine Schaltfläche auf einem Fass heruntergedrückt.
+Eine Schaltfläche auf einer Stiftspitze ist nach unten, wenn der Benutzer den Stift auf den Digitizer heruntersendt und mit der Ablaufverfolgung eines Strichs beginnt. Wenn die Schaltfläche gedrückt wird, ist eine Schaltfläche auf einer Knopffläche nicht mehr zu sehen.
 
-Wenn Sie mit der rechten Maustaste auf die Rechte Maustaste klicken, erhalten Sie tatsächlich zwei **Cursor buttondown** -Ereignisse: einen für die Rechte Taste gedrückt und einen für die linke Schaltfläche.
+Wenn Sie die rechte Maustaste drücken, erhalten Sie tatsächlich zwei **CursorButtonDown-Ereignisse** : eines für die gedrückte rechte Schaltfläche und eines für die linke Schaltfläche.
 
-Diese Ereignismethode wird in den \_ Schnittstellen iinkcollectorevents, \_ iinkoverlayevents und \_ iinkpictureevents Dispatch-only (Dispinterfaces) mit der ID DISPID \_ icecursorbuttondown definiert.
+Diese Ereignismethode wird in den \_ Dispatch-Schnittstellen IInkCollectorEvents, \_ IInkOverlayEvents und \_ IInkPictureEvents (dispinterfaces) mit der ID DISPID \_ ICECursorButtonDown definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                       |
+| Unterstützte Mindestversion (Client)<br/> | Nur Desktop-Apps für Windows XP Tablet PC \[ Edition\]<br/>                                                       |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                           |
-| Header<br/>                   | <dl> <dt>Msink AUT. h (erfordert auch msink AUT \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Msinkaut.h (erfordert auch Msinkaut \_ i.c)</dt> </dl> |
 | Bibliothek<br/>                  | <dl> <dt>InkObj.dll</dt> </dl>                               |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**InkCollector-Klasse**](inkcollector-class.md)
 </dt> <dt>
 
-[**Ereignis "Cursor"**](inkcollector-cursordown.md)
+[**CursorDown-Ereignis**](inkcollector-cursordown.md)
 </dt> <dt>
 
-[**Currsorbuttonup-Ereignis**](inkcollector-cursorbuttonup.md)
+[**CursorButtonUp-Ereignis**](inkcollector-cursorbuttonup.md)
 </dt> <dt>
 
-[**Iinkcursor-Schnittstelle**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkcursor)
+[**IInkCursor-Schnittstelle**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkcursor)
 </dt> <dt>
 
-[**Iinkcursor Button-Schnittstelle**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkcursorbutton)
+[**IInkCursorButton-Schnittstelle**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkcursorbutton)
 </dt> </dl>
 
  

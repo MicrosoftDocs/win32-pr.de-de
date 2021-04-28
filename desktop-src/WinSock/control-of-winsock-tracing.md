@@ -1,134 +1,134 @@
 ---
-description: .
+description: Steuerung der Winsock-Ablaufverfolgung
 ms.assetid: b079bdfc-b192-451c-967d-dcefa94b7ec7
-title: Kontrolle über die Winsock-Ablauf Verfolgung
+title: Steuerung der Winsock-Ablaufverfolgung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 910b15ece4581525fddc25213c630e24d0e49110
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 75f256c4e3927672bc13b14bfb72ca3b02c22bde
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106356760"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108110548"
 ---
-# <a name="control-of-winsock-tracing"></a>Kontrolle über die Winsock-Ablauf Verfolgung
+# <a name="control-of-winsock-tracing"></a>Steuerung der Winsock-Ablaufverfolgung
 
-Die Winsock-Ablauf Verfolgung kann mit einer der folgenden Methoden gesteuert werden:
+Die Winsock-Ablaufverfolgung kann mit einer der folgenden Methoden gesteuert werden:
 
 -   Befehlszeilentools
 
-    In Windows Vista und Windows Server 2008 sind zwei Befehlszeilen Tools enthalten, mit denen die Ablauf Verfolgung gesteuert und die Binärdatei für die Ablauf Verfolgungs Protokolle in lesbaren Text konvertiert wird.
+    In Windows Vista und Windows Server 2008 sind zwei Befehlszeilentools enthalten, mit denen die Ablaufverfolgung kontrolliert und die binäre Ablaufverfolgungsprotokolldatei in lesbaren Text konvertiert wird.
 
-    Das **logman.exe** Tool wird verwendet, um die Winsock-Ablauf Verfolgung zu starten oder zu starten.
+    Das **logman.exe** Tool wird verwendet, um die Winsock-Ablaufverfolgung zu starten oder zu beenden.
 
-    Das **tracerpt.exe** Tool wird verwendet, um die Binärdatei der Ablauf Verfolgungs Protokolle in eine lesbare Textdatei zu konvertieren.
+    Das **tracerpt.exe** Tool wird verwendet, um die binäre Ablaufverfolgungsprotokolldatei in eine lesbare Textdatei zu konvertieren.
 
 -   Ereignisanzeige
 
-    Der Ereignisanzeige unter Windows Vista und höher kann auch verwendet werden, um die Winsock-Ablauf Verfolgung zu aktivieren. Der Ereignisanzeige ist unter den Verwaltungs Tools über das Startmenü verfügbar.
+    Die Ereignisanzeige unter Windows Vista und höher kann auch verwendet werden, um die Winsock-Ablaufverfolgung zu aktivieren. Der Ereignisanzeige ist über die Verwaltungstools über die Startmenü.
 
 ## <a name="using-logman-and-tracert"></a>Verwenden von logman und tracert
 
-Die Winsock-Netzwerk Ereignis Ablauf Verfolgung ist unter Windows Vista und höher standardmäßig deaktiviert.
+Die Winsock-Netzwerkereignisablaufverfolgung ist unter Windows Vista und höher standardmäßig deaktiviert.
 
-Der folgende Befehl startet die Winsock-Netzwerk Ereignis Ablauf Verfolgung auf einem Computer, legt den Namen der Ereignis Ablauf Verfolgungs Sitzung auf mywinsocksession fest und sendet die Ausgabe an eine binäre Protokolldatei mit dem Namen winsocklogfile. ETL:
+Der folgende Befehl startet die Winsock-Netzwerkereignisablaufverfolgung auf einem Computer, legt den Namen der Ereignisablaufverfolgungssitzung auf mywinsocksession fest und sendet die Ausgabe an eine binäre Protokolldatei namens winsocklogfile.etl:
 
-**logman start-ETs mywinsocksession-o winsocklogfile. ETL-p Microsoft-Windows-Winsock-AFD**
+**logman start -ets mywinsocksession -o winsocklogfile.etl -p Microsoft-Windows-Winsock-AFD**
 
-Protokolldateien werden im aktuellen Verzeichnis mit Dateinamen in der Form winsocklogfile \_ 000001. etl erstellt.
+Protokolldateien werden im aktuellen Verzeichnis mit Dateinamen im Format winsocklogfile \_ 000001.etl erstellt.
 
-Mit dem folgenden Befehl wird die obige Winsock-Ablauf Verfolgung auf einem Computer für die Sitzung mit dem Namen "mywinsocksession" beendet:
+Der folgende Befehl beendet die oben genannte Winsock-Ablaufverfolgung auf einem Computer für die Sitzung namens mywinsocksession:
 
-**logman beendet-ETS mywinsocksession**
+**logman stop -ets mywinsocksession**
 
-Eine binäre Protokolldatei wird an den Speicherort geschrieben, der durch den – o-Parameter angegeben wird. Wenn die Binärdatei in eine lesbare Textdatei übersetzt werden soll, wird **tracerpt.exe** verwendet:
+Eine binäre Protokolldatei wird an den vom -o-Parameter angegebenen Speicherort geschrieben. Um die Binärdatei in eine lesbare Textdatei zu **übersetzen,** tracerpt.exeverwendet:
 
-**tracerpt.exe <Namen der ETL-Datei> – o winsocktracelog.txt**
+**tracerpt.exe <Namen der ETL-Datei> -o winsocktracelog.txt**
 
-Wenn eine Ausgabedatei, die XML anstelle von Klartext enthält, bevorzugt wird, wird der folgende Befehl verwendet:
+Wenn eine Ausgabedatei bevorzugt wird, die xml anstelle von Nur-Text enthält, wird der folgende Befehl verwendet:
 
-**tracerpt.exe <Namen der ETL-Datei> – o winsocktracelog.xml – von XML**
+**tracerpt.exe <Name der ETL-Datei> –o winsocktracelog.xml –von xml**
 
-Die Änderungs Ablauf Verfolgung für den Winsock-Katalog ist unter Windows Vista und höher standardmäßig aktiviert.
+Die Ablaufverfolgung für Winsock-Katalogänderungen ist unter Windows Vista und höher standardmäßig aktiviert.
 
 > [!Note]  
-> Mehrstufige Dienstanbieter sind veraltet. Ab Windows 8 und Windows Server 2012 verwenden Sie die [Windows-Filter Plattform](../fwp/windows-filtering-platform-start-page.md).
+> Mehrstufige Dienstanbieter sind veraltet. Verwenden Sie ab Windows 8 und Windows Server 2012 [die Windows-Filterplattform](../fwp/windows-filtering-platform-start-page.md).
 
  
 
-Der folgende Befehl startet die Änderungs Ablauf Verfolgung für den Winsock-Katalog für mehrstufige Dienstanbieter (LSPs) auf einem Computer, legt den Namen der Ereignis Ablauf Verfolgungs Sitzung auf mywinsockcatalogsession fest und sendet die Ausgabe an eine binäre Protokolldatei mit dem Namen winsockcataloglogfile. ETL:
+Der folgende Befehl startet die Ablaufverfolgung für Winsock Catalog Change für mehrstufige Dienstanbieter (LSPs) auf einem Computer, legt den Namen der Ereignisablaufverfolgungssitzung auf mywinsockcatalogsession fest und sendet die Ausgabe an eine binäre Protokolldatei namens winsockcataloglogfile.etl:
 
-**logman start-ETs mywinsockcatalogsession-o winsockcataloglogfile. ETL-p Microsoft-Windows-Winsock-WS2HELP**
+**logman start -ets mywinsockcatalogsession -o winsockcataloglogfile.etl -p Microsoft-Windows-Winsock-WS2HELP**
 
-Protokolldateien werden im aktuellen Verzeichnis mit Dateinamen in der Form winsockcataloglogfile \_ 000001. etl erstellt.
+Protokolldateien werden im aktuellen Verzeichnis mit Dateinamen im Format winsockcataloglogfile \_ 000001.etl erstellt.
 
-Mit dem folgenden Befehl wird die obige Winsock-Ablauf Verfolgung auf einem Computer für die Sitzung mit dem Namen "MySession" beendet:
+Mit dem folgenden Befehl wird die oben genannte Winsock-Ablaufverfolgung auf einem Computer für die Sitzung mysession beendet:
 
-**logman beendet-ETS mywinsockcatalogsession**
+**logman stop -ets mywinsockcatalogsession**
 
-Eine binäre Protokolldatei wird an den Speicherort geschrieben, der durch den – o-Parameter angegeben wird. Wenn die Binärdatei in eine lesbare Textdatei übersetzt werden soll, wird **tracerpt.exe** verwendet:
+Eine binäre Protokolldatei wird an den Speicherort geschrieben, der durch den -o-Parameter angegeben wird. Um die Binärdatei in eine lesbare Textdatei zu übersetzen, **wirdtracerpt.exe** verwendet:
 
-**tracerpt.exe <Namen der ETL-Datei> – o winsockcatalogtracelog.txt**
+**tracerpt.exe <Name der ETL-Datei> –o winsockcatalogtracelog.txt**
 
-Wenn eine Ausgabedatei, die XML anstelle von Klartext enthält, bevorzugt wird, wird der folgende Befehl verwendet:
+Wenn eine Ausgabedatei bevorzugt wird, die xml anstelle von Nur-Text enthält, wird der folgende Befehl verwendet:
 
-**tracerpt.exe <Namen der ETL-Datei> – o winsockcatalogtracelog.xml – von XML**
+**tracerpt.exe <Name der ETL-Datei> –o winsockcatalogtracelog.xml –von xml**
 
-## <a name="using-event-viewer-to-start-winsock-network-event-tracing"></a>Verwenden von Ereignisanzeige zum Starten der Winsock-Netzwerk Ereignis Ablauf Verfolgung
+## <a name="using-event-viewer-to-start-winsock-network-event-tracing"></a>Verwenden von Ereignisanzeige zum Starten der Winsock-Netzwerkereignisablaufverfolgung
 
-Wenn Sie Ereignisanzeige öffnen, enthält der linke Bereich die Liste der Ereignisse. Öffnen Sie **Anwendungs-und Dienst Protokolle** , und navigieren Sie zum **Microsoft \\ Windows \\ Winsock-Netzwerk Ereignis** als Quelle, und wählen Sie **Operational** aus.
+Wenn Sie Ereignisanzeige öffnen, enthält der linke Bereich die Liste der Ereignisse. Öffnen Sie **Anwendungs- und Dienstprotokolle,** navigieren Sie zu **Microsoft Windows \\ \\ Winsock Network Event** als Quelle, und wählen Sie **Betriebsbereit** aus.
 
-Wählen Sie im Aktionsbereich die Option **Protokoll Eigenschaften** aus, und aktivieren Sie das Kontrollkästchen **Protokollierung aktivieren** . Wenn die Protokollierung aktiviert ist, können Sie auch die Größe der Protokolldatei ändern, wenn dies erforderlich ist.
+Wählen Sie im Bereich Aktion die Option **Protokolleigenschaften** aus, und aktivieren Sie das Kontrollkästchen **Protokollierung aktivieren.** Sobald die Protokollierung aktiviert ist, können Sie bei Bedarf auch die Größe der Protokolldatei ändern.
 
-Die Winsock-Netzwerk Ereignis Ablauf Verfolgung ist nun aktiviert, und Sie müssen nur noch die Aktualisierungs Aktion ausführen, um die Liste der protokollierten Ereignisse zu aktualisieren. Deaktivieren Sie einfach das Optionsfeld, um die Protokollierung zu deaktivieren.
+Die Winsock-Netzwerkereignisablaufverfolgung ist jetzt aktiviert, und Sie müssen lediglich die Aktion Aktualisieren drücken, um die Liste der protokollierten Ereignisse zu aktualisieren. Deaktivieren Sie einfach das gleiche Optionsfeld, um die Protokollierung zu beenden.
 
-Abhängig von der Anzahl der Ereignisse, die Sie anzeigen möchten, müssen Sie möglicherweise die Größe des Protokolls erhöhen. Ein Nachteil bei der Verwendung des Ereignisanzeige für die Winsock-Ablauf Verfolgung besteht darin, dass nicht alle Zeichen folgen Ressourcen geladen werden, sodass die Nachrichten, die im Beschreibungsfeld angezeigt werden (nachdem Sie ein Ereignis ausgewählt haben), manchmal schwer lesbar sind (ein Argument, das als Hex formatiert werden sollte, wird beispielsweise in Dezimalform angezeigt). Sie können jedoch die Registerkarte **Details** in der Ereignis Beschreibung auswählen, die den unformatierten XML-Protokolleintrag anzeigt, der in der Regel leichter zu verstehen ist.
+Möglicherweise müssen Sie die Protokollgröße erhöhen, je nachdem, wie viele Ereignisse Sie anzeigen möchten. Ein Nachteil der Verwendung des Ereignisanzeige für die Winsock-Ablaufverfolgung besteht darin, dass nicht alle Zeichenfolgenressourcen geladen werden, sodass die im Feld Beschreibung angezeigten Meldungen (nachdem Sie ein Ereignis ausgewählt haben) manchmal schwer zu lesen sind (ein Argument, das als hexadezimal formatiert werden soll, wird z. B. als Dezimalzahl angezeigt). Sie können jedoch die Registerkarte **Details** in der Ereignisbeschreibung auswählen, die den unformatierten XML-Protokolleintrag anzeigt, der in der Regel einfacher zu verstehende Argumente enthält.
 
-## <a name="using-event-viewer-to-start-winsock-catalog-change-tracing"></a>Verwenden von Ereignisanzeige zum Starten der Ablauf Verfolgung der Winsock-Katalog Änderung
+## <a name="using-event-viewer-to-start-winsock-catalog-change-tracing"></a>Verwenden von Ereignisanzeige zum Starten der Winsock-Katalogänderungsablaufverfolgung
 
-Wenn Sie Ereignisanzeige öffnen, enthält der linke Bereich die Liste der Ereignisse. Öffnen Sie **Anwendungs-und Dienst Protokolle** , und navigieren Sie zu **Microsoft \\ Windows \\ Winsock Catalog Change** als Quelle, und wählen Sie **Operational** aus.
+Wenn Sie Ereignisanzeige öffnen, enthält der linke Bereich die Liste der Ereignisse. Öffnen Sie **Anwendungs- und Dienstprotokolle,** navigieren Sie zu **Microsoft Windows \\ Winsock Catalog Change (Microsoft Windows \\ Winsock-Katalogänderung)** als Quelle, und wählen Sie **Operational (Betriebsbereit)** aus.
 
-Wählen Sie im Aktionsbereich die Option **Protokoll Eigenschaften** aus, und aktivieren Sie das Kontrollkästchen **Protokollierung aktivieren** . Wenn die Protokollierung aktiviert ist, können Sie auch die Größe der Protokolldatei ändern, wenn dies erforderlich ist.
+Wählen Sie im Bereich Aktion die Option **Protokolleigenschaften** aus, und aktivieren Sie das Kontrollkästchen **Protokollierung aktivieren.** Sobald die Protokollierung aktiviert ist, können Sie bei Bedarf auch die Größe der Protokolldatei ändern.
 
-Die Änderungs Ablauf Verfolgung für den Winsock-Katalog ist jetzt aktiviert, und Sie müssen nur noch die Aktualisierungs Aktion ausführen, um die Liste der protokollierten Ereignisse zu aktualisieren. Deaktivieren Sie einfach das Optionsfeld, um die Protokollierung zu deaktivieren.
+Die Ablaufverfolgung für Winsock-Katalogänderungen ist jetzt aktiviert, und Sie müssen lediglich die Aktion Aktualisieren ausführen, um die Liste der protokollierten Ereignisse zu aktualisieren. Deaktivieren Sie einfach das gleiche Optionsfeld, um die Protokollierung zu beenden.
 
-Abhängig von der Anzahl der Ereignisse, die Sie anzeigen möchten, müssen Sie möglicherweise die Größe des Protokolls erhöhen. Ein Nachteil bei der Verwendung des Ereignisanzeige für die Winsock-Ablauf Verfolgung besteht darin, dass nicht alle Zeichen folgen Ressourcen geladen werden, sodass die Nachrichten, die im Beschreibungsfeld angezeigt werden (nachdem Sie ein Ereignis ausgewählt haben), manchmal schwer lesbar sind (ein Argument, das als Hex formatiert werden sollte, wird beispielsweise in Dezimalform angezeigt). Sie können jedoch die Registerkarte **Details** in der Ereignis Beschreibung auswählen, die den unformatierten XML-Protokolleintrag anzeigt, der in der Regel leichter zu verstehen ist.
+Möglicherweise müssen Sie die Protokollgröße erhöhen, je nachdem, wie viele Ereignisse Sie anzeigen möchten. Ein Nachteil der Verwendung des Ereignisanzeige für die Winsock-Ablaufverfolgung besteht darin, dass nicht alle Zeichenfolgenressourcen geladen werden, sodass die im Feld Beschreibung angezeigten Meldungen (nachdem Sie ein Ereignis ausgewählt haben) manchmal schwer zu lesen sind (ein Argument, das als hexadezimal formatiert werden soll, wird z. B. als Dezimalzahl angezeigt). Sie können jedoch die Registerkarte **Details** in der Ereignisbeschreibung auswählen, die den unformatierten XML-Protokolleintrag anzeigt, der in der Regel einfacher zu verstehende Argumente enthält.
 
-## <a name="interpreting-winsock-tracing-logs"></a>Interpretieren von Winsock-Ablauf Verfolgungs Protokollen
+## <a name="interpreting-winsock-tracing-logs"></a>Interpretieren von Winsock-Ablaufverfolgungsprotokollen
 
-Alle Winsock-Ablauf Verfolgungs Ereignisse in einem Protokoll enthalten zwei Arten von Informationen:
+Alle Winsock-Ablaufverfolgungsereignisse in einem Protokoll enthalten zwei Arten von Informationen:
 
 -   System
 -   EventData
 
-Die Systeminformationen enthalten den Protokolliergrad, den Zeitpunkt, zu dem der Protokolleintrag erstellt wurde, die Ereignis-ID, die den Ereignistyp, die Ausführungsprozess-ID, die Ausführungs Thread-ID und andere Systeminformationen darstellt. Die Protokollebene 4 in der Winsock-Ablauf Verfolgung stellt die Protokollierung von Informations Ereignissen dar. Die Protokollebene 5 in der Winsock-Ablauf Verfolgung stellt die Protokollierung ausführlicher Ereignisse dar.
+Die Systeminformationen enthalten den Protokollierstand, die Zeit, zu der der Protokolleintrag erstellt wurde, die Ereignis-ID, die den Ereignistyp darstellt, die Ausführungsprozess-ID, die Ausführungsthread-ID und andere Systeminformationen. Die Protokollebene 4 in der Winsock-Ablaufverfolgung stellt die Protokollierung von Informationsereignis dar. Die Protokollebene 5 in der Winsock-Ablaufverfolgung stellt eine ausführliche Ereignisprotokollierung dar.
 
-Die Ausführungsprozess-ID und die Thread-ID in den Systeminformationen gibt den Prozess und den Thread an, der ausgeführt wurde, als das Ereignis aufgetreten ist. In vielen Fällen stellt dies einen Kernel-oder Arbeits Thread und-Prozess dar, nicht einen benutzermoduscothread und oder den Prozess der Anwendung. Dieses Feld ist daher normalerweise nicht sehr nützlich.
+Die Ausführungsprozess-ID und thread-ID in den Systeminformationen geben den Prozess und thread an, der beim Ereignis ausgeführt wurde. In vielen Fällen stellt dies einen Kernel- oder Workerthread und -prozess dar, keinen Benutzermodusthread und oder den Prozess der Anwendung. Daher ist dieses Feld normalerweise nicht sehr nützlich.
 
-Jeder Winsock-Ablaufverfolgungs-Ereignistyp weist eine eindeutige Ereignis-ID im Abschnitt "System" der protokollierten Daten auf. Diese Ereignis-IDs können problemlos verwendet werden, um eine Protokolldatei nach bestimmten Winsock-Ablauf Verfolgungs Ereignissen zu filtern.
+Jeder Winsock-Ablaufverfolgungsereignistyp verfügt über eine eindeutige Ereignis-ID im Systemabschnitt der protokollierten Daten. Diese Ereignis-IDs können problemlos verwendet werden, um eine Protokolldatei nach bestimmten Winsock-Ablaufverfolgungsereignissen zu filtern.
 
-EVENTDATA enthält Informationen, die für den Ereignistyp spezifisch sind.
+Die eventdata-Daten enthalten spezifische Informationen für den Ereignistyp.
 
-Der Process-Parameter in den EVENTDATA-Informationen ist die Kernel-EPROCESS-Struktur Adresse für den Prozess, nicht die tatsächliche PID. Wenn Sie ein Ereignis mit der benutzermoduspid vergleichen möchten, verwenden Sie den Wert Process aus den EVENTDATA-Informationen von einem beliebigen Protokolleintrag, und suchen Sie im Protokoll nach einem socketerstellungs-Ereignis mit dem Wert verarbeiten. Nachdem eine Entsprechung gefunden wurde, ist der letzte Parameter in den socketerstellungs-Ereignisdaten die Benutzermodusprozess-ID, die den Socket erstellt hat.
+Der Process-Parameter in den eventdata-Informationen ist die Kernel-EPROCESS-Strukturadresse für den Prozess, nicht die tatsächliche PID. Um ein Ereignis mit der Benutzermodus-PID zu übereinstimmen, verwenden Sie den Wert Verarbeiten aus den eventdata-Informationen eines beliebigen Protokolleintrags, und suchen Sie weiter oben im Protokoll nach einem Socketerstellungsereignis mit dem Wert Verarbeiten. Sobald eine Übereinstimmung gefunden wird, ist der letzte Parameter in den Socketerstellungsereignisdaten die Prozess-ID im Benutzermodus, die den Socket erstellt hat.
 
-In einigen Winsock-Ablauf Verfolgungs Ereignissen wird ein Adress Parameter in den EVENTDATA-Informationen zurückgegeben. Ein Adress Parameter stellt eine IP-Adresse dar, wird jedoch in der Textdatei angezeigt, die vom **tracerpt.exe** Tool erstellt wurde, oder in Ereignisanzeige als Rohbytes oder als Zahl. IPv6-Adressen werden als hexadezimal angezeigt, sodass Sie leichter verständlich sind. IPv4-Adressen werden als große Dezimalzahl angezeigt. Entwickler müssen die Rohdaten Bytes einer IPv4-Adresse manuell in die vertraute IPv4-punktierte Adress Notation konvertieren, damit der Wert besser interpretiert werden kann.
+Ein Address-Parameter in den eventdata-Informationen wird in einigen Winsock-Ablaufverfolgungsereignissen zurückgegeben. Ein Address-Parameter stellt eine IP-Adresse dar, wird jedoch in der Textdatei angezeigt, die vom **tracerpt.exe-Tool** erstellt wurde, oder in Ereignisanzeige als unformatierte Bytes oder als Zahl. IPv6-Adressen werden hexadezimal angezeigt, sodass sie leichter verständlich sind. IPv4-Adressen werden als große Dezimalzahl angezeigt. Entwickler müssen die unformatierten Bytes einer IPv4-Adresse manuell in die vertrautere IPv4-Punkt-Dezimal-Adressschreibung konvertieren, um den Wert besser interpretieren zu können.
 
-In einigen Winsock-Ablauf Verfolgungs Ereignissen wird ein Fehler Parameter in EVENTDATA zurückgegeben. Ein Fehler Parameter hat die Form eines NTSTATUS-oder HRESULT-Fehlercodes. Dieser Fehler Parameter wird in der Textdatei angezeigt, die vom **tracerpt.exe** Tool erstellt wurde, oder in Ereignisanzeige als Dezimalzahl. Entwickler müssen die Dezimalzahl manuell in eine hexadezimale Zahl konvertieren, damit der Fehlercode in einigen Fällen besser interpretiert werden kann.
+Ein Error-Parameter in eventdata wird in einigen Winsock-Ablaufverfolgungsereignissen zurückgegeben. Ein Error-Parameter weist die Form eines NTSTATUS- oder HRESULT-Fehlercodes auf. Dieser Fehlerparameter wird in der Textdatei angezeigt, die vom **tracerpt.exe** Tool erstellt wurde, oder in Ereignisanzeige als Dezimalzahl. Entwickler müssen die Dezimalzahl manuell in eine hexadezimale Zahl konvertieren, um den Fehlercode in einigen Fällen besser zu interpretieren.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Winsock-Ablauf Verfolgung](winsock-tracing.md)
+[Winsock-Ablaufverfolgung](winsock-tracing.md)
 </dt> <dt>
 
-[Details zur Änderung der Winsock-Katalog Änderung](winsock-layered-service-provider-tracing-event-details.md)
+[Ablaufverfolgungsdetails für Winsock-Katalogänderungen](winsock-layered-service-provider-tracing-event-details.md)
 </dt> <dt>
 
-[Details der Winsock-Netzwerk Ereignis Ablauf Verfolgung](winsock-tracing-event-details.md)
+[Details zur Ablaufverfolgung von Winsock-Netzwerkereignissen](winsock-tracing-event-details.md)
 </dt> <dt>
 
-[Winsock-Ablauf Verfolgungs Ebenen](winsock-tracing-levels.md)
+[Winsock-Ablaufverfolgungsebenen](winsock-tracing-levels.md)
 </dt> </dl>
 
  

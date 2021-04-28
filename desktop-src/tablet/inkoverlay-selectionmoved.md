@@ -1,19 +1,19 @@
 ---
-description: Tritt auf, wenn sich die Position der aktuellen Auswahl geändert hat, z. b. durch Änderungen an der Benutzeroberfläche, von Ausschneide-und einfügeprozeduren oder von der Selection-Eigenschaft.
+description: 'InkOverlay.SelectionMoved-Ereignis: Tritt auf, wenn sich die Position der aktuellen Auswahl geändert hat, z. B. durch Änderungen an der Benutzeroberfläche, Ausschneide- und Einfügeprozeduren oder die Selection-Eigenschaft.'
 ms.assetid: 78b5ab11-01c0-4bdb-ae1f-ec55774abdce
-title: InkOverlay. selectionverschodas Ereignis (msink AUT. h)
+title: InkOverlay.SelectionMoved-Ereignis (Msinkaut.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b5f254b5e3ae3c23f50b12c097608946aad3b3c0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e27bf1600683b5258bf899692b692c8cdcabb359
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104348668"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108116868"
 ---
-# <a name="inkoverlayselectionmoved-event"></a>InkOverlay. selectionverschodas Ereignis
+# <a name="inkoverlayselectionmoved-event"></a>InkOverlay.SelectionMoved-Ereignis
 
-Tritt auf, wenn sich die Position der aktuellen Auswahl geändert hat, z. b. durch Änderungen an der Benutzeroberfläche, von Ausschneide-und einfügeprozeduren oder von der [**Selection**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkoverlay-get_selection) -Eigenschaft.
+Tritt ein, wenn sich die Position der aktuellen Auswahl geändert hat, z. B. [](/windows/desktop/api/msinkaut/nf-msinkaut-iinkoverlay-get_selection) durch Änderungen an der Benutzeroberfläche, Prozeduren zum Ausschneiden und Einfügen oder die Selection-Eigenschaft.
 
 ## <a name="syntax"></a>Syntax
 
@@ -30,13 +30,13 @@ void SelectionMoved(
 
 <dl> <dt>
 
-*Oldselectionrect* \[ in\]
+*OldSelectionRect* \[ In\]
 </dt> <dd>
 
-Das umschließende Rechteck der ausgewählten [inkstrokes](/previous-versions/windows/desktop/legacy/ms703293(v=vs.85)) -Auflistung, wie es vor dem Auslösen des **selectionverschochereignisses** vorhanden war.
+Das umschließende Rechteck der ausgewählten [InkStrokes-Auflistung,](/previous-versions/windows/desktop/legacy/ms703293(v=vs.85)) wie es vor dem **Ausgelösten SelectionMoved-Ereignis** vorhanden war.
 
 > [!Note]  
-> Dieses Rechteck wird in Freihand Raumkoordinaten angegeben, die rückgängig-Szenarien ermöglichen.
+> Dieses Rechteck wird in Freihandraumkoordinaten angegeben, was Rückgängig-Szenarien ermöglicht.
 
  
 
@@ -48,34 +48,34 @@ Dieses Ereignis gibt keinen Wert zurück.
 
 ## <a name="remarks"></a>Bemerkungen
 
-TDiese Ereignismethode wird in den \_ Dispatch-only-Schnittstellen iinkoverlayevents und \_ iinkpictureevents (Dispinterfaces) mit der ID DISPID \_ ioeselectionverschot definiert.
+Diese Ereignismethode wird in den \_ Dispatch-Only-Schnittstellen IInkOverlayEvents und \_ IInkPictureEvents (dispinterfaces) mit der ID DISPID \_ IOESelectionMoved definiert.
 
-Zum Abrufen des neuen umgebenden Rechtecks der Auflistung von Strichen, die verschoben wurden, müssen Sie die [**Selection. GetBoundingBox**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkstrokedisp-getboundingbox) -Methode aufrufen.
+Um das neue umgrenzende Rechteck der Auflistung der verschobenen Striche abzurufen, rufen Sie die [**Selection.GetBoundingBox-Methode**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkstrokedisp-getboundingbox) auf.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                       |
+| Unterstützte Mindestversion (Client)<br/> | Nur Desktop-Apps der Windows XP Tablet PC Edition \[\]<br/>                                                       |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                           |
-| Header<br/>                   | <dl> <dt>Msink AUT. h (erfordert auch msink AUT \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Msinkaut.h (erfordert auch Msinkaut \_ i.c)</dt> </dl> |
 | Bibliothek<br/>                  | <dl> <dt>InkObj.dll</dt> </dl>                               |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**InkOverlay-Klasse**](inkoverlay-class.md)
 </dt> <dt>
 
-[**Auswahl Eigenschaft**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkoverlay-get_selection)
+[**Selection-Eigenschaft**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkoverlay-get_selection)
 </dt> <dt>
 
-[**Inkrechteck-Klasse**](inkrectangle-class.md)
+[**InkRectangle-Klasse**](inkrectangle-class.md)
 </dt> </dl>
 
  

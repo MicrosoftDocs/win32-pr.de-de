@@ -1,5 +1,5 @@
 ---
-description: Eine Matrix zum Transformieren von Welt Raum zu Objekt Raum.
+description: 'WorldToObject3x4: Eine Matrix für die Transformation vom Weltraum in den Objektraum.'
 ms.assetid: ''
 title: WorldToObject3x4
 ms.localizationpriority: low
@@ -12,16 +12,16 @@ api_name:
 - WorldToObject3x4
 api_type:
 - NA
-ms.openlocfilehash: 6274b1d4d18aff0464d933c20f7b8052f3389e5f
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: cc7bf7dc2f06102b9b23eafd45655f12816c8359
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106345635"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108105238"
 ---
 # <a name="worldtoobject3x4"></a>WorldToObject3x4
 
-Eine Matrix zum Transformieren von Welt Raum zu Objekt Raum. Objekt-Space bezieht sich auf den Raum der aktuellen Beschleunigungs Struktur der untersten Ebene.
+Eine Matrix zum Transformieren vom Weltraum in den Objektraum. Objektbereich bezieht sich auf den Raum der aktuellen Beschleunigungsstruktur der unteren Ebene.
 
 ## <a name="syntax"></a>Syntax
 
@@ -35,9 +35,9 @@ void WorldToObject3x4();
 
 ## <a name="remarks"></a>Bemerkungen
 
-Die Matrix ist eine Umsetzung der **WorldToObject4x3** -Matrix.
+Die Matrix ist eine Füge der **WorldToObject4x3-Matrix.**
 
-Diese Funktion kann von den folgenden Raytracing-shadertypen aufgerufen werden:
+Diese Funktion kann von den folgenden Raytracing-Shadertypen aufgerufen werden:
 
 * [**Any Hit-Shader**](any-hit-shader.md)
 * [**Closest Hit-Shader**](closest-hit-shader.md)
@@ -47,7 +47,7 @@ Diese Funktion kann von den folgenden Raytracing-shadertypen aufgerufen werden:
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

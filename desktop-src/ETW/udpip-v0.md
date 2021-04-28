@@ -1,5 +1,5 @@
 ---
-description: Diese Klasse ist die übergeordnete Klasse für UDP/IP-Ereignisse. Die folgende Syntax wird durch den MOF-Code vereinfacht.
+description: 'UdpIp_V0 Klasse: Diese Klasse ist die übergeordnete Klasse für UDP/IP-Ereignisse. Die folgende Syntax wird durch MOF-Code vereinfacht.'
 ms.assetid: 2c7ac6b2-7dd7-4da7-ae0b-ac0ffffeb74b
 title: UdpIp_V0-Klasse
 ms.topic: reference
@@ -12,18 +12,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: b37bd31ea5ec2678e933b9f42efd13282b85d23a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 845466d630a671416ac465d0b73d99976d4521e9
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104977808"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108105418"
 ---
-# <a name="udpip_v0-class"></a>Udpip- \_ Klasse "v0"
+# <a name="udpip_v0-class"></a>UdpIp \_ V0-Klasse
 
 Diese Klasse ist die übergeordnete Klasse für UDP/IP-Ereignisse.
 
-Die folgende Syntax wird durch den MOF-Code vereinfacht.
+Die folgende Syntax wird durch MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -36,15 +36,15 @@ class UdpIp_V0 : MSNT_SystemTrace
 
 ## <a name="members"></a>Member
 
-Die Klasse " **udpip \_ v0** " definiert keine Member.
+Die **UdpIp \_ V0-Klasse** definiert keine Member.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|---------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ XP-Desktop-Apps\]<br/> |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                   |
 
 
@@ -53,13 +53,13 @@ Die Klasse " **udpip \_ v0** " definiert keine Member.
 
 <dl> <dt>
 
-[**MSNT \_ systemtrace**](msnt-systemtrace.md)
+[**MSNT \_ SystemTrace**](msnt-systemtrace.md)
 </dt> <dt>
 
-[**Udpip**](udpip.md)
+[**UdpIp**](udpip.md)
 </dt> <dt>
 
-[**Udpip \_ v0 \_ TypeGroup1**](udpip-v0-typegroup1.md)
+[**UdpIp \_ V0 \_ TypeGroup1**](udpip-v0-typegroup1.md)
 </dt> </dl>
 
  

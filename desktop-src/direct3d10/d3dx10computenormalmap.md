@@ -1,7 +1,7 @@
 ---
-description: Konvertiert eine Höhen Zuordnung in eine normale Karte. Die Komponenten (x, y, z) der einzelnen normalen werden den Kanälen (r, g, b) der Ausgabe Textur zugeordnet.
+description: 'D3DX10ComputeNormalMap-Funktion: Konvertiert eine Höhenkarte in eine normale Karte. Die (x,y,z)-Komponenten jeder Normalen werden den (r,g,b) Kanälen der Ausgabetextur zugeordnet.'
 ms.assetid: 535033dd-f078-4d56-8e5d-cdda80ef5992
-title: D3DX10ComputeNormalMap-Funktion (D3DX10Tex. h)
+title: D3DX10ComputeNormalMap-Funktion (D3DX10Tex.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: 1d7318e6d00d921ba0d573eb6fb696eed6c6a58d
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 173a8e0c1b3130a399152187eb52288a0306051c
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106365319"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108105318"
 ---
 # <a name="d3dx10computenormalmap-function"></a>D3DX10ComputeNormalMap-Funktion
 
-Konvertiert eine Höhen Zuordnung in eine normale Karte. Die Komponenten (x, y, z) der einzelnen normalen werden den Kanälen (r, g, b) der Ausgabe Textur zugeordnet.
+Konvertiert eine Höhenkarte in eine normale Karte. Die (x,y,z)-Komponenten jeder Normalen werden den (r,g,b) Kanälen der Ausgabetextur zugeordnet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,48 +44,48 @@ HRESULT D3DX10ComputeNormalMap(
 
 <dl> <dt>
 
-*psrctexture* \[ in\]
+*pSrcTexture* \[ In\]
 </dt> <dd>
 
 Typ: **[ **ID3D10Texture2D**](/windows/desktop/api/D3D10/nn-d3d10-id3d10texture2d)\***
 
-Ein Zeiger auf eine ID3D10Texture2D-Schnittstelle, die die Textur der Quell Höhe darstellt.
+Zeiger auf eine ID3D10Texture2D-Schnittstelle, die die Quelltextur der Höhenzuordnung darstellt.
 
 </dd> <dt>
 
 *Flags* \[in\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Ein oder mehrere D3DX \_ normalmap-Flags, die die Generierung normaler Karten steuern.
+Mindestens ein D3DX \_ NORMALMAP-Flag, das die Generierung normaler Zuordnungen steuert.
 
 </dd> <dt>
 
-*Channel* \[ in\]
+*Kanal* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Ein D3DX- \_ kanalflag, das die Quelle der Höheninformationen angibt.
+Ein \_ D3DX-KANALflag, das die Quelle der Höheninformationen angibt.
 
 </dd> <dt>
 
-*Amplitude* \[ in\]
+*Amplitude* \[ In\]
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-Konstanter Wert Multiplikator, der die Werte in der normalen Zuordnung vergrößert (oder verringert). Höhere Werte machen in der Regel zu Leistungseinbußen, niedrigere Werte werden in der Regel weniger sichtbar.
+Konstanter Wertmultiplikator, der die Werte in der normalen Zuordnung erhöht (oder verringert). Höhere Werte machen Bumps in der Regel sichtbarer, niedrigere Werte machen Bumps in der Regel weniger sichtbar.
 
 </dd> <dt>
 
-*pdesttexture* \[ in\]
+*pDestTexture* \[ In\]
 </dt> <dd>
 
 Typ: **[ **ID3D10Texture2D**](/windows/desktop/api/D3D10/nn-d3d10-id3d10texture2d)\***
 
-Zeiger auf eine ID3D10Texture2D-Schnittstelle, die die Ziel Textur darstellt.
+Zeiger auf eine ID3D10Texture2D-Schnittstelle, die die Zieltextur darstellt.
 
 </dd> </dl>
 
@@ -93,28 +93,28 @@ Zeiger auf eine ID3D10Texture2D-Schnittstelle, die die Ziel Textur darstellt.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert der folgende Wert sein: D3DERR \_ invalidcall.
+Wenn die Funktion erfolgreich ist, ist der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert folgender Wert sein: D3DERR \_ INVALIDCALL.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Diese Methode berechnet die normale, indem der zentrale Unterschied mit einer Kernel Größe von 3X3 verwendet wird. RGB-Kanäle im Ziel enthalten unausgewogene (x, y, z) Komponenten der normalen. Der zentrale Differenzierungs Nenner ist hart codiert in 2,0.
+Diese Methode berechnet den Normalwert, indem der zentrale Unterschied mit einer Kernelgröße von 3 x 3 verwendet wird. RGB-Kanäle im Ziel enthalten verzerrte (x,y,z)-Komponenten des Normals. Der zentrale Unterscheidende Nenner ist auf 2,0 hartcodiert.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX10Tex. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx10. lib</dt> </dl>  |
+| Header<br/>  | <dl> <dt>D3DX10Tex.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl>  |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Textur Funktionen in D3DX 10](d3d10-graphics-reference-d3dx10-functions-texturing.md)
+[Texturfunktionen in D3DX 10](d3d10-graphics-reference-d3dx10-functions-texturing.md)
 </dt> </dl>
 
  
