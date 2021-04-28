@@ -1,7 +1,7 @@
 ---
-description: Zeiger auf die Speicherzuweisung.
+description: 'CBaseOutputPin::m_pAllocator Member : Zeiger auf die Speicherbelegung.'
 ms.assetid: b5e37ce0-7c02-4395-bfdf-0ee8c11da09a
-title: 'Cbaseoutputpin:: m_pAllocator Member (amfilter. h)'
+title: CBaseOutputPin::m_pAllocator-Member (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,18 +16,18 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 9f46c786cb0cec5c5082b5cda003a8f4b345f518
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 0d5b512f2b40d27e13fa78904481fcc749d0bde4
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361011"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108096099"
 ---
-# <a name="cbaseoutputpinm_pallocator-member"></a><span data-ttu-id="165f5-103">Cbaseoutputpin:: m \_ pallocator-Member</span><span class="sxs-lookup"><span data-stu-id="165f5-103">CBaseOutputPin::m\_pAllocator member</span></span>
+# <a name="cbaseoutputpinm_pallocator-member"></a><span data-ttu-id="b7338-103">CBaseOutputPin::m \_ pAllocator-Member</span><span class="sxs-lookup"><span data-stu-id="b7338-103">CBaseOutputPin::m\_pAllocator member</span></span>
 
-<span data-ttu-id="165f5-104">Zeiger auf die Speicherzuweisung.</span><span class="sxs-lookup"><span data-stu-id="165f5-104">Pointer to the memory allocator.</span></span>
+<span data-ttu-id="b7338-104">Zeiger auf die Speicherzuweisung.</span><span class="sxs-lookup"><span data-stu-id="b7338-104">Pointer to the memory allocator.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="165f5-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="165f5-105">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="b7338-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="b7338-105">Syntax</span></span>
 
 
 ```C++
@@ -36,22 +36,22 @@ IMemAllocator *m_pAllocator;
 
 
 
-## <a name="requirements"></a><span data-ttu-id="165f5-106">Requirements (Anforderungen)</span><span class="sxs-lookup"><span data-stu-id="165f5-106">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="b7338-106">Requirements (Anforderungen)</span><span class="sxs-lookup"><span data-stu-id="b7338-106">Requirements</span></span>
 
 
 
-| <span data-ttu-id="165f5-107">Anforderung</span><span class="sxs-lookup"><span data-stu-id="165f5-107">Requirement</span></span> | <span data-ttu-id="165f5-108">Wert</span><span class="sxs-lookup"><span data-stu-id="165f5-108">Value</span></span> |
+| <span data-ttu-id="b7338-107">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="b7338-107">Requirement</span></span> | <span data-ttu-id="b7338-108">Wert</span><span class="sxs-lookup"><span data-stu-id="b7338-108">Value</span></span> |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span data-ttu-id="165f5-109">Header</span><span class="sxs-lookup"><span data-stu-id="165f5-109">Header</span></span><br/>  | <dl> <span data-ttu-id="165f5-110"><dt>Amfilter. h (Include Streams. h)</dt></span><span class="sxs-lookup"><span data-stu-id="165f5-110"><dt>Amfilter.h (include Streams.h)</dt></span></span> </dl>                                                                                  |
-| <span data-ttu-id="165f5-111">Bibliothek</span><span class="sxs-lookup"><span data-stu-id="165f5-111">Library</span></span><br/> | <dl> <span data-ttu-id="165f5-112">" <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt></span><span class="sxs-lookup"><span data-stu-id="165f5-112"><dt>Strmbase.lib (retail builds); </dt> <dt>Strmbasd.lib (debug builds)</dt></span></span> </dl> |
+| <span data-ttu-id="b7338-109">Header</span><span class="sxs-lookup"><span data-stu-id="b7338-109">Header</span></span><br/>  | <dl> <span data-ttu-id="b7338-110"><dt>Amfilter.h (streams.h einschließen)</dt></span><span class="sxs-lookup"><span data-stu-id="b7338-110"><dt>Amfilter.h (include Streams.h)</dt></span></span> </dl>                                                                                  |
+| <span data-ttu-id="b7338-111">Bibliothek</span><span class="sxs-lookup"><span data-stu-id="b7338-111">Library</span></span><br/> | <dl> <span data-ttu-id="b7338-112"><dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt></span><span class="sxs-lookup"><span data-stu-id="b7338-112"><dt>Strmbase.lib (retail builds); </dt> <dt>Strmbasd.lib (debug builds)</dt></span></span> </dl> |
 
 
 
-## <a name="see-also"></a><span data-ttu-id="165f5-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="165f5-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b7338-113">Weitere Informationen</span><span class="sxs-lookup"><span data-stu-id="b7338-113">See also</span></span>
 
 <dl> <dt>
 
-[<span data-ttu-id="165f5-114">**Cbaseoutputpin-Klasse**</span><span class="sxs-lookup"><span data-stu-id="165f5-114">**CBaseOutputPin Class**</span></span>](cbaseoutputpin.md)
+[<span data-ttu-id="b7338-114">**CBaseOutputPin-Klasse**</span><span class="sxs-lookup"><span data-stu-id="b7338-114">**CBaseOutputPin Class**</span></span>](cbaseoutputpin.md)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
-description: Erstellt eine Matrix, die das Koordinatensystem über eine Ebene wieder gibt.
+description: 'D3DXMatrixReflect-Funktion (D3DX10Math.h): Erstellt eine Matrix, die das Koordinatensystem einer Ebene widerspiegelt.'
 ms.assetid: bd2c5905-780e-4fac-a848-d7dbcfc390c6
-title: D3DXMatrixReflect-Funktion (D3DX10Math. h)
+title: D3DXMatrixReflect-Funktion (D3DX10Math.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,18 +14,18 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: d8c8f0fc8529730a46c403432ec0b5b5a86c8afa
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: f96224c881dcd5db2cc1c356003ab96e8a626900
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106370457"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108103408"
 ---
-# <a name="d3dxmatrixreflect-function-d3dx10mathh"></a><span data-ttu-id="42e2b-103">D3DXMatrixReflect-Funktion (D3DX10Math. h)</span><span class="sxs-lookup"><span data-stu-id="42e2b-103">D3DXMatrixReflect function (D3DX10Math.h)</span></span>
+# <a name="d3dxmatrixreflect-function-d3dx10mathh"></a><span data-ttu-id="1845e-103">D3DXMatrixReflect-Funktion (D3DX10Math.h)</span><span class="sxs-lookup"><span data-stu-id="1845e-103">D3DXMatrixReflect function (D3DX10Math.h)</span></span>
 
-<span data-ttu-id="42e2b-104">Erstellt eine Matrix, die das Koordinatensystem über eine Ebene wieder gibt.</span><span class="sxs-lookup"><span data-stu-id="42e2b-104">Builds a matrix that reflects the coordinate system about a plane.</span></span>
+<span data-ttu-id="1845e-104">Erstellt eine Matrix, die das Koordinatensystem einer Ebene widerspiegelt.</span><span class="sxs-lookup"><span data-stu-id="1845e-104">Builds a matrix that reflects the coordinate system about a plane.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="42e2b-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="42e2b-105">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="1845e-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="1845e-105">Syntax</span></span>
 
 
 ```C++
@@ -37,41 +37,41 @@ D3DXMATRIX* D3DXMatrixReflect(
 
 
 
-## <a name="parameters"></a><span data-ttu-id="42e2b-106">Parameter</span><span class="sxs-lookup"><span data-stu-id="42e2b-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="1845e-106">Parameter</span><span class="sxs-lookup"><span data-stu-id="1845e-106">Parameters</span></span>
 
 <dl> <dt>
 
-<span data-ttu-id="42e2b-107">*Pout* \[ in, out\]</span><span class="sxs-lookup"><span data-stu-id="42e2b-107">*pOut* \[in, out\]</span></span>
+<span data-ttu-id="1845e-107">*pOut* \[ in, out\]</span><span class="sxs-lookup"><span data-stu-id="1845e-107">*pOut* \[in, out\]</span></span>
 </dt> <dd>
 
-<span data-ttu-id="42e2b-108">Typ: **[ **D3DXMATRIX**](../direct3d9/d3dxmatrix.md)\***</span><span class="sxs-lookup"><span data-stu-id="42e2b-108">Type: **[**D3DXMATRIX**](../direct3d9/d3dxmatrix.md)\***</span></span>
+<span data-ttu-id="1845e-108">Typ: **[ **D3DXMATRIX**](../direct3d9/d3dxmatrix.md)\***</span><span class="sxs-lookup"><span data-stu-id="1845e-108">Type: **[**D3DXMATRIX**](../direct3d9/d3dxmatrix.md)\***</span></span>
 
-<span data-ttu-id="42e2b-109">Ein Zeiger auf die [**D3DXMATRIX**](d3d10-d3dxmatrix.md) -Struktur, die das Ergebnis des Vorgangs ist.</span><span class="sxs-lookup"><span data-stu-id="42e2b-109">Pointer to the [**D3DXMATRIX**](d3d10-d3dxmatrix.md) structure that is the result of the operation.</span></span>
+<span data-ttu-id="1845e-109">Zeiger auf die [**D3DXMATRIX-Struktur,**](d3d10-d3dxmatrix.md) die das Ergebnis des Vorgangs ist.</span><span class="sxs-lookup"><span data-stu-id="1845e-109">Pointer to the [**D3DXMATRIX**](d3d10-d3dxmatrix.md) structure that is the result of the operation.</span></span>
 
 </dd> <dt>
 
-<span data-ttu-id="42e2b-110">*pplane* \[ in\]</span><span class="sxs-lookup"><span data-stu-id="42e2b-110">*pPlane* \[in\]</span></span>
+<span data-ttu-id="1845e-110">*pPlane* \[ In\]</span><span class="sxs-lookup"><span data-stu-id="1845e-110">*pPlane* \[in\]</span></span>
 </dt> <dd>
 
-<span data-ttu-id="42e2b-111">Typ: **Konstanten [**D3DXPLANE**](../direct3d9/d3dxplane.md) \***</span><span class="sxs-lookup"><span data-stu-id="42e2b-111">Type: **const [**D3DXPLANE**](../direct3d9/d3dxplane.md)\***</span></span>
+<span data-ttu-id="1845e-111">Typ: **const [**D3DXPLANE**](../direct3d9/d3dxplane.md) \***</span><span class="sxs-lookup"><span data-stu-id="1845e-111">Type: **const [**D3DXPLANE**](../direct3d9/d3dxplane.md)\***</span></span>
 
-<span data-ttu-id="42e2b-112">Zeiger auf den Quell- [**D3DXPLANE**](d3d10-d3dxplane.md).</span><span class="sxs-lookup"><span data-stu-id="42e2b-112">Pointer to the source [**D3DXPLANE**](d3d10-d3dxplane.md).</span></span>
+<span data-ttu-id="1845e-112">Zeiger auf die [**D3DXPLANE-Quelldatei.**](d3d10-d3dxplane.md)</span><span class="sxs-lookup"><span data-stu-id="1845e-112">Pointer to the source [**D3DXPLANE**](d3d10-d3dxplane.md).</span></span>
 
 </dd> </dl>
 
-## <a name="return-value"></a><span data-ttu-id="42e2b-113">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="42e2b-113">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="1845e-113">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="1845e-113">Return value</span></span>
 
-<span data-ttu-id="42e2b-114">Typ: **[ **D3DXMATRIX**](../direct3d9/d3dxmatrix.md)\***</span><span class="sxs-lookup"><span data-stu-id="42e2b-114">Type: **[**D3DXMATRIX**](../direct3d9/d3dxmatrix.md)\***</span></span>
+<span data-ttu-id="1845e-114">Typ: **[ **D3DXMATRIX**](../direct3d9/d3dxmatrix.md)\***</span><span class="sxs-lookup"><span data-stu-id="1845e-114">Type: **[**D3DXMATRIX**](../direct3d9/d3dxmatrix.md)\***</span></span>
 
-<span data-ttu-id="42e2b-115">Zeiger auf eine D3DXMATRIX-Struktur, die das Koordinatensystem über die Quell Ebene wieder gibt.</span><span class="sxs-lookup"><span data-stu-id="42e2b-115">Pointer to a D3DXMATRIX structure that reflects the coordinate system about the source plane.</span></span>
+<span data-ttu-id="1845e-115">Zeiger auf eine D3DXMATRIX-Struktur, die das Koordinatensystem der Quellebene widerspiegelt.</span><span class="sxs-lookup"><span data-stu-id="1845e-115">Pointer to a D3DXMATRIX structure that reflects the coordinate system about the source plane.</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="42e2b-116">Bemerkungen</span><span class="sxs-lookup"><span data-stu-id="42e2b-116">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="1845e-116">Bemerkungen</span><span class="sxs-lookup"><span data-stu-id="1845e-116">Remarks</span></span>
 
-<span data-ttu-id="42e2b-117">Diese Funktion normalisiert die Gleichung der Ebene, bevor die reflektierte Matrix erstellt wird.</span><span class="sxs-lookup"><span data-stu-id="42e2b-117">This function normalizes the plane equation before it creates the reflected matrix.</span></span>
+<span data-ttu-id="1845e-117">Diese Funktion normalisiert die Ebenengleichung, bevor sie die reflektierte Matrix erstellt.</span><span class="sxs-lookup"><span data-stu-id="1845e-117">This function normalizes the plane equation before it creates the reflected matrix.</span></span>
 
-<span data-ttu-id="42e2b-118">Der Rückgabewert für diese Funktion ist derselbe Wert, der im Pout-Parameter zurückgegeben wird.</span><span class="sxs-lookup"><span data-stu-id="42e2b-118">The return value for this function is the same value returned in the pOut parameter.</span></span> <span data-ttu-id="42e2b-119">Auf diese Weise kann die D3DXMatrixReflect-Funktion als Parameter für eine andere Funktion verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="42e2b-119">In this way, the D3DXMatrixReflect function can be used as a parameter for another function.</span></span>
+<span data-ttu-id="1845e-118">Der Rückgabewert für diese Funktion ist der gleiche Wert, der im pOut-Parameter zurückgegeben wird.</span><span class="sxs-lookup"><span data-stu-id="1845e-118">The return value for this function is the same value returned in the pOut parameter.</span></span> <span data-ttu-id="1845e-119">Auf diese Weise kann die D3DXMatrixReflect-Funktion als Parameter für eine andere Funktion verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="1845e-119">In this way, the D3DXMatrixReflect function can be used as a parameter for another function.</span></span>
 
-<span data-ttu-id="42e2b-120">Diese Funktion verwendet die folgende Formel, um die zurückgegebene Matrix zu berechnen.</span><span class="sxs-lookup"><span data-stu-id="42e2b-120">This function uses the following formula to compute the returned matrix.</span></span>
+<span data-ttu-id="1845e-120">Diese Funktion verwendet die folgende Formel, um die zurückgegebene Matrix zu berechnen.</span><span class="sxs-lookup"><span data-stu-id="1845e-120">This function uses the following formula to compute the returned matrix.</span></span>
 
 
 ```
@@ -85,22 +85,22 @@ P = normalize(Plane);
 
 
 
-## <a name="requirements"></a><span data-ttu-id="42e2b-121">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="42e2b-121">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="1845e-121">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="1845e-121">Requirements</span></span>
 
 
 
-| <span data-ttu-id="42e2b-122">Anforderung</span><span class="sxs-lookup"><span data-stu-id="42e2b-122">Requirement</span></span> | <span data-ttu-id="42e2b-123">Wert</span><span class="sxs-lookup"><span data-stu-id="42e2b-123">Value</span></span> |
+| <span data-ttu-id="1845e-122">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="1845e-122">Requirement</span></span> | <span data-ttu-id="1845e-123">Wert</span><span class="sxs-lookup"><span data-stu-id="1845e-123">Value</span></span> |
 |--------------------|-----------------------------------------------------------------------------------------|
-| <span data-ttu-id="42e2b-124">Header</span><span class="sxs-lookup"><span data-stu-id="42e2b-124">Header</span></span><br/>  | <dl> <span data-ttu-id="42e2b-125"><dt>D3DX10Math. h</dt></span><span class="sxs-lookup"><span data-stu-id="42e2b-125"><dt>D3DX10Math.h</dt></span></span> </dl> |
-| <span data-ttu-id="42e2b-126">Bibliothek</span><span class="sxs-lookup"><span data-stu-id="42e2b-126">Library</span></span><br/> | <dl> <span data-ttu-id="42e2b-127"><dt>D3dx10. lib</dt></span><span class="sxs-lookup"><span data-stu-id="42e2b-127"><dt>D3DX10.lib</dt></span></span> </dl>   |
+| <span data-ttu-id="1845e-124">Header</span><span class="sxs-lookup"><span data-stu-id="1845e-124">Header</span></span><br/>  | <dl> <span data-ttu-id="1845e-125"><dt>D3DX10Math.h</dt></span><span class="sxs-lookup"><span data-stu-id="1845e-125"><dt>D3DX10Math.h</dt></span></span> </dl> |
+| <span data-ttu-id="1845e-126">Bibliothek</span><span class="sxs-lookup"><span data-stu-id="1845e-126">Library</span></span><br/> | <dl> <span data-ttu-id="1845e-127"><dt>D3DX10.lib</dt></span><span class="sxs-lookup"><span data-stu-id="1845e-127"><dt>D3DX10.lib</dt></span></span> </dl>   |
 
 
 
-## <a name="see-also"></a><span data-ttu-id="42e2b-128">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="42e2b-128">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1845e-128">Weitere Informationen</span><span class="sxs-lookup"><span data-stu-id="1845e-128">See also</span></span>
 
 <dl> <dt>
 
-[<span data-ttu-id="42e2b-129">Mathematische Funktionen</span><span class="sxs-lookup"><span data-stu-id="42e2b-129">Math Functions</span></span>](d3d10-graphics-reference-d3dx10-functions-math.md)
+[<span data-ttu-id="1845e-129">Mathematische Funktionen</span><span class="sxs-lookup"><span data-stu-id="1845e-129">Math Functions</span></span>](d3d10-graphics-reference-d3dx10-functions-math.md)
 </dt> </dl>
 
  
