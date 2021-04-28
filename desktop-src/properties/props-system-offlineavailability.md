@@ -1,19 +1,19 @@
 ---
-description: .
+description: System.OfflineAvailability
 ms.assetid: 4d0c880b-923d-4f83-91da-dd99bf111f13
-title: System. offlineavailability
+title: System.OfflineAvailability
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5ca82f7e8da4454be8a5e9dd557ff63a7784dc8c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ceeefaf33acfc07bba2d552761ecd418257e8485
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103959584"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108090018"
 ---
-# <a name="systemofflineavailability"></a><span data-ttu-id="bfb72-103">System. offlineavailability</span><span class="sxs-lookup"><span data-stu-id="bfb72-103">System.OfflineAvailability</span></span>
+# <a name="systemofflineavailability"></a><span data-ttu-id="6b81d-103">System.OfflineAvailability</span><span class="sxs-lookup"><span data-stu-id="6b81d-103">System.OfflineAvailability</span></span>
 
-## <a name="windows-10-version-1703-windows-10-version-1607-windows-10-version-1511-windows-10-version-1507-windows-81"></a><span data-ttu-id="bfb72-104">Windows 10, Version 1703, Windows 10, Version 1607, Windows 10, Version 1511, Windows 10, Version 1507, Windows 8.1</span><span class="sxs-lookup"><span data-stu-id="bfb72-104">Windows 10, version 1703, Windows 10, version 1607, Windows 10, version 1511, Windows 10, version 1507, Windows 8.1</span></span>
+## <a name="windows-10-version-1703-windows-10-version-1607-windows-10-version-1511-windows-10-version-1507-windows-81"></a><span data-ttu-id="6b81d-104">Windows 10, Version 1703, Windows 10, Version 1607, Windows 10, Version 1511, Windows 10, Version 1507, Windows 8.1</span><span class="sxs-lookup"><span data-stu-id="6b81d-104">Windows 10, version 1703, Windows 10, version 1607, Windows 10, version 1511, Windows 10, version 1507, Windows 8.1</span></span>
 
 ```
 propertyDescription
@@ -46,7 +46,7 @@ propertyDescription
             defineToken = OFFLINEAVAILABILITY_ALWAYS_AVAILABLE
 ```
 
-## <a name="windows-8-windows-7"></a><span data-ttu-id="bfb72-105">Windows 8, Windows 7</span><span class="sxs-lookup"><span data-stu-id="bfb72-105">Windows 8, Windows 7</span></span>
+## <a name="windows-8-windows-7"></a><span data-ttu-id="6b81d-105">Windows 8, Windows 7</span><span class="sxs-lookup"><span data-stu-id="6b81d-105">Windows 8, Windows 7</span></span>
 
 ```
 propertyDescription
@@ -79,7 +79,7 @@ propertyDescription
             defineToken = OFFLINEAVAILABILITY_ALWAYS_AVAILABLE
 ```
 
-## <a name="windows-vista"></a><span data-ttu-id="bfb72-106">Windows Vista</span><span class="sxs-lookup"><span data-stu-id="bfb72-106">Windows Vista</span></span>
+## <a name="windows-vista"></a><span data-ttu-id="6b81d-106">Windows Vista</span><span class="sxs-lookup"><span data-stu-id="6b81d-106">Windows Vista</span></span>
 
 ```
 propertyDescription
@@ -109,54 +109,54 @@ propertyDescription
             defineName = OFFLINEAVAILABILITY_ALWAYS_AVAILABLE
 ```
 
-## <a name="remarks"></a><span data-ttu-id="bfb72-107">Bemerkungen</span><span class="sxs-lookup"><span data-stu-id="bfb72-107">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="6b81d-107">Bemerkungen</span><span class="sxs-lookup"><span data-stu-id="6b81d-107">Remarks</span></span>
 
-<span data-ttu-id="bfb72-108">Pkey-Werte werden in "propkey. h" definiert.</span><span class="sxs-lookup"><span data-stu-id="bfb72-108">PKEY values are defined in Propkey.h.</span></span>
+<span data-ttu-id="6b81d-108">PKEY-Werte werden in Propkey.h definiert.</span><span class="sxs-lookup"><span data-stu-id="6b81d-108">PKEY values are defined in Propkey.h.</span></span>
 
-## <a name="related-topics"></a><span data-ttu-id="bfb72-109">Zugehörige Themen</span><span class="sxs-lookup"><span data-stu-id="bfb72-109">Related topics</span></span>
+## <a name="related-topics"></a><span data-ttu-id="6b81d-109">Zugehörige Themen</span><span class="sxs-lookup"><span data-stu-id="6b81d-109">Related topics</span></span>
 
 <dl> <dt>
 
-[<span data-ttu-id="bfb72-110">propertydescription</span><span class="sxs-lookup"><span data-stu-id="bfb72-110">propertyDescription</span></span>](./propdesc-schema-propertydescription.md)
+[<span data-ttu-id="6b81d-110">propertyDescription</span><span class="sxs-lookup"><span data-stu-id="6b81d-110">propertyDescription</span></span>](./propdesc-schema-propertydescription.md)
 </dt> <dt>
 
-[<span data-ttu-id="bfb72-111">SearchInfo</span><span class="sxs-lookup"><span data-stu-id="bfb72-111">searchInfo</span></span>](./propdesc-schema-searchinfo.md)
+[<span data-ttu-id="6b81d-111">searchInfo</span><span class="sxs-lookup"><span data-stu-id="6b81d-111">searchInfo</span></span>](./propdesc-schema-searchinfo.md)
 </dt> <dt>
 
-[<span data-ttu-id="bfb72-112">Labelinfo</span><span class="sxs-lookup"><span data-stu-id="bfb72-112">labelInfo</span></span>](./propdesc-schema-labelinfo.md)
+[<span data-ttu-id="6b81d-112">labelInfo</span><span class="sxs-lookup"><span data-stu-id="6b81d-112">labelInfo</span></span>](./propdesc-schema-labelinfo.md)
 </dt> <dt>
 
-[<span data-ttu-id="bfb72-113">TypeInfo</span><span class="sxs-lookup"><span data-stu-id="bfb72-113">typeInfo</span></span>](./propdesc-schema-typeinfo.md)
+[<span data-ttu-id="6b81d-113">Typeinfo</span><span class="sxs-lookup"><span data-stu-id="6b81d-113">typeInfo</span></span>](./propdesc-schema-typeinfo.md)
 </dt> <dt>
 
-[<span data-ttu-id="bfb72-114">Display Info</span><span class="sxs-lookup"><span data-stu-id="bfb72-114">displayInfo</span></span>](./propdesc-schema-displayinfo.md)
+[<span data-ttu-id="6b81d-114">displayInfo</span><span class="sxs-lookup"><span data-stu-id="6b81d-114">displayInfo</span></span>](./propdesc-schema-displayinfo.md)
 </dt> <dt>
 
-[<span data-ttu-id="bfb72-115">StringFormat</span><span class="sxs-lookup"><span data-stu-id="bfb72-115">stringFormat</span></span>](./propdesc-schema-stringformat.md)
+[<span data-ttu-id="6b81d-115">Stringformat</span><span class="sxs-lookup"><span data-stu-id="6b81d-115">stringFormat</span></span>](./propdesc-schema-stringformat.md)
 </dt> <dt>
 
-[<span data-ttu-id="bfb72-116">BooleanFormat</span><span class="sxs-lookup"><span data-stu-id="bfb72-116">booleanFormat</span></span>](./propdesc-schema-booleanformat.md)
+[<span data-ttu-id="6b81d-116">booleanFormat</span><span class="sxs-lookup"><span data-stu-id="6b81d-116">booleanFormat</span></span>](./propdesc-schema-booleanformat.md)
 </dt> <dt>
 
-[<span data-ttu-id="bfb72-117">NumberFormat</span><span class="sxs-lookup"><span data-stu-id="bfb72-117">numberFormat</span></span>](./propdesc-schema-numberformat.md)
+[<span data-ttu-id="6b81d-117">Numberformat</span><span class="sxs-lookup"><span data-stu-id="6b81d-117">numberFormat</span></span>](./propdesc-schema-numberformat.md)
 </dt> <dt>
 
-[<span data-ttu-id="bfb72-118">dateTimeFormat</span><span class="sxs-lookup"><span data-stu-id="bfb72-118">dateTimeFormat</span></span>](./propdesc-schema-datetimeformat.md)
+[<span data-ttu-id="6b81d-118">dateTimeFormat</span><span class="sxs-lookup"><span data-stu-id="6b81d-118">dateTimeFormat</span></span>](./propdesc-schema-datetimeformat.md)
 </dt> <dt>
 
-[<span data-ttu-id="bfb72-119">enumeratedlist</span><span class="sxs-lookup"><span data-stu-id="bfb72-119">enumeratedList</span></span>](./propdesc-schema-enumeratedlist.md)
+[<span data-ttu-id="6b81d-119">enumeratedList</span><span class="sxs-lookup"><span data-stu-id="6b81d-119">enumeratedList</span></span>](./propdesc-schema-enumeratedlist.md)
 </dt> <dt>
 
-[<span data-ttu-id="bfb72-120">DrawControl</span><span class="sxs-lookup"><span data-stu-id="bfb72-120">drawControl</span></span>](./propdesc-schema-drawcontrol.md)
+[<span data-ttu-id="6b81d-120">drawControl</span><span class="sxs-lookup"><span data-stu-id="6b81d-120">drawControl</span></span>](./propdesc-schema-drawcontrol.md)
 </dt> <dt>
 
-[<span data-ttu-id="bfb72-121">editcontrol</span><span class="sxs-lookup"><span data-stu-id="bfb72-121">editControl</span></span>](./propdesc-schema-editcontrol.md)
+[<span data-ttu-id="6b81d-121">editControl</span><span class="sxs-lookup"><span data-stu-id="6b81d-121">editControl</span></span>](./propdesc-schema-editcontrol.md)
 </dt> <dt>
 
-[<span data-ttu-id="bfb72-122">FilterControl</span><span class="sxs-lookup"><span data-stu-id="bfb72-122">filterControl</span></span>](./propdesc-schema-filtercontrol.md)
+[<span data-ttu-id="6b81d-122">Filtercontrol</span><span class="sxs-lookup"><span data-stu-id="6b81d-122">filterControl</span></span>](./propdesc-schema-filtercontrol.md)
 </dt> <dt>
 
-[<span data-ttu-id="bfb72-123">querycontrol</span><span class="sxs-lookup"><span data-stu-id="bfb72-123">queryControl</span></span>](./propdesc-schema-querycontrol.md)
+[<span data-ttu-id="6b81d-123">queryControl</span><span class="sxs-lookup"><span data-stu-id="6b81d-123">queryControl</span></span>](./propdesc-schema-querycontrol.md)
 </dt> </dl>
 
  

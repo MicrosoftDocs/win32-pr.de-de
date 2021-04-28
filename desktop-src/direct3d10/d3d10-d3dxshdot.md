@@ -1,7 +1,7 @@
 ---
-description: Berechnet das Punktprodukt zweier kugelförmiger (SH) Vektoren.
+description: 'D3DXSHDot-Funktion (D3DX10.h): Berechnet das Punktprodukt von zwei Sphärischen Vektoren (SH).'
 ms.assetid: 30f0e858-4c31-4b25-9979-754d996a7d48
-title: D3DXSHDot-Funktion (d3dx10. h)
+title: D3DXSHDot-Funktion (D3DX10.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,18 +14,18 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: 20f0896168dae0e2a779625c683777938c8e2df2
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 3ea3e839ff7a5fc038cf40a6402db4a358da8b39
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106353750"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108108628"
 ---
-# <a name="d3dxshdot-function-d3dx10h"></a><span data-ttu-id="1f582-103">D3DXSHDot-Funktion (d3dx10. h)</span><span class="sxs-lookup"><span data-stu-id="1f582-103">D3DXSHDot function (D3DX10.h)</span></span>
+# <a name="d3dxshdot-function-d3dx10h"></a><span data-ttu-id="ba263-103">D3DXSHDot-Funktion (D3DX10.h)</span><span class="sxs-lookup"><span data-stu-id="ba263-103">D3DXSHDot function (D3DX10.h)</span></span>
 
-<span data-ttu-id="1f582-104">Berechnet das Punktprodukt zweier kugelförmiger (SH) Vektoren.</span><span class="sxs-lookup"><span data-stu-id="1f582-104">Computes the dot product of two spherical harmonic (SH) vectors.</span></span>
+<span data-ttu-id="ba263-104">Berechnet das Punktprodukt zweier Sphärischer Zynisierungsvektoren (SH).</span><span class="sxs-lookup"><span data-stu-id="ba263-104">Computes the dot product of two spherical harmonic (SH) vectors.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="1f582-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="1f582-105">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="ba263-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="ba263-105">Syntax</span></span>
 
 
 ```C++
@@ -38,66 +38,66 @@ FLOAT D3DXSHDot(
 
 
 
-## <a name="parameters"></a><span data-ttu-id="1f582-106">Parameter</span><span class="sxs-lookup"><span data-stu-id="1f582-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="ba263-106">Parameter</span><span class="sxs-lookup"><span data-stu-id="ba263-106">Parameters</span></span>
 
 <dl> <dt>
 
-<span data-ttu-id="1f582-107">*Reihenfolge* \[ in\]</span><span class="sxs-lookup"><span data-stu-id="1f582-107">*Order* \[in\]</span></span>
+<span data-ttu-id="ba263-107">*Bestellung* \[ In\]</span><span class="sxs-lookup"><span data-stu-id="ba263-107">*Order* \[in\]</span></span>
 </dt> <dd>
 
-<span data-ttu-id="1f582-108">Typ: **[ **uint**](../winprog/windows-data-types.md)**</span><span class="sxs-lookup"><span data-stu-id="1f582-108">Type: **[**UINT**](../winprog/windows-data-types.md)**</span></span>
+<span data-ttu-id="ba263-108">Typ: **[ **UINT**](../winprog/windows-data-types.md)**</span><span class="sxs-lookup"><span data-stu-id="ba263-108">Type: **[**UINT**](../winprog/windows-data-types.md)**</span></span>
 
-<span data-ttu-id="1f582-109">Reihenfolge der Auswertung der sphärischen Harmonika (SH).</span><span class="sxs-lookup"><span data-stu-id="1f582-109">Order of the spherical harmonic (SH) evaluation.</span></span> <span data-ttu-id="1f582-110">Muss im Bereich von D3DXSH \_ minorder bis D3DXSH \_ maxorder (einschließlich) liegen.</span><span class="sxs-lookup"><span data-stu-id="1f582-110">Must be in the range of D3DXSH\_MINORDER to D3DXSH\_MAXORDER, inclusive.</span></span> <span data-ttu-id="1f582-111">Die Auswertung generiert die Koeffizienten der Bestellung.</span><span class="sxs-lookup"><span data-stu-id="1f582-111">The evaluation generates Order² coefficients.</span></span> <span data-ttu-id="1f582-112">Der Bewertungs Grad ist Order-1.</span><span class="sxs-lookup"><span data-stu-id="1f582-112">The degree of the evaluation is Order - 1.</span></span>
+<span data-ttu-id="ba263-109">Die Reihenfolge der SH-Auswertung (SphericalLips).</span><span class="sxs-lookup"><span data-stu-id="ba263-109">Order of the spherical harmonic (SH) evaluation.</span></span> <span data-ttu-id="ba263-110">Muss im Bereich von D3DXSH \_ MINORDER bis D3DXSH \_ MAXORDER (einschließlich) liegen.</span><span class="sxs-lookup"><span data-stu-id="ba263-110">Must be in the range of D3DXSH\_MINORDER to D3DXSH\_MAXORDER, inclusive.</span></span> <span data-ttu-id="ba263-111">Die Auswertung generiert Order²-Koeffizienten.</span><span class="sxs-lookup"><span data-stu-id="ba263-111">The evaluation generates Order² coefficients.</span></span> <span data-ttu-id="ba263-112">Der Grad der Auswertung ist "Order - 1".</span><span class="sxs-lookup"><span data-stu-id="ba263-112">The degree of the evaluation is Order - 1.</span></span>
 
 </dd> <dt>
 
-<span data-ttu-id="1f582-113">*PA* \[ in\]</span><span class="sxs-lookup"><span data-stu-id="1f582-113">*pA* \[in\]</span></span>
+<span data-ttu-id="ba263-113">*pA* \[ In\]</span><span class="sxs-lookup"><span data-stu-id="ba263-113">*pA* \[in\]</span></span>
 </dt> <dd>
 
-<span data-ttu-id="1f582-114">Typ: Konstante **[**float**](../winprog/windows-data-types.md) \***</span><span class="sxs-lookup"><span data-stu-id="1f582-114">Type: **const [**FLOAT**](../winprog/windows-data-types.md)\***</span></span>
+<span data-ttu-id="ba263-114">Typ: **const [**FLOAT**](../winprog/windows-data-types.md) \***</span><span class="sxs-lookup"><span data-stu-id="ba263-114">Type: **const [**FLOAT**](../winprog/windows-data-types.md)\***</span></span>
 
-<span data-ttu-id="1f582-115">Zeiger zum ersten SH-Vektor.</span><span class="sxs-lookup"><span data-stu-id="1f582-115">Pointer to the first SH vector.</span></span>
+<span data-ttu-id="ba263-115">Zeiger auf den ersten SH-Vektor.</span><span class="sxs-lookup"><span data-stu-id="ba263-115">Pointer to the first SH vector.</span></span>
 
 </dd> <dt>
 
-<span data-ttu-id="1f582-116">*PB* \[ in\]</span><span class="sxs-lookup"><span data-stu-id="1f582-116">*pB* \[in\]</span></span>
+<span data-ttu-id="ba263-116">*pB* \[ In\]</span><span class="sxs-lookup"><span data-stu-id="ba263-116">*pB* \[in\]</span></span>
 </dt> <dd>
 
-<span data-ttu-id="1f582-117">Typ: Konstante **[**float**](../winprog/windows-data-types.md) \***</span><span class="sxs-lookup"><span data-stu-id="1f582-117">Type: **const [**FLOAT**](../winprog/windows-data-types.md)\***</span></span>
+<span data-ttu-id="ba263-117">Typ: **const [**FLOAT**](../winprog/windows-data-types.md) \***</span><span class="sxs-lookup"><span data-stu-id="ba263-117">Type: **const [**FLOAT**](../winprog/windows-data-types.md)\***</span></span>
 
-<span data-ttu-id="1f582-118">Zeiger auf den zweiten SH-Vektor.</span><span class="sxs-lookup"><span data-stu-id="1f582-118">Pointer to the second SH vector.</span></span>
+<span data-ttu-id="ba263-118">Zeiger auf den zweiten SH-Vektor.</span><span class="sxs-lookup"><span data-stu-id="ba263-118">Pointer to the second SH vector.</span></span>
 
 </dd> </dl>
 
-## <a name="return-value"></a><span data-ttu-id="1f582-119">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="1f582-119">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="ba263-119">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="ba263-119">Return value</span></span>
 
-<span data-ttu-id="1f582-120">Typ: **[ **float**](../winprog/windows-data-types.md)**</span><span class="sxs-lookup"><span data-stu-id="1f582-120">Type: **[**FLOAT**](../winprog/windows-data-types.md)**</span></span>
+<span data-ttu-id="ba263-120">Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**</span><span class="sxs-lookup"><span data-stu-id="ba263-120">Type: **[**FLOAT**](../winprog/windows-data-types.md)**</span></span>
 
-<span data-ttu-id="1f582-121">SH-Ausgabe Koeffizienten.</span><span class="sxs-lookup"><span data-stu-id="1f582-121">SH output coefficients.</span></span>
+<span data-ttu-id="ba263-121">SH-Ausgabekoeffizienten.</span><span class="sxs-lookup"><span data-stu-id="ba263-121">SH output coefficients.</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="1f582-122">Bemerkungen</span><span class="sxs-lookup"><span data-stu-id="1f582-122">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="ba263-122">Bemerkungen</span><span class="sxs-lookup"><span data-stu-id="ba263-122">Remarks</span></span>
 
-<span data-ttu-id="1f582-123">Jeder Koeffizient der Basis Funktion "ylm" wird am Speicherort l ² + m + l gespeichert, wobei Folgendes gilt:</span><span class="sxs-lookup"><span data-stu-id="1f582-123">Each coefficient of the basis function Yₗₘ is stored at memory location l² + m + l, where:</span></span>
+<span data-ttu-id="ba263-123">Jeder Koeffizient der Basisfunktion "Ylm" wird an der Speicherposition ljs + m + l gespeichert, wobei Folgendes gilt:</span><span class="sxs-lookup"><span data-stu-id="ba263-123">Each coefficient of the basis function Yₗₘ is stored at memory location l² + m + l, where:</span></span>
 
--   <span data-ttu-id="1f582-124">l ist der Grad der Basis Funktion.</span><span class="sxs-lookup"><span data-stu-id="1f582-124">l is the degree of the basis function.</span></span>
--   <span data-ttu-id="1f582-125">m ist der Basis Funktions Index für den angegebenen l-Wert und reicht von-l bis l (einschließlich).</span><span class="sxs-lookup"><span data-stu-id="1f582-125">m is the basis function index for the given l value and ranges from -l to l, inclusive.</span></span>
+-   <span data-ttu-id="ba263-124">l ist der Grad der Basisfunktion.</span><span class="sxs-lookup"><span data-stu-id="ba263-124">l is the degree of the basis function.</span></span>
+-   <span data-ttu-id="ba263-125">m ist der Basisfunktionsindex für den angegebenen l-Wert und reicht von -l bis einschließlich l.</span><span class="sxs-lookup"><span data-stu-id="ba263-125">m is the basis function index for the given l value and ranges from -l to l, inclusive.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="1f582-126">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="1f582-126">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="ba263-126">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="ba263-126">Requirements</span></span>
 
 
 
-| <span data-ttu-id="1f582-127">Anforderung</span><span class="sxs-lookup"><span data-stu-id="1f582-127">Requirement</span></span> | <span data-ttu-id="1f582-128">Wert</span><span class="sxs-lookup"><span data-stu-id="1f582-128">Value</span></span> |
+| <span data-ttu-id="ba263-127">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="ba263-127">Requirement</span></span> | <span data-ttu-id="ba263-128">Wert</span><span class="sxs-lookup"><span data-stu-id="ba263-128">Value</span></span> |
 |--------------------|---------------------------------------------------------------------------------------|
-| <span data-ttu-id="1f582-129">Header</span><span class="sxs-lookup"><span data-stu-id="1f582-129">Header</span></span><br/>  | <dl> <span data-ttu-id="1f582-130"><dt>D3dx10. h</dt></span><span class="sxs-lookup"><span data-stu-id="1f582-130"><dt>D3DX10.h</dt></span></span> </dl>   |
-| <span data-ttu-id="1f582-131">Bibliothek</span><span class="sxs-lookup"><span data-stu-id="1f582-131">Library</span></span><br/> | <dl> <span data-ttu-id="1f582-132"><dt>D3dx10. lib</dt></span><span class="sxs-lookup"><span data-stu-id="1f582-132"><dt>D3DX10.lib</dt></span></span> </dl> |
+| <span data-ttu-id="ba263-129">Header</span><span class="sxs-lookup"><span data-stu-id="ba263-129">Header</span></span><br/>  | <dl> <span data-ttu-id="ba263-130"><dt>D3DX10.h</dt></span><span class="sxs-lookup"><span data-stu-id="ba263-130"><dt>D3DX10.h</dt></span></span> </dl>   |
+| <span data-ttu-id="ba263-131">Bibliothek</span><span class="sxs-lookup"><span data-stu-id="ba263-131">Library</span></span><br/> | <dl> <span data-ttu-id="ba263-132"><dt>D3DX10.lib</dt></span><span class="sxs-lookup"><span data-stu-id="ba263-132"><dt>D3DX10.lib</dt></span></span> </dl> |
 
 
 
-## <a name="see-also"></a><span data-ttu-id="1f582-133">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="1f582-133">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ba263-133">Weitere Informationen</span><span class="sxs-lookup"><span data-stu-id="ba263-133">See also</span></span>
 
 <dl> <dt>
 
-[<span data-ttu-id="1f582-134">Mathematische Funktionen</span><span class="sxs-lookup"><span data-stu-id="1f582-134">Math Functions</span></span>](d3d10-graphics-reference-d3dx10-functions-math.md)
+[<span data-ttu-id="ba263-134">Mathematische Funktionen</span><span class="sxs-lookup"><span data-stu-id="ba263-134">Math Functions</span></span>](d3d10-graphics-reference-d3dx10-functions-math.md)
 </dt> </dl>
 
  
