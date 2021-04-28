@@ -1,5 +1,5 @@
 ---
-description: Proxy Funktion für die Initialize-Methode.
+description: 'IWICBitmapScaler_Initialize_Proxy-Funktion: Proxyfunktion für die Initialize-Methode.'
 ms.assetid: 47a717d2-9aac-4230-bdb3-093212eb5448
 title: IWICBitmapScaler_Initialize_Proxy-Funktion
 ms.topic: reference
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - Windowscodecs.dll
 - Wincodec.lib
-ms.openlocfilehash: cc317adc831b0cf0759580d5c6924fb3f0997524
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 76b7c754273f4d55fbf3de9d8ba592806e590aac
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106369102"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108100538"
 ---
-# <a name="iwicbitmapscaler_initialize_proxy-function"></a>IWICBitmapScaler \_ Initialize \_ Proxy-Funktion
+# <a name="iwicbitmapscaler_initialize_proxy-function"></a>IWICBitmapScaler Initialize \_ \_ Proxy-Funktion
 
-Proxy Funktion für die [**Initialize**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapscaler-initialize) -Methode.
+Proxyfunktion für die [**Initialize-Methode.**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapscaler-initialize)
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,48 +44,48 @@ HRESULT IWICBitmapScaler_Initialize_Proxy(
 
 <dl> <dt>
 
-*Dies \_ PTR* \[ in\]
+*THIS \_ PTR* \[ in\]
 </dt> <dd>
 
-Typ: **[**IWICBitmapScaler**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapscaler) \** _
+Typ: **[ **IWICBitmapScaler**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapscaler)\***
 
-Zeiger auf dieses [_ *IWICBitmapScaler* *](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapscaler) -Objekt.
+Zeiger auf dieses [**IWICBitmapScaler-Objekt.**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapscaler)
 
 </dd> <dt>
 
-*pisource* \[ in\]
+*pISource* \[ In\]
 </dt> <dd>
 
-Typ: **[**IWICBitmapSource**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapsource) \** _
+Typ: **[ **IWICBitmapSource**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapsource)\***
 
-Die Eingabe Bitmap-Quelle.
+Die Eingabebitmapquelle.
 
 </dd> <dt>
 
-_uiWidth * \[ in\]
+*uiWidth* \[ In\]
 </dt> <dd>
 
-Typ: **uint**
+Typ: **UINT**
 
-Die Ziel Breite.
+Die Zielbreite.
 
 </dd> <dt>
 
-*uiheight* \[ in\]
+*uiHeight* \[ In\]
 </dt> <dd>
 
-Typ: **uint**
+Typ: **UINT**
 
-Die Höhe der Größe.
+Die Desinationshöhe.
 
 </dd> <dt>
 
-*Modus* \[ in\]
+*-Modus* \[ In\]
 </dt> <dd>
 
-Typ: **[ **wicbitmapinterpolationmode**](/windows/desktop/api/Wincodec/ne-wincodec-wicbitmapinterpolationmode)**
+Typ: **[ **WICBitmapInterpolationMode**](/windows/desktop/api/Wincodec/ne-wincodec-wicbitmapinterpolationmode)**
 
-Der Interpolations Modus, der bei der Skalierung verwendet werden soll.
+Der Interpolationsmodus, der beim Skalieren verwendet werden soll.
 
 </dd> </dl>
 
@@ -93,7 +93,7 @@ Der Interpolations Modus, der bei der Skalierung verwendet werden soll.
 
 Typ: **HRESULT**
 
-Wenn diese Funktion erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Funktion erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="remarks"></a>Bemerkungen
 
@@ -101,11 +101,11 @@ Wenn diese Funktion erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. 
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows XP mit SP2, nur Windows Vista \[ -Desktop-Apps\]<br/>                                                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                                                                             |
-| DLL<br/>                      | <dl> <dt>Windowscodecs.dll; </dt> <dt>Wincodec. lib</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows XP mit SP2, nur Windows \[ Vista-Desktop-Apps\]<br/>                                                                                              |
+| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2008-Desktop-Apps\]<br/>                                                                                                             |
+| DLL<br/>                      | <dl> <dt>Windowscodecs.dll; </dt> <dt>Wincodec.lib</dt> </dl> |
 
 
 

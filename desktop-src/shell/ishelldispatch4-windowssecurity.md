@@ -1,6 +1,6 @@
 ---
-description: Zeigt das Dialogfeld Windows-Sicherheit an.
-title: IShellDispatch4. WindowsSecurity-Methode (Shldisp. h)
+description: 'IShellDispatch4.WindowsSecurity-Methode: Zeigt das dialogfeld Windows-Sicherheit an.'
+title: IShellDispatch4.WindowsSecurity-Methode (Shldisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 api_location:
 - Shell32.dll
 ms.assetid: 665c4644-7749-446e-8212-3ecc9901a035
-ms.openlocfilehash: 066321c0ea4e4d5ade35a6571c59128a5137cba2
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
-ms.translationtype: HT
+ms.openlocfilehash: 2d7e8cfbd1e7a2a2392b78487c6a58b62de6df6a
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104977976"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108116808"
 ---
-# <a name="ishelldispatch4windowssecurity-method"></a>IShellDispatch4. WindowsSecurity-Methode
+# <a name="ishelldispatch4windowssecurity-method"></a>IShellDispatch4.WindowsSecurity-Methode
 
-Zeigt das Dialogfeld **Windows-Sicherheit** an.
+Zeigt das **Windows-Sicherheit** An.
 
 ## <a name="syntax"></a>Syntax
 
@@ -57,18 +57,18 @@ Diese Methode gibt keinen Wert zurück.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Diese Methode zeigt das Dialogfeld an, das nach dem Drücken von STRG + ALT + ENTF oder mithilfe der Option Sicherheit im **Startmenü** angezeigt wird.
+Diese Methode zeigt das Dialogfeld an, das nach dem Drücken von STRG+ALT+DELETE oder mithilfe der Sicherheitsoption im **Startmenü angezeigt** wird.
 
 > [!Note]  
-> Diese Methode kann nur verwendet werden, wenn eine Verbindung über eine Terminalsitzung mit dem Microsoft-Terminal Server hergestellt wird.
+> Diese Methode kann nur verwendet werden, wenn eine Verbindung zwischen einer Terminalsitzung und Microsoft Terminal Server besteht.
 
  
 
 ## <a name="examples"></a>Beispiele
 
-In den folgenden Beispielen wird die Verwendung von **WindowsSecurity** für JScript, VBScript und Visual Basic veranschaulicht.
+Die folgenden Beispiele zeigen die Verwendung von **WindowsSecurity** für JScript, VBScript und Visual Basic.
 
-JScript
+Jscript:
 
 
 ```JScript
@@ -84,7 +84,7 @@ JScript
 
 
 
-VBScript
+Vbscript:
 
 
 ```VB
@@ -116,17 +116,17 @@ End Sub
 
 
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                                                   |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                          |
-| Header<br/>                   | <dl> <dt>Shldisp. h</dt> </dl>                          |
-| IDL<br/>                      | <dl> <dt>Shldisp. idl</dt> </dl>                        |
-| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 6,0 oder höher)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ XP-Desktop-Apps\]<br/>                                                                   |
+| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2003-Desktop-Apps\]<br/>                                                          |
+| Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>                          |
+| Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                        |
+| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 6.0 oder höher)</dt> </dl> |
 
 
 

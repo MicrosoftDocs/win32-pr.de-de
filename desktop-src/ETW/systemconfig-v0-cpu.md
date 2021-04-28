@@ -1,5 +1,5 @@
 ---
-description: Diese Klasse ist die Ereignistyp Klasse für CPU-Konfigurations Ereignisse.
+description: 'SystemConfig_V0_CPU-Klasse: Diese Klasse ist die Ereignistypklasse für CPU-Konfigurationsereignisse.'
 ms.assetid: 9ca77676-ff0e-4c47-ae4e-f8192376d3ca
 title: SystemConfig_V0_CPU-Klasse
 ms.topic: reference
@@ -19,18 +19,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 6963201f76afa40e9b1741dc2936fa2ab4433a74
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: de3b63def40cb6ead40f6f4c95625603cfc581ee
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103960576"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108105988"
 ---
-# <a name="systemconfig_v0_cpu-class"></a>System config \_ v0- \_ CPU-Klasse
+# <a name="systemconfig_v0_cpu-class"></a>SystemConfig \_ V0 \_ CPU-Klasse
 
-Diese Klasse ist die Ereignistyp Klasse für CPU-Konfigurations Ereignisse.
+Diese Klasse ist die Ereignistypklasse für CPU-Konfigurationsereignisse.
 
-Die folgende Syntax wird durch den MOF-Code vereinfacht.
+Die folgende Syntax wird aus MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -50,42 +50,42 @@ class SystemConfig_V0_CPU : SystemConfig_V0
 
 ## <a name="members"></a>Member
 
-Die **\_ \_ CPU-Klasse "SystemConfig v0** " verfügt über diese Typen von Membern:
+Die **SystemConfig \_ \_ V0-CPU-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **System config \_ v0- \_ CPU** -Klasse verfügt über diese Eigenschaften.
+Die **SystemConfig \_ \_ V0-CPU-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**"Zuweisung"-Granularität**
+**AllocationGranularity**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (5)
+Qualifizierer: **WmiDataId** (5)
 </dt> </dl>
 
-Die Granularität, mit der der virtuelle Arbeitsspeicher zugewiesen wird.
+Granularität, mit der virtueller Arbeitsspeicher zugeordnet wird.
 
 </dd> <dt>
 
 **Computername**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **char16** Array
+Datentyp: **char16-Array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (6), **Max** (256)
+Qualifizierer: **WmiDataId** (6), **Max** (256)
 </dt> </dl>
 
 Name des Computers
@@ -95,45 +95,45 @@ Name des Computers
 **DomainName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **char16** Array
+Datentyp: **char16-Array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (7), **Max** (132)
+Qualifizierer: **WmiDataId** (7), **Max** (132)
 </dt> </dl>
 
-Der Name der Domäne, in der der Computer Mitglied ist.
+Name der Domäne, in der der Computer Mitglied ist.
 
 </dd> <dt>
 
-**Memsize**
+**MemSize**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (3)
+Qualifizierer: **WmiDataId** (3)
 </dt> </dl>
 
-Gesamtmenge des für das Betriebssystem verfügbaren physischen Speichers.
+Gesamtmenge des für das Betriebssystem verfügbaren physischen Arbeitsspeichers.
 
 </dd> <dt>
 
-**Suhr**
+**Mhz**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (1)
+Qualifizierer: **WmiDataId** (1)
 </dt> </dl>
 
 Maximale Geschwindigkeit des Prozessors in Megahertz.
@@ -143,43 +143,43 @@ Maximale Geschwindigkeit des Prozessors in Megahertz.
 **NumberOfProcessors**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (2)
+Qualifizierer: **WmiDataId** (2)
 </dt> </dl>
 
 Anzahl der Prozessoren auf dem Computer.
 
 </dd> <dt>
 
-**PageSize**
+**Pagesize**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (4)
+Qualifizierer: **WmiDataId** (4)
 </dt> </dl>
 
-Größe einer Auslagerungs Seite (in Bytes).
+Größe einer Auslagerungsseite in Bytes.
 
 </dd> </dl>
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2003-Desktop-Apps\]<br/> |
 
 
 
@@ -187,7 +187,7 @@ Größe einer Auslagerungs Seite (in Bytes).
 
 <dl> <dt>
 
-[**SystemConfig \_ v0**](systemconfig-v0.md)
+[**SystemConfig \_ V0**](systemconfig-v0.md)
 </dt> </dl>
 
  

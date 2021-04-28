@@ -1,48 +1,48 @@
 ---
-description: .
+description: Abfrageprozess in Windows Search
 ms.assetid: 0e5a633e-1703-4b72-8a04-6da71aec0ae2
 title: Abfrageprozess in Windows Search
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d92d868cb843e96b04d6b4bd575284638b6652ee
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d3585f2cca2a6d5d8548a85ae8fac759ec94b4fa
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103750345"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108117328"
 ---
 # <a name="querying-process-in-windows-search"></a>Abfrageprozess in Windows Search
 
 Dieses Thema ist wie folgt organisiert:
 
 -   [Informationen zum Abfragen in Windows Search](#about-querying-in-windows-search)
-    -   [Lokale Abfragen und Remote Abfragen](#local-and-remote-queries)
-    -   [Übersicht über die strukturierte Abfrage-API](#structured-query-api-overview)
--   [Abfragen von Szenarien](#querying-scenarios)
-    -   [Bedingungs Extraktion und Abfrage Verarbeitung](#condition-extraction-and-query-parsing)
-    -   [Abfragen des Indexes](#querying-the-index)
+    -   [Lokale und Remoteabfragen](#local-and-remote-queries)
+    -   [Übersicht über die API für strukturierte Abfragen](#structured-query-api-overview)
+-   [Abfrageszenarien](#querying-scenarios)
+    -   [Bedingungsextraktion und Abfrageparsing](#condition-extraction-and-query-parsing)
+    -   [Abfragen des Index](#querying-the-index)
 -   [Zugehörige Themen](#related-topics)
 
 ## <a name="about-querying-in-windows-search"></a>Informationen zum Abfragen in Windows Search
 
-Das Abfragen in Windows Search basiert auf den folgenden vier Ansätzen:
+Abfragen in Windows Search basieren auf den folgenden vier Ansätzen:
 
--   [Erweiterte Abfrage Syntax](-search-3x-advancedquerysyntax.md) (AQS)
--   Natürliche Abfrage Syntax (NQS)
+-   [Erweiterte Abfragesyntax](-search-3x-advancedquerysyntax.md) (AQS)
+-   Syntax natürlicher Abfragen (Natural Query Syntax, NQS)
 -   Structured Query Language (SQL) (Structured Query Language, SQL)
 -   Strukturierte Abfrageschnittstellen
 
-AQS ist die Standard Abfrage Syntax, die von Windows Search verwendet wird, um den Index abzufragen und Suchparameter zu verfeinern und einzuschränken. AQS ist hauptsächlich für Benutzer sichtbar und kann von Benutzern verwendet werden, um AQS-Abfragen zu erstellen. Sie kann jedoch auch von Entwicklern verwendet werden, um Abfragen Programm gesteuert zu erstellen. In Windows 7 wurde die kanonische AQS eingeführt und muss zum programmgesteuerten Generieren von AQS-Abfragen verwendet werden. In Windows 7 und höher kann eine Kontextmenü Option basierend darauf verfügbar sein, ob eine AQS-Bedingung erfüllt ist. Weitere Informationen finden Sie unter "erzielen von dynamischen Verhalten bei statischen Verben mithilfe der erweiterten Abfrage Syntax" unter [Erstellen von Kontextmenü Handlern](../shell/context-menu-handlers.md). AQS-Abfragen können auf bestimmte Typen von Dateien beschränkt werden, die als Dateitypen bezeichnet werden. Weitere Informationen finden Sie unter [Dateitypen und Zuordnungen](../shell/fa-intro.md). Eine Referenz Dokumentation zu den relevanten Eigenschaften finden Sie unter [System. Kind](../properties/props-system-kind.md)und [System. kindtext](../properties/props-system-kindtext.md).
+AQS ist die Standardabfragesyntax, die von Windows Search zum Abfragen des Indexes und zum Verfeinern und Einengen von Suchparametern verwendet wird. AQS steht hauptsächlich für Benutzer zur Verfügung und kann von Benutzern zum Erstellen von AQS-Abfragen verwendet werden, kann aber auch von Entwicklern verwendet werden, um Abfragen programmgesteuert zu erstellen. In Windows 7 wurde kanonische AQS eingeführt und muss zum programmgesteuerten Generieren von AQS-Abfragen verwendet werden. Unter Windows 7 und höher kann eine Kontextmenüoption verfügbar sein, je nach Erfüllt einer AQS-Bedingung. Weitere Informationen finden Sie unter "Getting Dynamic Behavior for Static Verbs by Using Advanced Query Syntax" (Abrufen des dynamischen Verhaltens für statische Verben mit erweiterter Abfragesyntax) in [Erstellen von Kontextmenühandlern.](../shell/context-menu-handlers.md) AQS-Abfragen können auf bestimmte Dateitypen beschränkt werden, die als Dateiarten bezeichnet werden. Weitere Informationen finden Sie unter [Dateitypen und Zuordnungen.](../shell/fa-intro.md) Eine Referenzdokumentation zu den relevanten Eigenschaften finden Sie unter [System.Kind](../properties/props-system-kind.md)und [System.KindText](../properties/props-system-kindtext.md).
 
-NQS ist eine Abfrage Syntax, die einfacher als AQS ist und der menschlichen Sprache ähnelt. NQS kann von Windows Search verwendet werden, um den Index abzufragen, wenn NQS anstelle der standardmäßigen AQS ausgewählt wird.
+NQS ist eine Abfragesyntax, die gelockerter als AQS ist und der menschlichen Sprache ähnelt. NQS kann von Windows Search Indexabfrage verwendet werden, wenn NQS anstelle der Standardeinstellung AQS ausgewählt ist.
 
-SQL ist eine Text Sprache, mit der Abfragen definiert werden. SQL ist in vielen verschiedenen Datenbanktechnologien üblich. Windows Search verwendet SQL, implementiert eine Teilmenge davon und erweitert Sie durch Hinzufügen von Elementen zur Sprache. Windows Search SQL erweitert die Standard Abfrage Syntax von SQL-92 und SQL-99, um die Nützlichkeit durch textbasierte Suchvorgänge zu verbessern. Alle Features von Windows Search SQL sind mit Windows Search unter Windows XP und Windows Server 2003 und höher kompatibel. Weitere Informationen zu Windows Search SQL finden Sie unter [Abfragen des Indexes mit der SQL-Syntax von Windows Search](-search-sql-windowssearch-entry.md)und [Übersicht über die SQL-Syntax von Windows Search](-search-sql-ovwofsearchquery.md).
+SQL ist eine Textsprache, die Abfragen definiert. SQL ist in vielen verschiedenen Datenbanktechnologien üblich. Windows Search SQL verwendet, implementiert eine Teilmenge davon und erweitert sie durch Hinzufügen von Elementen zur Sprache. Windows Search SQL erweitert die Standardmäßige Sql-92- und SQL-99-Datenbankabfragesyntax, um ihre Nützlichkeit mit textbasierten Suchvorgängen zu verbessern. Alle Features von Windows Search SQL sind mit Windows Search unter Windows XP und Windows Server 2003 und höher kompatibel. Weitere Informationen zu Windows Search SQL finden Sie unter [Querying the Index with Windows Search SQL Syntax](-search-sql-windowssearch-entry.md)und Overview of Windows Search SQL [Syntax](-search-sql-ovwofsearchquery.md).
 
-Die APIs für strukturierte Abfragen werden weiter unten in diesem Thema beschrieben. Eine Referenz Dokumentation zu den APIs für strukturierte Abfragen finden Sie unter [Abfragen von Schnittstellen](-search-querying-interfaces-entry-page.md). Schnittstellen wie [**isearchqueryhelper**](/windows/desktop/api/Searchapi/nn-searchapi-isearchqueryhelper) helfen beim Erstellen von SQL-Zeichen folgen aus einem Satz von Eingabe Werten. Diese Schnittstelle konvertiert AQS-Benutzer Abfragen in Windows Search SQL und gibt Abfrage Einschränkungen an, die in SQL, aber nicht in AQS ausgedrückt werden können. [**Isearchqueryhelper**](/windows/desktop/api/Searchapi/nn-searchapi-isearchqueryhelper) erhält auch eine OLE DB Verbindungs Zeichenfolge, um eine Verbindung mit der Windows Search-Datenbank herzustellen.
+Die strukturierten Abfrage-APIs werden weiter unten in diesem Thema beschrieben. Eine Referenzdokumentation zu den strukturierten Abfrage-APIs finden Sie unter [Abfragen von Schnittstellen.](-search-querying-interfaces-entry-page.md) Schnittstellen wie [**ISearchQueryHelper**](/windows/desktop/api/Searchapi/nn-searchapi-isearchqueryhelper) helfen beim Erstellen von SQL-Zeichenfolgen aus einem Satz von Eingabewerten. Diese Schnittstelle konvertiert AQS-Benutzerabfragen in Windows Search SQL und gibt Abfrageeinschränkungen an, die in SQL, aber nicht in AQS ausgedrückt werden können. [**ISearchQueryHelper**](/windows/desktop/api/Searchapi/nn-searchapi-isearchqueryhelper) erhält auch eine OLE DB Verbindungszeichenfolge, um eine Verbindung mit der Windows Search herzustellen.
 
-### <a name="local-and-remote-queries"></a>Lokale Abfragen und Remote Abfragen
+### <a name="local-and-remote-queries"></a>Lokale und Remoteabfragen
 
-Sie können Ihre Abfragen entweder lokal oder Remote ausführen. Eine lokale Abfrage mit der [from-Klausel](-search-sql-from.md) wird im folgenden Beispiel gezeigt. Eine lokale Abfrage fragt nur den lokalen SystemIndex-Katalog ab.
+Sie können Ihre Abfragen entweder lokal oder remote ausführen. Eine lokale Abfrage, die die [FROM-Klausel verwendet,](-search-sql-from.md) wird im folgenden Beispiel gezeigt. Eine lokale Abfrage fragt nur den lokalen SystemIndex-Katalog ab.
 
 
 ```
@@ -51,7 +51,7 @@ FROM SystemIndex
 
 
 
-Eine Remote Abfrage mit der [from-Klausel](-search-sql-from.md) wird im folgenden Beispiel gezeigt. Durch das Hinzufügen von Computername wird das vorherige Beispiel in eine Remote Abfrage transformiert.
+Eine Remoteabfrage mithilfe der [FROM-Klausel](-search-sql-from.md) wird im folgenden Beispiel gezeigt. Durch hinzufügen von ComputerName wird das vorherige Beispiel in eine Remoteabfrage transformiert.
 
 
 ```
@@ -60,15 +60,15 @@ FROM [<ComputerName>.]SystemIndex
 
 
 
-In Windows XP und Windows Server 2003 ist Windows Search standardmäßig nicht installiert. Nur Windows Search 4 (WS4) bietet Unterstützung für Remote Abfragen. Frühere Versionen von Windows Desktop Search (WDS), wie z. b. 3,01 und früher, unterstützen keine Remote Abfragen. Mit Windows Explorer können Sie den lokalen Index eines Remote Computers für Dateisystem Elemente (Elemente, die vom Protokoll "file:" behandelt werden) Abfragen.
+Standardmäßig ist für Windows XP und Windows Server 2003 Windows Search nicht installiert. Nur Windows Search 4 (WS4) bietet Remoteabfrageunterstützung. Frühere Versionen von Windows Desktop Search (WDS), z.B. 3.01 und früher, unterstützen keine Remoteabfragen. Mit Windows-Explorer können Sie den lokalen Index eines Remotecomputers nach Dateisystemelementen abfragen (Elemente, die vom Protokoll "file:" verarbeitet werden).
 
-Zum Abrufen eines Elements nach Remote Abfrage muss das Element die folgenden Anforderungen erfüllen:
+Um ein Element per Remoteabfrage abzurufen, muss das Element die folgenden Anforderungen erfüllen:
 
--   Kann über Universal Naming Convention (UNC)-Pfad aufgerufen werden.
--   Vorhanden auf dem Remote Computer, auf den der Client Zugriff hat.
--   Die Sicherheit muss festgelegt sein, damit der Client über Lesezugriff verfügen kann.
+-   Der Zugriff ist über Universal Naming Convention (UNC)-Pfad möglich.
+-   Auf dem Remotecomputer vorhanden, auf den der Client Zugriff hat.
+-   Lassen Sie die Sicherheit so festgelegt, dass der Client Lesezugriff hat.
 
-Windows-Explorer verfügt über Features zum Freigeben von Elementen, einschließlich einer öffentlichen Freigabe ( \\ \\ \\ Public \\ ...) im **Netzwerk-und Freigabe Center** und einer "Benutzer Freigabe" ( \\ \\ Computer \\ Benutzer.. \\ .) für Elemente, die über den Freigabe-Assistenten freigegeben werden. Nachdem Sie die Ordner freigegeben haben, können Sie den lokalen Index Abfragen, indem Sie den Computernamen des Remote Computers in der from-Klausel und einen UNC-Pfad auf dem Remote Computer in der Scope-Klausel angeben. Eine Remote Abfrage mit der from-Klausel und der Scope-Klausel ist im folgenden Beispiel dargestellt.
+Windows-Explorer verfügt über Funktionen für die Freigabe von Elementen, einschließlich einer "öffentlichen" Freigabe \\ \\ (Öffentliche \\ \\ Computerfreigabe ...) im **Netzwerk- und Freigabecenter** und einer Benutzerfreigabe \\ \\ \\ (Computerbenutzer ...) für \\ Elemente, die über den Freigabe-Assistenten freigegeben wurden. Nachdem Sie die Ordner freigegeben haben, können Sie den lokalen Index abfragen, indem Sie den Computernamen des Remotecomputers in der FROM-Klausel und einen UNC-Pfad auf dem Remotecomputer in der SCOPE-Klausel angeben. Eine Remoteabfrage mithilfe der FROM- und SCOPE-Klauseln wird im folgenden Beispiel gezeigt.
 
 
 ```
@@ -79,89 +79,89 @@ SELECT System.ItemName FROM MachineName.SystemIndex WHERE SCOPE='file://MachineN
 
 In den hier bereitgestellten Beispielen wird SQL verwendet.
 
-### <a name="structured-query-api-overview"></a>Übersicht über die strukturierte Abfrage-API
+### <a name="structured-query-api-overview"></a>Übersicht über die API für strukturierte Abfragen
 
-Eine strukturierte Abfrage bietet die Möglichkeit, anhand von booleschen Kombinationen von Abfragen über einzelne Eigenschaften nach Informationen zu suchen. In diesem Thema werden die Funktionen der wichtigsten strukturierten Abfrage-APIs und-Methoden erläutert. Eine Referenz Dokumentation zu den APIs für strukturierte Abfragen finden Sie unter [Abfragen von Schnittstellen](-search-querying-interfaces-entry-page.md).
+Eine strukturierte Abfrage bietet die Möglichkeit, nach Informationen nach booleschen Kombinationen von Abfragen für einzelne Eigenschaften zu suchen. In diesem Thema werden die Funktionen der wichtigsten strukturierten Abfrage-APIs und -Methoden beschrieben. Eine Referenzdokumentation zu den strukturierten Abfrage-APIs finden Sie unter [Abfragen von Schnittstellen.](-search-querying-interfaces-entry-page.md)
 
-### <a name="iqueryparser"></a>Iqueryparser
+### <a name="iqueryparser"></a>IQueryParser
 
-Die [**iqueryparser::P Arse**](/windows/desktop/api/Structuredquery/nf-structuredquery-iqueryparser-parse) -Methode analysiert eine Benutzereingabe Zeichenfolge und erzeugt eine Interpretation in Form einer [**iquerysolution**](/windows/desktop/api/Structuredquery/nn-structuredquery-iquerysolution). Wenn der *pcustomproperties* -Parameter dieser Methode nicht NULL ist, handelt es sich um eine Enumeration von [**irichchunk**](/windows/desktop/api/Structuredquerycondition/nn-structuredquerycondition-irichchunk) -Objekten (eine für jede erkannte benutzerdefinierte Eigenschaft). Die anderen [**iqueryparser**](/windows/desktop/api/Structuredquery/nn-structuredquery-iqueryparser) -Methoden ermöglichen es der Anwendung, mehrere Optionen wie locale, ein Schema, eine Wörter Trennung und Handler für verschiedene Typen von benannten Entitäten festzulegen. [**Iqueryparser:: getschemaprovider**](/windows/desktop/api/Structuredquery/nf-structuredquery-iqueryparser-getschemaprovider) gibt eine [**ischemaprovider**](/windows/desktop/api/Structuredquery/nn-structuredquery-ischemaprovider) -Schnittstelle zum Durchsuchen des geladenen Schemas zurück.
+Die [**IQueryParser::P arse-Methode**](/windows/desktop/api/Structuredquery/nf-structuredquery-iqueryparser-parse) analysiert eine Benutzereingabezeichenfolge und erzeugt eine Interpretation in Form einer [**IQuerySolution.**](/windows/desktop/api/Structuredquery/nn-structuredquery-iquerysolution) Wenn der *pCustomProperties-Parameter dieser* Methode nicht NULL ist, handelt es sich um eine Enumeration von [**IRichChunk-Objekten**](/windows/desktop/api/Structuredquerycondition/nn-structuredquerycondition-irichchunk) (eines für jede erkannte benutzerdefinierte Eigenschaft). Mit den [**anderen IQueryParser-Methoden**](/windows/desktop/api/Structuredquery/nn-structuredquery-iqueryparser) kann die Anwendung mehrere Optionen festlegen, z. B. ein Locale, ein Schema, eine Wörtertrenneinheit und Handler für verschiedene Typen benannter Entitäten. [**IQueryParser::GetSchemaProvider gibt**](/windows/desktop/api/Structuredquery/nf-structuredquery-iqueryparser-getschemaprovider) eine [**ISchemaProvider-Schnittstelle**](/windows/desktop/api/Structuredquery/nn-structuredquery-ischemaprovider) zum Durchsuchen des geladenen Schemas zurück.
 
-### <a name="iquerysolution--iconditionfactory"></a>Iquerysolution: iconditionfactory
+### <a name="iquerysolution--iconditionfactory"></a>IQuerySolution: IConditionFactory
 
-Die [**iquerysolution**](/windows/desktop/api/Structuredquery/nn-structuredquery-iquerysolution) -Schnittstelle stellt alle Informationen über das Ergebnis der Verarbeitung einer Eingabe Zeichenfolge bereit. Da **iquerysolution** auch eine [**iconditionfactory**](/windows/desktop/api/Structuredquery/nn-structuredquery-iconditionfactory) -Schnittstelle ist, können zusätzliche Bedingungs Struktur Knoten erstellt werden. Die [**iquerysolution:: GetQuery**](/windows/desktop/api/Structuredquery/nf-structuredquery-iquerysolution-getquery) -Methode erzeugt eine Bedingungs Struktur für die Interpretation. **Iquerysolution:: GetQuery** gibt auch den Semantik Typ zurück.
+Die [**IQuerySolution-Schnittstelle**](/windows/desktop/api/Structuredquery/nn-structuredquery-iquerysolution) stellt alle Informationen zum Ergebnis der Analyse einer Eingabezeichenfolge bereit. Da **IQuerySolution auch** eine [**IConditionFactory-Schnittstelle**](/windows/desktop/api/Structuredquery/nn-structuredquery-iconditionfactory) ist, können zusätzliche Bedingungsstrukturknoten erstellt werden. Die [**IQuerySolution::GetQuery-Methode**](/windows/desktop/api/Structuredquery/nf-structuredquery-iquerysolution-getquery) erzeugt eine Bedingungsstruktur für die Interpretation. **IQuerySolution::GetQuery** gibt auch den semantischen Typ zurück.
 
-### <a name="iconditionfactory"></a>Iconditionfactory
+### <a name="iconditionfactory"></a>IConditionFactory
 
-[**Iconditionfactory**](/windows/desktop/api/Structuredquery/nn-structuredquery-iconditionfactory) erstellt Bedingungs Struktur Knoten. Wenn der *vereinfachte Parameter* von [**iconditionfactory:: makenot**](/windows/desktop/api/Structuredquery/nf-structuredquery-iconditionfactory-makenot) **Variant \_ true** ist, wird die resultierende [**icondition**](/windows/desktop/api/Structuredquerycondition/nn-structuredquerycondition-icondition) -Eigenschaft vereinfacht und muss kein Negations Knoten sein. Wenn der *psubconditions* -Parameter von [**iconditionfactory:: makeandor**](/windows/desktop/api/Structuredquery/nf-structuredquery-iconditionfactory-makeandor) nicht NULL ist, sollte dieser Parameter eine Enumeration von [**icondition**](/windows/desktop/api/Structuredquerycondition/nn-structuredquerycondition-icondition) -Objekten sein und zu Unterstrukturen werden. [**Iconditionfactory:: makeleaf**](/windows/desktop/api/Structuredquery/nf-structuredquery-iconditionfactory-makeleaf) erstellt einen Blattknoten mit einem angegebenen Eigenschaftsnamen,-Vorgang und-Wert. Die Zeichenfolge im *pvaluetype* -Parameter sollte der Name eines Semantik Typs aus dem Schema sein. Wenn der *Erweiterungs Parameter* **Variant \_ true** und die-Eigenschaft virtuell ist, ist die resultierende Bedingungs Struktur in der Regel eine Disjunktion, die sich aus der Erweiterung der-Eigenschaft auf die definierten-Bestandteile ergibt. Wenn der Wert nicht NULL ist, sollten die Parameter *ppropertynameterm*, *poperatorterm* und *pvalueterm* Begriffe identifizieren, die die Eigenschaft, den Vorgang und den Wert angeben.
+[**IConditionFactory erstellt**](/windows/desktop/api/Structuredquery/nn-structuredquery-iconditionfactory) Bedingungsstrukturknoten. Wenn der *simplify-Parameter* von [**IConditionFactory::MakeNot**](/windows/desktop/api/Structuredquery/nf-structuredquery-iconditionfactory-makenot) **VARIANT \_ TRUE** ist, wird die resultierende [**ICondition**](/windows/desktop/api/Structuredquerycondition/nn-structuredquerycondition-icondition) vereinfacht und muss kein Negationsknoten sein. Wenn der *pSubConditions-Parameter* von [**IConditionFactory::MakeAndOr**](/windows/desktop/api/Structuredquery/nf-structuredquery-iconditionfactory-makeandor) nicht NULL ist, sollte dieser Parameter eine Enumeration von [**ICondition-Objekten**](/windows/desktop/api/Structuredquerycondition/nn-structuredquerycondition-icondition) sein und zu Teilstruktur werden. [**IConditionFactory::MakeLeaf erstellt**](/windows/desktop/api/Structuredquery/nf-structuredquery-iconditionfactory-makeleaf) einen Blattknoten mit einem angegebenen Eigenschaftennamen, Vorgang und Wert. Die Zeichenfolge im *pValueType-Parameter* sollte der Name eines semantischen Typs aus dem Schema sein. Wenn der *expand-Parameter* **VARIANT \_ TRUE** ist und die Eigenschaft virtuell ist, ist die resultierende Bedingungsstruktur in der Regel eine Disjunktion, die sich aus dem Erweitern der Eigenschaft auf die definierten Bestandteile ergibt. Wenn nicht NULL, sollten die Parameter *pPropertyNameTerm,* *pOperatorTerm* und *pValueTerm* Begriffe identifizieren, die die Eigenschaft, den Vorgang und den Wert angeben.
 
-### <a name="icondition--ipersiststream"></a>Icondition: IPersistStream
+### <a name="icondition--ipersiststream"></a>ICondition : IPersistStream
 
-Die [**icondition**](/windows/desktop/api/Structuredquerycondition/nn-structuredquerycondition-icondition) -Schnittstelle ist ein einzelner Knoten in einer Bedingungs Struktur. Der Knoten kann ein Negation-Knoten, ein Knoten, ein Knoten oder ein Blattknoten sein. Für einen nicht Blattknoten gibt [**icondition:: getsubconditions**](/windows/desktop/api/structuredquerycondition/nf-structuredquerycondition-icondition-getsubconditions) eine Enumeration der Teil Strukturen zurück. Bei einem Blattknoten geben die folgenden Methoden von [**icondition**](/windows/desktop/api/Structuredquerycondition/nn-structuredquerycondition-icondition) die folgenden Werte zurück:
+Die [**ICondition-Schnittstelle**](/windows/desktop/api/Structuredquerycondition/nn-structuredquerycondition-icondition) ist ein einzelner Knoten in einer Bedingungsstruktur. Der Knoten kann ein Negationsknoten, AND-Knoten, OR-Knoten oder Blattknoten sein. Für einen Nicht-Blattknoten gibt [**ICondition::GetSubConditions**](/windows/desktop/api/structuredquerycondition/nf-structuredquerycondition-icondition-getsubconditions) eine Enumeration der Unterstrukturen zurück. Für einen Blattknoten geben die folgenden Methoden von [**ICondition**](/windows/desktop/api/Structuredquerycondition/nn-structuredquerycondition-icondition) die folgenden Werte zurück:
 
--   [**Getcomparisoninfo**](/windows/desktop/api/structuredquerycondition/nf-structuredquerycondition-icondition-getcomparisoninfo) gibt den Eigenschaftsnamen, den Vorgang und den Wert zurück.
--   [**Getvaluetype**](/windows/desktop/api/structuredquerycondition/nf-structuredquerycondition-icondition-getvaluetype) gibt den semantischen Typ des Werts zurück, der im *pszvaluetype* -Parameter von [**iconditionfactory:: makeleaf**](/windows/desktop/api/Structuredquery/nf-structuredquery-iconditionfactory-makeleaf)angegeben wurde.
--   [**GetValueNormalization**](/windows/desktop/api/structuredquerycondition/nf-structuredquerycondition-icondition-getvaluenormalization) gibt eine Zeichen folgen Form des Werts zurück. (Wenn der Wert bereits eine Zeichenfolge ist, wird dieses Formular in Bezug auf Groß-/Kleinschreibung, Akzente usw. normalisiert.)
--   [**Getinputterms**](/windows/desktop/api/structuredquerycondition/nf-structuredquerycondition-icondition-getinputterms) gibt Informationen darüber zurück, welche Teile des Eingabe Satzes den Eigenschaftsnamen, den Vorgang und den Wert generiert haben.
--   [**Clone**](/windows/desktop/api/structuredquerycondition/nf-structuredquerycondition-icondition-clone) gibt eine tiefe Kopie einer Bedingungs Struktur zurück.
+-   [**GetComparisonInfo**](/windows/desktop/api/structuredquerycondition/nf-structuredquerycondition-icondition-getcomparisoninfo) gibt den Namen, den Vorgang und den Wert der Eigenschaft zurück.
+-   [**GetValueType**](/windows/desktop/api/structuredquerycondition/nf-structuredquerycondition-icondition-getvaluetype) gibt den semantischen Typ des Werts zurück, der im *pszValueType-Parameter* von [**IConditionFactory::MakeLeaf**](/windows/desktop/api/Structuredquery/nf-structuredquery-iconditionfactory-makeleaf)spezifisch war.
+-   [**GetValueNormalization**](/windows/desktop/api/structuredquerycondition/nf-structuredquerycondition-icondition-getvaluenormalization) gibt eine Zeichenfolgenform des Werts zurück. (Wenn es sich bei dem Wert bereits um eine Zeichenfolge handelt, wird dieses Formular hinsichtlich Groß-/Schreibung, Akzenten usw. normalisiert.)
+-   [**GetInputTerms**](/windows/desktop/api/structuredquerycondition/nf-structuredquerycondition-icondition-getinputterms) gibt Informationen darüber zurück, welche Teile des Eingabesatzes den Eigenschaftennamen, den Vorgang und den Wert generiert haben.
+-   [**Clone**](/windows/desktop/api/structuredquerycondition/nf-structuredquerycondition-icondition-clone) gibt eine tiefe Kopie einer Bedingungsstruktur zurück.
 
-### <a name="irichchunk"></a>Irichchunk
+### <a name="irichchunk"></a>IRichChunk
 
-Jedes [**irichchunk**](/windows/desktop/api/Structuredquerycondition/nn-structuredquerycondition-irichchunk) -Objekt identifiziert eine tokenspanne und eine Zeichenfolge. **Irichchunk** ist eine hilfsprogrammschnittstelle, die Informationen über eine Spanne (in der Regel eine Spanne von Token) darstellt, die durch eine Anfangsposition und-Länge gekennzeichnet wird. Diese Spannen Informationen beinhalten eine Zeichenfolge und/oder eine **Variante**.
+Jedes [**IRichChunk-Objekt**](/windows/desktop/api/Structuredquerycondition/nn-structuredquerycondition-irichchunk) identifiziert eine Tokenspanne und eine Zeichenfolge. **IRichChunk** ist eine Hilfsprogrammschnittstelle, die Informationen über eine Spanne (in der Regel eine Tokenspanne) darstellt, die durch eine Anfangsposition und Länge identifiziert wird. Diese Spanneninformationen umfassen eine Zeichenfolge und/oder eine **VARIANT -Datei.**
 
-### <a name="iconditiongenerator"></a>Iconditiongenerator
+### <a name="iconditiongenerator"></a>IConditionGenerator
 
-Die [**iconditiongenerator**](/windows/desktop/api/Structuredquery/nn-structuredquery-iconditiongenerator) -Schnittstelle wird von der Anwendung bereitgestellt, um die Generierung von Erkennungs-und Bedingungs Strukturen für einen benannten Entitätstyp zu verarbeiten. Ein Bedingungs Generator wird an [**iqueryparser**](/windows/desktop/api/Structuredquery/nn-structuredquery-iqueryparser) über [**iqueryparser:: setmultioption**](/windows/desktop/api/Structuredquery/nf-structuredquery-iqueryparser-setmultioption)übergeben. [**Iqueryparser**](/windows/desktop/api/Structuredquery/nn-structuredquery-iqueryparser) ruft [**iconditiongenerator:: Initialize**](/windows/desktop/api/Structuredquery/nf-structuredquery-iconditiongenerator-initialize) mit einem [**ischemaprovider**](/windows/desktop/api/Structuredquery/nn-structuredquery-ischemaprovider) für das aktuell geladene Schema auf. Auf diese Weise kann [**iconditiongenerator**](/windows/desktop/api/Structuredquery/nn-structuredquery-iconditiongenerator) alle erforderlichen Schema Informationen abrufen. Beim Parsen einer Eingabe Zeichenfolge ruft **iqueryparser** die [**iconditiongenerator:: erkenzenamedentities**](/windows/desktop/api/Structuredquery/nf-structuredquery-iconditiongenerator-recognizenamedentities) -Methode jedes [**iconditiongenerator**](/windows/desktop/api/Structuredquery/nn-structuredquery-iconditiongenerator)auf, sodass das Vorkommen von benannten Entitäten, das in der Eingabe Zeichenfolge erkannt wird, gemeldet werden kann. **Iqueryparser** kann das aktuelle Gebiets Schema verwenden und sollte die Tokenisierung der Eingabe verwenden, da es die tokenspannen von benannten Entitäten melden muss.
+Die [**IConditionGenerator-Schnittstelle**](/windows/desktop/api/Structuredquery/nn-structuredquery-iconditiongenerator) wird von der Anwendung bereitgestellt, um die Erkennung und Bedingungsstrukturgenerierung für einen benannten Entitätstyp zu verarbeiten. Ein Bedingungsgenerator wird einem [**IQueryParser**](/windows/desktop/api/Structuredquery/nn-structuredquery-iqueryparser) über [**IQueryParser::SetMultiOption**](/windows/desktop/api/Structuredquery/nf-structuredquery-iqueryparser-setmultioption)übergeben. [**IQueryParser**](/windows/desktop/api/Structuredquery/nn-structuredquery-iqueryparser) ruft [**IConditionGenerator::Initialize**](/windows/desktop/api/Structuredquery/nf-structuredquery-iconditiongenerator-initialize) mit einem [**ISchemaProvider**](/windows/desktop/api/Structuredquery/nn-structuredquery-ischemaprovider) für das derzeit geladene Schema auf. Dadurch kann [**IConditionGenerator**](/windows/desktop/api/Structuredquery/nn-structuredquery-iconditiongenerator) alle erforderlichen Schemainformationen abrufen. Beim Analyse einer Eingabezeichenfolge ruft **IQueryParser** die [**IConditionGenerator::RecognizeNamedEntities-Methode**](/windows/desktop/api/Structuredquery/nf-structuredquery-iconditiongenerator-recognizenamedentities) jedes [**IConditionGenerators**](/windows/desktop/api/Structuredquery/nn-structuredquery-iconditiongenerator)auf, damit das Vorkommen benannter Entitäten, die es in der Eingabezeichenfolge erkennt, gemeldet werden kann. **IQueryParser** kann das aktuelle Locale verwenden und sollte die Tokenisierung der Eingabe nutzen, da er die Tokenspanne aller benannten Entitäten melden muss.
 
-Wenn [**iqueryparser**](/windows/desktop/api/Structuredquery/nn-structuredquery-iqueryparser) einen Blattknoten ausgibt und der Semantik Typ des Werts mit dem benannten Entitätstyp für einen [**iconditiongenerator**](/windows/desktop/api/Structuredquery/nn-structuredquery-iconditiongenerator)übereinstimmt, ruft **iqueryparser** [**iconditiongenerator:: generateforleaf**](/windows/desktop/api/Structuredquery/nf-structuredquery-iconditiongenerator-generateforleaf) mit den Informationen für den zu generierenden Knoten auf. Wenn der [**iconditiongenerator**](/windows/desktop/api/Structuredquery/nn-structuredquery-iconditiongenerator) S OK zurückgibt \_ , sollte er eine Bedingungs Struktur zurückgeben (bei der es sich nicht um einen Endknoten handeln muss) und **iqueryparser** darüber informieren, ob die Alternative Zeichen folgen Interpretation unterdrückt werden soll, die normalerweise als Vorsichtsmaßnahme generiert würde.
+Wenn [**IQueryParser**](/windows/desktop/api/Structuredquery/nn-structuredquery-iqueryparser) einen Blattknoten aus geben möchte und der semantische Typ des Werts mit dem benannten Entitätstyp für einen [**IConditionGenerator**](/windows/desktop/api/Structuredquery/nn-structuredquery-iconditiongenerator)abschneidet, ruft **IQueryParser** [**IConditionGenerator::GenerateforLeaf**](/windows/desktop/api/Structuredquery/nf-structuredquery-iconditiongenerator-generateforleaf) mit den Informationen für den zu generierenden Knoten auf. Wenn [**der IConditionGenerator**](/windows/desktop/api/Structuredquery/nn-structuredquery-iconditiongenerator) S OK zurückgibt, sollte er eine Bedingungsstruktur zurückgeben (die kein Blattknoten sein muss) und \_ **IQueryParser** darüber informieren, ob die alternative Zeichenfolgeninterpretation unterdrückt werden soll, die normalerweise als Vorsichtsmaßnahme generiert wird.
 
-### <a name="itokencollection"></a>Iabkencollection
+### <a name="itokencollection"></a>ITokenCollection
 
-Die [**itokencollection:: numoftokens**](/windows/desktop/api/Structuredquery/nf-structuredquery-itokencollection-numberoftokens) -Methode gibt die Anzahl der Token zurück. [**Itokencollection:: GetToken**](/windows/desktop/api/Structuredquery/nf-structuredquery-itokencollection-gettoken) gibt Informationen zum *i* Th-Token zurück. Der Anfang und die Länge sind Zeichen Positionen in der Eingabe Zeichenfolge. Der zurückgegebene Text ist nur ungleich NULL, wenn ein Text vorhanden ist, der die Zeichen aus der Eingabe Zeichenfolge überschreibt. Dies wird z. b. verwendet, um einen Bindestrich in der Eingabe Zeichenfolge zu überschreiben, und nicht, wenn sich dieser Bindestrich in einem Kontext befindet, in dem er als Negation interpretiert werden soll.
+Die [**ITokenCollection::NumberOfTokens-Methode**](/windows/desktop/api/Structuredquery/nf-structuredquery-itokencollection-numberoftokens) gibt die Anzahl der Token zurück. [**ITokenCollection::GetToken gibt**](/windows/desktop/api/Structuredquery/nf-structuredquery-itokencollection-gettoken) Informationen zum *ith-Token* zurück. Der Anfang und die Länge sind Zeichenpositionen in der Eingabezeichenfolge. Der zurückgegebene Text ist nur dann nicht NULL, wenn ein Text die Zeichen aus der Eingabezeichenfolge überschreiben muss. Dies wird beispielsweise verwendet, um einen Bindestrich in der Eingabezeichenfolge mit NOT zu überschreiben, wenn sich dieser Bindestrich in einem Kontext befindet, in dem er als Negation interpretiert werden soll.
 
-### <a name="inamedentitycollector"></a>Inamedentitycollector
+### <a name="inamedentitycollector"></a>INamedEntityCollector
 
-[**Iconditiongenerator**](/windows/desktop/api/Structuredquery/nn-structuredquery-iconditiongenerator) Ruft für jede erkannte benannte Entität [**inamedentitycollector:: Add**](/windows/desktop/api/Structuredquery/nf-structuredquery-inamedentitycollector-add) auf. Die Spannen sind tokenspannen. Dies muss immer die Groß-/Kleinschreibung *sein?* *beginactual*  <  *endactual* ? *endspan*. *beginspan* und *endspan* können von *beginactual* und *endactual* abweichen, wenn die benannte Entität beginnt und/oder mit semantisch unbedeutenden Token, wie z. b. Anführungszeichen, endet (die von der benannten Entität abgedeckt werden). Der Wert muss als Zeichenfolge ausgedrückt werden und wird anschließend in einem Aufrufen von [**iconditiongenerator:: generateforleaf**](/windows/desktop/api/Structuredquery/nf-structuredquery-iconditiongenerator-generateforleaf)angezeigt.
+[**IConditionGenerator**](/windows/desktop/api/Structuredquery/nn-structuredquery-iconditiongenerator) ruft [**INamedEntityCollector::Add für**](/windows/desktop/api/Structuredquery/nf-structuredquery-inamedentitycollector-add) jede erkannte benannte Entität auf. Die Spannen sind Tokenspanne. Es muss immer der Fall sein, dass *beginSpan* ? *beginActual*  <  *endActual* ? *endSpan*. *beginSpan* und *endSpan* können sich von *beginActual* und *endActual* unterscheiden, wenn die benannte Entität mit semantisch nicht signifikanten Token wie Anführungszeichen beginnt und/oder endet (die dennoch von der benannten Entität abgedeckt werden). Der Wert muss als Zeichenfolge ausgedrückt werden und wird anschließend in einem Aufruf von [**IConditionGenerator::GenerateForLeaf angezeigt.**](/windows/desktop/api/Structuredquery/nf-structuredquery-iconditiongenerator-generateforleaf)
 
-### <a name="ischemaprovider"></a>Ischemaprovider
+### <a name="ischemaprovider"></a>ISchemaProvider
 
-Die [**ischemaprovider**](/windows/desktop/api/Structuredquery/nn-structuredquery-ischemaprovider) -Schnittstelle kann verwendet werden, um ein geladenes Schema nach Entitäten (Typen) und Beziehungen (Eigenschaften) zu durchsuchen. Im folgenden werden die einzelnen Methoden beschrieben:
+Die [**ISchemaProvider-Schnittstelle**](/windows/desktop/api/Structuredquery/nn-structuredquery-ischemaprovider) kann verwendet werden, um ein geladenes Schema nach Entitäten (Typen) und Beziehungen (Eigenschaften) zu durchsuchen. Dies sind die einzelnen Methoden:
 
--   [**Entitäten**](/windows/desktop/api/Structuredquery/nf-structuredquery-ischemaprovider-entities) gibt eine Enumeration aller Entitäten ([**IEntity**](/windows/desktop/api/Structuredquery/nn-structuredquery-ientity)) im Schema zurück.
--   [**Rootentity**](/windows/desktop/api/Structuredquery/nf-structuredquery-ischemaprovider-rootentity) gibt die Stamm Entität des Schemas zurück. Bei einem flachen Schema wird der Haupttyp jeder [**iquerysolution**](/windows/desktop/api/Structuredquery/nn-structuredquery-iquerysolution) zurückgegeben.
--   [**GetEntity**](/windows/desktop/api/Structuredquery/nf-structuredquery-ischemaprovider-getentity) sucht eine Entität anhand des Namens und gibt S false zurück, \_ Wenn keine solche Entität im Schema vorhanden ist.
--   [**Metadaten**](/windows/desktop/api/Structuredquery/nf-structuredquery-ischemaprovider-metadata) gibt eine Enumeration von [**IMetadata**](/windows/desktop/api/Structuredquery/nn-structuredquery-imetadata) -Schnittstellen zurück.
+-   [**Entitäten**](/windows/desktop/api/Structuredquery/nf-structuredquery-ischemaprovider-entities) geben eine Enumeration jeder Entität ([**IEntity**](/windows/desktop/api/Structuredquery/nn-structuredquery-ientity)) im Schema zurück.
+-   [**RootEntity gibt**](/windows/desktop/api/Structuredquery/nf-structuredquery-ischemaprovider-rootentity) die Stammentität des Schemas zurück. Bei einem flachen Schema wird der Haupttyp jeder [**IQuerySolution**](/windows/desktop/api/Structuredquery/nn-structuredquery-iquerysolution) zurückgegeben.
+-   [**GetEntity sucht**](/windows/desktop/api/Structuredquery/nf-structuredquery-ischemaprovider-getentity) nach einer Entität nach Namen und gibt S FALSE zurück, wenn im Schema keine entität \_ dieser Entität vorkommt.
+-   [**MetaData gibt**](/windows/desktop/api/Structuredquery/nf-structuredquery-ischemaprovider-metadata) eine Enumeration von [**IMetaData-Schnittstellen**](/windows/desktop/api/Structuredquery/nn-structuredquery-imetadata) zurück.
 
 ### <a name="ientity"></a>IEntity
 
-Die [**IEntity**](/windows/desktop/api/Structuredquery/nn-structuredquery-ientity) -Schnittstelle ist eine Schema Entität, die einen Typ mit einem Namen darstellt, eine Anzahl benannter Beziehungen zu anderen Typen (Eigenschaften) aufweist und von einer Basis Entität abgeleitet ist. Im folgenden werden die einzelnen Methoden beschrieben:
+Die [**IEntity-Schnittstelle**](/windows/desktop/api/Structuredquery/nn-structuredquery-ientity) ist eine Schemaentität, die einen Typ darstellt, der einen Namen hat, über eine Reihe benannter Beziehungen zu anderen Typen (Eigenschaften) verfügt und von einer Basisentität abstammt. Die einzelnen Methoden führen dies aus:
 
--   [**IEntity::**](/windows/desktop/api/Structuredquery/nf-structuredquery-ientity-relationships) Relationship gibt eine Enumeration von [**IRelationship**](/windows/desktop/api/Structuredquery/nn-structuredquery-irelationship) -Objekten zurück, eine für jede ausgehende Beziehung dieses Typs. Jede ausgehende Beziehung einer Entität hat einen Namen.
--   [**IEntity:: GetRelationship**](/windows/desktop/api/Structuredquery/nf-structuredquery-ientity-getrelationship) findet eine Beziehung nach Name und gibt S false zurück, \_ Wenn keine solche Beziehung für diese Entität vorhanden ist.
--   [**IEntity:: Metadata**](/windows/desktop/api/Structuredquery/nf-structuredquery-ientity-metadata) gibt eine Enumeration von [**IMetadata**](/windows/desktop/api/Structuredquery/nn-structuredquery-imetadata) -Schnittstellen zurück, eine für jedes metadatenpaar dieser Entität.
--   [**IEntity::D efaultphrase**](/windows/desktop/api/Structuredquery/nf-structuredquery-ientity-defaultphrase) gibt einen Standardausdruck zurück, um das Erstellen einer AQS-oder NQS-neuanweisung einer Bedingungs Struktur zu vereinfachen.
+-   [**IEntity::Relationships gibt**](/windows/desktop/api/Structuredquery/nf-structuredquery-ientity-relationships) eine Enumeration von [**IRelationship-Objekten**](/windows/desktop/api/Structuredquery/nn-structuredquery-irelationship) zurück, eine für jede ausgehende Beziehung dieses Typs. Jede ausgehende Beziehung einer Entität hat einen Namen.
+-   [**IEntity::GetRelationship**](/windows/desktop/api/Structuredquery/nf-structuredquery-ientity-getrelationship) sucht eine Beziehung anhand des Namens und gibt S FALSE zurück, wenn für diese Entität keine \_ solche Beziehung besteht.
+-   [**IEntity::MetaData**](/windows/desktop/api/Structuredquery/nf-structuredquery-ientity-metadata) gibt eine Enumeration von [**IMetaData-Schnittstellen**](/windows/desktop/api/Structuredquery/nn-structuredquery-imetadata) zurück, eine für jedes Metadatenpaar dieser Entität.
+-   [**IEntity::D efaultPhrase**](/windows/desktop/api/Structuredquery/nf-structuredquery-ientity-defaultphrase) gibt einen Standardbegriff zurück, um das Generieren einer AQS- oder NQS-Neukonfiguration einer Bedingungsstruktur zu erleichtern.
 
 ### <a name="irelationship"></a>IRelationship
 
-Die [**IRelationship**](/windows/desktop/api/Structuredquery/nn-structuredquery-irelationship) -Schnittstelle stellt eine Beziehung zwischen zwei Entitäten dar: eine Quelle und ein Ziel. Im folgenden werden die einzelnen Methoden beschrieben:
+Die [**IRelationship-Schnittstelle**](/windows/desktop/api/Structuredquery/nn-structuredquery-irelationship) stellt eine Beziehung zwischen zwei Entitäten dar: einer Quelle und einem Ziel. Einzelne Methoden haben folgende Möglichkeiten:
 
--   [**IRelationship:: Isreal**](/windows/desktop/api/Structuredquery/nf-structuredquery-irelationship-isreal) meldet, ob eine Beziehung Real ist. Wenn z. B. Entität a von Entität B abgeleitet ist und eine Beziehung namens r von ihr erbt, hat eine möglicherweise noch eine eigene Beziehung namens r. Allerdings müssen die Beziehungen A und R den gleichen Zieltyp wie b aufweisen, und der einzige Grund dafür ist das Speichern von Metadaten, die für b spezifisch sind. Eine solche Beziehung von B ist nicht Real.
--   [**IRelationship:: medadata**](/windows/desktop/api/Structuredquery/nf-structuredquery-irelationship-metadata) gibt eine Enumeration von [**IMetadata**](/windows/desktop/api/Structuredquery/nn-structuredquery-imetadata) -Schnittstellen zurück, eine für jedes metadatenpaar dieser Entität.
--   [**IRelationship::D efaultphrase**](/windows/desktop/api/Structuredquery/nf-structuredquery-irelationship-defaultphrase) gibt den für diese Beziehung in Restatements zu verwendenden Standardausdruck zurück. Jede Beziehung verfügt über einen Standardausdruck, der die Erstellung einer AQS-oder NQS-neuanweisung einer Bedingungs Struktur erleichtert.
+-   [**IRelationship::IsReal**](/windows/desktop/api/Structuredquery/nf-structuredquery-irelationship-isreal) meldet, ob eine Beziehung real ist. Wenn Entität A beispielsweise von Entität B abgeleitet ist und eine Beziehung mit dem Namen R erbt, verfügt A möglicherweise noch über eine eigene Beziehung mit dem Namen R. Die Beziehung zwischen A und R muss jedoch den gleichen Zieltyp wie B aufweisen, und der einzige Grund dafür ist das Speichern von Metadaten, die für B spezifisch sind. Eine solche Beziehung von B wird als nicht real bezeichnet.
+-   [**IRelationship::Medadata**](/windows/desktop/api/Structuredquery/nf-structuredquery-irelationship-metadata) gibt eine Enumeration von [**IMetaData-Schnittstellen**](/windows/desktop/api/Structuredquery/nn-structuredquery-imetadata) zurück, eine für jedes Metadatenpaar dieser Entität.
+-   [**IRelationship::D efaultPhrase**](/windows/desktop/api/Structuredquery/nf-structuredquery-irelationship-defaultphrase) gibt den Standardbegriff zurück, der für diese Beziehung in Neueinstellungen verwendet werden soll. Jede Beziehung verfügt über einen Standardphrasen, der sie bezeichnet, um das Generieren einer AQS- oder NQS-Neudarstellung einer Bedingungsstruktur zu vereinfachen.
 
-### <a name="imetadata"></a>IMetadata
+### <a name="imetadata"></a>IMetaData
 
-Metadaten sind Schlüssel-Wert-Paare, die jeweils mit einer Entität, einer Beziehung oder dem gesamten Schema verknüpft sind. Da Schlüssel nicht notwendigerweise eindeutig sind, kann eine Auflistung von Metadaten als mehrfach Zuordnung betrachtet werden. [**IMetadata:: GetData**](/windows/desktop/api/Structuredquery/nf-structuredquery-imetadata-getdata) wird aufgerufen, um den Schlüssel und den Wert für ein metatdatenpaar abzurufen.
+Metadaten sind Schlüssel-Wert-Paare, die jeweils einer Entität, einer Beziehung oder dem gesamten Schema zugeordnet sind. Da Schlüssel nicht unbedingt eindeutig sind, kann eine Sammlung von Metadaten als Mehrfachzuordnung bezeichnet werden. [**IMetaData::GetData**](/windows/desktop/api/Structuredquery/nf-structuredquery-imetadata-getdata) wird aufgerufen, um den Schlüssel und wert für ein Metadatenpaar abzurufen.
 
 ## <a name="querying-scenarios"></a>Abfragen von Szenarien
 
-In den folgenden Szenarien wird die Verwendung von strukturierten Abfrage-APIs in Windows Search in allgemeinen Abfrage Szenarios beschrieben, wie z. b. das Erstellen einer Bedingungs Struktur und das Abfragen des Indexes.
+In den folgenden Szenarien wird die Verwendung strukturierter Abfrage-APIs in Windows Search in gängigen Abfrageszenarien beschrieben, z. B. beim Erstellen einer Bedingungsstruktur und beim Abfragen des Indexes.
 
-### <a name="condition-extraction-and-query-parsing"></a>Bedingungs Extraktion und Abfrage Verarbeitung
+### <a name="condition-extraction-and-query-parsing"></a>Bedingungsextraktion und Abfrageparsing
 
-Wenn eine Abfrage erstellt wird, wird der zugehörige Bereich definiert, indem dem System mitgeteilt wird, wo gesucht werden soll. Dadurch werden die Suchergebnisse eingeschränkt. Nachdem der Bereich definiert wurde, wird ein Filter angewendet, und es wird ein Filtersatz zurückgegeben. Die Suchergebnisse werden durch das Entwickeln einer Bedingungs Struktur mit Blattknoten, ähnlich einem Diagramm, eingeschränkt. Diese Bedingungen werden dann extrahiert. Eine Bedingungs Struktur ist eine boolesche Kombination (and, or, not) der Blatt Bedingungen, von denen jede eine Eigenschaft über einen Vorgang mit einem Wert verknüpft. Ein Blattknoten stellt eine Einschränkung für eine einzelne Eigenschaft zu einem Wert durch einige Vorgänge dar.
+Wenn eine Abfrage erstellt wird, wird ihr Bereich definiert, indem dem System mitgeteilt wird, wo gesucht werden soll. Dies schränkt die Suchergebnisse ein. Nachdem der Bereich definiert wurde, wird ein Filter angewendet, und ein Filtersatz wird zurückgegeben. Suchergebnisse werden durch erstellen einer Bedingungsstruktur mit Blattknoten eingeschränkt, ähnlich wie ein Diagramm. Diese Bedingungen werden dann extrahiert. Eine Bedingungsstruktur ist eine boolesche Kombination (AND, OR, NOT) von Blattbedingungen, von denen jede eine Eigenschaft über einen Vorgang mit einem Wert verbindet. Ein Blattknoten stellt eine Einschränkung für eine einzelne Eigenschaft auf einen Wert durch einige Vorgänge dar.
 
-Eine Filter Einschränkung erfordert einen logischen Ausdruck, der die Einschränkung beschreibt. Die Definition dieses Ausdrucks beginnt mit der [**icondition**](/windows/desktop/api/Structuredquerycondition/nn-structuredquerycondition-icondition) -Schnittstelle, die verwendet wird, um einen einzelnen Knoten in einer Bedingungs Struktur zu erstellen. Da im folgenden Beispiel nur eine Bedingung vorhanden ist, ändert sich die Struktur nicht.
+Eine Filtereinschränkung erfordert einen logischen Ausdruck, der die Einschränkung beschreibt. Das Definieren dieses Ausdrucks beginnt mit der [**ICondition-Schnittstelle,**](/windows/desktop/api/Structuredquerycondition/nn-structuredquerycondition-icondition) die zum Erstellen eines einzelnen Knotens in einer Bedingungsstruktur verwendet wird. Da es im folgenden Beispiel nur eine Bedingung gibt, ändert sich die Struktur nicht.
 
 
 ```C++
@@ -187,9 +187,9 @@ Eine Filter Einschränkung erfordert einen logischen Ausdruck, der die Einschrä
 
 
 
-Wenn mehrere Filterbedingungen vorhanden sind, werden und und andere boolesche Operatoren verwendet, um eine einzelne Struktur zu erzielen. -Strukturen und-Strukturen und-Strukturen stellen Zusammenhänge und Disjunktionen ihrer Teil Strukturen dar. Eine not-Tree-Struktur stellt die Negation der einzelnen Unterstruktur dar. AQS bietet einen Text Ansatz, mit dem logische Ausdrücke mit booleschen Operatoren erreicht werden können. Dies ist häufig einfacher.
+Wenn es mehrere Filterbedingung gibt, werden AND und andere boolesche Operatoren verwendet, um eine einzelne Struktur zu erreichen. AND-Strukturen und OR-Strukturen stellen Konjunktionen und Disjunktionen ihrer Teilstrukturen dar. Eine NOT-Struktur stellt die Negation ihrer einzelnen Teilstruktur dar. AQS bietet einen Textansatz zum Erreichen logischer Ausdrücke mit booleschen Operatoren und ist häufig einfacher.
 
-Im nächsten Beispiel wird die Bedingungs Struktur ([**icondition**](/windows/desktop/api/Structuredquerycondition/nn-structuredquerycondition-icondition)) in das visuelle Formular konvertiert. Der Abfrage Parser konvertiert mithilfe der [**iqueryparser**](/windows/desktop/api/Structuredquery/nn-structuredquery-iqueryparser) -Schnittstelle die [**icondition**](/windows/desktop/api/Structuredquerycondition/nn-structuredquerycondition-icondition) in eine RTF-Abfrage Zeichenfolge (Rich Text formatiert). Die [**iqueryparser:: restateto String**](/windows/desktop/api/Structuredquery/nf-structuredquery-iqueryparser-restatetostring) -Methode gibt den Abfragetext zurück, während die [**iqueryparser::P Arse**](/windows/desktop/api/Structuredquery/nf-structuredquery-iqueryparser-parse) -Methode eine [**iquerysolution**](/windows/desktop/api/Structuredquery/nn-structuredquery-iquerysolution) -Schnittstelle erzeugt. Das folgende Beispiel zeigt, wie Sie das tun.
+Im nächsten Beispiel konvertieren wir die Bedingungsstruktur ([**ICondition**](/windows/desktop/api/Structuredquerycondition/nn-structuredquerycondition-icondition)) in visuelle Form. Der Abfrageparser konvertiert mithilfe der [**IQueryParser-Schnittstelle**](/windows/desktop/api/Structuredquery/nn-structuredquery-iqueryparser) [**die ICondition**](/windows/desktop/api/Structuredquerycondition/nn-structuredquerycondition-icondition) in eine RTF-Abfragezeichenfolge (Rich Text Formatted). Die [**IQueryParser::RestateToString-Methode**](/windows/desktop/api/Structuredquery/nf-structuredquery-iqueryparser-restatetostring) gibt den Abfragetext zurück, während die [**IQueryParser::P arse-Methode**](/windows/desktop/api/Structuredquery/nf-structuredquery-iqueryparser-parse) eine [**IQuerySolution-Schnittstelle**](/windows/desktop/api/Structuredquery/nn-structuredquery-iquerysolution) erzeugt. Das folgende Beispiel zeigt, wie Sie all dies tun.
 
 
 ```C++
@@ -214,7 +214,7 @@ Im nächsten Beispiel wird die Bedingungs Struktur ([**icondition**](/windows/de
 
 
 
-Die Haupt Eingabe von [**iqueryparser::P Arse**](/windows/desktop/api/Structuredquery/nf-structuredquery-iqueryparser-parse) ist eine Benutzereingabe Zeichenfolge, die analysiert werden soll, aber die Anwendung kann den Abfrage Parser auch über alle Eigenschaften informieren, die er in der Eingabe erkannt hat (von anwendungsspezifischer Syntax). Die Ausgabe von **iqueryparser::P Arse** ist eine [**iquerysolution**](/windows/desktop/api/Structuredquery/nn-structuredquery-iquerysolution), die alle Informationen zu diesem analysieren-Aufruf bereitstellt. Es gibt Methoden zum Abrufen der Eingabe Zeichenfolge, zur Tokenisierung der Eingabe Zeichenfolge, zu Analyse Fehlern und der analysierten Abfrage als Bedingungs Struktur, die durch eine [**icondition**](/windows/desktop/api/Structuredquerycondition/nn-structuredquerycondition-icondition)dargestellt wird. Das folgende Beispiel zeigt...
+Die Haupteingabe von [**IQueryParser::P arse**](/windows/desktop/api/Structuredquery/nf-structuredquery-iqueryparser-parse) ist eine zu analysierende Benutzereingabezeichenfolge, aber die Anwendung kann den Abfrageparser auch über alle Eigenschaften informieren, die er in der Eingabe erkannt hat (aus anwendungsspezifischer Syntax). Die Ausgabe von **IQueryParser::P arse** ist eine [**IQuerySolution,**](/windows/desktop/api/Structuredquery/nn-structuredquery-iquerysolution)die alle Informationen zu diesem Analyseaufruf enthält. Es gibt Methoden zum Abrufen der Eingabezeichenfolge, zum Tokenisieren der Eingabezeichenfolge, zu Analysefehlern und zur analysierten Abfrage als Bedingungsstruktur, die durch [**eine ICondition dargestellt wird.**](/windows/desktop/api/Structuredquerycondition/nn-structuredquerycondition-icondition) Das folgende Beispiel zeigt ...
 
 
 ```C++
@@ -236,27 +236,27 @@ Die Haupt Eingabe von [**iqueryparser::P Arse**](/windows/desktop/api/Structured
 
 
 
-Im vorherigen Beispiel konnte [**iquerysolution:: GetQuery**](/windows/desktop/api/Structuredquery/nf-structuredquery-iquerysolution-getquery) alle Informationen über die Abfrage abrufen, einschließlich des ursprünglichen Texts, der Token, die den Text umfassen, oder der Bedingungs Struktur. Beispiele für mögliche zurückgegebene Abfrage Werte sind in der folgenden Tabelle aufgeführt.
+Im vorherigen Beispiel konnte [**IQuerySolution::GetQuery**](/windows/desktop/api/Structuredquery/nf-structuredquery-iquerysolution-getquery) alle Informationen zur Abfrage abrufen, einschließlich des ursprünglichen Texts, token, die den Text bilden, oder der Bedingungsstruktur. Beispiele für mögliche zurückgegebene Abfragewerte sind in der folgenden Tabelle aufgeführt.
 
 
 
-| Beispiele für zurückgegebene Abfrage Werte                        | BESCHREIBUNG                                                                                               |
+| Beispiele für zurückgegebene Abfragewerte                        | BESCHREIBUNG                                                                                               |
 |----------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|
-| `  author:relja OR author:tyler`                         | Der Abfragetext, den [**iqueryparser:: restateto String**](/windows/desktop/api/Structuredquery/nf-structuredquery-iqueryparser-restatetostring) zurückgibt. |
-| `?author?, ?:?, ?relja?, ?OR?, ?author?, ?:?, ?tyler?`   | Die Unterbrechung von Token                                                                                  |
-| ![eine nicht aufgelöste Bedingungs Struktur](images/queryvalues1.png) | Eine nicht aufgelöste Bedingungs Struktur                                                                              |
+| `  author:relja OR author:tyler`                         | Der Abfragetext, den [**IQueryParser::RestateToString**](/windows/desktop/api/Structuredquery/nf-structuredquery-iqueryparser-restatetostring) zurückgibt |
+| `?author?, ?:?, ?relja?, ?OR?, ?author?, ?:?, ?tyler?`   | Auflisten von Token                                                                                  |
+| ![Eine nicht aufgelöste Bedingungsstruktur](images/queryvalues1.png) | Eine nicht aufgelöste Bedingungsstruktur                                                                              |
 
 
 
  
 
-Die ursprüngliche Bedingungs Struktur, die zurückgegeben wird, ist nicht aufgelöst. In einer nicht aufgelösten Bedingungs Struktur werden Datums-und Uhrzeit Verweise, wie z `date:yesterday` . b., nicht in die absolute Zeit konvertiert. Außerdem werden virtuelle Eigenschaften nicht erweitert. Virtuelle Eigenschaften sind Eigenschaften, die als Aggregate mehrerer Eigenschaften fungieren.
+Die zurückgegebene Anfangsbedingungsstruktur ist nicht aufgelöst. In einer nicht aufgelösten Bedingungsstruktur werden Datums- und Uhrzeitverweise wie `date:yesterday` nicht in absolute Zeit konvertiert. Außerdem werden virtuelle Eigenschaften nicht erweitert. Virtuelle Eigenschaften sind Eigenschaften, die als Aggregate mehrerer Eigenschaften fungieren.
 
-Die Abfrage `kind:email from:reljai` erzeugt z. b. die folgenden nicht aufgelösten und aufgelösten Bedingungs Strukturen. Die nicht aufgelöste Bedingungs Struktur befindet sich auf der linken Seite, und die aufgelöste Bedingungs Struktur befindet sich auf der rechten Seite.
+Die Abfrage erzeugt beispielsweise `kind:email from:reljai` die folgenden nicht aufgelösten und aufgelösten Bedingungsstrukturen. Die nicht aufgelöste Bedingungsstruktur befindet sich links, und die aufgelöste Bedingungsstruktur befindet sich rechts.
 
-![nicht aufgelöste und aufgelöste Bedingungs Strukturen](images/conditiontree.png)
+![Nicht aufgelöste und aufgelöste Bedingungsstrukturen](images/conditiontree.png)
 
-Die aufgelöste Struktur kann durch Aufrufen von [**iconditionfactory:: Resolve**](/windows/desktop/api/Structuredquery/nf-structuredquery-iconditionfactory-resolve)abgerufen werden. Durch die Übergabe von [**sqro nicht \_ Auflösen von \_ \_ DateTime**](/windows/desktop/api/Structuredquery/ne-structuredquery-structured_query_resolve_option) bleiben jedoch das Datum und die Uhrzeit nicht aufgelöst. Eine nicht aufgelöste Bedingungs Struktur hat Vorteile, da eine nicht aufgelöste Bedingungs Strukturinformationen zur Abfrage enthält. Jeder Blattknoten verweist auf die von [**iquerysolution:: getlexicaldata**](/windows/desktop/api/Structuredquery/nf-structuredquery-iquerysolution-getlexicaldata)zurückgegebenen Token, die der-Eigenschaft, dem-Operator und dem-Wert entsprechen, wenn die [**irichchunk**](/windows/desktop/api/Structuredquerycondition/nn-structuredquerycondition-irichchunk) -Schnittstelle verwendet wird. Das folgende Beispiel zeigt...
+Die aufgelöste Struktur kann durch Aufrufen von [**IConditionFactory::Resolve**](/windows/desktop/api/Structuredquery/nf-structuredquery-iconditionfactory-resolve)abgerufen werden. Bei der Übergabe von [**SQRO \_ DONT \_ RESOLVE \_ DATETIME**](/windows/desktop/api/Structuredquery/ne-structuredquery-structured_query_resolve_option) bleiben Datum und Uhrzeit jedoch ungelöst. Eine nicht aufgelöste Bedingungsstruktur bietet Vorteile, da eine nicht aufgelöste Bedingungsstruktur Informationen über die Abfrage enthält. Jeder Blattknoten zeigt auf die von [**IQuerySolution::GetLexicalData**](/windows/desktop/api/Structuredquery/nf-structuredquery-iquerysolution-getlexicaldata)zurückgegebenen Token, die der Eigenschaft, dem Operator und dem Wert entsprechen, wenn die [**IRichChunk-Schnittstelle**](/windows/desktop/api/Structuredquerycondition/nn-structuredquerycondition-irichchunk) verwendet wird. Das folgende Beispiel zeigt ...
 
 
 ```C++
@@ -279,25 +279,25 @@ IRichChunk** ppValueTerm);
 
 
 
-### <a name="querying-the-index"></a>Abfragen des Indexes
+### <a name="querying-the-index"></a>Abfragen des Index
 
-Es gibt mehrere Ansätze zum Abfragen des Indexes. Einige basieren auf SQL, und andere basieren auf AQS. Mithilfe von Abfrage [Schnittstellen](./-search-querying-interfaces-entry-page.md)können Sie den Windows-Suchindex auch Programm gesteuert Abfragen. Es gibt drei Schnittstellen, die für das Abfragen des Indexes spezifisch sind: [**isearchqueryhelper**](/windows/desktop/api/Searchapi/nn-searchapi-isearchqueryhelper), [**irowsetprioritisierung**](/windows/desktop/api/Searchapi/nn-searchapi-irowsetprioritization)und [**irowsetevents**](/windows/desktop/api/Searchapi/nn-searchapi-irowsetevents). Konzeptionelle Informationen finden Sie unter [Programm gesteuertes Abfragen des Indexes](-search-3x-wds-qryidx-overview.md).
+Es gibt mehrere Ansätze zum Abfragen des Indexes. Einige basieren auf SQL, andere auf AQS. Sie können den Index Windows Search auch programmgesteuert abfragen, indem Sie [Schnittstellen abfragen.](./-search-querying-interfaces-entry-page.md) Es gibt drei Schnittstellen, die für das Abfragen des Index spezifisch sind: [**ISearchQueryHelper**](/windows/desktop/api/Searchapi/nn-searchapi-isearchqueryhelper), [**IRowsetPrioritization**](/windows/desktop/api/Searchapi/nn-searchapi-irowsetprioritization)und [**IRowsetEvents**](/windows/desktop/api/Searchapi/nn-searchapi-irowsetevents). Konzeptionelle Informationen finden Sie unter [Programmgesteuertes Abfragen des Indexes.](-search-3x-wds-qryidx-overview.md)
 
-Sie können eine Komponente oder Hilfsklasse entwickeln, um den Index mithilfe der [**isearchqueryhelper**](/windows/desktop/api/Searchapi/nn-searchapi-isearchqueryhelper) -Schnittstelle abzufragen. Diese Schnittstelle wird als Hilfsklasse in [**isearchcatalogmanager**](/windows/desktop/api/Searchapi/nn-searchapi-isearchcatalogmanager) (und [**ISearchCatalogManager2**](/windows/desktop/api/Searchapi/nn-searchapi-isearchcatalogmanager2)) implementiert und durch Aufrufen von [**isearchcatalogmanager:: getqueryhelper**](/windows/desktop/api/Searchapi/nf-searchapi-isearchcatalogmanager-getqueryhelper)abgerufen. Konzeptionelle Informationen finden Sie unter [Abfragen des Indexes mit isearchqueryhelper](-search-3x-wds-qryidx-searchqueryhelper.md).
+Sie können eine Komponente oder Hilfsklasse entwickeln, um den Index mithilfe der [**ISearchQueryHelper-Schnittstelle abfragen zu**](/windows/desktop/api/Searchapi/nn-searchapi-isearchqueryhelper) können. Diese Schnittstelle wird als Hilfsklasse für [**ISearchCatalogManager**](/windows/desktop/api/Searchapi/nn-searchapi-isearchcatalogmanager) (und [**ISearchCatalogManager2)**](/windows/desktop/api/Searchapi/nn-searchapi-isearchcatalogmanager2)implementiert und wird durch Aufrufen von [**ISearchCatalogManager::GetQueryHelper erhalten.**](/windows/desktop/api/Searchapi/nf-searchapi-isearchcatalogmanager-getqueryhelper) Konzeptionelle Informationen finden Sie unter [Querying the Index with ISearchQueryHelper (Abfragen des Index mit ISearchQueryHelper).](-search-3x-wds-qryidx-searchqueryhelper.md)
 
-[**Isearchqueryhelper**](/windows/desktop/api/Searchapi/nn-searchapi-isearchqueryhelper) ermöglicht Folgendes:
+[**ISearchQueryHelper**](/windows/desktop/api/Searchapi/nn-searchapi-isearchqueryhelper) ermöglicht Ihnen:
 
--   Rufen Sie eine OLE DB Verbindungs Zeichenfolge für die Verbindung mit der Windows Search-Datenbank ab.
--   Konvertieren Sie AQS-Benutzer Abfragen in Windows Search SQL.
--   Geben Sie Abfrage Einschränkungen an, die in SQL ausgedrückt werden können, aber nicht in AQS.
+-   Abrufen einer OLE DB Verbindungszeichenfolge zum Herstellen einer Verbindung mit der Windows Search Datenbank.
+-   Konvertieren Sie AQS-Benutzerabfragen in Windows Search SQL.
+-   Geben Sie Abfrageeinschränkungen an, die in SQL, aber nicht in AQS ausgedrückt werden können.
 
-Indizierungs Priorisierung und rowsetereignisse werden in Windows 7 und höher unterstützt. Bei [**irowsetpriorisierung**](/windows/desktop/api/Searchapi/nn-searchapi-irowsetprioritization) gibt es einen Prioritäts Stapel, der es dem Client ermöglicht, anzufordern, dass die in einer bestimmten Abfrage verwendeten Bereiche höher als normale Priorität sind. [**Irowsetevents**](/windows/desktop/api/Searchapi/nn-searchapi-irowsetevents) ermöglicht das Benachrichtigen von Änderungen an Elementen in Rowsets, einschließlich der Addition neuer Elemente, dem Löschen von Elementen und der Änderung von Elementdaten. Durch die Verwendung von Rowset-Ereignis Benachrichtigungen wird sichergestellt, dass die Ergebnisse für vorhandene Abfragen so aktuell wie möglich sind. Konzeptionelle Informationen finden Sie unter [Indizieren von Priorisierung und rowsetereignissen in Windows 7](indexing-prioritization-and-rowset-events.md).
+Indizierungspriorisierungs- und Rowsetereignisse werden in Windows 7 und höher unterstützt. Mit [**IRowsetPrioritization**](/windows/desktop/api/Searchapi/nn-searchapi-irowsetprioritization) gibt es einen Prioritätsstapel, mit dem der Client anfordern kann, dass die in einer bestimmten Abfrage verwendeten Bereiche eine höhere Priorität als die normale Priorität erhalten. [**IRowsetEvents bietet**](/windows/desktop/api/Searchapi/nn-searchapi-irowsetevents) Benachrichtigungen über Änderungen an Elementen in Rowsets, einschließlich des Hinzufügens neuer Elemente, des Löschens von Elementen und der Änderung von Elementdaten. Durch die Verwendung von Rowsetereignisbenachrichtigungen wird sichergestellt, dass die Ergebnisse für vorhandene Abfragen so aktuell wie möglich sind. Konzeptionelle Informationen finden Sie unter [Indizierungspriorisierung und Rowsetereignisse in Windows 7.](indexing-prioritization-and-rowset-events.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Indizierung, Abfragen und Benachrichtigungen in Windows Search](-search-3x-wds-included-in-index.md)
+[Indizierung, Abfrage und Benachrichtigungen in Windows Search](-search-3x-wds-included-in-index.md)
 </dt> <dt>
 
 [Was ist im Index enthalten?](-search-indexing-process-overview.md)
@@ -306,10 +306,10 @@ Indizierungs Priorisierung und rowsetereignisse werden in Windows 7 und höher u
 [Indizierungsprozess in Windows Search](-search-indexing-process-overview.md)
 </dt> <dt>
 
-[Benachrichtigungs Prozess in Windows Search](-search-3x-wds-support.md)
+[Benachrichtigungsprozess in Windows Search](-search-3x-wds-support.md)
 </dt> <dt>
 
-[URL-Formatierungs Anforderungen](url-formatting-requirements.md)
+[Anforderungen an die URL-Formatierung](url-formatting-requirements.md)
 </dt> </dl>
 
  

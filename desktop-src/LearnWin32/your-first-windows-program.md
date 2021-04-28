@@ -1,25 +1,25 @@
 ---
 title: Modul 1. Ihr erstes Windows-Programm
-description: .
+description: Modul 1. Ihr erstes Windows-Programm
 ms.assetid: 73848144-bf02-4382-a476-7f5a35447727
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 27749cddabaefb4fd83b836887fbb2dac017d238
-ms.sourcegitcommit: 35bb565804eaeed7ac5503595753f59d120076dd
+ms.openlocfilehash: 6515b012f968707379ebf24023c3d282c50d6fd6
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2021
-ms.locfileid: "104570285"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108110948"
 ---
 # <a name="module-1-your-first-windows-program"></a>Modul 1. Ihr erstes Windows-Programm
 
-In diesem Modul wird ein minimales Windows-Desktop Programm geschrieben. Es wird lediglich ein leeres Fenster erstellt und angezeigt. Dieses erste Programm enthält ungefähr 50 Codezeilen, wobei keine leeren Zeilen und Kommentare gezählt werden. Das ist unser Ausgangspunkt. Später fügen wir Grafiken, Text, Benutzereingaben und andere Features hinzu.
+In diesem Modul schreiben wir ein minimales Windows-Desktopprogramm. Es wird nur ein leeres Fenster erstellt und angezeigt. Dieses erste Programm enthält ungefähr 50 Codezeilen, ohne leere Zeilen und Kommentare zu zählen. Es wird unser Ausgangspunkt sein. Später fügen wir Grafiken, Text, Benutzereingaben und andere Features hinzu.
 
-Weitere Informationen zum Erstellen einer herkömmlichen Windows-Desktop Anwendung in Visual Studio finden Sie unter Exemplarische Vorgehensweise  [: Erstellen einer herkömmlichen Windows-Desktop Anwendung (C++)](/cpp/windows/walkthrough-creating-windows-desktop-applications-cpp?view=vs-2019).
+Weitere Informationen zum Erstellen einer herkömmlichen Windows-Desktopanwendung in Visual Studio finden Sie unter [Exemplarische Vorgehensweise: Erstellen einer herkömmlichen Windows-Desktopanwendung (C++).](/cpp/windows/walkthrough-creating-windows-desktop-applications-cpp?view=vs-2019)
 
-![Screenshot des Beispiel Programms](images/window01.png)
+![Screenshot des Beispielprogramms](images/window01.png)
 
-Im folgenden finden Sie den gesamten Code für das Programm:
+Hier ist der vollständige Code für das Programm:
 
 
 ```C++
@@ -110,22 +110,22 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 
 
 
-Sie können das komplette Visual Studio-Projekt aus dem [Windows Hallo Welt-Beispiel](windows-hello-world-sample.md)herunterladen.
+Sie können das vollständige Visual Studio-Projekt aus [Windows Hello World Sample](windows-hello-world-sample.md)herunterladen.
 
-Es kann sinnvoll sein, einen kurzen Überblick über die Funktionsweise dieses Codes zu geben. In späteren Themen wird der Code ausführlich untersucht.
+Es kann hilfreich sein, einen kurzen Überblick über die Aufgabe dieses Codes zu geben. In späteren Themen wird der Code ausführlich untersucht.
 
-1.  **wWinMain** ist der Programm Einstiegspunkt. Wenn das Programm gestartet wird, werden einige Informationen über das Verhalten des Anwendungsfensters registriert. Eines der wichtigsten Elemente ist die Adresse einer Funktion, die `WindowProc` in diesem Beispiel benannt wird. Diese Funktion definiert das Verhalten des Fensters – seine Darstellung, die Interaktion mit dem Benutzer und so weiter.
+1.  **wWinMain** ist der Einstiegspunkt für das Programm. Wenn das Programm gestartet wird, werden einige Informationen zum Verhalten des Anwendungsfensters registriert. Eines der wichtigsten Elemente ist die Adresse einer Funktion, die in diesem Beispiel benannt `WindowProc` wird. Diese Funktion definiert das Verhalten des Fensters – seine Darstellung, die Interaktion mit dem Benutzer usw.
 2.  Als Nächstes erstellt das Programm das Fenster und empfängt ein Handle, das das Fenster eindeutig identifiziert.
-3.  Wenn das Fenster erfolgreich erstellt wurde, gibt das Programm eine **while** -Schleife ein. Das Programm verbleibt in dieser Schleife, bis der Benutzer das Fenster schließt und die Anwendung beendet.
+3.  Wenn das Fenster erfolgreich erstellt wurde, geht das Programm in eine **while-Schleife** über. Das Programm verbleibt in dieser Schleife, bis der Benutzer das Fenster schließt und die Anwendung beendet.
 
-Beachten Sie, dass das Programm die-Funktion nicht explizit aufruft `WindowProc` , obwohl wir sagten, dass dies der größte Teil der Anwendungslogik ist. Windows kommuniziert mit Ihrem Programm, indem es eine Reihe von *Nachrichten* übergibt. Der Code in der **while** -Schleife steuert diesen Prozess. Jedes Mal, wenn das Programm die [**DispatchMessage**](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) -Funktion aufruft, bewirkt dies indirekt, dass Windows die WindowProc-Funktion aufruft, einmal für jede Nachricht.
+Beachten Sie, dass das Programm die Funktion nicht explizit aufruft, obwohl wir gesagt haben, dass hier der Großteil `WindowProc` der Anwendungslogik definiert ist. Windows kommuniziert mit Ihrem Programm, indem eine Reihe von Nachrichten übergeben *wird.* Der Code in der **while-Schleife** steuert diesen Prozess. Jedes Mal, wenn das Programm die [**DispatchMessage-Funktion**](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) aufruft, führt es indirekt dazu, dass Windows die WindowProc-Funktion einmal für jede Nachricht aufruft.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
 -   [Erstellen eines Fensters](creating-a-window.md)
--   [Fenster Meldungen](window-messages.md)
--   [Schreiben der Fenster Prozedur](writing-the-window-procedure.md)
--   [Zeichnen des Fensters](painting-the-window.md)
+-   [Fenstermeldungen](window-messages.md)
+-   [Schreiben der Fensterprozedur](writing-the-window-procedure.md)
+-   [Malen des Fensters](painting-the-window.md)
 -   [Schließen des Fensters](closing-the-window.md)
 -   [Managing Application State (Verwalten eines Anwendungszustands)](managing-application-state-.md)
 
@@ -133,10 +133,10 @@ Beachten Sie, dass das Programm die-Funktion nicht explizit aufruft `WindowProc`
 
 <dl> <dt>
 
-[Erlernen Sie das Program mieren für Windows in C++](learn-to-program-for-windows.md)
+[Informationen zum Programmieren für Windows in C++](learn-to-program-for-windows.md)
 </dt> <dt>
 
-[Windows Hallo Welt-Beispiel](windows-hello-world-sample.md)
+[Windows Hello World Sample](windows-hello-world-sample.md)
 </dt> </dl>
 
  

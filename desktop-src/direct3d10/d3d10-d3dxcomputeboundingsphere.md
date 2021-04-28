@@ -1,7 +1,7 @@
 ---
-description: Berechnet eine umgebende Kugel für das Mesh.
+description: 'D3DXComputeBoundingSphere-Funktion (D3DX10math.h): Berechnet eine umgebende Kugel für das Netz.'
 ms.assetid: 54f486d2-45e9-4fc1-90a3-97488ed4d900
-title: D3DXComputeBoundingSphere-Funktion (D3DX10math. h)
+title: D3DXComputeBoundingSphere-Funktion (D3DX10math.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: 0c8e59b4d39652d02ce19f4c1bf6b0617fee7772
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 0041d775b21d1af37bc51d6ec2f432e616b2abd6
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104219638"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108113298"
 ---
-# <a name="d3dxcomputeboundingsphere-function-d3dx10mathh"></a>D3DXComputeBoundingSphere-Funktion (D3DX10math. h)
+# <a name="d3dxcomputeboundingsphere-function-d3dx10mathh"></a>D3DXComputeBoundingSphere-Funktion (D3DX10math.h)
 
-Berechnet eine umgebende Kugel für das Mesh.
+Berechnet eine umschließende Kugel für das Gitternetz.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,48 +44,48 @@ HRESULT D3DXComputeBoundingSphere(
 
 <dl> <dt>
 
-*Pfirsich Position* \[ in\]
+*pFirstPosition* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXVECTOR3**](../direct3d9/d3dxvector3.md) \***
+Typ: **const [**D3DXVECTOR3**](../direct3d9/d3dxvector3.md) \***
 
 Zeiger auf die erste Position.
 
 </dd> <dt>
 
-*Numvertices* \[ in\]
+*NumVertices* \[ In\]
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
-Anzahl der Scheitel Punkte.
+Anzahl der Scheitelpunkte.
 
 </dd> <dt>
 
-*dwstride* \[ in\]
+*dwStride* \[ In\]
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
-Anzahl von Bytes zwischen Positions Vektoren.
+Anzahl der Bytes zwischen Positionsvektoren.
 
 </dd> <dt>
 
-*pcenter* \[ in\]
+*pCenter* \[ In\]
 </dt> <dd>
 
 Typ: **[ **D3DXVECTOR3**](../direct3d9/d3dxvector3.md)\***
 
-[**D3DXVECTOR3**](d3d10-d3dxvector3.md) -Struktur, die das Koordinaten Zentrum der zurückgegebenen Begrenzungs Kugel definiert.
+[**D3DXVECTOR3-Struktur,**](d3d10-d3dxvector3.md) die den Koordinatenmittelpunkt der zurückgegebenen umgebenden Kugel definiert.
 
 </dd> <dt>
 
-*pradius* \[ in\]
+*pRadius* \[ In\]
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)\***
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)\***
 
-Der Radius der zurückgegebenen Begrenzungs Kugel.
+Radius der zurückgegebenen umgebenden Kugel.
 
 </dd> </dl>
 
@@ -93,20 +93,20 @@ Der Radius der zurückgegebenen Begrenzungs Kugel.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden sein: D3DERR \_ invalidcall.
+Wenn die Funktion erfolgreich ist, ist der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden sein: D3DERR \_ INVALIDCALL.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX10math. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx10. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX10math.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

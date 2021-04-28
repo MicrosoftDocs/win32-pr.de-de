@@ -1,7 +1,7 @@
 ---
-description: Bestimmt das Produkt von zwei Matrizen.
+description: 'D3DXMatrixMultiply-Funktion (D3DX10Math.h): Bestimmt das Produkt zweier Matrizen.'
 ms.assetid: d15cd680-0e19-4353-9eee-73933663960e
-title: D3DXMatrixMultiply-Funktion (D3DX10Math. h)
+title: D3DXMatrixMultiply-Funktion (D3DX10Math.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: 5f07130c25ce9ef1c588309460e4e12e67bb2485
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 89e103d441648643be0176ca34f72f6175c11213
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103961732"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108113128"
 ---
-# <a name="d3dxmatrixmultiply-function-d3dx10mathh"></a>D3DXMatrixMultiply-Funktion (D3DX10Math. h)
+# <a name="d3dxmatrixmultiply-function-d3dx10mathh"></a>D3DXMatrixMultiply-Funktion (D3DX10Math.h)
 
-Bestimmt das Produkt von zwei Matrizen.
+Bestimmt das Produkt zweier Matrizen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,30 +42,30 @@ D3DXMATRIX* D3DXMatrixMultiply(
 
 <dl> <dt>
 
-*Pout* \[ in, out\]
+*pOut* \[ in, out\]
 </dt> <dd>
 
 Typ: **[ **D3DXMATRIX**](../direct3d9/d3dxmatrix.md)\***
 
-Ein Zeiger auf die [**D3DXMATRIX**](d3d10-d3dxmatrix.md) -Struktur, die das Ergebnis des Vorgangs ist.
+Zeiger auf die [**D3DXMATRIX-Struktur,**](d3d10-d3dxmatrix.md) die das Ergebnis des Vorgangs ist.
 
 </dd> <dt>
 
-*pM1* \[ in\]
+*pM1* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXMATRIX**](../direct3d9/d3dxmatrix.md) \***
+Typ: **const [**D3DXMATRIX**](../direct3d9/d3dxmatrix.md) \***
 
-Zeiger auf eine Quell-D3DXMATRIX-Struktur (auf der linken Seite).
+Zeiger auf eine D3DXMATRIX-Quellstruktur (linke Seite).
 
 </dd> <dt>
 
-*pM2* \[ in\]
+*pM2* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXMATRIX**](../direct3d9/d3dxmatrix.md) \***
+Typ: **const [**D3DXMATRIX**](../direct3d9/d3dxmatrix.md) \***
 
-Zeiger auf eine Quell-D3DXMATRIX-Struktur (auf der rechten Seite).
+Zeiger auf eine D3DXMATRIX-Quellstruktur (rechte Seite).
 
 </dd> </dl>
 
@@ -73,26 +73,26 @@ Zeiger auf eine Quell-D3DXMATRIX-Struktur (auf der rechten Seite).
 
 Typ: **[ **D3DXMATRIX**](../direct3d9/d3dxmatrix.md)\***
 
-Zeiger auf eine D3DXMATRIX-Struktur, die das Produkt von zwei Matrizen ist.
+Zeiger auf eine D3DXMATRIX-Struktur, die das Produkt zweier Matrizen ist.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Das Ergebnis stellt die Transformation M1 dar, gefolgt von der Transformation m2 (out = M1 \* m2).
+Das Ergebnis stellt die Transformation M1 gefolgt von der Transformation M2 (Out = M1 \* M2) dar.
 
-Der Rückgabewert für diese Funktion ist derselbe Wert, der im Pout-Parameter zurückgegeben wird. Auf diese Weise kann die D3DXMatrixMultiply-Funktion als Parameter für eine andere Funktion verwendet werden.
+Der Rückgabewert für diese Funktion ist der gleiche Wert, der im pOut-Parameter zurückgegeben wird. Auf diese Weise kann die D3DXMatrixMultiply-Funktion als Parameter für eine andere Funktion verwendet werden.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX10Math. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx10. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX10Math.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

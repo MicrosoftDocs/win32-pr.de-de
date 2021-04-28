@@ -1,5 +1,5 @@
 ---
-description: Ruft den aktuellen Zustand der angegebenen Geräte Schaltfläche ab.
+description: 'GetButtonState-Methode der Msvm_SyntheticMouse Klasse: Ruft den aktuellen Zustand der angegebenen Geräteschaltfläche ab.'
 ms.assetid: 66363AF1-E360-478D-8E62-513DE66EF130
 title: GetButtonState-Methode der Msvm_SyntheticMouse-Klasse
 ms.topic: reference
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 3812d3e019a303656305471fc097fb1479fa1ada
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 26839292cf2fb3099e740629b28c7de0fbe3f60f
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106348806"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108119388"
 ---
-# <a name="getbuttonstate-method-of-the-msvm_syntheticmouse-class"></a>GetButtonState-Methode der MSVM \_ syntheticmouse-Klasse
+# <a name="getbuttonstate-method-of-the-msvm_syntheticmouse-class"></a>GetButtonState-Methode der Msvm \_ SyntheticMouse-Klasse
 
-Ruft den aktuellen Zustand der angegebenen Geräte Schaltfläche ab.
+Ruft den aktuellen Zustand der angegebenen Geräteschaltfläche ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,39 +40,39 @@ uint32 GetButtonState(
 
 <dl> <dt>
 
-*ButtonIndex* \[ in\]
+*buttonIndex* \[ In\]
 </dt> <dd>
 
-Typ: **UInt32**
+Typ: **uint32**
 
-Der 1-basierte Index der abzufragende Schaltfläche.
+Der 1-basierte Index der abfragten Schaltfläche.
 
 </dd> <dt>
 
-*isdown* \[ vorgenommen\]
+*isDown* \[ out\]
 </dt> <dd>
 
-Typ: **booleschen**
+Typ: **boolescher Wert**
 
-Der aktuelle Zustand der Schaltfläche. Ein **true** -Wert bedeutet, dass die Schaltfläche nicht angezeigt wird.
+Der aktuelle Zustand der Schaltfläche nach unten. Ein **True-Wert** bedeutet, dass die Schaltfläche nicht mehr angezeigt wird.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Typ: **UInt32**
+Typ: **uint32**
 
-Der Rückgabewert 0 (null) gibt den Erfolg an. Ein Wert ungleich 0 (null) gibt einen Abfrage Fehler an.
+Der Rückgabewert 0 (null) gibt den Erfolg an. Ein Wert ungleich 0 (null) gibt einen Abfragefehler an.
 
 <dl> <dt>
 
 **Abgeschlossen ohne Fehler** (0)
 </dt> <dt>
 
-Über **prüfte Methoden Parameter-Auftrag gestartet** (4096)
+**Überprüfte Methodenparameter – Auftrag gestartet** (4096)
 </dt> <dt>
 
-Fehler **(32768** )
+**Fehler** (32768)
 </dt> <dt>
 
 **Zugriff verweigert** (32769)
@@ -81,7 +81,7 @@ Fehler **(32768** )
 **Nicht unterstützt** (32770)
 </dt> <dt>
 
-Der **Status ist "Unknown** " (32771).
+**Status ist unbekannt** (32771)
 </dt> <dt>
 
 **Timeout** (32772)
@@ -90,44 +90,44 @@ Der **Status ist "Unknown** " (32771).
 **Ungültiger Parameter** (32773)
 </dt> <dt>
 
-Das **System wird verwendet** (32774).
+**System wird verwendet** (32774)
 </dt> <dt>
 
-**Ungültiger Status für diesen Vorgang** (32775).
+**Ungültiger Zustand für diesen Vorgang** (32775)
 </dt> <dt>
 
-**Falscher Datentyp** (32776).
+**Falscher Datentyp** (32776)
 </dt> <dt>
 
-Das **System ist nicht verfügbar** (32777).
+**System ist nicht verfügbar** (32777)
 </dt> <dt>
 
-**Nicht** genügend Arbeitsspeicher (32778)
+**Nicht genügend Arbeitsspeicher** (32778)
 </dt> </dl>
 
 ## <a name="remarks"></a>Bemerkungen
 
-Der Zugriff auf die [**MSVM \_ syntheticmouse**](msvm-syntheticmouse.md) -Klasse kann durch die UAC-Filterung eingeschränkt werden. Weitere Informationen finden Sie unter [Benutzerkontensteuerung und WMI](/windows/desktop/WmiSdk/user-account-control-and-wmi).
+Der Zugriff auf die [**Msvm \_ SyntheticMouse-Klasse**](msvm-syntheticmouse.md) kann durch die UAC-Filterung eingeschränkt werden. Weitere Informationen finden Sie unter [Benutzerkontensteuerung und WMI.](/windows/desktop/WmiSdk/user-account-control-and-wmi)
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 8 \[ Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2012-Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**MSVM \_ syntheticmouse**](msvm-syntheticmouse.md)
+[**Msvm \_ SyntheticMouse**](msvm-syntheticmouse.md)
 </dt> </dl>
 
  

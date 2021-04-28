@@ -1,6 +1,6 @@
 ---
-description: Zeigt den Desktop an oder blendet ihn aus.
-title: IShellDispatch4. deggledesktop-Methode (Shldisp. h)
+description: 'IShellDispatch4.ToggleDesktop-Methode: Zeigt den Desktop an oder blendet diesen aus.'
+title: IShellDispatch4.ToggleDesktop-Methode (Shldisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 api_location:
 - Shell32.dll
 ms.assetid: 60199e18-b8da-48a6-b316-e7f07ff44b78
-ms.openlocfilehash: ccca7769363ad4dcf967611aad1b8ee5d7e28deb
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
-ms.translationtype: HT
+ms.openlocfilehash: b635408ed8a44b8bb0d27e52c167470f80f61b18
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104977984"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108116818"
 ---
-# <a name="ishelldispatch4toggledesktop-method"></a>IShellDispatch4. deggledesktop-Methode
+# <a name="ishelldispatch4toggledesktop-method"></a>IShellDispatch4.ToggleDesktop-Methode
 
-Zeigt den Desktop an oder blendet ihn aus.
+Zeigt den Desktop an oder blendet den Desktop aus.
 
 ## <a name="syntax"></a>Syntax
 
@@ -57,13 +57,13 @@ Diese Methode gibt keinen Wert zurück.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Diese Methode hat dieselbe Auswirkung wie die Schaltfläche **Desktop anzeigen** auf der Taskleiste. Entweder werden alle geöffneten Fenster ausgeblendet, damit der Desktop angezeigt wird, oder es wird der Desktop ausgeblendet, indem alle geöffneten Fenster angezeigt werden. Die Methode " **deggledesktop** " zeigt keine Benutzeroberfläche an, sondern ruft lediglich die UMSCHALT Aktion auf.
+Diese Methode hat die gleiche Auswirkung wie die Schaltfläche **Desktop anzeigen** auf der Taskleiste. Sie blendet entweder alle geöffneten Fenster aus, um den Desktop anzuzeigen, oder sie blendet den Desktop aus, indem alle geöffneten Fenster angezeigt werden. Die **ToggleDesktop-Methode** zeigt keine Benutzeroberfläche an, sie ruft lediglich die Umschaltaktion auf.
 
 ## <a name="examples"></a>Beispiele
 
-Die folgenden Beispiele zeigen die ordnungsgemäße Verwendung von " **deggledesktop** " für JScript, VBScript und Visual Basic.
+Die folgenden Beispiele zeigen die ordnungsgemäße Verwendung von **ToggleDesktop** für JScript, VBScript und Visual Basic.
 
-JScript
+Jscript:
 
 
 ```JScript
@@ -79,7 +79,7 @@ JScript
 
 
 
-VBScript
+Vbscript:
 
 
 ```VB
@@ -111,17 +111,17 @@ End Sub
 
 
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                                                   |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                          |
-| Header<br/>                   | <dl> <dt>Shldisp. h</dt> </dl>                          |
-| IDL<br/>                      | <dl> <dt>Shldisp. idl</dt> </dl>                        |
-| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 6,0 oder höher)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ XP-Desktop-Apps\]<br/>                                                                   |
+| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2003-Desktop-Apps\]<br/>                                                          |
+| Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>                          |
+| Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                        |
+| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 6.0 oder höher)</dt> </dl> |
 
 
 

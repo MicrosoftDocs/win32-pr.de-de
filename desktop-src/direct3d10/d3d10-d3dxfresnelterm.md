@@ -1,7 +1,7 @@
 ---
-description: Berechnen Sie den Fresnel-Begriff.
+description: 'D3DXFresnelTerm-Funktion (D3DX10Math.h): Berechnet den Fresnel-Begriff.'
 ms.assetid: eaa2e5ea-9b6f-4216-8b48-7be74501124d
-title: D3DXFresnelTerm-Funktion (D3DX10Math. h)
+title: D3DXFresnelTerm-Funktion (D3DX10Math.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,14 +14,14 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: 1e87649d340e7d90c4df02c641919fd906631268
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 9efa557d44451674d2ae4c48a58370e939760a03
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104531052"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108113268"
 ---
-# <a name="d3dxfresnelterm-function-d3dx10mathh"></a>D3DXFresnelTerm-Funktion (D3DX10Math. h)
+# <a name="d3dxfresnelterm-function-d3dx10mathh"></a>D3DXFresnelTerm-Funktion (D3DX10Math.h)
 
 Berechnen Sie den Fresnel-Begriff.
 
@@ -41,35 +41,35 @@ FLOAT D3DXFresnelTerm(
 
 <dl> <dt>
 
-*Kostheta* \[ in\]
+*CosTheta* \[ In\]
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
 Der Wert muss zwischen 0 und 1 liegen.
 
 </dd> <dt>
 
-" *Refractionindex* \[ " in\]
+*RefractionIndex* \[ In\]
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-Der abbrechungs Index eines Materials. Der Wert muss größer als 1 sein.
+Der Refraktionsindex eines Materials. Der Wert muss größer als 1 sein.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-Diese Funktion gibt den Fresnel-Begriff für nicht polarisiertes Licht zurück. Costheta ist der Kosinus des Vorfall Winkels.
+Diese Funktion gibt den Fresnel-Begriff für unisiertes Licht zurück. CosTheta ist der Kosinus des Incidentwinkels.
 
 ## <a name="remarks"></a>Bemerkungen
 
 So finden Sie den Fresnel-Begriff (F):
 
-Wenn ein der Winkel des Auftretens und B der Winkel der abbrechungs Angabe ist, dann
+Wenn A ein Winkel von 1 und B der Winkel der Refraktion ist, dann
 
 
 ```
@@ -83,7 +83,7 @@ Let g   = (r2 + c2 - 1)1/2
 
 
 
-Wenn Sie die drei-und Vereinfachung verwenden, erhalten Sie Folgendes:
+Wenn Sie dann mithilfe der Trig-Identitäten erweitern und vereinfachen, erhalten Sie:
 
 
 ```
@@ -96,14 +96,14 @@ F = 0.5 * (g + c)2 / (g - c)2 * ([c(g + c) - 1]2 / [c(g - c) + 1]2 + 1)
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX10Math. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx10. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX10Math.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

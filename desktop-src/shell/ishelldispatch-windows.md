@@ -1,7 +1,7 @@
 ---
-description: Erstellt ein shellwindows-Objekt und gibt es zurück. Dieses Objekt stellt eine Auflistung aller geöffneten Fenster dar, die zur Shell gehören.
+description: 'IShellDispatch.Windows-Methode: Erstellt ein ShellWindows-Objekt und gibt es zurück. Dieses Objekt stellt eine Auflistung aller geöffneten Fenster dar, die zur Shell gehören.'
 ms.assetid: 788E2106-3534-4e22-801F-677FD02BDFE0
-title: Ishelldispatch. Windows-Methode (Shldisp. h)
+title: IShellDispatch.Windows-Methode (Shldisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Shell32.dll
-ms.openlocfilehash: cb5f84caebf38deb27c7fb60565167793fead561
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 16991d6a251909e8f3b277894a96e6ad08a7f9a4
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103753080"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108117168"
 ---
-# <a name="ishelldispatchwindows-method"></a>Ishelldispatch. Windows-Methode
+# <a name="ishelldispatchwindows-method"></a>IShellDispatch.Windows-Methode
 
-Erstellt ein [**shellwindows**](shellwindows.md) -Objekt und gibt es zurück. Dieses Objekt stellt eine Auflistung aller geöffneten Fenster dar, die zur Shell gehören.
+Erstellt ein [**ShellWindows-Objekt**](shellwindows.md) und gibt es zurück. Dieses Objekt stellt eine Auflistung aller geöffneten Fenster dar, die zur Shell gehören.
 
 ## <a name="syntax"></a>Syntax
 
@@ -51,23 +51,23 @@ Diese Methode hat keine Parameter.
 
 Typ: **[ **IDispatch**](/windows/win32/api/oaidl/nn-oaidl-idispatch)\*\***
 
-Ein Objekt Verweis auf das [**shellwindows**](shellwindows.md) -Objekt.
+Ein Objektverweis auf das [**ShellWindows-Objekt.**](shellwindows.md)
 
 ### <a name="vb"></a>VB
 
 Typ: **[ **IDispatch**](/windows/win32/api/oaidl/nn-oaidl-idispatch)\*\***
 
-Ein Objekt Verweis auf das [**shellwindows**](shellwindows.md) -Objekt.
+Ein Objektverweis auf das [**ShellWindows-Objekt.**](shellwindows.md)
 
 ## <a name="remarks"></a>Bemerkungen
 
-Diese Methode wird implementiert und über die [**Shell. Windows**](shell-windows.md) -Methode aufgerufen.
+Diese Methode wird implementiert und über die [**Shell.Windows-Methode**](shell-windows.md) aufgerufen.
 
 ## <a name="examples"></a>Beispiele
 
-In den folgenden Beispielen wird **Windows** verwendet, um das [**shellwindows**](shellwindows.md) -Objekt abzurufen und die Anzahl der darin enthaltenen Elemente anzuzeigen. Die Verwendung wird für JScript, VBScript und Visual Basic angezeigt.
+In den folgenden Beispielen wird **Windows** verwendet, um das [**ShellWindows-Objekt**](shellwindows.md) abzurufen und die Anzahl der darin enthaltenen Elemente anzuzeigen. Die Verwendung wird für JScript, VBScript und Visual Basic angezeigt.
 
-JScript
+Jscript:
 
 
 ```JScript
@@ -89,7 +89,7 @@ JScript
 
 
 
-VBScript
+Vbscript:
 
 
 ```VB
@@ -135,17 +135,17 @@ End Sub
 
 
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, Windows XP \[ Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, nur Windows \[ XP-Desktop-Apps\]<br/>                                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                           |
-| Header<br/>                   | <dl> <dt>Shldisp. h</dt> </dl>                           |
-| IDL<br/>                      | <dl> <dt>Shldisp. idl</dt> </dl>                         |
-| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4,71 oder höher)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>                           |
+| Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                         |
+| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4.71 oder höher)</dt> </dl> |
 
 
 

@@ -1,7 +1,7 @@
 ---
-description: Berechnet die Schnittmenge eines Strahls und eines Dreiecks.
+description: 'D3DXIntersectTri-Funktion (D3DX10math.h): Berechnet die Schnittmenge eines Strahls und eines Dreiecks.'
 ms.assetid: 819f2543-8046-47c9-93b8-7d888264786f
-title: D3DXIntersectTri-Funktion (D3DX10math. h)
+title: D3DXIntersectTri-Funktion (D3DX10math.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,14 +14,14 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: af96d25b4f13995d60e7926ec5da2d15ff86f282
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: c8bf502cca48701a7d71a083e515f9988cafe303
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106370431"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108113238"
 ---
-# <a name="d3dxintersecttri-function-d3dx10mathh"></a>D3DXIntersectTri-Funktion (D3DX10math. h)
+# <a name="d3dxintersecttri-function-d3dx10mathh"></a>D3DXIntersectTri-Funktion (D3DX10math.h)
 
 Berechnet die Schnittmenge eines Strahls und eines Dreiecks.
 
@@ -47,104 +47,104 @@ BOOL D3DXIntersectTri(
 
 <dl> <dt>
 
-*P0* \[ in\]
+*p0* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXVECTOR3**](../direct3d9/d3dxvector3.md) \***
+Typ: **const [**D3DXVECTOR3**](../direct3d9/d3dxvector3.md) \***
 
-Zeiger auf eine [**D3DXVECTOR3**](d3d10-d3dxvector3.md) -Struktur, die die Position des ersten Dreiecks Scheitel Punkts beschreibt.
+Zeiger auf eine [**D3DXVECTOR3-Struktur,**](d3d10-d3dxvector3.md) die die Erste Dreiecksvertexposition beschreibt.
 
 </dd> <dt>
 
-*P1* \[ in\]
+*p1* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXVECTOR3**](../direct3d9/d3dxvector3.md) \***
+Typ: **const [**D3DXVECTOR3**](../direct3d9/d3dxvector3.md) \***
 
-Zeiger auf eine [**D3DXVECTOR3**](d3d10-d3dxvector3.md) -Struktur, die die Position des zweiten Dreiecks Vertex beschreibt.
+Zeiger auf eine [**D3DXVECTOR3-Struktur,**](d3d10-d3dxvector3.md) die die Position des zweiten Dreiecks vertex beschreibt.
 
 </dd> <dt>
 
-*P2* \[ in\]
+*p2* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXVECTOR3**](../direct3d9/d3dxvector3.md) \***
+Typ: **const [**D3DXVECTOR3**](../direct3d9/d3dxvector3.md) \***
 
-Zeiger auf eine [**D3DXVECTOR3**](d3d10-d3dxvector3.md) -Struktur, die die dritte Position des Dreiecks Vertex beschreibt.
+Zeiger auf eine [**D3DXVECTOR3-Struktur,**](d3d10-d3dxvector3.md) die die Position des dritten Dreiecks vertex beschreibt.
 
 </dd> <dt>
 
-" *praypos* \[ " in\]
+*pRayPos* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXVECTOR3**](../direct3d9/d3dxvector3.md) \***
+Typ: **const [**D3DXVECTOR3**](../direct3d9/d3dxvector3.md) \***
 
-Zeiger auf eine [**D3DXVECTOR3**](d3d10-d3dxvector3.md) -Struktur, die den Punkt angibt, an dem das Ray beginnt.
+Zeiger auf eine [**D3DXVECTOR3-Struktur,**](d3d10-d3dxvector3.md) wobei der Punkt angegeben wird, an dem der Strahl beginnt.
 
 </dd> <dt>
 
-" *praydir* \[ " in\]
+*pRayDir* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXVECTOR3**](../direct3d9/d3dxvector3.md) \***
+Typ: **const [**D3DXVECTOR3**](../direct3d9/d3dxvector3.md) \***
 
-Zeiger auf eine [**D3DXVECTOR3**](d3d10-d3dxvector3.md) -Struktur, die die Richtung des Strahls angibt.
+Zeiger auf eine [**D3DXVECTOR3-Struktur**](d3d10-d3dxvector3.md) unter Angabe der Richtung des Strahls.
 
 </dd> <dt>
 
-*pU* \[ vorgenommen\]
+*pU* \[ out\]
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)\***
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)\***
 
-Baryzentrierte Treffer Koordinaten, U.
+Barycentric-Trefferkoordinaten, U.
 
 </dd> <dt>
 
-*PV* \[ vorgenommen\]
+*pV* \[ out\]
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)\***
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)\***
 
-Für den baryzentrischen Treffer, V.
+Barycentric-Trefferkoordinaten, V.
 
 </dd> <dt>
 
-*pdist* \[ vorgenommen\]
+*pDist* \[ out\]
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)\***
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)\***
 
-Der Ray-schnittungsparameter.
+Entfernung des Ray-Intersection-Parameters.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Typ: **[ **bool**](../winprog/windows-data-types.md)**
+Typ: **[ **BOOL**](../winprog/windows-data-types.md)**
 
-Gibt " **true** " zurück, wenn das Strahl den Bereich des Dreiecks schneidet. Andernfalls wird **false** zurückgegeben.
+Gibt **TRUE** zurück, wenn der Strahl den Bereich des Dreiecks überschneidet. Andernfalls gibt **FALSE** zurück.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Jeder Punkt in der Ebene V1V2V3 kann durch die baryzentrische Koordinate (U, V) dargestellt werden. Mit dem Parameter U wird gesteuert, wie viel v2 in das Ergebnis gewichtet wird, und mit dem Parameter V wird gesteuert, wie viel v3 in das Ergebnis gewichtet wird. Schließlich steuert der Wert von \[ 1-(U + V), \] wie viel V1 in das Ergebnis gewichtet wird.
+Jeder Punkt in der Ebene V1V2V3 kann durch die baryzentrische Koordinate (U,V) dargestellt werden. Der Parameter U steuert, wie viel V2 in das Ergebnis gewichtet wird, und der Parameter V steuert, wie viel V3 in das Ergebnis gewichtet wird. Schließlich steuert der Wert von 1 – \[ (U + V), \] wie viel V1 in das Ergebnis gewichtet wird.
 
-Baryzentrierte Koordinaten sind eine Form allgemeiner Koordinaten. In diesem Kontext stellt die Verwendung von barzentrischen Koordinaten eine Änderung in Koordinatensystemen dar. Was für kartesische Koordinaten true ist, ist für barzentrierte Koordinaten "true".
+Barycentric-Koordinaten sind eine Form allgemeiner Koordinaten. In diesem Kontext stellt die Verwendung von baryzentrischen Koordinaten eine Änderung der Koordinatensysteme dar. Was für kartesische Koordinaten gilt, gilt für baryzentrische Koordinaten.
 
-In den Scheitel Punkten des Dreiecks wird ein Punkt innerhalb eines Dreiecks definiert. Eine ausführlichere Beschreibung von baryzentrischen Koordinaten finden Sie in [der Beschreibung von mathworld in der Beschreibung der baryzentrierten Koordinaten](https://mathworld.wolfram.com/BarycentricCoordinates.html).
+Barycentric-Koordinaten definieren einen Punkt innerhalb eines Dreiecks in Bezug auf die Scheitelpunkte des Dreiecks. Eine ausführlichere Beschreibung der baryzentrischen Koordinaten finden Sie unter [Mathworld es Barycentric Coordinates Description](https://mathworld.wolfram.com/BarycentricCoordinates.html).
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX10math. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx10. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX10math.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

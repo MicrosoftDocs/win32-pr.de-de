@@ -1,5 +1,5 @@
 ---
-description: Diese Klasse ist die Ereignistyp Klasse für Prozess Ereignisse. Die folgende Syntax wird durch den MOF-Code vereinfacht.
+description: 'Process_TypeGroup1 Klasse: Diese Klasse ist die Ereignistypklasse für Prozessereignisse. Die folgende Syntax wird durch MOF-Code vereinfacht.'
 ms.assetid: 4f06e1af-3f9a-4346-aa50-50f3ee82cd98
 title: Process_TypeGroup1-Klasse
 ms.topic: reference
@@ -21,18 +21,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 4ad2ebcd9a3e1563f6e2f4c82d90dd4d2c80112f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: bd67059f5257dad9b66e1c21f642fef04f03719e
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103863056"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108106378"
 ---
 # <a name="process_typegroup1-class"></a>Process \_ TypeGroup1-Klasse
 
-Diese Klasse ist die Ereignistyp Klasse für Prozess Ereignisse.
+Diese Klasse ist die Ereignistypklasse für Prozessereignisse.
 
-Die folgende Syntax wird durch den MOF-Code vereinfacht.
+Die folgende Syntax wird durch MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -54,13 +54,13 @@ class Process_TypeGroup1 : Process
 
 ## <a name="members"></a>Member
 
-Die **Process \_ TypeGroup1** -Klasse verfügt über diese Typen von Membern:
+Die **Process \_ TypeGroup1-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **Process \_ TypeGroup1** -Klasse verfügt über diese Eigenschaften.
+Die **Process \_ TypeGroup1-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
@@ -73,26 +73,26 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (9), stringbeendigung ("nullterminiert"), Format ("w")
+Qualifizierer: WmiDataId(9), StringTermination("NullTerminated"), Format("w")
 </dt> </dl>
 
 Vollständige Befehlszeile des Prozesses.
 
 </dd> <dt>
 
-Directoriytablebase
+DirectoryTableBase
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (6), Zeiger
+Qualifizierer: WmiDataId(6), Zeiger
 </dt> </dl>
 
-Die physische Adresse der Seiten Tabelle des Prozesses.
+Die physische Adresse der Seitentabelle des Prozesses.
 
 </dd> <dt>
 
@@ -105,23 +105,23 @@ Datentyp: **sint32**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (5)
+Qualifizierer: WmiDataId(5)
 </dt> </dl>
 
-Beenden Sie den Status des beendeten Prozesses.
+Beendigungsstatus des beendeten Prozesses.
 
 </dd> <dt>
 
-Imagefilename
+ImageFileName
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **String**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (8), stringbeendigung ("nullterminiert")
+Qualifizierer: WmiDataId(8), StringTermination("NullTerminated")
 </dt> </dl>
 
 Pfad zur ausführbaren Datei des Prozesses.
@@ -131,92 +131,92 @@ Pfad zur ausführbaren Datei des Prozesses.
 ParentId
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (3), Format ("x")
+Qualifizierer: WmiDataId(3), Format("x")
 </dt> </dl>
 
-Eindeutiger Bezeichner des Prozesses, der diesen Prozess erstellt. Die prozesbezeichnernummern werden wieder verwendet, sodass Sie nur einen Prozess für die Lebensdauer dieses Prozesses identifizieren. Es ist möglich, dass der durch "parameterprocessid" identifizierte Prozess beendet wird, sodass "parameterprocessid" möglicherweise nicht auf einen laufenden Prozess verweist. Es ist auch möglich, dass "paramedprocessid" fälschlicherweise auf einen Prozess verweist, der einen Prozess Bezeichner wieder verwendet.
+Eindeutiger Bezeichner des Prozesses, der diesen Prozess erstellt. Prozessbezeichnernummern werden wiederverwendet, sodass sie nur einen Prozess für die Lebensdauer dieses Prozesses identifizieren. Es ist möglich, dass der durch ParentProcessId identifizierte Prozess beendet wird, sodass ParentProcessId möglicherweise nicht auf einen ausgeführten Prozess verweist. Es ist auch möglich, dass ParentProcessId fälschlicherweise auf einen Prozess verweist, der einen Prozessbezeichner wiederverwendet.
 
 </dd> <dt>
 
 ProcessId
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (2), Format ("x")
+Qualifizierer: WmiDataId(2), Format("x")
 </dt> </dl>
 
-Die globale Prozess-ID, mit der Sie einen Prozess identifizieren können. Der Wert ist gültig ab dem Zeitpunkt, zu dem ein Prozess erstellt wird, bis er beendet wird.
+Globaler Prozessbezeichner, den Sie zum Identifizieren eines Prozesses verwenden können. Der Wert ist gültig ab dem Zeitpunkt, zu dem ein Prozess erstellt wird, bis er beendet wird.
 
 </dd> <dt>
 
 SessionID
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (4)
+Qualifizierer: WmiDataId(4)
 </dt> </dl>
 
-Eindeutiger Bezeichner, den ein Betriebssystem generiert, wenn eine neue Sitzung erstellt wird. Eine Sitzung erstreckt sich über einen Zeitraum von der Anmeldung bis zum Abmelden von einem bestimmten System.
+Eindeutiger Bezeichner, den ein Betriebssystem generiert, wenn es eine neue Sitzung erstellt. Eine Sitzung erstreckt sich über einen Zeitraum von der Anmeldung bis zur Abmeldung von einem bestimmten System.
 
 </dd> <dt>
 
-Uniqueprocesskey
+UniqueProcessKey
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (1), Zeiger
+Qualifizierer: WmiDataId(1), Zeiger
 </dt> </dl>
 
-Die Adresse des Prozess Objekts im Kernel.
+Die Adresse des Prozessobjekts im Kernel.
 
 </dd> <dt>
 
 UserSID
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Object**
+Datentyp: **object**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (7), Erweiterung ("sid")
+Qualifizierer: WmiDataId(7), Extension("Sid")
 </dt> </dl>
 
-Sicherheits-ID (SID) für den Benutzer Kontext, in dem das Ereignis auftritt.
+Sicherheits-ID (SID) für den Benutzerkontext, unter dem das Ereignis eintritt.
 
 </dd> </dl>
 
 ## <a name="remarks"></a>Bemerkungen
 
-Die Ereignis Typen DCStart und DCEnd zählen den Prozess, der derzeit ausgeführt wird, einschließlich Leerlauf und System Prozess, zu dem Zeitpunkt, zu dem die Kernel Sitzung beginnt bzw. endet.
+Die DCStart- und DCEnd-Ereignistypen zählen den Prozess auf, der derzeit ausgeführt wird, einschließlich Leerlauf und Systemprozess, zu dem Zeitpunkt, zu dem die Kernelsitzung gestartet bzw. beendet wird.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/> |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>       |

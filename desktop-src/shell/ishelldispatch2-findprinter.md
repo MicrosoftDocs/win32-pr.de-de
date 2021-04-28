@@ -1,7 +1,7 @@
 ---
-description: Zeigt das Dialogfeld Drucker suchen an.
+description: 'IShellDispatch2.FindPrinter-Methode: Zeigt das Dialogfeld Drucker suchen an.'
 ms.assetid: a3d1e810-f0cf-48ec-93da-5cc01117c5d4
-title: IShellDispatch2. findprinter-Methode (Shldisp. h)
+title: IShellDispatch2.FindPrinter-Methode (Shldisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,14 +13,14 @@ api_type:
 - COM
 api_location:
 - Shell32.dll
-ms.openlocfilehash: 81124e3f0d04244b9b81e812e090bde25971c17c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 64a3975039255de76b3e59432b0848cc2cb1795b
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214872"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108117118"
 ---
-# <a name="ishelldispatch2findprinter-method"></a>IShellDispatch2. findprinter-Methode
+# <a name="ishelldispatch2findprinter-method"></a>IShellDispatch2.FindPrinter-Methode
 
 Zeigt das Dialogfeld **Drucker suchen** an.
 
@@ -53,46 +53,46 @@ IShellDispatch2.FindPrinter( _
 
 <dl> <dt>
 
-*sname* \[ in, optional\]
+*sName* \[ in, optional\]
 </dt> <dd>
 
 Typ: **[ **BSTR**](/previous-versions/windows/desktop/automat/bstr)**
 
-Eine **Zeichenfolge** , die den Drucker Namen enthält.
+Eine **Zeichenfolge,** die den Druckernamen enthält.
 
 </dd> <dt>
 
-*slotung* \[ in, optional\]
+*sLocation* \[ in, optional\]
 </dt> <dd>
 
 Typ: **[ **BSTR**](/previous-versions/windows/desktop/automat/bstr)**
 
-Eine **Zeichenfolge** , die den Drucker Speicherort enthält.
+Eine **Zeichenfolge,** die den Druckerspeicherort enthält.
 
 </dd> <dt>
 
-*smodel* \[ in, optional\]
+*sModel* \[ in, optional\]
 </dt> <dd>
 
 Typ: **[ **BSTR**](/previous-versions/windows/desktop/automat/bstr)**
 
-Eine **Zeichenfolge** , die das Drucker Modell enthält.
+Eine **Zeichenfolge,** die das Druckermodell enthält.
 
 </dd> </dl>
 
 ## <a name="remarks"></a>Bemerkungen
 
-Diese Methode wird implementiert, und der Zugriff erfolgt über die [**Shell. findprinter**](./shell-findprinter.md) -Methode.
+Diese Methode wird implementiert und über die [**Shell.FindPrinter-Methode**](./shell-findprinter.md) aufgerufen.
 
-Wenn Sie einem oder mehreren optionalen Parametern Zeichen folgen zuweisen, werden diese als Standardwerte im zugeordneten Bearbeitungs Steuerelement angezeigt, wenn das Dialogfeld " **Drucker suchen** " angezeigt wird. Der Benutzer kann diese Werte entweder annehmen oder außer Kraft setzen. Wenn einem Parameter kein Wert zugewiesen wird, ist das zugehörige Bearbeitungsfeld leer, und der Benutzer muss einen Wert eingeben.
+Wenn Sie einem oder mehreren optionalen Parametern Zeichenfolgen zuweisen, werden diese im zugeordneten Bearbeitungssteuerelement als Standardwerte angezeigt, wenn das Dialogfeld **Drucker suchen** angezeigt wird. Der Benutzer kann diese Werte entweder akzeptieren oder überschreiben. Wenn einem Parameter kein Wert zugewiesen ist, ist das zugeordnete Bearbeitungsfeld leer, und der Benutzer muss einen Wert eingeben.
 
-Diese Methode ist zurzeit nicht in Microsoft Visual Basic verfügbar.
+Diese Methode ist derzeit in Microsoft Visual Basic nicht verfügbar.
 
 ## <a name="examples"></a>Beispiele
 
-In den folgenden Beispielen wird gezeigt, wie **findprinter** verwendet wird, um das Dialogfeld **Drucker** suchen für eine bestimmte Anwendung anzuzeigen. Die Verwendung wird für JScript, VBScript und Visual Basic angezeigt.
+In den folgenden Beispielen wird die Verwendung von **FindPrinter** zum Anzeigen des Dialogfelds **Drucker suchen** für eine bestimmte Anwendung gezeigt. Die Verwendung wird für JScript, VBScript und Visual Basic angezeigt.
 
-JScript
+Jscript:
 
 
 ```JScript
@@ -108,7 +108,7 @@ JScript
 
 
 
-VBScript
+Vbscript:
 
 
 ```VB
@@ -127,17 +127,17 @@ VBScript
 
 
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, Windows XP \[ Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                          |
-| Header<br/>                   | <dl> <dt>Shldisp. h</dt> </dl>                          |
-| IDL<br/>                      | <dl> <dt>Shldisp. idl</dt> </dl>                        |
-| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 5,0 oder höher)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Nur Windows 2000 Professional- und Windows \[ XP-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2003-Desktop-Apps\]<br/>                                                          |
+| Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>                          |
+| Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                        |
+| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 5.0 oder höher)</dt> </dl> |
 
 
 

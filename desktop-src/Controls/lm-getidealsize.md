@@ -1,9 +1,9 @@
 ---
-title: LM_GETIDEALSIZE Meldung (kommstrg. h)
-description: Ruft die bevorzugte Höhe eines Links für die aktuelle Breite des Steuer Elements ab.
+title: LM_GETIDEALSIZE (Commctrl.h)
+description: 'LM_GETIDEALSIZE Meldung: Ruft die bevorzugte Höhe eines Links für die aktuelle Breite des Steuerelements ab.'
 ms.assetid: 63aad7eb-26ee-41d2-90d4-65fdcf0f182a
 keywords:
-- Windows-Steuerelemente für LM_GETIDEALSIZE Meldung
+- LM_GETIDEALSIZE Meldung Windows-Steuerelemente
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c138e22982116a3b7173f586d96c70cfc91194c3
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 761fb5f6e5f7a2e2e9b1b9cc862b9a8f2c0fcd1f
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104475207"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108112388"
 ---
-# <a name="lm_getidealsize-message"></a>LM- \_ getidealsize-Nachricht
+# <a name="lm_getidealsize-message"></a>LM \_ GETIDEALSIZE-Nachricht
 
-Ruft die bevorzugte Höhe eines Links für die aktuelle Breite des Steuer Elements ab.
+Ruft die bevorzugte Höhe eines Links für die aktuelle Breite des Steuerelements ab.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,17 +32,17 @@ Ruft die bevorzugte Höhe eines Links für die aktuelle Breite des Steuer Elemen
 *wParam* 
 </dt> <dd>Maximale Breite des Links in Pixel.</dd> <dt>
 
-*LPARAM* \[ vorgenommen\]
-</dt> <dd>Wenn diese Nachricht zurückgegeben wird, enthält Sie einen Zeiger auf eine <a href="/previous-versions//dd145106(v=vs.85)">**Größen**</a> Struktur. Der **CY** -Member dieser Struktur gibt die ideale Höhe des Steuer Elements für die angegebene Breite an. Der **CX** -Member wird an den tatsächlich benötigten Speicherplatz angepasst.</dd> </dl>
+*lParam* \[ out\]
+</dt> <dd>Enthält nach der Rückgabe dieser Meldung einen Zeiger auf eine <a href="/previous-versions//dd145106(v=vs.85)">**SIZE-Struktur.**</a> Der **Cy-Member** dieser -Struktur gibt die ideale Höhe des Steuerelements für die gegebene Breite an. Sie passt das **Cx-Member** an den tatsächlich benötigten Speicherplatz an.</dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine ganze Zahl, die die bevorzugte Höhe des linktexts in Pixel darstellt.
+Eine ganze Zahl, die die bevorzugte Höhe des Linktexts in Pixel darstellt.
 
 ## <a name="remarks"></a>Bemerkungen
 
 > [!Note]  
-> Um diese API zu verwenden, müssen Sie ein Manifest bereitstellen, das Comclt32.dll Version 6,0 angibt. Weitere Informationen zu Manifesten finden Sie unter [Aktivieren von visuellen Stilen](cookbook-overview.md).
+> Um diese API verwenden zu können, müssen Sie ein Manifest bereitstellen, das Comclt32.dll 6.0 angibt. Weitere Informationen zu Manifesten finden Sie unter [Aktivieren von visuellen Stilen.](cookbook-overview.md)
 
  
 
@@ -50,11 +50,11 @@ Eine ganze Zahl, die die bevorzugte Höhe des linktexts in Pixel darstellt.
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2008-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

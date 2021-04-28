@@ -1,29 +1,29 @@
 ---
-title: Dialog Feld Benachrichtigungen
-description: .
+title: Dialogfeldbenachrichtigungen
+description: Dialogfeldbenachrichtigungen
 ms.assetid: df51dad0-8320-4e7a-a93e-1731463f888a
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1f9e5e8720cad08b31eec945f40177e3c34a42d3
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 94c10ad325551a8c00b2eb05ebbadc29337fedc7
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104388819"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108112998"
 ---
-# <a name="dialog-box-notifications"></a>Dialog Feld Benachrichtigungen
+# <a name="dialog-box-notifications"></a>Dialogfeldbenachrichtigungen
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [**WM \_ ctlcolordlg**](wm-ctlcolordlg.md)
--   [**WM \_ Enter idle**](wm-enteridle.md)
--   [**WM \_ getdlgcode**](wm-getdlgcode.md)
--   [**WM \_ InitDialog**](wm-initdialog.md)
--   [**WM \_ nextdlgctl**](wm-nextdlgctl.md)
+-   [**WM \_ CTLCOLORDLG**](wm-ctlcolordlg.md)
+-   [**WM \_ ENTERIDLE**](wm-enteridle.md)
+-   [**WM \_ GETDLGCODE**](wm-getdlgcode.md)
+-   [**WM \_ INITDIALOG**](wm-initdialog.md)
+-   [**WM \_ NEXTDLGCTL**](wm-nextdlgctl.md)
 
- 
+ 
 
- 
+ 
 
 
 
