@@ -1,7 +1,7 @@
 ---
-description: Erstellt eine Matrix, die um eine beliebige Achse rotiert.
+description: 'D3DXMatrixRotationAxis-Funktion (D3DX10Math.h): Erstellt eine Matrix, die um eine beliebige Achse gedreht wird.'
 ms.assetid: dc4b8b3f-e1d2-475f-9dcb-622ada9fae6b
-title: D3DXMatrixRotationAxis-Funktion (D3DX10Math. h)
+title: D3DXMatrixRotationAxis-Funktion (D3DX10Math.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: bba74aa7258b39b8fdbbb8cab09684a14bfbda91
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 8ea5b8b0a40e876af454daa8915c0e455d691d08
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104050916"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108108998"
 ---
-# <a name="d3dxmatrixrotationaxis-function-d3dx10mathh"></a>D3DXMatrixRotationAxis-Funktion (D3DX10Math. h)
+# <a name="d3dxmatrixrotationaxis-function-d3dx10mathh"></a>D3DXMatrixRotationAxis-Funktion (D3DX10Math.h)
 
-Erstellt eine Matrix, die um eine beliebige Achse rotiert.
+Erstellt eine Matrix, die um eine beliebige Achse gedreht wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,30 +42,30 @@ D3DXMATRIX* D3DXMatrixRotationAxis(
 
 <dl> <dt>
 
-*Pout* \[ in, out\]
+*pOut* \[ in, out\]
 </dt> <dd>
 
 Typ: **[ **D3DXMATRIX**](../direct3d9/d3dxmatrix.md)\***
 
-Ein Zeiger auf die [**D3DXMATRIX**](d3d10-d3dxmatrix.md) -Struktur, die das Ergebnis des Vorgangs ist.
+Zeiger auf die [**D3DXMATRIX-Struktur,**](d3d10-d3dxmatrix.md) die das Ergebnis des Vorgangs ist.
 
 </dd> <dt>
 
-*PV* \[ in\]
+*pV* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXVECTOR3**](../direct3d9/d3dxvector3.md) \***
+Typ: **const [**D3DXVECTOR3**](../direct3d9/d3dxvector3.md) \***
 
 Zeiger auf die beliebige Achse. Siehe [**D3DXVECTOR3**](d3d10-d3dxvector3.md).
 
 </dd> <dt>
 
-*Winkel* \[ in\]
+*Winkel* \[ In\]
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-Winkel der Drehung im Bogenmaße. Winkel werden im Uhrzeigersinn gemessen, wenn Sie entlang der Drehungs Achse zum Ursprung suchen.
+Drehwinkel im Bogenmaß. Winkel werden im Uhrzeigersinn gemessen, wenn sie entlang der Drehachse zum Ursprung hin betrachtet werden.
 
 </dd> </dl>
 
@@ -73,24 +73,24 @@ Winkel der Drehung im Bogenmaße. Winkel werden im Uhrzeigersinn gemessen, wenn 
 
 Typ: **[ **D3DXMATRIX**](../direct3d9/d3dxmatrix.md)\***
 
-Ein Zeiger auf eine D3DXMATRIX-Struktur, gedreht um die angegebene Achse.
+Zeiger auf eine D3DXMATRIX-Struktur, die um die angegebene Achse gedreht wurde.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Der Rückgabewert für diese Funktion ist derselbe Wert, der im Pout-Parameter zurückgegeben wird. Auf diese Weise kann die D3DXMatrixRotationAxis-Funktion als Parameter für eine andere Funktion verwendet werden.
+Der Rückgabewert für diese Funktion ist der gleiche Wert, der im pOut-Parameter zurückgegeben wird. Auf diese Weise kann die D3DXMatrixRotationAxis-Funktion als Parameter für eine andere Funktion verwendet werden.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX10Math. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx10. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX10Math.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

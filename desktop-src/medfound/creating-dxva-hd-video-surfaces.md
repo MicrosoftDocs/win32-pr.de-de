@@ -1,25 +1,25 @@
 ---
-description: .
+description: Erstellen von DXVA-HD-Videooberflächen
 ms.assetid: a4508a1e-d68b-4c55-bce4-c8b462134fa1
-title: Erstellen von DXVA-HD-Video Oberflächen
+title: Erstellen von DXVA-HD-Videooberflächen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 459504a312ec0d59cf3642f528f433ffce8ba094
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1e20dea8f34a275aab59b2d57f68ca76d46b1c1f
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103861819"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108102548"
 ---
-# <a name="creating-dxva-hd-video-surfaces"></a>Erstellen von DXVA-HD-Video Oberflächen
+# <a name="creating-dxva-hd-video-surfaces"></a>Erstellen von DXVA-HD-Videooberflächen
 
-Die Anwendung muss mindestens eine Direct3D-Oberfläche erstellen, die für die Eingabe Rahmen verwendet werden soll. Diese müssen im Speicherpool zugeordnet werden, der vom **inputpool** -Member der [**\_ vpdevcaps-Struktur dxvahd**](/windows/desktop/api/dxvahd/ns-dxvahd-dxvahd_vpdevcaps) angegeben wird. Die folgenden Oberflächentypen können verwendet werden:
+Die Anwendung muss eine oder mehrere Direct3D-Oberflächen erstellen, die für die Eingabeframes verwendet werden sollen. Diese müssen in dem Vom **InputPool-Member** der [**DXVAHD \_ VPDEVCAPS-Struktur**](/windows/desktop/api/dxvahd/ns-dxvahd-dxvahd_vpdevcaps) angegebenen Speicherpool zugeordnet werden. Die folgenden Oberflächentypen können verwendet werden:
 
--   Eine Video Oberfläche, die durch Aufrufen von [**idxvahd \_ Device:: createvideosurface**](/windows/desktop/api/dxvahd/nf-dxvahd-idxvahd_device-createvideosurface) und durch Angeben des Datentyps **dxvahd \_ Surface \_ Type \_ Video \_ Input** oder **dxvahd \_ Surface \_ Type \_ \_ \_ private** Surface Type erstellt wurde. Dieser Oberflächen Typ entspricht einer flachen Oberfläche.
--   Eine renderzieloberfläche des Decoders, die durch Aufrufen von [**idirectxvideoaccelerationservice:: CreateSurface**](/windows/desktop/api/dxva2api/nf-dxva2api-idirectxvideoaccelerationservice-createsurface) und angeben des **DXVA2 \_ videodecoderrendertarget** -Oberflächen Typs erstellt wird. Dieser Surface-Typ wird für die DXVA-Decodierung verwendet.
--   Eine Schaltfläche außerhalb des Bildschirms.
+-   Eine Videooberfläche, die durch Aufrufen von [**IDXVAHD \_ Device::CreateVideoSurface**](/windows/desktop/api/dxvahd/nf-dxvahd-idxvahd_device-createvideosurface) und Angeben des **DXVAHD \_ SURFACE TYPE VIDEO \_ \_ \_ INPUT-** oder **DXVAHD \_ SURFACE TYPE VIDEO INPUT \_ \_ \_ PRIVATE-Oberflächentyps \_** erstellt wurde. Dieser Oberflächentyp entspricht einer einfachen Oberfläche im Off-Screen-Bereich.
+-   Eine Renderzieloberfläche des Decoders, die durch Aufrufen von [**IDirectXVideoAccelerationService::CreateSurface**](/windows/desktop/api/dxva2api/nf-dxva2api-idirectxvideoaccelerationservice-createsurface) und Angeben des **DXVA2 \_ VideoDecoderRenderTarget-Oberflächentyps** erstellt wird. Dieser Oberflächentyp wird für die DXVA-Decodierung verwendet.
+-   Eine einfache Oberfläche im Off-Screen-Bildschirm.
 
-Der folgende Code zeigt, wie Sie eine Video Oberfläche mithilfe von [**createvideosurface**](/windows/desktop/api/dxvahd/nf-dxvahd-idxvahd_device-createvideosurface)zuordnen:
+Der folgende Code zeigt, wie Sie mit [**CreateVideoSurface eine Videooberfläche zuordnen:**](/windows/desktop/api/dxvahd/nf-dxvahd-idxvahd_device-createvideosurface)
 
 
 ```C++

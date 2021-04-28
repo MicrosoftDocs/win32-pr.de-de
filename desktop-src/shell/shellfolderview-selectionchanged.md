@@ -1,6 +1,6 @@
 ---
-description: Tritt auf, wenn sich der Auswahl Zustand eines Elements oder der Elemente in der Ansicht geändert hat.
-title: Shellfolderview. SelectionChanged-Ereignis (Shldisp. h)
+description: 'ShellFolderView.SelectionChanged-Ereignis: Tritt auf, wenn sich der Auswahlzustand eines Elements oder eines Elements in der Ansicht geändert hat.'
+title: ShellFolderView.SelectionChanged-Ereignis (Shldisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 api_location:
 - Shell32.dll
 ms.assetid: e91b72fd-fd26-4e38-8e80-41febec3ca03
-ms.openlocfilehash: 864cd4c7bb0b414e4237c698412ad10899c8cbb3
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 31a32865a979bf6b5fa115912bdc32a9680e5064
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104050368"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108103998"
 ---
-# <a name="shellfolderviewselectionchanged-event"></a>Shellfolderview. SelectionChanged-Ereignis
+# <a name="shellfolderviewselectionchanged-event"></a>ShellFolderView.SelectionChanged-Ereignis
 
-Tritt auf, wenn sich der Auswahl Zustand eines Elements oder der Elemente in der Ansicht geändert hat.
+Tritt ein, wenn sich der Auswahlzustand eines Elements oder eines Elements in der Ansicht geändert hat.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,17 +43,17 @@ ShellFolderView.SelectionChanged = EventHandler;
 
 Dieser Ereignishandler verfügt über keine Parameter.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, Windows XP \[ Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, nur Windows \[ XP-Desktop-Apps\]<br/>                                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                           |
-| Header<br/>                   | <dl> <dt>Shldisp. h</dt> </dl>                           |
-| IDL<br/>                      | <dl> <dt>Shldisp. idl</dt> </dl>                         |
-| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4,71 oder höher)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>                           |
+| Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                         |
+| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4.71 oder höher)</dt> </dl> |
 
 
 

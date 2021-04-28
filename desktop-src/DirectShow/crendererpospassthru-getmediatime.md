@@ -1,7 +1,7 @@
 ---
-description: Die getmediatime-Methode ruft die Zeitstempel im aktuellen Beispiel ab.
+description: 'CRendererPosPassThru.GetMediaTime-Methode: Die GetMediaTime-Methode ruft die Zeitstempel im aktuellen Beispiel ab.'
 ms.assetid: 13710373-04fd-4c1d-ba97-78be5cf27e7d
-title: Crendererpospassthru. getmediatime-Methode (ctlutil. h)
+title: CRendererPosPassThru.GetMediaTime-Methode (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 628c0f0c65dad4e00dd259edbeee97fd8f6f13ac
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 588c92faec6b68cfa51392d4df00567c4e881460
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106373859"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108085368"
 ---
-# <a name="crendererpospassthrugetmediatime-method"></a>Crendererpospassthru. getmediatime-Methode
+# <a name="crendererpospassthrugetmediatime-method"></a>CRendererPosPassThru.GetMediaTime-Methode
 
-Die- `GetMediaTime` Methode ruft die Zeitstempel im aktuellen Beispiel ab.
+Die `GetMediaTime` -Methode ruft die Zeitstempel für das aktuelle Beispiel ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,31 +43,31 @@ HRESULT GetMediaTime(
 
 <dl> <dt>
 
-*pstarttime* 
+*pStartTime* 
 </dt> <dd>
 
-Ein Zeiger auf eine Variable, die die Startzeit in Einheiten des aktuellen Zeit Formats empfängt.
+Zeiger auf eine Variable, die die Startzeit in Einheiten des aktuellen Zeitformats empfängt.
 
 </dd> <dt>
 
-*Zeit* 
+*pEndTime* 
 </dt> <dd>
 
-Ein Zeiger auf eine Variable, die die Endzeit in Einheiten des aktuellen Zeit Formats empfängt. Kann **null** sein.
+Zeiger auf eine Variable, die die Endzeit in Einheiten des aktuellen Zeitformats empfängt. Kann **NULL** sein.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT** -Wert zurück. Mögliche Werte sind die in der folgenden Tabelle aufgeführten Werte.
+Gibt einen **HRESULT-Wert** zurück. Mögliche Werte sind die in der folgenden Tabelle aufgeführten Werte.
 
 
 
 | Rückgabecode                                                                                  | Beschreibung                                            |
 |----------------------------------------------------------------------------------------------|--------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>         | Erfolg.<br/>                                    |
-| <dl> <dt>**E \_ invalidArg**</dt> </dl> | Die Konvertierung in dieses Format wird nicht unterstützt.<br/> |
-| <dl> <dt>**E- \_ Zeiger**</dt> </dl>    | **Null** -Zeigerargument.<br/>                  |
+| <dl> <dt>**E \_ INVALIDARG**</dt> </dl> | Die Konvertierung in dieses Format wird nicht unterstützt.<br/> |
+| <dl> <dt>**E \_ POINTER**</dt> </dl>    | **NULL-Zeigerargument.**<br/>                  |
 
 
 
@@ -75,16 +75,16 @@ Gibt einen **HRESULT** -Wert zurück. Mögliche Werte sind die in der folgenden 
 
 ## <a name="remarks"></a>Bemerkungen
 
-Diese Methode überschreibt die [**cpospassthru:: getmediatime**](cpospassthru-getmediatime.md) -Methode. Die Zeitstempel Werte werden in das aktuelle Zeitformat konvertiert, indem die [**cpospassthru:: converttimeformat**](cpospassthru-converttimeformat.md) -Methode aufgerufen wird.
+Diese Methode überschreibt die [**CPosPassThru::GetMediaTime-Methode.**](cpospassthru-getmediatime.md) Die Zeitstempelwerte werden in das aktuelle Zeitformat konvertiert, indem die [**CPosPassThru::ConvertTimeFormat-Methode**](cpospassthru-converttimeformat.md) aufgerufen wird.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 

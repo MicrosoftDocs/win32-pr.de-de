@@ -1,7 +1,7 @@
 ---
-description: 'Die QueryId-Methode ruft einen Bezeichner für die PIN ab. Diese Methode implementiert die IPin:: QueryId-Methode.'
+description: 'CTransformInputPin.QueryId-Methode: Die QueryId-Methode ruft einen Bezeichner für den Pin ab. Diese Methode implementiert die IPin::QueryId-Methode.'
 ms.assetid: 91fde383-0288-4307-9ca8-e117b6111769
-title: Ctransforminputpin. QueryId-Methode (Transfrm. h)
+title: CTransformInputPin.QueryId-Methode (Transfrm.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: daae425e82bbc89cfbc863baea1924e36e63f122
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 8407e649814fcb12f699c2362f0f89137e941d19
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372597"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108095008"
 ---
-# <a name="ctransforminputpinqueryid-method"></a>Ctransforminputpin. QueryId-Methode
+# <a name="ctransforminputpinqueryid-method"></a>CTransformInputPin.QueryId-Methode
 
-Die- `QueryId` Methode ruft einen Bezeichner für die PIN ab. Diese Methode implementiert die [**IPin:: QueryId**](/windows/desktop/api/Strmif/nf-strmif-ipin-queryid) -Methode.
+Die `QueryId` -Methode ruft einen Bezeichner für den Pin ab. Diese Methode implementiert die [**IPin::QueryId-Methode.**](/windows/desktop/api/Strmif/nf-strmif-ipin-queryid)
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,21 +45,21 @@ HRESULT QueryId(
 *Id* 
 </dt> <dd>
 
-Empfängt eine Zeichenfolge mit dem PIN-Bezeichner.
+Empfängt eine Zeichenfolge, die den Stecknadelbezeichner enthält.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen der **HRESULT** -Werte zurück, die in der folgenden Tabelle aufgeführt sind.
+Gibt einen der in der folgenden Tabelle gezeigten **HRESULT-Werte** zurück.
 
 
 
 | Rückgabecode                                                                                   | Beschreibung                          |
 |-----------------------------------------------------------------------------------------------|--------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>          | Erfolg<br/>                   |
-| <dl> <dt>**E \_ outo-Memory**</dt> </dl> | Nicht genügend Arbeitsspeicher<br/>       |
-| <dl> <dt>**E- \_ Zeiger**</dt> </dl>     | **Null** -Zeigerargument<br/> |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl> | Nicht genügend Arbeitsspeicher<br/>       |
+| <dl> <dt>**E \_ POINTER**</dt> </dl>     | **NULL-Zeigerargument**<br/> |
 
 
 
@@ -67,16 +67,16 @@ Gibt einen der **HRESULT** -Werte zurück, die in der folgenden Tabelle aufgefü
 
 ## <a name="remarks"></a>Bemerkungen
 
-Der PIN-Bezeichner wird für die Diagramm Persistenz verwendet. Der PIN-Bezeichner für diese Klasse befindet sich in. Diese Klasse überschreibt das Verhalten der [**cbasepin**](cbasepin.md) -Klasse. In der **cbasepin** -Klasse ist der PIN-Bezeichner mit dem PIN-Namen identisch, der im-Klassenkonstruktor angegeben ist. In der **ctransforminputpin** -Klasse sind der PIN-Bezeichner und der PIN-Name nicht identisch.
+Der Stecknadelbezeichner wird für die Graphpersistenz verwendet. Der Stecknadelbezeichner für diese Klasse ist In. Diese Klasse überschreibt das Verhalten der [**CBasePin-Klasse.**](cbasepin.md) In der **CBasePin-Klasse** entspricht der Pinbezeichner dem Pinnamen, der im Klassenkonstruktor angegeben ist. In der **CTransformInputPin-Klasse** sind der Pinbezeichner und der Pinname nicht identisch.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Transfrm. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Transfrm.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 

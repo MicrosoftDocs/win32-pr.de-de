@@ -1,7 +1,7 @@
 ---
-description: Beschreibt eine Quaternion.
+description: 'D3DXQUATERNION-Struktur (D3dx9math.h): Beschreibt eine Quaternion.'
 ms.assetid: 3d88ed17-5b0a-46d5-8fe6-d66e1fa26c13
-title: D3DXQUATERNION-Struktur (D3dx9math. h)
+title: D3DXQUATERNION-Struktur (D3dx9math.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,14 +13,14 @@ api_type:
 - HeaderDef
 api_location:
 - d3dx9math.h
-ms.openlocfilehash: 59d3f147e8eb233b9197394bad738d19d9ceba5d
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: f67acc6389ce809c1aa5f4987d9502735fe61e49
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106370424"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108115678"
 ---
-# <a name="d3dxquaternion-structure-d3dx9mathh"></a>D3DXQUATERNION-Struktur (D3dx9math. h)
+# <a name="d3dxquaternion-structure-d3dx9mathh"></a>D3DXQUATERNION-Struktur (D3dx9math.h)
 
 Beschreibt eine Quaternion.
 
@@ -45,7 +45,7 @@ typedef struct D3DXQUATERNION {
 **x**
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
@@ -56,7 +56,7 @@ Die x-Komponente.
 **y**
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
@@ -67,7 +67,7 @@ Die y-Komponente.
 **z**
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
@@ -78,7 +78,7 @@ Die z-Komponente.
 **w**
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
@@ -88,7 +88,7 @@ Die w-Komponente.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Quaternionen fügen den \[ x-, y-, z- \] Werten, die einen Vektor definieren, ein viertes Element hinzu, was zu beliebigen 4D-Vektoren führt. Im folgenden wird jedoch veranschaulicht, wie sich die einzelnen Elemente einer Einheits-Quaternion auf eine Achse-Winkel Drehung beziehen (wobei q eine Einheits Quaternion (x, y, z, w), die Achse normalisiert und die gewünschte CCW-Drehung der Achse darstellt):
+Quaternionen fügen den \[ x-, y-, \] z-Werten, die einen Vektor definieren, ein viertes Element hinzu, was zu beliebigen 4D-Vektoren führt. Im Folgenden wird jedoch veranschaulicht, wie sich jedes Element einer Einheiten quaternion auf eine Achsenwinkelrotation bezieht (wobei q eine Einheiten quaternion (x, y, z, w) darstellt, die Achse normalisiert wird und theta die gewünschte CCW-Drehung um die Achse darstellt):
 
 
 ```
@@ -100,26 +100,26 @@ q.w = cos(theta/2)
 
 
 
-C++-Programmierer können das Überladen von Operatoren und die Typumwandlung mit den [**D3DXQUATERNION-Erweiterungen**](d3dxquaternion-extensions.md)nutzen, die überladene Konstruktoren und Zuweisungs-, unäre und binäre (einschließlich Gleichheits-) Operatoren implementieren.
+C++-Programmierer können die Vorteile der Operatorüberladung und Typcasting mit den [**D3DXQUATERNION-Erweiterungen**](d3dxquaternion-extensions.md)nutzen, die überladene Konstruktoren und Zuweisungs-, unäre und binäre Operatoren (einschließlich Gleichheitsoperatoren) implementieren.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------|----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3dx9math. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3dx9math.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [D3DX-Strukturen](dx9-graphics-reference-d3dx-structures.md)
 </dt> <dt>
 
-[Vektoren, Vertices und Quaternionen (Direct3D 9)](vectors--vertices--and-quaternions.md)
+[Vektoren, Scheitelpunkte und Quaternionen (Direct3D 9)](vectors--vertices--and-quaternions.md)
 </dt> </dl>
 
  

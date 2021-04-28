@@ -1,7 +1,7 @@
 ---
-description: Die Clear-Methode löscht alle Elemente aus der Auflistung.
+description: 'IPortableDeviceKeyCollection::Clear-Methode: Die Clear-Methode löscht alle Elemente aus der Auflistung.'
 ms.assetid: d5477ded-d0bd-4909-abb1-6ff282cf7925
-title: 'Iportabledevicekeycollection:: Clear-Methode (portabledevicetypes. h)'
+title: IPortableDeviceKeyCollection::Clear-Methode (PortableDeviceTypes.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - PortableDeviceGUIDs.lib
 - PortableDeviceGUIDs.dll
-ms.openlocfilehash: e72f20d93ddbdf521bcd83c1fe07d75f74abd463
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 9e5efb8b3784b9ddc04a9e28a83c39ef75d723b3
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106362087"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108106808"
 ---
-# <a name="iportabledevicekeycollectionclear-method"></a>Iportabledevicekeycollection:: Clear-Methode
+# <a name="iportabledevicekeycollectionclear-method"></a>IPortableDeviceKeyCollection::Clear-Methode
 
-Die **Clear** -Methode löscht alle Elemente aus der Auflistung.
+Die **Clear-Methode** löscht alle Elemente aus der Auflistung.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,7 +40,7 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
+Die -Methode gibt ein **HRESULT zurück.** Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
 
 
 
@@ -56,18 +56,18 @@ Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzi
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|----------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Portablede vicetypes. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>Portabledeviceguids. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>PortableDeviceTypes.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>PortableDeviceGUIDs.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iportabledevicekeycollection-Schnittstelle**](iportabledevicekeycollection.md)
+[**IPortableDeviceKeyCollection-Schnittstelle**](iportabledevicekeycollection.md)
 </dt> </dl>
 
  

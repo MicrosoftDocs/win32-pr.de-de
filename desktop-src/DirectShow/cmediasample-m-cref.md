@@ -1,7 +1,7 @@
 ---
-description: Verweis Zähler.
+description: CMediaSample::m_cRef Member – Verweisanzahl.
 ms.assetid: 57b8498d-2aa4-414f-9e0a-3ddcb748fb38
-title: 'Cmediasample:: m_cRef Member (amfilter. h)'
+title: CMediaSample::m_cRef-Member (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 5affe285a165d8736f7a2173b76d6309f3cb4725
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: ab1c34d6e62a3d66a2d7a412a03c94705615e3f3
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106357536"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108095448"
 ---
-# <a name="cmediasamplem_cref-member"></a>Cmediasample:: m- \_ kref-Member
+# <a name="cmediasamplem_cref-member"></a>CMediaSample::m \_ cRef-Member
 
-Verweis Zähler.
+Verweisanzahl.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,18 +40,18 @@ LONG m_cRef;
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (streams.h einschließen)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cmediasample-Klasse**](cmediasample.md)
+[**CMediaSample-Klasse**](cmediasample.md)
 </dt> </dl>
 
  

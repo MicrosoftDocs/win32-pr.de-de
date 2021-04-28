@@ -1,7 +1,7 @@
 ---
-description: Vergewissern Sie sich, dass die Version von D3DX, die Sie mit kompiliert haben, die Version ist, die Sie ausführen.
+description: 'D3DX10CheckVersion-Funktion: Stellen Sie sicher, dass die Version von D3DX, mit der Sie kompiliert haben, die Version ist, die Sie ausführen.'
 ms.assetid: 57085b07-f77b-425e-a889-22c3071d7143
-title: D3DX10CheckVersion-Funktion (D3DX10Core. h)
+title: D3DX10CheckVersion-Funktion (D3DX10Core.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: 3b41996f16cb97d91dc59f8d368f13b905992388
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 4fc8befa88fb706965a30224843745b033ea205b
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106371939"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108105348"
 ---
 # <a name="d3dx10checkversion-function"></a>D3DX10CheckVersion-Funktion
 
-Vergewissern Sie sich, dass die Version von D3DX, die Sie mit kompiliert haben, die Version ist, die Sie ausführen.
+Stellen Sie sicher, dass die Version von D3DX, mit der Sie kompiliert haben, die Version ist, die Sie ausführen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,21 +41,21 @@ HRESULT D3DX10CheckVersion(
 
 <dl> <dt>
 
-*D3DSdkVersion* \[ in\]
+*D3DSdkVersion* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Verwenden Sie die d3d10 \_ SDK- \_ Version. Siehe Bemerkungen.
+Verwenden Sie die D3D10 \_ \_ SDK-VERSION. Siehe Bemerkungen.
 
 </dd> <dt>
 
-*D3DX10SdkVersion* \[ in\]
+*D3DX10SdkVersion* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Verwenden Sie die d3dx10 \_ SDK- \_ Version. Siehe Bemerkungen.
+Verwenden Sie die D3DX10 \_ \_ SDK-VERSION. Siehe Bemerkungen.
 
 </dd> </dl>
 
@@ -63,7 +63,7 @@ Verwenden Sie die d3dx10 \_ SDK- \_ Version. Siehe Bemerkungen.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Version nicht übereinstimmt, gibt die Funktion false zurück (eine Zahl kleiner oder gleich 0, die Zahl selbst hat keine Bedeutung).
+Wenn die Version nicht entspricht, gibt die Funktion FALSE zurück (eine Zahl kleiner oder gleich 0, die Zahl selbst hat keine Bedeutung).
 
 ## <a name="remarks"></a>Bemerkungen
 
@@ -83,18 +83,18 @@ if( FAILED( D3DX10CheckVersion(D3D10_SDK_VERSION, D3DX10_SDK_VERSION) ) )
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX10Core. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx10. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX10Core.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Universell Funktionen](d3d10-graphics-reference-d3dx10-functions-general-purpose.md)
+[Universell Functions](d3d10-graphics-reference-d3dx10-functions-general-purpose.md)
 </dt> </dl>
 
  

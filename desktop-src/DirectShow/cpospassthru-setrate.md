@@ -1,7 +1,7 @@
 ---
-description: 'Die setRate-Methode legt die Wiedergabe Rate fest. Diese Methode implementiert die imediaseeking:: Server trate-Methode.'
+description: 'CPosPassThru.SetRate-Methode: Die SetRate-Methode legt die Wiedergaberate fest. Diese Methode implementiert die IMediaSeeking::SetRate-Methode.'
 ms.assetid: 1b38eb5d-38fd-408b-9f20-4f8d18158f92
-title: Cpospassthru. ctrate-Methode (ctlutil. h)
+title: CPosPassThru.SetRate-Methode (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: ada5c8bc8d265b33e1d4b243bdfd0cf8bf03a7dc
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: bccc0d7044ccf17ac1c97e4fc5a185bdf6c7f0be
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106357692"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108095218"
 ---
-# <a name="cpospassthrusetrate-method"></a>Cpospassthru. ctrate-Methode
+# <a name="cpospassthrusetrate-method"></a>CPosPassThru.SetRate-Methode
 
-Die- `SetRate` Methode legt die Wiedergabe Rate fest. Diese Methode implementiert die [**imediaseeking:: Server trate**](/windows/desktop/api/Strmif/nf-strmif-imediaseeking-setrate) -Methode.
+Die `SetRate` -Methode legt die Wiedergaberate fest. Diese Methode implementiert die [**IMediaSeeking::SetRate-Methode.**](/windows/desktop/api/Strmif/nf-strmif-imediaseeking-setrate)
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,33 +42,33 @@ HRESULT SetRate(
 
 <dl> <dt>
 
-*drate* 
+*dRate* 
 </dt> <dd>
 
-Wiedergabe Rate. Darf nicht NULL sein.
+Wiedergaberate. Darf nicht 0 (null) sein.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt E \_ invalidArg zurück, wenn *drate* 0 (null) ist. Andernfalls wird der **HRESULT** -Wert aus der verbundenen Pin zurückgegeben.
+Gibt E \_ INVALIDARG zurück, wenn *dRate* 0 (null) ist. Andernfalls wird der **HRESULT-Wert** vom verbundenen Pin zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (einschließlich Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cpospassthru-Klasse**](cpospassthru.md)
+[**CPosPassThru-Klasse**](cpospassthru.md)
 </dt> </dl>
 
  

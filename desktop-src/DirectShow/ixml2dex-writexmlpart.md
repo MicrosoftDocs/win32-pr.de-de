@@ -1,7 +1,7 @@
 ---
-description: Nicht implementiert.
+description: 'IXml2Dex::WriteXMLPart-Methode: Nicht implementiert.'
 ms.assetid: d0fc571f-79f5-448a-8082-6e5f7f48118f
-title: 'IXml2Dex:: Write texmlpart-Methode'
+title: IXml2Dex::WriteXMLPart-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,17 +12,17 @@ api_name:
 api_type:
 - COM
 api_location: ''
-ms.openlocfilehash: 8f194fe409d8ea94f786fe3802b2c758a1a00520
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 957fa74f09a79f94e2e0feb35c418a711c91c1b0
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "106344177"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108084358"
 ---
-# <a name="ixml2dexwritexmlpart-method"></a>IXml2Dex:: Write texmlpart-Methode
+# <a name="ixml2dexwritexmlpart-method"></a>IXml2Dex::WriteXMLPart-Methode
 
 > [!Note]  
-> \[Veraltet. Diese API kann aus zukünftigen Versionen von Windows entfernt werden.\]
+> \[Veraltet. Diese API wird möglicherweise aus zukünftigen Versionen von Windows entfernt.\]
 
  
 
@@ -46,21 +46,21 @@ HRESULT WriteXMLPart(
 
 <dl> <dt>
 
-*ptimeline* 
+*pTimeline* 
 </dt> <dd>
 
 Reserviert.
 
 </dd> <dt>
 
-*dstart* 
+*dStart* 
 </dt> <dd>
 
 Reserviert.
 
 </dd> <dt>
 
-*unabhängiges* 
+*dEnd* 
 </dt> <dd>
 
 Reserviert.
@@ -76,21 +76,21 @@ Reserviert.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="remarks"></a>Bemerkungen
 
 > [!Note]  
-> Die Header Datei "qedit. h" ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
+> Die Headerdatei Qedit.h ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
 
  
 
 > [!Note]  
-> Zum Abrufen von "qedit. h" Laden Sie das [Microsoft Windows SDK Update für Windows Vista und .NET Framework 3,0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. "Qedit. h" ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3,5 Service Pack 1 nicht verfügbar.
+> Um Qedit.h zu erhalten, laden Sie das Microsoft Windows SDK Update für Windows Vista und .NET Framework [3.0 herunter.](https://msdn.microsoft.com/windowsvista/bb980924.aspx) Qedit.h ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3.5 Service Pack 1 nicht verfügbar.
 
  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

@@ -1,7 +1,7 @@
 ---
-description: Gibt Toleranzwerte für jede Scheitelpunkt Komponente an, wenn Vertices verglichen werden, um zu bestimmen, ob Sie so ähnlich sind, dass Sie miteinander verbunden werden.
+description: 'D3DXWELDEPSILONS-Struktur: Gibt Beim Vergleich von Scheitelpunkten Toleranzwerte für jede Vertexkomponente an, um zu bestimmen, ob sie ähnlich genug sind, um zusammen zusammengestellt zu werden.'
 ms.assetid: 534903da-ff65-4629-9be9-66c9daed6ef5
-title: D3DXWELDEPSILONS-Struktur (D3dx9mesh. h)
+title: D3DXWELDEPSILONS-Struktur (D3dx9mesh.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - d3dx9mesh.h
-ms.openlocfilehash: 6b6673e16b153f53baf17967b7f33c4bcb40d518
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: bb11e6f5481b1adf7cc1bac58edf40d4ac770e92
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106365105"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108115498"
 ---
 # <a name="d3dxweldepsilons-structure"></a>D3DXWELDEPSILONS-Struktur
 
-Gibt Toleranzwerte für jede Scheitelpunkt Komponente an, wenn Vertices verglichen werden, um zu bestimmen, ob Sie so ähnlich sind, dass Sie miteinander verbunden werden.
+Gibt Beim Vergleich von Scheitelpunkten Toleranzwerte für jede Scheitelpunktkomponente an, um zu bestimmen, ob sie ähnlich genug sind, um zusammengeknauft zu werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -51,7 +51,7 @@ typedef struct _D3DXWELDEPSILONS {
 **Position**
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
@@ -59,21 +59,21 @@ Position
 
 </dd> <dt>
 
-**Blendweights**
+**BlendWeights**
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Blend-Gewichtung
+Mischungsgewichtung
 
 </dd> <dt>
 
 **Normal**
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
@@ -81,10 +81,10 @@ Normal
 
 </dd> <dt>
 
-**Psize**
+**PSize**
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
@@ -95,29 +95,29 @@ Wert der Punktgröße
 **Glänzend**
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Glanzlicht Wert
+Glanzlichtwert
 
 </dd> <dt>
 
 **Diffus**
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Diffuses Beleuchtungs Wert
+Diffuser Beleuchtungswert
 
 </dd> <dt>
 
 **Texcoord**
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
@@ -125,10 +125,10 @@ Acht Texturkoordinaten
 
 </dd> <dt>
 
-**Tangens**
+**Tangente**
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
@@ -139,7 +139,7 @@ Tangens
 **Binormal**
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
@@ -147,20 +147,20 @@ Binormal
 
 </dd> <dt>
 
-**Mosaik Faktor**
+**TessFactor**
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Mosaik Faktor
+Mosaikfaktor
 
 </dd> </dl>
 
 ## <a name="remarks"></a>Bemerkungen
 
-Der LPD3DXWELDEPSILONS-Typ wird als Zeiger auf die **D3DXWELDEPSILONS** -Struktur definiert.
+Der LPD3DXWELDEPSILONS-Typ ist als Zeiger auf die **D3DXWELDEPSILONS-Struktur** definiert.
 
 
 ```
@@ -173,13 +173,13 @@ typedef D3DXWELDEPSILONS *LPD3DXWELDEPSILONS;
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------|----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3dx9mesh. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3dx9mesh.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

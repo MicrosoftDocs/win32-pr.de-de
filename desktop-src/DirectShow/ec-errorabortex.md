@@ -1,17 +1,17 @@
 ---
-description: Ein Vorgang wurde aufgrund eines Fehlers abgebrochen.
+description: 'EC_ERRORABORTEX: Ein Vorgang wurde aufgrund eines Fehlers abgebrochen.'
 ms.assetid: de7b5222-3a29-40cc-af1a-2672bd68b7c9
-title: EC_ERRORABORTEX (DShow. h)
+title: EC_ERRORABORTEX (Dshow.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8465825b93207059e5f2ea5f054deb7c3fd5619f
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 9b3bf1e1f24f9d5b07312f542c1ce4ea671f601d
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370759"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108094608"
 ---
-# <a name="ec_errorabortex"></a>EC \_ errorabortex
+# <a name="ec_errorabortex"></a>EC \_ ERRORABORTEX
 
 Ein Vorgang wurde aufgrund eines Fehlers abgebrochen.
 
@@ -22,14 +22,14 @@ Ein Vorgang wurde aufgrund eines Fehlers abgebrochen.
 <span id="lParam1"></span><span id="lparam1"></span><span id="LPARAM1"></span>*lParam1*
 </dt> <dd>
 
-**(HRESULT)** Fehlercode des Vorgangs, bei dem ein Fehler aufgetreten ist.
+**(HRESULT)** Fehlercode des fehlgeschlagenen Vorgangs.
 
 </dd> <dt>
 
 <span id="lParam2"></span><span id="lparam2"></span><span id="LPARAM2"></span>*lParam2*
 </dt> <dd>
 
-**(BSTR)** Eine Zeichenfolge, die zusätzliche Fehlerinformationen enthält.
+**(BSTR)** Zeichenfolge, die zusätzliche Fehlerinformationen enthält.
 
 </dd> </dl>
 
@@ -39,26 +39,26 @@ Keine.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Dieses Ereignis wird vom Legacy- [Windows-Quell](windows-media-source-filter.md) Filter gesendet. Neue Filter sollten dieses Ereignis nicht senden.
+Der ältere [Windows Media Source-Filter](windows-media-source-filter.md) sendet dieses Ereignis. Neue Filter sollten dieses Ereignis nicht senden.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------|------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>DShow. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Dshow.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Ereignis Benachrichtigungs Codes](event-notification-codes.md)
+[Ereignisbenachrichtigungscodes](event-notification-codes.md)
 </dt> <dt>
 
-[Ereignis Benachrichtigung in DirectShow](event-notification-in-directshow.md)
+[Ereignisbenachrichtigung in DirectShow](event-notification-in-directshow.md)
 </dt> </dl>
 
  

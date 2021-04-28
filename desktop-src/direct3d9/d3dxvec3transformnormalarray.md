@@ -1,7 +1,7 @@
 ---
-description: Transformiert ein Array (x, y, z, 0) durch eine angegebene Matrix.
+description: 'D3DXVec3TransformNormalArray-Funktion (D3dx9math.h): Transformiert ein Array (x, y, z, 0) durch eine bestimmte Matrix.'
 ms.assetid: c12fad52-d541-483f-a919-e6031aa4f761
-title: D3DXVec3TransformNormalArray-Funktion (D3dx9math. h)
+title: D3DXVec3TransformNormalArray-Funktion (D3dx9math.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 7a70893cc38d2f2fa04b3b89432aa0f887c5a352
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 74da959002bfbd0c488e630f09c89e848708b1b1
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106354402"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108097728"
 ---
-# <a name="d3dxvec3transformnormalarray-function-d3dx9mathh"></a>D3DXVec3TransformNormalArray-Funktion (D3dx9math. h)
+# <a name="d3dxvec3transformnormalarray-function-d3dx9mathh"></a>D3DXVec3TransformNormalArray-Funktion (D3dx9math.h)
 
-Transformiert ein Array (x, y, z, 0) durch eine angegebene Matrix.
+Transformiert ein Array (x, y, z, 0) durch eine bestimmte Matrix.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,55 +45,55 @@ D3DXVECTOR3* D3DXVec3TransformNormalArray(
 
 <dl> <dt>
 
-*Pout* \[ in, out\]
+*pOut* \[ in, out\]
 </dt> <dd>
 
 Typ: **[ **D3DXVECTOR3**](d3dxvector3.md)\***
 
-Zeiger auf das [**D3DXVECTOR3**](d3dxvector3.md) -Array, das das Ergebnis des Vorgangs ist.
+Zeiger auf das [**D3DXVECTOR3-Array,**](d3dxvector3.md) das das Ergebnis des Vorgangs ist.
 
 </dd> <dt>
 
-*Outstride* \[ in\]
+*OutStride* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Schritt zwischen Vektoren im Ausgabedatenstrom.
+Stride zwischen Vektoren im Ausgabedatenstrom.
 
 </dd> <dt>
 
-*PV* \[ in\]
+*pV* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXVECTOR3**](d3dxvector3.md) \***
+Typ: **const [**D3DXVECTOR3**](d3dxvector3.md) \***
 
-Zeiger auf das Quell- [**D3DXVECTOR3**](d3dxvector3.md) Array.
+Zeiger auf das [**D3DXVECTOR3-Quellarray.**](d3dxvector3.md)
 
 </dd> <dt>
 
-*Vstride* \[ in\]
+*VStride* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Schritt zwischen Vektoren im Eingabedaten Strom.
+Stride zwischen Vektoren im Eingabedatenstrom.
 
 </dd> <dt>
 
-*pm* \[ in\]
+*pM* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXMATRIX**](d3dxmatrix.md) \***
+Typ: **const [**D3DXMATRIX**](d3dxmatrix.md) \***
 
-Ein Zeiger auf die Quell- [**D3DXMATRIX**](d3dxmatrix.md) -Struktur.
+Zeiger auf die [**D3DXMATRIX-Quellstruktur.**](d3dxmatrix.md)
 
 </dd> <dt>
 
 *n* \[ in\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
 Anzahl der Elemente im Array.
 
@@ -103,28 +103,28 @@ Anzahl der Elemente im Array.
 
 Typ: **[ **D3DXVECTOR3**](d3dxvector3.md)\***
 
-Zeiger auf ein [**D3DXVECTOR3**](d3dxvector3.md) -Array, das das transformierte Array ist.
+Zeiger auf ein [**D3DXVECTOR3-Array,**](d3dxvector3.md) das das transformierte Array ist.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Diese Funktion transformiert den Vektor (*PV*->x, *PV*->y, *PV*->z, 0) durch die Matrix, auf die von *pm* gezeigt wird.
+Diese Funktion transformiert den Vektor (*pV*->x, *pV*->y, *pV*->z, 0) durch die Matrix, auf die *pM* zeigt.
 
-Wenn Sie eine normale Transformation durchführen möchten, sollte die Matrix, die Sie an diese Funktion übergeben, die Umwandlung der Umkehrung der Matrix sein, die zum Transformieren eines Punkts verwendet werden soll.
+Wenn Sie einen normalen transformieren möchten, sollte die Matrix, die Sie an diese Funktion übergeben, die Transponieren der Umkehrung der Matrix sein, die Sie zum Transformieren eines Punkts verwenden würden.
 
-Der Rückgabewert für diese Funktion ist derselbe Wert, der im *Pout* -Parameter zurückgegeben wird. Auf diese Weise kann die **D3DXVec3TransformNormalArray** -Funktion als Parameter für eine andere Funktion verwendet werden.
+Der Rückgabewert für diese Funktion ist der gleiche Wert, der im *pOut-Parameter* zurückgegeben wird. Auf diese Weise kann die **D3DXVec3TransformNormalArray-Funktion** als Parameter für eine andere Funktion verwendet werden.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9math. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3dx9math.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

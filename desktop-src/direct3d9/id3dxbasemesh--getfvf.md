@@ -1,7 +1,7 @@
 ---
-description: Ruft den Scheitelpunkt Wert fester Funktion ab.
+description: 'ID3DXBaseMesh::GetFVF-Methode: Ruft den festen Vertexwert der Funktion ab.'
 ms.assetid: ed56ff2d-0366-426c-9f9a-7d1a7c5d1a7c
-title: 'ID3DXBaseMesh:: getf VF-Methode (D3DX9Mesh. h)'
+title: ID3DXBaseMesh::GetFVF-Methode (D3DX9Mesh.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 7ee76292c30b3dfb0a2e38b060f50ef643ae07ae
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 4e37db51238137d67ba6e060ecfafb7d1361727e
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103961642"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108115438"
 ---
-# <a name="id3dxbasemeshgetfvf-method"></a>ID3DXBaseMesh:: getf VF-Methode
+# <a name="id3dxbasemeshgetfvf-method"></a>ID3DXBaseMesh::GetFVF-Methode
 
-Ruft den Scheitelpunkt Wert fester Funktion ab.
+Ruft den festen Vertexwert der Funktion ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,24 +42,24 @@ Diese Methode hat keine Parameter.
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
-Gibt die flexiblen Vertexformatcodes (FVF) zurück.
+Gibt die Codes des flexiblen Scheitelpunktformats (FVF) zurück.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Diese Methode kann 0 zurückgeben, wenn das Vertex-Format nicht direkt einem FVF-Code zugeordnet werden kann. Dies geschieht bei einem Mesh, das aus einer Scheitelpunkt Deklaration erstellt wurde, die nicht die gleiche Reihenfolge und dieselben Elemente hat, die von den f
+Diese Methode kann 0 zurückgeben, wenn das Scheitelpunktformat nicht direkt einem FVF-Code zugeordnet werden kann. Dies tritt für ein Gitternetz auf, das aus einer Scheitelpunktdeklaration erstellt wurde, die nicht die gleiche Reihenfolge und die gleichen Elemente hat, die von den FVF-Codes unterstützt werden.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Mesh. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX9Mesh.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

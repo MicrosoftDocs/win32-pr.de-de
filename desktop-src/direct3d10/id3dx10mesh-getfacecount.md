@@ -1,7 +1,7 @@
 ---
-description: Ruft die Anzahl der Gesichter im Mesh ab.
+description: 'ID3DX10Mesh::GetFaceCount-Methode: Ruft die Anzahl der Gesichter im Netz ab.'
 ms.assetid: a36b758b-4805-4b01-98ce-a8ee7bc1f3b5
-title: 'ID3DX10Mesh:: getfacecount-Methode (d3dx10. h)'
+title: ID3DX10Mesh::GetFaceCount-Methode (D3DX10.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: cf8a5a207703c48b4138c63e429bd57a9d8fb17d
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 13efa3ccdd5c9ae3b5f255ae08a456187e7ed4cf
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104355277"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108083997"
 ---
-# <a name="id3dx10meshgetfacecount-method"></a>ID3DX10Mesh:: getfacecount-Methode
+# <a name="id3dx10meshgetfacecount-method"></a>ID3DX10Mesh::GetFaceCount-Methode
 
-Ruft die Anzahl der Gesichter im Mesh ab.
+Ruft die Anzahl der Gesichter im Gitternetz ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,22 +40,22 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Gibt die Anzahl der Gesichter im Mesh zurück.
+Gibt die Anzahl der Gesichter im Gitternetz zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx10. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>D3dx10. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>D3DX10.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

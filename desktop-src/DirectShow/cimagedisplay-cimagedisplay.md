@@ -1,7 +1,7 @@
 ---
-description: Konstruktormethode.
+description: 'CImageDisplay.CImageDisplay-Konstruktor : Konstruktormethode.'
 ms.assetid: 171a4f1e-a85d-4da8-9372-054aaa0e0a40
-title: Cimagedisplay. cimagedisplay-Konstruktor (winutil. h)
+title: CImageDisplay.CImageDisplay-Konstruktor (Winutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,14 +16,14 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: b9a6f902d75d104dbdcb7e04cc71a5ce7565185e
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 389ac06488762d95afa1894f7cfc27d2f9e2725e
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369251"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108085648"
 ---
-# <a name="cimagedisplaycimagedisplay-constructor"></a>Cimagedisplay. cimagedisplay-Konstruktor
+# <a name="cimagedisplaycimagedisplay-constructor"></a>CImageDisplay.CImageDisplay-Konstruktor
 
 Konstruktormethode.
 
@@ -38,31 +38,31 @@ CImageDisplay();
 
 ## <a name="parameters"></a>Parameter
 
-Dieser Konstruktor weist keine Parameter auf.
+Dieser Konstruktor verfügt über keine Parameter.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Der Konstruktor initialisiert den Formattyp unter Verwendung der Anzeigeeinstellungen für das Haupt Anzeigegerät.
+Der Konstruktor initialisiert den Formattyp unter Verwendung der Anzeigeeinstellungen für das Hauptanzeigegerät.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Winutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Winutil.h (einschließlich Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cimagedisplay-Klasse**](cimagedisplay.md)
+[**CImageDisplay-Klasse**](cimagedisplay.md)
 </dt> <dt>
 
-[**Cimagedisplay:: erfrischendes Display Type**](cimagedisplay-refreshdisplaytype.md)
+[**CImageDisplay::RefreshDisplayType**](cimagedisplay-refreshdisplaytype.md)
 </dt> </dl>
 
  
