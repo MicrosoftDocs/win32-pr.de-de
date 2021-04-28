@@ -1,7 +1,7 @@
 ---
-description: Öffnet den angegebenen Ordner.
+description: 'IShellDispatch.Open-Methode: Öffnet den angegebenen Ordner.'
 ms.assetid: 30FE669A-4AFD-4dfa-9F62-E62E744469C7
-title: Ishelldispatch. Open-Methode (Shldisp. h)
+title: IShellDispatch.Open-Methode (Shldisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,14 +13,14 @@ api_type:
 - COM
 api_location:
 - Shell32.dll
-ms.openlocfilehash: d794020313ad776c1d538dc2acb909d562d32f15
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 4b5301e030926b9bcfdc18949b6a04706c22bb71
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103753088"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108086628"
 ---
-# <a name="ishelldispatchopen-method"></a>Ishelldispatch. Open-Methode
+# <a name="ishelldispatchopen-method"></a>IShellDispatch.Open-Methode
 
 Öffnet den angegebenen Ordner.
 
@@ -49,14 +49,14 @@ IShellDispatch.Open( _
 
 <dl> <dt>
 
-*vdir* \[ in\]
+*vDir* \[ In\]
 </dt> <dd>
 
 Typ: **Variant**
 
-Eine Zeichenfolge, die den Pfad des Ordners oder einen der [**shellspecialfolderconstants**](/windows/desktop/api/Shldisp/ne-shldisp-shellspecialfolderconstants) -Werte angibt. Beachten Sie, dass die in **shellspecialfolderconstants** gefundenen Konstanten Namen in Visual Basic verfügbar sind, jedoch nicht in VBScript oder JScript. In diesen Fällen müssen die numerischen Werte an ihrer Stelle verwendet werden.
+Eine Zeichenfolge, die den Pfad des Ordners oder eines der [**ShellSpecialFolderConstants-Werte angibt.**](/windows/desktop/api/Shldisp/ne-shldisp-shellspecialfolderconstants) Beachten Sie, dass die konstanten Namen in **ShellSpecialFolderConstants** in Visual Basic, aber nicht in VBScript oder JScript verfügbar sind. In diesen Fällen müssen die numerischen Werte an ihrer Stelle verwendet werden.
 
-Wenn *vdir* auf eine der [**shellspecialfolderconstants**](/windows/desktop/api/Shldisp/ne-shldisp-shellspecialfolderconstants) festgelegt ist und der spezielle Ordner nicht vorhanden ist, erstellt diese Funktion den Ordner.
+Wenn *vDir* auf einen der [**ShellSpecialFolderConstants**](/windows/desktop/api/Shldisp/ne-shldisp-shellspecialfolderconstants) festgelegt ist und der spezielle Ordner nicht vorhanden ist, erstellt diese Funktion den Ordner.
 
 </dd> </dl>
 
@@ -72,13 +72,13 @@ Diese Methode gibt keinen Wert zurück.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Diese Methode wird implementiert und über die [**Shell. Open**](shell-open.md) -Methode aufgerufen.
+Diese Methode wird implementiert und über die [**Shell.Open-Methode aufgerufen.**](shell-open.md)
 
 ## <a name="examples"></a>Beispiele
 
-In den folgenden Beispielen wird die Verwendung von **Open** in JScript, VBScript und Visual Basic veranschaulicht.
+Die folgenden Beispiele zeigen die Verwendung von **Open** in JScript, VBScript und Visual Basic.
 
-JScript
+Jscript:
 
 
 ```JScript
@@ -95,7 +95,7 @@ JScript
 
 
 
-VBScript
+Vbscript:
 
 
 ```VB
@@ -129,17 +129,17 @@ End Sub
 
 
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, Windows XP \[ Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Client)<br/> | Nur Windows 2000 Professional- und Windows \[ XP-Desktop-Apps\]<br/>                                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                           |
-| Header<br/>                   | <dl> <dt>Shldisp. h</dt> </dl>                           |
-| IDL<br/>                      | <dl> <dt>Shldisp. idl</dt> </dl>                         |
-| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4,71 oder höher)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>                           |
+| Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                         |
+| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4.71 oder höher)</dt> </dl> |
 
 
 
@@ -147,7 +147,7 @@ End Sub
 
 <dl> <dt>
 
-[**Ishelldispatch**](ishelldispatch.md)
+[**IShellDispatch**](ishelldispatch.md)
 </dt> <dt>
 
 [**Erkunden**](shell-explore.md)

@@ -1,7 +1,7 @@
 ---
-description: 'Die setpositions-Methode legt die aktuelle Position und die Position des Stopps fest. Diese Methode implementiert die imediaseeking:: setpositions-Methode.'
+description: 'CPosPassThru.SetPositions-Methode: Die SetPositions-Methode legt die aktuelle Position und die Stoppposition fest. Diese Methode implementiert die IMediaSeeking::SetPositions-Methode.'
 ms.assetid: d4425221-e20f-4e51-8a33-a74fa21f9117
-title: Cpospassthru. setpositions-Methode (ctlutil. h)
+title: CPosPassThru.SetPositions-Methode (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 409b4a63f02e6751f987a53dad2836adecd27607
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: f8c61f24ab51ffe7fa161830ef9a0c8bdd167256
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361050"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108085478"
 ---
-# <a name="cpospassthrusetpositions-method"></a>Cpospassthru. setpositions-Methode
+# <a name="cpospassthrusetpositions-method"></a>CPosPassThru.SetPositions-Methode
 
-Die `SetPositions` -Methode legt die aktuelle Position und die Position des Stopps fest. Diese Methode implementiert die [**imediaseeking:: setpositions**](/windows/desktop/api/Strmif/nf-strmif-imediaseeking-setpositions) -Methode.
+Die `SetPositions` -Methode legt die aktuelle Position und die Stoppposition fest. Diese Methode implementiert die [**IMediaSeeking::SetPositions-Methode.**](/windows/desktop/api/Strmif/nf-strmif-imediaseeking-setpositions)
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,54 +45,54 @@ HRESULT SetPositions(
 
 <dl> <dt>
 
-*pcurrent* 
+*pCurrent* 
 </dt> <dd>
 
-Ein Zeiger auf eine Variable, die die aktuelle Position in Einheiten des aktuellen Zeit Formats angibt.
+Zeiger auf eine Variable, die die aktuelle Position in Einheiten des aktuellen Zeitformats angibt.
 
 </dd> <dt>
 
-*dwcurrentflags* 
+*dwCurrentFlags* 
 </dt> <dd>
 
-Bitweise Kombination von-Flags. Weitere Informationen finden Sie unter [**imediaseeking:: setpositions**](/windows/desktop/api/Strmif/nf-strmif-imediaseeking-setpositions) .
+Bitweise Kombination von Flags. Weitere Informationen finden Sie unter [**IMediaSeeking::SetPositions.**](/windows/desktop/api/Strmif/nf-strmif-imediaseeking-setpositions)
 
 </dd> <dt>
 
-*pstopps* 
+*Pstop* 
 </dt> <dd>
 
-Ein Zeiger auf eine Variable, die die Endzeit in Einheiten des aktuellen Zeit Formats angibt.
+Zeiger auf eine Variable, die die Beendigungszeit in Einheiten des aktuellen Zeitformats angibt.
 
 </dd> <dt>
 
-*dwstopflags* 
+*dwStopFlags* 
 </dt> <dd>
 
-Bitweise Kombination von-Flags. Weitere Informationen finden Sie unter [**imediaseeking:: setpositions**](/windows/desktop/api/Strmif/nf-strmif-imediaseeking-setpositions) .
+Bitweise Kombination von Flags. Weitere Informationen finden Sie unter [**IMediaSeeking::SetPositions.**](/windows/desktop/api/Strmif/nf-strmif-imediaseeking-setpositions)
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt den **HRESULT** -Wert aus der verbundenen PIN zurück.
+Gibt den **HRESULT-Wert** aus dem verbundenen Pin zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cpospassthru-Klasse**](cpospassthru.md)
+[**CPosPassThru-Klasse**](cpospassthru.md)
 </dt> </dl>
 
  

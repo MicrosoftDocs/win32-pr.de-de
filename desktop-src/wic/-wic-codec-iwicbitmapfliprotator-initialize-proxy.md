@@ -1,5 +1,5 @@
 ---
-description: Proxy Funktion für die Initialize-Methode.
+description: 'IWICBitmapFlipRotator_Initialize_Proxy-Funktion: Proxyfunktion für die Initialize-Methode.'
 ms.assetid: 860e8092-054d-489e-8ca1-fec43a039eca
 title: IWICBitmapFlipRotator_Initialize_Proxy-Funktion
 ms.topic: reference
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - Windowscodecs.dll
 - Wincodec.lib
-ms.openlocfilehash: 82a1aa5648edd47d0b635a407adc001c25183b50
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 4a260d6e60c0ffdeb05aa064ae8abbb38818ac8c
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106343664"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108091158"
 ---
-# <a name="iwicbitmapfliprotator_initialize_proxy-function"></a>IWICBitmapFlipRotator \_ Initialize \_ Proxy-Funktion
+# <a name="iwicbitmapfliprotator_initialize_proxy-function"></a>IWICBitmapFlipRotator-Funktion \_ "Proxy initialisieren" \_
 
-Proxy Funktion für die [**Initialize**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapfliprotator-initialize) -Methode.
+Proxyfunktion für die [**Initialize-Methode.**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapfliprotator-initialize)
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,30 +42,30 @@ HRESULT IWICBitmapFlipRotator_Initialize_Proxy(
 
 <dl> <dt>
 
-*Dies \_ PTR* \[ in\]
+*DIES \_ PTR* \[ in\]
 </dt> <dd>
 
-Typ: **[**IWICBitmapFlipRotator**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapfliprotator) \** _
+Typ: **[ **IWICBitmapFlipRotator**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapfliprotator)\***
 
-Zeiger auf dieses [_ *IWICBitmapFlipRotator* *](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapfliprotator) -Objekt.
+Zeiger auf dieses [**IWICBitmapFlipRotator-Objekt.**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapfliprotator)
 
 </dd> <dt>
 
-*pisource* \[ in\]
+*pISource* \[ In\]
 </dt> <dd>
 
-Typ: **[**IWICBitmapSource**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapsource) \** _
+Typ: **[ **IWICBitmapSource**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapsource)\***
 
-Die Eingabe Bitmap-Quelle.
+Die Eingabebitmapquelle.
 
 </dd> <dt>
 
-_options * \[ in\]
+*Optionen* \[ In\]
 </dt> <dd>
 
 Typ: **[ **WICBitmapTransformOptions**](/windows/desktop/api/Wincodec/ne-wincodec-wicbitmaptransformoptions)**
 
-Die [**WICBitmapTransformOptions**](/windows/desktop/api/Wincodec/ne-wincodec-wicbitmaptransformoptions) zum Kippen oder Drehen des Bilds.
+Die [**WICBitmapTransformOptions**](/windows/desktop/api/Wincodec/ne-wincodec-wicbitmaptransformoptions) zum Spiegeln oder Drehen des Bilds.
 
 </dd> </dl>
 
@@ -73,7 +73,7 @@ Die [**WICBitmapTransformOptions**](/windows/desktop/api/Wincodec/ne-wincodec-wi
 
 Typ: **HRESULT**
 
-Wenn diese Funktion erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Funktion erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="remarks"></a>Bemerkungen
 
@@ -81,11 +81,11 @@ Wenn diese Funktion erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. 
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows XP mit SP2, nur Windows Vista \[ -Desktop-Apps\]<br/>                                                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                                                                             |
-| DLL<br/>                      | <dl> <dt>Windowscodecs.dll; </dt> <dt>Wincodec. lib</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows XP mit SP2, nur Windows \[ Vista-Desktop-Apps\]<br/>                                                                                              |
+| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2008-Desktop-Apps\]<br/>                                                                                                             |
+| DLL<br/>                      | <dl> <dt>Windowscodecs.dll; </dt> <dt>Wincodec.lib</dt> </dl> |
 
 
 

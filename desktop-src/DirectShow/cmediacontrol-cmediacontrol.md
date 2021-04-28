@@ -1,7 +1,7 @@
 ---
-description: Konstruktormethode.
+description: 'CMediaControl.CMediaControl-Konstruktor : Konstruktormethode.'
 ms.assetid: 00549dfe-5dd4-445e-bad3-eb6bcfea8f5f
-title: Cmediacontrol. cmediacontrol-Konstruktor (ctlutil. h)
+title: CMediaControl.CMediaControl-Konstruktor (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,14 +16,14 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 63b965ff2484d4db7f7de41d8d524bc74c31ac73
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 96775678a8d182a3dc88f25fc19b194367c57d92
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370709"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108099208"
 ---
-# <a name="cmediacontrolcmediacontrol-constructor"></a>Cmediacontrol. cmediacontrol-Konstruktor
+# <a name="cmediacontrolcmediacontrol-constructor"></a>CMediaControl.CMediaControl-Konstruktor
 
 Konstruktormethode.
 
@@ -46,11 +46,11 @@ CMediaControl(
 *pName* 
 </dt> <dd>
 
-Zeiger auf den Namen des Objekts zu Debuggingzwecken.
+Zeiger auf den Namen des Objekts zu Debugzwecken.
 
 </dd> <dt>
 
-*Kro* 
+*Punk* 
 </dt> <dd>
 
 Zeiger auf den Besitzer dieses Objekts.
@@ -59,24 +59,24 @@ Zeiger auf den Besitzer dieses Objekts.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Weisen Sie den *PName* -Parameter im statischen Arbeitsspeicher zu. Dieser Name wird beim Erstellen und Löschen des Objekts im Terminal Debuggen angezeigt.
+Ordnen Sie den *pName-Parameter* im statischen Speicher zu. Dieser Name wird beim Erstellen und Löschen des Objekts im Debugterminal angezeigt.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (einschließlich Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cmediacontrol-Klasse**](cmediacontrol.md)
+[**CMediaControl-Klasse**](cmediacontrol.md)
 </dt> </dl>
 
  

@@ -1,5 +1,5 @@
 ---
-description: Fordert eine zurück Setzung an.
+description: 'Reset-Methode der Msvm_SCSIProtocolController-Klasse: Fordert eine Zurücksetzung an.'
 ms.assetid: 8de43754-19dc-4865-af6c-badcb5445167
 title: Reset-Methode der Msvm_SCSIProtocolController-Klasse
 ms.topic: reference
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: db64708b83db9f54b3f10f082fdd8725ea2656e6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 40d2ea3a69d0a13b067b6bb3ca70fe18c4741715
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103961010"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108111468"
 ---
-# <a name="reset-method-of-the-msvm_scsiprotocolcontroller-class"></a>Reset-Methode der MSVM \_ scsiprotocolcontroller-Klasse
+# <a name="reset-method-of-the-msvm_scsiprotocolcontroller-class"></a>Reset-Methode der Msvm \_ SCSIProtocolController-Klasse
 
-Fordert eine zurück Setzung an.
+Fordert eine Zurücksetzung an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -53,21 +53,21 @@ Diese Methode gibt einen der folgenden Werte zurück:
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8.1<br/>                                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2<br/>                                                                       |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**MSVM \_ scsiprotocolcontroller**](msvm-scsiprotocolcontroller.md)
+[**Msvm \_ SCSIProtocolController**](msvm-scsiprotocolcontroller.md)
 </dt> </dl>
 
  

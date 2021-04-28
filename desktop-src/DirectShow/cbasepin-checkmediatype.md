@@ -1,7 +1,7 @@
 ---
-description: Die checkmediatype-Methode bestimmt, ob die PIN einen bestimmten Medientyp akzeptiert.
+description: 'CBasePin.CheckMediaType-Methode: Die CheckMediaType-Methode bestimmt, ob der Pin einen bestimmten Medientyp akzeptiert.'
 ms.assetid: 6a138679-02b7-4ccc-8881-a0d496f84f93
-title: Cbasepin. checkmediatype-Methode (amfilter. h)
+title: CBasePin.CheckMediaType-Methode (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: e203851a44a5468567e75ee8c0cc955f8ad0278a
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: afe39f3a7aac155f3cc87fa6d58f402043861d1f
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358755"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108099397"
 ---
-# <a name="cbasepincheckmediatype-method"></a>Cbasepin. checkmediatype-Methode
+# <a name="cbasepincheckmediatype-method"></a>CBasePin.CheckMediaType-Methode
 
-Die- `CheckMediaType` Methode bestimmt, ob die PIN einen bestimmten Medientyp akzeptiert.
+Die `CheckMediaType` -Methode bestimmt, ob der Pin einen bestimmten Medientyp akzeptiert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,37 +42,37 @@ virtual HRESULT CheckMediaType(
 
 <dl> <dt>
 
-*PMT* 
+*Pmt* 
 </dt> <dd>
 
-Zeiger auf ein [**cmediatype**](cmediatype.md) -Objekt, das den vorgeschlagenen Medientyp enthält.
+Zeiger auf ein [**CMediaType-Objekt,**](cmediatype.md) das den vorgeschlagenen Medientyp enthält.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt S \_ OK zurück, wenn der vorgeschlagene Medientyp zulässig ist. Andernfalls gibt S \_ false oder einen Fehlercode zurück.
+Gibt S \_ OK zurück, wenn der vorgeschlagene Medientyp akzeptabel ist. Andernfalls wird S \_ FALSE oder ein Fehlercode zurückgegeben.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Die abgeleitete Klasse muss diese reine virtuelle Methode überschreiben.
+Die abgeleitete Klasse muss diese rein virtuelle Methode überschreiben.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (streams.h enthalten)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbasepin-Klasse**](cbasepin.md)
+[**CBasePin-Klasse**](cbasepin.md)
 </dt> </dl>
 
  

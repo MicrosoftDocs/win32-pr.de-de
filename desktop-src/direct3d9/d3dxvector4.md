@@ -1,7 +1,7 @@
 ---
-description: Beschreibt einen Vektor mit vier Komponenten, einschließlich Operator Überladungen und Typumwandlungen.
+description: 'D3DXVECTOR4-Struktur (D3dx9math.h): Beschreibt einen Vektor mit vier Komponenten, einschließlich Operatorüberladungen und Typcasts.'
 ms.assetid: fbfe7851-7bec-4fa0-b4dc-52f5cb83d0a4
-title: D3DXVECTOR4-Struktur (D3dx9math. h)
+title: D3DXVECTOR4-Struktur (D3dx9math.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - d3dx9math.h
-ms.openlocfilehash: 1647705877d5cacabbaeb79c4055de298e23b68f
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: d053c6d26df600fdf09d54eb66866014478845be
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104394266"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108097568"
 ---
-# <a name="d3dxvector4-structure-d3dx9mathh"></a>D3DXVECTOR4-Struktur (D3dx9math. h)
+# <a name="d3dxvector4-structure-d3dx9mathh"></a>D3DXVECTOR4-Struktur (D3dx9math.h)
 
-Beschreibt einen Vektor mit vier Komponenten, einschließlich Operator Überladungen und Typumwandlungen.
+Beschreibt einen Vektor mit vier Komponenten, einschließlich Operatorüberladungen und Typcasts.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,7 +45,7 @@ typedef struct D3DXVECTOR4 {
 **x**
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
@@ -56,7 +56,7 @@ Die x-Komponente.
 **y**
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
@@ -67,7 +67,7 @@ Die y-Komponente.
 **z**
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
@@ -78,11 +78,11 @@ Die z-Komponente.
 **w**
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Die w-Komponente.
+Die w--Komponente.
 
 </dd> </dl>
 
@@ -168,13 +168,13 @@ public:
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------|----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3dx9math. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3dx9math.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

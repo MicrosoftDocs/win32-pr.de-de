@@ -1,7 +1,7 @@
 ---
-description: 'Die getTimeFormat-Methode ruft das aktuelle Zeitformat ab. Diese Methode implementiert die imediaseeking:: getTimeFormat-Methode.'
+description: 'CPosPassThru.GetTimeFormat-Methode: Die GetTimeFormat-Methode ruft das aktuelle Zeitformat ab. Diese Methode implementiert die IMediaSeeking::GetTimeFormat-Methode.'
 ms.assetid: 445c1873-da6f-42be-a4cf-0c475c5f0723
-title: Cpospassthru. getTimeFormat-Methode (ctlutil. h)
+title: CPosPassThru.GetTimeFormat-Methode (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: f7db1b46cfe2ac06dc43b52009043ae32676f154
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 903d1c6163d4cad5c5b9ca22213b02542bb3da49
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106362146"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108085588"
 ---
-# <a name="cpospassthrugettimeformat-method"></a>Cpospassthru. getTimeFormat-Methode
+# <a name="cpospassthrugettimeformat-method"></a>CPosPassThru.GetTimeFormat-Methode
 
-Die- `GetTimeFormat` Methode ruft das aktuelle Zeitformat ab. Diese Methode implementiert die [**imediaseeking:: getTimeFormat**](/windows/desktop/api/Strmif/nf-strmif-imediaseeking-gettimeformat) -Methode.
+Die `GetTimeFormat` -Methode ruft das aktuelle Zeitformat ab. Diese Methode implementiert die [**IMediaSeeking::GetTimeFormat-Methode.**](/windows/desktop/api/Strmif/nf-strmif-imediaseeking-gettimeformat)
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,36 +42,36 @@ HRESULT GetTimeFormat(
 
 <dl> <dt>
 
-*pformat* 
+*pFormat* 
 </dt> <dd>
 
-Ein Zeiger auf eine Variable, die eine Zeitformat-GUID empfängt.
+Zeiger auf eine Variable, die eine Zeitformat-GUID empfängt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt den **HRESULT** -Wert aus der verbundenen PIN zurück.
+Gibt den **HRESULT-Wert** aus dem verbundenen Pin zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cpospassthru-Klasse**](cpospassthru.md)
+[**CPosPassThru-Klasse**](cpospassthru.md)
 </dt> <dt>
 
-[**Zeit Format-GUIDs**](time-format-guids.md)
+[**Zeitformat-GUIDs**](time-format-guids.md)
 </dt> </dl>
 
  

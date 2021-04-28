@@ -1,7 +1,7 @@
 ---
-description: Erstellt eine Matrix, die um die y-Achse rotiert.
+description: 'D3DXMatrixRotationY-Funktion (D3dx9math.h): Erstellt eine Matrix, die sich um die y-Achse dreht.'
 ms.assetid: 80449e5d-f9bb-48c0-a787-a5e5a9d1c9a3
-title: D3DXMatrixRotationY-Funktion (D3dx9math. h)
+title: D3DXMatrixRotationY-Funktion (D3dx9math.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 81e233f3d643e99c829c7d567721e52b9b5d3e82
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 902325890b02416e796940388bca7a6548773be5
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104355407"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108118128"
 ---
-# <a name="d3dxmatrixrotationy-function-d3dx9mathh"></a>D3DXMatrixRotationY-Funktion (D3dx9math. h)
+# <a name="d3dxmatrixrotationy-function-d3dx9mathh"></a>D3DXMatrixRotationY-Funktion (D3dx9math.h)
 
-Erstellt eine Matrix, die um die y-Achse rotiert.
+Erstellt eine Matrix, die sich um die y-Achse dreht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,21 +41,21 @@ D3DXMATRIX* D3DXMatrixRotationY(
 
 <dl> <dt>
 
-*Pout* \[ in, out\]
+*pOut* \[ in, out\]
 </dt> <dd>
 
 Typ: **[ **D3DXMATRIX**](d3dxmatrix.md)\***
 
-Ein Zeiger auf die [**D3DXMATRIX**](d3dxmatrix.md) -Struktur, die das Ergebnis des Vorgangs ist.
+Zeiger auf die [**D3DXMATRIX-Struktur,**](d3dxmatrix.md) die das Ergebnis des Vorgangs ist.
 
 </dd> <dt>
 
-*Winkel* \[ in\]
+*Winkel* \[ In\]
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-Winkel der Drehung im Bogenmaße. Winkel werden im Uhrzeigersinn gemessen, wenn Sie entlang der Drehungs Achse zum Ursprung suchen.
+Drehwinkel im Bogenmaß. Winkel werden im Uhrzeigersinn gemessen, wenn entlang der Drehachse zum Ursprung gesucht wird.
 
 </dd> </dl>
 
@@ -63,24 +63,24 @@ Winkel der Drehung im Bogenmaße. Winkel werden im Uhrzeigersinn gemessen, wenn 
 
 Typ: **[ **D3DXMATRIX**](d3dxmatrix.md)\***
 
-Ein Zeiger auf eine [**D3DXMATRIX**](d3dxmatrix.md) -Struktur, die um die y-Achse gedreht wurde.
+Zeiger auf eine um die y-Achse gedrehte [**D3DXMATRIX-Struktur.**](d3dxmatrix.md)
 
 ## <a name="remarks"></a>Bemerkungen
 
-Der Rückgabewert für diese Funktion ist derselbe Wert, der im *Pout* -Parameter zurückgegeben wird. Auf diese Weise kann die **D3DXMatrixRotationY** -Funktion als Parameter für eine andere Funktion verwendet werden.
+Der Rückgabewert für diese Funktion ist der gleiche Wert, der im *pOut-Parameter* zurückgegeben wird. Auf diese Weise kann die **D3DXMatrixRotationY-Funktion** als Parameter für eine andere Funktion verwendet werden.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9math. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3dx9math.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

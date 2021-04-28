@@ -1,7 +1,7 @@
 ---
-description: Die Start-Methode startet eine Aufzeichnung.
+description: 'IDelaydC::Start-Methode: Die Start-Methode startet eine Erfassung.'
 ms.assetid: 92b25afc-d5d8-47e4-a155-4ed2a3571038
-title: 'Idelta-DC:: Start-Methode (Netmon. h)'
+title: IDelaydC::Start-Methode (Netmon.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - Ndisnpp.dll
 - Rmtnpp.dll
-ms.openlocfilehash: a912af44dddb8a25d3279a5cdd7f021646c26e5d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 25bf778d9cccce20c736c5f8b83e6af9754ac933
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106346684"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108118438"
 ---
-# <a name="idelaydcstart-method"></a>Idelta aydc:: Start-Methode
+# <a name="idelaydcstart-method"></a>IDelaydC::Start-Methode
 
-Die **Start** -Methode startet eine Aufzeichnung.
+Die **Start-Methode** startet eine Erfassung.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,16 +40,16 @@ HRESULT STDMETHODCALLTYPE Start(
 
 <dl> <dt>
 
-*pfilename* \[ vorgenommen\]
+*pFileName* \[ out\]
 </dt> <dd>
 
-Zeiger auf den Namen der [*Erfassungs Datei*](c.md) , in der die Netzwerkdaten gespeichert werden. Stellen Sie sicher, dass der Dateiname zwischengespeichert wird, wenn er für den zukünftigen Verweis benötigt wird.
+Zeiger auf den Namen der [*Erfassungsdatei,*](c.md) die zum Speichern der Netzwerkdaten verwendet wird. Stellen Sie sicher, dass Sie diesen Dateinamen zwischenspeichern, wenn er für zukünftige Verweise benötigt wird.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Methode erfolgreich ist, ist der Rückgabewert nmerr \_ Success.
+Wenn die Methode erfolgreich ist, ist der Rückgabewert NMERR \_ SUCCESS.
 
 Wenn die Methode nicht erfolgreich ist, ist der Rückgabewert einer der folgenden Fehlercodes:
 
@@ -57,10 +57,10 @@ Wenn die Methode nicht erfolgreich ist, ist der Rückgabewert einer der folgende
 
 | Rückgabecode                                                                                           | Beschreibung                                                                                                                                                                                                                |
 |-------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**nmerr- \_ Erfassung \_ angehalten**</dt> </dl> | Die Erfassung befindet sich im angehaltenen Zustand und muss beendet werden, bevor Sie neu gestartet werden kann. Nennen Sie [**idelta aydc:: Beendigung**](idelaydc-stop.md) , um die Erfassung anzuhalten. Weitere Informationen finden Sie im Abschnitt "Hinweise" in diesem Thema.<br/> |
-| <dl> <dt>**nmerr- \_ Erfassung**</dt> </dl>       | Die Erfassung wurde bereits gestartet.<br/>                                                                                                                                                                                 |
-| <dl> <dt>**nmerr \_ nicht \_ verbunden**</dt> </dl>  | Der npp ist nicht mit dem Netzwerk verbunden. Wenden Sie [**idelta-DC:: Connect**](idelaydc-connect.md) an, um eine Verbindung mit dem Netzwerk herzustellen.<br/>                                                                                          |
-| <dl> <dt>**nmerr \_ nicht \_ verzögert**</dt> </dl>    | Der npp ist mit dem Netzwerk verbunden, jedoch nicht mit der [**idelta aydc:: Connect**](idelaydc-connect.md) -Methode.<br/>                                                                                                      |
+| <dl> <dt>**NMERR \_ CAPTURE \_ PAUSED**</dt> </dl> | Die Erfassung befindet sich in einem angehaltenen Zustand und muss beendet werden, bevor sie neu gestartet werden kann. Rufen [**Sie IDelaydC::Stop auf,**](idelaydc-stop.md) um die Erfassung zu beenden. Weitere Informationen finden Sie im Abschnitt "Hinweise" in diesem Thema.<br/> |
+| <dl> <dt>**NMERR-ERFASSUNG \_**</dt> </dl>       | Die Erfassung wurde bereits gestartet.<br/>                                                                                                                                                                                 |
+| <dl> <dt>**NMERR \_ NICHT \_ VERBUNDEN**</dt> </dl>  | Der NPP ist nicht mit dem Netzwerk verbunden. Rufen [**Sie IDelaydC::Connect auf, um**](idelaydc-connect.md) eine Verbindung mit dem Netzwerk herzustellen.<br/>                                                                                          |
+| <dl> <dt>**NMERR \_ NICHT \_ VERZÖGERT**</dt> </dl>    | Das NPP ist mit dem Netzwerk verbunden, aber nicht mit der [**IDelaydC::Connect-Methode.**](idelaydc-connect.md)<br/>                                                                                                      |
 
 
 
@@ -68,12 +68,12 @@ Wenn die Methode nicht erfolgreich ist, ist der Rückgabewert einer der folgende
 
 ## <a name="remarks"></a>Bemerkungen
 
-Der Speicherort der [*Erfassungs Datei*](c.md) wird in der Windows-Registrierung angegeben, aber Sie können Netzwerkmonitor verwenden, um den Speicherort der Datei zu ändern.
+Der Speicherort der [*Erfassungsdatei*](c.md) wird in Ihrer Windows-Registrierung angegeben, aber Sie können Netzwerkmonitor verwenden, um den Speicherort der Datei zu ändern.
 
-Zum Neustarten der Erfassung mithilfe von **idelta aydc:: Start** und [**idelta aydc:: stoppmüssen**](idelaydc-stop.md)Sie die [**idelta-DC:: Configure**](idelaydc-configure.md) -Methode zum Neukonfigurieren der Verbindung bei jedem Aufruf der **idelta aydc:: Start** -Methode zum Neustarten der Datenerfassung verwenden. Wenn Sie die Erfassung mit diesen drei Methoden starten und beenden, wird jedes Mal eine neue Erfassungs Datei erstellt, wenn die Erfassung gestartet wird.
+Um die Erfassung **mithilfe von IDelaydC::Start** und [**IDelaydC::Stop**](idelaydc-stop.md)neu zu starten, müssen Sie die [**IDelaydC::Configure-Methode**](idelaydc-configure.md) aufrufen, um die Verbindung jedes Mal neu zu konfigurieren, wenn Sie die **IDelaydC::Start-Methode** aufrufen, um die Erfassung von Daten neu zu starten. Wenn Sie die Erfassung mit diesen drei Methoden starten und beenden, wird bei jedem Start der Erfassung eine neue Erfassungsdatei erstellt.
 
 > [!Note]  
-> Sie können die Erfassung auch starten und Abbrechen, indem Sie die Methoden [**idelta aydc::P ause**](idelaydc-pause.md) und [**idelta aydc:: Resume**](idelaydc-resume.md) verwenden. Wenn Sie diese beiden Methoden verwenden, werden die erfassten Daten in derselben Erfassungs Datei gespeichert.
+> Sie können die Erfassung auch mithilfe der [**Methoden IDelaydC::P ause und**](idelaydc-pause.md) [**IDelaydC::Resume**](idelaydc-resume.md) starten und beenden. Wenn Sie diese beiden Methoden verwenden, werden die erfassten Daten in derselben Erfassungsdatei gespeichert.
 
  
 
@@ -81,35 +81,35 @@ Zum Neustarten der Erfassung mithilfe von **idelta aydc:: Start** und [**idelta 
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                                                                     |
-| Header<br/>                   | <dl> <dt>Netmon. h</dt> </dl>                                                                      |
+| Header<br/>                   | <dl> <dt>Netmon.h</dt> </dl>                                                                      |
 | DLL<br/>                      | <dl> <dt>Ndisnpp.dll; </dt> <dt>Rmtnpp.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Idelta-DC](idelaydc.md)
+[IDelaydC](idelaydc.md)
 </dt> <dt>
 
-[**Idelta aydc:: Configure**](idelaydc-configure.md)
+[**IDelaydC::Configure**](idelaydc-configure.md)
 </dt> <dt>
 
-[**Idelta aydc:: Connect**](idelaydc-connect.md)
+[**IDelaydC::Connect**](idelaydc-connect.md)
 </dt> <dt>
 
-[**Idelta aydc::P ause**](idelaydc-pause.md)
+[**IDelaydC::P ause**](idelaydc-pause.md)
 </dt> <dt>
 
-[**Idelta aydc:: Resume**](idelaydc-resume.md)
+[**IDelaydC::Resume**](idelaydc-resume.md)
 </dt> <dt>
 
-[**Idelta aydc:: Beendigung**](idelaydc-stop.md)
+[**IDelaydC::Stop**](idelaydc-stop.md)
 </dt> </dl>
 
  

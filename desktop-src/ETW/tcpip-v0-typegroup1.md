@@ -1,5 +1,5 @@
 ---
-description: Diese Klasse ist die Ereignistyp Klasse für TCP/IP-Ereignisse. Die folgende Syntax wird durch den MOF-Code vereinfacht.
+description: 'TcpIp_V0_TypeGroup1-Klasse: Diese Klasse ist die Ereignistypklasse für TCP/IP-Ereignisse. Die folgende Syntax wird aus MOF-Code vereinfacht.'
 ms.assetid: 007f0744-8b74-4c57-85bc-f6bdb20bffa7
 title: TcpIp_V0_TypeGroup1-Klasse
 ms.topic: reference
@@ -18,18 +18,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: c21025990fe3e21cd5322b651e543472fa8d48c5
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
-ms.translationtype: HT
+ms.openlocfilehash: 96df2214aff9b5be6f10a1f08f6e6ea2e015c6b5
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104344549"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108105788"
 ---
-# <a name="tcpip_v0_typegroup1-class"></a>Tcpip \_ v0 \_ TypeGroup1-Klasse
+# <a name="tcpip_v0_typegroup1-class"></a>TcpIp \_ V0 \_ TypeGroup1-Klasse
 
-Diese Klasse ist die Ereignistyp Klasse für TCP/IP-Ereignisse.
+Diese Klasse ist die Ereignistypklasse für TCP/IP-Ereignisse.
 
-Die folgende Syntax wird durch den MOF-Code vereinfacht.
+Die folgende Syntax wird aus MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,26 +48,26 @@ class TcpIp_V0_TypeGroup1 : TcpIp_V0
 
 ## <a name="members"></a>Member
 
-Die Klasse " **tcpip \_ v0 \_ TypeGroup1** " verfügt über diese Typen von Membern:
+Die **TcpIp \_ V0 \_ TypeGroup1-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **tcpip \_ v0 \_ TypeGroup1** -Klasse verfügt über diese Eigenschaften.
+Die **TcpIp \_ V0 \_ TypeGroup1-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 daddr
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Object**
+Datentyp: **object**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (1), Erweiterung ("ipaddr")
+Qualifizierer: WmiDataId(1), Extension("IPAddr")
 </dt> </dl>
 
 Ziel-IP-Adresse.
@@ -77,90 +77,90 @@ Ziel-IP-Adresse.
 dport
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Object**
+Datentyp: **object**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (3), Erweiterung ("Port")
+Qualifizierer: WmiDataId(3), Extension("Port")
 </dt> </dl>
 
-Die Ziel Portnummer.
+Zielportnummer.
 
 </dd> <dt>
 
 PID
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (6)
+Qualifizierer: WmiDataId(6)
 </dt> </dl>
 
-Der Bezeichner des Prozesses, der der Anforderung zugeordnet ist.
+Bezeichner des Prozesses, der der Anforderung zugeordnet ist.
 
 </dd> <dt>
 
 saddr
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Object**
+Datentyp: **Objekt**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (2), Erweiterung ("ipaddr")
+Qualifizierer: WmiDataId(2), Extension("IPAddr")
 </dt> </dl>
 
 Quell-IP-Adresse.
 
 </dd> <dt>
 
-size
+Größe
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (5)
+Qualifizierer: WmiDataId(5)
 </dt> </dl>
 
 Größe des Pakets.
 
 </dd> <dt>
 
-Reit
+Sport
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Object**
+Datentyp: **Objekt**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (4), Erweiterung ("Port")
+Qualifizierer: WmiDataId(4), Extension("Port")
 </dt> </dl>
 
-Quell Portnummer.
+Quellportnummer.
 
 </dd> </dl>
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|---------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ XP-Desktop-Apps\]<br/> |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                   |
 
 
@@ -169,7 +169,7 @@ Quell Portnummer.
 
 <dl> <dt>
 
-[**Tcpip \_ v0**](tcpip-v0.md)
+[**TcpIp \_ V0**](tcpip-v0.md)
 </dt> </dl>
 
  

@@ -1,5 +1,5 @@
 ---
-description: Diese Klasse ist die Ereignistyp Klasse für Dienst Konfigurations Ereignisse.
+description: 'SystemConfig_V0_Services-Klasse: Diese Klasse ist die Ereignistypklasse für Dienstkonfigurationsereignisse.'
 ms.assetid: 1e6c2061-f1a2-4253-a0c4-4b45b2feceda
 title: SystemConfig_V0_Services-Klasse
 ms.topic: reference
@@ -16,18 +16,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 6c061c6a0c4cbb3e807bcb3418155b1194fcfa28
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
-ms.translationtype: HT
+ms.openlocfilehash: b69ca7cf4ee4e16a5fbcb6a5f10c659f713ab458
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104349319"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108105928"
 ---
-# <a name="systemconfig_v0_services-class"></a>SystemConfig \_ v0 \_ Services-Klasse
+# <a name="systemconfig_v0_services-class"></a>SystemConfig \_ V0 \_ Services-Klasse
 
-Diese Klasse ist die Ereignistyp Klasse für Dienst Konfigurations Ereignisse.
+Diese Klasse ist die Ereignistypklasse für Dienstkonfigurationsereignisse.
 
-Die folgende Syntax wird durch den MOF-Code vereinfacht.
+Die folgende Syntax wird aus MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,88 +44,88 @@ class SystemConfig_V0_Services : SystemConfig_V0
 
 ## <a name="members"></a>Member
 
-Die Klasse " **SystemConfig \_ v0 \_ Services** " verfügt über diese Typen von Membern:
+Die **SystemConfig \_ V0 \_ Services-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **SystemConfig \_ v0 \_ Services** -Klasse verfügt über diese Eigenschaften.
+Die **SystemConfig \_ V0 \_ Services-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **DisplayName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **char16** Array
+Datentyp: **char16-Array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (2), **Max** (256)
+Qualifizierer: **WmiDataId** (2), **Max** (256)
 </dt> </dl>
 
-Der Anzeige Name des Dienstanbieter. Der Name wird im Dienststeuerungs-Manager nach Groß-/Kleinschreibung beibehalten. Jedoch wird bei Vergleichen des Anzeigenamens immer nach Groß- und Kleinschreibung unterschieden.
+Anzeigename des Diensts. Der Name wird im Dienststeuerungs-Manager beibehalten. Jedoch wird bei Vergleichen des Anzeigenamens immer nach Groß- und Kleinschreibung unterschieden.
 
 </dd> <dt>
 
-**ProcessID**
+**Processid**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (4)
+Qualifizierer: **WmiDataId** (4)
 </dt> </dl>
 
-Der Bezeichner des Prozesses, in dem der Dienst ausgeführt wird.
+Bezeichner des Prozesses, in dem der Dienst ausgeführt wird.
 
 </dd> <dt>
 
 **ProcessName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **char16** Array
+Datentyp: **char16-Array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (3), **Max** (34)
+Qualifizierer: **WmiDataId** (3), **Max** (34)
 </dt> </dl>
 
-Der Name des Prozesses, in dem der Dienst ausgeführt wird.
+Name des Prozesses, in dem der Dienst ausgeführt wird.
 
 </dd> <dt>
 
-**Service Name**
+**Servicename**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **char16** Array
+Datentyp: **char16-Array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (1), **Max** (34)
+Qualifizierer: **WmiDataId** (1), **Max** (34)
 </dt> </dl>
 
-Eindeutiger Bezeichner des Dienstanbieter. Der Bezeichner gibt Aufschluss über die Funktionen, die der Dienst bereitstellt.
+Eindeutiger Bezeichner des Diensts. Der Bezeichner gibt einen Hinweis auf die Funktionalität an, die der Dienst bietet.
 
 </dd> </dl>
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2003-Desktop-Apps\]<br/> |
 
 
 
@@ -133,7 +133,7 @@ Eindeutiger Bezeichner des Dienstanbieter. Der Bezeichner gibt Aufschluss über 
 
 <dl> <dt>
 
-[**SystemConfig \_ v0**](systemconfig-v0.md)
+[**SystemConfig \_ V0**](systemconfig-v0.md)
 </dt> </dl>
 
  

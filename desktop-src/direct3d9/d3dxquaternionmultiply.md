@@ -1,7 +1,7 @@
 ---
-description: Multipliziert zwei Quaternionen.
+description: 'D3DXQuaternionMultiply-Funktion (D3dx9math.h): Multipliziert zwei Quaternionen.'
 ms.assetid: 11072fc9-dae8-4f63-b07d-b709eed381df
-title: D3DXQuaternionMultiply-Funktion (D3dx9math. h)
+title: D3DXQuaternionMultiply-Funktion (D3dx9math.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,14 +14,14 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 753fd206e2b970182ed44c216f1339d56973c416
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 7250484e4943e8b077a63e35951c17a44eaf2de3
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104132381"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108118038"
 ---
-# <a name="d3dxquaternionmultiply-function-d3dx9mathh"></a>D3DXQuaternionMultiply-Funktion (D3dx9math. h)
+# <a name="d3dxquaternionmultiply-function-d3dx9mathh"></a>D3DXQuaternionMultiply-Funktion (D3dx9math.h)
 
 Multipliziert zwei Quaternionen.
 
@@ -42,30 +42,30 @@ D3DXQUATERNION* D3DXQuaternionMultiply(
 
 <dl> <dt>
 
-*Pout* \[ in, out\]
+*pOut* \[ in, out\]
 </dt> <dd>
 
 Typ: **[ **D3DXQUATERNION**](d3dxquaternion.md)\***
 
-Ein Zeiger auf die [**D3DXQUATERNION**](d3dxquaternion.md) -Struktur, die das Ergebnis des Vorgangs ist.
+Zeiger auf die [**D3DXQUATERNION-Struktur,**](d3dxquaternion.md) die das Ergebnis des Vorgangs ist.
 
 </dd> <dt>
 
-*pQ1* \[ in\]
+*pQ1* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXQUATERNION**](d3dxquaternion.md) \***
+Typ: **const [**D3DXQUATERNION**](d3dxquaternion.md) \***
 
-Zeiger auf eine Quell- [**D3DXQUATERNION**](d3dxquaternion.md) -Struktur.
+Zeiger auf eine [**D3DXQUATERNION-Quellstruktur.**](d3dxquaternion.md)
 
 </dd> <dt>
 
-*pQ2* \[ in\]
+*pQ2* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXQUATERNION**](d3dxquaternion.md) \***
+Typ: **const [**D3DXQUATERNION**](d3dxquaternion.md) \***
 
-Zeiger auf eine Quell- [**D3DXQUATERNION**](d3dxquaternion.md) -Struktur.
+Zeiger auf eine [**D3DXQUATERNION-Quellstruktur.**](d3dxquaternion.md)
 
 </dd> </dl>
 
@@ -73,13 +73,13 @@ Zeiger auf eine Quell- [**D3DXQUATERNION**](d3dxquaternion.md) -Struktur.
 
 Typ: **[ **D3DXQUATERNION**](d3dxquaternion.md)\***
 
-Zeiger auf eine [**D3DXQUATERNION**](d3dxquaternion.md) -Struktur, die das Produkt aus zwei Quaternionen ist.
+Zeiger auf eine [**D3DXQUATERNION-Struktur,**](d3dxquaternion.md) die das Produkt zweier Quaternionen ist.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Das Ergebnis stellt die Drehung Q1, gefolgt von der Drehung Q2 (out = Q2 \* Q1) dar. Dies geschieht, damit **D3DXQuaternionMultiply** dieselbe Semantik wie [**D3DXMatrixMultiply**](d3dxmatrixmultiply.md) beibehält, da Einheiten Quaternionen als eine andere Möglichkeit zur Darstellung von Rotations Matrizen angesehen werden können.
+Das Ergebnis stellt die Drehung Q1 gefolgt von der Drehung Q2 (Out = Q2 \* Q1) dar. Dies erfolgt so, dass **D3DXQuaternionMultiply** die gleiche Semantik wie [**D3DXMatrixMultiply**](d3dxmatrixmultiply.md) beibehält, da Einheitenquaternionen als eine andere Möglichkeit zur Darstellung von Rotationsmatrizen betrachtet werden können.
 
-Transformationen werden in derselben Reihenfolge für die **D3DXQuaternionMultiply** -Funktion und die [**D3DXMatrixMultiply**](d3dxmatrixmultiply.md) -Funktion verkettet. Wenn z. b. MX und My die gleichen Drehungen wie QX und qY darstellen, stellen sowohl m als auch q die gleichen Drehungen dar.
+Transformationen werden für die Funktionen **D3DXQuaternionMultiply** und [**D3DXMatrixMultiply**](d3dxmatrixmultiply.md) in der gleichen Reihenfolge verkettet. Angenommen, mX und mY stellen die gleichen Drehungen wie qX und qY dar, stellen sowohl m als auch q die gleichen Drehungen dar.
 
 
 ```
@@ -91,22 +91,22 @@ D3DXQuaternionMultiply(&q, &qX, &qY);
 
 Die Multiplikation von Quaternionen ist nicht kommutativ.
 
-Der Rückgabewert für diese Funktion ist derselbe Wert, der im *Pout* -Parameter zurückgegeben wird. Auf diese Weise kann die **D3DXQuaternionMultiply** -Funktion als Parameter für eine andere Funktion verwendet werden.
+Der Rückgabewert für diese Funktion ist der gleiche Wert, der im *pOut-Parameter zurückgegeben* wird. Auf diese Weise kann die **D3DXQuaternionMultiply-Funktion** als Parameter für eine andere Funktion verwendet werden.
 
-Verwenden Sie [**D3DXQuaternionNormalize**](d3dxquaternionnormalize.md) für eine beliebige Quaternion-Eingabe, die nicht bereits normalisiert ist.
+Verwenden [**Sie D3DXQuaternionNormalize**](d3dxquaternionnormalize.md) für alle Quaternioneingaben, die noch nicht normalisiert sind.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9math. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3dx9math.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

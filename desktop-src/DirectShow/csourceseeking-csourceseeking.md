@@ -1,7 +1,7 @@
 ---
-description: Konstruktormethode.
+description: 'CSourceSeeking.CSourceSeeking-Konstruktor : Konstruktormethode.'
 ms.assetid: a51d90c9-4046-42dc-b7cf-51b904c5f57a
-title: Csourceseeking. csourceseeking-Konstruktor (ctlutil. h)
+title: CSourceSeeking.CSourceSeeking-Konstruktor (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,14 +16,14 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 309e926ddf001cf9933b19334992f5210fc7f17b
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 7fcca70408e76466a88c620e3907271d49930973
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371466"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108098818"
 ---
-# <a name="csourceseekingcsourceseeking-constructor"></a>Csourceseeking. csourceseeking-Konstruktor
+# <a name="csourceseekingcsourceseeking-constructor"></a>CSourceSeeking.CSourceSeeking-Konstruktor
 
 Konstruktormethode.
 
@@ -48,28 +48,28 @@ CSourceSeeking(
 *pName* 
 </dt> <dd>
 
-Zeiger auf eine Zeichenfolge, die den Namen des Objekts enthält. Weitere Informationen finden Sie unter [**cbaseobject**](cbaseobject.md).
+Zeiger auf eine Zeichenfolge, die den Namen des Objekts enthält. Weitere Informationen finden Sie unter [**CBaseObject**](cbaseobject.md).
 
 </dd> <dt>
 
-*Kro* 
+*Punk* 
 </dt> <dd>
 
-Zeiger auf den Besitzer dieses Objekts. Wenn das Objekt aggregiert wird, übergeben Sie einen Zeiger an die **IUnknown** -Schnittstelle des Aggregations Objekts. Andernfalls legen Sie diesen Parameter auf **null** fest.
+Zeiger auf den Besitzer dieses Objekts. Wenn das Objekt aggregiert wird, übergeben Sie einen Zeiger auf die **IUnknown-Schnittstelle des aggregierenden** Objekts. Legen Sie andernfalls diesen Parameter auf **NULL fest.**
 
 </dd> <dt>
 
-*PHR* 
+*Phr* 
 </dt> <dd>
 
-Zeiger auf einen **HRESULT** -Wert. Ignoriert.
+Zeiger auf einen **HRESULT-Wert.** Ignoriert.
 
 </dd> <dt>
 
 *Plock* 
 </dt> <dd>
 
-Zeiger auf ein [**ccritsec**](ccritsec.md) -Objekt. Deklarieren Sie in der abgeleiteten Klasse eine **ccritsec** -Member-Variable, und verwenden Sie die Adresse des Parameters für diesen Parameter. Die- `CSourceSeeking` Klasse verwendet diesen kritischen Abschnitt, um den Zugriff auf die Start-und Endzeit-, Dauer-und Wiedergabe Rate zu synchronisieren. Wenn Sie auf diese Variablen in der abgeleiteten Klasse zugreifen, behalten Sie diese Sperre bei.
+Zeiger auf ein [**CCritSec-Objekt.**](ccritsec.md) Deklarieren Sie in der abgeleiteten Klasse eine **CCritSec-Membervariable,** und verwenden Sie die Adresse für diesen Parameter. Die -Klasse verwendet diesen kritischen Abschnitt, um den Zugriff auf die Start- und `CSourceSeeking` Stoppzeiten, die Dauer und die Wiedergaberate zu synchronisieren. Halten Sie diese Sperre bei jedem Zugriff auf diese Variablen in Ihrer abgeleiteten Klasse bei.
 
 </dd> </dl>
 
@@ -77,18 +77,18 @@ Zeiger auf ein [**ccritsec**](ccritsec.md) -Objekt. Deklarieren Sie in der abgel
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (einschließlich Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Csourceseeking-Klasse**](csourceseeking.md)
+[**CSourceSeeking-Klasse**](csourceseeking.md)
 </dt> </dl>
 
  

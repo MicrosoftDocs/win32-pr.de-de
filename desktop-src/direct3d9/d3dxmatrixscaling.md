@@ -1,7 +1,7 @@
 ---
-description: Erstellt eine Matrix, die auf der x-Achse, der y-Achse und der z-Achse skaliert.
+description: 'D3DXMatrixScaling-Funktion (D3dx9math.h): Erstellt eine Matrix, die entlang der X-Achse, der y-Achse und der Z-Achse skaliert wird.'
 ms.assetid: f51baa4e-0aec-4de8-b746-24cb52f318d6
-title: D3DXMatrixScaling-Funktion (D3dx9math. h)
+title: D3DXMatrixScaling-Funktion (D3dx9math.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 7cfc14fc1d514f68f2881d26c4729440d709af93
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 97ccd4cc6207bb211259833d163793c3499b51a1
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106371878"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108118068"
 ---
-# <a name="d3dxmatrixscaling-function-d3dx9mathh"></a>D3DXMatrixScaling-Funktion (D3dx9math. h)
+# <a name="d3dxmatrixscaling-function-d3dx9mathh"></a>D3DXMatrixScaling-Funktion (D3dx9math.h)
 
-Erstellt eine Matrix, die auf der x-Achse, der y-Achse und der z-Achse skaliert.
+Erstellt eine Matrix, die entlang der x-Achse, der y-Achse und der Z-Achse skaliert wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,39 +43,39 @@ D3DXMATRIX* D3DXMatrixScaling(
 
 <dl> <dt>
 
-*Pout* \[ in, out\]
+*pOut* \[ in, out\]
 </dt> <dd>
 
 Typ: **[ **D3DXMATRIX**](d3dxmatrix.md)\***
 
-Ein Zeiger auf die [**D3DXMATRIX**](d3dxmatrix.md) -Struktur, die das Ergebnis des Vorgangs ist.
+Zeiger auf die [**D3DXMATRIX-Struktur,**](d3dxmatrix.md) die das Ergebnis des Vorgangs ist.
 
 </dd> <dt>
 
-*SX* \[ in\]
+*sx* \[ In\]
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-Skalierungsfaktor, der auf der x-Achse angewendet wird.
+Skalierungsfaktor, der entlang der X-Achse angewendet wird.
 
 </dd> <dt>
 
-*Sy* \[ in\]
+*sy* \[ In\]
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-Skalierungsfaktor, der auf der y-Achse angewendet wird.
+Skalierungsfaktor, der entlang der y-Achse angewendet wird.
 
 </dd> <dt>
 
-*SZ* \[ in\]
+*sz* \[ In\]
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-Skalierungsfaktor, der auf der z-Achse angewendet wird.
+Skalierungsfaktor, der entlang der Z-Achse angewendet wird.
 
 </dd> </dl>
 
@@ -83,24 +83,24 @@ Skalierungsfaktor, der auf der z-Achse angewendet wird.
 
 Typ: **[ **D3DXMATRIX**](d3dxmatrix.md)\***
 
-Zeiger auf die Skalierungs Transformation [**D3DXMATRIX**](d3dxmatrix.md).
+Zeiger auf die Skalierungstransformation [**D3DXMATRIX**](d3dxmatrix.md).
 
 ## <a name="remarks"></a>Bemerkungen
 
-Der Rückgabewert für diese Funktion ist derselbe Wert, der im *Pout* -Parameter zurückgegeben wird. Auf diese Weise kann die **D3DXMatrixScaling** -Funktion als Parameter für eine andere Funktion verwendet werden.
+Der Rückgabewert für diese Funktion ist der gleiche Wert, der im *pOut-Parameter zurückgegeben* wird. Auf diese Weise kann die **D3DXMatrixScaling-Funktion** als Parameter für eine andere Funktion verwendet werden.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9math. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3dx9math.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

@@ -1,5 +1,5 @@
 ---
-description: Fordert eine Statusänderung an.
+description: 'RequestStateChange-Methode der Msvm_StorageJob-Klasse: Fordert eine Zustandsänderung an.'
 ms.assetid: 2960bc44-f2af-49c6-9c33-5d9e1ad8056c
 title: RequestStateChange-Methode der Msvm_StorageJob-Klasse
 ms.topic: reference
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 1ce563fdae2e73ba2e6994afc3d70c8d4d6fe34a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e15f28af892e713f8bd6897b2d75b6b227886ad1
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103866395"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108111348"
 ---
-# <a name="requeststatechange-method-of-the-msvm_storagejob-class"></a>RequestStateChange-Methode der MSVM \_ storagejob-Klasse
+# <a name="requeststatechange-method-of-the-msvm_storagejob-class"></a>RequestStateChange-Methode der Msvm \_ StorageJob-Klasse
 
-Fordert eine Statusänderung an.
+Fordert eine Zustandsänderung an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,7 +40,7 @@ uint32 RequestStateChange(
 
 <dl> <dt>
 
-*Requestedstate* \[ in\]
+*RequestedState* \[ In\]
 </dt> <dd>
 
 RequestStateChange ändert den Status eines Auftrags. Die folgenden Werte sind möglich:
@@ -54,24 +54,24 @@ RequestStateChange ändert den Status eines Auftrags. Die folgenden Werte sind m
 
 </dt> <dd>
 
-Ändert den Zustand in "wird ausgeführt".
+Ändert den Status in "Wird ausgeführt".
 
 </dd> <dt>
 
 <span id="Suspend"></span><span id="suspend"></span><span id="SUSPEND"></span>
 
-<span id="Suspend"></span><span id="suspend"></span><span id="SUSPEND"></span>**Aussetzen** (3)
+<span id="Suspend"></span><span id="suspend"></span><span id="SUSPEND"></span>**Anhalten** (3)
 
 
 </dt> <dd>
 
-Beendet den Auftrag vorübergehend. Die Absicht besteht darin, den Auftrag mit "Start" neu zu starten. Möglicherweise ist es möglich, den Zustand "Dienst" in den Status "angehalten" einzugeben. (Dies ist Auftrags spezifisch.)
+Beendet den Auftrag vorübergehend. Die Absicht besteht darin, den Auftrag anschließend mit "Start" neu zu starten. Es kann möglich sein, den Status "Dienst" zu erhalten, während er angehalten wird. (Dies ist auftragsspezifisch.)
 
 </dd> <dt>
 
 <span id="Terminate"></span><span id="terminate"></span><span id="TERMINATE"></span>
 
-<span id="Terminate"></span><span id="terminate"></span><span id="TERMINATE"></span>**Beenden** (4)
+<span id="Terminate"></span><span id="terminate"></span><span id="TERMINATE"></span>**Terminate** (4)
 
 
 </dt> <dd>
@@ -87,7 +87,7 @@ Beendet den Auftrag ordnungsgemäß, speichert Daten, behält den Zustand bei un
 
 </dt> <dd>
 
-Beendet den Auftrag sofort, ohne dass es erforderlich ist, Daten zu speichern oder den Zustand beizubehalten.
+Beendet den Auftrag sofort, ohne dass Daten gespeichert oder der Zustand beibehalten werden muss.
 
 </dd> <dt>
 
@@ -98,28 +98,28 @@ Beendet den Auftrag sofort, ohne dass es erforderlich ist, Daten zu speichern od
 
 </dt> <dd>
 
-Versetzt den Auftrag in einen herstellerspezifischen Dienst Zustand. Möglicherweise ist es möglich, den Auftrag neu zu starten.
+Versetzt den Auftrag in einen anbieterspezifischen Dienststatus. Möglicherweise kann der Auftrag neu gestartet werden.
 
 </dd> <dt>
 
 <span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>
 
-<span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>**DMTF reserviert** (7.. 32767)
+<span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>**DMTF Reserved** (7..32767)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Vendor_Reserved"></span><span id="vendor_reserved"></span><span id="VENDOR_RESERVED"></span>
 
-<span id="Vendor_Reserved"></span><span id="vendor_reserved"></span><span id="VENDOR_RESERVED"></span>**Anbieter reserviert** (32768.65535)
+<span id="Vendor_Reserved"></span><span id="vendor_reserved"></span><span id="VENDOR_RESERVED"></span>**Reservierter Anbieter** (32768..65535)
 
 
 </dt> <dd></dd> </dl> </dd> <dt>
 
-*Timeoutperiod* \[ in\]
+*TimeoutPeriod* \[ In\]
 </dt> <dd>
 
-Ein Timeout Zeitraum, der die maximale Zeitspanne angibt, die der Client für den Übergang in den neuen Zustand erwartet. Das Intervall Format muss zum Angeben des Timeout Zeitraums verwendet werden. Der Wert 0 oder **null** zeigt an, dass der Client keine Zeitanforderungen für den Übergang hat. Wenn diese Eigenschaft nicht 0 oder **null** enthält und die Implementierung diesen Parameter nicht unterstützt, muss der Rückgabecode 4098 (**use of Timeout Parameter not supported**) zurückgegeben werden.
+Ein Timeoutzeitraum, der die maximale Zeitspanne angibt, die der Client für den Übergang in den neuen Zustand erwartet. Das Intervallformat muss verwendet werden, um den Timeoutzeitraum anzugeben. Der Wert 0 oder **NULL gibt an,** dass der Client keine Zeitanforderungen für den Übergang hat. Wenn diese Eigenschaft nicht 0 oder **NULL** enthält und die Implementierung diesen Parameter nicht unterstützt, muss der Rückgabecode 4098 (**Use Of Timeout Parameter Not Supported**) zurückgegeben werden.
 
 </dd> </dl>
 
@@ -169,21 +169,21 @@ Diese Methode gibt einen der folgenden Werte zurück:
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8.1<br/>                                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2<br/>                                                                       |
 | Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**MSVM \_ storagejob**](msvm-storagejob.md)
+[**Msvm \_ StorageJob**](msvm-storagejob.md)
 </dt> </dl>
 
  

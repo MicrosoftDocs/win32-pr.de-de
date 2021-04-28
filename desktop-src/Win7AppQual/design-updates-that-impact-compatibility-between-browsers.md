@@ -1,19 +1,19 @@
 ---
-description: .
+description: Entwurfsupdates, die sich auf die Kompatibilität zwischen Browsern auswirken
 ms.assetid: F2C13FEC-5537-4B0D-BFDB-E17A42A289CB
-title: Entwerfen von Updates, die sich auf die Kompatibilität zwischen Browsern auswirken
+title: Entwurfsupdates, die sich auf die Kompatibilität zwischen Browsern auswirken
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: da217d761a603e2edf8f799ab638561b357151c4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a306a64cb03bce8b466f6367339302522109619a
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106363414"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108088478"
 ---
-# <a name="design-updates-that-impact-compatibility-between-browsers"></a>Entwerfen von Updates, die sich auf die Kompatibilität zwischen Browsern auswirken
+# <a name="design-updates-that-impact-compatibility-between-browsers"></a>Entwurfsupdates, die sich auf die Kompatibilität zwischen Browsern auswirken
 
-In diesem Abschnitt und in der folgenden Tabelle sind die vier Hauptbereiche der Kompatibilität (nicht in der Reihenfolge von vorkommen oder Rangfolge von Priorität) aufgeführt.
+Dieser Abschnitt und die folgende Tabelle zeigen die vier Hauptbereiche der Kompatibilität (nicht in der Reihenfolge der Priorität oder Rangfolge der Priorität).
 
 
 
@@ -60,7 +60,7 @@ In diesem Abschnitt und in der folgenden Tabelle sind die vier Hauptbereiche der
 <td><ul>
 <li>HTTPS-Verbesserungen</li>
 <li>Sicherere Skripterstellung</li>
-<li>Geschützter Modus (Windows Vista und spätere Versionen)</li>
+<li>Geschützter Modus (Windows Vista und höhere Versionen)</li>
 </ul></td>
 <td><ul>
 <li>Besserer Schutz vor Schadsoftware</li>
@@ -73,7 +73,7 @@ In diesem Abschnitt und in der folgenden Tabelle sind die vier Hauptbereiche der
 <td><a href="architecture.md">Architektur</a></td>
 
 <td><ul>
-<li>Lose gekoppelter Internet Explorer</li>
+<li>Lose gekoppelte Internet Explorer</li>
 </ul></td>
 </tr>
 </tbody>

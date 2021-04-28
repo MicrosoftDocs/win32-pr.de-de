@@ -1,7 +1,7 @@
 ---
-description: 'Die getduration-Methode ruft die Dauer des Streams ab. Diese Methode implementiert die imediaseeking:: getduration-Methode.'
+description: 'CSourceSeeking.GetDuration-Methode: Die GetDuration-Methode ruft die Dauer des Streams ab. Diese Methode implementiert die IMediaSeeking::GetDuration-Methode.'
 ms.assetid: 074eb2d0-a7a3-4bc1-82e8-2f42c6d43dac
-title: Csourceseeking. getduration-Methode (ctlutil. h)
+title: CSourceSeeking.GetDuration-Methode (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 8368f655394089c1155d848bc53d2ba2375e3320
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 3d5b961ad62d65c1f728af71e82de1373ea20b1f
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106354646"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108098768"
 ---
-# <a name="csourceseekinggetduration-method"></a>Csourceseeking. getduration-Methode
+# <a name="csourceseekinggetduration-method"></a>CSourceSeeking.GetDuration-Methode
 
-Die- `GetDuration` Methode ruft die Dauer des Streams ab. Diese Methode implementiert die [**imediaseeking:: getduration**](/windows/desktop/api/Strmif/nf-strmif-imediaseeking-getduration) -Methode.
+Die `GetDuration` -Methode ruft die Dauer des Streams ab. Diese Methode implementiert die [**IMediaSeeking::GetDuration-Methode.**](/windows/desktop/api/Strmif/nf-strmif-imediaseeking-getduration)
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,23 +42,23 @@ HRESULT GetDuration(
 
 <dl> <dt>
 
-*pduration* 
+*pDuration* 
 </dt> <dd>
 
-Ein Zeiger auf eine Variable, die die Dauer in Einheiten des aktuellen Zeit Formats empfängt.
+Zeiger auf eine Variable, die die Dauer in Einheiten des aktuellen Zeitformats empfängt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen der **HRESULT** -Werte zurück, die in der folgenden Tabelle aufgeführt sind.
+Gibt einen der in der folgenden Tabelle aufgeführten **HRESULT-Werte** zurück.
 
 
 
 | Rückgabecode                                                                               | Beschreibung                       |
 |-------------------------------------------------------------------------------------------|-----------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>      | Erfolg<br/>                |
-| <dl> <dt>**E- \_ Zeiger**</dt> </dl> | **Null** -Zeiger Wert<br/> |
+| <dl> <dt>**\_E-ZEIGER**</dt> </dl> | **NULL-Zeigerwert**<br/> |
 
 
 
@@ -66,24 +66,24 @@ Gibt einen der **HRESULT** -Werte zurück, die in der folgenden Tabelle aufgefü
 
 ## <a name="remarks"></a>Bemerkungen
 
-Die Dauer wird von der [**csourceseeking:: m \_ rtduration**](csourceseeking-m-rtduration.md) -Element Variablen angegeben.
+Die Dauer wird von der [**CSourceSeeking::m \_ rtDuration-Membervariablen**](csourceseeking-m-rtduration.md) angegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (einschließlich Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Csourceseeking-Klasse**](csourceseeking.md)
+[**CSourceSeeking-Klasse**](csourceseeking.md)
 </dt> </dl>
 
  
