@@ -1,7 +1,7 @@
 ---
-description: Dekonstruktormethode.
+description: CBaseAllocator.~CBaseAllocator-Destruktor – Destruktormethode.
 ms.assetid: b1e5653f-d72f-4cde-a8c9-d25763434374
-title: Cbasezucator. ~ cbasezucator-debugtor (amfilter. h)
+title: CBaseAllocator.~CBaseAllocator-Destruktor (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 53587482c5d9cf8f5a772453f220c7633c17d383
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 9a4b754c8937b87a547f4583b3270f5782a6a415
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364030"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108096418"
 ---
-# <a name="cbaseallocatorcbaseallocator-destructor"></a>Cbasezucator. ~ cbasezuweisung-Dekonstruktor
+# <a name="cbaseallocatorcbaseallocator-destructor"></a>CBaseAllocator.~CBaseAllocator-Destruktor
 
-Dekonstruktormethode.
+Destruktormethode.
 
 ## <a name="syntax"></a>Syntax
 
@@ -38,24 +38,24 @@ Dekonstruktormethode.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Immer die [**cbasezucator::D ecommit**](cbaseallocator-decommit.md) -Methode aufruft, bevor das Objekt zerstört wird. Der basisklassendekonstruktor kann " **Decommit**" nicht aufrufen, da diese Methode die rein virtuelle Methode " [**cbasezucator:: Free**](cbaseallocator-free.md)" aufruft. Abgeleitete Klassen sollten diesen Dekonstruktor überschreiben und **Decommit** aufzurufen.
+Rufen Sie immer [**die CBaseAllocator::D commit-Methode auf,**](cbaseallocator-decommit.md) bevor Sie das Objekt zerstören. Der Basisklassen-Destruktor kann **decommit** nicht aufrufen, da diese Methode die reine virtuelle [**Methode CBaseAllocator::Free aufruft.**](cbaseallocator-free.md) Abgeleitete Klassen sollten diesen Destruktor überschreiben und **Decommit aufrufen.**
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (streams.h enthalten)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbasezucator-Klasse**](cbaseallocator.md)
+[**CBaseAllocator-Klasse**](cbaseallocator.md)
 </dt> </dl>
 
  

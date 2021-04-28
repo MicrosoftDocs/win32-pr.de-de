@@ -1,7 +1,7 @@
 ---
-description: Bestimmt das Produkt der angegebenen Matrix und der aktuellen Matrix.
+description: 'ID3DXMATRIXStack::MultMatrixLocal-Methode (D3DX10.h): Bestimmt das Produkt der angegebenen Matrix und der aktuellen Matrix.'
 ms.assetid: 4d374a7b-99e0-4313-970d-b0e7cf3e97ce
-title: 'ID3DXMATRIXStack:: multmatrixlocal-Methode (d3dx10. h)'
+title: ID3DXMATRIXStack::MultMatrixLocal-Methode (D3DX10.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,14 +14,14 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: 095882c98169159beaca0ef6c98d13fe03b9aed2
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 4b777bd729810b6fd63bd71def9858203b2ac559
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104219705"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108107948"
 ---
-# <a name="id3dxmatrixstackmultmatrixlocal-method-d3dx10h"></a>ID3DXMATRIXStack:: multmatrixlocal-Methode (d3dx10. h)
+# <a name="id3dxmatrixstackmultmatrixlocal-method-d3dx10h"></a>ID3DXMATRIXStack::MultMatrixLocal-Methode (D3DX10.h)
 
 Bestimmt das Produkt der angegebenen Matrix und der aktuellen Matrix.
 
@@ -40,12 +40,12 @@ HRESULT MultMatrixLocal(
 
 <dl> <dt>
 
-*pm* \[ in\]
+*pM* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXMATRIX**](../direct3d9/d3dxmatrix.md) \***
+Typ: **const [**D3DXMATRIX**](../direct3d9/d3dxmatrix.md) \***
 
-Ein Zeiger auf die D3DXMATRIX-Struktur, die mit der aktuellen Matrix multipliziert werden soll.
+Zeiger auf die D3DXMATRIX-Struktur, die mit der aktuellen Matrix multipliziert werden soll.
 
 </dd> </dl>
 
@@ -53,11 +53,11 @@ Ein Zeiger auf die D3DXMATRIX-Struktur, die mit der aktuellen Matrix multiplizie
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert "D3DERR \_ invalidcall" lauten.
+Wenn die Methode erfolgreich ist, ist der Rückgabewert D3D \_ OK. Wenn bei der Methode ein Fehler auftritt, kann der Rückgabewert D3DERR \_ INVALIDCALL sein.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Diese Methode multipliziert die angegebene Matrix Links mit der aktuellen Matrix (die Transformation ist der lokale Ursprung des Objekts).
+Diese Methode multipliziert die gegebene Matrix mit der aktuellen Matrix (die Transformation bezieht sich auf den lokalen Ursprung des Objekts).
 
 
 ```
@@ -72,14 +72,14 @@ Diese Methode fügt dem Stapel kein Element hinzu, sondern ersetzt die aktuelle 
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx10. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>D3dx10. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>D3DX10.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

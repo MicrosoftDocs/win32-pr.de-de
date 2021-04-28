@@ -1,7 +1,7 @@
 ---
-description: 'Die getavailable-Methode ruft den Bereich der Zeiten ab, in denen die Suche effizient ist. Diese Methode implementiert die imediaseeking:: getavailable-Methode.'
+description: 'CPosPassThru.GetAvailable-Methode: Die GetAvailable-Methode ruft den Zeitbereich ab, in dem Suchfunktionen effizient sind. Diese Methode implementiert die IMediaSeeking::GetAvailable-Methode.'
 ms.assetid: 5f4af41a-eb7b-4caa-97e0-aaed78467723
-title: Cpospassthru. getavailable-Methode (ctlutil. h)
+title: CPosPassThru.GetAvailable-Methode (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 32dbba173caf933185602523dadcf71ce7ca3ef7
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 0d56827a68f4c287e5808f0d8f64b8142c31b1f4
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106360414"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108095288"
 ---
-# <a name="cpospassthrugetavailable-method"></a>Cpospassthru. getavailable-Methode
+# <a name="cpospassthrugetavailable-method"></a>CPosPassThru.GetAvailable-Methode
 
-Die- `GetAvailable` Methode ruft den Bereich der Zeiten ab, in denen die Suche effizient ist. Diese Methode implementiert die [**imediaseeking:: getavailable**](/windows/desktop/api/Strmif/nf-strmif-imediaseeking-getavailable) -Methode.
+Die `GetAvailable` -Methode ruft den Zeitbereich ab, in dem Suchfunktionen effizient sind. Diese Methode implementiert die [**IMediaSeeking::GetAvailable-Methode.**](/windows/desktop/api/Strmif/nf-strmif-imediaseeking-getavailable)
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,40 +43,40 @@ HRESULT GetAvailable(
 
 <dl> <dt>
 
-*pearliest* 
+*pEarliest* 
 </dt> <dd>
 
-Ein Zeiger auf eine Variable, die die früheste Zeit für eine effiziente Suche empfängt.
+Zeiger auf eine Variable, die die früheste Zeit für effiziente Suche empfängt.
 
 </dd> <dt>
 
-*platest* 
+*pLatest* 
 </dt> <dd>
 
-Ein Zeiger auf eine Variable, die den letzten Zeitpunkt für die effiziente Suche empfängt.
+Zeiger auf eine Variable, die die letzte Zeit für effiziente Suche empfängt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt den **HRESULT** -Wert aus der verbundenen PIN zurück.
+Gibt den **HRESULT-Wert** aus dem verbundenen Pin zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cpospassthru-Klasse**](cpospassthru.md)
+[**CPosPassThru-Klasse**](cpospassthru.md)
 </dt> </dl>
 
  

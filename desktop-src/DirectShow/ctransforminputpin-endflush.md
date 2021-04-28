@@ -1,7 +1,7 @@
 ---
-description: 'Die endflush-Methode beendet einen Löschvorgang. Diese Methode implementiert die IPin:: endflush-Methode.'
+description: 'CTransformInputPin.EndFlush-Methode: Die EndFlush-Methode beendet einen Leerungsvorgang. Diese Methode implementiert die IPin::EndFlush-Methode.'
 ms.assetid: ebc70df3-e99d-4292-990b-99b79ff06461
-title: Ctransforminputpin. endflush-Methode (Transfrm. h)
+title: CTransformInputPin.EndFlush-Methode (Transfrm.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: f0fe6afeaa0ca3d47b278987af494221e8f50340
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: e5e080b4531d05160bebd42a68145842c4783bea
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370737"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108095058"
 ---
-# <a name="ctransforminputpinendflush-method"></a>Ctransforminputpin. endflush-Methode
+# <a name="ctransforminputpinendflush-method"></a>CTransformInputPin.EndFlush-Methode
 
-Die- `EndFlush` Methode beendet einen Löschvorgang. Diese Methode implementiert die [**IPin:: endflush**](/windows/desktop/api/Strmif/nf-strmif-ipin-endflush) -Methode.
+Die `EndFlush` -Methode beendet einen Leerungsvorgang. Diese Methode implementiert die [**IPin::EndFlush-Methode.**](/windows/desktop/api/Strmif/nf-strmif-ipin-endflush)
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,14 +42,14 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT** -Wert zurück. Mögliche Werte sind in der folgenden Tabelle aufgeführt.
+Gibt einen **HRESULT-Wert** zurück. Mögliche Werte sind die in der folgenden Tabelle aufgeführten Werte.
 
 
 
 | Rückgabecode                                                                                           | Beschreibung                             |
 |-------------------------------------------------------------------------------------------------------|-----------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>                  | Erfolg.<br/>                     |
-| <dl> <dt>**VFW \_ E \_ nicht \_ verbunden**</dt> </dl> | Die Ausgabepin ist nicht verbunden.<br/> |
+| <dl> <dt>**VFW \_ E \_ NICHT \_ VERBUNDEN**</dt> </dl> | Der Ausgabepin ist nicht verbunden.<br/> |
 
 
 
@@ -57,16 +57,16 @@ Gibt einen **HRESULT** -Wert zurück. Mögliche Werte sind in der folgenden Tabe
 
 ## <a name="remarks"></a>Bemerkungen
 
-Diese Methode ruft die [**ctransformfilter:: endflush**](ctransformfilter-endflush.md) -Methode des Filters auf, um den Aufruf Downstream zu übermitteln. Anschließend wird die [**cbaseiniputpin:: endflush**](cbaseinputpin-endflush.md) -Methode der PIN aufgerufen.
+Diese Methode ruft die [**CTransformFilter::EndFlush-Methode**](ctransformfilter-endflush.md) des Filters auf, um den Aufruf downstreamzu übermitteln. Anschließend wird die [**CBaseInputPin::EndFlush-Methode**](cbaseinputpin-endflush.md) des Pins aufrufen.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Transfrm. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Transfrm.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 

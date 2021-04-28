@@ -1,9 +1,9 @@
 ---
-title: TBM_SETPOSNOTIFY Meldung (kommstrg. h)
-description: Legt die aktuelle logische Position des Schiebereglers in einer TrackBar fest.
+title: TBM_SETPOSNOTIFY Meldung (Commctrl.h)
+description: 'TBM_SETPOSNOTIFY Meldung: Legt die aktuelle logische Position des Schiebereglers in einer Trackleiste fest.'
 ms.assetid: 02f8899a-55b0-46ae-8642-9e534ab4abf5
 keywords:
-- Windows-Steuerelemente für TBM_SETPOSNOTIFY Meldung
+- TBM_SETPOSNOTIFY Meldung Windows-Steuerelemente
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 636a2add9f13470a89b312450f1a3dcbc185be2c
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 7201f3056ed05e6321ab9d9bd726edc3b4470f0b
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104475912"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108104078"
 ---
-# <a name="tbm_setposnotify-message"></a>TBM- \_ setposnotify-Nachricht
+# <a name="tbm_setposnotify-message"></a>TBM \_ SETPOSNOTIFY-Nachricht
 
-Legt die aktuelle logische Position des Schiebereglers in einer TrackBar fest.
+Legt die aktuelle logische Position des Schiebereglers in einer Trackleiste fest.
 
 ## <a name="parameters"></a>Parameter
 
@@ -39,7 +39,7 @@ wParam wird nicht verwendet.
 *lParam* 
 </dt> <dd>
 
-Neue logische Position des Schiebereglers. Gültige logische Positionen sind die ganzzahligen Werte in der TrackBar-Bereich der minimalen bis maximalen Schieberegler-Positionen. Wenn dieser Wert außerhalb des maximalen und minimalen Bereichs des Steuer Elements liegt, wird die Position auf den maximalen oder minimalen Wert festgelegt.
+Neue logische Position des Schiebereglers. Gültige logische Positionen sind die ganzzahligen Werte im Bereich der Trackleiste von minimalen bis maximalen Schiebereglerpositionen. Wenn dieser Wert außerhalb des maximalen und minimalen Bereichs des Steuerelements liegt, wird die Position auf den Maximal- oder Mindestwert festgelegt.
 
 </dd> </dl>
 
@@ -49,17 +49,17 @@ Kein Rückgabewert.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Durch den Aufruf von **TBM \_ setposnotify** wird der Schieberegler für den Schieberegler festgelegt, [**z. b. TBM- \_ SetPos**](tbm-setpos.md) . Dies bewirkt jedoch auch, dass die TrackBar das übergeordnete Element über eine " [**WM \_ HScroll**](wm-hscroll.md) "-oder " [**WM \_ VScroll**](wm-vscroll.md) "-Meldung
+Durch den Aufruf von **TBM \_ SETPOSNOTIFY** wird die Position des Trackbar-Schiebereglers wie [**bei TBM \_ SETPOS**](tbm-setpos.md) festgelegt. Dies bewirkt jedoch auch, dass die Trackleiste das übergeordnete Element über eine [**WM \_ HSCROLL-**](wm-hscroll.md) oder [**WM \_ VSCROLL-Nachricht**](wm-vscroll.md) über eine Verschiebung benachrichtigt.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/>                               |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ 7-Desktop-Apps\]<br/>                                            |
+| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ R2-Desktop-Apps\]<br/>                               |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

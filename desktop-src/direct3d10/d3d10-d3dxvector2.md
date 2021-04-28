@@ -1,7 +1,7 @@
 ---
-description: Beschreibt einen Vektor mit zwei Komponenten, einschließlich Operator Überladungen und Typumwandlungen.
+description: 'D3DXVECTOR2-Struktur (D3DX10Math.h): Beschreibt einen Vektor mit zwei Komponenten, einschließlich Operatorüberladungen und Typcasts.'
 ms.assetid: 5b7b4847-b994-48c6-ae3c-e48ee1716ddd
-title: D3DXVECTOR2-Struktur (D3DX10Math. h)
+title: D3DXVECTOR2-Struktur (D3DX10Math.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - D3DX10Math.h
-ms.openlocfilehash: 860c7ddaba61adcd93a38469117b2a95779240a2
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 972238650fa23e8b7aa435cd91b36f2caf8a4d9b
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104219618"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108102857"
 ---
-# <a name="d3dxvector2-structure-d3dx10mathh"></a>D3DXVECTOR2-Struktur (D3DX10Math. h)
+# <a name="d3dxvector2-structure-d3dx10mathh"></a>D3DXVECTOR2-Struktur (D3DX10Math.h)
 
-Beschreibt einen Vektor mit zwei Komponenten, einschließlich Operator Überladungen und Typumwandlungen.
+Beschreibt einen Vektor mit zwei Komponenten, einschließlich Operatorüberladungen und Typcasts.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,7 +43,7 @@ typedef struct D3DXVECTOR2 {
 **x**
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
@@ -54,7 +54,7 @@ Die x-Komponente.
 **y**
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
@@ -64,7 +64,7 @@ Die y-Komponente.
 
 ## <a name="remarks"></a>Bemerkungen
 
-**D3DXVECTOR2** verfügt über die folgenden C++-Erweiterungen.
+**D3DXVECTOR2 verfügt** über die folgenden C++-Erweiterungen.
 
 ### <a name="d3dxvector2-extensions"></a>D3DXVECTOR2-Erweiterungen
 
@@ -118,13 +118,13 @@ public:
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------|-----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3DX10Math. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3DX10Math.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

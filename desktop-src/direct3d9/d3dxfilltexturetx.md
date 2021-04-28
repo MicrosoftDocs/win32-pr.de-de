@@ -1,7 +1,7 @@
 ---
-description: Verwendet eine kompilierte HLSL-Funktion (High-Level Shader Language) zum Auffüllen der einzelnen texttabformationen einer Textur.
+description: 'D3DXFillTextureTX-Funktion: Verwendet eine kompilierte HLSL-Funktion (High-Level Shader Language), um jeden Texel jeder Mipmapebene einer Textur aufzufüllen.'
 ms.assetid: 013660ce-865e-4acf-a1ea-670e70377ff5
-title: D3DXFillTextureTX-Funktion (D3dx9tex. h)
+title: D3DXFillTextureTX-Funktion (D3dx9tex.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 3605011f7967edec68d13405b4cabbd9c90d4c59
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 419dc0e7b4266a2fe32557c52ed4323b51a25843
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104050854"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108107638"
 ---
 # <a name="d3dxfilltexturetx-function"></a>D3DXFillTextureTX-Funktion
 
-Verwendet eine kompilierte HLSL-Funktion (High-Level Shader Language) zum Auffüllen der einzelnen texttabformationen einer Textur.
+Verwendet eine kompilierte HLSL-Funktion (High-Level Shader Language), um jeden Texel jeder Mipmapebene einer Textur zu füllen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,21 +41,21 @@ HRESULT D3DXFillTextureTX(
 
 <dl> <dt>
 
-*ptexture* \[ in, out\]
+*pTexture* \[ in, out\]
 </dt> <dd>
 
 Typ: **[ **LPDIRECT3DTEXTURE9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3dtexture9)**
 
-Zeiger auf ein [**IDirect3DTexture9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3dtexture9) -Objekt, das die zu füllende Textur darstellt.
+Zeiger auf ein [**IDirect3DTexture9-Objekt,**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3dtexture9) das die zu füllende Textur darstellt.
 
 </dd> <dt>
 
-*ptextureshader* \[ in\]
+*pTextureShader* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXTEXTURESHADER**](id3dxtextureshader.md)**
 
-Zeiger auf ein [**ID3DXTextureShader**](id3dxtextureshader.md) Texture-Shader-Objekt.
+Zeiger auf ein [**ID3DXTextureShader-Texturshaderobjekt.**](id3dxtextureshader.md)
 
 </dd> </dl>
 
@@ -63,17 +63,17 @@ Zeiger auf ein [**ID3DXTextureShader**](id3dxtextureshader.md) Texture-Shader-Ob
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden sein: D3DERR \_ NotAvailable, D3DERR \_ invalidcall.
+Wenn die Funktion erfolgreich ist, ist der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert wie folgt sein: D3DERR \_ NOTAVAILABLE, D3DERR \_ INVALIDCALL.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Das Textur Ziel muss eine HLSL-Funktion sein, die die folgende Semantik enthält:
+Das Texturziel muss eine HLSL-Funktion sein, die die folgende Semantik enthält:
 
--   Ein Eingabeparameter muss eine Positions Semantik verwenden.
--   Ein Eingabeparameter muss eine Psize-Semantik verwenden.
--   Die Funktion muss einen Parameter zurückgeben, der die Farb Semantik verwendet.
+-   Ein Eingabeparameter muss eine POSITION-Semantik verwenden.
+-   Ein Eingabeparameter muss eine PSIZE-Semantik verwenden.
+-   Die Funktion muss einen Parameter zurückgeben, der die COLOR-Semantik verwendet.
 
-Im folgenden finden Sie ein Beispiel für eine solche HLSL-Funktion:
+Im Folgenden finden Sie ein Beispiel für eine solche HLSL-Funktion:
 
 
 ```
@@ -101,24 +101,24 @@ float4 TextureGradientFill(
 
 
 
-Beachten Sie, dass die Eingabeparameter in beliebiger Reihenfolge vorliegen können, aber beide Eingabe Semantik muss dargestellt werden.
+Beachten Sie, dass die Eingabeparameter in beliebiger Reihenfolge sein können, aber beide Eingabesemantiken dargestellt werden müssen.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9tex. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>  |
+| Header<br/>  | <dl> <dt>D3dx9tex.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>  |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Textur Funktionen in D3DX 9](dx9-graphics-reference-d3dx-functions-texture.md)
+[Texturfunktionen in D3DX 9](dx9-graphics-reference-d3dx-functions-texture.md)
 </dt> <dt>
 
 [**D3DXFillCubeTextureTX**](d3dxfillcubetexturetx.md)

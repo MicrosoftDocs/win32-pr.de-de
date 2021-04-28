@@ -1,7 +1,7 @@
 ---
-description: Dekonstruktormethode.
+description: CUnknown.~CUnknown-Destruktor – Destruktormethode.
 ms.assetid: 5d4ea970-2145-4119-b3dc-77fba1c2207a
-title: Cunknown. ~ cunknown-debugtor (ComBase. h)
+title: CUnknown.~CUnknown-Destruktor (Combase.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 9621371935e2641221eb156052f1e5cf514fa0fe
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: e17a15415e063f00067011a9dd1402f7eef6ec89
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358306"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108094668"
 ---
-# <a name="cunknowncunknown-destructor"></a>Cunknown. ~ cunknown-Dekonstruktor
+# <a name="cunknowncunknown-destructor"></a>CUnknown.~CUnknown-Destruktor
 
-Dekonstruktormethode.
+Destruktormethode.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,10 +40,10 @@ Dekonstruktormethode.
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>ComBase. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Combase.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 

@@ -1,7 +1,7 @@
 ---
-description: Die breakconnect-Methode gibt die PIN von einer Verbindung frei.
+description: 'CBaseOutputPin.BreakConnect-Methode: Die BreakConnect-Methode gibt den Pin aus einer Verbindung frei.'
 ms.assetid: 0dec3c9d-1adf-4fa3-ab5a-c351053f8054
-title: Cbaseoutputpin. breakconnect-Methode (amfilter. h)
+title: CBaseOutputPin.BreakConnect-Methode (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 3ea23d6f74032c3fd2608209d1d1f4cd2babf121
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 746783a73892bc34273da4b020446f2668a19cd9
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372574"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108096218"
 ---
-# <a name="cbaseoutputpinbreakconnect-method"></a>Cbaseoutputpin. breakconnect-Methode
+# <a name="cbaseoutputpinbreakconnect-method"></a>CBaseOutputPin.BreakConnect-Methode
 
-Die- `BreakConnect` Methode gibt die PIN von einer Verbindung frei.
+Die `BreakConnect` -Methode gibt den Pin von einer Verbindung frei.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,30 +42,30 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt \_ bei Erfolg S OK oder einen **HRESULT** -Wert zurück, der die Ursache des Fehlers angibt.
+Gibt S \_ OK zurück, wenn erfolgreich, oder ein **HRESULT-Wert,** der die Ursache des Fehlers angibt.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Diese Methode überschreibt die [**cbasepin:: breakconnect**](cbasepin-breakconnect.md) -Methode. Er debugt die Zuweisung und gibt die [**imemzuordcator**](/windows/desktop/api/Strmif/nn-strmif-imemallocator) -und [**IPin**](/windows/desktop/api/Strmif/nn-strmif-ipin) -Schnittstellen frei.
+Diese Methode überschreibt die [**CBasePin::BreakConnect-Methode.**](cbasepin-breakconnect.md) Er decommitiert die Zuweisung und gibt die [**Schnittstellen IMemAllocator**](/windows/desktop/api/Strmif/nn-strmif-imemallocator) und [**IPin**](/windows/desktop/api/Strmif/nn-strmif-ipin) frei.
 
-Wenn Sie diese Methode überschreiben, müssen Sie die Basisklassen Methode aus der über schreibenden Methode abrufen. Andernfalls können Sie Speicher Verluste verursachen.
+Wenn Sie diese Methode überschreiben, rufen Sie die Basisklassenmethode aus ihrer überschreibenden Methode auf. Andernfalls können Speicherverlusten verursacht werden.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (streams.h enthalten)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbaseoutputpin-Klasse**](cbaseoutputpin.md)
+[**CBaseOutputPin-Klasse**](cbaseoutputpin.md)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
-description: Gibt einen Wert zurück, der angibt, ob ein bestimmter Dienst ausgeführt wird.
+description: 'IShellDispatch2.IsServiceRunning-Methode: Gibt einen Wert zurück, der angibt, ob ein bestimmter Dienst ausgeführt wird.'
 ms.assetid: 91f3fba1-7aa5-423a-bc37-49db230c79db
-title: IShellDispatch2. isservicerunning-Methode (Shldisp. h)
+title: IShellDispatch2.IsServiceRunning-Methode (Shldisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,14 +13,14 @@ api_type:
 - COM
 api_location:
 - Shell32.dll
-ms.openlocfilehash: f39cd7da3d9959830208ab971b636e146e549775
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e8ad792f1669a8ebcfa411c58b34da214ccf69a7
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104978048"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108117088"
 ---
-# <a name="ishelldispatch2isservicerunning-method"></a>IShellDispatch2. isservicerunning-Methode
+# <a name="ishelldispatch2isservicerunning-method"></a>IShellDispatch2.IsServiceRunning-Methode
 
 Gibt einen Wert zurück, der angibt, ob ein bestimmter Dienst ausgeführt wird.
 
@@ -49,12 +49,12 @@ IShellDispatch2.IsServiceRunning( _
 
 <dl> <dt>
 
-*sservicename* \[ in\]
+*sServiceName* \[ In\]
 </dt> <dd>
 
 Typ: **[ **BSTR**](/previous-versions/windows/desktop/automat/bstr)**
 
-Eine **Zeichenfolge** , die den Namen des Dienstanbieter enthält.
+Eine **Zeichenfolge,** die den Namen des Diensts enthält.
 
 </dd> </dl>
 
@@ -62,27 +62,27 @@ Eine **Zeichenfolge** , die den Namen des Dienstanbieter enthält.
 
 ### <a name="jscript"></a>JScript
 
-Typ: **Variant \** _
+Typ: **\* Variant**
 
-Gibt _ *true** zurück, wenn der von *sservicename* angegebene Dienst ausgeführt wird. andernfalls **false**.
+Gibt **TRUE zurück,** wenn der von *sServiceName angegebene Dienst* ausgeführt wird. andernfalls **FALSE.**
 
 ### <a name="vb"></a>VB
 
-Typ: **Variant \** _
+Typ: **\* Variant**
 
-Gibt _ *true** zurück, wenn der von *sservicename* angegebene Dienst ausgeführt wird. andernfalls **false**.
+Gibt **TRUE zurück,** wenn der von *sServiceName angegebene Dienst* ausgeführt wird. andernfalls **FALSE.**
 
 ## <a name="remarks"></a>Bemerkungen
 
-Diese Methode wird implementiert und über die [**Shell. isservicerunning**](./shell-isservicerunning.md) -Methode aufgerufen.
+Diese Methode wird implementiert und über die [**Shell.IsServiceRunning-Methode aufgerufen.**](./shell-isservicerunning.md)
 
-Diese Methode ist zurzeit nicht in Microsoft Visual Basic verfügbar.
+Diese Methode ist derzeit in Microsoft Visual Basic.
 
 ## <a name="examples"></a>Beispiele
 
-In den folgenden Beispielen wird die Verwendung von **isservicerunning** veranschaulicht, um zu bestimmen, ob der Themes-Dienst für eine Anwendung ausgeführt wird. Die Verwendung wird für JScript und VBScript angezeigt.
+Die folgenden Beispiele zeigen die Verwendung von **IsServiceRunning,** um zu bestimmen, ob der Themes-Dienst für eine Anwendung ausgeführt wird. Die Verwendung wird für JScript und VBScript angezeigt.
 
-JScript
+Jscript:
 
 
 ```JScript
@@ -99,7 +99,7 @@ JScript
 
 
 
-VBScript
+Vbscript:
 
 
 ```VB
@@ -119,17 +119,17 @@ VBScript
 
 
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, Windows XP \[ Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                          |
-| Header<br/>                   | <dl> <dt>Shldisp. h</dt> </dl>                          |
-| IDL<br/>                      | <dl> <dt>Shldisp. idl</dt> </dl>                        |
-| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 5,0 oder höher)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Nur Windows 2000 Professional- und Windows \[ XP-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2003-Desktop-Apps\]<br/>                                                          |
+| Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>                          |
+| Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                        |
+| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 5.0 oder höher)</dt> </dl> |
 
 
 

@@ -1,19 +1,19 @@
 ---
-description: .
+description: image
 ms.assetid: 89893C4E-4F4E-4d85-9623-08607B4383E5
-title: Image-Element (Eigenschafts Beschreibungs Schema)
+title: image-Element (Schema der Eigenschaftenbeschreibung)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2d7bb519d5f8104d114734e1f12676f213312e32
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c24ecb1b88b8b724ce299a81281f926972180743
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106358806"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108104988"
 ---
 # <a name="image"></a>image
 
-Es darf nur ein [Bild]() Element für jedes übergeordnete Element vorhanden sein.
+Es sollte nur ein [Bildelement für]() jedes übergeordnete Element geben.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,17 +41,17 @@ Es darf nur ein [Bild]() Element für jedes übergeordnete Element vorhanden sei
 
 | Übergeordnete Elemente                                                                  | Untergeordnete Elemente |
 |----------------------------------------------------------------------------------|----------------|
-| [](./propdesc-schema-enum.md) [Enumeration, enumbereich](./propdesc-schema-enumrange.md) | Keine           |
+| [enum](./propdesc-schema-enum.md), [enumRange](./propdesc-schema-enumrange.md) | Keine           |
 
 
 
  
 
-## <a name="attributes"></a>Attribute
+## <a name="attributes"></a>Attributes
 
 
 
-| Attribut | BESCHREIBUNG       |
+| attribute | BESCHREIBUNG       |
 |-----------|-------------------|
 | res       | Öffentlich. Erforderlich. |
 

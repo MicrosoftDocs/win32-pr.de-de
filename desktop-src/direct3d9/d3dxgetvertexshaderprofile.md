@@ -1,7 +1,7 @@
 ---
-description: Gibt den Namen des höchsten HLSL-Profils (High-Level Shader Language) zurück, das von einem bestimmten Gerät unterstützt wird.
+description: 'D3DXGetVertexShaderProfile-Funktion: Gibt den Namen des höchsten HLSL-Profils (High-Level Shader Language) zurück, das von einem bestimmten Gerät unterstützt wird.'
 ms.assetid: a50e2a17-8170-4364-a562-7886593341b3
-title: D3DXGetVertexShaderProfile-Funktion (D3DX9Shader. h)
+title: D3DXGetVertexShaderProfile-Funktion (D3DX9Shader.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,12 +14,12 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 34f7ccaeba60bdd1d7c512cee3fb4da29289408a
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 70d6cdf79fdd91e819d54702682515aa3e4810b4
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106353722"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108114458"
 ---
 # <a name="d3dxgetvertexshaderprofile-function"></a>D3DXGetVertexShaderProfile-Funktion
 
@@ -40,7 +40,7 @@ LPCSTR D3DXGetVertexShaderProfile(
 
 <dl> <dt>
 
-*pdevice* \[ in\]
+*pDevice* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPDIRECT3DDEVICE9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3ddevice9)**
@@ -55,11 +55,11 @@ Typ: **[ **LPCSTR**](../winprog/windows-data-types.md)**
 
 Der HLSL-Profilname.
 
-Wenn das Gerät Scheitelpunkt-Shader nicht unterstützt, gibt die Funktion **null** zurück.
+Wenn das Gerät keine Vertex-Shader unterstützt, gibt die Funktion **NULL** zurück.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Ein Shader-Profil gibt die zu verwendende Assembly-Shader-Version und die Funktionen an, die dem HLSL-Compiler beim Kompilieren eines Shaders zur Verfügung stehen. In der folgenden Tabelle sind die unterstützten Vertex-shaderprofile aufgeführt.
+Ein Shaderprofil gibt die zu verwendende Assembly-Shaderversion und die Funktionen an, die dem HLSL-Compiler beim Kompilieren eines Shaders zur Verfügung stehen. In der folgenden Tabelle sind die unterstützten Vertex-Shaderprofile aufgeführt.
 
 
 
@@ -70,7 +70,7 @@ Ein Shader-Profil gibt die zu verwendende Assembly-Shader-Version und die Funkti
 </colgroup>
 <thead>
 <tr class="header">
-<th>Shader-Profil</th>
+<th>Shaderprofil</th>
 <th>BESCHREIBUNG</th>
 </tr>
 </thead>
@@ -81,20 +81,20 @@ Ein Shader-Profil gibt die zu verwendende Assembly-Shader-Version und die Funkti
 </tr>
 <tr class="even">
 <td>vs_2_0</td>
-<td>Kompilieren Sie in VS_2_0 Version.</td>
+<td>Kompilieren Sie in vs_2_0 Version.</td>
 </tr>
 <tr class="odd">
 <td>vs_2_a</td>
-<td>Identisch mit dem VS_2_0 Profil mit den folgenden zusätzlichen Funktionen, die für den Compiler als Ziel verfügbar sind:
+<td>Entspricht dem vs_2_0 Profil mit den folgenden zusätzlichen Funktionen, die der Compiler als Ziel hat:
 <ul>
-<li>Die Anzahl der temporären Register (r #) ist größer als oder gleich 13.</li>
-<li>Dynamische Fluss Steuerungs Anweisung.</li>
-<li>Prädikation übersprungen.</li>
+<li>Die Anzahl temporärer Register (r#) ist größer oder gleich 13.</li>
+<li>Anweisung zur dynamischen Flusssteuerung.</li>
+<li>Prädication.</li>
 </ul></td>
 </tr>
 <tr class="even">
 <td>vs_3_0</td>
-<td>Kompilieren Sie in vs_3_0 Version.</td>
+<td>Kompilieren Sie vs_3_0 Version.</td>
 </tr>
 </tbody>
 </table>
@@ -103,20 +103,20 @@ Ein Shader-Profil gibt die zu verwendende Assembly-Shader-Version und die Funkti
 
  
 
-Weitere Informationen zu den Unterschieden zwischen shaderversionen finden Sie [unter Unterschiede im Scheitelpunkt-Shader](../direct3dhlsl/dx9-graphics-reference-asm-vs-differences.md).
+Weitere Informationen zu den Unterschieden zwischen shader-Versionen finden Sie unter [Vertex Shader Differences](../direct3dhlsl/dx9-graphics-reference-asm-vs-differences.md).
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Shader. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>     |
+| Header<br/>  | <dl> <dt>D3DX9Shader.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

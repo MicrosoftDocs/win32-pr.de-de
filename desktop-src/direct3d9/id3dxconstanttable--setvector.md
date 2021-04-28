@@ -1,7 +1,7 @@
 ---
-description: Legt einen 4D-Vektor fest.
+description: 'ID3DXConstantTable::SetVector-Methode: Legt einen 4D-Vektor fest.'
 ms.assetid: d5849a8b-b372-4ad0-8773-8c9c4bac3799
-title: 'ID3DXConstantTable:: setvector-Methode (D3DX9Shader. h)'
+title: ID3DXConstantTable::SetVector-Methode (D3DX9Shader.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,14 +14,14 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: ace1e7b12b67173eb5b9d9a5fc5e56a8b360f2b4
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 2d7c464cebb050b9fd54c27656505e6f2221fe4d
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106365100"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108115018"
 ---
-# <a name="id3dxconstanttablesetvector-method"></a>ID3DXConstantTable:: setvector-Methode
+# <a name="id3dxconstanttablesetvector-method"></a>ID3DXConstantTable::SetVector-Methode
 
 Legt einen 4D-Vektor fest.
 
@@ -42,28 +42,28 @@ HRESULT SetVector(
 
 <dl> <dt>
 
-*pdevice* \[ in\]
+*pDevice* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPDIRECT3DDEVICE9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3ddevice9)**
 
-Zeiger auf eine [**IDirect3DDevice9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3ddevice9) -Schnittstelle, die das Gerät darstellt, das der Konstanten Tabelle zugeordnet ist.
+Zeiger auf eine [**IDirect3DDevice9-Schnittstelle,**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3ddevice9) die das Gerät darstellt, das der Konstantentabelle zugeordnet ist.
 
 </dd> <dt>
 
-*hconstant* \[ in\]
+*hConstant* \[ In\]
 </dt> <dd>
 
 Typ: **[D3DXHANDLE](dx9-graphics-reference-effects-constants.md)**
 
-Eindeutiger Bezeichner für die Vektor Konstante. Siehe [D3DXHANDLE](dx9-graphics-reference-effects-constants.md).
+Eindeutiger Bezeichner für die Vektorkonst constant. Siehe [D3DXHANDLE](dx9-graphics-reference-effects-constants.md).
 
 </dd> <dt>
 
-*pvector* \[ in\]
+*pVector* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXVECTOR4**](d3dxvector4.md) \***
+Typ: **const [**D3DXVECTOR4**](d3dxvector4.md) \***
 
 Zeiger auf einen 4D-Vektor.
 
@@ -73,20 +73,20 @@ Zeiger auf einen 4D-Vektor.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert "D3DERR \_ invalidcall" lauten.
+Wenn die Methode erfolgreich ist, ist der Rückgabewert D3D \_ OK. Wenn bei der Methode ein Fehler auftritt, kann der Rückgabewert D3DERR \_ INVALIDCALL sein.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Shader. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>     |
+| Header<br/>  | <dl> <dt>D3DX9Shader.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

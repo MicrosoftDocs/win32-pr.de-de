@@ -1,7 +1,7 @@
 ---
-description: Konvertiert eine Höhen Zuordnung in eine normale Karte. Die Komponenten (x, y, z) der einzelnen normalen werden den Kanälen (r, g, b) der Ausgabe Textur zugeordnet.
+description: 'D3DXComputeNormalMap-Funktion: Konvertiert eine Höhenkarte in eine normale Karte. Die (x,y,z)-Komponenten jedes Normals werden den (r,g,b)-Kanälen der Ausgabetextur zugeordnet.'
 ms.assetid: ed9053c0-b1df-4f74-bdee-627c0f60d942
-title: D3DXComputeNormalMap-Funktion (D3dx9tex. h)
+title: D3DXComputeNormalMap-Funktion (D3dx9tex.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 6e22418f5a023dbe70fee8ea0fba8a449abbcc8d
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 920ad763f478a2e6bcb9fbe98cc7e2a677ebe783
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106350714"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108105228"
 ---
 # <a name="d3dxcomputenormalmap-function"></a>D3DXComputeNormalMap-Funktion
 
-Konvertiert eine Höhen Zuordnung in eine normale Karte. Die Komponenten (x, y, z) der einzelnen normalen werden den Kanälen (r, g, b) der Ausgabe Textur zugeordnet.
+Konvertiert eine Höhenkarte in eine normale Karte. Die (x,y,z)-Komponenten jedes Normals werden den (r,g,b)-Kanälen der Ausgabetextur zugeordnet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,30 +45,30 @@ HRESULT D3DXComputeNormalMap(
 
 <dl> <dt>
 
-*ptexture* \[ vorgenommen\]
+*pTexture* \[ out\]
 </dt> <dd>
 
 Typ: **[ **LPDIRECT3DTEXTURE9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3dtexture9)**
 
-Zeiger auf eine [**IDirect3DTexture9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3dtexture9) -Schnittstelle, die die Ziel Textur darstellt.
+Zeiger auf eine [**IDirect3DTexture9-Schnittstelle,**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3dtexture9) die die Zieltextur darstellt.
 
 </dd> <dt>
 
-*psrctexture* \[ in\]
+*pSrcTexture* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPDIRECT3DTEXTURE9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3dtexture9)**
 
-Ein Zeiger auf eine [**IDirect3DTexture9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3dtexture9) -Schnittstelle, die die Textur der Quell Höhe darstellt.
+Zeiger auf eine [**IDirect3DTexture9-Schnittstelle,**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3dtexture9) die die Textur der Quellhöhenzuordnung darstellt.
 
 </dd> <dt>
 
-*psrcpalette* \[ in\]
+*pSrcPalette* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**PaletteEntry**](/windows/win32/api/wingdi/ns-wingdi-paletteentry) \***
+Typ: **const [**PALETTEENTRY**](/windows/win32/api/wingdi/ns-wingdi-paletteentry) \***
 
-Zeiger auf einen [**PaletteEntry**](/windows/win32/api/wingdi/ns-wingdi-paletteentry) -Typ, der die Quell Palette von 256 Farben oder **null** enthält.
+Zeiger auf einen [**PALETTEENTRY-Typ,**](/windows/win32/api/wingdi/ns-wingdi-paletteentry) der die Quellpalette mit 256 Farben oder **NULL enthält.**
 
 </dd> <dt>
 
@@ -77,25 +77,25 @@ Zeiger auf einen [**PaletteEntry**](/windows/win32/api/wingdi/ns-wingdi-palettee
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
-Ein oder mehrere [D3DX \_ normalmap](d3dx-normalmap.md) -Flags, die die Generierung normaler Karten steuern.
+Mindestens ein [D3DX \_ NORMALMAP-Flag,](d3dx-normalmap.md) das die Generierung normaler Karten kontrolliert.
 
 </dd> <dt>
 
-*Channel* \[ in\]
+*Kanal* \[ In\]
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
-Ein [D3DX- \_ kanalflag](d3dx-channel.md) , das die Quelle der Höheninformationen angibt.
+Ein [D3DX \_ CHANNEL-Flag,](d3dx-channel.md) das die Quelle der Höheninformationen an gibt.
 
 </dd> <dt>
 
-*Amplitude* \[ in\]
+*Amplitude* \[ In\]
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-Konstanter Wert Multiplikator, der die Werte in der normalen Zuordnung vergrößert (oder verringert). Höhere Werte machen in der Regel zu Leistungseinbußen, niedrigere Werte werden in der Regel weniger sichtbar.
+Konstanter Wertmultiplikator, der die Werte in der normalen Zuordnung erhöht (oder verringert). Höhere Werte machen Bumps in der Regel sichtbarer, niedrigere Werte machen Bumps in der Regel weniger sichtbar.
 
 </dd> </dl>
 
@@ -103,28 +103,28 @@ Konstanter Wert Multiplikator, der die Werte in der normalen Zuordnung vergröß
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert der folgende Wert sein: D3DERR \_ invalidcall.
+Wenn die Funktion erfolgreich ausgeführt wird, lautet der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert der folgende Wert sein: D3DERR \_ INVALIDCALL.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Diese Methode berechnet die normale, indem der zentrale Unterschied mit einer Kernel Größe von 3X3 verwendet wird. Der zentrale Differenzierungs Nenner, der verwendet wird, ist 2,0. RGB-Kanäle im Ziel enthalten unausgewogene (x, y, z) Komponenten der normalen.
+Diese Methode berechnet die Normalität mithilfe des zentralen Unterschieds mit einer Kernelgröße von 3x3. Der zentrale differenzierende Nenner ist 2.0. RGB-Kanäle im Ziel enthalten voreingenommene (x,y,z)-Komponenten der Normalen.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9tex. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>  |
+| Header<br/>  | <dl> <dt>D3dx9tex.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>  |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Textur Funktionen in D3DX 9](dx9-graphics-reference-d3dx-functions-texture.md)
+[Texturfunktionen in D3DX 9](dx9-graphics-reference-d3dx-functions-texture.md)
 </dt> </dl>
 
  
