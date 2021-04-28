@@ -1,19 +1,19 @@
 ---
-description: .
+description: System.Contact.HomeAddress1Locality
 ms.assetid: 3a2b382c-c7af-48cb-8cad-a9da0546cb17
-title: System. Contact. HomeAddress1Locality
+title: System.Contact.HomeAddress1Locality
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a7801f651c969dff46cf0c70f887ce7c31138a69
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6f4a27b6a731ec4554b663dac8bc6d74e9dc1d35
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103960008"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108102338"
 ---
-# <a name="systemcontacthomeaddress1locality"></a><span data-ttu-id="eac80-103">System. Contact. HomeAddress1Locality</span><span class="sxs-lookup"><span data-stu-id="eac80-103">System.Contact.HomeAddress1Locality</span></span>
+# <a name="systemcontacthomeaddress1locality"></a><span data-ttu-id="039c9-103">System.Contact.HomeAddress1Locality</span><span class="sxs-lookup"><span data-stu-id="039c9-103">System.Contact.HomeAddress1Locality</span></span>
 
-## <a name="windows-10-version-1703-windows-10-version-1607-windows-10-version-1511-windows-10-version-1507-windows-81"></a><span data-ttu-id="eac80-104">Windows 10, Version 1703, Windows 10, Version 1607, Windows 10, Version 1511, Windows 10, Version 1507, Windows 8.1</span><span class="sxs-lookup"><span data-stu-id="eac80-104">Windows 10, version 1703, Windows 10, version 1607, Windows 10, version 1511, Windows 10, version 1507, Windows 8.1</span></span>
+## <a name="windows-10-version-1703-windows-10-version-1607-windows-10-version-1511-windows-10-version-1507-windows-81"></a><span data-ttu-id="039c9-104">Windows 10, Version 1703, Windows 10, Version 1607, Windows 10, Version 1511, Windows 10, Version 1507, Windows 8.1</span><span class="sxs-lookup"><span data-stu-id="039c9-104">Windows 10, version 1703, Windows 10, version 1607, Windows 10, version 1511, Windows 10, version 1507, Windows 8.1</span></span>
 
 ```
 propertyDescription
@@ -28,54 +28,54 @@ propertyDescription
       type = String
 ```
 
-## <a name="remarks"></a><span data-ttu-id="eac80-105">Bemerkungen</span><span class="sxs-lookup"><span data-stu-id="eac80-105">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="039c9-105">Bemerkungen</span><span class="sxs-lookup"><span data-stu-id="039c9-105">Remarks</span></span>
 
-<span data-ttu-id="eac80-106">Pkey-Werte werden in "propkey. h" definiert.</span><span class="sxs-lookup"><span data-stu-id="eac80-106">PKEY values are defined in Propkey.h.</span></span>
+<span data-ttu-id="039c9-106">PKEY-Werte werden in Propkey.h definiert.</span><span class="sxs-lookup"><span data-stu-id="039c9-106">PKEY values are defined in Propkey.h.</span></span>
 
-## <a name="related-topics"></a><span data-ttu-id="eac80-107">Zugehörige Themen</span><span class="sxs-lookup"><span data-stu-id="eac80-107">Related topics</span></span>
+## <a name="related-topics"></a><span data-ttu-id="039c9-107">Zugehörige Themen</span><span class="sxs-lookup"><span data-stu-id="039c9-107">Related topics</span></span>
 
 <dl> <dt>
 
-[<span data-ttu-id="eac80-108">propertydescription</span><span class="sxs-lookup"><span data-stu-id="eac80-108">propertyDescription</span></span>](./propdesc-schema-propertydescription.md)
+[<span data-ttu-id="039c9-108">propertyDescription</span><span class="sxs-lookup"><span data-stu-id="039c9-108">propertyDescription</span></span>](./propdesc-schema-propertydescription.md)
 </dt> <dt>
 
-[<span data-ttu-id="eac80-109">SearchInfo</span><span class="sxs-lookup"><span data-stu-id="eac80-109">searchInfo</span></span>](./propdesc-schema-searchinfo.md)
+[<span data-ttu-id="039c9-109">searchInfo</span><span class="sxs-lookup"><span data-stu-id="039c9-109">searchInfo</span></span>](./propdesc-schema-searchinfo.md)
 </dt> <dt>
 
-[<span data-ttu-id="eac80-110">Labelinfo</span><span class="sxs-lookup"><span data-stu-id="eac80-110">labelInfo</span></span>](./propdesc-schema-labelinfo.md)
+[<span data-ttu-id="039c9-110">labelInfo</span><span class="sxs-lookup"><span data-stu-id="039c9-110">labelInfo</span></span>](./propdesc-schema-labelinfo.md)
 </dt> <dt>
 
-[<span data-ttu-id="eac80-111">TypeInfo</span><span class="sxs-lookup"><span data-stu-id="eac80-111">typeInfo</span></span>](./propdesc-schema-typeinfo.md)
+[<span data-ttu-id="039c9-111">Typeinfo</span><span class="sxs-lookup"><span data-stu-id="039c9-111">typeInfo</span></span>](./propdesc-schema-typeinfo.md)
 </dt> <dt>
 
-[<span data-ttu-id="eac80-112">Display Info</span><span class="sxs-lookup"><span data-stu-id="eac80-112">displayInfo</span></span>](./propdesc-schema-displayinfo.md)
+[<span data-ttu-id="039c9-112">displayInfo</span><span class="sxs-lookup"><span data-stu-id="039c9-112">displayInfo</span></span>](./propdesc-schema-displayinfo.md)
 </dt> <dt>
 
-[<span data-ttu-id="eac80-113">StringFormat</span><span class="sxs-lookup"><span data-stu-id="eac80-113">stringFormat</span></span>](./propdesc-schema-stringformat.md)
+[<span data-ttu-id="039c9-113">Stringformat</span><span class="sxs-lookup"><span data-stu-id="039c9-113">stringFormat</span></span>](./propdesc-schema-stringformat.md)
 </dt> <dt>
 
-[<span data-ttu-id="eac80-114">BooleanFormat</span><span class="sxs-lookup"><span data-stu-id="eac80-114">booleanFormat</span></span>](./propdesc-schema-booleanformat.md)
+[<span data-ttu-id="039c9-114">booleanFormat</span><span class="sxs-lookup"><span data-stu-id="039c9-114">booleanFormat</span></span>](./propdesc-schema-booleanformat.md)
 </dt> <dt>
 
-[<span data-ttu-id="eac80-115">NumberFormat</span><span class="sxs-lookup"><span data-stu-id="eac80-115">numberFormat</span></span>](./propdesc-schema-numberformat.md)
+[<span data-ttu-id="039c9-115">Numberformat</span><span class="sxs-lookup"><span data-stu-id="039c9-115">numberFormat</span></span>](./propdesc-schema-numberformat.md)
 </dt> <dt>
 
-[<span data-ttu-id="eac80-116">dateTimeFormat</span><span class="sxs-lookup"><span data-stu-id="eac80-116">dateTimeFormat</span></span>](./propdesc-schema-datetimeformat.md)
+[<span data-ttu-id="039c9-116">dateTimeFormat</span><span class="sxs-lookup"><span data-stu-id="039c9-116">dateTimeFormat</span></span>](./propdesc-schema-datetimeformat.md)
 </dt> <dt>
 
-[<span data-ttu-id="eac80-117">enumeratedlist</span><span class="sxs-lookup"><span data-stu-id="eac80-117">enumeratedList</span></span>](./propdesc-schema-enumeratedlist.md)
+[<span data-ttu-id="039c9-117">enumeratedList</span><span class="sxs-lookup"><span data-stu-id="039c9-117">enumeratedList</span></span>](./propdesc-schema-enumeratedlist.md)
 </dt> <dt>
 
-[<span data-ttu-id="eac80-118">DrawControl</span><span class="sxs-lookup"><span data-stu-id="eac80-118">drawControl</span></span>](./propdesc-schema-drawcontrol.md)
+[<span data-ttu-id="039c9-118">drawControl</span><span class="sxs-lookup"><span data-stu-id="039c9-118">drawControl</span></span>](./propdesc-schema-drawcontrol.md)
 </dt> <dt>
 
-[<span data-ttu-id="eac80-119">editcontrol</span><span class="sxs-lookup"><span data-stu-id="eac80-119">editControl</span></span>](./propdesc-schema-editcontrol.md)
+[<span data-ttu-id="039c9-119">editControl</span><span class="sxs-lookup"><span data-stu-id="039c9-119">editControl</span></span>](./propdesc-schema-editcontrol.md)
 </dt> <dt>
 
-[<span data-ttu-id="eac80-120">FilterControl</span><span class="sxs-lookup"><span data-stu-id="eac80-120">filterControl</span></span>](./propdesc-schema-filtercontrol.md)
+[<span data-ttu-id="039c9-120">Filtercontrol</span><span class="sxs-lookup"><span data-stu-id="039c9-120">filterControl</span></span>](./propdesc-schema-filtercontrol.md)
 </dt> <dt>
 
-[<span data-ttu-id="eac80-121">querycontrol</span><span class="sxs-lookup"><span data-stu-id="eac80-121">queryControl</span></span>](./propdesc-schema-querycontrol.md)
+[<span data-ttu-id="039c9-121">queryControl</span><span class="sxs-lookup"><span data-stu-id="039c9-121">queryControl</span></span>](./propdesc-schema-querycontrol.md)
 </dt> </dl>
 
  
