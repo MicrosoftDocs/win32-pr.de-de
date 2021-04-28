@@ -1,7 +1,7 @@
 ---
-description: Die beginflush-Methode startet einen Löschvorgang.
+description: 'CBaseRenderer.BeginFlush-Methode: Die BeginFlush-Methode startet einen Leerungsvorgang.'
 ms.assetid: dc652394-c24e-4cea-ac28-30a1e6de205f
-title: Cbaserderderer. beginflush-Methode (renbase. h)
+title: CBaseRenderer.BeginFlush-Methode (Renbase.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: e218e3b2d9c0cef8ce0fe052ad1b3c4b6f786858
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 76dfd77a5170a83813871143781868cae55c45ba
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106373823"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108095938"
 ---
-# <a name="cbaserendererbeginflush-method"></a>Cbaserderderer. beginflush-Methode
+# <a name="cbaserendererbeginflush-method"></a>CBaseRenderer.BeginFlush-Methode
 
-Die- `BeginFlush` Methode startet einen Löschvorgang.
+Die `BeginFlush` -Methode startet einen Leerungsvorgang.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,24 +46,24 @@ Gibt S \_ OK zurück.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Die Eingabe-PIN des Filters ruft diese Methode auf, wenn Sie einen Aufruf an die [**IPin:: beginflush**](/windows/desktop/api/Strmif/nf-strmif-ipin-beginflush) -Methode empfängt. Der Filter gibt den streamingingthread frei und gibt jedes Beispiel frei, das für das Rendering gehalten wurde.
+Der Eingabepin des Filters ruft diese Methode auf, wenn er einen Aufruf der [**IPin::BeginFlush-Methode**](/windows/desktop/api/Strmif/nf-strmif-ipin-beginflush) empfängt. Der Filter gibt den Streamingthread und alle Beispiele frei, die er für das Rendering enthalten hat.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Renbase. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Renbase.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbaserderderer-Klasse**](cbaserenderer.md)
+[**CBaseRenderer-Klasse**](cbaserenderer.md)
 </dt> </dl>
 
  

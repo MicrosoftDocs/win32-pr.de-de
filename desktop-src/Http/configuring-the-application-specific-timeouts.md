@@ -1,31 +1,31 @@
 ---
 title: Konfigurieren der anwendungsspezifischen Timeouts
-description: .
+description: Konfigurieren der anwendungsspezifischen Timeouts
 ms.assetid: 24526320-4174-4fc7-b45a-c1ec605e1666
 keywords:
-- Konfigurieren der anwendungsspezifischen Timeouts http
+- Konfigurieren des HTTP-Ausdrucks für anwendungsspezifische Timeouts
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 35827b797ad6c9f19b728064f6fe65b0d89b2a3b
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: aca1cbcdb0b0796820282673c41507f6bfcc0ebd
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104036901"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108109738"
 ---
 # <a name="configuring-the-application-specific-timeouts"></a>Konfigurieren der anwendungsspezifischen Timeouts
 
-Die HTTP-Server-API-weiten Einstellungen gelten für alle Server Sitzungen und URL-Gruppen auf dem Computer. Diese Konfigurationen können von der Anwendung überschrieben werden, indem die anwendungsspezifischen Timeout Werte festgelegt werden. Die Timeouts der Server Sitzung überschreiben die API-weiten Timeouts für die HTTP-Server und gelten für alle unter Ihnen erstellten URL-Gruppen. Wenn Sie die Timeouts-Eigenschaft für eine URL-Gruppe konfigurieren, werden die Timeouts der Server Sitzung für alle URLs in der Gruppe überschrieben.
+Die API-weiten HTTP-Servereinstellungen gelten für alle Serversitzungen und URL-Gruppen auf dem Computer. Diese Konfigurationen können von der Anwendung überschrieben werden, indem die anwendungsspezifischen Timeoutwerte gesetzt werden. Die Serversitzungs-Timeouts überschreiben die HTTP Server-API-weiten Timeouts und gelten für alle URL-Gruppen, die unter ihnen erstellt werden. Durch das Konfigurieren der Timeouteigenschaft für eine URL-Gruppe werden die Serversitzungs-Timeouts für alle URLs in der Gruppe überschrieben.
 
-Das Angeben von NULL für einen der Timer in der [**Informationsstruktur http- \_ Timeout \_ Limit \_**](/windows/desktop/api/Http/ns-http-http_timeout_limit_info) für eine URL-Gruppe bewirkt, dass die HTTP-Server-API die Timeout Werte der Server Sitzung wiederherstellt, wenn Sie vorhanden sind, oder die Standardeinstellungen der HTTP-Server-API, wenn die Server Sitzungs Timeouts nicht vorhanden sind. Wenn z. b. die Server Timeout-Eigenschaft in einer URL-Gruppe vorhanden ist und der **entityBody** -Timer 0 (null) ist, wird das Timeout der Server Sitzung verwendet. Wenn die Eigenschaft Timeouts für eine Server Sitzung nicht festgelegt ist, wird die Standardkonfiguration der HTTP-Server-API verwendet. Um einen Timer zu deaktivieren, legen Sie den Wert auf **maxushort** fest, mit Ausnahme des **minsendrate** -Timers, der auf **MAXULONG** festgelegt ist.
+Die Angabe von 0 (null) für einen der Timer in der [**HTTP \_ TIMEOUT \_ LIMIT \_ INFO-Struktur**](/windows/desktop/api/Http/ns-http-http_timeout_limit_info) für eine URL-Gruppe bewirkt, dass die HTTP-Server-API auf die Serversitzungs-Timeouts zurückgesetzt wird, sofern diese vorhanden sind, oder die Standardeinstellungen der HTTP-Server-API, wenn die Serversitzungs-Timeouts nicht vorhanden sind. Wenn beispielsweise die Serverzeitüberschreitungseigenschaft in einer URL-Gruppe vorhanden ist und der **EntityBody-Timer** 0 (null) ist, wird das Serversitzungs-Timeout verwendet. Wenn die Timeouteigenschaft nicht für eine Serversitzung festgelegt ist, wird die Standardkonfiguration der HTTP-Server-API verwendet. Um einen Timer zu deaktivieren, legen Sie den Wert auf **MAXUSHORT fest,** mit Ausnahme des **MinSendRate-Timers,** der auf **MAXULONG festgelegt ist.**
 
-Von der HTTP-Server-API können nur die anwendungsspezifischen **Header Wait** und die **idleconnection** -Timer nur wirksam werden, nachdem die erste Anforderung empfangen wurde. Bevor die erste Anforderung empfangen wird, werden die HTTP-Server-API-weiten Timeout Werte erzwungen. Nachdem die erste Anforderung eingeht und einer Anforderungs Warteschlange zugeordnet ist, können die anwendungsspezifischen **Header Wait** und **idleconnection** angewendet werden. Die anwendungsspezifischen Timer werden auf alle nachfolgenden Anforderungen angewendet, die für eine Keep-Alive-Verbindung in der Anforderungs Warteschlange eintreffen.
+Die HTTP-Server-API kann nur den anwendungsspezifischen **HeaderWait** konfigurieren, und die **IdleConnection-Timer** sind erst wirksam, nachdem die erste Anforderung empfangen wurde. Bevor die erste Anforderung empfangen wird, werden die HTTP Server-API-weiten Timeoutwerte erzwungen. Nachdem die erste Anforderung eintrifft und einer Anforderungswarteschlange zugeordnet ist, können die anwendungsspezifischen **Timer HeaderWait** und **IdleConnection** angewendet werden. Die anwendungsspezifischen Timer werden auf alle nachfolgenden Anforderungen angewendet, die in der Anforderungswarteschlange für eine Keep-Alive-Verbindung eintreffen.
 
-Weitere Informationen zum Konfigurieren von Timern finden Sie in den Themen [Konfigurieren der URL-Gruppe](configuring-the-url-group.md) und [Konfigurieren der Server Sitzung](configuring-the-server-session.md) .
+Weitere Informationen zum Konfigurieren von Timern finden Sie in den Themen [Konfigurieren der URL-Gruppe](configuring-the-url-group.md) und [Konfigurieren der Serversitzung.](configuring-the-server-session.md)
 
- 
+ 
 
- 
+ 
 
 
 

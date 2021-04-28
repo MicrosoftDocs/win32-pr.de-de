@@ -1,7 +1,7 @@
 ---
-description: Wird nicht unterstützt.
+description: 'IRenderEngine::SetSourceConnectCallback-Methode: Wird nicht unterstützt.'
 ms.assetid: 7da88bab-abba-417c-9e33-c4fc4950536f
-title: 'Unenderengine:: setsourceconnectcallback-Methode'
+title: IRenderEngine::SetSourceConnectCallback-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,14 +12,14 @@ api_name:
 api_type:
 - COM
 api_location: ''
-ms.openlocfilehash: e58755ef936b6dd0822dbbc8a4159291cf2e0454
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: e8fc7dca58f2c1406f575f99d8119edd9bd750d9
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "106344323"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108084428"
 ---
-# <a name="irenderenginesetsourceconnectcallback-method"></a>Unenderengine:: setsourceconnectcallback-Methode
+# <a name="irenderenginesetsourceconnectcallback-method"></a>IRenderEngine::SetSourceConnectCallback-Methode
 
 > [!Note]  
 > \[Veraltet. Diese API kann aus zukünftigen Versionen von Windows entfernt werden.\]
@@ -52,25 +52,25 @@ Reserviert.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="remarks"></a>Bemerkungen
 
 > [!Note]  
-> Die Header Datei "qedit. h" ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
+> Die Headerdatei Qedit.h ist mit Direct3D-Headern nach Version 7 nicht kompatibel.
 
  
 
 > [!Note]  
-> Zum Abrufen von "qedit. h" Laden Sie das [Microsoft Windows SDK Update für Windows Vista und .NET Framework 3,0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. "Qedit. h" ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3,5 Service Pack 1 nicht verfügbar.
+> Laden Sie zum Abrufen von Qedit.h das [Microsoft Windows SDK Update für Windows Vista und .NET Framework 3.0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. Qedit.h ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3.5 Service Pack 1 nicht verfügbar.
 
  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Schnittstelle ""**](irenderengine.md)
+[**IRenderEngine-Schnittstelle**](irenderengine.md)
 </dt> </dl>
 
  

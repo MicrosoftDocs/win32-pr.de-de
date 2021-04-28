@@ -1,7 +1,7 @@
 ---
-description: 'Die Benachrichtigungs Methode benachrichtigt die PIN, dass eine Qualitätsänderung angefordert wird. Diese Methode implementiert die iqualitycontrol:: Notify-Methode.'
+description: 'CTransformOutputPin.Notify-Methode: Die Notify-Methode benachrichtigt den Pin, dass eine Qualitätsänderung angefordert wird. Diese Methode implementiert die IQualityControl::Notify-Methode.'
 ms.assetid: cdb93eef-90d5-4111-a3d4-175903f44a13
-title: Ctransformoutputpin. Notify-Methode (Transfrm. h)
+title: CTransformOutputPin.Notify-Methode (Transfrm.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: d6ace7e25f1413f6e17a4d19ef937732ea8c689a
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 9a55e493c737b5a5864ec0a8dd38eee3abbfa586
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371245"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108084808"
 ---
-# <a name="ctransformoutputpinnotify-method"></a>Ctransformoutputpin. Notify-Methode
+# <a name="ctransformoutputpinnotify-method"></a>CTransformOutputPin.Notify-Methode
 
-Die- `Notify` Methode benachrichtigt die PIN, dass eine Qualitätsänderung angefordert wird. Diese Methode implementiert die [**iqualitycontrol:: notify**](/windows/desktop/api/Strmif/nf-strmif-iqualitycontrol-notify) -Methode.
+Die `Notify` -Methode benachrichtigt den Pin, dass eine Qualitätsänderung angefordert wird. Diese Methode implementiert die [**IQualityControl::Notify-Methode.**](/windows/desktop/api/Strmif/nf-strmif-iqualitycontrol-notify)
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,30 +43,30 @@ HRESULT Notify(
 
 <dl> <dt>
 
-*pself* 
+*pSelf* 
 </dt> <dd>
 
-Ein Zeiger auf die [**ibasefilter**](/windows/desktop/api/Strmif/nn-strmif-ibasefilter) -Schnittstelle des Filters, der die Qualitäts Steuerungs Meldung übermittelt hat.
+Zeiger auf die [**IBaseFilter-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-ibasefilter) des Filters, der die Qualitätskontrollnachricht übermittelt hat.
 
 </dd> <dt>
 
-*Q1* 
+*Q* 
 </dt> <dd>
 
-[**Qualitäts**](/windows/win32/api/strmif/ns-strmif-quality) Struktur, die die Qualitäts Steuerungs Meldung enthält.
+[**Qualitätsstruktur,**](/windows/win32/api/strmif/ns-strmif-quality) die die Qualitätskontrollmeldung enthält.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT** -Wert zurück. Mögliche Werte sind in der folgenden Tabelle aufgeführt.
+Gibt einen **HRESULT-Wert** zurück. Mögliche Werte sind die in der folgenden Tabelle gezeigten Werte.
 
 
 
 | Rückgabecode                                                                                       | Beschreibung                                                |
 |---------------------------------------------------------------------------------------------------|------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>              | Erfolg.<br/>                                        |
-| <dl> <dt>**VFW \_ E \_ nicht \_ gefunden**</dt> </dl> | Es konnte kein Objekt gefunden werden, um die Nachricht zu akzeptieren.<br/> |
+| <dl> <dt>**VFW \_ E \_ NICHT \_ GEFUNDEN**</dt> </dl> | Es wurde kein Objekt zum Akzeptieren der Nachricht finden.<br/> |
 
 
 
@@ -74,16 +74,16 @@ Gibt einen **HRESULT** -Wert zurück. Mögliche Werte sind in der folgenden Tabe
 
 ## <a name="remarks"></a>Bemerkungen
 
-Diese Methode ruft die [**ctransformfilter:: alterquality**](ctransformfilter-alterquality.md) -Methode des Filters auf. Wenn der Filter die Qualitäts Meldung nicht verarbeitet, ruft diese Methode die [**cbaseinputpin::P assnotify**](cbaseinputpin-passnotify.md) -Methode für die Eingabe-PIN des Filters auf. Die **passnotify** -Methode übergibt den upstreamnachrichten-Upstreamdienst (oder an einen benutzerdefinierten Quality Manager, wenn eine installiert wurde).
+Diese Methode ruft die [**CTransformFilter::AlterQuality-Methode**](ctransformfilter-alterquality.md) des Filters auf. Wenn der Filter die Qualitätsnachricht nicht verarbeitet, ruft diese Methode die [**CBaseInputPin::P assNotify-Methode**](cbaseinputpin-passnotify.md) auf dem Eingabepin des Filters auf. Die **PassNotify-Methode** übergibt die Qualitätsmeldung upstream (oder an einen benutzerdefinierten Qualitäts-Manager, sofern installiert).
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Transfrm. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Transfrm.h (streams.h enthalten)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 

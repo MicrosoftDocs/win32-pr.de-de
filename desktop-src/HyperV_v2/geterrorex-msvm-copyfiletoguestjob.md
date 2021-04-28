@@ -1,7 +1,7 @@
 ---
-description: Ruft die Fehler Objekte für den Auftrag ab, sofern vorhanden.
+description: 'Msvm_CopyFileToGuestJob::GetErrorEx-Methode: Ruft die Fehlerobjekte für den Auftrag ab, sofern vorhanden.'
 ms.assetid: 817AF83B-B601-4AE4-AB5B-CFEACB9A7F41
-title: 'Msvm_CopyFileToGuestJob:: geterrorex-Methode'
+title: Msvm_CopyFileToGuestJob::GetErrorEx-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 179ad3a70a985442d855d447ef4eab955d177f0c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 81a570c42457257212e83f9c0c034c4a390e4c04
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106345756"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108109668"
 ---
-# <a name="msvm_copyfiletoguestjobgeterrorex-method"></a>MSVM \_ copyfiledeguestjob:: geterrorex-Methode
+# <a name="msvm_copyfiletoguestjobgeterrorex-method"></a>Msvm \_ CopyFileToGuestJob::GetErrorEx-Methode
 
-Ruft die Fehler Objekte für den Auftrag ab, sofern vorhanden. Wenn der Auftrag ausgeführt wird oder ohne Fehler beendet wurde, gibt diese Methode keine [**MSVM- \_ Fehler**](msvm-error.md) Instanz zurück. Wenn der Auftrag jedoch aufgrund eines internen Problems fehlgeschlagen ist oder der Auftrag von einem Client beendet wurde, werden mindestens eine **MSVM- \_ Fehler** Instanz zurückgegeben.
+Ruft die Fehlerobjekte für den Auftrag ab, sofern vorhanden. Wenn der Auftrag ausgeführt wird oder ohne Fehler beendet wurde, gibt diese Methode keine [**Msvm \_ Error-Instanz**](msvm-error.md) zurück. Wenn der Auftrag jedoch aufgrund eines internen Problems fehlgeschlagen ist oder weil der Auftrag von einem Client beendet wurde, wird mindestens eine **Msvm \_ Error-Instanz** zurückgegeben.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,10 +39,10 @@ uint32 GetErrorEx(
 
 <dl> <dt>
 
-*Fehler* \[ vorgenommen\]
+*Fehler* \[ out\]
 </dt> <dd>
 
-Wenn der Betriebsstatus des Auftrags nicht 2 (OK) ist, gibt diese Methode mindestens eine eingebettete Instanz der [**MSVM- \_ Fehler**](msvm-error.md) Klasse im CIM-XML-Format zurück, die die im Auftrag gefundenen Fehler darstellt. Wenn der Betriebsstatus des Auftrags 2 (OK) ist, wird **null** zurückgegeben.
+Wenn der Betriebsstatus des Auftrags nicht 2 (OK) ist, gibt diese Methode mindestens eine eingebettete Instanz der [**Msvm \_ Error-Klasse**](msvm-error.md) im CIM-XML-Format zurück, die die im Auftrag aufgetretenen Fehler darstellen. Wenn der Betriebsstatus des Auftrags 2 (OK) ist, wird **NULL** zurückgegeben.
 
 </dd> </dl>
 
@@ -55,7 +55,7 @@ Diese Methode gibt einen der folgenden Werte zurück.
 **Abgeschlossen ohne Fehler** (0)
 </dt> <dt>
 
-Fehler **(32768** )
+**Fehler** (32768)
 </dt> <dt>
 
 **Zugriff verweigert** (32769)
@@ -64,49 +64,49 @@ Fehler **(32768** )
 **Nicht unterstützt** (32770)
 </dt> <dt>
 
-Der **Status ist "Unknown** " (32771).
+**Status ist unbekannt** (32771)
 </dt> <dt>
 
 **Timeout** (32772)
 </dt> <dt>
 
-**Ungültiger Parameter** (32773)
+**Ungültiger** Parameter (32773)
 </dt> <dt>
 
-Das **System wird verwendet** (32774).
+**System wird verwendet** (32774)
 </dt> <dt>
 
-**Ungültiger Status für diesen Vorgang** (32775).
+**Ungültiger Zustand für diesen Vorgang** (32775)
 </dt> <dt>
 
-**Falscher Datentyp** (32776).
+**Falscher Datentyp** (32776)
 </dt> <dt>
 
-Das **System ist nicht verfügbar** (32777).
+**System ist nicht verfügbar** (32777)
 </dt> <dt>
 
-**Nicht** genügend Arbeitsspeicher (32778)
+**Nicht genügend Arbeitsspeicher** (32778)
 </dt> </dl>
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | \[Nur Desktop-Apps Windows 8.1\]<br/>                                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 R2 \[ -Desktop-Apps\]<br/>                                                 |
-| Namespace<br/>                | \\\\\\Stammvirtualisierung \\ v2<br/>                                                                 |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 8.1 \[ Desktop-Apps\]<br/>                                                            |
+| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ R2-Desktop-Apps\]<br/>                                                 |
+| Namespace<br/>                | \\\\Root \\ Virtualization \\ V2<br/>                                                                 |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**MSVM \_ copyfilein guestjob**](msvm-copyfiletoguestjob.md)
+[**Msvm \_ CopyFileToGuestJob**](msvm-copyfiletoguestjob.md)
 </dt> </dl>
 
  

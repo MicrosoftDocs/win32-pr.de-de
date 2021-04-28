@@ -1,7 +1,7 @@
 ---
-description: Stellt den Zugriff auf von einem Objekt verfügbar gemachte Eigenschaften und Methoden bereit.
+description: 'CMediaEvent.Invoke-Methode: Ermöglicht den Zugriff auf Eigenschaften und Methoden, die von einem -Objekt verfügbar gemacht werden.'
 ms.assetid: 2b091b57-0855-489a-9a33-cfc75f63ad07
-title: Cmediaevent. aufrufen-Methode (ctlutil. h)
+title: CMediaEvent.Invoke-Methode (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,14 +16,14 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 22482cffe11f62d50361bc950409858a2436d8a4
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: ea812d0c7629b98d90f3f7e535d229c707452b23
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358742"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108095538"
 ---
-# <a name="cmediaeventinvoke-method"></a>Cmediaevent. aufrufen-Methode
+# <a name="cmediaeventinvoke-method"></a>CMediaEvent.Invoke-Methode
 
 Stellt den Zugriff auf von einem Objekt verfügbar gemachte Eigenschaften und Methoden bereit.
 
@@ -49,82 +49,82 @@ HRESULT Invoke(
 
 <dl> <dt>
 
-*dispidmember* 
+*dispidMember* 
 </dt> <dd>
 
-Der Bezeichner des Members. Verwenden Sie [**cmediaevent:: GetIDsOfNames**](cmediaevent-getidsofnames.md) oder die Dokumentation des Objekts, um den Dispatchbezeichner abzurufen.
+Bezeichner des Mitglieds. Verwenden [**Sie CMediaEvent::GetIDsOfNames**](cmediaevent-getidsofnames.md) oder die Dokumentation des Objekts, um den Dispatchbezeichner zu erhalten.
 
 </dd> <dt>
 
 *riid* 
 </dt> <dd>
 
-Für die zukünftige Verwendung reserviert. Muss IID \_ NULL sein.
+Für die zukünftige Verwendung reserviert. Muss IID NULL \_ sein.
 
 </dd> <dt>
 
 *lcid* 
 </dt> <dd>
 
-Der Gebiets Schema Kontext, in dem Argumente interpretiert werden sollen.
+Der Locale-Kontext, in dem Argumente interpretiert werden.
 
 </dd> <dt>
 
 *wFlags* 
 </dt> <dd>
 
-Flags, die den Kontext des `CMediaEvent::Invoke` Aufrufes beschreiben.
+Flags, die den Kontext des Aufrufs `CMediaEvent::Invoke` beschreiben.
 
 </dd> <dt>
 
-*pdispparameams* 
+*pdispparams* 
 </dt> <dd>
 
-Ein Zeiger auf eine-Struktur, die ein Array von Argumenten, ein Array von Argument dispatchids für benannte Argumente und Zähler für die Anzahl der Elemente in den Arrays enthält.
+Zeiger auf eine -Struktur, die ein Array von Argumenten, ein Array von Argument-Dispatch-IDs für benannte Argumente und die Anzahl der Elemente in den Arrays enthält.
 
 </dd> <dt>
 
-*pVarResult* 
+*pvarResult* 
 </dt> <dd>
 
-Ein Zeiger auf den Speicherort, an dem das Ergebnis gespeichert werden soll, oder **null** , wenn der Aufrufer kein Ergebnis erwartet.
+Zeiger auf den Ort, an dem das Ergebnis gespeichert werden soll, oder **NULL,** wenn der Aufrufer kein Ergebnis erwartet.
 
 </dd> <dt>
 
 *pexcepinfo* 
 </dt> <dd>
 
-Zeiger auf eine-Struktur, die Ausnahme Informationen enthält.
+Zeiger auf eine -Struktur, die Ausnahmeinformationen enthält.
 
 </dd> <dt>
 
-*gibt puArgErr* 
+*puArgErr* 
 </dt> <dd>
 
-Zeiger auf den Index des ersten Arguments innerhalb des **rgvarg** -Arrays der **DISPPARAMS** -Struktur, das einen Fehler aufweist. Weitere Informationen zu **disppara** Metern finden Sie unter Platform SDK.
+Zeiger auf den Index des ersten Arguments innerhalb des **rgvarg-Arrays** der **DISPPARAMS-Struktur** mit einem Fehler. Weitere Informationen zu **DISPPARAMS finden** Sie im Platform SDK.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt DISP \_ E \_ unknowninterface zurück, wenn *riid* nicht IID \_ NULL ist. Gibt einen der Fehlercodes aus [**cmediaevent:: GetTypeInfo**](cmediaevent-gettypeinfo.md) zurück, wenn der-Rückruf fehlschlägt. Andernfalls wird das **HRESULT** aus dem Aufruf von **IDispatch::** Aufruf zurückgegeben.
+Gibt DISP \_ E \_ UNKNOWNINTERFACE zurück, *wenn riid* nicht IID \_ NULL ist. Gibt einen der Fehlercodes von [**CMediaEvent::GetTypeInfo**](cmediaevent-gettypeinfo.md) zurück, wenn der Aufruf fehlschlägt. Andernfalls gibt das **HRESULT** aus dem Aufruf von **IDispatch::Invoke** zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cmediaevent-Klasse**](cmediaevent.md)
+[**CMediaEvent-Klasse**](cmediaevent.md)
 </dt> </dl>
 
  

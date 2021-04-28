@@ -1,7 +1,7 @@
 ---
-description: Gibt die normalisierte Version eines 4D-Vektors zurück.
+description: 'D3DXVec4Normalize-Funktion (D3DX10Math.h): Gibt die normalisierte Version eines 4D-Vektors zurück.'
 ms.assetid: ed3c48cf-4985-4ef3-b733-f8532e3ff6b5
-title: D3DXVec4Normalize-Funktion (D3DX10Math. h)
+title: D3DXVec4Normalize-Funktion (D3DX10Math.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,14 +13,14 @@ api_type:
 - HeaderDef
 api_location:
 - D3DX10Math.h
-ms.openlocfilehash: ebedbdddbe558bfad71520b64aa0cf2ff4c2f451
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 1577ff3109c2cc3ca547f68f7841ecebb2f03569
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104355296"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108102908"
 ---
-# <a name="d3dxvec4normalize-function-d3dx10mathh"></a>D3DXVec4Normalize-Funktion (D3DX10Math. h)
+# <a name="d3dxvec4normalize-function-d3dx10mathh"></a>D3DXVec4Normalize-Funktion (D3DX10Math.h)
 
 Gibt die normalisierte Version eines 4D-Vektors zurück.
 
@@ -40,21 +40,21 @@ D3DXVECTOR4* D3DXVec4Normalize(
 
 <dl> <dt>
 
-*Pout* \[ in, out\]
+*pOut* \[ in, out\]
 </dt> <dd>
 
 Typ: **[ **D3DXVECTOR4**](../direct3d9/d3dxvector4.md)\***
 
-Zeiger auf das [**D3DXVECTOR4**](d3d10-d3dxvector4.md) , das das Ergebnis des Vorgangs ist.
+Zeiger auf [**D3DXVECTOR4,**](d3d10-d3dxvector4.md) das das Ergebnis des Vorgangs ist.
 
 </dd> <dt>
 
-*PV* \[ in\]
+*pV* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXVECTOR4**](../direct3d9/d3dxvector4.md) \***
+Typ: **const [**D3DXVECTOR4**](../direct3d9/d3dxvector4.md) \***
 
-Ein Zeiger auf die Quell-D3DXVECTOR4-Struktur.
+Zeiger auf die D3DXVECTOR4-Quellstruktur.
 
 </dd> </dl>
 
@@ -66,19 +66,19 @@ Zeiger auf eine D3DXVECTOR4-Struktur, die die normalisierte Version des Vektors 
 
 ## <a name="remarks"></a>Bemerkungen
 
-Der Rückgabewert für diese Funktion ist derselbe Wert, der im Pout-Parameter zurückgegeben wird. Auf diese Weise kann die D3DXVec4Normalize-Funktion als Parameter für eine andere Funktion verwendet werden.
+Der Rückgabewert für diese Funktion ist der gleiche Wert, der im pOut-Parameter zurückgegeben wird. Auf diese Weise kann die D3DXVec4Normalize-Funktion als Parameter für eine andere Funktion verwendet werden.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------|-----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3DX10Math. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3DX10Math.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

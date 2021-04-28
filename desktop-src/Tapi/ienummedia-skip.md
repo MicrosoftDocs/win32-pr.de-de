@@ -1,21 +1,21 @@
 ---
-description: Die Skip-Methode überspringt die nächste angegebene Anzahl von Elementen in der enumerationssequenz.
+description: 'IEnumMedia::Skip-Methode: Die Skip-Methode überspringt die nächste angegebene Anzahl von Elementen in der Enumerationssequenz.'
 ms.assetid: 825972c9-5303-4c5a-9475-dc67c185af91
-title: 'Ienummedia:: Skip-Methode (sdpblb. h)'
+title: IEnumMedia::Skip-Methode (Sdpblb.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: cd950fd61ad6f6b2030b03d0d269854f86e3a02d
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 1d8c600a201d6800fcb04dba5f208fd5cb810078
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106352143"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108084188"
 ---
-# <a name="ienummediaskip-method"></a>Ienummedia:: Skip-Methode
+# <a name="ienummediaskip-method"></a>IEnumMedia::Skip-Methode
 
-\[ Rendezvous-Steuerelemente und Schnittstellen für die IP-telefoniekonferenz sind nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet eine ähnliche Funktionalität.\]
+\[ Rendezvous-IP-Telefoniekonferenz-Steuerelemente und -Schnittstellen sind nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet ähnliche Funktionen.\]
 
-Die **Skip** -Methode überspringt die nächste angegebene Anzahl von Elementen in der enumerationssequenz.
+Die **Skip-Methode** überspringt die nächste angegebene Anzahl von Elementen in der Enumerationssequenz.
 
 ## <a name="syntax"></a>Syntax
 
@@ -32,7 +32,7 @@ HRESULT Skip(
 
 <dl> <dt>
 
-*celt* \[ in\]
+*Celt* \[ In\]
 </dt> <dd>
 
 Anzahl der zu überspringenden Elemente.
@@ -47,8 +47,8 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
 | Rückgabecode                                                                             | Beschreibung                                           |
 |-----------------------------------------------------------------------------------------|-------------------------------------------------------|
-| <dl> <dt>**S \_ OK**</dt> </dl>    | Die Anzahl übersprungener Elemente war " *celt*".<br/>     |
-| <dl> <dt>**S \_ false**</dt> </dl> | Die Anzahl übersprungener Elemente war nicht " *celt*".<br/> |
+| <dl> <dt>**S \_ OK**</dt> </dl>    | Die Anzahl der übersprungenen Elemente war *"celt".*<br/>     |
+| <dl> <dt>**S \_ FALSE**</dt> </dl> | Die Anzahl der übersprungenen Elemente war nicht *"celt".*<br/> |
 
 
 
@@ -58,20 +58,20 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------|---------------------------------------------------------------------------------------|
-| TAPI-Version<br/> | Erfordert TAPI 3,0 oder höher<br/>                                                 |
-| Header<br/>       | <dl> <dt>Sdpblb. h</dt> </dl>   |
-| Bibliothek<br/>      | <dl> <dt>UUID. lib</dt> </dl>   |
+| TAPI-Version<br/> | Erfordert TAPI 3.0 oder höher<br/>                                                 |
+| Header<br/>       | <dl> <dt>Sdpblb.h</dt> </dl>   |
+| Bibliothek<br/>      | <dl> <dt>Uuid.lib</dt> </dl>   |
 | DLL<br/>          | <dl> <dt>Sdpblb.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Ienummedia**](ienummedia.md)
+[**IEnumMedia**](ienummedia.md)
 </dt> </dl>
 
  

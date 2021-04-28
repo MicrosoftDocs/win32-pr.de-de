@@ -1,7 +1,7 @@
 ---
-description: Die decidebuffersize-Methode legt die Puffer Anforderungen fest.
+description: 'CTransformOutputPin.DecideBufferSize-Methode: Die DecideBufferSize-Methode legt die Pufferanforderungen fest.'
 ms.assetid: cdf9e384-623e-46a6-b123-d881fe21fb09
-title: Ctransformoutputpin. decidebuffersize-Methode (Transfrm. h)
+title: CTransformOutputPin.DecideBufferSize-Methode (Transfrm.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: dc17314887094b7f62a43f38dd406d0ac9039de3
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 1bc84eaf5e95a19436de5429ce018352cdaa286e
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372181"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108084838"
 ---
-# <a name="ctransformoutputpindecidebuffersize-method"></a>Ctransformoutputpin. decidebuffersize-Methode
+# <a name="ctransformoutputpindecidebuffersize-method"></a>CTransformOutputPin.DecideBufferSize-Methode
 
-Die- `DecideBufferSize` Methode legt die Puffer Anforderungen fest.
+Die `DecideBufferSize` -Methode legt die Pufferanforderungen fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,36 +43,36 @@ HRESULT DecideBufferSize(
 
 <dl> <dt>
 
-*palloc* 
+*pAlloc* 
 </dt> <dd>
 
-Ein Zeiger auf die [**imemfercator**](/windows/desktop/api/Strmif/nn-strmif-imemallocator) -Schnittstelle des Zuordners.
+Zeiger auf die [**IMemAllocator-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-imemallocator) der Zuweisung.
 
 </dd> <dt>
 
-*ppropinputrequest* 
+*ppropInputRequest* 
 </dt> <dd>
 
-Zeiger eine [**\_ zuordnereigenschafts**](/windows/win32/api/strmif/ns-strmif-allocator_properties) -Struktur, die die Puffer Anforderungen der Eingabe-PIN enthält.
+Zeiger auf eine [**ALLOCATOR \_ PROPERTIES-Struktur,**](/windows/win32/api/strmif/ns-strmif-allocator_properties) die die Pufferanforderungen des Eingabepins enthält.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT** -Wert zurück.
+Gibt einen **HRESULT-Wert** zurück.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Diese Methode überschreibt die [**cbaseoutputpin::D ecidebuffersize**](cbaseoutputpin-decidebuffersize.md) -Methode. Sie ruft die rein virtuelle [**ctransformfilter::D ecidebuffersize**](ctransformfilter-decidebuffersize.md) -Methode des Filters auf, die von der abgeleiteten Klasse des Filters implementiert werden muss.
+Diese Methode überschreibt die [**CBaseOutputPin::D ecideBufferSize-Methode.**](cbaseoutputpin-decidebuffersize.md) Sie ruft die rein virtuelle [**CTransformFilter::D ecideBufferSize-Methode**](ctransformfilter-decidebuffersize.md) des Filters auf, die die abgeleitete Klasse des Filters implementieren muss.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Transfrm. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Transfrm.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 

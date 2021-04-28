@@ -1,7 +1,7 @@
 ---
-description: Dekonstruktormethode.
+description: CMemAllocator.~CMemAllocator-Destruktor – Destruktormethode.
 ms.assetid: e0a04d93-fb77-4dc1-9bc8-7d3965bc6803
-title: Cmemzuordcator. ~ cmemzugerdebugtor (amfilter. h)
+title: CMemAllocator.~CMemAllocator-Destruktor (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: d49046eccd8d7ef71c4eeb4c75acffbf90f7d826
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 43b0505ee34df72ab82e4204b08440ac1a2558b5
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369670"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108095408"
 ---
-# <a name="cmemallocatorcmemallocator-destructor"></a>Cmemzuordcator. ~ cmemzugerdekonstruktor
+# <a name="cmemallocatorcmemallocator-destructor"></a>CMemAllocator.~CMemAllocator-Destruktor
 
-Dekonstruktormethode.
+Destruktormethode.
 
 ## <a name="syntax"></a>Syntax
 
@@ -38,24 +38,24 @@ Dekonstruktormethode.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Diese Methode überschreibt den basisklassendekonstruktor zum Aufrufen von [**cbasezucator::D ecommit**](cbaseallocator-decommit.md) und [**cmemzucator:: reallyfree**](cmemallocator-reallyfree.md).
+Diese Methode überschreibt den Basisklassen-Destruktor, um [**CBaseAllocator::D ecommit**](cbaseallocator-decommit.md) und [**CMemAllocator::ReallyFree**](cmemallocator-reallyfree.md)aufzurufen.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (streams.h einschließen)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cmemzuordcator-Klasse**](cmemallocator.md)
+[**CMemAllocator-Klasse**](cmemallocator.md)
 </dt> </dl>
 
  

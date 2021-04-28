@@ -1,19 +1,19 @@
 ---
-description: Tritt auf, wenn die Cursor-QuickInfo die digitalisierende Tablet-Oberfläche kontaktiert
+description: 'InkPicture.CursorDown-Ereignis: Tritt ein, wenn die Cursorspitze mit der digitalisierenden Tablettoberfläche in Kontakt tritt.'
 ms.assetid: 6d524400-1341-45da-86b2-098e34ed5a1c
-title: InkPicture. currsordown-Ereignis (msink AUT. h)
+title: InkPicture.CursorDown-Ereignis (Msinkaut.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 15724f0a71e801393ca8e93100ba2105da9ff2b7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: dc4b6128589ba2d0b87d4369e8bb58aa66eabf23
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104529897"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108116698"
 ---
-# <a name="inkpicturecursordown-event"></a>InkPicture. currsordown-Ereignis
+# <a name="inkpicturecursordown-event"></a>InkPicture.CursorDown-Ereignis
 
-Tritt auf, wenn die Cursor-QuickInfo die digitalisierende Tablet-Oberfläche kontaktiert
+Tritt ein, wenn die Cursorspitze die digitalisierende Tablettoberfläche kontaktiert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -31,17 +31,17 @@ void CursorDown(
 
 <dl> <dt>
 
-*Cursor* \[ in\]
+*Cursor* \[ In\]
 </dt> <dd>
 
-Das [**iinkcursor**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkcursor) -Objekt, das das **CursorDown** -Ereignis generiert hat.
+Das [**IInkCursor-Objekt,**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkcursor) das das **CursorDown-Ereignis** generiert hat.
 
 </dd> <dt>
 
-*Strich* \[ in\]
+*Strich* \[ In\]
 </dt> <dd>
 
-Das [**IInkStrokeDisp**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkstrokedisp) -Objekt, das gestartet wurde, **als das "** [**iinkcursor**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkcursor) "-Objekt ausgelöst wurde.
+Das [**IInkStrokeDisp-Objekt,**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkstrokedisp) das gestartet wurde, als das [**IInkCursor-Objekt**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkcursor) das **CursorDown-Ereignis** ausgelöst hat.
 
 </dd> </dl>
 
@@ -51,37 +51,37 @@ Dieses Ereignis gibt keinen Wert zurück.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Diese Ereignis Methoden werden in den Schnittstellen **\_ iinkcollectorevents**, **\_ iinkoverlayevents** und **\_ iinkpictureevents** definiert. Die **\_ iinkcollector Events**-, **\_ iinkoverlayevents**-und **\_ iinkpictureevents** -Schnittstelle implementieren die [**IDispatch**](/windows/win32/api/oaidl/nn-oaidl-idispatch) -Schnittstelle mit dem Bezeichner DISPID \_ icecursordown.
+Diese Ereignismethoden werden in den Schnittstellen **\_ IInkCollectorEvents,** **\_ IInkOverlayEvents** und **\_ IInkPictureEvents** definiert. Die Schnittstellen **\_ IInkCollectorEvents,** **\_ IInkOverlayEvents** und **\_ IInkPictureEvents** implementieren die [**IDispatch-Schnittstelle**](/windows/win32/api/oaidl/nn-oaidl-idispatch) mit dem Bezeichner DISPID \_ ICECursorDown.
 
-Verwenden Sie dieses Ereignis sorgfältig, da dies eine negative Auswirkung auf die Handschrift Leistung haben kann, wenn zu viel Code in den Ereignis Handlern ausgeführt wird. Um die Echtzeitleistung zu verbessern, blenden Sie den Mauszeiger in den [**MouseDown**](inkpicture-mousedown.md) -und [**MouseUp**](inkpicture-mouseup.md) -Ereignis Handlern aus, oder zeigen Sie ihn an.
+Verwenden Sie dieses Ereignis sorgfältig, da es negative Auswirkungen auf die Ink-Leistung haben kann, wenn zu viel Code in den Ereignishandlern ausgeführt wird. Um die Leistung von Ink-Echtzeit zu verbessern, blenden Sie den Mauszeiger in den [**MouseDown-**](inkpicture-mousedown.md) und [**MouseUp-Ereignishandlern**](inkpicture-mouseup.md) aus oder ein.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                       |
+| Unterstützte Mindestversion (Client)<br/> | Nur Desktop-Apps der Windows XP Tablet PC Edition \[\]<br/>                                                       |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                           |
-| Header<br/>                   | <dl> <dt>Msink AUT. h (erfordert auch msink AUT \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Msinkaut.h (erfordert auch Msinkaut \_ i.c)</dt> </dl> |
 | Bibliothek<br/>                  | <dl> <dt>InkObj.dll</dt> </dl>                               |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[InkPicture](inkpicture-control-reference.md)
+[Inkpicture](inkpicture-control-reference.md)
 </dt> <dt>
 
-[**Currsorbuttonup-Ereignis**](inkpicture-cursorbuttonup.md)
+[**CursorButtonUp-Ereignis**](inkpicture-cursorbuttonup.md)
 </dt> <dt>
 
-[**Currsorbuttondown-Ereignis**](inkpicture-cursorbuttondown.md)
+[**CursorButtonDown-Ereignis**](inkpicture-cursorbuttondown.md)
 </dt> <dt>
 
-[**Iinkcursor-Schnittstelle**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkcursor)
+[**IInkCursor-Schnittstelle**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkcursor)
 </dt> <dt>
 
 [**IInkStrokeDisp-Schnittstelle**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkstrokedisp)

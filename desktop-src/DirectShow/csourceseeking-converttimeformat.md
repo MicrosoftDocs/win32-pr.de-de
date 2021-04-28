@@ -1,7 +1,7 @@
 ---
-description: 'Die converttimeformat-Methode konvertiert von einem Zeitformat in ein anderes. Diese Methode implementiert die imediaseeking:: converttimeformat-Methode.'
+description: 'CSourceSeeking.ConvertTimeFormat-Methode: Die ConvertTimeFormat-Methode konvertiert von einem Zeitformat in ein anderes. Diese Methode implementiert die IMediaSeeking::ConvertTimeFormat-Methode.'
 ms.assetid: d0cb44fa-30c1-41b4-92a4-7169161e3140
-title: Csourceseeking. converttimeformat-Methode (ctlutil. h)
+title: CSourceSeeking.ConvertTimeFormat-Methode (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 3869ef5bc9656414ca5b465a04d04a4ca4be41e8
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 6ba5c6808e091f48baac7d8928e327f45773e13a
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106354063"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108085248"
 ---
-# <a name="csourceseekingconverttimeformat-method"></a>Csourceseeking. converttimeformat-Methode
+# <a name="csourceseekingconverttimeformat-method"></a>CSourceSeeking.ConvertTimeFormat-Methode
 
-Die- `ConvertTimeFormat` Methode konvertiert von einem Zeitformat in ein anderes. Diese Methode implementiert die [**imediaseeking:: converttimeformat**](/windows/desktop/api/Strmif/nf-strmif-imediaseeking-converttimeformat) -Methode.
+Die `ConvertTimeFormat` -Methode konvertiert von einem Zeitformat in ein anderes. Diese Methode implementiert die [**IMediaSeeking::ConvertTimeFormat-Methode.**](/windows/desktop/api/Strmif/nf-strmif-imediaseeking-converttimeformat)
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,45 +45,45 @@ HRESULT ConvertTimeFormat(
 
 <dl> <dt>
 
-*pTARGET* 
+*pTarget* 
 </dt> <dd>
 
-Ein Zeiger auf eine Variable, die die konvertierte Zeit empfängt.
+Zeiger auf eine Variable, die die konvertierte Zeit empfängt.
 
 </dd> <dt>
 
-*ptargetformat* 
+*pTargetFormat* 
 </dt> <dd>
 
-Zeiger auf die GUID des Ziel Formats. Wenn der Wert **null** ist, wird das aktuelle Format verwendet. Siehe [**Zeit Format-GUIDs**](time-format-guids.md).
+Zeiger auf die GUID des Zielformats. Bei **NULL** wird das aktuelle Format verwendet. Weitere Informationen finden Sie unter [**Zeitformat-GUIDs.**](time-format-guids.md)
 
 </dd> <dt>
 
 *Quelle* 
 </dt> <dd>
 
-Zeitwert, der konvertiert werden soll.
+Der zu konvertierende Zeitwert.
 
 </dd> <dt>
 
-*psourceformat* 
+*pSourceFormat* 
 </dt> <dd>
 
-Ein Zeiger auf die Zeitformat-GUID des zu konvertierenden Formats. Wenn der Wert **null** ist, wird das aktuelle Format verwendet.
+Zeiger auf die GUID des Zeitformats des zu konvertierende Formats. Bei **NULL** wird das aktuelle Format verwendet.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen der **HRESULT** -Werte zurück, die in der folgenden Tabelle aufgeführt sind.
+Gibt einen der in der folgenden Tabelle aufgeführten **HRESULT-Werte** zurück.
 
 
 
 | Rückgabecode                                                                                  | Beschreibung                          |
 |----------------------------------------------------------------------------------------------|--------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>         | Erfolg<br/>                   |
-| <dl> <dt>**E \_ invalidArg**</dt> </dl> | Ungültiges Argument<br/>          |
-| <dl> <dt>**E- \_ Zeiger**</dt> </dl>    | **Null** -Zeigerargument<br/> |
+| <dl> <dt>**E \_ INVALIDARG**</dt> </dl> | Ungültiges Argument<br/>          |
+| <dl> <dt>**E \_ POINTER**</dt> </dl>    | **NULL-Zeigerargument**<br/> |
 
 
 
@@ -91,24 +91,24 @@ Gibt einen der **HRESULT** -Werte zurück, die in der folgenden Tabelle aufgefü
 
 ## <a name="remarks"></a>Bemerkungen
 
-Das einzige von der Basisklasse unterstützte Zeitformat ist die Zeit \_ Format \_ Medien \_ Zeit (100-Nanosecond-Einheiten). Diese Methode gibt E \_ invalidArg zurück, außer in dem trivialen Fall, in dem *ptargetformat* und *psourceformat* beide die Zeit \_ Format \_ Medien \_ Zeit angeben.
+Das einzige von der Basisklasse unterstützte Zeitformat ist TIME FORMAT MEDIA TIME (Einheiten von \_ \_ \_ 100 Nanosekunden). Diese Methode gibt E INVALIDARG zurück, außer in dem trivialen Fall, in dem \_ *sowohl pTargetFormat* als auch *pSourceFormat* TIME \_ FORMAT MEDIA TIME \_ \_ angeben.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (einschließlich Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Csourceseeking-Klasse**](csourceseeking.md)
+[**CSourceSeeking-Klasse**](csourceseeking.md)
 </dt> </dl>
 
  

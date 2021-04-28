@@ -1,7 +1,7 @@
 ---
-description: Konstruktormethode.
+description: CMemAllocator.CMemAllocator-Konstruktor – Konstruktormethode.
 ms.assetid: 2340b39a-cab6-4524-b8cd-b22d4bdd24d0
-title: Cmemzuordcator. cmemzucator-Konstruktor (amfilter. h)
+title: CMemAllocator.CMemAllocator-Konstruktor (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,14 +16,14 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: b650e23761c3fe5b3f5014666f90c679f088c4a4
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 1151572c32efe69cceb89e7a5ea5a045955b5f43
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358374"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108095398"
 ---
-# <a name="cmemallocatorcmemallocator-constructor"></a>Cmemzuzucator. cmemzucator-Konstruktor
+# <a name="cmemallocatorcmemallocator-constructor"></a>CMemAllocator.CMemAllocator-Konstruktor
 
 Konstruktormethode.
 
@@ -51,17 +51,17 @@ Zeiger auf eine Zeichenfolge, die den Namen der Zuweisung enthält.
 
 </dd> <dt>
 
-*Kro* 
+*Punk* 
 </dt> <dd>
 
-Zeiger auf den Besitzer dieses Objekts. Wenn das Objekt aggregiert wird, übergeben Sie einen Zeiger an die **IUnknown** -Schnittstelle des Aggregations Objekts. Andernfalls legen Sie diesen Parameter auf **null** fest.
+Zeiger auf den Besitzer dieses Objekts. Wenn das Objekt aggregiert wird, übergeben Sie einen Zeiger auf die **IUnknown-Schnittstelle** des aggregierenden Objekts. Legen Sie andernfalls diesen Parameter auf **NULL** fest.
 
 </dd> <dt>
 
-*PHR* 
+*Phr* 
 </dt> <dd>
 
-Ein Zeiger auf eine Variable, die einen **HRESULT** -Wert empfängt, der angibt, ob die Methode erfolgreich war oder fehlgeschlagen ist.
+Zeiger auf eine Variable, die einen **HRESULT-Wert** empfängt, der den Erfolg oder Fehler der Methode angibt.
 
 </dd> </dl>
 
@@ -69,18 +69,18 @@ Ein Zeiger auf eine Variable, die einen **HRESULT** -Wert empfängt, der angibt,
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (streams.h einschließen)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cmemzuordcator-Klasse**](cmemallocator.md)
+[**CMemAllocator-Klasse**](cmemallocator.md)
 </dt> </dl>
 
  

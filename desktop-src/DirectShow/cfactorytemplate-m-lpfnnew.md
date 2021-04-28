@@ -1,7 +1,7 @@
 ---
-description: Ein Zeiger auf eine Funktion, die eine Instanz des-Objekts erstellt.
+description: 'CFactoryTemplate::m_lpfnNew Member : Zeiger auf eine Funktion, die eine Instanz des -Objekts erstellt.'
 ms.assetid: 86859bf9-e16a-4494-bf1b-1d8ddbc1c805
-title: 'Cfactoriytemplate:: m_lpfnNew Member (ComBase. h)'
+title: CFactoryTemplate::m_lpfnNew Member (Combase.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 2299f7a87f348ac8a5fa6c6d83b6a17fbf97ca28
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: ee4ec8e1503d3b260e025d154624b2d7c09bb49b
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106359641"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108095648"
 ---
-# <a name="cfactorytemplatem_lpfnnew-member"></a>Cfactor ytemplate:: m \_ lpfnnew-Member
+# <a name="cfactorytemplatem_lpfnnew-member"></a>CFactoryTemplate::m \_ lpfnNew-Member
 
-Ein Zeiger auf eine Funktion, die eine Instanz des-Objekts erstellt.
+Zeiger auf eine Funktion, die eine Instanz des -Objekts erstellt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -38,11 +38,11 @@ LPFNNewCOMObject m_lpfnNew;
 
 ## <a name="remarks"></a>Bemerkungen
 
-Deklarieren Sie in der DLL eine statische Funktion, die einen Zeiger auf eine neue Instanz des-Objekts zurückgibt. Legen Sie in der Factory-Vorlage die **m \_ lpfnnew** -Member-Variable auf die Adresse dieser statischen Funktion fest.
+Deklarieren Sie in Ihrer DLL eine statische Funktion, die einen Zeiger auf eine neue Instanz des -Objekts zurückgibt. Legen Sie in der Factoryvorlage die **Membervariable m \_ lpfnNew** auf die Adresse dieser statischen Funktion fest.
 
-Der Funktions Zeigertyp ist " [**lpfnnewcomobject**](lpfnnewcomobject.md)".
+Der Funktionszeigertyp ist [**LPFNNewCOMObject.**](lpfnnewcomobject.md)
 
-Das folgende Beispiel zeigt eine typische Funktion für **m \_ lpfnnew**:
+Das folgende Beispiel zeigt eine typische Funktion für **m \_ lpfnNew:**
 
 
 ```C++
@@ -65,18 +65,18 @@ CUnknown * WINAPI CMyComponent::CreateInstance(LPUNKNOWN pUnk, HRESULT *pHr)
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>ComBase. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Combase.h (einschließlich Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cfactorytemplate-Klasse**](cfactorytemplate.md)
+[**CFactoryTemplate-Klasse**](cfactorytemplate.md)
 </dt> </dl>
 
  

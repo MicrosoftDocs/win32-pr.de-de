@@ -1,6 +1,6 @@
 ---
-description: Legt den Auswahl Zustand eines Elements in der Ansicht fest.
-title: Shellfolderview. SelectItem-Methode (Shldisp. h)
+description: 'ShellFolderView.SelectItem-Methode: Legt den Auswahlzustand eines Elements in der Ansicht fest.'
+title: ShellFolderView.SelectItem-Methode (Shldisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 api_location:
 - Shell32.dll
 ms.assetid: 91c39d4c-56c3-4c2b-93e8-9f782ca0aa93
-ms.openlocfilehash: d44633983075cdf22581bce05cfb7c073f422084
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c8cbff0da4da55d9621bfeb01f26c5ed62fe230a
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104217690"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108116748"
 ---
-# <a name="shellfolderviewselectitem-method"></a>Shellfolderview. SelectItem-Methode
+# <a name="shellfolderviewselectitem-method"></a>ShellFolderView.SelectItem-Methode
 
-Legt den Auswahl Zustand eines Elements in der Ansicht fest.
+Legt den Auswahlzustand eines Elements in der Ansicht fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,21 +40,21 @@ ShellFolderView.SelectItem(
 
 <dl> <dt>
 
-*vitem* \[ in\]
+*vItem* \[ In\]
 </dt> <dd>
 
-Typ: **Variant \** _
+Typ: **\* Variant**
 
-Das [_ *folderItem* *](folderitem.md) -Objekt, für das der Auswahl Zustand festgelegt wird.
+Das [**FolderItem-Objekt,**](folderitem.md) für das der Auswahlzustand festgelegt wird.
 
 </dd> <dt>
 
-*dwFlags* \[ in\]
+*dwFlags* \[ In\]
 </dt> <dd>
 
-Type: **Integer**
+Typ: **Integer**
 
-Ein Satz von Flags, die den neuen Auswahl Zustand angeben. Dabei kann es sich um einen oder mehrere der folgenden Werte handeln:
+Ein Satz von Flags, die den neuen Auswahlzustand angeben. Dies kann einer oder mehrere der folgenden Werte sein.
 
 <dt>
 
@@ -87,7 +87,7 @@ Wählen Sie das Element aus.
 
 </dt> <dd>
 
-Versetzen Sie das Element in den Bearbeitungsmodus.
+Setzen Sie das Element in den Bearbeitungsmodus.
 
 </dd> <dt>
 
@@ -98,7 +98,7 @@ Versetzen Sie das Element in den Bearbeitungsmodus.
 
 </dt> <dd>
 
-Deaktivieren Sie alle Elemente außer dem angegebenen Element.
+Deaktivieren Sie alle Elemente bis auf das angegebene Element.
 
 </dd> <dt>
 
@@ -120,7 +120,7 @@ Stellen Sie sicher, dass das Element in der Ansicht angezeigt wird.
 
 </dt> <dd>
 
-Gibt dem Element den Fokus.
+Geben Sie dem Element den Fokus.
 
 </dd> </dl> </dd> </dl>
 
@@ -130,11 +130,11 @@ Diese Methode gibt keinen Wert zurück.
 
 ## <a name="remarks"></a>Bemerkungen
 
-[**FocusedItem**](shellfolderview-focuseditem.md) kann nur auf dem lokalen System aufgerufen werden. Es funktioniert nicht, wenn es auf einer Webseite über HTTP oder UNC ausgeführt wird.
+[**FocusedItem**](shellfolderview-focuseditem.md) kann nur auf dem lokalen System aufgerufen werden. Sie funktioniert nicht, wenn sie auf einer Webseite über HTTP oder UNC ausgeführt wird.
 
 ## <a name="examples"></a>Beispiele
 
-Das folgende Beispiel zeigt die ordnungsgemäße Verwendung dieser Methode in JScript Embedded in HTML.
+Das folgende Beispiel zeigt die ordnungsgemäße Verwendung dieser Methode in JScript, eingebettet in HTML.
 
 
 ```JScript
@@ -189,17 +189,17 @@ Das folgende Beispiel zeigt die ordnungsgemäße Verwendung dieser Methode in JS
 
 
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, Windows XP \[ Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, nur Windows \[ XP-Desktop-Apps\]<br/>                                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                           |
-| Header<br/>                   | <dl> <dt>Shldisp. h</dt> </dl>                           |
-| IDL<br/>                      | <dl> <dt>Shldisp. idl</dt> </dl>                         |
-| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4,71 oder höher)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>                           |
+| Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                         |
+| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4.71 oder höher)</dt> </dl> |
 
 
 

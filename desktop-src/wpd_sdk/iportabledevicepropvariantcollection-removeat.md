@@ -1,7 +1,7 @@
 ---
-description: Die RemoveAt-Methode entfernt das Element, das an der durch den angegebenen Index angegebenen Position gespeichert ist.
+description: 'IPortableDevicePropVariantCollection::RemoveAt-Methode: Die RemoveAt-Methode entfernt das Element, das an dem vom angegebenen Index angegebenen Speicherort gespeichert ist.'
 ms.assetid: cfee2454-5103-48ce-b9f7-1f76f5c18b6d
-title: 'Iportabledevicepropvariantcollection:: RemoveAt-Methode (portabledevicetypes. h)'
+title: IPortableDevicePropVariantCollection::RemoveAt-Methode (PortableDeviceTypes.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - PortableDeviceGUIDs.lib
 - PortableDeviceGUIDs.dll
-ms.openlocfilehash: 74c7900340caab6adfda1b4607df607a4f6f0811
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 5c62df57a95a9f5a8238ff61c4ca6dc3cb73ed36
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106351231"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108109943"
 ---
-# <a name="iportabledevicepropvariantcollectionremoveat-method"></a>Iportabledevicepropvariantcollection:: RemoveAt-Methode
+# <a name="iportabledevicepropvariantcollectionremoveat-method"></a>IPortableDevicePropVariantCollection::RemoveAt-Methode
 
-Die **RemoveAt** -Methode entfernt das Element, das an der durch den angegebenen Index angegebenen Position gespeichert ist.
+Die **RemoveAt-Methode** entfernt das Element, das an der vom angegebenen Index angegebenen Position gespeichert ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,7 +40,7 @@ HRESULT RemoveAt(
 
 <dl> <dt>
 
-*dwIndex* \[ in\]
+*dwIndex* \[ In\]
 </dt> <dd>
 
 Gibt den Index des zu entfernenden Elements an.
@@ -49,14 +49,14 @@ Gibt den Index des zu entfernenden Elements an.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
+Die -Methode gibt ein **HRESULT zurück.** Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
 
 
 
 | Rückgabecode                                                                                  | Beschreibung                                      |
 |----------------------------------------------------------------------------------------------|--------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>         | Die Methode wurde erfolgreich ausgeführt.<br/>                 |
-| <dl> <dt>**E \_ invalidArg**</dt> </dl> | Der angegebene Index lag außerhalb des zulässigen Bereichs.<br/> |
+| <dl> <dt>**E \_ INVALIDARG**</dt> </dl> | Der angegebene Index lag nicht im Bereich.<br/> |
 
 
 
@@ -64,24 +64,24 @@ Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzi
 
 ## <a name="remarks"></a>Bemerkungen
 
-Sie müssen einen NULL basierten Index angeben.
+Sie müssen einen nullbasierten Index angeben.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|----------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Portablede vicetypes. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>Portabledeviceguids. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>PortableDeviceTypes.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>PortableDeviceGUIDs.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iportabledevicepropvariantcollection-Schnittstelle**](iportabledevicepropvariantcollection.md)
+[**IPortableDevicePropVariantCollection-Schnittstelle**](iportabledevicepropvariantcollection.md)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
-description: Gibt die Determinante einer Matrix zurück.
+description: 'D3DXMatrixDeterminant-Funktion (D3DX10Math.h): Gibt die Determinante einer Matrix zurück.'
 ms.assetid: b0155c91-1554-42ef-b219-c6cdd2a905b5
-title: D3DXMatrixDeterminant-Funktion (D3DX10Math. h)
+title: D3DXMatrixDeterminant-Funktion (D3DX10Math.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,14 +14,14 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: 11b1092427b12c33d8c34c9f1bbd5e09cf1ccf2d
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 894db23a3079c1344c97cab00642cbbc0953450d
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106355049"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108103458"
 ---
-# <a name="d3dxmatrixdeterminant-function-d3dx10mathh"></a>D3DXMatrixDeterminant-Funktion (D3DX10Math. h)
+# <a name="d3dxmatrixdeterminant-function-d3dx10mathh"></a>D3DXMatrixDeterminant-Funktion (D3DX10Math.h)
 
 Gibt die Determinante einer Matrix zurück.
 
@@ -40,33 +40,33 @@ FLOAT D3DXMatrixDeterminant(
 
 <dl> <dt>
 
-*pm* \[ in\]
+*pM* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXMATRIX**](../direct3d9/d3dxmatrix.md) \***
+Typ: **const [**D3DXMATRIX**](../direct3d9/d3dxmatrix.md) \***
 
-Ein Zeiger auf die Quell-D3DXMATRIX-Struktur.
+Zeiger auf die D3DXMATRIX-Quellstruktur.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-Gibt den Determinanten der Matrix zurück.
+Gibt die Determinante der Matrix zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX10Math. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx10. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX10Math.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

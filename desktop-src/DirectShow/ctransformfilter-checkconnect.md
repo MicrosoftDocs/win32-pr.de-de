@@ -1,7 +1,7 @@
 ---
-description: Die checkConnect-Methode bestimmt, ob eine PIN-Verbindung geeignet ist.
+description: 'CTransformFilter.CheckConnect-Methode: Die CheckConnect-Methode bestimmt, ob eine Pinverbindung geeignet ist.'
 ms.assetid: 4bec4b19-3f7c-43d8-9a45-2eb2cc15a0d4
-title: Ctransformfilter. checkConnect-Methode (Transfrm. h)
+title: CTransformFilter.CheckConnect-Methode (Transfrm.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 0d41c50323bae7cb4eaca52a87d8c1b936237ccd
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 5927aac2fa58322c93a23489a22dc96a1e2a67f0
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370597"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108085098"
 ---
-# <a name="ctransformfiltercheckconnect-method"></a>Ctransformfilter. checkConnect-Methode
+# <a name="ctransformfiltercheckconnect-method"></a>CTransformFilter.CheckConnect-Methode
 
-Die- `CheckConnect` Methode bestimmt, ob eine PIN-Verbindung geeignet ist.
+Die `CheckConnect` -Methode bestimmt, ob eine Stecknadelverbindung geeignet ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,14 +46,14 @@ virtual HRESULT CheckConnect(
 *dir* 
 </dt> <dd>
 
-Member des enumerierten Typs der [**Pin- \_ Richtung**](/windows/win32/api/strmif/ne-strmif-pin_direction) , der angibt, welche PIN im Filter die Verbindung herstellen soll.
+Member des [**PIN DIRECTION-Enumerationstyps, \_**](/windows/win32/api/strmif/ne-strmif-pin_direction) der angibt, welcher Pin auf dem Filter die Verbindung herstellen soll.
 
 </dd> <dt>
 
-*ppin* 
+*pPin* 
 </dt> <dd>
 
-Zeiger auf die [**IPin**](/windows/desktop/api/Strmif/nn-strmif-ipin) -Schnittstelle der anderen PIN bei diesem Verbindungsversuch.
+Zeiger auf die [**IPin-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-ipin) des anderen Pins in diesem Verbindungsversuch.
 
 </dd> </dl>
 
@@ -63,24 +63,24 @@ Gibt S \_ OK zurück.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Die [**ctransforminputpin:: checkConnect**](ctransforminputpin-checkconnect.md) -Methode und die [**ctransformoutputpin:: checkConnect**](ctransformoutputpin-checkconnect.md) -Methode ruft diese Methode während des PIN-Verbindungsprozesses auf. Diese Methode führt in der Basisklasse keine Aktion aus. Diese kann von der abgeleiteten Klasse überschrieben werden. Beispielsweise kann die abgeleitete Klasse die andere PIN für eine bestimmte Schnittstelle Abfragen.
+Die Methoden [**CTransformInputPin::CheckConnect**](ctransforminputpin-checkconnect.md) und [**CTransformOutputPin::CheckConnect**](ctransformoutputpin-checkconnect.md) rufen diese Methode während des Pinverbindungsprozesses auf. Diese Methode führt in der Basisklasse nichts aus. Die abgeleitete Klasse kann sie überschreiben. Beispielsweise kann die abgeleitete Klasse den anderen Pin nach einer bestimmten Schnittstelle abfragen.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Transfrm. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Transfrm.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Ctransformfilter-Klasse**](ctransformfilter.md)
+[**CTransformFilter-Klasse**](ctransformfilter.md)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
-description: Ein Zeiger auf eine Funktion, die eine Instanz des-Objekts erstellt.
+description: 'LPFNNewCOMObject-Funktionszeiger: Zeiger auf eine Funktion, die eine Instanz des -Objekts erstellt.'
 ms.assetid: 8c9dab82-a080-4733-8c62-d090b28306e0
-title: Lpfnnewcomobject-Funktionszeiger (ComBase. h)
+title: LPFNNewCOMObject-Funktionszeiger (Combase.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - UserDefined
 api_location:
 - Combase.h
-ms.openlocfilehash: 07c0f8ab961c872c9dc0f92d2fff519b94cd049e
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: f3ea5bc172bc22f7aa9dce1f348bba552520565f
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367701"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108116528"
 ---
-# <a name="lpfnnewcomobject-function-pointer"></a>Lpfnnewcomobject-Funktionszeiger
+# <a name="lpfnnewcomobject-function-pointer"></a>LPFNNewCOMObject-Funktionszeiger
 
-Ein Zeiger auf eine Funktion, die eine Instanz des-Objekts erstellt.
+Zeiger auf eine Funktion, die eine Instanz des -Objekts erstellt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,36 +43,36 @@ typedef CUnknown* ( CALLBACK *LPFNNewCOMObject)(
 *pUnkOuter* 
 </dt> <dd>
 
-Ein Zeiger auf die **IUnknown** -Schnittstelle des Objekts, das das neue Objekt aggregiert, sofern vorhanden. Dieser Zeiger kann **null** sein.
+Zeiger auf die **IUnknown-Schnittstelle** des Objekts, das das neue Objekt aggregiert, sofern verfügbar. Dieser Zeiger kann NULL **sein.**
 
 </dd> <dt>
 
-*PHR* 
+*Phr* 
 </dt> <dd>
 
-Zeiger auf einen **HRESULT** -Wert. Wenn der Konstruktor ausfällt, empfängt dieser Parameter einen Fehlercode.
+Zeiger auf einen **HRESULT-Wert.** Wenn der Konstruktor fehlschlägt, empfängt dieser Parameter einen Fehlercode.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen Zeiger auf eine neue Instanz des-Objekts zurück.
+Gibt einen Zeiger auf eine neue Instanz des -Objekts zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------|----------------------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>ComBase. h (Include Streams. h)</dt> </dl> |
+| Header<br/> | <dl> <dt>Combase.h (einschließlich Streams.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cfactorytemplate-Klasse**](cfactorytemplate.md)
+[**CFactoryTemplate-Klasse**](cfactorytemplate.md)
 </dt> </dl>
 
  

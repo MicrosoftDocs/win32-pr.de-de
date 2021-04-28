@@ -1,7 +1,7 @@
 ---
-description: Konstruktormethode.
+description: 'CSeekingPassThru.CSeekingPassThru-Konstruktor : Konstruktormethode.'
 ms.assetid: e31253fc-b365-4414-9dee-906d4c41d16e
-title: Cseekingpassthru. cseekingpassthru-Konstruktor (seekpt. h)
+title: CSeekingPassThru.CSeekingPassThru-Konstruktor (Seekpt.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,14 +16,14 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: a93ed9706762b9a1672bfae85550ee4c2aceeead
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: cab9d6329f5175c96a3bfc5962ca5a555fe62b5d
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106352834"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108085378"
 ---
-# <a name="cseekingpassthrucseekingpassthru-constructor"></a>Cseekingpassthru. cseekingpassthru-Konstruktor
+# <a name="cseekingpassthrucseekingpassthru-constructor"></a>CSeekingPassThru.CSeekingPassThru-Konstruktor
 
 Konstruktormethode.
 
@@ -47,21 +47,21 @@ CSeekingPassThru(
 *pName* 
 </dt> <dd>
 
-Zeichenfolge, die den Namen des Objekts enthält. Weitere Informationen finden Sie unter [**cbaseobject**](cbaseobject.md) .
+Zeichenfolge, die den Namen des Objekts enthält. Weitere Informationen finden Sie unter [**CBaseObject.**](cbaseobject.md)
 
 </dd> <dt>
 
-*Kro* 
+*Punk* 
 </dt> <dd>
 
-Zeiger auf den Besitzer dieses Objekts. Wenn das Objekt aggregiert wird, übergeben Sie einen Zeiger an die **IUnknown** -Schnittstelle des Aggregations Objekts. Andernfalls legen Sie diesen Parameter auf **null** fest.
+Zeiger auf den Besitzer dieses Objekts. Wenn das Objekt aggregiert wird, übergeben Sie einen Zeiger auf die **IUnknown-Schnittstelle** des aggregierenden Objekts. Legen Sie andernfalls diesen Parameter auf **NULL** fest.
 
 </dd> <dt>
 
-*PHR* 
+*Phr* 
 </dt> <dd>
 
-Zeiger auf einen **HRESULT** -Wert. Ignoriert.
+Zeiger auf einen **HRESULT-Wert.** Ignoriert.
 
 </dd> </dl>
 
@@ -69,18 +69,18 @@ Zeiger auf einen **HRESULT** -Wert. Ignoriert.
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Seekpt. h (Include Streams. h)</dt> </dl>                                                                                    |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Seekpt.h (include Streams.h)</dt> </dl>                                                                                    |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cseekingpassthru-Klasse**](cseekingpassthru.md)
+[**CSeekingPassThru-Klasse**](cseekingpassthru.md)
 </dt> </dl>
 
  

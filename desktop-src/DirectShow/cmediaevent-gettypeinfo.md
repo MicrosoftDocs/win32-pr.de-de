@@ -1,7 +1,7 @@
 ---
-description: Ruft ein Type-Information-Objekt ab, das die Typinformationen für eine Schnittstelle abrufen kann.
+description: 'CMediaEvent.GetTypeInfo-Methode: Ruft ein Typinformationsobjekt ab, das die Typinformationen für eine Schnittstelle abrufen kann.'
 ms.assetid: d54042d5-e9d3-415c-b90d-1fe7d38164f5
-title: Cmediaevent. gettypeingefo-Methode (ctlutil. h)
+title: CMediaEvent.GetTypeInfo-Methode (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: e351d3b8b06bea4f6f9a1a160802972a8fa50f82
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: f93e3227051729f9d16e1f9ef8de464a14cca33b
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361462"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108095568"
 ---
-# <a name="cmediaeventgettypeinfo-method"></a>Cmediaevent. gettypeingefo-Methode
+# <a name="cmediaeventgettypeinfo-method"></a>CMediaEvent.GetTypeInfo-Methode
 
-Ruft ein Type-Information-Objekt ab, das die Typinformationen für eine Schnittstelle abrufen kann.
+Ruft ein Typinformationsobjekt ab, das die Typinformationen für eine Schnittstelle abrufen kann.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,44 +47,44 @@ HRESULT GetTypeInfo(
 *itinfo* 
 </dt> <dd>
 
-Typinformationen, die zurückgegeben werden. Übergeben Sie NULL, um Typinformationen für die **IDispatch** -Implementierung abzurufen.
+Geben Sie die zurückzugebende Information ein. Übergeben Sie 0 (null), um Typinformationen für die **IDispatch-Implementierung** abzurufen.
 
 </dd> <dt>
 
 *lcid* 
 </dt> <dd>
 
-Die Gebiets Schema-ID für die Typinformationen. Bei Klassen, die lokalisierte Elementnamen unterstützen, kann ein Objekt möglicherweise unterschiedliche Typinformationen für verschiedene Sprachen zurückgeben. Für Klassen, die keine lokalisierten Elementnamen unterstützen, kann dieser Parameter ignoriert werden.
+Gebietsschema-ID für die Typinformationen. Für Klassen, die lokalisierte Membernamen unterstützen, kann ein Objekt möglicherweise unterschiedliche Typinformationen für verschiedene Sprachen zurückgeben. Für Klassen, die lokalisierte Membernamen nicht unterstützen, kann dieser Parameter ignoriert werden.
 
 </dd> <dt>
 
 *pptinfo* 
 </dt> <dd>
 
-Adresse eines Zeigers auf das angeforderte Type-Information-Objekt.
+Adresse eines Zeigers auf das angeforderte Typinformationsobjekt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen E-Zeiger zurück, \_ Wenn *pptinfo* ungültig ist. Gibt den Typ \_ E \_ elementnotfound zurück, wenn *itinfo* nicht 0 (null) ist. Gibt S \_ OK zurück, wenn erfolgreich ist. Andernfalls wird ein **HRESULT** von einem der Aufrufe zurückgegeben, um den Typ abzurufen.
+Gibt einen E \_ POINTER zurück, wenn *pptinfo* ungültig ist. Gibt TYPE \_ E \_ ELEMENTNOTFOUND zurück, wenn *itinfo* nicht 0 (null) ist. Gibt S \_ OK zurück, wenn erfolgreich ist. Andernfalls gibt ein **HRESULT** aus einem der Aufrufe zurück, um den Typ abzurufen.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cmediaevent-Klasse**](cmediaevent.md)
+[**CMediaEvent-Klasse**](cmediaevent.md)
 </dt> </dl>
 
  

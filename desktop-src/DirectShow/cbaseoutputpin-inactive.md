@@ -1,7 +1,7 @@
 ---
-description: Die inaktive Methode benachrichtigt die PIN, dass der Filter nicht mehr aktiv ist.
+description: 'CBaseOutputPin.Inactive-Methode: Die Inaktive Methode benachrichtigt den Pin, dass der Filter nicht mehr aktiv ist.'
 ms.assetid: 14a020de-2102-4d49-8a34-d59abe6698d1
-title: Cbaseoutputpin. inaktive Methode (amfilter. h)
+title: CBaseOutputPin.Inactive-Methode (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: afec15e295e5c14cfb3d9efa6e733d1dc288b319
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: cc4901bba7f1e34d49ff5bafb7b291544157bd9c
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106366874"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108096138"
 ---
-# <a name="cbaseoutputpininactive-method"></a>Cbaseoutputpin. inaktive Methode
+# <a name="cbaseoutputpininactive-method"></a>CBaseOutputPin.Inactive-Methode
 
-Die- `Inactive` Methode benachrichtigt die PIN, dass der Filter nicht mehr aktiv ist.
+Die `Inactive` -Methode benachrichtigt den Pin, dass der Filter nicht mehr aktiv ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,14 +42,14 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT** -Wert zurück. Mögliche Werte sind die in der folgenden Tabelle aufgeführten Werte.
+Gibt einen **HRESULT-Wert** zurück. Mögliche Werte sind die in der folgenden Tabelle aufgeführten Werte.
 
 
 
 | Rückgabecode                                                                                          | Beschreibung                                  |
 |------------------------------------------------------------------------------------------------------|----------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>                 | Erfolg.<br/>                          |
-| <dl> <dt>**VFW \_ E \_ No- \_ Zuweisung**</dt> </dl> | Es ist keine Speicherzuweisung verfügbar.<br/> |
+| <dl> <dt>**VFW \_ E \_ NO \_ ALLOCATOR**</dt> </dl> | Es ist keine Speicherzuweisung verfügbar.<br/> |
 
 
 
@@ -57,26 +57,26 @@ Gibt einen **HRESULT** -Wert zurück. Mögliche Werte sind die in der folgenden 
 
 ## <a name="remarks"></a>Bemerkungen
 
-Diese Methode überschreibt die [**cbasepin:: inaktive**](cbasepin-inactive.md) -Methode. Sie ruft die [**imemzuzucator::D ecommit**](/windows/desktop/api/Strmif/nf-strmif-imemallocator-decommit) -Methode auf, um die Speicher Belegung zu Decommit.
+Diese Methode überschreibt die [**CBasePin::Inactive-Methode.**](cbasepin-inactive.md) Sie ruft die [**IMemAllocator::D ecommit-Methode**](/windows/desktop/api/Strmif/nf-strmif-imemallocator-decommit) auf, um denCommit der Speicherbelegung zu decommitieren.
 
-Wenn Sie diese Methode überschreiben, müssen Sie die Basisklassen Methode aus der über schreibenden Methode abrufen.
+Wenn Sie diese Methode überschreiben, rufen Sie die Basisklassenmethode aus ihrer überschreibenden Methode auf.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (streams.h enthalten)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbaseoutputpin-Klasse**](cbaseoutputpin.md)
+[**CBaseOutputPin-Klasse**](cbaseoutputpin.md)
 </dt> </dl>
 
  

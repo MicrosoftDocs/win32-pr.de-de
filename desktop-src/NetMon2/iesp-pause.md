@@ -1,7 +1,7 @@
 ---
-description: Die Pause-Methode hält die aktuelle Erfassung an.
+description: 'IESP::P ause-Methode: Die Pause-Methode hält die aktuelle Erfassung an.'
 ms.assetid: efbc8947-b9fe-4dbd-8097-375b5f99845e
-title: IESP::P ause-Methode (Netmon. h)
+title: IESP::P ause-Methode (Netmon.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - Ndisnpp.dll
 - Rmtnpp.dll
-ms.openlocfilehash: 0558c5dfe36f26e3aad9f31101364d2e8e5c4967
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 486c7aedc7092e0dd0f9f68cc1ea2ccad08d9438
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104525118"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108084238"
 ---
 # <a name="iesppause-method"></a>IESP::P ause-Methode
 
-Die **Pause** -Methode hält die aktuelle Erfassung an.
+Die **Pause-Methode** hält die aktuelle Erfassung an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,7 +40,7 @@ HRESULT STDMETHODCALLTYPE Pause(
 
 <dl> <dt>
 
-*lpstats* 
+*lpStats* 
 </dt> <dd>
 
 Veraltet.
@@ -49,7 +49,7 @@ Veraltet.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Methode erfolgreich ist, ist der Rückgabewert nmerr \_ Success.
+Wenn die Methode erfolgreich ist, ist der Rückgabewert NMERR \_ SUCCESS.
 
 Wenn die Methode nicht erfolgreich ist, ist der Rückgabewert einer der folgenden Fehlercodes:
 
@@ -57,10 +57,10 @@ Wenn die Methode nicht erfolgreich ist, ist der Rückgabewert einer der folgende
 
 | Rückgabecode                                                                                           | Beschreibung                                                                                                                   |
 |-------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**nmerr- \_ Erfassung \_ angehalten**</dt> </dl> | Die Erfassung wurde bereits angehalten.<br/>                                                                                     |
-| <dl> <dt>**nmerr wird \_ nicht \_ erfasst**</dt> </dl>  | Der NPP erfasst keine Daten. Wenden Sie [iESP:: Start](iesp-start.md) an, um die Erfassung zu starten.<br/>                            |
-| <dl> <dt>**nmerr \_ nicht \_ verbunden**</dt> </dl>  | Der npp ist nicht mit dem Netzwerk verbunden. Wenden Sie [iESP:: Connect](iesp-connect.md) an, um die NPP mit dem Netzwerk zu verbinden.<br/> |
-| <dl> <dt>**nmerr \_ nicht \_ ESP**</dt> </dl>        | Der npp ist mit dem Netzwerk verbunden, jedoch nicht mit der [iESP:: Connect](iesp-connect.md) -Methode.<br/>                     |
+| <dl> <dt>**NMERR \_ CAPTURE \_ PAUSED**</dt> </dl> | Die Erfassung wurde bereits angehalten.<br/>                                                                                     |
+| <dl> <dt>**NMERR NOT CAPTURING (NMERR \_ WIRD NICHT \_ ERFASST)**</dt> </dl>  | Der NPP erfasst keine Daten. Rufen [Sie IESP::Start auf,](iesp-start.md) um die Erfassung zu starten.<br/>                            |
+| <dl> <dt>**NMERR \_ NICHT \_ VERBUNDEN**</dt> </dl>  | Der NPP ist nicht mit dem Netzwerk verbunden. Rufen [Sie IESP::Connect auf,](iesp-connect.md) um die NPP mit dem Netzwerk zu verbinden.<br/> |
+| <dl> <dt>**NMERR \_ NICHT \_ ESP**</dt> </dl>        | Das NPP ist mit dem Netzwerk verbunden, aber nicht mit der [IESP::Connect-Methode.](iesp-connect.md)<br/>                     |
 
 
 
@@ -68,42 +68,42 @@ Wenn die Methode nicht erfolgreich ist, ist der Rückgabewert einer der folgende
 
 ## <a name="remarks"></a>Bemerkungen
 
-Während sich die Erfassung in einem angehaltenen Zustand befindet, werden der aktuellen [*Erfassungs Datei*](c.md) keine neuen Daten hinzugefügt, bis Sie die [iESP:: Resume](iesp-resume.md) -Methode zum Neustarten der Erfassung aufgerufen haben. Wenn anhalten und **fortsetzen verwendet** werden, um die Erfassung zu **beenden und neu** zu starten, werden alle erfassten Informationen in derselben Erfassungs Datei abgelegt.
+Während sich die Erfassung in einem angehaltenen Zustand befindet, werden der aktuellen Erfassungsdatei erst dann neue Daten hinzugefügt, wenn Sie die [IESP::Resume-Methode](iesp-resume.md) aufrufen, um die Erfassung neu zu starten. [](c.md) Wenn **Anhalten** und **Fortsetzen** zum Beenden und Neustarten der Erfassung verwendet werden, werden alle erfassten Informationen in derselben Erfassungsdatei gespeichert.
 
-Wenn Sie die **iESP::P ause** -Methode und die **iESP:: Resume** -Methode verwenden, um die Erfassung zu steuern, werden Netzwerkmonitor weiterhin [*Konversations Statistiken*](c.md) hinzufügen, sobald die Erfassung ausgeführt wird.
+Wenn Sie die **Methoden IESP::P ause** und **IESP::Resume** verwenden, um die Erfassung [](c.md) zu steuern, fügt Netzwerkmonitor weiterhin Konversationsstatistiken hinzu, wenn die Erfassung ausgeführt wird.
 
-Um die Erfassung neu zu starten, nennen Sie [iESP:: Resume](iesp-resume.md). Um die Erfassung anzuhalten, nennen Sie [iESP:: Beendigung](iesp-stop.md).
+Rufen Sie [IESP::Resume](iesp-resume.md)auf, um die Erfassung neu zu starten. Um die Erfassung zu beenden, rufen Sie [IESP::Stop](iesp-stop.md)auf.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                                                                     |
-| Header<br/>                   | <dl> <dt>Netmon. h</dt> </dl>                                                                      |
+| Header<br/>                   | <dl> <dt>Netmon.h</dt> </dl>                                                                      |
 | DLL<br/>                      | <dl> <dt>Ndisnpp.dll; </dt> <dt>Rmtnpp.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [IESP](iesp.md)
 </dt> <dt>
 
-[IESP:: Connect](iesp-connect.md)
+[IESP::Connect](iesp-connect.md)
 </dt> <dt>
 
-[IESP:: Resume](iesp-resume.md)
+[IESP::Resume](iesp-resume.md)
 </dt> <dt>
 
-[IESP:: Start](iesp-start.md)
+[IESP::Start](iesp-start.md)
 </dt> <dt>
 
-[IESP:: Beendigung](iesp-stop.md)
+[IESP::Stop](iesp-stop.md)
 </dt> </dl>
 
  

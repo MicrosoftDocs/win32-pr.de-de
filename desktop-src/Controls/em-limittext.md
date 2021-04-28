@@ -1,9 +1,9 @@
 ---
-title: EM_LIMITTEXT Meldung (Winuser. h)
-description: Legt den Text Grenzwert eines Bearbeitungs Steuer Elements fest.
+title: EM_LIMITTEXT (Winuser.h)
+description: 'EM_LIMITTEXT Meldung: Legt die Textgrenze eines Bearbeitungssteuerfelds fest.'
 ms.assetid: 5a605de7-8dc7-4c54-8f18-e0b08c720856
 keywords:
-- Windows-Steuerelemente für EM_LIMITTEXT Meldung
+- EM_LIMITTEXT Meldung Windows-Steuerelemente
 topic_type:
 - apiref
 api_name:
@@ -14,18 +14,18 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: bf45f7ee9cfd88a25b78f0bd58911e516c146096
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: a80ce29d4ee5155f6b3c5c32609366982655a078
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104476107"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108109788"
 ---
-# <a name="em_limittext-message"></a>EM- \_ Limit-Textnachricht
+# <a name="em_limittext-message"></a>EM \_ LIMITTEXT-Meldung
 
-Legt den Text Grenzwert eines Bearbeitungs Steuer Elements fest. Das Text Limit ist die maximale Text Menge in **TCHAR** s, die der Benutzer in das Bearbeitungs Steuerelement eingeben kann. Sie können diese Nachricht entweder an ein Bearbeitungs Steuerelement oder ein Rich Edit-Steuerelement senden.
+Legt die Textgrenze eines Bearbeitungssteuerfelds fest. Die Textgrenze ist die maximale Textmenge in **TCHAR** s, die der Benutzer in das Bearbeitungssteuerfeld eingeben kann. Sie können diese Nachricht entweder an ein Bearbeitungssteuer steuerelement oder an ein Rich Edit-Steuerelement senden.
 
-Für Bearbeitungs Steuerelemente und Microsoft Rich Edit 1,0 werden Bytes verwendet. Für Microsoft Rich Edit 2,0 und höher werden Zeichen verwendet.
+Für Bearbeitungssteuerelemente und Microsoft Rich Edit 1.0 werden Bytes verwendet. Für Microsoft Rich Edit 2.0 und höher werden Zeichen verwendet.
 
 ## <a name="parameters"></a>Parameter
 
@@ -34,11 +34,11 @@ Für Bearbeitungs Steuerelemente und Microsoft Rich Edit 1,0 werden Bytes verwen
 *wParam* 
 </dt> <dd>
 
-Die maximale Anzahl von **TCHAR**-s, die der Benutzer eingeben kann. Bei ANSI-Text ist dies die Anzahl der Bytes. bei Unicode-Text ist dies die Anzahl der Zeichen. Diese Zahl umfasst nicht das abschließende Null Zeichen.
+Die maximale Anzahl von **TCHAR-S,** die der Benutzer eingeben kann. Für ANSI-Text ist dies die Anzahl von Bytes. für Unicode-Text ist dies die Anzahl von Zeichen. Diese Zahl schließt das beendende NULL-Zeichen nicht ein.
 
-**Rich Edit-Steuerelemente:** Wenn dieser Parameter 0 (null) ist, wird die Textlänge auf 64.000 Zeichen festgelegt.
+**Umfangreiche Bearbeitungssteuerelemente:** Wenn dieser Parameter null ist, wird die Textlänge auf 64.000 Zeichen festgelegt.
 
-Wenn dieser Parameter NULL ist, wird die Textlänge für einzeilige Bearbeitungs Steuerelemente auf 0x7ffffffe-Zeichen oder-1 für mehrzeilige Bearbeitungs Steuerelemente festgelegt.
+Wenn dieser Parameter 0 (null) ist, wird die Textlänge auf 0x7FFFFFFE Zeichen für einzeilenbasierte Bearbeitungssteuerelemente oder -1 für mehrzeilenbasierte Bearbeitungssteuerelemente festgelegt.
 
 </dd> <dt>
 
@@ -55,43 +55,43 @@ Diese Meldung gibt keinen Wert zurück.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Die **EM- \_ limittext** -Nachricht schränkt nur den Text ein, den der Benutzer eingeben kann. Er wirkt sich nicht auf Text aus, der sich bereits im Bearbeitungs Steuerelement befindet, wenn die Nachricht gesendet wird, und wirkt sich nicht auf die Länge des Texts aus, der durch die [**WM- \_ SetText**](/windows/desktop/winmsg/wm-settext) -Nachricht in das Bearbeitungs Steuerelement kopiert wird Wenn eine Anwendung die **WM- \_ SetText** -Nachricht verwendet, um mehr Text in ein Bearbeitungs Steuerelement zu platzieren, als in der **EM- \_ limittext** Meldung angegeben ist, kann der Benutzer den gesamten Inhalt des Bearbeitungs Steuer Elements bearbeiten.
+Die **EM \_ LIMITTEXT-Meldung** schränkt nur den Text ein, den der Benutzer eingeben kann. Sie wirkt sich weder auf Text aus, der bereits im Bearbeitungssteuerfeld enthalten ist, wenn die Nachricht gesendet wird, noch auf die Länge des Texts, der von der [**WM \_ SETTEXT-Nachricht**](/windows/desktop/winmsg/wm-settext) in das Bearbeitungssteuerfeld kopiert wird. Wenn eine Anwendung die **WM \_ SETTEXT-Nachricht** verwendet, um mehr Text in ein Bearbeitungssteuerfeld zu platzieren, als in der **EM \_ LIMITTEXT-Meldung** angegeben ist, kann der Benutzer den gesamten Inhalt des Bearbeitungssteuerfelds bearbeiten.
 
-Vor dem Aufrufen von **EM- \_ Begrenzungs Text** beträgt der Standard Grenzwert für die Text Menge, die ein Benutzer in einem Bearbeitungs Steuerelement eingeben kann, 32.767 Zeichen.
+Bevor **EM \_ LIMITTEXT** aufgerufen wird, beträgt der Standardgrenzwert für die Textmenge, die ein Benutzer in ein Bearbeitungssteuerfeld eingeben kann, 32.767 Zeichen.
 
-Für einzeilige Bearbeitungs Steuerelemente ist das Text Limit entweder 0x7ffffffe Bytes oder der Wert des *wParam* -Parameters, je nachdem, welcher Wert kleiner ist. Für mehrzeilige Bearbeitungs Steuerelemente ist dieser Wert entweder-1 Byte oder der Wert des *wParam* -Parameters, je nachdem, welcher Wert kleiner ist.
+Bei einzeilenbasierten Bearbeitungssteuerelementen beträgt der Textgrenzwert 0x7FFFFFFE Bytes oder den Wert des *wParam-Parameters,* je nach Kleinerem. Bei mehrzeiligen Bearbeitungssteuerelementen ist dieser Wert entweder -1 Byte oder der Wert des *wParam-Parameters,* je nachdem, welcher Wert kleiner ist.
 
-Umfassende **Bearbeitung:** Wird in Microsoft Rich Edit 1,0 und höher unterstützt. Verwenden Sie den [**\_ exlimittext**](em-exlimittext.md) der Nachricht EM für Textlängen Werte größer als 64.000. Informationen zur Kompatibilität von Rich-Edit-Versionen mit den verschiedenen Systemversionen finden Sie unter Informationen [zu Rich Edit](about-rich-edit-controls.md)-Steuerelementen.
+**Rich Edit:** Wird in Microsoft Rich Edit 1.0 und höher unterstützt. Verwenden Sie die Meldung [**EM \_ EXLIMITTEXT**](em-exlimittext.md) für Textlängenwerte, die größer als 64.000 sind. Informationen zur Kompatibilität von Rich Edit-Versionen mit den verschiedenen Systemversionen finden Sie unter [Informationen zu Rich Edit-Steuerelementen.](about-rich-edit-controls.md)
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2003-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Winuser.h (windows.h einschließen)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 **Verweis**
 </dt> <dt>
 
-[**EM- \_ exlimittext**](em-exlimittext.md)
+[**EM \_ EXLIMITTEXT**](em-exlimittext.md)
 </dt> <dt>
 
-[**\_Limittext bearbeiten**](/windows/desktop/api/Windowsx/nf-windowsx-edit_limittext)
+[**Bearbeiten von \_ LimitText**](/windows/desktop/api/Windowsx/nf-windowsx-edit_limittext)
 </dt> <dt>
 
 **Andere Ressourcen**
 </dt> <dt>
 
-[**WM- \_ SetText**](/windows/desktop/winmsg/wm-settext)
+[**WM \_ SETTEXT**](/windows/desktop/winmsg/wm-settext)
 </dt> </dl>
 
  

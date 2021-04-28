@@ -1,7 +1,7 @@
 ---
-description: Enthält die Anzahl der Elemente in der Auflistung.
+description: 'FolderItemVerbs.Count-Eigenschaft: Enthält die Anzahl der Elemente in der Auflistung.'
 ms.assetid: a676593b-ea78-433d-a622-221028245c3a
-title: Folderitemverbs. Count-Eigenschaft (Shldisp. h)
+title: FolderItemVerbs.Count-Eigenschaft (Shldisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,14 +13,14 @@ api_type:
 - COM
 api_location:
 - Shell32.dll
-ms.openlocfilehash: b41e78261dfc9bc72e9262615bc395a9d559e33a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5545ea64da914188226fbdabf7cc6301baa695af
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104994719"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108089548"
 ---
-# <a name="folderitemverbscount-property"></a>Folderitemverbs. Count-Eigenschaft
+# <a name="folderitemverbscount-property"></a>FolderItemVerbs.Count (Eigenschaft)
 
 Enthält die Anzahl der Elemente in der Auflistung.
 
@@ -37,13 +37,13 @@ iCount = FolderItemVerbs.Count
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Eine **ganze** Zahl, die die **count** -Eigenschaft empfängt.
+Eine **ganze Zahl,** die die **Count-Eigenschaft** empfängt.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird **count** verwendet, um die Anzahl der für den System Steuerungs Ordner verfügbaren Verben abzurufen. Die richtige Verwendung wird für JScript, VBScript und Visual Basic angezeigt.
+Im folgenden Beispiel wird **Count verwendet,** um die Anzahl der verben abzurufen, die für den Systemsteuerung sind. Die richtige Verwendung wird für JScript, VBScript und Visual Basic.
 
-JScript
+Jscript:
 
 
 ```JScript
@@ -75,7 +75,7 @@ JScript
 
 
 
-VBScript
+Vbscript:
 
 
 ```VB
@@ -142,17 +142,17 @@ End Sub
 
 
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, Windows XP \[ Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Client)<br/> | Nur Windows 2000 Professional- und Windows \[ XP-Desktop-Apps\]<br/>                                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                           |
-| Header<br/>                   | <dl> <dt>Shldisp. h</dt> </dl>                           |
-| IDL<br/>                      | <dl> <dt>Shldisp. idl</dt> </dl>                         |
-| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4,71 oder höher)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>                           |
+| Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                         |
+| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4.71 oder höher)</dt> </dl> |
 
 
 
