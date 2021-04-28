@@ -1,7 +1,7 @@
 ---
-description: Führt mithilfe der angegebenen 2D-Vektoren eine aufgenommene Spline-Interpolierung aus.
+description: 'D3DXVec2Hermite-Funktion (D3dx9math.h): Führt eine Hermite-Splineinterpolation mit den angegebenen 2D-Vektoren aus.'
 ms.assetid: 30eb9490-bc01-4449-adfb-1c552e8ad3e7
-title: D3DXVec2Hermite-Funktion (D3dx9math. h)
+title: D3DXVec2Hermite-Funktion (D3dx9math.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,18 +14,18 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: d55b5453067f83544da5084f3e79ce70275362c5
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 88073e23826362e1f9a753f411ac89ac1e272fc6
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106373508"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108097988"
 ---
-# <a name="d3dxvec2hermite-function-d3dx9mathh"></a><span data-ttu-id="5a1fd-103">D3DXVec2Hermite-Funktion (D3dx9math. h)</span><span class="sxs-lookup"><span data-stu-id="5a1fd-103">D3DXVec2Hermite function (D3dx9math.h)</span></span>
+# <a name="d3dxvec2hermite-function-d3dx9mathh"></a><span data-ttu-id="eca3c-103">D3DXVec2Hermite-Funktion (D3dx9math.h)</span><span class="sxs-lookup"><span data-stu-id="eca3c-103">D3DXVec2Hermite function (D3dx9math.h)</span></span>
 
-<span data-ttu-id="5a1fd-104">Führt mithilfe der angegebenen 2D-Vektoren eine aufgenommene Spline-Interpolierung aus.</span><span class="sxs-lookup"><span data-stu-id="5a1fd-104">Performs a Hermite spline interpolation, using the specified 2D vectors.</span></span>
+<span data-ttu-id="eca3c-104">Führt eine Hermite-Splineinterpolation unter Verwendung der angegebenen 2D-Vektoren aus.</span><span class="sxs-lookup"><span data-stu-id="eca3c-104">Performs a Hermite spline interpolation, using the specified 2D vectors.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="5a1fd-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="5a1fd-105">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="eca3c-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="eca3c-105">Syntax</span></span>
 
 
 ```C++
@@ -41,85 +41,85 @@ D3DXVECTOR2* D3DXVec2Hermite(
 
 
 
-## <a name="parameters"></a><span data-ttu-id="5a1fd-106">Parameter</span><span class="sxs-lookup"><span data-stu-id="5a1fd-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="eca3c-106">Parameter</span><span class="sxs-lookup"><span data-stu-id="eca3c-106">Parameters</span></span>
 
 <dl> <dt>
 
-<span data-ttu-id="5a1fd-107">*Pout* \[ in, out\]</span><span class="sxs-lookup"><span data-stu-id="5a1fd-107">*pOut* \[in, out\]</span></span>
+<span data-ttu-id="eca3c-107">*pOut* \[ in, out\]</span><span class="sxs-lookup"><span data-stu-id="eca3c-107">*pOut* \[in, out\]</span></span>
 </dt> <dd>
 
-<span data-ttu-id="5a1fd-108">Typ: **[ **D3DXVECTOR2**](d3dxvector2.md)\***</span><span class="sxs-lookup"><span data-stu-id="5a1fd-108">Type: **[**D3DXVECTOR2**](d3dxvector2.md)\***</span></span>
+<span data-ttu-id="eca3c-108">Typ: **[ **D3DXVECTOR2**](d3dxvector2.md)\***</span><span class="sxs-lookup"><span data-stu-id="eca3c-108">Type: **[**D3DXVECTOR2**](d3dxvector2.md)\***</span></span>
 
-<span data-ttu-id="5a1fd-109">Ein Zeiger auf die [**D3DXVECTOR2**](d3dxvector2.md) -Struktur, die das Ergebnis des Vorgangs ist.</span><span class="sxs-lookup"><span data-stu-id="5a1fd-109">Pointer to the [**D3DXVECTOR2**](d3dxvector2.md) structure that is the result of the operation.</span></span>
+<span data-ttu-id="eca3c-109">Zeiger auf die [**D3DXVECTOR2-Struktur,**](d3dxvector2.md) die das Ergebnis des Vorgangs ist.</span><span class="sxs-lookup"><span data-stu-id="eca3c-109">Pointer to the [**D3DXVECTOR2**](d3dxvector2.md) structure that is the result of the operation.</span></span>
 
 </dd> <dt>
 
-<span data-ttu-id="5a1fd-110">*pV1* \[ in\]</span><span class="sxs-lookup"><span data-stu-id="5a1fd-110">*pV1* \[in\]</span></span>
+<span data-ttu-id="eca3c-110">*pV1* \[ In\]</span><span class="sxs-lookup"><span data-stu-id="eca3c-110">*pV1* \[in\]</span></span>
 </dt> <dd>
 
-<span data-ttu-id="5a1fd-111">Typ: **Konstanten [**D3DXVECTOR2**](d3dxvector2.md) \***</span><span class="sxs-lookup"><span data-stu-id="5a1fd-111">Type: **const [**D3DXVECTOR2**](d3dxvector2.md)\***</span></span>
+<span data-ttu-id="eca3c-111">Typ: **const [**D3DXVECTOR2**](d3dxvector2.md) \***</span><span class="sxs-lookup"><span data-stu-id="eca3c-111">Type: **const [**D3DXVECTOR2**](d3dxvector2.md)\***</span></span>
 
-<span data-ttu-id="5a1fd-112">Zeiger auf eine Quell- [**D3DXVECTOR2**](d3dxvector2.md) -Struktur, ein Positions Vektor.</span><span class="sxs-lookup"><span data-stu-id="5a1fd-112">Pointer to a source [**D3DXVECTOR2**](d3dxvector2.md) structure, a position vector.</span></span>
+<span data-ttu-id="eca3c-112">Zeiger auf eine [**D3DXVECTOR2-Quellstruktur,**](d3dxvector2.md) einen Positionsvektor.</span><span class="sxs-lookup"><span data-stu-id="eca3c-112">Pointer to a source [**D3DXVECTOR2**](d3dxvector2.md) structure, a position vector.</span></span>
 
 </dd> <dt>
 
-<span data-ttu-id="5a1fd-113">*pT1* \[ in\]</span><span class="sxs-lookup"><span data-stu-id="5a1fd-113">*pT1* \[in\]</span></span>
+<span data-ttu-id="eca3c-113">*pT1* \[ In\]</span><span class="sxs-lookup"><span data-stu-id="eca3c-113">*pT1* \[in\]</span></span>
 </dt> <dd>
 
-<span data-ttu-id="5a1fd-114">Typ: **Konstanten [**D3DXVECTOR2**](d3dxvector2.md) \***</span><span class="sxs-lookup"><span data-stu-id="5a1fd-114">Type: **const [**D3DXVECTOR2**](d3dxvector2.md)\***</span></span>
+<span data-ttu-id="eca3c-114">Typ: **const [**D3DXVECTOR2**](d3dxvector2.md) \***</span><span class="sxs-lookup"><span data-stu-id="eca3c-114">Type: **const [**D3DXVECTOR2**](d3dxvector2.md)\***</span></span>
 
-<span data-ttu-id="5a1fd-115">Zeiger auf eine [**D3DXVECTOR2**](d3dxvector2.md) -Quell Struktur, ein Tangens Vektor.</span><span class="sxs-lookup"><span data-stu-id="5a1fd-115">Pointer to a source [**D3DXVECTOR2**](d3dxvector2.md) structure, a tangent vector.</span></span>
+<span data-ttu-id="eca3c-115">Zeiger auf eine [**D3DXVECTOR2-Quellstruktur,**](d3dxvector2.md) einen Tangensvektor.</span><span class="sxs-lookup"><span data-stu-id="eca3c-115">Pointer to a source [**D3DXVECTOR2**](d3dxvector2.md) structure, a tangent vector.</span></span>
 
 </dd> <dt>
 
-<span data-ttu-id="5a1fd-116">*pV2* \[ in\]</span><span class="sxs-lookup"><span data-stu-id="5a1fd-116">*pV2* \[in\]</span></span>
+<span data-ttu-id="eca3c-116">*pV2* \[ In\]</span><span class="sxs-lookup"><span data-stu-id="eca3c-116">*pV2* \[in\]</span></span>
 </dt> <dd>
 
-<span data-ttu-id="5a1fd-117">Typ: **Konstanten [**D3DXVECTOR2**](d3dxvector2.md) \***</span><span class="sxs-lookup"><span data-stu-id="5a1fd-117">Type: **const [**D3DXVECTOR2**](d3dxvector2.md)\***</span></span>
+<span data-ttu-id="eca3c-117">Typ: **const [**D3DXVECTOR2**](d3dxvector2.md) \***</span><span class="sxs-lookup"><span data-stu-id="eca3c-117">Type: **const [**D3DXVECTOR2**](d3dxvector2.md)\***</span></span>
 
-<span data-ttu-id="5a1fd-118">Zeiger auf eine Quell- [**D3DXVECTOR2**](d3dxvector2.md) -Struktur, ein Positions Vektor.</span><span class="sxs-lookup"><span data-stu-id="5a1fd-118">Pointer to a source [**D3DXVECTOR2**](d3dxvector2.md) structure, a position vector.</span></span>
+<span data-ttu-id="eca3c-118">Zeiger auf eine [**D3DXVECTOR2-Quellstruktur,**](d3dxvector2.md) einen Positionsvektor.</span><span class="sxs-lookup"><span data-stu-id="eca3c-118">Pointer to a source [**D3DXVECTOR2**](d3dxvector2.md) structure, a position vector.</span></span>
 
 </dd> <dt>
 
-<span data-ttu-id="5a1fd-119">*PT2* \[ in\]</span><span class="sxs-lookup"><span data-stu-id="5a1fd-119">*pT2* \[in\]</span></span>
+<span data-ttu-id="eca3c-119">*pT2* \[ In\]</span><span class="sxs-lookup"><span data-stu-id="eca3c-119">*pT2* \[in\]</span></span>
 </dt> <dd>
 
-<span data-ttu-id="5a1fd-120">Typ: **Konstanten [**D3DXVECTOR2**](d3dxvector2.md) \***</span><span class="sxs-lookup"><span data-stu-id="5a1fd-120">Type: **const [**D3DXVECTOR2**](d3dxvector2.md)\***</span></span>
+<span data-ttu-id="eca3c-120">Typ: **const [**D3DXVECTOR2**](d3dxvector2.md) \***</span><span class="sxs-lookup"><span data-stu-id="eca3c-120">Type: **const [**D3DXVECTOR2**](d3dxvector2.md)\***</span></span>
 
-<span data-ttu-id="5a1fd-121">Zeiger auf eine [**D3DXVECTOR2**](d3dxvector2.md) -Quell Struktur, ein Tangens Vektor.</span><span class="sxs-lookup"><span data-stu-id="5a1fd-121">Pointer to a source [**D3DXVECTOR2**](d3dxvector2.md) structure, a tangent vector.</span></span>
+<span data-ttu-id="eca3c-121">Zeiger auf eine [**D3DXVECTOR2-Quellstruktur,**](d3dxvector2.md) einen Tangensvektor.</span><span class="sxs-lookup"><span data-stu-id="eca3c-121">Pointer to a source [**D3DXVECTOR2**](d3dxvector2.md) structure, a tangent vector.</span></span>
 
 </dd> <dt>
 
-<span data-ttu-id="5a1fd-122">*s* \[ in\]</span><span class="sxs-lookup"><span data-stu-id="5a1fd-122">*s* \[in\]</span></span>
+<span data-ttu-id="eca3c-122">*s* \[ in\]</span><span class="sxs-lookup"><span data-stu-id="eca3c-122">*s* \[in\]</span></span>
 </dt> <dd>
 
-<span data-ttu-id="5a1fd-123">Typ: **[ **float**](../winprog/windows-data-types.md)**</span><span class="sxs-lookup"><span data-stu-id="5a1fd-123">Type: **[**FLOAT**](../winprog/windows-data-types.md)**</span></span>
+<span data-ttu-id="eca3c-123">Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**</span><span class="sxs-lookup"><span data-stu-id="eca3c-123">Type: **[**FLOAT**](../winprog/windows-data-types.md)**</span></span>
 
-<span data-ttu-id="5a1fd-124">Gewichtungsfaktor.</span><span class="sxs-lookup"><span data-stu-id="5a1fd-124">Weighting factor.</span></span> <span data-ttu-id="5a1fd-125">Siehe Hinweise.</span><span class="sxs-lookup"><span data-stu-id="5a1fd-125">See Remarks.</span></span>
+<span data-ttu-id="eca3c-124">Gewichtungsfaktor.</span><span class="sxs-lookup"><span data-stu-id="eca3c-124">Weighting factor.</span></span> <span data-ttu-id="eca3c-125">Siehe Hinweise.</span><span class="sxs-lookup"><span data-stu-id="eca3c-125">See Remarks.</span></span>
 
 </dd> </dl>
 
-## <a name="return-value"></a><span data-ttu-id="5a1fd-126">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="5a1fd-126">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="eca3c-126">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="eca3c-126">Return value</span></span>
 
-<span data-ttu-id="5a1fd-127">Typ: **[ **D3DXVECTOR2**](d3dxvector2.md)\***</span><span class="sxs-lookup"><span data-stu-id="5a1fd-127">Type: **[**D3DXVECTOR2**](d3dxvector2.md)\***</span></span>
+<span data-ttu-id="eca3c-127">Typ: **[ **D3DXVECTOR2**](d3dxvector2.md)\***</span><span class="sxs-lookup"><span data-stu-id="eca3c-127">Type: **[**D3DXVECTOR2**](d3dxvector2.md)\***</span></span>
 
-<span data-ttu-id="5a1fd-128">Ein Zeiger auf eine [**D3DXVECTOR2**](d3dxvector2.md) -Struktur, die das Ergebnis der Hermite-Spline-interpolung ist.</span><span class="sxs-lookup"><span data-stu-id="5a1fd-128">Pointer to a [**D3DXVECTOR2**](d3dxvector2.md) structure that is the result of the Hermite spline interpolation.</span></span>
+<span data-ttu-id="eca3c-128">Zeiger auf eine [**D3DXVECTOR2-Struktur,**](d3dxvector2.md) die das Ergebnis der Hermite-Splineinterpolation ist.</span><span class="sxs-lookup"><span data-stu-id="eca3c-128">Pointer to a [**D3DXVECTOR2**](d3dxvector2.md) structure that is the result of the Hermite spline interpolation.</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="5a1fd-129">Bemerkungen</span><span class="sxs-lookup"><span data-stu-id="5a1fd-129">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="eca3c-129">Bemerkungen</span><span class="sxs-lookup"><span data-stu-id="eca3c-129">Remarks</span></span>
 
-<span data-ttu-id="5a1fd-130">Die **D3DXVec2Hermite** -Funktion interpoliert von (positiona, tangenta) bis (positionb, tangentb) mithilfe der herdie Spline-Interpolation.</span><span class="sxs-lookup"><span data-stu-id="5a1fd-130">The **D3DXVec2Hermite** function interpolates from (positionA, tangentA) to (positionB, tangentB) using Hermite spline interpolation.</span></span>
+<span data-ttu-id="eca3c-130">Die **D3DXVec2Hermite-Funktion** interpoliert mithilfe der Hermite-Splineinterpolation von (positionA, tangentA) nach (positionB, tangentB).</span><span class="sxs-lookup"><span data-stu-id="eca3c-130">The **D3DXVec2Hermite** function interpolates from (positionA, tangentA) to (positionB, tangentB) using Hermite spline interpolation.</span></span>
 
-<span data-ttu-id="5a1fd-131">Die Spline-interpolung ist eine Generalisierung der Easy-in-Easy-out-Spline.</span><span class="sxs-lookup"><span data-stu-id="5a1fd-131">The spline interpolation is a generalization of the ease-in, ease-out spline.</span></span> <span data-ttu-id="5a1fd-132">Die-Rampe ist eine Funktion von Q (s) mit den folgenden Eigenschaften.</span><span class="sxs-lookup"><span data-stu-id="5a1fd-132">The ramp is a function of Q(s) with the following properties.</span></span>
+<span data-ttu-id="eca3c-131">Die Splineinterpolation ist eine Verallgemeinerung des Splines mit einfacherEntschärfung.</span><span class="sxs-lookup"><span data-stu-id="eca3c-131">The spline interpolation is a generalization of the ease-in, ease-out spline.</span></span> <span data-ttu-id="eca3c-132">Die Rampe ist eine Funktion von Q(s) mit den folgenden Eigenschaften.</span><span class="sxs-lookup"><span data-stu-id="eca3c-132">The ramp is a function of Q(s) with the following properties.</span></span>
 
-<span data-ttu-id="5a1fd-133">Q (s) = As ³ + b ² + CS + D (und somit q ' (s) = 3AS ² + 2B + C)</span><span class="sxs-lookup"><span data-stu-id="5a1fd-133">Q(s) = As³ + Bs² + Cs + D (and therefore, Q'(s) = 3As² + 2Bs + C)</span></span>
+<span data-ttu-id="eca3c-133">Q(s) = Assstelle + Bssstelle + Cs + D (und daher Q(s) = 3Aszept + 2Bs + C)</span><span class="sxs-lookup"><span data-stu-id="eca3c-133">Q(s) = As³ + Bs² + Cs + D (and therefore, Q'(s) = 3As² + 2Bs + C)</span></span>
 
-<span data-ttu-id="5a1fd-134">a) q (0) = v1, also q ' (0) = T1</span><span class="sxs-lookup"><span data-stu-id="5a1fd-134">a) Q(0) = v1, so Q'(0) = t1</span></span>
+<span data-ttu-id="eca3c-134">a) Q(0) = v1, also Q'(0) = t1</span><span class="sxs-lookup"><span data-stu-id="eca3c-134">a) Q(0) = v1, so Q'(0) = t1</span></span>
 
-<span data-ttu-id="5a1fd-135">b) q (1) = v2, also q ' (1) = T2</span><span class="sxs-lookup"><span data-stu-id="5a1fd-135">b) Q(1) = v2, so Q'(1) = t2</span></span>
+<span data-ttu-id="eca3c-135">b) Q(1) = v2, also Q'(1) = t2</span><span class="sxs-lookup"><span data-stu-id="eca3c-135">b) Q(1) = v2, so Q'(1) = t2</span></span>
 
-<span data-ttu-id="5a1fd-136">v1 ist der Inhalt von pV1, v2 im Inhalt von pV2, T1 ist der Inhalt von pT1, und T2 ist der Inhalt von PT2.</span><span class="sxs-lookup"><span data-stu-id="5a1fd-136">v1 is the contents of pV1, v2 in the contents of pV2, t1 is the contents of pT1, and t2 is the contents of pT2.</span></span>
+<span data-ttu-id="eca3c-136">v1 ist der Inhalt von pV1, v2 im Inhalt von pV2, t1 ist der Inhalt von pT1 und t2 ist der Inhalt von pT2.</span><span class="sxs-lookup"><span data-stu-id="eca3c-136">v1 is the contents of pV1, v2 in the contents of pV2, t1 is the contents of pT1, and t2 is the contents of pT2.</span></span>
 
-<span data-ttu-id="5a1fd-137">Diese Eigenschaften werden verwendet, um für A, B, C, D zu lösen.</span><span class="sxs-lookup"><span data-stu-id="5a1fd-137">These properties are used to solve for A, B, C, D.</span></span>
+<span data-ttu-id="eca3c-137">Diese Eigenschaften werden für A, B, C, D verwendet.</span><span class="sxs-lookup"><span data-stu-id="eca3c-137">These properties are used to solve for A, B, C, D.</span></span>
 
 ``` syntax
 D = v1  (from a)
@@ -128,7 +128,7 @@ C = t1  (from a)
 A + B = v2 - v1 - t1 (substituting for C and D)
 ```
 
-<span data-ttu-id="5a1fd-138">Binden Sie die Lösungen für A, B, C und D ein, um Q (s) zu generieren.</span><span class="sxs-lookup"><span data-stu-id="5a1fd-138">Plug in the solutions for A,B,C and D to generate Q(s).</span></span>
+<span data-ttu-id="eca3c-138">Schließen Sie die Lösungen für A, B, C und D ein, um Q(s) zu generieren.</span><span class="sxs-lookup"><span data-stu-id="eca3c-138">Plug in the solutions for A,B,C and D to generate Q(s).</span></span>
 
 ``` syntax
 A = 2v1 - 2v2 + t2 + t1 
@@ -137,34 +137,34 @@ C = t1
 D = v1
 ```
 
-<span data-ttu-id="5a1fd-139">Dies ergibt:</span><span class="sxs-lookup"><span data-stu-id="5a1fd-139">This yields:</span></span>
+<span data-ttu-id="eca3c-139">Dies ergibt:</span><span class="sxs-lookup"><span data-stu-id="eca3c-139">This yields:</span></span>
 
-<span data-ttu-id="5a1fd-140">Q (s) = (2v1-2v2 + T2 + T1) s ³ + (3v2-3v1-2t1-T2) s ² + T1S + v1</span><span class="sxs-lookup"><span data-stu-id="5a1fd-140">Q(s) = (2v1 - 2v2 + t2 + t1)s³ + (3v2 - 3v1 - 2t1 - t2)s² + t1s + v1</span></span>
+<span data-ttu-id="eca3c-140">Q(s) = (2v1 - 2v2 + t2 + t1)ssstelle + (3v2 - 3v1 - 2t1 - t2)stif + t1s + v1</span><span class="sxs-lookup"><span data-stu-id="eca3c-140">Q(s) = (2v1 - 2v2 + t2 + t1)s³ + (3v2 - 3v1 - 2t1 - t2)s² + t1s + v1</span></span>
 
-<span data-ttu-id="5a1fd-141">Diese können wie folgt neu angeordnet werden:</span><span class="sxs-lookup"><span data-stu-id="5a1fd-141">Which can be rearranged as:</span></span>
+<span data-ttu-id="eca3c-141">Dies kann wie hier angezeigt neu angeordnet werden:</span><span class="sxs-lookup"><span data-stu-id="eca3c-141">Which can be rearranged as:</span></span>
 
-<span data-ttu-id="5a1fd-142">Q (s) = (2S ³-3S ² + 1) v1 + (-2S ³ + 3S ²) v2 + (s ³-2S ² + s) T1 + (s ³-s ²) T2</span><span class="sxs-lookup"><span data-stu-id="5a1fd-142">Q(s) = (2s³ - 3s² + 1)v1 + (-2s³ + 3s²)v2 + (s³ - 2s² + s)t1 + (s³ - s²)t2</span></span>
+<span data-ttu-id="eca3c-142">Q(s) = (2ssstelle – 3ssstelle + 1)v1 + (-2ssstelle + 3ssstelle)v2 + (ssstelle – 2ssstelle + s)t1 + (ssstelle – ssstelle)t2</span><span class="sxs-lookup"><span data-stu-id="eca3c-142">Q(s) = (2s³ - 3s² + 1)v1 + (-2s³ + 3s²)v2 + (s³ - 2s² + s)t1 + (s³ - s²)t2</span></span>
 
-<span data-ttu-id="5a1fd-143">Hermite-Splines sind zum Steuern der Animation nützlich, da die Kurve alle Steuerungs Punkte durchläuft.</span><span class="sxs-lookup"><span data-stu-id="5a1fd-143">Hermite splines are useful for controlling animation because the curve runs through all the control points.</span></span> <span data-ttu-id="5a1fd-144">Da die Position und der Tangens an den Enden der einzelnen Segmente explizit angegeben werden, ist es einfach, eine C2-kontinuierliche Kurve zu erstellen, solange Sie sicherstellen, dass die Anfangsposition und der Tangens mit den Endwerten des letzten Segments übereinstimmen.</span><span class="sxs-lookup"><span data-stu-id="5a1fd-144">Also, because the position and tangent are explicitly specified at the ends of each segment, it is easy to create a C2 continuous curve as long as you make sure that your starting position and tangent match the ending values of the last segment.</span></span>
+<span data-ttu-id="eca3c-143">Hermite-Splines sind nützlich zum Steuern der Animation, da die Kurve alle Kontrollpunkte durchläuft.</span><span class="sxs-lookup"><span data-stu-id="eca3c-143">Hermite splines are useful for controlling animation because the curve runs through all the control points.</span></span> <span data-ttu-id="eca3c-144">Da die Position und der Tangens explizit an den Enden jedes Segments angegeben werden, ist es außerdem einfach, eine kontinuierliche C2-Kurve zu erstellen, solange Sie sicherstellen, dass Ihre Anfangsposition und der Tangens mit den Endwerten des letzten Segments übereinstimmen.</span><span class="sxs-lookup"><span data-stu-id="eca3c-144">Also, because the position and tangent are explicitly specified at the ends of each segment, it is easy to create a C2 continuous curve as long as you make sure that your starting position and tangent match the ending values of the last segment.</span></span>
 
-<span data-ttu-id="5a1fd-145">Der Rückgabewert für diese Funktion ist derselbe Wert, der im Pout-Parameter zurückgegeben wird.</span><span class="sxs-lookup"><span data-stu-id="5a1fd-145">The return value for this function is the same value returned in the pOut parameter.</span></span> <span data-ttu-id="5a1fd-146">Auf diese Weise kann die **D3DXVec2Hermite** -Funktion als Parameter für eine andere Funktion verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="5a1fd-146">In this way, the **D3DXVec2Hermite** function can be used as a parameter for another function.</span></span>
+<span data-ttu-id="eca3c-145">Der Rückgabewert für diese Funktion ist der gleiche Wert, der im pOut-Parameter zurückgegeben wird.</span><span class="sxs-lookup"><span data-stu-id="eca3c-145">The return value for this function is the same value returned in the pOut parameter.</span></span> <span data-ttu-id="eca3c-146">Auf diese Weise kann die **D3DXVec2Hermite-Funktion** als Parameter für eine andere Funktion verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="eca3c-146">In this way, the **D3DXVec2Hermite** function can be used as a parameter for another function.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="5a1fd-147">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="5a1fd-147">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="eca3c-147">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="eca3c-147">Requirements</span></span>
 
 
 
-| <span data-ttu-id="5a1fd-148">Anforderung</span><span class="sxs-lookup"><span data-stu-id="5a1fd-148">Requirement</span></span> | <span data-ttu-id="5a1fd-149">Wert</span><span class="sxs-lookup"><span data-stu-id="5a1fd-149">Value</span></span> |
+| <span data-ttu-id="eca3c-148">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="eca3c-148">Requirement</span></span> | <span data-ttu-id="eca3c-149">Wert</span><span class="sxs-lookup"><span data-stu-id="eca3c-149">Value</span></span> |
 |--------------------|----------------------------------------------------------------------------------------|
-| <span data-ttu-id="5a1fd-150">Header</span><span class="sxs-lookup"><span data-stu-id="5a1fd-150">Header</span></span><br/>  | <dl> <span data-ttu-id="5a1fd-151"><dt>D3dx9math. h</dt></span><span class="sxs-lookup"><span data-stu-id="5a1fd-151"><dt>D3dx9math.h</dt></span></span> </dl> |
-| <span data-ttu-id="5a1fd-152">Bibliothek</span><span class="sxs-lookup"><span data-stu-id="5a1fd-152">Library</span></span><br/> | <dl> <span data-ttu-id="5a1fd-153"><dt>D3dx9. lib</dt></span><span class="sxs-lookup"><span data-stu-id="5a1fd-153"><dt>D3dx9.lib</dt></span></span> </dl>   |
+| <span data-ttu-id="eca3c-150">Header</span><span class="sxs-lookup"><span data-stu-id="eca3c-150">Header</span></span><br/>  | <dl> <span data-ttu-id="eca3c-151"><dt>D3dx9math.h</dt></span><span class="sxs-lookup"><span data-stu-id="eca3c-151"><dt>D3dx9math.h</dt></span></span> </dl> |
+| <span data-ttu-id="eca3c-152">Bibliothek</span><span class="sxs-lookup"><span data-stu-id="eca3c-152">Library</span></span><br/> | <dl> <span data-ttu-id="eca3c-153"><dt>D3dx9.lib</dt></span><span class="sxs-lookup"><span data-stu-id="eca3c-153"><dt>D3dx9.lib</dt></span></span> </dl>   |
 
 
 
-## <a name="see-also"></a><span data-ttu-id="5a1fd-154">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="5a1fd-154">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="eca3c-154">Weitere Informationen</span><span class="sxs-lookup"><span data-stu-id="eca3c-154">See also</span></span>
 
 <dl> <dt>
 
-[<span data-ttu-id="5a1fd-155">Mathematische Funktionen</span><span class="sxs-lookup"><span data-stu-id="5a1fd-155">Math Functions</span></span>](dx9-graphics-reference-d3dx-functions-math.md)
+[<span data-ttu-id="eca3c-155">Mathematische Funktionen</span><span class="sxs-lookup"><span data-stu-id="eca3c-155">Math Functions</span></span>](dx9-graphics-reference-d3dx-functions-math.md)
 </dt> </dl>
 
  
