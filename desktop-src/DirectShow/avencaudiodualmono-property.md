@@ -1,58 +1,58 @@
 ---
-description: Gibt an, ob die zwei-Kanal-Audiodaten als Stereo oder Dual Mono codiert werden.
+description: 'AVEncAudioDualMono-Eigenschaft: Gibt an, ob 2-Kanal-Audio als Stereo oder Dual Mono codiert wird.'
 ms.assetid: 37f25590-69c2-43bd-a5d4-2262457cb39d
-title: Avencaudiodualmono-Eigenschaft (codecapi. h)
+title: AVEncAudioDualMono-Eigenschaft (Codecapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c0a5b684638133a1449fc849348cdfd8627533fe
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: b58cbd901079d8f4dede1efae140791ae99c7fed
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "106341111"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108096578"
 ---
-# <a name="avencaudiodualmono-property"></a>Avencaudiodualmono (Eigenschaft)
+# <a name="avencaudiodualmono-property"></a>AVEncAudioDualMono (Eigenschaft)
 
-Gibt an, ob die zwei-Kanal-Audiodaten als Stereo oder Dual Mono codiert werden.
+Gibt an, ob 2-Kanal-Audio als Stereo oder Dual Mono codiert wird.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
 ## <a name="data-type"></a>Datentyp
 
-**UInt32** (**VT \_ UI4**)
+**UINT32** (**VT \_ UI4**)
 
 ## <a name="property-guid"></a>Eigenschaften-GUID
 
-**Codecapi \_ avencaudiodualmono**
+**CODECAPI \_ AVEncAudioDualMono**
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Der Wert dieser Eigenschaft ist ein Member der [**eavencaudiodualmono**](/windows/win32/api/codecapi/ne-codecapi-eavencaudiodualmono) -Enumeration.
+Der Wert dieser Eigenschaft ist ein Member der [**eAVEncAudioDualMono-Enumeration.**](/windows/win32/api/codecapi/ne-codecapi-eavencaudiodualmono)
 
 ## <a name="remarks"></a>Bemerkungen
 
-Diese Eigenschaft gilt nicht für MPEG-Audioencoder. Verwenden Sie für MPEG-Audiodaten die Eigenschaft " [**avencmpacodingmode**](avencmpacodingmode-property.md) ".
+Diese Eigenschaft gilt nicht für MPEG-Audioencoder. Verwenden Sie für MPEG-Audio die [**EIGENSCHAFT AVEncMPACodingMode.**](avencmpacodingmode-property.md)
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[ Desktop Apps \| UWP-apps\]<br/>                     |
-| Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[ Desktop Apps \| UWP-apps\]<br/>                           |
-| Header<br/>                   | <dl> <dt>Codecapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | UWP-Apps für Windows 2000 \[ \| Professional-Desktop-Apps\]<br/>                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows 2000 \[ Server-Desktop-Apps \| UWP-Apps\]<br/>                           |
+| Header<br/>                   | <dl> <dt>Codecapi.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Eigenschaften der Codec-API](codec-api-properties.md)
+[Codec-API-Eigenschaften](codec-api-properties.md)
 </dt> <dt>
 
-[**Icodecapi-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-icodecapi)
+[**ICodecAPI-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-icodecapi)
 </dt> </dl>
 
  

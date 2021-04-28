@@ -1,7 +1,7 @@
 ---
-description: Konstruktormethode.
+description: 'CEnumPins.CEnumPins-Konstruktor : Konstruktormethode.'
 ms.assetid: f696e433-b051-4de0-80e5-f9cd31fd0f23
-title: Cenumpins. cenumpins-Konstruktor (amfilter. h)
+title: CEnumPins.CEnumPins-Konstruktor (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,14 +16,14 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 536782de6992acfc1613d5866f13af658fba6e71
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: caa27dfe0190df15be1e41b7128c06249f1ae2b8
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106355955"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108099228"
 ---
-# <a name="cenumpinscenumpins-constructor"></a>Cenumpins. cenumpins-Konstruktor
+# <a name="cenumpinscenumpins-constructor"></a>CEnumPins.CEnumPins-Konstruktor
 
 Konstruktormethode.
 
@@ -46,37 +46,37 @@ CEnumPins(
 *pFilter* 
 </dt> <dd>
 
-Zeiger auf den Filter, für den die Pins aufgelistet werden sollen.
+Zeiger auf den Filter, für den die Stecknadeln aufzählt werden.
 
 </dd> <dt>
 
-*Anmeldungen* 
+*pEnumPins* 
 </dt> <dd>
 
-Ein Zeiger auf die [**iumumpins**](/windows/desktop/api/Strmif/nn-strmif-ienumpins) -Schnittstelle eines Enumerators, der geklont werden soll, oder **null**.
+Zeiger auf die [**IEnumPins-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-ienumpins) eines zu klonenden Enumerators oder **NULL.**
 
 </dd> </dl>
 
 ## <a name="remarks"></a>Bemerkungen
 
-Wenn die *penumpins* **null** sind, initialisiert diese Methode den Enumerator bis zum Anfang der enumerationssequenz. Andernfalls dupliziert Sie den internen Zustand des Enumerators, der durch *penumpins* angegeben wird.
+Wenn *pEnumPins* **NULL ist,** initialisiert diese Methode den Enumerator am Anfang der Enumerationssequenz. Andernfalls wird der interne Zustand des durch *pEnumPins angegebenen Enumerators dupliziert.*
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (streams.h enthalten)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cenumpins-Klasse**](cenumpins.md)
+[**CEnumPins-Klasse**](cenumpins.md)
 </dt> </dl>
 
  

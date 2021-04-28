@@ -1,7 +1,7 @@
 ---
-description: Die Methode "Zuweisung" weist Speicher für die Puffer zu.
+description: 'CMemAllocator.Alloc-Methode: Die Alloc-Methode belegt Speicher für die Puffer.'
 ms.assetid: 81886163-2f7d-4d4f-be90-4491f76b8514
-title: Cmemzuzucator. Zuordnungsmethode (amfilter. h)
+title: CMemAllocator.Alloc-Methode (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: a142f6c0cea6cdb9b18507becabb909ce67b0fb2
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 7d7de755aa3b8007a122e43529d16f5e39ca0cb8
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358063"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108099038"
 ---
-# <a name="cmemallocatoralloc-method"></a>Cmemzuzucator. Zuordnungsmethode
+# <a name="cmemallocatoralloc-method"></a>CMemAllocator.Alloc-Methode
 
-Die- `Alloc` Methode weist Speicher für die Puffer zu.
+Die `Alloc` -Methode belegt Speicher für die Puffer.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,15 +42,15 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen der **HRESULT** -Werte zurück, die in der folgenden Tabelle aufgeführt sind.
+Gibt einen der in der folgenden Tabelle gezeigten **HRESULT-Werte** zurück.
 
 
 
 | Rückgabecode                                                                                       | Beschreibung                                  |
 |---------------------------------------------------------------------------------------------------|----------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>              | Erfolg.<br/>                          |
-| <dl> <dt>**E \_ outo-Memory**</dt> </dl>     | Nicht genügend Arbeitsspeicher.<br/>              |
-| <dl> <dt>**VFW \_ E \_ sizenotset**</dt> </dl> | Die Puffer Anforderungen wurden nicht festgelegt.<br/> |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl>     | Nicht genügend Arbeitsspeicher.<br/>              |
+| <dl> <dt>**VFW \_ E \_ SIZENOTSET**</dt> </dl> | Pufferanforderungen wurden nicht festgelegt.<br/> |
 
 
 
@@ -58,24 +58,24 @@ Gibt einen der **HRESULT** -Werte zurück, die in der folgenden Tabelle aufgefü
 
 ## <a name="remarks"></a>Bemerkungen
 
-Diese Methode wird von der [**cbasezucator:: Commit**](cbaseallocator-commit.md) -Methode aufgerufen. Er ordnet einen zusammenhängenden Speicherblock zu, der für die in der [**cmembelegcator:: SetProperties**](cmemallocator-setproperties.md) -Methode angegebenen Puffer Anforderungen ausreicht.
+Diese Methode wird von der [**CBaseAllocator::Commit-Methode**](cbaseallocator-commit.md) aufgerufen. Es ordnet einen zusammenhängenden Speicherblock zu, der für die Pufferanforderungen ausreicht, die in der [**CMemAllocator::SetProperties-Methode**](cmemallocator-setproperties.md) angegeben sind.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (streams.h einschließen)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cmemzuordcator-Klasse**](cmemallocator.md)
+[**CMemAllocator-Klasse**](cmemallocator.md)
 </dt> </dl>
 
  

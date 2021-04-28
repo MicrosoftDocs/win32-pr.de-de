@@ -1,90 +1,90 @@
 ---
-title: Mixed-Mode DPI-Skalierung und dpi-abhängige APIs
-description: .
+title: Mixed-Mode DPI-Skalierung und DPI-orientierte APIs
+description: Mixed-Mode DPI-Skalierung und DPI-orientierte APIs
 ms.assetid: 44AC0B29-3283-4801-90F5-3E78CCD87B9F
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: fb9f8a8f72b199aaba195002134855155925b30d
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 2244ea79d489ae1e20260f72336c15bc64b97de0
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "103948608"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108090098"
 ---
-# <a name="mixed-mode-dpi-scaling-and-dpi-aware-apis"></a>Mixed-Mode DPI-Skalierung und dpi-abhängige APIs
+# <a name="mixed-mode-dpi-scaling-and-dpi-aware-apis"></a>Mixed-Mode DPI-Skalierung und DPI-orientierte APIs
 
-## <a name="sub-process-dpi-awareness-support"></a>Unterstützung für Sub-Process dpi-Erkennung
+## <a name="sub-process-dpi-awareness-support"></a>Sub-Process DPI Awareness Support
 
-[**Setthreaddpiawareness Context**](/windows/desktop/api/Winuser/nf-winuser-setthreaddpiawarenesscontext) ermöglicht die Verwendung verschiedener dpi-Skalierungs Modi innerhalb eines einzelnen Prozesses. Vor dem Windows 10 Anniversary Update wurde das dpi-Bewusstsein eines Fensters an den Prozess weiten dpi-Informationsmodus gebunden (dpi-Informationen, System-dpi-fähig oder Per-Monitor dpi-fähig). Mit " **setthreaddpiawareness Context**" können jedoch Fenster der obersten Ebene einen dpi-Modus aufweisen, der sich von dem Prozess weiten dpi-Bild Modus unterscheidet. Dies wirkt sich auch auf untergeordnete Fenster aus, da Sie immer denselben dpi-Sensibilisierungs Modus wie das übergeordnete Fenster aufweisen.
+[**SetThreadDpiAwarenessContext**](/windows/desktop/api/Winuser/nf-winuser-setthreaddpiawarenesscontext) ermöglicht die Verwendung verschiedener DPI-Skalierungsmodi innerhalb eines einzelnen Prozesses. Vor der Windows 10 Anniversary Update war die DPI-Orientierte eines Fensters an den prozessweiten DPI-Bewusstseinsmodus gebunden (DPI nicht bekannt, System-DPI-bewusst oder Per-Monitor DPI-bewusst). Mit **SetThreadDpiAwarenessContext** können Fenster der obersten Ebene jedoch über einen DPI-Bewusstseinsmodus verfügen, der sich von dem des prozessweiten DPI-Bewusstseinsmodus unterscheiden kann. Dies wirkt sich auch auf untergeordnete Fenster aus, da sie immer den gleichen DPI-Bewusstseinsmodus wie das übergeordnete Fenster haben.
 
-Die Verwendung von **setthreaddpiawarenesscontext** ermöglicht Entwicklern, zu entscheiden, wo Sie Ihre Entwicklungsaktivitäten konzentrieren möchten, wenn Sie ein dpi-spezifisches Verhalten für Desktop Anwendungen definieren. Beispielsweise könnte das primäre Fenster der obersten Ebene einer Anwendung pro Monitor skaliert werden, während sekundäre Fenster der obersten Ebene mithilfe von Bitmapskalierung durch das Betriebssystem skaliert werden könnten.
+Durch die **Verwendung von SetThreadDpiAwarenessContext** können Entwickler entscheiden, wo sie ihre Entwicklungsbemühungen konzentrieren möchten, wenn sie DPI-spezifisches Verhalten für Desktopanwendungen definieren. Beispielsweise könnte das primäre Fenster der obersten Ebene einer Anwendung auf Monitorbasis skaliert werden, während sekundäre Fenster der obersten Ebene über die Bitmapskalierung durch das Betriebssystem skaliert werden könnten.
 
-## <a name="the-dpi-awareness-context"></a>Der Kontext der dpi-Erkennung
+## <a name="the-dpi-awareness-context"></a>Der DPI-Bewusstseinskontext
 
-Vor der Verfügbarkeit von **setthreaddpiawareness Context** wurde das dpi-Bewusstsein eines Prozesses entweder im Manifest der Anwendungs Binärdatei oder über einen Aufrufen von [**setprocessdpiawareness**](/windows/desktop/api/ShellScalingAPI/nf-shellscalingapi-setprocessdpiawareness) während der Prozess Initialisierung definiert. Mit **setthreaddpiawareness Context** kann jeder Thread über einen individuellen dpi-Kontext verfügen, der sich von dem Prozess weiten dpi-Informationsmodus unterscheiden kann. Der Kontext für den dpi-Kontext eines Threads wird mit dem * * * * dpi-Kontexttyp [ \_ \_ * * * *](dpi-awareness-context.md) dargestellt und verhält sich wie folgt:
+Vor der Verfügbarkeit von **SetThreadDpiAwarenessContext** wurde die DPI-Kenntnis eines Prozesses entweder im Manifest der Anwendungsbinardatei oder über einen Aufruf von [**SetProcessDpiAwareness**](/windows/desktop/api/ShellScalingAPI/nf-shellscalingapi-setprocessdpiawareness) während der Prozessin initialisierung definiert. Mit **SetThreadDpiAwarenessContext** kann jeder Thread über einen individuellen DPI-Bewusstseinskontext verfügen, der sich von dem des prozessweiten DPI-Bewusstseinsmodus unterscheiden kann. Der DPI-Bewusstseinskontext eines Threads wird mit dem [Typ "/DPI \_ AWARENESS \_ CONTEXT"](dpi-awareness-context.md) dargestellt und verhält sich wie folgt:
 
--   Ein Thread kann den dpi-Awareness-Kontext jederzeit ändern.
--   Alle API-Aufrufe, die nach dem Ändern des Kontexts erfolgen, werden im entsprechenden dpi-Kontext ausgeführt (und können virtualisiert werden).
--   Wenn ein Fenster erstellt wird, wird sein dpi-Bewusstsein als das dpi-Bewusstsein des aufrufenden Threads zu diesem Zeitpunkt definiert.
--   Wenn die Fenster Prozedur für ein Fenster aufgerufen wird, wird der Thread automatisch in den dpi-Kontext gewechselt, der beim Erstellen des Fensters verwendet wurde.
+-   Der DPI-Kontext eines Threads kann jederzeit geändert werden.
+-   Alle API-Aufrufe, die nach dem Ändern des Kontexts ausgeführt werden, werden im entsprechenden DPI-Kontext ausgeführt (und können virtualisiert werden).
+-   Wenn ein Fenster erstellt wird, wird sein DPI-Bewusstsein als DPI-Kenntnis des aufrufenden Threads zu diesem Zeitpunkt definiert.
+-   Wenn die Fensterprozedur für ein Fenster aufgerufen wird, wird der Thread automatisch in den DPI-Bewusstseinskontext umgeschaltet, der beim Erstellen des Fensters verwendet wurde.
 
-Ein gängiges Szenario für die Verwendung von **setthreaddpiawareness Context** lautet wie folgt: beginnen Sie mit einem Thread, der mit einem Kontext ausgeführt wird (z. b. der **dpi- \_ \_ Kontext \_ pro \_ Monitor \_**-fähig), und wechseln Sie vorübergehend in einen anderen Kontext (der **dpi-Kontext ist \_ \_ \_ nicht bekannt**), erstellen Sie ein Fenster, und wechseln Sie sofort wieder in den vorherigen Zustand Im erstellten Fenster wird der dpi-Kontext des dpi-kontokontexts **\_ \_ \_ nicht** beachtet, während der Kontext für den aufrufenden Thread mit einem nachfolgenden Aufruf von **setthreaddpiawareness Context** in den dpi-Kontext für den dpi-Kontext wieder hergestellt wird. **\_ \_ \_ \_ \_** In diesem Szenario würde das Fenster, das dem aufrufenden Thread zugeordnet ist, mit einem Kontext pro Monitor ausgeführt werden (und somit nicht durch das Betriebssystem durch Bitmap gestreckt), während das neu erstellte Fenster nicht dpi-fähig wäre (und daher automatisch Bitmap auf eine Anzeige festgelegt wird, die auf >100%-Skalierung festgelegt ist).
+Ein häufiges Szenario für die Verwendung von **SetThreadDpiAwarenessContext** ist folgendes: Beginnen Sie mit einem Thread, der mit einem Kontext ausgeführt wird (z. B. **DPI \_ AWARENESS CONTEXT PER MONITOR \_ \_ \_ \_ AWARE),** wechseln Sie vorübergehend zu einem anderen Kontext **(DPI \_ AWARENESS CONTEXT \_ \_ UNAWARE),** erstellen Sie ein Fenster, und wechseln Sie dann sofort wieder in den vorherigen Zustand des Threadkontexts. Das erstellte Fenster hat den DPI-Kontext **DPI \_ AWARENESS CONTEXT \_ \_ UNAWARE,** während der Kontext des aufrufenden Threads mit einem nachfolgenden Aufruf von **SetThreadDpiAwarenessContext** in **DPI AWARENESS CONTEXT PER \_ \_ MONITOR \_ \_ \_ AWARE** wiederhergestellt wird. In diesem Szenario wird das fenster, das dem aufrufenden Thread zugeordnet ist, mit einem Monitorkontext ausgeführt (und daher nicht vom Betriebssystem gestreckt), während das neu erstellte Fenster nicht DPI-bewusst ist (und daher automatisch auf einer Anzeige gestreckt wird, die auf eine Skalierung von >100 % festgelegt ist).
 
-In Abbildung 1 wird veranschaulicht, wie der Hauptprozess Thread mit **dpi- \_ Awareness- \_ Kontext \_ pro \_ Monitor** ausgeführt wird, seinen Kontext in den Kontext des dpi-Kontexts wechselt und ein neues Fenster erstellt. **\_ \_ \_** Das neu erstellte Fenster wird dann mit einem dpi-kontextkontext des dpi-Kontexts ausgeführt, der **\_ \_ \_ nicht weiß** , wann immer eine Nachricht an ihn gesendet wird, oder es werden API-Aufrufe von diesem Unmittelbar nach dem Erstellen des neuen Fensters wird der Haupt Thread im vorherigen Kontext des dpi-Kontexts **\_ \_ \_ pro \_ Monitor** wieder hergestellt.
+Abbildung 1 zeigt, wie der Hauptprozessthread mit **DPI \_ AWARENESS CONTEXT \_ PER \_ \_ MONITOR** ausgeführt wird, seinen Kontext in **DPI AWARENESS CONTEXT \_ \_ \_ UNAWARE** umschaltet und ein neues Fenster erstellt. Das neu erstellte Fenster wird dann mit dem DPI-Bewusstseinskontext **DPI \_ AWARENESS CONTEXT \_ \_ UNAWARE** ausgeführt, wenn eine Nachricht an das Fenster gesendet oder API-Aufrufe von diesem gesendet werden. Unmittelbar nach dem Erstellen des neuen Fensters wird der Hauptthread im vorherigen Kontext **DPI \_ AWARENESS CONTEXT PER MONITOR \_ \_ \_ wiederhergestellt.**
 
-![Diagramm, das die dpi-Informationen pro Monitor in Aktion anzeigt](images/dpi-awareness-context.png)
+![Diagramm, das die DPI-Wahrnehmung pro Monitor in Aktion zeigt](images/dpi-awareness-context.png)
 
-## <a name="new-dpi-related-apis"></a>Neue dpi-bezogene APIs
+## <a name="new-dpi-related-apis"></a>Neue DPI-bezogene APIs
 
-Zusätzlich zur Unterstützung verschiedener dpi-Informations Modi innerhalb eines einzelnen Prozesses, der von **setthreaddpiawarenstincontext** angeboten wird, wurden die folgenden dpi-spezifischen Funktionen für Desktop Anwendungen hinzugefügt:<dl> <dd>[Enablenonclientdpiscalung * * * *](/windows/desktop/api/Winuser/nf-winuser-enablenonclientdpiscaling)<dl> <dt>
+Zusätzlich zur Unterstützung für verschiedene DPI-Bewusstseinsmodi innerhalb eines einzelnen Prozesses, den **SetThreadDpiAwarenessContext** bietet, wurden die folgenden DPI-spezifischen Funktionen für Desktopanwendungen hinzugefügt:<dl> <dd>[EnableNonClientDpiScaling**](/windows/desktop/api/Winuser/nf-winuser-enablenonclientdpiscaling)<dl> <dt>
 
 
 
 > [!Note]  
-> Der dpi-Modus " **pro Monitor v2** " aktiviert diese Funktion automatisch, und das Aufrufen von **enablenonclientdpiscalseeing** ist daher in Anwendungen, die ihn verwenden, nicht erforderlich.
+> Der DPI-Bewusstseinsmodus "Pro **Monitor V2"** aktiviert diese Funktionalität automatisch, und das Aufrufen von **EnableNonClientDpiScaling** ist daher in Anwendungen, die sie verwenden, nicht erforderlich.
 
  
 
-Das Aufrufen von **enablenonclientdpiscalseout** innerhalb eines Window s **WM \_ nccreate** -Handlers führt dazu, dass der nicht-Client Bereich eines Fensters der obersten Ebene automatisch für dpi skaliert wird. Wenn das Fenster der obersten Ebene dpi-abhängig ist (unabhängig davon, ob es sich um einen dpi-fähigen Prozess pro Monitor handelt oder weil das Fenster innerhalb eines dpi-fähigen Threads pro Monitor erstellt wurde), werden die Titelleiste, die Bild Lauf leisten, Menüs und Menüleisten dieser Fenster dpi-skaliert, sobald sich der dpi-Wert des Fensters ändert.
+Das **Aufrufen von EnableNonClientDpiScaling** innerhalb des **WM \_ NCCREATE-Handlers** eines Fensters führt dazu, dass der Nicht-Clientbereich eines Fensters der obersten Ebene automatisch für DPI skaliert wird. Wenn das Fenster der obersten Ebene DPI-bewusst pro Monitor ist (unabhängig davon, ob der Prozess selbst DPI-bewusst ist oder weil das Fenster in einem DPI-orientierten Thread pro Monitor erstellt wurde), werden die Beschriftungsleiste, Scrollleisten, Menüs und Menüleisten dieser Fenster immer dann DPI-skaliert, wenn sich der DPI-Wert des Fensters ändert.
 </dt> <dt>
 
-Beachten Sie, dass nicht-Client Bereiche eines untergeordneten Fensters, z. b. nicht-Client-Bild Lauf leisten eines untergeordneten Bearbeitungs Steuer Elements, bei Verwendung dieser API nicht automatisch skaliert werden.
+Beachten Sie, dass Nicht-Clientbereiche eines untergeordneten Fensters, z. B. Nicht-Client-Bildlaufleisten eines untergeordneten Bearbeitungssteuerfelds, nicht automatisch skaliert werden, wenn diese API verwendet wird.
 </dt> <dt>
 
 > [!Note]  
-> **Enablenonclientdpiscaleing** muss vom **WM- \_ nccreate** -Handler aufgerufen werden.
+> **EnableNonClientDpiScaling** muss vom **WM \_ NCCREATE-Handler aufgerufen** werden.
 
-</dt> </dl> </dd> <dd> <b> Die * fordpi-APIs </b>
+</dt> </dl> </dd> <dd> <b> Die *ForDpi-APIs </b>
 
--   Einige häufig verwendete APIs, z. b. [**GetSystemMetrics**](/windows/desktop/api/winuser/nf-winuser-getsystemmetrics) , verfügen nicht über einen Kontext eines HWND und haben daher keine Möglichkeit, das richtige dpi-Bewusstsein für Ihre Rückgabewerte zu ableiten. Wenn diese APIs von einem Thread aufgerufen werden, der in einem anderen dpi-Informationsmodus oder-Kontext ausgeführt wird, können Werte zurückgegeben werden, die nicht für den Kontext des aufrufenden Threads skaliert werden. [* * * * Getsystemmetricfordpi * * *](/windows/desktop/api/Winuser/nf-winuser-getsystemmetricsfordpi)*, [* * * * systemparametersinfofordpi * * *](/windows/desktop/api/Winuser/nf-winuser-systemparametersinfofordpi)*, und [* * * *](/windows/desktop/api/Winuser/nf-winuser-adjustwindowrectexfordpi) "", "", und * * * * "", wird die gleiche Funktionalität wie bei ihren dpi-Entsprechungen verwendet.
--   **Getsystemmetricfordpi** und **systemparametersinfofordpi** geben in Übereinstimmung mit der Gleichung dpi-Werte für System Metriken und Systemparameter Werte zurück:
+-   Mehrere häufig verwendete APIs wie [**GetSystemMetrics**](/windows/desktop/api/winuser/nf-winuser-getsystemmetrics) haben keinen Kontext eines HWND und haben daher keine Möglichkeit, das richtige DPI-Bewusstsein für ihre Rückgabewerte zu deduzieren. Das Aufrufen dieser APIs aus einem Thread, der in einem anderen DPI-Bewusstseinsmodus oder Kontext ausgeführt wird, kann Werte zurückgeben, die nicht für den Kontext des aufrufenden Threads skaliert werden. ["GetSystemMetricForDpi",](/windows/desktop/api/Winuser/nf-winuser-getsystemmetricsfordpi) ["SystemParametersInfoForDpi",](/windows/desktop/api/Winuser/nf-winuser-systemparametersinfofordpi)und ["AdjustWindowRectExForDpi"](/windows/desktop/api/Winuser/nf-winuser-adjustwindowrectexfordpi) führen die gleiche Funktionalität wie ihre nicht DPI-nicht unterstützten Entsprechungen aus. Verwenden Sie jedoch einen DPI-Parameter als Argument, und ziehen Sie das DPI-Bewusstsein aus dem Kontext des aktuellen Threads ab.
+-   **GetSystemMetricForDpi** und **SystemParametersInfoForDpi** geben DPI-skalierte Systemmetrikwerte und Systemparameterwerte gemäß dieser Gleichung zurück:
 
     |                                                                 |
     |-----------------------------------------------------------------|
-    | GetSystemMetrics (...) @ dpi = = getsystemmetricsfordpi (..., dpi) |
+    | GetSystemMetrics(...) @ dpi == GetSystemMetricsForDpi(..., dpi) |
 
     
 
      
 
-    Aus diesem Grund gibt das Aufrufen von **GetSystemMetrics** (oder **systemparametersinfofordpi**) beim Ausführen auf einem Gerät mit einem bestimmten System-dpi-Wert denselben Wert zurück, den Ihre dpi-abhängigen Varianten (**getsystemmetricsfordpi** und **systemparametersinfofordpi**) erhalten, wenn derselbe dpi-Wert wie die Eingabe verwendet wird.
+    Daher gibt der Aufruf von **GetSystemMetrics** (oder **SystemParametersInfoForDpi)** während der Ausführung auf einem Gerät mit einem bestimmten System-DPI-Wert den gleichen Wert zurück, den die DPI-fähigen Varianten **(GetSystemMetricsForDpi** und **SystemParametersInfoForDpi)** erhalten, wenn derselbe DPI-Wert wie die Eingabe angegeben wird.
 
--   "Setting [**windowrectexfordpi**](/windows/desktop/api/Winuser/nf-winuser-adjustwindowrectexfordpi) " nimmt ein HWND an und berechnet die erforderliche Größe eines Fenster Rechtecks auf dpi-Weise.
+-   [**AdjustWindowRectExForDpi**](/windows/desktop/api/Winuser/nf-winuser-adjustwindowrectexfordpi) nimmt einen HWND an und berechnet die erforderliche Größe eines Fensterrechtecks auf DPI-bezogene Weise.
 
 </dd> <dd>
 
-</dd> <dd><b><a href="/windows/desktop/api/Winuser/nf-winuser-getdpiforwindow">Getdpiforwindow</a></b><dl> <dt><b>Getdpiforwindow</b> gibt den dpi-Wert zurück, der dem angegebenen HWND zugeordnet ist. Die Antwort hängt vom dpi-Awareness-Modus des HWND ab:
+</dd> <dd><b><a href="/windows/desktop/api/Winuser/nf-winuser-getdpiforwindow">GetDpiForWindow</a></b><dl> <dt><b>GetDpiForWindow</b> gibt den DPI zurück, der dem bereitgestellten HWND zugeordnet ist. Die Antwort hängt vom DPI-Awareness-Modus des HWND ab:
 
-| DPI-Awareness-Modus des HWND | Rückgabewert                                                                                                                                                                                                  |
+| DPI-Awareness-Modus von HWND | Rückgabewert                                                                                                                                                                                                  |
 |----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Bewusste                    | 96                                                                                                                                                                                                            |
-| System                     | Der System-dpi                                                                                                                                                                                                |
-| Per-Monitor                | Der dpi-Wert zeigt an, dass sich das zugeordnete Fenster der obersten Ebene hauptsächlich unter befindet. <br/> (Wenn ein untergeordnetes Fenster bereitgestellt wird, wird der dpi-Wert des entsprechenden übergeordneten Fensters der obersten Ebene zurückgegeben.)<br/> |
+| Nicht bekannt                    | 96                                                                                                                                                                                                            |
+| System                     | Der System-DPI                                                                                                                                                                                                |
+| Per-Monitor                | Der DPI der Anzeige, auf der sich das zugeordnete Fenster der obersten Ebene in erster Linie befindet. <br/> (Wenn ein untergeordnetes Fenster bereitgestellt wird, wird der DPI des entsprechenden übergeordneten Fensters der obersten Ebene zurückgegeben.)<br/> |
 
-</dt> </dl> </dd> <dd><b><a href="/windows/desktop/api/Winuser/nf-winuser-getdpiforsystem">Getdpiforsystem</a></b><dl> <dt>
+</dt> </dl> </dd> <dd><b><a href="/windows/desktop/api/Winuser/nf-winuser-getdpiforsystem">GetDpiForSystem</a></b><dl> <dt>
 
-Der Aufruf von **getdpiforsystem** ist effizienter als das Aufrufen von [**GetDC**](/windows/desktop/api/winuser/nf-winuser-getdc) und [**GetDeviceCaps**](/windows/desktop/api/wingdi/nf-wingdi-getdevicecaps) zum Abrufen des System-dpi.
+Das Aufrufen von **GetDpiForSystem** ist effizienter als das Aufrufen von [**GetDC**](/windows/desktop/api/winuser/nf-winuser-getdc) und [**GetDeviceCaps**](/windows/desktop/api/wingdi/nf-wingdi-getdevicecaps) zum Abrufen des System-DPI.
 </dt> <dt>
 
-Jede Komponente, die in einer Anwendung ausgeführt werden kann, die unter Prozess-dpi-Informationen verwendet, sollte nicht davon ausgehen, dass der System-dpi-Wert während des Lebenszyklus des Prozesses statisch ist. Wenn z. b. ein Thread, der unter dem dpi-Kontext, der den Kontext erkennt, den System-dpi-Wert abfragt, lautet die Antwort 96. **\_ \_ \_** Wenn derselbe Thread jedoch in den Kontext System-Informations Kontext des **dpi- \_ \_ Kontexts \_** gewechselt und den System-dpi-Wert erneut abgefragt, kann die Antwort anders lauten. Um die Verwendung eines zwischengespeicherten (und möglicherweise veralteten) System dpi-Werts zu vermeiden, verwenden Sie **getdpiforsystem** , um das System-dpi in Relation zum dpi-Awareness-Modus des aufrufenden Threads abzurufen. 
+Jede Komponente, die in einer Anwendung ausgeführt werden könnte, die DPI-Informationen des Unterprozesses verwendet, sollte nicht davon ausgehen, dass der System-DPI während des Lebenszyklus des Prozesses statisch ist. Wenn z. B. ein Thread, der unter **dem DPI \_ AWARENESS CONTEXT \_ UNAWARE \_ Awareness-Kontext** ausgeführt wird, den System-DPI abfragt, lautet die Antwort 96. Wenn jedoch derselbe Thread zum Kontext der **DPI \_ AWARENESS \_ \_ CONTEXT-SYSTEMerkennung** gewechselt und den System-DPI erneut abgefragt hat, kann die Antwort anders lauten. Um die Verwendung eines zwischengespeicherten (und möglicherweise veralteten) System-DPI-Werts zu vermeiden, verwenden **Sie GetDpiForSystem,** um den System-DPI relativ zum DPI-Wahrnehmungsmodus des aufrufenden Threads abzurufen. 
 </dt> </dl> </dd> </dl>

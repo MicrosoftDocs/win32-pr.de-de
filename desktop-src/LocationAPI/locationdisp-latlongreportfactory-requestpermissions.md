@@ -1,7 +1,7 @@
 ---
-description: Öffnet ein System Dialogfeld zum Anfordern von Benutzerberechtigungen für Geräte, die für den Standort aktiviert sind.
+description: 'LocationDisp.LatLongReportFactory.RequestPermissions-Methode: Öffnet ein Systemdialogfeld zum Anfordern der Benutzerberechtigung für standortfähige Geräte.'
 ms.assetid: 25b4368d-ff9d-4806-a22e-4ae0760d6f0f
-title: LocationDisp. latlongreportfactory. requestberechtigungs Methode
+title: LocationDisp.LatLongReportFactory.RequestPermissions-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,18 +12,18 @@ api_name:
 api_type:
 - COM
 api_location: ''
-ms.openlocfilehash: ed789aca4b6c9d0db50a3e7b6cae33d55d22920c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1b2d21a032a2e4c08c6f80e4f0ae79349a49ce21
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106358542"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108088928"
 ---
-# <a name="locationdisplatlongreportfactoryrequestpermissions-method"></a>LocationDisp. latlongreportfactory. requestberechtigungs Methode
+# <a name="locationdisplatlongreportfactoryrequestpermissions-method"></a>LocationDisp.LatLongReportFactory.RequestPermissions-Methode
 
-\[Das Location-API-Objektmodell ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt "Anforderungen" angegeben sind. Es kann in nachfolgenden Versionen geändert oder entfernt werden. Verwenden Sie stattdessen die [W3C-geolozierungs-API](/previous-versions/windows/internet-explorer/ie-developer/samples/gg589513(v=vs.85)), um auf den Standort von einer Website zuzugreifen. Verwenden Sie die [**Windows. Devices. Geolokation**](/uwp/api/Windows.Devices.Geolocation) -API, um auf den Speicherort einer Desktop Anwendung zuzugreifen.\]
+\[Das Location-API-Objektmodell steht für die Verwendung in den im Abschnitt Anforderungen angegebenen Betriebssystemen zur Verfügung. Es kann in nachfolgenden Versionen geändert oder entfernt werden. Verwenden Sie stattdessen die [W3C-Geolocation-API,](/previous-versions/windows/internet-explorer/ie-developer/samples/gg589513(v=vs.85))um von einer Website aus auf den Standort zuzugreifen. Verwenden Sie die [**Windows.Devices.Geolocation-API,**](/uwp/api/Windows.Devices.Geolocation) um über eine Desktopanwendung auf den Standort zuzugreifen.\]
 
-Öffnet ein System Dialogfeld zum Anfordern von Benutzerberechtigungen für Geräte, die für den Standort aktiviert sind.
+Öffnet ein Systemdialogfeld, in dem Benutzerberechtigungen für standortfähige Geräte anfordern werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -53,24 +53,24 @@ Diese Methode gibt keinen Wert zurück.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Der Aufruf erfolgt synchron, und der Aufrufer wartet darauf, dass das Dialogfeld geschlossen wird.
+Der Aufruf ist synchron, und der Aufrufer wartet darauf, dass das Dialogfeld geschlossen wird.
 
 > [!Note]  
-> Wenn eine Anwendung, die im geschützten Modus ausgeführt wird, z. b. ein Browserhilfsobjekt (BHO) für Internet Explorer, **requestberechtigungen** aufruft und der Benutzer die Option **diesen Speicherort nicht aktivieren** im Dialogfeld aktiviert, wird der Speicherort Anbieter nicht aktiviert, aber Windows zeigt das Dialogfeld erneut an, wenn **requestberechtigungs Berechtigungen** vom gleichen Benutzer erneut aufgerufen werden. Anwendungen, die im geschützten Modus ausgeführt werden, können **anfordererberechtigungen** beim Start nicht aufrufen, damit dem Benutzer bei jedem Start der Anwendung kein möglicherweise unerwünschtes Dialogfeld angezeigt wird.
+> Wenn eine Anwendung, die im geschützten Modus ausgeführt wird, z. B. ein Browser-Hilfsobjekt (Browser  Helper Object, BHO) für Internet Explorer, **RequestPermissions** aufruft und der Benutzer die Option Diesen Standortsensor nicht aktivieren im Dialogfeld auswählt, wird der Standortanbieter nicht aktiviert, aber Windows zeigt das Dialogfeld erneut an, wenn **RequestPermissions** erneut vom gleichen Benutzer aufgerufen wird. Anwendungen, die im geschützten Modus ausgeführt werden, können **requestPermissions** beim Start nicht aufrufen, damit dem Benutzer nicht bei jedem Start der Anwendung ein möglicherweise unerwünschtes Dialogfeld angezeigt wird.
 
  
 
 ## <a name="examples"></a>Beispiele
 
-Ein Beispiel für die Verwendung dieser Methode finden Sie unter [lauschen auf latlong-Bericht Ereignisse](/uwp/api/Windows.Devices.Geolocation).
+Ein Beispiel für die Verwendung dieser Methode finden Sie unter [Lauschen auf LatLong-Berichtsereignisse.](/uwp/api/Windows.Devices.Geolocation)
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|--------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ 7-Desktop-Apps\]<br/> |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                  |
 
 

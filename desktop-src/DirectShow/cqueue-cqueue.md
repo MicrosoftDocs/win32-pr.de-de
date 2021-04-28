@@ -1,7 +1,7 @@
 ---
-description: Konstruktormethode.
+description: 'CQueue.CQueue-Konstruktor (Wxutil.h): Konstruktormethode.'
 ms.assetid: 4dcbb088-638b-49a6-afaf-a973e13bd5fb
-title: Cqueue. cqueue-Konstruktor (wxutil. h)
+title: CQueue.CQueue-Konstruktor (Wxutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,14 +16,14 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: f013a1e009c533b8307b07fe6faf32ce70994948
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: f2fe1d44f4d8d6867ddb6fa4763d794aa0a32c55
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358049"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108098948"
 ---
-# <a name="cqueuecqueue-constructor-wxutilh"></a>Cqueue. cqueue-Konstruktor (wxutil. h)
+# <a name="cqueuecqueue-constructor-wxutilh"></a>CQueue.CQueue-Konstruktor (Wxutil.h)
 
 Konstruktormethode.
 
@@ -45,7 +45,7 @@ CQueue(
 *n* 
 </dt> <dd>
 
-Größe der zu erstellenden Warteschlange.
+Größe der zu erstellende Warteschlange.
 
 </dd> </dl>
 
@@ -53,18 +53,18 @@ Größe der zu erstellenden Warteschlange.
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Wxutil. h (Include Streams. h)</dt> </dl>                                                                                    |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Wxutil.h (include Streams.h)</dt> </dl>                                                                                    |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cqueue-Klasse**](cqueue.md)
+[**CQueue-Klasse**](cqueue.md)
 </dt> </dl>
 
  

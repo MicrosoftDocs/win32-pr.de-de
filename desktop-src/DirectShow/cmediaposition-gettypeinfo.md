@@ -1,7 +1,7 @@
 ---
-description: Die GetTypeInfo-Methode ruft die Typinformationen für das-Objekt ab, die dann zum Abrufen der Typinformationen für eine Schnittstelle verwendet werden können.
+description: 'CMediaPosition.GetTypeInfo-Methode: Die GetTypeInfo-Methode ruft die Typinformationen für das Objekt ab, die dann verwendet werden können, um die Typinformationen für eine Schnittstelle abzurufen.'
 ms.assetid: 0a04c43d-8b4b-4780-b02f-04053c405c77
-title: Cmediaposition. GetTypeInfo-Methode (ctlutil. h)
+title: CMediaPosition.GetTypeInfo-Methode (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 6fa776ca71daff67185bf9fd2c1727f9535f8ac4
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: f7827a3599f05061b5760084bed46cd2554b45f9
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361014"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108099138"
 ---
-# <a name="cmediapositiongettypeinfo-method"></a>Cmediaposition. GetTypeInfo-Methode
+# <a name="cmediapositiongettypeinfo-method"></a>CMediaPosition.GetTypeInfo-Methode
 
-Die- `GetTypeInfo` Methode ruft die Typinformationen für das-Objekt ab, die dann zum Abrufen der Typinformationen für eine Schnittstelle verwendet werden können.
+Die `GetTypeInfo` -Methode ruft die Typinformationen für das -Objekt ab, die dann verwendet werden können, um die Typinformationen für eine Schnittstelle abzurufen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,7 +47,7 @@ HRESULT GetTypeInfo(
 *itinfo* 
 </dt> <dd>
 
-Typinformationen, die zurückgegeben werden. Muss Null sein.
+Geben Sie informationen ein, die sie zurückgeben. Muss Null sein.
 
 </dd> <dt>
 
@@ -61,21 +61,21 @@ Gebietsschemabezeichner
 *pptinfo* 
 </dt> <dd>
 
-Adresse einer Variablen, die einen **itypeingefo** -Zeiger empfängt.
+Adresse einer Variablen, die einen **ITypeInfo-Zeiger** empfängt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT** -Wert zurück. Die folgenden Werte sind möglich.
+Gibt einen **HRESULT-Wert** zurück. Die folgenden Werte sind möglich.
 
 
 
 | Rückgabecode                                                                                             | Beschreibung                                    |
 |---------------------------------------------------------------------------------------------------------|------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>                    | Erfolg.<br/>                            |
-| <dl> <dt>**E- \_ Zeiger**</dt> </dl>               | **Null** -Zeigerargument.<br/>          |
-| <dl> <dt>**Geben Sie \_ E \_ elementnotfound ein.**</dt> </dl> | Der *itinfo* -Parameter ist nicht 0 (null).<br/> |
+| <dl> <dt>**\_E-ZEIGER**</dt> </dl>               |  NULL-Zeigerargument.<br/>          |
+| <dl> <dt>**TYP \_ E \_ ELEMENTNOTFOUND**</dt> </dl> | Der *itinfo-Parameter* ist nicht 0 (null).<br/> |
 
 
 
@@ -85,18 +85,18 @@ Gibt einen **HRESULT** -Wert zurück. Die folgenden Werte sind möglich.
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (einschließlich Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cmediaposition-Klasse**](cmediaposition.md)
+[**CMediaPosition-Klasse**](cmediaposition.md)
 </dt> </dl>
 
  

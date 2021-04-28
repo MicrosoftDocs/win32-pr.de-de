@@ -1,58 +1,58 @@
 ---
-description: Gibt an, ob die zwei-Kanal-Audiodaten als Stereo oder Dual Mono codiert werden.
+description: 'AVDecAudioDualMono-Eigenschaft: Gibt an, ob 2-Kanal-Audio als Stereo oder duales Mono codiert wird.'
 ms.assetid: 96cb9e17-588c-4a1a-a7ba-7f8439d5b79a
-title: Avdecaudiodualmono-Eigenschaft (codecapi. h)
+title: AVDecAudioDualMono-Eigenschaft (Codecapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 107adb00eb68cbb9ec19331b0c0f3f9db916a306
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: adc84e19d41840b358e3e79576152dbc8527e2bb
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "103860421"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108096568"
 ---
-# <a name="avdecaudiodualmono-property"></a>Avdecaudiodualmono (Eigenschaft)
+# <a name="avdecaudiodualmono-property"></a>AVDecAudioDualMono (Eigenschaft)
 
-Gibt an, ob die zwei-Kanal-Audiodaten als Stereo oder Dual Mono codiert werden.
+Gibt an, ob 2-Kanal-Audio als Stereo oder Dual Mono codiert wird.
 
 Diese Eigenschaft ist schreibgeschützt.
 
 ## <a name="data-type"></a>Datentyp
 
-**UInt32** (**VT \_ UI4**)
+**UINT32** (**VT \_ UI4**)
 
 ## <a name="property-guid"></a>Eigenschaften-GUID
 
-**Codecapi \_ avdecaudiodualmono**
+**CODECAPI \_ AVDecAudioDualMono**
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Der Wert dieser Eigenschaft ist ein Member der [**eavdecaudiodualmono**](/windows/desktop/api/codecapi/ne-codecapi-eavdecaudiodualmono) -Enumeration.
+Der Wert dieser Eigenschaft ist ein Member der [**eAVDecAudioDualMono-Enumeration.**](/windows/desktop/api/codecapi/ne-codecapi-eavdecaudiodualmono)
 
 ## <a name="remarks"></a>Bemerkungen
 
-Diese Eigenschaft wird nur angewendet, wenn der Eingabe-Bit-Stream des Decoders zwei Kanal-Audiodaten enthält. Ein Audiodatenstrom mit zwei Kanälen kann als Stereo oder als dualer Mono codiert werden. Wenn das Audio Dual Mono ist, können Sie die [**avdecaudiodualmonorepromode**](avdecaudiodualmonorepromode-property.md) -Eigenschaft festlegen, um zu konfigurieren, wie der Decoder die Audiodatei wiederherstellt.
+Diese Eigenschaft gilt nur, wenn der Eingabebitstream des Decoders Zweikanalaudiodaten enthält. Ein Zweikanal-Audiostream kann als Stereo oder duales Mono codiert werden. Wenn die Audiodaten dual mono sind, können Sie die [**AVDecAudioDualMonoReproMode-Eigenschaft**](avdecaudiodualmonorepromode-property.md) festlegen, um zu konfigurieren, wie der Decoder die Audiodaten reproduziert.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[ Desktop Apps \| UWP-apps\]<br/>                     |
-| Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[ Desktop Apps \| UWP-apps\]<br/>                           |
-| Header<br/>                   | <dl> <dt>Codecapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | UWP-Apps für Windows 2000 \[ \| Professional-Desktop-Apps\]<br/>                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows 2000 \[ Server-Desktop-Apps \| UWP-Apps\]<br/>                           |
+| Header<br/>                   | <dl> <dt>Codecapi.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Eigenschaften der Codec-API](codec-api-properties.md)
+[Codec-API-Eigenschaften](codec-api-properties.md)
 </dt> <dt>
 
-[**Icodecapi-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-icodecapi)
+[**ICodecAPI-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-icodecapi)
 </dt> </dl>
 
  

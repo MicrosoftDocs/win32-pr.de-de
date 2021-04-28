@@ -1,7 +1,7 @@
 ---
-description: Mit der Resume-Methode wird eine angehaltene Erfassung neu gestartet.
+description: 'IDelaydC::Resume-Methode: Die Resume-Methode startet eine angehaltene Erfassung neu.'
 ms.assetid: 4fa47220-d323-407b-9dae-704969f66bdd
-title: 'Idelta aydc:: Resume-Methode (Netmon. h)'
+title: IDelaydC::Resume-Methode (Netmon.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - Ndisnpp.dll
 - Rmtnpp.dll
-ms.openlocfilehash: ba0deef666c2e9829cb5a71d91e73da9c1b7d780
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9c8c3b505e0e9fb306a444111cce22c8c580d015
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103750057"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108109188"
 ---
-# <a name="idelaydcresume-method"></a>Idelta aydc:: Resume-Methode
+# <a name="idelaydcresume-method"></a>IDelaydC::Resume-Methode
 
-Mit der **Resume** -Methode wird eine angehaltene Erfassung neu gestartet.
+Die **Resume-Methode** startet eine angehaltene Erfassung neu.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,7 +40,7 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Methode erfolgreich ist, ist der Rückgabewert nmerr \_ Success.
+Wenn die Methode erfolgreich ist, lautet der Rückgabewert NMERR \_ SUCCESS.
 
 Wenn die Methode nicht erfolgreich ist, ist der Rückgabewert einer der folgenden Fehlercodes:
 
@@ -48,9 +48,9 @@ Wenn die Methode nicht erfolgreich ist, ist der Rückgabewert einer der folgende
 
 | Rückgabecode                                                                                                | Beschreibung                                                                                                                               |
 |------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**nmerr- \_ Erfassung wurde \_ nicht \_ angehalten.**</dt> </dl> | Die Erfassung wird nicht angehalten. Wenden Sie [**idelta DC::P ause**](idelaydc-pause.md) an, um die Erfassung anzuhalten.<br/>                                |
-| <dl> <dt>**nmerr \_ nicht \_ verbunden**</dt> </dl>       | Der npp ist nicht mit dem Netzwerk verbunden. Wenden Sie [**idelta-DC:: Connect**](idelaydc-connect.md) an, um die NPP mit dem Netzwerk zu verbinden.<br/> |
-| <dl> <dt>**nmerr \_ nicht \_ verzögert**</dt> </dl>         | Der npp ist mit dem Netzwerk verbunden, jedoch nicht mit der [**idelta aydc:: Connect**](idelaydc-connect.md) -Methode.<br/>                     |
+| <dl> <dt>**NMERR \_ CAPTURE \_ NOT \_ PAUSED**</dt> </dl> | Die Erfassung wird nicht angehalten. Rufen Sie [**IDelaydC::P ause**](idelaydc-pause.md) auf, um die Erfassung anzuhalten.<br/>                                |
+| <dl> <dt>**NMERR \_ NICHT \_ VERBUNDEN**</dt> </dl>       | Das NPP ist nicht mit dem Netzwerk verbunden. Rufen Sie [**IDelaydC::Connect**](idelaydc-connect.md) auf, um die NPP mit dem Netzwerk zu verbinden.<br/> |
+| <dl> <dt>**NMERR \_ NICHT \_ VERZÖGERT**</dt> </dl>         | Das NPP ist mit dem Netzwerk verbunden, jedoch nicht mit der [**IDelaydC::Connect-Methode.**](idelaydc-connect.md)<br/>                     |
 
 
 
@@ -58,39 +58,39 @@ Wenn die Methode nicht erfolgreich ist, ist der Rückgabewert einer der folgende
 
 ## <a name="remarks"></a>Bemerkungen
 
-Während die Erfassung angehalten wird, werden neue Daten erst zur aktuellen [*Erfassungs Datei*](c.md) hinzugefügt, wenn die **idelta-DC:: Resume** -Methode aufgerufen wird, um die Erfassung neu zu starten. Wenn anhalten und **fortsetzen verwendet** werden, um die Erfassung zu [**beenden und neu**](idelaydc-pause.md) zu starten, werden alle erfassten Informationen in derselben Erfassungs Datei abgelegt.
+Während die Erfassung angehalten wird, werden der aktuellen [*Erfassungsdatei*](c.md) erst neue Daten hinzugefügt, wenn die **IDelaydC::Resume-Methode** aufgerufen wird, um die Erfassung neu zu starten. Wenn [**Anhalten**](idelaydc-pause.md) und **Fortsetzen** zum Beenden und Neustarten der Erfassung verwendet werden, werden alle erfassten Informationen in derselben Erfassungsdatei gespeichert.
 
-Bei der [**Verwendung**](idelaydc-pause.md) von **Anhalten und fort** setzen zur Steuerung der Erfassung werden Netzwerkmonitor weiterhin [*Konversations Statistiken*](c.md) zu den vorhandenen Statistiken für die aktuelle Erfassung hinzufügen.
+Wenn [**Sie anhalten**](idelaydc-pause.md) und **fortsetzen** verwenden, um die Erfassung zu steuern, fügt Netzwerkmonitor den vorhandenen Statistiken für die aktuelle Erfassung weiterhin [*Konversationsstatistiken*](c.md) hinzu.
 
-Um die Erfassung anzuhalten, nennen Sie [**idelta aydc:: Stop.**](idelaydc-stop.md)
+Um die Erfassung zu beenden, rufen [**Sie IDelaydC::Stop**](idelaydc-stop.md)auf.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                                                                     |
-| Header<br/>                   | <dl> <dt>Netmon. h</dt> </dl>                                                                      |
+| Header<br/>                   | <dl> <dt>Netmon.h</dt> </dl>                                                                      |
 | DLL<br/>                      | <dl> <dt>Ndisnpp.dll; </dt> <dt>Rmtnpp.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Idelta-DC](idelaydc.md)
+[IDelaydC](idelaydc.md)
 </dt> <dt>
 
-[**Idelta aydc:: Connect**](idelaydc-connect.md)
+[**IDelaydC::Connect**](idelaydc-connect.md)
 </dt> <dt>
 
-[**Idelta aydc::P ause**](idelaydc-pause.md)
+[**IDelaydC::P ause**](idelaydc-pause.md)
 </dt> <dt>
 
-[**Idelta aydc:: Beendigung**](idelaydc-stop.md)
+[**IDelaydC::Stop**](idelaydc-stop.md)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
-description: Gibt die Matrix zurück, die eine Matrix umgibt.
+description: 'D3DXMatrixTranspose-Funktion (D3DX10Math.h): Gibt die Matrixübersetzung einer Matrix zurück.'
 ms.assetid: 934b17cc-39c4-425c-839b-69e080f0efd7
-title: D3DXMatrixTranspose-Funktion (D3DX10Math. h)
+title: D3DXMatrixTranspose-Funktion (D3DX10Math.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: 0ecc93a560e15b8f0abe4337b866efc292c9355e
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: e20fd8a29ba3f9adec7134a011f8f470c60f7011
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106370462"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108108858"
 ---
-# <a name="d3dxmatrixtranspose-function-d3dx10mathh"></a>D3DXMatrixTranspose-Funktion (D3DX10Math. h)
+# <a name="d3dxmatrixtranspose-function-d3dx10mathh"></a>D3DXMatrixTranspose-Funktion (D3DX10Math.h)
 
-Gibt die Matrix zurück, die eine Matrix umgibt.
+Gibt die Matrix transponieren einer Matrix zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,21 +41,21 @@ D3DXMATRIX* D3DXMatrixTranspose(
 
 <dl> <dt>
 
-*Pout* \[ in, out\]
+*pOut* \[ in, out\]
 </dt> <dd>
 
 Typ: **[ **D3DXMATRIX**](../direct3d9/d3dxmatrix.md)\***
 
-Ein Zeiger auf die [**D3DXMATRIX**](d3d10-d3dxmatrix.md) -Struktur, die das Ergebnis des Vorgangs ist.
+Zeiger auf die [**D3DXMATRIX-Struktur,**](d3d10-d3dxmatrix.md) die das Ergebnis des Vorgangs ist.
 
 </dd> <dt>
 
-*pm* \[ in\]
+*pM* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXMATRIX**](../direct3d9/d3dxmatrix.md) \***
+Typ: **const [**D3DXMATRIX**](../direct3d9/d3dxmatrix.md) \***
 
-Ein Zeiger auf die Quell-D3DXMATRIX-Struktur.
+Zeiger auf die D3DXMATRIX-Quellstruktur.
 
 </dd> </dl>
 
@@ -63,24 +63,24 @@ Ein Zeiger auf die Quell-D3DXMATRIX-Struktur.
 
 Typ: **[ **D3DXMATRIX**](../direct3d9/d3dxmatrix.md)\***
 
-Ein Zeiger auf die D3DXMATRIX-Struktur, die die Matrix ist, die die Matrix umgibt.
+Zeiger auf die D3DXMATRIX-Struktur, die die Matrix-Transponierung der Matrix darstellt.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Der Rückgabewert für diese Funktion ist derselbe Wert, der im Pout-Parameter zurückgegeben wird. Auf diese Weise kann die D3DXMatrixTranspose-Funktion als Parameter für eine andere Funktion verwendet werden.
+Der Rückgabewert für diese Funktion ist der gleiche Wert, der im pOut-Parameter zurückgegeben wird. Auf diese Weise kann die D3DXMatrixTranspose-Funktion als Parameter für eine andere Funktion verwendet werden.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX10Math. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx10. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX10Math.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

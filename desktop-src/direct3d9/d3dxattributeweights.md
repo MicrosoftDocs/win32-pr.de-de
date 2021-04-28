@@ -1,7 +1,7 @@
 ---
-description: Gibt Gitter Gewichtungs Attribute an.
+description: 'D3DXATTRIBUTEWEIGHTS-Struktur: Gibt Meshgewichtungsattribute an.'
 ms.assetid: 8901a0fe-e38a-4045-8e8d-584be2620cc3
-title: D3DXATTRIBUTEWEIGHTS-Struktur (D3dx9mesh. h)
+title: D3DXATTRIBUTEWEIGHTS-Struktur (D3dx9mesh.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - d3dx9mesh.h
-ms.openlocfilehash: 49725e410fb700c7ecb93fd56a8db367d7f982a0
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 7a833d2a58db0f434f836126926e461cd2ee3ea0
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106367378"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108115968"
 ---
 # <a name="d3dxattributeweights-structure"></a>D3DXATTRIBUTEWEIGHTS-Struktur
 
-Gibt Gitter Gewichtungs Attribute an.
+Gibt Gitternetzgewichtungsattribute an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,7 +49,7 @@ typedef struct D3DXATTRIBUTEWEIGHTS {
 **Position**
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
@@ -60,18 +60,18 @@ Position
 **Grenze**
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Blend-Gewichtung.
+Mischungsgewichtung.
 
 </dd> <dt>
 
 **Normal**
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
@@ -82,29 +82,29 @@ Normal.
 **Diffus**
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Diffuses Beleuchtungs Wert.
+Diffuser Beleuchtungswert.
 
 </dd> <dt>
 
 **Glänzend**
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Glanzlicht Wert.
+Glanzlichtwert.
 
 </dd> <dt>
 
 **Texcoord**
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
@@ -112,21 +112,21 @@ Acht Texturkoordinaten.
 
 </dd> <dt>
 
-**Tangens**
+**Tangente**
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Tangens.
+Tangente.
 
 </dd> <dt>
 
 **Binormal**
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
@@ -136,9 +136,9 @@ Binormal.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Diese Struktur beschreibt, wie bei einem Vereinfachungs Vorgang Scheitelpunkt Daten bei der Berechnung relativer Kosten zwischen reduzierenden Kanten berücksichtigt werden. Wenn das normale Feld z. b. 0,0 ist, ignoriert der Vereinfachungs Vorgang die normale Scheitelpunkt Komponente bei der Berechnung des Fehlers für das reduzieren. Wenn das normale Feld jedoch 1,0 ist, wird für den Vereinfachungs Vorgang die normale Scheitelpunkt Komponente verwendet. Wenn das normale Feld 2,0 ist, doppelte die Fehler Menge. Wenn das normale Feld 4,0 ist, vervierfachen Sie die Anzahl der Fehler, usw.
+Diese Struktur beschreibt, wie bei einem Vereinfachungsvorgang Scheitelpunktdaten berücksichtigt werden, wenn relative Kosten zwischen reduzierenden Kanten berechnet werden. Wenn das Feld Normal z. B. 0,0 ist, ignoriert der Vereinfachungsvorgang die Vertexnorm normal-Komponente beim Berechnen des Fehlers für das Reduzieren. Wenn das Feld Normal jedoch 1,0 ist, verwendet der Vereinfachungsvorgang die Vertex normal-Komponente. Wenn das Feld Normal 2,0 ist, doppelt so viele Fehler. , wenn das Feld Normal den Wert 4,0 aufweist, verdreiffachen Sie die Anzahl der Fehler usw.
 
-Der LPD3DXATTRIBUTEWEIGHTS-Typ wird als Zeiger auf die **D3DXATTRIBUTEWEIGHTS** -Struktur definiert.
+Der LPD3DXATTRIBUTEWEIGHTS-Typ wird als Zeiger auf die **D3DXATTRIBUTEWEIGHTS-Struktur** definiert.
 
 
 ```
@@ -152,13 +152,13 @@ Der LPD3DXATTRIBUTEWEIGHTS-Typ wird als Zeiger auf die **D3DXATTRIBUTEWEIGHTS** 
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------|----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3dx9mesh. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3dx9mesh.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

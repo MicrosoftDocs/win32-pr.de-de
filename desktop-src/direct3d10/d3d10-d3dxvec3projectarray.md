@@ -1,7 +1,7 @@
 ---
-description: Projiziert ein Array (x, y, z, 0) aus dem Objekt Raum in den Bildschirmbereich.
+description: 'D3DXVec3ProjectArray-Funktion (D3DX10Math.h): Projiziert ein Array (x, y, z, 0) aus dem Objektbereich in den Bildschirmbereich.'
 ms.assetid: 33f0f65a-c027-4a31-83a7-f5f6b2a2f72f
-title: D3DXVec3ProjectArray-Funktion (D3DX10Math. h)
+title: D3DXVec3ProjectArray-Funktion (D3DX10Math.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - D3DX10Math.h
-ms.openlocfilehash: bdbda9201d23a6c525dc054c53874c71d548e65e
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 1f69eb14cf2cf5fd77092ed6881e16524d8428c5
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104355386"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108108148"
 ---
-# <a name="d3dxvec3projectarray-function-d3dx10mathh"></a>D3DXVec3ProjectArray-Funktion (D3DX10Math. h)
+# <a name="d3dxvec3projectarray-function-d3dx10mathh"></a>D3DXVec3ProjectArray-Funktion (D3DX10Math.h)
 
-Projiziert ein Array (x, y, z, 0) aus dem Objekt Raum in den Bildschirmbereich.
+Projektet ein Array (x, y, z, 0) aus dem Objektbereich in den Bildschirmbereich.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,73 +47,73 @@ D3DXVECTOR3* D3DXVec3ProjectArray(
 
 <dl> <dt>
 
-*Pout* \[ in, out\]
+*pOut* \[ in, out\]
 </dt> <dd>
 
 Typ: **[ **D3DXVECTOR3**](../direct3d9/d3dxvector3.md)\***
 
-Zeiger auf das [**D3DXVECTOR3**](d3d10-d3dxvector3.md) , das das Ergebnis des Vorgangs ist.
+Zeiger auf [**D3DXVECTOR3,**](d3d10-d3dxvector3.md) das das Ergebnis des Vorgangs ist.
 
 </dd> <dt>
 
-*Outstride* \[ in\]
+*OutStride* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Schritt zwischen Vektoren im Ausgabedatenstrom.
+Stride zwischen Vektoren im Ausgabedatenstrom.
 
 </dd> <dt>
 
-*PV* \[ in\]
+*pV* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXVECTOR3**](../direct3d9/d3dxvector3.md) \***
+Typ: **const [**D3DXVECTOR3**](../direct3d9/d3dxvector3.md) \***
 
-Ein Zeiger auf die Quell-D3DXVECTOR3-Struktur.
+Zeiger auf die D3DXVECTOR3-Quellstruktur.
 
 </dd> <dt>
 
-*Vstride* \[ in\]
+*VStride* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Schritt zwischen Vektoren im Eingabedaten Strom.
+Stride zwischen Vektoren im Eingabedatenstrom.
 
 </dd> <dt>
 
-*pviewport* \[ in\]
+*pViewport* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**d3d10 \_ Viewport**](/windows/desktop/api/D3D10/ns-d3d10-d3d10_viewport) \***
+Typ: **const [**D3D10 \_ VIEWPORT**](/windows/desktop/api/D3D10/ns-d3d10-d3d10_viewport) \***
 
-Zeiger auf einen [**d3d10 \_ Viewport**](/windows/desktop/api/D3D10/ns-d3d10-d3d10_viewport), der den Viewport darstellt.
+Zeiger auf einen [**D3D10 \_ VIEWPORT,**](/windows/desktop/api/D3D10/ns-d3d10-d3d10_viewport)der den Viewport darstellt.
 
 </dd> <dt>
 
-*pprojection* \[ in\]
+*pProjection* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXMATRIX**](../direct3d9/d3dxmatrix.md) \***
+Typ: **const [**D3DXMATRIX**](../direct3d9/d3dxmatrix.md) \***
 
-Zeiger auf eine [**D3DXMATRIX**](d3d10-d3dxmatrix.md) -Struktur, die die Projektions Matrix darstellt.
+Zeiger auf eine [**D3DXMATRIX-Struktur,**](d3d10-d3dxmatrix.md) die die Projektionsmatrix darstellt.
 
 </dd> <dt>
 
-*PView* \[ in\]
+*pView* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXMATRIX**](../direct3d9/d3dxmatrix.md) \***
+Typ: **const [**D3DXMATRIX**](../direct3d9/d3dxmatrix.md) \***
 
-Zeiger auf eine D3DXMATRIX-Struktur, die die Ansichts Matrix darstellt.
+Zeiger auf eine D3DXMATRIX-Struktur, die die Ansichtsmatrix darstellt.
 
 </dd> <dt>
 
-*pworld* \[ in\]
+*pWorld* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXMATRIX**](../direct3d9/d3dxmatrix.md) \***
+Typ: **const [**D3DXMATRIX**](../direct3d9/d3dxmatrix.md) \***
 
 Zeiger auf eine D3DXMATRIX-Struktur, die die Weltmatrix darstellt.
 
@@ -122,7 +122,7 @@ Zeiger auf eine D3DXMATRIX-Struktur, die die Weltmatrix darstellt.
 *n* \[ in\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
 Anzahl der Elemente im Array.
 
@@ -132,23 +132,23 @@ Anzahl der Elemente im Array.
 
 Typ: **[ **D3DXVECTOR3**](../direct3d9/d3dxvector3.md)\***
 
-Zeiger auf eine D3DXVECTOR3-Struktur, bei der es sich um das Array handelt, das vom Objekt Raum auf den Bildschirmbereich
+Zeiger auf eine D3DXVECTOR3-Struktur, bei der es sich um das Array handelt, das vom Objektbereich in den Bildschirmbereich projiziert wird.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Der Rückgabewert für diese Funktion ist derselbe Wert, der im Pout-Parameter zurückgegeben wird. Auf diese Weise kann die D3DXVec3ProjectArray-Funktion als Parameter für eine andere Funktion verwendet werden.
+Der Rückgabewert für diese Funktion ist der gleiche Wert, der im pOut-Parameter zurückgegeben wird. Auf diese Weise kann die D3DXVec3ProjectArray-Funktion als Parameter für eine andere Funktion verwendet werden.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------|-----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3DX10Math. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3DX10Math.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

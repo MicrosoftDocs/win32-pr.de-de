@@ -1,7 +1,7 @@
 ---
-description: Beschreibt einen Vektor mit vier Komponenten, einschließlich Operator Überladungen und Typumwandlungen.
+description: 'D3DXVECTOR4-Struktur (D3DX10Math.h): Beschreibt einen Vektor mit vier Komponenten, einschließlich Operatorüberladungen und Typcasts.'
 ms.assetid: c6348346-f317-48ed-a369-e39fdb4dc1d6
-title: D3DXVECTOR4-Struktur (D3DX10Math. h)
+title: D3DXVECTOR4-Struktur (D3DX10Math.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - D3DX10Math.h
-ms.openlocfilehash: ce65fe5cc6de9d842fb7c93b1089e53b9b27920c
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 2e3af4c11922d7433c56b9353482eba8d374d5a5
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104394230"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108102828"
 ---
-# <a name="d3dxvector4-structure-d3dx10mathh"></a>D3DXVECTOR4-Struktur (D3DX10Math. h)
+# <a name="d3dxvector4-structure-d3dx10mathh"></a>D3DXVECTOR4-Struktur (D3DX10Math.h)
 
-Beschreibt einen Vektor mit vier Komponenten, einschließlich Operator Überladungen und Typumwandlungen.
+Beschreibt einen Vektor mit vier Komponenten, einschließlich Operatorüberladungen und Typcasts.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,7 +45,7 @@ typedef struct D3DXVECTOR4 {
 **x**
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
@@ -56,7 +56,7 @@ Die x-Komponente.
 **y**
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
@@ -67,7 +67,7 @@ Die y-Komponente.
 **z**
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
@@ -78,17 +78,17 @@ Die z-Komponente.
 **w**
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Die w-Komponente.
+Die w--Komponente.
 
 </dd> </dl>
 
 ## <a name="remarks"></a>Bemerkungen
 
-**D3DXVECTOR4** verfügt über die folgenden C++-Erweiterungen.
+**D3DXVECTOR4 verfügt** über die folgenden C++-Erweiterungen.
 
 ### <a name="d3dxvector4-extensions"></a>D3DXVECTOR4-Erweiterungen
 
@@ -142,13 +142,13 @@ public:
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------|-----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3DX10Math. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3DX10Math.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

@@ -1,7 +1,7 @@
 ---
-description: Gibt unter Verwendung der angegebenen 2D-Vektoren einen Punkt in der unter-/codezentrierten Koordinaten zurück.
+description: 'D3DXVec2BaryCentric-Funktion (D3DX10Math.h): Gibt unter Verwendung der angegebenen 2D-Vektoren einen Punkt in barycentric-Koordinaten zurück.'
 ms.assetid: 8eceb2c0-26a0-4a7f-9830-85327dcb31ab
-title: D3DXVec2BaryCentric-Funktion (D3DX10Math. h)
+title: D3DXVec2BaryCentric-Funktion (D3DX10Math.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: 270371fdda42b59cb755f1e0dc7e0fa43a863a1d
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 5b78d08c67fed04af9ef0d54d0c6895106b99208
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104355567"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108108441"
 ---
-# <a name="d3dxvec2barycentric-function-d3dx10mathh"></a>D3DXVec2BaryCentric-Funktion (D3DX10Math. h)
+# <a name="d3dxvec2barycentric-function-d3dx10mathh"></a>D3DXVec2BaryCentric-Funktion (D3DX10Math.h)
 
-Gibt unter Verwendung der angegebenen 2D-Vektoren einen Punkt in der unter-/codezentrierten Koordinaten zurück.
+Gibt unter Verwendung der angegebenen 2D-Vektoren einen Punkt in Barycentric-Koordinaten zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,46 +45,46 @@ D3DXVECTOR2* D3DXVec2BaryCentric(
 
 <dl> <dt>
 
-*Pout* \[ in\]
+*pOut* \[ In\]
 </dt> <dd>
 
 Typ: **[ **D3DXVECTOR2**](../direct3d9/d3dxvector2.md)\***
 
-Zeiger auf das [**D3DXVECTOR2**](d3d10-d3dxvector2.md) , das das Ergebnis des Vorgangs ist.
+Zeiger auf [**D3DXVECTOR2,**](d3d10-d3dxvector2.md) das das Ergebnis des Vorgangs ist.
 
 </dd> <dt>
 
-*pV1* \[ in\]
+*pV1* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXVECTOR2**](../direct3d9/d3dxvector2.md) \***
+Typ: **const [**D3DXVECTOR2**](../direct3d9/d3dxvector2.md) \***
 
-Zeiger auf eine Quell-D3DXVECTOR2-Struktur.
+Zeiger auf eine D3DXVECTOR2-Quellstruktur.
 
 </dd> <dt>
 
-*pV2* \[ in\]
+*pV2* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXVECTOR2**](../direct3d9/d3dxvector2.md) \***
+Typ: **const [**D3DXVECTOR2**](../direct3d9/d3dxvector2.md) \***
 
-Zeiger auf eine Quell-D3DXVECTOR2-Struktur.
+Zeiger auf eine D3DXVECTOR2-Quellstruktur.
 
 </dd> <dt>
 
-*pV3* \[ in\]
+*pV3* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXVECTOR2**](../direct3d9/d3dxvector2.md) \***
+Typ: **const [**D3DXVECTOR2**](../direct3d9/d3dxvector2.md) \***
 
-Zeiger auf eine Quell-D3DXVECTOR2-Struktur.
+Zeiger auf eine D3DXVECTOR2-Quellstruktur.
 
 </dd> <dt>
 
 *f* \[ in\]
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
 Gewichtungsfaktor. Siehe Hinweise.
 
@@ -93,7 +93,7 @@ Gewichtungsfaktor. Siehe Hinweise.
 *g* \[ in\]
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
 Gewichtungsfaktor. Siehe Hinweise.
 
@@ -103,39 +103,39 @@ Gewichtungsfaktor. Siehe Hinweise.
 
 Typ: **[ **D3DXVECTOR2**](../direct3d9/d3dxvector2.md)\***
 
-Zeiger auf eine D3DXVECTOR2-Struktur in den baryzentrierten Koordinaten.
+Zeiger auf eine D3DXVECTOR2-Struktur in baryzentrierten Koordinaten.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Die D3DXVec2BaryCentric-Funktion bietet eine Möglichkeit, Punkte in und um ein Dreieck zu verstehen, unabhängig davon, wo sich das Dreieck tatsächlich befindet. Diese Funktion gibt den resultierenden Punkt mithilfe der folgenden Gleichung zurück: v1 + f (V2-V1) + g (v3-v1).
+Die D3DXVec2BaryCentric-Funktion bietet eine Möglichkeit, Punkte in und um ein Dreieck zu verstehen, unabhängig davon, wo sich das Dreieck tatsächlich befindet. Diese Funktion gibt den resultierenden Punkt mithilfe der folgenden Gleichung zurück: V1 + f(V2-V1) + g(V3-V1).
 
-Jeder Punkt in der Ebene V1V2V3 kann durch die baryzentrische Koordinate (f, g) dargestellt werden. Der Parameter f steuert, wie viel v2 in das Ergebnis gewichtet wird, und der Parameter g steuert, wie viel v3 in das Ergebnis gewichtet wird. Schließlich steuert 1-f-g, wie viel V1 in das Ergebnis gewichtet wird.
+Jeder Punkt in der Ebene V1V2V3 kann durch die baryzentrierte Koordinate (f,g) dargestellt werden. Der Parameter f steuert, wie viel V2 in das Ergebnis gewichtet wird, und der Parameter g steuert, wie viel V3 in das Ergebnis gewichtet wird. Schließlich steuert 1-f-g, wie viel V1 in das Ergebnis gewichtet wird.
 
 Beachten Sie die folgenden Beziehungen.
 
--   Wenn (f>= 0 &, & g>= 0 &, & 1-f-g>= 0), befindet sich der Punkt innerhalb des Dreiecks V1V2V3.
--   Wenn (f = = 0 &, & g>= 0 &, & 1-f-g>= 0), befindet sich der Punkt in der Zeile V1V3.
--   Wenn (f>= 0 &, & g = = 0 &, & 1-f-g>= 0), befindet sich der Punkt in der Zeile v1v2.
--   Wenn (f>= 0 &, & g>= 0 &, & 1-f-g = = 0), befindet sich der Punkt in der Zeile V2V3.
+-   Wenn (f>=0 &, & g>=0 &, & 1-f-g>=0), befindet sich der Punkt innerhalb des Dreiecks V1V2V3.
+-   Wenn (f==0 &, & g>=0 &, & 1-f-g>=0), befindet sich der Punkt in der Zeile V1V3.
+-   Wenn (f>=0 &, & g==0 &, & 1-f-g>=0), befindet sich der Punkt in der Zeile V1V2.
+-   Wenn (f>=0 &, & g>=0 &, & 1-f-g==0), befindet sich der Punkt in der Zeile V2V3.
 
-Baryzentrierte Koordinaten sind eine Form allgemeiner Koordinaten. In diesem Kontext stellt die Verwendung von barzentrischen Koordinaten eine Änderung in Koordinatensystemen dar. Was für kartesische Koordinaten true ist, ist für barzentrierte Koordinaten "true".
+Baryzentrierte Koordinaten sind eine Form allgemeiner Koordinaten. In diesem Kontext stellt die Verwendung von baryzentrierten Koordinaten eine Änderung der Koordinatensysteme dar. Was für kartesische Koordinaten zutrifft, gilt für baryzentrierte Koordinaten.
 
-Der Rückgabewert für diese Funktion ist derselbe Wert, der im Pout-Parameter zurückgegeben wird. Auf diese Weise kann die D3DXVec2BaryCentric-Funktion als Parameter für eine andere Funktion verwendet werden.
+Der Rückgabewert für diese Funktion ist der gleiche Wert, der im pOut-Parameter zurückgegeben wird. Auf diese Weise kann die D3DXVec2BaryCentric-Funktion als Parameter für eine andere Funktion verwendet werden.
 
-In den Scheitel Punkten des Dreiecks wird ein Punkt innerhalb eines Dreiecks definiert. Eine ausführlichere Beschreibung von baryzentrischen Koordinaten finden Sie in [der Beschreibung von mathworld in der Beschreibung der baryzentrierten Koordinaten](https://mathworld.wolfram.com/BarycentricCoordinates.html).
+Baryzentrierte Koordinaten definieren einen Punkt innerhalb eines Dreiecks in Bezug auf die Scheitelpunkt des Dreiecks. Eine detailliertere Beschreibung der baryzentrierten Koordinaten finden Sie unter [Beschreibung der baryzentrierten Koordinaten von Mathworld.](https://mathworld.wolfram.com/BarycentricCoordinates.html)
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX10Math. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx10. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX10Math.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

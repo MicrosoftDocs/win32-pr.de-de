@@ -1,7 +1,7 @@
 ---
-description: Erstellt eine Quaternion mit dem angegebenen Yaw, der angegebenen Tonhöhe und dem angegebenen Rollover.
+description: 'D3DXQuaternionRotationYawPitchRoll-Funktion (D3DX10Math.h): Erstellt eine Quaternion mit dem angegebenen Yaw, Pitch und Roll.'
 ms.assetid: c929d9d4-b9cb-4de6-86c1-26fec3617846
-title: D3DXQuaternionRotationYawPitchRoll-Funktion (D3DX10Math. h)
+title: D3DXQuaternionRotationYawPitchRoll-Funktion (D3DX10Math.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: 7d894be61f5f22322f83c4e4a6c6a724de4b9da4
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: cefcf9a927cee0d8f7c83ff42ae6ca4fc699bb09
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106371933"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108108748"
 ---
-# <a name="d3dxquaternionrotationyawpitchroll-function-d3dx10mathh"></a>D3DXQuaternionRotationYawPitchRoll-Funktion (D3DX10Math. h)
+# <a name="d3dxquaternionrotationyawpitchroll-function-d3dx10mathh"></a>D3DXQuaternionRotationYawPitchRoll-Funktion (D3DX10Math.h)
 
-Erstellt eine Quaternion mit dem angegebenen Yaw, der angegebenen Tonhöhe und dem angegebenen Rollover.
+Erstellt eine Quaternion mit dem angegebenen Yaw, Pitch und Roll.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,39 +43,39 @@ D3DXQUATERNION* D3DXQuaternionRotationYawPitchRoll(
 
 <dl> <dt>
 
-*Pout* \[ in, out\]
+*pOut* \[ in, out\]
 </dt> <dd>
 
 Typ: **[ **D3DXQUATERNION**](../direct3d9/d3dxquaternion.md)\***
 
-Zeiger auf das [**D3DXQUATERNION**](d3d10-d3dxquaternion.md) , das das Ergebnis des Vorgangs ist.
+Zeiger auf [**D3DXQUATERNION,**](d3d10-d3dxquaternion.md) das das Ergebnis des Vorgangs ist.
 
 </dd> <dt>
 
-Nicht im  \[ in\]
+*Yaw* \[ In\]
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-Um die y-Achse im Bogenmaße herum.
+Gischen Sie um die y-Achse im Bogenmaß.
 
 </dd> <dt>
 
-*Tonhöhe* \[ in\]
+*Tonhöhe* \[ In\]
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-Die Höhe um die x-Achse im Bogenmaße.
+Tonhöhe um die x-Achse im Bogenmaß.
 
 </dd> <dt>
 
-*Rollout* \[ in\]
+*Roll* \[ In\]
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-Führen Sie ein Rollback für die z-Achse im Bogenmaße durch.
+Rolling um die Z-Achse im Bogenmaß.
 
 </dd> </dl>
 
@@ -83,26 +83,26 @@ Führen Sie ein Rollback für die z-Achse im Bogenmaße durch.
 
 Typ: **[ **D3DXQUATERNION**](../direct3d9/d3dxquaternion.md)\***
 
-Zeiger auf eine D3DXQUATERNION-Struktur mit dem angegebenen "Yaw", "Pitch" und "Roll".
+Zeiger auf eine D3DXQUATERNION-Struktur mit dem angegebenen Yaw, Pitch und Roll.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Der Rückgabewert für diese Funktion ist derselbe Wert, der im Pout-Parameter zurückgegeben wird. Auf diese Weise kann die D3DXQuaternionRotationYawPitchRoll-Funktion als Parameter für eine andere Funktion verwendet werden.
+Der Rückgabewert für diese Funktion ist der gleiche Wert, der im pOut-Parameter zurückgegeben wird. Auf diese Weise kann die D3DXQuaternionRotationYawPitchRoll-Funktion als Parameter für eine andere Funktion verwendet werden.
 
-Verwenden Sie [**D3DXQuaternionNormalize**](d3d10-d3dxquaternionnormalize.md) für eine beliebige Quaternion-Eingabe, die nicht bereits normalisiert ist.
+Verwenden [**Sie D3DXQuaternionNormalize**](d3d10-d3dxquaternionnormalize.md) für alle Quaternioneingaben, die noch nicht normalisiert sind.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX10Math. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx10. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX10Math.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

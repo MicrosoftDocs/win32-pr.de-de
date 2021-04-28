@@ -1,7 +1,7 @@
 ---
-description: Eine Rückruffunktion, die von einem Benutzer implementiert werden muss, um ein Array von booleschen Scheitelpunkt Konstanten für Vertex-Shader festzulegen.
+description: 'ID3DXEffectStateManager::SetPixelShaderConstantB-Methode: Eine Rückruffunktion, die von einem Benutzer implementiert werden muss, um ein Array von booleschen Vertexshaderkonstanten festzulegen.'
 ms.assetid: ad4d9beb-fd34-4574-9787-61bd3bfaaaaa
-title: 'ID3DXEffectStateManager:: setpixelshaderconstantb-Methode (D3DX9Effect. h)'
+title: ID3DXEffectStateManager::SetPixelShaderConstantB-Methode (D3DX9Effect.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3dx9.lib
 - D3dx9.dll
-ms.openlocfilehash: e3c3c988bdbfa84a3e815fe94d89c24f3fa3a264
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: ace60b72345c992c3f35943362f6a0958f043aba
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106355029"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108090488"
 ---
-# <a name="id3dxeffectstatemanagersetpixelshaderconstantb-method"></a>ID3DXEffectStateManager:: setpixelshaderconstantb-Methode
+# <a name="id3dxeffectstatemanagersetpixelshaderconstantb-method"></a>ID3DXEffectStateManager::SetPixelShaderConstantB-Methode
 
-Eine Rückruffunktion, die von einem Benutzer implementiert werden muss, um ein Array von booleschen Scheitelpunkt Konstanten für Vertex-Shader festzulegen.
+Eine Rückruffunktion, die von einem Benutzer implementiert werden muss, um ein Array von booleschen Vertex-Shaderkonstanten festzulegen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,30 +42,30 @@ HRESULT SetPixelShaderConstantB(
 
 <dl> <dt>
 
-*Startregiester* \[ vorgenommen\]
+*StartRegister* \[ out\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Der null basierte Index des ersten Konstanten Registers.
+Der nullbasierte Index des ersten Konstantenregisters.
 
 </dd> <dt>
 
-*pconstantdata* \[ vorgenommen\]
+*pConstantData* \[ out\]
 </dt> <dd>
 
-Typ: Konstante **[**bool**](../winprog/windows-data-types.md) \***
+Typ: **const [**BOOL**](../winprog/windows-data-types.md) \***
 
 Ein Array von booleschen Konstanten.
 
 </dd> <dt>
 
-*Register count* \[ vorgenommen\]
+*RegisterCount* \[ out\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Die Anzahl der Register in pconstantdata.
+Die Anzahl der Register in pConstantData.
 
 </dd> </dl>
 
@@ -73,23 +73,23 @@ Die Anzahl der Register in pconstantdata.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Die vom Benutzer implementierte Methode sollte S \_ OK zurückgeben. Wenn der Rückruf beim Festlegen des Geräte Zustands fehlschlägt, wird eine der folgenden Aktionen ausgeführt:
+Die vom Benutzer implementierte Methode sollte S \_ OK zurückgeben. Wenn der Rückruf beim Festlegen des Gerätezustands fehlschlägt, tritt eine der folgenden Schritte auf:
 
--   Der Effekt schlägt während [**ID3DXEffect:: beginpass**](id3dxeffect--beginpass.md)fehl.
--   Der dynamische Effekt Zustands Aufrufe (z. b. [**IDirect3DDevice9:: setpixelshaderconstantb**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-setpixelshaderconstantb)) schlägt fehl.
+-   Die Auswirkung schlägt während [**id3DXEffect::BeginPass**](id3dxeffect--beginpass.md)fehl.
+-   Der Dynamische Effektzustandsaufruf (z.B. [**IDirect3DDevice9::SetPixelShaderConstantB)**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-setpixelshaderconstantb)schlägt fehl.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Effect. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>     |
+| Header<br/>  | <dl> <dt>D3DX9Effect.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

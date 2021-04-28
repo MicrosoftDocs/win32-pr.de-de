@@ -1,7 +1,7 @@
 ---
-description: Dekonstruktormethode.
+description: 'CQueue.~CQueue-Destruktor : Destruktormethode.'
 ms.assetid: 6c3f21cf-5353-4ccb-a6f6-f3e182dec874
-title: Cqueue. ~ cqueue-debugtor (wxutil. h)
+title: CQueue.~CQueue-Destruktor (Wxutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 93b620b60bd0697eed2f383a696269c01d51f33d
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 85681dff4b336c179a1dff94eca386593d98d156
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371688"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108095208"
 ---
-# <a name="cqueuecqueue-destructor"></a>Cqueue. ~ cqueue-Dekonstruktor
+# <a name="cqueuecqueue-destructor"></a>CQueue.~CQueue-Destruktor
 
-Dekonstruktormethode.
+Destruktormethode.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,18 +40,18 @@ Dekonstruktormethode.
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Wxutil. h (Include Streams. h)</dt> </dl>                                                                                    |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Wxutil.h (streams.h enthalten)</dt> </dl>                                                                                    |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cqueue-Klasse**](cqueue.md)
+[**CQueue-Klasse**](cqueue.md)
 </dt> </dl>
 
  

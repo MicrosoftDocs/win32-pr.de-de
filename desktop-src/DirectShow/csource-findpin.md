@@ -1,7 +1,7 @@
 ---
-description: 'Die findpin-Methode ruft die PIN mit dem angegebenen Bezeichner ab. Diese Methode implementiert die ibasefilter:: findpin-Methode.'
+description: 'CSource.FindPin-Methode: Die FindPin-Methode ruft den Pin mit dem angegebenen Bezeichner ab. Diese Methode implementiert die IBaseFilter::FindPin-Methode.'
 ms.assetid: ad593dbf-ca56-4409-ac6e-1b88908c8cee
-title: CSource. findpin-Methode (Quelle. h)
+title: CSource.FindPin-Methode (Source.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 9fac8df1e53e4a129b42d1284a19392bc7b58aa2
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: daa1e2404e7c6fbf1d879d71374298103bdc621f
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106355892"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108098858"
 ---
-# <a name="csourcefindpin-method"></a>CSource. findpin-Methode
+# <a name="csourcefindpin-method"></a>CSource.FindPin-Methode
 
-Die- `FindPin` Methode ruft die PIN mit dem angegebenen Bezeichner ab. Diese Methode implementiert die [**ibasefilter:: findpin**](/windows/desktop/api/Strmif/nf-strmif-ibasefilter-findpin) -Methode.
+Die `FindPin` -Methode ruft den Pin mit dem angegebenen Bezeichner ab. Diese Methode implementiert die [**IBaseFilter::FindPin-Methode.**](/windows/desktop/api/Strmif/nf-strmif-ibasefilter-findpin)
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,28 +46,28 @@ HRESULT FindPin(
 *Id* 
 </dt> <dd>
 
-Zeiger auf eine mit NULL endenden Zeichenfolge, die die PIN identifiziert.
+Zeiger auf eine auf NULL beendete Zeichenfolge, die den Pin identifiziert.
 
 </dd> <dt>
 
-*pppin* 
+*ppPin* 
 </dt> <dd>
 
-Empfängt einen Zeiger auf die [**IPin**](/windows/desktop/api/Strmif/nn-strmif-ipin) -Schnittstelle der PIN. Wenn die Methode fehlschlägt, \* wird *pppin* auf **null** festgelegt.
+Empfängt einen Zeiger auf die [**IPin-Schnittstelle des Pins.**](/windows/desktop/api/Strmif/nn-strmif-ipin) Wenn die Methode fehlschlägt, \* *wird ppPin* auf NULL **festgelegt.**
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen der **HRESULT** -Werte zurück, die in der folgenden Tabelle aufgeführt sind.
+Gibt einen der in der folgenden Tabelle gezeigten **HRESULT-Werte** zurück.
 
 
 
 | Rückgabecode                                                                                       | Beschreibung                                           |
 |---------------------------------------------------------------------------------------------------|-------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>              | Erfolg.<br/>                                   |
-| <dl> <dt>**E- \_ Zeiger**</dt> </dl>         | **Null** -Zeigerargument.<br/>                 |
-| <dl> <dt>**VFW \_ E \_ nicht \_ gefunden**</dt> </dl> | Es wurde keine PIN mit diesem Bezeichner gefunden.<br/> |
+| <dl> <dt>**\_E-ZEIGER**</dt> </dl>         |  NULL-Zeigerargument.<br/>                 |
+| <dl> <dt>**VFW \_ E \_ NICHT \_ GEFUNDEN**</dt> </dl> | Eine Stecknadel mit diesem Bezeichner wurde nicht finden.<br/> |
 
 
 
@@ -75,20 +75,20 @@ Gibt einen der **HRESULT** -Werte zurück, die in der folgenden Tabelle aufgefü
 
 ## <a name="remarks"></a>Bemerkungen
 
-Die erste Pin hat immer den Namen "1". die zweite Pin hat den Namen "2". und so weiter. Weitere Informationen finden Sie unter [**csourcestream:: QueryId**](csourcestream-queryid.md).
+Der erste Pin hat immer den Namen "1". der zweite Pin heißt "2"; usw. Weitere Informationen finden Sie unter [**CSourceStream::QueryId**](csourcestream-queryid.md).
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Source. h (Include Streams. h)</dt> </dl>                                                                                    |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Source.h (include Streams.h)</dt> </dl>                                                                                    |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

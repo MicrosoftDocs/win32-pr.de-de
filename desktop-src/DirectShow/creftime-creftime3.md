@@ -1,7 +1,7 @@
 ---
-description: Konstruktormethode.
+description: 'CRefTime.CRefTime-Konstruktor (Reftime.h): Konstruktormethode.'
 ms.assetid: c1282676-6f2b-438a-850e-17bb6d7a2c68
-title: Der Konstruktor (Ref time. h)-RT-Parameter ("").
+title: CRefTime.CRefTime-Konstruktor (Reftime.h) – rt-Parameter
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,14 +16,14 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: d97175a07565c12033c5e1ea8f20c157657d9501
-ms.sourcegitcommit: 4d4a6e9ad5de37e467cd3164276771b71e1f113f
+ms.openlocfilehash: 3d5f20fcca6e05810320af8fad7ea79035fd1591
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2021
-ms.locfileid: "106389190"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108098938"
 ---
-# <a name="creftimecreftime-constructor-reftimeh"></a>"Up"-Konstruktor ("Ref time. h")
+# <a name="creftimecreftime-constructor-reftimeh"></a>CRefTime.CRefTime-Konstruktor (Reftime.h)
 
 Konstruktormethode.
 
@@ -42,25 +42,25 @@ CRefTime(
 
 <dl> <dt>
 
-*imposante* 
+*rt* 
 </dt> <dd>
 
-Zeit in 100-Nanosecond-Einheiten.
+Zeit in Einheiten von 100 Nanosekunden.
 
 </dd> </dl>
 
 ## <a name="remarks"></a>Bemerkungen
 
-Die Verweis Zeit ist standardmäßig 0 (null).
+Die Verweiszeit ist standardmäßig auf 0 (null) festgelegt.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ref time. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Reftime.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 

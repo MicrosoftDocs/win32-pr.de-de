@@ -1,7 +1,7 @@
 ---
-description: Fügt dem Stapel eine Matrix hinzu.
+description: 'ID3DXMATRIXStack::P ush-Methode (D3DX10.h): Fügt dem Stapel eine Matrix hinzu.'
 ms.assetid: 8660047f-64bc-4b34-8270-3087412db942
-title: ID3DXMATRIXStack::P USH-Methode (d3dx10. h)
+title: ID3DXMATRIXStack::P ush-Methode (D3DX10.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,14 +14,14 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: 694bb8b02f340be14f38b7d2a44ec2038d175098
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 9c248fdaed8235c383388a52172021921e2c78d8
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106367497"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108107917"
 ---
-# <a name="id3dxmatrixstackpush-method-d3dx10h"></a>ID3DXMATRIXStack::P USH-Methode (d3dx10. h)
+# <a name="id3dxmatrixstackpush-method-d3dx10h"></a>ID3DXMATRIXStack::P ush-Methode (D3DX10.h)
 
 Fügt dem Stapel eine Matrix hinzu.
 
@@ -42,24 +42,24 @@ Diese Methode hat keine Parameter.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert "D3DERR \_ invalidcall" lauten.
+Wenn die Methode erfolgreich ist, ist der Rückgabewert D3D \_ OK. Wenn bei der Methode ein Fehler auftritt, kann der Rückgabewert D3DERR \_ INVALIDCALL sein.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Mit dieser Methode wird die Anzahl der Elemente im Stapel um 1 erhöht, und die aktuelle Matrix wird duplizieren. Der Stapel vergrößert sich dynamisch, wenn weitere Elemente hinzugefügt werden.
+Diese Methode erhöht die Anzahl der Elemente im Stapel um 1 und dupliziert die aktuelle Matrix. Der Stapel wächst dynamisch, wenn weitere Elemente hinzugefügt werden.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx10. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>D3dx10. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>D3DX10.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
