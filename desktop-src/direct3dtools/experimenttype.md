@@ -1,10 +1,10 @@
 ---
-description: .
+description: <span id="vspixengine.experimenttype"></span>EXPERIMENTTYPE-Enumeration
 MS-HAID: vspixengine.EXPERIMENTTYPE
 MSHAttr:
 - PreferredSiteName:MSDN
 - PreferredLib:/library/windows/desktop
-title: Experiment Type-Enumeration
+title: EXPERIMENTTYPE-Enumeration
 ms.topic: reference
 ms.date: 05/31/2018
 ms.assetid: 9AEBCF2D-4556-43A4-9C97-8184BA9DB22D
@@ -17,33 +17,33 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: ce04d2c59441a62b603aea0d5d077908a9359b1a
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 58c0ce661bb428c699127fd9b07ad67ab0b5ee7f
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "106345419"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108097408"
 ---
-# <a name="span-idvspixengineexperimenttypespanexperimenttype-enumeration"></a><span data-ttu-id="42b75-103"><span id="vspixengine.experimenttype"></span>Experiment Type-Enumeration</span><span class="sxs-lookup"><span data-stu-id="42b75-103"><span id="vspixengine.experimenttype"></span>EXPERIMENTTYPE enumeration</span></span>
+# <a name="span-idvspixengineexperimenttypespanexperimenttype-enumeration"></a><span data-ttu-id="bffc2-103"><span id="vspixengine.experimenttype"></span>EXPERIMENTTYPE-Enumeration</span><span class="sxs-lookup"><span data-stu-id="bffc2-103"><span id="vspixengine.experimenttype"></span>EXPERIMENTTYPE enumeration</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="42b75-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="42b75-104">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="bffc2-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="bffc2-104">Syntax</span></span>
 
 
 ```C++
 };
 ```
 
-## <a name="constants"></a><span data-ttu-id="42b75-105">Konstanten</span><span class="sxs-lookup"><span data-stu-id="42b75-105">Constants</span></span>
+## <a name="constants"></a><span data-ttu-id="bffc2-105">Konstanten</span><span class="sxs-lookup"><span data-stu-id="bffc2-105">Constants</span></span>
 
-<span data-ttu-id="42b75-106"><span id="SINGLEFRAMECAPTURE"></span><span id="singleframecapture"></span>**Singleframecapture**</span><span class="sxs-lookup"><span data-stu-id="42b75-106"><span id="SINGLEFRAMECAPTURE"></span><span id="singleframecapture"></span>**SINGLEFRAMECAPTURE**</span></span>  
+<span data-ttu-id="bffc2-106"><span id="SINGLEFRAMECAPTURE"></span><span id="singleframecapture"></span>**SINGLEFRAMECAPTURE**</span><span class="sxs-lookup"><span data-stu-id="bffc2-106"><span id="SINGLEFRAMECAPTURE"></span><span id="singleframecapture"></span>**SINGLEFRAMECAPTURE**</span></span>  
 
-<span data-ttu-id="42b75-107"><span id="RINGBUFFER"></span><span id="ringbuffer"></span>**Ringpuffer**</span><span class="sxs-lookup"><span data-stu-id="42b75-107"><span id="RINGBUFFER"></span><span id="ringbuffer"></span>**RINGBUFFER**</span></span>  
+<span data-ttu-id="bffc2-107"><span id="RINGBUFFER"></span><span id="ringbuffer"></span>**RINGBUFFER**</span><span class="sxs-lookup"><span data-stu-id="bffc2-107"><span id="RINGBUFFER"></span><span id="ringbuffer"></span>**RINGBUFFER**</span></span>  
 
-<span data-ttu-id="42b75-108"><span id="PROFILING"></span><span id="profiling"></span>**Liert**</span><span class="sxs-lookup"><span data-stu-id="42b75-108"><span id="PROFILING"></span><span id="profiling"></span>**PROFILING**</span></span>  
+<span data-ttu-id="bffc2-108"><span id="PROFILING"></span><span id="profiling"></span>**Profilerstellung**</span><span class="sxs-lookup"><span data-stu-id="bffc2-108"><span id="PROFILING"></span><span id="profiling"></span>**PROFILING**</span></span>  
 
-## <a name="requirements"></a><span data-ttu-id="42b75-109">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="42b75-109">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="bffc2-109">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="bffc2-109">Requirements</span></span>
 
-<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td><p><span data-ttu-id="42b75-110">Header</span><span class="sxs-lookup"><span data-stu-id="42b75-110">Header</span></span></p></td><td><span data-ttu-id="42b75-111">Vspixengine. h</span><span class="sxs-lookup"><span data-stu-id="42b75-111">Vspixengine.h</span></span></td></tr></tbody></table>
+<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td><p><span data-ttu-id="bffc2-110">Header</span><span class="sxs-lookup"><span data-stu-id="bffc2-110">Header</span></span></p></td><td><span data-ttu-id="bffc2-111">Vspixengine.h</span><span class="sxs-lookup"><span data-stu-id="bffc2-111">Vspixengine.h</span></span></td></tr></tbody></table>
 
  
 

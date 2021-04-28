@@ -1,7 +1,7 @@
 ---
-description: Konstruktormethode.
+description: CABSchedule.CABSchedule-Konstruktor – Konstruktormethode.
 ms.assetid: ff210374-f394-4267-a67a-1a60a2f9538d
-title: Camschedule. camschedule-Konstruktor (dsschedule. h)
+title: CABSchedule.CABSchedule-Konstruktor (Dsschedule.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,18 +16,18 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 86e9b434aabaff3b6de12b361e1315c71d03b949
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: ce52a296c375f4d6e96f5fa44817a0098da9ae9f
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358616"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108096428"
 ---
-# <a name="camschedulecamschedule-constructor"></a><span data-ttu-id="f9fdd-103">Camschedule. camschedule-Konstruktor</span><span class="sxs-lookup"><span data-stu-id="f9fdd-103">CAMSchedule.CAMSchedule constructor</span></span>
+# <a name="camschedulecamschedule-constructor"></a><span data-ttu-id="26fe1-103">CABSchedule.CABSchedule-Konstruktor</span><span class="sxs-lookup"><span data-stu-id="26fe1-103">CAMSchedule.CAMSchedule constructor</span></span>
 
-<span data-ttu-id="f9fdd-104">Konstruktormethode.</span><span class="sxs-lookup"><span data-stu-id="f9fdd-104">Constructor method.</span></span>
+<span data-ttu-id="26fe1-104">Konstruktormethode.</span><span class="sxs-lookup"><span data-stu-id="26fe1-104">Constructor method.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="f9fdd-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="f9fdd-105">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="26fe1-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="26fe1-105">Syntax</span></span>
 
 
 ```C++
@@ -38,33 +38,33 @@ CAMSchedule(
 
 
 
-## <a name="parameters"></a><span data-ttu-id="f9fdd-106">Parameter</span><span class="sxs-lookup"><span data-stu-id="f9fdd-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="26fe1-106">Parameter</span><span class="sxs-lookup"><span data-stu-id="26fe1-106">Parameters</span></span>
 
 <dl> <dt>
 
-<span data-ttu-id="f9fdd-107">*hevent*</span><span class="sxs-lookup"><span data-stu-id="f9fdd-107">*hEvent*</span></span> 
+<span data-ttu-id="26fe1-107">*hEvent*</span><span class="sxs-lookup"><span data-stu-id="26fe1-107">*hEvent*</span></span> 
 </dt> <dd>
 
-<span data-ttu-id="f9fdd-108">Handle für ein Ereignis zum automatischen Zurücksetzen.</span><span class="sxs-lookup"><span data-stu-id="f9fdd-108">Handle to an auto-reset event.</span></span>
+<span data-ttu-id="26fe1-108">Behandeln eines Ereignisses für die automatische Zurücksetzung.</span><span class="sxs-lookup"><span data-stu-id="26fe1-108">Handle to an auto-reset event.</span></span>
 
 </dd> </dl>
 
-## <a name="requirements"></a><span data-ttu-id="f9fdd-109">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="f9fdd-109">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="26fe1-109">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="26fe1-109">Requirements</span></span>
 
 
 
-| <span data-ttu-id="f9fdd-110">Anforderung</span><span class="sxs-lookup"><span data-stu-id="f9fdd-110">Requirement</span></span> | <span data-ttu-id="f9fdd-111">Wert</span><span class="sxs-lookup"><span data-stu-id="f9fdd-111">Value</span></span> |
+| <span data-ttu-id="26fe1-110">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="26fe1-110">Requirement</span></span> | <span data-ttu-id="26fe1-111">Wert</span><span class="sxs-lookup"><span data-stu-id="26fe1-111">Value</span></span> |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span data-ttu-id="f9fdd-112">Header</span><span class="sxs-lookup"><span data-stu-id="f9fdd-112">Header</span></span><br/>  | <dl> <span data-ttu-id="f9fdd-113"><dt>Dsschedule. h (Include Streams. h)</dt></span><span class="sxs-lookup"><span data-stu-id="f9fdd-113"><dt>Dsschedule.h (include Streams.h)</dt></span></span> </dl>                                                                                |
-| <span data-ttu-id="f9fdd-114">Bibliothek</span><span class="sxs-lookup"><span data-stu-id="f9fdd-114">Library</span></span><br/> | <dl> <span data-ttu-id="f9fdd-115">" <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt></span><span class="sxs-lookup"><span data-stu-id="f9fdd-115"><dt>Strmbase.lib (retail builds); </dt> <dt>Strmbasd.lib (debug builds)</dt></span></span> </dl> |
+| <span data-ttu-id="26fe1-112">Header</span><span class="sxs-lookup"><span data-stu-id="26fe1-112">Header</span></span><br/>  | <dl> <span data-ttu-id="26fe1-113"><dt>Dsschedule.h (include Streams.h)</dt></span><span class="sxs-lookup"><span data-stu-id="26fe1-113"><dt>Dsschedule.h (include Streams.h)</dt></span></span> </dl>                                                                                |
+| <span data-ttu-id="26fe1-114">Bibliothek</span><span class="sxs-lookup"><span data-stu-id="26fe1-114">Library</span></span><br/> | <dl> <span data-ttu-id="26fe1-115"><dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt></span><span class="sxs-lookup"><span data-stu-id="26fe1-115"><dt>Strmbase.lib (retail builds); </dt> <dt>Strmbasd.lib (debug builds)</dt></span></span> </dl> |
 
 
 
-## <a name="see-also"></a><span data-ttu-id="f9fdd-116">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="f9fdd-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="26fe1-116">Weitere Informationen</span><span class="sxs-lookup"><span data-stu-id="26fe1-116">See also</span></span>
 
 <dl> <dt>
 
-[<span data-ttu-id="f9fdd-117">**Camschedule-Klasse**</span><span class="sxs-lookup"><span data-stu-id="f9fdd-117">**CAMSchedule Class**</span></span>](camschedule.md)
+[<span data-ttu-id="26fe1-117">**WEBCAMSchedule-Klasse**</span><span class="sxs-lookup"><span data-stu-id="26fe1-117">**CAMSchedule Class**</span></span>](camschedule.md)
 </dt> </dl>
 
  

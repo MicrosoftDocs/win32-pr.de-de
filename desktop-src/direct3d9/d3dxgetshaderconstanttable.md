@@ -1,7 +1,7 @@
 ---
-description: Ruft die in einen Shader eingebettete Shader-Konstante Tabelle ab.
+description: 'D3DXGetShaderConstantTable-Funktion: Ruft die shaderkonstante Tabelle ab, die in einen Shader eingebettet ist.'
 ms.assetid: eb965074-819f-44d2-889b-6c6eada4f062
-title: D3DXGetShaderConstantTable-Funktion (D3DX9Shader. h)
+title: D3DXGetShaderConstantTable-Funktion (D3DX9Shader.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,18 +14,18 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 876802023601c14b4cceed0ef0e2db431d7339e0
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: b397901578a1e6ce6fecc01ed25c99d4681d1c40
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106353723"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108114418"
 ---
-# <a name="d3dxgetshaderconstanttable-function"></a><span data-ttu-id="33868-103">D3DXGetShaderConstantTable-Funktion</span><span class="sxs-lookup"><span data-stu-id="33868-103">D3DXGetShaderConstantTable function</span></span>
+# <a name="d3dxgetshaderconstanttable-function"></a><span data-ttu-id="490e7-103">D3DXGetShaderConstantTable-Funktion</span><span class="sxs-lookup"><span data-stu-id="490e7-103">D3DXGetShaderConstantTable function</span></span>
 
-<span data-ttu-id="33868-104">Ruft die in einen Shader eingebettete Shader-Konstante Tabelle ab.</span><span class="sxs-lookup"><span data-stu-id="33868-104">Gets the shader-constant table embedded inside a shader.</span></span>
+<span data-ttu-id="490e7-104">Ruft die shaderkonstante Tabelle ab, die in einen Shader eingebettet ist.</span><span class="sxs-lookup"><span data-stu-id="490e7-104">Gets the shader-constant table embedded inside a shader.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="33868-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="33868-105">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="490e7-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="490e7-105">Syntax</span></span>
 
 
 ```C++
@@ -37,54 +37,54 @@ HRESULT D3DXGetShaderConstantTable(
 
 
 
-## <a name="parameters"></a><span data-ttu-id="33868-106">Parameter</span><span class="sxs-lookup"><span data-stu-id="33868-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="490e7-106">Parameter</span><span class="sxs-lookup"><span data-stu-id="490e7-106">Parameters</span></span>
 
 <dl> <dt>
 
-<span data-ttu-id="33868-107">*pfunction* \[ in\]</span><span class="sxs-lookup"><span data-stu-id="33868-107">*pFunction* \[in\]</span></span>
+<span data-ttu-id="490e7-107">*pFunction* \[ In\]</span><span class="sxs-lookup"><span data-stu-id="490e7-107">*pFunction* \[in\]</span></span>
 </dt> <dd>
 
-<span data-ttu-id="33868-108">Typ: Konstante **[**DWORD**](../winprog/windows-data-types.md) \***</span><span class="sxs-lookup"><span data-stu-id="33868-108">Type: **const [**DWORD**](../winprog/windows-data-types.md)\***</span></span>
+<span data-ttu-id="490e7-108">Typ: **const [**DWORD**](../winprog/windows-data-types.md) \***</span><span class="sxs-lookup"><span data-stu-id="490e7-108">Type: **const [**DWORD**](../winprog/windows-data-types.md)\***</span></span>
 
-<span data-ttu-id="33868-109">Ein Zeiger auf die Funktion DWORD-Stream.</span><span class="sxs-lookup"><span data-stu-id="33868-109">Pointer to the function DWORD stream.</span></span>
+<span data-ttu-id="490e7-109">Zeiger auf den DWORD-Funktionsstream.</span><span class="sxs-lookup"><span data-stu-id="490e7-109">Pointer to the function DWORD stream.</span></span>
 
 </dd> <dt>
 
- <span data-ttu-id="33868-110">*ppconstanbar* \[ vorgenommen\]</span><span class="sxs-lookup"><span data-stu-id="33868-110">*ppConstantTable* \[out\]</span></span>
+ <span data-ttu-id="490e7-110">*ppConstantTable* \[ out\]</span><span class="sxs-lookup"><span data-stu-id="490e7-110">*ppConstantTable* \[out\]</span></span>
 </dt> <dd>
 
-<span data-ttu-id="33868-111">Typ: **[ **LPD3DXCONSTANTTABLE**](id3dxconstanttable.md)\***</span><span class="sxs-lookup"><span data-stu-id="33868-111">Type: **[**LPD3DXCONSTANTTABLE**](id3dxconstanttable.md)\***</span></span>
+<span data-ttu-id="490e7-111">Typ: **[ **LPD3DXCONSTANTTABLE**](id3dxconstanttable.md)\***</span><span class="sxs-lookup"><span data-stu-id="490e7-111">Type: **[**LPD3DXCONSTANTTABLE**](id3dxconstanttable.md)\***</span></span>
 
-<span data-ttu-id="33868-112">Gibt die Konstante Tabellen Schnittstelle (siehe [**ID3DXConstantTable**](id3dxconstanttable.md)) zurück, die die Konstante Tabelle verwaltet.</span><span class="sxs-lookup"><span data-stu-id="33868-112">Returns the constant table interface (see [**ID3DXConstantTable**](id3dxconstanttable.md)) that manages the constant table.</span></span>
+<span data-ttu-id="490e7-112">Gibt die Konstante-Tabellenschnittstelle (siehe [**ID3DXConstantTable)**](id3dxconstanttable.md)zurück, die die konstante Tabelle verwaltet.</span><span class="sxs-lookup"><span data-stu-id="490e7-112">Returns the constant table interface (see [**ID3DXConstantTable**](id3dxconstanttable.md)) that manages the constant table.</span></span>
 
 </dd> </dl>
 
-## <a name="return-value"></a><span data-ttu-id="33868-113">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="33868-113">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="490e7-113">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="490e7-113">Return value</span></span>
 
-<span data-ttu-id="33868-114">Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**</span><span class="sxs-lookup"><span data-stu-id="33868-114">Type: **[**HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**</span></span>
+<span data-ttu-id="490e7-114">Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**</span><span class="sxs-lookup"><span data-stu-id="490e7-114">Type: **[**HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**</span></span>
 
-<span data-ttu-id="33868-115">Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK.</span><span class="sxs-lookup"><span data-stu-id="33868-115">If the function succeeds, the return value is D3D\_OK.</span></span> <span data-ttu-id="33868-116">Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden sein: D3DERR \_ invalidcall, D3DXERR \_ InvalidData, E \_ oudefmemory.</span><span class="sxs-lookup"><span data-stu-id="33868-116">If the function fails, the return value can be one of the following: D3DERR\_INVALIDCALL, D3DXERR\_INVALIDDATA, E\_OUTOFMEMORY.</span></span>
+<span data-ttu-id="490e7-115">Wenn die Funktion erfolgreich ausgeführt wird, lautet der Rückgabewert D3D \_ OK.</span><span class="sxs-lookup"><span data-stu-id="490e7-115">If the function succeeds, the return value is D3D\_OK.</span></span> <span data-ttu-id="490e7-116">Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: D3DERR \_ INVALIDCALL, D3DXERR \_ INVALIDDATA, E \_ OUTOFMEMORY.</span><span class="sxs-lookup"><span data-stu-id="490e7-116">If the function fails, the return value can be one of the following: D3DERR\_INVALIDCALL, D3DXERR\_INVALIDDATA, E\_OUTOFMEMORY.</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="33868-117">Bemerkungen</span><span class="sxs-lookup"><span data-stu-id="33868-117">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="490e7-117">Bemerkungen</span><span class="sxs-lookup"><span data-stu-id="490e7-117">Remarks</span></span>
 
-<span data-ttu-id="33868-118">Eine Konstante Tabelle wird von [**D3DXCompileShader**](d3dxcompileshader.md) generiert und in den Shader-Text eingebettet.</span><span class="sxs-lookup"><span data-stu-id="33868-118">A constant table is generated by [**D3DXCompileShader**](d3dxcompileshader.md) and embedded in the shader body.</span></span> <span data-ttu-id="33868-119">Wenn Sie zusätzlichen virtuellen Adressraum benötigen, finden Sie weitere Informationen unter [**D3DXGetShaderConstantTableEx**](d3dxgetshaderconstanttableex.md).</span><span class="sxs-lookup"><span data-stu-id="33868-119">If you need additional virtual address space, see [**D3DXGetShaderConstantTableEx**](d3dxgetshaderconstanttableex.md).</span></span>
+<span data-ttu-id="490e7-118">Eine konstante Tabelle wird von [**D3DXCompileShader**](d3dxcompileshader.md) generiert und in den Shadertext eingebettet.</span><span class="sxs-lookup"><span data-stu-id="490e7-118">A constant table is generated by [**D3DXCompileShader**](d3dxcompileshader.md) and embedded in the shader body.</span></span> <span data-ttu-id="490e7-119">Wenn Sie zusätzlichen virtuellen Adressraum benötigen, finden Sie weitere Informationen unter [**D3DXGetShaderConstantTableEx.**](d3dxgetshaderconstanttableex.md)</span><span class="sxs-lookup"><span data-stu-id="490e7-119">If you need additional virtual address space, see [**D3DXGetShaderConstantTableEx**](d3dxgetshaderconstanttableex.md).</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="33868-120">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="33868-120">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="490e7-120">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="490e7-120">Requirements</span></span>
 
 
 
-| <span data-ttu-id="33868-121">Anforderung</span><span class="sxs-lookup"><span data-stu-id="33868-121">Requirement</span></span> | <span data-ttu-id="33868-122">Wert</span><span class="sxs-lookup"><span data-stu-id="33868-122">Value</span></span> |
+| <span data-ttu-id="490e7-121">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="490e7-121">Requirement</span></span> | <span data-ttu-id="490e7-122">Wert</span><span class="sxs-lookup"><span data-stu-id="490e7-122">Value</span></span> |
 |--------------------|------------------------------------------------------------------------------------------|
-| <span data-ttu-id="33868-123">Header</span><span class="sxs-lookup"><span data-stu-id="33868-123">Header</span></span><br/>  | <dl> <span data-ttu-id="33868-124"><dt>D3DX9Shader. h</dt></span><span class="sxs-lookup"><span data-stu-id="33868-124"><dt>D3DX9Shader.h</dt></span></span> </dl> |
-| <span data-ttu-id="33868-125">Bibliothek</span><span class="sxs-lookup"><span data-stu-id="33868-125">Library</span></span><br/> | <dl> <span data-ttu-id="33868-126"><dt>D3dx9. lib</dt></span><span class="sxs-lookup"><span data-stu-id="33868-126"><dt>D3dx9.lib</dt></span></span> </dl>     |
+| <span data-ttu-id="490e7-123">Header</span><span class="sxs-lookup"><span data-stu-id="490e7-123">Header</span></span><br/>  | <dl> <span data-ttu-id="490e7-124"><dt>D3DX9Shader.h</dt></span><span class="sxs-lookup"><span data-stu-id="490e7-124"><dt>D3DX9Shader.h</dt></span></span> </dl> |
+| <span data-ttu-id="490e7-125">Bibliothek</span><span class="sxs-lookup"><span data-stu-id="490e7-125">Library</span></span><br/> | <dl> <span data-ttu-id="490e7-126"><dt>D3dx9.lib</dt></span><span class="sxs-lookup"><span data-stu-id="490e7-126"><dt>D3dx9.lib</dt></span></span> </dl>     |
 
 
 
-## <a name="see-also"></a><span data-ttu-id="33868-127">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="33868-127">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="490e7-127">Weitere Informationen</span><span class="sxs-lookup"><span data-stu-id="490e7-127">See also</span></span>
 
 <dl> <dt>
 
-[<span data-ttu-id="33868-128">Shaderfunktionen</span><span class="sxs-lookup"><span data-stu-id="33868-128">Shader Functions</span></span>](dx9-graphics-reference-d3dx-functions-shader.md)
+[<span data-ttu-id="490e7-128">Shaderfunktionen</span><span class="sxs-lookup"><span data-stu-id="490e7-128">Shader Functions</span></span>](dx9-graphics-reference-d3dx-functions-shader.md)
 </dt> </dl>
 
  
