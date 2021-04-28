@@ -1,35 +1,35 @@
 ---
-description: Diese Eigenschaft ist veraltet und sollte nicht festgelegt werden.
+description: 'MFPKEY_FRAMECOUNT-Eigenschaft: Diese Eigenschaft ist veraltet und sollte nicht festgelegt werden.'
 ms.assetid: 7eb51dc6-5450-45b7-9663-5ddddd30ed72
-title: MFPKEY_FRAMECOUNT-Eigenschaft (wmcodecdsp. h)
+title: MFPKEY_FRAMECOUNT-Eigenschaft (Wmcodecdsp.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c736b5eb69cf527ed4b339169afab4643baf9879
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 479ed3092daba774d8edc464f606f92efd84b3a2
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369306"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108092918"
 ---
-# <a name="mfpkey_framecount-property"></a><span data-ttu-id="a3253-103">Mfpkey \_ FrameCount (Eigenschaft)</span><span class="sxs-lookup"><span data-stu-id="a3253-103">MFPKEY\_FRAMECOUNT Property</span></span>
+# <a name="mfpkey_framecount-property"></a><span data-ttu-id="e1c61-103">MFPKEY \_ FRAMECOUNT-Eigenschaft</span><span class="sxs-lookup"><span data-stu-id="e1c61-103">MFPKEY\_FRAMECOUNT Property</span></span>
 
-<span data-ttu-id="a3253-104">Diese Eigenschaft ist veraltet und sollte nicht festgelegt werden.</span><span class="sxs-lookup"><span data-stu-id="a3253-104">This property is obsolete and should not be set.</span></span>
+<span data-ttu-id="e1c61-104">Diese Eigenschaft ist veraltet und sollte nicht festgelegt werden.</span><span class="sxs-lookup"><span data-stu-id="e1c61-104">This property is obsolete and should not be set.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="a3253-105">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="a3253-105">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="e1c61-105">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="e1c61-105">Requirements</span></span>
 
 
 
-| <span data-ttu-id="a3253-106">Anforderung</span><span class="sxs-lookup"><span data-stu-id="a3253-106">Requirement</span></span> | <span data-ttu-id="a3253-107">Wert</span><span class="sxs-lookup"><span data-stu-id="a3253-107">Value</span></span> |
+| <span data-ttu-id="e1c61-106">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="e1c61-106">Requirement</span></span> | <span data-ttu-id="e1c61-107">Wert</span><span class="sxs-lookup"><span data-stu-id="e1c61-107">Value</span></span> |
 |-------------------|-----------------------------------------------------------------------------------------|
-| <span data-ttu-id="a3253-108">Header</span><span class="sxs-lookup"><span data-stu-id="a3253-108">Header</span></span><br/> | <dl> <span data-ttu-id="a3253-109"><dt>Wmcodecdsp. h</dt></span><span class="sxs-lookup"><span data-stu-id="a3253-109"><dt>Wmcodecdsp.h</dt></span></span> </dl> |
+| <span data-ttu-id="e1c61-108">Header</span><span class="sxs-lookup"><span data-stu-id="e1c61-108">Header</span></span><br/> | <dl> <span data-ttu-id="e1c61-109"><dt>Wmcodecdsp.h</dt></span><span class="sxs-lookup"><span data-stu-id="e1c61-109"><dt>Wmcodecdsp.h</dt></span></span> </dl> |
 
 
 
-## <a name="see-also"></a><span data-ttu-id="a3253-110">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="a3253-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e1c61-110">Weitere Informationen</span><span class="sxs-lookup"><span data-stu-id="e1c61-110">See also</span></span>
 
 <dl> <dt>
 
-[<span data-ttu-id="a3253-111">Eigenschaften von Media Foundation</span><span class="sxs-lookup"><span data-stu-id="a3253-111">Media Foundation Properties</span></span>](media-foundation-properties.md)
+[<span data-ttu-id="e1c61-111">Media Foundation-Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="e1c61-111">Media Foundation Properties</span></span>](media-foundation-properties.md)
 </dt> </dl>
 
  

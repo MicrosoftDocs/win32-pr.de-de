@@ -1,7 +1,7 @@
 ---
-description: Hilfsobjekt, um Seek-Befehle zu übergeben.
+description: 'CBaseRenderer::m_pPosition Member : Hilfsobjekt zum Übergeben von Seek-Befehlen im Upstream.'
 ms.assetid: 10fe022d-8707-4059-90b8-5740c3861071
-title: 'Cbaserenderer:: m_pPosition Member (renbase. h)'
+title: CBaseRenderer::m_pPosition-Member (Renbase.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,18 +16,18 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 2324703280cdf8c19fe9093f21cb02400ba52f32
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: d7ceeac91266a2799d7ef248857de9b7d4d38ee2
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106352808"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108119858"
 ---
-# <a name="cbaserendererm_pposition-member"></a><span data-ttu-id="53af6-103">Cbaserenderer:: m \_ pposition-Member</span><span class="sxs-lookup"><span data-stu-id="53af6-103">CBaseRenderer::m\_pPosition member</span></span>
+# <a name="cbaserendererm_pposition-member"></a><span data-ttu-id="e144b-103">CBaseRenderer::m \_ pPosition-Member</span><span class="sxs-lookup"><span data-stu-id="e144b-103">CBaseRenderer::m\_pPosition member</span></span>
 
-<span data-ttu-id="53af6-104">Hilfsobjekt, um Seek-Befehle zu übergeben.</span><span class="sxs-lookup"><span data-stu-id="53af6-104">Helper object to pass seek commands upstream.</span></span>
+<span data-ttu-id="e144b-104">Hilfsobjekt zum Übergeben von Seek-Befehlen upstream.</span><span class="sxs-lookup"><span data-stu-id="e144b-104">Helper object to pass seek commands upstream.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="53af6-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="53af6-105">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="e144b-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="e144b-105">Syntax</span></span>
 
 
 ```C++
@@ -36,22 +36,22 @@ CRendererPosPassThru *m_pPosition;
 
 
 
-## <a name="requirements"></a><span data-ttu-id="53af6-106">Requirements (Anforderungen)</span><span class="sxs-lookup"><span data-stu-id="53af6-106">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="e144b-106">Requirements (Anforderungen)</span><span class="sxs-lookup"><span data-stu-id="e144b-106">Requirements</span></span>
 
 
 
-| <span data-ttu-id="53af6-107">Anforderung</span><span class="sxs-lookup"><span data-stu-id="53af6-107">Requirement</span></span> | <span data-ttu-id="53af6-108">Wert</span><span class="sxs-lookup"><span data-stu-id="53af6-108">Value</span></span> |
+| <span data-ttu-id="e144b-107">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="e144b-107">Requirement</span></span> | <span data-ttu-id="e144b-108">Wert</span><span class="sxs-lookup"><span data-stu-id="e144b-108">Value</span></span> |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span data-ttu-id="53af6-109">Header</span><span class="sxs-lookup"><span data-stu-id="53af6-109">Header</span></span><br/>  | <dl> <span data-ttu-id="53af6-110"><dt>Renbase. h (Include Streams. h)</dt></span><span class="sxs-lookup"><span data-stu-id="53af6-110"><dt>Renbase.h (include Streams.h)</dt></span></span> </dl>                                                                                   |
-| <span data-ttu-id="53af6-111">Bibliothek</span><span class="sxs-lookup"><span data-stu-id="53af6-111">Library</span></span><br/> | <dl> <span data-ttu-id="53af6-112">" <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt></span><span class="sxs-lookup"><span data-stu-id="53af6-112"><dt>Strmbase.lib (retail builds); </dt> <dt>Strmbasd.lib (debug builds)</dt></span></span> </dl> |
+| <span data-ttu-id="e144b-109">Header</span><span class="sxs-lookup"><span data-stu-id="e144b-109">Header</span></span><br/>  | <dl> <span data-ttu-id="e144b-110"><dt>Renbase.h (include Streams.h)</dt></span><span class="sxs-lookup"><span data-stu-id="e144b-110"><dt>Renbase.h (include Streams.h)</dt></span></span> </dl>                                                                                   |
+| <span data-ttu-id="e144b-111">Bibliothek</span><span class="sxs-lookup"><span data-stu-id="e144b-111">Library</span></span><br/> | <dl> <span data-ttu-id="e144b-112"><dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt></span><span class="sxs-lookup"><span data-stu-id="e144b-112"><dt>Strmbase.lib (retail builds); </dt> <dt>Strmbasd.lib (debug builds)</dt></span></span> </dl> |
 
 
 
-## <a name="see-also"></a><span data-ttu-id="53af6-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="53af6-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e144b-113">Weitere Informationen</span><span class="sxs-lookup"><span data-stu-id="e144b-113">See also</span></span>
 
 <dl> <dt>
 
-[<span data-ttu-id="53af6-114">**Cbaserderderer-Klasse**</span><span class="sxs-lookup"><span data-stu-id="53af6-114">**CBaseRenderer Class**</span></span>](cbaserenderer.md)
+[<span data-ttu-id="e144b-114">**CBaseRenderer-Klasse**</span><span class="sxs-lookup"><span data-stu-id="e144b-114">**CBaseRenderer Class**</span></span>](cbaserenderer.md)
 </dt> </dl>
 
  
