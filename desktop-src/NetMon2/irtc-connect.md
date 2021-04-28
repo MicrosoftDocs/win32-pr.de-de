@@ -1,7 +1,7 @@
 ---
-description: Mit der Connect-Methode wird die NPP mithilfe einer angegebenen NIC mit dem Netzwerk verbunden, und es werden Konfigurationsinformationen für die Verbindung bereitstellt.
+description: 'IRTC::Connect-Methode: Die Connect-Methode verbindet das NPP mithilfe einer angegebenen NIC mit dem Netzwerk und stellt Konfigurationsinformationen für die Verbindung zur Verfügung.'
 ms.assetid: d017c2a3-a832-4084-b21b-0cca428c5360
-title: 'Untc:: Connect-Methode (Netmon. h)'
+title: IRTC::Connect-Methode (Netmon.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - Ndisnpp.dll
 - Rmtnpp.dll
-ms.openlocfilehash: a14e34aeb0be30165aa18ddc7da18028d715be01
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ba62f3341b18ddfdbf09af4eec701322d901ab79
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106348157"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108110744"
 ---
-# <a name="irtcconnect-method"></a>Untc:: Connect-Methode
+# <a name="irtcconnect-method"></a>IRTC::Connect-Methode
 
-Mit der **Connect** -Methode wird die NPP mithilfe einer angegebenen NIC mit dem Netzwerk verbunden, und es werden Konfigurationsinformationen für die Verbindung bereitstellt.
+Die **Connect-Methode** verbindet den NPP mithilfe einer angegebenen NIC mit dem Netzwerk und stellt Konfigurationsinformationen für die Verbindung zur Verfügung.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,61 +44,61 @@ HRESULT STDMETHODCALLTYPE Connect(
 
 <dl> <dt>
 
-*hinputblob* \[ in\]
+*hInputBlob* \[ In\]
 </dt> <dd>
 
-Handle für das BLOB, das die NIC angibt, mit der Sie eine Verbindung herstellen, und die Konfigurationsinformationen für diese Verbindung.
+Handle für das BLOB, das die NIC angibt, mit der Sie eine Verbindung herstellen, und die Konfigurationsinformationen für diese Verbindung angibt.
 
 </dd> <dt>
 
-*Status callbackproc* \[ in\]
+*StatusCallbackProc* \[ In\]
 </dt> <dd>
 
-Adresse der Status Rückruffunktion des Benutzers, die Statusaktualisierungen (z. b. Trigger) empfängt. Dieser Parameter kann auf **null** festgelegt werden.
+Adresse der Statusrückruffunktion des Benutzers, die Statusupdates wie Trigger empfängt. Dieser Parameter kann auf NULL **festgelegt werden.**
 
 </dd> <dt>
 
-*Framescallbackproc* \[ in\]
+*FramesCallbackProc* \[ In\]
 </dt> <dd>
 
-Adresse der Frame Rückruffunktion des Benutzers, die zum Empfangen von Statusaktualisierungen (z. b. Trigger) verwendet wird. Dieser Parameter kann auf **null** festgelegt werden.
+Adresse der Framerückruffunktion des Benutzers, die zum Empfangen von Statusupdates wie Triggern verwendet wird. Dieser Parameter kann auf NULL **festgelegt werden.**
 
 </dd> <dt>
 
-*UserContext* \[ in\]
+*UserContext* \[ In\]
 </dt> <dd>
 
-Der Wert, der beim Aufrufen des Status und der Frame Rückruffunktion des Benutzers erfolgreich ist. Wenn beide Rückruf Funktionen angegeben werden, muss der gleiche Benutzer Kontextwert verwendet werden. Der Wert dieses Parameters ist in der Regel entweder HWND oder ein "This"-Zeiger.
+Der Wert wird übergeben, wenn der Status und die Framerückruffunktion des Benutzers aufgerufen werden. Wenn beide Rückruffunktionen angegeben werden, müssen sie denselben Benutzerkontextwert verwenden. Der Wert dieses Parameters ist in der Regel entweder HWND oder ein This-Zeiger.
 
 </dd> <dt>
 
-*herrorblob* \[ vorgenommen\]
+*hErrorBlob* \[ out\]
 </dt> <dd>
 
-Handle für ein fehlerblob, das zusätzliche Fehlerinformationen enthält. Weitere Informationen zu den Funktionen im fehlerblob finden Sie in den Hinweisen am Ende dieses Themas.
+Handle für ein Fehlerblob, das zusätzliche Fehlerinformationen enthält. Informationen dazu, was im Fehlerblob enthalten ist, finden Sie unter Hinweise am Ende dieses Themas.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ist, ist der Rückgabewert nmerr \_ Success.
+Wenn diese Methode erfolgreich ist, ist der Rückgabewert NMERR \_ SUCCESS.
 
-Wenn die Methode nicht erfolgreich ist, ist der Rückgabewert einer der folgenden Fehlercodes (einschließlich derjenigen, die vom internen " **iritc:: Configure** "-Befehl zurückgegeben werden):
+Wenn die Methode nicht erfolgreich ist, ist der Rückgabewert einer der folgenden Fehlercodes (einschließlich der Fehler, die vom internen **IRTC::Configure-Aufruf** zurückgegeben werden):
 
 
 
 | Rückgabecode                                                                                                         | Beschreibung                                                                                                                                                                                                                                                                                  |
 |---------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**nmerr \_ bereits \_ verbunden**</dt> </dl>            | Diese Instanz des NPP-com-Objekts ist bereits mit dem Netzwerk verbunden.<br/>                                                                                                                                                                                                          |
-| <dl> <dt>**nmerr- \_ BLOB- \_ Konvertierungs \_ Fehler**</dt> </dl>       | Das konfigurationsblob ist beschädigt. Dieser Fehler wird durch den " **untc:: Configure** "-Befehl generiert.<br/>                                                                                                                                                                                       |
-| <dl> <dt>**der nmerr- \_ \_ blobeintrag \_ ist \_ nicht \_ vorhanden.**</dt> </dl> | Für das vom *hinputblob* -Parameter angegebene eingabeblob fehlt ein Eintrag, der zum Ausführen dieses Vorgangs erforderlich ist. Dieser Fehler kann durch den " **untc:: Connect** "-oder " **untc:: Configure** "-Befehl generiert werden. Sehen Sie sich den von *herrorblob* zurückgegebenen Fehler-BLOB an, um zu ermitteln, welcher Eintrag nicht gefunden wurde.<br/> |
-| <dl> <dt>**nmerr- \_ BLOB wurde \_ nicht \_ initialisiert.**</dt> </dl>        | Die Funktion "| **ateblob** " wurde nicht aufgerufen. Dieser Fehler wird durch den " **untc:: Configure** "-Befehl generiert.<br/>                                                                                                                                                                         |
-| <dl> <dt>**nmerr- \_ BLOB- \_ Zeichenfolge \_ ungültig**</dt> </dl>         | Die Zeichenfolge wird nicht mit Null beendet. Dieser Fehler wird durch den " **untc:: Configure** "-Befehl generiert.<br/>                                                                                                                                                                                       |
-| <dl> <dt>**nmerr-Fehler (unzulässig) \_ \_**</dt> </dl>              | Der Auslöse Teil des eingabeblobs ist beschädigt. Dieser Fehler wird durch den " **untc:: Configure** "-Befehl generiert.<br/>                                                                                                                                                                        |
-| <dl> <dt>**Ungültiges nmerr- \_ \_ BLOB**</dt> </dl>                 | Das in *hinputblob* angegebene Objekt ist kein BLOB. Dieser Fehler wird durch den " **untc:: Configure** "-Befehl generiert.<br/>                                                                                                                                                                      |
-| <dl> <dt>**nicht genügend Arbeits \_ \_ Speicher für nmerr \_**</dt> </dl>               | Der zum Ausführen dieses Vorgangs erforderliche Arbeitsspeicher ist nicht verfügbar. Dieser Fehler wird durch den " **untc:: Configure** "-Befehl generiert.<br/>                                                                                                                                                              |
-| <dl> <dt>**nmerr- \_ Timeout**</dt> </dl>                       | Timeout bei der Anforderung. Dieser Fehler wird durch den " **untc:: Configure** "-Befehl generiert.<br/>                                                                                                                                                                                               |
-| <dl> <dt>**nmerr- \_ Uplevel- \_ BLOB**</dt> </dl>                 | Die in *hinputblob* angegebene Versionsnummer des BLOB ist falsch. Dieser Fehler wird durch den " **untc:: Configure** "-Befehl generiert.<br/>                                                                                                                                                   |
+| <dl> <dt>**NMERR \_ BEREITS \_ VERBUNDEN**</dt> </dl>            | Diese Instanz des NPP-COM-Objekts ist bereits mit dem Netzwerk verbunden.<br/>                                                                                                                                                                                                          |
+| <dl> <dt>**\_ \_ NMERR-BLOBKONVERTIERUNGSFEHLER \_**</dt> </dl>       | Das Konfigurations-BLOB ist beschädigt. Dieser Fehler wird durch den **IRTC::Configure-Aufruf** generiert.<br/>                                                                                                                                                                                       |
+| <dl> <dt>**NMERR \_ BLOB ENTRY DOES NOT EXIST (NMERR-BLOBEINTRAG IST NICHT \_ \_ \_ \_ VORHANDEN)**</dt> </dl> | Dem durch den *hInputBlob-Parameter* angegebenen Eingabeblob fehlt ein Eintrag, der zum Ausführen dieses Vorgangs erforderlich ist. Dieser Fehler kann durch den **IRTC::Connect-** oder **IRTC::Configure-Aufruf** generiert werden. Sehen Sie sich den von *hErrorBlob* zurückgegebenen Fehler-BLOB an, um zu ermitteln, welcher Eintrag nicht gefunden wurde.<br/> |
+| <dl> <dt>**\_NMERR-BLOB \_ NICHT \_ INITIALISIERT**</dt> </dl>        | Die **CreateBlob-Funktion** wurde nicht aufgerufen. Dieser Fehler wird durch den **IRTC::Configure-Aufruf** generiert.<br/>                                                                                                                                                                         |
+| <dl> <dt>**NMERR \_ BLOB \_ STRING \_ INVALID**</dt> </dl>         | Die Zeichenfolge ist nicht NULL-terminiert. Dieser Fehler wird durch den **IRTC::Configure-Aufruf** generiert.<br/>                                                                                                                                                                                       |
+| <dl> <dt>**NMERR \_ ILLEGAL \_ TRIGGER**</dt> </dl>              | Der Triggerteil des Eingabeblobs ist beschädigt. Dieser Fehler wird durch den **IRTC::Configure-Aufruf** generiert.<br/>                                                                                                                                                                        |
+| <dl> <dt>**NMERR \_ UNGÜLTIGES \_ BLOB**</dt> </dl>                 | Das in *hInputBlob* angegebene Objekt ist kein BLOB. Dieser Fehler wird durch den **IRTC::Configure-Aufruf** generiert.<br/>                                                                                                                                                                      |
+| <dl> <dt>**NMERR \_ NICHT \_ GENÜGEND \_ ARBEITSSPEICHER**</dt> </dl>               | Der zum Ausführen dieses Vorgangs erforderliche Arbeitsspeicher ist nicht verfügbar. Dieser Fehler wird durch den **IRTC::Configure-Aufruf** generiert.<br/>                                                                                                                                                              |
+| <dl> <dt>**NMERR \_ TIMEOUT**</dt> </dl>                       | Für die Anforderung ist ein Time out aufgetreten. Dieser Fehler wird durch den **IRTC::Configure-Aufruf** generiert.<br/>                                                                                                                                                                                               |
+| <dl> <dt>**\_ \_ NMERR-UPLEVEL-BLOB**</dt> </dl>                 | Die In *hInputBlob* angegebene Versionsnummer des BLOB ist falsch. Dieser Fehler wird durch den **IRTC::Configure-Aufruf** generiert.<br/>                                                                                                                                                   |
 
 
 
@@ -106,21 +106,21 @@ Wenn die Methode nicht erfolgreich ist, ist der Rückgabewert einer der folgende
 
 ## <a name="remarks"></a>Bemerkungen
 
-Wenn die **Connect** -Methode aufgerufen wird, ruft der NPP die Methode " **untc:: Configure** " automatisch mithilfe des von *hinputblob* bereitgestellten BLOB auf. Beachten Sie, dass alle Fehlercodes, die vom-Befehl an " **untc:: Configure** " zurückgegeben werden, vom " **untc:: Connect** "-Befehl zurückgegeben und zurückgegeben
+Wenn die **Connect-Methode** aufgerufen wird, ruft das NPP automatisch die **IRTC::Configure-Methode** auf, indem das von *hInputBlob* bereitgestellte BLOB verwendet wird. Beachten Sie, dass alle Fehlercodes, die vom Aufruf von **IRTC::Configure** zurückgegeben werden, zurückgegeben und vom **IRTC::Connect-Aufruf** zurückgegeben werden.
 
-Diese Methode muss aufgerufen werden, bevor Sie mit dem Erfassen von Frames beginnen können. Beachten Sie Folgendes: Wenn Sie mithilfe dieser Methode eine Verbindung mit dem Netzwerk herstellen, müssen Sie weiterhin die Schnittstelle " **iritc** " verwenden, um Frames zu erfassen.
+Diese Methode muss aufgerufen werden, bevor Sie mit der Erfassung von Frames beginnen können. Beachten Sie Folgendes: Wenn Sie mit dieser Methode eine Verbindung mit dem Netzwerk herstellen, müssen Sie weiterhin die **IRTC-Schnittstelle** verwenden, um Frames zu erfassen.
 
-Wenn Sie diese Funktion aufrufen, müssen Sie eine Status-oder Frame Rückruffunktion angeben, auch wenn Sie nur als Platzhalter fungiert.
+Beim Aufrufen dieser Funktion müssen Sie einen Status oder eine Framerückruffunktion angeben, auch wenn sie nur als Platzhalter fungiert.
 
-Das von *hinputblob* angegebene Eingabe-BLOB kann durch Aufrufen der Methoden **getnppblobfromui**, **getnppblobtable** und **selectnppblobfromtable** abgerufen werden.
+Das von *hInputBlob* angegebene Eingabeblob kann durch Aufrufen der Methoden **GetNPPBlobFromUI,** **GetNPPBlobTable** und **SelectNPPBlobFromTable** abgerufen werden.
 
-Das in *herrorblob* zurückgegebene Fehler-BLOB enthält Fehlerinformationen, die der Entwickler oder die Anwendung für die Problembehandlung verwenden kann. Der von *herrorblob* zurückgegebene fehlerblob enthält Einträge, die Netzwerkmonitor in dem in *hinputblob* angegebenen eingabeblob nicht verstehen oder finden konnten. Wenn z. b. der nmerr- \_ \_ blobeintrag \_ \_ nicht \_ vorhanden ist, wird der Eintrag Netzwerkmonitor der nicht gefunden wurde, im zurückgegebenen fehlerblob enthalten ist.
+Das in *hErrorBlob* zurückgegebene Fehlerblob enthält Fehlerinformationen, die der Entwickler oder die Anwendung für die Problembehandlung verwenden kann. Das von *hErrorBlob* zurückgegebene Fehlerblob enthält Einträge, die Netzwerkmonitor nicht verstehen oder im Eingabe-BLOB finden konnten, das in *hInputBlob* angegeben ist. Wenn z. B. NMERR \_ BLOB ENTRY DOES NOT EXIST zurückgegeben \_ \_ \_ \_ wird, ist der Eintrag, den Netzwerkmonitor nicht finden konnte, im zurückgegebenen Fehlerblob enthalten.
 
 
 
 | Informationen über                          | Finden Sie unter                                                                          |
 |------------------------------------------------|------------------------------------------------------------------------------|
-| Abrufen des eingabeblobs, das eine NIC darstellt | [Auswählen einer Netzwerkschnittstellenkarte](selecting-a-network-interface-card.md) |
+| Abrufen des Eingabeblobs, das eine NIC darstellt | [Auswählen einer Netzwerkschnittstellenkarte](selecting-a-network-interface-card.md) |
 
 
 
@@ -130,29 +130,29 @@ Das in *herrorblob* zurückgegebene Fehler-BLOB enthält Fehlerinformationen, di
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                                                                     |
-| Header<br/>                   | <dl> <dt>Netmon. h</dt> </dl>                                                                      |
+| Header<br/>                   | <dl> <dt>Netmon.h</dt> </dl>                                                                      |
 | DLL<br/>                      | <dl> <dt>Ndisnpp.dll; </dt> <dt>Rmtnpp.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-["Iran"](irtc.md)
+[IRTC](irtc.md)
 </dt> <dt>
 
-["Iran:: Configure"](irtc-configure.md)
+[IRTC::Configure](irtc-configure.md)
 </dt> <dt>
 
-[:D isconnect](irtc-disconnect.md)
+[IRTC::D isconnect](irtc-disconnect.md)
 </dt> <dt>
 
-["Iran:: Start"](irtc-start.md)
+[IRTC::Start](irtc-start.md)
 </dt> </dl>
 
  

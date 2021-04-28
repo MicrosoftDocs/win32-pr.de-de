@@ -1,11 +1,11 @@
 ---
 title: WebViewFolderContents.SelectedItems-Methode (Shldisp.h)
-description: Ruft ein folderitems-Objekt ab, das alle ausgewählten Elemente in der Ansicht darstellt.
+description: 'WebViewFolderContents.SelectedItems-Methode: Ruft ein FolderItems-Objekt ab, das alle ausgewählten Elemente in der Ansicht darstellt.'
 ms.assetid: 683acac4-f157-4a75-a3f8-c693887c1ea5
 keywords:
-- SelectedItems-Methode Legacy-Windows-Umgebungs Features
-- SelectedItems-Methode Legacy-Windows-Umgebungs Features, webviewfoldercontents-Objekt
-- Webviewfoldercontents-Objekt Legacy Funktionen der Windows-Umgebung, SelectedItems-Methode
+- SelectedItems-Methode Legacy-Windows-Umgebungsfeatures
+- SelectedItems-Methode Legacy-Windows-Umgebungsfeatures, WebViewFolderContents-Objekt
+- WebViewFolderContents-Objekt Legacy-Windows-Umgebungsfeatures, SelectedItems-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: cee4b7f34cdcabec637671af79775fc1fa546790
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 25a242991f6f9472610dffa20593f9cab5d8c310
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040917"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108102648"
 ---
-# <a name="webviewfoldercontentsselecteditems-method"></a>Webviewfoldercontents. SelectedItems-Methode
+# <a name="webviewfoldercontentsselecteditems-method"></a>WebViewFolderContents.SelectedItems-Methode
 
-Ruft ein [**folderitems**](../shell/folderitems.md) -Objekt ab, das alle ausgewählten Elemente in der Ansicht darstellt.
+Ruft ein [**FolderItems-Objekt**](../shell/folderitems.md) ab, das alle ausgewählten Elemente in der Ansicht darstellt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,13 +42,13 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Type: **[ **folderitems**](../shell/folderitems.md)\*\***
+Typ: **[ **FolderItems**](../shell/folderitems.md)\*\***
 
-Ein Objekt Verweis auf das [**folderitems**](../shell/folderitems.md) -Objekt.
+Ein Objektverweis auf das [**FolderItems-Objekt.**](../shell/folderitems.md)
 
 ## <a name="examples"></a>Beispiele
 
-Das folgende Beispiel zeigt die ordnungsgemäße Verwendung dieser Methode für JScript Embedded in HTML.
+Das folgende Beispiel zeigt die ordnungsgemäße Verwendung dieser Methode für in HTML eingebettetes JScript.
 
 
 ```HTML
@@ -86,13 +86,13 @@ Das folgende Beispiel zeigt die ordnungsgemäße Verwendung dieser Methode für 
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, Windows XP \[ Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Client)<br/> | Nur Windows 2000 Professional- und Windows \[ XP-Desktop-Apps\]<br/>                                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                           |
-| Header<br/>                   | <dl> <dt>Shldisp. h</dt> </dl>                           |
-| IDL<br/>                      | <dl> <dt>Shldisp. idl</dt> </dl>                         |
-| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4,71 oder höher)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>                           |
+| Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                         |
+| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4.71 oder höher)</dt> </dl> |
 
 
 

@@ -1,7 +1,7 @@
 ---
-description: Die getmediatype-Methode ruft einen bevorzugten Medientyp für die Ausgabepin ab.
+description: 'CTransformFilter.GetMediaType-Methode: Die GetMediaType-Methode ruft einen bevorzugten Medientyp für den Ausgabepin ab.'
 ms.assetid: 9a1b123b-aa8a-4bf0-a926-466ded24e506
-title: Ctransformfilter. getmediatype-Methode (Transfrm. h)
+title: CTransformFilter.GetMediaType-Methode (Transfrm.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: ba751e291a1ffa8e030be7e77cfd456956718baa
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 6415b8e3d8ae4e292b7e2592b123120927081ea8
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361634"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108095118"
 ---
-# <a name="ctransformfiltergetmediatype-method"></a>Ctransformfilter. getmediatype-Methode
+# <a name="ctransformfiltergetmediatype-method"></a>CTransformFilter.GetMediaType-Methode
 
-Die- `GetMediaType` Methode ruft einen bevorzugten Medientyp für die Ausgabepin ab.
+Die `GetMediaType` -Methode ruft einen bevorzugten Medientyp für den Ausgabepin ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,28 +46,28 @@ virtual HRESULT GetMediaType(
 *iPosition* 
 </dt> <dd>
 
-NULL basierter Indexwert.
+Nullbasierter Indexwert.
 
 </dd> <dt>
 
-*pmediatype* 
+*pMediaType* 
 </dt> <dd>
 
-Zeiger auf ein [**cmediatype**](cmediatype.md) -Objekt, das den Medientyp empfängt.
+Zeiger auf ein [**CMediaType-Objekt,**](cmediatype.md) das den Medientyp empfängt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT** -Wert zurück. Mögliche Werte sind in der folgenden Tabelle aufgeführt.
+Gibt einen **HRESULT-Wert** zurück. Mögliche Werte sind die in der folgenden Tabelle gezeigten Werte.
 
 
 
 | Rückgabecode                                                                                            | Beschreibung                      |
 |--------------------------------------------------------------------------------------------------------|----------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>                   | Erfolg.<br/>              |
-| <dl> <dt>**VFW \_ S \_ keine \_ weiteren \_ Elemente**</dt> </dl> | Der Index liegt außerhalb des zulässigen Bereichs.<br/>   |
-| <dl> <dt>**E \_ invalidArg**</dt> </dl>           | Index kleiner als 0 (null).<br/> |
+| <dl> <dt>**VFW \_ S KEINE ELEMENTE \_ \_ \_ MEHR**</dt> </dl> | Index liegt nicht im Bereich.<br/>   |
+| <dl> <dt>**E \_ INVALIDARG**</dt> </dl>           | Index kleiner als 0 (null).<br/> |
 
 
 
@@ -75,24 +75,24 @@ Gibt einen **HRESULT** -Wert zurück. Mögliche Werte sind in der folgenden Tabe
 
 ## <a name="remarks"></a>Bemerkungen
 
-Die [**ctransformoutputpin:: getmediatype**](ctransformoutputpin-getmediatype.md) -Methode der Ausgabe-PIN ruft diese Methode auf. Diese Methode muss von der abgeleiteten Klasse implementiert werden. Weitere Informationen finden Sie unter [**cbasepin:: getmediatype**](cbasepin-getmediatype.md).
+Die [**CTransformOutputPin::GetMediaType-Methode**](ctransformoutputpin-getmediatype.md) des Ausgabepins ruft diese Methode auf. Die abgeleitete Klasse muss diese Methode implementieren. Weitere Informationen finden Sie unter [**CBasePin::GetMediaType**](cbasepin-getmediatype.md).
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Transfrm. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Transfrm.h (streams.h enthalten)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Ctransformfilter-Klasse**](ctransformfilter.md)
+[**CTransformFilter-Klasse**](ctransformfilter.md)
 </dt> </dl>
 
  

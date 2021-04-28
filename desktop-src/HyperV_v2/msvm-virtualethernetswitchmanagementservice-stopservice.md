@@ -1,7 +1,7 @@
 ---
-description: Beendet den Dienst.
+description: 'StopService-Methode der Msvm_VirtualEthernetSwitchManagementService-Klasse: Beendet den Dienst.'
 ms.assetid: 4f88b099-3a89-4d05-920e-265fc94599b1
-title: Stop Service-Methode der Msvm_VirtualEthernetSwitchManagementService-Klasse
+title: StopService-Methode der Msvm_VirtualEthernetSwitchManagementService-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,14 +13,14 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 6303327b66ce66c9cda6fe29e7d0a63184ea5929
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5fbc91a4134fb0a024e66dfc1a46806aa531893f
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106357899"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108111008"
 ---
-# <a name="stopservice-method-of-the-msvm_virtualethernetswitchmanagementservice-class"></a>Stop Service-Methode der MSVM \_ virtualethernetzwitchmanagementservice-Klasse
+# <a name="stopservice-method-of-the-msvm_virtualethernetswitchmanagementservice-class"></a>StopService-Methode der Msvm \_ VirtualEthernetSwitchManagementService-Klasse
 
 Beendet den Dienst.
 
@@ -53,21 +53,21 @@ Diese Methode gibt einen der folgenden Werte zurück:
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8.1<br/>                                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2<br/>                                                                       |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**MSVM \_ virtualethernetzwitchmanagementservice**](msvm-virtualethernetswitchmanagementservice.md)
+[**Msvm \_ VirtualEthernetSwitchManagementService**](msvm-virtualethernetswitchmanagementservice.md)
 </dt> </dl>
 
  

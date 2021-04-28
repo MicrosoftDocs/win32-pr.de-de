@@ -1,7 +1,7 @@
 ---
-description: Zeiger auf den Filter, der diese Pin erstellt hat.
+description: 'CTransInPlaceOutputPin::m_pTIPFilter Member : Zeiger auf den Filter, der diesen Pin erstellt hat.'
 ms.assetid: e7939bce-d832-45e6-94fd-2f5e07792eef
-title: 'Ctransinplaceoutputpin:: m_pTIPFilter Member (transip. h)'
+title: CTransInPlaceOutputPin::m_pTIPFilter Member (Transip.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 67a6c953ab42546be442ded5b06e7b87c87c22ca
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: e07ecb43ce879634f7c149adebeb4b01416e65e3
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106360349"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108094688"
 ---
-# <a name="ctransinplaceoutputpinm_ptipfilter-member"></a>Ctransinplaceoutputpin:: m \_ ptipfilter-Member
+# <a name="ctransinplaceoutputpinm_ptipfilter-member"></a>CTransInPlaceOutputPin::m \_ pTIPFilter-Member
 
-Zeiger auf den Filter, der diese Pin erstellt hat.
+Zeiger auf den Filter, der diesen Pin erstellt hat.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,18 +40,18 @@ CTransInPlaceFilter * const m_pTIPFilter;
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Transip. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Transip.h (einschließlich Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Ctransinplaceoutputpin-Klasse**](ctransinplaceoutputpin.md)
+[**CTransInPlaceOutputPin-Klasse**](ctransinplaceoutputpin.md)
 </dt> </dl>
 
  

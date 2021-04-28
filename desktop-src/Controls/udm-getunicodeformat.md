@@ -1,9 +1,9 @@
 ---
-title: UDM_GETUNICODEFORMAT Meldung (kommstrg. h)
-description: Ruft das Unicode-Zeichenformat Flag für das-Steuerelement ab.
+title: UDM_GETUNICODEFORMAT-Nachricht (Commctrl.h)
+description: 'UDM_GETUNICODEFORMAT Meldung: Ruft das Unicode-Zeichenformatflag für das Steuerelement ab.'
 ms.assetid: 8c09d37b-95a2-49cd-b578-919f9c39fa8b
 keywords:
-- Windows-Steuerelemente für UDM_GETUNICODEFORMAT Meldung
+- UDM_GETUNICODEFORMAT Meldung Windows-Steuerelemente
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4b2f9eef604af6cf5dfcefbf1e3e03dec561ac21
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 273164df7f7021f39ec26a22eb637e8b9969fc24
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103957212"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108113589"
 ---
-# <a name="udm_getunicodeformat-message"></a>UDM \_ getunicodeformat-Meldung
+# <a name="udm_getunicodeformat-message"></a>UDM \_ GETUNICODEFORMAT-Nachricht
 
-Ruft das Unicode-Zeichenformat Flag für das-Steuerelement ab.
+Ruft das Unicode-Zeichenformatflag für das Steuerelement ab.
 
 ## <a name="parameters"></a>Parameter
 
@@ -37,29 +37,29 @@ Ruft das Unicode-Zeichenformat Flag für das-Steuerelement ab.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt das Unicode-formatflag für das-Steuerelement zurück. Wenn dieser Wert ungleich 0 (null) ist, verwendet das Steuerelement Unicode-Zeichen. Wenn dieser Wert 0 (null) ist, verwendet das Steuerelement ANSI-Zeichen.
+Gibt das Unicode-Formatflag für das Steuerelement zurück. Wenn dieser Wert ungleich 0 (null) ist, verwendet das Steuerelement Unicode-Zeichen. Wenn dieser Wert 0 (null) ist, verwendet das Steuerelement ANSI-Zeichen.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Eine Erörterung dieser Nachricht finden Sie in den Hinweisen für [**ccm \_ getunicodeformat**](ccm-getunicodeformat.md) .
+Eine Erläuterung dieser Meldung finden Sie in den Hinweisen zu [**CCM \_ GETUNICODEFORMAT.**](ccm-getunicodeformat.md)
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**UDM- \_ Format-Code Format**](udm-setunicodeformat.md)
+[**UDM \_ SETUNICODEFORMAT**](udm-setunicodeformat.md)
 </dt> </dl>
 
  

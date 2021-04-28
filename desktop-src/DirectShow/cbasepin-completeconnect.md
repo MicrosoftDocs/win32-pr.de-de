@@ -1,7 +1,7 @@
 ---
-description: Die completeconnect-Methode schließt eine Verbindung mit einer anderen Pin ab.
+description: 'CBasePin.CompleteConnect-Methode: Die CompleteConnect-Methode schließt eine Verbindung mit einem anderen Pin ab.'
 ms.assetid: 10cbf29c-2e1a-419c-b0c0-c99f9a285810
-title: Cbasepin. completeconnect-Methode (amfilter. h)
+title: CBasePin.CompleteConnect-Methode (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 9068bf63d3168a8c6d9e1bca2ef709f63e80a3c0
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: fee207d7a17f12cc81036fbd4f82ec49a99f4a31
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106354784"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108096038"
 ---
-# <a name="cbasepincompleteconnect-method"></a>Cbasepin. completeconnect-Methode
+# <a name="cbasepincompleteconnect-method"></a>CBasePin.CompleteConnect-Methode
 
-Die- `CompleteConnect` Methode schließt eine Verbindung mit einer anderen Pin ab.
+Die `CompleteConnect` -Methode schließt eine Verbindung mit einem anderen Pin ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,10 +42,10 @@ virtual HRESULT CompleteConnect(
 
 <dl> <dt>
 
-*preceivepin* 
+*pReceivePin* 
 </dt> <dd>
 
-Ein Zeiger auf die [**IPin**](/windows/desktop/api/Strmif/nn-strmif-ipin) -Schnittstelle der anderen Pin.
+Zeiger auf die [**IPin-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-ipin) des anderen Pins.
 
 </dd> </dl>
 
@@ -55,28 +55,28 @@ Gibt S \_ OK zurück.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Diese Methode wird auf beiden Pins am Ende des Verbindungsprozesses aufgerufen. Die Verbindungs-Pin ruft Sie aus der [**cbasepin:: Connect**](cbasepin-connect.md) -Methode ab, und die empfangende Pin ruft Sie innerhalb der [**cbasepin:: receiveconnection**](cbasepin-receiveconnection.md) -Methode auf.
+Diese Methode wird an beiden Pins am Ende des Verbindungsprozesses aufgerufen. Der Verbindungspin ruft ihn innerhalb der [**CBasePin::Connect-Methode**](cbasepin-connect.md) auf, und der empfangende Pin ruft ihn innerhalb der [**CBasePin::ReceiveConnection-Methode**](cbasepin-receiveconnection.md) auf.
 
-In der Basisklasse gibt diese Methode einfach S \_ OK zurück. Wenn eine abgeleitete Klasse über Anforderungen zum Abschließen einer Verbindung verfügt, sollte diese Methode überschrieben werden. Beispielsweise verwendet die [**cbaseoutputpin**](cbaseoutputpin.md) -Klasse diese Methode, um die Speicherzuweisung zu entscheiden.
+In der Basisklasse gibt diese Methode einfach S \_ OK zurück. Wenn eine abgeleitete Klasse Anforderungen zum Abschließen einer Verbindung hat, sollte sie diese Methode überschreiben. Beispielsweise verwendet die [**CBaseOutputPin-Klasse**](cbaseoutputpin.md) diese Methode, um die Speicherzuweisung zu bestimmen.
 
-Wenn diese Methode fehlschlägt, schlägt der allgemeine Verbindungsversuch ebenfalls fehl, und die PIN trennt die Verbindung mit der empfangenden PIN.
+Wenn bei dieser Methode ein Fehler auftritt, schlägt auch der gesamte Verbindungsversuch fehl, und der Pin wird vom empfangenden Pin getrennt.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (streams.h enthalten)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbasepin-Klasse**](cbasepin.md)
+[**CBasePin-Klasse**](cbasepin.md)
 </dt> </dl>
 
  

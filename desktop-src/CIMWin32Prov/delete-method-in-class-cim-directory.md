@@ -1,5 +1,5 @@
 ---
-description: Mit der Delete-Methode wird die im Objekt Pfad angegebene logische Datei (oder das angegebene Verzeichnis) gelöscht. Diese Methode wird von CIM \_ LogicalFile geerbt.
+description: 'Delete-Methode der CIM_Directory-Klasse: Die Delete-Methode löscht die logische Datei (oder das Verzeichnis), die im Objektpfad angegeben ist. Diese Methode wird von CIM \_ LogicalFile geerbt.'
 ms.assetid: 74f59073-a17a-4be5-8247-fba8d023f448
 ms.tgt_platform: multiple
 title: Delete-Methode der CIM_Directory-Klasse
@@ -14,23 +14,23 @@ api_type:
 - COM
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 6ad193231ffc15f5ce61257ee545f583d8e58e17
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 6d02c9eb6b603673228671b12df98c7b6884abdd
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103958582"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108089637"
 ---
-# <a name="delete-method-of-the-cim_directory-class"></a>Delete-Methode der CIM- \_ Verzeichnis Klasse
+# <a name="delete-method-of-the-cim_directory-class"></a>Delete-Methode der CIM \_ Directory-Klasse
 
-Mit der **Delete** -Methode wird die im Objekt Pfad angegebene logische Datei (oder das angegebene Verzeichnis) gelöscht. Diese Methode wird von [**CIM \_ LogicalFile**](cim-logicalfile.md)geerbt.
+Die **Delete-Methode** löscht die logische Datei (oder das Verzeichnis), die im Objektpfad angegeben ist. Diese Methode wird von [**CIM \_ LogicalFile**](cim-logicalfile.md)geerbt.
 
 > [!IMPORTANT]
-> Die Klassen der DMTF-CIM (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt zurzeit nur die [CIM 2. x-Versions Schemas](https://dmtf.org/standards/cim/schemas).
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF (Distributed Management Task Force) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 
-In diesem Thema wird die MOF-Syntax (Managed Object Format) verwendet. Weitere Informationen zum Verwenden dieser Methode finden Sie unter [Aufrufen einer Methode](/windows/desktop/WmiSdk/calling-a-method).
+In diesem Thema wird die MOF-Syntax (Managed Object Format) verwendet. Weitere Informationen zur Verwendung dieser Methode finden Sie unter [Aufrufen einer Methode.](/windows/desktop/WmiSdk/calling-a-method)
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,7 +47,7 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg den Wert 0 (null) zurück, und jede andere Zahl gibt einen Fehler an.
+Gibt bei Erfolg den Wert 0 (null) und eine beliebige andere Zahl zurück, um einen Fehler anzugeben.
 
 <dl> <dt>
 
@@ -61,14 +61,14 @@ Erfolg.
 **2**
 </dt> <dd>
 
-Zugriff verweigert.
+Der Zugriff wurde verweigert.
 
 </dd> <dt>
 
 **8**
 </dt> <dd>
 
-Nicht spezifizierter Fehler.
+Nicht angegebener Fehler.
 
 </dd> <dt>
 
@@ -89,7 +89,7 @@ Das Objekt ist bereits vorhanden.
 **11**
 </dt> <dd>
 
-Das Dateisystem ist nicht NTFS.
+Dateisystem nicht NTFS.
 
 </dd> <dt>
 
@@ -103,7 +103,7 @@ Plattform nicht Windows.
 **13**
 </dt> <dd>
 
-Das Laufwerk ist nicht identisch.
+Laufwerk nicht identisch.
 
 </dd> <dt>
 
@@ -131,7 +131,7 @@ Ungültige Startdatei.
 **17**
 </dt> <dd>
 
-Die Berechtigung wurde nicht aufrechterhalten.
+Die Berechtigung wurde nicht gehalten.
 
 </dd> <dt>
 
@@ -144,32 +144,32 @@ Ungültiger Parameter.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Diese Methode wird zurzeit nicht von WMI implementiert. Um diese Methode verwenden zu können, müssen Sie Sie in Ihrem eigenen Anbieter implementieren.
+Diese Methode wird derzeit nicht von WMI implementiert. Um diese Methode verwenden zu können, müssen Sie sie in Ihrem eigenen Anbieter implementieren.
 
-Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Beschreibungen abgeleitet. Microsoft hat möglicherweise Änderungen an den korrekten geringfügigen Fehlern vorgenommen, den Microsoft SDK-Dokumentations Standards entsprechen oder weitere Informationen bereitstellen.
+Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von DMTF veröffentlicht wurden. Microsoft hat möglicherweise Änderungen vorgenommen, um kleinere Fehler zu beheben, die Dokumentationsstandards des Microsoft SDK zu erfüllen oder weitere Informationen zur Verfügung zu stellen.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[CIM- \_ Verzeichnis](delete-method-in-class-cim-directory.md)
+[\_CIM-Verzeichnis](delete-method-in-class-cim-directory.md)
 </dt> <dt>
 
-[**CIM- \_ Verzeichnis**](cim-directory.md)
+[**\_CIM-Verzeichnis**](cim-directory.md)
 </dt> </dl>
 
  

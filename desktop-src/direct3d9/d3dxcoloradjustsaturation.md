@@ -1,7 +1,7 @@
 ---
-description: Passt den Sättigungswert einer Farbe an.
+description: 'D3DXColorAdjustSaturation-Funktion (D3dx9math.h): Passt den Sättigungswert einer Farbe an.'
 ms.assetid: 1f66c3b4-2f02-4993-80c6-c484180c2459
-title: D3DXColorAdjustSaturation-Funktion (D3dx9math. h)
+title: D3DXColorAdjustSaturation-Funktion (D3dx9math.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,14 +14,14 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 4d9a801a8355c1a9399f9864f9b1753bbecc17b2
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 878cdd83a04f594da3133eda314486af96ac3d56
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106364368"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108115868"
 ---
-# <a name="d3dxcoloradjustsaturation-function-d3dx9mathh"></a>D3DXColorAdjustSaturation-Funktion (D3dx9math. h)
+# <a name="d3dxcoloradjustsaturation-function-d3dx9mathh"></a>D3DXColorAdjustSaturation-Funktion (D3dx9math.h)
 
 Passt den Sättigungswert einer Farbe an.
 
@@ -42,30 +42,30 @@ D3DXCOLOR* D3DXColorAdjustSaturation(
 
 <dl> <dt>
 
-*Pout* \[ in, out\]
+*pOut* \[ in, out\]
 </dt> <dd>
 
 Typ: **[ **D3DXCOLOR**](d3dxcolor.md)\***
 
-Zeiger auf eine [**D3DXCOLOR**](d3dxcolor.md) -Struktur, die das Ergebnis des Vorgangs ist.
+Zeiger auf eine [**D3DXCOLOR-Struktur,**](d3dxcolor.md) die das Ergebnis des Vorgangs ist.
 
 </dd> <dt>
 
-*PC* \[ in\]
+*pC* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXCOLOR**](d3dxcolor.md) \***
+Typ: **const [**D3DXCOLOR**](d3dxcolor.md) \***
 
-Zeiger auf eine Quell- [**D3DXCOLOR**](d3dxcolor.md) -Struktur.
+Zeiger auf eine [**D3DXCOLOR-Quellstruktur.**](d3dxcolor.md)
 
 </dd> <dt>
 
 *s* \[ in\]
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-Sättigungswert. Dieser Parameter interpoliert eine lineare Interpolation zwischen der Farbe, die in Graustufen konvertiert wurde, und der ursprünglichen Farbe, dem PC. Es gibt keine Einschränkungen für den Wert von s. Wenn s 0 ist, ist die zurückgegebene Farbe die Graustufen Farbe. Wenn s den Wert 1 hat, ist die zurückgegebene Farbe die ursprüngliche Farbe.
+Sättigungswert. Dieser Parameter interpoliert linear zwischen der in Graustufen konvertierten Farbe und der ursprünglichen Farbe pC. Es gibt keine Grenzwerte für den Wert von s. Wenn s 0 ist, ist die zurückgegebene Farbe die Graustufenfarbe. Wenn s 1 ist, ist die zurückgegebene Farbe die ursprüngliche Farbe.
 
 </dd> </dl>
 
@@ -73,15 +73,15 @@ Sättigungswert. Dieser Parameter interpoliert eine lineare Interpolation zwisch
 
 Typ: **[ **D3DXCOLOR**](d3dxcolor.md)\***
 
-Diese Funktion gibt einen Zeiger auf eine [**D3DXCOLOR**](d3dxcolor.md) -Struktur zurück, die das Ergebnis der Sättigungs Anpassung ist.
+Diese Funktion gibt einen Zeiger auf eine [**D3DXCOLOR-Struktur**](d3dxcolor.md) zurück, die das Ergebnis der Anpassung der Sättigung ist.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Der Alphakanal für die Eingabe wird unverändert in den Alpha-Ausgabekanal kopiert.
+Der Alpha-Eingabekanal wird unverändert in den Alphaausgabekanal kopiert.
 
-Der Rückgabewert für diese Funktion ist derselbe Wert, der im Pout-Parameter zurückgegeben wird. Auf diese Weise kann diese Funktion als Parameter für eine andere Funktion verwendet werden.
+Der Rückgabewert für diese Funktion ist der gleiche Wert, der im pOut-Parameter zurückgegeben wird. Auf diese Weise kann diese Funktion als Parameter für eine andere Funktion verwendet werden.
 
-Diese Funktion interpoliert die roten, grünen und blauen Farbkomponenten einer [**D3DXCOLOR**](d3dxcolor.md) -Struktur zwischen einer ungesättigten Farbe und einer Farbe, wie im folgenden Beispiel gezeigt.
+Diese Funktion interpoliert die Rot-, Grün- und Blaufarbkomponenten einer [**D3DXCOLOR-Struktur**](d3dxcolor.md) zwischen einer nicht überschäumten Farbe und einer Farbe, wie im folgenden Beispiel gezeigt.
 
 
 ```
@@ -94,9 +94,9 @@ Diese Funktion interpoliert die roten, grünen und blauen Farbkomponenten einer 
 
 
 
-Wenn s größer als 0 und kleiner als 1 ist, wird die Sättigung verringert. Wenn s größer als 1 ist, wird die Sättigung angehoben.
+Wenn s größer als 0 und kleiner als 1 ist, wird die Sättigung verringert. Wenn s größer als 1 ist, wird die Sättigung erhöht.
 
-Die Graustufen Farbe wird wie folgt berechnet:
+Die Graustufenfarbe wird wie die folgenden berechnet:
 
 
 ```
@@ -109,14 +109,14 @@ r = g = b = 0.2125*r + 0.7154*g + 0.0721*b
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9math. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3dx9math.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

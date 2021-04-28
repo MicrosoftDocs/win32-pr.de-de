@@ -1,7 +1,7 @@
 ---
-description: Die checkConnect-Methode bestimmt, ob eine PIN-Verbindung geeignet ist.
+description: 'CBaseOutputPin.CheckConnect-Methode: Die CheckConnect-Methode bestimmt, ob eine Stecknadelverbindung geeignet ist.'
 ms.assetid: 50ab59ad-8ff7-4d7b-add3-b59203d93307
-title: Cbaseoutputpin. checkConnect-Methode (amfilter. h)
+title: CBaseOutputPin.CheckConnect-Methode (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: f3274e47e9a77d86f350c17aaca04ec0cdb95ef3
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 7ea5ad32de18046f3d23145d82e971391c3e304c
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106368600"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108096188"
 ---
-# <a name="cbaseoutputpincheckconnect-method"></a>Cbaseoutputpin. checkConnect-Methode
+# <a name="cbaseoutputpincheckconnect-method"></a>CBaseOutputPin.CheckConnect-Methode
 
-Die- `CheckConnect` Methode bestimmt, ob eine PIN-Verbindung geeignet ist.
+Die `CheckConnect` -Methode bestimmt, ob eine Stecknadelverbindung geeignet ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,24 +42,24 @@ HRESULT CheckConnect(
 
 <dl> <dt>
 
-*ppin* 
+*pPin* 
 </dt> <dd>
 
-Ein Zeiger auf die [**IPin**](/windows/desktop/api/Strmif/nn-strmif-ipin) -Schnittstelle der Eingabe-PIN.
+Zeiger auf die [**IPin-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-ipin) des Eingabepins.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen der folgenden **HRESULT** -Werte zurück.
+Gibt einen der folgenden **HRESULT-Werte** zurück.
 
 
 
 | Rückgabecode                                                                                               | Beschreibung                                                                 |
 |-----------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>                      | Erfolg.<br/>                                                         |
-| <dl> <dt>**E \_ nointerface**</dt> </dl>             | Die eingabepin unterstützt [**IMemInputPin**](/windows/desktop/api/Strmif/nn-strmif-imeminputpin)nicht.<br/> |
-| <dl> <dt>**VFW \_ E \_ ungültige \_ Richtung**</dt> </dl> | PIN-Anweisungen sind nicht kompatibel.<br/>                               |
+| <dl> <dt>**E \_ NOINTERFACE**</dt> </dl>             | Der Eingabepin unterstützt [**IMemInputPin nicht.**](/windows/desktop/api/Strmif/nn-strmif-imeminputpin)<br/> |
+| <dl> <dt>**VFW \_ E \_ UNGÜLTIGE \_ RICHTUNG**</dt> </dl> | Pin-Anweisungen sind nicht kompatibel.<br/>                               |
 
 
 
@@ -67,24 +67,24 @@ Gibt einen der folgenden **HRESULT** -Werte zurück.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Diese Methode ruft die [**cbasepin:: checkConnect**](cbasepin-checkconnect.md) -Methode der Basisklasse auf und fragt dann die Eingabe-PIN für Ihre [**IMemInputPin**](/windows/desktop/api/Strmif/nn-strmif-imeminputpin) -Schnittstelle ab.
+Diese Methode ruft die [**CBasePin::CheckConnect-Methode**](cbasepin-checkconnect.md) der Basisklasse auf und fragt dann den Eingabepin für seine [**IMemInputPin-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-imeminputpin) ab.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (streams.h enthalten)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbaseoutputpin-Klasse**](cbaseoutputpin.md)
+[**CBaseOutputPin-Klasse**](cbaseoutputpin.md)
 </dt> </dl>
 
  

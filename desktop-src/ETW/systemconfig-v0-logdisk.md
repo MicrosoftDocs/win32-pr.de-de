@@ -1,5 +1,5 @@
 ---
-description: Diese Klasse ist die Ereignistyp Klasse für Konfigurations Ereignisse logischer Datenträger.
+description: 'SystemConfig_V0_LogDisk Klasse: Diese Klasse ist die Ereignistypklasse für logische Datenträgerkonfigurationsereignisse.'
 ms.assetid: 3fa5f2e4-f6fa-4c10-9634-04908783cd28
 title: SystemConfig_V0_LogDisk-Klasse
 ms.topic: reference
@@ -26,18 +26,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: dbc1ee189bae1fe71f42267f38bd40763764dea2
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: eb0ad959d637a38a03b77bd8d7a812ff608ddc04
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104980545"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108105978"
 ---
-# <a name="systemconfig_v0_logdisk-class"></a>SystemConfig \_ v0 \_ logdisk-Klasse
+# <a name="systemconfig_v0_logdisk-class"></a>SystemConfig \_ V0 \_ LogDisk-Klasse
 
-Diese Klasse ist die Ereignistyp Klasse für Konfigurations Ereignisse logischer Datenträger.
+Diese Klasse ist die Ereignistypklasse für Logische Datenträgerkonfigurationsereignisse.
 
-Die folgende Syntax wird durch den MOF-Code vereinfacht.
+Die folgende Syntax wird durch MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -64,77 +64,77 @@ class SystemConfig_V0_LogDisk : SystemConfig_V0
 
 ## <a name="members"></a>Member
 
-Die **SystemConfig \_ v0 \_ logdisk** -Klasse verfügt über diese Typen von Membern:
+Die **\_ \_ LogDisk-Klasse SystemConfig V0** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **SystemConfig \_ v0 \_ logdisk** -Klasse verfügt über diese Eigenschaften.
+Die **\_ \_ LogDisk-Klasse SystemConfig V0** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Bytespersektor**
+**BytesPerSector**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (10)
+Qualifizierer: **WmiDataId** (10)
 </dt> </dl>
 
-Anzahl von Bytes in den einzelnen Sektoren für das physische Laufwerk.
+Anzahl von Bytes in jedem Sektor für das physische Laufwerk.
 
 </dd> <dt>
 
-**Disknumber**
+**DiskNumber**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (3)
+Qualifizierer: **WmiDataId** (3)
 </dt> </dl>
 
-Index Nummer des Datenträgers, der diese Partition enthält.
+Indexnummer des Datenträgers, der diese Partition enthält.
 
 </dd> <dt>
 
-**Driveletterstring**
+**DriveLetterString**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **char16** Array
+Datentyp: **char16-Array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (6), **Max** (4)
+Qualifizierer: **WmiDataId** (6), **Max** (4)
 </dt> </dl>
 
-Laufwerk Buchstabe des Datenträgers in der Form " <letter> :".
+Laufwerkbuchstaben des Datenträgers im Formular " <letter> :".
 
 </dd> <dt>
 
 **DriveType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (5)
+Qualifizierer: **WmiDataId** (5)
 </dt> </dl>
 
-Der Typ des Laufwerks. Dabei sind folgende Werte möglich:
+Typ des Laufwerks. Mögliche Werte:
 
 
 
@@ -150,7 +150,7 @@ Der Typ des Laufwerks. Dabei sind folgende Werte möglich:
 
 </dd> <dt>
 
-**Verwendet**
+**Dateisystem**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **char16**
@@ -159,14 +159,14 @@ Datentyp: **char16**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (13), **Max** (16)
+Qualifizierer: **WmiDataId** (13), **Max** (16)
 </dt> </dl>
 
-Dateisystem auf dem logischen Datenträger, z. b. NTFS.
+Dateisystem auf dem logischen Datenträger, z. B. NTFS.
 
 </dd> <dt>
 
-**"Numoffreeclusters"**
+**NumberOfFreeClusters**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint64**
@@ -175,7 +175,7 @@ Datentyp: **sint64**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (11)
+Qualifizierer: **WmiDataId** (11)
 </dt> </dl>
 
 Anzahl der freien Cluster im angegebenen Volume.
@@ -185,13 +185,13 @@ Anzahl der freien Cluster im angegebenen Volume.
 **Pad**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (7)
+Qualifizierer: **WmiDataId** (7)
 </dt> </dl>
 
 Reserviert.
@@ -201,84 +201,84 @@ Reserviert.
 **PartitionNumber**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (8)
+Qualifizierer: **WmiDataId** (8)
 </dt> </dl>
 
-Index Nummer der Partition.
+Indexnummer der Partition.
 
 </dd> <dt>
 
 **PartitionSize**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (2)
+Qualifizierer: **WmiDataId** (2)
 </dt> </dl>
 
 Gesamtgröße der Partition in Bytes.
 
 </dd> <dt>
 
-**Sector-Cluster**
+**SectorsPerCluster**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (9)
+Qualifizierer: **WmiDataId** (9)
 </dt> </dl>
 
-Anzahl der Sektoren auf dem Volume.
+Anzahl der Sektoren im Volume.
 
 </dd> <dt>
 
 **Größe**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (4)
+Qualifizierer: **WmiDataId** (4)
 </dt> </dl>
 
 Größe des Laufwerks in Bytes.
 
 </dd> <dt>
 
-**Starto ffset**
+**StartOffset**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (1)
+Qualifizierer: **WmiDataId** (1)
 </dt> </dl>
 
-Start Offset (in Bytes) der Partition vom Anfang des Datenträgers.
+Startoffset (in Bytes) der Partition vom Anfang des Datenträgers.
 
 </dd> <dt>
 
-**Totalnummeriofclusters**
+**TotalNumberOfClusters**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint64**
@@ -287,37 +287,37 @@ Datentyp: **sint64**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (12)
+Qualifizierer: **WmiDataId** (12)
 </dt> </dl>
 
-Anzahl der verwendeten und freien Cluster im Volume.
+Anzahl der verwendeten und kostenlosen Cluster im Volume.
 
 </dd> <dt>
 
-**Volumeext**
+**VolumeExt**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (14)
+Qualifizierer: **WmiDataId** (14)
 </dt> </dl>
 
 Reserviert.
 
 </dd> </dl>
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2003-Desktop-Apps\]<br/> |
 
 
 
@@ -325,7 +325,7 @@ Reserviert.
 
 <dl> <dt>
 
-[**SystemConfig \_ v0**](systemconfig-v0.md)
+[**SystemConfig \_ V0**](systemconfig-v0.md)
 </dt> </dl>
 
  

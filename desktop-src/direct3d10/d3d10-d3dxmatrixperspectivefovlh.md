@@ -1,7 +1,7 @@
 ---
-description: Erstellt eine linkshändige perspektivische Projektionsmatrix auf der Grundlage eines Sichtfelds.
+description: 'D3DXMatrixPerspectiveFovLH-Funktion (D3DX10Math.h): Erstellt eine linkshändige Projektionsmatrix basierend auf einem Sichtfeld.'
 ms.assetid: 35ee12d6-0a58-4b00-ac8f-82f82215f02e
-title: D3DXMatrixPerspectiveFovLH-Funktion (D3DX10Math. h)
+title: D3DXMatrixPerspectiveFovLH-Funktion (D3DX10Math.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,14 +14,14 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: 141c0a1468b2e073881976738cbd2a10b6108edc
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: cea1bec170664993332b1cde1de375c416209209
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106357259"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108113088"
 ---
-# <a name="d3dxmatrixperspectivefovlh-function-d3dx10mathh"></a>D3DXMatrixPerspectiveFovLH-Funktion (D3DX10Math. h)
+# <a name="d3dxmatrixperspectivefovlh-function-d3dx10mathh"></a>D3DXMatrixPerspectiveFovLH-Funktion (D3DX10Math.h)
 
 Erstellt eine linkshändige perspektivische Projektionsmatrix auf der Grundlage eines Sichtfelds.
 
@@ -44,48 +44,48 @@ D3DXMATRIX* D3DXMatrixPerspectiveFovLH(
 
 <dl> <dt>
 
-*Pout* \[ in, out\]
+*pOut* \[ in, out\]
 </dt> <dd>
 
 Typ: **[ **D3DXMATRIX**](../direct3d9/d3dxmatrix.md)\***
 
-Ein Zeiger auf die [**D3DXMATRIX**](d3d10-d3dxmatrix.md) -Struktur, die das Ergebnis des Vorgangs ist.
+Zeiger auf die [**D3DXMATRIX-Struktur,**](d3d10-d3dxmatrix.md) die das Ergebnis des Vorgangs ist.
 
 </dd> <dt>
 
-*fovy* \[ in\]
+*fovy* \[ In\]
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-Feld der Ansicht in y-Richtung im Bogenmaße.
+Sichtfeld in y-Richtung, im Bogenmaß.
 
 </dd> <dt>
 
-*Aspekt* \[ in\]
+*Aspekt* \[ In\]
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-Seitenverhältnis, definiert als Breite des Ansichts Raums dividiert durch Höhe.
+Seitenverhältnis, definiert als Ansichtsraumbreite dividiert durch Höhe.
 
 </dd> <dt>
 
-*Zn* \[ in\]
+*zn* \[ In\]
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-Z-Wert der nahen Ansichts Ebene.
+Z-Wert der ansichtsnahen Ebene.
 
 </dd> <dt>
 
-*ZF* \[ in\]
+*NSD* \[ In\]
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-Z-Wert der weit entfernten Ansichts Ebene.
+Z-Wert der fernen Ansichtsebene.
 
 </dd> </dl>
 
@@ -93,11 +93,11 @@ Z-Wert der weit entfernten Ansichts Ebene.
 
 Typ: **[ **D3DXMATRIX**](../direct3d9/d3dxmatrix.md)\***
 
-Zeiger auf eine D3DXMATRIX-Struktur, bei der es sich um eine Perspektiven Projektions Matrix mit linker Übergabe handelt.
+Zeiger auf eine D3DXMATRIX-Struktur, bei der es sich um eine linkshändige Projektionsmatrix handelt.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Der Rückgabewert für diese Funktion ist derselbe Wert, der im Pout-Parameter zurückgegeben wird. Auf diese Weise kann die D3DXMatrixPerspectiveFovLH-Funktion als Parameter für eine andere Funktion verwendet werden.
+Der Rückgabewert für diese Funktion ist der gleiche Wert, der im pOut-Parameter zurückgegeben wird. Auf diese Weise kann die D3DXMatrixPerspectiveFovLH-Funktion als Parameter für eine andere Funktion verwendet werden.
 
 Diese Funktion berechnet die zurückgegebene Matrix wie gezeigt:
 
@@ -119,14 +119,14 @@ xScale = yScale / aspect ratio
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX10Math. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx10. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX10Math.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

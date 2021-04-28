@@ -1,19 +1,19 @@
 ---
-description: .
+description: Timerbenachrichtigungen
 ms.assetid: eb4ab22b-a8f8-41d4-96f9-fac3aaa5fe44
-title: Timer-Benachrichtigungen
+title: Timerbenachrichtigungen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: fb3ada7c52a3cd0524f95933a648f80d5fba2365
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: afb2e5266d9cc18c2f0535bde4ed12de7b125195
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104218215"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108100308"
 ---
-# <a name="timer-notifications"></a>Timer-Benachrichtigungen
+# <a name="timer-notifications"></a>Timerbenachrichtigungen
 
--   [**WM- \_ Timer**](wm-timer.md)
+-   [**WM \_ TIMER**](wm-timer.md)
 
  
 

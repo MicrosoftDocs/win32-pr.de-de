@@ -1,7 +1,7 @@
 ---
-description: Unterteilt eine allgemeine 3D-Transformationsmatrix in seine skalaren, rotierenden und Übersetzer Komponenten.
+description: 'D3DXMatrixDecompose-Funktion (D3DX10Math.h): Unterteilt eine allgemeine 3D-Transformationsmatrix in ihre skalaren, rotationsbasierten und translationalen Komponenten.'
 ms.assetid: 3694769f-56e7-4983-924e-021c129462a2
-title: D3DXMatrixDecompose-Funktion (D3DX10Math. h)
+title: D3DXMatrixDecompose-Funktion (D3DX10Math.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: 507c8f177db0f71b3d333a8343e4166e649f424a
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: cc87de99d72283c20f25b15ea8d0e5864e2550d9
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104219665"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108113208"
 ---
-# <a name="d3dxmatrixdecompose-function-d3dx10mathh"></a>D3DXMatrixDecompose-Funktion (D3DX10Math. h)
+# <a name="d3dxmatrixdecompose-function-d3dx10mathh"></a>D3DXMatrixDecompose-Funktion (D3DX10Math.h)
 
-Unterteilt eine allgemeine 3D-Transformationsmatrix in seine skalaren, rotierenden und Übersetzer Komponenten.
+Unterteilt eine allgemeine 3D-Transformationsmatrix in ihre skalaren, rotations- und translationalen Komponenten.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,25 +43,25 @@ HRESULT D3DXMatrixDecompose(
 
 <dl> <dt>
 
-*poutscale* \[ in\]
+*pOutScale* \[ In\]
 </dt> <dd>
 
 Typ: **[ **D3DXVECTOR3**](../direct3d9/d3dxvector3.md)\***
 
-Zeiger auf das Ausgabe [**D3DXVECTOR3**](d3d10-d3dxvector3.md) , das Skalierungsfaktoren enthält, die auf der x-, y-und z-Achse angewendet werden.
+Zeiger auf die [**D3DXVECTOR3-Ausgabe,**](d3d10-d3dxvector3.md) die Skalierungsfaktoren enthält, die auf die x-, y- und z-Achse angewendet werden.
 
 </dd> <dt>
 
-*poutrotation* \[ in\]
+*pOutRotation* \[ In\]
 </dt> <dd>
 
 Typ: **[ **D3DXQUATERNION**](../direct3d9/d3dxquaternion.md)\***
 
-Zeiger auf das [**D3DXQUATERNION**](d3d10-d3dxquaternion.md) , das die Drehung beschreibt.
+Zeiger auf [**D3DXQUATERNION,**](d3d10-d3dxquaternion.md) der die Drehung beschreibt.
 
 </dd> <dt>
 
-*pouttranslation* \[ in\]
+*pOutTranslation* \[ In\]
 </dt> <dd>
 
 Typ: **[ **D3DXVECTOR3**](../direct3d9/d3dxvector3.md)\***
@@ -70,12 +70,12 @@ Zeiger auf den D3DXVECTOR3-Vektor, der die Übersetzung beschreibt.
 
 </dd> <dt>
 
-*pm* \[ in\]
+*pM* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXMATRIX**](../direct3d9/d3dxmatrix.md) \***
+Typ: **const [**D3DXMATRIX**](../direct3d9/d3dxmatrix.md) \***
 
-Zeiger auf eine [**D3DXMATRIX**](d3d10-d3dxmatrix.md) -Eingabe Matrix, die zerlegt werden soll.
+Zeiger auf eine zu zerlegende [**D3DXMATRIX-Eingabematrix.**](d3d10-d3dxmatrix.md)
 
 </dd> </dl>
 
@@ -83,20 +83,20 @@ Zeiger auf eine [**D3DXMATRIX**](d3d10-d3dxmatrix.md) -Eingabe Matrix, die zerle
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert wie folgt lauten: D3DERR \_ invalidcall.
+Wenn die Funktion erfolgreich ist, lautet der Rückgabewert S \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert wie folgt sein: D3DERR \_ INVALIDCALL.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX10Math. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx10. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX10Math.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

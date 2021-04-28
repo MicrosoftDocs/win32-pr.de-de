@@ -1,7 +1,7 @@
 ---
-description: Sperrt oder gibt die Medien frei.
+description: 'LockMedia-Methode der Msvm_DisketteDrive-Klasse: Sperrt oder gibt die Medien frei.'
 ms.assetid: 90f7e06c-92d0-4742-a74d-68ae6bfc00bf
-title: Lockmedia-Methode der Msvm_DisketteDrive-Klasse
+title: LockMedia-Methode der Msvm_DisketteDrive-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,14 +13,14 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 4f9bce4e9e46d76c3426271af16c28026c242fa9
-ms.sourcegitcommit: c16214e53680dc71d1c07111b51f72b82a4512d8
+ms.openlocfilehash: 5f5f87354aa7c39534e8b32c8985c5d18b55caa9
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "103869532"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108111976"
 ---
-# <a name="lockmedia-method-of-the-msvm_diskettedrive-class"></a>Lockmedia-Methode der MSVM \_ diskettedrive-Klasse
+# <a name="lockmedia-method-of-the-msvm_diskettedrive-class"></a>LockMedia-Methode der Msvm \_ DisketteDrive-Klasse
 
 Sperrt oder gibt die Medien frei.
 
@@ -39,16 +39,16 @@ uint32 LockMedia(
 
 <dl> <dt>
 
-*Sperre* \[ in\]
+*Sperren* \[ In\]
 </dt> <dd>
 
-" **true** ", um die Medien zu sperren. **false** zum Freigeben der Medien.
+**TRUE,** um das Medium zu sperren; **FALSE,** um die Medien freizugeben.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg 0 (null) zurück. Andernfalls wird einer der folgenden Werte zurückgegeben:
+Gibt bei Erfolg den Wert 0 zurück. andernfalls wird einer der folgenden Werte zurückgegeben:
 
 <dl> <dt>
 
@@ -62,21 +62,21 @@ Gibt bei Erfolg 0 (null) zurück. Andernfalls wird einer der folgenden Werte zur
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8.1<br/>                                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2<br/>                                                                       |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**MSVM \_ diskettedrive**](msvm-diskettedrive.md)
+[**Msvm \_ DisketteDrive**](msvm-diskettedrive.md)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
-description: Erstellt ein Mesh-Objekt mit einem Deklarator.
+description: 'D3DX10CreateMesh-Funktion: Erstellt ein Gittermodellobjekt mithilfe eines Deklarators.'
 ms.assetid: 50e09378-2935-4b18-8fc9-5e58eaadae44
-title: D3DX10CreateMesh-Funktion (D3DX10Mesh. h)
+title: D3DX10CreateMesh-Funktion (D3DX10Mesh.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: 2b00addb152fe18db448364fcc784c2044b10d23
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: cc744536336a4a102bafeaeae3ba87bbad58eb97
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106354399"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108113358"
 ---
 # <a name="d3dx10createmesh-function"></a>D3DX10CreateMesh-Funktion
 
-Erstellt ein Mesh-Objekt mit einem Deklarator.
+Erstellt ein Gittermodellobjekt mithilfe eines Deklarators.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,75 +47,75 @@ HRESULT D3DX10CreateMesh(
 
 <dl> <dt>
 
-*pdevice* \[ in\]
+*pDevice* \[ In\]
 </dt> <dd>
 
 Typ: **[ **ID3D10Device**](/windows/desktop/api/D3D10/nn-d3d10-id3d10device)\***
 
-Zeiger auf eine [**ID3D10Device-Schnittstelle**](/windows/desktop/api/D3D10/nn-d3d10-id3d10device), das Geräte Objekt, das dem Mesh zugeordnet werden soll.
+Zeiger auf eine [**ID3D10Device-Schnittstelle**](/windows/desktop/api/D3D10/nn-d3d10-id3d10device), das Geräteobjekt, das dem Netz zugeordnet werden soll.
 
 </dd> <dt>
 
-*pdeclaration* \[ in\]
+*pDeclaration* \[ In\]
 </dt> <dd>
 
-Type: **Konstanten [**d3d10 \_ input- \_ Element \_ DESC**](/windows/desktop/api/D3D10/ns-d3d10-d3d10_input_element_desc) \***
+Typ: **const [**D3D10 \_ INPUT ELEMENT \_ \_ DESC**](/windows/desktop/api/D3D10/ns-d3d10-d3d10_input_element_desc) \***
 
-Array von [**d3d10 \_ input \_ Element \_**](/windows/desktop/api/D3D10/ns-d3d10-d3d10_input_element_desc) -Elementen, das das Vertex-Format für das zurückgegebene Mesh beschreibt. Dieser Parameter muss einem flexiblen Scheitelpunkt Format (FVF) direkt zugeordnet werden.
+Array von [**D3D10 \_ INPUT ELEMENT \_ \_ DESC-Elementen,**](/windows/desktop/api/D3D10/ns-d3d10-d3d10_input_element_desc) das das Scheitelpunktformat für das zurückgegebene Netz beschreibt. Dieser Parameter muss direkt einem flexiblen Scheitelpunktformat (FVF) zuordnen.
 
 </dd> <dt>
 
-*Declcount* \[ in\]
+*DeclCount* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Die Anzahl der Elemente in der pdeclaration.
+Die Anzahl der Elemente in pDeclaration.
 
 </dd> <dt>
 
-*ppositionsemantic* \[ in\]
+*pPositionSemantic* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPCSTR**](../winprog/windows-data-types.md)**
 
-Semantik, die den Teil der Vertexdeklaration identifiziert, der Positionsinformationen enthält.
+Semantik, die identifiziert, welcher Teil der Scheitelpunktdeklaration Positionsinformationen enthält.
 
 </dd> <dt>
 
-*VertexCount* \[ in\]
+*VertexCount* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Anzahl der Scheitel Punkte für das Mesh. Dieser Parameter muss größer als 0 (null) sein.
+Anzahl der Scheitelzeichen für das Gitternetz. Dieser Parameter muss größer als 0 sein.
 
 </dd> <dt>
 
-*FaceCount* \[ in\]
+*FaceCount* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Anzahl der Flächen für das Mesh. Der gültige Bereich für diese Zahl ist größer als 0 und ein kleiner als der maximale DWORD-Wert (in der Regel 65534), da der letzte Index reserviert ist.
+Anzahl der Gesichter für das Gitternetz. Der gültige Bereich für diese Zahl ist größer als 0 und einer kleiner als der maximale DWORD-Wert (in der Regel 65534), da der letzte Index reserviert ist.
 
 </dd> <dt>
 
-*Optionen* \[ in\]
+*Optionen* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Eine Kombination aus einem oder mehreren Flags aus dem [**d3dx10 \_ Mesh**](d3dx10-mesh.md), das Optionen für das Mesh angibt.
+Kombination aus einem oder mehreren Flags aus dem [**D3DX10 \_ MESH,**](d3dx10-mesh.md)die Optionen für das Gitternetz angeben.
 
 </dd> <dt>
 
-*ppmesh* \[ vorgenommen\]
+*ppMesh* \[ out\]
 </dt> <dd>
 
 Typ: **[ **ID3DX10Mesh**](id3dx10mesh.md)\*\***
 
-Adresse eines Zeigers auf eine [**ID3DX10Mesh-Schnittstelle**](id3dx10mesh.md), die das erstellte Mesh-Objekt darstellt.
+Adresse eines Zeigers auf eine [**ID3DX10Mesh-Schnittstelle,**](id3dx10mesh.md)die das erstellte Gittermodellobjekt darstellt.
 
 </dd> </dl>
 
@@ -123,20 +123,20 @@ Adresse eines Zeigers auf eine [**ID3DX10Mesh-Schnittstelle**](id3dx10mesh.md), 
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden sein: D3DERR \_ invalidcall, E \_ oudefmemory.
+Wenn die Funktion erfolgreich ausgeführt wird, lautet der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: D3DERR \_ INVALIDCALL, E \_ OUTOFMEMORY.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX10Mesh. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx10. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX10Mesh.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

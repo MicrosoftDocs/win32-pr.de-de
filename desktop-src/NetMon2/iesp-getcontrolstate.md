@@ -1,7 +1,7 @@
 ---
-description: Die getcontrolstate-Methode ruft den Status der Erfassung ab, der angibt, ob die Erfassung ausgeführt wird oder angehalten wird.
+description: 'IESP::GetControlState-Methode: Die GetControlState-Methode ruft den Zustand der Erfassung ab, der angibt, ob die Erfassung ausgeführt wird oder angehalten wurde.'
 ms.assetid: 19cc3095-3aa3-4482-95f5-959b19f76cea
-title: 'IESP:: getcontrolstate-Methode (Netmon. h)'
+title: IESP::GetControlState-Methode (Netmon.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - Ndisnpp.dll
 - Rmtnpp.dll
-ms.openlocfilehash: c791d5dc1f5d5321268fef2fb5cf91e04d9ecff3
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b007eb6824ee3e65cdf8195914bbff3a50c39b2c
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106353016"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108114678"
 ---
-# <a name="iespgetcontrolstate-method"></a>IESP:: getcontrolstate-Methode
+# <a name="iespgetcontrolstate-method"></a>IESP::GetControlState-Methode
 
-Die **getcontrolstate** -Methode ruft den Status der [*Erfassung*](c.md)ab, der angibt, ob die Erfassung ausgeführt wird oder angehalten wird.
+Die **GetControlState-Methode** ruft den Zustand der Erfassung [*ab,*](c.md)die angibt, ob die Erfassung ausgeführt wird oder angehalten wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,23 +41,23 @@ HRESULT STDMETHODCALLTYPE GetControlState(
 
 <dl> <dt>
 
-*Isrunnning* \[ vorgenommen\]
+*IsRunnning* \[ out\]
 </dt> <dd>
 
-Indikator, dass die aktuelle Erfassung ausgeführt wird, einschließlich, wenn die Erfassung angehalten wurde.
+Gibt an, dass die aktuelle Erfassung ausgeführt wird, einschließlich, ob die Erfassung angehalten wurde.
 
 </dd> <dt>
 
-*IsPaused* \[ vorgenommen\]
+*IsPaused* \[ out\]
 </dt> <dd>
 
-Indikator, dass die aktuelle Erfassung angehalten wurde.
+Gibt an, dass die aktuelle Erfassung angehalten wurde.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Methode erfolgreich ist, ist der Rückgabewert nmerr \_ Success.
+Wenn die Methode erfolgreich ist, ist der Rückgabewert NMERR \_ SUCCESS.
 
 Wenn die Methode nicht erfolgreich ist, ist der Rückgabewert einer der folgenden Fehlercodes:
 
@@ -65,8 +65,8 @@ Wenn die Methode nicht erfolgreich ist, ist der Rückgabewert einer der folgende
 
 | Rückgabecode                                                                                          | Beschreibung                                                                                                                   |
 |------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**nmerr \_ nicht \_ verbunden**</dt> </dl> | Der npp ist nicht mit dem Netzwerk verbunden. Wenden Sie [iESP:: Connect](iesp-connect.md) an, um die NPP mit dem Netzwerk zu verbinden.<br/> |
-| <dl> <dt>**nmerr \_ nicht \_ ESP**</dt> </dl>       | Der npp ist mit dem Netzwerk verbunden, jedoch nicht mit der [iESP:: Connect](iesp-connect.md) -Methode.<br/>                     |
+| <dl> <dt>**NMERR \_ NICHT \_ VERBUNDEN**</dt> </dl> | Der NPP ist nicht mit dem Netzwerk verbunden. Rufen [Sie IESP::Connect auf,](iesp-connect.md) um die NPP mit dem Netzwerk zu verbinden.<br/> |
+| <dl> <dt>**NMERR \_ NICHT \_ ESP**</dt> </dl>       | Das NPP ist mit dem Netzwerk verbunden, aber nicht mit der [IESP::Connect-Methode.](iesp-connect.md)<br/>                     |
 
 
 
@@ -74,38 +74,38 @@ Wenn die Methode nicht erfolgreich ist, ist der Rückgabewert einer der folgende
 
 ## <a name="remarks"></a>Bemerkungen
 
-Diese Methode kann jedes Mal aufgerufen werden, wenn der NPP mit dem Netzwerk verbunden ist. Mit dieser Methode können Sie herausfinden, ob eine Erfassung ausgeführt wird, ob die Erfassung angehalten wurde oder ob die Erfassung angehalten wurde, aber der npp ist weiterhin verbunden.
+Diese Methode kann jedes Mal aufgerufen werden, wenn die NPP mit dem Netzwerk verbunden ist. Mit dieser Methode können Sie herausfinden, ob eine Erfassung ausgeführt wird, ob die Erfassung angehalten wurde oder ob die Erfassung beendet wurde, die NPP aber weiterhin verbunden ist.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                                                                     |
-| Header<br/>                   | <dl> <dt>Netmon. h</dt> </dl>                                                                      |
+| Header<br/>                   | <dl> <dt>Netmon.h</dt> </dl>                                                                      |
 | DLL<br/>                      | <dl> <dt>Ndisnpp.dll; </dt> <dt>Rmtnpp.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [IESP](iesp.md)
 </dt> <dt>
 
-[IESP:: Connect](iesp-connect.md)
+[IESP::Connect](iesp-connect.md)
 </dt> <dt>
 
 [IESP::P ause](iesp-pause.md)
 </dt> <dt>
 
-[IESP:: Start](iesp-start.md)
+[IESP::Start](iesp-start.md)
 </dt> <dt>
 
-[IESP:: Beendigung](iesp-stop.md)
+[IESP::Stop](iesp-stop.md)
 </dt> </dl>
 
  

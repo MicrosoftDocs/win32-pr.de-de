@@ -1,21 +1,21 @@
 ---
-description: Die get \_ \_ netwenum-Methode gibt einen Enumerator für die Auflistung zurück.
+description: 'ITTimeCollection::get__NewEnum-Methode: Die get NewEnum-Methode gibt einen \_ \_ Enumerator für die Auflistung zurück.'
 ms.assetid: 0c2d739d-736d-4773-9747-1107546a973c
-title: 'Ittimecollection:: get__NewEnum-Methode (sdpblb. h)'
+title: ITTimeCollection::get__NewEnum-Methode (Sdpblb.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5e3fbd171696b81bf5bd67c99b9a91294f4581d3
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: acfc9d616efb58c6173f2c9c6e5913d27776958c
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370636"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108088888"
 ---
-# <a name="ittimecollectionget__newenum-method"></a>Ittimecollection:: get- \_ \_ Methode "netwenum"
+# <a name="ittimecollectionget__newenum-method"></a>ITTimeCollection::get \_ \_ NewEnum-Methode
 
-\[ Rendezvous-Steuerelemente und Schnittstellen für die IP-telefoniekonferenz sind nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet eine ähnliche Funktionalität.\]
+\[ Rendezvous IP-Telefoniekonferenz-Steuerelemente und -Schnittstellen sind nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet ähnliche Funktionen.\]
 
-Die **get \_ \_ netwenum** -Methode gibt einen Enumerator für die Auflistung zurück.
+Die **get \_ \_ NewEnum-Methode** gibt einen Enumerator für die Auflistung zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -32,12 +32,12 @@ HRESULT get__NewEnum(
 
 <dl> <dt>
 
-*PVal* \[ vorgenommen\]
+*pVal* \[ out\]
 </dt> <dd>
 
-Zeiger auf eine [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) -Schnittstelle für ein Enumeratorobjekt für die Auflistung.
+Zeiger auf eine [IUnknown-Schnittstelle](/windows/win32/api/unknwn/nn-unknwn-iunknown) für ein Enumeratorobjekt für die Auflistung.
 
-Rufen Sie die [QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) -Methode auf der zurückgegebenen **IUnknown** -Schnittstelle auf, um einen Zeiger auf eine [IEnumVARIANT](/windows/win32/api/oaidl/nn-oaidl-ienumvariant) -Enumerationsschnittstelle für die Auflistung zu erhalten. **IEnumVARIANT** bietet eine Reihe von Methoden, die Sie verwenden können, um die Auflistung zu durchlaufen.
+Rufen Sie [die QueryInterface-Methode](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) für die **zurückgegebene IUnknown-Schnittstelle** auf, um einen Zeiger auf eine [IEnumVARIANT-Enumerationsschnittstelle](/windows/win32/api/oaidl/nn-oaidl-ienumvariant) für die Auflistung zu erhalten. **IEnumVARIANT** bietet eine Reihe von Methoden, die Sie verwenden können, um die Auflistung zu iterieren.
 
 Weitere Informationen finden Sie im folgenden Abschnitt "Hinweise".
 
@@ -52,10 +52,10 @@ Diese Methode kann einen dieser Werte zurückgeben.
 | Rückgabecode                                                                                   | Beschreibung                                                     |
 |-----------------------------------------------------------------------------------------------|-----------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>          | Methode war erfolgreich.<br/>                                    |
-| <dl> <dt>**E- \_ Zeiger**</dt> </dl>     | Der *PVal* -Parameter ist kein gültiger Zeiger.<br/>         |
-| <dl> <dt>**E \_ outo-Memory**</dt> </dl> | Zum Ausführen des Vorgangs ist nicht genügend Arbeitsspeicher vorhanden.<br/> |
-| <dl> <dt>**E \_ fehlschlagen**</dt> </dl>        | Unbekannter Fehler.<br/>                                   |
-| <dl> <dt>**E \_ notimpl**</dt> </dl>     | Diese Methode ist noch nicht implementiert.<br/>                  |
+| <dl> <dt>**\_E-ZEIGER**</dt> </dl>     | Der *pVal-Parameter* ist kein gültiger Zeiger.<br/>         |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl> | Es ist nicht genügend Arbeitsspeicher vorhanden, um den Vorgang durchzuführen.<br/> |
+| <dl> <dt>**E \_ FAIL**</dt> </dl>        | Unbekannter Fehler.<br/>                                   |
+| <dl> <dt>**E \_ NOTIMPL**</dt> </dl>     | Diese Methode ist noch nicht implementiert.<br/>                  |
 
 
 
@@ -63,29 +63,29 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Diese Methode ist mit [**get \_ enumerationif**](ittimecollection-get-enumerationif.md) austauschbar, mit dem Unterschied, dass Sie anstelle von [**ienumtime**](ienumtime.md) **IUnknown** zurückgibt.
+Diese Methode kann mit get [**\_ EnumerationIf austauschbar sein,**](ittimecollection-get-enumerationif.md) mit der Ausnahme, dass **sie IUnknown** anstelle von [**IEnumTime zurückgibt.**](ienumtime.md)
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------|---------------------------------------------------------------------------------------|
-| TAPI-Version<br/> | Erfordert TAPI 3,0 oder höher<br/>                                                 |
-| Header<br/>       | <dl> <dt>Sdpblb. h</dt> </dl>   |
-| Bibliothek<br/>      | <dl> <dt>UUID. lib</dt> </dl>   |
+| TAPI-Version<br/> | Erfordert TAPI 3.0 oder höher<br/>                                                 |
+| Header<br/>       | <dl> <dt>Sdpblb.h</dt> </dl>   |
+| Bibliothek<br/>      | <dl> <dt>Uuid.lib</dt> </dl>   |
 | DLL<br/>          | <dl> <dt>Sdpblb.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Ittimecollection**](ittimecollection.md)
+[**ITTimeCollection**](ittimecollection.md)
 </dt> <dt>
 
-[**Ittime**](ittime.md)
+[**ITTime**](ittime.md)
 </dt> </dl>
 
  

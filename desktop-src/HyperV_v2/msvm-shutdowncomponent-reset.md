@@ -1,7 +1,7 @@
 ---
-description: Fordert eine zurück Setzung an.
+description: Reset-Methode der Msvm_ShutdownComponent - Fordert eine Zurücksetzung an.
 ms.assetid: cdd14090-4ea1-4547-b8a5-fd40f7e494f5
-title: Reset-Methode der Msvm_ShutdownComponent-Klasse
+title: Reset-Methode der Msvm_ShutdownComponent Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 75502c8602adf3a357e04a9aef51dc6d0ea47be5
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 77c651ce429764edba069be21b246a8623cd0e76
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104216762"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108111368"
 ---
-# <a name="reset-method-of-the-msvm_shutdowncomponent-class"></a>Reset-Methode der MSVM \_ shutdowncomponent-Klasse
+# <a name="reset-method-of-the-msvm_shutdowncomponent-class"></a>Reset-Methode der Msvm \_ ShutdownComponent-Klasse
 
-Fordert eine zurück Setzung an.
+Fordert eine Zurücksetzung an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -53,21 +53,21 @@ Diese Methode gibt einen der folgenden Werte zurück:
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8.1<br/>                                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2<br/>                                                                       |
 | Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**MSVM \_ shutdowncomponent**](msvm-shutdowncomponent.md)
+[**Msvm \_ ShutdownComponent**](msvm-shutdowncomponent.md)
 </dt> </dl>
 
  

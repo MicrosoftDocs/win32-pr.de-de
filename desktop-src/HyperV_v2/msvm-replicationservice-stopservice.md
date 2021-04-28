@@ -1,7 +1,7 @@
 ---
-description: Beendet den Dienst.
+description: 'StopService-Methode der Msvm_ReplicationService-Klasse: Beendet den Dienst.'
 ms.assetid: ff92e1ba-3093-4e78-8729-9f98a22a9f74
-title: Stop Service-Methode der Msvm_ReplicationService-Klasse
+title: StopService-Methode der Msvm_ReplicationService-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,14 +13,14 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 4181ec216782a06655b83fc34b0c4865b72284c7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 75f70c782ff887076a8ddc6a16a6d9cbdadba16e
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106362508"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108111488"
 ---
-# <a name="stopservice-method-of-the-msvm_replicationservice-class"></a>Stop Service-Methode der MSVM \_ replicationservice-Klasse
+# <a name="stopservice-method-of-the-msvm_replicationservice-class"></a>StopService-Methode der Msvm \_ ReplicationService-Klasse
 
 Beendet den Dienst.
 
@@ -39,7 +39,7 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt einen der folgenden Werte zurück.
+Die -Methode gibt einen der folgenden Werte zurück.
 
 <dl> <dt>
 
@@ -53,21 +53,21 @@ Die-Methode gibt einen der folgenden Werte zurück.
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8.1<br/>                                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2<br/>                                                                       |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**MSVM \_ replicationservice**](msvm-replicationservice.md)
+[**Msvm \_ ReplicationService**](msvm-replicationservice.md)
 </dt> </dl>
 
  

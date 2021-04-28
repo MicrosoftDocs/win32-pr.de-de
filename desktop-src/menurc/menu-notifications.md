@@ -1,31 +1,31 @@
 ---
-title: Menü Benachrichtigungen
-description: .
+title: Menübenachrichtigungen
+description: Menübenachrichtigungen
 ms.assetid: 8ff5671e-a666-483c-9ac1-f8be6eb58ffa
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d61f5303253fd3201fd9a4510ecf90fa76c10524
-ms.sourcegitcommit: e98f40bef170ae9ce30d91ba96b90600b0446a24
+ms.openlocfilehash: f593e3007dff82241dc9e917a6cfa140cc443679
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "104314576"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108112528"
 ---
-# <a name="menu-notifications"></a>Menü Benachrichtigungen
+# <a name="menu-notifications"></a>Menübenachrichtigungen
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [**WM- \_ Befehl**](wm-command.md)
--   [**WM- \_ ContextMenu**](wm-contextmenu.md)
--   [**WM- \_ entermenuloop**](wm-entermenuloop.md)
--   [**WM- \_ exitmenuloop**](wm-exitmenuloop.md)
--   [**WM \_ gettitlebarinfoex**](wm-gettitlebarinfoex.md)
--   [**WM ( \_ MenuCommand)**](wm-menucommand.md)
--   [**WM- \_ menudrag**](wm-menudrag.md)
--   [**WM \_ menugetobject**](wm-menugetobject.md)
--   [**WM- \_ menurbuttonup**](wm-menurbuttonup.md)
--   [**WM- \_ nextmenu**](wm-nextmenu.md)
--   [**WM- \_ uninitmenupopup**](wm-uninitmenupopup.md)
+-   [**\_WM-BEFEHL**](wm-command.md)
+-   [**WM \_ CONTEXTMENU**](wm-contextmenu.md)
+-   [**WM \_ ENTERMENULOOP**](wm-entermenuloop.md)
+-   [**WM \_ EXITMENULOOP**](wm-exitmenuloop.md)
+-   [**WM \_ GETTITLEBARINFOEX**](wm-gettitlebarinfoex.md)
+-   [**\_WM-MENÜBEFEHL**](wm-menucommand.md)
+-   [**WM \_ MENUDRAG**](wm-menudrag.md)
+-   [**\_WM-MENÜGETOBJECT**](wm-menugetobject.md)
+-   [**\_WM-MENÜRBUTTONUP**](wm-menurbuttonup.md)
+-   [**WM \_ NEXTMENU**](wm-nextmenu.md)
+-   [**WM \_ UNINITMENUPOPUP**](wm-uninitmenupopup.md)
 
 
 ## <a name="example"></a>Beispiel
@@ -58,9 +58,9 @@ BOOL AboutDlg (
     return bRet;
 }
 ```
-Beispiel für [klassische Windows-Beispiele](https://github.com/microsoft/Windows-classic-samples) auf GitHub.
+Beispiel aus [klassischen Windows-Beispielen](https://github.com/microsoft/Windows-classic-samples) auf GitHub.
 
- 
+ 
 
 
 

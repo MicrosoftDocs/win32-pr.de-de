@@ -1,7 +1,7 @@
 ---
-description: Beendet einen benannten Dienst.
+description: 'Shell.ServiceStop-Methode: Beendet einen benannten Dienst.'
 ms.assetid: AC22C91E-BBC6-4a2e-8D39-F9D7C0AC0947
-title: Shell. servicestop-Methode (Shldisp. h)
+title: Shell.ServiceStop-Methode (Shldisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,14 +13,14 @@ api_type:
 - COM
 api_location:
 - Shell32.dll
-ms.openlocfilehash: 31388078fe1c0e15c2e54efc86f0ff76bcfb7ed2
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5307fabe79ab9e634ca1e2815c0b90d59b13b1f6
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104216600"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108104158"
 ---
-# <a name="shellservicestop-method"></a>Shell. servicestop-Methode
+# <a name="shellservicestop-method"></a>Shell.ServiceStop-Methode
 
 Beendet einen benannten Dienst.
 
@@ -51,21 +51,21 @@ Shell.ServiceStop( _
 
 <dl> <dt>
 
-*sservicename* \[ in\]
+*sServiceName* \[ In\]
 </dt> <dd>
 
 Typ: **[ **BSTR**](/previous-versions/windows/desktop/automat/bstr)**
 
-Eine **Zeichenfolge** , die den Namen des Dienstanbieter enthält.
+Eine **Zeichenfolge,** die den Namen des Diensts enthält.
 
 </dd> <dt>
 
-*vpersistent* \[ in\]
+*vPersistent* \[ In\]
 </dt> <dd>
 
 Typ: **Variant**
 
-Legen Sie diese Einstellung auf **true** fest, damit der Dienst vom Dienststeuerungs-Manager gestartet wird, wenn [**Servicestart**](./shell-servicestart.md) aufgerufen wird. Legen Sie *vpersistenz* auf **false** fest, um die Dienst Konfiguration unverändert zu lassen.
+Legen Sie auf **TRUE** fest, damit der Dienst vom Dienststeuerungs-Manager gestartet wird, wenn [**ServiceStart**](./shell-servicestart.md) aufgerufen wird. Um die Dienstkonfiguration unverändert zu lassen, legen *Sie vPersistent auf* **false fest.**
 
 </dd> </dl>
 
@@ -73,27 +73,27 @@ Legen Sie diese Einstellung auf **true** fest, damit der Dienst vom Dienststeuer
 
 ### <a name="jscript"></a>JScript
 
-Typ: **Variant \** _
+Typ: **\* Variant**
 
-Gibt _ *true** zurück, wenn erfolgreich; andernfalls **false**.
+Gibt **true zurück,** wenn erfolgreich; andernfalls **FALSE.**
 
 ### <a name="vb"></a>VB
 
-Typ: **Variant \** _
+Typ: **\* Variant**
 
-Gibt _ *true** zurück, wenn erfolgreich; andernfalls **false**.
+Gibt **true zurück,** wenn erfolgreich; andernfalls **FALSE.**
 
 ## <a name="remarks"></a>Bemerkungen
 
-Die Methode gibt **false** zurück, wenn der Dienst bereits beendet wurde. Bevor Sie diese Methode aufrufen, können Sie [**Shell. isservicerunning**](./shell-isservicerunning.md) aufrufen, um den Status des Dienstanbieter zu ermitteln.
+Die Methode gibt **FALSE zurück,** wenn der Dienst bereits beendet wurde. Vor dem Aufrufen dieser Methode können Sie [**Shell.IsServiceRunning**](./shell-isservicerunning.md) aufrufen, um den Status des Diensts zu ermitteln.
 
-Diese Methode ist zurzeit nicht in Microsoft Visual Basic verfügbar.
+Diese Methode ist derzeit in Microsoft Visual Basic.
 
 ## <a name="examples"></a>Beispiele
 
-In den folgenden Beispielen wird gezeigt, wie **servicestop** verwendet wird, um den Messenger-Dienst zu verhindern. Die Verwendung wird für JScript und VBScript angezeigt.
+In den folgenden Beispielen wird die Verwendung von **ServiceStop zum** Beenden des Messenger-Diensts gezeigt. Die Verwendung wird für JScript und VBScript angezeigt.
 
-JScript
+Jscript:
 
 
 ```JScript
@@ -110,7 +110,7 @@ JScript
 
 
 
-VBScript
+Vbscript:
 
 
 ```VB
@@ -130,17 +130,17 @@ VBScript
 
 
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, Windows XP \[ Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                          |
-| Header<br/>                   | <dl> <dt>Shldisp. h</dt> </dl>                          |
-| IDL<br/>                      | <dl> <dt>Shldisp. idl</dt> </dl>                        |
-| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 5,0 oder höher)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, nur Windows \[ XP-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2003-Desktop-Apps\]<br/>                                                          |
+| Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>                          |
+| Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                        |
+| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 5.0 oder höher)</dt> </dl> |
 
 
 

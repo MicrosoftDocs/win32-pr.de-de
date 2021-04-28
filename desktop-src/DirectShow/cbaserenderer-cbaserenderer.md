@@ -1,7 +1,7 @@
 ---
-description: Konstruktormethode.
+description: 'CBaseRenderer.CBaseRenderer-Konstruktor : Konstruktormethode.'
 ms.assetid: df5efbb3-6bce-4e30-b1b1-d69bf64fa87d
-title: Cbaserenderer. cbaserenderer-Konstruktor (renbase. h)
+title: CBaseRenderer.CBaseRenderer-Konstruktor (Renbase.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,14 +16,14 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: b41f8d7f9681a64f58413aea2fd8717320278f4d
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 68ebc6255456f0fcbb4bf732a91dce981d0f78ce
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364764"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108119908"
 ---
-# <a name="cbaserenderercbaserenderer-constructor"></a>Cbaserenderer. cbaserenderer-Konstruktor
+# <a name="cbaserenderercbaserenderer-constructor"></a>CBaseRenderer.CBaseRenderer-Konstruktor
 
 Konstruktormethode.
 
@@ -46,38 +46,38 @@ CBaseRenderer(
 
 <dl> <dt>
 
-*Renderclass* 
+*RenderClass* 
 </dt> <dd>
 
-Klassen Bezeichner des Renderers.
+Klassenbezeichner des Renderers.
 
 </dd> <dt>
 
 *pName* 
 </dt> <dd>
 
-Zeiger auf eine Zeichenfolge, die den Namen des Filters für Debugzwecke enthält.
+Zeiger auf eine Zeichenfolge, die den Namen des Filters enthält, zu Debugzwecken.
 
 </dd> <dt>
 
-*Kro* 
+*Punk* 
 </dt> <dd>
 
-Zeiger auf den Besitzer dieses Objekts. Wenn das Objekt aggregiert wird, übergeben Sie einen Zeiger an die **IUnknown** -Schnittstelle des Aggregations Objekts. Andernfalls legen Sie diesen Parameter auf **null** fest.
+Zeiger auf den Besitzer dieses Objekts. Wenn das Objekt aggregiert wird, übergeben Sie einen Zeiger auf die **IUnknown-Schnittstelle des aggregierenden** Objekts. Legen Sie andernfalls diesen Parameter auf **NULL fest.**
 
 </dd> <dt>
 
-*PHR* 
+*Phr* 
 </dt> <dd>
 
-Empfängt einen **HRESULT** -Wert.
+Empfängt einen **HRESULT-Wert.**
 
 </dd> <dt>
 
 *TimerResolution* 
 </dt> <dd>
 
-Zeit Geber Auflösung.
+Timerauflösung.
 
 </dd> </dl>
 
@@ -85,18 +85,18 @@ Zeit Geber Auflösung.
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Renbase. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Renbase.h (einschließlich Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbaserderderer-Klasse**](cbaserenderer.md)
+[**CBaseRenderer-Klasse**](cbaserenderer.md)
 </dt> </dl>
 
  

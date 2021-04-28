@@ -1,7 +1,7 @@
 ---
-description: Konstruktormethode.
+description: CDeferredCommand.CDeferredCommand-Konstruktor – Konstruktormethode.
 ms.assetid: 0b372fa2-78a9-4e38-813c-f18123716c6d
-title: Cdeferredcommand. cdeferredcommand-Konstruktor (ctlutil. h)
+title: CDeferredCommand.CDeferredCommand-Konstruktor (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,14 +16,14 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 4e92a2ffc5129ee38fc5061b28ea7ffef49da0f1
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 9a10d8bba48902ed2d6fd66da8483cea1ba9aacc
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371560"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108119788"
 ---
-# <a name="cdeferredcommandcdeferredcommand-constructor"></a>Cdeferredcommand. cdeferredcommand-Konstruktor
+# <a name="cdeferredcommandcdeferredcommand-constructor"></a>CDeferredCommand.CDeferredCommand-Konstruktor
 
 Konstruktormethode.
 
@@ -54,94 +54,94 @@ CDeferredCommand(
 
 <dl> <dt>
 
-*PQ* 
+*Pq* 
 </dt> <dd>
 
-Zeiger auf ein Objekt, das die [**iqueuecommand**](/windows/desktop/api/Control/nn-control-iqueuecommand) -Schnittstelle verfügbar macht.
+Zeiger auf ein Objekt, das die [**IQueueCommand-Schnittstelle verfügbar**](/windows/desktop/api/Control/nn-control-iqueuecommand) macht.
 
 </dd> <dt>
 
-*Kro* 
+*Punk* 
 </dt> <dd>
 
-Zeiger auf die äußere **IUnknown** -Schnittstelle für die Aggregation.
+Zeiger auf die äußere **IUnknown-Schnittstelle** für die Aggregation.
 
 </dd> <dt>
 
-*PHR* 
+*Phr* 
 </dt> <dd>
 
-Zeiger auf einen zurückgegebenen **HRESULT** -Wert.
+Zeiger auf einen zurückgegebenen **HRESULT-Wert.**
 
 </dd> <dt>
 
-*punkexecutor* 
+*pUnkExecutor* 
 </dt> <dd>
 
-Zeiger auf das-Objekt, das diesen Befehl ausführen soll.
+Zeiger auf das Objekt, von dem dieser Befehl ausgeführt wird.
 
 </dd> <dt>
 
 *time* 
 </dt> <dd>
 
-Der Zeitpunkt, zu dem der Befehl ausgeführt wird.
+Zeitpunkt, zu dem der Befehl ausgeführt wird.
 
 </dd> <dt>
 
-*IID* 
+*Iid* 
 </dt> <dd>
 
-Ein Zeiger auf die Globally Unique Identifier (**GUID**) der Schnittstelle, die die Methode enthält.
+Zeiger auf den global eindeutigen Bezeichner **(GUID)** der Schnittstelle, die die -Methode enthält.
 
 </dd> <dt>
 
-*dispidmethod* 
+*dispidMethod* 
 </dt> <dd>
 
--Methode für die aufzurufende Schnittstelle.
+Methode für die aufrufende Schnittstelle.
 
 </dd> <dt>
 
 *wFlags* 
 </dt> <dd>
 
-Der Kontext des aufaufruf.
+Kontext des Aufrufs.
 
 </dd> <dt>
 
-*kargs* 
+*cArgs* 
 </dt> <dd>
 
-Anzahl der über gebenen Argumente.
+Anzahl der übergebenen Argumente.
 
 </dd> <dt>
 
-*pdispparameams* 
+*pDispParams* 
 </dt> <dd>
 
-Zeiger auf eine Liste von Argument Variant-Typen.
+Zeiger auf eine Liste von Argumentvariantentypen.
 
 </dd> <dt>
 
-*pVarResult* 
+*pvarResult* 
 </dt> <dd>
 
-Zeiger auf eine zurückgegebene Varianttyp Liste, falls vorhanden.
+Zeiger auf eine zurückgegebene Liste von Variantentypen, sofern diese enthalten ist.
 
 </dd> <dt>
 
-*gibt puArgErr* 
+*puArgErr* 
 </dt> <dd>
 
-Zeiger auf das letzte Argument in der *pDispParams* -Parameterliste mit einem Fehler.
+Zeiger auf das letzte Argument in der *pDispParams-Parameterliste* mit einem Fehler.
 
 </dd> <dt>
 
 *bStream* 
 </dt> <dd>
 
-Ein Wert, der angibt, ob die verzögerte Befehls Zeit in der streamzeit (**true**) oder in der Präsentationszeit (**false**) liegt.
+Wert, der angibt, ob die verzögerte Befehlszeit in der Streamzeit (**TRUE**) oder in der Präsentationszeit ( FALSE )**liegt.**
 
 </dd> </dl>
 
@@ -149,18 +149,18 @@ Ein Wert, der angibt, ob die verzögerte Befehls Zeit in der streamzeit (**true*
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (einschließlich Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cdeferredcommand-Klasse**](cdeferredcommand.md)
+[**CDeferredCommand-Klasse**](cdeferredcommand.md)
 </dt> </dl>
 
  

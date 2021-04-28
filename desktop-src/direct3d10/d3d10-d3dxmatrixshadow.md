@@ -1,7 +1,7 @@
 ---
-description: Erstellt eine Matrix, die Geometrie in eine Ebene vereinfacht.
+description: 'D3DXMatrixShadow-Funktion (D3DX10Math.h): Erstellt eine Matrix, die die Geometrie in eine Ebene flach macht.'
 ms.assetid: 83c9e7d6-fc6c-48e7-bbf2-6aa10868351d
-title: D3DXMatrixShadow-Funktion (D3DX10Math. h)
+title: D3DXMatrixShadow-Funktion (D3DX10Math.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: a2edaee98f5a56cf5dffec262ecc3d546f0116f8
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: d3a5bff99552a4c5d65267c390c25a2892d3d32f
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104355666"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108103348"
 ---
-# <a name="d3dxmatrixshadow-function-d3dx10mathh"></a>D3DXMatrixShadow-Funktion (D3DX10Math. h)
+# <a name="d3dxmatrixshadow-function-d3dx10mathh"></a>D3DXMatrixShadow-Funktion (D3DX10Math.h)
 
-Erstellt eine Matrix, die Geometrie in eine Ebene vereinfacht.
+Erstellt eine Matrix, die die Geometrie in eine Ebene flach macht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,30 +42,30 @@ D3DXMATRIX* D3DXMatrixShadow(
 
 <dl> <dt>
 
-*Pout* \[ in, out\]
+*pOut* \[ in, out\]
 </dt> <dd>
 
 Typ: **[ **D3DXMATRIX**](../direct3d9/d3dxmatrix.md)\***
 
-Ein Zeiger auf die [**D3DXMATRIX**](d3d10-d3dxmatrix.md) -Struktur, die das Ergebnis des Vorgangs ist.
+Zeiger auf die [**D3DXMATRIX-Struktur,**](d3d10-d3dxmatrix.md) die das Ergebnis des Vorgangs ist.
 
 </dd> <dt>
 
-*Notlage* \[ in\]
+*pLight* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXVECTOR4**](../direct3d9/d3dxvector4.md) \***
+Typ: **const [**D3DXVECTOR4**](../direct3d9/d3dxvector4.md) \***
 
-Zeiger auf ein [**D3DXVECTOR4**](d3d10-d3dxvector4.md) , das die Position des Lichts beschreibt.
+Zeiger auf einen [**D3DXVECTOR4,**](d3d10-d3dxvector4.md) der die Position des Lichts beschreibt.
 
 </dd> <dt>
 
-*pplane* \[ in\]
+*pPlane* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXPLANE**](../direct3d9/d3dxplane.md) \***
+Typ: **const [**D3DXPLANE**](../direct3d9/d3dxplane.md) \***
 
-Zeiger auf den Quell- [**D3DXPLANE**](d3d10-d3dxplane.md).
+Zeiger auf die [**D3DXPLANE-Quelle.**](d3d10-d3dxplane.md)
 
 </dd> </dl>
 
@@ -73,13 +73,13 @@ Zeiger auf den Quell- [**D3DXPLANE**](d3d10-d3dxplane.md).
 
 Typ: **[ **D3DXMATRIX**](../direct3d9/d3dxmatrix.md)\***
 
-Zeiger auf eine D3DXMATRIX-Struktur, die die Geometrie in eine Ebene vereinfacht.
+Zeiger auf eine D3DXMATRIX-Struktur, die die Geometrie in eine Ebene flacht.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Die **D3DXMatrixShadow** -Funktion vereinfacht Geometrie in eine Ebene, als wäre ein Schatten von einem Licht dargestellt.
+Die **D3DXMatrixShadow-Funktion** flacht die Geometrie in eine Ebene, als würde sie einen Schatten von einem Licht werfen.
 
-Der Rückgabewert für diese Funktion ist derselbe Wert, der im Pout-Parameter zurückgegeben wird. Auf diese Weise kann die **D3DXMatrixShadow** -Funktion als Parameter für eine andere Funktion verwendet werden.
+Der Rückgabewert für diese Funktion ist der gleiche Wert, der im pOut-Parameter zurückgegeben wird. Auf diese Weise kann die **D3DXMatrixShadow-Funktion** als Parameter für eine andere Funktion verwendet werden.
 
 Diese Funktion verwendet die folgende Formel, um die zurückgegebene Matrix zu berechnen.
 
@@ -97,20 +97,20 @@ P.d * L.x      P.d * L.y      P.d * L.z      P.d * L.w + d
 
 
 
-Wenn die w-Komponente des Lichts 0 (null) ist, stellt das Strahl vom Ursprung zum Licht ein Direktionales Licht dar. Wenn der Wert 1 ist, ist das Licht ein Punktuelles Licht.
+Wenn die w-Komponente des Lichts 0 ist, stellt der Strahl vom Ursprung zum Licht ein direktionales Licht dar. Wenn es 1 ist, ist das Licht ein Punktlicht.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX10Math. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx10. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX10Math.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

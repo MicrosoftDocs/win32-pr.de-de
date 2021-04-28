@@ -1,7 +1,7 @@
 ---
-description: Beendet den Dienst.
+description: 'StopService-Methode der Msvm_TerminalService-Klasse: Beendet den Dienst.'
 ms.assetid: c96ca784-c935-41a4-b1aa-8360cf270c9e
-title: Stop Service-Methode der Msvm_TerminalService-Klasse
+title: StopService-Methode der Msvm_TerminalService-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,14 +13,14 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: f26efeefb7cd9ace2e17db565c4ff71190fa2814
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 720895f72a69504eb2efafe24fc5a3e18005356f
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106356563"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108111168"
 ---
-# <a name="stopservice-method-of-the-msvm_terminalservice-class"></a>Stop Service-Methode der MSVM \_ Terminalservice-Klasse
+# <a name="stopservice-method-of-the-msvm_terminalservice-class"></a>StopService-Methode der Msvm \_ TerminalService-Klasse
 
 Beendet den Dienst.
 
@@ -53,21 +53,21 @@ Diese Methode gibt einen der folgenden Werte zurück:
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8.1<br/>                                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2<br/>                                                                       |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**MSVM \_ Terminalservice**](msvm-terminalservice.md)
+[**Msvm \_ TerminalService**](msvm-terminalservice.md)
 </dt> </dl>
 
  

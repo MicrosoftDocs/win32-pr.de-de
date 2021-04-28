@@ -1,7 +1,7 @@
 ---
-description: Konstruktormethode.
+description: 'CCritSec.CCritSec-Konstruktor : Konstruktormethode.'
 ms.assetid: e8e9138a-6c39-41de-a7f8-d9e9c4fe5ab6
-title: Ccritsec. ccritsec-Konstruktor (wxutil. h)
+title: CCritSec.CCritSec-Konstruktor (Wxutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,14 +16,14 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 6baeadace7c1f8d8d3ad5dee1ff5c9dace1c6907
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: de2b852ffc9a12622a4560ae834a3347b1e07552
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106374032"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108119798"
 ---
-# <a name="ccritsecccritsec-constructor"></a>Ccritsec. ccritsec-Konstruktor
+# <a name="ccritsecccritsec-constructor"></a>CCritSec.CCritSec-Konstruktor
 
 Konstruktormethode.
 
@@ -38,28 +38,28 @@ CCritSec();
 
 ## <a name="parameters"></a>Parameter
 
-Dieser Konstruktor weist keine Parameter auf.
+Dieser Konstruktor verfügt über keine Parameter.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Diese Methode ruft die [**InitializeCriticalSection**](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsection) -Funktion auf, um den kritischen Abschnitt zu initialisieren.
+Diese Methode ruft die [**InitializeCriticalSection-Funktion auf,**](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsection) um den kritischen Abschnitt zu initialisieren.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Wxutil. h (Include Streams. h)</dt> </dl>                                                                                    |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Wxutil.h (streams.h enthalten)</dt> </dl>                                                                                    |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Ccritsec-Klasse**](ccritsec.md)
+[**CCritSec-Klasse**](ccritsec.md)
 </dt> </dl>
 
  

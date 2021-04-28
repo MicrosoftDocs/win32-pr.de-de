@@ -1,7 +1,7 @@
 ---
-description: Fehler werden durch negative Werte dargestellt und können nicht kombiniert werden.
+description: 'D3DX10_ERR Enumeration: Fehler werden durch negative Werte dargestellt und können nicht kombiniert werden.'
 ms.assetid: 4149ce6d-e87a-4003-b123-5555c6b3b086
-title: D3DX10_ERR-Enumeration (d3dx10. h)
+title: D3DX10_ERR -Enumeration (D3DX10.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - D3DX10.h
-ms.openlocfilehash: 098c15999f20a65614d642029b1d1f6e0b600db6
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 520abae0409dd4214106363d7ffde0cfb5c81ff1
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104219468"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108094353"
 ---
-# <a name="d3dx10_err-enumeration"></a>D3dx10 \_ Err-Enumeration
+# <a name="d3dx10_err-enumeration"></a>D3DX10 \_ ERR-Enumeration
 
-Fehler werden durch negative Werte dargestellt und können nicht kombiniert werden. Im folgenden finden Sie eine Liste von Werten, die von Methoden zurückgegeben werden können, die in der D3DX Utility Library enthalten sind. In den einzelnen Methodenbeschreibungen finden Sie Listen der Werte, die von den einzelnen Methoden zurückgegeben werden können. Diese Listen sind nicht notwendigerweise vollständig.
+Fehler werden durch negative Werte dargestellt und können nicht kombiniert werden. Im Folgenden finden Sie eine Liste von Werten, die von Methoden zurückgegeben werden können, die in der D3DX-Hilfsprogrammbibliothek enthalten sind. Listen der Werte, die jeweils zurückgeben können, finden Sie in den Beschreibungen der einzelnen Methoden. Diese Listen sind nicht unbedingt umfassend.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,63 +47,63 @@ typedef enum D3DX10_ERR {
 
 <dl> <dt>
 
-<span id="D3DX10_ERR_CANNOT_MODIFY_INDEX_BUFFER"></span><span id="d3dx10_err_cannot_modify_index_buffer"></span>**D3dx10 \_ Err \_ kann \_ den \_ Index \_ Puffer nicht ändern**
+<span id="D3DX10_ERR_CANNOT_MODIFY_INDEX_BUFFER"></span><span id="d3dx10_err_cannot_modify_index_buffer"></span>**D3DX10 \_ ERR \_ KANN \_ INDEXPUFFER NICHT \_ \_ ÄNDERN**
 </dt> <dd>
 
-Der Index Puffer kann nicht geändert werden.
+Der Indexpuffer kann nicht geändert werden.
 
 </dd> <dt>
 
-<span id="D3DX10_ERR_INVALID_MESH"></span><span id="d3dx10_err_invalid_mesh"></span>**D3dx10 \_ Err ( \_ ungültiges \_ Mesh)**
+<span id="D3DX10_ERR_INVALID_MESH"></span><span id="d3dx10_err_invalid_mesh"></span>**D3DX10 \_ ERR \_ INVALID \_ MESH**
 </dt> <dd>
 
-Das Mesh ist ungültig.
+Das Gitternetz ist ungültig.
 
 </dd> <dt>
 
-<span id="D3DX10_ERR_CANNOT_ATTR_SORT"></span><span id="d3dx10_err_cannot_attr_sort"></span>**D3dx10 \_ Err \_ kann nicht in der \_ \_ Sortierreihenfolge**
+<span id="D3DX10_ERR_CANNOT_ATTR_SORT"></span><span id="d3dx10_err_cannot_attr_sort"></span>**D3DX10 \_ ERR \_ CANNOT \_ ATTR \_ SORT**
 </dt> <dd>
 
-Die Attribut Sortierung (D3DXMESHOPT \_ attrsort) wird nicht als Optimierungstechnik unterstützt.
+Die Attributsortierung (D3DXMESHOPT \_ ATTRSORT) wird als Optimierungsmethode nicht unterstützt.
 
 </dd> <dt>
 
-<span id="D3DX10_ERR_SKINNING_NOT_SUPPORTED"></span><span id="d3dx10_err_skinning_not_supported"></span>**D3dx10 \_ Err- \_ Skinning \_ \_ wird nicht unterstützt.**
+<span id="D3DX10_ERR_SKINNING_NOT_SUPPORTED"></span><span id="d3dx10_err_skinning_not_supported"></span>**D3DX10 \_ ERR \_ SKINNING \_ NICHT \_ UNTERSTÜTZT**
 </dt> <dd>
 
-Das Skinning wird nicht unterstützt.
+Skinning wird nicht unterstützt.
 
 </dd> <dt>
 
-<span id="D3DX10_ERR_TOO_MANY_INFLUENCES"></span><span id="d3dx10_err_too_many_influences"></span>**D3dx10 \_ Err \_ zu \_ viele \_ Einflüsse**
+<span id="D3DX10_ERR_TOO_MANY_INFLUENCES"></span><span id="d3dx10_err_too_many_influences"></span>**D3DX10 \_ ERR \_ ZU VIELE \_ \_ FAKTOREN**
 </dt> <dd>
 
-Es wurden zu viele Einflüsse angegeben.
+Es wurden zu viele Faktoren angegeben.
 
 </dd> <dt>
 
-<span id="D3DX10_ERR_INVALID_DATA"></span><span id="d3dx10_err_invalid_data"></span>**D3dx10 \_ Err \_ ungültige \_ Daten**
+<span id="D3DX10_ERR_INVALID_DATA"></span><span id="d3dx10_err_invalid_data"></span>**D3DX10 \_ ERR \_ UNGÜLTIGE \_ DATEN**
 </dt> <dd>
 
 Die Daten sind ungültig.
 
 </dd> <dt>
 
-<span id="D3DX10_ERR_LOADED_MESH_HAS_NO_DATA"></span><span id="d3dx10_err_loaded_mesh_has_no_data"></span>**D3dx10 \_ Err \_ geladenes \_ Mesh \_ hat \_ keine \_ Daten**
+<span id="D3DX10_ERR_LOADED_MESH_HAS_NO_DATA"></span><span id="d3dx10_err_loaded_mesh_has_no_data"></span>**D3DX10 \_ ERR \_ LOADED \_ MESH \_ HAS \_ NO \_ DATA**
 </dt> <dd>
 
-Das Mesh weist keine Daten auf.
+Das Gitternetz verfügt über keine Daten.
 
 </dd> <dt>
 
-<span id="D3DX10_ERR_DUPLICATE_NAMED_FRAGMENT"></span><span id="d3dx10_err_duplicate_named_fragment"></span>**D3dx10 \_ Err- \_ doppeltes \_ benanntes \_ Fragment**
+<span id="D3DX10_ERR_DUPLICATE_NAMED_FRAGMENT"></span><span id="d3dx10_err_duplicate_named_fragment"></span>**D3DX10 \_ ERR \_ DUPLICATE \_ NAMED \_ FRAGMENT**
 </dt> <dd>
 
 Ein Fragment mit diesem Namen ist bereits vorhanden.
 
 </dd> <dt>
 
-<span id="D3DX10_ERR_CANNOT_REMOVE_LAST_ITEM"></span><span id="d3dx10_err_cannot_remove_last_item"></span>**D3dx10 \_ Err \_ kann \_ das \_ Letzte \_ Element nicht entfernen.**
+<span id="D3DX10_ERR_CANNOT_REMOVE_LAST_ITEM"></span><span id="d3dx10_err_cannot_remove_last_item"></span>**D3DX10 \_ ERR \_ KANN LETZTES ELEMENT \_ NICHT \_ \_ ENTFERNEN**
 </dt> <dd>
 
 Das letzte Element kann nicht gelöscht werden.
@@ -112,7 +112,7 @@ Das letzte Element kann nicht gelöscht werden.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Der Einrichtungs Code- \_ fakdd wird zum Generieren von Fehlercodes verwendet, wie in den folgenden Makros.
+Der Einrichtungscode \_ FACDD wird zum Generieren von Fehlercodes verwendet, wie in den folgenden Makros zu sehen.
 
 
 ```
@@ -131,13 +131,13 @@ enum _D3DXERR {
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------|-------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3dx10. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3DX10.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

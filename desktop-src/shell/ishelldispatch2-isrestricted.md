@@ -1,7 +1,7 @@
 ---
-description: Ruft die Einschränkungs Einstellung einer Gruppe aus der Registrierung ab.
+description: 'IShellDispatch2.IsRestricted-Methode: Ruft die Einschränkungseinstellung einer Gruppe aus der Registrierung ab.'
 ms.assetid: 04275c5f-c3ed-4962-882f-2cce0258a9f4
-title: IShellDispatch2. IsRestricted-Methode (Shldisp. h)
+title: IShellDispatch2.IsRestricted-Methode (Shldisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Shell32.dll
-ms.openlocfilehash: f666a9ed3407d12eb9cf2c28ae062a9886d7a2cc
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b4f482407fadd16d7ecfe9deeafd91b032a9a24f
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104978065"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108117098"
 ---
-# <a name="ishelldispatch2isrestricted-method"></a>IShellDispatch2. IsRestricted-Methode
+# <a name="ishelldispatch2isrestricted-method"></a>IShellDispatch2.IsRestricted-Methode
 
-Ruft die Einschränkungs Einstellung einer Gruppe aus der Registrierung ab.
+Ruft die Einschränkungseinstellung einer Gruppe aus der Registrierung ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -51,21 +51,21 @@ IShellDispatch2.IsRestricted( _
 
 <dl> <dt>
 
-*sgroup* \[ in\]
+*sGroup* \[ In\]
 </dt> <dd>
 
 Typ: **[ **BSTR**](/previous-versions/windows/desktop/automat/bstr)**
 
-Eine **Zeichenfolge** , die den Gruppennamen enthält. Dieser Wert ist der Name eines Registrierungs unter Schlüssels, unter dem die Einschränkung überprüft werden soll.
+Eine **Zeichenfolge,** die den Gruppennamen enthält. Dieser Wert ist der Name eines Registrierungsunterschlüssels, unter dem die Einschränkung überprüft werden soll.
 
 </dd> <dt>
 
-*seinschränkung* \[ in\]
+*sRestriction* \[ In\]
 </dt> <dd>
 
 Typ: **[ **BSTR**](/previous-versions/windows/desktop/automat/bstr)**
 
-Eine **Zeichenfolge** , die die Einschränkung enthält, deren Wert abgerufen werden soll.
+Eine **Zeichenfolge,** die die Einschränkung enthält, deren Wert abgerufen werden soll.
 
 </dd> </dl>
 
@@ -73,21 +73,21 @@ Eine **Zeichenfolge** , die die Einschränkung enthält, deren Wert abgerufen we
 
 ### <a name="jscript"></a>JScript
 
-Typ: **Integer \** _
+Typ: **\* Integer**
 
 Der Wert der Einschränkung. Wenn die angegebene Einschränkung nicht gefunden wird, ist der Rückgabewert 0.
 
 ### <a name="vb"></a>VB
 
-Type: _*Integer \**_
+Typ: **\* Integer**
 
 Der Wert der Einschränkung. Wenn die angegebene Einschränkung nicht gefunden wird, ist der Rückgabewert 0.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Diese Methode wird implementiert und über die [_ *Shell. IsRestricted* *](./shell-isrestricted.md) -Methode aufgerufen.
+Diese Methode wird implementiert und über die [**Shell.IsRestricted-Methode aufgerufen.**](./shell-isrestricted.md)
 
-**IsRestricted** sucht zuerst nach einem Unterschlüssel Namen, der mit *sgroup* unter dem folgenden Schlüssel übereinstimmt.
+**IsRestricted** sucht zunächst unter dem folgenden Schlüssel nach einem Unterschlüsselnamen, der *sGroup* entspricht.
 
 ```
 HKEY_LOCAL_MACHINE
@@ -98,15 +98,15 @@ HKEY_LOCAL_MACHINE
                Policies
 ```
 
-Einschränkungen werden als Werte der einzelnen Richtlinien Unterschlüssel deklariert. Wenn die in *seinschränkung* benannte Einschränkung in dem Unterschlüssel mit dem Namen in *sgroup* gefunden wird, gibt **IsRestricted** den aktuellen Wert der Einschränkung zurück. Wenn die Einschränkung unter **HKEY \_ local \_ Machine** nicht gefunden wird, wird unter **HKEY \_ Current \_ User** der gleiche Unterschlüssel geprüft.
+Einschränkungen werden als Werte der einzelnen Richtlinienunterschlüssel deklariert. Wenn die in *sRestriction* benannte Einschränkung im Unterschlüssel mit dem Namen in *sGroup* gefunden wird, gibt **IsRestricted** den aktuellen Wert der Einschränkung zurück. Wenn die Einschränkung unter **HKEY \_ LOCAL \_ MACHINE** nicht gefunden wird, wird derselbe Unterschlüssel unter **HKEY CURRENT USER \_ \_ überprüft.**
 
-Diese Methode ist zurzeit nicht in Microsoft Visual Basic verfügbar.
+Diese Methode ist derzeit in Microsoft Visual Basic nicht verfügbar.
 
 ## <a name="examples"></a>Beispiele
 
-In den folgenden Beispielen wird die Verwendung von **IsRestricted** zum Abrufen des Daten Werts der **undockwithoutlogon** -Einschränkung aus dem **System** Unterschlüssel veranschaulicht. Die Verwendung wird für JScript und VBScript angezeigt.
+Die folgenden Beispiele zeigen die Verwendung von **IsRestricted,** um den Datenwert der Einschränkung **"undockwithoutlogon"** aus dem **Unterschlüssel System** abzurufen. Die Verwendung wird für JScript und VBScript angezeigt.
 
-JScript
+Jscript:
 
 
 ```JScript
@@ -124,7 +124,7 @@ JScript
 
 
 
-VBScript
+Vbscript:
 
 
 ```VB
@@ -145,17 +145,17 @@ VBScript
 
 
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, Windows XP \[ Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                          |
-| Header<br/>                   | <dl> <dt>Shldisp. h</dt> </dl>                          |
-| IDL<br/>                      | <dl> <dt>Shldisp. idl</dt> </dl>                        |
-| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 5,0 oder höher)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, nur Windows \[ XP-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2003-Desktop-Apps\]<br/>                                                          |
+| Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>                          |
+| Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                        |
+| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 5.0 oder höher)</dt> </dl> |
 
 
 

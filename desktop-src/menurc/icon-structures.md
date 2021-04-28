@@ -1,27 +1,27 @@
 ---
-title: Symbol Strukturen
-description: .
+title: Symbolstrukturen
+description: Symbolstrukturen
 ms.assetid: c7923cc6-a84c-4c94-8359-0b7165c2c33c
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e40eb557cdef543223595501c4d14087f43121af
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 294567f7701545be4b46b1dfef04fcb6507314cc
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106337604"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108112658"
 ---
-# <a name="icon-structures"></a>Symbol Strukturen
+# <a name="icon-structures"></a>Symbolstrukturen
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [**Iconinfo**](/windows/desktop/api/Winuser/ns-winuser-iconinfo)
--   [**Iconinfoex**](/windows/desktop/api/Winuser/ns-winuser-iconinfoexa)
--   [**Iconmetrics**](/windows/win32/api/winuser/ns-winuser-iconmetricsa)
+-   [**ICONINFO**](/windows/desktop/api/Winuser/ns-winuser-iconinfo)
+-   [**ICONINFOEX**](/windows/desktop/api/Winuser/ns-winuser-iconinfoexa)
+-   [**ICONMETRICS**](/windows/win32/api/winuser/ns-winuser-iconmetricsa)
 
- 
+ 
 
- 
+ 
 
 
 

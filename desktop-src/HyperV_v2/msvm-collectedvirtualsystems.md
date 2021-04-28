@@ -1,5 +1,5 @@
 ---
-description: Ordnet die MSVM \_ virtualsystemcollection den enthaltenen MSVM \_ Computersystem-Objekten zu.
+description: 'Msvm_CollectedVirtualSystems-Klasse: Ordnet die Msvm \_ VirtualSystemCollection den enthaltenen Msvm \_ ComputerSystem-Objekten zu.'
 ms.assetid: ad783188-b60a-4271-aa2d-8050c36e70eb
 title: Msvm_CollectedVirtualSystems-Klasse
 ms.topic: reference
@@ -15,16 +15,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 0803eda14ffbaf21ee2bf4491bd835123b7191e1
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d6775f41a6e2ae7e45bac642fcd32b8deaec3fda
+ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106366141"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108119278"
 ---
-# <a name="msvm_collectedvirtualsystems-class"></a>MSVM \_ collectedvirtualsystems-Klasse
+# <a name="msvm_collectedvirtualsystems-class"></a>Msvm \_ CollectedVirtualSystems-Klasse
 
-Ordnet die [**MSVM \_ virtualsystemcollection**](msvm-virtualsystemcollection.md) den enthaltenen [**MSVM \_ Computersystem**](msvm-computersystem.md) -Objekten zu.
+Ordnet die [**Msvm \_ VirtualSystemCollection**](msvm-virtualsystemcollection.md) den enthaltenen [**Msvm \_ ComputerSystem-Objekten**](msvm-computersystem.md) zu.
 
 Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften.
 
@@ -41,45 +41,45 @@ class Msvm_CollectedVirtualSystems : CIM_CollectedMSEs
 
 ## <a name="members"></a>Member
 
-Die **MSVM \_ collectedvirtualsystems** -Klasse verfügt über diese Typen von Membern:
+Die **Msvm \_ CollectedVirtualSystems-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSVM \_ collectedvirtualsystems** -Klasse verfügt über diese Eigenschaften.
+Die **Msvm \_ CollectedVirtualSystems-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **Sammlung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **MSVM \_ virtualsystemcollection**
+Datentyp: **Msvm \_ VirtualSystemCollection**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Aggregate**](/windows/desktop/WmiSdk/standard-qualifiers), [**override**](/windows/desktop/WmiSdk/standard-qualifiers) ("Collection")
+Qualifizierer: [**Aggregieren,**](/windows/desktop/WmiSdk/standard-qualifiers) [**Überschreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("Collection")
 </dt> </dl>
 
-Eine [**MSVM- \_ virtualsystemcollection**](msvm-virtualsystemcollection.md) -Gruppierung oder ein "Bag"-Objekt, das die Auflistung darstellt.
+Ein [**Msvm \_ VirtualSystemCollection-Gruppierungsobjekt**](msvm-virtualsystemcollection.md) oder ein Bag-Objekt, das die Auflistung darstellt.
 
 </dd> <dt>
 
 **Member**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **MSVM \_ Computersystem**
+Datentyp: **Msvm \_ ComputerSystem**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: über [**Schreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("Member")
+Qualifizierer: [**Überschreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("Member")
 </dt> </dl>
 
-Ein [**MSVM \_ Computersystem**](msvm-computersystem.md) -Objekt, das die Member der Auflistung enthält.
+Ein [**Msvm \_ ComputerSystem-Objekt, das**](msvm-computersystem.md) die Member der Auflistung enthält.
 
 </dd> </dl>
 
@@ -87,21 +87,21 @@ Ein [**MSVM \_ Computersystem**](msvm-computersystem.md) -Objekt, das die Member
 
 
 
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                             |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 10 \[ Desktop-Apps\]<br/>                                                             |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2016<br/>                                                                          |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**CIM \_ collectedmses**](cim-collectedmses.md)
+[**CIM \_ CollectedMSEs**](cim-collectedmses.md)
 </dt> </dl>
 
  
