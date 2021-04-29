@@ -1,45 +1,45 @@
-- name: Windows-Menü Band Framework
+- name: Windows-Menübandframework
   href: '-uiplat-windowsribbon-entry.md'
   items:
-    - name: Menüband-frameworkübersichten
+    - name: Übersichten über Menübandframeworks
       href: windowsribbon-overviews-entry.md
       items:
-        - name: Einführung in das Windows-Menü Band Framework
+        - name: Einführung in das Windows-Menübandframework
           href: windowsribbon-introduction.md
-        - name: Deklarieren von Befehlen und Steuerelementen mit Menüband-Markup
+        - name: Deklarieren von Befehlen und Steuerelementen mit Menübandmarkup
           href: windowsribbon-schema.md
-    - name: Entwickler Handbücher für Menüband Framework
+    - name: Entwicklerhandbücher für Menübandframeworks
       href: windowsribbon-guides-entry.md
       items:
-        - name: Erstellen einer Menü Bandanwendung
+        - name: Erstellen einer Menübandanwendung
           href: windowsribbon-stepbystep.md
-        - name: Migrieren zum Windows-Menü Band Framework
+        - name: Migrieren zum Windows-Menübandframework
           href: ribbon-migration.md
         - name: Grundlegendes zu Befehlen und Steuerelementen
           href: windowsribbon-commandscontrols.md
-        - name: Lauschen auf Menü Band Ereignisse
+        - name: Lauschen auf Menübandereignisse
           href: listening-for-ribbon-events.md
-        - name: Angeben von Menüband-Bild Ressourcen
+        - name: Angeben von Menübandbildressourcen
           href: windowsribbon-imageformats.md
-        - name: Anpassen eines Menübands durch Größen Definitionen und Skalierungs Richtlinien
+        - name: Anpassen eines Menübands durch Größendefinitionen und Skalierungsrichtlinien
           href: windowsribbon-templates.md
-        - name: Arbeiten mit Galerien
+        - name: Arbeiten mit Katalogen
           href: ribbon-controls-galleries.md
-        - name: Anzeigen kontextbezogener Registerkarten
+        - name: Anzeigen kontextabhängiger Registerkarten
           href: ribbon-contextualtabs.md
-        - name: Neukonfigurieren des Menübands mit Anwendungsmodi
+        - name: Erneutes Konfigurieren des Menübands mit Anwendungsmodi
           href: ribbon-applicationmodes.md
-        - name: Anpassen von Menü Band Farben
+        - name: Anpassen von Menübandfarben
           href: ribbon-color.md
         - name: Anzeigen des Menübands
           href: ribbon-visibility.md
-        - name: Beibehalten des Multifunktionsleisten Status
+        - name: Beibehalten des Menübandzustands
           href: ribbon-statepersistence.md
-        - name: Kompilieren von Menü Band Markup
+        - name: Kompilieren von Menübandmarkup
           href: windowsribbon-intentcl.md
-        - name: Grundlegendes zu Markup Compiler-Meldungen
+        - name: Grundlegendes zu Markupcompilernachrichten
           href: windowsribbon-compilationerrors.md
-    - name: Menüband-Steuerelement Bibliothek
+    - name: Menüband-Framework-Steuerelementbibliothek
       href: windowsribbon-controls-entry.md
       items:
         - name: Anwendungsmenü
@@ -52,21 +52,21 @@
           href: windowsribbon-controls-combobox.md
         - name: Kontext-Popup
           href: windowsribbon-controls-contextpopup.md
-        - name: Drop-Down Schaltfläche
+        - name: Drop-Down-Schaltfläche
           href: windowsribbon-controls-dropdownbutton.md
-        - name: Drop-Down Farbauswahl
+        - name: Drop-Down Farbwähler
           href: windowsribbon-controls-dropdowncolorpicker.md
-        - name: Drop-Down-Katalog
+        - name: Drop-Down Katalog
           href: windowsribbon-controls-dropdowngallery.md
         - name: Schriftart-Steuerelement
           href: windowsribbon-controls-fontcontrol.md
         - name: Group
           href: windowsribbon-controls-group.md
-        - name: Hilfe Schaltfläche
+        - name: Schaltfläche "Hilfe"
           href: windowsribbon-controls-helpbutton.md
-        - name: In-Ribbon-Katalog
+        - name: In-Ribbon Katalog
           href: windowsribbon-controls-inribbongallery.md
-        - name: Menü Gruppe
+        - name: Menügruppe
           href: windowsribbon-controls-menugroup.md
         - name: Symbolleiste für den Schnellzugriff
           href: windowsribbon-controls-quickaccesstoolbar.md
@@ -76,51 +76,51 @@
           href: windowsribbon-controls-spinner.md
         - name: Unterteilte Schaltfläche
           href: windowsribbon-controls-splitbutton.md
-        - name: Split Button-Katalog
+        - name: Katalog mit geteilten Schaltflächen
           href: windowsribbon-controls-splitbuttongallery.md
         - name: Registerkarte
           href: windowsribbon-controls-tab.md
-        - name: Registerkarten Gruppe
+        - name: Registerkartengruppe
           href: windowsribbon-controls-tabgroup.md
         - name: Umschaltfläche
           href: windowsribbon-controls-togglebutton.md
-    - name: Menü Band Framework-Referenz
+    - name: Referenz zum Menübandframework
       href: windowsribbon-reference-entry.md
       items:
-        - name: Markup Elemente
+        - name: Markupelemente
           href: windowsribbon-reference-markup-elements.md
           items:
             - name: Befehle und Ressourcen
               href: windowsribbon-reference-elements-command.md
               items:
-                - name: Befehl
+                - name: Get-Help
                   href: windowsribbon-element-command.md
                   items:
-                    - name: Comment
+                    - name: Kommentar
                       href: windowsribbon-element-command-comment.md
                     - name: Id
                       href: windowsribbon-element-command-id.md
-                    - name: KeyTip
+                    - name: Keytip
                       href: windowsribbon-element-command-keytip.md
-                    - name: Labeldescription
+                    - name: LabelDescription
                       href: windowsribbon-element-command-labeldescription.md
-                    - name: Labeltitle
+                    - name: LabelTitle
                       href: windowsribbon-element-command-labeltitle.md
-                    - name: Largehighkontra stimages
+                    - name: LargeHighContrastImages
                       href: windowsribbon-element-command-largehighcontrastimages.md
-                    - name: Largeimages
+                    - name: LargeImages
                       href: windowsribbon-element-command-largeimages.md
                     - name: Name
                       href: windowsribbon-element-command-name.md
-                    - name: Smallhighkontra stimages
+                    - name: SmallHighContrastImages
                       href: windowsribbon-element-command-smallhighcontrastimages.md
-                    - name: Smallimages
+                    - name: SmallImages
                       href: windowsribbon-element-command-smallimages.md
                     - name: Symbol
                       href: windowsribbon-element-command-symbol.md
-                    - name: Tooltipdescription
+                    - name: QuickInfoDescription
                       href: windowsribbon-element-command-tooltipdescription.md
-                    - name: ToolTipTitle
+                    - name: QuickInfoTitle
                       href: windowsribbon-element-command-tooltiptitle.md
                 - name: Image
                   href: windowsribbon-element-image.md
@@ -136,40 +136,40 @@
                       href: windowsribbon-element-string-id.md
                     - name: Symbol
                       href: windowsribbon-element-string-symbol.md
-            - name: Ansichten
+            - name: Sichten
               href: windowsribbon-reference-elements-view.md
               items:
-                - name: Contextpopup
+                - name: ContextPopup
                   href: windowsribbon-element-contextpopup.md
                   items:
-                    - name: Contextmaps
+                    - name: ContextMaps
                       href: windowsribbon-element-contextpopup-contextmaps.md
-                    - name: ContextMenus an
+                    - name: ContextMenus
                       href: windowsribbon-element-contextpopup-contextmenus.md
-                    - name: Mini Symbolleisten
+                    - name: MiniToolbars
                       href: windowsribbon-element-contextpopup-minitoolbars.md
                 - name: Menüband
                   href: windowsribbon-element-ribbon.md
                   items:
-                    - name: Applicationmenu
+                    - name: ApplicationMenu
                       href: windowsribbon-element-ribbon-applicationmenu.md
-                    - name: Contextualtabs
+                    - name: ContextualTabs
                       href: windowsribbon-element-ribbon-contextualtabs.md
-                    - name: HelpButton
+                    - name: Helpbutton
                       href: windowsribbon-element-ribbon-helpbutton.md
-                    - name: Quickaccesstoolbar
+                    - name: QuickAccessToolbar
                       href: windowsribbon-element-ribbon-quickaccesstoolbar.md
-                    - name: Sizedefinitions
+                    - name: SizeDefinitions
                       href: windowsribbon-element-ribbon-sizedefinitions.md
                     - name: Registerkarten
                       href: windowsribbon-element-ribbon-tabs.md
             - name: Steuerelemente
               href: windowsribbon-reference-elements-control.md
               items:
-                - name: Applicationmenu
+                - name: ApplicationMenu
                   href: windowsribbon-element-applicationmenu.md
                   items:
-                    - name: '"Recentitems"'
+                    - name: RecentItems
                       href: windowsribbon-element-applicationmenu-recentitems.md
                 - name: Schaltfläche
                   href: windowsribbon-element-button.md
@@ -177,60 +177,60 @@
                   href: windowsribbon-element-checkbox.md
                 - name: Kombinationsfeld
                   href: windowsribbon-element-combobox.md
-                - name: Contextmap
+                - name: ContextMap
                   href: windowsribbon-element-contextmap.md
                 - name: ContextMenu
                   href: windowsribbon-element-contextmenu.md
                 - name: DropDownButton
                   href: windowsribbon-element-dropdownbutton.md
-                - name: Dropdowncolorpicker
+                - name: DropDownColorPicker
                   href: windowsribbon-element-dropdowncolorpicker.md
-                - name: Dropdown Gallery
+                - name: DropDownGallery
                   href: windowsribbon-element-dropdowngallery.md
                   items:
-                    - name: Menugroups
+                    - name: MenuGroups
                       href: windowsribbon-element-dropdowngallery-menugroups.md
-                    - name: Menulayout
+                    - name: MenuLayout
                       href: windowsribbon-element-dropdowngallery-menulayout.md
                 - name: FontControl
                   href: windowsribbon-element-fontcontrol.md
                 - name: Group
                   href: windowsribbon-element-group.md
-                - name: HelpButton
+                - name: Helpbutton
                   href: windowsribbon-element-helpbutton.md
-                - name: Inribbongallery
+                - name: InRibbonGallery
                   href: windowsribbon-element-inribbongallery.md
                   items:
-                    - name: Menugroups
+                    - name: MenuGroups
                       href: windowsribbon-element-inribbongallery-menugroups.md
-                    - name: Menulayout
+                    - name: MenuLayout
                       href: windowsribbon-element-inribbongallery-menulayout.md
-                - name: MenuGroup
+                - name: Menugroup
                   href: windowsribbon-element-menugroup.md
                 - name: MiniToolbar
                   href: windowsribbon-element-minitoolbar.md
-                - name: Quickaccesstoolbar
+                - name: QuickAccessToolbar
                   href: windowsribbon-element-quickaccesstoolbar.md
                   items:
                     - name: ApplicationDefaults
                       href: windowsribbon-element-quickaccesstoolbar-applicationdefaults.md
-                - name: '"Recentitems"'
+                - name: RecentItems
                   href: windowsribbon-element-recentitems.md
                 - name: Spinner
                   href: windowsribbon-element-spinner.md
                 - name: SplitButton
                   href: windowsribbon-element-splitbutton.md
                   items:
-                    - name: Buttonitem
+                    - name: ButtonItem
                       href: windowsribbon-element-splitbutton-buttonitem.md
-                    - name: Menugroups
+                    - name: MenuGroups
                       href: windowsribbon-element-splitbutton-menugroups.md
-                - name: Splitbuttongallery
+                - name: SplitButtonGallery
                   href: windowsribbon-element-splitbuttongallery.md
                   items:
-                    - name: Menugroups
+                    - name: MenuGroups
                       href: windowsribbon-element-splitbuttongallery-menugroups.md
-                    - name: Menulayout
+                    - name: MenuLayout
                       href: windowsribbon-element-splitbuttongallery-menulayout.md
                 - name: Registerkarte
                   href: windowsribbon-element-tab.md
@@ -241,7 +241,7 @@
                   href: windowsribbon-element-tabgroup.md
                 - name: ToggleButton
                   href: windowsribbon-element-togglebutton.md
-            - name: Sonstige
+            - name: Andere
               href: windowsribbon-reference-elements-other.md
               items:
                 - name: Application
@@ -251,21 +251,19 @@
                       href: windowsribbon-element-application-commands.md
                     - name: Sichten
                       href: windowsribbon-element-application-views.md
-                - name: Columnbreak
+                - name: ColumnBreak
                   href: windowsribbon-element-columnbreak.md
-                - name: Controlgroup
+                - name: ControlGroup
                   href: windowsribbon-element-controlgroup.md
-                - name: Controlnamedefinition
+                - name: ControlNameDefinition
                   href: windowsribbon-element-controlnamedefinition.md
-                - name: Controlnamemap
+                - name: ControlNameMap
                   href: windowsribbon-element-controlnamemap.md
-                - name: Controlsizedefinition
+                - name: ControlSizeDefinition
                   href: windowsribbon-element-controlsizedefinition.md
-                - name: Dynamicui
-                  href: windowsribbon-element-dynamicui.md
-                - name: Flowmenulayout
+                - name: FlowMenuLayout
                   href: windowsribbon-element-flowmenulayout.md
-                - name: Groupsizedefinition
+                - name: GroupSizeDefinition
                   href: windowsribbon-element-groupsizedefinition.md
                 - name: Zeile
                   href: windowsribbon-element-row.md
@@ -274,11 +272,11 @@
                 - name: ScalingPolicy
                   href: windowsribbon-element-scalingpolicy.md
                   items:
-                    - name: Ideal Größen
+                    - name: IdealSizes
                       href: windowsribbon-element-scalingpolicy-idealsizes.md
-                - name: Sizedefinition
+                - name: SizeDefinition
                   href: windowsribbon-element-sizedefinition.md
-                - name: Verticalmenulayout
+                - name: VerticalMenuLayout
                   href: windowsribbon-element-verticalmenulayout.md
         - name: Konstanten und Enumerationen
           href: windowsribbon-reference-enumerations.md
@@ -326,21 +324,21 @@
         - name: Schnittstellen
           href: windowsribbon-reference-interfaces.md
           items:
-            - name: Iuiapplication
+            - name: IUIApplication
               href: /windows/desktop/api/Uiribbon/nn-uiribbon-iuiapplication
               items:
-                - name: Onkreateuicommand
+                - name: OnCreateUICommand
                   href: /windows/desktop/api/Uiribbon/nf-uiribbon-iuiapplication-oncreateuicommand
-                - name: Ondestroyuicommand
+                - name: OnDestroyUICommand
                   href: /windows/desktop/api/Uiribbon/nf-uiribbon-iuiapplication-ondestroyuicommand
-                - name: OnViewChanged
+                - name: Onviewchanged
                   href: /windows/desktop/api/Uiribbon/nf-uiribbon-iuiapplication-onviewchanged
-            - name: Iuicollection
+            - name: IUICollection
               href: /windows/desktop/api/Uiribbon/nn-uiribbon-iuicollection
               items:
-                - name: Hinzufügen
+                - name: Add
                   href: /windows/desktop/api/Uiribbon/nf-uiribbon-iuicollection-add
-                - name: Clear
+                - name: Löschen
                   href: /windows/desktop/api/Uiribbon/nf-uiribbon-iuicollection-clear
                 - name: GetCount
                   href: /windows/desktop/api/Uiribbon/nf-uiribbon-iuicollection-getcount
@@ -352,74 +350,74 @@
                   href: /windows/desktop/api/Uiribbon/nf-uiribbon-iuicollection-removeat
                 - name: Replace
                   href: /windows/desktop/api/Uiribbon/nf-uiribbon-iuicollection-replace
-            - name: Iuicollectionchangede Vent
+            - name: IUICollectionChangedEvent
               href: /windows/desktop/api/Uiribbon/nn-uiribbon-iuicollectionchangedevent
               items:
                 - name: OnChanged
                   href: /windows/desktop/api/Uiribbon/nf-uiribbon-iuicollectionchangedevent-onchanged
-            - name: Iuicommandhandler
+            - name: IUICommandHandler
               href: /windows/desktop/api/Uiribbon/nn-uiribbon-iuicommandhandler
               items:
                 - name: Execute
                   href: /windows/desktop/api/Uiribbon/nf-uiribbon-iuicommandhandler-execute
-                - name: Updateproperty
+                - name: UpdateProperty
                   href: /windows/desktop/api/Uiribbon/nf-uiribbon-iuicommandhandler-updateproperty
-            - name: Iuicontextualui
+            - name: IUIContextualUI
               href: /windows/desktop/api/Uiribbon/nn-uiribbon-iuicontextualui
               items:
-                - name: Showatlocation
+                - name: ShowAtLocation
                   href: /windows/desktop/api/Uiribbon/nf-uiribbon-iuicontextualui-showatlocation
-            - name: Iuieventingmanager
+            - name: IUIEventingManager
               href: /windows/desktop/api/Uiribbon/nn-uiribbon-iuieventingmanager
               items:
-                - name: Methode "-Methode"
+                - name: SetEventLogger-Methode
                   href: /windows/desktop/api/Uiribbon/nf-uiribbon-iuieventingmanager-seteventlogger
-            - name: Iuieventlogger
+            - name: IUIEventLogger
               href: /windows/desktop/api/Uiribbon/nn-uiribbon-iuieventlogger
               items:
-                - name: Onuievent
+                - name: OnUIEvent
                   href: /windows/desktop/api/uiribbon/nf-uiribbon-iuieventlogger-onuievent
-            - name: Iuiframework
+            - name: IUIFramework
               href: /windows/desktop/api/Uiribbon/nn-uiribbon-iuiframework
               items:
                 - name: Zerstören
                   href: /windows/desktop/api/Uiribbon/nf-uiribbon-iuiframework-destroy
-                - name: Flushpdinginvalidations
+                - name: FlushPendingInvalidations
                   href: /windows/desktop/api/Uiribbon/nf-uiribbon-iuiframework-flushpendinginvalidations
-                - name: Getuicommandproperty
+                - name: GetUICommandProperty
                   href: /windows/desktop/api/Uiribbon/nf-uiribbon-iuiframework-getuicommandproperty
-                - name: GetView
+                - name: Getview
                   href: /windows/desktop/api/Uiribbon/nf-uiribbon-iuiframework-getview
                 - name: Initialisieren
                   href: /windows/desktop/api/Uiribbon/nf-uiribbon-iuiframework-initialize
-                - name: Invalidateuicommand
+                - name: InvalidateUICommand
                   href: /windows/desktop/api/Uiribbon/nf-uiribbon-iuiframework-invalidateuicommand
-                - name: Loadui
+                - name: LoadUI
                   href: /windows/desktop/api/Uiribbon/nf-uiribbon-iuiframework-loadui
-                - name: Setmodes
+                - name: SetModes
                   href: /windows/desktop/api/Uiribbon/nf-uiribbon-iuiframework-setmodes
-                - name: '"Abtuicommandproperty"'
+                - name: SetUICommandProperty
                   href: /windows/desktop/api/Uiribbon/nf-uiribbon-iuiframework-setuicommandproperty
-            - name: Iuiimage
+            - name: IUIImage
               href: /windows/desktop/api/Uiribbon/nn-uiribbon-iuiimage
               items:
-                - name: Getbitmap
+                - name: GetBitmap
                   href: /windows/desktop/api/Uiribbon/nf-uiribbon-iuiimage-getbitmap
-            - name: Iuiimagefrombitmap
+            - name: IUIImageFromBitmap
               href: /windows/desktop/api/Uiribbon/nn-uiribbon-iuiimagefrombitmap
               items:
-                - name: '"Kreateimage"'
+                - name: CreateImage
                   href: /windows/desktop/api/Uiribbon/nf-uiribbon-iuiimagefrombitmap-createimage
-            - name: Iuiribbon
+            - name: IUIRibbon
               href: /windows/desktop/api/Uiribbon/nn-uiribbon-iuiribbon
               items:
-                - name: GetHeight
+                - name: Font.getheight
                   href: /windows/desktop/api/Uiribbon/nf-uiribbon-iuiribbon-getheight
-                - name: Loadsettingsfromstream
+                - name: LoadSettingsFromStream
                   href: /windows/desktop/api/Uiribbon/nf-uiribbon-iuiribbon-loadsettingsfromstream
-                - name: Savesettingstostream
+                - name: SaveSettingsToStream
                   href: /windows/desktop/api/Uiribbon/nf-uiribbon-iuiribbon-savesettingstostream
-            - name: Iuisimplepropertyset
+            - name: IUISimplePropertySet
               href: /windows/desktop/api/Uiribbon/nn-uiribbon-iuisimplepropertyset
               items:
                 - name: GetValue
@@ -427,11 +425,11 @@
         - name: Objekte
           href: windowsribbon-reference-objects.md
           items:
-            - name: Uiribbonframework
+            - name: UIRibbonFramework
               href: /previous-versions/windows/desktop/legacy/dd742706(v=vs.85)
-            - name: Uiribbonimagefrombitmapfactory
+            - name: UIRibbonImageFromBitmapFactory
               href: /previous-versions/windows/desktop/legacy/dd742707(v=vs.85)
-        - name: Eigenschafts Schlüssel
+        - name: Eigenschaftsschlüssel
           href: windowsribbon-reference-properties.md
           items:
             - name: Sammlungseigenschaften
@@ -451,7 +449,7 @@
                   href: windowsribbon-reference-properties-uipkey-itemssource.md
                 - name: UI_PKEY_SelectedItem
                   href: windowsribbon-reference-properties-uipkey-selecteditem.md
-            - name: Farbauswahl Eigenschaften
+            - name: Farbwähler Eigenschaften
               href: windowsribbon-reference-properties-colorpicker.md
               items:
                 - name: UI_PKEY_AutomaticColorLabel
@@ -480,7 +478,7 @@
                   href: windowsribbon-reference-properties-uipkey-themecolorscategorylabel.md
                 - name: UI_PKEY_ThemeColorsTooltips
                   href: windowsribbon-reference-properties-uipkey-themecolorstooltips.md
-            - name: Schriftart Eigenschaften
+            - name: Schriftarteigenschaften
               href: windowsribbon-reference-properties-fontcontrol.md
               items:
                 - name: UI_PKEY_FontProperties
@@ -511,7 +509,7 @@
                   href: windowsribbon-reference-properties-uipkey-fontproperties-underline.md
                 - name: UI_PKEY_FontProperties_VerticalPositioning
                   href: windowsribbon-reference-properties-uipkey-fontproperties-verticalpositioning.md
-            - name: Framework-Eigenschaften
+            - name: Frameworkeigenschaften
               href: windowsribbon-reference-properties-framework.md
               items:
                 - name: UI_PKEY_GlobalBackgroundColor
@@ -541,7 +539,7 @@
                   href: windowsribbon-reference-properties-uipkey-tooltipdescription.md
                 - name: UI_PKEY_TooltipTitle
                   href: windowsribbon-reference-properties-uipkey-tooltiptitle.md
-            - name: Menü Band Eigenschaften
+            - name: Menübandeigenschaften
               href: windowsribbon-reference-properties-ribbon.md
               items:
                 - name: UI_PKEY_Minimized
@@ -550,7 +548,7 @@
                   href: windowsribbon-reference-properties-uipkey-quickaccesstoolbardock.md
                 - name: UI_PKEY_Viewable
                   href: windowsribbon-reference-properties-uipkey-viewable.md
-            - name: Zustands Eigenschaften
+            - name: Zustandseigenschaften
               href: windowsribbon-reference-properties-state.md
               items:
                 - name: UI_PKEY_BooleanValue
@@ -586,20 +584,20 @@
               href: /windows/win32/api/Uiribbon/ns-uiribbon-ui_eventparams
             - name: UI_EVENTPARAMS_COMMAND
               href: /windows/win32/api/Uiribbon/ns-uiribbon-ui_eventparams_command
-    - name: Menü Band Framework-Beispiele
+    - name: Menüband-Frameworkbeispiele
       href: windowsribbon-samples-entry.md
       items:
-        - name: Simpleribbon-Beispiel
+        - name: SimpleRibbon-Beispiel
           href: windowsribbon-sample1.md
-        - name: Contextpopup-Beispiel
+        - name: ContextPopup-Beispiel
           href: windowsribbon-contextpopupsample.md
-        - name: Dropdowncolorpicker-Beispiel
+        - name: DropDownColorPicker-Beispiel
           href: windowsribbon-dropdowncolorpickersample.md
-        - name: Galerie Beispiel
+        - name: Katalogbeispiel
           href: windowsribbon-gallerysample.md
-        - name: Htmleditribbon-Beispiel
+        - name: HTMLEditRibbon-Beispiel
           href: windowsribbon-htmleditribbonsample.md
         - name: FontControl-Beispiel
           href: windowsribbon-fontcontrolsample.md
-    - name: Menü Band Framework-Glossar
+    - name: Menübandframework-Glossar
       href: windowsribbon-glossary.md
