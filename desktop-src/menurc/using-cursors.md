@@ -1,43 +1,43 @@
 ---
 title: Verwenden von Cursors
-description: Dieser Abschnitt enthält Codebeispiele, die zeigen, wie mit Cursorn verknüpfte Aufgaben ausgeführt werden.
+description: Dieser Abschnitt enthält Codebeispiele, die zeigen, wie Sie Aufgaben im Zusammenhang mit Cursorn ausführen.
 ms.assetid: eab7b781-783e-4fc5-868d-6ff773c40a21
 keywords:
-- Ressourcen, Cursor
-- Cursor, Benutzer definiert
-- benutzerdefinierte Cursor
-- Sanduhr Cursor
+- resources,cursors
+- Cursor, benutzerdefiniert
+- Benutzerdefinierte Cursor
+- Sanduhrcursor
 - Cursor, erstellen
-- Cursor, Sanduhr
-- Erstellen von Cursors
-- zerstören von Cursors
-- Anzeigen von Cursors
-- Einschränken von Cursorn
-- Cursor, zerstören
+- cursors,hourglass
+- Erstellen von Cursorn
+- Zerstören von Cursorn
+- Anzeigen von Cursorn
+- Einbeen von Cursorn
+- cursors,destroying
 - Cursor, anzeigen
-- Cursor, einschränken
+- cursors,confining
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6529578b6dfe3c1997f6aadd32ef22ded8e3c90b
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: a6cf681fd17f3e79e4559e9936be232ae09f8453
+ms.sourcegitcommit: dc2f43e0f23f4a4ce239118cf9a5180f3ff0dd1d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104472956"
+ms.lasthandoff: 04/30/2021
+ms.locfileid: "108327125"
 ---
-# <a name="using-cursors"></a><span data-ttu-id="abdad-116">Verwenden von Cursors</span><span class="sxs-lookup"><span data-stu-id="abdad-116">Using Cursors</span></span>
+# <a name="using-cursors"></a><span data-ttu-id="9663e-116">Verwenden von Cursors</span><span class="sxs-lookup"><span data-stu-id="9663e-116">Using Cursors</span></span>
 
-<span data-ttu-id="abdad-117">In diesem Abschnitt werden die folgenden Themen behandelt.</span><span class="sxs-lookup"><span data-stu-id="abdad-117">This section discusses the following topics.</span></span>
+<span data-ttu-id="9663e-117">In diesem Abschnitt werden die folgenden Themen erläutert.</span><span class="sxs-lookup"><span data-stu-id="9663e-117">This section discusses the following topics.</span></span>
 
--   [<span data-ttu-id="abdad-118">Erstellen eines Cursors</span><span class="sxs-lookup"><span data-stu-id="abdad-118">Creating a Cursor</span></span>](#creating-a-cursor)
--   [<span data-ttu-id="abdad-119">Anzeigen eines Cursors</span><span class="sxs-lookup"><span data-stu-id="abdad-119">Displaying a Cursor</span></span>](#displaying-a-cursor)
--   [<span data-ttu-id="abdad-120">Einschränken eines Cursors</span><span class="sxs-lookup"><span data-stu-id="abdad-120">Confining a Cursor</span></span>](#confining-a-cursor)
--   [<span data-ttu-id="abdad-121">Verwenden von Cursor Funktionen zum Erstellen von Moustrap</span><span class="sxs-lookup"><span data-stu-id="abdad-121">Using Cursor Functions to Create a Mousetrap</span></span>](#using-cursor-functions-to-create-a-mousetrap)
--   [<span data-ttu-id="abdad-122">Verwenden der Tastatur zum Verschieben des Cursors</span><span class="sxs-lookup"><span data-stu-id="abdad-122">Using the Keyboard to Move the Cursor</span></span>](#using-the-keyboard-to-move-the-cursor)
+-   [<span data-ttu-id="9663e-118">Erstellen eines Cursors</span><span class="sxs-lookup"><span data-stu-id="9663e-118">Creating a Cursor</span></span>](#creating-a-cursor)
+-   [<span data-ttu-id="9663e-119">Anzeigen eines Cursors</span><span class="sxs-lookup"><span data-stu-id="9663e-119">Displaying a Cursor</span></span>](#displaying-a-cursor)
+-   [<span data-ttu-id="9663e-120">Confining a Cursor</span><span class="sxs-lookup"><span data-stu-id="9663e-120">Confining a Cursor</span></span>](#confining-a-cursor)
+-   [<span data-ttu-id="9663e-121">Verwenden von Cursorfunktionen zum Erstellen einer Maustrap</span><span class="sxs-lookup"><span data-stu-id="9663e-121">Using Cursor Functions to Create a Mousetrap</span></span>](#using-cursor-functions-to-create-a-mousetrap)
+-   [<span data-ttu-id="9663e-122">Verwenden der Tastatur zum Verschieben des Cursors</span><span class="sxs-lookup"><span data-stu-id="9663e-122">Using the Keyboard to Move the Cursor</span></span>](#using-the-keyboard-to-move-the-cursor)
 
-## <a name="creating-a-cursor"></a><span data-ttu-id="abdad-123">Erstellen eines Cursors</span><span class="sxs-lookup"><span data-stu-id="abdad-123">Creating a Cursor</span></span>
+## <a name="creating-a-cursor"></a><span data-ttu-id="9663e-123">Erstellen eines Cursors</span><span class="sxs-lookup"><span data-stu-id="9663e-123">Creating a Cursor</span></span>
 
-<span data-ttu-id="abdad-124">Im folgenden Beispiel werden zwei Cursor Handles erstellt: eine für den standardsanduktcursor und eine für einen benutzerdefinierten Cursor, der als Ressource in der Ressourcen Definitionsdatei der Anwendung enthalten ist.</span><span class="sxs-lookup"><span data-stu-id="abdad-124">The following example creates two cursor handles: one for the standard hourglass cursor and one for a custom cursor included as a resource in the application's resource-definition file.</span></span>
+<span data-ttu-id="9663e-124">Im folgenden Beispiel werden zwei Cursorhandles erstellt: einen für den Standardmäßig-Sanduhrcursor und einen für einen benutzerdefinierten Cursor, der als Ressource in der Ressourcendefinitionsdatei der Anwendung enthalten ist.</span><span class="sxs-lookup"><span data-stu-id="9663e-124">The following example creates two cursor handles: one for the standard hourglass cursor and one for a custom cursor included as a resource in the application's resource-definition file.</span></span>
 
 
 ```
@@ -55,9 +55,9 @@ hCurs2 = LoadCursor(hinst, MAKEINTRESOURCE(240));
 
 
 
-<span data-ttu-id="abdad-125">Sie sollten benutzerdefinierte Cursor als Ressourcen implementieren.</span><span class="sxs-lookup"><span data-stu-id="abdad-125">You should implement custom cursors as resources.</span></span> <span data-ttu-id="abdad-126">Anstatt die Cursor zur Laufzeit zu erstellen, verwenden Sie die [**LoadCursor**](/windows/desktop/api/Winuser/nf-winuser-loadcursora)-, [**loadcursorfromfile**](/windows/desktop/api/Winuser/nf-winuser-loadcursorfromfilea)-oder [**LoadImage**](/windows/desktop/api/Winuser/nf-winuser-loadimagea) -Funktion, um die Geräte Abhängigkeit zu vermeiden, die Lokalisierung zu vereinfachen und die Verwendung von Cursor Entwürfen durch Anwendungen zu ermöglichen.</span><span class="sxs-lookup"><span data-stu-id="abdad-126">Rather than create the cursors at run time, use the [**LoadCursor**](/windows/desktop/api/Winuser/nf-winuser-loadcursora), [**LoadCursorFromFile**](/windows/desktop/api/Winuser/nf-winuser-loadcursorfromfilea), or [**LoadImage**](/windows/desktop/api/Winuser/nf-winuser-loadimagea) function to avoid device dependence, to simplify localization, and to enable applications to share cursor designs.</span></span>
+<span data-ttu-id="9663e-125">Sie sollten benutzerdefinierte Cursor als Ressourcen implementieren.</span><span class="sxs-lookup"><span data-stu-id="9663e-125">You should implement custom cursors as resources.</span></span> <span data-ttu-id="9663e-126">Anstatt die Cursor zur Laufzeit zu erstellen, verwenden Sie die [**LoadCursor-,**](/windows/desktop/api/Winuser/nf-winuser-loadcursora) [**LoadCursorFromFile-**](/windows/desktop/api/Winuser/nf-winuser-loadcursorfromfilea)oder [**LoadImage-Funktion,**](/windows/desktop/api/Winuser/nf-winuser-loadimagea) um Geräteabhängigkeiten zu vermeiden, die Lokalisierung zu vereinfachen und Anwendungen das Freigeben von Cursorentwürfen zu ermöglichen.</span><span class="sxs-lookup"><span data-stu-id="9663e-126">Rather than create the cursors at run time, use the [**LoadCursor**](/windows/desktop/api/Winuser/nf-winuser-loadcursora), [**LoadCursorFromFile**](/windows/desktop/api/Winuser/nf-winuser-loadcursorfromfilea), or [**LoadImage**](/windows/desktop/api/Winuser/nf-winuser-loadimagea) function to avoid device dependence, to simplify localization, and to enable applications to share cursor designs.</span></span>
 
-<span data-ttu-id="abdad-127">Im folgenden Beispiel wird die Funktion " [**curatecursor**](/windows/desktop/api/Winuser/nf-winuser-createcursor) " zum Erstellen eines benutzerdefinierten Cursors zur Laufzeit verwendet.</span><span class="sxs-lookup"><span data-stu-id="abdad-127">The following example uses the [**CreateCursor**](/windows/desktop/api/Winuser/nf-winuser-createcursor) function to create a custom cursor at run time.</span></span> <span data-ttu-id="abdad-128">Das Beispiel ist hier enthalten, um zu veranschaulichen, wie das System Cursor Masken interpretiert.</span><span class="sxs-lookup"><span data-stu-id="abdad-128">The example is included here to illustrate how the system interprets cursor masks.</span></span>
+<span data-ttu-id="9663e-127">Im folgenden Beispiel wird die [**CreateCursor-Funktion**](/windows/desktop/api/Winuser/nf-winuser-createcursor) verwendet, um zur Laufzeit einen benutzerdefinierten Cursor zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="9663e-127">The following example uses the [**CreateCursor**](/windows/desktop/api/Winuser/nf-winuser-createcursor) function to create a custom cursor at run time.</span></span> <span data-ttu-id="9663e-128">Das Beispiel ist hier enthalten, um zu veranschaulichen, wie das System Cursormasken interpretiert.</span><span class="sxs-lookup"><span data-stu-id="9663e-128">The example is included here to illustrate how the system interprets cursor masks.</span></span>
 
 
 ```
@@ -169,28 +169,28 @@ hCurs3 = CreateCursor( hinst,   // app. instance
 
 
 
-<span data-ttu-id="abdad-129">Zum Erstellen des Cursors wendet " [**kreatecursor**](/windows/desktop/api/Winuser/nf-winuser-createcursor) " die folgende Wahrheitstabelle auf die **-und** -und **Xor** -Masken an.</span><span class="sxs-lookup"><span data-stu-id="abdad-129">To create the cursor, [**CreateCursor**](/windows/desktop/api/Winuser/nf-winuser-createcursor) applies the following truth table to the **AND** and **XOR** masks.</span></span>
+<span data-ttu-id="9663e-129">Zum Erstellen des Cursors wendet [**CreateCursor**](/windows/desktop/api/Winuser/nf-winuser-createcursor) die folgende Wahrheitstabelle auf die **AND-** und **XOR-Masken** an.</span><span class="sxs-lookup"><span data-stu-id="9663e-129">To create the cursor, [**CreateCursor**](/windows/desktop/api/Winuser/nf-winuser-createcursor) applies the following truth table to the **AND** and **XOR** masks.</span></span>
 
 
 
-| <span data-ttu-id="abdad-130">Und Maske</span><span class="sxs-lookup"><span data-stu-id="abdad-130">AND mask</span></span> | <span data-ttu-id="abdad-131">XOR-Maske</span><span class="sxs-lookup"><span data-stu-id="abdad-131">XOR mask</span></span> | <span data-ttu-id="abdad-132">Anzeige</span><span class="sxs-lookup"><span data-stu-id="abdad-132">Display</span></span>        |
+| <span data-ttu-id="9663e-130">AND-Maske</span><span class="sxs-lookup"><span data-stu-id="9663e-130">AND mask</span></span> | <span data-ttu-id="9663e-131">XOR-Maske</span><span class="sxs-lookup"><span data-stu-id="9663e-131">XOR mask</span></span> | <span data-ttu-id="9663e-132">Anzeige</span><span class="sxs-lookup"><span data-stu-id="9663e-132">Display</span></span>        |
 |----------|----------|----------------|
-| <span data-ttu-id="abdad-133">0</span><span class="sxs-lookup"><span data-stu-id="abdad-133">0</span></span>        | <span data-ttu-id="abdad-134">0</span><span class="sxs-lookup"><span data-stu-id="abdad-134">0</span></span>        | <span data-ttu-id="abdad-135">Schwarz</span><span class="sxs-lookup"><span data-stu-id="abdad-135">Black</span></span>          |
-| <span data-ttu-id="abdad-136">0</span><span class="sxs-lookup"><span data-stu-id="abdad-136">0</span></span>        | <span data-ttu-id="abdad-137">1</span><span class="sxs-lookup"><span data-stu-id="abdad-137">1</span></span>        | <span data-ttu-id="abdad-138">Weiß</span><span class="sxs-lookup"><span data-stu-id="abdad-138">White</span></span>          |
-| <span data-ttu-id="abdad-139">1</span><span class="sxs-lookup"><span data-stu-id="abdad-139">1</span></span>        | <span data-ttu-id="abdad-140">0</span><span class="sxs-lookup"><span data-stu-id="abdad-140">0</span></span>        | <span data-ttu-id="abdad-141">Screen</span><span class="sxs-lookup"><span data-stu-id="abdad-141">Screen</span></span>         |
-| <span data-ttu-id="abdad-142">1</span><span class="sxs-lookup"><span data-stu-id="abdad-142">1</span></span>        | <span data-ttu-id="abdad-143">1</span><span class="sxs-lookup"><span data-stu-id="abdad-143">1</span></span>        | <span data-ttu-id="abdad-144">Umgekehrter Bildschirm</span><span class="sxs-lookup"><span data-stu-id="abdad-144">Reverse screen</span></span> |
+| <span data-ttu-id="9663e-133">0</span><span class="sxs-lookup"><span data-stu-id="9663e-133">0</span></span>        | <span data-ttu-id="9663e-134">0</span><span class="sxs-lookup"><span data-stu-id="9663e-134">0</span></span>        | <span data-ttu-id="9663e-135">Schwarz</span><span class="sxs-lookup"><span data-stu-id="9663e-135">Black</span></span>          |
+| <span data-ttu-id="9663e-136">0</span><span class="sxs-lookup"><span data-stu-id="9663e-136">0</span></span>        | <span data-ttu-id="9663e-137">1</span><span class="sxs-lookup"><span data-stu-id="9663e-137">1</span></span>        | <span data-ttu-id="9663e-138">White</span><span class="sxs-lookup"><span data-stu-id="9663e-138">White</span></span>          |
+| <span data-ttu-id="9663e-139">1</span><span class="sxs-lookup"><span data-stu-id="9663e-139">1</span></span>        | <span data-ttu-id="9663e-140">0</span><span class="sxs-lookup"><span data-stu-id="9663e-140">0</span></span>        | <span data-ttu-id="9663e-141">Screen</span><span class="sxs-lookup"><span data-stu-id="9663e-141">Screen</span></span>         |
+| <span data-ttu-id="9663e-142">1</span><span class="sxs-lookup"><span data-stu-id="9663e-142">1</span></span>        | <span data-ttu-id="9663e-143">1</span><span class="sxs-lookup"><span data-stu-id="9663e-143">1</span></span>        | <span data-ttu-id="9663e-144">Reversebildschirm</span><span class="sxs-lookup"><span data-stu-id="9663e-144">Reverse screen</span></span> |
 
 
 
- 
+ 
 
-<span data-ttu-id="abdad-145">Weitere Informationen finden Sie unter [Bitmaps](/windows/desktop/gdi/bitmaps).</span><span class="sxs-lookup"><span data-stu-id="abdad-145">For more information, see [Bitmaps](/windows/desktop/gdi/bitmaps).</span></span>
+<span data-ttu-id="9663e-145">Weitere Informationen finden Sie unter [Bitmaps](/windows/desktop/gdi/bitmaps).</span><span class="sxs-lookup"><span data-stu-id="9663e-145">For more information, see [Bitmaps](/windows/desktop/gdi/bitmaps).</span></span>
 
-<span data-ttu-id="abdad-146">Vor dem schließen müssen Sie die [**destroycursor**](/windows/desktop/api/Winuser/nf-winuser-destroycursor) -Funktion verwenden, um alle mit " [**kreatecursor**](/windows/desktop/api/Winuser/nf-winuser-createcursor)" erstellten Cursor zu zerstören.</span><span class="sxs-lookup"><span data-stu-id="abdad-146">Before closing, you must use the [**DestroyCursor**](/windows/desktop/api/Winuser/nf-winuser-destroycursor) function to destroy any cursors you created with [**CreateCursor**](/windows/desktop/api/Winuser/nf-winuser-createcursor).</span></span> <span data-ttu-id="abdad-147">Es ist nicht erforderlich, die von anderen Funktionen erstellten Cursor zu zerstören.</span><span class="sxs-lookup"><span data-stu-id="abdad-147">It is not necessary to destroy cursors created by other functions.</span></span>
+<span data-ttu-id="9663e-146">Vor dem Schließen müssen Sie die [**DestroyCursor-Funktion**](/windows/desktop/api/Winuser/nf-winuser-destroycursor) verwenden, um alle Cursor zu zerstören, die Sie mit [**CreateCursor erstellt haben.**](/windows/desktop/api/Winuser/nf-winuser-createcursor)</span><span class="sxs-lookup"><span data-stu-id="9663e-146">Before closing, you must use the [**DestroyCursor**](/windows/desktop/api/Winuser/nf-winuser-destroycursor) function to destroy any cursors you created with [**CreateCursor**](/windows/desktop/api/Winuser/nf-winuser-createcursor).</span></span> <span data-ttu-id="9663e-147">Es ist nicht erforderlich, Cursor zu zerstören, die von anderen Funktionen erstellt wurden.</span><span class="sxs-lookup"><span data-stu-id="9663e-147">It is not necessary to destroy cursors created by other functions.</span></span>
 
-## <a name="displaying-a-cursor"></a><span data-ttu-id="abdad-148">Anzeigen eines Cursors</span><span class="sxs-lookup"><span data-stu-id="abdad-148">Displaying a Cursor</span></span>
+## <a name="displaying-a-cursor"></a><span data-ttu-id="9663e-148">Anzeigen eines Cursors</span><span class="sxs-lookup"><span data-stu-id="9663e-148">Displaying a Cursor</span></span>
 
-<span data-ttu-id="abdad-149">Das System zeigt automatisch den Klassen Cursor an (der Cursor, der dem Fenster zugeordnet ist, auf das der Cursor zeigt).</span><span class="sxs-lookup"><span data-stu-id="abdad-149">The system automatically displays the class cursor (the cursor associated with the window to which the cursor is pointing).</span></span> <span data-ttu-id="abdad-150">Sie können einen Klassen Cursor beim Registrieren einer Fenster Klasse zuweisen.</span><span class="sxs-lookup"><span data-stu-id="abdad-150">You can assign a class cursor while registering a window class.</span></span> <span data-ttu-id="abdad-151">Dies wird im folgenden Beispiel veranschaulicht, indem dem **hcursor** -Member der [**WNDCLASS**](/windows/win32/api/winuser/ns-winuser-wndclassa) -Struktur, die durch den *WC* -Parameter identifiziert wird, ein Cursor Handle zugewiesen wird.</span><span class="sxs-lookup"><span data-stu-id="abdad-151">The following example illustrates this by assigning a cursor handle to the **hCursor** member of the [**WNDCLASS**](/windows/win32/api/winuser/ns-winuser-wndclassa) structure identified by the *wc* parameter.</span></span>
+<span data-ttu-id="9663e-149">Das System zeigt automatisch den Klassencursor an (der Cursor, der dem Fenster zugeordnet ist, auf das der Cursor zeigt).</span><span class="sxs-lookup"><span data-stu-id="9663e-149">The system automatically displays the class cursor (the cursor associated with the window to which the cursor is pointing).</span></span> <span data-ttu-id="9663e-150">Sie können einen Klassencursor zuweisen, während Sie eine Fensterklasse registrieren.</span><span class="sxs-lookup"><span data-stu-id="9663e-150">You can assign a class cursor while registering a window class.</span></span> <span data-ttu-id="9663e-151">Im folgenden Beispiel wird dies veranschaulicht, indem dem **hCursor-Member** der [**WNDCLASS-Struktur,**](/windows/win32/api/winuser/ns-winuser-wndclassa) die durch den wc-Parameter identifiziert wird, ein Cursorhandle *zugewiesen* wird.</span><span class="sxs-lookup"><span data-stu-id="9663e-151">The following example illustrates this by assigning a cursor handle to the **hCursor** member of the [**WNDCLASS**](/windows/win32/api/winuser/ns-winuser-wndclassa) structure identified by the *wc* parameter.</span></span>
 
 
 ```
@@ -217,11 +217,11 @@ return RegisterClass(&wc);
 
 
 
-<span data-ttu-id="abdad-152">Wenn die Fenster Klasse registriert ist, ist der Cursor, der durch 230 in der Ressourcen Definitionsdatei der Anwendung identifiziert wird, der Standard Cursor für alle Fenster, die auf der-Klasse basieren.</span><span class="sxs-lookup"><span data-stu-id="abdad-152">When the window class is registered, the cursor identified by 230 in the application's resource-definition file is the default cursor for all windows based on the class.</span></span>
+<span data-ttu-id="9663e-152">Wenn die Fensterklasse registriert ist, ist der durch 230 in der Ressourcendefinitionsdatei der Anwendung identifizierte Cursor der Standardcursor für alle Fenster, die auf der -Klasse basieren.</span><span class="sxs-lookup"><span data-stu-id="9663e-152">When the window class is registered, the cursor identified by 230 in the application's resource-definition file is the default cursor for all windows based on the class.</span></span>
 
-<span data-ttu-id="abdad-153">Die Anwendung kann das Design des Cursors ändern, indem Sie die Funktion [**SetCursor**](/windows/desktop/api/Winuser/nf-winuser-setcursor) verwendet und ein anderes Cursor Handle angibt.</span><span class="sxs-lookup"><span data-stu-id="abdad-153">Your application can change the design of the cursor by using the [**SetCursor**](/windows/desktop/api/Winuser/nf-winuser-setcursor) function and specifying a different cursor handle.</span></span> <span data-ttu-id="abdad-154">Wenn der Cursor jedoch verschoben wird, zeichnet das System den Klassen Cursor am neuen Speicherort neu.</span><span class="sxs-lookup"><span data-stu-id="abdad-154">However, when the cursor moves, the system redraws the class cursor at the new location.</span></span> <span data-ttu-id="abdad-155">Um zu verhindern, dass der Klassen Cursor neu gezeichnet wird, müssen Sie die [**WM- \_ SetCursor**](wm-setcursor.md) -Nachricht verarbeiten.</span><span class="sxs-lookup"><span data-stu-id="abdad-155">To prevent the class cursor from being redrawn, you must process the [**WM\_SETCURSOR**](wm-setcursor.md) message.</span></span> <span data-ttu-id="abdad-156">Jedes Mal, wenn der Cursor bewegt und die Maus Eingaben nicht erfasst werden, sendet das System diese Meldung an das Fenster, in dem der Cursor bewegt wird.</span><span class="sxs-lookup"><span data-stu-id="abdad-156">Each time the cursor moves and mouse input is not captured, the system sends this message to the window in which the cursor is moving.</span></span>
+<span data-ttu-id="9663e-153">Ihre Anwendung kann den Entwurf des Cursors ändern, indem sie die [**SetCursor-Funktion**](/windows/desktop/api/Winuser/nf-winuser-setcursor) verwendet und ein anderes Cursorhandle anordnt.</span><span class="sxs-lookup"><span data-stu-id="9663e-153">Your application can change the design of the cursor by using the [**SetCursor**](/windows/desktop/api/Winuser/nf-winuser-setcursor) function and specifying a different cursor handle.</span></span> <span data-ttu-id="9663e-154">Wenn der Cursor jedoch bewegt wird, wird der Klassencursor vom System an der neuen Position neu gedraht.</span><span class="sxs-lookup"><span data-stu-id="9663e-154">However, when the cursor moves, the system redraws the class cursor at the new location.</span></span> <span data-ttu-id="9663e-155">Um zu verhindern, dass der Klassencursor neu gezeichnet wird, müssen Sie die [**WM \_ SETCURSOR-Meldung**](wm-setcursor.md) verarbeiten.</span><span class="sxs-lookup"><span data-stu-id="9663e-155">To prevent the class cursor from being redrawn, you must process the [**WM\_SETCURSOR**](wm-setcursor.md) message.</span></span> <span data-ttu-id="9663e-156">Jedes Mal, wenn der Cursor bewegt wird und die Mauseingabe nicht erfasst wird, sendet das System diese Meldung an das Fenster, in dem sich der Cursor bewegt.</span><span class="sxs-lookup"><span data-stu-id="9663e-156">Each time the cursor moves and mouse input is not captured, the system sends this message to the window in which the cursor is moving.</span></span>
 
-<span data-ttu-id="abdad-157">Sie können bei der Verarbeitung von [**WM \_ SetCursor**](wm-setcursor.md)verschiedene Cursor für verschiedene Bedingungen angeben.</span><span class="sxs-lookup"><span data-stu-id="abdad-157">You can specify different cursors for different conditions while processing [**WM\_SETCURSOR**](wm-setcursor.md).</span></span> <span data-ttu-id="abdad-158">Das folgende Beispiel zeigt beispielsweise, wie der Cursor angezeigt wird, wenn der Cursor über das Symbol einer minimierten Anwendung bewegt wird.</span><span class="sxs-lookup"><span data-stu-id="abdad-158">For example, the following example shows how to display the cursor whenever the cursor moves over the icon of a minimized application.</span></span>
+<span data-ttu-id="9663e-157">Sie können während der Verarbeitung von [**WM \_ SETCURSOR**](wm-setcursor.md)unterschiedliche Cursor für verschiedene Bedingungen angeben.</span><span class="sxs-lookup"><span data-stu-id="9663e-157">You can specify different cursors for different conditions while processing [**WM\_SETCURSOR**](wm-setcursor.md).</span></span> <span data-ttu-id="9663e-158">Im folgenden Beispiel wird beispielsweise gezeigt, wie der Cursor angezeigt wird, wenn der Cursor über das Symbol einer minimierten Anwendung bewegt wird.</span><span class="sxs-lookup"><span data-stu-id="9663e-158">For example, the following example shows how to display the cursor whenever the cursor moves over the icon of a minimized application.</span></span>
 
 
 ```
@@ -240,26 +240,26 @@ case WM_SETCURSOR:
 
 
 
-<span data-ttu-id="abdad-159">Wenn das Fenster nicht minimiert ist, zeigt das System den Klassen Cursor an.</span><span class="sxs-lookup"><span data-stu-id="abdad-159">When the window is not minimized, the system displays the class cursor.</span></span>
+<span data-ttu-id="9663e-159">Wenn das Fenster nicht minimiert ist, zeigt das System den Klassencursor an.</span><span class="sxs-lookup"><span data-stu-id="9663e-159">When the window is not minimized, the system displays the class cursor.</span></span>
 
-<span data-ttu-id="abdad-160">Sie können einen Klassen Cursor ersetzen, indem Sie die [**SetClassLong**](/windows/desktop/api/winuser/nf-winuser-setclasslonga) -Funktion verwenden.</span><span class="sxs-lookup"><span data-stu-id="abdad-160">You can replace a class cursor by using the [**SetClassLong**](/windows/desktop/api/winuser/nf-winuser-setclasslonga) function.</span></span> <span data-ttu-id="abdad-161">Diese Funktion ändert die Standardfenster Einstellungen für alle Fenster einer angegebenen Klasse.</span><span class="sxs-lookup"><span data-stu-id="abdad-161">This function changes the default window settings for all windows of a specified class.</span></span> <span data-ttu-id="abdad-162">Im folgenden Beispiel wird der vorhandene Klassen Cursor durch den `hCurs2` Cursor ersetzt.</span><span class="sxs-lookup"><span data-stu-id="abdad-162">The following example replaces the existing class cursor with the `hCurs2` cursor.</span></span>
+<span data-ttu-id="9663e-160">Sie können einen Klassencursor mithilfe der [**SetClassLong-Funktion**](/windows/desktop/api/winuser/nf-winuser-setclasslonga) ersetzen.</span><span class="sxs-lookup"><span data-stu-id="9663e-160">You can replace a class cursor by using the [**SetClassLong**](/windows/desktop/api/winuser/nf-winuser-setclasslonga) function.</span></span> <span data-ttu-id="9663e-161">Diese Funktion ändert die Standardfenstereinstellungen für alle Fenster einer angegebenen Klasse.</span><span class="sxs-lookup"><span data-stu-id="9663e-161">This function changes the default window settings for all windows of a specified class.</span></span> <span data-ttu-id="9663e-162">Im folgenden Beispiel wird der vorhandene Klassencursor durch den `hCurs2` Cursor ersetzt.</span><span class="sxs-lookup"><span data-stu-id="9663e-162">The following example replaces the existing class cursor with the `hCurs2` cursor.</span></span>
 
 
 ```
 // Change the cursor for window class represented by hwnd. 
  
-SetClassLong(hwnd,    // window handle 
-    GCL_HCURSOR,      // change cursor 
-    (LONG) hCurs2);   // new cursor 
+SetClassLongPtr(hwnd,    // window handle 
+    GCLP_HCURSOR,        // change cursor 
+    (LONG_PTR) hCurs2);  // new cursor 
 ```
 
 
 
-<span data-ttu-id="abdad-163">Weitere Informationen finden Sie unter [Fenster Klassen](/windows/desktop/winmsg/window-classes) und [Maus Eingaben](/windows/desktop/inputdev/mouse-input).</span><span class="sxs-lookup"><span data-stu-id="abdad-163">For more information, see [Window Classes](/windows/desktop/winmsg/window-classes) and [Mouse Input](/windows/desktop/inputdev/mouse-input).</span></span>
+<span data-ttu-id="9663e-163">Weitere Informationen finden Sie unter [Fensterklassen](/windows/desktop/winmsg/window-classes) und [Mauseingabe.](/windows/desktop/inputdev/mouse-input)</span><span class="sxs-lookup"><span data-stu-id="9663e-163">For more information, see [Window Classes](/windows/desktop/winmsg/window-classes) and [Mouse Input](/windows/desktop/inputdev/mouse-input).</span></span>
 
-## <a name="confining-a-cursor"></a><span data-ttu-id="abdad-164">Einschränken eines Cursors</span><span class="sxs-lookup"><span data-stu-id="abdad-164">Confining a Cursor</span></span>
+## <a name="confining-a-cursor"></a><span data-ttu-id="9663e-164">Confining a Cursor</span><span class="sxs-lookup"><span data-stu-id="9663e-164">Confining a Cursor</span></span>
 
-<span data-ttu-id="abdad-165">Im folgenden Beispiel wird der Cursor auf das Fenster der Anwendung beschränkt, und der Cursor wird dann im vorherigen Fenster wieder hergestellt.</span><span class="sxs-lookup"><span data-stu-id="abdad-165">The following example confines the cursor to the application's window and then restores the cursor to its previous window.</span></span> <span data-ttu-id="abdad-166">Im Beispiel wird die [**getclipcursor**](/windows/desktop/api/Winuser/nf-winuser-getclipcursor) -Funktion verwendet, um den Bereich aufzuzeichnen, in dem der Cursor verschoben werden kann, und die [**clipcursor**](/windows/desktop/api/Winuser/nf-winuser-clipcursor) -Funktion, um den Cursor einzuschränken und wiederherzustellen.</span><span class="sxs-lookup"><span data-stu-id="abdad-166">The example uses the [**GetClipCursor**](/windows/desktop/api/Winuser/nf-winuser-getclipcursor) function to record the area in which the cursor can move and the [**ClipCursor**](/windows/desktop/api/Winuser/nf-winuser-clipcursor) function to confine and restore the cursor.</span></span>
+<span data-ttu-id="9663e-165">Im folgenden Beispiel wird der Cursor auf das Fenster der Anwendung beschränkt und der Cursor dann im vorherigen Fenster wiederhergestellt.</span><span class="sxs-lookup"><span data-stu-id="9663e-165">The following example confines the cursor to the application's window and then restores the cursor to its previous window.</span></span> <span data-ttu-id="9663e-166">Im Beispiel wird die [**GetClipCursor-Funktion**](/windows/desktop/api/Winuser/nf-winuser-getclipcursor) verwendet, um den Bereich aufzuzeichnen, in den sich der Cursor bewegen kann, und die [**ClipCursor-Funktion,**](/windows/desktop/api/Winuser/nf-winuser-clipcursor) um den Cursor zu beschränken und wiederherzustellen.</span><span class="sxs-lookup"><span data-stu-id="9663e-166">The example uses the [**GetClipCursor**](/windows/desktop/api/Winuser/nf-winuser-getclipcursor) function to record the area in which the cursor can move and the [**ClipCursor**](/windows/desktop/api/Winuser/nf-winuser-clipcursor) function to confine and restore the cursor.</span></span>
 
 
 ```
@@ -289,13 +289,13 @@ ClipCursor(&rcOldClip);
 
 
 
-<span data-ttu-id="abdad-167">Da im System nur ein Cursor gleichzeitig verfügbar ist, muss eine Anwendung, die den Cursor einschränkt, den Cursor wiederherstellen, bevor die Steuerung an ein anderes Fenster übergeben wird.</span><span class="sxs-lookup"><span data-stu-id="abdad-167">Because there is only one cursor at a time available in the system, an application that confines the cursor must restore the cursor before relinquishing control to another window.</span></span>
+<span data-ttu-id="9663e-167">Da im System jeweils nur ein Cursor verfügbar ist, muss eine Anwendung, die den Cursor einschränkt, den Cursor wiederherstellen, bevor das Steuerelement in ein anderes Fenster verschoben wird.</span><span class="sxs-lookup"><span data-stu-id="9663e-167">Because there is only one cursor at a time available in the system, an application that confines the cursor must restore the cursor before relinquishing control to another window.</span></span>
 
-## <a name="using-cursor-functions-to-create-a-mousetrap"></a><span data-ttu-id="abdad-168">Verwenden von Cursor Funktionen zum Erstellen von Moustrap</span><span class="sxs-lookup"><span data-stu-id="abdad-168">Using Cursor Functions to Create a Mousetrap</span></span>
+## <a name="using-cursor-functions-to-create-a-mousetrap"></a><span data-ttu-id="9663e-168">Verwenden von Cursorfunktionen zum Erstellen einer Maustrap</span><span class="sxs-lookup"><span data-stu-id="9663e-168">Using Cursor Functions to Create a Mousetrap</span></span>
 
-<span data-ttu-id="abdad-169">Im folgenden Beispiel werden die Funktionen [**setcursorpos**](/windows/desktop/api/Winuser/nf-winuser-setcursorpos), [**GetCursorPos**](/windows/desktop/api/Winuser/nf-winuser-getcursorpos), [**kreatecursor**](/windows/desktop/api/Winuser/nf-winuser-createcursor), [**LoadCursor**](/windows/desktop/api/Winuser/nf-winuser-loadcursora)und [**SetCursor**](/windows/desktop/api/Winuser/nf-winuser-setcursor) verwendet, um einen einfachen mousetrap zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="abdad-169">The following example uses the [**SetCursorPos**](/windows/desktop/api/Winuser/nf-winuser-setcursorpos), [**GetCursorPos**](/windows/desktop/api/Winuser/nf-winuser-getcursorpos), [**CreateCursor**](/windows/desktop/api/Winuser/nf-winuser-createcursor), [**LoadCursor**](/windows/desktop/api/Winuser/nf-winuser-loadcursora), and [**SetCursor**](/windows/desktop/api/Winuser/nf-winuser-setcursor) functions to create a simple mousetrap.</span></span> <span data-ttu-id="abdad-170">Außerdem werden Cursor-und Timer-Funktionen verwendet, um die Position des Cursors alle 10 Sekunden zu überwachen.</span><span class="sxs-lookup"><span data-stu-id="abdad-170">It also uses cursor and timer functions to monitor the cursor's position every 10 seconds.</span></span> <span data-ttu-id="abdad-171">Wenn die Cursorposition in den letzten 10 Sekunden nicht geändert wurde und das Hauptfenster der Anwendung minimiert ist, wird der Cursor von der Anwendung geändert und auf das mousetrap-Symbol verschoben.</span><span class="sxs-lookup"><span data-stu-id="abdad-171">If the cursor position has not changed in the last 10 seconds and the application's main window is minimized, the application changes the cursor and moves it to the mousetrap icon.</span></span>
+<span data-ttu-id="9663e-169">Im folgenden Beispiel werden die Funktionen [**SetCursorPos,**](/windows/desktop/api/Winuser/nf-winuser-setcursorpos) [**GetCursorPos,**](/windows/desktop/api/Winuser/nf-winuser-getcursorpos) [**CreateCursor,**](/windows/desktop/api/Winuser/nf-winuser-createcursor) [**LoadCursor**](/windows/desktop/api/Winuser/nf-winuser-loadcursora)und [**SetCursor**](/windows/desktop/api/Winuser/nf-winuser-setcursor) verwendet, um eine einfache Maustrap zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="9663e-169">The following example uses the [**SetCursorPos**](/windows/desktop/api/Winuser/nf-winuser-setcursorpos), [**GetCursorPos**](/windows/desktop/api/Winuser/nf-winuser-getcursorpos), [**CreateCursor**](/windows/desktop/api/Winuser/nf-winuser-createcursor), [**LoadCursor**](/windows/desktop/api/Winuser/nf-winuser-loadcursora), and [**SetCursor**](/windows/desktop/api/Winuser/nf-winuser-setcursor) functions to create a simple mousetrap.</span></span> <span data-ttu-id="9663e-170">Außerdem werden Cursor- und Timerfunktionen verwendet, um die Position des Cursors alle 10 Sekunden zu überwachen.</span><span class="sxs-lookup"><span data-stu-id="9663e-170">It also uses cursor and timer functions to monitor the cursor's position every 10 seconds.</span></span> <span data-ttu-id="9663e-171">Wenn sich die Cursorposition in den letzten 10 Sekunden nicht geändert hat und das Hauptfenster der Anwendung minimiert ist, ändert die Anwendung den Cursor und verschiebt ihn zum Mauszeigersymbol.</span><span class="sxs-lookup"><span data-stu-id="9663e-171">If the cursor position has not changed in the last 10 seconds and the application's main window is minimized, the application changes the cursor and moves it to the mousetrap icon.</span></span>
 
-<span data-ttu-id="abdad-172">Ein Beispiel für einen ähnlichen mouseeltrap ist in [Symbolen](icons.md)enthalten.</span><span class="sxs-lookup"><span data-stu-id="abdad-172">An example for a similar mousetrap is included in [Icons](icons.md).</span></span> <span data-ttu-id="abdad-173">Sie verwendet die [**LoadCursor**](/windows/desktop/api/Winuser/nf-winuser-loadcursora) -und [**LoadIcon**](/windows/desktop/api/Winuser/nf-winuser-loadicona) -Funktionen anstelle der weiteren [**geräteabhängigen Funktionen**](/windows/desktop/api/Winuser/nf-winuser-createcursor) von "up" und " [**feateicon**](/windows/desktop/api/Winuser/nf-winuser-createicon) ".</span><span class="sxs-lookup"><span data-stu-id="abdad-173">It uses the [**LoadCursor**](/windows/desktop/api/Winuser/nf-winuser-loadcursora) and [**LoadIcon**](/windows/desktop/api/Winuser/nf-winuser-loadicona) functions instead of the more device-dependent [**CreateCursor**](/windows/desktop/api/Winuser/nf-winuser-createcursor) and [**CreateIcon**](/windows/desktop/api/Winuser/nf-winuser-createicon) functions.</span></span>
+<span data-ttu-id="9663e-172">Ein Beispiel für eine ähnliche Mausbewegung ist in Symbole [enthalten.](icons.md)</span><span class="sxs-lookup"><span data-stu-id="9663e-172">An example for a similar mousetrap is included in [Icons](icons.md).</span></span> <span data-ttu-id="9663e-173">Sie verwendet die [**Funktionen LoadCursor**](/windows/desktop/api/Winuser/nf-winuser-loadcursora) und [**LoadIcon**](/windows/desktop/api/Winuser/nf-winuser-loadicona) anstelle der geräteabhängigen [**Funktionen CreateCursor**](/windows/desktop/api/Winuser/nf-winuser-createcursor) und [**CreateIcon.**](/windows/desktop/api/Winuser/nf-winuser-createicon)</span><span class="sxs-lookup"><span data-stu-id="9663e-173">It uses the [**LoadCursor**](/windows/desktop/api/Winuser/nf-winuser-loadcursora) and [**LoadIcon**](/windows/desktop/api/Winuser/nf-winuser-loadicona) functions instead of the more device-dependent [**CreateCursor**](/windows/desktop/api/Winuser/nf-winuser-createcursor) and [**CreateIcon**](/windows/desktop/api/Winuser/nf-winuser-createicon) functions.</span></span>
 
 
 ```
@@ -500,9 +500,9 @@ LONG APIENTRY MainWndProc(
 
 
 
-## <a name="using-the-keyboard-to-move-the-cursor"></a><span data-ttu-id="abdad-174">Verwenden der Tastatur zum Verschieben des Cursors</span><span class="sxs-lookup"><span data-stu-id="abdad-174">Using the Keyboard to Move the Cursor</span></span>
+## <a name="using-the-keyboard-to-move-the-cursor"></a><span data-ttu-id="9663e-174">Verwenden der Tastatur zum Verschieben des Cursors</span><span class="sxs-lookup"><span data-stu-id="9663e-174">Using the Keyboard to Move the Cursor</span></span>
 
-<span data-ttu-id="abdad-175">Da das System keine Maus erfordert, sollte eine Anwendung Mausaktionen mit der Tastatur simulieren können.</span><span class="sxs-lookup"><span data-stu-id="abdad-175">Because the system does not require a mouse, an application should be able to simulate mouse actions with the keyboard.</span></span> <span data-ttu-id="abdad-176">Im folgenden Beispiel wird gezeigt, wie dies erreicht wird, indem die Funktionen [**GetCursor**](/windows/desktop/api/Winuser/nf-winuser-getcursorpos) und [**setcurrsorpos**](/windows/desktop/api/Winuser/nf-winuser-setcursorpos) verwendet und Eingaben aus den Pfeiltasten verarbeitet werden.</span><span class="sxs-lookup"><span data-stu-id="abdad-176">The following example shows how to achieve this by using the [**GetCursorPos**](/windows/desktop/api/Winuser/nf-winuser-getcursorpos) and [**SetCursorPos**](/windows/desktop/api/Winuser/nf-winuser-setcursorpos) functions and by processing input from the arrow keys.</span></span>
+<span data-ttu-id="9663e-175">Da das System keine Maus erfordert, sollte eine Anwendung Mausaktionen mit der Tastatur simulieren können.</span><span class="sxs-lookup"><span data-stu-id="9663e-175">Because the system does not require a mouse, an application should be able to simulate mouse actions with the keyboard.</span></span> <span data-ttu-id="9663e-176">Das folgende Beispiel zeigt, wie Sie dies erreichen, indem Sie die [**Funktionen GetCursorPos**](/windows/desktop/api/Winuser/nf-winuser-getcursorpos) und [**SetCursorPos**](/windows/desktop/api/Winuser/nf-winuser-setcursorpos) verwenden und Eingaben über die Pfeiltasten verarbeiten.</span><span class="sxs-lookup"><span data-stu-id="9663e-176">The following example shows how to achieve this by using the [**GetCursorPos**](/windows/desktop/api/Winuser/nf-winuser-getcursorpos) and [**SetCursorPos**](/windows/desktop/api/Winuser/nf-winuser-setcursorpos) functions and by processing input from the arrow keys.</span></span>
 
 
 ```
@@ -602,6 +602,6 @@ switch (message)
 
 
 
- 
+ 
 
- 
+ 
