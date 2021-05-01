@@ -1,26 +1,26 @@
 ---
-description: Die Windows-Kenn Wortfilter-dll, Passfilt.dll, wird im Sicherheitskontext des lokalen System Kontos ausgeführt und hilft Ihnen, Domänen Kennwörter oder lokale Konto Kennwörter zu filtern.
+description: Die Windows-Kennwortfilter-DLL Passfilt.dll wird im Sicherheitskontext des lokalen Systemkontos ausgeführt und unterstützt Sie beim Filtern von Domänen- oder lokalen Kontokennwörtern.
 ms.assetid: 12a6fe6d-5b37-4fcf-bd04-0a22d84ba323
-title: Installieren und Registrieren einer Kenn Wort Filter-dll
+title: Installieren und Registrieren einer Kennwortfilter-DLL
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7cd911c1a527384e48a2ae4567f6d85862e184cb
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3cb2e9f93630dc6bdaa5dbcc7e665a6b1cebff0e
+ms.sourcegitcommit: dc2f43e0f23f4a4ce239118cf9a5180f3ff0dd1d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103865444"
+ms.lasthandoff: 04/30/2021
+ms.locfileid: "108327165"
 ---
-# <a name="installing-and-registering-a-password-filter-dll"></a>Installieren und Registrieren einer Kenn Wort Filter-dll
+# <a name="installing-and-registering-a-password-filter-dll"></a>Installieren und Registrieren einer Kennwortfilter-DLL
 
-Mit dem Windows-Kenn Wortfilter können Sie Domänen Kennwörter oder lokale Konto Kennwörter filtern. Wenn Sie den Kenn Wortfilter für Domänen Konten verwenden möchten, installieren und registrieren Sie die dll auf den einzelnen Domänen Controllern in der Domäne.
+Sie können den Windows-Kennwortfilter verwenden, um Domänen- oder lokale Kontokennwörter zu filtern. Um den Kennwortfilter für Domänenkonten zu verwenden, installieren und registrieren Sie die DLL auf jedem Domänencontroller in der Domäne.
 
-Führen Sie die folgenden Schritte aus, um den Kenn Wortfilter zu installieren. Sie können diese Schritte manuell ausführen, oder Sie können ein Installationsprogramm schreiben, um diese Schritte auszuführen. Sie müssen ein Administrator sein oder zur Administrator Gruppe gehören, um diese Schritte ausführen zu können.
+Führen Sie die folgenden Schritte aus, um Ihren Kennwortfilter zu installieren. Sie können diese Schritte manuell ausführen oder ein Installationsprogramm schreiben, um diese Schritte auszuführen. Sie müssen Administrator sein oder der Administratorgruppe angehören, um diese Schritte ausführen zu können.
 
-**So installieren und registrieren Sie eine Windows-Kenn Wortfilter-dll**
+**So installieren und registrieren Sie eine Windows-Kennwortfilter-DLL**
 
-1.  Kopieren Sie die dll in das Windows-Installationsverzeichnis auf dem Domänen Controller oder auf dem lokalen Computer. Bei Standard Installationen ist Windows System32 der Standard \\ Ordner \\ . Stellen Sie sicher, dass Sie eine 32-Bit-Kenn Wortfilter-dll für 32-Bit-Computer und eine 64-Bit-Kenn Wortfilter-dll für 64-Bit-Computer erstellen und diese dann an den entsprechenden Speicherort kopieren.
-2.  Aktualisieren Sie den folgenden System Registrierungsschlüssel, um den Kenn Wortfilter zu registrieren:
+1.  Kopieren Sie die DLL in das Windows-Installationsverzeichnis auf dem Domänencontroller oder lokalen Computer. Bei Standardinstallationen lautet der Standardordner \\ Windows \\ System32. Stellen Sie sicher, dass Sie eine 32-Bit-Kennwortfilter-DLL für 32-Bit-Computer und eine 64-Bit-Kennwortfilter-DLL für 64-Bit-Computer erstellen und sie dann an den entsprechenden Speicherort kopieren.
+2.  Aktualisieren Sie den folgenden Systemregistrierungsschlüssel, um den Kennwortfilter zu registrieren:
 
     ```
     HKEY_LOCAL_MACHINE
@@ -30,29 +30,29 @@ Führen Sie die folgenden Schritte aus, um den Kenn Wortfilter zu installieren. 
                 Lsa
     ```
 
-    Wenn der Unterschlüssel für **Benachrichtigungs Pakete** vorhanden ist, fügen Sie den vorhandenen Wertdaten den Namen der dll hinzu. Überschreiben Sie die vorhandenen Werte nicht, und schließen Sie die DLL-Erweiterung nicht ein.
+    Wenn der Wert **Benachrichtigungspakete** vom Typ *REG_MULTI_SZ* vorhanden ist, fügen Sie den vorhandenen Wertdaten den Namen Ihrer DLL hinzu. Überschreiben Sie die vorhandenen Werte nicht, und schließen Sie die DLL-Erweiterung nicht ein.
 
-    Wenn der Unterschlüssel für **Benachrichtigungs Pakete** nicht vorhanden ist, fügen Sie ihn hinzu, und geben Sie dann den Namen der DLL für die Wertdaten an. Schließen Sie die DLL-Erweiterung nicht ein.
+    Wenn der Wert **Benachrichtigungspakete** nicht vorhanden ist, erstellen Sie ihn, geben Sie ihm den *REG_MULTI_SZ* Typ an, und geben Sie dann den Namen der DLL für die Wertdaten an. Schließen Sie die DLL-Erweiterung nicht ein.
 
-    Mit dem Unterschlüssel **Benachrichtigungs Pakete** können mehrere Pakete hinzugefügt werden.
+    Der Wert **Benachrichtigungspakete** kann mehrere Pakete hinzufügen.
 
-3.  Suchen Sie die Einstellung für die Kenn Wort Komplexität.
+3.  Suchen Sie die Einstellung für die Kennwortkomplexität.
 
-    Klicken Sie in der Systemsteuerung auf **Leistung und Wartung**, klicken Sie auf **Verwaltungs Tools**, doppelklicken Sie auf **lokale Sicherheitsrichtlinie**, doppelklicken Sie auf **Konto Richtlinien**, und doppelklicken Sie dann auf Kenn **Wort Richtlinie**.
+    Klicken Sie in Systemsteuerung auf **Leistung und Wartung**, klicken Sie auf **Verwaltung,** doppelklicken Sie auf **Lokale Sicherheitsrichtlinie,** doppelklicken Sie auf **Kontorichtlinien**, und doppelklicken Sie dann auf **Kennwortrichtlinie.**
 
-4.  Um sowohl den standardmäßigen Windows-Kenn Wortfilter als auch den benutzerdefinierten Kenn Wortfilter zu erzwingen, stellen Sie sicher, dass die Richtlinien Einstellung Kenn **Wörter müssen Komplexitäts Anforderungen entsprechen** Deaktivieren Sie andernfalls die Richtlinien Einstellung Kenn **Wörter müssen Komplexitäts Anforderungen entsprechen** .
+4.  Um sowohl den Windows-Standardkennwortfilter als auch den benutzerdefinierten Kennwortfilter zu erzwingen, stellen Sie sicher, dass die Richtlinieneinstellung Kennwörter müssen **Komplexitätsanforderungen** erfüllen aktiviert ist. Deaktivieren Sie andernfalls **die Richtlinieneinstellung Kennwörter müssen Komplexitätsanforderungen** erfüllen.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Überlegungen zur Kenn Wort Filter Programmierung](password-filter-programming-considerations.md)
+[Überlegungen zur Programmierung von Kennwortfiltern](password-filter-programming-considerations.md)
 </dt> <dt>
 
-[Starke Kenn Wort Erzwingung und Passfilt.dll](strong-password-enforcement-and-passfilt-dll.md)
+[Erzwingung und Passfilt.dll](strong-password-enforcement-and-passfilt-dll.md)
 </dt> <dt>
 
-[Kenn Wort Filter Funktionen](management-functions.md)
+[Kennwortfilterfunktionen](management-functions.md)
 </dt> </dl>
 
  

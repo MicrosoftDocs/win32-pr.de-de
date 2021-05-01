@@ -4,41 +4,41 @@ description: Kontrollierter Start
 ms.assetid: D7ED02FA-6D0F-4753-AC07-BD7DCE55B3FD
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9ccbba6e5f96fd91c00c295c4b15cab8849f11dc
-ms.sourcegitcommit: ea4baf9953a78d2d6bd530b680601e39f3884541
+ms.openlocfilehash: 7d728a1980bc9a461e6383b1dea2bd7eb4aab461
+ms.sourcegitcommit: f14de4414da072d5a761e946aedfde24d8b65102
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "103730737"
+ms.lasthandoff: 04/30/2021
+ms.locfileid: "108314341"
 ---
 # <a name="measured-boot"></a>Kontrollierter Start
 
 ## <a name="platforms"></a>Plattformen
 
- **Clients** -Windows 8  
-**Server** -Windows Server 2012  
+ **Clients** – Windows 8  
+**Server** – Windows Server 2012  
 
 
 
 ## <a name="description"></a>BESCHREIBUNG
 
-Da Antischadsoftware (am) bei der Erkennung von Lauf Zeit Schadsoftware besser und besser geeignet ist, sind Angreifer auch besser in der Erstellung von Rootkits, die von der Erkennung ausblenden können. Das Erkennen von Schadsoftware, die früh im Start Zyklen gestartet wird, ist eine Herausforderung, die die meisten Anbieter sorgfältig beantworten. In der Regel erstellen Sie System-Hacks, die vom Host Betriebssystem nicht unterstützt werden, und können dazu führen, dass der Computer in einen instabilen Zustand versetzt wird. Bis zu diesem Punkt hat Windows keine gute Möglichkeit bereitgestellt, diese frühen Start Bedrohungen zu erkennen und zu beheben. Windows 8 führt ein neues Feature mit dem Namen "gemessene Start" ein, das jede Komponente misst, von der Firmwareversion bis zu den Start Start Treibern, speichert diese Messungen im Trusted Platform Module (TPM) auf dem Computer und stellt dann ein Protokoll zur Verfügung, das Remote getestet werden kann, um den Startstatus des Clients zu überprüfen.
+Da Antischadsoftware (AM) immer besser zur Erkennung von Runtime-Schadsoftware geworden ist, werden Angreifer auch besser darin, Rootkits zu erstellen, die sich vor der Erkennung verbergen können. Die Erkennung von Schadsoftware, die früh im Startzyklus gestartet wird, ist eine Herausforderung, die die meisten AM-Anbieter sorgfältig bewältigen müssen. In der Regel erstellen sie System-Hacks, die vom Hostbetriebssystem nicht unterstützt werden und tatsächlich dazu führen können, dass der Computer in einem instabilen Zustand platziert wird. Bis zu diesem Zeitpunkt bietet Windows keine gute Möglichkeit für AM, diese Bedrohungen für den frühen Start zu erkennen und zu beheben. Windows 8 führt ein neues Feature namens Kontrollierter Start ein, das jede Komponente misst , von der Firmware bis hin zu den Starttreibern, speichert diese Messungen im Trusted Platform Module (TPM) auf dem Computer und stellt dann ein Protokoll zur Verfügung, das remote getestet werden kann, um den Startstatus des Clients zu überprüfen.
 
-## <a name="manifestation"></a>Ausstrahlung
+## <a name="manifestation"></a>Manifestation
 
-Das gemessene Start Feature bietet Software mit einem vertrauenswürdigen Protokoll (gegen das Spoofing und Manipulationen) aller Start Komponenten, die vor der Software gestartet wurden. Die Software kann das Protokoll verwenden, um zu bestimmen, ob es sich um vertrauenswürdige Komponenten handelt oder ob Sie mit Schadsoftware infiziert sind. Die am-Software auf dem lokalen Computer kann das Protokoll zur Evaluierung an einen Remote Server senden. Der Remote Server kann Wiederherstellungs Aktionen initiieren, indem er die Interaktion mit der Software auf dem Client oder über Out-of-Band-Mechanismen durchsetzt.
+Das feature Kontrollierter Start stellt AM-Software ein vertrauenswürdiges Protokoll (beständig gegen Spoofing und Manipulation) aller Startkomponenten bereit, die vor am-Software gestartet wurden. Am-Software kann das Protokoll verwenden, um zu bestimmen, ob Komponenten, die vor der Anwendung ausgeführt wurden, vertrauenswürdig sind oder ob sie mit Schadsoftware infiziert sind. Die AM-Software auf dem lokalen Computer kann das Protokoll zur Auswertung an einen Remoteserver senden. Der Remoteserver kann Wartungsaktionen initiieren, indem er je nach Bedarf mit Software auf dem Client oder über Out-of-Band-Mechanismen interagiert.
 
 ## <a name="mitigation"></a>Minderung
 
-In Unternehmens Szenarios kann der Systemadministrator steuern, wie gemessene Startinformationen verwendet werden. In Endbenutzer Szenarien (z. b. Online Banking) muss der Consumer die Verwendung des gemessenen Starts für den jeweiligen Dienst abonnieren.
+In Unternehmensszenarien hat der Systemadministrator die Kontrolle darüber, wie Kontrollierter Start Informationen verwendet werden. In Endbenutzerszenarien, z. B. Onlinebanking), muss sich der Kunde dafür entscheiden, Kontrollierter Start für den jeweiligen Dienst zu verwenden.
 
 ## <a name="solution"></a>Lösung
 
-Es wird ein Whitepaper vorbereitet, in dem die APIs und Funktionsaufrufe ausführlich erläutert werden, die für verschiedene gemessene Start Szenarios erfolgen müssen.
+Es wird ein Whitepaper vorbereitet, in dem die APIs und Funktionsaufrufe ausführlich beschrieben werden, die für verschiedene Kontrollierter Start Szenarien erfolgen müssen.
 
- 
+ 
 
- 
+ 
 
 
 

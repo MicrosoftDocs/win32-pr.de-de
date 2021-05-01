@@ -1,23 +1,23 @@
 ---
 title: Verwenden von Symbolen
-description: In diesem Abschnitt finden Sie Codebeispiele, die zeigen, wie Sie Aufgaben im Zusammenhang mit Symbolen ausführen.
+description: Dieser Abschnitt enthält Codebeispiele, die zeigen, wie Aufgaben im Zusammenhang mit Symbolen ausgeführt werden.
 ms.assetid: 5021d59a-7aae-4ddc-be66-9abdc75ad316
 keywords:
 - Ressourcen, Symbole
-- Symbole, erstellen
+- Symbole,Erstellen
 - Symbole, anzeigen
 - Symbole, Freigeben von Ressourcen
 - Erstellen von Symbolen
 - Anzeigen von Symbolen
-- Freigabe von Symbol Ressourcen
+- Freigeben von Symbolressourcen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c2e93f831e3411985ecfb9f841ade750acd4a61b
-ms.sourcegitcommit: 8755905962e156f29203705d09d6df8b7d0e2fca
+ms.openlocfilehash: 03202c250502794d5f845bcc8c2ae263d919ea62
+ms.sourcegitcommit: dc2f43e0f23f4a4ce239118cf9a5180f3ff0dd1d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "106371577"
+ms.lasthandoff: 04/30/2021
+ms.locfileid: "108327115"
 ---
 # <a name="using-icons"></a>Verwenden von Symbolen
 
@@ -25,11 +25,11 @@ In den folgenden Themen wird beschrieben, wie bestimmte Aufgaben im Zusammenhang
 
 -   [Erstellen eines Symbols](#creating-an-icon)
 -   [Anzeigen eines Symbols](#displaying-an-icon)
--   [Freigabe von Symbol Ressourcen](#sharing-icon-resources)
+-   [Freigabesymbolressourcen](#sharing-icon-resources)
 
 ## <a name="creating-an-icon"></a>Erstellen eines Symbols
 
-Um ein Symbol zu verwenden, muss die Anwendung ein Handle für das Symbol erhalten. Im folgenden Beispiel wird gezeigt, wie zwei verschiedene Symbol Handles erstellt werden: eine für das Standardfrage Symbol und eine für ein benutzerdefiniertes Symbol, das als Ressource in der Ressourcen Definitionsdatei der Anwendung enthalten ist.
+Um ein Symbol zu verwenden, muss Ihre Anwendung ein Handle für das Symbol abrufen. Das folgende Beispiel zeigt, wie sie zwei verschiedene Symbolhandles erstellen: einen für das Standardfragesymbol und einen für ein benutzerdefiniertes Symbol, das als Ressource in der Ressourcendefinitionsdatei der Anwendung enthalten ist.
 
 
 ```
@@ -50,7 +50,7 @@ hIcon2 = LoadIcon(hinst, MAKEINTRESOURCE(460));
 
 
 
-Eine Anwendung sollte benutzerdefinierte Symbole als Ressourcen implementieren und die [**LoadIcon**](/windows/desktop/api/Winuser/nf-winuser-loadicona) -oder [**LoadImage**](/windows/desktop/api/Winuser/nf-winuser-loadimagea) -Funktion verwenden, anstatt die Symbole zur Laufzeit zu erstellen. Dieser Ansatz vermeidet Geräte Abhängigkeit, vereinfacht die Lokalisierung und ermöglicht Anwendungen das Freigeben von Symbol Bitmaps. Im folgenden Beispiel wird jedoch " [**kreateicon**](/windows/desktop/api/Winuser/nf-winuser-createicon) " verwendet, um zur Laufzeit ein benutzerdefiniertes Symbol basierend auf Bitmap-Bitmasks zu erstellen; Es ist enthalten, um zu veranschaulichen, wie das System Symbol Bitmap-Bitmasks interpretiert.
+Eine Anwendung sollte benutzerdefinierte Symbole als Ressourcen implementieren und die [**LoadIcon-**](/windows/desktop/api/Winuser/nf-winuser-loadicona) oder [**LoadImage-Funktion**](/windows/desktop/api/Winuser/nf-winuser-loadimagea) verwenden, anstatt die Symbole zur Laufzeit zu erstellen. Dieser Ansatz vermeidet Geräteabhängigkeiten, vereinfacht die Lokalisierung und ermöglicht Anwendungen das Freigeben von Symbolbitmaps. Im folgenden Beispiel wird jedoch [**CreateIcon**](/windows/desktop/api/Winuser/nf-winuser-createicon) verwendet, um zur Laufzeit ein benutzerdefiniertes Symbol basierend auf Bitmapbitmasken zu erstellen. es ist enthalten, um zu veranschaulichen, wie das System Symbolbitmap-Bitmasken interpretiert.
 
 
 ```
@@ -152,26 +152,26 @@ hIcon3 = CreateIcon(hinst,    // application instance
 
 
 
-Um das Symbol zu erstellen, wendet " [**kreateicon**](/windows/desktop/api/Winuser/nf-winuser-createicon) " die folgende Wahrheitstabelle auf die-und-und XOR-Bitmasks an.
+Um das Symbol zu erstellen, wendet [**CreateIcon**](/windows/desktop/api/Winuser/nf-winuser-createicon) die folgende Wahrheitstabelle auf die AND- und XOR-Bitmasken an.
 
 
 
-| Und Bitmaske | XOR-Bitmaske | Anzeige        |
+| AND-Bitmaske | XOR-Bitmaske | Anzeige        |
 |-------------|-------------|----------------|
 | 0           | 0           | Schwarz          |
-| 0           | 1           | Weiß          |
+| 0           | 1           | White          |
 | 1           | 0           | Screen         |
-| 1           | 1           | Umgekehrter Bildschirm |
+| 1           | 1           | Reversebildschirm |
 
 
 
  
 
-Vor dem schließen muss die Anwendung [**DestroyIcon**](/windows/desktop/api/Winuser/nf-winuser-destroyicon) verwenden, um jedes Symbol zu zerstören, das [**mithilfe von**](/windows/desktop/api/Winuser/nf-winuser-createiconindirect)"" erstellt wurde. Es ist nicht erforderlich, Symbole zu zerstören, die von anderen Funktionen erstellt wurden.
+Vor dem Schließen muss Ihre Anwendung [**DestroyIcon**](/windows/desktop/api/Winuser/nf-winuser-destroyicon) verwenden, um alle Symbole zu zerstören, die sie mit [**createIconIndirect erstellt hat.**](/windows/desktop/api/Winuser/nf-winuser-createiconindirect) Es ist nicht erforderlich, Symbole zu zerstören, die von anderen Funktionen erstellt wurden.
 
 ## <a name="displaying-an-icon"></a>Anzeigen eines Symbols
 
-Die Anwendung kann Symbole laden und erstellen, die im Client Bereich der Anwendung oder untergeordneten Fenstern angezeigt werden. Im folgenden Beispiel wird veranschaulicht, wie ein Symbol im Client Bereich des Fensters gezeichnet wird, dessen Gerätekontext durch den *hdc* -Parameter identifiziert wird.
+Ihre Anwendung kann Symbole laden und erstellen, die im Clientbereich oder in untergeordneten Fenstern der Anwendung angezeigt werden. Im folgenden Beispiel wird veranschaulicht, wie sie ein Symbol im Clientbereich des Fensters zeichnen, dessen Gerätekontext (DC) durch den *hdc-Parameter identifiziert* wird.
 
 
 ```
@@ -183,7 +183,7 @@ DrawIcon(hdc, 10, 20, hIcon1);
 
 
 
-Das System zeigt automatisch die Klassen Symbole für ein Fenster an. Die Anwendung kann Klassen Symbole zuweisen, während eine Fenster Klasse registriert wird. Die Anwendung kann ein Klassen Symbol mithilfe der [**SetClassLong**](/windows/desktop/api/winuser/nf-winuser-setclasslonga) -Funktion ersetzen. Diese Funktion ändert die Standardfenster Einstellungen für alle Fenster einer bestimmten Klasse. Im folgenden Beispiel wird ein Klassen Symbol durch das Symbol ersetzt, dessen Ressourcen Bezeichner 480 ist.
+Das System zeigt automatisch die Klassensymbole für ein Fenster an. Ihre Anwendung kann Klassensymbole beim Registrieren einer Fensterklasse zuweisen. Ihre Anwendung kann ein Klassensymbol mithilfe der [**SetClassLong-Funktion**](/windows/desktop/api/winuser/nf-winuser-setclasslonga) ersetzen. Diese Funktion ändert die Standardfenstereinstellungen für alle Fenster einer bestimmten Klasse. Im folgenden Beispiel wird ein Klassensymbol durch das Symbol ersetzt, dessen Ressourcenbezeichner 480 ist.
 
 
 ```
@@ -192,21 +192,21 @@ HWND hwnd;                  // main window handle
  
 // Change the icon for hwnd's window class. 
  
-SetClassLong(hwnd,          // window handle 
-    GCL_HICON,              // changes icon 
-    (LONG) LoadIcon(hinst, MAKEINTRESOURCE(480))
+SetClassLongPtr(hwnd,          // window handle 
+    GCLP_HICON,              // changes icon 
+    (LONG_PTR) LoadIcon(hinst, MAKEINTRESOURCE(480))
    ); 
 ```
 
 
 
-Weitere Informationen zu Fenster Klassen finden Sie unter [window classes](/windows/desktop/winmsg/window-classes).
+Weitere Informationen zu Fensterklassen finden Sie unter [Fensterklassen.](/windows/desktop/winmsg/window-classes)
 
-## <a name="sharing-icon-resources"></a>Freigabe von Symbol Ressourcen
+## <a name="sharing-icon-resources"></a>Ressourcen des Freigabesymbols
 
-Im folgenden Code werden die Funktionen " [**kreateikonfromresourceex**](/windows/desktop/api/Winuser/nf-winuser-createiconfromresourceex)", " [**DrawIcon**](/windows/desktop/api/Winuser/nf-winuser-drawicon)" und " [**lookupikonidfromdirectoryex**](/windows/desktop/api/Winuser/nf-winuser-lookupiconidfromdirectoryex)" und verschiedene Ressourcen Funktionen verwendet, um ein Symbol Handle auf der Grundlage von Symbol Daten aus einer anderen ausführbaren Datei zu erstellen. Anschließend wird das Symbol in einem Fenster angezeigt.
+Der folgende Code verwendet die Funktionen [**CreateIconFromResourceEx,**](/windows/desktop/api/Winuser/nf-winuser-createiconfromresourceex) [**DrawIcon**](/windows/desktop/api/Winuser/nf-winuser-drawicon)und [**LookupIconIdFromDirectoryEx**](/windows/desktop/api/Winuser/nf-winuser-lookupiconidfromdirectoryex)sowie einige der Ressourcenfunktionen, um ein Symbolhandle basierend auf Symboldaten aus einer anderen ausführbaren Datei zu erstellen. Anschließend wird das Symbol in einem Fenster angezeigt.
 
-**Sicherheitswarnung:** Die falsche Verwendung von [**LoadLibrary**](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya) kann die Sicherheit Ihrer Anwendung beeinträchtigen, indem die falsche DLL geladen wird. Informationen zum ordnungsgemäßen Laden von DLLs mit unterschiedlichen Versionen von Windows finden Sie in der Dokumentation zu **LoadLibrary** .
+**Sicherheitswarnung:** Die [**falsche Verwendung von LoadLibrary**](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya) kann die Sicherheit Ihrer Anwendung gefährden, indem die falsche DLL geladen wird. Informationen zum ordnungsgemäßen Laden von DLLs mit verschiedenen Versionen von Windows finden Sie in der **LoadLibrary-Dokumentation.**
 
 
 ```

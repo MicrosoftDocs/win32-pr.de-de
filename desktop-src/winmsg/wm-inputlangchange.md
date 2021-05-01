@@ -1,44 +1,47 @@
 ---
-description: Wird an das oberste betroffene Fenster gesendet, nachdem die Eingabe Sprache einer Anwendung geändert wurde. Legen Sie alle anwendungsspezifischen Einstellungen fest, und übergeben Sie die Nachricht an die defwindowproc-Funktion, die die Nachricht an alle untergeordneten Fenster der ersten Ebene übergibt.
+description: Wird an das oberste betroffene Fenster gesendet, nachdem die Eingabesprache einer Anwendung geändert wurde. Sie sollten anwendungsspezifische Einstellungen vornehmen und die Nachricht an die DefWindowProc-Funktion übergeben, die die Nachricht an alle untergeordneten Fenster der ersten Ebene übergibt.
 ms.assetid: 4d403b1d-f6f7-40d5-9bf5-6a9c4da0803c
-title: WM_INPUTLANGCHANGE Meldung (Winuser. h)
+title: WM_INPUTLANGCHANGE-Nachricht (Winuser.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b0cdf04a775873e4cefe2c79269c14bd3d4da8d8
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b7e2ceb943290fceab13bf6f22c3d9dafbac27a8
+ms.sourcegitcommit: 40dddb65cba5c5470631f1f4c78218edf7e515de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104128961"
+ms.lasthandoff: 05/01/2021
+ms.locfileid: "108332405"
 ---
-# <a name="wm_inputlangchange-message"></a>WM- \_ inputlangchange-Meldung
+# <a name="wm_inputlangchange-message"></a>WM \_ INPUTLANGCHANGE-Nachricht
 
-Wird an das oberste betroffene Fenster gesendet, nachdem die Eingabe Sprache einer Anwendung geändert wurde. Legen Sie alle anwendungsspezifischen Einstellungen fest, und übergeben Sie die Nachricht an die [**defwindowproc**](/windows/desktop/api/winuser/nf-winuser-defwindowproca) -Funktion, die die Nachricht an alle untergeordneten Fenster der ersten Ebene übergibt. Diese untergeordneten Fenster können die Nachricht an [**defwindowproc**](/windows/desktop/api/winuser/nf-winuser-defwindowproca) übergeben, damit Sie die Nachricht an ihre untergeordneten Fenster weiterleiten kann usw.
+Wird an das oberste betroffene Fenster gesendet, nachdem die Eingabesprache einer Anwendung geändert wurde. Sie sollten anwendungsspezifische Einstellungen vornehmen und die Nachricht an die [**DefWindowProc-Funktion**](/windows/desktop/api/winuser/nf-winuser-defwindowproca) übergeben, die die Nachricht an alle untergeordneten Fenster der ersten Ebene übergibt. Diese untergeordneten Fenster können die Nachricht an [**DefWindowProc**](/windows/desktop/api/winuser/nf-winuser-defwindowproca) übergeben, damit die Nachricht an ihre untergeordneten Fenster übergeben wird usw.
 
-Ein Fenster empfängt diese Meldung über seine [**WindowProc**](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85)) -Funktion.
-
+Ein Fenster empfängt diese Meldung über seine [**WindowProc-Funktion.**](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85))
 
 ```C++
 #define WM_INPUTLANGCHANGE              0x0051
 ```
 
-
-
 ## <a name="parameters"></a>Parameter
 
 <dl> <dt>
 
-*wParam* 
-</dt> <dd>
+*wParam*
 
-Der Zeichensatz des neuen Gebiets Schemas.
+</dt> <dd>
+  
+Typ: **WPARAM**
+
+Die [Codepage](../Intl/code-pages.md) des neuen Gebietsschemas.
 
 </dd> <dt>
 
-*lParam* 
-</dt> <dd>
+*lParam*
 
-Der Eingabe Gebiets Schema Bezeichner. Weitere Informationen finden Sie unter [Sprachen, Gebiets Schemas und Tastatur Layouts](../inputdev/about-keyboard-input.md).
+</dt> <dd>
+ 
+Typ: **LPARAM**
+
+Der  HKL-Eingabe-Gebietsschemabezeichner. Weitere Informationen finden Sie unter [Sprachen, Gebietsschemas und Tastaturlayouts.](../inputdev/about-keyboard-input.md)
 
 </dd> </dl>
 
@@ -46,39 +49,39 @@ Der Eingabe Gebiets Schema Bezeichner. Weitere Informationen finden Sie unter [S
 
 Typ: **LRESULT**
 
-Eine Anwendung sollte bei der Verarbeitung dieser Nachricht einen Wert ungleich 0 (null) zurückgeben.
+Eine Anwendung sollte einen Wert ungleich 0 (null) zurückgeben, wenn sie diese Nachricht verarbeitet.
+
+## <a name="remarks"></a>Hinweise
+
+Sie können den [Namen des Tastaturschemas](../Intl/locale-names.md) über [die LCIDToLocaleName-Funktion](/windows/win32/api/winnls/nf-winnls-lcidtolocalename) abrufen. Mit dem Gebietsschemanamen können Sie [moderne Gebietsschemafunktionen](/windows/win32/intl/calling-the--locale-name--functions)verwenden:
+
+```cpp
+case WM_INPUTLANGCHANGE:
+{
+    HKL hkl = (HKL)lParam;
+    WCHAR localeName[LOCALE_NAME_MAX_LENGTH];
+    LCIDToLocaleName(MAKELCID(LOWORD(hkl), SORT_DEFAULT), localeName, LOCALE_NAME_MAX_LENGTH, 0);
+
+    WCHAR lang[9];
+    GetLocaleInfoEx(localeName, LOCALE_SISO639LANGNAME2, lang, 9);
+}
+```
 
 ## <a name="requirements"></a>Anforderungen
 
-
-
-| Anforderung | Wert |
+| Anforderungen | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Winuser.h (windows.h einschließen)</dt> </dl> |
 
-
-
-## <a name="see-also"></a>Siehe auch
-
-<dl> <dt>
+## <a name="see-also"></a>Weitere Informationen
 
 **Verweis**
-</dt> <dt>
 
-[**DefWindowProc**](/windows/desktop/api/winuser/nf-winuser-defwindowproca)
-</dt> <dt>
+- [**DefWindowProc**](/windows/desktop/api/winuser/nf-winuser-defwindowproca)
+- [**WM \_ INPUTLANGCHANGEREQUEST**](wm-inputlangchangerequest.md)
 
-[**WM \_ inputlangchangerequest**](wm-inputlangchangerequest.md)
-</dt> <dt>
+**Konzept**
 
-**Licher**
-</dt> <dt>
-
-[Windows](windows.md)
-</dt> </dl>
-
- 
-
- 
+- [Windows](windows.md) 
