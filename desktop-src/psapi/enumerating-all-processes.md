@@ -1,22 +1,22 @@
 ---
-title: Auflisten aller Prozesse
-description: Der folgende Beispielcode verwendet die EnumProcesses-Funktion, um die aktuellen Prozesse im System aufzuzählen.
+title: Aufzählen aller Prozesse
+description: Im folgenden Beispielcode wird die EnumProcesses-Funktion verwendet, um die aktuellen Prozesse im System zu aufzählen.
 ms.assetid: 0ed81548-4936-40e9-bfc8-baa71492310e
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e64e127014910974b881a7ae21e807be9ac19452
-ms.sourcegitcommit: d581811a577e00821667dad731710909979dc72d
+ms.openlocfilehash: bf03fd9ad06bfb15924f3f5ec92d8f8858fbff60
+ms.sourcegitcommit: 07ba02719c9779e082b108ae74f9699fb0236c34
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "104530416"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "108644112"
 ---
-# <a name="enumerating-all-processes"></a>Auflisten aller Prozesse
+# <a name="enumerating-all-processes"></a>Aufzählen aller Prozesse
 
-Der folgende Beispielcode verwendet die [**EnumProcesses**](/windows/win32/api/Psapi/nf-psapi-enumprocesses) -Funktion, um die Prozess-ID für jedes Prozess Objekt im System abzurufen. Anschließend wird " [enumprocessmodules](/windows/win32/api/psapi/nf-psapi-enumprocessmodules) " aufgerufen, um jeden Prozessnamen zu erhalten und ihn zu drucken.
+Im folgenden Beispielcode wird die [**EnumProcesses-Funktion**](/windows/win32/api/Psapi/nf-psapi-enumprocesses) verwendet, um den Prozessbezeichner für jedes Prozessobjekt im System abzurufen. [EnumProcessModules wird](/windows/win32/api/psapi/nf-psapi-enumprocessmodules) dann aufgerufen, um jeden Prozessnamen zu erhalten und ausgedruckt.
 
 >[!NOTE]
-> Verwenden Sie für 64-Bit-prozepositionen die [enumprocessmodulesex](/windows/win32/api/psapi/nf-psapi-enumprocessmodulesex) -Funktion.
+> Verwenden Sie für 64-Bit-Prozesse die [EnumProcessModulesEx-Funktion.](/windows/win32/api/psapi/nf-psapi-enumprocessmodulesex)
 
 ```C++
 #include <windows.h>
@@ -94,7 +94,7 @@ int main( void )
 
 
 
-Die Main-Funktion Ruft mithilfe der [**EnumProcesses**](/windows/desktop/api/Psapi/nf-psapi-enumprocesses) -Funktion eine Liste der Prozesse ab. Main Ruft für jeden Prozess die **printprocessnameandid** -Funktion auf und übergibt ihr den Prozess Bezeichner. **Print processnameandid** ruft wiederum die [**OpenProcess**](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-openprocess) -Funktion auf, um das Prozess Handle abzurufen. Wenn **OpenProcess** fehlschlägt, wird in der Ausgabe der Prozess Name als angezeigt <unknown> . Beispielsweise schlägt **OpenProcess** für die Prozesse im Leerlauf und für CSRSS fehl, da ihre Zugriffsbeschränkungen verhindern, dass Code auf Benutzerebene geöffnet wird. Als Nächstes ruft **printprocessnameandid** die [**enumprocessmodules**](/windows/desktop/api/Psapi/nf-psapi-enumprocessmodules) -Funktion auf, um die Modul Handles abzurufen. Zum Schluss ruft **printprocessnameandid** die [**getmodulebasename**](/windows/desktop/api/Psapi/nf-psapi-getmodulebasenamea) -Funktion auf, um den Namen der ausführbaren Datei abzurufen, und zeigt den Namen zusammen mit der Prozess-ID an.
+Die main-Funktion erhält mithilfe der [**EnumProcesses-Funktion**](/windows/desktop/api/Psapi/nf-psapi-enumprocesses) eine Liste von Prozessen. Für jeden Prozess ruft main die **PrintProcessNameAndID-Funktion** auf und über gibt den Prozessbezeichner an sie weiter. **PrintProcessNameAndID** ruft wiederum die [**OpenProcess-Funktion**](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-openprocess) auf, um das Prozesshandle zu erhalten. Wenn **OpenProcess fehlschlägt,** zeigt die Ausgabe den Prozessnamen als <unknown> an. Beispielsweise schlägt **OpenProcess für die Leerlauf-** und CSRSS-Prozesse fehl, da ihre Zugriffseinschränkungen verhindern, dass Code auf Benutzerebene sie öffnet. Als Nächstes **ruft PrintProcessNameAndID** die [**EnumProcessModules-Funktion**](/windows/desktop/api/Psapi/nf-psapi-enumprocessmodules) auf, um die Modulhandles zu erhalten. Schließlich ruft **PrintProcessNameAndID** die [**GetModuleBaseName-Funktion**](/windows/desktop/api/Psapi/nf-psapi-getmodulebasenamea) auf, um den Namen der ausführbaren Datei zu erhalten, und zeigt den Namen zusammen mit dem Prozessbezeichner an.
 
  
 

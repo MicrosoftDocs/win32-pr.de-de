@@ -1,9 +1,9 @@
 ---
 title: add sslcert
-description: Fügt eine neue SSL-Serverzertifikat Bindung (Secure Sockets Layer) und die entsprechenden Client Zertifikat Richtlinien für eine IP-Adresse und einen Port hinzu.
+description: Fügt eine neue SECURE SOCKETS LAYER(SSL)-Serverzertifikatbindung und die entsprechenden Clientzertifikatrichtlinien für eine IP-Adresse und einen Port hinzu.
 ms.assetid: 4ba3d2cb-050f-46e3-81f9-5f7e360b19fb
 keywords:
-- Hinzufügen von sslcert http
+- sslcert HTTP hinzufügen
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8a43569edd400b824876dff991f95e79cbfd6a96
-ms.sourcegitcommit: 476861130ea63675206d1f06e517059705b930ed
+ms.openlocfilehash: 309050be35748f39eefc8b40b8e590f8f6889fde
+ms.sourcegitcommit: 07ba02719c9779e082b108ae74f9699fb0236c34
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "104389394"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "108644192"
 ---
 # <a name="add-sslcert"></a>add sslcert
 
-Fügt eine neue SSL-Serverzertifikat Bindung (Secure Sockets Layer) und die entsprechenden Client Zertifikat Richtlinien für eine IP-Adresse und einen Port hinzu.
+Fügt eine neue SECURE SOCKETS LAYER(SSL)-Serverzertifikatbindung und die entsprechenden Clientzertifikatrichtlinien für eine IP-Adresse und einen Port hinzu.
 
 ``` syntax
 add sslcert [ipport=]IP Address:port
@@ -45,108 +45,108 @@ add sslcert [ipport=]IP Address:port
 
 <dl> <dt>
 
-<span id="_ipport__IP_Address_port"></span><span id="_ipport__ip_address_port"></span><span id="_IPPORT__IP_ADDRESS_PORT"></span>**\[IPPort = \] * * * IP-Adresse: Port*
+<span id="_ipport__IP_Address_port"></span><span id="_ipport__ip_address_port"></span><span id="_IPPORT__IP_ADDRESS_PORT"></span>**\[ipport=IP-Adresse:Port\]**
 </dt> <dd>
 
 Gibt die IP-Adresse und den Port für die Bindung an.
 
 </dd> <dt>
 
-<span id="_certhash__string"></span><span id="_CERTHASH__STRING"></span>**\[CertHash = \] * * * Zeichenfolge*
+<span id="_certhash__string"></span><span id="_CERTHASH__STRING"></span>**\[certhash=string\]**
 </dt> <dd>
 
-Gibt den SHA-Hash des Zertifikats an. Dieser Hash ist 20 Bytes lang und wird als hexadezimale Zeichenfolge angegeben.
+Gibt den SHA-Hash des Zertifikats an. Dieser Hash ist 20 Byte lang und wird als hexadezimale Zeichenfolge angegeben.
 
 </dd> <dt>
 
-<span id="_appid__GUID"></span><span id="_appid__guid"></span><span id="_APPID__GUID"></span>**\[AppID = \] * * * GUID*
+<span id="_appid__GUID"></span><span id="_appid__guid"></span><span id="_APPID__GUID"></span>**\[appid=GUID\]**
 </dt> <dd>
 
 Gibt die GUID zum Identifizieren der besitzenden Anwendung an.
 
 </dd> <dt>
 
-<span id="_certstorename__string"></span><span id="_CERTSTORENAME__STRING"></span>**\[certstorename = \] * * * Zeichenfolge*
+<span id="_certstorename__string"></span><span id="_CERTSTORENAME__STRING"></span>**\[certstorename=string\]**
 </dt> <dd>
 
 Gibt den Speichernamen für das Zertifikat an. Die Standardeinstellung ist MY. Das Zertifikat muss im Kontext des lokalen Computers gespeichert werden.
 
 </dd> <dt>
 
-<span id="_verifyclientcertrevocation__enable_disable__"></span><span id="_VERIFYCLIENTCERTREVOCATION__ENABLE_DISABLE__"></span>**\[verifyclientcertrevocation = {enable enable \| }\]**
+<span id="_verifyclientcertrevocation__enable_disable__"></span><span id="_VERIFYCLIENTCERTREVOCATION__ENABLE_DISABLE__"></span>**\[verifyclientcertrevocation={enable \| disable}\]**
 </dt> <dd>
 
-Schaltet die Überprüfung des Sperrens von Client Zertifikaten ein oder die Überprüfung wird durchgeführt.
+Aktiviert oder deaktiviert die Überprüfung der Sperrung von Clientzertifikaten.
 
 </dd> <dt>
 
-<span id="_verifyrevocationwithcachedclientcertonly__enable_disable__"></span><span id="_VERIFYREVOCATIONWITHCACHEDCLIENTCERTONLY__ENABLE_DISABLE__"></span>**\[verifyrevocationwithcachedclientcertonly = {enable \| Deaktivieren}\]**
+<span id="_verifyrevocationwithcachedclientcertonly__enable_disable__"></span><span id="_VERIFYREVOCATIONWITHCACHEDCLIENTCERTONLY__ENABLE_DISABLE__"></span>**\[verifyrevocationwithcachedclientcertonly={enable \| disable}\]**
 </dt> <dd>
 
-Schaltet die Verwendung des zwischengespeicherten Client Zertifikats für die Sperr Überprüfung ein oder aus.
+Aktiviert oder deaktiviert die Ausschließliche Verwendung des zwischengespeicherten Clientzertifikats für die Sperrüberprüfung.
 
 </dd> <dt>
 
-<span id="_usagecheck__enable_disable__"></span><span id="_USAGECHECK__ENABLE_DISABLE__"></span>**\[usagecheck = {enable \| Deaktivieren}\]**
+<span id="_usagecheck__enable_disable__"></span><span id="_USAGECHECK__ENABLE_DISABLE__"></span>**\[usagecheck={enable \| disable}\]**
 </dt> <dd>
 
-Schaltet die Nutzungs Überprüfung ein oder aus. Die Standardeinstellung ist „Aktiviert“.
+Aktiviert oder deaktiviert die Nutzungsprüfung. Die Standardeinstellung ist „Aktiviert“.
 
 </dd> <dt>
 
-<span id="_revocationfreshnesstime__u-int"></span><span id="_REVOCATIONFRESHNESSTIME__U-INT"></span>**\[RevocationFreshnessTime = \] * * * u-int*
+<span id="_revocationfreshnesstime__u-int"></span><span id="_REVOCATIONFRESHNESSTIME__U-INT"></span>**\[revocationfreshnesstime=u-int\]**
 </dt> <dd>
 
-Gibt das Zeitintervall an, nach dem eine aktualisierte Zertifikat Sperr Liste (CRL) überprüft werden soll. Wenn dieser Wert 0 ist, wird die neue Zertifikat Sperr Liste nur aktualisiert, wenn der vorherige Wert (in Sekunden) abläuft.
+Gibt das Zeitintervall für die Überprüfung auf eine aktualisierte Zertifikatsperrliste (Certificate Revocation List, CRL) an. Wenn dieser Wert 0 ist, wird die neue Zertifikatsperrliste nur aktualisiert, wenn die vorherige abläuft (in Sekunden).
 
 </dd> <dt>
 
-<span id="_urlretrievaltimeout__u-int"></span><span id="_URLRETRIEVALTIMEOUT__U-INT"></span>**\[UrlRetrievalTimeout = \] * * * u-int*
+<span id="_urlretrievaltimeout__u-int"></span><span id="_URLRETRIEVALTIMEOUT__U-INT"></span>**\[urlretrievaltimeout=u-int\]**
 </dt> <dd>
 
-Gibt das Timeout Intervall für das Abrufen der Zertifikats Sperr Liste für die Remote-URL (in Millisekunden) an.
+Gibt das Timeoutintervall für Versuche an, die Zertifikatsperrliste für die Remote-URL abzurufen (in Millisekunden).
 
 </dd> <dt>
 
-<span id="_sslctlidentifier__string"></span><span id="_SSLCTLIDENTIFIER__STRING"></span>**\[sslctlidentifier = \] * * * Zeichenfolge*
+<span id="_sslctlidentifier__string"></span><span id="_SSLCTLIDENTIFIER__STRING"></span>**\[sslctlidentifier=string\]**
 </dt> <dd>
 
-Listet die Zertifikat Aussteller auf, denen vertraut werden kann. Diese Liste kann eine Teilmenge der Zertifikatsaussteller sein, denen der Computer vertraut.
+Listet die Zertifikataussteller auf, die als vertrauenswürdig eingestuft werden können. Diese Liste kann eine Teilmenge der Zertifikatsaussteller sein, denen der Computer vertraut.
 
 </dd> <dt>
 
-<span id="_sslctlstorename__string"></span><span id="_SSLCTLSTORENAME__STRING"></span>**\[SslCtlStoreName = \] * * * Zeichenfolge*
+<span id="_sslctlstorename__string"></span><span id="_SSLCTLSTORENAME__STRING"></span>**\[sslctlstorename=string\]**
 </dt> <dd>
 
-Gibt den Speicher Namen unter dem lokalen Computer an, auf \_ dem sslctlidentifier gespeichert ist.
+Gibt den Speichernamen unter LOCAL \_ MACHINE an, auf dem SslCtlIdentifier gespeichert ist.
 
 </dd> <dt>
 
-<span id="_dsmapperusage__enable_disable__"></span><span id="_DSMAPPERUSAGE__ENABLE_DISABLE__"></span>**\[dsmapperusage = {enable \| Deaktivieren}\]**
+<span id="_dsmapperusage__enable_disable__"></span><span id="_DSMAPPERUSAGE__ENABLE_DISABLE__"></span>**\[dsmapperusage={enable \| disable}\]**
 </dt> <dd>
 
-Schaltet DS-Mapper ein oder aus. Die Standardeinstellung ist „Deaktiviert“.
+Aktiviert oder deaktiviert DS-Mapper. Die Standardeinstellung ist „Deaktiviert“.
 
 </dd> <dt>
 
-<span id="_clientcertnegotiation__enable_disable__"></span><span id="_CLIENTCERTNEGOTIATION__ENABLE_DISABLE__"></span>**\[clientcertaushandlung = {enable \| Deaktivieren}\]**
+<span id="_clientcertnegotiation__enable_disable__"></span><span id="_CLIENTCERTNEGOTIATION__ENABLE_DISABLE__"></span>**\[clientcertnegotiation={enable \| disable}\]**
 </dt> <dd>
 
-Schaltet die Aushandlung des Zertifikats ein oder aus. Die Standardeinstellung ist „Deaktiviert“.
+Aktiviert oder deaktiviert die Aushandlung des Zertifikats. Die Standardeinstellung ist „Deaktiviert“.
 
 </dd> </dl>
 
 ## <a name="examples"></a>Beispiele
 
-**Hinzufügen von sslcert IPPort = 1.1.1.1:443**
+**add sslcert ipport=1.1.1.1:443**
 
-**CertHash = 0102030405060708090a0b0c0d0e0f 1011121314**
+**certhash=0102030405060708090A0B0C0D0E0F1011121314**
 
-**AppID = {00112233-4455-6677-8899-aabbccddeeff}**
+**appid={00112233-4455-6677-8899-AABBCCDDEEFF}**
 
- 
+ 
 
- 
+ 
 
 
 

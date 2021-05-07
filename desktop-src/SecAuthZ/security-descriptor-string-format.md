@@ -1,24 +1,24 @@
 ---
-description: Das Sicherheitsbeschreibungszeichenfolgenformat ist ein Textformat zum Speichern oder Transport von Informationen in einem Sicherheitsdeskriptor.
+description: Das Zeichenfolgenformat der Sicherheitsbeschreibung ist ein Textformat zum Speichern oder Übertragen von Informationen in einem Sicherheitsdeskriptor.
 ms.assetid: 0a226629-084c-40c5-bdd4-ad7355c807cf
-title: Sicherheitsdeskriptor-Zeichenfolgenformat
+title: Security Descriptor String Format
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 42780c408908faf0a226584be7315ab6bf9e78e5
-ms.sourcegitcommit: 435ea8f5bf06808ffa7dce39afb0ee6de842ba2f
+ms.openlocfilehash: 2d7fd6e9e2387deee63b5046086ed167a29fa54b
+ms.sourcegitcommit: 07ba02719c9779e082b108ae74f9699fb0236c34
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2021
-ms.locfileid: "107925682"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "108644202"
 ---
-# <a name="security-descriptor-string-format"></a>Sicherheitsdeskriptor-Zeichenfolgenformat
+# <a name="security-descriptor-string-format"></a>Security Descriptor String Format
 
-Das **Sicherheitsbeschreibungszeichenfolgenformat** ist ein Textformat zum Speichern oder Transport von Informationen in einem Sicherheitsdeskriptor. Die [**Funktionen ConvertSecurityDescriptorToStringSecurityDescriptor**](/windows/desktop/api/Sddl/nf-sddl-convertsecuritydescriptortostringsecuritydescriptora) und [**ConvertStringSecurityDescriptorToSecurityDescriptor**](/windows/desktop/api/Sddl/nf-sddl-convertstringsecuritydescriptortosecuritydescriptora) verwenden dieses Format.
+Das **Zeichenfolgenformat** der Sicherheitsbeschreibung ist ein Textformat zum Speichern oder Übertragen von Informationen in einem Sicherheitsdeskriptor. Die Funktionen [**ConvertSecurityDescriptorToStringSecurityDescriptor**](/windows/desktop/api/Sddl/nf-sddl-convertsecuritydescriptortostringsecuritydescriptora) und [**ConvertStringSecurityDescriptorToSecurityDescriptor**](/windows/desktop/api/Sddl/nf-sddl-convertstringsecuritydescriptortosecuritydescriptora) verwenden dieses Format.
 
-Das Format ist eine mit **NULL** beendete Zeichenfolge mit Token, um jede der vier Hauptkomponenten eines Sicherheitsdeskriptors anzugeben: Besitzer (O:), primäre Gruppe (G:), DACL (D:) und SACL (S:).
+Das Format ist eine **mit NULL** endende Zeichenfolge mit Token, die jede der vier Hauptkomponenten einer Sicherheitsbeschreibung angibt: Besitzer (O:), primäre Gruppe (G:), DACL (D:) und SACL (S:).
 
 > [!Note]  
-> [*Zugriffssteuerungseinträge*](/windows/desktop/SecGloss/a-gly) (ACCESS Control Entries, ACEs) und bedingte ACEs haben unterschiedliche Formate. Informationen zu ACEs finden Sie unter [ACE-Zeichenfolgen.](ace-strings.md) Informationen zu bedingten ACEs finden Sie unter [Sicherheitsbeschreibungsdefinitionssprache für bedingte ACEs.](security-descriptor-definition-language-for-conditional-aces-.md)
+> [*Zugriffssteuerungseinträge (ACEs)*](/windows/desktop/SecGloss/a-gly) und bedingte ACEs weisen unterschiedliche Formate auf. AcEs finden Sie unter [ACE-Zeichenfolgen.](ace-strings.md) Informationen zu bedingten ACEs finden Sie unter [Sicherheitsbeschreibungsdefinitionssprache für bedingte ACEs.](security-descriptor-definition-language-for-conditional-aces-.md)
 
  
 
@@ -34,14 +34,14 @@ S:sacl_flags(string_ace1)(string_ace2)... (string_acen)
 
 <dl> <dt>
 
-<span id="owner_sid"></span><span id="OWNER_SID"></span>owner \_ sid
+<span id="owner_sid"></span><span id="OWNER_SID"></span>\_Besitzer-SID
 </dt> <dd>
 
 Eine [SID-Zeichenfolge,](sid-strings.md) die den Besitzer des Objekts identifiziert.
 
 </dd> <dt>
 
-<span id="group_sid"></span><span id="GROUP_SID"></span>group \_ sid
+<span id="group_sid"></span><span id="GROUP_SID"></span>\_Gruppen-SID
 </dt> <dd>
 
 Eine SID-Zeichenfolge, die die primäre Gruppe des Objekts identifiziert.
@@ -51,16 +51,16 @@ Eine SID-Zeichenfolge, die die primäre Gruppe des Objekts identifiziert.
 <span id="dacl_flags"></span><span id="DACL_FLAGS"></span>\_dacl-Flags
 </dt> <dd>
 
-Sicherheitsdeskriptor-Steuerungsflags, die für die DACL gelten. Eine Beschreibung dieser Steuerelementflags finden Sie in der [**SetSecurityDescriptorControl-Funktion.**](/windows/win32/api/securitybaseapi/nf-securitybaseapi-setsecuritydescriptorcontrol) Die Dacl-Flagzeichenfolge kann eine Verkettung von \_ 0 (null) oder mehr der folgenden Zeichenfolgen sein.
+Sicherheitsbeschreibungs-Steuerelementflags, die für die DACL gelten. Eine Beschreibung dieser Steuerelementflags finden Sie in der [**SetSecurityDescriptorControl-Funktion.**](/windows/win32/api/securitybaseapi/nf-securitybaseapi-setsecuritydescriptorcontrol) Die \_ Dacl-Flagzeichenfolge kann eine Verkettung von 0 (null) oder mehr der folgenden Zeichenfolgen sein.
 
 
 
-| Control               | Konstante in Sddl.h       | Bedeutung                                       |
+| Control               | Konstante in "Sddl.h"       | Bedeutung                                       |
 |-----------------------|--------------------------|-----------------------------------------------|
 | "P"                   | SDDL \_ PROTECTED          | Das SE \_ DACL \_ PROTECTED-Flag ist festgelegt.          |
 | "AR"                  | SDDL \_ AUTO \_ INHERIT \_ REQ | Das SE \_ DACL \_ AUTO INHERIT \_ \_ REQ-Flag ist festgelegt. |
 | "KI"                  | SDDL \_ AUTOMATISCH \_ GEERBT    | Das SE \_ DACL \_ AUTO \_ INHERITED-Flag ist festgelegt.    |
-| "NO ACCESS CONTROL" (KEINE \_ \_ ZUGRIFFSSTEUERUNG) | SDDL \_ \_ NULL-ACL          | Die ACL ist NULL.                              |
+| "KEINE \_ \_ ZUGRIFFSSTEUERUNG" | SDDL \_ \_ NULL-ACL          | Die ACL ist NULL. **Windows Server 2008, Windows Vista und Windows Server 2003:** Nicht verfügbar. |
 
 
 
@@ -71,24 +71,24 @@ Sicherheitsdeskriptor-Steuerungsflags, die für die DACL gelten. Eine Beschreibu
 <span id="sacl_flags"></span><span id="SACL_FLAGS"></span>\_sacl-Flags
 </dt> <dd>
 
-Sicherheitsdeskriptor-Steuerungsflags, die für die SACL gelten. Die \_ Sacl-Flagzeichenfolge verwendet die gleichen Steuerbitzeichenfolgen wie die \_ Dacl-Flagzeichenfolge.
+Sicherheitsdeskriptor-Steuerelementflags, die für die SACL gelten. Die \_ Sacl-Flagzeichenfolge verwendet dieselben Steuerbitzeichenfolgen wie die \_ dacl-Flagzeichenfolge.
 
 </dd> <dt>
 
 <span id="string_ace"></span><span id="STRING_ACE"></span>string \_ ace
 </dt> <dd>
 
-Eine Zeichenfolge, die einen ACE in der DACL oder SACL des Sicherheitsdeskriptors beschreibt. Eine Beschreibung des ACE-Zeichenfolgenformats finden Sie unter [ACE-Zeichenfolgen.](ace-strings.md) Jede ACE-Zeichenfolge wird in Klammern (()) eingeschlossen.
+Eine Zeichenfolge, die einen ACE in der DACL oder SACL des Sicherheitsdeskriptors beschreibt. Eine Beschreibung des ACE-Zeichenfolgenformats finden Sie unter [ACE-Zeichenfolgen.](ace-strings.md) Jede ACE-Zeichenfolge ist in Klammern (()) eingeschlossen.
 
 </dd> </dl>
 
-Nicht benötigte Komponenten können aus der Sicherheitsbeschreibungszeichenfolge weggelassen werden. Wenn beispielsweise das SE \_ DACL \_ PRESENT-Flag nicht im Eingabesicherheitsdeskriptor festgelegt ist, enthält [**ConvertSecurityDescriptorToStringSecurityDescriptor**](/windows/desktop/api/Sddl/nf-sddl-convertsecuritydescriptortostringsecuritydescriptora) keine D:-Komponente in der Ausgabezeichenfolge. Sie können auch die [**SECURITY INFORMATION-Bitflags \_**](security-information.md) verwenden, um die Komponenten anzugeben, die in eine Sicherheitsbeschreibungszeichenfolge eingeschlossen werden sollen.
+Nicht mehr verwendete Komponenten können in der Sicherheitsbeschreibungszeichenfolge weggelassen werden. Wenn das SE DACL PRESENT-Flag beispielsweise nicht im Eingabesicherheitsdeskriptor festgelegt ist, enthält \_ \_ [**ConvertSecurityDescriptorToStringSecurityDescriptor**](/windows/desktop/api/Sddl/nf-sddl-convertsecuritydescriptortostringsecuritydescriptora) keine D:-Komponente in der Ausgabezeichenfolge. Sie können auch die [**SECURITY INFORMATION-Bitflags \_**](security-information.md) verwenden, um die Komponenten anzugeben, die in eine Sicherheitsbeschreibungszeichenfolge eingeschlossen werden sollen.
 
 Das Format der Sicherheitsbeschreibungszeichenfolge unterstützt keine **NULL-ACLs.**
 
-Um eine leere ACL zu bezeichnen, enthält die Sicherheitsbeschreibungszeichenfolge das Token D: oder S: ohne zusätzliche Zeichenfolgeninformationen.
+Um eine leere ACL zu kennzeichnen, enthält die Sicherheitsbeschreibungszeichenfolge das Token D: oder S: ohne zusätzliche Zeichenfolgeninformationen.
 
-Die Sicherheitsbeschreibungszeichenfolge speichert die [**SECURITY DESCRIPTOR CONTROL-Bits**](security-descriptor-control.md) auf unterschiedliche Weise. Die SE DACL PRESENT- oder SE SACL PRESENT-Bits werden durch das Vorhandensein des \_ \_ Tokens \_ \_ D: oder S: in der Zeichenfolge angegeben. Andere Bits, die für die DACL oder SACL gelten, werden in \_ Dacl-Flags und Sacl-Flags \_ gespeichert. Die SE \_ OWNER \_ DEFAULTED-, SE \_ GROUP \_ DEFAULTED-, SE \_ DACL DEFAULTED- und SE SACL DEFAULTED-Bits werden nicht in einer \_ Sicherheitsbeschreibungszeichenfolge \_ \_ gespeichert. Das SE SELF RELATIVE-Bit wird nicht in der Zeichenfolge \_ \_ gespeichert, [**convertStringSecurityDescriptorToSecurityDescriptor**](/windows/desktop/api/Sddl/nf-sddl-convertstringsecuritydescriptortosecuritydescriptora) legt dieses Bit jedoch immer im Ausgabesicherheitsdeskriptor fest.
+Die Sicherheitsbeschreibungszeichenfolge speichert die [**SECURITY DESCRIPTOR**](security-descriptor-control.md) CONTROL-Bits auf unterschiedliche Weise. Die SE \_ DACL \_ PRESENT- oder SE \_ SACL \_ PRESENT-Bits werden durch das Vorhandensein des Tokens D: oder S: in der Zeichenfolge angegeben. Andere Bits, die für die DACL oder SACL gelten, werden in \_ Dacl-Flags und \_ sacl-Flags gespeichert. Die \_ Bits SE OWNER \_ DEFAULTED, SE \_ GROUP \_ DEFAULTED, SE \_ DACL \_ DEFAULTED und SE \_ SACL \_ DEFAULTED werden nicht in einer Sicherheitsbeschreibungszeichenfolge gespeichert. Das SE \_ SELF \_ RELATIVE-Bit wird nicht in der Zeichenfolge gespeichert, aber [**ConvertStringSecurityDescriptorToSecurityDescriptor**](/windows/desktop/api/Sddl/nf-sddl-convertstringsecuritydescriptortosecuritydescriptora) legt dieses Bit immer im Ausgabesicherheitsdeskriptor fest.
 
 Die folgenden Beispiele zeigen Sicherheitsbeschreibungszeichenfolgen und die Informationen in den zugeordneten Sicherheitsbeschreibungen.
 
@@ -250,14 +250,14 @@ DACL
 
 
 
-## <a name="related-topics"></a>Zugehörige Themen
+## <a name="related-topics"></a>Verwandte Themen
 
 <dl> <dt>
 
 [ACE-Zeichenfolgen](ace-strings.md)
 </dt> <dt>
 
-[Definitionssprache für Sicherheitsbeschreibungen für bedingte ACEs](security-descriptor-definition-language-for-conditional-aces-.md)
+[Sicherheitsdeskriptordefinitionssprache für bedingte ACEs](security-descriptor-definition-language-for-conditional-aces-.md)
 </dt> </dl>
 
  
