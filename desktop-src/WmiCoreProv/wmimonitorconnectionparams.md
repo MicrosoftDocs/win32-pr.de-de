@@ -1,7 +1,7 @@
 ---
 description: Enthält den Verbindungstyp des Monitors.
 ms.assetid: f5658246-fbb8-4530-8dfb-f1ca792fe9d5
-title: Wmimonitorconnectionparser-Klasse
+title: WmiMonitorConnectionParams-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_type:
 - DllExport
 api_location:
 - WmiProv.dll
-ms.openlocfilehash: 64212c523459696ced37e42689f6a4be0edb056b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a88b80773ec60b161df51fc759cc932d5c53c931
+ms.sourcegitcommit: cfcac5a083b72fd7f2a5188166d470cc0e95d02d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104216905"
+ms.lasthandoff: 05/08/2021
+ms.locfileid: "109626692"
 ---
-# <a name="wmimonitorconnectionparams-class"></a>Wmimonitorconnectionparser-Klasse
+# <a name="wmimonitorconnectionparams-class"></a>WmiMonitorConnectionParams-Klasse
 
-Die wmimonitorconnectionparser-WMI-Klasse enthält den Verbindungstyp des Monitors.
+Die WMI-Klasse WmiMonitorConnectionParams enthält den Verbindungstyp des Monitors.
 
 Die folgende Syntax enthält vereinfachten MOF-Code und schließt alle geerbten Eigenschaften ein.
 
@@ -42,20 +42,20 @@ class WmiMonitorConnectionParams
 
 ## <a name="members"></a>Member
 
-Die **wmimonitorconnectionparser** -Klasse verfügt über diese Typen von Membern:
+Die **WmiMonitorConnectionParams-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **wmimonitorconnectionparser** -Klasse verfügt über diese Eigenschaften.
+Die **WmiMonitorConnectionParams-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **Aktiv**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -68,7 +68,7 @@ Gibt den aktiven Monitor an.
 **InstanceName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -77,20 +77,20 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: **Schlüssel**
 </dt> </dl>
 
-Der Name der spezifischen Monitor Instanz.
+Name der spezifischen Überwachungsinstanz.
 
 </dd> <dt>
 
-**Videooutputtechnology**
+**VideoOutputTechnology**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Verbindungstyp der Video Ausgabe Technologie. Gültige Werte sind in der [D3DKMDT \_ Video \_ Output \_ Technology](https://msdn.microsoft.com/library/ms794498.aspx) -Enumeration dokumentiert.
+Verbindungstyp der Videoausgabetechnologie. Gültige Werte sind in der [D3DKMDT \_ VIDEO \_ OUTPUT \_ TECHNOLOGY-Enumeration](/windows-hardware/drivers/ddi/d3dkmdt/ne-d3dkmdt-_d3dkmdt_video_output_technology) dokumentiert.
 
 </dd> </dl>
 
@@ -101,9 +101,9 @@ Verbindungstyp der Video Ausgabe Technologie. Gültige Werte sind in der [D3DKMD
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                               |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                         |
-| Namespace<br/>                | WMI-Stammdatei \\<br/>                                                                   |
-| MOF<br/>                      | <dl> <dt>WMI Core. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Server)<br/> | WindowsServer 2008<br/>                                                         |
+| Namespace<br/>                | Root \\ wmi<br/>                                                                   |
+| MOF<br/>                      | <dl> <dt>WmiCore.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>WmiProv.dll</dt> </dl> |
 
 
