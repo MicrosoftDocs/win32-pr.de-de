@@ -1,6 +1,6 @@
 ---
-description: Wird verwendet, um zu bestimmen, ob die Option diesen Ordner freigeben in der Webansicht angezeigt werden soll.
-title: Cansharefolderw-Funktion
+description: Wird verwendet, um zu bestimmen, ob die Option Diesen Ordner freigeben in der Webansicht angezeigt werden soll.
+title: CanShareFolderW-Funktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,18 +14,18 @@ api_type:
 api_location:
 - Ntshrui.dll
 ms.assetid: 5fd28a14-53e7-4016-9c49-9bb14ce7808b
-ms.openlocfilehash: cf7d0feb31666f3a918c0307a0b0983bff246fea
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 46df03208ecc468aac366fb0b4cfb33e1a68157e
+ms.sourcegitcommit: 3caaa3c92dcb1ef12f84464d14ce6262e65e988e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104525403"
+ms.lasthandoff: 05/12/2021
+ms.locfileid: "109841681"
 ---
-# <a name="cansharefolderw-function"></a>Cansharefolderw-Funktion
+# <a name="cansharefolderw-function"></a>CanShareFolderW-Funktion
 
-\[Diese Funktion ist über Windows XP mit Service Pack 2 (SP2) und Windows Server 2003 verfügbar. Sie wird möglicherweise in nachfolgenden Versionen von Windows geändert oder ist nicht verfügbar.\]
+\[Diese Funktion ist über Windows XP mit Service Pack 2 (SP2) und Windows Server 2003 verfügbar. Sie kann in nachfolgenden Versionen von Windows geändert oder nicht verfügbar sein.\]
 
-Wird verwendet, um zu bestimmen, ob die Option **diesen Ordner freigeben** in der Webansicht angezeigt werden soll.
+Wird verwendet, um zu bestimmen, ob die Option **Diesen Ordner freigeben** in der Webansicht angezeigt werden soll.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,12 +42,12 @@ STDAPI CanShareFolderW(
 
 <dl> <dt>
 
-*pszpath* \[ in\]
+*pszPath* \[ In\]
 </dt> <dd>
 
 Typ: **LPCWSTR**
 
-Ein Zeiger auf eine Zeichenfolge, die den Pfad des Ordners angibt, der getestet werden soll.
+Ein Zeiger auf eine Zeichenfolge, die den Pfad des zu testden Ordners angibt.
 
 </dd> </dl>
 
@@ -55,42 +55,42 @@ Ein Zeiger auf eine Zeichenfolge, die den Pfad des Ordners angibt, der getestet 
 
 Typ: **STDAPI**
 
-Die Rückgabewerte umfassen Folgendes:
+Die Rückgabewerte umfassen Folgendes.
 
 
 
 | Rückgabecode/-wert                                                                        | BESCHREIBUNG                                                                           |
 |------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------|
-| <dl> <dt>**S \_ OK**</dt> </dl>     | Der Pfad, auf den von *pszpath* verwiesen wird, gibt einen Ordner an, der freigegeben werden kann.<br/>    |
-| <dl> <dt>**S \_ false**</dt> </dl>  | Der Pfad, auf den *pszpath* zeigt, gibt einen Ordner an, der nicht freigegeben werden kann.<br/> |
+| <dl> <dt>**S \_ OK**</dt> </dl>     | Der Pfad, auf den *pszPath zeigt,* gibt einen Ordner an, der freigegeben werden kann.<br/>    |
+| <dl> <dt>**S \_ FALSE**</dt> </dl>  | Der Pfad, auf den *pszPath zeigt,* gibt einen Ordner an, der nicht freigegeben werden kann.<br/> |
 | <dl> <dt>HRESULT-Fehler</dt> </dl> | Es ist ein Fehler aufgetreten.<br/>                                                     |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Funktion verfügt über keine zugehörige lib-Datei. Sie müssen " [**LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) " und " [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) " verwenden, um Sie zu verwenden.
+Dieser Funktion ist keine LIB-Datei zugeordnet. Sie müssen [**LoadLibrary und**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) [**GetProcAddress verwenden,**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) um sie zu verwenden.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                   |
+| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ XP-Desktop-Apps\]<br/>                                            |
+| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2003-Desktop-Apps\]<br/>                                   |
 | DLL<br/>                      | <dl> <dt>Ntshrui.dll</dt> </dl> |
-| Unicode- und ANSI-Name<br/>   | **Cansharefolderw** (Unicode)<br/>                                               |
+| Unicode- und ANSI-Name<br/>   | **CanShareFolderW** (Unicode)<br/>                                               |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[**Showsharefolderui**](./showsharefolderui.md)
+[**ShowShareFolderUI**](./showsharefolderui.md)
 </dt> </dl>
 
  

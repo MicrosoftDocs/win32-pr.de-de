@@ -1,6 +1,6 @@
 ---
-description: Wird vom Browser implementiert. Macht Methoden verfügbar, die verwalten, welcher Monitor die Windows-Taskleiste in einem System mit mehreren Monitoren enthält.
-title: Imultimonitordockingsite-Schnittstelle
+description: Wird vom Browser implementiert. Macht Methoden verfügbar, die verwalten, welcher Monitor die Windows-Taskleiste auf einem System mit mehreren Monitoren enthält.
+title: IMultiMonitorDockingSite-Schnittstelle
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,51 +12,51 @@ api_type:
 - COM
 api_location: ''
 ms.assetid: af9a7a9e-bd7c-4b17-9cb6-008df5c820d8
-ms.openlocfilehash: 3aa1ccb1c25fd2896ce9e18ba52ea3f46b1882af
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5ea3461d00c16f7384d7396e2f03946d517c460f
+ms.sourcegitcommit: 3caaa3c92dcb1ef12f84464d14ce6262e65e988e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104995198"
+ms.lasthandoff: 05/12/2021
+ms.locfileid: "109841891"
 ---
-# <a name="imultimonitordockingsite-interface"></a>Imultimonitordockingsite-Schnittstelle
+# <a name="imultimonitordockingsite-interface"></a>IMultiMonitorDockingSite-Schnittstelle
 
-Wird vom Browser implementiert. Macht Methoden verfügbar, die verwalten, welcher Monitor die Windows-Taskleiste in einem System mit mehreren Monitoren enthält.
+Wird vom Browser implementiert. Macht Methoden verfügbar, die verwalten, welcher Monitor die Windows-Taskleiste auf einem System mit mehreren Monitoren enthält.
 
 ## <a name="members"></a>Member
 
-Die **imultimonitordockingsite** -Schnittstelle erbt von der [**IUnknown**](/windows/win32/api/unknwn/nn-unknwn-iunknown) -Schnittstelle. **Imultimonitordockingsite** verfügt auch über die folgenden Typen von Membern:
+Die **IMultiMonitorDockingSite-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/win32/api/unknwn/nn-unknwn-iunknown) **IMultiMonitorDockingSite** verfügt auch über diese Membertypen:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **imultimonitordockingsite** -Schnittstelle verfügt über diese Methoden.
+Die **IMultiMonitorDockingSite-Schnittstelle** verfügt über diese Methoden.
 
 
 
 | Methode                                                            | BESCHREIBUNG                                                                                |
 |:------------------------------------------------------------------|:-------------------------------------------------------------------------------------------|
-| [**Getmonitor**](imultimonitordockingsite-getmonitor.md)         | Ruft den aktuellen Standard Monitor ab.<br/>                                               |
+| [**GetMonitor**](imultimonitordockingsite-getmonitor.md)         | Ruft den aktuellen Standardmonitor ab.<br/>                                               |
 | [**RequestMonitor**](imultimonitordockingsite-requestmonitor.md) | Überprüft, ob der Monitor aktiv und verfügbar ist.<br/>                              |
-| [**Setmonitor**](imultimonitordockingsite-setmonitor.md)         | Ändert, welcher Monitor für angedockte Symbolleisten in einem System mit mehreren Monitoren verwendet wird.<br/> |
+| [**SetMonitor**](imultimonitordockingsite-setmonitor.md)         | Änderungen, die für angedockte Symbolleisten auf einem System mit mehreren Monitoren verwendet werden.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Sie implementieren die **imultimonitordockingsite** -Schnittstelle in der Regel nicht. Der ShellBrowser implementiert diese Schnittstelle, um mehrere Monitore zu unterstützen.
+In der Regel implementieren Sie die **IMultiMonitorDockingSite-Schnittstelle** nicht. Der Shell-Browser implementiert diese Schnittstelle, um mehrere Monitore zu unterstützen.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, Windows XP \[ Desktop-Apps\]<br/> |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                   |
+| Unterstützte Mindestversion (Client)<br/> | Nur Windows 2000 Professional- und Windows \[ XP-Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2003-Desktop-Apps\]<br/>                   |
 
 
 

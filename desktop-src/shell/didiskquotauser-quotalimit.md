@@ -1,6 +1,6 @@
 ---
-description: Legt die aktuelle Kontingent Grenze des Benutzers fest oder ruft diese ab.
-title: Didiskquotauser. quotalimit (Eigenschaft)
+description: Legt das aktuelle Kontingentlimit des Benutzers fest oder ruft es ab.
+title: DIDiskQuotaUser.QuotaLimit (Eigenschaft)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 api_location:
 - Shell32.dll
 ms.assetid: 7eee1be7-8ad5-4796-910c-987fe3fd6338
-ms.openlocfilehash: 6c13c0d38c3c5f4387b7ee90165057edb111124a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b1971871bdeb18e3c7dd4c7978152bbec276fa8b
+ms.sourcegitcommit: 3caaa3c92dcb1ef12f84464d14ce6262e65e988e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104977224"
+ms.lasthandoff: 05/12/2021
+ms.locfileid: "109841631"
 ---
-# <a name="didiskquotauserquotalimit-property"></a>Didiskquotauser. quotalimit (Eigenschaft)
+# <a name="didiskquotauserquotalimit-property"></a>DIDiskQuotaUser.QuotaLimit (Eigenschaft)
 
-Legt die aktuelle [**Kontingent Grenze**](diskquotacontrol-object.md)des Benutzers fest oder ruft diese ab.
+Legt die aktuelle Kontingentgrenze des Benutzers fest oder [**ruft sie ab.**](diskquotacontrol-object.md)
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -38,9 +38,9 @@ DIDiskQuotaUser.QuotaLimit = iQuotaLimit
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Ein **ganzzahliger** Wert, der die aktuelle Kontingent Grenze des Benutzers in Bytes angibt oder empfängt.
+Ein **Ganzzahlwert,** der die aktuelle Kontingentgrenze des Benutzers in Bytes angibt oder empfängt.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
@@ -48,21 +48,21 @@ Ein **ganzzahliger** Wert, der die aktuelle Kontingent Grenze des Benutzers in B
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                          |
-| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 5,0 oder höher)</dt> </dl> |
+| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 5.0 oder höher)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[**Defaultquotalimit**](diskquotacontrol-defaultquotalimit.md)
+[**DefaultQuotaLimit**](diskquotacontrol-defaultquotalimit.md)
 </dt> <dt>
 
-[**Didiskquotauser**](didiskquotauser-object.md)
+[**DIDiskQuotaUser**](didiskquotauser-object.md)
 </dt> <dt>
 
-[**Quotalimittext**](didiskquotauser-quotalimittext.md)
+[**QuotaLimitText**](didiskquotauser-quotalimittext.md)
 </dt> </dl>
 
  

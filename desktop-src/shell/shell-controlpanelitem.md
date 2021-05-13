@@ -1,6 +1,6 @@
 ---
-description: Führt die angegebene System Steuerungs \* Anwendung (. cpl) aus.
-title: Shell. controlpanelitem-Methode (Shldisp. h)
+description: Führt die angegebene Systemsteuerung ( \* .cpl) aus.
+title: Shell.ControlPanelItem-Methode (Shldisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,19 +13,19 @@ api_type:
 api_location:
 - Shell32.dll
 ms.assetid: 54979bbd-b36b-4b5b-a8a0-5f63e9526fa5
-ms.openlocfilehash: dec27dab8bd37cc9c15e603c24a54d528cea331a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 04d2493f5d0ec5b86d19689cb8e7c2a02a82e536
+ms.sourcegitcommit: 3caaa3c92dcb1ef12f84464d14ce6262e65e988e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104979913"
+ms.lasthandoff: 05/12/2021
+ms.locfileid: "109841801"
 ---
-# <a name="shellcontrolpanelitem-method"></a>Shell. controlpanelitem-Methode
+# <a name="shellcontrolpanelitem-method"></a>Shell.ControlPanelItem-Methode
 
-Führt die angegebene System Steuerungs \* Anwendung (. cpl) aus. Wenn die Anwendung bereits geöffnet ist, wird die laufende Instanz aktiviert.
+Führt die angegebene Systemsteuerung ( \* .cpl) aus. Wenn die Anwendung bereits geöffnet ist, wird die ausgeführte Instanz aktiviert.
 
 > [!Note]  
-> Ab Windows Vista sind die meisten System Steuerungsanwendungen shellelemente und können nicht mit dieser Funktion geöffnet werden. Wenn Sie diese System Steuerungsanwendungen öffnen möchten, übergeben Sie den kanonischen Namen an control.exe. Zum Beispiel:
+> Ab Windows Vista sind die meisten Systemsteuerung Shell-Elemente und können mit dieser Funktion nicht geöffnet werden. Um diese anwendungen Systemsteuerung öffnen, übergeben Sie den kanonischen Namen an control.exe. Zum Beispiel:
 >
 > ``` syntax
 > control.exe /name Microsoft.Personalization
@@ -58,12 +58,12 @@ Shell.ControlPanelItem( _
 
 <dl> <dt>
 
-*bstrindir* \[ in\]
+*bstrDir* \[ In\]
 </dt> <dd>
 
 Typ: **[ **BSTR**](/previous-versions/windows/desktop/automat/bstr)**
 
-Der Dateiname der System Steuerungsanwendung. Alle System Steuerungsanwendungen haben die Erweiterung. cpl.
+Der Systemsteuerung dateiname der Anwendung. Alle Systemsteuerung haben die Erweiterung .cpl.
 
 </dd> </dl>
 
@@ -79,9 +79,9 @@ Diese Methode gibt keinen Wert zurück.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird **controlpanelitem** verwendet, um das Element **Anzeigeeigenschaften** der Systemsteuerung auszuführen. Die richtige Verwendung wird für JScript, VBScript und Visual Basic angezeigt.
+Im folgenden Beispiel wird **ControlPanelItem** verwendet, um das Systemsteuerung **des** Anzeigeeigenschaften ausführen. Die richtige Verwendung wird für JScript, VBScript und Visual Basic.
 
-JScript
+Jscript:
 
 
 ```JScript
@@ -97,7 +97,7 @@ JScript
 
 
 
-VBScript
+Vbscript:
 
 
 ```VB
@@ -131,17 +131,17 @@ End Sub
 
 
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, Windows XP \[ Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Client)<br/> | Nur Windows 2000 Professional- und Windows \[ XP-Desktop-Apps\]<br/>                                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                           |
-| Header<br/>                   | <dl> <dt>Shldisp. h</dt> </dl>                           |
-| IDL<br/>                      | <dl> <dt>Shldisp. idl</dt> </dl>                         |
-| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4,71 oder höher)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>                           |
+| Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                         |
+| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4.71 oder höher)</dt> </dl> |
 
 
 

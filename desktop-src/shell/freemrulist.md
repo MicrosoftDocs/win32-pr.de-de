@@ -1,6 +1,6 @@
 ---
-description: Gibt das der zuletzt verwendeten (MRU)-Liste zugeordnete Handle frei und schreibt zwischengespeicherte Daten in die Registrierung.
-title: Freemrulist-Funktion
+description: Gibt das handle frei, das der LISTE der zuletzt verwendeten (MRU) zugeordnet ist, und schreibt zwischengespeicherte Daten in die Registrierung.
+title: FreeMRUList-Funktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 api_location:
 - Comctl32.dll
 ms.assetid: 51db9352-7188-4fb7-9c92-1d9579cd7250
-ms.openlocfilehash: 8140586d5f428a66f27a71ea665ae6761380e3a4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7d31d261629853c3b82b9d1564c5e8755e047570
+ms.sourcegitcommit: 3caaa3c92dcb1ef12f84464d14ce6262e65e988e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104979649"
+ms.lasthandoff: 05/12/2021
+ms.locfileid: "109840621"
 ---
-# <a name="freemrulist-function"></a>Freemrulist-Funktion
+# <a name="freemrulist-function"></a>FreeMRUList-Funktion
 
-Gibt das der zuletzt verwendeten (MRU)-Liste zugeordnete Handle frei und schreibt zwischengespeicherte Daten in die Registrierung.
+Gibt das handle frei, das der LISTE der zuletzt verwendeten (MRU) zugeordnet ist, und schreibt zwischengespeicherte Daten in die Registrierung.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,12 +39,12 @@ int FreeMRUList(
 
 <dl> <dt>
 
-*hmru* \[ in\]
+*hMRU* \[ In\]
 </dt> <dd>
 
-Typ: **handle**
+Typ: **HANDLE**
 
-Das Handle der MRU-Liste, die freigegeben werden soll.
+Das Handle der frei zu gebenden MRU-Liste.
 
 </dd> </dl>
 
@@ -52,15 +52,15 @@ Das Handle der MRU-Liste, die freigegeben werden soll.
 
 Typ: **int**
 
-Gibt bei erfolgreicher Ausführung einen nicht negativen Wert zurück, andernfalls-1.
+Gibt bei Erfolg einen nicht negativen Wert zurück, andernfalls -1.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn die MRU-Liste mit dem **MRU \_ cachewrite** -Flag erstellt wurde, bewirkt das Aufrufen von **freemrulist** , dass alle Änderungen, die noch nicht in die in der Registrierung gespeicherte Version der MRU-Liste geschrieben wurden, zu diesem Zeitpunkt geschrieben werden.
+Wenn die MRU-Liste mit dem **MRU \_ CACHEWRITE-Flag** erstellt wurde, bewirkt der Aufruf von **FreeMRUList,** dass alle Änderungen, die noch nicht in die Version der in der Registrierung gespeicherten MRU-Liste geschrieben wurden, zu diesem Zeitpunkt geschrieben werden.
 
-Diese Funktion ist nicht in einem öffentlichen Header oder einer Bibliothek enthalten. Sie muss aus comctl32.dll durch die Ordnungszahl 152 extrahiert werden.
+Diese Funktion ist nicht in einem öffentlichen Header oder einer öffentlichen Bibliothek enthalten. Es muss aus der Ordnungszahl comctl32.dll 152 extrahiert werden.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
@@ -68,7 +68,7 @@ Diese Funktion ist nicht in einem öffentlichen Header oder einer Bibliothek ent
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                     |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                           |
-| DLL<br/>                      | <dl> <dt>Comctl32.dll (Version 5,0 oder höher)</dt> </dl> |
+| DLL<br/>                      | <dl> <dt>Comctl32.dll (Version 5.0 oder höher)</dt> </dl> |
 
 
 

@@ -1,6 +1,6 @@
 ---
-description: Wird an eine Erweiterungs-DLL gesendet, wenn der Benutzer einen Dateinamen im Datei-Manager-Verzeichnis Fenster oder im Fenster "Suchergebnisse" auswählt.
-title: FMEVENT_SELCHANGE Meldung (WF. h)
+description: Wird an eine Erweiterungs-DLL gesendet, wenn der Benutzer einen Dateinamen im Datei-Manager-Verzeichnisfenster oder im Fenster Suchergebnisse auswählt.
+title: FMEVENT_SELCHANGE Nachricht (Wfext.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 api_location:
 - Wfext.h
 ms.assetid: 0773aa74-adf2-4e90-aead-2a9a981be3cb
-ms.openlocfilehash: 4b05bca54f75bd48b5e710e31c31e5f0f56a2597
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e9aa647434aab5a483626757179a7b23b3372a02
+ms.sourcegitcommit: 3caaa3c92dcb1ef12f84464d14ce6262e65e988e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104524504"
+ms.lasthandoff: 05/12/2021
+ms.locfileid: "109842261"
 ---
-# <a name="fmevent_selchange-message"></a>\_Meldung zum Ändern der Nachricht
+# <a name="fmevent_selchange-message"></a>FMEVENT \_ SELCHANGE-Nachricht
 
-Wird an eine Erweiterungs-DLL gesendet, wenn der Benutzer einen Dateinamen im Datei-Manager-Verzeichnis Fenster oder im Fenster "Suchergebnisse" auswählt.
+Wird an eine Erweiterungs-DLL gesendet, wenn der Benutzer einen Dateinamen im Datei-Manager-Verzeichnisfenster oder im Fenster Suchergebnisse auswählt.
 
 ## <a name="parameters"></a>Parameter
 
@@ -36,15 +36,15 @@ Wird an eine Erweiterungs-DLL gesendet, wenn der Benutzer einen Dateinamen im Da
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine Erweiterungs-DLL sollte NULL zurückgeben, wenn Sie diese Nachricht verarbeitet.
+Eine Erweiterungs-DLL sollte 0 (null) zurückgeben, wenn diese Meldung verarbeitet wird.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Meldung wird nicht durch Änderungen im Strukturbereich des Verzeichnis Fensters erzeugt.
+Änderungen am Strukturteil des Verzeichnisfensters erzeugen diese Meldung nicht.
 
-Da der Benutzer die Auswahl mehrmals ändern kann, muss die Erweiterungs-DLL nach der Verarbeitung dieser Nachricht umgehend zurückgeben, um zu vermeiden, dass der Auswahl Vorgang für den Benutzer verlangsamt wird.
+Da der Benutzer die Auswahl mehrmals ändern kann, muss die Erweiterungs-DLL nach der Verarbeitung dieser Meldung sofort zurückgeben, um eine Verlangsamung des Auswahlprozesses für den Benutzer zu vermeiden.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
@@ -52,15 +52,15 @@ Da der Benutzer die Auswahl mehrmals ändern kann, muss die Erweiterungs-DLL nac
 |-------------------------------------|------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                               |
-| Header<br/>                   | <dl> <dt>WF. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Wfext.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[**"F"**](fmextensionproc.md)
+[**FMExtensionProc**](fmextensionproc.md)
 </dt> </dl>
 
  

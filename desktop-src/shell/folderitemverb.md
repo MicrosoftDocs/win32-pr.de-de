@@ -1,6 +1,6 @@
 ---
-description: Stellt ein einzelnes Verb dar, das einem Element zur Verfügung steht. Dieses Objekt enthält Eigenschaften und Methoden, mit denen Sie Informationen über das Verb abrufen können.
-title: Folderitemverb-Objekt (Shldisp. h)
+description: Stellt ein einzelnes Verb dar, das für ein Element verfügbar ist. Dieses Objekt enthält Eigenschaften und Methoden, mit denen Sie Informationen zum Verb abrufen können.
+title: FolderItemVerb-Objekt (Shldisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,33 +13,33 @@ api_type:
 api_location:
 - Shell32.dll
 ms.assetid: 22f52e3f-875e-4dde-8875-3228639bc7f1
-ms.openlocfilehash: d7039f05a3c22aa3e3195bd1c3bd786d9fd4c164
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 167fe7b48d68622b108aeb0caf0302c0cabce9f6
+ms.sourcegitcommit: 3caaa3c92dcb1ef12f84464d14ce6262e65e988e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104215951"
+ms.lasthandoff: 05/12/2021
+ms.locfileid: "109840631"
 ---
-# <a name="folderitemverb-object"></a>Folderitemverb-Objekt
+# <a name="folderitemverb-object"></a>FolderItemVerb-Objekt
 
-Stellt ein einzelnes Verb dar, das einem Element zur Verfügung steht. Dieses Objekt enthält Eigenschaften und Methoden, mit denen Sie Informationen über das Verb abrufen können.
+Stellt ein einzelnes Verb dar, das für ein Element verfügbar ist. Dieses Objekt enthält Eigenschaften und Methoden, mit denen Sie Informationen zum Verb abrufen können.
 
 ## <a name="members"></a>Member
 
-Das **folderitemverb** -Objekt verfügt über diese Typen von Membern:
+Das **FolderItemVerb-Objekt** verfügt über diese Typen von Membern:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Das **folderitemverb** -Objekt verfügt über diese Methoden.
+Das **FolderItemVerb-Objekt** verfügt über diese Methoden.
 
 
 
 | Methode                              | BESCHREIBUNG                                                                                  |
 |:------------------------------------|:---------------------------------------------------------------------------------------------|
-| [**Doit**](folderitemverb-doit.md) | Führt ein Verb für das [**folderItem**](folderitem.md) -Element aus, das dem Verb zugeordnet ist.<br/> |
+| [**Doit**](folderitemverb-doit.md) | Führt ein Verb für das [**FolderItem**](folderitem.md) aus, das dem Verb zugeordnet ist.<br/> |
 
 
 
@@ -47,7 +47,7 @@ Das **folderitemverb** -Objekt verfügt über diese Methoden.
 
 ### <a name="properties"></a>Eigenschaften
 
-Das **folderitemverb** -Objekt verfügt über diese Eigenschaften.
+Das **FolderItemVerb-Objekt** verfügt über diese Eigenschaften.
 
 
 
@@ -61,17 +61,17 @@ Das **folderitemverb** -Objekt verfügt über diese Eigenschaften.
 
  
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, Windows XP \[ Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, nur Windows \[ XP-Desktop-Apps\]<br/>                                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                           |
-| Header<br/>                   | <dl> <dt>Shldisp. h</dt> </dl>                           |
-| IDL<br/>                      | <dl> <dt>Shldisp. idl</dt> </dl>                         |
-| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4,71 oder höher)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>                           |
+| Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                         |
+| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4.71 oder höher)</dt> </dl> |
 
 
 

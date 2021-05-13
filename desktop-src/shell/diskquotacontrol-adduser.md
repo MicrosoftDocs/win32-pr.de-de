@@ -1,6 +1,6 @@
 ---
-description: Weist einem neuen Benutzer ein nicht standardmäßiges Datenträger Kontingent zu.
-title: Diskquotacontrol. AddUser-Methode
+description: Weist einem neuen Benutzer ein nicht standardmäßiges Datenträgerkontingent zu.
+title: DiskQuotaControl.AddUser-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 api_location:
 - Shell32.dll
 ms.assetid: de20d016-83da-42ac-962f-86faf9b25419
-ms.openlocfilehash: e91bfee0cf491d7191d64bdec6ed7593e10654ef
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9dd69b78210ecda418e784681694d84b27b1732a
+ms.sourcegitcommit: 3caaa3c92dcb1ef12f84464d14ce6262e65e988e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104525337"
+ms.lasthandoff: 05/12/2021
+ms.locfileid: "109841531"
 ---
-# <a name="diskquotacontroladduser-method"></a>Diskquotacontrol. AddUser-Methode
+# <a name="diskquotacontroladduser-method"></a>DiskQuotaControl.AddUser-Methode
 
-Weist einem neuen Benutzer ein nicht standardmäßiges Datenträger Kontingent zu.
+Weist einem neuen Benutzer ein nicht standardmäßiges Datenträgerkontingent zu.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,28 +39,28 @@ objRetVal = DiskQuotaControl.AddUser(
 
 <dl> <dt>
 
-*slogonname* 
+*sLogonName* 
 </dt> <dd>
 
-Typ: **char**
+Typ: **CHAR**
 
-Ein Zeichen folgen Wert, der den Anmelde Namen des Benutzers enthält. Verwenden Sie die [**usernameresolution**](diskquotacontrol-usernameresolution.md) -Eigenschaft, um anzugeben, wie der Name aufgelöst werden soll.
+Ein Zeichenfolgenwert, der den Anmeldenamen des Benutzers enthält. Verwenden Sie die [**UserNameResolution-Eigenschaft,**](diskquotacontrol-usernameresolution.md) um anzugeben, wie der Name aufgelöst werden soll.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Type: **Object**
+Typ: **Objekt**
 
-Gibt einen Objekt Ausdruck zurück, der das [**didiskquotauser**](didiskquotauser-object.md) -Objekt des Benutzers ergibt.
+Gibt einen Objektausdruck zurück, der das [**DIDiskQuotaUser-Objekt**](didiskquotauser-object.md) des Benutzers ergibt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das NTFS-Dateisystem erstellt automatisch einen Benutzer Kontingent Eintrag, wenn ein Benutzer zum ersten Mal auf das Volume schreibt. Einträge, die auf diese Weise erstellt werden, werden die Standardwerte für Warnungs Schwellenwert und feste Kontingent Grenze für das Volume zugewiesen. Mit dieser Methode können Sie einen Benutzer Kontingent Eintrag erstellen, bevor ein Benutzerinformationen in das Volume schreibt. Er gibt ein [**didiskquotauser**](didiskquotauser-object.md) -Objekt zurück, das verwendet werden kann, um einen Warnungs Schwellenwert oder einen Kontingent Grenzwert zuzuweisen, der sich von den Standardeinstellungen für das Volume unterscheidet.
+Das NTFS-Dateisystem erstellt automatisch einen Benutzerkontingenteintrag, wenn ein Benutzer zum ersten Mal auf das Volume schreibt. Einträgen, die auf diese Weise erstellt werden, werden der Standardmäßige Warnungsschwellenwert und die Festgelegten Kontingentgrenzwerte für das Volume zugewiesen. Mit dieser Methode können Sie einen Benutzerkontingenteintrag erstellen, bevor ein Benutzer Informationen auf das Volume schreibt. Es wird ein [**DIDiskQuotaUser-Objekt**](didiskquotauser-object.md) zurückgegeben, mit dem ein Warnungsschwellenwert oder ein Kontingentgrenzwert zugewiesen werden kann, der sich von den Standardeinstellungen für das Volume unterscheidet.
 
-Wenn der Benutzer bereits vorhanden ist, wird kein neuer Eintrag erstellt. Die-Methode gibt das [**didiskquotauser**](didiskquotauser-object.md) -Objekt zurück, das dem vorhandenen Eintrag zugeordnet ist.
+Wenn der Benutzer bereits vorhanden ist, wird kein neuer Eintrag erstellt. Die -Methode gibt das [**DIDiskQuotaUser-Objekt**](didiskquotauser-object.md) zurück, das dem vorhandenen Eintrag zugeordnet ist.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
@@ -68,21 +68,21 @@ Wenn der Benutzer bereits vorhanden ist, wird kein neuer Eintrag erstellt. Die-M
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                          |
-| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 5,0 oder höher)</dt> </dl> |
+| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 5.0 oder höher)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[**Defaultquotalimit**](diskquotacontrol-defaultquotalimit.md)
+[**DefaultQuotaLimit**](diskquotacontrol-defaultquotalimit.md)
 </dt> <dt>
 
-[**Defaultquotathreshold**](diskquotacontrol-defaultquotathreshold.md)
+[**DefaultQuotaThreshold**](diskquotacontrol-defaultquotathreshold.md)
 </dt> <dt>
 
-[**Diskquotacontrol-Objekt**](diskquotacontrol-object.md)
+[**DiskQuotaControl-Objekt**](diskquotacontrol-object.md)
 </dt> </dl>
 
  

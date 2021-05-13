@@ -1,6 +1,6 @@
 ---
-description: Legt diesen Zeiger auf eine Element Bezeichner-Liste (PIDL) als ungültigen Teil des shellordners.
-title: 'Ishellfoldersearchable:: invalidatesearch-Methode'
+description: Macht diesen Zeiger auf eine Elementbezeichnerliste (PIDL) zu einem ungültigen Teil des Shellordners.
+title: IShellFolderSearchable::InvalidateSearch-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 api_location:
 - Shell32.dll
 ms.assetid: 6985a299-8547-4db4-99f9-d46dafe4789b
-ms.openlocfilehash: 36c1de0a606fdfddbe8eb74b5cc6c20cdda8e983
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 43d76c6a27b301a61474b8028af16e5e540cf2ce
+ms.sourcegitcommit: 3caaa3c92dcb1ef12f84464d14ce6262e65e988e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214870"
+ms.lasthandoff: 05/12/2021
+ms.locfileid: "109841691"
 ---
-# <a name="ishellfoldersearchableinvalidatesearch-method"></a>Ishellfoldersearchable:: invalidatesearch-Methode
+# <a name="ishellfoldersearchableinvalidatesearch-method"></a>IShellFolderSearchable::InvalidateSearch-Methode
 
-Legt diesen Zeiger auf eine Element Bezeichner-Liste (PIDL) als ungültigen Teil des shellordners.
+Macht diesen Zeiger auf eine Elementbezeichnerliste (PIDL) zu einem ungültigen Teil des Shellordners.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,21 +40,21 @@ HRESULT InvalidateSearch(
 
 <dl> <dt>
 
-*pidlsearch* \[ in\]
+*pidlSearch* \[ In\]
 </dt> <dd>
 
-Typ: **lpcitemittellist**
+Typ: **LPCITEMIDLIST**
 
-Ein Zeiger auf die [**itemittellist**](/windows/desktop/api/Shtypes/ns-shtypes-itemidlist) -Struktur für den Suchordner.
+Ein Zeiger auf die [**ITEMIDLIST-Struktur**](/windows/desktop/api/Shtypes/ns-shtypes-itemidlist) für den Suchordner.
 
 </dd> <dt>
 
-*pdwflags* \[ in\]
+*pdwFlags* \[ In\]
 </dt> <dd>
 
-Typ: **DWORD \** _
+Typ: **DWORD \***
 
-Zurzeit sind keine Flags definiert. Legen Sie auf _ * NULL * * fest.
+Derzeit sind keine Flags definiert. legen Sie auf **NULL** fest.
 
 </dd> </dl>
 
@@ -62,13 +62,13 @@ Zurzeit sind keine Flags definiert. Legen Sie auf _ * NULL * * fest.
 
 Typ: **HRESULT**
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn ein Suchordner ungültig wird, kann er die Bereinigung aller verwendeten Ressourcen ausführen. Die **ishellfoldersearchable:: invalidatesearch** -Methode kann bewirken, dass eine asynchrone Suche abgebrochen wird, und führt dazu, dass das [**ishellfoldersearchablecallback**](ishellfoldersearchablecallback.md) -Schnittstellen Objekt die endgültige Version enthält.
+Wenn ein Suchordner für ungültig erklärt wird, kann er eine Bereinigung aller ressourcen durchführen, die er verwendet hat. Die **IShellFolderSearchable::InvalidateSearch-Methode** kann dazu führen, dass eine asynchrone Suche abgebrochen wird, was zur endgültigen Veröffentlichung des [**IShellFolderSearchableCallback-Schnittstellenobjekts**](ishellfoldersearchablecallback.md) führt.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 

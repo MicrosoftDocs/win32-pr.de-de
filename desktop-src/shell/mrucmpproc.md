@@ -1,6 +1,6 @@
 ---
-description: Wird verwendet, um zu bestimmen, ob ein Element in einer zuletzt verwendeten (MRU-) Liste vorhanden ist.
-title: Mrucmpproc-Rückruffunktion
+description: Wird verwendet, um zu bestimmen, ob ein Element in einer LISTE der zuletzt verwendeten Elemente (MRU) vorhanden ist.
+title: MRUCMPPROC-Rückruffunktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 - UserDefined
 api_location: ''
 ms.assetid: 00f31d6b-2a96-4abd-9647-24a6e66aa22f
-ms.openlocfilehash: f95856f6508ad728a15b3df3d6f5eafa4f5bd2ff
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 83020fbcd0d4cfcfbc643d1360e3671595de6f32
+ms.sourcegitcommit: 3caaa3c92dcb1ef12f84464d14ce6262e65e988e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103959124"
+ms.lasthandoff: 05/12/2021
+ms.locfileid: "109840781"
 ---
-# <a name="mrucmpproc-callback-function"></a>Mrucmpproc-Rückruffunktion
+# <a name="mrucmpproc-callback-function"></a>MRUCMPPROC-Rückruffunktion
 
-Wird verwendet, um zu bestimmen, ob ein Element in einer zuletzt verwendeten (MRU-) Liste vorhanden ist.
+Wird verwendet, um zu bestimmen, ob ein Element in einer LISTE der zuletzt verwendeten Elemente (MRU) vorhanden ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -63,13 +63,13 @@ Eine zweite Zeichenfolge, die mit der ersten verglichen werden soll.
 
 Typ: **int**
 
-Gibt 0 zurück, wenn die Elemente identisch sind, andernfalls ein Wert ungleich 0 (null).
+Gibt 0 zurück, wenn die Elemente identisch sind, andernfalls ein Wert ungleich 0.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Funktion kann optional für die Verwendung in der [**mruinfo**](mruinfo.md) -Struktur angegeben werden, die an " [**kreatemrulistw**](createmrulist.md)" übergeben wird. Dies ist hilfreich, wenn die MRU-Liste mit dem **MRU- \_ Binärflag** erstellt wurde. Wenn diese Funktion nicht angegeben wird, werden standardmäßige Zeichen folgen Vergleichsfunktionen verwendet.
+Diese Funktion kann optional für die Verwendung in der [**MRUINFO-Struktur**](mruinfo.md) angegeben werden, die an [**CreateMRUListW übergeben wird.**](createmrulist.md) Dies ist nützlich, wenn die MRU-Liste mit dem **MRU \_ BINARY-Flag erstellt** wurde. Wenn diese Funktion nicht angegeben wird, werden Standardfunktionen für den Zeichenfolgenvergleich verwendet.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
@@ -77,7 +77,7 @@ Diese Funktion kann optional für die Verwendung in der [**mruinfo**](mruinfo.md
 |-------------------------------------|-----------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>      |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>            |
-| Unicode- und ANSI-Name<br/>   | **Mrucmpprocw** (Unicode) und **mrucmpproca** (ANSI)<br/> |
+| Unicode- und ANSI-Name<br/>   | **MRUCMPPROCW** (Unicode) und **MRUCMPPROCA** (ANSI)<br/> |
 
 
 

@@ -1,6 +1,6 @@
 ---
-description: Lädt eine Liste von Zeichen folgen in die Liste der zuletzt verwendeten (MRU-) Einträge aus der Registrierung.
-title: 'Iaclcustommru:: Initialize-Methode'
+description: Lädt eine Liste von Zeichenfolgen in die Liste der zuletzt verwendeten (MRU) aus der Registrierung.
+title: IACLCustomMRU::Initialize-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,16 +12,16 @@ api_type:
 - COM
 api_location: ''
 ms.assetid: 358921b0-46c4-4428-b0b5-57a44fc3247b
-ms.openlocfilehash: 768df625cb66c888ddccc85f72de5b8676c20b10
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 715c6991021070dd132942de0bb18c8b77684860
+ms.sourcegitcommit: 3caaa3c92dcb1ef12f84464d14ce6262e65e988e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104994631"
+ms.lasthandoff: 05/12/2021
+ms.locfileid: "109841231"
 ---
-# <a name="iaclcustommruinitialize-method"></a>Iaclcustommru:: Initialize-Methode
+# <a name="iaclcustommruinitialize-method"></a>IACLCustomMRU::Initialize-Methode
 
-Lädt eine Liste von Zeichen folgen in die Liste der zuletzt verwendeten (MRU-) Einträge aus der Registrierung.
+Lädt eine Liste von Zeichenfolgen in die Liste der zuletzt verwendeten (MRU) aus der Registrierung.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,21 +39,21 @@ HRESULT Initialize(
 
 <dl> <dt>
 
-*pwszmruregkey* \[ in\]
+*pwszMRURegKey* \[ In\]
 </dt> <dd>
 
 Typ: **LPCWSTR**
 
-Ein Zeiger auf einen Puffer, der den Registrierungsschlüssel enthält, der die Zeichen folgen für die MRU-Liste enthält.
+Ein Zeiger auf einen Puffer, der den Registrierungsschlüssel mit den Zeichenfolgen für die MRU-Liste enthält.
 
 </dd> <dt>
 
-*dwMax* \[ in\]
+*dwMax* \[ In\]
 </dt> <dd>
 
 Typ: **DWORD**
 
-Die maximale Anzahl von Einträgen, die von *pwszmruregkey* entnommen werden können.
+Die maximale Anzahl von Einträgen, die aus *pwszMRURegKey* entnommen werden können.
 
 </dd> </dl>
 
@@ -61,16 +61,16 @@ Die maximale Anzahl von Einträgen, die von *pwszmruregkey* entnommen werden kö
 
 Typ: **HRESULT**
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ XP-Desktop-Apps\]<br/>          |
+| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2003-Desktop-Apps\]<br/> |
 
 
 

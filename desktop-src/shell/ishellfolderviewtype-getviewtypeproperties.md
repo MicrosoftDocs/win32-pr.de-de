@@ -1,6 +1,6 @@
 ---
 description: Ruft die Eigenschaften der Ansicht ab.
-title: 'Ishellfolderviewtype:: getviewtypeproperties-Methode'
+title: IShellFolderViewType::GetViewTypeProperties-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,14 +13,14 @@ api_type:
 api_location:
 - Shell32.dll
 ms.assetid: 82be6bd5-a46c-48b3-a1f0-a92b9454c35e
-ms.openlocfilehash: f4368edf6eae3e6892a3d81147401e061548f6e9
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f5c7c6b75c89711a69ac578b3d04a72362b1eac9
+ms.sourcegitcommit: 3caaa3c92dcb1ef12f84464d14ce6262e65e988e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104977928"
+ms.lasthandoff: 05/12/2021
+ms.locfileid: "109842701"
 ---
-# <a name="ishellfolderviewtypegetviewtypeproperties-method"></a>Ishellfolderviewtype:: getviewtypeproperties-Methode
+# <a name="ishellfolderviewtypegetviewtypeproperties-method"></a>IShellFolderViewType::GetViewTypeProperties-Methode
 
 Ruft die Eigenschaften der Ansicht ab.
 
@@ -40,43 +40,43 @@ HRESULT GetViewTypeProperties(
 
 <dl> <dt>
 
-*PIDL* \[ in\]
+*pidl* \[ In\]
 </dt> <dd>
 
-Type: **pcuitemid \_ Child**
+Typ: **PCUITEMID \_ CHILD**
 
-eine PIDL.
+EINE PIDL.
 
 </dd> <dt>
 
-*pdwflags* \[ vorgenommen\]
+*pdwFlags* \[ out\]
 </dt> <dd>
 
-Typ: **DWORD \** _
+Typ: **DWORD \***
 
-Ein Zeiger auf eine ganzzahlige Variable ohne Vorzeichen, die die Ansichts Eigenschaften empfängt und angibt, was beim Auswählen der Sicht geschehen soll. Flags können eine beliebige Kombination der folgenden Werte sein.
+Ein Zeiger auf eine ganzzahlige Variable ohne Vorzeichen, die die Ansichtseigenschaften empfängt, die angeben, was bei Auswahl der Ansicht zu tun ist. Flags können eine beliebige Kombination der folgenden Werte sein.
 
 <dt>
 
 <span id="SFVTFLAG_NOTIFY_CREATE"></span><span id="sfvtflag_notify_create"></span>
 
-<span id="SFVTFLAG_NOTIFY_CREATE"></span><span id="sfvtflag_notify_create"></span>_ *Sfvtflag \_ Notify \_ Create** (0x00000001)
+<span id="SFVTFLAG_NOTIFY_CREATE"></span><span id="sfvtflag_notify_create"></span>**SFVTFLAG \_ NOTIFY \_ CREATE** (0x00000001)
 
 
 </dt> <dd>
 
-Erstellen Sie ein Ansichts Element, wenn nicht vorhanden.
+Erstellen Sie ein Ansichtselement, falls es nicht dort ist.
 
 </dd> <dt>
 
 <span id="SFVTFLAG_NOTIFY_RESORT"></span><span id="sfvtflag_notify_resort"></span>
 
-<span id="SFVTFLAG_NOTIFY_RESORT"></span><span id="sfvtflag_notify_resort"></span>**Sfvtflag \_ \_Ressort Benachrichtigen** (0x00000002)
+<span id="SFVTFLAG_NOTIFY_RESORT"></span><span id="sfvtflag_notify_resort"></span>**SFVTFLAG \_ NOTIFY \_ RESORT** (0x00000002)
 
 
 </dt> <dd>
 
-Resert PIDL und resortieren.
+Erneutes Einreihen von PIDL und neu sortieren.
 
 </dd> </dl> </dd> </dl>
 
@@ -84,9 +84,9 @@ Resert PIDL und resortieren.
 
 Typ: **HRESULT**
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 

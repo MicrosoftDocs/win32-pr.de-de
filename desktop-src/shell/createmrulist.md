@@ -1,6 +1,6 @@
 ---
-description: Erstellt eine neue Liste der zuletzt verwendeten (MRU).
-title: Funktion "anatemrulistw"
+description: Erstellt eine neue MRU-Liste (Most Recently Used).
+title: CreateMRUListW-Funktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - Comctl32.dll
 ms.assetid: b2d9e3c7-8151-45ef-9658-bd33a87b4c9c
-ms.openlocfilehash: 572e52f1461e3d48ab9eba1aa903c7fb690636d1
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 34cd3dd9e5b9e62bbdd13b31d95e7205e4427de6
+ms.sourcegitcommit: 3caaa3c92dcb1ef12f84464d14ce6262e65e988e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103750248"
+ms.lasthandoff: 05/12/2021
+ms.locfileid: "109843381"
 ---
-# <a name="createmrulistw-function"></a>Funktion "anatemrulistw"
+# <a name="createmrulistw-function"></a>CreateMRUListW-Funktion
 
-Erstellt eine neue Liste der zuletzt verwendeten (MRU).
+Erstellt eine neue MRU-Liste (Most Recently Used).
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,12 +40,12 @@ int CreateMRUListW(
 
 <dl> <dt>
 
-*lpmi* \[ in\]
+*lpmi* \[ In\]
 </dt> <dd>
 
-Typ: **lpmruinfo**
+Typ: **LPMRUINFO**
 
-Ein Zeiger auf eine [**mruinfo**](mruinfo.md) -Struktur, die die MRU-Liste definiert.
+Ein Zeiger auf eine [**MRUINFO-Struktur,**](mruinfo.md) die die MRU-Liste definiert.
 
 </dd> </dl>
 
@@ -53,13 +53,13 @@ Ein Zeiger auf eine [**mruinfo**](mruinfo.md) -Struktur, die die MRU-Liste defin
 
 Typ: **int**
 
-Gibt ein Handle für die neue MRU-Liste oder bei einem Fehler 0 (null) zurück.
+Gibt ein Handle für die neue MRU-Liste oder 0 (bei einem Fehler) zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Funktion ist nicht in einem öffentlichen Header oder einer Bibliothek enthalten. Der Zugriff darauf erfolgt über [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) oder das Extrahieren aus comctl32.dll durch die Ordnungszahl, die 400 für " **featemrulistw**" ist.
+Diese Funktion ist nicht in einem öffentlichen Header oder einer öffentlichen Bibliothek enthalten. Der Zugriff kann über [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) erfolgen oder aus comctl32.dll durch die Ordnungszahl 400 für **CreateMRUListW** extrahiert werden.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
@@ -67,8 +67,8 @@ Diese Funktion ist nicht in einem öffentlichen Header oder einer Bibliothek ent
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                     |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                           |
-| DLL<br/>                      | <dl> <dt>Comctl32.dll (Version 5,0 oder höher)</dt> </dl> |
-| Unicode- und ANSI-Name<br/>   | " **Anatemrulistw** " (Unicode)<br/>                                                                        |
+| DLL<br/>                      | <dl> <dt>Comctl32.dll (Version 5.0 oder höher)</dt> </dl> |
+| Unicode- und ANSI-Name<br/>   | **CreateMRUListW** (Unicode)<br/>                                                                        |
 
 
 

@@ -1,6 +1,6 @@
 ---
-description: Ruft den aktuellen Standard Monitor ab.
-title: 'Imultimonitordockingsite:: getmonitor-Methode'
+description: Ruft den aktuellen Standardmonitor ab.
+title: IMultiMonitorDockingSite::GetMonitor-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,16 +12,16 @@ api_type:
 - COM
 api_location: ''
 ms.assetid: 0bae75eb-ebd5-4de4-9249-0e9bb489f61f
-ms.openlocfilehash: 1260da5ee4404a7ec4597a57e7e3836d6f133426
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2cd437fd6c0e842eb314db6c57420af6b54b05ff
+ms.sourcegitcommit: 3caaa3c92dcb1ef12f84464d14ce6262e65e988e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104994943"
+ms.lasthandoff: 05/12/2021
+ms.locfileid: "109840641"
 ---
-# <a name="imultimonitordockingsitegetmonitor-method"></a>Imultimonitordockingsite:: getmonitor-Methode
+# <a name="imultimonitordockingsitegetmonitor-method"></a>IMultiMonitorDockingSite::GetMonitor-Methode
 
-Ruft den aktuellen Standard Monitor ab.
+Ruft den aktuellen Standardmonitor ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,38 +39,38 @@ HRESULT GetMonitor(
 
 <dl> <dt>
 
-*punksrc* \[ in\]
+*dateiSrc* \[ In\]
 </dt> <dd>
 
-Typ: **[**IUnknown**](/windows/win32/api/unknwn/nn-unknwn-iunknown) \** _
+Typ: **[ **IUnknown**](/windows/win32/api/unknwn/nn-unknwn-iunknown)\***
 
-Ein Zeiger auf das Objekt, das die [_ *idockingwindow* *](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-idockingwindow) -Schnittstelle implementiert, für die der Monitor angefordert wird.
+Ein Zeiger auf das Objekt, das die [**IDockingWindow-Schnittstelle**](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-idockingwindow) implementiert, für die der Monitor angefordert wird.
 
 </dd> <dt>
 
-*phmon* \[ vorgenommen\]
+*phMon* \[ out\]
 </dt> <dd>
 
-Geben Sie Folgendes ein: **Hmonitor \** _
+Typ: **HMONITOR \***
 
-Wenn die Funktion zurückgegeben wird, enthält Sie einen Zeiger auf das Handle des Standard Monitors.
+Wenn die Funktion zurückgegeben wird, enthält sie einen Zeiger auf das Handle des Standardmonitors.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Type: _ *HRESULT**
+Typ: **HRESULT**
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, Windows XP \[ Desktop-Apps\]<br/> |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                   |
+| Unterstützte Mindestversion (Client)<br/> | Nur Windows 2000 Professional- und Windows \[ XP-Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2003-Desktop-Apps\]<br/>                   |
 
 
 

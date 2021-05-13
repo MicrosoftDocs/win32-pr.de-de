@@ -1,5 +1,5 @@
 ---
-description: Definiert die registrierten Profile, denen das referenzierte System entspricht.
+description: Definiert die registrierten Profile, denen das System entspricht, auf das verwiesen wird.
 ms.assetid: F01E79BE-82D9-49E0-AB0C-FD1B48BC4A55
 title: Msvm_ElementConformsToProfile-Klasse
 ms.topic: reference
@@ -15,18 +15,18 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 6b0afdc7dd9d55a036de0695f9a88a95d2b01308
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e9b4e257c2ebc0584a8291461439f75238599d35
+ms.sourcegitcommit: 3caaa3c92dcb1ef12f84464d14ce6262e65e988e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106363592"
+ms.lasthandoff: 05/12/2021
+ms.locfileid: "109843281"
 ---
-# <a name="msvm_elementconformstoprofile-class"></a>MSVM \_ elementreformstoprofile-Klasse
+# <a name="msvm_elementconformstoprofile-class"></a>Msvm \_ ElementConformsToProfile-Klasse
 
-Definiert die registrierten Profile, denen das referenzierte System entspricht. Diese Zuordnung kann auf ein beliebiges verwaltetes Element angewendet werden. Die typische Verwendung wird auf eine Instanz höherer Ebene angewendet, z. b. auf ein System, einen Namespace oder einen Dienst. Wenn Sie auf eine Instanz einer höheren Ebene angewendet werden, müssen sich alle Bestandteile entsprechend der Unterstützung der Übereinstimmung des verwalteten Elements mit dem benannten registrierten Profil Verhalten.
+Definiert die registrierten Profile, denen das System entspricht, auf das verwiesen wird. Diese Zuordnung kann für jedes verwaltete Element gelten. Die typische Verwendung wendet sie auf eine Instanz auf höherer Ebene an, z. B. auf ein System, einen Namespace oder einen Dienst. Bei Anwendung auf eine Instanz auf höherer Ebene müssen sich alle Bestandteile entsprechend verhalten, um die Konformität des verwalteten Elements mit dem benannten registrierten Profil zu unterstützen.
 
-Die folgende Syntax wird Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften.
+Die folgende Syntax ist Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,45 +40,45 @@ class Msvm_ElementConformsToProfile : CIM_ElementConformsToProfile
 
 ## <a name="members"></a>Member
 
-Die **MSVM \_ elementkonformstoprofile** -Klasse verfügt über diese Typen von Membern:
+Die **Msvm \_ ElementConformsToProfile-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSVM \_ ElementConfiguration** -Klasse verfügt über diese Eigenschaften.
+Die **Msvm \_ ElementConformsToProfile-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Conformantstandard**
+**ConformantStandard**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **[ **MSVM \_ registeredprofile**](msvm-registeredprofile.md)**
+Datentyp: **[ **Msvm \_ RegisteredProfile**](msvm-registeredprofile.md)**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **override**](/windows/desktop/WmiSdk/standard-qualifiers)
+Qualifizierer: [ **Überschreiben**](/windows/desktop/WmiSdk/standard-qualifiers)
 </dt> </dl>
 
-Ein Verweis auf eine Instanz der [**MSVM \_ registeredprofile**](msvm-registeredprofile.md) -Klasse, die das registrierte Profil darstellt, dem das System entspricht.
+Ein Verweis auf eine Instanz der [**Msvm \_ RegisteredProfile-Klasse,**](msvm-registeredprofile.md) die das registrierte Profil darstellt, dem das System entspricht.
 
 </dd> <dt>
 
-**"Managedelement"**
+**ManagedElement**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **[ **MSVM \_ Computersystem**](msvm-computersystem.md)**
+Datentyp: **[ **Msvm \_ ComputerSystem**](msvm-computersystem.md)**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **override**](/windows/desktop/WmiSdk/standard-qualifiers)
+Qualifizierer: [ **Überschreiben**](/windows/desktop/WmiSdk/standard-qualifiers)
 </dt> </dl>
 
-Ein Verweis auf eine Instanz der [**MSVM \_ Computersystem**](msvm-computersystem.md) -Klasse, die das System darstellt, das dem registrierten Profil entspricht.
+Ein Verweis auf eine Instanz der [**Msvm \_ ComputerSystem-Klasse,**](msvm-computersystem.md) die das System darstellt, das dem registrierten Profil entspricht.
 
 </dd> </dl>
 
@@ -88,10 +88,10 @@ Ein Verweis auf eine Instanz der [**MSVM \_ Computersystem**](msvm-computersyste
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | \[Nur Desktop-Apps Windows 8.1\]<br/>                                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 R2 \[ -Desktop-Apps\]<br/>                                                 |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 8.1 \[ Desktop-Apps\]<br/>                                                            |
+| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ R2-Desktop-Apps\]<br/>                                                 |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 

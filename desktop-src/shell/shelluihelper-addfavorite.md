@@ -1,6 +1,6 @@
 ---
-description: Zeigt die Standardbenutzer Oberfläche zum Erstellen eines bevorzugten Elements an. Die Benutzeroberfläche wird mit den angegebenen Parametern initialisiert.
-title: Shelluihelper. addfavorit-Methode (Exdisp. h)
+description: Zeigt die Standardbenutzerschnittstelle zum Erstellen eines bevorzugten Elements an. Die Benutzeroberfläche wird mit den angegebenen Parametern initialisiert.
+title: ShellUIHelper.AddFavorite-Methode (Exdisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 api_location:
 - Shell32.dll
 ms.assetid: b30e776e-642c-4599-b83f-ef15bc0b23d2
-ms.openlocfilehash: a5c3cae52f0ad18c1f2ddf6cf91759d1c6daf6c4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2ce6fa0a71bb2ab995e510f06b4403c78bebcc60
+ms.sourcegitcommit: 3caaa3c92dcb1ef12f84464d14ce6262e65e988e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104980721"
+ms.lasthandoff: 05/12/2021
+ms.locfileid: "109842451"
 ---
-# <a name="shelluihelperaddfavorite-method"></a>Shelluihelper. addfavorit-Methode
+# <a name="shelluihelperaddfavorite-method"></a>ShellUIHelper.AddFavorite-Methode
 
-Zeigt die Standardbenutzer Oberfläche zum Erstellen eines bevorzugten Elements an. Die Benutzeroberfläche wird mit den angegebenen Parametern initialisiert.
+Zeigt die Standardbenutzerschnittstelle zum Erstellen eines bevorzugten Elements an. Die Benutzeroberfläche wird mit den angegebenen Parametern initialisiert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,29 +40,29 @@ iRetVal = ShellUIHelper.AddFavorite(
 
 <dl> <dt>
 
-*sUrl* \[ in\]
+*sURL* \[ In\]
 </dt> <dd>
 
 Typ: **[ **BSTR**](/previous-versions/windows/desktop/automat/bstr)**
 
-Ein **Zeichen** folgen Wert, der die URL des Elements angibt, das dem Ordner **Favoriten** hinzugefügt werden soll.
+Ein  Zeichenfolgenwert, der die URL des Elements angibt, das dem Ordner **Favoriten** hinzugefügt werden soll.
 
 </dd> <dt>
 
-*vtitle* \[ in, optional\]
+*vTitle* \[ in, optional\]
 </dt> <dd>
 
-Typ: **Variant \** _
+Typ: **\* Variant**
 
-Ein _ *Variant**-Wert, der den Namen des Elements angibt.
+Ein **Variant-Wert,** der den Namen des Elements angibt.
 
 </dd> </dl>
 
 ## <a name="examples"></a>Beispiele
 
-Das folgende Beispiel zeigt die ordnungsgemäße Verwendung dieser Methode für JScript Embedded in HTML und Visual Basic.
+Das folgende Beispiel zeigt die ordnungsgemäße Verwendung dieser Methode für JScript, das in HTML und Visual Basic eingebettet ist.
 
-JScript
+Jscript:
 
 
 ```JScript
@@ -107,16 +107,16 @@ End Sub
 
 
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, Windows XP \[ Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, nur Windows \[ XP-Desktop-Apps\]<br/>                                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                           |
-| Header<br/>                   | <dl> <dt>Exdisp. h</dt> </dl>                            |
-| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4,71 oder höher)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Exdisp.h</dt> </dl>                            |
+| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4.71 oder höher)</dt> </dl> |
 
 
 

@@ -1,6 +1,6 @@
 ---
 description: Wird aufgerufen, wenn ein Fenster als Shellfenster registriert wird.
-title: Dshellwindowsvents. windowregistered-Methode
+title: DShellWindowsEvents.WindowRegistered-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,14 +13,14 @@ api_type:
 api_location:
 - Shdocvw.dll
 ms.assetid: 7faf758a-daa0-47f5-9f95-61fe3d8286ea
-ms.openlocfilehash: b12ed98c6b2a11e5886ed9e76d324a1a6842cda8
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 64bf83a88584c5d97994726696d4fb3a1e971bdf
+ms.sourcegitcommit: 3caaa3c92dcb1ef12f84464d14ce6262e65e988e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "104983068"
+ms.lasthandoff: 05/12/2021
+ms.locfileid: "109841451"
 ---
-# <a name="dshellwindowseventswindowregistered-method"></a>Dshellwindowsvents. windowregistered-Methode
+# <a name="dshellwindowseventswindowregistered-method"></a>DShellWindowsEvents.WindowRegistered-Methode
 
 Wird aufgerufen, wenn ein Fenster als Shellfenster registriert wird.
 
@@ -39,10 +39,10 @@ DShellWindowsEvents.WindowRegistered(
 
 <dl> <dt>
 
-*lcookie* \[ in\]
+*lCookie* \[ In\]
 </dt> <dd>
 
-Type: **Integer**
+Typ: **Integer**
 
 Das Cookie, das das registrierte Fenster identifiziert.
 
@@ -52,11 +52,11 @@ Das Cookie, das das registrierte Fenster identifiziert.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Einem Fenster wird ein Cookie erteilt, wenn es als Shellfenster registriert wird. Weitere Informationen finden Sie unter [**Register**](/windows/desktop/api/Exdisp/nf-exdisp-ishellwindows-register).
+Einem Fenster wird ein Cookie erteilt, wenn es als Shellfenster registriert wird. Weitere Informationen finden Sie unter [**Registrieren von**](/windows/desktop/api/Exdisp/nf-exdisp-ishellwindows-register).
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
@@ -67,20 +67,20 @@ Einem Fenster wird ein Cookie erteilt, wenn es als Shellfenster registriert wird
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[**Dshellwindowgvents**](dshellwindowsevents.md)
+[**DShellWindowsEvents**](dshellwindowsevents.md)
 </dt> <dt>
 
-[**Windows-gesperrt**](dshellwindowsevents-windowrevoked.md)
+[**WindowRevoked**](dshellwindowsevents-windowrevoked.md)
 </dt> <dt>
 
-[**Register**](/windows/desktop/api/Exdisp/nf-exdisp-ishellwindows-register)
+[**Registrieren**](/windows/desktop/api/Exdisp/nf-exdisp-ishellwindows-register)
 </dt> <dt>
 
-[**Register ausstehend**](/windows/desktop/api/Exdisp/nf-exdisp-ishellwindows-registerpending)
+[**RegisterPending**](/windows/desktop/api/Exdisp/nf-exdisp-ishellwindows-registerpending)
 </dt> </dl>
 
  

@@ -1,6 +1,6 @@
 ---
 description: Gibt an, dass eine Suche abgeschlossen wurde.
-title: 'Ishellfoldersearchablecallback:: RunEnd-Methode'
+title: IShellFolderSearchableCallback::RunEnd-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,14 +13,14 @@ api_type:
 api_location:
 - Shell32.dll
 ms.assetid: 91700764-6cdf-488d-adc0-e34d9b4cb71d
-ms.openlocfilehash: 73155e65f4b6edb4a4b4b9b0d52ab5b042fa68b9
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c23d461fdbd175a80a8fa94fcc238f6cf2f89869
+ms.sourcegitcommit: 3caaa3c92dcb1ef12f84464d14ce6262e65e988e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104994151"
+ms.lasthandoff: 05/12/2021
+ms.locfileid: "109842821"
 ---
-# <a name="ishellfoldersearchablecallbackrunend-method"></a>Ishellfoldersearchablecallback:: RunEnd-Methode
+# <a name="ishellfoldersearchablecallbackrunend-method"></a>IShellFolderSearchableCallback::RunEnd-Methode
 
 Gibt an, dass eine Suche abgeschlossen wurde.
 
@@ -39,7 +39,7 @@ HRESULT RunEnd(
 
 <dl> <dt>
 
-*dwReserved* \[ in\]
+*dwReserved* \[ In\]
 </dt> <dd>
 
 Typ: **DWORD**
@@ -52,9 +52,9 @@ Reserviert. Muss auf 0 festgelegt werden.
 
 Typ: **HRESULT**
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 

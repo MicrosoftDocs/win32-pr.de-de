@@ -1,6 +1,6 @@
 ---
-description: Wird an eine Erweiterungs-DLL gesendet, wenn der Datei-Manager Ihre Symbolleiste lädt. Diese Meldung ermöglicht der Erweiterungs-DLL, der Datei-Manager-Symbolleiste eine Schaltfläche hinzuzufügen.
-title: FMEVENT_TOOLBARLOAD Meldung (WF. h)
+description: Wird an eine Erweiterungs-DLL gesendet, wenn der Datei-Manager seine Symbolleiste lädt. Diese Meldung ermöglicht einer Erweiterungs-DLL, der Symbolleiste des Datei-Managers eine Schaltfläche hinzuzufügen.
+title: FMEVENT_TOOLBARLOAD Nachricht (Wfext.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 api_location:
 - Wfext.h
 ms.assetid: c5daab49-4ed5-439b-b1b7-a87f70c379f0
-ms.openlocfilehash: 5f04b524c8d44d987513b6605f9f827336078d02
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c4195acedbd696679a2deea2f4d6e268717566d1
+ms.sourcegitcommit: 3caaa3c92dcb1ef12f84464d14ce6262e65e988e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104215954"
+ms.lasthandoff: 05/12/2021
+ms.locfileid: "109841271"
 ---
-# <a name="fmevent_toolbarload-message"></a>Meldung für das Meldung "f" \_
+# <a name="fmevent_toolbarload-message"></a>FMEVENT \_ TOOLBARLOAD-Nachricht
 
-Wird an eine Erweiterungs-DLL gesendet, wenn der Datei-Manager Ihre Symbolleiste lädt. Diese Meldung ermöglicht der Erweiterungs-DLL, der Datei-Manager-Symbolleiste eine Schaltfläche hinzuzufügen.
+Wird an eine Erweiterungs-DLL gesendet, wenn der Datei-Manager seine Symbolleiste lädt. Diese Meldung ermöglicht einer Erweiterungs-DLL, der Symbolleiste des Datei-Managers eine Schaltfläche hinzuzufügen.
 
 ## <a name="parameters"></a>Parameter
 
@@ -34,15 +34,15 @@ Wird an eine Erweiterungs-DLL gesendet, wenn der Datei-Manager Ihre Symbolleiste
 *lpfmstbl* 
 </dt> <dd>
 
-Die Adresse einer [**f- \_ Load**](fms-toolbarload.md) -Struktur. Wenn die Erweiterungs-DLL der Symbolleiste im Datei-Manager eine Schaltfläche hinzufügt, sollte die dll die Struktur mit Informationen über die Schaltfläche Auffüllen.
+Die Adresse einer [**FMS \_ TOOLBARLOAD-Struktur.**](fms-toolbarload.md) Wenn die Erweiterungs-DLL der Symbolleiste im Datei-Manager eine Schaltfläche hinzufügt, sollte die DLL die Struktur mit Informationen zur Schaltfläche füllen.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine Erweiterungs-DLL muss **true** zurückgeben, um der Symbolleiste die Schaltfläche hinzuzufügen. Wenn die DLL **false** zurückgibt, fügt der Datei-Manager die Schaltfläche nicht hinzu.
+Eine Erweiterungs-DLL muss **TRUE** zurückgeben, um die Schaltfläche zur Symbolleiste hinzuzufügen. Wenn die DLL **FALSE** zurückgibt, fügt der Datei-Manager die Schaltfläche nicht hinzu.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
@@ -50,15 +50,15 @@ Eine Erweiterungs-DLL muss **true** zurückgeben, um der Symbolleiste die Schalt
 |-------------------------------------|------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                               |
-| Header<br/>                   | <dl> <dt>WF. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Wfext.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[**"F"**](fmextensionproc.md)
+[**FMExtensionProc**](fmextensionproc.md)
 </dt> </dl>
 
  

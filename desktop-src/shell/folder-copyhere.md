@@ -1,6 +1,6 @@
 ---
 description: Kopiert ein Element oder Elemente in einen Ordner.
-title: Folder. copyhere-Methode (Shldisp. h)
+title: Folder.CopyHere-Methode (Shldisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,14 +13,14 @@ api_type:
 api_location:
 - Shell32.dll
 ms.assetid: 22bf1b4c-f242-4c52-b094-c5339bb35d02
-ms.openlocfilehash: ac616aa88cfb0ad6742c6037ec28e8b93ff1a4d4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1466e5d01715c0c820cbc7cd9809c51e4963ec56
+ms.sourcegitcommit: 3caaa3c92dcb1ef12f84464d14ce6262e65e988e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104994735"
+ms.lasthandoff: 05/12/2021
+ms.locfileid: "109842141"
 ---
-# <a name="foldercopyhere-method"></a>Folder. copyhere-Methode
+# <a name="foldercopyhere-method"></a>Folder.CopyHere-Methode
 
 Kopiert ein Element oder Elemente in einen Ordner.
 
@@ -40,24 +40,24 @@ Folder.CopyHere(
 
 <dl> <dt>
 
-*vitem* 
+*vItem* 
 </dt> <dd>
 
 Typ: **Variant**
 
-Das Element, das kopiert werden soll. Dabei kann es sich um eine Zeichenfolge handeln, die einen Dateinamen, ein [**folderItem**](folderitem.md) -Objekt oder ein [**folderitems**](folderitems.md) -Objekt darstellt.
+Das zu kopierende Element oder die zu kopierende Elemente. Dies kann eine Zeichenfolge sein, die einen Dateinamen, ein [**FolderItem-Objekt**](folderitem.md) oder ein [**FolderItems-Objekt**](folderitems.md) darstellt.
 
 </dd> <dt>
 
-*voptions* \[ optionale\]
+*vOptions* \[ Optional\]
 </dt> <dd>
 
 Typ: **Variant**
 
-Optionen für den Kopiervorgang. Dieser Wert kann 0 (null) oder eine Kombination der folgenden Werte sein. Diese Werte basieren auf Flags, die für die Verwendung mit dem **fFlags** -Member der C++ [**shfleopstruct**](/windows/desktop/api/Shellapi/ns-shellapi-shfileopstructa) -Struktur definiert sind. Jeder Shell-Namespace muss eine eigene Implementierung dieser Flags bereitstellen, und jeder Namespace kann einige oder sogar alle dieser Flags ignorieren. Diese Flags werden nicht durch den Namen für Visual Basic, VBScript oder JScript definiert, sodass Sie Sie selbst definieren oder ihre numerischen Entsprechungen verwenden müssen.
+Optionen für den Kopiervorgang. Dieser Wert kann 0 (null) oder eine Kombination der folgenden Werte sein. Diese Werte basieren auf Flags, die für die Verwendung mit dem **fFlags-Member** der [**C++-SHFILEOPSTRUCT-Struktur**](/windows/desktop/api/Shellapi/ns-shellapi-shfileopstructa) definiert sind. Jeder Shellnamespace muss eine eigene Implementierung dieser Flags bereitstellen, und jeder Namespace kann einige oder sogar alle dieser Flags ignorieren. Diese Flags werden nicht anhand des Namens für Visual Basic, VBScript oder JScript definiert. Daher müssen Sie sie selbst definieren oder ihre numerischen Entsprechungen verwenden.
 
 > [!Note]  
-> In einigen Fällen, z. b. komprimierte Dateien (ZIP-Dateien), werden einige Optionsflags möglicherweise vom Design ignoriert.
+> In einigen Fällen, z. B. komprimierten Dateien (ZIP-Dateien), werden einige Optionsflags möglicherweise entwurfsweise ignoriert.
 
  
 
@@ -70,7 +70,7 @@ Optionen für den Kopiervorgang. Dieser Wert kann 0 (null) oder eine Kombination
 
 </dt> <dd>
 
-Zeigt kein Status Dialogfeld an.
+Zeigen Sie kein Statusdialogfeld an.
 
 </dd> <dt>
 
@@ -81,7 +81,7 @@ Zeigt kein Status Dialogfeld an.
 
 </dt> <dd>
 
-Übergeben Sie die Datei mit einem neuen Namen in einem Verschiebungs-, Kopier-oder Umbenennungs Vorgang, wenn bereits eine Datei mit dem Zielnamen vorhanden ist.
+Geben Sie der Datei, die mit einem neuen Namen betrieben wird, einen Verschiebungs-, Kopier- oder Umbenennungsvorgang, wenn bereits eine Datei mit dem Zielnamen vorhanden ist.
 
 </dd> <dt>
 
@@ -92,7 +92,7 @@ Zeigt kein Status Dialogfeld an.
 
 </dt> <dd>
 
-Antworten Sie für jedes Dialogfeld, das angezeigt wird, mit "Ja, alle".
+Antworten Sie für alle angezeigten Dialogfelder mit "Ja zu allen".
 
 </dd> <dt>
 
@@ -103,7 +103,7 @@ Antworten Sie für jedes Dialogfeld, das angezeigt wird, mit "Ja, alle".
 
 </dt> <dd>
 
-Behalten Sie die rückgängig-Informationen bei, sofern möglich.
+Behalten Sie nach Möglichkeit rückgängige Informationen bei.
 
 </dd> <dt>
 
@@ -114,7 +114,7 @@ Behalten Sie die rückgängig-Informationen bei, sofern möglich.
 
 </dt> <dd>
 
-Der Vorgang wird nur für Dateien durchgeführt, wenn ein Platzhalter Dateiname ( \* . \* ) angegeben wird.
+Führen Sie den Vorgang für Dateien nur aus, wenn ein Platzhalterdateiname ( \* . \* ) angegeben ist.
 
 </dd> <dt>
 
@@ -125,7 +125,7 @@ Der Vorgang wird nur für Dateien durchgeführt, wenn ein Platzhalter Dateiname 
 
 </dt> <dd>
 
-Zeigt ein Status Dialogfeld an, aber die Dateinamen werden nicht angezeigt.
+Zeigt ein Statusdialogfeld an, zeigt jedoch nicht die Dateinamen an.
 
 </dd> <dt>
 
@@ -136,7 +136,7 @@ Zeigt ein Status Dialogfeld an, aber die Dateinamen werden nicht angezeigt.
 
 </dt> <dd>
 
-Bestätigen Sie die Erstellung eines neuen Verzeichnisses nicht, wenn der Vorgang zum Erstellen eines neuen Verzeichnisses erforderlich ist.
+Bestätigen Sie die Erstellung eines neuen Verzeichnisses nicht, wenn für den Vorgang ein Verzeichnis erstellt werden muss.
 
 </dd> <dt>
 
@@ -147,7 +147,7 @@ Bestätigen Sie die Erstellung eines neuen Verzeichnisses nicht, wenn der Vorgan
 
 </dt> <dd>
 
-Wenn ein Fehler auftritt, wird keine Benutzeroberfläche angezeigt.
+Zeigen Sie keine Benutzeroberfläche an, wenn ein Fehler auftritt.
 
 </dd> <dt>
 
@@ -158,7 +158,7 @@ Wenn ein Fehler auftritt, wird keine Benutzeroberfläche angezeigt.
 
 </dt> <dd>
 
-[Version 4,71.](versions.md) Kopieren Sie die Sicherheits Attribute der Datei nicht.
+[Version 4.71.](versions.md) Kopieren Sie nicht die Sicherheitsattribute der Datei.
 
 </dd> <dt>
 
@@ -169,7 +169,7 @@ Wenn ein Fehler auftritt, wird keine Benutzeroberfläche angezeigt.
 
 </dt> <dd>
 
-Nur im lokalen Verzeichnis ausführen. Arbeiten Sie nicht rekursiv in Unterverzeichnissen.
+Wird nur im lokalen Verzeichnis verwendet. Arbeiten Sie nicht rekursiv in Unterverzeichnisse.
 
 </dd> <dt>
 
@@ -180,7 +180,7 @@ Nur im lokalen Verzeichnis ausführen. Arbeiten Sie nicht rekursiv in Unterverze
 
 </dt> <dd>
 
-[Version 5,0.](versions.md) Kopieren Sie keine verbundenen Dateien als Gruppe. Kopiert nur die angegebenen Dateien.
+[Version 5.0.](versions.md) Kopieren Sie verbundene Dateien nicht als Gruppe. Kopieren Sie nur die angegebenen Dateien.
 
 </dd> </dl> </dd> </dl>
 
@@ -188,20 +188,20 @@ Nur im lokalen Verzeichnis ausführen. Arbeiten Sie nicht rekursiv in Unterverze
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dem aufrufenden Programm wird keine Benachrichtigung erteilt, um anzugeben, dass der Kopiervorgang abgeschlossen wurde.
+Das aufrufende Programm erhält keine Benachrichtigung, um anzugeben, dass die Kopie abgeschlossen wurde.
 
 > [!Note]  
-> Nicht alle Methoden werden für alle Ordner implementiert. Beispielsweise ist die Methode " [**Parser Name**](folder-parsename.md) " nicht für den System Steuerungs Ordner (CSIDL-Steuer \_ Elemente) implementiert. Wenn Sie versuchen, eine nicht implementierte Methode aufzurufen, wird ein 0x800a01bd (Decimal 445)-Fehler ausgelöst.
+> Nicht alle Methoden werden für alle Ordner implementiert. Beispielsweise wird die [**ParseName-Methode**](folder-parsename.md) nicht für den ordner Systemsteuerung (CSIDL \_ CONTROLS) implementiert. Wenn Sie versuchen, eine nicht implementierte Methode aufzurufen, wird ein 0x800A01BD (Dezimalzahl 445) ausgelöst.
 
  
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird **copyhere** zum Kopieren der Autoexec.bat Datei aus dem Stammverzeichnis in das Verzeichnis "C: Windows" verwendet \\ . Die richtige Verwendung wird für JScript, VBScript und Visual Basic angezeigt.
+Im folgenden Beispiel wird **CopyHere** verwendet, um die Autoexec.bat-Datei aus dem Stammverzeichnis in das Verzeichnis C: Windows zu \\ kopieren. Die richtige Verwendung wird für JScript, VBScript und Visual Basic angezeigt.
 
-JScript
+Jscript:
 
 
 ```JScript
@@ -222,7 +222,7 @@ JScript
 
 
 
-VBScript
+Vbscript:
 
 
 ```VB
@@ -268,21 +268,21 @@ End Sub
 
 
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, Windows XP \[ Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, nur Windows \[ XP-Desktop-Apps\]<br/>                                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                           |
-| Header<br/>                   | <dl> <dt>Shldisp. h</dt> </dl>                           |
-| IDL<br/>                      | <dl> <dt>Shldisp. idl</dt> </dl>                         |
-| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4,71 oder höher)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>                           |
+| Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                         |
+| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4.71 oder höher)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

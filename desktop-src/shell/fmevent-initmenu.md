@@ -1,6 +1,6 @@
 ---
-description: Wird an eine Erweiterungs-DLL gesendet, wenn der Benutzer das Menü für die Erweiterung in der Menüleiste des Datei-Managers auswählt. Die Erweiterung kann diese Benachrichtigung verwenden, um Menü Elemente zu initialisieren.
-title: FMEVENT_INITMENU Meldung (WF. h)
+description: Wird an eine Erweiterungs-DLL gesendet, wenn der Benutzer das Menü für die Erweiterung in der Menüleiste Datei-Manager auswählt. Die Erweiterung kann diese Benachrichtigung verwenden, um Menüelemente zu initialisieren.
+title: FMEVENT_INITMENU Nachricht (Wfext.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 api_location:
 - Wfext.h
 ms.assetid: 8074a09f-ad94-4a7a-8c0b-965b0f8f6334
-ms.openlocfilehash: 4bbb959feeb2c1bf99eaa999b4c51b69b0d0cf63
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 82ec9130a681bdfd36ff6259392c0608e4cde9cf
+ms.sourcegitcommit: 3caaa3c92dcb1ef12f84464d14ce6262e65e988e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214304"
+ms.lasthandoff: 05/12/2021
+ms.locfileid: "109842281"
 ---
-# <a name="fmevent_initmenu-message"></a>Meldung zu "smevent \_ InitMenu"
+# <a name="fmevent_initmenu-message"></a>FMEVENT \_ INITMENU-Nachricht
 
-Wird an eine Erweiterungs-DLL gesendet, wenn der Benutzer das Menü für die Erweiterung in der Menüleiste des Datei-Managers auswählt. Die Erweiterung kann diese Benachrichtigung verwenden, um Menü Elemente zu initialisieren.
+Wird an eine Erweiterungs-DLL gesendet, wenn der Benutzer das Menü für die Erweiterung in der Menüleiste Datei-Manager auswählt. Die Erweiterung kann diese Benachrichtigung verwenden, um Menüelemente zu initialisieren.
 
 ## <a name="parameters"></a>Parameter
 
@@ -31,7 +31,7 @@ Wird an eine Erweiterungs-DLL gesendet, wenn der Benutzer das Menü für die Erw
 *wParam* 
 </dt> <dd>Muss Null sein.</dd> <dt>
 
-*HMENU* 
+*Hmenu* 
 </dt> <dd>
 
 Ein Handle für die Menüleiste des Datei-Managers.
@@ -40,13 +40,13 @@ Ein Handle für die Menüleiste des Datei-Managers.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine Erweiterungs-DLL sollte NULL zurückgeben, wenn Sie diese Nachricht verarbeitet.
+Eine Erweiterungs-DLL sollte 0 (null) zurückgeben, wenn diese Meldung verarbeitet wird.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine Erweiterungs-DLL empfängt diese Nachricht nur, wenn der Benutzer das Menü der obersten Ebene auswählt. Wenn die Erweiterung Untermenüs enthält, muss Sie gleichzeitig initialisiert werden, wenn Sie das Menü der obersten Ebene initialisieren.
+Eine Erweiterungs-DLL empfängt diese Meldung nur, wenn der Benutzer das Menü der obersten Ebene auswählt. Wenn die Erweiterung Untermenüs enthält, muss sie gleichzeitig initialisiert werden, wenn das Menü der obersten Ebene initialisiert wird.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
@@ -54,15 +54,15 @@ Eine Erweiterungs-DLL empfängt diese Nachricht nur, wenn der Benutzer das Menü
 |-------------------------------------|------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                               |
-| Header<br/>                   | <dl> <dt>WF. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Wfext.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[**"F"**](fmextensionproc.md)
+[**FMExtensionProc**](fmextensionproc.md)
 </dt> </dl>
 
  

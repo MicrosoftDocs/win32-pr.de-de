@@ -1,6 +1,6 @@
 ---
-description: Wird aufgerufen, wenn die Registrierung eines shellfensters widerrufen wird.
-title: Dshellwindowsvents. windowwiderruf-Methode
+description: Wird aufgerufen, wenn die Registrierung eines Shellfensters widerrufen wird.
+title: DShellWindowsEvents.WindowRevoked-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 api_location:
 - Shdocvw.dll
 ms.assetid: 92e8653f-7f41-4e0b-97e5-429fddc51951
-ms.openlocfilehash: b036bdde2916c2fa037d1b6e286a2096d9e1d8bd
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 7ed78dcaa545b2321b04aff9ff2f4e711f93c992
+ms.sourcegitcommit: 3caaa3c92dcb1ef12f84464d14ce6262e65e988e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "104983084"
+ms.lasthandoff: 05/12/2021
+ms.locfileid: "109843181"
 ---
-# <a name="dshellwindowseventswindowrevoked-method"></a>Dshellwindowsvents. windowwiderruf-Methode
+# <a name="dshellwindowseventswindowrevoked-method"></a>DShellWindowsEvents.WindowRevoked-Methode
 
-Wird aufgerufen, wenn die Registrierung eines shellfensters widerrufen wird.
+Wird aufgerufen, wenn die Registrierung eines Shellfensters widerrufen wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,12 +39,12 @@ DShellWindowsEvents.WindowRevoked(
 
 <dl> <dt>
 
-*lcookie* \[ in\]
+*lCookie* \[ In\]
 </dt> <dd>
 
-Type: **Integer**
+Typ: **Ganze Zahl**
 
-Das Cookie, das das Fenster identifiziert, das widerrufen wurde.
+Das Cookie, das das gesperrte Fenster identifiziert.
 
 </dd> </dl>
 
@@ -52,11 +52,11 @@ Das Cookie, das das Fenster identifiziert, das widerrufen wurde.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Einem Fenster wird ein Cookie erteilt, wenn es als Shellfenster registriert wird. Weitere Informationen finden Sie unter [**Register**](/windows/desktop/api/Exdisp/nf-exdisp-ishellwindows-register).
+Einem Fenster wird ein Cookie gewährt, wenn es als Shellfenster registriert ist. Weitere Informationen finden Sie unter [**Registrieren von**](/windows/desktop/api/Exdisp/nf-exdisp-ishellwindows-register).
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
@@ -67,14 +67,14 @@ Einem Fenster wird ein Cookie erteilt, wenn es als Shellfenster registriert wird
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[**Dshellwindowgvents**](dshellwindowsevents.md)
+[**DShellWindowsEvents**](dshellwindowsevents.md)
 </dt> <dt>
 
-[**Windowregistered**](dshellwindowsevents-windowregistered.md)
+[**WindowRegistered**](dshellwindowsevents-windowregistered.md)
 </dt> <dt>
 
 [**Revoke**](/windows/desktop/api/Exdisp/nf-exdisp-ishellwindows-revoke)

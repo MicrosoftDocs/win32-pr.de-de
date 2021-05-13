@@ -1,6 +1,6 @@
 ---
-description: Zeigt ein Hilfefenster an, das der aktuellen UI-Spracheinstellung entspricht.
-title: Mlhtmlhelp-Funktion
+description: Zeigt ein Hilfefenster an, das der aktuellen Einstellung der Benutzeroberflächensprache entspricht.
+title: MLHtmlHelp-Funktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -15,18 +15,18 @@ api_type:
 api_location:
 - Shlwapi.dll
 ms.assetid: 1108614d-7034-48da-a4a5-544f8d9af3ca
-ms.openlocfilehash: a477ef549b3b8437ba891259c7fecea4730f759e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 38d331d57b9484ab6d7a505d929508f30d510ad8
+ms.sourcegitcommit: 3caaa3c92dcb1ef12f84464d14ce6262e65e988e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104993799"
+ms.lasthandoff: 05/12/2021
+ms.locfileid: "109841211"
 ---
-# <a name="mlhtmlhelp-function"></a>Mlhtmlhelp-Funktion
+# <a name="mlhtmlhelp-function"></a>MLHtmlHelp-Funktion
 
-\[Diese Funktion ist über Windows XP und Windows Server 2003 verfügbar. Sie wird möglicherweise in nachfolgenden Versionen von Windows geändert oder ist nicht verfügbar.\]
+\[Diese Funktion ist über Windows XP und Windows Server 2003 verfügbar. Sie kann in nachfolgenden Versionen von Windows geändert oder nicht verfügbar sein.\]
 
-Zeigt ein Hilfefenster an, das der aktuellen UI-Spracheinstellung entspricht.
+Zeigt ein Hilfefenster an, das der aktuellen Einstellung der Benutzeroberflächensprache entspricht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,7 +47,7 @@ HWND MLHtmlHelp(
 
 <dl> <dt>
 
-*hwndcaller* \[ in\]
+*hwndCaller* \[ In\]
 </dt> <dd>
 
 Typ: **HWND**
@@ -56,39 +56,39 @@ Ein Handle für das übergeordnete Fenster, das diese Funktion aufruft.
 
 </dd> <dt>
 
-*pszFile* \[ in\]
+*pszFile* \[ In\]
 </dt> <dd>
 
 Typ: **LPCTSTR**
 
-Ein Zeiger auf einen Puffer, der den voll qualifizierten Pfad einer kompilierten Hilfedatei (. chm) oder eine themendatei in einer angegebenen Hilfedatei enthält.
+Ein Zeiger auf einen Puffer, der den vollqualifizierten Pfad einer kompilierten Hilfedatei (.chm) oder eine Themendatei in einer angegebenen Hilfedatei enthält.
 
 </dd> <dt>
 
-*ucommand* \[ in\]
+*uCommand* \[ In\]
 </dt> <dd>
 
-Typ: **uint**
+Typ: **UINT**
 
-Der Befehl, der ausgeführt werden soll. Diese Funktion unterstützt direkt nur das [HH- \_ Anzeige \_ Thema](/previous-versions/windows/desktop/htmlhelp/hh-display-topic-command) und das [HH- \_ Anzeige \_ \_ TextPopup](/previous-versions/windows/desktop/htmlhelp/hh-display-text-popup-command). Bei einem beliebigen anderen Befehl wird der-Befehl ohne den *dwcrosscodepage* -Wert an [HTMLHelp](/previous-versions/windows/desktop/htmlhelp/accessing-the-html-help-api)weitergeleitet.
+Der auszuführende Befehl. Diese Funktion unterstützt nur [HH \_ DISPLAY \_ TOPIC](/previous-versions/windows/desktop/htmlhelp/hh-display-topic-command) und [HH \_ DISPLAY TEXT \_ \_ POPUP](/previous-versions/windows/desktop/htmlhelp/hh-display-text-popup-command)direkt. Bei einem anderen Befehl wird der Aufruf ohne den *dwCrossCodePage-Wert* an [HtmlHelp](/previous-versions/windows/desktop/htmlhelp/accessing-the-html-help-api)weitergeleitet.
 
 </dd> <dt>
 
-*dwdata* \[ in\]
+*dwData* \[ In\]
 </dt> <dd>
 
-Typ: **DWORD \_ ptr**
+Typ: **DWORD \_ PTR**
 
-Alle Daten, die möglicherweise erforderlich sind, basierend auf dem Wert des *ucommand* -Parameters.
+Alle daten, die erforderlich sein können, basierend auf dem Wert des *uCommand-Parameters.*
 
 </dd> <dt>
 
-*dwcrosscodepage* \[ in\]
+*dwCrossCodePage* \[ In\]
 </dt> <dd>
 
 Typ: **DWORD**
 
-Der **DWORD** -Wert, der die Codepage der aktuellen UI-Spracheinstellung angibt, z \_ . b. CP ACP.
+Der **DWORD-Wert,** der die Codepage der aktuellen Ui-Spracheinstellung angibt, z. B. CP \_ ACP.
 
 </dd> </dl>
 
@@ -96,22 +96,22 @@ Der **DWORD** -Wert, der die Codepage der aktuellen UI-Spracheinstellung angibt,
 
 Typ: **HWND**
 
-Abhängig vom angegebenen *ucommand* und dem Ergebnis gibt **mlhtmlhelp** einen oder beide der folgenden zurück:
+Abhängig vom angegebenen *uCommand* und dem Ergebnis gibt **MLHtmlHelp** eine oder beide der folgenden Punkte zurück:
 
--   Das Handle (HWND) des Hilfe Fensters.
--   **Null**. In einigen Fällen weist **null** auf einen Fehler hin. in anderen Fällen gibt **null** an, dass das Hilfefenster noch nicht erstellt wurde.
+-   Das Handle (hwnd) des Hilfefensters.
+-   **NULL.** In einigen Fällen gibt **NULL einen** Fehler an. in anderen Fällen gibt **NULL** an, dass das Hilfefenster noch nicht erstellt wurde.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn ein Problem mit dem Pfad der Hilfedatei für die aktuelle Sprache auftritt, wird der-Befehl zur Standardbehandlung an [HTMLHelp](/previous-versions/windows/desktop/htmlhelp/accessing-the-html-help-api) weitergeleitet.
+Wenn ein Problem mit dem Pfad der Hilfedatei für die aktuelle Sprache auftritt, wird der Aufruf zur Standardbehandlung an [HtmlHelp](/previous-versions/windows/desktop/htmlhelp/accessing-the-html-help-api) weitergeleitet.
 
-Wenn das Hilfefenster geschlossen wird, wird der Fokus an den Besitzer zurückgegeben, es sei denn, der Besitzer ist der Desktop. Wenn *hwndcaller* der Desktop ist, bestimmt das Betriebssystem, wohin der Fokus zurückgegeben wird.
+Wenn das Hilfefenster geschlossen ist, kehrt der Fokus zum Besitzer zurück, es sei denn, der Besitzer ist der Desktop. Wenn *hwndCaller* der Desktop ist, bestimmt das Betriebssystem, wo der Fokus zurückgegeben wird.
 
-Wenn **mlhtmlhelp** Benachrichtigungs Meldungen aus dem Hilfefenster sendet, werden die Nachrichten außerdem an *hwndcaller* gesendet, solange Sie die Nachverfolgung von [Benachrichtigungs](/previous-versions/windows/desktop/htmlhelp/about-notification-messages) Meldungen in der Hilfefenster Definition aktiviert haben.
+Wenn **MLHtmlHelp** darüber hinaus Benachrichtigungsmeldungen aus dem Hilfefenster sendet, werden die Nachrichten an [](/previous-versions/windows/desktop/htmlhelp/about-notification-messages) *hwndCaller* gesendet, solange Sie die Nachverfolgung von Benachrichtigungsmeldungen in der Hilfefensterdefinition aktiviert haben.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird der Befehl [HH \_ Display \_ Topic](/previous-versions/windows/desktop/htmlhelp/hh-display-topic-command) aufgerufen, um die Hilfedatei mit dem Namen Help. chm zu öffnen und das Standardthema im Hilfefenster mit dem Namen anzuzeigen `Mainwin` . Im Allgemeinen handelt es sich bei dem in diesem Befehl angegebenen Hilfefenster um einen HTML-Standard [Hilfe Viewer](/previous-versions/windows/desktop/htmlhelp/html-help-viewer-topics).
+Das folgende Beispiel ruft den [Befehl HH \_ DISPLAY \_ TOPIC](/previous-versions/windows/desktop/htmlhelp/hh-display-topic-command) auf, um die Hilfedatei mit dem Namen Help.chm zu öffnen und ihr Standardthema im Hilfefenster mit dem Namen `Mainwin` anzuzeigen. Im Allgemeinen ist das in diesem Befehl angegebene Hilfefenster ein standardmäßiger [HTML Help Viewer.](/previous-versions/windows/desktop/htmlhelp/html-help-viewer-topics)
 
 ``` syntax
 HWND hwnd = HtmlHelp(GetDesktopWindow(),
@@ -122,21 +122,21 @@ HWND hwnd = HtmlHelp(GetDesktopWindow(),
 ```
 
 > [!Note]  
-> Wenn Sie diese Funktion verwenden, legen Sie die Stapelgröße der ausführbaren Hostingdatei auf mindestens 100K fest. Wenn die definierte Stapelgröße zu klein ist, wird der zum Ausführen der HTML-Hilfe erstellte Thread ebenfalls mit dieser Stapelgröße erstellt, und der Vorgang kann fehlschlagen. Optional können Sie/Stack aus der Link Befehlszeile entfernen und auch beliebige Stapel Einstellungen in der DEF-Datei der ausführbaren Datei entfernen (in diesem Fall ist die Standard Stapelgröße 1 MB). Sie können auch die Stapelgröße mit dem/fnumber-Compilerbefehl festlegen (der Compiler übergibt dies als/Stack an den Linker).
+> Legen Sie bei Verwendung dieser Funktion die Stapelgröße der ausführbaren Hostdatei auf mindestens 100.000 fest. Wenn die definierte Stapelgröße zu klein ist, wird der Thread, der zum Ausführen der HTML-Hilfe erstellt wurde, ebenfalls mit dieser Stapelgröße erstellt, und der Vorgang kann fehlschlagen. Optional können Sie /STACK aus der Linkbefehlszeile entfernen und auch alle STACK-Einstellungen in der DEF-Datei der ausführbaren Datei entfernen (in diesem Fall ist die Standardstapelgröße 1 MB). Sie können die Stapelgröße auch mit dem Compilerbefehl /Fnumber festlegen (der Compiler über gibt diese als /STACK an den Linker weiter).
 
  
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, Windows XP \[ Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                          |
-| Header<br/>                   | <dl> <dt>None</dt> </dl>                               |
-| DLL<br/>                      | <dl> <dt>Shlwapi.dll (Version 5,0 oder höher)</dt> </dl> |
-| Unicode- und ANSI-Name<br/>   | **Mlhtmlhelpw** (Unicode) und **mlhtmlhelpa** (ANSI)<br/>                                               |
+| Unterstützte Mindestversion (Client)<br/> | Nur Windows 2000 Professional- und Windows \[ XP-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2003-Desktop-Apps\]<br/>                                                          |
+| Header<br/>                   | <dl> <dt>Keine</dt> </dl>                               |
+| DLL<br/>                      | <dl> <dt>Shlwapi.dll (Version 5.0 oder höher)</dt> </dl> |
+| Unicode- und ANSI-Name<br/>   | **MLHtmlHelpW** (Unicode) und **MLHtmlHelpA** (ANSI)<br/>                                               |
 
 
 

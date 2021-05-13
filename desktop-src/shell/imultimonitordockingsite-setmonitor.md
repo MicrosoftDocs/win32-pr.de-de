@@ -1,6 +1,6 @@
 ---
-description: Ändert, welcher Monitor für angedockte Symbolleisten in einem System mit mehreren Monitoren verwendet wird.
-title: 'Imultimonitordockingsite:: setmonitor-Methode'
+description: Ändert, welcher Monitor für angedockte Symbolleisten auf einem System mit mehreren Monitoren verwendet wird.
+title: IMultiMonitorDockingSite::SetMonitor-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,16 +12,16 @@ api_type:
 - COM
 api_location: ''
 ms.assetid: ba4ace13-7096-4f05-bcb0-ab37f1632406
-ms.openlocfilehash: cc177316a850bbf5059cabf48362ab8d5cbe2466
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: be773ee68c214f6a2fab8da89f1f48b867e71239
+ms.sourcegitcommit: 3caaa3c92dcb1ef12f84464d14ce6262e65e988e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104995199"
+ms.lasthandoff: 05/12/2021
+ms.locfileid: "109841941"
 ---
-# <a name="imultimonitordockingsitesetmonitor-method"></a>Imultimonitordockingsite:: setmonitor-Methode
+# <a name="imultimonitordockingsitesetmonitor-method"></a>IMultiMonitorDockingSite::SetMonitor-Methode
 
-Ändert, welcher Monitor für angedockte Symbolleisten in einem System mit mehreren Monitoren verwendet wird.
+Ändert, welcher Monitor für angedockte Symbolleisten auf einem System mit mehreren Monitoren verwendet wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,47 +40,47 @@ HRESULT SetMonitor(
 
 <dl> <dt>
 
-*punksrc* \[ in\]
+*hexSrc* \[ In\]
 </dt> <dd>
 
-Typ: **[**IUnknown**](/windows/win32/api/unknwn/nn-unknwn-iunknown) \** _
+Typ: **[ **IUnknown**](/windows/win32/api/unknwn/nn-unknwn-iunknown)\***
 
-Ein Zeiger auf das Objekt, das die [_ *idockingwindow* *](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-idockingwindow) -Schnittstelle implementiert, für die der Monitor geändert wird.
+Ein Zeiger auf das -Objekt, das die [**IDockingWindow-Schnittstelle**](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-idockingwindow) implementiert, für die der Monitor geändert wird.
 
 </dd> <dt>
 
-*hmonnew* \[ in\]
+*hMonNeu* \[ In\]
 </dt> <dd>
 
-Typ: **Hmonitor**
+Typ: **HMONITOR**
 
-Ein Handle für den Monitor, der den vorhandenen Standard Monitor ersetzt.
+Ein Handle für den Monitor, der den vorhandenen Standardmonitor ersetzt.
 
 </dd> <dt>
 
-*phmonold* \[ vorgenommen\]
+*phMonOld* \[ out\]
 </dt> <dd>
 
-Geben Sie Folgendes ein: **Hmonitor \** _
+Typ: **HMONITOR \***
 
-Diese Funktion gibt einen Zeiger auf das vorherige Standard Monitor Handle zurück.
+Enthält nach der Rückgabe dieser Funktion einen Zeiger auf das Handle des vorherigen Standardmonitors.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Type: _ *HRESULT**
+Typ: **HRESULT**
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, Windows XP \[ Desktop-Apps\]<br/> |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                   |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, nur Windows \[ XP-Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2003-Desktop-Apps\]<br/>                   |
 
 
 

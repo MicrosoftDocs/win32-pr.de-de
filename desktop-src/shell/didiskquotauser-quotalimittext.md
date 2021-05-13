@@ -1,6 +1,6 @@
 ---
-description: Ruft die aktuelle Kontingent Grenze des Benutzers als Text Zeichenfolge ab.
-title: Didiskquotauser. quotalimittext-Eigenschaft
+description: Ruft die aktuelle Kontingentgrenze des Benutzers als Textzeichenfolge ab.
+title: DIDiskQuotaUser.QuotaLimitText-Eigenschaft
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 api_location:
 - Shell32.dll
 ms.assetid: 41f74c02-b673-46d4-87f1-4dfa040a2f06
-ms.openlocfilehash: 6f14b9a58f0e2cbd134ed2c022677698ae27a4b0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 166e35b375c46942a082a39c7656cd1f2c13e8a3
+ms.sourcegitcommit: 3caaa3c92dcb1ef12f84464d14ce6262e65e988e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103862116"
+ms.lasthandoff: 05/12/2021
+ms.locfileid: "109843231"
 ---
-# <a name="didiskquotauserquotalimittext-property"></a>Didiskquotauser. quotalimittext-Eigenschaft
+# <a name="didiskquotauserquotalimittext-property"></a>DIDiskQuotaUser.QuotaLimitText-Eigenschaft
 
-Ruft die aktuelle [**Kontingent Grenze**](diskquotacontrol-object.md) des Benutzers als Text Zeichenfolge ab.
+Ruft die aktuelle [**Kontingentgrenze**](diskquotacontrol-object.md) des Benutzers als Textzeichenfolge ab.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -37,9 +37,9 @@ QuotaLimitText = DIDiskQuotaUser.QuotaLimitText
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Ein Zeichen folgen Wert, der die aktuelle Kontingent Grenze des Benutzers enthält.
+Ein Zeichenfolgenwert, der das aktuelle Kontingentlimit des Benutzers enthält.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
@@ -47,18 +47,18 @@ Ein Zeichen folgen Wert, der die aktuelle Kontingent Grenze des Benutzers enthä
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                          |
-| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 5,0 oder höher)</dt> </dl> |
+| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 5.0 oder höher)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[**Defaultquotalimittext**](diskquotacontrol-defaultquotalimittext.md)
+[**DefaultQuotaLimitText**](diskquotacontrol-defaultquotalimittext.md)
 </dt> <dt>
 
-[**Didiskquotauser-Objekt**](didiskquotauser-object.md)
+[**DIDiskQuotaUser-Objekt**](didiskquotauser-object.md)
 </dt> <dt>
 
 [**QuotaLimit**](didiskquotauser-quotalimit.md)

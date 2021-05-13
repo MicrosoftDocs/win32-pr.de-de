@@ -1,6 +1,6 @@
 ---
-description: Enthält Informationen zu einer ausgewählten Datei im aktiven Datei-Manager-Fenster (im Verzeichnis Fenster oder im Fenster "Suchergebnisse").
-title: FMS_GETFILESEL-Struktur (WF. h)
+description: Enthält Informationen zu einer ausgewählten Datei im aktiven Datei-Manager-Fenster (Verzeichnisfenster oder Suchergebnisfenster).
+title: FMS_GETFILESEL -Struktur (Wfext.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 api_location:
 - Wfext.h
 ms.assetid: d8339f87-ba05-40bf-b7d1-a9de29eb15a4
-ms.openlocfilehash: e7ae92350e88e050b1208eed6e08f8faba811fee
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b1188840299a101081c5c29d0e5658963ca7a72e
+ms.sourcegitcommit: 3caaa3c92dcb1ef12f84464d14ce6262e65e988e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103958644"
+ms.lasthandoff: 05/12/2021
+ms.locfileid: "109842221"
 ---
-# <a name="fms_getfilesel-structure"></a>Fims \_ getfilesel-Struktur
+# <a name="fms_getfilesel-structure"></a>FMS \_ GETFILESEL-Struktur
 
-Enthält Informationen zu einer ausgewählten Datei im aktiven Datei-Manager-Fenster (im Verzeichnis Fenster oder im Fenster "Suchergebnisse").
+Enthält Informationen zu einer ausgewählten Datei im aktiven Datei-Manager-Fenster (Verzeichnisfenster oder Suchergebnisfenster).
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,14 +42,14 @@ typedef struct _FMS_GETFILESEL {
 
 <dl> <dt>
 
-**fttime**
+**ftTime**
 </dt> <dd>
 
 Typ: **FILETIME**
 
 </dd> <dd>
 
-Das Datum und die Uhrzeit, zu der die Datei erstellt wurde.
+Die Uhrzeit und das Datum, zu dem die Datei erstellt wurde.
 
 </dd> <dt>
 
@@ -64,10 +64,10 @@ Die Größe der Datei in Bytes.
 
 </dd> <dt>
 
-**battr**
+**bAttr**
 </dt> <dd>
 
-Type: **Byte**
+Typ: **BYTE**
 
 </dd> <dd>
 
@@ -75,18 +75,18 @@ Die Attribute der Datei.
 
 </dd> <dt>
 
-**szName**
+**Szname**
 </dt> <dd>
 
 Typ: **TCHAR**
 
 </dd> <dd>
 
-Der durch Null beendete vollständige Pfad und Dateiname der ausgewählten Datei.
+Der auf NULL beendete vollständige Pfad und Dateiname der ausgewählten Datei.
 
 </dd> </dl>
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
@@ -94,15 +94,15 @@ Der durch Null beendete vollständige Pfad und Dateiname der ausgewählten Datei
 |-------------------------------------|------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                               |
-| Header<br/>                   | <dl> <dt>WF. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Wfext.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[**"F"**](fmextensionproc.md)
+[**FMExtensionProc**](fmextensionproc.md)
 </dt> </dl>
 
  

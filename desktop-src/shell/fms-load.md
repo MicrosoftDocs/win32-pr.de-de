@@ -1,6 +1,6 @@
 ---
-description: Enthält Informationen, die der Datei-Manager zum Hinzufügen eines benutzerdefinierten Menüs verwendet, das von einer Datei-Manager-Erweiterungs-DLL Die Struktur bietet auch einen Delta Wert, den die Erweiterungs-DLL verwenden kann, um das benutzerdefinierte Menü zu bearbeiten, nachdem der Datei-Manager das Menü geladen hat.
-title: FMS_LOAD-Struktur (WF. h)
+description: Enthält Informationen, die der Datei-Manager verwendet, um ein benutzerdefiniertes Menü hinzuzufügen, das von einer Datei-Manager-Erweiterungs-DLL bereitgestellt wird. Die -Struktur bietet auch einen Deltawert, den die Erweiterungs-DLL verwenden kann, um das benutzerdefinierte Menü zu bearbeiten, nachdem der Datei-Manager das Menü geladen hat.
+title: FMS_LOAD -Struktur (Wfext.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 api_location:
 - Wfext.h
 ms.assetid: 0e76bcc5-76c2-4ec0-8ddb-4042cb5ffa7d
-ms.openlocfilehash: 1745c4e34ac124e9990602350db6479ce287be8e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: efd1777704c775db84c7dabf54b9e06c81535fb4
+ms.sourcegitcommit: 3caaa3c92dcb1ef12f84464d14ce6262e65e988e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104977088"
+ms.lasthandoff: 05/12/2021
+ms.locfileid: "109842191"
 ---
-# <a name="fms_load-structure"></a>Struktur zum \_ Laden von Strukturen
+# <a name="fms_load-structure"></a>FMS \_ LOAD-Struktur
 
-Enthält Informationen, die der Datei-Manager zum Hinzufügen eines benutzerdefinierten Menüs verwendet, das von einer Datei-Manager-Erweiterungs-DLL Die Struktur bietet auch einen Delta Wert, den die Erweiterungs-DLL verwenden kann, um das benutzerdefinierte Menü zu bearbeiten, nachdem der Datei-Manager das Menü geladen hat.
+Enthält Informationen, die der Datei-Manager verwendet, um ein benutzerdefiniertes Menü hinzuzufügen, das von einer Datei-Manager-Erweiterungs-DLL bereitgestellt wird. Die -Struktur bietet auch einen Deltawert, den die Erweiterungs-DLL verwenden kann, um das benutzerdefinierte Menü zu bearbeiten, nachdem der Datei-Manager das Menü geladen hat.
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,44 +49,44 @@ Typ: **DWORD**
 
 </dd> <dd>
 
-Die Länge der-Struktur in Bytes.
+Die Länge der -Struktur in Bytes.
 
 </dd> <dt>
 
-**szmenuname**
+**szMenuName**
 </dt> <dd>
 
-Typ: **TCHAR \[ - \_ Menü \_ Text \] len**
+Typ: **TCHAR \[ MENU TEXT \_ \_ LEN \]**
 
 </dd> <dd>
 
-Ein mit NULL endender Name für ein Menü Element, das in der Menüleiste im Datei-Manager angezeigt wird.
+Ein mit NULL beendeter Name für ein Menüelement, das in der Menüleiste im Datei-Manager angezeigt wird.
 
 </dd> <dt>
 
-**HMENU**
+**Hmenu**
 </dt> <dd>
 
 Typ: **HMENU**
 
 </dd> <dd>
 
-Der Bezeichner des Popup Menüs, das der Menüleiste im Datei-Manager hinzugefügt wird.
+Der Bezeichner des Popupmenüs, das der Menüleiste im Datei-Manager hinzugefügt wurde.
 
 </dd> <dt>
 
-**wmenudelta**
+**wMenuDelta**
 </dt> <dd>
 
-Typ: **uint**
+Typ: **UINT**
 
 </dd> <dd>
 
-Der Delta Wert des Menü Elements. Um Konflikte mit den eigenen Menü Elementen zu vermeiden, benennt der Datei-Manager die Menü Element Bezeichner in dem Popup Menü um, das durch den **HMENU** -Member identifiziert wird, indem dieser Delta Wert den einzelnen Bezeichnern hinzugefügt wird. Eine Erweiterungs-DLL, die ein Menü Element ändern muss, muss das Element identifizieren, indem der Delta Wert dem Bezeichner des Menü Elements hinzugefügt wird. Der Wert dieses Members kann von Sitzung zu Sitzung abweichen.
+Der Deltawert des Menüelements. Um Konflikte mit eigenen Menüelementen zu vermeiden, nummeriert der Datei-Manager die Menüelementbezeichner im Popupmenü, das vom **hMenu-Element** identifiziert wird, neu, indem dieser Deltawert jedem Bezeichner hinzugefügt wird. Eine Erweiterungs-DLL, die ein Menüelement ändern muss, muss das Element identifizieren, indem der Deltawert dem Bezeichner des Menüelements hinzugefügt wird. Der Wert dieses Members kann von Sitzung zu Sitzung variieren.
 
 </dd> </dl>
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
@@ -94,15 +94,15 @@ Der Delta Wert des Menü Elements. Um Konflikte mit den eigenen Menü Elementen 
 |-------------------------------------|------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                               |
-| Header<br/>                   | <dl> <dt>WF. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Wfext.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[**"F"**](fmextensionproc.md)
+[**FMExtensionProc**](fmextensionproc.md)
 </dt> </dl>
 
  

@@ -1,6 +1,6 @@
 ---
-description: Macht Rückruf Routinen zum Überwachen des Suchprozesses verfügbar.
-title: Ishellfoldersearchablecallback-Schnittstelle
+description: Macht Rückrufroutinen verfügbar, um den Suchvorgang zu überwachen.
+title: IShellFolderSearchableCallback-Schnittstelle
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,26 +13,26 @@ api_type:
 api_location:
 - Shell32.dll
 ms.assetid: 3412a01b-d5ea-44e1-819c-f10f81fac391
-ms.openlocfilehash: aac648861f3bf9dc5ae8fdcc7173792e427b234f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: cf1a3b03eed2a15e82e1313875a4ab8584243190
+ms.sourcegitcommit: 3caaa3c92dcb1ef12f84464d14ce6262e65e988e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104993822"
+ms.lasthandoff: 05/12/2021
+ms.locfileid: "109842781"
 ---
-# <a name="ishellfoldersearchablecallback-interface"></a>Ishellfoldersearchablecallback-Schnittstelle
+# <a name="ishellfoldersearchablecallback-interface"></a>IShellFolderSearchableCallback-Schnittstelle
 
-Macht Rückruf Routinen zum Überwachen des Suchprozesses verfügbar.
+Macht Rückrufroutinen verfügbar, um den Suchvorgang zu überwachen.
 
 ## <a name="members"></a>Member
 
-Die **ishellfoldersearchablecallback** -Schnittstelle erbt von der [**IUnknown**](/windows/win32/api/unknwn/nn-unknwn-iunknown) -Schnittstelle. **Ishellfoldersearchablecallback** verfügt auch über diese Typen von Membern:
+Die **IShellFolderSearchableCallback-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/win32/api/unknwn/nn-unknwn-iunknown) **IShellFolderSearchableCallback** verfügt auch über diese Typen von Membern:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **ishellfoldersearchablecallback** -Schnittstelle verfügt über diese Methoden.
+Die **IShellFolderSearchableCallback-Schnittstelle** verfügt über diese Methoden.
 
 
 
@@ -45,9 +45,9 @@ Die **ishellfoldersearchablecallback** -Schnittstelle verfügt über diese Metho
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Schnittstelle ist in keinen öffentlichen Header Dateien definiert. Wenn Sie diese Schnittstelle implementieren möchten, können Sie den folgenden C/C++-Code verwenden, um die zugehörigen Methoden zu deklarieren.
+Diese Schnittstelle ist nicht in öffentlichen Headerdateien definiert. Wenn Sie diese Schnittstelle implementieren möchten, können Sie den folgenden C/C++-Code verwenden, um die zugehörigen Methoden zu deklarieren.
 
 
 ```
@@ -55,12 +55,12 @@ Diese Schnittstelle ist in keinen öffentlichen Header Dateien definiert. Wenn S
 #define INTERFACE IShellFolderSearchableCallback
 DECLARE_INTERFACE_IID_(IShellFolderSearchableCallback, IUnknown, "F98D8294-2BBC-11d2-8DBD-0000F87A556C")
 {
-    // **_ IUnknown methods _*_
-    STDMETHOD(QueryInterface) (THIS_ REFIID riid, __out void _*ppv) PURE;
+    // *** IUnknown methods ***
+    STDMETHOD(QueryInterface) (THIS_ REFIID riid, __out void **ppv) PURE;
     STDMETHOD_(ULONG,AddRef)  (THIS) PURE;
     STDMETHOD_(ULONG,Release) (THIS) PURE;
 
-    // **_ IShellFolderSearchableCallback Methods _**
+    // *** IShellFolderSearchableCallback Methods ***
 
     STDMETHOD(RunBegin)(THIS_ DWORD dwReserved) PURE;
     STDMETHOD(RunEnd)(THIS_ DWORD dwReserved) PURE;
@@ -69,7 +69,7 @@ DECLARE_INTERFACE_IID_(IShellFolderSearchableCallback, IUnknown, "F98D8294-2BBC-
 
 
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 

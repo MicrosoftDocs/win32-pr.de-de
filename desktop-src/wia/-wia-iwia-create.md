@@ -1,7 +1,7 @@
 ---
-description: Die Create-Methode des WIA-Objekts stellt eine Verbindung mit dem angegebenen Windows-Abbild Erfassungsgerät (WIA) her und gibt ein Element Objekt zurück, das das Gerät darstellt.
+description: Die Create-Methode des Wia-Objekts stellt eine Verbindung mit dem angegebenen WIA-Gerät (Windows Image Acquisition) her und gibt ein Item-Objekt zurück, das das Gerät darstellt.
 ms.assetid: c33c635a-159c-4ac3-8ad5-6f21a1986702
-title: WIA. Create-Methode
+title: Wia.Create-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 - COM
 api_location:
 - Wiascr.dll
-ms.openlocfilehash: 6a388ba2b3ee0506b093221275e34104e3f91bbe
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d22d45e473cec1d5186c300f97cbdb4661237ab9
+ms.sourcegitcommit: 3caaa3c92dcb1ef12f84464d14ce6262e65e988e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104529150"
+ms.lasthandoff: 05/12/2021
+ms.locfileid: "109841331"
 ---
-# <a name="wiacreate-method"></a>WIA. Create-Methode
+# <a name="wiacreate-method"></a>Wia.Create-Methode
 
-Die **Create** -Methode des [**WIA**](-wia-wia.md) -Objekts stellt eine Verbindung mit dem angegebenen Windows-Abbild Erfassungsgerät (WIA) her und gibt ein [**Element**](-wia-item.md) Objekt zurück, das das Gerät darstellt.
+Die **Create-Methode** des [**Wia-Objekts**](-wia-wia.md) stellt eine Verbindung mit dem angegebenen WIA-Gerät (Windows Image Acquisition) her und gibt ein [**Item-Objekt**](-wia-item.md) zurück, das das Gerät darstellt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,30 +40,30 @@ retVal = Wia.Create(
 
 <dl> <dt>
 
-*Gerät* \[ in\]
+*Gerät* \[ In\]
 </dt> <dd>
 
-Typ: **Variant \** _
+Typ: **\* VARIANT**
 
-Gibt das WIA-Gerät an, mit dem eine Verbindung hergestellt wird.
+Gibt das WIA-Gerät an, mit dem eine Verbindung hergestellt werden soll.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Typ: _ *iwiadispatchitem**
+Typ: **IWiaDispatchItem**
 
-Bei erfolgreicher Ausführung gibt diese Methode ein [**Element**](-wia-item.md) Objekt zurück, das ein WIA-Hardware Gerät (ein Stamm Element) darstellt.
+Bei Erfolg gibt diese Methode ein [**Item-Objekt**](-wia-item.md) zurück, das ein WIA-Hardwaregerät (ein Stammelement) darstellt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der *Geräte* Parameter gibt ein Objekt vom Typ " [**toviceinfo**](-wia-deviceinfo.md) " an, indem das Objekt selbst, dessen Index von einem Auflistungs Objekt oder der Wert der [**ID**](-wia-iwiadeviceinfo-id.md) -Eigenschaft übergeben wird. Übergeben Sie **nichts** , um ein Dialogfeld anzuzeigen, das einem Benutzer ermöglicht, ein Gerät auszuwählen.
+Der *Device-Parameter* gibt ein [**DeviceInfo-Objekt**](-wia-deviceinfo.md) an, indem er das Objekt selbst, seinen Index aus einem Auflistungsobjekt oder den Wert seiner [**ID-Eigenschaft**](-wia-iwiadeviceinfo-id.md) übergibt. **Nichts** übergeben, um ein Dialogfeld anzuzeigen, in dem ein Benutzer ein Gerät auswählen kann.
 
 ## <a name="examples"></a>Beispiele
 
-Die folgenden VBScript-Beispiele veranschaulichen die Verwendung der **Create** -Methode.
+Die folgenden VBScript-Beispiele veranschaulichen die Verwendung der **Create-Methode.**
 
-Im ersten Beispiel wird ein [**deviceInfo**](-wia-deviceinfo.md) -Objekt an die **Create** -Methode übergeben. Beachten Sie, dass das übergeben der [**ID**](-wia-iwiadeviceinfo-id.md) -Eigenschaft des Objekts genau dasselbe Verhalten bewirkt.
+Im ersten Beispiel wird ein [**DeviceInfo-Objekt**](-wia-deviceinfo.md) an die **Create-Methode** übergeben. Beachten Sie, dass die Übergabe der [**ID-Eigenschaft**](-wia-iwiadeviceinfo-id.md) des Objekts genau das gleiche Verhalten verursacht.
 
 
 ```JScript
@@ -85,7 +85,7 @@ Next
 
 
 
-Im nächsten Beispiel übergibt die aufrufenden Anwendung den Index des [**deviceInfo**](-wia-deviceinfo.md) -Objekts in der-Auflistung an die **Create** -Methode.
+Im nächsten Beispiel übergibt die aufrufende Anwendung den Index des [**DeviceInfo-Objekts**](-wia-deviceinfo.md) in der Auflistung an die **Create-Methode.**
 
 
 ```JScript
@@ -106,7 +106,7 @@ Next
 
 
 
-Das nächste Beispiel übergibt **nichts** an die **Create** -Methode, um ein Dialogfeld anzuzeigen, in dem ein Benutzer ein Gerät auswählen kann.
+Im nächsten Beispiel wird **Nothing** an die **Create-Methode** übergeben, um ein Dialogfeld anzuzeigen, in dem ein Benutzer ein Gerät auswählen kann.
 
 
 ```JScript
@@ -126,9 +126,9 @@ Set objWia = objWia.Create(Nothing)
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, Windows XP \[ Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                          |
-| DLL<br/>                      | <dl> <dt>Wiascr.dll (Version 4,90 oder höher)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, nur Windows \[ XP-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2003-Desktop-Apps\]<br/>                                                          |
+| DLL<br/>                      | <dl> <dt>Wiascr.dll (Version 4.90 oder höher)</dt> </dl> |
 
 
 

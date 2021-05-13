@@ -1,6 +1,6 @@
 ---
-description: Navigiert zur Client seitigen Seite unmittelbar vor der Seite, auf der die serverseitigen HTML-Seiten gehostet werden.
-title: Webwizardhost. finalback-Methode (Shldisp. h)
+description: Navigiert zur clientseitigen Seite unmittelbar vor der Seite, die die serverseitigen HTML-Seiten hosten.
+title: WebWizardHost.FinalBack-Methode (Shldisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 api_location:
 - Shldisp.h
 ms.assetid: a0616388-cf94-4433-ae52-24f02f1d15ac
-ms.openlocfilehash: 704efbd4aae5a98ec01d8bd900e226144d25833d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f131050bb5dd4cfc4b8533857c306f566f12ec2d
+ms.sourcegitcommit: 3caaa3c92dcb1ef12f84464d14ce6262e65e988e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103865840"
+ms.lasthandoff: 05/12/2021
+ms.locfileid: "109841871"
 ---
-# <a name="webwizardhostfinalback-method"></a>Webwizardhost. finalback-Methode
+# <a name="webwizardhostfinalback-method"></a>WebWizardHost.FinalBack-Methode
 
-Navigiert zur Client seitigen Seite unmittelbar vor der Seite, auf der die serverseitigen HTML-Seiten gehostet werden.
+Navigiert zur clientseitigen Seite unmittelbar vor der Seite, die die serverseitigen HTML-Seiten hosten.
 
 ## <a name="syntax"></a>Syntax
 
@@ -37,20 +37,20 @@ iRetVal = WebWizardHost.FinalBack()
 
 Diese Methode hat keine Parameter.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn der Assistent die erste serverseitige Seite anzeigt und der Benutzer auf die Schaltfläche " **zurück** " klickt, ruft der Server **finalback** auf, wenn er über dieses Ereignis über den Ereignishandler des Clients benachrichtigt wird.
+Wenn der Assistent die erste serverseitige Seite anzeigt  und der Benutzer auf die Schaltfläche Zurück klickt, ruft der Server **FinalBack** auf, wenn er vom Ereignishandler des Clients über dieses Ereignis benachrichtigt wird.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                   |
-| Header<br/>                   | <dl> <dt>Shldisp. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Shldisp. idl</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ XP-Desktop-Apps\]<br/>                                            |
+| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2003-Desktop-Apps\]<br/>                                   |
+| Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl> |
 
 
 

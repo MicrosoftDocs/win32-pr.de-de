@@ -1,6 +1,6 @@
 ---
-description: Ruft die Standard Kontingent Grenze als Text Zeichenfolge ab.
-title: Diskquotacontrol. defaultquotalimittext-Eigenschaft
+description: Ruft die Standardkontingentgrenze als Textzeichenfolge ab.
+title: DiskQuotaControl.DefaultQuotaLimitText -Eigenschaft
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 api_location:
 - Shell32.dll
 ms.assetid: ea1b02e0-c480-4ef1-b6e0-1ec202d5f3c5
-ms.openlocfilehash: 442e9094c62f22c3d990cf1112d145a1b2838e62
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 14a5b5a0cc42bda17f922020a8485430797875e1
+ms.sourcegitcommit: 3caaa3c92dcb1ef12f84464d14ce6262e65e988e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104128441"
+ms.lasthandoff: 05/12/2021
+ms.locfileid: "109841541"
 ---
-# <a name="diskquotacontroldefaultquotalimittext-property"></a>Diskquotacontrol. defaultquotalimittext-Eigenschaft
+# <a name="diskquotacontroldefaultquotalimittext-property"></a>DiskQuotaControl.DefaultQuotaLimitText -Eigenschaft
 
-Ruft die Standard Kontingent Grenze als Text Zeichenfolge ab.
+Ruft die Standardkontingentgrenze als Textzeichenfolge ab.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -37,9 +37,9 @@ DefaultQuotaLimitText = DiskQuotaControl.DefaultQuotaLimitText
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Ein Zeichen folgen Wert, der die Standard Kontingent Grenze für neue Benutzer des Volumes enthält. Wenn das Standard Kontingent beispielsweise 10,5 MB beträgt, lautet der Wert der Eigenschaft "10,5 MB". Wenn für das Volume kein Standard Kontingent festgelegt ist, wird die-Eigenschaft auf "No Limit" oder die lokalisierte Entsprechung festgelegt.
+Ein Zeichenfolgenwert, der die Standardkontingentgrenze für neue Benutzer des Volumes enthält. Wenn das Standardkontingent beispielsweise 10,5 MB beträgt, ist der Wert der -Eigenschaft "10,5 MB". Wenn das Volume über kein Standardkontingent verfügt, wird die -Eigenschaft auf "No Limit" oder die lokalisierte Entsprechung festgelegt.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
@@ -47,18 +47,18 @@ Ein Zeichen folgen Wert, der die Standard Kontingent Grenze für neue Benutzer d
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                          |
-| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 5,0 oder höher)</dt> </dl> |
+| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 5.0 oder höher)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[**Defaultquotalimit**](diskquotacontrol-defaultquotalimit.md)
+[**DefaultQuotaLimit**](diskquotacontrol-defaultquotalimit.md)
 </dt> <dt>
 
-[**Diskquotacontrol**](diskquotacontrol-object.md)
+[**DiskQuotaControl**](diskquotacontrol-object.md)
 </dt> </dl>
 
  

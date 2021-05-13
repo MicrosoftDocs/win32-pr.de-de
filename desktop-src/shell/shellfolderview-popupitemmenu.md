@@ -13,12 +13,12 @@ api_type:
 api_location:
 - Shell32.dll
 ms.assetid: 1610d91e-87c3-4ba5-9147-1595eddb2c3a
-ms.openlocfilehash: cb862ba159f55d3ab82495ddeb32a87f3ce1901b
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 7a2feda23d6e1759e1c0be27805fefbb6b592df7
+ms.sourcegitcommit: 3caaa3c92dcb1ef12f84464d14ce6262e65e988e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108083388"
+ms.lasthandoff: 05/12/2021
+ms.locfileid: "109840751"
 ---
 # <a name="shellfolderviewpopupitemmenu-method"></a>ShellFolderView.PopupItemMenu-Methode
 
@@ -78,7 +78,7 @@ Die **Zeichenfolge,** die die Befehlszeichenfolge empfängt.
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, nur Windows \[ XP-Desktop-Apps\]<br/>                                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                           |

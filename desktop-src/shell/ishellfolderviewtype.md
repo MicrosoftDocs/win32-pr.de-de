@@ -1,6 +1,6 @@
 ---
-description: Macht Methoden verfügbar, mit denen ein Shellordner verschiedene Ansichten für seinen Inhalt unterstützt (verschiedene hierarchische Layouts der Daten).
-title: Ishellfolderviewtype-Schnittstelle
+description: Macht Methoden verfügbar, die es einem Shell-Ordner ermöglichen, verschiedene Ansichten des Inhalts (unterschiedliche hierarchische Layouts seiner Daten) zu unterstützen.
+title: IShellFolderViewType-Schnittstelle
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,45 +13,45 @@ api_type:
 api_location:
 - Shell32.dll
 ms.assetid: 9b597f6b-ef27-4fa1-ad00-e131dbd979e7
-ms.openlocfilehash: 1440b6d14950ad70d2c76168b28bb1077b19b5a3
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f3ccb4073d59e0ebe9b840bd6f8f592f463e1e46
+ms.sourcegitcommit: 3caaa3c92dcb1ef12f84464d14ce6262e65e988e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104042242"
+ms.lasthandoff: 05/12/2021
+ms.locfileid: "109842691"
 ---
-# <a name="ishellfolderviewtype-interface"></a>Ishellfolderviewtype-Schnittstelle
+# <a name="ishellfolderviewtype-interface"></a>IShellFolderViewType-Schnittstelle
 
-Macht Methoden verfügbar, mit denen ein Shellordner verschiedene Ansichten für seinen Inhalt unterstützt (verschiedene hierarchische Layouts der Daten).
+Macht Methoden verfügbar, die es einem Shell-Ordner ermöglichen, verschiedene Ansichten des Inhalts (unterschiedliche hierarchische Layouts seiner Daten) zu unterstützen.
 
 ## <a name="members"></a>Member
 
-Die **ishellfolderviewtype** -Schnittstelle erbt von der [**IUnknown**](/windows/win32/api/unknwn/nn-unknwn-iunknown) -Schnittstelle. **Ishellfolderviewtype** verfügt auch über diese Typen von Membern:
+Die **IShellFolderViewType-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/win32/api/unknwn/nn-unknwn-iunknown) **IShellFolderViewType** verfügt auch über diese Membertypen:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **ishellfolderviewtype** -Schnittstelle verfügt über diese Methoden.
+Die **IShellFolderViewType-Schnittstelle** verfügt über diese Methoden.
 
 
 
 | Methode                                                                      | BESCHREIBUNG                                                                                                                                                          |
 |:----------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Enumsichten**](ishellfolderviewtype-enumviews.md)                         | Ruft einen Enumerator ab, der eine PIDL für jede erweiterte Ansicht zurückgibt.<br/>                                                                                |
-| [**Getdefaultviewname**](ishellfolderviewtype-getdefaultviewname.md)       | Ruft den Namen der Standardansicht ab. Rufen Sie [**IShellFolder:: GetDisplayNameOf**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ishellfolder-getdisplaynameof) auf, um die Namen der anderen Sichten abzurufen.<br/> |
-| [**Getviewtypeproperties**](ishellfolderviewtype-getviewtypeproperties.md) | Ruft die Eigenschaften der Ansicht ab.<br/>                                                                                                                          |
-| [**Translateviewpidl**](ishellfolderviewtype-translateviewpidl.md)         | Rekonstruiert eine PIDL aus einer hierarchischen Darstellung des shellordners in eine andere Darstellung.<br/>                                             |
+| [**EnumViews**](ishellfolderviewtype-enumviews.md)                         | Ruft einen Enumerator ab, der eine PIDL für jede erweiterte Ansicht zurück gibt.<br/>                                                                                |
+| [**GetDefaultViewName**](ishellfolderviewtype-getdefaultviewname.md)       | Ruft den Namen der Standardansicht ab. Rufen [**Sie IShellFolder::GetDisplayNameOf auf,**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ishellfolder-getdisplaynameof) um die Namen der anderen Ansichten abzurufen.<br/> |
+| [**GetViewTypeProperties**](ishellfolderviewtype-getviewtypeproperties.md) | Ruft die Eigenschaften der Ansicht ab.<br/>                                                                                                                          |
+| [**TranslateViewPidl**](ishellfolderviewtype-translateviewpidl.md)         | Rekonstruiert eine PIDL aus einer hierarchischen Darstellung des Shellordners in einer anderen Darstellung.<br/>                                             |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieser Enumerator gibt pidls zurück, bei denen es sich um besondere ausgeblendete Ordner auf der obersten Ebene des shellordners handelt, die ansonsten nicht aufgelistet werden. Die Standardansicht ist die Standardansicht, die im Shellordner normal angezeigt wird.
+Dieser Enumerator gibt PIDLs zurück, bei denen es sich um spezielle ausgeblendete Ordner auf der obersten Ebene des Shellordners handelt, die andernfalls nicht aufzählt werden. Die Standardansicht ist die Ansicht, die der Shellordner normal anzeigt.
 
-Diese Schnittstelle ist in keiner öffentlichen Header Datei definiert. Wenn Sie diese Schnittstelle implementieren möchten, können Sie den folgenden C/C++-Code verwenden, um die zugehörigen Methoden zu deklarieren.
+Diese Schnittstelle ist in einer öffentlichen Headerdatei nicht definiert. Wenn Sie diese Schnittstelle implementieren möchten, können Sie den folgenden C/C++-Code verwenden, um die Methoden zu deklarieren.
 
 
 ```
@@ -59,16 +59,16 @@ Diese Schnittstelle ist in keiner öffentlichen Header Datei definiert. Wenn Sie
 #define INTERFACE   IShellFolderViewType
 DECLARE_INTERFACE_IID_(IShellFolderViewType, IUnknown, "49422C1E-1C03-11d2-8DAB-0000F87A556C")
 {
-    // **_ IUnknown methods _*_
-    STDMETHOD(QueryInterface) (THIS_ REFIID riid, __out void _*ppv) PURE;
+    // *** IUnknown methods ***
+    STDMETHOD(QueryInterface) (THIS_ REFIID riid, __out void **ppv) PURE;
     STDMETHOD_(ULONG,AddRef)  (THIS) PURE;
     STDMETHOD_(ULONG,Release) (THIS) PURE;
 
-    // **_ IShellFolderViewType Methods _*_
+    // *** IShellFolderViewType Methods ***
 
     // EnumViews:
     //   Returns an enumerator which will give out one pidl for every extended view.
-    STDMETHOD(EnumViews)(THIS_ ULONG grfFlags, __out IEnumIDList _*ppenum) PURE;
+    STDMETHOD(EnumViews)(THIS_ ULONG grfFlags, __out IEnumIDList **ppenum) PURE;
 
     // GetDefaultViewName:
     //   Returns the name of the default view.  The names of the other views
@@ -91,7 +91,7 @@ DECLARE_INTERFACE_IID_(IShellFolderViewType, IUnknown, "49422C1E-1C03-11d2-8DAB-
 
 
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 

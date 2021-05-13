@@ -1,6 +1,6 @@
 ---
-description: Erstellt ein Array von Handles für Symbole, die aus einer angegebenen Datei extrahiert werden.
-title: Shextractiensw-Funktion
+description: Erstellt ein Array von Handles für Symbole, die aus einer angegebenen Datei extrahiert wurden.
+title: SHExtractIconsW-Funktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,18 +14,18 @@ api_type:
 api_location:
 - Shell32.dll
 ms.assetid: 9f138b4e-6a84-4c7e-9521-5f8ffe0eaebf
-ms.openlocfilehash: d82eb48d45210ebf12464708b09fe469d97432db
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 699b6d5473d97548a22e220372b9f53633cb2346
+ms.sourcegitcommit: 3caaa3c92dcb1ef12f84464d14ce6262e65e988e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104994806"
+ms.lasthandoff: 05/12/2021
+ms.locfileid: "109840911"
 ---
-# <a name="shextracticonsw-function"></a>Shextractiensw-Funktion
+# <a name="shextracticonsw-function"></a>SHExtractIconsW-Funktion
 
-\[**Shextractitsw** ist über Windows XP Service Pack 2 (SP2) verfügbar. Sie wird möglicherweise in nachfolgenden Versionen geändert oder ist nicht verfügbar.\]
+\[**SHExtractIconsW** ist über Windows XP Service Pack 2 (SP2) verfügbar. Sie kann in nachfolgenden Versionen geändert oder nicht verfügbar sein.\]
 
-Erstellt ein Array von Handles für Symbole, die aus einer angegebenen Datei extrahiert werden.
+Erstellt ein Array von Handles für Symbole, die aus einer angegebenen Datei extrahiert wurden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,7 +49,7 @@ UINT SHExtractIconsW(
 
 <dl> <dt>
 
-*pszFileName* \[ in\]
+*pszFileName* \[ In\]
 </dt> <dd>
 
 Typ: **LPCWSTR**
@@ -58,16 +58,16 @@ Ein Zeiger auf den Dateinamen, aus dem die Symbole extrahiert werden sollen.
 
 </dd> <dt>
 
-*nidindex* \[ in\]
+*nIconIndex* \[ In\]
 </dt> <dd>
 
 Typ: **int**
 
-Der Index des ersten Symbols, das aus der in *pszFileName* benannten Ressource extrahiert werden soll.
+Der Index des ersten Symbols, das aus der Ressource namens in *pszFileName* extrahiert werden soll.
 
 </dd> <dt>
 
-*cxicon* \[ in\]
+*cxIcon* \[ In\]
 </dt> <dd>
 
 Typ: **int**
@@ -76,7 +76,7 @@ Die gewünschte Breite des Symbols. Siehe Hinweise.
 
 </dd> <dt>
 
-*cyicon* \[ in\]
+*cyIcon* \[ In\]
 </dt> <dd>
 
 Typ: **int**
@@ -85,77 +85,77 @@ Die gewünschte Höhe des Symbols. Siehe Hinweise.
 
 </dd> <dt>
 
-*phicon* \[ vorgenommen\]
+*phIcon* \[ out\]
 </dt> <dd>
 
-Typ: **HICON \** _
+Typ: **HICON \***
 
-Diese Funktion gibt einen Zeiger auf das Array von Symbol Handles zurück.
+Enthält nach der Rückkehr dieser Funktion einen Zeiger auf das Array von Symbolhandles.
 
 </dd> <dt>
 
-_pIconId * \[ out\]
+*pIconId* \[ out\]
 </dt> <dd>
 
-Typ: **uint \** _
+Typ: **UINT \***
 
-Wenn diese Funktion zurückgegeben wird, enthält Sie einen Zeiger auf den Ressourcen Bezeichner des extrahierten Symbols, das am besten zum aktuellen Anzeigegerät passt. Wenn kein Bezeichner für dieses Format verfügbar ist, enthält er "0xffffffff". Wenn kein Bezeichner aus einem anderen Grund abgerufen werden kann, gibt 0 (null) zurück.
+Wenn diese Funktion zurückgegeben wird, enthält sie einen Zeiger auf den Ressourcenbezeichner des extrahierten Symbols, das am besten zum aktuellen Anzeigegerät passt. Wenn für dieses Format kein Bezeichner verfügbar ist, enthält es 0xFFFFFFFF. Wenn aus einem anderen Grund kein Bezeichner erhalten werden kann, gibt 0 (null) zurück.
 
 </dd> <dt>
 
-_nIcons * \[ in\]
+*nIcons* \[ In\]
 </dt> <dd>
 
-Typ: **uint**
+Typ: **UINT**
 
-Die Anzahl der Symbole, die aus der in *pszFileName* benannten Ressource extrahiert werden sollen. Dieser Parameter ist nur gültig, wenn es sich bei der Ressource um eine exe-oder DLL-Datei handelt.
+Die Anzahl der Symbole, die aus der Ressource mit dem Namen in *pszFileName extrahiert werden.* Dieser Parameter ist nur gültig, wenn die Ressource eine EXE- oder DLL-Datei ist.
 
 </dd> <dt>
 
-*Flags* \[ in\]
+*Flags* \[ In\]
 </dt> <dd>
 
-Typ: **uint**
+Typ: **UINT**
 
-Die Flags, die diese Funktion steuern. Mögliche Werte finden Sie unter dem *fuload* -Parameter der [**LoadImage**](/windows/win32/api/winuser/nf-winuser-loadimagea) -Funktion.
+Die Flags, die diese Funktion steuern. Mögliche Werte finden Sie unter *dem fuLoad-Parameter* der [**LoadImage-Funktion.**](/windows/win32/api/winuser/nf-winuser-loadimagea)
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Typ: **uint**
+Typ: **UINT**
 
 Ein Wert ungleich 0 (null), wenn erfolgreich; andernfalls 0 (null).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-**Shextractikonsw** extrahiert aus den folgenden Dateitypen.
+**SHExtractIconsW** extrahiert aus den folgenden Dateitypen.
 
 -   Ausführbare Datei (.exe)
--   Dll (dll)
--   Symbol (. ico)
--   Cursor (. cur)
--   Animierter Cursor (. ani)
+-   DLL (.dll)
+-   Symbol (.ico)
+-   Cursor (.cur)
+-   Animierter Cursor (.ani)
 -   Bitmap (.bmp)
 
-Extraktionen von Windows 3. ausführbare *x* 16-Bit-Dateien (exe-oder DLL-Dateien) werden ebenfalls unterstützt.
+Extraktionen aus Windows 3. *x* ausführbare 16-Bit-Dateien (EXE oder DLL) werden ebenfalls unterstützt.
 
-Mit den Parametern *cxicon* und *cyicon* wird die Größe der zu extrahierenden Symbole angegeben. Sie können zwei Größen durch die einzelnen Parameter extrahieren, indem Sie den Wert zwischen seinem LoWord und HIWORD aufteilen. Legen Sie die erste gewünschte Größe in das lowort des-Parameters und die zweite Größe im HIWORD-Format ab. Beispielsweise extrahiert [**makelong**](/previous-versions/windows/desktop/legacy/ms632660(v=vs.85))(24, 48) sowohl für *cxicon* als auch für *cyicon* sowohl 24-als auch 48-Symbole.
+Die Parameter *cxIcon* und *cyIcon* geben die Größe der zu extrahierende Symbole an. Zwei Größen können über jeden Parameter extrahiert werden, indem der Wert zwischen LOWORD und HIWORD aufgeteilt wird. Legen Sie die erste gewünschte Größe in loword des Parameters und die zweite Größe in hiword ein. Beispielsweise extrahiert [**MAKELONG**](/previous-versions/windows/desktop/legacy/ms632660(v=vs.85))(24, 48) sowohl für *cxIcon* als auch *für cyIcon* symbole mit einer Größe von 24 und 48.
 
-Der Aufrufprozess ist dafür verantwortlich, alle Symbole zu zerstören, die durch diese Funktion durch Aufrufen der [**DestroyIcon**](/windows/win32/api/winuser/nf-winuser-destroyicon) -Funktion extrahiert werden.
+Der aufrufende Prozess ist dafür verantwortlich, alle Über diese Funktion extrahierten Symbole zu zerstören, indem die [**DestroyIcon-Funktion**](/windows/win32/api/winuser/nf-winuser-destroyicon) aufgerufen wird.
 
-**Shextractiensw** wird nicht nach Name exportiert oder in einer öffentlichen Header Datei deklariert. Um es zu verwenden, müssen Sie einen übereinstimmenden Prototyp deklarieren und [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) verwenden, um einen Funktionszeiger von Shell32.dll anzufordern, der zum Aufrufen dieser Funktion verwendet werden kann.
+**SHExtractIconsW** wird nicht anhand des Namens exportiert oder in einer öffentlichen Headerdatei deklariert. Um ihn zu verwenden, müssen Sie einen übereinstimmenden Prototyp deklarieren und [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) verwenden, um einen Funktionszeiger von Shell32.dll anzufordern, der zum Aufrufen dieser Funktion verwendet werden kann.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, Windows XP \[ Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                          |
-| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 5,0 oder höher)</dt> </dl> |
-| Unicode- und ANSI-Name<br/>   | **Shextractitsw** (Unicode)<br/>                                                                      |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, nur Windows \[ XP-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2003-Desktop-Apps\]<br/>                                                          |
+| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 5.0 oder höher)</dt> </dl> |
+| Unicode- und ANSI-Name<br/>   | **SHExtractIconsW** (Unicode)<br/>                                                                      |
 
 
 

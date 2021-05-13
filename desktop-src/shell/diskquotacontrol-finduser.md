@@ -1,6 +1,6 @@
 ---
-description: Sucht den Eintrag eines Benutzers anhand des Namens in der Kontingent Datei des Volumes.
-title: Diskquotacontrol. FINDUSER-Methode
+description: Sucht den Eintrag eines Benutzers anhand des Namens in der Kontingentdatei des Volumes.
+title: DiskQuotaControl.FindUser-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 api_location:
 - Shell32.dll
 ms.assetid: e5767d28-4c0a-49bc-a1d3-ba809411456d
-ms.openlocfilehash: af1bc9c0398d37f04e47515a2b85cb4520795b7a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: eab539a5ec5a360ae28fc87d5ffbb9dd4f9f1cc8
+ms.sourcegitcommit: 3caaa3c92dcb1ef12f84464d14ce6262e65e988e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104977185"
+ms.lasthandoff: 05/12/2021
+ms.locfileid: "109841521"
 ---
-# <a name="diskquotacontrolfinduser-method"></a>Diskquotacontrol. FINDUSER-Methode
+# <a name="diskquotacontrolfinduser-method"></a>DiskQuotaControl.FindUser-Methode
 
-Sucht den Eintrag eines Benutzers anhand des Namens in der Kontingent Datei des Volumes.
+Sucht den Eintrag eines Benutzers anhand des Namens in der Kontingentdatei des Volumes.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,24 +39,24 @@ DiskQuotaControl.FindUser(
 
 <dl> <dt>
 
-*slogonname* 
+*sLogonName* 
 </dt> <dd>
 
 Typ: **Zeichenfolge**
 
-Ein Zeichen folgen Wert, der den Anmelde Namen des Benutzers enthält.
+Ein Zeichenfolgenwert, der den Anmeldenamen des Benutzers enthält.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen Objekt Ausdruck zurück, der das [**didiskquotauser**](didiskquotauser-object.md) -Objekt des Benutzers ergibt.
+Gibt einen Objektausdruck zurück, der das [**DIDiskQuotaUser-Objekt**](didiskquotauser-object.md) des Benutzers ergibt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode gibt ein [**didiskquotauser**](didiskquotauser-object.md) -Objekt zurück, auch wenn in der Kontingent Datei kein Eintrag für den Benutzer vorhanden ist. Für das zurückgegebene Benutzerobjekt sind Warnungs Schwellenwert und feste Kontingent Limits auf die Standardwerte des Volumes festgelegt.
+Diese Methode gibt ein [**DIDiskQuotaUser-Objekt**](didiskquotauser-object.md) zurück, auch wenn kein Eintrag für den Benutzer in der Kontingentdatei vorhanden ist. Für das zurückgegebene Benutzerobjekt sind warnungsschwellenwert und harte Kontingentgrenzen auf die Standardwerte des Volumes festgelegt.
 
-Die von [**translatelogonnametosid**](diskquotacontrol-translatelogonnametosid.md) zurückgegebene Zeichenfolge kann anstelle des *slogonname* -Parameters übergeben werden. Wenn **FINDUSER** eine SID-Zeichenfolge empfängt, wird die entsprechende sid für die direkte Suche des Kontingent Datensatzes des Benutzers auf dem Volume verwendet. Dadurch wird der SID-Name-Cache umgangen. In Fällen, in denen **FINDUSER** aufgrund eines Konflikts im Format (z. b. Sam-kompatibel und UPN) des bereitgestellten Anmelde namens und des zwischengespeicherten Anmelde namens ausfällt, kann der Anmelde Name mithilfe von **translatelogonnametosid** in eine SID-Zeichenfolge übersetzt werden und dann erneut an **FINDUSER** übergeben werden. Dieses Verfahren wird im folgenden VBScript-Code veranschaulicht.
+Die von [**TranslateLogonNameToSID**](diskquotacontrol-translatelogonnametosid.md) zurückgegebene Zeichenfolge kann anstelle des *sLogonName-Parameters* übergeben werden. Wenn **FindUser** eine SID-Zeichenfolge empfängt, verwendet er die entsprechende SID für die direkte Suche des Kontingentdatensatzes des Benutzers auf dem Volume. Dadurch wird der SID-Name-Cache umgangen. In Fällen, in denen **FindUser** aufgrund eines Konflikts im Format (z. B. SAM-kompatibel und UPN) des angegebenen Anmeldenamens und des zwischengespeicherten Anmeldenamens fehlschlägt, kann der Anmeldename mit **TranslateLogonNameToSID** in eine SID-Zeichenfolge übersetzt und dann erneut an **FindUser** übergeben werden. Dies wird im folgenden VBScript-Code veranschaulicht.
 
 
 ```
@@ -74,7 +74,7 @@ End Function
 
 
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
@@ -82,15 +82,15 @@ End Function
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                          |
-| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 5,0 oder höher)</dt> </dl> |
+| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 5.0 oder höher)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[**Diskquotacontrol-Objekt**](diskquotacontrol-object.md)
+[**DiskQuotaControl-Objekt**](diskquotacontrol-object.md)
 </dt> </dl>
 
  

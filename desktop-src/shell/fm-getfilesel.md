@@ -1,6 +1,6 @@
 ---
-description: Gesendet von einer Datei-Manager-Erweiterung zum Abrufen von Informationen über eine ausgewählte Datei aus dem aktiven Datei-Manager-Fenster (entweder im Verzeichnis Fenster oder im Fenster "Suchergebnisse").
-title: FM_GETFILESEL Meldung (WF. h)
+description: Wird von einer Datei-Manager-Erweiterung gesendet, um Informationen zu einer ausgewählten Datei aus dem aktiven Datei-Manager-Fenster abzurufen (entweder das Verzeichnisfenster oder das Fenster Suchergebnisse).
+title: FM_GETFILESEL Nachricht (Wfext.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 api_location:
 - Wfext.h
 ms.assetid: c2b4aac6-165b-4eba-b012-ee7a20481cd3
-ms.openlocfilehash: ec7d221e0c352c4b9284ae5fe2d6f80e50da85ac
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2da95a39f8e84215640e926ae21a043865223665
+ms.sourcegitcommit: 3caaa3c92dcb1ef12f84464d14ce6262e65e988e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103864947"
+ms.lasthandoff: 05/12/2021
+ms.locfileid: "109841421"
 ---
-# <a name="fm_getfilesel-message"></a>FM \_ getfilesel-Meldung
+# <a name="fm_getfilesel-message"></a>FM \_ GETFILESEL-Nachricht
 
-Gesendet von einer Datei-Manager-Erweiterung zum Abrufen von Informationen über eine ausgewählte Datei aus dem aktiven Datei-Manager-Fenster (entweder im Verzeichnis Fenster oder im Fenster "Suchergebnisse").
+Wird von einer Datei-Manager-Erweiterung gesendet, um Informationen zu einer ausgewählten Datei aus dem aktiven Datei-Manager-Fenster abzurufen (entweder das Verzeichnisfenster oder das Fenster Suchergebnisse).
 
 ## <a name="parameters"></a>Parameter
 
@@ -31,26 +31,26 @@ Gesendet von einer Datei-Manager-Erweiterung zum Abrufen von Informationen über
 *Index* 
 </dt> <dd>
 
-Der null basierte Index der ausgewählten Datei, die abgerufen werden soll.
+Der nullbasierte Index der ausgewählten abzurufenden Datei.
 
 </dd> <dt>
 
 *lpfmsgfs* 
 </dt> <dd>
 
-Die Adresse einer [**f- \_ getfilesel**](fms-getfilesel.md) -Struktur, die Informationen über die Auswahl empfängt.
+Die Adresse einer [**FMS \_ GETFILESEL-Struktur,**](fms-getfilesel.md) die Informationen zur Auswahl empfängt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt den NULL basierten Index der ausgewählten Datei zurück, die abgerufen wurde.
+Gibt den nullbasierten Index der ausgewählten Datei zurück, die abgerufen wurde.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine Erweiterung kann die [**FM \_ getselcount**](fm-getselcount.md) -Nachricht verwenden, um die Anzahl ausgewählter Dateien abzurufen.
+Eine Erweiterung kann die [**FM \_ GETSELCOUNT-Nachricht**](fm-getselcount.md) verwenden, um die Anzahl der ausgewählten Dateien abzurufen.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
@@ -58,21 +58,21 @@ Eine Erweiterung kann die [**FM \_ getselcount**](fm-getselcount.md) -Nachricht 
 |-------------------------------------|------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                               |
-| Header<br/>                   | <dl> <dt>WF. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Wfext.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[**"F"**](fmextensionproc.md)
+[**FMExtensionProc**](fmextensionproc.md)
 </dt> <dt>
 
-[**FM \_ getfilesellfn**](fm-getfilesellfn.md)
+[**FM \_ GETFILESELLFN**](fm-getfilesellfn.md)
 </dt> <dt>
 
-[**FM \_ getselzähltlfn**](fm-getselcountlfn.md)
+[**FM \_ GETSELCOUNTLFN**](fm-getselcountlfn.md)
 </dt> </dl>
 
  

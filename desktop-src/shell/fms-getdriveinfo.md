@@ -1,6 +1,6 @@
 ---
-description: Enthält Informationen über das im aktiven Datei-Manager-Fenster (im Verzeichnis Fenster oder im Fenster "Suchergebnisse") ausgewählte Laufwerk.
-title: FMS_GETDRIVEINFO-Struktur (WF. h)
+description: Enthält Informationen über das Laufwerk, das im aktiven Datei-Manager-Fenster ausgewählt wurde (das Verzeichnisfenster oder das Fenster Suchergebnisse).
+title: FMS_GETDRIVEINFO-Struktur (Wfext.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 api_location:
 - Wfext.h
 ms.assetid: 14f8a90b-d0ed-4818-a719-8fc4ea617bef
-ms.openlocfilehash: b19b54d89f74fa122effa5853beb2961e0ddf1eb
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 107e12e1076a2fc928ecb9b578ab01d64898a83a
+ms.sourcegitcommit: 3caaa3c92dcb1ef12f84464d14ce6262e65e988e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104979697"
+ms.lasthandoff: 05/12/2021
+ms.locfileid: "109842231"
 ---
-# <a name="fms_getdriveinfo-structure"></a>FMS \_ getdriveingefo-Struktur
+# <a name="fms_getdriveinfo-structure"></a>FMS \_ GETDRIVEINFO-Struktur
 
-Enthält Informationen über das im aktiven Datei-Manager-Fenster (im Verzeichnis Fenster oder im Fenster "Suchergebnisse") ausgewählte Laufwerk.
+Enthält Informationen über das Laufwerk, das im aktiven Datei-Manager-Fenster ausgewählt wurde (das Verzeichnisfenster oder das Fenster Suchergebnisse).
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,7 +43,7 @@ typedef struct _FMS_GETDRIVEINFO {
 
 <dl> <dt>
 
-**dwtotalspace**
+**dwTotalSpace**
 </dt> <dd>
 
 Typ: **DWORD**
@@ -54,51 +54,51 @@ Die Gesamtmenge des Speicherplatzes in Bytes auf dem Datenträger, der dem Laufw
 
 </dd> <dt>
 
-**dwfreespace**
+**dwFreeSpace**
 </dt> <dd>
 
 Typ: **DWORD**
 
 </dd> <dd>
 
-Der freie Speicherplatz in Bytes auf dem Datenträger, der dem Laufwerk zugeordnet ist.
+Die Menge des freien Speicherplatzes in Bytes auf dem Datenträger, der dem Laufwerk zugeordnet ist.
 
 </dd> <dt>
 
-**szpath**
+**szPath**
 </dt> <dd>
 
 Typ: **TCHAR \[ 260 \]**
 
 </dd> <dd>
 
-der NULL terminierte Pfad des aktuellen Verzeichnisses.
+der mit NULL endende Pfad des aktuellen Verzeichnisses.
 
 </dd> <dt>
 
-**szvolume**
+**szVolume**
 </dt> <dd>
 
 Typ: **TCHAR \[ 14 \]**
 
 </dd> <dd>
 
-Die mit NULL terminierte Volumebezeichnung des Datenträgers, der dem Laufwerk zugeordnet ist.
+Die auf NULL endende Volumebezeichnung des Datenträgers, der dem Laufwerk zugeordnet ist.
 
 </dd> <dt>
 
-**szshare**
+**szShare**
 </dt> <dd>
 
 Typ: **TCHAR \[ 128 \]**
 
 </dd> <dd>
 
-Der NULL-terminierte Name der Netzwerkressource (wenn über ein Netzwerk auf das Laufwerk zugegriffen wird).
+Der auf NULL endende Name der Netzwerkressource (wenn über ein Netzwerk auf das Laufwerk zugegriffen wird).
 
 </dd> </dl>
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
@@ -106,18 +106,18 @@ Der NULL-terminierte Name der Netzwerkressource (wenn über ein Netzwerk auf das
 |-------------------------------------|------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                               |
-| Header<br/>                   | <dl> <dt>WF. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Wfext.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[**"F"**](fmextensionproc.md)
+[**FMExtensionProc**](fmextensionproc.md)
 </dt> <dt>
 
-[**FM \_ getdriveingefo**](fm-getdriveinfo.md)
+[**FM \_ GETDRIVEINFO**](fm-getdriveinfo.md)
 </dt> </dl>
 
  

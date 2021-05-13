@@ -1,6 +1,6 @@
 ---
-description: Wird an eine Erweiterungs-DLL gesendet, wenn der Datei-Manager die DLL entladen wird.
-title: FMEVENT_UNLOAD Meldung (WF. h)
+description: Wird an eine Erweiterungs-DLL gesendet, wenn der Datei-Manager die DLL entlädt.
+title: FMEVENT_UNLOAD (Wfext.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 api_location:
 - Wfext.h
 ms.assetid: 15ffcd46-602f-4ad0-9c58-0b8056b9cac4
-ms.openlocfilehash: 140fbdc79980a2ab6ba9f50b8815429436df0d3a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 24b5b2a77393178cad545cb63c1524a8d7e92c5c
+ms.sourcegitcommit: 3caaa3c92dcb1ef12f84464d14ce6262e65e988e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104127864"
+ms.lasthandoff: 05/12/2021
+ms.locfileid: "109843071"
 ---
-# <a name="fmevent_unload-message"></a>Meldung zum Entladen des Ereignisses \_
+# <a name="fmevent_unload-message"></a>FMEVENT \_ UNLOAD-Nachricht
 
-Wird an eine Erweiterungs-DLL gesendet, wenn der Datei-Manager die DLL entladen wird.
+Wird an eine Erweiterungs-DLL gesendet, wenn der Datei-Manager die DLL entlädt.
 
 ## <a name="parameters"></a>Parameter
 
@@ -36,13 +36,13 @@ Wird an eine Erweiterungs-DLL gesendet, wenn der Datei-Manager die DLL entladen 
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine Erweiterungs-DLL sollte NULL zurückgeben, wenn Sie diese Nachricht verarbeitet.
+Eine Erweiterungs-DLL sollte 0 (null) zurückgeben, wenn sie diese Meldung verarbeitet.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die *HWND* -und **HMENU** -Werte, die mit den " [**fmevent \_ Load**](fmevent-load.md) "-und " [**fmevent \_ InitMenu**](fmevent-initmenu.md) "-Meldungen übergeben werden, sind möglicherweise zum Zeitpunkt der Übermittlung dieser Nachricht ungültig.
+Die *hwnd-* und **hMenu-Werte,** die mit den [**FMEVENT \_ LOAD-**](fmevent-load.md) und [**FMEVENT \_ INITMENU-Nachrichten**](fmevent-initmenu.md) übergeben werden, sind möglicherweise zum Zeitpunkt des Sendens dieser Nachricht ungültig.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
@@ -50,15 +50,15 @@ Die *HWND* -und **HMENU** -Werte, die mit den " [**fmevent \_ Load**](fmevent-lo
 |-------------------------------------|------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                               |
-| Header<br/>                   | <dl> <dt>WF. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Wfext.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[**"F"**](fmextensionproc.md)
+[**FMExtensionProc**](fmextensionproc.md)
 </dt> </dl>
 
  

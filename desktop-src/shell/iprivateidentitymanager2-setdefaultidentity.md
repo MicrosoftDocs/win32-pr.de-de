@@ -1,6 +1,6 @@
 ---
-description: 'IPrivateIdentityManager2:: setdefaultidentity-Methode'
-title: 'IPrivateIdentityManager2:: setdefaultidentity-Methode'
+description: IPrivateIdentityManager2::SetDefaultIdentity-Methode
+title: IPrivateIdentityManager2::SetDefaultIdentity-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -9,14 +9,14 @@ api_name: ''
 api_type: ''
 api_location: ''
 ms.assetid: df111901-22ef-4f1a-a5e0-8a1d836c3e46
-ms.openlocfilehash: 62e7c50df3b4ba94cd8a692535876c551d17f219
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2dd65c8646efe27cf7e653032b70961afe1415e8
+ms.sourcegitcommit: 3caaa3c92dcb1ef12f84464d14ce6262e65e988e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104978129"
+ms.lasthandoff: 05/12/2021
+ms.locfileid: "109841711"
 ---
-# <a name="iprivateidentitymanager2setdefaultidentity-method"></a>IPrivateIdentityManager2:: setdefaultidentity-Methode
+# <a name="iprivateidentitymanager2setdefaultidentity-method"></a>IPrivateIdentityManager2::SetDefaultIdentity-Methode
 
 Diese Methode wird nicht unterstützt.
 

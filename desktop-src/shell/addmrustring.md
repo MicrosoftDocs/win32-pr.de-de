@@ -1,6 +1,6 @@
 ---
 description: Fügt am Anfang der Liste der zuletzt verwendeten (MRU) eine Zeichenfolge hinzu.
-title: Addmrustringw-Funktion
+title: AddMRUStringW-Funktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - Comctl32.dll
 ms.assetid: ad94a442-8492-412c-a4f2-ac6e7c5327d7
-ms.openlocfilehash: 0d0d65187105f4ad844b349c6ac60b030c464716
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b62e23cd0604273559e36e561970dd62f117c11d
+ms.sourcegitcommit: 3caaa3c92dcb1ef12f84464d14ce6262e65e988e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104041618"
+ms.lasthandoff: 05/12/2021
+ms.locfileid: "109841191"
 ---
-# <a name="addmrustringw-function"></a>Addmrustringw-Funktion
+# <a name="addmrustringw-function"></a>AddMRUStringW-Funktion
 
-\[Diese Funktion ist über Windows XP mit Service Pack 2 (SP2) und Windows Server 2003 verfügbar. Sie wird möglicherweise in nachfolgenden Versionen von Windows geändert oder ist nicht verfügbar. \]
+\[Diese Funktion ist über Windows XP mit Service Pack 2 (SP2) und Windows Server 2003 verfügbar. Sie kann in nachfolgenden Versionen von Windows geändert oder nicht verfügbar sein. \]
 
 Fügt am Anfang der Liste der zuletzt verwendeten (MRU) eine Zeichenfolge hinzu.
 
@@ -43,21 +43,21 @@ int AddMRUStringW(
 
 <dl> <dt>
 
-*hmru* \[ in\]
+*hMRU* \[ In\]
 </dt> <dd>
 
-Typ: **handle**
+Typ: **HANDLE**
 
 Das Handle der MRU-Liste.
 
 </dd> <dt>
 
-*szString* \[ in\]
+*szString* \[ In\]
 </dt> <dd>
 
 Typ: **LPCTSTR**
 
-Ein Zeiger auf die Daten. Dabei kann es sich entweder um eine Zeichenfolge handeln oder, wenn die MRU-Liste mit dem **MRU- \_ Binärflag** erstellt wurde, Binärdaten. Im Fall von Binärdaten gibt das erste **DWORD** die Größe an.
+Ein Zeiger auf die Daten. Dies kann entweder eine Zeichenfolge oder binäre Daten sein, wenn die MRU-Liste mit dem **MRU \_ BINARY-Flag** erstellt wurde. Bei binären Daten gibt das erste **DWORD** seine Größe an.
 
 </dd> </dl>
 
@@ -65,13 +65,13 @@ Ein Zeiger auf die Daten. Dabei kann es sich entweder um eine Zeichenfolge hande
 
 Typ: **int**
 
-Gibt bei erfolgreicher Ausführung einen nicht negativen Wert zurück, andernfalls-1.
+Gibt bei Erfolg einen nicht negativen Wert zurück, andernfalls -1.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Funktion ist nicht in einem öffentlichen Header oder einer Bibliothek enthalten. Der Zugriff darauf erfolgt über [**GetProcAddress**](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress) oder das Extrahieren aus comctl32.dll durch die Ordnungszahl, die 401 für **addmrustringw** ist.
+Diese Funktion ist nicht in einem öffentlichen Header oder einer öffentlichen Bibliothek enthalten. Der Zugriff kann über [**GetProcAddress**](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress) erfolgen oder aus comctl32.dll durch die Ordnungszahl 401 für **AddMRUStringW** extrahiert werden.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
@@ -79,8 +79,8 @@ Diese Funktion ist nicht in einem öffentlichen Header oder einer Bibliothek ent
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                     |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                           |
-| DLL<br/>                      | <dl> <dt>Comctl32.dll (Version 5,0 oder höher)</dt> </dl> |
-| Unicode- und ANSI-Name<br/>   | **Addmrustringw** (Unicode)<br/>                                                                         |
+| DLL<br/>                      | <dl> <dt>Comctl32.dll (Version 5.0 oder höher)</dt> </dl> |
+| Unicode- und ANSI-Name<br/>   | **AddMRUStringW** (Unicode)<br/>                                                                         |
 
 
 

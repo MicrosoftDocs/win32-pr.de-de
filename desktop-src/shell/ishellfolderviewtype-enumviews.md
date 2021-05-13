@@ -1,6 +1,6 @@
 ---
-description: Ruft einen Enumerator ab, der für jede erweiterte Ansicht einen Zeiger auf eine Element Bezeichner Liste (PIDL) zurückgibt.
-title: 'Ishellfolderviewtype:: enumviews-Methode'
+description: Ruft einen Enumerator ab, der einen Zeiger auf eine Elementbezeichnerliste (PIDL) für jede erweiterte Ansicht zurückgibt.
+title: IShellFolderViewType::EnumViews-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 api_location:
 - Shell32.dll
 ms.assetid: e44cd774-1d16-4faa-b5ca-fcaf2740cdca
-ms.openlocfilehash: 4ccaac7baf99608e097b8f8b67c8eac30f60ed3a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
-ms.translationtype: HT
+ms.openlocfilehash: 1627bb134066821444788ca44a3527278a02f4c7
+ms.sourcegitcommit: 3caaa3c92dcb1ef12f84464d14ce6262e65e988e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104993823"
+ms.lasthandoff: 05/12/2021
+ms.locfileid: "109842771"
 ---
-# <a name="ishellfolderviewtypeenumviews-method"></a>Ishellfolderviewtype:: enumviews-Methode
+# <a name="ishellfolderviewtypeenumviews-method"></a>IShellFolderViewType::EnumViews-Methode
 
-Ruft einen Enumerator ab, der für jede erweiterte Ansicht einen Zeiger auf eine Element Bezeichner Liste (PIDL) zurückgibt.
+Ruft einen Enumerator ab, der einen Zeiger auf eine Elementbezeichnerliste (PIDL) für jede erweiterte Ansicht zurückgibt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,21 +40,21 @@ HRESULT EnumViews(
 
 <dl> <dt>
 
-*grfFlags* \[ in\]
+*grfFlags* \[ In\]
 </dt> <dd>
 
-Typ: **ulong**
+Typ: **ULONG**
 
-Flags, die angeben, welche Elemente in die-Enumeration eingeschlossen werden sollen. Eine Liste möglicher Werte finden Sie unter dem Enumerationstyp " [**shcontf**](/windows/win32/api/shobjidl_core/ne-shobjidl_core-_shcontf) ". Dieser Parameter kann ignoriert werden.
+Flags, die angeben, welche Elemente in die Enumeration eingeschlossen werden sollen. Eine Liste der möglichen Werte finden Sie unter [**SHCONTF-Enumerationstyp.**](/windows/win32/api/shobjidl_core/ne-shobjidl_core-_shcontf) Dieser Parameter kann ignoriert werden.
 
 </dd> <dt>
 
-*ppum* \[ vorgenommen\]
+*ppenum* \[ out\]
 </dt> <dd>
 
-Typ: **[ **ienumittellist**](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ienumidlist)\*\***
+Typ: **[ **IEnumIDList**](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ienumidlist)\*\***
 
-Die Adresse einer Zeiger Variablen vom Typ [**ienumittellist**](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ienumidlist) , die den Enumerator empfängt.
+Die Adresse einer Zeigervariable vom Typ [**IEnumIDList,**](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ienumidlist) die den Enumerator empfängt.
 
 </dd> </dl>
 
@@ -62,13 +62,13 @@ Die Adresse einer Zeiger Variablen vom Typ [**ienumittellist**](/windows/desktop
 
 Typ: **HRESULT**
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Sichten werden dem Benutzer als ausgeblendete Ordner aus dem Stammverzeichnis (dargestellt durch pidls) dargestellt. Wenn dies erforderlich ist, wird die Standardansicht (aus dem Stamm Ordner) als **null**-oder leere PIDL dargestellt.
+Ansichten werden dem Benutzer als ausgeblendete Ordner außerhalb des Stammverzeichnisses (dargestellt durch PIDLs) dargestellt. Bei Bedarf wird die Standardansicht (außerhalb des Stammordners) als **NULL** oder als leere PIDL dargestellt.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 

@@ -1,6 +1,6 @@
 ---
-description: Startet das Abbrechen einer ausstehenden asynchronen Suche.
-title: 'Ishellfoldersearchable:: cancelasyncsearch-Methode'
+description: Startet den Prozess des Abbrechens einer ausstehenden asynchronen Suche.
+title: IShellFolderSearchable::CancelAsyncSearch-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 api_location:
 - Shell32.dll
 ms.assetid: 5c920dca-fbca-48e1-9dce-38713cf1fcef
-ms.openlocfilehash: e9e3231e8cc602a4e00b6ee79a25392717b6e68b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3146fea4f6c8d8547c8c86096b434cbaea5b5926
+ms.sourcegitcommit: 3caaa3c92dcb1ef12f84464d14ce6262e65e988e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104977953"
+ms.lasthandoff: 05/12/2021
+ms.locfileid: "109842991"
 ---
-# <a name="ishellfoldersearchablecancelasyncsearch-method"></a>Ishellfoldersearchable:: cancelasyncsearch-Methode
+# <a name="ishellfoldersearchablecancelasyncsearch-method"></a>IShellFolderSearchable::CancelAsyncSearch-Methode
 
-Startet das Abbrechen einer ausstehenden asynchronen Suche.
+Startet den Prozess des Abbrechens einer ausstehenden asynchronen Suche.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,21 +40,21 @@ HRESULT CancelAsyncSearch(
 
 <dl> <dt>
 
-*pidlsearch* \[ in\]
+*pidlSearch* \[ In\]
 </dt> <dd>
 
-Typ: **lpcitemittellist**
+Typ: **LPJSMIDLIST**
 
-Ein Zeiger auf eine [**itemittel List**](/windows/desktop/api/Shtypes/ns-shtypes-itemidlist) für die Suche.
+Ein Zeiger auf eine [**ITEMIDLIST**](/windows/desktop/api/Shtypes/ns-shtypes-itemidlist) für die Suche.
 
 </dd> <dt>
 
-*pdwflags* \[ in\]
+*pdwFlags* \[ In\]
 </dt> <dd>
 
-Typ: **DWORD \** _
+Typ: **DWORD \***
 
-Zurzeit sind keine Flags definiert. Legen Sie auf _ * NULL * * fest.
+Derzeit sind keine Flags definiert. auf **NULL festgelegt.**
 
 </dd> </dl>
 
@@ -62,13 +62,13 @@ Zurzeit sind keine Flags definiert. Legen Sie auf _ * NULL * * fest.
 
 Typ: **HRESULT**
 
-Gibt s \_ OK zurück, wenn abgebrochen wird, oder s \_ false, wenn die Suche nicht ausgeführt wird.
+Gibt S \_ OK zurück, wenn der Vorgang abgebrochen wird, oder S \_ FALSE, wenn die Suche nicht ausgeführt wird.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn die Suche tatsächlich abgebrochen wird, wird [**RunEnd**](ishellfoldersearchablecallback-runend.md) aufgerufen.
+Wenn die Suche tatsächlich abgebrochen wird, [**wird RunEnd**](ishellfoldersearchablecallback-runend.md) aufgerufen.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 

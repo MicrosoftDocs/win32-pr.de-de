@@ -1,6 +1,6 @@
 ---
-description: Legt die Standard Kontingent Grenze fest oder ruft Sie ab.
-title: Diskquotacontrol. defaultquotalimit (Eigenschaft)
+description: Legt das Standardkontingentlimit fest oder ruft es ab.
+title: DiskQuotaControl.DefaultQuotaLimit-Eigenschaft
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 api_location:
 - Shell32.dll
 ms.assetid: 7d123bff-5dae-4430-be22-a822e231e43e
-ms.openlocfilehash: fdfea60e58659b483a6b17c2dc89d313e3c81305
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6031f0fbf6c3c872252e9a80204c07356c54d0cb
+ms.sourcegitcommit: 3caaa3c92dcb1ef12f84464d14ce6262e65e988e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104977200"
+ms.lasthandoff: 05/12/2021
+ms.locfileid: "109843201"
 ---
-# <a name="diskquotacontroldefaultquotalimit-property"></a>Diskquotacontrol. defaultquotalimit (Eigenschaft)
+# <a name="diskquotacontroldefaultquotalimit-property"></a>DiskQuotaControl.DefaultQuotaLimit-Eigenschaft
 
-Legt die Standard Kontingent Grenze fest oder ruft Sie ab.
+Legt das Standardkontingentlimit fest oder ruft es ab.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -38,9 +38,9 @@ DiskQuotaControl.DefaultQuotaLimit = iDefaultQuotaLimit
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Ein **ganzzahliger** Wert, der die Standard Kontingent Grenze für neue Benutzer in Bytes angibt oder empfängt.
+Ein **Ganzzahlwert,** der die Standardkontingentgrenze für neue Benutzer in Bytes angibt oder empfängt.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
@@ -48,18 +48,18 @@ Ein **ganzzahliger** Wert, der die Standard Kontingent Grenze für neue Benutzer
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                          |
-| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 5,0 oder höher)</dt> </dl> |
+| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 5.0 oder höher)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[**Defaultquotalimittext**](diskquotacontrol-defaultquotalimittext.md)
+[**DefaultQuotaLimitText**](diskquotacontrol-defaultquotalimittext.md)
 </dt> <dt>
 
-[**Diskquotacontrol**](diskquotacontrol-object.md)
+[**DiskQuotaControl**](diskquotacontrol-object.md)
 </dt> </dl>
 
  

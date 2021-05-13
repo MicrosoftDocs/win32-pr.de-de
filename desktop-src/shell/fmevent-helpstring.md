@@ -1,6 +1,6 @@
 ---
-description: Wird an eine DLL-Prozedur für Datei-Manager-Erweiterungen gesendet, wenn der Datei-Manager eine Hilfe Zeichenfolge für ein Menü oder Symbolleisten-Befehls
-title: FMEVENT_HELPSTRING Meldung (WF. h)
+description: Wird an eine DATEI-Manager-Erweiterungs-DLL-Prozedur gesendet, wenn der Datei-Manager eine Hilfezeichenfolge für ein Menü- oder Symbolleistenbefehlselement benötigt.
+title: FMEVENT_HELPSTRING (Wfext.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 api_location:
 - Wfext.h
 ms.assetid: 55fb5bfe-2889-40e5-9798-85f63727e31f
-ms.openlocfilehash: ae3be1953d4c8bbf70f8f17fcf34fcfb1ac583f4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6fe187330e27f7e246c9bbd68005f68f346bbc90
+ms.sourcegitcommit: 3caaa3c92dcb1ef12f84464d14ce6262e65e988e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104215955"
+ms.lasthandoff: 05/12/2021
+ms.locfileid: "109841281"
 ---
-# <a name="fmevent_helpstring-message"></a>Meldung zu "Meldungs \_ Meldung"
+# <a name="fmevent_helpstring-message"></a>FMEVENT \_ HELPSTRING-Meldung
 
-Wird an eine DLL-Prozedur für Datei-Manager-Erweiterungen gesendet, wenn der Datei-Manager eine Hilfe Zeichenfolge für ein Menü oder Symbolleisten-Befehls
+Wird an eine DATEI-Manager-Erweiterungs-DLL-Prozedur gesendet, wenn der Datei-Manager eine Hilfezeichenfolge für ein Menü- oder Symbolleistenbefehlselement benötigt.
 
 ## <a name="parameters"></a>Parameter
 
@@ -34,15 +34,15 @@ Wird an eine DLL-Prozedur für Datei-Manager-Erweiterungen gesendet, wenn der Da
 *lpfmshs* 
 </dt> <dd>
 
-Die Adresse einer [**f- \_ HelpString**](fms-helpstring.md) -Struktur, die Befehls Element-hilfezeichen folgen Daten kommuniziert. Die **FMS \_ HelpString** -Struktur identifiziert das Befehls Element, für das eine Hilfe Zeichenfolge gewünscht wird, sowie ein Handle für das Menü. Eine Anwendung schreibt dann die entsprechende Hilfe Zeichenfolge in den **szhelp** -Member der **FMS- \_ HelpString** -Struktur.
+Die Adresse einer [**FMS \_ HELPSTRING-Struktur,**](fms-helpstring.md) die Hilfezeichenfolgendaten des Befehlselements kommuniziert. Die **FMS \_ HELPSTRING-Struktur** identifiziert das Befehlselement, für das eine Hilfezeichenfolge gewünscht ist, zusammen mit einem Handle für das Menü. Eine Anwendung schreibt dann die entsprechende Hilfezeichenfolge in das **szHelp-Member** der **FMS \_ HELPSTRING-Struktur.**
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine Erweiterungs-DLL-Prozedur sollte NULL zurückgeben, wenn Sie diese Nachricht verarbeitet.
+Eine DLL-Erweiterungsprozedur sollte 0 (null) zurückgeben, wenn diese Meldung verarbeitet wird.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
@@ -50,18 +50,18 @@ Eine Erweiterungs-DLL-Prozedur sollte NULL zurückgeben, wenn Sie diese Nachrich
 |-------------------------------------|------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                               |
-| Header<br/>                   | <dl> <dt>WF. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Wfext.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[**"F"**](fmextensionproc.md)
+[**FMExtensionProc**](fmextensionproc.md)
 </dt> <dt>
 
-[**"helpmenuitem" für "f" \_**](fmevent-helpmenuitem.md)
+[**FMEVENT \_ HELPMENUITEM**](fmevent-helpmenuitem.md)
 </dt> </dl>
 
  

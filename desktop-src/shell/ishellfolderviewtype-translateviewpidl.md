@@ -1,6 +1,6 @@
 ---
-description: Rekonstruiert einen Zeiger auf eine Element Bezeichner-Liste (PIDL) aus einer hierarchischen Darstellung des shellordners in eine andere Darstellung.
-title: 'Ishellfolderviewtype:: translateviewpidl-Methode'
+description: Rekonstruiert einen Zeiger auf eine Elementbezeichnerliste (PIDL) aus einer hierarchischen Darstellung des Shellordners in einer anderen Darstellung.
+title: IShellFolderViewType::TranslateViewPidl-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 api_location:
 - Shell32.dll
 ms.assetid: 3b7fa6c4-3d02-44ed-b63d-80a799e4017a
-ms.openlocfilehash: 75876e5088c610c1f9f02ba9374db5cea4a6023c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 537a77e7ffffb462e0031ea0959f60cd695f7d99
+ms.sourcegitcommit: 3caaa3c92dcb1ef12f84464d14ce6262e65e988e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104527311"
+ms.lasthandoff: 05/12/2021
+ms.locfileid: "109842671"
 ---
-# <a name="ishellfolderviewtypetranslateviewpidl-method"></a>Ishellfolderviewtype:: translateviewpidl-Methode
+# <a name="ishellfolderviewtypetranslateviewpidl-method"></a>IShellFolderViewType::TranslateViewPidl-Methode
 
-Rekonstruiert einen Zeiger auf eine Element Bezeichner-Liste (PIDL) aus einer hierarchischen Darstellung des shellordners in eine andere Darstellung.
+Rekonstruiert einen Zeiger auf eine Elementbezeichnerliste (PIDL) aus einer hierarchischen Darstellung des Shellordners in einer anderen Darstellung.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,28 +41,28 @@ HRESULT TranslateViewPidl(
 
 <dl> <dt>
 
-*PIDL* \[ in\]
+*pidl* \[ In\]
 </dt> <dd>
 
-Type: **pcuidlist \_ relative**
+Typ: **PCUIDLIST \_ RELATIVE**
 
-Das Array von Element-IDs relativ zum Stamm Ordner.
+Das Array von Element-IDs relativ zum Stammordner.
 
 </dd> <dt>
 
-*pidlview* \[ in\]
+*pidlView* \[ In\]
 </dt> <dd>
 
-Type: **pcuidlist \_ relative**
+Typ: **PCUIDLIST \_ RELATIVE**
 
-Besondere PIDL der Ansicht.
+Spezielle PIDL der Ansicht.
 
 </dd> <dt>
 
-*ppidlout* \[ in\]
+*dldlOut* \[ In\]
 </dt> <dd>
 
-Typ: **pcuidlist \_ relative \** _
+Typ: **PCUIDLIST \_ RELATIVE \***
 
 Die Adresse einer PIDL-Variablen, die die Übersetzung empfangen soll.
 
@@ -70,15 +70,15 @@ Die Adresse einer PIDL-Variablen, die die Übersetzung empfangen soll.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Type: _ *HRESULT**
+Typ: **HRESULT**
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn Sie fertig sind, sollten Sie die zurückgegebene PIDL mit [**ilfree**](/windows/desktop/api/shlobj_core/nf-shlobj_core-ilfree)freigeben.
+Wenn Sie fertig sind, sollten Sie die zurückgegebene PIDL mit [**ILFree frei geben.**](/windows/desktop/api/shlobj_core/nf-shlobj_core-ilfree)
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
