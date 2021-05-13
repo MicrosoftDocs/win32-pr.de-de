@@ -1,6 +1,6 @@
 ---
-description: Gibt an, ob eine angegebene URL abonniert ist.
-title: Shelluihelper. isabonniert-Methode (Exdisp. h)
+description: Gibt an, ob eine angegebene URL abonniert wird.
+title: ShellUIHelper.IsSubkribierte Methode (Exdisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 api_location:
 - Shell32.dll
 ms.assetid: fcf23352-6603-4b17-9c3b-b353cca1c003
-ms.openlocfilehash: 2085f38e5f91f13a2f67ff4f22b003b533249386
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ca68d2e46ce74593b66aac6f995b88ddcb79796b
+ms.sourcegitcommit: 3caaa3c92dcb1ef12f84464d14ce6262e65e988e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104042419"
+ms.lasthandoff: 05/12/2021
+ms.locfileid: "109842491"
 ---
-# <a name="shelluihelperissubscribed-method"></a>Shelluihelper. isabonniert-Methode
+# <a name="shelluihelperissubscribed-method"></a>ShellUIHelper.IsSubkribierte Methode
 
-Gibt an, ob eine angegebene URL abonniert ist.
+Gibt an, ob eine angegebene URL abonniert wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,26 +39,26 @@ bRetVal = ShellUIHelper.IsSubscribed(
 
 <dl> <dt>
 
-*sUrl* \[ in\]
+*sURL* \[ In\]
 </dt> <dd>
 
 Typ: **[ **BSTR**](/previous-versions/windows/desktop/automat/bstr)**
 
-Ein **Zeichen** folgen Wert, der die URL angibt.
+Ein  Zeichenfolgenwert, der die URL angibt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Typ: **Boolean \** _
+Typ: **Boolean \***
 
-_ *true**, wenn die URL abonniert ist; andernfalls **false**.
+**TRUE,** wenn die URL abonniert ist; andernfalls **FALSE.**
 
 ## <a name="examples"></a>Beispiele
 
-Das folgende Beispiel zeigt die ordnungsgemäße Verwendung dieser Methode für JScript Embedded in HTML und Visual Basic.
+Das folgende Beispiel zeigt die ordnungsgemäße Verwendung dieser Methode für JScript, das in HTML und Visual Basic eingebettet ist.
 
-JScript
+Jscript:
 
 
 ```JScript
@@ -108,16 +108,16 @@ End Sub
 
 
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, Windows XP \[ Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, nur Windows \[ XP-Desktop-Apps\]<br/>                                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                           |
-| Header<br/>                   | <dl> <dt>Exdisp. h</dt> </dl>                            |
-| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4,71 oder höher)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Exdisp.h</dt> </dl>                            |
+| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4.71 oder höher)</dt> </dl> |
 
 
 

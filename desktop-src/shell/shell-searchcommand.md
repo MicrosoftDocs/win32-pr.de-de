@@ -1,6 +1,6 @@
 ---
-description: Zeigt den Bereich apps-Suche an.
-title: Shell. searchcommand-Methode (Shldisp. h)
+description: Zeigt den Bereich Apps-Suche an.
+title: Shell.SearchCommand-Methode (Shldisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 api_location:
 - Shldisp.h
 ms.assetid: 5E789607-AEB6-48F9-A9D7-8D27263DBA77
-ms.openlocfilehash: c1de2e5dd6bd84c477f992a3a2c65881e25cf5e7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ba0399051e71598a219d6425efa1a82cf6ccba3c
+ms.sourcegitcommit: 3caaa3c92dcb1ef12f84464d14ce6262e65e988e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104979889"
+ms.lasthandoff: 05/12/2021
+ms.locfileid: "109841821"
 ---
-# <a name="shellsearchcommand-method"></a>Shell. searchcommand-Methode
+# <a name="shellsearchcommand-method"></a>Shell.SearchCommand-Methode
 
-Zeigt den Bereich apps-Suche an.
+Zeigt den Bereich Apps-Suche an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -55,16 +55,16 @@ Diese Methode gibt keinen Wert zurück.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                             |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                   |
-| Header<br/>                   | <dl> <dt>Shldisp. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Shldisp. idl</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 8 \[ Desktop-Apps\]<br/>                                             |
+| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2012-Desktop-Apps\]<br/>                                   |
+| Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl> |
 
 
 

@@ -1,6 +1,6 @@
 ---
-description: Ruft den anzeigen amen des Benutzers ab.
-title: Didiskquotauser. Display Name (Eigenschaft)
+description: Ruft den Anzeigenamen des Benutzers ab.
+title: DIDiskQuotaUser.DisplayName (Eigenschaft)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 api_location:
 - Shell32.dll
 ms.assetid: 2951c2fb-1682-4ec2-bb48-470a7c2d2b15
-ms.openlocfilehash: 8b0267949ed42fe8ddb07d92e9efd3bff9f57f67
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
-ms.translationtype: HT
+ms.openlocfilehash: 51e708bb406a79e7cfdd29c7a4a23f414e93335d
+ms.sourcegitcommit: 3caaa3c92dcb1ef12f84464d14ce6262e65e988e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214428"
+ms.lasthandoff: 05/12/2021
+ms.locfileid: "109843261"
 ---
-# <a name="didiskquotauserdisplayname-property"></a>Didiskquotauser. Display Name (Eigenschaft)
+# <a name="didiskquotauserdisplayname-property"></a>DIDiskQuotaUser.DisplayName (Eigenschaft)
 
-Ruft den anzeigen amen des Benutzers ab.
+Ruft den Anzeigenamen des Benutzers ab.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -37,13 +37,13 @@ DisplayName = DIDiskQuotaUser.DisplayName
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Ein Zeichen folgen Wert, der auf den anzeigen amen des Benutzers festgelegt ist.
+Ein Zeichenfolgenwert, der auf den Anzeigenamen des Benutzers festgelegt ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Eigenschaft enthält den anzeigen amen des Benutzers. Der Wert ist nicht notwendigerweise definiert.
+Diese Eigenschaft enthält den "Angezeigten Namen" des Benutzers. Der Wert ist nicht unbedingt definiert.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
@@ -51,15 +51,15 @@ Diese Eigenschaft enthält den anzeigen amen des Benutzers. Der Wert ist nicht n
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                          |
-| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 5,0 oder höher)</dt> </dl> |
+| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 5.0 oder höher)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[**Didiskquotauser-Objekt**](didiskquotauser-object.md)
+[**DIDiskQuotaUser-Objekt**](didiskquotauser-object.md)
 </dt> </dl>
 
  

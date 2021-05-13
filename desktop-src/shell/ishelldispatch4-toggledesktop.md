@@ -1,5 +1,5 @@
 ---
-description: 'IShellDispatch4.ToggleDesktop-Methode: Zeigt den Desktop an oder blendet diesen aus.'
+description: 'IShellDispatch4.ToggleDesktop-Methode: Zeigt den Desktop an oder blendet den Desktop aus.'
 title: IShellDispatch4.ToggleDesktop-Methode (Shldisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
@@ -13,12 +13,12 @@ api_type:
 api_location:
 - Shell32.dll
 ms.assetid: 60199e18-b8da-48a6-b316-e7f07ff44b78
-ms.openlocfilehash: b635408ed8a44b8bb0d27e52c167470f80f61b18
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: e78c14e2aa7f918ff27b21bdab0ce71bed08a84a
+ms.sourcegitcommit: 3caaa3c92dcb1ef12f84464d14ce6262e65e988e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108116818"
+ms.lasthandoff: 05/12/2021
+ms.locfileid: "109840931"
 ---
 # <a name="ishelldispatch4toggledesktop-method"></a>IShellDispatch4.ToggleDesktop-Methode
 
@@ -55,9 +55,9 @@ Diese Methode gibt keinen Wert zurück.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode hat die gleiche Auswirkung wie die Schaltfläche **Desktop anzeigen** auf der Taskleiste. Sie blendet entweder alle geöffneten Fenster aus, um den Desktop anzuzeigen, oder sie blendet den Desktop aus, indem alle geöffneten Fenster angezeigt werden. Die **ToggleDesktop-Methode** zeigt keine Benutzeroberfläche an, sie ruft lediglich die Umschaltaktion auf.
+Diese Methode hat die gleiche Wirkung wie die **Schaltfläche Desktop** anzeigen auf der Taskleiste. Sie blendet entweder alle geöffneten Fenster aus, um den Desktop einblenden, oder sie blendet den Desktop aus, indem alle geöffneten Fenster angezeigt werden. Die **ToggleDesktop-Methode** zeigt keine Benutzeroberfläche an, sondern ruft lediglich die Umschaltaktion auf.
 
 ## <a name="examples"></a>Beispiele
 
@@ -115,7 +115,7 @@ End Sub
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ XP-Desktop-Apps\]<br/>                                                                   |
 | Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2003-Desktop-Apps\]<br/>                                                          |

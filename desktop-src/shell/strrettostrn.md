@@ -1,6 +1,6 @@
 ---
-description: 'Nimmt eine von IShellFolder:: GetDisplayNameOf zurückgegebene "strinret"-Struktur, konvertiert sie in eine Zeichenfolge und platziert das Ergebnis in einem Puffer.'
-title: "\"Strauch\"-Funktion"
+description: Verwendet eine von IShellFolder::GetDisplayNameOf zurückgegebene STRRET-Struktur, konvertiert sie in eine Zeichenfolge und platziert das Ergebnis in einen Puffer.
+title: StrRetToStrN-Funktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 api_location:
 - Shell32.dll
 ms.assetid: a816fb5f-8320-4b63-a85d-dd4c59596ead
-ms.openlocfilehash: 89a8d991e22e8615456bd8d4690c046ec0d325d3
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 50295d712e539c94f10a708674cea595a47ae4e0
+ms.sourcegitcommit: 3caaa3c92dcb1ef12f84464d14ce6262e65e988e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104995174"
+ms.lasthandoff: 05/12/2021
+ms.locfileid: "109841031"
 ---
-# <a name="strrettostrn-function"></a>"Strauch"-Funktion
+# <a name="strrettostrn-function"></a>StrRetToStrN-Funktion
 
-Nimmt eine von [**IShellFolder:: GetDisplayNameOf**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ishellfolder-getdisplaynameof)zurückgegebene " [**strinret**](/windows/desktop/api/Shtypes/ns-shtypes-strret) "-Struktur, konvertiert sie in eine Zeichenfolge und platziert das Ergebnis in einem Puffer.
+Verwendet eine [**strret-Struktur,**](/windows/desktop/api/Shtypes/ns-shtypes-strret) die von [**IShellFolder::GetDisplayNameOf**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ishellfolder-getdisplaynameof)zurückgegeben wird, konvertiert sie in eine Zeichenfolge und platziert das Ergebnis in einen Puffer.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,81 +42,81 @@ BOOL StrRetToStrN(
 
 <dl> <dt>
 
-*pszout* \[ vorgenommen\]
+*pszOut* \[ out\]
 </dt> <dd>
 
 Typ: **LPTSTR**
 
-Puffer, der den anzeigen Amen enthalten soll. Sie wird als eine NULL-terminierte Zeichenfolge zurückgegeben. Wenn das *cchout* zu klein ist, wird der Name abgeschnitten, damit er passt.
+Puffer zum Halten des Anzeigenamens. Sie wird als auf NULL beendete Zeichenfolge zurückgegeben. Wenn *cchOut* zu klein ist, wird der Name abgeschnitten, damit er passt.
 
 </dd> <dt>
 
-*cchout* \[ in\]
+*cchOut* \[ In\]
 </dt> <dd>
 
-Typ: **uint**
+Typ: **UINT**
 
-Größe von *pszout* in Zeichen. Wenn das *cchout* zu klein ist, wird die Zeichenfolge gekürzt, damit Sie passt.
+Größe von *pszOut* in Zeichen. Wenn *cchOut* zu klein ist, wird die Zeichenfolge abgeschnitten, damit sie passt.
 
 </dd> <dt>
 
-*pstrauret* \[ in, out\]
+*pStrRet* \[ in, out\]
 </dt> <dd>
 
-Typ: **lpstrauret**
+Typ: **LPSTRRET**
 
-Zeiger auf eine " [**strinret**](/windows/desktop/api/Shtypes/ns-shtypes-strret) "-Struktur. Wenn die Funktion zurückgegeben wird, ist dieser Zeiger nicht mehr gültig.
+Zeiger auf eine [**STRRET-Struktur.**](/windows/desktop/api/Shtypes/ns-shtypes-strret) Wenn die Funktion zurückgegeben wird, ist dieser Zeiger nicht mehr gültig.
 
 </dd> <dt>
 
-*PIDL* \[ in\]
+*pidl* \[ In\]
 </dt> <dd>
 
-Typ: **lpcitemittellist**
+Typ: **LPJSMIDLIST**
 
-Ein Zeiger auf die [**itemittellist**](/windows/desktop/api/Shtypes/ns-shtypes-itemidlist) -Struktur des Elements.
+Zeiger auf die [**ITEMIDLIST-Struktur des**](/windows/desktop/api/Shtypes/ns-shtypes-itemidlist) Elements.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Typ: **bool**
+Typ: **BOOL**
 
-**True** für Erfolg, **false** für Fehler.
+**TRUE** für Erfolg, **FALSE** für Fehler.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Ab Shell32.dll Version 5,0 entspricht das Aufrufen dieser Funktion dem Aufrufen von " [**straurettobuf**](/windows/desktop/api/Shlwapi/nf-shlwapi-strrettobufa)".
+> Ab Shell32.dll Version 5.0 entspricht das Aufrufen dieser Funktion dem Aufruf von [**StrRetToBuf.**](/windows/desktop/api/Shlwapi/nf-shlwapi-strrettobufa)
 
  
 
- "" "" "" "" "" ". Um es zu verwenden, müssen Sie [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) und Request Ordnungszahl 96 aus Shell32.dll verwenden, um einen Funktionszeiger zu erhalten.
+**StrRetToStrN** wird nicht anhand des Namens exportiert. Um es zu verwenden, müssen Sie [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) verwenden und Ordnungszahl 96 von Shell32.dll anfordern, um einen Funktionszeiger abzurufen.
 
-Wenn das **uType** -Element der Struktur, auf die von *pstrinret* verwiesen wird, auf " **chanret \_ WSTR**" festgelegt ist, wird der **polestr** -Member dieser Struktur bei der Rückgabe freigegeben.
+Wenn der **uType-Member** der -Struktur, auf die *pStrRet* zeigt, auf **STRRET \_ WSTR** festgelegt ist, wird der **pOleStr-Member** dieser Struktur bei der Rückgabe freigegeben.
 
-Beachten Sie, dass diese Funktion aus Shell32.dll und nicht Shlwapi.dll exportiert wird. Es ist auch in "shlobj. h" und nicht in "shlwapi. h" enthalten.
+Beachten Sie, dass diese Funktion nicht aus Shlwapi.dll, sondern aus Shell32.dll exportiert wird. Sie ist auch in "Shlobj.h" und nicht in "Shlwapi.h" enthalten.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, Windows XP \[ Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, nur Windows \[ XP-Desktop-Apps\]<br/>                                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                           |
-| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4,71 oder höher)</dt> </dl> |
+| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4.71 oder höher)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[**"Strauch"**](/windows/desktop/api/Shlwapi/nf-shlwapi-strrettostra)
+[**StrRetToStr**](/windows/desktop/api/Shlwapi/nf-shlwapi-strrettostra)
 </dt> <dt>
 
-[**"Stringebuf"**](/windows/desktop/api/Shlwapi/nf-shlwapi-strrettobufa)
+[**StrRetToBuf**](/windows/desktop/api/Shlwapi/nf-shlwapi-strrettobufa)
 </dt> </dl>
 
  

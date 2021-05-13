@@ -1,6 +1,6 @@
 ---
-description: Übersetzt einen Anmelde Namen in die entsprechende Benutzersicherheits-ID im Zeichen folgen Format.
-title: Diskquotacontrol. translatelogonnametosid-Methode
+description: Übersetzt einen Anmeldenamen in die entsprechende Benutzersicherheits-ID im Zeichenfolgenformat.
+title: DiskQuotaControl.TranslateLogonNameToSID-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 api_location:
 - Shell32.dll
 ms.assetid: 3b6b0d03-e9ef-4575-bb67-f7b7b39d2a16
-ms.openlocfilehash: ec5e6c0bbd013c8fbd3f6616671ee006109566d0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5f0a2591b0f5df6bc0f50994fcbf101b7bfbb36d
+ms.sourcegitcommit: 3caaa3c92dcb1ef12f84464d14ce6262e65e988e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104042571"
+ms.lasthandoff: 05/12/2021
+ms.locfileid: "109841561"
 ---
-# <a name="diskquotacontroltranslatelogonnametosid-method"></a>Diskquotacontrol. translatelogonnametosid-Methode
+# <a name="diskquotacontroltranslatelogonnametosid-method"></a>DiskQuotaControl.TranslateLogonNameToSID-Methode
 
-Übersetzt einen Anmelde Namen in die entsprechende Benutzersicherheits-ID im Zeichen folgen Format.
+Übersetzt einen Anmeldenamen in die entsprechende Benutzersicherheits-ID im Zeichenfolgenformat.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,26 +39,26 @@ DiskQuotaControl.TranslateLogonNameToSID(
 
 <dl> <dt>
 
-*Anmelde Name* 
+*Anmeldename* 
 </dt> <dd>
 
 Typ: **Zeichenfolge**
 
-Ein Zeichen folgen Wert, der den Anmelde Namen des Benutzers angibt.
+Ein Zeichenfolgenwert, der den Anmeldenamen des Benutzers angibt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt die Benutzer Sicherheits-ID (SID) im Zeichen folgen Format zurück, das dem angegebenen Anmelde Namen entspricht. Die zurückgegebene Zeichenfolge enthält die standardmäßigen schließenden geschweiften Klammern. Beispiel:
+Gibt die Benutzersicherheits-ID (SID) im Zeichenfolgenformat zurück, das dem angegebenen Anmeldenamen entspricht. Die zurückgegebene Zeichenfolge enthält die standardmäßigen umschließenden geschweiften Klammern. Zum Beispiel:
 
 "{S-1-5-21-2127521184-1604012920-1887927527-19009}"
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die zurückgegebene SID-Zeichenfolge kann anstelle eines Anmelde namens an die [**FINDUSER**](diskquotacontrol-finduser.md) -Methode übergeben werden.
+Die zurückgegebene SID-Zeichenfolge kann statt eines Anmeldenamens an die [**FindUser-Methode**](diskquotacontrol-finduser.md) übergeben werden.
 
-Wenn beim Aufrufen der Methode [**FINDUSER**](diskquotacontrol-finduser.md)( *Logonname*) ein Fehler auftritt, kann dies auf einen Konflikt zwischen dem Formular (z. b. dem Sicherheits Konto \[ -Manager SAM \] -kompatibel und dem Benutzer Prinzipal Namen- \[ UPN \] ) des angegebenen Anmelde namens und der im sid-Name-Cache gespeicherten Form zurückzuführen sein. In solchen Fällen kann der Anmelde Name in eine SID konvertiert werden, und der **FINDUSER** -Befehl wird wiederholt. **FINDUSER** erkennt eine SID-Zeichenfolge und umgeht die Cache Suche mit dem SID-Namen. Der folgende Microsoft Visual Basic Scripting Edition-Code (VBScript) veranschaulicht diese Vorgehensweise.
+Wenn bei einem Aufruf der [**FindUser-Methode**](diskquotacontrol-finduser.md) *(logonname)* ein Fehler auftritt, kann dies auf einen Konflikt zwischen dem Formular (z. B. SAM-kompatibel mit dem Sicherheitskonto-Manager und dem \[ \] \[ Benutzerprinzipalnamen-UPN) des bereitgestellten Anmeldenamens und dem im SID-Namenscache gespeicherten Formular \] liegen. In solchen Fällen kann der Anmeldename in eine SID konvertiert und der Aufruf von **FindUser wiederholt** werden. **FindUser** erkennt eine SID-Zeichenfolge und umgeht die Cachesuche nach SID-Namen. Der folgende Code Visual Basic Scripting Edition (VBScript) von Microsoft veranschaulicht diese Technik.
 
 
 ```
@@ -76,25 +76,25 @@ End Function
 
 
 
-Die Namens-zu-sid-Übersetzung kann im Vergleich zu Such Vorgängen im Cache für sid-Namen ein langsamer Prozess sein. Daher wird empfohlen, dass [**FINDUSER**](diskquotacontrol-finduser.md) zuerst mit einem Anmelde Namen aufgerufen wird. Im obigen Beispiel wird diese Technik verwendet.
+Die Namens-zu-SID-Übersetzung kann im Vergleich zu Suchen im SID-Namenscache ein langsamer Prozess sein. Daher empfiehlt es sich, [**FindUser**](diskquotacontrol-finduser.md) zuerst mit einem Anmeldenamen auf zu nennen. Im obigen Beispiel wird diese Technik verwendet.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, Windows XP \[ Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                          |
-| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 5,0 oder höher)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Nur Windows 2000 Professional- und Windows \[ XP-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2003-Desktop-Apps\]<br/>                                                          |
+| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 5.0 oder höher)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[**Diskquotacontrol-Objekt**](diskquotacontrol-object.md)
+[**DiskQuotaControl-Objekt**](diskquotacontrol-object.md)
 </dt> </dl>
 
  

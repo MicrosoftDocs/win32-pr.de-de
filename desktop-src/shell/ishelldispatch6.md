@@ -1,6 +1,6 @@
 ---
 description: Erweitert das IShellDispatch5-Objekt.
-title: IShellDispatch6-Objekt (Shldisp. h)
+title: IShellDispatch6-Objekt (Shldisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,67 +13,67 @@ api_type:
 api_location:
 - Shell32.dll
 ms.assetid: 540A5CFD-1520-4B61-B461-E893EFA27115
-ms.openlocfilehash: 42e9690ec5b2f5995b184e4e686b27037aab891d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
-ms.translationtype: HT
+ms.openlocfilehash: de27322324dc8a25bdc679374e625f94a1d1a2ae
+ms.sourcegitcommit: 3caaa3c92dcb1ef12f84464d14ce6262e65e988e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104130088"
+ms.lasthandoff: 05/12/2021
+ms.locfileid: "109843031"
 ---
 # <a name="ishelldispatch6-object"></a>IShellDispatch6-Objekt
 
-Erweitert das [**IShellDispatch5**](ishelldispatch5.md) -Objekt. Zusätzlich zu den Eigenschaften und Methoden, die von **IShellDispatch5** unterstützt werden, fügt **IShellDispatch6** eine Methode hinzu, die den Suchbereich apps anzeigt.
+Erweitert das [**IShellDispatch5-Objekt.**](ishelldispatch5.md) Zusätzlich zu den Eigenschaften und Methoden, die von **IShellDispatch5** unterstützt werden, fügt **IShellDispatch6** eine Methode hinzu, die den Bereich Apps-Suche anzeigt.
 
 > [!Note]  
-> **IShellDispatch6** wird implementiert, und der Zugriff erfolgt über das [**Shellobjekt**](shell.md) .
+> **IShellDispatch6 wird** implementiert und über das [**Shell-Objekt aufgerufen.**](shell.md)
 
  
 
 ## <a name="members"></a>Member
 
-Das **IShellDispatch6** -Objekt verfügt über diese Typen von Membern:
+Das **IShellDispatch6-Objekt** verfügt über die folgenden Membertypen:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Das **IShellDispatch6** -Objekt verfügt über diese Methoden.
+Das **IShellDispatch6-Objekt** verfügt über diese Methoden.
 
 
 
 | Methode                                                 | BESCHREIBUNG                                                                                                                  |
 |:-------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------|
-| [**Searchcommand**](ishelldispatch6-searchcommand.md) | Zeigt den Suchbereich apps an, der normalerweise angezeigt wird, wenn Sie auf dem Start Bildschirm einen Suchbegriff eingeben.<br/> |
+| [**SearchCommand**](ishelldispatch6-searchcommand.md) | Zeigt den Bereich Apps-Suche an, der normalerweise angezeigt wird, wenn Sie beginnen, einen Suchbegriff aus dem Startbildschirm.<br/> |
 
 
 
  
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                             |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                   |
-| Header<br/>                   | <dl> <dt>Shldisp. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Shldisp. idl</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 8 \[ Desktop-Apps\]<br/>                                             |
+| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2012-Desktop-Apps\]<br/>                                   |
+| Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Shell32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
 [**IDispatch**](/windows/win32/api/oaidl/nn-oaidl-idispatch)
 </dt> <dt>
 
-[**Shellobjekt**](shell.md)
+[**Shell-Objekt**](shell.md)
 </dt> <dt>
 
-[**Ishelldispatch**](ishelldispatch.md)
+[**IShellDispatch**](ishelldispatch.md)
 </dt> <dt>
 
 [**IShellDispatch2**](ishelldispatch2-object.md)

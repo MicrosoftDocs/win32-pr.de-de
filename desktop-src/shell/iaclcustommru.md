@@ -1,6 +1,6 @@
 ---
-description: Macht Methoden verfügbar, die zum Initialisieren einer zuletzt verwendeten (MRU-) Liste für ein Objekt für die automatische Vervollständigung verwendet werden.
-title: Iaclcustommru-Schnittstelle
+description: Macht Methoden verfügbar, die verwendet werden, um eine LISTE der zuletzt verwendeten (MRU) für ein AutoVervollständigen-Objekt zu initialisieren.
+title: IACLCustomMRU-Schnittstelle
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,46 +12,46 @@ api_type:
 - COM
 api_location: ''
 ms.assetid: 6ebf64da-9eba-4ea7-91aa-242474097be1
-ms.openlocfilehash: 54cda8d6cc3c7f1c46d6bce7736160b0da67a4c0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f47a9df320da5c710c21ddbab83ca87b49c28e12
+ms.sourcegitcommit: 3caaa3c92dcb1ef12f84464d14ce6262e65e988e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104994623"
+ms.lasthandoff: 05/12/2021
+ms.locfileid: "109842011"
 ---
-# <a name="iaclcustommru-interface"></a>Iaclcustommru-Schnittstelle
+# <a name="iaclcustommru-interface"></a>IACLCustomMRU-Schnittstelle
 
-Macht Methoden verfügbar, die zum Initialisieren einer zuletzt verwendeten (MRU-) Liste für ein Objekt für die automatische Vervollständigung verwendet werden.
+Macht Methoden verfügbar, die verwendet werden, um eine LISTE der zuletzt verwendeten (MRU) für ein AutoVervollständigen-Objekt zu initialisieren.
 
 ## <a name="members"></a>Member
 
-Die **iaclcustommru** -Schnittstelle erbt von der [**IUnknown**](/windows/win32/api/unknwn/nn-unknwn-iunknown) -Schnittstelle. **Iaclcustommru** verfügt auch über die folgenden Typen von Membern:
+Die **IACLCustomMRU-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/win32/api/unknwn/nn-unknwn-iunknown) **IACLCustomMRU** verfügt auch über diese Membertypen:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **iaclcustommru** -Schnittstelle verfügt über diese Methoden.
+Die **IACLCustomMRU-Schnittstelle** verfügt über diese Methoden.
 
 
 
 | Methode                                             | BESCHREIBUNG                                                             |
 |:---------------------------------------------------|:------------------------------------------------------------------------|
-| [**Addmrustring**](iaclcustommru-addmrustring.md) | Fügt der MRU-Liste einen Eintrag hinzu.<br/>                               |
-| [**Initialisieren**](iaclcustommru-initialize.md)     | Lädt eine Liste von Zeichen folgen aus der Registrierung in die MRU-Liste.<br/> |
+| [**AddMRUString**](iaclcustommru-addmrustring.md) | Fügt der MRU-Liste einen Eintrag hinzu.<br/>                               |
+| [**Initialisieren**](iaclcustommru-initialize.md)     | Lädt eine Liste von Zeichenfolgen aus der Registrierung in die MRU-Liste.<br/> |
 
 
 
  
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ XP-Desktop-Apps\]<br/>          |
+| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2003-Desktop-Apps\]<br/> |
 
 
 

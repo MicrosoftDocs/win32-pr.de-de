@@ -1,6 +1,6 @@
 ---
-description: Fügt dem Microsoft Active Desktop ein Element hinzu.
-title: Shelluihelper. adddesktopcomponent-Methode (Exdisp. h)
+description: Fügt dem Microsoft-Konto ein Element Active Desktop.
+title: ShellUIHelper.AddDesktopComponent-Methode (Exdisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 api_location:
 - Shell32.dll
 ms.assetid: 41634a89-15b9-41c8-ba3f-4bf19b786f6f
-ms.openlocfilehash: d5234a0b43ea25c8ac931dc14ec90f7a6696ddfb
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2edaa79bd62dcee40e4f197700d2128cb0b2070d
+ms.sourcegitcommit: 3caaa3c92dcb1ef12f84464d14ce6262e65e988e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104980592"
+ms.lasthandoff: 05/12/2021
+ms.locfileid: "109842461"
 ---
-# <a name="shelluihelperadddesktopcomponent-method"></a>Shelluihelper. adddesktopcomponent-Methode
+# <a name="shelluihelperadddesktopcomponent-method"></a>ShellUIHelper.AddDesktopComponent-Methode
 
-Fügt dem Microsoft Active Desktop ein Element hinzu.
+Fügt dem Microsoft-Konto ein Element Active Desktop.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,27 +44,27 @@ iRetVal = ShellUIHelper.AddDesktopComponent(
 
 <dl> <dt>
 
-*sUrl* \[ in\]
+*sURL* \[ In\]
 </dt> <dd>
 
 Typ: **[ **BSTR**](/previous-versions/windows/desktop/automat/bstr)**
 
-Ein **Zeichen** folgen Wert, der die URL des neuen bevorzugten Elements angibt.
+Ein **Zeichenfolgenwert,** der die URL des neuen Favoritenelements angibt.
 
 </dd> <dt>
 
-*sType* \[ in\]
+*sType* \[ In\]
 </dt> <dd>
 
 Typ: **[ **BSTR**](/previous-versions/windows/desktop/automat/bstr)**
 
-Ein **Zeichen** folgen Wert, der den Typ des hinzugefügten Elements angibt. Dies kann einer der folgenden Werte sein:
+Ein **Zeichenfolgenwert,** der den Typ des hinzugefügten Elements angibt. Dies kann einer der folgenden Werte sein.
 
 <dt>
 
 
 
- Klang
+ (Bild)
 
 
 </dt> <dd>
@@ -75,7 +75,7 @@ Die Komponente ist ein Bild.
 
 
 
- Website
+ (Website)
 
 
 </dt> <dd>
@@ -89,16 +89,16 @@ Die Komponente ist eine Website.
 
 Typ: **Variant**
 
-Die Position des linken Rands der Komponente in Bildschirm Koordinaten.
+Die Position des linken Rands der Komponente in Bildschirmkoordinaten.
 
 </dd> <dt>
 
-Nach *oben* \[ in, optional\]
+*Oben* \[ in, optional\]
 </dt> <dd>
 
 Typ: **Variant**
 
-Die Position des oberen Rands der Komponente in Bildschirm Koordinaten.
+Die Position des oberen Rands der Komponente in Bildschirmkoordinaten.
 
 </dd> <dt>
 
@@ -107,7 +107,7 @@ Die Position des oberen Rands der Komponente in Bildschirm Koordinaten.
 
 Typ: **Variant**
 
-Die Breite der Komponente in Bildschirm Einheiten.
+Die Breite der Komponente in Bildschirmeinheiten.
 
 </dd> <dt>
 
@@ -116,15 +116,15 @@ Die Breite der Komponente in Bildschirm Einheiten.
 
 Typ: **Variant**
 
-Die Höhe der Komponente in Bildschirm Einheiten.
+Die Höhe der Komponente in Bildschirmeinheiten.
 
 </dd> </dl>
 
 ## <a name="examples"></a>Beispiele
 
-Das folgende Beispiel zeigt die ordnungsgemäße Verwendung dieser Methode für JScript Embedded in HTML und Visual Basic.
+Das folgende Beispiel zeigt die ordnungsgemäße Verwendung dieser Methode für JScript, das in HTML und Visual Basic eingebettet ist.
 
-JScript
+Jscript:
 
 
 ```JScript
@@ -169,16 +169,16 @@ End Sub
 
 
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, Windows XP \[ Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, nur Windows \[ XP-Desktop-Apps\]<br/>                                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                           |
-| Header<br/>                   | <dl> <dt>Exdisp. h</dt> </dl>                            |
-| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4,71 oder höher)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Exdisp.h</dt> </dl>                            |
+| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4.71 oder höher)</dt> </dl> |
 
 
 

@@ -1,6 +1,6 @@
 ---
-description: Ruft den Namen der Standardansicht ab. Rufen Sie GetDisplayNameOf auf, um die Namen der anderen Sichten abzurufen.
-title: 'Ishellfolderviewtype:: getdefaultviewname-Methode'
+description: Ruft den Namen der Standardansicht ab. Rufen Sie GetDisplayNameOf auf, um die Namen der anderen Ansichten abzurufen.
+title: IShellFolderViewType::GetDefaultViewName-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 api_location:
 - Shell32.dll
 ms.assetid: 99229d13-40dc-4750-81a7-48a2f608b778
-ms.openlocfilehash: 239fcd80bcfc0b29287f8e16aeef3efb8ae032c3
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 808f68093512e2da602d5e73775b47943b140a46
+ms.sourcegitcommit: 3caaa3c92dcb1ef12f84464d14ce6262e65e988e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104977937"
+ms.lasthandoff: 05/12/2021
+ms.locfileid: "109842761"
 ---
-# <a name="ishellfolderviewtypegetdefaultviewname-method"></a>Ishellfolderviewtype:: getdefaultviewname-Methode
+# <a name="ishellfolderviewtypegetdefaultviewname-method"></a>IShellFolderViewType::GetDefaultViewName-Methode
 
-Ruft den Namen der Standardansicht ab. Rufen Sie [**GetDisplayNameOf**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ishellfolder-getdisplaynameof) auf, um die Namen der anderen Sichten abzurufen.
+Ruft den Namen der Standardansicht ab. Rufen [**Sie GetDisplayNameOf**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ishellfolder-getdisplaynameof) auf, um die Namen der anderen Ansichten abzurufen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,21 +40,21 @@ HRESULT GetDefaultViewName(
 
 <dl> <dt>
 
-*uFlags* \[ in\]
+*uFlags* \[ In\]
 </dt> <dd>
 
 Typ: **DWORD**
 
-Optionale Flags; muss auf 0 festgelegt werden.
+Optionale Flags; sollte auf 0 festgelegt werden.
 
 </dd> <dt>
 
-*ppwszname* \[ vorgenommen\]
+*ppwszName* \[ out\]
 </dt> <dd>
 
-Typ: **LPWSTR \** _
+Typ: **LPWSTR \***
 
-Die Adresse eines Zeichen folgen Zeigers, der den Standard Ansichts Namen empfängt. Der Arbeitsspeicher für die Zeichenfolge wird mit [_ *shundup* *](/windows/desktop/api/Shlwapi/nf-shlwapi-shstrdupa)zugeordnet.
+Die Adresse eines Zeichenfolgenzeigers, der den Standardansichtsnamen empfängt. Der Arbeitsspeicher für die Zeichenfolge wird mit [**SHStrDup**](/windows/desktop/api/Shlwapi/nf-shlwapi-shstrdupa)zugeordnet.
 
 </dd> </dl>
 
@@ -62,9 +62,9 @@ Die Adresse eines Zeichen folgen Zeigers, der den Standard Ansichts Namen empfä
 
 Typ: **HRESULT**
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 

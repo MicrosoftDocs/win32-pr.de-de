@@ -1,6 +1,6 @@
 ---
-description: Erstellt ein neues shellwindows-Objekt, das eine Kopie dieses shellwindows-Objekts ist, und gibt es zurück.
-title: ShellWindows._NewEnum-Methode (Exdisp. h)
+description: Erstellt ein neues ShellWindows-Objekt, das eine Kopie dieses ShellWindows-Objekts ist, und gibt es zurück.
+title: ShellWindows._NewEnum -Methode (Exdisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 api_location:
 - Shell32.dll
 ms.assetid: 85e84c13-62aa-4502-b642-ca55273a800d
-ms.openlocfilehash: ded5ae2c337e80359c012fb63a37aa13cc43b5fa
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 944da80196db12d0bfa5d64767c5e6c2e8ff733e
+ms.sourcegitcommit: 3caaa3c92dcb1ef12f84464d14ce6262e65e988e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104218058"
+ms.lasthandoff: 05/12/2021
+ms.locfileid: "109841251"
 ---
-# <a name="shellwindows_newenum-method"></a>Shellwindows. \_ Methode ' netwenum '
+# <a name="shellwindows_newenum-method"></a>ShellWindows. \_ NewEnum-Methode
 
-Erstellt ein neues [**shellwindows**](shellwindows.md) -Objekt, das eine Kopie dieses **shellwindows** -Objekts ist, und gibt es zurück.
+Erstellt ein neues [**ShellWindows-Objekt,**](shellwindows.md) das eine Kopie dieses **ShellWindows-Objekts** ist, und gibt es zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,13 +41,13 @@ Diese Methode hat keine Parameter.
 
 Typ: **[ **IUnknown**](/windows/win32/api/unknwn/nn-unknwn-iunknown)\*\***
 
-Ein Objekt Verweis auf die [**shellwindows**](shellwindows.md) -Objekt Kopie.
+Ein Objektverweis auf die [**ShellWindows-Objektkopie.**](shellwindows.md)
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird gezeigt, wie " **\_ netwenum** " verwendet wird. Die richtige Verwendung wird für VBScript und Visual Basic angezeigt. Diese Methode kann nicht mit JScript verwendet werden.
+Im folgenden Beispiel wird **\_ NewEnum** verwendet. Die richtige Verwendung wird für VBScript und Visual Basic. Diese Methode kann nicht mit JScript verwendet werden.
 
-VBScript
+Vbscript:
 
 
 ```VB
@@ -101,16 +101,16 @@ End Sub
 
 
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, Windows XP \[ Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Client)<br/> | Nur Windows 2000 Professional- und Windows \[ XP-Desktop-Apps\]<br/>                                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                           |
-| Header<br/>                   | <dl> <dt>Exdisp. h</dt> </dl>                            |
-| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4,71 oder höher)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Exdisp.h</dt> </dl>                            |
+| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4.71 oder höher)</dt> </dl> |
 
 
 

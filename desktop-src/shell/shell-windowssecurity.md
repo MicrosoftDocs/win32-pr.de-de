@@ -1,5 +1,5 @@
 ---
-description: 'Shell.WindowsSecurity-Methode: Zeigt das Dialogfeld Windows-Sicherheit an.'
+description: 'Shell.WindowsSecurity-Methode: Zeigt das dialogfeld Windows-Sicherheit an.'
 title: Shell.WindowsSecurity-Methode (Shldisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
@@ -13,16 +13,16 @@ api_type:
 api_location:
 - Shell32.dll
 ms.assetid: 94916E29-5960-4010-B2C6-0FAA1E4BF72D
-ms.openlocfilehash: 7e04cc6d3a1a25f459da9f533fc562b1fc9d0b06
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 2c6e18ba2388909390b856deb03b65b078f810d9
+ms.sourcegitcommit: 3caaa3c92dcb1ef12f84464d14ce6262e65e988e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108083598"
+ms.lasthandoff: 05/12/2021
+ms.locfileid: "109840861"
 ---
 # <a name="shellwindowssecurity-method"></a>Shell.WindowsSecurity-Methode
 
-Zeigt das Dialogfeld **Windows-Sicherheit** an.
+Zeigt das **Windows-Sicherheit** An.
 
 ## <a name="syntax"></a>Syntax
 
@@ -55,12 +55,12 @@ Diese Methode gibt keinen Wert zurück.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode zeigt das Dialogfeld an, das angezeigt wird, nachdem Sie STRG+ALT+DELETE gedrückt oder die Sicherheitsoption im **Startmenü** verwendet haben.
+Diese Methode zeigt das Dialogfeld an, das nach dem Drücken von STRG+ALT+DELETE oder mithilfe der Sicherheitsoption im **Startmenü angezeigt** wird.
 
 > [!Note]  
-> Diese Methode kann nur verwendet werden, wenn sie von einer Terminalsitzung mit Microsoft Terminal Server verbunden ist.
+> Diese Methode kann nur verwendet werden, wenn eine Verbindung zwischen einer Terminalsitzung und Microsoft Terminal Server besteht.
 
  
 
@@ -120,7 +120,7 @@ End Sub
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ XP-Desktop-Apps\]<br/>                                                                   |
 | Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2003-Desktop-Apps\]<br/>                                                          |

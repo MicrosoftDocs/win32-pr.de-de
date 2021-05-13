@@ -1,6 +1,6 @@
 ---
-description: Löscht die zwischengespeicherten Benutzerinformationen des-Objekts.
-title: Didiskquotauser. Invalidate-Methode
+description: Löscht die zwischengespeicherten Benutzerinformationen des Objekts.
+title: DIDiskQuotaUser.Invalidate-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 api_location:
 - Shell32.dll
 ms.assetid: e0ffd5b7-db1d-40a4-810a-ff43549b0c9b
-ms.openlocfilehash: 2b07ae6fd210b8722378a771cda97c2c04572c66
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9f8ad77c9697ed5d284cf782f431ec59b38ca415
+ms.sourcegitcommit: 3caaa3c92dcb1ef12f84464d14ce6262e65e988e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104525343"
+ms.lasthandoff: 05/12/2021
+ms.locfileid: "109843271"
 ---
-# <a name="didiskquotauserinvalidate-method"></a>Didiskquotauser. Invalidate-Methode
+# <a name="didiskquotauserinvalidate-method"></a>DIDiskQuotaUser.Invalidate-Methode
 
-Löscht die zwischengespeicherten Benutzerinformationen des-Objekts.
+Löscht die zwischengespeicherten Benutzerinformationen des Objekts.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,11 +41,11 @@ Diese Methode hat keine Parameter.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode löscht die im Cache des Objekts gespeicherten Benutzerinformationen. Wenn Sie das nächste Mal eine Anforderung für Kontingent bezogene Informationen erhalten, ruft das-Objekt die Informationen vom NTFS-Volume ab und aktualisiert den Cache.
+Diese Methode löscht die im Cache des Objekts gespeicherten Benutzerinformationen. Wenn das nächste Mal eine Anforderung für kontingentbezogene Informationen erfolgt, ruft das -Objekt die Informationen vom NTFS-Volume ab und aktualisiert den Cache.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
@@ -53,15 +53,15 @@ Diese Methode löscht die im Cache des Objekts gespeicherten Benutzerinformation
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                          |
-| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 5,0 oder höher)</dt> </dl> |
+| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 5.0 oder höher)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[**Didiskquotauser-Objekt**](didiskquotauser-object.md)
+[**DIDiskQuotaUser-Objekt**](didiskquotauser-object.md)
 </dt> </dl>
 
  

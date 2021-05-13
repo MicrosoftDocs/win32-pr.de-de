@@ -1,6 +1,6 @@
 ---
-description: Gibt eine Anwendungs definierte Rückruffunktion an, die vom Datei-Manager für die Kommunikation mit einer Datei-Manager-Erweiterung aufgerufen wird.
-title: Funktion "f mextensionproc" (WF. h)
+description: Gibt eine anwendungsdefinierte Rückruffunktion an, die vom Datei-Manager für die Kommunikation mit einer Datei-Manager-Erweiterung aufgerufen wird.
+title: FMExtensionProc-Rückruffunktion (Wfext.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - Wfext.h
 ms.assetid: 6e02d655-f7d8-460a-97d2-5b369493e941
-ms.openlocfilehash: 40e18dfe64c6d2b24b982cdf891cbb63b091a7ee
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5e7b1f0142ea77967af15087131d3036aaec505e
+ms.sourcegitcommit: 3caaa3c92dcb1ef12f84464d14ce6262e65e988e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104993687"
+ms.lasthandoff: 05/12/2021
+ms.locfileid: "109842241"
 ---
-# <a name="fmextensionproc-callback-function"></a>Funktion "f mextensionproc"
+# <a name="fmextensionproc-callback-function"></a>RÜCKRUFFUNKTION "FMExtensionProc"
 
-Gibt eine Anwendungs definierte Rückruffunktion an, die vom Datei-Manager für die Kommunikation mit einer Datei-Manager-Erweiterung aufgerufen wird.
+Gibt eine anwendungsdefinierte Rückruffunktion an, die vom Datei-Manager aufgerufen wird, um mit einer Datei-Manager-Erweiterung zu kommunizieren.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,19 +42,19 @@ LONG CALLBACK FMExtensionProc(
 
 <dl> <dt>
 
-*HWND* 
+*Hwnd* 
 </dt> <dd>
 
 Typ: **HWND**
 
-Ein Fenster Handle für den Datei-Manager. Eine Erweiterung verwendet dieses Handle, um das übergeordnete Fenster für ein beliebiges Dialogfeld oder Meldungs Feld anzugeben, das angezeigt werden muss, und zum Senden von Abfrage Nachrichten an den Datei-Manager.
+Ein Fensterhandle für den Datei-Manager. Eine Erweiterung verwendet dieses Handle, um das übergeordnete Fenster für jedes Dialogfeld oder Meldungsfeld anzugeben, das angezeigt werden muss, und um Abfragemeldungen an den Datei-Manager zu senden.
 
 </dd> <dt>
 
-*wmsg* 
+*wMsg* 
 </dt> <dd>
 
-Typ: **Word**
+Typ: **WORD**
 
 Eine der folgenden Datei-Manager-Meldungen.
 
@@ -67,35 +67,35 @@ Eine der folgenden Datei-Manager-Meldungen.
 
 </dt> <dd>
 
-Der Benutzer hat ein Element aus dem von der Erweiterung bereitgestellten Menü ausgewählt. Der Wert ist der Bezeichner des ausgewählten Menü Elements.
+Der Benutzer hat im durch die Erweiterung bereitgestellten Menü ein Element ausgewählt. Der Wert ist der Bezeichner des ausgewählten Menüelements.
 
 </dd> <dt>
 
 <span id="FMEVENT_HELPMENUITEM"></span><span id="fmevent_helpmenuitem"></span>
 
-<span id="FMEVENT_HELPMENUITEM"></span><span id="fmevent_helpmenuitem"></span>**"helpmenuitem" für "f" \_**
+<span id="FMEVENT_HELPMENUITEM"></span><span id="fmevent_helpmenuitem"></span>**FMEVENT \_ HELPMENUITEM**
 
 
 </dt> <dd>
 
-Benutzer hat F1 gedrückt, während ein Erweiterungs Menü oder ein Symbolleisten-Befehls Element ausgewählt wurde. Gibt an, dass die Erweiterung **WinHelp** entsprechend für das Befehls Element aufruft.
+Der Benutzer hat F1 gedrückt, während er ein Erweiterungsmenü oder ein Symbolleistenbefehlselement auswählte. Gibt an, dass die Erweiterung **WinHelp** entsprechend für das Befehlselement aufrufen soll.
 
 </dd> <dt>
 
 <span id="FMEVENT_HELPSTRING"></span><span id="fmevent_helpstring"></span>
 
-<span id="FMEVENT_HELPSTRING"></span><span id="fmevent_helpstring"></span>**-HelpString für "f" \_**
+<span id="FMEVENT_HELPSTRING"></span><span id="fmevent_helpstring"></span>**FMEVENT \_ HELPSTRING**
 
 
 </dt> <dd>
 
-Der Benutzer hat ein Erweiterungs Menü oder ein Symbolleisten-Befehls Element ausgewählt. Gibt an, dass die Erweiterung eine Hilfe Zeichenfolge bereitstellen soll.
+Der Benutzer hat ein Erweiterungsmenü oder ein Symbolleistenbefehlselement ausgewählt. Gibt an, dass die Erweiterung eine Hilfezeichenfolge bereitstellen soll.
 
 </dd> <dt>
 
 <span id="FMEVENT_INITMENU"></span><span id="fmevent_initmenu"></span>
 
-<span id="FMEVENT_INITMENU"></span><span id="fmevent_initmenu"></span>**Datei " \_ InitMenu"**
+<span id="FMEVENT_INITMENU"></span><span id="fmevent_initmenu"></span>**FMEVENT \_ INITMENU**
 
 
 </dt> <dd>
@@ -106,75 +106,75 @@ Der Benutzer hat das Menü der Erweiterung ausgewählt. Die Erweiterung sollte E
 
 <span id="FMEVENT_LOAD"></span><span id="fmevent_load"></span>
 
-<span id="FMEVENT_LOAD"></span><span id="fmevent_load"></span>**Laden von "f" \_**
+<span id="FMEVENT_LOAD"></span><span id="fmevent_load"></span>**FMEVENT \_ LOAD**
 
 
 </dt> <dd>
 
-Der Datei-Manager lädt die Erweiterungs-DLL und fordert die dll zur Eingabe von Informationen über das Menü an, das die dll bereitstellt.
+Der Datei-Manager lädt die Erweiterungs-DLL und fordert die DLL auf, Informationen über das von der DLL zur Verfügung zu stellende Menü zu erhalten.
 
 </dd> <dt>
 
 <span id="FMEVENT_SELCHANGE"></span><span id="fmevent_selchange"></span>
 
-<span id="FMEVENT_SELCHANGE"></span><span id="fmevent_selchange"></span>**"schabvent \_ selChange"**
+<span id="FMEVENT_SELCHANGE"></span><span id="fmevent_selchange"></span>**FMEVENT \_ SELCHANGE**
 
 
 </dt> <dd>
 
-Die Auswahl im Verzeichnis Fenster des **Datei-Managers** oder im Fenster " **Suchergebnisse** " wurde geändert.
+Die Auswahl im **Datei-Manager-Verzeichnisfenster** oder **im Fenster Suchergebnisse** wurde geändert.
 
 </dd> <dt>
 
 <span id="FMEVENT_TOOLBARLOAD"></span><span id="fmevent_toolbarload"></span>
 
-<span id="FMEVENT_TOOLBARLOAD"></span><span id="fmevent_toolbarload"></span>**"Tool barload" von "f" \_**
+<span id="FMEVENT_TOOLBARLOAD"></span><span id="fmevent_toolbarload"></span>**FMEVENT \_ TOOLBARLOAD**
 
 
 </dt> <dd>
 
-Der Datei-Manager erstellt die Symbolleiste und fordert die Erweiterungs-DLL zur Eingabe von Informationen über alle Schaltflächen auf, die die dll der Symbolleiste hinzufügt.
+Der Datei-Manager erstellt die Symbolleiste und fordert die Erweiterungs-DLL auf, Informationen zu schaltflächen zu erhalten, die die DLL der Symbolleiste hinzufügt.
 
 </dd> <dt>
 
 <span id="FMEVENT_UNLOAD"></span><span id="fmevent_unload"></span>
 
-<span id="FMEVENT_UNLOAD"></span><span id="fmevent_unload"></span>**Entladen von "f" \_**
+<span id="FMEVENT_UNLOAD"></span><span id="fmevent_unload"></span>**FMEVENT \_ UNLOAD**
 
 
 </dt> <dd>
 
-Die Erweiterungs-DLL wird vom Datei-Manager entladen.
+Der Datei-Manager entlädt die Erweiterungs-DLL.
 
 </dd> <dt>
 
 <span id="FMEVENT_USER_REFRESH"></span><span id="fmevent_user_refresh"></span>
 
-<span id="FMEVENT_USER_REFRESH"></span><span id="fmevent_user_refresh"></span>**\_Benutzer Aktualisierung für "Benutzer" \_**
+<span id="FMEVENT_USER_REFRESH"></span><span id="fmevent_user_refresh"></span>**\_FMEVENT-BENUTZERAKTUALISIERUNG \_**
 
 
 </dt> <dd>
 
-Der Benutzer hat den Befehl " **Aktualisieren** " im Menü " **Fenster** " ausgewählt. Die Erweiterung sollte bei Bedarf Elemente im Menü aktualisieren.
+Der Benutzer hat im **Menü** Fenster den Befehl **Aktualisieren** ausgewählt. Die Erweiterung sollte bei Bedarf Elemente im Menü aktualisieren.
 
 </dd> </dl> </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Type: **Long**
+Typ: **LONG**
 
-Meldungs spezifischer Wert.
+Nachrichtenspezifischer Wert.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Type: **Long**
+Typ: **LONG**
 
-Gibt einen Wert zurück, der von der *wmsg* -Parameter Nachricht abhängt.
+Gibt einen Wert zurück, der von der *wMsg-Parametermeldung* abhängig ist.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
@@ -182,8 +182,8 @@ Gibt einen Wert zurück, der von der *wmsg* -Parameter Nachricht abhängt.
 |-------------------------------------|------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                               |
-| Header<br/>                   | <dl> <dt>WF. h</dt> </dl> |
-| Unicode- und ANSI-Name<br/>   | " **F** " (Unicode)<br/>                                          |
+| Header<br/>                   | <dl> <dt>Wfext.h</dt> </dl> |
+| Unicode- und ANSI-Name<br/>   | **FMExtensionProcW** (Unicode)<br/>                                          |
 
 
 

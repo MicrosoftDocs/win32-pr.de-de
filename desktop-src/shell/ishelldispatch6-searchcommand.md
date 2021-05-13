@@ -1,6 +1,6 @@
 ---
-description: Zeigt den Suchbereich apps an, der normalerweise angezeigt wird, wenn Sie auf dem Start Bildschirm einen Suchbegriff eingeben.
-title: IShellDispatch6. searchcommand-Methode (Shldisp. h)
+description: Zeigt den Bereich Apps-Suche an, der normalerweise angezeigt wird, wenn Sie beginnen, einen Suchbegriff aus dem Startbildschirm einzugeben.
+title: IShellDispatch6.SearchCommand-Methode (Shldisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 api_location:
 - Shldisp.h
 ms.assetid: B5861125-2B21-4C47-8425-026381B2F677
-ms.openlocfilehash: 9868d21cb5f5a0208f45ddc1c9ff6fb1d051a325
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7ca8818960704627376bde8b394eae7deb0317b6
+ms.sourcegitcommit: 3caaa3c92dcb1ef12f84464d14ce6262e65e988e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104977961"
+ms.lasthandoff: 05/12/2021
+ms.locfileid: "109842981"
 ---
-# <a name="ishelldispatch6searchcommand-method"></a>IShellDispatch6. searchcommand-Methode
+# <a name="ishelldispatch6searchcommand-method"></a>IShellDispatch6.SearchCommand-Methode
 
-Zeigt den Suchbereich apps an, der normalerweise angezeigt wird, wenn Sie auf dem Start Bildschirm einen Suchbegriff eingeben.
+Zeigt den Bereich Apps-Suche an, der normalerweise angezeigt wird, wenn Sie beginnen, einen Suchbegriff aus dem Startbildschirm einzugeben.
 
 ## <a name="syntax"></a>Syntax
 
@@ -55,16 +55,16 @@ Diese Methode gibt keinen Wert zurück.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                             |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                   |
-| Header<br/>                   | <dl> <dt>Shldisp. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Shldisp. idl</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 8 \[ Desktop-Apps\]<br/>                                             |
+| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2012-Desktop-Apps\]<br/>                                   |
+| Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl> |
 
 
 

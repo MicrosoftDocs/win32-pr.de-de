@@ -1,6 +1,6 @@
 ---
-description: Enthält Informationen, die eine neue Liste der zuletzt verwendeten (MRU) definieren. Wird von "kreatemrulistw" verwendet.
-title: Mruinfo-Struktur
+description: Enthält Informationen, die eine neue LISTE der zuletzt verwendeten (MRU) definieren. Wird von CreateMRUListW verwendet.
+title: MRUINFO-Struktur
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 - NA
 api_location: ''
 ms.assetid: 31d5831d-9a19-4bd9-8439-ce844966c414
-ms.openlocfilehash: 91c0b1a2c10f4ac77afa5f8af2380b3d14ced8f5
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 652168e6a4e61ac754aac3202e0681ec6b7d9e66
+ms.sourcegitcommit: 3caaa3c92dcb1ef12f84464d14ce6262e65e988e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104993790"
+ms.lasthandoff: 05/12/2021
+ms.locfileid: "109840761"
 ---
-# <a name="mruinfo-structure"></a>Mruinfo-Struktur
+# <a name="mruinfo-structure"></a>MRUINFO-Struktur
 
-Enthält Informationen, die eine neue Liste der zuletzt verwendeten (MRU) definieren. Wird von " [**kreatemrulistw**](createmrulist.md)" verwendet.
+Enthält Informationen, die eine neue LISTE der zuletzt verwendeten (MRU) definieren. Wird von [**CreateMRUListW verwendet.**](createmrulist.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,21 +45,21 @@ typedef struct {
 
 <dl> <dt>
 
-**CBSIZE**
+**cbSize**
 </dt> <dd>
 
 Typ: **DWORD**
 
 </dd> <dd>
 
-Die Größe der-Struktur.
+Die Größe der -Struktur.
 
 </dd> <dt>
 
 **Umax**
 </dt> <dd>
 
-Typ: **uint**
+Typ: **UINT**
 
 </dd> <dd>
 
@@ -70,7 +70,7 @@ Die maximale Anzahl von Einträgen in der MRU-Liste.
 **fFlags**
 </dt> <dd>
 
-Typ: **uint**
+Typ: **UINT**
 
 </dd> <dd>
 
@@ -80,41 +80,41 @@ Mindestens eines der folgenden Flags.
 
 <span id="MRU_BINARY"></span><span id="mru_binary"></span>
 
-<span id="MRU_BINARY"></span><span id="mru_binary"></span>**MRU \_ Binary** (0x0001)
+<span id="MRU_BINARY"></span><span id="mru_binary"></span>**MRU \_ BINARY** (0x0001)
 
 
 </dt> <dd>
 
-Daten werden in der Registrierung als Binärdaten und nicht als Zeichen folgen Daten gespeichert.
+Daten werden in der Registrierung als Binärdaten und nicht als Zeichenfolgendaten gespeichert.
 
 </dd> <dt>
 
 <span id="MRU_CACHEWRITE"></span><span id="mru_cachewrite"></span>
 
-<span id="MRU_CACHEWRITE"></span><span id="mru_cachewrite"></span>**MRU \_ Cachewrite** (0x0002)
+<span id="MRU_CACHEWRITE"></span><span id="mru_cachewrite"></span>**MRU \_ CACHEWRITE** (0x0002)
 
 
 </dt> <dd>
 
-Schreiben Sie Änderungen an der MRU-Version, die in der Registrierung gespeichert ist, nur dann, wenn ein neues Element hinzugefügt wird oder die Ressourcen der MRU-Liste aus dem Arbeitsspeicher freigegeben werden. Beachten Sie, dass die aktive Version der MRU im Arbeitsspeicher sofort als Reaktion auf eine Änderung des Inhalts oder der Reihenfolge aktualisiert wird.
+Schreiben Sie Änderungen an der in der Registrierung gespeicherten MRU-Version nur, wenn ein neues Element hinzugefügt oder die Ressourcen der MRU-Liste aus dem Arbeitsspeicher frei werden. Beachten Sie, dass die aktive Version der MRU im Arbeitsspeicher sofort aktualisiert wird, wenn sich der Inhalt oder die Reihenfolge ändert.
 
 </dd> </dl> </dd> <dt>
 
-**HKEY**
+**Hkey**
 </dt> <dd>
 
 Typ: **HKEY**
 
 </dd> <dd>
 
-Ein Handle für den aktuell geöffneten Schlüssel oder einen der folgenden vordefinierten Werte, unter denen die MRU-Daten gespeichert werden sollen.
+Ein Handle für den derzeit geöffneten Schlüssel oder einen der folgenden vordefinierten Werte, unter denen die MRU-Daten gespeichert werden sollen.
 
 <dl><span id="HKEY_CURRENT_USER"></span><span id="hkey_current_user"></span><dt>
 
-**Aktueller HKEY- \_ \_ Benutzer**
+**AKTUELLER \_ \_ HKEY-BENUTZER**
 </dt><span id="HKEY_LOCAL_MACHINE"></span><span id="hkey_local_machine"></span><dt>
 
-**lokaler HKEY- \_ \_ Computer**
+**HKEY \_ LOCAL \_ MACHINE**
 </dt> </dl> </dd> <dt>
 
 **lpszSubKey**
@@ -128,22 +128,22 @@ Der Unterschlüssel, unter dem die MRU-Daten gespeichert werden sollen.
 
 </dd> <dt>
 
-**lpfncompare**
+**lpfnCompare**
 </dt> <dd>
 
-Typ: **[ **mrucmpproc**](mrucmpproc.md)**
+Typ: **[ **MRUCMPPROC**](mrucmpproc.md)**
 
 </dd> <dd>
 
-Ein Zeiger auf eine optionale Daten Vergleichsfunktion, die verwendet werden kann, um zu bestimmen, ob ein Element in der MRU-Liste vorhanden ist. Dies ist hilfreich, wenn die MRU-Liste mit dem **MRU- \_ Binärflag** erstellt wurde. Wenn dieser Member **null** ist, werden standardmäßige Zeichen folgen Vergleichsfunktionen verwendet. für Binärdaten wird ein direkter Speicher Vergleich verwendet.
+Ein Zeiger auf eine optionale Datenvergleichsfunktion, mit der bestimmt werden kann, ob ein Element in der MRU-Liste vorhanden ist. Dies ist nützlich, wenn die MRU-Liste mit dem **MRU \_ BINARY-Flag** erstellt wurde. Wenn dieser Member **NULL** ist, werden Standardmäßige Zeichenfolgenvergleichsfunktionen verwendet. für Binärdaten wird ein direkter Speichervergleich verwendet.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Struktur ist nicht in einer Header Datei definiert. Sie müssen Sie selbst definieren.
+Diese Struktur ist in einer Headerdatei nicht definiert. Sie müssen es selbst definieren.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
@@ -151,7 +151,7 @@ Diese Struktur ist nicht in einer Header Datei definiert. Sie müssen Sie selbst
 |-------------------------------------|------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/> |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>       |
-| Unicode- und ANSI-Name<br/>   | **Mruinfow** (Unicode) und **mruinfoa** (ANSI)<br/>  |
+| Unicode- und ANSI-Name<br/>   | **MRUINFOW** (Unicode) und **MRUINFOA** (ANSI)<br/>  |
 
 
 

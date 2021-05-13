@@ -1,6 +1,6 @@
 ---
-description: Ruft die aktuelle Datenträger Verwendung des Benutzers in Bytes ab.
-title: Didiskquotauser. quotaused (Eigenschaft)
+description: Ruft die aktuelle Datenträgerverwendung des Benutzers in Bytes ab.
+title: DIDiskQuotaUser.QuotaUsed (Eigenschaft)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 api_location:
 - Shell32.dll
 ms.assetid: 3e3ade59-b925-4ff5-ae7e-ed97eff506c7
-ms.openlocfilehash: 7d5068e6f80fd2b0b435d04583e99da929e17fce
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a08d7579ad4de51fbc88b7091f2f906ace838883
+ms.sourcegitcommit: 3caaa3c92dcb1ef12f84464d14ce6262e65e988e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104128448"
+ms.lasthandoff: 05/12/2021
+ms.locfileid: "109841571"
 ---
-# <a name="didiskquotauserquotaused-property"></a>Didiskquotauser. quotaused (Eigenschaft)
+# <a name="didiskquotauserquotaused-property"></a>DIDiskQuotaUser.QuotaUsed (Eigenschaft)
 
-Ruft die aktuelle Datenträger Verwendung des Benutzers in Bytes ab.
+Ruft die aktuelle Datenträgerverwendung des Benutzers in Bytes ab.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -37,9 +37,9 @@ iQuotaUsed = DIDiskQuotaUser.QuotaUsed
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Der **ganzzahlige** Wert, der auf den derzeit verwendeten Speicherplatz festgelegt wird. Wenn die NTFS-Dateikomprimierung aktiviert ist, gibt **quotaused** die Menge an Speicherplatz an, die die Daten in einem unkomprimierten Zustand erfordern.
+Der  Ganzzahlwert, der auf die Menge des derzeit verwendeten Speicherplatzes festgelegt ist. Wenn die NTFS-Dateikomprimierung aktiviert ist, **gibt QuotaUsed** den Speicherplatz an, den die Daten in einem nicht komprimierten Zustand benötigen würden.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
@@ -47,24 +47,24 @@ Der **ganzzahlige** Wert, der auf den derzeit verwendeten Speicherplatz festgele
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                          |
-| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 5,0 oder höher)</dt> </dl> |
+| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 5.0 oder höher)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[**Didiskquotauser**](didiskquotauser-object.md)
+[**DIDiskQuotaUser**](didiskquotauser-object.md)
 </dt> <dt>
 
 [**QuotaLimit**](didiskquotauser-quotalimit.md)
 </dt> <dt>
 
-[**Quotathreshold**](didiskquotauser-quotathreshold.md)
+[**QuotaThreshold**](didiskquotauser-quotathreshold.md)
 </dt> <dt>
 
-[**Quotausedtext**](didiskquotauser-quotausedtext.md)
+[**QuotaUsedText**](didiskquotauser-quotausedtext.md)
 </dt> </dl>
 
  

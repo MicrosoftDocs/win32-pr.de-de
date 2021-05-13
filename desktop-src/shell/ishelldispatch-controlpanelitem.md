@@ -1,6 +1,6 @@
 ---
-description: Führt die angegebene System Steuerungsanwendung aus.
-title: Ishelldispatch. controlpanelitem-Methode (Shldisp. h)
+description: Führt die angegebene Systemsteuerung aus.
+title: IShellDispatch.ControlPanelItem-Methode (Shldisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,19 +13,19 @@ api_type:
 api_location:
 - Shell32.dll
 ms.assetid: 9A9B6B3F-FBBC-4e76-8018-8858B6392276
-ms.openlocfilehash: 72164ff76cbcf15703bc91160e6211b38015f989
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1a1c024b316472be00f119485326b704a4fe8dd0
+ms.sourcegitcommit: 3caaa3c92dcb1ef12f84464d14ce6262e65e988e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104527353"
+ms.lasthandoff: 05/12/2021
+ms.locfileid: "109842841"
 ---
-# <a name="ishelldispatchcontrolpanelitem-method"></a>Ishelldispatch. controlpanelitem-Methode
+# <a name="ishelldispatchcontrolpanelitem-method"></a>IShellDispatch.ControlPanelItem-Methode
 
-Führt die angegebene System Steuerungsanwendung aus. Wenn die Anwendung bereits geöffnet ist, wird die laufende Instanz aktiviert.
+Führt die angegebene Systemsteuerung aus. Wenn die Anwendung bereits geöffnet ist, wird die ausgeführte Instanz aktiviert.
 
 > [!Note]  
-> Ab Windows Vista sind die meisten System Steuerungsanwendungen shellelemente und können nicht mit dieser Funktion geöffnet werden. Wenn Sie diese System Steuerungsanwendungen öffnen möchten, übergeben Sie den kanonischen Namen an control.exe. Zum Beispiel:
+> Ab Windows Vista sind die meisten Systemsteuerung Shell-Elemente und können mit dieser Funktion nicht geöffnet werden. Um diese anwendungen Systemsteuerung öffnen, übergeben Sie den kanonischen Namen an control.exe. Zum Beispiel:
 >
 > ``` syntax
 > control.exe /name Microsoft.Personalization
@@ -58,12 +58,12 @@ IShellDispatch.ControlPanelItem( _
 
 <dl> <dt>
 
-*bstrindir* \[ in\]
+*bstrDir* \[ In\]
 </dt> <dd>
 
 Typ: **[ **BSTR**](/previous-versions/windows/desktop/automat/bstr)**
 
-Der Dateiname der System Steuerungsanwendung.
+Der Systemsteuerung dateiname der Anwendung.
 
 </dd> </dl>
 
@@ -77,15 +77,15 @@ Diese Methode gibt keinen Wert zurück.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode wird implementiert und über die [**Shell. controlpanelitem**](shell-controlpanelitem.md) -Methode aufgerufen.
+Diese Methode wird implementiert und über die [**Shell.ControlPanelItem-Methode aufgerufen.**](shell-controlpanelitem.md)
 
 ## <a name="examples"></a>Beispiele
 
-In den folgenden Beispielen wird [**controlpanelitem**](shell-controlpanelitem.md) verwendet, um das Element **Anzeigeeigenschaften** der Systemsteuerung auszuführen. Die Verwendung wird für JScript, VBScript und Visual Basic angezeigt.
+In den folgenden Beispielen [**wird ControlPanelItem**](shell-controlpanelitem.md) verwendet, um das Systemsteuerung **des** Anzeigeeigenschaften ausführen. Die Verwendung wird für JScript, VBScript und Visual Basic.
 
-JScript
+Jscript:
 
 
 ```JScript
@@ -101,7 +101,7 @@ JScript
 
 
 
-VBScript
+Vbscript:
 
 
 ```VB
@@ -135,17 +135,17 @@ End Sub
 
 
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, Windows XP \[ Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Client)<br/> | Nur Windows 2000 Professional- und Windows \[ XP-Desktop-Apps\]<br/>                                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                           |
-| Header<br/>                   | <dl> <dt>Shldisp. h</dt> </dl>                           |
-| IDL<br/>                      | <dl> <dt>Shldisp. idl</dt> </dl>                         |
-| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4,71 oder höher)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>                           |
+| Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                         |
+| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4.71 oder höher)</dt> </dl> |
 
 
 
