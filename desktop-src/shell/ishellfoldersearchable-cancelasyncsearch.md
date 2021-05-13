@@ -1,6 +1,6 @@
 ---
-description: Startet das Abbrechen einer ausstehenden asynchronen Suche.
-title: 'Ishellfoldersearchable:: cancelasyncsearch-Methode'
+description: Startet den Prozess des Abbrechens einer ausstehenden asynchronen Suche.
+title: IShellFolderSearchable::CancelAsyncSearch-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 api_location:
 - Shell32.dll
 ms.assetid: 5c920dca-fbca-48e1-9dce-38713cf1fcef
-ms.openlocfilehash: e9e3231e8cc602a4e00b6ee79a25392717b6e68b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3146fea4f6c8d8547c8c86096b434cbaea5b5926
+ms.sourcegitcommit: 3caaa3c92dcb1ef12f84464d14ce6262e65e988e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104977953"
+ms.lasthandoff: 05/12/2021
+ms.locfileid: "109842991"
 ---
-# <a name="ishellfoldersearchablecancelasyncsearch-method"></a><span data-ttu-id="0b719-103">Ishellfoldersearchable:: cancelasyncsearch-Methode</span><span class="sxs-lookup"><span data-stu-id="0b719-103">IShellFolderSearchable::CancelAsyncSearch method</span></span>
+# <a name="ishellfoldersearchablecancelasyncsearch-method"></a><span data-ttu-id="71c66-103">IShellFolderSearchable::CancelAsyncSearch-Methode</span><span class="sxs-lookup"><span data-stu-id="71c66-103">IShellFolderSearchable::CancelAsyncSearch method</span></span>
 
-<span data-ttu-id="0b719-104">Startet das Abbrechen einer ausstehenden asynchronen Suche.</span><span class="sxs-lookup"><span data-stu-id="0b719-104">Begins the process of canceling a pending asynchronous search.</span></span>
+<span data-ttu-id="71c66-104">Startet den Prozess des Abbrechens einer ausstehenden asynchronen Suche.</span><span class="sxs-lookup"><span data-stu-id="71c66-104">Begins the process of canceling a pending asynchronous search.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="0b719-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="0b719-105">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="71c66-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="71c66-105">Syntax</span></span>
 
 
 ```C++
@@ -36,47 +36,47 @@ HRESULT CancelAsyncSearch(
 
 
 
-## <a name="parameters"></a><span data-ttu-id="0b719-106">Parameter</span><span class="sxs-lookup"><span data-stu-id="0b719-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="71c66-106">Parameter</span><span class="sxs-lookup"><span data-stu-id="71c66-106">Parameters</span></span>
 
 <dl> <dt>
 
-<span data-ttu-id="0b719-107">*pidlsearch* \[ in\]</span><span class="sxs-lookup"><span data-stu-id="0b719-107">*pidlSearch* \[in\]</span></span>
+<span data-ttu-id="71c66-107">*pidlSearch* \[ In\]</span><span class="sxs-lookup"><span data-stu-id="71c66-107">*pidlSearch* \[in\]</span></span>
 </dt> <dd>
 
-<span data-ttu-id="0b719-108">Typ: **lpcitemittellist**</span><span class="sxs-lookup"><span data-stu-id="0b719-108">Type: **LPCITEMIDLIST**</span></span>
+<span data-ttu-id="71c66-108">Typ: **LPJSMIDLIST**</span><span class="sxs-lookup"><span data-stu-id="71c66-108">Type: **LPCITEMIDLIST**</span></span>
 
-<span data-ttu-id="0b719-109">Ein Zeiger auf eine [**itemittel List**](/windows/desktop/api/Shtypes/ns-shtypes-itemidlist) für die Suche.</span><span class="sxs-lookup"><span data-stu-id="0b719-109">A pointer to an [**ITEMIDLIST**](/windows/desktop/api/Shtypes/ns-shtypes-itemidlist) for the search.</span></span>
+<span data-ttu-id="71c66-109">Ein Zeiger auf eine [**ITEMIDLIST**](/windows/desktop/api/Shtypes/ns-shtypes-itemidlist) für die Suche.</span><span class="sxs-lookup"><span data-stu-id="71c66-109">A pointer to an [**ITEMIDLIST**](/windows/desktop/api/Shtypes/ns-shtypes-itemidlist) for the search.</span></span>
 
 </dd> <dt>
 
-<span data-ttu-id="0b719-110">*pdwflags* \[ in\]</span><span class="sxs-lookup"><span data-stu-id="0b719-110">*pdwFlags* \[in\]</span></span>
+<span data-ttu-id="71c66-110">*pdwFlags* \[ In\]</span><span class="sxs-lookup"><span data-stu-id="71c66-110">*pdwFlags* \[in\]</span></span>
 </dt> <dd>
 
-<span data-ttu-id="0b719-111">Typ: \**DWORD \** _</span><span class="sxs-lookup"><span data-stu-id="0b719-111">Type: \**DWORD\** _</span></span>
+<span data-ttu-id="71c66-111">Typ: **DWORD \***</span><span class="sxs-lookup"><span data-stu-id="71c66-111">Type: **DWORD\***</span></span>
 
-<span data-ttu-id="0b719-112">Zurzeit sind keine Flags definiert. Legen Sie auf _ \* NULL \* \* fest.</span><span class="sxs-lookup"><span data-stu-id="0b719-112">No flags are currently defined; set to _\*NULL\*\*.</span></span>
+<span data-ttu-id="71c66-112">Derzeit sind keine Flags definiert. auf **NULL festgelegt.**</span><span class="sxs-lookup"><span data-stu-id="71c66-112">No flags are currently defined; set to **NULL**.</span></span>
 
 </dd> </dl>
 
-## <a name="return-value"></a><span data-ttu-id="0b719-113">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="0b719-113">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="71c66-113">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="71c66-113">Return value</span></span>
 
-<span data-ttu-id="0b719-114">Typ: **HRESULT**</span><span class="sxs-lookup"><span data-stu-id="0b719-114">Type: **HRESULT**</span></span>
+<span data-ttu-id="71c66-114">Typ: **HRESULT**</span><span class="sxs-lookup"><span data-stu-id="71c66-114">Type: **HRESULT**</span></span>
 
-<span data-ttu-id="0b719-115">Gibt s \_ OK zurück, wenn abgebrochen wird, oder s \_ false, wenn die Suche nicht ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="0b719-115">Returns S\_OK if canceling, or S\_FALSE if search is not running.</span></span>
+<span data-ttu-id="71c66-115">Gibt S \_ OK zurück, wenn der Vorgang abgebrochen wird, oder S \_ FALSE, wenn die Suche nicht ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="71c66-115">Returns S\_OK if canceling, or S\_FALSE if search is not running.</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="0b719-116">Bemerkungen</span><span class="sxs-lookup"><span data-stu-id="0b719-116">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="71c66-116">Hinweise</span><span class="sxs-lookup"><span data-stu-id="71c66-116">Remarks</span></span>
 
-<span data-ttu-id="0b719-117">Wenn die Suche tatsächlich abgebrochen wird, wird [**RunEnd**](ishellfoldersearchablecallback-runend.md) aufgerufen.</span><span class="sxs-lookup"><span data-stu-id="0b719-117">When the search is actually canceled, [**RunEnd**](ishellfoldersearchablecallback-runend.md) will be called.</span></span>
+<span data-ttu-id="71c66-117">Wenn die Suche tatsächlich abgebrochen wird, [**wird RunEnd**](ishellfoldersearchablecallback-runend.md) aufgerufen.</span><span class="sxs-lookup"><span data-stu-id="71c66-117">When the search is actually canceled, [**RunEnd**](ishellfoldersearchablecallback-runend.md) will be called.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="0b719-118">Requirements (Anforderungen)</span><span class="sxs-lookup"><span data-stu-id="0b719-118">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="71c66-118">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="71c66-118">Requirements</span></span>
 
 
 
-| <span data-ttu-id="0b719-119">Anforderung</span><span class="sxs-lookup"><span data-stu-id="0b719-119">Requirement</span></span> | <span data-ttu-id="0b719-120">Wert</span><span class="sxs-lookup"><span data-stu-id="0b719-120">Value</span></span> |
+| <span data-ttu-id="71c66-119">Anforderung</span><span class="sxs-lookup"><span data-stu-id="71c66-119">Requirement</span></span> | <span data-ttu-id="71c66-120">Wert</span><span class="sxs-lookup"><span data-stu-id="71c66-120">Value</span></span> |
 |-------------------------------------|----------------------------------------------------------------------------------------|
-| <span data-ttu-id="0b719-121">Unterstützte Mindestversion (Client)</span><span class="sxs-lookup"><span data-stu-id="0b719-121">Minimum supported client</span></span><br/> | <span data-ttu-id="0b719-122">Windows 2000 Professional \[nur Desktop-Apps\]</span><span class="sxs-lookup"><span data-stu-id="0b719-122">Windows 2000 Professional \[desktop apps only\]</span></span><br/>                             |
-| <span data-ttu-id="0b719-123">Unterstützte Mindestversion (Server)</span><span class="sxs-lookup"><span data-stu-id="0b719-123">Minimum supported server</span></span><br/> | <span data-ttu-id="0b719-124">Windows 2000 Server \[nur Desktop-Apps\]</span><span class="sxs-lookup"><span data-stu-id="0b719-124">Windows 2000 Server \[desktop apps only\]</span></span><br/>                                   |
-| <span data-ttu-id="0b719-125">DLL</span><span class="sxs-lookup"><span data-stu-id="0b719-125">DLL</span></span><br/>                      | <dl> <span data-ttu-id="0b719-126"><dt>Shell32.dll</dt></span><span class="sxs-lookup"><span data-stu-id="0b719-126"><dt>Shell32.dll</dt></span></span> </dl> |
+| <span data-ttu-id="71c66-121">Unterstützte Mindestversion (Client)</span><span class="sxs-lookup"><span data-stu-id="71c66-121">Minimum supported client</span></span><br/> | <span data-ttu-id="71c66-122">Windows 2000 Professional \[nur Desktop-Apps\]</span><span class="sxs-lookup"><span data-stu-id="71c66-122">Windows 2000 Professional \[desktop apps only\]</span></span><br/>                             |
+| <span data-ttu-id="71c66-123">Unterstützte Mindestversion (Server)</span><span class="sxs-lookup"><span data-stu-id="71c66-123">Minimum supported server</span></span><br/> | <span data-ttu-id="71c66-124">Windows 2000 Server \[nur Desktop-Apps\]</span><span class="sxs-lookup"><span data-stu-id="71c66-124">Windows 2000 Server \[desktop apps only\]</span></span><br/>                                   |
+| <span data-ttu-id="71c66-125">DLL</span><span class="sxs-lookup"><span data-stu-id="71c66-125">DLL</span></span><br/>                      | <dl> <span data-ttu-id="71c66-126"><dt>Shell32.dll</dt></span><span class="sxs-lookup"><span data-stu-id="71c66-126"><dt>Shell32.dll</dt></span></span> </dl> |
 
 
 

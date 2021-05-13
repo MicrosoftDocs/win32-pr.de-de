@@ -1,6 +1,6 @@
 ---
-description: Rekonstruiert einen Zeiger auf eine Element Bezeichner-Liste (PIDL) aus einer hierarchischen Darstellung des shellordners in eine andere Darstellung.
-title: 'Ishellfolderviewtype:: translateviewpidl-Methode'
+description: Rekonstruiert einen Zeiger auf eine Elementbezeichnerliste (PIDL) aus einer hierarchischen Darstellung des Shellordners in einer anderen Darstellung.
+title: IShellFolderViewType::TranslateViewPidl-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 api_location:
 - Shell32.dll
 ms.assetid: 3b7fa6c4-3d02-44ed-b63d-80a799e4017a
-ms.openlocfilehash: 75876e5088c610c1f9f02ba9374db5cea4a6023c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 537a77e7ffffb462e0031ea0959f60cd695f7d99
+ms.sourcegitcommit: 3caaa3c92dcb1ef12f84464d14ce6262e65e988e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104527311"
+ms.lasthandoff: 05/12/2021
+ms.locfileid: "109842671"
 ---
-# <a name="ishellfolderviewtypetranslateviewpidl-method"></a><span data-ttu-id="c3289-103">Ishellfolderviewtype:: translateviewpidl-Methode</span><span class="sxs-lookup"><span data-stu-id="c3289-103">IShellFolderViewType::TranslateViewPidl method</span></span>
+# <a name="ishellfolderviewtypetranslateviewpidl-method"></a><span data-ttu-id="44030-103">IShellFolderViewType::TranslateViewPidl-Methode</span><span class="sxs-lookup"><span data-stu-id="44030-103">IShellFolderViewType::TranslateViewPidl method</span></span>
 
-<span data-ttu-id="c3289-104">Rekonstruiert einen Zeiger auf eine Element Bezeichner-Liste (PIDL) aus einer hierarchischen Darstellung des shellordners in eine andere Darstellung.</span><span class="sxs-lookup"><span data-stu-id="c3289-104">Reconstructs a pointer to an item identifier list (PIDL) from one hierarchical representation of the Shell folder into a different representation.</span></span>
+<span data-ttu-id="44030-104">Rekonstruiert einen Zeiger auf eine Elementbezeichnerliste (PIDL) aus einer hierarchischen Darstellung des Shellordners in einer anderen Darstellung.</span><span class="sxs-lookup"><span data-stu-id="44030-104">Reconstructs a pointer to an item identifier list (PIDL) from one hierarchical representation of the Shell folder into a different representation.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="c3289-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="c3289-105">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="44030-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="44030-105">Syntax</span></span>
 
 
 ```C++
@@ -37,56 +37,56 @@ HRESULT TranslateViewPidl(
 
 
 
-## <a name="parameters"></a><span data-ttu-id="c3289-106">Parameter</span><span class="sxs-lookup"><span data-stu-id="c3289-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="44030-106">Parameter</span><span class="sxs-lookup"><span data-stu-id="44030-106">Parameters</span></span>
 
 <dl> <dt>
 
-<span data-ttu-id="c3289-107">*PIDL* \[ in\]</span><span class="sxs-lookup"><span data-stu-id="c3289-107">*pidl* \[in\]</span></span>
+<span data-ttu-id="44030-107">*pidl* \[ In\]</span><span class="sxs-lookup"><span data-stu-id="44030-107">*pidl* \[in\]</span></span>
 </dt> <dd>
 
-<span data-ttu-id="c3289-108">Type: **pcuidlist \_ relative**</span><span class="sxs-lookup"><span data-stu-id="c3289-108">Type: **PCUIDLIST\_RELATIVE**</span></span>
+<span data-ttu-id="44030-108">Typ: **PCUIDLIST \_ RELATIVE**</span><span class="sxs-lookup"><span data-stu-id="44030-108">Type: **PCUIDLIST\_RELATIVE**</span></span>
 
-<span data-ttu-id="c3289-109">Das Array von Element-IDs relativ zum Stamm Ordner.</span><span class="sxs-lookup"><span data-stu-id="c3289-109">The array of item IDs relative to the root folder.</span></span>
+<span data-ttu-id="44030-109">Das Array von Element-IDs relativ zum Stammordner.</span><span class="sxs-lookup"><span data-stu-id="44030-109">The array of item IDs relative to the root folder.</span></span>
 
 </dd> <dt>
 
-<span data-ttu-id="c3289-110">*pidlview* \[ in\]</span><span class="sxs-lookup"><span data-stu-id="c3289-110">*pidlView* \[in\]</span></span>
+<span data-ttu-id="44030-110">*pidlView* \[ In\]</span><span class="sxs-lookup"><span data-stu-id="44030-110">*pidlView* \[in\]</span></span>
 </dt> <dd>
 
-<span data-ttu-id="c3289-111">Type: **pcuidlist \_ relative**</span><span class="sxs-lookup"><span data-stu-id="c3289-111">Type: **PCUIDLIST\_RELATIVE**</span></span>
+<span data-ttu-id="44030-111">Typ: **PCUIDLIST \_ RELATIVE**</span><span class="sxs-lookup"><span data-stu-id="44030-111">Type: **PCUIDLIST\_RELATIVE**</span></span>
 
-<span data-ttu-id="c3289-112">Besondere PIDL der Ansicht.</span><span class="sxs-lookup"><span data-stu-id="c3289-112">Special PIDL of the view.</span></span>
+<span data-ttu-id="44030-112">Spezielle PIDL der Ansicht.</span><span class="sxs-lookup"><span data-stu-id="44030-112">Special PIDL of the view.</span></span>
 
 </dd> <dt>
 
-<span data-ttu-id="c3289-113">*ppidlout* \[ in\]</span><span class="sxs-lookup"><span data-stu-id="c3289-113">*ppidlOut* \[in\]</span></span>
+<span data-ttu-id="44030-113">*dldlOut* \[ In\]</span><span class="sxs-lookup"><span data-stu-id="44030-113">*ppidlOut* \[in\]</span></span>
 </dt> <dd>
 
-<span data-ttu-id="c3289-114">Typ: \**pcuidlist \_ relative \** _</span><span class="sxs-lookup"><span data-stu-id="c3289-114">Type: \**PCUIDLIST\_RELATIVE\** _</span></span>
+<span data-ttu-id="44030-114">Typ: **PCUIDLIST \_ RELATIVE \***</span><span class="sxs-lookup"><span data-stu-id="44030-114">Type: **PCUIDLIST\_RELATIVE\***</span></span>
 
-<span data-ttu-id="c3289-115">Die Adresse einer PIDL-Variablen, die die Übersetzung empfangen soll.</span><span class="sxs-lookup"><span data-stu-id="c3289-115">The address of a PIDL variable to receive the translation.</span></span>
+<span data-ttu-id="44030-115">Die Adresse einer PIDL-Variablen, die die Übersetzung empfangen soll.</span><span class="sxs-lookup"><span data-stu-id="44030-115">The address of a PIDL variable to receive the translation.</span></span>
 
 </dd> </dl>
 
-## <a name="return-value"></a><span data-ttu-id="c3289-116">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="c3289-116">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="44030-116">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="44030-116">Return value</span></span>
 
-<span data-ttu-id="c3289-117">Type: _ *HRESULT*\*</span><span class="sxs-lookup"><span data-stu-id="c3289-117">Type: _ *HRESULT*\*</span></span>
+<span data-ttu-id="44030-117">Typ: **HRESULT**</span><span class="sxs-lookup"><span data-stu-id="44030-117">Type: **HRESULT**</span></span>
 
-<span data-ttu-id="c3289-118">Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück.</span><span class="sxs-lookup"><span data-stu-id="c3289-118">If this method succeeds, it returns **S\_OK**.</span></span> <span data-ttu-id="c3289-119">Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="c3289-119">Otherwise, it returns an **HRESULT** error code.</span></span>
+<span data-ttu-id="44030-118">Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.**</span><span class="sxs-lookup"><span data-stu-id="44030-118">If this method succeeds, it returns **S\_OK**.</span></span> <span data-ttu-id="44030-119">Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="44030-119">Otherwise, it returns an **HRESULT** error code.</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="c3289-120">Bemerkungen</span><span class="sxs-lookup"><span data-stu-id="c3289-120">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="44030-120">Hinweise</span><span class="sxs-lookup"><span data-stu-id="44030-120">Remarks</span></span>
 
-<span data-ttu-id="c3289-121">Wenn Sie fertig sind, sollten Sie die zurückgegebene PIDL mit [**ilfree**](/windows/desktop/api/shlobj_core/nf-shlobj_core-ilfree)freigeben.</span><span class="sxs-lookup"><span data-stu-id="c3289-121">When finished, you should free the returned PIDL with [**ILFree**](/windows/desktop/api/shlobj_core/nf-shlobj_core-ilfree).</span></span>
+<span data-ttu-id="44030-121">Wenn Sie fertig sind, sollten Sie die zurückgegebene PIDL mit [**ILFree frei geben.**](/windows/desktop/api/shlobj_core/nf-shlobj_core-ilfree)</span><span class="sxs-lookup"><span data-stu-id="44030-121">When finished, you should free the returned PIDL with [**ILFree**](/windows/desktop/api/shlobj_core/nf-shlobj_core-ilfree).</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="c3289-122">Requirements (Anforderungen)</span><span class="sxs-lookup"><span data-stu-id="c3289-122">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="44030-122">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="44030-122">Requirements</span></span>
 
 
 
-| <span data-ttu-id="c3289-123">Anforderung</span><span class="sxs-lookup"><span data-stu-id="c3289-123">Requirement</span></span> | <span data-ttu-id="c3289-124">Wert</span><span class="sxs-lookup"><span data-stu-id="c3289-124">Value</span></span> |
+| <span data-ttu-id="44030-123">Anforderung</span><span class="sxs-lookup"><span data-stu-id="44030-123">Requirement</span></span> | <span data-ttu-id="44030-124">Wert</span><span class="sxs-lookup"><span data-stu-id="44030-124">Value</span></span> |
 |-------------------------------------|----------------------------------------------------------------------------------------|
-| <span data-ttu-id="c3289-125">Unterstützte Mindestversion (Client)</span><span class="sxs-lookup"><span data-stu-id="c3289-125">Minimum supported client</span></span><br/> | <span data-ttu-id="c3289-126">Windows 2000 Professional \[nur Desktop-Apps\]</span><span class="sxs-lookup"><span data-stu-id="c3289-126">Windows 2000 Professional \[desktop apps only\]</span></span><br/>                             |
-| <span data-ttu-id="c3289-127">Unterstützte Mindestversion (Server)</span><span class="sxs-lookup"><span data-stu-id="c3289-127">Minimum supported server</span></span><br/> | <span data-ttu-id="c3289-128">Windows 2000 Server \[nur Desktop-Apps\]</span><span class="sxs-lookup"><span data-stu-id="c3289-128">Windows 2000 Server \[desktop apps only\]</span></span><br/>                                   |
-| <span data-ttu-id="c3289-129">DLL</span><span class="sxs-lookup"><span data-stu-id="c3289-129">DLL</span></span><br/>                      | <dl> <span data-ttu-id="c3289-130"><dt>Shell32.dll</dt></span><span class="sxs-lookup"><span data-stu-id="c3289-130"><dt>Shell32.dll</dt></span></span> </dl> |
+| <span data-ttu-id="44030-125">Unterstützte Mindestversion (Client)</span><span class="sxs-lookup"><span data-stu-id="44030-125">Minimum supported client</span></span><br/> | <span data-ttu-id="44030-126">Windows 2000 Professional \[nur Desktop-Apps\]</span><span class="sxs-lookup"><span data-stu-id="44030-126">Windows 2000 Professional \[desktop apps only\]</span></span><br/>                             |
+| <span data-ttu-id="44030-127">Unterstützte Mindestversion (Server)</span><span class="sxs-lookup"><span data-stu-id="44030-127">Minimum supported server</span></span><br/> | <span data-ttu-id="44030-128">Windows 2000 Server \[nur Desktop-Apps\]</span><span class="sxs-lookup"><span data-stu-id="44030-128">Windows 2000 Server \[desktop apps only\]</span></span><br/>                                   |
+| <span data-ttu-id="44030-129">DLL</span><span class="sxs-lookup"><span data-stu-id="44030-129">DLL</span></span><br/>                      | <dl> <span data-ttu-id="44030-130"><dt>Shell32.dll</dt></span><span class="sxs-lookup"><span data-stu-id="44030-130"><dt>Shell32.dll</dt></span></span> </dl> |
 
 
 
