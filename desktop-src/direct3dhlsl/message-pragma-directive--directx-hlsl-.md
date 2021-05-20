@@ -1,9 +1,9 @@
 ---
-title: Message-pragma-Direktive
-description: Pragma-Direktive, die compilerzeitnachrichten erzeugt.
+title: message pragma-Direktive
+description: Pragma-Direktive, die Compilerzeitmeldungen erzeugt.
 ms.assetid: dc3ece10-9730-4ab1-acc8-f95abc92de7d
 keywords:
-- Message-pragma-Direktive HLSL
+- message pragma Directive HLSL
 topic_type:
 - apiref
 api_name:
@@ -13,20 +13,20 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: f342f4a139320e4beb821f32662da72785ab751c
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 813483efb161a06db5ef7e40da99c391f53565bc
+ms.sourcegitcommit: 88049609e29f91a42442235885abf56f598b06b3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "103718924"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "110153483"
 ---
-# <a name="message-pragma-directive"></a>Message-pragma-Direktive
+# <a name="message-pragma-directive"></a>message pragma-Direktive
 
-Pragma-Direktive, die compilerzeitnachrichten erzeugt.
+Pragma-Direktive, die Compilerzeitmeldungen erzeugt.
 
 
 
-| \#pragma-Meldung "*Token-String*" |
+| \#pragma message("*token-string*") |
 |-----------------------------------|
 
 
@@ -37,9 +37,9 @@ Pragma-Direktive, die compilerzeitnachrichten erzeugt.
 
 
 
-| Element                                                                                    | BESCHREIBUNG                  |
+| Element                                                                                    | Beschreibung                  |
 |-----------------------------------------------------------------------------------------|------------------------------|
-| <span id="token-string"></span><span id="TOKEN-STRING"></span>*Tokenzeichenfolge*<br/> | Compilernachricht.<br/> |
+| <span id="token-string"></span><span id="TOKEN-STRING"></span>*token-string*<br/> | Compilermeldung.<br/> |
 
 
 
