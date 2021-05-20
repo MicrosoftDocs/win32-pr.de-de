@@ -1,18 +1,18 @@
-- name: Windows-Internet
+- name: Windows Internet
   href: portal.md
   items:
-    - name: Informationen zu WinInet
+    - name: Informationen zu WinINet
       href: about-wininet.md
       items:
-        - name: WinInet im Vergleich zu WinHTTP
+        - name: WinINet im Vergleich zu WinHTTP
           href: wininet-vs-winhttp.md
         - name: HINTERNET-Handles
           href: appendix-a-hinternet-handles.md
-        - name: Unterstützung von IP-Version 6
+        - name: UNTERSTÜTZUNG FÜR IP-Version 6
           href: ip-version-6-support.md
         - name: Inhaltscodierung
           href: content-encoding.md
-        - name: Zwischenspeicherung
+        - name: Caching
           href: caching.md
         - name: Allgemeine Funktionen
           href: common-functions.md
@@ -30,18 +30,18 @@
           href: handling-uniform-resource-locators.md
         - name: Sicherheitsrichtlinie
           href: security-guidelines.md
-    - name: Verwenden von WinInet
+    - name: Verwenden von WinINet
       href: using-wininet.md
       items:
-        - name: Aktivieren der Internet Funktionalität
+        - name: Aktivieren der Internetfunktionalität
           href: enabling-internet-functionality.md
-        - name: IDN-Unterstützung in WinInet
+        - name: IDN-Unterstützung in WinINet
           href: idn-support-in-wininet.md
-        - name: Einrichten einer DFÜ-Verbindung mit dem Internet
+        - name: Herstellen einer DFÜ-Verbindung mit dem Internet
           href: establishing-a-dial-up-connection-to-the-internet.md
-        - name: Verwenden der Zeichen folgen Puffer
+        - name: Verwenden von Zeichenfolgenpuffern
           href: appendix-b-using-buffers.md
-        - name: Erstellen von Status Rückruf Funktionen
+        - name: Erstellen von Statusrückruffunktionen
           href: creating-status-callback-functions.md
         - name: Behandeln von Fehlern
           href: appendix-c-handling-errors.md
@@ -49,26 +49,26 @@
           href: managing-cookies.md
         - name: Abrufen von HTTP-Headern
           href: retrieving-http-headers.md
-        - name: Festlegen und Abrufen von Internet Optionen
+        - name: Festlegen und Abrufen von Internetoptionen
           href: setting-and-retrieving-internet-options.md
         - name: Asynchrones Beispiel
           href: asynchronous-example.md
           items:
-            - name: Asynchrones Beispiel Makefile
+            - name: Makefile für asynchrone Beispiele
               href: asynchronous-example-makefile.md
-            - name: Asynchroner Beispiel Header
+            - name: Asynchroner Beispielheader
               href: asynchronous-example-header.md
             - name: Asynchrone Beispielanwendung
               href: asynchronous-example-application.md
-    - name: WinInet-Referenz
+    - name: WinINet-Referenz
       href: wininet-reference.md
       items:
-        - name: WinInet-Konstanten
+        - name: WinINet-Konstanten
           href: wininet-constants.md
           items:
             - name: API-Flags
               href: api-flags.md
-            - name: Cache Gruppen Konstanten
+            - name: Cachegruppenkonst constants
               href: cache-group-constants.md
             - name: Fehlermeldungen
               href: wininet-errors.md
@@ -78,245 +78,243 @@
               href: http-status-codes.md
             - name: Optionsflags
               href: option-flags.md
-            - name: Datenschutz Vorlagen
+            - name: Datenschutzvorlagen
               href: privacy-templates.md
-            - name: Daten Schutztyp
+            - name: Datenschutztyp
               href: privacy-type.md
-            - name: Abfrageinfoflags
+            - name: Abfrageinformationsflags
               href: query-info-flags.md
-        - name: WinInet-Enumerationen
+        - name: WinINet-Enumerationen
           href: wininet-enumerations.md
           items:
-            - name: Internetcookiestate
+            - name: InternetCookieState
               href: /windows/win32/api/wininet/ne-wininet-internetcookiestate
             - name: INTERNET_SCHEME
-              href: /windows/desktop/api/Wininet/ne-wininet-internet_scheme
-        - name: WinInet-Funktionen
+              href: /windows/win32/api/Wininet/ne-wininet-internet_scheme
+        - name: WinINet-Funktionen
           href: wininet-functions.md
           items:
-            - name: Cleanupkredentialcache
+            - name: CleanupCredentialCache
               href: cleanupcredentialcache.md
-            - name: Commiturlcacheentrya
-              href: /windows/desktop/api/Wininet/nf-wininet-commiturlcacheentrya
-            - name: Commiturlcacheentryw
-              href: /windows/desktop/api/Wininet/nf-wininet-commiturlcacheentryw
+            - name: CommitUrlCacheEntryW
+              href: /windows/win32/api/Wininet/nf-wininet-commiturlcacheentryw
             - name: CreateMD5SSOHash
-              href: /windows/desktop/api/wininet/nf-wininet-createmd5ssohash
-            - name: '"Kreateurlcachecontainer"'
-              href: /windows/desktop/api/winineti/nf-winineti-createurlcachecontainera
-            - name: '"Kreateurlcacheentry"'
-              href: /windows/desktop/api/Wininet/nf-wininet-createurlcacheentrya
-            - name: '"Kreateurlcachegroup"'
-              href: /windows/desktop/api/Wininet/nf-wininet-createurlcachegroup
-            - name: Deleteurlcacheentry
-              href: /windows/desktop/api/Wininet/nf-wininet-deleteurlcacheentry
-            - name: Deleteurlcachegroup
-              href: /windows/desktop/api/Wininet/nf-wininet-deleteurlcachegroup
-            - name: Detectautoproxyurl
-              href: /windows/desktop/api/wininet/nf-wininet-detectautoproxyurl
-            - name: Findcloseurlcache
-              href: /windows/desktop/api/Wininet/nf-wininet-findcloseurlcache
-            - name: Findfirsturlcacheentry
-              href: /windows/desktop/api/Wininet/nf-wininet-findfirsturlcacheentrya
-            - name: Findfirsturlcacheentryex
-              href: /windows/desktop/api/Wininet/nf-wininet-findfirsturlcacheentryexa
-            - name: Findfirsturlcachegroup
-              href: /windows/desktop/api/Wininet/nf-wininet-findfirsturlcachegroup
-            - name: Findnexturlcacheentry
-              href: /windows/desktop/api/Wininet/nf-wininet-findnexturlcacheentrya
-            - name: Findnexturlcacheentryex
-              href: /windows/desktop/api/Wininet/nf-wininet-findnexturlcacheentryexa
-            - name: Findnexturlcachegroup
-              href: /windows/desktop/api/Wininet/nf-wininet-findnexturlcachegroup
-            - name: FtpCommand
-              href: /windows/desktop/api/Wininet/nf-wininet-ftpcommanda
-            - name: Ftpkreatedirectory
-              href: /windows/desktop/api/Wininet/nf-wininet-ftpcreatedirectorya
-            - name: Ftpdeletefile
-              href: /windows/desktop/api/Wininet/nf-wininet-ftpdeletefilea
-            - name: Ftpfindfirstfile
-              href: /windows/desktop/api/Wininet/nf-wininet-ftpfindfirstfilea
-            - name: Ftpgetcurrentdirectory
-              href: /windows/desktop/api/Wininet/nf-wininet-ftpgetcurrentdirectorya
-            - name: Ftpgetfile
-              href: /windows/desktop/api/Wininet/nf-wininet-ftpgetfilea
-            - name: Ftpgetfilesize
-              href: /windows/desktop/api/Wininet/nf-wininet-ftpgetfilesize
-            - name: Ftpopumfile
-              href: /windows/desktop/api/Wininet/nf-wininet-ftpopenfilea
-            - name: Ftpputfile
-              href: /windows/desktop/api/Wininet/nf-wininet-ftpputfilea
-            - name: Ftpremuvedirectory
-              href: /windows/desktop/api/Wininet/nf-wininet-ftpremovedirectorya
-            - name: Ftprenamefile
-              href: /windows/desktop/api/Wininet/nf-wininet-ftprenamefilea
-            - name: Ftpsetcurrentdirectory
-              href: /windows/desktop/api/Wininet/nf-wininet-ftpsetcurrentdirectorya
-            - name: Geturlcacheconfginfo
-              href: /windows/desktop/api/Winineti/nf-winineti-geturlcacheconfiginfoa
-            - name: Geturlcacheentryinfo
-              href: /windows/desktop/api/Wininet/nf-wininet-geturlcacheentryinfoa
-            - name: Geturlcacheentryinfoex
-              href: /windows/desktop/api/Wininet/nf-wininet-geturlcacheentryinfoexa
-            - name: Geturlcachegroupattribute
-              href: /windows/desktop/api/Wininet/nf-wininet-geturlcachegroupattributea
-            - name: Gopherattributeenzuerator
-              href: /windows/desktop/api/Wininet/nc-wininet-gopher_attribute_enumerator
-            - name: Gopherkreatelocator
-              href: /windows/desktop/api/Wininet/nf-wininet-gophercreatelocatora
-            - name: Gopherfindfirstfile
-              href: /windows/desktop/api/Wininet/nf-wininet-gopherfindfirstfilea
-            - name: Gophergetattribute
-              href: /windows/desktop/api/Wininet/nf-wininet-gophergetattributea
-            - name: Gophergetloherortype
-              href: /windows/desktop/api/Wininet/nf-wininet-gophergetlocatortypea
-            - name: Gopheropenfile
-              href: /windows/desktop/api/Wininet/nf-wininet-gopheropenfilea
-            - name: Httpadressquestheaders
-              href: /windows/desktop/api/Wininet/nf-wininet-httpaddrequestheadersa
-            - name: Httpdrequest
-              href: /windows/desktop/api/Wininet/nf-wininet-httpendrequesta
-            - name: Httpopanrequest
-              href: /windows/desktop/api/Wininet/nf-wininet-httpopenrequesta
+              href: /windows/win32/api/wininet/nf-wininet-createmd5ssohash
+            - name: CreateUrlCacheContainer
+              href: /windows/win32/api/winineti/nf-winineti-createurlcachecontainera
+            - name: CreateUrlCacheEntry
+              href: /windows/win32/api/Wininet/nf-wininet-createurlcacheentrya
+            - name: CreateUrlCacheGroup
+              href: /windows/win32/api/Wininet/nf-wininet-createurlcachegroup
+            - name: DeleteUrlCacheEntry
+              href: /windows/win32/api/Wininet/nf-wininet-deleteurlcacheentry
+            - name: DeleteUrlCacheGroup
+              href: /windows/win32/api/Wininet/nf-wininet-deleteurlcachegroup
+            - name: DetectAutoProxyUrl
+              href: /windows/win32/api/wininet/nf-wininet-detectautoproxyurl
+            - name: FindCloseUrlCache
+              href: /windows/win32/api/Wininet/nf-wininet-findcloseurlcache
+            - name: FindFirstUrlCacheEntry
+              href: /windows/win32/api/Wininet/nf-wininet-findfirsturlcacheentrya
+            - name: FindFirstUrlCacheEntryEx
+              href: /windows/win32/api/Wininet/nf-wininet-findfirsturlcacheentryexa
+            - name: FindFirstUrlCacheGroup
+              href: /windows/win32/api/Wininet/nf-wininet-findfirsturlcachegroup
+            - name: FindNextUrlCacheEntry
+              href: /windows/win32/api/Wininet/nf-wininet-findnexturlcacheentrya
+            - name: FindNextUrlCacheEntryEx
+              href: /windows/win32/api/Wininet/nf-wininet-findnexturlcacheentryexa
+            - name: FindNextUrlCacheGroup
+              href: /windows/win32/api/Wininet/nf-wininet-findnexturlcachegroup
+            - name: FtpCommandW
+              href: /windows/win32/api/Wininet/nf-wininet-ftpcommandw
+            - name: FtpCreateDirectory
+              href: /windows/win32/api/Wininet/nf-wininet-ftpcreatedirectorya
+            - name: FtpDeleteFile
+              href: /windows/win32/api/Wininet/nf-wininet-ftpdeletefilea
+            - name: FtpFindFirstFile
+              href: /windows/win32/api/Wininet/nf-wininet-ftpfindfirstfilea
+            - name: FtpGetCurrentDirectory
+              href: /windows/win32/api/Wininet/nf-wininet-ftpgetcurrentdirectorya
+            - name: FtpGetFile
+              href: /windows/win32/api/Wininet/nf-wininet-ftpgetfilea
+            - name: FtpGetFileSize
+              href: /windows/win32/api/Wininet/nf-wininet-ftpgetfilesize
+            - name: FtpOpenFile
+              href: /windows/win32/api/Wininet/nf-wininet-ftpopenfilea
+            - name: FtpPutFile
+              href: /windows/win32/api/Wininet/nf-wininet-ftpputfilea
+            - name: FtpRemoveDirectory
+              href: /windows/win32/api/Wininet/nf-wininet-ftpremovedirectorya
+            - name: FtpRenameFile
+              href: /windows/win32/api/Wininet/nf-wininet-ftprenamefilea
+            - name: FtpSetCurrentDirectory
+              href: /windows/win32/api/Wininet/nf-wininet-ftpsetcurrentdirectorya
+            - name: GetUrlCacheConfigInfoW
+              href: /windows/win32/api/Winineti/nf-winineti-geturlcacheconfiginfow
+            - name: GetUrlCacheEntryInfo
+              href: /windows/win32/api/Wininet/nf-wininet-geturlcacheentryinfoa
+            - name: GetUrlCacheEntryInfoEx
+              href: /windows/win32/api/Wininet/nf-wininet-geturlcacheentryinfoexa
+            - name: GetUrlCacheGroupAttribute
+              href: /windows/win32/api/Wininet/nf-wininet-geturlcachegroupattributea
+            - name: GopherAttributeEnumerator
+              href: /windows/win32/api/Wininet/nc-wininet-gopher_attribute_enumerator
+            - name: GopherCreateLocator
+              href: /windows/win32/api/Wininet/nf-wininet-gophercreatelocatora
+            - name: GopherFindFirstFile
+              href: /windows/win32/api/Wininet/nf-wininet-gopherfindfirstfilea
+            - name: GopherGetAttribute
+              href: /windows/win32/api/Wininet/nf-wininet-gophergetattributea
+            - name: GopherGetLocatorType
+              href: /windows/win32/api/Wininet/nf-wininet-gophergetlocatortypea
+            - name: GopherOpenFile
+              href: /windows/win32/api/Wininet/nf-wininet-gopheropenfilea
+            - name: HttpAddRequestHeaders
+              href: /windows/win32/api/Wininet/nf-wininet-httpaddrequestheadersa
+            - name: HttpEndRequest
+              href: /windows/win32/api/Wininet/nf-wininet-httpendrequesta
+            - name: HttpOpenRequest
+              href: /windows/win32/api/Wininet/nf-wininet-httpopenrequesta
             - name: HttpQueryInfo
-              href: /windows/desktop/api/Wininet/nf-wininet-httpqueryinfoa
+              href: /windows/win32/api/Wininet/nf-wininet-httpqueryinfoa
             - name: HttpSendRequest
-              href: /windows/desktop/api/Wininet/nf-wininet-httpsendrequesta
+              href: /windows/win32/api/Wininet/nf-wininet-httpsendrequesta
             - name: HttpSendRequestEx
-              href: /windows/desktop/api/Wininet/nf-wininet-httpsendrequestexa
-            - name: Internetztattemptconnect
-              href: /windows/desktop/api/Wininet/nf-wininet-internetattemptconnect
-            - name: Internetautodial
-              href: /windows/desktop/api/wininet/nf-wininet-internetautodial
-            - name: Internetautodialhangup
-              href: /windows/desktop/api/wininet/nf-wininet-internetautodialhangup
-            - name: Internetcanonicalizeurl
-              href: /windows/desktop/api/Wininet/nf-wininet-internetcanonicalizeurla
-            - name: Internetcheckconnection
-              href: /windows/desktop/api/Wininet/nf-wininet-internetcheckconnectiona
-            - name: Internetclearallpersitecookiedecision
-              href: /windows/desktop/api/Wininet/nf-wininet-internetclearallpersitecookiedecisions
-            - name: Internetclosehandle
-              href: /windows/desktop/api/Wininet/nf-wininet-internetclosehandle
-            - name: Internetcombineurl
-              href: /windows/desktop/api/Wininet/nf-wininet-internetcombineurla
-            - name: Internetconfirmzonecrossing
-              href: /windows/desktop/api/Wininet/nf-wininet-internetconfirmzonecrossing
+              href: /windows/win32/api/Wininet/nf-wininet-httpsendrequestexa
+            - name: InternetAttemptConnect
+              href: /windows/win32/api/Wininet/nf-wininet-internetattemptconnect
+            - name: InternetAutodial
+              href: /windows/win32/api/wininet/nf-wininet-internetautodial
+            - name: InternetAutodialHangup
+              href: /windows/win32/api/wininet/nf-wininet-internetautodialhangup
+            - name: InternetCanonicalizeUrl
+              href: /windows/win32/api/Wininet/nf-wininet-internetcanonicalizeurla
+            - name: InternetCheckConnection
+              href: /windows/win32/api/Wininet/nf-wininet-internetcheckconnectiona
+            - name: InternetClearAllPerSiteCookieDecisions
+              href: /windows/win32/api/Wininet/nf-wininet-internetclearallpersitecookiedecisions
+            - name: InternetCloseHandle
+              href: /windows/win32/api/Wininet/nf-wininet-internetclosehandle
+            - name: InternetCombineUrl
+              href: /windows/win32/api/Wininet/nf-wininet-internetcombineurla
+            - name: InternetConfirmZoneCrossing
+              href: /windows/win32/api/Wininet/nf-wininet-internetconfirmzonecrossing
             - name: InternetConnect
-              href: /windows/desktop/api/Wininet/nf-wininet-internetconnecta
-            - name: Internetcrackurl
-              href: /windows/desktop/api/Wininet/nf-wininet-internetcrackurla
-            - name: Internetkreateurl
-              href: /windows/desktop/api/Wininet/nf-wininet-internetcreateurla
-            - name: Internetdeinitializeautoproxydll
-              href: /previous-versions/windows/desktop/legacy/aa384580(v=vs.85)
-            - name: Internetwahl
-              href: /windows/desktop/api/wininet/nf-wininet-internetdial
-            - name: Internetenrepersitecookiedecision
-              href: /windows/desktop/api/wininet/nf-wininet-internetenumpersitecookiedecisiona
-            - name: Internetzterrordlg
-              href: /windows/desktop/api/Wininet/nf-wininet-interneterrordlg
-            - name: Internetfindnextfile
-              href: /windows/desktop/api/Wininet/nf-wininet-internetfindnextfilea
-            - name: Internetgetconnectedstate
-              href: /windows/desktop/api/wininet/nf-wininet-internetgetconnectedstate
-            - name: Internetgetconnectedstateex
-              href: /windows/desktop/api/wininet/nf-wininet-internetgetconnectedstateex
+              href: /windows/win32/api/Wininet/nf-wininet-internetconnecta
+            - name: InternetCrackUrl
+              href: /windows/win32/api/Wininet/nf-wininet-internetcrackurla
+            - name: InternetCreateUrl
+              href: /windows/win32/api/Wininet/nf-wininet-internetcreateurla
+            - name: InternetDeInitializeAutoProxyDll
+              href: /previous-versions/windows/win32/legacy/aa384580(v=vs.85)
+            - name: InternetDial
+              href: /windows/win32/api/wininet/nf-wininet-internetdial
+            - name: InternetEnumPerSiteCookieDecision
+              href: /windows/win32/api/wininet/nf-wininet-internetenumpersitecookiedecisiona
+            - name: InternetErrorDlg
+              href: /windows/win32/api/Wininet/nf-wininet-interneterrordlg
+            - name: InternetFindNextFile
+              href: /windows/win32/api/Wininet/nf-wininet-internetfindnextfilea
+            - name: InternetGetConnectedState
+              href: /windows/win32/api/wininet/nf-wininet-internetgetconnectedstate
+            - name: InternetGetConnectedStateEx
+              href: /windows/win32/api/wininet/nf-wininet-internetgetconnectedstateex
             - name: InternetGetCookie
-              href: /windows/desktop/api/Wininet/nf-wininet-internetgetcookiea
-            - name: Internetgetcookieex
-              href: /windows/desktop/api/Wininet/nf-wininet-internetgetcookieexa
+              href: /windows/win32/api/Wininet/nf-wininet-internetgetcookiea
+            - name: InternetGetCookieEx
+              href: /windows/win32/api/Wininet/nf-wininet-internetgetcookieexa
             - name: InternetGetLastResponseInfo
-              href: /windows/desktop/api/Wininet/nf-wininet-internetgetlastresponseinfoa
-            - name: Internetgetpersitecookiedecision
-              href: /windows/desktop/api/Wininet/nf-wininet-internetgetpersitecookiedecisiona
-            - name: Internetgetproxyinfo
+              href: /windows/win32/api/Wininet/nf-wininet-internetgetlastresponseinfoa
+            - name: InternetGetPerSiteCookieDecision
+              href: /windows/win32/api/Wininet/nf-wininet-internetgetpersitecookiedecisiona
+            - name: InternetGetProxyInfo
               href: internetgetproxyinfo.md
-            - name: Internetgoonline
-              href: /windows/desktop/api/wininet/nf-wininet-internetgoonline
-            - name: Internet Explorer
-              href: /windows/desktop/api/wininet/nf-wininet-internethangup
-            - name: Internetinitializeautoproxydll
-              href: /windows/desktop/api/wininet/nf-wininet-internetinitializeautoproxydll
-            - name: Internetlockrequestfile
-              href: /windows/desktop/api/Wininet/nf-wininet-internetlockrequestfile
+            - name: InternetGoOnline
+              href: /windows/win32/api/wininet/nf-wininet-internetgoonline
+            - name: InternetHangUp
+              href: /windows/win32/api/wininet/nf-wininet-internethangup
+            - name: InternetInitializeAutoProxyDll
+              href: /windows/win32/api/wininet/nf-wininet-internetinitializeautoproxydll
+            - name: InternetLockRequestFile
+              href: /windows/win32/api/Wininet/nf-wininet-internetlockrequestfile
             - name: InternetOpen
-              href: /windows/desktop/api/Wininet/nf-wininet-internetopena
-            - name: InternetOpenURL
-              href: /windows/desktop/api/Wininet/nf-wininet-internetopenurla
-            - name: Internetquerydataavailable
-              href: /windows/desktop/api/Wininet/nf-wininet-internetquerydataavailable
+              href: /windows/win32/api/Wininet/nf-wininet-internetopena
+            - name: InternetOpenUrl
+              href: /windows/win32/api/Wininet/nf-wininet-internetopenurla
+            - name: InternetQueryDataAvailable
+              href: /windows/win32/api/Wininet/nf-wininet-internetquerydataavailable
             - name: InternetQueryOption
-              href: /windows/desktop/api/Wininet/nf-wininet-internetqueryoptiona
-            - name: Internetreadfile
-              href: /windows/desktop/api/Wininet/nf-wininet-internetreadfile
-            - name: Internetreadfileex
-              href: /windows/desktop/api/Wininet/nf-wininet-internetreadfileexa
+              href: /windows/win32/api/Wininet/nf-wininet-internetqueryoptiona
+            - name: InternetReadFile
+              href: /windows/win32/api/Wininet/nf-wininet-internetreadfile
+            - name: InternetReadFileEx
+              href: /windows/win32/api/Wininet/nf-wininet-internetreadfileexa
             - name: InternetSetCookie
-              href: /windows/desktop/api/Wininet/nf-wininet-internetsetcookiea
-            - name: Internetsetcookieex
-              href: /windows/desktop/api/Wininet/nf-wininet-internetsetcookieexa
-            - name: Internetsetdialstate
-              href: /windows/desktop/api/wininet/nf-wininet-internetsetdialstate
-            - name: Internetsetfilepointer
-              href: /windows/desktop/api/Wininet/nf-wininet-internetsetfilepointer
-            - name: Internettoption
-              href: /windows/desktop/api/Wininet/nf-wininet-internetsetoptiona
-            - name: Internettoptionex
-              href: /windows/desktop/api/wininet/nf-wininet-internetsetoptionexa
-            - name: Internetsetpersitecookiedecision
-              href: /windows/desktop/api/Wininet/nf-wininet-internetsetpersitecookiedecisiona
-            - name: Internetsetstatus Callback
-              href: /windows/desktop/api/Wininet/nf-wininet-internetsetstatuscallback
-            - name: Internetstatus Rückruf
-              href: /windows/desktop/api/Wininet/nc-wininet-internet_status_callback
-            - name: Internettimefromsystemtime
-              href: /windows/desktop/api/Wininet/nf-wininet-internettimefromsystemtime
-            - name: Internettimeto SYSTEMTIME
-              href: /windows/desktop/api/Wininet/nf-wininet-internettimetosystemtime
-            - name: Internetunlockrequestfile
-              href: /windows/desktop/api/Wininet/nf-wininet-internetunlockrequestfile
-            - name: Internetschreibdatei
-              href: /windows/desktop/api/Wininet/nf-wininet-internetwritefile
-            - name: Privacygetzonepreferencew
-              href: /windows/desktop/api/wininet/nf-wininet-privacygetzonepreferencew
-            - name: Privacysetzonepreferencew
-              href: /windows/desktop/api/wininet/nf-wininet-privacysetzonepreferencew
-            - name: '"Read urlcacheentrystream"'
-              href: /windows/desktop/api/Wininet/nf-wininet-readurlcacheentrystream
-            - name: Resumesuspendecoddownload
-              href: /windows/desktop/api/Wininet/nf-wininet-resumesuspendeddownload
-            - name: '"Retrieveurlcacheentryfile"'
-              href: /windows/desktop/api/Wininet/nf-wininet-retrieveurlcacheentryfilea
-            - name: '"Retrieveurlcacheentrystream"'
-              href: /windows/desktop/api/Wininet/nf-wininet-retrieveurlcacheentrystreama
-            - name: '"Tarturlcacheentrygroup"'
-              href: /windows/desktop/api/Wininet/nf-wininet-seturlcacheentrygroup
-            - name: '"Tarturlcacheentryinfo"'
-              href: /windows/desktop/api/Wininet/nf-wininet-seturlcacheentryinfoa
-            - name: '"Tarturlcachegroupattribute"'
-              href: /windows/desktop/api/Wininet/nf-wininet-seturlcachegroupattributea
-            - name: Unlockurlcacheentryfile
-              href: /windows/desktop/api/Wininet/nf-wininet-unlockurlcacheentryfile
-            - name: Unlockurlcacheentrystream
-              href: /windows/desktop/api/Wininet/nf-wininet-unlockurlcacheentrystream
-        - name: WinInet-Strukturen
+              href: /windows/win32/api/Wininet/nf-wininet-internetsetcookiea
+            - name: InternetSetCookieEx
+              href: /windows/win32/api/Wininet/nf-wininet-internetsetcookieexa
+            - name: InternetSetDialState
+              href: /windows/win32/api/wininet/nf-wininet-internetsetdialstate
+            - name: InternetSetFilePointer
+              href: /windows/win32/api/Wininet/nf-wininet-internetsetfilepointer
+            - name: InternetSetOption
+              href: /windows/win32/api/Wininet/nf-wininet-internetsetoptiona
+            - name: InternetSetOptionEx
+              href: /windows/win32/api/wininet/nf-wininet-internetsetoptionexa
+            - name: InternetSetPerSiteCookieDecision
+              href: /windows/win32/api/Wininet/nf-wininet-internetsetpersitecookiedecisiona
+            - name: InternetSetStatusCallback
+              href: /windows/win32/api/Wininet/nf-wininet-internetsetstatuscallback
+            - name: InternetStatusCallback
+              href: /windows/win32/api/Wininet/nc-wininet-internet_status_callback
+            - name: InternetTimeFromSystemTime
+              href: /windows/win32/api/Wininet/nf-wininet-internettimefromsystemtime
+            - name: InternetTimeToSystemTime
+              href: /windows/win32/api/Wininet/nf-wininet-internettimetosystemtime
+            - name: InternetUnlockRequestFile
+              href: /windows/win32/api/Wininet/nf-wininet-internetunlockrequestfile
+            - name: InternetWriteFile
+              href: /windows/win32/api/Wininet/nf-wininet-internetwritefile
+            - name: PrivacyGetZonePreferenceW
+              href: /windows/win32/api/wininet/nf-wininet-privacygetzonepreferencew
+            - name: PrivacySetZonePreferenceW
+              href: /windows/win32/api/wininet/nf-wininet-privacysetzonepreferencew
+            - name: ReadUrlCacheEntryStream
+              href: /windows/win32/api/Wininet/nf-wininet-readurlcacheentrystream
+            - name: ResumeSuspendedDownload
+              href: /windows/win32/api/Wininet/nf-wininet-resumesuspendeddownload
+            - name: RetrieveUrlCacheEntryFile
+              href: /windows/win32/api/Wininet/nf-wininet-retrieveurlcacheentryfilea
+            - name: RetrieveUrlCacheEntryStream
+              href: /windows/win32/api/Wininet/nf-wininet-retrieveurlcacheentrystreama
+            - name: SetUrlCacheEntryGroup
+              href: /windows/win32/api/Wininet/nf-wininet-seturlcacheentrygroup
+            - name: SetUrlCacheEntryInfo
+              href: /windows/win32/api/Wininet/nf-wininet-seturlcacheentryinfoa
+            - name: SetUrlCacheGroupAttribute
+              href: /windows/win32/api/Wininet/nf-wininet-seturlcachegroupattributea
+            - name: UnlockUrlCacheEntryFile
+              href: /windows/win32/api/Wininet/nf-wininet-unlockurlcacheentryfile
+            - name: UnlockUrlCacheEntryStream
+              href: /windows/win32/api/Wininet/nf-wininet-unlockurlcacheentrystream
+        - name: WinINet-Strukturen
           href: wininet-structures.md
           items:
-            - name: Autoproxyhelperfunctions
-              href: /windows/desktop/api/Wininet/ns-wininet-autoproxyhelperfunctions
-            - name: Autoproxyhelpervtbl
-              href: /windows/desktop/api/Wininet/ns-wininet-autoproxyhelpervtbl
+            - name: AutoProxyHelperFunctions
+              href: /windows/win32/api/Wininet/ns-wininet-autoproxyhelperfunctions
+            - name: AutoProxyHelperVtbl
+              href: /windows/win32/api/Wininet/ns-wininet-autoproxyhelpervtbl
             - name: AUTO_PROXY_SCRIPT_BUFFER
-              href: /windows/desktop/api/Wininet/ns-wininet-auto_proxy_script_buffer
+              href: /windows/win32/api/Wininet/ns-wininet-auto_proxy_script_buffer
             - name: GOPHER_ATTRIBUTE_TYPE
-              href: /windows/desktop/api/Wininet/ns-wininet-gopher_attribute_type
+              href: /windows/win32/api/Wininet/ns-wininet-gopher_attribute_type
             - name: GOPHER_FIND_DATA
-              href: /windows/desktop/api/Wininet/ns-wininet-gopher_find_dataa
+              href: /windows/win32/api/Wininet/ns-wininet-gopher_find_dataa
             - name: HTTP_VERSION_INFO
-              href: /windows/desktop/api/Wininet/ns-wininet-http_version_info
+              href: /windows/win32/api/Wininet/ns-wininet-http_version_info
             - name: INTERNET_ASYNC_RESULT
-              href: /windows/desktop/api/Wininet/ns-wininet-internet_async_result
+              href: /windows/win32/api/Wininet/ns-wininet-internet_async_result
             - name: INTERNET_AUTH_NOTIFY_DATA
               href: /windows/win32/api/wininet/ns-wininet-internet_auth_notify_data
             - name: INTERNET_BUFFERS
@@ -330,28 +328,28 @@
             - name: INTERNET_CACHE_TIMESTAMPS
               href: /windows/win32/api/Wininet/ns-wininet-internet_cache_timestamps
             - name: INTERNET_CERTIFICATE_INFO
-              href: /windows/desktop/api/Wininet/ns-wininet-internet_certificate_info
+              href: /windows/win32/api/Wininet/ns-wininet-internet_certificate_info
             - name: INTERNET_CONNECTED_INFO
-              href: /windows/desktop/api/Wininet/ns-wininet-internet_connected_info
+              href: /windows/win32/api/Wininet/ns-wininet-internet_connected_info
             - name: INTERNET_DIAGNOSTIC_SOCKET_INFO
-              href: /windows/desktop/api/Wininet/ns-wininet-internet_diagnostic_socket_info
+              href: /windows/win32/api/Wininet/ns-wininet-internet_diagnostic_socket_info
             - name: INTERNET_PER_CONN_OPTION
-              href: /windows/desktop/api/Wininet/ns-wininet-internet_per_conn_optiona
+              href: /windows/win32/api/Wininet/ns-wininet-internet_per_conn_optiona
             - name: INTERNET_PER_CONN_OPTION_LIST
-              href: /windows/desktop/api/Wininet/ns-wininet-internet_per_conn_option_lista
+              href: /windows/win32/api/Wininet/ns-wininet-internet_per_conn_option_lista
             - name: INTERNET_PROXY_INFO
-              href: /windows/desktop/api/Wininet/ns-wininet-internet_proxy_info
+              href: /windows/win32/api/Wininet/ns-wininet-internet_proxy_info
             - name: INTERNET_VERSION_INFO
-              href: /windows/desktop/api/Wininet/ns-wininet-internet_version_info
-            - name: Internetcookiehistory
+              href: /windows/win32/api/Wininet/ns-wininet-internet_version_info
+            - name: InternetCookieHistory
               href: /windows/win32/api/wininet/ns-wininet-internetcookiehistory
             - name: URL_COMPONENTS
-              href: /windows/desktop/api/Wininet/ns-wininet-url_componentsa
-        - name: Nachweis der Besitz-Cookie-API
+              href: /windows/win32/api/Wininet/ns-wininet-url_componentsa
+        - name: Proof of possession cookie API
           href: proof-of-possession-cookie-api.md
           items:
-            - name: Iproofofpossessioncookieinfomanager
-              href: /windows/desktop/api/ProofOfPossessionCookieInfo/nn-proofofpossessioncookieinfo-iproofofpossessioncookieinfomanager
+            - name: IOciOfPossessionCookieInfoManager
+              href: /windows/win32/api/ProofOfPossessionCookieInfo/nn-proofofpossessioncookieinfo-iproofofpossessioncookieinfomanager
               items:
-                - name: Getcookieingefoforuri-Methode
-                  href: /windows/desktop/api/ProofOfPossessionCookieInfo/nf-proofofpossessioncookieinfo-iproofofpossessioncookieinfomanager-getcookieinfoforuri
+                - name: GetCookieInfoForUri-Methode
+                  href: /windows/win32/api/ProofOfPossessionCookieInfo/nf-proofofpossessioncookieinfo-iproofofpossessioncookieinfomanager-getcookieinfoforuri

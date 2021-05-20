@@ -1,129 +1,232 @@
 ---
-title: WinInet-Funktionen
-description: Die folgende Liste enthält alle WinInet-Funktionen.
+title: WinINet-Funktionen
+description: Die folgende Liste enthält alle WinINet-Funktionen.
 ms.assetid: 2e0da5c6-29e4-47b5-8ed2-8712c9ca2c97
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c0aa23e24c3d90be5be63f81d6c6071be395b3ec
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: ed50afee0920a9a0d5012c830744d9bee6865050
+ms.sourcegitcommit: 8a31a21726d4a8ebfddfa71f02f1bfffea459277
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104390726"
+ms.lasthandoff: 05/20/2021
+ms.locfileid: "110208691"
 ---
-# <a name="wininet-functions"></a>WinInet-Funktionen
+# <a name="wininet-functions"></a>WinINet-Funktionen
 
-Die folgende Liste enthält alle WinInet-Funktionen:
+[**CleanupCredentialCache**](cleanupcredentialcache.md)
 
-<dl>
+[**CommitUrlCacheEntryW**](/windows/win32/api/Wininet/nf-wininet-commiturlcacheentryw)
 
-[**Cleanupkredentialcache**](cleanupcredentialcache.md)  
-[**Commiturlcacheentrya**](/windows/desktop/api/Wininet/nf-wininet-commiturlcacheentrya)  
-[**Commiturlcacheentryw**](/windows/desktop/api/Wininet/nf-wininet-commiturlcacheentryw)  
-[**CreateMD5SSOHash**](/windows/win32/api/winineti/nf-winineti-createmd5ssohash)  
-[**"Kreateurlcachecontainer"**](/windows/win32/api/winineti/nf-winineti-createurlcachecontainera)  
-[**"Kreateurlcacheentry"**](/windows/desktop/api/Wininet/nf-wininet-createurlcacheentrya)  
-[**"Kreateurlcachegroup"**](/windows/desktop/api/Wininet/nf-wininet-createurlcachegroup)  
-[**Deleteurlcacheentry**](/windows/desktop/api/Wininet/nf-wininet-deleteurlcacheentry)  
-[**Deleteurlcachegroup**](/windows/desktop/api/Wininet/nf-wininet-deleteurlcachegroup)  
-[**Detectautoproxyurl**](/windows/win32/api/winineti/nf-winineti-detectautoproxyurl)  
-[**Findcloseurlcache**](/windows/desktop/api/Wininet/nf-wininet-findcloseurlcache)  
-[**Findfirsturlcacheentry**](/windows/desktop/api/Wininet/nf-wininet-findfirsturlcacheentrya)  
-[**Findfirsturlcacheentryex**](/windows/desktop/api/Wininet/nf-wininet-findfirsturlcacheentryexa)  
-[**Findfirsturlcachegroup**](/windows/desktop/api/Wininet/nf-wininet-findfirsturlcachegroup)  
-[**Findnexturlcacheentry**](/windows/desktop/api/Wininet/nf-wininet-findnexturlcacheentrya)  
-[**Findnexturlcacheentryex**](/windows/desktop/api/Wininet/nf-wininet-findnexturlcacheentryexa)  
-[**Findnexturlcachegroup**](/windows/desktop/api/Wininet/nf-wininet-findnexturlcachegroup)  
-[**FtpCommand**](/windows/desktop/api/Wininet/nf-wininet-ftpcommanda)  
-[**Ftpkreatedirectory**](/windows/desktop/api/Wininet/nf-wininet-ftpcreatedirectorya)  
-[**Ftpdeletefile**](/windows/desktop/api/Wininet/nf-wininet-ftpdeletefilea)  
-[**Ftpfindfirstfile**](/windows/desktop/api/Wininet/nf-wininet-ftpfindfirstfilea)  
-[**Ftpgetcurrentdirectory**](/windows/desktop/api/Wininet/nf-wininet-ftpgetcurrentdirectorya)  
-[**Ftpgetfile**](/windows/desktop/api/Wininet/nf-wininet-ftpgetfilea)  
-[**Ftpgetfilesize**](/windows/desktop/api/Wininet/nf-wininet-ftpgetfilesize)  
-[**Ftpopumfile**](/windows/desktop/api/Wininet/nf-wininet-ftpopenfilea)  
-[**Ftpputfile**](/windows/desktop/api/Wininet/nf-wininet-ftpputfilea)  
-[**Ftpremuvedirectory**](/windows/desktop/api/Wininet/nf-wininet-ftpremovedirectorya)  
-[**Ftprenamefile**](/windows/desktop/api/Wininet/nf-wininet-ftprenamefilea)  
-[**Ftpsetcurrentdirectory**](/windows/desktop/api/Wininet/nf-wininet-ftpsetcurrentdirectorya)  
-[**Geturlcacheentryinfo**](/windows/desktop/api/Wininet/nf-wininet-geturlcacheentryinfoa)  
-[**Geturlcacheentryinfoex**](/windows/desktop/api/Wininet/nf-wininet-geturlcacheentryinfoexa)  
-[**Geturlcachegroupattribute**](/windows/desktop/api/Wininet/nf-wininet-geturlcachegroupattributea)  
-[*Gopherattributeenzuerator*](/windows/desktop/api/Wininet/nc-wininet-gopher_attribute_enumerator)  
-[**Gopherkreatelocator**](/windows/desktop/api/Wininet/nf-wininet-gophercreatelocatora)  
-[**Gopherfindfirstfile**](/windows/desktop/api/Wininet/nf-wininet-gopherfindfirstfilea)  
-[**Gophergetattribute**](/windows/desktop/api/Wininet/nf-wininet-gophergetattributea)  
-[**Gophergetloherortype**](/windows/desktop/api/Wininet/nf-wininet-gophergetlocatortypea)  
-[**Gopheropenfile**](/windows/desktop/api/Wininet/nf-wininet-gopheropenfilea)  
-[**Httpadressquestheaders**](/windows/desktop/api/Wininet/nf-wininet-httpaddrequestheadersa)  
-[**Httpdrequest**](/windows/desktop/api/Wininet/nf-wininet-httpendrequesta)  
-[**Httpopanrequest**](/windows/desktop/api/Wininet/nf-wininet-httpopenrequesta)  
-[**HttpQueryInfo**](/windows/desktop/api/Wininet/nf-wininet-httpqueryinfoa)  
-[**HttpSendRequest**](/windows/desktop/api/Wininet/nf-wininet-httpsendrequesta)  
-[**HttpSendRequestEx**](/windows/desktop/api/Wininet/nf-wininet-httpsendrequestexa)  
-[**Internetztattemptconnect**](/windows/desktop/api/Wininet/nf-wininet-internetattemptconnect)  
-[**Internetautodial**](/windows/win32/api/winineti/nf-winineti-internetautodial)  
-[**Internetautodialhangup**](/windows/win32/api/winineti/nf-winineti-internetautodialhangup)  
-[**Internetcanonicalizeurl**](/windows/desktop/api/Wininet/nf-wininet-internetcanonicalizeurla)  
-[**Internetcheckconnection**](/windows/desktop/api/Wininet/nf-wininet-internetcheckconnectiona)  
-[**Internetclosehandle**](/windows/desktop/api/Wininet/nf-wininet-internetclosehandle)  
-[**Internetcombineurl**](/windows/desktop/api/Wininet/nf-wininet-internetcombineurla)  
-[**Internetconfirmzonecrossing**](/windows/desktop/api/Wininet/nf-wininet-internetconfirmzonecrossing)  
-[**InternetConnect**](/windows/desktop/api/Wininet/nf-wininet-internetconnecta)  
-[**Internetcrackurl**](/windows/desktop/api/Wininet/nf-wininet-internetcrackurla)  
-[**Internetkreateurl**](/windows/desktop/api/Wininet/nf-wininet-internetcreateurla)  
-[**Internetdeinitializeautoproxydll**](/previous-versions/windows/desktop/legacy/aa384580(v=vs.85))  
-[**Internetwahl**](/windows/win32/api/winineti/nf-winineti-internetdial)  
-[**Internetzterrordlg**](/windows/desktop/api/Wininet/nf-wininet-interneterrordlg)  
-[**Internetfindnextfile**](/windows/desktop/api/Wininet/nf-wininet-internetfindnextfilea)  
-[**Internetgetconnectedstate**](/windows/win32/api/winineti/nf-winineti-internetgetconnectedstate)  
-[**Internetgetconnectedstateex**](/windows/win32/api/winineti/nf-winineti-internetgetconnectedstateex)  
-[**InternetGetCookie**](/windows/desktop/api/Wininet/nf-wininet-internetgetcookiea)  
-[**Internetgetcookieex**](/windows/desktop/api/Wininet/nf-wininet-internetgetcookieexa)  
-[**InternetGetLastResponseInfo**](/windows/desktop/api/Wininet/nf-wininet-internetgetlastresponseinfoa)  
-[**Internetgetproxyinfo**](internetgetproxyinfo.md)  
-[**Internetgoonline**](/windows/win32/api/winineti/nf-winineti-internetgoonline)  
-[**Internet Explorer**](/windows/win32/api/winineti/nf-winineti-internethangup)  
-[**Internetinitializeautoproxydll**](/windows/win32/api/winineti/nf-winineti-internetinitializeautoproxydll)  
-[**Internetlockrequestfile**](/windows/desktop/api/Wininet/nf-wininet-internetlockrequestfile)  
-[**InternetOpen**](/windows/desktop/api/Wininet/nf-wininet-internetopena)  
-[**InternetOpenURL**](/windows/desktop/api/Wininet/nf-wininet-internetopenurla)  
-[**Internetquerydataavailable**](/windows/desktop/api/Wininet/nf-wininet-internetquerydataavailable)  
-[**InternetQueryOption**](/windows/desktop/api/Wininet/nf-wininet-internetqueryoptiona)  
-[**Internetreadfile**](/windows/desktop/api/Wininet/nf-wininet-internetreadfile)  
-[**Internetreadfileex**](/windows/desktop/api/Wininet/nf-wininet-internetreadfileexa)  
-[**InternetSetCookie**](/windows/desktop/api/Wininet/nf-wininet-internetsetcookiea)  
-[**Internetsetcookieex**](/windows/desktop/api/Wininet/nf-wininet-internetsetcookieexa)  
-[**Internetsetdialstate**](/windows/desktop/api/wininet/nf-wininet-internetsetdialstate)  
-[**Internetsetfilepointer**](/windows/desktop/api/Wininet/nf-wininet-internetsetfilepointer)  
-[**Internettoption**](/windows/desktop/api/Wininet/nf-wininet-internetsetoptiona)  
-[**Internettoptionex**](/windows/desktop/api/wininet/nf-wininet-internetsetoptionexa)  
-[**Internetsetstatus Callback**](/windows/desktop/api/Wininet/nf-wininet-internetsetstatuscallback)  
-[**Internetstatus Rückruf**](/windows/desktop/api/Wininet/nc-wininet-internet_status_callback)  
-[**Internettimefromsystemtime**](/windows/desktop/api/Wininet/nf-wininet-internettimefromsystemtime)  
-[**Internettimeto SYSTEMTIME**](/windows/desktop/api/Wininet/nf-wininet-internettimetosystemtime)  
-[**Internetunlockrequestfile**](/windows/desktop/api/Wininet/nf-wininet-internetunlockrequestfile)  
-[**Internetschreibdatei**](/windows/desktop/api/Wininet/nf-wininet-internetwritefile)  
-[**"Read urlcacheentrystream"**](/windows/desktop/api/Wininet/nf-wininet-readurlcacheentrystream)  
-[**Resumesuspendecoddownload**](/windows/desktop/api/Wininet/nf-wininet-resumesuspendeddownload)  
-[**"Retrieveurlcacheentryfile"**](/windows/desktop/api/Wininet/nf-wininet-retrieveurlcacheentryfilea)  
-[**"Retrieveurlcacheentrystream"**](/windows/desktop/api/Wininet/nf-wininet-retrieveurlcacheentrystreama)  
-[**"Tarturlcacheentrygroup"**](/windows/desktop/api/Wininet/nf-wininet-seturlcacheentrygroup)  
-[**"Tarturlcacheentryinfo"**](/windows/desktop/api/Wininet/nf-wininet-seturlcacheentryinfoa)  
-[**"Tarturlcachegroupattribute"**](/windows/desktop/api/Wininet/nf-wininet-seturlcachegroupattributea)  
-[**Unlockurlcacheentryfile**](/windows/desktop/api/Wininet/nf-wininet-unlockurlcacheentryfile)  
-[**Unlockurlcacheentrystream**](/windows/desktop/api/Wininet/nf-wininet-unlockurlcacheentrystream)  
-</dl>
+[**CreateMD5SSOHash**](/windows/win32/api/winineti/nf-winineti-createmd5ssohash)
 
-Die folgende Liste enthält die Datenschutz-und Sicherheitsfunktionen von WinInet:
+[**CreateUrlCacheContainer**](/windows/win32/api/winineti/nf-winineti-createurlcachecontainera)
 
--   [**Internetclearallpersitecookiedecision**](/windows/desktop/api/Wininet/nf-wininet-internetclearallpersitecookiedecisions)
--   [**Internetenrepersitecookiedecision**](/windows/win32/api/winineti/nf-winineti-internetenumpersitecookiedecisiona)
--   [**Internetgetpersitecookiedecision**](/windows/desktop/api/Wininet/nf-wininet-internetgetpersitecookiedecisiona)
--   [**Internetsetpersitecookiedecision**](/windows/desktop/api/Wininet/nf-wininet-internetsetpersitecookiedecisiona)
--   [**Privacygetzonepreferencew**](/windows/win32/api/winineti/nf-winineti-privacygetzonepreferencew)
--   [**Privacysetzonepreferencew**](/windows/win32/api/winineti/nf-winineti-privacysetzonepreferencew)
+[**CreateUrlCacheEntry**](/windows/win32/api/Wininet/nf-wininet-createurlcacheentrya)
 
- 
+[**CreateUrlCacheGroup**](/windows/win32/api/Wininet/nf-wininet-createurlcachegroup)
 
- 
+[**DeleteUrlCacheEntry**](/windows/win32/api/Wininet/nf-wininet-deleteurlcacheentry)
+
+[**DeleteUrlCacheGroup**](/windows/win32/api/Wininet/nf-wininet-deleteurlcachegroup)
+
+[**DetectAutoProxyUrl**](/windows/win32/api/winineti/nf-winineti-detectautoproxyurl)
+
+[**FindCloseUrlCache**](/windows/win32/api/Wininet/nf-wininet-findcloseurlcache)
+
+[**FindFirstUrlCacheEntry**](/windows/win32/api/Wininet/nf-wininet-findfirsturlcacheentrya)
+
+[**FindFirstUrlCacheEntryEx**](/windows/win32/api/Wininet/nf-wininet-findfirsturlcacheentryexa)
+
+[**FindFirstUrlCacheGroup**](/windows/win32/api/Wininet/nf-wininet-findfirsturlcachegroup)
+
+[**FindNextUrlCacheEntry**](/windows/win32/api/Wininet/nf-wininet-findnexturlcacheentrya)
+
+[**FindNextUrlCacheEntryEx**](/windows/win32/api/Wininet/nf-wininet-findnexturlcacheentryexa)
+
+[**FindNextUrlCacheGroup**](/windows/win32/api/Wininet/nf-wininet-findnexturlcachegroup)
+
+[**FtpCommandW**](/windows/win32/api/Wininet/nf-wininet-ftpcommand)
+
+[**FtpCreateDirectory**](/windows/win32/api/Wininet/nf-wininet-ftpcreatedirectorya)
+
+[**FtpDeleteFile**](/windows/win32/api/Wininet/nf-wininet-ftpdeletefilea)
+
+[**FtpFindFirstFile**](/windows/win32/api/Wininet/nf-wininet-ftpfindfirstfilea)
+
+[**FtpGetCurrentDirectory**](/windows/win32/api/Wininet/nf-wininet-ftpgetcurrentdirectorya)
+
+[**FtpGetFile**](/windows/win32/api/Wininet/nf-wininet-ftpgetfilea)
+
+[**FtpGetFileSize**](/windows/win32/api/Wininet/nf-wininet-ftpgetfilesize)
+
+[**FtpOpenFile**](/windows/win32/api/Wininet/nf-wininet-ftpopenfilea)
+
+[**FtpPutFile**](/windows/win32/api/Wininet/nf-wininet-ftpputfilea)
+
+[**FtpRemoveDirectory**](/windows/win32/api/Wininet/nf-wininet-ftpremovedirectorya)
+
+[**FtpRenameFile**](/windows/win32/api/Wininet/nf-wininet-ftprenamefilea)
+
+[**FtpSetCurrentDirectory**](/windows/win32/api/Wininet/nf-wininet-ftpsetcurrentdirectorya)
+
+[**GetUrlCacheConfigInfoW**](/windows/win32/api/Winineti/nf-winineti-geturlcacheconfiginfow)
+
+[**GetUrlCacheEntryInfo**](/windows/win32/api/Wininet/nf-wininet-geturlcacheentryinfoa)
+
+[**GetUrlCacheEntryInfoEx**](/windows/win32/api/Wininet/nf-wininet-geturlcacheentryinfoexa)
+
+[**GetUrlCacheGroupAttribute**](/windows/win32/api/Wininet/nf-wininet-geturlcachegroupattributea)
+
+[*GopherAttributeEnumerator*](/windows/win32/api/Wininet/nc-wininet-gopher_attribute_enumerator)
+
+[**GopherCreateLocator**](/windows/win32/api/Wininet/nf-wininet-gophercreatelocatora)
+
+[**GopherFindFirstFile**](/windows/win32/api/Wininet/nf-wininet-gopherfindfirstfilea)
+
+[**GopherGetAttribute**](/windows/win32/api/Wininet/nf-wininet-gophergetattributea)
+
+[**GopherGetLocatorType**](/windows/win32/api/Wininet/nf-wininet-gophergetlocatortypea)
+
+[**GopherOpenFile**](/windows/win32/api/Wininet/nf-wininet-gopheropenfilea)
+
+[**HttpAddRequestHeaders**](/windows/win32/api/Wininet/nf-wininet-httpaddrequestheadersa)
+
+[**HttpEndRequest**](/windows/win32/api/Wininet/nf-wininet-httpendrequesta)
+
+[**HttpOpenRequest**](/windows/win32/api/Wininet/nf-wininet-httpopenrequesta)
+
+[**HttpQueryInfo**](/windows/win32/api/Wininet/nf-wininet-httpqueryinfoa)
+
+[**HttpSendRequest**](/windows/win32/api/Wininet/nf-wininet-httpsendrequesta)
+
+[**HttpSendRequestEx**](/windows/win32/api/Wininet/nf-wininet-httpsendrequestexa)
+
+[**InternetAttemptConnect**](/windows/win32/api/Wininet/nf-wininet-internetattemptconnect)
+
+[**InternetAutodial**](/windows/win32/api/winineti/nf-winineti-internetautodial)
+
+[**InternetAutodialHangup**](/windows/win32/api/winineti/nf-winineti-internetautodialhangup)
+
+[**InternetCanonicalizeUrl**](/windows/win32/api/Wininet/nf-wininet-internetcanonicalizeurla)
+
+[**InternetCheckConnection**](/windows/win32/api/Wininet/nf-wininet-internetcheckconnectiona)
+
+[**InternetClearAllPerSiteCookieDecisions**](/windows/win32/api/Wininet/nf-wininet-internetclearallpersitecookiedecisions)
+
+[**InternetCloseHandle**](/windows/win32/api/Wininet/nf-wininet-internetclosehandle)
+
+[**InternetCombineUrl**](/windows/win32/api/Wininet/nf-wininet-internetcombineurla)
+
+[**InternetConfirmZoneCrossing**](/windows/win32/api/Wininet/nf-wininet-internetconfirmzonecrossing)
+
+[**InternetConnect**](/windows/win32/api/Wininet/nf-wininet-internetconnecta)
+
+[**InternetCrackUrl**](/windows/win32/api/Wininet/nf-wininet-internetcrackurla)
+
+[**InternetCreateUrl**](/windows/win32/api/Wininet/nf-wininet-internetcreateurla)
+
+[**InternetDeInitializeAutoProxyDll**](/previous-versions/windows/win32/legacy/aa384580(v=vs.85))
+
+[**InternetDial**](/windows/win32/api/winineti/nf-winineti-internetdial)
+
+[**InternetEnumPerSiteCookieDecision**](/windows/win32/api/wininet/nf-wininet-internetenumpersitecookiedecisiona)
+
+[**InternetErrorDlg**](/windows/win32/api/Wininet/nf-wininet-interneterrordlg)
+
+[**InternetFindNextFile**](/windows/win32/api/Wininet/nf-wininet-internetfindnextfilea)
+
+[**InternetGetConnectedState**](/windows/win32/api/winineti/nf-winineti-internetgetconnectedstate)
+
+[**InternetGetConnectedStateEx**](/windows/win32/api/winineti/nf-winineti-internetgetconnectedstateex)
+
+[**InternetGetCookie**](/windows/win32/api/Wininet/nf-wininet-internetgetcookiea)
+
+[**InternetGetCookieEx**](/windows/win32/api/Wininet/nf-wininet-internetgetcookieexa)
+
+[**InternetGetLastResponseInfo**](/windows/win32/api/Wininet/nf-wininet-internetgetlastresponseinfoa)
+
+[**InternetGetPerSiteCookieDecision**](/windows/win32/api/Wininet/nf-wininet-internetgetpersitecookiedecisiona)
+
+[**InternetGetProxyInfo**](internetgetproxyinfo.md)
+
+[**InternetGoOnline**](/windows/win32/api/winineti/nf-winineti-internetgoonline)
+
+[**InternetHangUp**](/windows/win32/api/winineti/nf-winineti-internethangup)
+
+[**InternetInitializeAutoProxyDll**](/windows/win32/api/winineti/nf-winineti-internetinitializeautoproxydll)
+
+[**InternetLockRequestFile**](/windows/win32/api/Wininet/nf-wininet-internetlockrequestfile)
+
+[**InternetOpen**](/windows/win32/api/Wininet/nf-wininet-internetopena)
+
+[**InternetOpenUrl**](/windows/win32/api/Wininet/nf-wininet-internetopenurla)
+
+[**InternetQueryDataAvailable**](/windows/win32/api/Wininet/nf-wininet-internetquerydataavailable)
+
+[**InternetQueryOption**](/windows/win32/api/Wininet/nf-wininet-internetqueryoptiona)
+
+[**InternetReadFile**](/windows/win32/api/Wininet/nf-wininet-internetreadfile)
+
+[**InternetReadFileEx**](/windows/win32/api/Wininet/nf-wininet-internetreadfileexa)
+
+[**InternetSetCookie**](/windows/win32/api/Wininet/nf-wininet-internetsetcookiea)
+
+[**InternetSetCookieEx**](/windows/win32/api/Wininet/nf-wininet-internetsetcookieexa)
+
+[**InternetSetDialState**](/windows/win32/api/wininet/nf-wininet-internetsetdialstate)
+
+[**InternetSetFilePointer**](/windows/win32/api/Wininet/nf-wininet-internetsetfilepointer)
+
+[**InternetSetOption**](/windows/win32/api/Wininet/nf-wininet-internetsetoptiona)
+
+[**InternetSetOptionEx**](/windows/win32/api/wininet/nf-wininet-internetsetoptionexa)
+
+[**InternetSetPerSiteCookieDecision**](/windows/win32/api/Wininet/nf-wininet-internetsetpersitecookiedecisiona)
+
+[**InternetSetStatusCallback**](/windows/win32/api/Wininet/nf-wininet-internetsetstatuscallback)
+
+[**InternetStatusCallback**](/windows/win32/api/Wininet/nc-wininet-internet_status_callback)
+
+[**InternetTimeFromSystemTime**](/windows/win32/api/Wininet/nf-wininet-internettimefromsystemtime)
+
+[**InternetTimeToSystemTime**](/windows/win32/api/Wininet/nf-wininet-internettimetosystemtime)
+
+[**InternetUnlockRequestFile**](/windows/win32/api/Wininet/nf-wininet-internetunlockrequestfile)
+
+[**InternetWriteFile**](/windows/win32/api/Wininet/nf-wininet-internetwritefile)
+
+[**PrivacyGetZonePreferenceW**](/windows/win32/api/wininet/nf-wininet-privacygetzonepreferencew)
+
+[**PrivacySetZonePreferenceW**](/windows/win32/api/wininet/nf-wininet-privacysetzonepreferencew)
+
+[**ReadUrlCacheEntryStream**](/windows/win32/api/Wininet/nf-wininet-readurlcacheentrystream)
+
+[**ResumeSuspendedDownload**](/windows/win32/api/Wininet/nf-wininet-resumesuspendeddownload)
+
+[**RetrieveUrlCacheEntryFile**](/windows/win32/api/Wininet/nf-wininet-retrieveurlcacheentryfilea)
+
+[**RetrieveUrlCacheEntryStream**](/windows/win32/api/Wininet/nf-wininet-retrieveurlcacheentrystreama)
+
+[**SetUrlCacheEntryGroup**](/windows/win32/api/Wininet/nf-wininet-seturlcacheentrygroup)
+
+[**SetUrlCacheEntryInfo**](/windows/win32/api/Wininet/nf-wininet-seturlcacheentryinfoa)
+
+[**SetUrlCacheGroupAttribute**](/windows/win32/api/Wininet/nf-wininet-seturlcachegroupattributea)
+
+[**UnlockUrlCacheEntryFile**](/windows/win32/api/Wininet/nf-wininet-unlockurlcacheentryfile)
+
+[**UnlockUrlCacheEntryStream**](/windows/win32/api/Wininet/nf-wininet-unlockurlcacheentrystream)
+
+## <a name="wininet-privacy-and-security-functions"></a>Datenschutz- und Sicherheitsfunktionen von WinInet
+
+[**InternetClearAllPerSiteCookieDecisions**](/windows/win32/api/Wininet/nf-wininet-internetclearallpersitecookiedecisions)
+
+[**InternetEnumPerSiteCookieDecisions**](/windows/win32/api/winineti/nf-winineti-internetenumpersitecookiedecisiona)
+
+[**InternetGetPerSiteCookieDecisions**](/windows/win32/api/Wininet/nf-wininet-internetgetpersitecookiedecisiona)
+
+[**InternetSetPerSiteCookieDecisions**](/windows/win32/api/Wininet/nf-wininet-internetsetpersitecookiedecisiona)
+
+[**PrivacyGetZonePreferenceW**](/windows/win32/api/winineti/nf-winineti-privacygetzonepreferencew)
+
+[**PrivacySetZonePreferenceW**](/windows/win32/api/winineti/nf-winineti-privacysetzonepreferencew)
