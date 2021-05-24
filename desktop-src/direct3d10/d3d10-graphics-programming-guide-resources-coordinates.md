@@ -1,71 +1,74 @@
 ---
-description: Koordinatensysteme für Direct3D 10 sind für Pixel und Texels definiert.
+description: Koordinatensysteme für Direct3D 10 werden für Pixel und Texel definiert.
 ms.assetid: c8c269e7-6e2a-4b5d-847c-6779e276b9af
 title: Koordinatensysteme (Direct3D 10)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8ba84cd7d807474a1ff41f873d16cbd7eee07224
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 9e3da846ae4b989f6d8cb4741f9df8f7228e8970
+ms.sourcegitcommit: ca37395fd832e798375e81142b97cffcffabf184
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103748969"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "110335464"
 ---
 # <a name="coordinate-systems-direct3d-10"></a>Koordinatensysteme (Direct3D 10)
 
-Koordinatensysteme für Direct3D 10 sind für Pixel und Texels definiert.
+Koordinatensysteme für Direct3D 10 werden für Pixel und Texel definiert.
 
 
 
-|                                                                                                                                                                                                                                                                              |
-|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Unterschiede zwischen Direct3D 9 und Direct3D 10:<br/> Direct3D 10 definiert die linke obere Ecke des linken oberen Pixels als Ursprung eines Renderziels.<br/> Direct3D 9 definiert den Mittelpunkt des linken oberen Pixels als Ursprung eines Renderziels.<br/> |
+Unterschiede zwischen Direct3D 9 und Direct3D 10:
+
+- Direct3D 10 definiert die linke obere Ecke des oberen linken Pixels als Ursprung eines Renderziels.
+- Direct3D 9 definiert die Mitte des pixel oben links als Ursprung eines Renderziels.
 
 
 
  
 
--   [Pixel Koordinaten System](#pixel-coordinate-system)
-    -   [Pixel Koordinaten System für Direct3D 9](#pixel-coordinate-system-for-direct3d-9)
--   [Texel-Koordinaten System](#texel-coordinate-system)
-    -   [Texel-Koordinaten System](#texel-coordinate-system)
--   [Zugehörige Themen](#related-topics)
+[Pixelkoordinatensystem](#pixel-coordinate-system)
+- [Pixelkoordinatensystem für Direct3D 9](#pixel-coordinate-system-for-direct3d-9)
 
-## <a name="pixel-coordinate-system"></a>Pixel Koordinaten System
+[Texel-Koordinatensystem](#texel-coordinate-system)
+- [Texel-Koordinatensystem](#texel-coordinate-system)
 
-Das Pixelkoordinaten System in Direct3D 10 definiert den Ursprung eines Renderziels in der linken oberen Ecke. wie im folgenden Diagramm gezeigt. Pixel Center werden von ganzzahligen Speicherorten um (0,5 f, 0,5 f) versetzt.
+[Verwandte Themen](#related-topics)
 
-![Diagramm des Pixelkoordinaten Systems in Direct3D 10](images/d3d10-coordspix10.png)
+## <a name="pixel-coordinate-system"></a>Pixelkoordinatensystem
 
-### <a name="pixel-coordinate-system-for-direct3d-9"></a>Pixel Koordinaten System für Direct3D 9
+Das Pixelkoordinatensystem in Direct3D 10 definiert den Ursprung eines Renderziels in der oberen linken Ecke. wie im folgenden Diagramm dargestellt. Pixelcenter werden von ganzzahligen Positionen um (0,5f, 0,5f) versetzt.
 
-Im folgenden finden Sie das Pixelkoordinaten System für Direct3D 9, das den Ursprung oder ein Renderziel als Mittelpunkt des linken oberen Pixels (0,5, 0,5) von der linken oberen Ecke definiert, wie im folgenden Diagramm dargestellt. In Direct3D 9 befinden sich Pixel Center an ganzzahligen Positionen.
+![Diagramm des Pixelkoordinatensystems in direct3d 10](images/d3d10-coordspix10.png)
 
-![Diagramm des Pixelkoordinaten Systems in Direct3D 9](images/d3d10-coordspix9.png)
+### <a name="pixel-coordinate-system-for-direct3d-9"></a>Pixelkoordinatensystem für Direct3D 9
 
-## <a name="texel-coordinate-system"></a>Texel-Koordinaten System
+Als Referenz ist hier das Pixelkoordinatensystem für Direct3D 9 angegeben, das den Ursprung oder ein Renderziel als Mitte des oberen linken Pixels (0,5,0,5) von der oberen linken Ecke entfernt definiert hat, wie im folgenden Diagramm dargestellt. In Direct3D 9 befinden sich Pixelcenter an ganzzahligen Positionen.
 
-Das Texel-Koordinatensystem hat seinen Ursprung in der oberen linken Ecke der Textur, wie im folgenden Diagramm dargestellt. Dies macht das Rendern von Bildschirm Ausrichtung (in Direct3D 10) trivial, da das Pixelkoordinaten System am texelkoordinaten System ausgerichtet ist.
+![Diagramm des Pixelkoordinatensystems in direct3d 9](images/d3d10-coordspix9.png)
 
-![Diagramm des Texel-Koordinatensystems](images/d3d10-coordstex10.png)
+## <a name="texel-coordinate-system"></a>Texelkoordinatensystem
 
-### <a name="texel-coordinate-system"></a>Texel-Koordinaten System
+Das Texelkoordinatensystem hat seinen Ursprung in der oberen linken Ecke der Textur, wie im folgenden Diagramm dargestellt. Dies macht das Rendern bildschirmbündiger Texturen trivial (in Direct3D 10), da das Pixelkoordinatensystem am Texelkoordinatensystem ausgerichtet ist.
 
-Texturkoordinaten werden entweder durch eine normalisierte oder eine skalierte Zahl dargestellt. Jede Textur Koordinate wird wie folgt einem bestimmten Textem zugeordnet:
+![Diagramm des Texelkoordinatensystems](images/d3d10-coordstex10.png)
+
+### <a name="texel-coordinate-system"></a>Texelkoordinatensystem
+
+Texturkoordinaten werden entweder mit einer normalisierten oder einer skalierten Zahl dargestellt. Jede Texturkoordinate wird einem bestimmten Texel wie folgt zugeordnet:
 
 Für eine normalisierte Koordinate:
 
--   Punkt Stichproben: Texel \# = Floor (U \* Width)
--   Lineare Stichprobenentnahme: Left Texel \# = Floor (U \* Width), Right Texel \# = left Texel \# + 1
+-   Punktstichproben: Texel \# = floor(U \* Width)
+-   Lineare Stichprobenentnahme: Left Texel \# = floor(U \* Width), Right Texel \# = Left Texel + \# 1
 
 Für eine skalierte Koordinate:
 
--   Punkt Stichproben: Texel \# = Floor (U)
--   Lineare Stichprobenentnahme: Left Texel \# = Floor (U-0,5), Right Texel \# = left Texel \# + 1
+-   Punktsampling: Texel \# = floor(U)
+-   Lineare Stichprobenentnahme: Left Texel \# = floor(U - 0,5), Right Texel \# = Left Texel + \# 1
 
-Dabei ist die Breite die Breite der Textur (in Texels).
+Wobei die Breite die Breite der Textur (in Texel) ist.
 
-Das Umwickeln von Textur Adressen tritt auf, nachdem der textsort berechnet wurde.
+Die Texturadressumbruch erfolgt, nachdem die Texelposition berechnet wurde.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

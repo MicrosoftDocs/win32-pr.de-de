@@ -9,67 +9,67 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 504a1d9ff5a2aa2b37227f0016cdc97d28d967fe
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 64a64d08518cb987850c87da3fb19c264519a7f7
+ms.sourcegitcommit: ca37395fd832e798375e81142b97cffcffabf184
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104039378"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "110335384"
 ---
 # <a name="writing-hlsl-shaders-in-direct3d-9"></a>Schreiben von HLSL-Shadern in Direct3D 9
 
--   [Vertex-Shader-Grundlagen](#vertex-shader-basics)
--   [Grundlagen des Pixel-Shaders](#pixel-shader-basics)
-    -   [Textur Stufen und samplerzustände](#texture-stage-and-sampler-states)
-    -   [Pixel-shadereingaben](#pixel-shader-inputs)
-    -   [Pixel-Shader-Ausgaben](#pixel-shader-outputs)
--   [Shadereingaben und shadervariablen](#shader-inputs-and-shader-variables)
-    -   [Deklarieren von shadervariablen](#declaring-shader-variables)
-    -   [Einheitliche shadereingaben](#uniform-shader-inputs)
-    -   [Variierende shadereingaben und-Semantik](#varying-shader-inputs-and-semantics)
-    -   [Samplers und Textur Objekte](#samplers-and-texture-objects)
+-   [Vertex-Shader– Grundlagen](#vertex-shader-basics)
+-   [Pixel-Shader– Grundlagen](#pixel-shader-basics)
+    -   [Texturphase und Samplerzustände](#texture-stage-and-sampler-states)
+    -   [Pixel-Shadereingaben](#pixel-shader-inputs)
+    -   [Pixel-Shaderausgaben](#pixel-shader-outputs)
+-   [Shadereingaben und Shadervariablen](#shader-inputs-and-shader-variables)
+    -   [Deklarieren von Shadervariablen](#declaring-shader-variables)
+    -   [Uniform Shader-Eingaben](#uniform-shader-inputs)
+    -   [Unterschiedliche Shadereingaben und -semantik](#varying-shader-inputs-and-semantics)
+    -   [Sampler und Texturobjekte](#samplers-and-texture-objects)
 -   [Schreiben von Funktionen](#writing-functions)
--   [Fluss Steuerung](#flow-control)
--   [Zugehörige Themen](#related-topics)
+-   [Flusssteuerung](#flow-control)
+-   [Verwandte Themen](#related-topics)
 
-## <a name="vertex-shader-basics"></a>Grundlagen zu Vertex-Shader
+## <a name="vertex-shader-basics"></a>Vertex-Shader Grundlagen
 
-Bei einem Vorgang ersetzt ein programmierbarer Vertexshader die Scheitelpunkt Verarbeitung, die durch die Microsoft Direct3D-Grafik Pipeline durchgeführt wird. Bei der Verwendung eines Scheitelpunkt-Shaders werden Zustandsinformationen zu Transformations-und Beleuchtungs Vorgängen von der Fixed-Funktions Pipeline ignoriert. Wenn der Vertex-Shader deaktiviert ist und die Verarbeitung fester Funktionen zurückgegeben wird, gelten alle aktuellen Zustands Einstellungen.
+Wenn der Vorgang ausgeführt wird, ersetzt ein programmierbarer Vertex-Shader die Scheitelpunktverarbeitung, die von der Microsoft Direct3D-Grafikpipeline durchgeführt wird. Bei Verwendung eines Vertex-Shaders werden Zustandsinformationen zu Transformations- und Beleuchtungsvorgängen von der festen Funktionspipeline ignoriert. Wenn der Vertex-Shader deaktiviert ist und die Verarbeitung fester Funktionen zurückgegeben wird, gelten alle aktuellen Zustandseinstellungen.
 
-Vor der Ausführung des Vertexshaders sollte vor der Ausführung des Scheitelpunkt-Shaders ein Mosaik Prozess erstellt werden. Implementierungen, die nach der shaderverarbeitung das Oberflächen Mosaik ausführen, müssen dies auf eine Weise tun, die für die Anwendung und den Shader-Code nicht offensichtlich ist.
+Das Mosaik von Primitiven hoher Ordnung sollte vor der Ausführung des Vertex-Shaders erfolgen. Implementierungen, die nach der Shaderverarbeitung ein Oberflächen-Mosaik durchführen, müssen dies auf eine Weise tun, die für die Anwendung und den Shadercode nicht offensichtlich ist.
 
-Ein Vertex-Shader muss mindestens eine Scheitelpunkt Position im homogenen Clip Bereich ausgeben. Optional kann der Vertex-Shader Texturkoordinaten, Scheitelpunkt Farben, Scheitelpunkt Beleuchtung, Nebel Faktoren usw. ausgeben.
+Ein Vertex-Shader muss mindestens die Scheitelpunktposition im homogenen Clipbereich ausgeben. Optional kann der Vertex-Shader Texturkoordinaten, Scheitelpunktfarbe, Scheitelpunktbeleuchtung, Lichtfaktoren und so weiter ausgegeben.
 
-## <a name="pixel-shader-basics"></a>Grundlagen zu Pixel-Shader
+## <a name="pixel-shader-basics"></a>Pixel-Shader Grundlagen
 
-Die Pixel Verarbeitung erfolgt durch Pixel-Shader in einzelnen Pixeln. Pixel-Shader arbeiten mit Vertex-Shadern. die Ausgabe eines Vertex-Shaders stellt die Eingaben für einen PixelShader bereit. Andere Pixel Vorgänge (Nebel-Blending, Schablone-Vorgänge und renderzielmischung) treten nach der Ausführung des Shaders auf.
+Die Pixelverarbeitung wird von Pixel-Shadern auf einzelnen Pixeln ausgeführt. Pixel-Shader arbeiten zusammen mit Vertex-Shadern. Die Ausgabe eines Vertex-Shaders stellt die Eingaben für einen Pixel-Shader zur Verwendung. Andere Pixeloperationen (Blending, Schablonenoperationen und Renderzielblending) erfolgen nach der Ausführung des Shaders.
 
-### <a name="texture-stage-and-sampler-states"></a>Textur Stufen und samplerzustände
+### <a name="texture-stage-and-sampler-states"></a>Texturstufe und Samplerzustände
 
-Ein Pixelshader ersetzt vollständig die Pixel Mischungs Funktionen, die durch den Multitexture-Blender angegeben werden, einschließlich Vorgängen, die zuvor durch den Text der Textur Stufe definiert wurden. Textur Sampling-und Filter Vorgänge, die von den standardmäßigen Textur Phasen für Minimierung, Vergrößerung, MIP-Filterung und Umbruch Adressierungs Modi gesteuert wurden, können in Shadern initialisiert werden. Die Anwendung kann diese Zustände ändern, ohne dass der derzeit gebundene Shader neu generiert werden muss. Das Festlegen des Zustands kann sogar noch einfacher gemacht werden, wenn die Shader innerhalb eines Effekts entworfen wurden.
+Ein Pixel-Shader ersetzt die vom Multitexturblender angegebene Pixelblendingfunktion vollständig, einschließlich vorgängen, die zuvor durch die Texturstufenzustände definiert wurden. Textursstichproben- und Filtervorgänge, die von den Standardtexturstufenzuständen für Minierung, Vergrößerung, MIP-Filterung und die Wrap-Adressierungsmodi gesteuert wurden, können in Shadern initialisiert werden. Die Anwendung kann diese Zustände ändern, ohne dass der aktuell gebundene Shader neu entiert werden muss. Das Festlegen des Zustands kann noch einfacher werden, wenn Ihre Shader innerhalb eines Effekts entworfen wurden.
 
-### <a name="pixel-shader-inputs"></a>Pixel-shadereingaben
+### <a name="pixel-shader-inputs"></a>Pixel-Shadereingaben
 
-Bei Pixel-Shader-Versionen PS \_ 1 \_ 1-PS \_ 2 \_ 0 sind diffuse und Glanz Farben im Bereich von 0 bis 1 erschöpft (geklammert), bevor Sie vom Shader verwendet werden.
+Für die Pixel-Shaderversionen ps \_ 1 1 - ps 2 0 werden diffuse und specular-Farben im Bereich von 0 bis 1 überschniffen (klammert), bevor sie vom \_ \_ \_ Shader verwendet werden.
 
-Die Eingabe von Farbwerten für den Pixelshader wird als Perspektive angesehen, aber dies ist nicht garantiert (für alle Hardware). Farben, die aus Texturkoordinaten entnommen werden, werden in einer Perspektive ordnungsgemäß durchlaufen und während der Iterationen an den Bereich von 0 bis 1 gebunden.
+Für die Eingabe von Farbwerten für den Pixel-Shader wird angenommen, dass sie perspektivisch korrekt sind, aber dies ist (für alle Hardware) nicht garantiert. Farben, die aus Texturkoordinaten entnommen werden, werden perspektivisch korrekt durchgeitert und während der Iteration an den Bereich 0 bis 1 geklammert.
 
 ### <a name="pixel-shader-outputs"></a>Pixel-Shader-Ausgaben
 
-Bei Pixel-Shader-Versionen PS \_ 1 \_ 1-PS \_ 1 \_ 4 ist das vom Pixelshader ausgegebene Ergebnis der Inhalt von Register R0. Alles, was es enthält, wenn der Shader die Verarbeitung abschließt, wird an die Nebel-und Renderziel-Blender gesendet.
+Für die Pixel-Shaderversionen ps 1 1 - ps 1 4 entspricht das vom Pixel-Shader ausgegebene Ergebnis dem Inhalt \_ \_ des \_ \_ Registers r0. Alles, was sie enthält, wenn der Shader die Verarbeitung abgeschlossen hat, wird an die Phase und den Renderzielblender gesendet.
 
-Bei Pixel-Shader-Versionen PS \_ 2 \_ 0 und höher wird die Ausgabe Farbe von oC0-oC4 ausgegeben.
+Bei Pixel-Shaderversionen ps 2 0 und höher wird die Ausgabefarbe von \_ \_ oC0 - oC4 ausgegeben.
 
-## <a name="shader-inputs-and-shader-variables"></a>Shadereingaben und shadervariablen
+## <a name="shader-inputs-and-shader-variables"></a>Shadereingaben und Shadervariablen
 
--   [Deklarieren von shadervariablen](#declaring-shader-variables)
--   [Einheitliche shadereingaben](#uniform-shader-inputs)
--   [Variierende shadereingaben und-Semantik](#varying-shader-inputs-and-semantics)
--   [Samplers und Textur Objekte](#samplers-and-texture-objects)
+-   [Deklarieren von Shadervariablen](#declaring-shader-variables)
+-   [Uniform Shader-Eingaben](#uniform-shader-inputs)
+-   [Unterschiedliche Shadereingaben und -semantik](#varying-shader-inputs-and-semantics)
+-   [Sampler und Texturobjekte](#samplers-and-texture-objects)
 
-### <a name="declaring-shader-variables"></a>Deklarieren von shadervariablen
+### <a name="declaring-shader-variables"></a>Deklarieren von Shadervariablen
 
-Die einfachste Variablen Deklaration enthält einen Typ und einen Variablennamen, wie z. b. diese Gleit Komma Deklaration:
+Die einfachste Variablendeklaration enthält einen Typ und einen Variablennamen, z. B. diese Gleitkommadeklaration:
 
 
 ```
@@ -105,7 +105,7 @@ int iVar[3] = {1,2,3};
 
 
 
-Im folgenden finden Sie einige Deklarationen, die viele der Merkmale von HLSL-Variablen (High-Level Shader Language) veranschaulichen:
+Hier sind einige Deklarationen, die viele der Merkmale von HLSL-Variablen (High-Level Shader Language) veranschaulichen:
 
 
 ```
@@ -119,10 +119,10 @@ const float4 lightDirection = {0,0,1};
 Datendeklarationen können einen beliebigen gültigen Typ verwenden, einschließlich:
 
 -   [Datentypen (DirectX HLSL)](dx-graphics-hlsl-data-types.md)
--   [Vector Type (DirectX HLSL)](dx-graphics-hlsl-vector.md)
+-   [Vektortyp (DirectX HLSL)](dx-graphics-hlsl-vector.md)
 -   [Matrixtyp (DirectX HLSL)](dx-graphics-hlsl-matrix.md)
 -   [Shadertyp (DirectX HLSL)](dx-graphics-hlsl-shader.md)
--   [Sampltyp (DirectX HLSL)](dx-graphics-hlsl-sampler.md)
+-   [Samplertyp (DirectX HLSL)](dx-graphics-hlsl-sampler.md)
 -   [Benutzerdefinierter Typ (DirectX HLSL)](dx-graphics-hlsl-user-defined.md)
 
 Ein Shader kann Variablen, Argumente und Funktionen der obersten Ebene aufweisen.
@@ -151,46 +151,46 @@ void function2()
 
 Variablen der obersten Ebene werden außerhalb aller Funktionen deklariert. Argumente der obersten Ebene sind Parameter für eine Funktion der obersten Ebene. Eine Funktion der obersten Ebene ist jede Funktion, die von der Anwendung aufgerufen wird (im Gegensatz zu einer Funktion, die von einer anderen Funktion aufgerufen wird).
 
-### <a name="uniform-shader-inputs"></a>Einheitliche shadereingaben
+### <a name="uniform-shader-inputs"></a>Uniform Shader Inputs
 
-Scheitelpunkt-und Pixel-Shader akzeptieren zwei Arten von Eingabedaten: unterschiedlich und einheitlich. Die unterschiedliche Eingabe sind die Daten, die für jede Ausführung des Shaders eindeutig sind. Bei einem Vertex-Shader stammen die unterschiedlichen Daten (z. b. Position, normal usw.) aus den vertexstreams. Die einheitlichen Daten (z. b. Material Color, World Transform usw.) sind für mehrere Ausführungen eines Shaders konstant. Für diejenigen, die mit den assemblyshader-Modellen vertraut sind, werden einheitliche Daten durch konstante Register und abweichende Daten durch die v-und t-Register angegeben.
+Vertex- und Pixel-Shader akzeptieren zwei Arten von Eingabedaten: variierend und einheitlich. Die variierende Eingabe sind die Daten, die für jede Ausführung des Shaders eindeutig sind. Bei einem Vertex-Shader stammen die unterschiedlichen Daten (z. B. Position, Normal usw.) aus den Scheitelpunktstreams. Die einheitlichen Daten (z. B. Materialfarbe, Welttransformation usw.) sind für mehrere Ausführungen eines Shaders konstant. Für Diejenigen, die mit den Shadermodellen der Assembly vertraut sind, werden einheitliche Daten durch konstante Register und unterschiedliche Daten durch die Register v und t angegeben.
 
-Einheitliche Daten können durch zwei Methoden angegeben werden. Die gängigste Methode besteht darin, globale Variablen zu deklarieren und in einem Shader zu verwenden. Jede Verwendung von globalen Variablen in einem Shader führt dazu, dass diese Variable der Liste der für diesen Shader erforderlichen, einheitlichen Variablen hinzugefügt wird. Die zweite Methode besteht darin, einen Eingabeparameter der Shader-Funktion der obersten Ebene als einheitlich zu markieren. Diese Markierung gibt an, dass die angegebene Variable der Liste der einheitlichen Variablen hinzugefügt werden soll.
+Einheitliche Daten können mit zwei Methoden angegeben werden. Die gängigste Methode ist das Deklarieren globaler Variablen und deren Verwendung innerhalb eines Shaders. Jede Verwendung globaler Variablen innerhalb eines Shaders führt dazu, dass diese Variable der Liste der für diesen Shader erforderlichen einheitlichen Variablen hinzugefügt wird. Die zweite Methode besteht im Markieren eines Eingabeparameters der Shaderfunktion der obersten Ebene als einheitlich. Diese Kennzeichnung gibt an, dass die gegebene Variable der Liste der einheitlichen Variablen hinzugefügt werden soll.
 
-Von einem Shader verwendete einheitliche Variablen werden über die Konstante Tabelle an die Anwendung übermittelt. Die Konstante Tabelle ist der Name für die Symboltabelle, der definiert, wie die von einem Shader verwendeten einheitlichen Variablen in die Konstanten Register passen. Die Parameter der einheitlichen Funktion erscheinen in der Konstanten Tabelle, der ein Dollarzeichen ($) vorangestellt ist, im Gegensatz zu den globalen Variablen. Das Dollarzeichen ist erforderlich, um Namenskollisionen zwischen lokalen, einheitlichen Eingaben und globalen Variablen mit demselben Namen zu vermeiden.
+Einheitliche Variablen, die von einem Shader verwendet werden, werden über die konstante Tabelle an die Anwendung zurück übermittelt. Die Konstantentabelle ist der Name der Symboltabelle, die definiert, wie die von einem Shader verwendeten Uniformvariablen in die Konstantenregister passen. Die Parameter der einheitlichen Funktion werden im Gegensatz zu den globalen Variablen in der Konstantentabelle mit einem Dollarzeichen ($) angezeigt. Das Dollarzeichen ist erforderlich, um Namenskollisionen zwischen lokalen einheitlichen Eingaben und globalen Variablen mit demselben Namen zu vermeiden.
 
-Die Konstante Tabelle enthält die Konstanten Register Speicherorte aller vom Shader verwendeten einheitlichen Variablen. Die Tabelle enthält auch die Typinformationen und den Standardwert, falls angegeben.
+Die Konstantentabelle enthält die konstanten Registerpositionen aller vom Shader verwendeten einheitlichen Variablen. Die Tabelle enthält auch die Typinformationen und den Standardwert, sofern angegeben.
 
-### <a name="varying-shader-inputs-and-semantics"></a>Variierende shadereingaben und-Semantik
+### <a name="varying-shader-inputs-and-semantics"></a>Variierende Shadereingaben und Semantik
 
-Abweichende Eingabeparameter (einer shaderfunktion der obersten Ebene) müssen entweder mit einem Semantic-oder Uniform-Schlüsselwort markiert werden, das angibt, dass der Wert für die Ausführung des Shaders konstant ist. Wenn eine Shader-Eingabe der obersten Ebene nicht mit einem Semantic-oder Uniform-Schlüsselwort gekennzeichnet ist, kann der Shader nicht kompiliert werden.
+Unterschiedliche Eingabeparameter (einer Shaderfunktion der obersten Ebene) müssen entweder mit einem semantischen oder einem uniform-Schlüsselwort gekennzeichnet werden, das angibt, dass der Wert für die Ausführung des Shaders konstant ist. Wenn eine Shadereingabe der obersten Ebene nicht mit einem semantischen oder einheitlichen Schlüsselwort markiert ist, kann der Shader nicht kompiliert werden.
 
-Die Eingabe Semantik ist ein Name, der verwendet wird, um die angegebene Eingabe mit einer Ausgabe des vorherigen Teils der Grafik Pipeline zu verknüpfen. Beispielsweise wird die Eingabe Semantik POSITION0 von den Vertexshadern verwendet, um anzugeben, wo die Positionsdaten aus dem Vertex-Puffer verknüpft werden sollen.
+Die Eingabesemantik ist ein Name, der verwendet wird, um die gegebene Eingabe mit einer Ausgabe des vorherigen Teils der Grafikpipeline zu verknüpfen. Beispielsweise wird die eingabesemantische POSITION0 von den Vertex-Shadern verwendet, um anzugeben, wo die Positionsdaten aus dem Scheitelpunktpuffer verknüpft werden sollen.
 
-Pixel-und Vertex-Shader haben unterschiedliche Sätze der Eingabe Semantik, da die verschiedenen Teile der Grafik Pipeline in jede shadereinheit eingecheckt werden. Die Vertex-Shader-Eingabe Semantik beschreibt die pro-Vertex-Informationen (z. b. Position, normal, Texturkoordinaten, Farbe, Tangens, Binormal usw.), die aus einem Vertex-Puffer in ein Formular geladen werden sollen, das vom Vertexshader verwendet werden kann. Die Eingabe Semantik wird direkt der Vertex-Deklarations Verwendung und dem Verwendungs Index zugeordnet.
+Pixels- und Vertex-Shader verfügen aufgrund der verschiedenen Teile der Grafikpipeline, die in die einzelnen Shadereinheiten eingeht, über unterschiedliche Sätze von Eingabesemantik. Die Vertex-Shader-Eingabesemantik beschreibt die Pro-Scheitelpunkt-Informationen (z.B. Position, Normal, Texturkoordinaten, Farbe, Tangens, Binormal usw.), die aus einem Scheitelpunktpuffer in ein Formular geladen werden sollen, das vom Vertex-Shader genutzt werden kann. Die Eingabesemantik ist direkt der Verwendung der Scheitelpunktdeklaration und dem Verwendungsindex zu zuordnen.
 
-Die Pixel-Shader-Eingabe Semantik beschreibt die Informationen, die pro Pixel von der rasterisierungseinheit bereitgestellt werden. Die Daten werden durch Interpolation zwischen Ausgaben des Vertex-Shaders für jeden Scheitelpunkt des aktuellen primitiven generiert. Die grundlegende Pixel-Shader-Eingabe Semantik verknüpft die Ausgabe Farbe und die Texturkoordinaten Informationen mit den Eingabe Parametern.
+Die Pixel-Shader-Eingabesemantik beschreibt die Informationen, die von der Rasterungseinheit pro Pixel bereitgestellt werden. Die Daten werden generiert, indem zwischen ausgaben des Vertex-Shaders für jeden Scheitelpunkt des aktuellen Primitiven interpoliert wird. Die grundlegende Pixel-Shader-Eingabesemantik verknüpfen die Ausgabefarbe und Texturkoordinateninformationen mit Eingabeparametern.
 
-Die Eingabe Semantik kann Shader-Eingaben mit zwei Methoden zugewiesen werden:
+Die Eingabesemantik kann der Shadereingabe mit zwei Methoden zugewiesen werden:
 
--   Anhängen eines Doppelpunkts und des semantischen namens an die Parameter Deklaration.
--   Definieren einer Eingabe Struktur mit der Eingabe Semantik, die jedem Strukturmember zugewiesen ist.
+-   Anfügen eines Doppelpunkts und des semantischen Namens an die Parameterdeklaration.
+-   Definieren einer Eingabestruktur mit Eingabesemantik, die jedem Strukturmitglied zugewiesen ist.
 
-Vertex-und Pixel-Shader stellen Ausgabedaten für die nachfolgende Grafik Pipeline Phase bereit. Die Ausgabe Semantik wird verwendet, um anzugeben, wie Daten, die vom Shader generiert werden, mit den Eingaben der nächsten Stufe verknüpft werden sollen. Beispielsweise wird die Ausgabe Semantik für einen Vertex-Shader verwendet, um die Ausgaben der Interpolatoren im Raster zu verknüpfen, um die Eingabedaten für den Pixelshader zu generieren. Die Pixel-Shader-Ausgaben sind die Werte, die für die Alpha Mischungs Einheit für jedes der Renderziele bereitgestellt werden, oder der in den tiefen Puffer geschriebene tiefen Wert.
+Vertex- und Pixel-Shader stellen Ausgabedaten für die nachfolgende Grafikpipelinephase zur Verfügung. Ausgabesemantik wird verwendet, um anzugeben, wie vom Shader generierte Daten mit den Eingaben der nächsten Phase verknüpft werden sollen. Beispielsweise wird die Ausgabesemantik für einen Vertex-Shader verwendet, um die Ausgaben der Interpolatoren im Rasterizer zu verknüpfen, um die Eingabedaten für den Pixel-Shader zu generieren. Bei den Pixel-Shader-Ausgaben handelt es sich um die Werte, die der Alphablendingeinheit für jedes der Renderziele bereitgestellt werden, oder um den Tiefenwert, der in den Tiefenpuffer geschrieben wird.
 
-Die Vertex-Shader-Ausgabe Semantik wird verwendet, um den Shader sowohl mit dem Pixelshader als auch mit der Raster-Stufe zu verknüpfen. Ein Vertexshader, der vom Raster genutzt wird und nicht für den Pixelshader verfügbar gemacht wird, muss die Positionsdaten als minimal generieren. Vertexshader, die Texturkoordinaten und Farbdaten generieren, stellen diese Daten einem Pixelshader nach dem Durchführen der Interpolation zur Verfügung.
+Die Vertex-Shader-Ausgabesemantik wird verwendet, um den Shader sowohl mit dem Pixel-Shader als auch mit der Rasterizer-Stufe zu verknüpfen. Ein Vertex-Shader, der vom Rasterizer genutzt und nicht für den Pixelshader verfügbar gemacht wird, muss mindestens Positionsdaten generieren. Vertex-Shader, die Texturkoordinaten- und Farbdaten generieren, stellen diese Daten nach Abschluss der Interpolation an einen Pixel-Shader bereit.
 
-Die Pixel-Shader-Ausgabe Semantik bindet die Ausgabe Farben eines Pixelshaders mit dem richtigen Renderziel. Die Pixel-Shader-Ausgabe Farbe ist mit der Alpha Blend-Phase verknüpft, die bestimmt, wie die zielrenderziele geändert werden. Die Ausgabe der Pixel-Shader-Tiefe kann verwendet werden, um die Ziel tiefen Werte an der aktuellen Raster Position zu ändern. Die tiefen Ausgabe und mehrere Renderingziele werden nur mit einigen shadermodellen unterstützt.
+Die Ausgabesemantik des Pixelshaders bindet die Ausgabefarben eines Pixelshaders an das richtige Renderziel. Die Ausgabefarbe des Pixelshaders ist mit der Alphablendphase verknüpft, die bestimmt, wie die Zielrenderziele geändert werden. Die Pixel-Shader-Tiefenausgabe kann verwendet werden, um die Zieltiefewerte an der aktuellen Rasterposition zu ändern. Die Tiefenausgabe und mehrere Renderziele werden nur bei einigen Shadermodellen unterstützt.
 
-Die Syntax für die Ausgabe Semantik ist mit der Syntax zum Angeben der Eingabe Semantik identisch. Die Semantik kann entweder direkt für Parameter angegeben werden, die als "out"-Parameter deklariert oder während der Definition einer Struktur zugewiesen werden, die entweder als "out"-Parameter oder als Rückgabewert einer Funktion zurückgegeben wurde.
+Die Syntax für die Ausgabesemantik ist identisch mit der Syntax zum Angeben der Eingabesemantik. Die Semantik kann entweder direkt für Parameter angegeben werden, die als "out"-Parameter deklariert sind, oder während der Definition einer Struktur zugewiesen werden, die entweder als "out"-Parameter oder als Rückgabewert einer Funktion zurückgegeben wird.
 
-Die Semantik identifiziert, woher die Daten stammen. Semantik sind optionale Bezeichner zur Identifizierung von shadereingaben und-Ausgaben. Die Semantik wird an einem von drei Stellen angezeigt:
+Semantik identifiziert, woher Daten stammen. Semantik sind optionale Bezeichner, die Shadereingaben und -ausgaben identifizieren. Semantik wird an einer von drei Stellen angezeigt:
 
 -   Nach einem Strukturmember.
--   Nach einem Argument in der Eingabe Argumentliste einer Funktion.
--   Nach der Eingabe Argumentliste der Funktion.
+-   Nach einem Argument in der Eingabeargumentliste einer Funktion.
+-   Nach der Eingabeargumentliste der Funktion.
 
-In diesem Beispiel wird eine-Struktur verwendet, um eine oder mehrere vertexshadereingaben bereitzustellen, und eine weitere-Struktur, um eine oder mehrere vertexshaderausgaben bereitzustellen. Jedes der Strukturmember verwendet eine Semantik.
+In diesem Beispiel wird eine -Struktur verwendet, um eine oder mehrere Vertex-Shadereingaben bereitzustellen, und eine andere -Struktur, um eine oder mehrere Vertex-Shaderausgaben bereitzustellen. Jeder der Strukturmember verwendet eine Semantik.
 
 
 ```
@@ -247,23 +247,23 @@ VS_OUTPUT VS_Skinning_Example(const VS_INPUT v, uniform float len=100)
 
 
 
-Die Eingabe Struktur identifiziert die Daten aus dem Vertex-Puffer, der die shadereingaben bereitstellt. Dieser Shader ordnet die Daten aus den Positionen "Position", "Normal" und "blendweight" des Vertexpuffers den Vertex-Shader-Registern zu. Der Eingabe Datentyp muss nicht exakt mit dem Datentyp der Vertex-Deklaration übereinstimmen. Wenn Sie nicht genau übereinstimmt, werden die Scheitelpunkt Daten automatisch in den Datentyp von HLSL konvertiert, wenn Sie in die Shader-Register geschrieben werden. Wenn beispielsweise die normalen Daten vom Typ uint von der Anwendung definiert wurden, werden Sie beim Lesen durch den Shader in eine float3 konvertiert.
+Die Eingabestruktur identifiziert die Daten aus dem Scheitelpunktpuffer, der die Shadereingaben bereitstellt. Dieser Shader ordnet die Daten aus den Elementen position, normal und blendweight des Vertexpuffers in Vertex-Shaderregister zu. Der Eingabedatentyp muss nicht genau mit dem Datentyp der Scheitelpunktdeklaration übereinstimmen. Wenn sie nicht genau übereinstimmen, werden die Scheitelpunktdaten automatisch in den HLSL-Datentyp konvertiert, wenn sie in die Shaderregister geschrieben werden. Wenn die normalen Daten beispielsweise von der Anwendung als UINT-Typ definiert wurden, werden sie beim Lesen durch den Shader in float3 konvertiert.
 
-Wenn die Daten im vertexstream weniger Komponenten als der entsprechende shaderdatentyp enthalten, werden die fehlenden Komponenten mit 0 initialisiert (mit Ausnahme von w, die auf 1 initialisiert wird).
+Wenn die Daten im Scheitelpunktstream weniger Komponenten als der entsprechende Shaderdatentyp enthalten, werden die fehlenden Komponenten mit 0 initialisiert (mit Ausnahme von w, das mit 1 initialisiert wird).
 
-Die Eingabe Semantik ähnelt den Werten in [**D3DDECLUSAGE**](/windows/desktop/direct3d9/d3ddeclusage).
+Die Eingabesemantik ähnelt den Werten in [**D3DDECLUSAGE**](/windows/desktop/direct3d9/d3ddeclusage).
 
-Die Ausgabestruktur identifiziert die Scheitelpunkt-Shader-Ausgabeparameter von Position und Farbe. Diese Ausgaben werden von der Pipeline für die Dreiecks rasterisierung (in primitiver Verarbeitung) verwendet. Die als Positionsdaten markierte Ausgabe bezeichnet die Position eines Scheitel Punkts in homogenem Raum. Ein Vertex-Shader muss mindestens Positionsdaten generieren. Die Position des Bildschirm Raums wird berechnet, nachdem der Vertexshader abgeschlossen ist, indem die (x, y, z)-Koordinate durch w dividiert wird. Im Bildschirmbereich sind-1 und 1 die minimalen und maximalen x-und y-Werte der Grenzen des Viewports, während z zum Testen von z-Puffern verwendet wird.
+Die Ausgabestruktur identifiziert die Vertex-Shader-Ausgabeparameter der Position und Farbe. Diese Ausgaben werden von der Pipeline für die Dreiecksrasterung (bei primitiver Verarbeitung) verwendet. Die als Positionsdaten markierte Ausgabe gibt die Position eines Scheitelpunkts im homogenen Raum an. Ein Vertex-Shader muss mindestens Positionsdaten generieren. Die Position des Bildschirmraums wird berechnet, nachdem der Vertex-Shader abgeschlossen wurde, indem die Koordinate (x, y, z) durch w dividiert wird. Im Bildschirmbereich sind -1 und 1 die minimalen und maximalen x- und y-Werte der Grenzen des Viewports, während z für Z-Puffertests verwendet wird.
 
-Die Ausgabe Semantik ähnelt auch den Werten in [**D3DDECLUSAGE**](/windows/desktop/direct3d9/d3ddeclusage). Im Allgemeinen kann eine Ausgabestruktur für einen Vertex-Shader auch als Eingabe Struktur für einen PixelShader verwendet werden, vorausgesetzt, der Pixelshader liest nicht aus einer Variablen, die mit der Position, der Punktgröße oder der Semantik des Diagramms gekennzeichnet ist. Diese Semantik wird mit pro-Vertex-Skalarwerten verknüpft, die nicht von einem Pixelshader verwendet werden. Wenn diese Werte für den Pixelshader erforderlich sind, können Sie in eine andere Ausgabevariable kopiert werden, die eine Pixel-Shader-Semantik verwendet.
+Die Ausgabesemantik ähnelt auch den Werten in [**D3DDECLUSAGE.**](/windows/desktop/direct3d9/d3ddeclusage) Im Allgemeinen kann eine Ausgabestruktur für einen Vertex-Shader auch als Eingabestruktur für einen Pixel-Shader verwendet werden, vorausgesetzt, der Pixel-Shader liest nicht aus einer Variablen, die mit der Position, Punktgröße oder Semantik markiert ist. Diese Semantik ist Skalarwerten pro Scheitelpunkt zugeordnet, die nicht von einem Pixel-Shader verwendet werden. Wenn diese Werte für den Pixel-Shader benötigt werden, können sie in eine andere Ausgabevariable kopiert werden, die eine Pixel-Shadersemantik verwendet.
 
-Globale Variablen werden vom Compiler automatisch registriert. Globale Variablen werden auch als einheitliche Parameter bezeichnet, da der Inhalt der Variablen bei jedem Aufruf des Shaders identisch für alle Pixel ist, die verarbeitet werden. Die Register sind in der Konstanten Tabelle enthalten, die mit der [**ID3DXConstantTable**](/windows/desktop/direct3d9/id3dxconstanttable) -Schnittstelle gelesen werden kann.
+Globale Variablen werden Registern automatisch vom Compiler zugewiesen. Globale Variablen werden auch als einheitliche Parameter bezeichnet, da der Inhalt der Variablen für alle Pixel identisch ist, die jedes Mal verarbeitet werden, wenn der Shader aufgerufen wird. Die Register sind in der Konstantentabelle enthalten, die mithilfe der [**ID3DXConstantTable-Schnittstelle gelesen werden**](/windows/desktop/direct3d9/id3dxconstanttable) kann.
 
-Die Eingabe Semantik für Pixel-Shader ordnet Werte bestimmten Hardware Registern für den Transport zwischen Scheitelpunkt-Shadern und Pixel-Shadern zu. Jeder registriungstyp verfügt über bestimmte Eigenschaften. Da zurzeit nur zwei Semantik für Farb-und Texturkoordinaten vorhanden ist, werden die meisten Daten häufig als Texturkoordinaten gekennzeichnet, auch wenn dies nicht der Fall ist.
+Eingabesemantik für Pixel-Shader ordnen Werte bestimmten Hardwareregistern für den Transport zwischen Vertex-Shadern und Pixel-Shadern zu. Jeder Registertyp verfügt über bestimmte Eigenschaften. Da es derzeit nur zwei Semantiken für Farb- und Texturkoordinaten gibt, ist es üblich, dass die meisten Daten auch dann als Texturkoordinate markiert werden, wenn dies nicht dere ist.
 
-Beachten Sie, dass die Vertex-Shader-Ausgabestruktur eine Eingabe mit Positionsdaten verwendet hat, die nicht vom Pixelshader verwendet wird. HLSL ermöglicht gültige Ausgabedaten eines Vertexshaders, bei dem es sich nicht um gültige Eingabedaten für einen PixelShader handelt, vorausgesetzt, dass im Pixelshader nicht auf Sie verwiesen wird.
+Beachten Sie, dass die Vertex-Shader-Ausgabestruktur eine Eingabe mit Positionsdaten verwendet hat, die nicht vom Pixelshader verwendet wird. HLSL ermöglicht gültige Ausgabedaten eines Vertex-Shaders, die keine gültigen Eingabedaten für einen Pixel-Shader sind, vorausgesetzt, dass im Pixelshader nicht darauf verwiesen wird.
 
-Eingabeargumente können auch Arrays sein. Die Semantik wird automatisch vom Compiler für jedes Element des Arrays inkrementiert. Beachten Sie beispielsweise die folgende explizite Deklaration:
+Eingabeargumente können auch Arrays sein. Semantik wird automatisch vom Compiler für jedes Element des Arrays erhöht. Betrachten Sie beispielsweise die folgende explizite Deklaration:
 
 
 ```
@@ -283,7 +283,7 @@ float4 Sparkle(VS_OUTPUT In) : COLOR
 
 
 
-Die oben angegebene explizite Deklaration entspricht der folgenden Deklaration, deren Semantik vom Compiler automatisch inkrementiert wird:
+Die oben angegebene explizite Deklaration entspricht der folgenden Deklaration, deren Semantik automatisch vom Compiler erhöht wird:
 
 
 ```
@@ -297,7 +297,7 @@ float4 Sparkle(float4 Position : POSITION,
 
 
 
-Ebenso wie die Eingabe Semantik identifiziert die Ausgabe Semantik die Datenverwendung für die Pixel-Shader-Ausgabedaten. Viele Pixel-Shader schreiben nur in eine Ausgabe Farbe. Pixel-Shader können auch gleichzeitig einen tiefen Wert in ein oder mehrere Renderingziele schreiben (bis zu vier). Wie Vertex-Shader verwenden Pixel-Shader eine-Struktur, um mehr als eine Ausgabe zurückzugeben. Dieser Shader schreibt 0 sowohl in die Farbkomponenten als auch in die tiefen Komponente.
+Genau wie die Eingabesemantik identifiziert die Ausgabesemantik die Datenverwendung für Pixel-Shader-Ausgabedaten. Viele Pixelshader schreiben nur in eine Ausgabefarbe. Pixel-Shader können einen Tiefenwert auch gleichzeitig in ein oder mehrere Renderziele schreiben (bis zu vier). Wie Vertex-Shader verwenden Pixel-Shader eine -Struktur, um mehr als eine Ausgabe zurückzugeben. Dieser Shader schreibt 0 in die Farbkomponenten sowie in die Tiefenkomponente.
 
 
 ```
@@ -329,17 +329,17 @@ PS_OUTPUT main(void)
 
 
 
-Die Pixel-Shader-Ausgabe Farben müssen den Typ "float4" aufweisen. Wenn Sie mehrere Farben schreiben, müssen alle Ausgabe Farben zusammenhängend verwendet werden. Anders ausgedrückt kann [COLOR1](dx-graphics-hlsl-semantics.md) keine Ausgabe sein, es sei denn, [COLOR0](dx-graphics-hlsl-semantics.md) wurde bereits geschrieben. Die Ausgabe der Pixel-Shader-Tiefe muss vom Typ float1 sein.
+Die Pixel-Shader-Ausgabefarben müssen vom Typ float4 sein. Beim Schreiben mehrerer Farben müssen alle Ausgabefarben zusammenhängend verwendet werden. Anders ausgedrückt: [COLOR1](dx-graphics-hlsl-semantics.md) kann nur dann eine Ausgabe sein, wenn [COLOR0](dx-graphics-hlsl-semantics.md) bereits geschrieben wurde. Die Pixel-Shader-Tiefenausgabe muss vom Typ float1 sein.
 
-### <a name="samplers-and-texture-objects"></a>Samplers und Textur Objekte
+### <a name="samplers-and-texture-objects"></a>Sampler und Texturobjekte
 
-Ein Sampler enthält den samplerzustand. Der samplerstatus gibt die zu sammelnde Textur an und steuert die Filterung, die während des Samplings durchgeführt wird. Zum Beispiel für eine Textur sind drei Schritte erforderlich:
+Ein Sampler enthält den Samplerzustand. Der Samplerzustand gibt die Textur an, für die Stichproben entnommen werden sollen, und steuert die Filterung, die während der Stichprobenentnahme erfolgt. Es sind drei Dinge erforderlich, um eine Textur zu beproben:
 
 -   Eine Textur
--   Ein Sampler (mit dem samplerzustand)
--   Eine Samplings-Anweisung
+-   Ein Sampler (mit Samplerzustand)
+-   Eine Samplinganweisung
 
-Samplers können mit Texturen und dem samplerzustand initialisiert werden, wie hier gezeigt:
+Sampler können mit Texturen und dem Samplerzustand initialisiert werden, wie hier gezeigt:
 
 
 ```
@@ -352,7 +352,7 @@ sampler s = sampler_state
 
 
 
-Im folgenden finden Sie ein Beispiel für den Code für die Stichprobenentnahme einer 2D-Textur:
+Im Folgenden finden Sie ein Beispiel für den Code zum Beispiel für eine 2D-Textur:
 
 
 ```
@@ -367,11 +367,11 @@ float2 sample_2D(float2 tex : TEXCOORD0) : COLOR
 
 
 
-Die Textur wird mit einer Textur Variablen tex0 deklariert.
+Die Textur wird mit einer Texturvariablen tex0 deklariert.
 
-In diesem Beispiel wird eine samplervariable mit dem Namen s \_ 2D deklariert. Der Sampler enthält den samplerstatus in geschweiften Klammern. Dies schließt die Textur ein, die als Stichprobe verwendet wird, und optional den Filter Zustand (d. h. Umbruch Modi, Filtermodi usw.). Wenn der samplerzustand weggelassen wird, wird ein Standard-samplerstatus angewendet, der lineare Filterung und einen Umbruch Modus für die Texturkoordinaten angibt. Die samplingfunktion nimmt eine Gleit Komma-Textur Koordinate mit zwei Komponenten an und gibt eine Farbe mit zwei Komponenten zurück. Dies wird durch den float2-Rückgabetyp dargestellt und stellt Daten in den roten und grünen Komponenten dar.
+In diesem Beispiel wird eine Samplervariable mit dem Namen s \_ 2D deklariert. Der Sampler enthält den Samplerzustand in geschweiften Klammern. Dies schließt die Textur ein, für die Stichproben entnommen werden, und optional den Filterzustand (d. h. Umbruchmodi, Filtermodi usw.). Wenn der Samplerzustand weggelassen wird, wird ein Standardzustand des Samplers angewendet, der lineare Filterung und einen Umbruchmodus für die Texturkoordinaten an. Die Samplerfunktion verwendet eine Gleitkommatexturkoordinate mit zwei Komponenten und gibt eine Zwei-Komponenten-Farbe zurück. Dies wird mit dem Rückgabetyp float2 dargestellt und stellt Daten in den roten und grünen Komponenten dar.
 
-Es sind vier Typen von Samplern definiert (siehe [Schlüsselwörter](dx-graphics-hlsl-appendix.md)), und Textur Suchvorgänge werden von den intrinsischen Funktionen durchgeführt: [**tex1D (s, t) (DirectX HLSL)**](dx-graphics-hlsl-tex1d.md), [**tex2D (s, t) (DirectX HLSL)**](dx-graphics-hlsl-tex2d.md), [**tex3D (s, t) (DirectX HLSL**](dx-graphics-hlsl-tex3d.md)), [**Texcube (s, t) (DirectX HLSL)**](dx-graphics-hlsl-texcube.md). Hier ist ein Beispiel für die 3D-Stichprobenentnahme:
+Es werden vier Typen von Samplern definiert (siehe Schlüsselwörter [),](dx-graphics-hlsl-appendix.md)und Textursuchen werden von den systeminternen Funktionen ausgeführt: [**tex1D(s, t) (DirectX HLSL)**](dx-graphics-hlsl-tex1d.md), [**tex2D(s, t) (DirectX HLSL)**](dx-graphics-hlsl-tex2d.md), [**tex3D(s, t) (DirectX HLSL)**](dx-graphics-hlsl-tex3d.md), [**texCUBE(s, t) (DirectX HLSL)**](dx-graphics-hlsl-texcube.md). Hier ist ein Beispiel für die 3D-Stichprobenentnahme:
 
 
 ```
@@ -386,9 +386,9 @@ float3 sample_3D(float3 tex : TEXCOORD0) : COLOR
 
 
 
-Diese samplerdeklaration verwendet den Standard samplerstatus für die Filtereinstellungen und den Adress Modus.
+Diese Samplerdeklaration verwendet den Standardmäßigen Samplerzustand für die Filtereinstellungen und den Adressmodus.
 
-Hier sehen Sie das entsprechende Beispiel für eine Beispiel-Stichprobe
+Hier ist das entsprechende Beispiel für die Cubesstichprobe:
 
 
 ```
@@ -403,7 +403,7 @@ float3 sample_CUBE(float3 tex : TEXCOORD0) : COLOR
 
 
 
-Und zum Schluss ist das Beispiel für die 1D-Stichprobenentnahme:
+Und schließlich ist hier das Beispiel für die 1D-Stichprobenentnahme:
 
 
 ```
@@ -418,7 +418,7 @@ float sample_1D(float tex : TEXCOORD0) : COLOR
 
 
 
-Da die Common Language Runtime keine 1D-Texturen unterstützt, verwendet der Compiler eine 2D-Textur mit dem wissen, dass die y-Koordinate unwichtig ist. Da [**tex1D (s, t) (DirectX HLSL)**](dx-graphics-hlsl-tex1d.md) als 2D-Textur Suche implementiert ist, kann der Compiler die y-Komponente auf effiziente Weise auswählen. In einigen seltenen Szenarios kann der Compiler keine effiziente y-Komponente auswählen. in diesem Fall wird eine Warnung ausgegeben.
+Da die Runtime keine 1D-Texturen unterstützt, verwendet der Compiler eine 2D-Textur mit dem Wissen, dass die y-Koordinate unwichtig ist. Da [**tex1D(s, t) (DirectX HLSL)**](dx-graphics-hlsl-tex1d.md) als 2D-Textursuche implementiert wird, kann der Compiler die y-Komponente effizient auswählen. In einigen seltenen Szenarien kann der Compiler keine effiziente y-Komponente auswählen. In diesem Fall gibt er eine Warnung aus.
 
 
 ```
@@ -433,7 +433,7 @@ float4 main(float texCoords : TEXCOORD) : COLOR
 
 
 
-Dieses spezielle Beispiel ist ineffizient, da der Compiler die eingabekoordinate in ein anderes Register verschieben muss (da eine 1D-Suche als 2D-Suche implementiert wird und die Textur Koordinate als float1 deklariert wird). Wenn der Code mit einer float2-Eingabe anstelle eines float1 umgeschrieben wird, kann der Compiler die Eingabe Textur Koordinate verwenden, da er weiß, dass y für etwas initialisiert wird.
+Dieses spezielle Beispiel ist ineffizient, da der Compiler die Eingabekoordinate in ein anderes Register verschieben muss (da eine 1D-Suche als 2D-Suche implementiert und die Texturkoordinate als float1 deklariert wird). Wenn der Code mithilfe einer float2-Eingabe anstelle von float1 umgeschrieben wird, kann der Compiler die Eingabetexturkoordinate verwenden, da er weiß, dass y mit etwas initialisiert wird.
 
 
 ```
@@ -448,9 +448,9 @@ float4 main(float2 texCoords : TEXCOORD) : COLOR
 
 
 
-Alle Textur Suchvorgänge können mit "Bias" oder "proj" angehängt werden (d. h. [**tex2Dbias (DirectX HLSL)**](dx-graphics-hlsl-tex2dbias.md), [**texcubeproj (DirectX HLSL)**](dx-graphics-hlsl-texcubeproj.md)). Mit dem Suffix "proj" wird die Textur Koordinate durch die w-Komponente dividiert. Bei "Bias" wird die MIP-Ebene von der w-Komponente verlagert. Folglich nehmen alle Textur Suchvorgänge mit einem Suffix immer eine float4-Eingabe an. [**tex1D (s, t) (DirectX HLSL)**](dx-graphics-hlsl-tex1d.md) und [**tex2D (s, t) (DirectX HLSL)**](dx-graphics-hlsl-tex2d.md) ignorieren die YZ-und z-Komponenten.
+Alle Texturs lookups können mit "bias" oder "proj" (d.h. [**tex2Dbias (DirectX HLSL)**](dx-graphics-hlsl-tex2dbias.md), [**texCUBEproj (DirectX HLSL)**](dx-graphics-hlsl-texcubeproj.md)) angefügt werden. Mit dem Suffix "proj" wird die Texturkoordinate durch die w-Komponente geteilt. Mit "Bias" wird die Mip-Ebene von der w-Komponente verschoben. Daher nehmen alle Texturs lookups mit einem Suffix immer eine float4-Eingabe an. [**tex1D(s, t) (DirectX HLSL)**](dx-graphics-hlsl-tex1d.md) und [**tex2D(s, t) (DirectX HLSL)**](dx-graphics-hlsl-tex2d.md) ignorieren die yz- bzw. z-Komponenten.
 
-Samplers können auch im Array verwendet werden, obwohl das Back-End derzeit keinen Zugriff auf das dynamische Array von Samplern unterstützt. Daher ist Folgendes gültig, da es zum Zeitpunkt der Kompilierung aufgelöst werden kann:
+Sampler können auch im Array verwendet werden, obwohl derzeit kein Back-End den dynamischen Arrayzugriff auf Sampler unterstützt. Daher ist Folgendes gültig, da es zur Kompilierzeit aufgelöst werden kann:
 
 
 ```
@@ -459,7 +459,7 @@ tex2D(s[0],tex)
 
 
 
-Dieses Beispiel ist jedoch nicht gültig.
+Dieses Beispiel ist jedoch ungültig.
 
 
 ```
@@ -468,7 +468,7 @@ tex2D(s[a],tex)
 
 
 
-Der dynamische Zugriff von Samplern ist hauptsächlich zum Schreiben von Programmen mit literalschleifen nützlich. Der folgende Code veranschaulicht den Zugriff auf samplerarrays:
+Der dynamische Zugriff auf Sampler ist in erster Linie für das Schreiben von Programmen mit Literalschleifen nützlich. Der folgende Code veranschaulicht den Zugriff auf Samplerarrays:
 
 
 ```
@@ -491,19 +491,19 @@ float4 main(float4 tex[4] : TEXCOORD) : COLOR
 
 > [!Note]
 >
-> Die Verwendung der Microsoft Direct3D Debug-Laufzeit kann Ihnen helfen, Konflikte zwischen der Anzahl der Komponenten in einer Textur und einem Sampler abzufangen.
+> Mithilfe der Microsoft Direct3D-Debuglaufzeit können Sie Konflikte zwischen der Anzahl der Komponenten in einer Textur und einem Sampler abfangen.
 
- 
+ 
 
 ## <a name="writing-functions"></a>Schreiben von Funktionen
 
-Funktionen unterbrechen große Aufgaben in kleinere. Kleine Aufgaben sind einfacher zu Debuggen und können wieder verwendet werden, sobald Sie sich bewährt haben. Funktionen können verwendet werden, um Details anderer Funktionen auszublenden, wodurch ein Programm, das aus Funktionen besteht, einfacher zu befolgen ist.
+Funktionen untergliedern große Aufgaben in kleinere Aufgaben. Kleine Aufgaben lassen sich einfacher debuggen und können wiederverwendet werden, sobald sie sich bewährt haben. Funktionen können verwendet werden, um Details anderer Funktionen auszublenden, wodurch ein Programm, das aus Funktionen besteht, einfacher zu verfolgen ist.
 
-HLSL-Funktionen ähneln C-Funktionen auf verschiedene Weise: beide enthalten eine Definition und einen Funktions Text und deklarieren sowohl Rückgabe Typen als auch Argumentlisten. Wie bei C-Funktionen führt die HLSL-Validierung bei der Shader-Kompilierung eine Typüberprüfung für die Argumente, die Argument Typen und den Rückgabewert durch.
+HLSL-Funktionen ähneln C-Funktionen auf verschiedene Weise: Sie enthalten sowohl eine Definition als auch einen Funktionskörper und deklarieren Rückgabetypen und Argumentlisten. Wie C-Funktionen werden bei der HLSL-Überprüfung die Argumente, Argumenttypen und der Rückgabewert während der Shaderkompilierung überprüft.
 
-Im Gegensatz zu C-Funktionen verwenden HLSL-Einstiegspunkt Funktionen Semantik, um Funktionsargumente an Shader-Eingaben und-Ausgaben zu binden (HLSL-Funktionen, die intern die Semantik ignorieren). Dies vereinfacht das Binden von Puffer Daten an einen Shader und das Binden von shaderausgaben an shadereingaben.
+Im Gegensatz zu C-Funktionen verwenden HLSL-Einstiegspunktfunktionen Semantik, um Funktionsargumente an Shadereingaben und -ausgaben zu binden (HLSL-Funktionen, die intern als Semantik bezeichnet werden). Dies erleichtert das Binden von Pufferdaten an einen Shader und das Binden von Shader-Ausgaben an Shadereingaben.
 
-Eine Funktion enthält eine Deklaration und einen Text, und die Deklaration muss dem Text vorangestellt sein.
+Eine Funktion enthält eine Deklaration und einen Text, und die Deklaration muss dem Text voran gehen.
 
 
 ```
@@ -515,7 +515,7 @@ float4 VertexShader_Tutorial_1(float4 inPos : POSITION ) : POSITION
 
 
 
-Die Funktionsdeklaration enthält alles, was vor den geschweiften Klammern liegt:
+Die Funktionsdeklaration enthält alles vor den geschweiften Klammern:
 
 
 ```
@@ -524,15 +524,15 @@ float4 VertexShader_Tutorial_1(float4 inPos : POSITION ) : POSITION
 
 
 
-Eine Funktionsdeklaration enthält Folgendes:
+Eine Funktionsdeklaration enthält:
 
 -   Ein Rückgabetyp
 -   Ein Funktionsname
 -   Eine Argumentliste (optional)
--   Eine Ausgabe Semantik (optional)
+-   Eine Ausgabesemantik (optional)
 -   Eine Anmerkung (optional)
 
-Der Rückgabetyp kann jeder der HLSL-Grund Datentypen sein, z. b. ein float4:
+Der Rückgabetyp kann jeder der grundlegenden HLSL-Datentypen sein, z. B. float4:
 
 
 ```
@@ -562,7 +562,7 @@ VS_OUTPUT VertexShader_Tutorial_1(float4 inPos : POSITION )
 
 
 
-Wenn die Funktion keinen Wert zurückgibt, kann void als Rückgabetyp verwendet werden.
+Wenn die Funktion keinen Wert zurück gibt, kann void als Rückgabetyp verwendet werden.
 
 
 ```
@@ -583,7 +583,7 @@ float4 VertexShader_Tutorial_1(float4 inPos : POSITION ) : POSITION
 
 
 
-Eine Argumentliste deklariert die Eingabeargumente für eine Funktion. Es können auch Werte deklariert werden, die zurückgegeben werden. Einige Argumente sind Eingabe-und Ausgabe Argumente. Im folgenden finden Sie ein Beispiel für einen Shader, der vier Eingabeargumente annimmt.
+Eine Argumentliste deklariert die Eingabeargumente für eine Funktion. Sie kann auch Werte deklarieren, die zurückgegeben werden. Einige Argumente sind sowohl Eingabe- als auch Ausgabeargumente. Hier ist ein Beispiel für einen Shader, der vier Eingabeargumente verwendet.
 
 
 ```
@@ -600,11 +600,11 @@ float4 Light(float3 LightDir : TEXCOORD1,
 
 
 
-Diese Funktion gibt eine endgültige Farbe zurück, bei der es sich um eine Mischung aus einem Textur Beispiel und der hellen Farbe handelt. Die Funktion nimmt vier Eingaben an. Zwei Eingaben haben eine Semantik: lightdir weist die [TEXCOORD1](dx-graphics-hlsl-semantics.md) -Semantik auf, und texcrd hat die [TEXCOORD0](dx-graphics-hlsl-semantics.md) -Semantik. Die Semantik bedeutet, dass die Daten für diese Variablen aus dem Vertex-Puffer stammen. Obwohl die lightdir-Variable über eine [TEXCOORD1](dx-graphics-hlsl-semantics.md) -Semantik verfügt, ist der-Parameter wahrscheinlich keine Textur Koordinate. Der semantische Typ texcoordn wird häufig zum Bereitstellen einer Semantik für einen Typ verwendet, der nicht vordefiniert ist (es gibt keine Vertex-Shader-Eingabe Semantik für eine leichte Richtung).
+Diese Funktion gibt eine endgültige Farbe zurück, die eine Mischung aus einem Texturbeispiel und der hellen Farbe ist. Die Funktion nimmt vier Eingaben entgegen. Zwei Eingaben haben Semantik: LightDir hat die [TEXCOORD1-Semantik](dx-graphics-hlsl-semantics.md) und texcrd die [TEXCOORD0-Semantik.](dx-graphics-hlsl-semantics.md) Die Semantik bedeutet, dass die Daten für diese Variablen aus dem Scheitelpunktpuffer stammen. Obwohl die LightDir-Variable über eine [TEXCOORD1-Semantik](dx-graphics-hlsl-semantics.md) verfügt, ist der Parameter wahrscheinlich keine Texturkoordinate. Der TEXCOORDn-Semantiktyp wird häufig verwendet, um eine Semantik für einen Typ zu liefern, der nicht vordefiniert ist (es gibt keine Vertex-Shader-Eingabesemantik für eine lichte Richtung).
 
-Die anderen beiden Eingaben LightColor und SAMP werden mit dem Schlüsselwort [Uniform](dx-graphics-hlsl-appendix.md) bezeichnet. Dabei handelt es sich um einheitliche Konstanten, die sich nicht zwischen zeichnen-aufrufen ändern. Die Werte für diese Parameter stammen aus globalen Shader-Variablen.
+Die beiden anderen Eingaben LightColor und samp sind mit dem [Schlüsselwort uniform](dx-graphics-hlsl-appendix.md) gekennzeichnet. Dies sind einheitliche Konstanten, die sich zwischen Draw-Aufrufen nicht ändern. Die Werte für diese Parameter stammen aus globalen Shadervariablen.
 
-Argumente können mit dem in-Schlüsselwort als Eingaben gekennzeichnet werden, und es werden Ausgabe Argumente mit dem out-Schlüsselwort ausgegeben. Argumente können nicht als Verweis übermittelt werden. ein Argument kann jedoch sowohl eine Eingabe als auch eine Ausgabe sein, wenn es mit dem INOUT-Schlüsselwort deklariert wird. Argumente, die an eine Funktion übergebenen werden, die mit dem INOUT-Schlüsselwort gekennzeichnet sind, werden bis zur Rückgabe der Funktion als Kopien des Originals angesehen und zurückkopiert. Hier ist ein Beispiel für die Verwendung von INOUT:
+Argumente können als Eingaben mit dem Schlüsselwort in und Ausgabeargumente mit dem Schlüsselwort out bezeichnet werden. Argumente können nicht als Verweis übergeben werden. Ein Argument kann jedoch sowohl eine Eingabe als auch eine Ausgabe sein, wenn es mit dem Schlüsselwort inout deklariert wird. Argumente, die an eine Funktion übergeben werden, die mit dem Schlüsselwort inout markiert sind, werden als Kopien des Originals betrachtet, bis die Funktion zurückgegeben wird, und sie werden zurückkopiert. Hier sehen Sie ein Beispiel für die Verwendung von inout:
 
 
 ```
@@ -616,9 +616,9 @@ void Increment_ByVal(inout float A, inout float B)
 
 
 
-Diese Funktion erhöht die Werte in A und B und gibt Sie zurück.
+Diese Funktion erhöht die Werte in A und B und gibt sie zurück.
 
-Der Funktions Rumpf ist der gesamte Code nach der Funktionsdeklaration.
+Der Funktionstext ist der gesamte Code nach der Funktionsdeklaration.
 
 
 ```
@@ -630,17 +630,17 @@ float4 VertexShader_Tutorial_1(float4 inPos : POSITION ) : POSITION
 
 
 
-Der Text besteht aus Anweisungen, die von geschweiften Klammern eingeschlossen werden. Der Funktions Rumpf implementiert die gesamte Funktionalität mithilfe von Variablen, Literalen, Ausdrücken und Anweisungen.
+Der Text besteht aus Anweisungen, die von geschweiften Klammern umgeben sind. Der Funktionstext implementiert alle Funktionen mithilfe von Variablen, Literalen, Ausdrücken und Anweisungen.
 
-Der Shader-Text hat zwei Dinge: er führt eine Matrix Multiplikation aus und gibt ein float4-Ergebnis zurück. Die Matrix Multiplikation erfolgt mit der [**mul-Funktion (DirectX HLSL)**](dx-graphics-hlsl-mul.md) , die eine 4 x 4-Matrix Multiplikation durchführt. **mul (DirectX HLSL)** wird als intrinsische Funktion bezeichnet, da Sie bereits in die HLSL-Bibliotheks Bibliothek integriert ist. Intrinsische Funktionen werden im nächsten Abschnitt ausführlicher behandelt.
+Der Shadertext führt zwei Dinge aus: Er führt eine Matrixmultiplikation aus und gibt ein float4-Ergebnis zurück. Die Matrixmultiplikation wird mit der Multiplikationsfunktion [**mul (DirectX HLSL)**](dx-graphics-hlsl-mul.md) durchgeführt, die eine Multiplikation der 4x4-Matrix ausführt. **mul (DirectX HLSL)** wird als systeminterne Funktion bezeichnet, da sie bereits in die HLSL-Funktionsbibliothek integriert ist. Systeminterne Funktionen werden im nächsten Abschnitt ausführlicher behandelt.
 
-Die Matrix Multiplikation kombiniert eine Eingabe Vektor-POS und eine zusammengesetzte Matrix worldviewproj. Das Ergebnis sind Positionsdaten, die in den Bildschirmbereich transformiert werden. Dies ist die minimale Vertex-Shader-Verarbeitung, die wir durchführen können. Wenn wir anstelle eines Scheitelpunkt-Shaders die Pipeline mit fester Funktionsweise verwenden, können die Scheitelpunkt Daten nach dieser Transformation gezeichnet werden.
+Die Matrixmultiplikation kombiniert einen Eingabevektor Pos und eine zusammengesetzte Matrix WorldViewProj. Das Ergebnis sind Positionsdaten, die in den Bildschirmbereich transformiert werden. Dies ist die minimale Vertex-Shaderverarbeitung, die wir tun können. Wenn wir die Pipeline für feste Funktionen anstelle eines Vertex-Shaders verwenden, können die Vertexdaten nach dieser Transformation gezeichnet werden.
 
-Die letzte Anweisung in einem Funktions Text ist eine Return-Anweisung. Genau wie bei C gibt diese Anweisung die Steuerung von der-Funktion an die-Anweisung zurück, die die Funktion aufgerufen hat.
+Die letzte Anweisung in einem Funktionskörper ist eine return-Anweisung. Genau wie C gibt diese Anweisung die Steuerung von der Funktion an die Anweisung zurück, die die Funktion aufgerufen hat.
 
-Funktions Rückgabe Typen können beliebige einfache Datentypen sein, die in HLSL definiert sind, einschließlich bool, int half, float und Double. Rückgabe Typen können einer der komplexen Datentypen sein, z. b. Vektoren und Matrizen. HLSL-Typen, die auf-Objekte verweisen, können nicht als Rückgabe Typen verwendet werden. Dies schließt Pixelshader, Vertexshader, Texture und Sampler ein.
+Funktions-Rückgabetypen können beliebige einfache Datentypen sein, die in HLSL definiert sind, einschließlich bool, int half, float und double. Rückgabetypen können einen der komplexen Datentypen wie Vektoren und Matrizen sein. HLSL-Typen, die auf Objekte verweisen, können nicht als Rückgabetypen verwendet werden. Dies schließt Pixelshader, Vertexshader, Texture und Sampler ein.
 
-Im folgenden finden Sie ein Beispiel für eine Funktion, die eine-Struktur für einen Rückgabetyp verwendet.
+Hier ist ein Beispiel für eine Funktion, die eine -Struktur für einen Rückgabetyp verwendet.
 
 
 ```
@@ -663,9 +663,9 @@ VS_OUTPUT VS_HLL_Example(float4 inPos : POSITION )
 
 
 
-Der float4-Rückgabetyp wurde durch die Struktur vs \_ Output ersetzt, die jetzt einen einzelnen float4-Member enthält.
+Der Rückgabetyp float4 wurde durch die Vs OUTPUT-Struktur ersetzt, die \_ nun einen einzelnen float4-Member enthält.
 
-Eine Return-Anweisung signalisiert das Ende einer Funktion. Dies ist die einfachste Return-Anweisung. Sie gibt die Steuerung von der Funktion an das aufrufenden Programm zurück. Es wird kein Wert zurückgegeben.
+Eine return-Anweisung signalisiert das Ende einer Funktion. Dies ist die einfachste Return-Anweisung. Sie gibt die Steuerung von der Funktion an das aufrufende Programm zurück. Es wird kein Wert zurückgegeben.
 
 
 ```
@@ -677,7 +677,7 @@ void main()
 
 
 
-Eine Return-Anweisung kann einen oder mehrere Werte zurückgeben. In diesem Beispiel wird ein Literalwert zurückgegeben:
+Eine return-Anweisung kann einen oder mehrere Werte zurückgeben. In diesem Beispiel wird ein Literalwert zurückgegeben:
 
 
 ```
@@ -693,12 +693,12 @@ In diesem Beispiel wird das skalare Ergebnis eines Ausdrucks zurückgegeben:
 
 
 ```
-return  light.enabled = true ;
+return  light.enabled;
 ```
 
 
 
-Dieses Beispiel gibt eine float4 zurück, die aus einer lokalen Variablen und einem Literalwert erstellt wurde:
+In diesem Beispiel wird ein float4-Wert zurückgegeben, der aus einer lokalen Variablen und einem Literal erstellt wurde:
 
 
 ```
@@ -707,7 +707,7 @@ return  float4(color.rgb, 1) ;
 
 
 
-In diesem Beispiel wird ein float4-Wert zurückgegeben, der aus dem von einer intrinsischen Funktion zurückgegebenen Ergebnis und einigen Literalwerten erstellt wird:
+In diesem Beispiel wird ein float4-Wert zurückgegeben, der aus dem Von einer systeminternen Funktion zurückgegebenen Ergebnis und einigen Literalwerten erstellt wird:
 
 
 ```
@@ -719,7 +719,7 @@ float4 func(float2 a: POSITION): COLOR
 
 
 
-Dieses Beispiel gibt eine-Struktur zurück, die mindestens ein-Element enthält:
+In diesem Beispiel wird eine -Struktur zurückgegeben, die einen oder mehrere Member enthält:
 
 
 ```
@@ -742,9 +742,9 @@ VS_OUTPUT VertexShader_Tutorial_1(float4 inPos : POSITION )
 
 ## <a name="flow-control"></a>Flusssteuerung
 
-Die meisten aktuellen Scheitelpunkt-und Pixel-Shader-Hardware ist darauf ausgelegt, einen Shader zeilenweise auszuführen und jede Anweisung einmal auszuführen. HLSL unterstützt die Fluss Steuerung, einschließlich statischer Verzweigung, Prädikat Anweisungen, statischer Schleifen, dynamischer Verzweigungen und dynamischer Schleifen.
+Die meisten aktuellen Scheitelpunkt- und Pixel-Shaderhardware ist so konzipiert, dass eine Shaderlinie zeilenweisend ausgeführt wird, wobei jede Anweisung einmal ausgeführt wird. HLSL unterstützt die Flusssteuerung, einschließlich statischer Verzweigung, prädikatierter Anweisungen, statischer Schleifen, dynamischer Verzweigung und dynamischer Schleifen.
 
-Früher führte die Verwendung einer if-Anweisung zu einem assemblysprachshader-Code, der sowohl die if-Seite als auch die else-Seite des Code Flusses implementiert. Im folgenden finden Sie ein Beispiel für den in HLSL-Code, der für vs \_ 1 1 kompiliert wurde \_ :
+Zuvor führte die Verwendung einer if-Anweisung zu Assemblysprach-Shadercode, der sowohl die if-Seite als auch die andere Seite des Codeflows implementiert. Im Folgenden finden Sie ein Beispiel für den in HLSL-Code, der für \_ 1 1 kompiliert \_ wurde:
 
 
 ```
@@ -771,19 +771,19 @@ mad oPos, r0.w, r2, c1
 
 
 
-Einige Hardware ermöglicht entweder statische oder dynamische Schleifen, aber die meisten erfordern eine lineare Ausführung. Bei den Modellen, die keine Schleifen unterstützen, muss für alle Schleifen ein Rollback ausgeführt werden. Ein Beispiel hierfür ist das Beispiel " [DepthOfField Sample](https://msdn.microsoft.com/library/Ee416592(v=VS.85).aspx) ", in dem auch für PS \_ 1 1-Shader nicht rollende Schleifen verwendet werden \_ .
+Einige Hardware ermöglicht entweder statisches oder dynamisches Schleifen, aber die meisten erfordern eine lineare Ausführung. Für die Modelle, die keine Schleifen unterstützen, muss die Registrierung aller Schleifen aufgehoben werden. Ein Beispiel hierfür ist das [Beispiel "DepthOfField Sample",](https://msdn.microsoft.com/library/Ee416592(v=VS.85).aspx) das unrollierte Schleifen auch für Ps \_ 1 \_ 1-Shader verwendet.
 
-HLSL bietet jetzt Unterstützung für die einzelnen Arten der Fluss Steuerung:
+HLSL bietet jetzt Unterstützung für jede dieser Arten von Flusssteuerung:
 
 -   statische Verzweigung
--   Prädikat Anweisungen
--   statische Schleifen
--   dynamische Verzweigungen
--   dynamische Schleifen
+-   Prädikatanweisungen
+-   Statisches Schleifen
+-   Dynamische Verzweigung
+-   Dynamisches Schleifening
 
-Bei der statischen Verzweigung können Blöcke von shadercode basierend auf einer booleschen Shader-Konstante ein-oder ausgeschaltet werden. Dies ist eine bequeme Methode zum Aktivieren oder Deaktivieren von Codepfade basierend auf dem Typ des Objekts, das gerade gerendert wird. Zwischen zeichnen-aufrufen können Sie entscheiden, welche Features Sie mit dem aktuellen Shader unterstützen möchten, und dann die booleschen Flags festlegen, die zum Erreichen dieses Verhaltens erforderlich sind. Alle-Anweisungen, die von einer booleschen Konstante deaktiviert werden, werden während der shaderausführung übersprungen.
+Statische Verzweigung ermöglicht das Ein- oder Ausschalten von Shadercodeblöcken basierend auf einer booleschen Shaderkonstante. Dies ist eine praktische Methode zum Aktivieren oder Deaktivieren von Codepfaden basierend auf dem Typ des objekts, das gerade gerendert wird. Zwischen Draw-Aufrufen können Sie entscheiden, welche Features Sie mit dem aktuellen Shader unterstützen möchten, und dann die booleschen Flags festlegen, die zum Abrufen dieses Verhaltens erforderlich sind. Alle Anweisungen, die von einer booleschen Konstante deaktiviert werden, werden während der Shaderausführung übersprungen.
 
-Die vertraulichste Verzweigungs Unterstützung ist die dynamische Verzweigung. Bei der dynamischen Verzweigung befindet sich die Vergleichs Bedingung in einer Variablen. Dies bedeutet, dass der Vergleich für jeden Scheitelpunkt oder jedes Pixel zur Laufzeit erfolgt (im Gegensatz zum Vergleich, der zur Kompilierzeit oder zwischen zwei zeichnen-aufrufen auftritt). Die Leistungseinbußen sind die Kosten der Verzweigung zuzüglich der Kosten für die Anweisungen auf der Seite der Verzweigung. Dynamische Verzweigungen werden in Shader-Modell 3 oder höher implementiert. Die Optimierung von Shadern, die mit diesen Modellen funktionieren, ähnelt der Optimierung von Code, der auf einer CPU ausgeführt wird.
+Die vertrautste Branchunterstützung ist dynamische Verzweigung. Bei dynamischer Verzweigung befindet sich die Vergleichsbedingung in einer Variablen, was bedeutet, dass der Vergleich für jeden Scheitelpunkt oder jedes Pixel zur Laufzeit erfolgt (im Gegensatz zum Vergleich zur Kompilierzeit oder zwischen zwei Zeichnen-Aufrufen). Die Leistungstreffer sind die Kosten für den Branch plus die Kosten der Anweisungen auf der Seite des Branchs. Dynamische Verzweigung wird in Shadermodell 3 oder höher implementiert. Die Optimierung von Shadern, die mit diesen Modellen funktionieren, ähnelt der Optimierung von Code, der auf einer CPU ausgeführt wird.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -792,6 +792,6 @@ Die vertraulichste Verzweigungs Unterstützung ist die dynamische Verzweigung. B
 [Programmieranleitung für HLSL](dx-graphics-hlsl-pguide.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

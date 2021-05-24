@@ -1,7 +1,7 @@
 ---
-description: Zeichnen Sie mehrere Instanzen derselben Teilmenge eines Mesh.
+description: Zeichnen Sie mehrere Instanzen derselben Teilmenge eines Gitters.
 ms.assetid: 2a17ecdb-c6f3-401c-b7ed-8a42fe159de0
-title: ID3DX10Mesh::D rawsubsegtinstanzierte-Methode (d3dx10. h)
+title: ID3DX10Mesh::D rawSubsetInstanced-Methode (D3DX10.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: 314f85d896be629254def560e55ce6a05bfe1fbd
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 2e28d7a7d2c1d743090832d68793ec3743662308
+ms.sourcegitcommit: ca37395fd832e798375e81142b97cffcffabf184
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106353385"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "110335634"
 ---
-# <a name="id3dx10meshdrawsubsetinstanced-method"></a>ID3DX10Mesh::D rawsubsegtinstanzierte-Methode
+# <a name="id3dx10meshdrawsubsetinstanced-method"></a>ID3DX10Mesh::D rawSubsetInstanced-Methode
 
-Zeichnen Sie mehrere Instanzen derselben Teilmenge eines Mesh.
+Zeichnen Sie mehrere Instanzen derselben Teilmenge eines Gitters.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,30 +42,30 @@ HRESULT DrawSubsetInstanced(
 
 <dl> <dt>
 
-*Atungbid* \[ in\]
+*AttribId* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Gibt an, welche Teilmenge des Mesh gezeichnet werden soll. Dieser Wert wird verwendet, um Gesichter in einem Mesh als zu einer oder mehreren Attribut Gruppen gehörenden zu unterscheiden. Siehe Bemerkungen.
+Gibt an, welche Teilmenge des Gitters ge zeichnen werden soll. Dieser Wert wird verwendet, um Gesichter in einem Gitternetz als einer oder mehrere Attributgruppen zu unterscheiden. Siehe Bemerkungen.
 
 </dd> <dt>
 
-*InstanceCount* \[ in\]
+*InstanceCount* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Anzahl der zu Rendering enden Instanzen.
+Anzahl der zu rendernden Instanzen.
 
 </dd> <dt>
 
-*Startinstancelokation* \[ in\]
+*StartInstanceLocation* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Die Instanz, aus der in jedem als Instanzdaten markierten Puffer abgerufen werden soll.
+Die Instanz, aus der in jedem Puffer, der als Instanzdaten markiert ist, abgerufen werden soll.
 
 </dd> </dl>
 
@@ -73,29 +73,29 @@ Die Instanz, aus der in jedem als Instanzdaten markierten Puffer abgerufen werde
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Der Rückgabewert ist einer der Werte, die in [Direct3D 10-Rückgabe Codes](d3d10-graphics-reference-returnvalues.md)aufgelistet sind.
+Der Rückgabewert ist einer der Unter [Direct3D 10-Rückgabecodes aufgeführten Werte.](d3d10-graphics-reference-returnvalues.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Ein Mesh enthält eine Attribut Tabelle. In der Attribut Tabelle kann ein Mesh in Teilmengen aufgeteilt werden, wobei jede Teilmenge mit einer Attribut-ID identifiziert wird. Beispielsweise kann ein Mesh mit 200-Gesichtern, das in drei Teilmengen unterteilt ist, eine Attribut Tabelle aufweisen, die wie folgt aussieht:
+Ein Gitternetz enthält eine Attributtabelle. Die Attributtabelle kann ein Gitternetz in Teilmengen unterteilen, wobei jede Teilmenge mit einer Attribut-ID identifiziert wird. Ein Gitternetz mit 200 Gesichtern, unterteilt in drei Teilmengen, kann beispielsweise eine Attributtabelle wie die folgende haben:
 
 
 
-|            |                 |
+| Subset     | Gesichtserkennung           |
 |------------|-----------------|
-| Atungbid 0 | Gesichter 0 ~ 50    |
-| Atungbid 1 | Gesichter 51 ~ 125  |
-| Atungbid 2 | Gesichter 126 ~ 200 |
+| AttribID 0 | Gesichter 0 ~ 50    |
+| AttribID 1 | Gesichter 51 ~ 125  |
+| AttribID 2 | Gesichter 126 ~ 200 |
 
 
 
  
 
-Durch die Instanziierung kann die Leistung durch Wiederverwendung derselben Geometrie erweitert werden, um mehrere Objekte in einer Szene zu zeichnen. Ein Beispiel für eine Instanziierung könnte darin bestehen, das gleiche Objekt mit unterschiedlichen Positionen und Farben zu zeichnen. Die Indizierung erfordert mehrere Vertex-Puffer: mindestens eine für pro-Vertex-Daten und einen zweiten Puffer für Instanzdaten.
+Die Instanziierung kann die Leistung erweitern, indem dieselbe Geometrie wiederverwendet wird, um mehrere Objekte in einer Szene zu zeichnen. Ein Beispiel für die Instanziierung ist das Zeichnen desselben Objekts mit unterschiedlichen Positionen und Farben. Die Indizierung erfordert mehrere Scheitelpunktpuffer: mindestens einen für Daten pro Scheitelpunkt und einen zweiten Puffer für Daten pro Instanz.
 
-Das Zeichnen von Instanzen mit drawsubmentinstancing ähnelt dem Prozess, der mit [**ID3D10Device verwendet wird::D rawindexedinstancing**](/windows/desktop/api/D3D10/nf-d3d10-id3d10device-drawindexedinstanced) , der unter [Instancing Sample (instanziierungsbeispiel](https://msdn.microsoft.com/library/Ee418269(v=VS.85).aspx)) beschrieben wird. Der Hauptunterschied bei der Verwendung von drawsubsetinstancing besteht darin, dass Vertex-und Index Puffer aus dem [**ID3DX10Mesh-Schnittstellen**](id3dx10mesh.md) Objekt extrahiert werden müssen, bevor die Instanziierungsdaten kombiniert werden können.
+Zeichnungsinstanzen mit DrawSubsetInstanced ähneln sehr dem Prozess, der mit [**ID3D10Device::D rawIndexedInstanced**](/windows/desktop/api/D3D10/nf-d3d10-id3d10device-drawindexedinstanced) verwendet wird, der im [Instanziierungsbeispiel](https://msdn.microsoft.com/library/Ee418269(v=VS.85).aspx)beschrieben ist. Der Hauptunterschied bei der Verwendung von DrawSubsetInstanced besteht darin, dass Scheitelpunkt- und Indexpuffer aus dem [**ID3DX10Mesh-Schnittstellenobjekt**](id3dx10mesh.md) extrahiert werden müssen, bevor die Instanziierungsdaten kombiniert werden können.
 
-Der folgende Code veranschaulicht das Extrahieren der Scheitelpunkt-und Index Puffer aus dem Mesh-Objekt.
+Der folgende Code veranschaulicht das Extrahieren der Scheitelpunkt- und Indexpuffer aus dem Gittermodellobjekt.
 
 
 ```
@@ -114,12 +114,12 @@ Der folgende Code veranschaulicht das Extrahieren der Scheitelpunkt-und Index Pu
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx10. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>D3dx10. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>D3DX10.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

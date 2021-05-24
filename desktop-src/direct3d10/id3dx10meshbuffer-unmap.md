@@ -1,7 +1,7 @@
 ---
 description: Aufheben der Zuordnung eines Puffers.
 ms.assetid: 47f125cd-5c0a-4814-93c5-f2f11ce33ea6
-title: 'ID3DX10MeshBuffer:: unmap-Methode (d3dx10. h)'
+title: ID3DX10MeshBuffer::Unmap-Methode (D3DX10.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,14 +14,14 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: 0c3b382e0cfd01a51d89ddacb51ad390446315a6
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 11b15f8bc1e4103503b183672ebd31e92b4daea7
+ms.sourcegitcommit: ca37395fd832e798375e81142b97cffcffabf184
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106370478"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "110335374"
 ---
-# <a name="id3dx10meshbufferunmap-method"></a>ID3DX10MeshBuffer:: unmap-Methode
+# <a name="id3dx10meshbufferunmap-method"></a>ID3DX10MeshBuffer::Unmap-Methode
 
 Aufheben der Zuordnung eines Puffers.
 
@@ -42,15 +42,15 @@ Diese Methode hat keine Parameter.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Der Rückgabewert ist einer der Werte, die in [Direct3D 10-Rückgabe Codes](d3d10-graphics-reference-returnvalues.md)aufgelistet sind.
+Der Rückgabewert ist einer der In [Direct3D 10-Rückgabecodes aufgeführten](d3d10-graphics-reference-returnvalues.md)Werte.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 
 
-|                                                                                                                                               |
-|-----------------------------------------------------------------------------------------------------------------------------------------------|
-| Unterschiede zwischen Direct3D 9 und Direct3D 10:<br/> Unmap () in Direct3D 10 entspricht der Ressourcen Sperre () in Direct3D 9.<br/> |
+Unterschiede zwischen Direct3D 9 und Direct3D 10:
+
+- Unmap() in Direct3D 10 entspricht der Ressource Unlock() in Direct3D 9.
 
 
 
@@ -62,12 +62,12 @@ Der Rückgabewert ist einer der Werte, die in [Direct3D 10-Rückgabe Codes](d3d1
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx10. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>D3dx10. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>D3DX10.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

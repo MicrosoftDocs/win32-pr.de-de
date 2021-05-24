@@ -1,7 +1,7 @@
 ---
-description: Einen Zeiger auf den Arbeitsspeicher des Mesh-Puffers, um seinen Inhalt zu ändern.
+description: Sie erhalten einen Zeiger auf den Gitternetzpufferspeicher, um dessen Inhalt zu ändern.
 ms.assetid: d15ed47a-450e-404a-bcc2-a641abc2d02e
-title: 'ID3DX10MeshBuffer:: Map-Methode (d3dx10. h)'
+title: ID3DX10MeshBuffer::Map-Methode (D3DX10.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: 1b8cb03e128a6673963ce2d3cde993babb03da5c
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: c4a71aaaffe7ed11429efa67b6065f94ecd154d0
+ms.sourcegitcommit: ca37395fd832e798375e81142b97cffcffabf184
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104354946"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "110335354"
 ---
-# <a name="id3dx10meshbuffermap-method"></a>ID3DX10MeshBuffer:: Map-Methode
+# <a name="id3dx10meshbuffermap-method"></a>ID3DX10MeshBuffer::Map-Methode
 
-Einen Zeiger auf den Arbeitsspeicher des Mesh-Puffers, um seinen Inhalt zu ändern.
+Sie erhalten einen Zeiger auf den Gitternetzpufferspeicher, um dessen Inhalt zu ändern.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,19 +41,19 @@ HRESULT Map(
 
 <dl> <dt>
 
-*ppData* \[ vorgenommen\]
+*ppData* \[ out\]
 </dt> <dd>
 
-Typ: **void \* \***
+Typ: **\* \* void**
 
-Zeiger auf die Puffer Daten.
+Zeiger auf die Pufferdaten.
 
 </dd> <dt>
 
-*Psize* \[ vorgenommen\]
+*pSize* \[ out\]
 </dt> <dd>
 
-Typ: **[ **Größe \_ T**](../winprog/windows-data-types.md)\***
+Typ: **[ **SIZE \_ T**](../winprog/windows-data-types.md)\***
 
 Größe des Puffers in Byte.
 
@@ -63,15 +63,15 @@ Größe des Puffers in Byte.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Der Rückgabewert ist einer der Werte, die in [Direct3D 10-Rückgabe Codes](d3d10-graphics-reference-returnvalues.md)aufgelistet sind.
+Der Rückgabewert ist einer der Unter [Direct3D 10-Rückgabecodes aufgeführten Werte.](d3d10-graphics-reference-returnvalues.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 
 
-|                                                                                                                                          |
-|------------------------------------------------------------------------------------------------------------------------------------------|
-| Unterschiede zwischen Direct3D 9 und Direct3D 10:<br/> Map () in Direct3D 10 entspricht der Ressourcen Zuordnung () in Direct3D 9.<br/> |
+ Unterschiede zwischen Direct3D 9 und Direct3D 10:
+
+- Map() in Direct3D 10 entspricht der Ressourcenzuordnung () in Direct3D 9.
 
 
 
@@ -83,12 +83,12 @@ Der Rückgabewert ist einer der Werte, die in [Direct3D 10-Rückgabe Codes](d3d1
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx10. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>D3dx10. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>D3DX10.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
