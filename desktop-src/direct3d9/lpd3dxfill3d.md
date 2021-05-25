@@ -4,12 +4,12 @@ ms.assetid: ab2f3005-150f-46e1-b75b-75c39e7feed1
 title: LPD3DXFILL3D
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a6c711459cffa3430b31ba7c91d77cc9519e6a43
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: feed5845f04486a6ac9cf1c984178fb0ed98447a
+ms.sourcegitcommit: b40a986d5ded926ae7617119cdd35d99b533bad9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108114308"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "110342765"
 ---
 # <a name="lpd3dxfill3d"></a>LPD3DXFILL3D
 
@@ -33,7 +33,7 @@ typedef VOID (WINAPI *LPD3DXFILL2D)(
 
 pOut: Zeiger auf einen Vektor, der von der Funktion verwendet wird, um das Ergebnis zurückzugeben. X, Y, Z und W werden R, G, B bzw. A zugeordnet.
 
-pTexCoord: Zeiger auf einen Vektor, der die Koordinaten des gerade ausgewerteten Texels enthält. Texturkoordinatenkomponenten für Textur- und Volumentexturen liegen zwischen 0 und 1. Texturkoordinatenkomponenten für Cubetexturen reichen von -1 bis 1.
+pTexCoord: Zeiger auf einen Vektor, der die Koordinaten des texel enthält, das gerade ausgewertet wird. Texturkoordinatenkomponenten für Textur- und Volumentexturen reichen von 0 bis 1. Texturkoordinatenkomponenten für Cubetexturen reichen von -1 bis 1.
 
 pTexelSize: Zeiger auf einen Vektor, der die Abmessungen des aktuellen Texels enthält.
 
@@ -43,13 +43,13 @@ pData: Zeiger auf Benutzerdaten.
 
 Kein Rückgabewert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Achten Sie darauf, beim Deklarieren der Rückruffunktion die Aufrufkonvention für [**Windows-Datentypen**](../winprog/windows-data-types.md) anzugeben. Andernfalls können Stapelüberläufe auftreten.
 
 
 
-|                          |            |
+| Anforderung                         | Wert           |
 |--------------------------|------------|
 | Header                   | d3dx9tex.h |
 | Importbibliothek           | d3dx9.lib  |

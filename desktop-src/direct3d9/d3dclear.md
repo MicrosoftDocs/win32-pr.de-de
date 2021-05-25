@@ -4,12 +4,12 @@ ms.assetid: 5d76e9a3-7afc-4db7-bffe-64bc7b9f83ac
 title: D3DCLEAR
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 787488bc4f8ed96c08ac08c18bfecec17d697e1d
-ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
+ms.openlocfilehash: 5c4c588fca44f9567dba0c1d2f7b88ba286cb86f
+ms.sourcegitcommit: b40a986d5ded926ae7617119cdd35d99b533bad9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "107999457"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "110343345"
 ---
 # <a name="d3dclear"></a>D3DCLEAR
 
@@ -31,7 +31,7 @@ Diese Flags identifizieren eine Oberfläche, die zurückgesetzt werden soll, wen
 
 
 
-|                          |             |
+| Anforderung                         |  Wert           |
 |--------------------------|-------------|
 | Header                   | d3d9types.h |
 | Mindestbetriebssystem | Windows 98  |

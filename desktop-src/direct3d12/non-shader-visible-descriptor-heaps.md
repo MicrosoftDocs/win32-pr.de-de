@@ -1,59 +1,58 @@
 ---
-title: Nicht Shader sichtbare deskriptorheaps
-description: Auf einige deskriptorheaps kann nicht durch Shader durch deskriptortabellen verwiesen werden. Sie ist jedoch entweder vorhanden, um der APP das Staging der Deskriptoren vor dem Aufzeichnen einer Befehlsliste zu unterstützen, oder weil kein Shader-sichtbarer Heap erforderlich ist.
+title: Für den Shader nicht sichtbare Deskriptorheaps
+description: Auf einige Deskriptorheaps kann von Shadern nicht über Deskriptortabellen verwiesen werden, sie sind jedoch entweder vorhanden, um die App beim Staging der Deskriptoren vor der Aufzeichnung einer Befehlsliste zu unterstützen, oder weil kein shader-sichtbarer Heap erforderlich ist.
 ms.assetid: 85934873-8889-4564-A717-28A00614B38C
 ms.localizationpriority: high
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 894640cde142f1241b088518ba7140ffb9405152
-ms.sourcegitcommit: 015fb35e736a235d3c9becff1f6832a0965b4303
+ms.openlocfilehash: d51d30c7a99250ee0842b79d76ccebb6150bcf9a
+ms.sourcegitcommit: b40a986d5ded926ae7617119cdd35d99b533bad9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "104548665"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "110343455"
 ---
-# <a name="non-shader-visible-descriptor-heaps"></a>Nicht Shader sichtbare deskriptorheaps
+# <a name="non-shader-visible-descriptor-heaps"></a>Für den Shader nicht sichtbare Deskriptorheaps
 
-Auf einige deskriptorheaps kann nicht durch Shader durch deskriptortabellen verwiesen werden. Sie ist jedoch entweder vorhanden, um der APP das Staging der Deskriptoren vor dem Aufzeichnen einer Befehlsliste zu unterstützen, oder weil kein Shader-sichtbarer Heap erforderlich ist.
+Auf einige Deskriptorheaps kann von Shadern nicht über Deskriptortabellen verwiesen werden, sie sind jedoch entweder vorhanden, um die App beim Staging der Deskriptoren vor der Aufzeichnung einer Befehlsliste zu unterstützen, oder weil kein shader-sichtbarer Heap erforderlich ist.
 
--   [Nicht sichtbare Sichten](#non-visible-views)
+-   [Nicht sichtbare Ansichten](#non-visible-views)
 -   [Zusammenfassung](#summary)
 -   [Verwandte Themen](#related-topics)
 
-## <a name="non-visible-views"></a>Nicht sichtbare Sichten
+## <a name="non-visible-views"></a>Nicht sichtbare Ansichten
 
-Alle deskriptorheaps, einschließlich der zuvor beschriebenen deskriptorheaps für Shader, können je nach Arbeitsspeicher Pool und den CPU-Zugriffs Eigenschaften, die von der Anwendung für einen deskriptorheap ausgewählt werden, von der CPU-und/oder der Befehlsliste bearbeitet werden.
+Alle Deskriptorheaps, einschließlich der zuvor beschriebenen Shader-Deskriptorheaps, können von den CPU- und/oder Befehlslisten abhängig vom Arbeitsspeicherpool und den CPU-Zugriffseigenschaften bearbeitet werden, die die Anwendung für einen Deskriptorheap auswählt.
 
-Für [Shader sichtbare deskriptorheaps](shader-visible-descriptor-heaps.md)ist der offensichtliche Grund, den Shader-Zugriff auf diese deskriptorheaps zu verweigern, während Sie bereitgestellt werden. Anschließend werden diese Heaps in den Shader-sichtbar umgewandelt, und der Zugriff erfolgt über deskriptortabellen bei der Ausführung der Befehlsliste. Es ist jedoch nicht erforderlich, für Shader sichtbare Heaps bereitzustellen. Sie können direkt ausgefüllt werden.
+Für [Shader Visible Descriptor Heaps](shader-visible-descriptor-heaps.md)ist der offensichtliche Grund, shader den Zugriff auf diese Deskriptorheaps zu verweigern, während sie ge staget werden. Anschließend werden diese Heaps als Shader sichtbar gemacht und über Deskriptortabellen bei der Ausführung der Befehlsliste aufgerufen. Es ist jedoch nicht erforderlich, für Shader sichtbare Heaps zu stagen, da sie direkt aufgefüllt werden können.
 
-Andere Deskriptoren werden an die Pipeline gebunden, indem ihre Inhalte direkt in der Befehlsliste aufgezeichnet werden. Diese Deskriptoren dienen nur zur Übersetzung der Ansichts Parameter in der Befehlslisten-Daten Satz Zeit. Diese Heaps sind immer nicht-Shader sichtbar und enthalten Folgendes:
+Andere Deskriptoren werden an die Pipeline gebunden, indem ihre Inhalte direkt in der Befehlsliste aufgezeichnet werden. Diese Deskriptoren dienen nur dazu, die Ansichtsparameter zum Zeitpunkt des Befehlslisten-Datensatzes zu übersetzen. Diese Heaps sind immer nicht als Shader sichtbar und enthalten Folgendes.
 
--   Renderzielsichten (rtvs)
--   Tiefen Schablonen Ansichten (DSVs)
+-   Renderzielansichten (RTVs)
+-   Tiefenschablonenansichten (DSVs)
 
-Index Puffer Sichten (ibvs), Vertex-Puffer Sichten (vbvs) und Stream-Ausgabe Sichten (sovs) werden direkt an API-Methoden übermittelt, verfügen nicht über bestimmte Heap Typen.
+Indexpuffersichten (IBVs), Vertexpuffersichten (VBVs) und Streamausgabesichten (Stream Output Views, SOVs) werden direkt an API-Methoden übergeben und weisen keine bestimmten Heaptypen auf.
 
-Nach dem aufzeichnen in der Befehlsliste (z. b. mit einem-Befehl wie z. b. [**omstrendertargets**](/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-omsetrendertargets)) steht der Arbeitsspeicher, der zum Speichern der Deskriptoren für diesen Befehl verwendet wurde, sofort zur erneuten Verwendung nach dem-Befehl zur Verfügung.
+Nach der Aufzeichnung in der Befehlsliste (z. B. mit einem Aufruf wie [**OMSetRenderTargets)**](/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-omsetrendertargets)steht der Arbeitsspeicher, der zum Speichern der Deskriptoren für diesen Aufruf verwendet wird, sofort zur erneuten Verwendung nach dem Aufruf zur Verfügung.
 
-Auch deskriptortabellen haben Optionen, bei denen eine APP es der Implementierung ermöglicht, den Tabelleninhalt bei der Aufzeichnung der Befehlsliste aufzuzeichnen (anstatt den Tabellen Zeiger bei der Ausführung zu dereferenzieren).
+Selbst Deskriptortabellen verfügen über Optionen, bei denen eine App es der Implementierung ermöglichen kann, den Tabelleninhalt bei der Befehlslistenaufzeichnung aufzuzeichnen (anstatt den Tabellenzeiger bei der Ausführung zu dereferenzieren).
 
 ## <a name="summary"></a>Zusammenfassung
 
 
 
-|                   |                                    |                                        |
+|                   | Shader sichtbar, nur CPU-Schreibzugriff                                   | Nicht-Shader sichtbar, CPU-Lese-/Schreibzugriff                                       |
 |-------------------|------------------------------------|----------------------------------------|
-|                   | **Shader sichtbar, nur CPU-Schreibvorgänge** | **nicht-Shader sichtbar, CPU-Lese-/Schreibzugriff** |
-| **CBV, SRV, UAV** | ja                                | ja                                    |
-| **Sammel**       | ja                                | ja                                    |
-| **RTV**           | Nein                                 | ja                                    |
-| **DSV**           | Nein                                 | ja                                    |
+| **CBV, SRV, UAV** | Ja                                | Ja                                    |
+| **Sampler**       | Ja                                | Ja                                    |
+| **RTV**           | nein                                 | Ja                                    |
+| **Dsv**           | nein                                 | Ja                                    |
 
 
 
  
 
-## <a name="related-topics"></a>Verwandte Themen
+## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 

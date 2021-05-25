@@ -1,30 +1,30 @@
 ---
-description: Flexible Vertexformatkonstanten oder FVF-Codes werden verwendet, um den Inhalt von Scheitelpunkten zu beschreiben, die sich in einem einzelnen Datenstrom überlappen, der von der Pipeline mit festen Funktionen verarbeitet wird.
+description: Flexible Vertexformatkonstanten oder FVF-Codes werden verwendet, um den Inhalt von Scheitelpunkten zu beschreiben, die sich in einem einzelnen Datenstrom überlappen und von der Pipeline mit festen Funktionen verarbeitet werden.
 ms.assetid: 85d9f5b2-8e4a-4f92-a587-eae5b293778c
 title: D3DFVF
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 25a12b4f6008023a388bd204440a0b544db85c19
-ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
+ms.openlocfilehash: a088dda530904c320720371c76601fd4fb254481
+ms.sourcegitcommit: b40a986d5ded926ae7617119cdd35d99b533bad9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "107999437"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "110343260"
 ---
 # <a name="d3dfvf"></a>D3DFVF
 
-Flexible Vertexformatkonstanten oder FVF-Codes werden verwendet, um den Inhalt von Scheitelpunkten zu beschreiben, die sich in einem einzelnen Datenstrom überlappen, der von der Pipeline mit festen Funktionen verarbeitet wird.
+Flexible Vertexformatkonstanten oder FVF-Codes werden verwendet, um den Inhalt von Scheitelpunkten zu beschreiben, die sich in einem einzelnen Datenstrom überlappen und von der Pipeline mit festen Funktionen verarbeitet werden.
 
 ## <a name="vertex-data-flags"></a>Vertexdatenflags
 
-Die folgenden Flags beschreiben ein Scheitelpunktformat. Informationen zu Scheitelpunktformaten finden Sie unter [FVF-Codes für feste Funktionen (Direct3D 9).](fixed-function-fvf-codes.md)
+Die folgenden Flags beschreiben ein Scheitelpunktformat. Informationen zu Vertexformaten finden Sie unter [FVF-Codes für feste Funktionen (Direct3D 9).](fixed-function-fvf-codes.md)
 
 
 
 | \#Definieren                            | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                                             | Datenreihenfolge und -typ                                                                                       |
 |-------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|
 | D3DFVF \_ DIFFUSE                     | Das Scheitelpunktformat enthält eine diffuse Farbkomponente.                                                                                                                                                                                                                                                                                                                       | DWORD in ARGB-Reihenfolge. Siehe [**D3DCOLOR \_ ARGB**](d3dcolor-argb.md).                                         |
-| D3DFVF \_ NORMAL                      | Das Scheitelpunktformat enthält einen Vertexnorm normaler Vektor. Dieses Flag kann nicht mit dem D3DFVF \_ XYZRHW-Flag verwendet werden.                                                                                                                                                                                                                                                                   | float, float, float                                                                                       |
+| D3DFVF \_ NORMAL                      | Das Scheitelpunktformat enthält einen vertex-Normalvektor. Dieses Flag kann nicht mit dem D3DFVF \_ XYZRHW-Flag verwendet werden.                                                                                                                                                                                                                                                                   | float, float, float                                                                                       |
 | D3DFVF \_ PSIZE                       | In Punktgröße angegebenes Scheitelpunktformat. Diese Größe wird in Kameraraumeinheiten für Scheitelpunkte ausgedrückt, die nicht transformiert und beleuchtet werden, und in Geräteraumeinheiten für transformierte und beleuchtete Scheitelpunkte.                                                                                                                                                                          | float                                                                                                     |
 | D3DFVF \_ SPECULAR                    | Das Scheitelpunktformat enthält eine Specular-Farbkomponente.                                                                                                                                                                                                                                                                                                                      | DWORD in ARGB-Reihenfolge. Siehe [**D3DCOLOR \_ ARGB**](d3dcolor-argb.md).                                         |
 | D3DFVF \_ XYZ                         | Das Scheitelpunktformat enthält die Position eines nicht übersetzten Scheitelpunkts. Dieses Flag kann nicht mit dem Flag D3DFVF \_ XYZRHW verwendet werden.                                                                                                                                                                                                                                                  | float, float, float.                                                                                      |
@@ -45,7 +45,7 @@ Die folgenden Flags beschreiben Texturflags, die von der Pipeline mit festen Fun
 | \#Definieren                          | BESCHREIBUNG                                                                                                                                                                                                                                                                        |
 |-----------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | D3DFVF \_ TEX0 – D3DFVF \_ TEX8       | Anzahl der Texturkoordinatensätze für diesen Scheitelpunkt. Die tatsächlichen Werte für diese Flags sind nicht sequenziell.                                                                                                                                                                           |
-| D3DFVF \_ TEXCOORDSIZEN(coordIndex) | Definieren Sie ein Texturkoordinaten-Dataset. n gibt die Dimension der Texturkoordinaten an. coordIndex gibt die Nummer des Texturkoordinatenindexes an. Weitere Informationen finden Sie unter [**D3DFVF \_ TEXCOORDSIZEN**](d3dfvf-texcoordsizen.md) und [Texturkoordinaten und Texturstufen.](texture-coordinates.md) |
+| D3DFVF \_ TEXCOORDSIZEN(coordIndex) | Definieren Sie ein Texturkoordinaten-Dataset. n gibt die Dimension der Texturkoordinaten an. coordIndex gibt die Nummer des Texturkoordinatenindexes an. Siehe [**D3DFVF \_ TEXCOORDSIZEN**](d3dfvf-texcoordsizen.md) und [Texturkoordinaten und Texturstufen](texture-coordinates.md). |
 
 
 
@@ -53,7 +53,7 @@ Die folgenden Flags beschreiben Texturflags, die von der Pipeline mit festen Fun
 
 ## <a name="mask-flags"></a>Maskierungsflags
 
-Die folgenden Flags beschreiben mask-Flags, die von der Fixed-Function-Pipeline verwendet werden.
+Die folgenden Flags beschreiben Maskenflags, die von der Pipeline mit festen Funktionen verwendet werden.
 
 
 
@@ -198,7 +198,7 @@ dwFVF = ( D3DFVF_XYZ | D3DFVF_NORMAL | D3DFVF_DIFFUSE |
 
 
 
-|                          |             |
+| Anforderung                         | Wert            |
 |--------------------------|-------------|
 | Header                   | d3d9types.h |
 | Mindestbetriebssystem | Windows 98  |
@@ -214,7 +214,7 @@ dwFVF = ( D3DFVF_XYZ | D3DFVF_NORMAL | D3DFVF_DIFFUSE |
 [Direct3D-Konstanten](dx9-graphics-reference-d3d-constants.md)
 </dt> <dt>
 
-[FVF-Codes der Funktion korrigiert (Direct3D 9)](fixed-function-fvf-codes.md)
+[Feste FVF-Codes der Funktion (Direct3D 9)](fixed-function-fvf-codes.md)
 </dt> <dt>
 
 [Geometriemischung (Direct3D 9)](geometry-blending.md)

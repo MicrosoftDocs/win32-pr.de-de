@@ -1,39 +1,39 @@
 ---
-description: Normale Kartengenerierungskonst constants.
+description: Normal ordnet Generierungskonstanten zu.
 ms.assetid: edf4c3e4-1af4-43b4-80c7-6fab02575f7b
 title: D3DX_NORMALMAP
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 90f76b6afe6eb68e8ddbc3ca28085861a518effc
-ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
+ms.openlocfilehash: 4263237cedf92a5e322f2fe139e9afe2297f6b9b
+ms.sourcegitcommit: b40a986d5ded926ae7617119cdd35d99b533bad9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "107996327"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "110342855"
 ---
 # <a name="d3dx_normalmap"></a>D3DX \_ NORMALMAP
 
-Normale Kartengenerierungskonst constants.
+Normal ordnet Generierungskonstanten zu.
 
 
 
 | \#Definieren                            | BESCHREIBUNG                                                                                                                                                                                        |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| D3DX \_ NORMALMAP \_ MIRROR \_ U          | Gibt an, dass Pixel vom Rand der Textur auf der U-Achse gespiegelt und nicht umschlossen werden sollen.                                                                                                   |
-| D3DX \_ NORMALMAP \_ MIRROR \_ V          | Gibt an, dass Pixel vom Rand der Textur auf der V-Achse gespiegelt und nicht umschlossen werden sollen.                                                                                                   |
-| D3DX \_ NORMALMAP \_ MIRROR             | Identisch mit der Angabe von D3DX \_ NORMALMAP \_ MIRROR U \_ \| D3DX \_ NORMALMAP MIRROR \_ \_ V.                                                                                                                       |
-| D3DX \_ NORMALMAP \_ INVERTSIGN         | Invertiert die Richtung der einzelnen Normalen.                                                                                                                                                              |
-| D3DX \_ NORMALMAP \_ COMPUTE \_ OCCLUSION | Berechnet den Occlusion-Begriff pro Pixel und codiert ihn in das Alpha. Ein Alphawert von 1 bedeutet, dass das Pixel nicht verdeckt wird, und ein Alphawert von 0 bedeutet, dass das Pixel vollständig verdeckt ist. |
+| D3DX \_ NORMALMAP \_ MIRROR \_ U          | Gibt an, dass Pixel außerhalb des Texturrands auf der U-Achse gespiegelt und nicht umschlossen werden sollen.                                                                                                   |
+| D3DX \_ NORMALMAP \_ MIRROR \_ V          | Gibt an, dass Pixel außerhalb des Texturrands auf der V-Achse gespiegelt und nicht umschlossen werden sollen.                                                                                                   |
+| D3DX \_ NORMALMAP \_ MIRROR             | Entspricht der Angabe von D3DX \_ NORMALMAP \_ MIRROR U \_ \| D3DX \_ NORMALMAP MIRROR \_ \_ V.                                                                                                                       |
+| D3DX \_ NORMALMAP \_ INVERTSIGN         | Umkehrt die Richtung der einzelnen Normalitäten.                                                                                                                                                              |
+| D3DX \_ NORMALMAP \_ COMPUTE \_ OCCLUSION | Berechnet den Verdeckungsbegriff pro Pixel und codiert ihn in das Alpha. Ein Alpha von 1 bedeutet, dass das Pixel in keiner Weise verdeckt wird, und ein Alpha von 0 bedeutet, dass das Pixel vollständig verdeckt ist. |
 
 
 
  
 
-## <a name="constant-information"></a>Konstante Informationen
+## <a name="constant-information"></a>Konstanteninformationen
 
 
 
-|                          |            |
+| Anforderung                         | Wert           |
 |--------------------------|------------|
 | Header                   | d3dx9tex.h |
 | Mindestbetriebssystem | Windows 98 |

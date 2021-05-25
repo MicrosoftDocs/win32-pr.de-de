@@ -1,64 +1,64 @@
 ---
-title: Stamm Signatur Version 1,1
-description: Der Zweck der Stamm Signatur Version 1,1 besteht darin, dass Anwendungen den Treibern zuweisen können, wenn sich Deskriptoren in einem deskriptorheap nicht ändern oder die Daten Deskriptoren nicht geändert werden.
+title: Stammsignatur, Version 1.1
+description: Der Zweck von Version 1.1 der Stammsignatur ist es, Anwendungen zu ermöglichen, Treibern anzugeben, wenn sich Deskriptoren in einem Deskriptorhap nicht ändern oder die Datendeskriptoren, auf die zeigt, sich nicht ändern.
 ms.assetid: 8FE42C1C-7F1D-4E70-A7EE-D5EC67237327
 ms.localizationpriority: high
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 24d0a107b4186f164e60a6225f55c5ba3f4f06b2
-ms.sourcegitcommit: f5a319899176e2df564bdb4d9eaffc32140452a2
+ms.openlocfilehash: 04a7a32576efa4d93a8d26aa57282f06e0d5a02f
+ms.sourcegitcommit: b40a986d5ded926ae7617119cdd35d99b533bad9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "104548708"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "110343665"
 ---
-# <a name="root-signature-version-11"></a>Stamm Signatur Version 1,1
+# <a name="root-signature-version-11"></a>Stammsignatur, Version 1.1
 
-Der Zweck der Stamm Signatur Version 1,1 besteht darin, dass Anwendungen den Treibern zuweisen können, wenn sich Deskriptoren in einem deskriptorheap nicht ändern oder die Daten Deskriptoren nicht geändert werden. Dies ermöglicht es der Option für Treiber, Optimierungen zu erstellen, bei denen möglicherweise ein Deskriptor oder der Arbeitsspeicher, auf den er verweist, für einen bestimmten Zeitraum statisch ist.
+Der Zweck von Version 1.1 der Stammsignatur ist es, Anwendungen zu ermöglichen, Treibern anzugeben, wenn sich Deskriptoren in einem Deskriptorhap nicht ändern oder die Datendeskriptoren, auf die zeigt, sich nicht ändern. Dadurch können Treiber Optimierungen durchführen, die möglicherweise in dem Wissen möglich sind, dass ein Deskriptor oder der Arbeitsspeicher, auf den er zeigt, für einen bestimmten Zeitraum statisch ist.
 
 -   [Übersicht](#overview)
 -   [Statische und flüchtige Flags](#static-and-volatile-flags)
-    -   [Deskriptoren \_ flüchtig](#descriptors_volatile)
-    -   [Daten \_ flüchtig](#data_volatile)
-    -   [Daten \_ beim \_ \_ festlegen \_ bei der \_ Ausführung statisch](#data_static_while_set_at_execute)
-    -   [Daten \_ statisch](#data_static)
+    -   [DESKRIPTOREN \_ VOLATILE](#descriptors_volatile)
+    -   [DATA \_ VOLATILE](#data_volatile)
+    -   [DATA \_ STATIC \_ WHILE \_ SET \_ AT \_ EXECUTE](#data_static_while_set_at_execute)
+    -   [DATA \_ STATIC](#data_static)
     -   [Kombinieren von Flags](#combining-flags)
-    -   [Flag-Zusammenfassung](#flag-summary)
--   [API-Zusammenfassung der Version 1,1](#version-11-api-summary)
+    -   [Flagzusammenfassung](#flag-summary)
+-   [API-Zusammenfassung der Version 1.1](#version-11-api-summary)
     -   [Enumerationen](#enums)
     -   [Strukturen](#helper-structures)
     -   [Funktionen](#functions)
     -   [Methoden](#methods)
     -   [Hilfsstrukturen](#helper-structures)
--   [Folgen des Verstoßes gegen statische Flags](#consequences-of-violating-static-ness-flags)
+-   [Folgen der Verletzung von Static-ness-Flags](#consequences-of-violating-static-ness-flags)
 -   [Versionsverwaltung](#version-management)
 -   [Verwandte Themen](#related-topics)
 
-## <a name="overview"></a>Überblick
+## <a name="overview"></a>Übersicht
 
-Mit der Stamm Signatur Version 1,0 können die Inhalte von deskriptorheaps und der Arbeitsspeicher, auf die Sie verweisen, jederzeit von Anwendungen frei geändert werden. Häufig ist es jedoch nicht erforderlich, dass Anwendungen die Flexibilität ändern, Deskriptoren oder Speicher zu ändern, nachdem Befehle aufgezeichnet wurden, die auf Sie verweisen.
+Version 1.0 der Stammsignatur ermöglicht es, dass der Inhalt von Deskriptorhaps und der Arbeitsspeicher, auf den sie zeigen, von Anwendungen jederzeit frei geändert werden können, wenn Befehlslisten/Bündel, auf die sie verweisen, möglicherweise auf der GPU ausgeführt werden. Häufig benötigen Anwendungen jedoch nicht die Flexibilität, Deskriptoren oder Arbeitsspeicher zu ändern, nachdem Befehle aufgezeichnet wurden, die auf sie verweisen.
 
-Anwendungen sind häufig in den folgenden Fällen trivial:
+Anwendungen sind häufig trivial in der Lage:
 
--   Richten Sie vor dem Binden von deskriptortabellen oder Stamm Deskriptoren in einer Befehlsliste oder einem Bündel Deskriptoren (und möglicherweise den Speicher, auf den Sie verweisen) ein.
--   Stellen Sie sicher, dass diese Deskriptoren erst geändert werden, wenn die Ausführung der Befehlsliste/Bundles die auf Sie verweist, das letzte Mal abgeschlossen wurde.
--   Stellen Sie sicher, dass die Daten, auf die die Deskriptoren zeigen, sich für dieselbe vollständige Dauer nicht ändern.
+-   Richten Sie Vor dem Binden von Deskriptortabellen oder Stammdeskriptoren für eine Befehlsliste oder ein Paket Deskriptoren ein (und möglichen Speicher, auf den sie zeigen).
+-   Stellen Sie sicher, dass sich diese Deskriptoren erst ändern, wenn die Befehlsliste /bundles, auf die sie verweisen, die Ausführung zum letzten Mal beendet hat.
+-   Stellen Sie sicher, dass sich die Daten, auf die die Deskriptoren zeigen, während derselben vollständigen Dauer nicht ändern.
 
-Alternativ kann eine Anwendung nur beachten, dass sich die Daten für einen kürzeren Zeitraum nicht ändern. In bestimmten Daten kann für das Zeitfenster während der Ausführung der Befehlsliste statisch sein, dass eine Stamm Parameter Bindung (Deskriptortabelle oder Stamm Deskriptor) aktuell auf die Daten zeigt. Anders ausgedrückt: eine Anwendung möchte möglicherweise die Ausführung auf der GPU-Zeitachse ausführen, mit der einige Daten Zwischenzeit Räumen aktualisiert werden, in denen Sie über einen Root-Parameter festgelegt wird. Sie werden feststellen, dass Sie als statisch festgelegt werden.
+Alternativ kann eine Anwendung nur in der Lage sein, zu beachten, dass sich die Daten für einen kürzeren Zeitraum nicht ändern. Insbesondere daten können während der Ausführung der Befehlsliste für das Zeitfenster statisch sein, das eine Stammparameterbindung (Deskriptortabelle oder Stammdeskriptor) derzeit auf die Daten verweist. Anders ausgedrückt: Eine Anwendung möchte möglicherweise die Ausführung auf der GPU-Zeitachse durchführen, die einige Daten zwischen Zeiträumen aktualisiert, in denen sie über einen Stammparameter festgelegt wird, wobei sie weiß, dass sie statisch ist, wenn sie festgelegt wird.
 
-Wenn Deskriptoren oder die Daten Deskriptoren auf verweisen, werden die spezifischen Optimierungs Treiber möglicherweise Hardware Anbieter spezifisch sein, und wichtig ist, dass Sie das Verhalten nicht ändern, außer möglicherweise die Leistung zu verbessern. Wenn Sie so viel Wissen über Anwendungs Absicht wie möglich beibehalten, werden Anwendungen nicht belastet.
+Wenn sich Deskriptoren oder die Datendeskriptoren, auf die verweisen, nicht ändern, sind die spezifischen Optimierungstreiber möglicherweise hardwareherstellerspezifisch, und wichtig ist, dass sie das Verhalten nur ändern, um die Leistung zu verbessern. Wenn Sie so viel Wissen über die Anwendungsabsicht wie möglich beibehalten, ist dies keine Belastung für Anwendungen.
 
-Eine Optimierung besteht darin, dass viele Treiber effizientere Speicherzugriffe durch Shader erstellen können, wenn Sie die Zusagen kennen, die eine Anwendung über die statische Bedeutung von Deskriptoren und Daten treffen kann. Beispielsweise können Treiber eine Dereferenzierungsebene für den Zugriff auf einen Deskriptor in einem Heap entfernen, indem Sie Sie in einen Stamm Deskriptor umrechnen, wenn die jeweilige Hardware nicht für die Stamm Argument Größe sensibel ist.
+Eine Optimierung besteht darin, dass viele Treiber effizientere Speicherzugriffe durch Shader erzeugen können, wenn sie die Zusagen kennen, die eine Anwendung hinsichtlich der statischen Freundlichkeit von Deskriptoren und Daten machen kann. Beispielsweise könnten Treiber eine Dekonstruktionsebene für den Zugriff auf einen Deskriptor in einem Heap entfernen, indem sie ihn in einen Stammdeskriptor konvertieren, wenn die hardwarespezifischen Hardware hinsichtlich der Größe des Stammarguments nicht vertraulich ist.
 
-Die zusätzliche Aufgabe für Entwickler, die Version 1,1 verwenden, besteht darin, nach Möglichkeit Zusagen zur Volatilität und statischen Daten der Daten zu machen, damit Treiber die Optimierungen vornehmen können, die sinnvoll sind. Entwickler müssen keine Zusagen über die statische Bedeutung haben.
+Die zusätzliche Aufgabe für Entwickler, die Version 1.1 verwenden, besteht darin, möglichst Zusagen hinsichtlich der Schwankungen und statischen Daten zu machen, damit Treiber die sinnvollen Optimierungen vornehmen können. Entwickler müssen keine Zusagen zur Statischen Ness machen.
 
-Die Stamm Signatur Version 1,0 funktioniert unverändert, obwohl Anwendungen, die Stamm Signaturen neu kompilieren, standardmäßig die Stamm Signatur 1,1 (mit der Option zum Erzwingen der Version 1,0, wenn gewünscht) verwendet werden.
+Root Signature Version 1.0 funktioniert weiterhin unverändert, obwohl Anwendungen, die Stammsignaturen neu kompilieren, jetzt standardmäßig Stammsignatur 1.1 verwenden (mit einer Option zum Erzwingen von Version 1.0, falls gewünscht).
 
 ## <a name="static-and-volatile-flags"></a>Statische und flüchtige Flags
 
-Die folgenden Flags sind Teil der Stamm Signatur, damit Treiber eine Strategie auswählen können, mit der Sie einzelne Stamm Argumente am besten verarbeiten können, wenn Sie festgelegt sind. Außerdem können Sie dieselben Annahmen in Pipeline Zustands Objekte (PSOs) einbetten, wenn Sie ursprünglich kompiliert werden, da die Stamm Signatur Teil eines PSO ist.
+Die folgenden Flags sind Teil der Stammsignatur, damit Treiber eine Strategie auswählen können, wie einzelne Stammargumente am besten behandelt werden können, wenn sie festgelegt werden. Außerdem werden dieselben Annahmen in Pipelinezustandsobjekte (PSOs) eingebettet, wenn sie ursprünglich kompiliert wurden, da die Stammsignatur Teil eines PSO ist.
 
-Die folgenden Flags werden von der APP festgelegt und gelten für Deskriptoren oder Daten.
+Die folgenden Flags werden von der App festgelegt und gelten für Deskriptoren oder Daten.
 
 ``` syntax
 typedef enum D3D12_DESCRIPTOR_RANGE_FLAGS
@@ -79,170 +79,168 @@ typedef enum D3D12_ROOT_DESCRIPTOR_FLAGS
 } D3D12_ROOT_DESCRIPTOR_FLAGS;
 ```
 
-### <a name="descriptors_volatile"></a>Deskriptoren \_ flüchtig
+### <a name="descriptors_volatile"></a>DESKRIPTOREN \_ VOLATILE
 
-Wenn dieses Flag festgelegt ist, können die Deskriptoren in einem deskriptorheap, auf die von einer stammdeskriptortabelle verwiesen wird, von der Anwendung jederzeit geändert werden, außer wenn die Befehlsliste/die Pakete, die die Deskriptortabelle binden, übermittelt wurden und die Ausführung noch nicht abgeschlossen ist. Beispielsweise ist das Aufzeichnen einer Befehlsliste und das anschließende Ändern von Deskriptoren in einem deskriptorheap, auf den verwiesen wird, *bevor* die Befehlsliste für die Ausführung übermittelt wird, gültig. Dies ist das einzige unterstützte Verhalten der Stamm Signatur Version 1,0.
+Wenn dieses Flag festgelegt ist, können die Deskriptoren in einem Deskriptorhap, auf den eine Stammdeskriptortabelle verweist, jederzeit von der Anwendung geändert werden, es sei denn, die Befehlsliste/-bündel, die die Deskriptortabelle binden, wurden übermittelt und die Ausführung nicht abgeschlossen. Beispielsweise ist das Aufzeichnen einer Befehlsliste und das anschließende Ändern  von Deskriptoren in einem Deskriptorhap, auf den er verweist, vor dem Übermitteln der Befehlsliste zur Ausführung gültig. Dies ist das einzige unterstützte Verhalten von Root Signature Version 1.0.
 
-Wenn das Flag " \_ volatile" für Deskriptoren *nicht* festgelegt ist, sind Deskriptoren statisch. Es gibt kein Flag für diesen Modus. Statische Deskriptoren bedeuten, dass die Deskriptoren in einem deskriptorheap, auf den von einer stammdeskriptortabelle verwiesen wird, durch den Zeitpunkt der Festlegung der Deskriptortabelle in einer Befehlsliste/einem Paket (während der Aufzeichnung) initialisiert wurden und die Deskriptoren nicht geändert werden können, bis die Ausführung der Befehlsliste bzw. des Pakets zum letzten Mal abgeschlossen ist. *Bei der Stamm Signatur Version 1,1 sind statische Deskriptoren die Standard Annahme*, und die Anwendung muss ggf. das-Flag für das Deskriptoren \_ volatile angeben.
+Wenn das DESCRIPTORS \_ VOLATILE-Flag *nicht festgelegt* ist, sind Deskriptoren statisch. Für diesen Modus gibt es kein Flag. Statische Deskriptoren bedeuten, dass die Deskriptoren in einem Deskriptorhap, auf den von einer Stammdeskriptortabelle verwiesen wird, zu dem Zeitpunkt initialisiert wurden, zu dem die Deskriptortabelle für eine Befehlsliste/ein Bündel (während der Aufzeichnung) festgelegt wurde. Die Deskriptoren können erst geändert werden, wenn die Befehlsliste bzw. das Paket zum letzten Mal ausgeführt wurde. *Für Root Signature Version 1.1* sind statische Deskriptoren die Standardannahme, und die Anwendung muss bei Bedarf das DESCRIPTORS \_ VOLATILE-Flag angeben.
 
-Bei Paketen, die deskriptortabellen mit statischen Deskriptoren verwenden, müssen die Deskriptoren zum Zeitpunkt der Aufzeichnung des Pakets bereit sein (im Gegensatz zum Zeitpunkt, an dem das Paket aufgerufen wird) und nicht geändert werden, bis die Ausführung des Pakets zum letzten Mal abgeschlossen ist. Deskriptortabellen, die auf statische Deskriptoren zeigen, müssen während der Paket Aufzeichnung festgelegt und nicht in das Paket geerbt werden. Es ist zulässig, dass eine Befehlsliste eine Deskriptortabelle mit statischen Deskriptoren verwendet, die in einem Bündel festgelegt und an die Befehlsliste zurückgegeben wurde.
+Bei Paketen, die Deskriptortabellen mit statischen Deskriptoren verwenden, müssen die Deskriptoren zum Zeitpunkt der Aufzeichnung des Pakets bereit sein (im Gegensatz zum Zeitpunkt des Bundles) und nicht geändert werden, bis die Ausführung des Pakets zum letzten Mal abgeschlossen ist. Deskriptortabellen, die auf statische Deskriptoren verweisen, müssen während der Bundleaufzeichnung festgelegt und nicht in das Paket geerbt werden. Es ist gültig, wenn eine Befehlsliste eine Deskriptortabelle mit statischen Deskriptoren verwendet, die in einem Paket festgelegt und an die Befehlsliste zurückgegeben wurde.
 
-Wenn Deskriptoren statisch sind, gibt es eine andere Änderung des Verhaltens, das erfordert, dass das \_ Flag für flüchtiges Deskriptoren festgelegt wird. Der Zugriff auf alle Puffer Sichten (im Gegensatz zu Texture1D/2D/3D/Cube-Sichten) ist ungültig und erzeugt nicht definierte Ergebnisse, einschließlich möglicher Geräte Zurücksetzung, anstatt Standardwerte für Lese-oder Löschvorgänge zurückzugeben. Der Zweck, dass Anwendungen nicht mehr von der Überprüfung der Hardware abhängig sind, besteht darin, dass Sie es den Treibern ermöglichen, statische deskriptorzugriffe auf den Zugriff auf root-Deskriptoren herauf zusetzen, wenn Sie dies als effizienter betrachten. Stamm Deskriptoren unterstützen keine Überprüfung außerhalb der Grenzen.
+Wenn Deskriptoren statisch sind, gibt es eine weitere Änderung des Verhaltens, für die das DESCRIPTORS \_ VOLATILE-Flag festgelegt werden muss. Der Zugriff auf Pufferansichten (im Gegensatz zu Texture1D-/2D-/3D-/Cubeansichten) ist ungültig und führt zu nicht definierten Ergebnissen, einschließlich möglicher Gerätezurücksetzungen, anstatt Standardwerte für Lese- oder Schreibvorgänge zurückzusetzen. Der Zweck, anwendungen die Möglichkeit zu beseitigen, von Hardware aus der Begrenzung der Zugriffsüberprüfung abhängig zu sein, besteht im Zulassen, dass Treiber statische Deskriptorzugriffe auf Stammdeskriptorzugriffe fördern, wenn sie dies als effizienter einordnen. Stammdeskriptoren unterstützen keine Überprüfung über grenzenlose Grenzen.
 
-Wenn Anwendungen beim Zugriff auf Deskriptoren von einem sicheren Speicherzugriffs Verhalten abhängig sind, müssen Sie die Deskriptorbereiche, die auf diese Deskriptoren zugreifen, als Deskriptoren als "volatile" kennzeichnen \_ .
+Wenn Anwendungen beim Zugriff auf Deskriptoren von einem sicheren Speicherzugriffsverhalten abhängen, müssen sie die Deskriptorbereiche, die auf diese Deskriptoren zugreifen, als DESCRIPTORS \_ VOLATILE markieren.
 
-### <a name="data_volatile"></a>Daten \_ flüchtig
+### <a name="data_volatile"></a>DATA \_ VOLATILE
 
-Wenn dieses Flag festgelegt ist, können die Daten, auf die von Deskriptoren verwiesen wird, von der CPU jederzeit geändert werden, außer wenn die Befehlsliste bzw. die Pakete, die die Deskriptortabelle binden, übermittelt wurden und die Ausführung noch nicht abgeschlossen ist. Dies ist das einzige unterstützte Verhalten der Stamm Signatur Version 1,0.
+Wenn dieses Flag festgelegt ist, können die Daten, auf die Deskriptoren zeigen, jederzeit von der CPU geändert werden, es sei denn, die Befehlsliste/-bündel, die die Deskriptortabelle binden, wurden übermittelt und die Ausführung nicht abgeschlossen. Dies ist das einzige unterstützte Verhalten von Root Signature Version 1.0.
 
-Das-Flag ist in den deskriptorbereichsflags und den stammdeskriptorflags verfügbar.
+Das Flag ist sowohl in Deskriptorbereichsflags als auch in Stammdeskriptorflags verfügbar.
 
-### <a name="data_static_while_set_at_execute"></a>Daten \_ beim \_ \_ festlegen \_ bei der \_ Ausführung statisch
+### <a name="data_static_while_set_at_execute"></a>DATA \_ STATIC \_ WHILE \_ SET \_ AT \_ EXECUTE
 
-Wenn dieses Flag festgelegt ist, können die Daten, auf die von Deskriptoren verwiesen wird, beginnend ab nicht mehr geändert werden, wenn die zugrunde liegende stammdeskriptor-oder Deskriptortabelle bei der Ausführung auf der GPU-Zeitachse auf einer Befehlsliste/einem Paket festgelegt ist, und endet, wenn nachfolgende Zeichnungen/Verteiler nicht mehr
+Wenn dieses Flag festgelegt ist, können sich die Daten, auf die von Deskriptoren verwiesen wird, nicht mehr ändern, wenn die zugrunde liegende Stammdeskriptor- oder Deskriptortabelle während der Ausführung auf der GPU-Zeitachse für eine Befehlsliste bzw. ein Bündel festgelegt ist und endet, wenn nachfolgende Striche/Dispatches nicht mehr auf die Daten verweisen.
 
-Bevor eine stammdeskriptor-oder Deskriptortabelle auf der GPU festgelegt wurde, *können* diese Daten sogar durch dieselbe Befehlsliste/jedes Paket geändert werden. Die Daten können auch geändert werden, während ein stammdeskriptor oder eine Deskriptortabelle, auf die verwiesen wird, weiterhin in der Befehlsliste bzw. im Bundle festgelegt ist, solange Draw/Dispatches, die darauf verweisen, abgeschlossen ist. Dies erfordert jedoch, dass die Deskriptortabelle erneut in die Befehlsliste aufgenommen wird, bevor die stammdeskriptor-oder Deskriptortabelle das nächste Mal dereferenziert wird. Dadurch kann der Treiber wissen, dass die Daten, auf die von einem stammdeskriptor oder einer Deskriptortabelle verwiesen wird, geändert wurden.
+Bevor eine Stammdeskriptor- oder Deskriptortabelle auf der  GPU festgelegt wurde, können diese Daten auch durch dieselbe Befehlsliste bzw. dasselbe Paket geändert werden. Die Daten können auch geändert werden, während eine Stammdeskriptor- oder Deskriptortabelle, die darauf zeigt, weiterhin für die Befehlsliste/das Bündel festgelegt ist, solange Draw/Dispatches, die darauf verweisen, abgeschlossen sind. Dies erfordert jedoch, dass die Deskriptortabelle erneut an die Befehlsliste zurückgebunden wird, bevor das nächste Mal die Stammdeskriptor- oder Deskriptortabelle dereferenziert wird. Dadurch kann der Treiber wissen, dass daten, auf die von einem Stammdeskriptor oder einer Deskriptortabelle verwiesen wird, geändert wurden.
 
-Der wesentliche Unterschied zwischen \_ Daten \_ , die während \_ \_ \_ der Ausführung bei EXECUTE und Data volatile festgelegt \_ sind, besteht darin, dass \_ ein Treiber nicht erkennen kann, ob Datenkopien in einer Befehlsliste die Daten, auf die von einem Deskriptor verwiesen wird, geändert haben, ohne dass eine zusätzliche Zustandsüberwachung Wenn z. b. ein Treiber eine beliebige Art von Daten in der Befehlsliste einfügen kann (um den Shader-Zugriff auf bekannte Daten effizienter zu machen, beispielsweise \_ \_ können die Daten, \_ die während der Ausführung von festgelegt werden, \_ vom Treiber informiert werden, dass \_ Sie nur die vorab abzurufenden Daten ausführen müssen, wenn Sie über " [**setgraphicsrootdescriptortable**](/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-setgraphicsrootdescriptortable)", " [**setcomputerootdescriptortable**](/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-setcomputerootdescriptortable) " oder eine der Methoden zum Festlegen der Konstanten Puffer Ansicht, der shaderressourcenansicht oder der ungeordneten Zugriffs Ansicht festgelegt
+Der wesentliche Unterschied zwischen DATA STATIC WHILE SET AT EXECUTE und DATA VOLATILE ist, dass ein Treiber bei DATA VOLATILE nicht erkennen kann, ob Datenkopien in einer Befehlsliste die Daten geändert haben, auf die ein \_ \_ \_ \_ \_ \_ \_ Deskriptor verweist, ohne eine zusätzliche Zustandsnachverfolgung auszuführen. Wenn ein Treiber z. B. eine beliebige Art von Datenvorabrufbefehlen in seine Befehlsliste einfügen kann (um den Shaderzugriff auf bekannte Daten effizienter zu gestalten, z. B. ), informiert data STATIC WHILE SET AT EXECUTE den Treiber darüber, dass er nur datenvorabrufen muss, wenn er über \_ \_ \_ \_ \_ [**SetGraphicsRootDescriptorTable,**](/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-setgraphicsrootdescriptortable) [**SetComputeRootDescriptorTable**](/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-setcomputerootdescriptortable) oder eine der Methoden zum Festlegen der konstanten Pufferansicht, Shaderressourcenansicht oder ungeordneten Zugriffsansicht festgelegt wird.
 
-Bei Paketen ist die Zusicherung, dass Daten statisch sind, während Sie bei EXECUTE festgelegt ist, für jede Ausführung des Bündels eindeutig.
+Bei Paketen gilt die Zusage, dass Daten statisch sind, während sie bei der Ausführung festgelegt werden, eindeutig für jede Ausführung des Pakets.
 
-Das-Flag ist in den deskriptorbereichsflags und den stammdeskriptorflags verfügbar.
+Das Flag ist sowohl in Deskriptorbereichsflags als auch in Stammdeskriptorflags verfügbar.
 
-### <a name="data_static"></a>Daten \_ statisch
+### <a name="data_static"></a>DATA \_ STATIC
 
-Wenn dieses Flag festgelegt ist, werden die Daten, auf die von Deskriptoren verwiesen wird, von dem Zeitpunkt initialisiert, zu dem eine stammdeskriptor-oder Deskriptortabelle, die auf den Arbeitsspeicher verweist, während der Aufzeichnung in einer Befehlsliste/einem Paket festgelegt wurde, und die Daten können erst geändert werden, wenn die Ausführung der Befehlsliste bzw
+Wenn dieses Flag festgelegt ist, wurden die Daten, auf die von Deskriptoren verwiesen wird, bis zu dem Zeitpunkt initialisiert, zu dem ein Stammdeskriptor oder eine Deskriptortabelle, die auf den Arbeitsspeicher verweist, für eine Befehlsliste/ein Paket während der Aufzeichnung festgelegt wurde, und die Daten können erst geändert werden, wenn die Befehlsliste bzw. das Paket zum letzten Mal ausgeführt wurde.
 
-Bei Paketen beginnt die statische Dauer bei der Erstellung des Stamm Deskriptors oder der Deskriptortabelle während der Aufzeichnung des Pakets, im Gegensatz zur Aufzeichnung einer aufrufenden Befehlsliste. Außerdem muss eine Deskriptortabelle, die auf statische Daten verweist, im Paket festgelegt und nicht vererbt werden. Eine Befehlsliste kann eine Deskriptortabelle verwenden, die auf statische Daten verweist, die in einem Bündel festgelegt und an die Befehlsliste zurückgegeben wurden.
+Bei Paketen beginnt die statische Dauer bei der Einstellung der Stammdeskriptor- oder Deskriptortabelle während der Aufzeichnung des Pakets, im Gegensatz zur Aufzeichnung einer aufrufenden Befehlsliste. Darüber hinaus muss eine Deskriptortabelle, die auf statische Daten verweist, im Bündel festgelegt und nicht geerbt werden. Es ist gültig, dass eine Befehlsliste eine Deskriptortabelle verwendet, die auf statische Daten verweist, die in einem Bündel festgelegt und an die Befehlsliste zurückgegeben wurden.
 
-Das-Flag ist in den deskriptorbereichsflags und den stammdeskriptorflags verfügbar.
+Das Flag ist sowohl in Deskriptorbereichsflags als auch in Stammdeskriptorflags verfügbar.
 
 ### <a name="combining-flags"></a>Kombinieren von Flags
 
-Höchstens eines der datenflags kann gleichzeitig angegeben werden, mit Ausnahme der Sampler-Deskriptorbereiche, die keine datenflags unterstützen, da Samplern nicht auf Daten verweisen.
+Höchstens eines der DATA-Flags kann gleichzeitig angegeben werden, mit Ausnahme von Sampler-Deskriptorbereichen, die überhaupt keine DATA-Flags unterstützen, da Sampler nicht auf Daten verweisen.
 
-Das Fehlen von datenflags für SRV-und CBV-Deskriptorbereiche bedeutet, dass der Standardwert der Daten \_ statisch \_ ist, während \_ \_ beim Festlegen beim \_ Ausführungs Verhalten angenommen wird. Der Grund, warum dieser Standardwert anstelle von Daten statisch gewählt wird, \_ ist, dass Daten, die \_ \_ während \_ \_ der Ausführung festgelegt \_ werden, in den meisten Fällen sehr wahrscheinlich ein sicherer Standard \_ Wert sind
+Das Fehlen von DATA-Flags für SRV- und CBV-Deskriptorbereiche bedeutet, dass das Standardverhalten DATA \_ STATIC WHILE SET AT EXECUTE angenommen \_ \_ \_ \_ wird. Der Grund, warum dieser Standardwert anstelle von DATA STATIC ausgewählt \_ wird, ist, dass DATA \_ STATIC WHILE SET AT EXECUTE in den meisten Fällen viel \_ \_ \_ \_ wahrscheinlicher ein sicherer Standardwert ist, während dennoch einige Optimierungsmöglichkeiten besser sind als die Standardeinstellung DATA \_ VOLATILE.
 
-Das Fehlen von datenflags für UAV-Deskriptorbereiche bedeutet, dass standardmäßig Daten \_ flüchtiges Verhalten angenommen wird, wenn in der Regel UAVs in geschrieben werden.
+Das Fehlen von DATA-Flags für UAV-Deskriptorbereiche bedeutet, dass ein Standardverhalten von DATA VOLATILE angenommen wird, da in der \_ Regel UAVs geschrieben werden.
 
-Deskriptoren \_ flüchtig *können nicht* mit statischen Daten kombiniert werden \_ , Sie *können* jedoch mit den anderen datenflags kombiniert werden. Die Grund Deskriptoren \_ volatile können mit statischen Daten kombiniert werden, \_ \_ während Sie \_ \_ bei EXECUTE festgelegt \_ sind, dass flüchtige Deskriptoren weiterhin erfordern, dass die Deskriptoren während der Befehlsliste/Paket Ausführung bereit sind, und Daten, die \_ \_ während der Ausführung auf Execute festgelegt sind, \_ nur für \_ \_ die statische entigkeit innerhalb einer Teilmenge der Befehlsliste/Paket Ausführung Zusagen.
+DESCRIPTORS \_ VOLATILE kann *nicht* mit DATA \_ STATIC, aber mit den anderen DATA-Flags kombiniert werden.  Der Grund, warum DESCRIPTORS \_ VOLATILE mit DATA STATIC kombiniert werden \_ \_ kann, während SET AT EXECUTE \_ \_ festgelegt \_ ist, ist, dass flüchtige Deskriptoren während der Ausführung von Befehlsliste/Bündeln immer noch bereit sein müssen, und DATA \_ STATIC WHILE SET AT EXECUTE nur \_ \_ \_ \_ Zusagen zur statischen Ness innerhalb einer Teilmenge der Befehlsliste/Paketausführung macht.
 
-### <a name="flag-summary"></a>Flag-Zusammenfassung
+### <a name="flag-summary"></a>Flagzusammenfassung
 
-In den folgenden Tabellen werden die zu verwendenden Flag-Kombinationen zusammengefasst.
+In den folgenden Tabellen werden die möglicherweise verwendeten Flagkombinationen zusammengefasst.
 
 
 
-|                                                                |                                                                                                                                                                                                                                                                                                                                                      |
+| Gültige D3D12 \_ DESCRIPTOR \_ RANGE \_ FLAGS-Einstellungen                                                               | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                                     |
 |----------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Gültige D3D12- \_ Einstellungen für deskriptorbereichsflags \_ \_**             | **Beschreibung**                                                                                                                                                                                                                                                                                                                                      |
-| Keine Flags festgelegt.                                                   | Deskriptoren sind statisch (Standardeinstellung). Standard Annahmen für Daten: für SRV/CBV: Data \_ static \_ \_ \_ , bei EXECUTE festgelegt \_ , und für UAV: Data \_ volatile. Diese Standardeinstellungen für SRV/CBV passen sicher zu den Verwendungs Mustern für die Mehrzahl der Stamm Signaturen.                                                                                              |
-| Daten \_ statisch                                                   | Beide Deskriptoren und Daten sind statisch. Dadurch wird das Potenzial für die Treiber Optimierung maximiert.                                                                                                                                                                                                                                                          |
-| Daten \_ flüchtig                                                 | Deskriptoren sind statisch, und die Daten sind flüchtig.                                                                                                                                                                                                                                                                                                     |
-| Daten \_ beim \_ \_ festlegen \_ bei der \_ Ausführung statisch                          | Deskriptoren sind statisch, und Daten sind statisch, während Sie bei EXECUTE festgelegt werden.                                                                                                                                                                                                                                                                                      |
-| Deskriptoren \_ flüchtig                                          | Deskriptoren sind flüchtig, und es werden Standard Annahmen zu Daten gemacht: für SRV/CBV: Data \_ static, \_ \_ \_ bei EXECUTE festgelegt \_ , und für UAV: Data \_ volatile.                                                                                                                                                                                              |
-| Deskriptoren \_ flüchtiger \| Daten \_ flüchtig                        | Sowohl Deskriptoren als auch Daten sind flüchtig, äquivalent zur Stamm Signatur 1,0.                                                                                                                                                                                                                                                                            |
-| Deskriptoren \_ volatile \| - \_ Daten \_ beim \_ festlegen \_ bei \_ Execute | Deskriptoren sind flüchtig, aber beachten Sie, dass Sie Sie während der Ausführung der Befehlsliste trotzdem nicht ändern können. Daher ist es zulässig, die zusätzliche Deklaration zu kombinieren, bei der Daten während der Ausführung über die stammdeskriptortabelle festgelegt werden – die zugrunde liegenden Deskriptoren sind für einen längeren Zeitraum statisch, als die Daten als statisch festgelegt werden. |
+| Keine Flags festgelegt                                                   | Deskriptoren sind statisch (Standardeinstellung). Standardannahmen für Daten: für SRV/CBV: DATA \_ STATIC WHILE SET AT EXECUTE und für \_ \_ \_ \_ UAV: DATA \_ VOLATILE. Diese Standardwerte für SRV/CBV passen sicher zu den Verwendungsmustern für den Großteil der Stammsignaturen.                                                                                              |
+| DATA \_ STATIC                                                   | Sowohl Deskriptoren als auch Daten sind statisch. Dadurch wird das Potenzial für die Treiberoptimierung maximiert.                                                                                                                                                                                                                                                          |
+| DATA \_ VOLATILE                                                 | Deskriptoren sind statisch, und die Daten sind flüchtig.                                                                                                                                                                                                                                                                                                     |
+| DATA \_ STATIC \_ WHILE \_ SET \_ AT \_ EXECUTE                          | Deskriptoren sind statisch, und Daten sind statisch, während sie bei der Ausführung festgelegt werden.                                                                                                                                                                                                                                                                                      |
+| DESKRIPTOREN \_ VOLATILE                                          | Deskriptoren sind flüchtig, und es werden Standardannahmen zu Daten getroffen: für SRV/CBV: DATA \_ STATIC WHILE SET AT EXECUTE und für \_ \_ \_ \_ UAV: DATA \_ VOLATILE.                                                                                                                                                                                              |
+| DESKRIPTOREN VOLATILE \_ \| DATA \_ VOLATILE                        | Sowohl Deskriptoren als auch Daten sind flüchtig, äquivalent zu Root Signature 1.0.                                                                                                                                                                                                                                                                            |
+| DESKRIPTOREN VOLATILE \_ DATA STATIC WHILE SET AT \| \_ \_ \_ \_ \_ EXECUTE | Deskriptoren sind flüchtig, beachten Sie jedoch, dass sie sich während der Ausführung der Befehlsliste nicht ändern können. Daher ist es gültig, die zusätzliche Deklaration zu kombinieren, dass Daten statisch sind, während sie während der Ausführung über die Stammdeskriptortabelle festgelegt werden. Die zugrunde liegenden Deskriptoren sind effektiv statisch, solange die Daten nicht statisch sind. |
 
 
 
- 
+ 
 
 
 
-|                                                   |                                                                                                                                                                                                                   |
+| Gültige D3D12 \_ ROOT \_ DESCRIPTOR \_ FLAGS-Einstellungen                                                  |  BESCHREIBUNG                                                                                                                                                                                                                 |
 |---------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Gültige D3D12 \_ - \_ stammdeskriptorflags- \_ Einstellungen** | **Beschreibung**                                                                                                                                                                                                   |
-| Keine Flags festgelegt.                                      | Standard Annahmen für Daten: für SRV/CBV: Data \_ static \_ \_ \_ , bei EXECUTE festgelegt \_ , und für UAV: Data \_ volatile. Diese Standardeinstellungen für SRV/CBV passen sicher zu den Verwendungs Mustern für die Mehrzahl der Stamm Signaturen. |
-| Daten \_ statisch                                      | Daten sind statisch, das beste Potenzial für die Treiber Optimierung.                                                                                                                                                       |
-| Daten \_ beim \_ \_ festlegen \_ bei der \_ Ausführung statisch             | Daten sind statisch, während Sie bei EXECUTE festgelegt werden.                                                                                                                                                                              |
-| Daten \_ flüchtig                                    | Entspricht der Stamm Signatur 1,0.                                                                                                                                                                                 |
+| Keine Flags festgelegt                                      | Standardannahmen für Daten: für SRV/CBV: DATA \_ STATIC WHILE SET AT EXECUTE und für \_ \_ \_ \_ UAV: DATA \_ VOLATILE. Diese Standardwerte für SRV/CBV passen sicher zu den Verwendungsmustern für den Großteil der Stammsignaturen. |
+| DATA \_ STATIC                                      | Daten sind statisch, das beste Potenzial für die Treiberoptimierung.                                                                                                                                                       |
+| \_DATA STATIC WÄHREND SET AT \_ \_ \_ \_ EXECUTE             | Daten sind statisch, während sie bei der Ausführung festgelegt werden.                                                                                                                                                                              |
+| DATA \_ VOLATILE                                    | Entspricht stammsignatur 1.0.                                                                                                                                                                                 |
 
 
 
- 
+ 
 
-## <a name="version-11-api-summary"></a>API-Zusammenfassung der Version 1,1
+## <a name="version-11-api-summary"></a>API-Zusammenfassung der Version 1.1
 
-Die folgenden API-Aufrufe aktivieren Version 1,1.
+Die folgenden API-Aufrufe ermöglichen Version 1.1.
 
 ### <a name="enums"></a>Enumerationen
 
-Diese Enumerationen enthalten die Schlüsselflags zum Angeben von Deskriptoren und Daten Schwankungen.
+Diese Enumerationen enthalten die Schlüsselflags zum Angeben von Deskriptor und Datenvolatilität.
 
--   [**D3D \_ Stamm \_ Signatur \_ Version**](/windows/desktop/api/d3d12/ne-d3d12-d3d_root_signature_version) : Versions-IDs.
--   [**D3D12 \_ Deskriptorbereichsflags \_ \_**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_descriptor_range_flags) : ein Bereich von Flags, der bestimmt, ob Deskriptoren oder Daten flüchtig oder statisch sind.
--   [**D3D12 \_ \_ \_ Stammdeskriptorflags**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_root_descriptor_flags) : ein ähnlicher Bereich von Flags für [**D3D12- \_ deskriptorbereichsflags \_ \_**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_descriptor_range_flags), mit dem Unterschied, dass nur datenflags auf Stamm Deskriptoren angewendet werden.
+-   [**D3D \_ ROOT \_ SIGNATURE \_ VERSION**](/windows/desktop/api/d3d12/ne-d3d12-d3d_root_signature_version) : Versions-IDs.
+-   [**D3D12 \_ DESCRIPTOR \_ RANGE \_ FLAGS:**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_descriptor_range_flags) Ein Bereich von Flags, der bestimmt, ob Deskriptoren oder Daten flüchtig oder statisch sind.
+-   [**D3D12 \_ ROOT \_ DESCRIPTOR \_ FLAGS:**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_root_descriptor_flags) Ein ähnlicher Bereich von Flags wie [**D3D12 \_ DESCRIPTOR \_ RANGE \_ FLAGS,**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_descriptor_range_flags)mit der Ausnahme, dass nur Datenflags für Stammdeskriptoren gelten.
 
 ### <a name="structures"></a>Strukturen
 
-Aktualisierte Strukturen (ab Version 1,0) enthalten Verweise auf die Flags/static-Flags.
+Aktualisierte Strukturen (ab Version 1.0) enthalten Verweise auf die Flags "volatiley"/"static".
 
--   [**D3D12 \_ Funktions \_ Daten \_ \_**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_feature_data_root_signature) -Stamm Signatur: übergeben Sie diese Struktur an [**checkfeaturesupport**](/windows/desktop/api/d3d12/nf-d3d12-id3d12device-checkfeaturesupport) , um die Unterstützung der Stamm Signatur Version 1,1 zu überprüfen.
--   [**D3D12 \_ \_ \_ \_ DESC für versionierte Stamm Signatur**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_versioned_root_signature_desc) : kann eine beliebige Version einer Stamm Signatur Beschreibung enthalten und ist für die Verwendung mit den unten aufgeführten Serialisierungs-/Deserialisierungsfunktionen vorgesehen.
--   Diese Strukturen entsprechen den in Version 1,0 verwendeten, mit der Hinzufügung neuer Flags-Felder für Deskriptorbereiche und Stamm Deskriptoren:
+-   [**D3D12 \_ FEATURE \_ DATA \_ ROOT \_ SIGNATURE:**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_feature_data_root_signature) Übergeben Sie diese Struktur an [**CheckFeatureSupport,**](/windows/desktop/api/d3d12/nf-d3d12-id3d12device-checkfeaturesupport) um zu überprüfen, ob Root Signature Version 1.1 unterstützt wird.
+-   [**D3D12 \_ VERSIONED \_ ROOT \_ SIGNATURE \_ DESC:**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_versioned_root_signature_desc) kann eine beliebige Version einer Stammsignaturbeschreibung enthalten und ist für die Verwendung mit den unten aufgeführten Serialisierungs-/Deserialisierungsfunktionen konzipiert.
+-   Diese Strukturen entsprechen denen, die in Version 1.0 verwendet werden, mit dem Hinzufügen neuer Flagfelder für Deskriptorbereiche und Stammdeskriptoren:
 
-    -   [**D3D12 \_ root \_ Signature \_ DESC1**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_root_signature_desc1)
-    -   [**D3D12- \_ Deskriptor \_ Bereich1**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_descriptor_range1)
-    -   [**D3D12-Stamm \_ \_ Deskriptor \_ Table1**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_root_descriptor_table1)
-    -   [**D3D12 \_ root \_ DESCRIPTOR1**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_root_descriptor1)
-    -   [**D3D12 \_ root \_ PARAMETER1**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_root_parameter1)
+    -   [**D3D12 \_ ROOT \_ SIGNATURE \_ DESC1**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_root_signature_desc1)
+    -   [**D3D12 \_ DESCRIPTOR \_ RANGE1**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_descriptor_range1)
+    -   [**D3D12 \_ ROOT \_ DESCRIPTOR \_ TABLE1**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_root_descriptor_table1)
+    -   [**D3D12 \_ ROOT \_ DESCRIPTOR1**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_root_descriptor1)
+    -   [**D3D12 \_ ROOT \_ PARAMETER1**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_root_parameter1)
 
 ### <a name="functions"></a>Functions
 
-Die hier aufgeführten Methoden ersetzen die ursprünglichen [**D3D12SerializeRootSignature**](/windows/desktop/api/d3d12/nf-d3d12-d3d12serializerootsignature) -und [**D3D12CreateRootSignatureDeserializer**](/windows/desktop/api/d3d12/nf-d3d12-d3d12createrootsignaturedeserializer) -Funktionen, da Sie für eine beliebige Version der Stamm Signatur entwickelt wurden. Die serialisierte Form wird an [**die API "**](/windows/desktop/api/d3d12/nf-d3d12-id3d12device-createrootsignature) API-API" übergeben. Wenn ein Shader mit einer Stamm Signatur erstellt wurde, enthält der kompilierte Shader bereits eine serialisierte Stamm Signatur.
+Die hier aufgeführten Methoden haben die ursprünglichen [**Funktionen D3D12SerializeRootSignature**](/windows/desktop/api/d3d12/nf-d3d12-d3d12serializerootsignature) und [**D3D12CreateRootSignatureDeserializer**](/windows/desktop/api/d3d12/nf-d3d12-d3d12createrootsignaturedeserializer) ersetzt, da sie für eine beliebige Version der Stammsignatur konzipiert sind. Das serialisierte Formular wird an die [**CreateRootSignature-API**](/windows/desktop/api/d3d12/nf-d3d12-id3d12device-createrootsignature) übergeben. Wenn ein Shader mit einer Stammsignatur erstellt wurde, enthält der kompilierte Shader bereits eine serialisierte Stammsignatur.
 
--   [**D3D12SerializeVersionedRootSignature**](/windows/desktop/api/d3d12/nf-d3d12-d3d12serializeversionedrootsignature) : Wenn eine Anwendung prozedurale die Datenstruktur der Stamm [**\_ \_ \_ Signatur D3D12 mit Versions**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_versioned_root_signature_desc) Angabe generiert, muss Sie das serialisierte Formular mithilfe dieser Funktion erstellen.
--   [**D3D12CreateVersionedRootSignatureDeserializer**](/windows/desktop/api/d3d12/nf-d3d12-d3d12createversionedrootsignaturedeserializer) : generiert eine Schnittstelle, die die deserialisierte Datenstruktur über [**getunconvertedrootsignaturedesc**](/windows/desktop/api/d3d12/nf-d3d12-id3d12versionedrootsignaturedeserializer-getunconvertedrootsignaturedesc)zurückgeben kann.
+-   [**D3D12SerializeVersionedRootSignature:**](/windows/desktop/api/d3d12/nf-d3d12-d3d12serializeversionedrootsignature) Wenn eine Anwendung die [**D3D12 \_ \_ VERSIONED ROOT \_ SIGNATURE-Datenstruktur**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_versioned_root_signature_desc) prozedural generiert, muss sie das serialisierte Formular mit dieser Funktion erstellen.
+-   [**D3D12CreateVersionedRootSignatureDeserializer**](/windows/desktop/api/d3d12/nf-d3d12-d3d12createversionedrootsignaturedeserializer) : Generiert eine Schnittstelle, die die deserialisierte Datenstruktur über [**GetUnconvertedRootSignatureDesc**](/windows/desktop/api/d3d12/nf-d3d12-id3d12versionedrootsignaturedeserializer-getunconvertedrootsignaturedesc)zurückgeben kann.
 
 ### <a name="methods"></a>Methoden
 
-Die [**ID3D12VersionedRootSignatureDeserializer**](/windows/desktop/api/d3d12/nn-d3d12-id3d12versionedrootsignaturedeserializer) -Schnittstelle wird erstellt, um die Datenstruktur der Stamm Signatur zu deserialisieren.
+Die [**ID3D12VersionedRootSignatureDeserializer-Schnittstelle**](/windows/desktop/api/d3d12/nn-d3d12-id3d12versionedrootsignaturedeserializer) wird erstellt, um die Stammsignaturdatenstruktur zu deserialisieren.
 
--   [**Getrootsignaturedescatversion**](/windows/desktop/api/d3d12/nf-d3d12-id3d12versionedrootsignaturedeserializer-getrootsignaturedescatversion) : konvertiert Stamm Signatur Beschreibungs Strukturen in eine angeforderte Version.
--   [**Getunconvertedrootsignaturedesc**](/windows/desktop/api/d3d12/nf-d3d12-id3d12versionedrootsignaturedeserializer-getunconvertedrootsignaturedesc) : gibt einen Zeiger auf eine mit [**D3D12 \_ versionierte Stamm \_ \_ Signatur \_ DESC**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_versioned_root_signature_desc) -Struktur zurück.
+-   [**GetRootSignatureDescAtVersion:**](/windows/desktop/api/d3d12/nf-d3d12-id3d12versionedrootsignaturedeserializer-getrootsignaturedescatversion) Konvertiert Stammsignaturbeschreibungsstrukturen in eine angeforderte Version.
+-   [**GetUnconvertedRootSignatureDesc:**](/windows/desktop/api/d3d12/nf-d3d12-id3d12versionedrootsignaturedeserializer-getunconvertedrootsignaturedesc) Gibt einen Zeiger auf eine [**D3D12 \_ VERSIONED \_ ROOT SIGNATURE \_ \_ DESC-Struktur**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_versioned_root_signature_desc) zurück.
 
 ### <a name="helper-structures"></a>Hilfsstrukturen
 
-Hilfsstrukturen wurden hinzugefügt, um die Initialisierung einiger der 1,1-Strukturen zu unterstützen.
+Hilfsstrukturen wurden hinzugefügt, um die Initialisierung einiger der Strukturen der Version 1.1 zu unterstützen.
 
--   CD3DX12- \_ Deskriptor \_ Bereich1
--   CD3DX12 \_ root \_ PARAMETER1
--   CD3DX12 \_ static \_ SAMPLER1
--   CD3DX12 mit \_ versionierter Stamm \_ \_ Signatur \_ DESC
+-   CD3DX12 \_ DESCRIPTOR \_ RANGE1
+-   CD3DX12 \_ ROOT \_ PARAMETER1
+-   CD3DX12 \_ STATIC \_ SAMPLER1
+-   STAMMSIGNATUR-DESC MIT \_ \_ CD3DX12-VERSION \_ \_
 
-Weitere Informationen finden Sie unter [Hilfsstrukturen und Funktionen für D3D12](helper-structures-and-functions-for-d3d12.md).
+Weitere Informationen finden [Sie unter Hilfsstrukturen und -funktionen für D3D12](helper-structures-and-functions-for-d3d12.md).
 
-## <a name="consequences-of-violating-static-ness-flags"></a>Folgen des Verstoßes gegen statische Flags
+## <a name="consequences-of-violating-static-ness-flags"></a>Folgen der Verletzung von Static-ness-Flags
 
-Die oben beschriebenen Deskriptoren und datenflags (sowie die Standardwerte, die durch das Fehlen bestimmter Flags impliziert werden) definieren eine Zusage, die die Anwendung für den Treiber über die Art der Verhalten hat. Wenn eine Anwendung die Zusage verletzt, ist dies ein ungültiges Verhalten: die Ergebnisse sind nicht definiert und unterscheiden sich möglicherweise für verschiedene Treiber und Hardware.
+Der oben beschriebene Deskriptor und die Datenflags (sowie die Standardwerte, die durch das Fehlen bestimmter Flags impliziert werden) definieren eine Zusage der Anwendung an den Treiber, wie sie sich verhält. Wenn eine Anwendung gegen die Zusage verstößt, ist dies ungültiges Verhalten: Ergebnisse sind nicht definiert und können sich über verschiedene Treiber und Hardware hinweg unterscheiden.
 
-Die Debug-Ebene verfügt über Optionen zum Überprüfen, ob Anwendungen ihre Zusagen einhalten, einschließlich der Standard Zusagen, die bei der Verwendung der Stamm Signatur Version 1,1 enthalten sind, ohne dass Flags festgelegt werden.
+Die Debugebene verfügt über Optionen zum Überprüfen, dass Anwendungen ihre Zusagen einhalten, einschließlich der Standardzusicherungen, die mit der Verwendung von Root Signature Version 1.1 geliefert werden, ohne Flags festzulegen.
 
 ## <a name="version-management"></a>Versionsverwaltung
 
-Bei der Kompilierung von Stamm Signaturen, die an Shaders angefügt sind, wird die Stamm Signatur von neueren HLSL-Compilern standardmäßig in Version 1,1 kompiliert, während alte HLSL-Compiler nur 1,0 unterstützen. Beachten Sie, dass 1,1 Stamm Signaturen nicht auf Betriebssystemen funktionieren, die Stamm Signatur 1,1 nicht unterstützen.
+Beim Kompilieren von Stammsignaturen, die an Shader angefügt sind, kompilieren neuere HLSL-Compiler standardmäßig die Stammsignatur in Version 1.1, während alte HLSL-Compiler nur 1.0 unterstützen. Beachten Sie, dass 1.1-Stammsignaturen unter Betriebssystemen, die stammsignatur 1.1 nicht unterstützen, nicht funktionieren.
 
-Die mit einem Shader kompilierte Stamm Signatur Version kann mithilfe von für eine bestimmte Version erzwungen werden `/force_rootsig_ver <version>` . Die Erzwingung der Version ist erfolgreich, wenn der Compiler das Verhalten der Stamm Signatur beibehalten kann, die in der erzwungenen Version kompiliert wird, z. b. durch das Löschen nicht unterstützter Flags in der Stamm Signatur, die nur für Optimierungszwecke dienen, aber keine Auswirkungen auf das Verhalten haben.
+Die mit einem Shader kompilierte Stammsignaturversion kann mithilfe von auf eine bestimmte Version erzwungen `/force_rootsig_ver <version>` werden. Das Erzwingen der Version ist erfolgreich, wenn der Compiler das Verhalten der Stammsignatur, die bei der erzwungenen Version kompiliert wird, beibehalten kann, z. B. durch Löschen nicht unterstützter Flags in der Stammsignatur, die nur zu Optimierungszwecken dienen, sich aber nicht auf das Verhalten auswirken.
 
-Auf diese Weise kann eine Anwendung beispielsweise eine 1,1-Stamm Signatur sowohl bei der Erstellung der Anwendung sowohl bei 1,0 als auch bei 1,1 kompilieren und abhängig von der Betriebssystemunterstützung die geeignete Version zur Laufzeit auswählen. Dies wäre jedoch der größte Speicherplatz, wenn eine Anwendung Stamm Signaturen einzeln (insbesondere, wenn mehrere Versionen benötigt werden), getrennt von Shadern, kompiliert werden muss. Auch wenn Shader nicht anfänglich mit einer angefügten Stamm Signatur kompiliert werden, kann der Vorteil der compilerüberprüfung der Stamm Signatur Kompatibilität mit einem Shader mithilfe der- `/verifyrootsignature` Compileroption beibehalten werden. Später zur Laufzeit können PSOs mithilfe von Shadern erstellt werden, die keine Stamm Signaturen aufweisen, während die gewünschte Stamm Signatur (möglicherweise die vom Betriebssystem unterstützte Version) als separater Parameter übergeben wird.
+Auf diese Weise kann eine Anwendung z.B. eine 1.1-Stammsignatur für 1.0 und 1.1 kompilieren, wenn sie die Anwendung erstellt und die entsprechende Version zur Laufzeit abhängig vom Grad der Betriebssystemunterstützung auswählt. Es wäre jedoch am effizientesten, wenn eine Anwendung Stammsignaturen einzeln kompilieren würde (insbesondere, wenn mehrere Versionen benötigt werden), und zwar getrennt von Shadern. Auch wenn Shader anfänglich nicht mit einer angefügten Stammsignatur kompiliert werden, kann der Vorteil der Compilervalidierung der Stammsignaturkompatibilität mit einem Shader mithilfe der Compileroption beibehalten `/verifyrootsignature` werden. Später zur Laufzeit können PSOs mithilfe von Shadern erstellt werden, die keine Stammsignaturen enthalten, während die gewünschte Stammsignatur (möglicherweise die entsprechende Version, die vom Betriebssystem unterstützt wird) als separater Parameter übergeben wird.
 
-## <a name="related-topics"></a>Verwandte Themen
+## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Erstellen einer Stamm Signatur](creating-a-root-signature.md)
+[Erstellen einer Stammsignatur](creating-a-root-signature.md)
 </dt> <dt>
 
-[Stamm Signaturen](root-signatures.md)
+[Stammsignaturen](root-signatures.md)
 </dt> <dt>
 
-[Angeben von Stamm Signaturen in HLSL](specifying-root-signatures-in-hlsl.md)
+[Festlegen von Stammsignaturen in HLSL](specifying-root-signatures-in-hlsl.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

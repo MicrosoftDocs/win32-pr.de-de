@@ -4,12 +4,12 @@ ms.assetid: baf38e21-96b9-496f-8bec-7d2e28c1676d
 title: D3DCOMPOSERECTS_MAXNUMRECTS
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a44538f279275875686951faadfec4b3b47161c6
-ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
+ms.openlocfilehash: f2b5e8fc8cb819b3ae035a5a4a520b3a5e6de820
+ms.sourcegitcommit: b40a986d5ded926ae7617119cdd35d99b533bad9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "107996377"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "110343355"
 ---
 # <a name="d3dcomposerects_maxnumrects"></a>D3DCOMPOSERECTS \_ MAXNUMRECTS
 
@@ -29,7 +29,7 @@ Gibt die maximale Anzahl von Rechtecke an, die beim Zusammenstellen von Glyphen 
 
 
 
-|                          |             |
+|  Anforderung             |  Wert           |
 |--------------------------|-------------|
 | Header                   | d3d9types.h |
 | Mindestbetriebssystem |             |

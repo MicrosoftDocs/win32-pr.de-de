@@ -1,68 +1,68 @@
 ---
-title: Oberflächenfreigabe für Windows Graphics-APIs
-description: Dieses Thema bietet eine technische Übersicht über die Interoperabilität mithilfe der Oberflächen Freigabe zwischen Windows-Grafik-APIs, einschließlich Direct3D 11, Direct2D, DirectWrite, Direct3D 10 und Direct3D 9Ex.
+title: Oberflächenfreigabe zwischen Windows-Grafik-APIs
+description: Dieses Thema bietet eine technische Übersicht über die Interoperabilität mithilfe der Oberflächenfreigabe zwischen Windows-Grafik-APIs, einschließlich Direct3D 11, Direct2D, DirectWrite, Direct3D 10 und Direct3D 9Ex.
 ms.assetid: 65abf33e-3d15-42ff-99bd-674f24da773e
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1d889797902c964e603adefc51b25039afca7d46
-ms.sourcegitcommit: ea4baf9953a78d2d6bd530b680601e39f3884541
+ms.openlocfilehash: 1032cb1cf9b16280088f00e79e7e59bb7f1510b1
+ms.sourcegitcommit: b40a986d5ded926ae7617119cdd35d99b533bad9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "103730761"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "110343615"
 ---
-# <a name="surface-sharing-between-windows-graphics-apis"></a>Oberflächenfreigabe für Windows Graphics-APIs
+# <a name="surface-sharing-between-windows-graphics-apis"></a>Oberflächenfreigabe zwischen Windows-Grafik-APIs
 
-Dieses Thema bietet eine technische Übersicht über die Interoperabilität mithilfe der Oberflächen Freigabe zwischen Windows-Grafik-APIs, einschließlich Direct3D 11, Direct2D, DirectWrite, Direct3D 10 und Direct3D 9Ex. Wenn Sie bereits über Kenntnisse dieser APIs verfügen, kann dieses Whitepaper Ihnen helfen, mehrere APIs zu verwenden, um in einer Anwendung, die für die Betriebssysteme Windows 7 oder Windows Vista entwickelt wurde, dieselbe Oberfläche zu erzeugen. Dieses Thema enthält außerdem Richtlinien für bewährte Methoden und Zeiger auf Weitere Ressourcen.
+Dieses Thema bietet eine technische Übersicht über die Interoperabilität mithilfe der Oberflächenfreigabe zwischen Windows-Grafik-APIs, einschließlich Direct3D 11, Direct2D, DirectWrite, Direct3D 10 und Direct3D 9Ex. Wenn Sie bereits über fundierte Kenntnisse dieser APIs verfügen, können Sie in diesem Artikel mehrere APIs verwenden, um in einer Anwendung, die für die Betriebssysteme Windows 7 oder Windows Vista entwickelt wurde, auf die gleiche Oberfläche zu rendern. Dieses Thema enthält auch Richtlinien für bewährte Methoden und Hinweise auf zusätzliche Ressourcen.
 
 > [!Note]  
-> Für Direct2D-und DirectWrite-Interoperabilität in der DirectX 11,1-Laufzeit können Sie [Direct2D-Geräte und-Geräte Kontexte](/windows/desktop/Direct2D/devices-and-device-contexts) verwenden, um direkt auf Direct3D 11-Geräten zu gereinigen.
+> Für direct2D- und DirectWrite-Interoperabilität in der DirectX 11.1-Runtime können Sie [Direct2D-Geräte und Gerätekontexte](/windows/desktop/Direct2D/devices-and-device-contexts) verwenden, um direkt auf Direct3D 11-Geräten zu rendern.
 
- 
+ 
 
 Dieses Thema enthält folgende Abschnitte:
 
 -   [Introduction (Einführung)](#introduction)
--   [Übersicht über API-Interoperabilität](#api-interoperability-overview)
--   [Interoperabilitäts Szenarien](#interoperability-scenarios)
-    -   [Direct3D 10,1 Geräte Freigabe mit Direct2D](#direct3d-101-device-sharing-with-direct2d)
-    -   [DXGI 1,1 synchronisierte freigegebene Oberflächen](#dxgi-11-synchronized-shared-surfaces)
-    -   [Interoperabilität zwischen Direct3D 9Ex und DXGI-basierten APIs](#interoperability-between-direct3d-9ex-and-dxgi-based-apis)
+-   [Übersicht über die API-Interoperabilität](#api-interoperability-overview)
+-   [Interoperabilitätsszenarien](#interoperability-scenarios)
+    -   [Direct3D 10.1-Gerätefreigabe mit Direct2D](#direct3d-101-device-sharing-with-direct2d)
+    -   [DXGI 1.1 Synchronisierte freigegebene Oberflächen](#dxgi-11-synchronized-shared-surfaces)
+    -   [Interoperabilität zwischen Direct3D 9Ex- und DXGI-basierten APIs](#interoperability-between-direct3d-9ex-and-dxgi-based-apis)
 -   [Zusammenfassung](#conclusion)
 
 ## <a name="introduction"></a>Einführung
 
-In diesem Dokument bezieht sich die Interoperabilität der Windows-Grafik-API auf die gemeinsame Nutzung derselben Renderingoberfläche durch verschiedene APIs. Diese Art von Interoperabilität ermöglicht es Anwendungen, überzeugende Anzeigen durch Nutzung mehrerer Windows-Grafik-APIs zu erstellen und die Migration zu neuen Technologien zu vereinfachen, indem die Kompatibilität mit vorhandenen APIs gewahrt bleibt.
+In diesem Dokument bezieht sich die Interoperabilität der Windows-Grafik-API auf die Gemeinsame Nutzung derselben Renderingoberfläche durch verschiedene APIs. Diese Art von Interoperabilität ermöglicht Es Anwendungen, überzeugende Anzeigen zu erstellen, indem sie mehrere Windows-Grafik-APIs nutzen und die Migration zu neuen Technologien vereinfachen, indem die Kompatibilität mit vorhandenen APIs aufrechterhalten wird.
 
-In Windows 7 (und Windows Vista SP2 mit Windows 7 Interop Pack, Vista 7ip) sind die Grafik Rendering-APIs Direct3D 11, Direct2D, Direct3D 10,1, Direct3D 10,0, Direct3D 9Ex, Direct3D 9c und frühere Direct3D-APIs sowie GDI und GDI+. Windows Imaging Component (WIC) und DirectWrite sind verwandte Technologien für die Bildverarbeitung, und Direct2D führt Text Rendering aus. Die DirectX-Videobeschleunigung-API (DXVA), die auf Direct3D 9c und Direct3D 9Ex basiert, wird für die Video Verarbeitung verwendet.
+Unter Windows 7 (und Windows Vista SP2 mit Windows 7 Interop Pack, Vista 7IP) sind die Grafikrendering-APIs Direct3D 11, Direct2D, Direct3D 10.1, Direct3D 10.0, Direct3D 9Ex, Direct3D 9c und frühere Direct3D-APIs sowie GDI und GDI+. Windows-Bilderstellungskomponente (WIC) und DirectWrite sind verwandte Technologien für die Bildverarbeitung, und Direct2D führt Textrendering durch. DirectX Video Acceleration API (DXVA), basierend auf Direct3D 9c und Direct3D 9Ex, wird für die Videoverarbeitung verwendet.
 
-Da sich Windows-Grafik-APIs in Bezug auf Direct3D entwickeln, investiert Microsoft mehr Aufwand, um Interoperabilität über APIs hinweg zu gewährleisten. Neu entwickelte Direct3D-APIs und APIs auf höherer Ebene, die auf Direct3D-APIs basieren, bieten auch Unterstützung für die Überbrückung der Kompatibilität mit älteren APIs. Zur Veranschaulichung können Direct2D-Anwendungen Direct3D 10,1 verwenden, indem Sie ein Direct3D 10,1-Gerät freigeben. Außerdem können die APIs Direct3D 11, Direct2D und Direct3D 10,1 die DirectX Graphics Infrastructure (DXGI) 1,1 nutzen, wodurch synchronisierte freigegebene Oberflächen aktiviert werden, die die Interoperabilität zwischen diesen APIs vollständig unterstützen. DXGI 1,1-basierte APIs interagieren mit GDI und mit GDI+ by Association, indem Sie den GDI-Gerätekontext von einer DXGI 1,1-Oberfläche abrufen. Weitere Informationen finden Sie in der DXGI-und GDI-Interoperabilitäts Dokumentation auf MSDN.
+Mit der Weiterentwicklung von Windows-Grafik-APIs hin zu Direct3D-basierten ApIs investiert Microsoft mehr Aufwand in die Sicherstellung der APIs-übergreifenden Interoperabilität. Neu entwickelte Direct3D-APIs und APIs auf höherer Ebene, die auf Direct3D-APIs basieren, bieten bei Bedarf auch Unterstützung für die Überbrückung der Kompatibilität mit älteren APIs. Zur Veranschaulichung können Direct2D-Anwendungen Direct3D 10.1 verwenden, indem sie ein Direct3D 10.1-Gerät freigeben. Außerdem können Direct3D 11-, Direct2D- und Direct3D 10.1-APIs die Vorteile von DirectX Graphic Infrastructure (DXGI) 1.1 nutzen, das synchronisierte freigegebene Oberflächen ermöglicht, die die Interoperabilität zwischen diesen APIs vollständig unterstützen. DXGI 1.1-basierte APIs interoperabilität mit GDI und mit GDI+ nach Zuordnung, indem sie den GDI-Gerätekontext von einer DXGI 1.1-Oberfläche abrufen. Weitere Informationen finden Sie in der DXGI- und GDI-Interoperabilitätsdokumentation auf MSDN.
 
-Nicht synchronisierte Oberflächen Freigabe wird von der Direct3D 9Ex-Laufzeit unterstützt. Auf DXVA basierende Videoanwendungen können das Direct3D 9Ex-und DXGI-Interoperabilitäts Hilfsprogramm für die Direct3D 9Ex-basierte DXVA-Interoperabilität mit Direct3D 11 für den Compute-Shader verwenden, oder Sie können mit Direct2D für 2D-Steuerelemente oder Text Rendering interagieren. WIC und DirectWrite interagieren auch mit GDI, Direct2D und by Association, anderen Direct3D-APIs.
+Die nicht synchronisierte Oberflächenfreigabe wird von der Direct3D 9Ex-Runtime unterstützt. DXVA-basierte Videoanwendungen können das Direct3D 9Ex- und DXGI-Interoperabilitätshilfe für die Direct3D 9Ex-basierte DXVA-Interoperabilität mit Direct3D 11 für Compute-Shader verwenden oder mit Direct2D für 2D-Steuerelemente oder Textrendering zusammenarbeiten. WIC und DirectWrite können auch mit GDI, Direct2D und anderen Direct3D-APIs zusammenarbeiten.
 
-Direct3D 10,0, Direct3D 9c und ältere Direct3D-Laufzeiten unterstützen keine freigegebenen Oberflächen. System Speicher Kopien werden weiterhin für die Interoperabilität mit GDI-oder DXGI-basierten APIs verwendet.
+Direct3D 10.0, Direct3D 9c und ältere Direct3D-Runtimes unterstützen keine freigegebenen Oberflächen. Systemspeicherkopien werden weiterhin für die Interoperabilität mit GDI- oder DXGI-basierten APIs verwendet.
 
-Beachten Sie, dass die Interoperabilitäts Szenarien in diesem Dokument auf mehrere Grafiken-APIs verweisen, die auf eine freigegebene Renderingoberfläche und nicht auf das gleiche Anwendungsfenster rendern. Die Synchronisierung für separate APIs, die auf verschiedene Oberflächen abzielen, die anschließend in das gleiche Fenster zusammengesetzt werden, liegt außerhalb des Umfangs dieses Papiers.
+Beachten Sie, dass sich die Interoperabilitätsszenarien in diesem Dokument auf mehrere Grafik-APIs beziehen, die auf eine freigegebene Renderingoberfläche und nicht auf dasselbe Anwendungsfenster gerendert werden. Die Synchronisierung für separate APIs für verschiedene Oberflächen, die dann im selben Fenster zusammengesetzt werden, liegt außerhalb des Rahmens dieses Whitepapers.
 
-## <a name="api-interoperability-overview"></a>Übersicht über API-Interoperabilität
+## <a name="api-interoperability-overview"></a>Übersicht über die API-Interoperabilität
 
-Die Interoperabilität der Oberflächen Freigabe von Windows-Grafik-APIs kann in Bezug auf API-zu-API-Szenarien und die entsprechenden Interoperabilitäts Funktionen beschrieben werden. Ab Windows 7 und ab Windows Vista SP2 mit 7ip enthalten neue APIs und zugehörige Laufzeiten Direct2D und verwandte Technologien: Direct3D 11 und DXGI 1,1. Die GDI-Leistung wurde in Windows 7 ebenfalls verbessert. Direct3D 10,1 wurde in Windows Vista SP1 eingeführt. Das folgende Diagramm zeigt die Interoperabilitäts Unterstützung zwischen APIs.
+Die Oberflächenfreigabe-Interoperabilität von Windows-Grafik-APIs kann in Bezug auf API-zu-API-Szenarien und die entsprechende Interoperabilitätsfunktionalität beschrieben werden. Ab Windows 7 und ab Windows Vista SP2 mit 7IP enthalten neue APIs und zugehörige Runtimes Direct2D und zugehörige Technologien: Direct3D 11 und DXGI 1.1. Die GDI-Leistung wurde auch in Windows 7 verbessert. Direct3D 10.1 wurde in Windows Vista SP1 eingeführt. Das folgende Diagramm zeigt die Interoperabilitätsunterstützung zwischen APIs.
 
-![Diagramm der Interoperabilitäts Unterstützung zwischen Windows-Grafik-APIs](images/surface-sharing-interoperability.png)
+![Diagramm der Interoperabilitätsunterstützung zwischen Windows-Grafik-APIs](images/surface-sharing-interoperability.png)
 
-In diesem Diagramm zeigen Pfeile Interoperabilitäts Szenarien, in denen die verbundenen APIs auf die gleiche Oberfläche zugreifen können. Blaue Pfeile weisen auf die in Windows Vista eingeführten Interoperabilitäts Mechanismen hin. Grüne Pfeile zeigen die Interoperabilitäts Unterstützung für neue APIs oder Verbesserungen an, die älteren APIs helfen, mit neueren APIs zu interagieren. Grüne Pfeile stellen z. b. die Geräte Freigabe, synchronisierte Shared Surface-Unterstützung, Direct3D 9Ex/DXGI-Synchronisierungs Hilfe und das Abrufen eines GDI-Geräte Kontexts von einer kompatiblen Oberfläche dar.
+In diesem Diagramm zeigen Pfeile Interoperabilitätsszenarien an, in denen die verbundenen APIs auf dieselbe Oberfläche zugreifen können. Blaue Pfeile zeigen Interoperabilitätsmechanismen an, die in Windows Vista eingeführt wurden. Grüne Pfeile zeigen die Interoperabilitätsunterstützung für neue APIs oder Verbesserungen an, die älteren APIs bei der Interoperabilität mit neueren APIs helfen. Grüne Pfeile stellen beispielsweise die Gerätefreigabe, die Unterstützung der synchronisierten freigegebenen Oberfläche, das Direct3D 9Ex/DXGI-Synchronisierungshilfselement und das Abrufen eines GDI-Gerätekontexts von einer kompatiblen Oberfläche dar.
 
-## <a name="interoperability-scenarios"></a>Interoperabilitäts Szenarien
+## <a name="interoperability-scenarios"></a>Interoperabilitätsszenarien
 
-Ab Windows 7 und Windows Vista 7ip unterstützen die gängigen Angebote von Windows-Grafik-APIs das Rendering mehrerer APIs zur gleichen DXGI 1,1-Oberfläche.
+Ab Windows 7 und Windows Vista 7IP unterstützen gängige Angebote von Windows-Grafik-APIs mehrere APIs, die auf derselben DXGI 1.1-Oberfläche gerendert werden.
 
-**Direct3D 11, Direct3D 10,1, Direct2D – Interoperabilität untereinander**
+**Direct3D 11, Direct3D 10.1, Direct2D – Interoperabilität miteinander**
 
-Direct3D 11-, Direct3D 10,1-und Direct2D-APIs (und die zugehörigen APIs wie DirectWrite und WIC) können miteinander interagieren, indem Sie entweder die Freigabe von Direct3D 10,1-Geräten oder synchronisierte freigegebene Oberflächen verwenden.
+Direct3D 11-, Direct3D 10.1- und Direct2D-APIs (und zugehörige APIs wie DirectWrite und WIC) können über direct3D 10.1-Gerätefreigabe oder synchronisierte freigegebene Oberflächen miteinander zusammenarbeiten.
 
-### <a name="direct3d-101-device-sharing-with-direct2d"></a>Direct3D 10,1 Geräte Freigabe mit Direct2D
+### <a name="direct3d-101-device-sharing-with-direct2d"></a>Direct3D 10.1-Gerätefreigabe mit Direct2D
 
-Die Geräte Freigabe zwischen Direct2D und Direct3D 10,1 ermöglicht es einer Anwendung, beide APIs zu verwenden, um nahtlos und effizient auf derselben DXGI 1,1-Oberfläche zu renderarbeiten, wobei dasselbe zugrunde liegende Direct3D-Geräte Objekt verwendet wird. Direct2D bietet die Möglichkeit, Direct2D-APIs über ein vorhandenes Direct3D 10,1-Gerät aufzurufen. dabei wird die Tatsache genutzt, dass Direct2D auf Direct3D 10,1-und DXGI 1,1-Laufzeiten aufbaut. Die folgenden Code Ausschnitte veranschaulichen, wie Direct2D das Direct3D 10,1 Device-Renderziel von einer DXGI 1,1-Oberfläche erhält, die dem Gerät zugeordnet ist. Das Direct3D 10,1-geräterrenderziel kann Direct2D-Zeichnungs Aufrufe zwischen beginDraw-und EndDraw-APIs ausführen.
+Die Gerätefreigabe zwischen Direct2D und Direct3D 10.1 ermöglicht es einer Anwendung, beide APIs zu verwenden, um nahtlos und effizient auf derselben DXGI 1.1-Oberfläche zu rendern, wobei das gleiche zugrunde liegende Direct3D-Geräteobjekt verwendet wird. Direct2D bietet die Möglichkeit, Direct2D-APIs mit einem vorhandenen Direct3D 10.1-Gerät aufzurufen. Dabei wird die Tatsache genutzt, dass Direct2D auf Direct3D 10.1- und DXGI 1.1-Runtimes basiert. Die folgenden Codeausschnitte veranschaulichen, wie Direct2D das Direct3D 10.1-Geräterenderingziel von einer DXGI 1.1-Oberfläche erhält, die dem Gerät zugeordnet ist. Das Direct3D 10.1-Geräterenderingziel kann Direct2D-Zeichnungsaufrufe zwischen BeginDraw- und EndDraw-APIs ausführen.
 
 
 ```C++
@@ -113,32 +113,32 @@ pSwapChain->Present(0, 0);
 
 **Anmerkungen**
 
--   Das zugehörige Direct3D 10,1-Gerät muss das BGRA-Format unterstützen. Dieses Gerät wurde durch Aufrufen von D3D10CreateDevice1 mit dem Parameter \_ d3d10 \_ \_ BGRA- \_ Unterstützung für das Gerät erstellt. Das BGRA-Format wird ab Direct3D 10-Featureebene 9,1 unterstützt.
--   Die Anwendung sollte nicht mehrere ID2D1RenderTargets erstellen, die demselben Direct3D 10.1-Gerät zugeordnet ist.
--   Um eine optimale Leistung zu erzielen, sollten Sie mindestens eine Ressource jederzeit herum aufbewahren, z. b. Texturen oder Oberflächen, die dem Gerät zugeordnet sind.
+-   Das zugeordnete Direct3D 10.1-Gerät muss das BGRA-Format unterstützen. Dieses Gerät wurde durch Aufrufen von D3D10CreateDevice1 mit dem Parameter D3D10 \_ CREATE \_ DEVICE \_ BGRA SUPPORT \_ erstellt. Das BGRA-Format wird ab Direct3D 10 Featureebene 9.1 unterstützt.
+-   Die Anwendung sollte nicht mehrere ID2D1RenderTargets erstellen, die demselben Direct3D10.1-Gerät zuordnen.
+-   Um eine optimale Leistung zu erzielen, sollten Sie jederzeit mindestens eine Ressource verwenden, z. B. Texturen oder Oberflächen, die dem Gerät zugeordnet sind.
 
-Die Geräte Freigabe eignet sich für die Prozess interne, Single Thread-Verwendung eines renderinggeräts, das von den Direct3D 10,1-und Direct2D-Rendering-APIs gemeinsam genutzt wird. Synchronisierte freigegebene Oberflächen ermöglichen Multithread-, Prozess interne und prozessübergreifende Verwendung mehrerer renderinggeräte, die von Direct3D 10,1-, Direct2D-und Direct3D 11-APIs verwendet werden.
+Die Gerätefreigabe eignet sich für die Prozess-Singlethread-Verwendung eines Renderinggeräts, das von Direct3D 10.1- und Direct2D-Rendering-APIs gemeinsam genutzt wird. Synchronisierte freigegebene Oberflächen ermöglichen die Verwendung mehrerer Renderinggeräte, die von Direct3D 10.1-, Direct2D- und Direct3D 11-APIs verwendet werden.
 
-Eine weitere Methode der Direct3D 10,1-und Direct2D-Interoperabilität ist die Verwendung von ID3D1RenderTarget:: foatesharedbitmap, die ein ID2D1Bitmap-Objekt aus idxgisurface erstellt. Sie können eine Direct3D 10.1-Szene in die Bitmap schreiben und Sie mit Direct2D Rendering. Weitere Informationen finden Sie unter [ID2D1RenderTarget:: kreatesharedbitmap-Methode](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-createsharedbitmap).
+Eine weitere Methode der Direct3D 10.1- und Direct2D-Interoperabilität ist die Verwendung von ID3D1RenderTarget::CreateSharedBitmap, die ein ID2D1Bitmap-Objekt aus IDXGISurface erstellt. Sie können eine Direct3D10.1-Szene in die Bitmap schreiben und mit Direct2D rendern. Weitere Informationen finden Sie unter [ID2D1RenderTarget::CreateSharedBitmap-Methode.](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-createsharedbitmap)
 
-### <a name="direct2d-software-rasterization"></a>Direct2D Software rasterization
+### <a name="direct2d-software-rasterization"></a>Direct2D-Softwarerasterung
 
-Die Geräte Freigabe mit Direct3D 10,1 wird nicht unterstützt, wenn der Software-Renderer Direct2D verwendet wird, z. b. durch Angeben von D2D1 \_ \_ \_ \_ Renderziel-Verwendungs Erzwingen von \_ Software \_ Rendering in D2D1 \_ renderzielverwendung \_ \_ beim Erstellen eines Direct2D Renderziels.
+Die Gerätefreigabe mit Direct3D 10.1 wird bei Verwendung des Direct2D-Softwarerenderers nicht unterstützt, z. B. durch Angabe von D2D1 RENDER TARGET USAGE FORCE SOFTWARE RENDERING in D2D1 RENDER TARGET USAGE beim Erstellen eines \_ \_ \_ \_ \_ \_ \_ \_ \_ Direct2D-Renderziels.
 
-Direct2D kann das WARP10 Software Raster verwenden, um das Gerät für Direct3D 10 oder Direct3D 11 freizugeben, aber die Leistung sinkt erheblich.
+Direct2D kann den WARP10-Softwareraster verwenden, um das Gerät mit Direct3D 10 oder Direct3D 11 zu teilen, aber die Leistung verringert sich erheblich.
 
-### <a name="dxgi-11-synchronized-shared-surfaces"></a>DXGI 1,1 synchronisierte freigegebene Oberflächen
+### <a name="dxgi-11-synchronized-shared-surfaces"></a>DXGI 1.1 Synchronisierte freigegebene Oberflächen
 
-Direct3D 11, Direct3D 10,1-und Direct2D-APIs verwenden alle DXGI 1,1, das die Funktionalität zum Synchronisieren von Lese-und Schreib vorlese-und Schreib vorschreiben auf derselben Grafikspeicher Oberfläche (DXGISurface1) durch mindestens zwei Direct3D-Geräte bietet. Die renderinggeräte mit synchronisierten freigegebenen Oberflächen können Direct3D 10,1-oder Direct3D 11-Geräte sein, die jeweils in demselben Prozess oder prozessübergreifenden Prozess ausgeführt werden.
+Direct3D 11-, Direct3D 10.1- und Direct2D-APIs verwenden dxgi 1.1, das die Funktionalität bietet, das Lesen von und Schreiben von zwei oder mehr Direct3D-Geräten von derselben Videospeicheroberfläche (DXGISurface1) zu synchronisieren. Die Renderinggeräte, die synchronisierte freigegebene Oberflächen verwenden, können Direct3D 10.1- oder Direct3D 11-Geräte sein, die jeweils im gleichen Prozess oder prozessübergreifend ausgeführt werden.
 
-Anwendungen können synchronisierte freigegebene Oberflächen verwenden, um zwischen allen DXGI 1,1-basierten Geräten, z. b. Direct3D 11 und Direct3D 10,1, oder zwischen Direct3D 11 und Direct2D zu interagieren, indem das Direct3D 10,1-Gerät vom Direct2D-Renderziel Objekt erhalten wird.
+Anwendungen können synchronisierte freigegebene Oberflächen verwenden, um zwischen dxgi 1.1-basierten Geräten wie Direct3D 11 und Direct3D 10.1 oder zwischen Direct3D 11 und Direct2D zu zusammenarbeiten, indem sie das Direct3D 10.1-Gerät aus dem Direct2D-Renderzielobjekt abrufen.
 
-Stellen Sie in den APIs Direct3D 10,1 und höher für die Verwendung von DXGI 1,1 sicher, dass das Direct3D-Gerät mithilfe eines DXGI 1,1-Adapter Objekts erstellt wird, das aus dem DXGI 1,1 Factory-Objekt aufgeführt wird. Rufen Sie CreateDXGIFactory1 auf, um das IDXGIFactory1-Objekt zu erstellen, und EnumAdapters1, um das IDXGIAdapter1-Objekt aufzulisten. Das IDXGIAdapter1-Objekt muss als Teil des D3D10CreateDevice-oder D3D10CreateDeviceAndSwapChain-Aufrufes aufgerufen werden. Weitere Informationen zu DXGI 1,1-APIs finden Sie im [Programmier Handbuch für DXGI](https://msdn.microsoft.com/library/ee418147(VS.85).aspx).
+Stellen Sie in Direct3D 10.1 und höher sicher, dass das Direct3D-Gerät mit einem DXGI 1.1-Adapterobjekt erstellt wird, das aus dem DXGI 1.1-Factoryobjekt aufzählt wird, um DXGI 1.1 zu verwenden. Rufen Sie CreateDXGIFactory1 auf, um das IDXGIFactory1-Objekt zu erstellen, und EnumAdapters1, um das IDXGIAdapter1-Objekt aufzuzählen. Das IDXGIAdapter1-Objekt muss als Teil des Aufrufs D3D10CreateDevice oder D3D10CreateDeviceAndSwapChain übergeben werden. Weitere Informationen zu DXGI 1.1-APIs finden Sie im [Programmierhandbuch für DXGI](https://msdn.microsoft.com/library/ee418147(VS.85).aspx).
 
 ### <a name="apis"></a>APIs
 
-**D3d10 \_ \_ ressourcenmisc \_ Shared \_ keyedmutex**  
-Wenn Sie die synchronisierte freigegebene Ressource erstellen, legen Sie d3d10 \_ Resource \_ misc \_ Shared \_ keyedmutex in das \_ Flag d3d10 Resource \_ misc fest \_ .  
+**D3D10-RESSOURCE \_ \_ MISC \_ SHARED \_ KEYEDMUTEX**  
+Legen Sie beim Erstellen der synchronisierten freigegebenen Ressource D3D10 \_ RESOURCE \_ MISC \_ SHARED \_ KEYEDMUTEX in D3D10 \_ RESOURCE \_ MISC FLAG \_ fest.  
 
 
 ```C++
@@ -153,24 +153,24 @@ typedef enum D3D10_RESOURCE_MISC_FLAG {
 
 
 
-**D3d10 \_ \_ ressourcenmisc \_ Shared \_ keyedmutex**  
-Ermöglicht die Synchronisierung der erstellten Ressource mithilfe der idxgikeyedmutex:: acquiresync-und releasesync-APIs. Die folgende Ressourcen Erstellung Direct3D 10,1-APIs, die alle einen d3d10- \_ ressourcenmisc-Flag-Parameter annehmen, wurden \_ \_ erweitert, um das neue Flag zu unterstützen.  
+**D3D10-RESSOURCE \_ \_ MISC \_ SHARED \_ KEYEDMUTEX**  
+Ermöglicht die Synchronisierung der erstellten Ressource mithilfe der APIs IDXGIKeyedMutex::AcquireSync und ReleaseSync. Die folgenden Direct3D 10.1-APIs für die Ressourcenerstellung, die alle einen D3D10 \_ RESOURCE \_ MISC FLAG-Parameter verwenden, wurden \_ erweitert, um das neue Flag zu unterstützen.  
 
 -   ID3D10Device1::CreateTexture1D
 -   ID3D10Device1::CreateTexture2D
 -   ID3D10Device1::CreateTexture3D
--   ID3D10Device1:: up Buffer
+-   ID3D10Device1::CreateBuffer
 
   
-Wenn eine der aufgelisteten Funktionen mit dem "d3d10 \_ Resource \_ misc \_ Shared \_ keyedmutex"-Flag aufgerufen wird, kann die zurückgegebene Schnittstelle für eine idxgikeyedmutex-Schnittstelle abgefragt werden, die die acquiresync-und releasesync-APIs implementiert, um den Zugriff auf die-Oberfläche zu synchronisieren. Das Gerät, das die Oberfläche erstellt, und alle anderen Geräte, die die Oberfläche öffnen (mit opensharedresource), müssen idxgikeyedmutex:: acquiresync aufrufen, bevor alle renderingbefehle auf der Oberfläche ausgeführt werden, und idxgikeyedmutex:: releasesync beim Rendering.  
-Von Warp-und ref-Geräten werden keine freigegebenen Ressourcen unterstützt. Wenn Sie versuchen, eine Ressource mit diesem Flag entweder auf einem Warp-oder ref-Gerät zu erstellen, gibt die Create-Methode einen E \_ outo fmemory-Fehlercode zurück.  
-**idxgikeyedmutex-Schnittstelle**  
-Eine neue Schnittstelle in DXGI 1,1, idxgikeyedmutex, stellt einen Schlüssel gebundenen Mutex dar, der exklusiven Zugriff auf eine freigegebene Ressource ermöglicht, die von mehreren Geräten verwendet wird. Eine Referenz Dokumentation zu dieser Schnittstelle und den beiden Methoden acquiresync und releasesync finden Sie unter [idxgikeyedmutex](https://msdn.microsoft.com/library/ee421920(VS.85).aspx).  
+Wenn eine der aufgelisteten Funktionen mit dem D3D10 \_ RESOURCE \_ MISC \_ SHARED \_ KEYEDMUTEX-Flag aufgerufen wird, kann die zurückgegebene Schnittstelle nach einer IDXGIKeyedMutex-Schnittstelle abgefragt werden, die AcquireSync- und ReleaseSync-APIs implementiert, um den Zugriff auf die Oberfläche zu synchronisieren. Das Gerät, das die Oberfläche erstellt, und jedes andere Gerät, das die Oberfläche öffnet (mit OpenSharedResource), muss IDXGIKeyedMutex::AcquireSync vor rendering-Befehlen auf der Oberfläche und IDXGIKeyedMutex::ReleaseSync aufrufen, wenn das Rendering fertig ist.  
+WARP- und REF-Geräte unterstützen keine freigegebenen Ressourcen. Wenn Sie versuchen, eine Ressource mit diesem Flag auf einem WARP- oder REF-Gerät zu erstellen, gibt die create-Methode einen E \_ OUTOFMEMORY-Fehlercode zurück.  
+**IDXGIKEYEDMUTEX-SCHNITTSTELLE**  
+Eine neue Schnittstelle in DXGI 1.1, IDXGIKeyedMutex, stellt einen schlüsselierten Mutex dar, der exklusiven Zugriff auf eine freigegebene Ressource ermöglicht, die von mehreren Geräten verwendet wird. Eine Referenzdokumentation zu dieser Schnittstelle und den beiden Methoden AcquireSync und ReleaseSync finden Sie unter [IDXGIKeyedMutex](https://msdn.microsoft.com/library/ee421920(VS.85).aspx).  
 </dl>
 
-### <a name="sample-synchronized-surface-sharing-between-two-direct3d-101-devices"></a>Beispiel: synchronisierte Oberflächen Freigabe zwischen zwei Direct3D 10,1-Geräten
+### <a name="sample-synchronized-surface-sharing-between-two-direct3d-101-devices"></a>Beispiel: Synchronisierte Oberflächenfreigabe zwischen zwei Direct3D 10.1-Geräten
 
-Im folgenden Beispiel wird die gemeinsame Nutzung einer Oberfläche zwischen zwei Direct3D 10,1-Geräten veranschaulicht. Die synchronisierte freigegebene Oberfläche wird von einem Direct3D 10.1-Gerät erstellt.
+Das folgende Beispiel veranschaulicht die Gemeinsame Nutzung einer Oberfläche zwischen zwei Direct3D 10.1-Geräten. Die synchronisierte freigegebene Oberfläche wird von einem Direct3D10.1-Gerät erstellt.
 
 
 ```C++
@@ -210,7 +210,7 @@ If ( FAILED( hr ) || ( g_pDXGIKeyedMutex_dev1 == NULL ) )
 
 
 
-Das gleiche Direct3D 10.1-Gerät kann die synchronisierte freigegebene Oberfläche für das Rendering abrufen, indem es acquiresync aufrufen und dann die Oberfläche für das Rendering des anderen Geräts durch Aufrufen von releasesync freigibt. Wenn Sie die synchronisierte freigegebene Oberfläche nicht mit einem anderen Direct3D-Gerät freigeben, kann der Ersteller die synchronisierte freigegebene Oberfläche (zum Starten und Beenden des Renderings) abrufen und freigeben, indem er den gleichen Schlüsselwert verwendet.
+Das gleiche Direct3D10.1-Gerät kann die synchronisierte freigegebene Oberfläche für das Rendering abrufen, indem AcquireSync aufruft und dann die Oberfläche für das Rendering des anderen Geräts durch Aufrufen von ReleaseSync freigegeben wird. Wenn die synchronisierte freigegebene Oberfläche nicht für ein anderes Direct3D-Gerät freigegeben wird, kann der Ersteller die synchronisierte freigegebene Oberfläche (zum Starten und Beenden des Renderings) abrufen und freigeben, indem er denselben Schlüsselwert erhält und frei gibt.
 
 
 ```C++
@@ -240,7 +240,7 @@ if (result == WAIT_OBJECT_0)
 
 
 
-Das zweite Direct3D 10.1-Gerät kann die synchronisierte freigegebene Oberfläche für das Rendering abrufen, indem es acquiresync aufrufen und dann die Oberfläche für das erste Rendern des Geräts durch Aufrufen von releasesync freigibt. Beachten Sie, dass Gerät 2 die synchronisierte freigegebene Oberfläche mithilfe desselben Schlüssel Werts abrufen kann, der im releasesync-Aufruf von Gerät 1 angegeben wurde.
+Das zweite Direct3D10.1-Gerät kann die synchronisierte freigegebene Oberfläche zum Rendern abrufen, indem AcquireSync aufruft und dann die Oberfläche für das Rendering des ersten Geräts durch Aufrufen von ReleaseSync freigegeben wird. Beachten Sie, dass Gerät 2 die synchronisierte freigegebene Oberfläche mit demselben Schlüsselwert wie im ReleaseSync-Aufruf von Gerät 1 erhalten kann.
 
 
 ```C++
@@ -260,7 +260,7 @@ if ( result == WAIT_OBJECT_0 )
 
 
 
-Weitere Geräte, die dieselbe Oberfläche gemeinsam nutzen, können die Oberfläche mithilfe zusätzlicher Schlüssel abrufen und freigeben, wie in den folgenden Aufrufen gezeigt.
+Zusätzliche Geräte, die sich die gleiche Oberfläche teilen, können die Oberfläche mithilfe zusätzlicher Schlüssel nach und nach abrufen und freigeben, wie in den folgenden Aufrufen gezeigt.
 
 
 ```C++
@@ -291,72 +291,72 @@ result = g_pDXGIKeyedMutex_dev1->ReleaseSync(0);
 
 
 
-Beachten Sie, dass eine reale Anwendung immer auf eine zwischen Oberfläche renderierender ist, die dann auf die freigegebene Oberfläche kopiert wird, um zu verhindern, dass ein Gerät auf ein anderes Gerät wartet, das die Oberfläche nutzt
+Beachten Sie, dass eine reale Anwendung möglicherweise immer auf einer Zwischenoberfläche gerendert wird, die dann auf die freigegebene Oberfläche kopiert wird, um zu verhindern, dass ein Gerät auf ein anderes Gerät wartet, das die Oberfläche teilt.
 
-### <a name="using-synchronized-shared-surfaces-with-direct2d-and-direct3d-11"></a>Verwenden von synchronisierten freigegebenen Oberflächen mit Direct2D und Direct3D 11
+### <a name="using-synchronized-shared-surfaces-with-direct2d-and-direct3d-11"></a>Verwenden synchronisierter freigegebener Oberflächen mit Direct2D und Direct3D 11
 
-Ebenso kann für die gemeinsame Nutzung zwischen Direct3D 11-und Direct3D 10,1-APIs eine synchronisierte freigegebene Oberfläche entweder von API-Geräten aus erstellt und für die anderen API-Geräte, in oder außerhalb des Prozesses, freigegeben werden.
+Auf ähnliche Weise kann für die Freigabe zwischen Direct3D 11- und Direct3D 10.1-APIs eine synchronisierte freigegebene Oberfläche entweder über ein API-Gerät erstellt und mit den anderen API-Geräten gemeinsam genutzt werden.
 
-Anwendungen, die Direct2D verwenden, können ein Direct3D 10,1-Gerät freigeben und eine synchronisierte freigegebene Oberfläche verwenden, um mit Direct3D 11 oder anderen Direct3D 10,1-Geräten zusammenzuarbeiten, unabhängig davon, ob Sie zum gleichen Prozess oder zu unterschiedlichen Prozessen gehören. Für Single-Process-Anwendungen mit nur einem Thread ist die Geräte Freigabe jedoch die leistungsfähigsten und effizientesten Interoperabilitäts Methode zwischen Direct2D und Direct3D 10 oder Direct3D 11.
+Anwendungen, die Direct2D verwenden, können ein Direct3D 10.1-Gerät gemeinsam nutzen und eine synchronisierte freigegebene Oberfläche verwenden, um mit Direct3D 11 oder anderen Direct3D 10.1-Geräten zu zusammenarbeiten, unabhängig davon, ob sie demselben Prozess oder verschiedenen Prozessen angehören. Bei Singlethreadanwendungen mit nur einem Prozess ist die Gerätefreigabe jedoch die leistungsfähigste und effizienteste Methode für die Interoperabilität zwischen Direct2D und Direct3D 10 oder Direct3D 11.
 
-### <a name="software-rasterizer"></a>Software-Rasterizer
+### <a name="software-rasterizer"></a>Softwarerasterizer
 
-Synchronisierte freigegebene Oberflächen werden nicht unterstützt, wenn Anwendungen die Direct3D-oder Direct2D-Software-Raster verwenden, einschließlich des verweisrasterizers und des Warp, anstelle der Hardwarebeschleunigung.
+Synchronisierte freigegebene Oberflächen werden nicht unterstützt, wenn Anwendungen die Direct3D- oder Direct2D-Softwarerasterizer verwenden, einschließlich des Referenzrasterizers und WARP, anstatt die Grafikhardwarebeschleunigung zu verwenden.
 
-### <a name="interoperability-between-direct3d-9ex-and-dxgi-based-apis"></a>Interoperabilität zwischen Direct3D 9Ex und DXGI-basierten APIs
+### <a name="interoperability-between-direct3d-9ex-and-dxgi-based-apis"></a>Interoperabilität zwischen Direct3D 9Ex- und DXGI-basierten APIs
 
-Die Direct3D 9Ex-APIs enthielten das Konzept der Oberflächen Freigabe, damit andere APIs von der freigegebenen Oberfläche lesen können. Um Lese-und Schreibvorgänge für eine freigegebene Direct3D 9Ex-Oberfläche zu verwenden, müssen Sie der Anwendung selbst eine manuelle Synchronisierung hinzufügen.
+Direct3D 9Ex-APIs enthielten das Konzept der Oberflächenfreigabe, damit andere APIs von der freigegebenen Oberfläche lesen können. Um Lese- und Schreibvorgänge für eine freigegebene Direct3D 9Ex-Oberfläche freizugeben, müssen Sie der Anwendung selbst eine manuelle Synchronisierung hinzufügen.
 
-### <a name="direct3d-9ex-shared-surfaces-plus-manual-synchronization-helper"></a>Direct3D 9Ex Shared-Oberflächen Plus Manuelles Synchronisieren-Hilfsprogramm
+### <a name="direct3d-9ex-shared-surfaces-plus-manual-synchronization-helper"></a>Direct3D 9Ex Shared Surfaces Plus Manual Synchronization Helper
 
-Die grundlegendste Aufgabe bei der Interoperabilität von Direct3D 9Ex und Direct3D 10 oder 11 besteht darin, eine einzige Oberfläche vom ersten Gerät (Gerät a) an das zweite Gerät (Gerät b) zu übergeben, sodass das Rendering von Gerät a vollständig abgeschlossen ist. Daher kann Gerät B diese Oberfläche ohne Sorgen nutzen. Diese Vorgehensweise ähnelt dem klassischen Producer-Consumer-Problem, und dieses Problem wird auf diese Weise modelliert. Das erste Gerät, das die-Oberfläche verwendet und dann aufgibt, ist der Producer (Gerät A), und das Gerät, das anfänglich wartet, ist der Consumer (Gerät B). Alle realen Anwendungen sind komplexer als dies, und Sie verketten mehrere Producer-Consumer-Bausteine, um die gewünschte Funktionalität zu erzielen.
+Die grundlegendste Aufgabe in der Interoperabilität von Direct3D 9Ex und Direct3D 10 oder 11 besteht darin, eine einzelne Oberfläche vom ersten Gerät (Gerät A) an das zweite Gerät (Gerät B) zu übergeben, sodass das Rendering von Gerät A garantiert abgeschlossen ist, wenn Gerät B ein Handle auf der Oberfläche erhält. Daher kann Gerät B diese Oberfläche ohne Bedenken verwenden. Dies ähnelt dem klassischen Producer-Consumer-Problem, und diese Diskussion modelliert das Problem auf diese Weise. Das erste Gerät, das die Oberfläche verwendet und dann auf den Producer (Gerät A) verzichten muss, und das Gerät, das anfänglich wartet, ist der Consumer (Gerät B). Jede reale Anwendung ist komplexer als diese und verkettet mehrere Producer-Consumer-Bausteine, um die gewünschte Funktionalität zu erstellen.
 
-Die Producer-Consumer-Bausteine werden mithilfe einer Warteschlange von Oberflächen in das Hilfsprogramm implementiert. Oberflächen werden vom Producer in die Warteschlange eingereiht und vom Consumer aus der Warteschlange entfernt. Das Hilfsprogramm führt drei COM-Schnittstellen ein: isurfacequeue, isurfaceproducer und isurfaceconsumer.
+Die Producer-Consumer-Bausteine werden im Hilfsfeld mithilfe einer Warteschlange von Oberflächen implementiert. Oberflächen werden vom Producer in die Enqueued und vom Consumer aus der Queuing entfernt. Das Hilfsprogramm führt drei COM-Schnittstellen ein: ISurfaceQueue, ISurfaceProducer und ISurfaceConsumer.
 
-### <a name="high-level-overview-of-helper"></a>High-Level Übersicht über das Hilfsprogramm
+### <a name="high-level-overview-of-helper"></a>High-Level Übersicht über Helper
 
-Das isurfakequeue-Objekt ist der Baustein für die Verwendung der freigegebenen Oberflächen. Es wird mit einem initialisierten Direct3D-Gerät und einer Beschreibung erstellt, um eine Fixed-Anzahl von freigegebenen Oberflächen zu erstellen. Das Queue-Objekt verwaltet die Erstellung von Ressourcen und das Öffnen von Code. Anzahl und Typ der Oberflächen werden korrigiert. Nachdem die Oberflächen erstellt wurden, kann Sie von der Anwendung nicht mehr hinzugefügt oder entfernt werden.
+Das ISurfaceQueue-Objekt ist der Baustein für die Verwendung der freigegebenen Oberflächen. Es wird mit einem initialisierten Direct3D-Gerät und einer Beschreibung erstellt, um eine feste Anzahl von freigegebenen Oberflächen zu erstellen. Das Warteschlangenobjekt verwaltet die Erstellung von Ressourcen und das Öffnen von Code. Anzahl und Typ der Oberflächen sind fest. Sobald die Oberflächen erstellt wurden, kann die Anwendung sie nicht hinzufügen oder entfernen.
 
-Jede Instanz des isurfakequeue-Objekts stellt eine unidirektionale Straße dar, die zum Senden von Oberflächen vom produzierenden Gerät an das verarbeitende Gerät verwendet werden kann. Mehrere unidirektionale Straßen können verwendet werden, um Oberflächen Freigabe Szenarien zwischen Geräten spezifischer Anwendungen zu ermöglichen.
+Jede Instanz des ISurfaceQueue-Objekts bietet eine Art einwegiger Straße, die verwendet werden kann, um Oberflächen vom erzeugenden Gerät an das verbrauchende Gerät zu senden. Es können mehrere solcher einweggeflagten Straßen verwendet werden, um Szenarien für die gemeinsame Nutzung von Oberflächen zwischen Geräten bestimmter Anwendungen zu ermöglichen.
 
-**Erstellung/Objekt Lebensdauer**  
-Es gibt zwei Möglichkeiten, das Warteschlangen Objekt zu erstellen: über "kreatesurfacequeue" oder über die Klon Methode von isurfacequeue. Da es sich bei den Schnittstellen um COM-Objekte handelt, gilt die Standard Verwaltung von com  
+**Erstellung/Objektlebensdauer**  
+Es gibt zwei Möglichkeiten, das Warteschlangenobjekt zu erstellen: über CreateSurfaceQueue oder über die Clone-Methode von ISurfaceQueue. Da es sich bei den Schnittstellen um COM-Objekte handelt, gilt die standardmäßige COM-Lebensdauerverwaltung.  
 **Producer/Consumer-Modell**  
-Enqueue (): der Producer ruft diese Funktion auf, um anzugeben, dass Sie mit der-Oberfläche abgeschlossen ist, die jetzt für ein anderes Gerät verfügbar sein kann. Nach dem Zurückgeben dieser Funktion hat das Producer-Gerät keine Rechte mehr auf die Oberfläche, und es ist unsicher, Sie weiterhin zu verwenden.  
-Dequeue (): das verarbeitende Gerät ruft diese Funktion auf, um eine freigegebene Oberfläche zu erhalten. Die API stellt sicher, dass alle aus der Warteschlange eingereihten Oberflächen zur Verwendung bereit sind.  
+Enqueue (): Der Producer ruft diese Funktion auf, um anzugeben, dass dies mit der Oberfläche erfolgt, die nun für ein anderes Gerät verfügbar sein kann. Nach der Rückkehr von dieser Funktion verfügt das Producergerät nicht mehr über Rechte für die Oberfläche und ist unsicher, es weiterhin zu verwenden.  
+Aus der Queue (): Das nutzende Gerät ruft diese Funktion auf, um eine freigegebene Oberfläche zu erhalten. Die API stellt sicher, dass alle aus der Queued- Entfernten entfernten Oberflächen für die Verwendung bereit sind.  
 **Metadaten**  
 Die API unterstützt das Zuordnen von Metadaten zu den freigegebenen Oberflächen.  
-In der Warteschlange () haben Sie die Möglichkeit, zusätzliche Metadaten anzugeben, die an das verarbeitende Gerät weitergeleitet werden. Die Metadaten müssen kleiner als der zum Erstellungs Zeitpunkt bekannte Höchstwert sein.  
-Aus Queue () kann optional ein Puffer und ein Zeiger auf die Größe des Puffers übergeben werden. Die Warteschlange füllt den Puffer mit den Metadaten aus dem entsprechenden aufrufeschlangenbefehl.  
+Enqueue() hat die Möglichkeit, zusätzliche Metadaten anzugeben, die an das nutzende Gerät übergeben werden. Die Metadaten müssen kleiner als ein maximaler Wert sein, der zum Erstellungszeitpunkt bekannt ist.  
+Dequeue() kann optional einen Puffer und einen Zeiger auf die Größe des Puffers übergeben. Die Warteschlange füllt den Puffer mit den Metadaten des entsprechenden Enqueue-Aufrufs aus.  
 **Klonen?**  
-Jedes isurfakequeue-Objekt löst eine unidirektionale Synchronisierung. Wir gehen davon aus, dass die große Mehrheit der Anwendungen, die diese API verwenden, ein geschlossenes System verwenden wird. Das einfachste geschlossene System mit zwei Geräten, die die Oberflächen hin-und Hersenden, erfordert zwei Warteschlangen. Das isurfacequeue-Objekt verfügt über eine Clone ()-Methode, um das Erstellen mehrerer Warteschlangen zu ermöglichen, die alle Teil derselben größeren Pipeline sind.  
-Klon erstellt ein neues isurfakequeue-Objekt aus einem vorhandenen Objekt und teilt alle geöffneten Ressourcen auf. Das resultierende-Objekt verfügt über genau die gleichen Oberflächen wie die Quell Warteschlange. Geklonte Warteschlangen können über unterschiedliche metadatengrößen verfügen.  
+Jedes ISurfaceQueue-Objekt löst eine einseitige Synchronisierung. Wir gehen davon aus, dass die überwiegende Mehrheit der Anwendungen, die diese API verwenden, ein geschlossenes System verwenden wird. Das einfachste geschlossene System mit zwei Geräten, die Oberflächen hin und her senden, erfordert zwei Warteschlangen. Das ISurfaceQueue-Objekt verfügt über eine Clone()-Methode, die es ermöglicht, mehrere Warteschlangen zu erstellen, die alle Teil derselben größeren Pipeline sind.  
+Clone erstellt ein neues ISurfaceQueue-Objekt aus einem vorhandenen Objekt und teilt alle geöffneten Ressourcen zwischen ihnen. Das resultierende Objekt verfügt über genau die gleichen Oberflächen wie die Quellwarteschlange. Geklonte Warteschlangen können unterschiedliche Metadatengrößen aufweisen.  
 **Surface**  
-Isurfakequeue übernimmt die Verantwortung für das Erstellen und Verwalten seiner Oberflächen. Es ist nicht zulässig, beliebige Oberflächen in die Warteschlange zu stellen. Außerdem sollte eine Oberfläche nur über einen aktiven "Besitzer" verfügen. Er sollte sich entweder in einer bestimmten Warteschlange befinden oder von einem bestimmten Gerät verwendet werden. Es ist nicht zulässig, es in mehreren Warteschlangen zu verwenden, oder die Oberfläche kann von Geräten weiterhin verwendet werden, nachdem Sie in die Warteschlange eingereiht wurde.  
+ISurfaceQueue übernimmt die Verantwortung für das Erstellen und Verwalten seiner Oberflächen. Es ist nicht gültig, beliebige Oberflächen in die Enqueue einzudingen. Darüber hinaus sollte eine Oberfläche nur über einen aktiven "Besitzer" verfügen. Sie sollte sich entweder in einer bestimmten Warteschlange befinden oder von einem bestimmten Gerät verwendet werden. Es ist nicht zulässig, sie in mehreren Warteschlangen zu speichern oder geräte die Oberfläche nach dem Einreihen in die Warteschlange weiter zu verwenden.  
 </dl>
 
 ### <a name="api-details"></a>API-Details
 
-### <a name="isurfacequeue"></a>Isurfakequeue
+### <a name="isurfacequeue"></a>IsurfaceQueue
 
-Die Warteschlange ist für das Erstellen und Verwalten der freigegebenen Ressourcen zuständig. Außerdem bietet es die Funktionalität zum Verketten mehrerer Warteschlangen mithilfe von Klonen. Die Warteschlange verfügt über Methoden, die das erbende Gerät und ein consumergerät öffnen. Es kann immer nur jeweils einer der beiden geöffnet werden.
+Die Warteschlange ist für das Erstellen und Verwalten der freigegebenen Ressourcen verantwortlich. Sie bietet auch die Funktionalität zum Verketten mehrerer Warteschlangen mit clone. Die Warteschlange verfügt über Methoden, mit denen das erzeugende Gerät und ein verbrauchendes Gerät geöffnet werden. Es kann jeweils nur eine geöffnet werden.
 
-Die Warteschlange stellt die folgenden APIs bereit:
+Die Warteschlange macht die folgenden APIs verfügbar:
 
 
 
-|                             |                                                                                  |
+| API                            | BESCHREIBUNG                                                                                 |
 |-----------------------------|----------------------------------------------------------------------------------|
-| "Kreatesurfakequeue"          | Erstellt ein isurfakequeue-Objekt (die Stamm Warteschlange).                              |
-| Isurfakequeue:: openconsumer | Gibt eine Schnittstelle für das zu entmittelende Gerät zurück.                        |
-| Isurfakequeue:: openproducer | Gibt eine Schnittstelle für das herzustellende Gerät in die Warteschlange zurück                        |
-| Isurfakequeue:: Clone        | Erstellt ein isurfakequeue-Objekt, das Oberflächen mit dem Stamm Warteschlangen Objekt freigibt. |
+| CreateSurfaceQueue          | Erstellt ein ISurfaceQueue-Objekt (die "Root"-Warteschlange).                              |
+| ISurfaceQueue::OpenConsumer | Gibt eine Schnittstelle zurück, über die das verwendende Gerät aus der Queue aus der Quequeue ausrückt.                        |
+| ISurfaceQueue::OpenProducer | Gibt eine Schnittstelle zurück, die das erzeugende Gerät in die Enqueue einträgt.                        |
+| ISurfaceQueue::Clone        | Erstellt ein ISurfaceQueue-Objekt, das Oberflächen mit dem Stammwarteschlangenobjekt teilt. |
 
 
 
- 
+ 
 
-**"Kreatesurfakequeue"**  
+**CreateSurfaceQueue**  
 
 
 ```C++
@@ -374,10 +374,10 @@ typedef struct SURFACE_QUEUE_DESC {
 
 **Mitglieder**  
 
-**Breite**, **Höhe**  der Dimensionen der freigegebenen Oberflächen. Alle freigegebenen Oberflächen müssen die gleichen Dimensionen aufweisen.  
-**Format** Das Format der freigegebenen Oberflächen. Alle freigegebenen Oberflächen müssen das gleiche Format aufweisen. Die gültigen Formate sind abhängig von den Geräten, die verwendet werden, da verschiedene Geräte Paare verschiedene Format Typen gemeinsam nutzen können.  
-**Numoberflächen**  Die Anzahl der Oberflächen, die Teil der Warteschlange sind. Dies ist eine Fixed-Nummer.  
- **MetaDataSize**  Die maximale Größe des metadatenpuffers.  
+**Breite**, **Höhe**  Die Abmessungen der freigegebenen Oberflächen. Alle freigegebenen Oberflächen müssen die gleichen Dimensionen haben.  
+**Formatieren** Das Format der freigegebenen Oberflächen. Alle freigegebenen Oberflächen müssen das gleiche Format haben. Die gültigen Formate hängen von den verwendeten Geräten ab, da unterschiedliche Gerätepaare unterschiedliche Formattypen gemeinsam nutzen können.  
+**NumSurfaces**  Die Anzahl der Oberflächen, die Teil der Warteschlange sind. Dies ist eine feste Zahl.  
+ **MetaDataSize**  Die maximale Größe des Metadatenpuffers.  
 **Flags**  Flags zum Steuern des Verhaltens der Warteschlange. Siehe Hinweise.  
 
 
@@ -394,24 +394,24 @@ HRESULT CreateSurfaceQueue(
 
 **Parameter**
 
- *PDE SC* \[ in \]  der Beschreibung der zu erstellenden freigegebenen Oberflächen Warteschlange.  
+ *pDesc* \[ in \]  Die Beschreibung der zu erstellenden freigegebenen Surface-Warteschlange.  
 
- *pdevice* \[ auf \]  dem Gerät, das zum Erstellen der freigegebenen Oberflächen verwendet werden soll. Dies ist ein expliziter Parameter aufgrund eines Features in Windows Vista. Für Oberflächen, die von Direct3D 9 und Direct3D 10 gemeinsam genutzt werden, müssen die Oberflächen mit Direct3D 9 erstellt werden.  
+ *pDevice* \[ in \]  Das Gerät, das zum Erstellen der freigegebenen Oberflächen verwendet werden soll. Dies ist ein expliziter Parameter aufgrund eines Features in Windows Vista. Für Oberflächen, die von Direct3D 9 und Direct3D 10 gemeinsam genutzt werden, müssen die Oberflächen mit Direct3D 9 erstellt werden.  
 
- *ppqueue* \[ Out \]  bei der Rückgabe enthält einen Zeiger auf das isurfakequeue-Objekt.  
+ *ppQueue* \[ out \]  Enthält bei rückgabe einen Zeiger auf das ISurfaceQueue-Objekt.  
 
 
 **Rückgabewerte**
 
-Wenn *pdevice* Ressourcen nicht freigeben kann, gibt diese Funktion einen ungültigen DXGI- \_ Fehler zurück \_ \_ . Diese Funktion erstellt die Ressourcen. Wenn ein Fehler auftritt, wird ein Fehler zurückgegeben. Wenn der Vorgang erfolgreich ist, wird S OK zurückgegeben \_ .
+Wenn *pDevice* nicht in der Lage ist, Ressourcen gemeinsam zu nutzen, gibt diese Funktion DXGI \_ ERROR INVALID CALL \_ \_ zurück. Diese Funktion erstellt die Ressourcen. Wenn ein Fehler auftritt, wird ein Fehler zurückgegeben. Wenn dies erfolgreich ist, wird S \_ OK zurückgegeben.
 
 **Anmerkungen**
 
-Beim Erstellen des Warteschlangen Objekts werden auch alle-Oberflächen erstellt. Bei allen Oberflächen handelt es sich um 2D-Renderziele. Sie werden mit den \_ \_ \_ Ressourcenflags d3d10 BIND-Renderziel und d3d10 \_ Bind- \_ Shader erstellt \_ (oder die entsprechenden Flags für die unterschiedlichen Laufzeiten).
+Beim Erstellen des Warteschlangenobjekts werden auch alle Oberflächen erstellt. Alle Oberflächen werden als 2D-Renderziele angenommen und mit den festgelegten RESSOURCENflags D3D10 \_ BIND RENDER TARGET und \_ \_ D3D10 \_ BIND \_ SHADER RESOURCE \_ (oder den entsprechenden Flags für die verschiedenen Runtimes) erstellt.
 
-Der Entwickler kann ein Flag angeben, das angibt, ob mehrere Threads auf die Warteschlange zugreifen werden. Wenn keine Flags festgelegt sind (**Flags** = = 0), wird die Warteschlange von mehreren Threads verwendet. Der Entwickler kann einen Single Thread-Zugriff angeben, der den Synchronisierungs Code deaktiviert und eine Leistungsverbesserung für diese Fälle bietet. Jede geklonte Warteschlange verfügt über ein eigenes Flag, daher ist es möglich, dass für unterschiedliche Warteschlangen im System verschiedene Synchronisierungs Steuerungen vorhanden sind.
+Der Entwickler kann ein Flag angeben, das angibt, ob mehrere Threads auf die Warteschlange zugreifen. Wenn keine Flags festgelegt sind **(Flags** == 0), wird die Warteschlange von mehreren Threads verwendet. Der Entwickler kann den Singlethreadzugriff angeben, wodurch der Synchronisierungscode deaktiviert und eine Leistungsverbesserung für diese Fälle ermöglicht wird. Jede geklonte Warteschlange verfügt über ein eigenes Flag, sodass verschiedene Warteschlangen im System über unterschiedliche Synchronisierungssteuerelemente verfügen können.
 
- **Einen Producer öffnen**  
+ **Öffnen eines Producers**  
 
 
 ```C++
@@ -425,18 +425,18 @@ HRESULT OpenProducer(
 
 **Parameter**  
 
-*pdevice* \[ in\]  
+*pDevice* \[ In\]  
 
-Das Producer-Gerät, das in die Warteschlange für die Warteschlange eingereiht wird. 
+Das Producergerät, das Oberflächen in die Warteschlange einreiht. 
 
-*ppproducer* \[ Out \] gibt ein Objekt an die Producer-Schnittstelle zurück.  
+*ppProducer* \[ out \] Gibt ein -Objekt an die Producerschnittstelle zurück.  
 
 
 **Rückgabewerte**
 
-Wenn das Gerät keine Oberflächen freigeben kann, wird der ungültige DXGI-Fehler zurückgegeben \_ \_ \_ .
+Wenn das Gerät keine Oberflächen freigeben kann, gibt DXGI \_ ERROR \_ INVALID CALL \_ zurück.
 
-**Einen Consumer öffnen**  
+**Öffnen eines Consumers**  
 
 
 ```C++
@@ -449,22 +449,22 @@ HRESULT OpenConsumer(
 
 
 **Parameter**  
- *pdevice* \[ in\]  
- Das consumergerät, das die Oberfläche aus der Warteschlange entfernt. 
- *ppconsumer* \[ Out \]  gibt ein Objekt an die consumerschnittstelle zurück.  
+ *pDevice* \[ In\]  
+ Das Consumergerät, das Oberflächen aus der Oberflächenwarteschlange aus der Warteschlange entfernt. 
+ *ppConsumer* \[ out \]  Gibt ein Objekt an die Consumerschnittstelle zurück.  
 
 
 **Rückgabewerte**
 
-Wenn das Gerät keine Oberflächen freigeben kann, wird der ungültige DXGI-Fehler zurückgegeben \_ \_ \_ .
+Wenn das Gerät keine Oberflächen freigeben kann, gibt DXGI \_ ERROR \_ INVALID CALL \_ zurück.
 
 **Anmerkungen**
 
-Diese Funktion öffnet alle Oberflächen in der Warteschlange für das Eingabegerät und speichert Sie zwischen. Nachfolgende Aufrufe von Dequeue werden einfach in den Cache übergegangen und müssen die Oberflächen nicht jedes Mal erneut öffnen.
+Diese Funktion öffnet alle Oberflächen in der Warteschlange für das Eingabegerät und speichert sie zwischen. Nachfolgende Aufrufe von Dequeue wechseln einfach zum Cache und müssen die Oberflächen nicht jedes Mal erneut öffnen.
 
 
 
-### <a name="cloning-an-idxgixsurfacequeue"></a>Klonen eines idxgixsurfakequeue
+### <a name="cloning-an-idxgixsurfacequeue"></a>Klonen einer IDXGIXSurfaceQueue
 
 
 
@@ -478,7 +478,7 @@ typedef struct SHARED_SURFACE_QUEUE_CLONE_DESC {
 
 
 
- Member **MetaDataSize** und **Flags** haben das gleiche Verhalten wie bei "kreatesurfagequeue".  
+**Die** **Elemente MetaDataSize** **und Flags** haben das gleiche Verhalten wie für CreateSurfaceQueue.  
 
 
 
@@ -493,16 +493,16 @@ HRESULT Clone(
 
 **Parameter**
 
-*PDE SC* \[ in \] einer Struktur, die eine Beschreibung des zu erstellenden Klon Objekts bereitstellt. Dieser Parameter muss initialisiert werden.  
-*ppqueue* \[ Out \] gibt das initialisierte Objekt zurück.  
+*pDesc* \[ in Einer Struktur, die eine Beschreibung des zu \] erstellenden Klonobjekts enthält. Dieser Parameter sollte initialisiert werden.  
+*ppQueue* \[ out \] Gibt das initialisierte Objekt zurück.  
 </dl>
 
 **Anmerkungen**
 
-Sie können aus jedem vorhandenen Warteschlangen Objekt klonen, auch wenn es nicht der Stamm ist.  
+Sie können aus jedem vorhandenen Warteschlangenobjekt klonen, auch wenn es sich nicht um das Stammobjekt handelt.  
 </dl>
 
-### <a name="idxgixsurfaceconsumer"></a>Idxgixsurfakeconsumer
+### <a name="idxgixsurfaceconsumer"></a>IDXGIXSurfaceConsumer
 
 <dl>
 
@@ -520,43 +520,43 @@ HRESULT Dequeue(
 
 
 **Parameter**  
-*ID* \[ in\]  
-Die refi-ID einer 2D-Oberfläche des nutzenden Geräts.  
+*id* \[ in\]  
+Die REFIID einer 2D-Oberfläche des verbrauchten Geräts.  
 
--   Bei einem IDirect3DDevice9 muss die refi-ID \_ \_ uuidof (IDirect3DTexture9) sein.
--   Bei einem ID3D10Device muss die refi-ID \_ \_ uuidof (ID3D10Texture2D) sein.
--   Bei einem ID3D11Device muss die refi-ID \_ \_ uuidof (ID3D11Texture2D) sein.
+-   Für IDirect3DDevice9 sollte die REFIID \_ \_ uuidof(IDirect3DTexture9) sein.
+-   Für eine ID3D10Device sollte die REFIID \_ \_ uuidof(ID3D10Texture2D) sein.
+-   Bei einem ID3D11Device muss die REFIID \_ \_ uuidof(ID3D11Texture2D) sein.
 
-*ppsurface* \[ Out \] gibt einen Zeiger auf die-Oberfläche zurück.  
-*pbuffer* \[ in, out \] ein optionaler Parameter, und wenn not **null** ist, enthält bei der Rückgabe die Metadaten, die an den entsprechenden aufruteschlangen-Befehl übergeben wurden.  
-*pbuffersize* \[ in \] die Größe von *pbuffer* in Bytes. Gibt die Anzahl von Bytes zurück, die in *pbuffer* zurückgegeben werden. Wenn der einreihen-Rückruf keine Metadaten bereitstellt, wird *pbuffer* auf 0 festgelegt.  
-*dwtimeout* \[ in \] gibt einen Timeout Wert an. Weitere Details finden Sie in den hinweisen.  
+*ppSurface* \[ out \] Gibt einen Zeiger auf die Oberfläche zurück.  
+*pBuffer* \[ in, out \] Ein optionaler Parameter und, wenn nicht **NULL,** enthält bei der Rückgabe die Metadaten, die beim entsprechenden Enqueue-Aufruf übergeben wurden.  
+*pBufferSize* \[ in, out \] Die Größe von *pBuffer* in Bytes. Gibt die Anzahl der in *pBuffer* zurückgegebenen Bytes zurück. Wenn der Enqueue-Aufruf keine Metadaten bereitstellte, wird *pBuffer* auf 0 festgelegt.  
+*dwTimeout* \[ in \] Gibt einen Timeoutwert an. Weitere Informationen finden Sie in den Hinweisen.  
 </dl>
 
 **Rückgabewerte**
 
-Diese Funktion kann das Timeout Timeout zurückgeben, \_ Wenn ein Timeout Wert angegeben wird und die Funktion nicht vor dem Timeout Wert zurückgegeben wird. Siehe Hinweise. Wenn keine Oberflächen verfügbar sind, gibt die Funktion zurück, wobei *ppsurface* auf **null**, *pbuffersize* auf 0 und der Rückgabewert 0x80070120 (Win32 \_ zu \_ HRESULT (Wartezeit \_ Timeout)) festgelegt ist.  
+Diese Funktion kann WAIT \_ TIMEOUT zurückgeben, wenn ein Timeoutwert angegeben ist und die Funktion nicht vor dem Timeoutwert zurückgegeben wird. Siehe Hinweise. Wenn keine Oberflächen verfügbar sind, gibt die Funktion zurück, wobei *ppSurface* auf **NULL** festgelegt ist, *pBufferSize* auf 0 festgelegt ist und der Rückgabewert 0x80070120 ist (WIN32 \_ TO \_ HRESULT(WAIT \_ TIMEOUT)).  
 </dl>
 
 **Anmerkungen**
 
-Diese API kann blockieren, wenn die Warteschlange leer ist. Der Parameter " *dwtimeout* " funktioniert identisch mit den Windows-Synchronisierungs-APIs, z. b. "WaitForSingleObject". Verwenden Sie für ein nicht blockierendes Verhalten einen Timeout Wert von 0.  
+Diese API kann blockieren, wenn die Warteschlange leer ist. Der *dwTimeout-Parameter* funktioniert identisch mit den Windows-Synchronisierungs-APIs, z. B. WaitForSingleObject. Verwenden Sie für nicht blockierende Verhaltensweisen ein Timeout von 0.  
 </dl>
 
-### <a name="isurfaceproducer"></a>Isurfaceproducer
+### <a name="isurfaceproducer"></a>ISurfaceProducer
 
-Diese Schnittstelle bietet zwei Methoden, mit denen die APP Oberflächen in die Warteschlange eingereiht. Nachdem eine Oberfläche in die Warteschlange eingereiht wurde, ist der Surface-Zeiger nicht mehr gültig und kann nicht sicher verwendet werden. Die einzige Aktion, die die Anwendung mit dem Zeiger ausführen sollte, besteht darin, Sie freizugeben.
+Diese Schnittstelle stellt zwei Methoden bereit, die es der App ermöglichen, Oberflächen in die Quehnung zu stellen. Nachdem eine Oberfläche in die Quehen eingedrunget wurde, ist der Oberflächenzeiger nicht mehr gültig und kann nicht mehr sicher verwendet werden. Die einzige Aktion, die die Anwendung mit dem Zeiger ausführen soll, besteht darin, sie freizugeben.
 
 
 
-|                           |                                                                                                                                                       |
+| Methode                          | BESCHREIBUNG                                                                                                                                                      |
 |---------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Isurfaceproducer:: Einreihen in Warteschlange | Fügt eine Oberfläche in die Warteschlange des Warteschlangen Objekts ein. Nachdem dieser Vorgang abgeschlossen wurde, erfolgt der Producer mit der Oberfläche, und die Oberfläche ist für ein anderes Gerät bereit. |
-| Isurfaceproducer:: Flush   | Wird verwendet, wenn die Anwendungen nicht blockierende Verhalten aufweisen sollten. Einzelheiten finden Sie in den Hinweisen.                                                                  |
+| ISurfaceProducer::Enqueue | Reiht eine Oberfläche in die Warteschlange ein. Nach Abschluss dieses Aufrufs wird der Producer mit der Oberfläche fertig, und die Oberfläche ist für ein anderes Gerät bereit. |
+| ISurfaceProducer::Flush   | Wird verwendet, wenn die Anwendungen nicht blockierend sein sollen. Einzelheiten finden Sie in den Hinweisen.                                                                  |
 
 
 
- 
+ 
 
 **Einreihen in die Warteschlange**  
 
@@ -573,21 +573,21 @@ HRESULT Enqueue(
 
 
 **Parameter**  
-*pSurface* \[ in\]  
-Die Oberfläche des produzierenden Geräts, das in die Warteschlange eingereiht werden muss. Dabei muss es sich um eine aus der Warteschlange entfernte Oberfläche aus demselben Warteschlangen Netzwerk handeln. *pbuffer* \[ in \] einem optionalen Parameter, der verwendet wird, um Metadaten zu übergeben. Er sollte auf die Daten zeigen, die an den Befehl zum Entfernen aus der Warteschlange weitergegeben werden.  
-*BufferSize* \[ in \] der Größe von *pbuffer*(in Bytes).  
-*Flags* \[ in \] einem optionalen Parameter, der das Verhalten dieser Funktion steuert. Das einzige Flag ist das Surface \_ Queue- \_ Flag \_ \_ nicht \_ warten. Weitere Informationen finden Sie in den Hinweisen zum leeren. Wenn kein Flag (*Flags* = = 0) überschritten wird, wird das standardmäßige Blockierungs Verhalten verwendet.  
+*pSurface* \[ In\]  
+Die Oberfläche des erzeugenden Geräts, das in die Queued-Enqueuing eingeändert werden muss. Diese Oberfläche muss eine Oberfläche sein, die aus dem gleichen Warteschlangennetzwerk aus der Warteschlange entfernt wird. *pBuffer* \[ in \] Ein optionaler Parameter, der zum Übergeben von Metadaten verwendet wird. Er sollte auf die Daten verweisen, die an den Dequeue-Aufruf übergeben werden.  
+*BufferSize* \[ in \] Die Größe von *pBuffer* in Bytes.  
+*Flags* \[ in \] Ein optionaler Parameter, der das Verhalten dieser Funktion steuert. Das einzige Flag ist SURFACE \_ QUEUE FLAG DO NOT \_ \_ \_ \_ WAIT. Weitere Informationen finden Sie in den Anmerkungen zu Flush. Wenn kein Flag übergeben wird (*Flags* == 0), wird das standardmäßige Blockierungsverhalten verwendet.  
 </dl>
 
 **Rückgabewerte**
 
-Diese Funktion kann den DXGI-Fehler zurückgeben, \_ \_ Wenn das \_ \_ \_ Flag für die nicht Wartezeit der Surface-Warteschlange \_ \_ \_ \_ verwendet wird.  
+Diese Funktion kann DXGI \_ ERROR WAS STILL DRAWING \_ \_ \_ zurückgeben, wenn ein SURFACE QUEUE FLAG \_ DO NOT \_ \_ \_ \_ WAIT-Flag verwendet wird.  
 </dl>
 
 **Anmerkungen**
 
--   Diese Funktion setzt die-Oberfläche in die Warteschlange. Wenn die Anwendung kein Surface \_ Queue \_ -Flag angibt \_ \_ \_ , wird diese Funktion blockiert und führt eine GPU-CPU-Synchronisierung durch, um sicherzustellen, dass das gesamte Rendering auf der in die Warteschlange eingereihten Oberfläche vollständig ist. Wenn diese Funktion erfolgreich ausgeführt wird, steht eine Oberfläche zum Entfernen aus der Warteschlange zur Verfügung. Wenn Sie ein nicht blockierendes Verhalten wünschen, verwenden Sie das \_ \_ Flag nicht warten. Weitere Informationen finden Sie unter Flush ().
--   Gemäß den Regeln für die COM-Verweis Zählung wird die von "toqueue" zurückgegebene Oberfläche "adressf ()" verwendet, damit die Anwendung dies nicht tun muss. Nach dem Aufrufen von Enqueue muss die Anwendung die Oberfläche freigeben, da Sie Sie nicht mehr verwenden.
+-   Mit dieser Funktion wird die Oberfläche in die Warteschlange gestellt. Wenn die Anwendung SURFACE QUEUE FLAG DO NOT WAIT nicht anordnt, blockiert diese Funktion und führt eine \_ \_ \_ \_ GPU-CPU-Synchronisierung durch, um sicherzustellen, dass das gesamte Rendering auf der in die Warteschlange gestellten Oberfläche \_ abgeschlossen ist. Wenn diese Funktion erfolgreich ist, steht eine Oberfläche für das Aus der Queue zur Verfügung. Wenn Sie nicht blockierende Verhalten wünschen, verwenden Sie das Flag DO \_ NOT \_ WAIT. Weitere Informationen finden Sie unter Flush().
+-   Die von Dequeue zurückgegebene Oberfläche ist nach den COM-Verweiszählungsregeln AddRef(), sodass die Anwendung dies nicht tun muss. Nach dem Aufruf von Enqueue muss die Anwendung die Oberfläche wieder frei geben, da sie sie nicht mehr verwendet.
 
 **Leerung**  
 
@@ -603,44 +603,44 @@ HRESULT Flush(
 
 **Parameter**  
 *Flags* \[in\]  
-Das einzige Flag ist das Surface \_ Queue- \_ Flag \_ \_ nicht \_ warten. Siehe Hinweise. *noberflächen* \[ Out \] gibt die Anzahl der Oberflächen zurück, die noch ausstehend sind und nicht geleert werden.  
+Das einzige Flag ist SURFACE \_ QUEUE FLAG DO NOT \_ \_ \_ \_ WAIT. Siehe Hinweise. *nSurfaces* \[ out \] Gibt die Anzahl der Oberflächen zurück, die noch ausstehend sind und nicht geleert werden.  
 </dl>
 
 **Rückgabewerte**
 
-Diese Funktion kann den DXGI-Fehler zurückgeben, \_ \_ \_ \_ Wenn das Flag für die Surface- \_ Warteschlange \_ \_ \_ nicht \_ gewartet wird. Diese Funktion gibt S \_ OK zurück, wenn beliebige Oberflächen erfolgreich geleert wurden. Diese Funktion gibt den DXGI-Fehler zurück, der \_ \_ \_ nur gezeichnet wurde, \_ Wenn keine Oberflächen geleert wurden. Zusammen geben der Rückgabewert und die *Oberflächen* für die Anwendung an, welche Arbeit durchgeführt wurde und ob eine beliebige Arbeit zu erledigen ist.  
+Diese Funktion kann DXGI \_ ERROR WAS STILL DRAWING \_ \_ \_ zurückgeben, wenn das FLAG SURFACE QUEUE \_ FLAG DO NOT WAIT verwendet \_ \_ \_ \_ wird. Diese Funktion gibt S \_ OK zurück, wenn Oberflächen erfolgreich geleert wurden. Diese Funktion gibt DXGI ERROR WAS STILL DRAWING nur dann \_ \_ \_ \_ zurück, wenn keine Oberflächen geleert wurden. Zusammen geben der Rückgabewert und *nSurfaces* der Anwendung an, welche Arbeit ausgeführt wurde und ob noch Arbeit übrig ist.  
 </dl>
 
 **Anmerkungen**
 
-Der Löschvorgang ist nur sinnvoll, wenn der vorherige aufrubungsvorgang das Flag "nicht warten" verwendet \_ \_ hat, andernfalls ist es ein No-op. Wenn der aufzurufende aufrubungsvorgang das \_ \_ Flag nicht warten verwendet hat, wird der einreihen-Vorgang sofort zurückgegeben, und die GPU-CPU-Synchronisierung Die Oberfläche wird weiterhin in die Warteschlange eingereiht, das ermittelende Gerät kann Sie jedoch nicht mehr verwenden, ist aber nicht zum Entfernen aus der Warteschlange verfügbar. Um zu versuchen, ein Commit für die-Oberfläche zum Entfernen aus der Warteschlange auszuführen, muss Flush aufgerufen werden. "Flush" versucht, alle Oberflächen zu übertragen, die gerade in die Warteschlange eingereiht werden. Wenn kein Flag an Flush weitergegeben wird, wird die gesamte Warteschlange blockiert und gelöscht, und alle darin ausgefallenen Oberflächen werden zum Entfernen aus der Warteschlange gelöscht. Wenn das \_ Flag nicht \_ warten verwendet wird, überprüft die Warteschlange die Oberflächen, um festzustellen, ob Sie bereit sind. dieser Schritt ist nicht blockierend. Oberflächen, die die GPU-CPU-Synchronisierung abgeschlossen haben, sind für das consumergerät bereit. Noch ausstehende Oberflächen sind nicht betroffen. Die-Funktion gibt die Anzahl der Oberflächen zurück, die noch geleert werden müssen.
+Die Leerung ist nur sinnvoll, wenn beim vorherigen Aufruf der Enqueue das FLAG DO NOT WAIT verwendet \_ \_ wurde. Andernfalls ist dies ein No-Op-Flag. Wenn beim Aufruf der Enqueue das FLAG DO NOT WAIT verwendet wurde, wird \_ \_ die Enqueue sofort zurückgegeben, und die GPU-CPU-Synchronisierung ist nicht garantiert. Die Oberfläche gilt weiterhin als in die Enqueued-Queue eingegrenzt, das erzeugende Gerät kann sie nicht mehr verwenden, ist aber nicht für das Aussetzen aus der Queue verfügbar. Um zu versuchen, die Oberfläche für die Löschung zu committen, muss Flush aufgerufen werden. Beim Leeren wird versucht, alle Oberflächen zu committen, die derzeit in die Quehen eingedrungen sind. Wenn kein Flag an Flush übergeben wird, wird die gesamte Warteschlange blockiert und gelöscht, und alle darin stehenden Oberflächen werden für die Warteschlangenlöschung vorbereitet. Wenn das \_ DO NOT \_ WAIT-Flag verwendet wird, überprüft die Warteschlange die Oberflächen, um festzustellen, ob eine davon bereit ist. Dieser Schritt ist nicht blockierend. Oberflächen, die die GPU-CPU-Synchronisierung abgeschlossen haben, sind für das Consumergerät bereit. Oberflächen, die noch ausstehen, sind davon nicht betroffen. Die Funktion gibt die Anzahl der Oberflächen zurück, die noch geleert werden müssen.
 
 > [!Note]  
-> Das leeren führt nicht zu einer Unterbrechung der Warteschlangen Semantik. Die API stellt sicher, dass für in die Warteschlange eingereihte Oberflächen zuerst ein Commit ausgeführt wird, bevor die Oberflächen später in die Warteschlange eingereiht werden.
+> Durch die Leerung wird die Warteschlangensemantik nicht unterbricht. Die API garantiert, dass oberflächen, die zuerst in die Quehen eingedred wurden, ein Commit ausgeführt werden, bevor Oberflächen später in die Quehen gestellt werden, unabhängig davon, wann die GPU-CPU-Synchronisierung erfolgt.
 
- 
+ 
 
   
 </dl>
 
-### <a name="direct3d-9ex-and-dxgi-interop-helper-how-to-use"></a>Direct3D 9Ex und DXGI Interop Helper: Verwendung
+### <a name="direct3d-9ex-and-dxgi-interop-helper-how-to-use"></a>Direct3D 9Ex and DXGI Interop Helper: How To Use
 
-Wir gehen davon aus, dass die meisten Verwendungs Fälle zwei Geräte umfassen, die eine Reihe von Oberflächen gemeinsam nutzen. Da dies auch das einfachste Szenario ist, wird in diesem Dokument ausführlich erläutert, wie die APIs verwendet werden, um dieses Ziel zu erreichen, eine nicht blockierende Variation erläutert und mit einem kurzen Abschnitt über die Initialisierung von drei Geräten endet.
+Wir gehen davon aus, dass die meisten Anwendungsfälle zwei Geräte umfassen, die eine Reihe von Oberflächen gemeinsam nutzen. Da dies auch das einfachste Szenario ist, wird in diesem Dokument erläutert, wie sie die APIs verwenden, um dieses Ziel zu erreichen, eine nicht blockierende Variante erläutert und mit einem kurzen Abschnitt zur Initialisierung für drei Geräte endet.
 
 ### <a name="two-devices"></a>Zwei Geräte
 
-Die Beispielanwendung, die dieses Hilfsprogramm verwendet, kann Direct3D 9Ex und Direct3D 11 gleichzeitig verwenden. Die Anwendung kann Inhalte mit beiden Geräten verarbeiten und Inhalte mithilfe von Direct3D 9 präsentieren. Die Verarbeitung kann das Rendern von Inhalten, das Decodieren von Videos, das Ausführen von Compute-Shadern usw. bedeuten. Die Anwendung wird für jeden Frame zuerst mit Direct3D 11 verarbeitet und dann mit Direct3D 9 und schließlich mit Direct3D 9 verarbeitet. Darüber hinaus werden bei der Verarbeitung mit Direct3D 11 einige Metadaten erzeugt, die der vorhandene Direct3D 9 verbrauchen muss. In diesem Abschnitt wird die Verwendung von Hilfsprogrammen in drei Teilen behandelt, die dieser Sequenz entsprechen: Initialisierung, Hauptschleife und Cleanup.
+Die Beispielanwendung, die dieses Hilfs verwendet, kann Direct3D 9Ex und Direct3D 11 zusammen verwenden. Die Anwendung kann Inhalte mit beiden Geräten verarbeiten und Inhalte mit Direct3D 9 präsentieren. Die Verarbeitung kann das Rendern von Inhalten, das Decodieren von Videos, das Ausführen von Compute-Shadern und so weiter bedeuten. Für jeden Frame wird die Anwendung zuerst mit Direct3D 11, dann mit Direct3D 9 und schließlich mit Direct3D 9 verarbeiten. Darüber hinaus erzeugt die Verarbeitung mit Direct3D 11 einige Metadaten, die die direct3D 9-Datei nutzen muss. In diesem Abschnitt wird die Verwendung des Hilfsers in drei Teilen behandelt, die dieser Sequenz entsprechen: Initialisierung, Hauptschleife und Bereinigung.
 
 **Initialisierung**  
 Die Initialisierung umfasst die folgenden Schritte:  
 
 1.  Initialisieren Sie beide Geräte.
-2.  Erstellen Sie die Stamm Warteschlange: m \_ 11warte Schlange.
-3.  Aus der Stamm Warteschlange Klonen: m \_ 9on11queue.
-4.  Openproducer/openconsumer in beiden Warteschlangen aufzurufen.
+2.  Erstellen Sie die Stammwarteschlange m \_ 11to9Queue.
+3.  Klonen aus der Stammwarteschlange: m \_ 9to11Queue.
+4.  Rufen Sie OpenProducer/OpenConsumer in beiden Warteschlangen auf.
 
-In den Warteschlangen Namen werden die Nummern 9 und 11 verwendet, um anzugeben, welche API der Producer ist und welche der Consumer: **m \_ ***Producer*** to ***Consumer*** Queue** ist. Entsprechend gibt m \_ 11warte Schlange eine Warteschlange an, für die das Gerät Direct3D 11 Oberflächen erzeugt, die vom Direct3D 9-Gerät genutzt werden. Entsprechend \_ gibt die Warteschlange "m 9to 11" eine Warteschlange an, für die Direct3D 9 Oberflächen erzeugt, die Direct3D 11 nutzt.  
-Die Stamm Warteschlange ist anfänglich voll und alle geklonten Warteschlangen sind anfänglich leer Dies sollte für die Anwendung kein Problem darstellen, mit Ausnahme des ersten Durchlaufs der Enqueues und aus der Warteschlange und der Verfügbarkeit von Metadaten. Wenn ein aus der Warteschlange eingereiht wird, dass keine Metadaten vorhanden sind, aber keine festgelegt wurde (weil anfänglich nichts vorhanden ist oder die einreihen nichts festgelegt hat), wird von der Warteschlange festgestellt, dass keine Metadaten  
+Die Warteschlangennamen verwenden die Zahlen 9 und 11, um anzugeben, welche API der Producer und welcher der Consumer ist: **m \_**_producer_*_to_*_consumer_*_Queue_*. m 11to9Queue gibt entsprechend eine Warteschlange an, für die das Direct3D 11-Gerät Oberflächen erzeugt, die das \_ Direct3D 9-Gerät verbraucht. Entsprechend gibt m 9to11Queue eine Warteschlange an, für die Direct3D 9 Oberflächen erzeugt, die \_ Direct3D 11 verbraucht.  
+Die Stammwarteschlange ist anfänglich voll, und alle geklonten Warteschlangen sind anfänglich leer. Dies sollte kein Problem für die Anwendung sein, mit Ausnahme des ersten Zyklus der Enqueues und Dequeues und der Verfügbarkeit von Metadaten. Wenn ein Aus der Enqueue nach Metadaten fragt, aber keine festgelegt wurden (entweder weil anfänglich nichts enthalten ist oder die Enqueue nichts festgelegt hat), erkennt das Aus der Enqueue, dass keine Metadaten empfangen wurden.  
 
 1.  **Initialisieren Sie beide Geräte.**  
     ```C++
@@ -650,9 +650,9 @@ Die Stamm Warteschlange ist anfänglich voll und alle geklonten Warteschlangen s
 
     
 
-2.  **Erstellen Sie die Stamm Warteschlange.**  
-    Dieser Schritt erstellt auch die-Oberflächen. Größen-und Format Einschränkungen sind identisch mit der Erstellung einer freigegebenen Ressource. Die Größe des metadatenpuffers ist zur Erstellungszeit korrigiert, und in diesem Fall wird nur ein uint übergeben.  
-    Die Warteschlange muss mit einer bestimmten Anzahl von Oberflächen erstellt werden. Die Leistung variiert abhängig vom jeweiligen Szenario. Das vorhanden sein mehrerer Oberflächen erhöht die Wahrscheinlichkeit, dass Geräte ausgelastet sind. Wenn es z. b. nur eine Oberfläche gibt, erfolgt keine Parallelisierung zwischen den beiden Geräten. Andererseits erhöht das Erhöhen der Anzahl der Oberflächen den Speicherbedarf, wodurch die Leistung beeinträchtigt werden kann. In diesem Beispiel werden zwei Oberflächen verwendet.  
+2.  **Erstellen Sie die Stammwarteschlange.**  
+    In diesem Schritt werden auch die Oberflächen erstellt. Größen- und Formateinschränkungen sind identisch mit dem Erstellen einer beliebigen freigegebenen Ressource. Die Größe des Metadatenpuffers wird zum Erstellungszeitpunkt festgelegt, und in diesem Fall übergeben wir lediglich einen UINT.  
+    Die Warteschlange muss mit einer festen Anzahl von Oberflächen erstellt werden. Die Leistung variiert je nach Szenario. Mehrere Oberflächen erhöhen die Wahrscheinlichkeit, dass Geräte ausgelastet sind. Wenn es beispielsweise nur eine Oberfläche gibt, gibt es keine Parallelisierung zwischen den beiden Geräten. Andererseits erhöht die Erhöhung der Anzahl von Oberflächen den Speicherbedarf, was die Leistung beeinträchtigen kann. In diesem Beispiel werden zwei Oberflächen verwendet.  
     ```C++
     SURFACE_QUEUE_DESC Desc;
     Desc.Width        = 640;
@@ -667,8 +667,8 @@ Die Stamm Warteschlange ist anfänglich voll und alle geklonten Warteschlangen s
 
     
 
-3.  **Klonen Sie die Stamm Warteschlange.**  
-    Jede geklonte Warteschlange muss die gleichen Oberflächen verwenden, kann jedoch unterschiedliche metadatenpuffergrößen und andere Flags aufweisen. In diesem Fall sind keine Metadaten von Direct3D 9 bis Direct3D 11 vorhanden.  
+3.  **Klonen Sie die Stammwarteschlange.**  
+    Jede geklonte Warteschlange muss die gleichen Oberflächen verwenden, kann jedoch unterschiedliche Metadatenpuffergrößen und unterschiedliche Flags aufweisen. In diesem Fall sind keine Metadaten von Direct3D 9 zu Direct3D 11 vorhanden.  
     ```C++
     SURFACE_QUEUE_CLONE_DESC Desc;
     Desc.MetaDataSize = 0;
@@ -679,8 +679,8 @@ Die Stamm Warteschlange ist anfänglich voll und alle geklonten Warteschlangen s
 
     
 
-4.  **Öffnen Sie die Geräte Producer und Consumer.**  
-    Die Anwendung muss diesen Schritt ausführen, bevor Enqueue und Dequeue aufgerufen wird. Beim Öffnen eines Producer und Consumer werden Schnittstellen zurückgegeben, die die Enqueue-/Dequeue-APIs enthalten.  
+4.  **Öffnen Sie die Producer- und Consumergeräte.**  
+    Die Anwendung muss diesen Schritt ausführen, bevor Enqueue und Dequeue aufgerufen werden. Beim Öffnen eines Producers und Consumers werden Schnittstellen zurückgegeben, die die Enqueue/Dequeue-APIs enthalten.  
     ```C++
     // Open for m_p9to11Queue.
     m_p9to11Queue->OpenProducer(m_pD3D9Device, &m_pD3D9Producer);
@@ -694,7 +694,7 @@ Die Stamm Warteschlange ist anfänglich voll und alle geklonten Warteschlangen s
     
 
 **Hauptschleife**  
-Die Verwendung der Warteschlange wird nach dem klassischen Producer/Consumer-Problem modelliert. Stellen Sie sich dies aus der Perspektive pro Gerät vor. Jedes Gerät muss die folgenden Schritte ausführen: Entfernen Sie die Warteschlange, um eine Oberfläche von der Warteschlange zu erhalten, und verarbeiten Sie Sie auf der Oberfläche. Für das Gerät Direct3D 11 ist die Verwendung von Direct3D 9 nahezu identisch.  
+Die Verwendung der Warteschlange wird nach dem klassischen Producer-Consumer-Problem modelliert. Stellen Sie sich dies aus Geräteperspektive vor. Jedes Gerät muss die folgenden Schritte ausführen: aus der Warteschlange ausreihen, um eine Oberfläche aus der Warteschlange zu erhalten, auf der Oberfläche zu verarbeiten und dann in die Produktionswarteschlange einzureihen. Für das Direct3D 11-Gerät ist die Verwendung von Direct3D 9 nahezu identisch.  
 
 
 ```C++
@@ -723,7 +723,7 @@ while (!done)
 
 
 **Bereinigen**  
-Dieser Schritt ist sehr unkompliziert. Zusätzlich zu den normalen Schritten zum Bereinigen von Direct3D-APIs muss die Anwendung die Rückgabe-com-Schnittstellen freigeben.  
+Dieser Schritt ist sehr einfach. Zusätzlich zu den normalen Schritten zum Bereinigen von Direct3D-APIs muss die Anwendung die rückgaben COM-Schnittstellen veröffentlichen.  
 
 
 ```C++
@@ -741,10 +741,10 @@ m_p11to9Queue->Release();
 
 ### <a name="non-blocking-use"></a>Nicht blockierende Verwendung
 
-Das vorherige Beispiel ist für einen multithreadnutzungsfall sinnvoll, bei dem jedes Gerät über einen eigenen Thread verfügt. In diesem Beispiel werden die blockierenden Versionen der APIs verwendet: unendlich für Timeout und kein Flag zum Einreihen in die Warteschlange. Wenn Sie das Hilfsprogramm auf nicht blockierende Weise verwenden möchten, müssen Sie nur einige Änderungen vornehmen. In diesem Abschnitt wird die nicht blockierende Verwendung für beide Geräte in einem Thread veranschaulicht.
+Das vorherige Beispiel ist für einen Multithread-Verwendungsfall sinnvoll, bei dem jedes Gerät über einen eigenen Thread verfügt. Im Beispiel werden die blockierenden Versionen der APIs verwendet: INFINITE für Timeout und kein Flag zum Einsperren in die Enqueue. Wenn Sie das Hilfsfeld auf nicht blockierende Weise verwenden möchten, müssen Sie nur wenige Änderungen vornehmen. In diesem Abschnitt wird die nicht blockierende Verwendung mit beiden Geräten in einem Thread veranschaulicht.
 
 **Initialisierung**  
-Die Initialisierung ist mit Ausnahme der Flags identisch. Da es sich bei der Anwendung um einen Single Thread handelt, verwenden Sie dieses Flag für die Erstellung. Dadurch wird ein Teil des Synchronisierungs Codes deaktiviert, wodurch die Leistung möglicherweise verbessert wird.  
+Die Initialisierung ist mit Ausnahme der Flags identisch. Da die Anwendung singlethreaded ist, verwenden Sie dieses Flag für die Erstellung. Dadurch wird ein Teil des Synchronisierungscodes deaktiviert, wodurch die Leistung möglicherweise verbessert wird.  
 
 
 ```C++
@@ -772,9 +772,9 @@ m_11to9Queue->Clone(&Desc, &m_9to11Queue);
 
 
 
-Das Öffnen von Producer-und Consumer-Geräten ist dasselbe wie im Blockierungs Beispiel.  
+Das Öffnen der Producer- und Consumergeräte ist mit dem im Blockierungsbeispiel identisch.  
 **Verwenden der Warteschlange**  
-Es gibt viele Möglichkeiten, die Warteschlange in einer nicht blockierenden Weise mit verschiedenen Leistungsmerkmalen zu verwenden. Das folgende Beispiel ist einfach, hat jedoch aufgrund übermäßiger Drehung und Abruf eine schlechte Leistung. Trotz dieser Probleme zeigt das Beispiel, wie das Hilfsprogramm verwendet werden kann. Der Ansatz besteht darin, ständig in einer Schleife zu sitzen und aus der Warteschlange zu entfernen, Sie zu verarbeiten, in die Warteschlange zu stellen Wenn einer der Schritte fehlschlägt, weil die Ressource nicht verfügbar ist, versucht die Anwendung einfach erneut, die nächste Schleife auszuführen.  
+Es gibt viele Möglichkeiten, die Warteschlange auf nicht blockierende Weise mit verschiedenen Leistungsmerkmalen zu verwenden. Das folgende Beispiel ist einfach, hat jedoch aufgrund übermäßiger Spin- und Abrufe eine schlechte Leistung. Trotz dieser Probleme zeigt das Beispiel die Verwendung des Hilfsers. Der Ansatz besteht in der kontinuierlichen Schleife und dem Aussetzen, Verarbeiten, Ein- und Leeren in die Quege. Wenn einer der Schritte fehlschlägt, weil die Ressource nicht verfügbar ist, versucht die Anwendung einfach erneut, die nächste Schleife zu verwenden.  
 
 
 ```C++
@@ -835,12 +835,12 @@ while (!done)
 
 
 
-Eine komplexere Lösung könnte den Rückgabewert von einreihen und von Flush überprüfen, um zu bestimmen, ob eine Leerung erforderlich ist.  
+Eine komplexere Lösung könnte den Rückgabewert aus der Enqueue und der Leerung überprüfen, um festzustellen, ob eine Leerung erforderlich ist.  
 </dl>
 
 ### <a name="three-devices"></a>Drei Geräte
 
-Das Erweitern der vorherigen Beispiele auf mehrere Geräte ist einfach. Der folgende Code führt die Initialisierung aus. Nachdem die Producer/Consumer-Objekte erstellt wurden, ist der Code für die Verwendung identisch. Dieses Beispiel enthält drei Geräte und somit drei Warteschlangen. Die Oberflächen werden von Direct3D 9 bis Direct3D 10 bis Direct3D 11 abgeleitet.
+Die Erweiterung der vorherigen Beispiele auf mehrere Geräte ist einfach. Der folgende Code führt die Initialisierung aus. Nachdem die Producer/Consumer-Objekte erstellt wurden, ist der Code für deren Verwendung identisch. Dieses Beispiel enthält drei Geräte und somit drei Warteschlangen. Oberflächen fließen von Direct3D 9 zu Direct3D 10 zu Direct3D 11.
 
 
 ```C++
@@ -863,7 +863,7 @@ m_11to9Queue->Clone(&Desc, &m_10to11Queue);
 
 
 
-Wie bereits erwähnt, funktioniert das Klonen auf dieselbe Weise, unabhängig davon, welche Warteschlange geklont wird. Beispielsweise könnte der zweite Klon-Befehl aus dem Objekt "m \_ 9to 10queue" entfernt worden sein.
+Wie bereits erwähnt, funktioniert das Klonen auf die gleiche Weise, unabhängig davon, welche Warteschlange geklont wird. Beispielsweise könnte der zweite Clone-Aufruf aus dem m \_ 9to10Queue-Objekt entfernt worden sein.
 
 
 ```C++
@@ -884,8 +884,8 @@ m_p11to9Queue->OpenConsumer(m_pD3D9Device, &m_pD3D9Consumer);
 
 ## <a name="conclusion"></a>Zusammenfassung
 
-Sie können Lösungen erstellen, die mithilfe von Interoperabilität die Leistungsfähigkeit mehrerer DirectX-APIs nutzen. Die Interoperabilität der Windows-Grafik-API bietet nun eine Common Surface Management Runtime DXGI 1,1. Diese Laufzeit ermöglicht die Unterstützung synchroner Oberflächen Freigabe in neu entwickelten APIs, z. b. Direct3D 11, Direct3D 10,1 und Direct2D. Die Verbesserungen der Interoperabilität zwischen neuen APIs und vorhandenen APIs unterstützen die Anwendungs Migration und Abwärtskompatibilität. Die Consumer-APIs Direct3D 9Ex und DXGI 1,1 können zusammenarbeiten, wie Sie mit dem Synchronisierungs Mechanismus veranschaulicht werden, der durch Sample Helper Code in der MSDN Code Gallery bereitgestellt wird.
+Sie können Lösungen erstellen, die Interoperabilität verwenden, um die Leistungsfähigkeit mehrerer DirectX-APIs zu nutzen. Die Interoperabilität der Windows-Grafik-API bietet jetzt eine allgemeine Surface Management Runtime DXGI 1.1. Diese Runtime ermöglicht die Unterstützung der synchronisierten Oberflächenfreigabe in neu entwickelten APIs wie Direct3D 11, Direct3D 10.1 und Direct2D. Interoperabilitätsverbesserungen zwischen neuen APIs und vorhandenen APIs unterstützen die Anwendungsmigration und Abwärtskompatibilität. Direct3D 9Ex- und DXGI 1.1-Consumer-APIs können zusammenarbeiten, wie mit dem Synchronisierungsmechanismus gezeigt, der über Beispielhilfscode im MSDN Code Gallery bereitgestellt wird.
 
- 
+ 
 
- 
+ 

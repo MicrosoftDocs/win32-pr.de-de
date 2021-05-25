@@ -1,7 +1,7 @@
 ---
-description: Beschreibt die Präsentations Parameter.
+description: Beschreibt die Präsentationsparameter.
 ms.assetid: d677aeb7-a188-4ddc-b8c9-48e13676e9c8
-title: D3DPRESENT_PARAMETERS-Struktur (D3D9Types. h)
+title: D3DPRESENT_PARAMETERS-Struktur (D3D9Types.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - D3D9Types.h
-ms.openlocfilehash: f83ab03773356a01c8c6ac490bb099c6e7508be2
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: f113b3df247765b958dfe47bb04fafb6c9a13bbe
+ms.sourcegitcommit: b40a986d5ded926ae7617119cdd35d99b533bad9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104355057"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "110343105"
 ---
-# <a name="d3dpresent_parameters-structure"></a>D3DPRESENT \_ Parameters-Struktur
+# <a name="d3dpresent_parameters-structure"></a>D3DPRESENT \_ PARAMETERS-Struktur
 
-Beschreibt die Präsentations Parameter.
+Beschreibt die Präsentationsparameter.
 
 ## <a name="syntax"></a>Syntax
 
@@ -55,95 +55,93 @@ typedef struct D3DPRESENT_PARAMETERS {
 **BackBufferWidth**
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Breite der Hintergrund Puffer der neuen Austausch Kette in Pixel. Wenn " **Windowed** " den Wert " **false** " hat (die Präsentation ist voll Bildschirm), muss dieser Wert mit der Breite eines der aufgelisteten Anzeigemodi identisch sein, die über [**enumadaptermodes**](/windows/win32/api/d3d9/nf-d3d9-idirect3d9-enumadaptermodes)gefunden werden. Wenn **Windowed** den Wert **true** aufweist und entweder **BackBufferWidth** oder **BackBufferHeight** gleich NULL ist, wird die entsprechende Dimension des Client Bereichs von **hdevicewindow** (oder im Fokus Fenster, wenn **hdevicewindow** **null** ist) übernommen.
+Breite der Rückpuffer der neuen Swapkette in Pixel. Wenn **Windowed** auf **FALSE** festgelegt ist (die Präsentation ist vollbildbereit), muss dieser Wert der Breite eines der aufzählten Anzeigemodi entsprechen, die über [**EnumAdapterModes**](/windows/win32/api/d3d9/nf-d3d9-idirect3d9-enumadaptermodes)gefunden werden. Wenn **Windowed** **true** ist und entweder **BackBufferWidth** oder **BackBufferHeight** 0 (null) ist, wird die entsprechende Dimension des Clientbereichs von **hDeviceWindow** (oder das Fokusfenster, wenn **hDeviceWindow** **NULL** ist) übernommen.
 
 </dd> <dt>
 
 **BackBufferHeight**
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Die Höhe der Hintergrund Puffer der neuen Austausch Kette in Pixel. Wenn " **Windowed** " den Wert " **false** " hat (die Präsentation ist voll Bildschirm), muss dieser Wert mit der Höhe eines der aufgelisteten Anzeigemodi identisch sein, die über [**enumadaptermodes**](/windows/win32/api/d3d9/nf-d3d9-idirect3d9-enumadaptermodes)gefunden werden. Wenn **Windowed** den Wert **true** aufweist und entweder **BackBufferWidth** oder **BackBufferHeight** gleich NULL ist, wird die entsprechende Dimension des Client Bereichs von **hdevicewindow** (oder im Fokus Fenster, wenn **hdevicewindow** **null** ist) übernommen.
+Höhe der Rückpuffer der neuen Swapkette in Pixel. Wenn **Windowed** auf **FALSE** festgelegt ist (die Darstellung im Vollbildmodus), muss dieser Wert der Höhe eines der aufzählten Anzeigemodi entsprechen, die über [**EnumAdapterModes**](/windows/win32/api/d3d9/nf-d3d9-idirect3d9-enumadaptermodes)gefunden werden. Wenn **Windowed** **true** ist und entweder **BackBufferWidth** oder **BackBufferHeight** 0 (null) ist, wird die entsprechende Dimension des Clientbereichs von **hDeviceWindow** (oder das Fokusfenster, wenn **hDeviceWindow** **NULL** ist) übernommen.
 
 </dd> <dt>
 
-**Backbufferformat**
+**BackBufferFormat**
 </dt> <dd>
 
 Typ: **[D3DFORMAT](d3dformat.md)**
 
 </dd> <dd>
 
-Das Format des Hintergrund Puffers. Weitere Informationen zu Formaten finden Sie unter [D3DFORMAT](d3dformat.md). Bei diesem Wert muss es sich um eines der renderzielformate handeln, die von [**CheckDeviceType**](/windows/desktop/api)überprüft werden. Sie können [**getdisplaymode**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-getdisplaymode) zum Abrufen des aktuellen Formats verwenden.
+Das Backpufferformat. Weitere Informationen zu Formaten finden Sie unter [D3DFORMAT](d3dformat.md). Dieser Wert muss eines der Renderzielformate sein, wie von [**CheckDeviceType**](/windows/desktop/api)überprüft. Sie können [**GetDisplayMode**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-getdisplaymode) verwenden, um das aktuelle Format abzurufen.
 
-Tatsächlich \_ kann D3DFMT Unknown für das **backbufferformat** im Fenstermodus angegeben werden. Dadurch wird der Laufzeit mitgeteilt, dass das aktuelle Anzeigemodus-Format verwendet wird, und es entfällt, dass [**getdisplaymode**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-getdisplaymode)aufgerufen werden muss.
+Tatsächlich kann D3DFMT UNKNOWN für \_ **das BackBufferFormat** im Fenstermodus angegeben werden. Dies weist die Runtime an, das aktuelle Anzeigemodusformat zu verwenden, und macht es nicht mehr notwendig, [**GetDisplayMode auf aufruft.**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-getdisplaymode)
 
-Für Fenster Anwendungen muss das Hintergrund Puffer Format nicht mehr dem Anzeigemodus entsprechen, da die Farbkonvertierung nun von der Hardware durchgeführt werden kann (wenn die Hardware Farbkonvertierung unterstützt). Der Satz möglicher backpufferformate ist eingeschränkt, aber die Laufzeit lässt zu, dass jedes beliebige gültige Hintergrund Puffer Format allen Desktop Formaten angezeigt wird. (Es ist erforderlich, dass das Gerät auf dem Desktop betriebsbereit ist. Geräte funktionieren in der Regel nicht im Modus von 8 Bits pro Pixel.)
+Bei Anwendungen mit Fenstern muss das Format des Hintergrundpuffers nicht mehr mit dem Anzeigemodusformat übereinstimmen, da die Farbkonvertierung jetzt von der Hardware durchgeführt werden kann (wenn die Hardware die Farbkonvertierung unterstützt). Der Satz möglicher Backpufferformate ist eingeschränkt, aber die Laufzeit lässt zu, dass jedes gültige Backpufferformat in jedem Desktopformat dargestellt wird. (Es gibt die zusätzliche Anforderung, dass das Gerät auf dem Desktop ausgeführt werden kann. Geräte arbeiten in der Regel nicht mit 8 Bits pro Pixelmodus.)
 
-Vollbildanwendungen können keine Farbkonvertierung durchführen.
+Vollbildanwendungen können keine Farbkonvertierung verwenden.
 
 </dd> <dt>
 
 **BackBufferCount**
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Dieser Wert kann zwischen 0 und [D3DPRESENT \_ Back \_ Puffern \_ Max](d3dpresent-back-buffers.md) (oder [D3DPRESENT \_ Back \_ Puffern \_ Max \_ Ex](d3dpresent-back-buffers.md) bei Verwendung von Direct3D 9Ex) liegen. Werte von 0 werden als 1 behandelt. Wenn die Anzahl der Back Puffer nicht erstellt werden kann, misslingt die Laufzeit den Methoden Aufrufvorgang und füllen diesen Wert mit der Anzahl der zu erstellenden Sicherungs Puffer aus. Daher kann eine Anwendung die Methode zweimal mit der gleichen D3DPRESENT \_ Parameters-Struktur abrufen und erwarten, dass Sie beim zweiten Mal funktioniert.
+Dieser Wert kann zwischen 0 und [D3DPRESENT \_ BACK \_ BUFFERS \_ MAX](d3dpresent-back-buffers.md) (oder [D3DPRESENT \_ BACK \_ BUFFERS MAX \_ \_ EX](d3dpresent-back-buffers.md) bei Verwendung von Direct3D 9Ex) liegen. Werte von 0 werden als 1 behandelt. Wenn die Anzahl der Backpuffer nicht erstellt werden kann, erzeugt die Laufzeit einen Fehler beim Methodenaufruf und füllt diesen Wert mit der Anzahl der Backpuffer auf, die erstellt werden könnten. Daher kann eine Anwendung die -Methode zweimal mit derselben D3DPRESENT PARAMETERS-Struktur aufrufen und erwarten, dass sie beim \_ zweiten Mal funktioniert.
 
-Die Methode schlägt fehl, wenn ein BackBuffer nicht erstellt werden kann. Der Wert von **BackBufferCount** wirkt sich darauf aus, welche Gruppe von Swap-Effekten zulässig sind. Insbesondere ist es erforderlich, dass für jeden D3DSWAPEFFECT-Auslagerungs \_ Effekt genau ein Hintergrund Puffer vorhanden ist.
+Die Methode schlägt fehl, wenn kein Backpuffer erstellt werden kann. Der Wert von **BackBufferCount beeinflusst,** welche Swapeffekte zulässig sind. Insbesondere erfordert jeder D3DSWAPEFFECT \_ COPY-Auslagerungseffekt genau einen Hintergrundpuffer.
 
 </dd> <dt>
 
 **MultiSampleType**
 </dt> <dd>
 
-Type: **[ **D3DMULTISAMPLE- \_ Typ**](./d3dmultisample-type.md)**
+Typ: **[ **D3DMULTISAMPLE \_ TYPE**](./d3dmultisample-type.md)**
 
 </dd> <dd>
 
-Member des [**D3DMULTISAMPLE \_ Type**](./d3dmultisample-type.md) -enumerierten Typs. Der Wert muss D3DMULTISAMPLE \_ None lauten, es sei denn, für " **Swap** " wurde "D3DSWAPEFFECT DISCARD" festgelegt \_ . Multisampling wird nur unterstützt, wenn der Auslagerungs Effekt D3DSWAPEFFECT \_ verwerfen ist.
+Member des [**aufzählten D3DMULTISAMPLE \_ TYPE-Typs.**](./d3dmultisample-type.md) Der Wert muss D3DMULTISAMPLE NONE sein, es sei \_ **denn, SwapEffect** wurde auf D3DSWAPEFFECT \_ DISCARD festgelegt. Multisampling wird nur unterstützt, wenn der Swapeffekt D3DSWAPEFFECT \_ DISCARD ist.
 
 </dd> <dt>
 
-**Multisamplequality**
+**MultiSampleQuality**
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Qualitätsstufe. Der gültige Bereich liegt zwischen 0 (null) und einem niedrigeren Wert als der von " [**checkdevicemultisampletype**](/windows/desktop/api)" verwendeten pqualitylevels. Wenn Sie einen größeren Wert übergeben, wird der Fehler D3DERR \_ invalidcallzurück gegeben. Gekoppelte Werte von renderzielen oder tiefen Schablonen und der [**D3DMULTISAMPLE- \_ Typ**](./d3dmultisample-type.md) müssen mit identisch sein.
+Qualitätsstufe. Der gültige Bereich liegt zwischen 0 (null) und 1 kleiner als die von "pQualityLevels" zurückgegebene Ebene, die von [**CheckDeviceMultiSampleType**](/windows/desktop/api)verwendet wird. Wenn Sie einen größeren Wert übergeben, wird der Fehler D3DERR \_ INVALIDCALL zurückgegeben. Gekoppelte Werte von Renderzielen oder Tiefenschablonenoberflächen und [**D3DMULTISAMPLE \_ TYPE**](./d3dmultisample-type.md) müssen übereinstimmen.
 
 </dd> <dt>
 
-**SwapEffect verwenden**
+**SwapEffect**
 </dt> <dd>
 
 Typ: **[ **D3DSWAPEFFECT**](./d3dswapeffect.md)**
 
 </dd> <dd>
 
-Member des [**D3DSWAPEFFECT**](./d3dswapeffect.md) -Enumerationstyps. Die Laufzeit gewährleistet die implizite Semantik bezüglich des Puffer Austausch Verhaltens. Wenn " **Windowed** " auf " **true** " festgelegt ist und " **Swap** " auf "D3DSWAPEFFECT Flip" festgelegt ist \_ , erstellt die Laufzeit einen zusätzlichen Hintergrund Puffer und kopiert, je nachdem, welcher der vordere Puffer zur Präsentationszeit wird.
+Member des [**D3DSWAPEFFECT-Enumerationstyps.**](./d3dswapeffect.md) Die Laufzeit garantiert die implizite Semantik in Bezug auf das Pufferaustauschverhalten. Wenn **Windowed** daher **TRUE** ist und **SwapEffect** auf D3DSWAPEFFECT FLIP festgelegt \_ ist, erstellt die Laufzeit einen zusätzlichen Backpuffer und kopiert den Puffer, der zur Präsentationszeit zum Frontpuffer wird.
 
-D3DSWAPEFFECT \_ Copy erfordert, dass **BackBufferCount** auf 1 festgelegt ist.
+D3DSWAPEFFECT \_ COPY erfordert, dass **BackBufferCount** auf 1 festgelegt ist.
 
-D3DSWAPEFFECT \_ verwerfen wird in der Debug-Laufzeit erzwungen, indem jeder Puffer mit Rauschen aufgefüllt wird, nachdem er angezeigt wird.
+D3DSWAPEFFECT \_ DISCARD wird in der Debuglaufzeit erzwungen, indem nach der Darstellung ein beliebiger Puffer mit Rauschen gefüllt wird.
 
+Unterschiede zwischen Direct3D9 und Direct3D9Ex:
 
-
-|                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Unterschiede zwischen von Direct3D9 und Direct3D9Ex<br/> In Direct3D9Ex wird D3DSWAPEFFECT \_ flipex hinzugefügt, um zu bestimmen, wann eine Anwendung den Flip-Modus annimmt. Das heißt, der Rahmen einer Anwendung wird im Fenstermodus (anstelle von kopiert) zur Komposition an den Desktopfenster-Manager (DWM) übermittelt. Der Flip-Modus sorgt für eine effizientere Arbeitsspeicher Bandbreite und ermöglicht einer Anwendung, die Vollbildansicht von Statistiken zu nutzen. Das Verhalten der voll Bild Anzeige wird nicht geändert. Das Verhalten des Flip-Modus ist ab Windows 7 verfügbar.<br/> |
+- In Direct3D9Ex wird D3DSWAPEFFECT \_ FLIPEX hinzugefügt, um festzulegen, wann eine Anwendung den Flip-Modus einnimmt. Das heißt, der Frame einer Anwendung wird im Fenstermodus (statt kopiert) zur Komposition an den Desktopfenster-Manager (DWM) übergeben. Der Flip-Modus bietet eine effizientere Speicherbandbreite und ermöglicht einer Anwendung die Nutzung von Statistiken im Vollbildmodus. Das Vollbildverhalten wird nicht geändert. Das Flipmodusverhalten ist ab Windows 7 verfügbar.
 
 
 
@@ -151,57 +149,57 @@ D3DSWAPEFFECT \_ verwerfen wird in der Debug-Laufzeit erzwungen, indem jeder Puf
 
 </dd> <dt>
 
-**hdevicewindow**
+**hDeviceWindow**
 </dt> <dd>
 
 Typ: **[ **HWND**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Das Geräte Fenster bestimmt den Speicherort und die Größe des Hintergrund Puffers auf dem Bildschirm. Diese wird von Direct3D verwendet, wenn der Hintergrund Pufferinhalt während der [**Anwesenheit**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-present)in den Vorder-Puffer kopiert wird.
+Das Gerätefenster bestimmt den Speicherort und die Größe des Hintergrundpuffers auf dem Bildschirm. Dies wird von Direct3D verwendet, wenn der Inhalt des Hintergrundpuffers während present in den Frontpuffer [**kopiert wird.**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-present)
 
--   Bei einer Vollbildanwendung handelt es sich hierbei um ein Handle für das obere Fenster (das Fokus Fenster).
+-   Bei einer Vollbildanwendung ist dies ein Handle für das obere Fenster (das Fokusfenster).
 
-    Bei Anwendungen mit mehreren voll Bild Geräten (z. b. einem Multimonitor-System) kann genau ein Gerät das Fokus Fenster als Geräte Fenster verwenden. Alle anderen Geräte müssen über eindeutige Geräte Fenster verfügen.
+    Für Anwendungen, die mehrere Vollbildgeräte verwenden (z. B. ein System mit mehreren Monitoren), kann genau ein Gerät das Fokusfenster als Gerätefenster verwenden. Alle anderen Geräte müssen über eindeutige Gerätefenster verfügen.
 
--   Bei einer Anwendung im Windowed-Modus ist dieses handle das Standardziel Fenster für das [**vorhanden**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-present)sein. Wenn dieses Handle **null** ist, wird das Fokus Fenster übernommen.
+-   Für eine Anwendung im Fenstermodus ist dieses Handle das Standardzielfenster für [**Present**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-present). Wenn dieses Handle NULL **ist,** wird das Fokusfenster verwendet.
 
-Beachten Sie, dass die Laufzeit keinen Versuch hat, Benutzer Änderungen in der Fenstergröße widerzuspiegeln. Der Hintergrund Puffer wird beim Zurücksetzen dieses Fensters nicht implizit zurückgesetzt. Allerdings werden die Änderungen an der Fensterposition von der [**aktuellen**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-present) Methode automatisch nachverfolgt.
+Beachten Sie, dass die Runtime nicht versucht, Benutzeränderungen in der Fenstergröße widerzu spiegeln. Der Hintergrundpuffer wird nicht implizit zurückgesetzt, wenn dieses Fenster zurückgesetzt wird. Die [**Present-Methode**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-present) verfolgt änderungen an der Fensterposition jedoch automatisch nach.
 
 </dd> <dt>
 
-**Fenster**
+**Fenstermodus**
 </dt> <dd>
 
-Typ: **[ **bool**](../winprog/windows-data-types.md)**
+Typ: **[ **BOOL**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-**True** , wenn die Anwendung ausgeführt wird. **False** , wenn die Anwendung voll Bildschirm ausführt.
+**TRUE,** wenn die Anwendung im Fenster ausgeführt wird; **FALSE,** wenn die Anwendung im Vollbildmodus ausgeführt wird.
 
 </dd> <dt>
 
-**Enableautodepthstencil**
+**EnableAutoDepthStencil**
 </dt> <dd>
 
-Typ: **[ **bool**](../winprog/windows-data-types.md)**
+Typ: **[ **BOOL**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Wenn dieser Wert **true** ist, verwaltet Direct3D Tiefe Puffer für die Anwendung. Das Gerät erstellt einen tiefen Schablone-Puffer, wenn er erstellt wird. Der tiefen Schablone-Puffer wird automatisch als Renderziel des Geräts festgelegt. Wenn das Gerät zurückgesetzt wird, wird der tiefen Schablone-Puffer automatisch zerstört und in der neuen Größe neu erstellt.
+Wenn dieser Wert **TRUE ist,** verwaltet Direct3D Tiefenpuffer für die Anwendung. Das Gerät erstellt einen Tiefen-Schablonenpuffer, wenn es erstellt wird. Der Tiefen-Schablonenpuffer wird automatisch als Renderziel des Geräts festgelegt. Wenn das Gerät zurückgesetzt wird, wird der Tiefen-Schablonenpuffer automatisch zerstört und in der neuen Größe neu erstellt.
 
-Wenn enableautodepthstencil den Wert **true** hat, muss autodepthstencilformat ein gültiges tiefen Schablone-Format aufweisen.
+Wenn EnableAutoDepthStencil **true** ist, muss AutoDepthStencilFormat ein gültiges Tiefen-Schablonenformat sein.
 
 </dd> <dt>
 
-**Autodepthstencilformat**
+**AutoDepthStencilFormat**
 </dt> <dd>
 
 Typ: **[D3DFORMAT](d3dformat.md)**
 
 </dd> <dd>
 
-Member des [D3DFORMAT](d3dformat.md) -Enumerationstyps. Das Format der automatischen tiefen Schablone, die vom Gerät erstellt wird. Dieser Member wird ignoriert, es sei denn, **enableautodepthstencil** ist " **true**".
+Member des [D3DFORMAT-Enumerationstyps.](d3dformat.md) Das Format der automatischen Tiefenschablonenoberfläche, die das Gerät erstellt. Dieser Member wird ignoriert, es sei **denn, EnableAutoDepthStencil** ist **TRUE.**
 
 </dd> <dt>
 
@@ -212,32 +210,32 @@ Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Eine der [D3DPRESENTFLAG](d3dpresentflag.md) -Konstanten.
+Eine der [D3DPRESENTFLAG-Konstanten.](d3dpresentflag.md)
 
 </dd> <dt>
 
-**Vollbild- \_ aktuscreenshrateingehz**
+**FullScreen \_ RefreshRateInHz**
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Die Rate, mit der der Anzeige Adapter den Bildschirm aktualisiert. Der Wert hängt vom Modus ab, in dem die Anwendung ausgeführt wird:
+Die Rate, mit der der Anzeigeadapter den Bildschirm aktualisiert. Der Wert hängt vom Modus ab, in dem die Anwendung ausgeführt wird:
 
--   Für den Fenstermodus muss die Aktualisierungsrate 0 betragen.
--   Für den Vollbildmodus ist die Aktualisierungsrate einer der von [**enumadaptermodes**](/windows/win32/api/d3d9/nf-d3d9-idirect3d9-enumadaptermodes)zurückgegebenen Aktualisierungs Raten.
+-   Für den Fenstermodus muss die Aktualisierungsrate 0 sein.
+-   Für den Vollbildmodus ist die Aktualisierungsrate eine der Aktualisierungsraten, die von [**EnumAdapterModes**](/windows/win32/api/d3d9/nf-d3d9-idirect3d9-enumadaptermodes)zurückgegeben werden.
 
 </dd> <dt>
 
-**Presentationinterval**
+**PresentationInterval**
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Die maximale Rate, mit der die Hintergrund Puffer der Swapkette dem Vorder Puffer angezeigt werden können. Eine ausführliche Erläuterung der Modi und der unterstützten Intervalle finden Sie unter [D3DPRESENT](d3dpresent.md).
+Die maximale Rate, mit der die Hintergrundpuffer der Swapkette dem Frontpuffer angezeigt werden können. Eine ausführliche Erläuterung der unterstützten Modi und Intervalle finden Sie unter [D3DPRESENT](d3dpresent.md).
 
 </dd> </dl>
 
@@ -247,24 +245,24 @@ Die maximale Rate, mit der die Hintergrund Puffer der Swapkette dem Vorder Puffe
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3D9Types. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3D9Types.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [Direct3D-Strukturen](dx9-graphics-reference-d3d-structures.md)
 </dt> <dt>
 
-[**"Kreatedevice"**](/windows/win32/api/d3d9/nf-d3d9-idirect3d9-createdevice)
+[**CreateDevice**](/windows/win32/api/d3d9/nf-d3d9-idirect3d9-createdevice)
 </dt> <dt>
 
-[**"Kreateadditionalswapchain"**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-createadditionalswapchain)
+[**CreateAdditionalSwapChain**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-createadditionalswapchain)
 </dt> <dt>
 
-[**Anzahl**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-present)
+[**Present**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-present)
 </dt> <dt>
 
 [**Reset**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-reset)

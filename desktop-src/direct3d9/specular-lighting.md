@@ -1,56 +1,52 @@
 ---
-description: Das Modellieren von Glanz Reflektion erfordert, dass das System nicht nur weiß, in welcher Richtung das Licht unterwegs ist, sondern auch die Richtung des Viewers.
+description: Die Modellierung von Spiegelung erfordert, dass das System nicht nur weiß, in welche Richtung Licht bewegt wird, sondern auch die Richtung zum Auge des Betrachters.
 ms.assetid: 35da0ac3-4e68-4d37-a987-405fc15d0cbf
-title: Glanz Beleuchtung (Direct3D 9)
+title: Specular Lighting (Direct3D 9)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3ab378d4ca3f00ef81c5048e6ad6cc85eaeb18ad
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 2b16d71bd8d814e104cf8a90d1d1fe9b15ba10f3
+ms.sourcegitcommit: b40a986d5ded926ae7617119cdd35d99b533bad9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104569457"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "110343675"
 ---
-# <a name="specular-lighting-direct3d-9"></a>Glanz Beleuchtung (Direct3D 9)
+# <a name="specular-lighting-direct3d-9"></a>Specular Lighting (Direct3D 9)
 
-Das Modellieren von Glanz Reflektion erfordert, dass das System nicht nur weiß, in welcher Richtung das Licht unterwegs ist, sondern auch die Richtung des Viewers. Das System verwendet eine vereinfachte Version des Phong-reflektionsmodells, das einen halben Vektor verwendet, um die Intensität der Glanz Reflektion zu annähern.
+Die Modellierung von Spiegelung erfordert, dass das System nicht nur weiß, in welche Richtung Licht bewegt wird, sondern auch die Richtung zum Auge des Betrachters. Das System verwendet eine vereinfachte Version des Phong-Specular-Reflektionsmodells, das einen Halbvektor verwendet, um die Intensität der spiegelförmigen Reflektion zu ungefähren.
 
-Der Standard Beleuchtungs Zustand berechnet keine Glanzlichter. Um die Glanz Beleuchtung zu aktivieren, stellen Sie sicher, dass D3DRS \_ specularenable auf **true** festgelegt ist.
+Der Standardmäßige Beleuchtungszustand berechnet keine Glanzlichter. Stellen Sie sicher, dass D3DRS SPECULARENABLE auf TRUE festgelegt ist, um die beleuchtungsförmige \_ Beleuchtung **zu aktivieren.**
 
-## <a name="specular-lighting-equation"></a>Glanzlicht Gleichung
+## <a name="specular-lighting-equation"></a>Specular Lighting Equation
 
-Die Glanz Beleuchtung wird durch die folgende Gleichung beschrieben.
+Specular Lighting wird durch die folgende Gleichung beschrieben:
 
-
-
-|                                                                             |
-|-----------------------------------------------------------------------------|
-| Glanz Beleuchtung = CS \* Sum \[ ls \* (N) H)<sup>P</sup> \* - \* Punkt-Punkt\] |
+**Specular Lighting = Cs \* sum \[ Ls \* (N · H)<sup>P</sup> \* Atten \* Spot\]**
 
 
 
  
 
-In der folgenden Tabelle werden die Variablen, ihre Typen und ihre Bereiche aufgeführt.
+In der folgenden Tabelle sind die Variablen, ihre Typen und ihre Bereiche aufgeführt.
 
 
 
-| Parameter    | Standardwert | type          | BESCHREIBUNG                                                                                                         |
+| Parameter    | Standardwert | Typ          | BESCHREIBUNG                                                                                                         |
 |--------------|---------------|---------------|---------------------------------------------------------------------------------------------------------------------|
-| CS           | (0, 0, 0, 0)     | D3DCOLORVALUE | Glanz Farbe.                                                                                                     |
-| Sum          | –           | –           | Sumpunktions Zeichen für die Glanz Komponente der einzelnen Leuchten.                                                                       |
-| N            | –           | D3DVECTOR     | Vertex normal.                                                                                                      |
-| H            | –           | D3DVECTOR     | Halber-Wege-Vektor. Weitere Informationen finden Sie im Abschnitt zum halben Vektor.                                                             |
-| <sup>P</sup> | 0,0           | GLEITKOMMAZAHL         | Glanz Fähigkeit der Reflektion. Der Bereich liegt zwischen 0 und + unendlich.                                                                  |
-| Ls           | (0, 0, 0, 0)     | D3DCOLORVALUE | Helle Glanz Farbe.                                                                                               |
-| Ratte        | –           | GLEITKOMMAZAHL         | Heller Dämpfungswert. Siehe [Dämpfung und Spotlight-Faktor (Direct3D 9)](attenuation-and-spotlight-factor.md). |
-| Sofortige Zahlung         | –           | GLEITKOMMAZAHL         | Spotlight-Faktor. Siehe [Dämpfung und Spotlight-Faktor (Direct3D 9)](attenuation-and-spotlight-factor.md).        |
+| Cs           | (0,0,0,0)     | D3DCOLORVALUE | Specular-Farbe.                                                                                                     |
+| Sum          | –           | –           | Summierung der specular-Komponente jedes Lichts.                                                                       |
+| N            | –           | D3DVECTOR     | Scheitelpunkt normal.                                                                                                      |
+| H            | –           | D3DVECTOR     | Halbwegsvektor. Weitere Informationen finden Sie im Abschnitt zur Hälfte des Vektors.                                                             |
+| <sup>P</sup> | 0,0           | GLEITKOMMAZAHL         | Glanzreflektionsleistung. Der Bereich ist 0 bis +unendlich.                                                                  |
+| Ls           | (0,0,0,0)     | D3DCOLORVALUE | Helle Glanzfarbe.                                                                                               |
+| Atten        | –           | GLEITKOMMAZAHL         | Leichter Dämpfungswert. Weitere Informationen finden Sie [unter Dämpfung und Spotlight-Faktor (Direct3D 9).](attenuation-and-spotlight-factor.md) |
+| Sofortige Zahlung         | –           | GLEITKOMMAZAHL         | Spotlight-Faktor. Weitere Informationen finden Sie [unter Dämpfung und Spotlight-Faktor (Direct3D 9).](attenuation-and-spotlight-factor.md)        |
 
 
 
  
 
-Der Wert für CS lautet wie folgt:
+Der Wert für Cs lautet:
 
 
 ```
@@ -60,26 +56,22 @@ if(SPECULARMATERIALSOURCE == D3DMCS_COLOR1)
 
 
 
--   Vertex color1, wenn die Glanz materialquelle D3DMCS \_ color1 und die erste Scheitelpunkt Farbe in der Scheitelpunkt Deklaration angegeben wird.
--   Vertex color2, wenn die Glanz materialquelle D3DMCS \_ color2 ist, und die zweite Scheitelpunkt Farbe in der Vertex-Deklaration angegeben wird.
--   Material Glanz Farbe
+-   vertex color1, wenn die Spiegelmaterialquelle D3DMCS COLOR1 ist \_ und die erste Scheitelpunktfarbe in der Scheitelpunktdeklaration angegeben wird.
+-   vertex color2, wenn die Spiegelmaterialquelle D3DMCS COLOR2 ist \_ und die zweite Scheitelpunktfarbe in der Scheitelpunktdeklaration angegeben wird.
+-   material specular color (Materialspekularfarbe)
 
 > [!Note]  
-> Wenn eine der beiden Optionen für die Quell Text Quelle verwendet wird und die Scheitelpunkt Farbe nicht angegeben wird, wird die Glanz Farbe für das Material verwendet.
+> Wenn eine der beiden Quelloptionen für Glanzmaterialien verwendet wird und die Scheitelpunktfarbe nicht angegeben wird, wird die Materialspekularfarbe verwendet.
 
  
 
-Glanz Komponenten werden an einen Wert zwischen 0 und 255 gebunden, nachdem alle Lichter separat verarbeitet und interpoliert wurden.
+Glanzkomponenten werden so klammert, dass sie von 0 bis 255 liegen, nachdem alle Beleuchtungen separat verarbeitet und interpoliert wurden.
 
-## <a name="the-halfway-vector"></a>Der halbe Vektor
+## <a name="the-halfway-vector"></a>Der Halbwegvektor
 
-Der halbe Vektor (H) ist in der Mitte zwischen zwei Vektoren vorhanden: der Vektor von einem Objekt Scheitelpunkt zur hellen Quelle und der Vektor von einem Objekt Scheitelpunkt bis zur Kameraposition. Direct3D bietet zwei Möglichkeiten, den halbvektor zu berechnen. Wenn D3DRS \_ localviewer auf **true** festgelegt ist, berechnet das System den halben Vektor mithilfe der Position der Kamera und der Position des Scheitel Punkts, zusammen mit dem Richtungsvektor des Lichts. Dies wird in der folgenden Formel veranschaulicht.
+Der halbe Vektor (H) befindet sich in der Mitte zwischen zwei Vektoren: der Vektor von einem Objektvertex zur Lichtquelle und der Vektor von einem Objektvertex zur Kameraposition. Direct3D bietet zwei Möglichkeiten, den Mittelvektor zu berechnen. Wenn D3DRS LOCALVIEWER auf TRUE festgelegt ist, berechnet das System den Hälftenvektor anhand der Position der Kamera und der Position des Scheitelpunkts zusammen mit dem Richtungsvektor des \_ Lichts.  Die folgende Formel veranschaulicht dies.
 
-
-
-|                                           |
-|-------------------------------------------|
-| H = Norm (Norm (CP-VP) + L-<sub>dir</sub>) |
+**H = norm(norm(Cp - Vp) + L <sub>dir</sub>)**
 
 
 
@@ -87,33 +79,29 @@ Der halbe Vektor (H) ist in der Mitte zwischen zwei Vektoren vorhanden: der Vekt
 
 
 
-| Parameter       | Standardwert | type      | BESCHREIBUNG                                                  |
+| Parameter       | Standardwert | Typ      | BESCHREIBUNG                                                  |
 |-----------------|---------------|-----------|--------------------------------------------------------------|
-| Erfolgen              | –           | D3DVECTOR | Kameraposition.                                             |
-| Füttern              | –           | D3DVECTOR | Vertex-Position.                                             |
-| L-<sub>dir</sub> | –           | D3DVECTOR | Richtung Vektor von Scheitelpunkt Position zur hellen Position. |
+| Cp              | –           | D3DVECTOR | Kameraposition.                                             |
+| Vp              | –           | D3DVECTOR | Scheitelpunktposition.                                             |
+| L<sub>dir</sub> | –           | D3DVECTOR | Richtungsvektor von der Scheitelpunktposition zur Lichtposition. |
 
 
 
  
 
-Die Bestimmung des halb möglichen Vektors auf diese Weise kann Rechen intensiv sein. Alternativ \_ weist das Festlegen von D3DRS localviewer = **false** das System an, so zu agieren, als ob der Standpunkt auf der z-Achse unendlich weit entfernt ist. Dies wird in der folgenden Formel dargestellt.
+Die Ermittlung des Hälftenvektors auf diese Weise kann rechenintensiv sein. Alternativ weist das Festlegen von D3DRS LOCALVIEWER = FALSE das System an, so zu agieren, als wäre der Blickpunkt unendlich weit von der \_ Z-Achse  entfernt. Dies wird in der folgenden Formel widergespiegelt.
 
-
-
-|                                     |
-|-------------------------------------|
-| H = Norm ((0,0) + L-<sub>dir</sub>) |
+**H = norm((0,0,1) + L <sub>dir</sub>)**
 
 
 
  
 
-Diese Einstellung ist weniger Rechen intensiv, aber weitaus weniger genau. Sie wird daher am besten von Anwendungen verwendet, die eine orthogonale Projektion verwenden.
+Diese Einstellung ist weniger rechenintensiv, aber viel weniger genau, daher wird sie am besten von Anwendungen verwendet, die eine orthogonale Projektion verwenden.
 
 ## <a name="example"></a>Beispiel
 
-In diesem Beispiel wird das-Objekt mithilfe der Glanzlicht Farbe der Szene und einer hellen Glanz Farbe gefärbt. Der Code wird unten dargestellt.
+In diesem Beispiel wird das -Objekt mithilfe der Szenenspezifikationslichtfarbe und einer Materialspezifikationsfarbe farbig dargestellt. Der Code ist unten dargestellt.
 
 
 ```
@@ -153,21 +141,21 @@ m_pd3dDevice->SetRenderState(D3DRS_SPECULARMATERIALSOURCE, D3DMCS_MATERIAL);
 
 
 
-Gemäß der Gleichung ist die resultierende Farbe für die Objekt Vertices eine Kombination aus der Material Farbe und der hellen Farbe.
+Gemäß der Gleichung ist die resultierende Farbe für die Objektvertices eine Kombination aus der Materialfarbe und der hellen Farbe.
 
-Die folgende Abbildung zeigt die Glanz Farbe, die grau ist, und die helle helle Farbe, die weiß ist.
+Die folgenden beiden Abbildungen zeigen die Farbe des Glanzmaterials , die grau ist, und die Glanzlichtfarbe, die weiß ist.
 
 ![Abbildung einer grauen Kugel](images/amb1.jpg)![Abbildung einer weißen Kugel](images/lightwhite.jpg)
 
-Die sich ergebende Glanz Markierung wird in der folgenden Abbildung dargestellt.
+Die resultierende Glanzlichtermarkerung wird in der folgenden Abbildung dargestellt.
 
-![Abbildung der Glanz Markierung](images/lights.jpg)
+![Abbildung des Glanzlichts](images/lights.jpg)
 
-Die Kombination der Glanz Markierung mit der Ambient-und diffuse Beleuchtung ergibt die folgende Abbildung. Wenn alle drei Arten von Beleuchtung angewendet werden, ähnelt dies deutlich einem realistischen Objekt.
+Die Kombination des Glanzlichts mit der Umgebungs- und diffusen Beleuchtung erzeugt die folgende Abbildung. Wenn alle drei Arten von Beleuchtung angewendet werden, ähnelt dies eindeutiger einem realistischen Objekt.
 
-![Darstellung der Kombination der Glanz Markierung, der Umgebungsbeleuchtung und der diffusen Beleuchtung](images/lightads.jpg)
+![Abbildung der Kombination von Glanzlicht, Umgebungslicht und diffuser Beleuchtung](images/lightads.jpg)
 
-Die Glanz Beleuchtung ist intensiver zu berechnen als diffuses Beleuchtung. Sie wird in der Regel verwendet, um visuelle Hinweise zum Oberflächenmaterial bereitzustellen. Die Glanz Markierung variiert in Größe und Farbe mit dem Material der-Oberfläche.
+Die Berechnung der Glanzlichter ist aufwendiger als die diffuse Beleuchtung. Es wird in der Regel verwendet, um visuelle Hinweise zum Oberflächenmaterial bereitzustellen. Die Glanzlichter unterscheiden sich in Größe und Farbe mit dem Material der Oberfläche.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

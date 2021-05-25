@@ -1,28 +1,28 @@
 ---
-description: Dabei handelt es sich um Shader-und Effekt Konstanten.
+description: Dies sind Shader- und Effektkonst constants.
 ms.assetid: cfc6ef62-c791-4714-93cb-4df682543c30
-title: Effekt Konstanten
+title: Effektkonst constants
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9aaa3920bb9483526e264b7b16def448d6915feb
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: c08f0520541c80b64fdfc9837130ed10fcf42517
+ms.sourcegitcommit: b40a986d5ded926ae7617119cdd35d99b533bad9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104124021"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "110342755"
 ---
-# <a name="effect-constants"></a>Effekt Konstanten
+# <a name="effect-constants"></a>Effektkonst constants
 
-Dabei handelt es sich um Shader-und Effekt Konstanten.
+Dies sind Shader- und Effektkonst constants.
 
--   [**D3DX- \_ Parameter**](d3dx-parameter.md)
+-   [**D3DX-PARAMETER \_**](d3dx-parameter.md)
 -   [D3DXFX](d3dxfx.md)
 
-Effekte verwenden [Handles (Direct3D 9)](handles.md) , um auf Techniken, Pässe, Anmerkungen und Parameter zu verweisen.
+Effekte verwenden [Handles (Direct3D 9), um](handles.md) auf Techniken, Durchläufe, Anmerkungen und Parameter zu verweisen.
 
 
 
-|         |        |            |
+| Parameter        | Wirkung       |  Handle          |
 |---------|--------|------------|
 | Typedef | LPCSTR | D3DXHANDLE |
 
@@ -34,7 +34,7 @@ Effekte verwenden [Handles (Direct3D 9)](handles.md) , um auf Techniken, Pässe,
 
 <dl> <dt>
 
-[Effekt Referenz](dx9-graphics-reference-effects.md)
+[Referenz zu Effekten](dx9-graphics-reference-effects.md)
 </dt> </dl>
 
  

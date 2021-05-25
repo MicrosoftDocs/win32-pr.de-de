@@ -1,34 +1,34 @@
 ---
-description: Die Direct3D 9-API funktioniert abhängig vom installierten Betriebssystem entweder mit dem Windows XP-Anzeigetreiber Modell (XPDM) oder dem Windows Vista-Anzeigetreiber Modell (WDDM).
+description: Die Direct3D 9-API funktioniert abhängig vom installierten Betriebssystem entweder mit dem Windows XP-Anzeigetreibermodell (XPDM) oder dem Windows Vista-Anzeigetreibermodell (Windows Vista Display Driver Model, WDDM).
 ms.assetid: b552c822-aa01-4f1d-a0a6-1411ab006e7b
 title: XPDM im Vergleich zu WDDM
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ccdf4bba28b53959d8e86d8928c786db3b1d0c7f
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: e12c7d811850c953eb53c346b628363a2642dda9
+ms.sourcegitcommit: b40a986d5ded926ae7617119cdd35d99b533bad9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "106343932"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "110343535"
 ---
 # <a name="xpdm-vs-wddm"></a>XPDM im Vergleich zu WDDM
 
-Die Direct3D 9-API funktioniert abhängig vom installierten Betriebssystem entweder mit dem Windows XP-Anzeigetreiber Modell (XPDM) oder dem Windows Vista-Anzeigetreiber Modell (WDDM). Es gibt einige Unterschiede in der Art und Weise, wie sich die Direct3D-API auf die beiden Treiber Modelle verhält.
+Die Direct3D 9-API funktioniert abhängig vom installierten Betriebssystem entweder mit dem Windows XP-Anzeigetreibermodell (XPDM) oder dem Windows Vista-Anzeigetreibermodell (Windows Vista Display Driver Model, WDDM). Es gibt einige Unterschiede im Verhalten der Direct3D-API bei den beiden Treibermodellen.
 
 -   [Sicherer Desktop](#secure-desktop)
 -   [Remotedesktop](#remote-desktop)
 -   [Windows-Dienst](#windows-service)
--   [Zugehörige Themen](#related-topics)
+-   [Verwandte Themen](#related-topics)
 
 ## <a name="secure-desktop"></a>Sicherer Desktop
 
-Der sichere Desktop ist aktiv, wenn eine der folgenden Aktionen auftritt: der Benutzer sperrt den Desktop (Windows + L), der Bildschirmschoner wird aktiviert (wenn kein Benutzer angemeldet ist) oder standardmäßig, wenn die Benutzerkontensteuerung eine Eingabeaufforderung anzeigt. Wenn der sichere Desktop aktiv ist, kann nicht auf das HAL-Gerät zugegriffen werden.
+Der sichere Desktop ist immer dann aktiv, wenn einer der folgenden Ereignisse auftritt: Der Benutzer sperrt seinen Desktop (Windows+L), der Bildschirmschoner wird aktiviert (wenn kein Benutzer angemeldet ist) oder standardmäßig, wenn die Benutzerkontensteuerung eine Eingabeaufforderung einleiten. Wenn der sichere Desktop aktiv ist, ist der Zugriff auf das HALOGEN-Gerät nicht möglich.
 
+Unterschiede zwischen XPDM und WDDM:
 
+- Beim Versuch, ein Direct3D9-GERÄT zu erstellen, ist ein Fehler **(D3DERR \_ \_ NICHT** VERFÜGBAR) möglich, und alle vorhandenen Direct3D 9-Geräte weisen auf einen verloren gegangenen Geräte-Rückgabecode auf Present hin.
 
-|                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Unterschiede zwischen XPDM und WDDM:<br/> Beim Versuch, ein von Direct3D9 HAL-Gerät zu erstellen, tritt ein Fehler auf (mit **D3DERR \_ nicht \_ verfügbar**), und jedes vorhandene Direct3D 9-Gerät weist auf einen verlorenen Geräte Rückgabecode hin.<br/> Die APIs Direct3D9Ex und Direct3D 10 können ein Gerät erfolgreich erstellen, während der sichere Desktop aktiv ist, und alle Aufrufe an Present ([**IDirect3D9Ex**](/windows/desktop/api/d3d9/nn-d3d9-idirect3d9ex) oder DXGI) geben einen Statuscode zurück, der anzeigt, dass der Desktop zurzeit nicht verfügbar ist.<br/> |
+- Direct3D9Ex- und Direct3D 10-APIs können erfolgreich ein Gerät erstellen, während der sichere Desktop aktiv ist, und alle Aufrufe von Present ([**IDirect3D9Ex**](/windows/desktop/api/d3d9/nn-d3d9-idirect3d9ex) oder DXGI) geben einen Statuscode zurück, der angibt, dass der Desktop derzeit nicht verfügbar ist.
 
 
 
@@ -36,13 +36,13 @@ Der sichere Desktop ist aktiv, wenn eine der folgenden Aktionen auftritt: der Be
 
 ## <a name="remote-desktop"></a>Remotedesktop
 
-Wenn ein Remote Desktop aktiv ist, wird die Anzeige vom Computer mit dem hostingcomputer behandelt, der Informationen über das Netzwerk sendet.
+Wenn ein Remotedesktop aktiv ist, wird die Anzeige vom Anzeigecomputer verarbeitet, während der Hostcomputer Informationen über das Netzwerk sendet.
 
+Unterschiede zwischen XPDM und WDDM:
 
+- Unter XPDM sind alle Versuche, ein Direct3D 9-Gerät auf einem Remotedesktop zu erstellen, fehlgeschlagen.
 
-|                                                                                                                                                                                                                                                  |
-|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Unterschiede zwischen XPDM und WDDM:<br/> Bei XPDM tritt bei allen versuchen, ein Direct3D 9-Gerät auf einem Remote Desktop zu erstellen, ein Fehler auf.<br/> Auf WDDM unterstützt Remote Desktop das Erstellen eines HAL-Geräts über eine Remote Desktop Sitzung.<br/> |
+- Auf WDDM unterstützt Remotedesktop das Erstellen eines HALOGEN-Geräts über eine Remotedesktopsitzung.
 
 
 
@@ -50,41 +50,38 @@ Wenn ein Remote Desktop aktiv ist, wird die Anzeige vom Computer mit dem hosting
 
 ## <a name="windows-service"></a>Windows-Dienst
 
-Ein Windows-Dienst ist ein Prozess, der im Hintergrund ausgeführt wird, der vom Dienststeuerungs-Manager (Service Control Manager, SCM) gesteuert wird. Ein Dienst wird unabhängig vom aktiven Desktop ausgeführt und verfügt daher über eingeschränkte Möglichkeiten zur Interaktion mit Benutzern.
+Ein Windows-Dienst ist ein Prozess, der im Hintergrund ausgeführt wird und vom Dienststeuerungs-Manager (Service Control Manager, SCM) gesteuert wird. Ein Dienst wird unabhängig vom aktiven Desktop ausgeführt und verfügt daher nur über eingeschränkte Möglichkeiten zur Interaktion mit Benutzern.
 
+Unterschiede zwischen XPDM und WDDM:
 
-
-|                                                                                                                                                                                                                                                            |
-|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Unterschiede zwischen XPDM und WDDM:<br/> Bei WDDM stellt die Isolation der Sitzung 0 sicher, dass ein Dienst nicht als Sicherheitsmaßnahme auf einen Benutzer Desktop zugreifen kann. aus diesem Grund ist ein Direct3D 9 HAL-Gerät nie über einen Windows-Dienst verfügbar.<br/> |
+- Unter WDDM stellt die Sitzungs-0-Isolation sicher, dass ein Dienst keinen Zugriff auf Benutzerdesktops als Sicherheitsmaßnahme hat. Daher ist ein Direct3D 9-MSI-Gerät nie über einen Windows-Dienst verfügbar.
 
 
 
  
 
 > [!Note]  
-> Sie können Direct3D 9 nicht in einem Windows-Dienst verwenden. Weitere Informationen finden Sie im [Microsoft Support-Artikel 978635](https://support.microsoft.com/kb/978635).
+> Direct3D 9 kann nicht in einem Windows-Dienst verwendet werden. Weitere Informationen finden Sie im [Microsoft-Supportartikel 978635.](https://support.microsoft.com/kb/978635)
 
  
 
 
-In der folgenden Tabelle werden die hier aufgeführten Unterschiede zusammengefasst.
+In der folgenden Tabelle sind die hier aufgeführten Unterschiede zusammengefasst.
 
 
 
-|                 | XPDM | WDDM (von Direct3D9) | WDDM (Direct3D9Ex/Direct3D10) |
+| Sicherer Desktop | Xpdm | WDDM (Direct3D9) | WDDM(Direct3D9Ex/Direct3D10) |
 |-----------------|------|------------------|------------------------------|
-| Sicherer Desktop  |      |                  |                              |
-| NullRef         | Ja  | Ja              | Ja                          |
-| Hale             | Nein   | Nein               | Ja                          |
+| NULLREF         | Ja  | Ja              | Ja                          |
+| Hal             | Nein   | Nein               | Ja                          |
 | REF             | Ja  | Ja              | Ja                          |
 | Remotedesktop  |      |                  |                              |
-| NullRef         | Nein   | Ja              | Ja                          |
-| Hale             | Nein   | Ja              | Ja                          |
+| NULLREF         | Nein   | Ja              | Ja                          |
+| Hal             | Nein   | Ja              | Ja                          |
 | REF             | Ja  | Ja              | Ja                          |
 | Windows-Dienst |      |                  |                              |
-| NullRef         | Nein   | Nein               | Nein                           |
-| Hale             | Nein   | Nein               | Nein                           |
+| NULLREF         | Nein   | Nein               | Nein                           |
+| Hal             | Nein   | Nein               | Nein                           |
 | REF             | Nein   | Nein               | Nein                           |
 | WARP10          | –  | –              | Ja                          |
 
@@ -92,7 +89,7 @@ In der folgenden Tabelle werden die hier aufgeführten Unterschiede zusammengefa
 
  
 
-Weitere Informationen zu XPDM, WDDM, Direct3D9Ex und Direct3D 10 finden Sie unter [Grafik-APIs in Windows](../direct3darticles/graphics-apis-in-windows-vista.md).
+Weitere Informationen zu XPDM, WDDM, Direct3D9Ex und Direct3D 10 finden Sie unter [Grafik-APIs in Windows.](../direct3darticles/graphics-apis-in-windows-vista.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

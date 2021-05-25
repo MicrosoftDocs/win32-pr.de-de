@@ -1,7 +1,7 @@
 ---
 description: Kompiliert einen Shader aus einem Effekt, der eine oder mehrere Funktionen enthält.
 ms.assetid: f34a2975-dcd5-4917-9b11-ed40583272f9
-title: 'ID3DXEffectCompiler:: compileshader-Methode (D3DX9Effect. h)'
+title: ID3DXEffectCompiler::CompileShader-Methode (D3DX9Effect.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,14 +14,14 @@ api_type:
 api_location:
 - D3dx9.lib
 - D3dx9.dll
-ms.openlocfilehash: 375646202e102623053c179398329ad2286e6c1b
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 3e8d1d72fccd5c4ad47d21d05ee46013860a7743
+ms.sourcegitcommit: b40a986d5ded926ae7617119cdd35d99b533bad9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106371927"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "110343625"
 ---
-# <a name="id3dxeffectcompilercompileshader-method"></a>ID3DXEffectCompiler:: compileshader-Methode
+# <a name="id3dxeffectcompilercompileshader-method"></a>ID3DXEffectCompiler::CompileShader-Methode
 
 Kompiliert einen Shader aus einem Effekt, der eine oder mehrere Funktionen enthält.
 
@@ -45,21 +45,21 @@ HRESULT CompileShader(
 
 <dl> <dt>
 
-*hfunction* \[ in\]
+*hFunction* \[ In\]
 </dt> <dd>
 
 Typ: **[D3DXHANDLE](dx9-graphics-reference-effects-constants.md)**
 
-Eindeutiger Bezeichner für die Funktion, die kompiliert werden soll. Dieser Wert darf nicht **null** sein. Weitere Informationen finden Sie unter [Handles (Direct3D 9)](handles.md).
+Eindeutiger Bezeichner für die zu kompilierende Funktion. Dieser Wert darf nicht **NULL** sein. Siehe [Handles (Direct3D 9)](handles.md).
 
 </dd> <dt>
 
-*pTARGET* \[ in\]
+*pTarget* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPCSTR**](../winprog/windows-data-types.md)**
 
-Zeiger auf ein Shader-Profil, das den Shader-Anweisungs Satz bestimmt. Eine Liste der verfügbaren Profile finden Sie unter [**D3DXGetVertexShaderProfile**](d3dxgetvertexshaderprofile.md) oder [**D3DXGetPixelShaderProfile**](d3dxgetpixelshaderprofile.md) .
+Zeiger auf ein Shaderprofil, das den Shader-Anweisungssatz bestimmt. Eine Liste der verfügbaren Profile finden Sie unter [**D3DXGetVertexShaderProfile**](d3dxgetvertexshaderprofile.md) oder [**D3DXGetPixelShaderProfile.**](d3dxgetpixelshaderprofile.md)
 
 </dd> <dt>
 
@@ -68,34 +68,34 @@ Zeiger auf ein Shader-Profil, das den Shader-Anweisungs Satz bestimmt. Eine List
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
-Kompilierungsoptionen, die durch verschiedene Flags identifiziert werden. Der Direct3D 10 HLSL-Compiler ist nun der Standard. Weitere Informationen finden Sie unter [D3DXSHADER-Flags](d3dxshader-flags.md) .
+Kompilierungsoptionen, die durch verschiedene Flags identifiziert werden. Der Direct3D 10 HLSL-Compiler ist jetzt die Standardeinstellung. Weitere Informationen finden Sie unter [D3DXSHADER-Flags.](d3dxshader-flags.md)
 
 </dd> <dt>
 
-*ppshader* \[ Out, retval\]
+*ppShader* \[ out, retval\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXBUFFER**](id3dxbuffer.md)\***
 
-Der Puffer, der den kompilierten Shader enthält. Der compilershader ist ein Array von DWORDs. Weitere Informationen zum Zugreifen auf den Puffer finden Sie unter [**ID3DXBuffer**](id3dxbuffer.md).
+Puffer, der den kompilierten Shader enthält. Der Compiler-Shader ist ein Array von DWORDs. Weitere Informationen zum Zugreifen auf den Puffer finden Sie unter [**ID3DXBuffer**](id3dxbuffer.md).
 
 </dd> <dt>
 
-*pperrormsgs* \[ Out, retval\]
+*ppErrorMsgs* \[ out, retval\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXBUFFER**](id3dxbuffer.md)\***
 
-Puffer, der mindestens die erste Kompilierungs Fehlermeldung enthält, die aufgetreten ist. Dies schließt Compilerfehler und allgemeine sprach Kompilierungsfehler ein. Weitere Informationen zum Zugreifen auf den Puffer finden Sie unter [**ID3DXBuffer**](id3dxbuffer.md).
+Puffer, der mindestens die erste aufgetretene Kompilierfehlermeldung enthält. Dies schließt Auswirkungencompilerfehler und Fehler bei der Sprachcompilierung auf hoher Ebene ein. Weitere Informationen zum Zugreifen auf den Puffer finden Sie unter [**ID3DXBuffer**](id3dxbuffer.md).
 
 </dd> <dt>
 
-*ppconstanbar* \[ vorgenommen\]
+*ppConstantTable* \[ out\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXCONSTANTTABLE**](id3dxconstanttable.md)\***
 
-Gibt eine [**ID3DXConstantTable**](id3dxconstanttable.md) -Schnittstelle zurück, die für den Zugriff auf shaderkonstanten verwendet werden kann. Dieser Wert kann **null** sein. Wenn Sie die Anwendung als große Adressen unterstützen (d. h. mit der/LARGEADDRESSAWARE-Linkeroption, um Adressen zu verarbeiten, die größer als 2 GB sind), können Sie diesen Parameter nicht verwenden und müssen ihn auf **null** festlegen. Stattdessen müssen Sie die [**D3DXGetShaderConstantTableEx**](d3dxgetshaderconstanttableex.md) -Funktion verwenden, um die in den Shader eingebettete Shader-Konstante Tabelle abzurufen. In diesem **D3DXGetShaderConstantTableEx** -Aufruf müssen Sie das Flag **D3DXCONSTTABLE \_ LARGEADDRESSAWARE** an den *Flags* -Parameter übergeben, um anzugeben, dass auf bis zu 4 GB virtuellen Adressraum zugegriffen werden soll.
+Gibt eine [**ID3DXConstantTable-Schnittstelle**](id3dxconstanttable.md) zurück, die für den Zugriff auf Shaderkonstanten verwendet werden kann. Dieser Wert kann NULL **sein.** Wenn Sie Ihre Anwendung als große Adressierung kompilieren (d. h., Sie verwenden die Linkeroption /LARGEADDRESSAWARE, um Adressen zu verarbeiten, die größer als 2 GB sind), können Sie diesen Parameter nicht verwenden und müssen ihn auf **NULL festlegen.** Stattdessen müssen Sie die [**D3DXGetShaderConstantTableEx-Funktion**](d3dxgetshaderconstanttableex.md) verwenden, um die shaderkonstante Tabelle abzurufen, die in den Shader eingebettet ist. In diesem **D3DXGetShaderConstantTableEx-Aufruf** müssen Sie das **D3DXCONSTTABLE \_ LARGEADDRESSAWARE-Flag** an den *Flags-Parameter* übergeben, um den Zugriff auf bis zu 4 GB virtuellen Adressraum anzugeben.
 
 </dd> </dl>
 
@@ -103,23 +103,23 @@ Gibt eine [**ID3DXConstantTable**](id3dxconstanttable.md) -Schnittstelle zurück
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK.
+Wenn die Methode erfolgreich ist, ist der Rückgabewert S \_ OK.
 
-Wenn die Argumente ungültig sind, gibt die Methode D3DERR \_ invalidcallzurück.
+Wenn die Argumente ungültig sind, gibt die Methode D3DERR \_ INVALIDCALL zurück.
 
-Wenn die Methode fehlschlägt, lautet der Rückgabewert E \_ Fail.
+Wenn bei der Methode ein Fehler auftritt, ist der Rückgabewert E \_ FAIL.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Ziele können für Vertex-Shader, Pixel-Shader und Textur Füll Funktionen angegeben werden.
+Ziele können für Vertex-Shader, Pixel-Shader und Texturfüllfunktionen angegeben werden.
 
 
 
-|                       |                                                                       |
+| Ziele                      | Functions                                                                      |
 |-----------------------|-----------------------------------------------------------------------|
-| Vertex-Shader-Ziele | vs \_ 1 \_ 1, vs \_ 2 \_ 0, vs \_ 2 \_ SW, vs \_ 3 \_ 0                               |
-| Pixel-Shader-Ziele  | PS \_ 1 \_ 1, PS \_ 1 \_ 2, PS \_ 1 \_ 3, PS \_ 1 \_ 4, PS \_ 2 \_ 0, PS \_ 2 \_ SW, PS \_ 3 \_ 0 |
-| Textur Füll Ziele  | TX \_ 0, TX \_ 1                                                          |
+| Vertex-Shaderziele | Vs \_ 1 \_ 1, vs \_ 2 \_ 0, vs \_ 2 \_ sw, vs \_ 3 \_ 0                               |
+| Pixel-Shaderziele  | ps \_ 1 \_ 1, ps \_ 1 \_ 2, ps \_ 1 \_ 3, ps \_ 1 \_ 4, ps \_ 2 \_ 0, ps \_ 2 \_ sw, ps \_ 3 \_ 0 |
+| Texturfüllziele  | tx \_ 0, tx \_ 1                                                          |
 
 
 
@@ -133,12 +133,12 @@ Diese Methode kompiliert einen Shader aus einer Funktion, die in einer C-ähnlic
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Effect. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>     |
+| Header<br/>  | <dl> <dt>D3DX9Effect.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

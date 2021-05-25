@@ -1,19 +1,19 @@
 ---
-description: Von D3DPRESENT- \_ Parametern verwendete Konstanten.
+description: Von D3DPRESENT PARAMETERS verwendete \_ Konstanten.
 ms.assetid: 1294171e-b3f6-4264-8411-b69427cefe7b
 title: D3DPRESENTFLAG
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: fe3b7fe950a6fe09425aa47a79ce8f803eb81298
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 578d41119980719e69b9eb0e502c025414018f73
+ms.sourcegitcommit: b40a986d5ded926ae7617119cdd35d99b533bad9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106346225"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "110343095"
 ---
 # <a name="d3dpresentflag"></a>D3DPRESENTFLAG
 
-Von D3DPRESENT- [**\_ Parametern**](d3dpresent-parameters.md)verwendete Konstanten.
+Konstanten, die von [**D3DPRESENT PARAMETERS \_ verwendet werden.**](d3dpresent-parameters.md)
 
 
 
@@ -25,28 +25,28 @@ Von D3DPRESENT- [**\_ Parametern**](d3dpresent-parameters.md)verwendete Konstant
 </colgroup>
 <tbody>
 <tr class="odd">
-<td>#definieren</td>
+<td>#Definieren</td>
 <td>Wert</td>
 <td>BESCHREIBUNG</td>
 </tr>
 <tr class="even">
 <td>D3DPRESENTFLAG_DEVICECLIP</td>
 <td>0x00000004</td>
-<td>Schneiden Sie ein Fenster <a href="/windows/desktop/api"><strong></strong></a> aus, das sich im Fenster Client Bereich befindet, und zwar im Bildschirmbereich des Monitors der Grafikkarte, von der das Direct3D-Gerät erstellt wurde. D3DPRESENTFLAG_DEVICECLIP ist mit D3DSWAPEFFECT_FLIPEX ungültig.</td>
+<td>Clip a windowed <a href="/windows/desktop/api"><strong>Present</strong></a> blit into the window client area, within the monitor screen area of the video adapter that created the Direct3D device. D3DPRESENTFLAG_DEVICECLIP ist mit dem -D3DSWAPEFFECT_FLIPEX.</td>
 </tr>
 <tr class="odd">
 <td>D3DPRESENTFLAG_DISCARD_DEPTHSTENCIL</td>
 <td>0x00000002</td>
-<td>Legen Sie dieses Flag fest, wenn das Gerät oder die Swapkette erstellt wird, um z-Puffer-verwerfen zu aktivieren. Wenn dieses Flag festgelegt ist, ist der Inhalt des tiefen Schablone-Puffers nach dem Aufrufen von " <a href="/windows/desktop/api"><strong>Present</strong></a>" oder " <a href="/windows/desktop/api"><strong>setdepthstencilsurface</strong></a> " mit einer anderen tiefen Oberfläche ungültig. Das Verwerfen von z-Puffer Daten kann die Leistung erhöhen und ist Treiber abhängig. Die Debug-Laufzeit erzwingt das verwerfen, indem Sie den z-Puffer auf einen konstanten Wert nach dem Aufruf von " <a href="/windows/desktop/api"><strong>Present</strong></a>" oder " <a href="/windows/desktop/api"><strong>setdepthstencilsurface</strong></a> " mit einer anderen tiefen Oberfläche löscht.<br/> Das Verwerfen von z-Puffer Daten ist für alle Sperr baren Formate, D3DFMT_D16_LOCKABLE und D3DFMT_D32F_LOCKABLE nicht zulässig. Jede Verwendung von " <a href="/windows/desktop/api"><strong>kreatedevice</strong></a> ", die ein Sperr bares Format und z-Puffer-verwerfen angibt, schlägt fehl. Weitere Informationen zu Formaten finden Sie unter <a href="d3dformat.md">D3DFORMAT</a>.<br/></td>
+<td>Legen Sie dieses Flag fest, wenn das Gerät oder die Auslagerungskette erstellt wird, um das Z-Buffer-Verwerfen zu aktivieren. Wenn dieses Flag festgelegt ist, ist der Inhalt des Tiefen-Schablonenpuffers nach dem Aufruf von <a href="/windows/desktop/api"><strong>Present</strong></a>oder <a href="/windows/desktop/api"><strong>SetDepthStencilSurface</strong></a> mit einer anderen Tiefenoberfläche ungültig. Das Verwerfen von Z-Buffer-Daten kann die Leistung erhöhen und ist treiberabhängig. Die Debuglaufzeit erzwingt das Verwerfen, indem der Z-Puffer auf einen konstanten Wert gelöscht wird, nachdem entweder <a href="/windows/desktop/api"><strong>Present</strong></a>oder <a href="/windows/desktop/api"><strong>SetDepthStencilSurface</strong></a> mit einer anderen Tiefenoberfläche aufruft.<br/> Das Verwerfen von Z-Buffer-Daten ist für alle sperrbaren Formate, Formate D3DFMT_D16_LOCKABLE und D3DFMT_D32F_LOCKABLE. Bei jeder Verwendung <a href="/windows/desktop/api"><strong>von CreateDevice,</strong></a> die ein sperrbares Format und Z-Buffer-Verwerfen anknt, kommt es zu einem Fehler. Weitere Informationen zu Formaten finden Sie unter <a href="d3dformat.md">D3DFORMAT</a>.<br/></td>
 </tr>
 <tr class="even">
 <td>D3DPRESENTFLAG_LOCKABLE_BACKBUFFER</td>
 <td>0x00000001</td>
-<td>Legen Sie dieses Flag fest, wenn die Anwendung die Möglichkeit erfordert, den Hintergrund Puffer direkt zu sperren. Beachten Sie, dass die Back Puffer nicht sperrbar sind, es sei denn, die Anwendung gibt D3DPRESENTFLAG_LOCKABLE_BACKBUFFER beim Aufrufen von <a href="/windows/desktop/api"><strong>createdevice</strong></a> <a href="/windows/desktop/api"><strong>an oder setzt</strong></a> Sperr Bare Sicherungs Puffer verursachen bei manchen Grafikhardware Konfigurationen Leistungseinbußen. Durch das Ausführen eines Sperr Vorgangs (oder mithilfe von <a href="/windows/desktop/api"><strong>updatesurface</strong></a> zum Schreiben) auf dem Sperr baren Hintergrund wird die Leistung auf vielen Karten verringert. In diesem Fall sollten Sie die Verwendung von Text Dreiecken zum Verschieben von Daten in den Hintergrund Puffer in Erwägung ziehen.<br/> 
+<td>Legen Sie dieses Flag fest, wenn die Anwendung die Möglichkeit benötigt, den Hintergrundpuffer direkt zu sperren. Beachten Sie, dass Rückpuffer nur dann gesperrt werden können, wenn die Anwendung D3DPRESENTFLAG_LOCKABLE_BACKBUFFER <a href="/windows/desktop/api"><strong>CreateDevice</strong></a> oder <a href="/windows/desktop/api"><strong>Reset angibt.</strong></a> Sperrbare Hintergrundpuffer führen bei einigen Grafikhardwarekonfigurationen zu Leistungskosten. Das Ausführen eines Sperrvorgangs (oder Verwenden von <a href="/windows/desktop/api"><strong>UpdateSurface</strong></a> zum Schreiben) für den sperrbaren Hintergrundpuffer verringert die Leistung auf vielen Karten. Ziehen Sie in diesem Fall die Verwendung von strukturierten Dreiecken in Betracht, um Daten in den Hintergrundpuffer zu verschieben.<br/> 
 <table>
 <tbody>
 <tr class="odd">
-<td>Unterschiede zwischen Direct3D 9 und Direct3D 9Ex:<br/> In Direct3D9Ex kann dieses Flag nicht festgelegt werden, wenn der D3DSWAPEFFECT-Wert D3DSWAPEFFECT_FLIPEX ist, da das Flip-Modell dem Desktopfenster-Manager den Zugriff auf den Hintergrund Puffer einer Anwendung ermöglicht. Eine prozessübergreifende, freigegebene Oberfläche sollte nicht gesperrt werden.<br/></td>
+<td>Unterschiede zwischen Direct3D 9 und Direct3D 9Ex:<br/> In Direct3D9Ex kann dieses Flag nicht festgelegt werden, wenn D3DSWAPEFFECT D3DSWAPEFFECT_FLIPEX ist, da das Flip-Modell dem Desktopfenster-Manager den Zugriff auf den Backpuffer einer Anwendung ermöglicht. Eine prozessübergreifende freigegebene Oberfläche sollte nicht gesperrt werden.<br/></td>
 </tr>
 </tbody>
 </table>
@@ -56,7 +56,7 @@ Von D3DPRESENT- [**\_ Parametern**](d3dpresent-parameters.md)verwendete Konstant
 <tr class="odd">
 <td>D3DPRESENTFLAG_NOAUTOROTATE</td>
 <td>0x00000020</td>
-<td>Gedrehte Monitore werden bei der Präsentation automatisch mit einer rotierenden Kopie behandelt, was nicht sehr effizient ist. Dieses Flag bedeutet, dass die Anwendung die eigene Anzeigedrehung ausführt. 
+<td>Gedrehte Monitore werden automatisch mit einer rotierenden Kopie während der Präsentation verarbeitet, was nicht sehr effizient ist. Dieses Flag bedeutet, dass die Anwendung ihre eigene Anzeigerotation ausführt. 
 <table>
 <tbody>
 <tr class="odd">
@@ -66,13 +66,13 @@ Von D3DPRESENT- [**\_ Parametern**](d3dpresent-parameters.md)verwendete Konstant
 </table>
 
 <p> </p>
-<p>Anwendungen können eine eigene Drehung erzielen, indem Sie möglicherweise eine gedrehte Ansichts Matrix verwenden. Die Methoden <a href="/windows/desktop/api/D3D9/nf-d3d9-idirect3dswapchain9ex-getdisplaymodeex"><strong>getdisplaymodeex</strong></a> und <a href="/windows/desktop/api/d3d9/nf-d3d9-idirect3d9ex-getadapterdisplaymodeex"><strong>getadapterdisplaymodeex</strong></a> sollten verwendet werden, um die aktuelle Rotations Einstellung zu ermitteln. Die Parameter "width" und "Height" in " <a href="/windows/desktop/api/d3d9/nf-d3d9-idirect3d9ex-createdeviceex"><strong>kreatedeviceex</strong></a> " und " <a href="/windows/desktop/api/d3d9/nf-d3d9-idirect3ddevice9ex-resetex"><strong>rectex</strong></a> " müssen in der Querformat Ausrichtung verwendet werden, während die Struktur des Vollbild-Anzeigemodus identisch mit der Rückgabe von " <a href="/windows/desktop/api/d3d9/nf-d3d9-idirect3d9ex-enumadaptermodesex"><strong>enumadaptermodesex</strong></a> " ist (d. h., wenn 90 und 270 Grad gedreht werden, werden Breite und Höhe ausgetauscht).</p>
-<p>Bei Verwendung der Lock-Klausel für gedrehte Renderziele sind linke obere Ecke nicht mehr true. Das Renderziel SURFACE_DESC bleibt Querformat (wie durch die Erstellungs Parameter impliziert) und GDI-Fenster, Maus Koordinaten und muss bei Verwendung mit dem Direct3D-Renderziel und der Szene ordnungsgemäß übersetzt werden.</p></td>
+<p>Anwendungen können ihre eigene Drehung erreichen, möglicherweise mithilfe einer gedrehten Ansichtsmatrix. Die Methoden <a href="/windows/desktop/api/D3D9/nf-d3d9-idirect3dswapchain9ex-getdisplaymodeex"><strong>GetDisplayModeEx</strong></a> und <a href="/windows/desktop/api/d3d9/nf-d3d9-idirect3d9ex-getadapterdisplaymodeex"><strong>GetAdapterDisplayModeEx</strong></a> sollten verwendet werden, um die aktuelle Rotationseinstellung zu finden. Die Backbufferparameter Width und Height in <a href="/windows/desktop/api/d3d9/nf-d3d9-idirect3d9ex-createdeviceex"><strong>CreateDeviceEx</strong></a> und <a href="/windows/desktop/api/d3d9/nf-d3d9-idirect3ddevice9ex-resetex"><strong>ResetEx</strong></a> müssen querformatiert sein, während die Struktur des Vollbildanzeigemodus mit der von <a href="/windows/desktop/api/d3d9/nf-d3d9-idirect3d9ex-enumadaptermodesex"><strong>EnumAdapterModesEx</strong></a> zurückgegebenen Struktur identisch sein sollte (d. h. Breite und Höhe werden ausgetauscht, wenn sie um 90 und 270 Grad gedreht werden).</p>
+<p>Bei Verwendung von Lock on rotated render targets (Sperren für gedrehte Renderziele) gelten annahmen in der linken oberen Ecke nicht mehr als true, das Renderziel SURFACE_DESC bleibt (wie durch die Erstellungsparameter impliziert) und GDI-Fenster, Mauskoordinaten und solche müssen ordnungsgemäß übersetzt werden, wenn sie mit dem Direct3D-Renderziel und der -Szene verwendet werden.</p></td>
 </tr>
 <tr class="even">
 <td>D3DPRESENTFLAG_UNPRUNEDMODE</td>
 <td>0x00000040</td>
-<td>Verwenden Sie dieses Flag, um alle vom Anzeige Adapter aufgelisteten unformatierten Anzeigemodi anzugeben, auch wenn Direct3D möglicherweise angibt, dass der Modus ungültig ist. Die Anwendung sollte dies auf robuste Weise implementieren, falls der gewünschte Modus wirklich ungültig ist. 
+<td>Verwenden Sie dieses Flag, um einen beliebigen RAW-Anzeigemodus anzugeben, der vom Anzeigeadapter aufzählt, obwohl Direct3D möglicherweise angegeben hat, dass der Modus ungültig ist. Die Anwendung sollte dies auf stabile Weise implementieren, falls der gewünschte Modus tatsächlich ungültig ist. 
 <table>
 <tbody>
 <tr class="odd">
@@ -86,12 +86,12 @@ Von D3DPRESENT- [**\_ Parametern**](d3dpresent-parameters.md)verwendete Konstant
 <tr class="odd">
 <td>D3DPRESENTFLAG_VIDEO</td>
 <td>0x00000010</td>
-<td>Dies ist ein Hinweis für den Treiber, dass die Hintergrund Puffer Videodaten enthalten.</td>
+<td>Dies ist ein Hinweis an den Treiber, dass die Hintergrundpuffer Videodaten enthalten.</td>
 </tr>
 <tr class="even">
 <td>D3DPRESENTFLAG_OVERLAY_LIMITEDRGB</td>
 <td>0x00000080</td>
-<td>Gibt an, ob die Überlagerung den vollen Bereich RGB oder den begrenzten Bereich RGB hat. Das Festlegen dieses Flags gibt den begrenzten Bereich RGB an. Im begrenzten Bereich RGB wird der RGB-Bereich so komprimiert, dass 16:16:16 schwarz und 235:235:235 weiß ist.
+<td>Gibt an, ob es sich bei der Überlagerung um einen RGB-Vollbereich oder um rgb-Bereich mit eingeschränktem Bereich handelt. Das Festlegen dieses Flags gibt den begrenzten Bereich RGB an. In einem begrenzten Bereich von RGB wird der RGB-Bereich so komprimiert, dass 16:16:16 schwarz und 235:235:235 weiß ist.
 <table>
 <tbody>
 <tr class="odd">
@@ -105,7 +105,7 @@ Von D3DPRESENT- [**\_ Parametern**](d3dpresent-parameters.md)verwendete Konstant
 <tr class="odd">
 <td>D3DPRESENTFLAG_OVERLAY_YCbCr_BT709</td>
 <td>0x00000100</td>
-<td>Gibt an, ob die Überlagerung BT. 601 oder BT. 709 ist. Wenn dieses Flag festgelegt wird, wird "BT. 709" für High-Definition TV (HDTV) angegeben.
+<td>Gibt an, ob die Überlagerung BT.601 oder BT.709 ist. Wenn Sie dieses Flag festlegen, wird BT.709 für high-definition TV (GS) angegeben.
 <table>
 <tbody>
 <tr class="odd">
@@ -119,7 +119,7 @@ Von D3DPRESENT- [**\_ Parametern**](d3dpresent-parameters.md)verwendete Konstant
 <tr class="even">
 <td>D3DPRESENTFLAG_OVERLAY_YCbCr_xvYCC</td>
 <td>0x00000200</td>
-<td>Gibt an, ob die Überlagerung konventionelle YCbCr oder Extended YCbCr (xwycc) ist. Wenn dieses Flag festgelegt wird, wird der erweiterte YCbCr (xwycc) angegeben.
+<td>Gibt an, ob die Überlagerung konventioneller YCbCr oder erweiterter YCbCr (xvYCC) ist. Das Festlegen dieses Flags gibt die erweiterte YCbCr (xvYCC) an.
 <table>
 <tbody>
 <tr class="odd">
@@ -133,7 +133,7 @@ Von D3DPRESENT- [**\_ Parametern**](d3dpresent-parameters.md)verwendete Konstant
 <tr class="odd">
 <td>D3DPRESENTFLAG_RESTRICTED_CONTENT</td>
 <td>0x00000400</td>
-<td>Das Festlegen dieses Flags gibt an, dass die vorhandenes SwapChain geschützte Inhalte enthält und automatisch bewirkt, dass die Laufzeit den Zugriff auf die vorhandenes SwapChain einschränkt, sodass nur der Desktop-Windows-Manager (DWM) vorhandenes SwapChain verwenden kann.
+<td>Das Festlegen dieses Flags gibt an, dass die Swapkette geschützte Inhalte enthält und automatisch bewirkt, dass die Laufzeit den Zugriff auf die Swapkette einschränkt, sodass nur der Desktop-Windows-Manager (DWM) die Swapkette verwenden kann.
 <table>
 <tbody>
 <tr class="odd">
@@ -147,7 +147,7 @@ Von D3DPRESENT- [**\_ Parametern**](d3dpresent-parameters.md)verwendete Konstant
 <tr class="even">
 <td>D3DPRESENTFLAG_RESTRICT_SHARED_RESOURCE_DRIVER</td>
 <td>0x00000800</td>
-<td>Wenn dieses Flag festgelegt wird, wird der Zugriff auf freigegebene Ressourcen, die für die DWM-Interaktion erstellt werden, durch den Treiber eingeschränkt. Der Aufrufer muss einen authentifizierten Kanal mit dem Treiber erstellen. Der Treiber sollte dann den Zugriff auf Prozesse zulassen, die versuchen, diese freigegebenen Ressourcen zu öffnen.
+<td>Das Festlegen dieses Flags gibt an, dass der Treiber den Zugriff auf alle freigegebenen Ressourcen einschränken soll, die für die DWM-Interaktion erstellt werden. Der Aufrufer muss einen authentifizierten Kanal mit dem Treiber erstellen. Der Treiber sollte dann den Zugriff auf Prozesse zulassen, die versuchen, diese freigegebenen Ressourcen zu öffnen.
 <table>
 <tbody>
 <tr class="odd">
@@ -165,16 +165,16 @@ Von D3DPRESENT- [**\_ Parametern**](d3dpresent-parameters.md)verwendete Konstant
 
  
 
-Diese Konstanten werden von [**D3DPRESENT- \_ Parametern**](d3dpresent-parameters.md)verwendet.
+Diese Konstanten werden von [**D3DPRESENT \_ PARAMETERS**](d3dpresent-parameters.md)verwendet.
 
-## <a name="constant-information"></a>Konstante Informationen
+## <a name="constant-information"></a>Konstanteninformationen
 
 
 
-|                          |             |
+| Anforderung                         | Wert            |
 |--------------------------|-------------|
-| Header                   | d3d9types. h |
-| Mindestens Betriebssystem | Windows 98  |
+| Header                   | d3d9types.h |
+| Mindestbetriebssystem | Windows 98  |
 
 
 
