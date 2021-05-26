@@ -1,54 +1,53 @@
 ---
-description: Abrufen unterstützter Dienst Methoden
+description: Abrufen unterstützter Dienstmethoden
 ms.assetid: 783a6552-9b22-4af4-9252-b443e2624687
-title: Abrufen unterstützter Dienst Methoden
+title: Abrufen unterstützter Dienstmethoden
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6029af655a8835a4eee887d919c534856062ff13
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b021aa868ffaa95df23a729e94d62eae8a0c632e
+ms.sourcegitcommit: 0f7a8198bacd5493ab1e78a9583c7a3578794765
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103866503"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "110423800"
 ---
-# <a name="retrieving-supported-service-methods"></a>Abrufen unterstützter Dienst Methoden
+# <a name="retrieving-supported-service-methods"></a>Abrufen unterstützter Dienstmethoden
 
-Dienst Methoden Kapseln Funktionen, die von den einzelnen Diensten definiert und implementiert werden. Sie sind spezifisch für jeden Diensttyp und werden durch eine eindeutige GUID dargestellt.
+Dienstmethoden kapseln Funktionen, die jeder Dienst definiert und implementiert. Sie sind spezifisch für jeden Diensttyp und werden durch eine eindeutige GUID dargestellt.
 
-Der Kontakt Dienst definiert z. b. eine **BeginSync** -Methode, die Anwendungen aufrufen, um das Gerät für die Synchronisierung von Kontakt Objekten vorzubereiten, und eine **EndSync** -Methode, um das Gerät zu benachrichtigen, dass die Synchronisierung abgeschlossen ist.
+Beispielsweise definiert der Contacts-Dienst eine **BeginSync-Methode,** die Anwendungen aufrufen, um das Gerät für die Synchronisierung von Contact-Objekten vorzubereiten, und eine **EndSync-Methode,** um das Gerät über den Abschluss der Synchronisierung zu informieren.
 
-Anwendungen können die unterstützten Methoden Programm gesteuert Abfragen und mithilfe der [**iportabledeviceservicecapabili-**](/windows/desktop/api/PortableDeviceAPI/nn-portabledeviceapi-iportabledeviceservicecapabilities) Schnittstelle auf diese Methoden und deren Attribute zugreifen.
+Anwendungen können die unterstützten Methoden programmgesteuert abfragen und mithilfe der [**IPortableDeviceServiceCapabilities-Schnittstelle**](/windows/desktop/api/PortableDeviceAPI/nn-portabledeviceapi-iportabledeviceservicecapabilities) auf diese Methoden und ihre Attribute zugreifen.
 
-Dienst Methoden sollten nicht mit WPD-Befehlen verwechselt werden. WPD-Befehle sind Teil der standardmäßigen WPD-Gerätetreiber Schnittstelle (DDI) und stellen den Mechanismus für die Kommunikation zwischen einer WPD-Anwendung und dem Treiber dar. Befehle sind vordefiniert, gruppiert nach Kategorien, z. b. \_ die WPD \_ -Kategorie Common, und werden durch eine PropertyKey-Struktur dargestellt. Weitere Informationen finden Sie im Thema " [**Befehle**](commands.md) ".
+Dienstmethoden dürfen nicht mit WPD-Befehlen verwechselt werden. WPD-Befehle sind Teil der standardmäßigen WPD-Gerätetreiberschnittstelle (DDI) und der Mechanismus für die Kommunikation zwischen einer WPD-Anwendung und dem Treiber. Befehle sind vordefiniert, nach Kategorien gruppiert, z. B. WPD \_ CATEGORY \_ COMMON, und werden durch eine PROPERTYKEY-Struktur dargestellt. Weitere Informationen finden Sie im Thema [**Befehle.**](commands.md)
 
-Die Anwendung wpdservicesapisample enthält Code, der veranschaulicht, wie eine Anwendung die von einem bestimmten Kontakt Dienst unterstützten Methoden mithilfe der Schnittstellen in der folgenden Tabelle abrufen kann.
+Die WpdServicesApiSample-Anwendung enthält Code, der veranschaulicht, wie eine Anwendung die von einem bestimmten Contacts-Dienst unterstützten Methoden mithilfe der Schnittstellen in der folgenden Tabelle abrufen kann.
 
 
 
-|                                                                                      |                                                                                                                |
+| Schnittstelle      | BESCHREIBUNG         |
 |--------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| Schnittstelle                                                                            | BESCHREIBUNG                                                                                                    |
-| [**Iportablede viceservice**](/windows/desktop/api/PortableDeviceAPI/nn-portabledeviceapi-iportabledeviceservice)                             | Dient zum Abrufen der **iportabledeviceservicecapabili-** Schnittstelle für den Zugriff auf die unterstützten Dienst Methoden. |
-| [**Iportablede viceservicecapabili**](/windows/desktop/api/PortableDeviceAPI/nn-portabledeviceapi-iportabledeviceservicecapabilities)     | Bietet Zugriff auf die unterstützten Methoden, Methoden Attribute und Methoden Parameter.                             |
-| [**Iportabledevicepropvariantcollection**](iportabledevicepropvariantcollection.md) | Enthält die Liste der unterstützten Methoden.                                                                        |
-| [**Iportablede vicevalues**](iportabledevicevalues.md)                               | Enthält die Attribute für eine Methode und für die Parameter einer bestimmten Methode.                                      |
-| [**Iportabledevicekeycollection**](iportabledevicekeycollection.md)                 | Enthält die Parameter für eine bestimmte Methode.                                                                    |
+| [**IPortableDeviceService**](/windows/desktop/api/PortableDeviceAPI/nn-portabledeviceapi-iportabledeviceservice)                             | Wird verwendet, um die **IPortableDeviceServiceCapabilities-Schnittstelle** abzurufen, um auf die unterstützten Dienstmethoden zuzugreifen. |
+| [**IPortableDeviceServiceCapabilities**](/windows/desktop/api/PortableDeviceAPI/nn-portabledeviceapi-iportabledeviceservicecapabilities)     | Bietet Zugriff auf die unterstützten Methoden, Methodenattribute und Methodenparameter.                             |
+| [**IPortableDevicePropVariantCollection**](iportabledevicepropvariantcollection.md) | Enthält die Liste der unterstützten Methoden.                                                                        |
+| [**IPortableDeviceValues**](iportabledevicevalues.md)                               | Enthält die Attribute für eine Methode und für die Parameter einer bestimmten Methode.                                      |
+| [**IPortableDeviceKeyCollection**](iportabledevicekeycollection.md)                 | Enthält die Parameter für eine bestimmte Methode.                                                                    |
 
 
 
  
 
-Wenn der Benutzer die Option "5" in der Befehlszeile auswählt, ruft die Anwendung die **listsupportedmethods** -Methode auf, die im Modul "servicemethods. cpp" zu finden ist.
+Wenn der Benutzer die Option "5" in der Befehlszeile auswählt, ruft die Anwendung die **ListSupportedMethods-Methode** auf, die sich im Modul ServiceMethods.cpp befindet.
 
-Beachten Sie, dass die Beispielanwendung vor dem Abrufen der Ereignisliste einen Kontakt Dienst auf einem verbundenen Gerät öffnet.
+Beachten Sie, dass die Beispielanwendung vor dem Abrufen der Ereignisliste einen Kontaktdienst auf einem verbundenen Gerät öffnet.
 
-In WPD wird eine Methode anhand ihres Namens, ihrer Zugriffsrechte, der Parameter und der zugehörigen Daten beschrieben. Die Beispielanwendung zeigt einen benutzerfreundlichen Namen an, z. b. "custommethod" oder eine GUID. Auf den Methodennamen oder die GUID folgt der Zugriff auf Daten ("Lesen/Schreiben"), den Namen eines beliebigen zugeordneten Formats und die Parameterdaten. Diese Daten umfassen den Parameternamen, die Verwendung, den VarType und das Formular.
+In WPD wird eine Methode durch ihren Namen, Zugriffsrechte, Parameter und zugehörige Daten beschrieben. Die Beispielanwendung zeigt einen benutzerfreundlichen Namen an, z. B. "CustomMethod" oder eine GUID. Auf den Methodennamen oder die GUID folgen Zugriffsdaten ("Lesen/Schreiben"), der Name jedes zugeordneten Formats und die Parameterdaten. Diese Daten umfassen den Parameternamen, die Verwendung, VARTYPE und das Formular.
 
-Fünf Methoden im servicemethods. cpp-Modul unterstützen das Abrufen von Methoden (und verknüpften Daten) für den jeweiligen Kontakt Dienst: **listsupportedmethods**, **Display Method**, **displaymethodaccess**, **Display Format** und **Display MethodParameters**. Die **listsupportedmethods** -Methode ruft die Anzahl unterstützter Methoden und den GUID-Bezeichner für jeden ab. Anschließend wird die **displaymethod** -Methode aufgerufen. Die **displaymethod** -Methode ruft die [**iportabledeviceservicecapebilitäts:: getmethodattributes**](/windows/desktop/api/PortableDeviceAPI/nf-portabledeviceapi-iportabledeviceservicecapabilities-getmethodattributes) -Methode auf, um die Optionen, Parameter usw. der angegebenen Methode abzurufen. Nachdem die Methoden Daten von **displaymethod** abgerufen wurden, werden der Name (oder die GUID), die Zugriffsbeschränkungen, das zugeordnete Format (sofern vorhanden) und die Parameter Beschreibungen gerendert. **Display methodaccess**, **Display Format** und **displaymethodparameters** sind Hilfsfunktionen, die ihre jeweiligen Datenfelder Rendering.
+Fünf Methoden im Modul ServiceMethods.cpp unterstützen das Abrufen von Methoden (und zugehörigen Daten) für den angegebenen Contacts-Dienst: **ListSupportedMethods**, **DisplayMethod**, **DisplayMethodAccess**, **DisplayFormat** und **DisplayMethodParameters**. Die **ListSupportedMethods-Methode** ruft jeweils die Anzahl der unterstützten Methoden und den GUID-Bezeichner ab. anschließend wird die **DisplayMethod-Methode** aufruft. Die **DisplayMethod-Methode** ruft die [**IPortableDeviceServiceCapapbilities::GetMethodAttributes-Methode**](/windows/desktop/api/PortableDeviceAPI/nf-portabledeviceapi-iportabledeviceservicecapabilities-getmethodattributes) auf, um die Optionen, Parameter und so weiter der angegebenen Methode abzurufen. Nachdem **die DisplayMethod** die Methodendaten abgerufen hat, rendert sie den Namen (oder die GUID), die Zugriffseinschränkungen, das zugeordnete Format (falls verfügbar) und die Parameterbeschreibungen. Die **DisplayMethodAccess-,** **DisplayFormat-** und **DisplayMethodParameters** sind Hilfsfunktionen, die ihre jeweiligen Datenfelder rendern.
 
-Die **listsupportedmethods** -Methode ruft die [**iportabledeviceservice:: Funktionen**](/windows/desktop/api/PortableDeviceAPI/nf-portabledeviceapi-iportabledeviceservice-capabilities) -Methode auf, um eine [**iportabledeviceservicecapabili-**](/windows/desktop/api/PortableDeviceAPI/nn-portabledeviceapi-iportabledeviceservicecapabilities) Schnittstelle abzurufen. Mithilfe dieser Schnittstelle werden die unterstützten Methoden durch Aufrufen der [**iportabledeviceservicecapabili:: getsupportedmethods**](/windows/desktop/api/PortableDeviceAPI/nf-portabledeviceapi-iportabledeviceservicecapabilities-getsupportedmethods) -Methode abgerufen. Die **getsupportedmethods** -Methode ruft die GUIDs für jede Methode ab, die vom Dienst unterstützt wird, und kopiert diese GUID in ein [**iportabledevicepropvariantcollection**](iportabledevicepropvariantcollection.md) -Objekt.
+Die **ListSupportedMethods-Methode** ruft die [**IPortableDeviceService::Capabilities-Methode**](/windows/desktop/api/PortableDeviceAPI/nf-portabledeviceapi-iportabledeviceservice-capabilities) auf, um eine [**IPortableDeviceServiceCapabilities-Schnittstelle**](/windows/desktop/api/PortableDeviceAPI/nn-portabledeviceapi-iportabledeviceservicecapabilities) abzurufen. Mit dieser Schnittstelle werden die unterstützten Methoden abgerufen, indem die [**IPortableDeviceServiceCapabilities::GetSupportedMethods-Methode**](/windows/desktop/api/PortableDeviceAPI/nf-portabledeviceapi-iportabledeviceservicecapabilities-getsupportedmethods) aufgerufen wird. Die **GetSupportedMethods-Methode** ruft die GUIDs für jede vom Dienst unterstützte Methode ab und kopiert diese GUID in ein [**IPortableDevicePropVariantCollection-Objekt.**](iportabledevicepropvariantcollection.md)
 
-Im folgenden Code wird die **listsupportedmethods** -Methode verwendet.
+Im folgenden Code wird die **ListSupportedMethods-Methode** verwendet.
 
 
 ```C++
@@ -124,11 +123,11 @@ void ListSupportedMethods(IPortableDeviceService* pService)
 
 
 
-Nachdem die **listsupportedmethods** -Methode die GUID für jedes Ereignis abgerufen hat, das vom angegebenen Dienst unterstützt wird, ruft Sie die **displaymethod** -Methode auf, um die Methoden spezifischen Attribute abzurufen. Zu diesen Attributen gehören: der Skript Anzeige Name der Methode, die erforderlichen Zugriffsbeschränkungen, das zugehörige Format und die Liste der Parameter.
+Nachdem die **ListSupportedMethods-Methode** die GUID für jedes vom angegebenen Dienst unterstützte Ereignis abgerufen hat, ruft sie die **DisplayMethod-Methode** auf, um die methodenspezifischen Attribute abzurufen. Zu diesen Attributen gehören: der Skript-Anzeigename der Methode, erforderliche Zugriffseinschränkungen, jedes zugeordnete Format und eine Liste von Parametern.
 
-Die **displaymethod** -Methode ruft die [**iportabledeviceservicecapabili:: getmethodattributes**](/windows/desktop/api/PortableDeviceAPI/nf-portabledeviceapi-iportabledeviceservicecapabilities-getmethodattributes) -Methode auf, um eine Auflistung von Attributen für die angegebene Methode abzurufen. Anschließend wird die [**iportabledevicevalues:: GetStringValue**](iportabledevicevalues-getstringvalue.md) -Methode aufgerufen, um den Namen der Methode abzurufen. Die **displaymethod** ruft [**iportabledevicevalues:: getunsignedintegervalue**](iportabledevicevalues-getunsignedintegervalue.md) auf, um die Zugriffs Umleitungen abzurufen. Anschließend wird [**iportabledevicevalues:: getguidvalue**](iportabledevicevalues-getguidvalue.md) aufgerufen, um ein zugeordnetes Format abzurufen. Und schließlich Ruft die **displaymethod** den [**iportabledevicevalues:: getiportabledevicekeycollectionvalue**](iportabledevicevalues-getiportabledevicekeycollectionvalue.md) auf, um die Parameterdaten abzurufen. Sie übergibt die von diesen Methoden zurückgegebenen Daten an die Hilfsfunktionen " **displaymethodaccess**", " **Display Format**" und " **displaymethodparameters** ", die die Informationen für die angegebene Methode Rendering.
+Die **DisplayMethod-Methode** ruft die [**IPortableDeviceServiceCapabilities::GetMethodAttributes-Methode**](/windows/desktop/api/PortableDeviceAPI/nf-portabledeviceapi-iportabledeviceservicecapabilities-getmethodattributes) auf, um eine Auflistung von Attributen für die angegebene Methode abzurufen. Anschließend wird die [**IPortableDeviceValues::GetStringValue-Methode**](iportabledevicevalues-getstringvalue.md) aufgerufen, um den Namen der Methode abzurufen. **DisplayMethod** ruft [**IPortableDeviceValues::GetUnsignedIntegerValue**](iportabledevicevalues-getunsignedintegervalue.md) auf, um die Zugriffs-Restrctions abzurufen. Danach wird [**IPortableDeviceValues::GetGuidValue**](iportabledevicevalues-getguidvalue.md) aufgerufen, um alle zugeordneten Formate abzurufen. Schließlich ruft **displayMethod** den [**IPortableDeviceValues::GetIPortableDeviceKeyCollectionValue**](iportabledevicevalues-getiportabledevicekeycollectionvalue.md) auf, um die Parameterdaten abzurufen. Die von diesen Methoden zurückgegebenen Daten werden an die Hilfsfunktionen **DisplayMethodAccess,** **DisplayFormat** und **DisplayMethodParameters** übergeben, die die Informationen für die angegebene Methode rendern.
 
-Im folgenden Code wird die **displaymethod** -Methode verwendet.
+Im folgenden Code wird die **DisplayMethod-Methode** verwendet.
 
 
 ```C++
@@ -202,9 +201,9 @@ void DisplayMethod(
 
 
 
-Die Hilfsfunktion **displaymethodaccess** empfängt einen DWORD-Wert, der die Zugriffs Optionen der Methode enthält. Dieser Wert wird mit dem WPD \_ \_ -Befehls Zugriffs \_ Lese-und dem WPD \_ -Befehls Zugriffs-Lesevorgang verglichen \_ \_ , um die Zugriffsberechtigung der Methode zu bestimmen. Wenn das Ergebnis verwendet wird, rendert es eine Zeichenfolge, die die Zugriffsbeschränkung für die angegebene Methode angibt.
+Die **DisplayMethodAccess-Hilfsfunktion** empfängt einen DWORD-Wert, der die Zugriffsoptionen der Methode enthält. Dieser Wert wird mit WPD \_ COMMAND ACCESS READ und \_ \_ WPD COMMAND ACCESS \_ \_ \_ READWRITE verglichen, um die Zugriffsrechte der Methode zu bestimmen. Mithilfe des Ergebnisses wird eine Zeichenfolge gerendert, die die Zugriffseinschränkung für die gegebene Methode angibt.
 
-Im folgenden Code wird die-Hilfsfunktion **displaymethodaccess** verwendet.
+Im folgenden Code wird die **Hilfsfunktion DisplayMethodAccess** verwendet.
 
 
 ```C++
@@ -230,11 +229,11 @@ void DisplayMethodAccess(
 
 
 
-Die Hilfsfunktion **displaymethod** empfängt ein [**iportabledeviceservicecapabili-**](/windows/desktop/api/PortableDeviceAPI/nn-portabledeviceapi-iportabledeviceservicecapabilities) Objekt und die GUID der Methode als Parameter. Mithilfe des **iportabledeviceservicecapabili-** Objekts wird die [**iportabledeviceservicecapabili:: getmethodattributes**](/windows/desktop/api/PortableDeviceAPI/nf-portabledeviceapi-iportabledeviceservicecapabilities-getformatattributes) -Methode aufgerufen, um die Methoden Attribute abzurufen und Sie im Konsolenfenster der Anwendung zu erzeugen.
+Die **DisplayMethod-Hilfsfunktion** empfängt ein [**IPortableDeviceServiceCapabilities-Objekt**](/windows/desktop/api/PortableDeviceAPI/nn-portabledeviceapi-iportabledeviceservicecapabilities) und die GUID der Methode als Parameter. Mithilfe des **IPortableDeviceServiceCapabilities-Objekts** wird die [**IPortableDeviceServiceCapabilities::GetMethodAttributes-Methode**](/windows/desktop/api/PortableDeviceAPI/nf-portabledeviceapi-iportabledeviceservicecapabilities-getformatattributes) aufgerufen, um die Methodenattribute abzurufen und im Konsolenfenster der Anwendung zu rendern.
 
-Die Hilfsfunktion **displaymethodparameters** empfängt ein [**iportabledeviceservicecapabili-**](/windows/desktop/api/PortableDeviceAPI/nn-portabledeviceapi-iportabledeviceservicecapabilities) Objekt, die GUID der Methode und ein iportabledevicekeycollection-Objekt, das die Methoden Parameter enthält. Mithilfe des [**iportabledevicekeycollection**](iportabledevicekeycollection.md) -Objekts wird die [**iportabledeviceservicecapabili:: getmethodparameterattribute**](/windows/desktop/api/PortableDeviceAPI/nf-portabledeviceapi-iportabledeviceservicecapabilities-getmethodparameterattributes) -Methode aufgerufen, um den Namen, die Verwendung, den VarType und das Formular des Parameters abzurufen. Diese Informationen werden im Konsolenfenster der Anwendung gerendert.
+Die **Hilfsfunktion DisplayMethodParameters** empfängt ein [**IPortableDeviceServiceCapabilities-Objekt,**](/windows/desktop/api/PortableDeviceAPI/nn-portabledeviceapi-iportabledeviceservicecapabilities) die GUID der Methode und ein IPortableDeviceKeyCollection-Objekt, das die Methodenparameter enthält. Mithilfe des [**IPortableDeviceKeyCollection-Objekts**](iportabledevicekeycollection.md) wird die [**IPortableDeviceServiceCapabilities::GetMethodParameterAttributes-Methode**](/windows/desktop/api/PortableDeviceAPI/nf-portabledeviceapi-iportabledeviceservicecapabilities-getmethodparameterattributes) aufgerufen, um den Namen, die Verwendung, den VARTYPE und das Formular des Parameters abzurufen. Diese Informationen werden im Konsolenfenster der Anwendung gerendert.
 
-Im folgenden Code wird die-Hilfsfunktion **displaymethodparameters** verwendet.
+Im folgenden Code wird die **DisplayMethodParameters-Hilfsfunktion** verwendet.
 
 
 ```C++
@@ -346,19 +345,19 @@ void DisplayMethodParameters(
 
 <dl> <dt>
 
-[**Iportabledevicekeycollection**](iportabledevicekeycollection.md)
+[**IPortableDeviceKeyCollection**](iportabledevicekeycollection.md)
 </dt> <dt>
 
-[**Iportablede viceservice**](/windows/desktop/api/PortableDeviceAPI/nn-portabledeviceapi-iportabledeviceservice)
+[**IPortableDeviceService**](/windows/desktop/api/PortableDeviceAPI/nn-portabledeviceapi-iportabledeviceservice)
 </dt> <dt>
 
-[**Iportablede viceservicecapabili**](/windows/desktop/api/PortableDeviceAPI/nn-portabledeviceapi-iportabledeviceservicecapabilities)
+[**IPortableDeviceServiceCapabilities**](/windows/desktop/api/PortableDeviceAPI/nn-portabledeviceapi-iportabledeviceservicecapabilities)
 </dt> <dt>
 
-[**Iportablede vicevalues**](iportabledevicevalues.md)
+[**IPortableDeviceValues**](iportabledevicevalues.md)
 </dt> <dt>
 
-[Wpdservicesapisample](wpdapisample-sample-service-application.md)
+[WpdServicesApiSample](wpdapisample-sample-service-application.md)
 </dt> </dl>
 
  

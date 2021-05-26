@@ -4,38 +4,37 @@ ms.assetid: f762a571-83ea-4999-ad49-a51044bc790d
 title: Schreiben von Objekteigenschaften
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4cb061288cbfde93f2baea1860581c25c61a8a0b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 726501c986e73033437de3bee0c11b3beb66150d
+ms.sourcegitcommit: 0f7a8198bacd5493ab1e78a9583c7a3578794765
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106353478"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "110423930"
 ---
 # <a name="writing-object-properties"></a>Schreiben von Objekteigenschaften
 
-Dienste enthalten häufig untergeordnete Objekte, die zu einem der Formate gehören, die von den einzelnen Diensten unterstützt werden. Beispielsweise kann ein Kontakt Dienst mehrere Kontakt Objekte des abstrakten Kontakt Formats unterstützen. Alle Kontakt Objekte werden durch verwandte Eigenschaften (Kontakt Name, Telefonnummer, e-Mail-Adresse usw.) beschrieben.
+Dienste enthalten häufig untergeordnete Objekte, die zu einem der Formate gehören, die jeder Dienst unterstützt. Ein Contacts-Dienst kann beispielsweise mehrere Kontaktobjekte im Abstrakten Kontaktformat unterstützen. Jedes Kontaktobjekt wird durch verwandte Eigenschaften (Kontaktname, Telefonnummer, E-Mail-Adresse und ähnliches) beschrieben.
 
-Die Anwendung wpdservicesapisample enthält Code, der veranschaulicht, wie eine Anwendung die Name-Eigenschaft für ein untergeordnetes Objekt des angegebenen Contacts-diensdienstanbieter aktualisieren kann. In diesem Beispiel werden die folgenden WPD-Schnittstellen verwendet.
+Die WpdServicesApiSample-Anwendung enthält Code, der veranschaulicht, wie eine Anwendung die Name-Eigenschaft für ein untergeordnetes Objekt des angegebenen Contacts-Diensts aktualisieren kann. In diesem Beispiel werden die folgenden WPD-Schnittstellen verwendet.
 
 
 
-|                                                                |                                                                                                                                                                      |
-|----------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Schnittstelle                                                      | BESCHREIBUNG                                                                                                                                                          |
-| [**Iportablede viceservice**](/windows/desktop/api/PortableDeviceAPI/nn-portabledeviceapi-iportabledeviceservice)       | Dient zum Abrufen der **IPortableDeviceContent2** -Schnittstelle für den Zugriff auf die unterstützten Dienst Methoden.                                                                  |
-| [**IPortableDeviceContent2**](/windows/desktop/api/PortableDeviceAPI/nn-portabledeviceapi-iportabledevicecontent2)     | Ermöglicht den Zugriff auf die Inhalts spezifischen Methoden.                                                                                                                     |
-| [**Iportabledeviceproperties**](/windows/desktop/api/portabledeviceapi/nn-portabledeviceapi-iportabledeviceproperties) | Wird verwendet, um die Objekt Eigenschaftswerte zu schreiben und um zu bestimmen, ob eine bestimmte Eigenschaft geschrieben werden kann.                                                                    |
-| [**Iportablede vicevalues**](iportabledevicevalues.md)         | Wird verwendet, um die zu schreibenden Eigenschaftswerte zu speichern, die Ergebnisse des Schreibvorgangs zu bestimmen und Attribute von Eigenschaften abzurufen (beim Bestimmen der Schreibfunktion). |
+|----------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [**IPortableDeviceService**](/windows/desktop/api/PortableDeviceAPI/nn-portabledeviceapi-iportabledeviceservice)       | Wird zum Abrufen der **IPortableDeviceContent2-Schnittstelle** für den Zugriff auf die unterstützten Dienstmethoden verwendet.                                                                  |
+| [**IPortableDeviceContent2**](/windows/desktop/api/PortableDeviceAPI/nn-portabledeviceapi-iportabledevicecontent2)     | Ermöglicht den Zugriff auf die inhaltsspezifischen Methoden.                                                                                                                     |
+| [**IPortableDeviceProperties**](/windows/desktop/api/portabledeviceapi/nn-portabledeviceapi-iportabledeviceproperties) | Wird verwendet, um die Objekteigenschaftswerte zu schreiben und zu bestimmen, ob eine bestimmte Eigenschaft geschrieben werden kann.                                                                    |
+| [**IPortableDeviceValues**](iportabledevicevalues.md)         | Wird verwendet, um die zu schreibenden Eigenschaftswerte zu speichern, die Ergebnisse des Schreibvorganges zu bestimmen und Attribute von Eigenschaften abzurufen (bei der Bestimmung der Schreibfunktion). |
 
 
 
  
 
-Wenn der Benutzer die Option "8" in der Befehlszeile auswählt, ruft die Anwendung die Methode " **schreitecontentproperties** " auf, die im Modul "contentproperties. cpp" zu finden ist. Diese Methode fordert den Benutzer auf, einen Objekt Bezeichner für die zu Aktualisier Ende Eigenschaft einzugeben. Der Benutzer identifiziert das-Objekt, und die-Methode fordert den Benutzer auf, einen neuen Namen anzugeben. Nachdem dieser Name angegeben wurde, wird die Name-Eigenschaft für das angegebene Objekt von der-Methode aktualisiert.
+Wenn der Benutzer die Option "8" in der Befehlszeile auswählt, ruft die Anwendung die **WriteContentProperties-Methode** auf, die sich im ContentProperties.cpp-Modul befindet. Diese Methode fordert den Benutzer zur Eingabe eines Objektbezeichners für die zu aktualisierende Eigenschaft auf. Der Benutzer identifiziert das Objekt, und die -Methode fordert den Benutzer auf, einen neuen Namen anzugeben. Nachdem dieser Name angegeben wurde, aktualisiert die -Methode die Name-Eigenschaft für das angegebene Objekt.
 
 Beachten Sie, dass die Beispielanwendung vor dem Schreiben der Objekteigenschaften einen Contacts-Dienst auf einem verbundenen Gerät öffnet.
 
-Der folgende Code für die Methode " **Write-contentproperties** " veranschaulicht, wie die Anwendung mithilfe der [**IPortableDeviceContent2**](/windows/desktop/api/PortableDeviceAPI/nn-portabledeviceapi-iportabledevicecontent2) -Schnittstelle eine [**iportabledeviceproperties**](/windows/desktop/api/portabledeviceapi/nn-portabledeviceapi-iportabledeviceproperties) -Schnittstelle abruft. Durch übergeben der PropertyKeys der angeforderten Eigenschaften an die [**iportabledeviceproperties:: SetValues**](/windows/desktop/api/PortableDeviceApi/nf-portabledeviceapi-iportabledeviceproperties-getvalues) -Methode aktualisiert " **Write-contentproperties** " die Name-Eigenschaft.
+Der folgende Code für die **WriteContentProperties-Methode** veranschaulicht, wie die Anwendung die [**IPortableDeviceContent2-Schnittstelle**](/windows/desktop/api/PortableDeviceAPI/nn-portabledeviceapi-iportabledevicecontent2) verwendet, um eine [**IPortableDeviceProperties-Schnittstelle**](/windows/desktop/api/portabledeviceapi/nn-portabledeviceapi-iportabledeviceproperties) abzurufen. Indem die PROPERTYKEYS der angeforderten Eigenschaften an die [**IPortableDeviceProperties::SetValues-Methode**](/windows/desktop/api/PortableDeviceApi/nf-portabledeviceapi-iportabledeviceproperties-getvalues) übergeben werden, aktualisiert **WriteContentProperties** die Name-Eigenschaft.
 
 
 ```C++
@@ -176,10 +175,10 @@ void WriteContentProperties(
 [**IPortableDeviceContent2**](/windows/desktop/api/PortableDeviceAPI/nn-portabledeviceapi-iportabledevicecontent2)
 </dt> <dt>
 
-[**Iportabledeviceproperties**](/windows/desktop/api/portabledeviceapi/nn-portabledeviceapi-iportabledeviceproperties)
+[**IPortableDeviceProperties**](/windows/desktop/api/portabledeviceapi/nn-portabledeviceapi-iportabledeviceproperties)
 </dt> <dt>
 
-[Wpdservicesapisample](wpdapisample-sample-service-application.md)
+[WpdServicesApiSample](wpdapisample-sample-service-application.md)
 </dt> </dl>
 
  

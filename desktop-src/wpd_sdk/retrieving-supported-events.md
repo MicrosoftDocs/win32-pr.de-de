@@ -1,45 +1,44 @@
 ---
-description: Abrufen unterstützter Dienst Ereignisse
+description: Abrufen von unterstützten Dienstereignissen
 ms.assetid: 1bf3aa08-7ffc-417f-a67e-9eee042337b9
-title: Abrufen unterstützter Dienst Ereignisse
+title: Abrufen von unterstützten Dienstereignissen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f515b65b8ed062c346777224a64539f5229a704a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: dfdc1df4c8255a4dc2a1297ae99216437ac3b4c9
+ms.sourcegitcommit: 0f7a8198bacd5493ab1e78a9583c7a3578794765
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106352671"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "110423470"
 ---
-# <a name="retrieving-supported-service-events"></a>Abrufen unterstützter Dienst Ereignisse
+# <a name="retrieving-supported-service-events"></a>Abrufen von unterstützten Dienstereignissen
 
-Die Anwendung wpdservicesapisample enthält Code, der veranschaulicht, wie eine Anwendung die Ereignisse abrufen kann, die von einem bestimmten Kontakt Dienst unterstützt werden, indem Methoden für die folgenden Schnittstellen aufgerufen werden.
+Die WpdServicesApiSample-Anwendung enthält Code, der veranschaulicht, wie eine Anwendung die von einem bestimmten Contacts-Dienst unterstützten Ereignisse abrufen kann, indem Methoden für die folgenden Schnittstellen aufgerufen werden.
 
 
 
-|                                                                                      |                                                                                                       |
+| Schnittstelle                | BESCHREIBUNG    |
 |--------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|
-| Schnittstelle                                                                            | BESCHREIBUNG                                                                                           |
-| [**Iportablede viceservice**](/windows/desktop/api/PortableDeviceAPI/nn-portabledeviceapi-iportabledeviceservice)                             | Wird zum Abrufen der **iportabledeviceservicecapabili-** Schnittstelle verwendet, um auf die unterstützten Ereignisse zuzugreifen. |
-| [**Iportablede viceservicecapabili**](/windows/desktop/api/PortableDeviceAPI/nn-portabledeviceapi-iportabledeviceservicecapabilities)     | Bietet Zugriff auf die unterstützten Ereignisse und Ereignis Attribute.                                         |
-| [**Iportabledevicepropvariantcollection**](iportabledevicepropvariantcollection.md) | Enthält die Liste der unterstützten Ereignisse.                                                                |
-| [**Iportablede vicevalues**](iportabledevicevalues.md)                               | Enthält die Attribute für ein bestimmtes Ereignis.                                                            |
+| [**IPortableDeviceService**](/windows/desktop/api/PortableDeviceAPI/nn-portabledeviceapi-iportabledeviceservice)                             | Wird verwendet, um die **IPortableDeviceServiceCapabilities-Schnittstelle** abzurufen, um auf die unterstützten Ereignisse zuzugreifen. |
+| [**IPortableDeviceServiceCapabilities**](/windows/desktop/api/PortableDeviceAPI/nn-portabledeviceapi-iportabledeviceservicecapabilities)     | Ermöglicht den Zugriff auf die unterstützten Ereignisse und Ereignisattribute.                                         |
+| [**IPortableDevicePropVariantCollection**](iportabledevicepropvariantcollection.md) | Enthält die Liste der unterstützten Ereignisse.                                                                |
+| [**IPortableDeviceValues**](iportabledevicevalues.md)                               | Enthält die Attribute für ein bestimmtes Ereignis.                                                            |
 
 
 
  
 
-Wenn der Benutzer die Option "4" in der Befehlszeile auswählt, ruft die Anwendung die **listsupportedevents** -Methode auf, die im Modul "servicecapabili. cpp" zu finden ist.
+Wenn der Benutzer die Option "4" in der Befehlszeile auswählt, ruft die Anwendung die **ListSupportedEvents-Methode** auf, die sich im Modul ServiceCapabilities.cpp befindet.
 
-Beachten Sie, dass die Beispielanwendung vor dem Abrufen der Ereignisliste einen Kontakt Dienst auf einem verbundenen Gerät öffnet.
+Beachten Sie, dass die Beispielanwendung vor dem Abrufen der Ereignisliste einen Kontaktdienst auf einem verbundenen Gerät öffnet.
 
-In WPD wird ein Ereignis anhand des Namens, der Optionen und der Parameter beschrieben. Der Ereignis Name ist eine Skript freundliche Zeichenfolge, z. b. "mycustomevent". Die Ereignis Optionen geben an, ob ein bestimmtes Ereignis an alle Clients gesendet wird und ob dieses Ereignis die automatische Wiedergabe unterstützt. Die Attribute des Ereignis Parameters enthalten den PropertyKey und den VarType eines angegebenen Parameters.
+In WPD wird ein Ereignis anhand seines Namens, seiner Optionen und seiner Parameter beschrieben. Der Ereignisname ist eine skriptfreundliche Zeichenfolge, z.B. "MyCustomEvent". Die Ereignisoptionen geben an, ob ein bestimmtes Ereignis an alle Clients übertragen wird und ob dieses Ereignis die automatische Wiedergabe unterstützt. Die Ereignisparameterattribute enthalten propertykey und VARTYPE eines bestimmten Parameters.
 
-Vier Methoden im servicecapabili. cpp-Modul unterstützen das Abrufen von unterstützten Ereignissen für den jeweiligen Contacts-Dienst: **listsupportedevents**, **Display Event**, **displayeventoptions** und **displayeventparameters**. Die **listsupportedevents** -Methode ruft die Anzahl unterstützter Ereignisse und den GUID-Bezeichner für jedes Ereignis ab. Die **displayevent** -Methode zeigt den Ereignis Namen oder die GUID an und ruft dann **displayeventoptions** und **displayeventparameters** auf, um die ereignisbezogenen Daten anzuzeigen.
+Vier Methoden im ServiceCapabilities.cpp-Modul unterstützen das Abrufen unterstützter Ereignisse für den angegebenen Contacts-Dienst: **ListSupportedEvents**, **DisplayEvent**, **DisplayEventOptions** und **DisplayEventParameters**. Die **ListSupportedEvents-Methode** ruft die Anzahl der unterstützten Ereignisse und den GUID-Bezeichner für jedes Ereignis ab. Die **DisplayEvent-Methode** zeigt den Ereignisnamen oder die GUID an und ruft **dann DisplayEventOptions** und **DisplayEventParameters** auf, um die ereignisbezogenen Daten anzuzeigen.
 
-Die **listsupportedevents** -Methode ruft die [**iportabledeviceservice:: Funktionen**](/windows/desktop/api/PortableDeviceAPI/nf-portabledeviceapi-iportabledeviceservice-capabilities) -Methode auf, um eine [**iportabledeviceservicecapabili-**](/windows/desktop/api/PortableDeviceAPI/nn-portabledeviceapi-iportabledeviceservicecapabilities) Schnittstelle abzurufen. Mithilfe dieser Schnittstelle werden die unterstützten Ereignisse abgerufen, indem die [**iportabledeviceservicecapabili:: getsupportedevents**](/windows/desktop/api/PortableDeviceAPI/nf-portabledeviceapi-iportabledeviceservicecapabilities-getsupportedevents) -Methode aufgerufen wird. Die **getsupportedevents** -Methode ruft die GUIDs für jedes Ereignis ab, das vom Dienst unterstützt wird, und kopiert diese GUIDs in ein [**iportabledevicepropvariantcollection**](iportabledevicepropvariantcollection.md) -Objekt.
+Die **ListSupportedEvents-Methode** ruft die [**IPortableDeviceService::Capabilities-Methode auf,**](/windows/desktop/api/PortableDeviceAPI/nf-portabledeviceapi-iportabledeviceservice-capabilities) um eine [**IPortableDeviceServiceCapabilities-Schnittstelle**](/windows/desktop/api/PortableDeviceAPI/nn-portabledeviceapi-iportabledeviceservicecapabilities) abzurufen. Über diese Schnittstelle werden die unterstützten Ereignisse abgerufen, indem die [**IPortableDeviceServiceCapabilities::GetSupportedEvents-Methode aufgerufen**](/windows/desktop/api/PortableDeviceAPI/nf-portabledeviceapi-iportabledeviceservicecapabilities-getsupportedevents) wird. Die **GetSupportedEvents-Methode** ruft die GUIDs für jedes vom Dienst unterstützte Ereignis ab und kopiert diese GUIDs in ein [**IPortableDevicePropVariantCollection-Objekt.**](iportabledevicepropvariantcollection.md)
 
-Der folgende Code veranschaulicht das Abrufen unterstützter Dienst Ereignisse.
+Der folgende Code veranschaulicht das Abrufen unterstützter Dienstereignisse.
 
 
 ```C++
@@ -116,11 +115,11 @@ void ListSupportedEvents(
 
 
 
-Nachdem die **listsupportedevents** -Methode die GUIDs abgerufen hat, die die einzelnen Ereignisse darstellen, die vom angegebenen Dienst unterstützt werden, ruft Sie die **displayevent** -Methode auf, um ereignisspezifische Daten abzurufen. Zu diesen Daten gehören der Ereignis Name, seine Optionen (Broadcast oder AutoPlay), Parameter-GUIDs, Parametertypen usw.
+Nachdem die **ListSupportedEvents-Methode** die GUIDs abgerufen hat, die jedes vom angegebenen Dienst unterstützte Ereignis darstellen, ruft sie die **DisplayEvent-Methode** auf, um ereignisspezifische Daten abzurufen. Diese Daten umfassen den Ereignisnamen, seine Optionen (Broadcast oder automatische Wiedergabe), Parameter-GUIDs, Parametertypen und so weiter.
 
-Die **displayevent** -Methode ruft die [**iportabledeviceservicecapabili:: geteventattributemethode**](/windows/desktop/api/PortableDeviceAPI/nf-portabledeviceapi-iportabledeviceservicecapabilities-geteventattributes) auf, um eine Auflistung von Attributen für das angegebene Ereignis abzurufen. Anschließend wird die [**iportabledevicevalues:: GetStringValue**](iportabledevicevalues-getstringvalue.md) -Methode aufgerufen, und es wird angefordert, dass der Treiber einen benutzerfreundlichen Namen für das angegebene Ereignis zurückgibt. Als Nächstes ruft **Display Vent** [**iportabledevicevalues:: getiportabledevicevaluesvalue**](iportabledevicevalues-getiportabledevicevaluesvalue.md) auf, um die Ereignis Optionen abzurufen. Zum Schluss ruft displayevent [**iportabledevicevalues:: getiportabledevicekeycollectionvalue**](iportabledevicevalues-getiportabledevicekeycollectionvalue.md) auf, um die Liste der Ereignis Parameter abzurufen. Sie übergibt die von diesen Methoden zurückgegebenen Daten an die Hilfsfunktionen " **displayeventoptions** " und " **displayeventparameters** ", die die Optionen und Parameterinformationen für das jeweilige Ereignis darstellen.
+Die **DisplayEvent-Methode** ruft die [**IPortableDeviceServiceCapabilities::GetEventAttributes-Methode**](/windows/desktop/api/PortableDeviceAPI/nf-portabledeviceapi-iportabledeviceservicecapabilities-geteventattributes) auf, um eine Auflistung von Attributen für das gegebene Ereignis abzurufen. Anschließend ruft sie die [**IPortableDeviceValues::GetStringValue-Methode**](iportabledevicevalues-getstringvalue.md) auf und fordert an, dass der Treiber einen benutzerfreundlichen Namen für das gegebene Ereignis zurücksendet. Als Nächstes **ruft DisplayEvent** [**IPortableDeviceValues::GetIPortableDeviceValuesValuesValue**](iportabledevicevalues-getiportabledevicevaluesvalue.md) auf, um die Ereignisoptionen abzurufen. Schließlich ruft DisplayEvent den [**IPortableDeviceValues::GetIPortableDeviceKeyCollectionValue**](iportabledevicevalues-getiportabledevicekeycollectionvalue.md) auf, um die Liste der Ereignisparameter abzurufen. Die von diesen Methoden zurückgegebenen Daten werden an die **Hilfsfunktionen DisplayEventOptions** und **DisplayEventParameters** übergeben, die die Optionen und Parameterinformationen für das gegebene Ereignis rendern.
 
-Im folgenden Code wird die **displayevent** -Methode verwendet.
+Im folgenden Code wird die **DisplayEvent-Methode** verwendet.
 
 
 ```C++
@@ -185,7 +184,7 @@ void DisplayEvent(
 
 
 
-Die Hilfsfunktion **displayeventoptions** empfängt ein [**iportabledevicevalues**](iportabledevicevalues.md) -Objekt, das die Options Daten des Ereignisses enthält. Anschließend wird die [**iportabledevicevalues:: GetBoolValue**](iportabledevicevalues-getboolvalue.md) -Methode aufgerufen, um die Options Daten abzurufen. Mithilfe dieser Daten wird eine Zeichenfolge gerendert, die angibt, ob die Optionen Broadcast und automatische Wiedergabe unterstützt werden.
+Die **DisplayEventOptions-Hilfsfunktion** empfängt ein [**IPortableDeviceValues-Objekt,**](iportabledevicevalues.md) das die Optionsdaten des Ereignisses enthält. Anschließend wird die [**IPortableDeviceValues::GetBoolValue-Methode**](iportabledevicevalues-getboolvalue.md) aufgerufen, um die Optionsdaten abzurufen. Mithilfe dieser Daten wird eine Zeichenfolge gerendert, die angibt, ob die Broadcast- und Autoplay-Optionen unterstützt werden.
 
 
 ```C++
@@ -208,19 +207,19 @@ void DisplayEventOptions(
 
 <dl> <dt>
 
-[**Iportabledevicekeycollection**](iportabledevicekeycollection.md)
+[**IPortableDeviceKeyCollection**](iportabledevicekeycollection.md)
 </dt> <dt>
 
-[**Iportablede viceservice**](/windows/desktop/api/PortableDeviceAPI/nn-portabledeviceapi-iportabledeviceservice)
+[**IPortableDeviceService**](/windows/desktop/api/PortableDeviceAPI/nn-portabledeviceapi-iportabledeviceservice)
 </dt> <dt>
 
-[**Iportablede viceservicecapabili**](/windows/desktop/api/PortableDeviceAPI/nn-portabledeviceapi-iportabledeviceservicecapabilities)
+[**IPortableDeviceServiceCapabilities**](/windows/desktop/api/PortableDeviceAPI/nn-portabledeviceapi-iportabledeviceservicecapabilities)
 </dt> <dt>
 
-[**Iportablede vicevalues**](iportabledevicevalues.md)
+[**IPortableDeviceValues**](iportabledevicevalues.md)
 </dt> <dt>
 
-[Wpdservicesapisample](wpdapisample-sample-service-application.md)
+[WpdServicesApiSample](wpdapisample-sample-service-application.md)
 </dt> </dl>
 
  

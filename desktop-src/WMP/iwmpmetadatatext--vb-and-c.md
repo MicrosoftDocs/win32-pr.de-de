@@ -1,10 +1,10 @@
 ---
-title: IWMPMetadataText-Schnittstelle (VB und C) (WMP. h)
-description: Stellt Eigenschaften zum erhalten von Informationen zu komplexen textmetadatenattributen bereit.
+title: IWMPMetadataText -Schnittstelle (VB und C) (Wmp.h)
+description: Stellt Eigenschaften zum Abrufen von Informationen zu komplexen Textmetadatenattributen bereit.
 ms.assetid: c0f300d2-6ddb-470b-849d-771d3719bb97
 keywords:
-- IWMPMetadataText (VB und C) Interface Windows Media Player
-- IWMPMetadataText (VB und C) Interface Windows Media Player, beschrieben
+- IWMPMetadataText-Schnittstelle (VB und C) Windows Media Player
+- IWMPMetadataText-Schnittstelle (VB und C) Windows Media Player beschrieben
 topic_type:
 - apiref
 api_name:
@@ -15,37 +15,36 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f735c96e2d4b57e829d10901c1e24058ec0c94c1
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 146afd709d0805043603cfb3b14b1c1fc1838075
+ms.sourcegitcommit: 0f7a8198bacd5493ab1e78a9583c7a3578794765
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106356031"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "110424300"
 ---
-# <a name="iwmpmetadatatext-vb-and-c-interface"></a>IWMPMetadataText-Schnittstelle (VB und c#)
+# <a name="iwmpmetadatatext-vb-and-c-interface"></a>IWMPMetadataText-Schnittstelle (VB und C#)
 
-Stellt Eigenschaften zum erhalten von Informationen zu komplexen textmetadatenattributen bereit.
+Stellt Eigenschaften zum Abrufen von Informationen zu komplexen Textmetadatenattributen bereit.
 
-Die **IWMPMetadataText** -Schnittstelle macht die folgenden Eigenschaften verfügbar.
+Die **IWMPMetadataText-Schnittstelle** macht die folgenden Eigenschaften verfügbar.
 
 
 
 | Eigenschaft                                                                         | BESCHREIBUNG                              |
 |----------------------------------------------------------------------------------|------------------------------------------|
-| [Beschreibung](wmplibiwmpmetadatatext-iwmpmetadatatext-description--vb-and-c.md) | Ruft eine Beschreibung des metadatentexts ab. |
-| [text](wmplibiwmpmetadatatext-iwmpmetadatatext-text--vb-and-c.md)               | Ruft den metadatentext ab.                  |
+| [Beschreibung](wmplibiwmpmetadatatext-iwmpmetadatatext-description--vb-and-c.md) | Ruft eine Beschreibung des Metadatentexts ab. |
+| [text](wmplibiwmpmetadatatext-iwmpmetadatatext-text--vb-and-c.md)               | Ruft den Metadatentext ab.                  |
 
 
 
  
 
-Sie erhalten eine **IWMPMetadataText** -Schnittstelle, indem Sie einen Attributnamen wie **WM/userweburl** an die folgende Methode übergeben und das zurückgegebene Objekt umwandeln.
+Sie erhalten eine **IWMPMetadataText-Schnittstelle,** indem Sie einen Attributnamen wie **WM/UserWebURL** an die folgende Methode übergeben und das zurückgegebene Objekt umwandeln.
 
 
 
-|                                        |                                                                                  |
-|----------------------------------------|----------------------------------------------------------------------------------|
 | Schnittstelle                              | Eigenschaft                                                                         |
+|----------------------------------------|----------------------------------------------------------------------------------|
 | [IWMPMedia3](iwmpmedia3--vb-and-c.md) | [getItemInfoByType](wmplibiwmpmedia3-iwmpmedia3-getiteminfobytype--vb-and-c.md) |
 
 
@@ -54,7 +53,7 @@ Sie erhalten eine **IWMPMetadataText** -Schnittstelle, indem Sie einen Attributn
 
 ## <a name="members"></a>Member
 
-Die **IWMPMetadataText-Schnittstelle (VB und c#)** definiert keine Member.
+Die **IWMPMetadataText-Schnittstelle (VB und C#)** definiert keine Member.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -62,7 +61,7 @@ Die **IWMPMetadataText-Schnittstelle (VB und c#)** definiert keine Member.
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>WMP. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Wmp.h</dt> </dl> |
 
 
 
@@ -70,7 +69,7 @@ Die **IWMPMetadataText-Schnittstelle (VB und c#)** definiert keine Member.
 
 <dl> <dt>
 
-[**Schnittstellen für Visual Basic .net und C #**](interfaces-for-visual-basic--net-and-c.md)
+[**Schnittstellen für Visual Basic .NET und C #**](interfaces-for-visual-basic--net-and-c.md)
 </dt> </dl>
 
  

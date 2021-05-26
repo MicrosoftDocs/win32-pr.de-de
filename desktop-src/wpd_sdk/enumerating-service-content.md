@@ -1,40 +1,39 @@
 ---
-description: Auflisten von Dienst Inhalten
+description: Aufzählen von Dienstinhalten
 ms.assetid: 4af4201c-d3f6-4630-91ec-6509c51871a5
-title: Auflisten von Dienst Inhalten
+title: Aufzählen von Dienstinhalten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 04adb949fdec9a0001583b1481ccd50ada1ef1df
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d2b701bdab867e96bc9658e2624ea18aa65dfc33
+ms.sourcegitcommit: 0f7a8198bacd5493ab1e78a9583c7a3578794765
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214539"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "110424250"
 ---
-# <a name="enumerating-service-content"></a>Auflisten von Dienst Inhalten
+# <a name="enumerating-service-content"></a>Aufzählen von Dienstinhalten
 
-Nachdem die Anwendung einen Dienst geöffnet hat, kann Sie damit beginnen, Dienst bezogene Vorgänge auszuführen. Im Fall der Anwendung wpdservicesapisample ist einer dieser Vorgänge die Enumeration von Inhalten für einen bestimmten Kontakt Dienst. In der folgenden Tabelle werden die verwendeten Schnittstellen beschrieben.
+Nachdem Ihre Anwendung einen Dienst geöffnet hat, kann sie mit dem Ausführen dienstbezogener Vorgänge beginnen. Im Fall der WpdServicesApiSample-Anwendung ist einer dieser Vorgänge die Enumeration des Inhalts für einen bestimmten Contacts-Dienst. In der folgenden Tabelle werden die verwendeten Schnittstellen beschrieben.
 
 
 
-|                                                                      |                                                                                                  |
-|----------------------------------------------------------------------|--------------------------------------------------------------------------------------------------|
 | Schnittstelle                                                            | BESCHREIBUNG                                                                                      |
-| [**Iportablede viceservice**](/windows/desktop/api/PortableDeviceAPI/nn-portabledeviceapi-iportabledeviceservice)             | Dient zum Abrufen der IPortableDeviceContent2-Schnittstelle für den Zugriff auf den-Dienst.         |
-| [**IPortableDeviceContent2**](/windows/desktop/api/PortableDeviceAPI/nn-portabledeviceapi-iportabledevicecontent2)           | Wird zum Abrufen der ienumportabledeviceobjectids-Schnittstelle verwendet, um Objekte im Dienst aufzulisten. |
-| [**Ienumportabledeviceobjectids**](/windows/desktop/api/PortableDeviceApi/nn-portabledeviceapi-ienumportabledeviceobjectids) | Wird verwendet, um Objekte im Dienst aufzulisten.                                                        |
+|----------------------------------------------------------------------|--------------------------------------------------------------------------------------------------|
+| [**IPortableDeviceService**](/windows/desktop/api/PortableDeviceAPI/nn-portabledeviceapi-iportabledeviceservice)             | Wird verwendet, um die IPortableDeviceContent2-Schnittstelle abzurufen, um auf Inhalte im Dienst zuzugreifen.         |
+| [**IPortableDeviceContent2**](/windows/desktop/api/PortableDeviceAPI/nn-portabledeviceapi-iportabledevicecontent2)           | Wird verwendet, um die IEnumPortableDeviceObjectIDs-Schnittstelle abzurufen, um Objekte für den Dienst aufzuzählen. |
+| [**IEnumPortableDeviceObjectIDs**](/windows/desktop/api/PortableDeviceApi/nn-portabledeviceapi-ienumportabledeviceobjectids) | Wird verwendet, um Objekte für den Dienst aufzuzählen.                                                        |
 
 
 
  
 
-Der inhaltsaufzählungs Code befindet sich im Modul "contentenumeration. cpp". Dieser Code befindet sich in den **enumerateallcontent** -und **recursiveenumerate** -Methoden. Die erste Methode ruft letztere auf.
+Der Inhaltsenumerationscode befindet sich im ContentEnumeration.cpp-Modul. Dieser Code befindet sich in den Methoden **EnumerateAllContent** und **RecursiveEnumerate.** Die frühere Methode ruft letztere auf.
 
-Die **enumeratecontent** -Methode nimmt einen Zeiger auf ein [**iportabledeviceservice**](/windows/desktop/api/PortableDeviceAPI/nn-portabledeviceapi-iportabledeviceservice) -Objekt als einen Parameter an. Dieses Objekt entspricht einem Dienst, den die Anwendung zuvor geöffnet hat, als die [**iportabledeviceservice:: Open**](/windows/desktop/api/PortableDeviceAPI/nf-portabledeviceapi-iportabledeviceservice-open) -Methode aufgerufen wurde.
+Die **EnumerateContent-Methode** verwendet einen Zeiger auf ein [**IPortableDeviceService-Objekt**](/windows/desktop/api/PortableDeviceAPI/nn-portabledeviceapi-iportabledeviceservice) als einen Parameter. Dieses Objekt entspricht einem Dienst, den die Anwendung zuvor beim Aufruf der [**IPortableDeviceService::Open-Methode**](/windows/desktop/api/PortableDeviceAPI/nf-portabledeviceapi-iportabledeviceservice-open) geöffnet hat.
 
-Die **enumeratecontent** -Methode erstellt ein [**IPortableDeviceContent2**](/windows/desktop/api/PortableDeviceAPI/nn-portabledeviceapi-iportabledevicecontent2) -Objekt und übergibt dieses Objekt an die [**iportabledeviceservice:: Content**](/windows/desktop/api/PortableDeviceAPI/nf-portabledeviceapi-iportabledeviceservice-content) -Methode. Diese Methode ruft wiederum den Inhalt auf der Stamm Ebene des diensdienstanzen ab und beginnt dann rekursiv mit dem Abrufen von Inhalt, der unterhalb des Stamms gefunden wurde.
+Die **EnumerateContent-Methode** erstellt ein [**IPortableDeviceContent2-Objekt**](/windows/desktop/api/PortableDeviceAPI/nn-portabledeviceapi-iportabledevicecontent2) und übergibt dieses Objekt an die [**IPortableDeviceService::Content-Methode.**](/windows/desktop/api/PortableDeviceAPI/nf-portabledeviceapi-iportabledeviceservice-content) Diese Methode ruft wiederum den Inhalt auf der Stammebene des Diensts ab und beginnt dann rekursiv mit dem Abrufen von Inhalten, die unterhalb des Stamms gefunden wurden.
 
-Der folgende Code entspricht der **enumeratecontent** -Methode.
+Der folgende Code entspricht der **EnumerateContent-Methode.**
 
 
 ```C++
@@ -71,7 +70,7 @@ void EnumerateAllContent(
 
 
 
-Der folgende Code entspricht der **recursiveenumerate** -Methode. Die recursiveenumerate-Methode instanziiert eine **ienumportabledeviceobjectids** -Schnittstelle für das angegebene übergeordnete Objekt und ruft **ienumportabledeviceobjectids:: Next** auf, wobei ein Batch der unmittelbaren untergeordneten Objekte abgerufen wird. Für jedes untergeordnete Objekt wird rekursiveenumerate erneut aufgerufen, um seine untergeordneten Objekte zurückzugeben, usw.
+Der folgende Code entspricht der **RecursiveEnumerate-Methode.** Die RecursiveEnumerate-Methode instanziiert eine **IEnumPortableDeviceObjectIDs-Schnittstelle** für das angegebene übergeordnete Objekt und ruft **IEnumPortableDeviceObjectIDs::Next** auf und ruft einen Batch von unmittelbar untergeordneten Objekten ab. Für jedes untergeordnete Objekt wird RecursiveEnumerate erneut aufgerufen, um seine untergeordneten untergeordneten Objekte zurück zu geben, und so weiter.
 
 
 ```C++
@@ -128,19 +127,19 @@ void RecursiveEnumerate(
 
 <dl> <dt>
 
-[**Ienumportabledeviceobjectids**](/windows/desktop/api/PortableDeviceApi/nn-portabledeviceapi-ienumportabledeviceobjectids)
+[**IEnumPortableDeviceObjectIDs**](/windows/desktop/api/PortableDeviceApi/nn-portabledeviceapi-ienumportabledeviceobjectids)
 </dt> <dt>
 
 [**IPortableDeviceContent2-Schnittstelle**](/windows/desktop/api/PortableDeviceAPI/nn-portabledeviceapi-iportabledevicecontent2)
 </dt> <dt>
 
-[**Iportablede viceservice-Schnittstelle**](/windows/desktop/api/PortableDeviceAPI/nn-portabledeviceapi-iportabledeviceservice)
+[**IPortableDeviceService-Schnittstelle**](/windows/desktop/api/PortableDeviceAPI/nn-portabledeviceapi-iportabledeviceservice)
 </dt> <dt>
 
-[Öffnen eines Dienstanbieter](opening-a-service.md)
+[Öffnen eines Diensts](opening-a-service.md)
 </dt> <dt>
 
-[Wpdservicesapisample](wpdapisample-sample-service-application.md)
+[WpdServicesApiSample](wpdapisample-sample-service-application.md)
 </dt> </dl>
 
  

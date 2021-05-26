@@ -1,47 +1,47 @@
 ---
-title: Start Informationsformular für Online Musikspeicher
-description: Start Informationsformular für Online Musikspeicher
+title: Formular für Startinformationen für einen Online-Musikspeicher
+description: Formular für Startinformationen für einen Online-Musikspeicher
 ms.assetid: 6ee30446-7505-40ae-b664-3727a5be9976
 keywords:
-- Windows Media Player Online Stores
+- Windows Media Player Onlineshops
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 99c32ef8f3c5bdb5779a5c7fbd36ed2dd3efac7b
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: a3ded923538d6be6c8a22fa0ba96ddcd0814348d
+ms.sourcegitcommit: 0f7a8198bacd5493ab1e78a9583c7a3578794765
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104036527"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "110424070"
 ---
-# <a name="startup-information-form-for-an-online-music-store"></a>Start Informationsformular für Online Musikspeicher
+# <a name="startup-information-form-for-an-online-music-store"></a>Formular für Startinformationen für einen Online-Musikspeicher
 
-Füllen Sie ein Formular für jeden Store und jedes Gebiets Schema an das virtuelle Windows Media Player Services-Team unter aus, und senden Sie es an mpsvctm@microsoft.com .
+Füllen Sie ein Formular für jeden Speicher und jedes Gebietsschema aus, und senden Sie es an das virtuelle Windows Media Player Services-Team unter mpsvctm@microsoft.com .
 
 
 
 | Element                      | BESCHREIBUNG |
 |---------------------------|-------------|
 | Store Name                |             |
-| Gebietsschema                    |             |
-| Date                      |             |
-| Fenster für die Ziel Einbindung |             |
+| Locale                    |             |
+| Datum                      |             |
+| Ziel-Onboardingfenster |             |
 
 
 
  
 
-## <a name="startup-information-for-test-store"></a>Startinformationen für den Test Speicher
+## <a name="startup-information-for-test-store"></a>Startinformationen für den Testspeicher
 
 
 
-| Von der Microsoft-Infrastruktur referenziertes Element                                                              | BESCHREIBUNG |
+| Element, auf das von der Microsoft-Infrastruktur verwiesen wird                                                              | BESCHREIBUNG |
 |----------------------------------------------------------------------------------------------------------|-------------|
-| XML-URL für Dienst Informationen (2048-Zeichenlimit)                                                              |             |
-| Dienst Schlüssel (eindeutige ID)                                                                                  |             |
-| Anzeige Name (Limit von 30 Zeichen)                                                                       |             |
-| Menü Bild-URL (2048-Zeichenlimit)                                                                    |             |
-| Musik-URL kaufen (2048-Zeichenlimit)<br/> (Nur integrierte Musikspeicher)<br/>                |             |
-| 10 ft UI-Kauf-URL (2048-Zeichenlimit)<br/> (Nur integrierte Musikspeicher: optional)<br/> |             |
+| XML-URL für Dienstinformationen (Grenzwert von 2048 Zeichen)                                                              |             |
+| Dienstschlüssel (eindeutige ID)                                                                                  |             |
+| Anzeigename (Grenzwert von 30 Zeichen)                                                                       |             |
+| Menübild-URL (Grenzwert von 2048 Zeichen)                                                                    |             |
+| Musik-URL kaufen (Limit von 2048 Zeichen)<br/> (Nur integrierte Musikspeicher)<br/>                |             |
+| Kauf-URL mit 10 Fuß (Grenzwert von 2048 Zeichen)<br/> (Nur integrierte Musikspeicher – optional)<br/> |             |
 
 
 
@@ -49,12 +49,12 @@ Füllen Sie ein Formular für jeden Store und jedes Gebiets Schema an das virtue
 
 
 
-| Von Microsoft gehostetes Element auf "alle Online Stores Durchsuchen"                             | BESCHREIBUNG |
+| Von Microsoft gehostetes Element in "Alle Onlineshops durchsuchen"                             | BESCHREIBUNG |
 |------------------------------------------------------------------------------------|-------------|
-| Store-Logo (130W x 30h)<br/> (PNG-Datei separat anfügen.)<br/>        |             |
+| Store Logo (130w x 30h)<br/> (Fügen Sie die PNG-Datei separat an.)<br/>        |             |
 | Browse-all Image (108w x 108h)<br/> (PNG-Datei separat anfügen.)<br/> |             |
-| Speicher Beschreibungstext (110-Zeichenlimit)                                       |             |
-| Text für Hyperlink (Limit von 45 Zeichen)                                            |             |
+| Speichern von Beschreibungstext (Grenzwert von 110 Zeichen)                                       |             |
+| Text für Link (Grenzwert von 45 Zeichen)                                            |             |
 
 
 
@@ -64,14 +64,14 @@ Füllen Sie ein Formular für jeden Store und jedes Gebiets Schema an das virtue
 
 
 
-| Von der Microsoft-Infrastruktur referenziertes Element                                                              | BESCHREIBUNG |
+| Element, auf das von der Microsoft-Infrastruktur verwiesen wird                                                              | BESCHREIBUNG |
 |----------------------------------------------------------------------------------------------------------|-------------|
-| XML-URL für Dienst Informationen (2048-Zeichenlimit)                                                              |             |
-| Dienst Schlüssel (eindeutige ID)                                                                                  |             |
-| Anzeige Name (Limit von 30 Zeichen)                                                                       |             |
-| Menü Bild-URL (2048-Zeichenlimit)                                                                    |             |
-| Musik-URL kaufen (2048-Zeichenlimit)<br/> (Nur integrierte Musikspeicher)<br/>                |             |
-| 10 ft UI-Kauf-URL (2048-Zeichenlimit)<br/> (Nur integrierte Musikspeicher: optional)<br/> |             |
+| XML-URL für Dienstinformationen (Grenzwert von 2048 Zeichen)                                                              |             |
+| Dienstschlüssel (eindeutige ID)                                                                                  |             |
+| Benutzerfreundlicher Name (Grenzwert von 30 Zeichen)                                                                       |             |
+| Menübild-URL (Grenzwert von 2048 Zeichen)                                                                    |             |
+| Kaufen einer Musik-URL (Grenzwert von 2048 Zeichen)<br/> (Nur integrierte Musikspeicher)<br/>                |             |
+| 10-Fuß-UI-Kauf-URL (Grenzwert von 2048 Zeichen)<br/> (Nur integrierte Musikspeicher – optional)<br/> |             |
 
 
 
@@ -79,34 +79,34 @@ Füllen Sie ein Formular für jeden Store und jedes Gebiets Schema an das virtue
 
 
 
-| Von Microsoft gehostetes Element auf "alle Online Stores Durchsuchen"                             | BESCHREIBUNG |
+| Von Microsoft gehostetes Element unter "Alle Onlineshops durchsuchen"                             | BESCHREIBUNG |
 |------------------------------------------------------------------------------------|-------------|
-| Store-Logo (130W x 30h)<br/> (PNG-Datei separat anfügen.)<br/>        |             |
-| Browse-all Image (108w x 108h)<br/> (PNG-Datei separat anfügen.)<br/> |             |
-| Speicher Beschreibungstext (110-Zeichenlimit)                                       |             |
-| Text für Hyperlink (Limit von 45 Zeichen)                                            |             |
+| Store Logo (130w x 30h)<br/> (PNG-Datei separat anfügen.)<br/>        |             |
+| Bild "Alle durchsuchen" (108w x 108h)<br/> (PNG-Datei separat anfügen.)<br/> |             |
+| Speichern von Beschreibungstext (Grenzwert von 110 Zeichen)                                       |             |
+| Text für Link (Grenzwert von 45 Zeichen)                                            |             |
 
 
 
  
 
-## <a name="test-accounts"></a>Test Konten
+## <a name="test-accounts"></a>Testkonten
 
 
 
 | Element                                                                                     | BESCHREIBUNG |
 |------------------------------------------------------------------------------------------|-------------|
-| Wie werden Testkonten erneut aufgeladen?<br/> (Dummy-Kreditkartennummer?, ...?<br/> |             |
+| Wie werden Testkonten überprüft?<br/> (Dummy-Kreditkartennummer?, ...?<br/> |             |
 
 
 
  
 
-## <a name="valid-accounts-that-testers-can-use-to-purchase-albums-or-tracks"></a>Gültige Konten, mit denen Tester Alben oder Spuren erwerben können
+## <a name="valid-accounts-that-testers-can-use-to-purchase-albums-or-tracks"></a>Gültige Konten, die Tester zum Erwerben von Alben oder Titeln verwenden können
 
 
 
-|                | Benutzername | Kennwort |
+|  Konto       | Benutzername | Kennwort |
 |----------------|-----------|----------|
 | Testkonto 1 |           |          |
 | Testkonto 2 |           |          |
@@ -122,7 +122,7 @@ Füllen Sie ein Formular für jeden Store und jedes Gebiets Schema an das virtue
 
 <dl> <dt>
 
-[Willkommens-Kit für Online Stores](online-stores-welcome-kit.md)
+[Welcome Kit für Onlineshops](online-stores-welcome-kit.md)
 </dt> </dl>
 
  

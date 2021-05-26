@@ -1,47 +1,46 @@
 ---
-description: Abrufen unterstützter Dienst Formate
+description: Abrufen unterstützter Dienstformate
 ms.assetid: b54dfeda-c2a3-42ec-895f-9abbbd4dd2ec
-title: Abrufen unterstützter Dienst Formate
+title: Abrufen unterstützter Dienstformate
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1ed8021d8feefaaad3da7905e17e8c658dfb19e0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 73618f3450255ad470545ac472ad9f71238621e3
+ms.sourcegitcommit: 0f7a8198bacd5493ab1e78a9583c7a3578794765
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106362898"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "110423811"
 ---
-# <a name="retrieving-supported-service-formats"></a>Abrufen unterstützter Dienst Formate
+# <a name="retrieving-supported-service-formats"></a>Abrufen unterstützter Dienstformate
 
-Die Anwendung wpdservicesapisample enthält Code, der veranschaulicht, wie eine Anwendung die Formate abrufen kann, die von einem bestimmten Kontakt Dienst unterstützt werden, indem Methoden der Schnittstellen in der folgenden Tabelle aufgerufen werden.
+Die WpdServicesApiSample-Anwendung enthält Code, der veranschaulicht, wie eine Anwendung die von einem bestimmten Contacts-Dienst unterstützten Formate abrufen kann, indem methoden der Schnittstellen in der folgenden Tabelle aufgerufen werden.
 
 
 
-|                                                                                      |                                                                                                       |
+| Schnittstelle | BESCHREIBUNG   |
 |--------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|
-| Schnittstelle                                                                            | BESCHREIBUNG                                                                                           |
-| [**Iportablede viceservice**](/windows/desktop/api/PortableDeviceAPI/nn-portabledeviceapi-iportabledeviceservice)                             | Wird zum Abrufen der **iportabledeviceservicecapabili-** Schnittstelle verwendet, um auf die unterstützten Ereignisse zuzugreifen. |
-| [**Iportablede viceservicecapabili**](/windows/desktop/api/PortableDeviceAPI/nn-portabledeviceapi-iportabledeviceservicecapabilities)     | Bietet Zugriff auf die unterstützten Ereignisse und Ereignis Attribute.                                         |
-| [**Iportabledevicepropvariantcollection**](iportabledevicepropvariantcollection.md) | Enthält die Liste der unterstützten Formate.                                                               |
-| [**Iportablede vicevalues**](iportabledevicevalues.md)                               | Enthält die Attribute für ein bestimmtes Format.                                                           |
+| [**IPortableDeviceService**](/windows/desktop/api/PortableDeviceAPI/nn-portabledeviceapi-iportabledeviceservice)                             | Wird zum Abrufen der **IPortableDeviceServiceCapabilities-Schnittstelle** für den Zugriff auf die unterstützten Ereignisse verwendet. |
+| [**IPortableDeviceServiceCapabilities**](/windows/desktop/api/PortableDeviceAPI/nn-portabledeviceapi-iportabledeviceservicecapabilities)     | Ermöglicht den Zugriff auf die unterstützten Ereignisse und Ereignisattribute.                                         |
+| [**IPortableDevicePropVariantCollection**](iportabledevicepropvariantcollection.md) | Enthält die Liste der unterstützten Formate.                                                               |
+| [**IPortableDeviceValues**](iportabledevicevalues.md)                               | Enthält die Attribute für ein bestimmtes Format.                                                           |
 
 
 
  
 
-Wenn der Benutzer die Option "3" in der Befehlszeile auswählt, ruft die Anwendung die **listsupportedformats** -Methode auf, die im Modul "servicecapabili. cpp" zu finden ist.
+Wenn der Benutzer die Option "3" in der Befehlszeile auswählt, ruft die Anwendung die **ListSupportedFormats-Methode** auf, die sich im Modul ServiceCapabilities.cpp befindet.
 
-Beachten Sie, dass die Beispielanwendung vor dem Abrufen der Ereignisliste einen Kontakt Dienst auf einem verbundenen Gerät öffnet.
+Beachten Sie, dass die Beispielanwendung vor dem Abrufen der Ereignisliste einen Kontaktdienst auf einem verbundenen Gerät öffnet.
 
-In WPD wird ein Format von Attributen beschrieben, die den Namen und (optional) den MIME-Typ eines gegebenen Formats angeben. Diese Attribute werden in der Header Datei "portabledevice. h" definiert. Eine Beschreibung der unterstützten Attribute finden Sie im Thema [Attribute](attributes.md) .
+In WPD wird ein Format durch Attribute beschrieben, die den Namen und (optional) den MIME-Typ eines bestimmten Formats angeben. Diese Attribute werden in der HeaderdateiPortableDevice.h definiert. Eine Beschreibung der unterstützten Attribute finden Sie im Thema [Attribute.](attributes.md)
 
-Bei der Beispielanwendung gibt der Treiber, wenn wpdservicesampledriver das einzige installierte Gerät ist, zwei unterstützte Formate für den Kontakt Dienst an: "abstractcontactformat" und "VCard2Format". Diese Formate entsprechen dem **\_ \_ \_ abstrakten \_ Kontakt im WPD-Objekt Format** und dem **WPD- \_ Objekt \_ Format \_ VCARD2** Attribute in "portabledevice. h".
+Wenn wpdServiceSampleDriver das einzige installierte Gerät ist, gibt der Treiber im Fall der Beispielanwendung zwei unterstützte Formate für den Contact-Dienst zurück: "AbstractContactFormat" und "VCard2Format". Diese Formate entsprechen den **WPD \_ OBJECT FORMAT \_ ABSTRACT \_ \_ CONTACT-** und **WPD OBJECT FORMAT \_ \_ \_ VCARD2-Attributen** in PortableDevice.h.
 
-Zwei Methoden im servicecapabili. cpp-Modul unterstützen den Abruf unterstützter Formate für den Contacts-Dienst: **listsupportedformats** und **Display Format**. Der erste Ruft den GUID-Bezeichner für jedes unterstützte Format ab. Letztere konvertiert diese GUID in eine benutzerfreundliche Zeichenfolge.
+Zwei Methoden im Modul ServiceCapabilities.cpp unterstützen das Abrufen unterstützter Formate für den Contacts-Dienst: **ListSupportedFormats** und **DisplayFormat**. Erstere ruft den GUID-Bezeichner für jedes unterstützte Format ab. Letztere konvertiert diese GUID in eine benutzerfreundliche Zeichenfolge.
 
-Die **listsupportedformats** -Methode ruft die [**iportabledeviceservice:: Funktionen**](/windows/desktop/api/PortableDeviceAPI/nf-portabledeviceapi-iportabledeviceservice-capabilities) -Methode auf, um eine [**iportabledeviceservicecapabili-**](/windows/desktop/api/PortableDeviceAPI/nn-portabledeviceapi-iportabledeviceservicecapabilities) Schnittstelle abzurufen. Mithilfe dieser Schnittstelle werden die unterstützten Formate durch Aufrufen der [**iportabledeviceservicecapabili:: GetSupportedFormats**](/windows/desktop/api/PortableDeviceAPI/nf-portabledeviceapi-iportabledeviceservicecapabilities-getsupportedformats) -Methode abgerufen. Die **GetSupportedFormats** -Methode ruft die GUID für jedes Format ab, das vom Dienst unterstützt wird, und kopiert diese GUID in ein [**iportabledevicepropvariantcollection**](iportabledevicepropvariantcollection.md) -Objekt.
+Die **ListSupportedFormats-Methode** ruft die [**IPortableDeviceService::Capabilities-Methode**](/windows/desktop/api/PortableDeviceAPI/nf-portabledeviceapi-iportabledeviceservice-capabilities) auf, um eine [**IPortableDeviceServiceCapabilities-Schnittstelle**](/windows/desktop/api/PortableDeviceAPI/nn-portabledeviceapi-iportabledeviceservicecapabilities) abzurufen. Mit dieser Schnittstelle werden die unterstützten Formate abgerufen, indem die [**IPortableDeviceServiceCapabilities::GetSupportedFormats-Methode**](/windows/desktop/api/PortableDeviceAPI/nf-portabledeviceapi-iportabledeviceservicecapabilities-getsupportedformats) aufgerufen wird. Die **GetSupportedFormats-Methode** ruft die GUID für jedes vom Dienst unterstützte Format ab und kopiert diese GUID in ein [**IPortableDevicePropVariantCollection-Objekt.**](iportabledevicepropvariantcollection.md)
 
-Im folgenden Code wird die **listsupportedformats** -Methode verwendet.
+Im folgenden Code wird die **ListSupportedFormats-Methode** verwendet.
 
 
 ```C++
@@ -118,11 +117,11 @@ void ListSupportedFormats(
 
 
 
-Nachdem die **listsupportedformats** -Methode die GUID für jedes vom angegebenen Dienst unterstützte Format abgerufen hat, ruft Sie die **DisplayFormat** -Methode auf, um den anzeigen amen des Skripts für die einzelnen Formate anzuzeigen. Beispiel: "VCard2".
+Nachdem die **ListSupportedFormats-Methode** die GUID für jedes vom angegebenen Dienst unterstützte Format abgerufen hat, ruft sie die **DisplayFormat-Methode** auf, um den Anzeigenamen des Skripts für jedes Format anzuzeigen. Beispiel: "VCard2".
 
-Die **DisplayFormat** -Methode ruft die [**iportabledeviceservicecapabili:: getformattribute**](/windows/desktop/api/PortableDeviceAPI/nf-portabledeviceapi-iportabledeviceservicecapabilities-getformatattributes) -Methode auf, um eine Auflistung von Attributen für die angegebene Format-GUID abzurufen. Anschließend wird die [**iportabledevicevalues:: GetStringValue**](iportabledevicevalues-getstringvalue.md) -Methode aufgerufen, und es wird angefordert, dass der Treiber einen Skript freundlichen Namen für das angegebene Format zurückgibt.
+Die **DisplayFormat-Methode** ruft die [**IPortableDeviceServiceCapabilities::GetFormatAttributes-Methode**](/windows/desktop/api/PortableDeviceAPI/nf-portabledeviceapi-iportabledeviceservicecapabilities-getformatattributes) auf, um eine Auflistung von Attributen für die angegebene Format-GUID abzurufen. Anschließend ruft sie die [**IPortableDeviceValues::GetStringValue-Methode**](iportabledevicevalues-getstringvalue.md) auf und fordert an, dass der Treiber einen skriptfreundlichen Namen für das angegebene Format zurückgibt.
 
-Im folgenden Code wird die **DisplayFormat** -Methode verwendet.
+Im folgenden Code wird die **DisplayFormat-Methode** verwendet.
 
 
 ```C++
@@ -162,16 +161,16 @@ void DisplayFormat(
 
 <dl> <dt>
 
-[**Iportablede viceservice**](/windows/desktop/api/PortableDeviceAPI/nn-portabledeviceapi-iportabledeviceservice)
+[**IPortableDeviceService**](/windows/desktop/api/PortableDeviceAPI/nn-portabledeviceapi-iportabledeviceservice)
 </dt> <dt>
 
-[**Iportablede viceservicecapabili**](/windows/desktop/api/PortableDeviceAPI/nn-portabledeviceapi-iportabledeviceservicecapabilities)
+[**IPortableDeviceServiceCapabilities**](/windows/desktop/api/PortableDeviceAPI/nn-portabledeviceapi-iportabledeviceservicecapabilities)
 </dt> <dt>
 
-[**Iportablede vicevalues**](iportabledevicevalues.md)
+[**IPortableDeviceValues**](iportabledevicevalues.md)
 </dt> <dt>
 
-[Wpdservicesapisample](wpdapisample-sample-service-application.md)
+[WpdServicesApiSample](wpdapisample-sample-service-application.md)
 </dt> </dl>
 
  

@@ -1,38 +1,37 @@
 ---
-description: Öffnen eines Dienstanbieter
+description: Öffnen eines Diensts
 ms.assetid: 722d657d-332a-40df-ac30-bc2050deda74
-title: Öffnen eines Dienstanbieter
+title: Öffnen eines Diensts
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d0bcccc6c3769173bfee72e73d7cbf68435b0ba1
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e8b273b8709a4d750085f14075d605f88ed0faa6
+ms.sourcegitcommit: 0f7a8198bacd5493ab1e78a9583c7a3578794765
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104529525"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "110423920"
 ---
-# <a name="opening-a-service"></a>Öffnen eines Dienstanbieter
+# <a name="opening-a-service"></a>Öffnen eines Diensts
 
-Bevor die Anwendung Vorgänge für einen Dienst ausführen kann, z. b. das Auflisten von Inhalten oder das Abrufen von Beschreibungen unterstützter Ereignisse oder Methoden, muss der Dienst geöffnet werden. In der Anwendung wpdservicesapisample wird diese Aufgabe im serviceenumeration. cpp-Modul mithilfe der in der folgenden Tabelle beschriebenen Schnittstellen veranschaulicht.
+Bevor Ihre Anwendung Vorgänge für einen Dienst ausführen kann, z. B. das Aufzählen von Inhalten oder das Abrufen von Beschreibungen unterstützter Ereignisse oder Methoden, muss der Dienst geöffnet werden. In der WpdServicesApiSample-Anwendung wird diese Aufgabe im ServiceEnumeration.cpp-Modul mithilfe der in der folgenden Tabelle beschriebenen Schnittstellen veranschaulicht.
 
 
 
-|                                                                        |                                                    |
-|------------------------------------------------------------------------|----------------------------------------------------|
 | Schnittstelle                                                              | BESCHREIBUNG                                        |
-| [**Iportablede viceservicemanager**](/windows/desktop/api/PortableDeviceAPI/nn-portabledeviceapi-iportabledeviceservicemanager) | Wird verwendet, um die Dienste auf einem Gerät aufzuzählen.        |
-| [**Iportablede viceservice**](/windows/desktop/api/PortableDeviceAPI/nn-portabledeviceapi-iportabledeviceservice)               | Wird verwendet, um eine Verbindung mit einem Geräte Dienst zu öffnen.     |
-| [**Iportablede vicevalues**](iportabledevicevalues.md)                 | Wird verwendet, um die Client Informationen der Anwendung zu speichern. |
+|------------------------------------------------------------------------|----------------------------------------------------|
+| [**IPortableDeviceServiceManager**](/windows/desktop/api/PortableDeviceAPI/nn-portabledeviceapi-iportabledeviceservicemanager) | Wird verwendet, um die Dienste auf einem Gerät aufzuzählen.        |
+| [**IPortableDeviceService**](/windows/desktop/api/PortableDeviceAPI/nn-portabledeviceapi-iportabledeviceservice)               | Wird verwendet, um eine Verbindung mit einem Gerätedienst zu öffnen.     |
+| [**IPortableDeviceValues**](iportabledevicevalues.md)                 | Wird verwendet, um die Clientinformationen der Anwendung zu speichern. |
 
 
 
  
 
-Die Methode, die einen Dienst öffnet, ist [**iportabledeviceservice:: Open**](/windows/desktop/api/PortableDeviceAPI/nf-portabledeviceapi-iportabledeviceservice-open). Diese Methode nimmt zwei Argumente an: einen PNP-Bezeichner (Plug-and-Play) für den Dienst und ein [**iportabledevicevalues**](iportabledevicevalues.md) -Objekt, das die Client Informationen der Anwendung enthält.
+Die Methode, die einen Dienst öffnet, ist [**IPortableDeviceService::Open**](/windows/desktop/api/PortableDeviceAPI/nf-portabledeviceapi-iportabledeviceservice-open). This method takes two arguments: a Plug-and-Play (PnP) identifier for the service and an [**IPortableDeviceValues**](iportabledevicevalues.md) object that contains the application's client information.
 
-Um einen PNP-Bezeichner für einen bestimmten Dienst zu erhalten, ruft Ihre Anwendung die [**iportabledeviceservicemanager:: getdeviceservices**](/windows/desktop/api/PortableDeviceAPI/nf-portabledeviceapi-iportabledeviceservicemanager-getdeviceservices) -Methode auf. Diese Methode ruft ein Array von PNP-Bezeichner für Dienste einer Dienst Kategorie-GUID (z. b. Dienst Kontakte) ab.
+Um einen PnP-Bezeichner für einen bestimmten Dienst abzurufen, ruft Ihre Anwendung die [**IPortableDeviceServiceManager::GetDeviceServices-Methode**](/windows/desktop/api/PortableDeviceAPI/nf-portabledeviceapi-iportabledeviceservicemanager-getdeviceservices) auf. Diese Methode ruft ein Array von PnP-Bezeichnern für Dienste einer Dienstkategorie-GUID ab (z. B. DIENSTkontakte).
 
-Die Beispiel Dienst Anwendung ruft einen PNP-Bezeichner für Kontakte Dienste innerhalb der **enumeratecontactsservices** -Methode im serviceenumeration. cpp-Modul ab. Das folgende Codebeispiel stammt aus dieser Methode.
+Die Beispieldienstanwendung ruft einen PnP-Bezeichner für Contacts-Dienste innerhalb der **EnumerateContactsServices-Methode** im ServiceEnumeration.cpp-Modul ab. Das folgende Codebeispiel stammt aus dieser Methode.
 
 
 ```C++
@@ -76,13 +75,13 @@ for (dwIndex = 0; dwIndex < cPnpDeviceIDs; dwIndex++)
 
 
 
-Nachdem die Anwendung den PNP-Bezeichner für den Dienst abgerufen hat, kann Sie die Client Informationen einrichten und [**iportabledeviceservice:: Open**](/windows/desktop/api/PortableDeviceAPI/nf-portabledeviceapi-iportabledeviceservice-open)aufrufen.
+Nachdem Ihre Anwendung den PnP-Bezeichner für den Dienst abgerufen hat, kann sie die Clientinformationen einrichten und [**IPortableDeviceService::Open**](/windows/desktop/api/PortableDeviceAPI/nf-portabledeviceapi-iportabledeviceservice-open)aufrufen.
 
-In der Beispielanwendung wird diese Methode innerhalb von **choosedeviceservice** im serviceenumeration. cpp-Modul aufgerufen.
+In der Beispielanwendung wird diese Methode in **ChooseDeviceService** im Modul ServiceEnumeration.cpp aufgerufen.
 
-[**Iportableendviceservice**](/windows/desktop/api/PortableDeviceAPI/nn-portabledeviceapi-iportabledeviceservice) unterstützt zwei CLSIDs für **cokreatabstance**. **CLSID \_ Portableendviceservice** gibt einen **iportableendviceservice** -Zeiger zurück, der den Freethread-Mars Haller nicht aggregiert. **CLSID \_ Portableendviceserviceftm** ist eine neue CLSID, die einen **iportableendviceservice** -Zeiger zurückgibt, der den frei Thread-Mars Haller aggregiert. Beide Zeiger unterstützen andernfalls dieselbe Funktionalität.
+[**IPortableDeviceService**](/windows/desktop/api/PortableDeviceAPI/nn-portabledeviceapi-iportabledeviceservice) unterstützt zwei CLSIDs für **CoCreateInstance.** **CLSID \_ PortableDeviceService gibt** einen **IPortableDeviceService-Zeiger** zurück, der den Freethread-Marshaller nicht aggregiert. **CLSID \_ PortableDeviceServiceFTM** ist eine neue CLSID, die einen **IPortableDeviceService-Zeiger** zurückgibt, der den Marshaller mit Freiem Thread aggregiert. Andernfalls unterstützen beide Zeiger die gleiche Funktionalität.
 
-Anwendungen, die in Single Thread-Apartments Leben, sollten **CLSID \_ portabletoviceserviceftm** verwenden, da dadurch der Aufwand für das Marshalling von Schnittstellen Zeigern entfällt. **CLSID \_ Portablede viceservice** wird weiterhin für ältere Anwendungen unterstützt.
+Anwendungen, die sich in SingleThreaded Apartment befinden, sollten **CLSID \_ PortableDeviceServiceFTM** verwenden, da dadurch der Aufwand für das Marshalling von Schnittstellenzeigern entfällt. **CLSID \_ PortableDeviceService wird** weiterhin für Legacyanwendungen unterstützt.
 
 
 ```C++
@@ -121,16 +120,16 @@ if (SUCCEEDED(hr))
 
 <dl> <dt>
 
-[**Iportablede viceservice-Schnittstelle**](/windows/desktop/api/PortableDeviceAPI/nn-portabledeviceapi-iportabledeviceservice)
+[**IPortableDeviceService-Schnittstelle**](/windows/desktop/api/PortableDeviceAPI/nn-portabledeviceapi-iportabledeviceservice)
 </dt> <dt>
 
-[**Iportabledebug-Schnittstelle**](iportabledevicevalues.md)
+[**IPortableDeviceValues-Schnittstelle**](iportabledevicevalues.md)
 </dt> <dt>
 
-[**Iportabledebug Service Service Manager-Schnittstelle**](/windows/desktop/api/PortableDeviceAPI/nn-portabledeviceapi-iportabledeviceservicemanager)
+[**IPortableDeviceServiceManager-Schnittstelle**](/windows/desktop/api/PortableDeviceAPI/nn-portabledeviceapi-iportabledeviceservicemanager)
 </dt> <dt>
 
-[Wpdservicesapisample](wpdapisample-sample-service-application.md)
+[WpdServicesApiSample](wpdapisample-sample-service-application.md)
 </dt> </dl>
 
  

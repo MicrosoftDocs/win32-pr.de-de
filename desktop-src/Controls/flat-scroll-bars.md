@@ -1,44 +1,44 @@
 ---
-title: Flache Scrollleisten
-description: Microsoft Internet Explorer 4,0 führte eine neue visuelle Technologie mit dem Namen "flatscrollleisten" ein.
+title: Flache Bildlaufleisten
+description: Microsoft Internet Explorer 4.0 hat eine neue visuelle Technologie eingeführt, die als flache Scrollleisten bezeichnet wird.
 ms.assetid: f7e00e71-bf12-4db9-bb84-6d413b967049
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 07fbbdb64aa9815cb56f5dc3bf55ffb17390db38
-ms.sourcegitcommit: 5f33645661bf8c825a7a2e73950b1f4ea0f1cd82
+ms.openlocfilehash: 5e56db4ee987a6d8cdc7b185f5db0f8d89540453
+ms.sourcegitcommit: 0f7a8198bacd5493ab1e78a9583c7a3578794765
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "103730457"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "110423890"
 ---
-# <a name="flat-scroll-bars"></a>Flache Scrollleisten
+# <a name="flat-scroll-bars"></a>Flache Bildlaufleisten
 
-Microsoft Internet Explorer 4,0 führte eine neue visuelle Technologie mit dem Namen "flatscrollleisten" ein. Funktionale, flache Schiebe leisten Verhalten sich genau wie Standard Scrollleisten. Der Unterschied besteht darin, dass Sie Ihre Darstellung in größerem Umfang als Standard Scrollleisten anpassen können.
+Microsoft Internet Explorer 4.0 hat eine neue visuelle Technologie eingeführt, die als flache Scrollleisten bezeichnet wird. Funktionell verhalten sich flache Bildlaufleisten genauso wie Standard-Scrollleisten. Der Unterschied besteht darin, dass Sie deren Darstellung in größerem Umfang als standard-Scrollleisten anpassen können.
 
-Die folgende Abbildung zeigt ein Fenster, das eine flache Bild Lauf Leiste enthält.
+Die folgende Abbildung zeigt ein Fenster, das eine flache Scrollleiste enthält.
 
-![Screenshot eines Fensters, das eine flatscrollleiste enthält](images/flatsb.jpg)
+![Screenshot eines Fensters, das eine flache Scrollleiste enthält](images/flatsb.jpg)
 
 > [!Note]  
-> Flache Schiebe leisten werden von Comctl32.dll Versionen 4,71 bis 5,82 unterstützt. In Comctl32.dll, Version 6,00 und höher, werden keine flachen Schiebe leisten unterstützt.
+> Flache Scrollleisten werden von Comctl32.dll Versionen 4.71 bis 5.82 unterstützt. Comctl32.dll Versionen 6.00 und höher unterstützen keine flachen Bildlaufleisten.
 
- 
+ 
 
-## <a name="using-flat-scroll-bars"></a>Verwenden von flachen Schiebe leisten
+## <a name="using-flat-scroll-bars"></a>Verwenden von flachen Bildlaufleisten
 
-In diesem Abschnitt wird beschrieben, wie Sie flache Schiebe leisten in der Anwendung implementieren.
+In diesem Abschnitt wird beschrieben, wie Sie flache Scrollleisten in Ihrer Anwendung implementieren.
 
 ### <a name="before-you-begin"></a>Vorbereitungen
 
-Wenn Sie die Funktionen der flatscrollleiste verwenden möchten, müssen Sie in den Quelldateien kommctrl. h einschließen und mit Comctl32. lib verknüpfen.
+Um die flachen Scrollleistenfunktionen zu verwenden, müssen Sie Commctrl.h in Ihre Quelldateien einschließen und eine Verknüpfung mit Comctl32.lib erstellen.
 
-### <a name="adding-flat-scroll-bars-to-a-window"></a>Hinzufügen von flatscrollleisten zu einem Fenster
+### <a name="adding-flat-scroll-bars-to-a-window"></a>Hinzufügen von flachen Bildlaufleisten zu einem Fenster
 
-Wenn Sie einem Fenster flatscrollleisten hinzufügen möchten, führen Sie [**initializeflatsb**](/windows/desktop/api/Commctrl/nf-commctrl-initializeflatsb)aus, und übergeben Sie das Handle an das Fenster. Anstatt die Scrollleisten-Standardfunktionen zum Bearbeiten der Schiebe leisten zu verwenden, müssen Sie die entsprechende flatsb \_ xxx-Funktion verwenden. Es gibt flache Scrollleisten-Funktionen zum Festlegen und Abrufen der scrollinformationen, des Bereichs und der Position. Wenn für das Fenster keine flatscrollleisten initialisiert wurden, wird die API für die flatscrollleiste auf die entsprechenden Standardfunktionen zurückgestellt, sofern diese verwendet werden. Auf diese Weise können Sie flache Schiebe leisten ein-und ausschalten, ohne bedingten Code schreiben zu müssen.
+Um einem Fenster flache Scrollleisten hinzuzufügen, rufen [**Sie InitializeFlatSB**](/windows/desktop/api/Commctrl/nf-commctrl-initializeflatsb)auf und übergeben das Handle an das Fenster. Anstatt die standardmäßigen Scrollleistenfunktionen zum Bearbeiten ihrer Scrollleisten zu verwenden, müssen Sie die entsprechende FlatSB \_ XXX-Funktion verwenden. Es gibt flache Scrollleistenfunktionen zum Festlegen und Abrufen der Scrollinformationen, des Bereichs und der Position. Wenn für Ihr Fenster keine flachen Bildlaufleisten initialisiert wurden, wird die API für flache Scrollleisten ggf. auf die entsprechenden Standardfunktionen zurückgeleitet. Dadurch können Sie flache Bildlaufleisten aktivieren und deaktivieren, ohne bedingten Code schreiben zu müssen.
 
-Da eine Anwendung möglicherweise benutzerdefinierte Metriken für Ihre flachen Schiebe leisten festgelegt hat, werden Sie nicht automatisch aktualisiert, wenn sich Systemmetriken ändern. Wenn sich die Metriken der systemscrollleiste ändern, wird eine [**WM- \_ settingchange**](/windows/desktop/winmsg/wm-settingchange) -Nachricht gesendet, wobei *wParam* auf [**SPI \_ setnonclientmetrics**](/windows/desktop/api/winuser/nf-winuser-systemparametersinfoa)festgelegt ist. Zum Aktualisieren von flatscrollleisten auf die neuen Systemmetriken müssen Anwendungen diese Nachricht verarbeiten und die metrikabhängigen Eigenschaften der flatscrollleiste explizit ändern.
+Da eine Anwendung möglicherweise benutzerdefinierte Metriken für ihre flachen Scrollleisten festgelegt hat, werden sie nicht automatisch aktualisiert, wenn sich die Systemmetriken ändern. Wenn sich die Metriken der Scrollleiste des Systems ändern, wird eine [**WM \_ SETTINGCHANGE-Nachricht**](/windows/desktop/winmsg/wm-settingchange) übertragen, deren *wParam* auf [**SPI \_ SETNONCLIENTMETRICS festgelegt ist.**](/windows/desktop/api/winuser/nf-winuser-systemparametersinfoa) Um flache Bildlaufleisten auf die neuen Systemmetriken zu aktualisieren, müssen Anwendungen diese Meldung verarbeiten und die metrikabhängigen Eigenschaften der flachen Scrollleiste explizit ändern.
 
-Verwenden Sie [**flatsb \_ setscrollprop**](/windows/desktop/api/Commctrl/nf-commctrl-flatsb_setscrollprop), um die ScrollBar-Eigenschaften zu aktualisieren. Mit dem folgenden Code Fragment werden die metrikabhängigen Eigenschaften einer flatscrollleiste auf die aktuellen System Werte geändert.
+Verwenden Sie [**FlatSB \_ SetScrollProp,**](/windows/desktop/api/Commctrl/nf-commctrl-flatsb_setscrollprop)um die Eigenschaften der Scrollleiste zu aktualisieren. Das folgende Codefragment ändert die metrikabhängigen Eigenschaften einer flachen Scrollleiste in die aktuellen Systemwerte.
 
 
 ```
@@ -55,28 +55,28 @@ FlatSB_SetScrollProp(hWnd, WSB_PROP_CYVTHUMB, GetSystemMetrics(SM_CYVTHUMB), TRU
 
 
 
-### <a name="enhancing-flat-scroll-bars"></a>Verbessern von flachen Schiebe leisten
+### <a name="enhancing-flat-scroll-bars"></a>Verbessern von flachen Bildlaufleisten
 
-[**Flatsb \_ Setscrollprop**](/windows/desktop/api/Commctrl/nf-commctrl-flatsb_setscrollprop) ermöglicht es Ihnen, die flachen Schiebe leisten zu ändern, um das Aussehen des Fensters anzupassen. Bei vertikalen Schiebe leisten können Sie die Breite des Balkens und die Höhe der Pfeilrichtung ändern. Bei horizontalen Schiebe leisten können Sie die Höhe des Balkens und die Breite der Pfeilrichtung ändern. Sie können auch die Hintergrundfarbe der horizontalen und vertikalen Schiebe leisten ändern.
+[**FlatSB \_ Mit SetScrollProp**](/windows/desktop/api/Commctrl/nf-commctrl-flatsb_setscrollprop) können Sie die flachen Scrollleisten ändern, um das Aussehen Ihres Fensters anzupassen. Bei vertikalen Bildlaufleisten können Sie die Breite des Balkens und die Höhe der Richtungspfeile ändern. Bei horizontalen Scrollleisten können Sie die Höhe des Balkens und die Breite der Richtungspfeile ändern. Sie können auch die Hintergrundfarbe der horizontalen und vertikalen Scrollleisten ändern.
 
-[**Flatsb \_ Mit setscrollprop**](/windows/desktop/api/Commctrl/nf-commctrl-flatsb_setscrollprop) können Sie auch anpassen, wie die flachen Schiebe leisten angezeigt werden. Durch Ändern der Eigenschaften von WSB \_ Prop \_ Vstyle und WSB \_ Prop \_ hstyle können Sie den Typ der Scrollleiste festlegen, die Sie verwenden möchten. Es sind drei Stile verfügbar.
+[**FlatSB \_ Mit SetScrollProp**](/windows/desktop/api/Commctrl/nf-commctrl-flatsb_setscrollprop) können Sie auch anpassen, wie die flachen Scrollleisten angezeigt werden. Durch Ändern der Eigenschaften WSB PROP VSTYLE und WSB PROP HSTYLE können Sie den Typ der Bildlaufleiste \_ \_ \_ \_ festlegen, die Sie verwenden möchten. Es sind drei Stile verfügbar.
 
 
 
-|                    |                                                                                                                                                                          |
+|   Style                 |   BESCHREIBUNG                                                                                                                                                                       |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| FSB- \_ Encarta- \_ Modus | Eine standardmäßige flatscrollleiste wird angezeigt. Wenn die Maus über eine Richtungs Schaltfläche oder den Ziehpunkt bewegt wird, wird dieser Teil der Bild Lauf Leiste in 3D angezeigt.             |
-| FSB \_ - \_ FlatMode    | Eine standardmäßige flatscrollleiste wird angezeigt. Wenn die Maus über eine Richtungs Schaltfläche oder den Ziehpunkt bewegt wird, wird dieser Teil der Bild Lauf Leiste in umgekehrten Farben angezeigt. |
-| \_regulärer \_ Modus für FSB | Eine normale, nicht flache Bild Lauf Leiste wird angezeigt. Es werden keine besonderen visuellen Effekte angewendet.                                                                                    |
+| \_FSB-ENCARTA-MODUS \_ | Eine standardmäßige flache Bildlaufleiste wird angezeigt. Wenn der Mauszeiger über eine Richtungsschaltfläche oder den Strich bewegt wird, wird dieser Teil der Scrollleiste in 3D angezeigt.             |
+| FSB \_ FLAT \_ MODE    | Eine standardmäßige flache Bildlaufleiste wird angezeigt. Wenn der Mauszeiger über eine Richtungsschaltfläche oder den Strich bewegt wird, wird dieser Teil der Scrollleiste in invertierten Farben angezeigt. |
+| REGULÄRER \_ \_ FSB-MODUS | Eine normale, nichtflat-Scrollleiste wird angezeigt. Es werden keine speziellen visuellen Effekte angewendet.                                                                                    |
 
 
 
- 
+ 
 
-### <a name="removing-flat-scroll-bars"></a>Entfernen von flachen Schiebe leisten
+### <a name="removing-flat-scroll-bars"></a>Entfernen von flachen Bildlaufleisten
 
-Wenn Sie flache Schiebe leisten aus dem Fenster entfernen möchten, können Sie die Funktion [**uninitializeflatsb**](/windows/desktop/api/Commctrl/nf-commctrl-uninitializeflatsb) aufrufen und das Handle an das Fenster übergeben. Diese Funktion entfernt nur flatscrollleisten aus dem Fenster zur Laufzeit. Diese Funktion muss nicht aufgerufen werden, wenn das Fenster zerstört wird.
+Wenn Sie flache Bildlaufleisten aus Ihrem Fenster entfernen möchten, rufen Sie die [**UninitializeFlatSB-Funktion**](/windows/desktop/api/Commctrl/nf-commctrl-uninitializeflatsb) auf, und übergeben Sie das Handle an das Fenster. Diese Funktion entfernt nur zur Laufzeit flache Bildlaufleisten aus Ihrem Fenster. Sie müssen diese Funktion nicht aufrufen, wenn Ihr Fenster zerstört wird.
 
- 
+ 
 
- 
+ 

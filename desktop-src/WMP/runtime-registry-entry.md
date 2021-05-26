@@ -1,71 +1,70 @@
 ---
-title: Registrierungs Eintrag für die Laufzeit
-description: Registrierungs Eintrag für die Laufzeit
+title: Registrierungseintrag zur Laufzeit
+description: Registrierungseintrag zur Laufzeit
 ms.assetid: 3b2880f9-acb9-4a13-8364-67fbe76f8d29
 keywords:
-- Windows Media Player, Lauf Zeit Registrierungseinträge
-- Windows Media Player, Dateinamen Erweiterungen
-- Windows Media Player, Registrierung
-- Registrierung, Dateinamen Erweiterungen
-- Registrierung, Lauf Zeiteinträge
-- Registrierung, Einstellungen für Windows-Media Player
-- Registrierungs Einstellungen für die Dateinamenerweiterung
-- Registrierungseinträge für die Laufzeit
+- Windows Media Player,Laufzeitregistrierungseinträge
+- Windows Media Player,Dateierweiterungen
+- Windows Media Player,Registrierung
+- Registrierung, Dateinamenerweiterungen
+- Registrierung, Laufzeiteinträge
+- registry,settings for Windows Media Player
+- Registrierungseinstellungen der Dateinamenerweiterung
+- Laufzeitregistrierungseinträge
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b01a83c3642f49a9fdbe7f8c51f157a154a9843b
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 3bf485038965184add320e49c29482672c770f48
+ms.sourcegitcommit: 0f7a8198bacd5493ab1e78a9583c7a3578794765
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104037207"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "110424109"
 ---
-# <a name="runtime-registry-entry"></a>Registrierungs Eintrag für die Laufzeit
+# <a name="runtime-registry-entry"></a>Registrierungseintrag zur Laufzeit
 
-Wenn Windows Media Player auf eine benutzerdefinierte Dateierweiterung trifft, sucht es nach einem Registrierungs Unterschlüssel, der der Erweiterung entspricht. Der Unterschlüssel wird in [Registrierungs Einstellungen für Dateinamen Erweiterungen](file-name-extension-registry-settings.md)beschrieben. Einer der Registrierungseinträge, der unter dem Unterschlüssel der Erweiterung angezeigt werden kann, ist der **Lauf** Zeiteintrag.
+Wenn Windows Media Player eine benutzerdefinierte Dateinamenerweiterung findet, sucht sie nach einem Registrierungsunterschlüssel, der der Erweiterung entspricht. Der Unterschlüssel wird unter [File Name Extension Registry Settings (Registrierungseinstellungen für Dateinamenerweiterungen) beschrieben.](file-name-extension-registry-settings.md) Einer der Registrierungseinträge, die unter dem Unterschlüssel der Erweiterung angezeigt werden können, ist der **Runtimeeintrag.**
 
-Der **Lauf** Zeiteintrag gibt die zugrunde liegende Technologie an, mit der Windows Media Player digitale Mediendateien mit der benutzerdefinierten Erweiterung wiedergeben oder konvertieren kann. Der **Lauf** Zeiteintrag weist das folgende Format auf.
+Der **Eintrag Runtime** gibt die zugrunde liegende Technologie an, die Windows Media Player, um digitale Mediendateien mit der benutzerdefinierten Erweiterung wiedergibt oder zu konvertieren. Der **Eintrag Runtime** hat das folgende Formular.
 
 
 
-|          |                |                                                               |
+|   Name   |   Typ         |   Wert                                                       |
 |----------|----------------|---------------------------------------------------------------|
-| **Name** | **Typ**       | **Wert**                                                     |
 | Typ  | **REG \_ DWORD** | Eine positive ganze Zahl, die die zugrunde liegende Technologie identifiziert. |
 
 
 
- 
+ 
 
-Der Wert für den **Lauf** Zeiteintrag muss einer der folgenden Werte sein.
+Der Wert des **Runtime-Eintrags** muss einer der folgenden sein.
 
 
 
 | **Wert (dezimal)** | **Beschreibung**                                                                            |
 |---------------------|--------------------------------------------------------------------------------------------|
-| 6                   | Rendering mit dem Windows Media-Format-SDK.                                                 |
-| 7                   | Rendering mithilfe von Microsoft DirectShow.                                                         |
-| 13                  | Konvertiert die Datei mit dem angegebenen Konvertierungs-Plug-in. Erfordert Windows Media Player 11. |
+| 6                   | Rendern mit dem Windows Media Format SDK.                                                 |
+| 7                   | Rendern mit Microsoft DirectShow.                                                         |
+| 13                  | Konvertieren Sie die Datei mithilfe des angegebenen Konvertierungs-Plug-Ins. Erfordert Windows Media Player 11. |
 
 
 
- 
+ 
 
-Die **Lauf** Zeit Registrierungs Eintrags Werte 6 und 7 werden von der Windows Media Player 9-Serie und höher unterstützt. Der Wert 13 wird von Windows Media Player 11 unterstützt.
+Die **Registrierungseintragswerte** 6 und 7 der Runtime werden von Windows Media Player 9er Serie und höher unterstützt. Der Wert 13 wird von Windows Media Player 11 unterstützt.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Convertpluginclsid-Unterschlüssel**](convertpluginclsid-subkey.md)
+[**ConvertPluginCLSID-Unterschlüssel**](convertpluginclsid-subkey.md)
 </dt> <dt>
 
-[**Registrierungs Einstellungen für die Dateinamenerweiterung**](file-name-extension-registry-settings.md)
+[**Registrierungseinstellungen für die Dateinamenerweiterung**](file-name-extension-registry-settings.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 
