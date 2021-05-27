@@ -3,7 +3,7 @@
   items:
     - name: Neuerungen bei Windows Sockets
       href: what-s-new-for-windows-sockets-2.md
-    - name: Winsock-Netzwerkprotokoll Unterstützung in Windows
+    - name: Winsock-Netzwerkprotokollunterstützung unter Windows
       href: network-protocol-support-in-windows.md
     - name: Informationen zu Winsock
       href: about-winsock.md
@@ -11,106 +11,106 @@
         - name: Überlegungen zur Winsock-Programmierung
           href: winsock-programming-considerations.md
           items:
-            - name: Architektur von Windows Sockets 2
+            - name: Windows Sockets 2-Architektur
               href: windows-sockets-2-architecture-2.md
             - name: Sockethandles
               href: socket-handles-2.md
-            - name: Scatter/Gather-e/a
+            - name: Punkt-/Erfassungs-E/A
               href: scatter-gather-i-o-2.md
-            - name: Multicast-und Multipoint-Protocol-Independent
+            - name: Protocol-Independent Multicast und Multipoint
               href: protocol-independent-multicast-and-multipoint-2.md
-            - name: Fluss Spezifikation Quality of Service
+            - name: Flow Specification Quality of Service
               href: flow-specification-quality-of-service-2.md
             - name: Provider-Specific-Erweiterungsmechanismus
               href: provider-specific-extension-mechanism-2.md
             - name: Freigegebene Sockets
               href: shared-sockets-2.md
-            - name: Einrichten und Löschen der Verbindung
+            - name: Verbindungseinrichtung und -abschaltung
               href: connection-setup-and-teardown-2.md
-            - name: 'Ordnungsgemäßes Herunterfahren, Linger Optionen und Socket-Schließung'
+            - name: 'Ordnungsgemäßes Herunterfahren, Lingeroptionen und Socketabschluss'
               href: graceful-shutdown-linger-options-and-socket-closure-2.md
-            - name: Out-of-Band-Daten Protocol-Independent
+            - name: Protocol-Independent Out-of-Band-Daten
               href: protocol-independent-out-of-band-data-2.md
-            - name: Debug-und Ablauf Verfolgungs Funktionen
+            - name: Debug- und Ablaufverfolgungs-Funktionen
               href: debug-and-trace-facilities-2.md
-            - name: Windows Sockets-Kompatibilitätsprobleme
+            - name: Kompatibilitätsprobleme mit Windows Sockets
               href: windows-sockets-compatibility-issues-2.md
               items:
                 - name: Standardzustand für das überlappende Attribut eines Sockets
                   href: default-state-for-a-socket-s-overlapped-attribute-2.md
-                - name: 'Windows Sockets 1,1 blockierende Routinen und einen Fortschritt'
+                - name: Blockierende Routinen für Windows Sockets 1.1 und EINPROGRESS
                   href: windows-sockets-1-1-blocking-routines-and-einprogress-2.md
             - name: Behandeln von Winsock-Fehlern
               href: handling-winsock-errors.md
-        - name: Gleichzeitiger Zugriff auf mehrere Transport Protokolle
+        - name: Gleichzeitiger Zugriff auf mehrere Transportprotokolle
           href: simultaneous-access-to-multiple-transport-protocols-2.md
           items:
-            - name: Geschichtete Protokolle und Protokoll Ketten
+            - name: Mehrschichtige Protokolle und Protokollketten
               href: layered-protocols-and-protocol-chains-2.md
             - name: Verwenden mehrerer Protokolle
               href: using-multiple-protocols-2.md
-            - name: Mehrere Anbieter Einschränkungen bei SELECT
+            - name: Einschränkungen für mehrere Anbieter bei Auswahl
               href: multiple-provider-restrictions-on-select-2.md
-        - name: Überlappende e/a-und Ereignis Objekte
+        - name: Überlappende E/A- und Ereignisobjekte
           href: overlapped-i-o-and-event-objects-2.md
           items:
             - name: Ereignisobjekte
               href: event-objects-2.md
-            - name: Empfangende Vervollständigungs Hinweise
+            - name: Empfangen von Vervollständigungsanzeigen
               href: receiving-completion-indications-2.md
-            - name: Asynchrone Benachrichtigung mit Ereignis Objekten
+            - name: Asynchrone Benachrichtigung mitHilfe von Ereignisobjekten
               href: asynchronous-notification-using-event-objects-2.md
         - name: Registrierung und Namensauflösung
           href: registration-and-name-resolution-2.md
           items:
-            - name: Auflösung von Protocol-Independent Namen
+            - name: Protocol-Independent Namensauflösung
               href: protocol-independent-name-resolution-2.md
               items:
-                - name: Namens Auflösungs Modell
+                - name: Namensauflösungsmodell
                   href: name-resolution-model-2.md
-                - name: Zusammenfassung der namens Auflösungs Funktionen
+                - name: Zusammenfassung der Namensauflösungsfunktionen
                   href: summary-of-name-resolution-functions-2.md
-                - name: Datenstrukturen für die Namensauflösung
+                - name: Namensauflösungsdatenstrukturen
                   href: name-resolution-data-structures-2.md
-            - name: 'Kompatible Namensauflösung für TCP/IP in der Windows Sockets 1,1-API'
+            - name: Kompatible Namensauflösung für TCP/IP in der Windows Sockets 1.1-API
               href: compatible-name-resolution-for-tcp-ip-in-the-windows-sockets-1-1-api-2.md
               items:
-                - name: Grundlegender Ansatz für getxbyy in der API
+                - name: Grundlegender Ansatz für GetXbyY in der API
                   href: basic-approach-for-getxbyy-in-the-api-2.md
-                - name: Funktionen "getprotobyname" und "getprotobynumber" in der API
+                - name: getprotobyname- und getprotobynumber-Funktionen in der API
                   href: getprotobyname-and-getprotobynumber-functions-in-the-api-2.md
-                - name: Funktionen "getservbyname" und "getservbyport" in der API
+                - name: getservbyname- und getservbyport-Funktionen in der API
                   href: getservbyname-and-getservbyport-functions-in-the-api-2.md
-                - name: Funktion "gethostbyname" in der API
+                - name: gethostbyname-Funktion in der API
                   href: gethostbyname-function-in-the-api-2.md
-                - name: Funktion "gethostbyaddr" in der API
+                - name: gethostbyaddr-Funktion in der API
                   href: gethostbyaddr-function-in-the-api-2.md
-                - name: Funktion "GetHostName" in der API
+                - name: gethostname-Funktion in der API
                   href: gethostname-function-in-the-api-2.md
-        - name: Multipoint-und Multicast-Semantik
+        - name: Multipoint- und Multicastsemantik
           href: multipoint-and-multicast-semantics-2.md
           items:
             - name: Multipoint-Taxonomie
               href: multipoint-taxonomy-2.md
-            - name: Windows Sockets 2-Schnittstellen Elemente für Multipoint und Multicast
+            - name: Windows Sockets 2-Schnittstellenelemente für Multipoint und Multicast
               href: windows-sockets-2-interface-elements-for-multipoint-and-multicast-2.md
               items:
-                - name: Attribute in WSAPROTOCOL_INFO Struktur
+                - name: Attribute in WSAPROTOCOL_INFO-Struktur
                   href: attributes-in-wsaprotocol-info-structure-2.md
-                - name: Bits für wsasocket markieren
+                - name: Flagbits für WSASocket
                   href: flag-bits-for-wsasocket-2.md
-                - name: SIO_MULTIPOINT_LOOPBACK Befehls Code für WSAIoctl
+                - name: SIO_MULTIPOINT_LOOPBACK Befehlscode für WSAIoctl
                   href: sio-multipoint-loopback-command-code-for-wsaioctl-2.md
-                - name: SIO_MULTICAST_SCOPE Befehls Code für WSAIoctl
+                - name: SIO_MULTICAST_SCOPE Befehlscode für WSAIoctl
                   href: sio-multicast-scope-command-code-for-wsaioctl-2.md
-            - name: Semantik für das beitreten von Multipoint-Blättern
+            - name: Semantik für das Verknüpfen von Multipointblättern
               href: semantics-for-joining-multipoint-leaves-2.md
               items:
-                - name: Verwenden von wsajoinleaf
+                - name: Verwenden von WSAJoinLeaf
                   href: using-wsajoinleaf-2.md
-            - name: Semantische Unterschiede zwischen Multipoint-Sockets und regulären Sockets
+            - name: Semantische Unterschiede zwischen Multipointsockets und regulären Sockets
               href: semantic-differences-between-multipoint-sockets-and-regular-sockets-2.md
-            - name: Unterstützung dieser Erweiterungen durch Multipoint-Protokolle
+            - name: Unterstützung dieser Erweiterungen durch Multipointprotokolle
               href: how-existing-multipoint-protocols-support-these-extensions-2.md
               items:
                 - name: IP-Multicast
@@ -136,57 +136,57 @@
             - name: Empfohlene Konfigurationen
               href: recommended-configurations-2.md
               items:
-                - name: 'Konfiguration 1: einzelnes Subnetz mit Link-Local-Adressen'
+                - name: 'Konfiguration 1: Einzelnes Subnetz mit lokalen Linkadressen'
                   href: configuration-1-single-subnet-with-link-local-addresses-2.md
-                - name: 'Konfiguration 2: IPv6-Datenverkehr zwischen Knoten in unterschiedlichen Subnetzen eines IPv4-Netzwerks (6zu 4)'
+                - name: 'Konfiguration 2: IPv6-Datenverkehr zwischen Knoten in verschiedenen Subnetzen eines IPv4-Internetnetzwerks (6to4)'
                   href: configuration-2-ipv6-traffic-between-nodes-on-different-subnets-of-an-ipv4-internetwork-6to4--2.md
-                - name: 'Konfiguration 3: Verwenden von IPSec zwischen zwei local-Link-Hosts'
+                - name: 'Konfiguration 3: Verwenden von IPsec zwischen zwei Hosts mit lokaler Verknüpfung'
                   href: configuration-4-using-ipsec-between-two-local-link-hosts-2.md
             - name: Weitere IPv6-Themen
               href: additional-topics-2.md
               items:
                 - name: IPv6-Routerankündigungen
                   href: router-advertisements-2.md
-                - name: IPv6-Site Präfixe
+                - name: IPv6-Standortpräfixe
                   href: site-prefixes-2.md
-                - name: IPv6-Verbindungs lokale und Standort lokale Adressen
+                - name: Lokale und standortbasierte IPv6-Adressen
                   href: link-local-and-site-local-addresses-2.md
-                - name: IPv6-Multicast Zieladressen
+                - name: IPv6-Multicastzieladressen
                   href: multicast-destination-addresses-2.md
-                - name: Automatisches IPv6-Tunnelung und IPv6-zu-IPv4
+                - name: Automatisches Tunneln von IPv6 und 6 zu 4
                   href: automatic-tunneling-and-6to4-2.md
-                - name: IPv6-Weiterleitungs Tunneled-Pakete
+                - name: Getunnelte IPv6-Weiterleitungspakete
                   href: forwarding-tunneled-packets-2.md
-        - name: Network Location Awareness Service Provider (NLA)
+        - name: NLA (Network Location Awareness Service Provider)
           href: network-location-awareness-service-provider-nla--2.md
           items:
-            - name: Die NLA-Rolle
+            - name: Die Rolle von NLA
               href: the-role-of-nla-2.md
             - name: Abfragen von NLA
               href: querying-nla-2.md
             - name: Benachrichtigung von NLA
               href: notification-from-nla-2.md
-            - name: Registrieren einer Dienst Instanz bei NLA
+            - name: Registrieren einer Dienstinstanz mit NLA
               href: registering-a-service-instance-with-nla-2.md
-        - name: Informationen über die Winsock SPI
+        - name: Informationen zur Winsock SPI
           href: about-the-winsock-spi.md
           items:
-            - name: Funktions Schnittstellen Modell
+            - name: Funktionsschnittstellenmodell
               href: function-interface-model-2.md
-            - name: Dienstanbieter-Reihenfolge
+            - name: Dienstanbieterbestellung
               href: service-provider-ordering-2.md
-            - name: Transport Dienstanbieter
+            - name: Transportdienstanbieter
               href: transport-service-providers-2.md
               items:
-                - name: Transport Division von Zuständigkeiten zwischen dll-und Dienstanbietern
+                - name: Transportverteilung der Zuständigkeiten zwischen DLL und Dienstanbietern
                   href: transport-division-of-responsibilities-between-dll-and-service-providers-2.md
-                - name: Transport Zuordnung zwischen API-und SPI-Funktionen
+                - name: Transportzuordnung zwischen API- und SPI-Funktionen
                   href: transport-mapping-between-api-and-spi-functions-2.md
-                - name: Funktions Erweiterungsmechanismus in der SPI
+                - name: Funktionserweiterungsmechanismus in der SPI
                   href: function-extension-mechanism-in-the-spi-2.md
-                - name: Transport Konfiguration und-Installation
+                - name: Transportkonfiguration und -installation
                   href: transport-configuration-and-installation-2.md
-                - name: Anforderungen an den Winsock-Transport Dienstanbieter
+                - name: Anforderungen des Winsock-Transportdienstanbieters
                   href: winsock-transport-service-provider-requirements.md
                   items:
                     - name: Aktivierung des Dienstanbieters
@@ -194,38 +194,38 @@
                       items:
                         - name: Initialisierung
                           href: initialization-2.md
-                        - name: Cleanup
+                        - name: Bereinigen
                           href: cleanup-2.md
-                        - name: Fehlerberichterstattung und Parameter Validierung
+                        - name: Fehlerberichterstattung und Parameterüberprüfung
                           href: error-reporting-and-parameter-validation-2.md
-                        - name: Annahmen der Byte Reihenfolge
+                        - name: Bytereihenfolgeannahmen
                           href: byte-ordering-assumptions-2.md
-                    - name: Socketerstellung und deskriptorverwaltung
+                    - name: Socketerstellung und Deskriptorverwaltung
                       href: socket-creation-and-descriptor-management-2.md
                       items:
                         - name: Deskriptorzuordnung
                           href: descriptor-allocation-2.md
-                        - name: Socketattributflags und-Modi
+                        - name: Socketattributflags und -modi
                           href: socket-attribute-flags-and-modes-2.md
                         - name: Schließen von Sockets
                           href: closing-sockets-2.md
                     - name: Blockierende Vorgänge
                       href: blocking-operations-2.md
                       items:
-                        - name: Pseudo Blockierung und echte Blockierung
+                        - name: Pseudoblockierung und True Blocking
                           href: pseudo-vs--true-blocking-2.md
-                        - name: Hook blockieren
+                        - name: Blockierende Hooks
                           href: blocking-hook-2.md
                         - name: Abbrechen von blockierenden Vorgängen
                           href: canceling-blocking-operations-2.md
-                    - name: Ereignis Objekte in Windows Sockets 2 SPI
+                    - name: Ereignisobjekte im Windows Sockets 2 SPI
                       href: event-objects-in-the-windows-sockets-2-spi-2.md
                       items:
-                        - name: Erstellen von Ereignis Objekten
+                        - name: Erstellen von Ereignisobjekten
                           href: creating-event-objects-2.md
-                        - name: Verwenden von Ereignis Objekten
+                        - name: Verwenden von Ereignisobjekten
                           href: using-event-objects-2.md
-                        - name: Zerstören von Ereignis Objekten
+                        - name: Zerstören von Ereignisobjekten
                           href: destroying-event-objects-2.md
                     - name: Benachrichtigung über Netzwerkereignisse
                       href: notification-of-network-events-2.md
@@ -234,21 +234,21 @@
                           href: selects-2.md
                         - name: Windows-Meldungen
                           href: windows-messages-2.md
-                        - name: Ereignis Objekt Signalisierung
+                        - name: Ereignisobjektsignalisierung
                           href: event-object-signaling-2.md
-                    - name: Socketgruppen in Windows Sockets 2 SPI
+                    - name: Socketgruppen im Windows Sockets 2 SPI
                       href: socket-groups-in-the-windows-sockets-2-spi-2.md
                       items:
                         - name: Socketgruppenvorgänge
                           href: socket-group-operations-2.md
-                        - name: Erforderliches socketgruppierungsverhalten
+                        - name: Erforderliches Socketgruppierungsverhalten
                           href: required-socket-grouping-behavior-2.md
-                        - name: Empfohlenes socketgruppenverhalten
+                        - name: Empfohlenes Verhalten beim Gruppieren von Sockets
                           href: recommended-socket-grouping-behavior-2.md
-                    - name: Quality of Service in Windows Sockets 2 SPI
+                    - name: Quality of Service in der Windows Sockets 2 SPI
                       href: quality-of-service-in-the-windows-sockets-2-spi-2.md
                       items:
-                        - name: Verwendungs Modell
+                        - name: Verwendungsmodell
                           href: usage-model-2.md
                         - name: QoS-Updates
                           href: qos-updates-2.md
@@ -256,176 +256,176 @@
                           href: default-values-in-the-spi-2.md
                         - name: QoS-Vorlagen in der SPI
                           href: qos-templates-in-the-spi-2.md
-                    - name: Socketverbindungen bei Connection-Oriented Protokollen
+                    - name: Socketverbindungen auf Connection-Oriented Protokollen
                       href: socket-connections-on-connection-oriented-protocols-2.md
                       items:
                         - name: Binden an eine lokale Adresse
                           href: binding-to-a-local-address-2.md
-                        - name: 'Grundlagen des Protokolls: lauschen, verbinden, annehmen'
+                        - name: 'Protokollgrund grundlagen: Lauschen, Verbinden, Akzeptieren'
                           href: protocol-basics-listen-connect-accept-2.md
-                        - name: Bestimmen von lokalen und Remote Namen
+                        - name: Bestimmen von lokalen und Remotenamen
                           href: determining-local-and-remote-names-2.md
                         - name: Erweiterte Funktionalität zur Verbindungszeit
                           href: enhanced-functionality-at-connect-time-2.md
                         - name: Herunterfahren der Verbindung
                           href: connection-shutdown-2.md
                           items:
-                            - name: 'Ordnungsgemäßes Herunterfahren, Linger Optionen und Socket-Schließung in der SPI'
+                            - name: 'Graceful Shutdown, Linger Options, and Socket Closure in the SPI'
                               href: graceful-shutdown-linger-options-and-socket-closure-in-the-spi-2.md
-                    - name: Socketverbindungen bei Verbindungs losen Protokollen
+                    - name: Socketverbindungen für verbindungslose Protokolle
                       href: socket-connections-on-connectionless-protocols-2.md
                       items:
-                        - name: Herstellen einer Verbindung mit einem standardpeer
+                        - name: Herstellen einer Verbindung mit einem Standard-Peer
                           href: connecting-to-a-default-peer-2.md
-                        - name: Erneutes Herstellen einer Verbindung und trennen
+                        - name: Erneutes Herstellen einer Verbindung und Trennen der Verbindung
                           href: reconnecting-and-disconnecting-2.md
-                        - name: Verwenden von SendTo während der Verbindung
+                        - name: Verwenden von Sendto während der Verbindung
                           href: using-sendto-while-connected-2.md
-                    - name: Socket-e/a
+                    - name: Socket-E/A
                       href: socket-i-o-2.md
                       items:
-                        - name: Blockieren von Eingaben/Ausgaben
+                        - name: Blockierende Eingabe/Ausgabe
                           href: blocking-i-o-2.md
-                        - name: Nicht blockierende Eingabe/Ausgabe
+                        - name: Eingabe/Ausgabe ohne Blockierung
                           href: nonblocking-i-o-2.md
                         - name: Überlappende Eingabe/Ausgabe
                           href: overlapped-i-o-2.md
                           items:
-                            - name: Zusammenfassung der Überlapp enden Vervollständigungs Anzeige Mechanismen in der SPI
+                            - name: Zusammenfassung der Überlappung der Vervollständigungsanzeigemechanismen in der SPI
                               href: summary-of-overlapped-completion-indication-mechanisms-in-the-spi-2.md
-                        - name: Unterstützung für die Scatter/Gather-Eingabe/-Ausgabe in der SPI
+                        - name: Unterstützung für Punkt-/Erfassungseingabe/-ausgabe im SPI
                           href: support-for-scatter-gather-input-output-in-the-spi-2.md
                         - name: Out-of-Band-Daten in der SPI
                           href: out-of-band-data-in-the-spi-2.md
                           items:
-                            - name: Protokoll unabhängig – out-of-Band-Daten in der SPI
+                            - name: Protokollunabhängige Out-of-Band-Daten im SPI
                               href: protocol-independent-out-of-band-data-in-the-spi-2.md
                     - name: Freigegebene Sockets in der SPI
                       href: shared-sockets-in-the-spi-2.md
                       items:
                         - name: Mehrere Handles für einen einzelnen Socket
                           href: multiple-handles-to-a-single-socket-2.md
-                        - name: Verweis Zählung
+                        - name: Verweiszählung
                           href: reference-counting-2.md
-                        - name: Rang folgen Richtlinien
+                        - name: Rangfolgenrichtlinien
                           href: precedence-guidelines-2.md
                     - name: Protocol-Independent Multicast und Multipoint in der SPI
                       href: protocol-independent-multicast-and-multipoint-in-the-spi-2.md
                       items:
-                        - name: Multipoint-Taxonomie und Glossar
+                        - name: Multipunkttaxonomie und Glossar
                           href: multipoint-taxonomy-and-glossary-2.md
-                        - name: Multipoint-Attribute in WSAPROTOCOL_INFO
+                        - name: Multipointattribute in WSAPROTOCOL_INFO
                           href: multipoint-attributes-in-the-wsaprotocol-info-structure.md
-                        - name: Multipoint-socketattribute
+                        - name: Multipoint-Socketattribute
                           href: multipoint-socket-attributes-2.md
-                        - name: SIO_MULTIPOINT_LOOPBACK ioctl
+                        - name: SIO_MULTIPOINT_LOOPBACK Ioctl
                           href: sio-multipoint-loopback-ioctl-2.md
-                        - name: SIO_MULTICAST_SCOPE ioctl
+                        - name: SIO_MULTICAST_SCOPE Ioctl
                           href: sio-multicast-scope-ioctl-2.md
-                        - name: SPI-Semantik zum beitreten von Multipoint-Blättern
+                        - name: SPI-Semantik zum Verknüpfen von Multipointblättern
                           href: spi-semantics-for-joining-multipoint-leaves-2.md
-                        - name: Verwenden von wspjoinleaf
+                        - name: Verwenden von WSPJoinLeaf
                           href: using-wspjoinleaf-2.md
-                        - name: Semantische Unterschiede zwischen Multipoint-Sockets und regulären Sockets
+                        - name: Semantische Unterschiede zwischen Multipointsockets und regulären Sockets
                           href: semantic-differences-between-multipoint-sockets-and-regular-sockets-in-the-spi-2.md
                     - name: Socketoptionen und IOCTLs
                       href: socket-options-and-ioctls-2.md
                       items:
-                        - name: Zusammenfassung der socketioctl-OpCodes
+                        - name: Zusammenfassung der Socket-Ioctl-Opcodes
                           href: summary-of-socket-ioctl-opcodes-2.md
-                        - name: Verwenden von SIO_ADDRESS_LIST_SORT
+                        - name: Verwenden SIO_ADDRESS_LIST_SORT
                           href: using-sio-address-list-sort.md
                     - name: Zusammenfassung der SPI-Funktionen
                       href: summary-of-spi-functions-2.md
                       items:
-                        - name: Allgemeine Daten Transport Funktionen
+                        - name: Generische Datentransportfunktionen
                           href: generic-data-transport-functions-2.md
-                        - name: Von der Windows Sockets 2-dll bereitgestellte upcalls
+                        - name: Von Windows Sockets 2-DLL verfügbar gemachte Upcalls
                           href: upcalls-exposed-by-windows-sockets-2-dll-2.md
-                        - name: Installations-und Konfigurationsfunktionen
+                        - name: Installations- und Konfigurationsfunktionen
                           href: installation-and-configuration-functions-2.md
             - name: Namespace-Dienstanbieter
               href: name-space-service-providers-2.md
               items:
-                - name: Namens Auflösungs Modell für den SPI
+                - name: Namensauflösungsmodell für die SPI
                   href: name-resolution-model-for-the-spi-2.md
                   items:
                     - name: Typen von Namespaces in der SPI
                       href: types-of-name-spaces-in-the-spi-2.md
-                    - name: Namespace Organisation in der SPI
+                    - name: Namespaceorganisation in der SPI
                       href: name-space-organization-in-the-spi-2.md
-                    - name: Architektur von Namespace Anbietern in SPI
+                    - name: Namespaceanbieterarchitektur in der SPI
                       href: name-space-provider-architecture-in-the-spi-2.md
-                - name: Namensauflösung für dll-und Dienstanbieter
+                - name: Namensauflösung für DLL- und Dienstanbieter
                   href: name-resolution-division-of-responsibilities-between-dll-and-service-providers-2.md
-                - name: Namens Auflösungs Zuordnung zwischen API-und SPI-Funktionen
+                - name: Namensauflösungszuordnung zwischen API- und SPI-Funktionen
                   href: name-resolution-mapping-between-api-and-spi-functions-2.md
-                - name: Namens Auflösungs Konfiguration und-Installation
+                - name: Konfiguration und Installation der Namensauflösung
                   href: name-resolution-configuration-and-installation-2.md
-                - name: Anforderungen an den Winsock-Namespace-Dienstanbieter
+                - name: Anforderungen des Winsock-Namespace-Dienstanbieters
                   href: winsock-namespace-service-provider-requirements.md
                   items:
-                    - name: Zusammenfassung der Namespace-Anbieter Funktionen
+                    - name: Zusammenfassung der Namespaceanbieterfunktionen
                       href: summary-of-name-space-provider-functions-2.md
                       items:
-                        - name: Konfiguration und Installation von Namespace Anbietern
+                        - name: Konfiguration und Installation des Namespaceanbieters
                           href: name-space-provider-configuration-and-installation-2.md
-                        - name: Initialisierung und Bereinigung von Namespace Anbietern
+                        - name: Initialisierung und Bereinigung des Namespaceanbieters
                           href: name-space-provider-initialization-and-cleanup-2.md
-                        - name: Dienst Installation in Windows Sockets 2 SPI
+                        - name: Dienstinstallation in Windows Sockets 2 SPI
                           href: service-installation-in-the-windows-sockets-2-spi-2.md
-                        - name: Dienst Abfrage
+                        - name: Dienstabfrage
                           href: service-query-2.md
                         - name: Hilfsfunktionen in der SPI
                           href: helper-functions-in-the-spi-2.md
-                        - name: Datenstrukturen für die Namensauflösung in der SPI
+                        - name: Namensauflösungsdatenstrukturen in der SPI
                           href: name-resolution-data-structures-in-the-spi-2.md
                           items:
-                            - name: Query-Related von Datenstrukturen in der SPI
+                            - name: Query-Related Datenstrukturen in der SPI
                               href: query-related-data-structures-in-the-spi-2.md
-                            - name: Dienst Klassen-Datenstrukturen in der SPI
+                            - name: Dienstklassendatenstrukturen in der SPI
                               href: service-class-data-structures-in-the-spi-2.md
-                    - name: 'Kompatible Namensauflösung für TCP/IP in Windows Sockets 1,1 SPI'
+                    - name: Kompatible Namensauflösung für TCP/IP im Windows Sockets 1.1 SPI
                       href: compatible-name-resolution-for-tcp-ip-in-the-windows-sockets-1-1-spi-2.md
                       items:
-                        - name: Grundlegender Ansatz für getxbyy in der SPI
+                        - name: Grundlegender Ansatz für GetXbyY in der SPI
                           href: basic-approach-for-getxbyy-in-the-spi-2.md
-                        - name: Funktionen "getprotobyname" und "getprotobynumber" in der SPI
+                        - name: getprotobyname- und getprotobynumber-Funktionen in der SPI
                           href: getprotobyname-and-getprotobynumber-functions-in-the-spi-2.md
-                        - name: Funktionen "getservbyname" und "getservbyport" in der SPI
+                        - name: getservbyname- und getservbyport-Funktionen in der SPI
                           href: getservbyname-and-getservbyport-functions-in-the-spi-2.md
                         - name: gethostbyname-Funktion in der SPI
                           href: gethostbyname-function-in-the-spi-2.md
-                        - name: Funktion "gethostbyaddr" in SPI
+                        - name: gethostbyaddr-Funktion in der SPI
                           href: gethostbyaddr-function-in-the-spi-2.md
-                        - name: GetHostName-Funktion in der SPI
+                        - name: gethostname-Funktion in der SPI
                           href: gethostname-function-in-the-spi-2.md
-                    - name: Beispiel Code für einen Dienstanbieter
+                    - name: Beispielcode für einen Dienstanbieter
                       href: sample-code-for-a-service-provider-2.md
     - name: Verwenden von Winsock
       href: using-winsock.md
       items:
-        - name: Einstieg in Winsock
+        - name: Erste Schritte mit Winsock
           href: getting-started-with-winsock.md
           items:
             - name: Informationen zu Servern und Clients
               href: about-clients-and-servers.md
-            - name: Erstellen einer grundlegenden Winsock-Anwendung
+            - name: Erstellen einer einfachen Winsock-Anwendung
               href: creating-a-basic-winsock-application.md
             - name: Initialisieren von Winsock
               href: initializing-winsock.md
-            - name: WinSock-Client Anwendung
+            - name: Winsock-Clientanwendung
               href: winsock-client-application.md
               items:
                 - name: Erstellen eines Sockets für den Client
                   href: creating-a-socket-for-the-client.md
                 - name: Herstellen einer Verbindung mit einem Socket
                   href: connecting-to-a-socket.md
-                - name: Senden und empfangen von Daten auf dem Client
+                - name: Senden und Empfangen von Daten auf dem Client
                   href: sending-and-receiving-data-on-the-client.md
-                - name: Trennen der Verbindung des Clients
+                - name: Trennen des Clients
                   href: disconnecting-the-client.md
-            - name: Winsock-Server Anwendung
+            - name: Winsock Server-Anwendung
               href: winsock-server-application.md
               items:
                 - name: Erstellen eines Sockets für den Server
@@ -438,35 +438,35 @@
                   href: accepting-a-connection.md
                 - name: Empfangen und Senden von Daten auf dem Server
                   href: receiving-and-sending-data-on-the-server.md
-                - name: Trennen der Verbindung mit dem Server
+                - name: Trennen des Servers
                   href: disconnecting-the-server.md
-            - name: Ausführen des WinSock-Client-und Server Code Beispiels
+            - name: Ausführen des Winsock-Client- und -Servercodebeispiels
               href: finished-server-and-client-code.md
               items:
-                - name: Vervollständigen des WinSock-Client Codes
+                - name: Vollständigen Winsock-Clientcode
                   href: complete-client-code.md
-                - name: Vervollständigen des Winsock-Server Codes
+                - name: Vollständigen Winsock-Servercode
                   href: complete-server-code.md
         - name: Sichere Winsock-Programmierung
           href: secure-winsock-programming.md
           items:
-            - name: Verwenden von SO_REUSEADDR und SO_EXCLUSIVEADDRUSE
+            - name: Verwenden SO_REUSEADDR und SO_EXCLUSIVEADDRUSE
               href: using-so-reuseaddr-and-so-exclusiveaddruse.md
             - name: Winsock Secure Socket Extensions
               href: winsock-secure-socket-extensions.md
               items:
-                - name: Verwenden von Secure Socket Extensions
+                - name: Verwenden von Secure Socket-Erweiterungen
                   href: using-secure-socket-extensions.md
-                - name: Erweiterte Winsock-Beispiele mit Secure Socket Extensions
+                - name: Erweiterte Winsock-Beispiele mit Secure Socket-Erweiterungen
                   href: advanced-winsock-samples-using-secure-socket-extensions.md
-        - name: Portieren von Socketanwendungen auf Winsock
+        - name: Portieren von Socketanwendungen zu Winsock
           href: porting-socket-applications-to-winsock.md
           items:
-            - name: Socket-Datentyp
+            - name: Socketdatentyp
               href: socket-data-type-2.md
-            - name: Auswählen und FD_ *
+            - name: Auswählen und FD_*
               href: select-and-fd---2.md
-            - name: 'Fehler Codes: errno, h_errno und WSAGetLastError'
+            - name: 'Fehlercodes: errno, h_errno und WSAGetLastError'
               href: error-codes-errno-h-errno-and-wsagetlasterror-2.md
             - name: Zeiger
               href: pointers-2.md
@@ -476,46 +476,46 @@
               href: maximum-number-of-sockets-supported-2.md
             - name: Includedateien
               href: include-files-2.md
-            - name: Rückgabewerte bei Funktions Fehlern
+            - name: Rückgabewerte bei Funktionsfehlern
               href: return-values-on-function-failure-2.md
-            - name: Rohdaten Sockets
+            - name: Rohdatensockets
               href: service-provided-raw-sockets-2.md
             - name: Bytereihenfolge
               href: byte-ordering-2.md
-            - name: Erweiterte Byte-Order Konvertierungs Routinen
+            - name: Erweiterte Byte-Order Konvertierungsroutinen
               href: extended-byte-order-conversion-routines-2.md
-        - name: IPv6-Handbuch für Windows Sockets-Anwendungen
+        - name: IPv6-Leitfaden für Windows Sockets-Anwendungen
           href: ipv6-guide-for-windows-sockets-applications-2.md
           items:
             - name: Ändern von Datenstrukturen für IPv6-Winsock-Appications
               href: changing-data-structures-2.md
             - name: Funktionsaufrufe für IPv6-Winsock-Anwendungen
               href: function-calls-2.md
-            - name: Verwendung von hart codierten IPv4-Adressen
+            - name: Verwenden von hartcodierten IPv4-Adressen
               href: use-of-hardcoded-ipv4-addresses-2.md
-            - name: Probleme mit der Benutzeroberfläche für IPv6-Winsock-Anwendungen
+            - name: Benutzeroberfläche Probleme bei IPv6-Winsock-Anwendungen
               href: user-interface-issues-2.md
             - name: Zugrunde liegende Protokolle für IPv6-Winsock-Anwendungen
               href: underlying-protocols-2.md
-            - name: Dual-Stack Sockets für IPv6-Winsock-Anwendungen
+            - name: Dual-Stack Sockets für IPv6-Winsockanwendungen
               href: dual-stack-sockets.md
-            - name: Verwenden des Checkv4.exe Hilfsprogramms
+            - name: Verwenden des hilfsprogramms für Checkv4.exe
               href: using-the-checkv4-exe-utility-2.md
-            - name: 'Anhang A: nur-IPv4-Quellcode'
+            - name: 'Anhang A: Nur IPv4-Quellcode'
               href: appendix-a-ipv4-only-source-code-2.md
               items:
-                - name: Nur-IPv4-Client Code
+                - name: Nur-IPv4-Clientcode
                   href: ipv4-only-client-code-2.md
-                - name: Nur-IPv4-Server Code
+                - name: Nur IPv4-Servercode
                   href: ipv4-only-server-code-2.md
-            - name: 'Anhang B: Quell Code für die unabhängige IP-Version'
+            - name: 'Anhang B: Agnostic Source Code der IP-Version'
               href: appendix-b-ip-version-agnostic-source-code-2.md
               items:
-                - name: IPv6-Enabled-Client Code
+                - name: IPv6-Enabled Clientcode
                   href: ipv6-enabled-client-code-2.md
-                - name: IPv6-Enabled Server Code
+                - name: IPv6-Enabled Servercode
                   href: ipv6-enabled-server-code-2.md
-        - name: Hochleistungsfähige Windows Sockets-Anwendungen
+        - name: Leistungsstarke Windows Sockets-Anwendungen
           href: high-performance-windows-sockets-applications-2.md
           items:
             - name: Netzwerkterminologie
@@ -525,9 +525,9 @@
               items:
                 - name: 'Leistungsanforderungen: Benutzer und Administratoren'
                   href: performance-needs-users-and-administrators-2.md
-                - name: Transaktionale und Streaminganwendungen
+                - name: Transaktions- im Vergleich zu Streaminganwendungen
                   href: transactional-versus-streaming-applications-2.md
-                - name: Unterschiedliche Netzwerkumgebungen
+                - name: Verschiedene Netzwerkumgebungen
                   href: different-network-environments-2.md
             - name: TCP/IP-Merkmale
               href: tcp-ip-characteristics-2.md
@@ -538,62 +538,68 @@
                   href: tcp-ip-specific-issues-2.md
                 - name: Erkennen langsamer Anwendungen
                   href: recognizing-slow-applications-2.md
-                - name: Berechnen des Aufwands mit netstat
+                - name: Berechnen des Mehraufwands mit Netstat
                   href: calculating-overhead-with-netstat-2.md
             - name: Verbessern einer langsamen Anwendung
               href: improving-a-slow-application-2.md
               items:
-                - name: 'Baselineversion: eine sehr schlechte leistungsfähige Anwendung'
+                - name: 'Baselineversion: Eine Anwendung mit sehr schlechter Leistung'
                   href: the-baseline-version-a-very-poor-performing-application-2.md
-                - name: 'Revision 1: Bereinigen der offensichtlichen'
+                - name: 'Revision 1: Bereinigen des offensichtlichen'
                   href: revision-1-cleaning-up-the-obvious-2.md
-                - name: 'Revision 2: Neuentwerfen für eine geringere Anzahl von Verbindungen'
+                - name: 'Revision 2: Neugestaltung für weniger Verbindungen'
                   href: revision-2-redesigning-for-fewer-connects-2.md
-                - name: 'Revision 3: komprimierte Block-Sendevorgang'
+                - name: 'Revision 3: Compressed Block Send'
                   href: revision-3-compressed-block-send-2.md
                 - name: Zukünftige Verbesserungen
                   href: future-improvements-2.md
             - name: Bewährte Methoden für interaktive Anwendungen
               href: best-practices-for-interactive-applications-2.md
-        - name: Kategorisierung von geschichteten Dienstanbietern und Apps
+        - name: Kategorisieren von mehrschichtigen Dienstanbietern und Apps
           href: categorizing-layered-service-providers-and-applications.md
-        - name: Multicast Programmierung
+        - name: Multicastprogrammierung
           href: multicast-programming.md
           items:
-            - name: MLD und IGMP mithilfe von Windows Sockets
+            - name: MLD und IGMP mit Windows Sockets
               href: igmp-and-windows-sockets.md
-            - name: Multicast-socketoptionsverhalten
+            - name: Multicastsocket-Optionsverhalten
               href: multicast-socket-option-behavior.md
-            - name: Beispiel für Multicast Programmierung
+            - name: Multicastprogrammierungsbeispiel
               href: multicast-programming-sample.md
-            - name: Abschließende Zustands basierte Multicast Programmierung
+            - name: Endzustandsbasierte Multicastprogrammierung
               href: final-state-based-multicast-programming.md
-            - name: Portieren von Broadcast Anwendungen auf IPv6
+            - name: Portieren von Broadcastanwendungen zu IPv6
               href: porting-broadcast-applications-to-ipv6.md
-        - name: Zuverlässige Multicast Programmierung (PGM)
+        - name: 'Zuverlässige Multicastprogrammierung (Reliable Multicast Programming, PGM)'
           href: reliable-multicast-programming--pgm-.md
           items:
-            - name: PGM-Absender und-Empfänger
+            - name: PGM-Absender und -Empfänger
               href: pgm-senders-and-receivers.md
-            - name: PGM-Sender Optionen
+            - name: Optionen für PGM-Absender
               href: pgm-sender-options.md
-            - name: Senden und empfangen von PGM-Daten
+            - name: Senden und Empfangen von PGM-Daten
               href: sending-and-receiving-pgm-data.md
-            - name: Multihosting und PGM
+            - name: Multihoming und PGM
               href: multihoming-and-pgm.md
             - name: PGM-Socketoptionen
               href: pgm-socket-options.md
-        - name: Winsock-Ablauf Verfolgung
+        - name: Winsock-Ablaufverfolgung
           href: winsock-tracing.md
           items:
-            - name: Winsock-Ablauf Verfolgungs Ebenen
+            - name: Winsock-Ablaufverfolgungsebenen
               href: winsock-tracing-levels.md
-            - name: Kontrolle über die Winsock-Ablauf Verfolgung
+            - name: Steuerung der Winsock-Ablaufverfolgung
               href: control-of-winsock-tracing.md
-            - name: Details der Winsock-Netzwerk Ereignis Ablauf Verfolgung
+            - name: Details zur Ablaufverfolgung von Winsock-Netzwerkereignissen
               href: winsock-tracing-event-details.md
-            - name: Details zur Änderung der Winsock-Katalog Änderung
+            - name: Ablaufverfolgungsdetails für Winsock-Katalogänderungen
               href: winsock-layered-service-provider-tracing-event-details.md
+        - name: Winsock-Zeitstempel
+          href: winsock-timestamping.md
+        - name: Winsock-Benachrichtigung über explizite Überlastung
+          href: winsock-ecn.md
+        - name: Winsock-Socketstatusbenachrichtigungen
+          href: winsock-socket-state-notifications.md
     - name: Winsock-Referenz
       href: winsock-reference.md
       items:
@@ -639,7 +645,7 @@
                   href: so-port-scalability.md
             - name: IP_DSCP_TRAFFIC_TYPE
               href: ip-dscp-traffic-type.md
-        - name: Winsock IOCTLs
+        - name: Winsock-IOCTLs
           href: winsock-ioctls.md
           items:
             - name: SIO_ACQUIRE_PORT_RESERVATION
@@ -678,40 +684,40 @@
               href: sio-tcp-info.md
             - name: SIO_TCP_INITIAL_RTO
               href: sio-tcp-initial-rto.md
-        - name: Winsock-Anhänge
+        - name: Winsock-1600
           href: winsock-annexes.md
           items:
             - name: Winsock ATM-Anhang
               href: winsock-atm-annex.md
               items:
-                - name: Winsock-ATM-Steuerelemente
+                - name: Winsock ATM-Steuerelemente
                   href: winsock-atm-controls.md
-                - name: Details der Winsock-ATM-Funktion
+                - name: Funktionsdetails zu Winsock ATM
                   href: winsock-atm-function-details.md
-                - name: Winsock ATM-QoS-Erweiterung
+                - name: Winsock ATM QoS-Erweiterung
                   href: winsock-atm-qos-extension.md
                   items:
-                    - name: Aal-Parameter
+                    - name: AAL-Parameter
                       href: aal-parameters-2.md
-                    - name: ATM-Datenverkehrs Deskriptor
+                    - name: ATM-Datenverkehrsdeskriptor
                       href: atm-traffic-descriptor-2.md
-                    - name: Breitband Träger Funktion
+                    - name: Breitband-Bearerfunktion
                       href: broadband-bearer-capability-2.md
-                    - name: Informationen zur Breitband-hoch Schicht
+                    - name: Informationen zur hohen Breitbandebene
                       href: broadband-high-layer-information-2.md
-                    - name: Informationen zu Informationen auf niedrigerer Ebene
+                    - name: Informationen zur unteren Breitbandebene
                       href: broadband-lower-layer-information-2.md
-                    - name: Partei Nummer genannt
+                    - name: Aufgerufene Parteinummer
                       href: called-party-number-2.md
-                    - name: Als Partei untergeordnete Adresse bezeichnet
+                    - name: Subaddress der aufgerufenen Partei
                       href: called-party-subaddress-2.md
                     - name: Nummer der aufrufenden Partei
                       href: calling-party-number-2.md
-                    - name: Partei untergeordneter Adresse
+                    - name: Unteradresse der aufrufenden Partei
                       href: calling-party-subaddress-2.md
-                    - name: Quality of Service-Parameter
+                    - name: Quality of Service Parameter
                       href: quality-of-service-parameter-2.md
-                    - name: Transit Netzwerk Auswahl
+                    - name: Auswahl des Transitnetzwerks
                       href: transit-network-selection-2.md
                     - name: Ursache
                       href: cause-2.md
@@ -726,24 +732,24 @@
                       href: /windows/win32/api/Ws2atm/ns-ws2atm-atm_blli
                     - name: sockaddr_atm
                       href: /windows/win32/api/Ws2atm/ns-ws2atm-sockaddr_atm
-            - name: WinSock-IPX/SPX-Anhang
+            - name: Winsock IPX/SPX-Anhang
               href: winsock-ipx-spx-annex.md
               items:
                 - name: AF_IPX-Adressfamilie
                   href: af-ipx-address-family-2.md
-                - name: IPX-Familie von Protokoll bezeichlern
+                - name: IPX-Familie von Protokollbezeichnern
                   href: ipx-family-of-protocol-identifiers-2.md
-                - name: Übertragung an das lokale Netzwerk
+                - name: Übertragung an lokales Netzwerk
                   href: broadcast-to-local-network-2.md
-                - name: Alle Routen Broadcast
+                - name: Alle Routen übertragen
                   href: all-routes-broadcast-2.md
-                - name: Gesteuerte Übertragung
+                - name: Directed Broadcast
                   href: directed-broadcast-2.md
-                - name: Informationen zur Medienpaket Größe
+                - name: Informationen zur Medienpaketgröße
                   href: about-media-packet-size-2.md
                 - name: Auswirkungen der Paketgröße auf Protokolle
                   href: how-packet-size-affects-protocols-2.md
-                - name: WinSock-IPX/SPX-Strukturen
+                - name: Winsock-IPX-/SPX-Strukturen
                   href: winsock-ipx-spx-structures.md
                   items:
                     - name: IPX_ADDRESS_DATA
@@ -752,21 +758,21 @@
                       href: /windows/win32/api/Wsnwlink/ns-wsnwlink-ipx_netnum_data
                     - name: IPX_SPXCONNSTATUS_DATA
                       href: /windows/win32/api/Wsnwlink/ns-wsnwlink-ipx_spxconnstatus_data
-            - name: Winsock-TCP/IP-Anhang
+            - name: Winsock TCP/IP Anhang
               href: winsock-tcp-ip-annex.md
               items:
-                - name: Verwenden von UNIX IOCTLs in Winsock
+                - name: Verwenden von UNIX-Ioctls in Winsock
                   href: using-unix-ioctls-in-winsock.md
-                - name: Details der Winsock-TCP/IP-Funktion
+                - name: Details zur Winsock-TCP/IP-Funktion
                   href: winsock-tcp-ip-function-details.md
                   items:
                     - name: Multicast
                       href: multicast-2.md
-                    - name: TCP/IP-Rohdaten Sockets
+                    - name: UNFORMATIERTE TCP/IP-Sockets
                       href: tcp-ip-raw-sockets-2.md
                     - name: IPv6-Unterstützung
                       href: ipv6-support-2.md
-                    - name: Text Darstellung von IPv6-Adressen
+                    - name: Textdarstellung von IPv6-Adressen
                       href: text-representation-of-ipv6-addresses-2.md
                 - name: Winsock-TCP/IP-Strukturen
                   href: winsock-tcp-ip-structures.md
@@ -784,7 +790,7 @@
               href: /windows/win32/api/Mstcpip/ne-mstcpip-control_channel_trigger_status
             - name: eWINDOW_ADVANCE_METHOD
               href: /windows/win32/api/Wsrm/ne-wsrm-ewindow_advance_method
-            - name: Leistet
+            - name: Garantieren
               href: guarantee-2.md
             - name: MULTICAST_MODE_TYPE
               href: /windows/win32/api/Ws2ipdef/ne-ws2ipdef-multicast_mode_type
@@ -798,9 +804,9 @@
               href: /windows/win32/api/Mstcpip/ne-mstcpip-socket_security_protocol
             - name: SOCKET_USAGE_TYPE
               href: /windows/win32/api/Mstcpip/ne-mstcpip-socket_usage_type
-            - name: TcpState
+            - name: TCPSTATE
               href: /windows/win32/api/Mstcpip/ne-mstcpip-tcpstate
-            - name: Wsaecomparator
+            - name: WSAECOMPARATOR
               href: /windows/win32/api/Winsock2/ne-winsock2-wsaecomparator
             - name: WSC_PROVIDER_INFO_TYPE
               href: /windows/win32/api/Ws2spi/ne-ws2spi-wsc_provider_info_type
@@ -809,7 +815,7 @@
           items:
             - name: accept (Akzeptieren)
               href: /windows/win32/api/Winsock2/nf-winsock2-accept
-            - name: Akzeptex
+            - name: AcceptEx
               href: /windows/win32/api/mswsock/nf-mswsock-acceptex
             - name: bind
               href: /windows/win32/api/winsock/nf-winsock-bind
@@ -819,19 +825,19 @@
               href: /windows/win32/api/Winsock2/nf-winsock2-connect
             - name: LPFN_CONNECTEX
               href: /windows/win32/api/Mswsock/nc-mswsock-lpfn_connectex
-            - name: Disconnectex
+            - name: DisconnectEx
               href: /windows/win32/api/mswsock/nc-mswsock-lpfn_disconnectex
-            - name: Enumprotokolle
+            - name: EnumProtocols
               href: /windows/win32/api/Nspapi/nf-nspapi-enumprotocolsa
-            - name: '"freiaddrinfo"'
+            - name: freeaddrinfo
               href: /windows/win32/api/Ws2tcpip/nf-ws2tcpip-freeaddrinfo
-            - name: '"Freiaddrinfoex"'
+            - name: FreeAddrInfoEx
               href: /windows/win32/api/Ws2tcpip/nf-ws2tcpip-freeaddrinfoex
-            - name: Freiaddrinfow
+            - name: FreeAddrInfoW
               href: /windows/win32/api/Ws2tcpip/nf-ws2tcpip-freeaddrinfow
             - name: gai_strerror
               href: /windows/win32/api/Ws2tcpip/nf-ws2tcpip-gai_strerrora
-            - name: Getaccept texsockaddrs
+            - name: GetAcceptExSockaddrs
               href: /windows/win32/api/mswsock/nf-mswsock-getacceptexsockaddrs
             - name: GetAddressByName
               href: /windows/win32/api/Nspapi/nf-nspapi-getaddressbynamea
@@ -839,29 +845,29 @@
               href: /windows/win32/api/Ws2tcpip/nf-ws2tcpip-getaddrinfo
             - name: GetAddrInfoEx
               href: /windows/win32/api/Ws2tcpip/nf-ws2tcpip-getaddrinfoexa
-            - name: Getaddrinfoexcancel
+            - name: GetAddrInfoExCancel
               href: /windows/win32/api/Ws2tcpip/nf-ws2tcpip-getaddrinfoexcancel
-            - name: Getaddrinfoexoverlappedresult
+            - name: GetAddrInfoExOverlappedResult
               href: /windows/win32/api/Ws2tcpip/nf-ws2tcpip-getaddrinfoexoverlappedresult
-            - name: Getaddrinfow
+            - name: GetAddrInfoW
               href: /windows/win32/api/Ws2tcpip/nf-ws2tcpip-getaddrinfow
             - name: gethostbyaddr
               href: /windows/win32/api/wsipv6ok/nf-wsipv6ok-gethostbyaddr
-            - name: gethostbyname
+            - name: Gethostbyname
               href: /windows/win32/api/wsipv6ok/nf-wsipv6ok-gethostbyname
-            - name: GetHostName
+            - name: Gethostname
               href: /windows/win32/api/winsock/nf-winsock-gethostname
-            - name: Gethostnamew
+            - name: GetHostNameW
               href: /windows/win32/api/Winsock2/nf-winsock2-gethostnamew
-            - name: Getnamebytype
+            - name: GetNameByType
               href: /windows/win32/api/Nspapi/nf-nspapi-getnamebytypea
-            - name: getnameingefo
+            - name: getnameinfo
               href: /windows/win32/api/Ws2tcpip/nf-ws2tcpip-getnameinfo
             - name: getipv4sourcefilter
               href: /windows/win32/api/Ws2tcpip/nf-ws2tcpip-getipv4sourcefilter
-            - name: Getnameingefow
+            - name: GetNameInfoW
               href: /windows/win32/api/Ws2tcpip/nf-ws2tcpip-getnameinfow
-            - name: getPeer Name
+            - name: getpeername
               href: /windows/win32/api/winsock/nf-winsock-getpeername
             - name: getprotobyname
               href: /windows/win32/api/winsock/nf-winsock-getprotobyname
@@ -889,73 +895,73 @@
               href: /windows/win32/api/winsock/nf-winsock-htonl
             - name: htonll
               href: /windows/win32/api/Winsock2/nf-winsock2-htonll
-            - name: htonnen
+            - name: htons
               href: /windows/win32/api/winsock/nf-winsock-htons
             - name: inet_addr
               href: /windows/win32/api/wsipv6ok/nf-wsipv6ok-inet_addr
             - name: inet_ntoa
               href: /windows/win32/api/wsipv6ok/nf-wsipv6ok-inet_ntoa
-            - name: Inetntop
+            - name: InetNtop
               href: /windows/win32/api/Ws2tcpip/nf-ws2tcpip-inetntopw
-            - name: Inetpton
+            - name: InetPton
               href: /windows/win32/api/Ws2tcpip/nf-ws2tcpip-inetptonw
             - name: ioctlsocket
               href: /windows/win32/api/winsock/nf-winsock-ioctlsocket
             - name: warten
               href: /windows/win32/api/Winsock2/nf-winsock2-listen
-            - name: nzu HD
+            - name: ntohd
               href: /windows/win32/api/Winsock2/nf-winsock2-ntohd
-            - name: NUM HF
+            - name: ntohf
               href: /windows/win32/api/Winsock2/nf-winsock2-ntohf
-            - name: nzu HLS
+            - name: nt durch
               href: /windows/win32/api/winsock/nf-winsock-ntohl
-            - name: Nin-HLL
+            - name: ntprotokolll
               href: /windows/win32/api/Winsock2/nf-winsock2-ntohll
-            - name: NUM
+            - name: ntohs
               href: /windows/win32/api/winsock/nf-winsock-ntohs
-            - name: empfangener
+            - name: Recv
               href: /windows/win32/api/winsock/nf-winsock-recv
             - name: recvfrom
               href: /windows/win32/api/winsock/nf-winsock-recvfrom
-            - name: Rioclosecompletionqueue
+            - name: RIOCloseCompletionQueue
               href: /windows/win32/api/mswsock/nc-mswsock-lpfn_rioclosecompletionqueue
-            - name: Riokreatecompletionqueue
+            - name: RIOCreateCompletionQueue
               href: /windows/win32/api/mswsock/nc-mswsock-lpfn_riodequeuecompletion
-            - name: Riokreaterequestqueue
+            - name: RIOCreateRequestQueue
               href: /windows/win32/api/mswsock/nc-mswsock-lpfn_riocreaterequestqueue
-            - name: Rioabqueuecompletion
+            - name: RIODequeueCompletion
               href: /windows/win32/api/mswsock/nc-mswsock-lpfn_riodequeuecompletion
-            - name: Rioderegisterbuffer
+            - name: RIODeregisterBuffer
               href: /windows/win32/api/mswsock/nc-mswsock-lpfn_rioderegisterbuffer
-            - name: Rionotifizieren
+            - name: RIONotify
               href: /windows/win32/api/mswsock/nc-mswsock-lpfn_rionotify
-            - name: Rioreceive
+            - name: RIOReceive
               href: /windows/win32/api/mswsock/nc-mswsock-lpfn_rioreceive
-            - name: Rioreceiveex
+            - name: RIOReceiveEx
               href: /windows/win32/api/mswsock/nc-mswsock-lpfn_rioreceiveex
-            - name: Rioregisterbuffer
+            - name: RIORegisterBuffer
               href: /windows/win32/api/mswsock/nc-mswsock-lpfn_rioregisterbuffer
-            - name: Rioresizecompletionqueue
+            - name: RIOResizeCompletionQueue
               href: /windows/win32/api/mswsock/nc-mswsock-lpfn_rioresizecompletionqueue
-            - name: Rioresizerequestqueue
+            - name: RIOResizeRequestQueue
               href: /windows/win32/api/mswsock/nc-mswsock-lpfn_rioresizerequestqueue
-            - name: Randalisend
+            - name: RIOSend
               href: /windows/win32/api/mswsock/nc-mswsock-lpfn_riosend
-            - name: Riosendex
+            - name: RIOSendEx
               href: /windows/win32/api/mswsock/nc-mswsock-lpfn_riosendex
             - name: select
               href: /windows/win32/api/Winsock2/nf-winsock2-select
             - name: Send
               href: /windows/win32/api/Winsock2/nf-winsock2-send
-            - name: SendTo
+            - name: Sendto
               href: /windows/win32/api/winsock/nf-winsock-sendto
-            - name: Absichtbare foex
+            - name: SetAddrInfoEx
               href: /windows/win32/api/Ws2tcpip/nf-ws2tcpip-setaddrinfoexa
             - name: setipv4sourcefilter
               href: /windows/win32/api/Ws2tcpip/nf-ws2tcpip-setipv4sourcefilter
-            - name: Setservice
+            - name: SetService
               href: /windows/win32/api/Nspapi/nf-nspapi-setservicea
-            - name: Setsocketmediastreamingmode
+            - name: SetSocketMediaStreamingMode
               href: /windows/win32/api/Socketapi/nf-socketapi-setsocketmediastreamingmode
             - name: setsockopt
               href: /windows/win32/api/winsock/nf-winsock-setsockopt
@@ -965,55 +971,55 @@
               href: /windows/win32/api/winsock/nf-winsock-shutdown
             - name: Socket
               href: /windows/win32/api/Winsock2/nf-winsock2-socket
-            - name: TransmitFile
+            - name: Transmitfile
               href: /windows/win32/api/mswsock/nf-mswsock-transmitfile
             - name: LPFN_TRANSMITPACKETS
               href: /windows/win32/api/Mswsock/nc-mswsock-lpfn_transmitpackets
-            - name: Wsaaccept
+            - name: WSAAccept
               href: /windows/win32/api/Winsock2/nf-winsock2-wsaaccept
-            - name: Wsaadresssstostring
+            - name: WSAAddressToString
               href: /windows/win32/api/Winsock2/nf-winsock2-wsaaddresstostringa
-            - name: Wsaasyncgethostbyaddr
+            - name: WSAAsyncGetHostByAddr
               href: /windows/win32/api/wsipv6ok/nf-wsipv6ok-wsaasyncgethostbyaddr
-            - name: Wsaasyncgethostbyname
+            - name: WSAAsyncGetHostByName
               href: /windows/win32/api/wsipv6ok/nf-wsipv6ok-wsaasyncgethostbyname
-            - name: Wsaasyncgetprotobyname
+            - name: WSAAsyncGetProtoByName
               href: /windows/win32/api/winsock/nf-winsock-wsaasyncgetprotobyname
-            - name: Wsaasyncgetprotobynumber
+            - name: WSAAsyncGetProtoByNumber
               href: /windows/win32/api/winsock/nf-winsock-wsaasyncgetprotobynumber
-            - name: Wsaasyncgetservbyname
+            - name: WSAAsyncGetServByName
               href: /windows/win32/api/winsock/nf-winsock-wsaasyncgetservbyname
-            - name: Wsaasyncgetservbyport
+            - name: WSAAsyncGetServByPort
               href: /windows/win32/api/winsock/nf-winsock-wsaasyncgetservbyport
             - name: WSAAsyncSelect
               href: /windows/win32/api/winsock/nf-winsock-wsaasyncselect
-            - name: Wsacancelasynkrequest
+            - name: WSACancelAsyncRequest
               href: /windows/win32/api/winsock/nf-winsock-wsacancelasyncrequest
-            - name: Wsacancelblockingcall
+            - name: WSACancelBlockingCall
               href: /windows/win32/api/winsock2/nf-winsock2-wsacancelblockingcall
             - name: WSACleanup
               href: /windows/win32/api/winsock/nf-winsock-wsacleanup
-            - name: Wsacloseevent
+            - name: WSACloseEvent
               href: /windows/win32/api/Winsock2/nf-winsock2-wsacloseevent
-            - name: Wsaconnct
+            - name: WSAConnect
               href: /windows/win32/api/Winsock2/nf-winsock2-wsaconnect
-            - name: Wsaconnectbylist
+            - name: WSAConnectByList
               href: /windows/win32/api/Winsock2/nf-winsock2-wsaconnectbylist
             - name: WSAConnectByName
               href: /windows/win32/api/Winsock2/nf-winsock2-wsaconnectbynamea
-            - name: Wsacreateevent
+            - name: WSACreateEvent
               href: /windows/win32/api/Winsock2/nf-winsock2-wsacreateevent
-            - name: Wsadeletesocketpeer-TargetName
+            - name: WSADeleteSocketPeerTargetName
               href: /windows/win32/api/Ws2tcpip/nf-ws2tcpip-wsadeletesocketpeertargetname
-            - name: Wsaduplicatcher
+            - name: WSADuplicateSocket
               href: /windows/win32/api/Winsock2/nf-winsock2-wsaduplicatesocketa
-            - name: Wsaenumnamespaceproviders
+            - name: WSAEnumNameSpaceProviders
               href: /windows/win32/api/Winsock2/nf-winsock2-wsaenumnamespaceprovidersa
-            - name: Wsaenumnamespaceprovidersex
+            - name: WSAEnumNameSpaceProvidersEx
               href: /windows/win32/api/Winsock2/nf-winsock2-wsaenumnamespaceprovidersexa
             - name: WSAEnumNetworkEvents
               href: /windows/win32/api/Winsock2/nf-winsock2-wsaenumnetworkevents
-            - name: Wsaenumprotokolle
+            - name: WSAEnumProtocols
               href: /windows/win32/api/Winsock2/nf-winsock2-wsaenumprotocolsa
             - name: WSAEventSelect
               href: /windows/win32/api/Winsock2/nf-winsock2-wsaeventselect
@@ -1027,110 +1033,110 @@
               href: /windows/win32/api/ws2tcpip/nf-ws2tcpip-wsagetipusermtu
             - name: WSAGetLastError
               href: /windows/win32/api/winsock/nf-winsock-wsagetlasterror
-            - name: Wsagein verlappedresult
+            - name: WSAGetOverlappedResult
               href: /windows/win32/api/Winsock2/nf-winsock2-wsagetoverlappedresult
-            - name: Wsagetqosbyname
+            - name: WSAGetQOSByName
               href: /windows/win32/api/Winsock2/nf-winsock2-wsagetqosbyname
-            - name: Wsagetserviceclassinfo
+            - name: WSAGetServiceClassInfo
               href: /windows/win32/api/Winsock2/nf-winsock2-wsagetserviceclassinfoa
-            - name: Wsagetserviceclassnamebyclassid
+            - name: WSAGetServiceClassNameByClassId
               href: /windows/win32/api/Winsock2/nf-winsock2-wsagetserviceclassnamebyclassida
             - name: 'WSAGetUdpRecvMaxCoalescedSize '
               href: /windows/win32/api/ws2tcpip/nf-ws2tcpip-wsagetudprecvmaxcoalescedsize
             - name: 'WSAGetUdpSendMessageSize '
               href: /windows/win32/api/ws2tcpip/nf-ws2tcpip-wsagetudpsendmessagesize
-            - name: Wsahtonl
+            - name: WSAHtonl
               href: /windows/win32/api/Winsock2/nf-winsock2-wsahtonl
-            - name: Wsahtonnen
+            - name: WSAHtons
               href: /windows/win32/api/Winsock2/nf-winsock2-wsahtons
-            - name: Wsaidentität atesocketpeer
+            - name: WSAImpersonateSocketPeer
               href: /windows/win32/api/Ws2tcpip/nf-ws2tcpip-wsaimpersonatesocketpeer
-            - name: Wsainstallserviceclass
+            - name: WSAInstallServiceClass
               href: /windows/win32/api/Winsock2/nf-winsock2-wsainstallserviceclassa
             - name: WSAIoctl
               href: /windows/win32/api/Winsock2/nf-winsock2-wsaioctl
-            - name: Wsais-Blockierung
+            - name: WSAIsBlocking
               href: /windows/win32/api/winsock2/nf-winsock2-wsaisblocking
-            - name: Wsajoinleaf
+            - name: WSAJoinLeaf
               href: /windows/win32/api/Winsock2/nf-winsock2-wsajoinleaf
-            - name: Wsalookupservicebegin
+            - name: WSALookupServiceBegin
               href: /windows/win32/api/Winsock2/nf-winsock2-wsalookupservicebegina
             - name: WSALookupServiceEnd
               href: /windows/win32/api/Winsock2/nf-winsock2-wsalookupserviceend
             - name: WSALookupServiceNext
               href: /windows/win32/api/Winsock2/nf-winsock2-wsalookupservicenexta
-            - name: Wsanspioctl
+            - name: WSANSPIoctl
               href: /windows/win32/api/Winsock2/nf-winsock2-wsanspioctl
-            - name: Wsanum
+            - name: WSANtetter
               href: /windows/win32/api/Winsock2/nf-winsock2-wsantohl
-            - name: Wsanum
+            - name: WSANtohs
               href: /windows/win32/api/Winsock2/nf-winsock2-wsantohs
-            - name: Wsapoll
+            - name: WSAPoll
               href: /windows/win32/api/winsock2/nf-winsock2-wsapoll
-            - name: Wsaquerysocketsecurity
+            - name: WSAQuerySocketSecurity
               href: /windows/win32/api/Ws2tcpip/nf-ws2tcpip-wsaquerysocketsecurity
-            - name: Wsaproviderconfigchange
+            - name: WSAProviderConfigChange
               href: /windows/win32/api/Winsock2/nf-winsock2-wsaproviderconfigchange
             - name: WSARecv
               href: /windows/win32/api/Winsock2/nf-winsock2-wsarecv
-            - name: Wsarecvdisconnect
+            - name: WSARecvDisconnect
               href: /windows/win32/api/Winsock2/nf-winsock2-wsarecvdisconnect
-            - name: Wsarecvex
+            - name: WSARecvEx
               href: /windows/win32/api/mswsock/nf-mswsock-wsarecvex
             - name: WSARecvFrom
               href: /windows/win32/api/Winsock2/nf-winsock2-wsarecvfrom
-            - name: LPFN_WSARECVMSG (wsarecvmsg)
+            - name: LPFN_WSARECVMSG (WSARecvMsg)
               href: /windows/win32/api/mswsock/nc-mswsock-lpfn_wsarecvmsg
-            - name: Wsareviveserviceclass
+            - name: WSARemoveServiceClass
               href: /windows/win32/api/Winsock2/nf-winsock2-wsaremoveserviceclass
-            - name: Wsaresetevent
+            - name: WSAResetEvent
               href: /windows/win32/api/Winsock2/nf-winsock2-wsaresetevent
-            - name: Wsarevertimpersonations
+            - name: WSARevertImpersonation
               href: /windows/win32/api/Ws2tcpip/nf-ws2tcpip-wsarevertimpersonation
-            - name: Wsasend
+            - name: WSASend
               href: /windows/win32/api/Winsock2/nf-winsock2-wsasend
-            - name: Wsasenddisconnect
+            - name: WSASendDisconnect
               href: /windows/win32/api/Winsock2/nf-winsock2-wsasenddisconnect
-            - name: Wsasendmsg
+            - name: WSASendMsg
               href: /windows/win32/api/winsock2/nf-winsock2-wsasendmsg
             - name: WSASendTo
               href: /windows/win32/api/Winsock2/nf-winsock2-wsasendto
-            - name: Wsasetblockinghook
+            - name: WSASetBlockingHook
               href: /windows/win32/api/winsock2/nf-winsock2-wsasetblockinghook
-            - name: Wsasetevent
+            - name: WSASetEvent
               href: /windows/win32/api/Winsock2/nf-winsock2-wsasetevent
             - name: 'WSASetFailConnectOnIcmpError '
               href: /windows/win32/api/ws2tcpip/nf-ws2tcpip-wsasetfailconnectonicmperror
             - name: 'WSASetIPUserMtu '
               href: /windows/win32/api/ws2tcpip/nf-ws2tcpip-wsasetipusermtu
-            - name: Wsasetlasterror
+            - name: WSASetLastError
               href: /windows/win32/api/winsock/nf-winsock-wsasetlasterror
-            - name: Wsasetservice
+            - name: WSASetService
               href: /windows/win32/api/Winsock2/nf-winsock2-wsasetservicea
-            - name: Wsasetsocketpeer-TargetName
+            - name: WSASetSocketPeerTargetName
               href: /windows/win32/api/Ws2tcpip/nf-ws2tcpip-wsasetsocketpeertargetname
-            - name: Wsasetsocketsecurity
+            - name: WSASetSocketSecurity
               href: /windows/win32/api/Ws2tcpip/nf-ws2tcpip-wsasetsocketsecurity
             - name: 'WSASetUdpRecvMaxCoalescedSize '
               href: /windows/win32/api/ws2tcpip/nf-ws2tcpip-wsasetudprecvmaxcoalescedsize
             - name: 'WSASetUdpSendMessageSize '
               href: /windows/win32/api/ws2tcpip/nf-ws2tcpip-wsasetudpsendmessagesize
-            - name: Wsasocket
+            - name: WSASocket
               href: /windows/win32/api/Winsock2/nf-winsock2-wsasocketa
             - name: WSAStartup
               href: /windows/win32/api/winsock/nf-winsock-wsastartup
             - name: WSAStringToAddress
               href: /windows/win32/api/Winsock2/nf-winsock2-wsastringtoaddressa
-            - name: Wsaunhuokblockinghook
+            - name: WSAUnhookBlockingHook
               href: /windows/win32/api/winsock2/nf-winsock2-wsaunhookblockinghook
-            - name: Wsawaitformultipleevents
+            - name: WSAWaitForMultipleEvents
               href: /windows/win32/api/Winsock2/nf-winsock2-wsawaitformultipleevents
         - name: Winsock-Strukturen
           href: winsock-structures.md
           items:
             - name: addrinfo
               href: /windows/win32/api/ws2def/ns-ws2def-addrinfoa
-            - name: addrinfow
+            - name: addrinfoW
               href: /windows/win32/api/Ws2def/ns-ws2def-addrinfow
             - name: addrinfoex
               href: /windows/win32/api/Ws2def/ns-ws2def-addrinfoexw
@@ -1140,7 +1146,7 @@
               href: /windows/win32/api/Ws2def/ns-ws2def-addrinfoex3
             - name: addrinfoex4
               href: /windows/win32/api/Ws2def/ns-ws2def-addrinfoex4
-            - name: Afprotokolle
+            - name: AFPROTOCOLS
               href: /windows/win32/api/Winsock2/ns-winsock2-afprotocols
             - name: ASSOCIATE_NAMERES_CONTEXT_INPUT
               href: /windows/win32/api/Mstcpip/ns-mstcpip-associate_nameres_context_input
@@ -1180,7 +1186,7 @@
               href: /windows/win32/api/Ws2ipdef/ns-ws2ipdef-ip_msfilter
             - name: ipv6_mreq
               href: /windows/win32/api/Ws2ipdef/ns-ws2ipdef-ipv6_mreq
-            - name: gerin
+            - name: Verweilen
               href: /windows/win32/api/winsock/ns-winsock-linger
             - name: NAPI_DOMAIN_DESCRIPTION_BLOB
               href: /windows/win32/api/Nsemail/ns-nsemail-napi_domain_description_blob
@@ -1190,7 +1196,7 @@
               href: /windows/win32/api/Nspapi/ns-nspapi-ns_service_infoa
             - name: PROTOCOL_INFO
               href: /windows/win32/api/Nspapi/ns-nspapi-protocol_infoa
-            - name: Prototyp
+            - name: protoent
               href: /windows/win32/api/winsock/ns-winsock-protoent
             - name: REAL_TIME_NOTIFICATION_SETTING_INPUT
               href: /windows/win32/api/Mstcpip/ns-mstcpip-real_time_notification_setting_input
@@ -1208,7 +1214,7 @@
               href: /windows/win32/api/Mswsock/ns-mswsock-rio_notification_completion
             - name: RIO_RQ
               href: riorqueue.md
-            - name: Rioresult
+            - name: RIORESULT
               href: /windows/win32/api/Mswsockdef/ns-mswsockdef-rioresult
             - name: RM_FEC_INFO
               href: /windows/win32/api/Wsrm/ns-wsrm-rm_fec_info
@@ -1218,7 +1224,7 @@
               href: /windows/win32/api/Wsrm/ns-wsrm-rm_send_window
             - name: RM_SENDER_STATS
               href: /windows/win32/api/Wsrm/ns-wsrm-rm_sender_stats
-            - name: servent
+            - name: Servent
               href: /windows/win32/api/winsock/ns-winsock-servent
             - name: SERVICE_ADDRESS
               href: /windows/win32/api/Nspapi/ns-nspapi-service_address
@@ -1266,39 +1272,39 @@
               href: /windows/win32/api/mstcpip/ns-mstcpip-transport_setting_id
             - name: WSABUF
               href: /windows/win32/api/ws2def/ns-ws2def-wsabuf
-            - name: Wsacompletion
+            - name: WSACOMPLETION
               href: /windows/win32/api/Winsock2/ns-winsock2-wsacompletion
             - name: WSADATA
               href: /windows/win32/api/winsock/ns-winsock-wsadata
-            - name: Wsamsg
+            - name: WSAMSG
               href: /windows/win32/api/Ws2def/ns-ws2def-wsamsg
             - name: WSANAMESPACE_INFO
               href: /windows/win32/api/Winsock2/ns-winsock2-wsanamespace_infow
             - name: WSANAMESPACE_INFOEX
               href: /windows/win32/api/Winsock2/ns-winsock2-wsanamespace_infoexw
-            - name: Wsanetworkevents
+            - name: WSANETWORKEVENTS
               href: /windows/win32/api/Winsock2/ns-winsock2-wsanetworkevents
-            - name: Wsansclassinfo
+            - name: WSANSCLASSINFO
               href: /windows/win32/api/Winsock2/ns-winsock2-wsansclassinfow
-            - name: Wsaoverlgetauscht
+            - name: WSAOVERLAPPED
               href: /windows/win32/api/Winsock2/ns-winsock2-wsaoverlapped
-            - name: Wsapollfd
+            - name: WSAPOLLFD
               href: /windows/win32/api/winsock2/ns-winsock2-wsapollfd
             - name: WSAPROTOCOL_INFO
               href: /windows/win32/api/winsock2/ns-winsock2-wsaprotocol_infoa
             - name: WSAPROTOCOL_INFOW
               href: /windows/win32/api/Winsock2/ns-winsock2-wsaprotocol_infow
-            - name: Wsaprotocolchain
+            - name: WSAPROTOCOLCHAIN
               href: /windows/win32/api/Winsock2/ns-winsock2-wsaprotocolchain
-            - name: Wsaqueryset
+            - name: WSAQUERYSET
               href: /windows/win32/api/Winsock2/ns-winsock2-wsaquerysetw
             - name: WSAQUERYSET2
               href: /windows/win32/api/Winsock2/ns-winsock2-wsaqueryset2w
-            - name: Wsaserviceclassinfo
+            - name: WSASERVICECLASSINFO
               href: /windows/win32/api/Winsock2/ns-winsock2-wsaserviceclassinfow
-            - name: Wsaversion
+            - name: WSAVERSION
               href: /windows/win32/api/Winsock2/ns-winsock2-wsaversion
-        - name: Winsock-Ablauf Verfolgungs Ereignisse
+        - name: Winsock-Ablaufverfolgungsereignisse
           href: winsock-tracing-events.md
           items:
             - name: AFD_EVENT_CREATE
@@ -1319,23 +1325,23 @@
             - name: Winsock-SPI-Funktionen
               href: winsock-spi-functions.md
               items:
-                - name: Lpnspcleanup
+                - name: LPNSPCLEANUP
                   href: /windows/win32/api/Ws2spi/nc-ws2spi-lpnspcleanup
-                - name: Lpnspgetserviceclassinfo
+                - name: LPNSPGETSERVICECLASSINFO
                   href: /windows/win32/api/Ws2spi/nc-ws2spi-lpnspgetserviceclassinfo
-                - name: Lpnspioctl
+                - name: LPNSPIOCTL
                   href: /windows/win32/api/Ws2spi/nc-ws2spi-lpnspioctl
-                - name: Lpnspinstallserviceclass
+                - name: LPNSPINSTALLSERVICECLASS
                   href: /windows/win32/api/Ws2spi/nc-ws2spi-lpnspinstallserviceclass
-                - name: Lpnsplookupservicebegin
+                - name: LPNSPLOOKUPSERVICEBEGIN
                   href: /windows/win32/api/Ws2spi/nc-ws2spi-lpnsplookupservicebegin
-                - name: Lpnsplookupserviceend
+                - name: LPNSPLOOKUPSERVICEEND
                   href: /windows/win32/api/Ws2spi/nc-ws2spi-lpnsplookupserviceend
-                - name: Lpnsplookupservicenext
+                - name: LPNSPLOOKUPSERVICENEXT
                   href: /windows/win32/api/Ws2spi/nc-ws2spi-lpnsplookupservicenext
-                - name: Lpnspmuveserviceclass
+                - name: LPNSPREMOVESERVICECLASS
                   href: /windows/win32/api/Ws2spi/nc-ws2spi-lpnspremoveserviceclass
-                - name: Lpnspsetservice
+                - name: LPNSPSETSERVICE
                   href: /windows/win32/api/Ws2spi/nc-ws2spi-lpnspsetservice
                 - name: NSPStartup
                   href: /windows/win32/api/Ws2spi/nf-ws2spi-nspstartup
@@ -1353,49 +1359,49 @@
                   href: /windows/win32/api/Ws2spi/nc-ws2spi-lpnspv2setserviceex
                 - name: LPNSPV2STARTUP
                   href: /windows/win32/api/Ws2spi/nc-ws2spi-lpnspv2startup
-                - name: Wpucloseevent
+                - name: WPUCloseEvent
                   href: /windows/win32/api/Ws2spi/nf-ws2spi-wpucloseevent
-                - name: Wpuclosesockethandle
+                - name: WPUCloseSocketHandle
                   href: /windows/win32/api/Ws2spi/nf-ws2spi-wpuclosesockethandle
-                - name: Wpuclosethread
+                - name: WPUCloseThread
                   href: /windows/win32/api/Ws2spi/nf-ws2spi-wpuclosethread
-                - name: Wpucompleteoverlappedrequest
+                - name: WPUCompleteOverlappedRequest
                   href: /windows/win32/api/Ws2spi/nf-ws2spi-wpucompleteoverlappedrequest
-                - name: Wpukreateevent
+                - name: WPUCreateEvent
                   href: /windows/win32/api/Ws2spi/nf-ws2spi-wpucreateevent
-                - name: Wpukreatesockethandle
+                - name: WPUCreateSocketHandle
                   href: /windows/win32/api/Ws2spi/nf-ws2spi-wpucreatesockethandle
-                - name: Wpuf-Menge
+                - name: WPUFDIsSet
                   href: /windows/win32/api/Ws2spi/nf-ws2spi-wpufdisset
-                - name: Wpugetproviderpath
+                - name: WPUGetProviderPath
                   href: /windows/win32/api/Ws2spi/nf-ws2spi-wpugetproviderpath
-                - name: Wpumodisyif shandle
+                - name: WPUModifyIFSHandle
                   href: /windows/win32/api/Ws2spi/nf-ws2spi-wpumodifyifshandle
-                - name: Wpuopencurrentthread
+                - name: WPUOpenCurrentThread
                   href: /windows/win32/api/Ws2spi/nf-ws2spi-wpuopencurrentthread
-                - name: Wpupostmessage
+                - name: WPUPostMessage
                   href: /windows/win32/api/Ws2spi/nf-ws2spi-wpupostmessage
-                - name: Wpuqueryblockingcallback
+                - name: WPUQueryBlockingCallback
                   href: /windows/win32/api/Ws2spi/nf-ws2spi-wpuqueryblockingcallback
-                - name: Wpuquerysockethandlecontext
+                - name: WPUQuerySocketHandleContext
                   href: /windows/win32/api/Ws2spi/nf-ws2spi-wpuquerysockethandlecontext
-                - name: Wpuqueueapc
+                - name: WPUQueueApc
                   href: /windows/win32/api/Ws2spi/nf-ws2spi-wpuqueueapc
-                - name: Wpure-tevent
+                - name: WPUResetEvent
                   href: /windows/win32/api/Ws2spi/nf-ws2spi-wpuresetevent
-                - name: Wpuabvent
+                - name: WPUSetEvent
                   href: /windows/win32/api/Ws2spi/nf-ws2spi-wpusetevent
-                - name: Wsawerbung-Anbieter
+                - name: WSAAdvertiseProvider
                   href: /windows/win32/api/Ws2spi/nf-ws2spi-wsaadvertiseprovider
-                - name: Wsaprovidercompleteasynccall
+                - name: WSAProviderCompleteAsyncCall
                   href: /windows/win32/api/Ws2spi/nf-ws2spi-wsaprovidercompleteasynccall
-                - name: Wsaunwerbeprovider
+                - name: WSAUnadvertiseProvider
                   href: /windows/win32/api/Ws2spi/nf-ws2spi-wsaunadvertiseprovider
-                - name: Wscdeinstallprovider
+                - name: WSCDeinstallProvider
                   href: /windows/win32/api/Ws2spi/nf-ws2spi-wscdeinstallprovider
                 - name: WSCDeinstallProvider32
                   href: /windows/win32/api/Ws2spi/nf-ws2spi-wscdeinstallprovider32
-                - name: Wscenablensprovider
+                - name: WSCEnableNSProvider
                   href: /windows/win32/api/Ws2spi/nf-ws2spi-wscenablensprovider
                 - name: WSCEnableNSProvider32
                   href: /windows/win32/api/Ws2spi/nf-ws2spi-wscenablensprovider32
@@ -1403,123 +1409,123 @@
                   href: /windows/win32/api/Ws2spi/nf-ws2spi-wscenumnamespaceproviders32
                 - name: WSCEnumNameSpaceProvidersEx32
                   href: /windows/win32/api/Ws2spi/nf-ws2spi-wscenumnamespaceprovidersex32
-                - name: Wscenumschlag-Protokolle
+                - name: WSCEnumProtocols
                   href: /windows/win32/api/Ws2spi/nf-ws2spi-wscenumprotocols
                 - name: WSCEnumProtocols32
                   href: /windows/win32/api/Ws2spi/nf-ws2spi-wscenumprotocols32
-                - name: Wscgetapplicationcategory
+                - name: WSCGetApplicationCategory
                   href: /windows/win32/api/Ws2spi/nf-ws2spi-wscgetapplicationcategory
-                - name: Wscgetproviderinfo
+                - name: WSCGetProviderInfo
                   href: /windows/win32/api/Ws2spi/nf-ws2spi-wscgetproviderinfo
                 - name: WSCGetProviderInfo32
                   href: /windows/win32/api/Ws2spi/nf-ws2spi-wscgetproviderinfo32
-                - name: Wscgetproviderpath
+                - name: WSCGetProviderPath
                   href: /windows/win32/api/Ws2spi/nf-ws2spi-wscgetproviderpath
                 - name: WSCGetProviderPath32
                   href: /windows/win32/api/Ws2spi/nf-ws2spi-wscgetproviderpath32
-                - name: Wscinstallnamespace
+                - name: WSCInstallNameSpace
                   href: /windows/win32/api/Ws2spi/nf-ws2spi-wscinstallnamespace
                 - name: WSCInstallNameSpace32
                   href: /windows/win32/api/Ws2spi/nf-ws2spi-wscinstallnamespace32
-                - name: Wscinstallnamespaceex
+                - name: WSCInstallNameSpaceEx
                   href: /windows/win32/api/Ws2spi/nf-ws2spi-wscinstallnamespaceex
                 - name: WSCInstallNameSpaceEx32
                   href: /windows/win32/api/Ws2spi/nf-ws2spi-wscinstallnamespaceex32
-                - name: Wscinstallprovider
+                - name: WSCInstallProvider
                   href: /windows/win32/api/Ws2spi/nf-ws2spi-wscinstallprovider
                 - name: WSCInstallProvider64_32
                   href: /windows/win32/api/Ws2spi/nf-ws2spi-wscinstallprovider64_32
-                - name: Wscinstallproviderandchain
+                - name: WSCInstallProviderAndChains
                   href: /windows/win32/api/Ws2spi/nf-ws2spi-wscinstallproviderandchains
                 - name: WSCInstallProviderAndChains64_32
                   href: /windows/win32/api/Ws2spi/nf-ws2spi-wscinstallproviderandchains64_32
-                - name: Wscinstallqostemplate
+                - name: WSCInstallQOSTemplate
                   href: /windows/win32/api/Ws2spi/nf-ws2spi-wscinstallqostemplate
-                - name: Wscremoveqostemplate
+                - name: WSCRemoveQOSTemplate
                   href: /windows/win32/api/Ws2spi/nf-ws2spi-wscremoveqostemplate
-                - name: Wscabtapplicationcategory
+                - name: WSCSetApplicationCategory
                   href: /windows/win32/api/Ws2spi/nf-ws2spi-wscsetapplicationcategory
-                - name: Wscsetproviderinfo
+                - name: WSCSetProviderInfo
                   href: /windows/win32/api/Ws2spi/nf-ws2spi-wscsetproviderinfo
                 - name: WSCSetProviderInfo32
                   href: /windows/win32/api/Ws2spi/nf-ws2spi-wscsetproviderinfo32
-                - name: Wscuninstallnamespace
+                - name: WSCUnInstallNameSpace
                   href: /windows/win32/api/Ws2spi/nf-ws2spi-wscuninstallnamespace
                 - name: WSCUnInstallNameSpace32
                   href: /windows/win32/api/Ws2spi/nf-ws2spi-wscuninstallnamespace32
-                - name: Wscupdateprovider
+                - name: WSCUpdateProvider
                   href: /windows/win32/api/Ws2spi/nf-ws2spi-wscupdateprovider
                 - name: WSCUpdateProvider32
                   href: /windows/win32/api/Ws2spi/nf-ws2spi-wscupdateprovider32
-                - name: Wscschreitenamespaceorder
+                - name: WSCWriteNameSpaceOrder
                   href: /windows/win32/api/Sporder/nf-sporder-wscwritenamespaceorder
                 - name: WSCWriteNameSpaceOrder32
                   href: /windows/win32/api/Sporder/nf-sporder-wscwritenamespaceorder32
-                - name: Wscschreiteproviderorder
+                - name: WSCWriteProviderOrder
                   href: /windows/win32/api/Sporder/nf-sporder-wscwriteproviderorder
                 - name: WSCWriteProviderOrder32
                   href: /windows/win32/api/Sporder/nf-sporder-wscwriteproviderorder32
-                - name: Lpwspaccept
+                - name: LPWSPACCEPT
                   href: /windows/win32/api/Ws2spi/nc-ws2spi-lpwspaccept
-                - name: Lpwspadresssstostring
+                - name: LPWSPADDRESSTOSTRING
                   href: /windows/win32/api/Ws2spi/nc-ws2spi-lpwspaddresstostring
-                - name: Lpwspasyncselect
+                - name: LPWSPASYNCSELECT
                   href: /previous-versions/windows/desktop/legacy/ms742267(v=vs.85)
-                - name: Lpwspbind
+                - name: LPWSPBIND
                   href: /previous-versions/windows/hardware/network/ff566268(v=vs.85)
-                - name: Lpwspcancelblockingstatement
+                - name: LPWSPCANCELBLOCKINGCALL
                   href: /windows/win32/api/ws2spi/nc-ws2spi-lpwspcancelblockingcall
-                - name: Lpwspcleanup
+                - name: LPWSPCLEANUP
                   href: /previous-versions/windows/hardware/network/ff566270(v=vs.85)
-                - name: Lpwspclosesocket
+                - name: LPWSPCLOSESOCKET
                   href: /previous-versions/windows/hardware/network/ff566273(v=vs.85)
-                - name: Lpwspconnect
+                - name: LPWSPCONNECT
                   href: /previous-versions/windows/hardware/network/ff566275(v=vs.85)
-                - name: Lpwspduplialisiesocket
+                - name: LPWSPDUPLICATESOCKET
                   href: /previous-versions/windows/hardware/network/ff566282(v=vs.85)
-                - name: Lpwspenumnetworkevents
+                - name: LPWSPENUMNETWORKEVENTS
                   href: /previous-versions/windows/hardware/network/ff566284(v=vs.85)
-                - name: Lpwspeventselect
+                - name: LPWSPEVENTSELECT
                   href: /previous-versions/windows/hardware/network/ff566287(v=vs.85)
-                - name: Lpwspgedienst verlappedresult
+                - name: LPWSPGETOVERLAPPEDRESULT
                   href: /windows/win32/api/Ws2spi/nc-ws2spi-lpwspgetoverlappedresult
-                - name: Lpwspgetpeer Name
+                - name: LPWSPGETPEERNAME
                   href: /windows/win32/api/ws2spi/nc-ws2spi-lpwspgetpeername
                 - name: 'LPWSPGETQOSBYNAME '
                   href: /windows/win32/api/Ws2spi/nc-ws2spi-lpwspgetqosbyname
-                - name: Lpwspgetsockname
+                - name: LPWSPGETSOCKNAME
                   href: /windows/win32/api/ws2spi/nc-ws2spi-lpwspgetsockname
-                - name: Lpwspgetsockopt
+                - name: LPWSPGETSOCKOPT
                   href: /previous-versions/windows/hardware/network/ff566292(v=vs.85)
                 - name: 'LPWSPIOCTL '
                   href: /previous-versions/windows/hardware/network/ff566296(v=vs.85)
-                - name: Lpwspjoinleaf
+                - name: LPWSPJOINLEAF
                   href: /windows/win32/api/Ws2spi/nc-ws2spi-lpwspjoinleaf
-                - name: Lpwsplauschen
+                - name: LPWSPLISTEN
                   href: /previous-versions/windows/hardware/network/ff566297(v=vs.85)
-                - name: Lpwsprecv
+                - name: LPWSPRECV
                   href: /previous-versions/windows/hardware/network/ff566309(v=vs.85)
                 - name: 'LPWSPRECVDISCONNECT '
                   href: /windows/win32/api/ws2spi/nc-ws2spi-lpwsprecvdisconnect
-                - name: Lpwsprecvfrom
+                - name: LPWSPRECVFROM
                   href: /windows/win32/api/ws2spi/nc-ws2spi-lpwsprecvfrom
-                - name: Lpwspselect
+                - name: LPWSPSELECT
                   href: /windows/win32/api/ws2spi/nc-ws2spi-lpwspselect
-                - name: Lpwspsend
+                - name: LPWSPSEND
                   href: /previous-versions/windows/hardware/network/ff566316(v=vs.85)
                 - name: 'LPWSPSENDDISCONNECT '
                   href: /windows/win32/api/ws2spi/nc-ws2spi-lpwspsenddisconnect
-                - name: Lpwspsendto
+                - name: LPWSPSENDTO
                   href: /windows/win32/api/ws2spi/nc-ws2spi-lpwspsendto
-                - name: Lpwspsetsockopt
+                - name: LPWSPSETSOCKOPT
                   href: /previous-versions/windows/hardware/network/ff566318(v=vs.85)
                 - name: 'LPWSPSHUTDOWN '
                   href: /windows/win32/api/ws2spi/nc-ws2spi-lpwspshutdown
-                - name: Lpwspsocket
+                - name: LPWSPSOCKET
                   href: /windows/win32/api/Ws2spi/nc-ws2spi-lpwspsocket
                 - name: WSPStartup
                   href: /windows/win32/api/Ws2spi/nf-ws2spi-wspstartup
-                - name: Lpwspstringdienst Address
+                - name: LPWSPSTRINGTOADDRESS
                   href: /windows/win32/api/Ws2spi/nc-ws2spi-lpwspstringtoaddress
             - name: Winsock SPI-Strukturen
               href: winsock-spi-structures.md
@@ -1532,11 +1538,11 @@
                   href: /windows/win32/api/Ws2spi/ns-ws2spi-wsathreadid
                 - name: WSC_PROVIDER_AUDIT_INFO
                   href: /windows/win32/api/Ws2spi/ns-ws2spi-wsc_provider_audit_info
-                - name: Wspdata
+                - name: WSPDATA
                   href: /windows/win32/api/Ws2spi/ns-ws2spi-wspdata
                 - name: WSPPROC_TABLE
                   href: /windows/win32/api/Ws2spi/ns-ws2spi-wspproc_table
-                - name: Wspupcalltable
+                - name: WSPUPCALLTABLE
                   href: /windows/win32/api/Ws2spi/ns-ws2spi-wspupcalltable
-        - name: Windows Sockets-Fehler Codes
+        - name: Windows Sockets-Fehlercodes
           href: windows-sockets-error-codes-2.md

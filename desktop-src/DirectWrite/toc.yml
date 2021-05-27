@@ -75,7 +75,7 @@
             - name: DWriteCreateFactory
               href: /windows/win32/api/dwrite/nf-dwrite-dwritecreatefactory
             - name: DWriteCoreCreateFactory (DWriteCore)
-              href: /windows/win32/directwrite/dwrite_core/nf-dwrite_core-dwritecorecreatefactory
+              href: ./dwrite_core/nf-dwrite_core-dwritecorecreatefactory.md
         - name: DirectWrite-Enumerationen
           href: enumerations.md
           items:
@@ -831,7 +831,7 @@
                 - name: GetMatchingFonts-Methoden
                   href: idwritefontset-getmatchingfonts-overload.md
                   items:
-                    - name: 'GetMatchingFonts(const DWRITE_FONT_PROPERTY*, UINT32, IDWriteFontSet**) -Methode'
+                    - name: 'GetMatchingFonts(const DWRITE_FONT_PROPERTY*, UINT32, IDWriteFontSet**)-Methode'
                       href: /windows/win32/api/dwrite_3/nf-dwrite_3-idwritefontset-getmatchingfonts(wcharconst_dwrite_font_weight_dwrite_font_stretch_dwrite_font_style_idwritefontset)
                     - name: 'GetMatchingFonts(const WCHAR*, DWRITE_FONT_WEIGHT, DWRITE_FONT_STRETCH, DWRITE_FONT_STYLE, IDWriteFontSet**)'
                       href: /windows/win32/api/dwrite_3/nf-dwrite_3-idwritefontset-getmatchingfonts(wcharconst_dwrite_font_weight_dwrite_font_stretch_dwrite_font_style_idwritefontset)
@@ -986,7 +986,7 @@
                   href: /windows/win32/api/dwrite/nf-dwrite-idwritelocalizedstrings-getstring
                 - name: GetStringLength
                   href: /windows/win32/api/dwrite/nf-dwrite-idwritelocalizedstrings-getstringlength
-            - name: IDWriteNumberSubsierung
+            - name: IDWriteNumberSubsphy
               href: idwritenumbersubstitution.md
             - name: IDWritePixelSnapping
               href: /windows/win32/api/dwrite/nn-dwrite-idwritepixelsnapping

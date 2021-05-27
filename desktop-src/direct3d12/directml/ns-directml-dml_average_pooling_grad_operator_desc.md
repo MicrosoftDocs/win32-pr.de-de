@@ -1,7 +1,7 @@
 ---
 UID: NS:directml.DML_AVERAGE_POOLING_GRAD_OPERATOR_DESC
 title: DML_AVERAGE_POOLING_GRAD_OPERATOR_DESC
-description: Berechnet Backpropagation-Farbverläufe für durchschnittliches Pooling (siehe [DML_AVERAGE_POOLING_OPERATOR_DESC](/windows/win32/api/directml/ns-directml-dml_average_pooling_operator_desc)).
+description: Berechnet Backpropagation-Farbverläufe für das durchschnittliche Pooling (siehe [DML_AVERAGE_POOLING_OPERATOR_DESC](/windows/win32/api/directml/ns-directml-dml_average_pooling_operator_desc)).
 helpviewer_keywords:
 - DML_AVERAGE_POOLING_GRAD_OPERATOR_DESC
 - DML_AVERAGE_POOLING_GRAD_OPERATOR_DESC structure
@@ -45,18 +45,18 @@ api_location:
 - DirectML.h
 api_name:
 - DML_AVERAGE_POOLING_GRAD_OPERATOR_DESC
-ms.openlocfilehash: 5c2803fc300ca862d54a74aee1c864e9097e3d8e
-ms.sourcegitcommit: 8e1f04c7e3c5c850071bac8d173f9441aab0dfed
+ms.openlocfilehash: aaa2b5d2becac421214afe7c643426c1c93cf899
+ms.sourcegitcommit: f848119a8faa29b27585f4df53f6e50ee9666684
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "107803370"
+ms.lasthandoff: 05/27/2021
+ms.locfileid: "110550485"
 ---
-# <a name="dml_average_pooling_grad_operator_desc-structure-directmlh"></a><span data-ttu-id="02ba1-103">DML_AVERAGE_POOLING_GRAD_OPERATOR_DESC -Struktur (directml.h)</span><span class="sxs-lookup"><span data-stu-id="02ba1-103">DML_AVERAGE_POOLING_GRAD_OPERATOR_DESC structure (directml.h)</span></span>
+# <a name="dml_average_pooling_grad_operator_desc-structure-directmlh"></a><span data-ttu-id="77c8d-103">DML_AVERAGE_POOLING_GRAD_OPERATOR_DESC-Struktur (directml.h)</span><span class="sxs-lookup"><span data-stu-id="77c8d-103">DML_AVERAGE_POOLING_GRAD_OPERATOR_DESC structure (directml.h)</span></span>
 
-<span data-ttu-id="02ba1-104">Berechnet Backpropagation-Farbverläufe für durchschnittliches Pooling (siehe [DML_AVERAGE_POOLING_OPERATOR_DESC](/windows/win32/api/directml/ns-directml-dml_average_pooling_operator_desc)).</span><span class="sxs-lookup"><span data-stu-id="02ba1-104">Computes backpropagation gradients for average pooling (see [DML_AVERAGE_POOLING_OPERATOR_DESC](/windows/win32/api/directml/ns-directml-dml_average_pooling_operator_desc)).</span></span>
+<span data-ttu-id="77c8d-104">Berechnet Backpropagation-Farbverläufe für das durchschnittliche Pooling (siehe [DML_AVERAGE_POOLING_OPERATOR_DESC](/windows/win32/api/directml/ns-directml-dml_average_pooling_operator_desc)).</span><span class="sxs-lookup"><span data-stu-id="77c8d-104">Computes backpropagation gradients for average pooling (see [DML_AVERAGE_POOLING_OPERATOR_DESC](/windows/win32/api/directml/ns-directml-dml_average_pooling_operator_desc)).</span></span>
 
-<span data-ttu-id="02ba1-105">Betrachten Sie eine **2x2-DML_AVERAGE_POOLING_OPERATOR_DESC**, ohne Auf padding und einen Schritt von 1, der Folgendes ausführt.</span><span class="sxs-lookup"><span data-stu-id="02ba1-105">Consider a 2x2 **DML_AVERAGE_POOLING_OPERATOR_DESC**, without padding and a stride of 1, that performs the following.</span></span>
+<span data-ttu-id="77c8d-105">Betrachten Sie eine **2x2-DML_AVERAGE_POOLING_OPERATOR_DESC**, ohne Auffüllung und einen Schritt von 1, der Folgendes ausführt.</span><span class="sxs-lookup"><span data-stu-id="77c8d-105">Consider a 2x2 **DML_AVERAGE_POOLING_OPERATOR_DESC**, without padding and a stride of 1, that performs the following.</span></span>
 
 ```
 InputTensor             OutputTensor
@@ -65,7 +65,7 @@ InputTensor             OutputTensor
    [7, 8, 9]]]]
 ```
 
-<span data-ttu-id="02ba1-106">Jedes 2x2-Fenster im Eingabe tensor wird gemittelt, um ein Element der Ausgabe zu erzeugen (nullen für Elemente außerhalb des Edges zu lesen).</span><span class="sxs-lookup"><span data-stu-id="02ba1-106">Each 2x2 window in the input tensor is averaged to produce one element of the output (reading zeros for elements beyond the edge).</span></span> <span data-ttu-id="02ba1-107">Im Folgenden finden Sie ein Beispiel für die Ausgabe **von** DML_AVERAGE_POOLING_GRAD_OPERATOR_DESC mit ähnlichen Parametern.</span><span class="sxs-lookup"><span data-stu-id="02ba1-107">Here's an example of the output of **DML_AVERAGE_POOLING_GRAD_OPERATOR_DESC** given similar parameters.</span></span>
+<span data-ttu-id="77c8d-106">Jedes 2x2-Fenster im Eingabe-Tensor wird gemittelt, um ein Element der Ausgabe zu erzeugen (Nullen für Elemente außerhalb des Rands).</span><span class="sxs-lookup"><span data-stu-id="77c8d-106">Each 2x2 window in the input tensor is averaged to produce one element of the output (reading zeros for elements beyond the edge).</span></span> <span data-ttu-id="77c8d-107">Hier ist ein Beispiel für die Ausgabe von **DML_AVERAGE_POOLING_GRAD_OPERATOR_DESC** mit ähnlichen Parametern angegeben.</span><span class="sxs-lookup"><span data-stu-id="77c8d-107">Here's an example of the output of **DML_AVERAGE_POOLING_GRAD_OPERATOR_DESC** given similar parameters.</span></span>
 
 ```
 InputGradientTensor            OutputGradientTensor
@@ -74,12 +74,12 @@ InputGradientTensor            OutputGradientTensor
                                  [0.75, 1.75,   1]]]]
 ```
 
-<span data-ttu-id="02ba1-108">Beachten Sie, dass die Werte im *OutputGradientTensor* die gewichteten Beiträge dieses Elements zum *OutputTensor* während des ursprünglichen DML_AVERAGE_POOLING_OPERATOR_DESC [darstellen.](/windows/win32/api/directml/ns-directml-dml_average_pooling_operator_desc)</span><span class="sxs-lookup"><span data-stu-id="02ba1-108">Notice that the values in the *OutputGradientTensor* represent the weighted contributions of that element to the *OutputTensor* during the original [DML_AVERAGE_POOLING_OPERATOR_DESC](/windows/win32/api/directml/ns-directml-dml_average_pooling_operator_desc) operator.</span></span>
+<span data-ttu-id="77c8d-108">Beachten Sie, dass die Werte im *OutputGradientTensor* die gewichteten Beiträge dieses Elements zum *OutputTensor* während des ursprünglichen [DML_AVERAGE_POOLING_OPERATOR_DESC-Operators](/windows/win32/api/directml/ns-directml-dml_average_pooling_operator_desc) darstellen.</span><span class="sxs-lookup"><span data-stu-id="77c8d-108">Notice that the values in the *OutputGradientTensor* represent the weighted contributions of that element to the *OutputTensor* during the original [DML_AVERAGE_POOLING_OPERATOR_DESC](/windows/win32/api/directml/ns-directml-dml_average_pooling_operator_desc) operator.</span></span>
 
 > [!IMPORTANT]
-> <span data-ttu-id="02ba1-109">Diese API ist als Teil des eigenständigen weiterverteilten DirectML-Pakets verfügbar (siehe [Microsoft.AI.DirectML](https://www.nuget.org/packages/Microsoft.AI.DirectML/) Version 1.4 und höher).</span><span class="sxs-lookup"><span data-stu-id="02ba1-109">This API is available as part of the DirectML standalone redistributable package (see [Microsoft.AI.DirectML](https://www.nuget.org/packages/Microsoft.AI.DirectML/) version 1.4 and later.</span></span> <span data-ttu-id="02ba1-110">Siehe auch [DirectML-Versionsverlauf.](../dml-version-history.md)</span><span class="sxs-lookup"><span data-stu-id="02ba1-110">Also see [DirectML version history](../dml-version-history.md).</span></span>
+> <span data-ttu-id="77c8d-109">Diese API ist als Teil des eigenständigen verteilbaren DirectML-Pakets verfügbar (siehe [Microsoft.AI.DirectML](https://www.nuget.org/packages/Microsoft.AI.DirectML/) Version 1.4 und höher).</span><span class="sxs-lookup"><span data-stu-id="77c8d-109">This API is available as part of the DirectML standalone redistributable package (see [Microsoft.AI.DirectML](https://www.nuget.org/packages/Microsoft.AI.DirectML/) version 1.4 and later.</span></span> <span data-ttu-id="77c8d-110">Siehe auch [DirectML-Versionsverlauf.](../dml-version-history.md)</span><span class="sxs-lookup"><span data-stu-id="77c8d-110">Also see [DirectML version history](../dml-version-history.md).</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="02ba1-111">Syntax</span><span class="sxs-lookup"><span data-stu-id="02ba1-111">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="77c8d-111">Syntax</span><span class="sxs-lookup"><span data-stu-id="77c8d-111">Syntax</span></span>
 
 ```cpp
 struct DML_AVERAGE_POOLING_GRAD_OPERATOR_DESC
@@ -95,69 +95,69 @@ struct DML_AVERAGE_POOLING_GRAD_OPERATOR_DESC
 };
 ```
 
-## <a name="members"></a><span data-ttu-id="02ba1-112">Member</span><span class="sxs-lookup"><span data-stu-id="02ba1-112">Members</span></span>
+## <a name="members"></a><span data-ttu-id="77c8d-112">Member</span><span class="sxs-lookup"><span data-stu-id="77c8d-112">Members</span></span>
 
 `InputGradientTensor`
 
-<span data-ttu-id="02ba1-113">Typ: **const [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***</span><span class="sxs-lookup"><span data-stu-id="02ba1-113">Type: **const [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc)\***</span></span>
+<span data-ttu-id="77c8d-113">Typ: **const [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***</span><span class="sxs-lookup"><span data-stu-id="77c8d-113">Type: **const [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc)\***</span></span>
 
-<span data-ttu-id="02ba1-114">Der eingehende Farbverlaufs-Tensor.</span><span class="sxs-lookup"><span data-stu-id="02ba1-114">The incoming gradient tensor.</span></span> <span data-ttu-id="02ba1-115">Dies wird in der Regel aus der Ausgabe der Backpropagation einer vorherigen Ebene ermittelt.</span><span class="sxs-lookup"><span data-stu-id="02ba1-115">This is typically obtained from the output of backpropagation of a preceding layer.</span></span> <span data-ttu-id="02ba1-116">In der Regel hat dieser Tensor  die gleichen Größen wie die Ausgabe des entsprechenden DML_AVERAGE_POOLING_OPERATOR_DESC [im](/windows/win32/api/directml/ns-directml-dml_average_pooling_operator_desc) Vorwärtspass.</span><span class="sxs-lookup"><span data-stu-id="02ba1-116">Typically this tensor would have the same sizes as the *output* of the corresponding [DML_AVERAGE_POOLING_OPERATOR_DESC](/windows/win32/api/directml/ns-directml-dml_average_pooling_operator_desc) in the forward pass.</span></span>
+<span data-ttu-id="77c8d-114">Der eingehende Farbverlaufs-Tensor.</span><span class="sxs-lookup"><span data-stu-id="77c8d-114">The incoming gradient tensor.</span></span> <span data-ttu-id="77c8d-115">Dies wird in der Regel aus der Ausgabe der Backpropagation einer vorangehenden Ebene abgerufen.</span><span class="sxs-lookup"><span data-stu-id="77c8d-115">This is typically obtained from the output of backpropagation of a preceding layer.</span></span> <span data-ttu-id="77c8d-116">In der Regel hat dieser Tensor die gleichen Größen wie die *Ausgabe* der entsprechenden [DML_AVERAGE_POOLING_OPERATOR_DESC](/windows/win32/api/directml/ns-directml-dml_average_pooling_operator_desc) im Vorwärtsdurchlauf.</span><span class="sxs-lookup"><span data-stu-id="77c8d-116">Typically this tensor would have the same sizes as the *output* of the corresponding [DML_AVERAGE_POOLING_OPERATOR_DESC](/windows/win32/api/directml/ns-directml-dml_average_pooling_operator_desc) in the forward pass.</span></span>
 
 `OutputGradientTensor`
 
-<span data-ttu-id="02ba1-117">Typ: **const [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***</span><span class="sxs-lookup"><span data-stu-id="02ba1-117">Type: **const [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc)\***</span></span>
+<span data-ttu-id="77c8d-117">Typ: **const [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***</span><span class="sxs-lookup"><span data-stu-id="77c8d-117">Type: **const [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc)\***</span></span>
 
-<span data-ttu-id="02ba1-118">Ein Ausgabe tensor, der die zurückpropagierten Farbverläufe enthält.</span><span class="sxs-lookup"><span data-stu-id="02ba1-118">An output tensor containing the backpropagated gradients.</span></span> <span data-ttu-id="02ba1-119">In der Regel hat dieser Tensor  die gleichen Größen wie die Eingabe des entsprechenden DML_AVERAGE_POOLING_OPERATOR_DESC [im](/windows/win32/api/directml/ns-directml-dml_average_pooling_operator_desc) Vorwärtspass.</span><span class="sxs-lookup"><span data-stu-id="02ba1-119">Typically this tensor would have the same sizes as the *input* of the corresponding [DML_AVERAGE_POOLING_OPERATOR_DESC](/windows/win32/api/directml/ns-directml-dml_average_pooling_operator_desc) in the forward pass.</span></span>
+<span data-ttu-id="77c8d-118">Ein Ausgabe-Tensor, der die Zurückpropagierten Farbverläufe enthält.</span><span class="sxs-lookup"><span data-stu-id="77c8d-118">An output tensor containing the backpropagated gradients.</span></span> <span data-ttu-id="77c8d-119">In der Regel hat dieser Tensor die gleichen Größen wie die *Eingabe* der entsprechenden [DML_AVERAGE_POOLING_OPERATOR_DESC](/windows/win32/api/directml/ns-directml-dml_average_pooling_operator_desc) im Vorwärtsdurchlauf.</span><span class="sxs-lookup"><span data-stu-id="77c8d-119">Typically this tensor would have the same sizes as the *input* of the corresponding [DML_AVERAGE_POOLING_OPERATOR_DESC](/windows/win32/api/directml/ns-directml-dml_average_pooling_operator_desc) in the forward pass.</span></span>
 
 `DimensionCount`
 
-<span data-ttu-id="02ba1-120">Typ: [ **UINT**](/windows/desktop/winprog/windows-data-types)</span><span class="sxs-lookup"><span data-stu-id="02ba1-120">Type: [**UINT**](/windows/desktop/winprog/windows-data-types)</span></span>
+<span data-ttu-id="77c8d-120">Typ: [ **UINT**](/windows/desktop/winprog/windows-data-types)</span><span class="sxs-lookup"><span data-stu-id="77c8d-120">Type: [**UINT**](/windows/desktop/winprog/windows-data-types)</span></span>
 
-<span data-ttu-id="02ba1-121">Die Anzahl der Elemente in den *Arrays Strides,* *WindowSize,* *StartPadding* und *EndPadding.*</span><span class="sxs-lookup"><span data-stu-id="02ba1-121">The number of elements in the *Strides*, *WindowSize*, *StartPadding*, and *EndPadding* arrays.</span></span> <span data-ttu-id="02ba1-122">Dieser Wert muss der Anzahl räumlicher Dimensionen entspricht.</span><span class="sxs-lookup"><span data-stu-id="02ba1-122">This value must equal the spatial dimension count.</span></span> <span data-ttu-id="02ba1-123">Die Anzahl räumlicher Dimensionen beträgt 2, wenn 4D-Tensoren bereitgestellt werden, oder 3, wenn 5D-Tensoren bereitgestellt werden.</span><span class="sxs-lookup"><span data-stu-id="02ba1-123">The spatial dimension count is 2 if 4D tensors are provided, or 3 if 5D tensors are provided.</span></span>
+<span data-ttu-id="77c8d-121">Die Anzahl der Elemente in den Arrays *Strides,* *WindowSize,* *StartPadding* und *EndPadding.*</span><span class="sxs-lookup"><span data-stu-id="77c8d-121">The number of elements in the *Strides*, *WindowSize*, *StartPadding*, and *EndPadding* arrays.</span></span> <span data-ttu-id="77c8d-122">Dieser Wert muss der Anzahl räumlicher Dimensionen entsprechen.</span><span class="sxs-lookup"><span data-stu-id="77c8d-122">This value must equal the spatial dimension count.</span></span> <span data-ttu-id="77c8d-123">Die Anzahl räumlicher Dimensionen ist 2, wenn 4D-Tensors bereitgestellt werden, oder 3, wenn 5D-Tensors bereitgestellt werden.</span><span class="sxs-lookup"><span data-stu-id="77c8d-123">The spatial dimension count is 2 if 4D tensors are provided, or 3 if 5D tensors are provided.</span></span>
 
 `Strides`
 
-<span data-ttu-id="02ba1-124">Typ: \_ Field_size \_ (DimensionCount) **const [UINT](/windows/win32/winprog/windows-data-types) \***</span><span class="sxs-lookup"><span data-stu-id="02ba1-124">Type: \_Field_size\_(DimensionCount) **const [UINT](/windows/win32/winprog/windows-data-types)\***</span></span>
+<span data-ttu-id="77c8d-124">Typ: \_ Field_size \_ (DimensionCount) **const [UINT](../../winprog/windows-data-types.md) \***</span><span class="sxs-lookup"><span data-stu-id="77c8d-124">Type: \_Field_size\_(DimensionCount) **const [UINT](../../winprog/windows-data-types.md)\***</span></span>
 
-<span data-ttu-id="02ba1-125">Weitere Informationen finden Sie unter *Strides* in [DML_AVERAGE_POOLING_OPERATOR_DESC](/windows/win32/api/directml/ns-directml-dml_average_pooling_operator_desc).</span><span class="sxs-lookup"><span data-stu-id="02ba1-125">See *Strides* in [DML_AVERAGE_POOLING_OPERATOR_DESC](/windows/win32/api/directml/ns-directml-dml_average_pooling_operator_desc).</span></span>
+<span data-ttu-id="77c8d-125">Weitere *Informationen finden Sie* unter [Strides](/windows/win32/api/directml/ns-directml-dml_average_pooling_operator_desc)in DML_AVERAGE_POOLING_OPERATOR_DESC .</span><span class="sxs-lookup"><span data-stu-id="77c8d-125">See *Strides* in [DML_AVERAGE_POOLING_OPERATOR_DESC](/windows/win32/api/directml/ns-directml-dml_average_pooling_operator_desc).</span></span>
 
 `WindowSize`
 
-<span data-ttu-id="02ba1-126">Typ: \_ Field_size \_ (DimensionCount) **const [UINT](/windows/win32/winprog/windows-data-types) \***</span><span class="sxs-lookup"><span data-stu-id="02ba1-126">Type: \_Field_size\_(DimensionCount) **const [UINT](/windows/win32/winprog/windows-data-types)\***</span></span>
+<span data-ttu-id="77c8d-126">Typ: \_ Field_size \_ (DimensionCount) **const [UINT](../../winprog/windows-data-types.md) \***</span><span class="sxs-lookup"><span data-stu-id="77c8d-126">Type: \_Field_size\_(DimensionCount) **const [UINT](../../winprog/windows-data-types.md)\***</span></span>
 
-<span data-ttu-id="02ba1-127">Weitere Informationen finden Sie unter *WindowSize* in [DML_AVERAGE_POOLING_OPERATOR_DESC](/windows/win32/api/directml/ns-directml-dml_average_pooling_operator_desc).</span><span class="sxs-lookup"><span data-stu-id="02ba1-127">See *WindowSize* in [DML_AVERAGE_POOLING_OPERATOR_DESC](/windows/win32/api/directml/ns-directml-dml_average_pooling_operator_desc).</span></span>
+<span data-ttu-id="77c8d-127">Weitere *Informationen finden Sie unter WindowSize* in [DML_AVERAGE_POOLING_OPERATOR_DESC](/windows/win32/api/directml/ns-directml-dml_average_pooling_operator_desc).</span><span class="sxs-lookup"><span data-stu-id="77c8d-127">See *WindowSize* in [DML_AVERAGE_POOLING_OPERATOR_DESC](/windows/win32/api/directml/ns-directml-dml_average_pooling_operator_desc).</span></span>
 
 `StartPadding`
 
-<span data-ttu-id="02ba1-128">Typ: \_ Field_size \_ (DimensionCount) **const [UINT](/windows/win32/winprog/windows-data-types) \***</span><span class="sxs-lookup"><span data-stu-id="02ba1-128">Type: \_Field_size\_(DimensionCount) **const [UINT](/windows/win32/winprog/windows-data-types)\***</span></span>
+<span data-ttu-id="77c8d-128">Typ: \_ Field_size \_ (DimensionCount) **const [UINT](../../winprog/windows-data-types.md) \***</span><span class="sxs-lookup"><span data-stu-id="77c8d-128">Type: \_Field_size\_(DimensionCount) **const [UINT](../../winprog/windows-data-types.md)\***</span></span>
 
-<span data-ttu-id="02ba1-129">Weitere Informationen finden Sie unter *StartPadding* in [DML_AVERAGE_POOLING_OPERATOR_DESC](/windows/win32/api/directml/ns-directml-dml_average_pooling_operator_desc).</span><span class="sxs-lookup"><span data-stu-id="02ba1-129">See *StartPadding* in [DML_AVERAGE_POOLING_OPERATOR_DESC](/windows/win32/api/directml/ns-directml-dml_average_pooling_operator_desc).</span></span>
+<span data-ttu-id="77c8d-129">Weitere *Informationen finden Sie unter StartPadding* in [DML_AVERAGE_POOLING_OPERATOR_DESC](/windows/win32/api/directml/ns-directml-dml_average_pooling_operator_desc).</span><span class="sxs-lookup"><span data-stu-id="77c8d-129">See *StartPadding* in [DML_AVERAGE_POOLING_OPERATOR_DESC](/windows/win32/api/directml/ns-directml-dml_average_pooling_operator_desc).</span></span>
 
 `EndPadding`
 
-<span data-ttu-id="02ba1-130">Typ: \_ Field_size \_ (DimensionCount) **const [UINT](/windows/win32/winprog/windows-data-types) \***</span><span class="sxs-lookup"><span data-stu-id="02ba1-130">Type: \_Field_size\_(DimensionCount) **const [UINT](/windows/win32/winprog/windows-data-types)\***</span></span>
+<span data-ttu-id="77c8d-130">Typ: \_ Field_size \_ (DimensionCount) **const [UINT](../../winprog/windows-data-types.md) \***</span><span class="sxs-lookup"><span data-stu-id="77c8d-130">Type: \_Field_size\_(DimensionCount) **const [UINT](../../winprog/windows-data-types.md)\***</span></span>
 
-<span data-ttu-id="02ba1-131">Weitere Informationen finden Sie unter *EndPadding* in [DML_AVERAGE_POOLING_OPERATOR_DESC](/windows/win32/api/directml/ns-directml-dml_average_pooling_operator_desc).</span><span class="sxs-lookup"><span data-stu-id="02ba1-131">See *EndPadding* in [DML_AVERAGE_POOLING_OPERATOR_DESC](/windows/win32/api/directml/ns-directml-dml_average_pooling_operator_desc).</span></span>
+<span data-ttu-id="77c8d-131">Weitere *Informationen finden Sie unter EndPadding* in [DML_AVERAGE_POOLING_OPERATOR_DESC](/windows/win32/api/directml/ns-directml-dml_average_pooling_operator_desc).</span><span class="sxs-lookup"><span data-stu-id="77c8d-131">See *EndPadding* in [DML_AVERAGE_POOLING_OPERATOR_DESC](/windows/win32/api/directml/ns-directml-dml_average_pooling_operator_desc).</span></span>
 
 `IncludePadding`
 
-<span data-ttu-id="02ba1-132">Typ: <b> <a href="/windows/win32/winprog/windows-data-types">BOOL</a></b></span><span class="sxs-lookup"><span data-stu-id="02ba1-132">Type: <b><a href="/windows/win32/winprog/windows-data-types">BOOL</a></b></span></span>
+<span data-ttu-id="77c8d-132">Typ: <b> <a href="/windows/win32/winprog/windows-data-types">BOOL</a></b></span><span class="sxs-lookup"><span data-stu-id="77c8d-132">Type: <b><a href="/windows/win32/winprog/windows-data-types">BOOL</a></b></span></span>
 
-<span data-ttu-id="02ba1-133">Weitere Informationen finden Sie unter *IncludePadding* in [DML_AVERAGE_POOLING_OPERATOR_DESC](/windows/win32/api/directml/ns-directml-dml_average_pooling_operator_desc).</span><span class="sxs-lookup"><span data-stu-id="02ba1-133">See *IncludePadding* in [DML_AVERAGE_POOLING_OPERATOR_DESC](/windows/win32/api/directml/ns-directml-dml_average_pooling_operator_desc).</span></span>
+<span data-ttu-id="77c8d-133">Weitere *Informationen finden Sie unter IncludePadding* in [DML_AVERAGE_POOLING_OPERATOR_DESC](/windows/win32/api/directml/ns-directml-dml_average_pooling_operator_desc).</span><span class="sxs-lookup"><span data-stu-id="77c8d-133">See *IncludePadding* in [DML_AVERAGE_POOLING_OPERATOR_DESC](/windows/win32/api/directml/ns-directml-dml_average_pooling_operator_desc).</span></span>
 
-## <a name="availability"></a><span data-ttu-id="02ba1-134">Verfügbarkeit</span><span class="sxs-lookup"><span data-stu-id="02ba1-134">Availability</span></span>
-<span data-ttu-id="02ba1-135">Dieser Operator wurde in `DML_FEATURE_LEVEL_3_0` eingeführt.</span><span class="sxs-lookup"><span data-stu-id="02ba1-135">This operator was introduced in `DML_FEATURE_LEVEL_3_0`.</span></span>
+## <a name="availability"></a><span data-ttu-id="77c8d-134">Verfügbarkeit</span><span class="sxs-lookup"><span data-stu-id="77c8d-134">Availability</span></span>
+<span data-ttu-id="77c8d-135">Dieser Operator wurde in `DML_FEATURE_LEVEL_3_0` eingeführt.</span><span class="sxs-lookup"><span data-stu-id="77c8d-135">This operator was introduced in `DML_FEATURE_LEVEL_3_0`.</span></span>
 
-## <a name="tensor-constraints"></a><span data-ttu-id="02ba1-136">Tensoreinschränkungen</span><span class="sxs-lookup"><span data-stu-id="02ba1-136">Tensor constraints</span></span>
-<span data-ttu-id="02ba1-137">*InputGradientTensor* und *OutputGradientTensor* müssen den gleichen *DataType* und *DimensionCount* aufweisen.</span><span class="sxs-lookup"><span data-stu-id="02ba1-137">*InputGradientTensor* and *OutputGradientTensor* must have the same *DataType* and *DimensionCount*.</span></span>
+## <a name="tensor-constraints"></a><span data-ttu-id="77c8d-136">Tensor-Einschränkungen</span><span class="sxs-lookup"><span data-stu-id="77c8d-136">Tensor constraints</span></span>
+<span data-ttu-id="77c8d-137">*InputGradientTensor und* *OutputGradientTensor* müssen denselben *DataType und* *DimensionCount aufweisen.*</span><span class="sxs-lookup"><span data-stu-id="77c8d-137">*InputGradientTensor* and *OutputGradientTensor* must have the same *DataType* and *DimensionCount*.</span></span>
 
-## <a name="tensor-support"></a><span data-ttu-id="02ba1-138">Tensor-Unterstützung</span><span class="sxs-lookup"><span data-stu-id="02ba1-138">Tensor support</span></span>
-| <span data-ttu-id="02ba1-139">Tensor</span><span class="sxs-lookup"><span data-stu-id="02ba1-139">Tensor</span></span> | <span data-ttu-id="02ba1-140">Typ</span><span class="sxs-lookup"><span data-stu-id="02ba1-140">Kind</span></span> | <span data-ttu-id="02ba1-141">Unterstützte Dimensionsanzahlen</span><span class="sxs-lookup"><span data-stu-id="02ba1-141">Supported dimension counts</span></span> | <span data-ttu-id="02ba1-142">Unterstützte Datentypen</span><span class="sxs-lookup"><span data-stu-id="02ba1-142">Supported data types</span></span> |
+## <a name="tensor-support"></a><span data-ttu-id="77c8d-138">Tensor-Unterstützung</span><span class="sxs-lookup"><span data-stu-id="77c8d-138">Tensor support</span></span>
+| <span data-ttu-id="77c8d-139">Tensor</span><span class="sxs-lookup"><span data-stu-id="77c8d-139">Tensor</span></span> | <span data-ttu-id="77c8d-140">Typ</span><span class="sxs-lookup"><span data-stu-id="77c8d-140">Kind</span></span> | <span data-ttu-id="77c8d-141">Unterstützte Dimensionsanzahl</span><span class="sxs-lookup"><span data-stu-id="77c8d-141">Supported dimension counts</span></span> | <span data-ttu-id="77c8d-142">Unterstützte Datentypen</span><span class="sxs-lookup"><span data-stu-id="77c8d-142">Supported data types</span></span> |
 | ------ | ---- | -------------------------- | -------------------- |
-| <span data-ttu-id="02ba1-143">InputGradientTensor</span><span class="sxs-lookup"><span data-stu-id="02ba1-143">InputGradientTensor</span></span> | <span data-ttu-id="02ba1-144">Eingabe</span><span class="sxs-lookup"><span data-stu-id="02ba1-144">Input</span></span> | <span data-ttu-id="02ba1-145">4 bis 5</span><span class="sxs-lookup"><span data-stu-id="02ba1-145">4 to 5</span></span> | <span data-ttu-id="02ba1-146">FLOAT32, FLOAT16</span><span class="sxs-lookup"><span data-stu-id="02ba1-146">FLOAT32, FLOAT16</span></span> |
-| <span data-ttu-id="02ba1-147">OutputGradientTensor</span><span class="sxs-lookup"><span data-stu-id="02ba1-147">OutputGradientTensor</span></span> | <span data-ttu-id="02ba1-148">Ausgabe</span><span class="sxs-lookup"><span data-stu-id="02ba1-148">Output</span></span> | <span data-ttu-id="02ba1-149">4 bis 5</span><span class="sxs-lookup"><span data-stu-id="02ba1-149">4 to 5</span></span> | <span data-ttu-id="02ba1-150">FLOAT32, FLOAT16</span><span class="sxs-lookup"><span data-stu-id="02ba1-150">FLOAT32, FLOAT16</span></span> |
+| <span data-ttu-id="77c8d-143">InputGradientTensor</span><span class="sxs-lookup"><span data-stu-id="77c8d-143">InputGradientTensor</span></span> | <span data-ttu-id="77c8d-144">Eingabe</span><span class="sxs-lookup"><span data-stu-id="77c8d-144">Input</span></span> | <span data-ttu-id="77c8d-145">4 bis 5</span><span class="sxs-lookup"><span data-stu-id="77c8d-145">4 to 5</span></span> | <span data-ttu-id="77c8d-146">FLOAT32, FLOAT16</span><span class="sxs-lookup"><span data-stu-id="77c8d-146">FLOAT32, FLOAT16</span></span> |
+| <span data-ttu-id="77c8d-147">OutputGradientTensor</span><span class="sxs-lookup"><span data-stu-id="77c8d-147">OutputGradientTensor</span></span> | <span data-ttu-id="77c8d-148">Ausgabe</span><span class="sxs-lookup"><span data-stu-id="77c8d-148">Output</span></span> | <span data-ttu-id="77c8d-149">4 bis 5</span><span class="sxs-lookup"><span data-stu-id="77c8d-149">4 to 5</span></span> | <span data-ttu-id="77c8d-150">FLOAT32, FLOAT16</span><span class="sxs-lookup"><span data-stu-id="77c8d-150">FLOAT32, FLOAT16</span></span> |
 
-## <a name="requirements"></a><span data-ttu-id="02ba1-151">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="02ba1-151">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="77c8d-151">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="77c8d-151">Requirements</span></span>
 | &nbsp; | &nbsp; |
 | ---- |:---- |
-| <span data-ttu-id="02ba1-152">**Header**</span><span class="sxs-lookup"><span data-stu-id="02ba1-152">**Header**</span></span> | <span data-ttu-id="02ba1-153">directml.h</span><span class="sxs-lookup"><span data-stu-id="02ba1-153">directml.h</span></span> |
+| <span data-ttu-id="77c8d-152">**Header**</span><span class="sxs-lookup"><span data-stu-id="77c8d-152">**Header**</span></span> | <span data-ttu-id="77c8d-153">directml.h</span><span class="sxs-lookup"><span data-stu-id="77c8d-153">directml.h</span></span> |
