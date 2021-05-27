@@ -1,8 +1,8 @@
 ---
-title: PROPSHEETPAGE-Struktur (prsht. h)
-description: Definiert eine Seite in einem Eigenschaften Blatt.
+title: PROPSHEETPAGE-Struktur (Prsht.h)
+description: Definiert eine Seite in einem Eigenschaftenblatt.
 keywords:
-- PROPSHEETPAGE-Struktur von Windows-Steuerelementen
+- PROPSHEETPAGE-Struktur Windows-Steuerelemente
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 02/23/2021
-ms.openlocfilehash: cdde3f27900c7599b33af706d8fac9f9e8127b6f
-ms.sourcegitcommit: 11f52354f570aacaf1ba2a266b2e507abd73352a
+ms.openlocfilehash: 78e1d1e4e6b4b2067083443bdb5dc4db5df59558
+ms.sourcegitcommit: f848119a8faa29b27585f4df53f6e50ee9666684
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "106365879"
+ms.lasthandoff: 05/27/2021
+ms.locfileid: "110550345"
 ---
 # <a name="propsheetpage-structure"></a>PROPSHEETPAGE-Struktur
 
-Definiert eine Seite in einem Eigenschaften Blatt.
+Definiert eine Seite in einem Eigenschaftenblatt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -61,7 +61,7 @@ typedef struct {
 
 Typ: [DWORD](../winprog/windows-data-types.md)
 
-Größe der-Struktur in Bytes.
+Größe dieser Struktur in Bytes.
 
 *dwFlags* 
 
@@ -71,134 +71,134 @@ Flags, die angeben, welche Optionen beim Erstellen der Eigenschaftenblattseite v
 
 | Wert | Bedeutung |
 |-------|---------|
-| PSP_DEFAULT | Verwendet die Standardbedeutung für alle Strukturmember. Dieses Flag wird nicht unterstützt, wenn der Aero-Style-Assistent ([PSH_AEROWIZARD](pss-propsheetheader.md)) verwendet wird. |
-| PSP_DLGINDIRECT | Erstellt die Seite aus der Dialogfeld Vorlage im Speicher, auf die der *presource* -Member verweist. Die [PropertySheet](/windows/win32/api/prsht/nf-prsht-propertysheeta) -Funktion geht davon aus, dass die Vorlage, die sich im Arbeitsspeicher befindet, nicht schreibgeschützt ist. Eine schreibgeschützte Vorlage führt in einigen Versionen von Windows zu einer Ausnahme. |
-| PSP_HASHELP | Aktiviert die Schaltfläche " **Hilfe** " des Eigenschaften Blatts, wenn die Seite aktiv ist. Dieses Flag wird nicht unterstützt, wenn der Aero-Style-Assistent ([PSH_AEROWIZARD](pss-propsheetheader.md)) verwendet wird. |
-| PSP_HIDEHEADER | [Version 5,80](common-control-versions.md) und höher. Bewirkt, dass die Eigenschaften Seite des Assistenten den Header Bereich beim Auswählen der Seite ausblenden. Wenn ein Wasserzeichen angegeben wurde, wird es auf der linken Seite der Seite gezeichnet. Dieses Flag sollte für Willkommens-und Abschluss Seiten festgelegt und für innere Seiten ausgelassen werden. Dieses Flag wird nicht unterstützt, wenn der Aero-Style-Assistent ([PSH_AEROWIZARD](pss-propsheetheader.md)) verwendet wird. |
-| PSP_PREMATURE | [Version 4,71](common-control-versions.md) oder höher. Bewirkt, dass die Seite beim Erstellen des Eigenschaften Blatts erstellt wird. Wenn dieses Flag nicht angegeben wird, wird die Seite erst erstellt, wenn Sie zum ersten Mal ausgewählt wird. Dieses Flag wird nicht unterstützt, wenn der Aero-Style-Assistent ([PSH_AEROWIZARD](pss-propsheetheader.md)) verwendet wird. |
-| PSP_RTLREADING | Kehrt die Richtung um, in der " *psztitle* " angezeigt wird. Normal Fenster zeigt den gesamten Text, einschließlich *psztitle*, von links nach rechts (LTR) an. Für Sprachen, wie z. b. Hebräisch oder Arabisch, die von rechts nach links (RTL) gelesen wurden, kann ein Fenster gespiegelt werden, und der gesamte Text wird RTL angezeigt. Wenn PSP_RTLREADING festgelegt ist, liest *psztitle* stattdessen RTL in einem normalen übergeordneten Fenster und LTR in einem gespiegelten übergeordneten Fenster. |
-| PSP_USECALLBACK | Ruft die Funktion auf, die vom *pfncallback* -Member angegeben wird, wenn die von dieser Struktur definierte Eigenschaften Blattseite erstellt oder zerstört wird. |
-| PSP_USEFUSIONCONTEXT | [Version 6,0](common-control-versions.md) und höher. Verwenden Sie einen Aktivierungs Kontext. Wenn Sie einen Aktivierungs Kontext verwenden möchten, müssen Sie dieses Flag festlegen und " *hactctx*" das Aktivierungs Kontext Handle zuweisen. Siehe Hinweise. |
-| PSP_USEHEADERSUBTITLE | [Version 5,80](common-control-versions.md) oder höher. Zeigt die Zeichenfolge an, auf die vom *pszheaderunter Titel* -Member als Untertitel des Header Bereichs einer Wizard97 Seite verwiesen wird. Um dieses Flag zu verwenden, müssen Sie auch das PSH_WIZARD97-Flag im *dwFlags* -Member der zugeordneten [propsheeder](pss-propsheetheader.md) -Struktur festlegen. Das PSP_USEHEADERSUBTITLE-Flag wird ignoriert, wenn PSP_HIDEHEADER festgelegt ist. Im Aero-Assistenten wird der Titel am oberen Rand des Client Bereichs angezeigt. |
-| PSP_USEHEADERTITLE | [Version 5,80](common-control-versions.md) oder höher. Zeigt die Zeichenfolge an, auf die der *pszheadertitle* -Member als Titel in der Kopfzeile einer Wizard97-inneren Seite zeigt. Sie müssen auch das PSH_WIZARD97-Flag im *dwFlags* -Member der zugeordneten [propsheedie Ader](pss-propsheetheader.md) -Struktur festlegen. Das PSP_USEHEADERTITLE-Flag wird ignoriert, wenn PSP_HIDEHEADER festgelegt ist. Dieses Flag wird nicht unterstützt, wenn der Aero-Style-Assistent ([PSH_AEROWIZARD](pss-propsheetheader.md)) verwendet wird. |
-| PSP_USEHICON | Verwendet *HICON* als kleines Symbol auf der Registerkarte für die Seite. Dieses Flag wird nicht unterstützt, wenn der Aero-Style-Assistent ([PSH_AEROWIZARD](pss-propsheetheader.md)) verwendet wird.  |
-| PSP_USEICONID | Verwendet *pszicon* als Namen der zu ladenden Symbol Ressource und wird als kleines Symbol auf der Registerkarte der Seite verwendet. Dieses Flag wird nicht unterstützt, wenn der Aero-Style-Assistent ([PSH_AEROWIZARD](pss-propsheetheader.md)) verwendet wird. |
-| PSP_USEREFPARENT | Verwaltet den Verweis Zähler, der vom *pkrefparent* -Element für die Lebensdauer der von dieser Struktur erstellten Eigenschaften Blattseite angegeben wird. |
-| PSP_USETITLE | Verwendet das *psztitle* -Element als Titel des Eigenschaften Blatts-Dialog Felds anstelle des Titels, der in der Dialogfeld Vorlage gespeichert ist. Dieses Flag wird nicht unterstützt, wenn der Aero-Style-Assistent ([PSH_AEROWIZARD](pss-propsheetheader.md)) verwendet wird. |
+| PSP_DEFAULT | Verwendet die Standardmeinung für alle Strukturmember. Dieses Flag wird nicht unterstützt, wenn sie den Assistenten im Stil von Styles ([PSH_AEROWIZARD](pss-propsheetheader.md)) verwenden. |
+| PSP_DLGINDIRECT | Erstellt die Seite aus der Dialogfeldvorlage im Arbeitsspeicher, auf die der *pResource-Member* zeigt. Die [PropertySheet-Funktion](/windows/win32/api/prsht/nf-prsht-propertysheeta) geht davon aus, dass die Vorlage, die sich im Arbeitsspeicher befindet, nicht schreibgeschützt ist. Eine schreibgeschützte Vorlage verursacht in einigen Versionen von Windows eine Ausnahme. |
+| PSP_HASHELP | Aktiviert die **Hilfeschaltfläche** des Eigenschaftenblatts, wenn die Seite aktiv ist. Dieses Flag wird nicht unterstützt, wenn sie den Assistenten im Stil von Styles ([PSH_AEROWIZARD](pss-propsheetheader.md)) verwenden. |
+| PSP_HIDEHEADER | [Version 5.80](common-control-versions.md) und höher. Bewirkt, dass das Eigenschaftenblatt des Assistenten den Headerbereich ausblendet, wenn die Seite ausgewählt ist. Wenn ein Wasserzeichen angegeben wurde, wird es links auf der Seite gestrichen. Dieses Flag sollte für Begrüßungs- und Vervollständigungsseiten festgelegt und für innere Seiten weggelassen werden. Dieses Flag wird nicht unterstützt, wenn sie den Assistenten im Stil von Stil[(PSH_AEROWIZARD) verwendet.](pss-propsheetheader.md) |
+| PSP_PREMATURE | [Version 4.71](common-control-versions.md) oder höher. Bewirkt, dass die Seite erstellt wird, wenn das Eigenschaftenblatt erstellt wird. Wenn dieses Flag nicht angegeben wird, wird die Seite erst erstellt, wenn sie zum ersten Mal ausgewählt wird. Dieses Flag wird nicht unterstützt, wenn sie den Assistenten im Stil von Stil[(PSH_AEROWIZARD) verwendet.](pss-propsheetheader.md) |
+| PSP_RTLREADING | Kehrt die Richtung um, in der *pszTitle* angezeigt wird. Normale Fenster zeigen den ganzen Text an, einschließlich *pszTitle*, von links nach rechts (LTR). Für Sprachen wie Hebräisch oder Arabisch, die von rechts nach links (RTL) lesen, kann ein Fenster gespiegelt werden, und der ganze Text wird angezeigt. Wenn PSP_RTLREADING festgelegt ist, liest *pszTitle* stattdessen RTL in einem normalen übergeordneten Fenster und LTR in einem gespiegelten übergeordneten Fenster. |
+| PSP_USECALLBACK | Ruft die funktion auf, die vom *pfnCallback-Member beim* Erstellen oder Zerstören der durch diese Struktur definierten Eigenschaftenblattseite angegeben wird. |
+| PSP_USEFUSIONCONTEXT | [Version 6.0](common-control-versions.md) und höher. Verwenden Sie einen Aktivierungskontext. Um einen Aktivierungskontext zu verwenden, müssen Sie dieses Flag festlegen und *hActCtx* das Aktivierungskontexthandle zuweisen. Weitere Informationen finden Sie in den Hinweisen. |
+| PSP_USEHEADERSUBTITLE | [Version 5.80](common-control-versions.md) oder höher. Zeigt die Zeichenfolge an, auf die das *pszHeaderSubTitle-Element* als Untertitel des Headerbereichs einer Wizard97-Seite zeigt. Um dieses Flag zu verwenden, müssen Sie auch das PSH_WIZARD97-Flag im *dwFlags-Member* der zugeordneten [PROPSHEETHEADER-Struktur](pss-propsheetheader.md) festlegen. Das flag PSP_USEHEADERSUBTITLE wird ignoriert, wenn PSP_HIDEHEADER festgelegt ist. In Assistenten im Stil von Styles wird der Titel am oberen Rand des Clientbereichs angezeigt. |
+| PSP_USEHEADERTITLE | [Version 5.80](common-control-versions.md) oder höher. Zeigt die Zeichenfolge, auf die das *pszHeaderTitle-Element* zeigt, als Titel im Header einer Assistenten97-Innenseite an. Sie müssen auch das flag PSH_WIZARD97 im *dwFlags-Member* der zugeordneten [PROPSHEETHEADER-Struktur](pss-propsheetheader.md) festlegen. Das flag PSP_USEHEADERTITLE wird ignoriert, wenn PSP_HIDEHEADER festgelegt ist. Dieses Flag wird nicht unterstützt, wenn sie den Assistenten im Stil von Styles ([PSH_AEROWIZARD](pss-propsheetheader.md)) verwenden. |
+| PSP_USEHICON | Verwendet *hIcon* als kleines Symbol auf der Registerkarte für die Seite. Dieses Flag wird nicht unterstützt, wenn sie den Assistenten im Stil von Styles ([PSH_AEROWIZARD](pss-propsheetheader.md)) verwenden.  |
+| PSP_USEICONID | Verwendet *pszIcon* als Namen der zu ladende Symbolressource und verwendet als kleines Symbol auf der Registerkarte für die Seite. Dieses Flag wird nicht unterstützt, wenn sie den Assistenten im Stil von Styles ([PSH_AEROWIZARD](pss-propsheetheader.md)) verwenden. |
+| PSP_USEREFPARENT | Behält die vom *pcRefParent-Element* angegebene Verweisanzahl für die Lebensdauer der Eigenschaftenblattseite bei, die aus dieser Struktur erstellt wurde. |
+| PSP_USETITLE | Verwendet das *pszTitle-Member* als Titel des Eigenschaftenblattdialogfelds anstelle des in der Dialogfeldvorlage gespeicherten Titels. Dieses Flag wird nicht unterstützt, wenn sie den Assistenten im Stil von Stil[(PSH_AEROWIZARD) verwendet.](pss-propsheetheader.md) |
 
 *hInstance* 
 
 Typ: [HINSTANCE](../winprog/windows-data-types.md)
 
-Handle für die-Instanz, aus der eine Symbol-oder Zeichen folgen Ressource geladen werden soll. Wenn das Element *pszicon*, *psztitle*, *pszheadertitle* oder *pszheaderunter Titel* eine zu ladende Ressource identifiziert, muss *HINSTANCE* angegeben werden.
+Handle für die Instanz, aus der ein Symbol oder eine Zeichenfolgenressource geladen werden soll. Wenn das *PszIcon-,* *pszTitle-,* *pszHeaderTitle-* oder *pszHeaderSubTitle-Member* eine zu ladende Ressource identifiziert, muss *hInstance* angegeben werden.
 
-*psztemplate* 
+*pszTemplate* 
 
 Typ: [LPCSTR](../winprog/windows-data-types.md)
 
-Dialog Feld Vorlage, die zum Erstellen der Seite verwendet werden soll. Dieser Member kann entweder den Ressourcen Bezeichner der Vorlage oder die Adresse einer Zeichenfolge angeben, die den Namen der Vorlage angibt. Wenn das PSP_DLGINDIRECT-Flag im *dwFlags* -Member festgelegt ist, wird *psztemplate* ignoriert. Dieser Member wird als Union with *presource* deklariert.
+Dialogfeldvorlage, die zum Erstellen der Seite verwendet werden soll. Dieser Member kann entweder den Ressourcenbezeichner der Vorlage oder die Adresse einer Zeichenfolge angeben, die den Namen der Vorlage angibt. Wenn das PSP_DLGINDIRECT im *dwFlags-Member* festgelegt ist, *wird pszTemplate* ignoriert. Dieser Member wird als Union mit *pResource deklariert.*
 
-*vorab Quelle* 
+*pResource* 
 
-Geben Sie Folgendes ein: **lpcdlgtemplate**
+Typ: **LPCDLGTEMPLATE**
 
-Zeiger auf eine Dialogfeld Vorlage im Speicher. Die [PropertySheet](/windows/win32/api/prsht/nf-prsht-propertysheeta) -Funktion geht davon aus, dass die Vorlage nicht schreibgeschützt ist. Eine schreibgeschützte Vorlage führt in einigen Versionen von Windows zu einer Ausnahme. Wenn Sie diesen Member verwenden möchten, müssen Sie das PSP_DLGINDIRECT-Flag im *dwFlags* -Member festlegen. Dieser Member wird als Union mit *psztemplate* deklariert.
+Zeiger auf eine Dialogfeldvorlage im Arbeitsspeicher. Die [PropertySheet-Funktion](/windows/win32/api/prsht/nf-prsht-propertysheeta) geht davon aus, dass die Vorlage nicht schreibgeschützt ist. Eine schreibgeschützte Vorlage verursacht in einigen Versionen von Windows eine Ausnahme. Um diesen Member zu verwenden, müssen Sie das PSP_DLGINDIRECT im *dwFlags-Member* festlegen. Dieser Member wird als Union mit *pszTemplate* deklariert.
 
 *hIcon* 
 
 Typ: [HICON](../winprog/windows-data-types.md)
 
-Handle für das Symbol, das als Symbol auf der Registerkarte der Seite verwendet werden soll. Wenn der *dwFlags* -Member keine PSP_USEHICON enthält, wird dieser Member ignoriert. Dieser Member wird als Union mit *pszicon* deklariert.
+Greifen Sie auf das Symbol zu, das als Symbol auf der Registerkarte der Seite verwendet werden soll. Wenn der *dwFlags-Member* PSP_USEHICON nicht enthält, wird dieser Member ignoriert. Dieser Member wird mit *pszIcon* als Union deklariert.
 
-*pszicon* 
-
-Typ: [LPCSTR](../winprog/windows-data-types.md)
-
-Symbol Ressource, die als Symbol auf der Registerkarte der Seite verwendet werden soll. Dieser Member kann entweder den Bezeichner der Symbol Ressource oder die Adresse der Zeichenfolge angeben, die den Namen der Symbol Ressource angibt. Wenn Sie diesen Member verwenden möchten, müssen Sie das PSP_USEICONID-Flag im *dwFlags* -Member festlegen. Dieser Member wird als Union mit *HICON* deklariert.
-
-*psztitle* 
+*pszIcon* 
 
 Typ: [LPCSTR](../winprog/windows-data-types.md)
 
-Der Titel des Eigenschaften Blatts-Dialog Felds. Dieser Titel überschreibt den in der Dialogfeld Vorlage angegebenen Titel. Dieser Member kann entweder den Bezeichner einer Zeichen folgen Ressource oder die Adresse einer Zeichenfolge angeben, die den Titel angibt. Wenn Sie diesen Member verwenden möchten, müssen Sie das PSP_USETITLE-Flag im *dwFlags* -Member festlegen.
+Symbolressource, die als Symbol auf der Registerkarte der Seite verwendet werden soll. Dieser Member kann entweder den Bezeichner der Symbolressource oder die Adresse der Zeichenfolge angeben, die den Namen der Symbolressource angibt. Um diesen Member zu verwenden, müssen Sie das PSP_USEICONID-Flag im *dwFlags-Member* festlegen. Dieser Member wird mit *hIcon* als Union deklariert.
 
-*pfndlgproc* 
+*pszTitle* 
 
-Typ: **DlgProc**
+Typ: [LPCSTR](../winprog/windows-data-types.md)
 
-Zeiger auf die Dialogfeld Prozedur für die Seite. Da die Seiten als nicht modante Dialogfelder erstellt werden, darf die Dialogfeld Prozedur die [EndDialog](/windows/win32/api/winuser/nf-winuser-enddialog) -Funktion nicht aufzurufen.
+Titel des Eigenschaftenblattdialogfelds. Dieser Titel überschreibt den in der Dialogfeldvorlage angegebenen Titel. Dieser Member kann entweder den Bezeichner einer Zeichenfolgenressource oder die Adresse einer Zeichenfolge angeben, die den Titel angibt. Um diesen Member zu verwenden, müssen Sie das PSP_USETITLE-Flag im *dwFlags-Member* festlegen.
+
+*pfnDlgProc* 
+
+Typ: **DLGPROC**
+
+Zeiger auf die Dialogfeldprozedur für die Seite. Da die Seiten als moduslose Dialogfelder erstellt werden, darf die Dialogfeldprozedur die [EndDialog-Funktion nicht](/windows/win32/api/winuser/nf-winuser-enddialog) aufrufen.
 
 *lParam* 
 
 Typ: [LPARAM](../winprog/windows-data-types.md)
 
-Wenn die Seite erstellt wird, wird eine Kopie der **PROPSHEETPAGE** -Struktur der Seite mit einer [WM_INITDIALOG](/windows/win32/dlgbox/wm-initdialog) Meldung an die Dialogfeld Prozedur übermittelt. Das *LPARAM* -Element wird bereitgestellt, damit Sie anwendungsspezifische Informationen an die Dialogfeld Prozedur übergeben können. Dies hat keine Auswirkungen auf die eigentliche Seite.
+Wenn die Seite erstellt wird, wird eine Kopie der **PROPSHEETPAGE-Struktur** der Seite an die Dialogfeldprozedur mit einer WM_INITDIALOG [übergeben.](../dlgbox/wm-initdialog.md) Das *lParam-Member* wird bereitgestellt, damit Sie anwendungsspezifische Informationen an die Dialogfeldprozedur übergeben können. Dies hat keine Auswirkungen auf die eigentliche Seite.
 
-*pfncallback* 
+*pfnCallback* 
 
-Typ: **lpfnpspcallback**
+Typ: **LPFNPSPCALLBACK**
 
-Zeiger auf eine Anwendungs definierte Rückruffunktion, die aufgerufen wird, wenn die Seite erstellt wird, und wenn Sie gelöscht werden soll. Weitere Informationen zur Rückruffunktion finden Sie unter [lpfnpspcallbacka callback function](/windows/win32/api/prsht/nc-prsht-lpfnpspcallbacka). Wenn Sie diesen Member verwenden möchten, müssen Sie das PSP_USECALLBACK-Flag im *dwFlags* -Member festlegen.
+Zeiger auf eine anwendungsdefinierte Rückruffunktion, die aufgerufen wird, wenn die Seite erstellt und zerstört wird. Weitere Informationen zur Rückruffunktion finden Sie unter [LPFNPSPCALLBACKA-Rückruffunktion.](/windows/win32/api/prsht/nc-prsht-lpfnpspcallbacka) Um diesen Member zu verwenden, müssen Sie das PSP_USECALLBACK im *dwFlags-Member* festlegen.
 
-*pkref Parent* 
+*pcRefParent* 
 
-Typ: [uint *](../winprog/windows-data-types.md)
+Typ: [UINT*](../winprog/windows-data-types.md)
 
-Zeiger auf den Verweis zählungs Wert. Wenn Sie diesen Member verwenden möchten, müssen Sie das PSP_USEREFPARENT-Flag im *dwFlags* -Member festlegen.
+Zeiger auf den Verweiszählerwert. Um diesen Member zu verwenden, müssen Sie das PSP_USEREFPARENT im *dwFlags-Member* festlegen.
 
 > [!NOTE]
-> Wenn eine Eigenschaften Blattseite erstellt wird, wird der Wert, auf den von *pkrefparent* verwiesen wird, inkrementiert. Sie erstellen eine Eigenschaften Blattseite implizit, indem Sie das PSH_PROPSHEETPAGE-Flag im *dwFlags* -Member von [propsheeder Ader](pss-propsheetheader.md) festlegen und die [PropertySheet](/windows/win32/api/prsht/nf-prsht-propertysheeta) -Funktion aufrufen. Sie können dies explizit mithilfe der Funktion "Funktion" von " [kreatepropertysheetpage](/windows/win32/api/prsht/nf-prsht-createpropertysheetpagea) " erreichen. Wenn eine Eigenschaften Blattseite zerstört wird, wird der Wert, auf den der *pkrefparent* -Member verweist, verringert. Dies erfolgt automatisch, wenn das Eigenschaften Blatt zerstört wird. Sie können eine Eigenschaften Blattseite mithilfe der [destroypropertysheetpage](/windows/win32/api/prsht/nf-prsht-destroypropertysheetpage) -Funktion explizit zerstören.
+> Wenn eine Eigenschaftenblattseite erstellt wird, wird der Wert, auf den *pcRefParent* zeigt, inkrementiert. Sie erstellen implizit eine Eigenschaftenblattseite, indem Sie das PSH_PROPSHEETPAGE im *dwFlags-Member* von [PROPSHEETHEADER](pss-propsheetheader.md) festlegen und die [PropertySheet-Funktion](/windows/win32/api/prsht/nf-prsht-propertysheeta) aufrufen. Sie können dies explizit mithilfe der [CreatePropertySheetPage-Funktion](/windows/win32/api/prsht/nf-prsht-createpropertysheetpagea) tun. Wenn eine Eigenschaftenblattseite zerstört wird, wird der Wert, auf den das *pcRefParent-Element* zeigt, dekrementiert. Dies erfolgt automatisch, wenn das Eigenschaftenblatt zerstört wird. Sie können eine Eigenschaftenblattseite explizit mithilfe der [DestroyPropertySheetPage-Funktion](/windows/win32/api/prsht/nf-prsht-destroypropertysheetpage) zerstören.
 
-*pszheadertitle* 
+*pszHeaderTitle* 
 
 Typ: [LPCTSTR](../winprog/windows-data-types.md)
 
-[Version 5,80](common-control-versions.md) oder höher. Titel des Header Bereichs. Um dieses Element im Wizard97-Assistenten zu verwenden, müssen Sie auch die folgenden Schritte ausführen:
+[Version 5.80](common-control-versions.md) oder höher. Titel des Headerbereichs. Um dieses Element im Assistenten97-Stil zu verwenden, müssen Sie auch folgende Schritte ausführen:
 
-* Legen Sie das PSP_USEHEADERTITLE-Flag im *dwFlags* -Member fest.
-* Legen Sie das PSH_WIZARD97-Flag im *dwFlags* -Member der [propsheeder](pss-propsheetheader.md) -Struktur der Seite fest.
-* Stellen Sie sicher, dass das PSP_HIDEHEADER-Flag im *dwFlags* -Member nicht festgelegt ist.
+* Legen Sie das PSP_USEHEADERTITLE-Flag im *dwFlags-Member* fest.
+* Legen Sie das PSH_WIZARD97-Flag im *dwFlags-Member* der [PROPSHEETHEADER-Struktur](pss-propsheetheader.md) der Seite fest.
+* Stellen Sie sicher, dass das PSP_HIDEHEADER-Flag im *dwFlags-Member* nicht festgelegt ist.
 
-*pszheaderuntertitel* 
+*pszHeaderSubTitle* 
 
 Typ: [LPCTSTR](../winprog/windows-data-types.md)
 
-[Version 5,80](common-control-versions.md) oder höher. Untertitel des Header Bereichs. Um dieses Element zu verwenden, müssen Sie die folgenden Schritte ausführen:
+[Version 5.80](common-control-versions.md) oder höher. Untertitel des Headerbereichs. Um diesen Member verwenden zu können, müssen Sie folgende Schritte ausführen:
 
-* Legen Sie das PSP_USEHEADERSUBTITLE-Flag im *dwFlags* -Member fest.
-* Legen Sie das PSH_WIZARD97-Flag im *dwFlags* -Member der [propsheeder](pss-propsheetheader.md) -Struktur der Seite fest.
-* Stellen Sie sicher, dass das PSP_HIDEHEADER-Flag im *dwFlags* -Member nicht festgelegt ist.
+* Legen Sie das PSP_USEHEADERSUBTITLE-Flag im *dwFlags-Member* fest.
+* Legen Sie das PSH_WIZARD97-Flag im *dwFlags-Member* der [PROPSHEETHEADER-Struktur](pss-propsheetheader.md) der Seite fest.
+* Stellen Sie sicher, dass das PSP_HIDEHEADER-Flag im *dwFlags-Member* nicht festgelegt ist.
 
 > [!NOTE]
-> Dieser Member wird ignoriert, wenn der Aero-Style-Assistent ([PSH_AEROWIZARD](pss-propsheetheader.md)) verwendet wird.
+> Dieser Member wird ignoriert, wenn der Assistent im Stil von Styles ([PSH_AEROWIZARD](pss-propsheetheader.md)) verwendet wird.
 
-*hactctx* 
+*hActCtx* 
 
-Typ: [handle](../winprog/windows-data-types.md)
+Typ: [HANDLE](../winprog/windows-data-types.md)
 
-[Version 6,0](common-control-versions.md) oder höher. Ein Aktivierungs Kontext handle. Legen Sie diesen Member auf das Handle fest, das zurückgegeben wird, wenn Sie den Aktivierungs Kontext mit " [kreateactctx](/windows/win32/api/winbase/nf-winbase-createactctxa)" erstellen. Das System aktiviert diesen Kontext, bevor das Dialogfeld erstellt wird. Sie müssen diesen Member nicht verwenden, wenn Sie ein globales Manifest verwenden.
+[Version 6.0](common-control-versions.md) oder höher. Ein Aktivierungskontexthand handle. Legen Sie diesen Member auf das Handle fest, das zurückgegeben wird, wenn Sie den Aktivierungskontext mit [CreateActCtx erstellen.](/windows/win32/api/winbase/nf-winbase-createactctxa) Das System aktiviert diesen Kontext, bevor das Dialogfeld erstellt wird. Sie müssen diesen Member nicht verwenden, wenn Sie ein globales Manifest verwenden.
 
-*hbmheader* 
+*hbmHeader* 
 
-Typ: [hBitmap](../winprog/windows-data-types.md)
+Typ: [HBITMAP](../winprog/windows-data-types.md)
 
-Dieser Member wird als Union mit *pszbmheader* deklariert.
+Dieser Member wird als Union mit *psmusheader deklariert.*
 
-*pszbmheader*
+*pswittmHeader*
 
 Typ: [LPCSTR](../winprog/windows-data-types.md)
 
-Dieser Member wird als Union mit *hbmheader* deklariert.
+Dieser Member wird als Union mit *hbmHeader deklariert.*
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Comctl32.dll Version 6 und höher ist nicht Verteil Bar. Wenn Sie Comctl32.dll Version 6 oder höher verwenden möchten, geben Sie die DLL-Datei in einem Manifest an. Weitere Informationen zu Manifesten finden Sie unter [Aktivieren von visuellen Stilen](cookbook-overview.md).
+Comctl32.dll Version 6 und höher sind nicht verteilbar. Wenn Sie Comctl32.dll Version 6 oder höher verwenden, geben Sie die DLL-Datei in einem Manifest an. Weitere Informationen zu Manifesten finden Sie unter [Aktivieren von visuellen Stilen.](cookbook-overview.md)
 
 ## <a name="requirements"></a>Anforderungen
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client) | Nur Windows Vista \[ -Desktop-Apps\]                                    |
-| Unterstützte Mindestversion (Server) | Nur Windows Server 2003 \[ -Desktop-Apps\]                              |
-| Header                   | Prsht. h |
-| Unicode- und ANSI-Name                   | **Propsheetheiaderw** (Unicode) und **propshee-Adera** (ANSI) |
+| Unterstützte Mindestversion (Client) | Nur Windows \[ Vista-Desktop-Apps\]                                    |
+| Unterstützte Mindestversion (Server) | Nur Windows Server \[ 2003-Desktop-Apps\]                              |
+| Header                   | Prsht.h |
+| Unicode- und ANSI-Name                   | **PROPSHEETHEADERW** (Unicode) und **PROPSHEETHEADERA** (ANSI) |

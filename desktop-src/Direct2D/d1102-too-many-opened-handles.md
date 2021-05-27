@@ -1,7 +1,7 @@
 ---
 title: D1102 zu viele geöffnete Handles
 ms.assetid: a7e52926-a4e6-4030-9e90-9df2b3e3edde
-description: Eine große Anzahl nicht veröffentlichter Schnittstellen wurde gefunden. Aktuell sind von dieser DLL nicht freigegebene Schnittstellen zugeordnet.
+description: Es wurde eine große Anzahl von nicht freigegebenen Schnittstellen gefunden. Derzeit sind von dieser DLL nicht freigegebene Schnittstellen zugeordnet.
 keywords:
 - D1102 zu viele geöffnete Handles Direct2D
 topic_type:
@@ -13,43 +13,43 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 ms.custom: seodec18
-ms.openlocfilehash: e3c12c2e2a7b47535e830c6ed65a828a16672bbf
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 2d59e110aece56a31af71e75e9a8eca0bb008961
+ms.sourcegitcommit: f848119a8faa29b27585f4df53f6e50ee9666684
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "103718053"
+ms.lasthandoff: 05/27/2021
+ms.locfileid: "110548685"
 ---
-# <a name="d1102-too-many-opened-handles"></a>D1102: zu viele geöffnete Handles
+# <a name="d1102-too-many-opened-handles"></a>D1102: Zu viele geöffnete Handles
 
-Eine große Anzahl nicht veröffentlichter Schnittstellen wurde gefunden. Derzeit sind \[  \] von dieser DLL zahlreiche nicht freigegebene Schnittstellen zugeordnet.
+Es wurde eine große Anzahl von nicht freigegebenen Schnittstellen gefunden. Derzeit sind \[ *von* dieser DLL nicht \] freigegebene Schnittstellen zugeordnet.
 
 ## <a name="placeholders"></a>Platzhalter
 
 <dl> <dt>
 
-<span id="number"></span><span id="NUMBER"></span>*einigen*
+<span id="number"></span><span id="NUMBER"></span>*Anzahl*
 </dt> <dd>
 
-Die Anzahl der nicht veröffentlichten Schnittstellen, die von dieser DLL zugewiesen wurden.
+Die Anzahl von nicht freigegebenen Schnittstellen, die von dieser DLL zugeordnet werden.
 
 </dd> </dl> 
 
-|             |         |
+| &nbsp;      |  &nbsp; |
 |-------------|---------|
 | Fehlerstufe | Warnung |
 
 
 
- 
+ 
 
 ## <a name="possible-causes"></a>Mögliche Ursachen
 
-Es wurde eine große Anzahl von Ressourcen erstellt. Obwohl Direct2D über keine Obergrenze für die Anzahl der verfügbaren Ressourcen (mit Ausnahme des Speichers) verfügt, gibt die debugschicht diese Informations Meldung aus, wenn 1001 Live-Objekte, 2001 Live-Objekte oder 3001 Live-Objekte usw. auftreten, da dies auf einen Fehler in der Anwendung hindeuten könnte.
+Eine große Anzahl von Ressourcen wurde erstellt. Obwohl Direct2D keine Obergrenze für die Anzahl der verfügbaren Ressourcen (außer Arbeitsspeicher) hat, gibt die Debugebene diese Informationsmeldung aus, wenn 1001 Liveobjekte, 2001 Liveobjekte oder 3001 Liveobjekte usw. auftreten, da dies auf einen Verlust in der Anwendung hinweisen kann.
 
- 
+ 
 
- 
+ 
 
 
 

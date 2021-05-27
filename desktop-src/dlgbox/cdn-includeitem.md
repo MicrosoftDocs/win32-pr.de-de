@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2a91c61e4a7c2786e67ed28e2c62e5963762659c
-ms.sourcegitcommit: 8e083a10b3a480dec8a8d74dbd5889f49dea15e4
+ms.openlocfilehash: 78f25ea90f8eb37c829cdc86e89f6d7e8cad2312
+ms.sourcegitcommit: f848119a8faa29b27585f4df53f6e50ee9666684
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/17/2021
-ms.locfileid: "107590777"
+ms.lasthandoff: 05/27/2021
+ms.locfileid: "110549255"
 ---
 # <a name="cdn_includeitem-notification-code"></a>CDN \_ INCLUDEITEM-Benachrichtigungscode
 
-\[Ab Windows Vista wurden  **die** allgemeinen Dialogfelder Öffnen und Speichern unter durch den Allgemeinen [Elementdialog ersetzt.](/windows/win32/shell/common-file-dialog) Es wird empfohlen, anstelle dieser Dialogfelder aus der Common Dialog Box Library die API für den Allgemeinen Elementdialog zu verwenden.\]
+\[Ab Windows Vista wurden  **die** allgemeinen Dialogfelder Öffnen und Speichern unter durch den Allgemeinen [Elementdialog ersetzt.](../shell/common-file-dialog.md) Es wird empfohlen, anstelle dieser Dialogfelder aus der Common Dialog Box Library die API für den Allgemeinen Elementdialog zu verwenden.\]
 
 Wird über das **Dialogfeld Öffnen** oder Speichern **unter** gesendet, um zu bestimmen, ob im Dialogfeld ein Element in der Elementliste eines Shellordners angezeigt werden soll. Wenn der Benutzer einen Ordner öffnet, sendet das Dialogfeld eine **CDN \_ INCLUDEITEM-Benachrichtigung** für jedes Element im Ordner. Das Dialogfeld sendet diese Benachrichtigung nur, wenn das **OFN \_ ENABLEINCLUDENOTIFY-Flag** beim Erstellen des Dialogfelds festgelegt wurde.
 
@@ -65,7 +65,7 @@ Wenn die [*HOOKprozedur OFNHookProc*](/windows/win32/api/commdlg/nc-commdlg-lpof
 
 Um das Element ein include zu erhalten, geben Sie einen Wert ungleich 0 (null) aus der Hookprozedur zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Das Dialogfeld enthält immer Elemente mit den Attributen **SFGAO \_ FILESYSTEM** und **SFGAO \_ FILESYSANCESTOR,** unabhängig vom wert, der von **CDN \_ INCLUDEITEM zurückgegeben wird.**
 
@@ -81,11 +81,11 @@ Das Dialogfeld enthält immer Elemente mit den Attributen **SFGAO \_ FILESYSTEM*
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
 [**GetOpenFileName**](/windows/desktop/api/Commdlg/nf-commdlg-getopenfilenamea)
@@ -105,6 +105,4 @@ Das Dialogfeld enthält immer Elemente mit den Attributen **SFGAO \_ FILESYSTEM*
 
 [Allgemeine Dialogfeldbibliothek](common-dialog-box-library.md)
 </dt> </dl>
-
- 
 

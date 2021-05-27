@@ -12,12 +12,12 @@ api_type:
 - DllExport
 ms.date: 07/02/2019
 ms.topic: reference
-ms.openlocfilehash: f49876a5eb9d7700aeb347e5168ca3e8c1e239e0
-ms.sourcegitcommit: 59ec383331366f8a62c94bb88468ca03e95c43f8
+ms.openlocfilehash: 9147dbdfe53aa21c5fa77849e3599ded69c8f243
+ms.sourcegitcommit: f848119a8faa29b27585f4df53f6e50ee9666684
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "107380624"
+ms.lasthandoff: 05/27/2021
+ms.locfileid: "110549385"
 ---
 # <a name="id2d1rendertargetcreatesolidcolorbrush-methods"></a>ID2D1RenderTarget::CreateSolidColorBrush-Methoden
 
@@ -29,9 +29,9 @@ Erstellt einen neuen [**ID2D1SolidColorBrush,**](/windows/win32/api/d2d1/nf-d2d1
 
 | Methode                                                                                                                                                                                                           | Beschreibung                                                                                                                             |
 |:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------------------------------|
-| [**CreateSolidColorBrush(D2D1 \_ COLOR \_ F&,ID2D1SolidColorBrush \* \* )**](https://msdn.microsoft.com/library/Dd371867(v=VS.85).aspx)                                                      | Erstellt eine neue [**ID2D1SolidColorBrush**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-createsolidcolorbrush(constd2d1_color_f__constd2d1_brush_properties__id2d1solidcolorbrush)) mit der angegebenen Farbe und einer Basisdurchlässigkeit von 1,0f. <br/> |
-| [**CreateSolidColorBrush(D2D1 \_ COLOR \_ F&,D2D1 \_ BRUSH PROPERTIES \_&,ID2D1SolidColorBrush \* \* )**](https://msdn.microsoft.com/library/Dd371867(v=VS.85).aspx)   | Erstellt eine neue [**ID2D1SolidColorBrush**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-createsolidcolorbrush(constd2d1_color_f__constd2d1_brush_properties__id2d1solidcolorbrush)) mit der angegebenen Farbe und Deckkraft. <br/>                |
-| [**CreateSolidColorBrush(D2D1 \_ COLOR F , \_ \* D2D1 \_ BRUSH PROPERTIES \_ \* ,ID2D1SolidColorBrush \* \* )**](https://msdn.microsoft.com/library/Dd371867(v=VS.85).aspx) | Erstellt eine neue [**ID2D1SolidColorBrush**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-createsolidcolorbrush(constd2d1_color_f__constd2d1_brush_properties__id2d1solidcolorbrush)) mit der angegebenen Farbe und Deckkraft. <br/>                |
+| [**CreateSolidColorBrush(D2D1 \_ COLOR \_ F&,ID2D1SolidColorBrush \* \* )**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-createsolidcolorbrush(constd2d1_color_f__constd2d1_brush_properties__id2d1solidcolorbrush))                                                      | Erstellt eine neue [**ID2D1SolidColorBrush**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-createsolidcolorbrush(constd2d1_color_f__constd2d1_brush_properties__id2d1solidcolorbrush)) mit der angegebenen Farbe und einer Basisdurchlässigkeit von 1,0f. <br/> |
+| [**CreateSolidColorBrush(D2D1 \_ COLOR \_ F&,D2D1 \_ BRUSH PROPERTIES \_&,ID2D1SolidColorBrush \* \* )**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-createsolidcolorbrush(constd2d1_color_f__constd2d1_brush_properties__id2d1solidcolorbrush))   | Erstellt eine neue [**ID2D1SolidColorBrush**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-createsolidcolorbrush(constd2d1_color_f__constd2d1_brush_properties__id2d1solidcolorbrush)) mit der angegebenen Farbe und Deckkraft. <br/>                |
+| [**CreateSolidColorBrush(D2D1 \_ COLOR F , \_ \* D2D1 \_ BRUSH PROPERTIES \_ \* ,ID2D1SolidColorBrush \* \* )**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-createsolidcolorbrush(constd2d1_color_f__constd2d1_brush_properties__id2d1solidcolorbrush)) | Erstellt eine neue [**ID2D1SolidColorBrush**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-createsolidcolorbrush(constd2d1_color_f__constd2d1_brush_properties__id2d1solidcolorbrush)) mit der angegebenen Farbe und Deckkraft. <br/>                |
 
 
 
@@ -51,7 +51,7 @@ Ein Beispiel finden Sie unter [Erstellen eines Volltonfarbpinsels.](how-to-creat
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

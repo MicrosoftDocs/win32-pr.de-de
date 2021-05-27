@@ -1,7 +1,7 @@
 ---
 UID: NS:directml.DML_QUANTIZED_LINEAR_CONVOLUTION_OPERATOR_DESC
 title: DML_QUANTIZED_LINEAR_CONVOLUTION_OPERATOR_DESC
-description: Führt eine Konvolution des *FilterTensor* mit dem *InputTensor aus.* Dieser Operator führt die Vorwärtskonvolution für quantisierte Daten aus. Dieser Operator entspricht mathematischer Entsprechung der Dequantisierung der Eingaben, der Verschachtelung und der anschließenden Quantisierung der Ausgabe.
+description: Führt eine Konvolution des *FilterTensor* mit dem *InputTensor aus.* Dieser Operator führt die Vorwärtskonvolution für quantisierte Daten aus. Dieser Operator entspricht mathematisch der Dequantisierung der Eingaben, der Verschachtelung und der anschließenden Quantisierung der Ausgabe.
 helpviewer_keywords:
 - DML_QUANTIZED_LINEAR_CONVOLUTION_OPERATOR_DESC
 - DML_QUANTIZED_LINEAR_CONVOLUTION_OPERATOR_DESC structure
@@ -44,15 +44,15 @@ api_location:
 - DirectML.h
 api_name:
 - DML_QUANTIZED_LINEAR_CONVOLUTION_OPERATOR_DESC
-ms.openlocfilehash: 4dd50d80dfe4ae60e3fe7e67124ef00bfbc7bf2b
-ms.sourcegitcommit: 8e1f04c7e3c5c850071bac8d173f9441aab0dfed
+ms.openlocfilehash: 5b98e1f57268cab70c2fb672991bce3d67419db8
+ms.sourcegitcommit: f848119a8faa29b27585f4df53f6e50ee9666684
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "107803879"
+ms.lasthandoff: 05/27/2021
+ms.locfileid: "110549784"
 ---
 # <a name="dml_quantized_linear_convolution_operator_desc-structure-directmlh"></a>DML_QUANTIZED_LINEAR_CONVOLUTION_OPERATOR_DESC-Struktur (directml.h)
-Führt eine Konvolution des *FilterTensor* mit dem *InputTensor aus.* Dieser Operator führt die Vorwärtskonvolution für quantisierte Daten aus. Dieser Operator entspricht mathematischer Entsprechung der Dequantisierung der Eingaben, der Verschachtelung und der anschließenden Quantisierung der Ausgabe. 
+Führt eine Konvolution des *FilterTensor* mit dem *InputTensor aus.* Dieser Operator führt die Vorwärtskonvolution für quantisierte Daten aus. Dieser Operator entspricht mathematisch der Dequantisierung der Eingaben, der Verschachtelung und der anschließenden Quantisierung der Ausgabe. 
 
 Die von diesem Operator verwendeten linearen Quantisierungsfunktionen sind die linearen Quantisierungsfunktionen.
 
@@ -176,28 +176,28 @@ Die Anzahl der räumlichen Dimensionen für den Konvolutionsvorgang. Räumliche 
 
 `Strides`
 
-Typ: \_ Field_size \_ (DimensionCount) **const [UINT](/windows/win32/winprog/windows-data-types) \***
+Typ: \_ Field_size \_ (DimensionCount) **const [UINT](../../winprog/windows-data-types.md) \***
 
 Die Fortschritte des Konvolutionsvorgangs. Diese Schritte werden auf den Konvolutionsfilter angewendet. Sie sind von den Tensorschritten getrennt, die in [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc)enthalten sind.
 
 
 `Dilations`
 
-Typ: \_ Field_size \_ (DimensionCount) **const [UINT](/windows/win32/winprog/windows-data-types) \***
+Typ: \_ Field_size \_ (DimensionCount) **const [UINT](../../winprog/windows-data-types.md) \***
 
 Die Dilationen des Konvolutionsvorgangs. Dilationen sind Schritte, die auf die Elemente des Filterkernels angewendet werden. Dies hat den Effekt, dass ein größerer Filterkernel simuliert wird, indem die internen Filterkernelelemente mit Nullen aufschlossen werden.
 
 
 `StartPadding`
 
-Typ: \_ Field_size \_ (DimensionCount) **const [UINT](/windows/win32/winprog/windows-data-types) \***
+Typ: \_ Field_size \_ (DimensionCount) **const [UINT](../../winprog/windows-data-types.md) \***
 
-Die Auf padding-Werte, die auf den Anfang jeder räumlichen Dimension des Filters und den Eingabetensor des Konvolutionsvorgang angewendet werden sollen.
+Die Auf padding-Werte, die am Anfang jeder räumlichen Dimension des Filters und des Eingabetensors des Konvolutionsvorgang angewendet werden sollen.
 
 
 `EndPadding`
 
-Typ: \_ Field_size \_ (DimensionCount) **const [UINT](/windows/win32/winprog/windows-data-types) \***
+Typ: \_ Field_size \_ (DimensionCount) **const [UINT](../../winprog/windows-data-types.md) \***
 
 Die Auf padding-Werte, die auf das Ende jeder räumlichen Dimension des Filters und des Eingabetensors des Konvolutionsvorgang angewendet werden sollen.
 

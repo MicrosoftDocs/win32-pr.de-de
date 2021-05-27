@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 74d75bb3d3ac486bbb43545df80c67383a7655b8
-ms.sourcegitcommit: 8e083a10b3a480dec8a8d74dbd5889f49dea15e4
+ms.openlocfilehash: 89c82a9144717224871caecf44da352a4e01cac2
+ms.sourcegitcommit: f848119a8faa29b27585f4df53f6e50ee9666684
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/17/2021
-ms.locfileid: "107590887"
+ms.lasthandoff: 05/27/2021
+ms.locfileid: "110550125"
 ---
 # <a name="cdm_setcontroltext-message"></a>CDM \_ SETCONTROLTEXT-Meldung
 
-\[Ab Windows Vista wurden  **die** allgemeinen Dialogfelder Öffnen und Speichern unter durch den Allgemeinen [Elementdialog ersetzt.](/windows/win32/shell/common-file-dialog) Es wird empfohlen, anstelle dieser Dialogfelder aus der Common Dialog Box Library die API für den Allgemeinen Elementdialog zu verwenden.\]
+\[Ab Windows Vista wurden  **die** allgemeinen Dialogfelder Öffnen und Speichern unter durch den Allgemeinen [Elementdialog ersetzt.](../shell/common-file-dialog.md) Es wird empfohlen, anstelle dieser Dialogfelder aus der Common Dialog Box Library die API für den Allgemeinen Elementdialog zu verwenden.\]
 
 Legt den Text für das angegebene  Steuerelement im Dialogfeld Öffnen oder Speichern unter im **Explorer-Stil** fest. Das Dialogfeld muss mit dem **\_ OFN-EXPLORER-Flag** erstellt worden sein. Andernfalls schlägt die Meldung fehl.
 
@@ -58,7 +58,7 @@ Der neue Text für das Steuerelement.
 
 Diese Meldung gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Das entsprechende Makro lautet wie folgt:
 
@@ -78,11 +78,11 @@ void CommDlg_OpenSave_SetControlText(hwnd, wparam, lparam)
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
 [**GetOpenFileName**](/windows/desktop/api/Commdlg/nf-commdlg-getopenfilenamea)
@@ -99,6 +99,4 @@ void CommDlg_OpenSave_SetControlText(hwnd, wparam, lparam)
 
 [Allgemeine Dialogfeldbibliothek](common-dialog-box-library.md)
 </dt> </dl>
-
- 
 

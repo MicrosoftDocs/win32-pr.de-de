@@ -1,43 +1,43 @@
 ---
-title: Ressourcen Bindung in HLSL
-description: In diesem Thema werden einige spezifische Features der Verwendung des HLSL-Shader-Modells 5,1 (High Level Shader Language) mit Direct3D 12 beschrieben.
+title: Ressourcenbindung in HLSL
+description: In diesem Thema werden einige spezifische Features der Verwendung des HLSL-Shadermodells 5.1 (High Level Shader Language) mit Direct3D 12 beschrieben.
 ms.assetid: 3CD4BDAD-8AE3-4DE0-B3F8-9C9F9E83BBE9
 ms.localizationpriority: high
 ms.topic: article
 ms.date: 08/27/2019
-ms.openlocfilehash: 01039550f07de57fb7b2f1e815bced02e549c741
-ms.sourcegitcommit: 60120d10c957815d79af566c72e5f4bcfaca4025
+ms.openlocfilehash: 711ccdee71ff916445be68d03b84b7621aa04cf3
+ms.sourcegitcommit: f848119a8faa29b27585f4df53f6e50ee9666684
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/23/2021
-ms.locfileid: "104837488"
+ms.lasthandoff: 05/27/2021
+ms.locfileid: "110550385"
 ---
-# <a name="resource-binding-in-hlsl"></a>Ressourcen Bindung in HLSL
+# <a name="resource-binding-in-hlsl"></a>Ressourcenbindung in HLSL
 
-In diesem Thema werden einige spezifische Features der Verwendung des HLSL- [Shader-Modells 5,1](/windows/desktop/direct3dhlsl/shader-model-5-1) (High Level Shader Language) mit Direct3D 12 beschrieben. Alle Direct3D 12-Hardware unterstützt das Shader-Modell 5,1. die Unterstützung für dieses Modell hängt daher nicht von der Hardware Funktionsebene ab.
+In diesem Thema werden einige spezifische Features der Verwendung des [HLSL-Shadermodells 5.1](/windows/desktop/direct3dhlsl/shader-model-5-1) (High Level Shader Language) mit Direct3D 12 beschrieben. Alle Direct3D 12-Hardware unterstützt shader Model 5.1, sodass die Unterstützung für dieses Modell nicht von der Hardwarefeatureebene abhängig ist.
 
 ## <a name="resource-types-and-arrays"></a>Ressourcentypen und Arrays
 
-Die Ressourcen Syntax von Shader Model 5 (SM 5.0) verwendet das- `register` Schlüsselwort, um wichtige Informationen über die Ressource an den HLSL-Compiler weiterzugeben. Die folgende Anweisung deklariert z. b. ein Array aus vier Texturen, die an Slots T3, T4, T5 und T6 gebunden sind. T3 ist der einzige in der-Anweisung angezeigte Registrierungs Slot, der einfach der erste im Array von vier ist.
+Die Ressourcensyntax des Shaders Model 5 (SM5.0) verwendet das Schlüsselwort , um wichtige Informationen zur Ressource an den `register` HLSL-Compiler weiter zu übergeben. Die folgende Anweisung deklariert beispielsweise ein Array von vier Texturen, die an den Slots t3, t4, t5 und t6 gebunden sind. t3 ist der einzige Registerslot, der in der -Anweisung angezeigt wird und einfach der erste im Array von vier ist.
 
 ``` syntax
 Texture2D<float4> tex1[4] : register(t3)
 ```
 
-Die Ressourcen Syntax von Shader Model 5,1 (SM 5.1) in HLSL basiert auf der vorhandenen Register Resource-Syntax, um das Portieren zu vereinfachen. Direct3D 12-Ressourcen in HLSL sind an virtuelle Register innerhalb logischer Register Plätze gebunden:
+Die Ressourcensyntax des Shadermodells 5.1 (SM5.1) in HLSL basiert auf der vorhandenen Syntax für Registerressourcen, um eine einfachere Portierung zu ermöglichen. Direct3D 12-Ressourcen in HLSL sind an virtuelle Register innerhalb logischer Registerräume gebunden:
 
--   t – für Shader-Ressourcen Sichten (SRV)
--   s – für Samplern
--   u – für ungeordnete Zugriffs Sichten (UAV)
--   b – für konstantenpuffersichten (CBV)
+-   t – für Shaderressourcenansichten (SRV)
+-   s – für Sampler
+-   u – für ungeordnete Zugriffsansichten (UAV)
+-   b – für konstante Pufferansichten (CBV)
 
-Die Stamm Signatur, die auf den Shader verweist, muss mit den deklarierten Register Slots kompatibel sein. Der folgende Teil einer Stamm Signatur ist beispielsweise mit der Verwendung von Textur Slots T3 bis T6 kompatibel, da er eine Deskriptortabelle mit Slots t0 bis T98 beschreibt.
+Die Stammsignatur, die auf den Shader verweisen soll, muss mit den deklarierten Registerslots kompatibel sein. Beispielsweise wäre der folgende Teil einer Stammsignatur mit der Verwendung von Texturslots t3 bis t6 kompatibel, da er eine Deskriptortabelle mit den Slots t0 bis t98 beschreibt.
 
 ``` syntax
 DescriptorTable( CBV(b1), SRV(t0,numDescriptors=99), CBV(b2) )
 ```
 
-Eine Ressourcen Deklaration kann ein Skalar, ein 1D-Array oder ein mehrdimensionales Array sein:
+Eine Ressourcendeklaration kann ein Skalar, ein 1D-Array oder ein mehrdimensionales Array sein:
 
 ``` syntax
 Texture2D<float4> tex1 : register(t3,  space0)
@@ -45,32 +45,32 @@ Texture2D<float4> tex2[4] : register(t10)
 Texture2D<float4> tex3[7][5][3] : register(t20, space1)
 ```
 
-SM 5.1 verwendet dieselben Ressourcentypen und Elementtypen wie SM 5.0. Die SM 5.1-Deklarations Limits sind flexibler und werden nur durch die Lauf Zeit-/Hardwarelimits eingeschränkt. Das `space` Schlüsselwort gibt an, an welchen logischen Register Bereich die deklarierte Variable gebunden ist. Wenn das `space` Schlüsselwort weggelassen wird, wird der standardmäßige Speicherplatz Index 0 implizit dem Bereich zugewiesen (sodass sich der `tex2` obige Bereich in befindet `space0` ). `register(t3,  space0)` führt niemals zu einem Konflikt mit `register(t3,  space1)` und mit einem Array in einem anderen Bereich, das T3 enthalten kann.
+SM5.1 verwendet dieselben Ressourcentypen und Elementtypen wie SM5.0. SM5.1-Deklarationsgrenzwerte sind flexibler und nur durch die Laufzeit-/Hardwaregrenzwerte eingeschränkt. Das `space` Schlüsselwort gibt an, an welchen logischen Registerraum die deklarierte Variable gebunden ist. Wenn das `space` Schlüsselwort ausgelassen wird, wird der Standardspeicherplatzindex von 0 implizit dem Bereich zugewiesen (sodass sich der `tex2` obige Bereich in `space0` befindet). `register(t3,  space0)` tritt niemals ein Konflikt mit `register(t3,  space1)` oder einem Array in einem anderen Bereich auf, das t3 enthalten kann.
 
-Eine Array Ressource kann eine unbegrenzte Größe aufweisen, die durch Angabe der ersten zu lefenden Dimension deklariert wird, oder 0:
+Eine Arrayressource kann eine unbegrenzte Größe aufweisen, die deklariert wird, indem die erste Dimension als leer angegeben wird, oder 0:
 
 ``` syntax
 Texture2D<float4> tex1[] : register(t0)
 ```
 
-Die entsprechende Deskriptortabelle könnte wie folgt lauten:
+Die entsprechende Deskriptortabelle kann folgende sein:
 
 ``` syntax
 DescriptorTable( CBV(b1), UAV(u0, numDescriptors = 4), SRV(t0, numDescriptors=unbounded)
 ```
 
-Ein ungebundenes Array in HLSL entspricht einer festgelegten Anzahl von `numDescriptors` in der Deskriptortabelle, und eine festgelegte Größe im HLSL entspricht einer ungebundenen Deklaration in der Deskriptortabelle.
+Ein ungebundenes Array in HLSL entspricht einer festen Zahl, `numDescriptors` die mit in der Deskriptortabelle festgelegt ist, und eine feste Größe in der HLSL stimmt mit einer ungebundenen Deklaration in der Deskriptortabelle überein.
 
-Mehrdimensionale Arrays, einschließlich einer unbegrenzten Größe, sind zulässig. Diese mehrdimensionalen Arrays werden im Register Bereich reduziert.
+Mehrdimensionale Arrays sind zulässig, einschließlich einer unbegrenzten Größe. Diese mehrdimensionalen Arrays werden im Registerbereich flacher.
 
 ``` syntax
 Texture2D<float4> tex2[3000][10] : register(t0, space0); // t0-t29999 in space0
 Texture2D<float4> tex3[0][5][3] : register(t5, space1)
 ```
 
-Das Aliasing von Ressourcen Bereichen ist nicht zulässig. Mit anderen Worten: für jeden Ressourcentyp (t, s, u, b) dürfen sich deklarierte Register Bereiche nicht überlappen. Dies schließt auch unbegrenzte Bereiche ein. Bereiche, die in verschiedenen Register Bereichen deklariert werden, überlappen sich niemals Beachten Sie, dass `tex2` sich die unbegrenzte (oben) in befindet `space0` , während sich die unbegrenzte Grenze `tex3` in befindet `space1` , sodass Sie sich nicht überlappen.
+Das Aliasing von Ressourcenbereichen ist nicht zulässig. Anders ausgedrückt: Für jeden Ressourcentyp (t, s, u, b) dürfen deklarierte Registerbereiche nicht überlappen. Dies schließt auch nicht gebundene Bereiche ein. Bereiche, die in unterschiedlichen Registerräumen deklariert werden, überlappen sich nie. Beachten Sie, dass sich "unbounded" `tex2` (oben) in befindet, während sich `space0` "unbounded" `tex3` in `space1` befindet, sodass sie sich nicht überlappen.
 
-Der Zugriff auf Ressourcen, die als Arrays deklariert wurden, ist so einfach wie die Indizierung.
+Der Zugriff auf Ressourcen, die als Arrays deklariert wurden, ist so einfach wie das Indizieren.
 
 ``` syntax
 Texture2D<float4> tex1[400] : register(t3);
@@ -78,19 +78,19 @@ sampler samp[7] : register(s0);
 tex1[myMaterialID].Sample(samp[samplerID], texCoords);
 ```
 
-Es gibt eine wichtige Standard Beschränkung für die Verwendung der Indizes ( `myMaterialID` und `samplerID` im obigen Code) darin, dass Sie innerhalb einer [Welle](../direct3dhlsl/hlsl-shader-model-6-0-features-for-direct3d-12.md#terminology)nicht variieren dürfen. Sogar das Ändern des Indexes auf der Grundlage der instanziierungsanzahl als unterschiedlich.
+Es gibt eine wichtige Standardeinschränkung für die Verwendung der Indizes ( `myMaterialID` und `samplerID` im obigen Code), da sie innerhalb einer [Welle](../direct3dhlsl/hlsl-shader-model-6-0-features-for-direct3d-12.md#terminology)nicht variieren dürfen. Selbst das Ändern des Indexes basierend auf der Instanziierung zählt als variierend.
 
-Wenn Sie den Index variieren müssen, geben Sie den `NonUniformResourceIndex` Qualifizierer für den Index an, z. b.:
+Wenn der Index variieren muss, geben Sie den `NonUniformResourceIndex` Qualifizierer für den Index an, z. B.:
 
 ``` syntax
 tex1[NonUniformResourceIndex(myMaterialID)].Sample(samp[NonUniformResourceIndex(samplerID)], texCoords);
 ```
 
-Bei bestimmter Hardware generiert die Verwendung dieses Qualifizierers zusätzlichen Code, um die Richtigkeit (auch Thread übergreifend) zu erzwingen, jedoch geringfügige Leistungseinbußen. Wenn ein Index ohne diesen Qualifizierer geändert wird und innerhalb eines zeichnen/dispatchvorgangs die Ergebnisse nicht definiert sind.
+Bei einigen Hardwarekomponenten generiert die Verwendung dieses Qualifizierers zusätzlichen Code, um die Richtigkeit (einschließlich threadübergreifender) zu erzwingen, jedoch mit geringen Leistungskosten. Wenn ein Index ohne diesen Qualifizierer und innerhalb eines Zeichnens/Dispatchs geändert wird, sind die Ergebnisse nicht definiert.
 
-## <a name="descriptor-arrays-and-texture-arrays"></a>Deskriptorarrays und Textur Arrays
+## <a name="descriptor-arrays-and-texture-arrays"></a>Deskriptorarrays und Texturarrays
 
-Textur Arrays sind seit DirectX 10 verfügbar. Textur Arrays erfordern einen Deskriptor, aber alle Array Slices müssen das gleiche Format, Breite, Höhe und MIP-Anzahl aufweisen. Außerdem muss das Array einen zusammenhängenden Bereich im virtuellen Adressraum belegen. Der folgende Code zeigt ein Beispiel für den Zugriff auf ein Textur Array aus einem Shader.
+Texturarrays sind seit DirectX 10 verfügbar. Texturarrays erfordern einen Deskriptor, aber alle Arrayslices müssen das gleiche Format, die gleiche Breite, Höhe und MIP-Anzahl aufweisen. Außerdem muss das Array einen zusammenhängenden Bereich im virtuellen Adressraum belegen. Der folgende Code zeigt ein Beispiel für den Zugriff auf ein Texturarray über einen Shader.
 
 ``` syntax
 Texture2DArray<float4> myTex2DArray : register(t0); // t0
@@ -98,9 +98,9 @@ float3 myCoord(1.0f,1.4f,2.2f); // 2.2f is array index (rounded to int)
 color = myTex2DArray.Sample(mySampler, myCoord);
 ```
 
-In einem Textur Array kann der Index frei variieren, ohne dass Qualifizierer wie z. b `NonUniformResourceIndex` . erforderlich sind.
+In einem Texturarray kann der Index frei variiert werden, ohne dass Qualifizierer wie benötigt `NonUniformResourceIndex` werden.
 
-Das entsprechende deskriptorarray wäre wie folgt:
+Das entsprechende Deskriptorarray wäre:
 
 ``` syntax
 Texture2D<float4> myArrayOfTex2D[] : register(t0); // t0+
@@ -108,15 +108,15 @@ float2 myCoord(1.0f, 1.4f);
 color = myArrayOfTex2D[2].Sample(mySampler,myCoord); // 2 is index
 ```
 
-Beachten Sie, dass die umständliche Verwendung eines float-Arrays für den Array Index durch ersetzt wird `myArrayOfTex2D[2]` . Außerdem bieten deskriptorarrays mehr Flexibilität in Bezug auf die Dimensionen. Der-Typ, `Texture2D` ist dieses Beispiel, kann nicht variieren, aber das Format, die Breite, die Höhe und die MIP-Anzahl können bei jedem Deskriptor variieren.
+Beachten Sie, dass die umwendliche Verwendung eines float für den Arrayindex durch ersetzt `myArrayOfTex2D[2]` wird. Auch Deskriptorarrays bieten mehr Flexibilität bei den Dimensionen. Der Typ , ist dieses Beispiel, kann nicht variieren, aber Format, Breite, Höhe und MIP-Anzahl können je nach `Texture2D` Deskriptor variieren.
 
-Es ist legitim, ein deskriptorarray von Textur Arrays zu haben:
+Es ist legitim, über ein Deskriptorarray von Texturarrays zu verfügen:
 
 ``` syntax
 Texture2DArray<float4> myArrayOfTex2DArrays[2] : register(t0);
 ```
 
-Es ist nicht legitim, ein Array von Strukturen zu deklarieren, jede Struktur mit Deskriptoren, z. b. der folgende Code wird nicht unterstützt.
+Es ist nicht legitim, ein Array von -Strukturen zu deklarieren. Jede -Struktur, die Deskriptoren enthält, wird beispielsweise nicht unterstützt.
 
 ``` syntax
 struct myStruct {
@@ -127,7 +127,7 @@ struct myStruct {
 myStruct foo[10000] : register(....);
 ```
 
-Dies hätte das Speicher Layout **abcab.**.., aber eine sprach Einschränkung und wird nicht unterstützt. Eine unterstützte Methode hierfür wäre wie folgt, obwohl das Speicher Layout in diesem Fall **AAA ist... BBB... CCC...**
+Dies hätte das Speicherlayout **abcabcabc....** zugelassen, ist jedoch eine Sprachbeschränkung und wird nicht unterstützt. Eine unterstützte Methode wäre die folgende, obwohl das Speicherlayout in diesem Fall **aaa ist... Bbb... ...**.
 
 ``` syntax
 Texture2D                     a[10000] : register(t0);
@@ -135,26 +135,26 @@ Texture2D                     b[10000] : register(t10000);
 ConstantBuffer<myConstants>   c[10000] : register(b0);
 ```
 
-Um das Layout " **abcabcabc....** Memory" zu erreichen, verwenden Sie eine Deskriptortabelle, ohne die-Struktur zu verwenden `myStruct` .
+Um das **Speicherlayout abcabcabc....** zu erreichen, verwenden Sie eine Deskriptortabelle ohne Verwendung der `myStruct` -Struktur.
 
-## <a name="resource-aliasing"></a>Ressourcen Aliasing
+## <a name="resource-aliasing"></a>Ressourcenaliasing
 
-Die in den HLSL-Shadern angegebenen Ressourcen Bereiche sind logische Bereiche. Sie werden zur Laufzeit über den Stamm Signatur Mechanismus an konkrete Heap Bereiche gebunden. Normalerweise wird ein logischer Bereich einem Heap Bereich zugeordnet, der sich nicht mit anderen Heap Bereichen überlappt. Der root Signature-Mechanismus ermöglicht jedoch das Alias (Überlappung) von Heap Bereichen kompatibler Typen. Beispielsweise `tex2` können und `tex3` Bereiche aus dem obigen Beispiel dem gleichen (oder überlappenden) Heap Bereich zugeordnet werden, der die Auswirkungen von Aliasing Texturen im HLSL-Programm hat. Wenn ein solches Alias gewünscht ist, muss der Shader mit der Option d3d10 \_ Shader \_ Resources \_ \_ Alias Alias kompiliert werden, die mithilfe der Option */Res \_ May \_ Alias* für das [Effekt-Compilertool](/windows/win32/direct3dtools/fxc) (FXC) festgelegt wird. Die-Option bewirkt, dass der Compiler korrekten Code erzeugt, indem bestimmte Lade-/Speicheroptimierungen unter der Annahme vermieden werden, dass Ressourcen Alias sein dürfen.
+Die in den HLSL-Shadern angegebenen Ressourcenbereiche sind logische Bereiche. Sie werden zur Laufzeit über den Stammsignaturmechanismus an konkrete Heapbereiche gebunden. Normalerweise wird ein logischer Bereich einem Heapbereich zuordnungen, der sich nicht mit anderen Heapbereichen überschneidet. Der Stammsignaturmechanismus ermöglicht es jedoch, Heapbereiche kompatibler Typen mit Aliasen (Überlappungen) zu überlappen. Beispielsweise können die Bereiche und aus dem obigen Beispiel dem gleichen (oder überlappenden) Heapbereich zugeordnet werden, was den Effekt hat, dass Texturen im `tex2` `tex3` HLSL-Programm aliasing werden. Wenn ein solches Aliasing gewünscht ist, muss der Shader mit der OPTION D3D10 SHADER RESOURCES MAY ALIAS kompiliert \_ \_ \_ \_ werden, die mit der Option */res \_ may \_ alias* für das [Effect-Compiler Tool](../direct3dtools/fxc.md) (FXC) festgelegt wird. Die Option bewirkt, dass der Compiler richtigen Code erzeugt, indem bestimmte Lade-/Speicheroptimierungen unter der Annahme verhindert werden, dass Ressourcen alias verwendet werden können.
 
-## <a name="divergence-and-derivatives"></a>Abweichung und Ableitungen
+## <a name="divergence-and-derivatives"></a>Abweichungen und Ableitungen
 
-SM 5.1 weist keine Einschränkungen für den Ressourcen Index auf. Das heißt, ` tex2[idx].Sample(…)` – der Index IDX kann eine Literalkonstante, eine cBuffer-Konstante oder ein interinterpolated-Wert sein. Obwohl das Programmiermodell eine sehr hohe Flexibilität bietet, müssen Probleme beachtet werden:
+SM5.1 erzwingt keine Einschränkungen für den Ressourcenindex. Das heißt, ` tex2[idx].Sample(…)` der Index-IDX kann eine Literalkonstante, eine Cbufferkonstante oder ein interpolierter Wert sein. Das Programmiermodell bietet zwar so große Flexibilität, aber es gibt Probleme, die Sie beachten sollten:
 
--   Wenn der Index über ein vierfache abweicht, sind die von der Hardware berechnete Ableitung und abgeleiteten Mengen wie Lod möglicherweise nicht definiert. Der HLSL-Compiler unternimmt den besten Aufwand, in diesem Fall eine Warnung auszugeben, verhindert jedoch nicht, dass ein Shader kompiliert wird. Dieses Verhalten ähnelt dem Berechnen von Ableitungen in einer abweichenden Ablauf Steuerung.
--   Wenn der Ressourcen Index abweicht, wird die Leistung im Vergleich zur Groß-/Kleinschreibung eines einheitlichen Indexes verringert, da die Hardware Vorgänge für mehrere Ressourcen ausführen muss. Ressourcen Indizes, die abweichen können, müssen mit der- `NonUniformResourceIndex` Funktion im HLSL-Code gekennzeichnet werden. Andernfalls sind die Ergebnisse nicht definiert.
+-   Wenn der Index auf einem Quader abweicht, sind die hardwareerschlossene Ableitung und abgeleitete Mengen wie LOD möglicherweise nicht definiert. Der HLSL-Compiler versucht in diesem Fall, eine Warnung auszugeben, verhindert jedoch nicht die Kompilierung eines Shaders. Dieses Verhalten ähnelt dem Berechnen von Ableitungen bei der ablaufweisen Ablaufsteuerung.
+-   Wenn der Ressourcenindex uneinheitlich ist, verringert sich die Leistung im Vergleich zum Fall eines einheitlichen Indexes, da die Hardware Vorgänge für mehrere Ressourcen ausführen muss. Ressourcenindizes, die möglicherweise unausweichlich sind, müssen mit der `NonUniformResourceIndex` -Funktion im HLSL-Code gekennzeichnet werden. Andernfalls sind Die Ergebnisse nicht definiert.
 
 ## <a name="uavs-in-pixel-shaders"></a>UAVs in Pixel-Shadern
 
-SM 5.1 erzwingt keine Einschränkungen für UAV-Bereiche in Pixel-Shadern, wie es bei SM 5.0 der Fall war.
+SM5.1 erzwingt keine Einschränkungen für UAV-Bereiche in Pixel-Shadern, wie dies bei SM5.0 der Fall war.
 
 ## <a name="constant-buffers"></a>Konstantenpuffer
 
-Die cBuffer-Syntax (SM 5.1 Constant Buffers) wurde von SM 5.0 geändert, damit Entwickler Konstante Puffer indizieren können. Um indizierbare Konstante Puffer zu aktivieren, führt SM 5.1 das `ConstantBuffer` "Template"-Konstrukt ein:
+Die Syntax der SM5.1-Konstantenpuffer (cbuffer) wurde von SM5.0 geändert, um Entwicklern das Indizieren konstanter Puffer zu ermöglichen. Sm5.1 führt das Konstrukt "template" ein, um indizierbare Konstantenpuffer zu `ConstantBuffer` aktivieren:
 
 ``` syntax
 struct Foo
@@ -166,14 +166,14 @@ ConstantBuffer<Foo> myCB1[2][3] : register(b2, space1);
 ConstantBuffer<Foo> myCB2 : register(b0, space1);
 ```
 
-Der vorangehende Code deklariert die Konstante Puffer Variable `myCB1` vom Typ `Foo` und die Größe 6 und eine skalare Konstante Puffer Variable `myCB2` . Eine Konstante Puffer Variable kann nun wie folgt im Shader indiziert werden:
+Der vorangehende Code deklariert eine konstante Puffervariable `myCB1` vom Typ und der Größe `Foo` 6 sowie eine skalare konstante Puffervariable `myCB2` . Eine konstante Puffervariable kann jetzt im Shader wie die folgende indiziert werden:
 
 ``` syntax
 myCB1[i][j].a.xyzw
 myCB2.b.yy
 ```
 
-Die Felder "a" und "b" werden nicht zu globalen Variablen, sondern müssen als Felder behandelt werden. Aus Gründen der Abwärtskompatibilität unterstützt SM 5.1 das alte cBuffer-Konzept für skalare cbuffers. Mit der folgenden Anweisung werden "a" und "b" globale, schreibgeschützte Variablen als in SM 5.0 definiert. Ein solcher cBuffer im alten Stil kann jedoch nicht indizierbar sein.
+Die Felder "a" und "b" werden nicht zu globalen Variablen, sondern müssen als Felder behandelt werden. Aus Gründen der Abwärtskompatibilität unterstützt SM5.1 das alte Cbufferkonzept für skalare Cbuffer. Die folgende Anweisung macht "a" und "b" zu globalen, schreibgeschützten Variablen wie in SM5.0. Ein solches Cbuffer im alten Stil kann jedoch nicht indiziert werden.
 
 ``` syntax
 cbuffer : register(b1)
@@ -183,13 +183,13 @@ cbuffer : register(b1)
 };
 ```
 
-Der Shader-Compiler unterstützt derzeit `ConstantBuffer` nur die Vorlage für benutzerdefinierte Strukturen.
+Derzeit unterstützt der Shadercompiler die `ConstantBuffer` Vorlage nur für benutzerdefinierte Strukturen.
 
-Aus Kompatibilitätsgründen kann der HLSL-Compiler automatisch Ressourcen Register für in deklarierte Bereiche zuweisen `space0` . Wenn "Space" in der Register-Klausel weggelassen wird, wird der Standardwert `space0` verwendet. Der Compiler verwendet zum Zuweisen der Register die Heuristik zum Zuweisen der Registerkarte. Die Zuweisung kann über die reflektionsapi abgerufen werden, die erweitert wurde, um das Feld " *Space* " für Leerzeichen hinzuzufügen, während das Feld " *bindpoint* " die untere Grenze des Ressourcen Registrierungs Bereichs angibt.
+Aus Kompatibilitätsgründen kann der HLSL-Compiler automatisch Ressourcenregister für Bereiche zuweisen, die in deklariert `space0` sind. Wenn "space" in der register-Klausel weggelassen wird, wird der `space0` Standardwert verwendet. Der Compiler verwendet die Heuristik first-fits, um die Register zu zuweisen. Die Zuweisung kann über die Reflektions-API abgerufen  werden, die erweitert wurde, um das Feld Space für den Raum hinzuzufügen, während das *BindPoint-Feld* die untere Grenze des Ressourcenregisterbereichs angibt.
 
-## <a name="bytecode-changes-in-sm51"></a>Bytecode-Änderungen in SM 5.1
+## <a name="bytecode-changes-in-sm51"></a>Bytecodeänderungen in SM5.1
 
-Mit SM 5.1 wird die Deklaration von Ressourcen Registern und die referenzierte Verwendung in Anweisungen geändert. Die Syntax umfasst das Deklarieren einer Register "Variablen", ähnlich wie bei Gruppen Shared Memory-Registern:
+SM5.1 ändert, wie Ressourcenregister deklariert und in anweisungen referenziert werden. Die Syntax umfasst das Deklarieren einer Registervariablen, ähnlich wie bei Gruppen-Shared Memory-Registern:
 
 ``` syntax
 Texture2D<float4> tex0          : register(t5,  space0);
@@ -207,7 +207,7 @@ float4 main(float4 coord : COORD) : SV_TARGET
 }
 ```
 
-Dies wird Disassemblierung zu:
+Dadurch wird die Disassemblierung für:
 
 ``` syntax
 // Resource Bindings:
@@ -258,28 +258,28 @@ ret
 // Approximately 12 instruction slots are used.
 ```
 
-Jeder Shader-Ressourcenbereich verfügt jetzt über eine ID (Name), die für den Shader-Bytecode eindeutig ist. Beispielsweise wird das tex1 (T10)-Textur Array im Shader-Bytecode zu 't 1 '. Das Erteilen von eindeutigen IDs für jeden Ressourcenbereich ermöglicht zwei Dinge:
+Jeder Shaderressourcenbereich verfügt jetzt über eine ID (einen Namen), die für den Shader-Bytecode eindeutig ist. Beispielsweise wird das Texturarray tex1 (t10) im Shader-Bytecode zu "T1". Die Angabe eindeutiger IDs für jeden Ressourcenbereich ermöglicht zwei Dinge:
 
--   Identifizieren Sie eindeutig den Ressourcenbereich (siehe DCL \_ Resource \_ Texture2D), der in einer Anweisung indiziert wird (siehe Beispiel Anweisung).
--   Anfügen eines Satzes von Attributen an die Deklaration, z. b. Elementtyp, Stride-Größe, Raster Betriebsmodus usw.
+-   Identifizieren Sie eindeutig, welcher Ressourcenbereich (siehe dcl resource texture2d) in einer Anweisung indiziert wird \_ \_ (siehe Beispielanweisung).
+-   Anfügen einer Gruppe von Attributen an die Deklaration, z. B. Elementtyp, Stridegröße, Rasterbetriebsmodus usw.
 
-Beachten Sie, dass die ID des Bereichs nicht mit der HLSL-Deklaration in der unteren Grenze verknüpft ist.
+Beachten Sie, dass die ID des Bereichs nicht mit der HLSL-Untergrenze-Deklaration verknüpft ist.
 
-Die Reihenfolge der reflektionsressourcenbindungen (im oberen Bereich) und der Shader-Deklarations Anweisungen (DCL \_ \* ) sind die gleichen, die Sie beim Identifizieren der Entsprechung zwischen HLSL-Variablen und Bytecode-IDs unterstützen.
+Die Reihenfolge der Reflektionsressourcenbindungen (auflistung oben) und anweisungen für die Shaderdeklaration (dcl) ist identisch, um die Übereinstimmung zwischen \_ \* HLSL-Variablen und Bytecode-IDs zu identifizieren.
 
-Jede Deklarations Anweisung in SM 5.1 verwendet einen 3D-Operanden, um Folgendes zu definieren: Range ID, Lower und Upper Bounds. Ein zusätzliches Token wird ausgegeben, um den Register Bereich anzugeben. Andere Token können ebenfalls ausgegeben werden, um zusätzliche Eigenschaften des Bereichs zu übermitteln, z. b. die cBuffer-Anweisung oder die strukturierte Puffer Deklarations Anweisung, die die Größe des cBuffer oder der Struktur ausgibt. Die genauen Codierungs Details finden Sie in d3d12TokenizedProgramFormat. h und **D3D10ShaderBinary:: cshadercodeparser**.
+Jede Deklarationsanweisung in SM5.1 verwendet einen 3D-Operanden, um die Bereichs-ID, die untere und die obere Grenze zu definieren. Ein zusätzliches Token wird ausgegeben, um den Registerbereich anzugeben. Es können auch andere Token ausgegeben werden, um zusätzliche Eigenschaften des Bereichs zu vermitteln, z. B. gibt die Cbuffer- oder structured buffer declaration-Anweisung die Größe des Cbuffers oder der Struktur aus. Die genauen Details der Codierung finden Sie unter d3d12TokenizedProgramFormat.h und **D3D10ShaderBinary::CShaderCodeParser**.
 
-In den Anweisungen von SM 5.1 werden im Rahmen der Anweisung (wie in SM 5.0) keine zusätzlichen Ressourcen Operanden Informationen ausgegeben. Diese Informationen befinden sich nun in den Deklarations Anweisungen. In SM 5.0 erforderte das Indizieren von Ressourcen, dass Ressourcen Attribute in erweiterten Opcode-Token beschrieben werden müssen, da die Indizierung die Zuordnung zur Deklaration verdeckt hat. In SM 5.1 ist jede ID (z. b. 't 1 ') eindeutig einer einzelnen Deklaration zugeordnet, die die erforderlichen Ressourcen Informationen beschreibt. Daher werden die erweiterten Opcode-Token, die für Anweisungen zum Beschreiben von Ressourcen Informationen verwendet werden, nicht mehr ausgegeben.
+SM5.1-Anweisungen geben keine zusätzlichen Ressourcenoperndeninformationen als Teil der Anweisung aus (wie in SM5.0). Diese Informationen sind jetzt in den Deklarationsanweisungen enthalten. In SM5.0 erforderten Anweisungen zum Indizieren von Ressourcen, dass Ressourcenattribute in erweiterten Opcodetoken beschrieben werden mussten, da die Indizierung die Zuordnung zur Deklaration verschleierte. In SM5.1 ist jede ID (z.B. "t1") eindeutig einer einzelnen Deklaration zugeordnet, die die erforderlichen Ressourceninformationen beschreibt. Daher werden die erweiterten Opcodetoken, die in Anweisungen zum Beschreiben von Ressourceninformationen verwendet werden, nicht mehr ausgegeben.
 
-In nicht Deklarations Anweisungen ist ein Ressourcen Operand für Samplers, Srvs und UAVs ein 2D-Operand. Der erste Index ist eine Literalkonstante, die die Bereichs-ID angibt. Der zweite Index stellt den linearisierten Wert des Indexes dar. Der Wert wird relativ zum Anfang des entsprechenden Register Bereichs (nicht relativ zum Anfang des logischen Bereichs) berechnet, um die Korrelation mit der Stamm Signatur zu verbessern und die Treiber-compilerlast für die Anpassung des Indexes zu verringern.
+In Anweisungen ohne Deklaration ist ein Ressourcenopernd für Sampler, SRVs und UAVs ein 2D-Operand. Der erste Index ist eine Literalkonstante, die die Bereichs-ID angibt. Der zweite Index stellt den linearisierten Wert des Indexes dar. Der Wert wird relativ zum Anfang des entsprechenden Registerraums (nicht relativ zum Anfang des logischen Bereichs) berechnet, um eine bessere Korrelation mit der Stammsignatur zu erreichen und die Treibercompilerlast durch das Anpassen des Indexes zu reduzieren.
 
-Ein Ressourcen Operand für cbvs ist ein 3D-Operand, der Folgendes enthält: literalid des Bereichs, Index des Konstanten Puffers, Offset in der jeweiligen Instanz des Konstanten Puffers.
+Ein Ressourcenopernd für CBVs ist ein 3D-Operand, der Folgendes enthält: Literal-ID des Bereichs, Index des Konstantenpuffers, Offset in die jeweilige Instanz des konstanten Puffers.
 
-## <a name="example-hlsl-declarations"></a>Beispiele für HLSL-Deklarationen
+## <a name="example-hlsl-declarations"></a>HLSL-Beispieldeklarationen
 
-HLSL-Programme müssen nichts über Stamm Signaturen wissen. Sie können dem virtuellen "Register"-Bindungs Bereich (t \# für Srvs, u \# für UAVs, b \# für cbvs, s \# für Samplers) Bindungen zuweisen, oder Sie müssen sich auf den Compiler stützen, um Zuweisungen auszuwählen (und die resultierenden Zuordnungen mithilfe der Shader-Reflektion später abzufragen). Die Stamm Signatur ordnet deskriptortabellen, Stamm Deskriptoren und Stamm Konstanten diesem virtuellen Register Bereich zu.
+HLSL-Programme müssen nichts über Stammsignaturen wissen. Sie können Bindungen dem virtuellen "Register"-Bindungsbereich zuweisen, t \# für SRVs, u \# für UAVs, b \# für CBVs, s \# für Sampler oder auf den Compiler, um Zuweisungen zu wählen (und anschließend die resultierenden Zuordnungen mithilfe von Shaderreflektion abzufragen). Die Stammsignatur ordnet Deskriptortabellen, Stammdeskriptoren und Stammkonstanten diesem virtuellen Registerbereich zu.
 
-Im folgenden sind einige Beispiel Deklarationen dargestellt, die ein HLSL-Shader aufweisen kann. Beachten Sie, dass es keine Verweise auf Stamm Signaturen oder deskriptortabellen gibt.
+Im Folgenden finden Sie einige Beispieldeklarationen, die ein HLSL-Shader möglicherweise hat. Beachten Sie, dass es keine Verweise auf Stammsignaturen oder Deskriptortabellen gibt.
 
 ``` syntax
 Texture2D foo[5] : register(t2);
@@ -316,11 +316,11 @@ ConstantBuffer<Stuff> myStuff[][3][8]  : register(b2, space3)
 ## <a name="related-topics"></a>Zugehörige Themen
 
 * [Dynamische Indizierung mit HLSL 5.1](dynamic-indexing-using-hlsl-5-1.md)
-* [Effekt-Compilertool](/windows/win32/direct3dtools/fxc)
-* [HLSL-Shader-Modell 5,1 Features für Direct3D 12](/windows/win32/direct3dhlsl/hlsl-shader-model-5-1-features-for-direct3d-12)
+* [Effect-Compiler-Tool](../direct3dtools/fxc.md)
+* [HLSL-Shadermodell 5.1-Features für Direct3D 12](../direct3dhlsl/hlsl-shader-model-5-1-features-for-direct3d-12.md)
 * [Geordnete Rasterizeransichten](rasterizer-order-views.md)
-* [Ressourcen Bindung](resource-binding.md)
+* [Ressourcenbindung](resource-binding.md)
 * [Stammsignaturen](root-signatures.md)
-* [Shadermodell 5,1](/windows/win32/direct3dhlsl/shader-model-5-1)
+* [Shadermodell 5.1](../direct3dhlsl/shader-model-5-1.md)
 * [Von Shader festgelegter Schablonenreferenzwert](shader-specified-stencil-reference-value.md)
 * [Festlegen von Stammsignaturen in HLSL](specifying-root-signatures-in-hlsl.md)

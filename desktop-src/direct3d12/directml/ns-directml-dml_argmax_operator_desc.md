@@ -45,18 +45,18 @@ api_location:
 - DirectML.h
 api_name:
 - DML_ARGMAX_OPERATOR_DESC
-ms.openlocfilehash: 0c466975ad3b88973f50bc06676f2197267c56a7
-ms.sourcegitcommit: 8e1f04c7e3c5c850071bac8d173f9441aab0dfed
+ms.openlocfilehash: 4c2852c3d301a12d318c5e3006b26830c6eaa6e1
+ms.sourcegitcommit: f848119a8faa29b27585f4df53f6e50ee9666684
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "107803548"
+ms.lasthandoff: 05/27/2021
+ms.locfileid: "110550495"
 ---
 # <a name="dml_argmax_operator_desc-structure-directmlh"></a>DML_ARGMAX_OPERATOR_DESC -Struktur (directml.h)
 
 Gibt die Indizes der Höchstwertelemente innerhalb einer oder mehrere Dimensionen des Eingabetensors aus.
 
-Jedes Ausgabeelement ist das Ergebnis der Anwendung einer *argmax-Reduzierung* auf eine Teilmenge des Eingabetensors. Die *argmax-Funktion* gibt den Index des Höchstwertelements in einem Satz von Eingabeelementen aus. Die an jeder Reduzierung beteiligten Eingabeelemente werden durch die bereitgestellten Eingabeachsen bestimmt. Ebenso gilt jeder Ausgabeindex in Bezug auf die bereitgestellten Eingabeachsen. Wenn alle Eingabeachsen angegeben sind, wendet der Operator eine einzelne *argmax-Reduzierung* an und erzeugt ein einzelnes Ausgabeelement.
+Jedes Ausgabeelement ist das Ergebnis der Anwendung einer *argmax-Reduzierung* auf eine Teilmenge des Eingabetensors. Die *argmax-Funktion* gibt den Index des Höchstwertelements in einem Satz von Eingabeelementen aus. Die an jeder Reduzierung beteiligten Eingabeelemente werden durch die bereitgestellten Eingabeachsen bestimmt. Auf ähnliche Weise gilt jeder Ausgabeindex in Bezug auf die bereitgestellten Eingabeachsen. Wenn alle Eingabeachsen angegeben sind, wendet der Operator eine einzelne *argmax-Reduzierung* an und erzeugt ein einzelnes Ausgabeelement.
 
 > [!IMPORTANT]
 > Diese API ist als Teil des eigenständigen weiterverteilten DirectML-Pakets verfügbar (siehe [Microsoft.AI.DirectML](https://www.nuget.org/packages/Microsoft.AI.DirectML/) Version 1.4 und höher). Siehe auch [DirectML-Versionsverlauf.](../dml-version-history.md)
@@ -92,13 +92,13 @@ Der Tensor, in den die Ergebnisse geschrieben werden. Jedes Ausgabeelement ist d
 
 `AxisCount`
 
-Typ: **[UINT](/windows/win32/winprog/windows-data-types)**
+Typ: **[UINT](../../winprog/windows-data-types.md)**
 
 Die Anzahl der zu reduzierenden Achsen. Dieses Feld bestimmt die Größe des *Achsenarrays.*
 
 `Axes`
 
-Typ: \_ Field_size \_ (AxisCount) **const [UINT](/windows/win32/winprog/windows-data-types) \***
+Typ: \_ Field_size \_ (AxisCount) **const [UINT](../../winprog/windows-data-types.md) \***
 
 Die Achsen, entlang derer reduziert werden soll. Werte müssen im Bereich `[0, InputTensor.DimensionCount - 1]` liegen.
 

@@ -1,5 +1,5 @@
 ---
-title: CDM_GETSPEC Meldung (Commdlg.h)
+title: CDM_GETSPEC Nachricht (Commdlg.h)
 description: Ruft den Dateinamen (ohne Den Pfad) der aktuell ausgewählten Datei in einem Dialogfeld im Explorer-Stil open or Save As (Öffnen oder Speichern unter) ab.
 ms.assetid: 22a67c92-bd24-4cba-bef8-291d241e6ec8
 keywords:
@@ -14,18 +14,18 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 938536ea7cc72ebb950420ad3d5c9bd35c64db72
-ms.sourcegitcommit: 8e083a10b3a480dec8a8d74dbd5889f49dea15e4
+ms.openlocfilehash: 27eff7e9a14f39554fa6c1a69846bbaca7c39990
+ms.sourcegitcommit: f848119a8faa29b27585f4df53f6e50ee9666684
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/17/2021
-ms.locfileid: "107590927"
+ms.lasthandoff: 05/27/2021
+ms.locfileid: "110548875"
 ---
 # <a name="cdm_getspec-message"></a>CDM \_ GETSPEC-Nachricht
 
-\[Ab Windows Vista wurden die Dialogfelder **Öffnen** und **Speichern unter** allgemein durch das [Dialogfeld "Allgemeines Element"](/windows/win32/shell/common-file-dialog)ersetzt. Es wird empfohlen, die DIALOGFELD-API für allgemeine Elemente anstelle dieser Dialogfelder aus der Common Dialog Box Library zu verwenden.\]
+\[Ab Windows Vista wurden die Dialogfelder **Öffnen** und **Speichern unter** allgemein durch das [Dialogfeld "Allgemeines Element"](../shell/common-file-dialog.md)ersetzt. Es wird empfohlen, die Dialogfeld-API für allgemeine Elemente anstelle dieser Dialogfelder aus der Common Dialog Box Library zu verwenden.\]
 
-Ruft den Dateinamen (ohne Den Pfad) der aktuell ausgewählten Datei in einem Dialogfeld im Explorer-Stil open or Save As **(Öffnen** oder **Speichern unter)** ab. Das Dialogfeld muss mit dem **\_ OFN-EXPLORER-Flag** erstellt worden sein. Andernfalls schlägt die Meldung fehl.
+Ruft den Dateinamen (ohne den Pfad) der aktuell ausgewählten Datei in einem Dialogfeld im Explorer-Stil open or Save As **(Öffnen** oder **Speichern unter)** ab. Das Dialogfeld muss mit dem **\_ OFN-EXPLORER-Flag** erstellt worden sein. Andernfalls schlägt die Meldung fehl.
 
 
 ```C++
@@ -60,7 +60,7 @@ Wenn die Nachricht erfolgreich ist, entspricht der Rückgabewert der Größe der
 
 Wenn ein Fehler auftritt, ist der Rückgabewert kleiner als 0 (null).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Das entsprechende Makro lautet wie folgt:
 
@@ -80,11 +80,11 @@ int CommDlg_OpenSave_GetSpec(hwnd, lparam, wparam);
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
 [**GetOpenFileName**](/windows/desktop/api/Commdlg/nf-commdlg-getopenfilenamea)
@@ -101,6 +101,4 @@ int CommDlg_OpenSave_GetSpec(hwnd, lparam, wparam);
 
 [Allgemeine Dialogfeldbibliothek](common-dialog-box-library.md)
 </dt> </dl>
-
- 
 

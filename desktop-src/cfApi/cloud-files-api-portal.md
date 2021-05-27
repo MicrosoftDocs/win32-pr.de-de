@@ -1,27 +1,26 @@
 ---
-description: Die cloudfilterapi bietet Funktionen an der Grenze zwischen dem Benutzermodus und dem Dateisystem.
+description: Die Cloudfilter-API stellt Funktionen an der Grenze zwischen dem Benutzermodus und dem Dateisystem bereit.
 ms.assetid: 72bc3e80-babd-4a39-842c-38afe4773a5e
-title: Cloud Sync Engines
+title: Cloudsynchronisierungs-Engines
 ms.topic: article
 ms.date: 02/06/2019
 ms.custom: project-verbatim
-ms.openlocfilehash: debe32a1849a393a067017f90f5405c4b3ba77d1
-ms.sourcegitcommit: af120ad5c30da2fc5eb717ca2a1c4c45878efd71
+ms.openlocfilehash: d40b195a442859441138ae4e61cb0eb946411623
+ms.sourcegitcommit: f848119a8faa29b27585f4df53f6e50ee9666684
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2021
-ms.locfileid: "106353411"
+ms.lasthandoff: 05/27/2021
+ms.locfileid: "110549595"
 ---
-# <a name="cloud-sync-engines"></a>Cloud Sync Engines
+# <a name="cloud-sync-engines"></a>Cloudsynchronisierungs-Engines
 
-Siehe auch [Cloud-Spiegel Beispiel](/windows/win32/cfapi/build-a-cloud-file-sync-engine#cloud-mirror-sample).
+Siehe auch [CloudSpiegel-Beispiel.](./build-a-cloud-file-sync-engine.md#cloud-mirror-sample)
 
-Ab Windows 10, Version 1709, stellt Windows die *Cloud Files-API* bereit. Diese API besteht aus mehreren nativen Win32-und WinRT-APIs, die die Unterstützung für Cloud-Synchronisierungs Module formalisieren und Aufgaben wie das Erstellen und Verwalten von Platzhalter Dateien und Verzeichnissen verarbeiten. Benutzer dieser API sind in der Regel Synchronisierungs Anbieter und ein gewisser Umfang von Windows-Anwendungen.
+Ab Windows 10 Version 1709 stellt Windows die *Clouddateien-API bereit.* Diese API besteht aus mehreren nativen Win32- und WinRT-APIs, die die Unterstützung für Cloudsynchronisierungs-Engines formalisieren und Aufgaben wie das Erstellen und Verwalten von Platzhalterdateien und Verzeichnissen durchführen. Benutzer dieser API sind in der Regel Synchronisierungsanbieter und in gewissem Umfang Windows-Anwendungen.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
-| Thema                                                                | BESCHREIBUNG                                                                                        |
+| Thema                                                                | Beschreibung                                                                                        |
 |----------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
-| [Erstellen einer Cloud-Synchronisierungs-Engine, die Platzhalter Dateien unterstützt](build-a-cloud-file-sync-engine.md)<br/> | Erfahren Sie, wie Sie die Cloud Files-API verwenden, um ein clouddateisynchronisierungs-Engine zu erstellen, das Platzhalter Dateien und Datei-Explorer-Integration <br/> |
-| [Cloudfilterverweis](cloud-filter-reference.md)<br/> | Die Cloud Filter-API ist eine native Win32-API, die Teil der umfassenderen Cloud Files-API ist. Die cloudfilterapi bietet Funktionen an der Grenze zwischen dem Benutzermodus und dem Dateisystem. Diese API behandelt die Erstellung und Verwaltung von Platzhalter Dateien und Verzeichnissen. <br/> |
-
+| [Erstellen eines Cloudsynchronisierungsmoduls, das Platzhalterdateien unterstützt](build-a-cloud-file-sync-engine.md)<br/> | Erfahren Sie, wie Sie die Clouddatei-API verwenden, um ein Clouddateisynchronisierungsmodul zu erstellen, das Platzhalterdateien und die Datei-Explorer-Integration enthält. <br/> |
+| [Cloudfilterreferenz](cloud-filter-reference.md)<br/> | Die Cloudfilter-API ist eine native Win32-API, die Teil der umfassenderen Clouddateien-API ist. Die Cloudfilter-API stellt Funktionen an der Grenze zwischen dem Benutzermodus und dem Dateisystem bereit. Diese API übernimmt die Erstellung und Verwaltung von Platzhalterdateien und Verzeichnissen. <br/> |

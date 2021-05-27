@@ -39,19 +39,19 @@ api_location:
 - dwrite_core.h
 api_name:
 - DWriteCoreCreateFactory
-ms.openlocfilehash: 43e43e00385e10f0da0ba459cdc16e84562b72ec
-ms.sourcegitcommit: 7024106e3420607420bb04c3f88d9bb4827038c8
+ms.openlocfilehash: 3ba1b8f6e09212c1ba2f4a0093e2205acaa2e835
+ms.sourcegitcommit: f848119a8faa29b27585f4df53f6e50ee9666684
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/25/2021
-ms.locfileid: "107955023"
+ms.lasthandoff: 05/27/2021
+ms.locfileid: "110548935"
 ---
 # <a name="dwritecorecreatefactory-function-dwrite_coreh"></a>DWriteCoreCreateFactory-Funktion (dwrite_core.h)
 
 Erstellt ein Factoryobjekt, das für die nachfolgende Erstellung einzelner DWriteCore-Objekte verwendet wird.
 
 > [!IMPORTANT]
-> Diese API ist als Teil der DWriteCore-Implementierung von [DirectWrite](../direct-write-portal.md)verfügbar. DWriteCore ist eine Form von DirectWrite, die auf Windows-Versionen bis hinunter zu Windows 8 läuft und Ihnen die Möglichkeit eröffnet, es plattformübergreifend zu nutzen. Weitere Informationen und Codebeispiele finden Sie unter [Übersicht über DWriteCore.](/windows/win32/directwrite/dwritecore-overview)
+> Diese API ist als Teil der DWriteCore-Implementierung von [DirectWrite verfügbar.](../direct-write-portal.md) DWriteCore ist eine Form von DirectWrite, die auf Windows-Versionen bis hinunter zu Windows 8 läuft und Ihnen die Möglichkeit eröffnet, es plattformübergreifend zu nutzen. Weitere Informationen und Codebeispiele finden Sie unter [Übersicht über DWriteCore.](../dwritecore-overview.md)
 
 ## <a name="syntax"></a>Syntax
 ```cpp
@@ -86,15 +86,15 @@ Eine Adresse eines Zeigers auf das neu erstellte DirectWrite-Factoryobjekt.
 
 Typ: <b>HRESULT</b>
 
-Wenn diese Methode erfolgreich ist, wird <b xmlns:loc="http://microsoft.com/wdcml/l10n">S_OK</b>zurückgegeben. Andernfalls wird ein <b xmlns:loc="http://microsoft.com/wdcml/l10n">HRESULT-Fehlercode</b> zurückgegeben.
+Wenn diese Methode erfolgreich ist, gibt <b xmlns:loc="http://microsoft.com/wdcml/l10n">sie</b>S_OK. Andernfalls wird ein <b xmlns:loc="http://microsoft.com/wdcml/l10n">HRESULT-Fehlercode</b> zurückgegeben.
 
 ## <a name="examples"></a>Beispiele
 
-Weitere Informationen finden Sie im Übersichtsthema [DWriteCore](/windows/win32/directwrite/dwritecore-overview) und in der [Beispiel-App DWriteCoreGallery.](https://github.com/microsoft/Project-Reunion-Samples/tree/main/DWriteCore/DWriteCoreGallery)
+Weitere Informationen finden [Sie im DWriteCore-Übersichtsthema](../dwritecore-overview.md) und in der [DWriteCoreGallery-Beispiel-App.](https://github.com/microsoft/Project-Reunion-Samples/tree/main/DWriteCore/DWriteCoreGallery)
 
 ## <a name="remarks"></a>Hinweise
 
-Dies entspricht funktional der [DWriteCreateFactory-Funktion,](/windows/win32/api/dwrite/nf-dwrite-dwritecreatefactory) die von der Systemversion von DirectWrite exportiert wird. Die DWriteCore-Funktion hat einen anderen Namen, um Mehrdeutigkeiten zu vermeiden.
+Dies ist funktionell identisch mit der [DWriteCreateFactory-Funktion,](/windows/win32/api/dwrite/nf-dwrite-dwritecreatefactory) die von der Systemversion von DirectWrite exportiert wurde. Die DWriteCore-Funktion hat einen anderen Namen, um Mehrdeutigkeiten zu vermeiden.
 
 ## <a name="requirements"></a>Anforderungen
 | &nbsp; | &nbsp; |

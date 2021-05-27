@@ -45,12 +45,12 @@ api_location:
 - DirectML.h
 api_name:
 - DML_ARGMIN_OPERATOR_DESC
-ms.openlocfilehash: 2e12a81593504a4eb7a0917e545bfa20c70647ff
-ms.sourcegitcommit: 8e1f04c7e3c5c850071bac8d173f9441aab0dfed
+ms.openlocfilehash: da270ea5354e361067335ba1c789efe18310437a
+ms.sourcegitcommit: f848119a8faa29b27585f4df53f6e50ee9666684
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "107804075"
+ms.lasthandoff: 05/27/2021
+ms.locfileid: "110550475"
 ---
 # <a name="dml_argmin_operator_desc-structure-directmlh"></a>DML_ARGMIN_OPERATOR_DESC -Struktur (directml.h)
 
@@ -85,20 +85,20 @@ Der Tensor, aus dem gelesen werden soll.
 
 Typ: **const [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
 
-Der Tensor, in den die Ergebnisse geschrieben werden. Jedes Ausgabeelement ist das Ergebnis einer *Argminverringerung* für eine Teilmenge von Elementen aus *dem InputTensor.*
+Der Tensor, in den die Ergebnisse geschrieben werden. Jedes Ausgabeelement ist das Ergebnis einer *Argminreduzierung* für eine Teilmenge von Elementen aus *dem InputTensor*.
 
 - *DimensionCount* muss mit *InputTensor.DimensionCount übereinstimmen* (der Rang des Eingabetensors wird beibehalten).
 - *Größen müssen* mit *InputTensor.Sizes übereinstimmen,* mit Ausnahme der Dimensionen, die in den reduzierten Achsen enthalten *sind,* die die Größe 1 haben müssen.
 
 `AxisCount`
 
-Typ: **[UINT](/windows/win32/winprog/windows-data-types)**
+Typ: **[UINT](../../winprog/windows-data-types.md)**
 
 Die Anzahl der zu reduzierenden Achsen. Dieses Feld bestimmt die Größe des *Achsenarrays.*
 
 `Axes`
 
-Typ: \_ Field_size \_ (AxisCount) **const [UINT](/windows/win32/winprog/windows-data-types) \***
+Typ: \_ Field_size \_ (AxisCount) **const [UINT](../../winprog/windows-data-types.md) \***
 
 Die Achsen, entlang derer reduziert werden soll. Werte müssen im Bereich `[0, InputTensor.DimensionCount - 1]` liegen.
 

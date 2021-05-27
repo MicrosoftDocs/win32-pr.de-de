@@ -1,9 +1,9 @@
 - name: Antimalware Scan Interface (AMSI)
   href: antimalware-scan-interface-portal.md
   items:
-    - name: Hilfe zu AMSI
+    - name: Wie AMSI hilft
       href: how-amsi-helps.md
-    - name: 'Entwickler Audience, Beispiele'
+    - name: 'Zielgruppe für Entwickler, Beispiele'
       href: dev-audience.md
     - name: AMSI-Referenz
       href: antimalware-scan-interface-reference.md
@@ -18,38 +18,45 @@
         - name: AMSI-Funktionen
           href: antimalware-scan-interface-functions.md
           items:
-            - name: Amsiclosesession
+            - name: AmsiCloseSession
               href: /windows/desktop/api/amsi/nf-amsi-amsiclosesession
-            - name: Amsiinitialize
+            - name: AmsiInitialize
               href: /windows/desktop/api/amsi/nf-amsi-amsiinitialize
-            - name: Amsiopensession
+            - name: AmsiNotifyOperation
               href: /windows/desktop/api/amsi/nf-amsi-amsiopensession
-            - name: Amsiresultismalware
+            - name: AmsiOpenSession
+              href: /windows/desktop/api/amsi/nf-amsi-amsinotifyoperation
+            - name: AmsiResultIsMalware
               href: /windows/desktop/api/amsi/nf-amsi-amsiresultismalware
-            - name: Amsiscanbuffer
+            - name: AmsiScanBuffer
               href: /windows/desktop/api/amsi/nf-amsi-amsiscanbuffer
-            - name: Amsiscanstring
+            - name: AmsiScanString
               href: /windows/desktop/api/amsi/nf-amsi-amsiscanstring
-            - name: Amsiuninitialize
+            - name: AmsiUninitialize
               href: /windows/desktop/api/amsi/nf-amsi-amsiuninitialize
         - name: AMSI-Schnittstellen
           href: antimalware-scan-interface-interfaces.md
           items:
-            - name: Iamsistream
+            - name: IAmsiStream
               href: /windows/desktop/api/amsi/nn-amsi-iamsistream
               items:
                 - name: GetAttribute-Methode
                   href: /windows/desktop/api/amsi/nf-amsi-iamsistream-getattribute
                 - name: Read-Methode
                   href: /windows/desktop/api/amsi/nf-amsi-iamsistream-read
-            - name: Iantischadsoftware
+            - name: IAntimalware
               href: /windows/desktop/api/amsi/nn-amsi-iantimalware
               items:
                 - name: CloseSession-Methode
                   href: /windows/desktop/api/amsi/nf-amsi-iantimalware-closesession
                 - name: Überprüfungsmethode
                   href: /windows/desktop/api/amsi/nf-amsi-iantimalware-scan
-            - name: Iantimalwareprovider
+            - name: IAntimalware2
+              href: /windows/desktop/api/amsi/nn-amsi-iantimalware2
+              items:
+                - name: Notify-Methode
+                  href: /windows/desktop/api/amsi/nf-amsi-iantimalware2-notify
+            - name: IAntimalwareProvider
               href: /windows/desktop/api/amsi/nn-amsi-iantimalwareprovider
               items:
                 - name: CloseSession-Methode
@@ -58,3 +65,8 @@
                   href: /windows/desktop/api/amsi/nf-amsi-iantimalwareprovider-displayname
                 - name: Überprüfungsmethode
                   href: /windows/desktop/api/amsi/nf-amsi-iantimalwareprovider-scan
+            - name: IAntimalwareProvider2
+              href: /windows/desktop/api/amsi/nn-amsi-iantimalwareprovider2
+              items:
+                - name: Notify-Methode
+                  href: /windows/desktop/api/amsi/nf-amsi-iantimalwareprovider2-notify

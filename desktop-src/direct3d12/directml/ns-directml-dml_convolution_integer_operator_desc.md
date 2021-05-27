@@ -1,7 +1,7 @@
 ---
 UID: NS:directml.DML_CONVOLUTION_INTEGER_OPERATOR_DESC
 title: DML_CONVOLUTION_INTEGER_OPERATOR_DESC
-description: Führt eine Konvolution des *FilterTensor mit* dem *InputTensor aus.* Dieser Operator führt die Vorwärtskonvolution für ganzzahlige Daten aus.
+description: Führt eine Konvolution des *FilterTensor* mit dem *InputTensor aus.* Dieser Operator führt die Vorwärtskonvolution für ganzzahlige Daten aus.
 helpviewer_keywords:
 - DML_CONVOLUTION_INTEGER_OPERATOR_DESC
 - DML_CONVOLUTION_INTEGER_OPERATOR_DESC structure
@@ -45,19 +45,19 @@ api_location:
 - DirectML.h
 api_name:
 - DML_CONVOLUTION_INTEGER_OPERATOR_DESC
-ms.openlocfilehash: 07406155be9ae5f78fbf5f3b7fcd750aa4631dbc
-ms.sourcegitcommit: 8e1f04c7e3c5c850071bac8d173f9441aab0dfed
+ms.openlocfilehash: f4045598dd1aa050479fec8e5732fe5c0a4e77ee
+ms.sourcegitcommit: f848119a8faa29b27585f4df53f6e50ee9666684
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "107803375"
+ms.lasthandoff: 05/27/2021
+ms.locfileid: "110550416"
 ---
-# <a name="dml_convolution_integer_operator_desc-structure-directmlh"></a>DML_CONVOLUTION_INTEGER_OPERATOR_DESC -Struktur (directml.h)
+# <a name="dml_convolution_integer_operator_desc-structure-directmlh"></a>DML_CONVOLUTION_INTEGER_OPERATOR_DESC-Struktur (directml.h)
 
-Führt eine Konvolution des *FilterTensor mit* dem *InputTensor aus.* Dieser Operator führt die Vorwärtskonvolution für ganzzahlige Daten aus. Optionale Nullpunkt-Tensoren können auch verwendet werden, um Nullpunktwerte vom Eingabe- und Filtertensor zu subtrahieren.
+Führt eine Konvolution des *FilterTensor* mit dem *InputTensor aus.* Dieser Operator führt die Vorwärtskonvolution für ganzzahlige Daten aus. Optionale Nullpunkt-Tensoren können auch verwendet werden, um Nullpunktwerte vom Eingabe- und Filter-Tensor zu subtrahieren.
 
 > [!IMPORTANT]
-> Diese API ist als Teil des eigenständigen weiterverteilten DirectML-Pakets verfügbar (siehe [Microsoft.AI.DirectML](https://www.nuget.org/packages/Microsoft.AI.DirectML/) Version 1.4 und höher). Siehe auch [DirectML-Versionsverlauf.](../dml-version-history.md)
+> Diese API ist als Teil des eigenständigen verteilbaren DirectML-Pakets verfügbar (siehe [Microsoft.AI.DirectML](https://www.nuget.org/packages/Microsoft.AI.DirectML/) Version 1.4 und höher). Siehe auch [DirectML-Versionsverlauf.](../dml-version-history.md)
 
 ## <a name="syntax"></a>Syntax
 ```cpp
@@ -82,87 +82,87 @@ struct DML_CONVOLUTION_INTEGER_OPERATOR_DESC {
 
 Typ: **const [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
 
-Ein Tensor, der die Eingabedaten enthält. Die erwarteten Dimensionen des *InputTensor sind* `{ BatchCount, InputChannelCount, InputHeight, InputWidth }` .
+Ein Tensor, der die Eingabedaten enthält. Die erwarteten Dimensionen des *InputTensor* sind `{ BatchCount, InputChannelCount, InputHeight, InputWidth }` .
 
 
 `InputZeroPointTensor`
 
 Typ: \_ Maybenull \_ **const [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
 
-Ein optionaler Tensor, der die Nullpunktdaten der Eingabe enthält. Die erwarteten Dimensionen des *InputZeroPointTensor sind* `{ 1, 1, 1, 1 }` .
+Ein optionaler Tensor, der die Eingabe-Nullpunktdaten enthält. Die erwarteten Dimensionen von *InputZeroPointTensor* sind `{ 1, 1, 1, 1 }` .
 
 
 `FilterTensor`
 
 Typ: **const [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
 
-Ein Tensor, der die Filterdaten enthält. Die erwarteten Dimensionen des *FilterTensor sind* `{ FilterBatchCount, FilterChannelCount, FilterHeight, FilterWidth }` .
+Ein Tensor, der die Filterdaten enthält. Die erwarteten Dimensionen von *FilterTensor* sind `{ FilterBatchCount, FilterChannelCount, FilterHeight, FilterWidth }` .
 
 
 `FilterZeroPointTensor`
 
 Typ: \_ Maybenull \_ **const [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
 
-Ein optionaler Tensor, der die Nullpunktdaten des Filters enthält. Die erwarteten Dimensionen des *FilterZeroPointTensor* sind , wenn eine Tensorquantisierung erforderlich ist oder wenn eine Quantisierung pro Kanal `{ 1, 1, 1, 1 }` `{ 1, OutputChannelCount, 1, 1 }` erforderlich ist.
+Ein optionaler Tensor, der die Nullpunktdaten des Filters enthält. Die erwarteten Dimensionen von *FilterZeroPointTensor* sind `{ 1, 1, 1, 1 }` , wenn eine Tensorquantisierung erforderlich ist, oder wenn eine `{ 1, OutputChannelCount, 1, 1 }` Pro-Kanal-Quantisierung erforderlich ist.
 
 
 `OutputTensor`
 
 Typ: **const [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
 
-Der Tensor, in den die Ergebnisse geschrieben werden sollen. Die erwarteten Dimensionen des *OutputTensor* sind `{ BatchCount, OutputChannelCount, OutputHeight, OutputWidth }` .
+Der Tensor, in den die Ergebnisse geschrieben werden. Die erwarteten Dimensionen des *OutputTensor sind* `{ BatchCount, OutputChannelCount, OutputHeight, OutputWidth }` .
 
 
 `DimensionCount`
 
 Typ: [ **UINT**](/windows/desktop/winprog/windows-data-types)
 
-Die Anzahl der räumlichen Dimensionen für den Konvolutionsvorgang. Räumliche Dimensionen sind die unteren Dimensionen der Konvolution *FilterTensor*. Dieser Wert bestimmt auch die Größe der Arrays *Strides*, *Dilations*, *StartPadding* und *EndPadding.* Es wird nur der Wert 2 unterstützt.
+Die Anzahl der räumlichen Dimensionen für den Konvolutionsvorgang. Räumliche Dimensionen sind die unteren Dimensionen des *Konvolutionsfiltertensors*. Dieser Wert bestimmt auch die Größe der *Arrays Strides,* *Dilations,* *StartPadding* und *EndPadding.* Nur der Wert 2 wird unterstützt.
 
 
 `Strides`
 
-Typ: \_ Field_size \_ (DimensionCount) **const [UINT](/windows/win32/winprog/windows-data-types) \***
+Typ: \_ Field_size \_ (DimensionCount) **const [UINT](../../winprog/windows-data-types.md) \***
 
-Ein Array, das die Schritte des Konvolutionsvorgangs enthält. Diese Schritte werden auf den Konvolutionsfilter angewendet. Sie sind von den Tensorschritten getrennt, die in [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc)enthalten sind.
+Ein Array, das die Schritte des Konvolutionsvorgang enthält. Diese Schritte werden auf den Konvolutionsfilter angewendet. Sie sind getrennt von den Tensorschritten, [](/windows/win32/api/directml/ns-directml-dml_tensor_desc)die in DML_TENSOR_DESC.
 
 
 `Dilations`
 
-Typ: \_ Field_size \_ (DimensionCount) **const [UINT](/windows/win32/winprog/windows-data-types) \***
+Typ: \_ Field_size \_ (DimensionCount) **const [UINT](../../winprog/windows-data-types.md) \***
 
-Ein Array, das die Sortierungen des Konvolutionsvorgangs enthält. Dilations sind Schritte, die auf die Elemente des Filterkernels angewendet werden. Dies hat den Effekt, dass ein größerer Filterkernel simuliert wird, indem die internen Filterkernelelemente mit Nullen auffüllt werden.
+Ein Array, das die Dilationen des Konvolutionsvorgang enthält. Dilationen sind Schritte, die auf die Elemente des Filterkernels angewendet werden. Dies hat den Effekt, dass ein größerer Filterkernel simuliert wird, indem die internen Filterkernelelemente mit Nullen aufschlossen werden.
 
 
 `StartPadding`
 
-Typ: \_ Field_size \_ (DimensionCount) **const [UINT](/windows/win32/winprog/windows-data-types) \***
+Typ: \_ Field_size \_ (DimensionCount) **const [UINT](../../winprog/windows-data-types.md) \***
 
-Ein Array, das die Auffüllwerte enthält, die am Anfang jeder räumlichen Dimension des Filters und eingabe tensor des Konvolutionsvorgangs angewendet werden sollen.
+Ein Array, das die Auf padding-Werte enthält, die am Anfang jeder räumlichen Dimension des Filters und des Eingabetensors des Konvolutionsvorgang angewendet werden sollen.
 
 
 `EndPadding`
 
-Typ: \_ Field_size \_ (DimensionCount) **const [UINT](/windows/win32/winprog/windows-data-types) \***
+Typ: \_ Field_size \_ (DimensionCount) **const [UINT](../../winprog/windows-data-types.md) \***
 
-Ein Array, das die Auffüllwerte enthält, die am Ende jeder räumlichen Dimension des Filters und eingabe tensor des Konvolutionsvorgangs angewendet werden sollen.
+Ein Array mit den Auf padding-Werten, die auf das Ende jeder räumlichen Dimension des Filters und des Eingabetensors des Konvolutionsvorgang angewendet werden sollen.
 
 
 `GroupCount`
 
 Typ: [ **UINT**](/windows/desktop/winprog/windows-data-types)
 
-Die Anzahl der Gruppen, in die der Konvolutionsvorgang unterteilt werden soll. *GroupCount* kann verwendet werden, um eine tiefenweise Konvolution zu erreichen, indem *GroupCount* auf die Anzahl der Eingabekanäle gesetzt wird. Dadurch wird die Konvolution in eine separate Konvolution pro Eingabekanal unterteilt.
+Die Anzahl der Gruppen, in die der Konvolutionsvorgang unterteilt werden soll. *GroupCount* kann verwendet werden, um eine tiefenweise Konvolution zu erreichen, indem *GroupCount* auf die Anzahl der Eingabekanäle festgelegt wird. Dadurch wird die Konvolution in eine separate Konvolution pro Eingabekanal unterteilt.
 
 ## <a name="availability"></a>Verfügbarkeit
 Dieser Operator wurde in `DML_FEATURE_LEVEL_2_1` eingeführt.
 
-## <a name="tensor-constraints"></a>Tensor-Einschränkungen
-* *FilterTensor und* *FilterZeroPointTensor* müssen denselben *Datentyp haben.*
-* *InputTensor* und *InputZeroPointTensor* müssen denselben *Datentyp haben.*
+## <a name="tensor-constraints"></a>Tensoreinschränkungen
+* *FilterTensor* und *FilterZeroPointTensor* müssen den gleichen *Datentyp aufweisen.*
+* *InputTensor* und *InputZeroPointTensor* müssen den gleichen *Datentyp aufweisen.*
 
 ## <a name="tensor-support"></a>Tensor-Unterstützung
-| Tensor | Typ | Dimensionen | Unterstützte Dimensionsanzahl | Unterstützte Datentypen |
+| Tensor | Typ | Dimensionen | Unterstützte Dimensionsanzahlen | Unterstützte Datentypen |
 | ------ | ---- | ---------- | -------------------------- | -------------------- |
 | InputTensor | Eingabe | { BatchCount, InputChannelCount, InputHeight, InputWidth } | 4 | INT8, UINT8 |
 | InputZeroPointTensor | Optionale Eingabe | { 1, 1, 1, 1 } | 4 | INT8, UINT8 |

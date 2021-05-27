@@ -3,7 +3,7 @@ title: SHAREVISTRING-Nachricht (Commdlg.h)
 description: Ein Dialogfeld Öffnen oder Speichern unter sendet die registrierte SHAREVISTRING-Nachricht an Ihre Hookprozedur OFNHookProc, wenn ein Freigabeverstoß für die ausgewählte Datei auftritt, wenn der Benutzer auf die Schaltfläche OK klickt.
 ms.assetid: 53884497-4872-4aa8-b56e-2bb98df58fed
 keywords:
-- DIALOGFELDER FÜR SHAREVISTRING-Nachrichten
+- SHAREVISTRING-Meldungsdialogfelder
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 79535b66cff62ad0f9d3fd298fdd76bfc9123a3d
-ms.sourcegitcommit: 8e083a10b3a480dec8a8d74dbd5889f49dea15e4
+ms.openlocfilehash: 043bed9edd08269e4e030482cbd44debea3a3695
+ms.sourcegitcommit: f848119a8faa29b27585f4df53f6e50ee9666684
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/17/2021
-ms.locfileid: "107590667"
+ms.lasthandoff: 05/27/2021
+ms.locfileid: "110548765"
 ---
 # <a name="sharevistring-message"></a>SHAREVISTRING-Nachricht
 
-\[Ab Windows Vista wurden  **die** allgemeinen Dialogfelder Öffnen und Speichern unter durch den Allgemeinen [Elementdialog ersetzt.](/windows/win32/shell/common-file-dialog) Es wird empfohlen, anstelle dieser Dialogfelder aus der Common Dialog Box Library die API für den Allgemeinen Elementdialog zu verwenden.\]
+\[Ab Windows Vista wurden  **die** allgemeinen Dialogfelder Öffnen und Speichern unter durch den Allgemeinen [Elementdialog ersetzt.](../shell/common-file-dialog.md) Es wird empfohlen, anstelle dieser Dialogfelder aus der Common Dialog Box Library die API für den Allgemeinen Elementdialog zu verwenden.\]
 
 Ein **Dialogfeld** Öffnen oder Speichern unter sendet die registrierte **SHAREVISTRING-Nachricht** an Ihre Hookprozedur [*OFNHookProc,*](/windows/win32/api/commdlg/nc-commdlg-lpofnhookproc)wenn ein Freigabeverstoß für die ausgewählte Datei auftritt, wenn der Benutzer auf die Schaltfläche **OK** klickt. 
 
@@ -70,7 +70,7 @@ Die Hookprozedur muss einen der folgenden Werte zurückgeben, um anzugeben, wie 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Die Hookprozedur muss die **SHAREVISTRING-Konstante** in einem Aufruf der [**RegisterWindowMessage-Funktion**](/windows/desktop/api/winuser/nf-winuser-registerwindowmessagea) angeben, um den Bezeichner für die vom Dialogfeld gesendete Nachricht zu erhalten.
 
@@ -91,11 +91,11 @@ Wenn die Hookprozedur einen nicht definierten Wert zurückgibt, antwortet das Di
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
 [**CDN \_ SHAREVIOLATION**](cdn-shareviolation.md)
@@ -112,6 +112,4 @@ Wenn die Hookprozedur einen nicht definierten Wert zurückgibt, antwortet das Di
 
 [Allgemeine Dialogfeldbibliothek](common-dialog-box-library.md)
 </dt> </dl>
-
- 
 

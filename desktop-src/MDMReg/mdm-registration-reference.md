@@ -1,28 +1,28 @@
 ---
-title: MDM-Registrierungs Referenz
-description: Die folgenden Programmier Elemente werden bei der MDM-Registrierung verwendet.
+title: MDM-Registrierungsreferenz
+description: Die folgenden Programmierelemente werden bei der MDM-Registrierung verwendet.
 ms.assetid: 1fd87643-435a-45f3-bb20-d5b8bca8a3d7
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 09b306eadee6aa157bc180fcb8f3d0707133a4c4
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 54948ba576376f33a427ec2764a94ced4ca4891c
+ms.sourcegitcommit: f848119a8faa29b27585f4df53f6e50ee9666684
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "106338422"
+ms.lasthandoff: 05/27/2021
+ms.locfileid: "110548895"
 ---
-# <a name="mdm-registration-reference"></a>MDM-Registrierungs Referenz
+# <a name="mdm-registration-reference"></a>MDM-Registrierungsreferenz
 
-Die folgenden Programmier Elemente werden bei der MDM-Registrierung verwendet.
+Die folgenden Programmierelemente werden bei der MDM-Registrierung verwendet.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
 <dl> <dt>
 
-[**MDM-Registrierungsfehler Werte**](mdm-registration-constants.md)
+[**Fehlerwerte für die MDM-Registrierung**](mdm-registration-constants.md)
 </dt> <dd>
 
-Die folgenden Fehler Werte sind bei der MDM-Registrierung.
+Die folgenden Fehlerwerte sind bei der MDM-Registrierung angegeben.
 
 </dd> <dt>
 
@@ -33,7 +33,7 @@ Die folgenden Funktionen werden von der MDM-Registrierung verwendet.
 
 </dd> <dt>
 
-[MDM-Registrierungs Strukturen](mdm-registration-structures.md)
+[MDM-Registrierungsstrukturen](mdm-registration-structures.md)
 </dt> <dd>
 
 Die folgenden Strukturen werden von der MDM-Registrierung verwendet.
@@ -44,12 +44,12 @@ Die folgenden Strukturen werden von der MDM-Registrierung verwendet.
 
 <dl> <dt>
 
-[Registrierung für die Verwaltung mobiler Geräte](mobile-device-management-registration-portal.md)
+[Mobile Geräteverwaltung Registrierung](mobile-device-management-registration-portal.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

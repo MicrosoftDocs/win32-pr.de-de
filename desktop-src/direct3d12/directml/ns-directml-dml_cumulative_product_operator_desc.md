@@ -44,12 +44,12 @@ api_location:
 - DirectML.h
 api_name:
 - DML_CUMULATIVE_PRODUCT_OPERATOR_DESC
-ms.openlocfilehash: 2f0c6a6b6f12792a245027a7f8e86c05f7e85192
-ms.sourcegitcommit: 8e1f04c7e3c5c850071bac8d173f9441aab0dfed
+ms.openlocfilehash: 71a078ad0f47c19ad1964d8d21f22e06822b5d01
+ms.sourcegitcommit: f848119a8faa29b27585f4df53f6e50ee9666684
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "107804461"
+ms.lasthandoff: 05/27/2021
+ms.locfileid: "110550215"
 ---
 # <a name="dml_cumulative_product_operator_desc-directmlh"></a>DML_CUMULATIVE_PRODUCT_OPERATOR_DESC (directml.h)
 
@@ -130,7 +130,7 @@ OutputTensor: (Sizes:{1,1,3,4}, DataType:FLOAT32)
 
 ### <a name="example-2-exclusive-products"></a>Beispiel 2: Exklusive Produkte
 
-Wenn *HasExclusiveProduct* auf **TRUE** festgelegt wird, wird der Wert des aktuellen Elements beim Schreiben in den Ausgabe-Tensor vom ausgeführten Tally ausgeschlossen.
+Wenn *HasExclusiveProduct* auf **TRUE** festgelegt wird, wird der Wert des aktuellen Elements beim Schreiben in den Ausgabe-Tensor von der ausgeführten Tally ausgeschlossen.
 
 ```
 Axis: 3
@@ -145,7 +145,7 @@ OutputTensor: (Sizes:{1,1,3,4}, DataType:FLOAT32)
 
 ### <a name="example-3-axis-direction"></a>Beispiel 3: Achsenrichtung
 
-Wenn *AxisDirection* auf [**DML_AXIS_DIRECTION_DECREASING**](/windows/win32/direct3d12/directml/ne-directml-dml_axis_direction) festgelegt wird, wird die Durchlaufreihenfolge von Elementen umgekehrt, wenn die ausgeführte tally-Berechnung erfolgt.
+Wenn *AxisDirection* auf [**DML_AXIS_DIRECTION_DECREASING**](./ne-directml-dml_axis_direction.md) festgelegt wird, wird die Durchlaufreihenfolge von Elementen umgekehrt, wenn die ausgeführte tally-Berechnung erfolgt.
 
 ```
 Axis: 3

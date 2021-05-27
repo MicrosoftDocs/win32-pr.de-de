@@ -12,16 +12,16 @@ api_type:
 - DllExport
 ms.date: 07/02/2019
 ms.topic: reference
-ms.openlocfilehash: e149727650223f40a290d1ada40abc69f9033440
-ms.sourcegitcommit: 59ec383331366f8a62c94bb88468ca03e95c43f8
+ms.openlocfilehash: f099c1c71015ca433299843d388085103571d31d
+ms.sourcegitcommit: f848119a8faa29b27585f4df53f6e50ee9666684
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "107380634"
+ms.lasthandoff: 05/27/2021
+ms.locfileid: "110549415"
 ---
 # <a name="id2d1rendertargetcreategradientstopcollection-methods"></a>ID2D1RenderTarget::CreateGradientStopCollection-Methoden
 
-Erstellt eine [**ID2D1GradientStopCollection aus**](/windows/win32/api/d2d1/nn-d2d1-id2d1gradientstopcollection) dem angegebenen Array von [**D2D1 \_ GRADIENT \_ STOP-Strukturen.**](/windows/win32/api/d2d1/ns-d2d1-d2d1_gradient_stop)
+Erstellt eine [**ID2D1GradientStopCollection**](/windows/win32/api/d2d1/nn-d2d1-id2d1gradientstopcollection) aus dem angegebenen Array von [**D2D1 \_ GRADIENT \_ STOP-Strukturen.**](/windows/win32/api/d2d1/ns-d2d1-d2d1_gradient_stop)
 
 ### <a name="overload-list"></a>Überladeliste
 
@@ -29,14 +29,14 @@ Erstellt eine [**ID2D1GradientStopCollection aus**](/windows/win32/api/d2d1/nn-d
 
 | Methode                                                                                                                                                                                                                                                               | Beschreibung                                                                                                                                                                                                                           |
 |:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**CreateGradientStopCollection(D2D1 \_ GRADIENT \_ STOP \* ,D2D1 \_ GAMMA,D2D1 \_ EXTEND \_ MODE,ID2D1GradientStopCollection \* \* )**](https://msdn.microsoft.com/library/Dd316783(v=VS.85).aspx) | Erstellt eine [**ID2D1GradientStopCollection**](/windows/win32/api/d2d1/nn-d2d1-id2d1gradientstopcollection) aus den angegebenen Farbverlaufsstopps, Farbinterpolation gamma und dem angegebenen Erweiterungsmodus. <br/>                                                              |
-| [**CreateGradientStopCollection(D2D1 \_ GRADIENT \_ STOP \* ,ID2D1GradientStopCollection \* \* )**](https://msdn.microsoft.com/library/Dd316783(v=VS.85).aspx)                                                            | Erstellt eine [**ID2D1GradientStopCollection**](/windows/win32/api/d2d1/nn-d2d1-id2d1gradientstopcollection) aus den angegebenen Farbverlaufsstopps, die die Farbinterpolation [**D2D1 \_ GAMMA \_ 2 \_ 2**](/windows/win32/api/d2d1/ne-d2d1-d2d1_gamma) und den Klammerdehnungsmodus verwendet.<br/> |
+| [**CreateGradientStopCollection(D2D1 \_ GRADIENT \_ STOP \* ,D2D1 \_ GAMMA,D2D1 \_ EXTEND \_ MODE,ID2D1GradientStopCollection \* \* )**](/windows/win32/api/d2d1/nn-d2d1-id2d1gradientstopcollection) | Erstellt eine [**ID2D1GradientStopCollection**](/windows/win32/api/d2d1/nn-d2d1-id2d1gradientstopcollection) aus den angegebenen Farbverlaufsstopps, farbinterpolation gamma und dem Extend-Modus. <br/>                                                              |
+| [**CreateGradientStopCollection(D2D1 \_ GRADIENT \_ STOP \* ,ID2D1GradientStopCollection \* \* )**](/windows/win32/api/d2d1/nn-d2d1-id2d1gradientstopcollection)                                                            | Erstellt eine [**ID2D1GradientStopCollection**](/windows/win32/api/d2d1/nn-d2d1-id2d1gradientstopcollection) aus den angegebenen Farbverlaufsstopps, die das Gamma der [**D2D1 \_ GAMMA \_ 2 2-Farbinterpolation \_**](/windows/win32/api/d2d1/ne-d2d1-d2d1_gamma) und den Klammererweiterungsmodus verwenden.<br/> |
 
 
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird ein Array von Farbverlaufsstopps erstellt und anschließend verwendet, um eine [**ID2D1GradientStopCollection zu erstellen.**](/windows/win32/api/d2d1/nn-d2d1-id2d1gradientstopcollection)
+Im folgenden Beispiel wird ein Array von Farbverlaufsstopps erstellt und dann verwendet, um eine [**ID2D1GradientStopCollection**](/windows/win32/api/d2d1/nn-d2d1-id2d1gradientstopcollection)zu erstellen.
 
 
 ```C++
@@ -62,7 +62,7 @@ hr = m_pRenderTarget->CreateGradientStopCollection(
 
 
 
-Im nächsten Codebeispiel wird [**id2D1GradientStopCollection**](/windows/win32/api/d2d1/nn-d2d1-id2d1gradientstopcollection) verwendet, um einen [**ID2D1LinearGradientBrush zu erstellen.**](/windows/win32/api/d2d1/nn-d2d1-id2d1lineargradientbrush)
+Im nächsten Codebeispiel wird [**id2D1GradientStopCollection**](/windows/win32/api/d2d1/nn-d2d1-id2d1gradientstopcollection) verwendet, um eine [**ID2D1LinearGradientBrush**](/windows/win32/api/d2d1/nn-d2d1-id2d1lineargradientbrush)zu erstellen.
 
 
 ```C++
@@ -95,7 +95,7 @@ if (SUCCEEDED(hr))
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
@@ -105,10 +105,10 @@ if (SUCCEEDED(hr))
 [**D2D1 \_ GRADIENT \_ STOP**](/windows/win32/api/d2d1/ns-d2d1-d2d1_gradient_stop)
 </dt> <dt>
 
-[Erstellen eines Pinsels mit linearem Farbverlauf](how-to-create-a-linear-gradient-brush.md)
+[Erstellen eines linearen Farbverlaufspinsels](how-to-create-a-linear-gradient-brush.md)
 </dt> <dt>
 
-[Erstellen eines Pinsels mit radialem Farbverlauf](how-to-create-a-radial-gradient-brush.md)
+[Erstellen eines Pinsels mit radialen Farbverläufen](how-to-create-a-radial-gradient-brush.md)
 </dt> <dt>
 
 [Übersicht über Pinsel](direct2d-brushes-overview.md)

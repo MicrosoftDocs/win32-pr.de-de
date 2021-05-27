@@ -1,9 +1,9 @@
 - name: IP-Hilfsprogramm
   href: ip-helper-start-page.md
   items:
-    - name: Neues in IP Helper
+    - name: Neues im IP-Hilfsfeld
       href: what-s-new-in-ip-helper.md
-    - name: Info
+    - name: Informationen zum IP-Hilfsfeld
       href: about-ip-helper.md
       items:
         - name: Abrufen von Informationen zur Netzwerkkonfiguration
@@ -14,48 +14,52 @@
           href: managing-interfaces.md
         - name: Verwalten von IP-Adressen
           href: managing-ip-addresses.md
-        - name: Verwenden des adressauflösungsprotokolls
+        - name: Verwenden des Adressauflösungsprotokolls
           href: using-the-address-resolution-protocol.md
-        - name: Abrufen von Informationen über das Internetprotokoll und das Internet Control Message-Protokoll
+        - name: Abrufen von Informationen über das Internetprotokoll und das Internet Control Message Protocol
           href: retrieving-information-on-the-internet-protocol-and-the-internet-control-message-protocol.md
         - name: Verwalten des Routings
           href: managing-routing.md
         - name: Empfangen von Benachrichtigungen über Netzwerkereignisse
           href: receiving-notification-of-network-events.md
-        - name: Abrufen von Informationen über das Transmission Control-Protokoll und das User Datagram-Protokoll
+        - name: Abrufen von Informationen über das Transmission Control Protocol und das User Datagram Protocol
           href: retrieving-information-about-the-transmission-control-protocol-and-the-user-datagram-protocol.md
-    - name: Verwenden von IP Helper
+    - name: Verwenden des IP-Hilfsers
       href: using-ip-helper.md
       items:
-        - name: Einführung in das IP-Hilfsprogramm
+        - name: Erste Schritte mit DEM IP-Hilfsfeld
           href: getting-started-with-ip-helper.md
           items:
-            - name: Erstellen einer grundlegenden IP-Hilfsanwendung
+            - name: Erstellen einer einfachen IP-Hilfsanwendung
               href: creating-a-basic-ip-helper-application.md
-            - name: Abrufen von Informationen mithilfe von getnetworkpara Metern
+            - name: Abrufen von Informationen mit GetNetworkParams
               href: retrieving-information-using-getnetworkparams.md
-            - name: Verwalten von Netzwerkadaptern mithilfe von getadaptersinfo
+            - name: Verwalten von Netzwerkadaptern mit GetAdaptersInfo
               href: managing-network-adapters-using-getadaptersinfo.md
-            - name: Verwalten von Schnittstellen mithilfe von getinterfacetten Info
+            - name: Verwalten von Schnittstellen mit GetInterfaceInfo
               href: managing-interfaces-using-getinterfaceinfo.md
-            - name: Verwalten von IP-Adressen mit getipaddrtable
+            - name: Verwalten von IP-Adressen mit GetIpAddrTable
               href: managing-ip-addresses-using-getipaddrtable.md
-            - name: 'Verwalten von DHCP-Leases mit ipreleaseaddress, iprenewaddress'
+            - name: 'Verwalten von DHCP-Leases mit IpReleaseAddress, IpRenewAddress'
               href: managing-dhcp-leases-using-ipreleaseaddress-and-iprenewaddress.md
-            - name: 'Verwalten von IP-Adressen mit addipaddress, deleteipaddress'
+            - name: 'Verwalten von IP-Adressen mit AddIPAddress, DeleteIPAddress'
               href: managing-ip-addresses-using-addipaddress-and-deleteipaddress.md
-            - name: Abrufen von Informationen mithilfe von GetIpStatistics
+            - name: Abrufen von Informationen mit getIpStatistics
               href: retrieving-information-using-getipstatistics.md
-            - name: Abrufen von Informationen mithilfe von GetTcpStatistics
+            - name: Abrufen von Informationen mit getTcpStatistics
               href: retrieving-information-using-gettcpstatistics.md
-            - name: Vollständiger IP-hilfsanwendungs-Quellcode
+            - name: Vollständiger Quellcode der IP-Hilfssoftwareanwendung
               href: complete-ip-helper-application-source-code.md
+            - name: Paketzeitstempel
+              href: packet-timestamping.md
     - name: Referenz zum IP-Hilfsprogramm
       href: ip-helper-function-reference.md
       items:
         - name: Rückruffunktionen des IP-Hilfsprogramms
           href: ip-helper-callbacks.md
           items:
+            - name: INTERFACE_TIMESTAMP_CONFIG_CHANGE_CALLBACK
+              href: /windows/win32/api/iphlpapi/nf-iphlpapi-captureinterfacehardwarecrosstimestamp
             - name: 'PNETWORK_CONNECTIVITY_HINT_CHANGE_CALLBACK '
               href: /windows/win32/api/netioapi/nc-netioapi-pnetwork_connectivity_hint_change_callback
         - name: Enumerationen des IP-Hilfsprogramms
@@ -92,205 +96,211 @@
         - name: IP-Hilfsfunktionen
           href: ip-helper-functions.md
           items:
-            - name: Addipaddress
+            - name: AddIPAddress
               href: /windows/win32/api/Iphlpapi/nf-iphlpapi-addipaddress
-            - name: '"Zuweisung von" "" "".'
+            - name: AllocateAndGetTcpExTableFromStack
               href: /windows/win32/api/Iphlpapi/nf-iphlpapi-allocateandgettcpextablefromstack
-            - name: '"Zuweisung von" "" "".'
+            - name: AllocateAndGetUdpExTableFromStack
               href: /windows/win32/api/Iphlpapi/nf-iphlpapi-allocateandgetudpextablefromstack
-            - name: Cancelipchangenotify
+            - name: CancelIPChangeNotify
               href: /windows/win32/api/Iphlpapi/nf-iphlpapi-cancelipchangenotify
             - name: CancelMibChangeNotify2
               href: /windows/win32/api/Netioapi/nf-netioapi-cancelmibchangenotify2
             - name: CancelSecurityHealthChangeNotify
               href: /previous-versions/windows/desktop/legacy/bb442512(v=vs.85)
-            - name: Convertinterfacealiastoluid
+            - name: CaptureInterfaceHardwareCrossTimestamp
+              href: /windows/win32/api/iphlpapi/nf-iphlpapi-captureinterfacehardwarecrosstimestamp
+            - name: ConvertInterfaceAliasToLuid
               href: /windows/win32/api/Netioapi/nf-netioapi-convertinterfacealiastoluid
-            - name: Convertinterfaceguidtoluid
+            - name: ConvertInterfaceGuidToLuid
               href: /windows/win32/api/Netioapi/nf-netioapi-convertinterfaceguidtoluid
-            - name: Convertinterfakeingedextoluid
+            - name: ConvertInterfaceIndexToLuid
               href: /windows/win32/api/Netioapi/nf-netioapi-convertinterfaceindextoluid
-            - name: Convertinterfakeluidesalias
+            - name: ConvertInterfaceLuidToAlias
               href: /windows/win32/api/Netioapi/nf-netioapi-convertinterfaceluidtoalias
-            - name: Convertinterfakeluidtoguid
+            - name: ConvertInterfaceLuidToGuid
               href: /windows/win32/api/Netioapi/nf-netioapi-convertinterfaceluidtoguid
-            - name: Convertinterfakeluidumindex
+            - name: ConvertInterfaceLuidToIndex
               href: /windows/win32/api/Netioapi/nf-netioapi-convertinterfaceluidtoindex
-            - name: Convertinterfakeluidtonamea
+            - name: ConvertInterfaceLuidToNameA
               href: /windows/win32/api/Netioapi/nf-netioapi-convertinterfaceluidtonamea
-            - name: Convertinterfakeluidtonamew
+            - name: ConvertInterfaceLuidToNameW
               href: /windows/win32/api/Netioapi/nf-netioapi-convertinterfaceluidtonamew
-            - name: Convertinterfakenametoluida
+            - name: ConvertInterfaceNameToLuidA
               href: /windows/win32/api/Netioapi/nf-netioapi-convertinterfacenametoluida
-            - name: Convertinterfakenametoluidw
+            - name: ConvertInterfaceNameToLuidW
               href: /windows/win32/api/Netioapi/nf-netioapi-convertinterfacenametoluidw
             - name: ConvertIpv4MaskToLength
               href: /windows/win32/api/Netioapi/nf-netioapi-convertipv4masktolength
             - name: ConvertLengthToIpv4Mask
               href: /windows/win32/api/Netioapi/nf-netioapi-convertlengthtoipv4mask
-            - name: '"Kreateanycastipaddressentry"'
+            - name: CreateAnycastIpAddressEntry
               href: /windows/win32/api/Netioapi/nf-netioapi-createanycastipaddressentry
-            - name: '"Kreateipforwardentry"'
+            - name: CreateIpForwardEntry
               href: /windows/win32/api/Iphlpapi/nf-iphlpapi-createipforwardentry
             - name: CreateIpForwardEntry2
               href: /windows/win32/api/Netioapi/nf-netioapi-createipforwardentry2
-            - name: '"Kreateipnetentry"'
+            - name: CreateIpNetEntry
               href: /windows/win32/api/Iphlpapi/nf-iphlpapi-createipnetentry
             - name: CreateIpNetEntry2
               href: /windows/win32/api/Netioapi/nf-netioapi-createipnetentry2
-            - name: '"Kreatepersistenttcpportreservation"'
+            - name: CreatePersistentTcpPortReservation
               href: /windows/win32/api/Iphlpapi/nf-iphlpapi-createpersistenttcpportreservation
-            - name: '"Kreatepersistentudpportreservation"'
+            - name: CreatePersistentUdpPortReservation
               href: /windows/win32/api/Iphlpapi/nf-iphlpapi-createpersistentudpportreservation
-            - name: '"Kreateproxyarpentry"'
+            - name: CreateProxyArpEntry
               href: /windows/win32/api/Iphlpapi/nf-iphlpapi-createproxyarpentry
-            - name: '"Kreatesortedadresssspairs"'
+            - name: CreateSortedAddressPairs
               href: /windows/win32/api/Netioapi/nf-netioapi-createsortedaddresspairs
-            - name: '"Kreateunicastipaddressentry"'
+            - name: CreateUnicastIpAddressEntry
               href: /windows/win32/api/Netioapi/nf-netioapi-createunicastipaddressentry
-            - name: Deleteanycastipaddressentry
+            - name: DeleteAnycastIpAddressEntry
               href: /windows/win32/api/Netioapi/nf-netioapi-deleteanycastipaddressentry
-            - name: Deleteipaddress
+            - name: DeleteIPAddress
               href: /windows/win32/api/Iphlpapi/nf-iphlpapi-deleteipaddress
-            - name: Deleteipforwardentry
+            - name: DeleteIpForwardEntry
               href: /windows/win32/api/Iphlpapi/nf-iphlpapi-deleteipforwardentry
             - name: DeleteIpForwardEntry2
               href: /windows/win32/api/Netioapi/nf-netioapi-deleteipforwardentry2
-            - name: Deleteipnetentry
+            - name: DeleteIpNetEntry
               href: /windows/win32/api/Iphlpapi/nf-iphlpapi-deleteipnetentry
             - name: DeleteIpNetEntry2
               href: /windows/win32/api/Netioapi/nf-netioapi-deleteipnetentry2
-            - name: Deletepersistenttcpportreservation
+            - name: DeletePersistentTcpPortReservation
               href: /windows/win32/api/Iphlpapi/nf-iphlpapi-deletepersistenttcpportreservation
-            - name: Deletepersistentudpportreservation
+            - name: DeletePersistentUdpPortReservation
               href: /windows/win32/api/Iphlpapi/nf-iphlpapi-deletepersistentudpportreservation
-            - name: Deleteproxyarpentry
+            - name: DeleteProxyArpEntry
               href: /windows/win32/api/Iphlpapi/nf-iphlpapi-deleteproxyarpentry
-            - name: Deleteunicastipaddressentry
+            - name: DeleteUnicastIpAddressEntry
               href: /windows/win32/api/Netioapi/nf-netioapi-deleteunicastipaddressentry
-            - name: Disablemediasense
+            - name: DisableMediaSense
               href: /windows/win32/api/Iphlpapi/nf-iphlpapi-disablemediasense
-            - name: Enablerouter
+            - name: EnableRouter
               href: /windows/win32/api/Iphlpapi/nf-iphlpapi-enablerouter
-            - name: Flushipnettfähig
+            - name: FlushIpNetTable
               href: /windows/win32/api/Iphlpapi/nf-iphlpapi-flushipnettable
             - name: FlushIpNetTable2
               href: /windows/win32/api/Netioapi/nf-netioapi-flushipnettable2
-            - name: Flushippathtable
+            - name: FlushIpPathTable
               href: /windows/win32/api/Netioapi/nf-netioapi-flushippathtable
-            - name: Frei wählbar
+            - name: FreeMibTable
               href: /windows/win32/api/Netioapi/nf-netioapi-freemibtable
             - name: GetAdapterIndex
               href: /windows/win32/api/Iphlpapi/nf-iphlpapi-getadapterindex
-            - name: Getadapterordermap
+            - name: GetAdapterOrderMap
               href: /windows/win32/api/Iphlpapi/nf-iphlpapi-getadapterordermap
-            - name: Getadaptersadressen
+            - name: GetAdaptersAddresses
               href: /windows/win32/api/Iphlpapi/nf-iphlpapi-getadaptersaddresses
-            - name: Getadaptersinfo
+            - name: GetAdaptersInfo
               href: /windows/win32/api/Iphlpapi/nf-iphlpapi-getadaptersinfo
-            - name: Getanycastipaddressentry
+            - name: GetAnycastIpAddressEntry
               href: /windows/win32/api/Netioapi/nf-netioapi-getanycastipaddressentry
-            - name: Getanycastipadresssstable
+            - name: GetAnycastIpAddressTable
               href: /windows/win32/api/Netioapi/nf-netioapi-getanycastipaddresstable
-            - name: Getbestinterface
+            - name: GetBestInterface
               href: /windows/win32/api/Iphlpapi/nf-iphlpapi-getbestinterface
-            - name: Getbestinterfaceex
+            - name: GetBestInterfaceEx
               href: /windows/win32/api/Iphlpapi/nf-iphlpapi-getbestinterfaceex
-            - name: Getbestroute
+            - name: GetBestRoute
               href: /windows/win32/api/Iphlpapi/nf-iphlpapi-getbestroute
             - name: GetBestRoute2
               href: /windows/win32/api/Netioapi/nf-netioapi-getbestroute2
-            - name: Getdefaultmenmentid
+            - name: GetDefaultCompartmentId
               href: /windows/win32/api/netioapi/nf-netioapi-getdefaultcompartmentid
-            - name: Getextende dtcptable
+            - name: GetExtendedTcpTable
               href: /windows/win32/api/Iphlpapi/nf-iphlpapi-getextendedtcptable
-            - name: Getextendedudptable
+            - name: GetExtendedUdpTable
               href: /windows/win32/api/Iphlpapi/nf-iphlpapi-getextendedudptable
-            - name: Getfriendlyifindex
+            - name: GetFriendlyIfIndex
               href: /windows/win32/api/Iphlpapi/nf-iphlpapi-getfriendlyifindex
             - name: GetIcmpStatistics
               href: /windows/win32/api/Iphlpapi/nf-iphlpapi-geticmpstatistics
             - name: GetIcmpStatisticsEx
               href: /windows/win32/api/Iphlpapi/nf-iphlpapi-geticmpstatisticsex
-            - name: Getif-Eintrag
+            - name: GetIfEntry
               href: /windows/win32/api/Iphlpapi/nf-iphlpapi-getifentry
             - name: GetIfEntry2
               href: /windows/win32/api/Netioapi/nf-netioapi-getifentry2
             - name: GetIfEntry2Ex
               href: /windows/win32/api/Netioapi/nf-netioapi-getifentry2ex
-            - name: Getifstacktable
+            - name: GetIfStackTable
               href: /windows/win32/api/Netioapi/nf-netioapi-getifstacktable
-            - name: Getiftbar
+            - name: GetIfTable
               href: /windows/win32/api/Iphlpapi/nf-iphlpapi-getiftable
             - name: GetIfTable2
               href: /windows/win32/api/Netioapi/nf-netioapi-getiftable2
             - name: GetIfTable2Ex
               href: /windows/win32/api/Netioapi/nf-netioapi-getiftable2ex
-            - name: Getinterfacetten Info
+            - name: GetInterfaceActiveTimestampCapabilities
+              href: /windows/win32/api/iphlpapi/nf-iphlpapi-getinterfaceactivetimestampcapabilities
+            - name: GetInterfaceInfo
               href: /windows/win32/api/Iphlpapi/nf-iphlpapi-getinterfaceinfo
-            - name: Getinvertedifstacktable
+            - name: GetInterfaceSupportedTimestampCapabilities
+              href: /windows/win32/api/iphlpapi/nf-iphlpapi-getinterfacesupportedtimestampcapabilities
+            - name: GetInvertedIfStackTable
               href: /windows/win32/api/Netioapi/nf-netioapi-getinvertedifstacktable
-            - name: Getipaddrtable
+            - name: GetIpAddrTable
               href: /windows/win32/api/Iphlpapi/nf-iphlpapi-getipaddrtable
-            - name: Getiperrorstring
+            - name: GetIpErrorString
               href: /windows/win32/api/Iphlpapi/nf-iphlpapi-getiperrorstring
             - name: GetIpForwardEntry2
               href: /windows/win32/api/Netioapi/nf-netioapi-getipforwardentry2
-            - name: Getipforwardtable
+            - name: GetIpForwardTable
               href: /windows/win32/api/Iphlpapi/nf-iphlpapi-getipforwardtable
             - name: GetIpForwardTable2
               href: /windows/win32/api/Netioapi/nf-netioapi-getipforwardtable2
-            - name: Getipinterfaceentry
+            - name: GetIpInterfaceEntry
               href: /windows/win32/api/Netioapi/nf-netioapi-getipinterfaceentry
-            - name: Getipinterfaketable
+            - name: GetIpInterfaceTable
               href: /windows/win32/api/Netioapi/nf-netioapi-getipinterfacetable
             - name: GetIpNetEntry2
               href: /windows/win32/api/Netioapi/nf-netioapi-getipnetentry2
-            - name: Getipnettfähig
+            - name: GetIpNetTable
               href: /windows/win32/api/Iphlpapi/nf-iphlpapi-getipnettable
             - name: GetIpNetTable2
               href: /windows/win32/api/Netioapi/nf-netioapi-getipnettable2
-            - name: Getipnetworkconnectionbandwiddermates
+            - name: GetIpNetworkConnectionBandwidthEstimates
               href: /windows/win32/api/Netioapi/nf-netioapi-getipnetworkconnectionbandwidthestimates
-            - name: Getippathentry
+            - name: GetIpPathEntry
               href: /windows/win32/api/Netioapi/nf-netioapi-getippathentry
-            - name: Getippathtable
+            - name: GetIpPathTable
               href: /windows/win32/api/Netioapi/nf-netioapi-getippathtable
             - name: GetIpStatistics
               href: /windows/win32/api/Iphlpapi/nf-iphlpapi-getipstatistics
-            - name: Getipstatisticsex
+            - name: GetIpStatisticsEx
               href: /windows/win32/api/Iphlpapi/nf-iphlpapi-getipstatisticsex
-            - name: Getmulticastipaddressentry
+            - name: GetMulticastIpAddressEntry
               href: /windows/win32/api/Netioapi/nf-netioapi-getmulticastipaddressentry
-            - name: Getmulticastipadresssstable
+            - name: GetMulticastIpAddressTable
               href: /windows/win32/api/Netioapi/nf-netioapi-getmulticastipaddresstable
-            - name: Getnetworkconnectivityhint
+            - name: GetNetworkConnectivityHint
               href: /windows/win32/api/netioapi/nf-netioapi-getnetworkconnectivityhint
             - name: 'GetNetworkConnectivityHintForInterface '
               href: /windows/win32/api/netioapi/nf-netioapi-getnetworkconnectivityhintforinterface
-            - name: Getnetworkparameams
+            - name: GetNetworkParams
               href: /windows/win32/api/Iphlpapi/nf-iphlpapi-getnetworkparams
-            - name: Getnumofintergesichter
+            - name: GetNumberOfInterfaces
               href: /windows/win32/api/Iphlpapi/nf-iphlpapi-getnumberofinterfaces
-            - name: Getownermodulefromtcpentry
+            - name: GetOwnerModuleFromTcpEntry
               href: /windows/win32/api/Iphlpapi/nf-iphlpapi-getownermodulefromtcpentry
             - name: GetOwnerModuleFromTcp6Entry
               href: /windows/win32/api/Iphlpapi/nf-iphlpapi-getownermodulefromtcp6entry
-            - name: Getownermodulefromudpentry
+            - name: GetOwnerModuleFromUdpEntry
               href: /windows/win32/api/Iphlpapi/nf-iphlpapi-getownermodulefromudpentry
             - name: GetOwnerModuleFromUdp6Entry
               href: /windows/win32/api/Iphlpapi/nf-iphlpapi-getownermodulefromudp6entry
-            - name: Getperadapterinfo
+            - name: GetPerAdapterInfo
               href: /windows/win32/api/Iphlpapi/nf-iphlpapi-getperadapterinfo
             - name: GetPerTcp6ConnectionEStats
               href: /windows/win32/api/Iphlpapi/nf-iphlpapi-getpertcp6connectionestats
-            - name: Getpertcpconnectionestats
+            - name: GetPerTcpConnectionEStats
               href: /windows/win32/api/Iphlpapi/nf-iphlpapi-getpertcpconnectionestats
-            - name: Getrttandhopcount
+            - name: GetRTTAndHopCount
               href: /windows/win32/api/Iphlpapi/nf-iphlpapi-getrttandhopcount
             - name: GetTcpStatistics
               href: /windows/win32/api/Iphlpapi/nf-iphlpapi-gettcpstatistics
-            - name: Gettcpstatisticsex
+            - name: GetTcpStatisticsEx
               href: /windows/win32/api/Iphlpapi/nf-iphlpapi-gettcpstatisticsex
             - name: GetTcpStatisticsEx2
               href: /windows/win32/api/Iphlpapi/nf-iphlpapi-gettcpstatisticsex2
@@ -302,23 +312,23 @@
               href: /windows/win32/api/Iphlpapi/nf-iphlpapi-gettcptable
             - name: GetTcpTable2
               href: /windows/win32/api/Iphlpapi/nf-iphlpapi-gettcptable2
-            - name: Getteredoport
+            - name: GetTeredoPort
               href: /windows/win32/api/Netioapi/nf-netioapi-getteredoport
             - name: GetUdpStatistics
               href: /windows/win32/api/Iphlpapi/nf-iphlpapi-getudpstatistics
-            - name: Getudpstatisticsex
+            - name: GetUdpStatisticsEx
               href: /windows/win32/api/Iphlpapi/nf-iphlpapi-getudpstatisticsex
             - name: GetUdpStatisticsEx2
               href: /windows/win32/api/Iphlpapi/nf-iphlpapi-getudpstatisticsex2
-            - name: Getudptable
+            - name: GetUdpTable
               href: /windows/win32/api/Iphlpapi/nf-iphlpapi-getudptable
             - name: GetUdp6Table
               href: /windows/win32/api/Iphlpapi/nf-iphlpapi-getudp6table
-            - name: Getunicastipaddressentry
+            - name: GetUnicastIpAddressEntry
               href: /windows/win32/api/Netioapi/nf-netioapi-getunicastipaddressentry
-            - name: Getunicastipadresssstable
+            - name: GetUnicastIpAddressTable
               href: /windows/win32/api/Netioapi/nf-netioapi-getunicastipaddresstable
-            - name: Getunidirectionaladapterinfo
+            - name: GetUniDirectionalAdapterInfo
               href: /windows/win32/api/Iphlpapi/nf-iphlpapi-getunidirectionaladapterinfo
             - name: Icmp6CreateFile
               href: /windows/win32/api/Icmpapi/nf-icmpapi-icmp6createfile
@@ -326,13 +336,13 @@
               href: /windows/win32/api/Icmpapi/nf-icmpapi-icmp6parsereplies
             - name: Icmp6SendEcho2
               href: /windows/win32/api/Icmpapi/nf-icmpapi-icmp6sendecho2
-            - name: Icmpclosehandle
+            - name: IcmpCloseHandle
               href: /windows/win32/api/Icmpapi/nf-icmpapi-icmpclosehandle
-            - name: Icmpkreatefile
+            - name: IcmpCreateFile
               href: /windows/win32/api/Icmpapi/nf-icmpapi-icmpcreatefile
-            - name: Icmpparamesereplies
+            - name: IcmpParseReplies
               href: /windows/win32/api/Icmpapi/nf-icmpapi-icmpparsereplies
-            - name: Icmpsendecho
+            - name: IcmpSendEcho
               href: /windows/win32/api/Icmpapi/nf-icmpapi-icmpsendecho
             - name: IcmpSendEcho2
               href: /windows/win32/api/Icmpapi/nf-icmpapi-icmpsendecho2
@@ -342,51 +352,53 @@
               href: /windows/win32/api/Netioapi/nf-netioapi-if_indextoname
             - name: if_nametoindex
               href: /windows/win32/api/Netioapi/nf-netioapi-if_nametoindex
-            - name: Initializeipforwardentry
+            - name: InitializeIpForwardEntry
               href: /windows/win32/api/Netioapi/nf-netioapi-initializeipforwardentry
-            - name: Initializeipinterfaceentry
+            - name: InitializeIpInterfaceEntry
               href: /windows/win32/api/Netioapi/nf-netioapi-initializeipinterfaceentry
-            - name: Initializeunicastipaddressentry
+            - name: InitializeUnicastIpAddressEntry
               href: /windows/win32/api/Netioapi/nf-netioapi-initializeunicastipaddressentry
-            - name: Ipreleaseaddress
+            - name: IpReleaseAddress
               href: /windows/win32/api/Iphlpapi/nf-iphlpapi-ipreleaseaddress
-            - name: Iprenewaddress
+            - name: IpRenewAddress
               href: /windows/win32/api/Iphlpapi/nf-iphlpapi-iprenewaddress
-            - name: Lookuppersistenttcpportreservation
+            - name: LookupPersistentTcpPortReservation
               href: /windows/win32/api/Iphlpapi/nf-iphlpapi-lookuppersistenttcpportreservation
-            - name: Lookuppersistentudpportreservation
+            - name: LookupPersistentUdpPortReservation
               href: /windows/win32/api/Iphlpapi/nf-iphlpapi-lookuppersistentudpportreservation
-            - name: Nhpallocateandgetinterfakanfofromstack
+            - name: NhpAllocateAndGetInterfaceInfoFromStack
               href: /windows/win32/api/Iphlpapi/nf-iphlpapi-nhpallocateandgetinterfaceinfofromstack
-            - name: Notifyaddrchange
+            - name: NotifyAddrChange
               href: /windows/win32/api/Iphlpapi/nf-iphlpapi-notifyaddrchange
-            - name: Notizyipinterfacechange
+            - name: NotifyIpInterfaceChange
               href: /windows/win32/api/Netioapi/nf-netioapi-notifyipinterfacechange
-            - name: Notifynetworkconnectivityhintchange
+            - name: NotifyNetworkConnectivityHintChange
               href: /windows/win32/api/netioapi/nf-netioapi-notifynetworkconnectivityhintchange
-            - name: Notifyroutechange
+            - name: NotifyRouteChange
               href: /windows/win32/api/Iphlpapi/nf-iphlpapi-notifyroutechange
             - name: NotifyRouteChange2
               href: /windows/win32/api/Netioapi/nf-netioapi-notifyroutechange2
             - name: NotifySecurityHealthChange
               href: /previous-versions/windows/desktop/legacy/bb451761(v=vs.85)
-            - name: Notifystableunicastipadresssstable
+            - name: NotifyStableUnicastIpAddressTable
               href: /windows/win32/api/Netioapi/nf-netioapi-notifystableunicastipaddresstable
-            - name: Notifyteredoportchange
+            - name: NotifyTeredoPortChange
               href: /windows/win32/api/Netioapi/nf-netioapi-notifyteredoportchange
-            - name: Notifyunicastipadresssschange
+            - name: NotifyUnicastIpAddressChange
               href: /windows/win32/api/Netioapi/nf-netioapi-notifyunicastipaddresschange
-            - name: Parameeworkstring
+            - name: ParseNetworkString
               href: /windows/win32/api/Iphlpapi/nf-iphlpapi-parsenetworkstring
+            - name: RegisterInterfaceTimestampConfigChange
+              href: /windows/win32/api/iphlpapi/nf-iphlpapi-registerinterfacetimestampconfigchange
             - name: ResolveIpNetEntry2
               href: /windows/win32/api/Netioapi/nf-netioapi-resolveipnetentry2
-            - name: Resolveneighbor
+            - name: ResolveNeighbor
               href: /windows/win32/api/Iphlpapi/nf-iphlpapi-resolveneighbor
-            - name: Restoremediasense
+            - name: RestoreMediaSense
               href: /windows/win32/api/Iphlpapi/nf-iphlpapi-restoremediasense
-            - name: Rtlethernetadresssstostring
+            - name: RtlEthernetAddressToString
               href: /windows/win32/api/ip2string/nf-ip2string-rtlethernetaddresstostringa
-            - name: Rtlethernetstringdienst Address
+            - name: RtlEthernetStringToAddress
               href: /windows/win32/api/ip2string/nf-ip2string-rtlethernetstringtoaddressa
             - name: RtlIpv4AddressToString
               href: /windows/win32/api/ip2string/nf-ip2string-rtlipv4addresstostringa
@@ -404,36 +416,38 @@
               href: /windows/win32/api/ip2string/nf-ip2string-rtlipv6stringtoaddressa
             - name: RtlIpv6StringToAddressEx
               href: /windows/win32/api/ip2string/nf-ip2string-rtlipv6stringtoaddressexw
-            - name: Sendarp
+            - name: SendARP
               href: /windows/win32/api/Iphlpapi/nf-iphlpapi-sendarp
-            - name: '"Eintrag"'
+            - name: SetIfEntry
               href: /windows/win32/api/Iphlpapi/nf-iphlpapi-setifentry
-            - name: '"Gtipforwardentry"'
+            - name: SetIpForwardEntry
               href: /windows/win32/api/Iphlpapi/nf-iphlpapi-setipforwardentry
             - name: SetIpForwardEntry2
               href: /windows/win32/api/Netioapi/nf-netioapi-setipforwardentry2
-            - name: '""-Interfaceentry "'
+            - name: SetIpInterfaceEntry
               href: /windows/win32/api/Netioapi/nf-netioapi-setipinterfaceentry
-            - name: '"-Netentry"'
+            - name: SetIpNetEntry
               href: /windows/win32/api/Iphlpapi/nf-iphlpapi-setipnetentry
             - name: SetIpNetEntry2
               href: /windows/win32/api/Netioapi/nf-netioapi-setipnetentry2
-            - name: '""-Statistik'
+            - name: SetIpStatistics
               href: /windows/win32/api/Iphlpapi/nf-iphlpapi-setipstatistics
-            - name: '"* Tipstatisticsex"'
+            - name: SetIpStatisticsEx
               href: /windows/win32/api/Iphlpapi/nf-iphlpapi-setipstatisticsex
-            - name: '"Abgleichen"'
+            - name: SetIpTTL
               href: /windows/win32/api/Iphlpapi/nf-iphlpapi-setipttl
             - name: SetPerTcp6ConnectionEStats
               href: /windows/win32/api/Iphlpapi/nf-iphlpapi-setpertcp6connectionestats
-            - name: Setpertcpconnectionestats
+            - name: SetPerTcpConnectionEStats
               href: /windows/win32/api/Iphlpapi/nf-iphlpapi-setpertcpconnectionestats
-            - name: Settcpentry
+            - name: SetTcpEntry
               href: /windows/win32/api/Iphlpapi/nf-iphlpapi-settcpentry
-            - name: '"Setup"'
+            - name: SetUnicastIpAddressEntry
               href: /windows/win32/api/Netioapi/nf-netioapi-setunicastipaddressentry
-            - name: Unenablerouter
+            - name: UnenableRouter
               href: /windows/win32/api/Iphlpapi/nf-iphlpapi-unenablerouter
+            - name: UnregisterInterfaceTimestampConfigChange
+              href: /windows/win32/api/iphlpapi/unregisterinterfacetimestampconfigchange
         - name: Strukturen des IP-Hilfsprogramms
           href: ip-helper-structures.md
           items:
@@ -451,6 +465,14 @@
               href: /windows/win32/api/Ipexport/ns-ipexport-icmpv6_echo_reply_lh
             - name: in_addr
               href: /windows/win32/api/Inaddr/ns-inaddr-in_addr
+            - name: INTERFACE_HARDWARE_TIMESTAMP_CAPABILITIES
+              href: /windows/win32/api/iphlpapi/ns-iphlpapi-interface_hardware_timestamp_capabilities
+            - name: INTERFACE_HARDWARE_CROSSTIMESTAMP
+              href: /windows/win32/api/iphlpapi/ns-iphlpapi-interface_hardware_crosstimestamp
+            - name: INTERFACE_SOFTWARE_TIMESTAMP_CAPABILITIES
+              href: /windows/win32/api/iphlpapi/ns-iphlpapi-interface_software_timestamp_capabilities
+            - name: INTERFACE_TIMESTAMP_CAPABILITIES
+              href: /windows/win32/api/iphlpapi/ns-iphlpapi-interface_timestamp_capabilities
             - name: IP_ADAPTER_ADDRESSES
               href: /windows/win32/api/Iptypes/ns-iptypes-ip_adapter_addresses_lh
             - name: IP_ADAPTER_ANYCAST_ADDRESS
@@ -547,7 +569,7 @@
               href: /windows/win32/api/Iprtrmib/ns-iprtrmib-tcpip_owner_module_basic_info
             - name: TCP_RESERVE_PORT_RANGE
               href: /windows/desktop/api/Ipexport/ns-ipexport-tcp_reserve_port_range
-        - name: IP-hilfenumerationen
+        - name: IP-Hilfsenumerationen
           href: ip-helper-enumerations.md
           items:
             - name: IF_OPER_STATUS

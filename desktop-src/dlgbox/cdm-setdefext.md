@@ -1,9 +1,9 @@
 ---
-title: CDM_SETDEFEXT Nachricht (Commdlg.h)
-description: Legt die Standarddateinamenerweiterung für ein Dialogfeld im Explorer-Stil "Öffnen" oder "Speichern unter" fest.
+title: CDM_SETDEFEXT (Commdlg.h)
+description: Legt die Standarddateinamenerweiterung für das Dialogfeld Öffnen oder Speichern unter im Explorer-Stil fest.
 ms.assetid: bd4999f1-0a7e-4b7f-a0ba-a7c2a7f196c6
 keywords:
-- Dialogfelder für CDM_SETDEFEXT Meldung
+- CDM_SETDEFEXT meldungsdialogfelder
 topic_type:
 - apiref
 api_name:
@@ -14,18 +14,18 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1bd5706e0bccf0b61c0737ef54d6e227e5593bc9
-ms.sourcegitcommit: 8e083a10b3a480dec8a8d74dbd5889f49dea15e4
+ms.openlocfilehash: 0b0b1169a2777d5a5f82925366c6723af741706d
+ms.sourcegitcommit: f848119a8faa29b27585f4df53f6e50ee9666684
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/17/2021
-ms.locfileid: "107590857"
+ms.lasthandoff: 05/27/2021
+ms.locfileid: "110550115"
 ---
-# <a name="cdm_setdefext-message"></a>CDM \_ SETDEFEXT-Meldung
+# <a name="cdm_setdefext-message"></a>CDM \_ SETDEFEXT-Nachricht
 
-\[Ab Windows Vista wurden die Dialogfelder **Öffnen** und **Speichern unter** allgemein durch das [Dialogfeld "Allgemeines Element"](/windows/win32/shell/common-file-dialog)ersetzt. Es wird empfohlen, die DIALOGFELD-API für allgemeine Elemente anstelle dieser Dialogfelder aus der Common Dialog Box Library zu verwenden.\]
+\[Ab Windows Vista wurden  **die** allgemeinen Dialogfelder Öffnen und Speichern unter durch den Allgemeinen [Elementdialog ersetzt.](../shell/common-file-dialog.md) Es wird empfohlen, anstelle dieser Dialogfelder aus der Common Dialog Box Library die API für den Allgemeinen Elementdialog zu verwenden.\]
 
-Legt die Standarddateinamenerweiterung für ein Dialogfeld im Explorer-Stil **"Öffnen"** oder **"Speichern** unter" fest. Das Dialogfeld muss mit dem **\_ OFN-EXPLORER-Flag** erstellt worden sein. Andernfalls schlägt die Meldung fehl.
+Legt die Standarddateinamenerweiterung für  das Dialogfeld Öffnen oder Speichern unter im **Explorer-Stil** fest. Das Dialogfeld muss mit dem **\_ OFN-EXPLORER-Flag** erstellt worden sein. Andernfalls schlägt die Meldung fehl.
 
 
 ```C++
@@ -56,9 +56,9 @@ Ein Zeiger auf die neue Dateinamenerweiterung. Darf den Punkt (.) nicht enthalte
 
 ## <a name="return-value"></a>Rückgabewert
 
-Diese Nachricht weist keinen Rückgabewert auf.
+Diese Meldung hat keinen Rückgabewert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Das entsprechende Makro lautet wie folgt:
 
@@ -74,15 +74,15 @@ void CommDlg_OpenSave_SetDefExt(hwnd, lparam)
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Commdlg.h (windows.h einschließen)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Commdlg.h (einschließlich Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
 [**GetOpenFileName**](/windows/desktop/api/Commdlg/nf-commdlg-getopenfilenamea)
@@ -99,6 +99,4 @@ void CommDlg_OpenSave_SetDefExt(hwnd, lparam)
 
 [Allgemeine Dialogfeldbibliothek](common-dialog-box-library.md)
 </dt> </dl>
-
- 
 

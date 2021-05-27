@@ -1,9 +1,9 @@
 ---
-title: D1111 mit Schicht verwenden, wenn Clip ausreichend ist
+title: D1111 unter Verwendung der Ebene, wenn clip ausreichend ist
 ms.assetid: 07fe3c66-15be-408b-a30b-a7f52919c058
-description: Eine Ebene wird mit einer NULL-Deckkraft Maske, 1,0 Deckkraft und einer durch Achsen ausgerichteten rechteckigen geometrischen Maske verwendet. Die Push-/Popout-API sollte die gleichen Ergebnisse erzielen, wenn Sie eine höhere Leistung erzielen.
+description: Eine Ebene wird mit einer NULL-Deckkraftmaske, einer Deckkraft von 1,0 und einer achsenbündig ausgerichteten rechteckigen geometrischen Maske verwendet. Die Push/Pop Clip-API sollte die gleichen Ergebnisse mit höherer Leistung erzielen.
 keywords:
-- D1111 Verwenden einer Schicht, wenn der Clip ausreichend ist Direct2D
+- D1111 unter Verwendung der Ebene, wenn clip ausreichend direct2d ist
 topic_type:
 - apiref
 api_name:
@@ -13,39 +13,39 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 ms.custom: seodec18
-ms.openlocfilehash: a30bbfd7b8ca448928249018a28bc4d6a8a2f57f
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: e8463cc3940b69e326f13df6be9602dd6073fec0
+ms.sourcegitcommit: f848119a8faa29b27585f4df53f6e50ee9666684
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103730072"
+ms.lasthandoff: 05/27/2021
+ms.locfileid: "110549905"
 ---
-# <a name="d1111-using-layer-when-clip-is-sufficient"></a>D1111: Schicht verwenden, wenn Clip ausreichend ist
+# <a name="d1111-using-layer-when-clip-is-sufficient"></a>D1111: Verwenden der Ebene, wenn clip ausreichend ist
 
-Perf: eine Ebene wird mit einer **null** -Deckkraft Maske, 1,0 Deckkraft und einer durch Achsen ausgerichteten rechteckigen geometrischen Maske verwendet. Die Push-/Popout-API sollte die gleichen Ergebnisse erzielen, wenn Sie eine höhere Leistung erzielen.
+PERF: Eine Ebene wird  mit einer NULL-Deckkraftmaske, einer Deckkraft von 1,0 und einer an einer Achse ausgerichteten rechteckigen geometrischen Maske verwendet. Die Push/Pop Clip-API sollte die gleichen Ergebnisse mit höherer Leistung erzielen.
 
 ## <a name="placeholders"></a>Platzhalter
 
 <dl> <dt>
 
-<span id="interface"></span><span id="INTERFACE"></span>*berfläche*
+<span id="interface"></span><span id="INTERFACE"></span>*Schnittstelle*
 </dt> <dd>
 
-Die Adresse der-Schnittstelle.
+Die Adresse der Schnittstelle.
 
 </dd> </dl> 
 
-|             |             |
+| &nbsp;      |    &nbsp;   |
 |-------------|-------------|
 | Fehlerstufe | Information |
 
 
 
- 
+ 
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Code werden die [**pushlayer**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-pushlayer(constd2d1_layer_parameters__id2d1layer)) und [**poplayer**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-poplayer) verwendet, wenn die Ebene nur ein primitiv (ein Rechteck) enthält und die Felder der [**D2D1 \_ Layer \_ Parameters**](/windows/desktop/api/d2d1/ns-d2d1-d2d1_layer_parameters) -Struktur auf Standardwerte festgelegt sind. Die Standardwerte der **D2D1 \_ Layer \_ Parameters** -Struktur finden Sie unter [**layerparameter**](/windows/desktop/api/d2d1helper/nf-d2d1helper-layerparameters).
+Im folgenden Code werden [**PushLayer**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-pushlayer(constd2d1_layer_parameters__id2d1layer)) und [**PopLayer**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-poplayer) verwendet, wenn die Ebene nur ein Primitiv (ein Rechteck) enthält und die Felder der [**D2D1 \_ LAYER \_ PARAMETERS-Struktur**](/windows/desktop/api/d2d1/ns-d2d1-d2d1_layer_parameters) auf Standardwerte festgelegt sind. Die Standardwerte der **D2D1 \_ LAYER \_ PARAMETERS-Struktur** finden Sie unter [**LayerParameter**](/windows/desktop/api/d2d1helper/nf-d2d1helper-layerparameters).
 
 
 ```C++
@@ -59,7 +59,7 @@ Im folgenden Code werden die [**pushlayer**](/windows/win32/api/d2d1/nf-d2d1-id2
 
 
 
-Dieses Beispiel erzeugt die folgende Debugmeldung:
+In diesem Beispiel wird die folgende Debugmeldung erzeugt:
 
 ``` syntax
 DEBUG INFO - PERF - A layer is being used with a NULL opacity mask, 1.0 opacity, 
@@ -69,8 +69,8 @@ DEBUG INFO - PERF - A layer is being used with a NULL opacity mask, 1.0 opacity,
 
 ## <a name="possible-causes"></a>Mögliche Ursachen
 
-Es wurde eine Ebene verwendet, wenn die [**pushaxisalignedclip**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-pushaxisalignedclip(constd2d1_rect_f__d2d1_antialias_mode)) -Methode und die [**popaxisalignedclip**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-popaxisalignedclip) -Methode nicht ausreichen.
+Eine Ebene wurde verwendet, wenn [**die Methoden PushAxisAlignedClip**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-pushaxisalignedclip(constd2d1_rect_f__d2d1_antialias_mode)) und [**PopAxisAlignedClip**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-popaxisalignedclip) ausreichend waren.
 
- 
+ 
 
- 
+ 

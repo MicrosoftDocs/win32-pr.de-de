@@ -1,47 +1,47 @@
 ---
-description: Ein Encoder schreibt Bilddaten in einen Stream. Encoder können die Bild Pixel auf verschiedene Weise komprimieren, verschlüsseln und ändern, bevor Sie Sie in den Stream schreiben.
+description: Ein Encoder schreibt Bilddaten in einen Stream. Encoder können die Bildpixel auf verschiedene Weise komprimieren, verschlüsseln und ändern, bevor sie in den Stream geschrieben werden.
 ms.assetid: e1e3a9d9-209b-46a6-92da-5570476507cf
 title: Übersicht über die Codierung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3be46aa73082071deb69fdd402f42866b18ef0aa
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f938e184dee7fd9b3e5348365550615ee28de70d
+ms.sourcegitcommit: f848119a8faa29b27585f4df53f6e50ee9666684
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104218038"
+ms.lasthandoff: 05/27/2021
+ms.locfileid: "110549485"
 ---
 # <a name="encoding-overview"></a>Übersicht über die Codierung
 
-Ein Encoder schreibt Bilddaten in einen Stream. Encoder können die Bild Pixel auf verschiedene Weise komprimieren, verschlüsseln und ändern, bevor Sie Sie in den Stream schreiben. Die Verwendung einiger Encoder führt zu den vor-und Nachteile – z. b. JPEG, die Farbinformationen für eine bessere Komprimierung abwickelt. Andere Encoder führen nicht zu solchen Verlusten – z. b. Bitmap (BMP). Da viele Codecs proprietäre Technologien verwenden, um eine bessere Komprimierung und Bild Treue zu erzielen, werden die Details zur Codierung eines Bilds dem Codec-Entwickler angezeigt.
+Ein Encoder schreibt Bilddaten in einen Stream. Encoder können die Bildpixel auf verschiedene Weise komprimieren, verschlüsseln und ändern, bevor sie in den Stream geschrieben werden. Die Verwendung einiger Encoder führt zu Kompromissen, z. B. JPEG, bei dem Farbinformationen für eine bessere Komprimierung abgehandelt werden. Andere Encoder führen nicht zu solchen Verlusten, z. B. Bitmap (BMP). Da viele Codecs proprietäre Technologie verwenden, um eine bessere Komprimierung und Bildgenauigkeit zu erzielen, sind die Details zur Codierung eines Bilds vom Codecentwickler selbst zu erhalten.
 
 Das Thema enthält folgende Abschnitte:
 
--   [Iwicbitmapcoder](#iwicbitmapencoder)
+-   [IWICBitmapEncoder](#iwicbitmapencoder)
 -   [IWICBitmapFrameEncode](#iwicbitmapframeencode)
--   [Beispiel für TIFF-Codierung](#tiff-encoding-example)
--   [Verwendung von Encoder-Optionen](#encoder-options-usage)
--   [Codierungsoptionen](#encoder-options-usage)
--   [Beispiele für Codierungsoptionen](#encoder-options-examples)
--   [Zugehörige Themen](#related-topics)
+-   [TIFF-Codierungsbeispiel](#tiff-encoding-example)
+-   [Verwendung von Encoderoptionen](#encoder-options-usage)
+-   [Encoderoptionen](#encoder-options-usage)
+-   [Beispiele für Encoderoptionen](#encoder-options-examples)
+-   [Verwandte Themen](#related-topics)
 
-## <a name="iwicbitmapencoder"></a>Iwicbitmapcoder
+## <a name="iwicbitmapencoder"></a>IWICBitmapEncoder
 
-[**Iwicbitmapcoder**](/windows/desktop/api/wincodec/nn-wincodec-iwicbitmapencoder) ist die Hauptschnittstelle zum Codieren eines Bilds in das Zielformat und wird zum Serialisieren der Komponenten eines Bilds, z. b. Miniaturansicht ([**setminiatur**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapencoder-setthumbnail)) und Frames ("[**kreatenewframe**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapencoder-createnewframe))", in die Bilddatei verwendet.
+[**IWICBitmapEncoder**](/windows/desktop/api/wincodec/nn-wincodec-iwicbitmapencoder) ist die Hauptschnittstelle zum Codieren eines Bilds in das Zielformat und wird verwendet, um die Komponenten eines Bilds, z. B. Miniaturansicht ([**SetThumbnail**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapencoder-setthumbnail)) und Frames ([**CreateNewFrame),**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapencoder-createnewframe)in die Bilddatei zu serialisieren.
 
-Wie und wann die Serialisierung stattfindet, wird dem Codec-Entwickler überlassen. Jeder einzelne Datenblock innerhalb des Ziel Datei Formats sollte in der Lage sein, unabhängig von der Reihenfolge festzulegen, aber dies ist die Entscheidung des Codec-Entwicklers. Nachdem die [**Commit**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapencoder-commit) -Methode aufgerufen wurde, sollten Änderungen am Bild nicht zulässig sein, und der Stream sollte geschlossen werden.
+Wie und wann die Serialisierung erfolgt, bleibt dem Codecentwickler übrig. Jeder einzelne Datenblock im Zieldateiformat sollte unabhängig von der Reihenfolge festgelegt werden können. Dies ist jedoch auch hier die Entscheidung des Codecentwicklers. Nachdem die [**Commit-Methode**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapencoder-commit) aufgerufen wurde, sollten Änderungen am Image jedoch nicht zulässig sein, und der Stream sollte geschlossen werden.
 
 ## <a name="iwicbitmapframeencode"></a>IWICBitmapFrameEncode
 
-[**Iwicbitmapframecocode**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapframeencode) ist die Schnittstelle zum Codieren der einzelnen Frames eines Bilds. Es stellt Methoden zum Festlegen einzelner Frame-Imaging-Komponenten wie Miniaturansichten und Frames sowie Bild Dimensionen, dpi-und Pixel Formate bereit.
+[**IWICBitmapFrameEncode**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapframeencode) ist die Schnittstelle zum Codieren der einzelnen Frames eines Bilds. Es stellt Methoden zum Festlegen einzelner Bildbildkomponenten für Frames bereit, z. B. Miniaturansichten und Frames, sowie Bilddimensionen, DPI- und Pixelformate.
 
-Einzelne Frames können mit Frame-spezifischen Metadaten codiert werden, damit [**iwicbitmapframecocode**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapframeencode) über die [**GetMetadataQueryWriter**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapframeencode-getmetadataquerywriter) -Methode Zugriff auf einen metadatenwriter bietet.
+Einzelne Frames können mit framespezifischen Metadaten codiert werden, sodass [**IWICBitmapFrameEncode**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapframeencode) über die [**GetMetadataQueryWriter-Methode**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapframeencode-getmetadataquerywriter) Zugriff auf einen Metadatenwriter bietet.
 
-Die Commit-Methode des Frames führt einen [**Commit**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapframeencode-commit) für alle Änderungen an den einzelnen Frame durch und gibt an, dass Änderungen an diesem Frame nicht mehr akzeptiert werden sollen.
+Die [**Commit-Methode**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapframeencode-commit) des Frames committet alle Änderungen am einzelnen Frame und gibt an, dass Änderungen an diesem Frame nicht mehr akzeptiert werden sollen.
 
-## <a name="tiff-encoding-example"></a>Beispiel für TIFF-Codierung
+## <a name="tiff-encoding-example"></a>TIFF-Codierungsbeispiel
 
-Im folgenden Beispiel wird ein Tagged Image File Format-Bild (TIFF) mit [**iwicbitmapcoder**](/windows/desktop/api/wincodec/nn-wincodec-iwicbitmapencoder) und einem [**iwicbitmapframecoder**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapframeencode)-Element codiert. Die TIFF-Ausgabe wird mithilfe von [**wictiffcompressionoption**](/windows/desktop/api/Wincodec/ne-wincodec-wictiffcompressionoption) angepasst, und der BitmapFrame wird mithilfe der angegebenen Optionen initialisiert. Nachdem das Image mit " [**Write Pixels**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapframeencode-writepixels)" erstellt wurde, wird der Frame per [**Commit**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapframeencode-commit) committet, und das Image wird mithilfe von [**Commit**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapencoder-commit)gespeichert.
+Im folgenden Beispiel wird ein Tagged Image File Format -Image (TIFF) mithilfe von [**IWICBitmapEncoder**](/windows/desktop/api/wincodec/nn-wincodec-iwicbitmapencoder) und einem [**IWICBitmapFrameEncode**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapframeencode)codiert. Die TIFF-Ausgabe wird mithilfe von [**WICTiffCompressionOption**](/windows/desktop/api/Wincodec/ne-wincodec-wictiffcompressionoption) angepasst, und der Bitmapframe wird mit den angegebenen Optionen initialisiert. Nachdem das Image mit [**WritePixels**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapframeencode-writepixels)erstellt wurde, wird für den Frame ein Commit über [**Commit**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapframeencode-commit) ausgeführt, und das Image wird mit [**Commit**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapencoder-commit)gespeichert.
 
 
 ```C++
@@ -121,8 +121,8 @@ if (SUCCEEDED(hr))
 
 if (SUCCEEDED(hr))
 {
-    UINT cbStride = (uiWidth * 24 + 7)/8/***WICGetStride**_/;
-    UINT cbBufferSize = uiHeight _ cbStride;
+    UINT cbStride = (uiWidth * 24 + 7)/8/***WICGetStride***/;
+    UINT cbBufferSize = uiHeight * cbStride;
 
     BYTE *pbBuffer = new BYTE[cbBufferSize];
 
@@ -173,17 +173,17 @@ return hr;
 
 
 
-## <a name="encoder-options-usage"></a>Verwendung von Encoder-Optionen
+## <a name="encoder-options-usage"></a>Verwendung von Encoderoptionen
 
-Verschiedene Encoder für verschiedene Formate müssen unterschiedliche Optionen für die Codierung eines Bilds verfügbar machen. Windows Imaging Component (WIC) stellt einen konsistenten Mechanismus dar, mit dem ausgedrückt werden soll, ob Codierungsoptionen erforderlich sind, während Anwendungen weiterhin mit mehreren Encodern arbeiten können, ohne dass ein bestimmtes Format erforderlich ist. Dies erfolgt durch Bereitstellen eines [IPropertyBag](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768196(v=vs.85)) -Parameters für die Methode "| [**atenewframe**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapencoder-createnewframe) " und die [**Initialize**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapframeencode-initialize) -Methode.
+Verschiedene Encoder für verschiedene Formate müssen unterschiedliche Optionen für die Codierung eines Bilds verfügbar machen. Windows-Bilderstellungskomponente (WIC) bietet einen konsistenten Mechanismus zum Ausdrücken, ob Codierungsoptionen erforderlich sind, während Anwendungen weiterhin mit mehreren Encodern arbeiten können, ohne dass ein bestimmtes Format bekannt sein muss. Dies wird erreicht, indem ein [IPropertyBag-Parameter](/windows/win32/api/oaidl/nn-oaidl-ipropertybag) für die [**CreateNewFrame-Methode**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapencoder-createnewframe) und die [**Initialize-Methode**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapframeencode-initialize) zur Verfügung gestellt wird.
 
-Die komponentenfactory bietet einen einfachen Erstellungs Punkt zum Erstellen eines Eigenschaften Behälters für Codierungsoptionen. Codecs können diesen Dienst verwenden, wenn Sie einen einfachen, intuitiven und nicht in Konflikt stehenden Satz von Codierungsoptionen bereitstellen müssen. Der Bild Verarbeitungseigenschaften Behälter muss während der Erstellung mit allen für diesen Codec relevanten Codierungsoptionen initialisiert werden. Bei Encoderoptionen aus der kanonischen Menge wird der Wertebereich beim Schreiben erzwungen. Für erweiterte Anforderungen sollten Codecs eine eigene Implementierung der Eigenschaften Behälter schreiben.
+Die Komponentenfactory bietet einen einfachen Erstellungspunkt zum Erstellen eines Eigenschaftenbehälters für Encoderoptionen. Codecs können diesen Dienst verwenden, wenn sie einen einfachen, intuitiven und nicht in Konflikt stehenden Satz von Encoderoptionen bereitstellen müssen. Die Imaging-Eigenschaftenerfassung muss während der Erstellung mit allen Encoderoptionen initialisiert werden, die für diesen Codec relevant sind. Für Encoderoptionen aus dem kanonischen Satz wird der Wertbereich beim Schreiben erzwungen. Für erweiterte Anforderungen sollten Codecs ihre eigene Implementierung von Eigenschaftentüten schreiben.
 
-Einer Anwendung wird während der Frame Erstellung der Codierungsoptionen-Behälter zugewiesen, und vor dem Initialisieren des encoderframes müssen alle Werte konfiguriert werden. Für eine UI-gesteuerte Anwendung kann Sie eine Benutzeroberfläche für kanonische Codierungsoptionen und eine erweiterte Ansicht für verbleibende Optionen bieten. Änderungen können jeweils nacheinander durch die Write-Methode vorgenommen werden, und alle Fehler werden über IErrorLog gemeldet. Die Benutzeroberflächen Anwendung sollte immer erneut lesen und alle Optionen anzeigen, nachdem eine Änderung vorgenommen wurde, falls die Änderung zu einem kaskadierenden Effekt geführt hat. Eine Anwendung sollte darauf vorbereitet sein, die fehlgeschlagene Frame Initialisierung für Codecs zu behandeln, die nur minimale Fehlerberichterstattung über ihren Eigenschaften Behälter bereitstellen.
+Eine Anwendung erhält während der Frameerstellung den Encoderoptionen-Bag und muss vor der Initialisierung des Encoderframes alle Werte konfigurieren. Für eine benutzeroberflächengesteuerte Anwendung kann sie eine feste Benutzeroberfläche für die kanonischen Encoderoptionen und eine erweiterte Ansicht für die verbleibenden Optionen anbieten. Änderungen können nach und nach über die Write-Methode vorgenommen werden, und alle Fehler werden über IErrorLog gemeldet. Die Benutzeroberflächenanwendung sollte nach einer Änderung immer erneut lesen und alle Optionen anzeigen, falls die Änderung einen kaskadierten Effekt verursacht hat. Eine Anwendung sollte darauf vorbereitet sein, die fehlgeschlagene Framein initialisierung für Codecs zu verarbeiten, die nur minimale Fehlerberichte über ihre Eigenschaftentüte bereitstellen.
 
-## <a name="encoder-options"></a>Codierungsoptionen
+## <a name="encoder-options"></a>Encoderoptionen
 
-Eine Anwendung kann die folgenden Codierungsoptionen erwarten. Die Codierungsoptionen spiegeln die Funktionen eines Encoders und des zugrunde liegenden Container Formats wider und sind daher von Natur aus nicht wirklich Codec-agnostisch. Wenn möglich, sollten neue Optionen normalisiert werden, damit Sie auf neue Codecs angewendet werden können, die sich ergeben.
+Eine Anwendung kann die folgenden Encoderoptionen erwarten. Encoderoptionen spiegeln die Funktionen eines Encoders und des zugrunde liegenden Containerformats wider und sind daher von Natur aus nicht wirklich codecunabhängig. Nach Möglichkeit sollten neue Optionen normalisiert werden, damit sie auf neue Codecs angewendet werden können, die entstehen.
 
 
 
@@ -191,43 +191,43 @@ Eine Anwendung kann die folgenden Codierungsoptionen erwarten. Die Codierungsopt
 |--------------------|----------|---------------------------------------------------------------------------|-------------------|
 | ImageQuality       | VT \_ R4   | 0-1.0                                                                     | JPEG, HDPhoto     |
 | CompressionQuality | VT \_ R4   | 0-1.0                                                                     | TIFF              |
-| Lossless           | VT \_ bool | **true**, **false**                                                       | HDPhoto           |
+| Lossless           | VT \_ BOOL | **TRUE,** **FALSE**                                                       | HDPhoto           |
 | BitmapTransform    | VT \_ UI1  | [**WICBitmapTransformOptions**](/windows/desktop/api/Wincodec/ne-wincodec-wicbitmaptransformoptions) | JPEG              |
 
 
 
  
 
-Imagequalty von 0,0 bedeutet, dass die niedrigste mögliche Treue Gabe und 1,0 die höchste Genauigkeit bedeuten. Dies kann je nach Codec auch Verluste bedeuten.
+ImageQualty von 0.0 bedeutet die kleinstmögliche Wiedergabegenauigkeit und 1.0 die höchste Genauigkeit, was je nach Codec auch verlustfrei bedeuten kann.
 
-CompressionQuality von 0,0 bedeutet das am wenigsten effiziente Komprimierungs Schema, das in der Regel eine schnelle Codierung, aber eine größere Ausgabe ergibt. Der Wert 1,0 ist das effizienteste verfügbare Schema, das in der Regel mehr Zeit in Anspruch nimmt, um eine geringere Ausgabe zu erzeugen. Abhängig von den Funktionen des Codecs kann dieser Bereich einem diskreten Satz verfügbarer Komprimierungs Methoden zugeordnet werden.
+CompressionQuality von 0.0 bedeutet, dass das am wenigsten effiziente Komprimierungsschema verfügbar ist, was in der Regel zu einer schnellen Codierung, aber einer größeren Ausgabe führt. Der Wert 1.0 bedeutet, dass das effizienteste verfügbare Schema verfügbar ist. In der Regel dauert die Codierung mehr Zeit, erzeugt aber eine kleinere Ausgabe. Abhängig von den Funktionen des Codecs kann dieser Bereich einem diskreten Satz verfügbarer Komprimierungsmethoden zugeordnet werden.
 
-Verlust lose bedeutet, dass der Codec das Image als verlustfreie Methode ohne Bild Datenverlust codiert. Wenn Lossless aktiviert ist, wird ImageQuality ignoriert.
+Verlustfrei bedeutet, dass der Codec das Bild als verlustfrei codiert, ohne dass Bilddaten verloren sind. Wenn Lossless aktiviert ist, wird ImageQuality ignoriert.
 
-Zusätzlich zu den oben genannten generischen Codierungsoptionen unterstützen mit WIC bereitgestellte Codecs die folgenden Optionen. Wenn ein Codec eine Option unterstützen muss, die mit der Verwendung in den angegebenen Codecs konsistent ist, wird es empfohlen, dies zu tun.
+Zusätzlich zu den oben genannten generischen Encoderoptionen unterstützen die mit WIC bereitgestellten Codecs die folgenden Optionen. Wenn ein Codec eine Option unterstützen muss, die mit der Verwendung in diesen bereitgestellten Codecs konsistent ist, wird empfohlen, dies zu tun.
 
 
 
 | Eigenschaftsname           | VARTYPE           | Wert                                                                             | Anwendbare Codecs |
 |-------------------------|-------------------|-----------------------------------------------------------------------------------|-------------------|
-| InterlaceOption         | VT \_ bool          | Ein/Aus                                                                            | PNG               |
-| FilterOption            | VT \_ UI1           | [**Wicpngfilteroption**](/windows/desktop/api/Wincodec/ne-wincodec-wicpngfilteroption)                       | PNG               |
-| TiffCompressionMethod   | VT \_ UI1           | [**Wictiffcompressionoption**](/windows/desktop/api/Wincodec/ne-wincodec-wictiffcompressionoption)           | TIFF              |
-| Luminance               | VT \_ UI4/VT- \_ Array | 64 Einträge (DCT)                                                                  | JPEG              |
-| Chrominance             | VT \_ UI4/VT- \_ Array | 64 Einträge (DCT)                                                                  | JPEG              |
-| JpegYCrCbSubsampling    | VT \_ UI1           | [**Wicjppfgycrcbsubsamplingoption**](/windows/desktop/api/Wincodec/ne-wincodec-wicjpegycrcbsubsamplingoption) | JPEG              |
-| SuppressApp0            | VT \_ bool          |                                                                                   | JPEG              |
-| EnableV5Header32bppBGRA | VT \_ bool          | Ein/Aus                                                                            | BMP               |
+| InterlaceOption         | VT \_ BOOL          | Ein/Aus                                                                            | PNG               |
+| FilterOption            | VT \_ UI1           | [**WICPngFilterOption**](/windows/desktop/api/Wincodec/ne-wincodec-wicpngfilteroption)                       | PNG               |
+| TiffCompressionMethod   | VT \_ UI1           | [**WICTiffCompressionOption**](/windows/desktop/api/Wincodec/ne-wincodec-wictiffcompressionoption)           | TIFF              |
+| Luminance               | VT \_ UI4/VT \_ ARRAY | 64 Einträge (DCT)                                                                  | JPEG              |
+| Chrominance             | VT \_ UI4/VT \_ ARRAY | 64 Einträge (DCT)                                                                  | JPEG              |
+| JpegYCrCbSubsampling    | VT \_ UI1           | [**WICJpegYCrCbSubsamplingOption**](/windows/desktop/api/Wincodec/ne-wincodec-wicjpegycrcbsubsamplingoption) | JPEG              |
+| SuppressApp0            | VT \_ BOOL          |                                                                                   | JPEG              |
+| EnableV5Header32bppBGRA | VT \_ BOOL          | Ein/Aus                                                                            | BMP               |
 
 
 
  
 
-Verwenden Sie **VT \_ empty** , um anzugeben, dass nicht als Standard **\* \* festgelegt** ist. Wenn zusätzliche Eigenschaften festgelegt, aber nicht unterstützt werden, sollte der Encoder diese ignorieren. Dadurch können Anwendungen weniger Logik codieren, wenn Sie eine Funktion benötigen, die möglicherweise vorhanden ist oder nicht.
+Verwenden **Sie VT \_ EMPTY,** um **\* anzugeben, dass nicht als \*** Standard festgelegt ist. Wenn zusätzliche Eigenschaften festgelegt, aber nicht unterstützt werden, sollte der Encoder sie ignorieren. Dadurch können Anwendungen weniger Logik codieren, wenn sie eine Funktion wünschen, die möglicherweise vorhanden ist oder nicht.
 
-## <a name="encoder-options-examples"></a>Beispiele für Codierungsoptionen
+## <a name="encoder-options-examples"></a>Beispiele für Encoderoptionen
 
-Im obigen [Beispiel](#tiff-encoding-example) für die TIFF-Codierung wird eine bestimmte Encoder-Option festgelegt. Der *pstrinname* -Member der PROPBAG2-Struktur wird auf den entsprechenden Eigenschaftsnamen festgelegt, und der Variant-Wert wird auf den entsprechenden VarType und den gewünschten Wert festgelegt – in diesem Fall ein Member der [**wictiffcompressionoption**](/windows/desktop/api/Wincodec/ne-wincodec-wictiffcompressionoption) -Enumeration.
+Im [obigen TIFF-Codierungsbeispiel](#tiff-encoding-example) ist eine bestimmte Encoderoption festgelegt. Der *pstrName-Member* der PROPBAG2-Struktur wird auf den entsprechenden Eigenschaftsnamen und variant auf den entsprechenden VARTYPE und den gewünschten Wert festgelegt – in diesem Fall ein Member der [**WICTiffCompressionOption-Enumeration.**](/windows/desktop/api/Wincodec/ne-wincodec-wictiffcompressionoption)
 
 
 ```C++
@@ -255,7 +255,7 @@ if (SUCCEEDED(hr))
 
 
 
-Um die standardmäßigen Codierungsoptionen zu verwenden, initialisieren Sie einfach den BitmapFrame mit dem Eigenschaften Behälter, der beim Erstellen des Frames zurückgegeben wurde.
+Um die Standardencoderoptionen zu verwenden, initialisieren Sie einfach den Bitmapframe mit dem Eigenschaftentüt, der beim Erstellen des Frames zurückgegeben wurde.
 
 
 ```C++
@@ -276,7 +276,7 @@ if (SUCCEEDED(hr))
 
 
 
-Es ist auch möglich, den Eigenschaften Behälter zu entfernen, wenn keine Codierungsoptionen berücksichtigt werden.
+Es ist auch möglich, die Eigenschaftentüte zu beseitigen, wenn keine Encoderoptionen berücksichtigt werden.
 
 
 ```C++
@@ -301,19 +301,19 @@ if (SUCCEEDED(hr))
 
 <dl> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
-[Übersicht über die Windows Imaging-Komponente](-wic-about-windows-imaging-codec.md)
+[Windows-Bilderstellungskomponente Übersicht](-wic-about-windows-imaging-codec.md)
 </dt> <dt>
 
-[Decodierung: Übersicht](-wic-creating-decoder.md)
+[Übersicht über die Decodierung](-wic-creating-decoder.md)
 </dt> <dt>
 
 **Andere Ressourcen**
 </dt> <dt>
 
-[Schreiben eines WIC-Enabled Codecs](-wic-howtowriteacodec.md)
+[Schreiben eines WIC-Enabled CODEC](-wic-howtowriteacodec.md)
 </dt> </dl>
 
  

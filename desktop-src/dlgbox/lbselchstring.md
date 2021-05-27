@@ -1,6 +1,6 @@
 ---
 title: LBSELCHSTRING-Nachricht (Commdlg.h)
-description: Ein Dialogfeld Öffnen oder Speichern unter sendet die registrierte LBSELCHSTRING-Nachricht an Ihre Hookprozedur, wenn sich die Auswahl in einem der Listenfelder oder Kombinationsfelder des Dialogfelds ändert.
+description: In einem Dialogfeld Öffnen oder Speichern unter wird die bei LBSELCHSTRING registrierte Meldung an Ihre Hookprozedur gesendet, wenn sich die Auswahl in einem der Listenfelder oder Kombinationsfelder des Dialogfelds ändert.
 ms.assetid: 3a8ebc63-b324-43ed-bb6f-34779f6043e7
 keywords:
 - LBSELCHSTRING-Meldungsdialogfelder
@@ -16,16 +16,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 137429b8fa7eb29fb96ec579e0240c4c282d0766
-ms.sourcegitcommit: 8e083a10b3a480dec8a8d74dbd5889f49dea15e4
+ms.openlocfilehash: 62d61f88bd7cb6a84a94a3d8a246e6045f88a305
+ms.sourcegitcommit: f848119a8faa29b27585f4df53f6e50ee9666684
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/17/2021
-ms.locfileid: "107590767"
+ms.lasthandoff: 05/27/2021
+ms.locfileid: "110550045"
 ---
 # <a name="lbselchstring-message"></a>LBSELCHSTRING-Meldung
 
-\[Ab Windows Vista wurden  **die** allgemeinen Dialogfelder Öffnen und Speichern unter durch den Allgemeinen [Elementdialog ersetzt.](/windows/win32/shell/common-file-dialog) Es wird empfohlen, anstelle dieser Dialogfelder aus der Common Dialog Box Library die API für den Allgemeinen Elementdialog zu verwenden.\]
+\[Ab Windows Vista wurden  **die** allgemeinen Dialogfelder Öffnen und Speichern unter durch den Allgemeinen [Elementdialog ersetzt.](../shell/common-file-dialog.md) Es wird empfohlen, anstelle dieser Dialogfelder aus der Common Dialog Box Library die API für den Allgemeinen Elementdialog zu verwenden.\]
 
 In einem  **Dialogfeld** Öffnen oder Speichern unter wird die bei **LBSELCHSTRING** registrierte Meldung an Ihre Hookprozedur gesendet, wenn sich die Auswahl in einem der Listenfelder oder Kombinationsfelder des Dialogfelds ändert.
 
@@ -71,7 +71,7 @@ Das Wort in niedriger Reihenfolge gibt die Elementnummer der ausgewählten Zeich
 
 Diese Meldung hat keinen Rückgabewert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Die Hookprozedur muss die **LBSELCHSTRING-Konstante** in einem Aufruf der [**RegisterWindowMessage-Funktion**](/windows/desktop/api/winuser/nf-winuser-registerwindowmessagea) angeben, um den Bezeichner für die vom Dialogfeld gesendete Nachricht zu erhalten.
 
@@ -88,11 +88,11 @@ Die Hookprozedur muss die **LBSELCHSTRING-Konstante** in einem Aufruf der [**Reg
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
 [**CDN \_ SELCHANGE**](cdn-selchange.md)
@@ -109,6 +109,4 @@ Die Hookprozedur muss die **LBSELCHSTRING-Konstante** in einem Aufruf der [**Reg
 
 [Allgemeine Dialogfeldbibliothek](common-dialog-box-library.md)
 </dt> </dl>
-
- 
 

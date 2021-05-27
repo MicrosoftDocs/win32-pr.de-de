@@ -1,7 +1,7 @@
 ---
 UID: NS:directml.DML_BATCH_NORMALIZATION_GRAD_OPERATOR_DESC
 title: DML_BATCH_NORMALIZATION_GRAD_OPERATOR_DESC
-description: Berechnet Rückeigenschaftenverläufe für die [Batchnormalisierung.](/windows/win32/api/directml/ns-directml-dml_batch_normalization_operator_desc)
+description: Berechnet Backpropagation-Farbverläufe für [die Batchnormalisierung.](/windows/win32/api/directml/ns-directml-dml_batch_normalization_operator_desc)
 helpviewer_keywords:
 - DML_BATCH_NORMALIZATION_GRAD_OPERATOR_DESC
 - DML_BATCH_NORMALIZATION_GRAD_OPERATOR_DESC structure
@@ -44,19 +44,19 @@ api_location:
 - DirectML.h
 api_name:
 - DML_BATCH_NORMALIZATION_GRAD_OPERATOR_DESC
-ms.openlocfilehash: ba12541514c8121d483236afa2163a04bd991288
-ms.sourcegitcommit: 8e1f04c7e3c5c850071bac8d173f9441aab0dfed
+ms.openlocfilehash: 2b94ac1dcf389d424aaf74d615f36cdf7acc804c
+ms.sourcegitcommit: f848119a8faa29b27585f4df53f6e50ee9666684
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "107804523"
+ms.lasthandoff: 05/27/2021
+ms.locfileid: "110550435"
 ---
 # <a name="dml_batch_normalization_grad_operator_desc-directmlh"></a>DML_BATCH_NORMALIZATION_GRAD_OPERATOR_DESC (directml.h)
 
-Berechnet Rückeigenschaftenverläufe für die [Batchnormalisierung.](/windows/win32/api/directml/ns-directml-dml_batch_normalization_operator_desc) **DML_BATCH_NORMALIZATION_GRAD_OPERATOR_DESC** führt mehrere Berechnungen aus, die in den separaten Ausgabebeschreibungen ausführlich beschrieben werden.
+Berechnet Backpropagation-Farbverläufe für [die Batchnormalisierung.](/windows/win32/api/directml/ns-directml-dml_batch_normalization_operator_desc) **DML_BATCH_NORMALIZATION_GRAD_OPERATOR_DESC** führt mehrere Berechnungen aus, die in den separaten Ausgabebeschreibungen beschrieben werden.
 
 > [!IMPORTANT]
-> Diese API ist als Teil des eigenständigen weiterverteilten DirectML-Pakets verfügbar (siehe [Microsoft.AI.DirectML](https://www.nuget.org/packages/Microsoft.AI.DirectML/) Version 1.5 und höher). Siehe auch [DirectML-Versionsverlauf.](../dml-version-history.md)
+> Diese API ist als Teil des eigenständigen verteilbaren DirectML-Pakets verfügbar (siehe [Microsoft.AI.DirectML](https://www.nuget.org/packages/Microsoft.AI.DirectML/) Version 1.5 und höher). Siehe auch [DirectML-Versionsverlauf.](../dml-version-history.md)
 
 ## <a name="syntax"></a>Syntax
 ```cpp
@@ -82,21 +82,21 @@ struct DML_BATCH_NORMALIZATION_GRAD_OPERATOR_DESC
 
 Typ: **const [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
 
-Ein Tensor, der die Eingabedaten enthält. Dies ist in der Regel der gleiche Tensor, der als *InputTensor* bereitgestellt wurde, um DML_BATCH_NORMALIZATION_OPERATOR_DESC [**vorwärts**](/windows/win32/api/directml/ns-directml-dml_batch_normalization_operator_desc) zu übergeben.
+Ein Tensor, der die Eingabedaten enthält. Dies ist in der Regel derselbe Tensor, der als *InputTensor* für [**DML_BATCH_NORMALIZATION_OPERATOR_DESC**](/windows/win32/api/directml/ns-directml-dml_batch_normalization_operator_desc) im Vorwärtsdurchlauf bereitgestellt wurde.
 
 `InputGradientTensor`
 
 Typ: **const [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
 
-Der eingehende Farbverlaufs-Tensor. Dies wird in der Regel aus der Ausgabe der Backpropagation einer vorherigen Ebene ermittelt. Dieser Tensor muss die gleichen Dimensionsgrößen wie *InputTensor aufweisen.*
+Der eingehende Farbverlaufs-Tensor. Dies wird in der Regel aus der Ausgabe der Backpropagation einer vorangehenden Ebene abgerufen. Dieser Tensor muss die gleichen Dimensionsgrößen wie *InputTensor aufweisen.*
 
 `MeanTensor`
 
 Typ: **const [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
 
-Ein Tensor, der die Mittelwertdaten enthält. Dies ist in der Regel der gleiche Tensor, der als *MeanTensor* bereitgestellt wurde, um DML_BATCH_NORMALIZATION_OPERATOR_DESC [**vorwärts**](/windows/win32/api/directml/ns-directml-dml_batch_normalization_operator_desc) zu übergeben.
+Ein Tensor, der die mittleren Daten enthält. Dies ist in der Regel derselbe Tensor, der als *MeanTensor* für [**DML_BATCH_NORMALIZATION_OPERATOR_DESC**](/windows/win32/api/directml/ns-directml-dml_batch_normalization_operator_desc) im Vorwärtsdurchlauf bereitgestellt wurde.
 
-Alle Dimensionen, die nicht die gleiche Größe wie die entsprechende Dimension von *InputTensor* haben, müssen eine Größe von 1 haben, damit sie für die Eingabe übertragen werden können.
+Alle Dimensionen, die nicht die gleiche Größe wie die entsprechende Dimension von *InputTensor* haben, müssen eine Größe von 1 aufweisen, damit sie an die Eingabe gesendet werden können.
 
 Beispielsweise sind die folgenden Größen akzeptabel.
 
@@ -105,7 +105,7 @@ InputTensor: [3, 4, 5, 6]
 MeanTensor : [1, 4, 1, 1] or [3, 4, 1, 1] or [3, 4, 5, 1] or [3, 4, 5, 6] or [1, 1, 1, 1]
 ```
 
-Es folgt ein Fehler, da alle Dimensionen, die nicht übereinstimmen, die Größe 1 haben müssen, um übertragungskompatibel zu sein.
+Im Folgenden wird ein Fehler angezeigt, da alle Dimensionen, die nicht übereinstimmen, größe 1 aufweisen müssen, um broadcastkompatibel zu sein.
 
 ```
 InputTensor: [3, 4, 5, 6]  
@@ -116,21 +116,21 @@ MeanTensor : [1, 2, 1, 1]  // 2 causes an error.
 
 Typ: **const [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
 
-Ein Tensor, der die Varianzdaten enthält. Dies ist in der Regel derselbe Tensor, der als *VarianceTensor* für [**DML_BATCH_NORMALIZATION_OPERATOR_DESC**](/windows/win32/api/directml/ns-directml-dml_batch_normalization_operator_desc) im Vorwärtsdurchlauf bereitgestellt wurde. Dieser Tensor muss die gleichen Dimensionsgrößen wie *MeanTensor* aufweisen.
+Ein Tensor, der die Varianzdaten enthält. Dies ist in der Regel der gleiche Tensor, der als *VarianceTensor* bereitgestellt wurde, um DML_BATCH_NORMALIZATION_OPERATOR_DESC [**vorwärts**](/windows/win32/api/directml/ns-directml-dml_batch_normalization_operator_desc) zu übergeben. Dieser Tensor muss die gleichen Dimensionsgrößen wie *MeanTensor aufweisen.*
 
 `ScaleTensor`
 
 Typ: **const [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
 
-Ein Tensor, der die Skalierungsdaten enthält. Dies ist in der Regel derselbe Tensor, der als *ScaleTensor* für [**DML_BATCH_NORMALIZATION_OPERATOR_DESC**](/windows/win32/api/directml/ns-directml-dml_batch_normalization_operator_desc) im Vorwärtsdurchlauf bereitgestellt wurde. Dieser Tensor muss die gleichen Dimensionsgrößen wie *MeanTensor* aufweisen.
+Ein Tensor, der die Skalierungsdaten enthält. Dies ist in der Regel der gleiche Tensor, der als *ScaleTensor* bereitgestellt wurde, um DML_BATCH_NORMALIZATION_OPERATOR_DESC [**Vorwärtspass**](/windows/win32/api/directml/ns-directml-dml_batch_normalization_operator_desc) zu verwenden. Dieser Tensor muss die gleichen Dimensionsgrößen wie *MeanTensor aufweisen.*
 
 `OutputGradientTensor`
 
 Typ: **const [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
 
-Für jeden entsprechenden Wert in den Eingaben `OutputGradient = InputGradient * (Scale / sqrt(Variance + Epsilon))` .
+Für jeden entsprechenden Wert in den Eingaben ist `OutputGradient = InputGradient * (Scale / sqrt(Variance + Epsilon))` .
 
-Dieser Tensor muss die gleichen Dimensionsgrößen wie *InputTensor* / *InputGradientTensor* aufweisen.
+Dieser Tensor muss die gleichen Dimensionsgrößen wie *InputTensor* / *InputGradientTensor aufweisen.*
 
 `OutputScaleGradientTensor`
 
@@ -142,9 +142,9 @@ Die folgende Berechnung erfolgt oder jeder entsprechende Wert in den Eingaben.
 
 `OutputScaleGradient = sum(InputGradient * (Input - Mean) / sqrt(Variance + Epsilon))`
 
-Wird `sum` über alle Dimensionen berechnet, die übertragen werden müssen. Wenn keine Übertragung erforderlich ist, ist keine Summe erforderlich.
+Die `sum` wird für alle Dimensionen berechnet, die übertragen werden müssen. Wenn keine Übertragung erforderlich ist, ist keine Summe erforderlich.
 
-Hier sehen Sie ein Beispiel.
+Hier ist ein Beispiel.
 
 ```
 InputTensor              : [3, 4, 5, 6]  
@@ -152,7 +152,7 @@ MeanTensor               : [1, 4, 1, 1] // dimensions 0, 2, 3 needed broadcastin
 OutputScaleGradientTensor: [1, 4, 1, 1]  
 ```
 
-Das Element [0, **0**, 0, 0] von `OutputScaleGradientTensor` ist die Summe von für alle `(InputGradient * (Input - Mean) / sqrt(variance + Epsilon)` 90 (3 \* 5 \* 6) Elemente [[0,2], **0**, [0,4], [0,5]].
+Das Element [0, **0**, 0, 0] von ist die Summe aller `OutputScaleGradientTensor` `(InputGradient * (Input - Mean) / sqrt(variance + Epsilon)` 90 (3 \* 5 \* 6) Elemente [[0,2], **0**, [0,4], [0,5]].
 
 `OutputBiasGradientTensor`
 
@@ -168,18 +168,18 @@ Die `sum` wird für alle Dimensionen berechnet, die übertragen werden müssen (
 
 `Epsilon`
 
-Typ: **[FLOAT](/windows/win32/winprog/windows-data-types)**
+Typ: **[FLOAT](../../winprog/windows-data-types.md)**
 
 Ein kleiner Wert, der der Varianz hinzugefügt wird, um 0 (null) zu vermeiden.
 
 ## <a name="availability"></a>Verfügbarkeit
 Dieser Operator wurde in `DML_FEATURE_LEVEL_3_1` eingeführt.
 
-## <a name="tensor-constraints"></a>Tensor-Einschränkungen
-*InputGradientTensor*, *InputTensor*, *MeanTensor*, *OutputBiasGradientTensor*, *OutputGradientTensor*, *OutputScaleGradientTensor*, *ScaleTensor* und *VarianceTensor* müssen denselben *DataType* und *DimensionCount* aufweisen.
+## <a name="tensor-constraints"></a>Tensoreinschränkungen
+*InputGradientTensor,* *InputTensor,* *MeanTensor,* *OutputBiasGradientTensor,* *OutputGradientTensor,* *OutputScaleGradientTensor,* *ScaleTensor* und *VarianceTensor* müssen den gleichen *Datentyp* und *DimensionCount* aufweisen.
 
 ## <a name="tensor-support"></a>Tensor-Unterstützung
-| Tensor | Typ | Unterstützte Dimensionsanzahl | Unterstützte Datentypen |
+| Tensor | Typ | Unterstützte Dimensionsanzahlen | Unterstützte Datentypen |
 | ------ | ---- | -------------------------- | -------------------- |
 | InputTensor | Eingabe | 1 bis 8 | FLOAT32, FLOAT16 |
 | InputGradientTensor | Eingabe | 1 bis 8 | FLOAT32, FLOAT16 |
