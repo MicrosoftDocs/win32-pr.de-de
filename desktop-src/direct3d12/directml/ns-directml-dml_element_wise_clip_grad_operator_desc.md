@@ -44,12 +44,12 @@ api_location:
 - DirectML.h
 api_name:
 - DML_ELEMENT_WISE_CLIP_GRAD_OPERATOR_DESC
-ms.openlocfilehash: 224fbacdb8816a6aed6a7779c5c8ff991736ee6c
-ms.sourcegitcommit: 8e1f04c7e3c5c850071bac8d173f9441aab0dfed
+ms.openlocfilehash: 3b993ca1c027119ae64157db2327a2836445bf43
+ms.sourcegitcommit: f848119a8faa29b27585f4df53f6e50ee9666684
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "107804448"
+ms.lasthandoff: 05/27/2021
+ms.locfileid: "110550205"
 ---
 # <a name="dml_element_wise_clip_grad_operator_desc-directmlh"></a>DML_ELEMENT_WISE_CLIP_GRAD_OPERATOR_DESC (directml.h)
 
@@ -96,17 +96,17 @@ Der eingehende Farbverlaufs-Tensor. Dies wird in der Regel aus der Ausgabe der B
 
 Typ: **const [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
 
-Ein Ausgabe-Tensor, der die zurückpropagierten Farbverläufe enthält. In der Regel hat dieser Tensor  die gleichen Größen wie die Eingabe des entsprechenden DML_OPERATOR_ELEMENT_WISE_CLIP **im** Vorwärtspass.
+Ein Ausgabe tensor, der die zurückpropagierten Farbverläufe enthält. In der Regel hat dieser Tensor  die gleichen Größen wie die Eingabe des entsprechenden DML_OPERATOR_ELEMENT_WISE_CLIP **im** Vorwärtspass.
 
 `Min`
 
-Typ: **[FLOAT](/windows/win32/winprog/windows-data-types)**
+Typ: **[FLOAT](../../winprog/windows-data-types.md)**
 
 Der Minimalwert. Wenn x bei oder unter diesem Wert liegt, ist das Farbverlaufsergebnis 0.
 
 `Max`
 
-Typ: **[FLOAT](/windows/win32/winprog/windows-data-types)**
+Typ: **[FLOAT](../../winprog/windows-data-types.md)**
 
 Der Maximalwert. Wenn x bei oder über diesem Wert liegt, ist das Farbverlaufsergebnis 0.
 
@@ -114,7 +114,7 @@ Der Maximalwert. Wenn x bei oder über diesem Wert liegt, ist das Farbverlaufser
 Dieser Operator wurde in `DML_FEATURE_LEVEL_3_1` eingeführt.
 
 ## <a name="tensor-constraints"></a>Tensoreinschränkungen
-*InputGradientTensor,* *InputTensor* und *OutputGradientTensor* müssen den gleichen *Datentyp,* *DimensionCount* und die gleichen *Größen* aufweisen.
+*InputGradientTensor,* *InputTensor* und *OutputGradientTensor* müssen die gleichen *Datentypen*, *DimensionCount* und *Größen* aufweisen.
 
 ## <a name="tensor-support"></a>Tensor-Unterstützung
 | Tensor | Typ | Unterstützte Dimensionsanzahlen | Unterstützte Datentypen |
