@@ -1,23 +1,23 @@
 ---
-title: Der Antwortdatei Befehl.
-description: Eine Antwortdatei ist eine Textdatei, die eine oder mehrere Mittell-Compilerbefehlszeilenoptionen enthält.
+title: Befehl "Antwortdatei"
+description: Eine Antwortdatei ist eine Textdatei, die eine oder mehrere MIDL-Compilerbefehlszeilenoptionen enthält.
 ms.assetid: ad47ea1a-fe7a-4354-be2f-599ba77685ee
 keywords:
-- Befehlszeilen Referenz-Mittell, Antwortdatei Befehl
+- Befehlszeilenreferenz MIDL, Befehl "Antwortdatei"
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5f624f8bb4fd50fa77df604e5d56f48c9e55c89a
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 26cf4d07ce8465239874ff666537646da2c4c564
+ms.sourcegitcommit: cb87082135319cbdc5df541e3071eebb83a58972
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103947964"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111387666"
 ---
-# <a name="the-response-file-command"></a>Der Antwortdatei Befehl.
+# <a name="the-response-file-command"></a>Befehl "Antwortdatei"
 
-Eine Antwortdatei ist eine Textdatei, die eine oder mehrere Mittell-Compilerbefehlszeilenoptionen enthält. Im Gegensatz zu einer Befehlszeile ermöglicht eine Antwortdatei mehrere Zeilen von Optionen und Dateinamen. Dies kann aufgrund von Einschränkungen ihrer Buildumgebung oder für Ihren Buildprozess nützlich sein.
+Eine Antwortdatei ist eine Textdatei, die eine oder mehrere MIDL-Compilerbefehlszeilenoptionen enthält. Im Gegensatz zu einer Befehlszeile lässt eine Antwortdatei mehrere Zeilen mit Optionen und Dateinamen zu. Dies kann aufgrund von Einschränkungen Ihrer Buildumgebung oder zur Vereinfachung Ihres Buildprozesses nützlich sein.
 
-## <a name="switch-options"></a>Optionen wechseln
+## <a name="switch-options"></a>Switch-Optionen
 
 ``` syntax
 midl @response_file
@@ -25,39 +25,39 @@ midl @response_file
 
 <dl> <dt>
 
-<span id="response_file"></span><span id="RESPONSE_FILE"></span>*Antwort \_ Datei*
+<span id="response_file"></span><span id="RESPONSE_FILE"></span>*\_Antwortdatei*
 </dt> <dd>
 
-Gibt den Namen einer Antwortdatei an. Der Name der Antwortdatei muss unmittelbar auf das @-Zeichen folgen. Zwischen dem @-Zeichen und dem Namen der Antwortdatei ist kein Leerraum zulässig.
+Gibt den Namen einer Antwortdatei an. Der Name der Antwortdatei muss unmittelbar auf das @-Zeichen folgen. Zwischen dem @-Zeichen und dem Namen der Antwortdatei ist kein Leerzeichen zulässig.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Als Alternative zum Platzieren aller Optionen, die einem Switch in der Befehlszeile zugeordnet sind, akzeptiert der Mittell-Compiler Antwort Dateien, die Schalter und Argumente enthalten. Optionen in einer Antwortdatei werden so interpretiert, als ob Sie an dieser Stelle in der Mittell-Befehlszeile vorhanden sind.
+Als Alternative zum Platzieren aller Optionen, die einem Schalter in der Befehlszeile zugeordnet sind, akzeptiert der MIDL-Compiler Antwortdateien, die Schalter und Argumente enthalten. Optionen in einer Antwortdatei werden so interpretiert, als ob sie an diesem Speicherort in der MIDL-Befehlszeile vorhanden sind.
 
-Jedes Argument in einer Antwortdatei muss in derselben Zeile beginnen und enden. Der umgekehrte Schrägstrich ( \) kann nicht zum Verketten von Zeilen verwendet werden. Wenn es Teil einer Zeichenfolge in Anführungszeichen in der Antwortdatei ist, kann der umgekehrte Schrägstrich nur vor einem anderen umgekehrten Schrägstrich oder vor einem doppelten Anführungszeichen (") verwendet werden. Wenn Sie nicht Teil einer Zeichenfolge in Anführungszeichen ist, kann der umgekehrte Schrägstrich nur vor einem doppelten Anführungszeichen verwendet werden.
+Jedes Argument in einer Antwortdatei muss in derselben Zeile beginnen und enden. Der schräge Schrägstrich ( ) kann nicht verwendet werden, um Zeilen \\ zu verketten. Wenn er Teil einer Zeichenfolge in Anführungszeichen in der Antwortdatei ist, kann der schräge Schrägstrich nur vor einem anderen schrägen Schrägstrich oder vor einem doppelten Anführungszeichen () verwendet werden. Wenn er nicht Teil einer Zeichenfolge in Anführungszeichen ist, kann der schräge Schrägstrich nur vor einem doppelten Anführungszeichen verwendet werden.
 
-"Mittel l" unterstützt Befehlszeilenargumente, die eine oder mehrere Antwort Dateien in Kombination mit anderen Befehls zeilenschaltern enthalten.
+MIDL unterstützt Befehlszeilenargumente, die eine oder mehrere Antwortdateien in Kombination mit anderen Befehlszeilenschaltern enthalten.
 
-Der mittlerer l-Compiler unterstützt keine netsted Response-Dateien.
+Der MIDL-Compiler unterstützt keine geschachtelten Antwortdateien.
 
 ## <a name="examples"></a>Beispiele
 
-**MIDL @midl.rsp**
+**Midl @midl.rsp**
 
-**Mittel l-Oicf @midl1.rsp -"Win32 @midl2.rsp . idl" für Win32**
+**midl -Oicf @midl1.rsp -env win32 @midl2.rsp itf.idl**
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Allgemeine Syntax der Mittell-Befehlszeile](general-midl-command-line-syntax.md)
+[Allgemeine MIDL-Befehlszeilensyntax](general-midl-command-line-syntax.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

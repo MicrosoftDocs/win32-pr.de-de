@@ -1,19 +1,19 @@
 ---
-description: Enthält Titelinformationen über die Journal Notiz.
+description: Enthält Titelinformationen zur Journalnotiz.
 ms.assetid: efeed3a6-de5e-4698-9dc3-d0acb3d13dee
 title: Title-Element
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2362e286482b329c50788b8eae4b4a30cbd1a125
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ef687f809aae5c3722cdad84ee63d79c7bfcfb21
+ms.sourcegitcommit: c3f669dc1d52278432bf75ad9fddba3257d26aa2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106351558"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111432222"
 ---
 # <a name="title-element"></a>Title-Element
 
-Enthält Titelinformationen über die Journal Notiz.
+Enthält Titelinformationen zur Journalnotiz.
 
 ## <a name="definition"></a>Definition
 
@@ -23,7 +23,7 @@ Enthält Titelinformationen über die Journal Notiz.
 
 ## <a name="parent-elements"></a>Übergeordnete Elemente
 
-[**Schreib**](stationery-element.md)
+[**Briefpapier**](stationery-element.md)
 
 ## <a name="child-elements"></a>Untergeordnete Elemente
 
@@ -43,8 +43,8 @@ Enthält Titelinformationen über die Journal Notiz.
 </colgroup>
 <thead>
 <tr class="header">
-<th>Attribut</th>
-<th>type</th>
+<th>attribute</th>
+<th>Typ</th>
 <th>Erforderlich</th>
 <th>BESCHREIBUNG</th>
 <th>Mögliche Werte</th>
@@ -55,21 +55,21 @@ Enthält Titelinformationen über die Journal Notiz.
 <td><strong>Stil</strong></td>
 <td><strong>xs:string</strong></td>
 <td>Erforderlich</td>
-<td>Gibt den Typ des Rahmens an, der den Titel des Notiz Rahmens umgibt.</td>
+<td>Gibt den Typ des Rahmens um den Titel der Notiz an.</td>
 <td><ul>
 <li>Keine</li>
-<li>Solidsquare</li>
-<li>Outlinesquare</li>
-<li>"Solidroundrecrect"</li>
-<li>Outlineroundrect</li>
-<li>"Solidroundrectdottedbaseline"</li>
+<li>SolidSquare</li>
+<li>OutlineSquare</li>
+<li>SolidRoundRect</li>
+<li>OutlineRoundRect</li>
+<li>SolidRoundRectDottedBaseline</li>
 </ul></td>
 </tr>
 <tr class="even">
 <td><strong>DateStyle</strong></td>
 <td><strong>xs:string</strong></td>
 <td>Erforderlich</td>
-<td>Definiert, ob der Titel ein Datum enthält.</td>
+<td>Definiert, ob der Titel ein Datum enthält oder nicht.</td>
 <td><ul>
 <li>Keine</li>
 <li>Short</li>
@@ -93,11 +93,11 @@ Enthält Titelinformationen über die Journal Notiz.
 
 
 
-|              |                                                         |
+| Element      | Wert                                                   |
 |--------------|---------------------------------------------------------|
-| Elementtyp | ComplexType für [**titletype**](titletype-complex-type.md) |
-| Namespace    | urn: Schemas-Microsoft-com: TabletPC: RichInk              |
-| Schemaname  | Journal Leser                                          |
+| Elementtyp | [**complexType: TitleType**](titletype-complex-type.md) |
+| Namespace    | urn:schemas-microsoft-com:tabletpc:richink              |
+| Schemaname  | Journalreader                                          |
 
 
 

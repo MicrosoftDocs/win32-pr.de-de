@@ -1,6 +1,6 @@
 ---
 title: MiniToolbar-Element
-description: Stellt eine kontextabhängige Symbolleiste dar.
+description: Stellt eine kontextbezogene Symbolleiste dar.
 ms.assetid: bb50890d-554a-4add-a583-d4fd48b823bf
 keywords:
 - MiniToolbar-Element Windows-Menüband
@@ -13,18 +13,18 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: cb5e4a27d10fe5233f8e7059bc9da8ecfd2fa383
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: ceea8ba1a220674f177e740411bf98a13d7bfc2e
+ms.sourcegitcommit: 099ecdda1e83618b844387405da0db0ebda93a65
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "104100842"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111443261"
 ---
 # <a name="minitoolbar-element"></a>MiniToolbar-Element
 
-Stellt eine kontextabhängige Symbolleiste dar.
+Stellt eine kontextbezogene Symbolleiste dar.
 
-## <a name="usage"></a>Verbrauch
+## <a name="usage"></a>Verwendung
 
 ``` syntax
 <MiniToolbar
@@ -37,9 +37,9 @@ Stellt eine kontextabhängige Symbolleiste dar.
 
 
 
-| Attribut           | type                 | Erforderlich       | BESCHREIBUNG                                                                                                                                                                                                                |
+| attribute           | Typ                 | Erforderlich       | BESCHREIBUNG                                                                                                                                                                                                                |
 |---------------------|----------------------|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Name**<br/> | xs:string<br/> | Ja<br/> | <dt> (xs: String)<br/> </dt> <dd> Eine Zeichenfolge, die aus einer beliebigen Zeichen Sequenz besteht, einschließlich Leerzeichen und Zeilenumbruch Zeichen.<br/> </dd> </dl> |
+| **Name**<br/> | xs:string<br/> | Ja<br/> | <dt> (xs:string)<br/> </dt> <dd> Eine Zeichenfolge, die aus einer beliebigen Sequenz von Zeichen besteht, einschließlich Leerzeichen und Zeilenunterbrechungszeichen.<br/> </dd> </dl> |
 
 
 
@@ -49,7 +49,7 @@ Stellt eine kontextabhängige Symbolleiste dar.
 
 | Element                                                         | BESCHREIBUNG                                     |
 |-----------------------------------------------------------------|-------------------------------------------------|
-| [**MenuGroup**](windowsribbon-element-menugroup.md)<br/> | Muss mindestens einmal vorkommen<br/> <br/> |
+| [**Menugroup**](windowsribbon-element-menugroup.md)<br/> | Muss mindestens einmal auftreten<br/> <br/> |
 
 
 
@@ -59,32 +59,32 @@ Stellt eine kontextabhängige Symbolleiste dar.
 
 | Element                                                                                         |
 |-------------------------------------------------------------------------------------------------|
-| [**Contextpopup. minitoolbars**](windowsribbon-element-contextpopup-minitoolbars.md)<br/> |
+| [**ContextPopup.MiniToolbars**](windowsribbon-element-contextpopup-minitoolbars.md)<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Dies ist optional.
 
-Kann für jede " [**contextpopup. minitoolbars**](windowsribbon-element-contextpopup-minitoolbars.md)" einmal oder mehrmals vorkommen.
+Kann ein oder mehrere Male für jede [**ContextPopup.MiniToolbars**](windowsribbon-element-contextpopup-minitoolbars.md)auftreten.
 
-Anders als das [**ContextMenu**](windowsribbon-element-contextmenu.md) -Element bleibt die **MiniToolbar** sichtbar, wenn auf ein Element auf der Symbolleiste geklickt wird.
+Im Gegensatz zum [**ContextMenu-Element**](windowsribbon-element-contextmenu.md) bleibt die **MiniToolbar** sichtbar, wenn auf ein Element auf der Symbolleiste geklickt wird.
 
-Wenn es ohne [**ContextMenu**](windowsribbon-element-contextmenu.md)angezeigt wird, wird die **MiniToolbar** ausgeblendet, wenn der Mauszeiger entfernt wird.
+Wenn die **Minitoolleiste** ohne [**ContextMenu**](windowsribbon-element-contextmenu.md)angezeigt wird, wird sie ausgeblendet, wenn der Mauszeiger entfernt wird.
 
 > [!Note]  
-> Aufgrund dieses verblassenden Verhaltens sollte ein [**ContextMenu**](windowsribbon-element-contextmenu.md) in der Nähe des Mauszeigers angezeigt werden.
+> Aufgrund dieses verblassenden Verhaltens sollte ein [**ContextMenu**](windowsribbon-element-contextmenu.md) in unmittelbarer Nähe zum Mauszeiger angezeigt werden.
 
  
 
-Da Steuerelemente in der **MiniToolbar** nicht auf Tastatur zugänglich sind, sollten die von Ihnen verfügbar gemachten Befehle an anderer Stelle in der Multifunktionsleisten-Benutzeroberfläche verfügbar sein.
+Da auf Steuerelemente in der **MiniToolbar** nicht über die Tastatur zugegriffen werden kann, sollten die verfügbar gemachten Befehle an anderer Stelle auf der Menübandbenutzeroberfläche verfügbar sein.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird das grundlegende Markup für eine [**contextpopup**](windowsribbon-element-contextpopup.md) -Ansicht veranschaulicht.
+Im folgenden Beispiel wird das grundlegende Markup für eine [**ContextPopup-Ansicht**](windowsribbon-element-contextpopup.md) veranschaulicht.
 
-Dieser Code Abschnitt zeigt einen Satz von **MiniToolbar** -Steuerelement Deklarationen.
+Dieser Codeabschnitt zeigt eine Reihe von **MiniToolbar-Steuerelementdeklarationen.**
 
 
 ```XML
@@ -173,20 +173,16 @@ Dieser Code Abschnitt zeigt einen Satz von **MiniToolbar** -Steuerelement Deklar
 
 ## <a name="element-information"></a>Elementinformationen
 
-
-
-|                                     |           |
-|-------------------------------------|-----------|
-| Unterstützte Mindestversion (System)<br/> | Windows 7 |
-| Kann leer bleiben                        | Nein        |
+* **Unterstütztes Mindestsystem:** Windows 7
+* **Kann leer sein:** Nein
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[Kontext-Popup Steuerelement](windowsribbon-controls-contextpopup.md)
+[Kontext-Popup-Steuerelement](windowsribbon-controls-contextpopup.md)
 </dt> </dl>
 
  

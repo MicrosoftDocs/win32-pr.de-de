@@ -1,31 +1,31 @@
 ---
-title: IPv6-Informationstypen für routerinformationblöcke
-description: Die folgenden Informationstypen sind in ipinfoid. h aufgeführt.
+title: IPv6-Informationstypen für Routerinformationsblöcke
+description: Erfahren Sie mehr über die Informationstypen, die in Ipinfoid.h aufgeführt sind.
 ms.assetid: 58fa59e6-e0f3-4f04-9c57-585f1d496b31
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a05f6d551dc4201a2b544b0d56c399a48e581b4f
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 72c37fcdc2b820cbf5c748dfde4884bce0f06db9
+ms.sourcegitcommit: 099ecdda1e83618b844387405da0db0ebda93a65
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103856807"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111443961"
 ---
-# <a name="ipv6-information-types-for-router-information-blocks"></a>IPv6-Informationstypen für routerinformationblöcke
+# <a name="ipv6-information-types-for-router-information-blocks"></a>IPv6-Informationstypen für Routerinformationsblöcke
 
-Die folgenden Informationstypen sind in ipinfoid. h aufgeführt. Verwenden Sie diese Informationstypen beim Ausführen des IP-Transports mit den Funktionen des Informations Headers:
+Die folgenden Informationstypen sind in Ipinfoid.h aufgeführt. Verwenden Sie diese Informationstypen mit den Information Header-Funktionen, wenn Sie den IP-Transport ausführen:
 
--   IP- \_ Demand- \_ Wähl \_ Filter \_ Informationen \_ V6
--   IP- \_ Filter \_ enable \_ Info \_ V6
--   IP \_ in \_ Filter \_ Info \_ V6
--   IP- \_ iffilter- \_ Info \_ V6
--   Informationen zum IP- \_ out- \_ Filter \_ \_ V6
--   Globale IPv6- \_ \_ Informationen
--   IPv6- \_ Routen \_ Informationen
+-   IP \_ DEMAND \_ DIAL \_ FILTER \_ INFO \_ V6
+-   \_IP-FILTER \_ ENABLE INFO \_ \_ V6
+-   IP \_ IN \_ \_ FILTERINFORMATIONEN \_ V6
+-   IP \_ IFFILTER \_ INFO \_ V6
+-   IP \_ OUT \_ FILTER \_ INFO \_ V6
+-   \_GLOBALE \_ IPV6-INFORMATIONEN
+-   \_IPV6-ROUTENINFORMATIONEN \_
 
- 
+ 
 
- 
+ 
 
 
 

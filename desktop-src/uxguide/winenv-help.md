@@ -1,128 +1,128 @@
 ---
 title: Hilfe
-description: Verwenden Sie die Hilfe als sekundären Mechanismus, um die Benutzer beim Ausführen und besser verstehen von Aufgaben \ 8212 zu unterstützen. der primäre Mechanismus ist die Benutzeroberfläche. Wenden Sie diese Richtlinien an, damit der Inhalt wirklich hilfreich und leicht zu finden ist.
+description: Verwenden Sie Hilfe als sekundären Mechanismus, um Benutzern zu helfen, Aufgaben abzuschließen und besser zu verstehen \ 8212; der primäre Mechanismus ist die Benutzeroberfläche selbst. Wenden Sie diese Richtlinien an, um die Inhalte wirklich hilfreich und leicht zu finden.
 ms.assetid: 82ce076e-062b-4793-a1c0-ed96c0f2b284
 ms.topic: article
 ms.date: 10/20/2020
-ms.openlocfilehash: 907494e9a97ccaf51e4eba463c34e49854b14a81
-ms.sourcegitcommit: 3bdf30edb314e0fcd17dc4ddbc70e4ec7d3596e6
+ms.openlocfilehash: f9b1260128eb253a2d501a810923ae809c5f8187
+ms.sourcegitcommit: 099ecdda1e83618b844387405da0db0ebda93a65
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "104562391"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111443242"
 ---
 # <a name="help"></a>Hilfe
 
 > [!NOTE]
-> Dieses Entwurfs Handbuch wurde für Windows 7 erstellt und wurde für neuere Versionen von Windows nicht aktualisiert. Ein Großteil der Anleitungen gilt weiterhin im Prinzip, aber die Präsentation und die Beispiele entsprechen nicht unseren [aktuellen Entwurfs Anleitungen](/windows/uwp/design/).
+> Dieser Entwurfsleitfaden wurde für Windows 7 erstellt und für neuere Versionen von Windows nicht aktualisiert. Ein Großteil der Anleitungen gilt immer noch im Prinzip, aber die Präsentation und die Beispiele spiegeln nicht unsere [aktuellen Entwurfsleitfäden](/windows/uwp/design/)wider.
 
-Verwenden Sie die Hilfe als sekundären Mechanismus, um Benutzer beim Ausführen und besseren Verständnis von Aufgaben zu unterstützen. Wenden Sie diese Richtlinien an, damit der Inhalt wirklich hilfreich und leicht zu finden ist.
+Verwenden Sie Hilfe als sekundären Mechanismus, um Benutzern zu helfen, Aufgaben abzuschließen und besser zu verstehen, wobei der primäre Mechanismus die Benutzeroberfläche selbst ist. Wenden Sie diese Richtlinien an, um die Inhalte wirklich hilfreich und leicht zu finden.
 
-Ein Hilfesystem besteht aus verschiedenen Arten von Inhalten, die Benutzern helfen sollen, wenn Sie eine Aufgabe nicht ausführen können, ein Konzept ausführlicher verstehen oder weitere technische Details benötigen, als auf der Benutzeroberfläche verfügbar sind.
+Ein Hilfesystem besteht aus verschiedenen Arten von Inhalten, die Benutzern helfen sollen, wenn sie eine Aufgabe nicht ausführen können, ein Konzept ausführlicher verstehen oder mehr technische Details benötigen, als auf der Benutzeroberfläche verfügbar sind.
 
-In diesem Artikel wird als sekundäres Element für die Benutzeroberfläche unterstützt. Die Benutzeroberfläche ist primär, da Benutzer zuerst versuchen, ihre Probleme zu lösen. Sie werden das Hilfesystem nur dann lesen, wenn Sie Ihre Aufgabe nicht mit der Benutzeroberfläche ausführen können.
+In diesem Artikel beziehen wir uns auf Hilfe als sekundär zur Benutzeroberfläche. Die Benutzeroberfläche ist primär, da benutzer hier zuerst versuchen, ihre Probleme zu lösen. Sie wenden sich nur dann an das Hilfesystem, wenn sie ihre Aufgabe nicht über die Benutzeroberfläche ausführen können.
 
-![Screenshot der Seite "Windows-Hilfe und Support" ](images/winenv-help-image1.png)
+![Screenshot der Windows-Hilfe- und -Supportseite ](images/winenv-help-image1.png)
 
-Die Windows-Hilfe-und Support-Startseite, die im Startmenü verfügbar ist.
+Die Startseite für Windows-Hilfe und -Support, die über die Startmenü verfügbar ist.
 
-**Hinweis:** Richtlinien im Zusammenhang mit [Stil und Ton](text-style-tone.md) werden in einem separaten Artikel dargestellt.
+**Hinweis:** Richtlinien im Zusammenhang mit [Stil und Tonfall](text-style-tone.md) werden in einem separaten Artikel vorgestellt.
 
-## <a name="is-this-the-right-user-interface"></a>Handelt es sich um die richtige Benutzeroberfläche?
+## <a name="is-this-the-right-user-interface"></a>Ist dies die richtige Benutzeroberfläche?
 
 Orientieren Sie sich an folgenden Fragen:
 
--   **Wie motiviert sind die Ziel Benutzer?** Umso wichtiger ist es, dass Sie die Funktionalität Ihres Programms ermitteln und zu fortgeschrittenen oder sogar fortgeschrittenen Benutzern der IT werden. umso besser ist es, dass Sie Antworten auf Ihre Fragen durch Beratungshilfe Themen untersuchen.
--   **Verwenden Sie die Hilfe, um eine fehlerhafte Benutzeroberfläche zu beheben?** Umso besser ist die Benutzeroberfläche, desto weniger Benutzer werden weitere Hilfe suchen. Wenn Ihr Programm eine sehr klare, hilfreiche primäre Benutzeroberfläche aufweist (z. b. für den Fachbereich freie Fehlermeldungen, gut geschriebene Assistenten und eindeutige Dialogfelder), benötigen Sie möglicherweise überhaupt kein sekundäres Hilfesystem.
--   **Ist Ihr Programm relativ einfach?** Wenn dies der Fall ist, sollten Sie ggf. alle notwendigen Unterstützungs Inhalte in ihre primären Oberflächen Oberflächen integrieren. Es ist wahrscheinlicher, dass Benutzer zusätzliche Hilfe in Programmen suchen, die komplexe Aufgaben ausführen.
--   **Richtet sich Ihre Anwendung an Entwickler, IT-Experten oder andere Softwareexperten?** Diese Benutzer erwarten in der Regel Referenz Hilfe für Programmiersprachen Konventionen und ausführliche konzeptionelle Hilfe zur Beherrschung von Features.
+-   **Wie motiviert sind Ihre Zielbenutzer?** Je stärker sie die Funktionalität Ihres Programms entdecken und fortgeschrittene oder sogar fortgeschrittene Benutzer werden, desto mehr sind sie bereit, Antworten auf ihre Fragen zu recherchieren, indem sie Hilfethemen lesen.
+-   **Verwenden Sie Hilfe, um eine fehlerhafte Benutzeroberfläche zu beheben?** Je besser Ihre Benutzeroberfläche ist, desto weniger Benutzer suchen zusätzliche Hilfe. Wenn Ihr Programm über eine sehr klare, hilfreiche primäre Benutzeroberfläche verfügt (z. B. jargonfreie Fehlermeldungen, gut geschriebene Assistenten und eindeutige Dialogfelder), benötigen Sie möglicherweise überhaupt kein sekundäres Hilfesystem.
+-   **Ist Ihr Programm relativ einfach?** Falls ja, sollten Sie alle erforderlichen Unterstützungsinhalte in Ihre primären Benutzeroberflächen integrieren. Benutzer suchen eher zusätzliche Hilfe in Programmen, die komplexe Aufgaben ausführen.
+-   **Ist Ihre Anwendung für Entwickler, IT-Experten oder andere Softwareexperten vorgesehen?** Diese Benutzer erwarten in der Regel Referenzhilfe für Programmiersprachenkonventionen und ausführliche konzeptionelle Hilfe zur Bemasterung von Features.
 
 ## <a name="design-concepts"></a>Entwurfskonzepte
 
-Wenn Sie sich dazu entschließen, Hilfe in das Programm einzubeziehen, integrieren Sie es in ihren Gesamtentwurf. Die Hilfe Schnittstelle sollte einfach, effizient und relevant sein. Dadurch können Benutzer problemlos Hilfe erhalten und dann zu ihrer Aufgabe zurückkehren. Sehen Sie sich Ihr Hilfesystem im Hinblick auf die Benutzer Zeit an: minimieren Sie zunächst die Unterbrechung, indem Sie die Probleme im Programm lösen und diese Probleme lösen, indem Sie grundlegende Unterstützung direkt in die Benutzeroberfläche integrieren und klare und konsistente Einstiegspunkte in Ihre ausführlichere Hilfe erstellen.
+Wenn Sie hilfe in Ihr Programm aufnehmen möchten, integrieren Sie es in Ihren Gesamtentwurf. Die Hilfeschnittstelle sollte einfach, effizient und relevant sein. Sie sollte es Benutzern ermöglichen, auf einfache Weise Hilfe zu erhalten und dann zu ihrer Aufgabe zurückzukehren. Stellen Sie sich Ihr Hilfesystem in Bezug auf die Zeit der Benutzer vor: Minimieren Sie zuerst die Unterbrechung, indem Sie vorhersehen, wo probleme in Ihrem Programm auftreten werden, und dann diese Probleme lösen, indem Sie grundlegende Unterstützung direkt in Ihre Benutzeroberfläche integrieren und klare und konsistente Einstiegspunkte in Ihre ausführlichere Hilfe erstellen.
 
-Die Windows-Unterstützung wurde gemäß diesen Prinzipien entworfen. Im folgenden finden Sie einige der Entwurfs Änderungen an der Windows-Hilfe:
+Die Windows-Unterstützung wurde gemäß diesen Prinzipien entworfen. Hier sind einige der Entwurfsänderungen an der Benutzeroberfläche der Windows-Hilfe:
 
--   Besser auffinalisier Bare Einstiegspunkte zur Unterstützung der primären Benutzeroberfläche (insbesondere neue Hilfe Links von Benutzeroberflächen Oberflächen wie Dialogfeldern, Fehlermeldungen und Assistenten). Hilfe Links gelangen direkt zum entsprechenden Thema in der-Hilfe.
--   Ein Schaltflächen Symbol für Hilfe ist in der oberen rechten Ecke der meisten System Steuerungs-Hub-Seiten sowie in shellordnern verfügbar.
--   Benutzer können die neuesten Hilfe Inhalte von Windows Online Hilfe und Support erhalten, wenn Sie online sind.
--   Hilfe Themen sind nun Aufgaben basiert und nicht auf Features fokussiert, sodass Benutzer ihre Aufgaben schnell und effizient erledigen können.
--   Hilfe Themen basieren nun größtenteils auf bekannten Top-Benutzer Szenarien.
--   Hilfe Themen haben einen entspannteren und informellen [Ton](text-style-tone.md), der in realer Sprache verwendet wird.
--   Hilfe Themen sind für eine effektive Überprüfung konzipiert, da Benutzer den Word-Word-Word-Inhalt nur selten lesen.
+-   Weitere erkennbare Einstiegspunkte für die Hilfe von der primären Benutzeroberfläche (insbesondere neue Hilfelinks von Benutzeroberflächen wie Dialogfeldern, Fehlermeldungen und Assistenten). Hilfelinks führen Sie direkt zum entsprechenden Thema in der Hilfe.
+-   Ein Symbol für die Hilfeschaltfläche ist in der oberen rechten Ecke der meisten Systemsteuerung Hubseiten sowie in Shellordnern verfügbar.
+-   Benutzer können die aktuellsten Hilfeinhalte aus der Windows Online-Hilfe und dem -Support abrufen, wenn sie online sind.
+-   Hilfethemen sind jetzt aufgabenbasiert und nicht featureorientiert, sodass Benutzer ihre Aufgaben schnell und effizient erledigen können.
+-   Hilfethemen basieren jetzt größtenteils auf bekannten Szenarien mit den meisten Benutzern.
+-   Hilfethemen weisen einen lockereren und [lockereren Ton auf,](text-style-tone.md)wobei die reale Sprache verwendet wird.
+-   Hilfethemen sind für eine effektive Überprüfung konzipiert, da Benutzer den Inhalt nur selten wort für Wort lesen.
 
 ### <a name="an-analogy-for-help"></a>Eine Analogie zur Hilfe
 
-Um mehr über das Entwerfen Ihres Hilfesystems nachzudenken, betrachten Sie eine Analogie aus dem alltäglichen Leben. Sie sind in einer unbekannten Stadt verloren gegangen. Was ist zu tun? Viele würden wie folgt reagieren:
+Um ausführlicher über das Entwerfen Ihres Hilfesystems nachzudenken, sollten Sie eine Analogie aus dem täglichen Leben in Betracht ziehen. Sie gehen in einer unbekannten Stadt verloren. Was ist zu tun? Viele würden wie folgt reagieren:
 
--   Orientierung erhalten; Suchen Sie nach-Marken, Straßen Zeichen (Namen und Zeiger auf Orte).
--   Suchen Sie nach Maps.
--   Stellen Sie schließlich als letztes Mittel eine Anleitung, oder wenden Sie sich an einen Freund.
+-   Orientieren; Suchen Sie nach Sehenswürdigkeiten, Straßenzeichen (Namen und Zeiger auf Orte).
+-   Suchen Sie nach Karten.
+-   Fragen Sie abschließend als letzte Möglichkeit nach Wegbeschreibungen, oder rufen Sie einen Freund an.
 
-Der Entwurf der "Schnittstelle" der Stadt wirkt sich auf Ihre Notwendigkeit aus. Gut bezeichnete Straßen, explizite Richtungen (Zeiger auf Krankenhäuser, Flughäfen, Museen, das Postbüro) und klare Kennzeichen, wie z. b. bedeutende geografische Features oder Gebäude, unterstützen Sie bei der Suche.
+Der Entwurf der "Schnittstelle" der Stadt wirkt sich auf Ihren Bedarf an Unterstützung aus. Gut beschriftete Straßen, explizite Wegbeschreibungen (Zeiger auf Krankenhause, Orte, Orte und Post) und klare Sehenswürdigkeiten wie prominente geografische Merkmale oder Gebäude helfen Ihnen dabei, ihren Weg zu finden.
 
-Sie werden als letztes Mittel um Hilfe gefragt. Es ist ein Hinweis darauf, dass die "Schnittstelle" der Stadt ausgefallen ist, weil sie unzureichend entworfen und verwirrend ist. Es ist wahrscheinlicher, dass Sie an einem Ort, der über eine bestimmte Bezeichnung verfügt und eine bestimmte Bezeichnung vorschlägt, nach Hilfe Fragen. Beispielsweise ist es wahrscheinlicher, dass Sie die Hilfe an einem Ort mit der Bezeichnung "Directions" oder "Information" anfordern, als eine allgemeine Stelle wie die Stadt Hall.
+Als letztes Mittel bitten Sie um Hilfe. Es ist ein Hinweis darauf, dass die "Schnittstelle" der Stadt fehlgeschlagen ist, da sie schlecht entworfen und verwirrend ist. Sie werden eher an einem Ort um Hilfe bitten, der über eine bestimmte Bezeichnung verfügt, die Hilfreichkeit andeutet. Beispielsweise bitten Sie eher an einem Ort mit den Bezeichnungen "Directions" oder "Information" um Hilfe als an einem allgemeinen Ort wie dem City Hall, auch wenn ihnen fast jeder im City Hall Anweisungen geben könnte.
 
-Wenn Sie Hilfe anfordern, sind Sie frustriert und möchten nur auf Ihr beabsichtigter Ziel gelangen. Wahrscheinlich sind Sie nicht in der Lage, eine Tour durch die Stadt zu machen oder den Verlauf kennenzulernen. Die Motivation hängt außerdem von der Wichtigkeit der Aufgabe ab. Wenn Sie versuchen, Ihren Hotel Raum zu finden, machen Sie alles, was Sie benötigt. Wenn Ihr Ziel jedoch darin besteht, eine Stelle der geringfügigen Wichtigkeit zu finden, werden Sie wahrscheinlich nur nach einem geringfügigen Aufwand darauf achten.
+Wenn Sie um Hilfe bitten, sind Sie wahrscheinlich frustriert und möchten nur zu Ihrem gewünschten Ziel gelangen. Sie sind wahrscheinlich nicht in der Stimmung, Zeit mit einer Tour durch die Stadt zu verbringen oder mehr über ihre Geschichte zu erfahren. Darüber hinaus hängt Ihre Motivation von der Wichtigkeit der Aufgabe ab. Wenn Sie versuchen, Ihr Zimmer zu finden, tun Sie alles, was sie benötigt. Wenn Ihr Ziel jedoch darin besteht, einen Ort mit geringfügiger Wichtigkeit zu finden, werden Sie wahrscheinlich nach einem geringen Aufwand einfach aufgeben.
 
-Alle diese Aspekte bei der Suche nach dem richtigen Raum entsprechen der Art und Weise, wie Benutzer in der Regel im virtuellen Bereich Ihres Programms suchen. Das Suchen von Hilfe über die primäre Benutzeroberfläche hinaus besteht darin, dass es sich um eine disarisierung handelt. machen Sie sich am besten mit einer gut entworfenen Benutzeroberfläche und intelligenten "Straßen signieren" vertraut, um die Benutzer auf die benötigten Antworten zu lenken.
+All diese Aspekte der Suche im realen Raum entsprechen der Art und Weise, wie Benutzer sich in der Regel im virtuellen Bereich Ihres Programms befinden. Hilfe über die primäre Benutzeroberfläche hinaus zu suchen, ist von Natur aus destruktierend. Tun Sie Ihr Bestes, um eine solche Erfahrung zu verringern, indem Sie eine gut entworfene Benutzeroberfläche und intelligente "Straßenschilder" verwenden, um Benutzer auf die benötigten Antworten zu leiten.
 
-### <a name="designing-ui-so-that-help-is-unnecessary"></a>Entwerfen der Benutzeroberfläche, sodass Hilfe unnötig ist
+### <a name="designing-ui-so-that-help-is-unnecessary"></a>Entwerfen der Benutzeroberfläche, sodass die Hilfe nicht erforderlich ist
 
-Versuchen Sie, die Hilfe zuerst zu überprüfen, indem Sie folgende Schritte durchführen:
+Versuchen Sie, Hilfe von Anfang an unnötig zu machen, indem Sie Folgendes verwenden:
 
--   Die einfache Ermittlung und Durchführung allgemeiner Aufgaben.
--   Eindeutige [Haupt Anweisungen](text-ui.md)werden bereitgestellt.
--   Bereitstellen klarer, präziser Steuerelement Bezeichnungen, die Ziel-und aufgabenorientiert sind.
--   Zusätzliche Anleitungen und Erläuterungen, sofern erforderlich.
--   Die Vorhersage von Problemen mithilfe von Steuerelementen, die auf gültige Optionen beschränkt sind, das Bereitstellen geeigneter Standardwerte, das Behandeln aller Eingabeformate und das verhindern von Fehlern
+-   Einfaches Ermitteln und Ausführen gängiger Aufgaben.
+-   Bereitstellen eindeutiger [Hauptanweisungen.](text-ui.md)
+-   Bereitstellen von klaren, präzisen Steuerelementbezeichnungen, die ziel- und aufgabenorientiert sind.
+-   Stellen Sie bei Bedarf zusätzliche Anweisungen und Erklärungen bereit.
+-   Antiziping avoidable problems by using controls constrained to valid choices, providing suitable default values, handling all input formats, and preventing errors.
 -   Schreiben von Fehlermeldungen, die eine klare Lösung oder Aktion für den Benutzer bereitstellen.
--   Vermeiden Sie verwirrende UI-Entwürfe, wie z. b. Aufgaben mit mangelendem Datenfluss oder die Verwendung von Steuerelementen, die aus Gründen der
--   Arbeiten mit Writern und Editoren früh im Entwicklungszeitraum, um einen qualitativ hochwertigen, konsistenten [UI-Text](text-ui.md) im gesamten Programm zu erstellen.
+-   Vermeiden sie verwirrende Benutzeroberflächenentwürfe, z. B. Aufgaben mit schlechtem Flow oder die Verwendung von Steuerelementen, die aus keinem offensichtlichen Grund deaktiviert sind.
+-   Arbeiten mit Writern und Editoren frühzeitig im Entwicklungszyklus, um qualitativ hochwertigen, konsistenten [Benutzeroberflächentext](text-ui.md) im gesamten Programm zu erstellen.
 
-Benutzer sollten sich nicht an einem anderen Ort befinden, um herauszufinden, wie Sie Ihre Benutzeroberfläche verwenden. Fügen Sie wichtige Informationen direkt in die primäre Benutzeroberfläche ein, anstatt Benutzer aus Ihrem unmittelbaren Kontext und dem Hilfebereich zu zwingen. Wenn wichtige Informationen nur in einem Hilfethema vorhanden sind, besteht die Möglichkeit, dass Benutzer diese nicht sehen können. Informationen, die optional und ausführlichere Informationen sind, finden Sie unter Hilfe Links von der primären Benutzeroberfläche zum relevanten Hilfethema, um zusätzliche Unterstützung zu erhalten.
+Benutzer sollten nicht an einen anderen Ort wechseln müssen, um herauszufinden, wie Sie Ihre Benutzeroberfläche verwenden. Fügen Sie wichtige Informationen direkt zur primären Benutzeroberfläche hinzu, anstatt Benutzer aus ihrem unmittelbaren Kontext und im Hilfebereich zu erzwingen. Wenn wichtige Informationen nur in einem Hilfethema vorhanden sind, besteht die Wahrscheinlichkeit, dass Benutzer sie nicht sehen. Informationen, die optional und erläuternder sind, finden Sie unter Hilfelinks von der primären Benutzeroberfläche zum entsprechenden Hilfethema.
 
-### <a name="considering-user-motivation"></a>Berücksichtigen der Benutzer Motivation
+### <a name="considering-user-motivation"></a>Berücksichtigen der Benutzermotivation
 
-Bei den meisten Benutzern gehören Geschwindigkeit und Effizienz zu den wichtigsten Vorteilen guter Programme. Benutzer möchten Ihre Arbeit erledigen. Im Allgemeinen ist es nicht interessant, das Programm und die Technologie zu erlernen. Ihre Geduld wird nur dadurch erweitert, dass das Programm Ihre eigenen Interessen erfüllt und Probleme löst.
+Für die meisten Benutzer gehören Geschwindigkeit und Effizienz zu den wichtigsten Vorteilen guter Programme. Benutzer möchten ihre Arbeit erledigen. Im Allgemeinen sind sie nicht daran interessiert, sich selbst über das Programm und die Technologie zu informieren. ihre Beeinträchtigung wird nur dadurch erweitert, dass dieses Programm ihren eigenen Interessen dient und probleme gelöst werden kann.
 
-Entwerfen Sie Ihr Hilfesystem so, dass es der Motivation Ihrer Benutzer entspricht. Nehmen Sie beispielsweise an, dass ein Benutzer, der sich auf einen Kiosk in einem Museum gezogen hat. Wenn Sie nicht ermitteln kann, wie die Aufgabe schnell durchgeführt werden kann, ist Sie wahrscheinlich einfach nur auf dem neuesten Stand. Es ist unwahrscheinlich, dass Sie sich mit der Hilfe Zeit beschäftigen. Alternativ hat ein stark motivierter Benutzer eine höhere Toleranz für die Zeit, die für die Untersuchung des Hilfesystems für Antworten aufgewendet wird. Ein Geschäfts Benutzer, der z. b. die Bücher ausgleichen muss, ist wahrscheinlich bereit, Hilfe Inhalte zu lesen, um die neue Buchhaltungs Anwendung optimal zu nutzen.
+Entwerfen Sie Ihr Hilfesystem so, dass es der Motivation Ihrer Benutzer entspricht. Stellen Sie sich z. B. einen Benutzer vor, der sich an einem Kiosk in einem Kiosk befindet. Wenn sie nicht herausfinden kann, wie sie die Aufgabe schnell ausführen kann, wird sie wahrscheinlich einfach aufgeben und gehen. Es ist unwahrscheinlich, dass sie Zeit mit der Verwendung der Hilfe verbringen wird. Alternativ dazu hat ein hochmotivierter Benutzer eine höhere Toleranz für die Zeit, die für die Suche nach Antworten in Ihrem Hilfesystem aufgewendet wurde. Ein Geschäftsbenutzer, der z. B. die Bücher ausgleichen muss, ist wahrscheinlich bereit, Hilfeinhalte zu lesen, um diese neue Buchhaltungsanwendung optimal zu gestalten.
 
-### <a name="writing-content-for-scanning"></a>Schreiben von Inhalten zum Scannen
+### <a name="writing-content-for-scanning"></a>Schreiben von Inhalten für die Überprüfung
 
-Schreiben Sie Hilfe Themen, in denen Sie wissen, dass Sie auf bestimmte Informationen überprüft werden, und nicht auf Word für Word. Schreiben Sie einen gewissen Wert, um schnell auf den Punkt zu gelangen und Informationen bereitzustellen, auf die Benutzer reagieren können.
+Schreibhilfethemen, in denen sie wissen, dass sie auf bestimmte Informationen überprüft werden, nicht auf Wörter für Wörter lesen. Schreiben Sie präzise, gelangen Sie schnell auf den Punkt, und stellen Sie Informationen bereit, auf die Benutzer reagieren können.
 
--   Schreiben Sie "Gewusst-wie"-Themen, indem Sie nummerierte Schritte in einem konsistenten Format verwenden, damit die Benutzer erkennen, dass Sie Unterstützung bei der
--   Schreiben Sie Referenz Themen mit einfacher Überprüfung, und verwenden Sie Tabellen, z. b. zur Darstellung von Benutzeroberflächen Optionen oder Sprachsyntax.
--   Schreiben von konzeptionellen Themen, die logisch nach untergeordneten Überschriften angeordnet sind, sodass der Benutzer ganze Abschnitte mit geringerem Interesse überspringen kann.
+-   Schreiben Sie Themen zur Vorgehensweise mit nummerierten Schritten in einem konsistenten Format, damit Benutzer erkennen, dass sie Prozedurunterstützung erhalten.
+-   Schreiben Sie Referenzthemen mit Blick auf die einfache Überprüfung, indem Sie z. B. Tabellen verwenden, um Ui-Optionen oder Sprachsyntax darzustellen.
+-   Schreiben Sie konzeptionelle Themen, die logisch nach Unterheadern organisiert sind, sodass der Benutzer ganze Abschnitte überspringen kann, die weniger interessant sind.
 
-Bei allen Hilfe Inhalten ist es einfacher, aufzurufene Listen zu scannen als Standard Absatz Blöcke von Text; Verwenden Sie Aufzählungs Listen jedoch nicht als Krümel für unorganisierte Materialien.
+In allen Hilfeinhalten ist es einfacher, Aufzählungen zu überprüfen als standardmäßige Absatzblöcke von Text. Verwenden Sie Aufzählungszeichen jedoch mit Mäßigung, nicht als Krücke für unorganisiertes Material.
 
 ### <a name="creating-content-that-matters"></a>Erstellen von Inhalten, die wichtig sind
 
-Da kein Hilfesystem jede Frage, die jeder Benutzer möglicherweise hat, vorhersehen kann, konzentrieren Sie sich auf den größten Teil des Inhalts auf die Beantwortung der wichtigsten Fragen in den wichtigsten Szenarien für Ihre Ziel Benutzer. Beispielsweise können das effektive suchen und das Einrichten von Netzwerkverbindungen (unter anderem Aufgaben) in hohem Maße gesucht werden. Konzentrieren Sie sich auch auf Aufgaben in ihren Top-Benutzer Szenarien, anstatt ein Feature oder eine Technologie für den eigenen Zweck zu dokumentieren.
+Da kein Hilfesystem jede Frage antizipieren kann, die jeder Benutzer möglicherweise hat, konzentrieren Sie sich den Großteil des Inhalts auf die Beantwortung der wichtigsten Fragen in den wichtigsten Szenarien für Ihre Zielbenutzer. Beispielsweise kann eine effektive Suche und das Einrichten der Netzwerkkonnektivität (neben anderen Aufgaben) sehr gefragte Themen sein. Konzentrieren Sie sich außerdem auf Aufgaben in Ihren Szenarien mit den wichtigsten Benutzern, anstatt ein Feature oder eine Technologie vollständig zu dokumentieren.
 
-**Tipp:** Technischer Support ist eine gute Quelle für Hilfe Inhalte. Helpdesks behalten häufig Datensätze häufig gestellter Fragen zu bestimmten Programmen oder Aufgaben bei, die von den Benutzern zu erledigen sind.
+**Tipp:** Technischer Support ist eine gute Quelle für Hilfeinhalte. Helpdesks speichern häufig Datensätze mit häufig gestellten Fragen zu bestimmten Programmen oder Aufgaben, die Benutzer ausführen möchten (und die nicht erfolgreich sind).
 
-Es ist nicht erforderlich, Hilfe zu allen Features in der Benutzeroberfläche bereitzustellen. **Sehr häufig sind nicht hilfreiche Hilfe Ergebnisse bei der Erstellung von Hilfe für alles.** Wenn die Benutzeroberfläche gut entworfen wurde, sind die meisten dieser Hilfe Themen nicht sehr hilfreich. Sie werden lediglich die offensichtlichste wiedergeben.
+Es ist nicht erforderlich, Hilfe für jedes Feature in der Benutzeroberfläche bereitzustellen. **Häufig führt die nicht hilfreiche Hilfe dazu, dass versucht wird, Hilfe für alles zu erstellen.** Wenn die Benutzeroberfläche gut entworfen ist, sind die meisten dieser Hilfethemen nicht sehr hilfreich. sie werden nur das Offensichtliche neu zugeben.
 
-Wenn es mehr als eine Möglichkeit gibt, eine Aufgabe auszuführen, können Sie in den meisten Fällen nur die gängigste Art dokumentieren, die von unerfahrenen Benutzern verwendet wird. Zu den Ausnahmen gehören Überlegungen zur Barrierefreiheit (z. b. das Dokumentieren von Tastatur Entsprechungen von Mausaktionen) und Platt Form Überlegungen (z. b. die Dokumentation für den Tablet-Formular Faktor oder für Serverumgebungen, in denen die Befehlszeile für die grafische Benutzeroberfläche verwendet werden kann).
+Wenn es mehrere Möglichkeiten gibt, eine Aufgabe auszuführen, können Sie in den meisten Fällen einfach die gängigste Methode dokumentieren, die von unerfahrenen Benutzern verwendet wird. Ausnahmen hierfür sind Überlegungen zur Barrierefreiheit (z. B. das Dokumentieren von Tastaturentsprechungen von Mausaktionen) und Plattformüberlegungen (z. B. das Dokumentieren des Tabletformfaktors oder für Serverumgebungen, in denen die Befehlszeile die grafische Benutzeroberfläche ersetzen kann).
 
-Denken Sie daran, dass die Benutzer oft nicht die Probleme, die Sie in den gleichen Begriffen wie Sie auftreten, berücksichtigen. So kann es beispielsweise vorkommen, dass Benutzer sich als "Konto" vorstellen. Stellen Sie sicher, dass Sie Ihre Such-und Indizierungs Funktionalität entwerfen und dann wahrscheinlich Terminologie-und Synonyme für Terminologie berücksichtigen.
+Denken Sie daran, dass Benutzer häufig nicht genau so wie Sie an die Probleme denken, die auftreten. Beispielsweise kann es für Benutzer ungewöhnlich sein, sich selbst als "Konto" zu betrachten. Achten Sie darauf, ihre Such- und Indizierungsfunktionen zu entwerfen, um wahrscheinliche Terminologievarianten und Synonyme zu berücksichtigen.
 
-Zwischen der primären Benutzeroberfläche und dem Hilfesystem sollten die Begriffe jedoch sehr ähnlich sein, wenn Sie nicht identisch sind. Benutzer können verwirrt werden, wenn sich die Hilfesystem Sprache nicht ganz genau mit der Anzeige auf dem Bildschirm korreliert.
+Zwischen der primären Benutzeroberfläche und dem Hilfesystem sollten begriffe jedoch sehr ähnlich sein, wenn sie nicht identisch sind. Benutzer können verwechselt werden, wenn die Hilfesystemsprache nicht sehr eng mit dem korreliert, was auf dem Bildschirm angezeigt wird.
 
-### <a name="writing-compelling-help-link-text"></a>Schreiben von ansprechenden Hilfelink
+### <a name="writing-compelling-help-link-text"></a>Schreiben von überzeugenden Hilfelinktexten
 
-Wenn Sie über Ihre primäre Benutzeroberfläche eine Verknüpfung mit einem Hilfethema erstellen, achten Sie darauf, dass Sie einen ansprechenden Hilfelink schreiben. Clear und eine bestimmte Sprache sorgen für Vertrauen. Benutzer sind tendenziell der Meinung, dass generische Hilfe Links (eine Schaltfläche mit dem Wort "Help" oder "Weitere Informationen") nicht zu den richtigen Informationen führt, ohne dass eine beträchtliche Zeit investiert werden muss.
+Wenn Sie von Ihrer primären Benutzeroberfläche aus einen Link zu einem Hilfethema erstellen, müssen Sie überzeugenden Hilfelinktext schreiben. Eine klare und spezifische Sprache schafft Vertrauen. Benutzer sind tendenziell der Meinung, dass generische Hilfelinks (eine Schaltfläche mit dem Wort "Hilfe" oder "Weitere Informationen" dazu) ohne erhebliche Zeitaufwand nicht zu den richtigen Informationen führen.
 
 **Wenn Sie nur fünf Dinge tun...**
 
-1.  Entwerfen Sie die Benutzeroberfläche, sodass Benutzer keine Hilfe benötigen.
-2.  Helfen Sie, Ihre Hilfe zu nutzen, indem Sie den Inhalt auf die wichtigsten Fragen in den wichtigsten Szenarien für Ihre Ziel Benutzer konzentrieren.
-3.  Präsentieren Sie den Hilfe Inhalt, sodass er leicht zu scannen ist.
-4.  Beachten Sie, dass Sie keine Hilfe zu allen Features in der Benutzeroberfläche bereitstellen müssen.
-5.  Machen Sie die Hilfe Einstiegspunkte auffindbar und aussagekräftigen.
+1.  Entwerfen Sie Ihre Benutzeroberfläche so, dass Benutzer keine Hilfe benötigen.
+2.  Machen Sie Ihre Hilfe hilfreich, indem Sie den Inhalt auf die wichtigsten Fragen in den wichtigsten Szenarien für Ihre Zielbenutzer konzentrieren.
+3.  Zeigen Sie den Hilfeinhalt an, damit er leicht überprüft werden kann.
+4.  Verstehen Sie, dass Sie nicht für jedes Feature auf der Benutzeroberfläche Hilfe bereitstellen müssen.
+5.  Machen Sie die Einstiegspunkte der Hilfe erkennbar und überzeugend.
 
 ## <a name="usage-patterns"></a>Verwendungsmuster
 
@@ -130,11 +130,11 @@ Verschiedene Arten von Inhalten dienen unterschiedlichen Zwecken.
 
 
 
-|                                                                                                              |                                                                                                                                                                                                                                                                                                                                                                                       |
+|    Inhaltstyp                                                                                                        |   Beispiel                                                                                                                                                                                                                                                                                                                                                                                    |
 |--------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Hilfe zur Vorgehensweise**<br/> enthält die Schritte zum Ausführen einer Aufgabe. <br/>                       | Die Verfahrenshilfe sollte sich auf "wie"-Informationen anstelle von "was" oder "Warum" konzentrieren. <br/> ![Screenshot der Hilfeseite zum Löschen von temporären Dateien ](images/winenv-help-image2.png)<br/> In diesem Beispiel wird in dem Hilfethema beschrieben, wie Sie eine Funktion des Hilfsprogramms für die Datenträger Bereinigung verwenden, und Sie können die nachfolgenden Schritte ausführen.<br/>                                              |
-| **Konzeptionelle Hilfe**<br/> Stellt Hintergrundinformationen, Featureübersichten oder Prozesse bereit. <br/> | Die konzeptionelle Hilfe sollte über das hinausgehende Informationen bereitstellen, die zum Ausführen einer Aufgabe erforderlich sind. <br/> ![Screenshot der Hilfeseite "Desktop (Übersicht)" ](images/winenv-help-image3.png)<br/> In diesem Beispiel definiert das Hilfethema, was der Desktop ist, und bietet weitere Details darüber, was er enthält und warum Benutzer mit ihm interagieren.<br/>           |
-| **Verweis Hilfe**<br/> dient als Online-Referenzbuch. <br/>                                | Sie können die Verweis Hilfe verwenden, um eine Programmiersprache oder Programmierschnittstellen zu dokumentieren. <br/> ![Screenshot der Hilfeseite "notational Conventions" ](images/winenv-help-image4.png)<br/> In diesem Beispiel werden in der Hilfe Themen typografische Konventionen für diese bestimmte Sprache oder Anwendung aufgelistet und die Informationen in einer leicht zu überprüfenden Tabelle bereitgestellt.<br/> |
+| **Prozedurale Hilfe**<br/> stellt die Schritte zum Ausführen einer Aufgabe bereit. <br/>                       | Die prozedurale Hilfe sollte sich auf "Wie"-Informationen und nicht auf "Was" oder "Warum" konzentrieren. <br/> ![Screenshot der Hilfeseite "Temporäre Dateien löschen" ](images/winenv-help-image2.png)<br/> In diesem Beispiel wird im Hilfethema beschrieben, wie Sie ein Feature des Hilfsprogramms für die Datenträgerbereinigung verwenden, indem Sie die Schritte nacheinander ausführen.<br/>                                              |
+| **Konzeptionelle Hilfe**<br/> stellt Hintergrundinformationen, Featureübersichten oder Prozesse bereit. <br/> | Konzeptionelle Hilfe sollte darüber hinaus Informationen zu "Was" oder "Warum" bereitstellen, die für die Durchführung einer Aufgabe erforderlich sind. <br/> ![Screenshot der Hilfeseite "Desktop (Übersicht)" ](images/winenv-help-image3.png)<br/> In diesem Beispiel definiert das Hilfethema, was der Desktop ist, und bietet zusätzliche Details dazu, was er enthält und warum Benutzer damit interagieren.<br/>           |
+| **Referenzhilfe**<br/> dient als Onlinereferenzbuch. <br/>                                | Sie können die Referenzhilfe verwenden, um eine Programmiersprache oder Programmierschnittstellen zu dokumentieren. <br/> ![Screenshot der Hilfeseite "Notational conventions" ](images/winenv-help-image4.png)<br/> In diesem Beispiel listet das Hilfethema typografische Konventionen auf, die für diese bestimmte Sprache oder Anwendung verwendet werden, und stellt die Informationen in einer einfach zu überprüfenden Tabelle bereit.<br/> |
 
 
 
@@ -144,111 +144,111 @@ Verschiedene Arten von Inhalten dienen unterschiedlichen Zwecken.
 
 ### <a name="entry-points"></a>Einstiegspunkte
 
--   **Link zu bestimmten, relevanten Hilfe Themen.** Keine Verknüpfung mit der Startseite der Hilfe, dem Inhaltsverzeichnis, einer Liste von Suchergebnissen oder einer Seite, die nur mit anderen Seiten verknüpft ist. Vermeiden Sie das Verknüpfen mit Seiten, die als eine große Liste häufig gestellter Fragen strukturiert sind, da Benutzer gezwungen werden, nach der Datei zu suchen, die dem Link entspricht, auf den Sie geklickt haben Verknüpfen Sie nicht mit bestimmten Hilfe Themen, die für die vorliegende Aufgabe nicht relevant und hilfreich sind. Niemals mit leeren Seiten verknüpfen.
--   **Fügen Sie keine Hilfe Verknüpfungen für jedes Fenster oder jede Seite ein, um die Konsistenz zu gewährleisten.** Wenn Sie einen Hilfelink an einem Ort bereitstellen, bedeutet das nicht, dass Sie Sie überall bereitstellen müssen.
--   **Verwenden von Hilfe Verknüpfungen für Dialogfelder, Fehlermeldungen, Assistenten und Eigenschaften Blätter.** Wenn der Hilfelink für bestimmte Steuerelemente gilt, platzieren Sie ihn linksbündig. Wenn der Hilfelink auf das gesamte Fenster zutrifft, platzieren Sie ihn in der unteren linken Ecke des Fensters Inhalts Bereich.
+-   **Link zu bestimmten, relevanten Hilfethemen.** Verknüpfen Sie nicht mit der Hilfe-Startseite, dem Inhaltsverzeichnis, einer Liste von Suchergebnissen oder einer Seite, die nur mit anderen Seiten verknüpft ist. Vermeiden Sie das Verknüpfen mit Seiten, die als eine große Liste häufig gestellter Fragen strukturiert sind, da Benutzer dadurch gezwungen werden, nach der Seite zu suchen, die dem link entspricht, auf den sie geklickt haben. Verknüpfen Sie nicht mit bestimmten Hilfethemen, die für die jeweilige Aufgabe nicht relevant und hilfreich sind. Verknüpfen Sie niemals mit leeren Seiten.
+-   **Stellen Sie aus Gründen der Konsistenz keine Hilfelinks in jedes Fenster oder jede Seite ein.** Wenn Sie einen Hilfelink an einem Ort bereitstellen, bedeutet dies nicht, dass Sie sie überall bereitstellen müssen.
+-   **Verwenden Sie Hilfelinks für Dialogfelder, Fehlermeldungen, Assistenten und Eigenschaftenblätter.** Wenn der Hilfelink für bestimmte Steuerelemente gilt, platzieren Sie ihn linksbündig darunter. Wenn der Hilfelink für das gesamte Fenster gilt, platzieren Sie ihn in der unteren linken Ecke des Inhaltsbereichs des Fensters.
 
-    ![Screenshot des Eigenschaften Blatts mit dem Gruppenfeld ](images/winenv-help-image5.png)
+    ![Screenshot des Eigenschaftenblatts mit Gruppenfeld ](images/winenv-help-image5.png)
 
-    In diesem Beispiel bezieht sich der zweite Hilfelink auf eine Gruppe von Steuerelementen.
+    In diesem Beispiel gilt der zweite Hilfelink für eine Gruppe von Steuerelementen.
 
-    ![Screenshot des Eigenschaften Blatts und Hilfelink ](images/winenv-help-image6.png)
+    ![Screenshot des Eigenschaftenblatts und Hilfelinks ](images/winenv-help-image6.png)
 
-    In diesem Beispiel wird der Hilfelink auf das gesamte Fenster angewendet.
+    In diesem Beispiel gilt der Hilfelink für das gesamte Fenster.
 
--   **Verwenden Sie Hilfe Links anstelle von generischen Text verweisen, um immer technisch zu helfen.**
+-   **Verwenden Sie Nach möglichkeit Hilfelinks anstelle von generischen Textverweisen auf Help.**
 
     **Richtig:**
 
-    Wie kann ich Datenträger Fehler reparieren?
+    Wie kann ich Datenträgerfehler reparieren?
 
     **Falsch:**
 
-    Weitere Informationen zum Reparieren von Datenträger Fehlern finden Sie unter Hilfe und Support.
+    Weitere Informationen zum Reparieren von Datenträgerfehlern finden Sie unter Hilfe und Support.
 
--   **Verwenden Sie eine Hilfe Schaltfläche mit dem Hilfe Symbol für die Hub-Seiten der System Steuerungselemente.** Platzieren Sie ihn in der oberen rechten Ecke. Diese Schaltflächen verfügen nicht über eine Bezeichnung, aber Sie verfügen über eine QuickInfo, die die Hilfe liest.
+-   **Verwenden Sie eine Hilfeschaltfläche mit dem Hilfesymbol für die Hubseiten von Systemsteuerungselementen.** Platzieren Sie ihn in der oberen rechten Ecke. Diese Schaltflächen verfügen nicht über eine Bezeichnung, sondern über eine QuickInfo, die Hilfe liest.
 
-    ![Screenshot des System Steuerungs Elements mit der Schaltfläche "Hilfe" ](images/winenv-help-image7.png)
+    ![Screenshot des Systemsteuerungselements mit Hilfeschaltfläche ](images/winenv-help-image7.png)
 
-    Ein System Steuerungselement mit einer Hilfe Schaltfläche.
+    Ein Systemsteuerungselement mit einer Hilfeschaltfläche.
 
--   **Die F1-Hilfe ist optional.** Benutzer haben sich daran gewöhnt, Hilfe Informationen zum unmittelbaren Kontext der Benutzeroberfläche auf dem Bildschirm zu finden, indem Sie die F1-Taste drücken, die als Hilfe zu Standard-Tastaturen bezeichnet wird. Sie können F1-Hilfe einschließen, wenn z. b. Verwendbarkeits Studien zeigen, dass die Benutzer das Auffinden erwarten, oder die Programm Benutzeroberfläche ist komplex genug, um von kontextbezogener Unterstützung profitieren zu können.
--   **Programme mit Menüleisten können über eine Menükategorie "Hilfe" verfügen.** Hilfe Menü Richtlinien finden Sie unter [Menüs](cmd-menus.md).
+-   **Die F1-Hilfe ist optional.** Benutzer haben sich daran gewöhnt, Hilfeinformationen im Zusammenhang mit dem unmittelbaren Kontext der Benutzeroberfläche auf dem Bildschirm zu finden, indem sie die F1-Taste drücken, die auf Standardtastaturen als Hilfe bezeichnet wird. Sie können die F1-Hilfe einschließen, wenn z. B. Benutzerfreundlichkeitsstudien zeigen, dass Ihre Benutzer sie erwarten, oder ihre Programmoberfläche komplex genug ist, um von kontextabhängiger Unterstützung zu profitieren.
+-   **Programme mit Menüleisten können über eine Menükategorie Hilfe verfügen.** Richtlinien für Hilfemenüs finden Sie unter [Menüs](cmd-menus.md).
 
     ![Screenshot der Hilfe, auf die über die Menüleiste zugegriffen wird ](images/winenv-help-image8.png)
 
-    In diesem Beispiel verfügt das Windows Paint-Zubehör über eine Menükategorie "Hilfe".
+    In diesem Beispiel verfügt das Windows Paint-Zubehör über eine Menükategorie Hilfe.
 
--   **Geben Sie für die Tastatureingabe Tabstopps für Hilfe Schaltflächen und Verknüpfungen an.**
--   Hilfe Schaltfläche und Verknüpfungs Verhalten sollten wie folgt lauten: der Hilfebereich wird geöffnet, und es wird ein dediziertes Hilfethema angezeigt. die Benutzeroberfläche, die den Bereich Hilfe aufgerufen hat, sollte offen bleiben, um die kontextbezogene Darstellung zu erhalten.
--   **Verwenden Sie nicht die folgenden veralteten Hilfe Einstiegspunkt-Stile: "Weitere Informationen" oder "Weitere Informationen zu..." Links, generische Hilfe Schaltflächen und kontextabhängige Hilfe Schaltflächen auf der Titelleiste.** Obwohl Sie in der Vergangenheit verwendet wurden, haben Benutzerfreundlichkeit festgestellt, dass Sie von den Benutzern tendenziell ignoriert werden. Verwenden Sie stattdessen Links zu bestimmten Hilfe Themen. Richtlinien zum Schreiben von guten Hilfe Links finden Sie unter [Hilfe Links](#text).
-
-    **Falsch:**
-
-    ![Screenshot des Dialog Felds mit dem Link "Weitere Informationen" ](images/winenv-help-image9.png)
-
-    Verwenden Sie nicht "Weitere Informationen" oder "Weitere Informationen zu..." verweist.
+-   **Geben Sie für die Barrierefreiheit der Tastatur Tabstopps für Hilfeschaltflächen und Links an.**
+-   Hilfeschaltfläche und Linkverhalten sollten wie folgt aussehen: Der Hilfebereich wird geöffnet, und es wird ein dediziertes Hilfethema angezeigt. Die Benutzeroberfläche, die den Hilfebereich aufgerufen hat, sollte geöffnet bleiben, um die Kontexterfahrung beizubehalten.
+-   **Verwenden Sie nicht die folgenden veralteten Hilfeeinstiegspunktstile: "Weitere Informationen" oder "Weitere Informationen..." Links, generische Hilfeschaltflächen und kontextbezogene Hilfeschaltflächen auf der Titelleiste.** Obwohl sie in der Vergangenheit verwendet wurden, haben Benutzerfreundlichkeitsstudien festgestellt, dass Benutzer sie tendenziell ignorieren. Verwenden Sie stattdessen Links zu bestimmten Hilfethemen. Richtlinien zum Schreiben guter Hilfelinks finden Sie unter [Hilfelinks.](#text)
 
     **Falsch:**
 
-    ![Screenshot der Schaltfläche "Hilfe" neben Commit-Schaltflächen ](images/winenv-help-image10.png)
+    ![Screenshot des Dialogfelds mit dem Link "Weitere Informationen" ](images/winenv-help-image9.png)
 
-    Verwenden Sie keine generischen Hilfe Schaltflächen.
+    Verwenden Sie nicht "Weitere Informationen" oder "Weitere Informationen..." Links.
 
     **Falsch:**
 
-    ![Screenshot des fragezeichensymbols in der Titelleiste ](images/winenv-help-image11.png)
+    ![Screenshot der Hilfeschaltfläche neben Commitschaltflächen ](images/winenv-help-image10.png)
 
-    Verwenden Sie auf der Titelleiste keine kontextbezogenen Hilfe Schaltflächen.
+    Verwenden Sie keine generischen Hilfeschaltflächen.
+
+    **Falsch:**
+
+    ![Screenshot des Fragezeichensymbols auf der Titelleiste ](images/winenv-help-image11.png)
+
+    Verwenden Sie keine kontextbezogenen Hilfeschaltflächen auf der Titelleiste.
 
 ### <a name="content"></a>Inhalt
 
--   **Erstellen Sie keinen offensichtlichen Inhalt.** Hilfe Themen, die wiederholen, was sich in der primären Benutzeroberfläche befindet, fügen keinen Wert hinzu
--   **Erstellen Sie keinen Inhalt, in dem der Benutzer nicht auf irgendeine Weise agieren kann.**
-    -   **Ausnahme:** Einige konzeptionelle Inhalte liefern wichtige Hintergrundinformationen, ohne dass Sie notwendigerweise zu Benutzeraktionen führen.
--   **Vermeiden Sie vage Lösungen für Probleme.** Beispiel: "wenden Sie sich an den Systemadministrator, oder installieren Sie die Anwendung neu, um Benutzer zu beeinträchtigen.
-    -   **Ausnahme:** Es wird empfohlen, sich an den Systemadministrator zu wenden, wenn dies die einzige praktische Lösung ist, und Systemadministratoren erwarten, dass Sie mit dem Problem kontaktiert werden.
--   **Vermeiden Sie Inhalte, die sehr unwahrscheinlich in Benutzer Szenarios behandelt werden.** Entwickeln Sie Ihre Haupt Hilfe Inhalte für das, was Sie als normale Verwendung erwarten. Beachten Sie wichtige Ausnahmen bei der erwarteten Verwendung, behandeln Sie diesen Inhalt jedoch mit niedrigerer Priorität.
--   **Sammeln Sie Feedback von Ihren Benutzern über die hilfreiche Hilfe Themen.** Ermöglicht es Benutzern, einzelne Themen zu bewerten. Führen Sie in Ihrer Dokumentation [Nutzbarkeits Studien](glossary.md) durch, um Probleme mit der Qualität und Auffindbarkeit von Inhalten zu ermitteln.
-    -   **Tipp:** Benutzer Feedback ist auch eine hervorragend Möglichkeit, mehr aufgabenbasierte Inhalte zu generieren, die sich darauf konzentrieren, was Benutzer mit Ihrem Programm tatsächlich tun, und sich nicht um featurebasierte Inhalte, sondern lediglich eine Beschreibung der Technologie.
--   **Bietet mehrere Möglichkeiten, auf Ihre Inhalte zuzugreifen.** Ein Inhaltsverzeichnis, ein Index und ein [Such](ctrl-search-boxes.md) Mechanismus sind drei der gängigsten Methoden zum Verbessern der Auffindbarkeit.
--   **Wenn es mehr als eine Möglichkeit gibt, eine Aufgabe auszuführen, können Sie in den meisten Fällen nur die gängigste Art dokumentieren, die von unerfahrenen Benutzern verwendet wird.**
+-   **Erstellen Sie keine offensichtlichen Inhalte.** Hilfethemen, die wiederholen, was sich auf der primären Benutzeroberfläche befindet, haben keinen Mehrwert.
+-   **Erstellen Sie keine Inhalte, auf die der Benutzer nicht reagieren kann.**
+    -   **Ausnahme:** Einige konzeptionelle Inhalte liefern wichtige Hintergrundinformationen, ohne dass dies notwendigerweise zu Benutzeraktionen führt.
+-   **Vermeiden Sie ungenaue Lösungen für Probleme.** "Wenden Sie sich beispielsweise an Ihren Systemadministrator", oder "Installieren Sie die Anwendung neu", um Benutzer zu frustrieren.
+    -   **Ausnahme:** Es wird empfohlen, sich an den Systemadministrator zu wenden, wenn dies die einzige praktische Lösung ist, und systemadministratoren erwarten, dass sie für das Problem kontaktiert werden.
+-   **Vermeiden Sie Inhalte, die sehr unwahrscheinliche Benutzerszenarien behandeln.** Entwickeln Sie Ihre wichtigsten Hilfeinhalte für das, was Sie als normaler Gebrauch erwarten. Beachten Sie wichtige Ausnahmen von der erwarteten Verwendung, behandeln Sie diesen Inhalt jedoch mit einer niedrigeren Priorität.
+-   **Sammeln Sie Feedback von Ihren Benutzern, wie hilfreich Ihre Hilfethemen sind.** Benutzern das Bewerten einzelner Themen ermöglichen. Führen Sie [Usability-Studien](glossary.md) zu Ihrer Dokumentation durch, um Probleme im Zusammenhang mit der Qualität und Auffindbarkeit von Inhalten zu ermitteln.
+    -   **Tipp:** Benutzerfeedback ist auch eine hervorragende Möglichkeit, mehr aufgabenbasierte Inhalte zu generieren, die sich darauf konzentrieren, was Benutzer tatsächlich mit Ihrem Programm tun, im Gegensatz zu featurebasierten Inhalten, die sich einfach auf eine Beschreibung der Technologie konzentrieren.
+-   **Stellen Sie mehrere Möglichkeiten für den Zugriff auf Ihre Inhalte zur Verfügung.** Ein Inhaltsverzeichnis, ein Index [](ctrl-search-boxes.md) und ein Suchmechanismus sind drei der gängigsten Methoden zur Verbesserung der Aufsuchbarkeit.
+-   **Wenn es mehr als eine Möglichkeit gibt, eine Aufgabe auszuführen, können Sie in den meisten Fällen nur die gängigste Methode dokumentieren, die von unerfahrenen Benutzern verwendet wird.**
 
 ### <a name="icons"></a>Symbole
 
--   Verwenden Sie das Hilfe Symbol nur für Explorer-Fenster und die Hub-Seiten der System Steuerungselemente. Verwenden Sie das Hilfe Symbol nicht mit Hilfe Links.
+-   Verwenden Sie das Hilfesymbol nur für Explorer-Fenster und die Hubseiten von Systemsteuerungselementen. Verwenden Sie nicht das Hilfesymbol mit Hilfelinks.
 
 **Richtig:**
 
-![Screenshot des Fensters mit dem Fragezeichen-Symbol ](images/winenv-help-image12.png)
+![Screenshot des Fensters mit Fragezeichensymbol ](images/winenv-help-image12.png)
 
-In diesem Beispiel verwendet ein Windows-Explorer-Fenster ein Hilfe Symbol, um den Zugriff auf die Hilfe zu ermöglichen.
+In diesem Beispiel verwendet ein Windows-Explorer ein Hilfesymbol, um Zugriff auf die Hilfe zu ermöglichen.
 
 **Falsch:**
 
-![Screenshot des Fensters mit Hilfe Symbol im linken Bereich ](images/winenv-help-image13.png)
+![Screenshot des Fensters mit Hilfesymbol im linken Bereich ](images/winenv-help-image13.png)
 
-In diesem Beispiel wird das Hilfe Symbol unten links mit einem Hilfelink falsch verwendet.
+In diesem Beispiel wird das Hilfesymbol links unten falsch mit einem Hilfelink verwendet.
 
 ## <a name="text"></a>Text
 
-**Hilfe Links**
+**Hilfelinks**
 
--   Stellen Sie spezifische Informationen zum Inhalt des Hilfe Themas bereit, und verwenden Sie so viel relevanten und präzisen Text wie erforderlich. Benutzer ignorieren häufig generische Hilfe Links. Stellen Sie sicher, dass die Ergebnisse der Verknüpfung vorhersagbar sind. Benutzer sollten nicht von den Ergebnissen überrascht sein.
+-   Geben Sie spezifische Informationen zum Inhalt des Hilfethemas an, indem Sie so viel relevanten, präzisen Text wie nötig verwenden. Benutzer ignorieren häufig generische Hilfelinks. Stellen Sie sicher, dass die Ergebnisse des Links vorhersagbar sind. Benutzer sollten nicht von den Ergebnissen überraschend sein.
 
-    -   **Ausnahme:** Sie können "Weitere Informationen" verwenden, um Anweisungen zu ergänzen, die sich direkt in der Benutzeroberfläche befinden. Dies gilt insbesondere dann, wenn die Bereitstellung spezifischer Informationen im Hilfelink zu unnötigen Wiederholungen führt oder den Link weniger interessant macht.
+    -   **Ausnahme:** Sie können "Weitere Informationen" verwenden, um Anweisungen zu ergänzen, die sich direkt auf der Benutzeroberfläche befinden. Dies gilt insbesondere, wenn die Angabe bestimmter Informationen im Hilfelink zu unnötiger Wiederholung führt oder den Link weniger überzeugend macht.
 
     **Falsch:**
 
-    Ein sicheres Kennwort hat mindestens sechs Großbuchstaben, Zahlen und Symbole. Was ist ein sicheres Kennwort?
+    Ein starkes Kennwort enthält mindestens sechs Buchstaben, Zahlen und Symbole in gemischter Groß-/Kleinbuchstaben. Was ist ein starkes Kennwort?
 
     **Richtig:**
 
-    Ein sicheres Kennwort hat mindestens sechs Großbuchstaben, Zahlen und Symbole. Weitere Informationen
+    Ein starkes Kennwort enthält mindestens sechs Buchstaben, Zahlen und Symbole in gemischter Groß-/Kleinbuchstaben. Weitere Informationen
 
-    Im falschen Beispiel wird der Hilfelink wiederholt. Es wird eine Frage gestellt, die wirklich bereits beantwortet wurde.
+    Im falschen Beispiel wiederholt sich der Link Hilfe. Sie stellt eine Frage, die tatsächlich bereits beantwortet wurde.
 
--   Wenn möglich, verknüpfen Sie Text in Bezug auf die primäre Frage, die der Hilfe Inhalt beantwortet hat. Verwenden Sie nicht "Weitere Informationen zu", "Weitere Informationen zu" oder "Hilfe zu diesem" formulieren.
+-   Geben Sie nach Möglichkeit Hilfelinktext in Bezug auf die primäre Frage ein, die vom Hilfeinhalt beantwortet wird. Verwenden Sie nicht den Ausdruck "Weitere Informationen", "Weitere Informationen" oder "Hilfe zu diesem Thema erhalten".
 
     **Falsch:**
 
@@ -256,60 +256,60 @@ In diesem Beispiel wird das Hilfe Symbol unten links mit einem Hilfelink falsch 
 
     **Richtig:**
 
-    Welche Risiken besteht darin, Ausnahmen zuzulassen?
+    Welche Risiken bestehen beim Zulassen von Ausnahmen?
 
     Gewusst wie Ausnahmen hinzufügen?
 
-    In den richtigen Beispielen wird der Link in Bezug auf die primäre Frage formuliert, die im Hilfethema beantwortet wird.
+    In den richtigen Beispielen wird der Link in Bezug auf die primäre Frage, die vom Hilfethema beantwortet wird, formuliert.
 
--   Wenn die relevantesten Informationen kurz zusammengefasst werden können, platzieren Sie die Zusammenfassung direkt in der Benutzeroberfläche, anstatt einen Hilfelink zu verwenden. Sie können jedoch einen Hilfelink verwenden, um zusätzliche Informationen bereitzustellen.
-
-    **Falsch:**
-
-    ![Screenshot des Links zu einem sicheren Kennwort? ](images/winenv-help-image14.png)
-
-    **Richtig:**
-
-    ![Screenshot des ergänzenden Texts zu kenn Wörtern ](images/winenv-help-image15.png)
-
-    **Besserer**
-
-    ![Screenshot von Text mit Link zu weiteren Informationen ](images/winenv-help-image16.png)
-
-    Im richtigen Beispiel werden die Hilfe Informationen kurz zusammengefasst und die Wahrscheinlichkeit, dass Benutzer Sie lesen, deutlich verbessert. Das bessere Beispiel bietet einen Hilfelink, um weitere Informationen zu diesem komplexen Thema zu erhalten.
-
--   Hilfe Links zu Ausdrücken, um Unterstützung eindeutig anzugeben. Hilfe Links sollten nie ähnliche Aktions Verknüpfungen lesen.
--   Verwenden Sie den gesamten Hilfelink für den Linktext, nicht nur für die Schlüsselwörter.
-
-    **Richtig:**
-
-    Welche Risiken besteht darin, Ausnahmen zuzulassen?
+-   Wenn die relevantesten Informationen kurz zusammengefasst werden können, legen Sie die Zusammenfassung direkt auf der Benutzeroberfläche ab, anstatt einen Hilfelink zu verwenden. Sie können jedoch einen Hilfelink verwenden, um zusätzliche Informationen zur Verfügung zu stellen.
 
     **Falsch:**
 
-    Welche Risiken besteht darin, Ausnahmen zuzulassen?
+    ![Screenshot des Links zu einem starken Kennwort? ](images/winenv-help-image14.png)
 
-    Im richtigen Beispiel wird der gesamte Hilfelink-Satz für den Linktext verwendet.
+    **Richtig:**
 
-    -   **Ausnahme:** Hilfe Links zu externen Websites sollten einfach den Namen der Website oder der Seite als Link verwenden. Jeder Text, der den Namen der Site einführt, muss nicht in den Link selbst eingeschlossen werden.
+    ![Screenshot mit ergänzendem Text zu Kennwörtern ](images/winenv-help-image15.png)
 
--   Hilfe Links müssen nicht genau mit Hilfe Themenüberschriften übereinstimmen, aber es sollte eine starke und offensichtliche Verbindung zwischen den beiden vorhanden sein. Entwerfen Sie Verknüpfungen und Überschriften in Paaren aus diesem Grund.
+    **Besser:**
+
+    ![Screenshot von Text mit Link zu mehr Informationen ](images/winenv-help-image16.png)
+
+    Im richtigen Beispiel werden die Hilfeinformationen kurz zusammengefasst, was die Wahrscheinlichkeit, dass Benutzer sie lesen, stark verbessert. Das bessere Beispiel enthält einen Hilfelink, um weitere Informationen zu diesem komplexen Thema zu erhalten.
+
+-   Hilfelinks zu Ausdrücken, um die Unterstützung eindeutig anzugeben. Hilfelinks sollten nie wie Aktionslinks aussehen.
+-   Verwenden Sie den gesamten Hilfelink für den Linktext, nicht nur die Schlüsselwörter.
+
+    **Richtig:**
+
+    Welche Risiken bestehen beim Zulassen von Ausnahmen?
+
+    **Falsch:**
+
+    Welche Risiken bestehen beim Zulassen von Ausnahmen?
+
+    Im richtigen Beispiel wird der gesamte Hilfelinksatz für den Linktext verwendet.
+
+    -   **Ausnahme:** Hilfelinks zu externen Websites sollten einfach den Namen der Website oder Seite als Link verwenden. Text, der den Namen der Website einfing, muss nicht in den Link selbst aufgenommen werden.
+
+-   Hilfelinks müssen nicht genau mit den Überschriften des Hilfethemas übereinstimmen, aber es sollte eine starke und offensichtliche Verbindung zwischen den beiden seiten geben. Entwerfen Sie aus diesem Grund Links und Überschriften paarweise.
 
     **Richtig:**
 
     Wie kann ich die Leistung dieses Features verbessern? (Linktext)
 
-    Konfigurieren dieses Features für eine optimale Leistung (Themen Überschrift)
+    Konfigurieren dieses Features für optimale Leistung (Themenüberschrift)
 
     **Falsch:**
 
     Wie kann ich die Leistung dieses Features verbessern? (Linktext)
 
-    Umfassende Übersicht über dieses Feature (Themen Überschrift)
+    Vollständige Übersicht über dieses Feature (Themenüberschrift)
 
-    Im falschen Beispiel unterscheidet sich die Überschrift des Hilfe Themas im Gültigkeitsbereich vom Hilfelink-Text und kann sich möglicherweise nicht mehr unterscheiden.
+    Im falschen Beispiel unterscheidet sich die Überschrift des Hilfethemas erheblich vom Bereich des Hilfelinktexts und kann versiert sein.
 
--   Wenn der Hilfe Inhalt online ist, legen Sie diesen im Linktext fest. Dadurch wird das Ergebnis der Verknüpfungen vorhersagbar.
+-   Wenn der Hilfeinhalt online ist, machen Sie dies im Linktext deutlich. Dies trägt dazu bei, das Ergebnis der Links vorhersagbar zu machen.
 
     **Richtig:**
 
@@ -317,17 +317,17 @@ In diesem Beispiel wird das Hilfe Symbol unten links mit einem Hilfelink falsch 
 
     **Falsch:**
 
-    Wo finde ich weitere Formate und Tools?
+    Wo finde ich zusätzliche Formate und Tools?
 
 -   Verwenden Sie vollständige Sätze.
--   Verwenden Sie keine endinterpunktions Zeichen, mit Ausnahme von Fragezeichen.
--   Verwenden Sie keine Ellipsen für Hilfe Links oder Befehle.
+-   Verwenden Sie mit Ausnahme von Fragezeichen keine endende Interpunktion.
+-   Verwenden Sie keine Ausellipsen für Hilfelinks oder Befehle.
 
-**Hilfe Inhalt**
+**Hilfeinhalt**
 
--   Formatieren Sie Benutzeroberflächen Elemente mithilfe von Fetten, damit Sie leicht zu erkennen sind. Dies ist besonders nützlich für prozedurale Hilfe Themen, die es Benutzern ermöglichen, Prozeduren zu durchsuchen und relevante Benutzeroberflächen Elemente schnell anzuzeigen.
--   Formatieren von Beschriftungen mithilfe von kursiv Formatierung. Dies gilt für Tabellen, Grafiken, Screenshots und andere grafische Elemente, die von einer kurzen Erläuterung von Text profitieren.
--   Weitere Informationen finden Sie in der Hilfe. Verwenden Sie im Allgemeinen nicht den Begriff "Online Hilfe", es sei denn, Sie verweisen tatsächlich auf Inhalte auf Ihrer Website.
+-   Formatieren Sie Benutzeroberflächenelemente fett, um sie leicht zu identifizieren. Dies ist besonders nützlich für Hilfethemen mit Prozeduren, die es Benutzern ermöglichen, Prozeduren zu durchsuchen und relevante Benutzeroberflächenelemente schnell anzuzeigen.
+-   Formatieren von Untertiteln mithilfe von italisch. Dies gilt für Tabellen, Grafiken, Screenshots und andere grafische Elemente, die von einer kurzen Texterklärung profitieren.
+-   Unter Hilfe finden Sie einfach Hilfe. Verwenden Sie im Allgemeinen nicht den Ausdruck Onlinehilfe, es sei denn, Sie verweisen tatsächlich auf Inhalte auf Ihrer Website.
 
  
 

@@ -1,67 +1,66 @@
 ---
-description: Der systemtraceprovider ist ein Kernel Anbieter mit vordefinierten Kernel Ereignissen, die unter Windows 7, Windows Server 2008 R2 und höher unterstützt werden.
+description: SystemTraceProvider ist ein Kernelanbieter mit vordefinierten Kernelereignissen, die unter Windows 7, Windows Server 2008 R2 und höher unterstützt werden.
 ms.assetid: 6808EC45-C8C3-45D7-9E4C-337F6A4CF9C8
-title: Konfigurieren und Starten einer systemtraceprovider-Sitzung
+title: Konfigurieren und Starten einer SystemTraceProvider-Sitzung
 ms.topic: article
-ms.date: 05/31/2018
-ms.openlocfilehash: b718269801a7677572e7bb5b74cd8b89d3711e3e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
-ms.translationtype: HT
+ms.date: 06/02/2021
+ms.openlocfilehash: 66e9d672a7c8e6358c2a92e7661e0d4e2a5878ab
+ms.sourcegitcommit: cb87082135319cbdc5df541e3071eebb83a58972
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104977712"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111386740"
 ---
-# <a name="configuring-and-starting-a-systemtraceprovider-session"></a>Konfigurieren und Starten einer systemtraceprovider-Sitzung
+# <a name="configuring-and-starting-a-systemtraceprovider-session"></a>Konfigurieren und Starten einer SystemTraceProvider-Sitzung
 
-Der systemtraceprovider ist ein Kernel Anbieter mit vordefinierten Kernel Ereignissen, die unter Windows 7, Windows Server 2008 R2 und höher unterstützt werden. Unter Windows 7 und Windows Server 2008 R2 konnte der systemtraceprovider nur für die NT Kernel Logger-Sitzung verwendet werden.
+SystemTraceProvider ist ein Kernelanbieter mit vordefinierten Kernelereignissen, die unter Windows 7, Windows Server 2008 R2 und höher unterstützt werden. Unter Windows 7 und Windows Server 2008 R2 konnte SystemTraceProvider nur für die NT-Kernelprotokollierungssitzung verwendet werden.
 
-Unter Windows 8, Windows Server 2012 und höher kann der systemtraceprovider für bis zu 8 Protokollierungs Sitzungen multiplext werden. Die ersten beiden Slots für Protokollierungs Sitzungen sind für die NT-Kernel Protokollierung und die zirkuläre Kernel Kontext Protokollierung reserviert.
+Auf Windows 8, Windows Server 2012 und höher, kann SystemTraceProvider für bis zu acht Protokollierungssitzungen multiplexiert werden. Die ersten beiden Slots für Protokollierungssitzungen sind für die NT-Kernelprotokollierung und die Circular Kernel Context Logger reserviert.
 
-Weitere Informationen zur Verwendung der NT Kernel Logger-Sitzung als Ablauf Verfolgungs Anbieter finden Sie unter [Konfigurieren und Starten der NT-Kernel](configuring-and-starting-the-nt-kernel-logger-session.md)Protokollierungs Sitzung.
+Weitere Informationen zur Verwendung der NT-Kernelprotokollierungssitzung als Ablaufverfolgungsanbieter finden Sie unter [Konfigurieren und Starten der NT-Kernelprotokollierungssitzung.](configuring-and-starting-the-nt-kernel-logger-session.md)
 
-Führen Sie den folgenden Befehl aus, um den systemtraceprovider zum Starten einer anderen Sitzung als der NT-Kernel Protokollierung zu aktivieren.
+Auf Windows 10 SDK-Build 20348 und höher kann SystemTraceProvider über separate Systemanbieter konfiguriert werden, die mit [EnableTraceEx2](/windows/win32/api/evntrace/nf-evntrace-enabletraceex2) wie standardmäßige Ereignisablaufverfolgung für Windows-Ereignisanbieter gesteuert werden können. Eine vollständige Liste der Systemanbieter, Schlüsselwörter und entsprechenden Legacyflags und -gruppen finden Sie unter [Systemanbieter.](system-providers.md)
 
-**tracelog-Start MySession-f c: \\ Kernel1. ETL-EFLAG proc \_ Thread + Loader + cswitch**
+## <a name="enable-a-systemtraceprovider-session"></a>Aktivieren einer SystemTraceProvider-Sitzung
 
-Führen Sie die folgenden Schritte aus, um den systemtraceprovider Programm gesteuert zum Starten einer anderen Sitzung als der NT-Kernel Protokollierung zu aktivieren.
+Führen Sie den folgenden Befehl aus, damit SystemTraceProvider eine andere Sitzung als die NT-Kernelprotokollierung starten kann:
 
--   Definieren Sie einen Namen für die private Protokollierung.
+**tracelog -start MySession -f c: \\ Kernel1.etl -eflag PROC \_ THREAD+LOADER+CSWITCH**
 
-    **\#definieren Sie den Namen der privaten Protokollierung \_ \_ L "Some private Trace Session".**
+Um systemTraceProvider programmgesteuert so zu aktivieren, dass eine andere Sitzung als die NT-Kernelprotokollierung gestartet wird, gehen Sie wie folgt vor.
 
--   Legen Sie auf dem Controller die folgenden Member der [**\_ \_ Eigenschaften**](/windows/win32/api/evntrace/ns-evntrace-event_trace_properties) Struktur der Ereignis Ablauf Verfolgung fest.
+-   Definieren Sie einen namen für die private Protokollierung.
 
-    Legen Sie **logfilemode** auf **Ereignis Ablauf \_ Verfolgungs \_ System \_ \_**-Protokollierungs Modus fest.
+    **\#define PRIVATE \_ LOGGER \_ NAME L"Some Private Trace Session"**
 
-    Legen Sie **Loggername** anstelle des **\_ \_ namens der Kernel** Protokollierung auf private Logger fest.
+-   Legen Sie auf dem Controller die folgenden Member der [**EVENT \_ TRACE \_ PROPERTIES-Struktur**](/windows/win32/api/evntrace/ns-evntrace-event_trace_properties) fest.
 
-    Stellen Sie sicher, dass das **wnode. GUID** -Element der Eigenschaften Struktur der [**Ereignis Ablauf \_ Verfolgung \_**](/windows/win32/api/evntrace/ns-evntrace-event_trace_properties) nicht auf **systemtracecontrolguid** festgelegt ist. Sie müssen diesem Member eine neue **GUID** zuweisen.
+    Legen Sie **LogFileMode** auf **EVENT TRACE SYSTEM \_ \_ \_ LOGGER \_ MODE** fest.
 
--   Legen Sie auf dem Consumer den **Loggername** -Member der [**Ereignis Ablauf \_ Verfolgung \_ logfile**](/windows/win32/api/evntrace/ns-evntrace-event_trace_logfilea) -Struktur auf diese private Protokollierung fest.
+    Legen Sie **LoggerName** anstelle von **KERNEL \_ LOGGER \_ NAME** auf private Protokollierung fest.
+
+    Stellen Sie sicher, dass der **Wnode.Guid-Member** der [**EVENT TRACE \_ \_ PROPERTIES-Struktur**](/windows/win32/api/evntrace/ns-evntrace-event_trace_properties) nicht auf **SystemTraceControlGuid** festgelegt ist. Sie müssen diesem Element eine neue **GUID** zuweisen.
+
+-   Legen Sie auf dem Consumer den **Member LoggerName** der [**EVENT TRACE \_ \_ LOGFILE-Struktur**](/windows/win32/api/evntrace/ns-evntrace-event_trace_logfilea) auf diese private Protokollierung fest.
 
 > [!Note]  
-> Wenn ein nicht-Administratoren-oder ein nicht-TCB-Prozess in der Lage sein soll, eine Profilerstellungs-Ablauf Verfolgungs Sitzung mithilfe von systemtraceprovider im Namen von Drittanbieter Anwendungen zu starten, müssen Sie dem Benutzerprofil Berechtigungen erteilen und diesen Benutzer dann sowohl der Sitzungs- **GUID** (für die Protokollierungs Sitzung erstellt) als auch der **GUID** des System Ablauf Verfolgungs Anbieters hinzufügen Weitere Informationen finden Sie in der [**eventaccesscontrol**](/windows/desktop/api/Evntcons/nf-evntcons-eventaccesscontrol) -Funktion.
+> Wenn Sie möchten, dass ein Nicht-Administratoren- oder Nicht-TCB-Prozess eine Profilerstellungs-Ablaufverfolgungssitzung mit systemTraceProvider im Auftrag von Anwendungen von Drittanbietern starten kann, müssen Sie dem Benutzerprofil berechtigungen gewähren und diesen Benutzer dann sowohl der **Sitzungs-GUID** (erstellt für die Protokollierungssitzung) als auch der **GUID** des Systemablaufverfolgungsanbieters hinzufügen, um den Systemablaufverfolgungsanbieter zu aktivieren. Weitere Informationen finden Sie in der [**EventAccessControl-Funktion.**](/windows/desktop/api/Evntcons/nf-evntcons-eventaccesscontrol)
 
  
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
-<dl> <dt>
+[Konfigurieren und Starten einer privaten Protokollierungssitzung](configuring-and-starting-a-private-logger-session.md)
 
-[Konfigurieren und Starten einer Sitzung für private Logger](configuring-and-starting-a-private-logger-session.md)
-</dt> <dt>
+[Konfigurieren und Starten einer AutoLogger-Sitzung](configuring-and-starting-an-autologger-session.md)
 
-[Konfigurieren und Starten einer autologger-Sitzung](configuring-and-starting-an-autologger-session.md)
-</dt> <dt>
+[Konfigurieren und Starten einer Ereignisablaufverfolgungssitzung](configuring-and-starting-an-event-tracing-session.md)
 
-[Konfigurieren und Starten einer Ereignis Ablauf Verfolgungs Sitzung](configuring-and-starting-an-event-tracing-session.md)
-</dt> <dt>
+[Konfigurieren und Starten der NT-Kernelprotokollierungssitzung](configuring-and-starting-the-nt-kernel-logger-session.md)
 
-[Konfigurieren und Starten der NT Kernel Logger-Sitzung](configuring-and-starting-the-nt-kernel-logger-session.md)
-</dt> <dt>
+[Systemanbieter](system-providers.md)
 
-[Aktualisieren einer Ereignis Ablauf Verfolgungs Sitzung](updating-an-event-tracing-session.md)
-</dt> </dl>
+[Aktualisieren einer Ereignisablaufverfolgungssitzung](updating-an-event-tracing-session.md)
 
  
 

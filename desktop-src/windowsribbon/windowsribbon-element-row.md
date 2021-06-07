@@ -1,9 +1,9 @@
 ---
 title: Row-Element
-description: Stellt eine Zeile von Steuerelementen in einer benutzerdefinierten sizedefinition-Layoutvorlage dar.
+description: Stellt eine Zeile von Steuerelementen in einer benutzerdefinierten SizeDefinition-Layoutvorlage dar.
 ms.assetid: c3dac35f-3537-4eb7-b378-501ea88813f5
 keywords:
-- Windows-Menüband für Zeilen Element
+- Zeilenelement Im Windows-Menüband
 topic_type:
 - apiref
 api_name:
@@ -13,18 +13,18 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 83a0a5a9e7908cc1c8cff688b3fefc1e8910b6a4
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 7d642cd209b3e00e2c63f7376e321132a1c0e686
+ms.sourcegitcommit: 099ecdda1e83618b844387405da0db0ebda93a65
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "106341271"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111445021"
 ---
 # <a name="row-element"></a>Row-Element
 
-Stellt eine Zeile von Steuerelementen in einer benutzerdefinierten sizedefinition-Layoutvorlage dar.
+Stellt eine Zeile von Steuerelementen in einer benutzerdefinierten SizeDefinition-Layoutvorlage dar.
 
-## <a name="usage"></a>Verbrauch
+## <a name="usage"></a>Verwendung
 
 ``` syntax
 <Row>
@@ -42,8 +42,8 @@ Es gibt keine Attribute.
 
 | Element                                                                                 | BESCHREIBUNG                                        |
 |-----------------------------------------------------------------------------------------|----------------------------------------------------|
-| [**Controlgroup**](windowsribbon-element-controlgroup.md)<br/>                   | Kann ein-oder mehrmals vorkommen<br/> <br/> |
-| [**Controlsizedefinition**](windowsribbon-element-controlsizedefinition.md)<br/> | Kann ein-oder mehrmals vorkommen<br/> <br/> |
+| [**ControlGroup**](windowsribbon-element-controlgroup.md)<br/>                   | Kann ein oder mehrere Male auftreten.<br/> <br/> |
+| [**ControlSizeDefinition**](windowsribbon-element-controlsizedefinition.md)<br/> | Kann ein oder mehrere Male auftreten.<br/> <br/> |
 
 
 
@@ -53,19 +53,19 @@ Es gibt keine Attribute.
 
 | Element                                                                             |
 |-------------------------------------------------------------------------------------|
-| [**Groupsizedefinition**](windowsribbon-element-groupsizedefinition.md)<br/> |
+| [**GroupSizeDefinition**](windowsribbon-element-groupsizedefinition.md)<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Dies ist optional.
 
-Kann für jedes [**groupsizedefinition**](windowsribbon-element-groupsizedefinition.md) -Element einmal oder mehrmals vorkommen.
+Kann ein oder mehrere Male für jedes [**GroupSizeDefinition-Element**](windowsribbon-element-groupsizedefinition.md) auftreten.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Codebeispiel wird das grundlegende Markup für eine benutzerdefinierte [**sizedefinition**](windowsribbon-element-sizedefinition.md) -Layoutvorlage mit vier Schaltflächen mit verschiedenen **Zeilen** Elementen veranschaulicht.
+Im folgenden Codebeispiel wird das grundlegende Markup für eine benutzerdefinierte [**SizeDefinition-Layoutvorlage**](windowsribbon-element-sizedefinition.md) mit vier Schaltflächen mit verschiedenen **Row-Elementen** veranschaulicht.
 
 
 ```XML
@@ -159,18 +159,17 @@ Im folgenden Codebeispiel wird das grundlegende Markup für eine benutzerdefinie
 
 
 
-|                                     |           |
-|-------------------------------------|-----------|
-| Unterstützte Mindestversion (System)<br/> | Windows 7 |
-| Kann leer bleiben                        | Nein        |
+
+* **Unterstütztes Mindestsystem:** Windows 7
+* **Kann leer sein:** Nein
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[Anpassen eines Menübands durch Größen Definitionen und Skalierungs Richtlinien](windowsribbon-templates.md)
+[Anpassen eines Menübands durch Größendefinitionen und Skalierungsrichtlinien](windowsribbon-templates.md)
 </dt> </dl>
 
  

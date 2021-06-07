@@ -1,262 +1,261 @@
 ---
-title: Benutzerkontensteuerung (Entwurfs Grundlagen)
-description: Eine gut entworfene Benutzerkontensteuerung hilft, unerwünschte systemweite Änderungen auf eine Weise zu verhindern, die vorhersagbar ist und einen minimalen Aufwand erfordert.
+title: Benutzerkontensteuerung (Grundlagen des Designs)
+description: Eine gut entworfene Benutzeroberfläche für die Benutzerkontensteuerung trägt dazu bei, unerwünschte systemweite Änderungen auf eine Weise zu verhindern, die vorhersagbar ist und nur minimalen Aufwand erfordert.
 ms.assetid: c4b83537-c600-4b24-bda6-df7a82719ab1
 ms.topic: article
 ms.date: 10/20/2020
-ms.openlocfilehash: b346e5cb581ac83ad2ebffabe73c5fbed636d814
-ms.sourcegitcommit: 3bdf30edb314e0fcd17dc4ddbc70e4ec7d3596e6
+ms.openlocfilehash: bb1424254a91f935073e57bbde2c7124fd838b32
+ms.sourcegitcommit: 099ecdda1e83618b844387405da0db0ebda93a65
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "104555410"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111443211"
 ---
 # <a name="user-account-control"></a>Benutzerkontensteuerung
 
 > [!NOTE]
-> Dieses Entwurfs Handbuch wurde für Windows 7 erstellt und wurde für neuere Versionen von Windows nicht aktualisiert. Ein Großteil der Anleitungen gilt weiterhin im Prinzip, aber die Präsentation und die Beispiele entsprechen nicht unseren [aktuellen Entwurfs Anleitungen](/windows/uwp/design/).
+> Dieser Entwurfsleitfaden wurde für Windows 7 erstellt und für neuere Versionen von Windows nicht aktualisiert. Ein Großteil der Anleitungen gilt immer noch im Prinzip, aber die Präsentation und die Beispiele spiegeln nicht unsere [aktuellen Entwurfsleitfäden](/windows/uwp/design/)wider.
 
-Eine gut entworfene Benutzerkontensteuerung hilft, unerwünschte systemweite Änderungen auf eine Weise zu verhindern, die vorhersagbar ist und einen minimalen Aufwand erfordert.
+Eine gut entworfene Benutzeroberfläche für die Benutzerkontensteuerung trägt dazu bei, unerwünschte systemweite Änderungen auf eine Weise zu verhindern, die vorhersagbar ist und nur minimalen Aufwand erfordert.
 
-Wenn die Benutzerkontensteuerung (User Account Control, UAC) vollständig aktiviert ist, werden interaktive Administratoren normalerweise mit geringsten Benutzerrechten ausgeführt. Sie können sich jedoch selbst erhöhen, um administrative Aufgaben durchzuführen, indem Sie der Zustimmungs Benutzeroberfläche explizite Zustimmung erteilen. Zu diesen Verwaltungsaufgaben gehören das Installieren von Software und Treibern, das Ändern von systemweiten Einstellungen, das Anzeigen oder Ändern anderer Benutzerkonten und das Ausführen von Verwaltungs Tools.
+Wenn die Benutzerkontensteuerung (User Account Control, UAC) vollständig aktiviert ist, werden interaktive Administratoren normalerweise mit den geringsten Benutzerberechtigungen ausgeführt. Sie können sich jedoch selbst erhöhen, um administrative Aufgaben auszuführen, indem sie der Zustimmungsbenutzeroberfläche explizit zustimmen. Zu diesen administrativen Aufgaben gehören das Installieren von Software und Treibern, das Ändern systemweiter Einstellungen, das Anzeigen oder Ändern anderer Benutzerkonten und das Ausführen von Verwaltungstools.
 
-Im Zustand mit den geringsten Rechten werden Administratoren als geschützte Administratoren bezeichnet. Im Zustand mit erhöhten Rechten werden Sie als erweiterte Administratoren bezeichnet. Im Gegensatz dazu können Standard Benutzer nicht selbst herauf Stufen, Sie können jedoch einen Administrator bitten, Sie mithilfe der Benutzeroberfläche für Anmelde Informationen zu erhöhen. Das integrierte Administrator Konto erfordert keine Erhöhung der Rechte.
+In ihrem Zustand mit den geringsten Berechtigungen werden Administratoren als geschützte Administratoren bezeichnet. In ihrem Zustand mit erhöhten Rechten werden sie als Administratoren mit erhöhten Rechten bezeichnet. Im Gegensatz dazu können Standardbenutzer selbst keine Rechte erhöhen, aber sie können einen Administrator bitten, sie über die Benutzeroberfläche für Anmeldeinformationen zu erhöhen. Für das integrierte Administratorkonto sind keine Rechteerweiterungen erforderlich.
 
-![Screenshot der Sicherheits Meldung "Programm zulassen" ](images/winenv-uac-image1.png)
+![Screenshot der Sicherheitsmeldung "Programm zulassen" ](images/winenv-uac-image1.png)
 
-Die Zustimmungs Benutzeroberfläche, mit der geschützte Administratoren auf Administratorrechte erweitert werden.
+Die Zustimmungs-Benutzeroberfläche, die verwendet wird, um geschützte Administratoren auf Administratorrechte zu erhöhen.
 
-![Screenshot der Meldung mit dem Kennwort ](images/winenv-uac-image2.png)
+![Screenshot der Meldung, in der nach einem Kennwort gefragt wird ](images/winenv-uac-image2.png)
 
-Die Benutzeroberfläche für Anmelde Informationen, die verwendet wird, um Standard Benutzer zu erhöhen.
+Die Benutzeroberfläche für Anmeldeinformationen, die zum Erhöhen von Standardbenutzern verwendet wird.
 
 UAC bietet die folgenden Vorteile:
 
--   Dadurch wird die Anzahl der Programme verringert, die mit erhöhten Rechten ausgeführt werden. Dadurch wird verhindert, dass Benutzer Ihre Systemeinstellungen versehentlich ändern können, und es wird verhindert, dass "Malware" systemweiten Zugriff erhält. Wenn die Rechte Erweiterung verweigert wird, kann Schadsoftware nur die Daten des aktuellen Benutzers beeinflussen. Ohne Erhöhung der Rechte können Schadsoftware keine systemweiten Änderungen vornehmen oder andere Benutzer beeinträchtigen.
--   Für [verwaltete Umgebungen](glossary.md)ermöglichen gut gestaltete UAC-Benutzeroberflächen, dass Benutzer produktiver arbeiten können, wenn Sie als Standard Benutzer ausgeführt werden, indem unnötige Einschränkungen entfernt werden.
--   Standard Benutzer haben die Möglichkeit, Administratoren aufzufordern, Ihnen die Berechtigung zum Ausführen administrativer Aufgaben innerhalb Ihrer aktuellen Sitzung zu erteilen.
--   In Heim Umgebungen ermöglicht es eine bessere Kontrolle über systemweite Änderungen, einschließlich der installierten Software.
+-   Dadurch wird die Anzahl der Programme reduziert, die mit erhöhten Rechten ausgeführt werden. Dadurch wird verhindert, dass Benutzer versehentlich ihre Systemeinstellungen ändern, und "Schadsoftware" wird daran gehindert, systemweiten Zugriff zu erhalten. Wenn erhöhte Rechte verweigert werden, kann Schadsoftware nur die Daten des aktuellen Benutzers beeinflussen. Ohne Erhöhte Rechte kann Schadsoftware keine systemweiten Änderungen vornehmen oder andere Benutzer beeinträchtigen.
+-   Für [verwaltete Umgebungen](glossary.md)ermöglichen gut entworfene UAC-Umgebungen es Benutzern, produktiver zu sein, wenn sie als Standardbenutzer ausgeführt werden, indem unnötige Einschränkungen entfernt werden.
+-   Standardbenutzer erhalten die Möglichkeit, Administratoren aufzufordern, ihnen die Berechtigung zum Ausführen administrativer Aufgaben innerhalb ihrer aktuellen Sitzung zu erteilen.
+-   Für Heimumgebungen ermöglicht es eine bessere Kontrolle der Eltern über systemweite Änderungen, einschließlich der installierten Software.
 
-**Entwickler:** Implementierungs Informationen finden Sie unter [Umgestalten der Benutzeroberfläche für die UAC-Kompatibilität](/previous-versions/bb756990(v=msdn.10)).
+**Entwickler:** Informationen zur Implementierung finden Sie unter [Redesign Your UI for UAC Compatibility (Umgestalten der Benutzeroberfläche für UAC-Kompatibilität).](/previous-versions/bb756990(v=msdn.10))
 
-In Windows Vista können geschützte Administratoren über alle Systemänderungen oder keine benachrichtigt werden. Die UAC-Standardeinstellung besteht darin, über alle Änderungen zu informieren, unabhängig von ihrem Ursprung. Wenn Sie benachrichtigt werden, wird der Desktop Abgleich angezeigt, und Sie müssen die Anforderung im UAC-Dialogfeld genehmigen oder verweigern, bevor Sie auf dem Computer weitere Aktionen ausführen können. Das Dimmen Ihres Desktops wird als [sicherer Desktop](glossary.md) bezeichnet, da andere Programme nicht ausgeführt werden können.
+In Windows Vista können geschützte Administratoren über alle Systemänderungen oder keine Benachrichtigungen benachrichtigt werden. Die Standardeinstellung für die UAC besteht darin, alle Änderungen unabhängig vom Ursprung zu benachrichtigen. Wenn Sie benachrichtigt werden, ist Ihr Desktop abgeblendet, und Sie müssen die Anforderung im UAC-Dialogfeld entweder genehmigen oder ablehnen, bevor Sie andere Möglichkeiten auf Ihrem Computer haben. Die Abgeblendung Ihres Desktops wird als [sicherer Desktop](glossary.md) bezeichnet, da andere Programme nicht ausgeführt werden können, während sie abgeblendet sind.
 
-Windows 7 führt neben den beiden von Windows Vista zwei zwischengeschaltete UAC-Einstellungen für geschützte Administratoren ein. Der erste besteht darin, Benutzer nur dann zu benachrichtigen, wenn ein Programm die Änderung vornimmt, sodass Administratoren automatisch erhöht werden, wenn Sie eine Änderung vornehmen. Dies ist die Standardeinstellung für die UAC in Windows 7 und nutzt auch den sicheren Desktop.
+Windows 7 führt zwei UAC-Zwischeneinstellungen für geschützte Administratoren ein, zusätzlich zu den beiden von Windows Vista. Die erste besteht darin, Benutzer nur zu benachrichtigen, wenn ein Programm die Änderung vornimmt, sodass Administratoren automatisch erhöht werden, wenn sie selbst eine Änderung vornehmen. Dies ist die UAC-Standardeinstellung in Windows 7 und nutzt auch den sicheren Desktop.
 
-Die zweite zwischen Einstellung in Windows 7 ist die gleiche wie die erste, mit der Ausnahme, dass Sie nicht den sicheren Desktop verwendet.
+Die zweite Zwischeneinstellung in Windows 7 ist mit der ersten identisch, mit der Ausnahme, dass der sichere Desktop nicht verwendet wird.
 
-![Screenshot der vier UAC-Einstellungen in Windows 7 ](images/winenv-uac-image3.png)
+![Screenshot von vier UAC-Einstellungen in Windows 7 ](images/winenv-uac-image3.png)
 
-Mit Windows 7 werden zwei zwischengeschaltete UAC-Einstellungen eingeführt.
+Windows 7 führt zwei UAC-Zwischeneinstellungen ein.
 
-**Hinweis:** Richtlinien für das Schreiben [von Code zur Unterstützung der Benutzerkontensteuerung](/previous-versions/aa905330(v=msdn.10)) werden in einem separaten Artikel vorgestellt.
+**Hinweis:** Richtlinien zum Schreiben von Code zur Unterstützung der [Benutzerkontensteuerung](/previous-versions/aa905330(v=msdn.10)) werden in einem separaten Artikel vorgestellt.
 
 ## <a name="design-concepts"></a>Entwurfskonzepte
 
 **Ziele**
 
-Eine gut entworfene Benutzerkontensteuerung hat die folgenden Ziele:
+Eine gut entworfene Benutzeroberfläche für die Benutzerkontensteuerung hat die folgenden Ziele:
 
--   **Vermeiden Sie unnötige Rechte.** Benutzer müssen nur die Rechte erweitern, um Aufgaben auszuführen, für die Administratorrechte erforderlich sind. Alle anderen Aufgaben sollten so entworfen werden, dass die Notwendigkeit der Erhöhung der Rechte entfällt. Ältere Software benötigt häufig Administratorrechte, indem Sie in die Registrierungs Abschnitte "HKLM", "HKCR" oder "Programme" oder "Windows-System Ordner" schreiben.
--   **Ist vorhersagbar.** Standard Benutzer müssen wissen, welche Aufgaben ein Administrator in verwalteten Umgebungen ausführen muss oder nicht. Administratoren müssen wissen, welche Aufgaben eine Erhöhung der Rechte erfordern. Wenn Sie die Notwendigkeit der Erhöhung der Rechte nicht genau vorhersagen können, erhalten Sie mit höherer Wahrscheinlichkeit eine Zustimmung für administrative Aufgaben, wenn dies nicht der Fall sein sollte.
--   **Erfordert minimalen Aufwand.** Tasks, für die Administratorrechte erforderlich sind, sollten so entworfen werden, dass eine einzelne Erweiterung erforderlich ist Aufgaben, die mehrere herauf Stufen erfordern, werden schnell mühsam.
--   **Kehren Sie zu den geringsten Berechtigungen zurück.** Wenn eine Aufgabe, für die Administratorrechte erforderlich sind, fertiggestellt ist, sollte das Programm in den geringsten Berechtigungs Status zurückversetzt werden.
+-   **Vermeiden Sie unnötige Rechteerweiterungen.** Benutzer sollten nur erhöht werden müssen, um Aufgaben auszuführen, die Administratorrechte erfordern. Alle anderen Aufgaben sollten so entworfen werden, dass keine Rechteerweiterung erforderlich ist. Ältere Software erfordert häufig unnötige Administratorrechte, indem sie in die Abschnitte HKLM oder HKCR-Registrierung oder in die Ordner Programme oder Windows-System schreibt.
+-   **Vorhersagbar sein.** Standardbenutzer müssen wissen, welche Aufgaben ein Administrator ausführen muss oder in verwalteten Umgebungen überhaupt nicht ausgeführt werden kann. Administratoren müssen wissen, für welche Aufgaben erhöhte Rechte erforderlich sind. Wenn sie den Bedarf an Erhöhungen nicht genau vorhersagen können, geben sie wahrscheinlich ihre Zustimmung für administrative Aufgaben, wenn sie dies nicht sollten.
+-   **Minimaler Aufwand erforderlich.** Aufgaben, für die Administratorrechte erforderlich sind, sollten so entworfen werden, dass eine einzelne Erhöhung erforderlich ist. Aufgaben, die mehrere Rechteerweiterungen erfordern, werden schnell mühsam.
+-   **Kehren Sie auf die geringsten Berechtigungen zurück.** Sobald eine Aufgabe, die Administratorrechte erfordert, abgeschlossen ist, sollte das Programm den Status der geringsten Rechte kehren.
 
-**Task Ablauf für erhöhte Rechte**
+**Aufgabenfluss für erhöhte Rechte**
 
-Wenn eine Aufgabe eine Erhöhung erfordert, werden die folgenden Schritte ausgeführt:
+Wenn für eine Aufgabe erhöhte Rechte erforderlich sind, werden die folgenden Schritte beschrieben:
 
-1.  **Einstiegspunkt.** Aufgaben, die eine sofortige Erhöhung erfordern, wenn UAC vollständig aktiviert ist, haben Einstiegspunkte, die mit dem UAC-Schild gekennzeichnet sind In diesem Fall sollten Benutzer sofort nach dem Klicken auf solche Befehle eine Benutzeroberfläche für die Rechte Erweiterung sehen, und Sie sollten besonders vorsichtig sein, wenn Sie die Benutzeroberfläche für Rechte Erweiterungen von Aufgaben sehen, für die kein Schild vorhanden ist.
+1.  **Einstiegspunkt.** Aufgaben, für die eine sofortige Erhöhung erforderlich ist, wenn die UAC vollständig aktiviert ist, verfügen über Einstiegspunkte, die mit dem UAC-Shield markiert sind. In diesem Fall sollten Benutzer sofort nach dem Klicken auf solche Befehle eine Benutzeroberfläche für erhöhte Rechte sehen, und sie sollten besonders vorsichtig sein, wenn sie die Benutzeroberfläche für erhöhte Rechte von Aufgaben sehen, die keinen Schutz aufweisen.
 
-    ![Screenshot der UAC-schildsymbole und deren Bezeichnungen ](images/winenv-uac-image4.png)
+    ![Screenshot von UAC-Shield-Symbolen und deren Bezeichnungen ](images/winenv-uac-image4.png)
 
-    In diesem Beispiel ist für die System Steuerungselemente "Jugendschutz" und "Benutzerkonten" eine Erhöhung erforderlich.
+    In diesem Beispiel erfordern die Elemente für die Jugendschutz- und Benutzerkontensteuerung erhöhte Rechte.
 
-    Wenn die Benutzerkontensteuerung teilweise aktiviert oder ausgeschaltet ist, wird das UAC-Schild immer noch angezeigt, um anzugeben, dass die Aufgabe Änderungen auf Systemebene umfasst und daher auch dann eine Erhöhung erfordert, wenn dem Benutzer die Benutzeroberfläche für die Rechte Erweiterung möglicherweise nicht angezeigt wird. Wenn das UAC-Schild immer für Aufgaben angezeigt wird, für die eine Erhöhung erforderlich ist, wird die Benutzeroberfläche einfach und
+    Wenn UAC teilweise aktiviert oder vollständig deaktiviert ist, wird der UAC-Shield weiterhin angezeigt, um anzugeben, dass der Task Änderungen auf Systemebene umfasst und daher eine Erhöhung erfordert, auch wenn dem Benutzer die Benutzeroberfläche für erhöhte Rechte möglicherweise nicht angezeigt wird. Wenn Sie den UAC-Schutz immer für Aufgaben anzeigen, die erhöhte Rechte erfordern, bleibt die Benutzeroberfläche einfach und vorhersagbar.
 
-2.  **Trie.** Für geschützte Administratoren fordert der Task die Zustimmung mithilfe der Zustimmungs Benutzeroberfläche an. Für Standard Benutzer fordert der Task Administrator Anmelde Informationen über die Benutzeroberfläche für Anmelde Informationen an.
+2.  **Höhe.** Für geschützte Administratoren fordert der Task die Zustimmung über die Benutzeroberfläche für die Zustimmung an. Für Standardbenutzer fordert die Aufgabe Administratoranmeldeinformationen über die Benutzeroberfläche für Anmeldeinformationen an.
 
-    ![Screenshot von zwei Arten der Erhöhung ](images/winenv-uac-image5.png)
+    ![Screenshot von zwei Arten von Rechteerweiterungen ](images/winenv-uac-image5.png)
 
-    Diese Beispiele zeigen die Benutzeroberfläche für Anmelde Informationen und die Zustimmungs Benutzeroberfläche.
+    Diese Beispiele zeigen die Benutzeroberfläche für Anmeldeinformationen und die Benutzeroberfläche für die Zustimmung.
 
-3.  **Separater Prozess mit erhöhten Rechten.** Intern wird ein neuer erhöhter Prozess erstellt, um die Aufgabe auszuführen.
-4.  **Kehren Sie zu den geringsten Berechtigungen zurück.** Stellen Sie bei Bedarf die geringste Berechtigung wieder her, um alle Schritte auszuführen, für die keine Rechte Erweiterung erforderlich ist.
+3.  **Separater Prozess mit erhöhten Rechten.** Intern wird ein neuer Prozess mit erhöhten Rechten erstellt, um die Aufgabe auszuführen.
+4.  **Kehren Sie zu den geringsten Rechten zurück.** Kehren Sie bei Bedarf auf die geringsten Rechte zurück, um alle Schritte auszuführen, für die keine Erhöhung erforderlich ist.
 
-Beachten Sie, dass sich Aufgaben nicht mit erhöhten Zuständen "merken". Wenn der Benutzer z. b. in einem Assistenten zu einem Erweiterungs Einstiegspunkt hin-und hernavigiert, muss der Benutzer jedes Mal eine Rechte Erweiterung durchgeführt werden.
+Beachten Sie, dass Tasks keine erhöhten Zustände "merken". Wenn der Benutzer beispielsweise in einem Assistenten über einen Einstiegspunkt für erhöhte Rechte hin und her navigiert, muss der Benutzer jedes Mal erhöhte Rechte erhöhen.
 
 ## <a name="usage-patterns"></a>Verwendungsmuster
 
-Die Benutzerkontensteuerung hat mehrere Verwendungs Muster (in der bevorzugten Reihenfolge):
+Die Benutzerkontensteuerung verfügt über mehrere Verwendungsmuster (in der Reihenfolge ihrer Präferenz):
 
-1.  **Arbeiten Sie für Standard Benutzer.** Entwerfen Sie das Feature für alle Benutzer, indem Sie den Gültigkeitsbereich auf den aktuellen Benutzer beschränken. Durch das Einschränken von Einstellungen auf den aktuellen Benutzer (im Gegensatz zur systemweiten) entfällt die Notwendigkeit, eine Benutzeroberfläche für die Rechte Erweiterung vollständig zu benötigen, und ermöglicht es den Benutzern, die Aufgabe abzuschließen.
+1.  **Arbeiten für Standardbenutzer.** Entwerfen Sie das Feature für alle Benutzer, indem Sie seinen Bereich auf den aktuellen Benutzer beschränken. Indem Sie die Einstellungen auf den aktuellen Benutzer (im Gegensatz zu systemweit) beschränken, müssen Sie keine erhöhte Benutzeroberfläche mehr benötigen, und ermöglichen Es Benutzern, die Aufgabe abzuschließen.
 
     **Falsch:**
 
-    ![Screenshot der Meldung: Sie haben keine Berechtigung. ](images/winenv-uac-image6.png)
+    ![Screenshot der Meldung: Sie haben keine Berechtigung ](images/winenv-uac-image6.png)
 
     In diesem Beispiel mussten Windows XP-Benutzer über Administratorrechte verfügen, um die aktuelle Zeitzone anzuzeigen oder zu ändern.
 
     **Richtig:**
 
-    ![Screenshot des Dialog Felds "Datum und Uhrzeit" ](images/winenv-uac-image7.png)
+    ![Screenshot des Dialogfelds "Datum und Uhrzeit" ](images/winenv-uac-image7.png)
 
-    In diesem Beispiel wurde die Zeit Zonen Funktion in Windows 7 und Windows Vista umgestaltet, damit Sie für alle Benutzer funktioniert.
+    In diesem Beispiel wurde das Zeitzonenfeature in Windows 7 und Windows Vista so umgestaltet, dass es für alle Benutzer funktioniert.
 
-2.  **Sie verfügen über separate Benutzeroberflächen Elemente für Standard Benutzer und Administratoren.** Trennen Sie Standard Benutzer Aufgaben eindeutig von Verwaltungsaufgaben. Gibt allen Benutzern Zugriff auf nützliche schreibgeschützte Informationen. Identifizieren Sie administrative Aufgaben mit dem UAC-Schild eindeutig.
+2.  **Sie verfügen über separate Benutzeroberflächenelemente für Standardbenutzer und -administratoren.** Trennen Sie Standardbenutzeraufgaben eindeutig von administrativen Aufgaben. Gewähren Sie allen Benutzern Zugriff auf nützliche schreibgeschützte Informationen. Identifizieren Sie administrative Aufgaben eindeutig mit dem UAC-Shield.
 
-    ![Grafik zum UAC-Schild, das erhöhte Rechte anzeigt ](images/winenv-uac-image8.png)
+    ![Grafik des UAC-Shields mit erforderlicher Erhöhung ](images/winenv-uac-image8.png)
 
-    In diesem Beispiel zeigt das System System Steuerungselement seinen Zustand für alle Benutzer an. das Ändern der systemweiten Einstellungen erfordert jedoch eine Erhöhung der Rechte.
+    In diesem Beispiel zeigt das Systemsteuerungselement seinen Zustand für alle Benutzer an, aber das Ändern der systemweiten Einstellungen erfordert erhöhte Rechte.
 
-3.  **Ermöglicht Standard Benutzern das Ausführen von Aufgaben und das erhöhen bei Fehlern.** Wenn Standard Benutzer die Informationen anzeigen können und einige Änderungen ohne erhöhte Rechte vornehmen können, erlauben Sie Ihnen den Zugriff auf die Benutzeroberfläche, und lassen Sie Sie nur erhöhen, wenn die Aufgabe fehlschlägt. Diese Vorgehensweise eignet sich, wenn Standard Benutzer eingeschränkten Zugriff haben, z. b. die Eigenschaften ihrer eigenen Dateien in Windows-Explorer. Sie eignet sich auch für Einstellungen auf der Seite "hybridhub" der Systemsteuerung.
+3.  **Standardbenutzer können versuchen, eine Aufgabe zu versuchen und bei einem Fehler erhöhte Rechte zu erhöhen.** Wenn Standardbenutzer die Informationen anzeigen und einige Änderungen ohne Erhöhte Rechte vornehmen können, erlauben Sie ihnen den Zugriff auf die Benutzeroberfläche, und lassen Sie sie nur dann erhöhen, wenn die Aufgabe fehlschlägt. Dieser Ansatz eignet sich, wenn Standardbenutzer eingeschränkten Zugriff haben, z. B. mit Eigenschaften ihrer eigenen Dateien in Windows-Explorer. Es eignet sich auch für Einstellungen auf Systemsteuerung Hybrid Hub-Seiten.
 
-    ![Screenshot der Meldung "Zugriff verweigert" ](images/winenv-uac-image9.png)
+    ![Screenshot: Meldung "Zugriff verweigert" ](images/winenv-uac-image9.png)
 
-    In diesem Beispiel hat der Benutzer versucht, die Eigenschaften der Programmdatei zu ändern, hatte aber keine ausreichenden Berechtigungen. Der Benutzer kann eine Erhöhung durchführen und den Vorgang wiederholen.
+    In diesem Beispiel hat der Benutzer versucht, die Eigenschaften der Programmdatei zu ändern, verfügte aber nicht über ausreichende Berechtigungen. Der Benutzer kann die Rechte erhöhen und es erneut versuchen.
 
-4.  **Nur für Administratoren arbeiten.** Verwenden Sie diesen Ansatz nur für Administrator Funktionen und-Programme! Wenn eine Funktion nur für Administratoren vorgesehen ist (ohne Navigationspfade oder hilfreiche schreibgeschützte Informationen für Standard Benutzer), können Sie am Einstiegspunkt zum Eingeben von Administrator Anmelde Informationen auffordern, bevor Sie eine Benutzeroberfläche angezeigt werden. Verwenden Sie diesen Ansatz für langwierige Assistenten und [Seiten Flüsse](glossary.md) , wenn alle Pfade Administratorrechte erfordern.
+4.  **Arbeiten Sie nur für Administratoren.** Verwenden Sie diesen Ansatz nur für Administratorfeatures und -programme! Wenn ein Feature nur für Administratoren vorgesehen ist (und keine Navigationspfade oder nützliche schreibgeschützte Informationen für Standardbenutzer enthält), können Sie am Einstiegspunkt zur Eingabe von Administratoranmeldeinformationen auffordern, bevor Sie eine Benutzeroberfläche anzeigen. Verwenden Sie diesen Ansatz für lange Assistenten und [Seitenflows,](glossary.md) wenn für alle Pfade Administratorrechte erforderlich sind.
 
-    Wenn das gesamte Programm nur für Administratoren vorgesehen ist, markieren Sie es als Eingabeaufforderung zum Eingeben von Administrator Anmelde Informationen, um zu starten. Windows zeigt diese Programmsymbole mit der UAC-Schild Überlagerung an.
+    Wenn das gesamte Programm nur für Administratoren vorgesehen ist, markieren Sie es, um zum Starten Administratoranmeldeinformationen einzufordern. Windows zeigt solche Programmsymbole mit der UAC-Shieldüberlagerung an.
 
-    ![Screenshot von Windows-Logo und UAC-Schild Überlagerung ](images/winenv-uac-image10.png)
+    ![Screenshot: Windows-Logo und UAC-Shield-Überlagerung ](images/winenv-uac-image10.png)
 
-    In diesem Beispiel benötigt das Programm Administratorrechte, um gestartet werden zu können.
+    In diesem Beispiel benötigt das Programm Administratorrechte, um gestartet zu werden.
 
 ## <a name="guidelines"></a>Richtlinien
 
-### <a name="uac-shield-icon"></a>UAC-Schild Symbol
+### <a name="uac-shield-icon"></a>UAC-Shield-Symbol
 
--   **Zeigen Sie Steuerelemente mit dem UAC-Schild an, um anzugeben, dass der Task eine sofortige Erhöhung erfordert, wenn UAC vollständig aktiviert ist,** auch wenn die Benutzerkontensteuerung aktuell nicht vollständig Wenn alle Pfade eines Assistenten und [Seiten Flusses](glossary.md) eine Erhöhung erfordern, zeigen Sie das UAC-Schild am Einstiegspunkt der Aufgabe an. Durch die ordnungsgemäße Verwendung des UAC-Shield können Benutzer Vorhersagen, wann eine Erhöhung erforderlich ist.
--   **Wenn das Programm mehrere Versionen von Windows unterstützt, zeigen Sie das UAC-Schild an, wenn mindestens eine Version eine Erhöhung erfordert.** Da für Windows XP keine Rechte Erweiterung erforderlich ist, sollten Sie ggf. die UAC-Schilde für Windows XP entfernen, wenn dies durchgängig und ohne Beeinträchtigung der Leistung möglich ist
--   **Zeigen Sie das UAC-Schild nicht für Aufgaben an, die in den meisten Kontexten keine Rechte erfordern.** Da dieser Ansatz in manchen Fällen irreführend ist, besteht der bevorzugte Ansatz darin, stattdessen einen ordnungsgemäß abgeschirmten kontextbezogenen Befehl zu verwenden.
+-   **Zeigen Sie Steuerelemente mit dem UAC-Shield an, um anzugeben, dass für den Task eine sofortige Erhöhung erforderlich ist, wenn die UAC vollständig aktiviert ist,** auch wenn die UAC derzeit nicht vollständig aktiviert ist. Wenn alle Pfade eines Assistenten und [Seitenflusses](glossary.md) erhöhte Rechte erfordern, zeigen Sie den UAC-Schutz am Einstiegspunkt des Tasks an. Durch die ordnungsgemäße Verwendung des UAC-Shields können Benutzer vorhersagen, wann erhöhte Rechte erforderlich sind.
+-   **Wenn Ihr Programm mehrere Versionen von Windows unterstützt, zeigen Sie den UAC-Schutz an, wenn mindestens eine Version eine Erhöhung erfordert.** Da Für Windows XP keine Erhöhung erforderlich ist, sollten Sie die UAC-Schirme für Windows XP entfernen, wenn Sie dies konsistent und ohne Leistungsbeeinträchtigung durchführen können.
+-   **Zeigen Sie den UAC-Schutz nicht für Aufgaben an, für die in den meisten Kontexten keine Erhöhung erforderlich ist.** Da dieser Ansatz manchmal irreführend sein wird, ist es der bevorzugte Ansatz, stattdessen einen ordnungsgemäß abgeschirmten kontextbezogenen Befehl zu verwenden.
 
-    ![Screenshot der Fotodateien in Windows-Explorer ](images/winenv-uac-image11.png)
+    ![Screenshot von Fotodateien im Windows-Explorer ](images/winenv-uac-image11.png)
 
-    Da der neue Ordner Befehl nur bei Verwendung in Systemordnern eine Erhöhung erfordert, wird er ohne UAC-Schild angezeigt.
+    Da der Befehl Neuer Ordner nur erhöhte Rechte erfordert, wenn er in Systemordnern verwendet wird, wird er ohne UAC-Shield angezeigt.
 
--   Der UAC-Schild kann in den folgenden Steuerelementen angezeigt werden:
+-   Der UAC-Shield kann auf den folgenden Steuerelementen angezeigt werden:
 
-    **Befehls Schaltflächen:**
+    **Befehlsschaltflächen:**
 
-    ![Screenshot der Befehls Schaltfläche mit UAC-Schild Symbol ](images/winenv-uac-image12.png)
+    ![Screenshot der Befehlsschaltfläche mit UAC-Shield-Symbol ](images/winenv-uac-image12.png)
 
-    Eine Befehls Schaltfläche, die eine sofortige Erhöhung erfordert.
+    Eine Befehlsschaltfläche, für die eine sofortige Erhöhung erforderlich ist.
 
-    **Befehls Verknüpfungen:**
+    **Befehlslinks:**
 
-    ![Screenshot des Befehls Links mit dem UAC-Schild Symbol ](images/winenv-uac-image13.png)
+    ![Screenshot des Befehlslinks mit UAC-Shield-Symbol ](images/winenv-uac-image13.png)
 
-    Ein Befehls Link, der eine sofortige Erhöhung der Rechte erfordert.
+    Ein Befehlslink, der eine sofortige Rechteerweiterung erfordert.
 
-    **Verweist**
+    **Links:**
 
-    ![Screenshot der Verknüpfung "Konto ändern" mit dem UAC-Schild ](images/winenv-uac-image14.png)
+    ![Screenshot: Ändern des Kontolinks mit uac shield ](images/winenv-uac-image14.png)
 
-    Ein Link, der eine sofortige Erhöhung der Rechte erfordert.
+    Ein Link, der eine sofortige Rechteerweiterung erfordert.
 
-    **Kreiert**
+    **Menüs:**
 
-    ![Screenshot des Menüs mit UAC-Schild ](images/winenv-uac-image15.png)
+    ![Screenshot des Menüs mit UAC-Shield ](images/winenv-uac-image15.png)
 
-    Ein Dropdown Menü, das eine sofortige Erhöhung der Rechte erfordert.
+    Ein Dropdownmenü, das sofortige Rechteerweiterungen erfordert.
 
--   Da sich die Zustände von Tasks nicht in erhöhten Zuständen befinden, **Ändern Sie den UAC-Schild nicht in den Zustand.**
--   **Zeigen Sie das UAC-Schild auch dann an, wenn die Benutzerkontensteuerung ausgeschaltet wurde oder der Benutzer das integrierte Administrator Konto verwendet.** Die konsistente Anzeige des UAC-Shield ist leichter zu programmieren und bietet Benutzern Informationen über die Art der Aufgabe.
+-   Da Tasks sich nicht an erhöhte Zustände erinnern, **sollten Sie den UAC-Schutz nicht ändern, um den Zustand widerzuspiegeln.**
+-   **Zeigen Sie den UAC-Schutz an, auch wenn die Benutzerkontensteuerung deaktiviert wurde oder der Benutzer das integrierte Administratorkonto verwendet.** Die konsistente Anzeige des UAC-Shields ist einfacher zu programmieren und stellt Benutzern Informationen über die Art der Aufgabe bereit.
 
 ### <a name="elevation"></a>Elevation
 
--   **Wenn möglich, entwerfen Sie Aufgaben, die von Standard Benutzern ohne Rechte Erweiterung ausgeführt werden.** Gibt allen Benutzern Zugriff auf nützliche schreibgeschützte Informationen.
--   **Erhöhen Sie die Rechte pro Aufgabe und nicht pro Einstellung.** Kombinieren Sie die Standard Benutzereinstellungen nicht mit den administrativen Einstellungen in einer einzelnen Seite oder in einem Dialogfeld. Wenn Standard Benutzer z. b. einige, aber nicht alle Einstellungen ändern können, teilen Sie diese Einstellungen als separate Oberfläche auf der Benutzeroberfläche auf.
+-   **Entwerfen Sie nach Möglichkeit Aufgaben, die von Standardbenutzern ohne Erhöhte Rechte ausgeführt werden sollen.** Gewähren Sie allen Benutzern Zugriff auf nützliche schreibgeschützte Informationen.
+-   **Erhöhen Sie die Rechte pro Aufgabe, nicht pro Einstellung.** Kombinieren Sie Standardbenutzereinstellungen nicht mit Administratoreinstellungen auf einer einzelnen Seite oder einem Dialogfeld. Wenn Standardbenutzer beispielsweise einige, aber nicht alle Einstellungen ändern können, teilen Sie diese Einstellungen als separate Benutzeroberfläche auf.
 
     **Falsch:**
 
-    ![Screenshot von Einstellungen für Datum und Uhrzeit (Dialogfeld) ](images/winenv-uac-image16.png)
+    ![Screenshot des Dialogfelds "Datums- und Uhrzeiteinstellungen" ](images/winenv-uac-image16.png)
 
-    In diesem Beispiel werden die Standard Benutzereinstellungen fälschlicherweise mit den administrativen Einstellungen vermischt.
+    In diesem Beispiel werden Standardbenutzereinstellungen falsch mit Administratoreinstellungen kombiniert.
 
     **Richtig:**
 
-    ![Screenshot desselben Dialog Felds ohne UAC-Schild ](images/winenv-uac-image17.png)
+    ![Screenshot des gleichen Dialogfelds ohne UAC-Shields ](images/winenv-uac-image17.png)
 
-    In diesem Beispiel befinden sich die Einstellungen zum Ändern des Datums und der Uhrzeit in einem separaten Dialogfeld, das nur für Administratoren verfügbar ist. Die Zeitzoneneinstellungen stehen Standard Benutzern zur Verfügung und sind nicht mit den administrativen Einstellungen gemischt.
+    In diesem Beispiel befinden sich die Einstellungen zum Ändern von Datum und Uhrzeit in einem separaten Dialogfeld, das nur Administratoren zur Verfügung steht. Die Zeitzoneneinstellungen sind für Standardbenutzer verfügbar und werden nicht mit Administratoreinstellungen gemischt.
 
--   **Berücksichtigen Sie nicht die Notwendigkeit, eine Erhöhung durchzusetzen, wenn Sie bestimmen, ob ein Steuerelement angezeigt oder deaktiviert werden soll.** Der Grund ist wie folgt:
-    -   Nehmen Sie in nicht verwalteten Umgebungen an, dass Standard Benutzer eine Erhöhung durch einen Administrator durchgeführt haben. Durch das Deaktivieren von Steuerelementen, die eine Rechte Erweiterung erfordern, wird verhindert, dass Benutzer über Administratoren verfügen.
-    -   Nehmen Sie in verwalteten Umgebungen an, dass Standard Benutzer überhaupt keine Rechte erhöhen können. Das Entfernen von Steuerelementen, die eine Erhöhung erfordern, würde verhindern, dass Benutzer wissen, wann die Suche beendet
--   **So vermeiden Sie unnötige Rechte:**
-    -   **Wenn eine Aufgabe eine Erhöhung der Rechte erfordern kann, erhöhen Sie so spät wie möglich.** Wenn für eine Aufgabe eine [Bestätigung](mess-confirm.md)erforderlich ist, sollten Sie die Benutzeroberfläche für die Rechte Erweiterung erst anzeigen, wenn der Benutzer die Wenn eine Aufgabe immer eine Erhöhung erfordert, erhöhen Sie an Ihrem Einstiegspunkt.
-    -   **Bleiben Sie nach der Erhöhung der Rechte erhöht, bis erweiterte Berechtigungen nicht mehr benötigt werden.** Benutzer sollten sich nicht mehrmals erhöhen müssen, um eine einzelne Aufgabe auszuführen.
-    -   **Wenn Benutzer erhöhen müssen, um eine Änderung vorzunehmen, aber keine Änderungen vornehmen möchten, lassen Sie die Schaltflächen für positives Commit aktiviert, und behandeln Sie den Commit als abbrechen.** Dadurch wird verhindert, dass Benutzer nur zum Schließen eines Fensters erweitert werden.
+-   **Berücksichtigen Sie nicht die Notwendigkeit, die Rechte zu erhöhen, wenn Sie bestimmen, ob ein Steuerelement angezeigt oder deaktiviert werden soll.** Der Grund ist wie folgt:
+    -   Gehen Sie in nicht verwalteten Umgebungen davon aus, dass Standardbenutzer die Rechte erhöhen können, indem sie einen Administrator bitten. Das Deaktivieren von Steuerelementen, die erhöhte Rechte erfordern, würde verhindern, dass Benutzer erhöhte Rechte von Administratoren haben.
+    -   Gehen Sie in verwalteten Umgebungen davon aus, dass Standardbenutzer überhaupt keine Rechte erhöhen können. Das Entfernen von Steuerelementen, die erhöhte Rechte erfordern, würde verhindern, dass Benutzer wissen, wann sie nicht mehr suchen müssen.
+-   **So vermeiden Sie unnötige Rechteerweiterungen:**
+    -   **Wenn für eine Aufgabe erhöhte Rechte erforderlich sind, erhöhen Sie die Rechte so spät wie möglich.** Wenn eine Aufgabe eine [Bestätigung](mess-confirm.md)benötigt, zeigen Sie die Benutzeroberfläche für erhöhte Rechte erst an, nachdem der Benutzer dies bestätigt hat. Wenn für eine Aufgabe immer erhöhte Rechte erforderlich sind, erhöhen Sie die Rechte an ihrem Einstiegspunkt.
+    -   **Bleiben Sie nach der Erhöhung erhöht, bis erhöhte Berechtigungen nicht mehr erforderlich sind.** Benutzer sollten nicht mehrmals erhöhen müssen, um eine einzelne Aufgabe auszuführen.
+    -   **Wenn Benutzer die Rechte erhöhen müssen, um eine Änderung vorzunehmen, aber keine Änderungen vornehmen möchten, lassen Sie die Schaltflächen für positive Commits aktiviert, behandeln Sie den Commit jedoch als Abbruch.** Auf diese Weise müssen Benutzer keine Rechte erhöhen, nur um ein Fenster zu schließen.
     -   **Falsch:**
-    -   ![Screenshot des Fensters, in dem nur eine Schaltfläche aktiv ist ](images/winenv-uac-image18.png)
-    -   In diesem Beispiel ist die Schaltfläche "Änderungen speichern" deaktiviert, um eine unnötige Erhöhung zu vermeiden, wird jedoch aktiviert, wenn Benutzer die Auswahl ändern. Die Schaltfläche "deaktivierte Commit" sieht jedoch so aus, als ob Benutzer wirklich keine Auswahl haben.
--   **Zeigt keine Fehlermeldung an, wenn Aufgaben fehlschlagen, da die Benutzer die Erhöhung nicht erhöhen.** Angenommen, die Benutzer haben sich bewusst entschieden, nicht fortzufahren, sodass Sie diese Situation nicht als Fehler betrachten.
+    -   ![Screenshot des Fensters mit nur einer aktiven Schaltfläche ](images/winenv-uac-image18.png)
+    -   In diesem Beispiel ist die Schaltfläche Änderungen speichern deaktiviert, um unnötige Rechteerweiterungen zu vermeiden, wird jedoch aktiviert, wenn Benutzer die Auswahl ändern. Die deaktivierte Commitschaltfläche sieht jedoch so aus, als hätten Benutzer keine Auswahl.
+-   **Es wird keine Fehlermeldung angezeigt, wenn Tasks fehlschlagen, weil Benutzer keine Erhöhten Rechte ausgewählt haben.** Gehen Sie davon aus, dass Benutzer absichtlich nicht fortfahren möchten, sodass sie diese Situation nicht als Fehler betrachten.
 
     **Falsch:**
 
-    ![Screenshot der Meldung: die Wiederherstellung von Fabrikam kann nicht ausgeführt werden. ](images/winenv-uac-image19.png)
+    ![Screenshot der Meldung: fabrikam restore can't run (Fabrikam-Wiederherstellung kann nicht ausgeführt werden) ](images/winenv-uac-image19.png)
 
-    In diesem Beispiel gibt die Fabrikam-Wiederherstellung fälschlicherweise eine Fehlermeldung aus, wenn der Benutzer entscheidet, nicht zu erhöhen.
+    In diesem Beispiel wird bei der Fabrikam-Wiederherstellung fälschlicherweise eine Fehlermeldung angezeigt, wenn der Benutzer entscheidet, die Rechte nicht zu erhöhen.
 
--   **Zeigen Sie keine Warnungen an, um zu erläutern, dass Benutzer möglicherweise Ihre Berechtigungen zum Ausführen von Aufgaben erhöhen müssen.** Ermöglichen Sie es Benutzern, diese Tatsache selbst zu erkennen.
--   **Zeigen Sie die Benutzeroberfläche für UAC-Schild und-Rechte auf Grundlage der folgenden Tabelle an:**
+-   **Zeigen Sie keine Warnungen an, um zu erklären, dass Benutzer möglicherweise ihre Berechtigungen zum Ausführen von Aufgaben erhöhen müssen.** Lassen Sie diese Tatsache von Benutzern selbst ermitteln.
+-   **Zeigen Sie den UAC-Schutz und die Benutzeroberfläche für erhöhte Rechte basierend auf der folgenden Tabelle an:**
 
-    |                       |                                                                                                                                                                  |                                                                                                                                                                                                                       |                                                                                                      |
+    | Object | Umstand | Wo der UAC-Shield ablegt | Zeitpunkt der Erhöhung der Rechte |
     |-----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|
-    | **Object**      | **Umfelds**                                                                                                                                                | **Speicherort für UAC-Schild**                                                                                                                                                                               | **Zeitpunkt der Erhöhung**                                                                            |
-    | Program<br/>    | Das gesamte Programm ist nur für Administratoren vorgesehen.<br/>                                                                                                            | ![Screenshot von Windows-Logo und UAC-Schild Überlagerung ](images/winenv-uac-image10.png)<br/> UAC-Schild Überlagerung auf Programmsymbol.<br/>                                                                       | Anzeigen der Benutzeroberfläche für die Rechte Erweiterung beim Start<br/>                                                           |
-    | Get-Help<br/>    | Der gesamte Befehl ist nur für Administratoren vorgesehen.<br/>                                                                                                            | ![Screenshot des Links zum Ändern des Kontos und des UAC-Shield ](images/winenv-uac-image14.png)<br/> UAC-Schild auf Befehls Schaltfläche oder Link.<br/>                                                                      | Zeigen Sie die Benutzeroberfläche für die Rechte Erweiterung an, wenn auf die Befehls Schaltfläche oder den Link geklickt wird,<br/> |
-    | Get-Help<br/>    | Der Befehl zeigt nützliche schreibgeschützte Informationen an, die für alle Benutzer geeignet sind, für Änderungen sind jedoch Administratorrechte erforderlich.<br/>                               | ![Screenshot des Links "Einstellungen ändern" und "UAC-Schild" ](images/winenv-uac-image8.png)<br/> UAC-Schild auf Befehls Schaltfläche oder Verknüpfung, um Änderungen vorzunehmen.<br/>                                                      | Zeigt die Benutzeroberfläche für die Rechte Erweiterung an, wenn auf die Befehls Schaltfläche geklickt wird<br/>         |
-    | Get-Help<br/>    | Standard Benutzer können die Informationen anzeigen und ggf. einige Änderungen ohne Erhöhung vornehmen. erlauben Sie Standard Benutzern, zu versuchen, und bei einem Fehler zu erhöhen.<br/> | ![Screenshot des Fehlers mit dem UAC-Symbol auf der Schaltfläche "Wiederholen" ](images/winenv-uac-image9.png)<br/> Zeigen Sie den UAC-Schild nicht für den Befehl an, sondern zeigen Sie ihn für den Einstiegspunkt für die Erhöhung an, wenn der Befehl fehlschlägt.<br/> | Benutzeroberfläche für Rechte Erweiterung anzeigen, wenn der Benutzer den Befehl erneut versucht.<br/>                                       |
-    | Task Schritt<br/>  | Alle nachfolgenden Schritte erfordern eine Erhöhung der Rechte.<br/>                                                                                                               | ![Screenshot der nächsten Befehls Schaltfläche mit UAC-Schild ](images/winenv-uac-image20.png)<br/> UAC-Schild für die Schaltfläche "weiter" (oder Äquivalent).<br/>                                                                | Anzeige der Benutzeroberfläche für die Rechte Erweiterung anzeigen, wenn auf die Schaltfläche "weiter"<br/>                         |
-    | Task Schritt<br/>  | Einige branches erfordern eine Erhöhung der Rechte.<br/>                                                                                                                      | ![Screenshot der Befehls Verknüpfung mit dem UAC-Schild ](images/winenv-uac-image21.png)<br/> UAC-Schild für Befehls Verknüpfungen, die eine Erhöhung erfordern.<br/>                                                              | Anzeige der Rechte Erweiterung anzeigen, wenn auf Befehls Verknüpfungen mit UAC-Schild geklickt wird.<br/>                      |
+    | Programm<br/>    | Das gesamte Programm ist nur für Administratoren vorgesehen.<br/>                                                                                                            | ![Screenshot: Windows-Logo und UAC-Shield-Überlagerung ](images/winenv-uac-image10.png)<br/> UAC-Shieldüberlagerung auf Programmsymbol.<br/>                                                                       | Anzeigen der Benutzeroberfläche für erhöhte Rechte beim Start.<br/>                                                           |
+    | Befehl<br/>    | Der gesamte Befehl ist nur für Administratoren vorgesehen.<br/>                                                                                                            | ![Screenshot: Ändern der Kontoverknüpfung und des UAC-Shields ](images/winenv-uac-image14.png)<br/> UAC-Shield auf Befehlsschaltfläche oder Link.<br/>                                                                      | Anzeigen der Benutzeroberfläche für erhöhte Rechte, wenn auf die Befehlsschaltfläche oder den Link geklickt wird, jedoch nach bestätigungserkenntnissen.<br/> |
+    | Befehl<br/>    | Der Befehl zeigt nützliche schreibgeschützte Informationen an, die für alle Benutzer geeignet sind, änderungen erfordern jedoch Administratorrechte.<br/>                               | ![Screenshot des Links "Einstellungen ändern" und "uac shield" ](images/winenv-uac-image8.png)<br/> UAC-Shield auf Befehlsschaltfläche oder Link, um Änderungen vorzunehmen.<br/>                                                      | Anzeigen der Benutzeroberfläche für erhöhte Rechte, wenn auf die Befehlsschaltfläche geklickt wird, jedoch nach bestätigungserkenntnissen.<br/>         |
+    | Befehl<br/>    | Standardbenutzer können die Informationen anzeigen und möglicherweise einige Änderungen ohne Erhöhte Rechte vornehmen. Standardbenutzern den Versuch zu ermöglichen und bei einem Fehler erhöhte Rechte zu erhöhen.<br/> | ![Screenshot des Fehlers mit dem UAC-Symbol auf der Wiederholungsschaltfläche ](images/winenv-uac-image9.png)<br/> Zeigen Sie den UAC-Schutz für den Befehl nicht an, sondern für den Einstiegspunkt für erhöhte Rechte, wenn der Befehl fehlschlägt.<br/> | Anzeige der Benutzeroberfläche für erhöhte Rechte, wenn der Benutzer den Befehl erneut anmeldet.<br/>                                       |
+    | Taskschritt<br/>  | Alle nachfolgenden Schritte erfordern erhöhte Rechte.<br/>                                                                                                               | ![Screenshot der nächsten Befehlsschaltfläche mit UAC-Shield ](images/winenv-uac-image20.png)<br/> UAC-Shield auf der Schaltfläche Weiter (oder gleichwertig).<br/>                                                                | Zeigen Sie die Benutzeroberfläche für erhöhte Rechte an, wenn auf die Schaltfläche Weiter oder ein anderer Commit geklickt wird.<br/>                         |
+    | Taskschritt<br/>  | Einige Branches erfordern erhöhte Rechte.<br/>                                                                                                                      | ![Screenshot des Befehlslinks mit uac shield ](images/winenv-uac-image21.png)<br/> UAC-Shield für Befehlslinks, die eine Erhöhung erfordern.<br/>                                                              | Anzeigen der Benutzeroberfläche für erhöhte Rechte, wenn Befehlslinks mit UAC-Shield angeklickt werden.<br/>                      |
 
     
 
      
 
-### <a name="elevation-ui"></a>Rechte Erweiterung
+### <a name="elevation-ui"></a>Benutzeroberfläche für erhöhte Rechte
 
--   **Wenn der Benutzer ein ungültiges Konto (Name oder Kennwort) oder keine Administratorrechte bereitstellt, zeigen Sie einfach die Benutzeroberfläche für Anmelde Informationen erneut an.** Zeigt keine Fehlermeldung an.
--   **Wenn der Benutzer die Benutzeroberfläche für Anmelde Informationen abbricht, müssen Sie den Benutzer wieder an die ursprüngliche Benutzeroberfläche zurückgeben.** Zeigt keine Fehlermeldung an.
--   Wenn die Benutzerkontensteuerung ausgeschaltet wurde und ein Standard Benutzer versucht, eine Aufgabe auszuführen, für die erhöhte Rechte erforderlich sind, geben Sie eine Fehlermeldung mit dem Hinweis an, dass dieser Task Administratorrechte erfordert. Um diese Aufgabe auszuführen, müssen Sie sich mit einem Administrator Konto anmelden. "
+-   **Wenn der Benutzer ein Konto bereitstellt, das nicht gültig ist (Name oder Kennwort) oder nicht über Administratorrechte verfügt, zeigen Sie einfach die Benutzeroberfläche für Anmeldeinformationen erneut an.** Es wird keine Fehlermeldung angezeigt.
+-   **Wenn der Benutzer die Benutzeroberfläche für Anmeldeinformationen abbricht, kehren Sie den Benutzer zur ursprünglichen Benutzeroberfläche zurück.** Es wird keine Fehlermeldung angezeigt.
+-   Wenn die Benutzerkontensteuerung deaktiviert wurde und ein Standardbenutzer versucht, eine Aufgabe auszuführen, für die eine Erhöhung erforderlich ist, geben Sie eine Fehlermeldung mit dem Hinweis an, dass für diese Aufgabe Administratorrechte erforderlich sind. Um diese Aufgabe auszuführen, müssen Sie sich mit einem Administratorkonto anmelden."
 
-![Screenshot der Aufgabe "erfordert eine Berechtigungs Meldung" ](images/winenv-uac-image22.png)
+![Screenshot der Aufgabe erfordert Die Meldung "Berechtigungen" ](images/winenv-uac-image22.png)
 
-In diesem Beispiel wurde die Benutzerkontensteuerung deaktiviert, sodass in einer Fehlermeldung erläutert wird, dass der Benutzer ein Administrator Konto verwenden muss.
+In diesem Beispiel wurde die Benutzerkontensteuerung deaktiviert, sodass in einer Fehlermeldung erklärt wird, dass der Benutzer ein Administratorkonto verwenden muss.
 
 ### <a name="wizards"></a>Assistenten
 
--   **Erhöhen Sie nicht mehrmals.** Sobald ein Assistent erhöht wird, sollte er erhöht werden.
--   Wenn die Aufgabe innerhalb des Assistenten ausgeführt wird, platzieren Sie ein UAC-Schild auf der Schaltfläche "weiter" der Commit-Seite (die eine spezifischere [Bezeichnung](win-wizards.md)erhalten sollte). Wenn der Benutzer einen Commit ausführt:
-    -   Wenn die nächste Seite eine Statusseite ist, wechseln Sie zu dieser Seite, und zeigen Sie die Benutzeroberfläche für die Rechte Erweiterung modal an. Führen Sie nach erfolgreicher Erhöhung der Erweiterung die Aufgabe aus.
-    -   Wenn die nächste Seite eine Vervollständigungs Seite ist, fahren Sie mit der Seite fort (ersetzen Sie den Inhalt vorübergehend durch "warten auf Berechtigungen..."), und zeigen Sie die Benutzeroberfläche für die Rechte Erweiterung modal an. Führen Sie nach erfolgreicher Erweiterung die Aufgabe aus, und zeigen Sie dann den Inhalt der Vervollständigungs Seite an.
-    -   Wenn der Benutzer die Benutzeroberfläche für die Rechte Erweiterung abbricht, kehren Sie zur Seite Commit zurück. Auf diese Weise kann der Benutzer den Vorgang erneut versuchen.
--   Wenn die Aufgabe ausgeführt wird, nachdem der Assistent abgeschlossen ist, platzieren Sie ein UAC-Schild auf der Schaltfläche "Fertigstellen" der commitseite (die eine spezifischere [Bezeichnung](win-wizards.md)erhalten sollte). Wenn der Benutzer einen Commit ausführt:
-    -   Bleiben Sie auf der Seite Commit, und zeigen Sie die Benutzeroberfläche für die Rechte Erweiterung modal an Schließen Sie den Assistenten nach der erfolgreichen Erhöhung der Rechte.
-    -   Wenn der Benutzer die Benutzeroberfläche für die Rechte Erweiterung abbricht, kehren Sie zur Seite Commit zurück. Auf diese Weise kann der Benutzer den Vorgang erneut versuchen.
--   Für lange Assistenten, die nur für Administratoren vorgesehen sind, können Sie am Einstiegspunkt zum Eingeben von Administrator Anmelde Informationen auffordern, bevor Sie eine Benutzeroberfläche angezeigt werden.
+-   **Erhöhen Sie die Rechte nicht mehrmals.** Sobald ein Assistent mit erhöhten Rechten ausgeführt wird, sollte er mit erhöhten Rechten bleiben.
+-   Wenn die Aufgabe innerhalb des Assistenten ausgeführt wird, setzen Sie einen UAC-Shield auf die Schaltfläche "Weiter" der Commit-Seite (die eine [spezifischere Bezeichnung](win-wizards.md)erhalten sollte). Wenn der Benutzer committet:
+    -   Wenn die nächste Seite eine Seite Status ist, wechseln Sie zu dieser Seite, und zeigen Sie die Benutzeroberfläche für erhöhte Rechte modal an. Führen Sie nach erfolgreicher Erhöhung die Aufgabe aus.
+    -   Wenn die nächste Seite eine Vervollständigungsseite ist, wechseln Sie zu dieser Seite (ersetzen Sie den Inhalt jedoch vorübergehend durch "Warten auf Berechtigung..."), und zeigen Sie die Benutzeroberfläche für erhöhte Rechte modal an. Führen Sie nach erfolgreicher Erhöhung der Rechte die Aufgabe aus, und zeigen Sie dann den Inhalt der Seite Abschluss an.
+    -   Wenn der Benutzer die Benutzeroberfläche für erhöhte Rechte abbricht, kehren Sie zur Seite Commit zurück. Auf diese Weise kann der Benutzer es erneut versuchen.
+-   Wenn die Aufgabe nach Abschluss des Assistenten ausgeführt wird, legen Sie einen UAC-Shield auf der Schaltfläche "Fertig stellen" der Commitseite ab (die eine [spezifischere Bezeichnung](win-wizards.md)erhalten sollte). Wenn der Benutzer committet:
+    -   Bleiben Sie auf der Seite Commit, und zeigen Sie modal die Benutzeroberfläche für erhöhte Rechte an. Schließen Sie nach erfolgreicher Erhöhung den Assistenten.
+    -   Wenn der Benutzer die Benutzeroberfläche für erhöhte Rechte abbricht, kehren Sie zur Seite Commit zurück. Auf diese Weise kann der Benutzer es erneut versuchen.
+-   Für lange Assistenten, die nur für Administratoren vorgesehen sind, können Sie am Einstiegspunkt zur Eingabe von Administratoranmeldeinformationen auffordern, bevor Sie eine Benutzeroberfläche anzeigen.
 
 ## <a name="text"></a>Text
 
--   **Verwenden Sie nur dann ein Ellipsen, weil für einen Befehl eine Erhöhung erforderlich ist.** Die Notwendigkeit einer Erhöhung der Rechte wird durch das UAC-Schild angegeben.
+-   **Verwenden Sie keine Auslassungszeichen, nur weil für einen Befehl erhöhte Rechte erforderlich sind.** Die Notwendigkeit, erhöhte Rechte zu erhöhen, wird mit dem UAC-Shield angegeben.
 
 ## <a name="documentation"></a>Dokumentation
 
-Beim Verweis auf die Benutzerkontensteuerung:
+Beim Verweisen auf die Benutzerkontensteuerung:
 
--   Weitere Informationen finden Sie unter Benutzerkontensteuerung (bei der ersten Erwähnung) oder UAC (bei späterer Erwähnung), nicht mit dem geringsten Benutzerkonto oder Lua.
--   Weitere Informationen finden Sie unter nicht-Administratoren als Standard Benutzer.
--   Weitere Informationen finden Sie unter integrierte Computer Administratoren als integrierte Administratoren.
+-   Beziehen Sie sich auf das Feature als Benutzerkontensteuerung (bei erster Erwähnung) oder UAC (bei späterer Erwähnung), nicht als Benutzerkonto mit geringsten Berechtigungen oder LUA.
+-   Beziehen Sie sich auf Nichtadministratoren als Standardbenutzer.
+-   Integrierte Computeradministratoren finden Sie unter Integrierte Administratoren.
 
 In der Benutzerdokumentation:
 
--   Weitere Informationen finden Sie unter Erteilen der Zustimmung zum Ausführen einer administrativen Aufgabe als erteilen der Berechtigung.
+-   Beziehen Sie sich auf das Erteilen der Zustimmung zum Ausführen einer administrativen Aufgabe als Erteilen der Berechtigung.
 
-In der Programmierung und in anderen technischen Dokumentationen:
+In der Programmierung und anderen technischen Dokumentationen:
 
--   Weitere Informationen finden Sie unter Erteilen der Zustimmung zum Ausführen einer administrativen Aufgabe als Erhöhung.
--   Im Zusammenhang mit der Benutzerkontensteuerung können Sie Administratoren als geschützte Administratoren bei nicht erhöhten Rechten und erhöhte Administratoren nach der Erhöhung der Rechte entnehmen.
--   Lesen Sie das Dialogfeld zum Eingeben von Kenn Wörtern als Anmelde Informationen-Benutzeroberfläche. Lesen Sie das Dialogfeld, das verwendet wird, um der Zustimmungs Benutzeroberfläche die Zustimmung zu erteilen. Im Allgemeinen wird die Benutzeroberfläche für die Rechte Erweiterung bezeichnet.
+-   Beziehen Sie sich auf das Erteilen der Zustimmung zum Ausführen einer Administrativen Aufgabe als Erhöhung.
+-   Beziehen Sie sich im Kontext der UAC auf Administratoren als geschützte Administratoren, wenn sie keine erhöhten Rechte haben, und Administratoren mit erhöhten Rechten nach erhöhten Rechten.
+-   Weitere Informationen finden Sie in dem Dialogfeld, in dem Kennwörter als Anmeldeinformations-Benutzeroberfläche eingegeben werden. Weitere Informationen finden Sie in dem Dialogfeld, das zum Erteilen der Zustimmung verwendet wird, als Benutzeroberfläche für die Zustimmung. Im Allgemeinen wird beides als Elevation UI (Erhöhte Benutzeroberfläche) bezeichnet.
 

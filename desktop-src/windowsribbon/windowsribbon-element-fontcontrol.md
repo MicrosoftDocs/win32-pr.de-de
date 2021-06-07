@@ -1,6 +1,6 @@
 ---
 title: FontControl-Element
-description: Stellt ein Schriftart Steuerelement dar, bei dem es sich um einen speziellen Container einzelner Steuerelemente handelt, die für die Schriftart Bearbeitung
+description: Stellt ein Schriftartsteuerelement dar, bei dem es sich um einen speziellen Container einzelner Steuerelemente für die Schriftartbearbeitung handelt.
 ms.assetid: 98eddab5-28cb-4b9d-a788-ee28dd6055b1
 keywords:
 - FontControl-Element Windows-Menüband
@@ -13,18 +13,18 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: fa080b58e3a9d53fa044e7dbbb6598d5b7be7c49
-ms.sourcegitcommit: 2387bc0339a1764564c1509e72ed5f2e8ae60b36
+ms.openlocfilehash: 42c9d900c2af4f7f8ba26f5ac8dbbdc0d055668d
+ms.sourcegitcommit: 099ecdda1e83618b844387405da0db0ebda93a65
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "104390115"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111443401"
 ---
 # <a name="fontcontrol-element"></a>FontControl-Element
 
-Stellt ein [Schriftart Steuer](windowsribbon-controls-fontcontrol.md)Element dar, bei dem es sich um einen speziellen Container einzelner Steuerelemente handelt, die für die Schriftart Bearbeitung
+Stellt ein [Schriftartsteuerelement](windowsribbon-controls-fontcontrol.md)dar, bei dem es sich um einen speziellen Container einzelner Steuerelemente für die Schriftartbearbeitung handelt.
 
-## <a name="usage"></a>Verbrauch
+## <a name="usage"></a>Verwendung
 
 ``` syntax
 <FontControl
@@ -53,8 +53,8 @@ Stellt ein [Schriftart Steuer](windowsribbon-controls-fontcontrol.md)Element dar
 </colgroup>
 <thead>
 <tr class="header">
-<th>Attribut</th>
-<th>type</th>
+<th>attribute</th>
+<th>Typ</th>
 <th>Erforderlich</th>
 <th>BESCHREIBUNG</th>
 </tr>
@@ -62,141 +62,141 @@ Stellt ein [Schriftart Steuer](windowsribbon-controls-fontcontrol.md)Element dar
 <tbody>
 <tr class="odd">
 <td><strong>CommandName</strong><br/></td>
-<td>xs: positiveingeteger oder xs: String<br/></td>
+<td>xs:positiveInteger oder xs:string<br/></td>
 <td>Nein<br/></td>
-<td>Ordnet das-Element einem <a href="windowsribbon-element-command.md"><strong>Befehl</strong></a>zu.<br/> <br/>
-<dt><span></span><span></span><strong></strong> (xs: positiveingeteger oder xs: String)<br/> </dt> <dd> Eine Zeichenfolge, ein ganzzahliger Wert zwischen 2 und 59999, einschließlich, oder ein Hexadezimalwert zwischen 0x2 und 0xea5f (einschließlich). <br/> Der Wert muss innerhalb des Menüband-XML-Dokuments eindeutig sein. <br/> Maximale Länge: 100 Zeichen. <br/> </dd> </dl></td>
+<td>Ordnet das Element einem <a href="windowsribbon-element-command.md"><strong>Command zu.</strong></a><br/> <br/>
+<dt><span></span><span></span><strong></strong> (xs:positiveInteger oder xs:string)<br/> </dt> <dd> Eine Zeichenfolge, ein ganzzahliger Wert zwischen 2 und 59999 einschließlich oder ein Hexadezimalwert zwischen 0x2 und 0xea5f einschließlich. <br/> Der Wert muss innerhalb des Menüband-XML-Dokuments eindeutig sein. <br/> Maximale Länge: 100 Zeichen. <br/> </dd> </dl></td>
 </tr>
 <tr class="even">
-<td><strong>Fonttype</strong><br/></td>
+<td><strong>FontType</strong><br/></td>
 <td>xs:string<br/></td>
 <td>Nein<br/></td>
 <td>Beschränkt auf einen der folgenden Werte: <br/> <br/>
-<dt><span></span><span></span><strong></strong> (Fontonly)<br/> </dt> <dd> Standard. <br/> <img src="images/markup/screenshot-fonttype-fontonly.png" alt="Screen shot of the FontControl element with the FontOnly attribute set to true." /><br/> Durch Festlegen des Attributs " <em>fonttype</em> " auf werden <code>FontOnly</code> die folgenden Funktionen aktiviert:<br/>
+<dt><span></span><span></span><strong></strong> (FontOnly)<br/> </dt> <dd> Standard. <br/> <img src="images/markup/screenshot-fonttype-fontonly.png" alt="Screen shot of the FontControl element with the FontOnly attribute set to true." /><br/> Das Festlegen des <em>FontType-Attributs</em> auf <code>FontOnly</code> ermöglicht die folgende Funktionalität:<br/>
 <ul>
-<li>Kombinations Feld " <strong>Schriftfamilie</strong> ".</li>
-<li>Kombinations Feld " <strong>Schriftgröße</strong> ".</li>
-<li><p>Die UMSCHALT Flächen <strong>Fett</strong>, <strong>kursiv</strong>, unter <strong>Strichen</strong>und <strong>durch</strong> gestrichen.</p>
+<li><strong>Kombinationsfeld der Schriftfamilie.</strong></li>
+<li><strong>Kombinationsfeld "Schriftgrad".</strong></li>
+<li><p><strong>Fette,</strong> <strong>kursiv formatierte,</strong> <strong>unterstrichene</strong>und <strong>durchgestrichene</strong> Umschaltflächen.</p>
 <blockquote>
 [!Note]<br />
-Die UMSCHALT Flächen " <strong>durch</strong> gestrichen" und "unter <strong>streichen</strong> " werden standardmäßig angezeigt. Sie können jedoch ausgeblendet werden, indem Sie die Attribute " <em>isstrikeflowbuttonvisible</em> " und " <em>isunderlinebuttonvisible</em> " auf festlegen <code>false</code> .
+Die Umschaltflächen <strong>Durchstreichen</strong> und <strong>Unterstrichen</strong> werden standardmäßig angezeigt, können jedoch ausgeblendet werden, indem sie die Attribute <em>IsStrikethroughButtonVisible</em> und <em>IsUnderlineButtonVisible</em> auf <code>false</code> festlegen.
 </blockquote>
 <p><br/></p></li>
 </ul>
-</dd> <dt><span></span><span></span><strong></strong> (Fontwithcolor)<br/> </dt> <dd> <img src="images/markup/screenshot-fonttype-fontwithcolor.png" alt="Screen shot of the FontControl element with the FontWithColor attribute set to true." /><br/> Durch Festlegen des Attributs " <em>fonttype</em> " auf werden <code>FontWithColor</code> die folgenden Funktionen aktiviert:<br/>
+</dd> <dt><span></span><span></span><strong></strong> (FontWithColor)<br/> </dt> <dd> <img src="images/markup/screenshot-fonttype-fontwithcolor.png" alt="Screen shot of the FontControl element with the FontWithColor attribute set to true." /><br/> Das Festlegen des <em>FontType-Attributs</em> auf <code>FontWithColor</code> ermöglicht die folgende Funktionalität:<br/>
 <ul>
-<li>Kombinations Feld " <strong>Schriftfamilie</strong> ".</li>
-<li>Kombinations Feld " <strong>Schriftgröße</strong> ".</li>
-<li><strong>Vergrößern Sie Schriftart</strong> , und <strong>verkleinern</strong> Sie die Schriftart für die Schriftgröße und die Dekrement-Schaltflächen</li>
-<li><p>Die UMSCHALT Flächen <strong>Fett</strong>, <strong>kursiv</strong>, unter <strong>Strichen</strong>und <strong>durch</strong> gestrichen.</p>
+<li><strong>Kombinationsfeld der Schriftfamilie.</strong></li>
+<li><strong>Kombinationsfeld "Schriftgrad".</strong></li>
+<li>Schaltflächen <strong>Schriftart</strong> vergrößern und <strong>Schriftgrad verkleinern</strong> inkrementieren und verringern.</li>
+<li><p><strong>Fette,</strong> <strong>kursiv formatierte,</strong> <strong>unterstrichene</strong>und <strong>durchgestrichene</strong> Umschaltflächen.</p>
 <blockquote>
 [!Note]<br />
-Die UMSCHALT Flächen " <strong>durch</strong> gestrichen" und "unter <strong>streichen</strong> " werden standardmäßig angezeigt. Sie können jedoch ausgeblendet werden, indem Sie die Attribute " <em>isstrikeflowbuttonvisible</em> " und " <em>isunderlinebuttonvisible</em> " auf festlegen <code>false</code> .
+Die Umschaltflächen <strong>Durchstreichen</strong> und <strong>Unterstrichen</strong> werden standardmäßig angezeigt, können jedoch ausgeblendet werden, indem sie die Attribute <em>IsStrikethroughButtonVisible</em> und <em>IsUnderlineButtonVisible</em> auf <code>false</code> festlegen.
 </blockquote>
 <p><br/></p></li>
-<li>Farbfarb Auswahl für <strong>Text</strong> .</li>
-<li><p><strong>Farbauswahl für Text Hervorhebung</strong> .</p>
+<li><strong>Farbauswahl für Textfarbe.</strong></li>
+<li><p><strong>Farbauswahl für Textmarkierung.</strong></p>
 <blockquote>
 [!Note]<br />
-Dieses Steuerelement ist standardmäßig ausgeblendet, kann jedoch angezeigt werden, indem das <em>ishighlightbuttonvisible</em> -Attribut auf festgelegt wird <code>true</code> .
+Dieses Steuerelement ist standardmäßig ausgeblendet, kann jedoch durch Festlegen des <em>IsHighlightButtonVisible-Attributs</em> auf angezeigt <code>true</code> werden.
 </blockquote>
 <p><br/></p></li>
 </ul>
-</dd> <dt><span></span><span></span><strong></strong> (Richfont)<br/> </dt> <dd> <img src="images/markup/screenshot-fonttype-richfont.png" alt="Screen shot of the FontControl element with the RichFont attribute set to true." /><br/> Durch Festlegen des Attributs " <em>fonttype</em> " auf werden <code>RichFont</code> die folgenden Funktionen aktiviert:<br/>
+</dd> <dt><span></span><span></span><strong></strong> (RichFont)<br/> </dt> <dd> <img src="images/markup/screenshot-fonttype-richfont.png" alt="Screen shot of the FontControl element with the RichFont attribute set to true." /><br/> Das Festlegen des <em>FontType-Attributs</em> auf <code>RichFont</code> ermöglicht die folgende Funktionalität:<br/>
 <ul>
-<li>Kombinations Feld " <strong>Schriftfamilie</strong> ".</li>
-<li>Kombinations Feld " <strong>Schriftgröße</strong> ".</li>
-<li><strong>Vergrößern Sie Schriftart</strong> , und <strong>verkleinern</strong> Sie die Schriftart für die Schriftgröße und die Dekrement-Schaltflächen</li>
-<li><p>Die UMSCHALT Flächen <strong>Fett</strong>, <strong>kursiv</strong>, unter <strong>Strichen</strong>und <strong>durch</strong> gestrichen.</p>
+<li><strong>Kombinationsfeld der Schriftfamilie.</strong></li>
+<li><strong>Kombinationsfeld "Schriftgrad".</strong></li>
+<li>Schaltflächen <strong>Schriftart</strong> vergrößern und <strong>Schriftgrad verkleinern</strong> inkrementieren und verringern.</li>
+<li><p><strong>Fette,</strong> <strong>kursiv formatierte,</strong> <strong>unterstrichene</strong>und <strong>durchgestrichene</strong> Umschaltflächen.</p>
 <blockquote>
 [!Note]<br />
-Die UMSCHALT Flächen " <strong>durch</strong> gestrichen" und "unter <strong>streichen</strong> " werden standardmäßig angezeigt und können nicht ausgeblendet werden, indem die Attribute " <em>isstrikeflowbuttonvisible</em> " und " <em>isunderlinebuttonvisible</em> " auf festgelegt werden <code>false</code> .
+Die Umschaltflächen <strong>Durchstreichen</strong> und <strong>Unterstrichen</strong> werden standardmäßig angezeigt und können nicht ausgeblendet werden, indem die Attribute <em>IsStrikethroughButtonVisible</em> und <em>IsUnderlineButtonVisible</em> auf festgelegt <code>false</code> werden.
 </blockquote>
 <p><br/></p></li>
-<li>Farbfarb Auswahl für <strong>Text</strong> .</li>
-<li><p><strong>Farbauswahl für Text Hervorhebung</strong> .</p>
+<li><strong>Farbauswahl für Textfarbe.</strong></li>
+<li><p><strong>Farbauswahl für Textmarkierung.</strong></p>
 <blockquote>
 [!Note]<br />
-Dieses Steuerelement wird standardmäßig angezeigt und kann nicht ausgeblendet werden, indem das <em>ishighlightbuttonvisible</em> -Attribut auf festgelegt wird <code>false</code> .
+Dieses Steuerelement wird standardmäßig angezeigt und kann nicht ausgeblendet werden, indem das <em>IsHighlightButtonVisible-Attribut</em> auf festgelegt <code>false</code> wird.
 </blockquote>
 <p><br/></p></li>
-<li>UMSCHALT Flächen für das Tief <strong>gestellte und das</strong> <strong>SuperScript</strong> .</li>
+<li><strong>Umschaltflächen "Tiefgestellt"</strong> und <strong>"Superscript"</strong></li>
 </ul>
 </dd> </dl></td>
 </tr>
 <tr class="odd">
-<td><strong>Isgrowshrinkbuttongroupvisible</strong><br/></td>
+<td><strong>IsGrowShrinkButtonGroupVisible</strong><br/></td>
 <td>Boolesch<br/></td>
 <td>Nein<br/></td>
-<td><strong>Windows 8 und höher</strong><br/> Beschränkt auf einen der folgenden Werte: <br/>
+<td><strong>Windows 8 und neuer</strong><br/> Beschränkt auf einen der folgenden Werte: <br/>
 <blockquote>
 [!Note]<br />
-Die Schaltflächen vergrößern/verkleinern werden nie in der <a href="windowsribbon-element-minitoolbar.md"><strong>MiniToolbar</strong></a>angezeigt.
+Die Schaltflächen Vergrößern/Verkleinern werden nie in der <a href="windowsribbon-element-minitoolbar.md"><strong>MiniToolbar</strong></a>angezeigt.
 </blockquote>
 <br/> <br/>
-<dt><span></span><span></span><strong></strong> Fall<br/> </dt> <dd> Standardwert, wenn der Wert von " <em>fonttype</em> " <code>FontWithColor</code> oder ist <code>RichFont</code> .<br/> </dd> <dt><span></span><span></span><strong></strong> Alarm<br/> </dt> <dd> Standardwert, wenn der Wert von " <em>fonttype</em> " ist <code>FontOnly</code> .<br/> </dd> </dl></td>
+<dt><span></span><span></span><strong></strong> (true)<br/> </dt> <dd> Standardwert, wenn der Wert von <em>FontType</em> gleich <code>FontWithColor</code> oder <code>RichFont</code> ist.<br/> </dd> <dt><span></span><span></span><strong></strong> (false)<br/> </dt> <dd> Standardwert, wenn der Wert von <em>FontType</em> gleich <code>FontOnly</code> ist.<br/> </dd> </dl></td>
 </tr>
 <tr class="even">
-<td><strong>Ishighlightbuttonvisible</strong><br/></td>
+<td><strong>IsHighlightButtonVisible</strong><br/></td>
 <td>Boolesch<br/></td>
 <td>Nein<br/></td>
-<td>Auf einen der folgenden Werte beschränkt (0 und 1 sind ungültig): <br/>
+<td>Beschränkt auf einen der folgenden Werte (0 und 1 sind ungültig): <br/>
 <blockquote>
 [!Note]<br />
-Die Farb Hervorhebung ist nur von einem <strong>FontControl</strong> -Element verfügbar, wenn der Wert des <em>fonttype</em> -Attributs <code>FontWithColor</code> oder entspricht <code>RichFont</code> .
+Die Farbhervorhebung ist nur über <strong>ein FontControl</strong> verfügbar, wenn der Wert des <em>FontType-Attributs</em> <code>FontWithColor</code> gleich oder <code>RichFont</code> ist.
 </blockquote>
 <br/> <br/>
-<dt><span></span><span></span><strong></strong> Fall<br/> </dt> <dd> Standardwert, wenn der Wert von " <em>fonttype</em> " <code>FontWithColor</code> oder ist <code>RichFont</code> .<br/> Nur gültig, wenn der Wert von " <em>fonttype</em> " <code>FontWithColor</code> oder ist <code>RichFont</code> .<br/> </dd> <dt><span></span><span></span><strong></strong> Alarm<br/> </dt> <dd> Standardwert, wenn der Wert von " <em>fonttype</em> " ist <code>FontOnly</code> .<br/> Nur gültig, wenn der Wert von " <em>fonttype</em> " <code>FontOnly</code> oder ist <code>FontWithColor</code> .<br/> </dd> </dl></td>
+<dt><span></span><span></span><strong></strong> (true)<br/> </dt> <dd> Standardwert, wenn der Wert von <em>FontType</em> gleich <code>FontWithColor</code> oder <code>RichFont</code> ist.<br/> Nur gültig, wenn der Wert von <em>FontType</em> gleich <code>FontWithColor</code> oder <code>RichFont</code> ist.<br/> </dd> <dt><span></span><span></span><strong></strong> (false)<br/> </dt> <dd> Standardwert, wenn der Wert von <em>FontType</em> gleich <code>FontOnly</code> ist.<br/> Nur gültig, wenn der Wert von <em>FontType</em> gleich <code>FontOnly</code> oder <code>FontWithColor</code> ist.<br/> </dd> </dl></td>
 </tr>
 <tr class="odd">
-<td><strong>Isstrikethrough buttonvisible</strong><br/></td>
+<td><strong>IsStrikethroughButtonVisible</strong><br/></td>
 <td>Boolesch<br/></td>
 <td>Nein<br/></td>
-<td>Auf einen der folgenden Werte beschränkt (0 und 1 sind ungültig): <br/> <br/>
-<dt><span></span><span></span><strong></strong> Fall<br/> </dt> <dd> Standard. <br/> </dd> <dt><span></span><span></span><strong></strong> Alarm<br/> </dt> <dd> Nur gültig, wenn der Wert von " <em>fonttype</em> " <code>FontOnly</code> oder ist <code>FontWithColor</code> . <br/> </dd> </dl></td>
+<td>Beschränkt auf einen der folgenden Werte (0 und 1 sind ungültig): <br/> <br/>
+<dt><span></span><span></span><strong></strong> (true)<br/> </dt> <dd> Standard. <br/> </dd> <dt><span></span><span></span><strong></strong> (false)<br/> </dt> <dd> Nur gültig, wenn der Wert von <em>FontType</em> gleich <code>FontOnly</code> oder <code>FontWithColor</code> ist. <br/> </dd> </dl></td>
 </tr>
 <tr class="even">
-<td><strong>Isunderlinebuttonvisible</strong><br/></td>
+<td><strong>IsUnderlineButtonVisible</strong><br/></td>
 <td>Boolesch<br/></td>
 <td>Nein<br/></td>
-<td>Auf einen der folgenden Werte beschränkt (0 und 1 sind ungültig): <br/> <br/>
-<dt><span></span><span></span><strong></strong> Fall<br/> </dt> <dd> Standard. <br/> </dd> <dt><span></span><span></span><strong></strong> Alarm<br/> </dt> <dd> Nur gültig, wenn der Wert von " <em>fonttype</em> " <code>FontOnly</code> oder ist <code>FontWithColor</code> . <br/> </dd> </dl></td>
+<td>Beschränkt auf einen der folgenden Werte (0 und 1 sind ungültig): <br/> <br/>
+<dt><span></span><span></span><strong></strong> (true)<br/> </dt> <dd> Standard. <br/> </dd> <dt><span></span><span></span><strong></strong> (false)<br/> </dt> <dd> Nur gültig, wenn der Wert von <em>FontType</em> gleich <code>FontOnly</code> oder <code>FontWithColor</code> ist. <br/> </dd> </dl></td>
 </tr>
 <tr class="odd">
-<td><strong>Maximumfontsize</strong><br/></td>
+<td><strong>MaximumFontSize</strong><br/></td>
 <td>xs:positiveInteger<br/></td>
 <td>Nein<br/></td>
 <td>Die maximale anzuzeigende Punktgröße.<br/> <br/>
-<dt><span></span><span></span><strong></strong> (xs: positivin teger)<br/> </dt> <dd> Ein ganzzahliger Wert zwischen 1 und 9999 (einschließlich).<br/> Der Standardwert ist <strong>9999</strong>.<br/> </dd> </dl></td>
+<dt><span></span><span></span><strong></strong> (xs:positiveInteger)<br/> </dt> <dd> Ein ganzzahliger Wert zwischen 1 und 9999 einschließlich.<br/> Der Standardwert ist <strong>9999.</strong><br/> </dd> </dl></td>
 </tr>
 <tr class="even">
 <td><strong>MinimumFontSize</strong><br/></td>
 <td>xs:positiveInteger<br/></td>
 <td>Nein<br/></td>
 <td>Die minimale anzuzeigende Punktgröße.<br/> <br/>
-<dt><span></span><span></span><strong></strong> (xs: positivin teger)<br/> </dt> <dd> Ein ganzzahliger Wert zwischen 1 und 9999 (einschließlich).<br/> Der Standardwert ist <strong>1</strong>.<br/> </dd> </dl></td>
+<dt><span></span><span></span><strong></strong> (xs:positiveInteger)<br/> </dt> <dd> Ein ganzzahliger Wert zwischen 1 und 9999 einschließlich .<br/> Der Standardwert ist <strong>1.</strong><br/> </dd> </dl></td>
 </tr>
 <tr class="odd">
-<td><strong>Showtruetypinonly</strong><br/></td>
+<td><strong>ShowTrueTypeOnly</strong><br/></td>
 <td>Boolesch<br/></td>
 <td>Nein<br/></td>
-<td>Auf einen der folgenden Werte beschränkt (0 und 1 sind ungültig):<br/> <br/>
-<dt><span></span><span></span><strong></strong> Fall<br/> </dt> <dd> Zeigt nur TrueType-und OpenType-Schriftarten an. <br/> </dd> <dt><span></span><span></span><strong></strong> Alarm<br/> </dt> <dd> Standard. Der Typ der angezeigten Schriftarten wird nicht eingeschränkt.<br/> </dd> </dl></td>
+<td>Beschränkt auf einen der folgenden Werte (0 und 1 sind ungültig):<br/> <br/>
+<dt><span></span><span></span><strong></strong> (true)<br/> </dt> <dd> Zeigt nur TrueType- und OpenType-Schriftarten an. <br/> </dd> <dt><span></span><span></span><strong></strong> (false)<br/> </dt> <dd> Standard. Es wird keine Einschränkung für den Typ der angezeigten Schriftarten platziert.<br/> </dd> </dl></td>
 </tr>
 <tr class="even">
-<td><strong>Showverticalfonts</strong><br/></td>
+<td><strong>ShowVerticalFonts</strong><br/></td>
 <td>Boolesch<br/></td>
 <td>Nein<br/></td>
-<td>Auf einen der folgenden Werte beschränkt (0 und 1 sind ungültig):<br/>
+<td>Beschränkt auf einen der folgenden Werte (0 und 1 sind ungültig):<br/>
 <blockquote>
 [!Note]<br />
-Vertikalen Schriftarten wird ein @-Symbol in der <strong>Schriftfamilien</strong> Liste vorangestellt.
+Vertikalen Schriftarten wird in der Liste Schriftfamilie ein <strong>@-Symbol</strong> vorangehende.
 </blockquote>
 <br/> <br/>
-<dt><span></span><span></span><strong></strong> Fall<br/> </dt> <dd> Standard. Zeigt die vertikalen Schriftarten an, die in der Systemsteuerung der <strong>Schriftarten</strong> <strong>angezeigt</strong> werden. <br/> </dd> <dt><span></span><span></span><strong></strong> Alarm<br/> </dt> <dd> Ermöglicht es einer Anwendung, die vertikalen Text nicht unterstützt, vertikale Schriftarten auszublenden, die in der Systemsteuerung der <strong>Schriftarten</strong> <strong>angezeigt</strong> werden.<br/>
+<dt><span></span><span></span><strong></strong> (true)<br/> </dt> <dd> Standard. Zeigt die vertikalen Schriftarten an, die in <strong>der</strong> Systemsteuerung <strong>Schriftarten</strong> auf Anzeigen festgelegt sind. <br/> </dd> <dt><span></span><span></span><strong></strong> (false)<br/> </dt> <dd> Ermöglicht einer Anwendung, die keinen vertikalen Text unterstützt, alle vertikalen Schriftarten auszublenden, die <strong>in</strong> der Systemsteuerung <strong>Schriftarten</strong> auf Anzeigen festgelegt sind.<br/>
 <blockquote>
 [!Note]<br />
-In Windows Vista bietet die Systemsteuerung für <strong>Schriftarten</strong> keine Funktionen zum <strong>anzeigen</strong> oder <strong>Ausblenden</strong> . In diesem Fall muss das <em>showverticalfonts</em> -Attribut auf festgelegt werden <code>False</code> .
+In Windows Vista bietet die <strong>Systemsteuerung</strong> Schriftarten keine Funktionen zum <strong>Ein-</strong> <strong>oder</strong> Ausblenden. In diesem Fall muss das <em>ShowVerticalFonts-Attribut</em> auf festgelegt <code>False</code> werden.
 </blockquote>
 <br/> </dd> </dl></td>
 </tr>
@@ -215,27 +215,27 @@ Es gibt keine untergeordneten Elemente.
 
 | Element                                                               |
 |-----------------------------------------------------------------------|
-| [**Controlgroup**](windowsribbon-element-controlgroup.md)<br/> |
+| [**ControlGroup**](windowsribbon-element-controlgroup.md)<br/> |
 | [**Gruppe**](windowsribbon-element-group.md)<br/>               |
-| [**MenuGroup**](windowsribbon-element-menugroup.md)<br/>       |
+| [**Menugroup**](windowsribbon-element-menugroup.md)<br/>       |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Dies ist optional.
 
-Kann höchstens einmal für jedes Element der Gruppe " [**controlgroup**](windowsribbon-element-controlgroup.md)", " [**Group**](windowsribbon-element-group.md)" oder " [**MenuGroup**](windowsribbon-element-menugroup.md) " auftreten.
+Kann für jedes [**ControlGroup-,**](windowsribbon-element-controlgroup.md) [**Group- oder**](windowsribbon-element-group.md) [**MenuGroup-Element mindestens einmal**](windowsribbon-element-menugroup.md) auftreten.
 
-Alle im Markup deklarierten **FontControl** -Befehls Attribute, z [**. b. Command. labeltitle**](windowsribbon-element-command-labeltitle.md) oder [**Command. ToolTipTitle**](windowsribbon-element-command-tooltiptitle.md), werden von den Attributen der einzelnen Steuerelemente, aus denen das **FontControl**-Element besteht, überschrieben.
+Alle **im Markup deklarierten FontControl-Befehlsattribute,** z.B. [**Command.LabelTitle**](windowsribbon-element-command-labeltitle.md) oder [**Command.TooltipTitle,**](windowsribbon-element-command-tooltiptitle.md)werden durch die Attribute der einzelnen Steuerelemente überschrieben, aus denen **fontControl besteht.**
 
-Jeder Versuch, ein Farbmuster aus der Farbauswahl eines [Schriftart Steuer](windowsribbon-controls-fontcontrol.md) Elements auszuwählen, kann zu einer Zugriffsverletzung führen, wenn dem Steuerelement kein Befehls Handler zugeordnet ist.
+Jeder Versuch, ein Farbmuster aus der Farbauswahl eines Schriftartsteuerfelds auszuwählen, kann zu einer Zugriffsverletzung führen, wenn dem Steuerelement kein Befehlshandler zugeordnet ist. [](windowsribbon-controls-fontcontrol.md)
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird das grundlegende Markup für die drei Arten von [Schriftart Steuer](windowsribbon-controls-fontcontrol.md)Elementen veranschaulicht.
+Im folgenden Beispiel wird das grundlegende Markup für die drei Typen von [Font Control veranschaulicht.](windowsribbon-controls-fontcontrol.md)
 
-In diesem Code Abschnitt werden die **FontControl** -Befehls Deklarationen angezeigt, die jeweils über eine [**Gruppen**](windowsribbon-element-group.md) Container Deklaration verfügen.
+Dieser Codeabschnitt zeigt die **Deklarationen des FontControl-Befehls** mit jeweils einer [**Gruppencontainerdeklaration.**](windowsribbon-element-group.md)
 
 
 ```XML
@@ -279,7 +279,7 @@ In diesem Code Abschnitt werden die **FontControl** -Befehls Deklarationen angez
 
 
 
-Dieser Code Abschnitt zeigt die **FontControl** -Steuerelement Deklarationen, in denen jedes **FontControl** und jede [**Gruppe**](windowsribbon-element-group.md) auf einer einzelnen Registerkarte deklariert wird.
+Dieser Codeabschnitt zeigt die **Deklarationen des** FontControl-Steuerelements, bei denen **jedes FontControl** und [**jede Gruppe**](windowsribbon-element-group.md) auf einer einzelnen Registerkarte deklariert wird.
 
 
 ```XML
@@ -317,12 +317,8 @@ Dieser Code Abschnitt zeigt die **FontControl** -Steuerelement Deklarationen, in
 
 ## <a name="element-information"></a>Elementinformationen
 
-
-
-|                                     |           |
-|-------------------------------------|-----------|
-| Unterstützte Mindestversion (System)<br/> | Windows 7 |
-| Kann leer bleiben                        | Ja       |
+* **Unterstütztes Mindestsystem:** Windows 7
+* **Kann leer sein:** Ja
 
 
 
@@ -330,10 +326,10 @@ Dieser Code Abschnitt zeigt die **FontControl** -Steuerelement Deklarationen, in
 
 <dl> <dt>
 
-[Schriftart Steuerelement Steuerelement](windowsribbon-controls-fontcontrol.md)
+[Steuerelement "Schriftart"](windowsribbon-controls-fontcontrol.md)
 </dt> <dt>
 
-[Schriftart Steuerelement-Eigenschaften](windowsribbon-reference-properties-fontcontrol.md)
+[Eigenschaften des Schriftartsteuersteuer steuerelements](windowsribbon-reference-properties-fontcontrol.md)
 </dt> <dt>
 
 [FontControl-Beispiel](windowsribbon-fontcontrolsample.md)

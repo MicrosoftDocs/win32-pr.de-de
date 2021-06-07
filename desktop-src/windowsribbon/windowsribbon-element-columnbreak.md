@@ -1,9 +1,9 @@
 ---
-title: Columnbreak-Element
-description: Stellt ein vertikales Trennzeichen (sichtbar oder ausgeblendet) in benutzerdefinierten sizedefinition-Layoutvorlagen dar.
+title: ColumnBreak-Element
+description: Stellt ein vertikales Trennzeichen (sichtbar oder ausgeblendet) in benutzerdefinierten SizeDefinition-Layoutvorlagen dar.
 ms.assetid: 5979d3e6-366b-4c47-810f-90fb8039af8d
 keywords:
-- Windows-Menüband für columnbreak-Element
+- ColumnBreak-Element Im Windows-Menüband
 topic_type:
 - apiref
 api_name:
@@ -13,18 +13,18 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 00257783c0c8a7919251004a4b1996ab4d994c3c
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: b5bff1682cdf55b44092a176abd6dc7e935220a7
+ms.sourcegitcommit: 099ecdda1e83618b844387405da0db0ebda93a65
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "106342099"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111444841"
 ---
-# <a name="columnbreak-element"></a>Columnbreak-Element
+# <a name="columnbreak-element"></a>ColumnBreak-Element
 
-Stellt ein vertikales Trennzeichen (sichtbar oder ausgeblendet) in benutzerdefinierten [**sizedefinition**](windowsribbon-element-sizedefinition.md) -Layoutvorlagen dar.
+Stellt ein vertikales Trennzeichen (sichtbar oder ausgeblendet) in benutzerdefinierten [**SizeDefinition-Layoutvorlagen**](windowsribbon-element-sizedefinition.md) dar.
 
-## <a name="usage"></a>Verbrauch
+## <a name="usage"></a>Verwendung
 
 ``` syntax
 <ColumnBreak
@@ -44,19 +44,19 @@ Stellt ein vertikales Trennzeichen (sichtbar oder ausgeblendet) in benutzerdefin
 </colgroup>
 <thead>
 <tr class="header">
-<th>Attribut</th>
-<th>type</th>
+<th>attribute</th>
+<th>Typ</th>
 <th>Erforderlich</th>
 <th>BESCHREIBUNG</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><strong>Showseparator</strong><br/></td>
+<td><strong>ShowSeparator</strong><br/></td>
 <td>Boolesch<br/></td>
 <td>Nein<br/></td>
-<td>Beschränkt auf einen der folgenden Werte:<br/> <br/>
-<dt><span></span><span></span><strong></strong> Fall<br/> </dt> <dd> Standard. <br/> </dd> <dt><span></span><span></span><strong></strong> Alarm<br/> </dt> <dd></dd> </dl></td>
+<td>Auf einen der folgenden Werte beschränkt:<br/> <br/>
+<dt><span></span><span></span><strong></strong> (true)<br/> </dt> <dd> Standard. <br/> </dd> <dt><span></span><span></span><strong></strong> (false)<br/> </dt> <dd></dd> </dl></td>
 </tr>
 </tbody>
 </table>
@@ -73,19 +73,19 @@ Es gibt keine untergeordneten Elemente.
 
 | Element                                                                             |
 |-------------------------------------------------------------------------------------|
-| [**Groupsizedefinition**](windowsribbon-element-groupsizedefinition.md)<br/> |
+| [**GroupSizeDefinition**](windowsribbon-element-groupsizedefinition.md)<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Dies ist optional.
 
-Kann für jedes [**groupsizedefinition**](windowsribbon-element-groupsizedefinition.md) -Element einmal oder mehrmals vorkommen.
+Kann ein oder mehrere Male für jedes [**GroupSizeDefinition-Element**](windowsribbon-element-groupsizedefinition.md) auftreten.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird das grundlegende Markup für ein **columnbreak** -Element in einer benutzerdefinierten [**sizedefinition**](windowsribbon-element-sizedefinition.md) -Layoutvorlage mit vier Schaltflächen veranschaulicht. Der **columnbreak** -Wert wird nur für die `Large` Vorlage angegeben.
+Im folgenden Beispiel wird das grundlegende Markup für ein **ColumnBreak-Element** in einer benutzerdefinierten [**SizeDefinition-Layoutvorlage**](windowsribbon-element-sizedefinition.md) mit vier Schaltflächen veranschaulicht. **ColumnBreak** wird nur für die Vorlage `Large` angegeben.
 
 
 ```XML
@@ -177,12 +177,8 @@ Im folgenden Beispiel wird das grundlegende Markup für ein **columnbreak** -Ele
 
 ## <a name="element-information"></a>Elementinformationen
 
-
-
-|                                     |           |
-|-------------------------------------|-----------|
-| Unterstützte Mindestversion (System)<br/> | Windows 7 |
-| Kann leer bleiben                        | Ja       |
+* **Unterstütztes Mindestsystem:** Windows 7
+* **Kann leer sein:** Ja
 
 
 
@@ -190,7 +186,7 @@ Im folgenden Beispiel wird das grundlegende Markup für ein **columnbreak** -Ele
 
 <dl> <dt>
 
-[Anpassen eines Menübands durch Größen Definitionen und Skalierungs Richtlinien](windowsribbon-templates.md)
+[Anpassen eines Menübands durch Größendefinitionen und Skalierungsrichtlinien](windowsribbon-templates.md)
 </dt> </dl>
 
  

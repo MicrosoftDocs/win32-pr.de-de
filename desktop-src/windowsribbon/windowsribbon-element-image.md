@@ -1,9 +1,9 @@
 ---
-title: Image-Element (Windows-Menüband-Framework)
+title: Image-Element (Windows Ribbon Framework)
 description: Stellt ein Bild dar.
 ms.assetid: 2c71bb16-93ac-484f-b81b-1b95842472b3
 keywords:
-- Windows-Menüband für Bildelement
+- Bildelement Windows-Menüband
 topic_type:
 - apiref
 api_name:
@@ -13,18 +13,18 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 1d33f6710da2261a359aa7fd0a3b493871155cf4
-ms.sourcegitcommit: 40a1246849dba8ececf54c716b2794b99c96ad50
+ms.openlocfilehash: fe0b9afb51697d50de9cb80886cf829b90c81262
+ms.sourcegitcommit: 099ecdda1e83618b844387405da0db0ebda93a65
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "104101050"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111442891"
 ---
 # <a name="image-element"></a>Image-Element
 
 Stellt ein Bild dar.
 
-## <a name="usage"></a>Verbrauch
+## <a name="usage"></a>Verwendung
 
 ``` syntax
 <Image
@@ -49,8 +49,8 @@ Stellt ein Bild dar.
 </colgroup>
 <thead>
 <tr class="header">
-<th>Attribut</th>
-<th>type</th>
+<th>attribute</th>
+<th>Typ</th>
 <th>Erforderlich</th>
 <th>BESCHREIBUNG</th>
 </tr>
@@ -58,29 +58,29 @@ Stellt ein Bild dar.
 <tbody>
 <tr class="odd">
 <td><strong>Id</strong><br/></td>
-<td>xs: positivan teger Union xs: String<br/></td>
+<td>xs:positiveInteger union xs:string<br/></td>
 <td>Nein<br/></td>
 <td>Die eindeutige Ressourcen-ID. <br/> <br/>
-<dt><span></span><span></span><strong></strong> (Die Vereinigung von xs: positiveingeteger und xs: String)<br/> </dt> <dd> Ein ganzzahliger Wert zwischen 2 und 59999, einschließlich, oder 0x2 und 0xea5f in Hexadezimal (einschließlich). <br/> Die maximale Länge beträgt 10 Zeichen, einschließlich optionaler führender Nullen. <br/> </dd> </dl></td>
+<dt><span></span><span></span><strong></strong> (Die Vereinigung von xs:positiveInteger und xs:string)<br/> </dt> <dd> Ein ganzzahliger Wert zwischen 2 und 59999, einschließlich oder 0x2 und 0xea5f hexadezimal, einschließlich. <br/> Die maximale Länge beträgt 10 Zeichen, einschließlich optionaler führender Nullen. <br/> </dd> </dl></td>
 </tr>
 <tr class="even">
-<td><strong>Mindpi</strong><br/></td>
+<td><strong>MinDPI</strong><br/></td>
 <td>xs:positiveInteger<br/></td>
 <td>Nein<br/></td>
-<td><dt><span></span><span></span><strong></strong> (xs: positivin teger)<br/> </dt> <dd> Eine beliebige Sequenz von Ziffern mit einem Minimalwert von 96. <br/> Wenn mindpi weggelassen wird, ist der Standardwert 96. <br/> </dd> </dl></td>
+<td><dt><span></span><span></span><strong></strong> (xs:positiveInteger)<br/> </dt> <dd> Eine beliebige Sequenz von Ziffern mit einem Mindestwert von 96. <br/> Wenn MinDPI weggelassen wird, ist der Standardwert 96. <br/> </dd> </dl></td>
 </tr>
 <tr class="odd">
 <td><strong>Quelle</strong><br/></td>
 <td>xs:anyURI<br/></td>
 <td>Nein<br/></td>
-<td><dt><span></span><span></span><strong></strong> (xs: anyURI)<br/> </dt> <dd> Eine beliebige Sequenz von Zeichen, die einen URI darstellt. Der URI-Wert ist eine absolute oder relative (für den Menüband-Markup Datei) Pfad zu einer Bildressource des Typs BMP. <br/> </dd> </dl></td>
+<td><dt><span></span><span></span><strong></strong> (xs:anyURI)<br/> </dt> <dd> Jede Sequenz von Zeichen, die einen URI darstellt. Der URI-Wert ist ein absoluter oder relativer Pfad (zur Menübandmarkupdatei) zu einer Bildressource vom Typ BMP. <br/> </dd> </dl></td>
 </tr>
 <tr class="even">
 <td><strong>Symbol</strong><br/></td>
 <td>xs:string<br/></td>
 <td>Nein<br/></td>
-<td>Das Ressourcen Symbol für das Bild.<br/> <br/>
-<dt><span></span><span></span><strong></strong> (xs: String)<br/> </dt> <dd> Eine Zeichenfolge, die aus einem Buchstaben oder einem Unterstrich gefolgt von einer beliebigen Folge von Buchstaben, Ziffern oder unterstrichen mit maximal 100 Zeichen besteht. <br/> </dd> </dl></td>
+<td>Das Ressourcensymbol für das Bild.<br/> <br/>
+<dt><span></span><span></span><strong></strong> (xs:string)<br/> </dt> <dd> Eine Zeichenfolge, die aus einem Buchstaben oder Unterstrich gefolgt von einer beliebigen Folge von Buchstaben, Ziffern oder Unterstrichen bis zu maximal 100 Zeichen besteht. <br/> </dd> </dl></td>
 </tr>
 </tbody>
 </table>
@@ -93,7 +93,7 @@ Stellt ein Bild dar.
 
 | Element                                                               | BESCHREIBUNG                                   |
 |-----------------------------------------------------------------------|-----------------------------------------------|
-| [**Image. Source**](windowsribbon-element-image-source.md)<br/> | Kann höchstens einmal vorkommen<br/> <br/> |
+| [**Image.Source**](windowsribbon-element-image-source.md)<br/> | Kann nur einmal auftreten.<br/> <br/> |
 
 
 
@@ -103,26 +103,26 @@ Stellt ein Bild dar.
 
 | Element                                                                                                     |
 |-------------------------------------------------------------------------------------------------------------|
-| [**Command. largehighkontra stimages**](windowsribbon-element-command-largehighcontrastimages.md)<br/> |
-| [**Command. largeimages**](windowsribbon-element-command-largeimages.md)<br/>                         |
-| [**Command. smallhighkontra stimages**](windowsribbon-element-command-smallhighcontrastimages.md)<br/> |
-| [**Command. smallimages**](windowsribbon-element-command-smallimages.md)<br/>                         |
+| [**Command.LargeHighContrastImages**](windowsribbon-element-command-largehighcontrastimages.md)<br/> |
+| [**Command.LargeImages**](windowsribbon-element-command-largeimages.md)<br/>                         |
+| [**Command.SmallHighContrastImages**](windowsribbon-element-command-smallhighcontrastimages.md)<br/> |
+| [**Command.SmallImages**](windowsribbon-element-command-smallimages.md)<br/>                         |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Dies ist optional.
 
-Kann für jeden Befehl einmal oder mehrmals vorkommen [**. smallimages**](windowsribbon-element-command-smallimages.md), [**Command. smallhighkontra stimages**](windowsribbon-element-command-smallhighcontrastimages.md), [**Command. largeimages**](windowsribbon-element-command-largeimages.md)oder [**Command. largehighkontra stimages**](windowsribbon-element-command-largehighcontrastimages.md) .
+Kann ein oder mehrere Male für jedes [**Command.SmallImages-,**](windowsribbon-element-command-smallimages.md) [**Command.SmallHighContrastImages-,**](windowsribbon-element-command-smallhighcontrastimages.md) [**Command.LargeImages-**](windowsribbon-element-command-largeimages.md)oder [**Command.LargeHighContrastImages-Element**](windowsribbon-element-command-largehighcontrastimages.md) auftreten.
 
-Wenn eine Auflistung von Bild Ressourcen, die für die Unterstützung bestimmter Bildschirmpunkte pro Zoll (dpi) entwickelt wurden, über einen Satz von **Bild** Elementen an das Menüband-Framework übergeben wird, verwendet das Framework das **Bild** mit einem *mindpi* -Attribut Wert, der mit der aktuellen Bildschirm-dpi-Einstellung übereinstimmt.
+Wenn eine Sammlung von Bildressourcen, die für die Unterstützung bestimmter DPI-Einstellungen (Screen Dots per Inch) entworfen  wurden, für das Menübandframework über eine Reihe von **Image-Elementen** bereitgestellt wird, verwendet das Framework das Image mit einem *MinDPI-Attributwert,* der der aktuellen DPI-Einstellung des Bildschirms entspricht.
 
-Wenn kein **Bild** Element mit einem *mindpi* -Wert deklariert wird, der mit der aktuellen Bildschirm dpi-Einstellung übereinstimmt, wählt das Framework das **Bild** aus, das den nächstgelegenen *mindpi* -Wert aufweist, der kleiner ist als die aktuelle Bildschirm dpi-Einstellung, und skaliert die Bildressource Wenn kein **Bild** Element mit einem *mindpi* -Attribut Wert, der kleiner als die aktuelle Bildschirm dpi-Einstellung ist, deklariert ist, wählt das Framework den nächsten *mindpi* -Wert aus, der größer als die aktuelle Bildschirm dpi-Einstellung ist, und skaliert die Bildressource nach unten.
+Wenn kein **Image-Element** mit einem *MinDPI-Wert* deklariert wird, der der  aktuellen DPI-Einstellung des Bildschirms entspricht, wählt das Framework das Bild aus, das den nächstgelegenen *MinDPI-Wert* kleiner als die aktuelle DPI-Einstellung des Bildschirms hat, und skaliert die Bildressource hoch. Wenn andernfalls kein **Image-Element** mit einem *MinDPI-Attributwert* deklariert wird, der kleiner als die aktuelle DPI-Einstellung des Bildschirms ist, wählt das Framework den nächsten *MinDPI-Wert* aus, der größer als die aktuelle DPI-Einstellung des Bildschirms ist, und skaliert die Bildressource herunter.
 
 ## <a name="examples"></a>Beispiele
 
-Das folgende Codebeispiel zeigt das Markup, das zum Deklarieren von über einen Satz von **Bild** Elementen erforderlich ist, eine Auflistung von Bild Ressourcen, die für die Unterstützung von vier bestimmten Bildschirm DPI-Einstellungen entworfen wurden.
+Das folgende Codebeispiel zeigt das Markup, das erforderlich ist, um über einen Satz von **Image-Elementen** eine Sammlung von Bildressourcen zu deklarieren, die zur Unterstützung von vier spezifischen DPI-Bildschirmeinstellungen entwickelt wurden.
 
 
 ```XML
@@ -143,20 +143,16 @@ Das folgende Codebeispiel zeigt das Markup, das zum Deklarieren von über einen 
 
 ## <a name="element-information"></a>Elementinformationen
 
-
-
-|                                     |           |
-|-------------------------------------|-----------|
-| Unterstützte Mindestversion (System)<br/> | Windows 7 |
-| Kann leer bleiben                        | Nein        |
+* **Unterstütztes Mindestsystem:** Windows 7
+* **Kann leer sein:** Nein
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[Angeben von Menüband-Bild Ressourcen](windowsribbon-imageformats.md)
+[Angeben von Menübandbildressourcen](windowsribbon-imageformats.md)
 </dt> </dl>
 
  

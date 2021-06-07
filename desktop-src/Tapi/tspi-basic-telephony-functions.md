@@ -1,87 +1,87 @@
 ---
 description: Alle Dienstanbieter müssen grundlegende Telefoniefunktionen implementieren.
 ms.assetid: 4250f3a0-a66a-4a6e-8566-d71be7463179
-title: Grundlegende Telefoniefunktionen von TSPI
+title: GRUNDLEGENDE TSPI-Telefoniefunktionen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6276be51482620af32650ad1625eea97bddb8e5c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5308def0c94df9fa59f2022bf25c4dbb1843e2f8
+ms.sourcegitcommit: 8ebcf6cd36f67f8bcf78e76ae8923d65b8995c8a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103868599"
+ms.lasthandoff: 06/05/2021
+ms.locfileid: "111524154"
 ---
-# <a name="tspi-basic-telephony-functions"></a>Grundlegende Telefoniefunktionen von TSPI
+# <a name="tspi-basic-telephony-functions"></a>GRUNDLEGENDE TSPI-Telefoniefunktionen
 
-Alle Dienstanbieter müssen grundlegende Telefoniefunktionen implementieren. Im folgenden finden Sie eine Liste dieser Funktionen nach Kategorie. Eine Funktion wird als *asynchron* identifiziert, wenn Sie die Vervollständigung in einer Antwortmeldung an die Anwendung angibt. Wenn die Funktion das Ergebnis immer sofort zurückgibt, wird die Funktion als *synchron* betrachtet.
+Alle Dienstanbieter müssen grundlegende Telefoniefunktionen implementieren. Im Folgenden finden Sie eine Liste solcher Funktionen nach Kategorie. Eine Funktion wird als asynchron *identifiziert,* wenn sie die Vervollständigung in einer ANTWORT-Nachricht an die Anwendung angibt. Wenn die Funktion ihr Ergebnis immer sofort zurückgibt, wird die Funktion als synchron *betrachtet.*
 
 -   [Adresses](#addresses)
 -   [Beantworten eingehender Anrufe](#answering-incoming-calls)
--   [Drop Functions-Aufrufe](#call-drop-functions)
--   [Aufrufe von Zuständen und Ereignissen](#call-states-and-events)
--   [Zeilen Status und-Funktionen](#line-status-and-capabilities)
--   [Aushandlung der Zeilen Version](#line-version-negotiation)
--   [Aufrufen](#making-calls)
--   [Öffnen und Schließen von Linien Geräten](#opening-and-closing-line-devices)
--   [Aushandlung der Telefon Version](#phone-version-negotiation)
--   [TSP-Initialisierung und-Herunterfahren](#tsp-initialization-and-shutdown)
+-   [Drop-Funktionen für Aufrufe](#call-drop-functions)
+-   [Aufrufzustände und Ereignisse](#call-states-and-events)
+-   [Zeilenstatus und Funktionen](#line-status-and-capabilities)
+-   [Zeilenversionsaushandlung](#line-version-negotiation)
+-   [Tätigen von Aufrufen](#making-calls)
+-   [Öffnen und Schließen von Line-Geräten](#opening-and-closing-line-devices)
+-   [Telefonversionsaushandlung](#phone-version-negotiation)
+-   [TSP-Initialisierung und -Herunterfahren](#tsp-initialization-and-shutdown)
 
-## <a name="tsp-initialization-and-shutdown"></a>TSP-Initialisierung und-Herunterfahren
+## <a name="tsp-initialization-and-shutdown"></a>TSP-Initialisierung und -Herunterfahren
 
 
 
-|                                                           |                                                           |
+|  Funktion                                                         |   BESCHREIBUNG                                                        |
 |-----------------------------------------------------------|-----------------------------------------------------------|
-| [**Tuispi \_ providerinstall**](/windows/win32/api/tspi/nf-tspi-tuispi_providerinstall) | Installiert einen TSP. Synchronous.                              |
-| [**TSPI \_ providerinstall**](/windows/win32/api/tspi/nf-tspi-tspi_providerinstall)     | Installiert den TSP. Veraltet mit Version 2,0. Synchronous. |
-| [**TSPI \_ providerinit**](/windows/win32/api/tspi/nf-tspi-tspi_providerinit)           | Initialisiert den TSP. Synchronous.                         |
-| [**TSPI \_ providershutdown**](/windows/win32/api/tspi/nf-tspi-tspi_providershutdown)   | Fährt den Dienstanbieter herunter.                          |
-| [**Tuispi \_ providerremove**](/windows/win32/api/tspi/nf-tspi-tuispi_providerremove)   | Entfernt einen TSP. Synchronous.                               |
-| [**TSPI \_ providerremove**](/windows/win32/api/tspi/nf-tspi-tspi_providerremove)       | Entfernt einen TSP. Veraltet mit Version 2,0. Synchronous.    |
+| [**\_PROVIDERSPI-AnbieterInstallieren**](/windows/win32/api/tspi/nf-tspi-tuispi_providerinstall) | Installiert einen TSP. Synchronous.                              |
+| [**\_TSPI-AnbieterInstallieren**](/windows/win32/api/tspi/nf-tspi-tspi_providerinstall)     | Installiert den TSP. Veraltet mit Version 2.0. Synchronous. |
+| [**TSPI \_ providerInit**](/windows/win32/api/tspi/nf-tspi-tspi_providerinit)           | Initialisiert den TSP. Synchronous.                         |
+| [**TSPI \_ providerShutdown**](/windows/win32/api/tspi/nf-tspi-tspi_providershutdown)   | Fährt den Dienstanbieter herunter.                          |
+| [**PROVIDERSSPI \_ providerRemove**](/windows/win32/api/tspi/nf-tspi-tuispi_providerremove)   | Entfernt einen TSP. Synchronous.                               |
+| [**TSPI \_ providerRemove**](/windows/win32/api/tspi/nf-tspi-tspi_providerremove)       | Entfernt einen TSP. Veraltet mit Version 2.0. Synchronous.    |
 
 
 
  
 
-## <a name="phone-version-negotiation"></a>Aushandlung der Telefon Version
+## <a name="phone-version-negotiation"></a>Telefonversionsaushandlung
 
 
 
-|                                                                           |                                                                                         |
+|  Funktion                                                         |   BESCHREIBUNG                                                        |
 |---------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|
-| [**TSPI \_ phonenegotiatetspiversion**](/windows/win32/api/tspi/nf-tspi-tspi_phonenegotiatetspiversion) | Gibt die höchste SPI-Version zurück, unter der der Dienstanbieter für dieses Gerät arbeiten kann. |
+| [**TSPI \_ phoneNegotiateTSPIVersion**](/windows/win32/api/tspi/nf-tspi-tspi_phonenegotiatetspiversion) | Gibt die höchste SPI-Version zurück, unter der der Dienstanbieter für dieses Gerät arbeiten kann. |
 
 
 
  
 
-## <a name="line-version-negotiation"></a>Aushandlung der Zeilen Version
+## <a name="line-version-negotiation"></a>Zeilenversionsaushandlung
 
 
 
-|                                                                         |                                                                                                 |
+|  Funktion                                                         |   BESCHREIBUNG                                                        |
 |-------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|
-| [**TSPI \_ linenegotiatetspiversion**](/windows/win32/api/tspi/nf-tspi-tspi_linenegotiatetspiversion) | Ermöglicht es einer Anwendung, eine TSPI-Version zu aushandeln, die mit einem bestimmten liniengerät verwendet werden soll. Synchronous. |
+| [**TSPI \_ lineNegotiateTSPIVersion**](/windows/win32/api/tspi/nf-tspi-tspi_linenegotiatetspiversion) | Ermöglicht einer Anwendung das Aushandeln einer TSPI-Version für die Verwendung mit einem bestimmten Liniengerät. Synchronous. |
 
 
 
  
 
-## <a name="line-status-and-capabilities"></a>Zeilen Status und-Funktionen
+## <a name="line-status-and-capabilities"></a>Zeilenstatus und Funktionen
 
 
 
-|                                                                     |                                                                                                                                                                |
+|  Funktion                                                         |   BESCHREIBUNG                                                        |
 |---------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**TSPI \_ linegetdevcaps**](/windows/win32/api/tspi/nf-tspi-tspi_linegetdevcaps)                 | Gibt die Funktionen eines angegebenen Zeilen Geräts zurück. Synchronous.                                                                                                  |
-| [**TSPI \_ linegetdevconfig**](/windows/win32/api/tspi/nf-tspi-tspi_linegetdevconfig)             | Gibt die Konfiguration eines Medienstrom Geräts zurück. Synchronous.                                                                                                   |
-| [**TSPI \_ linegetlinedevstatus**](/windows/win32/api/tspi/nf-tspi-tspi_linegetlinedevstatus)     | Gibt den aktuellen Status des angegebenen Open-Line-Geräts zurück. Synchronous.                                                                                         |
-| [**TSPI \_ linesetdevconfig**](/windows/win32/api/tspi/nf-tspi-tspi_linesetdevconfig)             | Legt die Konfiguration des angegebenen Medienstrom Geräts fest. Synchronous.                                                                                      |
-| [**TSPI- \_ linesetstatus-Meldungen**](/windows/win32/api/tspi/nf-tspi-tspi_linesetstatusmessages)   | Gibt die Statusänderungen an, für die die Anwendung benachrichtigt werden muss. Synchronous.                                                                      |
-| [**TSPI- \_ lineGetID**](/windows/win32/api/tspi/nf-tspi-tspi_linegetid)                           | Ruft eine Geräte-ID ab, die der angegebenen öffnenden Zeile, Adresse oder dem angegebenen-Befehl zugeordnet ist. Synchronous.                                                                  |
-| [**TSPI- \_ linegeticon**](/windows/win32/api/tspi/nf-tspi-tspi_linegeticon)                       | Ermöglicht es einer Anwendung, ein Symbol für die Anzeige für den Benutzer abzurufen. Synchronous.                                                                                |
-| [**Tuispi \_ lineconfigdialog**](/windows/win32/api/tspi/nf-tspi-tuispi_lineconfigdialog)         | Bewirkt, dass der Anbieter des angegebenen Zeilen Geräts ein Dialogfeld anzeigt, das es dem Benutzer ermöglicht, Parameter im Zusammenhang mit dem liniengerät zu konfigurieren. Synchronous. |
-| [**Tuispi \_ lineconfigdialogedit**](/windows/win32/api/tspi/nf-tspi-tuispi_lineconfigdialogedit) | Zeigt ein Dialogfeld an, in dem der Benutzer Konfigurationsinformationen für ein liniengerät ändern kann. Synchronous.                                                    |
+| [**TSPI \_ lineGetDevCaps**](/windows/win32/api/tspi/nf-tspi-tspi_linegetdevcaps)                 | Gibt die Funktionen eines bestimmten Liniengeräts zurück. Synchronous.                                                                                                  |
+| [**TSPI \_ lineGetDevConfig**](/windows/win32/api/tspi/nf-tspi-tspi_linegetdevconfig)             | Gibt die Konfiguration eines Medienstreamgeräts zurück. Synchronous.                                                                                                   |
+| [**TSPI \_ lineGetLineDevStatus**](/windows/win32/api/tspi/nf-tspi-tspi_linegetlinedevstatus)     | Gibt den aktuellen Status des angegebenen Open Line-Geräts zurück. Synchronous.                                                                                         |
+| [**TSPI \_ lineSetDevConfig**](/windows/win32/api/tspi/nf-tspi-tspi_linesetdevconfig)             | Legt die Konfiguration des angegebenen Medienstreamgeräts fest. Synchronous.                                                                                      |
+| [**TSPI \_ lineSetStatusMessages**](/windows/win32/api/tspi/nf-tspi-tspi_linesetstatusmessages)   | Gibt die Statusänderungen an, bei denen die Anwendung benachrichtigt werden muss. Synchronous.                                                                      |
+| [**TSPI \_ lineGetID**](/windows/win32/api/tspi/nf-tspi-tspi_linegetid)                           | Ruft eine Geräte-ID ab, die der angegebenen offenen Zeile, Adresse oder dem angegebenen Aufruf zugeordnet ist. Synchronous.                                                                  |
+| [**\_TSPI-ZeileGetIcon**](/windows/win32/api/tspi/nf-tspi-tspi_linegeticon)                       | Ermöglicht es einer Anwendung, ein Symbol für die Anzeige für den Benutzer abzurufen. Synchronous.                                                                                |
+| [**KONSTRUKTORSPI \_ lineConfigDialog**](/windows/win32/api/tspi/nf-tspi-tuispi_lineconfigdialog)         | Veranlasst den Anbieter des angegebenen Liniengeräts, ein Dialogfeld anzuzeigen, in dem der Benutzer Parameter konfigurieren kann, die sich auf das Liniengerät bezieht. Synchronous. |
+| [**KONSTRUKTORSPI \_ lineConfigDialogEdit**](/windows/win32/api/tspi/nf-tspi-tuispi_lineconfigdialogedit) | Zeigt ein Dialogfeld an, in dem der Benutzer konfigurationsinformationen für ein Liniengerät ändern kann. Synchronous.                                                    |
 
 
 
@@ -91,52 +91,52 @@ Alle Dienstanbieter müssen grundlegende Telefoniefunktionen implementieren. Im 
 
 
 
-|                                                                 |                                                                                          |
+|  Funktion                                                         |   BESCHREIBUNG                                                        |
 |-----------------------------------------------------------------|------------------------------------------------------------------------------------------|
-| [**TSPI \_ linegetaddresscaps**](/windows/win32/api/tspi/nf-tspi-tspi_linegetaddresscaps)     | Gibt die Telefoniefunktionen einer Adresse zurück. Synchronous.                           |
-| [**TSPI \_ linegetaddressstatus**](/windows/win32/api/tspi/nf-tspi-tspi_linegetaddressstatus) | Gibt den aktuellen Status einer angegebenen Adresse zurück. Synchronous.                              |
-| [**TSPI \_ linegetnumaddressids**](/windows/win32/api/tspi/nf-tspi-tspi_linegetnumaddressids) | Ruft die Anzahl der auf der angegebene Zeile unterstützten Adress Bezeichner ab.             |
-| [**TSPI \_ linegetadressssid**](/windows/win32/api/tspi/nf-tspi-tspi_linegetaddressid)         | Ruft die Adress-ID einer Adresse ab, die mit einem alternativen Format angegeben wird. Synchronous. |
+| [**TSPI \_ lineGetAddressCaps**](/windows/win32/api/tspi/nf-tspi-tspi_linegetaddresscaps)     | Gibt die Telefoniefunktionen einer Adresse zurück. Synchronous.                           |
+| [**TSPI \_ lineGetAddressStatus**](/windows/win32/api/tspi/nf-tspi-tspi_linegetaddressstatus) | Gibt den aktuellen Status einer angegebenen Adresse zurück. Synchronous.                              |
+| [**TSPI \_ lineGetNumAddressIDs**](/windows/win32/api/tspi/nf-tspi-tspi_linegetnumaddressids) | Ruft die Anzahl der Adressbezeichner ab, die in der angegebenen Zeile unterstützt werden.             |
+| [**TSPI \_ lineGetAddressID**](/windows/win32/api/tspi/nf-tspi-tspi_linegetaddressid)         | Ruft die Adress-ID einer Adresse ab, die in einem alternativen Format angegeben wurde. Synchronous. |
 
 
 
  
 
-## <a name="opening-and-closing-line-devices"></a>Öffnen und Schließen von Linien Geräten
+## <a name="opening-and-closing-line-devices"></a>Öffnen und Schließen von Line-Geräten
 
 
 
-|                                           |                                                                                                            |
+|  Funktion                                                         |   BESCHREIBUNG                                                        |
 |-------------------------------------------|------------------------------------------------------------------------------------------------------------|
-| [**TSPI ( \_ lineOpen)**](/windows/win32/api/tspi/nf-tspi-tspi_lineopen)   | Öffnet ein angegebenes Zeilen Gerät zum Bereitstellen der nachfolgenden Überwachung und/oder Steuerung der Zeile. Synchronous. |
-| [**TSPI- \_ lineclose**](/windows/win32/api/tspi/nf-tspi-tspi_lineclose) | Schließt ein angegebenes geöffnetes Zeilen Gerät. Synchronous.                                                        |
+| [**\_TSPI-ZeileOpen**](/windows/win32/api/tspi/nf-tspi-tspi_lineopen)   | Öffnet ein angegebenes Liniengerät für die nachfolgende Überwachung und/oder Steuerung der Linie. Synchronous. |
+| [**\_TSPI-ZeileSchließen**](/windows/win32/api/tspi/nf-tspi-tspi_lineclose) | Schließt ein angegebenes geöffnetes Zeilengerät. Synchronous.                                                        |
 
 
 
  
 
-## <a name="call-states-and-events"></a>Aufrufe von Zuständen und Ereignissen
+## <a name="call-states-and-events"></a>Aufrufzustände und Ereignisse
 
 
 
-|                                                             |                                                                                     |
+|  Funktion                                                         |   BESCHREIBUNG                                                        |
 |-------------------------------------------------------------|-------------------------------------------------------------------------------------|
-| [**TSPI \_ linegetcallinfo**](/windows/win32/api/tspi/nf-tspi-tspi_linegetcallinfo)       | Gibt fixierte Informationen zu einem-Befehl zurück. Synchronous.                                |
-| [**TSPI \_ linegetcallstatus**](/windows/win32/api/tspi/nf-tspi-tspi_linegetcallstatus)   | Gibt die Statusinformationen zum Abschluss des angegebenen Aufrufes zurück. Synchronous.       |
-| [**TSPI \_ linesetappspecific**](/windows/win32/api/tspi/nf-tspi-tspi_linesetappspecific) | Legt das anwendungsspezifische Feld der Informationsstruktur eines Aufrufes fest. Synchronous. |
+| [**TSPI \_ lineGetCallInfo**](/windows/win32/api/tspi/nf-tspi-tspi_linegetcallinfo)       | Gibt feste Informationen zu einem Aufruf zurück. Synchronous.                                |
+| [**\_TSPI-ZeileGetCallStatus**](/windows/win32/api/tspi/nf-tspi-tspi_linegetcallstatus)   | Gibt vollständige Aufrufstatusinformationen für den angegebenen Aufruf zurück. Synchronous.       |
+| [**TSPI \_ lineSetAppSpecific**](/windows/win32/api/tspi/nf-tspi-tspi_linesetappspecific) | Legt das anwendungsspezifische Feld der Informationsstruktur eines Aufrufs fest. Synchronous. |
 
 
 
  
 
-## <a name="making-calls"></a>Aufrufen
+## <a name="making-calls"></a>Tätigen von Aufrufen
 
 
 
-|                                                 |                                                                        |
+|  Funktion                                                         |   BESCHREIBUNG                                                        |
 |-------------------------------------------------|------------------------------------------------------------------------|
-| [**TSPI \_ linemakecall**](/windows/win32/api/tspi/nf-tspi-tspi_linemakecall) | Führt einen ausgehenden-Rückruf aus und gibt ein-Rückruf handle dafür zurück. Asynchron. |
-| [**TSPI- \_ linedial**](/windows/win32/api/tspi/nf-tspi-tspi_linedial)         | Dials (Teile von einer oder mehreren), die als nicht zulässig sind. Asynchron.         |
+| [**TSPI \_ lineMakeCall**](/windows/win32/api/tspi/nf-tspi-tspi_linemakecall) | Macht einen ausgehenden Aufruf und gibt ein Aufrufhand handle dafür zurück. Asynchron. |
+| [**TSPI \_ lineDial**](/windows/win32/api/tspi/nf-tspi-tspi_linedial)         | Wählt (Teile einer oder mehrere) wählbare Adressen. Asynchron.         |
 
 
 
@@ -146,21 +146,21 @@ Alle Dienstanbieter müssen grundlegende Telefoniefunktionen implementieren. Im 
 
 
 
-|                                             |                                         |
+|  Funktion                                                         |   BESCHREIBUNG                                                        |
 |---------------------------------------------|-----------------------------------------|
-| [**TSPI- \_ lineanswer**](/windows/win32/api/tspi/nf-tspi-tspi_lineanswer) | Beantwortet einen eingehenden-Befehl. Asynchron. |
+| [**TSPI \_ lineAnswer**](/windows/win32/api/tspi/nf-tspi-tspi_lineanswer) | Beantwortet einen eingehenden Anruf. Asynchron. |
 
 
 
  
 
-## <a name="call-drop-functions"></a>Drop Functions-Aufrufe
+## <a name="call-drop-functions"></a>Drop-Funktionen für Aufrufe
 
 
 
-|                                         |                                                                           |
+|  Funktion                                                         |   BESCHREIBUNG                                                        |
 |-----------------------------------------|---------------------------------------------------------------------------|
-| [**TSPI- \_ linedrop**](/windows/win32/api/tspi/nf-tspi-tspi_linedrop) | Trennt einen-Befehl oder bricht einen aufzurufenden Versuch ab. Asynchron. |
+| [**TSPI \_ lineDrop**](/windows/win32/api/tspi/nf-tspi-tspi_linedrop) | Trennt einen Aufruf oder verabsehrt einen aufrufversuch, der in Bearbeitung ist. Asynchron. |
 
 
 

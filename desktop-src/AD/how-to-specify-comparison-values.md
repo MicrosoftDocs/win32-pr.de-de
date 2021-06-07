@@ -4,30 +4,30 @@ description: Jeder Attributtyp verfügt über eine Syntax, die den Typ der Vergl
 ms.assetid: 72bd58e4-e1c3-40a5-9917-4910f40c52c5
 ms.tgt_platform: multiple
 keywords:
-- Angeben der Vergleichswerte (AD)
+- Angeben von Vergleichswerten in AD
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 95f9355bc4853fa6dc62645e1c241d8e26f731f9
-ms.sourcegitcommit: 803f3ccd65bdefe36bd851b9c6e7280be9489016
+ms.openlocfilehash: edba238961cdc18b088b6b5bd5b06ff4be383add
+ms.sourcegitcommit: cb87082135319cbdc5df541e3071eebb83a58972
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "103724489"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111386750"
 ---
 # <a name="how-to-specify-comparison-values"></a>Angeben von Vergleichswerten
 
 Jeder Attributtyp verfügt über eine Syntax, die den Typ der Vergleichswerte bestimmt, die Sie in einem Suchfilter für dieses Attribut angeben können.
 
-In den folgenden Abschnitten werden die Anforderungen für die einzelnen Attribut Syntax beschrieben. Weitere Informationen zur Attribut Syntax finden Sie unter [Syntax für Attribute in Active Directory Domain Services](syntaxes-for-attributes-in-active-directory-domain-services.md).
+In den folgenden Abschnitten werden die Anforderungen für jede Attributsyntax beschrieben. Weitere Informationen zu Attributsyntaxen finden Sie unter [Syntaxes for Attributes in Active Directory Domain Services](syntaxes-for-attributes-in-active-directory-domain-services.md).
 
 <dl> <dt>
 
-<span id="Boolean"></span><span id="boolean"></span><span id="BOOLEAN"></span>Booleschen
+<span id="Boolean"></span><span id="boolean"></span><span id="BOOLEAN"></span>Boolean
 </dt> <dd>
 
-Der in einem Filter angegebene Wert muss ein Zeichen folgen Wert sein, der entweder "true" oder "false" ist. In den folgenden Beispielen wird gezeigt, wie eine boolesche Vergleichs Zeichenfolge angegeben wird.
+Der in einem Filter angegebene Wert muss ein Zeichenfolgenwert sein, der entweder "TRUE" oder "FALSE" ist. In den folgenden Beispielen wird gezeigt, wie eine boolesche Vergleichszeichenfolge angegeben wird.
 
-Im folgenden Beispiel wird nach Objekten gesucht, für die " **showInAdvancedViewOnly** " auf " **true**" festgelegt ist:
+Im folgenden Beispiel wird nach Objekten gesucht, für die **showInAdvancedViewOnly** auf TRUE festgelegt **ist:**
 
 
 ```C++
@@ -36,7 +36,7 @@ Im folgenden Beispiel wird nach Objekten gesucht, für die " **showInAdvancedVie
 
 
 
-Im folgenden Beispiel wird nach Objekten gesucht, für die " **showInAdvancedViewOnly** " auf " **false**" festgelegt ist:
+Im folgenden Beispiel wird nach Objekten gesucht, für die **showInAdvancedViewOnly** auf FALSE festgelegt **ist:**
 
 
 ```C++
@@ -47,10 +47,10 @@ Im folgenden Beispiel wird nach Objekten gesucht, für die " **showInAdvancedVie
 
 </dd> <dt>
 
-<span id="Integer_and_Enumeration"></span><span id="integer_and_enumeration"></span><span id="INTEGER_AND_ENUMERATION"></span>Ganzzahl und Enumeration
+<span id="Integer_and_Enumeration"></span><span id="integer_and_enumeration"></span><span id="INTEGER_AND_ENUMERATION"></span>Ganze Zahl und Enumeration
 </dt> <dd>
 
-Der in einem Filter angegebene Wert muss eine ganze Dezimalzahl sein. Hexadezimale Werte müssen in decimal konvertiert werden. Eine Wert Vergleichs Zeichenfolge hat die folgende Form:
+Der in einem Filter angegebene Wert muss eine dezimale ganze Zahl sein. Hexadezimalwerte müssen in decimal konvertiert werden. Eine Wertvergleichszeichenfolge hat die folgende Form:
 
 
 ```C++
@@ -59,9 +59,9 @@ Der in einem Filter angegebene Wert muss eine ganze Dezimalzahl sein. Hexadezima
 
 
 
-" <attribute name> " ist der **ldapDisplayName** des Attributs und "<value>"ist der Wert, der für den Vergleich verwendet werden soll.
+" <attribute name> " ist der **lDAPDisplayName des** Attributs und "<value>" ist der Wert, der für den Vergleich verwendet werden soll.
 
-Das folgende Codebeispiel zeigt einen Filter, der nach Objekten mit einem **GroupType** -Wert sucht, der gleich dem **ADS- \_ \_ Gruppentyp \_ Universal \_ Group** (8)-Flag und dem **ADS- \_ \_ Gruppentyp \_ Security \_ aktiviertes** Flag (0x80000000) ist. Die beiden Flags kombinierten denselben 0x80000008-Wert, der in "Decimal" konvertiert wurde, ist 2147483656.
+Das folgende Codebeispiel zeigt einen Filter, der nach Objekten sucht, die über einen **groupType-Wert** verfügen, der dem **ADS GROUP TYPE UNIVERSAL \_ \_ \_ \_ GROUP** (8)-Flag und dem **ADS GROUP TYPE SECURITY \_ \_ \_ \_ ENABLED** (0x80000000)-Flag entspricht. Die beiden flags kombinierten 0x80000008, die in decimal konvertiert werden, ist 2147483656.
 
 
 ```C++
@@ -70,7 +70,7 @@ Das folgende Codebeispiel zeigt einen Filter, der nach Objekten mit einem **Grou
 
 
 
-Die Regeln für die LDAP-abgleichsregel können auch verwendet werden, um bitweise Vergleiche auszuführen. Weitere Informationen zu abgleichsregeln finden Sie unter [Such Filter Syntax](/windows/desktop/ADSI/search-filter-syntax). Das folgende Codebeispiel zeigt einen Filter, der nach Objekten sucht, die einen **GroupType** mit **\_ aktiviertem ADS- \_ Gruppentyp \_ Security- \_ aktiviertem** (0x80000000 = 2147483648) Bitset aufweisen.
+Die LDAP-Abgleichsregeloperatoren können auch verwendet werden, um bitweise Vergleiche durchzuführen. Weitere Informationen zu Abgleichsregeln finden Sie unter [Suchfiltersyntax](/windows/desktop/ADSI/search-filter-syntax). Das folgende Codebeispiel zeigt einen Filter, der nach Objekten sucht, deren **groupType** mit dem Bitsatz **ADS GROUP TYPE SECURITY \_ \_ \_ \_ ENABLED** (0x80000000 = 2147483648) festgelegt ist.
 
 
 ```C++
@@ -81,16 +81,16 @@ Die Regeln für die LDAP-abgleichsregel können auch verwendet werden, um bitwei
 
 </dd> <dt>
 
-<span id="OctetString"></span><span id="octetstring"></span><span id="OCTETSTRING"></span>Octetstring
+<span id="OctetString"></span><span id="octetstring"></span><span id="OCTETSTRING"></span>OctetString
 </dt> <dd>
 
-Der in einem Filter angegebene Wert ist die zu verwendenden Daten. Die Daten müssen als eine Zeichenfolge mit zwei Zeichen codiertem Byte dargestellt werden, wobei jedem Byte ein umgekehrter Schrägstrich () vorangestellt wird \) . Beispielsweise wird der Wert 0x05 in der Zeichenfolge als " \\ 05" angezeigt.
+Der in einem Filter angegebene Wert ist die zu findenden Daten. Die Daten müssen als zwei zeichencodierte Bytezeichenfolge dargestellt werden, wobei jedem Byte ein zurücker schräger Schrägstrich () voran \\ steht. Beispielsweise wird der 0x05 in der Zeichenfolge als \\ "05" angezeigt.
 
-Die [**ADsEncodeBinaryData**](/windows/desktop/api/adshlp/nf-adshlp-adsencodebinarydata) -Funktion kann verwendet werden, um eine codierte Zeichen folgen Darstellung binärer Daten zu erstellen. Die **ADsEncodeBinaryData** -Funktion codiert keine Byte-Werte, die alphanumerische Zeichen darstellen. Stattdessen wird das Zeichen in die Zeichenfolge platziert, ohne es zu codieren. Dies führt dazu, dass die Zeichenfolge eine Mischung aus codierten und nicht codierten Zeichen enthält. Wenn die Binärdaten z. b. 0x05 \| 0x1A \| 0x1B \| 0x43 \| 0x32 sind, enthält die codierte Zeichenfolge " \\ 05 \\ 1a \\ 1bc2". Dies hat keine Auswirkung auf den Filter, und die Suchfilter funktionieren ordnungsgemäß mit diesen Zeichen folgen Typen.
+Die [**ADsEncodeBinaryData-Funktion**](/windows/desktop/api/adshlp/nf-adshlp-adsencodebinarydata) kann verwendet werden, um eine codierte Zeichenfolgendarstellung von Binärdaten zu erstellen. Die **ADsEncodeBinaryData-Funktion** codiert keine Bytewerte, die alphanumerische Zeichen darstellen. Stattdessen wird das Zeichen in der Zeichenfolge ohne Codierung platzieren. Dies führt dazu, dass die Zeichenfolge eine Mischung aus codierten und nicht codierten Zeichen enthält. Wenn die Binärdaten beispielsweise 0x05 0x1A 0x1B 0x43 0x32 sind, enthält die codierte Zeichenfolge \| \| \| \| \\ "05 \\ 1A \\ 1BC2". Dies hat keine Auswirkungen auf den Filter, und die Suchfilter funktionieren mit diesen Zeichenfolgentypen ordnungsgemäß.
 
 Platzhalter werden akzeptiert.
 
-Das folgende Codebeispiel zeigt einen Filter, der die codierte Zeichenfolge für **schemaIdGUID** mit dem GUID-Wert "{BF967ABA-0DE6-11D0-A285-00AA003049E2}" enthält:
+Das folgende Codebeispiel zeigt einen Filter, der eine codierte Zeichenfolge für **schemaIDGUID** mit dem GUID-Wert "{BF967ABA-0DE6-11D0-A285-00AA003049E2}" enthält:
 
 
 ```C++
@@ -104,9 +104,9 @@ Das folgende Codebeispiel zeigt einen Filter, der die codierte Zeichenfolge für
 <span id="Sid"></span><span id="sid"></span><span id="SID"></span>Sid
 </dt> <dd>
 
-Der in einem Filter angegebene Wert ist die codierte Byte Zeichen folgen Darstellung der SID. Weitere Informationen zu codierten Byte Zeichenfolgen finden Sie im vorherigen Abschnitt in diesem Thema, in dem die octetstring-Syntax erläutert wird.
+Der in einem Filter angegebene Wert ist die codierte Bytezeichenfolgendarstellung der SID. Weitere Informationen zu codierten Bytezeichenfolgen finden Sie im vorherigen Abschnitt dieses Themas, in dem die OctetString-Syntax erläutert wird.
 
-Das folgende Codebeispiel zeigt einen Filter, der eine codierte Zeichenfolge für **objectSID** mit dem SID-Zeichen folgen Wert "S-1-5-21-1935655697-308236825-1417001333" enthält:
+Das folgende Codebeispiel zeigt einen Filter, der eine codierte Zeichenfolge für **objectSid** mit dem SID-Zeichenfolgenwert "S-1-5-21-1935655697-308236825-1417001333" enthält:
 
 
 ```C++
@@ -117,16 +117,16 @@ Das folgende Codebeispiel zeigt einen Filter, der eine codierte Zeichenfolge fü
 
 </dd> <dt>
 
-<span id="DN"></span><span id="dn"></span>Derte
+<span id="DN"></span><span id="dn"></span>Dn
 </dt> <dd>
 
-Der gesamte Distinguished Name, der abgeglichen werden soll, muss angegeben werden.
+Der gesamte Distinguished Name muss angegeben werden, um eine Übereinstimmung zu finden.
 
 Platzhalter werden nicht akzeptiert.
 
-Beachten Sie, dass Sie mit dem **objectCategory** -Attribut auch den **ldapDisplayName** der Klasse festlegen können, die für das Attribut festgelegt ist.
+Beachten Sie, dass Sie mit dem **ObjectCategory-Attribut** auch **den lDAPDisplayName** der Klasse angeben können, die für das Attribut festgelegt ist.
 
-Das folgende Beispiel zeigt einen Filter, der einen **Member** angibt, der "CN = testuser, DC = fabrikam, DC = com" enthält:
+Das folgende Beispiel zeigt einen  Filter, der einen Member angibt, der "CN=TestUser,DC=Fabrikam,DC=COM" enthält:
 
 
 ```C++
@@ -140,9 +140,9 @@ Das folgende Beispiel zeigt einen Filter, der einen **Member** angibt, der "CN =
 <span id="INTEGER8"></span><span id="integer8"></span>INTEGER8
 </dt> <dd>
 
-Der in einem Filter angegebene Wert muss eine ganze Dezimalzahl sein. Konvertieren von hexadezimalen Werten in Dezimalzahlen.
+Der in einem Filter angegebene Wert muss eine ganze Dezimalzahl sein. Konvertieren Sie Hexadezimalwerte in decimal.
 
-Im folgenden Codebeispiel wird ein Filter gezeigt, der einen " **deationtime** "-Wert angibt, der auf eine [**FILETIME**](/windows/desktop/api/minwinbase/ns-minwinbase-filetime) von "1999-12-31 23:59:59 (UTC/GMT)" festgelegt ist:
+Das folgende Codebeispiel zeigt einen Filter, der angibt, dass **creationTime** auf [**einen FILETIME-Wert**](/windows/desktop/api/minwinbase/ns-minwinbase-filetime) von "1999-12-31 23:59:59 (UTC/GMT)" festgelegt ist:
 
 
 ```C++
@@ -151,7 +151,7 @@ Im folgenden Codebeispiel wird ein Filter gezeigt, der einen " **deationtime** "
 
 
 
-Die folgenden Funktionen erstellen einen exakten Übereinstimmungs Filter (=) für ein großes integer-Attribut und überprüfen das-Attribut im Schema und seine Syntax:
+Die folgenden Funktionen erstellen einen Filter für eine genaue Übereinstimmung (=) für ein großes Ganzzahlattribut und überprüfen das Attribut im Schema und dessen Syntax:
 
 
 ```C++
@@ -279,15 +279,15 @@ HRESULT CreateExactMatchFilterLargeInteger( LPOLESTR szAttribute,
 <span id="PrintableString"></span><span id="printablestring"></span><span id="PRINTABLESTRING"></span>PrintableString
 </dt> <dd>
 
-Attribute mit diesen Syntaxen sollten bestimmten Zeichensätzen entsprechen. Weitere Informationen finden Sie unter [Syntax für Attribute in Active Directory Domain Services](syntaxes-for-attributes-in-active-directory-domain-services.md).
+Attribute mit diesen Syntaxen sollten bestimmten Zeichensätzen entsprechen. Weitere Informationen finden Sie unter [Syntaxes for Attributes in Active Directory Domain Services.](syntaxes-for-attributes-in-active-directory-domain-services.md)
 
-Derzeit erzwingen Active Directory Domain Services diese Zeichensätze nicht.
+Derzeit werden Active Directory Domain Services Zeichensätze nicht erzwungen.
 
-Der in einem Filter angegebene Wert ist eine Zeichenfolge. Beim Vergleich wird die Groß-/Kleinschreibung beachtet.
+Der in einem Filter angegebene Wert ist eine Zeichenfolge. Beim Vergleich wird die Kleinschreibung beachtet.
 
 </dd> <dt>
 
-<span id="GeneralizedTime"></span><span id="generalizedtime"></span><span id="GENERALIZEDTIME"></span>Generalizedtime
+<span id="GeneralizedTime"></span><span id="generalizedtime"></span><span id="GENERALIZEDTIME"></span>GeneralizedTime
 </dt> <dd>
 
 Der in einem Filter angegebene Wert ist eine Zeichenfolge, die das Datum in der folgenden Form darstellt:
@@ -299,11 +299,11 @@ YYYYMMDDHHMMSS.0Z
 
 
 
-"0z" weist auf keine Zeit differenzielle Abweichung hin. Beachten Sie, dass der Active Directory Server Datum/Uhrzeit als Greenwich Mean Time (GMT) speichert. Wenn keine Zeit differenzielle Angabe angegeben ist, lautet der Standardwert GMT.
+"0Z" gibt an, dass es keine differenzielle Zeit gibt. Beachten Sie, dass der Active Directory-Server Datum/Uhrzeit als Greenwich Mean Time (GMT) speichert. Wenn kein zeitdifferenzieller Wert angegeben wird, ist der Standardwert GMT.
 
-Wenn die lokale Zeitzone nicht GMT ist, verwenden Sie einen differenziellen Wert, um die lokale Zeitzone anzugeben, und wenden Sie die differenzielle Zeit auf GMT an. Das differenzielle differenzielle basiert auf: GMT = local + Differential.
+Wenn die lokale Zeitzone nicht GMT ist, verwenden Sie einen differenziellen Wert, um Ihre lokale Zeitzone anzugeben, und wenden Sie das differenzielle auf GMT an. Die differenzielle Basiert auf: GMT=Local+differential.
 
-Verwenden Sie Folgendes, um eine differenzielle Angabe anzugeben:
+Verwenden Sie Folgendes, um ein differenzielles -Paar anzugeben:
 
 
 ```C++
@@ -312,7 +312,7 @@ YYYYMMDDHHMMSS.0[+/-]HHMM
 
 
 
-Das folgende Beispiel zeigt einen Filter, der eine festgelegte Uhrzeit angibt, die auf 3/23/99 8:52:58 Uhr GMT festgelegt **wurde** :
+Das folgende Beispiel zeigt einen Filter, der eine **whenCreated-Zeit** angibt, die auf 23.03.2019 20:52:58 Uhr GMT festgelegt ist:
 
 
 ```C++
@@ -321,7 +321,7 @@ Das folgende Beispiel zeigt einen Filter, der eine festgelegte Uhrzeit angibt, d
 
 
 
-Das folgende Beispiel zeigt einen Filter, der eine fest **gelegte Uhrzeit angibt** , die auf 3/23/99 8:52:58 Uhr Neuseeland Normalzeit (differenziell = + 12 Stunden) festgelegt ist:
+Das folgende Beispiel zeigt einen Filter, der eine **whenCreated-Zeit** angibt, die auf 23.03.2019 20:52:58 Uhr Normalzeit (differenziell + 12 Stunden) festgelegt ist:
 
 
 ```C++
@@ -330,7 +330,7 @@ Das folgende Beispiel zeigt einen Filter, der eine fest **gelegte Uhrzeit angibt
 
 
 
-Im folgenden Codebeispiel wird die Berechnung der Zeit Zonen differenziell veranschaulicht. Die-Funktion gibt das differenzielle zwischen der aktuellen lokalen Zeitzone und GMT zurück. Der zurückgegebene Wert ist eine Zeichenfolge im folgenden Format:
+Das folgende Codebeispiel zeigt, wie die differenzielle Zeitzone berechnet wird. Die Funktion gibt die Differenz zwischen der aktuellen lokalen Zeitzone und GMT zurück. Der zurückgegebene Wert ist eine Zeichenfolge im folgenden Format:
 
 
 ```C++
@@ -339,7 +339,7 @@ Im folgenden Codebeispiel wird die Berechnung der Zeit Zonen differenziell veran
 
 
 
-Pacific Normalzeit ist beispielsweise-0800.
+Pacific Normalzeit ist beispielsweise -0800.
 
 
 ```C++
@@ -424,7 +424,7 @@ HRESULT GetLocalTimeZoneDifferential(LPOLESTR *pszDifferential)
 
 </dd> <dt>
 
-<span id="UTCTime"></span><span id="utctime"></span><span id="UTCTIME"></span>UtcTime
+<span id="UTCTime"></span><span id="utctime"></span><span id="UTCTIME"></span>UTCTime
 </dt> <dd>
 
 Der in einem Filter angegebene Wert ist eine Zeichenfolge, die das Datum in der folgenden Form darstellt:
@@ -436,13 +436,13 @@ YYMMDDHHMMSSZ
 
 
 
-Z gibt an, dass kein Zeitunterschied besteht. Beachten Sie, dass der Active Directory Server Datum und Uhrzeit als GMT-Zeit speichert. Wenn keine Zeit differenzielle Angabe festgelegt ist, ist GMT die Standardeinstellung.
+Z gibt an, dass es keine differenzielle Zeit gibt. Beachten Sie, dass der Active Directory-Server Datum und Uhrzeit als GMT-Zeit speichert. Wenn kein zeitdifferenzieller Wert angegeben wird, ist GMT der Standardwert.
 
 Der Sekundenwert ("SS") ist optional.
 
-Wenn GMT nicht die lokale Zeitzone ist, wenden Sie einen lokalen differenziellen Wert an, um die lokale Zeitzone anzugeben. Das differenzielle differenzielle ist: GMT = local + Differential.
+Wenn GMT nicht die lokale Zeitzone ist, wenden Sie einen lokalen differenziellen Wert an, um Ihre lokale Zeitzone anzugeben. Der differenzielle Wert ist: GMT=Local+differential.
 
-Verwenden Sie das folgende Format, um eine differenzielle Angabe anzugeben:
+Verwenden Sie zum Angeben eines differenziellen -Werts das folgende Formular:
 
 
 ```C++
@@ -451,7 +451,7 @@ YYMMDDHHMMSS[+/-]HHMM
 
 
 
-Das folgende Beispiel zeigt einen Filter, der einen auf 3/23/99 8:52:58 Uhr GMT festgelegten Wert von " **mytimeatkurzer b** " angibt:
+Das folgende Beispiel zeigt einen Filter, der eine **myTimeAttrib-Zeit** angibt, die auf 23.03.2019 20:52:58 Uhr GMT festgelegt ist:
 
 
 ```C++
@@ -460,7 +460,7 @@ Das folgende Beispiel zeigt einen Filter, der einen auf 3/23/99 8:52:58 Uhr GMT 
 
 
 
-Das folgende Beispiel zeigt einen Filter, der einen Wert von " **mytimeatkurzer b** " angibt, der auf 3/23/99 8:52:58 Uhr festgelegt ist
+Das folgende Beispiel zeigt einen Filter, der eine **myTimeAttrib-Zeit** ohne Angabe von Sekunden auf 23.03.99 20:52:58 Uhr angibt:
 
 
 ```C++
@@ -469,7 +469,7 @@ Das folgende Beispiel zeigt einen Filter, der einen Wert von " **mytimeatkurzer 
 
 
 
-Das folgende Beispiel zeigt einen Filter, der einen Zeitraum von **mytimeatyb** angibt, der auf 3/23/99 8:52:58 Uhr Neuseeland Normalzeit (differenziell ist 12 Stunden) festgelegt ist. Dies entspricht 3/23/99 8:52:58 Uhr GMT.
+Das folgende Beispiel zeigt einen Filter, der eine **myTimeAttrib-Zeit** angibt, die auf 23.03.2019 20:52:58 Uhr Normalzeit (differenziell: 12 Stunden) festgelegt ist. Dies entspricht 3/23/99 8:52:58 AM GMT.
 
 
 ```C++
@@ -480,23 +480,23 @@ Das folgende Beispiel zeigt einen Filter, der einen Zeitraum von **mytimeatyb** 
 
 </dd> <dt>
 
-<span id="DirectoryString"></span><span id="directorystring"></span><span id="DIRECTORYSTRING"></span>Directoriystring
+<span id="DirectoryString"></span><span id="directorystring"></span><span id="DIRECTORYSTRING"></span>DirectoryString
 </dt> <dd>
 
-Der in einem Filter angegebene Wert ist eine Zeichenfolge. Directoriystring kann Unicode-Zeichen enthalten. Bei dem Vergleich wird Groß- und Kleinschreibung nicht unterschieden.
+Der in einem Filter angegebene Wert ist eine Zeichenfolge. DirectoryString kann Unicode-Zeichen enthalten. Bei dem Vergleich wird Groß- und Kleinschreibung nicht unterschieden.
 
 </dd> <dt>
 
-<span id="OID"></span><span id="oid"></span>OID
+<span id="OID"></span><span id="oid"></span>Oid
 </dt> <dd>
 
-Die gesamte OID, die abgeglichen werden soll, muss angegeben werden.
+Die gesamte übereinstimmende OID muss angegeben werden.
 
 Platzhalter werden nicht akzeptiert.
 
-Mit dem **objectCategory** -Attribut können Sie den **ldapDisplayName** des Klassen Satzes für das-Attribut angeben.
+Mit **dem objectCategory-Attribut** können Sie **den lDAPDisplayName** der Für das Attribut festgelegten Klasse angeben.
 
-Das folgende Beispiel zeigt einen Filter, der die **governsId** für die volumeklasse angibt:
+Das folgende Beispiel zeigt einen Filter, der **governsID für** die Volumeklasse angibt:
 
 
 ```C++
@@ -505,7 +505,7 @@ Das folgende Beispiel zeigt einen Filter, der die **governsId** für die volumek
 
 
 
-Zwei äquivalente Filter, der das **systemmustare** -Attribut angibt, das **uncname** enthält, das eine OID von 1.2.840.113556.1.4.137 hat:
+Zwei entsprechende Filter, die das **systemMustContain-Attribut** mit **uNCName** angeben, das über eine OID von 1.2.840.113556.1.4.137 verfügt:
 
 
 ```C++
@@ -518,21 +518,21 @@ Zwei äquivalente Filter, der das **systemmustare** -Attribut angibt, das **uncn
 
 </dd> <dt>
 
-<span id="Other_Syntaxes"></span><span id="other_syntaxes"></span><span id="OTHER_SYNTAXES"></span>Weitere Syntaxen
+<span id="Other_Syntaxes"></span><span id="other_syntaxes"></span><span id="OTHER_SYNTAXES"></span>Andere Syntaxen
 </dt> <dd>
 
-Die folgenden Syntaxen werden in einem Filter ausgewertet, der einer Oktett-Zeichenfolge ähnelt:
+Die folgenden Syntaxen werden in einem Filter ausgewertet, der einer Oktettzeichenfolge ähnelt:
 
--   Objectsecuritydescriptor
--   Access spointdn
--   Presentationadressen
--   Replicalink
--   Dnwithstring
--   Dnwithoctetstring
--   Orname
+-   ObjectSecurityDescriptor
+-   AccessPointDN
+-   PresentationAddresses
+-   ReplicaLink
+-   DNWithString
+-   DNWithOctetString
+-   ORName
 
 </dd> </dl>
 
- 
+ 
 
- 
+ 

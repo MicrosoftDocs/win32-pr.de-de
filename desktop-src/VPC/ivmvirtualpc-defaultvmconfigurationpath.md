@@ -1,11 +1,11 @@
 ---
-title: Ivmvirtualpc defaultvmconfigurationpath-Eigenschaft (vpccominterfaces. h)
-description: Standardverzeichnis, das nach verfügbaren Konfigurationsdateien für virtuelle Maschinen durchsucht werden soll.
+title: IVMVirtualPC DefaultVMConfigurationPath-Eigenschaft (VPCCOMInterfaces.h)
+description: Standardverzeichnis, das nach verfügbaren Konfigurationsdateien für virtuelle Computer durchsucht werden soll.
 ms.assetid: 9ae63198-e3f6-4dcb-8edb-85adfbbdca26
 keywords:
-- Defaultvmconfigurationpath-Eigenschaft virtueller PC
-- Defaultvmconfigurationpath-Eigenschaft Virtual PC, ivmvirtualpc-Schnittstelle
-- Ivmvirtualpc Interface Virtual PC, defaultvmconfigurationpath (Eigenschaft)
+- DefaultVMConfigurationPath-Eigenschaft Virtueller PC
+- DefaultVMConfigurationPath-Eigenschaft Virtueller PC, IVMVirtualPC-Schnittstelle
+- IVMVirtualPC-Schnittstelle Virtueller PC, DefaultVMConfigurationPath-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -18,18 +18,18 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e13fc2323cb15bdbeb8c42e61810a376e49b3988
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 09f6370dfb868ec386e05f361240a74412f13a7d
+ms.sourcegitcommit: cb87082135319cbdc5df541e3071eebb83a58972
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103742729"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111387636"
 ---
-# <a name="ivmvirtualpcdefaultvmconfigurationpath-property"></a>Ivmvirtualpc::D efaultvmconfigurationpath-Eigenschaft
+# <a name="ivmvirtualpcdefaultvmconfigurationpath-property"></a>IVMVirtualPC::D efaultVMConfigurationPath (Eigenschaft)
 
-\[Windows Virtual PC ist nicht mehr für die Verwendung ab Windows 8 verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (v2)](/windows/desktop/HyperV_v2/windows-virtualization-portal).\]
+\[Der virtuelle Windows-PC kann ab diesem Windows 8. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
 
-Ruft das Standardverzeichnis ab, das nach verfügbaren Konfigurationsdateien für virtuelle Maschinen gesucht werden soll, und legt dieses fest.
+Ruft das Standardverzeichnis ab, das nach verfügbaren Konfigurationsdateien für virtuelle Computer durchsucht werden soll, und legt es fest.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -50,7 +50,7 @@ HRESULT get_DefaultVMConfigurationPath(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Gibt den Verzeichnispfad für die Standard Konfigurationsdateien der virtuellen Maschine an. In der Pfad Zeichenfolge wird ein umgekehrter Schrägstrich ( \) möglicherweise direkt vor dem abschließenden NULL-Zeichen angezeigt).
+Gibt den Verzeichnispfad für die Standardkonfigurationsdateien des virtuellen Computers an. In der Pfadzeichenfolge kann ein zurücker Schrägstrich ( ) unmittelbar vor dem beendenden \\ NULL-Zeichen angezeigt werden.
 
 ## <a name="error-codes"></a>Fehlercodes
 
@@ -59,33 +59,33 @@ Gibt den Verzeichnispfad für die Standard Konfigurationsdateien der virtuellen 
 | Name/Wert                                                                                                                                                                               | Bedeutung                                                                                                                                                  |
 |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
 | <dl> <dt>S \_ OK</dt> <dt>0</dt> </dl>                                                  | Der Vorgang wurde durchgeführt.<br/>                                                                                                                 |
-| <dl> <dt>E \_ Zeiger</dt> <dt>0x80004003</dt> </dl>                                    | Der *ConfigurationPath* -Parameter ist **null**.<br/>                                                                                                |
-| <dl> <dt>HRESULT \_ Von \_ Win32 (Fehler \_ Datei \_ nicht \_ gefunden)</dt> <dt>0x80070002</dt> </dl> | Das System kann das vom *ConfigurationPath* -Parameter angegebene Verzeichnis nicht finden.<br/>                                                          |
-| <dl> <dt>HRESULT \_ FROM \_ Win32 (Fehler \_ Pfad \_ nicht \_ gefunden)</dt> <dt>0x80070003</dt> </dl> | Das System kann den vom *ConfigurationPath* -Parameter angegebenen Pfad nicht finden.<br/>                                                               |
-| <dl> <dt>HRESULT \_ Von \_ Win32 ( \_ ungültiger \_ Name)</dt> <dt>0x8007007b</dt> </dl>    | Der *ConfigurationPath* -Parameter enthält ein ungültiges Zeichen (eines der folgenden Zeichen: " \* ? <>/ \| ": ").<br/>                                   |
-| <dl> <dt>HRESULT \_ FROM \_ Win32 (Error ungültiger \_ \_ Pfadname)</dt> <dt>0x800700a1</dt> </dl>    | Der *ConfigurationPath* -Parameter gibt einen leeren oder relativen Pfad an. Ein absoluter Pfad ist erforderlich.<br/>                                          |
-| <dl> <dt>HRESULT \_ Von \_ Win32 (Fehler \_ Puffer \_ Überlauf)</dt> <dt>0x8007006f</dt> </dl> | Der vom *ConfigurationPath* -Parameter angegebene Pfad ist zu lang. Die Länge des Pfads muss kleiner als der **Maximale \_ Pfad** (260) sein.<br/> |
-| <dl> <dt>DISP \_ E- \_ Ausnahme</dt> <dt>0x80020009</dt> </dl>                            | Ein unerwarteter Fehler ist aufgetreten.<br/>                                                                                                             |
-| <dl> <dt>VM \_ E \_ \_ Hardwarevirtualisierung \_ deaktiviert</dt> <dt>0xa0040951</dt> </dl>     | Der Prozessor bietet keine Unterstützung für hav-Erweiterungen (Hardware Beschleunigung Virtualization).<br/>                                                          |
+| <dl> <dt>E \_ ZEIGER 0X80004003</dt> <dt></dt> </dl>                                    | Der *configurationPath-Parameter* ist **NULL.**<br/>                                                                                                |
+| <dl> <dt>HRESULT \_ FROM \_ WIN32(ERROR \_ FILE NOT \_ \_ FOUND)</dt> <dt>0X80070002</dt> </dl> | Das vom configurationPath-Parameter angegebene Verzeichnis kann vom *System nicht finden.*<br/>                                                          |
+| <dl> <dt>HRESULT \_ FROM \_ WIN32(ERROR \_ PATH NOT \_ \_ FOUND)</dt> <dt>0x80070003</dt> </dl> | Das System kann den durch den *configurationPath-Parameter angegebenen Pfad nicht* finden.<br/>                                                               |
+| <dl> <dt>HRESULT \_ FROM \_ WIN32(ERROR \_ INVALID \_ NAME)</dt> <dt>0x8007007b</dt> </dl>    | Der *parameter configurationPath* enthält ein ungültiges Zeichen (eines der folgenden Zeichen: " \* ?<>/ \| ":").<br/>                                   |
+| <dl> <dt>HRESULT \_ FROM \_ WIN32(ERROR \_ BAD \_ PATHNAME)</dt> <dt>0x800700a1</dt> </dl>    | Der *configurationPath-Parameter* gibt einen leeren oder relativen Pfad an. Ein absoluter Pfad ist erforderlich.<br/>                                          |
+| <dl> <dt>HRESULT \_ FROM \_ WIN32(ERROR \_ BUFFER \_ OVERFLOW)</dt> <dt>0x8007006f</dt> </dl> | Der vom *configurationPath-Parameter angegebene Pfad* ist zu lang. Die Länge des Pfads muss kleiner als **MAX \_ PATH** (260) Zeichen sein.<br/> |
+| <dl> <dt>DISP \_ E \_ EXCEPTION</dt> <dt>0x80020009</dt> </dl>                            | Ein unerwarteter Fehler ist aufgetreten.<br/>                                                                                                             |
+| <dl> <dt>VM \_ E \_ \_ HARDWAREVIRTUALISIERUNG \_ DEAKTIVIERT</dt> <dt>0XA0040951</dt> </dl>     | Der Prozessor unterstützt keine HAV-Erweiterungen (Hardware Accelerated Virtualization).<br/>                                                          |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Standardmäßig ist dieser Eigenschafts Wert auf das folgende Verzeichnis festgelegt: "% LocalAppData% \\ Microsoft \\ Windows Virtual PC \\ Virtual Machines \\ ".
+Standardmäßig ist dieser Eigenschaftswert auf das folgende Verzeichnis festgelegt: "%LocalAppData% \\ Microsoft Windows Virtual PC Virtual Machines \\ \\ \\ ".
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ 7-Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                     |
-| Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                          |
+| Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                          |
 | Produkt<br/>                  | Windows Virtual PC<br/>                                                                 |
-| Header<br/>                   | <dl> <dt>Vpccominterfaces. h</dt> </dl> |
-| IID<br/>                      | IID \_ ivmvirtualpc ist als 236ba0d9-a24a-4292-A132-27c1421dfd01 definiert.<br/>               |
+| Header<br/>                   | <dl> <dt>VPCCOMInterfaces.h</dt> </dl> |
+| IID<br/>                      | IID \_ IVMVirtualPC ist als 236ba0d9-a24a-4292-a132-27c1421dfd01 definiert.<br/>               |
 
 
 
@@ -93,7 +93,7 @@ Standardmäßig ist dieser Eigenschafts Wert auf das folgende Verzeichnis festge
 
 <dl> <dt>
 
-[**Ivmvirtualpc**](ivmvirtualpc.md)
+[**IVMVirtualPC**](ivmvirtualpc.md)
 </dt> </dl>
 
  

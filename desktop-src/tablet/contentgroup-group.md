@@ -1,19 +1,19 @@
 ---
-description: Definiert eine Gruppe, die einen Satz gruppierter Inhalte in einer Journal Notiz enthält.
+description: Definiert eine Gruppe, die einen Satz gruppierter Inhalte in einer Journalnotiz enthält.
 ms.assetid: e2561be1-03ce-41f7-9ad4-197d75411c48
-title: Gruppe "contentgroup"
+title: ContentGroup-Gruppe
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5fbbc13a3dee796646b6d61ac9ba0bde50880f12
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 02e4291da1912c43674871c06fb803e1936f7178
+ms.sourcegitcommit: c3f669dc1d52278432bf75ad9fddba3257d26aa2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104042622"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111432612"
 ---
-# <a name="contentgroup-group"></a>Gruppe "contentgroup"
+# <a name="contentgroup-group"></a>ContentGroup-Gruppe
 
-Definiert eine Gruppe, die einen Satz gruppierter Inhalte in einer Journal Notiz enthält.
+Definiert eine Gruppe, die einen Satz gruppierter Inhalte in einer Journalnotiz enthält.
 
 ## <a name="definition"></a>Definition
 
@@ -34,7 +34,7 @@ Definiert eine Gruppe, die einen Satz gruppierter Inhalte in einer Journal Notiz
 
 ## <a name="child-elements"></a>Untergeordnete Elemente
 
-[**-Gruppenknoten**](groupnode-element.md)
+[**GroupNode**](groupnode-element.md)
 
 [**Paragraph**](paragraph-element.md)
 
@@ -52,12 +52,12 @@ Definiert eine Gruppe, die einen Satz gruppierter Inhalte in einer Journal Notiz
 
 
 
-| Attribut  | type                      | Erforderlich | BESCHREIBUNG                                                                                        | PossibleValues                       |
+| attribute  | Typ                      | Erforderlich | BESCHREIBUNG                                                                                        | PossibleValues                       |
 |------------|---------------------------|----------|----------------------------------------------------------------------------------------------------|--------------------------------------|
-| **Left**   | **xs:integer**            | Erforderlich | Der Abstand zwischen dem Ursprung und dem äußersten äußersten linken Punkt im umgebenden Feld des Elements.<br/> | Eine beliebige ganze Zahl.<br/>              |
-| **Top**    | **xs:integer**            | Erforderlich | Der Abstand zwischen dem Ursprung und dem obersten Punkt im umgebenden Feld für das Element.<br/>  | Eine beliebige ganze Zahl.<br/>              |
-| **Width**  | **xs:nonNegativeInteger** | Erforderlich | Die Breite des Begrenzungs Rahmens für das Element.<br/>                                          | Eine beliebige nicht negative ganze Zahl.<br/> |
-| **Height** | **xs:nonNegativeInteger** | Erforderlich | Die Höhe des umgebenden Felds für das Element.<br/>                                         | Eine beliebige nicht negative ganze Zahl.<br/> |
+| **Left**   | **xs:integer**            | Erforderlich | Der Abstand vom Ursprung zum äußersten linken Punkt im begrenzungsfeld für das Element.<br/> | Eine beliebige ganze Zahl.<br/>              |
+| **Top**    | **xs:integer**            | Erforderlich | Der Abstand vom Ursprung zum obersten Punkt im Begrenzungsfeld für das Element.<br/>  | Eine beliebige ganze Zahl.<br/>              |
+| **Width**  | **xs:nonNegativeInteger** | Erforderlich | Die Breite des Begrenzungsfelds für das Element.<br/>                                          | Eine beliebige nicht negative ganze Zahl.<br/> |
+| **Height** | **xs:nonNegativeInteger** | Erforderlich | Die Höhe des Begrenzungsfelds für das Element.<br/>                                         | Eine beliebige nicht negative ganze Zahl.<br/> |
 
 
 
@@ -67,10 +67,10 @@ Definiert eine Gruppe, die einen Satz gruppierter Inhalte in einer Journal Notiz
 
 
 
-|             |                                            |
+|  Element     | Wert                                                     |
 |-------------|--------------------------------------------|
-| Namespace   | urn: Schemas-Microsoft-com: TabletPC: RichInk |
-| Schemaname | Journal Leser                             |
+| Namespace   | urn:schemas-microsoft-com:tabletpc:richink |
+| Schemaname | Journalreader                             |
 
 
 

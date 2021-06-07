@@ -1,37 +1,37 @@
 ---
-title: Eigenschaften (allgemeine Elemente)
-description: Das Text Services-Framework (TSF) stellt Eigenschaften bereit, die Metadaten einem Textbereich zuordnen.
+title: Eigenschaften (Allgemeine Elemente)
+description: Textdienstframework (TSF) stellt Eigenschaften bereit, die Metadaten einem Textbereich zuordnen.
 ms.assetid: d1d0dd99-f303-4355-9835-917de9491a0b
 keywords:
-- Text Dienst Framework (TSF), Eigenschaften
-- TSF (Text Dienst Framework), Eigenschaften
-- Text Dienste, Eigenschaften
-- TSF-aktivierte Anwendungen, Eigenschaften
+- Textdienstframework (TSF), Eigenschaften
+- TSF (Textdienstframework),Properties
+- Textdienste,Eigenschaften
+- TSF-fähige Anwendungen,Eigenschaften
 - properties
-- Text Dienst Framework (TSF), Eigenschafts Typen
-- TSF (Text Services Framework), Eigenschafts Typen
-- Text Dienste, Eigenschafts Typen
-- TSF-aktivierte Anwendungen, Eigenschafts Typen
+- Textdienstframework (TSF), Eigenschaftentypen
+- TSF (Textdienstframework),Eigenschaftentypen
+- Textdienste,Eigenschaftentypen
+- TSF-fähige Anwendungen,Eigenschaftentypen
 - Eigenschaftentypen
-- Text Dienst Framework (TSF), persistente Speicherung von Eigenschaften
-- TSF (Text Dienst Framework), persistente Speicherung von Eigenschaften
-- Text Dienste, persistente Speicherung von Eigenschaften
-- TSF-aktivierte Anwendungen, persistente Speicherung von Eigenschaften
-- persistente Speicherung von Eigenschaften
+- Textdienstframework (TSF), beständige Speicherung von Eigenschaften
+- TSF (Textdienstframework), persistente Speicherung von Eigenschaften
+- Textdienste,persistente Speicherung von Eigenschaften
+- TSF-fähige Anwendungen, beständige Speicherung von Eigenschaften
+- Persistente Speicherung von Eigenschaften
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: bff852bccfb7d9b6c94e57a2fa0cf8eef6fbdf18
-ms.sourcegitcommit: 8fa6614b715bddf14648cce36d2df22e5232801a
+ms.openlocfilehash: f5b94a1f6c504fcd3e6491af9e66b399d59a3eeb
+ms.sourcegitcommit: 8ebcf6cd36f67f8bcf78e76ae8923d65b8995c8a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "106339923"
+ms.lasthandoff: 06/05/2021
+ms.locfileid: "111524214"
 ---
-# <a name="properties-common-elements"></a>Eigenschaften (allgemeine Elemente)
+# <a name="properties-common-elements"></a>Eigenschaften (Allgemeine Elemente)
 
-Das Text Services-Framework (TSF) stellt Eigenschaften bereit, die Metadaten einem Textbereich zuordnen. Zu diesen Eigenschaften gehören unter anderem die Anzeige von Attributen wie fettem Text, der sprach Bezeichner des Texts und von einem Text Dienst bereitgestellte Rohdaten, wie z. b. die Audiodaten, die Text aus dem sprach Text Dienst zugeordnet sind.
+Textdienstframework (TSF) stellt Eigenschaften bereit, die Metadaten einem Textbereich zuordnen. Zu diesen Eigenschaften zählen u. a. Anzeigeattribute wie fett formatierten Text, der Sprachbezeichner des Texts und rohe Daten, die von einem Textdienst bereitgestellt werden, z. B. die Audiodaten, die dem Text aus dem Sprachtextdienst zugeordnet sind.
 
-Im folgenden Beispiel wird veranschaulicht, wie eine hypothetische Text Farb Eigenschaft mit möglichen Werten von rot (R), grün (G) oder blau (B) angezeigt werden kann.
+Im folgenden Beispiel wird veranschaulicht, wie eine hypothetische Textfarbeigenschaft mit möglichen Werten von Rot (R), Grün (G) oder Blau (B) angezeigt werden kann.
 
 
 ```C++
@@ -41,7 +41,7 @@ TEXT:  this is some colored text
 
 
 
-Eigenschaften verschiedener Typen können sich überlappen. Nehmen Sie z. B. das vorherige Beispiel, und fügen Sie ein Text Attribut hinzu, das entweder Fett (B) oder kursiv (I) sein kann.
+Eigenschaften verschiedener Typen können sich überlappen. Nehmen Sie beispielsweise das vorherige Beispiel, und fügen Sie ein Textattribut hinzu, das entweder fett (B) oder italisch (I) sein kann.
 
 
 ```C++
@@ -52,9 +52,9 @@ TEXT:  this is some colored text
 
 
 
-Der Text "This" wäre "Bold", "is", wäre "Bold" und "Red", "Some" wird normal angezeigt, "farbig" wäre grün und kursiv und "Text" wird kursiv formatiert.
+Der Text "this" wäre fett, "is" wäre sowohl fett als auch rot, "some" würde normal angezeigt, "colored" wäre grün und italicized und "text" wäre italicized.
 
-Eigenschaften desselben Typs dürfen sich nicht überlappen. Beispielsweise ist die folgende Situation nicht zulässig, da "ist" und "farbig" überlappende Werte desselben Typs aufweisen.
+Eigenschaften desselben Typs dürfen sich nicht überlappen. Die folgende Situation ist beispielsweise nicht zulässig, da "is" und "colored" überlappende Werte der gleichen Typen haben.
 
 
 ```C++
@@ -71,11 +71,11 @@ TSF definiert drei verschiedene Typen von Eigenschaften.
 
 
 
-|                |                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+|   Eigenschaftstyp             |   BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 |----------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| statischen         | Ein statisches Eigenschaften Objekt speichert die Eigenschafts Daten mit Text. Außerdem wird der Bereich der Textinformationen für jeden Bereich gespeichert, für den die Eigenschaft gilt. Itfreadonlyproperty:: GetType gibt die statische GUID \_ tfcat \_ propstyle- \_ Kategorie zurück.                                                                                                                                                                                                                      |
-| Static-Compact | Ein statisches Compact-Eigenschafts Objekt ist mit einem statischen Eigenschafts Objekt identisch, außer eine static-Compact-Eigenschaft speichert keine Bereichs Daten. Wenn der von einer static-Compact-Eigenschaft abgedeckte Bereich angefordert wird, wird für jede Gruppe von angrenzenden Eigenschaften ein Bereich erstellt. Statische Compact-Eigenschaften sind die effizienteste Methode, um Eigenschaften pro Zeichen zu speichern. Itfreadonlyproperty:: GetType gibt die GUID \_ tfcat \_ propstyle \_ staticcompact-Kategorie zurück. |
-| Benutzerdefiniert         | Ein benutzerdefiniertes Eigenschaften Objekt speichert die Bereichs Informationen für jeden Bereich, auf den die Eigenschaft angewendet wird. Die eigentlichen Daten für die Eigenschaft werden jedoch nicht gespeichert. Stattdessen speichert eine benutzerdefinierte Eigenschaft ein ITF PropertyStore-Objekt. Der TSF-Manager verwendet dieses Objekt, um auf die Eigenschaften Daten zuzugreifen und diese zu verwalten. Itfreadonlyproperty:: GetType gibt die \_ benutzerdefinierte Kategorie GUID tfcat \_ propstyle zurück \_ .                                                                    |
+| statischen         | Ein statisches Eigenschaftenobjekt speichert die Eigenschaftsdaten mit Text. Außerdem wird der Bereich der Textinformationen für jeden Bereich gespeichert, für den die Eigenschaft gilt. ITfReadOnlyProperty::GetType gibt die KATEGORIE GUID \_ TFCAT \_ PROPSTYLE \_ STATIC zurück.                                                                                                                                                                                                                      |
+| Static-Compact | Ein static-compact-Eigenschaftsobjekt ist mit einem statischen Eigenschaftsobjekt identisch, mit der Ausnahme, dass eine statisch-kompakte Eigenschaft keine Bereichsdaten enthält. Wenn der Bereich angefordert wird, der von einer statisch-kompakten Eigenschaft abgedeckt wird, wird ein Bereich für jede Gruppe benachbarter Eigenschaften erstellt. Statisch-kompakte Eigenschaften sind die effizienteste Möglichkeit, Eigenschaften pro Zeichen zu speichern. ITfReadOnlyProperty::GetType gibt die KATEGORIE GUID \_ TFCAT \_ PROPSTYLE \_ STATICCOMPACT zurück. |
+| Benutzerdefiniert         | Ein benutzerdefiniertes Eigenschaftenobjekt speichert die Bereichsinformationen für jeden Bereich, für den die Eigenschaft gilt. Die tatsächlichen Daten für die Eigenschaft werden jedoch nicht gespeichert. Stattdessen speichert eine benutzerdefinierte Eigenschaft ein ITfPropertyStore-Objekt. Der TSF-Manager verwendet dieses Objekt, um auf die Eigenschaftendaten zu zugreifen und diese zu verwalten. ITfReadOnlyProperty::GetType gibt die KATEGORIE GUID \_ TFCAT \_ PROPSTYLE \_ CUSTOM zurück.                                                                    |
 
 
 
@@ -83,11 +83,11 @@ TSF definiert drei verschiedene Typen von Eigenschaften.
 
 ## <a name="working-with-properties"></a>Arbeiten mit Eigenschaften
 
-Der Eigenschafts Wert und die Attribute werden mithilfe der [itfreadonlyproperty](/windows/desktop/api/msctf/nn-msctf-itfreadonlyproperty) -Schnittstelle abgerufen und mithilfe der [ITF Property](/windows/desktop/api/Msctf/nn-msctf-itfproperty) -Schnittstelle geändert.
+Der Eigenschaftswert und die Attribute werden mithilfe der [ITfReadOnlyProperty-Schnittstelle](/windows/desktop/api/msctf/nn-msctf-itfreadonlyproperty) ermittelt und mithilfe der [ITfProperty-Schnittstelle](/windows/desktop/api/Msctf/nn-msctf-itfproperty) geändert.
 
-Wenn ein bestimmter Eigenschaftentyp erforderlich ist, wird [ITF context:: GetProperty](/windows/desktop/api/msctf/nf-msctf-itfcontext-getproperty) verwendet. **ITfContext:: GetProperty** erfordert eine **GUID** , die die abzurufenden Eigenschaft identifiziert. TSF definiert eine Reihe von [vordefinierten Eigenschaften bezeichgern](predefined-properties.md) , die verwendet werden, oder ein Text Dienst kann seine eigenen Eigenschaften Bezeichner definieren. Wenn eine benutzerdefinierte Eigenschaft verwendet wird, muss der Eigenschafts Anbieter die Eigenschafts- **GUID** und das Format der erhaltenen Daten veröffentlichen.
+Wenn ein bestimmter Eigenschaftentyp erforderlich ist, wird [ITfContext::GetProperty](/windows/desktop/api/msctf/nf-msctf-itfcontext-getproperty) verwendet. **ITfContext::GetProperty** erfordert eine **GUID,** die die zu erhaltende Eigenschaft identifiziert. TSF definiert einen Satz von [vordefinierten Eigenschaftenbezeichnern,](predefined-properties.md) die verwendet werden, oder ein Textdienst kann seine eigenen Eigenschaftenbezeichner definieren. Wenn eine benutzerdefinierte Eigenschaft verwendet wird, muss der Eigenschaftenanbieter die **Eigenschaften-GUID** und das Format der erhaltenen Daten veröffentlichen.
 
-Wenn Sie z. b. die **CLSID** für den Besitzer eines Text Bereichs abrufen möchten, rufen Sie **ITfContext:: GetProperty** auf, um das Property-Objekt abzurufen, rufen Sie [itfproperty:: findrange](/windows/desktop/api/msctf/nf-msctf-itfproperty-findrange) auf, um den Bereich zu erhalten, der die Eigenschaft vollständig abdeckt, und rufen Sie dann [itfreadonlyproperty:: GetValue](/windows/desktop/api/msctf/nf-msctf-itfreadonlyproperty-getvalue) auf, um ein [tfguidatom](/windows/desktop/TSF/tfguidatom) abzurufen, das die **CLSID** des Text dienstantexts darstellt Im folgenden Beispiel wird eine Funktion veranschaulicht, die bei Angabe von Kontext, Bereich und Bearbeitungs Cookie die **CLSID** des Text Dienstanbieter erhält, der den Text besitzt.
+Um beispielsweise die **CLSID** für den Besitzer eines Textbereichs zu erhalten, rufen Sie **ITfContext::GetProperty** auf, um das Eigenschaftenobjekt zu erhalten, rufen [Sie ITfProperty::FindRange](/windows/desktop/api/msctf/nf-msctf-itfproperty-findrange) auf, um den Bereich zu erhalten, der die Eigenschaft vollständig abdeckt, und rufen Sie dann [ITfReadOnlyProperty::GetValue](/windows/desktop/api/msctf/nf-msctf-itfreadonlyproperty-getvalue) auf, um ein [TfGuidAtom-Objekt](/windows/desktop/TSF/tfguidatom) zu erhalten, das die **CLSID** des Textdiensts darstellt, der den Text besitzt. Das folgende Beispiel zeigt eine Funktion, die bei einem Kontext, einem Bereich und einem Bearbeitungscookie die **CLSID** des Textdiensts erhält, der den Text besitzt.
 
 
 ```C++
@@ -165,23 +165,23 @@ HRESULT GetTextOwner(   ITfContext *pContext,
 
 
 
-Eigenschaften können auch aufgelistet werden, indem eine [ienumtfproperties](/windows/desktop/api/msctf/nn-msctf-ienumtfproperties) -Schnittstelle von [ITF context:: EnumProperties](/windows/desktop/api/msctf/nf-msctf-itfcontext-enumproperties)erhalten wird.
+Eigenschaften können auch durch Abrufen einer [IEnumTfProperties-Schnittstelle](/windows/desktop/api/msctf/nn-msctf-ienumtfproperties) aus [ITfContext::EnumProperties aufzählt werden.](/windows/desktop/api/msctf/nf-msctf-itfcontext-enumproperties)
 
 ## <a name="persistent-storage-of-properties"></a>Persistente Speicherung von Eigenschaften
 
-Häufig sind Eigenschaften für eine Anwendung transparent und werden von einem oder mehreren Text Diensten verwendet. Um die Eigenschaften Daten beizubehalten, z. b. beim Speichern in einer Datei, muss eine Anwendung die Eigenschaften Daten bei der Speicherung serialisieren und die Eigenschafts Daten beim Wiederherstellen der Daten wiederherstellen. In diesem Fall sollte die Anwendung nicht an einzelnen Eigenschaften interessiert sein, sondern alle Eigenschaften im Kontext auflisten und speichern.
+Häufig sind Eigenschaften für eine Anwendung transparent und werden von mindestens einem Textdienst verwendet. Um die Eigenschaftsdaten zu erhalten, z. B. beim Speichern in einer Datei, muss eine Anwendung die Eigenschaftsdaten serialisieren, wenn sie gespeichert werden, und die Eigenschaftsdaten bei der Wiederherstellung der Daten neu serialisieren. In diesem Fall sollte die Anwendung nicht an einzelnen Eigenschaften interessiert sein, sondern alle Eigenschaften im Kontext aufzählen und speichern.
 
-Beim Speichern von Eigenschaften Daten sollte eine Anwendung die folgenden Schritte ausführen.
+Beim Speichern von Eigenschaftsdaten sollte eine Anwendung die folgenden Schritte ausführen.
 
-1.  Rufen Sie einen eigenschaftenenumerator durch Aufrufen von **ITfContext:: EnumProperties** ab.
-2.  Zählen Sie die einzelnen Eigenschaften durch Aufrufen von [ienumtfproperties:: Next](/windows/desktop/api/msctf/nf-msctf-ienumtfproperties-next)auf.
-3.  Rufen Sie für jede Eigenschaft einen Bereichs Enumerator durch Aufrufen von [itfreadonlyproperty:: enumranges](/windows/desktop/api/msctf/nf-msctf-itfreadonlyproperty-enumranges)ab.
-4.  Listet jeden Bereich in der Eigenschaft durch Aufrufen von [ienumtfranges:: Next](/windows/desktop/api/msctf/nf-msctf-ienumtfranges-next)auf.
-5.  Für jeden Bereich in der-Eigenschaft wird [itextstoreacpservices:: Serialize](/windows/desktop/api/msctf/nf-msctf-itextstoreacpservices-serialize) mit der-Eigenschaft, dem Range, einem [tf \_ persistent \_ \_ -Eigenschaften Header \_ ACP-](/windows/desktop/api/msctf/ns-msctf-tf_persistent_property_header_acp) Struktur und einem von der Anwendung implementierten Stream-Objekt aufgerufen.
-6.  Schreiben Sie den Inhalt der Überschrift für den **\_ persistenten TF \_ \_ -Eigenschaften Header \_ ACP** in den persistenten Speicher.
-7.  Schreiben Sie den Inhalt des Datenstrom Objekts in den persistenten Speicher.
-8.  Führen Sie die vorherigen Schritte für alle Bereiche in allen Eigenschaften aus.
-9.  Die Anwendung muss eine Art von terminiator in den Stream schreiben, damit beim Wiederherstellen der Daten ein Haltepunkt identifiziert werden kann.
+1.  Rufen Sie einen Eigenschaftenenumerator ab, indem **Sie ITfContext::EnumProperties aufrufen.**
+2.  Enumerieren Sie jede Eigenschaft, indem Sie [IEnumTfProperties::Next aufrufen.](/windows/desktop/api/msctf/nf-msctf-ienumtfproperties-next)
+3.  Rufen Sie für jede Eigenschaft einen Bereichsenumerator ab, indem [Sie ITfReadOnlyProperty::EnumRanges aufrufen.](/windows/desktop/api/msctf/nf-msctf-itfreadonlyproperty-enumranges)
+4.  Aufzählen Sie jeden Bereich in der -Eigenschaft, indem [Sie IEnumTfRanges::Next aufrufen.](/windows/desktop/api/msctf/nf-msctf-ienumtfranges-next)
+5.  Rufen Sie für jeden Bereich in der -Eigenschaft [ITextStoreACPServices::Serialize](/windows/desktop/api/msctf/nf-msctf-itextstoreacpservices-serialize) mit der -Eigenschaft, dem Bereich, einer [TF PERSISTENT PROPERTY HEADER \_ \_ \_ \_ ACP-Struktur](/windows/desktop/api/msctf/ns-msctf-tf_persistent_property_header_acp) und einem von der Anwendung implementierten Streamobjekt auf.
+6.  Schreiben Sie den Inhalt der **TF PERSISTENT PROPERTY HEADER \_ \_ \_ \_ ACP-Struktur** in den persistenten Speicher.
+7.  Schreiben Sie den Inhalt des Streamobjekts in den persistenten Speicher.
+8.  Fahren Sie mit den vorherigen Schritten für alle Bereiche in allen Eigenschaften fort.
+9.  Die Anwendung sollte einen Typ von Abschlusszeichen in den Stream schreiben, damit bei der Wiederherstellung der Daten ein Beendigungspunkt identifiziert werden kann.
 
 
 ```C++
@@ -271,19 +271,19 @@ HRESULT SaveProperties( ITfContext *pContext,
 
 
 
-**Itextstoreacpservices:: Serialize**[ITF PropertyStore:: Serialize](/windows/desktop/api/msctf/nf-msctf-itfpropertystore-serialize)
+**ITextStoreACPServices::Serialize**[ITfPropertyStore::Serialize](/windows/desktop/api/msctf/nf-msctf-itfpropertystore-serialize)
 
-Beim Wiederherstellen von Eigenschaften Daten sollte eine Anwendung die folgenden Schritte ausführen.
+Beim Wiederherstellen von Eigenschaftsdaten sollte eine Anwendung die folgenden Schritte ausführen.
 
-1.  Legen Sie den Streamzeiger auf den Anfang der ersten **tf \_ -Struktur der persistenten \_ \_ \_ -Eigenschaften Kopfzeile** fest.
-2.  Lesen Sie den beständigen **tf \_ \_ \_ -Eigenschaften Header \_ ACP-** Struktur.
-3.  Aufrufen von **ITfContext:: GetProperty** mit dem **guidtype** -Member des **tf-Elements für \_ persistente \_ Eigenschaften \_ Header \_ ACP** .
-4.  An dieser Stelle kann die Anwendung eine von zwei Punkten ausführen.
-    1.  Erstellen Sie eine Instanz eines [ITF persistentpropertyloaderacp-](/windows/desktop/api/msctf/nn-msctf-itfpersistentpropertyloaderacp) Objekts, das von der Anwendung implementiert werden muss. Nennen Sie dann [itextstoreacpservices:: unserialize](/windows/desktop/api/msctf/nf-msctf-itextstoreacpservices-unserialize) mit **null** für *pStream* und den **itfpersistentpropertyloaderacp-** Zeiger.
-    2.  Übergeben Sie den Eingabedaten Strom an **itextstoreacpservices:: unserialize** und **null** für *ploader*.
+1.  Legen Sie den Streamzeiger auf den Anfang der ersten **TF PERSISTENT PROPERTY HEADER \_ \_ \_ \_ ACP-Struktur** fest.
+2.  Lesen Sie die **TF PERSISTENT PROPERTY HEADER \_ \_ \_ \_ ACP-Struktur.**
+3.  Rufen **Sie ITfContext::GetProperty** mit dem **guidType-Member** der **TF PERSISTENT PROPERTY HEADER \_ \_ \_ \_ ACP-Struktur** auf.
+4.  Die Anwendung kann an diesem Punkt eines von zwei Dingen tun.
+    1.  Erstellen Sie eine Instanz eines [ITfPersistentPropertyLoaderACP-Objekts,](/windows/desktop/api/msctf/nn-msctf-itfpersistentpropertyloaderacp) das die Anwendung implementieren muss. Rufen Sie dann [ITextStoreACPServices::Unserialize](/windows/desktop/api/msctf/nf-msctf-itextstoreacpservices-unserialize) mit **NULL** für *pStream* und den **ITfPersistentPropertyLoaderACP-Zeiger** auf.
+    2.  Übergeben Sie den Eingabestream **an ITextStoreACPServices::Unserialize** und **NULL** für *pLoader*.
 
-    Die erste Methode wird bevorzugt, da Sie die effizienteste ist. Das Implementieren der zweiten Methode bewirkt, dass alle Eigenschaften Daten während des **itextstoreacpservices:: unserialize** -Aufrufes aus dem Stream gelesen werden. Die erste Methode bewirkt, dass die Eigenschaften Daten zu einem späteren Zeitpunkt bei Bedarf gelesen werden.
-5.  Wiederholen Sie die vorherigen Schritte, bis alle Eigenschafts Blöcke unserialisiert sind.
+    Die erste Methode wird bevorzugt, da sie am effizientesten ist. Die Implementierung der zweiten Methode bewirkt, dass alle Eigenschaftsdaten während des **ITextStoreACPServices::Unserialize-Aufrufs** aus dem Stream gelesen werden. Die erste Methode bewirkt, dass die Eigenschaftsdaten bei Bedarf zu einem späteren Zeitpunkt gelesen werden.
+5.  Wiederholen Sie die vorherigen Schritte, bis alle Eigenschaftenblöcke erneutialisiert wurden.
 
 
 ```C++

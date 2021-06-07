@@ -1,11 +1,11 @@
 ---
-title: Taskfolder. DeleteFolder-Methode
-description: Bei der Skripterstellung wird ein Unterordner aus dem übergeordneten Ordner gelöscht.
+title: TaskFolder.DeleteFolder-Methode
+description: Für die Skripterstellung löscht einen Unterordner aus dem übergeordneten Ordner.
 ms.assetid: 0d6a9a60-7909-4945-8186-3495e6fe9bc4
 keywords:
-- DeleteFolder-Methode Taskplaner
-- DeleteFolder-Methode Taskplaner, Task Folder-Objekt
-- Task Folder-Objekt Taskplaner, DeleteFolder-Methode
+- DeleteFolder-Taskplaner
+- DeleteFolder-Methode Taskplaner , TaskFolder-Objekt
+- TaskFolder-Taskplaner , DeleteFolder-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6ea9b8aaa7da7710cedc49e10d6be2a203f62b34
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 31080f017329cde376b646befd4b7e12ba02926b
+ms.sourcegitcommit: cb87082135319cbdc5df541e3071eebb83a58972
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104477481"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111387039"
 ---
-# <a name="taskfolderdeletefolder-method"></a>Taskfolder. DeleteFolder-Methode
+# <a name="taskfolderdeletefolder-method"></a>TaskFolder.DeleteFolder-Methode
 
-Bei der Skripterstellung wird ein Unterordner aus dem übergeordneten Ordner gelöscht.
+Für die Skripterstellung löscht einen Unterordner aus dem übergeordneten Ordner.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,14 +43,14 @@ TaskFolder.DeleteFolder( _
 
 <dl> <dt>
 
-*FolderName* \[ in\]
+*folderName* \[ In\]
 </dt> <dd>
 
-Der Name des unter Ordners, der entfernt werden soll. Der Stamm Aufgaben Ordner wird mit einem umgekehrten Schrägstrich () angegeben \) . Dieser Parameter kann ein relativer Pfad zu dem Ordner sein, den Sie löschen möchten. Ein Beispiel für einen Aufgaben Ordner Pfad unter dem Stamm Aufgaben Ordner ist \\ mytaskfolder. Das Zeichen "." kann nicht verwendet werden, um den aktuellen Aufgaben Ordner und ".." anzugeben. Zeichen können nicht verwendet werden, um den übergeordneten Aufgaben Ordner im Pfad anzugeben.
+Der Name des zu entfernenden Unterordners. Der Stammordner des Task wird mit einem schrägen Schrägstrich () \\ angegeben. Dieser Parameter kann ein relativer Pfad zu dem Ordner sein, den Sie löschen möchten. Ein Beispiel für einen Taskordnerpfad unter dem Stammaufgabenordner ist \\ MyTaskFolder. Das Zeichen "." kann nicht verwendet werden, um den aktuellen Taskordner und "." anzugeben. -Zeichen können nicht verwendet werden, um den übergeordneten Taskordner im Pfad anzugeben.
 
 </dd> <dt>
 
-*Flags* \[ in\]
+*Flags* \[ In\]
 </dt> <dd>
 
 Wird nicht unterstützt.
@@ -61,15 +61,15 @@ Wird nicht unterstützt.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                    |
-| Typbibliothek<br/>             | <dl> <dt>Taskschd. tlb</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ Vista-Desktop-Apps\]<br/>                                          |
+| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2008-Desktop-Apps\]<br/>                                    |
+| Typbibliothek<br/>             | <dl> <dt>Taskschd.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Taskschd.dll</dt> </dl> |
 
 
@@ -78,7 +78,7 @@ Diese Methode gibt keinen Wert zurück.
 
 <dl> <dt>
 
-[**Task Folder**](taskfolder.md)
+[**TaskFolder**](taskfolder.md)
 </dt> <dt>
 
 [Aufgabenplanung](task-scheduler-start-page.md)

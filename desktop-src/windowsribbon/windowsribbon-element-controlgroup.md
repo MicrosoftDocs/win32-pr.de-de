@@ -1,9 +1,9 @@
 ---
-title: Controlgroup-Element
-description: Stellt eine Gruppe von Steuerelementen in einer sizedefinition-Layoutvorlage dar.
+title: ControlGroup-Element
+description: Stellt eine Gruppe von Steuerelementen in einer SizeDefinition-Layoutvorlage dar.
 ms.assetid: 688f3fa5-f305-4554-b16a-590983cf23b9
 keywords:
-- Windows-Menüband für controlgroup-Element
+- ControlGroup-Element Im Windows-Menüband
 topic_type:
 - apiref
 api_name:
@@ -13,18 +13,18 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: dd6df69f788efe01b9eb2c7ffe0aaddd98bd7198
-ms.sourcegitcommit: 927b9c371f75f52b8011483edf3a4ba37d11ebe4
+ms.openlocfilehash: 7d2b49612102d03003c2f61395a56647aaef4475
+ms.sourcegitcommit: 099ecdda1e83618b844387405da0db0ebda93a65
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "104389784"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111442941"
 ---
-# <a name="controlgroup-element"></a>Controlgroup-Element
+# <a name="controlgroup-element"></a>ControlGroup-Element
 
-Stellt eine Gruppe von Steuerelementen in einer [**sizedefinition**](windowsribbon-element-sizedefinition.md) -Layoutvorlage dar.
+Stellt eine Gruppe von Steuerelementen in einer [**SizeDefinition-Layoutvorlage**](windowsribbon-element-sizedefinition.md) dar.
 
-## <a name="usage"></a>Verbrauch
+## <a name="usage"></a>Verwendung
 
 ``` syntax
 <ControlGroup
@@ -46,8 +46,8 @@ Stellt eine Gruppe von Steuerelementen in einer [**sizedefinition**](windowsribb
 </colgroup>
 <thead>
 <tr class="header">
-<th>Attribut</th>
-<th>type</th>
+<th>attribute</th>
+<th>Typ</th>
 <th>Erforderlich</th>
 <th>BESCHREIBUNG</th>
 </tr>
@@ -57,8 +57,8 @@ Stellt eine Gruppe von Steuerelementen in einer [**sizedefinition**](windowsribb
 <td><strong>SequenceNumber</strong><br/></td>
 <td>xs:positiveInteger<br/></td>
 <td>Nein<br/></td>
-<td>Nur gültig, wenn die <a href="windowsribbon-element-group.md"><strong>Gruppe</strong></a> das übergeordnete Element ist.<br/> Jede <em>sequencenumkehr</em> muss innerhalb eines <a href="windowsribbon-element-group.md"><strong>Group</strong></a> -Elements eindeutig sein. Die Werte für <em>sequencenenumber</em> sollten für jedes <strong>Group</strong> -Element erhöht werden, müssen jedoch nicht sequenziell sein. <br/> <br/>
-<dt><span></span><span></span><strong></strong> (xs: positivin teger)<br/> </dt> <dd> Ein beliebiger positiver ganzzahliger Wert zwischen 1000 und 59999 (einschließlich).<br/> </dd> </dl></td>
+<td>Nur gültig, <a href="windowsribbon-element-group.md"><strong>wenn Group</strong></a> das übergeordnete Element ist.<br/> Jede <em>SequenceNumber</em> muss innerhalb eines Group-Elements <a href="windowsribbon-element-group.md"><strong>eindeutig</strong></a> sein. Die Werte für <em>SequenceNumber</em> sollten für jedes <strong>Group-Element</strong> erhöht werden, müssen jedoch nicht sequenziell sein. <br/> <br/>
+<dt><span></span><span></span><strong></strong> (xs:positiveInteger)<br/> </dt> <dd> Ein positiver ganzzahliger Wert zwischen 1000 und 59999 einschließlich .<br/> </dd> </dl></td>
 </tr>
 </tbody>
 </table>
@@ -71,19 +71,19 @@ Stellt eine Gruppe von Steuerelementen in einer [**sizedefinition**](windowsribb
 
 | Element                                                                                 | BESCHREIBUNG                                        |
 |-----------------------------------------------------------------------------------------|----------------------------------------------------|
-| [**Schaltfläche**](windowsribbon-element-button.md)<br/>                               | Kann ein-oder mehrmals vorkommen<br/> <br/> |
-| [**CheckBox**](windowsribbon-element-checkbox.md)<br/>                           | Kann ein-oder mehrmals vorkommen<br/> <br/> |
-| [**ComboBox**](windowsribbon-element-combobox.md)<br/>                           | Kann ein-oder mehrmals vorkommen<br/> <br/> |
-| [**Controlsizedefinition**](windowsribbon-element-controlsizedefinition.md)<br/> | Kann ein-oder mehrmals vorkommen<br/> <br/> |
-| [**DropDownButton**](windowsribbon-element-dropdownbutton.md)<br/>               | Kann ein-oder mehrmals vorkommen<br/> <br/> |
-| [**Dropdowncolorpicker**](windowsribbon-element-dropdowncolorpicker.md)<br/>     | Kann ein-oder mehrmals vorkommen<br/> <br/> |
-| [**Dropdown Gallery**](windowsribbon-element-dropdowngallery.md)<br/>             | Kann ein-oder mehrmals vorkommen<br/> <br/> |
-| [**FontControl**](windowsribbon-element-fontcontrol.md)<br/>                     | Kann höchstens einmal vorkommen<br/> <br/>      |
-| [**Inribbongallery**](windowsribbon-element-inribbongallery.md)<br/>             | Kann ein-oder mehrmals vorkommen<br/> <br/> |
-| [**Spinner**](windowsribbon-element-spinner.md)<br/>                             | Kann ein-oder mehrmals vorkommen<br/> <br/> |
-| [**SplitButton**](windowsribbon-element-splitbutton.md)<br/>                     | Kann ein-oder mehrmals vorkommen<br/> <br/> |
-| [**Splitbuttongallery**](windowsribbon-element-splitbuttongallery.md)<br/>       | Kann ein-oder mehrmals vorkommen<br/> <br/> |
-| [**ToggleButton**](windowsribbon-element-togglebutton.md)<br/>                   | Kann ein-oder mehrmals vorkommen<br/> <br/> |
+| [**Schaltfläche**](windowsribbon-element-button.md)<br/>                               | Kann ein oder mehrere Male auftreten.<br/> <br/> |
+| [**Checkbox**](windowsribbon-element-checkbox.md)<br/>                           | Kann ein oder mehrere Male auftreten.<br/> <br/> |
+| [**ComboBox**](windowsribbon-element-combobox.md)<br/>                           | Kann ein oder mehrere Male auftreten.<br/> <br/> |
+| [**ControlSizeDefinition**](windowsribbon-element-controlsizedefinition.md)<br/> | Kann ein oder mehrere Male auftreten.<br/> <br/> |
+| [**DropDownButton**](windowsribbon-element-dropdownbutton.md)<br/>               | Kann ein oder mehrere Male auftreten.<br/> <br/> |
+| [**DropDownColorPicker**](windowsribbon-element-dropdowncolorpicker.md)<br/>     | Kann ein oder mehrere Male auftreten.<br/> <br/> |
+| [**DropDownGallery**](windowsribbon-element-dropdowngallery.md)<br/>             | Kann ein oder mehrere Male auftreten.<br/> <br/> |
+| [**FontControl**](windowsribbon-element-fontcontrol.md)<br/>                     | Kann nur einmal auftreten.<br/> <br/>      |
+| [**InRibbonGallery**](windowsribbon-element-inribbongallery.md)<br/>             | Kann ein oder mehrere Male auftreten.<br/> <br/> |
+| [**Spinner**](windowsribbon-element-spinner.md)<br/>                             | Kann ein oder mehrere Male auftreten.<br/> <br/> |
+| [**SplitButton**](windowsribbon-element-splitbutton.md)<br/>                     | Kann ein oder mehrere Male auftreten.<br/> <br/> |
+| [**SplitButtonGallery**](windowsribbon-element-splitbuttongallery.md)<br/>       | Kann ein oder mehrere Male auftreten.<br/> <br/> |
+| [**ToggleButton**](windowsribbon-element-togglebutton.md)<br/>                   | Kann ein oder mehrere Male auftreten.<br/> <br/> |
 
 
 
@@ -93,28 +93,28 @@ Stellt eine Gruppe von Steuerelementen in einer [**sizedefinition**](windowsribb
 
 | Element                                                                             |
 |-------------------------------------------------------------------------------------|
-| **Controlgroup**<br/>                                                         |
+| **ControlGroup**<br/>                                                         |
 | [**Gruppe**](windowsribbon-element-group.md)<br/>                             |
-| [**Groupsizedefinition**](windowsribbon-element-groupsizedefinition.md)<br/> |
+| [**GroupSizeDefinition**](windowsribbon-element-groupsizedefinition.md)<br/> |
 | [**Zeile**](windowsribbon-element-row.md)<br/>                                 |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Dies ist optional.
 
-Kann für jedes [**Group**](windowsribbon-element-group.md) -oder **controlgroup** -Element einmal oder mehrmals vorkommen.
+Kann ein oder mehrere Male für jedes [**Group- oder**](windowsribbon-element-group.md) **ControlGroup-Element** auftreten.
 
-Wenn keine Sequenznummern angegeben werden, werden Elemente in der Reihenfolge gerendert, in der das Menüband-Markup angegeben ist.
+Wenn keine Sequenznummern angegeben werden, werden Elemente in der im Menübandmarkup angegebenen Reihenfolge gerendert.
 
-Wenn " [**Group**](windowsribbon-element-group.md) " oder " **controlgroup** " das übergeordnete Element ist, wird " **controlgroup** " auf die folgenden möglichen untergeordneten Elemente beschränkt: [**Schaltfläche**](windowsribbon-element-button.md), [**CheckBox**](windowsribbon-element-checkbox.md), [**ComboBox**](windowsribbon-element-combobox.md), [**Dropdown Button**](windowsribbon-element-dropdownbutton.md), [**dropdowncolorpicker**](windowsribbon-element-dropdowncolorpicker.md), [**dropdowngallery**](windowsribbon-element-dropdowngallery.md), [**FontControl**](windowsribbon-element-fontcontrol.md), [**inribbongallery**](windowsribbon-element-inribbongallery.md), [**Spinner**](windowsribbon-element-spinner.md), [**SplitButton**](windowsribbon-element-splitbutton.md), [**splitbuttongallery**](windowsribbon-element-splitbuttongallery.md)oder UMSCHALT [**Fläche**](windowsribbon-element-togglebutton.md)
+Wenn [**Group**](windowsribbon-element-group.md) oder **ControlGroup** das übergeordnete Element ist, **ist ControlGroup** auf die folgenden möglichen untergeordneten Elemente beschränkt: [**Button,**](windowsribbon-element-button.md) [**CheckBox,**](windowsribbon-element-checkbox.md) [**ComboBox,**](windowsribbon-element-combobox.md) [**DropDownButton,**](windowsribbon-element-dropdownbutton.md) [**DropDownColorPicker,**](windowsribbon-element-dropdowncolorpicker.md) [**DropDownGallery,**](windowsribbon-element-dropdowngallery.md) [**FontControl,**](windowsribbon-element-fontcontrol.md) [**InRibbonGallery,**](windowsribbon-element-inribbongallery.md) [**Spinner,**](windowsribbon-element-spinner.md) [**SplitButton,**](windowsribbon-element-splitbutton.md) [**SplitButtonGallery**](windowsribbon-element-splitbuttongallery.md)oder [**ToggleButton**](windowsribbon-element-togglebutton.md)
 
-Wenn " [**Row**](windowsribbon-element-row.md) " oder " [**groupsizedefinition**](windowsribbon-element-groupsizedefinition.md) " das übergeordnete Element ist, wird die [**Gruppe**](windowsribbon-element-group.md) auf das folgende mögliche untergeordnete Element beschränkt: [**controlsizedefinition**](windowsribbon-element-controlsizedefinition.md).
+Wenn Row [**oder**](windowsribbon-element-row.md) [**GroupSizeDefinition**](windowsribbon-element-groupsizedefinition.md) das übergeordnete Element ist, ist [**Group**](windowsribbon-element-group.md) andernfalls auf das folgende mögliche untergeordnete Element [**beschränkt: ControlSizeDefinition**](windowsribbon-element-controlsizedefinition.md).
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Codebeispiel wird das grundlegende Markup für eine benutzerdefinierte [**sizedefinition**](windowsribbon-element-sizedefinition.md) -Layoutvorlage mit vier Schaltflächen mit verschiedenen [**Gruppen**](windowsribbon-element-group.md) Elementen veranschaulicht.
+Im folgenden Codebeispiel wird das grundlegende Markup für eine benutzerdefinierte [**SizeDefinition-Layoutvorlage**](windowsribbon-element-sizedefinition.md) mit vier Schaltflächen mit verschiedenen [**Group-Elementen**](windowsribbon-element-group.md) veranschaulicht.
 
 
 ```XML
@@ -206,20 +206,16 @@ Im folgenden Codebeispiel wird das grundlegende Markup für eine benutzerdefinie
 
 ## <a name="element-information"></a>Elementinformationen
 
-
-
-|                                     |           |
-|-------------------------------------|-----------|
-| Unterstützte Mindestversion (System)<br/> | Windows 7 |
-| Kann leer bleiben                        | Nein        |
+* **Unterstütztes Mindestsystem:** Windows 7
+* **Kann leer sein:** Nein
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[Anpassen eines Menübands durch Größen Definitionen und Skalierungs Richtlinien](windowsribbon-templates.md)
+[Anpassen eines Menübands durch Größendefinitionen und Skalierungsrichtlinien](windowsribbon-templates.md)
 </dt> </dl>
 
  

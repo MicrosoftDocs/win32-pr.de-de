@@ -1,403 +1,403 @@
 ---
 title: Animationen und Übergänge
-description: Mithilfe der strategischen Verwendung von Animationen und Übergängen kann Ihr Programm leichter zu verstehen sein, es kann sich als etwas Glätte, natürlicher und von höherer Qualität erweisen und die Benutzerfreundlichkeit verbessern.
+description: Die strategische Verwendung von Animationen und Übergängen kann ihr Programm leichter verstehen, reibungsloser, natürlicher und von höherer Qualität sein und ansprechender sein.
 ms.assetid: 9e0e9604-f051-47e4-bcd0-59fbfd38b9c1
 ms.topic: article
 ms.date: 10/20/2020
-ms.openlocfilehash: 6d57c696bd78df9c9505bb85453456f10631a00d
-ms.sourcegitcommit: 3bdf30edb314e0fcd17dc4ddbc70e4ec7d3596e6
+ms.openlocfilehash: 546c1d0a59808b54f4ffa12fc7cd034554521ca3
+ms.sourcegitcommit: 099ecdda1e83618b844387405da0db0ebda93a65
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "104566053"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111444761"
 ---
 # <a name="animations-and-transitions"></a>Animationen und Übergänge
 
 > [!NOTE]
-> Dieses Entwurfs Handbuch wurde für Windows 7 erstellt und wurde für neuere Versionen von Windows nicht aktualisiert. Ein Großteil der Anleitungen gilt weiterhin im Prinzip, aber die Präsentation und die Beispiele entsprechen nicht unseren [aktuellen Entwurfs Anleitungen](/windows/uwp/design/).
+> Dieser Entwurfsleitfaden wurde für Windows 7 erstellt und für neuere Versionen von Windows nicht aktualisiert. Ein Großteil der Anleitungen gilt immer noch im Prinzip, aber die Präsentation und die Beispiele spiegeln nicht unsere [aktuellen Entwurfsleitfäden](/windows/uwp/design/)wider.
 
-Mithilfe der strategischen Verwendung von Animationen und Übergängen kann Ihr Programm leichter zu verstehen sein, es kann sich als etwas Glätte, natürlicher und von höherer Qualität erweisen und die Benutzerfreundlichkeit verbessern. Die kostenlose Verwendung von Animationen und Übergängen kann das Programm jedoch ablenkend und sogar lästig machen.
+Die strategische Verwendung von Animationen und Übergängen kann ihr Programm leichter verstehen, reibungsloser, natürlicher und von höherer Qualität sein und ansprechender sein. Die zufällige Verwendung von Animationen und Übergängen kann das Programm jedoch störend und sogar ängstlich machen.
 
-Animationen gestalten die Darstellung von Bewegung oder ändern sich im Laufe der Zeit. Verwenden Sie Animationen, um Feedback zu geben, die Auswirkungen einer Aktion in der Vorschau anzuzeigen, die Beziehung zwischen Objekten anzuzeigen, auf Änderungen aufmerksam zu machen oder eine Aufgabe visuell zu erläutern.
+Animationen geben die Darstellung von Bewegung oder Änderung im Laufe der Zeit an. Verwenden Sie Animationen, um Feedback zu geben, eine Vorschau der Auswirkung einer Aktion anzuzeigen, die Beziehung zwischen Objekten anzuzeigen, die Aufmerksamkeit auf Änderungen zu lenken oder eine Aufgabe visuell zu erklären.
 
-![Abbildung der numerischen Tastatur mit hervorgehobenem Schlüssel ](images/vis-animations-image1.png)
+![Abbildung der numerischen Tastatur mit hervorgehobener Taste ](images/vis-animations-image1.png)
 
-Microsoft Windows verwendet eine Hintergrund-Flash-Animation, um Feedback zu geben, auf das das Objekt geklickt wurde.
+Microsoft Windows verwendet eine Hintergrund-Flash-Animation, um Feedback zu geben, dass auf das Objekt geklickt wurde.
 
-Übergänge sind Animationen, die verwendet werden, um die Benutzer auf der Benutzeroberfläche (UI)-Zustandsänderungen und Objekt Manipulationen zu halten und diese Änderungen als Smooth-anstelle von jarringverhalten zu gestalten. Gute Übergänge fühlen sich natürlich, und es wird oft die Illusion angezeigt, dass Benutzer mit echten Objekten interagieren.
+Übergänge sind Animationen, mit denen Benutzer während Benutzeroberflächenzustandsänderungen und Objektbearbeitungen ausgerichtet bleiben und diese Änderungen reibungslos und nicht mit Jarringen funktionieren. Gute Übergänge wirken natürlich und vermitteln oft die Vorstellung, dass Benutzer mit realen Objekten interagieren.
 
-![Screenshot, der drei Größen von Wetter Gadgets zeigt.](images/vis-animations-image2.png)
+![Screenshot, der drei Größen von Wetter-Gadgets zeigt.](images/vis-animations-image2.png)
 
-Windows-Desktop-Mini Anwendungen verwenden reibungslose Übergänge zwischen ihren präzisen und Detail Zuständen.
+Windows Desktop-Gadgets verwenden reibungslose Übergänge zwischen ihren präzisen und Detailzuständen.
 
-Im Allgemeinen werden die besten Animationen und Übergänge verwendet, um mit den Benutzern nicht verbal zu kommunizieren und Zustandsänderungen natürlicher und weniger bemerkbar zu machen. Im Gegensatz dazu sind die geringsten Nachteile darin, dass Sie keine Inhalte kommunizieren oder unnötige Aufmerksamkeit ziehen. Animationen werden am besten als sekundäre Form der Kommunikation verwendet. Sie sollten Informationen, die hilfreich, aber nicht kritisch sind, übermitteln und darauf zugreifen können, dass Benutzer in der Lage sein sollten, entsprechende Informationen auf andere Weise zu ermitteln.
+Im Allgemeinen werden die besten Animationen und Übergänge verwendet, um Benutzer nicht-lyrisch zu kommunizieren und Zustandsänderungen natürlicher und weniger wahrnehmbar zu machen. Im Gegensatz dazu sind die am wenigsten effektiven , da sie nichts kommunizieren oder unnötige Aufmerksamkeit auf sich ziehen. Animationen werden am besten als sekundäre Kommunikationsform verwendet. Sie sollten Informationen kommunizieren, die nützlich, aber nicht kritisch sind, und um darauf zugreifen zu können, sollten Benutzer in der Lage sein, äquivalente Informationen auf andere Weise zu bestimmen.
 
-**Hinweis:** Richtlinien im Zusammenhang mit [Software Branding](exper-branding.md), [Sound](vis-sound.md)und [Barrierefreiheit](inter-accessibility.md) werden in separaten Artikeln dargestellt.
+**Hinweis:** Richtlinien im Zusammenhang mit [Softwarebranding,](exper-branding.md) [Sound](vis-sound.md)und [Barrierefreiheit](inter-accessibility.md) werden in separaten Artikeln vorgestellt.
 
-## <a name="is-this-the-right-user-interface"></a>Handelt es sich um die richtige Benutzeroberfläche?
+## <a name="is-this-the-right-user-interface"></a>Ist dies die richtige Benutzeroberfläche?
 
-Beachten Sie die folgenden Fragen, um zu entscheiden.
+Berücksichtigen Sie die folgenden Fragen, um die Entscheidung zu treffen.
 
 ### <a name="animations"></a>Animationen
 
 Gelten die folgenden Bedingungen?
 
--   Die Animation kommuniziert visuell etwas Nützliches, wie z. b. das Senden von Feedback, das darstellen von Beziehungen, Gründe und Auswirkungen oder das Zeichnen auf wichtige Änderungen.
--   Das Anzeigen der Animation ist nicht zwingend erforderlich. Äquivalente Informationen können auf andere Weise abgerufen werden. Benutzer profitieren möglicherweise nicht von der Animation, wenn Folgendes gilt:
+-   Die Animation kommuniziert visuell etwas Nützliches, z. B. Feedback geben, Beziehungen, Ursachen und Effekte anzeigen oder die Aufmerksamkeit auf wichtige Änderungen lenken.
+-   Das Sehen der Animation ist nicht zwingend erforderlich. Äquivalente Informationen können auf andere Weise abgerufen werden. Benutzer profitieren möglicherweise nicht von der Animation, wenn:
     -   Sie haben Animationen deaktiviert.
-    -   Ihre Aufmerksamkeit ist an anderer Stelle.
-    -   Sie sind optisch beeinträchtigt.
-    -   Die Animation wird von einem anderen Fenster verdeckt.
+    -   Ihre Aufmerksamkeit liegt an anderer Stelle.
+    -   Sie sind sehbehindert.
+    -   Die Animation wird durch ein anderes Fenster verdeckt.
     -   Die Animation wird aufgrund unzureichender Systemleistung nicht wiedergegeben.
 -   Die Animation wirkt sich nicht auf die Produktivität des Benutzers aus. Entweder:
-    -   Dies erfolgt schnell (200 Millisekunden oder weniger).
-    -   Dies beeinträchtigt die Interaktion nicht, oder es kann unterbrochen werden.
-    -   Der Benutzer muss auf jeden Fall warten.
--   Die Animation wirkt sich nicht auf den Flow des Benutzers aus.
-    -   Sie ist entweder im Mittelpunkt des Benutzers, oder Sie bezieht sich auf etwas, das außerhalb der Aufmerksamkeit liegt, das beim Abschließen einer Aufgabe wichtig oder nützlich ist.
-    -   Es kann leicht ignoriert werden, nicht ablenkend oder lästig.
-    -   Es wird nicht mehr mehr angezeigt. Benutzer finden Sie nach der wiederholten Anzeige auch nach Bedarf.
+    -   Dies geschieht schnell (200 Millisekunden oder weniger).
+    -   Die Interaktion wird nicht beeinträchtigt, oder sie kann unterbrochen werden.
+    -   Der Benutzer muss trotzdem warten.
+-   Die Animation wirkt sich nicht auf den Benutzerflow aus.
+    -   Sie befindet sich entweder im Mittelpunkt des Benutzers oder richtet die Aufmerksamkeit auf etwas außerhalb des Mittelpunkts der Aufmerksamkeit, das wichtig oder nützlich ist, um eine Aufgabe abzuschließen.
+    -   Dies ist leicht zu ignorieren, nicht ablenkend oder ungärrlich.
+    -   Es wird nicht mühsam. Benutzer finden es auch nach wiederholter Anzeige weiterhin geeignet und freuen sich.
 
-Wenn dies der Fall ist, sollten Sie eine Animation verwenden.
+Ziehen Sie in diesem Falle die Verwendung einer Animation in Betracht.
 
 ### <a name="transitions"></a>Transitions
 
-Handelt es sich um einen Objekt-oder Szenenwechsel Zustand, der alle oben genannten Bedingungen für die Verwendung von Animationen und eine der folgenden Bedingungen erfüllt?
+Ändert sich der Zustand eines Objekts oder einer Szene, und gelten alle oben genannten Bedingungen für die Verwendung von Animationen sowie eine der folgenden Bedingungen?
 
--   Die Zustandsänderung ist konzeptionell Disorienting, verwirrend oder anderweitig schwer zu verstehen.
--   Die Statusänderung ist visuell und ohne jegliche Kontinuität oder Glätte. oder ist unnatürlich, unpoliert oder von schlechter Qualität, insbesondere dann, wenn Sie einen großen Bildschirmbereich umfasst.
--   Die Verwendung eines Übergangs führt dazu, dass die Zustandsänderung schneller erscheint.
--   Die Zustandsänderung ist mit besonderer Benutzer Aufmerksamkeit zu tun.
+-   Die Zustandsänderung ist konzeptionell desorientiert, verwirrend oder anderweitig schwer zu verstehen.
+-   Die Zustandsänderung ist visuell jarring, fehlt an Kontinuität oder Glättung oder blinkt. oder erscheint unnatürlich, unpoliert oder von schlechter Qualität, insbesondere wenn es sich um einen großen Bildschirmbereich handelt.
+-   Wenn Sie einen Übergang verwenden, wird die Zustandsänderung schneller angezeigt.
+-   Die Zustandsänderung ist eine besondere Aufmerksamkeit des Benutzers.
 
-Wenn dies der Fall ist, sollten Sie einen Übergang verwenden.
+In diesem Falle sollten Sie einen Übergang verwenden.
 
 ## <a name="design-concepts"></a>Entwurfskonzepte
 
-Animationen und Übergänge sind eine effektive Möglichkeit, um Informationen visuell zu kommunizieren, die andernfalls Text zur Erläuterung benötigen oder von Benutzern übersehen werden könnten.
+Animationen und Übergänge sind eine effektive Möglichkeit, Informationen visuell zu kommunizieren, für die andernfalls Text zur Erläuterung erforderlich wäre oder von Benutzern übersehen werden könnte.
 
 **Falsch:**
 
-![Screenshot des Dialog Felds mit der Meldung ](images/vis-animations-image3.png)
+![Screenshot des Dialogfelds mit Meldung ](images/vis-animations-image3.png)
 
 **Richtig:**
 
-![Abbildung der visuellen Darstellung der Animation ](images/vis-animations-image4.png)
+![Abbildung der visuellen Kommunikation von Animationen ](images/vis-animations-image4.png)
 
-Die Verwendung einer Animation kommuniziert mit denselben Informationen, aber auf natürliche und unaufdringliche Weise. Was würden Sie eher tausend Mal sehen?
+Die Verwendung einer Animation kommuniziert die gleichen Informationen, aber auf natürliche, unaufdringliche Weise. Was würden Sie lieber tausendmal sehen?
 
-**Animationen und Übergänge müssen keine Aufmerksamkeit erfordern, um erfolgreich zu sein.** Sie werden häufig verwendet, um die Aufmerksamkeit auf Programm Mechanismen zu vermeiden, die Benutzer nicht kennen müssen. Viele erfolgreiche Animationen sind so natürlich, dass Benutzer sich nicht einmal bewusst sind. vielmehr bemerken Benutzer nur ihre Abwesenheit. Die Häufigkeit des Vorkommens erhöht den Bedarf an Feinheiten, sodass Sie Auswirkungen auf seltene Ereignisse haben, die die Aufmerksamkeit wirklich verdienen.
+**Animationen und Übergänge müssen keine Aufmerksamkeit erfordern, um erfolgreich zu sein.** Tatsächlich werden sie häufig verwendet, um die Aufmerksamkeit auf Programmmechanismen zu lenken, die Benutzer nicht kennen müssen. Viele erfolgreiche Animationen sind so natürlich, dass Benutzer sie nicht einmal kennen. stattdessen würden Benutzer nur ihre Abwesenheit bemerken. Die Häufigkeit des Auftretens erhöht den Bedarf an Feinheiten, sodass Effekte gespart werden, die aufmerksamkeitsaufwendige seltene Ereignisse erfordern, die die Aufmerksamkeit wirklich erfordern.
 
-![Screenshot aller Programme, die in den rückwärts Pfeil Wechseln ](images/vis-animations-image5.png)
+![Screenshot aller Programme, die in den Rückwärtspfeil geändert werden ](images/vis-animations-image5.png)
 
-Ein Start Menü Übergang, der das Zeichnen von Aufmerksamkeit vermeidet.
+Ein Startmenü Übergang, der es vermeidet, die Aufmerksamkeit zu lenken.
 
-Wenn Sie das Programm leichter verständlich machen und sich ein glatteres Gefühl machen möchten, **sind gut gestaltete Animationen und Übergänge eine hervorragend Möglichkeit, Ihrem Programm eine Persönlichkeit, ein Zeichen und einen Stil hinzuzufügen.** Sie können die Benutzererfahrung einprägender gestalten, indem Sie Ihr einen natürlichen Eindruck vermitteln.
+Neben dem einfacheren Verständnis und Verhalten Ihres Programms sind gut **entworfene Animationen und Übergänge eine hervorragende Möglichkeit, Ihrem Programm Persönlichkeit, Zeichen und Stil hinzuzufügen.** Sie können die Benutzerfreundlichkeit immersiver und ansprechender gestalten, indem sie ihr ein natürliches, echtes Gefühl geben.
 
-![Abbildung, die zeigt, wie sich der Mauszeiger auf die ](images/vis-animations-image6.png)
+![Abbildung, die zeigt, wie sich das Zeigen auf die Schaltflächenfarbe auswirkt ](images/vis-animations-image6.png)
 
-Mit Windows 7 werden die Task leisten Schaltflächen auf der Grundlage der aktuellen Mausposition und der Programmsymbol Farbe hervorgehoben. Diese Vorgehensweise ist visuell ansprechend, aber sehr fein und vermittelt eine bescheidene Persönlichkeit.
+Windows 7 hebt Taskleistenschaltflächen beim Zeigen auf die aktuelle Mausposition und Programmsymbolfarbe hervor. Dieser Ansatz ist visuell ansprechend, aber dennoch dezent und vermittelt eine ungenannte Persönlichkeit.
 
-**Animationen und Übergänge sind jedoch am effektivsten und willkommen, wenn Sie einen klaren Zweck erfüllen.** Sie sollten verwendet werden, um Benutzerfreundlichkeit, Glätte und Fluss und die Wahrnehmung der Qualität zu verbessern, ohne dass die Leistung erheblich beeinträchtigt wird.
+**Animationen und Übergänge sind jedoch am effektivsten und willkommen, wenn sie einen eindeutigen Zweck erfüllen.** Sie sollten verwendet werden, um die Benutzerfreundlichkeit, die Glätte und den Fluss sowie die Wahrnehmung der Qualität zu verbessern, ohne die Leistung erheblich zu beeinträchtigen.
 
-Obwohl einige Arten von Animationen verwendet werden, um die Aufmerksamkeit des Benutzers zu zeichnen, sollten Sie sicherstellen, dass die Aufmerksamkeit durchaus verdient ist und die Schulung des Benutzers unterbricht. Das menschliche Auge ist sensibel an Bewegung, vor allem bei der Peripherie Bewegung. Es ist für die Benutzer schwierig, sich zu konzentrieren, wenn eine blinkende Task leisten Schaltfläche oder ein Symbol für den drehenden Benachrichtigungsbereich vorliegt. **Vermeiden Sie die Verwendung von Animationen, um Benutzer zu unterbrechen oder abzubrechen oder um Punkte zu zeichnen, die die Aufmerksamkeit des Benutzers nicht rechtfertigen.**
-
-**Falsch:**
-
-![Abbildung der Task leisten Schaltfläche aus keinem Grund hervorgehoben ](images/vis-animations-image7.png)
-
-Programme sollten ihre Task leisten Schaltfläche nicht blinken, es sei denn, Benutzer müssen sofort etwas wichtiges ausführen. In diesem Fall muss das Programm nur vom Benutzer aktiviert werden.
-
-**Verwenden Sie Animationen und Übergänge, da Sie von Ihrem Programm benötigt werden, nicht nur, weil Sie dies tun können.** Und für Barrierefreiheit sollten Sie keine Animation als einzige Möglichkeit zum vermitteln wichtiger Informationen verwenden. Stellen Sie sicher, dass Benutzer äquivalente Informationen auf andere Weise abrufen können.
-
-### <a name="attributes-of-good-animations-and-transitions"></a>Attribute von guten Animationen und Übergängen
-
-Gute Animationen und Übergänge treffen das richtige Gleichgewicht zwischen diesen Attributen:
-
--   **Sind klar zielstrebig.** Gute Animationen sind vorhanden, da Sie sein müssen, ob Sie Informationen übermitteln, eine Interaktion in Echtzeit durchführen oder auf etwas beachtenswertes aufmerksam machen müssen. Und zielgerichtete Animationen sind genau. Wenn eine Animation anzeigt, dass eine Aufgabe durchgeführt wird, liegt dies daran, dass die Aufgabe tatsächlich ausgeführt wird.
+Während einige Arten von Animationen verwendet werden, um die Aufmerksamkeit des Benutzers zu lenken, stellen Sie sicher, dass die Aufmerksamkeit gut ausgeglichen ist und das Denken des Benutzers unterbrochen wird. Das menschliche Auge reagiert empfindlich auf Bewegung, insbesondere auf die Peripheriebewegung. Es kann für Benutzer schwierig sein, sich zu konzentrieren, wenn eine blinkende Taskleistenschaltfläche oder ein rotierendes Benachrichtigungsbereichssymbol vorhanden ist. **Vermeiden Sie die Verwendung von Animationen, um Benutzer zu unterbrechen oder abzulenken, oder machen Sie die Aufmerksamkeit auf Dinge, die die Aufmerksamkeit des Benutzers nicht rechtfertigen.**
 
 **Falsch:**
 
-![Screenshot des Akku Symbols und der Bezeichnung "vollständig abgerechnet" ](images/vis-animations-image8.png)
+![Abbildung der Schaltfläche "Taskleiste" ohne Grund hervorgehoben ](images/vis-animations-image7.png)
 
-In diesem Beispiel zeigt die Animation, dass ein vollständig geladener Akku in Rechnung gestellt wird.
+Programme sollten ihre Taskleistenschaltfläche nicht blinken lassen, es sei denn, Benutzer müssen sofort etwas Wichtiges tun. In diesem Fall muss der Benutzer nur das Programm aktivieren.
 
--   **Das Aussehen ist reibungslos und kontinuierlich.** Gute Animationen entfernen problemlos die Kontexte zwischen Szenen-oder Element Zustandsänderungen, indem Beziehungen angezeigt werden und ein Sinn von Ort und Kontext bereitgestellt wird. Die Kontinuität hilft Benutzern zu verstehen, wo Sie sich befinden, und wie Sie zu dem Ort zurückkehren, von dem Sie stammen.
+**Verwenden Sie Animationen und Übergänge, da ihr Programm sie benötigt, nicht nur, weil Sie dies können.** Verwenden Sie für die Barrierefreiheit keine Animation als einzige Möglichkeit, wichtige Informationen zu vermitteln. Stellen Sie sicher, dass Benutzer äquivalente Informationen auf andere Weise abrufen können.
 
-![Screenshot der drei Vorschau Versionen des Task leisten Fensters ](images/vis-animations-image9.png)
+### <a name="attributes-of-good-animations-and-transitions"></a>Attribute guter Animationen und Übergänge
 
-Das Fenster der Windows 7-Taskleiste wird für die Kontinuität angezeigt, wenn der Benutzer von einem Programm zu einem anderen wechselt.
+Gute Animationen und Übergänge treffen die richtige Balance zwischen diesen Attributen:
 
--   **Sind realistisch.** Gute Animationen simulieren die realen physischen Eigenschaften und das Verhalten eines Objekts. Dadurch können Benutzer die Ergebnisse Ihrer Interaktionen Vorhersagen und verstehen. Sie müssen die reale Welt nicht genau modellieren, aber wenn Sie realistische Animationen verwenden, müssen Sie Sie mit der realen Welt konsistent halten. Benutzer sollten nie durch die Ergebnisse überrascht oder verwirrt werden, insbesondere bei Animationen, die für die direkte Bearbeitung verwendet werden.
+-   **Sind eindeutig absichtsvoll.** Gute Animationen sind vorhanden, da sie sein müssen, ob Sie Informationen kommunizieren, eine Interaktion real gestalten oder die Aufmerksamkeit auf etwas Besonderes lenken müssen. Und zielgerichtete Animationen sind genau. Wenn eine Animation zeigt, dass eine Aufgabe ausgeführt wird, liegt dies daran, dass die Aufgabe tatsächlich ausgeführt wird.
 
-![Abbildung der auf die neue Position gezogenen Task leisten Schaltfläche ](images/vis-animations-image10.png)
+**Falsch:**
 
-In diesem Beispiel ist die Animation, die von der Windows 7-Taskleiste verwendet wird, realistischer als eine statische Einfügemarke.
+![Screenshot des Akkusymbols und des vollständig geladenen Labels ](images/vis-animations-image8.png)
 
--   **Sind authentisch.** Auch Objekte, die nicht in der realen Welt gefunden werden, können naturgemäß aussehen, indem Sie auf dem realen Verhalten eines anderen, aber verknüpften Objekts basieren. Diese Metapher funktioniert nur, wenn die Beziehung den beabsichtigten Zweck und das Verhalten eindeutig kommuniziert.
+In diesem Beispiel zeigt die Animation, dass ein vollständig geladener Akku geladen wird.
 
-![Screenshot der ausgelassenen Auswirkung hinter verschobenem Fenster ](images/vis-animations-image11.png)
+-   **Sieht reibungslos und kontinuierlich aus.** Gute Animationen entfernen Nahten zwischen Szenen- oder Elementzustandsänderungen reibungslos, indem Beziehungen angezeigt werden und ein Gefühl für Ort und Kontext vermittelt wird. Die Kontinuität hilft Benutzern zu verstehen, wie sie dorthin gelangt sind und wie sie zu dem Ort zurückkehren können, von dem sie stammen.
 
-In diesem Beispiel ist die von Windows 7 verwendete Animation "Quetschen" authentisch, da Sie mit der Art und Weise, wie sich Glasfenster in der realen Welt Verhalten, konsistent ist.
+![Screenshot von drei Vorschauversionen des Taskleistenfensters ](images/vis-animations-image9.png)
 
--   **Verwenden Sie die natürliche Zuordnung.** Natürliche Zuordnungen sind entweder physisch oder Kultur. Eine kulturbasierte natürliche Zuordnung könnte z. b. von der Tatsache ausgehen, dass in westlichen Kulturen Personen von links nach rechts gelesen werden. Folglich ist zum Ausdrücken einer Zeitsequenz von Objekten das mittlere Objekt aktuell, die Objekte auf der linken Seite und die Objekte auf der rechten Seite in der Zukunft. Der Fortschritt wird durch die Bewegung von links nach rechts angezeigt.
+Die Vorschauversion des Windows 7-Taskleistenfensters wird aus Gründen der Kontinuität geändert, wenn der Benutzer von einem Programm zu einem anderen wechselt.
 
-![Screenshot der Statusanzeige von Media Player ](images/vis-animations-image12.png)
+-   **Sind realistisch.** Gute Animationen simulieren die realen physischen Eigenschaften und das Verhalten eines Objekts. Dies hilft Benutzern, die Ergebnisse ihrer Interaktionen vorherzusagen und zu verstehen. Sie müssen die reale Welt nicht genau modellieren, aber wenn Sie realistische Animationen verwenden, müssen Sie sie mit der realen Welt konsistent halten. Benutzer sollten nie von den Ergebnissen verwirrend oder verwirrend sein, insbesondere mit Animationen, die für die direkte Bearbeitung verwendet werden.
 
-In diesem Beispiel verfügt das Windows Media Player-Steuerelement über eine natürliche Zuordnung, da die Position von links nach rechts verschoben wird.
+![Abbildung der Taskleistenschaltfläche, die an neue Position gezogen wird ](images/vis-animations-image10.png)
 
--   **Haben Sie eine Persönlichkeit.** Gut ausgewählte Animationen sind hervorragend geeignet, um Ihrem Programm eine Persönlichkeit, ein Zeichen und einen Stil hinzuzufügen. Sie können den Benutzer schneller und ansprechender gestalten. Während der Typ der Animation bestimmt, was er kommuniziert, zeigt die jeweilige Art und Weise, in der die Animation durchgeführt wird, die Persönlichkeit des Programms an. Gute Animationen projizieren die richtige Persönlichkeit für Ihr Programm, egal ob Ernst oder positiv oder irgendwo dazwischen.
+In diesem Beispiel ist die animation "Move out of the way", die von der Windows 7-Taskleiste verwendet wird, realistischer als eine statische Einfügemarke.
 
-![Screenshot der kreativ entworfenen Zune-Schnittstelle ](images/vis-animations-image13.png)
+-   **Sind authentifiziert.** Selbst Objekte, die in der realen Welt nicht gefunden werden, können natürlich erscheinen, indem sie auf dem realen Verhalten eines anderen, aber verknüpften Objekts basieren. DieseMetapher funktioniert nur, wenn die Beziehung den beabsichtigten Zweck und das Verhalten eindeutig kommuniziert.
 
-In diesem Beispiel unterstützt die Zune die Verwendung von animiertem Text und dynamischer Perspektive dabei, seine eigene Persönlichkeit zu gestalten.
+![Screenshot des ausgelösten Effekts hinter dem verschobenen Fenster ](images/vis-animations-image11.png)
 
--   **Aussehen und reaktionsfähig.** Gute Animationen beeinträchtigen die Produktivität des Benutzers nicht, indem Benutzer gegen andere Interaktionen blockiert werden oder Benutzer gezwungen werden, Sie zu überwachen. Unabhängig davon, wie natürlich und mit der Animation der Animationen des Programms zu tun sind, möchte niemand auf diese exklusiv warten. Gute Animationen sind auch reaktionsfähig, ohne dass eine jarringschleife durchlaufen wird. Reaktionsfähige Animationen profitieren auch von der schnellen Kommunikation Ihres zwecks. Benutzer sollten eine Animation nicht lange Zeit ansehen, um herauszufinden, was Sie tut oder wann Sie abgeschlossen ist. Für die direkte Bearbeitung sind reaktionsschnelle Animationen von wesentlicher Bedeutung, um eine direkte und ansprechende reale Darstellung zu gewährleisten. Um sich direkt zu fühlen, müssen die Kontaktpunkte eines Objekts während der Bearbeitung reibungslos unter dem Zeiger bleiben. Jede Verzögerung, eine verpacsantwort oder der Verlust von Kontakten zerstört die Wahrnehmung direkter Manipulationen.
+In diesem Beispiel ist die von Windows 7 verwendete Fensteranimation "Squeegee" authentiert, da sie mit dem Verhalten von Fenstern in der realen Welt konsistent ist.
 
-![Abbildung von Finger berühren eines Touchscreens ](images/vis-animations-image14.png)
+-   **Verwenden Sie die natürliche Zuordnung.** Natürliche Zuordnungen sind entweder physisch oder kulturbelassen. Eine kulturbasierte natürliche Zuordnung kann z. B. damit beginnen, dass in den Kulturen des Westens Menschen von links nach rechts lesen. Um eine Zeitsequenz von -Objekten auszudrücken, ist das mittlere Objekt daher aktuell, Objekte auf der linken Seite liegen aus der Vergangenheit und Objekte auf der rechten Seite sind in der Zukunft. Die Zukunft in der Zeit wird durch die Bewegung von links nach rechts angezeigt.
 
-In diesem Beispiel ist der Touch-Panel-Übergang reaktionsfähig, indem der Kontaktpunkt während der Bearbeitung unter dem Finger des Benutzers gehalten wird.
+![Screenshot der Media Player-Statusleiste ](images/vis-animations-image12.png)
 
--   **Ziehen Sie das richtige Maß an Aufmerksamkeit.** Gute Animationen sind normalerweise sehr gering und Zeichnen nur die Aufmerksamkeit aus, die zur Erfüllung ihres Zwecks erforderlich ist. Daher sind Sie nicht ablenkend, lästig, übermäßig Komplex, übermäßig lang oder wiederholt. Sie werden nach dem wiederholten Viewings nicht mehr Überdruss.
+In diesem Beispiel verfügt das Windows Media Player-Steuerelement über eine natürliche Zuordnung, da die Wiedergabe die Position von links nach rechts verschiebt.
 
-![Screenshot der Ausblenden von Hervorhebungen für Dateinamen ](images/vis-animations-image15.png)
+-   **Persönlichkeit haben.** Gut ausgewählte Animationen sind hervorragende Möglichkeiten, Ihrem Programm Persönlichkeit, Zeichen und Stil hinzuzufügen. Sie können die Benutzererfahrung immersiver und ansprechender gestalten. Während der Typ der Animation bestimmt, was sie kommuniziert, zeigt die spezifische Art und Weise, wie die Animation ausgeführt wird, die Persönlichkeit des Programms. Gute Animationen zeigen die richtige Persönlichkeit für Ihr Programm an, ob schwerwiegend oder launisch oder irgendwo dazwischen.
 
-In diesem Beispiel zeichnet Windows Search temporär auf übereinstimmende Suchbegriffe und dann auf.
+![Screenshot der kreativ gestalteten Zune-Schnittstelle ](images/vis-animations-image13.png)
 
--   **Sehen Sie sich nur besondere Informationen an, wenn wirklich besonders** Die Häufigkeit erhöht die Notwendigkeit von Feinheiten, sodass häufige Interaktionen einfache Animationen erfordern, die eine einfache Idee auf einfache Weise vermitteln. Reservieren Sie besondere, komplexe Animationen für besondere, seltene Umgebungen.
+In diesem Beispiel hilft Zunes Verwendung von animiertem Text und dynamischer Perspektive dabei, seine Persönlichkeit zu formen.
 
-![Screenshot von vier Kreisen mit Windows-Logo ](images/vis-animations-image16.png)
+-   **Aussehen und Reagieren.** Gute Animationen beeinträchtigen nicht die Produktivität des Benutzers, indem sie Benutzer von anderen Interaktionen aussperren oder benutzer gezwungen werden, zu sehen. Unabhängig davon, wie natürlich und ansprechend die Animationen Ihres Programms sind, möchte niemand ausschließlich auf sie warten. Gute Animationen sehen auch reaktionsschnell aus, ohne durch einen schnellen Start mit einer weichen Landegeschwindigkeit zu jarringen. Dynamische Animationen profitieren auch von der schnellen Kommunikation ihres Zwecks. Benutzer sollten sich eine Animation nicht lange ansehen müssen, nur um herauszufinden, was sie tut oder wann sie fertig ist. Für die direkte Manipulation sind reaktionsfähige Animationen wichtig, um ein direktes und ansprechendes reales Gefühl zu erhalten. Um sich direkt zu fühlen, müssen die Kontaktpunkte eines Objekts während der gesamten Bearbeitung reibungslos unter dem Zeiger bleiben. Jede Verzögerung, abgesenkte Antwort oder ein Verlust des Kontakts zerstört die Wahrnehmung der direkten Manipulation.
 
-In diesem Beispiel verwendet Windows eine Animations Animation beim Start, um die Erfahrung besonders zu gestalten, aber eine solche Animation wäre an anderer Stelle ungeeignet.
+![Abbildung des Fingers, der einen Touchscreen berührt ](images/vis-animations-image14.png)
 
-Sie werden feststellen, dass Sie das richtige Gleichgewicht erreicht haben, wenn die Gesamtleistung beeinträchtigt wäre, wenn eines dieser Attribute entfernt wurde.
+In diesem Beispiel ist der Übergang zum Schwenken von Fingern reaktionsfähig, da der Kontaktpunkt während der gesamten Bearbeitung unter dem Finger des Benutzers hält.
 
-### <a name="creating-an-animation-vocabulary"></a>Erstellen eines Animations Vokabulars
+-   **Gewinnen Sie die richtige Aufmerksamkeit.** Gute Animationen sind in der Regel dezent und ziehen nur die Aufmerksamkeit auf sich, die erforderlich ist, um ihren Zweck zu erfüllen. Daher sind sie nicht störend, störend, zu komplex, zu lang oder sich wiederholend. Sie werden nach wiederholten Anzeigen nicht mühsam.
 
-Gute Animationen sind eine effektive visuelle Kommunikation, und die Konsistenz ist für ihre Effektivität von entscheidender Bedeutung. Wenn Sie einen bestimmten Übergang verwenden, z. b. das Verschieben einer Szene von rechts nach rechts, um zur nächsten Szene zu gelangen, sollte dies der einzige Übergang sein, der für diesen Zweck verwendet wird, und dieser Übergang sollte nicht für andere Zwecke verwendet werden. Das Zuweisen einer anderen Bedeutung zur gleichen Animation schadet der Möglichkeit der Kommunikation. Wenn Sie bestimmte Animationen und Übergänge zu einer bestimmten Bedeutung zuweisen, erstellen Sie ein Animations Vokabular.
+![Screenshot: Hervorhebung von "Fading" bei Dateinamen ](images/vis-animations-image15.png)
 
-Dieses Problem gilt für Animationen und Übergänge, die eine Bedeutung haben, nicht für generische, denen Benutzer wahrscheinlich keine Bedeutung zuweisen, oder für solche, deren Zweck nicht erkennbar ist. Animationen wie z. b. "Fades" und besondere Effekte, wie z. b
+In diesem Beispiel lenkt die Windows-Suche vorübergehend die Aufmerksamkeit auf übereinstimmende Suchwörter und wird dann ausgeblendet.
 
-Ein gutes Vokabular weist Animationen zu, die das tatsächliche physische Verhalten eines Objekts modellieren. Wenn Sie einem Objekt oder einer Aktion eine Animation zuweisen müssen, die nicht über ein echtes Gegenstück verfügt, wählen Sie eine Animation aus, die zeigt, wie sich das Objekt in der Praxis verhält.
+-   **Sehen Sie nur dann besonders aus, wenn es speziell ist.** Die Häufigkeit erhöht die Notwendigkeit von Feinheiten, sodass häufige Interaktionen einfache Animationen erfordern, die eine einfache Idee auf einfache Weise kommunizieren. Reservieren Sie spezielle, komplexe Animationen für besondere, seltene Erfahrungen.
 
-![Screenshot der Art und Weise, wie Hover auf das Windows-Logo leuchtet ](images/vis-animations-image17.png)
+![Screenshot von vier Kreisen, die zu einem Windows-Logo werden ](images/vis-animations-image16.png)
 
-Obwohl das Startmenü kein reales Objekt ist, sieht der Hover-Effekt wie ein reales Objekt aus, wenn es aktiviert ist.
+In diesem Beispiel verwendet Windows eine Aufmerksamkeitsanimation beim Start, um die Erfahrung besonders zu machen, aber eine solche Animation wäre an anderer Stelle ungeeignet.
 
-Jede Animation in einem Vokabular muss eindeutig verschieden sein. Die Animationen sollten ein ähnliches Verhalten aufweisen, wenn die zugehörigen Aktionen auf ähnliche Weise verknüpft sind. Beispielsweise wird durch Verschiebungs Übergänge die Navigation empfohlen, sodass Sie Verschiebungs Übergänge aus unterschiedlichen Richtungen verwenden können, um unterschiedliche Navigations Typen anzugeben.
+Sie wissen, dass Sie das richtige Gleichgewicht erzielt haben, wenn die Gesamterfahrung geschädigt würde, wenn eines dieser Attribute entfernt würde.
 
-Sie wissen, dass Ihre Animationen und Übergänge nicht gut kommunizieren, wenn die Benutzer die Ergebnisse verwirrend, überraschend oder unerwartet finden. Im Allgemeinen ist es besser, einen einzigen Zweck als mehrere Zwecke zu erreichen, nicht so gut.
+### <a name="creating-an-animation-vocabulary"></a>Erstellen eines Animationsvokabulars
 
-Im Idealfall sollte Ihr Animations Vokabular in allen Bereichen Ihres Programms umfassend sein, die diese benötigen. Wenn nur einige wenige Interaktionen natürliche Animationen aufweisen, werden Sie darauf aufmerksam gemacht.
+Gute Animationen sind eine effektive visuelle Kommunikation, und Konsistenz ist entscheidend für ihre Effektivität. Wenn Sie einen bestimmten Übergang verwenden, z. B. das Einschieben einer Szene von rechts zur nächsten Szene, sollte dies der einzige Übergang sein, der für diesen Zweck verwendet wird, und dieser Übergang sollte nicht für andere Zwecke verwendet werden. Das Zuweisen unterschiedlicher Bedeutungen zu derselben Animation schadet der Kommunikationsfähigkeit. Indem Sie bestimmte Animationen und Übergänge zu bestimmten Bedeutungen zuweisen, erstellen Sie ein Animationsvokabular.
 
-Weitere Informationen zum Windows-Animations Vokabular finden Sie in diesem Artikel im Abschnitt [Verwendungs Muster](#usage-patterns) .
+Dieses Problem gilt für Animationen und Übergänge, die eine Bedeutung haben, nicht für generische Animationen, denen Benutzer wahrscheinlich keine Bedeutung zuweisen, oder für Animationen, deren Zweck unmerklich sein soll. Animationen wie Ausblendungen und Sondereffekte wie z. B. Einblendungen haben z. B. keine besondere Bedeutung, sodass sie frei verwendet werden können.
+
+Ein gutes Vokabular weist Animationen zu, die das physische Verhalten eines Objekts in der realen Welt modellieren. Wenn Sie einem Objekt oder einer Aktion eine Animation zuweisen müssen, die keine entsprechung in der realen Welt hat, wählen Sie eine Animation aus, die zeigt, wie sich das Objekt verhalten könnte, wenn es real wäre.
+
+![Screenshot, in dem gezeigt wird, wie mit dem Zeigen auf das Windows-Logo gezeigt wird ](images/vis-animations-image17.png)
+
+Der Startmenü ist kein objekt aus der realen Welt, aber sein Hovereffekt wird wie ein reales Objekt aufscheinen, wenn es aktiviert wird.
+
+Jede Animation in einem Vokabular muss eindeutig eindeutig sein. Die Animationen sollten nur dann ähnliches Verhalten haben, wenn ihre zugeordneten Aktionen ähnlich verknüpft sind. Beispielsweise schlagen Bewegungsübergänge die Navigation vor, sodass Sie Bewegungsübergänge aus verschiedenen Richtungen verwenden können, um verschiedene Navigationstypen anzugeben.
+
+Sie werden wissen, dass Ihre Animationen und Übergänge nicht gut kommunizieren, wenn Benutzer die Ergebnisse verwirrend, überraschend oder unerwartet finden. Im Allgemeinen ist es besser, einen einzelnen Zweck zu erreichen als mehrere Zwecke, die nicht so gut sind.
+
+Im Idealfall sollte Ihr Animationsvokabular in allen Bereichen Ihres Programms, die sie benötigen, umfassend sein. Wenn nur wenige Interaktionen natürliche Animationen enthalten, wird dies auf diejenigen aufmerksam machen, die dies nicht sind.
+
+Weitere Informationen zum Windows-Animationsvokabular finden Sie im Abschnitt [Verwendungsmuster](#usage-patterns) dieses Artikels.
 
 ### <a name="designing-the-right-personality"></a>Entwerfen der richtigen Persönlichkeit
 
-Während der Typ der Animation bestimmt, was er kommuniziert, wird die jeweilige Art und Weise, in der die Animation ausgeführt wird, mit der Programm Persönlichkeit gesprochen und seine Marke verstärkt.
+Während der Typ der Animation bestimmt, was sie kommuniziert, spricht die spezifische Art und Weise, wie die Animation ausgeführt wird, die Persönlichkeit des Programms und verstärkt seine Marke.
 
-Die Persönlichkeit Ihres Programms sollte die Art ihrer Aufgaben und die Persönlichkeit ihrer Benutzer widerspiegeln, sodass es keine willkürliche Auswahl ist. Vielmehr sollte sich eine gut entworfene Persönlichkeit als authentisch fühlen. versuchen Sie es niemals zu erzwingen. Die Persönlichkeit sollte eine emotionale Verbindung mit dem Benutzer herstellen. Zu berücksichtigende Faktoren:
+Die Persönlichkeit Ihres Programms sollte die Art ihrer Aufgaben und die Persönlichkeit ihrer Benutzer widerspiegeln, sodass es keine willkürliche Wahl ist. Stattdessen sollte sich eine gut entworfene Persönlichkeit authentifizieren. Versuchen Sie nie, dies zu erzwingen. Die Persönlichkeit sollte eine emotionale Verbindung mit dem Benutzer herstellen. Zu berücksichtigende Faktoren:
 
--   **Aufgaben:** Ernst oder Spaß; optional oder erforderlich.
--   **Folgen:** Ernsthaft oder neben Version.
--   **Kosten:** Kostenlos oder gekauft; Wenn gekauft, moderat Preis oder aufwendig.
--   **Benutzer Fokus:** Relativ schmale Gruppe von Ziel Benutzern oder Breite, allgemeine Zielgruppe.
--   **Benutzerumgebung:** Professionell, lässig oder privat.
--   **Benutzer Alter:** Jünger oder älter.
--   **Verwendungs Häufigkeit:** Häufig oder selten.
+-   **Aufgaben:** Schwerwiegend oder spaßig; optional oder erforderlich.
+-   **Folgen:** Schwerwiegend oder minder schwerwiegend.
+-   **Kosten:** Kostenlos oder erworben; , wenn erworben, moderat oder teuer.
+-   **Benutzerfokus:** Relativ kleine Gruppe von Zielbenutzern oder eine breite, allgemeine Zielgruppe.
+-   **Benutzerumgebung:** Professional, locker oder zu Hause.
+-   **Benutzeralter:** Älter oder älter.
+-   **Nutzungshäufigkeit:** Häufig oder selten.
 
-Die Kombination dieser Faktoren hilft dabei, eine passende Persönlichkeit für Ihr Programm zu ermitteln. Im folgenden finden Sie einige geeignete Kombinationen für gängige Programmtypen:
+Die Kombination dieser Faktoren hilft dabei, eine geeignete Persönlichkeit für Ihr Programm zu bestimmen. Im Folgenden finden Sie einige geeignete Kombinationen für gängige Programmtypen:
 
 **Produktivitätsanwendungen**
 
-Natürlich müssen Produktivitätsanwendungen auf die Produktivität konzentrieren. Während einige besondere Erfahrungen auftreten können, sollten die meisten anderen Animationen über diese Merkmale verfügen:
+Produktivitätsanwendungen müssen sich natürlich auf die Produktivität konzentrieren. Während sich einige besondere Erfahrungen aufdringen können, sollten die meisten anderen Animationen die folgenden Merkmale aufweisen:
 
--   Klein
+-   Small
 -   Natürlich, realistisch
--   Geringfügige, verhaltene
+-   Dezent, dezent
 -   Schnell, effizient
 -   Gelockert
 
 **Hilfsprogramme**
 
-Hilfsprogramme werden in der Regel kurz verwendet, sodass die Verwendung der Animation aggressiver sein kann:
+Hilfsprogramme werden in der Regel kurz verwendet, sodass ihre Verwendung von Animationen aggressiver sein kann:
 
--   Realistisch, anschaulich, selbsterklärend
+-   Realistisch, veranschaulichend, selbsterklärend
 -   Safe
--   Einbezieht
+-   ansprechend
 
 **Unterhaltung, Spiele**
 
-Da das Ziel dieser Programme darin besteht, Benutzer zu engagieren und zu begeistern, können die Animationen und Übergänge durch die folgenden Merkmale weitaus aggressiver sein:
+Da das Ziel dieser Programme ist, Benutzer zu binden und zu unterstützen, können die Animationen und Übergänge durch die folgenden Merkmale viel aggressiver sein:
 
--   Groß (möglicherweise zu einem integralen Bestandteil der Darstellung)
--   Künstlich, surreal
--   Impacerend, lebhaft
--   Emotional, spielerisch, positiv
+-   Groß (wird möglicherweise zu einem integralen Bestandteil der Erfahrung)
+-   Künstlicher, besens
+-   Einflussreich, dynamisch
+-   Emotional, Heiter, Launen
 -   Energetische
 
-Eine emotionale Verbindung ist so wichtig für Unterhaltungsprogramme, dass es akzeptabel ist, einige Regeln zu vereinigen, wenn dies dazu beiträgt, dass Benutzer mit dem Programm zufrieden sind. Beispielsweise ist es akzeptabel, wenn eine Animation oder ein Übergang nach der Hundertstel Zeit zu einem Überdruss wird, wenn die meisten Benutzer wahrscheinlich nicht das Programm verwenden, das häufig verwendet wird.
+Das Herstellen einer emotionalen Verbindung ist für Unterhaltungsprogramme so wichtig, dass es akzeptabel ist, einige Regeln zu über sichten, wenn dies dazu bei trägt, dass sich Benutzer in das Programm verlieben. Beispielsweise ist es akzeptabel, wenn eine Animation oder ein Übergang nach dem hundertsten Mal lästig wird, wenn die meisten Benutzer das Programm wahrscheinlich nicht so oft verwenden.
 
-Im Allgemeinen sind Animationen und Übergänge, die klein, natürlich, gedämpft, effizient und dennoch gelockert sind, die sicherste Lösung. Übergänge mit diesen Merkmalen nehmen in der Regel den kürzesten Weg von Anfang bis Ende, schnelles starten, Ende, und lassen sich nicht überschreiben. Außerdem sind gut gestaltete Übergänge so konzipiert, dass Sie für alle Bereiche, in denen Sie verwendet werden, gut funktionieren.
+Im Allgemeinen sind Animationen und Übergänge, die klein, natürlich, dedudiert, effizient, aber gelockert sind, die sicherste Lösung. Übergänge mit diesen Merkmalen nehmen in der Regel den kürzesten Weg von Anfang bis Ende ein, beginnen schnell, enden weich und überdrehen sich nicht. Außerdem sind gut entworfene Übergänge so konzipiert, dass sie über den gesamten Bereich der Entfernungen, in denen sie verwendet werden, gut funktionieren.
 
-### <a name="animation-performance"></a>Animations Leistung
+### <a name="animation-performance"></a>Animationsleistung
 
-Stellen Sie beim Entwerfen von Animationen sicher, dass die Benutzer die Möglichkeit haben, Ihr Programm effizient zu verwenden. Im allgemeinen machen Sie Ihre Animationen langsam genug, um ihren Zweck zu erfüllen, aber so schnell, dass Sie sich nicht mit der Reaktionsfähigkeit stören, eine zu hohe Aufmerksamkeit erfordern oder mehr zu tun haben.
+Stellen Sie beim Entwerfen von Animationen sicher, dass sie sich nicht auf die Fähigkeit der Benutzer auswirken, Ihr Programm effizient zu verwenden. Machen Sie Ihre Animationen im Allgemeinen langsam genug, um ihren Zweck zu erfüllen, aber schnell genug, dass sie die Reaktionsfähigkeit nicht beeinträchtigen, zu viel Aufmerksamkeit erfordern oder ermüdend werden.
 
 **Falsch:**
 
-![Abbildung der Seiten Umwandlung von rechts nach links ](images/vis-animations-image18.png)
+![Abbildung des Seitendrehens von rechts nach links ](images/vis-animations-image18.png)
 
-Diese Seiten Turn-Animation bietet zwar ein Gefühl für die Benutzerproduktivität, verringert jedoch die Produktivität der Benutzer, indem es länger dauert, Seiten zu drehen.
+Diese Animation zum Drehen von Seiten hat zwar ein ansprechendes, reales Gefühl, aber sie mindert die Produktivität der Benutzer, da es länger dauert, Seiten zu drehen.
 
-Kurze Übergänge (200 Millisekunden oder weniger) sind ein Sonderfall (vor allem, wenn Sie häufig von einer Verzögerung aus arbeiten), da Benutzer sich darüber im klaren sein müssen, dass Sie eine geteilte Sekunde darauf warten müssen. Benutzer sind bereit, auf solche Animationen zu warten, wenn Folgendes:
+Kurze Übergänge (200 Millisekunden oder weniger) sind ein Sonderfall (insbesondere, wenn sie sich häufig von einer Verzögerung abarbeiten), da Benutzer wissen, dass sie eine Teilsekunde auf sie warten müssen. Benutzer sind bereit, auf solche Animationen zu warten, wenn:
 
--   Die wahrgenommene Wartezeit ist sehr kurz (200 Millisekunden oder weniger).
--   Der Übergang sorgt für eine reibungslose und natürliche Interaktion.
--   Der Übergang sorgt für eine reaktionsfähigere Interaktion.
--   Jede Verzögerung sorgt dafür, dass der Benutzer die Kontrolle über die Interaktion behält.
+-   Die wahrgenommene Wartezeit ist extrem kurz (200 Millisekunden oder weniger).
+-   Durch den Übergang wird die Interaktion reibungsloser und natürlicher.
+-   Durch den Übergang wird die Interaktion reaktionsfähiger.
+-   Jede Verzögerung hilft dem Benutzer, die Kontrolle über die Interaktion zu behalten.
 
-![Abbildung der Task leisten Schaltflächen, die an neue Position gezogen werden ](images/vis-animations-image19.png)
+![Abbildung der Taskleistenschaltflächen, die an eine neue Position gezogen werden ](images/vis-animations-image19.png)
 
-Benutzer akzeptieren eine kurze Verzögerung für die Animation der Task leisten Schaltfläche Neuanordnung, da Sie sehr kurz ist, und die Interaktion wird dadurch natürlicher.
+Benutzer akzeptieren eine kurze Verzögerung für die Animation zur Neuanordnung der Taskleistenschaltfläche, da sie sehr kurz ist und die Interaktion natürlicher anfühlt.
 
-Es gibt drei Möglichkeiten, wie sich Animationen nachteilig auf die Leistung auswirken können: Geschwindigkeit, Reaktionsfähigkeit und Wahrnehmung.
+Es gibt drei Möglichkeiten, wie Animationen sich negativ auf die Leistung auswirken können: Geschwindigkeit, Reaktionsfähigkeit und Wahrnehmung.
 
-Aus Gründen der Geschwindigkeit sind einige Animationen visuelle und sehr CPU-intensive Aufgaben, daher sollten Sie diese Aufgaben mit CPU-intensiven Animationen langsamer machen. Bei den meisten CPU-intensiven Animationen ("Heavy"-Animationen) werden tendenziell folgende Aktionen durchführen:
+Aus Speed-Sicht sind einige Animationen visuelle Lässer für CPU-intensive Aufgaben, daher sollten Sie diese Aufgaben mit CPU-intensiven Animationen langsamer machen. Die cpuintensivsten Animationen ("intensive" Animationen) tendieren zu:
 
--   Viele Elemente, die unabhängig voneinander verschoben werden.
--   Wiedergabe für eine lange Dauer oder Entfernung.
--   Sie sollten eine große Menge an Bildschirm Leerraum einschließen.
--   Sind mathematisch intensiv.
+-   Binden Sie viele Elemente ein, die sich unabhängig voneinander bewegen.
+-   Spielen Sie für eine lange Dauer oder Entfernung.
+-   Beziehen Sie eine große Menge an Bildschirmbereich ein.
+-   Sind rechenintensiv.
 
-Animationen mit geringerer Auswirkung auf die Leistung:
+Animationen mit geringeren Auswirkungen auf die Leistung:
 
--   Binden Sie ein einzelnes-Objekt ein.
--   Wiedergabe für eine kurze Dauer oder Entfernung.
--   Sie sollten nur einen kleinen Teil des Bildschirm Raums einschließen.
--   Sind nicht mathematisch intensiv.
+-   Beziehen Sie ein einzelnes -Objekt ein.
+-   Spielen Sie für eine kurze Dauer oder Entfernung.
+-   Beziehen Sie eine kleine Menge an Bildschirmraum ein.
+-   Sie sind nicht rechenintensiv.
 
-Um eine gute Leistung zu gewährleisten, sollten große Animationen nur für Aufgaben verwendet werden, die nicht CPU-intensiv sind, während helle Animationen überall verwendet werden können.
+Um eine gute Leistung zu gewährleisten, sollten intensive Animationen nur für Aufgaben verwendet werden, die nicht CPU-intensiv sind, wohingegen helle Animationen überall verwendet werden können.
 
-Bei der Reaktionsfähigkeit sollten die meisten Animationen und Übergänge so entworfen werden, dass Benutzer während der Ausführung der Animation interagieren können. Wenn eine Animation nicht Teil eines Prozesses ist, machen Sie diese unabhängig von der primären Interaktion des Benutzers, und erlauben Sie Benutzern, Sie zu unterbrechen.
+Für die Reaktionsfähigkeit sollten die meisten Animationen und Übergänge so entworfen werden, dass Benutzer interagieren können, während die Animation ausgeführt wird. Wenn eine Animation nicht Teil eines Prozesses ist, machen Sie sie unabhängig von der primären Interaktion des Benutzers, und erlauben Sie Benutzern, sie zu unterbrechen.
 
-Eine Animation wirkt sich möglicherweise nicht negativ auf die Leistung einer Aufgabe aus, aber Benutzer haben möglicherweise die Wahrnehmung. Verwenden Sie z. b. keine Animation, die für eine langsame, CPU-intensive Aufgabe auch dann sehr schwer erscheint, wenn die Leistung nicht beeinträchtigt wird, da Benutzer möglicherweise den Grund für eine langsame Aufgabe haben. **Wenn etwas langsam aussieht, ist es langsam, daher ist es besser, Animationen zu verwenden, die einfach, einfach und schnell sind.** Die Verwendung von Animationen mit einem Snappy-Anfang für CPU-intensive Aufgaben hilft.
+Eine Animation wirkt sich möglicherweise nicht negativ auf die Leistung einer Aufgabe in der Realität aus, aber Benutzer haben möglicherweise die Wahrnehmung, dass sie dies tut. Verwenden Sie z. B. keine Animation, die für eine langsame, CPU-intensive Aufgabe stark erscheint, auch wenn dies die Leistung nicht beeinträchtigen würde, da Benutzer möglicherweise schlussfolgern, dass die Animation der Grund dafür ist, dass die Aufgabe langsam ist. **Wenn etwas langsam aussieht, wird es langsam, daher ist es besser, Animationen zu verwenden, die sich einfach, einfach und schnell anfühlen.** Die Verwendung von Animationen mit Snappy-Anfangs- für CPU-intensive Aufgaben ist hilfreich.
 
-**Diger**
+**Riskant:**
 
-![Screenshot des Dialog Felds "Kopieren" mit Statusanzeige ](images/vis-animations-image20.png)
+![Screenshot des Dialogfelds "Kopieren" mit Statusleiste ](images/vis-animations-image20.png)
 
-Während die Animation im Windows-Dialogfeld zum Kopieren von Dateien die Datei Kopier Leistung nicht beeinträchtigt, besteht das Risiko, dass die Benutzer davon ausgehen, dass Sie dies tun.
+Obwohl die Animation im Dialogfeld zum Kopieren von Windows-Dateien die Leistung beim Kopieren von Dateien nicht beeinträchtigen kann, besteht das Risiko, dass Benutzer dies glauben.
 
-**Auch riskant:**
+**Außerdem riskant:**
 
 ![Screenshot des Fortschritts, der in der Adressleiste angezeigt wird ](images/vis-animations-image21.png)
 
-In diesem Beispiel werden einige Aufgaben durch die Animation für langsam aussehende Fortschritte in der Adressleiste von Windows-Explorer sehr langsam aussehen.
+In diesem Beispiel sorgt die langsam aussehende Fortschrittsanimation in der Adressleiste Windows-Explorer, dass einige Aufgaben sehr langsam aussehen.
 
-Animationen und Übergänge haben keinen Wert, wenn ihre Qualität so schlecht ist, dass Sie die Leistung weniger reibungslos und weniger ansprechend gestalten. Um die Qualität beizubehalten, sollten Animationen so konzipiert werden, dass Sie immer dann ordnungsgemäß herabgestuft werden, wenn ausreichend Systemressourcen nicht verfügbar sind. Animationen können durch Abweichungen, die weniger Ressourcen erfordern (z. b. kürzere Längen oder niedrigere Frameraten) oder gar nicht ausgeführt werden, herabgestuft werden. Unabhängig von den verfügbaren Ressourcen müssen Sie sicherstellen, dass die Animationen hochwertig sind und anstelle von Softwarefehlern Animationen wie Animationen aussehen.
+Animationen und Übergänge haben keinen Nutzen, wenn ihre Qualität so schlecht ist, dass sie die Erfahrung weniger reibungslos und weniger ansprechend machen. Um ihre Qualität zu gewährleisten, sollten Animationen so entworfen werden, dass sie ordnungsgemäß beeinträchtigt werden, wenn keine ausreichenden Systemressourcen verfügbar sind. Animationen können durch Variationen beeinträchtigt werden, die weniger Ressourcen erfordern (z. B. kürzere Längen oder niedrigere Frameraten) oder überhaupt nicht ausgeführt werden. Stellen Sie unabhängig von den verfügbaren Ressourcen sicher, dass die Animationen eine hohe Qualität haben und wie Animationen anstelle von Softwarefehlern aussehen.
 
-Wenn die Benutzer der Meinung sind, dass die Animationen und Übergänge Ihres Programms von ihrer Produktivität ausgehen, besteht die Möglichkeit, dass einige Benutzer Sie deaktivieren möchten. Um diese Möglichkeit zu unterstützen, achten Sie darauf, dass Sie **alle unnötigen Animationen** aus dem Windows Easy Access Center deaktivieren.
+Wenn Benutzer schließlich der Meinung sind, dass die Animationen und Übergänge Ihres Programms ihre Produktivität beeinträchtigen, besteht eine gute Wahrscheinlichkeit, dass einige Benutzer sie deaktivieren möchten. Um diese Möglichkeit zu unterstützen, sollten Sie die Option **alle** unnötigen Animationen deaktivieren, die im Windows-Fenster gefunden Center für erleicherte Bedienung.
 
-### <a name="attracting-the-right-level-of-attention"></a>Ziehen der richtigen Aufmerksamkeit
+### <a name="attracting-the-right-level-of-attention"></a>Gewinnen der richtigen Aufmerksamkeit
 
-Obwohl nur einige Arten von Animationen und Übergängen speziell für die Aufmerksamkeit des Benutzers entworfen wurden, sollten Sie so entworfen werden, dass Sie die richtige Aufmerksamkeit erreichen, um ihren Zweck zu erfüllen. Was sind die verschiedenen Möglichkeiten, um Aufmerksamkeit zu erhalten, und wie können Sie die richtige Auswahl treffen?
+Obwohl nur einige Arten von Animationen und Übergänge speziell entwickelt wurden, um die Aufmerksamkeit des Benutzers zu gewinnen, sollten sie so entworfen werden, dass sie die richtige Aufmerksamkeit erhalten, um ihren Zweck gut zu erfüllen. Welche Möglichkeiten gibt es, um Aufmerksamkeit zu gewinnen, und wie wählen Sie die richtige aus?
 
 **Animationseffekte**
 
-Unterschiedliche Animationseffekte sind mit unterschiedlichen Ebenen identisch. In der folgenden Liste werden die gängigsten Methoden zusammengefasst, beginnend mit der höchsten Aufmerksamkeit:
+Verschiedene Animationseffekte ziehen unterschiedliche Aufmerksamkeitsebenen auf sich. In der folgenden Liste sind die gängigsten Methoden zusammengefasst, beginnend mit den wichtigsten Maßnahmen:
 
--   **Schnelles Blinken.** Erfordert sofortige Aufmerksamkeit. Kann die Benutzer Konzentration unabhängig davon unterbrechen, wo das Blinken auftritt.
--   **Mittelmäßiges blinken.** Identisch, erfordert jedoch weniger Aufmerksamkeit mit niedrigerer Häufigkeit.
--   **Sprung.** Bemerkbar in peripheren Visionen und relativ anspruchsvoller Natur. Benutzer werden wahrscheinlich bemerken, können sich jedoch weiterhin an einer anderen Stelle konzentrieren, wenn die Dauer kurz ist.
--   **Entschließungs.** Bemerkbar in peripheren Visionen, aber nicht anspruchsvoll. Komplexe oder 3D-Bewegungen ziehen jedoch mehr Aufmerksamkeit als einfache oder 2D-Bewegungen. Benutzer werden wahrscheinlich bemerken, aber Sie können sich weiter an anderer Stelle konzentrieren.
--   **Mittelmäßiges Pulsing.** Bemerkbar, aber keine ablenkend in der Peripherie Vision. Benutzer können sich weiter an anderer Stelle konzentrieren. Kann Helligkeit, Farben und Größen von Impulsen haben.
--   **Langsames Pulsing/glühen.** Merkliche, aber feine. Zieht mehr Aufmerksamkeit als ein statischer Effekt. Benutzer bemerken die Animation jedoch möglicherweise nicht, es sei denn, Sie sind bereits vorhanden.
--   **Abzuwehren.** Noch weniger bemerkbar. Zieht mehr Aufmerksamkeit als ein statischer Effekt. Benutzer bemerken die Animation jedoch möglicherweise nicht, es sei denn, Sie sind bereits vorhanden.
--   **Statische Hervorhebung/Gleam.** Bemerkbar, wenn Benutzer sich für die Suche entscheiden, aber keine Aufmerksamkeit erfordern, wenn Sie sich an anderer Stelle befindet.
--   **Ambient/Natural.** Absichtlich nicht bemerkbar, wenn eine natürliche Darstellung in der Praxis auftritt.
+-   **Schnelles Flashen.** Erfordert sofortige Aufmerksamkeit. Kann die Aufmerksamkeit der Benutzer unabhängig davon, wo das Flashen auftritt, unterbricht.
+-   **Moderates Blinken.** Identisch, erfordert jedoch weniger Aufmerksamkeit mit geringerer Häufigkeit.
+-   **Bouncing.** Wahrnehmbar beim sehenden Peripheriegerät und relativ anspruchsvoller Natur. Benutzer werden es wahrscheinlich bemerken, können sich aber nur dann an anderer Stelle konzentrieren, wenn die Dauer kurz ist.
+-   **Bewegung.** Wahrnehmbar beim sehenden Peripheriegerät, aber nicht anspruchsvoll. Komplexe oder 3D-Bewegungen gewinnen jedoch mehr Aufmerksamkeit als einfache oder 2D-Bewegungen. Benutzer werden es wahrscheinlich bemerken, können sich aber weiterhin an anderer Stelle konzentrieren.
+-   **Moderates Pulsing.** Wahrnehmbar, aber nicht störend beim sehenden Peripheriegerät. Benutzer können sich weiterhin auf andere Regionen konzentrieren. Kann Helligkeit, Farben und Größen des Pulses anpassen.
+-   **Langsames Pulsieren/Leuchten.** Wahrnehmbar, aber dezent. Zieht mehr Aufmerksamkeit als ein statischer Effekt auf sich, aber Benutzer bemerken die Animation möglicherweise nur, wenn sie bereits suchen.
+-   **Verblassen.** Noch weniger wahrnehmbar. Zieht mehr Aufmerksamkeit als ein statischer Effekt auf sich, aber Benutzer bemerken die Animation möglicherweise nur, wenn sie bereits suchen.
+-   **Statische Hervorhebung/gleam.** Wahrnehmbar, wenn benutzer sich für die Suche entscheiden, aber keine Aufmerksamkeit erfordert, wenn es sich an anderer Stelle befindet.
+-   **Umgebung/natürlich.** Durch ein natürliches, reales Aussehen ist dies nicht erkennbar.
 
-Um den richtigen Ansatz für Ihr Programm oder Feature zu ermitteln, berücksichtigen Sie, wie sich diese Faktoren auf die Szenarios ihrer Features beziehen.
+Um den richtigen Ansatz für Ihr Programm oder Feature zu bestimmen, überlegen Sie, wie sich diese Faktoren auf die Szenarios Ihres Features beziehen.
 
-Nehmen Sie beispielsweise an, Sie entwerfen ein Sofortnachrichten Programm, und jemand hat dem Benutzer soeben eine Nachricht gesendet. Dieses Szenario erfordert die Aufmerksamkeit des Benutzers, es sollte sich an jedem Ort bemerkbar machen, und der Benutzer möchte in der Regel schnell Antworten. Dieses Szenario deutet darauf hin, dass eine moderate blinkende Animation eine gute Wahl wäre. Angenommen, Sie möchten Benutzer darüber informieren, dass ein Druckauftrag abgeschlossen wurde. Benutzer sollten in der Lage sein, sich weiter an anderer Stelle zu konzentrieren und produktiv zu arbeiten. Dies ist akzeptabel, wenn die Benutzer nicht bemerken. Dieses Szenario deutet darauf hin, dass das mittellange bis langsame pulsierender oder glühen eine gute Wahl wäre.
+Angenommen, Sie entwerfen ein Sofortnachrichtenprogramm, und jemand hat dem Benutzer gerade eine Nachricht gesendet. Dieses Szenario erfordert die Aufmerksamkeit des Benutzers, sollte überall wahrnehmbar sein, und normalerweise möchte der Benutzer schnell reagieren. Dieses Szenario deutet darauf hin, dass eine moderate Blinkanimation eine gute Wahl wäre. Angenommen, Sie möchten Benutzer darüber informieren, dass ein Druckauftrag abgeschlossen wurde. Benutzer sollten sich weiter auf andere Regionen konzentrieren und produktiv arbeiten können, und es ist akzeptabel, wenn benutzer dies nicht bemerken. Dieses Szenario deutet darauf hin, dass moderates bis langsames Pulsen oder Leuchten eine gute Wahl wäre.
 
 **Dauer**
 
-Die geeignete Dauer für die Animation der Animation hängt von dem Szenario und der Art der verwendeten Animation ab. Wenn Sie einen Animationseffekt mehr beachten, ist die Dauer kürzer. Obwohl sehr feine Effekte, die eine geringe Aufmerksamkeit erfordern (z. b. langsame Pulsing), unbegrenzt wiedergegeben werden können, sollten die Auswirkungen auf die Aufmerksamkeit nur zwischen 1 und 3 Sekunden wiedergegeben werden. Das Risiko, dass die Animation überwältigend und ärgerlich ist, ist länger.
+Die geeignete Dauer für das Abrufen einer Animation durch eine Aufmerksamkeit hängt vom Szenario und dem jeweiligen verwendeten Animationstyp ab. Desto mehr Aufmerksamkeit ein Animationseffekt erfordert, desto kürzer sollte die Dauer sein. Obwohl sehr subtile Effekte, die wenig Aufmerksamkeit erfordern (z. B. langsames Pulsen), unbegrenzt spielen können, sollten aufmerksamkeitserlangende Effekte nur zwischen 1 und 3 Sekunden abgespielt werden. Alles, was länger ist, birgt das Risiko, dass die Animation überfordert und lästig wird.
 
-![Screenshot der markierten Task leisten Schaltfläche ](images/vis-animations-image22.png)
+![Screenshot der hervorgehobenen Taskleistenschaltfläche ](images/vis-animations-image22.png)
 
-In Windows 7 wird die Taskleiste nur für eine Sekunde auf Aufmerksamkeit blinken. Dies wäre eine lästige Weile.
+Unter Windows 7 blinkt die Taskleiste nur eine Sekunde. Mehr wäre lästig.
 
-**Effekt Verfall**
+**Effektverfall**
 
-Sie sollten Aufmerksamkeit entwerfen, indem Sie Animationen auf der Grundlage der Annahme machen, dass Benutzer nicht sofort reagieren, weil Sie mit einer anderen Aktion beschäftigt sind und nicht unterbrochen werden möchten. Daher sollte Ihr Ziel sein, die Aufmerksamkeit zu erregen, ohne Sie zu fordern.
+Sie sollten Animationen entwerfen, die auf aufmerksamkeitsorientierte Animationen basieren und davon ausgehen, dass Benutzer, die nicht sofort reagieren, mit anderen Maßnahmen beschäftigt sind und nicht unterbrochen werden möchten. Daher sollte ihr Ziel sein, die Aufmerksamkeit zu gewinnen, ohne sie zu fordern.
 
-Um das richtige Gleichgewicht der Aufmerksamkeit zu erhalten, ohne Sie zu fordern, können Sie die Intensität eines Effekts im Laufe der Zeit übernehmen. Wenn Sie z. b. auf Aufmerksamkeit aufmerksam machen möchten, können Sie den Effekt anfänglich stärken, aber die Auswirkungen dann schnell verlangsamen. Auf diese Weise wird die attraktive Leistung größtenteils durch die anfängliche Wirkung bestimmt, aber der Gesamteindruck des Benutzers wird hauptsächlich durch seine Fertigstellung bestimmt.
+Um das richtige Gleichgewicht zu finden, um Aufmerksamkeit zu gewinnen, ohne sie zu fordern, zerfällt die Intensität eines Effekts im Laufe der Zeit. Um z. B. Aufmerksamkeit zu gewinnen, können Sie den Effekt anfänglich stark machen, aber dann den Effekt schnell verlangsamen. Dadurch wird die attraktive Leistung größtenteils durch den anfänglichen Effekt bestimmt, aber der Gesamteindruck des Benutzers wird größtenteils durch seinen Abschluss bestimmt.
 
-![Screenshot der reduzierten Flash Rate ](images/vis-animations-image23.png)
+![Screenshot mit reduzierter Flashrate ](images/vis-animations-image23.png)
 
-In Windows 7 verlangsamt sich der Task leisten-Flash Effekt am Ende.
+Unter Windows 7 verlangsamt sich der Flasheffekt der Taskleiste am Ende.
 
 ### <a name="what-about-powerpoint"></a>Was ist mit PowerPoint?
 
-Microsoft PowerPoint-Übergänge verstoßen häufig absichtlich gegen diese Richtlinien, da Sie so konzipiert sind, dass Sie sich auf Folien Übergänge beziehen und erfordern, dass Benutzer darauf warten. Außerdem haben Sie keine bestimmte Bedeutung, sodass Sie nichts über die Tatsache informieren, dass sich eine Folie ändert.
+Microsoft PowerPoint-Übergänge verstoßen häufig absichtlich gegen diese Richtlinien, da sie darauf ausgelegt sind, die Aufmerksamkeit auf Schiebeübergänge zu ziehen und zu verlangen, dass Benutzer darauf warten. Darüber hinaus haben sie keine besondere Bedeutung, sodass sie nichts über die Tatsache hinaus kommunizieren, dass sich eine Folie ändert.
 
-Übergängen im PowerPoint-Stil, wenn diese ordnungsgemäß verwendet werden, haben folgende Zwecke:
+Übergänge im PowerPoint-Stil haben bei ordnungsgemäßer Verwendung die folgenden Zwecke:
 
--   Sie unterbrechen lange Präsentationen in kleinere Blöcke, indem der Presenter gezwungen wird, anzuhalten.
--   Sie zeichnen die Aufmerksamkeit der Zielgruppe in Bezug auf Änderungen in der Präsentation und unterstützen Menschen dabei, sich auf Ihre Meinung zu konzentrieren.
--   Sie vermitteln der Präsentation einen Rhythmus, sodass Sie nicht monoton oder überwältigend ist.
--   Ihr Stil reflektiert die Persönlichkeit des Präsentators oder des Materials.
+-   Sie unterbricht lange Präsentationen in kleinere Block, indem sie die Präsentation zum Anhalten zwingen.
+-   Sie gewinnen die Aufmerksamkeit der Zielgruppe auf Änderungen in der Präsentation und helfen den Menschen, sich neu zu konzentrieren, wenn sie sich gefragt haben.
+-   Sie geben der Präsentation einen Rhythmus, damit sie sich nicht monoton oder überfordert anfühlt.
+-   Ihr Stil spiegelt die Persönlichkeit des Moderators oder des Materials wider.
 
-Obwohl es sich hierbei um wichtige Ziele für eine Präsentation handelt, würden solche Übergänge in der Benutzeroberfläche der meisten Programmtypen unnötig beachtet werden.
+Obwohl dies wichtige Ziele für eine Präsentation sind, würden solche Übergänge unnötige Aufmerksamkeit auf der Benutzeroberfläche der meisten Arten von Programmen auf sich ziehen und schnell mühsam werden.
 
-**Untere Zeile:** Verwenden Sie keine Übergängen im PowerPoint-Stil als Modell für Ihr Programm.
+**Unterm Strich:** Verwenden Sie Übergänge im PowerPoint-Stil nicht als Modell für Ihr Programm.
 
 **Wenn Sie nur sechs Dinge tun...**
 
-1.  Verwenden Sie Animationen und Übergänge, damit das Programm leichter zu verstehen ist, und fühlen Sie sich leichter und ansprechender. Sie sollten eine klare Aufgabe haben. Verwenden Sie Animationen nicht nur, weil Sie dies tun können, oder um unnötige Aufmerksamkeit auf Ihr Programm zu ziehen.
-2.  Definieren Sie ein Animations Vokabular, und verwenden Sie es im gesamten Programm einheitlich. Verwenden Sie bei Bedarf das Animations Vokabular von Windows 7.
-3.  Verwenden Sie die Merkmale ihrer Animationen, um Ihre Programm Persönlichkeit zu gestalten und Ihre Marke zu verstärken.
-4.  Machen Sie die meisten Animationen einfach, kurz und fein. Beachten Sie, dass Animationen keine Aufmerksamkeit benötigen, um erfolgreich zu sein. Wenn eine Animation geeignet und natürlich ist, bemerken Benutzer nur ihre Abwesenheit.
-5.  Sorgen Sie dafür, dass Ihre Animationen schnell und reaktionsfähig sind und Ihnen ein schlankes Gefühl vermitteln. Unabhängig davon, wie Sie Ihre Animationen einbinden, sollte niemand so aussehen, als würden Sie darauf warten. Entwerfen Sie schwerere Animationen für eine ordnungsgemäße Beeinträchtigung.
-6.  Entwurf für die lange Ausführung. Wenn eine Animation lästig, ablenkend oder tiresome ist, entwerfen Sie Sie neu, oder entfernen Sie Sie.
+1.  Verwenden Sie Animationen und Übergänge, um Ihr Programm leichter zu verstehen und sich reibungsloser und ansprechender zu gestalten. Sie sollten einen eindeutigen Zweck haben. Verwenden Sie Animationen nicht nur, weil Sie dies können, oder um unnötige Aufmerksamkeit auf Ihr Programm zu ziehen.
+2.  Definieren Sie ein Animationsvokabular, und verwenden Sie es konsistent im gesamten Programm. Verwenden Sie gegebenenfalls das Windows 7-Animationsvokabular.
+3.  Verwenden Sie die Merkmale Ihrer Animationen, um Ihrem Programm Persönlichkeit zu verleihen und seine Marke zu stärken.
+4.  Machen Sie die meisten Animationen einfach, kurz und dezent. Denken Sie daran, dass Animationen keine Aufmerksamkeit erfordern müssen, um erfolgreich zu sein. Wenn eine Animation geeignet und natürlich ist, bemerken Benutzer nur deren Fehlen.
+5.  Sorgen Sie dafür, dass Ihre Animationen schnell und reaktionsfähig sind, und geben Sie ihnen ein einfaches Gefühl. Unabhängig davon, wie ansprechend Ihre Animationen sind, möchte niemand das Gefühl haben, dass er auf sie wartet. Entwerfen Sie größere Animationen, um eine graceful-Beeinträchtigung zu erhalten.
+6.  Entwurf für die langfristige Ausführung. Wenn eine Animation störend, störend oder mühsam ist, gestalten Sie sie neu, oder entfernen Sie sie.
 
 ## <a name="usage-patterns"></a>Verwendungsmuster
 
-Animationen verfügen über mehrere Verwendungs Muster:
+Animationen haben mehrere Verwendungsmuster:
 
 
 
-|                                                                                                                  |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+|   Verwendung                                                                                                               |   BESCHREIBUNG                                     |
 |------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Feedback zu Hover**<br/> , um anzuzeigen, wo der Interaktionspunkt ist. <br/>                                | Gibt an, dass der Interaktionspunkt aktiv ist. Hover kann auch durch einen statischen Effekt angezeigt werden.<br/> Windows-Vokabular: zeigen Sie mit dem Mauszeiger auf den Mauszeiger (Begrenzungs Rechteck, Hervorhebung, Vergrößerung) mit einem einblenden/ausblenden-Effekt für Glätte. <br/> ![Screenshot von einem der sechs markierten Albumcover ](images/vis-animations-image24.png)<br/> Beim Zune Digital Media Player werden Wiedergabe Steuerelemente durch das Album hervorgehoben und hinzugefügt.<br/>                                                                                                                                                                                                                 |
-| **Auf Feedback klicken**<br/> , um anzuzeigen, dass ein durch Klicken Aktivier bares Objekt reagiert und einen Klick erhalten hat. <br/>    | Gibt an, dass auf ein Objekt geklickt wurde.<br/> Windows-Vokabular: Hintergrund des Flash Objekts bei Click-Down-Ereignis. um den Berührungs Kontakt anzuzeigen, verwenden Sie einen Ripple-Effekt. <br/> ![Foto des Fingers auf dem Touchbildschirm mit rippeln ](images/vis-animations-image25.png)<br/> "Berühren" zeigt eine Ripple-Animation an, damit der Benutzer weiß, dass die Interaktion erkannt wurde.<br/>                                                                                                                                                                                                                                                                                                         |
-| **Auswahl Feedback**<br/> , um anzuzeigen, dass ein Objekt ausgewählt ist. <br/>                                | Gibt an, dass ein Objekt ausgewählt ist. die Auswahl kann auch durch einen statischen Effekt angezeigt werden.<br/> Windows-Vokabular: Zeichnen Sie das Auswahl Rechteck mit einem einblenden/ausblenden-Effekt für Glätte. <br/> ![Abbildung eines ausgewähltem und dann ausgewählten Albumcover ](images/vis-animations-image26.png)<br/> In Zune gibt Album das Blinken bei Click aus und erhält dann ein Auswahl Rechteck bei der Auswahl.<br/>                                                                                                                                                                                                                                                                      |
-| **Fortschritts Feedback**<br/> , um anzuzeigen, dass eine Aufgabe ausgeführt wird. <br/>                             | Fortschritts Feedback gibt an, dass eine Aufgabe Fortschritte macht, in der Regel mit Aktivitätsindikatoren, Status anzeigen oder Animationen, die die Aufgabe veranschaulichen. die bestimmte des Fortschritts Feedbacks zeigt ungefähr den Umfang der Aufgabe und den verbleibenden Verlauf, während der unbeendete Fortschritt nur angibt, dass die Aufgabe ausgeführt wird.<br/> Windows-Vokabulare: drehende Aktivitätsindikatoren, Status anzeigen, Fortschritts Hintergründe, Grafik Animationen. <br/> ![Screenshot des Dialog Felds mit dem Text "Signieren" ](images/vis-animations-image27.png)<br/> In diesem Beispiel zeigt Windows Live Messenger während der Anmeldung unbestimmtes Fortschritts Feedback an.<br/> |
-| **Attractor**<br/> , um anzuzeigen, dass ein Eingreifen des Benutzers erforderlich ist. <br/>                          | Ziehen Sie die richtige Aufmerksamkeit, wenn wichtige Objekte erstellt werden oder eine Aufmerksamkeit erfordern (häufig aufgrund von Änderungen), oder wenn wichtige oder dringende Ereignisse eintreten. Weitere Informationen finden Sie [unter gewinnen der richtigen Aufmerksamkeit](#attracting-the-right-level-of-attention) für Entwurfs Techniken.<br/> Windows-Vokabular: blinken, verschieben, Pulsing, Leucht End, Glanz. <br/> ![Screenshot der Symbolleisten Animation ](images/vis-animations-image28.png)<br/> Die Windows Live-Symbolleiste wird bei der ersten Darstellung animiert, damit Sie offensichtlich ist, wo Sie sich befindet.<br/>                                                                                                                                 |
-| **Relationship**<br/> , um die Beziehung zwischen Objekten oder Kausalität in Effekten anzuzeigen. <br/>        | Anzeigen von Beziehungen, insbesondere dann, wenn die Beziehung möglicherweise nicht verstanden oder erwartet wird, auf eine Weise, die nicht ablenkend oder verwirrend ist.<br/> Windows-Vokabular: morphung, Transport, physische Änderung, z. b. das kippen, Vergrößern von einer Punktquelle, verkleinern zu einem Punkt Ziel. <br/> ![Screenshot der Farbkalibrierung (Dialogfeld)](images/vis-animations-image29.png)<br/> In diesem Beispiel zeigt die Animation die Beziehung zwischen der Gamma-Einstellung und deren Auswirkung auf die Anzeige.<br/>                                                                                                                                                    |
-| **Abbildung/Vorschau**<br/> zur visuellen Erläuterung eines Konzepts, einer Aufgabe oder der Auswirkung eines Befehls. <br/> | Eine Animation oder ein Video, in dem ein Konzept oder eine visuelle Darstellung erläutert wird, um eine Text Erklärung zu ergänzen oder zu ersetzen. auf diese Weise können Benutzer Aufgaben ausführen oder Befehle effizient und zuverlässig auswählen. <br/> ![Screenshot des Rechtschreibfehlers bei Stift Korrektur ](images/vis-animations-image30.png)<br/> In diesem Beispiel verwenden die Befehle "Show Me" des Tablet PC-Eingabe Bereichs Abbildungen, um zu veranschaulichen, wie Sie diese korrigieren, löschen, teilen und verknüpfen.<br/>                                                                                                                                                                                                        |
+| **Hoverfeedback**<br/> , um zu zeigen, wo sich der Interaktionspunkt befindet. <br/>                                | Gibt an, dass der Interaktionspunkt aktiv ist. Der Hover kann auch durch einen statischen Effekt angezeigt werden.<br/> Windows-Vokabular: Anzeige des Hovereffekts (umhingendes Rechteck, Hervorhebung, Verblendung) mit einem Ein-/Ausblenden-Effekt für die Glätte. <br/> ![Screenshot eines von sechs hervorgehobenen Albumabdeckungen ](images/vis-animations-image24.png)<br/> Im digitalen Zune-Medienplayer wird das Album cover hervorhebt und Wiedergabesteuerelemente beim Zeigen hinzugefügt.<br/>                                                                                                                                                                                                                 |
+| **Klicken Sie auf Feedback.**<br/> , um zu zeigen, dass ein klickbares Objekt reaktionsfähig ist und einen Klick empfangen hat. <br/>    | Gibt an, dass auf ein Objekt geklickt wurde.<br/> Windows-Vokabular: Flashobjekthintergrund beim Click-Down-Ereignis. Verwenden Sie zum Anzeigen des Berührungskontakts einen Effekt vom z.B. "Effect". <br/> ![Foto des Fingers auf dem Touchscreen mit Denkeffekten ](images/vis-animations-image25.png)<br/> Touch zeigt eine Wellenanimation an, damit der Benutzer weiß, dass die Interaktion erkannt wurde.<br/>                                                                                                                                                                                                                                                                                                         |
+| **Feedback zur Auswahl**<br/> , um zu zeigen, dass ein Objekt ausgewählt ist. <br/>                                | Gibt an, dass ein Objekt ausgewählt ist. Die Auswahl kann auch durch einen statischen Effekt angezeigt werden.<br/> Windows-Vokabular: Zeichnen des Auswahlrechtecks mit einem ein- und ausblendenden Effekt für die Glätte. <br/> ![Abbildung eines Albumcovers, auf das geklickt und dann ausgewählt wurde ](images/vis-animations-image26.png)<br/> In Zune blinkt das Album beim Klicken, und dann wird ein Auswahlrechteck für die Auswahl angezeigt.<br/>                                                                                                                                                                                                                                                                      |
+| **Statusfeedback**<br/> , um zu zeigen, dass eine Aufgabe ausgeführt wird. <br/>                             | Statusfeedback gibt an, dass eine Aufgabe Fortschritte macht, in der Regel mit Aktivitätsindikatoren, Statusanzeigen oder Animationen, die die Aufgabe veranschaulichen. Das Feedback zum Bestimmen des Fortschritts zeigt ungefähr, wie viel der Aufgabe durchgeführt wurde und wie viel übrig bleibt, wohingegen ein unbestimmter Fortschritt nur darauf hinweist, dass die Aufgabe durchgeführt wird.<br/> Windows-Vokabular: Rotierende Aktivitätsindikatoren, Statusanzeigen, Fortschrittshintergrund, Illustrationsanimationen. <br/> ![Screenshot des Dialogfelds mit dem Text "Anmelden" ](images/vis-animations-image27.png)<br/> In diesem Beispiel zeigt Windows Live Messenger unbestimmtes Statusfeedback während der Anmeldung an.<br/> |
+| **Attraktor**<br/> , um zu zeigen, dass etwas die Aufmerksamkeit des Benutzers erfordert. <br/>                          | Gewinnen Sie die richtige Aufmerksamkeit, wenn wichtige Objekte erstellt werden oder Aufmerksamkeit erfordern (häufig aufgrund von Änderungen), oder wenn wichtige oder dringende Ereignisse passieren. sehen [Sie, wie Sie die richtige Aufmerksamkeit für](#attracting-the-right-level-of-attention) Entwurfstechniken gewinnen.<br/> Windows-Vokabular: blinkend, bewegend, pulsierend, leuchtend, blinkend. <br/> ![Screenshot der Symbolleistenanimation ](images/vis-animations-image28.png)<br/> Die Windows Live-Symbolleiste wird bei der ersten Darstellung animiert, um deutlich zu machen, wo sie sich befindet.<br/>                                                                                                                                 |
+| **Beziehung**<br/> , um die Beziehung zwischen Objekten oder Kausalität in Effekten zu zeigen. <br/>        | Anzeigen von Beziehungen, insbesondere wenn die Beziehung möglicherweise nicht verstanden oder erwartet wird, auf eine Weise, die nicht störend oder verwirrend ist.<br/> Windows-Vokabular: Morphing, Transport, physische Änderungen, z. B. Umkippen, Wachsen von einer Punktquelle, Verkleinern auf ein Punktziel. <br/> ![Screenshot des Dialogfelds "Farb kalibrierung"](images/vis-animations-image29.png)<br/> In diesem Beispiel zeigt die Animation die Beziehung zwischen der Gammaeinstellung und ihren Auswirkungen auf die Anzeige.<br/>                                                                                                                                                    |
+| **Abbildung/Vorschau**<br/> , um ein Konzept, eine Aufgabe oder die Auswirkung eines Befehls visuell zu erklären. <br/> | Eine Animation oder ein Video, in der ein Konzept oder die visuelle Funktionsweise erläutert wird, um eine Texterklärung zu ergänzen oder zu ersetzen. Auf diese Weise können Benutzer Aufgaben effizient und sicher ausführen oder Befehle auswählen. <br/> ![Screenshot: Rechtschreibfehler beim Korrigieren des Stifts ](images/vis-animations-image30.png)<br/> In diesem Beispiel verwenden die Befehle des Tablet PC-Eingabebereichs "show me" Abbildungen, die zeigen, wie Sie korrigieren, löschen, aufteilen und joinen.<br/>                                                                                                                                                                                                        |
 
 
 
  
 
-Übergänge haben mehrere Verwendungs Muster:
+Übergänge haben mehrere Verwendungsmuster:
 
 
 
-|                                                                                                                                                                                                            |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+|      Verwendung                                                                                                                                                                                                      |    BESCHREIBUNG                                                                                                                                                                                                                |
 |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Objekt vergrößern/verkleinern/anzeigen**<br/> , wenn die Größe oder der Zustand eines Objekts reibungslos geändert werden soll. <br/>                                                                                                         | Objektänderungen zwischen Zuständen, möglicherweise während des Verschiebens. durch den Übergang bleiben die Benutzer während der Änderungen orientiert.<br/> Windows-Vokabular: Morph, Größe ändern, Objekt Folien ein-oder ausgehend. <br/> ![Screenshot der drei Größen von Wetter Gadgets ](images/vis-animations-image31.png)<br/> In diesem Beispiel wird die Weather Gadget-Mini Anwendung aus dem präzisen Zustand entfernt, um das Dialogfeld Optionen anzuzeigen.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| **Inhalt anzeigen/ausblenden/ändern**<br/> , um Inhalt reibungslos anzuzeigen, auszublenden oder zu ändern, üblicherweise für die Progressive Offenlegung. <br/>                                                                       | Fenster innere Umgestaltung zum Anzeigen von mehr, weniger oder anderem Inhalt. durch den Übergang bleiben die Benutzer während der Änderungen orientiert.<br/> Windows-Vokabular: der Bereich wird ein-oder ausgeblendet. Flyout-Fenster werden ein-und ausgeblendet. unterschiedliche Inhalte werden ausgeblendet oder durchläuft. <br/> ![Screenshot von drei Größen des Rechners ](images/vis-animations-image32.png)<br/> Der Windows-Rechner bietet einen reibungslosen Übergang zwischen Ansichtsmodi.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| **Anzeigen/Ausblenden von Steuerelementen oder Kosten**<br/> um das normale visuelle Erscheinungsbild zu vereinfachen oder auszublenden, um Steuerelemente oder Ihre Zuordnungs Elemente auf dem Mauszeiger anzuzeigen oder auszublenden. <br/>                | Anzeigen von Steuerelementen, wenn Benutzer mit dem Mauszeiger auf einen Befehlsbereich zeigen, oder Anzeigen von Kosten, wenn Benutzer auf ein Steuerelement zeigen. der Mauszeiger über diese Bereiche zeigt an, dass der Benutzer interagieren soll. die Kosten können ausgeblendet werden, wenn der Zeiger stationär wird. <br/> ![Screenshot der Ausblenden von Steuerelementen vor dem Mauszeiger ](images/vis-animations-image33.png)<br/> In diesem Beispiel werden die Windows-Media Player Steuerelemente im Vollbildmodus auf dem Mauszeiger ausgeblendet.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| **Szenen Übergänge**<br/> , um eine Szene nahtlos und nahtlos zu gestalten, um die Aufmerksamkeit zu vermeiden. <br/>                                                                                   | Abrupte Szenen Änderungen können jarringvorgänge sein, insbesondere bei großen Bildschirm Bereichen. verwenden Sie daher Szenen Übergänge, um Glätte und Kontinuität zu schaffen und Kontext bereitzustellen. Szenen Übergänge werden als natürlicher und niedriger Schlüssel entworfen, um zu vermeiden, dass auf den Prozess des Übergangs selbst geachtet wird.<br/> Windows-Vokabular: einblenden in/aus; Kreuz ausblenden; gleitende in/Left, out/right, up, Down; Pushvorgänge und Cover-Vorgänge. <br/> ![Screenshot eines Fotos, das in eine andere ](images/vis-animations-image34.png)<br/> In diesem Beispiel wird das Hintergrundbild des Windows-Desktops sanft zwischen Bildern durchkreuzt, damit der Übergang reibungslos und gesteuert wird.<br/>                                                                                                                                                                                                                                                                                                                               |
-| **Besondere Szenen Übergänge**<br/> um die Aufmerksamkeit auf eine Szenen Änderung aufmerksam zu machen und die Aufmerksamkeit des Benutzers zu erhöhen oder neu zu fokussieren. <br/>                                                               | Während die meisten Szenen Übergänge nicht auf den Übergangsprozess aufmerksam machen sollten, sind einige so konzipiert, dass Sie den Flow unterbrechen und Aufmerksamkeit ziehen, um zu betonen, dass etwas anderes passiert. um Aufmerksamkeit zu erregen, sind besondere Szenen Übergänge so konzipiert, dass Sie unnatürlich sind und eine hohe visuelle Auswirkung haben. <br/> ![Screenshot der Folie zum Verschieben des Zieh Grabens ](images/vis-animations-image35.png)<br/> In diesem Beispiel verwendet PowerPoint Aufmerksamkeit, um die Zielgruppe in die Änderung zu ziehen.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| **Direkte Manipulationen**<br/> , um die Auswirkung von direkten Manipulationen (z. b. verschieben, Scrollen/schwenken, drehen und Zoomen) anzuzeigen. <br/>                                                                   | Der Übergang zeigt die Auswirkung der Bearbeitung in Echtzeit. der Effekt sollte glatt, kontinuierlich und konsistent mit der realen Welt sein. das Verschieben und drehen ist an manchen Stellen möglicherweise nicht fortlaufend, um Einschränkungen oder wahrscheinlich bevorzugte Optionen anzugeben. durch Zoomen wird der Inhalt größer oder kleiner, und möglicherweise wird der Detailgrad entsprechend geändert. <br/> ![Screenshot der drei Größen der Bildschirmlupe ](images/vis-animations-image36.png)<br/> In diesem Beispiel zoomt die Lupe zwischen den Ebenen reibungslos.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| **Falsche direkte Manipulationen**<br/> , um anzugeben, dass eine direkte Manipulation (z. b. Move, Scroll/Pan) versucht wurde, jedoch nicht ausgeführt werden konnte. <br/>                                           | Der Übergang zeigt die zu Versuchs Ende Manipulation, kehrt jedoch wieder in den ursprünglichen Zustand zurück. häufig sieht der Effekt wie die Bearbeitung aufgrund einer realen physischen Einschränkung nicht durchgeführt werden. Diese Animationen werden anstelle von textbasierten Fehlermeldungen verwendet, wodurch die tatsächliche Darstellung der Bearbeitung beeinträchtigt würde.<br/> Windows-Vokabular: Sprung <br/> ![Abbildung der visuellen Darstellung der Animation ](images/vis-animations-image4.png)<br/> In diesem Beispiel springt das Dokument, um anzuzeigen, dass der Benutzer das Ende erreicht hat.<br/>                                                                                                                                                                                                                                                                                                                                                                                                               |
-| **Sortieren, Filtern, Neuordnen von Übergängen**<br/> , um anzugeben, dass die Darstellung oder der Inhalt einer Auflistung von Elementen geändert wurde. <br/>                                                            | Der Übergang zeigt die Auswirkung der Änderung (oder bei komplexen Änderungen). <br/> ![Screenshot der Zeilen Kameras mit drei entfernten ](images/vis-animations-image37.png)<br/> ![ähnlicher Screenshot mit unterschiedlichen Kameras entfernt ](images/vis-animations-image38.png)<br/> ![ähnlicher Screenshot mit anderen Kameras entfernt ](images/vis-animations-image39.png)<br/> in diesem Beispiel verwendet die visuelle Suche in der Suche einen Filter Übergang.<br/> ![Screenshot von Album Abdeckung zum Ändern des Erscheinungs Bilds ](images/vis-animations-image40.png)<br/> In diesem Beispiel verwendet Windows Media Center einen Umstellungs Übergang als besondere Darstellung, während ein Song abgespielt wird.<br/>                                                                                                                                                                                                                                                                                   |
-| **Leistungs Übergänge**<br/> damit eine Aktion schneller ausgeführt wird. <br/>                                                                                                              | Obwohl jeder Übergang das Potenzial hat, eine Aktion schneller durchzuführen, besteht der Hauptzweck dieser Übergänge darin, die Wahrnehmung von Leistung und Reaktionsfähigkeit zu verbessern. eine gute Vorgehensweise besteht darin, die ausgeführte Aufgabe in absichtlichen Schritten anzuzeigen. im Gegensatz dazu wird das Verzögern der Aktion, das Rendern der Ergebnisse in einer willkürlichen Weise oder die Verwendung eines Aktivitäts Indikators zu langsam.<br/> Windows-Vokabular: führen Sie eine Aktion in Phasen aus, bei der die Phasen reibungslos verlaufen. <br/> ![Screenshot der Sprung Liste zum Hinzufügen von Zielen ](images/vis-animations-image41.png)<br/> In diesem Beispiel zeigt eine Task leisten-Sprung Liste die Standardelemente sofort an und zeigt dann die Ziele an, sobald die Liste bereit ist. Dadurch wird die Zeit, die zum Erstellen der Liste erforderlich ist, verdeckt. Im Gegensatz dazu würde das Verzögern der anfänglichen Anzeige nicht reaktionsfähig sein, und das Anzeigen einer unvollständigen Liste oder eines Fortschritts Feedbacks würde viel langsamer erscheinen.<br/> |
-| **Besondere Erfahrungen**<br/> zum einbinden und begeistern von Benutzern in seltenen Umgebungen [, die](glossary.md) für Ihr Programm wichtig sind und dem Benutzer die volle Aufmerksamkeit schenken. <br/>    | Obwohl jeder Übergang das Potenzial eines besonderen Erlebnisses hat, sind diese Übergänge am besten für seltene Erlebnisse reserviert, die für Ihr Programm wirklich besonders spezifisch sind. benutzerdefinierte Übergänge werden verwendet, um ein besonderes Gefühl zu vermitteln. Branding und Personality sind häufig wichtige Entwurfs Elemente. anders als bei anderen Mustern können besondere Benutzererfahrung Aufmerksamkeit erfordern, sehr hoch sein und erfordern, dass Benutzer einen Moment warten. Folglich werden diese Übergänge bei einer über Auslastung schnell durchgezogen, da die Ober Schreibung nicht mehr besonders besonders ist. <br/> ![Screenshot des Windows-Logos, das in den neuen Bildschirm wechselt ](images/vis-animations-image42.png)<br/> In diesem Beispiel zeigt Windows Media Center eine Animation beim Laden an, um Benutzer sofort einzubinden.<br/>                                                                                                                                                                                                                                      |
+| **Objektverkleinerung/-verkleinern/angezeigt**<br/> , um die Größe oder den Zustand eines Objekts reibungslos zu ändern. <br/>                                                                                                         | Objektänderungen zwischen Zuzuständen, möglicherweise während des Verschiebens. Transition sorgt dafür, dass benutzerorientierte Änderungen vorgenommen werden.<br/> Windows-Vokabular: Morph, Größe ändern, Objektfolien ein- oder aus. <br/> ![Screenshot von drei Größen von Wetter-Gadgets ](images/vis-animations-image31.png)<br/> In diesem Beispiel wird das Wetter-Gadget aus seinem präzisen Zustand gewandelt, um das Dialogfeld Optionen anzuzeigen.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| **Inhalt ein-/ausblenden/ändern**<br/> , um Inhalte reibungslos anzuzeigen, auszublenden oder zu ändern, in der Regel für die progressive Offenlegung. <br/>                                                                       | Das Innere des Fensters wird so umgestaltet, dass mehr, weniger oder andere Inhalte angezeigt werden. Transition sorgt dafür, dass benutzerorientierte Änderungen vorgenommen werden.<br/> Windows-Vokabular: Ein- oder Ausschieben des Bereichs. Flyoutfenster werden ein- und ausgeblendet. unterschiedliche Inhalte werden ausgeblendet oder eingerollt. <br/> ![Screenshot mit drei Größen des Rechners ](images/vis-animations-image32.png)<br/> Die Windows-Rechner einen reibungslosen Übergang zwischen den Ansichtsmodi.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| **Ein-/Ausblenden von Steuerelementen oder Bieten**<br/> , um Steuerelemente oder deren Bezahlbarkeiten beim Zeigen oder Bewegen der Maus reibungslos ein- oder auszublenden, um die normale visuelle Darstellung zu vereinfachen. <br/>                | Anzeigen von Steuerelementen, wenn Benutzer mit dem Zeiger auf einen Befehlsbereich zeigen, oder Anzeigeanzeigen, wenn Benutzer auf ein Steuerelement zeigen. Wenn Sie auf diese Bereiche zeigen, bedeutet dies, dass der Benutzer interagieren möchte. Affordances können ausgeblendet werden, wenn der Zeiger stationär wird. <br/> ![Screenshot von ausgeblendeten Steuerelementen vor dem Zeigen ](images/vis-animations-image33.png)<br/> In diesem Beispiel werden die Windows Media Player-Steuerelemente ausgeblendet, wenn sie im Vollbildmodus mit dem Mauszeiger darauf zeigen.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| **Szenenübergänge**<br/> , um einen reibungslosen und nahtlosen Szenenübergang zu ermöglichen, um Aufmerksamkeit zu vermeiden. <br/>                                                                                   | Plötzliche Szenenänderungen können vor allem für große Bildschirmbereiche unbrauchbar sein. Verwenden Sie daher Szenenübergänge, um Glätte und Kontinuität zu schaffen und Kontext bereitzustellen. Szenenübergänge sind so konzipiert, dass sie natürlich und niedrig sind, um zu vermeiden, dass der Prozess des Übergangs selbst beachtet wird.<br/> Windows-Vokabular: Ein-/Ausblenden; Kreuzblenden; Ein-/Links-Schieben, nach außen/rechts, nach oben, unten; pusht und deckt ab. <br/> ![Screenshot eines Fotos, das in ein anderes eingeblendet wird ](images/vis-animations-image34.png)<br/> In diesem Beispiel wird der Hintergrund des Windows-Desktops zwischen Bildern überblendet, damit der Übergang reibungslos und gesteuert wird.<br/>                                                                                                                                                                                                                                                                                                                               |
+| **Besondere Szenenübergänge**<br/> , um die Aufmerksamkeit auf eine Szenenänderung zu lenken, um sie speziell zu gestalten oder die Aufmerksamkeit des Benutzers neu zu konzentrieren. <br/>                                                               | Während die meisten Szenenübergänge die Aufmerksamkeit nicht auf den Übergangsprozess lenken sollten, sind einige so konzipiert, dass sie den Flow unterbrechen und die Aufmerksamkeit auf sich ziehen, um zu verdeutlichen, dass etwas anderes passieren wird. Um die Aufmerksamkeit zu lenken, sind spezielle Szenenübergänge so konzipiert, dass sie unnatürlich sind und eine hohe visuelle Auswirkung haben. <br/> ![Screenshot der Schieberegler für den Übergang zur Aufmerksamkeit ](images/vis-animations-image35.png)<br/> In diesem Beispiel verwendet PowerPoint aufmerksamkeitsorientierte Übergänge, um die Zielgruppe in die Änderung zu ziehen.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| **Direkte Bearbeitungen**<br/> , um die Auswirkungen direkter Bearbeitungen anzuzeigen (z. B. Verschieben, Scrollen/Schwenken, Drehen und Zoomen). <br/>                                                                   | Der Übergang zeigt die Auswirkungen der Bearbeitung in Echtzeit. der Effekt sollte reibungslos, kontinuierlich und mit der realen Welt konsistent sein. Das Verschieben und Rotieren kann an einigen Stellen nicht kontinuierlich sein, um Einschränkungen oder wahrscheinlich bevorzugte Optionen anzugeben. Durch das Zoomen wird der Inhalt größer oder kleiner, wodurch möglicherweise die Detailebene entsprechend geändert wird. <br/> ![Screenshot mit drei Bildschirmlupegrößen ](images/vis-animations-image36.png)<br/> In diesem Beispiel zoomt die Bildschirmlupe gleichmäßig zwischen ebenen.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| **Falsche direkte Manipulationen**<br/> , um anzugeben, dass eine direkte Bearbeitung (z. B. Verschieben, Scrollen/Schwenken) versucht wurde, aber nicht durchgeführt werden konnte. <br/>                                           | Der Übergang zeigt an, dass versucht wird, die Bearbeitung zu versuchen, aber wieder in den ursprünglichen Zustand zurückgesetzt wird. oft sieht der Effekt so aus, als ob die Manipulation aufgrund einer realen physischen Einschränkung nicht durchgeführt werden kann. Diese Animationen werden anstelle von textbasierten Fehlermeldungen verwendet, die das reale Gefühl der Manipulation stören würden.<br/> Windows-Vokabular: Bounce <br/> ![Abbildung der visuellen Kommunikation von Animationen ](images/vis-animations-image4.png)<br/> In diesem Beispiel springt das Dokument, um zu zeigen, dass der Benutzer das Ende erreicht hat.<br/>                                                                                                                                                                                                                                                                                                                                                                                                               |
+| **Sortieren, Filtern, Neuanordnen von Übergängen**<br/> , um anzugeben, dass sich die Darstellung oder der Inhalt einer Auflistung von Elementen geändert hat. <br/>                                                            | Der Übergang zeigt (oder bei komplexen Änderungen schlägt vor), wie sich die Änderung auswirkt. <br/> ![Screenshot von Zeilenkameras mit drei entfernten ](images/vis-animations-image37.png)<br/> ![Ähnliche Screenshots mit verschiedenen entfernten Kameras ](images/vis-animations-image38.png)<br/> ![Ähnlicher Screenshot mit entfernten anderen Kameras ](images/vis-animations-image39.png)<br/> In diesem Beispiel verwendet die visuelle Bing-Suche einen Filterübergang.<br/> ![Screenshot des Albumcovers, das seine Darstellung ändert ](images/vis-animations-image40.png)<br/> In diesem Beispiel verwendet Windows Media Center einen Übergang zur Neuanordnung als besonderes Erlebnis, während ein Titel wiedergegeben wird.<br/>                                                                                                                                                                                                                                                                                   |
+| **Leistungsübergänge**<br/> , damit eine Aktion schneller geschieht. <br/>                                                                                                              | Während jeder Übergang das Potenzial hat, eine Aktion schneller zu gestalten, besteht der Hauptzweck dieser Übergänge darin, die Wahrnehmung von Leistung und Reaktionsfähigkeit zu verbessern. Eine gute Methode besteht darin, die Aufgabe in absichtlichen Schritten zu zeigen. Im Gegensatz dazu wirkt das Verzögern der Aktion, das Rendern der Ergebnisse auf zufällige Weise oder die Verwendung eines Aktivitätsindikators langsam.<br/> Windows-Vokabular: Führen Sie Aktionen in Phasen mit reibungslosen Übergängen zwischen den Phasen aus. <br/> ![Screenshot der Sprungliste zum Hinzufügen von Zielen ](images/vis-animations-image41.png)<br/> In diesem Beispiel zeigt eine Taskleiste Sprungliste sofort die Standardelemente an und schiebet dann auf, um die Ziele anzuzeigen, sobald die Liste bereit ist. Dies vergeht in der Zeit, die zum Erstellen der Liste erforderlich ist. Im Gegensatz dazu würde das Verzögern der ersten Anzeige nicht reagieren, und das Anzeigen einer unvollständigen Liste oder eines Fortschrittsfeedbacks würde sich viel langsamer anfühlen.<br/> |
+| **Besondere Erfahrungen**<br/> um Benutzer bei seltenen, [besonderen Erfahrungen,](glossary.md) die für Ihr Programm wichtig sind und die volle Aufmerksamkeit des Benutzers haben, zu ansprechen und zu freuen. <br/>    | Während jeder Übergang das Potenzial hat, eine besondere Erfahrung zu sein, sind diese Übergänge am besten für seltene Erfahrungen reserviert, die wirklich speziell für Ihr Programm sind. Benutzerdefinierte Übergänge werden verwendet, um ein besonderes Gefühl zu vermitteln. Branding und Persönlichkeit sind häufig wichtige Entwurfselemente. Im Gegensatz zu anderen Mustern können besondere Erfahrungen Aufmerksamkeit erfordern, stark sein und erfordern, dass Benutzer einen Moment warten müssen. folglich werden diese Übergänge bei übermäßiger Überschreitung schnell abnutzungsfähig, da die Erfahrung nicht mehr sonderlich ist. <br/> ![Screenshot des Windows-Logos, das in einen neuen Bildschirm geändert wird ](images/vis-animations-image42.png)<br/> In diesem Beispiel zeigt Windows Media Center beim Laden eine Animation an, um Benutzer sofort einzubinden.<br/>                                                                                                                                                                                                                                      |
 
 
 
@@ -407,248 +407,248 @@ Animationen verfügen über mehrere Verwendungs Muster:
 
 ### <a name="effective-communication"></a>Effektive Kommunikation
 
--   **Definieren und verwenden Sie ein Animations Vokabular** , um sicherzustellen, dass Ihre Animationen und Übergänge eine konsistente Bedeutung haben, und verwenden Sie es im gesamten Programm einheitlich. Die meisten Vokabulare sollten Einträge für Darstellung und verschwinden von Szenen und Objekten, Navigation, grundlegende Interaktion (zeigen, auswählen, klicken), Objekt Bearbeitung und-Interaktion (verschieben, löschen, Ändern der Größe, scrollen, Schwenken, Zoomen, drehen, Filtern) und Aufmerksamkeit berücksichtigen. Eine konsistente Bedeutung ist für die effektive Kommunikation entscheidend.
--   **Verwenden Sie bei Bedarf das Windows-Animations Vokabular.** Obwohl das Programm möglicherweise unterschiedliche Zielgruppen und unterschiedliche Anforderungen hat, überwiegen die Vorteile von Konsistenz und Vertrautheit häufig die Vorteile der Unterschiede. Wenn das Vokabular des Programms unterschiedlich sein muss, verwenden Sie dieselben grundlegenden Animations Typen wie Windows, aber geben Sie Ihnen die richtige Persönlichkeit für Ihr Programm.
--   **Weisen Sie generischen Animationen und Übergängen in einem Animations Vokabular keine bestimmte Bedeutung zu.** Generische Übergänge wie z. b. "Fades" und besondere Effekte, wie z. b.-Aufstellungen, haben keine besondere Bedeutung (über einblenden oder ausblenden hinaus),
+-   **Definieren und verwenden Sie ein Animationsvokabular,** um sicherzustellen, dass Ihre Animationen und Übergänge eine konsistente Bedeutung haben, und verwenden Sie es konsistent im gesamten Programm. Die meisten Vokabulars sollten Einträge für Szenen- und Objektdarstellung und -darstellung, Navigation, grundlegende Interaktion (Zeigen, Auswählen, Klicken), Objektbearbeitung und Interaktion (Verschieben, Ablegen, Ändern der Größe, Scrollen, Schwenken, Zoomen, Drehen, Filtern) und Aufmerksamkeit umfassen. Konsistente Bedeutung ist entscheidend für eine effektive Kommunikation.
+-   **Verwenden Sie nach Möglichkeit das Windows-Animationsvokabular.** Obwohl Ihr Programm möglicherweise eine andere Zielgruppe und unterschiedliche Anforderungen hat, überwiegen oft die Vorteile der Konsistenz und Vertrautheit die Vorteile der Unterschiedlichkeit. Wenn das Vokabular Ihres Programms unterschiedlich sein muss, verwenden Sie die gleichen grundlegenden Animationstypen wie Windows, aber geben Sie ihnen die richtige Persönlichkeit für Ihr Programm.
+-   **Weisen Sie generischen Animationen und Übergängen in einem Animationsvokabular keine bestimmten Bedeutungen zu.** Generische Übergänge wie Einblendungen und Sondereffekte wie z.B. Effekte haben keine bestimmte Bedeutung (über das Erscheinen oder Verschwinden hinaus), sodass sie frei verwendet werden können.
 
     **Falsch:**
 
-    ![Screenshot eines Dialog Felds, das in einem anderen Dialogfeld ausgeblendet wird ](images/vis-animations-image43.png)
+    ![Screenshot eines Dialogfelds, das in ein anderes eingeblendet wird ](images/vis-animations-image43.png)
 
-    In diesem Beispiel wird ein Kreuz ausblenden fälschlicherweise verwendet, um zum nächsten Element zu navigieren. Da Cross-Fades keine bestimmte Bedeutung haben, bietet dieser Übergang keinen Kontext.
+    In diesem Beispiel wird fälschlicherweise eine Kreuzblendung verwendet, um zum nächsten Element zu navigieren. Da Kreuzblendungen keine besondere Bedeutung haben, bietet dieser Übergang keinen Kontext.
 
--   **Machen Sie vokabulareinträge eindeutig verschieden.** Verwandte Aktionen können ähnliche Auswirkungen haben (z. b. wenn das Zoomen und Zoomen einen umgekehrten Übergang aufweisen), aber nicht verknüpfte Aktionen sollten deutliche unterschiedliche Effekte aufweisen (z. b. sollte das Zoomen nie mit Drehung verwechselt werden).
--   **Sorgen Sie für realistische und konsistente Effekte in der Praxis.** Wenn Sie realistische Animationen und Übergänge verwenden, halten Sie die Umgebung mit der realen Welt in Einklang. Benutzer sollten nie überrascht, verwirrt oder durch die Ergebnisse in die Irre führen. Und aus Gründen der Konsistenz sollten keine Metaphern kombiniert werden.
--   **Umkehren von umgekehrten Aktionen umgekehrte Animationen.** Dies entspricht den Erwartungen der Benutzer und vereinfacht das Vokabular. Wenn z. b. ein Bereich durch Verschieben in angezeigt wird, entfernen Sie ihn, indem Sie ihn nicht mit einem anderen Effekt auslagern.
--   **Machen Sie Animationen verständlich.** Benutzer sollten in der Lage sein, den Zweck einer Animation schnell nachzuvollziehen. Es ist möglich, eine Animation zu klein, zu kurz (weniger als 50 Millisekunden) zu machen, oder so geringfügig, dass Benutzer ihren Zweck nicht verstehen können. In solchen Fällen müssen Sie entweder umgestaltet werden, um die Bedeutung klar zu machen oder zu entfernen.
+-   **Machen Sie Vokabulareinträge eindeutig eindeutig.** Verwandte Aktionen können ähnliche Auswirkungen haben (z. B. sollte das Vergrößern und Verkleinern umgekehrte Übergänge aufweisen), aber nicht verknüpfte Aktionen sollten eindeutig unterschiedliche Auswirkungen haben (z. B. sollte das Zoomen nie mit dem Drehen verwechselt werden).
+-   **Halten Sie reale Effekte realistisch und konsistent.** Wenn Sie realistische Animationen und Übergänge verwenden, halten Sie die Erfahrung mit der realen Welt konsistent. Benutzer sollten sich nie über die Ergebnisse verunsichern, verwirren oder verführen lassen. Mischen Sie aus Konsistenzgründen keine Metaphern.
+-   **Geben Sie inverse Aktionen inverse Animationen an.** Dies erfüllt die Erwartungen der Benutzer und vereinfacht das Vokabular. Wenn z. B. ein Bereich durch Einschieben angezeigt wird, entfernen Sie ihn, indem Sie ihn entfernen, nicht mit einem anderen Effekt.
+-   **Sorgen Sie dafür, dass Animationen greifbar werden.** Benutzer sollten in der Lage sein, den Zweck einer Animation schnell zu verstehen. Es ist möglich, eine Animation zu klein, zu kurz (weniger als 50 Millisekunden) oder so dezent zu gestalten, dass Benutzer ihren Zweck nicht verstehen können. In solchen Fällen entweder umgestalten, um die Bedeutung klar zu machen, oder entfernen.
 
     **Falsch:**
 
-    ![Screenshot der Animation beim Löschen (Dialogfeld) ](images/vis-animations-image44.png)
+    ![Screenshot der Animation beim Löschen des Dialogfelds ](images/vis-animations-image44.png)
 
-    In diesem Beispiel ist der Effekt so klein, dass nur wenige Benutzer ihren Zweck verstehen können. Bessere Umgestaltung oder Entfernung.
+    In diesem Beispiel ist der Effekt so klein und dezent, dass nur wenige Benutzer seinen Zweck verstehen können. Besser umgestalten oder entfernen.
 
 ### <a name="patterns"></a>Muster
 
-**Feedback zu Hover**
+**Feedback mit dem Mauszeiger**
 
--   **Um reaktionsfähig zu sein, sollten Sie die Animation innerhalb von 50 Millisekunden nach dem eingeben oder belassen des Hover-Zustands abspielen.**
--   **Um schnell zu erscheinen, legen Sie die Dauer von Hover-Animationen auf weniger als 50 Millisekunden fest.**
--   **Verwenden Sie den Mauszeiger auf ein-/ausblenden.** Auf diese Weise unterscheiden sich die Hover-Effekte deutlich von Klick-und Auswahl Feedback.
+-   **Um reaktionsfähig zu sein, versuchen Sie, Animationen innerhalb von 50 Millisekunden nach dem Eintreten oder Verlassen des Hoverzustands wiederzugeben.**
+-   **Um schnell zu sein, sollte die Dauer von Animationen mit dem Mauszeiger weniger als 50 Millisekunden betragen.**
+-   **Verwenden Sie einen Effekt zum Ein- bzw. Ausblenden des Hovereffekts.** Dadurch unterscheiden sich Hovereffekte deutlich vom Klick- und Auswahlfeedback.
 
-**Auf Feedback klicken**
+**Klicken Sie auf Feedback.**
 
--   **Um reaktionsfähig zu sein, sollten Sie die Animation innerhalb von 50 Millisekunden von Click-Down-Ereignis abspielen.** Klicken Sie auf nach oben, um auf Ereignisse zu klicken.
--   **Um schnell zu erscheinen, legen Sie die Dauer von Klick Animationen auf weniger als 50 Millisekunden fest.**
--   **Verwenden Sie einen Hintergrund Blitz oder blinkffekt.** Wenn Sie dies tun, unterscheiden Sie sich deutlich von Mauszeiger-und Auswahl Feedback. Wenn Sie auf das Klicken auf den Mauszeiger klicken müssen, klicken Sie auf Feedback a Smooth Additions, um Feedback
+-   **Um reaktionsfähig zu sein, versuchen Sie, Animationen innerhalb von 50 Millisekunden nach dem Click-Down-Ereignis wiederzuspielen.** Click up events don't need click feedback .
+-   **Um schnell zu erscheinen, geben Sie die Dauer von Klickanimationen auf weniger als 50 Millisekunden an.**
+-   **Verwenden Sie einen Flash- oder Blinkeffekt im Hintergrund.** Dadurch unterscheiden sich Klickeffekte deutlich vom Zeigen und Auswahlfeedback. Da das Klicken mit dem Hovern erforderlich ist, machen Sie Click Feedback zu einer reibungslosen Ergänzung zum Hoverfeedback.
 
-**Auswahl Feedback**
+**Feedback zur Auswahl**
 
--   **Um reaktionsfähig zu sein, sollten Sie die Animation innerhalb von 50 Millisekunden der Auswahl oder der Auswahl wiedergeben.**
--   **Um schnell zu erscheinen, legen Sie die Dauer von Auswahl Animationen auf weniger als 50 Millisekunden fest.**
--   **Verwenden Sie die Auswahl des Rechtecks "Ausblenden/ausblenden".** Dadurch wird die Auswahl deutlich von Hover und Click-Feedback unterschieden.
+-   **Um reaktionsfähig zu sein, sollten Sie Animationen innerhalb von 50 Millisekunden nach Auswahl oder Deselektion wiedererlangen.**
+-   **Um schnell zu erscheinen, geben Sie die Dauer von Auswahlanimationen auf weniger als 50 Millisekunden an.**
+-   **Verwenden Sie einen Ein-/Ausblenden-Auswahlrechteckeffekt.** Dadurch unterscheidet sich die Auswahl deutlich vom Zeigen und Klicken auf Feedback.
 
-**Fortschritts Feedback**
+**Statusfeedback**
 
--   **Verwenden Sie einen Aktivitätsindikator, wenn eine Aktion nicht innerhalb einer Sekunde ausgeführt werden kann.** Dadurch wird angegeben, dass der Befehl empfangen wurde.
--   **Verwenden Sie eine Statusanzeige, wenn eine Aufgabe mehr als fünf Sekunden in Anspruch nimmt.** Weitere Richtlinien finden Sie unter Status [leisten](progress-bars.md).
--   **Verwenden Sie Fortschritts Feedback Animationen, mit denen Benutzer die Auswirkungen von Aufgaben mit langer Ausführungszeit visualisieren können.** Vermeiden Sie unnötige Fortschritts Feedback Animationen, wenn eine Animation etwas Nützliches kommuniziert, verwenden Sie stattdessen eine Statusanzeige.
--   **Sie haben klar identifizierbare Vervollständigungs-und Fehlerzustände.** Benutzer müssen in der Lage sein, diese Endzustände schnell zu ermitteln.
--   **Hiermit wird der Fortschritt nicht mehr angezeigt, wenn die zugrunde liegende Aufgabe nicht fort** Benutzer müssen in der Lage sein, zu bestimmen, ob der Fortschritt nicht durchgeführt wird, und entsprechend zu reagieren.
+-   **Verwenden Sie einen Aktivitätsindikator, wenn eine Aktion nicht innerhalb einer Sekunde ausgeführt werden kann.** Dies gibt an, dass der Befehl empfangen wurde.
+-   **Verwenden Sie eine Statusleiste, wenn eine Aufgabe mehr als fünf Sekunden dauert.** Weitere Richtlinien finden Sie unter [Statusleisten](progress-bars.md).
+-   **Verwenden Sie Statusfeedbackanimationen, mit denen Benutzer die Auswirkungen von Aufgaben mit langer Ausführungslauf visualisieren können.** Vermeiden Sie unnötige Statusfeedbackanimationen, wenn eine Animation nichts Hilfreiches kommuniziert. Verwenden Sie stattdessen eine Statusleiste.
+-   **Klar erkennbare Vervollständigungs- und Fehlerzustände.** Benutzer müssen in der Lage sein, diese Endzustände schnell zu bestimmen.
+-   **Der Fortschritt wird nicht mehr angezeigt, wenn die zugrunde liegende Aufgabe keinen Fortschritt erzielt.** Benutzer müssen ermitteln können, ob kein Fortschritt erzielt wird, und entsprechend reagieren.
 
 **Attraktoren**
 
--   **Verwenden Sie Attraktoren mit Unterhaltung.** Wenn die Informationen nicht dringend, kritisch oder anderweitig das unmittelbare Verhalten des Benutzers beeinflussen, ist es in der Regel besser, den Zustand inauffällig zu ändern und Benutzern zu ermöglichen, die Änderung selbst zu ermitteln. [Lösen Sie Ablenkungen, nicht Auffindbarkeit](/windows/desktop/uxguide/how-to-design-desktop-ux).
+-   **Verwenden Sie Gewinnungserziehende mit Nehmern.** Sofern die Informationen nicht dringend, kritisch oder anderweitig wahrscheinlich auf das unmittelbare Verhalten des Benutzers auswirken, ist es in der Regel besser, den Zustand unauffällig zu ändern und den Benutzern die Änderung selbst zu ermöglichen. [Lösen Sie Ableitungen, nicht auf erkennbar.](/windows/desktop/uxguide/how-to-design-desktop-ux)
 
-    ![Screenshot der Symbole des drahtlos Status ](images/vis-animations-image45.png)
+    ![Screenshot der Drahtlosen Statussymbole ](images/vis-animations-image45.png)
 
-    In diesem Beispiel verwendet das Symbol für das Benachrichtigungsbereich des drahtlos Netzwerks eine Animation für kritische Probleme, aber Benutzer können selbst schwache Signale entdecken.
+    In diesem Beispiel verwendet das Symbol für den Benachrichtigungsbereich des Drahtlosnetzwerks eine Animation für kritische Probleme, ermöglicht benutzern jedoch, selbst schwache Signale zu erkennen.
 
--   **Wählen Sie eine Animation aus, die die richtige Ebene der Aufmerksamkeit zeichnet.** Attractor-Animationen sollten genau genug darauf achten, um ihren Zweck zu erfüllen, aber noch nicht. Wenn der Benutzer sofort agieren muss, wählen Sie einen Effekt aus, der eine Aufmerksamkeit erfordert, unabhängig davon, wo der Benutzer sucht. Weitere Situationen finden Sie im Abschnitt "einbringen [der richtigen Aufmerksamkeit](#attracting-the-right-level-of-attention) ", um die richtige Kombination aus Aufmerksamkeit, Notiz barkeit und Dringlichkeit zu erhalten.
-
-    **Falsch:**
-
-    ![Screenshot des Taschen Clips im Büro-Assistenten ](images/vis-animations-image46.png)
-
-    Die Microsoft Office-Assistenten haben unnötige Aufmerksamkeit auf sich selbst.
-
--   **Wenn der Benutzer nicht antwortet, wiederholen Sie die Animation nicht, oder verwenden Sie keine kontinuierlichen Animationen.** Gehen Sie stattdessen davon aus, dass der Benutzer keine Maßnahmen getroffen hat, sondern später agieren kann. Kontinuierliche Animationen erschweren es Benutzern, sich auf alles andere zu konzentrieren.
-
-**Beziehungs Animationen**
-
--   **Verwenden Sie Beziehungs Animationen, um anzuzeigen, woher die Objekte stammen oder wo Sie sich befinden.**
--   **Beziehungs Animationen müssen mit dem ausgewählten Objekt beginnen oder enden.** Zeigen Sie keine Beziehungen zwischen Objekten an, mit denen der Benutzer derzeit nicht interagiert. Wenn Benutzer überhaupt bemerken, sehen Sie, was Sie bemerken werden.
-
-**Abbildungen/Vorschau**
-
--   **Verwenden Sie Vorschauen, um die Auswirkung eines Befehls anzuzeigen, ohne dass Benutzer ihn zuerst ausführen müssen.** Durch die Verwendung hilfreicher Vorschau Versionen können Sie die Effizienz und das einfache erlernen Ihres Programms verbessern und die Notwendigkeit von Test-und Fehler Fehlern reduzieren.
--   **Verwenden Sie Abbildungen und Vorschau Versionen, die über eine klare Interpretation verfügen.** Wenn Sie verwirrend sind, haben Sie wenig Wert.
--   **Spielen Sie immer nur eine Abbildung gleichzeitig** , um zu vermeiden, dass Benutzer überwältigend werden. Wenn mehrere gleichzeitige Abbildungen möglich sind, verwenden Sie den Mauszeiger oder die Wiedergabe Schaltfläche, um Benutzern das Anzeigen Ihres Interesses zu ermöglichen.
--   **Eine Abbildung automatisch abspielen, wenn dies der Hauptzweck des Fensters oder der Seite ist.** Wenn die Option optional ist, können Benutzer Sie wiedergeben, wenn Sie bereit sind.
--   Wieder **Gabe von Animationen mit der optimalen Geschwindigkeit**: nicht so schnell, Sie sind schwer zu verstehen, aber nicht so langsam, Sie sind mühsam zu beobachten.
-
-**Vergrößern/Verkleinern von Objekten**
-
--   **Inhalt während einer Größenänderung nicht abschneiden.** Erweitern Sie Container, bevor Sie Inhalte hinzufügen. Entfernen Sie Inhalte, bevor Sie Container reduzieren.
+-   **Wählen Sie eine Animation aus, die die richtige Aufmerksamkeit auf sich zieht.** Zieheranimationen sollten nur genügend Aufmerksamkeit auf sich selbst ziehen, um ihren Zweck zu erfüllen, aber nicht mehr. Wenn der Benutzer sofort reagieren muss, wählen Sie einen Effekt aus, der Aufmerksamkeit erfordert, unabhängig davon, wo der Benutzer sucht. Informationen zu anderen Situationen finden Sie im Abschnitt [Gewinnen](#attracting-the-right-level-of-attention) der richtigen Aufmerksamkeitsebene, um die richtige Kombination aus Aufmerksamkeit, Aufsehen und Dringendkeit zu erhalten.
 
     **Falsch:**
 
-    ![Screenshot des abgeschnittene Rechners ](images/vis-animations-image47.png)
+    ![Screenshot des Büroassistenten für Büroclips ](images/vis-animations-image46.png)
 
-    In diesem Beispiel wird der Inhalt während der Größenänderung abgeschnitten.
+    Die Microsoft Office-Assistenten erfordern unnötige Aufmerksamkeit für sich selbst.
 
-**Inhalt anzeigen/ausblenden/ändern**
+-   **Wenn der Benutzer nicht antwortet, wiederholen Sie die Animation nicht, und verwenden Sie keine kontinuierlichen Animationen.** Gehen Sie stattdessen davon aus, dass der Benutzer sich entschieden hat, jetzt nicht zu handeln, sondern später handeln kann. Kontinuierliche Animationen erschweren es Benutzern, sich auf etwas anderes zu konzentrieren.
 
--   **Wichtige Informationen statisch anzeigen.** Benutzer sollten nicht über eine progressive Offenlegung auf wichtige Informationen zugreifen müssen.
+**Beziehungsanimationen**
 
-**Anzeigen/Ausblenden von Steuerelementen oder Kosten**
+-   **Verwenden Sie Beziehungsanimationen, um zu zeigen, woher Objekte stammten oder wo sie hinkamen.**
+-   **Beziehungsanimationen müssen mit dem ausgewählten Objekt beginnen oder enden.** Zeigen Sie keine Beziehungen zwischen Objekten an, mit denen der Benutzer derzeit nicht interagiert. Wenn Benutzer überhaupt bemerken, wird ihnen die Ableitung aufgefallen.
 
--   **Zeigen Sie wichtige Steuerelemente an, wenn der Benutzer den Mauszeiger an einer beliebigen Stelle im Fenster oder im Bereich positioniert, oder wenn der Vollbild-Mauszeiger bewegt wird.** Benutzer sollten diese Steuerelemente nicht überprüfen müssen, sodass Sie Ihre Ermittlung sicher machen.
+**Abbildungen/Vorschauen**
 
-    ![Abbildung, die anzeigt, wie mit dem Mauszeiger ](images/vis-animations-image48.png)
+-   **Verwenden Sie Vorschauversionen, um die Auswirkungen eines Befehls anzuzeigen, ohne dass Benutzer ihn zuerst ausführen müssen.** Mit hilfreichen Vorschauversionen können Sie die Effizienz und Einfachheit des Lernens Ihres Programms verbessern und den Bedarf an Test- und Fehlerversuchen reduzieren.
+-   **Verwenden Sie Abbildungen und Vorschauen, die eine klare Interpretation haben.** Sie haben wenig Wert, wenn sie verwirrend sind.
+-   **Geben Sie immer nur eine Abbildung nach der anderen wieder,** um zu vermeiden, dass Benutzer überfordert werden. Wenn mehrere gleichzeitige Abbildungen möglich sind, verwenden Sie den Mauszeiger oder eine Wiedergabeschaltfläche, damit Benutzer ihr Interesse angeben können.
+-   **Gibt eine Abbildung automatisch wieder, wenn dies der Hauptzweck des Fensters oder der Seite ist.** Wenn dies optional ist, können Benutzer dies auch wieder geben, wenn sie bereit sind.
+-   **Wiedergabeanimationen mit der optimalen Geschwindigkeit:** Nicht so schnell, dass sie schwer zu verstehen sind, aber nicht so langsam sind, dass sie mühsam zu beobachten sind.
 
-    In diesem Beispiel zeigt Windows Media Center die Steuerelemente an, wenn sich der Mauszeiger über dem Fenster befindet.
+**Objektverkleinerung/-verkleinerung**
 
--   **Anzeigen sekundärer Steuerelemente oder Steuern von Kosten, wenn der Benutzer den Mauszeiger auf oder in der Nähe der Befehle positioniert.** Um die Auffindbarkeit zu vereinfachen, machen Sie den Standort offensichtlich und das Ziel groß.
+-   **Beschneiden Sie inhalte während einer Größenvergrößerung nicht.** Erweitern Sie Container, bevor Sie Inhalt hinzufügen. Entfernen Sie Inhalt, bevor Sie Container reduzieren.
 
-    ![Screenshot des Zeigers, der den sekundären Befehl aufzeigt ](images/vis-animations-image49.png)
+    **Falsch:**
 
-    In diesem Beispiel zeigt Windows Live Messenger einen sekundären Befehl an, wenn sich der Mauszeiger in der Nähe der oberen rechten Ecke befindet.
+    ![Screenshot des abgeschnittenen Rechners ](images/vis-animations-image47.png)
 
-**Szenen Übergänge**
+    In diesem Beispiel wird der Inhalt während einer Größenvergrößerung abgeschnitten.
 
--   **Sorgen Sie für physische Szenen Übergänge in Einklang mit der natürlichen Zuordnung.** Personen, die von links nach rechts in westlichen Kulturen gelesen werden, und hierarchische Diagramme fließen von oben nach unten. Folglich wird der Fortschritt in der Zeit durch die Bewegung von links nach rechts angezeigt. Die folgenden physischen Szenen Übergänge haben eine natürliche Zuordnung:
+**Inhalt ein-/ausblenden/ändern**
+
+-   **Zeigen Sie wichtige Informationen statisch an.** Benutzer sollten nicht durch progressive Offenlegung auf wichtige Informationen zugreifen müssen.
+
+**Ein-/Ausblenden von Steuerelementen oder Vorhaltungen**
+
+-   **Zeigen Sie wichtige Steuerelemente an, wenn der Benutzer den Mauszeiger an einer beliebigen Stelle im Fenster oder Bereich oder, wenn der Vollbildmodus angezeigt wird, während der Mauszeiger bewegt wird.** Benutzer sollten nicht nach diesen Steuerelementen suchen müssen. Stellen Sie daher sicher, dass ihre Ermittlung sicher ist.
+
+    ![Abbildung, die zeigt, wie steuerelemente mit dem Zeigen angezeigt werden ](images/vis-animations-image48.png)
+
+    In diesem Beispiel zeigt Windows Media Center seine Steuerelemente immer dann an, wenn sich der Zeiger über dem Fenster befindet.
+
+-   **Zeigen Sie sekundäre Steuerelemente oder Steuerelementen an, wenn der Benutzer den Zeiger auf die Befehle oder in der Nähe der Befehle positioniert.** Machen Sie den Standort offensichtlich und das Ziel groß, um die Aufholbarkeit zu verbessern.
+
+    ![Screenshot des Zeigers, der den sekundären Befehl zeigt ](images/vis-animations-image49.png)
+
+    In diesem Beispiel zeigt Windows Live Messenger einen sekundären Befehl an, wenn sich der Zeiger in der Nähe der oberen rechten Ecke befindet.
+
+**Szenenübergänge**
+
+-   **Sorgen Sie dafür, dass physische Szenenübergänge mit der natürlichen Zuordnung konsistent sind.** In westen Kulturen lesen Menschen von links nach rechts, und hierarchische Diagramme fließen von oben nach unten. Folglich wird die Zukunft in der Zeit durch die Bewegung von links nach rechts angezeigt. Die folgenden physischen Szenenübergänge haben eine natürliche Zuordnung:
 
 
 
     | Übergang                          | Bedeutung                                     |
     |---------------------------|--------------------------------------|
-    | Von Links<br/>      | Zurück in den Aufgaben Fluss<br/>    |
-    | Von rechts<br/>     | Vorwärts im Aufgaben Fluss<br/> |
-    | Von oben<br/>       | Aufgaben Hierarchie nach oben verschieben<br/>    |
-    | Von unten<br/>    | Aufgaben Hierarchie nach unten verschieben<br/>  |
+    | Von links<br/>      | Zurück in Den Taskfluss verschieben<br/>    |
+    | Von rechts<br/>     | Weiter im Aufgabenfluss<br/> |
+    | Von oben<br/>       | Taskhierarchie nach oben verschieben<br/>    |
+    | Von unten<br/>    | Taskhierarchie nach unten verschieben<br/>  |
 
 
 
  
 
--   **Wenn Ihr Programm Sound wieder gibt, entwerfen Sie Szenen Übergänge und audioübergänge.** Wenn eine Szene z. b. schrittweise ausgeblendet wird, sollte jeder Sound allmählich auch ausgeblendet werden. Vermeiden Sie nahtlose visuelle Übergänge durch abrupte Sound Übergänge. Weitere Informationen zu Sound finden Sie unter [Sound](vis-sound.md).
+-   **Wenn Ihr Programm Sound abspielt, werden Szenenübergänge und Audioübergänge zusammen gewendet.** Wenn eine Szene z. B. allmählich ausblendet, sollte jeder Sound auch schrittweise ausgeblendet werden. Lassen Sie nahtlose visuelle Übergänge nicht durch plötzliche Soundübergänge zu. Weitere Soundrichtlinien finden Sie unter [Sound](vis-sound.md).
 
 **Direkte Manipulationen**
 
--   **Wenn Sie physische Gesten in der Interaktion verwenden (z. b. das Umschalten), entwerfen Sie die Animation so, dass Sie wie eine natürliche Reaktion auf die Geste aussieht.** Verknüpfen Sie die Interaktions Ursache mit dem Übergangseffekt. Verleihen Sie der Animation reale physische Merkmale, wie z. b. Beschleunigung, Verlangsamung, Schwung, Widerstandsfähigkeit, Gewichtung, Sprung und Drehung.
--   **Halten Sie die Kontaktpunkte eines Objekts während der Interaktion reibungslos unter dem Zeiger, um ein direktes Gefühl zu erhalten.** Jede Verzögerung, eine verpacsantwort oder der Verlust von Kontakten zerstört die Wahrnehmung direkter Manipulationen. Objekte sollten bei der Manipulation nie verschwinden.
+-   **Wenn Sie physische Gesten in der Interaktion verwenden (z. B. Bewegungen), entwerfen Sie die Animation so, dass sie sich wie eine natürliche Antwort auf die Geste anfühlt.** Verknüpfen Sie die Interaktionsursache mit dem Übergangseffekt. Geben Sie der Animation reale physische Merkmale wie Beschleunigung, Verlangsamung, Bewegung, Widerstand, Gewicht, Bounce und Drehung.
+-   **Um ein direktes Gefühl zu erhalten, halten Sie die Kontaktpunkte eines Objekts während der gesamten Interaktion reibungslos unter dem Zeiger.** Jede Verzögerung, abgesenkte Antwort oder ein Verlust des Kontakts zerstört die Wahrnehmung der direkten Manipulation. Objekte sollten nie verschwinden, während sie bearbeitet werden.
 
-**Übergängen sortieren, Filtern oder Neuanordnen**
+**Sortieren, Filtern oder Neuordnen von Übergängen**
 
--   **Zeigen Sie für einfache Änderungen den gesamten Übergang an.** Benutzer können den gesamten Übergang problemlos durchführen. Einfache Änderungen umfassen vier Elemente oder weniger.
--   **Bei komplexen Änderungen wird das Ende der Bewegung bei der Verlangsamung hervorgehoben, und der Rest wird mit dem Augenblick aufgefüllt.** Auf diese Weise wird das Gefühl der Bewegung viel reaktionsfähiger und geordneter.
+-   **Zeigen Sie bei einfachen Änderungen den gesamten Übergang an.** Benutzer können den gesamten Übergang problemlos verfolgen. Einfache Änderungen umfassen vier Elemente oder weniger.
+-   **Heben Sie bei komplexen Änderungen das Ende der Bewegung hervor, wenn sie verlangsamt wird, und lassen Sie das Auge auffüllen.** Dadurch wird die Bewegung viel reaktionsfähiger und geordneter.
 
-**Leistungs Übergänge**
+**Leistungsübergänge**
 
--   **Denken Sie daran, langsame Übergänge in zwei oder drei Phasen auszuführen, damit Sie schneller und interaktiv angezeigt werden.** Verwenden Sie bei Bedarf die folgende Kompositions Reihenfolge:
+-   **Erwägen Sie die Durchführung langsamer Übergänge in zwei oder drei Phasen, damit sie schneller und sofort interaktiv angezeigt werden.** Verwenden Sie gegebenenfalls die folgende Kompositions reihenfolge:
     -   Externer Frame
     -   Hintergrund
-    -   Ursprünglicher Inhalt (bei Bedarf unter Verwendung einer temporären Darstellung)
+    -   Ursprünglicher Inhalt (bei Bedarf mithilfe einer temporären Darstellung)
     -   Primäre Steuerelemente (sodass Benutzer sofort interagieren können)
-    -   Sekundäre Steuerelemente und alle verbleibenden Elemente der Benutzeroberfläche
-    -   Der endgültige Inhalt (bei Verwendung einer temporären Darstellung) verwenden Sie Übergänge wie "Fades" und "Folien", damit die Komposition reibungslos, ordnungsgemäß und verfeinert erscheint.
+    -   Sekundäre Steuerelemente und alle verbleibenden Benutzeroberflächenelemente
+    -   Final content (if a temporary representation was used) Use transitions like fades and slides to make the composition appear smooth, orderly, and refined.
 
-![Screenshot der Karte mit einem Satellitenfoto und einem Raster ](images/vis-animations-image50.png)
+![Screenshot der Karte mit Satellitenfoto und Raster ](images/vis-animations-image50.png)
 
-Wenn Sie einen Bildlauf in der Ansicht "Vogelperspektive" durchführen, wird in "ge Maps" ein temporäres Raster Auf diese Weise können Benutzer weiterhin sofort scrollen, bevor der endgültige Inhalt gerendert wird.
+Beim Scrollen in der Ansicht "Aus den Augen des Auges" zeigen Bing-Karten einen temporären Rasterhintergrund an. Auf diese Weise können Benutzer sofort scrollen, bevor der endgültige Inhalt gerendert wird.
 
-**Besondere Animations Animationen**
+**Animationen mit besonderer Erfahrung**
 
--   **Überdenken Sie animierte Begrüßungs Bildschirme (und statische Begrüßungs Bildschirme).** Häufig zeichnen sich die Begrüßungs Bildschirme nur darauf aus, wie lange ein Programm geladen werden muss, und Sie sind schnell dabei, die Willkommensseite zu laden. Obwohl Begrüßungs Bildschirme akzeptabel sind, wenn Sie nur angezeigt werden, wenn eine Benutzerinteraktion nicht möglich ist, ist es immer noch eine bessere Alternative, das Programm so zu entwerfen, dass Benutzer sofort mit dem Programm interagieren können, auch wenn es noch geladen wird.
--   **Geben Sie einen Befehl zum Überspringen der Einführung an, wenn ein animierter Begrüßungsbildschirm mehr als drei Sekunden benötigt.** Wenn Sie auf eine beliebige Stelle im Begrüßungsbildschirm klicken, sollte diese ebenfalls geschlossen werden Verwenden Sie alternativ eine kurze Version der Animation nach einem anfänglichen Zeitraum.
+-   **Animierte Begrüßungsbildschirme (sowie statische Begrüßungsbildschirme) animieren.** Begrüßungsbildschirme machen häufig nur darauf aufmerksam, wie lange das Laden eines Programms dauert, und die Begrüßung wird schnell verschleieren. Begrüßungsbildschirme sind zwar akzeptabel, wenn sie nur angezeigt werden, wenn eine Benutzerinteraktion nicht möglich ist, aber wenn möglich, ist es eine bessere Alternative, Ihr Programm so zu entwerfen, dass Benutzer sofort damit interagieren können, auch wenn es noch geladen wird.
+-   **Geben Sie den Befehl Einführung überspringen an, wenn ein animierter Begrüßungsbildschirm länger als drei Sekunden dauert.** Wenn Sie auf eine beliebige Stelle auf dem Begrüßungsbildschirm klicken, sollte sie ebenfalls verworfen werden. Alternativ können Sie nach einem anfänglichen Zeitraum eine kurze Version der Animation verwenden.
 
 ### <a name="performance"></a>Leistung
 
--   **Nehmen Sie nicht an, dass Benutzer auf Animationen und Übergänge Ihres Programms warten.** Verwenden Sie bei Bedarf kurze Animationen und Übergänge (weniger als 200 Millisekunden). Verwenden Sie schnellere Animationen (100 Millisekunden) für häufigere Vorgänge. Entwerfen Sie längere Animationen (mehr als eine Sekunde, in der Regel Feedback, Illustration und besondere Erfahrungs Muster), damit Benutzer weiterhin arbeiten können, während Sie ausgeführt werden.
--   **Entwerfen Sie Animationen mit langer Laufzeit, um Benutzern zu ermöglichen, dass Sie während der Ausführung der Animation interagieren können.** Benutzer versuchen nicht, die Arbeit fortzusetzen, wenn die visuellen Hinweise darauf hindeuten, dass Sie nicht möglich sind.
+-   **Sorgen Sie nicht dafür, dass Benutzer auf die Animationen und Übergänge Ihres Programms warten.** Verwenden Sie nach Möglichkeit kurze Animationen und Übergänge (weniger als 200 Millisekunden). Verwenden Sie schnellere Animationen (100 Millisekunden) für häufigere Vorgänge. Entwerfen Sie längere Animationen (in der Regel mehr als eine Sekunde das Statusfeedback, die Abbildung und spezielle Erfahrungsmuster), damit Benutzer weiterhin arbeiten können, während sie ausgeführt werden.
+-   **Entwerfen Sie Animationen mit langer Laufzeit, um Benutzern klar zu machen, dass sie interagieren können, während die Animation ausgeführt wird.** Benutzer versuchen nicht, weiter zu arbeiten, wenn die visuellen Hinweise darauf hindeuten, dass sie dies nicht können.
 
     ![Screenshot einer Statusleiste in einer Statusleiste ](images/vis-animations-image51.png)
 
-    In diesem Beispiel aus Windows Internet Explorer schlägt die Statusleiste mit niedriger Tastatur in der Statusleiste vor, dass Benutzer nicht auf den Abschluss warten müssen, bevor Sie interagieren können.
+    In diesem Beispiel aus Windows Internet Explorer die Statusleiste mit geringem Schlüssel in der Statusleiste darauf hin, dass Benutzer nicht auf den Abschluss warten müssen, bevor sie interagieren können.
 
--   **Verwenden Sie für CPU-intensive Aufgaben Lightweight-Animationen.** Dadurch erhalten Sie eine vollständige Verarbeitungsleistung für die Aufgabe. Außerdem bemerken Benutzer nicht, dass die leichte Animation der Grund dafür ist, dass die Aufgabe CPU-intensiv ist.
--   **Während einer Animation oder eines Übergangs wird kein Aktivitätsindikator angezeigt.** Dadurch wird der Effekt zerstört. Entwerfen Sie Animationen und Übergänge, damit Sie sofort loslegen können.
--   **Entwerfen Sie Animationen so, dass Sie immer dann ordnungsgemäß herabgestuft werden, wenn nicht genügend Systemressourcen** Animationen können durch Abweichungen, die weniger Ressourcen erfordern (z. b. kürzere Längen oder niedrigere Frameraten) oder gar nicht ausgeführt werden, herabgestuft werden. Unabhängig von den verfügbaren Ressourcen müssen Sie sicherstellen, dass die Animationen hochwertig sind und anstelle von Softwarefehlern Animationen wie Animationen aussehen.
+-   **Verwenden Sie einfache Animationen für CPU-intensive Aufgaben.** Dadurch erhält die Aufgabe volle Verarbeitungsleistung. Darüber hinaus werden Benutzer nicht erkennen, dass die einfache Animation der Grund dafür ist, dass die Aufgabe CPU-intensiv ist.
+-   **Zeigen Sie während einer Animation oder eines Übergangs keinen Aktivitätsindikator an.** Dadurch wird der Effekt zerstört. Entwerfen Sie Animationen und Übergänge, damit sie sofort beginnen können.
+-   **Entwerfen Sie Animationen so, dass sie ordnungsgemäß heruntergestuft werden, wenn nicht genügend Systemressourcen verfügbar sind.** Animationen können durch Variationen beeinträchtigt werden, die weniger Ressourcen erfordern (z. B. kürzere Längen oder niedrigere Frameraten) oder überhaupt nicht ausgeführt werden. Stellen Sie unabhängig von den verfügbaren Ressourcen sicher, dass die Animationen eine hohe Qualität haben und wie Animationen anstelle von Softwarefehlern aussehen.
 
     **Falsch:**
 
-    ![Screenshot eines verblassten Programm Rahmens über den Desktop ](images/vis-animations-image52.png)
+    ![Screenshot des ausgeblendeten Programmrahmens über dem Desktop ](images/vis-animations-image52.png)
 
-    In diesem Beispiel wird der Übergang der Fenster Wiederherstellung auch dann verwendet, wenn nicht genügend Systemressourcen vorhanden sind, um Sie gut abspielen zu können. Folglich scheint der fixierte Frame ein Fehler zu sein. Wenn die Ressourcen nicht verfügbar sind, ist es besser, das Fenster nur ohne einen Übergang anzuzeigen.
+    In diesem Beispiel wird der Übergang zur Fensterwiederherstellung verwendet, obwohl nicht genügend Systemressourcen vorhanden sind, um ihn gut zu spielen. Folglich scheint der fixierte Frame ein Fehler zu sein. Wenn die Ressourcen nicht verfügbar sind, ist es besser, einfach das Fenster ohne Übergang anzuzeigen.
 
-### <a name="animation-characteristics"></a>Animations Merkmale
+### <a name="animation-characteristics"></a>Animationsmerkmale
 
-Gut entworfene Animationen und Übergänge verfügen in der Regel über die folgenden Merkmale:
+Gut entworfene Animationen und Übergänge haben im Allgemeinen die folgenden Merkmale:
 
--   **Kurze Dauer.** Die meisten Animationen sollten zwischen 100 und 300 Millisekunden liegen, vorzugsweise entweder 1/6 Sekunden (167 Millisekunden) oder 1/4 Sekunde (250 Millisekunden). (Besondere Erlebnisse und Fortschritts Feedback können länger sein.) Verwenden Sie schnellere Animations Zeiten für häufigere Vorgänge. Im Allgemeinen nehmen längere Animationen mehr Zeit in Anspruch, nehmen mehr Zeit in Anspruch und können langsam sein.
--   **Digkeit.** Animationen sollten innerhalb von 50 Millisekunden des initiierenden Ereignisses oder der Benutzeraktion gestartet werden. Längere Startzeiten sind nicht reaktionsfähig.
--   **Beschleunigung/Verlangsamung.** Die meisten Animationseffekte müssen beschleunigt werden, wenn Sie beim Beenden Starten und verlangsamen. Um reaktionsfähig zu sein, entwerfen Sie Animationen, damit Sie schnell starten können. Um gesteuert angezeigt zu werden, entwerfen Sie Animationen so, dass Sie am Ende eine weiche Landung haben. Wenngleich dies für Bewegungs Effekte gilt, gilt dies auch für jede Auswirkung, die eine Bewegung vorschlägt, wie z. b. Zoom und sogar die Verweil.
+-   **Kurze Dauer.** Die meisten Animationen sollten zwischen 100 und 300 Millisekunden liegen, vorzugsweise entweder 1/6 Sekunde (167 Millisekunden) oder 1/4 Sekunde (250 Millisekunden). (Spezielle Erfahrungen und Feedback zum Fortschritt können länger sein.) Verwenden Sie schnellere Animationszeiten für häufigere Vorgänge. Im Allgemeinen dauert es länger, dass längere Animationen abgeschlossen sind, sich mehr Zeit für das Verständnis nehmen und sich langsam anfühlen.
+-   **Reaktionsfähigkeit.** Animationen sollten innerhalb von 50 Millisekunden nach dem initiierenden Ereignis oder der Benutzeraktion beginnen. Längere Startzeiten reagieren nicht.
+-   **Beschleunigung/Verlangsamung.** Um natürlich aus aussehen zu können, müssen die meisten Animationseffekte beim Starten beschleunigt und beim Beenden verlangsamt werden. Entwerfen Sie Animationen für schnelle Starts, um reaktionsfähig zu sein. Um kontrolliert zu erscheinen, entwerfen Sie Animationen, um am Ende soft Landings zu erhalten. Dies gilt zwar für Bewegungseffekte, gilt aber auch für alle Effekte, die Bewegungen vorschlägt, z. B. Zooms und sogar Verblassungen.
 
-    ![Abbildung eines Diagramms mit reduzierter Geschwindigkeit im Zeitverlauf ](images/vis-animations-image53.png)
+    ![Abbildung eines Diagramms, das eine geringere Geschwindigkeit im Laufe der Zeit zeigt ](images/vis-animations-image53.png)
 
-    Die meisten Animationen sollten Schnellstarts und weiche Endungen aufweisen, um ein reaktionsfähiges, aber dennoch kontrolliertes Gefühl zu haben.
+    Die meisten Animationen sollten schnelle Starts und weiche Endungen haben, um ein reaktionsfähiges, aber kontrolliertes Gefühl zu haben.
 
--   **Entschließungs.** Animationen, die eine bestimmte Bewegung darstellen, müssen beschleunigt und verlangsamt werden. verwenden Sie daher keine lineare Bewegung, es sei denn, die Animations Dauer ist sehr kurz. Bei der Bewegung sollten der Pfad Shorts von Anfang bis Ende ohne Überschreiben übernommen werden. Der vollständige Animations Pfad ist nicht immer erforderlich. Wenn dies der Fall ist, markieren Sie das Ende der Bewegung, wenn es verlangsamt wird, und lassen Sie das Auge den Rest ausfüllen. Auf diese Weise wird das Gefühl der Bewegung viel reaktionsfähiger und geordneter. Wenn Sie die Bewegung mehrerer Objekte gleichzeitig animieren, weisen Sie Ihnen leicht unterschiedliche Pfade mit etwas unterschiedlichen Zeiträumen zu, um natürlichere zu gestalten.
--   **Die Framerate.** Die meisten Animationen sollten eine Framerate von 20 Frames pro Sekunde verwenden. Wenn die Animation eine besondere Ober Linie ist oder mit dem Hauptzweck des Programms verknüpft ist, sollten Sie die Verwendung einer höheren Rate von 24 30 Frames pro Sekunde in Erwägung nehmen, um die glätttheit und den Realismus zu verbessern.
--   **Skalierung.** Entwerfen Sie Animationen so, dass Sie für den gesamten Bereich der vorgesehenen Verwendung gut funktionieren. Seiten Übergänge sollten z. b. so entworfen werden, dass Sie für alle Seitengrößen funktionieren.
--   **Persönlichkeits.** Entwerfen Sie Animationen, um naturgemäß, unterdrückt und effizient und nicht künstlich, positiv oder langsam zu sein.
+-   **Bewegung.** Insbesondere Animationen, die bewegungen, müssen beschleunigt und verlangsamt werden. Verwenden Sie daher keine lineare Bewegung, es sei denn, die Animationsdauer ist sehr kurz. Bewegungen sollten den Shorts-Pfad von Anfang bis Ende nehmen, ohne zu überdrehen. Der vollständige Bewegungspfad ist nicht immer erforderlich. Heben Sie gegebenenfalls das Ende der Bewegung hervor, wenn es verlangsamt wird, und lassen Sie das Auge auffüllen. Dadurch wird die Bewegung viel reaktionsfähiger und geordneter. Wenn Sie die Bewegung mehrerer Objekte gleichzeitig animieren, geben Sie ihnen leicht unterschiedliche Pfade mit etwas unterschiedlichen Zeitsteuerungen, um sich natürlicher anfühlen zu können.
+-   **Bildrate.** Die meisten Animationen sollten eine Bildfrequenz von 20 Bildern pro Sekunde verwenden. Wenn die Animation für eine besondere Erfahrung ist oder mit dem Hauptzweck des Programms zusammenhing, sollten Sie erwägen, eine höhere Rate von 24 30 Frames pro Sekunde zu verwenden, um die Glätte und Realität zu verbessern.
+-   **Skalierung.** Entwerfen Sie Animationen so, dass sie für den gesamten vorgesehenen Verwendungsbereich gut funktionieren. Beispielsweise sollten Seitenübergänge so entworfen werden, dass sie für alle Seitengrößen funktionieren.
+-   **Persönlichkeit.** Entwerfen Sie Animationen so, dass sie sich natürlich, dedudiert und effizient und nicht wie künstliche, launische oder langsame Animationen verhalten.
 
 ### <a name="animated-text"></a>Animierter Text
 
--   Obwohl Sie Text mithilfe eines Übergangs anzeigen können, **animieren Sie den Text nicht fortlaufend.** Animierter Text ist oft ablenkend und schwieriger zu lesen als statischer Text. **Ausnahmen:**
-    -   Sie können Text in Situationen animieren, in denen er traditionell animiert ist, und eine barrierefreie Alternative bereitstellen.
-    -   Sie können Text animieren, wenn der Zweck des Texts hauptsächlich dekorativ ist.
+-   Sie können Text zwar mithilfe eines Übergangs anzeigen, **aber nicht kontinuierlich Animieren von Text.** Animierter Text ist oft abgelenkt und schwieriger zu lesen als statischer Text. **Ausnahmen:**
+    -   Sie können Text in Situationen animieren, in denen er traditionell animiert ist, und Sie stellen eine barrierefreie Alternative zur Verfügung.
+    -   Sie können Text animieren, wenn der Zweck des Texts hauptsächlichdekorativ ist.
 
-![Screenshot der kreativ entworfenen Zune-Schnittstelle ](images/vis-animations-image13.png)
+![Screenshot der kreativ gestalteten Zune-Schnittstelle ](images/vis-animations-image13.png)
 
-In diesem Beispiel animiert Zune den Text, aber sein Zweck ist hauptsächlich dekorativ. Es gibt kein Problem, wenn Benutzer den Text nicht sorgfältig lesen.
+In diesem Beispiel animiert Zune Text, aber sein Zweck ist in erster Linie dekohativ. Es gibt kein Problem, wenn Benutzer den Text nicht sorgfältig lesen.
 
-### <a name="reducing-power-consumption"></a>Reduzieren des Stromverbrauchs
+### <a name="reducing-power-consumption"></a>Reduzieren des Energieverbrauchs
 
--   **Entwerfen Sie Ihre Animationen, um den Energieverbrauch zu verringern.** Wenn die Animation ordnungsgemäß entworfen wurde, sollten Animationen den Energieverbrauch nicht signifikant erhöhen So reduzieren Sie den Stromverbrauch:
-    -   **Animation beenden, wenn die Anzeige deaktiviert ist.** Die Anzeige ist möglicherweise deaktiviert, um Energie zu sparen.
-    -   **Verwenden Sie keine Animationen mit langer Laufzeit, die nicht vom Benutzer initiiert wurden.** Animationen, die periodische Zeit Geber mit hoher Auflösung verwenden, verringern die Effizienz der Prozessor Energie Verwaltung. Achten Sie auch darauf, dass Sie alle regelmäßigen High-Resolution-Timer deaktivieren, wenn die Animationen fertig sind.
-    -   **Alle Animationen aussetzen, wenn sich das System im Leerlauf befindet.** Der Zeitraum, in dem die Benutzer Inaktivität in den Leerlauf versetzt wird, wird durch Energieoptionen in der Systemsteuerung bestimmt
+-   **Entwerfen Sie Ihre Animationen, um den Energieverbrauch zu reduzieren.** Bei ordnungsgemäßer Entwicklung sollten Animationen den Energieverbrauch nicht erheblich erhöhen. So reduzieren Sie den Energieverbrauch:
+    -   **Beenden Sie die Animation, wenn die Anzeige deaktiviert ist.** Die Anzeige ist möglicherweise ausgeschaltet, um Energie zu sparen.
+    -   **Verwenden Sie keine Animationen mit langer Laufzeit, die nicht vom Benutzer initiiert wurden.** Animationen, die regelmäßige Timer mit hoher Auflösung verwenden, verringern die Effizienz der Prozessorleistungsverwaltung. Achten Sie außerdem darauf, dass Sie alle periodischen Timer mit hoher Auflösung deaktivieren, wenn die Animationen abgeschlossen sind.
+    -   **Alle Animationen werden angehalten, wenn sich das System im Leerlauf befindet.** Der Zeitraum der Benutzerinaktivität, der in den Leerlauf übergedauert werden soll, wird durch Energieoptionen in Systemsteuerung.
 
-### <a name="accessibility"></a>Eingabehilfen
+### <a name="accessibility"></a>Zugriff
 
--   **Verwenden Sie Animation nicht als einzige Möglichkeit zum vermitteln wichtiger Informationen.** Animationen sollten nützliche Informationen vermitteln, die für Benutzer mit Sehbehinderung nicht zugänglich sind.
--   **Stellen Sie sicher, dass äquivalente Informationen auf andere Weise verfügbar sind,** z. b.:
+-   **Verwenden Sie Animationen nicht als einzige Möglichkeit, wichtige Informationen zu vermitteln.** Animationen sollten Informationen kommunizieren, die nützlich, aber nicht kritisch sind, da sie für Benutzer mit sehbehinderten Funktionen nicht zugänglich sind.
+-   **Stellen Sie sicher, dass gleichwertige Informationen auf andere Mittel verfügbar sind, z.** B.:
 
-    -   **Bei der Überprüfung.** Benutzer können entsprechende Informationen ermitteln, indem Sie sich den Bildschirm oder die an der Animation beteiligten Objekte ansehen.
-    -   **Durch einfache Interaktion.** Benutzer können gleichwertige Informationen ermitteln, indem Sie mit der Maus darauf zeigen, klicken oder doppelklicken.
+    -   **Nach Überprüfung.** Benutzer können äquivalente Informationen ermitteln, indem sie sich den Bildschirm oder die Objekte ansehen, die an der Animation beteiligt sind.
+    -   **Durch einfache Interaktion.** Benutzer können entsprechende Informationen ermitteln, indem sie mit dem Mauszeiger zeigen, klicken oder doppelklicken.
 
-    ![Screenshot der Startseite von Startseite mit Hotspots ](images/vis-animations-image54.png)
+    ![Screenshot der Bing-Startseite mit Hotspots ](images/vis-animations-image54.png)
 
-    Die Startseite von Start enthält eine erste Animation, die mehrere Hotspots zeigt. Benutzer können die Hotspots auch anzeigen, indem Sie den Cursor in der Nähe bewegen.
+    Die Bing-Startseite enthält eine anfängliche Animation, die mehrere Hotspots aufdecken kann. Benutzer können die Hotspots auch anzeigen, indem sie den Cursor in ihrer Nähe bewegen.
 
-    Beachten Sie, dass "äquivalente Informationen" nicht identische Informationen bedeuten. Die Informationen können in einem anderen Format vorliegen oder eine einfache Ableitung erfordern.
+    Beachten Sie, dass "äquivalente Informationen" keine identischen Informationen bedeutet. Die Informationen können in einem anderen Format vorliegen oder erfordern eine einfache Ableitung.
 
--   **Legen Sie bei Bedarf den Eingabefokus auf das Objekt fest, das während eines Übergangs geändert wurde.** Auf diese Weise können Hilfstechnologien erkennen, wo die Änderung aufgetreten ist. Ändern Sie den Eingabefokus jedoch nicht, wenn der Benutzer die Tastatur verwendet.
--   **Verwenden Sie keine Animationen oder Übergänge, die Objekte schnell blinken oder die Größe ändern.** Blinkende und schnelle Bildschirm Änderungen können für Personen mit Beeinträchtigungen und anderen neurologischen Störungen Probleme verursachen.
--   **Ermöglicht Benutzern das Deaktivieren der Animationen und Übergänge Ihres Programms.** Um diese Möglichkeit zu unterstützen, achten Sie darauf, dass Sie die Option alle unnötigen Animationen deaktivieren im Easy of Access Center in Windows berücksichtigen.
+-   **Legen Sie ggf. den Eingabefokus auf das Objekt fest, das während eines Übergangs geändert wurde.** Auf diese Weise können Hilfstechnologien erkennen, wo die Änderung stattgefunden hat. Ändern Sie den Eingabefokus jedoch nicht, wenn der Benutzer die Tastatur verwendet.
+-   **Verwenden Sie keine Animationen oder Übergänge, die Objekte schnell flashen oder deren Größe ändern.** Flashing und schnelle Bildschirmänderungen können zu Problemen für Personen mit Sehbehinderung und anderen Störungen führen.
+-   **Benutzern das Deaktivieren der Animationen und Übergänge Ihres Programms gestatten.** Um diese Funktion zu unterstützen, beachten Sie die Option Alle unnötigen Animationen deaktivieren im Center für erleicherte Bedienung in Windows.
 
-    **Entwickler:** Mithilfe der SystemParametersInfo-API können Sie feststellen, ob Animationen aktiviert sind.
+    **Entwickler:** Sie können mithilfe der SystemParametersInfo-API ermitteln, ob Animationen aktiviert sind.
 
--   **Entwerfen Sie Aufgaben, wenn Benutzer die Animation des Programms deaktivieren.** Stellen Sie sicher, dass dadurch der Aufgaben Fluss nicht erheblich unterbrochen wird.
+-   **Entwurfsaufgaben unter der Annahme, dass Benutzer die Animationen Ihres Programms deaktivieren.** Stellen Sie sicher, dass der Taskflow dadurch nicht erheblich unterbrochen wird.
 
-Weitere Richtlinien für Barrierefreiheit finden Sie unter [Barrierefreiheit](inter-accessibility.md).
+Weitere Richtlinien zur Barrierefreiheit finden Sie unter [Barrierefreiheit](inter-accessibility.md).
 
 ## <a name="documentation"></a>Dokumentation
 
--   Vermeiden Sie, wenn möglich, auf Animationen. Verweisen Sie stattdessen auf das zu animierende Objekt und ggf. auf den Typ der Animation.
--   Verweisen Sie nicht auf Übergänge, außer in der technischen Dokumentation. Verweisen Sie stattdessen auf das-Objekt in seinem endgültigen oder ursprünglichen Zustand.
--   Wenn der Benutzer eine Animation explizit initiiert, verwenden Sie das Verb Play. Verwenden Sie andernfalls das Verb use für die technische Dokumentation.
+-   Vermeiden Sie es nach Möglichkeit, auf Animationen zu verweisen. Verweisen Sie stattdessen auf das Objekt, das animiert wird, und ggf. auf den Animationstyp.
+-   Beziehen Sie sich nicht auf Übergänge, außer in der technischen Dokumentation. Verweisen Sie stattdessen auf das Objekt im endgültigen oder anfänglichen Zustand.
+-   Wenn der Benutzer explizit eine Animation initiiert, verwenden Sie die Verbwiedergabe. Verwenden Sie andernfalls die Verbverwendung für die technische Dokumentation.
 
 Beispiele:
 
--   Sie wissen, dass ein Element Ihre Aufmerksamkeit erfordert, wenn das Symbol mit dem springen beginnt.
--   Wählen Sie zunächst die Fotos aus, die Sie drucken möchten (Beachten Sie, dass die Fotos bei der Auswahl vergrößert werden).
--   Verwenden Sie einen Kreuz Fade-Übergang, um den Zustand eines Objekts nahtlos zu ändern.
+-   Sie werden wissen, dass ein Element Ihre Aufmerksamkeit benötigt, wenn sein Symbol mit dem Springen beginnt.
+-   Wählen Sie zunächst die Fotos aus, die Sie drucken möchten (beachten Sie, dass die Fotos bei der Auswahl vergrößert werden).
+-   Verwenden Sie einen Überblendungsübergang, um den Zustand eines Objekts nahtlos zu ändern.
 

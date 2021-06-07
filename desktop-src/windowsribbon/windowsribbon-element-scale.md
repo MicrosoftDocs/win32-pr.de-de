@@ -1,9 +1,9 @@
 ---
 title: Scale-Element
-description: Stellt die Größe und Layouteinstellung einer Gruppe von Steuerelementen über eine Gruppe, sizedefinition-Paar, dar.
+description: Stellt die Größe und Layoutpräferenz einer Gruppe von Steuerelementen über ein Group,SizeDefinition-Paar dar.
 ms.assetid: feef3721-c779-4c64-96c6-9d951ac32277
 keywords:
-- Menüband für Fenster Skalierungs Element
+- Skalierungselement Im Windows-Menüband
 topic_type:
 - apiref
 api_name:
@@ -13,18 +13,18 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 3832d36a48b330b036fa287499f9db387335f87b
-ms.sourcegitcommit: 927b9c371f75f52b8011483edf3a4ba37d11ebe4
+ms.openlocfilehash: e3ba922b65525b92189673020f7155275bdf49f9
+ms.sourcegitcommit: 099ecdda1e83618b844387405da0db0ebda93a65
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "104389805"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111445011"
 ---
 # <a name="scale-element"></a>Scale-Element
 
-Stellt die Größe und die Layouteinstellung einer [**Gruppe**](windowsribbon-element-group.md) von Steuerelementen durch ein {**Group**, [**sizedefinition**](windowsribbon-element-sizedefinition.md)}-Paar dar.
+Stellt die Größe und Layoutpräferenz einer [**Gruppe**](windowsribbon-element-group.md) von Steuerelementen über ein Paar {**Group**, [**SizeDefinition**](windowsribbon-element-sizedefinition.md)} dar.
 
-## <a name="usage"></a>Verbrauch
+## <a name="usage"></a>Verwendung
 
 ``` syntax
 <Scale
@@ -46,26 +46,26 @@ Stellt die Größe und die Layouteinstellung einer [**Gruppe**](windowsribbon-el
 </colgroup>
 <thead>
 <tr class="header">
-<th>Attribut</th>
-<th>type</th>
+<th>attribute</th>
+<th>Typ</th>
 <th>Erforderlich</th>
 <th>BESCHREIBUNG</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><strong>Gruppieren</strong><br/></td>
-<td>xs: positiveingeteger oder xs: String<br/></td>
+<td><strong>Gruppe</strong><br/></td>
+<td>xs:positiveInteger oder xs:string<br/></td>
 <td>Ja<br/></td>
-<td>Muss einem vorhandenen <em>CommandName</em>der <a href="windowsribbon-element-group.md"><strong>Gruppe</strong></a> entsprechen.<br/> <br/>
-<dt><span></span><span></span><strong></strong> (xs: positiveingeteger oder xs: String)<br/> </dt> <dd> Eine Zeichenfolge oder ein ganzzahliger Wert zwischen 2 und 59999, einschließlich, oder 0x2 und 0xea5f in Hexadezimal (einschließlich). <br/> Der Wert muss innerhalb des Menüband-XML-Dokuments eindeutig sein. <br/> Maximale Länge: 100 Zeichen. <br/> </dd> </dl></td>
+<td>Muss einem vorhandenen <a href="windowsribbon-element-group.md"><strong>Gruppenbefehlsnamen</strong></a> <em>entsprechen.</em><br/> <br/>
+<dt><span></span><span></span><strong></strong> (xs:positiveInteger oder xs:string)<br/> </dt> <dd> Eine Zeichenfolge oder ein ganzzahliger Wert zwischen 2 und 59999, einschließlich oder 0x2 und 0xea5f hexadezimal, einschließlich. <br/> Der Wert muss innerhalb des Menüband-XML-Dokuments eindeutig sein. <br/> Maximale Länge: 100 Zeichen. <br/> </dd> </dl></td>
 </tr>
 <tr class="even">
 <td><strong>Größe</strong><br/></td>
 <td>xs:string<br/></td>
 <td>Ja<br/></td>
-<td>Dieser Wert sollte einer der gültigen Größen für das <em>sizedefinition</em> -Attribut der zugeordneten <a href="windowsribbon-element-group.md"><strong>Gruppe</strong></a> von Steuerelementen entsprechen, die in der <em>Gruppe</em>angegeben sind. <br/> Beschränkt auf einen der folgenden Werte: <br/> <br/>
-<dt><span></span><span></span><strong></strong> Up<br/> </dt> <dd> Identisches Steuerelement Layout, das <code>Large</code> jedoch in einem Popup-oder Dropdown Bereich gehostet wird.<br/> </dd> <dt><span></span><span></span><strong></strong> Zuletzt<br/> </dt> <dd> Kleine <a href="windowsribbon-element-sizedefinition.md"><strong>sizedefinition</strong></a> -Vorlage.<br/> </dd> <dt><span></span><span></span><strong></strong> Mittelalter<br/> </dt> <dd> Mittlere <a href="windowsribbon-element-sizedefinition.md"><strong>sizedefinition</strong></a> -Vorlage.<br/> </dd> <dt><span></span><span></span><strong></strong> Viele<br/> </dt> <dd> Große <a href="windowsribbon-element-sizedefinition.md"><strong>sizedefinition</strong></a> -Vorlage.<br/> </dd> </dl></td>
+<td>Dieser Wert sollte einer der gültigen Größen für das <em>SizeDefinition-Attribut</em> der zugeordneten <a href="windowsribbon-element-group.md"><strong>Gruppe</strong></a> von Steuerelementen entsprechen, die in Gruppe <em>angegeben ist.</em> <br/> Auf einen der folgenden Werte beschränkt: <br/> <br/>
+<dt><span></span><span></span><strong></strong> (Popup)<br/> </dt> <dd> Identisches Steuerelementlayout, <code>Large</code> das in einem Popup- oder Dropdownbereich gehostet wird.<br/> </dd> <dt><span></span><span></span><strong></strong> (Klein)<br/> </dt> <dd> Small <a href="windowsribbon-element-sizedefinition.md"><strong>SizeDefinition-Vorlage.</strong></a><br/> </dd> <dt><span></span><span></span><strong></strong> (Mittel)<br/> </dt> <dd> Vorlage <a href="windowsribbon-element-sizedefinition.md"><strong>"Medium SizeDefinition".</strong></a><br/> </dd> <dt><span></span><span></span><strong></strong> (Groß)<br/> </dt> <dd> Large <a href="windowsribbon-element-sizedefinition.md"><strong>SizeDefinition-Vorlage.</strong></a><br/> </dd> </dl></td>
 </tr>
 </tbody>
 </table>
@@ -83,23 +83,23 @@ Es gibt keine untergeordneten Elemente.
 | Element                                                                                       |
 |-----------------------------------------------------------------------------------------------|
 | [**ScalingPolicy**](windowsribbon-element-scalingpolicy.md)<br/>                       |
-| [**Scalingpolicy. ideal sizes**](windowsribbon-element-scalingpolicy-idealsizes.md)<br/> |
+| [**ScalingPolicy.IdealSizes**](windowsribbon-element-scalingpolicy-idealsizes.md)<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Dies ist optional.
 
-Kann einmal oder mehrmals für jede [**scalingpolicy**](windowsribbon-element-scalingpolicy.md) oder [**scalingpolicy. ideal sizes**](windowsribbon-element-scalingpolicy-idealsizes.md)auftreten.
+Kann ein oder mehrere Male für jedes [**ScalingPolicy-**](windowsribbon-element-scalingpolicy.md) oder [**ScalingPolicy.IdealSizes-Objekt auftreten.**](windowsribbon-element-scalingpolicy-idealsizes.md)
 
-Jedes Attribut Paar (*Gruppe*, *Größe*) muss eindeutig sein.
+Jedes *Attributpaar*( Group , *Size*) muss eindeutig sein.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird veranschaulicht, wie die Darstellung von Steuerelementen in einer [**Gruppe**](windowsribbon-element-group.md) durch die Adaptive Layoutfunktionalität von Menüband- [**sizedefinition**](windowsribbon-element-sizedefinition.md) -Vorlagen angepasst werden kann.
+Im folgenden Beispiel wird veranschaulicht, wie [](windowsribbon-element-group.md) die Darstellung von Steuerelementen in einer Gruppe mithilfe der Adaptive Layout-Funktionalität von SizeDefinition-Vorlagen des [**Menübands angepasst werden**](windowsribbon-element-sizedefinition.md) kann.
 
-Das [**scalingpolicy**](windowsribbon-element-scalingpolicy.md) -Manifest in diesem Beispiel gibt für jede der vier Gruppen von Steuerelementen auf einer Registerkarte **Home** die Einstellung [**scalingpolicy. ideal sizes**](windowsribbon-element-scalingpolicy-idealsizes.md) [**sizedefinition**](windowsribbon-element-sizedefinition.md) an. Außerdem werden **Skalierungs** Elemente angegeben, um das reduzierende Verhalten der einzelnen Gruppen in absteigender Reihenfolge zu beeinflussen.
+Das [**ScalingPolicy-Manifest**](windowsribbon-element-scalingpolicy.md) in diesem Beispiel gibt eine [**ScalingPolicy.IdealSizes**](windowsribbon-element-scalingpolicy-idealsizes.md) [**SizeDefinition-Einstellung**](windowsribbon-element-sizedefinition.md) für jede von vier Gruppen von Steuerelementen auf einer Registerkarte **Start** an. Darüber hinaus werden **Skalierungselemente** angegeben, um das Reduzierungsverhalten jeder Gruppe in absteigender Reihenfolge zu beeinflussen.
 
 
 ```XML
@@ -169,10 +169,8 @@ Das [**scalingpolicy**](windowsribbon-element-scalingpolicy.md) -Manifest in die
 
 
 
-|                                     |           |
-|-------------------------------------|-----------|
-| Unterstützte Mindestversion (System)<br/> | Windows 7 |
-| Kann leer bleiben                        | Ja       |
+* **Unterstütztes Mindestsystem:** Windows 7
+* **Kann leer sein:** Ja
 
 
 
@@ -180,7 +178,7 @@ Das [**scalingpolicy**](windowsribbon-element-scalingpolicy.md) -Manifest in die
 
 <dl> <dt>
 
-[Anpassen eines Menübands durch Größen Definitionen und Skalierungs Richtlinien](windowsribbon-templates.md)
+[Anpassen eines Menübands durch Größendefinitionen und Skalierungsrichtlinien](windowsribbon-templates.md)
 </dt> </dl>
 
  

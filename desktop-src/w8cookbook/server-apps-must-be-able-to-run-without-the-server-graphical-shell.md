@@ -1,17 +1,17 @@
 ---
-title: Einschränkungen für die Server-grafische Shell
-description: Server-apps müssen ohne die servergrafikshell ausgeführt werden können
+title: Einschränkungen der grafischen Shell für Server
+description: Server-Apps müssen ohne die grafische Shell des Servers ausgeführt werden können.
 ms.assetid: 8F531497-B64D-4E79-AD7A-790EFDC6ADFE
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7666ae07a28d798a36d249bf37ab2d7719b9fba0
-ms.sourcegitcommit: 46376be61d3fa308f9b1a06d7e2fa122a39755af
+ms.openlocfilehash: ae2a3002fc2395faba3e07d90a2322c770fe3ee9
+ms.sourcegitcommit: 099ecdda1e83618b844387405da0db0ebda93a65
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "104391158"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111443221"
 ---
-# <a name="server-apps-must-be-able-to-run-without-the-server-graphical-shell"></a>Server-apps müssen ohne die servergrafikshell ausgeführt werden können
+# <a name="server-apps-must-be-able-to-run-without-the-server-graphical-shell"></a>Server-Apps müssen ohne die grafische Shell des Servers ausgeführt werden können.
 
 ## <a name="platform"></a>Plattform
 
@@ -19,73 +19,73 @@ ms.locfileid: "104391158"
 
 ## <a name="description"></a>BESCHREIBUNG
 
-Die grafische Shell des Servers, das Feature, das Windows Explorer und Internet Explorer umfasst, wird standardmäßig auf der Seite "Server mit grafischer Benutzeroberfläche" von Windows Server 2012 installiert. Das Feature "grafische Shell für Server" kann deinstalliert werden, um den potenziellen Wartungs-und Leistungsbedarf zu reduzieren, wodurch die Anzahl der Neustarts beschränkt wird, die der Server verursachen kann, und gleichzeitig das lokale Ausführen von Verwaltungs Tools auf dem Server zulässt.
+Die grafische Servershell, das Feature, das Windows-Explorer und Internet Explorer enthält, wird standardmäßig auf "Server mit grafischer Benutzeroberfläche" von Windows Server 2012 installiert. Die Funktion der grafischen Shell für Server kann deinstalliert werden, um den potenziellen Wartungs- und Leistungsbedarf zu reduzieren. Dadurch wird die Anzahl von Neustarts eingeschränkt, die auf dem Server auftreten können, während verwaltungstools weiterhin lokal auf dem Server ausgeführt werden können.
 
-Nachdem ein Administrator die servergrafikshell deinstalliert hat, befindet sich der Server in der minimalen Server Schnittstellen Konfiguration:
+Nachdem ein Administrator die grafische Shell für den Server deinstalliert hat, befindet sich der Server in der Konfiguration minimaler Serverschnittstellen:
 
-![Konfiguration der Server grafischen Shell-Schnittstelle](images/minimalserverinterface.png)
+![Konfiguration der grafischen Shellschnittstelle des Servers](images/minimalserverinterface.png)
 
-Administratoren können dann in der Konfiguration mit minimaler Server Schnittstelle (die eine Reihe von lokalen Verwaltungs Tools umfasst) als Standardeinstellung und nicht auf dem Server mit einer GUI-Konfiguration ausgeführt werden. Dies ermöglicht die lokale Überwachung und Verwaltung, während gleichzeitig die Ressourcennutzung und die Wartungs Häufigkeit reduziert werden.
+Administratoren können dann die Minimale Serverschnittstellenkonfiguration (die einen Satz lokaler Verwaltungstools enthält) als Standard ausführen, anstatt auf dem Server mit einer GUI-Konfiguration. Dies ermöglicht eine lokale Überwachung und Verwaltung, während gleichzeitig die Ressourcennutzung und die Wartungshäufigkeit reduziert werden.
 
-Administratoren können die servergrafikshell zu einem späteren Zeitpunkt neu installieren, wenn Sie die darin enthaltenen Funktionen benötigen. (Administratoren können auch von einer Server Core-Installation aus starten und die Konfiguration der minimalen Server Schnittstelle mithilfe der Features nach Bedarf-Funktionalität einrichten.)
+Administratoren können die grafische Servershell später erneut installieren, wenn sie die darin enthaltene Funktionalität benötigen. (Administratoren können auch mit einer Server Core-Installation beginnen und mithilfe der Features bei Bedarf die Konfiguration der minimalen Serverschnittstelle "erstellen".)
 
-Server-apps müssen in der Konfiguration mit minimaler Server Schnittstelle ausgeführt werden können, um von der geringeren Ressourcennutzung und Wartung profitieren zu können. Diese Funktion kann erreicht werden, indem Sie dem Administrator die Möglichkeit geben, keine Teile der APP zu installieren, die die grafische Shell des Servers benötigen, oder indem Sie das vorhanden sein der grafischen Shell des Servers erkennen und einige Aspekte der App deaktivieren.
+Server-Apps müssen in der Lage sein, in der minimalen Serverschnittstellenkonfiguration ausgeführt zu werden, um die geringere Ressourcenauslastung und den geringeren Wartungsbedarf nutzen zu können. Diese Funktion kann erreicht werden, indem es dem Administrator gestattet wird, Teile der App, die die grafische Servershell benötigen, nicht zu installieren, oder indem er das Vorhandensein der grafischen Servershell erkennt und einige Aspekte der App deaktiviert.
 
-Die minimale Server Schnittstelle verfügt über einen reduzierten Ressourcen-und Wartungsbedarf, da viele APIs und Binärdateien, die in der servergrafikshell enthalten sind, in dieser Konfiguration nicht verfügbar sind. Gegebenenfalls sollten Server-apps auch eine Remote Verwaltung (vorzugsweise über Windows PowerShell-Remoting) von einer anderen Windows Server-oder Windows-Client Installation zulassen. Dies ermöglicht eine bessere zentralisierte Verwaltung von einem oder mehreren Computern in der Konfiguration mit minimaler Server Schnittstelle oder von Computern mit einer noch geringeren Speicherbedarf, wie z. b. Server Core.
+Die minimale Serverschnittstelle weist einen reduzierten Ressourcen- und Wartungsbedarf auf, da viele APIs und Binärdateien, die in der grafischen Servershell enthalten sind, in dieser Konfiguration nicht verfügbar sind. Gegebenenfalls sollten Server-Apps auch die Remoteverwaltung (vorzugsweise über Windows PowerShell Remoting) über eine andere Windows Server- oder Windows-Clientinstallation zulassen. Dies ermöglicht eine bessere zentralisierte Verwaltung von mindestens einem Computer in der Minimalen Serverschnittstellenkonfiguration oder von Computern in einer noch geringeren Speicherbedarfskonfiguration wie Server Core.
 
-## <a name="manifestation"></a>Ausstrahlung
+## <a name="manifestation"></a>Manifestation
 
-Wenn eine APP eine der APIs oder Binärdateien erfordert, die in der Konfiguration der minimalen Server Schnittstelle nicht verfügbar sind, wird Sie möglicherweise nicht ordnungsgemäß auf dem Bildschirm angezeigt und/oder ist unbrauchbar.
+Wenn eine App APIs oder Binärdateien erfordert, die in der Konfiguration der minimalen Serverschnittstelle nicht verfügbar sind, wird sie möglicherweise nicht ordnungsgemäß auf dem Bildschirm angezeigt und/oder nicht verwendet werden.
 
 ## <a name="mitigation"></a>Minderung
 
-Server-App-Entwickler sollten diese Teile Ihrer Apps ermitteln, die eine der entfernten APIs oder Binärdateien erfordern, und Informationen für den Server Administrator einschließen, die die Teile der APP identifizieren, die bei Verwendung der minimalen Server Schnittstelle nicht ordnungsgemäß ausgeführt werden. Wenn diese Teile der APP optional installiert werden können oder für die Produktfunktionalität nicht unbedingt erforderlich sind, kann die APP weiterhin installiert und unter der Konfiguration der minimalen Server Schnittstelle ausgeführt werden.
+Server-App-Entwickler sollten die Teile ihrer Apps identifizieren, die entfernte APIs oder Binärdateien erfordern, und Informationen für den Serveradministrator enthalten, die die Teile der App identifizieren, die bei Verwendung der minimalen Serverschnittstelle nicht ordnungsgemäß ausgeführt werden. Wenn diese Teile der App optional installiert werden können oder für die Produktfunktionalität nicht unbedingt erforderlich sind, kann die App weiterhin installiert und unter der Minimalkonfiguration der Serverschnittstelle ausgeführt werden.
 
-Wenn die APP nicht ohne die servergrafikshell verwendet werden kann, sollte diese Einschränkung dokumentiert werden, und der Server Administrator sollte angewiesen werden, die servergrafikshell zu installieren. (Wenn Sie eine Server Core-Installation hinzufügen, erfordert dies möglicherweise das Hinzufügen von Features mithilfe von Features bei Bedarf.) Außerdem sollte die APP beim Start prüfen, ob alle erforderlichen Dateien verfügbar sind, da die servergrafikshell jederzeit vor oder nach der Installation der APP deinstalliert werden kann.
+Wenn die App ohne die grafische Shell des Servers überhaupt nicht verwendet werden kann, sollte diese Einschränkung dokumentiert werden, und der Serveradministrator sollte angewiesen werden, die grafische Shell des Servers zu installieren. (Wenn Sie zu einer Server Core-Installation hinzufügen, kann dies das Hinzufügen von Features mithilfe von Features bei Bedarf erfordern.) Darüber hinaus sollte die App beim Start überprüfen, ob alle erforderlichen Dateien verfügbar sind, da die grafische Servershell jederzeit vor oder nach der Installation der App deinstalliert werden kann.
 
 ## <a name="solution"></a>Lösung
 
-Verlassen Sie sich auf den kleinsten möglichen Satz von Abhängigkeiten, und modularisieren Sie apps, damit die Kern-App-Funktionalität funktionieren kann, ohne dass eine größere Anzahl von Benutzeroberflächen Komponenten installiert werden muss. Entwickeln Sie apps, für die keine der entfernten APIs oder Binärdateien erforderlich ist, und verlassen Sie sich stattdessen auf die Funktionen, die in der minimalen Server Schnittstelle oder im Server Core enthalten sind. Dies reduziert die Wartungsanforderungen und verbessert gleichzeitig die Leistung und die Benutzer Zufriedenheit.
+Verlassen Sie sich auf den kleinstmöglichen Satz von Abhängigkeiten, und modularisieren Sie Apps, sodass die Kernfunktionen der App funktionieren können, ohne dass komplexere Komponenten der Benutzeroberfläche installiert werden müssen. Entwickeln Sie Apps, die keine der entfernten APIs oder Binärdateien benötigen, und nutzen Sie stattdessen die Funktionen, die in minimaler Serverschnittstelle oder Server Core enthalten sind. Dies reduziert die Wartungsanforderungen und verbessert gleichzeitig die Leistung und benutzerzufriedenheit.
 
-Wenn es Teile einer APP gibt, die möglicherweise bedeutende Funktionen hinzufügen, wenn die servergrafikshell verfügbar ist, können App-Entwickler folgende Aktionen ausführen:
+Wenn es Teile einer App gibt, die wichtige Funktionen hinzufügen können, wenn die grafische Shell des Servers verfügbar ist, haben App-Entwickler folgende Möglichkeiten:
 
--   Diese zusätzlichen Funktionen, die die Verwendung der servergrafikshell verwenden, können optional installiert werden. Daher können Sie bei Installationen bei einer minimalen Server Schnittstellen Konfiguration ausgelassen werden.
--   Erkennen, ob die grafische Shell des Servers vorhanden ist, und passen das Verhalten der APP an
+-   Lassen Sie zu, dass diese zusätzlichen Features, die die grafische Servershell verwenden, optional installiert werden, damit sie bei Installationen in einer Minimalkonfiguration der Serverschnittstelle weggelassen werden können.
+-   Erkennen des Vorhandenseins der grafischen Shell des Servers und Anpassen des App-Verhaltens
 
-App-Entwickler sollten außerdem sicherstellen, dass Server-apps nach Möglichkeit und entsprechend Remote verwaltet werden können.
+App-Entwickler sollten auch sicherstellen, dass Server-Apps nach Möglichkeit remote verwaltet werden können.
 
-## <a name="detecting-minimal-server-interface-and-server-core"></a>Erkennen der minimalen Server Schnittstelle und des Server Kerns
+## <a name="detecting-minimal-server-interface-and-server-core"></a>Erkennen von minimaler Serverschnittstelle und Server Core
 
-Windows Server installiert einen entsprechenden Registrierungs Wert für jede installierte Server Ebene. Sie können Abfragen, ob diese Schlüssel vorhanden sind, um zu bestimmen, ob die servergrafikshell oder die minimalen Server Schnittstellen Funktionen installiert und aktiviert sind.
+Windows Server installiert einen entsprechenden Registrierungswert für jede installierte Serverebene. Sie können abfragen, ob diese Schlüssel vorhanden sind, um zu ermitteln, ob die Funktionen der grafischen Shell oder der minimalen Serverschnittstelle installiert und aktiviert sind.
 
-HKEY \_ local \_ Machine \\ Software \\ Microsoft \\ Windows NT \\ CurrentVersion \\ Server Server \\ Levels:
+HKEY \_ LOCAL \_ MACHINE \\ SOFTWARE \\ Microsoft \\ Windows NT \\ CurrentVersion \\ Server \\ ServerLevels:
 
 
 
-|                  | Server Core | Minimale Serverbenutzeroberfläche | Grafische Shell für Server |
+|   &nbsp;         | Server Core | Minimale Serverbenutzeroberfläche | Grafische Shell des Servers |
 |------------------|-------------|--------------------------|------------------------|
-| Server Core = 1     | X           | X                        | X                      |
-| Server-guimgmt = 1 |             | X                        | X                      |
-| Serverguishell = 1 |             |                          | X                      |
+| ServerCore=1     | X           | X                        | X                      |
+| Server-GuiMgmt=1 |             | X                        | X                      |
+| ServerGuiShell=1 |             |                          | X                      |
 
 
 
- 
+ 
 
 Ein "X" in der obigen Tabelle bedeutet, dass der Registrierungsschlüssel vorhanden ist, wenn das entsprechende Feature installiert wird.
 
-Beachten Sie, dass diese Server Ebenen Additiv sind. Wenn die servergrafikshell installiert ist, ist dies die minimale Server Schnittstelle und Server Core. In diesem Fall sind beide Registrierungsschlüssel vorhanden.
+Beachten Sie, dass diese Serverebenen additiv sind. , wenn die grafische Servershell installiert ist, ebenso wie die minimale Serverschnittstelle und Server Core. In diesem Fall sind beide Registrierungsschlüssel vorhanden.
 
 ## <a name="tests"></a>Tests
 
-Überprüfen Sie Ihren app-Code auf Anforderungen, bei denen eine der entfernten APIs und Binärdateien verwendet wird. Nachdem Sie alle Instanzen dieser Dateien aus den Binärdateien der Kernanwendung entfernt haben, testen Sie Ihre APP in einer Umgebung, in der die grafische Shell des Servers nicht enthalten ist. Hierfür können Tools wie der Prozess Monitor hilfreich sein.
+Überprüfen Sie Ihren App-Code auf Anforderungen, die eine der entfernten APIs und Binärdateien verwenden. Nachdem Sie alle Instanzen dieser Instanzen aus "Kernanwendungsbinärdateien" entfernt haben, testen Sie Ihre App in einer Umgebung, die nicht die grafische Servershell enthält. Tools wie der Prozessmonitor können dabei hilfreich sein.
 
-Wenn Sie die Verwendung dieser APIs und Binärdateien nicht vollständig beenden können, sollten Sie sicherstellen, dass Ihre APP ordnungsgemäß fehlschlägt, wenn Sie auf minimaler Server Schnittstelle oder Server Core ausgeführt wird.
+Wenn Sie die Verwendung dieser APIs und Binärdateien nicht vollständig beenden können, stellen Sie sicher, dass Ihre App ordnungsgemäß fehlschlägt, wenn sie auf minimaler Serverschnittstelle oder Server Core ausgeführt wird.
 
 ## <a name="resources"></a>Ressourcen
 
 -   [Vorhandene Server Core-Dokumentation auf MSDN](/previous-versions/windows/desktop/legacy/ms723891(v=vs.85))
 
- 
+ 
 
- 
+ 

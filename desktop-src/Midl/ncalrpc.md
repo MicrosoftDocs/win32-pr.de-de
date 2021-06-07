@@ -1,9 +1,9 @@
 ---
-title: Ncalrpc-Attribut
-description: Das Ncalrpc-Schlüsselwort identifiziert die lokale prozessübergreifende Kommunikation als Protokollfamilie für den Endpunkt. Dieses Schlüsselwort ist einer der gültigen Protokoll Familiennamen, die mit dem Attribut \ Endpoint \ verwendet werden müssen.
+title: ncalrpc-Attribut
+description: Das Schlüsselwort ncalrpc identifiziert die lokale prozessübergreifende Kommunikation als Protokollfamilie für den Endpunkt. Dieses Schlüsselwort ist einer der gültigen Protokollfamiliennamen, die mit dem Attribut \endpoint\ verwendet werden müssen.
 ms.assetid: 0009f794-5c14-4484-9023-cb20c7030dc5
 keywords:
-- Ncalrpc-Attribut-Mittel l
+- ncalrpc-Attribut MIDL
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6f20ae9e347303288868eeb16758736047fecc1b
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 2f5d22b572eb9ad2f2e46b029ec242b48d5cd684
+ms.sourcegitcommit: cb87082135319cbdc5df541e3071eebb83a58972
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "103948707"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111386879"
 ---
-# <a name="ncalrpc-attribute"></a>Ncalrpc-Attribut
+# <a name="ncalrpc-attribute"></a>ncalrpc-Attribut
 
-Das **Ncalrpc** -Schlüsselwort identifiziert die lokale prozessübergreifende Kommunikation als Protokollfamilie für den Endpunkt. Dieses Schlüsselwort ist einer der gültigen Protokoll Familiennamen, die mit dem **\[** [**Endpunkt**](endpoint.md) Attribut verwendet werden müssen **\]** .
+Das **Schlüsselwort ncalrpc** identifiziert die lokale prozessübergreifende Kommunikation als Protokollfamilie für den Endpunkt. Dieses Schlüsselwort ist einer der gültigen Protokollfamiliennamen, die mit dem **\[** [](endpoint.md) **\]** Endpunktattribut verwendet werden müssen.
 
 ``` syntax
 endpoint("ncalrpc:[port-name]")
@@ -34,13 +34,13 @@ endpoint("ncalrpc:[port-name]")
 *Portname* 
 </dt> <dd>
 
-Eine Zeichenfolge, die den Kommunikationsport (eine Anwendung, einen Dienst oder eine Instanz eines Dienstanbieter) angibt, der von einem Client verwendet wird, um prozessübergreifende Aufrufe an einen Server vorzunehmen. Die Zeichenfolge kann bis zu 53 Zeichen enthalten und darf keinen umgekehrten Schrägstrich ( \) Zeichen) enthalten. Der Computername darf nicht mit dem Schlüsselwort **Ncalrpc** verwendet werden.
+Eine Zeichenfolge, die den Kommunikationsport (eine Anwendung, einen Dienst oder eine Instanz eines Diensts) angibt, den ein Client verwendet, um prozessübergreifende Aufrufe an einen Server zu tätigen. Die Zeichenfolge kann bis zu 53 Zeichen enthalten und darf keinen umgekehrten Schrägstrich \\ () enthalten. Der Computername darf nicht mit dem **Schlüsselwort ncalrpc** verwendet werden.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Syntax der lokalen Port Zeichenfolge für die prozessübergreifende Kommunikation, wie alle Port Zeichenfolgen, wird durch die Transport Implementierung definiert und ist unabhängig von der IDL-Spezifikation. Der mittlerer l-Compiler führt eine eingeschränkte Syntax Überprüfung durch, gewährleistet jedoch nicht, dass die Endpunkt Spezifikation korrekt ist. Einige Klassen von Fehlern können zur Laufzeit und nicht zur Kompilierzeit gemeldet werden.
+Die Syntax der lokalen Interprocess-Communication-Portzeichenfolge wird wie alle Portzeichenfolgen von der Transportimplementation definiert und ist unabhängig von der IDL-Spezifikation. Der MIDL-Compiler führt eine eingeschränkte Syntaxüberprüfung durch, garantiert jedoch nicht, dass die Endpunktspezifikation korrekt ist. Einige Fehlerklassen werden möglicherweise zur Laufzeit und nicht zur Kompilierzeit gemeldet.
 
 ## <a name="examples"></a>Beispiele
 
@@ -60,48 +60,48 @@ interface iface
 
 <dl> <dt>
 
-[**Dreher**](endpoint.md)
+[**Endpunkt**](endpoint.md)
 </dt> <dt>
 
-[Schnittstellen Definitionsdatei (IDL)](interface-definition-idl-file.md)
+[IDL-Datei (Interface Definition)](interface-definition-idl-file.md)
 </dt> <dt>
 
-[**ncacn \_ bei \_ DSP**](ncacn-at-dsp.md)
+[**ncacn \_ bei \_ dsp**](ncacn-at-dsp.md)
 </dt> <dt>
 
-[**ncacn \_ dnet \_ NSP**](ncacn-dnet-nsp.md)
+[**ncacn \_ dnet \_ nsp**](ncacn-dnet-nsp.md)
 </dt> <dt>
 
-[**ncacn \_ IP \_ TCP**](ncacn-ip-tcp.md)
+[**ncacn \_ ip \_ tcp**](ncacn-ip-tcp.md)
 </dt> <dt>
 
-[**ncacn \_ NB \_ IPX**](ncacn-nb-ipx.md)
+[**ncacn \_ nb \_ ipx**](ncacn-nb-ipx.md)
 </dt> <dt>
 
-[**ncacn- \_ SPX**](ncacn-spx.md)
+[**ncacn \_ spx**](ncacn-spx.md)
 </dt> <dt>
 
-[**ncacn \_ NB \_ NB**](ncacn-nb-nb.md)
+[**ncacn \_ nb \_ nb**](ncacn-nb-nb.md)
 </dt> <dt>
 
-[**ncacn \_ NB \_ TCP**](ncacn-nb-tcp.md)
+[**ncacn \_ nb \_ tcp**](ncacn-nb-tcp.md)
 </dt> <dt>
 
-[**ncacn \_ NP**](ncacn-np.md)
+[**ncacn \_ np**](ncacn-np.md)
 </dt> <dt>
 
-[**ncacn \_ VNS- \_ spp**](ncacn-vns-spp.md)
+[**ncacn \_ vns \_ spp**](ncacn-vns-spp.md)
 </dt> <dt>
 
-[**ncadg \_ -IP- \_ UDP**](ncadg-ip-udp.md)
+[**ncadg \_ ip \_ udp**](ncadg-ip-udp.md)
 </dt> <dt>
 
-[**ncadg \_ IPX**](ncadg-ipx.md)
+[**ncadg \_ ipx**](ncadg-ipx.md)
 </dt> <dt>
 
-[Zeichen folgen Bindung](/windows/desktop/Rpc/string-binding)
+[Zeichenfolgenbindung](/windows/desktop/Rpc/string-binding)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

@@ -3,7 +3,7 @@ title: CheckBox-Element
 description: Stellt ein Kontrollkästchen-Steuerelement dar.
 ms.assetid: ebb44d6d-91fb-4a59-9b62-4a694fea8a4d
 keywords:
-- CheckBox-Element Windows-Menüband
+- CheckBox-Element Im Windows-Menüband
 topic_type:
 - apiref
 api_name:
@@ -13,18 +13,18 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 0af090058e0475f1997c681750009a12f4e5e7cd
-ms.sourcegitcommit: 927b9c371f75f52b8011483edf3a4ba37d11ebe4
+ms.openlocfilehash: 4d9357337e569f43b14c34798c9c6e8da4b7b10b
+ms.sourcegitcommit: 099ecdda1e83618b844387405da0db0ebda93a65
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "104101226"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111443041"
 ---
 # <a name="checkbox-element"></a>CheckBox-Element
 
-Stellt ein Kontroll [Kästchen](windowsribbon-controls-checkbox.md) -Steuerelement dar.
+Stellt ein [Kontrollkästchen-Steuerelement](windowsribbon-controls-checkbox.md) dar.
 
-## <a name="usage"></a>Verbrauch
+## <a name="usage"></a>Verwendung
 
 ``` syntax
 <CheckBox
@@ -45,31 +45,31 @@ Stellt ein Kontroll [Kästchen](windowsribbon-controls-checkbox.md) -Steuereleme
 </colgroup>
 <thead>
 <tr class="header">
-<th>Attribut</th>
-<th>type</th>
+<th>attribute</th>
+<th>Typ</th>
 <th>Erforderlich</th>
 <th>BESCHREIBUNG</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><strong>ApplicationDefaults. IsChecked</strong><br/></td>
+<td><strong>ApplicationDefaults.IsChecked</strong><br/></td>
 <td>Boolesch<br/></td>
 <td>Nein<br/></td>
-<td>Dieses Attribut ist nur gültig, wenn das <strong>CheckBox</strong> -Element ein untergeordnetes Element von <a href="windowsribbon-element-quickaccesstoolbar-applicationdefaults.md"><strong>quickaccesstoolbar. ApplicationDefaults</strong></a>ist. <br/> Beschränkt auf einen der folgenden Werte:<br/>
+<td>Dieses Attribut ist nur gültig, wenn das <strong>CheckBox-Element</strong> ein untergeordnetes Element von <a href="windowsribbon-element-quickaccesstoolbar-applicationdefaults.md"><strong>QuickAccessToolbar.ApplicationDefaults ist.</strong></a> <br/> Auf einen der folgenden Werte beschränkt:<br/>
 <blockquote>
 [!Note]<br />
-Das <strong>Kontrollkästchen</strong> unterstützt keinen tertiären bzw. unbestimmten Zustand.
+Das <strong>CheckBox-Kontrollkästchen</strong> unterstützt keinen tertiären oder unbestimmten Zustand.
 </blockquote>
 <br/> <br/>
-<dt><span></span><span></span><strong></strong> Fall<br/> </dt> <dd> Standard. <br/> </dd> <dt><span></span><span></span><strong></strong> Alarm<br/> </dt> <dd></dd> </dl></td>
+<dt><span></span><span></span><strong></strong> (true)<br/> </dt> <dd> Standard. <br/> </dd> <dt><span></span><span></span><strong></strong> (false)<br/> </dt> <dd></dd> </dl></td>
 </tr>
 <tr class="even">
 <td><strong>CommandName</strong><br/></td>
-<td>xs: positiveingeteger oder xs: String<br/></td>
+<td>xs:positiveInteger oder xs:string<br/></td>
 <td>Nein<br/></td>
-<td>Ordnet das-Element einem <a href="windowsribbon-element-command.md"><strong>Befehl</strong></a>zu.<br/> <br/>
-<dt><span></span><span></span><strong></strong> (xs: positiveingeteger oder xs: String)<br/> </dt> <dd> Eine Zeichenfolge, ein ganzzahliger Wert zwischen 2 und 59999, einschließlich, oder ein Hexadezimalwert zwischen 0x2 und 0xea5f (einschließlich). <br/> Der Wert muss innerhalb des Menüband-XML-Dokuments eindeutig sein. <br/> Maximale Länge: 100 Zeichen. <br/> </dd> </dl></td>
+<td>Ordnet das Element einem Befehl <a href="windowsribbon-element-command.md"><strong>zu.</strong></a><br/> <br/>
+<dt><span></span><span></span><strong></strong> (xs:positiveInteger oder xs:string)<br/> </dt> <dd> Eine Zeichenfolge, ein ganzzahliger Wert zwischen 2 und 59999, einschließlich, oder ein Hexadezimalwert zwischen 0x2 und 0xea5f einschließlich. <br/> Der Wert muss innerhalb des Menüband-XML-Dokuments eindeutig sein. <br/> Maximale Länge: 100 Zeichen. <br/> </dd> </dl></td>
 </tr>
 </tbody>
 </table>
@@ -86,28 +86,28 @@ Es gibt keine untergeordneten Elemente.
 
 | Element                                                                                                                   |
 |---------------------------------------------------------------------------------------------------------------------------|
-| [**Controlgroup**](windowsribbon-element-controlgroup.md)<br/>                                                     |
+| [**ControlGroup**](windowsribbon-element-controlgroup.md)<br/>                                                     |
 | [**DropDownButton**](windowsribbon-element-dropdownbutton.md)<br/>                                                 |
-| [**Dropdown Gallery**](windowsribbon-element-dropdowngallery.md)<br/>                                               |
+| [**DropDownGallery**](windowsribbon-element-dropdowngallery.md)<br/>                                               |
 | [**Gruppe**](windowsribbon-element-group.md)<br/>                                                                   |
-| [**MenuGroup**](windowsribbon-element-menugroup.md)<br/>                                                           |
-| [**Quickaccesstoolbar. ApplicationDefaults**](windowsribbon-element-quickaccesstoolbar-applicationdefaults.md)<br/> |
+| [**Menugroup**](windowsribbon-element-menugroup.md)<br/>                                                           |
+| [**QuickAccessToolbar.ApplicationDefaults**](windowsribbon-element-quickaccesstoolbar-applicationdefaults.md)<br/> |
 | [**SplitButton**](windowsribbon-element-splitbutton.md)<br/>                                                       |
-| [**Splitbuttongallery**](windowsribbon-element-splitbuttongallery.md)<br/>                                         |
+| [**SplitButtonGallery**](windowsribbon-element-splitbuttongallery.md)<br/>                                         |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Optional oder erforderlich, abhängig vom übergeordneten Element.
+Optional oder erforderlich, je nach übergeordnetem Element.
 
-Kann für jedes [**controlgroup**](windowsribbon-element-controlgroup.md)-, [**DropDownButton**](windowsribbon-element-dropdownbutton.md)-, [**dropdowngallery**](windowsribbon-element-dropdowngallery.md)-, [**Group**](windowsribbon-element-group.md)-, [**MenuGroup**](windowsribbon-element-menugroup.md)-, [**quickaccesstoolbar. ApplicationDefaults**](windowsribbon-element-quickaccesstoolbar-applicationdefaults.md)-, [**SplitButton**](windowsribbon-element-splitbutton.md)-oder [**splitbuttongallery**](windowsribbon-element-splitbuttongallery.md) -Element einmal oder mehrmals vorkommen.
+Kann ein oder mehrere Male für jedes [**ControlGroup-,**](windowsribbon-element-controlgroup.md) [**DropDownButton-,**](windowsribbon-element-dropdownbutton.md) [**DropDownGallery-,**](windowsribbon-element-dropdowngallery.md) [**Group-,**](windowsribbon-element-group.md) [**MenuGroup-,**](windowsribbon-element-menugroup.md) [**QuickAccessToolbar.ApplicationDefaults-,**](windowsribbon-element-quickaccesstoolbar-applicationdefaults.md) [**SplitButton-**](windowsribbon-element-splitbutton.md)oder [**SplitButtonGallery-Element**](windowsribbon-element-splitbuttongallery.md) auftreten.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird das grundlegende Markup für das **CheckBox** -Element veranschaulicht.
+Im folgenden Beispiel wird das grundlegende Markup für das **CheckBox-Element** veranschaulicht.
 
-In diesem Code Abschnitt werden die Befehls Deklarationen des **CheckBox** -Befehls angezeigt.
+Dieser Codeabschnitt zeigt die **Deklarationen des** CheckBox-Befehls.
 
 
 ```XML
@@ -123,7 +123,7 @@ In diesem Code Abschnitt werden die Befehls Deklarationen des **CheckBox** -Befe
 
 
 
-In diesem Code Abschnitt werden die **CheckBox** -Steuerelement Deklarationen angezeigt.
+Dieser Codeabschnitt zeigt die **CheckBox-Steuerelementdeklarationen.**
 
 
 ```XML
@@ -136,13 +136,8 @@ In diesem Code Abschnitt werden die **CheckBox** -Steuerelement Deklarationen an
 
 ## <a name="element-information"></a>Elementinformationen
 
-
-
-|                                     |           |
-|-------------------------------------|-----------|
-| Unterstützte Mindestversion (System)<br/> | Windows 7 |
-| Kann leer bleiben                        | Ja       |
-
+* **Unterstütztes Mindestsystem:** Windows 7
+* **Kann leer sein:** Ja
 
 
 ## <a name="see-also"></a>Siehe auch

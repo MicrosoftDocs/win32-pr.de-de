@@ -1,170 +1,170 @@
 ---
 title: Warnmeldungen
-description: Eine Warnmeldung ist ein modales Dialogfeld, eine direkte Nachricht, eine Benachrichtigung oder eine Sprechblase, die den Benutzer über eine Bedingung benachrichtigt, die möglicherweise in der Zukunft ein Problem verursacht.
+description: Eine Warnmeldung ist ein modales Dialogfeld, eine ortsbezogene Nachricht, eine Benachrichtigung oder eine Sprechblase, mit der der Benutzer über eine Bedingung benachrichtigt wird, die in Zukunft zu einem Problem führen kann.
 ms.assetid: 4a2c3be9-9dc6-4d62-bd3d-72a2e5b621f4
 ms.topic: article
 ms.date: 10/20/2020
-ms.openlocfilehash: d704890b2471e205b933e2995950716c269488e8
-ms.sourcegitcommit: 3bdf30edb314e0fcd17dc4ddbc70e4ec7d3596e6
+ms.openlocfilehash: 42f7c669a68790ec290f931165b4aa937b5008d5
+ms.sourcegitcommit: 8ebcf6cd36f67f8bcf78e76ae8923d65b8995c8a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "104351088"
+ms.lasthandoff: 06/05/2021
+ms.locfileid: "111524504"
 ---
 # <a name="warning-messages"></a>Warnmeldungen
 
 > [!NOTE]
-> Dieses Entwurfs Handbuch wurde für Windows 7 erstellt und wurde für neuere Versionen von Windows nicht aktualisiert. Ein Großteil der Anleitungen gilt weiterhin im Prinzip, aber die Präsentation und die Beispiele entsprechen nicht unseren [aktuellen Entwurfs Anleitungen](/windows/uwp/design/).
+> Dieser Entwurfsleitfaden wurde für Windows 7 erstellt und für neuere Versionen von Windows nicht aktualisiert. Ein Großteil der Anleitungen gilt immer noch im Prinzip, aber die Präsentation und die Beispiele spiegeln nicht unsere [aktuellen Entwurfsleitfäden](/windows/uwp/design/)wider.
 
-Eine Warnmeldung ist ein modales Dialogfeld, eine direkte Nachricht, eine Benachrichtigung oder eine Sprechblase, die den Benutzer über eine Bedingung benachrichtigt, die möglicherweise in der Zukunft ein Problem verursacht.
+Eine Warnmeldung ist ein modales Dialogfeld, eine ortsbezogene Nachricht, eine Benachrichtigung oder eine Sprechblase, mit der der Benutzer über eine Bedingung benachrichtigt wird, die in Zukunft zu einem Problem führen kann.
 
 ![Screenshot einer typischen Warnmeldung](images/mess-warn-image1.png)
 
 Eine typische modale Warnmeldung.
 
-Das wichtigste Merkmal von Warnungen besteht darin, dass Sie das Risiko eines Verlusts von einem oder mehreren der folgenden Punkte einschließen:
+Das grundlegende Merkmal von Warnungen besteht darin, dass sie das Risiko mit sich bringen, einen oder mehrere der folgenden Punkte zu verlieren:
 
--   Ein wertvolles Asset, z. b. wichtige Finanzdaten oder andere Daten.
--   System Zugriff oder-Integrität.
+-   Eine wertvolle Ressource, z. B. wichtige Finanzdaten oder andere Daten.
+-   Systemzugriff oder -integrität.
 -   Datenschutz oder Kontrolle über vertrauliche Informationen.
--   Benutzer Zeit (eine beträchtliche Menge, z. b. 30 Sekunden oder mehr).
+-   Die Zeit des Benutzers (eine erhebliche Menge, z. B. 30 Sekunden oder mehr).
 
-Im Gegensatz dazu ist eine Bestätigung ein modales Dialogfeld, in dem Sie gefragt werden, ob der Benutzer eine Aktion fortsetzen möchte. Einige Typen von Warnungen werden als Bestätigungen dargestellt, und wenn dies der Fall ist, gelten die Bestätigungs Richtlinien ebenfalls.
+Im Gegensatz dazu ist eine Bestätigung ein modales Dialogfeld, in dem gefragt wird, ob der Benutzer mit einer Aktion fortfahren möchte. Einige Arten von Warnungen werden als Bestätigungen angezeigt, und wenn ja, gelten auch die Bestätigungsrichtlinien.
 
-**Hinweis:** Richtlinien, die sich auf [Dialogfelder](win-dialog-box.md), [Bestätigungen](mess-confirm.md), [Fehlermeldungen](mess-error.md)[Standardsymbole](vis-std-icons.md), [Benachrichtigungen](mess-notif.md)und das [Layout](vis-layout.md) beziehen, werden in separaten Artikeln dargestellt.
+**Hinweis:** Richtlinien im Zusammenhang mit [Dialogfeldern,](win-dialog-box.md) [Bestätigungen,](mess-confirm.md) [Fehlermeldungen](mess-error.md)[Standardsymbole,](vis-std-icons.md) [Benachrichtigungen](mess-notif.md)und [Layout](vis-layout.md) werden in separaten Artikeln dargestellt.
 
-## <a name="is-this-the-right-user-interface"></a>Handelt es sich um die richtige Benutzeroberfläche?
+## <a name="is-this-the-right-user-interface"></a>Ist dies die richtige Benutzeroberfläche?
 
 Orientieren Sie sich an folgenden Fragen:
 
--   **Wird der Benutzer über eine Bedingung benachrichtigt, die in der Zukunft möglicherweise ein Problem verursacht?** Andernfalls ist die Nachricht keine Warnung.
--   **Stellt die Benutzeroberfläche einen Fehler oder ein Problem dar, das bereits aufgetreten ist?** Wenn dies der Fall ist, verwenden Sie stattdessen eine Fehlermeldung.
--   **Werden Benutzer wahrscheinlich eine Aktion ausführen oder Ihr Verhalten als Ergebnis der Nachricht ändern?** Wenn dies nicht der Fall ist, wird die Unterbrechung des Benutzers durch die Bedingung nicht rechtfertigen, sodass die Warnung besser unterdrückt werden kann
--   **Ist die Bedingung das direkte Ergebnis einer vom Benutzer initiierten Aktion?** Wenn dies nicht der Fall ist, sollten Sie eine [nicht kritische Ereignis Benachrichtigung](mess-notif.md)verwenden.
--   **Handelt es sich bei der Bedingung um eine besondere Bedingung in einem Steuerelement?** Verwenden Sie in diesem Fall [stattdessen eine](ctrl-balloons.md) Sprechblase.
--   **Soll der Benutzer für Bestätigungen eine riskante Aktion ausführen?** Wenn dies der Fall ist, ist eine Warnung geeignet, wenn die Aktion bedeutende Konsequenzen hat oder nicht einfach rückgängig gemacht werden kann.
--   **Für andere Typen von Warnungen muss der Benutzer jetzt oder in naher Zukunft agieren?** Zeigen Sie keine Warnungen an, wenn Benutzer ohne unmittelbare Probleme weiterhin produktiv arbeiten können. Verschieben Sie die Warnung so lange, bis die Bedingung unmittelbarer und relevanter ist.
+-   **Wird der Benutzer über eine Bedingung benachrichtigt, die in Zukunft ein Problem verursachen kann?** Wenn nicht, ist die Nachricht keine Warnung.
+-   **Stellt die Benutzeroberfläche einen Fehler oder ein Problem dar, das bereits aufgetreten ist?** Verwenden Sie in diesem Falle stattdessen eine Fehlermeldung.
+-   **Führen Benutzer wahrscheinlich eine Aktion aus oder ändern ihr Verhalten als Ergebnis der Nachricht?** Wenn dies nicht der Lage ist, kann der Benutzer durch die Bedingung nicht unterbrochen werden. Daher ist es besser, die Warnung zu unterdrücken.
+-   **Ist die Bedingung das direkte Ergebnis einer vom Benutzer initiierten Aktion?** Wenn dies nicht der Fall ist, sollten Sie eine [nicht kritische Ereignisbenachrichtigung](mess-notif.md)verwenden.
+-   **Ist die Bedingung eine besondere Bedingung in einem Steuerelement?** Verwenden Sie in diesem Falle stattdessen einen [Balloon.](ctrl-balloons.md)
+-   **Ist der Benutzer bereit, eine riskante Aktion auszuführen, um Bestätigungen zu erhalten?** In diesem Falle ist eine Warnung geeignet, wenn die Aktion erhebliche Konsequenzen hat oder nicht einfach rückgängig zu werden ist.
+-   **Muss der Benutzer für andere Arten von Warnungen jetzt oder in der unmittelbaren Zukunft handeln?** Zeigen Sie keine Warnungen an, wenn Benutzer weiterhin ohne sofortige Probleme produktiv arbeiten können. Verschieben Sie die Warnung, bis die Bedingung direkter und relevanter ist.
 
 ## <a name="design-concepts"></a>Entwurfskonzepte
 
-### <a name="avoid-overwarning"></a>Vermeiden von überschreinungs Warnungen
+### <a name="avoid-overwarning"></a>Vermeiden von Überwarnungen
 
-Wir haben in Microsoft Windows-Programmen Vorrang vor der Warnung. Das typische Windows-Programm weist scheinbar überall Warnungen auf, die mit einer geringen Bedeutung zu tun haben. In einigen Programmen wird fast jede Frage als Warnung angezeigt. Durch die übermäßige Warnung wird die Verwendung eines Programms wie eine gefährliche Aktivität vereinfacht, und es wird von wirklich wichtigen Problemen entfernt.
+Wir haben in Microsoft Windows-Programmen überwarnt. Das typische Windows-Programm verfügt scheinbar überall über Warnungen, warnungen zu Dingen, die nur eine geringe Bedeutung haben. In einigen Programmen wird fast jede Frage als Warnung dargestellt. Eine Überhärtung bewirkt, dass die Verwendung eines Programms sich wie eine gefährliche Aktivität anfühlt und von wirklich signifikanten Problemen abweicht.
 
 **Falsch:**
 
 ![Screenshot einer unnötigen Warnmeldung ](images/mess-warn-image2.png)
 
-Durch die übermäßige Warnung wird Ihr Programm gefährlich, und es sieht so aus, als ob es von Anwälten entworfen wurde
+Überwarnungen machen Ihr Programm gefährlich und sehen so aus, als ob es von Dern entwickelt wurde.
 
-Das einzige Potenzial für Datenverluste oder ein zukünftiges Problem allein ist nicht ausreichend, um eine Warnung aufzurufen. Außerdem sollten unerwünschte Ergebnisse unerwartet oder unbeabsichtigt sein und nicht einfach korrigiert werden. Andernfalls können fast alle Benutzerfehler so interpretiert werden, dass Datenverluste oder potenzielle Probleme auftreten und eine Warnung ausgegeben wird.
+Das reine Potenzial für Datenverlust oder ein zukünftiges Problem allein reicht nicht aus, um eine Warnung aufzurufen. Darüber hinaus sollten unerwünschte Ergebnisse unerwartet oder unbeabsichtigt sein und nicht einfach korrigiert werden. Andernfalls kann fast jeder Benutzerfehler behoben werden, um zu Datenverlust oder einem potenziellen Problem einer Art zu führen und eine Warnung auszulösen.
 
-### <a name="characteristics-of-good-warnings"></a>Merkmale von guten Warnungen
+### <a name="characteristics-of-good-warnings"></a>Merkmale guter Warnungen
 
 Gute Warnungen:
 
--   **Risiken einbeziehen.** Gute Warnungen warnen Benutzer von etwas signifikanter.
+-   **Risiko einbeziehen.** Gute Warnungen warnen Benutzer vor etwas, das von Bedeutung ist.
 
 **Falsch:**
 
-![Screenshot von "möchten Sie den Vorgang beenden?" warning ](images/mess-warn-image3.png)
+![Screenshot von "Möchten Sie beenden?" warning ](images/mess-warn-image3.png)
 
-Na und? Diese Bestätigung setzt voraus, dass Benutzer Programme oft versehentlich beenden.
+Na und? Bei dieser Bestätigung wird davon ausgegangen, dass Benutzer Programme häufig aus Versehen beenden.
 
--   **Sie haben unmittelbare Relevanz.** Sie müssen sich nicht nur auf die Benutzer kümmern, sondern auch darauf achten. Benutzer sind in der Regel nicht an Problemen interessiert, die möglicherweise später auftreten, wenn Sie Ihre Arbeit jetzt erledigen können.
+-   **Unmittelbar relevant.** Benutzer müssen sich nicht nur darum kümmern, sie müssen sich jetzt darum kümmern. Benutzer sind in der Regel nicht an Problemen interessiert, die sie möglicherweise später haben, solange sie ihre Arbeit jetzt erledigen können.
 
 **Falsch:**
 
-![Screenshot der Akku-Low-in-3-Stunden-Warnung ](images/mess-warn-image4.png)
+![Screenshot der Warnung "Battery-low-in-three-hours" ](images/mess-warn-image4.png)
 
 In diesem Fall ist es besser, den Benutzer in drei Stunden zu warnen.
 
--   **Führt zu einer Aktion.** Es gibt etwas, das Benutzer als Ergebnis der Warnung verwenden oder beachten müssen. Möglicherweise müssen Sie jetzt oder in der unmittelbaren Zukunft eine Aktion durchführen. Möglicherweise wird eine Aufgabe als Ergebnis anders durchgeführt. Die Folge, dass die Warnung ignoriert wird, sollte klar sein. Warnungen ohne Aktionen machen es einfach, dass die Benutzer in der Meinung sind
+-   **Führen Sie zu einer Aktion.** Es gibt etwas, das Benutzer als Ergebnis der Warnung tun oder beachten müssen. Möglicherweise müssen sie jetzt oder in der unmittelbaren Zukunft eine Aktion ergreifen. Möglicherweise führen sie daher eine Aufgabe anders aus. Die Folge des Ignorierens der Warnung sollte klar sein. Warnungen ohne Aktionen sorgen nur dafür, dass Benutzer paranoid sind.
 
 **Falsch:**
 
 ![Screenshot der Warnung "Live Messenger wird ausgeführt" ](images/mess-warn-image5.png)
 
-Warum ist diese Benachrichtigung eine Warnung? Was sollten Benutzer tun (neben Sorge)?
+Warum ist diese Benachrichtigung eine Warnung? Was sollen Benutzer tun (neben der Sorge)?
 
--   **Sind nicht offensichtlich.** Zeigen Sie keine Warnung an, um die offensichtliche Folge einer Aktion anzuzeigen. Nehmen Sie z. b. an, dass Benutzer die Konsequenzen der Nichtausführung einer Aufgabe verstehen.
-
-**Falsch:**
-
-![Screenshot von möchten Sie den Assistenten beenden? davor ](images/mess-warn-image6.png)
-
-Wenn Sie einen unvollständigen Assistenten abbrechen, wird der Task nicht ausgeführt... Wer wusste?
-
--   **Tritt selten auf.** Konstante Warnungen werden schnell wirkungslos und lästig. Benutzer werden häufig stärker darauf ausgerichtet, die Warnung zu beseitigen, als das Problem zu beheben.
+-   **Dies ist nicht offensichtlich.** Zeigen Sie keine Warnung an, um die offensichtliche Folge einer Aktion anzugeben. Nehmen Sie beispielsweise an, dass Benutzer die Konsequenzen verstehen, die sich ergeben, wenn eine Aufgabe nicht abgeschlossen wird.
 
 **Falsch:**
 
-![Screenshot der Warnung "Viren Signaturen aktualisieren" ](images/mess-warn-image7.png)
+![Screenshot: Möchten Sie den Assistenten beenden? Warnung ](images/mess-warn-image6.png)
 
-Benutzer sind eher darauf ausgerichtet, die Warnung zu entfernen, als das zugrunde liegende Problem zu beheben.
+Das Abbrechen eines unvollständigen Assistenten bedeutet, dass die Aufgabe nicht abgeschlossen wird... wer wusste?
 
-Eine Nachricht, die nicht über diese Merkmale verfügt, ist möglicherweise trotzdem eine gute Nachricht, aber keine gute Warnung.
+-   **Tritt selten auf.** Konstante Warnungen werden schnell ineffektiv und ungern. Benutzer konzentrieren sich häufig eher darauf, die Warnung zu entfernen, als das Problem zu beheben.
 
-### <a name="determine-the-appropriate-message-type"></a>Bestimmen des geeigneten Nachrichten Typs
+**Falsch:**
 
-Einige Probleme können je nach Betonung und Formulierung als Fehler, Warnung oder Informationen angezeigt werden. Nehmen Sie beispielsweise an, eine Webseite kann ein nicht signiertes ActiveX-Steuerelement nicht auf Grundlage der aktuellen Windows Internet Explorer-Konfiguration laden:
+![Screenshot der Warnung "Virussignaturen aktualisieren" ](images/mess-warn-image7.png)
 
--   **Zeit.** "Auf dieser Seite kann kein nicht signiertes ActiveX-Steuerelement geladen werden." (Als vorhandenes Problem formuliert.)
--   **Davor.** "Diese Seite verhält sich möglicherweise nicht wie erwartet, da Windows Internet Explorer nicht zum Laden von nicht signierten ActiveX-Steuerelementen konfiguriert ist." oder "Diese Seite darf ein nicht signiertes ActiveX-Steuerelement installieren? Wenn Sie dies aus nicht vertrauenswürdigen Quellen machen, kann dies Ihren Computer beeinträchtigen. " (Beide werden als Bedingungen formuliert, die möglicherweise zukünftige Probleme verursachen.)
--   **Informationen.** "Sie haben Windows Internet Explorer so konfiguriert, dass nicht signierte ActiveX-Steuerelemente blockiert werden." (Als eine-Anweisung formuliert.)
+Benutzer konzentrieren sich eher darauf, die Warnung zu entfernen, als das zugrunde liegende Problem zu beheben.
 
-**Um den richtigen Nachrichtentyp zu bestimmen, konzentrieren Sie sich auf den wichtigsten Aspekt des Problems, das Benutzer kennen oder reagieren müssen.** Wenn ein Problem darin besteht, dass der Benutzer nicht mehr fortfahren kann, sollten Sie es in der Regel als Fehler darstellen. Wenn der Benutzer fortfahren kann, stellen Sie ihn als Warnung dar. Erstellen Sie die [Haupt Anweisung](text-ui.md) oder einen anderen entsprechenden Text basierend auf diesem Fokus, und wählen Sie dann ein Symbol ([Standard](vis-std-icons.md) oder anderweitig), das mit dem Text übereinstimmt. Der Hauptanweisungs Text und die Symbole sollten immer mit dem Text identisch sein
+Eine Nachricht, die diese Merkmale nicht aufweist, ist möglicherweise dennoch eine gute Nachricht, keine gute Warnung.
 
-### <a name="be-specific"></a>Spezifisch
+### <a name="determine-the-appropriate-message-type"></a>Bestimmen des geeigneten Nachrichtentyps
 
-Warnungen sind überzeugender, wenn die folgenden Informationen spezifisch und klar sind:
+Einige Probleme können je nach Schwerpunkt und Ausdruck als Fehler, Warnung oder Information dargestellt werden. Angenommen, eine Webseite kann basierend auf der aktuellen Windows Internet Explorer-Konfiguration kein nicht signiertes ActiveX-Steuerelement laden:
+
+-   **Fehler.** "Diese Seite kann kein ActiveX-Steuerelement ohne Vorzeichen laden." (Wird als vorhandenes Problem bezeichnet.)
+-   **Warnung.** "Diese Seite verhält sich möglicherweise nicht wie erwartet, da Windows Internet Explorer nicht zum Laden von ActiveX-Steuerelementen ohne Vorzeichen konfiguriert ist." oder "Zulassen, dass diese Seite ein nicht signiertes ActiveX-Steuerelement installiert? Wenn Sie dies aus nicht vertrauenswürdigen Quellen tun, kann dies ihrem Computer schaden." (Beide werden als Bedingungen bezeichnet, die zukünftige Probleme verursachen können.)
+-   **Informationen.** "Sie haben Windows Internet Explorer so konfiguriert, dass nicht signierte ActiveX-Steuerelemente blockiert werden." (Als Faktenhinweis formuliert.)
+
+**Um den geeigneten Nachrichtentyp zu bestimmen, konzentrieren Sie sich auf den wichtigsten Aspekt des Problems, den Benutzer kennen oder reagieren müssen.** Wenn ein Problem den Benutzer daran hindert, fortzufahren, sollten Sie ihn in der Regel als Fehler darstellen. Wenn der Benutzer fortfahren kann, stellen Sie ihn als Warnung dar. Erstellen Sie die [Hauptanweisung](text-ui.md) oder einen anderen entsprechenden Text basierend auf diesem Fokus, und wählen Sie dann ein Symbol[(Standard](vis-std-icons.md) oder anderweitig) aus, das dem Text entspricht. Der Hauptanweisungstext und die Symbole sollten immer übereinstimmen.
+
+### <a name="be-specific"></a>Spezifisch sein
+
+Warnungen sind überzeugender, wenn die folgenden Informationen spezifisch und eindeutig sind:
 
 -   Die Quelle der Warnung.
 -   Die spezifische Bedingung und das potenzielle Problem.
--   Was der Benutzer damit tun sollte.
--   Was geschieht, wenn der Benutzer nichts tut.
+-   Was der Benutzer tun sollte.
+-   Was geschieht, wenn der Benutzer nichts tut?
 
 **Falsch:**
 
-![Screenshot der vagen Warnung mit erheblichem Risiko ](images/mess-warn-image8.png)
+![Screenshot: Warnung vor erheblichem Risiko ](images/mess-warn-image8.png)
 
-In diesem Beispiel ist das potenzielle Problem? Was soll der Benutzer tun, abgesehen davon, dass er nicht den Projektor über das Netzwerk verwendet? Ohne genauere Informationen kann der Vorgang nicht durchgeführt werden.
-
-**Richtig:**
-
-![Screenshot der Warnung zu Problemen und folgen ](images/mess-warn-image9.png)
-
-In diesem Beispiel sind das Problem und die Konsequenzen eindeutig.
-
-Manchmal gibt es ein legitimer potenzielles Problem, das die Benutzer über informiert, aber die Lösung und die Konsequenzen sind nicht bekannt. Anstatt eine vage Warnung anzugeben, sollten Sie die wahrscheinlichsten Informationen oder das gängigste Beispiel bereitstellen.
+Was ist das potenzielle Problem in diesem Beispiel? Was soll der Benutzer tun, abgesehen davon, dass der Projektor nicht über das Netzwerk verwendet wird? Ohne spezifischere Informationen kann der Benutzer nicht fortfahren.
 
 **Richtig:**
 
-![Screenshot der Netzwerkfehler Warnung und-Lösungen ](images/mess-warn-image10.png)
+![Screenshot: Warnung vor Problem und Folgen ](images/mess-warn-image9.png)
 
-In diesem Beispiel wird die Warnung durch Bereitstellen der wahrscheinlichsten Lösung festgestellt.
+In diesem Beispiel sind das Problem und die Konsequenzen klar.
 
-Verwenden Sie in solchen Fällen jedoch einen Wortlaut, der angibt, dass andere Möglichkeiten vorhanden sind. Andernfalls werden Benutzer möglicherweise Irre geführt.
+Manchmal besteht ein legitimes potenzielles Problem, benutzer zu informieren, aber die Lösung und die Konsequenzen sind nicht sicher. Anstatt eine ungenaue Warnung zu geben, sollten Sie spezifisch sein, indem Sie die wahrscheinlichsten Informationen oder das gängigste Beispiel geben.
+
+**Richtig:**
+
+![Screenshot: Netzwerkfehlerwarnung und Lösungen ](images/mess-warn-image10.png)
+
+In diesem Beispiel wird die Warnung spezifisch gemacht, indem die wahrscheinlichste Lösung zur Verfügung gestellt wird.
+
+Verwenden Sie in solchen Fällen jedoch Formulierungen, die darauf hindeutet, dass es andere Möglichkeiten gibt. Andernfalls kann es sein, dass Benutzer verfehlt werden.
 
 **Falsch:**
 
-![Screenshot der Warnung "Netzwerkkabel getrennt" ](images/mess-warn-image11.png)
+![Screenshot der Netzwerkkabel-Entkabelungswarnung ](images/mess-warn-image11.png)
 
 **Richtig:**
 
-![Screenshot des Kabels kann eine fehlende Warnung sein ](images/mess-warn-image12.png)
+![Screenshot des Kabels ist möglicherweise nicht angeschlossen ](images/mess-warn-image12.png)
 
-Im falschen Beispiel werden die Benutzer verwirrt, wenn das Kabel eindeutig angeschlossen ist.
+Im falschen Beispiel sind Benutzer verwirrend, wenn das Kabel eindeutig angeschlossen ist.
 
 **Wenn Sie nur zwei Dinge tun...**
 
-1. Nicht überschreiben. Beschränken Sie Warnungen auf Bedingungen, die ein Risiko darstellen und sofort relevant, handlungsfähig, nicht offensichtlich und selten sind. Andernfalls entfernen Sie die Nachricht, oder formulieren Sie Sie neu.
+1. Nicht überwarnen. Beschränken Sie Warnungen auf Bedingungen, die risikenind und sofort relevant, umsetzbar, nicht offensichtlich und selten sind. Entfernen oder umformulieren Sie andernfalls die Nachricht.
 
-2. Geben Sie spezielle, nützliche Informationen an.
+2. Geben Sie spezifische, nützliche Informationen an.
 
 ## <a name="usage-patterns"></a>Verwendungsmuster
 
-Warnungen weisen mehrere Verwendungs Muster auf:
+Warnungen haben mehrere Verwendungsmuster:
 
 
 
@@ -175,36 +175,36 @@ Warnungen weisen mehrere Verwendungs Muster auf:
 </colgroup>
 <tbody>
 <tr class="odd">
-<td><strong>Bewusstsein</strong><br/> Sorgen Sie dafür, dass der Benutzer eine Bedingung oder ein potenzielles Problem erkennt, aber der Benutzer muss möglicherweise noch nichts Unternehmen. <br/></td>
-<td><img src="images/mess-warn-image13.png" alt="Screen shot of warning of network problems " /><br/> <img src="images/mess-warn-image14.png" alt="Screen shot of low-battery warning " /><br/> <img src="images/mess-warn-image15.png" alt="Screen shot of &#39;caps-lock-is-on&#39; warning " /><br/> <img src="images/mess-warn-image16.png" alt="Screen shot of &#39;TPM-not-found&#39; warning " /><br/> Beispiele für Warnungen zu Warnungen.<br/> Warnungen zu Warnungen haben folgende Präsentation: <br/>
+<td><strong>Bewusstsein</strong><br/> Machen Sie den Benutzer auf eine Bedingung oder ein potenzielles Problem aufmerksam, aber der Benutzer muss jetzt möglicherweise nichts tun. <br/></td>
+<td><img src="images/mess-warn-image13.png" alt="Screen shot of warning of network problems " /><br/> <img src="images/mess-warn-image14.png" alt="Screen shot of low-battery warning " /><br/> <img src="images/mess-warn-image15.png" alt="Screen shot of &#39;caps-lock-is-on&#39; warning " /><br/> <img src="images/mess-warn-image16.png" alt="Screen shot of &#39;TPM-not-found&#39; warning " /><br/> Beispiele für Warnungen zu Bewusstsein.<br/> Warnungen zu Bewusstseinswarnungen haben die folgende Darstellung: <br/>
 <ul>
-<li><strong>Main-Anweisung:</strong> Beschreiben Sie die Bedingung oder das potenzielle Problem.</li>
-<li><strong>Ergänzende Anweisung:</strong> Erläutern Sie die Implikation und warum Sie wichtig ist.</li>
-<li><strong>Commit-Schaltflächen:</strong> Ihrer.</li>
+<li><strong>Hauptanweisung:</strong> Beschreiben Sie die Bedingung oder das potenzielle Problem.</li>
+<li><strong>Zusätzliche Anweisung:</strong> Erläutern Sie die Implikation und warum sie wichtig ist.</li>
+<li><strong>Commitschaltflächen:</strong> Schließen.</li>
 </ul></td>
 </tr>
 <tr class="even">
-<td><strong>Fehler Verhinderung</strong><br/> Machen Sie die Benutzer auf Informationen aufmerksam, die möglicherweise ein Problem verhindern, insbesondere bei Auswahlmöglichkeiten. <br/></td>
-<td>Warnungen zur Fehler Verhinderung werden am besten mit einem direkten Warnsymbol und einem erklärenden Text dargestellt. <br/> <img src="images/mess-warn-image17.png" alt="Screen shot of Not-enough-free-space warning " /><br/> <img src="images/mess-warn-image18.png" alt="Screen shot of Use-installation-CD warning " /><br/> Beispiele für Warnungen zur Fehler Verhinderung.<br/></td>
+<td><strong>Fehlerschutz</strong><br/> Machen Sie den Benutzer auf Informationen aufmerksam, die ein Problem verhindern können, insbesondere wenn Sie Entscheidungen treffen. <br/></td>
+<td>Fehlerschutzwarnungen werden am besten mit einem symbol für eine warnungsbasierte Warnung und einem erläuternden Text angezeigt. <br/> <img src="images/mess-warn-image17.png" alt="Screen shot of Not-enough-free-space warning " /><br/> <img src="images/mess-warn-image18.png" alt="Screen shot of Use-installation-CD warning " /><br/> Beispiele für Fehlerschutzwarnungen.<br/></td>
 </tr>
 <tr class="odd">
 <td><strong>Bevorstehendes Problem</strong><br/> Der Benutzer muss jetzt etwas tun, um ein bevorstehendes Problem zu verhindern. <br/></td>
-<td><img src="images/mess-warn-image19.png" alt="Screen shot of Close-programs warning " /><br/> Ein Beispiel für eine Warnung zu einem bevorstehenden Problem.<br/> Bevorstehende Problem Warnungen haben folgende Präsentation: <br/>
+<td><img src="images/mess-warn-image19.png" alt="Screen shot of Close-programs warning " /><br/> Ein Beispiel für eine Warnung zu einem bevorstehenden Problem.<br/> Warnungen zu einem bevorstehenden Problem haben die folgende Darstellung: <br/>
 <ul>
-<li><strong>Main-Anweisung:</strong> Beschreiben Sie, was der Benutzer jetzt tun muss.</li>
-<li><strong>Ergänzende Anweisung:</strong> Erläutern Sie die Bedingung und warum Sie wichtig ist.</li>
-<li><strong>Commit-Schaltflächen:</strong> Eine Befehls Schaltfläche oder ein Befehls Link für jede Option oder OK, wenn die Aktion außerhalb des Dialog Felds erfolgt.</li>
+<li><strong>Hauptanweisung:</strong> Beschreiben Sie, was der Benutzer jetzt tun muss.</li>
+<li><strong>Zusätzliche Anweisung:</strong> Erläutern Sie die Bedingung und deren Bedeutung.</li>
+<li><strong>Commitschaltflächen:</strong> Eine Befehlsschaltfläche oder ein Befehlslink für jede Option oder OK, wenn die Aktion außerhalb des Dialogfelds erfolgt.</li>
 </ul></td>
 </tr>
 <tr class="even">
-<td><strong>Bestätigung der riskanten Aktion</strong><br/> Vergewissern Sie sich, dass der Benutzer eine Aktion durchführen möchte, die ein gewisses Risiko aufweist und nicht einfach rückgängig gemacht werden kann. <br/></td>
-<td><img src="images/mess-warn-image20.png" alt="Screen shot of Formatting-will-erase-data warning " /><br/> Ein Beispiel für eine risikobehaftete Aktions Bestätigung.<br/> Riskante Aktions Bestätigungen haben die folgende Präsentation: <br/>
+<td><strong>Bestätigung riskanter Aktionen</strong><br/> Vergewissern Sie sich, dass der Benutzer mit einer Aktion fortfahren möchte, die ein gewisses Risiko auf sich hat und nicht einfach rückgängig gemacht werden kann. <br/></td>
+<td><img src="images/mess-warn-image20.png" alt="Screen shot of Formatting-will-erase-data warning " /><br/> Ein Beispiel für die Bestätigung riskanter Aktionen.<br/> Bestätigungen für riskante Aktionen haben die folgende Darstellung: <br/>
 <ul>
-<li><strong>Main-Anweisung:</strong> Stellen Sie eine Frage, um zu bestimmen, ob der Benutzer den Vorgang fortsetzen möchte.</li>
-<li><strong>Ergänzende Anweisung:</strong> Erläutern Sie alle nicht offensichtlichen Gründe, warum der Benutzer möglicherweise nicht fortfahren möchte.</li>
-<li><strong>Commit-Schaltflächen:</strong> Ja, Nein.</li>
+<li><strong>Hauptanweisung:</strong> Stellen Sie eine Frage, um zu bestimmen, ob der Benutzer fortfahren möchte.</li>
+<li><strong>Zusätzliche Anweisung:</strong> Erläutern Sie alle nicht offensichtlichen Gründe, warum der Benutzer möglicherweise nicht fortfahren möchte.</li>
+<li><strong>Commitschaltflächen:</strong> Ja, Nein.</li>
 </ul>
-Richtlinien zu diesem Muster finden Sie unter <a href="mess-confirm.md">Bestätigungen</a>. <br/></td>
+Richtlinien zu diesem Muster finden Sie unter <a href="mess-confirm.md">Bestätigungen.</a> <br/></td>
 </tr>
 </tbody>
 </table>
@@ -217,173 +217,169 @@ Richtlinien zu diesem Muster finden Sie unter <a href="mess-confirm.md">Bestäti
 
 ### <a name="presentation"></a>Präsentation
 
--   **Wählen Sie die Präsentations Benutzeroberfläche basierend auf der Art der Informationen aus:**
+-   **Wählen Sie die Präsentationsbenutzeroberfläche basierend auf dem Informationstyp aus:**
 
 
 
-|                               |                                                                                                                                        |
+| Benutzeroberfläche  | Am besten verwendet für |
 |-------------------------------|----------------------------------------------------------------------------------------------------------------------------------------|
-| **User interface (Benutzeroberfläche)**<br/> | **Beste Verwendung für**<br/>                                                                                                           |
-| Modale Dialogfelder<br/> | Kritische Warnungen (einschließlich Bestätigungen), auf die Benutzer jetzt Antworten müssen.<br/>                                                 |
-| Direkt<br/>           | Informationen, die möglicherweise ein Problem verhindern, insbesondere, wenn Benutzer Entscheidungen treffen.<br/>                                         |
-| Mitzubringen<br/>            | Informationen, die möglicherweise ein Problem verhindern, insbesondere im Zusammenhang mit dem Abschließen einer Aufgabe.<br/>                                     |
-| Benachrichtigungen<br/>      | Wichtige Ereignisse oder Status, die auf sichere Weise ignoriert werden können, zumindest vorübergehend.<br/>                                              |
-| Ballons<br/>           | Ein-Steuerelement befindet sich in einem Zustand, der sich auf Eingaben auswirkt Dieser Status ist wahrscheinlich unbeabsichtigt, und der Benutzer hat möglicherweise keine Eingaben erkannt.<br/> |
+| Modale Dialogfelder<br/> | Kritische Warnungen (einschließlich Bestätigungen), auf die Benutzer jetzt reagieren müssen.<br/>                                                 |
+| In-Place<br/>           | Informationen, die ein Problem verhindern können, insbesondere, wenn Benutzer Entscheidungen treffen.<br/>                                         |
+| Banner<br/>            | Informationen, die ein Problem verhindern können, insbesondere im Zusammenhang mit dem Abschließen einer Aufgabe.<br/>                                     |
+| Benachrichtigungen<br/>      | Wichtige Ereignisse oder Status, die zumindest vorübergehend ignoriert werden können.<br/>                                              |
+| Ballons<br/>           | Ein Steuerelement befindet sich in einem Zustand, der die Eingabe beeinflusst. Dieser Zustand ist wahrscheinlich unbeabsichtigt, und der Benutzer erkennt möglicherweise nicht, dass die Eingabe betroffen ist.<br/> |
 
 
 
  
 
 -   **Für modale Dialogfelder:**
-    -   **Verwenden Sie nach Bedarf Aufgaben Dialogfelder, um ein konsistentes Aussehen und Layout zu erzielen.** Aufgaben Dialogfelder erfordern Windows Vista oder höher, sodass Sie nicht für frühere Versionen von Windows geeignet sind.
-    -   **Zeigt nur eine Warnmeldung pro Bedingung an.** Zeigen Sie z. b. eine einzelne Warnung an, die eine Bedingung vollständig erläutert, anstatt Sie jeweils einmal pro Nachricht zu beschreiben. Das Anzeigen einer Sequenz von Warn Dialogfeldern für eine einzelne Bedingung ist verwirrend und lästig.
-    -   **Zeigen Sie eine Warnung nicht mehr als einmal pro Bedingung an.** Konstante Warnungen werden schnell wirkungslos und lästig. Benutzer werden häufig stärker darauf ausgerichtet, die Warnung zu beseitigen, als das Problem zu beheben. Wenn Sie für eine einzelne Bedingung wiederholt warnen müssen, verwenden Sie [Progressive Eskalation](mess-notif.md).
--   **Führen Sie keine Warnungen mit einem Soundeffekt oder einem Signal aus.** Dabei handelt es sich um jarringverfahren und unnötig.
-    -   **Ausnahme:** Wenn der Benutzer sofort Antworten muss, können Sie einen Soundeffekt verwenden.
+    -   **Verwenden Sie Taskdialoge, wenn dies angemessen ist, um ein konsistentes Aussehen und Layout zu erzielen.** Taskdialogfelder erfordern Windows Vista oder höher, sodass sie nicht für frühere Versionen von Windows geeignet sind.
+    -   **Zeigt nur eine Warnmeldung pro Bedingung an.** Zeigen Sie z. B. eine einzelne Warnung an, die eine Bedingung vollständig erklärt, anstatt sie nach und nach pro Nachricht zu beschreiben. Das Anzeigen einer Sequenz von Warndialogfeldern für eine einzelne Bedingung ist verwirrend und verwirrend.
+    -   **Zeigen Sie eine Warnung nicht mehr als einmal pro Bedingung an.** Konstante Warnungen werden schnell ineffektiv und lästig. Benutzer konzentrieren sich häufig eher darauf, die Warnung zu beheben, als das Problem zu beheben. Wenn Sie wiederholt bei einer einzelnen Bedingung warnen müssen, verwenden Sie [progressive Eskalation.](mess-notif.md)
+-   **Warnungen werden nicht mit einem Soundeffekt oder Signalton begleitet.** Dies ist nicht erforderlich.
+    -   **Ausnahme:** Wenn der Benutzer sofort reagieren muss, können Sie einen Soundeffekt verwenden.
 
 ### <a name="icons"></a>Symbole
 
--   Platzieren Sie kein Warnsymbol in der Titelleiste eines Dialog Felds.
+-   Platzieren Sie in der Titelleiste eines Dialogfelds kein Warnsymbol.
 -   **Verwenden Sie ein Warnsymbol.** Ausnahmen:
-    -   Wenn die Warnung für eine Funktion ist, die über ein Symbol verfügt, können Sie das Funktions Symbol mit einem Warn Überlagerungs Symbol verwenden.
+    -   Wenn die Warnung für ein Feature mit einem Symbol gilt, können Sie das Featuresymbol mit einer Warnüberlagerung verwenden.
 
         **Richtig:**
 
-        ![Screenshot des sperrsymbols mit Warnsymbol Überlagerung ](images/mess-warn-image21.png)
+        ![Screenshot des Sperrsymbols mit Überlagerung des Warnsymbols ](images/mess-warn-image21.png)
 
-        In diesem Beispiel enthält das Feature-Symbol eine Warn Überlagerung.
+        In diesem Beispiel verfügt das Featuresymbol über eine Warnüberlagerung.
 
--   Legen Sie für modale Dialogfelder mit einer Warn fußnotiz das Warnsymbol in der fußnotiz anstelle des Inhalts Bereichs ab.
+-   Legen Sie für modale Dialogfelder mit einer Fußnote mit Einer Warnung das Warnsymbol in die Fußnote und nicht in den Inhaltsbereich.
 
     **Richtig:**
 
-    ![Screenshot des Warn Symbols im Dialogfeld "Fußnote" ](images/mess-warn-image22.png)
+    ![Screenshot des Warnsymbols in der Fußnote des Dialogfelds ](images/mess-warn-image22.png)
 
-    In diesem Beispiel enthält die fußnotiz das Warnsymbol.
+    In diesem Beispiel weist die Fußnote das Warnsymbol auf.
 
-Weitere Richtlinien und Beispiele finden Sie unter [Standard Symbole](vis-std-icons.md).
+Weitere Richtlinien und Beispiele finden Sie unter [Standardsymbole.](vis-std-icons.md)
 
-### <a name="dont-show-this-message-again"></a>Diese Meldung nicht mehr anzeigen
+### <a name="dont-show-this-message-again"></a>Diese Meldung nicht erneut anzeigen
 
--   **Wenn diese Option für ein Warn Dialogfeld erforderlich ist, überdenken Sie die Warnung und deren Häufigkeit.** Wenn Sie über alle Merkmale einer guten Warnung verfügt (was ein Risiko darstellt und sofort relevant, handlungsfähig, nicht offensichtlich und unregelmäßig ist), sollte es für Benutzer nicht sinnvoll sein, Sie zu unterdrücken.
+-   **Wenn diese Option für ein Warnungsdialogfeld erforderlich ist, sollten Sie die Warnung und ihre Häufigkeit überprüfen.** Wenn sie alle Merkmale einer guten Warnung aufweist (risikobezieht und sofort relevant, umsetzbar, nicht offensichtlich und selten ist), sollte es für Benutzer nicht sinnvoll sein, sie zu unterdrücken.
 
-Weitere Richtlinien finden Sie unter [Dialog Felder](win-dialog-box.md).
+Weitere Richtlinien finden Sie unter [Dialogfelder](win-dialog-box.md).
 
 ### <a name="progressive-disclosure"></a>Schrittweise Offenlegung
 
--   **Wenn Sie erweiterte Informationen in eine Warnmeldung einschließen müssen, können Sie diese mithilfe der Schaltflächen für die Progressive Offenlegung** anzeigen (z. b. "Details anzeigen"). Dies vereinfacht die Warnung für die typische Verwendung. Blenden Sie erforderliche Informationen nicht aus, da Benutzer Sie möglicherweise nicht finden.
--   **Verwenden Sie "Details anzeigen" nicht, es sei denn, es gibt wirklich weitere Details.** Geben Sie die vorhandenen Informationen nicht nur in einem anderen Format zurück.
+-   **Wenn Sie erweiterte Informationen in eine Warnmeldung einschließen müssen, können Sie sie mithilfe von Schaltflächen** für die progressive Offenlegung anzeigen (z. B. "Details anzeigen"). Dadurch wird die Warnung für die typische Verwendung vereinfacht. Blenden Sie die benötigten Informationen nicht aus, da benutzer sie möglicherweise nicht finden.
+-   **Verwenden Sie nicht "Details anzeigen", es sei denn, es gibt wirklich mehr Details.** Stellen Sie nicht einfach die vorhandenen Informationen in einem anderen Format wieder her.
 
-Informationen zu Bezeichnungs Richtlinien finden Sie unter [Progressive Offenlegung](ctrl-progressive-disclosure-controls.md).
+Informationen zu Bezeichnungsrichtlinien finden Sie unter [Progressive Offenlegung.](ctrl-progressive-disclosure-controls.md)
 
 ### <a name="default-values"></a>Standardwerte
 
--   **Wählen Sie die sicherste, am wenigsten zerstörerische oder sicherste Antwort als Standard aus.**
+-   **Wählen Sie die sicherste, am wenigsten destruktive oder sicherste Antwort als Standard aus.**
 
 ## <a name="text"></a>Text
 
 ### <a name="general"></a>Allgemein
 
--   **Entfernen Sie den redundanten Text.** Suchen Sie nach dem Titel, den Haupt Anweisungen, zusätzlichen Anweisungen, Inhalts Bereichen, Befehls Verknüpfungen und Commit-Schaltflächen. Im Allgemeinen sollten Sie voll Text in Anweisungen und interaktiven Steuerelementen belassen und Redundanz von den anderen Orten entfernen.
--   **Verwenden Sie nicht die Begriffe "Warnung" oder "Vorsicht" im Text.** Wenn das Warnsymbol [ordnungsgemäß verwendet](vis-std-icons.md)wird, kommuniziert das Warnsymbol ausreichend, dass Benutzer mit Vorsicht fortfahren müssen.
+-   **Entfernen Sie redundanten Text.** Suchen Sie in Titeln, Hauptanweisungen, zusätzlichen Anweisungen, Inhaltsbereich, Befehlslinks und Commitschaltflächen danach. Lassen Sie im Allgemeinen vollständigen Text in Anweisungen und interaktiven Steuerelementen, und entfernen Sie redundanzen von den anderen Stellen.
+-   **Verwenden Sie nicht die Begriffe "Warnung" oder "Vorsicht" im Text.** Bei [ordnungsgemäßer Verwendung](vis-std-icons.md)kommuniziert das Warnsymbol ausreichend, dass Benutzer mit Vorsicht vorgehen müssen.
 
 **Falsch:**
 
-![Screenshot der unnötigen Verwendung von Warnung im Text ](images/mess-warn-image23.png)
+![Screenshot der unnötigen Verwendung von Warnungen im Text ](images/mess-warn-image23.png)
 
-In diesem Beispiel ist der Begriff "Warning" nicht erforderlich.
+In diesem Beispiel ist der Begriff "Warnung" nicht erforderlich.
 
 ### <a name="titles"></a>Titel
 
 -   **Verwenden Sie den Titel, um den Befehl oder das Feature zu identifizieren, von dem die Warnung stammt.** Ausnahmen:
     -   Wenn eine Warnung von vielen verschiedenen Befehlen angezeigt wird, sollten Sie stattdessen den Programmnamen verwenden.
-    -   Wenn der Titel mit der Main-Anweisung redundant oder verwirrend wäre, sollten Sie stattdessen den Programmnamen verwenden.
+    -   Wenn dieser Titel redundant oder verwirrend mit der Hauptanweisung wäre, verwenden Sie stattdessen den Programmnamen.
 
 **Falsch:**
 
-![Screenshot des Dialogfeld Titels mit der Sicherheitswarnung ](images/mess-warn-image24.png)
+![Screenshot des Titels des Dialogfelds "Sicherheitswarnung" ](images/mess-warn-image24.png)
 
 In diesem Beispiel identifiziert "Sicherheitswarnung" nicht den Befehl oder das Feature, von dem die Warnung stammt.
 
--   **Verwenden Sie den Titel nicht, um zu erläutern, wie Sie im Dialog** Feld mit der Main-Anweisung vorgehen sollten.
--   Verwenden Sie die Groß-/Kleinschreibung im [Titel](glossary.md), ohne die Beendigung zu beenden
+-   **Verwenden Sie den Titel nicht, um zu erläutern, was im Dialogfeld ausgeführt** werden soll, das der Zweck der Hauptanweisung ist.
+-   Verwenden Sie [die Groß-/Großschreibung im Titelformat,](glossary.md)ohne die Interpunktion zu beenden.
 
-### <a name="main-instructions"></a>Haupt Anleitung
+### <a name="main-instructions"></a>Hauptanweisungen
 
--   Die Haupt Anweisung für eine Warnung basiert auf dem Entwurfsmuster:
+-   Die Hauptanweisung für eine Warnung basiert auf ihrem Entwurfsmuster:
 
 
 
-|                                      |                                                                      |
+| Muster                        | Hauptanweisung                                               |
 |--------------------------------------|----------------------------------------------------------------------|
-| **Muster**<br/>               | **Main-Anweisung**<br/>                                      |
 | Bewusstsein<br/>                 | Beschreiben Sie die Bedingung oder das potenzielle Problem.<br/>              |
 | Bevorstehendes Problem<br/>          | Beschreiben Sie, was der Benutzer jetzt tun muss.<br/>                   |
-| Bestätigung der riskanten Aktion<br/> | Stellen Sie eine Frage, um zu bestimmen, ob der Benutzer den Vorgang fortsetzen möchte.<br/> |
+| Bestätigung riskanter Aktionen<br/> | Stellen Sie eine Frage, um zu bestimmen, ob der Benutzer fortfahren möchte.<br/> |
 
 
 
  
 
--   ![Screenshot einer Benachrichtigung mit geringem Akku ](images/mess-warn-image25.png)
--   In diesem Beispiel ist die Benachrichtigung bei geringer Akku Benachrichtigung eine Warnung, sodass die Bedingung in der Haupt Anweisung beschrieben wird.
--   ![Screenshot der Änderung der Akku sofortige Warnung ](images/mess-warn-image1.png)
--   In diesem Beispiel ist das Dialogfeld "geringe Akkukapazität" ein bevorstehendes Problem, daher wird in der Haupt Anweisung beschrieben, was der Benutzer jetzt tun muss.
--   **Bei der präzisen Verwendung wird nur ein einzelner, kompletter Satz verwendet.** Entfernen Sie die Haupt Anweisung zu den wesentlichen Informationen. Wenn Sie etwas anderes erläutern müssen, verwenden Sie eine ergänzende Anweisung.
--   **Verwenden Sie Wörter wie "Now" und "sofort", wenn der Benutzer sofort agieren muss.** Verwenden Sie diese Wörter nicht, wenn es keine Dringlichkeit gibt.
--   **Wenn Objekte beteiligt sind, geben Sie die vollständigen Namen an.**
--   Verwenden Sie die Groß Schreibung im [Satz](glossary.md)Format.
+-   ![Screenshot einer Benachrichtigung mit geringem Akkustand ](images/mess-warn-image25.png)
+-   In diesem Beispiel ist die Benachrichtigung über niedrige Akkukapazität eine Warnung zur Benachrichtigung des Bewusstseins, sodass die Hauptanweisung die Bedingung beschreibt.
+-   ![Screenshot der Warnung zum sofortigen Wechsel des Akkus ](images/mess-warn-image1.png)
+-   In diesem Beispiel ist das Dialogfeld mit geringem Akkustand ein bevorstehendes Problem. Daher wird in der Hauptanweisung beschrieben, was der Benutzer jetzt tun muss.
+-   **Verwenden Sie nur einen einzigen vollständigen Satz.** Legen Sie die Hauptanweisung auf die wesentlichen Informationen fest. Wenn Sie weitere Informationen benötigen, verwenden Sie eine ergänzende Anweisung.
+-   **Verwenden Sie Wörter wie "jetzt" und "sofort", wenn der Benutzer sofort handeln muss.** Verwenden Sie diese Wörter nicht, wenn es keine Dringendkeit gibt.
+-   **Geben Sie den vollständigen Namen an, wenn Objekte beteiligt sind.**
+-   Verwenden Sie [die Groß-/Großschreibung im Satzformat.](glossary.md)
 
-### <a name="supplemental-instructions"></a>Ergänzende Anweisungen
+### <a name="supplemental-instructions"></a>Zusätzliche Anweisungen
 
--   Die ergänzende Anweisung für eine Warnung basiert auf dem Entwurfsmuster:
+-   Die ergänzende Anweisung für eine Warnung basiert auf ihrem Entwurfsmuster:
 
 
 
-|                                      |                                                                                    |
+| Muster            | Ergänzende Anweisung                                            |
 |--------------------------------------|------------------------------------------------------------------------------------|
-| **Muster**<br/>               | **Ergänzende Anweisung**<br/>                                            |
-| Bewusstsein<br/>                 | Erläutern Sie die Implikation und warum Sie wichtig ist.<br/>                        |
-| Bevorstehendes Problem<br/>          | Erläutern Sie die Bedingung und warum Sie wichtig ist.<br/>                          |
-| Bestätigung der riskanten Aktion<br/> | Erläutern Sie alle nicht offensichtlichen Gründe, warum der Benutzer möglicherweise nicht fortfahren möchte.<br/> |
+| Bewusstsein<br/>                 | Erläutern Sie die Auswirkungen und warum dies wichtig ist.<br/>                        |
+| Bevorstehendes Problem<br/>          | Erläutern Sie die Bedingung und warum sie wichtig ist.<br/>                          |
+| Bestätigung riskanter Aktionen<br/> | Erläutern Sie alle nicht offensichtlichen Gründe, warum der Benutzer möglicherweise nicht fortfahren möchte.<br/> |
 
 
 
  
 
--   **Wiederholen Sie die main-Anweisung nicht mit etwas anderen Formulierungen.** Lassen Sie stattdessen die ergänzende Anweisung Weg, wenn nicht mehr hinzugefügt werden muss.
--   Verwenden Sie vollständige Sätze, die Groß-/Kleinschreibung und die endinterpunktions Zeichen.
+-   **Wiederholen Sie die Hauptanweisung nicht mit leicht abweichenden Formulierungen.** Lassen Sie stattdessen die zusätzliche Anweisung aus, wenn nicht mehr hinzugefügt werden muss.
+-   Verwenden Sie vollständige Sätze, Groß- und Großschreibung im Satzstil und endende Interpunktion.
 
-### <a name="commit-buttons"></a>Commit-Schaltflächen
+### <a name="commit-buttons"></a>Commitschaltflächen
 
--   Für Warn Dialogfelder basieren die Commit-Schaltflächen auf dem Entwurfsmuster:
+-   Für Warndialogfelder basieren die Commitschaltflächen auf ihrem Entwurfsmuster:
 
 
 
-|                                      |                                                                                                                 |
+| Muster               | Commitschaltflächen        |
 |--------------------------------------|-----------------------------------------------------------------------------------------------------------------|
-| **Muster**<br/>               | **Commit-Schaltflächen**<br/>                                                                                   |
-| Bewusstsein<br/>                 | Fast richtig. Verwenden Sie "OK" nicht, da es ein mögliches Problem ist.<br/>                              |
-| Bevorstehendes Problem<br/>          | Eine Befehls Schaltfläche oder ein Befehls Link für jede Option oder OK, wenn die Aktion außerhalb des Dialog Felds erfolgt.<br/> |
-| Bestätigung der riskanten Aktion<br/> | Ja, Nein.<br/>                                                                                             |
+| Bewusstsein<br/>                 | Fast richtig. Verwenden Sie ok nicht, da dies darauf hindeutet, dass potenzielle Probleme in Ordnung sind.<br/>                              |
+| Bevorstehendes Problem<br/>          | Eine Befehlsschaltfläche oder ein Befehlslink für jede Option oder OK, wenn die Aktion außerhalb des Dialogfelds auftritt.<br/> |
+| Bestätigung riskanter Aktionen<br/> | Ja, Nein.<br/>                                                                                             |
 
 
 
  
 
 -   **Falsch:**
--   ![Screenshot des Warn Dialogfelds mit der Schaltfläche "OK" ](images/mess-warn-image26.png)
--   Probleme sind nicht in Ordnung. verwenden Sie daher stattdessen close.
+-   ![Screenshot des Dialogfelds "Warnung" mit schaltfläche "OK" ](images/mess-warn-image26.png)
+-   Probleme sind nicht in Ordnung, verwenden Sie stattdessen Schließen.
 
 ## <a name="documentation"></a>Dokumentation
 
-Beim Verweis auf Warnungen:
+Beim Verweisen auf Warnungen:
 
--   Wenn in der Warnung eine Frage gestellt wird, finden Sie eine Warnung nach Ihrer Frage. Andernfalls verwenden Sie die main-Anweisung. Wenn die Frage oder die Haupt Anweisung lang oder ausführlich ist, fassen Sie sie zusammen.
--   Falls erforderlich, können Sie auf ein Warn Dialogfeld als Nachricht verweisen.
--   Formatieren Sie den Text nach Möglichkeit fett formatiert. Andernfalls sollten Sie den Text nur bei Bedarf in Anführungszeichen setzen, um Verwechslungen zu vermeiden.
+-   Wenn die Warnung eine Frage stellt, verweisen Sie anhand ihrer Frage auf eine Warnung. Verwenden Sie andernfalls die Main-Anweisung. Wenn die Frage oder die Hauptanweisung lang oder ausführlich ist, fassen Sie sie zusammen.
+-   Bei Bedarf können Sie auf ein Warndialogfeld als Meldung verweisen.
+-   Formatieren Sie den Text nach Möglichkeit fett. Andernfalls setzen Sie den Text nur in Anführungszeichen, wenn dies erforderlich ist, um Verwechslungen zu vermeiden.
 
-Beispiel: Klicken Sie in der Meldung möchten **Sie die nicht sicheren Elemente anzeigen?** auf Ja.
+Beispiel: Klicken Sie in der Meldung **Möchten Sie die unsicheren Elemente anzeigen?** auf Ja.
 
  
 

@@ -1,45 +1,45 @@
 ---
-title: Sprach Leiste (Text Dienste)
-description: Sprach Leiste
+title: Sprachleiste (Textdienste)
+description: Sprachleiste
 ms.assetid: 82b92567-fdc1-488c-b395-4cb95257955c
 keywords:
-- Text Services-Framework (TSF), sprach Leiste
-- TSF (Text Dienst Framework), sprach Leiste
-- Text Dienste, sprach Leiste
-- sprach Leiste
-- Text Dienst Framework (TSF), Schaltflächen
-- TSF (Text Dienst Framework), Schaltflächen
-- Text Dienste, Schaltflächen
-- Text Dienste-Framework (TSF), Menüs
-- TSF (Text Dienste-Framework), Menüs
-- Text Dienste, Menüs
+- Textdienstframework (TSF), Sprachleiste
+- TSF (Textdienstframework),Sprachleiste
+- Textdienste, Sprachleiste
+- Sprachleiste
+- Textdienstframework (TSF), Schaltflächen
+- TSF (Textdienstframework),Schaltflächen
+- Textdienste, Schaltflächen
+- Textdienstframework (TSF),Menüs
+- TSF (Textdienstframework),Menüs
+- Textdienste, Menüs
 - Schaltflächenstile
-- Menü Schaltflächen
+- Menüschaltflächen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c41d64a488406f6eefcff5fef6c11093af00bc5b
-ms.sourcegitcommit: 8fa6614b715bddf14648cce36d2df22e5232801a
+ms.openlocfilehash: 0e3c4359c6753f5d96613435f9501036f1d5f317
+ms.sourcegitcommit: 8ebcf6cd36f67f8bcf78e76ae8923d65b8995c8a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "104391459"
+ms.lasthandoff: 06/05/2021
+ms.locfileid: "111524444"
 ---
-# <a name="language-bar-text-services"></a>Sprach Leiste (Text Dienste)
+# <a name="language-bar-text-services"></a>Sprachleiste (Textdienste)
 
-## <a name="implementing-the-language-bar-object"></a>Implementieren des Language Bar-Objekts
+## <a name="implementing-the-language-bar-object"></a>Implementieren des Sprachleistenobjekts
 
-Um das Hinzufügen eines Elements zur sprach Leiste zu unterstützen, muss ein Text Dienst ein Objekt implementieren, das die [itfsource](/windows/desktop/api/msctf/nn-msctf-itfsource) -Schnittstelle und eines der [itflangbaritem](/windows/desktop/api/ctfutb/nn-ctfutb-itflangbaritem) -Steuerelement Elemente unterstützt. Wenn das Element installiert ist, installiert die sprach Leiste eine [itflangbaritemsink](/windows/desktop/api/ctfutb/nn-ctfutb-itflangbaritemsink) -Senke, indem das [itfsource:: AdviseSink](/windows/desktop/api/msctf/nf-msctf-itfsource-advisesink) -Element des Elements mit IID \_ itflangbaritemsink aufgerufen wird. Das Element verwendet die **itflangbaritemsink** -Schnittstelle, um die sprach Leiste von Änderungen zu benachrichtigen, z. b. wenn das Element ausgeblendet, angezeigt, aktiviert oder deaktiviert ist.
+Um das Hinzufügen eines Elements zur Sprachleiste zu unterstützen, muss ein Textdienst ein Objekt implementieren, das die [ITfSource-Schnittstelle](/windows/desktop/api/msctf/nn-msctf-itfsource) und eines der [ITfLangBarItem-Steuerelementelemente](/windows/desktop/api/ctfutb/nn-ctfutb-itflangbaritem) unterstützt. Wenn das Element installiert ist, installiert die Sprachleiste eine [ITfLangBarItemSink-Senke,](/windows/desktop/api/ctfutb/nn-ctfutb-itflangbaritemsink) indem die [ITfSource::AdviseSink](/windows/desktop/api/msctf/nf-msctf-itfsource-advisesink) des Elements mit IID \_ ITfLangBarItemSink aufgerufen wird. Das Element verwendet die **ITfLangBarItemSink-Schnittstelle,** um die Sprachleiste über Änderungen zu benachrichtigen, z. B. wenn das Element ausgeblendet, angezeigt, aktiviert oder deaktiviert wird.
 
-Es können vier Arten von sprach leisten Elementen installiert werden, und alle erforderlichen Schnittstellen werden aus **itslangbaritem** erstellt. Im folgenden finden Sie mögliche **itslangbaritem** -Steuerelemente.
+Vier Typen von Sprachleistenelementen können installiert werden, und jede der erforderlichen Schnittstellen wird aus **ITfLangBarItem** erstellt. Im Folgenden sind mögliche **ITfLangBarItem-Steuerelementelemente** enthalten.
 
 
 
-|               |                                                                                                                                                                                   |
+|   Element            |    BESCHREIBUNG                                                                                                                                                                               |
 |---------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Schaltfläche        | Eine sprach leisten Schaltfläche dient als Befehls Schaltfläche, UMSCHALT Steuerelement oder Menü auf der sprach Leiste. Das Objekt muss die itflangbaritembutton-Schnittstelle unterstützen.                   |
-| Ballons       | Eine sprach leisten Sprechblase fungiert als Popup Benachrichtigung auf der sprach Leiste. Das Objekt muss die Schnittstelle itbolangbaritemballoon unterstützen.                                       |
-| Bitmap        | Eine sprach leisten Bitmap fungiert als statisches Element auf der sprach Leiste, das eine Bitmap anzeigt. Das Objekt muss die itblangbaritembitmap-Schnittstelle unterstützen.                       |
-| Bitmap-Schaltfläche | Eine Schaltfläche für eine sprach leisten-Bitmap fungiert als Schaltflächen Element auf der sprach Leiste, auf der Text und eine Bitmap angezeigt werden. Das Objekt muss die itflangbaritembitmapbutton-Schnittstelle unterstützen. |
+| Schaltfläche        | Eine Sprachleistenschaltfläche fungiert als Befehlsschaltfläche, Umschaltfläche oder menü auf der Sprachleiste. Das -Objekt muss die ITfLangBarItemButton-Schnittstelle unterstützen.                   |
+| Ballon       | Ein Sprachleistensprechblasen fungiert als Popupbenachrichtigung auf der Sprachleiste. Das -Objekt muss die ITfLangBarItemBalloon-Schnittstelle unterstützen.                                       |
+| Bitmap        | Eine Sprachleistenbitmap fungiert als statisches Element auf der Sprachleiste, das eine Bitmap anzeigt. Das -Objekt muss die ITfLangBarItemBitmap-Schnittstelle unterstützen.                       |
+| Bitmapschaltfläche | Eine Sprachleisten-Bitmapschaltfläche fungiert als Schaltflächenelement auf der Sprachleiste, das Text und eine Bitmap anzeigt. Das -Objekt muss die ITfLangBarItemBitmapButton-Schnittstelle unterstützen. |
 
 
 
@@ -47,69 +47,69 @@ Es können vier Arten von sprach leisten Elementen installiert werden, und alle 
 
 ## <a name="button-styles"></a>Schaltflächenstile
 
-Ein Button-Element kann wie folgt funktionieren. Die Funktion des Schaltflächen Elements wird durch die Flags bestimmt, die im **dwstyle** -Member der [tf \_ langbariteminfo](/windows/desktop/api/ctfutb/ns-ctfutb-tf_langbariteminfo) -Struktur in der [itflangbaritem:: GetInfo](/windows/desktop/api/ctfutb/nf-ctfutb-itflangbaritem-getinfo) -Methode festgelegt sind.
+Ein Schaltflächenelement kann wie jedes der folgenden elemente funktionieren. Die Funktion des Schaltflächenelements wird durch die Flags bestimmt, die im **dwStyle-Member** der [TF \_ LANGBARITEMINFO-Struktur](/windows/desktop/api/ctfutb/ns-ctfutb-tf_langbariteminfo) in der [ITfLangBarItem::GetInfo-Methode](/windows/desktop/api/ctfutb/nf-ctfutb-itflangbaritem-getinfo) festgelegt sind.
 
 
 
-|               |                                                                                                                                                                                                                                                                                                                                                                                      |
+|    Element           |    BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                                                                  |
 |---------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Schaltfläche        | Die Schaltfläche dient als Standard Befehls Schaltfläche. Dieser Schaltflächen Stil wird durch den Formatvorlagen Stil der TF-LBI-Formatvorlage identifiziert \_ \_ \_ \_ . Itflangbaritembutton:: OnClick wird aufgerufen, wenn auf das Element geklickt wird. Itflangbaritembutton:: InitMenu und itflangbaritembutton:: onmenuselect werden nicht verwendet.                                                                                                   |
-| Umschaltfläche | Die Schaltfläche fungiert als UMSCHALT Steuerelement, das einen angeklickten Zustand beibehalten kann, ähnlich wie ein Kontrollkästchen. Dieser Schaltflächen Stil wird durch den TF \_ LBI- \_ Stil \_ BTN- \_ UMSCHALT Stil identifiziert. Itflangbaritembutton:: OnClick wird aufgerufen, wenn auf das Element geklickt wird. Itflangbaritembutton:: InitMenu und itflangbaritembutton:: onmenuselect werden nicht verwendet.                                                  |
-| Menü          | Die Schaltfläche dient als Dropdown Menü. Dieser Schaltflächen Stil wird durch den Menü Stil für den TF \_ LBI- \_ Stil \_ BTN identifiziert \_ . Itflangbaritembutton:: InitMenu wird aufgerufen, wenn auf die Schaltfläche geklickt wird. Wenn der Benutzer ein Element im Menü auswählt, ruft die sprach Leiste itflangbaritembutton:: onmenuselect mit dem Bezeichner des ausgewählten Menü Elements auf. Itflangbaritembutton:: onclickis wird nicht verwendet. |
+| Schaltfläche        | Die Schaltfläche fungiert als Standardbefehlsschaltfläche. Dieser Schaltflächenstil wird durch den \_ TF LBI \_ STYLE \_ BTN \_ BUTTON-Stil identifiziert. ITfLangBarItemButton::OnClick wird aufgerufen, wenn auf das Element geklickt wird. ITfLangBarItemButton::InitMenu und ITfLangBarItemButton::OnMenuSelect werden nicht verwendet.                                                                                                   |
+| Umschaltfläche | Die Schaltfläche fungiert als Ein-/Ausschalten-Steuerelement, das einen angeklickten Zustand beibehalten kann, ähnlich wie ein Kontrollkästchen. Dieser Schaltflächenstil wird durch den \_ TF LBI \_ STYLE \_ BTN \_ TOGGLE-Stil identifiziert. ITfLangBarItemButton::OnClick wird aufgerufen, wenn auf das Element geklickt wird. ITfLangBarItemButton::InitMenu und ITfLangBarItemButton::OnMenuSelect werden nicht verwendet.                                                  |
+| Menü          | Die Schaltfläche fungiert als Dropdownmenü. Dieser Schaltflächenstil wird durch den \_ \_ \_ BTN-MENÜstil des TF-LBI-Stils \_ identifiziert. ITfLangBarItemButton::InitMenu wird aufgerufen, wenn auf die Schaltfläche geklickt wird. Wenn der Benutzer ein Element im Menü auswählt, ruft die Sprachleiste ITfLangBarItemButton::OnMenuSelect mit dem Bezeichner des ausgewählten Menüelements auf. ITfLangBarItemButton::OnClickis wird nicht verwendet. |
 
 
 
  
 
-## <a name="implementing-a-menu-button"></a>Implementieren einer Menü Schaltfläche
+## <a name="implementing-a-menu-button"></a>Implementieren einer Menüschaltfläche
 
-Wenn der Benutzer auf eine Menü Schaltfläche klickt, ruft die sprach Leiste [itflangbaritembutton:: InitMenu](/windows/desktop/api/Ctfutb/nf-ctfutb-itflangbaritembutton-initmenu)auf. Das Element fügt dem Menü Elemente mithilfe der [itfmenu](/windows/desktop/api/ctfutb/nn-ctfutb-itfmenu) -Schnittstelle hinzu, die an InitMenu übergeben wird.
+Wenn der Benutzer auf eine Menüschaltfläche klickt, ruft die Sprachleiste [ITfLangBarItemButton::InitMenu](/windows/desktop/api/Ctfutb/nf-ctfutb-itflangbaritembutton-initmenu)auf. Das Element fügt dem Menü Elemente mithilfe der [ITfMenu-Schnittstelle](/windows/desktop/api/ctfutb/nn-ctfutb-itfmenu) hinzu, die an InitMenu übergeben wird.
 
-Um dem Menü ein Untermenü hinzuzufügen, nennen Sie [itfmenu:: addmenuitem](/windows/desktop/api/Ctfutb/nf-ctfutb-itfmenu-addmenuitem) mit dem \_ unter Menü TF lbmenuf \_ . Wenn dies der Fall ist, wird ein neues **ITF Menu** -Objekt, das das Untermenü darstellt, im *ppmenu* -Parameter von addmenuitem zurückgegeben. Dieses neue Menü Objekt wird verwendet, um dem Untermenü Elemente hinzuzufügen.
+Um dem Menü ein Untermenü hinzuzufügen, rufen Sie [ITfMenu::AddMenuItem](/windows/desktop/api/Ctfutb/nf-ctfutb-itfmenu-addmenuitem) mit TF \_ LBMENUF \_ SUBMENU auf. Wenn dies erfolgt ist, wird im *ppMenu-Parameter* von AddMenuItem ein neues **ITfMenu-Objekt** zurückgegeben, das das Untermenü darstellt. Dieses neue Menüobjekt wird zum Hinzufügen von Elementen zum Untermenü verwendet.
 
-Wenn der Benutzer ein Element im Menü auswählt, ruft die sprach Leiste [itflangbaritembutton:: onmenuselect](/windows/desktop/api/Ctfutb/nf-ctfutb-itflangbaritembutton-onmenuselect) mit dem Bezeichner des ausgewählten Menü Elements auf.
+Wenn der Benutzer ein Element im Menü auswählt, ruft die Sprachleiste [ITfLangBarItemButton::OnMenuSelect](/windows/desktop/api/Ctfutb/nf-ctfutb-itflangbaritembutton-onmenuselect) mit dem Bezeichner des ausgewählten Menüelements auf.
 
-## <a name="adding-items-to-the-language-bar"></a>Hinzufügen von Elementen zur sprach Leiste
+## <a name="adding-items-to-the-language-bar"></a>Hinzufügen von Elementen zur Sprachleiste
 
-Ein Text Dienst sollte seine Elemente der sprach Leiste hinzufügen, wenn die [itftextinputprocessor:: Aktivierungs](/windows/desktop/api/msctf/nf-msctf-itftextinputprocessor-activate) -Methode aufgerufen wird, und Sie entfernt werden, wenn [itftextinputprocessor::D eaktivierung](/windows/desktop/api/msctf/nf-msctf-itftextinputprocessor-deactivate) aufgerufen wird.
+Ein Textdienst sollte seine Elemente der Sprachleiste hinzufügen, wenn seine [ITfTextInputProcessor::Activate-Methode](/windows/desktop/api/msctf/nf-msctf-itftextinputprocessor-activate) aufgerufen wird, und diese entfernen, wenn [ITfTextInputProcessor::D eactivate](/windows/desktop/api/msctf/nf-msctf-itftextinputprocessor-deactivate) aufgerufen wird.
 
-Um der sprach Leiste ein Element hinzuzufügen, ruft der Text Dienst eine [itflangbaritemmgr](/windows/desktop/api/ctfutb/nn-ctfutb-itflangbaritemmgr) -Schnittstelle ab, indem ITfThreadMgr:: QueryInterface mit IID \_ itflangbaritemmgr aufgerufen wird. Der Text Dienst ruft dann [itflangbaritemmgr:: AddItem](/windows/desktop/api/ctfutb/nf-ctfutb-itflangbaritemmgr-additem) mit dem Zeiger auf das sprach leisten Element-Objekt auf.
+Um der Sprachleiste ein Element hinzuzufügen, ruft der Textdienst eine [ITfLangBarItemMgr-Schnittstelle](/windows/desktop/api/ctfutb/nn-ctfutb-itflangbaritemmgr) ab, indem er ITfThreadMgr::QueryInterface mit IID \_ ITfLangBarItemMgr aufruft. Der Textdienst ruft dann [ITfLangBarItemMgr::AddItem](/windows/desktop/api/ctfutb/nf-ctfutb-itflangbaritemmgr-additem) mit dem Zeiger auf das Sprachleistenelementobjekt auf.
 
-Der Text Dienst muss das Element entfernen, wenn es deaktiviert ist. Der Text Dienst verwendet die gleiche **itflangbaritemmgr** -Schnittstelle, die zum Hinzufügen der Elemente verwendet wird, oder ruft eine andere Instanz der Schnittstelle ab. Der Text Dienst ruft dann [itflangbaritemmgr:: RemoveItem](/windows/desktop/api/ctfutb/nf-ctfutb-itflangbaritemmgr-removeitem) mit dem Schnittstellen Zeiger des zu entfernenden Elements auf.
+Der Textdienst muss das Element entfernen, wenn es deaktiviert wird. Der Textdienst verwendet entweder die gleiche **ITfLangBarItemMgr-Schnittstelle,** die zum Hinzufügen der Elemente verwendet wird, oder ruft eine andere Instanz der Schnittstelle ab. Der Textdienst ruft dann [ITfLangBarItemMgr::RemoveItem](/windows/desktop/api/ctfutb/nf-ctfutb-itflangbaritemmgr-removeitem) mit dem Schnittstellenzeiger des zu entfernende Elements auf.
 
-## <a name="extending-system-language-bar-items"></a>Erweitern von System sprach leisten Elementen
+## <a name="extending-system-language-bar-items"></a>Erweitern von Systemsprachleistenelementen
 
-TSF bietet die Möglichkeit, vorhandenen sprach leisten Menüs Menü Elemente hinzuzufügen. Dadurch kann ein Text Dienst dem Menü eines anderen Text Dienstanbieter Elemente hinzufügen, ohne dass der Symbolleiste eine separate Schaltfläche hinzugefügt werden muss. Dadurch können die Menü Elemente auch in logische Gruppen unterteilt werden. Beispielsweise kann ein Text Dienst, der zusätzliche Funktionen für den Standard-sprach Text Dienst bereitstellt, dem sprach Text-Dienst Menü Elemente hinzufügen, anstatt seine eigene Menü Schaltfläche auf oberster Ebene hinzuzufügen.
+TSF bietet die Möglichkeit, vorhandenen Sprachleistenmenüs Menüelemente hinzuzufügen. Dadurch kann ein Textdienst Elemente zum Menü eines anderen Textdiensts hinzufügen, ohne der Symbolleiste eine separate Schaltfläche hinzufügen zu müssen. Dadurch können die Menüelemente auch in logische Gruppen organisiert werden. Beispielsweise kann ein Textdienst, der dem Standard-Sprachtextdienst zusätzliche Features bietet, Elemente zum Sprachtextdienstmenü hinzufügen, anstatt eine eigene Menüschaltfläche der obersten Ebene hinzuzufügen.
 
-Ein Text Dienst stellt eine sprach leisten-Menü Erweiterung bereit, indem er ein Objekt implementiert, das die [ITF systemlangbaritemsink](/windows/desktop/api/ctfutb/nn-ctfutb-itfsystemlangbaritemsink) -Schnittstelle unterstützt. Diese Schnittstelle funktioniert genau wie die [itflangbaritembutton](/windows/desktop/api/Ctfutb/nn-ctfutb-itflangbaritembutton) -Schnittstelle für eine Menü Schaltfläche. Wenn das Menü angezeigt wird, ruft der Text Dienst, der erweitert wird, [ITF systemlangbaritemsink:: InitMenu](/windows/desktop/api/ctfutb/nf-ctfutb-itfsystemlangbaritemsink-initmenu)auf. Die Erweiterung fügt dem Menü Elemente mithilfe der [itfmenu](/windows/desktop/api/ctfutb/nn-ctfutb-itfmenu) -Schnittstelle hinzu, die an **InitMenu** übergeben wird. Wenn der Benutzer ein Element auswählt, das von der Erweiterung hinzugefügt wurde, ruft der Text Dienst, der erweitert wird, [ITF systemlangbaritemsink:: onmenuselect](/windows/desktop/api/ctfutb/nf-ctfutb-itfsystemlangbaritemsink-onmenuselect) mit dem Bezeichner des ausgewählten Menü Elements auf.
+Ein Textdienst stellt eine Sprachleisten-Menüerweiterung bereit, indem ein -Objekt implementiert wird, das die [ITfSystemLangBarItemSink-Schnittstelle](/windows/desktop/api/ctfutb/nn-ctfutb-itfsystemlangbaritemsink) unterstützt. Diese Schnittstelle funktioniert genau wie die [ITfLangBarItemButton-Schnittstelle](/windows/desktop/api/Ctfutb/nn-ctfutb-itflangbaritembutton) für eine Menüschaltfläche. Wenn das Menü angezeigt wird, ruft der erweiterte Textdienst [ITfSystemLangBarItemSink::InitMenu auf.](/windows/desktop/api/ctfutb/nf-ctfutb-itfsystemlangbaritemsink-initmenu) Die Erweiterung fügt dem Menü Elemente mithilfe der [ITfMenu-Schnittstelle](/windows/desktop/api/ctfutb/nn-ctfutb-itfmenu) hinzu, die an **InitMenu** übergeben wird. Wenn der Benutzer ein von der Erweiterung hinzugefügtes Element auswählt, ruft der erweiterte Textdienst [ITfSystemLangBarItemSink::OnMenuSelect](/windows/desktop/api/ctfutb/nf-ctfutb-itfsystemlangbaritemsink-onmenuselect) mit dem Bezeichner des ausgewählten Menüelements auf.
 
-Zum Installieren einer sprach leisten-Menü Erweiterung führt der Text Dienst die folgenden Schritte aus.
+Um eine Sprachleisten-Menüerweiterung zu installieren, schließt der Textdienst die folgenden Schritte ab.
 
-1.  Rufen Sie die **itflangbaritem** -Schnittstelle für das Element ab, das Sie erweitern möchten, indem Sie [itflangbaritemmgr:: GetItem](/windows/desktop/api/ctfutb/nf-ctfutb-itflangbaritemmgr-getitem) mit der **GUID** für das Element aufrufen, das erweitert werden soll.
-2.  Rufen Sie die **itfsource** -Schnittstelle für das Element ab, das durch Aufrufen von itflangbaritem:: QueryInterface mit IID \_ itfsource erweitert werden soll.
-3.  Aufrufen von [itfsource:: AdviseSink](/windows/desktop/api/msctf/nf-msctf-itfsource-advisesink) mit IID \_ itfsystemlangbaritemsink und dem Zeiger auf das **itfsystemlangbaritemsink** -Objekt. Wenn ITF Source:: AdviseSink fehlschlägt, unterstützt der Text Dienst keine Menü Erweiterungen.
+1.  Rufen Sie die **ITfLangBarItem-Schnittstelle** für das zu erweiternde Element ab, indem [Sie ITfLangBarItemMgr::GetItem](/windows/desktop/api/ctfutb/nf-ctfutb-itflangbaritemmgr-getitem) mit der **GUID** für das zu erweiternde Element aufrufen.
+2.  Rufen Sie die **ITfSource-Schnittstelle** für das zu erweiternde Element ab, indem Sie ITfLangBarItem::QueryInterface mit IID \_ ITfSource aufrufen.
+3.  Rufen Sie [ITfSource::AdviseSink](/windows/desktop/api/msctf/nf-msctf-itfsource-advisesink) mit IID \_ ITfSystemLangBarItemSink und dem Zeiger auf das **ITfSystemLangBarItemSink-Objekt** auf. Wenn ITfSource::AdviseSink fehlschlägt, unterstützt der Textdienst keine Menüerweiterungen.
 
-[ITF Source:: unadvisesink](/windows/desktop/api/msctf/nf-msctf-itfsource-unadvisesink)**ITF Source:: AdviseSink**
+[ITfSource::UnadviseSink](/windows/desktop/api/msctf/nf-msctf-itfsource-unadvisesink)**ITfSource::AdviseSink**
 
-## <a name="supporting-language-bar-menu-extensions"></a>Unterstützende sprach leisten-Menü Erweiterungen
+## <a name="supporting-language-bar-menu-extensions"></a>Unterstützen von Sprachleisten-Menüerweiterungen
 
-Ein Text Dienst kann anderen Text Diensten das Hinzufügen von Elementen zu den sprach leisten Menüs ermöglichen, wie oben gezeigt. Der Text Dienst, der seine GUID veröffentlichen muss, damit das Element durch Aufrufen von [itflangbaritemmgr:: GetItem](/windows/desktop/api/ctfutb/nf-ctfutb-itflangbaritemmgr-getitem)abgerufen werden kann.
+Ein Textdienst kann anderen Textdiensten das Hinzufügen von Elementen zu den Sprachleistenmenüs wie oben gezeigt ermöglichen. Der Textdienst, der seine GUID veröffentlichen muss, damit das Element durch Aufrufen von [ITfLangBarItemMgr::GetItem](/windows/desktop/api/ctfutb/nf-ctfutb-itflangbaritemmgr-getitem)abgerufen werden kann.
 
-Um Menü Erweiterungen zu unterstützen, muss der Text Dienst die [itfsource](/windows/desktop/api/msctf/nn-msctf-itfsource) -Schnittstelle unterstützen. Die folgenden Schritte ermöglichen die Unterstützung für eine oder mehrere Menü Erweiterungen.
+Um Menüerweiterungen zu unterstützen, muss der Textdienst die [ITfSource-Schnittstelle](/windows/desktop/api/msctf/nn-msctf-itfsource) unterstützen. Die folgenden Schritte ermöglichen die Unterstützung für eine oder mehrere Menüerweiterungen.
 
-1.  Wenn [itfsource:: AdviseSink](/windows/desktop/api/msctf/nf-msctf-itfsource-advisesink) mit IID \_ itfsystemlangbaritemsink aufgerufen wird, muss der Text Dienst die **itfsystemlangbaritemsink** -Schnittstelle speichern und einen Cookie-Wert zurückgeben, der die Erweiterung identifiziert.
-2.  Wenn [itflangbaritembutton:: InitMenu](/windows/desktop/api/Ctfutb/nf-ctfutb-itflangbaritembutton-initmenu) aufgerufen wird, ruft der Text Dienst die [itfsystemlangbaritemsink:: InitMenu](/windows/desktop/api/ctfutb/nf-ctfutb-itfsystemlangbaritemsink-initmenu) -Methode der Erweiterung auf. Der Text Dienst muss eine Methode implementieren, um die von der Erweiterung hinzugefügten Menü Elemente im Gegensatz zu den Elementen, die durch den Text Dienst selbst hinzugefügt wurden, zu identifizieren.
-3.  Wenn [itflangbaritembutton:: onmenuselect](/windows/desktop/api/Ctfutb/nf-ctfutb-itflangbaritembutton-onmenuselect) mit einem Menü Element Bezeichner aufgerufen wird, der zu einer Erweiterung gehört, ruft der Text Dienst die **itfsystemlangbaritemsink:: onmenuselect** -Methode der Erweiterung auf.
-4.  Wenn [itfsource:: unadvisesink](/windows/desktop/api/msctf/nf-msctf-itfsource-unadvisesink) mit dem entsprechenden Cookie aufgerufen wird, entfernt der Text Dienst die Menü Erweiterung.
+1.  Wenn [ITfSource::AdviseSink](/windows/desktop/api/msctf/nf-msctf-itfsource-advisesink) mit IID \_ ITfSystemLangBarItemSink aufgerufen wird, muss der Textdienst die **ITfSystemLangBarItemSink-Schnittstelle** speichern und einen Cookiewert zurückgeben, der die Erweiterung identifiziert.
+2.  Wenn [ITfLangBarItemButton::InitMenu](/windows/desktop/api/Ctfutb/nf-ctfutb-itflangbaritembutton-initmenu) aufgerufen wird, ruft der Textdienst die [ITfSystemLangBarItemSink::InitMenu-Methode](/windows/desktop/api/ctfutb/nf-ctfutb-itfsystemlangbaritemsink-initmenu) der Erweiterung auf. Der Textdienst muss eine Möglichkeit implementieren, die von der Erweiterung hinzugefügten Menüelemente im Gegensatz zu den vom Textdienst selbst hinzugefügten Elementen zu identifizieren.
+3.  Wenn [ITfLangBarItemButton::OnMenuSelect](/windows/desktop/api/Ctfutb/nf-ctfutb-itflangbaritembutton-onmenuselect) mit einem Menüelementbezeichner aufgerufen wird, der zu einer Erweiterung gehört, ruft der Textdienst die **ITfSystemLangBarItemSink::OnMenuSelect-Methode** der Erweiterung auf.
+4.  Wenn [ITfSource::UnadviseSink](/windows/desktop/api/msctf/nf-msctf-itfsource-unadvisesink) mit dem entsprechenden Cookie aufgerufen wird, entfernt der Textdienst die Menüerweiterung.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Einrichten des Text Dienst-Frameworks](how-to-set-up-tsf.md)
+[Einrichten von Textdienstframework](how-to-set-up-tsf.md)
 </dt> <dt>
 
-[Sprach Leiste (Anwendungen)](language-bar-app.md)
+[Sprachleiste (Anwendungen)](language-bar-app.md)
 </dt> </dl>
 
  

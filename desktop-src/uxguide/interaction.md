@@ -1,40 +1,39 @@
 ---
 title: Interaktion
-description: Interaktion ist die unterschiedliche Art und Weise, wie Benutzer mit Ihrer APP interagieren, einschließlich berühren, Tastatur, Maus und so weiter. Verwenden Sie diese Richtlinien, um intuitive und differenzierte Benutzeroberflächen zu erstellen, die für die Berührungs Optimierung optimiert sind, aber konsistent auf Eingabegeräten funktionieren
+description: Interaktion ist die Vielzahl von Möglichkeiten, wie Benutzer mit Ihrer App interagieren, einschließlich Toucheingabe, Tastatur, Maus usw. Verwenden Sie diese Richtlinien, um intuitive und einzigartige Benutzeroberflächen zu erstellen, die für die Toucheingabe optimiert sind, aber über Eingabegeräte hinweg konsistent funktionieren.
 ms.assetid: 1509c885-f4dc-4cf9-86a3-cc6754d3b4a0
 ms.topic: article
 ms.date: 10/20/2020
-ms.openlocfilehash: fbbbed55bbee1b1b0a028bada4e9d97682d9c293
-ms.sourcegitcommit: 3bdf30edb314e0fcd17dc4ddbc70e4ec7d3596e6
+ms.openlocfilehash: 869034e8d7cc8b9d7023e1511482dae203c14b49
+ms.sourcegitcommit: 8ebcf6cd36f67f8bcf78e76ae8923d65b8995c8a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "106366540"
+ms.lasthandoff: 06/05/2021
+ms.locfileid: "111524174"
 ---
 # <a name="interaction"></a>Interaktion
 
 > [!NOTE]
-> Dieses Entwurfs Handbuch wurde für Windows 7 erstellt und wurde für neuere Versionen von Windows nicht aktualisiert. Ein Großteil der Anleitungen gilt weiterhin im Prinzip, aber die Präsentation und die Beispiele entsprechen nicht unseren [aktuellen Entwurfs Anleitungen](/windows/uwp/design/).
+> Dieser Entwurfsleitfaden wurde für Windows 7 erstellt und für neuere Versionen von Windows nicht aktualisiert. Ein Großteil der Anleitungen gilt immer noch im Prinzip, aber die Präsentation und die Beispiele spiegeln nicht unsere [aktuellen Entwurfsleitfäden](/windows/uwp/design/)wider.
 
-Interaktion ist die unterschiedliche Art und Weise, wie Benutzer mit Ihrer APP interagieren, einschließlich berühren, Tastatur, Maus und so weiter. Verwenden Sie diese Richtlinien, um intuitive und differenzierte Benutzeroberflächen zu erstellen, die für die Berührungs Optimierung optimiert sind, aber konsistent auf Eingabegeräten funktionieren
+Interaktion ist die Vielzahl von Möglichkeiten, wie Benutzer mit Ihrer App interagieren, einschließlich Toucheingabe, Tastatur, Maus usw. Verwenden Sie diese Richtlinien, um intuitive und einzigartige Benutzeroberflächen zu erstellen, die für die Toucheingabe optimiert sind, aber über Eingabegeräte hinweg konsistent funktionieren.
 
-## <a name="design-for-a-touch-first-experience"></a>Entwurf für eine Berührungs basierte Interaktion
+## <a name="design-for-a-touch-first-experience"></a>Entwurf für eine Touch-First-Erfahrung
 
-Am wichtigsten ist, dass Sie beim Entwerfen Ihrer App davon ausgehen, dass die Benutzer in erster Linie die Fingereingabe als Eingabemethode verwenden. Wenn Sie die Platt Form Steuerelemente verwenden, ist für die Unterstützung von Touchpad, Maus und Stift/Tablettstift keine zusätzliche Programmierung erforderlich, da Windows dies kostenlos bereitstellt.
+Am wichtigsten ist, dass Sie beim Entwerfen Ihrer App davon ausgehen, dass die Benutzer in erster Linie die Fingereingabe als Eingabemethode verwenden. Wenn Sie die Plattformsteuerelemente verwenden, erfordert die Unterstützung für Touchpad, Maus und Stift/Stift keine zusätzliche Programmierung, da Windows dies kostenlos bereitstellt.
 
-Bedenken Sie dabei jedoch, dass eine für Toucheingaben optimierte Benutzeroberfläche einer herkömmlichen Benutzeroberfläche nicht in jedem Fall überlegen ist. Beide bieten vor-und Nachteile, die für die Technologie und die Anwendung eindeutig sind. Bei der Umstellung auf eine Touch-First-Benutzeroberfläche ist es wichtig, die wesentlichen Unterschiede zwischen Touch (einschließlich Touchpad), Stift/Tablettstift, Maus und Tastatureingaben zu verstehen. Nehmen Sie keine vertrauten Eingabegeräte Eigenschaften und Verhaltensweisen für die Gewährung vor, da die Interaktion in Windows 8 mehr als einfach nur diese Funktionalität emuliert.
+Bedenken Sie dabei jedoch, dass eine für Toucheingaben optimierte Benutzeroberfläche einer herkömmlichen Benutzeroberfläche nicht in jedem Fall überlegen ist. Beide bieten Vor- und Nachteile, die sich auf die Technologie und die Anwendung auskennen. Bei der Umstellung auf eine Touch-First-Benutzeroberfläche ist es wichtig, die grundlegenden Unterschiede zwischen Toucheingabe (einschließlich Touchpad), Stift/Stift, Maus und Tastatureingabe zu verstehen. Nehmen Sie keine vertrauten Eingabegeräteeigenschaften und -verhaltensweisen als selbstverständlich an, da touch in Windows 8 mehr als nur diese Funktionalität emuliert.
 
-Wie Sie bald erkennen, erfordert die Berührungs Eingabe einen anderen Ansatz für den Entwurf der Benutzeroberfläche.
+Wie Sie bald feststellen werden, erfordert die Toucheingabe einen anderen Ansatz für den Benutzeroberflächenentwurf.
 
 **Vergleich der Anforderungen für Toucheingabe-Interaktionen**
 
-In dieser Tabelle werden einige der Unterschiede zwischen Eingabegeräten angezeigt, die Sie beim Entwerfen von Touchscreen-optimierten Windows Store-Apps berücksichtigen sollten.
+Diese Tabelle zeigt einige der Unterschiede zwischen Eingabegeräten, die Sie beim Entwerfen touchoptimierter Windows Store-Apps berücksichtigen sollten.
 
 
 
-|                                 |                                                                                                                                                                                                                  |                                                                                                                                                                                                                                                                                                                 |                                                     |
+| Faktor          | Toucheingabe-Interaktionen   | Interaktionen über Maus, Tastatur oder Zeichen- bzw. Eingabestift | Touchpad  |
 |---------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------|
-| **Aspekt**<br/>           | **Interaktionen per Toucheingabe**<br/>                                                                                                                                                                                | **Interaktionen über Maus, Tastatur oder Zeichen- bzw. Eingabestift**<br/>                                                                                                                                                                                                                                                         | **Touchpad**<br/>                             |
 | **Genauigkeit**<br/>        | Der Kontaktbereich einer Fingerspitze ist größer als eine einzige xy-Koordinate. Dadurch erhöht sich die Wahrscheinlichkeit, dass Befehle unbeabsichtigt aktiviert werden.<br/>                                                               | Maus und Zeichen- oder Eingabestift liefern eine präzise xy-Koordinate.<br/>                                                                                                                                                                                                                                            | Identisch mit der Maus.<br/>                           |
 |                                 | Die Form des Kontaktbereichs ändert sich während der Bewegung. <br/>                                                                                                                                       | Mausbewegungen und Striche mit Zeichen- oder Eingabestift liefern eine präzise xy-Koordinate. Die Tastatur hat einen expliziten Fokus.<br/>                                                                                                                                                                                                   | Identisch mit der Maus.<br/>                           |
 |                                 | Es gibt keinen Mauscursor, der die Zielbestimmung unterstützt.<br/>                                                                                                                                                    | Der Fokus von Mauscursor, Zeichen- oder Eingabestiftcursor und Tastatur unterstützt die Zielbestimmung.<br/>                                                                                                                                                                                                                   | Identisch mit der Maus.<br/>                           |
@@ -53,7 +52,7 @@ In dieser Tabelle werden einige der Unterschiede zwischen Eingabegeräten angeze
 
 Die indirekte Eingabe hat den Vorteil, dass sie über 25 Jahre optimiert wurde. Features wie durch Zeigen ausgelöste QuickInfos wurden als Lösung für die Erforschung der UI speziell für die Eingabe über Touchpad, Maus, Zeichen- oder Eingabestift und Tastatur entworfen. Solche UI-Funktionen wurden neu entworfen, um der umfassenden Toucheingabefunktion gerecht zu werden, ohne die Benutzererfahrung auf den anderen Geräten zu beeinträchtigen.
 
-Wir stellen hier einige allgemeine Richtlinien für die Benutzerinteraktion bereit und decken gerätespezifische Richtlinien in diesen Themen ab.
+Wir stellen hier einige allgemeine Richtlinien für die Benutzerinteraktion bereit und behandeln gerätespezifische Richtlinien in diesen Themen.
 
 -   [Toucheingabe](/windows/desktop/uxguide/inter-touch)
 -   [Maus](/windows/desktop/uxguide/inter-mouse)
@@ -61,34 +60,34 @@ Wir stellen hier einige allgemeine Richtlinien für die Benutzerinteraktion bere
 -   [Tastatur](/windows/desktop/uxguide/inter-keyboard)
 -   [Bedienungshilfen](/windows/desktop/uxguide/inter-accessibility)
 
-## <a name="visuals-for-feedback"></a>Visuelle Elemente für Feedback
+## <a name="visuals-for-feedback"></a>Visuals für Feedback
 
-Durch entsprechendes visuelles Feedback bei Interaktionen mit ihrer App können Benutzer ihre Interaktionen erkennen, erlernen und anpassen, wie ihre Interaktionen sowohl von der App als auch von dem visuellen Windows-Feedback interpretiert werden, können auf erfolgreiche Interaktionen, den Status des relaysystems, das Verbessern der Steuerung, das Verringern von Fehlern, das verstehen des System-und Eingabe Geräts und das fördern der Interaktion hinweisen.
+Geeignetes visuelles Feedback bei Interaktionen mit Ihrer App hilft Benutzern dabei, zu erkennen, zu lernen und anzupassen, wie ihre Interaktionen sowohl von der App interpretiert werden, als auch das visuelle Feedback von Windows kann auf erfolgreiche Interaktionen hinweisen, den Systemstatus weiterleiten, das Gefühl der Kontrolle verbessern, Fehler reduzieren, Benutzern helfen, das System und das Eingabegerät zu verstehen und die Interaktion zu fördern.
 
 Visuelles Feedback ist wichtig, wenn der Benutzer die Fingereingabe für Aktivitäten verwendet, bei denen Positionsgenauigkeit gefragt ist. Zeigen Sie immer Feedback an, wenn Toucheingabe erkannt wird, damit der Benutzer die von der App und den Steuerelementen definierten angepassten Zielbestimmungsregeln versteht.
 
 ## <a name="optimize-for-accuracy"></a>Optimieren der Genauigkeit
 
-Touch-Eingaben betreffen den gesamten Kontaktbereich des Fingers. Diese Kontakt Geometrie wird verwendet, um das wahrscheinlichste Zielobjekt zu ermitteln. Größe Ihrer Steuerelemente, um eine bequeme Benutzeroberfläche mit Objekten und Steuerelementen zu gewährleisten, die einfach und sicher für das Ziel sind.
+Die Toucheingabe umfasst den gesamten Kontaktbereich des Fingers. Diese Kontaktgeometrie wird verwendet, um das wahrscheinlichste Zielobjekt zu bestimmen. Dimensionieren Sie Ihre Steuerelemente, um eine komfortable Benutzeroberfläche mit Objekten und Steuerelementen sicherzustellen, die einfach und sicher als Ziel verwendet werden können.
 
-Größe, Leerraum und Position Ihrer Steuerelemente, um die Finger-und Handzeichen-oksion zu eliminieren, bei der die Benutzeroberfläche durch die Benutzerinteraktion selbst verdeckt wird.
+Größe, Platz und Position ihrer Steuerelemente, um finger- und handverdeckung zu beseitigen, wobei die Benutzeroberfläche durch die Benutzerinteraktion selbst verdeckt wird.
 
-Positions Menüs, Popups und Quick Infos über dem Kontaktbereich, wann immer dies möglich ist.
+Positionieren Sie nach Möglichkeit Menüs, Popups und QuickInfos über dem Kontaktbereich.
 
-## <a name="constrain-for-confidence"></a>Vertrauen einschränken
+## <a name="constrain-for-confidence"></a>Einschränken der Zuverlässigkeit
 
-Vermeiden oder minimieren Sie schlampigen-Interaktionen mithilfe von Benutzeroberflächen Einschränkungen.
+Vermeiden oder minimieren Sie Disketteninteraktionen mithilfe von Benutzeroberflächeneinschränkungen.
 
--   Andockpunkte können das Ende an den gewünschten Orten vereinfachen. Mit Andockpunkten werden logische Stopps im App-Inhalt festgelegt. Reaktions Punkte fungieren als Auslagerungs Mechanismus für den Benutzer und minimieren die Ermüdung durch übermäßige gleitende, Striping-oder rotieren. Mit Ihnen können Sie unpräzise Benutzereingaben behandeln und sicherstellen, dass eine bestimmte Teilmenge von Inhalts-oder Schlüsselinformationen angezeigt wird.
--   Direktionale "Rails", die die Achse der Bewegung (vertikal oder horizontal) hervorheben.
+-   Andockpunkte können das Anhalten an gewünschten Stellen vereinfachen. Mit Andockpunkten werden logische Stopps im App-Inhalt festgelegt. Kognitiv fungieren Ausrichtungspunkte als Auslagerungsmechanismus für den Benutzer und minimieren die Ermüdung durch übermäßiges Gleiten, Wischen oder Drehen. Mit ihnen können Sie unpräzise Benutzereingaben verarbeiten und sicherstellen, dass eine bestimmte Teilmenge von Inhalten oder Schlüsselinformationen angezeigt wird.
+-   Direktionale "Schienen", die die Bewegungsachse (vertikal oder horizontal) hervorheben.
 
-## <a name="avoid-timed-interactions"></a>Vermeiden von zeitgesteuerten Interaktionen
+## <a name="avoid-timed-interactions"></a>Vermeiden von zeitlichen Interaktionen
 
 Die Interaktionen sollten nicht anhand der Zeit unterschieden werden. Eine Interaktion sollte unabhängig von der Ausführungsdauer immer zum gleichen Ergebnis führen. Zeitbasierte Aktivierungen führen zu obligatorischen Verzögerungen für Benutzer und beeinträchtigen die immersive Natur der direkten Manipulation und die Wahrnehmung der Reaktion des Systems.
 
-Zeitlich festgelegte Interaktionen bestimmen normalerweise abhängig von unsichtbaren Schwellenwerten wie Zeit, Entfernung oder Geschwindigkeit, welcher Befehl ausgeführt werden soll. Zeitgesteuerte Interaktionen haben kein visuelles Feedback, bis das System die Aktion ausführt und Benutzer beliebige und unsichtbare Schwellenwerte erreichen müssen, um ein Ergebnis zu erzielen. Sofortiges visuelles Feedback bei Interaktionen weckt die Aufmerksamkeit der Benutzer und vermittelt ihnen ein Gefühl von Sicherheit und Kontrolle.
+Zeitlich festgelegte Interaktionen bestimmen normalerweise abhängig von unsichtbaren Schwellenwerten wie Zeit, Entfernung oder Geschwindigkeit, welcher Befehl ausgeführt werden soll. Zeitabhängige Interaktionen haben kein visuelles Feedback, bis das System die Aktion ausführt und Benutzer willkürliche und unsichtbare Schwellenwerte erreichen müssen, um ein Ergebnis zu erzielen. Sofortiges visuelles Feedback bei Interaktionen weckt die Aufmerksamkeit der Benutzer und vermittelt ihnen ein Gefühl von Sicherheit und Kontrolle.
 
 Interaktionen, die direkte Auswirkungen auf Objekte haben und reale Interaktionen nachahmen, sind intuitiver und leichter zu finden und zu merken. Sie sind nicht auf schwer verständliche oder abstrakte Interaktionen angewiesen.
 
-**Hinweis:** Eine Ausnahme besteht darin, dass Sie bestimmte zeitgesteuerte Interaktionen verwenden, um das Erlernen und durchsuchen zu unterstützen (z. b. Drücken und halten). Die Verwendung von geeigneten Beschreibungen und visuellen Cues hat eine große Auswirkung auf die Verwendung von erweiterten Interaktionen.
+**Hinweis:** Eine Ausnahme besteht darin, dass Sie bestimmte zeitlich festgelegte Interaktionen verwenden, um beim Lernen und Untersuchen zu helfen (z. B. drücken und halten). Die Verwendung geeigneter Beschreibungen und visueller Hinweise hat einen großen Einfluss auf die Verwendung erweiterter Interaktionen.
 

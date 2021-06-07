@@ -1,33 +1,33 @@
 ---
-description: Die Registrierung ist eine hierarchische Datenbank, die Daten enthält, die für den Betrieb von Windows und die Anwendungen und Dienste, die unter Windows ausgeführt werden, wichtig sind.
+description: Die Registrierung ist eine hierarchische Datenbank, die Daten enthält, die für den Betrieb von Windows und die unter Windows ausgeführten Anwendungen und Dienste von entscheidender Bedeutung sind.
 ms.assetid: 4ed60563-73d8-4134-8cb2-8388734fb18d
 title: Struktur der Registrierung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 28b76b7f827ae3ea96d75d089c7d874c3d31d030
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7bf104806b5e4e10b4be7387018e714a0db8bf37
+ms.sourcegitcommit: cb87082135319cbdc5df541e3071eebb83a58972
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104555543"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111386669"
 ---
 # <a name="structure-of-the-registry"></a>Struktur der Registrierung
 
-Die Registrierung ist eine hierarchische Datenbank, die Daten enthält, die für den Betrieb von Windows und die Anwendungen und Dienste, die unter Windows ausgeführt werden, wichtig sind. Die Daten sind in einem Struktur Format strukturiert. Jeder Knoten in der Struktur wird als *Schlüssel* bezeichnet. Jeder Schlüssel kann sowohl *Unterschlüssel* als auch Dateneinträge mit dem Namen *Values* enthalten. Manchmal handelt es sich bei dem vorhanden sein eines Schlüssels um alle Daten, die für eine Anwendung erforderlich sind. in anderen Zeiten öffnet eine Anwendung einen Schlüssel und verwendet die Werte, die dem Schlüssel zugeordnet sind. Ein Schlüssel kann eine beliebige Anzahl von Werten aufweisen, und die Werte können in beliebiger Form vorliegen. Weitere Informationen finden Sie unter [Registrierungs Werttypen](registry-value-types.md) und [Größenbeschränkungen für Registrierungs Elemente](registry-element-size-limits.md).
+Die Registrierung ist eine hierarchische Datenbank, die Daten enthält, die für den Betrieb von Windows und die unter Windows ausgeführten Anwendungen und Dienste von entscheidender Bedeutung sind. Die Daten sind in einem Strukturformat strukturiert. Jeder Knoten in der Struktur wird als Schlüssel *bezeichnet.* Jeder Schlüssel kann sowohl Unterschlüssel *als auch* Dateneinträge enthalten, die als Werte *bezeichnet werden.* Manchmal sind alle Daten, die eine Anwendung benötigt, das Vorhandensein eines Schlüssels. in anderen Zeiten öffnet eine Anwendung einen Schlüssel und verwendet die dem Schlüssel zugeordneten Werte. Ein Schlüssel kann eine beliebige Anzahl von Werten enthalten, und die Werte können in beliebiger Form sein. Weitere Informationen finden Sie unter [Registrierungswerttypen und](registry-value-types.md) [Größenbeschränkungen für Registrierungselemente.](registry-element-size-limits.md)
 
-Jeder Schlüssel weist einen Namen auf, der aus einem oder mehreren druckbaren Zeichen besteht. Bei Schlüsselnamen wird Groß-/Kleinschreibung nicht beachtet. Schlüsselnamen dürfen keinen umgekehrten Schrägstrich enthalten ( \) , es kann jedoch ein beliebiges anderes druckbares Zeichen verwendet werden. Wertnamen und-Daten können den umgekehrten Schrägstrich enthalten.
+Jeder Schlüssel hat einen Namen, der aus mindestens einem druckbaren Zeichen besteht. Bei Schlüsselnamen wird die Schreibung nicht beachtet. Schlüsselnamen dürfen nicht den schrägen Schrägstrich () enthalten, es können jedoch \\ beliebige andere druckbare Zeichen verwendet werden. Wertnamen und Daten können den schrägen Schrägstrich enthalten.
 
-Der Name jedes unter Schlüssels ist in Bezug auf den Schlüssel, der sich direkt oberhalb des Schlüssels in der Hierarchie befindet, eindeutig. Schlüsselnamen sind nicht in anderen Sprachen lokalisiert, auch wenn die Werte lauten.
+Der Name jedes Unterschlüssels ist in Bezug auf den Schlüssel, der sich direkt darüber in der Hierarchie befindet, eindeutig. Schlüsselnamen werden nicht in andere Sprachen lokalisiert, obwohl Werte sein können.
 
-Die folgende Abbildung ist ein Beispiel für eine Registrierungsschlüssel Struktur, die im Registrierungs-Editor angezeigt wird.
+Die folgende Abbildung zeigt eine Beispielstruktur für Registrierungsschlüssel, die vom Registrierungs-Editor angezeigt wird.
 
-![Fenster des Registrierungs-Editors](images/regtree.png)
+![Fenster "Registrierungs-Editor"](images/regtree.png)
 
-Jede Struktur unter **Arbeitsplatz** ist ein Schlüssel. Der Schlüssel **des \_ lokalen \_ HKEY** -Computers verfügt über die folgenden Unterschlüssel: **Hardware**, **Sam**, **Security**, **Software** und **System**. Alle diese Schlüssel haben wiederum Unterschlüssel. Der **Hardware** Schlüssel weist beispielsweise die Unterschlüssel **Beschreibung**, **DeviceMap** und **ResourceMap** auf. der **DeviceMap** -Schlüssel verfügt über mehrere Unterschlüssel, einschließlich **Video**.
+Jede der Strukturen unter **Arbeitsplatz** ist ein Schlüssel. Der **HKEY \_ LOCAL \_ MACHINE-Schlüssel** verfügt über die folgenden Unterschlüssel: **HARDWARE,** **SAM,** **SECURITY,** **SOFTWARE** und **SYSTEM**. Jeder dieser Schlüssel verfügt wiederum über Unterschlüssel. Beispielsweise verfügt der **HARDWARE-Schlüssel** über die Unterschlüssel **DESCRIPTION,** **DEVICEMAP** und **RESOURCEMAP.** Der **DEVICEMAP-Schlüssel** verfügt über mehrere Unterschlüssel, einschließlich **VIDEO**.
 
-Jeder Wert besteht aus einem Wertnamen und den zugehörigen Daten, sofern vorhanden. " **Maxobjectnumber** " und " **vgacompatible** " sind Werte, die Daten unter dem **Video** Unterschlüssel enthalten.
+Jeder Wert besteht aus einem Wertnamen und den zugehörigen Daten(sofern möglich). **MaxObjectNumber und** **VgaCompatible sind** Werte, die Daten unter dem **Unterschlüssel VIDEO** enthalten.
 
-Eine Registrierungs Struktur kann 512 Ebenen tief sein. Sie können bis zu 32 Ebenen gleichzeitig über einen einzigen Registrierungs-API-Aufruf erstellen.
+Eine Registrierungsstruktur kann 512 Ebenen tief sein. Sie können bis zu 32 Ebenen gleichzeitig über einen einzelnen Registrierungs-API-Aufruf erstellen.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

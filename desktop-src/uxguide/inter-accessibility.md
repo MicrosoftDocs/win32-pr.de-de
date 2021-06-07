@@ -1,349 +1,347 @@
 ---
-title: Barrierefreiheit (Entwurfs Grundlagen)
-description: Das Entwerfen von Software für Barrierefreiheit bedeutet, sicherzustellen, dass Programme und Funktionen für die größte Anzahl von Benutzern problemlos verfügbar sind, einschließlich derjenigen, die über Behinderungen und Beeinträchtigungen verfügen.
+title: Barrierefreiheit (Entwurfsgrundlagen)
+description: Das Entwerfen von Software für die Barrierefreiheit bedeutet, sicherzustellen, dass Programme und Funktionen problemlos für die breite palette von Benutzern verfügbar sind, auch für Benutzer mit Behinderungen und Beeinträchtigungen.
 ms.assetid: df6947ec-6a1d-4645-ae3e-863839c32588
 ms.topic: article
 ms.date: 10/20/2020
-ms.openlocfilehash: 559d4c18e59c63a428aca1086e57f2ba4e62ae6f
-ms.sourcegitcommit: 3bdf30edb314e0fcd17dc4ddbc70e4ec7d3596e6
+ms.openlocfilehash: e6ff3cdaa9a1a1b2a13025da14c9aed150ee3928
+ms.sourcegitcommit: 8ebcf6cd36f67f8bcf78e76ae8923d65b8995c8a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "104558567"
+ms.lasthandoff: 06/05/2021
+ms.locfileid: "111524464"
 ---
-# <a name="accessibility-design-basics"></a>Barrierefreiheit (Entwurfs Grundlagen)
+# <a name="accessibility-design-basics"></a>Barrierefreiheit (Entwurfsgrundlagen)
 
 > [!NOTE]
-> Dieses Entwurfs Handbuch wurde für Windows 7 erstellt und wurde für neuere Versionen von Windows nicht aktualisiert. Ein Großteil der Anleitungen gilt weiterhin im Prinzip, aber die Präsentation und die Beispiele entsprechen nicht unseren [aktuellen Entwurfs Anleitungen](/windows/uwp/design/).
+> Dieser Entwurfsleitfaden wurde für Windows 7 erstellt und für neuere Versionen von Windows nicht aktualisiert. Ein Großteil der Anleitungen gilt immer noch im Prinzip, aber die Präsentation und die Beispiele spiegeln nicht unsere [aktuellen Entwurfsleitfäden](/windows/uwp/design/)wider.
 
-Das Entwerfen von Software für Barrierefreiheit bedeutet, sicherzustellen, dass Programme und Funktionen für die größte Anzahl von Benutzern problemlos verfügbar sind, einschließlich derjenigen, die über Behinderungen und Beeinträchtigungen verfügen.
+Das Entwerfen von Software für die Barrierefreiheit bedeutet, sicherzustellen, dass Programme und Funktionen problemlos für die breite palette von Benutzern verfügbar sind, auch für Benutzer mit Behinderungen und Beeinträchtigungen.
 
-Die Anzahl der Benutzer, die Barrierefreiheits Funktionen unterstützen können, kann Sie überraschen. in den USA haben Umfragen beispielsweise ergeben, dass mehr als die Hälfte aller Computerbenutzer Probleme oder Beeinträchtigungen im Zusammenhang mit der Barrierefreiheit haben und wahrscheinlich von der Verwendung der zugänglichen Technologie profitieren. Darüber hinaus führt der Software Entwurf durch Flexibilität und inklusiv, die die Merkmale der Barrierefreiheit sind, häufig zu einer verbesserten Nutzbarkeit und Kundenzufriedenheit.
+Die Anzahl der Benutzer, die Barrierefreiheitsfeatures helfen können, kann Sie verdauen. Beispielsweise haben Umfragen im USA ergeben, dass mehr als die Hälfte aller Computerbenutzer Schwierigkeiten oder Beeinträchtigungen im Zusammenhang mit der Barrierefreiheit haben und wahrscheinlich von der Verwendung barrierefreier Technologien profitieren. Darüber hinaus führt die Herangehensweise an den Softwareentwurf mit der Flexibilität und Inklusion, die das Merkmal der Barrierefreiheit sind, häufig zu einer insgesamt verbesserten Benutzerfreundlichkeit und Kundenzufriedenheit.
 
-![Screenshot des Dialog Felds "Easy Access Center" ](images/inter-accessibility-image1.png)
+![Screenshot des Dialogfelds "Erleichtertes Zugreifen auf das Center" ](images/inter-accessibility-image1.png)
 
-Das in der Systemsteuerung verfügbare Easy of Access Center bietet einen zentralen Ort, an dem Benutzer die gewünschten Barrierefreiheits Features auswählen und anpassen können.
+Die Center für erleicherte Bedienung, die über Systemsteuerung verfügbar ist, bietet einen zentralen Ort, an dem Benutzer die gewünschten Barrierefreiheitsfunktionen auswählen und anpassen können.
 
-**Hinweis:** Richtlinien, die sich auf [Tastatur](inter-keyboard.md), [Maus](inter-mouse.md), [Farbe](vis-color.md)und [Sound](vis-sound.md) beziehen, werden in separaten Artikeln dargestellt.
+**Hinweis:** Richtlinien für [Tastatur,](inter-keyboard.md) [Maus,](inter-mouse.md) [Farbe](vis-color.md)und [Sound](vis-sound.md) werden in separaten Artikeln vorgestellt.
 
 ## <a name="design-concepts"></a>Entwurfskonzepte
 
-Wenn Benutzer mit Computer Hardware und-Software interagieren, kommen viele physische, perzeptive und kognitive Faktoren ins Spiel. Bevor Sie überlegen, wie Sie die Funktionen Ihres Programms leichter zugänglich machen können, erfahren Sie, welche Arten von Behinderungen und Beeinträchtigungen vorhanden sind und welche Hilfstechnologien diese Benutzer bei der Interaktion mit Computern möglicherweise bearbeiten.
+Viele physische, perzeptive und kognitive Faktoren kommen ins Spiel, wenn Benutzer mit Computerhardware und -software interagieren. Bevor Sie möglichkeiten in Betracht ziehen, die Funktionen Ihres Programms besser zugänglich zu machen, hilft es Ihnen, zu erfahren, welche Arten von Behinderungen und Beeinträchtigungen vorhanden sind und mit welchen Hilfstechnologien diese Benutzer möglicherweise arbeiten, während sie mit Computern interagieren.
 
 ### <a name="types-of-impairments"></a>Arten von Beeinträchtigungen
 
-In der folgenden Tabelle werden häufige Benutzer Behinderungen und-Beeinträchtigungen beschrieben, und es werden einige der wichtigsten Lösungen aufgelistet, die für die Barrierefreiheit von Computern verwendet werden.
+In der folgenden Tabelle werden häufige Benutzerbehinderungen und Beeinträchtigungen beschrieben. Außerdem werden einige der wichtigsten Lösungen aufgeführt, die verwendet werden, um den Zugriff auf Computer zu erleichtern.
 
 
 
-|                               |                                                                                                                                                                                                         |                                                                                                                                                                                       |
+| Wertminderung    | BESCHREIBUNG   | Lösungen  |
 |-------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Einschränkungen**<br/>     | **Beschreibung**<br/>                                                                                                                                                                              | **Lösungen**<br/>                                                                                                                                                              |
-| Grafisches Element<br/>             | Reicht von einem milden (betroffen 17 Prozent der Benutzer) bis zu einem schwerwiegenden Wert (Dies wirkt sich auf 9 Prozent der Benutzer aus)<br/>                                                                                                   | Anpassbare Vergrößerung, Farben und Kontrast Braille-Hilfsprogramme; Sprachausgaben.<br/>                                                                                       |
-| Hörvermögen<br/>            | Reicht von milden (von 18 Prozent der Benutzer betroffen) auf schwerwiegende Werte (die sich auf 2 Prozent der Benutzer auswirken).<br/>                                                                                                   | Informations Redundanz: Sound, der nur als Ergänzung zu Text oder visueller Kommunikation verwendet wird.<br/>                                                                                     |
-| Beweglichkeit<br/>          | Reicht von milden (die sich auf 19 Prozent der Benutzer auswirken) auf "schwerwiegend" (betrifft 5 Prozent der Benutzer). Diese Beeinträchtigung umfasst oft Schwierigkeiten bei der Durchführung bestimmter Motor Fertigkeiten mit Tastatur oder Maus.<br/> | Redundanz der Eingabemethode: Programm Features, auf die über die Maus-oder Tastatur Entsprechungen<br/>                                                                                       |
-| Kognitiv<br/>          | Beinhaltet Arbeitsspeicher Beeinträchtigungen und perzeptive Unterschiede. Wirkt sich auf 16 Prozent der Benutzer aus.<br/>                                                                                                         | Hochgradig anpassbare Benutzeroberfläche (UI); Verwendung von [progressiver Offenlegung](ctrl-progressive-disclosure-controls.md) zum Ausblenden der Komplexität Verwendung von Symbolen und anderen visuellen Hilfen.<br/> |
-| Geisel<br/>            | Beinhaltet visuelle Empfindlichkeit für Bewegung und blinken.<br/>                                                                                                                                        | Konservativer Ansatz zum modulieren von Schnittstellen, z. b. die Verwendung von Animationen Vermeiden von Bildschirm Flimmern im Bereich zwischen 2 Hertz (Hz) und 55 Hz.<br/>                        |
-| Sprache oder Sprache<br/> | Umfasst Probleme mit der Dyslexia-und der mündlichen Kommunikation.<br/>                                                                                                                                       | Rechtschreibprüfungs-und Grammatik Prüfungs Dienstprogramme; sprach Erkennungs-und Text-zu-Sprache-Technologie.<br/>                                                                                 |
+| Grafisches Element<br/>             | Dieser Bereich reicht von 17 Prozent der Benutzer bis hin zu schwerwiegend (9 Prozent der Benutzer).<br/>                                                                                                   | Anpassbare Vergrößerung, Farben und Kontrast; Braorte-Hilfsprogramme; Sprachausgabe.<br/>                                                                                       |
+| Hörvermögen<br/>            | Der Bereich reicht von "18 Prozent der Benutzer" bis "schwerwiegend" (2 Prozent der Benutzer).<br/>                                                                                                   | Informationsredundanz: Sound wird nur als Ergänzung zur Text- oder visuellen Kommunikation verwendet.<br/>                                                                                     |
+| Geschicklichkeit<br/>          | Der Bereich reicht von "19 Prozent der Benutzer" bis "schwerwiegend" (5 Prozent der Benutzer). Diese Beeinträchtigung bringt häufig Schwierigkeiten mit sich, bestimmte motorische Fähigkeiten mit Tastatur oder Maus auszuführen.<br/> | Eingabemethodenredundanz: Programmfeatures, auf die über Maus- oder Tastaturentsprechungen zugegriffen wird.<br/>                                                                                       |
+| Kognitiv<br/>          | Schließt Speicherbehinderung und Wahrnehmungsunterschiede ein. Betrifft 16 Prozent der Benutzer.<br/>                                                                                                         | Hochgradig anpassbare Benutzeroberfläche (UI); Verwendung der [progressiven Offenlegung,](ctrl-progressive-disclosure-controls.md) um die Komplexität auszublenden; Verwendung von Symbolen und anderen visuellen Hilfen.<br/> |
+| Beschlagnahme<br/>            | Umfasst visuelle Empfindlichkeit gegenüber Bewegung und Blinken.<br/>                                                                                                                                        | Konservativer Ansatz zum Modulieren von Schnittstellen, z. B. die Verwendung von Animationen; Vermeiden von Bildschirmflimmern im Bereich zwischen 2 Hertz (Hz) und 55 Hz.<br/>                        |
+| Sprache oder Sprache<br/> | Umfasst Schwierigkeiten bei der Kommunikation mit Derlexie und der Kommunikation.<br/>                                                                                                                                       | Rechtschreibprüfungs- und Grammatikprüfungs-Hilfsprogramme; Spracherkennung und Spracherkennungstechnologie.<br/>                                                                                 |
 
 
 
  
 
-Weitere Richtlinien zur Unterstützung von Benutzern bei diesen Beeinträchtigungen finden Sie weiter unten in diesem Artikel unter [behandeln bestimmter Beeinträchtigungen](#addressing-particular-impairments) .
+Weitere Richtlinien zur Unterstützung von Benutzern mit diesen Beeinträchtigungen finden Sie weiter unten in diesem Artikel unter [Behandeln bestimmter Beeinträchtigungen.](#addressing-particular-impairments)
 
-### <a name="types-of-assistive-technologies-and-accessibility-features"></a>Typen von Hilfstechnologien und Barrierefreiheits Features
+### <a name="types-of-assistive-technologies-and-accessibility-features"></a>Typen von Hilfstechnologien und Barrierefreiheitsfunktionen
 
 **Sprachausgabe**
 
-Eine Sprachausgabe ermöglicht es Benutzern mit visuellen Behinderungen oder Behinderungen, durch die Umwandlung von visuellen Elementen in Audiodaten durch eine Benutzeroberfläche zu navigieren. Auf diese Weise werden Benutzeroberflächen Text, Steuerelemente, Menüs, Symbolleisten, Grafiken und andere Bildschirmelemente von der Sprachausgabe der Sprachausgabe gesprochen. Um ein Programm zu erstellen, das für die Unterstützung von Bildschirmlesern optimiert ist, müssen Sie planen, wie die Sprachausgabe die einzelnen Benutzeroberflächen Elemente identifizieren soll.
+Eine Sprachausgabe ermöglicht Benutzern mit Sehbehinderung oder Beeinträchtigungen die Navigation auf einer Benutzeroberfläche durch Transformieren von Visuals in Audio. Daher werden Benutzeroberflächentext, Steuerelemente, Menüs, Symbolleisten, Grafiken und andere Bildschirmelemente von der computerisierten Stimme der Sprachausgabe gesprochen. Um ein Programm zu erstellen, das für die Sprachausgabe-Hilfstechnologie optimiert ist, müssen Sie planen, wie die Sprachausgabe jedes Benutzeroberflächenelement identifiziert.
 
-Jedes Benutzeroberflächen Element, mit dem der Benutzer interagieren kann, muss Tastatur zugänglich sein und über eine Barrierefreiheit-Anwendungsprogrammierschnittstelle (Application Programming Interface, API) verfügbar gemacht werden. Wir empfehlen die Verwendung von Benutzeroberflächen Automatisierung, das neue Barrierefreiheits Framework für alle Versionen von Microsoft Windows, die Windows Presentation Foundation (WPF) unterstützen. Die Benutzeroberflächen Automatisierung ermöglicht den programmgesteuerten Zugriff auf die meisten Elemente auf dem Desktop, sodass Hilfstechnologieprodukte, z. b. Bildschirm Sprachausgaben, Informationen zur Benutzeroberfläche für Benutzer bereitstellen und die Benutzeroberfläche auf andere Weise als Standard Eingaben ändern können (z. b. durch sprechen anstelle von oder zusätzlich zur Bearbeitung der Maus oder Tastatur). Weitere Informationen finden Sie unter [Übersicht über die Benutzeroberflächen Automatisierung](/dotnet/framework/ui-automation/ui-automation-overview).
+Jedes Benutzeroberflächenelement, mit dem der Benutzer interagieren kann, muss über die Tastatur zugänglich sein und über eine Barrierefreiheits-API (Application Programming Interface, Anwendungsprogrammierschnittstelle) verfügbar gemacht werden. Es wird empfohlen, Benutzeroberflächenautomatisierung zu verwenden, das neue Barrierefreiheitsframework für alle Versionen von Microsoft Windows, die Windows Presentation Foundation (WPF) unterstützen. Benutzeroberflächenautomatisierung bietet programmgesteuerten Zugriff auf die meisten Elemente auf dem Desktop, sodass Hilfstechnologieprodukte wie Sprachausgaben Benutzern Informationen über die Benutzeroberfläche bereitstellen und die Benutzeroberfläche mit anderen Mitteln als Standardeingaben bearbeiten können (z. B. durch Sprechen statt oder zusätzlich zum Bearbeiten der Maus oder Tastatur). Weitere Informationen finden Sie in der [Benutzeroberflächenautomatisierung Übersicht.](/dotnet/framework/ui-automation/ui-automation-overview)
 
-Beachten Sie, dass die Bildschirm Sprachausgabe zwar eine sehr wichtige Hilfstechnologie ist, aber auch andere. Weitere Informationen zu den verfügbaren Technologien finden Sie unter [Typen von Hilfstechnologieprodukten](https://www.microsoft.com/enable/at/types.aspx).
+Beachten Sie, dass Sprachausgaben zwar eine sehr wichtige Hilfstechnologie sind, es aber auch andere gibt. Weitere Informationen zu den verfügbaren Technologien finden Sie unter [Typen von Hilfstechnologieprodukten.](https://www.microsoft.com/enable/at/types.aspx)
 
 **Spracherkennung**
 
-Die Spracherkennung ist ein Barrierefreiheits Feature in Windows, das es Benutzern ermöglicht, per Spracheingabe mit ihren Computern zu interagieren, was die Notwendigkeit einer Motor Interaktion mit der Maus oder Tastatur reduziert. Benutzer können Dokumente und e-Mails vorschreiben, Sprachbefehle verwenden, um zwischen Programmen zu starten und zwischen diesen zu wechseln, das Betriebssystem zu steuern und sogar Formulare im Web auszufüllen.
+Die Spracherkennung ist ein Barrierefreiheitsfeature in Windows, mit dem Benutzer per Sprache mit ihren Computern interagieren können, wodurch die Notwendigkeit einer motorischen Interaktion mit der Maus oder Tastatur reduziert wird. Benutzer können Dokumente und E-Mails vorgeben, Sprachbefehle zum Starten und Wechseln zwischen Programmen verwenden, das Betriebssystem steuern und sogar Formulare im Web ausfüllen.
 
 **Bildschirmlupe**
 
-Die Vergrößerung unterstützt Benutzer mit Sehfähigkeit durch die Vergrößerung von Elementen auf dem Bildschirm von 2 bis zum 16-fachen des Originals. Benutzer können diese Funktion festlegen, um die Maus zu verfolgen (um eine vergrößerte Version anzuzeigen, auf die die Maus zeigt), die Tastatur (um den Bereich anzuzeigen, in dem sich der Zeiger bei der Tabstopps bewegt) oder die Textbearbeitung (um zu sehen, was Sie typisieren).
+Die Vergrößerung hilft Benutzern mit sehbehinderung, indem Elemente auf dem Bildschirm an einer beliebigen Stelle zwischen dem 2- und dem 16-fachen des Originals vergrößert werden. Benutzer können dieses Feature so festlegen, dass die Maus nachverfolgt wird (um eine vergrößerte Version des Mauszeigers anzuzeigen), die Tastatur (um den Bereich zu sehen, in dem sich der Zeiger beim Tabstopp bewegt), oder die Textbearbeitung (um zu sehen, was sie eingeben).
 
 **Visuelle Einstellungen und Farbschemas**
 
-Benutzer mit visueller Beeinträchtigung können nicht nur die Dinge auf dem Bildschirm vergrößern, sondern auch von Systemeinstellungen wie dem [Modus für hohe Kontraste](glossary.md) oder der Möglichkeit zum Anpassen von Hintergrund-und Vordergrund Farbschemas profitieren.
+Benutzer mit Sehbehinderung können nicht nur die Bildschirmfläche vergrößern, sondern auch von Systemeinstellungen wie dem Modus mit [hohem Kontrast](glossary.md) oder der Möglichkeit, Hintergrund- und Vordergrundfarbschemas anzupassen.
 
 **Narrator**
 
-Die Sprachausgabe ist eine herunter skalierte Bildschirmausgabe in Windows, mit der Benutzer auf dem Bildschirm Text und UI-Elemente lesen können, auch wenn einige Ereignisse (einschließlich Fehlermeldungen), die spontan auftreten, angezeigt werden. Der Benutzer kann die Sprachausgabe Menüs hören, ohne das aktive Fenster zu belassen.
+Die Sprachausgabe ist eine herunterskalierte Sprachausgabe in Windows, mit der Benutzer Text auf dem Bildschirm und Benutzeroberflächenelemente laut vorlesen können, einschließlich einiger Ereignisse (einschließlich Fehlermeldungen), die unaufhörlich auftreten. Der Benutzer kann die Sprachausgabemenüs hören, ohne das aktive Fenster zu verlassen.
 
-![Screenshot des Dialog Felds "Microsoft-Sprachausgabe" ](images/inter-accessibility-image2.png)
+![Screenshot des Dialogfelds "Microsoft-Sprachausgabe" ](images/inter-accessibility-image2.png)
 
 Benutzer können den Umfang anpassen, in dem die Microsoft-Sprachausgabe verwendet wird.
 
 **Bildschirmtastatur**
 
-Für Benutzer, die Probleme mit physischen Tastaturen haben und ein alternatives Eingabegerät wie z. b. einen Switch verwenden müssen, sind Bildschirmtastatur erforderlich. Benutzer können Schlüssel mit der Maus oder einem anderen Zeigegerät, einer kleinen Gruppe von Schlüsseln oder nur einem Schlüssel auswählen, je nachdem, wie Sie die Bildschirmtastatur einrichten.
+Für Benutzer, die Probleme mit physischen Tastaturen haben und ein alternatives Eingabegerät wie einen Schalter verwenden müssen, sind Bildschirmtastaturen erforderlich. Benutzer können Schlüssel mit der Maus oder einem anderen zeigenden Gerät, einer kleinen Gruppe von Tasten oder nur einer Taste auswählen, je nachdem, wie Sie die Bildschirmtastatur einrichten.
 
 **Tastaturmaus**
 
-Wenn Maustasten aktiviert sind, können Benutzer, die die Tastatur bevorzugen, mithilfe der Pfeiltasten auf der numerischen Tastatur den Mauszeiger bewegen.
+Wenn Maustasten aktiviert sind, können Benutzer, die die Tastatur bevorzugen, die Pfeiltasten auf der numerischen Tastatur verwenden, um den Mauszeiger zu bewegen.
 
-Eine umfassende Liste der Barrierefreiheits Funktionen finden Sie unter [Barrierefreiheit in Windows Vista](https://www.microsoft.com/enable/products/windowsvista/default.aspx) auf der Microsoft-Website.
+Eine vollständige Liste der Barrierefreiheitsfunktionen finden Sie auf der Microsoft-Website unter [Barrierefreiheit in Windows Vista.](https://www.microsoft.com/enable/products/windowsvista/default.aspx)
 
-### <a name="keyboard-based-navigation"></a>Tastatur basierte Navigation
+### <a name="keyboard-based-navigation"></a>Tastaturbasierte Navigation
 
-Die Tab-Taste, Pfeiltasten, Leertaste und EINGABETASTE sind wichtig für die Tastatur basierte Navigation. Beim Drücken der Tab-Taste wird der [Eingabefokus](glossary.md) durch die verschiedenen Steuerelement Gruppen und durch Drücken der Pfeiltasten innerhalb eines Steuer Elements oder zwischen Steuerelementen innerhalb einer Gruppe verschoben. Das Drücken der Leertaste ist das gleiche wie das Klicken auf das Steuerelement mit dem Eingabefokus, während das Drücken der EINGABETASTE mit dem Klicken auf die Standard Befehls Schaltfläche oder den Befehls Link identisch ist.
+Tabulatortaste, Pfeiltaste, Leertaste und EINGABETASTE sind wichtig für die tastaturbasierte Navigation. Durch Drücken der TAB-TASTE wird der [Eingabefokus](glossary.md) durch die verschiedenen Steuerelementgruppen gekreist, und die Pfeiltasten werden innerhalb eines Steuerelements oder zwischen Steuerelementen innerhalb einer Gruppe bewegt. Das Drücken der Leertaste entspricht dem Klicken auf das Steuerelement mit dem Eingabefokus, während das Drücken der EINGABETASTE dem Klicken auf die Standardbefehlsschaltfläche oder den Befehlslink entspricht, unabhängig vom Eingabefokus.
 
-![Screenshot des Dialog Felds "Leerer Papierkorb" ](images/inter-accessibility-image3.png)
+![Screenshot des Dialogfelds "Leerer Papierkorb" ](images/inter-accessibility-image3.png)
 
-In diesem Beispiel können Benutzer die Tab-Taste drücken, bis die gewünschte Option den Eingabefokus besitzt, und dann die EINGABETASTE drücken, um das Objekt zu öffnen.
+In diesem Beispiel können Benutzer die TAB-TASTE drücken, bis die gewünschte Option den Eingabefokus besitzt, und dann die EINGABETASTE drücken, um das Objekt zu öffnen.
 
 ### <a name="access-keys"></a>Zugriffsschlüssel
 
-Mit Zugriffs Schlüsseln können Benutzeroptionen auswählen und Befehle direkt initiieren, ohne zuerst zum Steuerelement navigieren zu müssen. Zugriffsschlüssel werden durch das unterstreichen eines der Zeichen in der Bezeichnung des Steuer Elements angegeben. Benutzer aktivieren dann die Option oder den Befehl, indem Sie die Alt-Taste und das unterstrichene Zeichen drücken. Bei Zugriffs Schlüsseln wird die Groß-/Kleinschreibung
+Mit Zugriffsschlüsseln können Benutzer Optionen auswählen und Befehle direkt initiieren, ohne zuerst zum Steuerelement navigieren zu müssen. Zugriffsschlüssel werden durch Unterstriche eines der Zeichen in der Bezeichnung jedes Steuerelements angegeben. Benutzer aktivieren dann die Option oder den Befehl, indem sie die ALT-TASTE zusammen mit dem unterstrichenen Zeichen drücken. Bei Zugriffsschlüsseln wird die Groß-/Kleinschreibung nicht beachtet.
 
-![Screenshot des Menüs "Datei" und "Zugriffsschlüssel" ](images/inter-accessibility-image4.png)
+![Screenshot des Dateimenüs und der Zugriffsschlüssel ](images/inter-accessibility-image4.png)
 
-Wenn Sie in diesem Beispiel ALT + O drücken, wird der Befehl "Öffnen" aktiviert.
+In diesem Beispiel wird durch Drücken von ALT+O der Befehl Öffnen aktiviert.
 
-Die Auswahl logischer Zugriffsschlüssel für Steuerelemente stellt in der Regel keine Schwierigkeit dar. Je mehr Steuerelemente in einem Fenster vorhanden sind, desto größer ist jedoch die Möglichkeit, die Zugriffsschlüssel Optionen zu überschreiten. Weisen Sie in diesem Fall der Steuerungsgruppe anstelle der einzelnen einzelnen Zugriffstasten zu.
+Die Auswahl logischer Zugriffsschlüssel für Steuerelemente stellt in der Regel keine Schwierigkeiten dar. Je mehr Steuerelemente in einem Fenster vorhanden sind, desto größer ist jedoch die Wahrscheinlichkeit, dass Ihnen die Auswahl von Zugriffsschlüsseln ausgeht. Weisen Sie in diesem Fall Zugriffsschlüssel zu Steuerelementgruppen zu, anstatt jeder einzelnen Gruppe zuzuweisen.
 
-![Screenshot von Steuerelement Gruppen und Zugriffs Schlüsseln ](images/inter-accessibility-image5.png)
+![Screenshot von Steuerelementgruppen und Zugriffsschlüsseln ](images/inter-accessibility-image5.png)
 
-In diesem Beispiel werden Zugriffsschlüssel Steuerungsgruppen anstelle einzelner Steuerelemente zugewiesen.
+In diesem Beispiel werden Zugriffsschlüssel Steuerelementgruppen und nicht einzelnen Steuerelementen zugewiesen.
 
-Zugriffsschlüssel werden oft mit Tastenkombinationen verwechselt, aber Tastenkombinationen werden von Zugriffs Schlüsseln anders zugewiesen und weisen unterschiedliche Ziele auf. Beispielsweise verwenden Tastenkombinationen STRG und Funktions schlüsselsequenzen und dienen in erster Linie als Verknüpfung für fortgeschrittene Benutzer anstelle von für die Barrierefreiheit.
+Zugriffsschlüssel werden häufig mit Tastenkombinationen verwechselt, aber Tastenkombinationen werden anders zugewiesen als Zugriffsschlüssel und haben unterschiedliche Ziele. Tastenkombinationen verwenden beispielsweise STRG- und Funktionstastensequenzen und sind in erster Linie als Tastenkombination für fortgeschrittene Benutzer und nicht für Barrierefreiheit vorgesehen.
 
 Weitere Informationen finden Sie unter [Tastatur](inter-keyboard.md).
 
-### <a name="designing-for-accessibility-three-fundamental-practices"></a>Entwerfen für Barrierefreiheit: drei grundlegende Vorgehensweisen
+### <a name="designing-for-accessibility-three-fundamental-practices"></a>Entwerfen für Barrierefreiheit: drei grundlegende Methoden
 
-Barrierefreie Programme helfen allen Benutzern auf irgendeine Weise, da sich die Ziele von Barrierefreiheit und Nutzbarkeit überlappen. Beispielsweise sind Features, die für fortgeschrittene Benutzer so effizient wie möglich entwickelt wurden, auch für Benutzer vorteilhaft, die die Tastatur aufgrund der Beweglichkeit-Beeinträchtigung verwenden möchten.
+Barrierefreie Programme unterstützen alle Benutzer in irgendeiner Weise, da sich die Ziele von Barrierefreiheit und Benutzerfreundlichkeit überschneiden. Features, die erweiterte Benutzer so effizient wie möglich gestalten sollen, profitieren beispielsweise auch von Benutzern, die die Tastatur aufgrund einer Beeinträchtigung der Dexterität bevorzugen.
 
-Drei grundlegende Vorgehensweisen helfen Ihnen beim barrierefreien Entwurf: ermöglichen Sie eine gewisse Flexibilität in der Benutzeroberfläche, nehmen Sie in Bezug auf die Benutzer Anforderungen und-Einstellungen eine wichtige Rolle bei Entwurfsentscheidungen, und ermöglichen Sie den programmgesteuerten Zugriff auf Ihre Benutzeroberfläche.
+Drei grundlegende Methoden helfen Ihnen beim barrierefreien Entwurf: Ermöglichen Sie ein gewisses Maß an Flexibilität in Ihrer Benutzeroberfläche, lassen Sie die Beachtung der Benutzeranforderungen und -einstellungen eine wichtige Rolle bei Entwurfsentscheidungen spielen, und bieten Sie programmgesteuerten Zugriff auf Ihre Benutzeroberfläche.
 
-**Bereitstellen flexibler Benutzeroberflächen**
+**Bereitstellen einer flexiblen Benutzeroberfläche**
 
-Barrierefreiheits Entwurf ist zumindest teilweise die Möglichkeit, Benutzern Auswahlmöglichkeiten zu bieten. Keine frustrierenden, nicht sehr vielfältigen Auswahlmöglichkeiten, sondern eine begrenzte Anzahl von Optionen, die die Benutzer Anforderungen Intelligent erwartet. "Möchten Sie die Navigation nicht mit der Maus durchlaufen? Hier können Sie mit der Tastatur genau die gleichen Aktionen ausführen. Sie möchten keine physischen Tastaturen? Hier ist ein virtuelles, das Sie auf dem Bildschirm verwenden können. "
+Beim barrierefreien Entwurf geht es zumindest teilweise darum, Benutzern Auswahlmöglichkeiten zu geben. Kein frustrierendes, heiteres Auswahlarray, sondern eine begrenzte Anzahl von Auswahlmöglichkeiten, die die Benutzeranforderungen intelligent antizipieren. "Möchten Sie nicht mit der Maus navigieren? Hier können Sie die gleichen Dinge nur über die Tastatur durchführen. Möchten Sie keine physischen Tastaturen? Hier ist ein virtueller Computer, den Sie auf dem Bildschirm verwenden können."
 
-Stellen Sie z. b. Flexibilität wie folgt bereit:
+Bieten Sie z. B. Flexibilität durch Folgendes:
 
--   Bereitstellen von auswählbaren Entsprechungen für nicht-Text-Elemente (z. b. alt-Text für Grafiken und Beschriftungen für Audiodaten).
+-   Bereitstellen von vom Benutzer auswählbaren Entsprechungen für Nicht-Textelemente (z. B. alternativer Text für Grafiken und Untertitel für Audio).
 
-    ![Screenshot der Anmelde Schaltfläche](images/inter-accessibility-image6.png)
+    ![Screenshot der Anmeldeschaltfläche](images/inter-accessibility-image6.png)
 
-    ![Screenshot von alt-Text für Anmelde Schaltfläche](images/inter-accessibility-image7.png)
+    ![Screenshot des ALT-Texts für die Anmeldeschaltfläche](images/inter-accessibility-image7.png)
 
-    Benutzer, die sich für das Rendering von Grafiken entschieden haben, sollten stattdessen ALT-Text sehen und beschreiben, wie das Steuerelement funktioniert und wie Sie damit interagieren.
+    Benutzer, die keine Grafiken rendern möchten, sollten stattdessen den alten Text sehen und beschreiben, was das Steuerelement tut und wie mit ihm interagiert werden soll.
 
--   Bereitstellen von Alternativen für Farbe (z. b. Symbol Differenzierung oder Verwendung von Sounds).
+-   Bereitstellung von Alternativen zur Farbe (z. B. Symboldifferenzierung oder Verwendung von Sounds).
 
-    ![Screenshot der Symbole in Graustufen (Graustufen) ](images/inter-accessibility-image8.png)
+    ![Screenshot von Symbolen in Graustufen (Graustufen) ](images/inter-accessibility-image8.png)
 
-    In diesem Beispiel können die Standardsymbole basierend auf ihren Entwürfen leicht unterschieden werden.
+    In diesem Beispiel sind die Standardsymbole anhand ihrer Entwürfe leicht zu unterscheiden.
 
--   Sicherstellen des Tastatur Zugriffs (z. b. ein Tabstopp für jedes interaktive Steuerelement), sodass Benutzer die gleichen Elemente in Ihrem Programm mit der Maus oder der Tastatur erreichen können.
--   Stellen Sie sicher, dass Ihr Programm gute Farbkontrast Optionen für Benutzer bietet. Windows stellt eine Option für hohe Kontraste dar, ist aber eigentlich als Lösung für eine strenge visuelle Beeinträchtigung konzipiert. Andere Kontrast Optionen bieten den Benutzern am besten eine milde Beeinträchtigung, z. b. eine geringe Sehfähigkeit und Farbenblindheit.
--   Sicherstellen, dass Benutzer die Größe des Texts in der Benutzeroberfläche des Programms anpassen können (z. b. über ein Schieberegler-Steuerelement oder ein Dropdown Feld für die Schriftgröße). Wenn möglich, unterstützen Sie den Modus für hohe Punkte pro Zoll (dpi).
--   Stellen Sie sicher, dass das Programm Multimodal ist, d. h., wenn der primäre Modus des Programms für einige nicht zugänglich ist, haben diese Benutzer eine Möglichkeit, das Problem zu umgehen. Wenn Animation z. b. angezeigt wird, sollten die Informationen in mindestens einem nicht animierten Präsentationsmodus mit der Option des Benutzers angezeigt werden.
+-   Sicherstellen des Tastaturzugriffs (z. B. ein Tabstopp für jedes interaktive Steuerelement), damit Benutzer die gleichen Aufgaben in Ihrem Programm mit der Maus oder der Tastatur ausführen können.
+-   Stellen Sie sicher, dass Ihr Programm gute Farbkontrastoptionen für Benutzer bietet. Windows bietet eine Option mit hohem Kontrast, die jedoch als Lösung für schwerwiegende Sehbehinderung konzipiert ist. Andere Kontrastoptionen sind für Benutzer mit sehbehinderter Sehfähigkeit und Farbblindheit am besten geeignet.
+-   Stellen Sie sicher, dass Benutzer die Größe des Texts auf der Benutzeroberfläche Ihres Programms anpassen können (z. B. über ein Schieberegler-Steuerelement oder ein Dropdownfeld für den Schriftgrad). Unterstützen Sie nach Möglichkeit den DPI-Modus (High Dots per Inch).
+-   Stellen Sie sicher, dass Ihr Programm ein paarfach ist. Dies bedeutet, dass diese Benutzer eine Möglichkeit haben, das Problem zu umgehen, wenn auf den primären Modus des Programms für einige Benutzer nicht zugegriffen werden kann. Wenn z. B. Animationen angezeigt werden, sollten die Informationen in mindestens einem nicht animierten Präsentationsmodus auf der Option des Benutzers angezeigt werden können.
 
-Multimodale Schnittstellen und flexible Navigation bieten dem Benutzer im Grunde die Architektur der Informations Redundanz. Redundanz verfügt manchmal über negative-und-Einschränkungen. Beispielsweise wird in Benutzeroberflächen Text empfohlen, Redundanz zu entfernen, um das Leseverhalten zu optimieren. Im Kontext der Barrierefreiheit werden Redundanz jedoch positive, ausfallsichere Mechanismen und Erfahrungen mit sich bringen.
+Über die schnittstellenischen Schnittstellen und die flexible Navigation verfügen Benutzer im Wesentlichen über die Architektur der Informationsredundanz. Redundanz weist manchmal negative Konnotationen auf. Im Text der Benutzeroberfläche empfiehlt es sich beispielsweise, redundanz zu entfernen, um die Leseerfahrung zu optimieren. Im Kontext der Barrierefreiheit stellt redundanz jedoch positive, ausfallsichere Mechanismen und Erfahrungen in Verbindung.
 
 **Berücksichtigen Ihrer Benutzer**
 
-Im Allgemeinen ist das Leitprinzip wichtig, um barrierefreie Programme zu entwerfen. Selbst als intellektueller Übung sollten Sie sich vorstellen, wie Sie Ihr Programm als Benutzer, der deaktiviert ist, kennenlernen müssen. Nehmen Sie sich die Zeit, die UI-Bildschirme im Modus mit hohem Kontrast und bei verschiedenen Auflösungen zu testen, um sicherzustellen, dass die Benutzeroberfläche für Benutzer mit Sehbehinderung eine gute Lösung ist Testen Sie den Tastatur Zugriff, indem Sie das Kontrollkästchen **Tastenkombinationen und Zugriffstasten unterstreichen** im System Steuerungselement Easy of Access Center aktivieren (damit Zugriffstasten immer sichtbar sind). Sie können sogar über strikte Tests hinausgehen, indem Sie Entwicklern und Designern, die eine natürliche Eignung aufweisen, mit anderen Personen beginnen, damit zu beginnen.
+Die Beachtung als allgemeines Leitprinzip ist für das Entwerfen barrierefreier Programme von entscheidender Bedeutung. Stellen Sie sich auch als geistige Übung vor, wie es aussehen muss, um Ihr Programm als benutzeraktiven Benutzer zu erleben. Nehmen Sie sich zeit, Ui-Bildschirme im Modus mit hohem Kontrast und mit verschiedenen Auflösungen zu testen, um sicherzustellen, dass die Benutzeroberfläche für Benutzer mit Sehbehinderung gut geeignet ist. Testen Sie den Tastaturzugriff, indem Sie das Kontrollkästchen **Tastenkombinationen und Zugriffsschlüssel unterstrichen** im Center für erleicherte Bedienung Systemsteuerung Element aktivieren (damit die Zugriffsschlüssel immer sichtbar sind). Sie können sogar über strenge Tests hinausgehen, indem Sie Entwickler und Designer einstellen, die eine natürliche Fähigkeit haben, sich mit anderen zu beschäftigen.
 
-Sie sollten auch die folgenden Schritte veranschaulichen:
+Außerdem sollten Sie dies durch Dies sollten Sie beachten:
 
--   Verwenden von systemweiten Einstellungen (z. b. System Farbe) anstelle von hardverdrahtungs Einstellungen für das jeweilige Programm. Beachten Sie nicht nur die Parameter, die Benutzer speziell für die Interaktion mit ihren Programmen ausgewählt haben, sondern auch Barrierefreiheits Funktionen, die in das Betriebssystem integriert sind, das der Benutzer unabhängig von dem Programm, das Sie verwenden, in Kraft setzen möchten. Weitere Informationen finden Sie unter Informationen [zu Windows-Barrierefreiheits Funktionen](/previous-versions//ms695605(v=vs.85)).
--   Bevorzugen allgemeiner Steuerelemente für benutzerdefinierte Steuerelemente, da gängige Steuerelemente bereits die Windows-Barrierefreiheits-APIs implementiert haben.
--   Dokumentieren aller Optionen und Features für die Barrierefreiheit (z. b. alle Tastenkombinationen). Benutzer mit Beeinträchtigungen sind stark motiviert, Barrierefreiheits Features zu entdecken, und erwarten häufig, dass umfassende Informationen in der Hilfe gesammelt werden.
--   Erstellen einer zugänglichen Dokumentation in zugänglichen Formaten. Folglich sollte die Dokumentation selbst dieselben Zugriffsregeln wie die primäre Benutzeroberfläche einhalten, einschließlich der Möglichkeit, die Schriftart Größe zu vergrößern, die Verwendung von alt-Text für Grafiken und redundante Informationsarchitektur (z. b. die Verwendung von Farbcodierung als Ergänzung zu Text).
+-   Verwenden von systemweiten Einstellungen (z. B. Systemfarbe) anstelle von Hartverkabelungseinstellungen für Ihr bestimmtes Programm. Berücksichtigen Sie nicht nur die Parameter, die Benutzer speziell für die Interaktion mit ihren Programmen ausgewählt haben, sondern auch die in das Betriebssystem integrierten Barrierefreiheitsfunktionen, die der Benutzer unabhängig davon, welches Programm er verwendet, in Kraft setzen möchte. Weitere Informationen finden Sie unter [Informationen zu Windows-Barrierefreiheitsfunktionen.](/previous-versions//ms695605(v=vs.85))
+-   Bevorzugen von allgemeinen Steuerelementen zu benutzerdefinierten Steuerelementen, da allgemeine Steuerelemente bereits die Windows-Barrierefreiheits-APIs implementiert haben.
+-   Dokumentieren aller Barrierefreiheitsoptionen und -features (z. B. alle Tastenkombinationen). Benutzer mit Beeinträchtigungen sind stark daran interessiert, Barrierefreiheitsfeatures zu entdecken, und erwarten häufig, dass umfassende Informationen in der Hilfe gesammelt werden.
+-   Erstellen einer barrierefreien Dokumentation in barrierefreien Formaten. Daher sollte die Dokumentation selbst die gleichen Regeln für die Barrierefreiheit wie die primäre Benutzeroberfläche einhalten, einschließlich der Möglichkeit, den Schriftgrad zu vergrößern, der Verwendung von alt geschriebenen Text für Grafiken und der redundanten Informationsarchitektur (z. B. die Verwendung von Farbcodierung nur als Ergänzung zu Text).
 
-In Softwareprodukten kann sich der Benutzer in Bezug auf Nutzbarkeit und Marktforschung, in effizienten Supportdiensten und Dokumentationen und natürlich in Entwurfsentscheidungen nicht mit der Unterstützung der Benutzer in Zusammenhang bringen. Wenn Sie sich z. b. in Bezug auf das Design für fortgeschrittene Benutzer Gedanken machen: haben Sie diese neue Funktion in, da Sie Sie möchten, oder weil Sie wissen, dass Ihre fortgeschrittenen Benutzer Sie gefragt haben? Der letztere Fall gibt an, dass der Entwurf für die Entscheidungsfindung durch den Wert von "Achtung" gut informiert ist.
+Bei Softwareprodukten kann sich die Beachtung der Benutzer in Benutzerfreundlichkeit und Marktforschung, in mühsamen Supportdiensten und Dokumentationen und natürlich in Entwurfsentscheidungen manifestieren. Denken Sie beispielsweise noch einmal an den Entwurf für fortgeschrittene Benutzer: Setzen Sie dieses innovative neue Feature in ein, weil Sie es wünschen, oder weil Sie wissen, dass Ihre erweiterten Benutzer nach ihm gefragt haben? Der zweite Fall gibt an, dass Ihr Entscheidungsfindungsprozess für den Entwurf durch den Wert der Beachtung gut informiert ist.
 
-**Bereitstellen von programmgesteuerten**
+**Bereitstellen von programmgesteuertem Zugriff**
 
-Das Bereitstellen des programmgesteuerten Zugriffs auf die Benutzeroberfläche ist unverzichtbar, damit Hilfstechnologien (z. b. Bildschirm Sprachausgaben, Alternative Eingabegeräte und sprach Erkennungs Programme) den Bildschirm für die Benutzer richtig interpretieren. Indem Sie einen "Map" der einzelnen UI-Bildschirme im Programm erstellen, stellen Sie ihn für Benutzer von Hilfstechnologien zur Verfügung.
+Die Bereitstellung von programmgesteuertem Zugriff auf die Benutzeroberfläche ist von entscheidender Bedeutung, damit Hilfstechnologien (z. B. Sprachausgaben, alternative Eingabegeräte und Spracherkennungsprogramme) den Bildschirm für ihre Benutzer richtig interpretieren. Indem Sie eine "Karte" der einzelnen Benutzeroberflächenbildschirme in Ihrem Programm erstellen, stellen Sie sie Benutzern von Hilfstechnologien zur Verfügung.
 
-Gehen Sie dazu wie folgt vor:
+Gehen Sie wie folgt vor, um dies zu tun:
 
--   Aktivieren des programmgesteuerten Zugriffs auf alle Elemente der Benutzeroberfläche und auf Text (z. b. über die Active Accessibility com-Schnittstelle, [**IAccessible**](/windows/desktop/api/oleacc/nn-oleacc-iaccessible)).
--   Platzieren von Namen (oder Titeln) und Beschreibungen auf Benutzeroberflächen Objekte, Frames und Seiten (z. b. mit der Eigenschaft " [**IAccessible**](/windows/desktop/api/oleacc/nn-oleacc-iaccessible) Name").
--   Sicherstellen, dass programmgesteuerte Ereignisse von allen Benutzeroberflächen Aktivitäten ausgelöst werden (z. b. bei Fokus Ereignissen für alle UI-Aktivitäten, die die Fokus Bewegung betreffen
+-   Aktivieren des programmgesteuerten Zugriffs auf alle Benutzeroberflächenelemente und Text (z. B. mithilfe der Active Accessibility COM-Schnittstelle, [**IAccessible**](/windows/desktop/api/oleacc/nn-oleacc-iaccessible)).
+-   Platzieren von Namen (oder Titeln) und Beschreibungen auf Benutzeroberflächenobjekten, Frames und Seiten (z. B. mithilfe der [**IAccessible**](/windows/desktop/api/oleacc/nn-oleacc-iaccessible) Name-Eigenschaft).
+-   Sicherstellen, dass programmgesteuerte Ereignisse von allen Benutzeroberflächenaktivitäten ausgelöst werden (z. B. Fokusereignisse für alle Aktivitäten der Benutzeroberfläche mit Fokusbewegung).
 
 **Wenn Sie nur vier Dinge tun...**
 
-1.  Stellen Sie sicher, dass jeder Benutzer das volle Potenzial des Programms nutzen kann.
-2.  Stellen Sie sich den Barrierefreiheit als Gelegenheit für eine kreative Problembehebung vor, und eine weitere Möglichkeit, die Gesamt Benutzer Zufriedenheit zu erhöhen.
-3.  Beachten Sie die Systemeinstellungen.
+1.  Stellen Sie sicher, dass jeder Benutzer das volle Potenzial Ihres Programms nutzen kann.
+2.  Stellen Sie sich Barrierefreiheit als Chance für die lösungsintensiver Probleme und eine weitere Möglichkeit vor, die Benutzerzufriedenheit insgesamt zu steigern.
+3.  Berücksichtigen Sie die Systemeinstellungen.
 4.  Verwenden Sie nach Möglichkeit allgemeine Steuerelemente.
 
 ## <a name="guidelines"></a>Richtlinien
 
 ### <a name="general"></a>Allgemein
 
--   **Stören oder deaktivieren Sie die aktivierten Funktionen des Betriebssystems oder anderer Produkte, die als Barrierefreiheits Features identifiziert werden.** Sie können diese Features identifizieren, indem Sie sich auf die Dokumentation des betreffenden Betriebssystems oder des betreffenden Produkts beziehen.
--   **Erzwingen Sie nicht die Interaktion von Benutzern mit Ihrem Programm als oberstes Fenster auf dem Bildschirm.** Wenn eine Funktion oder ein Fenster fortlaufend erforderlich ist, damit Benutzer eine Aufgabe ausführen können, sollte das Fenster immer sichtbar bleiben, wenn der Benutzer dies unabhängig von seiner Position relativ zu anderen Fenstern auswählt. Wenn der Benutzer z. b. eine verschiebbare Bildschirmtastatur hat, die sich auf allen anderen Fenstern befindet, sodass er jederzeit sichtbar ist, sollte das Programm es nie durch die obligatorische Platzierung am Anfang der [Z-Reihenfolge](glossary.md)verschleiern.
--   **Verwenden Sie nach Möglichkeit Systemfarben, Schriftarten und allgemeine Steuerelemente.** Auf diese Weise reduzieren Sie die Anzahl der eintretene Barrierefreiheits Probleme erheblich.
+-   **Unterbrechen oder deaktivieren Sie keine aktivierten Features des Betriebssystems oder anderer Produkte, die als Barrierefreiheitsfeatures identifiziert werden.** Sie können diese Features anhand der Dokumentation des betreffenden Betriebssystems oder Produkts identifizieren.
+-   **Erzwingen Sie nicht, dass Benutzer mit Ihrem Programm als oberes Fenster auf dem Bildschirm interagieren.** Wenn eine Funktion oder ein Fenster kontinuierlich erforderlich ist, damit Benutzer eine Aufgabe ausführen können, sollte dieses Fenster immer sichtbar bleiben, wenn der Benutzer dies wählt, unabhängig von seiner Position relativ zu anderen Fenstern. Wenn der Benutzer beispielsweise über eine verschiebbare Bildschirmtastatur verfügt, die sich über allen anderen Fenstern befindet, sodass sie jederzeit sichtbar ist, sollte ihr Programm sie niemals verbergen, indem sie obligatorisch am oberen Rand der [Z-Reihenfolge](glossary.md)platziert wird.
+-   **Verwenden Sie nach Möglichkeit Systemfarben, Schriftarten und allgemeine Steuerelemente.** Dadurch verringern Sie die Anzahl der Barrierefreiheitsprobleme, die Benutzern auftreten, erheblich.
 
-### <a name="addressing-particular-impairments"></a>Adressieren bestimmter Beeinträchtigungen
+### <a name="addressing-particular-impairments"></a>Beheben bestimmter Beeinträchtigungen
 
-**Störungen**
+**Visual**
 
--   **Verlassen Sie sich nie allein auf Farbe, um Bedeutungen zu vermitteln.** Verwenden Sie Farbe nur als Mittel zur Verstärkung der Bedeutung von Text, Design, Location oder Sound.
+-   **Verlassen Sie sich niemals auf Farbe allein, um Bedeutung zu vermitteln.** Verwenden Sie Farbe nur als Mittel, um die Bedeutung von Text, Entwurf, Position oder Sound zu verbessern.
 
-    ![Screenshot des roten Communicator-Symbols und der QuickInfo ](images/inter-accessibility-image9.png)
+    ![Screenshot des roten Kommunikationssymbols und der QuickInfo ](images/inter-accessibility-image9.png)
 
-    Die primäre Kommunikationsmethode in diesem Beispiel ist der präzise QuickInfo-Text. Die Verwendung von Color unterstützt bei der Kommunikation der Bedeutung, aber ist sekundär.
+    Die primäre Kommunikationsmethode in diesem Beispiel ist der präzise QuickInfo-Text. Die Verwendung von Farben hilft bei der Kommunikation der Bedeutung, ist aber sekundär.
 
--   **Verwenden Sie alternative Text Info Tipps (alt), um Grafiken zu beschreiben.**
--   **Verwenden Sie Text nicht in Grafiken.** Benutzer mit Sehbehinderung können Grafiken deaktiviert haben (z. b. in einem Webbrowser), oder Sie können Text, der in Grafiken platziert wurde, einfach nicht sehen oder suchen.
--   **Stellen Sie sicher, dass Dialogfelder und Fenster aussagekräftige Namen aufweisen,** damit ein Benutzer, der hört, anstatt den Bildschirm anzuzeigen (z. b. mithilfe eines Bildschirm Readers), entsprechende Kontextinformationen erhält.
--   **Beachten Sie die Benutzereinstellungen für die visuelle Darstellung** , indem Sie immer Schriftart-, Größen-und Farben, Windows-Anzeigeelement Größen und Systemkonfigurations Einstellungen aus den APIs Theme und GetSystemMetrics abrufen.
--   Halten Sie den Sprechblasen **Text kurz** , damit er leichter lesbar ist und die Unterbrechung der Bildschirm Sprachausgaben minimiert.
+-   **Verwenden Sie alternative (alt)-Textinfos, um Grafiken zu beschreiben.**
+-   **Verwenden Sie keinen Text in Grafiken.** Benutzer mit Sehbehinderung können Grafiken deaktivieren (z. B. in einem Webbrowser) oder einfach keinen Text sehen oder suchen, der in Grafiken platziert ist.
+-   **Stellen Sie sicher, dass Dialogfelder und Fenster aussagekräftige Namen haben,** damit ein Benutzer, der den Bildschirm nicht sieht (z. B. mit einer Sprachausgabe), entsprechende Kontextinformationen erhält.
+-   **Beachten Sie die Einstellungen des Benutzers für die visuelle Anzeige,** indem Sie stets Schriftarten, Größen und Farben, Windows-Anzeigeelementgrößen und Systemkonfigurationseinstellungen aus den Design- und GetSystemMetrics-APIs abrufen.
+-   **Halten Sie Sprechblasentext präzise,** damit er einfacher zu lesen ist, und minimieren Sie die Unterbrechung der Sprachausgabe.
 
-    ![Screenshot der Sprechblase, die PIN-Code Limits anzeigt ](images/inter-accessibility-image10.png)
+    ![Screenshot des Sprechblasens, der Stecknadelcodelimits angibt ](images/inter-accessibility-image10.png)
 
-    Obwohl die Ballons ggf. zusätzlichen Textkörper Text verwenden können, wird in diesem Beispiel gezeigt, dass der Titel Text in einigen Fällen das gleiche Ziel in einer wirtschaftlicheren und barrierefreien Weise erreicht.
+    Obwohl Sprechblasen bei Bedarf zusätzlichen Text verwenden können, zeigt dieses Beispiel, dass Titeltext allein manchmal das gleiche Ziel auf kostengünstigere und zugänglichere Weise erreicht.
 
 **Hörvermögen**
 
--   **Verlassen Sie sich nie auf Sound, um Bedeutung zu vermitteln.** Verwenden Sie Sound nur als Mittel zur Verstärkung der Bedeutung von Text, Design, Location oder Color.
--   **Ermöglicht es Benutzern, die Menge der Audioausgabe zu steuern.** Verwenden Sie zu diesem Zweck den Windows-volumemixer. Weitere Informationen finden Sie unter [Sound](vis-sound.md).
--   **Richten Sie den Sound Ihres Programms so ein, dass er in einem Bereich zwischen 500 Hz und 3000 Hz auftritt** oder vom Benutzer problemlos in diesem Bereich angepasst werden soll. Sounds in diesem Bereich sind höchstwahrscheinlich für Personen mit einer Hörbehinderung erkennbar.
+-   **Verlassen Sie sich niemals allein auf Sound, um Bedeutung zu vermitteln.** Verwenden Sie Sound nur als Mittel, um die Bedeutung von Text, Entwurf, Position oder Farbe zu verbessern.
+-   **Ermöglichen Sie Es Benutzern, die Lautstärke der Audioausgabe zu steuern.** Verwenden Sie zu diesem Zweck den Windows-Volumemixer. Weitere Informationen finden Sie unter [Sound](vis-sound.md).
+-   Richten Sie den Sound Ihres Programms so ein, dass er **in einem Bereich zwischen 500 Hz und 3.000 Hz auftritt,** oder lassen Sie sich einfach vom Benutzer in diesen Bereich anpassen. Laute in diesem Bereich sind höchstwahrscheinlich für Personen mit Hörbehinderung erkennbar.
 
-**Beweglichkeit**
+**Geschicklichkeit**
 
--   **Nehmen Sie die Timeout Werte für die Benutzeroberfläche in Relation zu getdoubleclicktime (), statt Absolute Zeiten zu verwenden.** Dadurch werden die Timeouts an die Geschwindigkeit des Benutzers angepasst.
--   **Weisen Sie allen Menü Elementen Zugriffstasten zu** , damit Benutzer, die lieber mit der Tastatur arbeiten, die gleiche Fähigkeit haben, in Ihrem Programm als Benutzer zu navigieren, die mit der Maus arbeiten.
--   **Doppelklicken und ziehen Sie nicht die einzige Möglichkeit, um eine Aktion auszuführen.** Dies kann für einige Benutzer schwierig sein.
--   **Entfernen Sie Menüleisten nicht aus dem Programm.** Menüleisten sind einfacher als Symbolleisten, auf die Tastatur Benutzer zugreifen können. Wenn Sie nicht möchten, dass die Menüleiste standardmäßig sichtbar ist, blenden Sie Sie stattdessen aus.
--   **Erleichtern Sie die Hilfe von der Tastatur, indem Sie Tabstopps für Hilfe Schaltflächen und Links bereitstellen.**
--   **Um das Bewusstsein der Zugriffsschlüssel Zuweisungen in Ihrem Programm zu verbessern, können Sie Sie jederzeit anzeigen.** Wechseln Sie in der Systemsteuerung zu Easy of Access Center, und klicken Sie auf **Tastatur leichter zu verwenden**. Aktivieren Sie dann das Kontrollkästchen **Tastenkombinationen und Zugriffstasten unterstreichen** .
+-   **Ändern Sie die Ui-Timeoutwerte relativ zu GetDoubleClickTime(), anstatt absolute Zeiten zu verwenden.** Dadurch werden die Timeouts an die Geschwindigkeit des Benutzers angepasst.
+-   **Weisen Sie allen Menüelementen Zugriffsschlüssel zu,** damit Benutzer, die lieber mit der Tastatur arbeiten, in Ihrem Programm genauso navigieren können wie Benutzer, die mit der Maus arbeiten.
+-   **Führen Sie kein Doppelklicken und Ziehen aus, um eine Aktion auszuführen.** Dies kann für einige Benutzer schwierig sein.
+-   **Entfernen Sie keine Menüleisten aus dem Programm.** Menüleisten sind einfacher als Symbolleisten, auf die Tastaturbenutzer zugreifen können. Wenn die Menüleiste standardmäßig nicht sichtbar sein soll, blenden Sie sie stattdessen aus.
+-   **Machen Sie die Hilfe über die Tastatur zugänglich, indem Sie Tabstopps für Hilfeschaltflächen und Links bereitstellen.**
+-   **Um das Bewusstsein für die Zuweisungen von Zugriffsschlüsseln in Ihrem Programm zu verbessern, können Sie sie jederzeit anzeigen.** Wechseln Sie in Systemsteuerung zum Center für erleicherte Bedienung, und klicken Sie auf **Die Tastatur einfacher zu verwenden.** Aktivieren Sie dann das Kontrollkästchen **Tastenkombinationen und Zugriffsschlüssel unterstrichen.**
 
 **Kognitiv**
 
--   **Verwenden Sie Progressive Offenlegung** , um die Komplexität auszublenden.
+-   **Verwenden Sie die progressive Offenlegung,** um die Komplexität auszublenden.
 
-    ![Screenshot der unterteilten Schaltflächen mit nach unten ](images/inter-accessibility-image11.png)
+    ![Screenshot der geteilten Schaltflächen mit nach unten geschalteten Dreiecken ](images/inter-accessibility-image11.png)
 
-    In diesen Beispielen sind Optionen, die über die Befehls Schaltfläche verfügbar sind, standardmäßig ausgeblendet, und Benutzer können die Optionen anzeigen, indem Sie die Steuerelemente für die Progressive Offenlegung nutzen.
+    In diesen Beispielen sind die über die Befehlsschaltfläche verfügbaren Optionen standardmäßig ausgeblendet, und Benutzer können die Optionen anzeigen, indem sie die Vorteile progressiver Offenlegungskontrollen nutzen.
 
--   **Verwenden Sie Symbole, Symbolleisten und andere visuelle Hilfsmittel** , um das Lesen von Text zu verbrauchen.
--   Stellen Sie nach Möglichkeit eine **automatische Vervollständigung in Textfeldern und in bearbeitbaren Dropdown Listen bereit**, sodass Benutzer nicht den vollständigen Namen der Befehle, Dateinamen oder ähnlichen Optionen aus einem begrenzten Satz von Optionen eingeben müssen. Dadurch wird die kognitive Auslastung für alle Benutzer reduziert, und die Benutzereingaben für Benutzer, für die Rechtschreibung oder Typisierung schwierig, langsam oder mühsam ist, werden reduziert.
--   **Veranschaulichen Sie schwierige Konzepte in der Hilfe, indem Sie Tutorials und Animationen einschließen.** Beachten Sie, dass Animationen für Benutzer mit Beeinträchtigungen der Beeinträchtigung schwierig sein können und daher nur bei Bedarf verwendet werden sollten.
+-   **Verwenden Sie Symbole, Symbolleisten und andere visuelle Hilfen,** um die kognitive Auslastung des Lesens von Text zu reduzieren.
+-   Stellen Sie nach Möglichkeit funktionen für die **automatische Vervollständigung in Textfeldern und bearbeitbaren Dropdownlisten** bereit, sodass Benutzer nicht den gesamten Namen von Befehlen, Dateinamen oder ähnlichen Optionen aus einem begrenzten Satz von Optionen eingeben müssen. Dies reduziert die kognitive Auslastung für alle Benutzer und verringert den Typisierungsaufwand für Benutzer, deren Rechtschreibung oder Eingabe schwierig, langsam oder schwierig ist.
+-   **Veranschaulichen Sie schwierige Konzepte in der Hilfe, indem Sie Tutorials und Animationen hinzufügen.** Beachten Sie, dass Animationen für Benutzer mit Sehbehinderung schwierig sein können und daher nur bei Bedarf verwendet werden sollten.
 
-**Geisel**
+**Beschlagnahme**
 
--   **Verwenden Sie nicht blinkende oder blinkende Text, Objekte oder andere Elemente mit einer Flash-oder Blink Häufigkeit im Bereich zwischen 2-55 Hz.**
--   **Beschränken Sie die Verwendung von Animationen.** Einige Benutzer sind besonders empfindlich für die Bildschirm Bewegung, insbesondere in der Peripherie ihres visuellen Felds. Wenn Sie die Animation verwenden, um etwas zu beachten, stellen Sie sicher, dass die Aufmerksamkeit verdient wird und das Unterbrechen des Benutzers ist.
+-   **Verwenden Sie keinen blinkenden oder blinkenden Text, keine Objekte oder andere Elemente mit einer Flash- oder Blinkfrequenz im Bereich zwischen 2 und 55 Hz.**
+-   **Beschränken Sie die Verwendung von Animationen.** Einige Benutzer sind besonders empfindlich auf Bildschirmbewegungen, insbesondere im Visuellen. Wenn Sie Animationen verwenden, um die Aufmerksamkeit auf etwas zu ziehen, stellen Sie sicher, dass die Aufmerksamkeit auf den Benutzer zu achten und nicht unterbrochen werden kann.
 
 **Sprache oder Sprache**
 
--   **Organisieren und schreiben Sie klaren, präzisen und leicht verständlichen Text.** Nutzbarkeits Tests zeigen, dass das Verständnis von Informationen zum durch finden von Schlüsselinformationen am Ende eines Ausdrucks verbessert wird. Weitere Richtlinien finden Sie unter [Style und Tone](text-style-tone.md).
+-   **Organisieren und Schreiben von klarem, präzisem, leicht verständlichen Text.** Benutzerfreundlichkeitstests zeigen, dass das Aufklappen wichtiger Informationen am Ende eines Ausdrucks das Verständnis verbessert. Weitere Richtlinien finden Sie unter [Stil und Ton.](text-style-tone.md)
 
 **Falsch:**
 
-Sind drei der nächsten Ziffern?
+Sind drei die nächste Ziffer?
 
-Klicken Sie zum Starten auf OK.
+Klicken Sie auf OK, um zu beginnen.
 
 **Richtig:**
 
-Ist die nächste Ziffer 3?
+Ist die nächste Ziffer drei?
 
 Klicken Sie zunächst auf OK.
 
 ### <a name="access-keys"></a>Zugriffsschlüssel
 
--   **Zeichen mit breiter Breite** (z. b. w, m und Großbuchstaben) bevorzugen.
--   **Bevorzugen Sie einen unverwechselbaren Konsonanten oder einen vowel,** z. b. "x" in "Exit".
--   **Vermeiden Sie die Verwendung von Zeichen, die die Unterstreichung schwer zu erkennen machen,** wie z. b. (vom problematischsten bis zum geringsten problematischen)
-    -   Zeichen, die nur ein Pixel breit sind, z. b. i und l.
-    -   Zeichen mit untergeordneten Zeichen, wie z. b. g, j, p, q und y.
-    -   Zeichen neben einem Buchstaben mit einem descender.
+-   **Bevorzugen Sie Zeichen mit breiten Zeichen,** z. B. w, m und Großbuchstaben.
+-   **Bevorzugen Sie einen konsonanten Konsonanten oder einen Vokal,** z. B. "x" in "Exit".
+-   **Vermeiden Sie die Verwendung von Zeichen, die** die Unterstriche schwer zu erkennen machen, z. B. (von den problematischsten zu den am wenigsten problematischen):
+    -   Zeichen, die nur ein Pixel breit sind, z. B. i und l.
+    -   Zeichen mit absteigenden Zeichen, z. B. g, j, p, q und y.
+    -   Zeichen neben einem Buchstaben mit einem absteigenden Zeichen.
 
-### <a name="menu-access-keys"></a>Menü Zugriffstasten
+### <a name="menu-access-keys"></a>Menüzugriffsschlüssel
 
--   **Weisen Sie allen Menü Elementen Zugriffstasten zu.** Keine Ausnahmen.
--   **Für dynamische Menü Elemente (z. b. zuletzt verwendete Dateien) weisen Sie Zugriffsschlüssel numerisch zu.**
+-   **Weisen Sie allen Menüelementen Zugriffsschlüssel zu.** Keine Ausnahmen.
+-   **Weisen Sie für dynamische Menüelemente (z. B. zuletzt verwendete Dateien) Zugriffsschlüssel numerisch zu.**
 
-    ![Screenshot des Menüs "Öffnen" mit zuletzt verwendeten Dateien ](images/inter-accessibility-image12.png)
+    ![Screenshot des geöffneten Menüs mit zuletzt verwendeten Dateien ](images/inter-accessibility-image12.png)
 
-    In diesem Beispiel weist das Paint-Programm in Windows den kürzlich verwendeten Dateien numerische Zugriffstasten zu.
+    In diesem Beispiel weist das Paint-Programm in Windows zuletzt verwendeten Dateien numerische Zugriffsschlüssel zu.
 
--   **Zuweisen von eindeutigen Zugriffs Schlüsseln innerhalb einer Menü Ebene.** Sie können Zugriffsschlüssel über verschiedene Menüebenen hinweg wieder verwenden.
--   **Machen Sie Zugriffsschlüssel leicht zu finden:**
-    -   Wählen Sie für die am häufigsten verwendeten Menü Elemente die Zeichen am Anfang des ersten oder zweiten Worts der Bezeichnung aus, vorzugsweise das erste Zeichen.
-    -   Wählen Sie für weniger häufig verwendete Menü Elemente Buchstaben aus, die eine unterschiedliche konsonante oder einen Vokal in der Bezeichnung darstellen.
+-   **Weisen Sie eindeutige Zugriffsschlüssel innerhalb einer Menüebene zu.** Sie können Zugriffsschlüssel auf verschiedenen Menüebenen wiederverwenden.
+-   **Einfaches Aufschlüsseln von Zugriffsschlüsseln:**
+    -   Wählen Sie für die am häufigsten verwendeten Menüelemente Zeichen am Anfang des ersten oder zweiten Worts der Bezeichnung aus, vorzugsweise das erste Zeichen.
+    -   Wählen Sie für weniger häufig verwendete Menüelemente Buchstaben aus, die in der Bezeichnung ein charakteristischer Konsonant oder Vokal sind.
 
-### <a name="dialog-box-access-keys"></a>Zugriffsschlüssel für das Dialog Feld
+### <a name="dialog-box-access-keys"></a>Zugriffsschlüssel für Dialogfelder
 
--   **Weisen Sie allen interaktiven Steuerelementen oder deren Bezeichnungen nach Möglichkeit eindeutige Zugriffstasten zu.** Schreibgeschützte [Textfelder](ctrl-text-boxes.md) sind interaktive Steuerelemente (da Benutzer einen Bildlauf durchführen und Text kopieren können), sodass Sie von Zugriffs Schlüsseln profitieren. **Weisen Sie keinen Zugriffsschlüssel zu:**
-    -   **Schaltflächen OK, Abbrechen und schließen.** Enter und ESC werden für Ihre Zugriffsschlüssel verwendet. Weisen Sie jedoch immer einen Zugriffsschlüssel einem Steuerelement zu, das "OK" oder "Abbrechen" bedeutet, aber eine andere Bezeichnung hat.
+-   **Weisen Sie nach Möglichkeit allen interaktiven Steuerelementen** oder deren Bezeichnungen eindeutige Zugriffsschlüssel zu. [Schreibgeschützte Textfelder sind](ctrl-text-boxes.md) interaktive Steuerelemente (da Benutzer scrollen und Text kopieren können), sodass sie von Zugriffsschlüsseln profitieren. **Weisen Sie keine Zugriffsschlüssel zu:**
+    -   **Schaltflächen OK, Abbrechen und Schließen.** Eingabe und ESC werden für ihre Zugriffsschlüssel verwendet. Weisen Sie einem Steuerelement jedoch immer einen Zugriffsschlüssel zu, der OK oder Abbrechen bedeutet, aber eine andere Bezeichnung hat.
 
-        ![Screenshot der Steuerelemente mit zugewiesenen Zugriffs Schlüsseln ](images/inter-accessibility-image13.png)
+        ![Screenshot von Steuerelementen mit zugewiesenen Zugriffsschlüsseln ](images/inter-accessibility-image13.png)
 
-        In diesem Beispiel ist der Schaltfläche positiver Commit eine Zugriffstaste zugewiesen.
+        In diesem Beispiel ist der Schaltfläche für den positiven Commit ein Zugriffsschlüssel zugewiesen.
 
--   **Gruppen Bezeichnungen.** Normalerweise werden den einzelnen Steuerelementen innerhalb einer Gruppe Zugriffsschlüssel zugewiesen, sodass die Gruppen Bezeichnung keines benötigt. Weisen Sie der Gruppen Bezeichnung jedoch einen Zugriffsschlüssel zu, nicht die einzelnen Steuerelemente, wenn ein Mangel an Zugriffs Schlüsseln vorliegt.
--   **Allgemeine Hilfe** Schaltflächen, auf die mit F1 zugegriffen wird.
--   **Link Bezeichnungen.** Es gibt oft zu viele Verknüpfungen, um eindeutige Zugriffsschlüssel zuzuweisen, und Link-Unterstriche blenden die Zugriffsschlüssel Unterstriche aus. Lassen Sie die Benutzer stattdessen auf Verknüpfungen mit der Tab-Taste zugreifen.
--   **Registerkarten Namen.** Registerkarten werden mithilfe von STRG + TAB und STRG + UMSCHALT + TAB mithilfe von STRG + UMSCHALTTASTE gedrückt.
--   **Durchsuchen von Schaltflächen mit der Bezeichnung "...".** Diese können nicht eindeutig Zugriffs Schlüsseln zugewiesen werden.
--   **Nicht beschriftete Steuerelemente,** wie z. b. Dreh Steuerelemente, grafische Befehls Schaltflächen und unbezeichnete Steuerelemente für progressives
--   **Statischer Text oder Bezeichnungen ohne Bezeichnung für Steuerelemente, die nicht interaktiv sind,** z. b. Status leisten.
--   **Weisen Sie zuerst Zugriffsschlüssel für die Zugriffstaste zu, um sicherzustellen, dass Sie über die Standardschlüssel Zuweisungen verfügen** Wenn keine Standardschlüssel Zuweisung vorhanden ist, verwenden Sie den ersten Buchstaben des ersten Worts. Beispielsweise sollten die Schaltflächen Zugriffsschlüssel für Ja und kein Commit immer "Y" und "N" sein, unabhängig von den anderen Steuerelementen im Dialogfeld.
--   **Für negative Commit-Schaltflächen (außer Abbrechen), die als "nicht" formuliert sind, weisen Sie den Zugriffsschlüssel "n" in "nicht" zu.** Wenn Sie nicht als "nicht" formuliert ist, verwenden Sie die standardmäßige Zugriffsschlüssel Zuweisung, oder weisen Sie den ersten Buchstaben des ersten Worts zu. Dadurch haben alle "TS" und "No" eine konsistente Zugriffstaste.
--   Damit **Zugriffsschlüssel leicht zu finden sind, weisen Sie die Tastenkombinationen einem Zeichen zu, das früh in der Bezeichnung angezeigt wird,** idealerweise das erste Zeichen, auch wenn es ein Schlüsselwort gibt, das später in der Bezeichnung angezeigt wird.
+-   **Gruppenbezeichnungen.** Normalerweise werden den einzelnen Steuerelementen innerhalb einer Gruppe Zugriffsschlüssel zugewiesen, sodass die Gruppenbezeichnung keinen benötigt. Weisen Sie der Gruppenbezeichnung jedoch einen Zugriffsschlüssel zu, nicht den einzelnen Steuerelementen, wenn es zu einem Mangel an Zugriffsschlüsseln kommt.
+-   **Generische Hilfeschaltflächen,** auf die mit F1 zugegriffen wird.
+-   **Linkbezeichnungen.** Es gibt häufig zu viele Links, um eindeutige Zugriffsschlüssel zu zuweisen, und Link unterstriche blenden die Unterstriche der Zugriffsschlüssel aus. Lassen Sie benutzer stattdessen mit der TAB-TASTE auf Links zugreifen.
+-   **Registerkartennamen.** Tabstopps werden mit STRG+TAB und STRG+UMSCHALT+TAB zyklen.
+-   **Schaltflächen mit der Bezeichnung "..." durchsuchen.** Diesen können keine Zugriffsschlüssel eindeutig zugewiesen werden.
+-   **Nicht bezeichnete Steuerelemente, z.** B. Drehsteuerelemente, grafische Befehlsschaltflächen und nicht bezeichnete Steuerelemente für die progressive Offenlegung.
+-   **Nicht beschriftete statischer Text** oder Bezeichnungen für Steuerelemente, die nicht interaktiv sind, z. B. Statusleisten.
+-   **Weisen Sie zuerst Zugriffsschlüssel für commit-Schaltflächen zu, um sicherzustellen, dass sie über die Standardschlüsselzuweisungen verfügen.** Wenn es keine Standardschlüsselzuweisung gibt, verwenden Sie den ersten Buchstaben des ersten Worts. Beispielsweise sollte der Zugriffsschlüssel für die Schaltflächen Ja und Nein commit immer "Y" und "N" sein, unabhängig von den anderen Steuerelementen im Dialogfeld.
+-   **Weisen Sie für negative Commitschaltflächen (mit Anderen als Abbrechen), die als "Don't" (Nicht) formuliert sind, den Zugriffsschlüssel dem "n" in "Don't" zu.** Wenn sie nicht als "Nicht" bezeichnet werden, verwenden Sie die Standardzugriffsschlüsselzuweisung, oder weisen Sie den ersten Buchstaben des ersten Worts zu. Auf diese Weise verfügen alle Don'ts und No es über einen konsistenten Zugriffsschlüssel.
+-   **Um zugriffsschlüssel** leicht zu finden, weisen Sie die Zugriffsschlüssel einem Zeichen zu, das früh in der Bezeichnung angezeigt wird, idealerweise das erste Zeichen, auch wenn später in der Bezeichnung ein Schlüsselwort angezeigt wird.
 
 Weitere Richtlinien und Beispiele finden Sie unter [Tastatur](inter-keyboard.md).
 
 ## <a name="text"></a>Text
 
--   **Verwenden Sie Doppelpunkte am Ende externer Steuerelement Bezeichnungen.** Einige Hilfstechnologien suchen nach Doppelpunkten, um Steuerelement Bezeichnungen zu identifizieren.
--   **Positionieren Sie Bezeichnungen einheitlich in Bezug auf die Elemente, die Sie bezeichnen.** Dies hilft der Hilfstechnologie, die Bezeichnungen ordnungsgemäß den entsprechenden Steuerelementen zuzuordnen, und unterstützt Benutzer von Bildschirm Vergrößerungen, wo Sie nach einer Bezeichnung oder einem Steuerelement suchen müssen.
+-   **Verwenden Sie Doppelpunkte am Ende externer Steuerelementbezeichnungen.** Einige Hilfstechnologien suchen nach Doppelpunkten, um Steuerelementbezeichnungen zu identifizieren.
+-   **Positionieren Sie Bezeichnungen konsistent relativ zu den Elementen, die sie beschriften.** Dies hilft der Hilfstechnologie, die Bezeichnungen den entsprechenden Steuerelementen richtig zu zuordnen, und benutzer von Bildschirm vergrößernden Bildschirmen können wissen, wo sie nach einer Bezeichnung oder einem Steuerelement suchen müssen.
 
-    ![Screenshot der konsistent platzierten Bezeichnungen ](images/inter-accessibility-image14.png)
+    ![Screenshot konsistent platzierter Bezeichnungen ](images/inter-accessibility-image14.png)
 
-    In diesem Beispiel werden die Bezeichnungen für jede der Dropdown Listen konsistent platziert, und es werden Doppelpunkte verwendet.
+    In diesem Beispiel werden die Bezeichnungen für jede der Dropdownlisten konsistent platziert und verwenden Doppelpunkte.
 
--   **Beschränken Sie den alt-Text auf maximal 150 Zeichen.** Beschreiben Sie die Aktion zum Aktivieren des Steuer Elements (z. b. klicken, klicken Sie mit der rechten Maustaste auf usw.), und beschreiben Sie dann die Funktion des Steuer Elements.
+-   **Beschränken Sie den alt-Text auf maximal 150 Zeichen.** Beschreiben Sie die Aktion zum Aktivieren des Steuerelements (z. B. Klicken, Klicken mit der rechten Maustaste und so weiter), und beschreiben Sie dann die Funktion des Steuerelements.
 
     **Annehmbar:**
 
-    Gedrückt.
+    Schaltfläche.
 
-    Blaue Hügel.
+    Blaues Blau.
 
-    **Besserer**
+    **Besser:**
 
-    Klicken Sie hier, um sich bei Ihrem Konto anzumelden.
+    Klicken Sie auf diese Schaltfläche, um sich bei Ihrem Konto zu anmelden.
 
-    Foto von fernen Hügeln, das zeigt, wie Farben über die Distanz ausgeblendet werden.
+    Foto von entfernten Abständen, die zeigen, wie Farben über die Entfernung verblassen.
 
--   **Verwenden Sie keinen Text zum Zeichnen von Linien, Feldern oder anderen grafischen Symbolen.** Zeichen, die auf diese Weise verwendet werden, können Benutzer von Sprachausgaben verwirren. Beispielsweise wird ein Feld, das mit dem Buchstaben "x" um einen Textbereich gezeichnet wird, von der Bildschirmlesesoftware als "x x x x x x" in der ersten Zeile, gefolgt von "x" und Inhalt und "x" gelesen.
+-   **Verwenden Sie keinen Text zum Zeichnen von Linien, Feldern oder anderen grafischen Symbolen.** Auf diese Weise verwendete Zeichen können Benutzer von Sprachbildschirmen verwirren. Beispielsweise wird ein Feld, das mit dem Buchstaben "X" um einen Textbereich gezeichnet wird, von der Sprachausgabesoftware als "X X X X X X" in der ersten Zeile gelesen, gefolgt von "X" und dem Inhalt und "X".
 
 ## <a name="documentation"></a>Dokumentation
 
--   Dokumentieren Sie alle Optionen und Features für die Barrierefreiheit (z. b. alle Tastenkombinationen).
--   Erstellen Sie eine barrierefreie Dokumentation in zugänglichen Formaten. Daher sollte die Dokumentation selbst dieselben Regeln für Barrierefreiheit wie die primäre Benutzeroberfläche einhalten.
--   Beziehen Sie sich auf Zugriffsschlüssel, nicht auf Tastenkombinationen (die eine andere Bedeutung und Verwendung aufweisen), mnetmonische Schlüssel oder Accelerators.
--   Im Allgemeinen beziehen Sie sich auf eine Person mit einer Art von Behinderung, nicht mit deaktivierter Person. Denken Sie zuerst an die Person, nicht an die Bezeichnung.
+-   Dokumentieren Sie alle Optionen und Features für die Barrierefreiheit (z. B. alle Tastenkombinationen).
+-   Erstellen Sie barrierefreie Dokumentation in barrierefreien Formaten. Daher sollte die Dokumentation selbst denselben Regeln für die Barrierefreiheit entsprechen wie die primäre Benutzeroberfläche.
+-   Weitere Informationen finden Sie unter Zugriffsschlüssel, keine Tastenkombinationen (die eine andere Bedeutung und Verwendung haben), mnemonische Schlüssel oder Zugriffstasten.
+-   Im Allgemeinen bezieht sich auf eine Person mit einer Art von Behinderungen, nicht auf eine deaktivierte Person. Betrachten Sie zuerst die Person, nicht die Bezeichnung.
 
 
 
-|                                                               |                                                                                  |
+| Verwenden Sie diese Begriffe.           | Statt                                                        |
 |---------------------------------------------------------------|----------------------------------------------------------------------------------|
-| **Diese Begriffe verwenden**<br/>                                | **Statt**<br/>                                                        |
-| Hat eingeschränkte Dexterität, hat Bewegungsbehinderungen<br/>     | Lähmt, lahm<br/>                                                        |
-| Ohne Behinderungen<br/>                               | Normal, fähig, fehlerfrei<br/>                                          |
-| Eingebene, Personen, die mit einer Hand eingeben<br/>          | Einhändig <br/>                                                        |
-| Personen mit Behinderungen<br/>                           | Die deaktivierten, deaktivierten Personen, Menschen mit Behinderungen, den Behinderten<br/> |
-| Kognitive Behinderungen, entwicklungsbehinderungen<br/> |                                                                                  |
+| Hat eingeschränkte Dexterität, hat Bewegungsbehinderungen<br/>     | Crippled, lame<br/>                                                        |
+| Ohne Behinderungen<br/>                               | Normal, füllvoll, fehlerfrei<br/>                                          |
+| Einhändige Personen, die mit einer Hand eingeben<br/>          | Einhändig <br/>                                                        |
+| Personen mit Behinderungen<br/>                           | Die deaktivierten, deaktivierten Personen, Die Mitbehinderten, die Verletzten<br/> |
+| Kognitive Behinderungen, Entwicklungsbehinderungen<br/> |                                                                                  |
 
 
 
