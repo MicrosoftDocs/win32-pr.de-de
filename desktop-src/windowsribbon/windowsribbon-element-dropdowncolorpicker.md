@@ -1,9 +1,9 @@
 ---
-title: Dropdowncolorpicker-Element
-description: Stellt ein Drop-Down Color pickercontrol dar, das beim Klicken auf eine Palette von farbsuhren zeigt.
+title: DropDownColorPicker-Element
+description: Stellt ein Drop-Down Farbauswahlsteuerfeld dar, das beim Klicken eine Palette von Farbmustern anzeigt.
 ms.assetid: fc4df978-9c52-43d5-8a5e-e015aa7058cd
 keywords:
-- Windows-Menüband für dropdowncolorpicker-Element
+- DropDownColorPicker-Element Windows-Menüband
 topic_type:
 - apiref
 api_name:
@@ -13,18 +13,18 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 00185d14d9066b2cb85da4b23959e84df1827007
-ms.sourcegitcommit: 927b9c371f75f52b8011483edf3a4ba37d11ebe4
+ms.openlocfilehash: ce2fd1d9ff12b56d87955304fad24af23209ff91
+ms.sourcegitcommit: 099ecdda1e83618b844387405da0db0ebda93a65
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "103720489"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111442901"
 ---
-# <a name="dropdowncolorpicker-element"></a>Dropdowncolorpicker-Element
+# <a name="dropdowncolorpicker-element"></a>DropDownColorPicker-Element
 
-Stellt ein [Dropdown-Farbauswahl](windowsribbon-controls-dropdowncolorpicker.md)Steuerelement dar, das beim Klicken auf eine Palette von farbsuhren zeigt.
+Stellt ein [Dropdown-Farbwähler-Steuerelement](windowsribbon-controls-dropdowncolorpicker.md)dar, das beim Klicken eine Palette von Farbüberwachungen anzeigt.
 
-## <a name="usage"></a>Verbrauch
+## <a name="usage"></a>Verwendung
 
 ``` syntax
 <DropDownColorPicker
@@ -52,48 +52,48 @@ Stellt ein [Dropdown-Farbauswahl](windowsribbon-controls-dropdowncolorpicker.md)
 </colgroup>
 <thead>
 <tr class="header">
-<th>Attribut</th>
-<th>type</th>
+<th>attribute</th>
+<th>Typ</th>
 <th>Erforderlich</th>
 <th>BESCHREIBUNG</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><strong>Chipgröße</strong><br/></td>
+<td><strong>ChipSize</strong><br/></td>
 <td>xs:string<br/></td>
 <td>Nein<br/></td>
-<td>Die Größe jedes Farbchips oder eines Musters. <br/> Beschränkt auf einen der folgenden Werte:<br/> <br/>
-<dt><span></span><span></span><strong></strong> Zuletzt<br/> </dt> <dd> Jeder farbchip ist ein 11x11-Pixel Quadrat. <br/> </dd> <dt><span></span><span></span><strong></strong> Mittelalter<br/> </dt> <dd> Jeder farbchip ist ein 16x16-Pixel Quadrat. <br/> </dd> <dt><span></span><span></span><strong></strong> Viele<br/> </dt> <dd> Jeder farbchip ist ein rund um die Uhr großes Pixel Quadrat. <br/> </dd> </dl></td>
+<td>Die Größe der einzelnen Farbchips oder Farbwatches. <br/> Beschränkt auf einen der folgenden Werte:<br/> <br/>
+<dt><span></span><span></span><strong></strong> (Klein)<br/> </dt> <dd> Jeder Farbchip ist ein Quadrat mit 11 x 11 Pixeln. <br/> </dd> <dt><span></span><span></span><strong></strong> (Mittel)<br/> </dt> <dd> Jeder Farbchip ist ein Quadrat mit 16 x 16 Pixeln. <br/> </dd> <dt><span></span><span></span><strong></strong> (Groß)<br/> </dt> <dd> Jeder Farbchip ist ein Quadrat mit 24 x 24 Pixeln. <br/> </dd> </dl></td>
 </tr>
 <tr class="even">
-<td><strong>Colortemplate</strong><br/></td>
+<td><strong>ColorTemplate</strong><br/></td>
 <td>xs:string<br/></td>
 <td>Nein<br/></td>
-<td>Layoutvorlagen, die den Typ der <a href="windowsribbon-controls-dropdowncolorpicker.md">Dropdown-Farbauswahl</a>angeben. <br/> Auf einen der folgenden Werte beschränkt (wenn keine optionalen Attribute, die sich auf eine <em>colortemplate</em> beziehen, deklariert sind, wird die Standardansicht angezeigt):<br/> <br/>
-<dt><span></span><span></span><strong></strong> (Mecolors)<br/> </dt> <dd> Standard. <br/> <img src="images/markup/colortemplate.themedcolors.1.png" alt="Screen shot of the DropDownColorPicker element with the ColorTemplate attribute set to &#39;ThemeColors&#39;." /><br/> Durch Festlegen des <em>colortemplate</em> -Attributs auf werden <code>ThemeColors</code> die folgenden Funktionen aktiviert:<br/>
+<td>Layoutvorlagen, die den Typ der <a href="windowsribbon-controls-dropdowncolorpicker.md">Dropdown-Farbwähler</a>angeben. <br/> Beschränkt auf einen der folgenden Werte (wenn keine optionalen Attribute im Zusammenhang mit einer <em>ColorTemplate</em> deklariert werden, wird die Standardansicht angezeigt):<br/> <br/>
+<dt><span></span><span></span><strong></strong> (ThemeColors)<br/> </dt> <dd> Standard. <br/> <img src="images/markup/colortemplate.themedcolors.1.png" alt="Screen shot of the DropDownColorPicker element with the ColorTemplate attribute set to &#39;ThemeColors&#39;." /><br/> Das Festlegen des <em>ColorTemplate-Attributs</em> auf <code>ThemeColors</code> ermöglicht die folgende Funktionalität:<br/>
 <ul>
 <li>SplitButton-Anker.</li>
-<li>Standardmäßig wird die <strong>Automatische</strong> Farb Schaltfläche angezeigt.</li>
-<li>Fensterdesign <strong>Farben</strong> -Muster Raster.</li>
-<li>Muster Raster für <strong>Standard Farben</strong> .</li>
-<li><strong>Aktuelles Farb</strong> Muster Raster ist optional.</li>
-<li>Dialogfeld " <strong>Weitere Farben</strong> ".</li>
-<li>Standardmäßig wird <strong>keine Farb</strong> Farb Schaltfläche angezeigt.</li>
+<li>Die <strong>automatische</strong> Farbschaltfläche wird standardmäßig angezeigt.</li>
+<li><strong>Fensterdesignfarben–</strong> Farbmusterraster.</li>
+<li><strong>Standardfarben–</strong> Musterraster.</li>
+<li>Das Farbmusterraster <strong>"Zuletzt verwendet"</strong> ist optional.</li>
+<li><strong>Dialogfeldstartfeld "Weitere Farben".</strong></li>
+<li>Standardmäßig wird <strong>keine Farbfarbe</strong> angezeigt.</li>
 </ul>
-</dd> <dt><span></span><span></span><strong></strong> (Standardcolors)<br/> </dt> <dd> <img src="images/markup/colortemplate.standardcolors.3.png" alt="Screen shot of the DropDownColorPicker element with the ColorTemplate attribute set to &#39;StandardColors&#39;." /><br/> Durch Festlegen des <em>colortemplate</em> -Attributs auf werden <code>StandardColors</code> die folgenden Funktionen aktiviert:<br/>
+</dd> <dt><span></span><span></span><strong></strong> (StandardColors)<br/> </dt> <dd> <img src="images/markup/colortemplate.standardcolors.3.png" alt="Screen shot of the DropDownColorPicker element with the ColorTemplate attribute set to &#39;StandardColors&#39;." /><br/> Das Festlegen des <em>ColorTemplate-Attributs</em> auf <code>StandardColors</code> ermöglicht die folgende Funktionalität:<br/>
 <ul>
 <li>SplitButton-Anker.</li>
-<li>Standardmäßig wird die <strong>Automatische</strong> Farb Schaltfläche angezeigt.</li>
-<li>Muster Raster für <strong>Standard Farben</strong> .</li>
-<li>Dialogfeld " <strong>Weitere Farben</strong> ".</li>
-<li>Standardmäßig wird <strong>keine Farb</strong> Farb Schaltfläche angezeigt.</li>
+<li>Die <strong>automatische</strong> Farbschaltfläche wird standardmäßig angezeigt.</li>
+<li><strong>Standardfarben–</strong> Musterraster.</li>
+<li><strong>Dialogfeldstartfeld "Weitere Farben".</strong></li>
+<li>Standardmäßig wird <strong>keine Farbfarbe</strong> angezeigt.</li>
 </ul>
-</dd> <dt><span></span><span></span><strong></strong> (Highlightcolors)<br/> </dt> <dd> <img src="images/markup/colortemplate.highlightcolors.2.png" alt="Screen shot of the DropDownColorPicker element with the ColorTemplate attribute set to &#39;HighlightColors&#39;." /><br/> Durch Festlegen des <em>colortemplate</em> -Attributs auf werden <code>HighlightColors</code> die folgenden Funktionen aktiviert:<br/>
+</dd> <dt><span></span><span></span><strong></strong> (HighlightColors)<br/> </dt> <dd> <img src="images/markup/colortemplate.highlightcolors.2.png" alt="Screen shot of the DropDownColorPicker element with the ColorTemplate attribute set to &#39;HighlightColors&#39;." /><br/> Das Festlegen des <em>ColorTemplate-Attributs</em> auf <code>HighlightColors</code> ermöglicht die folgende Funktionalität:<br/>
 <ul>
 <li>SplitButton-Anker.</li>
-<li>Muster Raster mit <strong>Standard Farben</strong> ohne Header.</li>
-<li>Standardmäßig wird <strong>keine Farb</strong> Farb Schaltfläche angezeigt.</li>
+<li>Musterraster für <strong>Standardfarben</strong> ohne Kopfzeile.</li>
+<li>Standardmäßig wird <strong>keine Farbfarbe</strong> angezeigt.</li>
 </ul>
 </dd> </dl></td>
 </tr>
@@ -101,50 +101,50 @@ Stellt ein [Dropdown-Farbauswahl](windowsribbon-controls-dropdowncolorpicker.md)
 <td><strong>Spalten</strong><br/></td>
 <td>xs:positiveInteger<br/></td>
 <td>Nein<br/></td>
-<td>Die Anzahl der farbchipspalten (oder Muster Spalten).<br/> <br/>
-<dt><span></span><span></span><strong></strong> (xs: positivin teger)<br/> </dt> <dd> Ein beliebiger positiver ganzzahliger Wert zwischen 1 und 256 (einschließlich).<br/> </dd> </dl></td>
+<td>Die Anzahl der Farbchipspalten (oder Farbmusterspalten).<br/> <br/>
+<dt><span></span><span></span><strong></strong> (xs:positiveInteger)<br/> </dt> <dd> Ein beliebiger positiver ganzzahliger Wert zwischen 1 und 256 einschließlich.<br/> </dd> </dl></td>
 </tr>
 <tr class="even">
 <td><strong>CommandName</strong><br/></td>
-<td>xs: positiveingeteger oder xs: String<br/></td>
+<td>xs:positiveInteger oder xs:string<br/></td>
 <td>Nein<br/></td>
-<td>Ordnet das-Element einem <a href="windowsribbon-element-command.md"><strong>Befehl</strong></a>zu.<br/> <br/>
-<dt><span></span><span></span><strong></strong> (xs: positiveingeteger oder xs: String)<br/> </dt> <dd> Eine Zeichenfolge, ein ganzzahliger Wert zwischen 2 und 59999, einschließlich, oder ein Hexadezimalwert zwischen 0x2 und 0xea5f (einschließlich). <br/> Der Wert muss innerhalb des Menüband-XML-Dokuments eindeutig sein. <br/> Maximale Länge: 100 Zeichen. <br/> </dd> </dl></td>
+<td>Ordnet das Element einem <a href="windowsribbon-element-command.md"><strong>Command zu.</strong></a><br/> <br/>
+<dt><span></span><span></span><strong></strong> (xs:positiveInteger oder xs:string)<br/> </dt> <dd> Eine Zeichenfolge, ein ganzzahliger Wert zwischen 2 und 59999 einschließlich oder ein Hexadezimalwert zwischen 0x2 und 0xea5f einschließlich. <br/> Der Wert muss innerhalb des Menüband-XML-Dokuments eindeutig sein. <br/> Maximale Länge: 100 Zeichen. <br/> </dd> </dl></td>
 </tr>
 <tr class="odd">
-<td><strong>Isautomaticcolorbuttonvisible</strong><br/></td>
+<td><strong>IsAutomaticColorButtonVisible</strong><br/></td>
 <td>Boolesch<br/></td>
 <td>Nein<br/></td>
-<td>Zeigt die <strong>Automatische</strong> Farb Schaltfläche an oder blendet sie aus. <br/> Nur gültig, wenn <code>StandardColors</code> oder <code>ThemeColors</code> für das <em>colortemplate</em> -Attribut angegeben ist. <br/> Auf einen der folgenden Werte beschränkt (0 und 1 sind ungültig):<br/> <br/>
-<dt><span></span><span></span><strong></strong> Fall<br/> </dt> <dd></dd> <dt><span></span><span></span><strong></strong> Alarm<br/> </dt> <dd></dd> </dl></td>
+<td>Zeigt die Schaltfläche <strong>Automatische</strong> Farbe an (oder blendet sie aus). <br/> Nur gültig, wenn <code>StandardColors</code> oder <code>ThemeColors</code> für das <em>ColorTemplate-Attribut</em> angegeben ist. <br/> Beschränkt auf einen der folgenden Werte (0 und 1 sind ungültig):<br/> <br/>
+<dt><span></span><span></span><strong></strong> (true)<br/> </dt> <dd></dd> <dt><span></span><span></span><strong></strong> (false)<br/> </dt> <dd></dd> </dl></td>
 </tr>
 <tr class="even">
-<td><strong>Isnocolorbuttonvisible</strong><br/></td>
+<td><strong>IsNoColorButtonVisible</strong><br/></td>
 <td>Boolesch<br/></td>
 <td>Nein<br/></td>
-<td>Zeigt die Schaltfläche <strong>keine Farbe</strong> an (oder blendet sie aus). <br/> Gültig für alle <em>colortemplate</em> -Werte.<br/> Auf einen der folgenden Werte beschränkt (0 und 1 sind ungültig):<br/> <br/>
-<dt><span></span><span></span><strong></strong> Fall<br/> </dt> <dd></dd> <dt><span></span><span></span><strong></strong> Alarm<br/> </dt> <dd></dd> </dl></td>
+<td>Zeigt die Schaltfläche <strong>Keine Farbe</strong> an (oder blendet sie aus). <br/> Gültig für alle <em>ColorTemplate-Werte.</em><br/> Beschränkt auf einen der folgenden Werte (0 und 1 sind ungültig):<br/> <br/>
+<dt><span></span><span></span><strong></strong> (true)<br/> </dt> <dd></dd> <dt><span></span><span></span><strong></strong> (false)<br/> </dt> <dd></dd> </dl></td>
 </tr>
 <tr class="odd">
-<td><strong>Recentcolorgridrows</strong><br/></td>
+<td><strong>RecentColorGridRows</strong><br/></td>
 <td>xs:positiveInteger<br/></td>
 <td>Nein<br/></td>
-<td>Die Anzahl der farbchipzeilen (oder Muster Zeilen) im Bereich " <strong>Letzte Farben</strong> ". <br/> Nur gültig, wenn <code>ThemeColors</code> für das <em>colortemplate</em> -Attribut angegeben ist.<br/> <br/>
-<dt><span></span><span></span><strong></strong> (xs: positivin teger)<br/> </dt> <dd> Ein beliebiger positiver ganzzahliger Wert zwischen 1 und 256 (einschließlich).<br/> </dd> </dl></td>
+<td>Die Anzahl von Farbchipzeilen (oder Farbmusterzeilen) im Bereich <strong>Zuletzt verwendeter Farben.</strong> <br/> Nur gültig, wenn <code>ThemeColors</code> für das <em>ColorTemplate-Attribut</em> angegeben ist.<br/> <br/>
+<dt><span></span><span></span><strong></strong> (xs:positiveInteger)<br/> </dt> <dd> Ein beliebiger positiver ganzzahliger Wert zwischen 1 und 256 einschließlich.<br/> </dd> </dl></td>
 </tr>
 <tr class="even">
-<td><strong>Standardcolorgridrows</strong><br/></td>
+<td><strong>StandardColorGridRows</strong><br/></td>
 <td>xs:positiveInteger<br/></td>
 <td>Nein<br/></td>
-<td>Die Anzahl der farbchipzeilen (oder Muster Zeilen) im <strong>Standard Farben</strong> Bereich.<br/> <br/>
-<dt><span></span><span></span><strong></strong> (xs: positivin teger)<br/> </dt> <dd> Ein beliebiger positiver ganzzahliger Wert zwischen 1 und 256 (einschließlich).<br/> </dd> </dl></td>
+<td>Die Anzahl von Farbchipzeilen (oder Farbmusterzeilen) im <strong>Bereich Standardfarben.</strong><br/> <br/>
+<dt><span></span><span></span><strong></strong> (xs:positiveInteger)<br/> </dt> <dd> Ein beliebiger positiver ganzzahliger Wert zwischen 1 und 256 einschließlich.<br/> </dd> </dl></td>
 </tr>
 <tr class="odd">
-<td><strong>"Mecolorgridrows"</strong><br/></td>
+<td><strong>ThemeColorGridRows</strong><br/></td>
 <td>xs:positiveInteger<br/></td>
 <td>Nein<br/></td>
-<td>Die Anzahl der farbchipzeilen (oder Muster Zeilen) im Design <strong>Farben</strong> Bereich.<br/> Nur gültig, wenn <code>ThemeColors</code> für das <em>colortemplate</em> -Attribut angegeben ist.<br/> <br/>
-<dt><span></span><span></span><strong></strong> (xs: positivin teger)<br/> </dt> <dd> Ein beliebiger positiver ganzzahliger Wert zwischen 1 und 256 (einschließlich).<br/> </dd> </dl></td>
+<td>Die Anzahl von Farbchipzeilen (oder Farbmusterzeilen) im Bereich <strong>Designfarben.</strong><br/> Nur gültig, wenn <code>ThemeColors</code> für das <em>ColorTemplate-Attribut</em> angegeben ist.<br/> <br/>
+<dt><span></span><span></span><strong></strong> (xs:positiveInteger)<br/> </dt> <dd> Ein beliebiger positiver ganzzahliger Wert zwischen 1 und 256 einschließlich.<br/> </dd> </dl></td>
 </tr>
 </tbody>
 </table>
@@ -161,27 +161,27 @@ Es gibt keine untergeordneten Elemente.
 
 | Element                                                                           |
 |-----------------------------------------------------------------------------------|
-| [**Controlgroup**](windowsribbon-element-controlgroup.md)<br/>             |
+| [**ControlGroup**](windowsribbon-element-controlgroup.md)<br/>             |
 | [**DropDownButton**](windowsribbon-element-dropdownbutton.md)<br/>         |
-| [**Dropdown Gallery**](windowsribbon-element-dropdowngallery.md)<br/>       |
+| [**DropDownGallery**](windowsribbon-element-dropdowngallery.md)<br/>       |
 | [**Gruppe**](windowsribbon-element-group.md)<br/>                           |
-| [**MenuGroup**](windowsribbon-element-menugroup.md)<br/>                   |
+| [**Menugroup**](windowsribbon-element-menugroup.md)<br/>                   |
 | [**SplitButton**](windowsribbon-element-splitbutton.md)<br/>               |
-| [**Splitbuttongallery**](windowsribbon-element-splitbuttongallery.md)<br/> |
+| [**SplitButtonGallery**](windowsribbon-element-splitbuttongallery.md)<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Dies ist optional.
 
-Kann für jedes [**controlgroup**](windowsribbon-element-controlgroup.md)-, [**DropDownButton**](windowsribbon-element-dropdownbutton.md)-, [**dropdowngallery**](windowsribbon-element-dropdowngallery.md)-, [**Group**](windowsribbon-element-group.md)-, [**MenuGroup**](windowsribbon-element-menugroup.md)-, [**SplitButton**](windowsribbon-element-splitbutton.md)-oder [**splitbuttongallery**](windowsribbon-element-splitbuttongallery.md) -Element einmal oder mehrmals vorkommen.
+Kann ein oder mehrere Male für jedes [**ControlGroup-,**](windowsribbon-element-controlgroup.md) [**DropDownButton-,**](windowsribbon-element-dropdownbutton.md) [**DropDownGallery-,**](windowsribbon-element-dropdowngallery.md) [**Group-,**](windowsribbon-element-group.md) [**MenuGroup-,**](windowsribbon-element-menugroup.md) [**SplitButton-**](windowsribbon-element-splitbutton.md)oder [**SplitButtonGallery-Element**](windowsribbon-element-splitbuttongallery.md) auftreten.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird das grundlegende Markup für alle drei Typen der [Dropdown-Farbauswahl](windowsribbon-controls-dropdowncolorpicker.md)veranschaulicht.
+Im folgenden Beispiel wird das grundlegende Markup für alle drei Typen von [Dropdown-Farbwähler.](windowsribbon-controls-dropdowncolorpicker.md)
 
-Dieser Code Abschnitt zeigt die Befehls Deklarationen für drei **dropdowncolorpicker** -Elemente.
+Dieser Codeabschnitt zeigt die Befehlsdeklarationen für drei **DropDownColorPicker-Elemente.**
 
 
 ```XML
@@ -210,7 +210,7 @@ Dieser Code Abschnitt zeigt die Befehls Deklarationen für drei **dropdowncolorp
 
 
 
-In diesem Code Abschnitt werden die drei Typen von **dropdowncolorpicker** -Steuerelement Deklarationen veranschaulicht.
+Dieser Codeabschnitt zeigt die drei Typen von **DropDownColorPicker-Steuerelementdeklarationen.**
 
 
 ```XML
@@ -233,12 +233,8 @@ In diesem Code Abschnitt werden die drei Typen von **dropdowncolorpicker** -Steu
 
 ## <a name="element-information"></a>Elementinformationen
 
-
-
-|                                     |           |
-|-------------------------------------|-----------|
-| Unterstützte Mindestversion (System)<br/> | Windows 7 |
-| Kann leer bleiben                        | Ja       |
+* **Unterstütztes Mindestsystem:** Windows 7
+* **Kann leer sein:** Ja
 
 
 
@@ -246,10 +242,10 @@ In diesem Code Abschnitt werden die drei Typen von **dropdowncolorpicker** -Steu
 
 <dl> <dt>
 
-[Dropdown-Farbauswahl-Steuerelement](windowsribbon-controls-dropdowncolorpicker.md)
+[Dropdown-Farbwähler Steuerelement](windowsribbon-controls-dropdowncolorpicker.md)
 </dt> <dt>
 
-[Dropdowncolorpicker-Beispiel](windowsribbon-dropdowncolorpickersample.md)
+[DropDownColorPicker-Beispiel](windowsribbon-dropdowncolorpickersample.md)
 </dt> </dl>
 
  

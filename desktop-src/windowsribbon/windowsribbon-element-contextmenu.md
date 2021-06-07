@@ -1,9 +1,9 @@
 ---
 title: ContextMenu-Element
-description: Stellt ein Kontextmenü-Steuerelement dar.
+description: Stellt ein Kontextmenüsteuerelement dar.
 ms.assetid: 08cc0514-0795-4e6b-b80c-33d920783032
 keywords:
-- Fenster "ContextMenu-Element Fenster"
+- ContextMenu-Element Windows-Menüband
 topic_type:
 - apiref
 api_name:
@@ -13,18 +13,18 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: c824e87c063fb863e79f10cb9755b74df36023f7
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 916a031ed642a76fb22ecc58dbbe1ce29cbcd105
+ms.sourcegitcommit: 099ecdda1e83618b844387405da0db0ebda93a65
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "103718378"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111443468"
 ---
 # <a name="contextmenu-element"></a>ContextMenu-Element
 
-Stellt ein Kontextmenü-Steuerelement dar.
+Stellt ein Kontextmenüsteuerelement dar.
 
-## <a name="usage"></a>Verbrauch
+## <a name="usage"></a>Verwendung
 
 ``` syntax
 <ContextMenu
@@ -37,9 +37,9 @@ Stellt ein Kontextmenü-Steuerelement dar.
 
 
 
-| Attribut           | type                 | Erforderlich       | BESCHREIBUNG                                                                                                                                                                                                                |
+| attribute           | Typ                 | Erforderlich       | BESCHREIBUNG                                                                                                                                                                                                                |
 |---------------------|----------------------|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Name**<br/> | xs:string<br/> | Ja<br/> | <dt> (xs: String)<br/> </dt> <dd> Eine Zeichenfolge, die aus einer beliebigen Zeichen Sequenz besteht, einschließlich Leerzeichen und Zeilenumbruch Zeichen.<br/> </dd> </dl> |
+| **Name**<br/> | xs:string<br/> | Ja<br/> | <dt> (xs:string)<br/> </dt> <dd> Eine Zeichenfolge, die aus einer beliebigen Sequenz von Zeichen besteht, einschließlich Leerzeichen und Zeilenunterbrechungszeichen.<br/> </dd> </dl> |
 
 
 
@@ -49,7 +49,7 @@ Stellt ein Kontextmenü-Steuerelement dar.
 
 | Element                                                         | BESCHREIBUNG                                     |
 |-----------------------------------------------------------------|-------------------------------------------------|
-| [**MenuGroup**](windowsribbon-element-menugroup.md)<br/> | Muss mindestens einmal vorkommen<br/> <br/> |
+| [**Menugroup**](windowsribbon-element-menugroup.md)<br/> | Muss mindestens einmal auftreten<br/> <br/> |
 
 
 
@@ -59,26 +59,26 @@ Stellt ein Kontextmenü-Steuerelement dar.
 
 | Element                                                                                         |
 |-------------------------------------------------------------------------------------------------|
-| [**Contextpopup. ContextMenus**](windowsribbon-element-contextpopup-contextmenus.md)<br/> |
+| [**ContextPopup.ContextMenus**](windowsribbon-element-contextpopup-contextmenus.md)<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Dies ist optional.
 
-Kann für jedes [**contextpopup. ContextMenus**](windowsribbon-element-contextpopup-contextmenus.md)-Objekt einmal oder mehrmals vorkommen.
+Kann ein oder mehrere Male für jede [**ContextPopup.ContextMenus**](windowsribbon-element-contextpopup-contextmenus.md)auftreten.
 
 > [!IMPORTANT]
-> Ein **ContextMenu** kann keine Kombinations [Feld](windowsribbon-controls-combobox.md) -oder [Spinner](windowsribbon-controls-spinner.md) -Steuerelemente hosten.
+> **Ein ContextMenu** kann keine [Kombinationsfeld-](windowsribbon-controls-combobox.md) oder [Spinner-Steuerelemente](windowsribbon-controls-spinner.md) hosten.
 
  
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird das grundlegende Markup für eine [**contextpopup**](windowsribbon-element-contextpopup.md) -Ansicht veranschaulicht.
+Im folgenden Beispiel wird das grundlegende Markup für eine [**ContextPopup-Ansicht**](windowsribbon-element-contextpopup.md) veranschaulicht.
 
-Dieser Code Abschnitt zeigt einen Satz von **ContextMenu** -Steuerelement Deklarationen.
+Dieser Codeabschnitt zeigt einen Satz von **ContextMenu-Steuerelementdeklarationen.**
 
 
 ```XML
@@ -167,20 +167,16 @@ Dieser Code Abschnitt zeigt einen Satz von **ContextMenu** -Steuerelement Deklar
 
 ## <a name="element-information"></a>Elementinformationen
 
-
-
-|                                     |           |
-|-------------------------------------|-----------|
-| Unterstützte Mindestversion (System)<br/> | Windows 7 |
-| Kann leer bleiben                        | Nein        |
+* **Unterstütztes Mindestsystem:** Windows 7
+* **Kann leer sein:** Nein
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[Kontext-Popup Steuerelement](windowsribbon-controls-contextpopup.md)
+[Kontext-Popup-Steuerelement](windowsribbon-controls-contextpopup.md)
 </dt> </dl>
 
  

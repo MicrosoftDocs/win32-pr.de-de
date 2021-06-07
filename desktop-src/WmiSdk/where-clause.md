@@ -1,20 +1,20 @@
 ---
-description: Verwenden Sie die WHERE-Klausel, um den Bereich einer Daten-, Ereignis-oder Schema Abfrage einzuschränken.
+description: Verwenden Sie die WHERE-Klausel, um den Bereich einer Daten-, Ereignis- oder Schemaabfrage zu engen.
 ms.assetid: b275f8e0-773d-422c-be21-b427e7a1fb6b
 ms.tgt_platform: multiple
 title: WHERE-Klausel (WMI)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a72e68d8266b72f6e41e17c0b85766b7a58bb197
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b0587bffb1a10c4611773de8a61fdb7ac1576952
+ms.sourcegitcommit: cb87082135319cbdc5df541e3071eebb83a58972
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106362731"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111386720"
 ---
 # <a name="where-clause-wmi"></a>WHERE-Klausel (WMI)
 
-Verwenden Sie die WHERE-Klausel, um den Bereich einer Daten-, Ereignis-oder Schema Abfrage einzuschränken. Weitere Informationen finden Sie unter [Abfragen mit WQL](querying-with-wql.md). Die WHERE-Klausel besteht aus einer Eigenschaft oder einem Schlüsselwort, einem Operator und einer Konstante. Alle WHERE-Klauseln müssen einen der vordefinierten Operatoren angeben, die im Windows-Verwaltungsinstrumentation (WMI) Query Language (WQL) enthalten sind. Sie können die WHERE-Klausel an die SELECT-Anweisung anfügen, indem Sie eine der folgenden Formen verwenden:
+Verwenden Sie die WHERE-Klausel, um den Bereich einer Daten-, Ereignis- oder Schemaabfrage zu engen. Weitere Informationen finden Sie unter [Abfragen mit WQL.](querying-with-wql.md) Die WHERE-Klausel besteht aus einer Eigenschaft oder einem Schlüsselwort, einem Operator und einer Konstante. Alle WHERE-Klauseln müssen einen der vordefinierten Operatoren angeben, die in der Windows-Verwaltungsinstrumentation (WMI) Query Language (WQL) enthalten sind. Sie können die WHERE-Klausel mit einer der folgenden Formen an die SELECT-Anweisung anfügen:
 
 
 ```sql
@@ -24,17 +24,17 @@ SELECT * FROM class WHERE constant operator property
 
 
 
-Where \* ist das Element, nach dem abgefragt wird, die Klasse ist die Klasse, in der abgefragt werden soll, und Konstante, Operator und Eigenschaft sind die Konstante, der Operator und die Eigenschaft bzw. das Schlüsselwort, die verwendet werden sollen. Weitere Informationen zur SELECT-Anweisung finden Sie unter [SELECT-Anweisung für Daten Abfragen](select-statement-for-data-queries.md), [SELECT-Anweisung für Ereignis Abfragen](select-statement-for-event-queries.md)oder [SELECT-Anweisung für Schema Abfragen](select-statement-for-schema-queries.md).
+Wobei das abgefragte Element ist, ist class die Klasse, in der abgefragt werden soll, und constant, operator und property sind die Konstante, der Operator und die Eigenschaft oder das Schlüsselwort, die \* verwendet werden sollen. Weitere Informationen zur SELECT-Anweisung finden Sie unter [SELECT-Anweisung](select-statement-for-data-queries.md)für Datenabfragen, [SELECT-Anweisung](select-statement-for-event-queries.md)für Ereignisabfragen oder [SELECT-Anweisung für Schemaabfragen.](select-statement-for-schema-queries.md)
 
-Der Wert der Konstante muss den richtigen Typ für die Eigenschaft aufweisen. Außerdem muss der Operator in der Liste der gültigen [WQL-Operatoren](wql-operators.md)enthalten sein. Entweder ein Eigenschaftsname oder eine Konstante muss auf beiden Seiten des Operators in der WHERE-Klausel angezeigt werden.
+Der Wert der Konstante muss den richtigen Typ für die Eigenschaft haben. Darüber hinaus muss der -Operator in der Liste der gültigen [WQL-Operatoren enthalten sein.](wql-operators.md) Entweder ein Eigenschaftenname oder eine Konstante muss auf beiden Seiten des Operators in der WHERE-Klausel angezeigt werden.
 
-Sie können Zeichen folgen Literale, wie z. b. "NTFS", in einer WHERE-Klausel verwenden. Wenn Sie die folgenden Sonderzeichen in die Zeichenfolge einschließen möchten, müssen Sie das Zeichen zunächst mit einem Escapezeichen versehen, indem Sie dem Zeichen einen umgekehrten Schrägstrich ( \) :
+Sie können Zeichenfolgenliterale wie "NTFS" in einer WHERE-Klausel verwenden. Wenn Sie die folgenden Sonderzeichen in die Zeichenfolge eingeben möchten, müssen Sie das Zeichen zunächst mit Escapezeichen verketten, indem Sie dem Zeichen einen zurückgestellten Schrägstrich ( ) voran \\ stellen:
 
--   umgekehrten Schrägstrich\\\)
+-   schräger Schrägstrich ( \\ \\ )
 -   doppelte Anführungszeichen ( \\ ")
 -   einfache Anführungszeichen ( \\ ')
 
-Beliebige arithmetische Ausdrücke können nicht verwendet werden. Die folgende Abfrage gibt beispielsweise nur die Instanzen der [**Win32 \_ LogicalDisk**](/windows/desktop/CIMWin32Prov/win32-logicaldisk) -Klasse zurück, die NTFS-Laufwerke darstellen:
+Beliebige arithmetische Ausdrücke können nicht verwendet werden. Die folgende Abfrage gibt beispielsweise nur die Instanzen der [**Win32 \_ LogicalDisk-Klasse**](/windows/desktop/CIMWin32Prov/win32-logicaldisk) zurück, die NTFS-Laufwerke darstellen:
 
 
 ```sql
@@ -53,13 +53,13 @@ SELECT * FROM PhysicalDisk WHERE Partitions < (4 + 7 - 2)
 
 
 
-Bei den meisten Verwendungsmöglichkeiten von Klassen Deskriptoren in einer WHERE-Klausel wird die Abfrage von WMI als ungültig gekennzeichnet, und es wird ein Fehler zurückgegeben. Verwenden Sie jedoch den Punkt Operator (.) für Eigenschaften vom Typ " **Object** " in WMI. Beispielsweise ist die folgende Abfrage gültig, wenn "prop" eine gültige Eigenschaft von "MyClass" und "Type **Object**" ist:
+Bei den meisten Verwendungen von Klassendeskriptoren in einer WHERE-Klausel kennzeichnet WMI die Abfrage als ungültig und gibt einen Fehler zurück. Verwenden Sie jedoch den Punktoperator (.) für Eigenschaften vom Typ **Objekt** in WMI. Die folgende Abfrage ist beispielsweise gültig, wenn Prop eine gültige Eigenschaft von MyClass und ein Typobjekt **ist:**
 
 ``` syntax
 SELECT * FROM MyClass WHERE Prop.embedprop = 5
 ```
 
-Bei Vergleichstests wird immer die Groß-/Kleinschreibung beachtet Das heißt, die folgenden drei Anweisungen werden alle als **true** ausgewertet:
+Bei Vergleichstests wird die Groß-/Kleinschreibung immer nicht beachtet. Das heißt, die folgenden drei Anweisungen werden alle als **TRUE ausgewertet:**
 
 
 ```sql
@@ -70,7 +70,7 @@ SELECT * FROM MyClass WHERE Prop1 = "cAt"
 
 
 
-Sie können eine Abfrage erstellen, die boolesche Datentypen enthält, aber die einzigen gültigen booleschen Operanden Typen sind die Typen =,! = und <> . Der Wert **true** entspricht der Zahl 1, und der Wert **false** entspricht der Zahl 0. Die folgenden Beispiele sind Abfragen, die einen booleschen Wert mit den Werten **true** oder **false** vergleichen.
+Sie können eine Abfrage erstellen, die boolesche Datentypen enthält, aber die einzigen gültigen booleschen Operandentypen sind die Typen =, != und <> . Der Wert **TRUE** entspricht der Zahl 1, und der Wert **FALSE** entspricht der Zahl 0. Die folgenden Beispiele sind Abfragen, die einen booleschen Wert mit den Werten **TRUE** oder **FALSE vergleichen.**
 
 
 ```sql
@@ -86,7 +86,7 @@ SELECT * FROM MyClass WHERE BoolProp <> FALSE
 
 
 
-Die folgenden Beispiele sind ungültige Abfragen, bei denen versucht wird, ungültige Operanden zu verwenden.
+Die folgenden Beispiele sind ungültige Abfragen, die versuchen, ungültige Operanden zu verwenden.
 
 
 ```sql
@@ -98,7 +98,7 @@ SELECT * FROM win32_computersystem WHERE infraredsupported >= null
 
 
 
-Mehrere Gruppen von Eigenschaften, Operatoren und Konstanten können in einer WHERE-Klausel mit logischen Operatoren und Klammer unter Ausdrücken kombiniert werden. Jede Gruppe muss mit den [Operatoren](wql-operators.md) and, or oder not verknüpft werden, wie in den folgenden Abfragen gezeigt. Die erste Abfrage ruft alle Instanzen der [**Win32 \_ LogicalDisk**](/windows/desktop/CIMWin32Prov/win32-logicaldisk) -Klasse ab, wobei die **Name** -Eigenschaft entweder auf C oder D festgelegt ist:
+Mehrere Gruppen von Eigenschaften, Operatoren und Konstanten können in einer WHERE-Klausel mithilfe logischer Operatoren und klammerischer Teilausdrucke kombiniert werden. Jede Gruppe muss mit den Operatoren AND, OR oder [NOT](wql-operators.md) verbunden werden, wie in den folgenden Abfragen gezeigt. Die erste Abfrage ruft alle Instanzen der [**Win32 \_ LogicalDisk-Klasse**](/windows/desktop/CIMWin32Prov/win32-logicaldisk) ab, bei der die **Name-Eigenschaft** entweder auf C oder D festgelegt ist:
 
 
 ```sql
@@ -107,7 +107,7 @@ SELECT * FROM Win32_LogicalDisk WHERE Name = "C:" OR Name = "D:"
 
 
 
-Die zweite Abfrage ruft Datenträger mit dem Namen "C:" oder "D:" nur dann ab, wenn Sie über eine bestimmte Menge an freiem Speicherplatz verfügen und NTFS-Dateisysteme aufweisen:
+Die zweite Abfrage ruft Datenträger mit den Namen "C:" oder "D:" nur dann ab, wenn sie über eine bestimmte Menge an freiem Speicherplatz und NTFS-Dateisystemen verfügen:
 
 
 ```sql
@@ -117,7 +117,7 @@ SELECT * FROM Win32_LogicalDisk WHERE (Name = "C:" OR Name = "D:")
 
 
 
-Dieses Beispiel zeigt eine Schema Abfrage mit der WHERE-Klausel.
+Dieses Beispiel zeigt eine Schemaabfrage mithilfe der WHERE-Klausel.
 
 
 ```sql
@@ -126,9 +126,9 @@ SELECT * FROM meta_class WHERE __this ISA "myClassName"
 
 
 
-Die Klasse Meta \_ Class identifiziert dies als Schema Abfrage. die Eigenschaft, die als bezeichnet wird, \_ \_ identifiziert die Zielklasse der Abfrage, und der [ISA-Operator](isa-operator-for-schema-queries.md) fordert Definitionen für die Unterklassen der Zielklasse an. Daher gibt die vorherige Abfrage die Definition für die myClassName-Klasse und Definitionen für alle zugehörigen Unterklassen zurück.
+Die Klassenmetaklasse identifiziert dies als Schemaabfrage, die Eigenschaft namens this identifiziert die Zielklasse der Abfrage, und der ISA-Operator fordert Definitionen für die Unterklassen der \_ \_ \_ Zielklasse an. [](isa-operator-for-schema-queries.md) Daher gibt die vorherige Abfrage die Definition für die myClassName-Klasse und Definitionen für alle ihre Unterklassen zurück.
 
-Das folgende Beispiel ist eine Datenabfrage, die die [assoziatoren der-Anweisung](associators-of-statement.md) mit WHERE verwendet:
+Das folgende Beispiel ist eine Datenabfrage, die die [ASSOCIATORS OF-Anweisung mit](associators-of-statement.md) WHERE verwendet:
 
 
 ```sql
@@ -137,7 +137,7 @@ ASSOCIATORS OF {myClass.keyVal="Value1"} WHERE ClassDefsOnly
 
 
 
-Das nächste Beispiel zeigt eine Schema Abfrage mit assoziatoren von und, wobei:
+Das nächste Beispiel zeigt eine Schemaabfrage mit ASSOCIATORS OF und WHERE:
 
 
 ```sql
@@ -146,7 +146,7 @@ ASSOCIATORS OF {myClass} WHERE SchemaOnly
 
 
 
-Das folgende Beispiel zeigt eine Datenabfrage, die die [Verweise der-Anweisung](references-of-statement.md) und wobei verwendet:
+Das folgende Beispiel ist eine Datenabfrage, die die [REFERENCES OF-Anweisung und](references-of-statement.md) WHERE verwendet:
 
 
 ```sql
@@ -156,7 +156,7 @@ REFERENCES OF {myClass.keyVal="Value1"}
 
 
 
-Bei diesem letzten Beispiel handelt es sich um eine Schema Abfrage mit Verweisen auf und, wobei:
+Das letzte Beispiel ist eine Schemaabfrage mit REFERENCES OF und WHERE:
 
 
 ```sql
@@ -165,9 +165,9 @@ REFERENCES OF {myClass} WHERE SchemaOnly
 
 
 
-Zusätzlich zum WMI- [DateTime](date-and-time-format.md) -Format unterstützt die WQL WHERE-Klausel verschiedene andere Datums-und Uhrzeit Formate:
+Zusätzlich zum WMI [DATETIME-Format](date-and-time-format.md) unterstützt die WQL WHERE-Klausel mehrere andere Datums- und Uhrzeitformate:
 
--   [WQL-unterstützte Datumsformate](wql-supported-date-formats.md)
+-   [Von WQL unterstützte Datumsformate](wql-supported-date-formats.md)
 -   [Von WQL unterstützte Zeitformate](wql-supported-time-formats.md)
 
  

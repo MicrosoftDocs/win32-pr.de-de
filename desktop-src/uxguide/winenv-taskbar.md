@@ -1,516 +1,515 @@
 ---
 title: Taskleiste
-description: Die Taskleiste ist der Zugriffspunkt für Programme, die auf dem Desktop angezeigt werden. Mit den neuen Funktionen der Windows 7-Taskleiste können Benutzer Befehle bereitstellen, auf Ressourcen zugreifen und den Programmstatus direkt über die Taskleiste anzeigen.
+description: Die Taskleiste ist der Zugriffspunkt für Programme, die auf dem Desktop angezeigt werden. Mit den neuen Windows 7-Taskleistenfeatures können Benutzer Befehle erteilen, auf Ressourcen zugreifen und den Programmstatus direkt über die Taskleiste anzeigen.
 ms.assetid: c00e558a-313f-4741-a4b2-7d738f4544fa
 ms.topic: article
 ms.date: 10/20/2020
-ms.openlocfilehash: f8b2bc21a75bc11c43df2cbdd37381165b89a793
-ms.sourcegitcommit: 3bdf30edb314e0fcd17dc4ddbc70e4ec7d3596e6
+ms.openlocfilehash: c3e549e665f0200a448144ddf7202b258e88ff26
+ms.sourcegitcommit: 099ecdda1e83618b844387405da0db0ebda93a65
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "104551576"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111443391"
 ---
 # <a name="taskbar"></a>Taskleiste
 
 > [!NOTE]
-> Dieses Entwurfs Handbuch wurde für Windows 7 erstellt und wurde für neuere Versionen von Windows nicht aktualisiert. Ein Großteil der Anleitungen gilt weiterhin im Prinzip, aber die Präsentation und die Beispiele entsprechen nicht unseren [aktuellen Entwurfs Anleitungen](/windows/uwp/design/).
+> Dieser Entwurfsleitfaden wurde für Windows 7 erstellt und für neuere Versionen von Windows nicht aktualisiert. Ein Großteil der Anleitungen gilt immer noch im Prinzip, aber die Präsentation und die Beispiele spiegeln nicht unsere [aktuellen Entwurfsleitfäden](/windows/uwp/design/)wider.
 
-Die Taskleiste ist der Zugriffspunkt für Programme, die auf dem Desktop angezeigt werden. Mit den neuen Funktionen der Windows 7-Taskleiste können Benutzer Befehle bereitstellen, auf Ressourcen zugreifen und den Programmstatus direkt über die Taskleiste anzeigen.
+Die Taskleiste ist der Zugriffspunkt für Programme, die auf dem Desktop angezeigt werden. Mit den neuen Windows 7-Taskleistenfeatures können Benutzer Befehle erteilen, auf Ressourcen zugreifen und den Programmstatus direkt über die Taskleiste anzeigen.
 
-Die Taskleiste ist der Zugriffspunkt für Programme, die auf dem Desktop angezeigt werden, selbst wenn das Programm minimiert ist. Solche Programme werden als Desktop Präsenz bezeichnet. Mithilfe der Taskleiste können Benutzer die geöffneten primären Fenster und bestimmte sekundäre Fenster auf dem Desktop anzeigen und schnell zwischen den Fenstern wechseln.
+Die Taskleiste ist der Zugriffspunkt für Programme, die auf dem Desktop angezeigt werden, auch wenn das Programm minimiert ist. Solche Programme werden als Desktopdarstellung bezeichnet. Über die Taskleiste können Benutzer die geöffneten primären Fenster und bestimmte sekundäre Fenster auf dem Desktop anzeigen und schnell zwischen ihnen wechseln.
 
-![Screenshot der Taskleiste mit den aufgerufenen Features ](images/winenv-taskbar-image1.png)
+![Screenshot der Taskleiste mit aufgerufenen Features ](images/winenv-taskbar-image1.png)
 
 Die Microsoft Windows-Taskleiste.
 
-Die Steuerelemente auf der Taskleiste werden als Task leisten Schaltflächen bezeichnet. Wenn ein Programm ein primäres Fenster (oder ein sekundäres Fenster mit bestimmten Merkmalen) erstellt, fügt Windows eine Task leisten Schaltfläche für dieses Fenster hinzu und entfernt diese, wenn dieses Fenster geschlossen wird.
+Die Steuerelemente auf der Taskleiste werden als Taskleistenschaltflächen bezeichnet. Wenn ein Programm ein primäres Fenster (oder ein sekundäres Fenster mit bestimmten Merkmalen) erstellt, fügt Windows eine Taskleistenschaltfläche für dieses Fenster hinzu und entfernt es, wenn dieses Fenster geschlossen wird.
 
-Für Windows 7 entwickelte Programme können diese neuen Features der Task leisten-Schaltfläche nutzen:
+Programme, die für Windows 7 entwickelt wurden, können diese neuen Funktionen der Taskleistenschaltfläche nutzen:
 
--   Sprung Listen ermöglichen den schnellen Zugriff auf häufig verwendete Ziele (z. b. Dateien, Ordner und Verknüpfungen) und Befehle über ein Kontextmenü, auf das über die Task leisten Schaltfläche des Programms und das Startmenü Element zugegriffen werden kann, selbst wenn das Programm nicht ausgeführt wird.
--   Miniatur Ansichts Symbolleisten ermöglichen den schnellen Zugriff auf häufig verwendete Befehle für ein bestimmtes Fenster. Miniatur Ansichts Symbolleisten werden in der Miniaturansicht der Taskleiste angezeigt.
--   Überlagerungs Symbole zeigen die Statusänderung auf dem Symbolleisten Symbol der Taskleiste des Programms an.
--   Status leisten zeigen den Fortschritt für Aufgaben mit langer Ausführungszeit auf der Task leisten Schaltfläche des Programms an.
--   Mithilfe der Schaltflächen für die Taskleiste Unterfenster können Benutzer mithilfe von Schaltflächen Miniaturansichten auf der Taskleiste direkt zu Fenster Registerkarten, Projekt Fenstern, untergeordneten Fenstern von Multiple Document Interface (MDI) und sekundären Fenstern wechseln.
--   Mit angehefteten Task leisten Schaltflächen können Benutzerprogramm Schaltflächen an die Taskleiste anheften, um schnell auf Programme zuzugreifen, auch wenn Sie nicht ausgeführt werden.
+-   Sprunglisten bieten schnellen Zugriff auf häufig verwendete Ziele (z. B. Dateien, Ordner und Links) und Befehle über ein Kontextmenü, auf das über die Taskleistenschaltfläche des Programms zugegriffen werden kann, und Startmenü Element, auch wenn das Programm derzeit nicht ausgeführt wird.
+-   Miniaturansichtssymbolleisten bieten schnellen Zugriff auf häufig verwendete Befehle für ein bestimmtes Fenster. Miniaturansichtssymbolleisten werden in der Miniaturansicht der Taskleistenschaltfläche angezeigt.
+-   Überlagerungssymbole zeigen die Statusänderung auf dem Symbol der Taskleistenschaltfläche des Programms an.
+-   Statusleisten zeigen den Fortschritt für Aufgaben mit langer Ausführungslaufzeit auf der Taskleistenschaltfläche des Programms an.
+-   Unterfenster-Taskleistenschaltflächen ermöglichen Benutzern die Verwendung von Miniaturansichten der Taskleistenschaltfläche, um direkt zu Fensterregisterkarten, Projektfenstern, untergeordneten MDI-Fenstern (Multiple Document Interface) und sekundären Fenstern zu wechseln.
+-   Mit angehefteten Taskleistenschaltflächen können Benutzer Programmschaltflächen an die Taskleiste anheften, um schnellen Zugriff auf Programme auch dann zu ermöglichen, wenn sie nicht ausgeführt werden.
 
-Technisch gesehen umfasst die Taskleiste den gesamten Balken von der Start Schaltfläche bis zum Benachrichtigungsbereich. Üblicherweise verweist die Taskleiste auf den Bereich, der die Schaltflächen der Taskleiste enthält. Bei Konfigurationen mit mehreren Monitoren verfügt nur ein Monitor über eine Taskleiste, und dieser Monitor ist der Standard Monitor.
+Technisch gesehen umfasst die Taskleiste den gesamten Balken vom Schaltfläche "Start" bis zum Benachrichtigungsbereich. In der Regel bezieht sich die Taskleiste jedoch nur auf den Bereich, der die Taskleistenschaltflächen enthält. Bei konfigurationen mit mehreren Monitoren verfügt nur ein Monitor über eine Taskleiste, und dieser Monitor ist der Standardmonitor.
 
-**Hinweis:** Die Richtlinien im Zusammenhang mit [Desktop](winenv-desktop.md), [Benachrichtigungsbereich](winenv-notification.md)und [Fensterverwaltung](win-window-mgt.md) werden in separaten Artikeln dargestellt.
+**Hinweis:** Richtlinien zur [](winenv-desktop.md) [Desktop-,](win-window-mgt.md) [Benachrichtigungsbereichs-](winenv-notification.md)und Fensterverwaltung werden in separaten Artikeln vorgestellt.
 
-## <a name="is-this-the-right-user-interface"></a>Handelt es sich um die richtige Benutzeroberfläche?
+## <a name="is-this-the-right-user-interface"></a>Ist dies die richtige Benutzeroberfläche?
 
-Für Windows 7 entwickelte Programme können diese Funktionen der Task leisten-Schaltfläche nutzen. Stellen Sie sich die folgenden wichtigen Fragen, um zu bestimmen, ob Sie Sie verwenden möchten:
+Programme, die für Windows 7 entwickelt wurden, können diese Funktionen der Taskleistenschaltfläche nutzen. Stellen Sie sich die folgenden wichtigen Fragen, um zu bestimmen, ob sie verwendet werden sollen:
 
-**Sprung Listen**
+**Sprunglisten**
 
--   **Müssen Benutzer häufig neue Aufgaben mit Ihrem Programm starten?** Wenn dies der Fall ist, sollten Sie eine Sprung Liste bereitstellen. Sprung Listen können auch für andere Zwecke verwendet werden. in den meisten Szenarien ist jedoch das Starten einer neuen Aufgabe enthalten.
--   **Benötigen Benutzer häufig oder häufig verwendete Dateien, Ordner, Links oder andere Ressourcen?** Wenn dies der Fall ist, sollten Sie eine Sprung Liste angeben, um auf diese nützlichen Ressourcen zuzugreifen.
+-   **Müssen Benutzer häufig neue Aufgaben mit ihrem Programm starten?** Falls ja, sollten Sie eine Sprungliste bereitstellen. Sprunglisten können zwar für andere Zwecke verwendet werden, die meisten Szenarien umfassen jedoch das Starten einer neuen Aufgabe.
+-   **Müssen Benutzer häufig auf zuletzt verwendete oder häufig verwendete Dateien, Ordner, Links oder andere Ressourcen zugreifen?** Falls ja, sollten Sie eine Sprungliste für den Zugriff auf diese nützlichen Ressourcen bereitstellen.
 
-    ![Screenshot der Taskleiste mit der Sprung Liste von Internet Explorer ](images/winenv-taskbar-image2.png)
+    ![Screenshot der Taskleiste mit Internet Explorer-Sprungliste ](images/winenv-taskbar-image2.png)
 
-    In diesem Beispiel verwendet Windows Internet Explorer eine Sprung Liste, um häufig besuchte Seiten zu präsentieren.
+    In diesem Beispiel verwendet Windows Internet Explorer eine Sprungliste, um häufig besuchten Seiten darzustellen.
 
--   **Benötigen Benutzer bei der Verwendung anderer Programme häufig schnellen Zugriff auf eine kleine Anzahl von Befehlen Ihres Programms, auch wenn das Programm nicht ausgeführt wird?** Wenn dies der Fall ist, sollten Sie eine Sprung Liste mit diesen häufig verwendeten Befehlen bereitstellen. Diese Befehle müssen auch dann funktionieren, wenn das Programm nicht ausgeführt wird und auf das gesamte Programm und nicht auf ein bestimmtes Fenster angewendet werden muss. Als Alternative empfiehlt es sich, eine Miniaturansicht für Befehle bereitzustellen, die auf ein bestimmtes Fenster angewendet werden.
+-   **Benötigen Benutzer häufig schnellen Zugriff auf eine kleine Anzahl von Befehlen Ihres Programms, während sie andere Programme verwenden, auch wenn Ihr Programm nicht ausgeführt wird?** Falls ja, sollten Sie eine Sprungliste mit diesen häufig verwendeten Befehlen bereitstellen. Diese Befehle müssen auch funktionieren, wenn ihr Programm nicht ausgeführt wird, und sie müssen für das gesamte Programm und nicht für ein bestimmtes Fenster gelten. Alternativ können Sie eine Miniaturansichtssymbolleiste für Befehle bereitstellen, die für ein bestimmtes Fenster gelten.
 
-    ![Screenshot der Taskleiste mit der Sprung Liste für kurz Notizen ](images/winenv-taskbar-image3.png)
+    ![Screenshot der Taskleiste mit Sprungliste mit stickigen Notizen ](images/winenv-taskbar-image3.png)
 
-    In diesem Beispiel können Benutzer mit dem Kurznotizen Zubehör einen neuen Hinweis schnell erstellen, während Sie andere Programme verwenden.
+    In diesem Beispiel ermöglicht das Kurznotizen-Zubehör Benutzern, schnell eine neue Notiz zu erstellen, während sie andere Programme verwenden.
 
--   **Fördern Sie neue, einmalige Verwendung oder schwer zu suchende Features?** Wenn dies der Fall ist, verwenden Sie keine Sprung Listen, da Sie für diesen Zweck nicht vorgesehen sind. Stattdessen sollten Sie die Auffindbarkeit solcher Befehle direkt im Programm verbessern.
+-   **Bewerben Sie neue, einmalige Verwendung oder schwer zu findende Features?** Verwenden Sie in diesem Falle keine Sprunglisten, da sie nicht für diesen Zweck vorgesehen sind. Verbessern Sie stattdessen die Auffindbarkeit solcher Befehle direkt im Programm.
 
-**Miniatur Ansichts Symbolleisten**
+**Miniaturansichtssymbolleisten**
 
 Gelten alle folgenden Bedingungen?
 
--   **Gelten die Befehle für ein bestimmtes Fenster?** Miniatur Ansichts Symbolleisten sind für Befehle, die für vorhandene Aufgaben gelten, während Sprung Listen Befehle zum Starten neuer Aufgaben dienen.
--   **Müssen Benutzer bei der Verwendung anderer Programme schnell mit einer laufenden Aufgabe interagieren?** Wenn dies der Fall ist, sind Miniatur Ansichts Symbolleisten eine gute Wahl. Miniatur Ansichts-Symbolleisten können maximal sieben Befehle enthalten, aber im Allgemeinen werden maximal fünf Befehle bevorzugt.
--   **Sind die Befehle sofort?** Das heißt, Sie benötigen keine zusätzlichen Eingaben? Miniatur Ansichts-Symbolleisten müssen über sofortige Befehle verfügen, um effizient zu sein, während Sprung Listen mit Befehlen, die zusätzliche Eingaben erfordern, besser funktionieren.
+-   **Gelten die Befehle für ein bestimmtes Fenster?** Miniaturansichtssymbolleisten sind für Befehle vorgesehen, die für vorhandene Aufgaben gelten, während Sprungliste Befehle zum Starten neuer Aufgaben dienen.
+-   **Müssen Benutzer bei der Verwendung anderer Programme schnell mit einer ausgeführten Aufgabe interagieren?** Wenn ja, sind Miniaturansichtssymbolleisten eine gute Wahl. Miniaturansichtssymbolleisten können maximal sieben Befehle enthalten, aber maximal fünf Befehle werden im Allgemeinen bevorzugt.
+-   **Sind die Befehle sofort?** Das heißt, sind keine zusätzlichen Eingaben erforderlich? Miniaturansichtssymbolleisten müssen über sofortige Befehle verfügen, um effizient zu sein, während Sprunglisten besser mit Befehlen funktionieren, die zusätzliche Eingaben erfordern.
 
     **Falsch:**
 
     ![Screenshot der Taskleiste mit überlappenden Fenstern ](images/winenv-taskbar-image4.png)
 
-    Befehle, die zusätzliche Eingaben erfordern, funktionieren nicht gut auf Miniatur Ansichts Symbolleisten.
+    Befehle, die zusätzliche Eingaben erfordern, funktionieren auf Miniaturansichtssymbolleisten nicht gut.
 
--   **Sind die Befehle direkt?** Das heißt, können Benutzer mit Ihnen mit einem einzigen Mausklick interagieren? Symbolleisten müssen direkt Befehle aufweisen, damit Sie effizient sind.
--   **Werden die Befehle gut durch Symbole dargestellt?** Symbolleisten Befehle für Miniaturansichten werden mithilfe von Symbolen, nicht Text Bezeichnungen, angezeigt, während Sprung Listen Befehle durch Text Beschriftungen dargestellt werden.
+-   **Sind die Befehle direkt?** Das heißt, können Benutzer mit einem einzigen Klick mit ihnen interagieren? Symbolleisten müssen über direkte Befehle verfügen, um effizient zu sein.
+-   **Werden die Befehle durch Symbole gut dargestellt?** Miniaturansichtssymbolleistenbefehle werden mit Symbolen und nicht mit Textbeschriftungen dargestellt, während Sprungliste Befehle durch Textbeschriftungen dargestellt werden.
 
     **Falsch:**
 
-    ![Screenshot des Miniatur Ansichts Befehls mit dem Symbol ](images/winenv-taskbar-image5.png)
+    ![Screenshot des Miniaturansichtsbefehls mit Symbol ](images/winenv-taskbar-image5.png)
 
     In diesem Beispiel wird der Befehl nicht gut durch Symbole dargestellt.
 
-**Überlagerungs Symbole**
+**Überlagerungssymbole**
 
--   **Hat das Programm "Desktop Präsenz"?** Wenn dies nicht der gibt, verwenden Sie stattdessen ein Benachrichtigungs Bereichs Symbol. Wenn dies der Fall ist, sollten Sie ein Überlagerungs Symbol verwenden, anstatt den Status im Info Bereichs Symbol für Programme für Windows 7 zu platzieren. Dadurch wird sichergestellt, dass das Symbol immer sichtbar ist (bei Verwendung von großen Symbolen), und das Programm wird mit seinem Status an einem Ort konsolidiert.
--   **Wird das Überlagerungs Symbol temporär angezeigt, um eine Statusänderung anzuzeigen?** Wenn dies der Fall ist, kann ein Überlagerungs Symbol geeignet sein, je nach den folgenden Faktoren:
-    -   **Ist der Status hilfreich und relevant bei der Verwendung anderer Programme?** Wenn dies nicht der Wert ist, zeigen Sie die Informationen in den [Status leisten](ctrl-status-bars.md) des Programms oder in einem anderen Programmstatus an.
+-   **Verfügt das Programm über "Desktopdarstellung"?** Falls nicht, verwenden Sie stattdessen ein Symbol für den Benachrichtigungsbereich. Wenn ja, sollten Sie ein Überlagerungssymbol verwenden, anstatt den Status auf dem Symbol für den Benachrichtigungsbereich für Programme zu setzen, die für Windows 7 entwickelt wurden. Dadurch wird sichergestellt, dass das Symbol immer sichtbar ist (wenn große Symbole verwendet werden), und das Programm mit seinem Status an einem Ort konsolidiert.
+-   **Wird das Überlagerungssymbol vorübergehend angezeigt, um eine Statusänderung anzuzeigen?** In diesem Falle kann je nach den folgenden Faktoren ein Überlagerungssymbol geeignet sein:
+    -   **Ist der Status nützlich und relevant, wenn andere Programme verwendet werden?** Andernfalls werden die Informationen in den [Statusleisten](ctrl-status-bars.md) des Programms oder in einem anderen Programmstatusbereich angezeigt.
 
-        ![Screenshot der Fenster Statusleiste von Internet Explorer ](images/winenv-taskbar-image7.png)
+        ![Screenshot der Statusleiste des Internet Explorer-Fensters ](images/winenv-taskbar-image7.png)
 
-        In diesem Beispiel wird die Statusleiste verwendet, da der Status bei der Verwendung anderer Programme nicht hilfreich ist.
+        In diesem Beispiel wird die Statusleiste verwendet, da der Status bei Verwendung anderer Programme nicht nützlich ist.
 
-    -   **Wird der Status angezeigt?** Wenn dies der Fall ist, verwenden Sie stattdessen eine Statusleiste der Taskleiste.
-    -   **Ist der Status kritisch? Ist eine sofortige Aktion erforderlich?** Wenn dies der Fall ist, zeigen Sie die Informationen so an, dass Sie beachtet werden und nicht einfach ignoriert werden können, z. b. ein [Dialogfeld](win-dialog-box.md).
+    -   **Zeigt der Status den Fortschritt an?** Wenn ja, verwenden Sie stattdessen eine Statusleiste der Taskleistenschaltfläche.
+    -   **Ist der Status kritisch? Ist sofortige Aktion erforderlich?** Wenn ja, zeigen Sie die Informationen auf eine Weise an, die Aufmerksamkeit erfordert und nicht einfach ignoriert werden kann, z. B. ein [Dialogfeld](win-dialog-box.md).
 
-**Status anzeigen**
+**Statusanzeigen**
 
--   **Ist das Fortschritts Feedback hilfreich und relevant bei der Verwendung anderer Programme?** Das heißt, Benutzer können den Fortschritt bei der Verwendung anderer Programme wahrscheinlich überwachen und ihr Verhalten als Ergebnis ändern? Dieser nützliche und relevante Status wird normalerweise im Dialogfeld "nicht modalstatus" oder auf einer dedizierten Statusseite angezeigt, jedoch nicht mit einem ausgelasteten Zeiger, Aktivitätsindikator oder Statusleiste auf einer Statusleiste. Wenn der Status bei der Verwendung anderer Programme nicht hilfreich ist, zeigen Sie einfach das Fortschritts Feedback direkt im Programm an.
+-   **Ist das Fortschrittsfeedback nützlich und relevant bei der Verwendung anderer Programme?** Das heißt, werden Benutzer wahrscheinlich den Fortschritt überwachen, während sie andere Programme verwenden, und ihr Verhalten ändern? Ein solcher nützlicher und relevanter Status wird in der Regel über ein statusloses Dialogfeld oder eine dedizierte Statusseite angezeigt, jedoch nicht mit einem ausgelasteten Zeiger, Aktivitätsindikator oder Statusanzeige auf einer Statusleiste. Wenn der Status bei Verwendung anderer Programme nicht hilfreich ist, zeigen Sie einfach das Fortschrittsfeedback direkt im Programm selbst an.
 
     **Richtig:**
 
-    ![Screenshot des Dialog Felds "Kopieren" mit Statusanzeige ](images/winenv-taskbar-image8.png)
+    ![Screenshot des Kopierdialogfelds mit Statusanzeige ](images/winenv-taskbar-image8.png)
 
     **Falsch:**
 
-    ![Screenshot der Statusanzeige auf der Task leisten Schaltfläche ](images/winenv-taskbar-image9.png)
+    ![Screenshot der Statusanzeige auf der Taskleistenschaltfläche ](images/winenv-taskbar-image9.png)
 
-    Im falschen Beispiel ist die Statusleiste der Taskleiste nicht sehr nützlich.
+    Im falschen Beispiel ist die Statusleiste der Taskleistenschaltfläche nicht sehr nützlich.
 
--   **Ist die Aufgabe kontinuierlich?** Wenn die Aufgabe nie abgeschlossen wird, muss der Fortschritt nicht angezeigt werden. Beispiele für fortlaufende Aufgaben sind Antivirenscans, die nicht von Benutzern initiiert werden, und die Datei Indizierung.
+-   **Ist die Aufgabe fortlaufend?** Wenn die Aufgabe nie abgeschlossen wird, muss der Fortschritt nicht angezeigt werden. Beispiele für kontinuierliche Aufgaben sind Antivirenscans, die nicht von Benutzern initiiert werden, und Dateiindizierung.
 
     **Falsch:**
 
-    ![Screenshot des Fortschritts Symbols einer kontinuierlichen Aufgabe ](images/winenv-taskbar-image10.png)
+    ![Screenshot des Statussymbols einer fortlaufenden Aufgabe ](images/winenv-taskbar-image10.png)
 
     In diesem Beispiel muss ein fortlaufender Task den Fortschritt nicht anzeigen.
 
-**Unterfenster-Task leisten**
+**Taskleisten des Unterfensters**
 
--   **Enthält Ihr Programm Registerkarten, Projektfenster, untergeordnete MDI-Fenster oder sekundäre Fenster, auf die Benutzer häufig direkt umsteigen möchten?** Wenn dies der Fall ist, können Sie für diese Windows-Schaltflächen Miniaturansichten geeignet sein.
+-   **Enthält Ihr Programm Registerkarten, Projektfenster, untergeordnete MDI-Fenster oder sekundäre Fenster, zu denen Benutzer häufig direkt wechseln möchten?** Falls ja, kann es sinnvoll sein, diesen Fenstern eigene Miniaturansichten der Taskleistenschaltfläche zu geben.
 
 ## <a name="design-concepts"></a>Entwurfskonzepte
 
-### <a name="using-jump-lists-and-thumbnail-toolbars-effectively"></a>Effektive Verwendung von Sprung Listen und Miniatur Ansichts Symbolleisten
+### <a name="using-jump-lists-and-thumbnail-toolbars-effectively"></a>Effektives Verwenden von Sprunglisten und Miniaturansichtssymbolleisten
 
-Sprung Listen und Miniaturansicht-Symbolleisten helfen Benutzern, auf Ressourcen zuzugreifen und Befehle effizienter auszuführen. Wenn Sie jedoch entwerfen, wie Ihr Programm diese Features unterstützt, nehmen Sie keine verbesserte Effizienz für die Gewährung vor. Wenn Benutzer nicht genau vorhersagen können, welches Feature den Befehl hat, den Sie benötigen, oder mehrere Orte überprüfen müssen, werden die Benutzer schließlich frustriert und können diese Features nicht mehr verwenden.
+Sprunglisten und Miniaturansichtssymbolleisten helfen Benutzern, auf Ressourcen zu zugreifen und Befehle effizienter auszuführen. Wenn Sie jedoch entwerfen, wie Ihr Programm diese Features unterstützt, sollten Sie die effizienzsteigerung nicht selbstverständlicher gestalten. Wenn Benutzer nicht genau vorhersagen können, welches Feature über den benötigten Befehl verfügt, oder wenn sie mehrere Stellen überprüfen müssen, werden Benutzer letztendlich frustriert und können diese Features nicht mehr verwenden.
 
-Sprung Listen und Miniatur Ansichts Symbolleisten arbeiten am effektivsten zusammen, wenn Sie Folgendes sind:
+Sprunglisten und Miniaturansichtssymbolleisten funktionieren am effektivsten, wenn sie:
 
--   **Eindeutig differenziert.** Benutzer wissen, wann Sie in einer Sprung Liste nach einem Ziel oder Befehl Suchen und wann Sie in einer Miniaturansicht auf der Symbolleiste suchen müssen. Es gibt eine klare Aufgabe für jeden, sodass Benutzer den Inhalt der beiden selten verwechseln. Im Allgemeinen werden Sprung Listen zum Starten neuer Aufgaben verwendet, während bei der Verwendung anderer Programme Miniatur Ansichts-Symbolleisten verwendet werden, um mit laufenden Aufgaben zu interagieren.
--   **Lichem.** Die angebotenen Ziele und Befehle sind diejenigen, die von Benutzern benötigt werden. Wenn Benutzer wahrscheinlich nichts benötigen, ist Sie nicht enthalten. Verwenden Sie die maximale Anzahl von Elementen nicht, wenn Sie nicht benötigt werden.
--   **Vorhersagbare.** Die angebotenen Ziele und Befehle sind diejenigen, die von Benutzern erwartet werden. Benutzer müssen selten an mehr als einem Ort suchen.
--   **Gut organisiert.** Benutzer können schnell feststellen, was Sie suchen. Sie verwenden beschreibende, aber präzise Bezeichnungen und geeignete Symbole, um die Erkennung zu unterstützen.
+-   **Eindeutig differenziert.** Benutzer wissen, wann nach einem Ziel oder Befehl in einer Sprungliste und wann sie in einer Miniaturansichtssymbolleiste suchen sollten. Es gibt einen eindeutigen Zweck, sodass Benutzer den Inhalt der beiden nur selten verwechseln. Im Allgemeinen werden Sprunglisten verwendet, um neue Aufgaben zu starten, während Miniaturansichtssymbolleisten verwendet werden, um mit ausgeführten Aufgaben zu interagieren, während andere Programme verwendet werden.
+-   **Nützlich.** Die von Benutzern benötigten Ziele und Befehle sind diejenigen, die sie benötigen. Wenn Benutzer wahrscheinlich etwas nicht benötigen, wird es nicht eingeschlossen. Verwenden Sie nicht die maximale Anzahl von Elementen, wenn sie nicht benötigt werden.
+-   **Vorhersehbar.** Die angebotenen Ziele und Befehle sind die Ziele, die Benutzer erwarten. Benutzer müssen selten an mehr als einem Ort suchen.
+-   **Gut organisiert.** Benutzer können schnell herausfinden, was sie suchen. Sie verwenden beschreibende, aber präzise Bezeichnungen und geeignete Symbole, um die Erkennung zu helfen.
 
-Stellen Sie sicher, dass Sie eine Benutzer Recherche durchführen, um sicherzustellen, dass Sie richtig ist. Wenn Sie letztendlich feststellen, dass Sie keine Sprung Listen und Symbolleisten für die Miniaturansicht erstellen können, um diese Ziele zu erreichen, sollten Sie nur eine davon bereitstellen. Es ist besser, eine vorhersagbare Möglichkeit zu haben, Befehle als zwei verwirrende Befehle zu erhalten.
+Stellen Sie sicher, dass Sie nach Benutzerinformationen forschen, um sicherzustellen, dass Sie richtig sind. Wenn Sie letztendlich feststellen, dass Sie keine Sprunglisten und Miniaturansichtssymbolleisten zusammen entwerfen können, die diese Ziele erreichen, sollten Sie nur eine davon bereitstellen. Es ist besser, eine vorhersagbare Möglichkeit zu haben, Befehle zu geben, als zwei verwirrende.
 
 ## <a name="guidelines"></a>Richtlinien
 
-### <a name="taskbar-buttons"></a>Task leisten Schaltflächen
+### <a name="taskbar-buttons"></a>Taskleistenschaltflächen
 
--   **Nehmen Sie die folgenden Fenstertypen auf der Taskleiste auf (für Windows 7, indem Sie eine Miniaturansicht der Taskleiste verwenden):**
-    -   Primäre Fenster (einschließlich Dialogfeldern ohne Besitzer)
+-   **Lassen Sie die folgenden Fenstertypen auf der Taskleiste angezeigt (für Windows 7 mithilfe einer Miniaturansicht der Taskleistenschaltfläche):**
+    -   Primäre Fenster (einschließlich Dialogfelder ohne Besitzer)
     -   Eigenschaftenblätter
-    -   Dialogfelder mit nicht modalem Status
+    -   Dialogfelder für den statuslosen Status
     -   Assistenten
--   **Verwenden Sie für Windows 7 die Schaltflächen Miniaturansichten der Taskleiste, um die folgenden Fenstertypen mit der Schaltfläche für das primäre Fenster der Taskleiste zu gruppieren, von der aus** Jedes Programm (insbesondere jedes Programm, das als separates Programm wahrgenommen wird) sollte über eine einzige Task leisten Schaltfläche verfügen.
+-   **Verwenden Sie für Windows 7 Miniaturansichten der Taskleistenschaltfläche, um die folgenden Fenstertypen mit der Taskleistenschaltfläche des primären Fensters zu gruppen, aus der sie gestartet wurde.** Jedes Programm (insbesondere jedes Programm, das als separates Programm wahrgenommen wird) sollte über eine einzelne Taskleistenschaltfläche verfügen.
 
     -   Sekundäre Fenster
-    -   Arbeitsbereichs Registerkarten
+    -   Registerkarten "Arbeitsbereich"
     -   Projektfenster
     -   Untergeordnetes MDI-Fenster
 
     **Richtig:**
 
-    ![Screenshot von Windows-Explorer und Statusanzeige ](images/winenv-taskbar-image11.png)
+    ![Screenshot des Windows-Explorers und der Statusleiste ](images/winenv-taskbar-image11.png)
 
-    In diesem Beispiel wird ein sekundäres Fenster mit der Task leisten Schaltfläche des primären Fensters gruppiert.
-
-    **Falsch:**
-
-    ![Screenshot von Windows-Explorer und der Systemsteuerung ](images/winenv-taskbar-image12.png)
-
-    In diesem Beispiel ist die Systemsteuerung nicht ordnungsgemäß mit Windows-Explorer gruppiert. Benutzer nehmen diese als separate Programme an.
+    In diesem Beispiel wird ein sekundäres Fenster mit der Taskleistenschaltfläche des primären Fensters gruppiert.
 
     **Falsch:**
 
-    ![Screenshot des Programms, der Statusanzeige und einer Taskleiste ](images/winenv-taskbar-image13.png)
+    ![Screenshot des Windows-Explorers und der Systemsteuerung ](images/winenv-taskbar-image12.png)
 
-    In diesem Beispiel verwendet Windows Backup fälschlicherweise zwei Task leisten Schaltflächen für ein einzelnes Programm.
-
--   Beim **Wiederherstellen eines primären Fensters sollten auch alle zugehörigen sekundären Fenster wieder hergestellt werden,** selbst wenn diese sekundären Fenster über eigene Task leisten Schaltflächen verfügen. Platzieren Sie bei der Wiederherstellung sekundäre Fenster oberhalb des primären Fensters.
--   **Für Windows 7 können Programme, die normalerweise über Desktop Präsenz verfügen, vorübergehend eine Task leisten Schaltfläche anzeigen, um den Status anzuzeigen.** Dies ist nur möglich, wenn das Programm normalerweise auf dem Desktop angezeigt wird und Benutzer häufig mit dem Programm interagieren. Ein Programm, das normalerweise ohne Desktop Präsenz ausgeführt wird, sollte stattdessen sein Benachrichtigungs Bereichs Symbol verwenden, obwohl es möglicherweise nicht immer sichtbar ist.
+    In diesem Beispiel wird Systemsteuerung falsch mit einem Windows-Explorer. Benutzer betrachten diese als separate Programme.
 
     **Falsch:**
 
-    ![Screenshot der Schaltfläche "Windows Sync Center-Taskleiste" ](images/winenv-taskbar-image14.png)
+    ![Screenshot des Programms, der Statusleiste und einer Taskleiste ](images/winenv-taskbar-image13.png)
 
-    In diesem Beispiel verwendet Windows Sync Center fälschlicherweise eine temporäre Task leisten Schaltfläche, um den Status anzuzeigen. Stattdessen sollte das Benachrichtigungs Bereichs Symbol verwendet werden.
+    In diesem Beispiel verwendet Windows-Sicherung fälschlicherweise zwei Taskleistenschaltflächen für ein einzelnes Programm.
+
+-   **Beim Wiederherstellen eines primären Fensters sollten auch** alle sekundären Fenster wiederhergestellt werden, auch wenn diese sekundären Fenster über eigene Taskleistenschaltflächen verfügen. Platzieren Sie bei der Wiederherstellung sekundäre Fenster über dem primären Fenster.
+-   **Unter Windows 7 können Programme, die normalerweise über Desktops verfügen, vorübergehend eine Taskleistenschaltfläche anzeigen, um den Status anzuzeigen.** Tun Sie dies nur, wenn Ihr Programm normalerweise auf dem Desktop angezeigt wird und Benutzer häufig damit interagieren. Ein Programm, das normalerweise ohne Desktop-Präsenz ausgeführt wird, sollte stattdessen das Benachrichtigungsbereichssymbol verwenden, obwohl es möglicherweise nicht immer sichtbar ist.
+
+    **Falsch:**
+
+    ![Screenshot der Taskleistenschaltfläche des Windows-Synchronisierungscenters ](images/winenv-taskbar-image14.png)
+
+    In diesem Beispiel verwendet Windows Synchronisierungscenter fälschlicherweise eine temporäre Taskleistenschaltfläche, um den Status anzuzeigen. Stattdessen sollte das Benachrichtigungsbereichssymbol verwendet werden.
 
 ### <a name="icons"></a>Symbole
 
--   **Entwerfen Sie das Programmsymbol so, dass es auf der Taskleiste hervorragend aussieht.** Stellen Sie sicher, dass Sie sinnvoll ist und ihre Funktion und Ihre Marke widerspiegelt. Machen Sie es eindeutig, machen Sie es speziell, und stellen Sie sicher, dass es in allen Symbolgrößen gut rendert. Nehmen Sie die Zeit, die Sie benötigen, um es zu korrigieren. Befolgen Sie die [Richtlinien für das Aero-Stilsymbol](vis-icons.md).
--   **Wenn das Programm Überlagerungs Symbole verwendet, entwerfen Sie das Basis Symbol Ihres Programms, um die Überlagerungen zu verarbeiten.** Die Überlagerungs Symbole werden in der unteren rechten Ecke angezeigt. entwerfen Sie also das Symbol, damit der Bereich verdeckt werden kann.
+-   **Entwerfen Sie das Programmsymbol so, dass es auf der Taskleiste gut ausschaut.** Stellen Sie sicher, dass es sinnvoll ist und seine Funktion und Ihre Marke widerspiegelt. Machen Sie es eindeutig, machen Sie es speziell, und stellen Sie sicher, dass es in allen Symbolgrößen gut gerendert wird. Verbringen Sie die Zeit, die erforderlich ist, um es richtig zu machen. Befolgen Sie [die Richtlinien für Symbole im Stil von Stil.](vis-icons.md)
+-   **Wenn Ihr Programm Überlagerungssymbole verwendet, entwerfen Sie das Basissymbol Ihres Programms, um Überlagerungen gut zu verarbeiten.** Überlagerungssymbole werden in der unteren rechten Ecke angezeigt. Entwerfen Sie daher das Symbol so, dass der Bereich verdeckt werden kann.
 
-    ![Screenshot von Symbolen und mit niedrigerer Überlagerung ](images/winenv-taskbar-image15.png)
+    ![Screenshot von Symbolen und mit unterer rechtem Overlay ](images/winenv-taskbar-image15.png)
 
-    In diesem Beispiel enthält das Symbol für die Taskleiste der Taskleiste des Programms keine wichtigen Informationen im unteren rechten Bereich.
+    In diesem Beispiel enthält das Symbol für die Taskleistenschaltfläche des Programms im unteren rechten Bereich keine wichtigen Informationen.
 
--   **Verwenden Sie keine Überlagerungen im Basis Symbol Ihres Programms,** unabhängig davon, ob das Programm Überlagerungs Symbole verwendet oder nicht. Die Verwendung einer Überlagerung im Basis Symbol ist verwirrend, da die Benutzer herausfinden müssen, dass der Status nicht kommuniziert.
-
-    **Falsch:**
-
-    ![Screenshot des Basis Symbols mit Overlay ](images/winenv-taskbar-image16.png)
-
-    In diesem Beispiel sieht das Basis Symbol des Programms so aus, als ob es den Status anzeigt.
-
-Allgemeine Symbol Richtlinien und Beispiele finden Sie unter [Symbole](vis-icons.md).
-
-### <a name="overlay-icons"></a>Überlagerungs Symbole
-
--   **Verwenden Sie Überlagerungs Symbole, um nur einen nützlichen und relevanten Status anzugeben.** Beachten Sie, dass ein Überlagerungs Symbol eine potenzielle Unterbrechung der Arbeit des Benutzers darstellen kann. Daher muss die Statusänderung wichtig genug sein, um eine mögliche Unterbrechung zu verdienen.
+-   **Verwenden Sie keine Überlagerungen im** Basissymbol Ihres Programms, unabhängig davon, ob das Programm Überlagerungssymbole verwendet oder nicht. Die Verwendung einer Überlagerung im Basissymbol ist verwirrend, da Benutzer herausfinden müssen, dass sie keinen Status kommunizieren.
 
     **Falsch:**
 
-    ![Screenshot von drei Überlagerungs Symbolen ](images/winenv-taskbar-image17.png)
+    ![Screenshot des Basissymbols mit Überlagerung ](images/winenv-taskbar-image16.png)
 
-    In diesen Beispielen ist das Überlagerungs Symbol nicht wichtig genug, um eine mögliche Unterbrechung zu verdienen.
+    In diesem Beispiel sieht das Basissymbol des Programms so aus, als würde es den Status anzeigen.
 
--   **Verwenden Sie Überlagerungs Symbole für den temporären Status.** Die Überlagerungs Symbole verlieren ihren Wert, wenn Sie ständig angezeigt werden, sodass der normale Programmstatus kein Symbol anzeigen kann. Entfernen Sie das Überlagerungs Symbol, wenn das Symbol:
+Allgemeine Symbolrichtlinien und Beispiele finden Sie unter [Symbole](vis-icons.md).
 
-    -   **Liegt bei einem Problem:** Entfernen Sie das Symbol, sobald das Problem gelöst wurde.
-    -   **Warnungen, dass etwas Neues ist:** Entfernen Sie das Symbol, sobald der Benutzer das Programm aktiviert hat.
+### <a name="overlay-icons"></a>Überlagerungssymbole
 
-    **Ausnahme:** Das Programm kann ständig ein Überlagerungs Symbol anzeigen, wenn Benutzer den Status immer kennen müssen.
-
-    ![Screenshot von Live Messenger mit Überlagerungs Symbol ](images/winenv-taskbar-image18.png)
-
-    In diesem Beispiel zeigt Windows Live Messenger immer ein Überlagerungs Symbol an, sodass Benutzer ihre gemeldete Anwesenheit immer überprüfen können.
-
--   **Zeigen Sie kein Symbol an, um anzugeben, dass ein Problem gelöst wurde.** Entfernen Sie stattdessen einfach alle vorherigen Symbole, die auf ein Problem hinweisen. Angenommen, die Benutzer erwarten, dass Ihr Programm ohne Probleme ausgeführt wird.
--   **Zeigen Sie entweder Überlagerungs Symbole oder Benachrichtigungs Bereichs Symbole an, aber nicht beides.** Das Programm kann beide Mechanismen aus Gründen der Abwärtskompatibilität unterstützen, aber wenn Ihr Programm den Status mithilfe von Überlagerungs Symbolen anzeigt, sollte es nicht auch Benachrichtigungs Bereichs Symbole für den Status verwenden.
+-   **Verwenden Sie Überlagerungssymbole, um nur den nützlichen und relevanten Status anzugeben.** Betrachten Sie die Anzeige eines Überlagerungssymbols als potenzielle Unterbrechung der Arbeit des Benutzers, sodass die Statusänderung wichtig genug sein muss, um eine potenzielle Unterbrechung zu bewerksparen.
 
     **Falsch:**
 
-    ![Screenshot der Taskleiste, bei der das Symbol zweimal angezeigt wird ](images/winenv-taskbar-image19.png)
+    ![Screenshot von drei Überlagerungssymbolen ](images/winenv-taskbar-image17.png)
 
-    In diesem Beispiel wird das Symbol für die neue e-Mail redundant angezeigt.
+    In diesen Beispielen ist das Überlagerungssymbol nicht wichtig genug, um eine potenzielle Unterbrechung zu ersparen.
 
--   **Klicken Sie nicht auf die Schaltfläche "Taskleiste", um eine Statusänderung zu zeichnen.** Dies wäre zu ablenkend. Ermöglichen Sie Benutzern, über Lagerungs Symbole selbst zu erkennen.
--   **Standard-Überlagerungs Symbole bevorzugen, um Status-oder Statusänderungen anzugeben.** Verwenden Sie diese standardüberlagerungs Symbole: 
+-   **Verwenden Sie Überlagerungssymbole für den temporären Status.** Die Überlagerungssymbole verlieren ihren Wert, wenn sie ständig angezeigt werden, sodass der normale Programmstatus kein Symbol anzeigen sollte. Entfernen Sie das Überlagerungssymbol, wenn das Symbol:
 
-    |                                                                                                   |                                  |
+    -   **Ist für ein Problem:** Entfernen Sie das Symbol, sobald das Problem behoben wurde.
+    -   **Weist darauf hin, dass etwas neu ist:** Entfernen Sie das Symbol, nachdem der Benutzer das Programm aktiviert hat.
+
+    **Ausnahme:** Ihr Programm kann ständig ein Überlagerungssymbol anzeigen, wenn Benutzer ihren Status immer kennen müssen.
+
+    ![Screenshot von Live-Messenger mit Überlagerungssymbol ](images/winenv-taskbar-image18.png)
+
+    In diesem Beispiel zeigt Windows Live Messenger immer ein Überlagerungssymbol an, damit Benutzer immer ihre gemeldete Präsenz überprüfen können.
+
+-   **Zeigen Sie kein Symbol an, um anzugeben, dass ein Problem gelöst wurde.** Entfernen Sie stattdessen einfach alle vorherigen Symbole, die auf ein Problem hinweisen. Gehen Sie davon aus, dass Benutzer normalerweise erwarten, dass Ihr Programm problemlos ausgeführt wird.
+-   **Zeigen Sie entweder Überlagerungssymbole oder Benachrichtigungsbereichssymbole an, aber nie beide.** Ihr Programm unterstützt möglicherweise beide Mechanismen zur Abwärtskompatibilität, aber wenn ihr Programm den Status mithilfe von Überlagerungssymbolen anzeigt, sollte es nicht auch Benachrichtigungsbereichssymbole für den Status verwenden.
+
+    **Falsch:**
+
+    ![Screenshot der Taskleiste mit zweimal angezeigten Symbolen ](images/winenv-taskbar-image19.png)
+
+    In diesem Beispiel wird das neue E-Mail-Symbol redundant angezeigt.
+
+-   **Drücken Sie nicht die Taskleistenschaltfläche, um auf eine Statusänderung aufmerksam zu machen.** Dies wäre zu störend. Benutzer können Überlagerungssymbole selbst entdecken.
+-   **Standardüberlagerungssymbole werden bevorzugt, um Status- oder Statusänderungen anzuzeigen.** Verwenden Sie diese Standardüberlagerungssymbole: 
+
+    | Überlagerung | Status |
     |---------------------------------------------------------------------------------------------------|----------------------------------|
-    | **Überlagerung**<br/>                                                                            | **Status**<br/>            |
-    | ![Screenshot des kleinen Warn Symbols ](images/winenv-taskbar-image20.png)<br/>               | Warnung<br/>               |
-    | ![Screenshot des kleinen Fehler Symbols ](images/winenv-taskbar-image21.png)<br/>                 | Fehler<br/>                 |
-    | ![Screenshot des kleinen deaktivierten/getrennten Symbols ](images/winenv-taskbar-image22.png)<br/> | Deaktiviert/getrennt<br/> |
-    | ![Screenshot eines kleinen blockierten/Offline-Symbols ](images/winenv-taskbar-image23.png)<br/>       | Blockiert/offline<br/>       |
+    | ![Screenshot eines kleinen Warnsymbols ](images/winenv-taskbar-image20.png)<br/>               | Warnung<br/>               |
+    | ![Screenshot des kleinen Fehlersymbols ](images/winenv-taskbar-image21.png)<br/>                 | Fehler<br/>                 |
+    | ![Screenshot des Symbols "Klein deaktiviert/getrennt" ](images/winenv-taskbar-image22.png)<br/> | Deaktiviert/Getrennt<br/> |
+    | ![Screenshot: kleines Symbol "Blockiert/Offline" ](images/winenv-taskbar-image23.png)<br/>       | Blockiert/Offline<br/>       |
 
     
 
      
 
--   **Wählen Sie für benutzerdefinierte Überlagerungs Symbole einen leicht erkennbaren Entwurf aus.** Verwenden Sie hochwertige 16x16-Pixel-Symbole mit Vollfarben. Symbole mit besonderen Gliederungen über quadratische oder rechteckige förmige Symbole bevorzugen. Wenden Sie auch die anderen [Aero-Stil-Richtlinien](vis-icons.md) an.
--   **Lassen Sie das Design von benutzerdefinierten Überlagerungs Symbolen einfach.** Versuchen Sie nicht, komplexe, unbekannte oder abstrakte Ideen zu kommunizieren. Wenn Sie sich kein geeignetes benutzerdefiniertes Symbol vorstellen können, verwenden Sie stattdessen ein Standard symbolfehler-oder Warnsymbol. Diese Symbole können effektiv verwendet werden, um viele Arten von Status zu kommunizieren.
--   **Ändern Sie den Status nicht zu häufig.** Überlagerungs Symbole sollten nicht laut, instabil oder nach Bedarf angezeigt werden. Das Auge ist von den Änderungen im Peripherie Feld der Vision abhängig, sodass Statusänderungen gering sein müssen.
-    -   **Ändern Sie das Symbol nicht schnell.** Wenn sich der zugrunde liegende Status schnell ändert, lassen Sie das Symbol den Status auf hoher Ebene widerspiegeln.
+-   **Wählen Sie für benutzerdefinierte Überlagerungssymbole ein leicht erkennbares Design aus.** Verwenden Sie hochwertige 16 x 16 Pixel umfassende Farbsymbole. Symbole mit unterschiedlichen Konturen gegenüber quadratischen oder rechteckigen Symbolen bevorzugen. Wenden Sie auch die anderen Richtlinien für [Symbole im Stil von Styles](vis-icons.md) an.
+-   **Halten Sie den Entwurf benutzerdefinierter Überlagerungssymbole einfach.** Versuchen Sie nicht, komplexe, unbekannte oder abstrakte Ideen zu kommunizieren. Wenn Sie sich kein geeignetes benutzerdefiniertes Symbol vorstellen können, verwenden Sie bei Bedarf einen Standardsymbolfehler oder ein Warnsymbol. Diese Symbole können effektiv verwendet werden, um viele Statustypen zu kommunizieren.
+-   **Ändern Sie den Status nicht zu häufig.** Überlagerungssymbole dürfen nicht laut, instabil oder Aufmerksamkeit erfordern. Das Auge reagiert empfindlich auf Änderungen im Peripheriebereich des Sehens, sodass Statusänderungen geringfügig sein müssen.
+    -   **Ändern Sie das Symbol nicht schnell.** Wenn sich der zugrunde liegende Status schnell ändert, sollte das Symbol den Status auf hoher Ebene widerspiegeln.
 
         **Falsch:**
 
-        ![Screenshot des Überlagerungs Symbols in zwei Zuständen ](images/winenv-taskbar-image24.png)
+        ![Screenshot des Overlaysymbols in zwei Zuständen ](images/winenv-taskbar-image24.png)
 
-        In diesem Beispiel erfordert das schnell veränderliche Überlagerungs Symbol Aufmerksamkeit.
+        In diesem Beispiel erfordert das sich schnell ändernde Überlagerungssymbol Aufmerksamkeit.
 
-    -   **Verwenden Sie keine Animationen.** Dies ist zu stark ablenkend.
-    -   **Blinken Sie das Symbol nicht.** Dies ist zu stark ablenkend. Wenn ein Ereignis sofortige Aufmerksamkeit erfordert, verwenden Sie stattdessen ein Dialogfeld. Wenn das Ereignis anderweitig Eingreifen erfordert, verwenden Sie eine Benachrichtigung.
+    -   **Verwenden Sie keine Animationen.** Dies ist zu ablenkend.
+    -   **Blinken Sie das Symbol nicht.** Dies ist zu ablenkend. Wenn ein Ereignis sofortige Aufmerksamkeit erfordert, verwenden Sie stattdessen ein Dialogfeld. Wenn das Ereignis andernfalls Aufmerksamkeit benötigt, verwenden Sie eine Benachrichtigung.
 
-### <a name="taskbar-button-flashing"></a>Task leisten Schaltfläche blinkt
+### <a name="taskbar-button-flashing"></a>Blinkende Taskleistenschaltfläche
 
--   **Verwenden Sie die Symbolleisten Schaltfläche für die Taskleiste, um die sofortige Aufmerksamkeit des Benutzers auf die Ausführung einer laufenden Aufgabe zu fordern.** Es ist für die Benutzer schwierig, sich zu konzentrieren, während eine Task leisten Schaltfläche blinkt. gehen Sie also davon aus, dass Sie die Aktionen unterbrechen, die Sie durchführen. Das Blinken einer Task leisten Schaltfläche ist besser als das stehlen des Eingabefokus, aber blinkende Task leisten Schaltflächen sind weiterhin sehr eindringlich. Stellen Sie sicher, dass die Unterbrechung gerechtfertigt ist, z. b., um anzugeben, dass der Benutzer vor dem Schließen eines Fensters Daten speichern muss. Inaktive Programme sollten selten sofortige Aktionen erfordern. Klicken Sie nicht auf die Schaltfläche "Taskleiste", wenn der Benutzer nur das Programm aktivieren, eine Nachricht lesen oder eine Statusänderung sehen muss.
--   **Wenn sofortige Aktionen nicht erforderlich sind, sollten Sie diese alternativen beachten:**
-    -   Verwenden Sie eine [Aktions Erfolgs Benachrichtigung](mess-notif.md) , um anzugeben, dass eine Aufgabe abgeschlossen wurde.
-    -   Sie unternehmen nichts. Warten Sie, bis Benutzer an dem problemteil nehmen, wenn Sie das Programm das nächste Mal aktivieren. Dies ist oft die beste Wahl.
--   **Wenn ein inaktives Programm sofortige Aufmerksamkeit erfordert, können Sie die Task leisten Schaltfläche ablegen, um die Aufmerksamkeit zu zeichnen und diese hervorzuheben.** Führen Sie nichts anderes aus: Wiederherstellen oder aktivieren Sie das Fenster nicht, und spielen Sie keine Soundeffekte. Beachten Sie stattdessen die Fenster Zustands Auswahl des Benutzers, und lassen Sie den Benutzer das Fenster aktivieren, wenn Sie bereit sind.
--   **Bei sekundären Fenstern mit einer Task leisten Schaltfläche können Sie die zugehörige Schaltfläche anstelle der Task leisten Schaltfläche des primären Fensters blinken.** Auf diese Weise können Benutzer direkt am Fenster teilnehmen.
--   **Bei sekundären Fenstern, die nicht über eine Task leisten Schaltfläche verfügen, können Sie die Task leisten Schaltfläche des primären Fensters blinken und das sekundäre Fenster auf allen anderen Fenstern für dieses Programm aufrufen.** Sekundäre Fenster, für die eine Aufmerksamkeit erforderlich ist, müssen am meisten sein, um sicherzustellen, dass Sie von Benutzern
--   **Nur eine Task leisten Schaltfläche für ein Fenster gleichzeitig blinken.** Das Blinken von mehr als einer Schaltfläche ist unnötig und zu ablenkend.
--   **Entfernen Sie die Symbolleisten Schaltfläche, sobald das Programm aktiv wird.**
--   **Wenn das Programm aktiv wird, sollten Sie sicherstellen, dass es offensichtlich ist.** In der Regel wird dieses Ziel erreicht, indem ein Dialogfeld angezeigt wird, das eine Frage stellt oder eine Aktion initiiert.
+-   **Verwenden Sie die Taskleistenschaltfläche, die nur selten blinkt, um die sofortige Aufmerksamkeit des Benutzers aufzufordern, damit eine laufende Aufgabe weiterhin ausgeführt wird.** Es ist schwierig für Benutzer, sich zu konzentrieren, während eine Taskleistenschaltfläche blinkt. Nehmen Sie daher an, dass sie unterbrechen, was sie tun, um sie zu beenden. Das Blinken einer Taskleistenschaltfläche ist zwar besser als das Stehlen des Eingabefokus, aber das Blinken von Taskleistenschaltflächen ist immer noch sehr aufdringlich. Stellen Sie sicher, dass die Unterbrechung gerechtfertigt ist, z. B. um anzugeben, dass der Benutzer Daten speichern muss, bevor ein Fenster geschlossen wird. Inaktive Programme sollten selten sofortige Aktionen erfordern. Flashen Sie die Taskleistenschaltfläche nicht, wenn der Benutzer nur das Programm aktivieren, eine Nachricht lesen oder eine Statusänderung sehen muss.
+-   **Wenn keine sofortige Aktion erforderlich ist, sollten Sie die folgenden Alternativen in Betracht ziehen:**
+    -   Verwenden Sie eine [Aktionserfolgsbenachrichtigung,](mess-notif.md) um anzugeben, dass eine Aufgabe abgeschlossen wurde.
+    -   Sie unternehmen nichts. Warten Sie einfach, bis benutzer sich an dem Problem bei der nächsten Aktivierung des Programms teilnehmen. Dies ist häufig die beste Wahl.
+-   **Wenn ein inaktives Programm sofortige Aufmerksamkeit erfordert, blinken Sie die Taskleistenschaltfläche, um die Aufmerksamkeit zu lenken und es hervorgehoben zu lassen.** Machen Sie nichts anderes: Stellen Sie das Fenster nicht wieder her, oder aktivieren Sie es nicht, und geben Sie keine Soundeffekte wieder. Berücksichtigen Sie stattdessen die Fensterzustandsauswahl des Benutzers, und lassen Sie den Benutzer das Fenster aktivieren, wenn er bereit ist.
+-   **Für sekundäre Fenster, die über eine Taskleistenschaltfläche verfügen, flashen Sie die Schaltfläche anstelle der Taskleistenschaltfläche des primären Fensters.** Auf diese Weise können Benutzer direkt am Fenster teilnehmen.
+-   **Für sekundäre Fenster, die keine Taskleistenschaltfläche haben, flashen Sie die Taskleistenschaltfläche des primären Fensters, und setzen Sie das sekundäre Fenster über alle anderen Fenster für dieses Programm.** Sekundäre Fenster, die Aufmerksamkeit erfordern, müssen ganz oben sein, um sicherzustellen, dass sie benutzern angezeigt werden.
+-   **Blinken Sie jeweils nur eine Taskleistenschaltfläche für jeweils ein Fenster.** Das Blinken mehrerer Schaltflächen ist unnötig und zu ablenkend.
+-   **Entfernen Sie die Hervorhebung der Taskleistenschaltfläche, sobald das Programm aktiv wird.**
+-   **Wenn das Programm aktiv wird, stellen Sie sicher, dass etwas offensichtlich ist.** In der Regel wird dieses Ziel erreicht, indem ein Dialogfeld angezeigt wird, das eine Frage stellt oder eine Aktion initiiert.
 
-### <a name="quick-launch-shortcuts"></a>Tastenkombinationen für Schnellstarts
+### <a name="quick-launch-shortcuts"></a>Schnellstart Tastenkombinationen
 
--   **Legen Sie Programm Verknüpfungen nur dann im schnell Startbereich ab, wenn sich die Benutzer anmelden.** Da der Schnellstart von Windows 7 entfernt wurde, sollten Programme, die für Windows 7 entwickelt wurden, keine Programm Verknüpfungen zum Schnellstartbereich hinzufügen oder entsprechende Optionen bereitstellen.
+-   **Setzen Sie Programmverknüpfungen nur dann in den bereich Schnellstart, wenn Benutzer sich dafür entscheiden.** Da Schnellstart aus Windows 7 entfernt wurde, sollten Programme, die für Windows 7 entwickelt wurden, keine Programmverknüpfungen zum Schnellstart Bereich hinzufügen oder entsprechende Optionen bereitstellen.
 
-### <a name="jump-lists"></a>Sprung Listen
+### <a name="jump-lists"></a>Sprunglisten
 
 **Design**
 
--   **Entwerfen Sie Sprung Listen, um die Ziele ihrer Benutzer für Ihre täglichen Aufgaben zu erfüllen.** Berücksichtigen Sie dabei Folgendes:
-    -   **Der Zweck Ihres Programms.** Stellen Sie sich vor, was Benutzer wahrscheinlich als nächstes tun. Bei Dokumenten Erstellungs Programmen werden Benutzer wahrscheinlich zu kürzlich verwendeten Dokumenten zurückkehren. Für Programme, in denen vorhandener Inhalt angezeigt wird, möchten Benutzer möglicherweise auf häufig verwendete Ressourcen zugreifen. Bei anderen Programmen können Benutzer wahrscheinlich Aufgaben ausführen, die Sie zuvor noch nicht ausgeführt haben, z. b. neue Nachrichten lesen, neue Videos ansehen oder Ihre nächste Besprechung überprüfen.
-    -   **Was die Benutzer interessieren.** Stellen Sie sich vor, warum Benutzer die Sprung Liste anstelle anderer Mittel verwenden würden. Beispielsweise ist es wahrscheinlicher, dass sich die Ziele, die Sie explizit als wichtig identifiziert haben (z. b. Webanwendungen, die Benutzer in ihrer Verknüpfungs Leiste oder in Favoriten abgelegt haben oder eingegeben haben). Es ist weniger wahrscheinlich, dass die indirekt oder mit geringem Aufwand (z. b. durch Umleitung oder durch Klicken auf Verknüpfungen besuchte Webadressen) nicht berücksichtigt werden.
+-   **Entwerfen Sie Sprunglisten, um die Ziele Ihrer Benutzer für ihre alltäglichen Aufgaben zu erfüllen.** Berücksichtigen Sie dabei Folgendes:
+    -   **Der Zweck Ihres Programms.** Überlegen Sie, welche Benutzer als Nächstes am wahrscheinlichsten vorgehen werden. Bei Programmen zur Dokumenterstellung kehren Benutzer wahrscheinlich zu kürzlich verwendeten Dokumenten zurück. Für Programme, die vorhandene Inhalte anzeigen, möchten Benutzer möglicherweise Zugriff auf Ressourcen, die sie häufig verwenden. Bei anderen Programmen können Benutzer möglicherweise Aufgaben ausführen, die sie noch nicht ausgeführt haben, z. B. neue Nachrichten lesen, neue Videos ansehen oder ihre nächste Besprechung überprüfen.
+    -   **Was den Benutzern am meisten am Wichtigsten ist.** Überlegen Sie sich, warum Benutzer die Sprungliste anstelle anderer Mittel verwenden würden. Benutzer interessieren sich beispielsweise eher für Ziele, die sie explizit als wichtig identifiziert haben (z. B. Webadressenbenutzer, die auf ihrer Linkleiste oder in Favoriten platziert oder eingegeben werden). Es ist weniger wahrscheinlich, dass sie sich um diejenigen kümmern, die indirekt oder mit geringem Aufwand abgerufen werden (z. B. Webadressen, die durch Umleitung oder durch Klicken auf Links besucht werden).
 
         **Richtig:**
 
-        ![Screenshot der Sprung Liste mit einem Link zu einem Ziel ](images/winenv-taskbar-image25.png)
+        ![Screenshot der Sprungliste mit einem Link zu einem Ziel ](images/winenv-taskbar-image25.png)
 
         **Falsch:**
 
-        ![Screenshot der Sprung Liste mit fünf Verknüpfungen zum Ziel ](images/winenv-taskbar-image26.png)
+        ![Screenshot der Sprungliste mit fünf Links zum Ziel ](images/winenv-taskbar-image26.png)
 
-        Im falschen Beispiel enthält die Sprung Liste viele Ziele, die für Benutzer wahrscheinlich nicht relevant sind.
+        Im falschen Beispiel enthält die Sprungliste viele Ziele, die Benutzern wahrscheinlich nicht wichtig sind.
 
--   **Machen Sie Ziele nicht zu genau.** Wenn Sie Ziele zu eng und spezifisch machen, kann dies zu Redundanz führen, und es gibt mehrere Möglichkeiten, zum gleichen Ort zu wechseln. Wenn Sie z. b. keine einzelnen Webseiten auflisten, sollten Sie stattdessen die Startseiten der obersten Ebene auflisten. Listen Sie anstelle der Auflistung von Liedern Alben auf.
+-   **Machen Sie Ziele nicht zu präzise.** Wenn Ziele zu schmal und spezifisch sind, kann dies zu Redundanz führen, und es gibt mehrere Möglichkeiten, an denselben Ort zu gelangen. Anstatt beispielsweise einzelne Webseiten aufzulisten, listen Sie stattdessen Startseiten der obersten Ebene auf. Anstatt Titel aufzulisten, listen Sie Alben auf.
 
     **Richtig:**
 
-    ![Screenshot der Sprung Liste nach Gruppen ](images/winenv-taskbar-image27.png)
+    ![Screenshot der nach Gruppen organisierten Sprungliste ](images/winenv-taskbar-image27.png)
 
     **Falsch:**
 
-    ![Screenshot der Sprung Liste nach Liedern organisiert ](images/winenv-taskbar-image28.png)
+    ![Screenshot der nach Titeln organisierten Sprungliste ](images/winenv-taskbar-image28.png)
 
-    Im falschen Beispiel wird das Auflisten von Titeln in einer Sprung Liste mit einem einzigen Album gefüllt.
+    Im falschen Beispiel füllt das Auflisten von Titeln in einem Sprungliste es mit einem einzigen Album.
 
--   **Füllen Sie nicht alle verfügbaren Sprung Listen Slots aus, wenn Sie dies nicht benötigen.** Fokus Listen Inhalt der nützlichsten Elemente, wenn Ihr Programm nur drei nützliche Elemente enthält, geben Sie nur drei an. Umso mehr Elemente in einer Sprung Liste sind erforderlich, um ein bestimmtes Element zu finden.
+-   **Füllen Sie nicht alle verfügbaren Sprungliste Slots aus, wenn Sie dies nicht benötigen.** Konzentrieren Sie sich Sprungliste Inhalte auf die nützlichsten Elemente, wenn Ihr Programm nur drei nützliche Elemente enthält, stellen Sie nur drei bereit. Je mehr Elemente in einem Sprungliste, desto mehr Aufwand ist erforderlich, um ein bestimmtes Element zu finden.
 
-    ![Screenshot der Sprung Liste mit einem Befehl ](images/winenv-taskbar-image29.png)
+    ![Screenshot der Sprungliste mit einem Befehl ](images/winenv-taskbar-image29.png)
 
-    In diesem Beispiel stellt das Kurznotizen Zubehör einen einzigen Sprung Listen Befehl bereit, da dies alles ist, was erforderlich ist.
+    In diesem Beispiel stellt das Kurznotizen-Accessory einen einzelnen Sprungliste Befehl bereit, da dies alles erforderlich ist.
 
--   **Geben Sie Quick Infos nur bei Bedarf ein, um Benutzern das Verständnis von Sprung Listenelementen zu erleichtern.** Vermeiden Sie redundante Quick Infos, da Sie unnötige Ablenkungen darstellen. Weitere QuickInfo-Richtlinien finden Sie unter Quick [Infos und infotips](ctrl-tooltips-and-infotips.md).
+-   **Geben Sie QuickInfos nur bei Bedarf an, damit Benutzer Sprungliste Elemente besser verstehen können.** Vermeiden Sie redundante QuickInfos, da sie eine unnötige Ablenkung sind. Weitere QuickInfo-Richtlinien finden Sie unter [QuickInfos und Infotips.](ctrl-tooltips-and-infotips.md)
 
     **Falsch:**
 
-    ![Screenshot der Sprung Liste mit redundanter QuickInfo ](images/winenv-taskbar-image30.png)
+    ![Screenshot der Sprungliste mit redundanter QuickInfo ](images/winenv-taskbar-image30.png)
 
-    In diesem Beispiel ist die QuickInfo der Sprung Liste redundant.
+    In diesem Beispiel ist die Sprungliste QuickInfo redundant.
 
-**Sprung Listen Features und Programm Features**
+**Sprungliste Features im Vergleich zu Programmfeatures**
 
--   **Stellen Sie Ziele und Befehle nicht nur über Sprung Listen zur Verfügung.** Die gleichen Ziele und Befehle sollten direkt aus dem Programm selbst verfügbar sein.
--   **Verwenden Sie konsistente Namen für Ziele und Bezeichnungen für Befehle.** Sprung Listenelemente müssen mit den entsprechenden Elementen identisch sein, auf die direkt vom Programm zugegriffen wird.
--   **Aktivieren Sie das Programm, um Ziele und Befehle auch dann zu verarbeiten, wenn das Programm nicht ausgeführt wird.** Dies ist erforderlich, um eine konsistente, zuverlässige und bequeme Darstellung zu gewährleisten.
+-   **Stellen Sie Ziele und Befehle nicht nur über Sprunglisten zur Verfügung.** Die gleichen Ziele und Befehle sollten direkt über das Programm selbst verfügbar sein.
+-   **Verwenden Sie konsistente Namen für Ziele und Bezeichnungen für Befehle.** Sprungliste Elemente sollten mit den entsprechenden Elementen beschriftet werden, auf die direkt aus dem Programm zugegriffen wird.
+-   **Ermöglichen Sie es Ihrem Programm, Ziele und Befehle auch dann zu verarbeiten, wenn das Programm nicht ausgeführt wird.** Dies ist für eine konsistente, zuverlässige und praktische Erfahrung erforderlich.
 
 **Gruppierung**
 
--   **Geben Sie mindestens eine und höchstens drei Gruppen an.** Sprung Listenelemente werden immer gruppiert, um ihren Zweck zu bezeichnen. Wenn mehr als drei Gruppen vorhanden sind, sind Elemente schwerer zu finden.
--   **Verwenden Sie bei Bedarf Standard Gruppennamen.** Standard Gruppennamen sind Ihnen vertraut und können Benutzer leichter verstehen.
+-   **Geben Sie mindestens eine und höchstens drei Gruppen an.** Sprungliste Elemente werden immer gruppiert, um ihren Zweck zu bezeichnen. Wenn Sie mehr als drei Gruppen haben, ist die Suche nach Elementen schwieriger.
+-   **Verwenden Sie bei Bedarf Standardgruppennamen.** Standardgruppennamen sind für Benutzer vertraut und einfacher zu verstehen.
 
-    Befehlen wird der Name der Aufgaben Gruppe zugewiesen, der von Windows zugewiesen wird und daher nicht geändert werden kann.
+    Befehle erhalten den Gruppennamen Aufgaben, der von Windows zugewiesen wird und daher nicht geändert werden kann.
 
     **Richtig:**
 
-    ![Screenshot der Sprung Liste mit dem aktuellen Gruppennamen ](images/winenv-taskbar-image31.png)
+    ![Screenshot der Sprungliste mit dem aktuellen Gruppennamen ](images/winenv-taskbar-image31.png)
 
     **Falsch:**
 
-    ![Screenshot der Sprung Liste mit dem Namen der Verlaufs Gruppe ](images/winenv-taskbar-image32.png)
+    ![Screenshot der Sprungliste mit Dem Namen der Verlaufsgruppe ](images/winenv-taskbar-image32.png)
 
-    "Aktuell" ist der bessere Gruppenname, da er vertraut ist, und der feine Unterschied zwischen Verlauf und letzter ist nicht sinnvoll.
+    Aktuell ist der bessere Gruppenname, da er vertraut ist, und die dezente Unterscheidung zwischen Verlauf und neuer ist es nicht wert, dies zu machen.
 
 **Befehle**
 
--   **Stellen Sie einen festgelegten Satz von Befehlen bereit, unabhängig vom Status des Programms, das aktuelle Dokument oder den aktuellen Benutzer.** Die Befehle sollten auf das gesamte Programm, nicht auf ein bestimmtes Fenster oder Dokument angewendet werden. Dies ist erforderlich, um eine konsistente, zuverlässige und bequeme Darstellung zu gewährleisten. Befehle sollten nicht entfernt oder deaktiviert werden.
+-   **Geben Sie einen festen Satz von Befehlen unabhängig vom Ausführungsstatus des Programms, dem aktuellen Dokument oder dem aktuellen Benutzer an.** Die Befehle sollten für das gesamte Programm und nicht für ein bestimmtes Fenster oder Dokument gelten. Dies ist für eine konsistente, zuverlässige und praktische Erfahrung erforderlich. Befehle sollten nicht entfernt oder deaktiviert werden.
 
-    **Ausnahmen:** In folgenden Aktionen können Sie Befehle ersetzen oder entfernen:
+    **Ausnahmen:** Sie können Befehle ersetzen oder entfernen, wenn:
 
-    -   Ein Satz von sich gegenseitig ausschließenden Befehlen hat einen einzelnen Befehls Slot gemeinsam, solange ein Befehl immer angewendet wird.
+    -   Eine Reihe von sich gegenseitig ausschließenden Befehlen verwendet einen einzelnen Befehlsslot, solange immer ein Befehl gilt.
     -   Befehle werden erst angewendet, wenn bestimmte Features verwendet wurden, solange die Befehle andernfalls immer angewendet werden.
 
     **Falsch:**
 
-    ![Screenshot der Sprung Liste mit Druck Aufgabe ](images/winenv-taskbar-image33.png)
+    ![Screenshot der Sprungliste mit Druckaufgabe ](images/winenv-taskbar-image33.png)
 
-    In diesem Beispiel ist "Print" kein guter Sprung Listen Befehl, da er vom aktuellen Dokument abhängig ist.
+    In diesem Beispiel ist Drucken kein guter Sprungliste Befehl, da er vom aktuellen Dokument abhängt.
 
     **Richtig:**
 
-    ![Screenshot der Sprung Liste mit der Anmeldung und Abmeldung ](images/winenv-taskbar-image34.png)
+    ![Screenshot der Sprungliste mit Anmeldung und Abanmeldung ](images/winenv-taskbar-image34.png)
 
-    In diesem Beispiel sind die Befehle "Anmelden" und "Abmelden" gegenseitig ausschließende Befehle. Außerdem werden Trennzeichen verwendet, um verwandte Befehle zu gruppieren.
+    In diesem Beispiel schließen sich Die Befehle Anmelden und Abmelden gegenseitig aus. Außerdem werden Trennzeichen verwendet, um verwandte Befehle zu gruppieren.
 
--   **Verwenden Sie bei Bedarf die folgenden Standard Befehls Bezeichnungen.** Standard Befehls Bezeichnungen sind für Benutzer leichter zu verstehen.
--   **Stellen Sie die Befehle in einer logischen Reihenfolge dar.** Allgemeine Bestellungen umfassen die Nutzungshäufigkeit oder die Reihenfolge der Verwendung. Platzieren Sie sehr verwandte Befehle nebeneinander. Fügen Sie in der Gruppe Tasks nach Bedarf Trennzeichen zwischen Gruppen verwandter Befehle ein.
--   **Stellen Sie keine Befehle zum Öffnen oder Schließen des Programms bereit.** Diese Befehle sind in alle Sprung Listen integriert.
+-   **Verwenden Sie ggf. die folgenden Standardbefehlsbezeichnungen.** Standardbefehlsbezeichnungen sind für Benutzer einfacher zu verstehen.
+-   **Stellen Sie die Befehle in einer logischen Reihenfolge dar.** Häufige Bestellungen sind nach Verwendungshäufigkeit oder Verwendungsreihenfolge. Platzieren Sie in hohem Maße verwandte Befehle nebeneinander. Legen Sie in der Gruppe Tasks nach Bedarf Trennzeichen zwischen Gruppen verwandter Befehle ein.
+-   **Geben Sie keine Befehle zum Öffnen oder Schließen des Programms an.** Diese Befehle sind in alle Sprunglisten integriert.
 
 **Befehlssymbole**
 
--   **Geben Sie in der Gruppe Tasks nur dann ein Befehls Symbol an, wenn es Benutzern hilft, Befehle zu verstehen, zu erkennen oder zu unterscheiden,** insbesondere dann, wenn ein Symbol für den Befehl vorhanden ist, der innerhalb des Programms verwendet wird.
+-   **Geben Sie in der Gruppe Aufgaben nur dann ein Befehlssymbol an, wenn es Benutzern hilft, Befehle zu verstehen, zu erkennen oder zu unterscheiden. Dies** gilt insbesondere, wenn ein symbol für den im Programm verwendeten Befehl vorhanden ist.
 
-    -   **Ausnahme:** Wenn das Programm beide Ziele (die immer über Symbole verfügen) und Befehle verwendet, sollten Sie die Bereitstellung von Symbolen für alle Befehle in Erwägung gezogen, wenn dies nicht der Fall ist.
+    -   **Ausnahme:** Wenn Ihr Programm sowohl Ziele (mit immer Symbolen) als auch Befehle verwendet, erwägen Sie die Bereitstellung von Symbolen für alle Befehle, wenn dies nicht umständlich aussieht.
 
     **Falsch:**
 
-    ![Screenshot der inkonsistenten Verwendung von Symbolen in der Sprung Liste ](images/winenv-taskbar-image35.png)
+    ![Screenshot der inkonsistenten Verwendung von Symbolen in der Sprungliste ](images/winenv-taskbar-image35.png)
 
-    In diesem Beispiel sollte Internet Explorer Symbole für alle Befehle bereitstellen, um ein unangenehmes aussehen zu vermeiden.
+    In diesem Beispiel sollten Internet Explorer Symbole für alle Befehle bereitstellen, um eine umständliche Darstellung zu vermeiden.
 
 **Destinations**
 
--   **Stellen Sie einen dynamischen Satz von Zielen bereit, die für den aktuellen Benutzer spezifisch sind, aber unabhängig vom Programm, der den Status oder das aktuelle Dokument ausführen.** Wie bereits erwähnt, müssen Sie sicherstellen, dass Sie an den Zweck Ihres Programms angepasst werden, welche Benutzer sich am meisten interessieren und wie Sie die richtige Ebene aufweisen.
--   **Wenn geeignet, verwenden Sie eine "automatische" Zielliste.** Automatische Ziele werden von Windows verwaltet, aber das Programm steuert die spezifischen Ziele, die weitergegeben werden.
-    -   Verwenden Sie "zuletzt verwendet" für Programme zur Dokument Erstellung, bei denen Benutzer wahrscheinlich zu den zuletzt verwendeten Zielen zurückkehren.
+-   **Geben Sie einen dynamischen Satz von Zielen an, die für den aktuellen Benutzer spezifisch sind, aber unabhängig vom Ausführungsstatus des Programms oder dem aktuellen Dokument sind.** Wie bereits erwähnt, stellen Sie sicher, dass sie dem Zweck Ihres Programms entsprechen, den Benutzern am wichtigsten sind und über das richtige Maß an Spezifität verfügen.
+-   **Verwenden Sie bei Bedarf eine "automatische" Zielliste.** Automatische Ziele werden von Windows verwaltet, aber Ihr Programm steuert die spezifischen Ziele, die übergeben werden.
+    -   Erwägen Sie die Verwendung von Zuletzt verwendet für Programme zur Dokumenterstellung, bei denen Benutzer wahrscheinlich zu kürzlich verwendeten Zielen zurückkehren.
 
-        ![Screenshot der Sprung Liste mit dem Gruppennamen "zuletzt" ](images/winenv-taskbar-image36.png)
+        ![Screenshot der Sprungliste mit dem Gruppennamen "zuletzt" ](images/winenv-taskbar-image36.png)
 
-        In diesem Beispiel verwendet Windows Notepad die letzten Ziele.
+        In diesem Beispiel verwendet Windows Notepad zuletzt geöffnete Ziele.
 
-    -   Sie sollten häufig für Programme verwenden, die vorhandene Inhalte anzeigen, bei denen Benutzer wahrscheinlich zu häufig verwendeten Elementen zurückkehren. Häufige Ziele werden in der Reihenfolge der Häufigkeit sortiert, die am häufigsten zuerst auftritt.
+    -   Erwägen Sie die Verwendung von Häufig für Programme, die vorhandene Inhalte anzeigen, bei denen Benutzer wahrscheinlich zu Elementen zurückkehren, die sie häufig verwenden. Häufige Ziele werden nach Häufigkeit sortiert, am häufigsten zuerst.
 
-        ![Screenshot der Sprung Liste mit dem häufigen Gruppennamen ](images/winenv-taskbar-image37.png)
+        ![Screenshot der Sprungliste mit häufigen Gruppennamen ](images/winenv-taskbar-image37.png)
 
-        In diesem Beispiel verwendet Windows Explorer häufige Ziele.
+        In diesem Beispiel verwendet Windows-Explorer häufige Ziele.
 
-    -   Verwenden Sie häufig, wenn die aktuelle zu vielen nutzlosen Zielen führen würde. Häufige Listen sind stabiler, und die bessere Wahl, wenn Benutzer zu vielen verschiedenen Zielen navigieren, aber wahrscheinlich nicht zu selten verwendeten Listen zurückkehren.
+    -   Verwenden Sie Häufig, wenn Zuletzt verwendet zu vielen unnötigen Zielen führen würde. Häufige Listen sind stabiler und die bessere Wahl, wenn Benutzer zu vielen verschiedenen Zielen wechseln, aber wahrscheinlich nicht zu selten verwendeten Zielen zurückkehren.
 
         **Falsch:**
 
-        ![Screenshot der Sprung Liste mit mehreren zuletzt verwendeten Elementen ](images/winenv-taskbar-image38.png)
+        ![Screenshot der Sprungliste mit mehreren aktuellen Elementen ](images/winenv-taskbar-image38.png)
 
-        Die Verwendung der aktuellen in Windows Internet Explorer führt zu vielen nutzlosen Zielen.
+        Die Verwendung von Recent in Windows Internet Explorer würde zu vielen unnötigen Zielen führen.
 
-    -   Wenn "aktuell" oder "häufig" gleichermaßen geeignet ist, verwenden Sie "aktuell", da diese Vorgehensweise für Benutzer einfacher zu verstehen und besser vorhersagbar ist
-    -   Wenn Sie "zuletzt verwendet" verwenden und das Programm im Menü "Datei" über eine Entsprechung verfügt, nehmen Sie an, dass die Listen denselben Inhalt in derselben Reihenfolge aufweisen. Den Benutzern sollten diese Listen angezeigt werden.
+    -   Wenn Zuletzt verwendet oder Häufig gleich geeignete Optionen sind, verwenden Sie Zuletzt verwendet, da dieser Ansatz für Benutzer einfacher zu verstehen ist und besser vorhersagbar ist.
+    -   Wenn Sie Zuletzt verwendet und das Programm im Menü Datei über eine Entsprechung verfügt, stellen Sie sicher, dass die Listen denselben Inhalt in der gleichen Reihenfolge aufweisen. Für Benutzer sollten diese listengleich sein.
 
--   **Verwenden Sie ggf. eine benutzerdefinierte Zielliste.** Das Programm verfügt über eine umfassende Kontrolle über den Inhalt und die Sortierreihenfolge einer benutzerdefinierten Zielliste und kann daher die Liste auf beliebige Faktoren basieren.
-    -   Erstellen Sie benutzerdefinierte Versionen von zuletzt oder häufig, wenn diese geeignet sind, aber die automatische Verwaltung funktioniert nicht gut für Ihr Programm. Beispielsweise muss das Programm möglicherweise eine Vielzahl von Faktoren über geöffnete Datei Befehle hinaus verfolgen. Verwenden Sie in diesem Fall denselben Namen (aktuell oder häufig) und die Sortierreihenfolge, da die Benutzer den Unterschied nicht kennen.
-    -   Verwenden Sie andernfalls einen anderen Zieltyp, um die Ziele ihrer Benutzer besser zu erfüllen. Häufig helfen diese Listen Benutzern dabei, Aufgaben auszuführen, die Sie zuvor noch nicht ausgeführt haben, z. b. das Lesen neuer Nachrichten, das Ansehen neuer Videos oder das Überprüfen der nächsten Besprechung.
+-   **Verwenden Sie bei Bedarf eine benutzerdefinierte Zielliste.** Ihr Programm hat vollständige Kontrolle über den Inhalt und die Sortierreihenfolge einer benutzerdefinierten Zielliste und kann die Liste daher auf beliebigen Faktoren basieren.
+    -   Erstellen Sie benutzerdefinierte Versionen von Zuletzt verwendet oder Häufig, wenn diese geeignet sind, aber die automatische Verwaltung für Ihr Programm nicht gut funktioniert. Beispielsweise muss Ihr Programm möglicherweise eine Vielzahl von Faktoren nachverfolgen, die über offene Dateibefehle hinausgehen. Verwenden Sie in diesem Fall den gleichen Namen (Zuletzt verwendet oder Häufig) und die Sortierreihenfolge, da Benutzer den Unterschied nicht kennen.
+    -   Verwenden Sie andernfalls einen anderen Zieltyp, um die Ziele Ihres Benutzers besser zu erfüllen. Häufig helfen diese Listen Benutzern beim Ausführen von Aufgaben, die sie noch nicht ausgeführt haben, z. B. das Lesen neuer Nachrichten, das Ansehen neuer Videos oder das Überprüfen der nächsten Besprechung.
 
-        ![Screenshot der Sprung Liste mit "New"-Gruppenname ](images/winenv-taskbar-image39.png)
+        ![Screenshot der Sprungliste mit dem Gruppennamen "new" ](images/winenv-taskbar-image39.png)
 
-        In diesem Beispiel listet Windows Media Center die kürzlich aufgezeichneten anzeigen auf, die der Benutzer noch nicht gesehen hat.
+        In diesem Beispiel listet Windows Media Center die zuletzt aufgezeichneten Aufzählungen auf, die der Benutzer noch nicht gesehen hat.
 
-    -   Wählen Sie eine Sortierreihenfolge aus, die dem geistigen Modell der Liste des Benutzers entspricht. Beispielsweise würde eine to-do-Style-Liste zuerst die nächste Aufgabe haben. Wenn kein klares mentales Modell vorhanden ist, Sortieren Sie die Zielliste in alphabetischer Reihenfolge.
+    -   Wählen Sie eine Sortierreihenfolge aus, die dem mentalen Modell des Benutzers der Liste entspricht. Für eine To-Do-Stilliste wird beispielsweise zuerst das Nächste aufgeführt, was Sie tun müssen. Wenn kein klares mentales Modell vorhanden ist, sortieren Sie die Zielliste in alphabetischer Reihenfolge.
 
--   **Verwenden Sie nicht mehrere Ziellisten, die unterschiedliche Sichten derselben Daten bieten.** Vielmehr sollten mehrere Ziellisten größtenteils verschiedene Daten aufweisen, um die Differenz Szenarien zu unterstützen. Sie können z. b. eine aktuelle Liste oder eine häufig auftretende Liste, aber nicht beides bereitstellen. Dies ist verschwenderisch, wenn überlappende Elemente vorhanden sind, aber verwirrend sind, wenn überlappende Elemente entfernt werden.
+-   **Verwenden Sie nicht mehrere Ziellisten, die unterschiedliche Ansichten derselben Daten enthalten.** Stattdessen sollten mehrere Ziellisten größtenteils unterschiedliche Daten enthalten, um unterschiedliche Szenarien zu unterstützen. Sie können z. B. eine Liste Zuletzt vorhanden oder häufig angeben, aber nicht beides. Dies ist verschwendung, wenn überlappende Elemente vorhanden sind, aber verwirrend, wenn überlappende Elemente entfernt werden.
 
     **Falsch:**
 
-    ![Screenshot der Sprung Liste mit wiederholten Gruppenelementen ](images/winenv-taskbar-image40.png)
+    ![Screenshot der Sprungliste mit wiederholten Gruppenelementen ](images/winenv-taskbar-image40.png)
 
-    In diesem Beispiel ist die Bereitstellung verschiedener Sichten der gleichen Ziele verschwenderisch.
+    In diesem Beispiel ist es verschwendung, verschiedene Ansichten derselben Ziele bereitzustellen.
 
     **Richtig:**
 
-    ![Screenshot der Sprung Liste mit gut organisierten Aufgaben ](images/winenv-taskbar-image41.png)
+    ![Screenshot der Sprungliste mit gut organisierten Aufgaben ](images/winenv-taskbar-image41.png)
 
-    In diesem Beispiel verfügen die Ziellisten über unterschiedliche Daten für verschiedene Tasks.
+    In diesem Beispiel verfügen die Ziellisten über unterschiedliche Daten für verschiedene Aufgaben.
 
--   **Wenn das Programm über einen Befehl zum Löschen von Daten für den Datenschutz verfügt, löschen Sie auch die Liste der Ziele.** Ziellisten können vertrauliche Daten enthalten.
+-   **Wenn Ihr Programm über einen Befehl zum Löschen von Daten für den Datenschutz verfügt, löschen Sie auch die Listen Ziele.** Ziellisten können vertrauliche Daten enthalten.
 
-### <a name="thumbnail-toolbars"></a>Miniatur Ansichts Symbolleisten
+### <a name="thumbnail-toolbars"></a>Miniaturansichtssymbolleisten
 
 **Interaktion**
 
--   **Stellen Sie bis zu sieben der wichtigsten, häufig verwendeten Befehle bereit, die für das in der Miniaturansicht angezeigte Fenster gelten.** Sie sind nicht verpflichtet, so viele Befehle wie möglich bereitzustellen, wenn Ihr Programm nur drei wichtige, häufig verwendete Befehle enthält, geben Sie nur drei an.
+-   **Stellen Sie bis zu sieben der wichtigsten, häufig verwendeten Befehle bereit, die für das in der Miniaturansicht angezeigte Fenster gelten.** Denken Sie nicht daran, so viele Befehle wie sie können bereitzustellen, wenn Ihr Programm nur über drei wichtige, häufig verwendete Befehle verfügt und nur drei bereitstellt.
 
     **Falsch:**
 
     ![Screenshot der Symbolleiste mit zu vielen Befehlen ](images/winenv-taskbar-image42.png)
 
-    In diesem Beispiel enthält die Miniaturansicht-Symbolleiste Befehle, die nicht wichtig sind.
+    In diesem Beispiel enthält die Miniaturansichtssymbolleiste Befehle, die nicht wichtig sind.
 
--   **Verwenden Sie direkte und unmittelbare Befehle.** Diese Befehle sollten sofort wirksam sein, wenn Sie auf den Befehl klicken, um weitere Eingaben anzuzeigen und kein Dropdown Menü oder Dialogfeld anzuzeigen.
+-   **Verwenden Sie Befehle, die direkt und direkt sind.** Diese Befehle sollten sofortige Auswirkungen haben, wenn Sie auf den Befehl klicken, um kein Dropdownmenü oder Dialogfeld für weitere Eingaben anzuzeigen.
 
     **Falsch:**
 
-    ![Screenshot der Miniaturansicht mit dem Dropdown Menü ](images/winenv-taskbar-image43.png)
+    ![Screenshot der Miniaturansicht mit Dropdownmenü ](images/winenv-taskbar-image43.png)
 
-    Miniatur Ansichts-Symbolleisten Befehle müssen sofort wirksam werden.
+    Befehle der Miniaturansichtssymbolleiste müssen sofort wirksam sein.
 
--   **Deaktivieren Sie Befehle, die nicht auf den aktuellen Kontext angewendet werden oder direkt zu einem Fehler führen.** Blenden Sie solche Befehle nicht aus, da dadurch die Symbolleisten Präsentation instabil wird.
--   **Schließen Sie die Miniaturansicht nicht, wenn Benutzer auf einen Befehl klicken, wenn Sie die Ergebnisse wahrscheinlich überprüfen oder sofort auf einen anderen Befehl klicken.** Entfernen Sie die Miniaturansicht für Befehle, die angeben, dass der Benutzer vorerst fertig ist, z. b. mit Befehlen, die andere Fenster anzeigen.
+-   **Deaktivieren Sie Befehle, die nicht für den aktuellen Kontext gelten oder direkt zu einem Fehler führen würden.** Blenden Sie solche Befehle nicht aus, da dadurch die Darstellung der Symbolleiste instabil wird.
+-   **Verkleinern Sie die Miniaturansicht nicht, wenn Benutzer auf einen Befehl klicken, wenn sie wahrscheinlich die Ergebnisse überprüfen oder sofort auf einen anderen Befehl klicken.** Entfernen Sie die Miniaturansicht für Befehle, die angeben, dass der Benutzer vorer zeit fertig ist, z. B. mit Befehlen, die andere Fenster anzeigen.
 
     ![Screenshot der Media Player-Miniaturansicht mit dem Befehl ](images/winenv-taskbar-image44.png)
 
-    Wenn Sie in diesem Beispiel in Windows Media Player auf Weiter klicken, wird die Miniaturansicht weiterhin angezeigt, da Benutzer möglicherweise andere Befehle übergeben möchten.
+    In diesem Beispiel wird beim Klicken auf Weiter in Windows Media Player weiterhin die Miniaturansicht angezeigt, da Benutzer möglicherweise andere Befehle geben möchten.
 
-    ![Screenshot der Miniaturansicht mit Chat (Symbol) ](images/winenv-taskbar-image45.png)
+    ![Screenshot der Miniaturansicht mit Chatsymbol ](images/winenv-taskbar-image45.png)
 
-    In diesem Beispiel wird durch Klicken auf chatten in Windows Live Messenger die Miniaturansicht verworfen, da Benutzer höchstwahrscheinlich eine Nachricht senden.
+    In diesem Beispiel wird durch Klicken auf Chat in Windows Live Messenger die Miniaturansicht verworfen, da Benutzer wahrscheinlich eine Nachricht senden.
 
 **Präsentation**
 
--   **Stellen Sie sicher, dass Miniaturansicht-Symbolleisten Symbole den Aero-Style-Symbol Richtlinien entsprechen.** Stellen Sie für jeden Befehl High-Quality-Symbole mit einer Breite von 16x16, 20 x 20 und 24 x 24 Pixel bereit. Die größeren Versionen werden im Modus mit hoher dpi-Anzeige verwendet.
--   **Stellen Sie sicher, dass die Symbole für die Symbolleisten-Hintergrundfarbe im normalen und im Hover-Zustand eindeutig sichtbar sind.** Wertet Symbole immer im Kontext und im Modus mit hohem Kontrast aus.
--   **Wählen Sie Befehls Symbol Entwürfe aus, die ihre Auswirkung eindeutig übermitteln.** Gut entworfene Befehls Symbole sind selbsterklärend, um Benutzern zu helfen, Befehle effizient zu finden und zu verstehen.
--   **Wählen Sie Symbole aus, die erkennbar und unterschieden werden können.** Stellen Sie sicher, dass die Symbole über unterschiedliche Formen und Farben verfügen. Auf diese Weise können Benutzer die Befehle schnell finden, auch wenn Sie das symbolsymbol nicht merken. Nach der anfänglichen Verwendung sollten sich Benutzer nicht mehr auf Quick Infos verlassen müssen, um zwischen den Befehlen zu unterscheiden.
--   **Geben Sie eine QuickInfo zum bezeichnen der einzelnen Befehle an.** Eine gute QuickInfo bezeichnet das nicht beschriftete Steuerelement, auf das verwiesen wird. Richtlinien und Beispiele finden Sie unter Quick [Infos und infotips](ctrl-tooltips-and-infotips.md).
+-   **Stellen Sie sicher, dass Symbolleistensymbole für Miniaturansichten den Richtlinien für Symbole im Stil von Stilen entsprechen.** Stellen Sie für jeden Befehl hochwertige 16x16-, 20x20- und 24 x 24-Pixel-Vollfarbsymbole zur Verfügung. Die größeren Versionen werden in Anzeigemodi mit hohem DPI-Anteil verwendet.
+-   **Stellen Sie sicher, dass die Symbole für die Hintergrundfarbe der Symbolleiste sowohl im normalen als auch im Hoverzustand deutlich sichtbar sind.** Werten Sie Symbole immer im Kontext und im Modus mit hohem Kontrast aus.
+-   **Wählen Sie Befehlssymbolentwürfe aus, die ihre Wirkung deutlich kommunizieren.** Gut entworfene Befehlssymbole sind selbsterklärend, damit Benutzer Befehle effizient finden und verstehen können.
+-   **Wählen Sie Symbole aus, die erkennbar und unterscheidbar sind.** Stellen Sie sicher, dass die Symbole über unterschiedliche Formen und Farben verfügen. Auf diese Weise können Benutzer die Befehle schnell finden, auch wenn sie sich nicht an das Symbolsymbol erinnern. Nach der ersten Verwendung sollten Sich Benutzer nicht auf QuickInfos verlassen müssen, um zwischen den Befehlen zu unterscheiden.
+-   **Geben Sie eine QuickInfo an, um die einzelnen Befehle zu beschriften.** Eine gute QuickInfo bezeichnet das Steuerelement ohne Bezeichnung, auf das verwiesen wird. Richtlinien und Beispiele finden Sie unter [QuickInfos und Infotips.](ctrl-tooltips-and-infotips.md)
 
-### <a name="progress-bars"></a>Status anzeigen
+### <a name="progress-bars"></a>Statusleisten
 
--   **Befolgen Sie die allgemeinen Richtlinien für die Statusanzeige,** einschließlich nicht Neustart oder Sicherungs Status, und verwenden Sie eine rote Statusanzeige, um ein Problem anzuzeigen.
--   **Vermeiden Sie die Verwendung von unbestimmten Status leisten.** Unbeendete Status leisten zeigen Aktivität, nicht Fortschritt an. Reservieren Sie unbestimmt Status leisten in seltenen Fällen, in denen Benutzer keine Aktivitäten für die Gewährung durchführen.
+-   **Befolgen Sie die allgemeinen Statusleistenrichtlinien,** z. B. das Nichtneustarten oder Sichern des Fortschritts, und verwenden Sie eine rote Statusleiste, um auf ein Problem hindeuten.
+-   **Vermeiden Sie die Verwendung unbestimmter Statusleisten.** In unbestimmten Statusleisten wird die Aktivität und nicht der Fortschritt angezeigt. Reservieren Sie unbestimmte Statusleisten für die seltenen Situationen, in denen Benutzer keine Aktivität als selbstverständlich ein nehmen.
 
-Weitere Richtlinien finden Sie unter Status [leisten](progress-bars.md).
+Weitere Richtlinien finden Sie unter [Statusleisten.](progress-bars.md)
 
 ## <a name="text"></a>Text
 
 ### <a name="window-titles"></a>Fenstertitel
 
-Beachten Sie beim Auswählen von Fenstertiteln die Darstellung des Titels auf der Taskleiste:
+Berücksichtigen Sie bei der Auswahl von Fenstertiteln die Darstellung des Titels auf der Taskleiste:
 
--   Optimieren Sie die Titel für die Anzeige auf der Taskleiste, indem Sie die Unterscheidungs Informationen an erster Stelle platzieren.
--   Fassen Sie den Fortschritt in den Dialogfeldern für den nicht modalem Status zusammen. Beispiel: "66% Complete".
--   Vermeiden Sie Fenstertitel, die über umständliche Abschneiden verfügen.
+-   Optimieren Sie Titel für die Anzeige auf der Taskleiste, indem Sie die unterscheidenden Informationen präzise an erster Stelle platzieren.
+-   Für Dialogfelder für den statuslosen Status fassen Sie zunächst den Fortschritt zusammen. Beispiel: "66 % abgeschlossen".
+-   Vermeiden Sie Fenstertitel, die umkrüme Abgeschnitten haben.
 
     **Falsch:**
 
-    ![Screenshot des Titels, der den Programmnamen abschneidet ](images/winenv-taskbar-image48.png)
+    ![Screenshot des Titels, der den Programmnamen ausschneidet ](images/winenv-taskbar-image48.png)
 
-    In diesem Beispiel hat der Titel des abgeschnittene Fensters unglückliche Ergebnisse.
+    In diesem Beispiel verfügt der abgeschnittene Fenstertitel über ergebnisschädigende Ergebnisse.
 
-### <a name="jump-list-commands"></a>Befehle der Sprung Liste
+### <a name="jump-list-commands"></a>Sprungliste-Befehle
 
 -   **Starten Sie Befehle mit einem Verb.**
 -   **Verwenden Sie für Überschriften die Standardgroß- und kleinschreibung.**
 
-Weitere Richtlinien für die Befehls Bezeichnung finden Sie unter [Menüs](cmd-menus.md).
+Weitere Richtlinien für Befehlsbezeichnungen finden Sie unter [Menüs](cmd-menus.md).
 
 ## <a name="documentation"></a>Dokumentation
 
 Beim Verweisen auf die Taskleiste:
 
--   Verweisen Sie auf die gesamte Leiste als Taskleiste (ein einzelnes Verbund Wort in Kleinbuchstaben).
--   Verweisen Sie auf die Elemente auf der Taskleiste speziell auf ihre Bezeichnung oder im Allgemeinen auf die Schaltflächen der Taskleiste.
--   Formatieren Sie die Task leisten Bezeichnungen, wenn möglich, mit fett formatiertem Text. Andernfalls sollten Sie die Bezeichnung nur in Anführungszeichen setzen, wenn dies erforderlich ist, um Verwirrung zu vermeiden.
--   Weitere Informationen finden Sie unter über Lagerungs Symbole als Symbolleisten Symbole. Sie werden nicht als Benachrichtigungen bezeichnet, auch wenn der Zweck darin besteht, Benutzer zu benachrichtigen. Sie können jedoch sagen, dass diese Symbole Benutzer über bestimmte Ereignisse benachrichtigen.
+-   Verweisen Sie auf die gesamte Leiste als Taskleiste (ein einzelnes zusammengesetztes Wort in Kleinbuchstaben).
+-   Verweisen Sie auf Elemente auf der Taskleiste speziell nach ihrer Bezeichnung oder im Allgemeinen als Taskleistenschaltflächen.
+-   Formatieren Sie die Taskleistenbezeichnungen nach Möglichkeit mit fett formatiertem Text. Andernfalls setzen Sie die Bezeichnung nur dann in Anführungszeichen, wenn dies erforderlich ist, um Verwirrung zu vermeiden.
+-   Überlagerungssymbole werden als Symbole für Taskleistenschaltfläche bezeichnet. Verweisen Sie nicht auf sie als Benachrichtigungen, auch wenn ihr Zweck die Benachrichtigung von Benutzern ist. Sie können jedoch sagen, dass diese Symbole Benutzer über bestimmte Ereignisse benachrichtigen.
 
-Beispiel: das Schaltflächen Symbol "neue Mail-Taskleiste" benachrichtigt Sie, dass eine neue e-Mail-Nachricht eingetroffen ist.
+Beispiel: Das Schaltflächensymbol Neue E-Mail-Taskleiste benachrichtigt Sie, dass eine neue E-Mail-Nachricht eingetroffen ist.
 
  
 

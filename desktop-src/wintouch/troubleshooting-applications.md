@@ -1,38 +1,38 @@
 ---
 title: Problembehandlung bei Anwendungen
-description: In diesem Abschnitt finden Sie Lösungen für häufige Probleme.
+description: Dieser Abschnitt enthält Lösungen für häufige Probleme.
 ms.assetid: dfdc5a97-aa0a-4011-8f61-6e405e28b6f8
 keywords:
-- Windows-Interaktion, Problembehandlung bei Anwendungen
-- Windows-Fingereingabe, Palm Ablehnung
-- Palmen Ablehnung
-- Windows-Fingereingabe, Legacy Unterstützung
-- Problembehandlung bei Windows berühren
+- Windows Touch,Problembehandlung bei Anwendungen
+- Windows Touch,Ablehnung von Hand
+- Ablehnung von Blättern
+- Windows Touch,Legacyunterstützung
+- Problembehandlung Windows Touch
 - Trägheit, Problembehandlung bei Anwendungen
-- Manipulationen, Problembehandlung bei Anwendungen
-- Gesten, Problembehandlung bei Anwendungen
+- Manipulationen,Problembehandlung bei Anwendungen
+- Gesten,Problembehandlung bei Anwendungen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: cf1aeb37f139ea9063c07dd7d629ac5579229863
-ms.sourcegitcommit: 70f39ec77d19d3c32c376ee2831753d2cafae41a
+ms.openlocfilehash: 389d200cedc57b7f128a535355b12a9288c6e9eb
+ms.sourcegitcommit: 099ecdda1e83618b844387405da0db0ebda93a65
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "103961274"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111443146"
 ---
 # <a name="troubleshooting-applications"></a>Problembehandlung bei Anwendungen
 
-In diesem Abschnitt finden Sie Lösungen für häufige Probleme.
+Dieser Abschnitt enthält Lösungen für häufige Probleme.
 
 ## <a name="general-troubleshooting"></a>Allgemeine Problembehandlung
 
 
 
-|          |                                                                                                                                                                                                                                                                                                                    |
+| Kategorie | BESCHREIBUNG |
 |----------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Problem    | Ich führe Windows Server 2008 aus, und die Windows-Berührungs Features funktionieren nicht.                                                                                                                                                                                                                                       |
-| Ursache    | Sie haben die Desktop Darstellung nicht aktiviert.                                                                                                                                                                                                                                                                        |
-| Lösung | Öffnen Sie das Server-Manager Verwaltungs Tool: Klicken Sie auf **Start**, zeigen Sie auf **Verwaltung**, und klicken Sie dann auf **Server-Manager**. Klicken Sie in der linken Spalte auf das Element **Features** . Klicken Sie im Abschnitt **Features** auf **Features hinzufügen** . Wählen Sie **Desktop** Darstellung aus, klicken Sie auf **weiter**, und klicken Sie dann auf **Installieren**. |
+| Problem    | Ich verarbeite Windows Server 2008, und Windows Touch Funktionen funktionieren nicht.                                                                                                                                                                                                                                       |
+| Ursache    | Sie haben die Desktoperfahrung nicht aktiviert.                                                                                                                                                                                                                                                                        |
+| Lösung | Öffnen Sie Server-Manager Verwaltungstool: Klicken Sie **auf Start**, zeigen Sie **auf Verwaltung,** und klicken Sie dann **auf Server-Manager.** Klicken Sie **in der** linken Spalte auf das Element Features. Klicken **Sie im Abschnitt** Features auf **Features** hinzufügen. Wählen **Sie Desktop experience (Desktoperfahrung)** **aus, klicken Sie auf Next**(Weiter), und klicken Sie dann auf Install **(Installieren).** |
 
 
 
@@ -40,11 +40,11 @@ In diesem Abschnitt finden Sie Lösungen für häufige Probleme.
 
 
 
-|          |                                                                                                                                                                                                    |
+| Kategorie | BESCHREIBUNG |
 |----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Problem    | Jedes Mal, wenn ich meinen Finger schnell über die Anwendung hinweg bewege, wird ein Pfeil angezeigt, und meine Geste oder Manipulation wird nicht ordnungsgemäß registriert.                                                             |
-| Ursache    | Sie haben schnelle Stift Bewegungen aktiviert, wenn Sie Sie nicht benötigen.                                                                                                                                                      |
-| Lösung | Sie haben schnelle Stift Bewegungen aktiviert, wenn Sie Sie deaktivieren möchten. Informationen zum Deaktivieren von Stift Flicks finden Sie [unter Legacy Unterstützung für das Schwenken mit Scrollleisten](legacy-support-for-panning-with-scrollbars.md) . |
+| Problem    | Wenn ich meinen Finger schnell über meine Anwendung bewegen kann, wird ein Pfeil angezeigt, und meine Geste oder Bearbeitung wird nicht ordnungsgemäß registriert.                                                             |
+| Ursache    | Aktivieren von Flicks, wenn Sie sie nicht benötigen.                                                                                                                                                      |
+| Lösung | Sie haben Flicks aktiviert, wenn sie deaktiviert werden sollen. Informationen [zum Deaktivieren von Stiftflicks](legacy-support-for-panning-with-scrollbars.md) finden Sie unter Legacy-Unterstützung für Schwenken mit Scrollleisten. |
 
 
 
@@ -60,15 +60,15 @@ In diesem Abschnitt finden Sie Lösungen für häufige Probleme.
 <tbody>
 <tr class="odd">
 <td>Problem</td>
-<td>Ich kann nicht zwischen Maus Eingaben und Windows-Eingabe Eingaben erkennen.</td>
+<td>Ich kann nicht zwischen Mauseingaben und Windows Touch unterscheiden.</td>
 </tr>
 <tr class="even">
 <td>Ursache</td>
-<td>Windows generiert Maus Meldungen für die Legacy Unterstützung, wenn ein Benutzer auf den Bildschirm klickt.</td>
+<td>Windows generiert Mausmeldungen für legacy-Unterstützung, wenn ein Benutzer auf den Bildschirm klickt.</td>
 </tr>
 <tr class="odd">
 <td>Lösung</td>
-<td>Sie können <a href="/windows/win32/api/winuser/nf-winuser-getmessageextrainfo">getMessageExtraInfo</a> für den <strong>WM_LBUTTONDOWN</strong> und <strong>WM_LBUTTONUP</strong> Nachrichten aufrufen, um die Quelle zu ermitteln. Der folgende Code zeigt, wie dies möglich wäre. <span data-codelanguage="ManagedCPlusPlus"></span>
+<td>Sie können <a href="/windows/win32/api/winuser/nf-winuser-getmessageextrainfo">GetMessageExtraInfo</a> <strong></strong> für die WM_LBUTTONDOWN aufrufen und <strong>WM_LBUTTONUP,</strong> um die Quelle zu bestimmen. Der folgende Code zeigt, wie dies möglich ist. <span data-codelanguage="ManagedCPlusPlus"></span>
 <table>
 <colgroup>
 <col style="width: 100%" />
@@ -102,11 +102,11 @@ if ((GetMessageExtraInfo() & MOUSEEVENTF_FROMTOUCH) == MOUSEEVENTF_FROMTOUCH) {
 
 
 
-|          |                                                                                    |
+| Kategorie | BESCHREIBUNG |
 |----------|------------------------------------------------------------------------------------|
-| Problem    | Gewusst wie Microsoft Pixel Sense-Anwendungen unter Windows 7 ausführen?                       |
-| Ursache    | Windows-Fingereingabe und Microsoft Pixel Sense sind nicht kompatibel.                           |
-| Lösung | Sie müssen entweder die Windows 7-Plattform oder die Microsoft Pixel Sense-Plattform als Zielplattform haben. |
+| Problem    | Gewusst wie Microsoft PixelSense-Anwendungen unter Windows 7 ausführen?                       |
+| Ursache    | Windows Touch und Microsoft PixelSense sind nicht kompatibel.                           |
+| Lösung | Sie müssen entweder die Windows 7-Plattform oder die Microsoft PixelSense-Plattform als Ziel verwenden. |
 
 
 
@@ -116,11 +116,11 @@ if ((GetMessageExtraInfo() & MOUSEEVENTF_FROMTOUCH) == MOUSEEVENTF_FROMTOUCH) {
 
 
 
-|          |                                                                                                                                                                                                                                                          |
+| Kategorie | BESCHREIBUNG |
 |----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Problem    | Meine Anwendung wird aus irgendeinem Grund eingefroren. Ich erhalte Zugriffs Verletzungen, wenn ich meine Objekt Schnittstellen initialisierte.                                                                                                                                          |
-| Ursache    | Ein Aufruf von **CoInitialize** fehlt, wenn die Schnittstellen [**IManipulationProcessor**](/windows/desktop/api/manipulations/nn-manipulations-imanipulationprocessor) oder [**IInertiaProcessor**](/windows/desktop/api/manipulations/nn-manipulations-iinertiaprocessor) verwendet werden.                                                                                 |
-| Lösung | Dies kann dadurch verursacht werden, dass die Windows-Fingereingabe Component Object Model (com)-Objekte instanziiert werden, ohne CoInitialize Aufrufs Dies tritt manchmal auf, wenn Sie Projekte von der Verwendung von Gesten in mithilfe der Manipulationen oder der Trägheits Schnittstellen umrechnen. |
+| Problem    | Meine Anwendung wird ohne Grund einfriert. Ich habe Zugriffsverletzungen, wenn ich meine Objektschnittstellen initialisiere.                                                                                                                                          |
+| Ursache    | Fehlender Aufruf von **CoInitialize bei** Verwendung der [**Schnittstellen IManipulationProcessor**](/windows/desktop/api/manipulations/nn-manipulations-imanipulationprocessor) oder [**IInertiaProcessor.**](/windows/desktop/api/manipulations/nn-manipulations-iinertiaprocessor)                                                                                 |
+| Lösung | Dies kann durch instanziieren der Windows Touch Component Object Model (COM)-Objekte verursacht werden, ohne CoInitialize auf aufruft. Dies geschieht manchmal, wenn Sie Projekte von der Verwendung von Gesten in die Verwendung der Manipulations- oder Trägheitsschnittstellen konvertieren. |
 
 
 
@@ -128,25 +128,25 @@ if ((GetMessageExtraInfo() & MOUSEEVENTF_FROMTOUCH) == MOUSEEVENTF_FROMTOUCH) {
 
 
 
-|          |                                                                                                                                                                                                                                                                                                                                                                                         |
+| Kategorie | BESCHREIBUNG |
 |----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Problem    | Das Objekt wird beim Übersetzen nicht ordnungsgemäß rotiert. Die Einzel Finger Drehung funktioniert nicht ordnungsgemäß.                                                                                                                                                                                                                                                                           |
-| Ursache    | Nicht ordnungsgemäß Festlegung von Pivots für ein Objekt.                                                                                                                                                                                                                                                                                                                                                 |
-| Lösung | Sie richten die Manipulations Punkt Punkte nicht ordnungsgemäß ein. Legen Sie die Eigenschaften [**pivotpointx**](/windows/desktop/api/manipulations/nf-manipulations-imanipulationprocessor-get_pivotpointx) und [**pivotpointy**](/windows/desktop/api/manipulations/nf-manipulations-imanipulationprocessor-get_pivotpointy) auf den Mittelpunkt des Objekts oder Punkts fest, um das Sie drehen möchten, und legen Sie die Eigenschaft [**pivotradius**](/windows/desktop/api/manipulations/nf-manipulations-imanipulationprocessor-get_pivotradius) auf den RADIUS Ihres Objekts fest. |
+| Problem    | Mein Objekt wird nicht ordnungsgemäß gedreht, wenn es übersetzt wird. Die Drehung mit einem Finger funktioniert nicht ordnungsgemäß.                                                                                                                                                                                                                                                                           |
+| Ursache    | Falsches Festlegen von Pivots für ein Objekt.                                                                                                                                                                                                                                                                                                                                                 |
+| Lösung | Die Pivotpunkte für die Bearbeitung werden nicht ordnungsgemäß eingerichtet. Legen Sie die [**PivotPointX-**](/windows/desktop/api/manipulations/nf-manipulations-imanipulationprocessor-get_pivotpointx) und [**PivotPointY-Eigenschaften**](/windows/desktop/api/manipulations/nf-manipulations-imanipulationprocessor-get_pivotpointy) auf die Mitte des Objekts oder Punkts fest, um das bzw. den Sie drehen möchten, und legen Sie die [**PivotRadius-Eigenschaft**](/windows/desktop/api/manipulations/nf-manipulations-imanipulationprocessor-get_pivotradius) auf den Radius Ihres Objekts fest. |
 
 
 
  
 
-## <a name="troubleshooting-windows-touch-input"></a>Problembehandlung bei Windows-Eingabe Eingaben
+## <a name="troubleshooting-windows-touch-input"></a>Problembehandlung Windows Touch Eingabe
 
 
 
-|          |                                                                                                                                                                                                                                                                                                                                        |
+| Kategorie | BESCHREIBUNG |
 |----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Problem    | Nachdem ich die [**WM- \_ touchnachricht**](wm-touchdown.md) verarbeitet habe, erhalte ich kein Feedback mehr.                                                                                                                                                                                                                                        |
-| Ursache    | Verwenden der [**WM \_**](wm-touchdown.md) -Fingereingabe Nachricht, ohne Sie zu behandeln.                                                                                                                                                                                                                                                           |
-| Lösung | Sie verbrauchen wahrscheinlich eine Windows-Berührungs Nachricht, ohne Sie an **defwindowproc** weiterzuleiten, was zu unerwartetem Verhalten führt. Weitere Informationen zur ordnungsgemäßen Behandlung von WM-Fingerabdruck Nachrichten finden Sie unter [**\_**](wm-touchdown.md) [Getting Started with Windows Touchscreen Messages](getting-started-with-multi-touch-messages.md) . |
+| Problem    | Nachdem ich die [**WM \_ TOUCH-Nachricht verarbeitet**](wm-touchdown.md) habe, kann ich keine Begrenzungsfeedback mehr erhalten.                                                                                                                                                                                                                                        |
+| Ursache    | Verwenden der [**WM \_ TOUCH-Nachricht,**](wm-touchdown.md) ohne sie zu behandeln.                                                                                                                                                                                                                                                           |
+| Lösung | Sie verwenden wahrscheinlich eine Windows Touch, ohne sie an **DefWindowProc** weiterzuleiten. Dies führt zu unerwartetem Verhalten. Weitere [Erste Schritte mit Windows Touch-Nachrichten](getting-started-with-multi-touch-messages.md) finden Sie unter Ordnungsgemäßer Umgang mit [**WM \_ TOUCH-Nachrichten.**](wm-touchdown.md) |
 
 
 
@@ -162,15 +162,15 @@ if ((GetMessageExtraInfo() & MOUSEEVENTF_FROMTOUCH) == MOUSEEVENTF_FROMTOUCH) {
 <tbody>
 <tr class="odd">
 <td>Problem</td>
-<td>Ich füge Windows. h ein, aber es wird immer noch angegeben, dass <a href="wm-touchdown.md"><strong>WM_TOUCH</strong></a> nicht definiert ist.</td>
+<td>Ich samt windows.h, aber es wird immer noch angezeigt, <a href="wm-touchdown.md"><strong>WM_TOUCH</strong></a> nicht definiert ist.</td>
 </tr>
 <tr class="even">
 <td>Ursache</td>
-<td>Die Windows-Version in "targetver. h" ist falsch.</td>
+<td>Die Windows-Version in Targetver.h ist falsch.</td>
 </tr>
 <tr class="odd">
 <td>Lösung</td>
-<td>Sie haben die richtige Windows-Version nicht in Ihrem Projekt festgelegt. Der folgende Code veranschaulicht die ordnungsgemäße Festlegung von Windows-Versionen für Windows-Finger Eingaben in Windows 7. <span data-codelanguage="ManagedCPlusPlus"></span>
+<td>Sie haben nicht die richtige Windows-Version in Ihrem Projekt festgelegt. Der folgende Code veranschaulicht die ordnungsgemäß festgelegten Windows-Versionen für Windows Touch Windows 7. <span data-codelanguage="ManagedCPlusPlus"></span>
 <table>
 <colgroup>
 <col style="width: 100%" />
@@ -207,15 +207,15 @@ if ((GetMessageExtraInfo() & MOUSEEVENTF_FROMTOUCH) == MOUSEEVENTF_FROMTOUCH) {
 <tbody>
 <tr class="odd">
 <td>Problem</td>
-<td>Die x-Koordinaten und y-Koordinaten für die Fingereingabe sind ungültig. Dabei handelt es sich entweder um größere Werte als erwartet, oder es handelt sich um negative Werte.</td>
+<td>Meine Toucheingabe-X-Koordinaten und y-Koordinaten scheinen ungültig zu sein. Sie sind entweder größer als erwartet, oder sie sind negative Werte.</td>
 </tr>
 <tr class="even">
 <td>Ursache</td>
-<td>Möglicherweise müssen Sie Ihre touchpunkte in Pixel konvertieren, oder Sie müssen die Bildschirm Koordinaten konvertieren.</td>
+<td>Möglicherweise müssen Sie Ihre Berührungspunkte in Pixel konvertieren, oder Sie müssen die Bildschirmkoordinaten konvertieren.</td>
 </tr>
 <tr class="odd">
 <td>Lösung</td>
-<td>Stellen Sie sicher, dass Sie <a href="/windows/desktop/api/winuser/nf-winuser-touch_coord_to_pixel"><strong>TOUCH_COORD_TO_PIXEL</strong></a> und <a href="/windows/desktop/api/winuser/nf-winuser-screentoclient"><strong>ScreenToClient</strong></a>aufrufen. Dies wird im folgenden Code veranschaulicht. <span data-codelanguage="ManagedCPlusPlus"></span>
+<td>Stellen Sie sicher, dass Sie <a href="/windows/desktop/api/winuser/nf-winuser-touch_coord_to_pixel"><strong>TOUCH_COORD_TO_PIXEL</strong></a> <a href="/windows/desktop/api/winuser/nf-winuser-screentoclient"><strong>und ScreenToClient aufrufen.</strong></a> Dies wird im folgenden Code veranschaulicht. <span data-codelanguage="ManagedCPlusPlus"></span>
 <table>
 <colgroup>
 <col style="width: 100%" />
@@ -248,7 +248,7 @@ if ((GetMessageExtraInfo() & MOUSEEVENTF_FROMTOUCH) == MOUSEEVENTF_FROMTOUCH) {
 <div class="alert">
 <blockquote>
 [!Note]<br />
-Um die <a href="/windows/desktop/api/winuser/nf-winuser-screentoclient"><strong>ScreenToClient</strong></a> -Funktion verwenden zu können, müssen Sie in Ihrer Anwendung über eine hohe dpi-Unterstützung verfügen. Weitere Informationen zur Unterstützung von High dpi finden Sie im Abschnitt " <a href=" /windows/win32/hidpi/high-dpi-desktop-application-development-on-windows">High dpi</a> " in MSDN.
+Um die <a href="/windows/desktop/api/winuser/nf-winuser-screentoclient"><strong>ScreenToClient-Funktion verwenden zu</strong></a> können, müssen Sie eine hohe DPI-Unterstützung in Ihrer Anwendung haben. Weitere Informationen zur Unterstützung eines hohen DPI-Werts finden Sie im <a href=" /windows/win32/hidpi/high-dpi-desktop-application-development-on-windows">MSDN-Abschnitt</a> Mit hohem DPI-Wert.
 </blockquote>
 </div>
 <div>
@@ -264,11 +264,11 @@ Um die <a href="/windows/desktop/api/winuser/nf-winuser-screentoclient"><strong>
 
 
 
-|          |                                                                                                                                                                                                                                |
+| Kategorie | BESCHREIBUNG |
 |----------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Problem    | Ich sehe keine [**WM- \_ touchnachrichten**](wm-touchdown.md) , aber ich weiß, dass die Windows-Toucheingabe funktioniert, weil ich [**WM- \_ Gesten**](wm-gesture.md) Meldungen sehe.                                                             |
-| Ursache    | Fehlendes Aufrufen von [**RegisterTouchWindow**](/windows/desktop/api/winuser/nf-winuser-registertouchwindow).                                                                                                                                                          |
-| Lösung | [**WM \_ Touchnachrichten**](wm-touchdown.md) und [**WM- \_ Gesten**](wm-gesture.md) schließen sich gegenseitig aus. Wenn Sie [**RegisterTouchWindow**](/windows/desktop/api/winuser/nf-winuser-registertouchwindow)nicht aufrufen, werden nur Nachrichten der **WM- \_ Geste** empfangen. |
+| Problem    | Mir werden keine [**WM \_ TOUCH-Nachrichten**](wm-touchdown.md) angezeigt, aber ich weiß, dass Windows Touch funktioniert, da wm gesture-Meldungen angezeigt [**\_ werden.**](wm-gesture.md)                                                             |
+| Ursache    | Es fehlt ein Aufruf von [**RegisterTouchWindow.**](/windows/desktop/api/winuser/nf-winuser-registertouchwindow)                                                                                                                                                          |
+| Lösung | [**WM \_ TOUCH-**](wm-touchdown.md) und [**WM \_ GESTURE-Nachrichten**](wm-gesture.md) schließen sich gegenseitig aus. Wenn Sie [**RegisterTouchWindow**](/windows/desktop/api/winuser/nf-winuser-registertouchwindow)nicht aufrufen, erhalten Sie nur **WM \_ GESTURE-Meldungen.** |
 
 
 
@@ -276,25 +276,25 @@ Um die <a href="/windows/desktop/api/winuser/nf-winuser-screentoclient"><strong>
 
 
 
-|          |                                                                                                                                                                                                                                                                                                                                                       |
+| Kategorie | BESCHREIBUNG |
 |----------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Problem    | Ich sehe kleine Verzögerungen ab dem Zeitpunkt, an dem ich meinen Finger eingebe, wenn ich Eingaben in meiner Anwendung erhalte.                                                                                                                                                                                                                                         |
-| Ursache    | Bei der über Gabe von Palmen wird die Eingabe verzögert.                                                                                                                                                                                                                                                                                                            |
-| Lösung | Wenn **TWF \_ wantpalm** in Aufrufen von [**RegisterTouchWindow**](/windows/desktop/api/winuser/nf-winuser-registertouchwindow)festgelegt ist, ist die Überlegung von Palmen aktiviert. Dies verursacht eine kurze (100 ms) Verzögerung, während die Software testet, ob die Eingabe von einem Finger, Stift oder der Benutzer Palme stammt. Deaktivieren Sie die durch den Aufruf von " **RegisterTouchWindow** " mit aktiviertem **TWF- \_ wantpalm** -Flag. |
+| Problem    | Ich stelle kleine Verzögerungen fest, von dem Zeitpunkt, an dem ich meinen Finger nach unten befasse, bis zu dem Zeitpunkt, zu dem ich Eingaben in meiner Anwendung erhalte.                                                                                                                                                                                                                                         |
+| Ursache    | Die Ablehnung von Handflächen führt zu Verzögerungen bei der Eingabe.                                                                                                                                                                                                                                                                                                            |
+| Lösung | Wenn **TWF \_ WANTPALM** in Aufrufen von [**RegisterTouchWindow**](/windows/desktop/api/winuser/nf-winuser-registertouchwindow)festgelegt ist, ist die Ablehnung von "hand" aktiviert. Dies führt zu einer kleinen Verzögerung (100 ms), während die Software testet, ob die Eingabe von einem Finger, Stift oder der Handfläche des Benutzers stammt. Deaktivieren Sie die Ablehnung von Handflächen, indem **Sie RegisterTouchWindow** aufrufen, wobei das **\_ TWF-FLAG WANTPALM** deaktiviert ist. |
 
 
 
  
 
-## <a name="troubleshooting-windows-touch-gestures"></a>Problembehandlung bei Windows-Touchgesten
+## <a name="troubleshooting-windows-touch-gestures"></a>Problembehandlung bei Windows Touch Gesten
 
 
 
-|          |                                                                                                                                                                                                                                                                                                                                                                                 |
+| Kategorie | BESCHREIBUNG |
 |----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Problem    | Nach der Verarbeitung der [**WM- \_ Gesten**](wm-gesture.md) Nachricht wird das Feedback zu Grenzen nicht mehr angezeigt. Oder eine Geste, die zuvor funktionierte, funktioniert jetzt nicht mehr.                                                                                                                                                                                                                         |
-| Ursache    | Verwenden der [**WM- \_ Gesten**](wm-gesture.md) Nachricht, ohne Sie zu behandeln.                                                                                                                                                                                                                                                                                                    |
-| Lösung | Sie verbrauchen wahrscheinlich eine Windows-Berührungs Nachricht, ohne Sie an [defwindowproc](/windows/win32/api/winuser/nf-winuser-defwindowproca)weiterzuleiten, was zu unerwartetem Verhalten führt. Weitere Informationen zum ordnungsgemäßen verarbeiten von WM-Gesten Nachrichten finden Sie unter [**\_**](wm-gesture.md) [Getting Started with Windows Gesten](getting-started-with-multi-touch-gestures.md) . |
+| Problem    | Nachdem ich die [**\_ WM-GESTE-Nachricht**](wm-gesture.md) verarbeitet habe, erhalte ich keine Begrenzungsfeedback mehr. Oder eine Geste, die zuvor funktioniert hat, funktioniert jetzt nicht.                                                                                                                                                                                                                         |
+| Ursache    | Verwenden der [**WM \_ GESTURE-Nachricht,**](wm-gesture.md) ohne sie zu verarbeiten.                                                                                                                                                                                                                                                                                                    |
+| Lösung | Sie verwenden wahrscheinlich eine Windows Touch Nachricht, ohne sie an [DefWindowProc](/windows/win32/api/winuser/nf-winuser-defwindowproca)weiterzuleiten. Dies führt zu unerwartetem Verhalten. Weitere Informationen zum ordnungsgemäßen Behandeln von WM GESTURE-Nachrichten finden Sie unter [Erste Schritte mit Windows-Gesten.](getting-started-with-multi-touch-gestures.md) [**\_**](wm-gesture.md) |
 
 
 
@@ -302,11 +302,11 @@ Um die <a href="/windows/desktop/api/winuser/nf-winuser-screentoclient"><strong>
 
 
 
-|          |                                                                                                                                                                                                                         |
+| Kategorie | BESCHREIBUNG |
 |----------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Problem    | Ich sehe keine [**WM- \_ Gesten**](wm-gesture.md) Meldungen, aber ich weiß, dass die Windows-Toucheingabe funktioniert, weil ich [**WM- \_ touchnachrichten**](wm-touchdown.md) sehe.                                                      |
-| Ursache    | [**RegisterTouchWindow**](/windows/desktop/api/winuser/nf-winuser-registertouchwindow)wird aufgerufen.                                                                                                                                                             |
-| Lösung | [**WM \_ Touchnachrichten**](wm-touchdown.md) und [**WM- \_ Gesten**](wm-gesture.md) schließen sich gegenseitig aus. Wenn Sie [**RegisterTouchWindow**](/windows/desktop/api/winuser/nf-winuser-registertouchwindow)aufrufen, werden keine Nachrichten der **WM- \_ Geste** empfangen. |
+| Problem    | Mir werden keine [**WM \_ GESTURE-Meldungen**](wm-gesture.md) angezeigt, aber ich weiß, dass Windows Touch funktioniert, da wm [**\_ touch-Nachrichten**](wm-touchdown.md) angezeigt werden.                                                      |
+| Ursache    | Aufrufen von [**RegisterTouchWindow.**](/windows/desktop/api/winuser/nf-winuser-registertouchwindow)                                                                                                                                                             |
+| Lösung | [**WM \_ TOUCH-**](wm-touchdown.md) und [**WM \_ GESTURE-Nachrichten**](wm-gesture.md) schließen sich gegenseitig aus. Wenn Sie [**RegisterTouchWindow**](/windows/desktop/api/winuser/nf-winuser-registertouchwindow)aufrufen, erhalten Sie keine **WM \_ GESTURE-Meldungen.** |
 
 
 
@@ -322,15 +322,15 @@ Um die <a href="/windows/desktop/api/winuser/nf-winuser-screentoclient"><strong>
 <tbody>
 <tr class="odd">
 <td>Problem</td>
-<td>Ich sehe nicht alle Gesten, die ich erwarte. Ich sehe z. b. Gesten mit dem Bezeichner <strong>GID_PAN</strong> , aber nicht <strong>GID_ROTATE</strong>.</td>
+<td>Ich sehe nicht alle Gesten, die ich erwartet. Beispielsweise werden Gesten mit dem Bezeichner <strong>GID_PAN,</strong> aber nicht <strong>GID_ROTATE.</strong></td>
 </tr>
 <tr class="even">
 <td>Ursache</td>
-<td>Einige Gesten, wie z. b. die Drehungs Bewegung, sind standardmäßig nicht aktiviert.</td>
+<td>Einige Gesten, z. B. die Drehbewegung, sind standardmäßig nicht aktiviert.</td>
 </tr>
 <tr class="odd">
 <td>Lösung</td>
-<td>Sie müssen <a href="/windows/desktop/api/winuser/nf-winuser-setgestureconfig"><strong>setgestureconfig</strong></a> aufrufen, wenn Sie eine <a href="wm-gesturenotify.md"><strong>WM_GESTURENOTIFY</strong></a> Nachricht erhalten, wie in der <strong>WM_GESTURENOTIFY</strong> Referenz beschrieben, oder Sie müssen einen Handler für die <strong>WM_GESTURENOTIFY</strong> Nachricht hinzufügen. Der folgende Code zeigt, wie ein Handler implementiert werden kann, um die Unterstützung für die Rotation zu aktivieren. <span data-codelanguage="ManagedCPlusPlus"></span>
+<td>Sie müssen <a href="/windows/desktop/api/winuser/nf-winuser-setgestureconfig"><strong>SetGestureConfig</strong></a> aufrufen, wenn Sie eine <a href="wm-gesturenotify.md"><strong>WM_GESTURENOTIFY</strong></a> Meldung erhalten, wie im <strong>WM_GESTURENOTIFY-Verweis</strong> beschrieben, oder Sie müssen einen Handler für die <strong>WM_GESTURENOTIFY</strong> Nachricht hinzufügen. Der folgende Code zeigt, wie ein Handler implementiert werden kann, um die Unterstützung für die Rotation zu aktivieren. <span data-codelanguage="ManagedCPlusPlus"></span>
 <table>
 <colgroup>
 <col style="width: 100%" />
@@ -372,7 +372,7 @@ LRESULT CTestWndApp::OnWindowsGestureNotify(
 </tbody>
 </table>
 
-Weitere Beispiele für typische Gesten Konfigurationen finden Sie unter <strong>setgestureconfig</strong>.</td>
+Weitere Beispiele für typische Gestenkonfigurationen finden Sie unter <strong>SetGestureConfig</strong>.</td>
 </tr>
 </tbody>
 </table>
@@ -383,11 +383,11 @@ Weitere Beispiele für typische Gesten Konfigurationen finden Sie unter <strong>
 
 
 
-|          |                                                                                                                                                                                                                                                                                                                                                                                                    |
+| Kategorie | BESCHREIBUNG |
 |----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Problem    | Die benutzerdefinierten Schiebe leisten in meiner Anwendung führen beim Ausführen der Schwenkbewegung keinen Bildlauf durch.                                                                                                                                                                                                                                                                                                         |
-| Ursache    | Fehlende Handler für die korrekten WM- \_ \* scrollnachrichten.                                                                                                                                                                                                                                                                                                                                            |
-| Lösung | Sie behandeln nicht alle WM- \_ \* scrollnachrichten in den benutzerdefinierten Schiebe leisten. Es wird empfohlen, die WM- [**\_ Gesten**](wm-gesture.md) Nachricht zu verarbeiten, anstatt die benutzerdefinierte Bild Lauf Leiste-Funktionalität durch Legacy Unterstützung beizubehalten. Sie müssen Nachrichten unterstützen, wie im Abschnitt [Legacy Unterstützung für das Schwenken mit](legacy-support-for-panning-with-scrollbars.md)Bild Lauf leisten ausführlich beschrieben. |
+| Problem    | Die benutzerdefinierten Bildlaufleisten in meiner Anwendung scrollen nicht, wenn ich die Schwenkbewegung durchgezeig.                                                                                                                                                                                                                                                                                                         |
+| Ursache    | Fehlende Handler für die richtigen WM \_ \* SCROLL-Meldungen.                                                                                                                                                                                                                                                                                                                                            |
+| Lösung | Sie verarbeiten nicht alle WM \_ \* SCROLL-Meldungen in Ihren benutzerdefinierten Scrollleisten. Es wird empfohlen, die [**WM \_ GESTURE-Nachricht**](wm-gesture.md) zu verarbeiten, anstatt die benutzerdefinierte Scrollleistenfunktion über legacy-Unterstützung beizubehalten. Sie müssen Meldungen unterstützen, wie im Abschnitt [Legacyunterstützung für Schwenken mit Scrollleisten](legacy-support-for-panning-with-scrollbars.md)beschrieben. |
 
 
 
@@ -395,11 +395,11 @@ Weitere Beispiele für typische Gesten Konfigurationen finden Sie unter <strong>
 
 
 
-|          |                                                                                                                                                                                                                                                                 |
+| Kategorie | BESCHREIBUNG |
 |----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Problem    | Ich erhalte Verzögerungen bei Gesten.                                                                                                                                                                                                                               |
-| Ursache    | Flicks können Verzögerungen bei Gesten verursachen.                                                                                                                                                                                                                      |
-| Lösung | Flicks können Verzögerungen verursachen, wie lange es dauert, bis Ihre Anwendung [**WM- \_ Gesten**](wm-gesture.md) Nachrichten empfängt. Informationen zum Deaktivieren von Flicks finden Sie [unter Legacy Unterstützung für das Schwenken mit Scrollleisten](legacy-support-for-panning-with-scrollbars.md) . |
+| Ursache    | Flimmer können zu Verzögerungen bei Gesten führen.                                                                                                                                                                                                                      |
+| Lösung | Bei Flimmern kann es zu Verzögerungen kommen, wie lange es dauert, bis Ihre Anwendung [**WM \_ GESTURE-Nachrichten**](wm-gesture.md) empfängt. Informationen zum Deaktivieren von Flimmern finden Sie unter Legacyunterstützung für Schwenken [mit Scrollleisten.](legacy-support-for-panning-with-scrollbars.md) |
 
 
 

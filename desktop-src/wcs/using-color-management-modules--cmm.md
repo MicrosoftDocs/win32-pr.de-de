@@ -1,35 +1,35 @@
 ---
 title: Verwenden von Farbverwaltungsmodulen (CMM)
-description: Farb Verwaltungs Module (Color Management modules, CMMS) sind Module von WCS-Code, die die Informationen in Geräte Profilen zum Durchführen der Farbkonvertierung und der Farbzuordnung verwenden.
+description: Color Management Modules (CMMs) sind Module mit WCS-Code, die die Informationen in Geräteprofilen verwenden, um Farbkonvertierung und Farbzuordnung durchzuführen.
 ms.assetid: df119e1a-b6f5-40a3-8852-8a57b21483d0
 keywords:
-- Windows Color System (WCS), Farb Verwaltungsmodul (CMM)
-- WCS (Windows Color System), Farb Verwaltungsmodul (CMM)
-- Bild Farbverwaltung, Farb Verwaltungsmodul (CMM)
-- Farbverwaltung, Farb Verwaltungsmodul (CMM)
-- Farben, Farb Verwaltungsmodul (CMM)
-- Farb Verwaltungsmodul (CMM)
-- CMM (Farb Verwaltungsmodul)
+- Windows Color System (WCS), Color Management Module (CMM)
+- WCS (Windows Color System), Color Management Module (CMM)
+- Bildfarbverwaltung, Farbverwaltungsmodul (CMM)
+- Farbverwaltung, Farbverwaltungsmodul (CMM)
+- Colors,Color Management Module (CMM)
+- Color Management Module (CMM)
+- CMM (Farbverwaltungsmodul)
 ms.localizationpriority: high
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 518558305639f0699358f22fb3544698741cfedf
-ms.sourcegitcommit: 9bf844f41bd6451b8508d93e722e88a43e913b56
+ms.openlocfilehash: 9b12a087bfc972ffcbd7f9fb083a9d73d669f134
+ms.sourcegitcommit: cb87082135319cbdc5df541e3071eebb83a58972
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/02/2021
-ms.locfileid: "106351182"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111386899"
 ---
 # <a name="using-color-management-modules-cmm"></a>Verwenden von Farbverwaltungsmodulen (CMM)
 
-Farb Verwaltungs Module (Color Management modules, CMMS) sind Module von WCS-Code, die die Informationen in Geräte Profilen zum Durchführen der Farbkonvertierung und der Farbzuordnung verwenden. Anwendungsentwickler sollten CMMS nicht implementieren müssen. Microsoft stellt den Standard-CMM bereit. Wenn Sie jedoch Software schreiben, für die die Verwendung spezieller Algorithmen zur Farbkonvertierung und Farbzuordnung erforderlich ist, können Sie eine erstellen.
+Color Management Modules (CMMs) sind Module mit WCS-Code, die die Informationen in Geräteprofilen verwenden, um Farbkonvertierung und Farbzuordnung durchzuführen. Anwendungsentwickler sollten keine CMMs implementieren müssen. Microsoft stellt das Standard-CMM zur Verfügung. Wenn Sie jedoch Software schreiben, die die Verwendung spezieller Farbkonvertierungs- und Farbzuordnungsalgorithmen erfordert, können Sie einen erstellen.
 
 > [!Note]  
-> CMM-Einstiegspunkte sind *keine* API-Funktionen und sollten nicht von Anwendungen aufgerufen werden.
+> CMM-Einstiegspunkte *sind keine* API-Funktionen und sollten nicht von Anwendungen aufgerufen werden.
 
  
 
-Wenn CMMS installiert sind, werden Sie vom Installationsprogramm in der Windows-Registrierung registriert. Anwendungen können die registrierten CMMS auflisten und mithilfe der [**selectcmm**](/windows/win32/api/icm/nf-icm-selectcmm) -Funktion eine auswählen. Die folgende Beispielanwendung veranschaulicht, wie alle registrierten CMMS aufgelistet werden.
+Wenn CMMs installiert sind, registriert das Installationsprogramm sie in der Windows-Registrierung. Anwendungen können die registrierten CMMs auflisten und mithilfe der [**SelectCMM-Funktion eines**](/windows/win32/api/icm/nf-icm-selectcmm) auswählen. Die folgende Beispielanwendung veranschaulicht, wie sie alle registrierten CMMs aufzählt.
 
 
 ```C++
@@ -55,11 +55,11 @@ _CRTAPI1 main (int argc, char *argv[])
 
     HANDLE hkCMM;
     DWORD dwErr = RegCreateKey(HKEY_LOCAL_MACHINE,
-                 gszICMatcher, &amp;hkCMM);
+                 gszICMatcher, &hkCMM);
     DWORD dwMaxName, dwMaxValue;
-    DWORD dwInfoErr = RegQueryInfoKey(&amp;hkCMM, NULL, NULL,
+    DWORD dwInfoErr = RegQueryInfoKey(&hkCMM, NULL, NULL,
                                 NULL, NULL, NULL, NULL, NULL,
-                                &amp;dwMaxName, &amp;dwMaxValue,
+                                &dwMaxName, &dwMaxValue,
                                 NULL, NULL);
     TCHAR chCMM[dwMaxName];
     ULONG cjCMM = sizeof(chCMM)/sizeof(chCMM[0]);
@@ -76,8 +76,8 @@ _CRTAPI1 main (int argc, char *argv[])
     {
         while (RegEnumValue(
                    hkCMM,dwNumCMM,chCMM,
-                   &amp;cjCMM,NULL,&amp;dwType,
-                   chCMMFile,&amp;cjCMMFile) == ERROR_SUCCESS)
+                   &cjCMM,NULL,&dwType,
+                   chCMMFile,&cjCMMFile) == ERROR_SUCCESS)
         {
             if (dwType == REG_SZ)
             {

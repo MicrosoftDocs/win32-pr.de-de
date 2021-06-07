@@ -1,23 +1,23 @@
 ---
-description: Die fotometadatenrichtlinie für die System. Photo. f Number-Eigenschaft.
+description: Die Richtlinie für Fotometadaten für die System.Photo.FNumber-Eigenschaft.
 ms.assetid: 434d52cb-c98d-4860-87f7-4aedab7f8188
-title: System. Photo. f Number-Foto-metadatenrichtlinie
+title: System.Photo.FNumber-Richtlinie für Fotometadaten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c518ef2a05dde8fd7e812d1d76a79cbe3efb4217
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 85443b849d9f810709f3e75c3082738e5377092f
+ms.sourcegitcommit: 099ecdda1e83618b844387405da0db0ebda93a65
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104216810"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111443621"
 ---
-# <a name="systemphotofnumber-photo-metadata-policy"></a>System. Photo. f Number-Foto-metadatenrichtlinie
+# <a name="systemphotofnumber-photo-metadata-policy"></a>System.Photo.FNumber-Richtlinie für Fotometadaten
 
-Die fotometadatenrichtlinie für die [System. Photo. f Number](../properties/props-system-photo-fnumber.md) -Eigenschaft.
+Die Richtlinie für Fotometadaten für die [System.Photo.FNumber-Eigenschaft.](../properties/props-system-photo-fnumber.md)
 
-### <a name="pkey"></a>Pkey
+### <a name="pkey"></a>PKEY
 
-Pkey- \_ Foto- \_ f-Nummer
+PKEY \_ Photo \_ FNumber
 
 ### <a name="containers"></a>Container
 
@@ -27,51 +27,47 @@ JPEG, TIFF
 
 Ja
 
-### <a name="output-propvariant-type"></a>Ausgabe-PROPVARIANT-Typ
+### <a name="output-propvariant-type"></a>PROPVARIANT-Ausgabetyp
 
 VT \_ R8
 
-### <a name="conflict-resolution-policy"></a>Richtlinie zur Konfliktlösung
+### <a name="conflict-resolution-policy"></a>Konfliktlösungsrichtlinie
 
-Dieser Wert wird von "System. Photo. vnumzähler" und "System. Photo. f-Nenner" generiert. Sie kann nicht direkt geschrieben werden. Werte aus unterschiedlichen Schemas sind abgestimmt.
+Dieser Wert wird von System.Photo.FNumberNumerator und System.Photo.FNumberDenominator generiert. Sie kann nicht direkt geschrieben werden. Werte aus verschiedenen Schemas werden abgestimmt.
 
 ### <a name="jpeg-policy"></a>JPEG-Richtlinie
 
-### <a name="read-paths"></a>Pfade lesen
+### <a name="read-paths"></a>Lesepfade
 
 
 
-| Auftrag | Pfad                          | Datenträger Format |
+| Auftrag | Pfad                          | Datenträgerformat |
 |-------|-------------------------------|-------------|
-| 1     | /App1/IFD/EXIF/{ushort = 33437} |             |
-| 2     | /XMP/EXIF: f-Nummer             |             |
+| 1     | /app1/ifd/exif/{ushort=33437} |             |
+| 2     | /xmp/exif:FNumber             |             |
 
 
 
  
 
-### <a name="write-paths"></a>Schreib Pfade
+### <a name="write-paths"></a>Schreibpfade
 
 
 
-|       |                               |             |     |
-|-------|-------------------------------|-------------|-----|
-| Auftrag | Pfad                          | Datenträger Format |     |
-| 1     | /App1/IFD/EXIF/{ushort = 33437} |             |     |
-| 2     | /XMP/EXIF: f-Nummer             |             |     |
-
-
-
+| Auftrag | Pfad                          | Datenträgerformat |
+|-------|-------------------------------|-------------|
+| 1     | /app1/ifd/exif/{ushort=33437} |             |
+| 2     | /xmp/exif:FNumber             |             | 
  
 
-### <a name="remove-paths"></a>Pfade entfernen
+### <a name="remove-paths"></a>Entfernen von Pfaden
 
 
 
 | Auftrag | Pfad                          |
 |-------|-------------------------------|
-| 1     | /App1/IFD/EXIF/{ushort = 33437} |
-| 2     | /XMP/EXIF: f-Nummer             |
+| 1     | /app1/ifd/exif/{ushort=33437} |
+| 2     | /xmp/exif:fnumber             |
 
 
 
@@ -79,52 +75,52 @@ Dieser Wert wird von "System. Photo. vnumzähler" und "System. Photo. f-Nenner" 
 
 ### <a name="tiff-policies"></a>TIFF-Richtlinien
 
-### <a name="read-paths"></a>Pfade lesen
+### <a name="read-paths"></a>Lesepfade
 
 
 
-| Auftrag | Pfad                     | Datenträger Format |
+| Auftrag | Pfad                     | Datenträgerformat |
 |-------|--------------------------|-------------|
-| 1     | /IFD/EXIF/{ushort = 33437} |             |
-| 2     | /IFD/XMP/EXIF: f-Nummer    |             |
+| 1     | /ifd/exif/{ushort=33437} |             |
+| 2     | /ifd/xmp/exif:FNumber    |             |
 
 
 
  
 
-### <a name="write-paths"></a>Schreib Pfade
+### <a name="write-paths"></a>Schreibpfade
 
 
 
-| Auftrag | Pfad                     | Datenträger Format |
+| Auftrag | Pfad                     | Datenträgerformat |
 |-------|--------------------------|-------------|
-| 1     | /IFD/EXIF/{ushort = 33437} |             |
-| 2     | /IFD/XMP/EXIF: f-Nummer    |             |
+| 1     | /ifd/exif/{ushort=33437} |             |
+| 2     | /ifd/xmp/exif:FNumber    |             |
 
 
 
  
 
-### <a name="remove-paths"></a>Pfade entfernen
+### <a name="remove-paths"></a>Entfernen von Pfaden
 
 
 
 | Auftrag | Pfad                     |
 |-------|--------------------------|
-| 1     | /IFD/EXIF/{ushort = 33437} |
-| 2     | /IFD/XMP/EXIF: f-Nummer    |
+| 1     | /ifd/exif/{ushort=33437} |
+| 2     | /ifd/xmp/exif:fnumber    |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[System. Photo. f Number](../properties/props-system-photo-fnumber.md)
+[System.Photo.FNumber](../properties/props-system-photo-fnumber.md)
 </dt> </dl>
 
  

@@ -1,33 +1,33 @@
 ---
 title: Befehlsverknüpfungen
-description: Mit Befehls Verknüpfungen wählen Benutzer eine einzelne Antwort auf eine Haupt Anweisung aus, und auf diese Weise fahren Sie mit dem nächsten Schritt in einer Aufgabe fort.
+description: Mit Befehlslinks wählen Benutzer eine einzelne Antwort auf eine Hauptanweisung aus und fahren damit mit dem nächsten Schritt in einer Aufgabe fort.
 ms.assetid: a77819b1-9a32-4468-94fb-3f73a469fb81
 ms.topic: article
 ms.date: 10/20/2020
-ms.openlocfilehash: 29031b4456950db6ceff30d75b354dece92c5897
-ms.sourcegitcommit: 3bdf30edb314e0fcd17dc4ddbc70e4ec7d3596e6
+ms.openlocfilehash: b579f554d46d48fd7e373d28df516ae1c0baca6a
+ms.sourcegitcommit: 8ebcf6cd36f67f8bcf78e76ae8923d65b8995c8a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "103761289"
+ms.lasthandoff: 06/05/2021
+ms.locfileid: "111524274"
 ---
 # <a name="command-links"></a>Befehlsverknüpfungen
 
 > [!NOTE]
-> Dieses Entwurfs Handbuch wurde für Windows 7 erstellt und wurde für neuere Versionen von Windows nicht aktualisiert. Ein Großteil der Anleitungen gilt weiterhin im Prinzip, aber die Präsentation und die Beispiele entsprechen nicht unseren [aktuellen Entwurfs Anleitungen](/windows/uwp/design/).
+> Dieser Entwurfsleitfaden wurde für Windows 7 erstellt und für neuere Versionen von Windows nicht aktualisiert. Ein Großteil der Anleitungen gilt immer noch im Prinzip, aber die Präsentation und die Beispiele spiegeln nicht unsere [aktuellen Entwurfsleitfäden](/windows/uwp/design/)wider.
 
-Mit Befehls Verknüpfungen wählen Benutzer eine einzelne Antwort auf eine Haupt Anweisung aus, und auf diese Weise fahren Sie mit dem nächsten Schritt in einer Aufgabe fort.
+Mit Befehlslinks wählen Benutzer eine einzelne Antwort auf eine Hauptanweisung aus und fahren damit mit dem nächsten Schritt in einer Aufgabe fort.
 
-Befehls Verknüpfungen verfügen über eine saubere, einfache Darstellung, die beschreibende Bezeichnungen zulässt. Sie werden entweder mit einem Standardpfeil oder einem benutzerdefinierten Symbol und einer optionalen Zusatzerklärung angezeigt.
+Befehlslinks verfügen über eine übersichtliche, einfache Darstellung, die beschreibende Bezeichnungen ermöglicht und entweder mit einem Standardpfeil oder einem benutzerdefinierten Symbol sowie optional mit einer ergänzenden Erklärung angezeigt wird.
 
-![Screenshot eines typischen Befehls Link Dialogfelds ](images/ctrl-command-links-image1.png)
+![Screenshot eines typischen Dialogfelds "Befehlslink" ](images/ctrl-command-links-image1.png)
 
-Ein typischer Satz von Befehls Verknüpfungen.
+Ein typischer Satz von Befehlslinks.
 
-Befehls Verknüpfungen ähneln options [Feldern insofern,](ctrl-radio-buttons.md) als Sie verwendet werden, um aus einem Satz von sich gegenseitig ausschließenden, zusammenhängenden Optionen auszuwählen. Wie Options Felder werden Befehls Verknüpfungen immer in den Sätzen, nie einzeln, angezeigt. In der Darstellung weisen Befehls Verknüpfungen das vereinfachte Aussehen ähnlich wie reguläre [Verknüpfungen](ctrl-links.md)auf, ohne einen Frame oder einen anderen [starken Klick zu](glossary.md)bieten. Befehls Verknüpfungen sind auch mit [Befehls](ctrl-command-buttons.md)Schaltflächen vergleichbar, da Sie als Standard Befehls Schaltfläche dienen können und Ihnen eine Zugriffstaste zugewiesen werden kann. Wenn Sie auf die Schaltflächen " [Commit](glossary.md)" klicken, schließen Sie entweder das Fenster (für Dialogfelder), oder fahren Sie mit der nächsten Seite fort (für Assistenten und Seiten Flüsse).
+Befehlslinks ähneln [Optionsfeldern,](ctrl-radio-buttons.md) da sie verwendet werden, um aus einer Reihe von sich gegenseitig ausschließenden, verwandten Optionen auszuwählen. Wie Optionsfelder werden Befehlslinks immer in Sätzen und nie einzeln angezeigt. In der Darstellung weisen Befehlslinks eine einfache Darstellung auf, die regulären [Links](ctrl-links.md)ähnelt, ohne einen Frame oder ein anderes strong click [affordance -Erscheinungsbild.](glossary.md) Befehlslinks ähneln auch [Befehlsschaltflächen,](ctrl-command-buttons.md)da sie die Standardschaltfläche "Befehl" sein können und ihnen ein Zugriffsschlüssel zugewiesen werden kann. Wie [commit-Schaltflächen](glossary.md)schließen sie beim Klicken entweder das Fenster (für Dialogfelder) oder wechseln zur nächsten Seite (für Assistenten und Seitenflows).
 
 > [!Note]  
-> Richtlinien, die sich auf [Links](ctrl-links.md) und [Layout](vis-layout.md) beziehen, werden in separaten Artikeln dargestellt.
+> Richtlinien im Zusammenhang mit [Links](ctrl-links.md) und [Layout](vis-layout.md) werden in separaten Artikeln vorgestellt.
 
  
 
@@ -35,141 +35,141 @@ Befehls Verknüpfungen ähneln options [Feldern insofern,](ctrl-radio-buttons.md
 
 Orientieren Sie sich an folgenden Fragen:
 
--   **Gibt es die Optionen, die auf die Haupt Anweisung Antworten und mit dem Hauptzweck des Fensters oder der Seite verknüpft sind?** Müssen Benutzer darauf reagieren, um etwas anderes zu tun, als einfach nur zu einer anderen Seite zu navigieren? Andernfalls verwenden Sie ein anderes Steuerelement, z. b. Befehls Schaltflächen oder Links. Befehls Verknüpfungen sind bei sekundären oder optionalen Optionen oder reinen Navigationsmöglichkeiten nicht geeignet.
+-   **Beziehen sich die Optionsantworten auf die Hauptanweisung und auf den primären Zweck des Fensters oder der Seite?** Müssen Benutzer darauf reagieren, etwas anderes zu tun, als nur zu einer anderen Seite zu navigieren? Verwenden Sie andernfalls ein anderes Steuerelement, z. B. Befehlsschaltflächen oder Links. Befehlslinks eignen sich nicht für sekundäre oder optionale Optionen oder reine Navigation.
 
-    ![Screenshot eines Personalisier enden System Steuerungs Elements ](images/ctrl-command-links-image2.png)
+    ![Screenshot eines Personalisierungselements der Systemsteuerung ](images/ctrl-command-links-image2.png)
 
-    Das Element der Personalisierungs-Systemsteuerung sieht so aus, als ob es Befehls Verknüpfungen verwendet, die Optionen sind reguläre Verknüpfungen, da diese [Hub-Seite](winenv-ctrl-panels.md) für reine Navigation vorgesehen ist.
+    Während die Personalisierung Systemsteuerung Element so aussieht, als ob es Befehlslinks verwendet, sind die Optionen reguläre Links, da diese [Hubseite](winenv-ctrl-panels.md) für die reine Navigation vorgesehen ist.
 
--   **Wird das Steuerelement verwendet, um eine Antwort aus einem Satz von sich gegenseitig ausschließenden Antworten auszuwählen?** Wenn dies nicht erwünscht ist, verwenden Sie ein anderes Steuerelement. Verwenden Sie Befehls Schaltflächen oder Links, damit Benutzer einzelne Befehle auswählen können.
--   **Wird in Dialogfeldern das Fenster durch Klicken auf das Steuerelement geschlossen?** Wenn dies nicht der Wert ist, verwenden Sie ein Steuerelement, für das das Schließen des Fensters nicht erforderlich ist, z.b. Options Felder, Befehls Schaltflächen oder Links
+-   **Wird das Steuerelement verwendet, um eine Antwort aus mehreren sich gegenseitig ausschließenden Antworten auszuwählen?** Wenn dies nicht erwünscht ist, verwenden Sie ein anderes Steuerelement. Um Benutzern die Auswahl einzelner Befehle zu ermöglichen, verwenden Sie Befehlsschaltflächen oder Links.
+-   **Wird das Fenster bei Dialogfeldern durch Klicken auf das Steuerelement geschlossen?** Verwenden Sie andernfalls ein Steuerelement, das das Schließen des Fensters nicht erfordert, z. B. Optionsfelder, Befehlsschaltflächen oder Links.
 
     **Falsch:**
 
-    ![Screenshot des Dialog Felds "Firewalleinstellungen im Registerkarten Format" ](images/ctrl-command-links-image3.png)
+    ![Screenshot des Dialogfelds "Firewalleinstellungen im Registerkartenmodus" ](images/ctrl-command-links-image3.png)
 
-    Befehls Verknüpfungen können nicht in Eigenschaften Fenstern oder Dialogfeldern mit Registerkarten verwendet werden, da das Fenster durch Klicken auf das Steuerelement geschlossen wird
+    Befehlslinks können nicht in Eigenschaftenfenstern oder Dialogfeldern im Registerkartenregister verwendet werden, da das Fenster durch Klicken auf das Steuerelement geschlossen wird.
 
--   **Wenn Sie Assistenten und Seiten Flüsse ausführen, klicken Sie ohne Verpflichtung auf zur nächsten Seite.** Verwenden Sie keine Befehls Verknüpfungen zum Ausführen eines Commit für eine Aufgabe. Verwenden Sie stattdessen Commit-Schaltflächen. Da Befehls Verknüpfungen wie Links Aussehen und Benutzer innerhalb eines Seiten Flusses Verknüpfungen mit der Navigation verknüpfen, sind Verknüpfungen für [Commit-Seiten](glossary.md) nicht geeignet, da Benutzer immer in der Lage sein sollten, die Sicherung durchzuführen.
--   **Gibt es für Assistenten und Seiten Flüsse andere Seiten, die Befehls Verknüpfungen verwenden?** Wenn dies der Fall ist und alle anderen Faktoren gleich sind, werden Befehls Verknüpfungen für die Konsistenz zwischen den Seiten bevorzugt.
--   **Ist die Anzahl der Antworten zwischen zwei und fünf?** Es darf nie ein einziger Befehls Link vorhanden sein. Da es sich bei den Befehls Verknüpfungen um große Steuerelemente handelt und der verwendete Bildschirmbereich proportional zur Anzahl der Optionen ist, sollten Sie die Anzahl der Antworten auf höchstens fünf Zeichen beschränken. Verwenden Sie für sechs oder mehr Optionen Options Felder, reguläre Links oder eine [Listenansicht](ctrl-list-views.md)mit einfacher Auswahl.
+-   **Geht der Klick bei Assistenten und Seitenflows ohne Verpflichtung zur nächsten Seite über?** Verwenden Sie keine Befehlslinks zum Ausführen eines Commits für eine Aufgabe. Verwenden Sie stattdessen Commitschaltflächen. Da Befehlslinks wie Links aussehen und Benutzer Links der Navigation innerhalb eines Seitenflusses zuordnen, sind Links für [Commitseiten](glossary.md) nicht geeignet, da Benutzer immer in der Lage sein sollten, das Back-Out durchzuführen.
+-   **Verwenden andere Seiten für Assistenten und Seitenflows Befehlslinks?** Wenn ja, und alle anderen Faktoren gleich sind, bevorzugen Sie Befehlslinks für seitenübergreifende Konsistenz.
+-   **Liegt die Anzahl der Antworten zwischen zwei und fünf?** Es sollte nie einen einzigen Befehlslink geben. Da Befehlslinks große Steuerelemente sind und der verwendete Bildschirmbereich proportional zur Anzahl der Optionen ist, halten Sie die Anzahl der Antworten auf fünf oder weniger. Verwenden Sie für sechs oder mehr Optionen Optionsfelder, reguläre Links oder eine [Einzelauswahllistenansicht.](ctrl-list-views.md)
 
-    ![Screenshot des Dialog Felds mit der Liste der Befehle ](images/ctrl-command-links-image4.png)
+    ![Screenshot des Dialogfelds mit einer Liste von Befehlen ](images/ctrl-command-links-image4.png)
 
-    In diesem Beispiel verwendet die Funktion "AutoPlay" in Microsoft Windows eine Listenansicht.
+    In diesem Beispiel verwendet das Feature AutoPlay in Microsoft Windows eine Listenansicht.
 
--   **Ist eine Kombination aus Options Feldern und der Schaltfläche "Commit" eine bessere Wahl?** Options Felder sind eine bessere Wahl, wenn Folgendes zutrifft:
-    -   **Es gibt eine starke Standardoption, die die meisten Benutzer auswählen können.** Es ist weniger wahrscheinlich, dass Benutzer eine Standard Options Schaltfläche ändern, als dies ein Standard Befehls Link ist, insbesondere in einem Assistenten, bei dem die Benutzer daran gewöhnt sind, die entsprechenden Standardwerte zu akzeptieren. Auf der anderen Seite sind Befehls Verknüpfungen eine bessere Wahl, wenn Sie Benutzer auffordern möchten, eine explizite Auswahl zu treffen.
-    -   **Benutzer müssen mit den Optionen interagieren (möglicherweise, um weitere Informationen anzuzeigen), bevor Sie eine Entscheidung treffen.** Wenn Sie z. b. ein Optionsfeld auswählen, wird möglicherweise eine Beschreibung der Option angezeigt.
+-   **Wäre eine Kombination aus Optionsfeldern und einer Commitschaltfläche die bessere Wahl?** Optionsfelder sind eine bessere Wahl, wenn eine der folgenden Punkte zutrifft:
+    -   **Es gibt eine starke Standardoption, die von den meisten Benutzern ausgewählt werden soll.** Die Wahrscheinlichkeit, dass Benutzer ein Standardschaltfeld ändern, ist geringer als bei einem Standardbefehlslink, insbesondere in einem Assistenten, in dem Benutzer es gewohnt sind, auf Weiter zu klicken, um die entsprechenden Standardwerte zu übernehmen. Auf der anderen Seite sind Befehlslinks eine bessere Wahl, wenn Sie Benutzer dazu ermutigen möchten, eine explizite Auswahl zu treffen.
+    -   **Benutzer müssen mit den Optionen interagieren (z. B. um zusätzliche Informationen anzuzeigen), bevor sie eine Entscheidung treffen.** Wenn Sie beispielsweise ein Optionsfeld auswählen, wird möglicherweise dynamisch eine Beschreibung der Option angezeigt.
 
-        ![Screenshot des Dialog Felds mit Options Feldern ](images/ctrl-command-links-image5.png)
+        ![Screenshot des Dialogfelds mit Optionsfeldern ](images/ctrl-command-links-image5.png)
 
-        In diesem Beispiel wird durch Auswählen eines Options Felds eine Beschreibung der Option angezeigt.
+        Wenn Sie in diesem Beispiel ein Optionsfeld auswählen, wird eine Beschreibung der Option angezeigt.
 
-    -   **Auf der Seite sind sekundäre oder zugehörige Optionen vorhanden.** Befehls Verknüpfungen neigen dazu, die Seite zu dominieren, sodass alles leicht übersehen wird. Außerdem ist es nicht möglich, sekundäre Optionen auszuwählen, sobald auf einen Befehls Link geklickt wurde.
+    -   **Es gibt sekundäre oder verwandte Optionen auf der Seite.** Befehlslinks neigen dazu, die Seite zu überdehnen, sodass alles andere leicht übersehen werden kann. Darüber hinaus ist es unmöglich, sekundäre Optionen auszuwählen, sobald auf einen Befehlslink geklickt wird.
 
         **Falsch:**
 
-        ![Screenshot des Dialog Felds mit gemischten Steuerelementen ](images/ctrl-command-links-image6.png)
+        ![Screenshot des Dialogfelds mit gemischten Steuerelementen ](images/ctrl-command-links-image6.png)
 
-        In diesem Beispiel gibt es zwei verschiedene Möglichkeiten, auf die Haupt Anweisung zu reagieren. Ein Befehls Link wurde nicht für die erste Antwort verwendet, da es schwierig wäre, sekundäre Optionen auszuwählen.
+        In diesem Beispiel gibt es zwei verschiedene Möglichkeiten, auf die Hauptanweisung zu reagieren. Für die erste Antwort wurde kein Befehlslink verwendet, da es schwierig wäre, sekundäre Optionen auszuwählen.
 
         **Richtig:**
 
-        ![Screenshot des Dialog Felds mit denselben Steuerelementen ](images/ctrl-command-links-image7.png)
+        ![Screenshot des Dialogfelds mit den gleichen Steuerelementen ](images/ctrl-command-links-image7.png)
 
-        In diesem Beispiel werden die Antworten durch Options Felder klarer, während Benutzer gleichzeitig sekundäre Optionen auswählen können.
+        In diesem Beispiel machen Optionsfelder die Antworten klar, während Benutzer sekundäre Optionen auswählen können.
 
--   **Wäre eine Gruppe von Commit-Schaltflächen für Dialogfelder eine bessere Wahl?** Befehls Verknüpfungen funktionieren besser, wenn die Optionen längere, ausführlichere Antworten und zusätzliche Erläuterungen erfordern, aber eine Gruppe von Commit-Schaltflächen ist eine bessere Wahl, wenn es einige einfache Optionen gibt.
-
-    **Falsch:**
-
-    ![Screenshot des Dialog Felds mit "Speichern" und "nicht speichern" ](images/ctrl-command-links-image8.png)
-
-    Wenn Sie in diesem Beispiel Befehls Verknüpfungen für einfache Befehle verwenden, wird das Dialogfeld unnötig kompliziert.
-
-    **Richtig:**
-
-    ![Screenshot mit einem Dialogfeld mit den Schaltflächen "Speichern", "nicht speichern" und "Abbrechen".](images/ctrl-command-links-image9.png)
-
-    In diesem Beispiel wird die Verwendung einfacher Commit-Schaltflächen direkt zum Punkt angezeigt.
-
-    Selbsterklärende Befehls Verknüpfungen sind jedoch immer besser geeignet, wenn Text verwendet wird, um Commit-Schaltflächen zu erläutern.
+-   **Wäre eine Gruppe von Commitschaltflächen für Dialogfelder die bessere Wahl?** Befehlslinks funktionieren besser, wenn die Optionen längere, erläuternde Antworten und zusätzliche Erklärungen erfordern, aber eine Gruppe von Commitschaltflächen ist eine bessere Wahl, wenn es einige einfache Optionen gibt.
 
     **Falsch:**
 
-    ![Screenshot des Dialog Felds mit unnötigem Text ](images/ctrl-command-links-image10.png)
+    ![Screenshot des Dialogfelds mit "Speichern" und "Nicht speichern" ](images/ctrl-command-links-image8.png)
 
-    In diesem Beispiel wird Text verwendet, um die Commit-Schaltflächen zu erläutern.
+    In diesem Beispiel macht die Verwendung von Befehlslinks für einfache Befehle das Dialogfeld unnötig kompliziert.
 
     **Richtig:**
 
-    ![Screenshot von Bezeichnungen, die keinen Text mehr benötigen ](images/ctrl-command-links-image11.png)
+    ![Screenshot: Dialogfeld mit den Commitschaltflächen "Speichern", "Nicht speichern" und "Abbrechen"](images/ctrl-command-links-image9.png)
 
-    In diesem Beispiel sind die Befehls Verknüpfungen selbsterklärend.
+    In diesem Beispiel wird die Verwendung einfacher Commitschaltflächen direkt bis zum Punkt ausgeführt.
+
+    Selbsterklärende Befehlslinks sind jedoch immer besser geeignet, wenn Text verwendet wird, um Commitschaltflächen zu erklären.
+
+    **Falsch:**
+
+    ![Screenshot des Dialogfelds mit unnötigem Text ](images/ctrl-command-links-image10.png)
+
+    In diesem Beispiel wird Text verwendet, um die Commitschaltflächen zu erklären.
+
+    **Richtig:**
+
+    ![Screenshot von Bezeichnungen, die keinen weiteren Text benötigen ](images/ctrl-command-links-image11.png)
+
+    In diesem Beispiel sind die Befehlslinks selbsterklärend.
 
 > [!Note]  
-> Für Befehls Verknüpfungen ist Windows Vista oder höher erforderlich, sodass Sie sich nicht für frühere Versionen von Windows eignen. Sie können reguläre Verknüpfungen als Ersatz verwenden.
+> Befehlslinks erfordern Windows Vista oder höher, sodass sie nicht für frühere Versionen von Windows geeignet sind. Sie können reguläre Links als Ersatz verwenden.
 
  
 
-![Screenshot der regulären Verknüpfungen mit Symbolen und Text ](images/ctrl-command-links-image12.png)
+![Screenshot regulärer Links mit Symbolen und Text ](images/ctrl-command-links-image12.png)
 
-In diesem Beispiel werden reguläre Verknüpfungen mit einem Symbol und eine ergänzende Erklärung als Ersatz für Befehls Verknüpfungen in Windows XP verwendet.
+In diesem Beispiel werden reguläre Links mit einem Symbol und einer ergänzenden Erklärung als Ersatz für Befehlslinks in Windows XP verwendet.
 
 ## <a name="design-concepts"></a>Entwurfskonzepte
 
-Nur weil Befehls Verknüpfungen es Ihnen ermöglichen, aussagekräftigere Bezeichnungen zu verwenden, bedeutet dies nicht, dass Sie dies tun sollten. Betrachten Sie das folgenden Beispiel:
+Nur weil Befehlslinks die Verwendung beschreibender Bezeichnungen und optionaler ergänzender Erklärungen ermöglichen, bedeutet dies nicht, dass Sie es sollten. Betrachten Sie das folgende Beispiel:
 
 **Falsch:**
 
-![Screenshot des Dialog Felds mit zu viel Text ](images/ctrl-command-links-image13.png)
+![Screenshot des Dialogfelds mit zu viel Text ](images/ctrl-command-links-image13.png)
 
-Dieses Dialogfeld ist äußerst übermittelt.
+Dieses Dialogfeld ist eine schwerwiegende Überkommunikation.
 
-In diesem Dialogfeld wird eine einfache Frage gestellt, und es wird unnötigerweise mit dem Text des Befehls Links erschwert. Benutzer möchten nicht den gesamten Text für solche einfachen Fragen lesen.
+Dieses Dialogfeld nimmt eine einfache Frage entgegen und erschwert sie unnötigerweise mit dem Befehlslinktext. Benutzer möchten nicht den gesamten Text für solche einfachen Fragen lesen.
 
-Wir können dieses Dialogfeld vereinfachen, indem Sie drei Befehls Link Richtlinien anwenden:
+Wir können dieses Dialogfeld vereinfachen, indem wir drei Richtlinien für Befehlslinks anwenden:
 
--   **Verwenden Sie keine ergänzende Erklärung, bei der es sich um eine verfassen Anpassung des Befehls Links handelt.** Verwenden Sie eine ergänzende Erläuterung nur dann, wenn Sie keinen Befehls Link selbsterklärend erstellen können. Das Bereitstellen einer ergänzenden Erklärung für einen Befehls Link bedeutet nicht, dass Sie Sie für alle Befehle bereitstellen müssen.
--   **Wählen Sie das sicherste (um den Verlust von Daten oder den System Zugriff zu verhindern) und die sicherste Antwort als Standard aus.** Wenn Sicherheit und Sicherheit keine Faktoren sind, wählen Sie die wahrscheinlichste oder bequeme Antwort aus.
--   **Geben Sie eine explizite Schaltfläche Abbrechen an.** Verwenden Sie für diesen Zweck keinen Befehls Link.
+-   **Verwenden Sie keine ergänzende Erklärung, bei der es sich um eine wortliche Neustellung des Befehlslinks handelt.** Verwenden Sie eine ergänzende Erklärung nur, wenn Sie einen Befehlslink nicht selbsterklärend machen können. Das Bereitstellen einer ergänzenden Erklärung für einen Befehlslink bedeutet nicht, dass Sie sie für alle Befehle bereitstellen müssen.
+-   **Wählen Sie die sicherste (um Daten- oder Systemzugriffsverluste zu verhindern) und die sicherste Antwort als Standard aus.** Wenn Sicherheit und Sicherheit keine Faktoren sind, wählen Sie die wahrscheinlichste oder bequemste Antwort aus.
+-   **Geben Sie eine explizite Schaltfläche Abbrechen an.** Verwenden Sie zu diesem Zweck keinen Befehlslink.
 
-Durch die Anwendung dieser Richtlinien können wir die unnötigen ergänzenden Erklärungen beseitigen, die standardmäßige Antwort auf den Standardwert festlegen und eine explizite Schaltfläche "Abbrechen" bereitstellen.
+Durch Die Anwendung dieser Richtlinien können wir die unnötigen ergänzenden Erklärungen beseitigen, die einfachste Antwort als Standard festlegen und eine explizite Schaltfläche Abbrechen bereitstellen.
 
-**Besserer**
+**Besser:**
 
-![Screenshot des Dialog Felds mit Befehlen und Bezeichnungen ](images/ctrl-command-links-image14.png)
+![Screenshot des Dialogfelds mit Befehlen und Bezeichnungen ](images/ctrl-command-links-image14.png)
 
-Eine verbesserte Version mit einfacheren Befehls Verknüpfungen.
+Eine verbesserte Version mit einfacheren Befehlslinks.
 
-Obwohl es zutrifft, dass diese Version nicht explizit erklärt, dass das Speichern als Verlust gezählt wird, ändern sich nur wenige Benutzer ihre Entscheidung anhand dieser Informationen, sodass dies ein guter Kompromiss ist.
+Obwohl es zutrifft, dass diese Version nicht explizit erklärt, dass das Speichern nicht als Verlust gezählt wird, ändern nur wenige Benutzer ihre Entscheidung basierend auf diesen Informationen und machen dies zu einem guten Kompromiss.
 
-Dieses Dialogfeld kann sogar noch besser erstellt werden, indem Sie analysieren, ob Befehls Verknüpfungen sogar das richtige Steuerelement sind, das in diesem Fall verwendet werden soll. Commit-Schaltflächen sind tatsächlich eine bessere Wahl, da längere, ausführlichere Antworten nicht benötigt werden.
+Dieses Dialogfeld kann noch besser gestaltet werden, indem analysiert wird, ob Befehlslinks in diesem Fall sogar das richtige Steuerelement sind. Commitschaltflächen sind tatsächlich eine bessere Wahl, da längere, erläuternde Antworten nicht erforderlich sind.
 
-**Best**
+**Beste:**
 
-![Screenshot des Dialog Felds mit Commit-Schaltflächen ](images/ctrl-command-links-image15.png)
+![Screenshot des Dialogfelds mit Commitschaltflächen ](images/ctrl-command-links-image15.png)
 
-Die richtige Version verwendet Commit-Schaltflächen, um direkt zum Punkt zu gelangen.
+Die richtige Version verwendet Commitschaltflächen, um direkt auf den Punkt zu gelangen.
 
-Befehls Verknüpfungen haben viele Vorteile, aber wenn Sie unklugerweise verwendet werden, führen Sie zu einer über-Kommunikation. Verwenden Sie für Dialogfelder zunächst die Option Commit-Schaltflächen, und verwenden Sie nur die Befehls Verknüpfungen, wenn Commit-Schaltflächen den Auftrag nicht gut ausführen
+Befehlslinks haben viele Vorteile, führen aber bei unkluger Verwendung zu Überkommunikation. Erwägen Sie für Dialogfelder zuerst die Verwendung von Commitschaltflächen und verwenden Sie Befehlslinks nur, wenn commit-Schaltflächen die Aufgabe nicht gut erledigen.
 
-**Bei entsprechender Verwendung sollten Befehls Verknüpfungen Ihre Benutzeroberfläche vereinfachen und verdeutlichen.** Wenn die Ergebnisse das Gegenteil sind, nehmen Sie einen Schritt zurück, überprüfen Sie die Alternativen, und konzentrieren Sie sich auf das, was Sie wirklich benötigen, um zu kommunizieren.
+**Bei entsprechender Verwendung sollten Befehlslinks Ihre Benutzeroberfläche vereinfachen und verdeutlichen.** Wenn die Ergebnisse das Gegenteil sind, gehen Sie einen Schritt zurück, überprüfen Sie die Alternativen, und konzentrieren Sie sich auf das, was Sie wirklich kommunizieren müssen.
 
-**Wenn Sie nur eine Aktion ausführen...** Verwenden Sie keine Befehls Verknüpfungen, um die Kommunikation zu überschreiten. Befehls Verknüpfungen sollten die Kommunikation vereinfachen und verdeutlichen und Sie nicht komplizierter machen.
+**Wenn Sie nur eine Sache tun...** Verwenden Sie keine Befehlslinks für die überhändige Kommunikation. Befehlslinks sollten die Kommunikation vereinfachen und verdeutlichen, dürfen sie nicht komplizierter machen.
 
 ## <a name="usage-patterns"></a>Verwendungsmuster
 
-Befehls Verknüpfungen weisen mehrere Verwendungs Muster auf:
+Befehlslinks weisen mehrere Verwendungsmuster auf:
 
 
 
-|                                                                                                                          |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| Verwendung                                                                                                                      | Beispiel                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 |--------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Seiten Antworten** Befehls Verknüpfungen werden verwendet, um auf die Haupt Anweisung zu Antworten und zur nächsten Seite zu gelangen.    | mit diesem Muster ersetzen die Befehls Verknüpfungen die Schaltfläche "weiter", aber es gibt noch eine Schaltfläche "Abbrechen".<br/>Seiten Antworten impliziert keine Verpflichtung. Da Befehls Verknüpfungen wie Links Aussehen und Benutzer innerhalb eines Seiten Flusses Verknüpfungen mit der Navigation verknüpfen, sind Verknüpfungen für Commit-Seiten nicht geeignet. Benutzer sollten immer in der Lage sein, Sie zu sichern. <br/> ![Screenshot, der das Dialogfeld "Verbindung mit dem Internet herstellen" mit den Befehls Verknüpfungen "drahtlos", "Breitband (PPPoE)" und "Einwähl" anzeigt.](images/ctrl-command-links-image16.png)<br/>In diesem Beispiel werden Befehls Verknüpfungen verwendet, um beschreibende Antworten auf die main-Anweisung zu geben. Obwohl Options Felder hier verwendet werden können, ermöglichen Befehls Verknüpfungen Benutzern, mit einem einzigen Mausklick zu antworten.<br/> |
-| **Dialog Feld Antworten** Befehls Verknüpfungen werden verwendet, um auf die Haupt Anweisung zu Antworten und das Dialogfeld zu schließen.  | bei diesem Muster ersetzen die Befehls Verknüpfungen die Commit-Schaltflächen (z. b. OK), aber es gibt immer noch eine Schaltfläche "Abbrechen".<br/>Anders als bei Seiten Flüssen gibt es keine Möglichkeit, eine auf einem Dialogfeld basierende Antwort zu sichern, sobald Sie erstellt wurde. Folglich implizieren Dialogfeld-Befehls Verknüpfungen die Zusage. <br/> ![Screenshot des Dialog Felds mit Befehls Verknüpfungen ](images/ctrl-command-links-image17.png)<br/>In diesem Beispiel werden Befehls Verknüpfungen verwendet, um beschreibende Antworten auf die main-Anweisung zu geben. Die Options Felder können hier verwendet werden. mit den Befehls Verknüpfungen können Benutzer jedoch mit einem einzigen Mausklick auswählen.<br/>                                                   |
-| **Ausführliche Antworten** Eine Seite oder Dialogfeld Antwort, die ausführliche Informationen enthält.                          | Gelegentlich benötigen Benutzer ausführlichere Informationen, um Ihre Antwort auszuwählen. <br/> ![Screenshot des Dialog Felds "Datei kopieren" und Miniaturansichten ](images/ctrl-command-links-image18.png)<br/> In diesem Beispiel werden ausführliche Befehls Verknüpfungen verwendet, damit Benutzer fundierte Entscheidungen treffen können. Die Miniaturansichten und Dateidetails helfen Benutzern bei der Entscheidung.<br/>                                                                                                                                                                                                                                                                                                         |
+| **Seitenantworten** Befehlslinks werden verwendet, um auf die Hauptanweisung zu reagieren und zur nächsten Seite zu gelangen.    | Mit diesem Muster ersetzen die Befehlslinks die nächste Schaltfläche, aber es gibt immer noch eine Schaltfläche zum Abbrechen.<br/>Seitenantworten bedeuten keine Verpflichtung. Da Befehlslinks wie Links aussehen und Benutzer Links der Navigation innerhalb eines Seitenflusses zuordnen, sind Links für Commitseiten nicht geeignet. Benutzer sollten immer in der Lage sein, das Back-Out durchzuführen. <br/> ![Screenshot: Dialogfeld "Verbindung mit dem Internet herstellen" mit den Befehlslinks "Drahtlos", "Breitband (PPPoE)" und "Dial-up"](images/ctrl-command-links-image16.png)<br/>In diesem Beispiel werden Befehlslinks verwendet, um beschreibende Antworten auf die Hauptanweisung zu geben. Während hier Optionsfelder verwendet werden können, ermöglichen Befehlslinks Benutzern, mit einem einzigen Klick zu antworten.<br/> |
+| **Dialogfeldantworten** Befehlslinks werden verwendet, um auf die Hauptanweisung zu reagieren und das Dialogfeld zu schließen.  | Mit diesem Muster ersetzen die Befehlslinks die Commitschaltflächen (z. B. OK), aber es gibt immer noch eine Schaltfläche zum Abbrechen.<br/>Im Gegensatz zu Seitenflows gibt es keine Möglichkeit, aus einer dialogfeldbasierten Antwort zurückzukehren, sobald sie erfolgt ist. Folglich bedeuten Dialogfeld-Befehlslinks eine Verpflichtung. <br/> ![Screenshot des Dialogfelds mit Befehlslinks ](images/ctrl-command-links-image17.png)<br/>In diesem Beispiel werden Befehlslinks verwendet, um beschreibende Antworten auf die Hauptanweisung zu geben. Obwohl hier Optionsfelder verwendet werden können, können Benutzer über Befehlslinks mit einem einzigen Klick auswählen.<br/>                                                   |
+| **Detaillierte Antworten** Eine Seiten- oder Dialogantwort, die ausführliche Informationen enthält.                          | Gelegentlich benötigen Benutzer möglicherweise ausführlichere Informationen, um ihre Antwort auszuwählen. <br/> ![Screenshot: Dialogfeld "Datei kopieren" und Miniaturansichten ](images/ctrl-command-links-image18.png)<br/> In diesem Beispiel werden detaillierte Befehlslinks verwendet, damit Benutzer fundierte Entscheidungen treffen können. Die Miniaturansichten und Dateidetails helfen Benutzern bei der Entscheidung.<br/>                                                                                                                                                                                                                                                                                                         |
 
 
 
@@ -179,132 +179,132 @@ Befehls Verknüpfungen weisen mehrere Verwendungs Muster auf:
 
 ### <a name="interaction"></a>Interaktion
 
--   **Zeigen Sie einen ausgelasteten Zeiger an, wenn das Ergebnis des Klickens auf einen Befehls Link nicht sofort ist.** Ohne Feedback können Benutzer davon ausgehen, dass das Klicken nicht durchgeführt wurde, und dann erneut auf klicken.
+-   **Zeigt einen ausgelasteten Zeiger an, wenn das Ergebnis des Klickens auf einen Befehlslink nicht sofort erfolgt.** Ohne Feedback gehen Benutzer möglicherweise davon aus, dass der Klick nicht erfolgt ist, und klicken erneut.
 
 ### <a name="presentation"></a>Präsentation
 
--   **Befehls Verknüpfungen sollten immer in einem Satz von zwei oder mehr vorhanden sein.** Logisch, es gibt keinen Grund, eine Frage zu stellen, die nur eine Antwort hat.
+-   **Befehlslinks werden immer in einer Gruppe von zwei oder mehr Befehlslinks dargestellt.** Logischerweise gibt es keinen Grund, eine Frage mit nur einer Antwort zu stellen.
 
     **Falsch:**
 
-    ![Screenshot des Dialog Felds mit einem Befehls Link ](images/ctrl-command-links-image19.png)
+    ![Screenshot des Dialogfelds mit einem Befehlslink ](images/ctrl-command-links-image19.png)
 
-    In diesem Beispiel sieht das Dialogfeld so aus, als würde dem Benutzer eine Auswahl angeboten, aber es gibt nur eine Anweisung. Dies sollte stattdessen ein Informations Dialogfeld sein.
+    In diesem Beispiel scheint das Dialogfeld dem Benutzer eine Auswahl zu bieten, aber es gibt nur eine Anweisung. Dies sollte stattdessen ein Informationsdialogfeld sein.
 
--   **Präsentieren Sie zuerst die am häufigsten verwendeten Befehls Verknüpfungen.** Die resultierende Reihenfolge sollte ungefähr der Wahrscheinlichkeit der Verwendung, aber auch eines logischen Flows entsprechen.
-    -   **Ausnahme:** Befehls Verknüpfungen, die zu allen Aufgaben führen, sollten zuerst platziert werden.
--   **Geben Sie eine explizite Schaltfläche Abbrechen an.** Verwenden Sie für diesen Zweck keinen Befehls Link. Häufig bemerken Benutzer, dass Sie keine Aufgabe ausführen möchten. Wenn Sie einen Befehls Link zum Abbrechen verwenden, müssen Benutzer alle Befehls Verknüpfungen sorgfältig lesen, um zu bestimmen, welches der Abbruch bedeutet. Durch eine explizite Schaltfläche "Abbrechen" können Benutzer eine Aufgabe effizient abbrechen.
+-   **Zeigen Sie zuerst die am häufigsten verwendeten Befehlslinks an.** Die resultierende Reihenfolge sollte ungefähr der Wahrscheinlichkeit der Verwendung entsprechen, aber auch einen logischen Ablauf aufweisen.
+    -   **Ausnahme:** Befehlslinks, die dazu führen, dass alles erledigt wird, sollten zuerst platziert werden.
+-   **Geben Sie eine explizite Schaltfläche Abbrechen an.** Verwenden Sie zu diesem Zweck keinen Befehlslink. Häufig stellen Benutzer fest, dass sie keine Aufgabe ausführen möchten. Wenn Sie einen Befehlslink zum Abbrechen verwenden, müssen Benutzer alle Befehlslinks sorgfältig lesen, um zu bestimmen, welcher Befehl abbrechen bedeutet. Mit einer expliziten Schaltfläche Abbrechen können Benutzer eine Aufgabe effizient abbrechen.
 
     **Falsch:**
 
-    ![Screenshot des Dialog Felds mit dem Link "nicht beenden" ](images/ctrl-command-links-image20.png)
+    ![Screenshot des Dialogfelds mit dem Link "Nicht beenden" ](images/ctrl-command-links-image20.png)
 
-    In diesem Beispiel sollte das Befehls Link nicht beenden eine Schaltfläche "Abbrechen" lauten.
+    In diesem Beispiel sollte der Befehlslink Nicht beenden eine Schaltfläche Abbrechen sein.
 
--   **Wenn die Bereitstellung einer expliziten Schaltfläche Abbrechen einen einzelnen Befehls Link verlässt, geben Sie einen Befehls Link zum Abbrechen und eine Schaltfläche Abbrechen an.** Dadurch wird deutlich, dass Benutzer eine Auswahl treffen. Formulieren Sie diesen Befehls Link in Bezug darauf, wie er sich von der ersten Antwort unterscheidet, anstelle von "Abbrechen" oder einer Abweichung.
+-   **Wenn eine explizite Schaltfläche Abbrechen einen einzelnen Befehlslink verlässt, geben Sie sowohl einen Befehlslink zum Abbrechen als auch eine Schaltfläche Abbrechen an.** Dadurch wird deutlich, dass Benutzer eine Auswahl treffen können. Formulieren Sie diesen Befehlslink in Bezug darauf, wie er sich von der ersten Antwort unterscheidet, anstatt nur "Abbrechen" oder eine Variation.
 
-    ![Screenshot von zwei Links und einer Schaltfläche "Abbrechen" ](images/ctrl-command-links-image21.png)
+    ![Screenshot von zwei Links und einer Schaltfläche zum Abbrechen ](images/ctrl-command-links-image21.png)
 
-    In diesem Beispiel gibt der zweite Befehls Link an, dass der Benutzer eine Auswahl hat, aber nur den Vorgang abbrechen. Es wird jedoch in Bezug auf die Unterschiede zwischen dem ersten Befehls Link formuliert.
+    In diesem Beispiel gibt der zweite Befehlslink an, dass der Benutzer eine Auswahl hat, aber alles, was er macht, ist abbrechen. Es wird jedoch in Bezug auf seine Unterschiede zum ersten Befehlslink formuliert.
 
--   **Verwenden Sie Close anstelle von Cancel, wenn Sie die Umgebung nicht in ihren vorherigen Zustand zurücksetzen können, ohne Nebeneffekte zu hinterlassen.**
--   **Nicht deaktivierte Befehls Verknüpfungen anzeigen.** Wenn ein Befehls Link nicht auf den aktuellen Kontext angewendet wird, entfernen Sie ihn stattdessen. Wenn das Entfernen aller nicht angewendenden Befehls Verknüpfungen einen einzelnen Befehls Link verlässt, entfernen Sie entweder das Fenster oder die Seite, oder zeigen Sie eine [Bestätigung](mess-confirm.md) an, wenn eine explizite Zustimmung des Benutzers erforderlich ist.
+-   **Verwenden Sie Schließen anstelle von Abbrechen, wenn Sie den vorherigen Zustand der Umgebung nicht kehren können, sodass keine Nebeneffekte vorhanden sind.**
+-   **Zeigen Sie keine deaktivierten Befehlslinks an.** Wenn ein Befehlslink nicht für den aktuellen Kontext gilt, entfernen Sie ihn stattdessen. Wenn beim Entfernen aller nicht angewendeten Befehlslinks ein einzelner Befehlslink verbleibt, entfernen Sie entweder das Fenster oder die Seite, oder zeigen Sie eine [Bestätigung](mess-confirm.md) an, wenn eine explizite Benutzereinwilligung erforderlich ist.
 
 ### <a name="icons"></a>Symbole
 
--   **Für alle Befehls Verknüpfungen ist ein Symbol erforderlich.** Die Symbole helfen Benutzern, Befehls Verknüpfungen von regulären Verknüpfungen und Benutzeroberflächen Text zu unterscheiden.
--   **Verwenden Sie das Pfeilsymbol nur für Befehls Verknüpfungen.** Reguläre Verknüpfungen sollten das Pfeilsymbol nur verwenden, wenn Sie als Ersatz für Befehls Verknüpfungen in Windows XP verwendet werden.
--   **Verwenden Sie das Sicherheitsschild Symbol, um anzugeben, dass eine Antwort eine sofortige Erhöhung erfordert.** Weitere Richtlinien zur Verwendung des Sicherheitsschild Symbols finden Sie unter [Benutzerkontensteuerung](winenv-uac.md).
--   **Verwenden Sie benutzerdefinierte Symbole nur, wenn Sie Benutzer bei der visuellen Identifizierung und Unterscheidung der Optionen unterstützen.** Verwenden Sie benutzerdefinierte Symbole nicht, wenn Sie nicht sofort erkennbar oder aussagekräftig sind.
+-   **Alle Befehlslinks benötigen ein Symbol.** Mithilfe der Symbole können Benutzer Befehlslinks von regulären Links und Benutzeroberflächentext unterscheiden.
+-   **Verwenden Sie das Pfeilsymbol nur für Befehlslinks.** Reguläre Links sollten nur dann das Pfeilsymbol verwenden, wenn sie als Ersatz für Befehlslinks in Windows XP verwendet werden.
+-   **Verwenden Sie das Sicherheitsschutzsymbol, um anzugeben, dass für eine Antwort eine sofortige Erhöhung erforderlich ist.** Weitere Richtlinien zur Verwendung des Sicherheitsschutzsymbols finden Sie unter [Benutzerkontensteuerung.](winenv-uac.md)
+-   **Verwenden Sie benutzerdefinierte Symbole nur, wenn benutzerdefiniert die Optionen visuell identifizieren und unterscheiden können.** Verwenden Sie keine benutzerdefinierten Symbole, wenn sie nicht sofort erkennbar oder sinnvoll sind.
 
     **Falsch:**
 
-    ![Screenshot von zwei Befehls Verknüpfungen mit benutzerdefinierten Symbolen ](images/ctrl-command-links-image22.png)
+    ![Screenshot von zwei Befehlslinks mit benutzerdefinierten Symbolen ](images/ctrl-command-links-image22.png)
 
     In diesem Beispiel sind die benutzerdefinierten Symbole nicht sofort erkennbar.
 
--   **Verwenden Sie für benutzerdefinierte Symbole 16x16-oder 32 x 32 Pixel-Symbole.** Verwenden Sie die größeren Symbole, wenn ausreichend Speicherplatz vorhanden ist, und profitieren Sie von der größeren Größe. Wenn Sie sicherheitstokenüberlagerungen benötigen, verwenden Sie Symbole mit 32 x 32 oder 48 Pixel.
+-   **Verwenden Sie für benutzerdefinierte Symbole Symbole mit 16 x 16 oder 32 x 32 Pixeln.** Verwenden Sie die größeren Symbole, wenn ausreichend Platz vorhanden ist und sie visuell von der größeren Größe profitieren. Wenn Sie Sicherheitsschutzüberlagerungen benötigen, verwenden Sie Symbole mit 32 x 32 oder 48 x 48 Pixeln.
 
-    ![Screenshot von drei Befehls Verknüpfungen mit Symbolen ](images/ctrl-command-links-image23.png)
+    ![Screenshot von drei Befehlslinks mit Symbolen ](images/ctrl-command-links-image23.png)
 
-    In diesem Beispiel werden benutzerdefinierte 32 x 32 Pixel-Symbole verwendet.
+    In diesem Beispiel werden benutzerdefinierte Symbole mit 32 x 32 Pixeln verwendet.
 
-    ![Screenshot von zwei Befehls Verknüpfungen mit größeren Symbolen ](images/ctrl-command-links-image24.png)
+    ![Screenshot von zwei Befehlslinks mit größeren Symbolen ](images/ctrl-command-links-image24.png)
 
-    In diesem Beispiel werden benutzerdefinierte 48 Pixel-Symbole mit einem Sicherheitsschild Overlay verwendet.
+    In diesem Beispiel werden benutzerdefinierte 48 x 48 Pixel-Symbole mit einer Sicherheitsschutzüberlagerung verwendet.
 
--   **Vermeiden Sie die Mischung von benutzerdefinierten Symbolen mit dem Standardpfeil Symbol in einem Fenster oder einer Seite.** Wenn Sie ein benutzerdefiniertes Symbol auf einer Oberfläche verwenden, versuchen Sie, alle benutzerdefinierten Symbole zu verwenden. Bevorzugen Sie jedoch das Standardpfeil Symbol für bedeutungslose benutzerdefinierte Symbole.
+-   **Vermeiden Sie das Kombinieren von benutzerdefinierten Symbolen mit dem Standardpfeilsymbol in einem Fenster oder einer Seite.** Wenn Sie ein benutzerdefiniertes Symbol auf einer Oberfläche verwenden, versuchen Sie, alle benutzerdefinierten Symbole zu verwenden. Bevorzugen Sie jedoch das Standardpfeilsymbol gegenüber bedeutungslosen benutzerdefinierten Symbolen.
 
 ### <a name="default-values"></a>Standardwerte
 
--   **Wählen Sie das sicherste (um den Verlust von Daten oder den System Zugriff zu verhindern) und die sicherste Antwort als Standard aus.** Wenn Sicherheit und Sicherheit keine Faktoren sind, wählen Sie die wahrscheinlichste oder bequeme Antwort aus.
--   **Wenn dies praktikabel ist, sollten Sie die erste Antwort als Standardoption festlegen,** da Benutzer häufig davon ausgehen, dass diese Reihenfolge nicht logisch ist.
--   **Machen Sie für Dialogfelder keine destruktive Aktion als Standard Befehls Link,** es sei denn, es gibt eine einfache Möglichkeit, die Aktion rückgängig zu machen.
+-   **Wählen Sie die sicherste (um Daten- oder Systemzugriffsverluste zu verhindern) und die sicherste Antwort als Standard aus.** Wenn Sicherheit und Sicherheit keine Faktoren sind, wählen Sie die wahrscheinlichste oder bequemste Antwort aus.
+-   Machen Sie die erste Antwort in **der Praxis zur Standardoption,** da Benutzer dies häufig erwarten, es sei denn, diese Reihenfolge ist nicht logisch.
+-   **Machen Sie für Dialogfelder keine destruktive Aktion als Standardbefehlslink,** es sei denn, es gibt eine einfache Möglichkeit, die Aktion rückgängig zu machen.
 
-## <a name="recommended-sizing-and-spacing"></a>Empfohlene Größe und Abstände
+## <a name="recommended-sizing-and-spacing"></a>Empfohlene Größen- und Abstände
 
-![Screenshot der Größenanpassung und des Abstands des Befehls Links ](images/ctrl-command-links-image25.png)
+![Screenshot der Größe und des Abstands von Befehlslinks ](images/ctrl-command-links-image25.png)
 
 ## <a name="labels"></a>Bezeichnungen
 
 > [!Note]  
-> Da Befehls Verknüpfungen Antworten auf eine Haupt Anweisung sind, sollten Sie vor dem Bestimmen der Antworten eine [gute Haupt Anweisung](text-ui.md) erstellen.
+> Da Befehlslinks Antworten auf eine Hauptanweisung sind, sollten Sie eine [gute Hauptanweisung](text-ui.md) erstellen, bevor Sie ihre Antworten bestimmen.
 
  
 
-**Befehls Link Bezeichnungen**
+**Befehlslinkbezeichnungen**
 
--   **Wählen Sie eine präzise Bezeichnung aus, die die Funktionsweise des Befehls Links eindeutig kommuniziert und unterscheidet.** Es sollte selbsterklärend sein und der Haupt Anweisung entsprechen. Konzentrieren Sie die Bezeichnungen auf die Unterschiede zwischen den Antworten. Benutzer müssen nicht ermitteln, was der Befehls Link wirklich bedeutet, oder wie er sich von anderen Befehls Verknüpfungen unterscheidet.
+-   **Wählen Sie eine präzise Bezeichnung aus, die die Funktionen des Befehlslinks klar kommuniziert und unterscheidet.** Sie sollte selbsterklärend sein und der Hauptanweisung entsprechen. Konzentrieren Sie die Bezeichnungen auf die Unterschiede zwischen den Antworten. Benutzer sollten nicht herausfinden müssen, was der Befehlslink wirklich bedeutet oder wie er sich von anderen Befehlslinks unterscheidet.
 
     **Falsch:**
 
-    ![Screenshot eines redundanten Befehls Links ](images/ctrl-command-links-image26.png)
+    ![Screenshot eines redundanten Befehlslinks ](images/ctrl-command-links-image26.png)
 
-    Worin besteht der Unterschied zwischen den zweiten und dritten Antworten in diesem Beispiel? Sind Sie nicht glücklich, dass es eine Schaltfläche zum Abbrechen gibt?
+    Was ist in diesem Beispiel der Unterschied zwischen der zweiten und dritten Antwort? Freuen Sie sich nicht, dass die Schaltfläche Abbrechen angezeigt wird?
 
--   **Fokus-Befehls Link Bezeichnungen, die Benutzern helfen, die richtige Entscheidung zu treffen.** Lassen Sie Details aus, die sich nicht auf die Auswahl auswirken. Die Bezeichnungen müssen keine umfassende Spezifikation dafür sein, was passiert.
--   **Start Befehl Verknüpfungen mit einem Verb.** Verwenden Sie die Option "Click" jedoch nicht, da die Bezeichnung über die Funktionsweise des Befehls Links und nicht über die Funktionsweise kommunizieren soll.
-    -   **Ausnahme:** Wenn alle Befehls Verknüpfungen mit demselben Verb oder Ausdruck beginnen, entfernen Sie das redundante Verb oder den Ausdruck.
--   Verwenden Sie im Allgemeinen den **positiven** Ausdruck (stellen Sie eine Auswahl, um etwas zu tun). Ein negativer Ausdruck (bei der Auswahl, dass nichts zu tun ist) ist akzeptabel, wenn die Bezeichnungen leichter zu verstehen sind.
--   **Verwenden Sie parallele Ausdrücke und einzeilige Bezeichnungen.** Lange Bezeichnungen verhindern das Lesen und sollten nicht notwendig sein. Außerdem ist es in der Dokumentation einfacher, in mittelgroßen Bezeichnungen zu verweisen.
+-   **Fokusbefehlslinkbezeichnungen, die Benutzern dabei helfen, die richtige Entscheidung zu treffen.** Lassen Sie Details aus, die sich nicht auf die Auswahl auswirken. Die Bezeichnungen müssen keine vollständige Spezifikation sein, was geschieht.
+-   **Startbefehlslinks mit einem Verb.** Verwenden Sie jedoch keine Klicks, da die Bezeichnung die Funktion des Befehlslinks und nicht die Funktionsweise kommunizieren soll.
+    -   **Ausnahme:** Wenn alle Befehlslinks mit demselben Verb oder Ausdruck beginnen, entfernen Sie das redundante Verb oder den gleichen Ausdruck.
+-   Verwenden Sie im Allgemeinen **positive Ausdrücke** (mit einer Auswahl). Negative Ausdrücke (das Bereitstellen einer Entscheidung, etwas nicht zu tun) sind akzeptabel, wenn die Bezeichnungen leichter zu verstehen sind.
+-   **Verwenden Sie parallele Ausdrücke und einzeilige Bezeichnungen.** Lange Bezeichnungen raten vom Lesen ab und sollten nicht erforderlich sein. Außerdem sind Bezeichnungen mit mittlerer Größe in der Dokumentation einfacher zu finden.
 -   **Verwenden Sie für Überschriften die Standardgroß- und kleinschreibung.**
--   **Verwenden Sie keine endpunktierungen, es sei denn, die Bezeichnung ist eine Frage.**
+-   **Verwenden Sie keine endende Interpunktion, es sei denn, die Bezeichnung ist eine Frage.**
 -   **Weisen Sie einen eindeutigen Zugriffsschlüssel zu.** Richtlinien finden Sie unter [Tastatur](inter-keyboard.md).
--   **Verwenden Sie keine Ellipsen.** Ellipsen bedeutet, dass möglicherweise weitere Informationen erforderlich sind, um die Aktion auszuführen. Ordnungsgemäß verwendete Befehls Verknüpfungen benötigen keine Ellipsen, da Sie unmittelbare Auswirkungen haben.
--   **Wenn eine Antwort dringend empfohlen wird, fügen Sie "(empfohlen)" der Bezeichnung hinzu.** Stellen Sie sicher, dass Sie der Bezeichnung und nicht der ergänzenden Erläuterung hinzufügen.
--   **Wenn eine Antwort nur für fortgeschrittene Benutzer vorgesehen ist, sollten Sie der Bezeichnung "(Advanced)" hinzufügen.** Stellen Sie sicher, dass Sie der Bezeichnung und nicht der ergänzenden Erläuterung hinzufügen.
+-   **Verwenden Sie keine Ellipsen.** Ellipsen bedeuten, dass möglicherweise weitere Informationen erforderlich sind, um die Aktion auszuführen. Ordnungsgemäß verwendete Befehlslinks benötigen keine Ellipsen, da sie sofortige Auswirkungen haben.
+-   **Wenn eine Antwort dringend empfohlen wird, fügen Sie der Bezeichnung "(empfohlen)" hinzu.** Achten Sie darauf, der Bezeichnung und nicht der ergänzenden Erklärung hinzuzufügen.
+-   **Wenn eine Antwort nur für fortgeschrittene Benutzer vorgesehen ist, sollten Sie der Bezeichnung "(advanced)" hinzufügen.** Achten Sie darauf, der Bezeichnung und nicht der ergänzenden Erklärung hinzuzufügen.
 
-**Tipp:** Sie können Befehls Verknüpfungen auswerten, indem Sie festgelegt haben, dass ein Freund die Haupt Anweisung angegeben hat, und dass Sie mit den Befehls Verknüpfungen geantwortet haben. Wenn die Antwort mit den Befehls Verknüpfungen unnatürlich oder umständlich wäre, überarbeiten Sie die Befehls Verknüpfungen und möglicherweise die Haupt Anweisung.
+**Tipp:** Sie können Befehlslinks auswerten, indem Sie sich vorstellen, dass ein Freund die Hauptanweisung angegeben hat und Sie mit den Befehlslinks geantwortet haben. Wenn die Antwort mit den Befehlslinks unnatürlich oder umständlich wäre, überarbeiten Sie die Befehlslinks und möglicherweise die Hauptanweisung.
 
 **Ergänzende Erläuterungen**
 
--   Wenn für einen Befehls Link eine weitere Erläuterung erforderlich ist, sollten Sie **eine zusätzliche Erläuterung angeben**. Ergänzende Erläuterungen beschreiben, warum Benutzer möglicherweise eine Antwort auswählen oder was geschieht, wenn eine Antwort ausgewählt wird.
+-   Wenn ein Befehlslink eine weitere Erläuterung erfordert, **geben Sie eine zusätzliche Erklärung** an. Ergänzende Erklärungen beschreiben, warum Benutzer möglicherweise eine Antwort auswählen möchten oder was geschieht, wenn eine Antwort ausgewählt wird.
 
-    ![Screenshot von Text, in dem die Ergebnisse der Option beschrieben werden ](images/ctrl-command-links-image27.png)
+    ![Screenshot des Texts, der die Ergebnisse der Option beschreibt ](images/ctrl-command-links-image27.png)
 
-    In diesem Beispiel werden die Auswirkungen der-Option in der ergänzenden Erläuterung beschrieben.
+    In diesem Beispiel beschreibt die ergänzende Erklärung die Auswirkungen der Option.
 
--   **Verwenden Sie keine ergänzende Erklärung, die für den Befehls Link "Verfassen Anpassung" ist.** Verwenden Sie eine ergänzende Erläuterung nur dann, wenn Sie keinen Befehls Link selbsterklärend erstellen können. Das Bereitstellen einer ergänzenden Erklärung für einen Befehls Link bedeutet nicht, dass Sie Sie für alle bereitstellen müssen.
--   **Konzentrieren Sie sich auf ergänzende Erklärungen, um Benutzern zu helfen, die richtige Entscheidung zu treffen.** Lassen Sie Details aus, die sich nicht auf die Auswahl auswirken. Die ergänzenden Erklärungen müssen keine umfassende Spezifikation dafür sein, was passiert.
--   **Verwenden Sie parallele Ausdrücke und höchstens drei Textzeilen.** Lange ergänzende Erklärungen verhindern das Lesen und sollten nicht notwendig sein.
--   **Verwenden Sie vollständige Sätze und endinterpunktions Zeichen.**
+-   **Verwenden Sie keine ergänzende Erklärung, die eine wortliche Neustellung des Befehlslinks ist.** Verwenden Sie eine ergänzende Erklärung nur, wenn Sie einen Befehlslink nicht selbsterklärend machen können. Das Bereitstellen einer ergänzenden Erklärung für einen Befehlslink bedeutet nicht, dass Sie sie für alle bereitstellen müssen.
+-   **Konzentrieren Sie sich auf ergänzende Erklärungen, um Benutzern dabei zu helfen, die richtige Entscheidung zu treffen.** Lassen Sie Details aus, die sich nicht auf die Auswahl auswirken. Die ergänzenden Erklärungen müssen keine vollständige Spezifikation des Geschehens sein.
+-   **Verwenden Sie parallele Ausdrücke und höchstens drei Textzeilen.** Lange ergänzende Erklärungen raten vom Lesen ab und sollten nicht erforderlich sein.
+-   **Verwenden Sie vollständige Sätze und endende Interpunktion.**
 
-**Befehls Verknüpfungs Gruppen Bezeichnungen**
+**Bezeichnungen von Befehlslinkgruppen**
 
--   **Verwenden Sie keine Gruppen Bezeichnungen.** Die Haupt Anweisungen fungieren als Gruppen Bezeichnung für Befehls Verknüpfungen.
+-   **Verwenden Sie keine Gruppenbezeichnungen.** Hauptanweisungen fungieren als Gruppenbezeichnung für Befehlslinks.
 
 ## <a name="documentation"></a>Dokumentation
 
-Beim Verweisen auf Befehls Verknüpfungen:
+Wenn Sie auf Befehlslinks verweisen:
 
--   Verwenden Sie den genauen Bezeichnungs Text, einschließlich der Groß-und Kleinschreibung, aber nicht den Unterstrich des Zugriffsschlüssels.
--   Wenn die Bezeichnung einen Objektnamen enthält, lassen Sie entweder den Objektnamen aus, oder verwenden Sie Platzhalter Text.
--   Um die Benutzerinteraktion zu beschreiben, verwenden Sie klicken.
--   Formatieren Sie nach Möglichkeit die Bezeichnung mit fettem Text. Andernfalls sollten Sie die Bezeichnung nur in Anführungszeichen setzen, wenn dies erforderlich ist, um Verwirrung zu vermeiden.
+-   Verwenden Sie den genauen Bezeichnungstext, einschließlich der Groß-/Großschreibung, aber nicht den Zugriffsschlüsselunterstrich.
+-   Wenn die Bezeichnung einen Objektnamen enthält, lassen Sie entweder den Objektnamen aus, oder verwenden Sie Platzhaltertext.
+-   Um die Benutzerinteraktion zu beschreiben, klicken Sie auf .
+-   Formatieren Sie die Bezeichnung nach Möglichkeit mit fett formatiertem Text. Andernfalls setzen Sie die Bezeichnung nur in Anführungszeichen, wenn dies erforderlich ist, um Verwechslungen zu vermeiden.
 
-**Beispiele:** Um das Bild zu kopieren, klicken Sie auf **Kopieren und ersetzen**.
+**Beispiele:** Klicken Sie zum Kopieren des Bilds auf **Kopieren und Ersetzen.**
 
-Klicken Sie auf **Netzwerkadapter zurücksetzen**. (Einen Befehls Link mit der Bezeichnung "Netzwerkadapter- *Adapter Name* zurücksetzen".)
+Klicken Sie auf **Netzwerkadapter zurücksetzen.** (Für einen Befehlslink mit der Bezeichnung "Name des *Netzwerkadapteradapters* zurücksetzen".)
 
  
 

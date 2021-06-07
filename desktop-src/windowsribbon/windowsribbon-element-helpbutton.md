@@ -1,9 +1,9 @@
 ---
 title: HelpButton-Element
-description: Stellt das Hilfe Button-Steuerelement dar.
+description: Stellt das Steuerelement Hilfeschaltfläche dar.
 ms.assetid: 24c709da-539e-4ea0-bd3e-d3fbd72dfb97
 keywords:
-- HelpButton-Element Windows-Menüband
+- HelpButton-Element Im Windows-Menüband
 topic_type:
 - apiref
 api_name:
@@ -13,18 +13,18 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 5be084ff6fc92d4eac4bbaffb3c507142f91eba8
-ms.sourcegitcommit: 927b9c371f75f52b8011483edf3a4ba37d11ebe4
+ms.openlocfilehash: 9f34f04133b7628cce01ac0ce2808923b4f6bbdb
+ms.sourcegitcommit: 099ecdda1e83618b844387405da0db0ebda93a65
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "106341911"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111442841"
 ---
 # <a name="helpbutton-element"></a>HelpButton-Element
 
-Stellt das [Hilfe Button](windowsribbon-controls-helpbutton.md) -Steuerelement dar.
+Stellt das Steuerelement [Hilfeschaltfläche](windowsribbon-controls-helpbutton.md) dar.
 
-## <a name="usage"></a>Verbrauch
+## <a name="usage"></a>Verwendung
 
 ``` syntax
 <HelpButton
@@ -44,8 +44,8 @@ Stellt das [Hilfe Button](windowsribbon-controls-helpbutton.md) -Steuerelement d
 </colgroup>
 <thead>
 <tr class="header">
-<th>Attribut</th>
-<th>type</th>
+<th>attribute</th>
+<th>Typ</th>
 <th>Erforderlich</th>
 <th>BESCHREIBUNG</th>
 </tr>
@@ -53,10 +53,10 @@ Stellt das [Hilfe Button](windowsribbon-controls-helpbutton.md) -Steuerelement d
 <tbody>
 <tr class="odd">
 <td><strong>CommandName</strong><br/></td>
-<td>xs: positiveingeteger oder xs: String<br/></td>
+<td>xs:positiveInteger oder xs:string<br/></td>
 <td>Nein<br/></td>
-<td>Ordnet das-Element einem <a href="windowsribbon-element-command.md"><strong>Befehl</strong></a>zu.<br/> <br/>
-<dt><span></span><span></span><strong></strong> (xs: positiveingeteger oder xs: String)<br/> </dt> <dd> Eine Zeichenfolge, ein ganzzahliger Wert zwischen 2 und 59999, einschließlich, oder ein Hexadezimalwert zwischen 0x2 und 0xea5f (einschließlich). <br/> Der Wert muss innerhalb des Menüband-XML-Dokuments eindeutig sein. <br/> Maximale Länge: 100 Zeichen. <br/> </dd> </dl></td>
+<td>Ordnet das Element einem Befehl <a href="windowsribbon-element-command.md"><strong>zu.</strong></a><br/> <br/>
+<dt><span></span><span></span><strong></strong> (xs:positiveInteger oder xs:string)<br/> </dt> <dd> Eine Zeichenfolge, ein ganzzahliger Wert zwischen 2 und 59999, einschließlich, oder ein Hexadezimalwert zwischen 0x2 und 0xea5f einschließlich. <br/> Der Wert muss innerhalb des Menüband-XML-Dokuments eindeutig sein. <br/> Maximale Länge: 100 Zeichen. <br/> </dd> </dl></td>
 </tr>
 </tbody>
 </table>
@@ -73,23 +73,23 @@ Es gibt keine untergeordneten Elemente.
 
 | Element                                                                         |
 |---------------------------------------------------------------------------------|
-| [**Menüband. HelpButton**](windowsribbon-element-ribbon-helpbutton.md)<br/> |
+| [**Ribbon.HelpButton**](windowsribbon-element-ribbon-helpbutton.md)<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Dies ist optional.
 
-Kann höchstens einmal für jede [**Multifunktionsleiste. HelpButton**](windowsribbon-element-ribbon-helpbutton.md)auftreten.
+Kann für jedes [**Ribbon.HelpButton--Menüband nur einmal auftreten.**](windowsribbon-element-ribbon-helpbutton.md)
 
-Öffnet das Dialogfeld Anwendungs Hilfe, wenn darauf geklickt wird.
+Öffnet ein Anwendungshilfedialogfeld, wenn darauf geklickt wird.
 
 ## <a name="examples"></a>Beispiele
 
-Das folgende Beispiel veranschaulicht das grundlegende Markup, das zum Implementieren eines [Schalt](windowsribbon-controls-helpbutton.md) Flächen-Steuer Elements für die Multifunktionsleiste erforderlich ist.
+Im folgenden Beispiel wird das grundlegende Markup veranschaulicht, das zum Implementieren eines [Menüband-Hilfeschaltfläche-Steuerelements erforderlich](windowsribbon-controls-helpbutton.md) ist.
 
-Dieser Code Abschnitt zeigt die **HelpButton** -Befehls Deklaration.
+Dieser Codeabschnitt zeigt die **HelpButton-Befehlsdeklaration.**
 
 
 ```XML
@@ -100,7 +100,7 @@ Dieser Code Abschnitt zeigt die **HelpButton** -Befehls Deklaration.
 
 
 
-In diesem Code Abschnitt wird die **HelpButton** -Steuerelement Deklaration gezeigt.
+Dieser Codeabschnitt zeigt die **HelpButton-Steuerelementdeklaration.**
 
 
 ```XML
@@ -113,12 +113,8 @@ In diesem Code Abschnitt wird die **HelpButton** -Steuerelement Deklaration geze
 
 ## <a name="element-information"></a>Elementinformationen
 
-
-
-|                                     |           |
-|-------------------------------------|-----------|
-| Unterstützte Mindestversion (System)<br/> | Windows 7 |
-| Kann leer bleiben                        | Ja       |
+* **Unterstütztes Mindestsystem:** Windows 7
+* **Kann leer sein:** Ja
 
 
 
@@ -126,7 +122,7 @@ In diesem Code Abschnitt wird die **HelpButton** -Steuerelement Deklaration geze
 
 <dl> <dt>
 
-[Hilfe Button-Steuerelement](windowsribbon-controls-helpbutton.md)
+[Schaltflächen-Steuerelement "Hilfe"](windowsribbon-controls-helpbutton.md)
 </dt> </dl>
 
  

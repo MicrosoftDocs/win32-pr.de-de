@@ -1,6 +1,6 @@
 ---
 title: TabGroup-Element
-description: Stellt eine Kontext Gruppe von Registerkarten-Steuerelementen dar.
+description: Stellt einen kontextbezogenen Satz von Tabulatorsteuerelementen dar.
 ms.assetid: f131efe1-b8c4-416e-997a-5e2d3bcc03ea
 keywords:
 - TabGroup-Element Windows-Menüband
@@ -13,18 +13,18 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: fcbe0760c850f37c6a7bf348c38e48aa7cf54ddc
-ms.sourcegitcommit: 927b9c371f75f52b8011483edf3a4ba37d11ebe4
+ms.openlocfilehash: 6a4c18db72d6b0161842bfde9d5a836d14189c6a
+ms.sourcegitcommit: 099ecdda1e83618b844387405da0db0ebda93a65
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "104208365"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111444061"
 ---
 # <a name="tabgroup-element"></a>TabGroup-Element
 
-Stellt eine Kontext Gruppe von [Register](windowsribbon-controls-tabgroup.md) Karten-Steuerelementen dar.
+Stellt einen kontextbezogenen Satz von [Tabulatorsteuerelementen](windowsribbon-controls-tabgroup.md) dar.
 
-## <a name="usage"></a>Verbrauch
+## <a name="usage"></a>Verwendung
 
 ``` syntax
 <TabGroup
@@ -46,8 +46,8 @@ Stellt eine Kontext Gruppe von [Register](windowsribbon-controls-tabgroup.md) Ka
 </colgroup>
 <thead>
 <tr class="header">
-<th>Attribut</th>
-<th>type</th>
+<th>attribute</th>
+<th>Typ</th>
 <th>Erforderlich</th>
 <th>BESCHREIBUNG</th>
 </tr>
@@ -55,10 +55,10 @@ Stellt eine Kontext Gruppe von [Register](windowsribbon-controls-tabgroup.md) Ka
 <tbody>
 <tr class="odd">
 <td><strong>CommandName</strong><br/></td>
-<td>xs: positiveingeteger oder xs: String<br/></td>
+<td>xs:positiveInteger oder xs:string<br/></td>
 <td>Nein<br/></td>
-<td>Ordnet das-Element einem <a href="windowsribbon-element-command.md"><strong>Befehl</strong></a>zu.<br/> <br/>
-<dt><span></span><span></span><strong></strong> (xs: positiveingeteger oder xs: String)<br/> </dt> <dd> Eine Zeichenfolge, ein ganzzahliger Wert zwischen 2 und 59999, einschließlich, oder ein Hexadezimalwert zwischen 0x2 und 0xea5f (einschließlich). <br/> Der Wert muss innerhalb des Menüband-XML-Dokuments eindeutig sein. <br/> Maximale Länge: 100 Zeichen. <br/> </dd> </dl></td>
+<td>Ordnet das Element einem <a href="windowsribbon-element-command.md"><strong>Command zu.</strong></a><br/> <br/>
+<dt><span></span><span></span><strong></strong> (xs:positiveInteger oder xs:string)<br/> </dt> <dd> Eine Zeichenfolge, ein ganzzahliger Wert zwischen 2 und 59999 einschließlich oder ein Hexadezimalwert zwischen 0x2 und 0xea5f einschließlich. <br/> Der Wert muss innerhalb des Menüband-XML-Dokuments eindeutig sein. <br/> Maximale Länge: 100 Zeichen. <br/> </dd> </dl></td>
 </tr>
 </tbody>
 </table>
@@ -71,7 +71,7 @@ Stellt eine Kontext Gruppe von [Register](windowsribbon-controls-tabgroup.md) Ka
 
 | Element                                             | BESCHREIBUNG                                     |
 |-----------------------------------------------------|-------------------------------------------------|
-| [**Registerkarte**](windowsribbon-element-tab.md)<br/> | Muss mindestens einmal vorkommen<br/> <br/> |
+| [**Registerkarte**](windowsribbon-element-tab.md)<br/> | Muss mindestens einmal auftreten.<br/> <br/> |
 
 
 
@@ -81,21 +81,21 @@ Stellt eine Kontext Gruppe von [Register](windowsribbon-controls-tabgroup.md) Ka
 
 | Element                                                                                 |
 |-----------------------------------------------------------------------------------------|
-| [**Menüband. contextualtabs**](windowsribbon-element-ribbon-contextualtabs.md)<br/> |
+| [**Ribbon.ContextualTabs**](windowsribbon-element-ribbon-contextualtabs.md)<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Erforderlich.
 
-Für jedes [**Ribbon. contextualtabs**](windowsribbon-element-ribbon-contextualtabs.md) -Element muss mindestens einmal vorkommen.
+Muss mindestens einmal für jedes [**Ribbon.ContextualTabs-Element**](windowsribbon-element-ribbon-contextualtabs.md) auftreten.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird das grundlegende Markup für das **TabGroup** -Element veranschaulicht.
+Im folgenden Beispiel wird das grundlegende Markup für das **TabGroup-Element** veranschaulicht.
 
-In diesem Code Abschnitt wird eine **TabGroup** -Befehls Deklaration mit zwei kontextbezogenen Registerkarten angezeigt.
+Dieser Codeabschnitt zeigt eine **TabGroup-Befehlsdeklaration** mit zwei kontextbezogenen Registerkarten.
 
 
 ```XML
@@ -113,7 +113,7 @@ In diesem Code Abschnitt wird eine **TabGroup** -Befehls Deklaration mit zwei ko
 
 
 
-In diesem Code Abschnitt werden die entsprechenden **TabGroup** -Steuerelement Deklarationen veranschaulicht.
+Dieser Codeabschnitt zeigt die entsprechenden **TabGroup-Steuerelementdeklarationen.**
 
 
 ```XML
@@ -157,20 +157,16 @@ In diesem Code Abschnitt werden die entsprechenden **TabGroup** -Steuerelement D
 
 ## <a name="element-information"></a>Elementinformationen
 
-
-
-|                                     |           |
-|-------------------------------------|-----------|
-| Unterstützte Mindestversion (System)<br/> | Windows 7 |
-| Kann leer bleiben                        | Nein        |
+- **Unterstütztes Mindestsystem:** Windows 7 
+- **Kann leer sein:** Nein
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[Registerkarten-Steuerelement](windowsribbon-controls-tabgroup.md)
+[Registerkartengruppen-Steuerelement](windowsribbon-controls-tabgroup.md)
 </dt> <dt>
 
 [Registersteuerelement](windowsribbon-controls-tab.md)

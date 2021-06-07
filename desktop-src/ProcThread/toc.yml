@@ -1,7 +1,7 @@
 - name: Prozesse und Threads
   href: processes-and-threads.md
   items:
-    - name: Neuerungen in Prozessen und Threads
+    - name: Neues in Prozessen und Threads
       href: what-s-new-in-processes-and-threads.md
     - name: Informationen zu Prozessen und Threads
       href: about-processes-and-threads.md
@@ -18,7 +18,7 @@
         - name: Scheduling
           href: scheduling.md
           items:
-            - name: Planungsprioritäten
+            - name: Zeitplanungsprioritäten
               href: scheduling-priorities.md
             - name: Kontextwechsel
               href: context-switches.md
@@ -30,9 +30,9 @@
               href: multiple-processors.md
             - name: NUMA-Unterstützung
               href: numa-support.md
-            - name: Threadreihenfolgedienst
+            - name: Thread Ordering Service
               href: thread-ordering-service.md
-            - name: Multimedia Class Scheduler Service
+            - name: Multimedia-Klassenplanerdienst
               href: multimedia-class-scheduler-service.md
               items:
                 - name: Real-Time Work-Warteschlangen-API
@@ -144,9 +144,9 @@
           items:
             - name: Threadstapelgröße
               href: thread-stack-size.md
-            - name: Threadhandles und -bezeichner
+            - name: Threadhandles und Bezeichner
               href: thread-handles-and-identifiers.md
-            - name: Anhalten der Threadausführung
+            - name: Angehaltene Threadausführung
               href: suspending-thread-execution.md
             - name: Synchronisieren der Ausführung mehrerer Threads
               href: synchronizing-execution-of-multiple-threads.md
@@ -154,7 +154,7 @@
               href: multiple-threads-and-gdi-objects.md
             - name: Threadlokaler Speicher
               href: thread-local-storage.md
-            - name: Erstellen von Windows in Threads
+            - name: Erstellen von Fenstern in Threads
               href: creating-windows-in-threads.md
             - name: Beenden eines Threads
               href: terminating-a-thread.md
@@ -210,7 +210,7 @@
           href: creating-threads.md
         - name: Erstellen eines untergeordneten Prozesses mit umgeleiteter Eingabe und Ausgabe
           href: creating-a-child-process-with-redirected-input-and-output.md
-        - name: 'Prozesse im isolierten Benutzermodus (Isolated User Mode, IUM)'
+        - name: 'Isolierte Benutzermodusprozesse (Isolated User Mode, IUM)'
           href: isolated-user-mode--ium--processes.md
         - name: Ändern von Umgebungsvariablen
           href: changing-environment-variables.md
@@ -478,7 +478,7 @@
             - name: GetProcessVersion
               href: /windows/desktop/api/processthreadsapi/nf-processthreadsapi-getprocessversion
             - name: GetProcessWorkingSetSize
-              href: /windows/desktop/api/WinBase/nf-winbase-getprocessworkingsetsize
+              href: /windows/desktop/api/memoryapi/nf-memoryapi-getprocessworkingsetsize
             - name: GetProcessWorkingSetSizeEx
               href: /windows/desktop/api/memoryapi/nf-memoryapi-getprocessworkingsetsizeex
             - name: GetProcessorSystemCycleTime
@@ -608,7 +608,7 @@
             - name: SetProcessShutdownParameters
               href: /windows/desktop/api/processthreadsapi/nf-processthreadsapi-setprocessshutdownparameters
             - name: SetProcessWorkingSetSize
-              href: /windows/desktop/api/WinBase/nf-winbase-setprocessworkingsetsize
+              href: /windows/desktop/api/memoryapi/nf-memoryapi-setprocessworkingsetsize
             - name: SetProcessWorkingSetSizeEx
               href: /windows/desktop/api/memoryapi/nf-memoryapi-setprocessworkingsetsizeex
             - name: SetProtectedPolicy

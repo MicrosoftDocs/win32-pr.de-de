@@ -1,9 +1,9 @@
 ---
 title: SplitButton-Element
-description: Stellt ein Standard Steuerelement für unterteilte Schaltflächen dar.
+description: Stellt ein Standardmäßiges Split Button-Steuerelement dar.
 ms.assetid: dece1100-ed04-49a3-a16d-3c5d5e7a2225
 keywords:
-- Fensterleiste des SplitButton-Elements
+- SplitButton-Element Im Windows-Menüband
 topic_type:
 - apiref
 api_name:
@@ -13,18 +13,18 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 3235d58d6499d7d57c54e33e1049f40c50dd189a
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: cf03d85dd0402548d02f107dafb209b68c13bb72
+ms.sourcegitcommit: 099ecdda1e83618b844387405da0db0ebda93a65
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "106337237"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111444401"
 ---
 # <a name="splitbutton-element"></a>SplitButton-Element
 
-Stellt ein Standard Steuerelement für unter [teilte Schalt](windowsribbon-controls-splitbutton.md) Flächen dar.
+Stellt ein Standardmäßiges [Split Button-Steuerelement](windowsribbon-controls-splitbutton.md) dar.
 
-## <a name="usage"></a>Verbrauch
+## <a name="usage"></a>Verwendung
 
 ``` syntax
 <SplitButton
@@ -47,26 +47,26 @@ Stellt ein Standard Steuerelement für unter [teilte Schalt](windowsribbon-contr
 </colgroup>
 <thead>
 <tr class="header">
-<th>Attribut</th>
-<th>type</th>
+<th>attribute</th>
+<th>Typ</th>
 <th>Erforderlich</th>
 <th>BESCHREIBUNG</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><strong>Applicationmodes</strong><br/></td>
+<td><strong>ApplicationModes</strong><br/></td>
 <td>xs:string<br/></td>
 <td>Nein<br/></td>
-<td>Nur gültig, wenn <a href="windowsribbon-element-menugroup.md"><strong>MenuGroup</strong></a> das übergeordnete Element ist.<br/> <br/>
-<dt><span></span><span></span><strong></strong> (xs: String)<br/> </dt> <dd> Eine Zeichenfolge, die eine durch Trennzeichen getrennte Liste mit ganzen Zahlen zwischen 0 und 31 enthält.<br/> Leerraum ist gültig und wird ignoriert.<br/> Maximale Länge: 250 Zeichen. <br/> </dd> </dl></td>
+<td>Nur gültig, <a href="windowsribbon-element-menugroup.md"><strong>wenn MenuGroup</strong></a> das übergeordnete Element ist.<br/> <br/>
+<dt><span></span><span></span><strong></strong> (xs:string)<br/> </dt> <dd> Eine Zeichenfolge, die eine durch Komma getrennte Liste von ganzen Zahlen zwischen 0 und 31 enthält.<br/> Leerzeichen sind gültig und werden ignoriert.<br/> Maximale Länge: 250 Zeichen. <br/> </dd> </dl></td>
 </tr>
 <tr class="even">
 <td><strong>CommandName</strong><br/></td>
-<td>xs: positiveingeteger oder xs: String<br/></td>
+<td>xs:positiveInteger oder xs:string<br/></td>
 <td>Nein<br/></td>
-<td>Ordnet das-Element einem <a href="windowsribbon-element-command.md"><strong>Befehl</strong></a>zu.<br/> <br/>
-<dt><span></span><span></span><strong></strong> (xs: positiveingeteger oder xs: String)<br/> </dt> <dd> Eine Zeichenfolge, ein ganzzahliger Wert zwischen 2 und 59999, einschließlich, oder ein Hexadezimalwert zwischen 0x2 und 0xea5f (einschließlich). <br/> Der Wert muss innerhalb des Menüband-XML-Dokuments eindeutig sein. <br/> Maximale Länge: 100 Zeichen. <br/> </dd> </dl></td>
+<td>Ordnet das Element einem Befehl <a href="windowsribbon-element-command.md"><strong>zu.</strong></a><br/> <br/>
+<dt><span></span><span></span><strong></strong> (xs:positiveInteger oder xs:string)<br/> </dt> <dd> Eine Zeichenfolge, ein ganzzahliger Wert zwischen 2 und 59999, einschließlich, oder ein Hexadezimalwert zwischen 0x2 und 0xea5f einschließlich. <br/> Der Wert muss innerhalb des Menüband-XML-Dokuments eindeutig sein. <br/> Maximale Länge: 100 Zeichen. <br/> </dd> </dl></td>
 </tr>
 </tbody>
 </table>
@@ -79,16 +79,16 @@ Stellt ein Standard Steuerelement für unter [teilte Schalt](windowsribbon-contr
 
 | Element                                                                                   | BESCHREIBUNG                                        |
 |-------------------------------------------------------------------------------------------|----------------------------------------------------|
-| [**Schaltfläche**](windowsribbon-element-button.md)<br/>                                 | Kann ein-oder mehrmals vorkommen<br/> <br/> |
-| [**CheckBox**](windowsribbon-element-checkbox.md)<br/>                             | Kann ein-oder mehrmals vorkommen<br/> <br/> |
-| [**DropDownButton**](windowsribbon-element-dropdownbutton.md)<br/>                 | Kann ein-oder mehrmals vorkommen<br/> <br/> |
-| [**Dropdowncolorpicker**](windowsribbon-element-dropdowncolorpicker.md)<br/>       | Kann ein-oder mehrmals vorkommen<br/> <br/> |
-| [**Dropdown Gallery**](windowsribbon-element-dropdowngallery.md)<br/>               | Kann ein-oder mehrmals vorkommen<br/> <br/> |
-| **SplitButton**<br/>                                                                | Kann ein-oder mehrmals vorkommen<br/> <br/> |
-| [**SplitButton. buttonitem**](windowsribbon-element-splitbutton-buttonitem.md)<br/> | Kann höchstens einmal vorkommen<br/> <br/>      |
-| [**SplitButton. menugroups**](windowsribbon-element-splitbutton-menugroups.md)<br/> | Kann höchstens einmal vorkommen<br/> <br/>      |
-| [**Splitbuttongallery**](windowsribbon-element-splitbuttongallery.md)<br/>         | Kann ein-oder mehrmals vorkommen<br/> <br/> |
-| [**ToggleButton**](windowsribbon-element-togglebutton.md)<br/>                     | Kann ein-oder mehrmals vorkommen<br/> <br/> |
+| [**Schaltfläche**](windowsribbon-element-button.md)<br/>                                 | Kann ein oder mehrere Male auftreten.<br/> <br/> |
+| [**Checkbox**](windowsribbon-element-checkbox.md)<br/>                             | Kann ein oder mehrere Male auftreten.<br/> <br/> |
+| [**DropDownButton**](windowsribbon-element-dropdownbutton.md)<br/>                 | Kann ein oder mehrere Male auftreten.<br/> <br/> |
+| [**DropDownColorPicker**](windowsribbon-element-dropdowncolorpicker.md)<br/>       | Kann ein oder mehrere Male auftreten.<br/> <br/> |
+| [**DropDownGallery**](windowsribbon-element-dropdowngallery.md)<br/>               | Kann ein oder mehrere Male auftreten.<br/> <br/> |
+| **SplitButton**<br/>                                                                | Kann ein oder mehrere Male auftreten.<br/> <br/> |
+| [**SplitButton.ButtonItem**](windowsribbon-element-splitbutton-buttonitem.md)<br/> | Kann nur einmal auftreten.<br/> <br/>      |
+| [**SplitButton.MenuGroups**](windowsribbon-element-splitbutton-menugroups.md)<br/> | Kann nur einmal auftreten.<br/> <br/>      |
+| [**SplitButtonGallery**](windowsribbon-element-splitbuttongallery.md)<br/>         | Kann ein oder mehrere Male auftreten.<br/> <br/> |
+| [**ToggleButton**](windowsribbon-element-togglebutton.md)<br/>                     | Kann ein oder mehrere Male auftreten.<br/> <br/> |
 
 
 
@@ -98,43 +98,43 @@ Stellt ein Standard Steuerelement für unter [teilte Schalt](windowsribbon-contr
 
 | Element                                                                           |
 |-----------------------------------------------------------------------------------|
-| [**Controlgroup**](windowsribbon-element-controlgroup.md)<br/>             |
-| [**Dropdown Gallery**](windowsribbon-element-dropdowngallery.md)<br/>       |
+| [**ControlGroup**](windowsribbon-element-controlgroup.md)<br/>             |
+| [**DropDownGallery**](windowsribbon-element-dropdowngallery.md)<br/>       |
 | [**Gruppe**](windowsribbon-element-group.md)<br/>                           |
-| [**MenuGroup**](windowsribbon-element-menugroup.md)<br/>                   |
+| [**Menugroup**](windowsribbon-element-menugroup.md)<br/>                   |
 | **SplitButton**<br/>                                                        |
-| [**Splitbuttongallery**](windowsribbon-element-splitbuttongallery.md)<br/> |
+| [**SplitButtonGallery**](windowsribbon-element-splitbuttongallery.md)<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Dies ist optional.
 
-Kann für jedes [**controlgroup**](windowsribbon-element-controlgroup.md)-, [**dropdowngallery**](windowsribbon-element-dropdowngallery.md)-, [**Group**](windowsribbon-element-group.md)-, [**MenuGroup**](windowsribbon-element-menugroup.md)-, **SplitButton**-oder [**splitbuttongallery**](windowsribbon-element-splitbuttongallery.md) -Element einmal oder mehrmals vorkommen.
+Kann ein oder mehrere Male für jedes [**ControlGroup-,**](windowsribbon-element-controlgroup.md) [**DropDownGallery-,**](windowsribbon-element-dropdowngallery.md) [**Group-,**](windowsribbon-element-group.md) [**MenuGroup-,**](windowsribbon-element-menugroup.md) **SplitButton-** oder [**SplitButtonGallery-Element**](windowsribbon-element-splitbuttongallery.md) auftreten.
 
-**SplitButton** unterstützt [Anwendungsmodi](ribbon-applicationmodes.md) , wenn es in der linken Spalte des Anwendungs Menüs gehostet wird.
+**SplitButton unterstützt** [Anwendungsmodi,](ribbon-applicationmodes.md) wenn es in der linken Spalte des Anwendungsmenüs gehostet wird.
 
-[**Dropdowngallery**](windowsribbon-element-dropdowngallery.md) und [**splitbuttongallery**](windowsribbon-element-splitbuttongallery.md) sind keine gültigen untergeordneten Elemente von [**DropDownButton**](windowsribbon-element-dropdownbutton.md) , wenn **DropDownButton** ein Nachfolger von [**applicationmenu**](windowsribbon-element-applicationmenu.md)ist.
+[**DropDownGallery**](windowsribbon-element-dropdowngallery.md) und [**SplitButtonGallery**](windowsribbon-element-splitbuttongallery.md) sind keine gültigen untergeordneten Elemente von [**DropDownButton,**](windowsribbon-element-dropdownbutton.md) wenn **DropDownButton** ein Nachfolger von [**ApplicationMenu ist.**](windowsribbon-element-applicationmenu.md)
 
-[**SplitButton. menugroups**](windowsribbon-element-splitbutton-menugroups.md) muss einmal auftreten, wenn Folgendes nicht als untergeordnete Elemente von **SplitButton** vorhanden ist:
+[**SplitButton.MenuGroups muss**](windowsribbon-element-splitbutton-menugroups.md) einmal auftreten, wenn folgende Elemente nicht als untergeordnete Elemente von **SplitButton vorhanden sind:**
 
--   [**Gedrückt**](windowsribbon-element-button.md)
--   [**CheckBox**](windowsribbon-element-checkbox.md)
+-   [**Schaltfläche**](windowsribbon-element-button.md)
+-   [**Checkbox**](windowsribbon-element-checkbox.md)
 -   [**DropDownButton**](windowsribbon-element-dropdownbutton.md)
--   [**Dropdowncolorpicker**](windowsribbon-element-dropdowncolorpicker.md)
--   [**Dropdown Gallery**](windowsribbon-element-dropdowngallery.md)
+-   [**DropDownColorPicker**](windowsribbon-element-dropdowncolorpicker.md)
+-   [**DropDownGallery**](windowsribbon-element-dropdowngallery.md)
 -   **SplitButton**
--   [**Splitbuttongallery**](windowsribbon-element-splitbuttongallery.md)
+-   [**SplitButtonGallery**](windowsribbon-element-splitbuttongallery.md)
 -   [**ToggleButton**](windowsribbon-element-togglebutton.md)
 
-Diese Steuerelemente werden als untergeordnete Elemente eines einzelnen standardmäßigen [**SplitButton. menugroups**](windowsribbon-element-splitbutton-menugroups.md) -Elements behandelt.
+Diese Steuerelemente werden als untergeordnete Elemente eines einzelnen [**SplitButton.MenuGroups-Standardelements**](windowsribbon-element-splitbutton-menugroups.md) behandelt.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird das grundlegende Markup für die [Trenn Schaltfläche](windowsribbon-controls-splitbutton.md)veranschaulicht.
+Im folgenden Beispiel wird das grundlegende Markup für die [Split-Schaltfläche veranschaulicht.](windowsribbon-controls-splitbutton.md)
 
-Dieser Code Abschnitt zeigt die **SplitButton** -Befehls Deklarationen mit einer zugeordneten [**Gruppe**](windowsribbon-element-group.md) , die als übergeordneter Container für das **SplitButton** -Element fungiert.
+In diesem Codeabschnitt werden die **Deklarationen des SplitButton-Befehls** mit einer zugeordneten [**Gruppe**](windowsribbon-element-group.md) gezeigt, die als übergeordneter Container für das **SplitButton-Element** fungiert.
 
 
 ```XML
@@ -178,7 +178,7 @@ Dieser Code Abschnitt zeigt die **SplitButton** -Befehls Deklarationen mit einer
 
 
 
-In diesem Code Abschnitt werden die Deklarationen des **SplitButton** -Steuer Elements angezeigt.
+In diesem Codeabschnitt werden die **SplitButton-Steuerelementdeklarationen** gezeigt.
 
 
 ```XML
@@ -211,23 +211,19 @@ In diesem Code Abschnitt werden die Deklarationen des **SplitButton** -Steuer El
 
 ## <a name="element-information"></a>Elementinformationen
 
-
-
-|                                     |           |
-|-------------------------------------|-----------|
-| Unterstützte Mindestversion (System)<br/> | Windows 7 |
-| Kann leer bleiben                        | Nein        |
+- **Unterstütztes Mindestsystem:** Windows 7 
+- **Kann leer sein:** Nein
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[Steuerelement "Split Button](windowsribbon-controls-splitbutton.md)
+[Steuerelement "Schaltfläche teilen"](windowsribbon-controls-splitbutton.md)
 </dt> <dt>
 
-[**Setmodes**](/windows/desktop/api/uiribbon/nf-uiribbon-iuiframework-setmodes)
+[**SetModes**](/windows/desktop/api/uiribbon/nf-uiribbon-iuiframework-setmodes)
 </dt> </dl>
 
  

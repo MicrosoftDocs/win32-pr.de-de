@@ -1,19 +1,19 @@
 ---
-description: Enthält den Titel der Notiz und das Datum im Titel, falls vorhanden.
+description: Enthält den Titel der Notiz und das Datum im Titel, sofern vorhanden.
 ms.assetid: 70f90c34-5f9b-4be5-85b9-6d2ccf9dde8c
-title: Titleinfo-Element
+title: TitleInfo-Element
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 56a416ef07adea33a11b0df6aacd21183f47b89e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6ae170700e8a82e145767336a2943d45bedec9eb
+ms.sourcegitcommit: c3f669dc1d52278432bf75ad9fddba3257d26aa2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104349359"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111432212"
 ---
-# <a name="titleinfo-element"></a>Titleinfo-Element
+# <a name="titleinfo-element"></a>TitleInfo-Element
 
-Enthält den Titel der Notiz und das Datum im Titel, falls vorhanden.
+Enthält den Titel der Notiz und das Datum im Titel, sofern vorhanden.
 
 ## <a name="definition"></a>Definition
 
@@ -23,13 +23,13 @@ Enthält den Titel der Notiz und das Datum im Titel, falls vorhanden.
 
 ## <a name="parent-elements"></a>Übergeordnete Elemente
 
-[**Journalpage**](journalpage-element.md)
+[**JournalPage**](journalpage-element.md)
 
 ## <a name="child-elements"></a>Untergeordnete Elemente
 
 [**Text**](text-element.md)
 
-[**Datum**](date-element.md)
+[**Date**](date-element.md)
 
 ## <a name="attributes"></a>Attribute
 
@@ -39,11 +39,11 @@ Keine
 
 
 
-|              |                                                                 |
+|   Element    | Wert                                                           |
 |--------------|-----------------------------------------------------------------|
-| Elementtyp | ComplexType für [**titleinfotype**](titleinfotype-complex-type.md) |
-| Namespace    | urn: Schemas-Microsoft-com: TabletPC: RichInk                      |
-| Schemaname  | Journal Leser                                                  |
+| Elementtyp | [**complexType: TitleInfoType**](titleinfotype-complex-type.md) |
+| Namespace    | urn:schemas-microsoft-com:tabletpc:richink                      |
+| Schemaname  | Journalreader                                                  |
 
 
 

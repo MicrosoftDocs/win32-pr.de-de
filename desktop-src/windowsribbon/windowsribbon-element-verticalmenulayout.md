@@ -1,9 +1,9 @@
 ---
-title: Verticalmenulayout-Element
+title: VerticalMenuLayout-Element
 description: Stellt ein vertikales Layout für Elemente in einem Katalog dar.
 ms.assetid: 4124c639-c078-4eb0-9d36-37d1ffcebac0
 keywords:
-- Windows-Menüband für verticalmenulayout-Element
+- VerticalMenuLayout-Element Windows-Menüband
 topic_type:
 - apiref
 api_name:
@@ -13,18 +13,18 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 7fb848edcc8ab5ddff1405f35d5abd414ae40d15
-ms.sourcegitcommit: 2387bc0339a1764564c1509e72ed5f2e8ae60b36
+ms.openlocfilehash: 5e6f3e4a691c9691b9bc6c8c6d760bb10635d8d8
+ms.sourcegitcommit: 099ecdda1e83618b844387405da0db0ebda93a65
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "103724344"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111444051"
 ---
-# <a name="verticalmenulayout-element"></a>Verticalmenulayout-Element
+# <a name="verticalmenulayout-element"></a>VerticalMenuLayout-Element
 
 Stellt ein vertikales Layout für Elemente in einem Katalog dar.
 
-## <a name="usage"></a>Verbrauch
+## <a name="usage"></a>Verwendung
 
 ``` syntax
 <VerticalMenuLayout
@@ -46,33 +46,33 @@ Stellt ein vertikales Layout für Elemente in einem Katalog dar.
 </colgroup>
 <thead>
 <tr class="header">
-<th>Attribut</th>
-<th>type</th>
+<th>attribute</th>
+<th>Typ</th>
 <th>Erforderlich</th>
 <th>BESCHREIBUNG</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><strong>Zieh Elements</strong><br/></td>
+<td><strong>Greifer</strong><br/></td>
 <td>xs:string<br/></td>
 <td>Nein<br/></td>
-<td>Ein an den Katalog-Dropdown angefügtes Handle zur Anpassung der Größe. <br/> <img src="images/controls/gripper.png" alt="Screen shot of a vertical gripper." /><br/> Beschränkt auf einen der folgenden Werte:<br/> <br/>
-<dt><span></span><span></span><strong></strong> Gar<br/> </dt> <dd></dd> <dt><span></span><span></span><strong></strong> Rechtes<br/> </dt> <dd> Standard. <br/> </dd> </dl></td>
+<td>Ein Anfügehandle für die Größenänderung, das an die Dropdown-Dropdown-Datei des Katalogs angefügt ist. <br/> <img src="images/controls/gripper.png" alt="Screen shot of a vertical gripper." /><br/> Beschränkt auf einen der folgenden Werte:<br/> <br/>
+<dt><span></span><span></span><strong></strong> (Keine)<br/> </dt> <dd></dd> <dt><span></span><span></span><strong></strong> (Vertikal)<br/> </dt> <dd> Standard. <br/> </dd> </dl></td>
 </tr>
 <tr class="even">
-<td><strong>Ismultiplehighlightingenabled</strong><br/></td>
+<td><strong>IsMultipleHighlightingEnabled</strong><br/></td>
 <td>xs:boolean<br/></td>
 <td>Nein<br/></td>
-<td><strong>Windows 8 und höher</strong><br/> Hebt alle Elemente in der Liste bis einschließlich des aktuellen Mouseover-Elements hervor (anstelle des Mouseover-Elements). Wird normalerweise für mehrere Funktionen zum Rückgängigmachen und wieder <strong>holen</strong> <strong></strong><br/> <br/>
-<dt><span></span><span></span><strong></strong> Fall<br/> </dt> <dd></dd> <dt><span></span><span></span><strong></strong> Alarm<br/> </dt> <dd> Standard. <br/> </dd> </dl></td>
+<td><strong>Windows 8 und neuer</strong><br/> Hebt alle Elemente in der Liste bis einschließlich des aktuellen Mauszeigerelements hervor (anstatt nur des Mauszeigerelements). Wird in der Regel für mehrere <strong>Rückgängig-</strong> und <strong>Wiederholungsfunktionen</strong> verwendet.<br/> <br/>
+<dt><span></span><span></span><strong></strong> (true)<br/> </dt> <dd></dd> <dt><span></span><span></span><strong></strong> (false)<br/> </dt> <dd> Standard. <br/> </dd> </dl></td>
 </tr>
 <tr class="odd">
 <td><strong>Zeilen</strong><br/></td>
 <td>xs:integer<br/></td>
 <td>Nein<br/></td>
-<td>Gibt die Anzahl der Element Zeilen an, die ohne Scrollen sichtbar sein sollen. <br/> <br/>
-<dt><span></span><span></span><strong></strong> (xs: Integer)<br/> </dt> <dd> Eine positive oder negative ganze Zahl. <br/> Der Standardwert ist <strong>-1</strong> . dieser gibt an, dass so viele Element Zeilen wie möglich angezeigt werden.<br/> </dd> </dl></td>
+<td>Gibt die Anzahl der Elementzeilen an, die ohne Bildlauf sichtbar sein sollen. <br/> <br/>
+<dt><span></span><span></span><strong></strong> (xs:integer)<br/> </dt> <dd> Eine beliebige positive oder negative ganze Zahl. <br/> Der Standardwert ist <strong>-1,</strong> der angibt, dass so viele Elementzeilen wie möglich angezeigt werden sollen.<br/> </dd> </dl></td>
 </tr>
 </tbody>
 </table>
@@ -89,23 +89,23 @@ Es gibt keine untergeordneten Elemente.
 
 | Element                                                                                                 |
 |---------------------------------------------------------------------------------------------------------|
-| [**Dropdowngallery. menulayout**](windowsribbon-element-dropdowngallery-menulayout.md)<br/>       |
-| [**Inribbongallery. menulayout**](windowsribbon-element-inribbongallery-menulayout.md)<br/>       |
-| [**Splitbuttongallery. menulayout**](windowsribbon-element-splitbuttongallery-menulayout.md)<br/> |
+| [**DropDownGallery.MenuLayout**](windowsribbon-element-dropdowngallery-menulayout.md)<br/>       |
+| [**InRibbonGallery.MenuLayout**](windowsribbon-element-inribbongallery-menulayout.md)<br/>       |
+| [**SplitButtonGallery.MenuLayout**](windowsribbon-element-splitbuttongallery-menulayout.md)<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Erforderlich.
 
-Entweder das **verticalmenulayout** -oder das [**flowmenulayout**](windowsribbon-element-flowmenulayout.md) -Element muss für jedes [**dropdowngallery. menulayout**](windowsribbon-element-dropdowngallery-menulayout.md)-, [**inribbongallery. menulayout**](windowsribbon-element-inribbongallery-menulayout.md)-oder [**splitbuttongallery. menulayout**](windowsribbon-element-splitbuttongallery-menulayout.md) -Element einmal vorkommen.
+Das **VerticalMenuLayout-Element** oder das [**FlowMenuLayout-Element**](windowsribbon-element-flowmenulayout.md) muss einmal für jedes [**DropDownGallery.MenuLayout-,**](windowsribbon-element-dropdowngallery-menulayout.md) [**InRibbonGallery.MenuLayout-**](windowsribbon-element-inribbongallery-menulayout.md)oder [**SplitButtonGallery.MenuLayout-Element**](windowsribbon-element-splitbuttongallery-menulayout.md) auftreten.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird das grundlegende Markup für ein **verticalmenulayout** -Element veranschaulicht.
+Im folgenden Beispiel wird das grundlegende Markup für ein **VerticalMenuLayout-Element** veranschaulicht.
 
-In diesem Code Abschnitt werden die Deklarationen des [**inribbongallery**](windowsribbon-element-inribbongallery.md) -Steuer Elements veranschaulicht.
+Dieser Codeabschnitt zeigt die [**InRibbonGallery-Steuerelementdeklarationen.**](windowsribbon-element-inribbongallery.md)
 
 
 ```XML
@@ -139,11 +139,8 @@ In diesem Code Abschnitt werden die Deklarationen des [**inribbongallery**](wind
 ## <a name="element-information"></a>Elementinformationen
 
 
-
-|                                     |           |
-|-------------------------------------|-----------|
-| Unterstützte Mindestversion (System)<br/> | Windows 7 |
-| Kann leer bleiben                        | Ja       |
+- **Unterstütztes Mindestsystem:** Windows 7 
+- **Kann leer sein:** Ja
 
 
 

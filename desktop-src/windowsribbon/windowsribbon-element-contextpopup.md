@@ -1,9 +1,9 @@
 ---
-title: Contextpopup-Element
-description: Stellt das Kontext-Popup Steuerelement in der contextpopup-Ansicht dar.
+title: ContextPopup-Element
+description: Stellt das Kontextpopup-Steuerelement in der ContextPopup-Ansicht dar.
 ms.assetid: b955be16-803e-47b5-a72d-f993180fbf14
 keywords:
-- Fenster "contextpopup-Element Fenster"
+- ContextPopup-Element im Windows-Menüband
 topic_type:
 - apiref
 api_name:
@@ -13,18 +13,18 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 4feb7c4fbd2ca538fe4d0c2b2584163ee8c9fcea
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: f779b0196d14fb42246c2a10d476352d835b6cf8
+ms.sourcegitcommit: 099ecdda1e83618b844387405da0db0ebda93a65
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "104038034"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111443463"
 ---
-# <a name="contextpopup-element"></a>Contextpopup-Element
+# <a name="contextpopup-element"></a>ContextPopup-Element
 
-Stellt das [Kontext-Popup](windowsribbon-controls-contextpopup.md) Steuerelement in der contextpopup-Ansicht dar.
+Stellt das [Kontextpopup-Steuerelement](windowsribbon-controls-contextpopup.md) in der ContextPopup-Ansicht dar.
 
-## <a name="usage"></a>Verbrauch
+## <a name="usage"></a>Verwendung
 
 ``` syntax
 <ContextPopup>
@@ -42,9 +42,9 @@ Es gibt keine Attribute.
 
 | Element                                                                                         | BESCHREIBUNG                                   |
 |-------------------------------------------------------------------------------------------------|-----------------------------------------------|
-| [**Contextpopup. contextmaps**](windowsribbon-element-contextpopup-contextmaps.md)<br/>   | Kann höchstens einmal vorkommen<br/> <br/> |
-| [**Contextpopup. ContextMenus**](windowsribbon-element-contextpopup-contextmenus.md)<br/> | Kann höchstens einmal vorkommen<br/> <br/> |
-| [**Contextpopup. minitoolbars**](windowsribbon-element-contextpopup-minitoolbars.md)<br/> | Kann höchstens einmal vorkommen<br/> <br/> |
+| [**ContextPopup.ContextMaps**](windowsribbon-element-contextpopup-contextmaps.md)<br/>   | Kann nur einmal auftreten.<br/> <br/> |
+| [**ContextPopup.ContextMenus**](windowsribbon-element-contextpopup-contextmenus.md)<br/> | Kann nur einmal auftreten.<br/> <br/> |
+| [**ContextPopup.MiniToolbars**](windowsribbon-element-contextpopup-minitoolbars.md)<br/> | Kann nur einmal auftreten.<br/> <br/> |
 
 
 
@@ -54,19 +54,19 @@ Es gibt keine Attribute.
 
 | Element                                                                         |
 |---------------------------------------------------------------------------------|
-| [**Application. views**](windowsribbon-element-application-views.md)<br/> |
+| [**Application.Views**](windowsribbon-element-application-views.md)<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Dies ist optional.
 
-Kann höchstens einmal für jede [**Anwendung. views**](windowsribbon-element-application-views.md)auftreten.
+Kann für jede [**Application.Views--Anwendung mindestens einmal auftreten.**](windowsribbon-element-application-views.md)
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird das grundlegende Markup für eine **contextpopup** -Ansicht veranschaulicht.
+Im folgenden Beispiel wird das grundlegende Markup für eine **ContextPopup-Ansicht** veranschaulicht.
 
 
 ```XML
@@ -155,20 +155,16 @@ Im folgenden Beispiel wird das grundlegende Markup für eine **contextpopup** -A
 
 ## <a name="element-information"></a>Elementinformationen
 
-
-
-|                                     |           |
-|-------------------------------------|-----------|
-| Unterstützte Mindestversion (System)<br/> | Windows 7 |
-| Kann leer bleiben                        | Nein        |
+* **Unterstütztes Mindestsystem:** Windows 7
+* **Kann leer sein:** Nein
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[Kontext-Popup Steuerelement](windowsribbon-controls-contextpopup.md)
+[Kontext-Popup-Steuerelement](windowsribbon-controls-contextpopup.md)
 </dt> </dl>
 
  

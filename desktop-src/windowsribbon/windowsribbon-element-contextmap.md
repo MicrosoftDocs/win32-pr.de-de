@@ -1,9 +1,9 @@
 ---
-title: Contextmap-Element
-description: Stellt eine ContextMenu-und MiniToolbar-paar Zuordnung dar.
+title: ContextMap-Element
+description: Stellt eine ContextMenu- und MiniToolbar-Paarzuordnung dar.
 ms.assetid: 84379578-24c6-4bf7-8dcf-8e21e5665d29
 keywords:
-- Windows-Menüband für contextmap-Element
+- ContextMap-Element Im Windows-Menüband
 topic_type:
 - apiref
 api_name:
@@ -13,18 +13,18 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: e2ddcc8bdea16f5e00974b2b2e58934941e44c68
-ms.sourcegitcommit: 927b9c371f75f52b8011483edf3a4ba37d11ebe4
+ms.openlocfilehash: 4754fc75ca09e39cdc7eabbeae2a0a2d2630c31f
+ms.sourcegitcommit: 099ecdda1e83618b844387405da0db0ebda93a65
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "106340681"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111443011"
 ---
-# <a name="contextmap-element"></a>Contextmap-Element
+# <a name="contextmap-element"></a>ContextMap-Element
 
-Stellt eine [**ContextMenu**](windowsribbon-element-contextmenu.md) -und [**MiniToolbar**](windowsribbon-element-minitoolbar.md) -paar Zuordnung dar.
+Stellt eine [**ContextMenu-**](windowsribbon-element-contextmenu.md) und [**MiniToolbar-Paarzuordnung**](windowsribbon-element-minitoolbar.md) dar.
 
-## <a name="usage"></a>Verbrauch
+## <a name="usage"></a>Verwendung
 
 ``` syntax
 <ContextMap
@@ -46,8 +46,8 @@ Stellt eine [**ContextMenu**](windowsribbon-element-contextmenu.md) -und [**Mini
 </colgroup>
 <thead>
 <tr class="header">
-<th>Attribut</th>
-<th>type</th>
+<th>attribute</th>
+<th>Typ</th>
 <th>Erforderlich</th>
 <th>BESCHREIBUNG</th>
 </tr>
@@ -55,24 +55,24 @@ Stellt eine [**ContextMenu**](windowsribbon-element-contextmenu.md) -und [**Mini
 <tbody>
 <tr class="odd">
 <td><strong>CommandName</strong><br/></td>
-<td>xs: positiveingeteger oder xs: String<br/></td>
+<td>xs:positiveInteger oder xs:string<br/></td>
 <td>Nein<br/></td>
-<td>Ordnet das-Element einem <a href="windowsribbon-element-command.md"><strong>Befehl</strong></a>zu.<br/> <br/>
-<dt><span></span><span></span><strong></strong> (xs: positiveingeteger oder xs: String)<br/> </dt> <dd> Eine Zeichenfolge, ein ganzzahliger Wert zwischen 2 und 59999, einschließlich, oder ein Hexadezimalwert zwischen 0x2 und 0xea5f (einschließlich). <br/> Der Wert muss innerhalb des Menüband-XML-Dokuments eindeutig sein. <br/> Maximale Länge: 100 Zeichen. <br/> </dd> </dl></td>
+<td>Ordnet das Element einem Befehl <a href="windowsribbon-element-command.md"><strong>zu.</strong></a><br/> <br/>
+<dt><span></span><span></span><strong></strong> (xs:positiveInteger oder xs:string)<br/> </dt> <dd> Eine Zeichenfolge, ein ganzzahliger Wert zwischen 2 und 59999, einschließlich, oder ein Hexadezimalwert zwischen 0x2 und 0xea5f einschließlich. <br/> Der Wert muss innerhalb des Menüband-XML-Dokuments eindeutig sein. <br/> Maximale Länge: 100 Zeichen. <br/> </dd> </dl></td>
 </tr>
 <tr class="even">
 <td><strong>ContextMenu</strong><br/></td>
 <td>xs:string<br/></td>
 <td>Nein<br/></td>
-<td>Muss einem vorhandenen <a href="windowsribbon-element-contextmenu.md"><strong>ContextMenu</strong></a> - <em>Namen</em>entsprechen.<br/> <br/>
-<dt><span></span><span></span><strong></strong> (xs: String)<br/> </dt> <dd> Eine Zeichenfolge, die aus einer beliebigen Zeichen Sequenz besteht, einschließlich Leerzeichen und Zeilenumbruch Zeichen.<br/> </dd> </dl></td>
+<td>Muss einem vorhandenen <a href="windowsribbon-element-contextmenu.md"><strong>ContextMenu-Namen</strong></a> <em>entsprechen.</em><br/> <br/>
+<dt><span></span><span></span><strong></strong> (xs:string)<br/> </dt> <dd> Eine Zeichenfolge, die aus einer beliebigen Folge von Zeichen besteht, einschließlich Leerzeichen und Zeilenumbruchzeichen.<br/> </dd> </dl></td>
 </tr>
 <tr class="odd">
 <td><strong>MiniToolbar</strong><br/></td>
 <td>xs:string<br/></td>
 <td>Nein<br/></td>
-<td>Muss einem vorhandenen <a href="windowsribbon-element-minitoolbar.md"><strong>MiniToolbar</strong></a> - <em>Namen</em>entsprechen.<br/> <br/>
-<dt><span></span><span></span><strong></strong> (xs: String)<br/> </dt> <dd> Eine Zeichenfolge, die aus einer beliebigen Zeichen Sequenz besteht, einschließlich Leerzeichen und Zeilenumbruch Zeichen.<br/> </dd> </dl></td>
+<td>Muss einem vorhandenen <a href="windowsribbon-element-minitoolbar.md"><strong>MiniToolbar-Namen</strong></a> <em>entsprechen.</em><br/> <br/>
+<dt><span></span><span></span><strong></strong> (xs:string)<br/> </dt> <dd> Eine Zeichenfolge, die aus einer beliebigen Folge von Zeichen besteht, einschließlich Leerzeichen und Zeilenumbruchzeichen.<br/> </dd> </dl></td>
 </tr>
 </tbody>
 </table>
@@ -89,21 +89,21 @@ Es gibt keine untergeordneten Elemente.
 
 | Element                                                                                       |
 |-----------------------------------------------------------------------------------------------|
-| [**Contextpopup. contextmaps**](windowsribbon-element-contextpopup-contextmaps.md)<br/> |
+| [**ContextPopup.ContextMaps**](windowsribbon-element-contextpopup-contextmaps.md)<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Dies ist optional.
 
-Kann für jede " [**contextpopup. contextmaps**](windowsribbon-element-contextpopup-contextmaps.md)" einmal oder mehrmals vorkommen.
+Kann ein oder mehrere Male für jedes [**ContextPopup.ContextMaps-Objekt auftreten.**](windowsribbon-element-contextpopup-contextmaps.md)
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird das grundlegende Markup für eine [**contextpopup**](windowsribbon-element-contextpopup.md) -Ansicht veranschaulicht.
+Im folgenden Beispiel wird das grundlegende Markup für eine [**ContextPopup-Ansicht**](windowsribbon-element-contextpopup.md) veranschaulicht.
 
-Dieser Code Abschnitt zeigt einen Satz von **contextmap** -Steuerelement Deklarationen.
+Dieser Codeabschnitt zeigt eine Reihe von **ContextMap-Steuerelementdeklarationen.**
 
 
 ```XML
@@ -193,11 +193,8 @@ Dieser Code Abschnitt zeigt einen Satz von **contextmap** -Steuerelement Deklara
 ## <a name="element-information"></a>Elementinformationen
 
 
-
-|                                     |           |
-|-------------------------------------|-----------|
-| Unterstützte Mindestversion (System)<br/> | Windows 7 |
-| Kann leer bleiben                        | Ja       |
+* **Unterstütztes Mindestsystem:** Windows 7
+* **Kann leer sein:** Ja
 
 
 
@@ -205,7 +202,7 @@ Dieser Code Abschnitt zeigt einen Satz von **contextmap** -Steuerelement Deklara
 
 <dl> <dt>
 
-[Kontext-Popup Steuerelement](windowsribbon-controls-contextpopup.md)
+[Kontext-Popup-Steuerelement](windowsribbon-controls-contextpopup.md)
 </dt> </dl>
 
  

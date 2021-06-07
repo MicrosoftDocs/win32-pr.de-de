@@ -1,50 +1,52 @@
 ---
-description: Der erste Schritt beim Mapping einer Datei besteht darin, die Datei zu öffnen, indem Sie die CreateFile-Funktion aufrufen.
+description: Der erste Schritt beim Zuordnen einer Datei besteht im Öffnen der Datei durch Aufrufen der CreateFile-Funktion.
 ms.assetid: e00d8742-b717-419c-902c-9a286d75d8aa
-title: Erstellen eines Datei Mapping-Objekts
+title: Erstellen eines Dateizuordnungsobjekts
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 65badc2af8aed5211c2f5c590fc0998019dae264
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 550609cf9d8a052e324c585fc046472278bb428c
+ms.sourcegitcommit: 8ebcf6cd36f67f8bcf78e76ae8923d65b8995c8a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104345368"
+ms.lasthandoff: 06/05/2021
+ms.locfileid: "111524354"
 ---
-# <a name="creating-a-file-mapping-object"></a>Erstellen eines Datei Mapping-Objekts
+# <a name="creating-a-file-mapping-object"></a>Erstellen eines Dateizuordnungsobjekts
 
-Der erste Schritt beim Mapping einer Datei besteht darin, die Datei zu öffnen, indem Sie die [**CreateFile**](/windows/win32/api/fileapi/nf-fileapi-createfilea) -Funktion aufrufen. Um sicherzustellen, dass andere Prozesse nicht in den Teil der Datei schreiben können, der zugeordnet ist, sollten Sie die Datei mit exklusiven Zugriffsberechtigungen öffnen. Außerdem sollte das Datei Handle geöffnet bleiben, bis der Prozess das Datei Zuordnungsobjekt nicht mehr benötigt. Eine einfache Möglichkeit, exklusiven Zugriff zu erhalten, ist die Angabe von 0 (null) im *fdwsharemode* -Parameter von " **kreatefile**". Das von " **kreatefile** " zurückgegebene Handle wird von der Funktion "Create [**FileMapping**](/windows/desktop/api/WinBase/nf-winbase-createfilemappinga) " verwendet, um ein Datei Zuordnung-Objekt zu erstellen.
+Der erste Schritt beim Zuordnen einer Datei besteht im Öffnen der Datei durch Aufrufen der [**CreateFile-Funktion.**](/windows/win32/api/fileapi/nf-fileapi-createfilea) Um sicherzustellen, dass andere Prozesse nicht in den zugeordneten Teil der Datei schreiben können, sollten Sie die Datei mit exklusivem Zugriff öffnen. Darüber hinaus sollte das Dateihand handle geöffnet bleiben, bis der Prozess das Dateizuordnungsobjekt nicht mehr benötigt. Eine einfache Möglichkeit, exklusiven Zugriff zu erhalten, besteht in der Angabe von 0 (null) im *fdwShareMode-Parameter* **von CreateFile.** Das von **CreateFile zurückgegebene Handle** wird von der [**CreateFileMapping-Funktion**](/windows/desktop/api/WinBase/nf-winbase-createfilemappinga) verwendet, um ein Dateizuordnungsobjekt zu erstellen.
 
-Die Funktion " [**fiatefilemapping**](/windows/desktop/api/WinBase/nf-winbase-createfilemappinga) " gibt ein Handle für das Datei-Mapping-Objekt zurück. Dieses Handle wird verwendet, wenn [eine Dateiansicht erstellt](creating-a-file-view.md) wird, sodass Sie auf den freigegebenen Speicher zugreifen können. Wenn Sie " **kreatefilemapping**" aufrufen, geben Sie einen Objektnamen, die Anzahl der Bytes, die der Datei zugeordnet werden sollen, und die Lese-/Schreibberechtigung für den zugeordneten Speicher an. Der erste Prozess, der " **kreatefilemapping** " aufruft, erstellt das Datei Zuordnung-Objekt. Prozesse, die **CreateFileMapping** für ein vorhandenes Objekt aufrufen, erhalten ein Handle für das vorhandene Objekt. Sie können feststellen, ob ein erfolgreicher Aufruf von **CreateFileMapping** das Datei Zuordnung-Objekt erstellt oder geöffnet hat, indem Sie die [**GetLastError**](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) -Funktion aufrufen. **GetLastError** gibt **keinen \_ Fehler** an den Erstellungsprozess zurück, und der Fehler ist für nachfolgende Prozesse **\_ bereits \_ vorhanden** .
+Die [**CreateFileMapping-Funktion**](/windows/desktop/api/WinBase/nf-winbase-createfilemappinga) gibt ein Handle an das Dateizuordnungsobjekt zurück. Dieses Handle wird beim Erstellen einer [Dateiansicht verwendet,](creating-a-file-view.md) damit Sie auf den freigegebenen Speicher zugreifen können. Wenn Sie **CreateFileMapping aufrufen,** geben Sie einen Objektnamen, die Anzahl der Bytes, die aus der Datei zugeordnet werden sollen, und die Lese-/Schreibberechtigung für den zugeordneten Speicher an. Der erste Prozess, der **CreateFileMapping aufruft,** erstellt das Dateizuordnungsobjekt. Prozesse, **die CreateFileMapping** für ein vorhandenes Objekt aufrufen, erhalten ein Handle für das vorhandene Objekt. Sie können feststellen, ob ein erfolgreicher Aufruf von **CreateFileMapping** das Dateizuordnungsobjekt erstellt oder geöffnet hat, indem Sie die [**GetLastError-Funktion**](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) aufrufen. **GetLastError gibt** **NO ERROR \_ an** den Erstellungsprozess und **ERROR ALREADY EXISTS \_ \_ für** nachfolgende Prozesse zurück.
 
-Die Funktion "Funktion für die Funktion" schlägt fehl, wenn die Zugriffsflags [**mit den beim**](/windows/win32/api/fileapi/nf-fileapi-createfilea) Öffnen der Datei [**angegebenen Funktionen in**](/windows/desktop/api/WinBase/nf-winbase-createfilemappinga) Konflikt stehen. Beispielsweise zum Lesen und Schreiben in die Datei:
+Die [**CreateFileMapping-Funktion**](/windows/desktop/api/WinBase/nf-winbase-createfilemappinga) schlägt fehl, wenn die Zugriffsflags mit denen in Konflikt stehen, die beim Öffnen der Datei durch die [**CreateFile-Funktion**](/windows/win32/api/fileapi/nf-fileapi-createfilea) angegeben wurden. So lesen und schreiben Sie beispielsweise in die Datei:
 
--   Geben **Sie die generischen \_ Lese** -und **generischen \_ Schreib** Werte im Parameter " *bdwaccess* " von " [**kreatefile**](/windows/win32/api/fileapi/nf-fileapi-createfilea)" an.
--   Geben Sie den Wert für die **Seiten \_ Lese** Vorgänge im Parameter " *sdwprotect* " von " [**kreatefilemapping**](/windows/desktop/api/WinBase/nf-winbase-createfilemappinga)" an.
+-   Geben Sie **die GENERIC \_ READ-** **und GENERIC \_ WRITE-Werte** im *fdwAccess-Parameter* von [**CreateFile an.**](/windows/win32/api/fileapi/nf-fileapi-createfilea)
+-   Geben Sie **den PAGE \_ READWRITE-Wert** im *fdwProtect-Parameter* von [**CreateFileMapping an.**](/windows/desktop/api/WinBase/nf-winbase-createfilemappinga)
 
-Beim Erstellen eines Datei Zuordnungsobjekts wird kein Commit für den physischen Speicher durchführt, sondern nur reserviert.
+Beim Erstellen eines Dateizuordnungsobjekts wird kein physischer Speicher committ, sondern nur reserviert.
 
-## <a name="file-mapping-size"></a>Größe der Datei Zuordnung
+## <a name="file-mapping-size"></a>Dateizuordnungsgröße
 
-Die Größe des Datei Zuordnungsobjekts ist unabhängig von der Größe der Datei, die zugeordnet wird. Wenn das Datei Zuordnungsobjekt jedoch größer als die Datei ist, erweitert das System die Datei [](/windows/desktop/api/WinBase/nf-winbase-createfilemappinga) , bevor die Datei zuordnet. Wenn das Datei Zuordnungs Objekt kleiner als die Datei ist, ordnet das System nur die angegebene Anzahl von Bytes aus der Datei zu.
+Die Größe des Dateizuordnungsobjekts ist unabhängig von der Größe der zugeordneten Datei. Wenn das Dateizuordnungsobjekt jedoch größer als die Datei ist, erweitert das System die Datei, bevor [**CreateFileMapping zurückgegeben**](/windows/desktop/api/WinBase/nf-winbase-createfilemappinga) wird. Wenn das Dateizuordnungsobjekt kleiner als die Datei ist, ordnet das System nur die angegebene Anzahl von Bytes aus der Datei zu.
 
-Mit den Parametern *dwmaximumsizehigh* und *dwmaximumsizelow* von " [**kreatefilemapping**](/windows/desktop/api/WinBase/nf-winbase-createfilemappinga) " können Sie die Anzahl der Bytes angeben, die aus der Datei zugeordnet werden sollen:
+Mit *den Parametern dwMaximumSizeHigh* und *dwMaximumSizeLow* von [**CreateFileMapping**](/windows/desktop/api/WinBase/nf-winbase-createfilemappinga) können Sie die Anzahl der Bytes angeben, die aus der Datei zugeordnet werden sollen:
 
--   Wenn Sie nicht möchten, dass die Datei geändert wird (z. b. bei der Zuordnung Schreib geschützter Dateien), müssen Sie für " *dwmaximumsizehigh* [**" und "**](/windows/desktop/api/WinBase/nf-winbase-createfilemappinga) *dwmaximumsizelow*" den Wert "0" aufrufen und NULL angeben. Dadurch wird ein Datei Mapping-Objekt erstellt, das exakt der Größe der Datei entspricht. Andernfalls müssen Sie die Größe der fertigen Datei berechnen oder schätzen, da die Größe der Datei Zuordnung von Objekten statisch ist. nach der Erstellung kann die Größe nicht mehr gesteigert oder verringert werden. Der Versuch, eine Datei mit einer Länge von NULL auf diese Weise zuzuordnen, schlägt mit dem Fehlercode **" \_ \_ ungültige Fehler Datei**" fehl. Programme sollten auf Dateien mit einer Länge von 0 (null) testen und solche Dateien ablehnen.
+-   Wenn Die Größe der Datei nicht geändert werden soll (z. B. beim Zuordnen schreibgeschützter Dateien), rufen Sie [**CreateFileMapping**](/windows/desktop/api/WinBase/nf-winbase-createfilemappinga) auf, und geben Sie 0 (null) für *dwMaximumSizeHigh* und *dwMaximumSizeLow* an. Dadurch wird ein Dateizuordnungsobjekt erstellt, das genau die gleiche Größe wie die Datei hat. Andernfalls müssen Sie die Größe der fertig gestellten Datei berechnen oder schätzen, da Dateizuordnungsobjekte statisch sind. Sobald sie erstellt wurde, kann ihre Größe nicht erhöht oder verringert werden. Der Versuch, eine Datei mit einer Länge von 0 (null) auf diese Weise zu zuordnen, schlägt mit dem Fehlercode **ERROR \_ FILE INVALID \_ fehl.** Programme sollten auf Dateien mit einer Länge von 0 (null) testen und solche Dateien ablehnen.
 
--   Die Größe eines Datei Mapping-Objekts, das von einer benannten Datei unterstützt wird, ist durch Speicherplatz beschränkt. Die Größe einer Dateiansicht ist auf den größten verfügbaren zusammenhängenden Block des nicht reservierten virtuellen Speichers beschränkt. Dies liegt höchstens bei 2 GB minus dem virtuellen Arbeitsspeicher, der vom Prozess bereits reserviert wurde.
+-   Die Größe eines Dateizuordnungsobjekts, das durch eine benannte Datei erstellt wird, ist durch den Speicherplatz beschränkt. Die Größe einer Dateiansicht ist auf den größten verfügbaren zusammenhängenden Block des nicht reservierten virtuellen Arbeitsspeichers beschränkt. Dies sind mindestens 2 GB abzüglich des virtuellen Arbeitsspeichers, der bereits vom Prozess reserviert wurde.
 
-Die Größe des von Ihnen ausgewählten Datei Mapping-Objekts steuert, wie weit die Datei, die Sie anzeigen können, mit der Speicher Zuordnung angezeigt wird. Wenn Sie ein Datei Zuordnungsobjekt erstellen, das 500 KB groß ist, haben Sie nur Zugriff auf die ersten 500 KB der Datei, unabhängig von der Größe der Datei. Da Sie keine Systemressourcen für die Erstellung eines größeren Datei Zuordnungs Objekts Kosten, erstellen Sie ein Datei Zuordnungs Objekt, bei dem es sich um die Größe der Datei handelt (legen Sie die Parameter *dwmaximumsizehigh* und *dwmaximumsizelow* von [**CreateFileMapping**](/windows/desktop/api/WinBase/nf-winbase-createfilemappinga) auf NULL fest), auch wenn Sie nicht erwarten, dass Sie die gesamte Datei anzeigen. Die Kosten für Systemressourcen entstehen in der Erstellung der Sichten und des Zugriffs auf diese.
+Die Größe des ausgewählten Dateizuordnungsobjekts steuert, wie weit sie mit der Speicherzuordnung in der Datei "sehen" können. Wenn Sie ein Dateizuordnungsobjekt mit einer Größe von 500 KB erstellen, haben Sie nur Zugriff auf die ersten 500 KB der Datei, unabhängig von der Größe der Datei. Da es keine Systemressourcen kostet, ein größeres Dateizuordnungsobjekt zu erstellen, erstellen Sie ein Dateizuordnungsobjekt, das die Größe der Datei hat (legen Sie die *Parameter dwMaximumSizeHigh* und *dwMaximumSizeLow* von [**CreateFileMapping**](/windows/desktop/api/WinBase/nf-winbase-createfilemappinga) beide auf null fest), auch wenn Sie nicht erwarten, dass Sie die gesamte Datei anzeigen. Die Kosten für Systemressourcen sind für das Erstellen der Ansichten und den Zugriff darauf ankommt.
 
-Wenn Sie einen Teil der Datei anzeigen möchten, der nicht am Anfang der Datei beginnt, müssen Sie ein Datei Zuordnungsobjekt erstellen. Bei diesem Objekt handelt es sich um die Größe des Teils der Datei, die Sie anzeigen möchten, sowie um den Offset in der Datei.
+Sie können einen Teil der Datei anzeigen, der nicht am Anfang der Datei beginnt. Weitere Informationen finden Sie unter [Erstellen einer Ansicht in einer Datei.](creating-a-view-within-a-file.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
+  
+[Erstellen einer Dateiansicht](creating-a-file-view.md)
+</dt> <dt>
 
-[Erstellen einer Ansicht in einer Datei](creating-a-view-within-a-file.md)
+[Erstellen einer Ansicht innerhalb einer Datei](creating-a-view-within-a-file.md)
 </dt> </dl>
 
- 
 
  

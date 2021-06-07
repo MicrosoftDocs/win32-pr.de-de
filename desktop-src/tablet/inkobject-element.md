@@ -1,19 +1,19 @@
 ---
-description: Enthält die Base64-codierten Binärdaten des Ink-Objekts für ein InkWord oder eine Zeichnung.
+description: Enthält die Base64-codierten Binärdaten des Ink-Objekts für ein InkWord- oder Drawing-Objekt.
 ms.assetid: 7ee9ecd3-9dd6-4c6b-80bc-23f9a8e6b352
-title: Inkobject-Element
+title: InkObject-Element
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1c3c5965f2c23f3799a988a9cf2dbaa7eac29a0f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 54c3a626da2afef506f8777ea188bdd883e29dd5
+ms.sourcegitcommit: c3f669dc1d52278432bf75ad9fddba3257d26aa2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104347899"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111432362"
 ---
-# <a name="inkobject-element"></a>Inkobject-Element
+# <a name="inkobject-element"></a>InkObject-Element
 
-Enthält die Base64-codierten Binärdaten des Ink-Objekts für ein [**InkWord**](inkword-element.md) oder eine [**Zeichnung**](drawing-element.md).
+Enthält die Base64-codierten Binärdaten des Ink-Objekts für [**ein InkWord- oder**](inkword-element.md) [**Drawing-Objekt.**](drawing-element.md)
 
 ## <a name="definition"></a>Definition
 
@@ -39,11 +39,11 @@ Keine
 
 
 
-|              |                                            |
+|  Element     | Wert                                                     |
 |--------------|--------------------------------------------|
 | Elementtyp | **xs:base64Binary**                        |
-| Namespace    | urn: Schemas-Microsoft-com: TabletPC: RichInk |
-| Schemaname  | Journal Leser                             |
+| Namespace    | urn:schemas-microsoft-com:tabletpc:richink |
+| Schemaname  | Journalreader                             |
 
 
 

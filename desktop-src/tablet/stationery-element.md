@@ -1,19 +1,19 @@
 ---
-description: Enthält Informationen über die in der Journal Notiz verwendeten Schreibweise, einschließlich der Hintergrundfarbe oder des Bilds, der Titelinformationen und der Informationen zum linienlayout, wie z. b. schmale Regeln und Rand Regeln.
+description: Enthält Informationen über die im Journalnotiz verwendeten Schreibweise, einschließlich hintergrundfarbener oder bildischer Hintergrundfarbe, Titelinformationen und Linienlayoutinformationen, z. B. schmale Regeln und Randregeln.
 ms.assetid: 39cc8ee6-b010-428e-b729-de49fa34b91b
 title: Stationery-Element
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c7f681e7c27424af573425e852fe7ab345091728
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 012ec2c271d7b0509cf0a9669a9d7898cf7956b6
+ms.sourcegitcommit: c3f669dc1d52278432bf75ad9fddba3257d26aa2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106352589"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111432622"
 ---
 # <a name="stationery-element"></a>Stationery-Element
 
-Enthält Informationen über die in der Journal Notiz verwendeten Schreibweise, einschließlich der Hintergrundfarbe oder des Bilds, der Titelinformationen und der Informationen zum linienlayout, wie z. b. schmale Regeln und Rand Regeln.
+Enthält Informationen über die im Journalnotiz verwendeten Schreibweise, einschließlich hintergrundfarbener oder bildischer Hintergrundfarbe, Titelinformationen und Linienlayoutinformationen, z. B. schmale Regeln und Randregeln.
 
 ## <a name="definition"></a>Definition
 
@@ -23,7 +23,7 @@ Enthält Informationen über die in der Journal Notiz verwendeten Schreibweise, 
 
 ## <a name="parent-elements"></a>Übergeordnete Elemente
 
-[**Journaldocument**](journaldocument-element.md)
+[**JournalDocument**](journaldocument-element.md)
 
 ## <a name="child-elements"></a>Untergeordnete Elemente
 
@@ -31,7 +31,7 @@ Enthält Informationen über die in der Journal Notiz verwendeten Schreibweise, 
 
 [**Titel**](title-element.md)
 
-[**Linelayout**](linelayout-element.md)
+[**LineLayout**](linelayout-element.md)
 
 ## <a name="attributes"></a>Attribute
 
@@ -41,11 +41,11 @@ Keine
 
 
 
-|              |                                                                   |
+|  Element     | Wert                                                             |
 |--------------|-------------------------------------------------------------------|
-| Elementtyp | ComplexType " [**stationerytype**](stationerytype-complex-type.md) " |
-| Namespace    | urn: Schemas-Microsoft-com: TabletPC: RichInk                        |
-| Schemaname  | Journal Leser                                                    |
+| Elementtyp | [**complexType: StationeryType**](stationerytype-complex-type.md) |
+| Namespace    | urn:schemas-microsoft-com:tabletpc:richink                        |
+| Schemaname  | Journalreader                                                    |
 
 
 

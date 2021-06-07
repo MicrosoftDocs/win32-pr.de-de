@@ -1,9 +1,9 @@
 ---
 title: String-Element
-description: Stellt eine Zeichen folgen Ressource dar.
+description: Stellt eine Zeichenfolgenressource dar.
 ms.assetid: 83e5bdbb-ef86-4942-af40-2e327360ee67
 keywords:
-- String-Element Windows-Menüband
+- Windows-Menüband für Zeichenfolgenelement
 topic_type:
 - apiref
 api_name:
@@ -13,18 +13,18 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 577d318292081dddf4e2839967642c6115a474d6
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 0b0dab5d7ce1485aad5fe1e15442069c488933aa
+ms.sourcegitcommit: 099ecdda1e83618b844387405da0db0ebda93a65
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "104038048"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111443901"
 ---
 # <a name="string-element"></a>String-Element
 
-Stellt eine Zeichen folgen Ressource dar.
+Stellt eine Zeichenfolgenressource dar.
 
-## <a name="usage"></a>Verbrauch
+## <a name="usage"></a>Verwendung
 
 ``` syntax
 <String
@@ -48,8 +48,8 @@ Stellt eine Zeichen folgen Ressource dar.
 </colgroup>
 <thead>
 <tr class="header">
-<th>Attribut</th>
-<th>type</th>
+<th>attribute</th>
+<th>Typ</th>
 <th>Erforderlich</th>
 <th>BESCHREIBUNG</th>
 </tr>
@@ -59,21 +59,21 @@ Stellt eine Zeichen folgen Ressource dar.
 <td><strong>Inhalt</strong><br/></td>
 <td>xs:string<br/></td>
 <td>Nein<br/></td>
-<td><dt><span></span><span></span><strong></strong> (xs: String)<br/> </dt> <dd> Eine Zeichenfolge, die aus einer beliebigen Zeichen Sequenz besteht, einschließlich Leerzeichen und Zeilenumbruch Zeichen.<br/> </dd> </dl></td>
+<td><dt><span></span><span></span><strong></strong> (xs:string)<br/> </dt> <dd> Eine Zeichenfolge, die aus einer beliebigen Sequenz von Zeichen besteht, einschließlich Leerzeichen und Zeilenunterbrechungszeichen.<br/> </dd> </dl></td>
 </tr>
 <tr class="even">
 <td><strong>Id</strong><br/></td>
-<td>xs: positiveingeteger oder xs: String<br/></td>
+<td>xs:positiveInteger oder xs:string<br/></td>
 <td>Nein<br/></td>
 <td>Die eindeutige Ressourcen-ID. <br/> <br/>
-<dt><span></span><span></span><strong></strong> (xs: positiveingeteger oder xs: String)<br/> </dt> <dd> Ein ganzzahliger Wert zwischen 2 und 59999, einschließlich, oder 0x2 und 0xea5f in Hexadezimal (einschließlich). <br/> Die maximale Länge beträgt 10 Zeichen, einschließlich optionaler führender Nullen. <br/> </dd> </dl></td>
+<dt><span></span><span></span><strong></strong> (xs:positiveInteger oder xs:string)<br/> </dt> <dd> Ein ganzzahliger Wert zwischen 2 und 59999, einschließlich oder 0x2 und 0xea5f in Hexadezimal, einschließlich. <br/> Die maximale Länge beträgt 10 Zeichen, einschließlich optionaler führender Nullen. <br/> </dd> </dl></td>
 </tr>
 <tr class="odd">
 <td><strong>Symbol</strong><br/></td>
 <td>xs:string<br/></td>
 <td>Nein<br/></td>
-<td>Das Ressourcen Symbol für die Zeichenfolge.<br/> <br/>
-<dt><span></span><span></span><strong></strong> (xs: String)<br/> </dt> <dd> Ein Buchstabe oder Unterstrich, gefolgt von einer beliebigen Reihenfolge von Buchstaben, Ziffern oder unterstrichen.<br/> Die maximale Länge beträgt 100 Zeichen.<br/> </dd> </dl></td>
+<td>Das Ressourcensymbol für die Zeichenfolge.<br/> <br/>
+<dt><span></span><span></span><strong></strong> (xs:string)<br/> </dt> <dd> Ein Buchstabe oder Unterstrich, gefolgt von einer beliebigen Sequenz von Buchstaben, Ziffern oder Unterstrichen.<br/> Die maximale Länge beträgt 100 Zeichen.<br/> </dd> </dl></td>
 </tr>
 </tbody>
 </table>
@@ -86,9 +86,9 @@ Stellt eine Zeichen folgen Ressource dar.
 
 | Element                                                                   | BESCHREIBUNG                                   |
 |---------------------------------------------------------------------------|-----------------------------------------------|
-| [**String. Content**](windowsribbon-element-string-content.md)<br/> | Kann höchstens einmal vorkommen<br/> <br/> |
-| [**String.Id**](windowsribbon-element-string-id.md)<br/>           | Kann höchstens einmal vorkommen<br/> <br/> |
-| [**String. Symbol**](windowsribbon-element-string-symbol.md)<br/>   | Kann höchstens einmal vorkommen<br/> <br/> |
+| [**String.Content**](windowsribbon-element-string-content.md)<br/> | Kann höchstens einmal auftreten.<br/> <br/> |
+| [**String.Id**](windowsribbon-element-string-id.md)<br/>           | Kann höchstens einmal auftreten.<br/> <br/> |
+| [**String.Symbol**](windowsribbon-element-string-symbol.md)<br/>   | Kann höchstens einmal auftreten.<br/> <br/> |
 
 
 
@@ -98,27 +98,27 @@ Stellt eine Zeichen folgen Ressource dar.
 
 | Element                                                                                           |
 |---------------------------------------------------------------------------------------------------|
-| [**Command. KeyTip**](windowsribbon-element-command-keytip.md)<br/>                         |
-| [**Command. labeldescription**](windowsribbon-element-command-labeldescription.md)<br/>     |
-| [**Command. labeltitle**](windowsribbon-element-command-labeltitle.md)<br/>                 |
-| [**Command. tooltipdescription**](windowsribbon-element-command-tooltipdescription.md)<br/> |
-| [**Command. ToolTipTitle**](windowsribbon-element-command-tooltiptitle.md)<br/>             |
+| [**Command.Keytip**](windowsribbon-element-command-keytip.md)<br/>                         |
+| [**Command.LabelDescription**](windowsribbon-element-command-labeldescription.md)<br/>     |
+| [**Command.LabelTitle**](windowsribbon-element-command-labeltitle.md)<br/>                 |
+| [**Command.TooltipDescription**](windowsribbon-element-command-tooltipdescription.md)<br/> |
+| [**Command.TooltipTitle**](windowsribbon-element-command-tooltiptitle.md)<br/>             |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Dies ist optional.
 
-Kann höchstens einmal für jedes [**Command. labeltitle**](windowsribbon-element-command-labeltitle.md)-, [**Command. labeldescription**](windowsribbon-element-command-labeldescription.md)-, [**Command. KeyTip**](windowsribbon-element-command-keytip.md)-, [**Command. ToolTipTitle**](windowsribbon-element-command-tooltiptitle.md)-oder [**Command. tooltipdescription**](windowsribbon-element-command-tooltipdescription.md) -Element auftreten.
+Kann höchstens einmal für jedes [**Command.LabelTitle-,**](windowsribbon-element-command-labeltitle.md) [**Command.LabelDescription-,**](windowsribbon-element-command-labeldescription.md) [**Command.Keytip-,**](windowsribbon-element-command-keytip.md) [**Command.TooltipTitle-**](windowsribbon-element-command-tooltiptitle.md)oder [**Command.TooltipDescription-Element**](windowsribbon-element-command-tooltipdescription.md) auftreten.
 
-Die Zeichen folgen Definition wird der Menüband-Header Datei hinzugefügt, z `#define strSave 59999` . b..
+Die Zeichenfolgendefinition wird der Menübandheaderdatei hinzugefügt, z. `#define strSave 59999` B. .
 
-Die Zeichenfolge wird einer Zeichen folgen Tabelle in der Ressourcen Datei des Menübands hinzugefügt, in der ein Name und eine ID vom Menüband-Framework generiert werden, wenn keine deklariert sind.
+Die Zeichenfolge wird einer Zeichenfolgentabelle in der Menübandressourcendatei hinzugefügt, in der ein Name und eine ID vom Menübandframework generiert werden, wenn keine deklariert sind.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird das Markup für ein [**Command. labeltitle**](windowsribbon-element-command-labeltitle.md) -Element mit einer **Zeichen** folgen Deklaration veranschaulicht.
+Im folgenden Beispiel wird das Markup für ein [**Command.LabelTitle-Element**](windowsribbon-element-command-labeltitle.md) mit einer **String-Deklaration** veranschaulicht.
 
 
 ```XML
@@ -135,12 +135,8 @@ Im folgenden Beispiel wird das Markup für ein [**Command. labeltitle**](windows
 
 ## <a name="element-information"></a>Elementinformationen
 
-
-
-|                                     |           |
-|-------------------------------------|-----------|
-| Unterstützte Mindestversion (System)<br/> | Windows 7 |
-| Kann leer bleiben                        | Nein        |
+- **Unterstütztes Mindestsystem:** Windows 7 
+- **Kann leer sein:** Nein
 
 
 

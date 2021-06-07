@@ -1,32 +1,32 @@
 ---
-title: Microsoft-Agent-Sprachausgabe Tags
-description: Microsoft-Agent-Sprachausgabe Tags
+title: Microsoft Agent Speech-Ausgabetags
+description: Microsoft Agent Speech-Ausgabetags
 ms.assetid: b7939974-bc54-4dd8-8e79-3ebd24e76215
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d365d4837df3e3a5afb57c355e229f21ade0b5a0
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: e712285b8160cf12817890ac42c4d49e95d72a2b
+ms.sourcegitcommit: cb87082135319cbdc5df541e3071eebb83a58972
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103856212"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111386799"
 ---
-# <a name="microsoft-agent-speech-output-tags"></a>Microsoft-Agent-Sprachausgabe Tags
+# <a name="microsoft-agent-speech-output-tags"></a>Microsoft Agent Speech-Ausgabetags
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Microsoft Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht mehr verfügbar.\]
 
-Die Microsoft-Agent-Dienste unterstützen das Ändern der Sprachausgabe über spezielle Tags, die in die Zeichenfolge für die sprach Diese Tags helfen Ihnen, die Eigenschaften des Ausgabe Ausdrucks des Zeichens zu ändern.
+Die Microsoft Agent-Dienste unterstützen das Ändern der Sprachausgabe über spezielle Tags, die in die Sprachtextzeichenfolge eingefügt werden. Mit diesen Tags können Sie die Merkmale des Ausgabeausdrucks des Zeichens ändern.
 
-Für Sprachausgabe Tags werden die folgenden Syntax Regeln verwendet:
+Sprachausgabetags verwenden die folgenden Syntaxregeln:
 
--   Alle Tags beginnen und enden mit einem umgekehrten Schrägstrich ( \) .
--   Der einzelne umgekehrte Schrägstrich ist innerhalb eines Tags nicht aktiviert. Wenn Sie einen umgekehrten Schrägstrich in einen Text Parameter eines Tags einschließen möchten, verwenden Sie einen doppelten umgekehrten Schrägstrich ( \\ \) .
--   Tags Unterscheidung nach Groß-/Kleinschreibung. Beispielsweise \\ ist Pit \\ das gleiche wie \\ Pit \\ .
--   Tags sind Leerzeichen abhängig. Beispielsweise \\ ist RST \\ nicht mit \\ RST identisch \\ .
+-   Alle Tags beginnen und enden mit einem schrägen Schrägstrich ( \\ ).
+-   Der einzelne schräge Schrägstrich ist innerhalb eines Tags nicht aktiviert. Verwenden Sie einen doppelten schrägen Schrägstrich ( ), um einen schrägen Schrägstrich in einen Textparameter eines Tags ein-/aus. \\ \\
+-   Bei Tags wird die Groß-/Kleinschreibung nicht beachtet. Pit ist \\ \\ z. B. identisch mit \\ PIT \\ .
+-   Tags sind leerraumabhängig. Beispielsweise ist \\ Rst \\ nicht mit \\ Rst \\ identisch.
 
-Sofern nicht anders angegeben oder von einem anderen Tag geändert, behält die Sprachausgabe das von dem-Tag festgelegte Merkmal in dem Text bei, der in einer einzelnen [**Sprech**](speak-method.md) Methode angegeben ist. Die Sprachausgabe wird automatisch durch die benutzerdefinierten Parameter zurückgesetzt, **nachdem eine Sprech** Methode abgeschlossen wurde.
+Sofern nicht anders angegeben oder durch ein anderes Tag geändert, behält die Sprachausgabe das Merkmal bei, das durch das -Tag innerhalb des in einer einzelnen Speak-Methode angegebenen [**Texts festgelegt**](speak-method.md) wird. Die Sprachausgabe wird automatisch über die benutzerdefinierten Parameter zurückgesetzt, nachdem eine **Speak-Methode** abgeschlossen wurde.
 
-Einige Tags enthalten Zeichen folgen in Anführungszeichen. Für einige Programmiersprachen, wie z. b. Visual Basic Scripting Edition (VBScript) und Visual Basic, bedeutet dies, dass Sie möglicherweise zwei Anführungszeichen verwenden müssen, um den Parameter des Tags anzugeben oder ein doppeltes Anführungszeichen als Teil der Zeichenfolge zu verketten. Letzteres wird in diesem Visual Basic Beispiel gezeigt:
+Einige Tags enthalten Zeichenfolgen in Anführungswörtern. Für einige Programmiersprachen wie Visual Basic Scripting Edition (VBScript) und Visual Basic bedeutet dies, dass Sie möglicherweise zwei Anführungszeichen verwenden müssen, um den Parameter des Tags zu kennzeichnen oder ein doppeltes Anführungszeichen als Teil der Zeichenfolge zu verketten. Letzteres wird in diesem Beispiel Visual Basic gezeigt:
 
 
 ```
@@ -36,7 +36,7 @@ Agent1.Characters("Genie").Speak "This is \map=" + chr(34) + "Spoken text" _
 
 
 
-Stellen Sie für C-, C++-und Java-™ Programmierung vor umgekehrten Schrägstrichen und doppelten Anführungszeichen mit einem umgekehrten Schrägstrich voran. Beispiel:
+Bei C-, C++- und Java™-Programmierung vor den zurücken Schrägstrichen und doppelten Anführungszeichen mit einem zurücken Schrägstrich. Zum Beispiel:
 
 
 ```
@@ -47,32 +47,32 @@ pCharacter->Speak(bszSpeak, ......);
 
 
 
-Für Fremdsprachen, die Zeichen mit Doppelbyte-Zeichensatz (Double-Byte Character Set, DBCS) unterstützen, können Sie Zeichen folgen Parameter mithilfe von Doppelbyte Zeichen angeben. Verwenden Sie jedoch Einzel Byte Zeichen für alle anderen Parameter und Zeichen, die zum Definieren des Tags verwendet werden, einschließlich des Tags selbst.
+Für Sprachen, die Doppel-Byte-Zeichensatzzeichen (Double-Byte Character Set, DBCS) unterstützen, können Sie Doppel bytezeichen verwenden, um Zeichenfolgenparameter anzugeben. Verwenden Sie jedoch Einzel bytezeichen für alle anderen Parameter und Zeichen, die zum Definieren des Tags verwendet werden, einschließlich des Tags selbst.
 
 Die folgenden Tags werden unterstützt:
 
 -   [**Chr**](chr-tag.md)
--   [**CTX**](ctx-tag.md)
--   [**EMP**](emp-tag.md)
--   [**LST**](lst-tag.md)
--   [**Bilden**](map-tag.md)
--   [**MRK**](mrk-tag.md)
--   [**Referi**](pau-tag.md)
--   [**Baum**](pit-tag.md)
--   [**RST**](rst-tag.md)
--   [**SPD**](spd-tag.md)
--   [**Volumen**](vol-tag.md)
+-   [**Ctx**](ctx-tag.md)
+-   [**Emp**](emp-tag.md)
+-   [**Lst**](lst-tag.md)
+-   [**Karte**](map-tag.md)
+-   [**Mrk**](mrk-tag.md)
+-   [**Pau**](pau-tag.md)
+-   [**Grube**](pit-tag.md)
+-   [**Ersten**](rst-tag.md)
+-   [**Spd**](spd-tag.md)
+-   [**Vol**](vol-tag.md)
 
-Die Tags sind hauptsächlich für die Anpassung von von der Text-zu-Sprache (TTS) generierten Ausgaben konzipiert. Nur die [**MRK**](mrk-tag.md) -und [**map**](map-tag.md) -Tags können mit Audiodatei-basierter, gesprochener Ausgabe verwendet werden.
+Die Tags sind in erster Linie für die Anpassung der von TTS (Text-to-Speech) generierten Ausgabe konzipiert. Nur die [**Mrk-**](mrk-tag.md) und [**Map-Tags**](map-tag.md) können mit audiodateibasierter gesprochener Ausgabe verwendet werden.
 
 > [!Note]  
-> Der Microsoft-Agent unterstützt nicht alle Tags, die im Microsoft Speech SDK dokumentiert sind. Parameter können auch abhängig von der ausgewählten TTS-Engine variieren. Sie können eine bestimmte TTS-Engine mit [**ttsmodeid**](ttsmodeid-property.md)festlegen.
+> Microsoft Agent unterstützt nicht alle Tags, die im Microsoft Speech SDK dokumentiert sind. Die Parameter können auch abhängig von der ausgewählten TTS-Engine variieren. Sie können eine bestimmte TTS-Engine mit [**TTSModeID festlegen.**](ttsmodeid-property.md)
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
 
 

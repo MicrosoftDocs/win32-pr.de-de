@@ -1,5 +1,5 @@
 ---
-description: Weitere Informationen finden Sie in der Aufzählung von "MUF deserializerschemavalidationoption".
+description: 'Weitere Informationen finden Sie unter: MofDeserializerSchemaValidationOption-Enumeration'
 title: MofDeserializerSchemaValidationOption-Enumeration (Microsoft.Management.Infrastructure.Serialization)
 TOCTitle: MofDeserializerSchemaValidationOption enumeration (Microsoft.Management.Infrastructure.Serialization)
 ms:assetid: T:Microsoft.Management.Infrastructure.Serialization.MofDeserializerSchemaValidationOption
@@ -38,19 +38,19 @@ topic_type:
 - apiref
 product_family_name: VS
 ms.topic: reference
-ms.openlocfilehash: efb6c5a694d09bcb59fedf3f186498c940a95c7e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 18baf6fa3ab837a82d725b72b8b60e3b33b7175f
+ms.sourcegitcommit: 099ecdda1e83618b844387405da0db0ebda93a65
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104130396"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111444971"
 ---
-# <a name="mofdeserializerschemavalidationoption-enumeration"></a>Fuatdeserializerschemavalidationoption-Enumeration
+# <a name="mofdeserializerschemavalidationoption-enumeration"></a>MofDeserializerSchemaValidationOption-Enumeration
 
-Definiert Konstanten, die Schema Validierungs Optionen für die Deserialisierung angeben.
+Definiert Konstanten, die Schemavalidierungsoptionen für die Deserialisierung angeben.
 
-**Namespace:**   [Microsoft. Management. Infrastructure. Serialization](/previous-versions/windows/desktop/wmi_v2/mi-managed-api/hh832966(v=vs.85))  
-**Assembly:**  Microsoft. Management. Infrastructure (in Microsoft.Management.Infrastructure.dll)  
+**Namespace:**   [Microsoft.Management.Infrastructure.Serialization](/previous-versions/windows/desktop/wmi_v2/mi-managed-api/hh832966(v=vs.85))  
+**Assembly:**  Microsoft.Management.Infrastructure (in Microsoft.Management.Infrastructure.dll)  
 
 ## <a name="syntax"></a>Syntax
 
@@ -72,14 +72,14 @@ Friend Enumeration MofDeserializerSchemaValidationOption
 
 ## <a name="members"></a>Member
 
-||Membername|Beschreibung|
-|-|-|-|
-||Standard|Gibt die Standardschema Validierung an.|
-||Strict|Gibt eine strikte Schema Validierung an.|
-||Lose|Gibt die lose Schema Validierung an.|
-||Ignorepropertytype|Gibt an, dass die Schema Validierung Eigenschafts Typen ignorieren soll.|
-||Ignorieren|Gibt an, dass die Schema Validierung ignoriert werden soll.|
+|Membername|Beschreibung|
+|-|-|
+|Standard|Gibt die Standardschemaüberprüfung an.|
+|Strict|Gibt die strenge Schemavalidierung an.|
+|Lose|Gibt eine lose Schemavalidierung an.|
+|IgnorePropertyType|Gibt an, dass die Schemavalidierung Eigenschaftstypen ignorieren soll.|
+|Ignorieren|Gibt an, dass die Schemavalidierung ignoriert werden soll.|
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[Microsoft. Management. Infrastructure. Serialization-Namespace](/previous-versions/windows/desktop/wmi_v2/mi-managed-api/hh832966(v=vs.85))
+[Microsoft.Management.Infrastructure.Serialization-Namespace](/previous-versions/windows/desktop/wmi_v2/mi-managed-api/hh832966(v=vs.85))

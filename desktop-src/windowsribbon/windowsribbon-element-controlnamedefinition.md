@@ -1,9 +1,9 @@
 ---
-title: Controlnamedefinition-Element
-description: Stellt den Namen eines Steuer Elements in einer benutzerdefinierten sizedefinition-Layoutvorlage dar.
+title: ControlNameDefinition-Element
+description: Stellt einen Namen eines Steuerelements in einer benutzerdefinierten SizeDefinition-Layoutvorlage dar.
 ms.assetid: 94b724bd-a4e3-40e0-9cf0-3cc6a71100d2
 keywords:
-- Controlnamedefinition-Element Windows-Menüband
+- ControlNameDefinition-Element Im Windows-Menüband
 topic_type:
 - apiref
 api_name:
@@ -13,18 +13,18 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 14ec269ce51b0074b9a03f78aea218b482955d1b
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 6b2dc1db251d4d657c3793d2a66a9add1d324c37
+ms.sourcegitcommit: 099ecdda1e83618b844387405da0db0ebda93a65
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "104312665"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111443441"
 ---
-# <a name="controlnamedefinition-element"></a>Controlnamedefinition-Element
+# <a name="controlnamedefinition-element"></a>ControlNameDefinition-Element
 
-Stellt den Namen eines Steuer Elements in einer benutzerdefinierten [**sizedefinition**](windowsribbon-element-sizedefinition.md) -Layoutvorlage dar.
+Stellt einen Namen eines Steuerelements in einer benutzerdefinierten [**SizeDefinition-Layoutvorlage**](windowsribbon-element-sizedefinition.md) dar.
 
-## <a name="usage"></a>Verbrauch
+## <a name="usage"></a>Verwendung
 
 ``` syntax
 <ControlNameDefinition
@@ -37,9 +37,9 @@ Stellt den Namen eines Steuer Elements in einer benutzerdefinierten [**sizedefin
 
 
 
-| Attribut           | type                                       | Erforderlich      | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                                                           |
+| attribute           | Typ                                       | Erforderlich      | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                                                           |
 |---------------------|--------------------------------------------|---------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Name**<br/> | xs: positiveingeteger oder xs: String<br/> | Nein<br/> | <dt> (xs: positiveingeteger oder xs: String)<br/> </dt> <dd> Eine Zeichenfolge, ein ganzzahliger Wert zwischen 2 und 59999, einschließlich, oder ein Hexadezimalwert zwischen 0x2 und 0xea5f (einschließlich). <br/> Der Wert muss innerhalb des Menüband-XML-Dokuments eindeutig sein. <br/> Maximale Länge: 100 Zeichen. <br/> </dd> </dl> |
+| **Name**<br/> | xs:positiveInteger oder xs:string<br/> | Nein<br/> | <dt> (xs:positiveInteger oder xs:string)<br/> </dt> <dd> Eine Zeichenfolge, ein ganzzahliger Wert zwischen 2 und 59999, einschließlich, oder ein Hexadezimalwert zwischen 0x2 und 0xea5f einschließlich. <br/> Der Wert muss innerhalb des Menüband-XML-Dokuments eindeutig sein. <br/> Maximale Länge: 100 Zeichen. <br/> </dd> </dl> |
 
 
 
@@ -49,7 +49,7 @@ Stellt den Namen eines Steuer Elements in einer benutzerdefinierten [**sizedefin
 
 | Element                              | BESCHREIBUNG                                        |
 |--------------------------------------|----------------------------------------------------|
-| **Controlnamedefinition**<br/> | Kann ein-oder mehrmals vorkommen<br/> <br/> |
+| **ControlNameDefinition**<br/> | Kann ein oder mehrere Male auftreten.<br/> <br/> |
 
 
 
@@ -59,19 +59,19 @@ Stellt den Namen eines Steuer Elements in einer benutzerdefinierten [**sizedefin
 
 | Element                                                                   |
 |---------------------------------------------------------------------------|
-| [**Controlnamemap**](windowsribbon-element-controlnamemap.md)<br/> |
+| [**ControlNameMap**](windowsribbon-element-controlnamemap.md)<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Dies ist optional.
 
-Kann für jedes [**controlnamemap**](windowsribbon-element-controlnamemap.md) -Element einmal oder mehrmals vorkommen.
+Kann ein oder mehrere Male für jedes [**ControlNameMap-Element**](windowsribbon-element-controlnamemap.md) auftreten.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Codebeispiel wird das grundlegende Markup für eine benutzerdefinierte [**sizedefinition**](windowsribbon-element-sizedefinition.md) -Layoutvorlage mit vier Schaltflächen mit vier **controlnamedefinition** -Elementen veranschaulicht.
+Im folgenden Codebeispiel wird das grundlegende Markup für eine benutzerdefinierte [**SizeDefinition-Layoutvorlage**](windowsribbon-element-sizedefinition.md) mit vier Schaltflächen mit vier **ControlNameDefinition-Elementen** veranschaulicht.
 
 
 ```XML
@@ -163,20 +163,16 @@ Im folgenden Codebeispiel wird das grundlegende Markup für eine benutzerdefinie
 
 ## <a name="element-information"></a>Elementinformationen
 
-
-
-|                                     |           |
-|-------------------------------------|-----------|
-| Unterstützte Mindestversion (System)<br/> | Windows 7 |
-| Kann leer bleiben                        | Nein        |
+* **Unterstütztes Mindestsystem:** Windows 7
+* **Kann leer sein:** Nein
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[Anpassen eines Menübands durch Größen Definitionen und Skalierungs Richtlinien](windowsribbon-templates.md)
+[Anpassen eines Menübands durch Größendefinitionen und Skalierungsrichtlinien](windowsribbon-templates.md)
 </dt> </dl>
 
  

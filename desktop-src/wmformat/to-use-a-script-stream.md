@@ -1,58 +1,58 @@
 ---
-title: So verwenden Sie einen Skript Datenstrom
-description: So verwenden Sie einen Skript Datenstrom
+title: So verwenden Sie einen Skriptstream
+description: So verwenden Sie einen Skriptstream
 ms.assetid: 502b1f66-213d-41d8-992a-9bef4f6209f9
 keywords:
-- Windows Media-Format-SDK, Skript Datenströme
-- Advanced Systems Format (ASF), Skript Datenströme
-- ASF (Advanced Systems Format), Skript Datenströme
-- Skript Datenströme, Informationen
+- Windows Media Format SDK, Skriptstreams
+- Advanced Systems Format (ASF), Skriptstreams
+- ASF (Advanced Systems Format), Skriptstreams
+- Skriptstreams, Informationen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 82dee2c4a9789406c21b18c58a5f281a768fc713
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 09782855bd3000d711f134c5889733e49e020c44
+ms.sourcegitcommit: 099ecdda1e83618b844387405da0db0ebda93a65
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104311447"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111444731"
 ---
-# <a name="to-use-a-script-stream"></a>So verwenden Sie einen Skript Datenstrom
+# <a name="to-use-a-script-stream"></a>So verwenden Sie einen Skriptstream
 
-In diesem Abschnitt wird beschrieben, wie Skript Daten für die Einbindung in eine Datei an den Writer gesendet werden. Informationen zum Einschließen von Skript Datenströmen in Profile finden Sie unter [Konfigurieren beliebiger Streamtypen](configuring-arbitrary-stream-types.md).
+In diesem Abschnitt wird beschrieben, wie Skriptdaten zur Aufnahme in eine Datei an den Writer gesendet werden. Informationen zum Verwenden von Skriptstreams in Profile finden Sie unter Configuring Arbitrary Stream Types (Konfigurieren [beliebiger Streamtypen).](configuring-arbitrary-stream-types.md)
 
-Jedes Skript besteht aus zwei Zeichen folgen, einer *Typzeichenfolge* und einer *Argument* Zeichenfolge.
+Jedes Skript besteht aus zwei Zeichenfolgen, einer *Typzeichenfolge* und einer *Argumentzeichenfolge.*
 
-Die Skript Daten müssen formatiert werden, bevor Sie an den Writer gesendet werden. Die Zeichen folgen müssen verkettet werden, durch ein **null** -Zeichen getrennt und mit einem **null** -Zeichen beendet werden. Das folgende Beispiel zeigt ein legitimer Skript:
+Die Skriptdaten müssen formatiert werden, bevor sie an den Writer gesendet werden. Die Zeichenfolgen sollten verkettet, durch ein **NULL-Zeichen** getrennt und mit einem **NULL-Zeichen beendet** werden. Das folgende Beispiel zeigt ein legitimes Skript:
 
 
 
-|     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |
+| &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |   &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp;  | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp;  | &nbsp; |
 |-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|
-| U   | R   | L   | \\0 | h.   | t   | t   | p   | :   | /   | /   | w   | w   | w   | .   | a   | d   | a   | t   | u   | m   | .   | c   | o   | m   | \\0 |
+| U   | R   | L   | &nbsp; | h   | t   | t   | p   | :   | /   | /   | w   | w   | w   | .   | a   | d   | a   | t   | u   | m   | .   | c   | o   | m   | &nbsp; |
 
 
 
- 
+ 
 
-Jedes Paar von Skript Befehlen sollte als Beispiel für den Writer geschrieben werden. Weitere Informationen zum Schreiben von Beispielen finden [Sie unter so schreiben Sie Beispiele](to-write-samples.md).
+Jedes Skriptbefehlspaar sollte als Beispiel in den Writer geschrieben werden. Weitere Informationen zum Schreiben von Beispielen finden Sie unter [To Write Samples](to-write-samples.md).
 
-Beim Wiedergeben der ASF-Datei werden die Skript Befehle vom Reader (oder synchronen Reader) in der Präsentationszeit Reihenfolge übermittelt. Es liegt in der Verantwortung der Anwendung, die beiden Zeichen folgen zu analysieren und auf den Skript Befehl zu reagieren.
+Wenn die ASF-Datei abgespielt wird, werden die Skriptbefehle vom Reader (oder synchronen Reader) in der Reihenfolge der Präsentationszeit übermittelt. Die Anwendung ist dafür verantwortlich, die beiden Zeichenfolgen zu analysieren und auf den Skriptbefehl zu reagieren.
 
 > [!Note]  
-> Wenn Sie DRM zum Verschlüsseln einer Datei verwenden, kann kein Skript Befehl eine Präsentationszeit von 0 aufweisen.
+> Bei Verwendung von DRM zum Verschlüsseln einer Datei kann kein Skriptbefehl eine Präsentationszeit von 0 haben.
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Verwenden von Skript Befehlen**](using-script-commands.md)
+[**Verwenden von Skriptbefehlen**](using-script-commands.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 
