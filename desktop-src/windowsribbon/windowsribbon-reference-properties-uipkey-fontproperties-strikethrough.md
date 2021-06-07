@@ -1,69 +1,69 @@
 ---
 title: UI_PKEY_FontProperties_Strikethrough
-description: Identifiziert die Eigenschaft "Benutzeroberflächen- \_ pkey- \_ fontproperties-Eigenschaften" \_ .
+description: Identifiziert die \_ PKEY \_ FontProperties \_ Strikethrough-Eigenschaft der Benutzeroberfläche.
 ms.assetid: 18ee653d-db01-4615-a85d-ad4ac6a0f422
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b07804a74671bb219b34b1c67580af083fd5c34c
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 9b684704fdd90a8dd1b88b14db2b52540b15fccb
+ms.sourcegitcommit: 099ecdda1e83618b844387405da0db0ebda93a65
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104390853"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111443791"
 ---
-# <a name="ui_pkey_fontproperties_strikethrough"></a><span data-ttu-id="d2464-103">UI- \_ pkey- \_ fontproperties \_ durchgestrichen</span><span class="sxs-lookup"><span data-stu-id="d2464-103">UI\_PKEY\_FontProperties\_Strikethrough</span></span>
+# <a name="ui_pkey_fontproperties_strikethrough"></a><span data-ttu-id="c4473-103">UI \_ PKEY \_ FontProperties \_ Strikethrough</span><span class="sxs-lookup"><span data-stu-id="c4473-103">UI\_PKEY\_FontProperties\_Strikethrough</span></span>
 
-<span data-ttu-id="d2464-104">Identifiziert die Eigenschaft "Benutzeroberflächen- \_ pkey- \_ fontproperties-Eigenschaften" \_ .</span><span class="sxs-lookup"><span data-stu-id="d2464-104">Identifies the UI\_PKEY\_FontProperties\_Strikethrough property.</span></span>
+<span data-ttu-id="c4473-104">Identifiziert die \_ PKEY \_ FontProperties \_ Strikethrough-Eigenschaft der Benutzeroberfläche.</span><span class="sxs-lookup"><span data-stu-id="c4473-104">Identifies the UI\_PKEY\_FontProperties\_Strikethrough property.</span></span>
 
 ```
 propertyDescription
-   name = UI_PKEY_FontProperties_Strikethrough
-   shellPKey = UI_PKEY_FontProperties_Strikethrough
-   formatID = 00000306-7363-696e-8441798acf5aebb7
-   propID = 306
-   typeInfo
-      type = UI_FONTPROPERTIES
+   name = UI_PKEY_FontProperties_Strikethrough
+   shellPKey = UI_PKEY_FontProperties_Strikethrough
+   formatID = 00000306-7363-696e-8441798acf5aebb7
+   propID = 306
+   typeInfo
+      type = UI_FONTPROPERTIES
 ```
 
-## <a name="remarks"></a><span data-ttu-id="d2464-105">Bemerkungen</span><span class="sxs-lookup"><span data-stu-id="d2464-105">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="c4473-105">Hinweise</span><span class="sxs-lookup"><span data-stu-id="c4473-105">Remarks</span></span>
 
-<span data-ttu-id="d2464-106">UI \_ pkey \_ fontproperties durchgestrichen \_ wird von einer Anwendung verwendet, um den Zustand der Schaltfläche **durch** gestrichen abzufragen.</span><span class="sxs-lookup"><span data-stu-id="d2464-106">UI\_PKEY\_FontProperties\_Strikethrough is used by an application to query the state of the **Strikethrough** button.</span></span>
+<span data-ttu-id="c4473-106">PKEY FontProperties Strikethrough der Benutzeroberfläche wird von einer Anwendung verwendet, um den Zustand der \_ \_ Schaltfläche \_ **Durchgestreichen** abfragt.</span><span class="sxs-lookup"><span data-stu-id="c4473-106">UI\_PKEY\_FontProperties\_Strikethrough is used by an application to query the state of the **Strikethrough** button.</span></span>
 
-<span data-ttu-id="d2464-107">Der Eigenschafts Wert ist aus der [**UI \_ fontproperties**](/windows/desktop/api/uiribbon/ne-uiribbon-ui_fontproperties) -Enumeration.</span><span class="sxs-lookup"><span data-stu-id="d2464-107">The property value is from the [**UI\_FONTPROPERTIES**](/windows/desktop/api/uiribbon/ne-uiribbon-ui_fontproperties) enumeration.</span></span>
+<span data-ttu-id="c4473-107">Der -Eigenschaftswert ist aus der [**\_ FONTPROPERTIES-Enumeration der Benutzeroberfläche.**](/windows/desktop/api/uiribbon/ne-uiribbon-ui_fontproperties)</span><span class="sxs-lookup"><span data-stu-id="c4473-107">The property value is from the [**UI\_FONTPROPERTIES**](/windows/desktop/api/uiribbon/ne-uiribbon-ui_fontproperties) enumeration.</span></span>
 
-<span data-ttu-id="d2464-108">Der Standardwert ist `UI_FONTPROPERTIES_NOTSET`.</span><span class="sxs-lookup"><span data-stu-id="d2464-108">The default value is `UI_FONTPROPERTIES_NOTSET`.</span></span>
+<span data-ttu-id="c4473-108">Standardwert: `UI_FONTPROPERTIES_NOTSET`.</span><span class="sxs-lookup"><span data-stu-id="c4473-108">The default value is `UI_FONTPROPERTIES_NOTSET`.</span></span>
 
-<span data-ttu-id="d2464-109">Der folgende Screenshot zeigt die Schaltfläche **durch** gestrichen des Menübands [**FontControl**](windowsribbon-element-fontcontrol.md).</span><span class="sxs-lookup"><span data-stu-id="d2464-109">The following screen shot shows the **Strikethrough** button of the Ribbon [**FontControl**](windowsribbon-element-fontcontrol.md).</span></span>
+<span data-ttu-id="c4473-109">Der folgende Screenshot zeigt die Schaltfläche **Durchstreichen** des [**FontControl-Menübands.**](windowsribbon-element-fontcontrol.md)</span><span class="sxs-lookup"><span data-stu-id="c4473-109">The following screen shot shows the **Strikethrough** button of the Ribbon [**FontControl**](windowsribbon-element-fontcontrol.md).</span></span>
 
-![Screenshot des FontControl-Elements, bei dem das richfont-Attribut auf "true" festgelegt ist.](images/markup/fontcontrol-strikethrough.png)
+![Screenshot des fontcontrol-Elements mit dem richfont-Attribut, das auf TRUE festgelegt ist.](images/markup/fontcontrol-strikethrough.png)
 
-<span data-ttu-id="d2464-111">In der folgenden Tabelle werden die Eigenschaften und das Benutzeroberflächen Ergebnis beschrieben.</span><span class="sxs-lookup"><span data-stu-id="d2464-111">The following table describes the properties and the UI result.</span></span>
+<span data-ttu-id="c4473-111">In der folgenden Tabelle werden die Eigenschaften und das Ergebnis der Benutzeroberfläche beschrieben.</span><span class="sxs-lookup"><span data-stu-id="c4473-111">The following table describes the properties and the UI result.</span></span>
 
 
 
-|                                  |                                                                              |
+|   <span data-ttu-id="c4473-112">Eigenschaft</span><span class="sxs-lookup"><span data-stu-id="c4473-112">Property</span></span>                       |    <span data-ttu-id="c4473-113">Ergebnis der Benutzeroberfläche</span><span class="sxs-lookup"><span data-stu-id="c4473-113">UI Result</span></span>                                                                 |
 |----------------------------------|------------------------------------------------------------------------------|
-| `UI_FONTPROPERTIES_NOTAVAILABLE` | <span data-ttu-id="d2464-112">Die Schaltfläche " **durch** gestrichen" ist deaktiviert und kann nur von der Anwendung festgelegt werden.</span><span class="sxs-lookup"><span data-stu-id="d2464-112">**Strikethrough** button is disabled and can only be set by the application.</span></span> |
-| `UI_FONTPROPERTIES_NOTSET`       | <span data-ttu-id="d2464-113">Die Schaltfläche " **durch** gestrichen" ist nicht ausgewählt.</span><span class="sxs-lookup"><span data-stu-id="d2464-113">**Strikethrough** button is not selected.</span></span>                                    |
-| `UI_FONTPROPERTIES_SET`          | <span data-ttu-id="d2464-114">Die Schaltfläche " **durch** gestrichen" ist ausgewählt.</span><span class="sxs-lookup"><span data-stu-id="d2464-114">**Strikethrough** button is selected.</span></span>                                        |
+| `UI_FONTPROPERTIES_NOTAVAILABLE` | <span data-ttu-id="c4473-114">**Die Schaltfläche** "Durchgestreichen" ist deaktiviert und kann nur von der Anwendung festgelegt werden.</span><span class="sxs-lookup"><span data-stu-id="c4473-114">**Strikethrough** button is disabled and can only be set by the application.</span></span> |
+| `UI_FONTPROPERTIES_NOTSET`       | <span data-ttu-id="c4473-115">**Die Durchstreichschaltfläche** ist nicht ausgewählt.</span><span class="sxs-lookup"><span data-stu-id="c4473-115">**Strikethrough** button is not selected.</span></span>                                    |
+| `UI_FONTPROPERTIES_SET`          | <span data-ttu-id="c4473-116">**Die Schaltfläche Durchgestreichen** ist ausgewählt.</span><span class="sxs-lookup"><span data-stu-id="c4473-116">**Strikethrough** button is selected.</span></span>                                        |
 
 
 
- 
+ 
 
-## <a name="related-topics"></a><span data-ttu-id="d2464-115">Zugehörige Themen</span><span class="sxs-lookup"><span data-stu-id="d2464-115">Related topics</span></span>
+## <a name="related-topics"></a><span data-ttu-id="c4473-117">Zugehörige Themen</span><span class="sxs-lookup"><span data-stu-id="c4473-117">Related topics</span></span>
 
 <dl> <dt>
 
-[<span data-ttu-id="d2464-116">Schriftart Steuerelement-Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="d2464-116">Font Control Properties</span></span>](windowsribbon-reference-properties-fontcontrol.md)
+[<span data-ttu-id="c4473-118">Eigenschaften des Schriftart-Steuerelements</span><span class="sxs-lookup"><span data-stu-id="c4473-118">Font Control Properties</span></span>](windowsribbon-reference-properties-fontcontrol.md)
 </dt> <dt>
 
-[<span data-ttu-id="d2464-117">**UI- \_ fontproperties**</span><span class="sxs-lookup"><span data-stu-id="d2464-117">**UI\_FONTPROPERTIES**</span></span>](/windows/desktop/api/uiribbon/ne-uiribbon-ui_fontproperties)
+[<span data-ttu-id="c4473-119">**SCHRIFTARTEIGENSCHAFTEN \_ DER BENUTZEROBERFLÄCHE**</span><span class="sxs-lookup"><span data-stu-id="c4473-119">**UI\_FONTPROPERTIES**</span></span>](/windows/desktop/api/uiribbon/ne-uiribbon-ui_fontproperties)
 </dt> <dt>
 
-[<span data-ttu-id="d2464-118">Schriftart-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="d2464-118">Font Control</span></span>](windowsribbon-controls-fontcontrol.md)
+[<span data-ttu-id="c4473-120">Schriftart-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="c4473-120">Font Control</span></span>](windowsribbon-controls-fontcontrol.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
