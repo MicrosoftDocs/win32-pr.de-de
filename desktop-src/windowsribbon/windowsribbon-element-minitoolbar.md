@@ -1,6 +1,6 @@
 ---
 title: MiniToolbar-Element
-description: Stellt eine kontextabhängige Symbolleiste dar.
+description: Stellt eine kontextbezogene Symbolleiste dar.
 ms.assetid: bb50890d-554a-4add-a583-d4fd48b823bf
 keywords:
 - MiniToolbar-Element Windows-Menüband
@@ -13,18 +13,18 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: cb5e4a27d10fe5233f8e7059bc9da8ecfd2fa383
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: ceea8ba1a220674f177e740411bf98a13d7bfc2e
+ms.sourcegitcommit: 099ecdda1e83618b844387405da0db0ebda93a65
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "104100842"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111443261"
 ---
-# <a name="minitoolbar-element"></a><span data-ttu-id="02e5e-104">MiniToolbar-Element</span><span class="sxs-lookup"><span data-stu-id="02e5e-104">MiniToolbar element</span></span>
+# <a name="minitoolbar-element"></a><span data-ttu-id="ce761-104">MiniToolbar-Element</span><span class="sxs-lookup"><span data-stu-id="ce761-104">MiniToolbar element</span></span>
 
-<span data-ttu-id="02e5e-105">Stellt eine kontextabhängige Symbolleiste dar.</span><span class="sxs-lookup"><span data-stu-id="02e5e-105">Represents a contextual toolbar.</span></span>
+<span data-ttu-id="ce761-105">Stellt eine kontextbezogene Symbolleiste dar.</span><span class="sxs-lookup"><span data-stu-id="ce761-105">Represents a contextual toolbar.</span></span>
 
-## <a name="usage"></a><span data-ttu-id="02e5e-106">Verbrauch</span><span class="sxs-lookup"><span data-stu-id="02e5e-106">Usage</span></span>
+## <a name="usage"></a><span data-ttu-id="ce761-106">Verwendung</span><span class="sxs-lookup"><span data-stu-id="ce761-106">Usage</span></span>
 
 ``` syntax
 <MiniToolbar
@@ -33,58 +33,58 @@ ms.locfileid: "104100842"
 </MiniToolbar>
 ```
 
-## <a name="attributes"></a><span data-ttu-id="02e5e-107">Attribute</span><span class="sxs-lookup"><span data-stu-id="02e5e-107">Attributes</span></span>
+## <a name="attributes"></a><span data-ttu-id="ce761-107">Attribute</span><span class="sxs-lookup"><span data-stu-id="ce761-107">Attributes</span></span>
 
 
 
-| <span data-ttu-id="02e5e-108">Attribut</span><span class="sxs-lookup"><span data-stu-id="02e5e-108">Attribute</span></span>           | <span data-ttu-id="02e5e-109">type</span><span class="sxs-lookup"><span data-stu-id="02e5e-109">Type</span></span>                 | <span data-ttu-id="02e5e-110">Erforderlich</span><span class="sxs-lookup"><span data-stu-id="02e5e-110">Required</span></span>       | <span data-ttu-id="02e5e-111">BESCHREIBUNG</span><span class="sxs-lookup"><span data-stu-id="02e5e-111">Description</span></span>                                                                                                                                                                                                                |
+| <span data-ttu-id="ce761-108">attribute</span><span class="sxs-lookup"><span data-stu-id="ce761-108">Attribute</span></span>           | <span data-ttu-id="ce761-109">Typ</span><span class="sxs-lookup"><span data-stu-id="ce761-109">Type</span></span>                 | <span data-ttu-id="ce761-110">Erforderlich</span><span class="sxs-lookup"><span data-stu-id="ce761-110">Required</span></span>       | <span data-ttu-id="ce761-111">BESCHREIBUNG</span><span class="sxs-lookup"><span data-stu-id="ce761-111">Description</span></span>                                                                                                                                                                                                                |
 |---------------------|----------------------|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span data-ttu-id="02e5e-112">**Name**</span><span class="sxs-lookup"><span data-stu-id="02e5e-112">**Name**</span></span><br/> | <span data-ttu-id="02e5e-113">xs:string</span><span class="sxs-lookup"><span data-stu-id="02e5e-113">xs:string</span></span><br/> | <span data-ttu-id="02e5e-114">Ja</span><span class="sxs-lookup"><span data-stu-id="02e5e-114">Yes</span></span><br/> | <span data-ttu-id="02e5e-115"><dt> (xs: String)</span><span class="sxs-lookup"><span data-stu-id="02e5e-115"><dt> (xs:string)</span></span><br/> </dt> <dd> <span data-ttu-id="02e5e-116">Eine Zeichenfolge, die aus einer beliebigen Zeichen Sequenz besteht, einschließlich Leerzeichen und Zeilenumbruch Zeichen.</span><span class="sxs-lookup"><span data-stu-id="02e5e-116">A string composed of any sequence of characters, including white space and line-break characters.</span></span><br/> </dd> </dl> |
+| <span data-ttu-id="ce761-112">**Name**</span><span class="sxs-lookup"><span data-stu-id="ce761-112">**Name**</span></span><br/> | <span data-ttu-id="ce761-113">xs:string</span><span class="sxs-lookup"><span data-stu-id="ce761-113">xs:string</span></span><br/> | <span data-ttu-id="ce761-114">Ja</span><span class="sxs-lookup"><span data-stu-id="ce761-114">Yes</span></span><br/> | <span data-ttu-id="ce761-115"><dt> (xs:string)</span><span class="sxs-lookup"><span data-stu-id="ce761-115"><dt> (xs:string)</span></span><br/> </dt> <dd> <span data-ttu-id="ce761-116">Eine Zeichenfolge, die aus einer beliebigen Sequenz von Zeichen besteht, einschließlich Leerzeichen und Zeilenunterbrechungszeichen.</span><span class="sxs-lookup"><span data-stu-id="ce761-116">A string composed of any sequence of characters, including white space and line-break characters.</span></span><br/> </dd> </dl> |
 
 
 
-## <a name="child-elements"></a><span data-ttu-id="02e5e-117">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="02e5e-117">Child elements</span></span>
+## <a name="child-elements"></a><span data-ttu-id="ce761-117">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="ce761-117">Child elements</span></span>
 
 
 
-| <span data-ttu-id="02e5e-118">Element</span><span class="sxs-lookup"><span data-stu-id="02e5e-118">Element</span></span>                                                         | <span data-ttu-id="02e5e-119">BESCHREIBUNG</span><span class="sxs-lookup"><span data-stu-id="02e5e-119">Description</span></span>                                     |
+| <span data-ttu-id="ce761-118">Element</span><span class="sxs-lookup"><span data-stu-id="ce761-118">Element</span></span>                                                         | <span data-ttu-id="ce761-119">BESCHREIBUNG</span><span class="sxs-lookup"><span data-stu-id="ce761-119">Description</span></span>                                     |
 |-----------------------------------------------------------------|-------------------------------------------------|
-| [<span data-ttu-id="02e5e-120">**MenuGroup**</span><span class="sxs-lookup"><span data-stu-id="02e5e-120">**MenuGroup**</span></span>](windowsribbon-element-menugroup.md)<br/> | <span data-ttu-id="02e5e-121">Muss mindestens einmal vorkommen</span><span class="sxs-lookup"><span data-stu-id="02e5e-121">Must occur at least once</span></span><br/> <br/> |
+| [<span data-ttu-id="ce761-120">**Menugroup**</span><span class="sxs-lookup"><span data-stu-id="ce761-120">**MenuGroup**</span></span>](windowsribbon-element-menugroup.md)<br/> | <span data-ttu-id="ce761-121">Muss mindestens einmal auftreten</span><span class="sxs-lookup"><span data-stu-id="ce761-121">Must occur at least once</span></span><br/> <br/> |
 
 
 
-## <a name="parent-elements"></a><span data-ttu-id="02e5e-122">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="02e5e-122">Parent elements</span></span>
+## <a name="parent-elements"></a><span data-ttu-id="ce761-122">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="ce761-122">Parent elements</span></span>
 
 
 
-| <span data-ttu-id="02e5e-123">Element</span><span class="sxs-lookup"><span data-stu-id="02e5e-123">Element</span></span>                                                                                         |
+| <span data-ttu-id="ce761-123">Element</span><span class="sxs-lookup"><span data-stu-id="ce761-123">Element</span></span>                                                                                         |
 |-------------------------------------------------------------------------------------------------|
-| [<span data-ttu-id="02e5e-124">**Contextpopup. minitoolbars**</span><span class="sxs-lookup"><span data-stu-id="02e5e-124">**ContextPopup.MiniToolbars**</span></span>](windowsribbon-element-contextpopup-minitoolbars.md)<br/> |
+| [<span data-ttu-id="ce761-124">**ContextPopup.MiniToolbars**</span><span class="sxs-lookup"><span data-stu-id="ce761-124">**ContextPopup.MiniToolbars**</span></span>](windowsribbon-element-contextpopup-minitoolbars.md)<br/> |
 
 
 
-## <a name="remarks"></a><span data-ttu-id="02e5e-125">Bemerkungen</span><span class="sxs-lookup"><span data-stu-id="02e5e-125">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="ce761-125">Hinweise</span><span class="sxs-lookup"><span data-stu-id="ce761-125">Remarks</span></span>
 
-<span data-ttu-id="02e5e-126">Dies ist optional.</span><span class="sxs-lookup"><span data-stu-id="02e5e-126">Optional.</span></span>
+<span data-ttu-id="ce761-126">Dies ist optional.</span><span class="sxs-lookup"><span data-stu-id="ce761-126">Optional.</span></span>
 
-<span data-ttu-id="02e5e-127">Kann für jede " [**contextpopup. minitoolbars**](windowsribbon-element-contextpopup-minitoolbars.md)" einmal oder mehrmals vorkommen.</span><span class="sxs-lookup"><span data-stu-id="02e5e-127">May occur one or more times for each [**ContextPopup.MiniToolbars**](windowsribbon-element-contextpopup-minitoolbars.md).</span></span>
+<span data-ttu-id="ce761-127">Kann ein oder mehrere Male für jede [**ContextPopup.MiniToolbars**](windowsribbon-element-contextpopup-minitoolbars.md)auftreten.</span><span class="sxs-lookup"><span data-stu-id="ce761-127">May occur one or more times for each [**ContextPopup.MiniToolbars**](windowsribbon-element-contextpopup-minitoolbars.md).</span></span>
 
-<span data-ttu-id="02e5e-128">Anders als das [**ContextMenu**](windowsribbon-element-contextmenu.md) -Element bleibt die **MiniToolbar** sichtbar, wenn auf ein Element auf der Symbolleiste geklickt wird.</span><span class="sxs-lookup"><span data-stu-id="02e5e-128">Unlike the [**ContextMenu**](windowsribbon-element-contextmenu.md) element, the **MiniToolbar** remains visible when an item on the toolbar is clicked.</span></span>
+<span data-ttu-id="ce761-128">Im Gegensatz zum [**ContextMenu-Element**](windowsribbon-element-contextmenu.md) bleibt die **MiniToolbar** sichtbar, wenn auf ein Element auf der Symbolleiste geklickt wird.</span><span class="sxs-lookup"><span data-stu-id="ce761-128">Unlike the [**ContextMenu**](windowsribbon-element-contextmenu.md) element, the **MiniToolbar** remains visible when an item on the toolbar is clicked.</span></span>
 
-<span data-ttu-id="02e5e-129">Wenn es ohne [**ContextMenu**](windowsribbon-element-contextmenu.md)angezeigt wird, wird die **MiniToolbar** ausgeblendet, wenn der Mauszeiger entfernt wird.</span><span class="sxs-lookup"><span data-stu-id="02e5e-129">If displayed without a [**ContextMenu**](windowsribbon-element-contextmenu.md), the **MiniToolbar** fades as the mouse pointer is moved away.</span></span>
+<span data-ttu-id="ce761-129">Wenn die **Minitoolleiste** ohne [**ContextMenu**](windowsribbon-element-contextmenu.md)angezeigt wird, wird sie ausgeblendet, wenn der Mauszeiger entfernt wird.</span><span class="sxs-lookup"><span data-stu-id="ce761-129">If displayed without a [**ContextMenu**](windowsribbon-element-contextmenu.md), the **MiniToolbar** fades as the mouse pointer is moved away.</span></span>
 
 > [!Note]  
-> <span data-ttu-id="02e5e-130">Aufgrund dieses verblassenden Verhaltens sollte ein [**ContextMenu**](windowsribbon-element-contextmenu.md) in der Nähe des Mauszeigers angezeigt werden.</span><span class="sxs-lookup"><span data-stu-id="02e5e-130">Due to this fading behavior, a [**ContextMenu**](windowsribbon-element-contextmenu.md) should be displayed in close proximity to the mouse pointer.</span></span>
+> <span data-ttu-id="ce761-130">Aufgrund dieses verblassenden Verhaltens sollte ein [**ContextMenu**](windowsribbon-element-contextmenu.md) in unmittelbarer Nähe zum Mauszeiger angezeigt werden.</span><span class="sxs-lookup"><span data-stu-id="ce761-130">Due to this fading behavior, a [**ContextMenu**](windowsribbon-element-contextmenu.md) should be displayed in close proximity to the mouse pointer.</span></span>
 
  
 
-<span data-ttu-id="02e5e-131">Da Steuerelemente in der **MiniToolbar** nicht auf Tastatur zugänglich sind, sollten die von Ihnen verfügbar gemachten Befehle an anderer Stelle in der Multifunktionsleisten-Benutzeroberfläche verfügbar sein.</span><span class="sxs-lookup"><span data-stu-id="02e5e-131">Because controls in the **MiniToolbar** are not keyboard accessible, the Commands they expose should be available elsewhere in the Ribbon UI.</span></span>
+<span data-ttu-id="ce761-131">Da auf Steuerelemente in der **MiniToolbar** nicht über die Tastatur zugegriffen werden kann, sollten die verfügbar gemachten Befehle an anderer Stelle auf der Menübandbenutzeroberfläche verfügbar sein.</span><span class="sxs-lookup"><span data-stu-id="ce761-131">Because controls in the **MiniToolbar** are not keyboard accessible, the Commands they expose should be available elsewhere in the Ribbon UI.</span></span>
 
-## <a name="examples"></a><span data-ttu-id="02e5e-132">Beispiele</span><span class="sxs-lookup"><span data-stu-id="02e5e-132">Examples</span></span>
+## <a name="examples"></a><span data-ttu-id="ce761-132">Beispiele</span><span class="sxs-lookup"><span data-stu-id="ce761-132">Examples</span></span>
 
-<span data-ttu-id="02e5e-133">Im folgenden Beispiel wird das grundlegende Markup für eine [**contextpopup**](windowsribbon-element-contextpopup.md) -Ansicht veranschaulicht.</span><span class="sxs-lookup"><span data-stu-id="02e5e-133">The following example demonstrates the basic markup for a [**ContextPopup**](windowsribbon-element-contextpopup.md) View.</span></span>
+<span data-ttu-id="ce761-133">Im folgenden Beispiel wird das grundlegende Markup für eine [**ContextPopup-Ansicht**](windowsribbon-element-contextpopup.md) veranschaulicht.</span><span class="sxs-lookup"><span data-stu-id="ce761-133">The following example demonstrates the basic markup for a [**ContextPopup**](windowsribbon-element-contextpopup.md) View.</span></span>
 
-<span data-ttu-id="02e5e-134">Dieser Code Abschnitt zeigt einen Satz von **MiniToolbar** -Steuerelement Deklarationen.</span><span class="sxs-lookup"><span data-stu-id="02e5e-134">This section of code shows a set of **MiniToolbar** control declarations.</span></span>
+<span data-ttu-id="ce761-134">Dieser Codeabschnitt zeigt eine Reihe von **MiniToolbar-Steuerelementdeklarationen.**</span><span class="sxs-lookup"><span data-stu-id="ce761-134">This section of code shows a set of **MiniToolbar** control declarations.</span></span>
 
 
 ```XML
@@ -171,22 +171,18 @@ ms.locfileid: "104100842"
 
 
 
-## <a name="element-information"></a><span data-ttu-id="02e5e-135">Elementinformationen</span><span class="sxs-lookup"><span data-stu-id="02e5e-135">Element information</span></span>
+## <a name="element-information"></a><span data-ttu-id="ce761-135">Elementinformationen</span><span class="sxs-lookup"><span data-stu-id="ce761-135">Element information</span></span>
+
+* <span data-ttu-id="ce761-136">**Unterstütztes Mindestsystem:** Windows 7</span><span class="sxs-lookup"><span data-stu-id="ce761-136">**Minimum supported system**: Windows 7</span></span>
+* <span data-ttu-id="ce761-137">**Kann leer sein:** Nein</span><span class="sxs-lookup"><span data-stu-id="ce761-137">**Can be empty**: No</span></span>
 
 
 
-|                                     |           |
-|-------------------------------------|-----------|
-| <span data-ttu-id="02e5e-136">Unterstützte Mindestversion (System)</span><span class="sxs-lookup"><span data-stu-id="02e5e-136">Minimum supported system</span></span><br/> | <span data-ttu-id="02e5e-137">Windows 7</span><span class="sxs-lookup"><span data-stu-id="02e5e-137">Windows 7</span></span> |
-| <span data-ttu-id="02e5e-138">Kann leer bleiben</span><span class="sxs-lookup"><span data-stu-id="02e5e-138">Can be empty</span></span>                        | <span data-ttu-id="02e5e-139">Nein</span><span class="sxs-lookup"><span data-stu-id="02e5e-139">No</span></span>        |
-
-
-
-## <a name="see-also"></a><span data-ttu-id="02e5e-140">Weitere Informationen</span><span class="sxs-lookup"><span data-stu-id="02e5e-140">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ce761-138">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="ce761-138">See also</span></span>
 
 <dl> <dt>
 
-[<span data-ttu-id="02e5e-141">Kontext-Popup Steuerelement</span><span class="sxs-lookup"><span data-stu-id="02e5e-141">Context Popup control</span></span>](windowsribbon-controls-contextpopup.md)
+[<span data-ttu-id="ce761-139">Kontext-Popup-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="ce761-139">Context Popup control</span></span>](windowsribbon-controls-contextpopup.md)
 </dt> </dl>
 
  

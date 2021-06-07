@@ -1,9 +1,9 @@
 ---
 title: Row-Element
-description: Stellt eine Zeile von Steuerelementen in einer benutzerdefinierten sizedefinition-Layoutvorlage dar.
+description: Stellt eine Zeile von Steuerelementen in einer benutzerdefinierten SizeDefinition-Layoutvorlage dar.
 ms.assetid: c3dac35f-3537-4eb7-b378-501ea88813f5
 keywords:
-- Windows-Menüband für Zeilen Element
+- Zeilenelement Im Windows-Menüband
 topic_type:
 - apiref
 api_name:
@@ -13,18 +13,18 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 83a0a5a9e7908cc1c8cff688b3fefc1e8910b6a4
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 7d642cd209b3e00e2c63f7376e321132a1c0e686
+ms.sourcegitcommit: 099ecdda1e83618b844387405da0db0ebda93a65
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "106341271"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111445021"
 ---
-# <a name="row-element"></a><span data-ttu-id="85013-104">Row-Element</span><span class="sxs-lookup"><span data-stu-id="85013-104">Row element</span></span>
+# <a name="row-element"></a><span data-ttu-id="dbcf1-104">Row-Element</span><span class="sxs-lookup"><span data-stu-id="dbcf1-104">Row element</span></span>
 
-<span data-ttu-id="85013-105">Stellt eine Zeile von Steuerelementen in einer benutzerdefinierten sizedefinition-Layoutvorlage dar.</span><span class="sxs-lookup"><span data-stu-id="85013-105">Represents a row of controls in a custom SizeDefinition layout template.</span></span>
+<span data-ttu-id="dbcf1-105">Stellt eine Zeile von Steuerelementen in einer benutzerdefinierten SizeDefinition-Layoutvorlage dar.</span><span class="sxs-lookup"><span data-stu-id="dbcf1-105">Represents a row of controls in a custom SizeDefinition layout template.</span></span>
 
-## <a name="usage"></a><span data-ttu-id="85013-106">Verbrauch</span><span class="sxs-lookup"><span data-stu-id="85013-106">Usage</span></span>
+## <a name="usage"></a><span data-ttu-id="dbcf1-106">Verwendung</span><span class="sxs-lookup"><span data-stu-id="dbcf1-106">Usage</span></span>
 
 ``` syntax
 <Row>
@@ -32,40 +32,40 @@ ms.locfileid: "106341271"
 </Row>
 ```
 
-## <a name="attributes"></a><span data-ttu-id="85013-107">Attribute</span><span class="sxs-lookup"><span data-stu-id="85013-107">Attributes</span></span>
+## <a name="attributes"></a><span data-ttu-id="dbcf1-107">Attribute</span><span class="sxs-lookup"><span data-stu-id="dbcf1-107">Attributes</span></span>
 
-<span data-ttu-id="85013-108">Es gibt keine Attribute.</span><span class="sxs-lookup"><span data-stu-id="85013-108">There are no attributes.</span></span>
+<span data-ttu-id="dbcf1-108">Es gibt keine Attribute.</span><span class="sxs-lookup"><span data-stu-id="dbcf1-108">There are no attributes.</span></span>
 
-## <a name="child-elements"></a><span data-ttu-id="85013-109">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="85013-109">Child elements</span></span>
+## <a name="child-elements"></a><span data-ttu-id="dbcf1-109">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="dbcf1-109">Child elements</span></span>
 
 
 
-| <span data-ttu-id="85013-110">Element</span><span class="sxs-lookup"><span data-stu-id="85013-110">Element</span></span>                                                                                 | <span data-ttu-id="85013-111">BESCHREIBUNG</span><span class="sxs-lookup"><span data-stu-id="85013-111">Description</span></span>                                        |
+| <span data-ttu-id="dbcf1-110">Element</span><span class="sxs-lookup"><span data-stu-id="dbcf1-110">Element</span></span>                                                                                 | <span data-ttu-id="dbcf1-111">BESCHREIBUNG</span><span class="sxs-lookup"><span data-stu-id="dbcf1-111">Description</span></span>                                        |
 |-----------------------------------------------------------------------------------------|----------------------------------------------------|
-| [<span data-ttu-id="85013-112">**Controlgroup**</span><span class="sxs-lookup"><span data-stu-id="85013-112">**ControlGroup**</span></span>](windowsribbon-element-controlgroup.md)<br/>                   | <span data-ttu-id="85013-113">Kann ein-oder mehrmals vorkommen</span><span class="sxs-lookup"><span data-stu-id="85013-113">May occur one or more times</span></span><br/> <br/> |
-| [<span data-ttu-id="85013-114">**Controlsizedefinition**</span><span class="sxs-lookup"><span data-stu-id="85013-114">**ControlSizeDefinition**</span></span>](windowsribbon-element-controlsizedefinition.md)<br/> | <span data-ttu-id="85013-115">Kann ein-oder mehrmals vorkommen</span><span class="sxs-lookup"><span data-stu-id="85013-115">May occur one or more times</span></span><br/> <br/> |
+| [<span data-ttu-id="dbcf1-112">**ControlGroup**</span><span class="sxs-lookup"><span data-stu-id="dbcf1-112">**ControlGroup**</span></span>](windowsribbon-element-controlgroup.md)<br/>                   | <span data-ttu-id="dbcf1-113">Kann ein oder mehrere Male auftreten.</span><span class="sxs-lookup"><span data-stu-id="dbcf1-113">May occur one or more times</span></span><br/> <br/> |
+| [<span data-ttu-id="dbcf1-114">**ControlSizeDefinition**</span><span class="sxs-lookup"><span data-stu-id="dbcf1-114">**ControlSizeDefinition**</span></span>](windowsribbon-element-controlsizedefinition.md)<br/> | <span data-ttu-id="dbcf1-115">Kann ein oder mehrere Male auftreten.</span><span class="sxs-lookup"><span data-stu-id="dbcf1-115">May occur one or more times</span></span><br/> <br/> |
 
 
 
-## <a name="parent-elements"></a><span data-ttu-id="85013-116">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="85013-116">Parent elements</span></span>
+## <a name="parent-elements"></a><span data-ttu-id="dbcf1-116">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="dbcf1-116">Parent elements</span></span>
 
 
 
-| <span data-ttu-id="85013-117">Element</span><span class="sxs-lookup"><span data-stu-id="85013-117">Element</span></span>                                                                             |
+| <span data-ttu-id="dbcf1-117">Element</span><span class="sxs-lookup"><span data-stu-id="dbcf1-117">Element</span></span>                                                                             |
 |-------------------------------------------------------------------------------------|
-| [<span data-ttu-id="85013-118">**Groupsizedefinition**</span><span class="sxs-lookup"><span data-stu-id="85013-118">**GroupSizeDefinition**</span></span>](windowsribbon-element-groupsizedefinition.md)<br/> |
+| [<span data-ttu-id="dbcf1-118">**GroupSizeDefinition**</span><span class="sxs-lookup"><span data-stu-id="dbcf1-118">**GroupSizeDefinition**</span></span>](windowsribbon-element-groupsizedefinition.md)<br/> |
 
 
 
-## <a name="remarks"></a><span data-ttu-id="85013-119">Bemerkungen</span><span class="sxs-lookup"><span data-stu-id="85013-119">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="dbcf1-119">Hinweise</span><span class="sxs-lookup"><span data-stu-id="dbcf1-119">Remarks</span></span>
 
-<span data-ttu-id="85013-120">Dies ist optional.</span><span class="sxs-lookup"><span data-stu-id="85013-120">Optional.</span></span>
+<span data-ttu-id="dbcf1-120">Dies ist optional.</span><span class="sxs-lookup"><span data-stu-id="dbcf1-120">Optional.</span></span>
 
-<span data-ttu-id="85013-121">Kann für jedes [**groupsizedefinition**](windowsribbon-element-groupsizedefinition.md) -Element einmal oder mehrmals vorkommen.</span><span class="sxs-lookup"><span data-stu-id="85013-121">May occur one or more times for each [**GroupSizeDefinition**](windowsribbon-element-groupsizedefinition.md) element.</span></span>
+<span data-ttu-id="dbcf1-121">Kann ein oder mehrere Male für jedes [**GroupSizeDefinition-Element**](windowsribbon-element-groupsizedefinition.md) auftreten.</span><span class="sxs-lookup"><span data-stu-id="dbcf1-121">May occur one or more times for each [**GroupSizeDefinition**](windowsribbon-element-groupsizedefinition.md) element.</span></span>
 
-## <a name="examples"></a><span data-ttu-id="85013-122">Beispiele</span><span class="sxs-lookup"><span data-stu-id="85013-122">Examples</span></span>
+## <a name="examples"></a><span data-ttu-id="dbcf1-122">Beispiele</span><span class="sxs-lookup"><span data-stu-id="dbcf1-122">Examples</span></span>
 
-<span data-ttu-id="85013-123">Im folgenden Codebeispiel wird das grundlegende Markup für eine benutzerdefinierte [**sizedefinition**](windowsribbon-element-sizedefinition.md) -Layoutvorlage mit vier Schaltflächen mit verschiedenen **Zeilen** Elementen veranschaulicht.</span><span class="sxs-lookup"><span data-stu-id="85013-123">The following code example demonstrates the basic markup for a custom four-button [**SizeDefinition**](windowsribbon-element-sizedefinition.md) layout template with various **Row** elements.</span></span>
+<span data-ttu-id="dbcf1-123">Im folgenden Codebeispiel wird das grundlegende Markup für eine benutzerdefinierte [**SizeDefinition-Layoutvorlage**](windowsribbon-element-sizedefinition.md) mit vier Schaltflächen mit verschiedenen **Row-Elementen** veranschaulicht.</span><span class="sxs-lookup"><span data-stu-id="dbcf1-123">The following code example demonstrates the basic markup for a custom four-button [**SizeDefinition**](windowsribbon-element-sizedefinition.md) layout template with various **Row** elements.</span></span>
 
 
 ```XML
@@ -155,22 +155,21 @@ ms.locfileid: "106341271"
 
 
 
-## <a name="element-information"></a><span data-ttu-id="85013-124">Elementinformationen</span><span class="sxs-lookup"><span data-stu-id="85013-124">Element information</span></span>
+## <a name="element-information"></a><span data-ttu-id="dbcf1-124">Elementinformationen</span><span class="sxs-lookup"><span data-stu-id="dbcf1-124">Element information</span></span>
 
 
 
-|                                     |           |
-|-------------------------------------|-----------|
-| <span data-ttu-id="85013-125">Unterstützte Mindestversion (System)</span><span class="sxs-lookup"><span data-stu-id="85013-125">Minimum supported system</span></span><br/> | <span data-ttu-id="85013-126">Windows 7</span><span class="sxs-lookup"><span data-stu-id="85013-126">Windows 7</span></span> |
-| <span data-ttu-id="85013-127">Kann leer bleiben</span><span class="sxs-lookup"><span data-stu-id="85013-127">Can be empty</span></span>                        | <span data-ttu-id="85013-128">Nein</span><span class="sxs-lookup"><span data-stu-id="85013-128">No</span></span>        |
+
+* <span data-ttu-id="dbcf1-125">**Unterstütztes Mindestsystem:** Windows 7</span><span class="sxs-lookup"><span data-stu-id="dbcf1-125">**Minimum supported system**: Windows 7</span></span>
+* <span data-ttu-id="dbcf1-126">**Kann leer sein:** Nein</span><span class="sxs-lookup"><span data-stu-id="dbcf1-126">**Can be empty**: No</span></span>
 
 
 
-## <a name="see-also"></a><span data-ttu-id="85013-129">Weitere Informationen</span><span class="sxs-lookup"><span data-stu-id="85013-129">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="dbcf1-127">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="dbcf1-127">See also</span></span>
 
 <dl> <dt>
 
-[<span data-ttu-id="85013-130">Anpassen eines Menübands durch Größen Definitionen und Skalierungs Richtlinien</span><span class="sxs-lookup"><span data-stu-id="85013-130">Customizing a Ribbon Through Size Definitions and Scaling Policies</span></span>](windowsribbon-templates.md)
+[<span data-ttu-id="dbcf1-128">Anpassen eines Menübands durch Größendefinitionen und Skalierungsrichtlinien</span><span class="sxs-lookup"><span data-stu-id="dbcf1-128">Customizing a Ribbon Through Size Definitions and Scaling Policies</span></span>](windowsribbon-templates.md)
 </dt> </dl>
 
  
