@@ -1,19 +1,19 @@
 ---
-description: Enthält einen Satz von Elementen&\# 8212; Absatz, InkWord, Zeichnung, Text, Bild oder Flag&\# 8212;, die in der Journal Notiz gruppiert sind.
+description: Enthält eine Reihe von Elementen&\# 8212; Paragraph, InkWord, Drawing, Text, Image oder Flag&\# 8212;, die in der Journalnotiz gruppiert sind.
 ms.assetid: 59ee3037-7178-41c8-84d5-d5c68fa2cf9b
-title: Groupnode-Element
+title: GroupNode-Element
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6ee141691ef58d14e6c08a49544e9cf3ecf7540b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: cbc4d39a592b5b6328bd31ff37761cfd3f0138c0
+ms.sourcegitcommit: c3f669dc1d52278432bf75ad9fddba3257d26aa2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106346960"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111432571"
 ---
-# <a name="groupnode-element"></a>Groupnode-Element
+# <a name="groupnode-element"></a>GroupNode-Element
 
-Enthält eine Reihe von Elementen –[**Absatz**](paragraph-element.md), [**InkWord**](inkword-element.md), [**Zeichnung**](drawing-element.md), [**Text**](text-element.md), [**Bild**](image-element.md)oder [**Flag**](flag-element.md)–, die in der Journal Notiz gruppiert sind.
+Enthält eine Reihe von Elementen –[**Absatz**](paragraph-element.md), [**InkWord**](inkword-element.md), [**Zeichnung**](drawing-element.md), [**Text**](text-element.md), [**Bild**](image-element.md)oder [**Flag**](flag-element.md)– die in der Journalnotiz zusammen bzw. niert sind.
 
 ## <a name="definition"></a>Definition
 
@@ -43,12 +43,12 @@ Enthält eine Reihe von Elementen –[**Absatz**](paragraph-element.md), [**InkW
 
 
 
-| Attribut  | type                      | Erforderlich | BESCHREIBUNG                                                                             | Mögliche Werte           |
+| attribute  | Typ                      | Erforderlich | BESCHREIBUNG                                                                             | Mögliche Werte           |
 |------------|---------------------------|----------|-----------------------------------------------------------------------------------------|---------------------------|
-| **Left**   | **xs:integer**            | Erforderlich | Der Abstand zwischen dem Ursprung und dem äußersten äußersten linken Punkt im umgebenden Feld des Elements. | Eine beliebige ganze Zahl.              |
-| **Top**    | **xs:integer**            | Erforderlich | Der Abstand zwischen dem Ursprung und dem obersten Punkt im umgebenden Feld für das Element.  | Eine beliebige ganze Zahl.              |
-| **Width**  | **xs:nonNegativeInteger** | Erforderlich | Die Breite des Begrenzungs Rahmens für das Element.                                          | Eine beliebige nicht negative ganze Zahl. |
-| **Height** | **xs:nonNegativeInteger** | Erforderlich | Die Höhe des umgebenden Felds für das Element.                                         | Eine beliebige nicht negative ganze Zahl. |
+| **Left**   | **xs:integer**            | Erforderlich | Der Abstand zwischen dem Ursprung und dem äußersten linken Punkt im Begrenzungsfeld für das Element. | Eine beliebige ganze Zahl.              |
+| **Top**    | **xs:integer**            | Erforderlich | Der Abstand zwischen dem Ursprung und dem obersten Punkt im Begrenzungsfeld für das Element.  | Eine beliebige ganze Zahl.              |
+| **Width**  | **xs:nonNegativeInteger** | Erforderlich | Die Breite des Begrenzungsfelds für das Element.                                          | Eine nicht negative ganze Zahl. |
+| **Height** | **xs:nonNegativeInteger** | Erforderlich | Die Höhe des Begrenzungsfelds für das Element.                                         | Eine nicht negative ganze Zahl. |
 
 
 
@@ -58,11 +58,11 @@ Enthält eine Reihe von Elementen –[**Absatz**](paragraph-element.md), [**InkW
 
 
 
-|              |                                                                 |
+|  Element     | Wert                                                     |
 |--------------|-----------------------------------------------------------------|
-| Elementtyp | ComplexType " [**groupnodetype**](groupnodetype-complex-type.md) " |
-| Namespace    | urn: Schemas-Microsoft-com: TabletPC: RichInk                      |
-| Schemaname  | Journal Leser                                                  |
+| Elementtyp | [**complexType: GroupNodeType**](groupnodetype-complex-type.md) |
+| Namespace    | urn:schemas-microsoft-com:tabletpc:richink                      |
+| Schemaname  | Journalreader                                                  |
 
 
 

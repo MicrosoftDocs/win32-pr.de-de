@@ -1,9 +1,9 @@
 ---
-title: Quickaccesstoolbar-Element
-description: Stellt die Symbolleiste für den schnell Zugriff (QAT) dar, eine kleine Symbolleiste, die Verknüpfungen zu Menü Band Befehlen anzeigt.
+title: QuickAccessToolbar-Element
+description: Stellt die Schnellzugriffssymbolleiste (Quick Access Toolbar, QAT) dar, eine kleine Symbolleiste, die Verknüpfungen zu Menübandbefehlen anzeigt.
 ms.assetid: 59aa35c3-a844-46b3-b066-c9a321fb0891
 keywords:
-- Windows-Menüband für quickaccesstoolbar-Element
+- QuickAccessToolbar-Element Windows-Menüband
 topic_type:
 - apiref
 api_name:
@@ -13,18 +13,18 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 0076890a8d9858d4bf410ecfdd866bf4f48fdbb6
-ms.sourcegitcommit: 927b9c371f75f52b8011483edf3a4ba37d11ebe4
+ms.openlocfilehash: 6ae01f620d66298a5f7200d0be947dbfb3750af4
+ms.sourcegitcommit: 099ecdda1e83618b844387405da0db0ebda93a65
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "104389804"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111443301"
 ---
-# <a name="quickaccesstoolbar-element"></a>Quickaccesstoolbar-Element
+# <a name="quickaccesstoolbar-element"></a>QuickAccessToolbar-Element
 
-Stellt die [Symbolleiste für den schnell Zugriff (QAT)](windowsribbon-controls-quickaccesstoolbar.md)dar, eine kleine Symbolleiste, die Verknüpfungen zu Menü Band Befehlen anzeigt.
+Stellt die [Quick Access Toolbar (QAT)](windowsribbon-controls-quickaccesstoolbar.md)dar, eine kleine Symbolleiste, die Verknüpfungen zu Menübandbefehlen anzeigt.
 
-## <a name="usage"></a>Verbrauch
+## <a name="usage"></a>Verwendung
 
 ``` syntax
 <QuickAccessToolbar
@@ -47,8 +47,8 @@ Stellt die [Symbolleiste für den schnell Zugriff (QAT)](windowsribbon-controls-
 </colgroup>
 <thead>
 <tr class="header">
-<th>Attribut</th>
-<th>type</th>
+<th>attribute</th>
+<th>Typ</th>
 <th>Erforderlich</th>
 <th>BESCHREIBUNG</th>
 </tr>
@@ -56,17 +56,17 @@ Stellt die [Symbolleiste für den schnell Zugriff (QAT)](windowsribbon-controls-
 <tbody>
 <tr class="odd">
 <td><strong>CommandName</strong><br/></td>
-<td>xs: positiveingeteger oder xs: String<br/></td>
+<td>xs:positiveInteger oder xs:string<br/></td>
 <td>Nein<br/></td>
-<td>Ordnet das-Element einem <a href="windowsribbon-element-command.md"><strong>Befehl</strong></a>zu.<br/> <br/>
-<dt><span></span><span></span><strong></strong> (xs: positiveingeteger oder xs: String)<br/> </dt> <dd> Eine Zeichenfolge, ein ganzzahliger Wert zwischen 2 und 59999, einschließlich, oder ein Hexadezimalwert zwischen 0x2 und 0xea5f (einschließlich). <br/> Der Wert muss innerhalb des Menüband-XML-Dokuments eindeutig sein. <br/> Maximale Länge: 100 Zeichen. <br/> </dd> </dl></td>
+<td>Ordnet das Element einem <a href="windowsribbon-element-command.md"><strong>Command zu.</strong></a><br/> <br/>
+<dt><span></span><span></span><strong></strong> (xs:positiveInteger oder xs:string)<br/> </dt> <dd> Eine Zeichenfolge, ein ganzzahliger Wert zwischen 2 und 59999 einschließlich oder ein Hexadezimalwert zwischen 0x2 und 0xea5f einschließlich. <br/> Der Wert muss innerhalb des Menüband-XML-Dokuments eindeutig sein. <br/> Maximale Länge: 100 Zeichen. <br/> </dd> </dl></td>
 </tr>
 <tr class="even">
-<td><strong>Customizecommandname</strong><br/></td>
-<td>xs: positiveingeteger oder xs: String<br/></td>
+<td><strong>CustomizeCommandName</strong><br/></td>
+<td>xs:positiveInteger oder xs:string<br/></td>
 <td>Nein<br/></td>
-<td>Fügt ein zusätzliches Befehls Element in das QAT-Menü ein.<br/> <br/>
-<dt><span></span><span></span><strong></strong> (xs: positiveingeteger oder xs: String)<br/> </dt> <dd> <img src="images/markup/qat-customizecommandname.png" alt="Screen shot of a QAT menu with the More commands... Command item." /><br/> Eine Zeichenfolge, ein ganzzahliger Wert zwischen 2 und 59999, einschließlich, oder ein Hexadezimalwert zwischen 0x2 und 0xea5f (einschließlich). <br/> Der Wert muss innerhalb des Menüband-XML-Dokuments eindeutig sein. <br/> Maximale Länge: 100 Zeichen. <br/> </dd> </dl></td>
+<td>Fügt ein zusätzliches Befehlselement in das QAT-Menü ein.<br/> <br/>
+<dt><span></span><span></span><strong></strong> (xs:positiveInteger oder xs:string)<br/> </dt> <dd> <img src="images/markup/qat-customizecommandname.png" alt="Screen shot of a QAT menu with the More commands... Command item." /><br/> Eine Zeichenfolge, ein ganzzahliger Wert zwischen 2 und 59999 einschließlich oder ein Hexadezimalwert zwischen 0x2 und 0xea5f einschließlich. <br/> Der Wert muss innerhalb des Menüband-XML-Dokuments eindeutig sein. <br/> Maximale Länge: 100 Zeichen. <br/> </dd> </dl></td>
 </tr>
 </tbody>
 </table>
@@ -79,7 +79,7 @@ Stellt die [Symbolleiste für den schnell Zugriff (QAT)](windowsribbon-controls-
 
 | Element                                                                                                                   | BESCHREIBUNG                                   |
 |---------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------|
-| [**Quickaccesstoolbar. ApplicationDefaults**](windowsribbon-element-quickaccesstoolbar-applicationdefaults.md)<br/> | Kann höchstens einmal vorkommen<br/> <br/> |
+| [**QuickAccessToolbar.ApplicationDefaults**](windowsribbon-element-quickaccesstoolbar-applicationdefaults.md)<br/> | Kann höchstens einmal auftreten.<br/> <br/> |
 
 
 
@@ -89,25 +89,25 @@ Stellt die [Symbolleiste für den schnell Zugriff (QAT)](windowsribbon-controls-
 
 | Element                                                                                         |
 |-------------------------------------------------------------------------------------------------|
-| [**Menüband. quickaccesstoolbar**](windowsribbon-element-ribbon-quickaccesstoolbar.md)<br/> |
+| [**Ribbon.QuickAccessToolbar**](windowsribbon-element-ribbon-quickaccesstoolbar.md)<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Erforderlich.
 
-Muss für jede [**Multifunktionsleiste. quickaccesstoolbar**](windowsribbon-element-ribbon-quickaccesstoolbar.md)genau einmal auftreten.
+Muss genau einmal für jede [**Ribbon.QuickAccessToolbar**](windowsribbon-element-ribbon-quickaccesstoolbar.md)auftreten.
 
-Elemente im QAT können zur Laufzeit hinzugefügt oder entfernt werden.
+Elemente in der QAT können zur Laufzeit hinzugefügt oder entfernt werden.
 
-Aus Gründen der Konsistenz zwischen Menüband-Anwendungen wird empfohlen, dass der *customizecommandname* -Befehls Handler ein QAT-Anpassungs Dialogfeld startet.
+Aus Gründen der Konsistenz zwischen Menübandanwendungen wird empfohlen, dass der *Befehlshandler CustomizeCommandName* ein QAT-Anpassungsdialogfeld startet.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird das grundlegende Markup für die **quickaccesstoolbar** veranschaulicht.
+Im folgenden Beispiel wird das grundlegende Markup für **quickAccessToolbar** veranschaulicht.
 
-In diesem Code Abschnitt wird die **quickaccesstoolbar** -Befehls Deklaration veranschaulicht.
+Dieser Codeabschnitt zeigt die **QuickAccessToolbar-Befehlsdeklaration.**
 
 
 ```XML
@@ -121,7 +121,7 @@ In diesem Code Abschnitt wird die **quickaccesstoolbar** -Befehls Deklaration ve
 
 
 
-In diesem Code Abschnitt wird die Deklaration des **quickaccesstoolbar** -Steuer Elements veranschaulicht.
+Dieser Codeabschnitt zeigt die **QuickAccessToolbar-Steuerelementdeklaration.**
 
 
 ```XML
@@ -141,20 +141,16 @@ In diesem Code Abschnitt wird die Deklaration des **quickaccesstoolbar** -Steuer
 
 ## <a name="element-information"></a>Elementinformationen
 
-
-
-|                                     |           |
-|-------------------------------------|-----------|
-| Unterstützte Mindestversion (System)<br/> | Windows 7 |
-| Kann leer bleiben                        | Nein        |
+* **Unterstütztes Mindestsystem:** Windows 7
+* **Kann leer sein:** Nein
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[Symbolleisten-Steuerelement schnell Zugriff](windowsribbon-controls-quickaccesstoolbar.md)
+[Symbolleisten-Steuerelement für den Schnellzugriff](windowsribbon-controls-quickaccesstoolbar.md)
 </dt> </dl>
 
  

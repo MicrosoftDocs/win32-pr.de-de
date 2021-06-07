@@ -1,19 +1,19 @@
 ---
-description: Der Pfad zu dem Bild, das für den Hintergrund einer Journal Notiz verwendet wird.
+description: Der Pfad zu dem Bild, das für den Hintergrund einer Journalnotiz verwendet wird.
 ms.assetid: bf7f39ec-8f1f-437c-b172-fd6f94af97bc
 title: Path-Element
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 707dda1a82a99b863148be5fa312900f6cfe28eb
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ee8299e66874a04ba9ff338b0b77d73ffd547ec4
+ms.sourcegitcommit: c3f669dc1d52278432bf75ad9fddba3257d26aa2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104042412"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111432377"
 ---
 # <a name="path-element"></a>Path-Element
 
-Der Pfad zu dem Bild, das für den Hintergrund einer Journal Notiz verwendet wird.
+Der Pfad zu dem Bild, das für den Hintergrund einer Journalnotiz verwendet wird.
 
 ## <a name="definition"></a>Definition
 
@@ -37,11 +37,11 @@ Keine
 
 
 
-|              |                                            |
+|  Element     | Wert                                                     |
 |--------------|--------------------------------------------|
 | Elementtyp | **xs:string**                              |
-| Namespace    | urn: Schemas-Microsoft-com: TabletPC: RichInk |
-| Schemaname  | Journal Leser                             |
+| Namespace    | urn:schemas-microsoft-com:tabletpc:richink |
+| Schemaname  | Journalreader                             |
 
 
 

@@ -44,12 +44,12 @@ api_location:
 - DirectML.h
 api_name:
 - DML_CUMULATIVE_PRODUCT_OPERATOR_DESC
-ms.openlocfilehash: 71a078ad0f47c19ad1964d8d21f22e06822b5d01
-ms.sourcegitcommit: f848119a8faa29b27585f4df53f6e50ee9666684
+ms.openlocfilehash: 68b001467496ab9affc559e76ecac5461902399c
+ms.sourcegitcommit: d168355cd7112871f24643b4079c2640b36f4975
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2021
-ms.locfileid: "110550215"
+ms.lasthandoff: 06/05/2021
+ms.locfileid: "111521196"
 ---
 # <a name="dml_cumulative_product_operator_desc-directmlh"></a>DML_CUMULATIVE_PRODUCT_OPERATOR_DESC (directml.h)
 
@@ -84,29 +84,29 @@ Der Eingabetensor, der zu multiplizierte Elemente enthält.
 
 Typ: **const [DML_TENSOR_DESC](/windows/win32/api/directml/ns-directml-dml_tensor_desc) \***
 
-Der Ausgabe tensor, in den die resultierenden kumulativen Produkte geschrieben werden. Dieser Tensor muss die gleichen Größen und datentypen wie *InputTensor haben.*
+Der Ausgabe tensor, in den die resultierenden kumulativen Produkte geschrieben werden. Dieser Tensor muss die gleichen Größen und Datentypen wie *InputTensor haben.*
 
 `Axis`
 
 Typ: [ **UINT**](/windows/desktop/winprog/windows-data-types)
 
-Der Index der Dimension, über die Elemente multipliziert werden. Dieser Wert muss kleiner als *dimensionCount des* *InputTensor sein.*
+Der Index der Dimension, über die Elemente multipliziert werden. Dieser Wert muss kleiner als *dimensionCount des* *InputTensor-Werts sein.*
 
 `AxisDirection`
 
-Typ: **[DML_AXIS_DIRECTION](./ne-directml-dml_axis_direction.md)**
+Typ: **[DML_AXIS_DIRECTION](/windows/win32/api/directml/ne-directml-dml_axis_direction)**
 
-Einer der Werte der [DML_AXIS_DIRECTION](./ne-directml-dml_axis_direction.md) Enumeration. Wenn auf **DML_AXIS_DIRECTION_INCREASING** festgelegt ist, wird das Produkt durch Durchlaufen des Tensors entlang der angegebenen Achse durch den aufsteigenden Elementindex angezeigt. Wenn auf **DML_AXIS_DIRECTION_DECREASING** festgelegt ist, ist die Umkehrung true, und das Produkt tritt auf, indem Elemente durch einen absteigenden Index durchlaufen werden.
+Einer der Werte der [DML_AXIS_DIRECTION](/windows/win32/api/directml/ne-directml-dml_axis_direction) Enumeration. Wenn auf **DML_AXIS_DIRECTION_INCREASING** festgelegt ist, wird das Produkt durch Durchlaufen des Tensors entlang der angegebenen Achse durch den aufsteigenden Elementindex angezeigt. Wenn auf **DML_AXIS_DIRECTION_DECREASING** festgelegt ist, ist die Umkehrung true, und das Produkt tritt auf, indem Elemente durch einen absteigenden Index durchlaufen werden.
 
 `HasExclusiveProduct`
 
 Typ: <b> <a href="/windows/win32/winprog/windows-data-types">BOOL</a></b>
 
-True gibt an, dass der Wert des aktuellen Elements beim Schreiben der ausgeführten Tally in den Ausgabe-Tensor ausgeschlossen wird. False gibt an, dass der Wert des aktuellen Elements in der ausgeführten Tally enthalten ist.
+True **gibt** an, dass der Wert des aktuellen Elements ausgeschlossen wird, wenn die laufende Klammer in den Ausgabemandator geschrieben wird. False **gibt** an, dass der Wert des aktuellen Elements in der ausgeführten Zählung enthalten ist.
 
 ## <a name="examples"></a>Beispiele
 
-In den Beispielen in diesem Abschnitt wird der gleiche Eingabe-Tensor verwendet.
+In den Beispielen in diesem Abschnitt wird der gleiche Eingabetensor verwendet.
 
 ```
 InputTensor: (Sizes:{1,1,3,4}, DataType:FLOAT32)
@@ -115,7 +115,7 @@ InputTensor: (Sizes:{1,1,3,4}, DataType:FLOAT32)
    [9, 6, 2, 4]]]]
 ```
 
-### <a name="example-1-cumulative-product-across-horizontal-slivers"></a>Beispiel 1: Kumulatives Produkt über horizontale Splitter hinweg
+### <a name="example-1-cumulative-product-across-horizontal-slivers"></a>Beispiel 1: Kumulatives Produkt über horizontale Schrägstriche
 
 ```
 Axis: 3
@@ -130,7 +130,7 @@ OutputTensor: (Sizes:{1,1,3,4}, DataType:FLOAT32)
 
 ### <a name="example-2-exclusive-products"></a>Beispiel 2: Exklusive Produkte
 
-Wenn *HasExclusiveProduct* auf **TRUE** festgelegt wird, wird der Wert des aktuellen Elements beim Schreiben in den Ausgabe-Tensor von der ausgeführten Tally ausgeschlossen.
+Das *Festlegen von HasExclusiveProduct* auf **TRUE** hat den Effekt, dass der Wert des aktuellen Elements beim Schreiben in den Ausgabemandor von der ausgeführten Zählung ausgenommen wird.
 
 ```
 Axis: 3
@@ -145,7 +145,7 @@ OutputTensor: (Sizes:{1,1,3,4}, DataType:FLOAT32)
 
 ### <a name="example-3-axis-direction"></a>Beispiel 3: Achsenrichtung
 
-Wenn *AxisDirection* auf [**DML_AXIS_DIRECTION_DECREASING**](./ne-directml-dml_axis_direction.md) festgelegt wird, wird die Durchlaufreihenfolge von Elementen umgekehrt, wenn die ausgeführte tally-Berechnung erfolgt.
+Das Festlegen *von AxisDirection* auf [**DML_AXIS_DIRECTION_DECREASING**](/windows/win32/api/directml/ne-directml-dml_axis_direction) hat den Effekt, dass die Durchlaufrichtung der Elemente beim Berechnen der laufenden Zählung umkehrt.
 
 ```
 Axis: 3
@@ -158,7 +158,7 @@ OutputTensor: (Sizes:{1,1,3,4}, DataType:FLOAT32)
    [432,  48,  8, 4]]]]  //      [...                   ]
 ```
 
-### <a name="example-4-multiplying-along-a-different-axis"></a>Beispiel 4. Multiplizieren auf einer anderen Achse
+### <a name="example-4-multiplying-along-a-different-axis"></a>Beispiel 4. Multiplizieren entlang einer anderen Achse
 
 In diesem Beispiel tritt das Produkt vertikal entlang der Höhenachse (zweite Dimension) auf.
 
@@ -174,21 +174,21 @@ OutputTensor: (Sizes:{1,1,3,4}, DataType:FLOAT32)
 ```
 
 ## <a name="remarks"></a>Hinweise
-Dieser Operator unterstützt die direkt ausgeführte Ausführung, was bedeutet, dass der Ausgabe-Tensor während der Bindung den Alias *InputTensor* aliasen darf.
+Dieser Operator unterstützt die in-place-Ausführung, was bedeutet, dass der Ausgabetensor während der Bindung den *Alias InputTensor* verwenden darf.
 
 ## <a name="availability"></a>Verfügbarkeit
 Dieser Operator wurde in `DML_FEATURE_LEVEL_3_1` eingeführt.
 
-## <a name="tensor-constraints"></a>Tensoreinschränkungen
-*InputTensor* und *OutputTensor* müssen den gleichen *Datentyp* und die gleichen *Größen* aufweisen.
+## <a name="tensor-constraints"></a>Tensor-Einschränkungen
+*InputTensor* und *OutputTensor* müssen den gleichen *Datentyp und* die *gleichen Größen haben.*
 
 ## <a name="tensor-support"></a>Tensor-Unterstützung
-| Tensor | Typ | Unterstützte Dimensionsanzahlen | Unterstützte Datentypen |
+| Tensor | Typ | Unterstützte Dimensionsanzahl | Unterstützte Datentypen |
 | ------ | ---- | -------------------------- | -------------------- |
 | InputTensor | Eingabe | 4 | FLOAT32, FLOAT16, UINT32, UINT16 |
 | OutputTensor | Ausgabe | 4 | FLOAT32, FLOAT16, UINT32, UINT16 |
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 | &nbsp; | &nbsp; |
 | ---- |:---- |
 | **Header** | directml.h |

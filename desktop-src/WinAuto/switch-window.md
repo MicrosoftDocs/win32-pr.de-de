@@ -1,31 +1,31 @@
 ---
-title: Fenster wechseln (MSAA UI-Element Referenz)
-description: Das Fenster Switch wird angezeigt, wenn ein Benutzer Alt + Tab drückt, um zu einer anderen Anwendung zu wechseln. Das Fenster Switch enthält ein Symbol für jede Anwendung, die gerade ausgeführt wird.
+title: Switch-Fenster (MSAA UI-Elementreferenz)
+description: Das Schalterfenster wird angezeigt, wenn ein Benutzer ALT+TAB drückt, um zu einer anderen Anwendung zu wechseln. Das Switchfenster enthält ein Symbol für jede derzeit ausgeführte Anwendung.
 ms.assetid: 77b32eb1-7722-410b-b141-ac09fc7fdffb
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: eead618e23f8a56c90b37eae2386f16a90f6dd67
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 5aa12b5fa3bfb9e6207ddaff4133b030e6c233c3
+ms.sourcegitcommit: 099ecdda1e83618b844387405da0db0ebda93a65
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103714129"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111443981"
 ---
-# <a name="switch-window-msaa-ui-element-reference"></a>Fenster wechseln (MSAA UI-Element Referenz)
+# <a name="switch-window-msaa-ui-element-reference"></a>Switch-Fenster (MSAA UI-Elementreferenz)
 
-Das Fenster Switch wird angezeigt, wenn ein Benutzer Alt + Tab drückt, um zu einer anderen Anwendung zu wechseln. Das Fenster Switch enthält ein Symbol für jede Anwendung, die gerade ausgeführt wird.
+Das Schalterfenster wird angezeigt, wenn ein Benutzer ALT+TAB drückt, um zu einer anderen Anwendung zu wechseln. Das Switchfenster enthält ein Symbol für jede derzeit ausgeführte Anwendung.
 
-Der Fenster Klassenname für das Fenster Switch lautet " \# 32771".
+Der Name der Fensterklasse für das Switchfenster lautet " \# 32771".
 
 ## <a name="iaccessible-methods"></a>IAccessible-Methoden
 
-Das Fenster Switch unterstützt die folgenden [**IAccessible**](/windows/desktop/api/oleacc/nn-oleacc-iaccessible) -Methoden:
+Das Switchfenster unterstützt die folgenden [**IAccessible-Methoden:**](/windows/desktop/api/oleacc/nn-oleacc-iaccessible)
 
 
 
 | Methode                                                                    | Kommentare                                                                                                                                                                                                                          |
 |---------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**accDoDefaultAction**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-accdodefaultaction) | Das Switch Window-Objekt selbst verfügt über keine **DEFAULTACTION** -Eigenschaft. Die [**accDoDefaultAction**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-accdodefaultaction) -Methode für jedes Element im Switch-Fenster aktiviert das angegebene Element. |
+| [**accDoDefaultAction**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-accdodefaultaction) | Das Switchfensterobjekt selbst verfügt nicht über eine **DefaultAction-Eigenschaft.** Die [**accDoDefaultAction-Methode**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-accdodefaultaction) für jedes Element im Switchfenster aktiviert das angegebene Element. |
 | [**accHitTest**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-acchittest)                 |                                                                                                                                                                                                                                   |
 | [**accLocation**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-acclocation)               |                                                                                                                                                                                                                                   |
 | [**accNavigate**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-accnavigate)               |                                                                                                                                                                                                                                   |
@@ -33,26 +33,26 @@ Das Fenster Switch unterstützt die folgenden [**IAccessible**](/windows/desktop
 
 
 
- 
+ 
 
 ## <a name="iaccessible-properties"></a>IAccessible-Eigenschaften
 
-Das Fenster Switch unterstützt die [**folgenden Eigenschaften**](/windows/desktop/api/oleacc/nn-oleacc-iaccessible) , auf die zugegriffen werden kann:
+Das Schalterfenster unterstützt die folgenden [**IAccessible-Eigenschaften:**](/windows/desktop/api/oleacc/nn-oleacc-iaccessible)
 
 
 
-|                                                                                |                                                                                                                                                                                                                                |
+|      Eigenschaft                                                                          |      BESCHREIBUNG                                                                                                                                                                                                                          |
 |--------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**get \_ accChildCount**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accchildcount)       | Die **childCount** -Eigenschaft ist 0 (null).                                                                                                                                                                                           |
-| [**get \_ accdefaultaction**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accdefaultaction) | Das Switch Window-Objekt selbst verfügt über keine **DEFAULTACTION** -Eigenschaft. Die **DEFAULTACTION** -Eigenschaft für jedes Element im Switch-Fenster ist "Switch".                                                                     |
-| [**\_Zugriffs Fokus erhalten**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accfocus)                 | Das übergeordnete Objekt des Switch-Fensters kann den Fokus nicht erhalten. nur die einzelnen untergeordneten Elemente können den Fokus erhalten.                                                                                                                          |
-| [**\_accName erhalten**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accname)                   | Das Switch Window-Objekt selbst hat keine **Name** -Eigenschaft. Die **Name** -Eigenschaft für jedes Anwendungssymbol im Fenster Switch ist mit dem angezeigten Anwendungsnamen identisch.                                         |
-| [**get- \_ Zugriffs Rolle**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accrole)                   | Das Switch Window-Objekt selbst verfügt über die **Role** -Eigenschaft "Window \[ 32771 \] ". Außerdem verfügt jedes Anwendungssymbol im Fenster Switch über die **Rollen** Eigenschaften [**Rolle \_ System \_ ListItem**](object-roles.md). |
-| [**\_accState erhalten**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accstate)                 | Das Switch Window-Objekt selbst unterstützt die **State** -Eigenschaft nicht. Der **Zustands** Wert für die Listen Ansichts Elemente ist [**Zustands \_ System- \_ focverwendbar**](object-state-constants.md).                     |
+| [**get \_ accChildCount**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accchildcount)       | Die **ChildCount-Eigenschaft** ist 0 (null).                                                                                                                                                                                           |
+| [**get \_ accDefaultAction**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accdefaultaction) | Das Switchfensterobjekt selbst verfügt nicht über eine **DefaultAction-Eigenschaft.** Die **DefaultAction-Eigenschaft** für jedes Element im Switchfenster lautet "Switch".                                                                     |
+| [**get \_ accFocus**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accfocus)                 | Das übergeordnete Objekt des Switchfensters kann den Fokus nicht erhalten. nur die einzelnen untergeordneten Elemente können den Fokus erhalten.                                                                                                                          |
+| [**get \_ accName**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accname)                   | Das Switchfensterobjekt selbst verfügt nicht über eine **Name-Eigenschaft.** Die **Name-Eigenschaft** für jedes Anwendungssymbol im Switchfenster entspricht dem angezeigten Anwendungsnamen.                                         |
+| [**get \_ accRole**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accrole)                   | Das Switchfensterobjekt selbst verfügt über die **Role-Eigenschaft** "window \[ 32771". \] Außerdem verfügt jedes Anwendungssymbol im Switchfenster über die **Role-Eigenschaft** [**ROLE SYSTEM \_ \_ LISTITEM**](object-roles.md). |
+| [**get \_ accState**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accstate)                 | Das Switchfensterobjekt selbst unterstützt die **State-Eigenschaft** nicht. Der **Wert State** für die Listenansichtselemente ist STATE SYSTEM [**\_ \_ FOCUSABLE.**](object-state-constants.md)                     |
 
 
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -61,9 +61,9 @@ Das Fenster Switch unterstützt die [**folgenden Eigenschaften**](/windows/deskt
 [IAccessible-Schnittstelle](/windows/desktop/api/oleacc/nn-oleacc-iaccessible)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

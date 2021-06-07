@@ -1,9 +1,9 @@
 ---
 title: ComboBox-Element
-description: Stellt ein Kombinations Feld-Steuerelement dar.
+description: Stellt ein Kombinationsfeld-Steuerelement dar.
 ms.assetid: d796e26b-44c2-4e11-b1a5-2ede5bcff676
 keywords:
-- Windows-Menüband für ComboBox-Element
+- ComboBox-Element Windows-Menüband
 topic_type:
 - apiref
 api_name:
@@ -13,18 +13,18 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 5bdcc95c64c2bd60df4f2f53d3bd3699c0a7ee65
-ms.sourcegitcommit: 927b9c371f75f52b8011483edf3a4ba37d11ebe4
+ms.openlocfilehash: 60ad8866b655be587e0c3d0f123d8bc59b6b8a21
+ms.sourcegitcommit: 099ecdda1e83618b844387405da0db0ebda93a65
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "106340680"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111443581"
 ---
 # <a name="combobox-element"></a>ComboBox-Element
 
-Stellt ein Kombinations [Feld](windowsribbon-controls-combobox.md) -Steuerelement dar.
+Stellt ein [Kombinationsfeld-Steuerelement](windowsribbon-controls-combobox.md) dar.
 
-## <a name="usage"></a>Verbrauch
+## <a name="usage"></a>Verwendung
 
 ``` syntax
 <ComboBox
@@ -47,8 +47,8 @@ Stellt ein Kombinations [Feld](windowsribbon-controls-combobox.md) -Steuerelemen
 </colgroup>
 <thead>
 <tr class="header">
-<th>Attribut</th>
-<th>type</th>
+<th>attribute</th>
+<th>Typ</th>
 <th>Erforderlich</th>
 <th>BESCHREIBUNG</th>
 </tr>
@@ -56,30 +56,30 @@ Stellt ein Kombinations [Feld](windowsribbon-controls-combobox.md) -Steuerelemen
 <tbody>
 <tr class="odd">
 <td><strong>CommandName</strong><br/></td>
-<td>xs: positiveingeteger oder xs: String<br/></td>
+<td>xs:positiveInteger oder xs:string<br/></td>
 <td>Nein<br/></td>
-<td>Ordnet das-Element einem <a href="windowsribbon-element-command.md"><strong>Befehl</strong></a>zu.<br/> <br/>
-<dt><span></span><span></span><strong></strong> (xs: positiveingeteger oder xs: String)<br/> </dt> <dd> Eine Zeichenfolge, ein ganzzahliger Wert zwischen 2 und 59999, einschließlich, oder ein Hexadezimalwert zwischen 0x2 und 0xea5f (einschließlich). <br/> Der Wert muss innerhalb des Menüband-XML-Dokuments eindeutig sein. <br/> Maximale Länge: 100 Zeichen. <br/> </dd> </dl></td>
+<td>Ordnet das Element einem <a href="windowsribbon-element-command.md"><strong>Command zu.</strong></a><br/> <br/>
+<dt><span></span><span></span><strong></strong> (xs:positiveInteger oder xs:string)<br/> </dt> <dd> Eine Zeichenfolge, ein ganzzahliger Wert zwischen 2 und 59999 einschließlich oder ein Hexadezimalwert zwischen 0x2 und 0xea5f einschließlich. <br/> Der Wert muss innerhalb des Menüband-XML-Dokuments eindeutig sein. <br/> Maximale Länge: 100 Zeichen. <br/> </dd> </dl></td>
 </tr>
 <tr class="even">
-<td><strong>Isautocompleteaktivierte</strong><br/></td>
+<td><strong>IsAutoCompleteEnabled</strong><br/></td>
 <td>Boolesch<br/></td>
 <td>Nein<br/></td>
-<td>Auf einen der folgenden Werte beschränkt (0 und 1 sind ungültig):<br/> <br/>
-<dt><span></span><span></span><strong></strong> Fall<br/> </dt> <dd> Standard. <br/> </dd> <dt><span></span><span></span><strong></strong> Alarm<br/> </dt> <dd></dd> </dl></td>
+<td>Beschränkt auf einen der folgenden Werte (0 und 1 sind ungültig):<br/> <br/>
+<dt><span></span><span></span><strong></strong> (true)<br/> </dt> <dd> Standard. <br/> </dd> <dt><span></span><span></span><strong></strong> (false)<br/> </dt> <dd></dd> </dl></td>
 </tr>
 <tr class="odd">
-<td><strong>IsEditable</strong><br/></td>
+<td><strong>Iseditable</strong><br/></td>
 <td>Boolesch<br/></td>
 <td>Nein<br/></td>
-<td>Auf einen der folgenden Werte beschränkt (0 und 1 sind ungültig):<br/> <br/>
-<dt><span></span><span></span><strong></strong> Fall<br/> </dt> <dd> Standard. <br/> </dd> <dt><span></span><span></span><strong></strong> Alarm<br/> </dt> <dd></dd> </dl></td>
+<td>Beschränkt auf einen der folgenden Werte (0 und 1 sind ungültig):<br/> <br/>
+<dt><span></span><span></span><strong></strong> (true)<br/> </dt> <dd> Standard. <br/> </dd> <dt><span></span><span></span><strong></strong> (false)<br/> </dt> <dd></dd> </dl></td>
 </tr>
 <tr class="even">
-<td><strong>Resizetype</strong><br/></td>
-<td>Comboboxresizetype<br/></td>
+<td><strong>ResizeType</strong><br/></td>
+<td>ComboBoxResizeType<br/></td>
 <td>Nein<br/></td>
-<td><dt><span></span><span></span><strong></strong> (NORESIZE)<br/> </dt> <dd> Standard. <br/> </dd> <dt><span></span><span></span><strong></strong> (Verticalresize)<br/> </dt> <dd></dd> </dl></td>
+<td><dt><span></span><span></span><strong></strong> (NoResize)<br/> </dt> <dd> Standard. <br/> </dd> <dt><span></span><span></span><strong></strong> (VerticalResize)<br/> </dt> <dd></dd> </dl></td>
 </tr>
 </tbody>
 </table>
@@ -107,7 +107,7 @@ Es gibt keine untergeordneten Elemente.
 </thead>
 <tbody>
 <tr class="odd">
-<td><a href="windowsribbon-element-controlgroup.md"><strong>Controlgroup</strong></a><br/></td>
+<td><a href="windowsribbon-element-controlgroup.md"><strong>ControlGroup</strong></a><br/></td>
 
 </tr>
 <tr class="even">
@@ -115,7 +115,7 @@ Es gibt keine untergeordneten Elemente.
 
 </tr>
 <tr class="odd">
-<td><a href="windowsribbon-element-dropdowngallery.md"><strong>Dropdown Gallery</strong></a><br/></td>
+<td><a href="windowsribbon-element-dropdowngallery.md"><strong>DropDownGallery</strong></a><br/></td>
 
 </tr>
 <tr class="even">
@@ -123,19 +123,19 @@ Es gibt keine untergeordneten Elemente.
 
 </tr>
 <tr class="odd">
-<td><a href="windowsribbon-element-menugroup.md"><strong>MenuGroup</strong></a><br/></td>
+<td><a href="windowsribbon-element-menugroup.md"><strong>Menugroup</strong></a><br/></td>
 
 </tr>
 <tr class="even">
-<td><a href="windowsribbon-element-quickaccesstoolbar-applicationdefaults.md"><strong>Quickaccesstoolbar. ApplicationDefaults</strong></a><br/></td>
+<td><a href="windowsribbon-element-quickaccesstoolbar-applicationdefaults.md"><strong>QuickAccessToolbar.ApplicationDefaults</strong></a><br/></td>
 <td><blockquote>
 [!Note]<br />
-Windows 8 und höher.
+Windows 8 und neuer.
 </blockquote>
 <br/> <br/></td>
 </tr>
 <tr class="odd">
-<td><a href="windowsribbon-element-splitbuttongallery.md"><strong>Splitbuttongallery</strong></a><br/></td>
+<td><a href="windowsribbon-element-splitbuttongallery.md"><strong>SplitButtonGallery</strong></a><br/></td>
 
 </tr>
 </tbody>
@@ -143,23 +143,23 @@ Windows 8 und höher.
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Dies ist optional.
 
-Kann für jedes [**controlgroup**](windowsribbon-element-controlgroup.md)-, [**DropDownButton**](windowsribbon-element-dropdownbutton.md)-, [**dropdowngallery**](windowsribbon-element-dropdowngallery.md)-, [**Group**](windowsribbon-element-group.md)-, [**MenuGroup**](windowsribbon-element-menugroup.md)-oder [**splitbuttongallery**](windowsribbon-element-splitbuttongallery.md) -Element einmal oder mehrmals vorkommen.
+Kann ein oder mehrere Male für jedes [**ControlGroup-,**](windowsribbon-element-controlgroup.md) [**DropDownButton-,**](windowsribbon-element-dropdownbutton.md) [**DropDownGallery-,**](windowsribbon-element-dropdowngallery.md) [**Group-, MenuGroup-**](windowsribbon-element-menugroup.md)oder [**SplitButtonGallery-Element**](windowsribbon-element-splitbuttongallery.md) auftreten. [](windowsribbon-element-group.md)
 
-Da es sich bei der **ComboBox** ausschließlich um einen Element Katalog handelt, werden Befehls Elemente nicht unterstützt. Es ist auch das einzige Katalog Steuerelement, das keinen Befehlsbereich unterstützt (eine Auflistung von Befehlen, die im Markup deklariert und im unteren Bereich eines Element Katalogs oder einer Befehls Galerie aufgelistet sind). Weitere Informationen finden Sie unter [Arbeiten mit Galerien](ribbon-controls-galleries.md).
+Da es sich bei **ComboBox** ausschließlich um einen Elementkatalog handelt, werden keine Befehlselemente unterstützt. Es ist auch das einzige Katalogsteuerelement, das keinen Befehlsbereich unterstützt (eine Sammlung von Befehlen, die im Markup deklariert und am unteren Rand eines Elementkatalogs oder Befehlskatalogs aufgeführt sind). Weitere Informationen finden Sie unter [Arbeiten mit Katalogen.](ribbon-controls-galleries.md)
 
-Der folgende Screenshot veranschaulicht ein Menüband-Kombinations [Feld](windowsribbon-controls-combobox.md) -Steuerelement von Windows Live Movie Maker.
+Der folgende Screenshot veranschaulicht ein [Menüband-Kombinationsfeld-Steuerelement](windowsribbon-controls-combobox.md) von Windows Live Movie Maker.
 
-![Screenshot eines ComboBox-Steuer Elements im Microsoft Paint-Menüband.](images/controls/combobox.png)
+![Screenshot eines Combobox-Steuerelements im Microsoft Paint-Menüband.](images/controls/combobox.png)
 
 ## <a name="examples"></a>Beispiele
 
-In den folgenden Beispielen wird das grundlegende Markup für das Kombinations **Feld** veranschaulicht.
+In den folgenden Beispielen wird das grundlegende Markup für **comboBox** veranschaulicht.
 
-Dieser Code Abschnitt zeigt die **ComboBox** -Befehls Deklarationen mit einer zugeordneten [**Gruppe**](windowsribbon-element-group.md) , die als übergeordneter Container für das **ComboBox** -Element fungiert.
+Dieser Codeabschnitt zeigt die **ComboBox-Befehlsdeklarationen** mit einer zugeordneten [**Gruppe,**](windowsribbon-element-group.md) die als übergeordneter Container für das **ComboBox-Element** fungiert.
 
 
 ```XML
@@ -176,7 +176,7 @@ Dieser Code Abschnitt zeigt die **ComboBox** -Befehls Deklarationen mit einer zu
 
 
 
-Dieser Code Abschnitt zeigt die **ComboBox** -Steuerelement Deklarationen.
+Dieser Codeabschnitt zeigt die **ComboBox-Steuerelementdeklarationen.**
 
 
 ```XML
@@ -191,12 +191,8 @@ Dieser Code Abschnitt zeigt die **ComboBox** -Steuerelement Deklarationen.
 
 ## <a name="element-information"></a>Elementinformationen
 
-
-
-|                                     |           |
-|-------------------------------------|-----------|
-| Unterstützte Mindestversion (System)<br/> | Windows 7 |
-| Kann leer bleiben                        | Ja       |
+* **Unterstütztes Mindestsystem:** Windows 7
+* **Kann leer sein:** Ja
 
 
 
@@ -207,7 +203,7 @@ Dieser Code Abschnitt zeigt die **ComboBox** -Steuerelement Deklarationen.
 [Kombinationsfeld-Steuerelement](windowsribbon-controls-combobox.md)
 </dt> <dt>
 
-[Galerie Beispiel](windowsribbon-gallerysample.md)
+[Katalogbeispiel](windowsribbon-gallerysample.md)
 </dt> </dl>
 
  

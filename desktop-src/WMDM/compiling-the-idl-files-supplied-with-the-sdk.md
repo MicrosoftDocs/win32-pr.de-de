@@ -1,38 +1,38 @@
 ---
-title: Kompilieren der IDL-Dateien, die mit dem SDK bereitgestellt werden
-description: Kompilieren der IDL-Dateien, die mit dem SDK bereitgestellt werden
+title: Kompilieren der mit dem SDK bereitgestellten IDL-Dateien
+description: Kompilieren der mit dem SDK bereitgestellten IDL-Dateien
 ms.assetid: 718528eb-6ac4-466d-8dfd-d6f2b6c30303
 keywords:
-- Windows Media Device Manager, IDL-Dateien
-- Device Manager, IDL-Dateien
-- Desktop Anwendungen, IDL-Dateien
+- Windows Media Geräte-Manager,IDL-Dateien
+- Geräte-Manager,IDL-Dateien
+- Desktopanwendungen, IDL-Dateien
 - Dienstanbieter, IDL-Dateien
-- Programmier Handbuch, IDL-Dateien
+- Programmierhandbuch, IDL-Dateien
 - IDL-Dateien
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 87e24eec21a481de4603392942b40013ec55086c
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 19e3d4ecd7f4f9df7b884cf70de3ba3ad62c7939
+ms.sourcegitcommit: 099ecdda1e83618b844387405da0db0ebda93a65
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106337998"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111444011"
 ---
-# <a name="compiling-the-idl-files-supplied-with-the-sdk"></a>Kompilieren der IDL-Dateien, die mit dem SDK bereitgestellt werden
+# <a name="compiling-the-idl-files-supplied-with-the-sdk"></a>Kompilieren der mit dem SDK bereitgestellten IDL-Dateien
 
-Das Windows Media Device Manager SDK umfasst sowohl Header Dateien als auch die Quell-IDL-Dateien für die meisten dieser Header Dateien. Die Header Dateien befinden sich im \\ Ordner "Inc" \\ im SDK-Installationspfad. Die IDL-Dateien befinden sich im \\ IDL- \\ Ordner.
+Das Windows Media Geräte-Manager SDK enthält sowohl Headerdateien als auch die IDL-Quelldateien für die meisten dieser Headerdateien. Die Headerdateien befinden sich im \\ Ordner inc \\ im SDK-Installationspfad. Die IDL-Dateien befinden sich im \\ Ordner \\ idl.
 
-Die vorkompilierten Header sind viel einfacher zu verwenden, und mehrere der IDL-Dateien werden zu einem einzelnen bereitgestellten Header zusammengefasst. Wenn Sie jedoch ihre eigenen Header Dateien aus den bereitgestellten IDL-Dateien verarbeiten möchten, wird in diesem Thema beschrieben, welche IDL-Dateien welche Header Dateien erstellen. Außerdem werden die Abhängigkeiten der einzelnen IDL-Dateien beschrieben.
+Die vorkompilierten Header sind viel einfacher zu verwenden, und einige der IDL-Dateien werden zu einem einzelnen bereitgestellten Header kombiniert. Wenn Sie jedoch ihre eigenen Headerdateien aus den bereitgestellten IDL-Dateien verarbeiten möchten, wird in diesem Thema beschrieben, welche IDL-Dateien welche Headerdateien erstellen, und es werden auch die Abhängigkeiten der einzelnen IDL-Dateien beschrieben.
 
-**Äquivalente IDL und bereitgestellte Header Dateien**
+**Äquivalente IDL- und bereitgestellte Headerdateien**
 
 
 
-| **IDL**                                                                                            | **Gleichwertig bereitgestellter**               | **Beschreibung**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| **Idl**                                                                                            | **Entsprechender angegebener Header**               | **Beschreibung**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 |----------------------------------------------------------------------------------------------------|----------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| WMDM. idl<br/> Wmsp. idl<br/> Wmscp. idl<br/> icomponentauthenticate. idl<br/> | Mtaumdm. h                                     | Alle vier IDL-Dateien sind in diesem einzelnen bereitgestellten Header enthalten.<br/> **WMDM. idl** definiert alle Anwendungsschnittstellen und erforderlichen Strukturen, Konstanten und Fehlercodes.<br/> **Wmsp. idl** definiert alle Dienstanbieter Schnittstellen.<br/> **Wmscp. idl** definiert alle Schnittstellen, GUID-Werte und Konstanten, die von sicheren Inhaltsanbietern benötigt werden.<br/> **icomponentauthenticate. idl** definiert die [**icomponentauthenticate**](/windows/desktop/api/mswmdm/nn-mswmdm-icomponentauthenticate) -Schnittstelle.<br/> |
-| Wmdmlog. idl                                                                                        | Wmdmlog. h<br/> wmdmlog \_ i. c<br/> | Definiert die Protokollierungs Schnittstellen.<br/> Beide bereitgestellten Header Dateien müssen anstelle der h-Datei verwendet werden, da ein Problem mit der IDL-Datei vorliegt.<br/>                                                                                                                                                                                                                                                                                                                                                |
-| Wmdrmdeviceapp. idl                                                                                 | Wmdrmdeviceapp. h                             | Definiert die [**iwmdrmdeviceapp**](iwmdrmdeviceapp.md) -und [**IWMDRMDeviceApp2**](iwmdrmdeviceapp2.md) -Schnittstellen, die von Anwendungen verwendet werden, die DRM auf Geräten oder die Anzahl der Wiedergabe Zähler auf Geräten aktualisieren.                                                                                                                                                                                                                                                                                                                 |
+| WMDM.idl<br/> WMSP.idl<br/> WMSCP.idl<br/> icomponentauthenticate.idl<br/> | Mswmdm.h                                     | Alle vier IDL-Dateien sind in diesem einzelnen bereitgestellten Header enthalten.<br/> **WMDM.idl** Definiert alle Anwendungsschnittstellen und erforderlichen Strukturen, Konstanten und Fehlercodes.<br/> **WMSP.idl** Definiert alle Dienstanbieterschnittstellen.<br/> **WMSCP.idl** Definiert alle Schnittstellen, GUID-Werte und Konstanten, die von sicheren Inhaltsanbietern benötigt werden.<br/> **icomponentauthenticate.idl** Definiert die [**IComponentAuthenticate-Schnittstelle.**](/windows/desktop/api/mswmdm/nn-mswmdm-icomponentauthenticate)<br/> |
+| Wmdmlog.idl                                                                                        | Wmdmlog.h<br/> wmdmlog \_ i.c<br/> | Definiert die Protokollierungsschnittstellen.<br/> Beide angegebenen Headerdateien müssen aufgrund eines Problems mit der IDL-Datei anstelle der H-Datei verwendet werden.<br/>                                                                                                                                                                                                                                                                                                                                                |
+| WMDRMDeviceApp.idl                                                                                 | Wmdrmdeviceapp.h                             | Definiert die [**IWMDRMDeviceApp-**](iwmdrmdeviceapp.md) und [**IWMDRMDeviceApp2-Schnittstellen,**](iwmdrmdeviceapp2.md) die von Anwendungen verwendet werden, die DRM auf Geräten aktualisieren, oder die Anzahl der Wiedergaben von Zählern auf Geräten.                                                                                                                                                                                                                                                                                                                 |
 
 
 
@@ -40,19 +40,18 @@ Die vorkompilierten Header sind viel einfacher zu verwenden, und mehrere der IDL
 
 **IDL-Abhängigkeiten**
 
-Einige der bereitgestellten IDL-Dateien haben Buildabhängigkeiten. Wenn Sie beabsichtigen, die IDL-Dateien selbst zu kompilieren, müssen Sie diese externen Abhängigkeiten in der in der folgenden Tabelle gezeigten Reihenfolge verarbeiten.
+Einige der bereitgestellten IDL-Dateien verfügen über Buildabhängigkeiten. Wenn Sie die IDL-Dateien selbst kompilieren möchten, müssen Sie diese externen Abhängigkeiten in der in der folgenden Tabelle gezeigten Reihenfolge verarbeiten.
 
 
 
-|                            |                                                                                  |
+|   Idl                      |   Abhängigkeiten                                                                   |
 |----------------------------|----------------------------------------------------------------------------------|
-| **IDL**                    | **Abhängigkeiten**                                                                 |
-| icomponentauthenticate. idl | Importieren Sie "oaidl. idl";<br/> \#"icomponentauthenticate. idl" einschließen<br/> |
-| WMDM. idl                   | Keine externen Abhängigkeiten                                                         |
-| Wmdmlog. idl                | Keine externen Abhängigkeiten                                                         |
-| Wmdrmdeviceapp. idl         | Keine externen Abhängigkeiten                                                         |
-| Wmscp. idl                  | \#"wmdrmdeviceapp. idl" einschließen<br/> \#"wmsp. idl" einschließen<br/>        |
-| Wmsp. idl                   | \#"WMDM. idl" einschließen                                                             |
+| icomponentauthenticate.idl | import "oaidl.idl";<br/> \#include "icomponentauthenticate.idl"<br/> |
+| WMDM.idl                   | Keine externen Abhängigkeiten                                                         |
+| WmdmLog.idl                | Keine externen Abhängigkeiten                                                         |
+| WMDRMDeviceApp.idl         | Keine externen Abhängigkeiten                                                         |
+| WMSCP.idl                  | \#include "WMDRMDeviceApp.idl"<br/> \#include "WMSP.idl"<br/>        |
+| WMSP.idl                   | \#include "WMDM.idl"                                                             |
 
 
 

@@ -4,12 +4,12 @@ description: TBD
 ms.localizationpriority: high
 ms.topic: article
 ms.date: 11/05/2020
-ms.openlocfilehash: 68633f531c627eed8b02c7f65a248213743ca8bc
-ms.sourcegitcommit: 8e1f04c7e3c5c850071bac8d173f9441aab0dfed
+ms.openlocfilehash: fdc489184b3220afd0b8c75738fa1d40de207c8d
+ms.sourcegitcommit: cb87082135319cbdc5df541e3071eebb83a58972
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "107803790"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111387049"
 ---
 # <a name="directml-feature-level-history"></a>DirectML-Verlauf auf Featureebene
 
@@ -19,9 +19,9 @@ Informationen zum allgemeinen DirectML-Versionsverlauf finden Sie unter [DirectM
 
 Eingeführt in DirectML Version 1.5.0.
 
-Unterstützung für die folgenden Operatoren wurde hinzugefügt.
+Unterstützung für die folgenden [Operatoren](/windows/win32/api/directml/ne-directml-dml_operator_type)wurde hinzugefügt.
 
-* [DML_OPERATOR_ELEMENT_WISE_ATAN_YX](/windows/win32/api/directml/ne-directml-dml_operator_type)
+* **DML_OPERATOR_ELEMENT_WISE_ATAN_YX**
 * **DML_OPERATOR_ELEMENT_WISE_CLIP_GRAD**
 * **DML_OPERATOR_ELEMENT_WISE_DIFFERENCE_SQUARE**
 * **DML_OPERATOR_LOCAL_RESPONSE_NORMALIZATION_GRAD**
@@ -46,9 +46,9 @@ Die maximale Anzahl unterstützter Dimensionen für die folgenden Operatoren wur
 
 Eingeführt in DirectML Version 1.4.0.
 
-Unterstützung für die folgenden Operatoren hinzugefügt.
+Unterstützung für die folgenden [Operatoren](/windows/win32/api/directml/ne-directml-dml_operator_type)wurde hinzugefügt.
 
-* [DML_OPERATOR_ELEMENT_WISE_BIT_AND](/windows/win32/api/directml/ne-directml-dml_operator_type)
+* **DML_OPERATOR_ELEMENT_WISE_BIT_AND**
 * **DML_OPERATOR_ELEMENT_WISE_BIT_OR**
 * **DML_OPERATOR_ELEMENT_WISE_BIT_XOR**
 * **DML_OPERATOR_ELEMENT_WISE_BIT_NOT**
@@ -95,7 +95,7 @@ Die folgenden APIs wurden hinzugefügt.
 * [IDMLDevice1-Schnittstelle](./directml/nn-directml-idmldevice1.md)
 * Operatordiagrammunterstützung (siehe [IDMLDevice1::CompileGraph](./directml/nf-directml-idmldevice1-compilegraph.md)
 
-Unterstützung für die folgenden Operatoren hinzugefügt.
+Unterstützung für die folgenden Operatoren wurde hinzugefügt.
 
 * **DML_OPERATOR_ELEMENT_WISE_BIT_SHIFT_LEFT**
 * **DML_OPERATOR_ELEMENT_WISE_BIT_SHIFT_RIGHT**
@@ -159,7 +159,7 @@ Die folgenden Erweiterungen wurden hinzugefügt.
     * **DML_REDUCE_FUNCTION_MIN**
     * **DML_REDUCE_FUNCTION_MULTIPLY**
     * **DML_REDUCE_FUNCTION_SUM**
-* Gelockerte Tensorformeinschränkungen für **DML_OPERATOR_GATHER**
+* Gelockerte Tensorformeinschränkungen **für DML_OPERATOR_GATHER**
 
 ## <a name="dml_feature_level_2_0"></a>DML_FEATURE_LEVEL_2_0
 
@@ -167,10 +167,10 @@ Eingeführt in DirectML Version 1.1.0.
 
 Die folgenden APIs wurden hinzugefügt.
 * [DMLCreateDevice1-Funktion](./directml/nf-directml-dmlcreatedevice1.md)
-* [DML_FEATURE_LEVEL-Enumeration](/windows/win32/api/directml/ne-directml-dml_feature_level)
+* [DML_FEATURE_LEVEL Enumeration](/windows/win32/api/directml/ne-directml-dml_feature_level)
 * Abfragen auf Featureebene (siehe [DML_FEATURE_QUERY_FEATURE_LEVELS](/windows/win32/api/directml/ns-directml-dml_feature_query_feature_levels))
 
-Unterstützung für die folgenden Operatoren wurde hinzugefügt.
+Unterstützung für die folgenden Operatoren hinzugefügt.
 
 * **DML_OPERATOR_ELEMENT_WISE_SIGN**
 * **DML_OPERATOR_ELEMENT_WISE_IS_NAN**
@@ -203,15 +203,15 @@ Die folgenden Erweiterungen wurden hinzugefügt.
   * **DML_OPERATOR_ELEMENT_WISE_LOGICAL_NOT**
   * **DML_OPERATOR_ELEMENT_WISE_LOGICAL_OR**
   * **DML_OPERATOR_ELEMENT_WISE_LOGICAL_XOR**
-* 5D-Aktivierungsfunktionen unterstützen jetzt die Verwendung von Schritten bei ihren Eingabe- und Ausgabe-Tensoren.
+* 5D-Aktivierungsfunktionen unterstützen jetzt die Verwendung von Strides für ihre Eingabe- und Ausgabetensoren.
 
 ## <a name="dml_feature_level_1_0"></a>DML_FEATURE_LEVEL_1_0
 
-Die Funktionsebene, in der DirectML eingeführt wurde.
+Die Featureebene, in der DirectML eingeführt wurde.
 
 ## <a name="see-also"></a>Siehe auch
 
 * [DirectML-Versionsverlauf](./dml-version-history.md)
-* [DML_FEATURE_LEVEL-Enumeration](/windows/win32/api/directml/ne-directml-dml_feature_level)
+* [DML_FEATURE_LEVEL Enumeration](/windows/win32/api/directml/ne-directml-dml_feature_level)
 * [DMLCreateDevice1-Funktion](./directml/nf-directml-dmlcreatedevice1.md)
 * [DML_FEATURE_QUERY_FEATURE_LEVELS-Struktur](/windows/win32/api/directml/ns-directml-dml_feature_query_feature_levels)

@@ -1,19 +1,19 @@
 ---
-description: Das Element der obersten Ebene in einer Journal Notiz-XML-Datei.
+description: Das Element der obersten Ebene in einer XML-Datei mit Journalnotizen.
 ms.assetid: 3887667c-67a7-416a-b94d-c30bb02a7985
-title: Journaldocument-Element
+title: JournalDocument-Element
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 408df14347c130e6b0a73ba869b634ca2493fb56
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7820ef68dc87bf42d9580c800e2e165f2f2859a4
+ms.sourcegitcommit: c3f669dc1d52278432bf75ad9fddba3257d26aa2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104530170"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111432172"
 ---
-# <a name="journaldocument-element"></a>Journaldocument-Element
+# <a name="journaldocument-element"></a>JournalDocument-Element
 
-Das Element der obersten Ebene in einer Journal Notiz-XML-Datei.
+Das Element der obersten Ebene in einer XML-Datei mit Journalnotizen.
 
 ## <a name="definition"></a>Definition
 
@@ -37,19 +37,19 @@ Keine
 
 ## <a name="child-elements"></a>Untergeordnete Elemente
 
-[**Schreib**](stationery-element.md)
+[**Briefpapier**](stationery-element.md)
 
-[**Journalpage**](journalpage-element.md)
+[**JournalPage**](journalpage-element.md)
 
 ## <a name="attributes"></a>Attribute
 
 
 
-| Attribut             | type                      | Erforderlich | BESCHREIBUNG                                                      | Mögliche Werte           |
+| attribute             | Typ                      | Erforderlich | BESCHREIBUNG                                                      | Mögliche Werte           |
 |-----------------------|---------------------------|----------|------------------------------------------------------------------|---------------------------|
-| **Version**           | **xs:string**             | Erforderlich | Die Version des Journal Dokuments, das in der XML-Datei dargestellt wird. | 1.0                       |
-| **DefaultPageWidth**  | **xs:nonNegativeInteger** | Erforderlich | Die Standardbreite der Seite für das Journal Dokument.          | Eine beliebige nicht negative ganze Zahl. |
-| **Defaultpageheight** | **xs:nonNegativeInteger** | Erforderlich | Die Standardhöhe der Seite für das Journal Dokument.         | Eine beliebige nicht negative ganze Zahl. |
+| **Version**           | **xs:string**             | Erforderlich | Die Version des Journaldokuments, das in der XML-Datei dargestellt wird. | 1.0                       |
+| **DefaultPageWidth**  | **xs:nonNegativeInteger** | Erforderlich | Die Standardbreite der Seite für das Journaldokument.          | Eine nicht negative ganze Zahl. |
+| **DefaultPageHeight** | **xs:nonNegativeInteger** | Erforderlich | Die Standardhöhe der Seite für das Journaldokument.         | Eine nicht negative ganze Zahl. |
 
 
 
@@ -59,11 +59,11 @@ Keine
 
 
 
-|              |                                            |
+|  Element     | Wert                                                     |
 |--------------|--------------------------------------------|
-| Elementtyp | **Journaldocument**                        |
-| Namespace    | urn: Schemas-Microsoft-com: TabletPC: RichInk |
-| Schemaname  | Journal Leser                             |
+| Elementtyp | **JournalDocument**                        |
+| Namespace    | urn:schemas-microsoft-com:tabletpc:richink |
+| Schemaname  | Journalreader                             |
 
 
 

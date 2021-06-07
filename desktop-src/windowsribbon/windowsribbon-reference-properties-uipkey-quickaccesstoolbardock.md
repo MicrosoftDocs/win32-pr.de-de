@@ -1,19 +1,19 @@
 ---
 title: UI_PKEY_QuickAccessToolbarDock
-description: Identifiziert die UI \_ pkey \_ quickaccesstoolbardock-Eigenschaft.
+description: Identifiziert die \_ PKEY \_ QuickAccessToolbarDock-Eigenschaft der Benutzeroberfläche.
 ms.assetid: 77f7b0a8-f276-4501-9d53-fb5a3185edcc
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d1ae48cb9ef2ee665739de2f3aacab197b461665
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 5e28ec2e153755fd243bf78ee389cad40485a348
+ms.sourcegitcommit: 099ecdda1e83618b844387405da0db0ebda93a65
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104390399"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111443761"
 ---
-# <a name="ui_pkey_quickaccesstoolbardock"></a>UI \_ pkey \_ quickaccesstoolbardock
+# <a name="ui_pkey_quickaccesstoolbardock"></a>UI \_ PKEY \_ QuickAccessToolbarDock
 
-Identifiziert die UI \_ pkey \_ quickaccesstoolbardock-Eigenschaft.
+Identifiziert die \_ PKEY \_ QuickAccessToolbarDock-Eigenschaft der Benutzeroberfläche.
 
 ```
 propertyDescription
@@ -25,18 +25,18 @@ propertyDescription
       type = UI_CONTROLDOCK
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-UI \_ pkey \_ quickaccesstoolbardock wird von einer Anwendung verwendet, um den Andock Zustand der Symbolleiste für den schnell Zugriff (QAT) abzufragen.
+Ui \_ PKEY \_ QuickAccessToolbarDock wird von einer Anwendung verwendet, um den Andockzustand der Schnellzugriffssymbolleiste (Quick Access Toolbar, QAT) abzufragen.
 
-Der Eigenschafts Wert ist aus der [**UI \_ controldock**](/windows/desktop/api/uiribbon/ne-uiribbon-ui_controldock) -Enumeration.
+Der Eigenschaftswert stammt aus der [**UI \_ CONTROLDOCK-Enumeration.**](/windows/desktop/api/uiribbon/ne-uiribbon-ui_controldock)
 
 
 
-|                         |                                                                                                                                                                                                                                                       |
+|    Enumeration                     |    Beschreibung                                                                                                                                                                                                                                                   |
 |-------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| UI \_ controldock \_ Top    | QAT wird im nicht-Client Bereich der Menüband-Host Anwendung angedockt, wie im folgenden Screenshot gezeigt.![Screenshot der Symbolleiste für den schnell Zugriff, die über dem Menüband im nicht-Client Bereich angedockt ist.](images/properties/qat-docktop.png)<br/> |
-| UI- \_ controldock \_ unten | QAT wird als visuell ganzzahliges Band unter dem Menüband angedockt, wie im folgenden Screenshot gezeigt. ![Screenshot der Symbolleiste für den schnell Zugriff, die unter dem Menüband angedockt ist.](images/properties/qat-dockbottom.png)<br/>                           |
+| UI \_ CONTROLDOCK \_ TOP    | Die QAT wird im Nichtclientbereich der Menübandhostanwendung angedockt, wie im folgenden Screenshot gezeigt.![Screenshot der Symbolleiste für den Schnellzugriff, die über dem Menüband im Nichtclientbereich angedockt ist.](images/properties/qat-docktop.png)<br/> |
+| UI \_ CONTROLDOCK \_ BOTTOM | Die QAT ist wie im folgenden Screenshot gezeigt als visuell integrales Band unterhalb des Menübands angedockt. ![Screenshot der Symbolleiste für den Schnellzugriff, die unter dem Menüband angedockt ist.](images/properties/qat-dockbottom.png)<br/>                           |
 
 
 
@@ -46,7 +46,7 @@ Der Eigenschafts Wert ist aus der [**UI \_ controldock**](/windows/desktop/api/u
 
 <dl> <dt>
 
-[Menü Band Eigenschaften](windowsribbon-reference-properties-ribbon.md)
+[Menübandeigenschaften](windowsribbon-reference-properties-ribbon.md)
 </dt> </dl>
 
  

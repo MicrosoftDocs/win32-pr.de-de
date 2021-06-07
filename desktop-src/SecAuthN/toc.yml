@@ -4,42 +4,42 @@
     - name: Informationen zur Authentifizierung
       href: about-authentication.md
       items:
-        - name: Verwaltung von Anmelde Informationen
+        - name: Verwaltung von Anmeldeinformationen
           href: credentials-management.md
           items:
-            - name: Arten von Anmelde Informationen
+            - name: Arten von Anmeldeinformationen
               href: kinds-of-credentials.md
-            - name: Benutzernamen Formate
+            - name: Benutzernamenformate
               href: user-name-formats.md
         - name: LSA-Authentifizierung
           href: lsa-authentication.md
           items:
-            - name: LSA-Authentifizierungs Modell
+            - name: LSA-Authentifizierungsmodell
               href: lsa-authentication-model.md
-            - name: LSA-Anmelde Sitzungen
+            - name: LSA-Anmeldesitzungen
               href: lsa-logon-sessions.md
-            - name: Authentifizierung von LSA-Benutzer Anmelde Authentifizierung
+            - name: LSA-Benutzeranmeldungsauthentifizierung
               href: lsa-user-logon-authentication.md
               items:
                 - name: Interaktive Authentifizierung
                   href: interactive-authentication.md
-                - name: Nicht interaktive Authentifizierung
+                - name: Nichtinteraktive Authentifizierung
                   href: noninteractive-authentication.md
-            - name: Authentifizierungs Pakete
+            - name: Authentifizierungspakete
               href: authentication-packages.md
               items:
-                - name: Windows-Authentifizierungs Pakete
+                - name: Windows-Authentifizierungspakete
                   href: windows-authentication-packages.md
-                - name: Anbieter für Sicherheitsunterstützung/Authentifizierungs Pakete
+                - name: Anbieter/Authentifizierungspakete für den Sicherheitssupport
                   href: security-support-provider-authentication-packages.md
-                - name: Von Microsoft bereitgestellte Authentifizierungs Pakete
+                - name: Von Microsoft bereitgestellte Authentifizierungspakete
                   href: authentication-packages-provided-by-microsoft.md
                   items:
-                    - name: Kerberos SSP/AP
+                    - name: Kerberos-SSP/-AP
                       href: kerberos-ssp-ap.md
-                    - name: MSV1_0 Authentifizierungs Paket
+                    - name: MSV1_0-Authentifizierungspaket
                       href: msv1-0-authentication-package.md
-                - name: Unter Authentifizierungs Pakete
+                - name: Unterauthentifizierungspakete
                   href: subauthentication-packages.md
         - name: Netzwerkanbieter-API
           href: network-provider-api.md
@@ -48,28 +48,28 @@
               href: network-providers.md
             - name: Anmeldeinformationsverwaltung
               href: credential-manager.md
-            - name: Mehrere Anbieter Router
+            - name: Router mit mehreren Anbietern
               href: multiple-provider-router.md
             - name: Von Netzwerkanbietern implementierte Funktionen
               href: functions-implemented-by-network-providers.md
               items:
-                - name: Funktionen-Funktionen
+                - name: Funktionenfunktionen
                   href: capabilities-functions.md
-                - name: Benutzernamen Funktionen
+                - name: Benutzernamenfunktionen
                   href: user-name-functions.md
-                - name: Device-Redirecting Funktionen
+                - name: Device-Redirecting Functions
                   href: device-redirecting-functions.md
-                - name: Dialog Feld Funktionen Provider-Specific
+                - name: Provider-Specific Dialogfeldfunktionen
                   href: provider-specific-dialog-box-functions.md
-                - name: Verwaltungsfunktionen
+                - name: Administrative Funktionen
                   href: administrative-functions.md
                 - name: Enumerationsfunktionen
                   href: enumeration-functions.md
-            - name: Credential Management-API
+            - name: Verwaltungs-API für Anmeldeinformationen
               href: credential-management-api.md
-            - name: Verbindungs Benachrichtigungs-API
+            - name: Verbindungs-Benachrichtigungs-API
               href: connection-notification-api.md
-        - name: Smartcardauthentifizierung
+        - name: Smartcard-Authentifizierung
           href: smart-card-authentication.md
           items:
             - name: Smartcardkonzepte
@@ -81,44 +81,44 @@
                   href: smart-card-interfaces.md
                 - name: Primärer Dienstanbieter
                   href: primary-service-provider.md
-                - name: Einführung in Smartcards für das System
+                - name: Einführung in Smartcards im System
                   href: introducing-smart-cards-to-the-system.md
                 - name: Zugreifen auf eine Smartcard
                   href: accessing-a-smart-card.md
                 - name: Beziehung zu anderen Diensten
                   href: relation-to-other-services.md
-            - name: Smartcard-Ressourcen-Manager
+            - name: Smartcard-Resource Manager
               href: smart-card-resource-manager.md
               items:
-                - name: Ressourcen-Manager-Implementierung
+                - name: Resource Manager-Implementierung
                   href: resource-manager-implementation.md
-                - name: Smartcard-Ressourcen-Manager-API
+                - name: Smartcard-Resource Manager-API
                   href: smart-card-resource-manager-api.md
                   items:
-                    - name: Smartcard-Datenbankabfrage Funktionen
+                    - name: Abfragefunktionen für Smartcard-Datenbanken
                       href: smart-card-database-query-functions.md
                     - name: Verwaltungsfunktionen für Smartcard-Datenbanken
                       href: smart-card-database-management-functions.md
-                    - name: Ressourcen-Manager Kontextfunktionen
+                    - name: Resource Manager-Kontextfunktionen
                       href: resource-manager-context-functions.md
-                    - name: Ressourcen-Manager-Unterstützungsfunktion
+                    - name: Resource Manager-Supportfunktion
                       href: resource-manager-support-function.md
-                    - name: Smartcard-nach Verfolgungs Funktionen
+                    - name: Smartcard-Nachverfolgungsfunktionen
                       href: smart-card-tracking-functions.md
-                    - name: Smartcard-und Reader-Zugriffs Funktionen
+                    - name: Smartcard- und Lesezugriffsfunktionen
                       href: smart-card-and-reader-access-functions.md
-                    - name: Direkt Karten Zugriffs Funktionen
+                    - name: Direct Card Access Functions
                       href: direct-card-access-functions.md
             - name: Smartcard-Benutzeroberfläche
               href: smart-card-user-interface.md
-            - name: Smartcarddienstanbieter
+            - name: Smartcard-Dienstanbieter
               href: smart-card-service-providers.md
               items:
-                - name: Basis Dienstanbieter
+                - name: Basisdienstanbieter
                   href: base-service-providers.md
-                - name: Aufbauen eines ISO7816-4-APDU-Befehls
+                - name: Erstellen eines ISO7816-4-APDU-Befehls
                   href: building-an-iso7816-4-apdu-command.md
-                - name: Anbieter-Wrapper Dienstanbieter
+                - name: Anbieterwrapper-Dienstanbieter
                   href: vendor-wrapper-service-provider.md
         - name: SSPI
           href: sspi.md
@@ -127,78 +127,78 @@
               href: sspi-model.md
             - name: SSPI-Optionen für verteilte Anwendungen
               href: sspi-options-for-distributed-applications.md
-            - name: SSPI-Kontext Semantik
+            - name: SSPI-Kontextsemantik
               href: sspi-context-semantics.md
               items:
                 - name: Asynchrone Kontexte
                   href: sspi-asynchronous-contexts.md
-                - name: Kontext Anforderungen
+                - name: Kontextanforderungen
                   href: context-requirements.md
                 - name: Connection-Oriented Kontexte
                   href: connection-oriented-contexts.md
-                - name: Datagramm-Kontexte
+                - name: Datagrammkontexte
                   href: datagram-contexts.md
                 - name: Streamkontexte
                   href: stream-contexts.md
             - name: Von Microsoft bereitgestellte SSP-Pakete
               href: ssp-packages-provided-by-microsoft.md
               items:
-                - name: Anmelde Informationsanbieter für Sicherheitsunterstützung
+                - name: Anmeldeinformationssicherheits-Supportanbieter
                   href: credential-security-support-provider.md
                   items:
-                    - name: Einstellungen für den Gruppenrichtlinie ""
+                    - name: CredSSP Gruppenrichtlinie-Einstellungen
                       href: credssp-group-policy-settings.md
-                - name: Microsoft aushandeln
+                - name: Microsoft Negotiate
                   href: microsoft-negotiate.md
-                - name: Microsoft-NTLM
+                - name: Microsoft NTLM
                   href: microsoft-ntlm.md
                 - name: Microsoft Kerberos
                   href: microsoft-kerberos.md
                   items:
-                    - name: Grundlegende Authentifizierungs Konzepte
+                    - name: Grundlegende Authentifizierungskonzepte
                       href: basic-authentication-concepts.md
                       items:
                         - name: Schlüsselauthentifizierung
                           href: key-authentication.md
-                        - name: Authenticator-Meldungen
+                        - name: Authentifikatormeldungen
                           href: authenticator-messages.md
                         - name: Schlüsselverteilung
                           href: key-distribution.md
-                        - name: Sitzungs Tickets
+                        - name: Sitzungstickets
                           href: session-tickets.md
                         - name: Ticket-Granting Tickets
                           href: ticket-granting-tickets.md
-                    - name: Kerberos-Unterprotokolle
+                    - name: Kerberos-Unterprotokollen
                       href: kerberos-subprotocols.md
                       items:
                         - name: Authentifizierungsdienstaustausch
                           href: authentication-service-exchange.md
                         - name: Ticket-Granting-Dienstaustausch
                           href: ticket-granting-service-exchange.md
-                        - name: Client-/Server-Exchange
+                        - name: Client-/Serveraustausch
                           href: client-server-exchange.md
                     - name: Kerberos-Modell
                       href: kerberos-components.md
                       items:
                         - name: Schlüsselverteilungscenter
                           href: key-distribution-center.md
-                        - name: Konto Datenbank
+                        - name: Kontodatenbank
                           href: account-database.md
                         - name: Kerberos-Richtlinie
                           href: kerberos-policy.md
-                    - name: SSPI/Kerberos-Interoperabilität mit GSSAPI
+                    - name: SSPI-/Kerberos-Interoperabilität mit GSSAPI
                       href: sspi-kerberos-interoperability-with-gssapi.md
-                - name: SSP Microsoft Digest
+                - name: Microsoft Digest SSP
                   href: microsoft-digest-ssp.md
                   items:
-                    - name: Das Digest-Zugriffsprotokoll
+                    - name: Das Digestzugriffsprotokoll
                       href: the-digest-access-protocol.md
                       items:
-                        - name: Inhalt einer Digestherausforderung
+                        - name: Inhalt einer Digest-Herausforderung
                           href: contents-of-a-digest-challenge.md
-                        - name: Inhalt einer digestaufforderungs-Antwort
+                        - name: Inhalt einer Digest-Abfrageantwort
                           href: contents-of-a-digest-challenge-response.md
-                    - name: Qualität von Schutz und Chiffren
+                    - name: Qualität von Schutz und Verschlüsselungen
                       href: quality-of-protection-and-ciphers.md
                       items:
                         - name: Qualität des Schutzes
@@ -210,9 +210,9 @@
                       items:
                         - name: Anfängliche Authentifizierung mit Microsoft Digest
                           href: initial-authentication-using-microsoft-digest.md
-                        - name: Authentifizieren von nachfolgenden Anforderungen mithilfe von Microsoft Digest
+                        - name: Authentifizieren nachfolgender Anforderungen mit Microsoft Digest
                           href: authenticating-subsequent-requests-using-microsoft-digest.md
-                        - name: Beibehalten des Sicherheits Kontexts zwischen Verbindungen
+                        - name: Verwalten des Sicherheitskontexts zwischen Verbindungen
                           href: maintaining-the-security-context-between-connections.md
                     - name: IETF-Spezifikationen für Microsoft Digest SSP
                       href: ietf-specifications-for-microsoft-digest-ssp.md
@@ -229,100 +229,100 @@
                         - name: TLS-Protokoll (Transport Layer Security)
                           href: transport-layer-security-protocol.md
                           items:
-                            - name: TLS-Handshake-Protokoll
+                            - name: TLS-Handshakeprotokoll
                               href: tls-handshake-protocol.md
-                            - name: TLS-Daten Satz Protokoll
+                            - name: TLS-Datensatzprotokoll
                               href: tls-record-protocol.md
-                            - name: TLS-Verschlüsselungs Sammlungen
+                            - name: TLS-Verschlüsselungssammlungen
                               href: tls-cipher-suites.md
-                            - name: TLS und SSL
+                            - name: TLS im Vergleich zu SSL
                               href: tls-versus-ssl.md
-                    - name: Nachrichten Authentifizierungs Codes in Schannel
+                    - name: Nachrichtenauthentifizierungscodes in Schannel
                       href: message-authentication-codes-in-schannel.md
-                    - name: Verschlüsselungs Sammlungen in TLS/SSL (Schannel SSP)
+                    - name: Cipher Suites in TLS/SSL (Schannel SSP)
                       href: cipher-suites-in-schannel.md
                       items:
-                        - name: TLS-Verschlüsselungs Sammlungen in Windows 10 v21H1
+                        - name: TLS-Verschlüsselungssammlungen in Windows 10 v21H1
                           href: ./tls-cipher-suites-in-windows-server-2022.md
-                        - name: TLS-Verschlüsselungs Sammlungen in Windows 10 v1903
+                        - name: TLS-Verschlüsselungssammlungen in Windows 10 v1903
                           href: tls-cipher-suites-in-windows-10-v1903.md
-                        - name: TLS-Verschlüsselungs Sammlungen in Windows 10 v1809
+                        - name: TLS-Verschlüsselungssammlungen in Windows 10 v1809
                           href: tls-cipher-suites-in-windows-10-v1809.md
-                        - name: TLS-Verschlüsselungs Sammlungen in Windows 10 v1803
+                        - name: TLS-Verschlüsselungssammlungen in Windows 10 v1803
                           href: tls-cipher-suites-in-windows-10-v1803.md
-                        - name: TLS-Verschlüsselungs Sammlungen in Windows 10 v1709
+                        - name: TLS-Verschlüsselungssammlungen in Windows 10 v1709
                           href: tls-cipher-suites-in-windows-10-v1709.md
-                        - name: TLS-Verschlüsselungs Sammlungen in Windows 10 v1703
+                        - name: TLS-Verschlüsselungssammlungen in Windows 10 v1703
                           href: tls-cipher-suites-in-windows-10-v1703.md
-                        - name: TLS-Verschlüsselungs Sammlungen in Windows 10 v1607
+                        - name: TLS-Verschlüsselungssammlungen in Windows 10 v1607
                           href: tls-cipher-suites-in-windows-10-v1607.md
-                        - name: TLS-Verschlüsselungs Sammlungen in Windows 10 v1511
+                        - name: TLS-Verschlüsselungssammlungen in Windows 10 v1511
                           href: tls-cipher-suites-in-windows-10-v1511.md
-                        - name: TLS-Verschlüsselungs Sammlungen in Windows 10 v1507
+                        - name: TLS-Verschlüsselungssammlungen in Windows 10 v1507
                           href: tls-cipher-suites-in-windows-10--version-1507.md
-                        - name: TLS-Verschlüsselungs Sammlungen in Windows 8.1
+                        - name: TLS-Verschlüsselungssammlungen in Windows 8.1
                           href: tls-cipher-suites-in-windows-8-1.md
-                        - name: TLS-Verschlüsselungs Sammlungen in Windows 8
+                        - name: TLS-Verschlüsselungssammlungen in Windows 8
                           href: tls-cipher-suites-in-windows-8.md
-                        - name: TLS-Verschlüsselungs Sammlungen in Windows 7
+                        - name: TLS-Verschlüsselungssammlungen in Windows 7
                           href: tls-cipher-suites-in-windows-7.md
                         - name: TLS Cipher-Suites in Windows Vista
                           href: schannel-cipher-suites-in-windows-vista.md
-                        - name: Priorisieren von SChannel-Verschlüsselungs Sammlungen
+                        - name: Priorisieren von Schannel-Verschlüsselungssammlungen
                           href: prioritizing-schannel-cipher-suites.md
                     - name: Elliptische Kurven in TLS (Schannel SSP)
                       items:
-                        - name: 'TLS-elliptische Kurven in Windows 10, Version 1607 und höher'
+                        - name: 'TLS Elliptic Curves in Windows 10, Version 1607 und höher'
                           href: tls-elliptic-curves-in-windows-10-1607-and-later.md
-                        - name: 'TLS-elliptische Kurven in Windows 10, Version 1507 und 1511'
+                        - name: 'TLS Elliptic Curves in Windows 10, Version 1507 und 1511'
                           href: tls-elliptic-curves-in-windows-10-1507-and-1511.md
-                    - name: SChannel-Anmelde Informationen
+                    - name: Schannel-Anmeldeinformationen
                       href: schannel-credentials.md
-                    - name: SChannel-Fehler Codes für TLS-und SSL-Warnungen
+                    - name: Schannel-Fehlercodes für TLS- und SSL-Warnungen
                       href: schannel-error-codes-for-tls-and-ssl-alerts.md
-                    - name: SChannel und CryptoAPI
+                    - name: Schannel und CryptoAPI
                       href: schannel-and-cryptoapi.md
                       items:
                         - name: Zertifikatspeicher
                           href: certificate-stores.md
-                        - name: Private Schlüssel CryptoAPI 2.0
+                        - name: CryptoAPI 2.0 private Schlüssel
                           href: cryptoapi-2-0-private-keys.md
             - name: Benutzerdefinierte Sicherheitspakete
               href: custom-security-packages.md
               items:
-                - name: SSP/APS im Vergleich zu SSPs
+                - name: SSP/APs im Vergleich zu SSPs
                   href: ssp-aps-versus-ssps.md
                 - name: LSA-Modus im Vergleich zum Benutzermodus
                   href: lsa-mode-versus-user-mode.md
-                - name: Einschränkungen bei der Registrierung und Installation eines Sicherheitspakets
+                - name: Einschränkungen beim Registrieren und Installieren eines Sicherheitspakets
                   href: restrictions-around-registering-and-installing-a-security-package.md
             - name: Erweiterte Fehlerinformationen
               href: extended-error-information.md
-        - name: Winlogon-und Anmelde Informationsanbieter
+        - name: Winlogon- und Anmeldeinformationsanbieter
           href: winlogon-and-credential-providers.md
           items:
-            - name: Winlogon und Gina
+            - name: Winlogon und GINA
               href: winlogon-and-gina.md
               items:
                 - name: Windows-Anmeldung
                   href: winlogon.md
                   items:
-                    - name: Winlogon wird initialisiert.
+                    - name: Initialisieren der Winlogon
                       href: initializing-winlogon.md
                     - name: Winlogon-Zustände
                       href: winlogon-states.md
-                    - name: Unterstützte Dialog Feld Dienstnutzungsdauer-out-Vorgänge
+                    - name: Unterstützte Time outvorgänge des Dialogfelddiensts
                       href: supported-dialog-box-service-time-out-operations.md
-                    - name: Senden von Nachrichten an die Gina
+                    - name: Senden von Nachrichten an die GINA
                       href: sending-messages-to-the-gina.md
                 - name: Gina
                   href: gina.md
                   items:
-                    - name: Laden und Ausführen einer Gina-dll
+                    - name: Laden und Ausführen einer GINA-DLL
                       href: loading-and-running-a-gina-dll.md
-                    - name: Entwickeln und Testen einer Gina-dll
+                    - name: Erstellen und Testen einer GINA-DLL
                       href: building-and-testing-a-gina-dll.md
-                - name: Terminal Dienste-Gina-Funktionen
+                - name: GINA-Funktionen für Terminaldienste
                   href: terminal-services-gina-functions.md
                 - name: Interaktion mit Netzwerkanbietern
                   href: interaction-with-network-providers.md
@@ -331,50 +331,50 @@
                   items:
                     - name: Zuständigkeiten von Winlogon
                       href: responsibilities-of-winlogon.md
-                    - name: Zuständigkeiten von Gina
+                    - name: Zuständigkeiten der GINA
                       href: responsibilities-of-the-gina.md
                     - name: MSGina.dll Features
                       href: msgina-dll-features.md
                 - name: 'Interaktion zwischen Windows-Anmeldung und GINA '
                   href: interaction-between-winlogon-and-gina.md
-                - name: Winlogon-Benachrichtigungs Pakete
+                - name: Winlogon-Benachrichtigungspakete
                   href: winlogon-notification-packages.md
                   items:
-                    - name: Erstellen eines Winlogon-Benachrichtigungs Pakets
+                    - name: Erstellen eines Winlogon-Benachrichtigungspakets
                       href: creating-a-winlogon-notification-package.md
-                    - name: Registrieren eines Winlogon-Benachrichtigungs Pakets
+                    - name: Registrieren eines Winlogon-Benachrichtigungspakets
                       href: registering-a-winlogon-notification-package.md
-                    - name: Winlogon-Benachrichtigungs Ereignisse
+                    - name: Winlogon-Benachrichtigungsereignisse
                       href: winlogon-notification-events.md
-                    - name: Referenz zum Winlogon-Benachrichtigungs Paket
+                    - name: Referenz zum Winlogon-Benachrichtigungspaket
                       href: winlogon-notification-package-reference.md
                       items:
                         - name: Registrierungseinträge
                           href: registry-entries.md
-                        - name: Ereignishandlerfunktions-Prototyp
+                        - name: Prototyp der Ereignishandlerfunktion
                           href: event-handler-function-prototype.md
                           items:
                             - name: WLX_NOTIFICATION_INFO
                               href: /windows/win32/api/Winwlx/ns-winwlx-wlx_notification_info
-            - name: Anmelde Informationsanbieter in Windows
+            - name: Anmeldeinformationsanbieter in Windows
               href: credential-providers-in-windows.md
     - name: Verwenden der Authentifizierung
       href: using-authentication.md
       items:
-        - name: Erstellen von benutzerdefinierten Sicherheitspaketen
+        - name: Erstellen benutzerdefinierter Sicherheitspakete
           href: creating-custom-security-packages.md
           items:
-            - name: LSA-ModusInitialisierung
+            - name: Initialisierung im LSA-Modus
               href: lsa-mode-initialization.md
-            - name: Benutzermodusinitialisierung
+            - name: Initialisierung des Benutzermodus
               href: user-mode-initialization.md
             - name: Registrieren von SSP/AP-DLLs
               href: registering-ssp-ap-dlls.md
-            - name: Verwenden von dreiteiligen Prinzipal Namen
+            - name: Verwenden von dreiteiligen Prinzipalnamen
               href: using-three-part-principal-names.md
-        - name: Anpassen von Winlogon
+        - name: Anpassen der Winlogon
           href: customizing-winlogon.md
-        - name: 'Leitfaden zu den ersten Schritten für Online Anbieter, die in die Web Authentication Broker-APIs integrieren'
+        - name: 'Anleitungen zu den ersten Schritte für Onlineanbieter, die in die Webauthentifizierungsbroker-APIs integriert sind'
           href: getting-started-guidance-for-online-providers-integrating-with-the-web-authentication-broker-apis.md
           items:
             - name: Überlegungen für die Webseitenentwicklung
@@ -388,79 +388,79 @@
                   href: authentication-for-web-pages.md
                 - name: Autorisierung für Webseiten
                   href: authorization-for-web-pages.md
-                - name: Bewährte Methoden für das Entwerfen von Authentifizierungs Webseiten
+                - name: Bewährte Methoden für das Entwerfen von Authentifizierungswebseiten
                   href: best-practices-for-designing-authentication-web-pages.md
             - name: Webauthentifizierungsprobleme
               href: web-authentication-problems.md
-            - name: Häufig gestellte Fragen zum Webauthentifizierungs Broker
+            - name: Häufig gestellte Fragen zum Webauthentifizierungsbroker
               href: faq-for-web-authentication-broker.md
         - name: Verwenden der Netzwerkanbieter-API
           href: using-network-provider-api.md
           items:
-            - name: Implementieren eines Netzwerk Anbieters
+            - name: Implementieren eines Netzwerkanbieters
               href: implementing-a-network-provider.md
-            - name: Implementieren eines Credential-Managers
+            - name: Implementieren eines Anmeldeinformationsverwaltung
               href: implementing-a-credential-manager.md
-            - name: Registrieren von Netzwerkanbietern und Anmelde Informations Managern
+            - name: Registrieren von Netzwerkanbietern und Anmeldeinformations-Managern
               href: registering-network-providers-and-credential-managers.md
             - name: Zurückgeben von Werten an die MPR
               href: returning-values-to-the-mpr.md
             - name: Verarbeiten von gepufferten Daten
               href: handling-buffered-data.md
-            - name: Empfangen von Verbindungs Benachrichtigungen
+            - name: Empfangen von Verbindungsbenachrichtigungen
               href: receiving-connection-notifications.md
-            - name: Registrieren für den Empfang von Verbindungs Benachrichtigungen
+            - name: Registrieren für den Empfang von Verbindungsbenachrichtigungen
               href: registering-to-receive-connection-notifications.md
-            - name: Überschreiben des standardmpr-Timeout Intervalls
+            - name: Überschreiben des STANDARDMÄßIGEN MPR-Time out-Intervalls
               href: overriding-the-default-mpr-time-out-interval.md
         - name: Verwenden von SSPI
           href: using-sspi.md
           items:
-            - name: Prozeduren für die meisten Sicherheitspakete und Protokolle
+            - name: 'Verfahren, die mit den meisten Sicherheitspaketen und Protokollen verwendet werden'
               href: procedures-used-with-most-security-packages-and-protocols.md
               items:
-                - name: Verwenden von secbufferde SC und secbuffer
+                - name: Verwenden von SecBufferDesc und SecBuffer
                   href: using-secbufferdesc-and-secbuffer.md
-                - name: SSPI wird initialisiert.
+                - name: Initialisieren von SSPI
                   href: initializing-sspi.md
                   items:
-                    - name: Schreiben und Installieren eines Security Support Provider
+                    - name: Schreiben und Installieren eines Sicherheitssupportanbieters
                       href: writing-and-installing-a-security-support-provider.md
                     - name: Initialisieren des Sicherheitspakets
                       href: initializing-the-security-package.md
-                    - name: Informationen zu Sicherheitspaketen erhalten
+                    - name: Abrufen von Informationen zu Sicherheitspaketen
                       href: getting-information-about-security-packages.md
                     - name: Verwenden von Sicherheitspaketen
                       href: using-security-packages.md
-                - name: Einrichten einer sicheren Verbindung mit der Authentifizierung
+                - name: Herstellen einer sicheren Verbindung mit Authentifizierung
                   href: establishing-a-secure-connection-with-authentication.md
                   items:
-                    - name: Client kontextinitialisierung
+                    - name: Initialisierung des Clientkontexts
                       href: client-context-initialization.md
                       items:
-                        - name: Client Fortsetzung
+                        - name: Clientfortsetzung
                           href: client-continuation.md
-                    - name: Initialisierung des Server Kontexts
+                    - name: Initialisierung des Serverkontexts
                       href: server-context-initialization.md
                       items:
-                        - name: Server Fortsetzung
+                        - name: Serverfortsetzung
                           href: server-continuation.md
-                - name: Sicherstellen der Kommunikations Integrität während des Nachrichten Austauschs
+                - name: Sicherstellen der Kommunikationsintegrität während des Nachrichtenaustauschs
                   href: ensuring-communication-integrity-during-message-exchange.md
                 - name: Beenden einer SSPI-Sitzung
                   href: ending-an-sspi-session.md
-            - name: SSPI-Beispiel Code
+            - name: SSPI-Beispielcode
               href: sample-sspi-code.md
               items:
                 - name: Verwenden von SSPI mit einem Windows Sockets-Client
                   href: using-sspi-with-a-windows-sockets-client.md
                 - name: Verwenden von SSPI mit einem Windows Sockets-Server
                   href: using-sspi-with-a-windows-sockets-server.md
-                - name: Header Datei für SSPI-Client und-Server
+                - name: Headerdatei für SSPI-Client und -Server
                   href: header-file-for-sspi-client-and-server.md
-                - name: Beispiel Code für secbuffer und secbufferdesc
+                - name: SecBuffer- und SecBufferDesc-Beispielcode
                   href: secbuffer-and-secbufferdesc-example-code.md
-                - name: Verwenden der Nachrichten Unterstützung
+                - name: Verwenden der Nachrichtenunterstützung
                   href: using-message-support.md
                   items:
                     - name: Signieren einer Nachricht
@@ -471,101 +471,101 @@
                       href: encrypting-a-message.md
                     - name: Entschlüsseln einer Nachricht
                       href: decrypting-a-message.md
-            - name: SSPI mit Microsoft Digest SSP-Tasks
+            - name: SSPI mit Microsoft Digest SSP-Aufgaben
               href: sspi-with-microsoft-digest-ssp-tasks.md
               items:
-                - name: Abrufen von Microsoft Digest SSP-Anmelde Informationen
+                - name: Abrufen Microsoft Digest SSP-Anmeldeinformationen
                   href: obtaining-microsoft-digest-ssp-credentials.md
                   items:
-                    - name: Abrufen der standardmäßigen Hashwert
+                    - name: Abrufen von Standard-Digestanmeldeinformationen
                       href: obtaining-default-digest-credentials.md
-                    - name: Abrufen alternativer Digest-Anmelde Informationen
+                    - name: Abrufen alternativer Digestanmeldeinformationen
                       href: obtaining-alternate-digest-credentials.md
-                - name: Die Digest-Abfrage wird erzeugt.
+                - name: Generieren der Digest-Herausforderung
                   href: generating-the-digest-challenge.md
-                - name: Erzeugen der digestaufforderungs-Antwort
+                - name: Generieren der Digest-Challenge-Antwort
                   href: generating-the-digest-challenge-response.md
                   items:
-                    - name: Eingabepuffer für die digestaufforderungs-Antwort
+                    - name: Eingabepuffer für die Digest-Challenge-Antwort
                       href: input-buffers-for-the-digest-challenge-response.md
                 - name: Schützen von Nachrichten mit Microsoft Digest
                   href: protecting-messages-using-microsoft-digest.md
-                - name: Abfragen von Digest-Sicherheitskontext Attributen
+                - name: Abfragen von Digestsicherheitskontextattributen
                   href: querying-digest-security-context-attributes.md
-            - name: Erstellen einer sicheren Verbindung mithilfe von SChannel
+            - name: Erstellen einer sicheren Verbindung mit Schannel
               href: creating-a-secure-connection-using-schannel.md
               items:
-                - name: Abrufen von SChannel-Anmelde Informationen
+                - name: Abrufen von Schannel-Anmeldeinformationen
                   href: obtaining-schannel-credentials.md
                   items:
-                    - name: Erhalten von SChannel-Anmelde Informationen
+                    - name: Abrufen von Schannel-Anmeldeinformationen
                       href: getting-schannel-credentials.md
-                    - name: Erhalten eines Zertifikats für SChannel
+                    - name: Abrufen eines Zertifikats für Schannel
                       href: getting-a-certificate-for-schannel.md
-                    - name: Angeben von SChannel-Chiffren und Verschlüsselungs stärken
+                    - name: Angeben von Schannel-Verschlüsselungen und Verschlüsselungsstärken
                       href: specifying-schannel-ciphers-and-cipher-strengths.md
-                - name: Erstellen eines SChannel-Sicherheits Kontexts
+                - name: Erstellen eines Schannel-Sicherheitskontexts
                   href: creating-an-schannel-security-context.md
                   items:
-                    - name: Durchführen der Authentifizierung mithilfe von SChannel
+                    - name: Durchführen der Authentifizierung mit Schannel
                       href: performing-authentication-using-schannel.md
-                    - name: Zuordnung von Zertifikaten
+                    - name: Zuordnen von Zertifikaten
                       href: mapping-certificates.md
-                    - name: Manuelles Überprüfen von SChannel-Anmelde Informationen
+                    - name: Manuelles Überprüfen von Schannel-Anmeldeinformationen
                       href: manually-validating-schannel-credentials.md
-                - name: Informationen zu SChannel-Verbindungen erhalten
+                - name: Abrufen von Informationen zu Schannel-Verbindungen
                   href: getting-information-about-schannel-connections.md
                   items:
-                    - name: Abfragen der Attribute eines SChannel-Kontexts
+                    - name: Abfragen der Attribute eines Schannel-Kontexts
                       href: querying-the-attributes-of-an-schannel-context.md
-                    - name: Abfragen der Attribute von SChannel-Anmelde Informationen
+                    - name: Abfragen der Attribute von Schannel-Anmeldeinformationen
                       href: querying-the-attributes-of-an-schannel-credential.md
-                - name: Verwalten von SChannel-Verbindungen
+                - name: Verwalten von Schannel-Verbindungen
                   href: managing-schannel-connections.md
                   items:
-                    - name: Lastenausgleich mithilfe von SChannel
+                    - name: Lastenausgleich mit Schannel
                       href: load-balancing-using-schannel.md
                     - name: Neuverhandlung einer Kanalverbindung
                       href: renegotiating-an-schannel-connection.md
-                    - name: Erkennen einer Anforderung zum Aushandeln einer Verbindung
+                    - name: Erkennen einer Anforderung zum erneuten Aushandeln einer Verbindung
                       href: recognizing-a-request-to-renegotiate-a-connection.md
-                    - name: Beenden einer SChannel-Verbindung
+                    - name: Herunterfahren einer Schannel-Verbindung
                       href: shutting-down-an-schannel-connection.md
-                - name: Von SChannel zurückgegebene zusätzliche Puffer
+                - name: Von Schannel zurückgegebene zusätzliche Puffer
                   href: extra-buffers-returned-by-schannel.md
-                - name: PSDK-Beispiele mit SChannel
+                - name: PSDK-Beispiele mit Schannel
                   href: psdk-samples-using-schannel.md
         - name: Schützen des Kennworts für die automatische Anmeldung
           href: protecting-the-automatic-logon-password.md
-    - name: Authentifizierungs Referenz
+    - name: Authentifizierungsreferenz
       href: authentication-reference.md
       items:
-        - name: Authentifizierungs Klassen
+        - name: Authentifizierungsklassen
           href: authentication-classes.md
           items:
-            - name: Remotetpmvirtualsmartcardmanager
+            - name: RemoteTpmVirtualSmartCardManager
               href: /previous-versions/windows/desktop/legacy/hh707166(v=vs.85)
-            - name: Tpmvirtualsmartcardmanager
+            - name: TpmVirtualSmartCardManager
               href: /previous-versions/windows/desktop/legacy/hh707171(v=vs.85)
-        - name: Authentifizierungs Konstanten
+        - name: Authentifizierungskonst constants (Authentifizierungs
           href: authentication-constants.md
           items:
             - name: WLX_LOGON_OPTION_XXX
               href: wlx-logon-option-xxx.md
             - name: WLX_SAS_TYPE_XXX
               href: wlx-sas-type-xxx.md
-        - name: Authentifizierungs Datentypen
+        - name: Authentifizierungsdatentypen
           href: authentication-data-types.md
           items:
             - name: PLSA_CLIENT_REQUEST
               href: plsa-client-request.md
             - name: SSPI-Handles
               href: sspi-handles.md
-            - name: SSPI-Status Codes
+            - name: SSPI-Statuscodes
               href: sspi-status-codes.md
             - name: TimeStamp
               href: timestamp.md
-        - name: Authentifizierungs Enumerationen
+        - name: Authentifizierungsenumeration
           href: authentication-enumerations.md
           items:
             - name: CRED_MARSHAL_TYPE
@@ -623,45 +623,45 @@
         - name: Authentifizierungsfunktionen
           href: authentication-functions.md
           items:
-            - name: Akzeptsecuritycontext (allgemein)
+            - name: AcceptSecurityContext (Allgemein)
               href: acceptsecuritycontext--general.md
               items:
-                - name: Accept-SecurityContext (kredssp)
+                - name: AcceptSecurityContext (CredSSP)
                   href: acceptsecuritycontext--credssp.md
-                - name: Akzeptsecuritycontext (Digest)
+                - name: AcceptSecurityContext (Digest)
                   href: acceptsecuritycontext--digest.md
-                - name: Akzeptsecuritycontext (Kerberos)
+                - name: AcceptSecurityContext (Kerberos)
                   href: acceptsecuritycontext--kerberos.md
-                - name: Akzeptsecuritycontext (aushandeln)
+                - name: AcceptSecurityContext (Negotiate)
                   href: acceptsecuritycontext--negotiate.md
-                - name: Akzeptsecuritycontext (NTLM)
+                - name: AcceptSecurityContext (NTLM)
                   href: acceptsecuritycontext--ntlm.md
-                - name: Akzeptsecuritycontext (SChannel)
+                - name: AcceptSecurityContext (Schannel)
                   href: acceptsecuritycontext--schannel.md
-            - name: AcquireCredentialsHandle (allgemein)
+            - name: AcquireCredentialsHandle (Allgemein)
               href: acquirecredentialshandle--general.md
               items:
-                - name: AcquireCredentialsHandle (kredssp)
+                - name: AcquireCredentialsHandle (CredSSP)
                   href: acquirecredentialshandle--credssp.md
                 - name: AcquireCredentialsHandle (Digest)
                   href: acquirecredentialshandle--digest.md
                 - name: AcquireCredentialsHandle (Kerberos)
                   href: acquirecredentialshandle--kerberos.md
-                - name: AcquireCredentialsHandle (aushandeln)
+                - name: AcquireCredentialsHandle (Negotiate)
                   href: acquirecredentialshandle--negotiate.md
                 - name: AcquireCredentialsHandle (NTLM)
                   href: acquirecredentialshandle--ntlm.md
-                - name: AcquireCredentialsHandle (SChannel)
+                - name: AcquireCredentialsHandle (Schannel)
                   href: acquirecredentialshandle--schannel.md
-            - name: Addconnectnotify
+            - name: AddConnectNotify
               href: /windows/desktop/api/Npapi/nf-npapi-addconnectnotify
-            - name: Addsecuritypackage
+            - name: AddSecurityPackage
               href: /windows/desktop/api/Sspi/nf-sspi-addsecuritypackagea
             - name: LSA_ADD_CREDENTIAL
               href: /windows/desktop/api/Ntsecpkg/nc-ntsecpkg-lsa_add_credential
             - name: LSA_ALLOCATE_CLIENT_BUFFER
               href: /windows/desktop/api/Ntsecpkg/nc-ntsecpkg-lsa_allocate_client_buffer
-            - name: Zuordnung
+            - name: AllocateHeap
               href: /previous-versions/windows/desktop/legacy/aa374721(v=vs.85)
             - name: LSA_ALLOCATE_LSA_HEAP
               href: /windows/desktop/api/Ntsecpkg/nc-ntsecpkg-lsa_allocate_lsa_heap
@@ -669,7 +669,7 @@
               href: /windows/desktop/api/Ntsecpkg/nc-ntsecpkg-lsa_allocate_private_heap
             - name: LSA_ALLOCATE_SHARED_MEMORY
               href: /windows/desktop/api/Ntsecpkg/nc-ntsecpkg-lsa_allocate_shared_memory
-            - name: Applycontroltoken
+            - name: ApplyControlToken
               href: /windows/desktop/api/Sspi/nf-sspi-applycontroltoken
             - name: LSA_AUDIT_ACCOUNT_LOGON
               href: /windows/desktop/api/Ntsecpkg/nc-ntsecpkg-lsa_audit_account_logon
@@ -681,11 +681,11 @@
               href: /windows/desktop/api/Ntsecpkg/nc-ntsecpkg-lsa_call_packageex
             - name: LSA_CALL_PACKAGE_PASSTHROUGH
               href: /windows/desktop/api/Ntsecpkg/nc-ntsecpkg-lsa_call_package_passthrough
-            - name: Cancelconnectnotify
+            - name: CancelConnectNotify
               href: /windows/desktop/api/Npapi/nf-npapi-cancelconnectnotify
             - name: LSA_CANCEL_NOTIFICATION
               href: /windows/desktop/api/Ntsecpkg/nc-ntsecpkg-lsa_cancel_notification
-            - name: Changeaccountpassword
+            - name: ChangeAccountPassword
               href: /windows/desktop/api/Sspi/nf-sspi-changeaccountpassworda
             - name: LSA_CLIENT_CALLBACK
               href: /windows/desktop/api/Ntsecpkg/nc-ntsecpkg-lsa_client_callback
@@ -711,123 +711,123 @@
               href: /windows/desktop/api/Ntsecpkg/nc-ntsecpkg-lsa_create_token
             - name: LSA_CREATE_TOKEN_EX
               href: /windows/desktop/api/Ntsecpkg/nc-ntsecpkg-lsa_create_token_ex
-            - name: Mit "Löschen"
+            - name: CredDelete
               href: /windows/desktop/api/WinCred/nf-wincred-creddeletea
-            - name: Anmelde Informationen
+            - name: CredEnumerate
               href: /windows/desktop/api/WinCred/nf-wincred-credenumeratea
-            - name: '"Kredfindbestcredential"'
+            - name: CredFindBestCredential
               href: /windows/desktop/api/WinCred/nf-wincred-credfindbestcredentiala
-            - name: Kostenlos
+            - name: CredFree
               href: /windows/desktop/api/WinCred/nf-wincred-credfree
-            - name: '"Kredgeungessiontypes"'
+            - name: CredGetSessionTypes
               href: /windows/desktop/api/WinCred/nf-wincred-credgetsessiontypes
-            - name: '"Kredgettargetinfo"'
+            - name: CredGetTargetInfo
               href: /windows/desktop/api/WinCred/nf-wincred-credgettargetinfoa
-            - name: '"Kredfreecredentialsfn"'
+            - name: CredFreeCredentialsFn
               href: /windows/desktop/api/Ntsecpkg/nc-ntsecpkg-credfreecredentialsfn
-            - name: '"Kredreadfn"'
+            - name: CredReadFn
               href: /windows/desktop/api/Ntsecpkg/nc-ntsecpkg-credreadfn
-            - name: '"Kredreaddomaincredentialsfn"'
+            - name: CredReadDomainCredentialsFn
               href: /windows/desktop/api/Ntsecpkg/nc-ntsecpkg-credreaddomaincredentialsfn
-            - name: Crediunmarshalanddecodestringfn
+            - name: CrediUnmarshalandDecodeStringFn
               href: /windows/desktop/api/Ntsecpkg/nc-ntsecpkg-crediunmarshalanddecodestringfn
-            - name: '"Kredschreitefn"'
+            - name: CredWriteFn
               href: /windows/desktop/api/Ntsecpkg/nc-ntsecpkg-credwritefn
-            - name: '"Kredismarshaledcredential"'
+            - name: CredIsMarshaledCredential
               href: /windows/desktop/api/WinCred/nf-wincred-credismarshaledcredentiala
-            - name: In Konflikt stehen
+            - name: CredIsProtected
               href: /windows/desktop/api/WinCred/nf-wincred-credisprotecteda
-            - name: '"Kredmarshalcredential"'
+            - name: CredMarshalCredential
               href: /windows/desktop/api/WinCred/nf-wincred-credmarshalcredentiala
-            - name: '"Kredmarshaltargetinfo"'
+            - name: CredMarshalTargetInfo
               href: /windows/desktop/api/NTSecPkg/nf-ntsecpkg-credmarshaltargetinfo
-            - name: '"Kredpackauthenticationbuffer"'
+            - name: CredPackAuthenticationBuffer
               href: /windows/desktop/api/WinCred/nf-wincred-credpackauthenticationbuffera
-            - name: '"-Schutz"'
+            - name: CredProtect
               href: /windows/desktop/api/WinCred/nf-wincred-credprotecta
-            - name: In den
+            - name: CredRead
               href: /windows/desktop/api/WinCred/nf-wincred-credreada
-            - name: '"Kredreaddomaincredenseins"'
+            - name: CredReadDomainCredentials
               href: /windows/desktop/api/WinCred/nf-wincred-credreaddomaincredentialsa
-            - name: Name von "Name"
+            - name: CredRename
               href: /windows/desktop/api/WinCred/nf-wincred-credrenamea
-            - name: '"Forduicmdlinepromptforanmelde"'
+            - name: CredUICmdLinePromptForCredentials
               href: /windows/desktop/api/WinCred/nf-wincred-creduicmdlinepromptforcredentialsa
-            - name: '"Kreduiconfirmanmelde"'
+            - name: CredUIConfirmCredentials
               href: /windows/desktop/api/WinCred/nf-wincred-creduiconfirmcredentialsa
-            - name: '"Kreduicseusername"'
+            - name: CredUIParseUserName
               href: /windows/desktop/api/WinCred/nf-wincred-creduiparseusernamea
-            - name: '"Kreduipromptforanmelde Informationen"'
+            - name: CredUIPromptForCredentials
               href: /windows/desktop/api/WinCred/nf-wincred-creduipromptforcredentialsa
-            - name: '"Kreduipromptforwindowscreden."'
+            - name: CredUIPromptForWindowsCredentials
               href: /windows/desktop/api/WinCred/nf-wincred-creduipromptforwindowscredentialsa
-            - name: '"Kreduilesssokredw"'
+            - name: CredUIReadSSOCredW
               href: /windows/desktop/api/WinCred/nf-wincred-creduireadssocredw
-            - name: '"Kreduistoressokredw"'
+            - name: CredUIStoreSSOCredW
               href: /windows/desktop/api/WinCred/nf-wincred-creduistoressocredw
-            - name: '"Kredunmarshalcredential"'
+            - name: CredUnmarshalCredential
               href: /windows/desktop/api/WinCred/nf-wincred-credunmarshalcredentiala
-            - name: '"Kredunpackauthenticationbuffer"'
+            - name: CredUnPackAuthenticationBuffer
               href: /windows/desktop/api/WinCred/nf-wincred-credunpackauthenticationbuffera
-            - name: '"Kredunprotect"'
+            - name: CredUnprotect
               href: /windows/desktop/api/WinCred/nf-wincred-credunprotecta
-            - name: '"Erstellen"'
+            - name: CredWrite
               href: /windows/desktop/api/WinCred/nf-wincred-credwritea
-            - name: '"Kredschreitedomaincredenseins"'
+            - name: CredWriteDomainCredentials
               href: /windows/desktop/api/WinCred/nf-wincred-credwritedomaincredentialsa
-            - name: DecryptMessage (allgemein)
+            - name: DecryptMessage (Allgemein)
               href: decryptmessage--general.md
               items:
                 - name: DecryptMessage (Digest)
                   href: decryptmessage--digest.md
                 - name: DecryptMessage (Kerberos)
                   href: decryptmessage--kerberos.md
-                - name: DecryptMessage (aushandeln)
+                - name: DecryptMessage (Negotiate)
                   href: decryptmessage--negotiate.md
                 - name: DecryptMessage (NTLM)
                   href: decryptmessage--ntlm.md
-                - name: DecryptMessage (SChannel)
+                - name: DecryptMessage (Schannel)
                   href: decryptmessage--schannel.md
-            - name: Deleteconnectedidentity
+            - name: DeleteConnectedIdentity
               href: deleteconnectedidentity.md
             - name: LSA_DELETE_CREDENTIAL
               href: /windows/desktop/api/Ntsecpkg/nc-ntsecpkg-lsa_delete_credential
             - name: LSA_DELETE_LOGON_SESSION
               href: /windows/desktop/api/Ntsecpkg/nc-ntsecpkg-lsa_delete_logon_session
-            - name: Delta Context-Kontext
+            - name: DeleteSecurityContext
               href: /windows/desktop/api/Sspi/nf-sspi-deletesecuritycontext
-            - name: Delta-Paket
+            - name: DeleteSecurityPackage
               href: /windows/desktop/api/Sspi/nf-sspi-deletesecuritypackagea
             - name: LSA_DELETE_SHARED_MEMORY
               href: /windows/desktop/api/Ntsecpkg/nc-ntsecpkg-lsa_delete_shared_memory
-            - name: Duplialisiehandle
+            - name: DuplicateHandle
               href: /windows/desktop/api/ntsecpkg/nc-ntsecpkg-lsa_duplicate_handle
-            - name: Verschlüsselungsnachricht (allgemein)
+            - name: EncryptMessage (Allgemein)
               href: encryptmessage--general.md
               items:
-                - name: Verschlüsselungs Meldung (Digest)
+                - name: EncryptMessage (Digest)
                   href: encryptmessage--digest.md
-                - name: Verschlüsselungs Meldung (Kerberos)
+                - name: EncryptMessage (Kerberos)
                   href: encryptmessage--kerberos.md
-                - name: Verschlüsselungsnachricht (aushandeln)
+                - name: EncryptMessage (Negotiate)
                   href: encryptmessage--negotiate.md
-                - name: Verschlüsselungs Meldung (NTLM)
+                - name: EncryptMessage (NTLM)
                   href: encryptmessage--ntlm.md
-                - name: Verschlüsselungs Meldung (SChannel)
+                - name: EncryptMessage (Schannel)
                   href: encryptmessage--schannel.md
-            - name: Enumeratesecuritypackages
+            - name: EnumerateSecurityPackages
               href: /windows/desktop/api/Sspi/nf-sspi-enumeratesecuritypackagesa
             - name: LSA_EXPAND_AUTH_DATA_FOR_DOMAIN
               href: /windows/desktop/api/Ntsecpkg/nc-ntsecpkg-lsa_expand_auth_data_for_domain
-            - name: Exportsecuritycontext
+            - name: ExportSecurityContext
               href: /windows/desktop/api/Sspi/nf-sspi-exportsecuritycontext
             - name: LSA_FREE_CLIENT_BUFFER
               href: /windows/desktop/api/Ntsecpkg/nc-ntsecpkg-lsa_free_client_buffer
-            - name: Freecontextbuffer
+            - name: FreeContextBuffer
               href: /windows/desktop/api/Sspi/nf-sspi-freecontextbuffer
-            - name: Freecredentialshandle
+            - name: FreeCredentialsHandle
               href: /windows/desktop/api/Sspi/nf-sspi-freecredentialshandle
-            - name: Freeheap
+            - name: FreeHeap
               href: /previous-versions/windows/desktop/legacy/aa375418(v=vs.85)
             - name: LSA_FREE_LSA_HEAP
               href: /windows/desktop/api/ntlsa/nc-ntlsa-lsa_free_lsa_heap
@@ -841,50 +841,50 @@
               href: /windows/desktop/api/Ntsecpkg/nc-ntsecpkg-lsa_get_auth_data_for_user
             - name: LSA_GET_CALL_INFO
               href: /windows/desktop/api/Ntsecpkg/nc-ntsecpkg-lsa_get_call_info
-            - name: Getcertifipeefromkred
+            - name: GetCertificateFromCred
               href: getcertificatefromcred.md
             - name: LSA_GET_CLIENT_INFO
               href: /windows/desktop/api/Ntsecpkg/nc-ntsecpkg-lsa_get_client_info
             - name: LSA_GET_CREDENTIALS
               href: /windows/desktop/api/Ntsecpkg/nc-ntsecpkg-lsa_get_credentials
-            - name: Getopencardname
+            - name: GetOpenCardName
               href: /windows/desktop/api/Winscard/nf-winscard-getopencardnamea
             - name: LSA_GET_USER_AUTH_DATA
               href: /windows/desktop/api/Ntsecpkg/nc-ntsecpkg-lsa_get_user_auth_data
             - name: LSA_IMPERSONATE_CLIENT
               href: /previous-versions/windows/desktop/legacy/aa375494(v=vs.85)
-            - name: Identitätsnachweis für "atesecuritycontext"
+            - name: ImpersonateSecurityContext
               href: /windows/desktop/api/Sspi/nf-sspi-impersonatesecuritycontext
-            - name: Importsecuritycontext
+            - name: ImportSecurityContext
               href: /windows/desktop/api/Sspi/nf-sspi-importsecuritycontexta
-            - name: InitializeSecurityContext (allgemein)
+            - name: InitializeSecurityContext (Allgemein)
               href: initializesecuritycontext--general.md
               items:
-                - name: InitializeSecurityContext (kredssp)
+                - name: InitializeSecurityContext (CredSSP)
                   href: initializesecuritycontext--credssp.md
                 - name: InitializeSecurityContext (Digest)
                   href: initializesecuritycontext--digest.md
                 - name: InitializeSecurityContext (Kerberos)
                   href: initializesecuritycontext--kerberos.md
-                - name: InitializeSecurityContext (aushandeln)
+                - name: InitializeSecurityContext (Negotiate)
                   href: initializesecuritycontext--negotiate.md
                 - name: InitializeSecurityContext (NTLM)
                   href: initializesecuritycontext--ntlm.md
-                - name: InitializeSecurityContext (SChannel)
+                - name: InitializeSecurityContext (Schannel)
                   href: initializesecuritycontext--schannel.md
-            - name: Initsecurityinterface
+            - name: InitSecurityInterface
               href: /windows/desktop/api/Sspi/nf-sspi-initsecurityinterfacea
-            - name: LogonUser
+            - name: Logonuser
               href: /windows/desktop/api/Winbase/nf-winbase-logonusera
-            - name: Logonuserex
+            - name: LogonUserEx
               href: /windows/desktop/api/Winbase/nf-winbase-logonuserexa
-            - name: Logonuserexexw
+            - name: LogonUserExExW
               href: logonuserexexw.md
             - name: LSA_AP_CALL_PACKAGE
               href: /windows/desktop/api/Ntsecpkg/nc-ntsecpkg-lsa_ap_call_package
             - name: LSA_AP_CALL_PACKAGE_PASSTHROUGH
               href: /windows/desktop/api/Ntsecpkg/nc-ntsecpkg-lsa_ap_call_package_passthrough
-            - name: Lsaapcallpackageuntrusted
+            - name: LsaApCallPackageUntrusted
               href: /previous-versions/windows/desktop/legacy/aa378218(v=vs.85)
             - name: LSA_AP_INITIALIZE_PACKAGE
               href: /windows/desktop/api/Ntsecpkg/nc-ntsecpkg-lsa_ap_initialize_package
@@ -896,49 +896,49 @@
               href: /windows/desktop/api/Ntsecpkg/nc-ntsecpkg-lsa_ap_logon_user_ex
             - name: LSA_AP_LOGON_USER_EX2
               href: /windows/desktop/api/Ntsecpkg/nc-ntsecpkg-lsa_ap_logon_user_ex2
-            - name: Lsacallauthenticationpackage
+            - name: LsaCallAuthenticationPackage
               href: /windows/desktop/api/Ntsecapi/nf-ntsecapi-lsacallauthenticationpackage
-            - name: Lsaconnectuntrusted
+            - name: LsaConnectUntrusted
               href: /windows/desktop/api/Ntsecapi/nf-ntsecapi-lsaconnectuntrusted
-            - name: Lsaderegisterlogonprocess
+            - name: LsaDeregisterLogonProcess
               href: /windows/desktop/api/Ntsecapi/nf-ntsecapi-lsaderegisterlogonprocess
-            - name: Lsaenumeratelogonsessions
+            - name: LsaEnumerateLogonSessions
               href: /windows/desktop/api/Ntsecapi/nf-ntsecapi-lsaenumeratelogonsessions
-            - name: Lsafreereturnbuffer
+            - name: LsaFreeReturnBuffer
               href: /windows/desktop/api/Ntsecapi/nf-ntsecapi-lsafreereturnbuffer
-            - name: Lsagetappliedcapids
+            - name: LsaGetAppliedCAPIDs
               href: /windows/desktop/api/Ntlsa/nf-ntlsa-lsagetappliedcapids
-            - name: Lsagetlogonsessiondata
+            - name: LsaGetLogonSessionData
               href: /windows/desktop/api/Ntsecapi/nf-ntsecapi-lsagetlogonsessiondata
             - name: LsaLogonUser
               href: /windows/desktop/api/Ntsecapi/nf-ntsecapi-lsalogonuser
-            - name: Lsalookupauthenticationpackage
+            - name: LsaLookupAuthenticationPackage
               href: /windows/desktop/api/Ntsecapi/nf-ntsecapi-lsalookupauthenticationpackage
-            - name: Lsamanagesidnamemapping
+            - name: LsaManageSidNameMapping
               href: /previous-versions/windows/desktop/legacy/jj902653(v=vs.85)
             - name: LsaOpenPolicy
               href: /windows/desktop/api/Ntsecapi/nf-ntsecapi-lsaopenpolicy
             - name: LSA_PROTECT_MEMORY
               href: /windows/desktop/api/Ntsecpkg/nc-ntsecpkg-lsa_protect_memory
-            - name: Lsaquerycaps
+            - name: LsaQueryCAPs
               href: /windows/desktop/api/Ntlsa/nf-ntlsa-lsaquerycaps
-            - name: Lsaquerydomaininformationpolicy
+            - name: LsaQueryDomainInformationPolicy
               href: /windows/desktop/api/Ntsecapi/nf-ntsecapi-lsaquerydomaininformationpolicy
-            - name: Lsaqueryforesttrustinformation
+            - name: LsaQueryForestTrustInformation
               href: /windows/desktop/api/Ntsecapi/nf-ntsecapi-lsaqueryforesttrustinformation
             - name: LsaQueryInformationPolicy
               href: /windows/desktop/api/Ntsecapi/nf-ntsecapi-lsaqueryinformationpolicy
-            - name: Lsaregisterlogonprocess
+            - name: LsaRegisterLogonProcess
               href: /windows/desktop/api/Ntsecapi/nf-ntsecapi-lsaregisterlogonprocess
-            - name: Lsasetdomaininformationpolicy
+            - name: LsaSetDomainInformationPolicy
               href: /windows/desktop/api/Ntsecapi/nf-ntsecapi-lsasetdomaininformationpolicy
-            - name: Lsasetforesttrustinformation
+            - name: LsaSetForestTrustInformation
               href: /windows/desktop/api/Ntsecapi/nf-ntsecapi-lsasetforesttrustinformation
-            - name: Lsasetinformationpolicy
+            - name: LsaSetInformationPolicy
               href: /windows/desktop/api/Ntsecapi/nf-ntsecapi-lsasetinformationpolicy
-            - name: Lsaunprotectmemory
+            - name: LsaUnprotectMemory
               href: /previous-versions/windows/desktop/legacy/ff714510(v=vs.85)
-            - name: Makesignature
+            - name: MakeSignature
               href: /windows/desktop/api/Sspi/nf-sspi-makesignature
             - name: LSA_MAP_BUFFER
               href: /windows/desktop/api/Ntsecpkg/nc-ntsecpkg-lsa_map_buffer
@@ -950,344 +950,344 @@
               href: /windows/desktop/api/Subauth/nf-subauth-msv1_0subauthenticationroutinegeneric
             - name: Msv1_0SubAuthenticationRoutineEx
               href: /windows/desktop/api/Subauth/nf-subauth-msv1_0subauthenticationroutineex
-            - name: Npaddconnection
+            - name: NPAddConnection
               href: /windows/desktop/api/Npapi/nf-npapi-npaddconnection
             - name: NPAddConnection3
               href: /windows/desktop/api/Npapi/nf-npapi-npaddconnection3
-            - name: Npcancelconnection
+            - name: NPCancelConnection
               href: /windows/desktop/api/Npapi/nf-npapi-npcancelconnection
-            - name: Npcloseenum
+            - name: NPCloseEnum
               href: /windows/desktop/api/Npapi/nf-npapi-npcloseenum
-            - name: Npdevicemode
+            - name: NPDeviceMode
               href: /windows/desktop/api/Npapi/nf-npapi-npdevicemode
-            - name: Npdirectoriynotify
+            - name: NPDirectoryNotify
               href: /windows/desktop/api/Npapi/nf-npapi-npdirectorynotify
-            - name: Npumschlag Resource
+            - name: NPEnumResource
               href: /windows/desktop/api/Npapi/nf-npapi-npenumresource
-            - name: Npfmxeditperm
+            - name: NPFMXEditPerm
               href: /windows/desktop/api/Npapi/nf-npapi-npfmxeditperm
-            - name: Npfmxgetpermcaps
+            - name: NPFMXGetPermCaps
               href: /windows/desktop/api/Npapi/nf-npapi-npfmxgetpermcaps
-            - name: Npfmxgetpermhelp
+            - name: NPFMXGetPermHelp
               href: /windows/desktop/api/Npapi/nf-npapi-npfmxgetpermhelp
-            - name: Npformatnetworkname
+            - name: NPFormatNetworkName
               href: /windows/desktop/api/Npapi/nf-npapi-npformatnetworkname
-            - name: NPgetCaps
+            - name: NPGetCaps
               href: /windows/desktop/api/Npapi/nf-npapi-npgetcaps
-            - name: Npgetconnection
+            - name: NPGetConnection
               href: /windows/desktop/api/Npapi/nf-npapi-npgetconnection
             - name: NPGetConnection3
               href: /windows/desktop/api/Npapi/nf-npapi-npgetconnection3
-            - name: Npgetconnectionperformance
+            - name: NPGetConnectionPerformance
               href: /windows/desktop/api/Npapi/nf-npapi-npgetconnectionperformance
-            - name: Npgetdirectoriytype
+            - name: NPGetDirectoryType
               href: /windows/desktop/api/Npapi/nf-npapi-npgetdirectorytype
-            - name: Npgetpropertytext
+            - name: NPGetPropertyText
               href: /windows/desktop/api/Npapi/nf-npapi-npgetpropertytext
-            - name: Npgetresourceinformation
+            - name: NPGetResourceInformation
               href: /windows/desktop/api/Npapi/nf-npapi-npgetresourceinformation
-            - name: Npgetresourceparent
+            - name: NPGetResourceParent
               href: /windows/desktop/api/Npapi/nf-npapi-npgetresourceparent
-            - name: Npgetuniversalname
+            - name: NPGetUniversalName
               href: /windows/desktop/api/Npapi/nf-npapi-npgetuniversalname
-            - name: Npgetuser
+            - name: NPGetUser
               href: /windows/desktop/api/Npapi/nf-npapi-npgetuser
-            - name: Nplogonnotify
+            - name: NPLogonNotify
               href: /windows/desktop/api/Npapi/nf-npapi-nplogonnotify
-            - name: Npopenum
+            - name: NPOpenEnum
               href: /windows/desktop/api/Npapi/nf-npapi-npopenenum
-            - name: Nppasswordchangenotify
+            - name: NPPasswordChangeNotify
               href: /windows/desktop/api/Npapi/nf-npapi-nppasswordchangenotify
-            - name: Nppropertydialog
+            - name: NPPropertyDialog
               href: /windows/desktop/api/Npapi/nf-npapi-nppropertydialog
-            - name: Npsearchdialog
+            - name: NPSearchDialog
               href: /windows/desktop/api/Npapi/nf-npapi-npsearchdialog
-            - name: Onprofileloaded
+            - name: OnProfileLoaded
               href: onprofileloaded.md
             - name: LSA_OPEN_SAM_USER
               href: /windows/desktop/api/Ntsecpkg/nc-ntsecpkg-lsa_open_sam_user
             - name: LSA_OPEN_TOKEN_BY_LOGON_ID
               href: /windows/desktop/api/Ntsecpkg/nc-ntsecpkg-lsa_open_token_by_logon_id
-            - name: Pstacquireprivatekey
+            - name: PstAcquirePrivateKey
               href: /windows/desktop/api/Certpoleng/nf-certpoleng-pstacquireprivatekey
-            - name: Pstgetzertifikate
+            - name: PstGetCertificates
               href: /windows/desktop/api/Certpoleng/nf-certpoleng-pstgetcertificates
-            - name: Pstgettrustanchors
+            - name: PstGetTrustAnchors
               href: /windows/desktop/api/Certpoleng/nf-certpoleng-pstgettrustanchors
-            - name: Pstgetusernameforcertificate
+            - name: PstGetUserNameForCertificate
               href: /windows/desktop/api/Certpoleng/nf-certpoleng-pstgetusernameforcertificate
-            - name: Pstmapcertificate
+            - name: PstMapCertificate
               href: /windows/desktop/api/Certpoleng/nf-certpoleng-pstmapcertificate
-            - name: Pstvalidate
+            - name: PstValidate
               href: /windows/desktop/api/Certpoleng/nf-certpoleng-pstvalidate
-            - name: Querycontextattributesex
+            - name: QueryContextAttributesEx
               href: /windows/desktop/api/Sspi/nf-sspi-querycontextattributesexa
-            - name: QueryContextAttributes (allgemein)
+            - name: QueryContextAttributes (Allgemein)
               href: querycontextattributes--general.md
               items:
-                - name: QueryContextAttributes (kredssp)
+                - name: QueryContextAttributes (CredSSP)
                   href: querycontextattributes--credssp.md
                 - name: QueryContextAttributes (Digest)
                   href: querycontextattributes--digest.md
                 - name: QueryContextAttributes (Kerberos)
                   href: querycontextattributes--kerberos.md
-                - name: QueryContextAttributes (aushandeln)
+                - name: QueryContextAttributes (Negotiate)
                   href: querycontextattributes--negotiate.md
                 - name: QueryContextAttributes (NTLM)
                   href: querycontextattributes--ntlm.md
-                - name: QueryContextAttributes (SChannel)
+                - name: QueryContextAttributes (Schannel)
                   href: querycontextattributes--schannel.md
-            - name: Querykredentialsattributes
+            - name: QueryCredentialsAttributes
               href: /windows/desktop/api/Sspi/nf-sspi-querycredentialsattributesa
-            - name: Querysecuritycontexttoken
+            - name: QuerySecurityContextToken
               href: /windows/desktop/api/Sspi/nf-sspi-querysecuritycontexttoken
-            - name: Querysecuritypackageinfo
+            - name: QuerySecurityPackageInfo
               href: /windows/desktop/api/Sspi/nf-sspi-querysecuritypackageinfoa
-            - name: Register Callback
+            - name: Registercallback
               href: /previous-versions/windows/desktop/legacy/aa379372(v=vs.85)
             - name: PLSA_REGISTER_NOTIFICATION
               href: /windows/desktop/api/ntsecpkg/nc-ntsecpkg-lsa_register_notification
-            - name: Revertsecuritycontext
+            - name: RevertSecurityContext
               href: /windows/desktop/api/Sspi/nf-sspi-revertsecuritycontext
-            - name: Saslakzeptsecuritycontext
+            - name: SaslAcceptSecurityContext
               href: /windows/desktop/api/Sspi/nf-sspi-saslacceptsecuritycontext
-            - name: Saslenenerateprofiles
+            - name: SaslEnumerateProfiles
               href: /windows/desktop/api/Sspi/nf-sspi-saslenumerateprofilesa
-            - name: Saslgetcontextoption
+            - name: SaslGetContextOption
               href: /windows/desktop/api/Sspi/nf-sspi-saslgetcontextoption
-            - name: Saslgetprofilepackage
+            - name: SaslGetProfilePackage
               href: /windows/desktop/api/Sspi/nf-sspi-saslgetprofilepackagea
-            - name: Saslidentifypackage
+            - name: SaslIdentifyPackage
               href: /windows/desktop/api/Sspi/nf-sspi-saslidentifypackagea
-            - name: Saslinitializesecuritycontext
+            - name: SaslInitializeSecurityContext
               href: /windows/desktop/api/Sspi/nf-sspi-saslinitializesecuritycontexta
-            - name: Saslsetcontextoption
+            - name: SaslSetContextOption
               href: /windows/desktop/api/Sspi/nf-sspi-saslsetcontextoption
-            - name: Scardaccessstartedebug
+            - name: SCardAccessStartedEvent
               href: /windows/desktop/api/Winscard/nf-winscard-scardaccessstartedevent
-            - name: Scardadressaderto Group
+            - name: SCardAddReaderToGroup
               href: /windows/desktop/api/Winscard/nf-winscard-scardaddreadertogroupa
-            - name: Scardaudit
+            - name: SCardAudit
               href: /windows/desktop/api/Winscard/nf-winscard-scardaudit
             - name: SCardBeginTransaction
               href: /windows/desktop/api/Winscard/nf-winscard-scardbegintransaction
-            - name: '"SCardCancel"'
+            - name: SCardCancel
               href: /windows/desktop/api/Winscard/nf-winscard-scardcancel
-            - name: Scardconnect
+            - name: SCardConnect
               href: /windows/desktop/api/Winscard/nf-winscard-scardconnecta
-            - name: Scardcontrol
+            - name: SCardControl
               href: /windows/desktop/api/Winscard/nf-winscard-scardcontrol
-            - name: '"Scarddisconnect"'
+            - name: SCardDisconnect
               href: /windows/desktop/api/Winscard/nf-winscard-scarddisconnect
-            - name: '"SCardEndTransaction"'
+            - name: SCardEndTransaction
               href: /windows/desktop/api/Winscard/nf-winscard-scardendtransaction
             - name: SCardEstablishContext
               href: /windows/desktop/api/Winscard/nf-winscard-scardestablishcontext
-            - name: Scardforgetcardtype
+            - name: SCardForgetCardType
               href: /windows/desktop/api/Winscard/nf-winscard-scardforgetcardtypea
-            - name: Scardforgetreader
+            - name: SCardForgetReader
               href: /windows/desktop/api/Winscard/nf-winscard-scardforgetreadera
-            - name: Scardforgetreadergroup
+            - name: SCardForgetReaderGroup
               href: /windows/desktop/api/Winscard/nf-winscard-scardforgetreadergroupa
-            - name: '"Scardfrememory"'
+            - name: SCardFreeMemory
               href: /windows/desktop/api/Winscard/nf-winscard-scardfreememory
-            - name: Scardgetattrib
+            - name: SCardGetAttrib
               href: /windows/desktop/api/Winscard/nf-winscard-scardgetattrib
-            - name: Scardgetcardtypeprovidername
+            - name: SCardGetCardTypeProviderName
               href: /windows/desktop/api/Winscard/nf-winscard-scardgetcardtypeprovidernamea
-            - name: Scardgetde vicetypeid
+            - name: SCardGetDeviceTypeId
               href: /windows/desktop/api/Winscard/nf-winscard-scardgetdevicetypeida
-            - name: '"Scardgetproviderid"'
+            - name: SCardGetProviderId
               href: /windows/desktop/api/Winscard/nf-winscard-scardgetproviderida
-            - name: Scardgetreaderdebug-ID
+            - name: SCardGetReaderDeviceInstanceId
               href: /windows/desktop/api/winscard/nf-winscard-scardgetreaderdeviceinstanceida
-            - name: Scardgetreadericon
+            - name: SCardGetReaderIcon
               href: /windows/desktop/api/winscard/nf-winscard-scardgetreadericona
-            - name: ScardGetStatusChange
+            - name: SCardGetStatusChange
               href: /windows/desktop/api/Winscard/nf-winscard-scardgetstatuschangea
-            - name: Scardgettransmitcount
+            - name: SCardGetTransmitCount
               href: /windows/desktop/api/Winscard/nf-winscard-scardgettransmitcount
-            - name: Scardintroducecardtype
+            - name: SCardIntroduceCardType
               href: /windows/desktop/api/Winscard/nf-winscard-scardintroducecardtypea
-            - name: Scardintroducereader
+            - name: SCardIntroduceReader
               href: /windows/desktop/api/Winscard/nf-winscard-scardintroducereadera
-            - name: Scardintroducereadergroup
+            - name: SCardIntroduceReaderGroup
               href: /windows/desktop/api/Winscard/nf-winscard-scardintroducereadergroupa
-            - name: Scardisvalidcontext
+            - name: SCardIsValidContext
               href: /windows/desktop/api/Winscard/nf-winscard-scardisvalidcontext
-            - name: Scardlistcards
+            - name: SCardListCards
               href: /windows/desktop/api/Winscard/nf-winscard-scardlistcardsa
-            - name: Scardlistinterfaces
+            - name: SCardListInterfaces
               href: /windows/desktop/api/Winscard/nf-winscard-scardlistinterfacesa
-            - name: Scardlistreadergroups
+            - name: SCardListReaderGroups
               href: /windows/desktop/api/Winscard/nf-winscard-scardlistreadergroupsa
             - name: SCardListReaders
               href: /windows/desktop/api/Winscard/nf-winscard-scardlistreadersa
-            - name: Scardlistreaderswithdeviceinstanceid
+            - name: SCardListReadersWithDeviceInstanceId
               href: /windows/desktop/api/winscard/nf-winscard-scardlistreaderswithdeviceinstanceida
-            - name: Scardlogecards
+            - name: SCardLocateCards
               href: /windows/desktop/api/Winscard/nf-winscard-scardlocatecardsa
-            - name: Scardloerecardsbyatr
+            - name: SCardLocateCardsByATR
               href: /windows/desktop/api/Winscard/nf-winscard-scardlocatecardsbyatra
-            - name: Scardreadcache
+            - name: SCardReadCache
               href: /windows/desktop/api/Winscard/nf-winscard-scardreadcachea
-            - name: Scardreconnect
+            - name: SCardReconnect
               href: /windows/desktop/api/Winscard/nf-winscard-scardreconnect
-            - name: Scardreleasecontext
+            - name: SCardReleaseContext
               href: /windows/desktop/api/Winscard/nf-winscard-scardreleasecontext
-            - name: Scardreleasestartede Vent
+            - name: SCardReleaseStartedEvent
               href: /windows/desktop/api/Winscard/nf-winscard-scardreleasestartedevent
-            - name: Scardremuvereaderfromgroup
+            - name: SCardRemoveReaderFromGroup
               href: /windows/desktop/api/Winscard/nf-winscard-scardremovereaderfromgroupa
-            - name: Scardsegtaterb
+            - name: SCardSetAttrib
               href: /windows/desktop/api/Winscard/nf-winscard-scardsetattrib
-            - name: Scardsetcardtypeprovidername
+            - name: SCardSetCardTypeProviderName
               href: /windows/desktop/api/Winscard/nf-winscard-scardsetcardtypeprovidernamea
             - name: SCardStatus
               href: /windows/desktop/api/Winscard/nf-winscard-scardstatusa
-            - name: Scardüberträgt
+            - name: SCardTransmit
               href: /windows/desktop/api/Winscard/nf-winscard-scardtransmit
-            - name: Scarduidlgselectcard
+            - name: SCardUIDlgSelectCard
               href: /windows/desktop/api/Winscard/nf-winscard-scarduidlgselectcarda
-            - name: Scardschreitecache
+            - name: SCardWriteCache
               href: /windows/desktop/api/Winscard/nf-winscard-scardwritecachea
-            - name: Sendsas
+            - name: SendSAS
               href: /windows/desktop/api/Sas/nf-sas-sendsas
-            - name: Setcontextattributes
+            - name: SetContextAttributes
               href: /windows/desktop/api/Sspi/nf-sspi-setcontextattributesa
-            - name: Setkredentialsattributes
+            - name: SetCredentialsAttributes
               href: /windows/desktop/api/Sspi/nf-sspi-setcredentialsattributesa
-            - name: Spakzeptkredentialsfn
+            - name: SpAcceptCredentialsFn
               href: /windows/desktop/api/Ntsecpkg/nc-ntsecpkg-spacceptcredentialsfn
-            - name: Spaccept tlsamodecontextfn
+            - name: SpAcceptLsaModeContextFn
               href: /windows/desktop/api/Ntsecpkg/nc-ntsecpkg-spacceptlsamodecontextfn
-            - name: Spacquirecredentialshandlefn
+            - name: SpAcquireCredentialsHandleFn
               href: /windows/desktop/api/Ntsecpkg/nc-ntsecpkg-spacquirecredentialshandlefn
-            - name: Spaddkredentialsfn
+            - name: SpAddCredentialsFn
               href: /windows/desktop/api/Ntsecpkg/nc-ntsecpkg-spaddcredentialsfn
-            - name: Spapplycontrolflikenfn
+            - name: SpApplyControlTokenFn
               href: /windows/desktop/api/Ntsecpkg/nc-ntsecpkg-spapplycontroltokenfn
-            - name: Spcompleteauthdienst kenfn
+            - name: SpCompleteAuthTokenFn
               href: /windows/desktop/api/Ntsecpkg/nc-ntsecpkg-spcompleteauthtokenfn
-            - name: Kspdeletecontextfn
+            - name: KspDeleteContextFn
               href: /windows/desktop/api/Ntsecpkg/nc-ntsecpkg-kspdeletecontextfn
-            - name: Spdeletekredentialsfn
+            - name: SpDeleteCredentialsFn
               href: /windows/desktop/api/Ntsecpkg/nc-ntsecpkg-spdeletecredentialsfn
             - name: SpExchangeMetaDataFn
               href: /windows/desktop/api/Ntsecpkg/nc-ntsecpkg-spexchangemetadatafn
-            - name: Spexportsecuritycontextfn
+            - name: SpExportSecurityContextFn
               href: /windows/desktop/api/Ntsecpkg/nc-ntsecpkg-spexportsecuritycontextfn
-            - name: Spformatkredentialsfn
+            - name: SpFormatCredentialsFn
               href: /windows/desktop/api/Ntsecpkg/nc-ntsecpkg-spformatcredentialsfn
-            - name: Spfreecredentialshandlefn
+            - name: SpFreeCredentialsHandleFn
               href: /windows/desktop/api/Ntsecpkg/nc-ntsecpkg-spfreecredentialshandlefn
-            - name: Spgetcontexttkenfn
+            - name: SpGetContextTokenFn
               href: /windows/desktop/api/Ntsecpkg/nc-ntsecpkg-spgetcontexttokenfn
-            - name: Spgetkredentialsfn
+            - name: SpGetCredentialsFn
               href: /windows/desktop/api/Ntsecpkg/nc-ntsecpkg-spgetcredentialsfn
-            - name: Spgetkreduicontextfn
+            - name: SpGetCredUIContextFn
               href: /windows/desktop/api/Ntsecpkg/nc-ntsecpkg-spgetcreduicontextfn
-            - name: Spgetextendecodinformationfn
+            - name: SpGetExtendedInformationFn
               href: /windows/desktop/api/Ntsecpkg/nc-ntsecpkg-spgetextendedinformationfn
-            - name: Spgetinfofn
+            - name: SpGetInfoFn
               href: /windows/desktop/api/Ntsecpkg/nc-ntsecpkg-spgetinfofn
-            - name: Spgetuserinfofn
+            - name: SpGetUserInfoFn
               href: /windows/desktop/api/Ntsecpkg/nc-ntsecpkg-spgetuserinfofn
-            - name: Spimportsecuritycontextfn
+            - name: SpImportSecurityContextFn
               href: /windows/desktop/api/Ntsecpkg/nc-ntsecpkg-spimportsecuritycontextfn
-            - name: Spinitializefn
+            - name: SpInitializeFn
               href: /windows/desktop/api/Ntsecpkg/nc-ntsecpkg-spinitializefn
-            - name: Spinitlsamodecontextfn
+            - name: SpInitLsaModeContextFn
               href: /windows/desktop/api/Ntsecpkg/nc-ntsecpkg-spinitlsamodecontextfn
-            - name: Spinitusermodecontextfn
+            - name: SpInitUserModeContextFn
               href: /windows/desktop/api/Ntsecpkg/nc-ntsecpkg-spinitusermodecontextfn
-            - name: Spinstancinitfn
+            - name: SpInstanceInitFn
               href: /windows/desktop/api/Ntsecpkg/nc-ntsecpkg-spinstanceinitfn
-            - name: Splsamodeinitializefn
+            - name: SpLsaModeInitializeFn
               href: /windows/desktop/api/Ntsecpkg/nc-ntsecpkg-splsamodeinitializefn
-            - name: Kspmakesignaturefn
+            - name: KspMakeSignatureFn
               href: /windows/desktop/api/Ntsecpkg/nc-ntsecpkg-kspmakesignaturefn
-            - name: Spmarshallsupplementalkredsfn
+            - name: SpMarshallSupplementalCredsFn
               href: /windows/desktop/api/Ntsecpkg/nc-ntsecpkg-spmarshallsupplementalcredsfn
-            - name: Spquerycontextattributesfn
+            - name: SpQueryContextAttributesFn
               href: /windows/desktop/api/Ntsecpkg/nc-ntsecpkg-spquerycontextattributesfn
-            - name: Spquerykredentialsattributesfn
+            - name: SpQueryCredentialsAttributesFn
               href: /windows/desktop/api/Ntsecpkg/nc-ntsecpkg-spquerycredentialsattributesfn
             - name: SpQueryMetaDataFn
               href: /windows/desktop/api/Ntsecpkg/nc-ntsecpkg-spquerymetadatafn
-            - name: Spsavecredentialsfn
+            - name: SpSaveCredentialsFn
               href: /windows/desktop/api/Ntsecpkg/nc-ntsecpkg-spsavecredentialsfn
-            - name: Spversiemessagefn
+            - name: SpSealMessageFn
               href: /windows/desktop/api/Ntsecpkg/nc-ntsecpkg-spsealmessagefn
-            - name: Spabtextendecodinformationfn
+            - name: SpSetExtendedInformationFn
               href: /windows/desktop/api/Ntsecpkg/nc-ntsecpkg-spsetextendedinformationfn
-            - name: Spshutdownfn
+            - name: SpShutdownFn
               href: /previous-versions/windows/desktop/legacy/aa380183(v=vs.85)
-            - name: Spunsealmessagefn
+            - name: SpUnsealMessageFn
               href: /windows/desktop/api/Ntsecpkg/nc-ntsecpkg-spunsealmessagefn
-            - name: Spupdatecredentialsfn
+            - name: SpUpdateCredentialsFn
               href: /windows/desktop/api/Ntsecpkg/nc-ntsecpkg-spupdatecredentialsfn
-            - name: Spusermodeinitializefn
+            - name: SpUserModeInitializeFn
               href: /windows/desktop/api/Ntsecpkg/nc-ntsecpkg-spusermodeinitializefn
-            - name: Spvalidatetargetinfofn
+            - name: SpValidateTargetInfoFn
               href: /windows/desktop/api/Ntsecpkg/nc-ntsecpkg-spvalidatetargetinfofn
-            - name: Kspverifysignaturefn
+            - name: KspVerifySignatureFn
               href: /windows/desktop/api/Ntsecpkg/nc-ntsecpkg-kspverifysignaturefn
-            - name: Sslcrackcertificate
+            - name: SslCrackCertificate
               href: /windows/desktop/api/Schannel/nf-schannel-sslcrackcertificate
-            - name: Sslemptycache
+            - name: SslEmptyCache
               href: /windows/desktop/api/Schannel/nf-schannel-sslemptycachea
-            - name: Sslfreecertificate
+            - name: SslFreeCertificate
               href: /windows/desktop/api/Schannel/nf-schannel-sslfreecertificate
-            - name: Sslgetserveridentity
+            - name: SslGetServerIdentity
               href: /windows/desktop/api/Schannel/nf-schannel-sslgetserveridentity
-            - name: Sspicompareauthidentities
+            - name: SspiCompareAuthIdentities
               href: /windows/desktop/api/Sspi/nf-sspi-sspicompareauthidentities
-            - name: Sspicopyauthidentity
+            - name: SspiCopyAuthIdentity
               href: /windows/desktop/api/Sspi/nf-sspi-sspicopyauthidentity
-            - name: Sspidecryptauthidentity
+            - name: SspiDecryptAuthIdentity
               href: /windows/desktop/api/Sspi/nf-sspi-sspidecryptauthidentity
-            - name: Sspidecryptauthidentityex
+            - name: SspiDecryptAuthIdentityEx
               href: /windows/desktop/api/Sspi/nf-sspi-sspidecryptauthidentityex
-            - name: Sspiencodeauthidentityasstrings
+            - name: SspiEncodeAuthIdentityAsStrings
               href: /windows/desktop/api/Sspi/nf-sspi-sspiencodeauthidentityasstrings
-            - name: Sspiencodestringsasauthidentity
+            - name: SspiEncodeStringsAsAuthIdentity
               href: /windows/desktop/api/Sspi/nf-sspi-sspiencodestringsasauthidentity
-            - name: Sspiverschlüsseltauthidentity
+            - name: SspiEncryptAuthIdentity
               href: /windows/desktop/api/Sspi/nf-sspi-sspiencryptauthidentity
-            - name: Sspiverschlüsseltauthidentityex
+            - name: SspiEncryptAuthIdentityEx
               href: /windows/desktop/api/Sspi/nf-sspi-sspiencryptauthidentityex
-            - name: Sspiexcludepackage
+            - name: SspiExcludePackage
               href: /windows/desktop/api/Sspi/nf-sspi-sspiexcludepackage
-            - name: Sspifreauthidentity
+            - name: SspiFreeAuthIdentity
               href: /windows/desktop/api/Sspi/nf-sspi-sspifreeauthidentity
-            - name: Sspigetkreduicontext
+            - name: SspiGetCredUIContext
               href: /windows/desktop/api/Sspi/nf-sspi-sspigetcreduicontext
-            - name: Sspigettargethostname
+            - name: SspiGetTargetHostName
               href: /windows/desktop/api/Sspi/nf-sspi-sspigettargethostname
-            - name: Sspiisauthidentityverschlüsselt
+            - name: SspiIsAuthIdentityEncrypted
               href: /windows/desktop/api/Sspi/nf-sspi-sspiisauthidentityencrypted
-            - name: Sspiispromptingbenötigte
+            - name: SspiIsPromptingNeeded
               href: /windows/desktop/api/Sspi/nf-sspi-sspiispromptingneeded
-            - name: Sspilocalfree
+            - name: SspiLocalFree
               href: /windows/desktop/api/Sspi/nf-sspi-sspilocalfree
-            - name: Sspimarshalauthidentity
+            - name: SspiMarshalAuthIdentity
               href: /windows/desktop/api/Sspi/nf-sspi-sspimarshalauthidentity
-            - name: Sspiprepareforkredread
+            - name: SspiPrepareForCredRead
               href: /windows/desktop/api/Sspi/nf-sspi-sspiprepareforcredread
-            - name: Sspiprepareforkredwrite
+            - name: SspiPrepareForCredWrite
               href: /windows/desktop/api/Sspi/nf-sspi-sspiprepareforcredwrite
-            - name: Sspipromptforanmelde Informationen
+            - name: SspiPromptForCredentials
               href: /windows/desktop/api/Sspi/nf-sspi-sspipromptforcredentialsa
-            - name: Sspiunmarshalauthidentity
+            - name: SspiUnmarshalAuthIdentity
               href: /windows/desktop/api/Sspi/nf-sspi-sspiunmarshalauthidentity
-            - name: Sspiunmarshalkreduicontext
+            - name: SspiUnmarshalCredUIContext
               href: /windows/desktop/api/Sspi/nf-sspi-sspiunmarshalcreduicontext
-            - name: Sspiupdatecredenseins
+            - name: SspiUpdateCredentials
               href: /windows/desktop/api/Sspi/nf-sspi-sspiupdatecredentials
-            - name: Sspivalidateauthidentity
+            - name: SspiValidateAuthIdentity
               href: /windows/desktop/api/Sspi/nf-sspi-sspivalidateauthidentity
-            - name: Sspizeroauthidentity
+            - name: SspiZeroAuthIdentity
               href: /windows/desktop/api/Sspi/nf-sspi-sspizeroauthidentity
             - name: LSA_UNLOAD_PACKAGE
               href: /previous-versions/windows/desktop/legacy/aa380520(v=vs.85)
@@ -1295,119 +1295,119 @@
               href: /windows/desktop/api/Ntsecpkg/nc-ntsecpkg-lsa_update_primary_credentials
             - name: VerifySignature
               href: /windows/desktop/api/Sspi/nf-sspi-verifysignature
-            - name: Wlxactivateusershell
+            - name: WlxActivateUserShell
               href: /windows/desktop/api/Winwlx/nf-winwlx-wlxactivateusershell
-            - name: Wlxzuzutragshellprotection
+            - name: WlxAssignShellProtection
               href: /windows/desktop/api/winwlx/nc-winwlx-pwlx_assign_shell_protection
-            - name: Wlxchangepasswordnotify
+            - name: WlxChangePasswordNotify
               href: /windows/desktop/api/winwlx/nc-winwlx-pwlx_change_password_notify
-            - name: Wlxchangepasswordnotifyex
+            - name: WlxChangePasswordNotifyEx
               href: /windows/desktop/api/winwlx/nc-winwlx-pwlx_change_password_notify_ex
-            - name: Wlxcloseuserdesktop
+            - name: WlxCloseUserDesktop
               href: /windows/desktop/api/winwlx/nc-winwlx-pwlx_close_user_desktop
-            - name: Wlxkreateuserdesktop
+            - name: WlxCreateUserDesktop
               href: /windows/desktop/api/winwlx/nc-winwlx-pwlx_create_user_desktop
-            - name: Wlxdialogbox
+            - name: WlxDialogBox
               href: /windows/desktop/api/winwlx/nc-winwlx-pwlx_dialog_box
-            - name: Wlxdialogboxindirekte
+            - name: WlxDialogBoxIndirect
               href: /windows/desktop/api/winwlx/nc-winwlx-pwlx_dialog_box_indirect
-            - name: Wlxdialogboxderederederetztparam
+            - name: WlxDialogBoxIndirectParam
               href: /windows/desktop/api/winwlx/nc-winwlx-pwlx_dialog_box_indirect_param
-            - name: Wlxdialogboxparam
+            - name: WlxDialogBoxParam
               href: /windows/desktop/api/winwlx/nc-winwlx-pwlx_dialog_box_param
-            - name: Wlxdisconnect
+            - name: WlxDisconnect
               href: /windows/desktop/api/winwlx/nc-winwlx-pwlx_disconnect
-            - name: Wlxdisplaylockednotice
+            - name: WlxDisplayLockedNotice
               href: /windows/desktop/api/Winwlx/nf-winwlx-wlxdisplaylockednotice
-            - name: Wlxdisplaysasnotice
+            - name: WlxDisplaySASNotice
               href: /windows/desktop/api/Winwlx/nf-winwlx-wlxdisplaysasnotice
-            - name: Wlxdisplaystatusmessage
+            - name: WlxDisplayStatusMessage
               href: /windows/desktop/api/Winwlx/nf-winwlx-wlxdisplaystatusmessage
-            - name: Wlxgetconsoleswitch-Anmelde Informationen
+            - name: WlxGetConsoleSwitchCredentials
               href: /windows/desktop/api/Winwlx/nf-winwlx-wlxgetconsoleswitchcredentials
-            - name: Wlxgetoption
+            - name: WlxGetOption
               href: /windows/desktop/api/winwlx/nc-winwlx-pwlx_get_option
-            - name: Wlxgetsourcedesktop
+            - name: WlxGetSourceDesktop
               href: /windows/desktop/api/winwlx/nc-winwlx-pwlx_get_source_desktop
-            - name: Wlxgetstatusmessage
+            - name: WlxGetStatusMessage
               href: /windows/desktop/api/Winwlx/nf-winwlx-wlxgetstatusmessage
-            - name: Wlxinitialize
+            - name: WlxInitialize
               href: /windows/desktop/api/Winwlx/nf-winwlx-wlxinitialize
-            - name: Wlxislockok
+            - name: WlxIsLockOk
               href: /windows/desktop/api/Winwlx/nf-winwlx-wlxislockok
-            - name: Wlxislogoffok
+            - name: WlxIsLogoffOk
               href: /windows/desktop/api/Winwlx/nf-winwlx-wlxislogoffok
-            - name: Wlxloggedonsas
+            - name: WlxLoggedOnSAS
               href: /windows/desktop/api/Winwlx/nf-winwlx-wlxloggedonsas
-            - name: Wlxloggedoutsas
+            - name: WlxLoggedOutSAS
               href: /windows/desktop/api/Winwlx/nf-winwlx-wlxloggedoutsas
-            - name: Wlxlogoff
+            - name: WlxLogoff
               href: /windows/desktop/api/Winwlx/nf-winwlx-wlxlogoff
-            - name: Wlxmessagebox
+            - name: WlxMessageBox
               href: /windows/desktop/api/winwlx/nc-winwlx-pwlx_message_box
-            - name: Wlxaushandlungs
+            - name: WlxNegotiate
               href: /windows/desktop/api/Winwlx/nf-winwlx-wlxnegotiate
-            - name: Wlxnetworkproviderload
+            - name: WlxNetworkProviderLoad
               href: /windows/desktop/api/Winwlx/nf-winwlx-wlxnetworkproviderload
-            - name: Wlxqueryclientanmelde Informationen
+            - name: WlxQueryClientCredentials
               href: /windows/desktop/api/winwlx/nc-winwlx-pwlx_query_client_credentials
-            - name: Wlxqueryconsoleswitch-Anmelde Informationen
+            - name: WlxQueryConsoleSwitchCredentials
               href: /windows/desktop/api/winwlx/nc-winwlx-pwlx_query_consoleswitch_credentials
-            - name: Wlxqueryinetconnector-Anmelde Informationen
+            - name: WlxQueryInetConnectorCredentials
               href: /windows/desktop/api/winwlx/nc-winwlx-pwlx_query_ic_credentials
-            - name: Wlxqueryterminalservicesdata
+            - name: WlxQueryTerminalServicesData
               href: /windows/desktop/api/winwlx/nc-winwlx-pwlx_query_terminal_services_data
-            - name: Wlxquerytatlogon-Anmelde Informationen
+            - name: WlxQueryTsLogonCredentials
               href: /windows/desktop/api/winwlx/nc-winwlx-pwlx_query_ts_logon_credentials
-            - name: Wlxremovestatusmessage
+            - name: WlxRemoveStatusMessage
               href: /windows/desktop/api/Winwlx/nf-winwlx-wlxremovestatusmessage
-            - name: Wlxsasnotify
+            - name: WlxSasNotify
               href: /windows/desktop/api/winwlx/nc-winwlx-pwlx_sas_notify
-            - name: Wlxscreensavernotify
+            - name: WlxScreenSaverNotify
               href: /windows/desktop/api/Winwlx/nf-winwlx-wlxscreensavernotify
-            - name: Wlxsetcontextpointer
+            - name: WlxSetContextPointer
               href: /windows/desktop/api/winwlx/nc-winwlx-pwlx_set_context_pointer
-            - name: Wlxsetoption
+            - name: WlxSetOption
               href: /windows/desktop/api/winwlx/nc-winwlx-pwlx_set_option
-            - name: Wlxltreturndesktop
+            - name: WlxSetReturnDesktop
               href: /windows/desktop/api/winwlx/nc-winwlx-pwlx_set_return_desktop
-            - name: Wlxsettimeout
+            - name: WlxSetTimeout
               href: /windows/desktop/api/winwlx/nc-winwlx-pwlx_set_timeout
-            - name: Wlxshutdown
+            - name: WlxShutdown
               href: /windows/desktop/api/Winwlx/nf-winwlx-wlxshutdown
-            - name: Wlxstartapplikation
+            - name: WlxStartApplication
               href: /windows/desktop/api/Winwlx/nf-winwlx-wlxstartapplication
-            - name: Wlxswitchdesktoptouser
+            - name: WlxSwitchDesktopToUser
               href: /windows/desktop/api/winwlx/nc-winwlx-pwlx_switch_desktop_to_user
-            - name: Wlxswitchdesktopdewinlogon
+            - name: WlxSwitchDesktopToWinlogon
               href: /windows/desktop/api/winwlx/nc-winwlx-pwlx_switch_desktop_to_winlogon
-            - name: Wlxusectrlaltdel
+            - name: WlxUseCtrlAltDel
               href: /windows/desktop/api/winwlx/nc-winwlx-pwlx_use_ctrl_alt_del
             - name: WlxWin31Migrate
               href: /windows/desktop/api/winwlx/nc-winwlx-pwlx_win31_migrate
-            - name: Wlxwkstalockedsas
+            - name: WlxWkstaLockedSAS
               href: /windows/desktop/api/Winwlx/nf-winwlx-wlxwkstalockedsas
-            - name: Wnetsetlasterror
+            - name: WNetSetLastError
               href: /windows/desktop/api/Npapi/nf-npapi-wnetsetlasterrora
-        - name: Authentifizierungs Schnittstellen
+        - name: Authentifizierungsschnittstellen
           href: authentication-interfaces.md
           items:
-            - name: Iassociatedidentityprovider
+            - name: IAssociatedIdentityProvider
               href: /windows/desktop/api/IdentityProvider/nn-identityprovider-iassociatedidentityprovider
               items:
-                - name: Iassociatedidentityprovider-Methoden
+                - name: IAssociatedIdentityProvider-Methoden
                   href: iassociatedidentityprovider-methods.md
                   items:
-                    - name: Associateidentity-Methode
+                    - name: AssociateIdentity-Methode
                       href: /windows/desktop/api/IdentityProvider/nf-identityprovider-iassociatedidentityprovider-associateidentity
-                    - name: Changecredential-Methode
+                    - name: ChangeCredential-Methode
                       href: /windows/desktop/api/IdentityProvider/nf-identityprovider-iassociatedidentityprovider-changecredential
-                    - name: Disassociateidentity-Methode
+                    - name: DisassociateIdentity-Methode
                       href: /windows/desktop/api/IdentityProvider/nf-identityprovider-iassociatedidentityprovider-disassociateidentity
-            - name: Ibytebuffer
+            - name: IByteBuffer
               href: ibytebuffer.md
               items:
-                - name: Ibytebuffer-Methoden
+                - name: IByteBuffer-Methoden
                   href: ibytebuffer-methods.md
                   items:
                     - name: Clone-Methode
@@ -1434,61 +1434,61 @@
                       href: ibytebuffer-unlockregion.md
                     - name: Write-Methode
                       href: ibytebuffer-write.md
-            - name: Iccgdomainauthanmelde Informationen
-              href: iccgdomainauthcredentials.md
+            - name: ICcgDomainAuthCredentials
+              href: windows/win32/api/ccgplugins/nn-ccgplugins-iccgdomainauthcredentials
               items:
-                - name: Getpasswordanmelde-Methode
-                  href: iccgdomainauthcredentials-getpasswordcredentials.md
-            - name: Iconnectedidentityprovider
+                - name: GetPasswordCredentials-Methode
+                  href: windows/win32/api/ccgplugins/nf-ccgplugins-iccgdomainauthcredentials-getpasswordcredentials
+            - name: IConnectedIdentityProvider
               href: /windows/desktop/api/Identityprovider/nn-identityprovider-iconnectedidentityprovider
               items:
-                - name: Connectidentity-Methode
+                - name: ConnectIdentity-Methode
                   href: /windows/desktop/api/Identityprovider/nf-identityprovider-iconnectedidentityprovider-connectidentity
-                - name: Disconnectidentity-Methode
+                - name: DisconnectIdentity-Methode
                   href: /windows/desktop/api/Identityprovider/nf-identityprovider-iconnectedidentityprovider-disconnectidentity
-                - name: GetURL-Methode
+                - name: GetUrl-Methode
                   href: /windows/desktop/api/Identityprovider/nf-identityprovider-iconnectedidentityprovider-geturl
-            - name: Iidentityrat
+            - name: IIdentityAdvise
               href: /windows/desktop/api/IdentityProvider/nn-identityprovider-iidentityadvise
               items:
-                - name: Iidentityempfehlung-Methoden
+                - name: IIdentityAdvise-Methoden
                   href: iidentityadvise-methods.md
                   items:
-                    - name: Identityaktualisierte-Methode
+                    - name: IdentityUpdated-Methode
                       href: /windows/desktop/api/IdentityProvider/nf-identityprovider-iidentityadvise-identityupdated
-            - name: Iidentityprovider
+            - name: IIdentityProvider
               href: /windows/desktop/api/Identityprovider/nn-identityprovider-iidentityprovider
               items:
-                - name: Iidentityprovider-Methoden
+                - name: IIdentityProvider-Methoden
                   href: iidentityprovider-methods.md
                   items:
-                    - name: Methode "Empfehlung"
+                    - name: Advise-Methode
                       href: /windows/desktop/api/Identityprovider/nf-identityprovider-iidentityprovider-advise
                     - name: Create-Methode
                       href: /windows/desktop/api/Identityprovider/nf-identityprovider-iidentityprovider-create
                     - name: Delete-Methode
                       href: /windows/desktop/api/Identityprovider/nf-identityprovider-iidentityprovider-delete
-                    - name: Findbyuniqueid-Methode
+                    - name: FindByUniqueID-Methode
                       href: /windows/desktop/api/Identityprovider/nf-identityprovider-iidentityprovider-findbyuniqueid
-                    - name: Getidentityerum-Methode
+                    - name: GetIdentityEnum-Methode
                       href: /windows/desktop/api/Identityprovider/nf-identityprovider-iidentityprovider-getidentityenum
-                    - name: Getproviderpropertystore-Methode
+                    - name: GetProviderPropertyStore-Methode
                       href: /windows/desktop/api/Identityprovider/nf-identityprovider-iidentityprovider-getproviderpropertystore
                     - name: Importmethode
                       href: /windows/desktop/api/Identityprovider/nf-identityprovider-iidentityprovider-import
-                    - name: Unempfehlung-Methode
+                    - name: UnAdvise-Methode
                       href: /windows/desktop/api/Identityprovider/nf-identityprovider-iidentityprovider-unadvise
-            - name: Iidentitystore
+            - name: IIdentityStore
               href: /windows/desktop/api/Identitystore/nn-identitystore-iidentitystore
               items:
-                - name: Iidentitystore-Methoden
+                - name: IIdentityStore-Methoden
                   href: iidentitystore-methods.md
                   items:
                     - name: AddToCache-Methode
                       href: /windows/desktop/api/Identitystore/nf-identitystore-iidentitystore-addtocache
-                    - name: Convertdesid-Methode
+                    - name: ConvertToSid-Methode
                       href: /windows/desktop/api/Identitystore/nf-identitystore-iidentitystore-converttosid
-                    - name: Enumerateidentities-Methode
+                    - name: EnumerateIdentities-Methode
                       href: /windows/desktop/api/Identitystore/nf-identitystore-iidentitystore-enumerateidentities
                     - name: GetAt-Methode
                       href: /windows/desktop/api/Identitystore/nf-identitystore-iidentitystore-getat
@@ -1496,15 +1496,15 @@
                       href: /windows/desktop/api/Identitystore/nf-identitystore-iidentitystore-getcount
                     - name: Reset-Methode
                       href: /windows/desktop/api/Identitystore/nf-identitystore-iidentitystore-reset
-            - name: Iscard
+            - name: ISCard
               href: iscard.md
               items:
-                - name: Iscard-Methoden
+                - name: ISCard-Methoden
                   href: iscard-methods.md
                   items:
-                    - name: Attachbyhandle-Methode
+                    - name: AttachByHandle-Methode
                       href: iscard-attachbyhandle.md
-                    - name: Attachbyreader-Methode
+                    - name: AttachByReader-Methode
                       href: iscard-attachbyreader.md
                     - name: Detach-Methode
                       href: iscard-detach.md
@@ -1518,39 +1518,39 @@
                       href: iscard-get-protocol.md
                     - name: get_Status-Methode
                       href: iscard-get-status.md
-                    - name: Lockscard-Methode
+                    - name: LockSCard-Methode
                       href: iscard-lockscard.md
-                    - name: Methode zum erneuten Anfügen
+                    - name: ReAttach-Methode
                       href: iscard-reattach.md
-                    - name: Transaktions Methode
+                    - name: Transaktionsmethode
                       href: iscard-transaction.md
-                    - name: Unlockscard-Methode
+                    - name: UnlockSCard-Methode
                       href: iscard-unlockscard.md
-            - name: Iscardauth
+            - name: ISCardAuth
               href: iscardauth.md
               items:
-                - name: Iscardauth-Methoden
+                - name: ISCardAuth-Methoden
                   href: iscardauth-methods.md
                   items:
                     - name: APP_Auth-Methode
                       href: iscardauth-app-auth.md
-                    - name: Getchallenge-Methode
+                    - name: GetChallenge-Methode
                       href: iscardauth-getchallenge.md
                     - name: ICC_Auth-Methode
                       href: iscardauth-icc-auth.md
                     - name: User_Auth-Methode
                       href: iscardauth-user-auth.md
-            - name: Iscardcmd
+            - name: ISCardCmd
               href: iscardcmd.md
               items:
-                - name: Iscardcmd-Methoden
+                - name: ISCardCmd-Methoden
                   href: iscardcmd-methods.md
                   items:
-                    - name: Buildcmd-Methode
+                    - name: BuildCmd-Methode
                       href: iscardcmd-buildcmd.md
                     - name: Clear-Methode
                       href: iscardcmd-clear.md
-                    - name: Kapseln-Methode
+                    - name: Encapsulate-Methode
                       href: iscardcmd-encapsulate.md
                     - name: get_AlternateClassId-Methode
                       href: iscardcmd-get-alternateclassid.md
@@ -1564,7 +1564,7 @@
                       href: iscardcmd-get-apdureplylength.md
                     - name: get_ClassId-Methode
                       href: iscardcmd-get-classid.md
-                    - name: get_data-Methode
+                    - name: get_Data-Methode
                       href: iscardcmd-get-data.md
                     - name: get_InstructionId-Methode
                       href: iscardcmd-get-instructionid.md
@@ -1604,29 +1604,29 @@
                       href: iscardcmd-put-p2.md
                     - name: put_ReplyStatus-Methode
                       href: iscardcmd-put-replystatus.md
-            - name: Iscarddatabase
+            - name: ISCardDatabase
               href: iscarddatabase.md
               items:
-                - name: Iscarddatabase-Methoden
+                - name: ISCardDatabase-Methoden
                   href: iscarddatabase-methods.md
                   items:
-                    - name: Getprovidercardid-Methode
+                    - name: GetProviderCardId-Methode
                       href: iscarddatabase-getprovidercardid.md
-                    - name: Listcardinterfaces-Methode
+                    - name: ListCardInterfaces-Methode
                       href: iscarddatabase-listcardinterfaces.md
-                    - name: Listcards-Methode
+                    - name: ListCards-Methode
                       href: iscarddatabase-listcards.md
-                    - name: Listreadergroups-Methode
+                    - name: ListReaderGroups-Methode
                       href: iscarddatabase-listreadergroups.md
-                    - name: Listreaders-Methode
+                    - name: ListReaders-Methode
                       href: iscarddatabase-listreaders.md
-            - name: Iscardfileaccess
+            - name: ISCardFileAccess
               href: iscardfileaccess.md
               items:
-                - name: Iscardfileaccess-Methoden
+                - name: ISCardFileAccess-Methoden
                   href: iscardfileaccess-methods.md
                   items:
-                    - name: Changedir-Methode
+                    - name: ChangeDir-Methode
                       href: iscardfileaccess-changedir.md
                     - name: Close-Methode
                       href: iscardfileaccess-close.md
@@ -1636,9 +1636,9 @@
                       href: iscardfileaccess-delete.md
                     - name: Directory-Methode
                       href: iscardfileaccess-directory.md
-                    - name: Getcurrentdir-Methode
+                    - name: GetCurrentDir-Methode
                       href: iscardfileaccess-getcurrentdir.md
-                    - name: Getfilefunktionen-Methode
+                    - name: GetFileCapabilities-Methode
                       href: iscardfileaccess-getfilecapabilities.md
                     - name: GetProperties-Methode
                       href: iscardfileaccess-getproperties.md
@@ -1648,7 +1648,7 @@
                       href: iscardfileaccess-open.md
                     - name: Read-Methode
                       href: iscardfileaccess-read.md
-                    - name: Rehabiliingmethode
+                    - name: Neusüdbarkeitsmethode
                       href: iscardfileaccess-rehabilitate.md
                     - name: Seek-Methode
                       href: iscardfileaccess-seek.md
@@ -1662,140 +1662,140 @@
                 - name: ISCardISO7816-Methoden
                   href: iscardiso7816-methods.md
                   items:
-                    - name: Appendrecord-Methode
+                    - name: AppendRecord-Methode
                       href: iscardiso7816-appendrecord.md
-                    - name: Erasebinary-Methode
+                    - name: EraseBinary-Methode
                       href: iscardiso7816-erasebinary.md
-                    - name: Externalauthenticate-Methode
+                    - name: ExternalAuthenticate-Methode
                       href: iscardiso7816-externalauthenticate.md
-                    - name: Getchallenge-Methode
+                    - name: GetChallenge-Methode
                       href: iscardiso7816-getchallenge.md
                     - name: GetData-Methode
                       href: iscardiso7816-getdata.md
                     - name: GetResponse-Methode
                       href: iscardiso7816-getresponse.md
-                    - name: Internalauthenticate-Methode
+                    - name: InternalAuthenticate-Methode
                       href: iscardiso7816-internalauthenticate.md
-                    - name: Managechannel-Methode
+                    - name: ManageChannel-Methode
                       href: iscardiso7816-managechannel.md
-                    - name: Putdata-Methode
+                    - name: PutData-Methode
                       href: iscardiso7816-putdata.md
-                    - name: Read Binary-Methode
+                    - name: ReadBinary-Methode
                       href: iscardiso7816-readbinary.md
-                    - name: Read Record-Methode
+                    - name: ReadRecord-Methode
                       href: iscardiso7816-readrecord.md
-                    - name: Selectfile-Methode
+                    - name: SelectFile-Methode
                       href: iscardiso7816-selectfile.md
-                    - name: Setdefaultclassid-Methode
+                    - name: SetDefaultClassId-Methode
                       href: iscardiso7816-setdefaultclassid.md
-                    - name: Updatebinary-Methode
+                    - name: UpdateBinary-Methode
                       href: iscardiso7816-updatebinary.md
                     - name: UpdateRecord-Methode
                       href: iscardiso7816-updaterecord.md
                     - name: Verify-Methode
                       href: iscardiso7816-verify.md
-                    - name: Write Binary-Methode
+                    - name: WriteBinary-Methode
                       href: iscardiso7816-writebinary.md
-                    - name: Beschreiterecord-Methode
+                    - name: WriteRecord-Methode
                       href: iscardiso7816-writerecord.md
-            - name: Iscardsuche
+            - name: ISCardLocate
               href: iscardlocate.md
               items:
-                - name: Iscardlocate-Methoden
+                - name: ISCardLocate-Methoden
                   href: iscardlocate-methods.md
                   items:
-                    - name: Konfigurations namesearch-Methode
+                    - name: ConfigureCardNameSearch-Methode
                       href: iscardlocate-configurecardnamesearch.md
-                    - name: Findcard-Methode
+                    - name: FindCard-Methode
                       href: iscardlocate-findcard.md
-            - name: Iscardmanage
+            - name: ISCardManage
               href: iscardmanage.md
               items:
-                - name: Iscardmanage-Methoden
+                - name: ISCardManage-Methoden
                   href: iscardmanage-methods.md
                   items:
-                    - name: Attachbyhandle-Methode
+                    - name: AttachByHandle-Methode
                       href: iscardmanage-attachbyhandle.md
-                    - name: Attachbyifd-Methode
+                    - name: AttachByIFD-Methode
                       href: iscardmanage-attachbyifd.md
-                    - name: Methode "kreatecardauth"
+                    - name: CreateCardAuth-Methode
                       href: iscardmanage-createcardauth.md
-                    - name: Methode "kreatechverification"
+                    - name: CreateCHVerification-Methode
                       href: iscardmanage-createchverification.md
-                    - name: Methode "kreatefileaccess"
+                    - name: CreateFileAccess-Methode
                       href: iscardmanage-createfileaccess.md
-                    - name: Methode "kreateingeterface"
+                    - name: CreateInterface-Methode
                       href: iscardmanage-createinterface.md
                     - name: Detach-Methode
                       href: iscardmanage-detach.md
                     - name: Reconnect-Methode
                       href: iscardmanage-reconnect.md
-                    - name: Scardlock-Methode
+                    - name: SCardLock-Methode
                       href: iscardmanage-scardlock.md
-                    - name: Scardunlock-Methode
+                    - name: SCardUnlock-Methode
                       href: iscardmanage-scardunlock.md
                     - name: Status-Methode
                       href: iscardmanage-status.md
-            - name: Iscardtypeconfiguration
+            - name: ISCardTypeConv
               href: iscardtypeconv.md
               items:
-                - name: Iscardtypeconfiguration-Methoden
+                - name: ISCardTypeConv-Methoden
                   href: iscardtypeconv-methods.md
                   items:
-                    - name: Convertbytearraydebytebuffer-Methode
+                    - name: ConvertByteArrayToByteBuffer-Methode
                       href: iscardtypeconv-convertbytearraytobytebuffer.md
-                    - name: Convertbytebufferdebytearray-Methode
+                    - name: ConvertByteBufferToByteArray-Methode
                       href: iscardtypeconv-convertbytebuffertobytearray.md
-                    - name: Convertbytebufferdesafearray-Methode
+                    - name: ConvertByteBufferToSafeArray-Methode
                       href: iscardtypeconv-convertbytebuffertosafearray.md
-                    - name: Converzafearraydebytebuffer-Methode
+                    - name: ConvertSafeArrayToByteBuffer-Methode
                       href: iscardtypeconv-convertsafearraytobytebuffer.md
-                    - name: Methode "kreatebytearray"
+                    - name: CreateByteArray-Methode
                       href: iscardtypeconv-createbytearray.md
-                    - name: Methode "kreatebytebuffer"
+                    - name: CreateByteBuffer-Methode
                       href: iscardtypeconv-createbytebuffer.md
-                    - name: Kreatesafearray-Methode
+                    - name: CreateSafeArray-Methode
                       href: iscardtypeconv-createsafearray.md
-                    - name: Freeistreammemoryptr-Methode
+                    - name: FreeIStreamMemoryPtr-Methode
                       href: iscardtypeconv-freeistreammemoryptr.md
-                    - name: Getatistreammemory-Methode
+                    - name: GetAtIStreamMemory-Methode
                       href: iscardtypeconv-getatistreammemory.md
-                    - name: Sizeomestream-Methode
+                    - name: SizeOfIStream-Methode
                       href: iscardtypeconv-sizeofistream.md
-            - name: Iscardverify
+            - name: ISCardVerify
               href: iscardverify.md
               items:
-                - name: Iscardverify-Methoden
+                - name: ISCardVerify-Methoden
                   href: iscardverify-methods.md
                   items:
                     - name: ChangeCode-Methode
                       href: iscardverify-changecode.md
-                    - name: Resetsecuritystate-Methode
+                    - name: ResetSecurityState-Methode
                       href: iscardverify-resetsecuritystate.md
                     - name: Unblock-Methode
                       href: /previous-versions/windows/desktop/legacy/aa377269(v=vs.85)
                     - name: Verify-Methode
                       href: iscardverify-verify.md
-            - name: Itpmvirtualsmartcardmanager
+            - name: ITpmVirtualSmartCardManager
               href: /windows/desktop/api/Tpmvscmgr/nn-tpmvscmgr-itpmvirtualsmartcardmanager
               items:
-                - name: Methode "kreatevirtualsmartcard"
+                - name: CreateVirtualSmartCard-Methode
                   href: /windows/desktop/api/Tpmvscmgr/nf-tpmvscmgr-itpmvirtualsmartcardmanager-createvirtualsmartcard
-                - name: Destroyvirtualsmartcard-Methode
+                - name: DestroyVirtualSmartCard-Methode
                   href: /windows/desktop/api/Tpmvscmgr/nf-tpmvscmgr-itpmvirtualsmartcardmanager-destroyvirtualsmartcard
-            - name: Itpmvirtualsmartcardmanagerstatus Callback
+            - name: ITpmVirtualSmartCardManagerStatusCallback
               href: /windows/desktop/api/Tpmvscmgr/nn-tpmvscmgr-itpmvirtualsmartcardmanagerstatuscallback
               items:
-                - name: Report Terror-Methode
+                - name: ReportError-Methode
                   href: /windows/desktop/api/Tpmvscmgr/nf-tpmvscmgr-itpmvirtualsmartcardmanagerstatuscallback-reporterror
-                - name: Report Progress-Methode
+                - name: ReportProgress-Methode
                   href: /windows/desktop/api/Tpmvscmgr/nf-tpmvscmgr-itpmvirtualsmartcardmanagerstatuscallback-reportprogress
-        - name: Registrierungsschlüssel für die Authentifizierung
+        - name: Authentifizierungsregistrierungsschlüssel
           href: authentication-registry-keys.md
-        - name: Authentifizierungs Rückgabewerte
+        - name: Authentifizierungs-Rückgabewerte
           href: authentication-return-values.md
           items:
-            - name: Rückgabewerte für die Netzwerksicherheit
+            - name: Rückgabewerte der Netzwerksicherheit
               href: network-security-return-values.md
         - name: Authentifizierungsstrukturen
           href: authentication-structures.md
@@ -1954,23 +1954,23 @@
               href: /windows/win32/api/Ntsecapi/ns-ntsecapi-msv1_0_subauth_response
             - name: MSV1_0_SUPPLEMENTAL_CREDENTIAL
               href: /windows/win32/api/Ntsecapi/ns-ntsecapi-msv1_0_supplemental_credential
-            - name: Netconnectinfostruct
+            - name: NETCONNECTINFOSTRUCT
               href: /windows/win32/api/Winnetwk/ns-winnetwk-netconnectinfostruct
             - name: NETLOGON_LOGON_IDENTITY_INFO
               href: /windows/win32/api/Subauth/ns-subauth-netlogon_logon_identity_info
-            - name: '"Nettresource"'
+            - name: NETRESOURCE
               href: /windows/win32/api/Winnetwk/ns-winnetwk-netresourcea
-            - name: Notifyadd
+            - name: NOTIFYADD
               href: /windows/win32/api/Npapi/ns-npapi-notifyadd
-            - name: Notifycancel
+            - name: NOTIFYCANCEL
               href: /windows/win32/api/Npapi/ns-npapi-notifycancel
-            - name: Notifyinfo
+            - name: NOTIFYINFO
               href: /windows/win32/api/Npapi/ns-npapi-notifyinfo
             - name: OLD_LARGE_INTEGER
               href: /windows/win32/api/Subauth/ns-subauth-old_large_integer
             - name: OPENCARD_SEARCH_CRITERIA
               href: /windows/desktop/api/Winscard/ns-winscard-opencard_search_criteriaa
-            - name: Opencardname
+            - name: OPENCARDNAME
               href: /windows/desktop/api/Winscard/ns-winscard-opencardnamea
             - name: OPENCARDNAME_EX
               href: /windows/desktop/api/Winscard/ns-winscard-opencardname_exa
@@ -2034,9 +2034,9 @@
               href: /windows/win32/api/Sspi/ns-sspi-sec_winnt_credui_context
             - name: SEC_WINNT_CREDUI_CONTEXT_VECTOR
               href: /windows/win32/api/Sspi/ns-sspi-sec_winnt_credui_context_vector
-            - name: Secbuffer
+            - name: SecBuffer
               href: /windows/win32/api/Sspi/ns-sspi-secbuffer
-            - name: Secbufferdebug
+            - name: SecBufferDesc
               href: /windows/win32/api/Sspi/ns-sspi-secbufferdesc
             - name: SECPKG_BYTE_VECTOR
               href: /windows/win32/api/Ntsecpkg/ns-ntsecpkg-secpkg_byte_vector
@@ -2170,7 +2170,7 @@
               href: /windows/win32/api/Sspi/ns-sspi-secpkgcredentials_namesa
             - name: SecPkgCredentials_SSIProvider
               href: /windows/win32/api/Sspi/ns-sspi-secpkgcredentials_ssiprovidera
-            - name: Secpkginfo
+            - name: SecPkgInfo
               href: /windows/win32/api/Sspi/ns-sspi-secpkginfoa
             - name: SECURITY_INTEGER
               href: /windows/win32/api/Sspi/ns-sspi-security_integer
@@ -2180,9 +2180,9 @@
               href: /windows/win32/api/Sspi/ns-sspi-security_package_options
             - name: SECURITY_STRING
               href: /windows/win32/api/Sspi/ns-sspi-security_string
-            - name: Securityfunctiontable
+            - name: SecurityFunctionTable
               href: /windows/win32/api/sspi/ns-sspi-securityfunctiontablea
-            - name: Securityuserdata
+            - name: SecurityUserData
               href: /windows/win32/api/Ntsecpkg/ns-ntsecpkg-security_user_data
             - name: SR_SECURITY_DESCRIPTOR
               href: /windows/win32/api/Subauth/ns-subauth-sr_security_descriptor

@@ -1,11 +1,11 @@
 ---
-title: Taskfolder. gettask-Eigenschaft
-description: Ruft bei der Skripterstellung eine Aufgabe an einer angegebenen Position in einem Ordner ab.
+title: TaskFolder.GetTask-Eigenschaft
+description: Ruft für die Skripterstellung eine Aufgabe an einem angegebenen Speicherort in einem Ordner ab.
 ms.assetid: c0ad4402-dd63-499f-964c-0eada5665d1b
 keywords:
-- Gettask-Eigenschaft Taskplaner
-- Gettask-Eigenschaft Taskplaner, taskfolder-Objekt
-- Task Folder-Objekt Taskplaner, gettask-Eigenschaft
+- GetTask-Eigenschaft Taskplaner
+- GetTask-Eigenschaft Taskplaner , TaskFolder-Objekt
+- TaskFolder-Objekt Taskplaner , GetTask-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e813538cfcb995949cbe1fb8ec6a3b0d7772061c
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: b697b8fa2d0715dcf0282c5f32490bfccec79fec
+ms.sourcegitcommit: cb87082135319cbdc5df541e3071eebb83a58972
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103740600"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111387676"
 ---
-# <a name="taskfoldergettask-property"></a>Taskfolder. gettask-Eigenschaft
+# <a name="taskfoldergettask-property"></a>TaskFolder.GetTask-Eigenschaft
 
-Ruft bei der Skripterstellung eine Aufgabe an einer angegebenen Position in einem Ordner ab.
+Ruft für die Skripterstellung eine Aufgabe an einem angegebenen Speicherort in einem Ordner ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,21 +40,21 @@ TaskFolder.GetTask( _
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Der Pfad (Speicherort) für die Aufgabe in einem Ordner. Der Stamm Aufgaben Ordner wird mit einem umgekehrten Schrägstrich () angegeben \) . Ein Beispiel für einen Aufgaben Ordner Pfad unter dem Stamm Aufgaben Ordner ist \\ mytaskfolder. Das Zeichen "." kann nicht verwendet werden, um den aktuellen Aufgaben Ordner und ".." anzugeben. Zeichen können nicht verwendet werden, um den übergeordneten Aufgaben Ordner im Pfad anzugeben.
+Der Pfad (Speicherort) der Aufgabe in einem Ordner. Der Stammtaskordner wird mit einem umgekehrten Schrägstrich \\ () angegeben. Ein Beispiel für einen Taskordnerpfad im Stammtaskordner ist \\ MyTaskFolder. Das Zeichen "." kann nicht zum Angeben des aktuellen Aufgabenordners und des "."-Zeichens verwendet werden. -Zeichen können nicht verwendet werden, um den übergeordneten Aufgabenordner im Pfad anzugeben.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Die Aufgabe an der angegebenen Position. Der Task ist ein [**registeredtask**](registeredtask.md) -Objekt.
+Die Aufgabe an der angegebenen Position. Der Task ist ein [**RegisteredTask-Objekt.**](registeredtask.md)
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                    |
-| Typbibliothek<br/>             | <dl> <dt>Taskschd. tlb</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ Vista-Desktop-Apps\]<br/>                                          |
+| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2008-Desktop-Apps\]<br/>                                    |
+| Typbibliothek<br/>             | <dl> <dt>Taskschd.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Taskschd.dll</dt> </dl> |
 
 

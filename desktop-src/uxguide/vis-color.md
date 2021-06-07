@@ -1,272 +1,271 @@
 ---
 title: Color
-description: Color ist ein wichtiges visuelles Element der meisten Benutzeroberflächen.
+description: Farbe ist ein wichtiges visuelles Element der meisten Benutzeroberflächen.
 ms.assetid: 30a60e9e-ebb4-40f2-8535-a9b58dc668a8
 ms.topic: article
 ms.date: 10/20/2020
-ms.openlocfilehash: ae58ddf232a3d8311a917ea0475c7aca1bae8949
-ms.sourcegitcommit: 3bdf30edb314e0fcd17dc4ddbc70e4ec7d3596e6
+ms.openlocfilehash: 598654c7e96f025bbcc1ff2a97c96df1a328c046
+ms.sourcegitcommit: 099ecdda1e83618b844387405da0db0ebda93a65
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "104132132"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111444641"
 ---
 # <a name="color"></a>Color
 
 > [!NOTE]
-> Dieses Entwurfs Handbuch wurde für Windows 7 erstellt und wurde für neuere Versionen von Windows nicht aktualisiert. Ein Großteil der Anleitungen gilt weiterhin im Prinzip, aber die Präsentation und die Beispiele entsprechen nicht unseren [aktuellen Entwurfs Anleitungen](/windows/uwp/design/).
+> Dieser Entwurfsleitfaden wurde für Windows 7 erstellt und für neuere Versionen von Windows nicht aktualisiert. Ein Großteil der Anleitungen gilt immer noch im Prinzip, aber die Präsentation und die Beispiele spiegeln nicht unsere [aktuellen Entwurfsleitfäden](/windows/uwp/design/)wider.
 
-Color ist ein wichtiges visuelles Element der meisten Benutzeroberflächen. Neben der reinen Ästhetik hat die Farbe Bedeutungen, und es werden emotionale Reaktionen hervorgerufen. Um Verwirrung zu vermeiden, muss die Farbe konsistent verwendet werden. Um die gewünschten emotionalen Antworten zu erhalten, muss die Farbe entsprechend verwendet werden.
+Farbe ist ein wichtiges visuelles Element der meisten Benutzeroberflächen. Neben reinen Ethiken hat Farbe auch bedeutungsbedingte Bedeutungen und löst emotionale Reaktionen aus. Um Verwechslungen in der Bedeutung zu vermeiden, muss Farbe konsistent verwendet werden. Um die gewünschten emotionalen Antworten zu erhalten, muss die Farbe entsprechend verwendet werden.
 
-Die Farbe wird häufig in Bezug auf einen Farbraum betrachtet, bei dem RGB (rot, grün, blau), HSL (Hue, Sättigung, Helligkeit) und HSV (Hue, Sättigung, Wert) die am häufigsten verwendeten Farbbereiche sind.
+Farbe wird häufig als Farbraum betrachtet, wobei RGB (Rot, Grün, Blau), HSL (Farbton, Sättigung, Helligkeit) und HSV (Farbton, Sättigung, Wert) die am häufigsten verwendeten Farbräume sind.
 
-![Abbildung eines Cubes, der Farb Beziehungen anzeigt ](images/vis-color-image1.png)
+![Abbildung eines Cubes mit Farbbeziehungen ](images/vis-color-image1.png)
 
 Der RGB-Farbraum kann als Cube visualisiert werden.
 
-Bei der Anzeige Technologie werden RGB-Werte verwendet, und die Entwickler betrachten daher häufig Farben in Bezug auf RGB. der RGB-Farbraum entspricht nicht der Art und Weise, in der die Farbe der Farben Wenn Sie z. b. "dunkel cyan" rot hinzufügen, wird das Ergebnis nicht als rot, sondern als heller Cyan wahrgenommen.
+Während die Anzeigetechnologie RGB-Werte verwendet und Entwickler daher häufig Farben in Bezug auf RGB betrachten, entspricht der RGB-Farbraum nicht der Art und Weise, wie Menschen Farben erkennen. Wenn Sie z. B. "red" zu "dark cyan" hinzufügen, wird das Ergebnis nicht als roter, sondern als leichterer Cyan wahrgenommen.
 
-![Abbildung von dunklen und hellen Zyan-Quadraten ](images/vis-color-image2.png)
+![Abbildung von dunklen und hellen Cyan-Quadraten ](images/vis-color-image2.png)
 
-In diesem Beispiel ist das Hinzufügen von rot zu dunkel Zyan heller, nicht mehr rot. Der RGB-Farbraum entspricht nicht der Art und Weise, wie Benutzer die Farbe erkennen.
+In diesem Beispiel wird es durch hinzufügen von Rot zu dunklem Cyan leichter, nicht rot. Der RGB-Farbraum entspricht nicht der Wahrnehmung von Farben durch Personen.
 
-Die HSL/HSV-Farbbereiche bestehen aus drei Komponenten: Hue, Sättigung und Helligkeit oder Wert. Diese Farbbereiche werden häufig anstelle von RGB verwendet, da Sie besser mit der Wahrnehmung von Farben in Einklang stehen.
+Die HSL-/HSV-Farbräume bestehen aus drei Komponenten: Farbton, Sättigung und Helligkeit oder Wert. Diese Farbräume werden häufig anstelle von RGB verwendet, da sie besser mit der Wahrnehmung von Farben übereinstimmen.
 
-Der HSL-Farbraum bildet einen doppelten Kegel, der in der Mitte weiß, schwarz unten und neutral in der Mitte ist:
+Der HSL-Farbraum bildet einen doppelten Kegel, der oben weiß, unten schwarz und in der Mitte neutral ist:
 
--   **Farbton:** Die Grundfarbe im Farbrad, die zwischen 0 und 360 Grad liegt, wobei 0 und 360 Grad rot sind.
+-   **Hue:** Die Grundfarbe im Farbrad im Bereich von 0 bis 360 Grad, wobei sowohl 0 als auch 360 Grad rot sind.
 
-    ![Abbildung eines Kreises, der Farb Beziehungen anzeigt ](images/vis-color-image3.png)
+    ![Abbildung eines Kreises mit Farbbeziehungen ](images/vis-color-image3.png)
 
-    Das Farbrad, bei dem rot 0 Grad beträgt, gelb 60 Grad, grün 120 Grad, Zyan 180 Grad, blau ist 240 Grad und Magenta ist 300 Grad.
+    Das Farbrad, bei dem Rot 0 Grad, Gelb 60 Grad, Grün 120 Grad, Cyan 180 Grad, Blau 240 Grad und Magenta 300 Grad ist.
 
--   **Sättigung:** Gibt an, wie rein (oder langweilig) die Farbe ist, von 0 bis 100, wobei 100 vollständig ausgelastet und 0 grau ist.
--   **Helligkeit:** Wie hell die Farbe ist, liegt zwischen 0 und 100, wobei 100 so hell wie möglich ist (weiß, unabhängig von Farbton und Sättigung) und 0 so dunkel wie möglich (schwarz) ist.
+-   **Sättigung:** Wie rein (im Vergleich zu dull) die Farbe ist, die zwischen 0 und 100 liegt, wobei 100 vollständig ausgelastet und 0 grau ist.
+-   **Helligkeit:** Wie hell die Farbe im Bereich von 0 bis 100 ist, wobei 100 so hell wie möglich ist (Weiß, unabhängig von Farbton und Sättigung) und 0 so dunkel wie möglich (Schwarz).
 
-    ![Abbildung zur Veranschaulichung des HSL-Farbraum ](images/vis-color-image4.png)
+    ![Abbildung zur Veranschaulichung des hsl-Farbraums ](images/vis-color-image4.png)
 
     Der HSL-Farbraum kann als doppelter Kegel visualisiert werden.
 
-Der HSV-Farbraum ist ähnlich, mit dem Unterschied, dass sein Bereich einen einzelnen Kegel bildet:
+Der HSV-Farbraum ist ähnlich, mit der Ausnahme, dass sein Raum einen einzelnen Kegel bildet:
 
--   **Farbton:** Die Grundfarbe im Farbrad, die zwischen 0 und 360 Grad liegt, wobei 0 und 360 Grad rot sind.
--   **Sättigung:** Gibt an, wie rein (oder langweilig) die Farbe ist, von 0 bis 100, wobei 100 vollständig ausgelastet und 0 grau ist.
--   **Wert:** Die Farbe der Farbe liegt zwischen 0 und 100, wobei 100 so hell wie möglich ist (d. h. die Hälfte der Leuchtkraft im HSL-Bereich) und 0 so dunkel wie möglich (schwarz) ist.
+-   **Hue:** Die Grundfarbe im Farbrad im Bereich von 0 bis 360 Grad, wobei sowohl 0 als auch 360 Grad rot sind.
+-   **Sättigung:** Wie rein (im Vergleich zu dull) die Farbe ist, die zwischen 0 und 100 liegt, wobei 100 vollständig ausgelastet und 0 grau ist.
+-   **Wert:** Wie hell die Farbe im Bereich von 0 bis 100 ist, wobei 100 so hell wie möglich ist (also halber Helligkeit im HSL-Raum) und 0 so dunkel wie möglich (Schwarz).
 
-    ![Abbildung der HSV-Farbraum ](images/vis-color-image5.png)
+    ![Abbildung zur Veranschaulichung des hsv-Farbraums ](images/vis-color-image5.png)
 
     Der HSV-Farbraum kann als einzelner Kegel visualisiert werden.
 
-In HSL-und HSV-Leerzeichen, wenn Sättigung gleich 0 ist, gibt die Helligkeit einen grauen Farbton an. In Windows werden die HSL-und die HSV-Leerzeichen in der Regel einer Skala zwischen 0 und 240 neu zugeordnet, damit Farben mit einem 32-Bit-Wert dargestellt werden können.
+Wenn die Sättigung sowohl in HSL- als auch in HSV-Bereichen 0 ist, gibt die Helligkeit einen Grauton an. In Windows werden die HSL- und HSV-Leerzeichen in der Regel einer Skala zwischen 0 und 240 neu zugeordnet, sodass Farben mit einem 32-Bit-Wert dargestellt werden können.
 
-**Hinweis:** Richtlinien, die sich auf [Schriftarten](vis-fonts.md) und [Barrierefreiheit](inter-accessibility.md) beziehen, werden in separaten Artikeln dargestellt.
+**Hinweis:** Richtlinien für [Schriftarten](vis-fonts.md) und [Barrierefreiheit](inter-accessibility.md) werden in separaten Artikeln vorgestellt.
 
 ## <a name="design-concepts"></a>Entwurfskonzepte
 
-Durch die effektive Verwendung von Color kann die Benutzeroberfläche des Programms effektiver werden. Die Farbe kann Benutzern helfen, bestimmte Bedeutungen auf einen Blick zu verstehen. Durch die Farbe kann Ihr Produkt auch ästhetisch ansprechend und verfeinert erscheinen.
+Die effektive Verwendung von Farben kann die Benutzeroberfläche Ihres Programms effektiver gestalten. Farbe kann Benutzern helfen, bestimmte Bedeutungen auf einen Blick zu verstehen. Farbe kann auch dazu sorgen, dass Ihr Produkt ansprechender und feiner dargestellt wird.
 
-Leider ist es ganz einfach, die Farbe ineffektiv zu verwenden, insbesondere, wenn Sie nicht im visuellen Design geschult sind. Schlechte Verwendung von Farben führt zu Entwürfen, die Unprofessional, veraltet, verwirrend oder einfach hässlich betrachten. Eine schlechte Verwendung von Farben kann schlimmer sein als die Verwendung der Farbe überhaupt nicht.
+Leider ist es zu einfach, Farben ineffektiv zu verwenden, insbesondere wenn Sie nicht im visuellen Design trainiert sind. Eine schlechte Verwendung von Farben führt zu Entwürfen, die unprofessionell, veraltet, verwirrend oder einfach hässlich aussehen. Eine schlechte Verwendung der Farbe kann schlechter sein, als überhaupt keine Farbe zu verwenden.
 
-In diesem Abschnitt wird erläutert, was Sie wissen müssen, um die Farbe effektiv zu verwenden.
+In diesem Abschnitt wird erläutert, was Sie wissen müssen, um Farbe effektiv zu verwenden.
 
 ### <a name="how-color-is-used"></a>Verwendung der Farbe
 
-Die Farbe wird normalerweise in der Benutzeroberfläche für die Kommunikation verwendet:
+Farbe wird in der Regel in der Benutzeroberfläche für die Kommunikation verwendet:
 
--   **D.h..** Die Bedeutung einer Nachricht kann durch Farbe zusammengefasst werden. Beispielsweise wird "Color" häufig verwendet, um den Status zu kommunizieren, bei dem "Red" ein Problem oder Fehler ist, gelb "Vorsicht" oder "Warnung" ist und grün ist
--   **Land.** Der Zustand eines Objekts kann durch Farbe angegeben werden. Beispielsweise verwendet Windows Color zum Angeben von Auswahl-und Hover-Zuständen. Links innerhalb von Webseiten verwenden Blue für nicht besuchte und lila für den Besuch.
--   **Zierungen.** Es wird davon ausgegangen, dass es eine Beziehung zwischen Elementen derselben Farbe gibt, sodass die Farbcodierung eine effektive Möglichkeit zur Unterscheidung zwischen Objekten ist. Beispielsweise verwenden Aufgabenbereiche in einem System Steuerungselement einen grünen Hintergrund, um Sie visuell vom Hauptinhalt zu trennen. Außerdem ermöglicht Microsoft Outlook Benutzern das Zuweisen verschiedener farbiger Flags zu Nachrichten.
--   **Akzente.** Die Farbe kann verwendet werden, um die Aufmerksamkeit von Benutzern zu zeichnen. Windows verwendet z. b. blaue [Haupt Anweisungen](text-ui.md) , um Sie beim Einstieg aus dem anderen Text zu unterstützen.
+-   **Bedeutung.** Die Bedeutung einer Nachricht kann anhand der Farbe zusammengefasst werden. Beispielsweise wird Farbe häufig verwendet, um den Status zu kommunizieren, bei dem Rot ein Problem oder Fehler ist, Gelb vorsichtshalber oder Warnung ist und Grün gut ist.
+-   **Staat.** Der Zustand eines Objekts kann durch Farbe angegeben werden. Windows verwendet z. B. Farbe, um Auswahl- und Mauszeigerzustände anzugeben. Links innerhalb von Webseiten verwenden blau für nicht aufgerufene und violette Für besucht.
+-   **Differenzierung.** Personen gehen davon aus, dass es eine Beziehung zwischen Elementen der gleichen Farbe gibt, sodass die Farbcodierung eine effektive Möglichkeit ist, zwischen Objekten zu unterscheiden. Beispielsweise verwenden Aufgabenbereiche in einem Systemsteuerungselement einen grünen Hintergrund, um sie visuell vom Hauptinhalt zu trennen. Darüber hinaus ermöglicht Microsoft Outlook Benutzern, Nachrichten unterschiedliche farbige Flags zuzuweisen.
+-   **Schwerpunkt.** Farbe kann verwendet werden, um die Aufmerksamkeit der Benutzer zu lenken. Windows verwendet beispielsweise blaue [Hauptanweisungen,](text-ui.md) um sie vom anderen Text abzuheben.
 
-Natürlich wird die Farbe aus rein ästhetischen Gründen häufig in Grafiken verwendet. Obwohl die Ästhetik wichtig ist, sollten Sie die Farben der UI-Elemente in erster Linie auf Grundlage ihrer Bedeutung, nicht wie Sie aussehen.
+Natürlich wird Farbe aus reinen optischen Gründen häufig in Grafiken verwendet. Obwohl Dies ist wichtig, sollten Sie die Farben von Benutzeroberflächenelementen in erster Linie basierend darauf auswählen, was sie bedeuten, nicht wie sie aussehen.
 
-### <a name="color-interpretation"></a>Farb Interpretation
+### <a name="color-interpretation"></a>Farbinterpretation
 
-**Die Interpretation der Farbe von Benutzern ist oft von der Kultur abhängig.** Beispielsweise ist in der USA das Hochzeits Zeichen für die Braut größtenteils mit der Farbe weiß verknüpft, während "Black" den Bestattungs Zeichen zugeordnet ist. Vor langer Zeit in Japan war die Farbsymbolik nur das Gegenteil: weiß war die vorherrschende Farbe bei der Beerdigung, und Black wurde als eine Farbe angesehen, die für das hoch-und hoch-und hoch-bis zu einem guten Erfolg sorgt
+**Die Interpretation der Farbe durch benutzer ist häufig kulturabhängig.** In der USA ist beispielsweise die Färbung für die Färbung größtenteils mit der Farbe Weiß verknüpft, während Schwarz mit Färbungen verknüpft ist. In Japan war die Farbsymbolik jedoch vor langer Zeit genau das Gegenteil: Weiß war die vorherrschende Farbe bei Färbungen, und Schwarz wurde als Farbe angesehen, die guten Erfolg für Diebe bringt.
 
-Das heißt, **die Interpretation von rot, gelb und grün für den Status ist global global.** Dies liegt an der [UNESCO-Wien-Konvention auf Straßen Vorzeichen und Signalen](https://www.unece.org/trans/conventn/signalse.pdf), die die weltweite Konvention für Verkehrs Leuchten definiert (wobei rot das Ende bedeutet, Grün bedeutet fortfahren, und Gelb bedeutet, dass Sie mit Vorsicht fortfahren). Diese Status Farben können ohne Rücksicht auf Kultur abhängige Interpretationen verwendet werden.
+Allerdings **ist die Interpretation von Rot, Gelb und Grün für den Status global konsistent.** Dies ist auf die [CONVENTION on Road Signs and Signals](https://www.unece.org/trans/conventn/signalse.pdf)zurückzuführen, die die weltweite Konvention für Ampeln definiert (wobei Rot stopp, grün bedeutet fortfahren und gelb mit Vorsicht vorgeht). Sie können diese Statusfarben ohne Bedenken für kulturabhängige Interpretationen verwenden.
 
-Neben den Status Farben weist Windows den Farben auf der Grundlage der Konvention Bedeutungen zu, wie im Abschnitt "Richtlinien" in diesem Artikel dargestellt. Stellen Sie sicher, dass die Farbverwendung des Programms mit diesen Farb Konventionen kompatibel ist.
+Über die Statusfarben hinaus weist Windows Farben gemäß der Konvention Bedeutungen zu, wie im Abschnitt Richtlinien dieses Artikels beschrieben. Stellen Sie sicher, dass die Farbverwendung Ihres Programms mit diesen Farbkonventionen kompatibel ist.
 
-### <a name="color-accessibility"></a>Farb Barrierefreiheit
+### <a name="color-accessibility"></a>Farbbarrierefreiheit
 
-Die Verwendung von Color wirkt sich auf den Zugriff ihrer Software auf die größtmögliche Zielgruppe aus. Benutzer mit Blindheit oder Sehbehinderung sind möglicherweise nicht in der Lage, die Farben zu erkennen, wenn überhaupt. Ungefähr 8 Prozent der Erwachsenen Männer haben eine Form von Farb Verwirrung (häufig fälschlicherweise als "Farb Blindheit" bezeichnet), von der rot-grün-Farb Verwirrung am häufigsten ist.
+Die Verwendung von Farben wirkt sich auf die Barrierefreiheit Ihrer Software für eine möglichst breite Zielgruppe aus. Benutzer mit Blindheit oder sehschwachen Sehvermögen können die Farben möglicherweise nicht gut sehen, wenn überhaupt. Ungefähr 8 Prozent der erwachsenen Märchen weisen eine Form von Farbverwechslungen auf (häufig fälschlicherweise als "Farbblindheit" bezeichnet), von denen Rot-Grün-Farbverwechslungen am häufigsten vorkommen.
 
-![Darstellung der in der Regel angezeigten Primärfarben ](images/vis-color-image6.png)
+![Abbildung mit primärer Farbe wie gewohnt ](images/vis-color-image6.png)
 
-Die Primärfarben, wie Sie mit normaler Farbvision sichtbar sind.
+Die Primärfarben, die bei normalem Farbbild zu sehen sind.
 
-![Abbildung der gleichen Farben wie bei Protanopia ](images/vis-color-image7.png)
+![Abbildung, die die gleichen Farben wie bei Protantropie zeigt ](images/vis-color-image7.png)
 
-Die Primärfarben wie bei Protanopia (1% der männlichen Population).
+Die Primärfarben wie bei Protantropie (1 % der legenen Bevölkerung).
 
-![Abbildung der gleichen Farben wie bei Deuteranopia ](images/vis-color-image8.png)
+![Abbildung mit den gleichen Farben, die mit deuteran colors zu sehen sind ](images/vis-color-image8.png)
 
-Die Primärfarben, wie Sie mit Deuteranopia (6% der männlichen Population) angezeigt werden.
+Die Primärfarben, wie sie bei Deuterantropie (6 % der legenen Bevölkerung) zu sehen sind.
 
-![Abbildung der gleichen Farben wie bei tritanopia ](images/vis-color-image9.png)
+![Abbildung, die die gleichen Farben wie bei Tritantropie zeigt ](images/vis-color-image9.png)
 
-Die Primärfarben wie bei tritanopia (1% der männlichen Population).
+Die Primärfarben, die mit Tritantropie (1 % der legenen Bevölkerung) zu sehen sind.
 
-Weitere Informationen finden Sie unter [können Color-Blind Benutzer Ihre Website sehen?](/previous-versions/windows/internet-explorer/ie-developer/)
+Weitere Informationen finden Sie unter [Können Color-Blind Benutzer Ihre Website anzeigen?](/previous-versions/windows/internet-explorer/ie-developer/)
 
-### <a name="use-color-to-reinforce-visually"></a>Farben zur visuellen Verstärkung verwenden
+### <a name="use-color-to-reinforce-visually"></a>Verwenden von Farben zur visuellen Verstärkung
 
-Die beste Lösung für die Farb Interpretation und Barrierefreiheits Probleme ist die Verwendung von Farben, um die Bedeutung einer dieser primären Kommunikationsmethoden visuell zu verstärken:
+Die beste Lösung für farbliche Interpretations- und Barrierefreiheitsprobleme ist die Verwendung von Farbe, um die Bedeutung einer dieser primären Kommunikationsmethoden visuell zu verstärken:
 
--   **Text.** Beim präzisen Text handelt es sich in der Regel um die effektivste primäre Kommunikation entweder direkt auf der Benutzeroberfläche oder über eine QuickInfo.
+-   **Text.** Präziser Text ist in der Regel die effektivste primäre Kommunikation entweder direkt auf der Benutzeroberfläche oder über eine QuickInfo.
 
 ![Screenshot eines kleinen roten Symbols mit QuickInfo ](images/vis-color-image10.png)
 
-In diesem Beispiel wird der QuickInfo-Text verwendet, um die Bedeutung eines Symbols zu kommunizieren.
+In diesem Beispiel wird QuickInfo-Text verwendet, um die Bedeutung eines Symbols zu kommunizieren.
 
--   **Ausge.** Symbole lassen sich leicht durch die Entwürfe unterscheiden, insbesondere die Konturform.
+-   **Design.** Symbole lassen sich leicht durch die Entwürfe unterscheiden, insbesondere durch ihre Konturform.
 
-![Screenshot der Symbole in Graustufen (Graustufen) ](images/vis-color-image11.png)
+![Screenshot von Symbolen in Graustufen (Graustufen) ](images/vis-color-image11.png)
 
-In diesem Beispiel können die Standardsymbole basierend auf ihren Entwürfen leicht unterschieden werden.
+In diesem Beispiel sind die Standardsymbole anhand ihrer Entwürfe leicht zu unterscheiden.
 
--   **Hotels.** Der relative Speicherort kann auch verwendet werden, aber dieser Ansatz ist schwächer als die Alternativen. Um effektiv zu sein, sollte der Speicherort "Standard" und "bekannt" lauten, wie bei Verkehrs Leuchten.
+-   **Lage.** Es kann auch ein relativer Standort verwendet werden, aber dieser Ansatz ist schwächer als die Alternativen. Um effektiv zu sein, sollte der Standort standard und bekannt sein, wie bei Ampeln.
 
-Obwohl Color das offensichtlichste Attribut von vielen Entwürfen ist, muss es immer redundant sein.
+Obwohl Farbe das offensichtlichste Attribut vieler Entwürfe ist, muss sie immer redundant sein.
 
 ### <a name="designing-with-color"></a>Entwerfen mit Farbe
 
-Ironischerweise ist die beste Methode zum Entwerfen von Farben zunächst das Entwerfen ohne Farbe, die Verwendung von [Draht Modelle](glossary.md) oder Chrome und das anschließende Hinzufügen von Farben zu einem späteren Zeitpunkt. Dadurch wird sichergestellt, dass die Informationen nicht allein mithilfe von Farben kommuniziert werden. Außerdem können Sie sicherstellen, dass Ihre Ausdrucke in Monochrom-Druckern hervorragend aussehen.
+Ironischerweise besteht die beste Möglichkeit zum Entwerfen von Farben darin, mit dem Entwerfen ohne Farbe zu beginnen, entweder [wireframes](glossary.md) oder monocolore zu verwenden und später Farbe hinzuzufügen. Dadurch wird sichergestellt, dass Informationen nicht nur mithilfe von Farben kommuniziert werden. Außerdem wird sichergestellt, dass Ihre Drucke auf monofarbigen Druckern gut aussehen.
 
-### <a name="use-theme-or-system-colors"></a>Design-oder Systemfarben verwenden
+### <a name="use-theme-or-system-colors"></a>Verwenden von Design- oder Systemfarben
 
-Obwohl es viele komplexe Faktoren bei der effektiven Verwendung von Farben gibt, wird in der Windows-Benutzeroberfläche die Auswahl von Farbe häufig auf die Auswahl der passenden Design [Farbe](glossary.md) oder der [System Farbe](glossary.md) nach einigen einfachen Regeln beschränkt. Benutzer können dann diese Farbschemas auswählen und anpassen.
+Obwohl es viele komplexe Faktoren bei der effektiven Verwendung von Farben gibt, geht [](glossary.md) es [](glossary.md) bei der Auswahl der Farbe auf der Windows-Benutzeroberfläche häufig nur um die Auswahl der passenden Designfarbe oder Systemfarbe gemäß einigen einfachen Regeln. Benutzer können diese Farbschemas dann nach Bewählen auswählen und anpassen.
 
-Auf diese Weise können Sie nicht nur die Farbeinstellungen aller Benutzer abdecken, sondern Sie können auch das richtige Farbschema auswählen, das für alle Geschmacksrichtungen, Stile und Kulturen geeignet ist (was natürlich nicht möglich ist).
+Auf diese Weise berücksichtigen Sie nicht nur die Farbeinstellungen aller Benutzer, sondern auch die Auswahl eines perfekten Farbschemas, das für alle Vorlieben, Stile und Kulturen geeignet ist (was natürlich andernfalls unmöglich ist).
 
-**Wenn Sie nur eine Aktion ausführen...**
+**Wenn Sie nur eine Sache tun...**
 
-Wählen Sie Farben aus, indem Sie die entsprechende Design Farbe oder System Farbe auswählen. Verwenden Sie die Farbe nie als primäre Kommunikationsmethode, sondern als sekundäre Methode, um die Bedeutung visuell zu verstärken. Entwerfen Sie mithilfe von Draht Modelle oder Chrome, um sicherzustellen, dass die Farbe sekundär ist.
+Wählen Sie Farben aus, indem Sie die entsprechende Designfarbe oder Systemfarbe auswählen. Verwenden Sie niemals Farbe als primäre Kommunikationsmethode, sondern als sekundäre Methode, um die Bedeutung visuell zu verstärken. Entwerfen Sie mithilfe von Wireframes oder monofarbig, um sicherzustellen, dass farbe sekundär ist.
 
-### <a name="use-theme-or-system-colors-correctly"></a>Design-oder Systemfarben ordnungsgemäß verwenden
+### <a name="use-theme-or-system-colors-correctly"></a>Design- oder Systemfarben richtig verwenden
 
-Angenommen, Benutzer wählen Design-oder Systemfarben auf der Grundlage Ihrer persönlichen Anforderungen aus, und das Design oder die Systemfarben sind entsprechend konstruiert. Wenn Sie auf der Grundlage dieser Annahme immer Design-oder Systemfarben auf der Grundlage ihres vorgesehenen zwecks und ihrer zugehörigen Hintergründe auswählen, sind die Farben garantiert lesbar und berücksichtigen die Anforderungen der Benutzer in allen Video Modi, einschließlich des [Modus für hohe Kontraste](glossary.md). Beispielsweise ist es garantiert, dass die Fenster Text-System Farbe für die Hintergrundsystem Farbe des Fensters lesbar ist.
+Angenommen, Benutzer wählen Design- oder Systemfarben basierend auf ihren persönlichen Anforderungen aus und das Design oder die Systemfarben werden entsprechend erstellt. Wenn Sie basierend auf dieser Annahme immer Design- oder Systemfarben basierend auf ihrem beabsichtigten Zweck auswählen und Vordergrund mit den zugehörigen Hintergründen koppeln, sind die Farben garantiert lesbar und achten in allen Videomodi, einschließlich des Modus mit hohem Kontrast, auf die Bedürfnisse der [Benutzer.](glossary.md) Beispielsweise ist sichergestellt, dass die Systemfarbe des Fenstertexts für die Systemfarbe des Fensterhintergrunds lesbar ist.
 
 Insbesondere immer:
 
--   **Wählen Sie die Farben auf Grundlage ihres Zwecks aus.** Wählen Sie auf der Grundlage ihrer aktuellen Darstellung keine Farben aus, da diese Darstellung vom Benutzer oder von zukünftigen Windows-Versionen geändert werden kann.
--   **Vergleichen Sie die Vorder Grundfarben mit ihren zugeordneten Hintergrundfarben.** Vorder Grundfarben sind garantiert nur für die zugehörigen Hintergrundfarben lesbar. Kombinieren Sie nicht die Vorder Grundfarben mit anderen Hintergrundfarben oder noch schlimmer, andere Vordergrund Farben.
--   **Farben Typen nicht kombinieren.** Das heißt, Sie sollten immer Design Farben mit den zugehörigen Design Farben, Systemfarben mit den zugeordneten Systemfarben und hart verdrahteten Farben mit anderen hart verdrahteten Farben vergleichen. Beispielsweise ist es nicht garantiert, dass eine Design Textfarbe für einen hart verdrahteten Hintergrund lesbar ist.
--   **Wenn Sie Farben hart verdrahtet müssen, behandeln Sie den Modus für hohe Kontraste als Sonderfall.**
+-   **Wählen Sie Farben basierend auf ihrem Zweck aus.** Wählen Sie Farben nicht basierend auf ihrer aktuellen Darstellung aus, da diese Darstellung vom Benutzer oder zukünftigen Versionen von Windows geändert werden kann.
+-   **Übereinstimmung von Vordergrundfarben mit den zugeordneten Hintergrundfarben.** Vordergrundfarben sind garantiert nur für ihre zugeordneten Hintergrundfarben lesbar. Kombinieren Sie keine Vordergrundfarben mit anderen Hintergrundfarben oder noch schlechter noch anderen Vordergrundfarben, und passen Sie sie nicht an.
+-   **Mischen Sie keine Farbtypen.** Dies bedeutet, dass Designfarben immer mit ihren zugeordneten Designfarben, Systemfarben mit den zugehörigen Systemfarben und hartverkabelten Farben mit anderen hartverkabelten Farben übereinstimmen. Beispielsweise ist nicht garantiert, dass eine Designtextfarbe vor einem hartverkabelten Hintergrund lesbar ist.
+-   **Wenn Sie Hardwirefarben verwenden müssen, behandeln Sie den Modus mit hohem Kontrast als Sonderfall.**
 
-**Wenn Sie nur eine Aktion ausführen...**
+**Wenn Sie nur eine Sache tun...**
 
-Wählen Sie immer Design-oder Systemfarben auf Grundlage ihres beabsichtigten Zwecks aus, und koppeln Sie die zugehörigen Hintergründe.
+Wählen Sie immer Design- oder Systemfarben basierend auf ihrem beabsichtigten Zweck aus, und koppeln Sie Vordergrund mit ihren zugeordneten Hintergründen.
 
-### <a name="using-other-colors"></a>Verwenden von anderen Farben
+### <a name="using-other-colors"></a>Verwenden anderer Farben
 
-Während das Windows-Design einen umfassenden Satz von Design Teilen definiert, stellen Sie möglicherweise fest, dass das Programm Farben benötigt, die nicht in der Designdatei definiert sind. Obwohl Sie diese Farben hart übertragen konnten, empfiehlt es sich, Farben aus dem Design oder den Systemfarben abzuleiten. Bei der strategischen Verwendung dieses Ansatzes erhalten Sie alle Vorteile der Verwendung von Design-und Systemfarben, aber mit viel mehr Flexibilität.
+Obwohl das Windows-Design einen umfassenden Satz von Designteilen definiert, stellen Sie möglicherweise fest, dass Ihr Programm Farben benötigt, die nicht in der Designdatei definiert sind. Sie können solche Farben zwar verkabeln, aber ein besserer Ansatz besteht in der Ableitung von Farben aus dem Design oder den Systemfarben. Die strategische Verwendung dieses Ansatzes bietet Ihnen alle Vorteile der Verwendung von Design- und Systemfarben, aber mit viel mehr Flexibilität.
 
-Nehmen Sie beispielsweise an, dass Sie einen Fenster Hintergrund benötigen, der dunkler als die Hintergrundfarbe des Design Fensters ist. Im HSL-Farbraum bedeutet eine dunklere Farbe eine Farbe mit einer niedrigeren Helligkeit. Daher können Sie mithilfe der folgenden Schritte eine dunklere Fenster Hintergrundfarbe ableiten:
+Angenommen, Sie benötigen einen Fensterhintergrund, der dunkler als die Hintergrundfarbe des Designfensters ist. Im HSL-Farbraum bedeutet eine dunklere Farbe eine Farbe mit einer geringeren Helligkeit. Daher können Sie mithilfe der folgenden Schritte eine dunklere Hintergrundfarbe für das Fenster ableiten:
 
--   Ruft das Hintergrunddesign Color RGB des Fensters ab.
--   Konvertieren Sie den RGB-Wert in seinen HSL-Wert.
--   Verringern Sie den Wert für die Helligkeit (etwa 20 Prozent).
+-   Abrufen der Hintergrunddesignfarbe des Fensters RGB.
+-   Konvertieren Sie rgb in den HSL-Wert.
+-   Reduzieren Sie den Helligkeitswert (z. B. um 20 Prozent).
 -   Konvertieren Sie zurück in RGB-Werte.
 
-Bei diesem Ansatz wird die abgeleitete Farbe garantiert als dunkler Farbton der ursprünglichen Farbe wahrgenommen (es sei denn, die ursprüngliche Farbe war sehr dunkel, um mit zu beginnen).
+Bei diesem Ansatz wird die abgeleitete Farbe garantiert als dunklerer Schattierung der ursprünglichen Farbe wahrgenommen (es sei denn, die ursprüngliche Farbe war zu Beginn sehr dunkel.)
 
-![Darstellung der Auswirkungen der reduzierten Helligkeit ](images/vis-color-image12.png)
+![Abbildung der Auswirkungen einer reduzierten Helligkeit ](images/vis-color-image12.png)
 
-In diesem Beispiel wird die Hintergrundfarbe des dunkleren Fensters von der Design Farbe abgeleitet.
+In diesem Beispiel wird eine dunklere Hintergrundfarbe des Fensters von der Designfarbe abgeleitet.
 
 ### <a name="testing-colors"></a>Testen von Farben
 
-Um festzustellen, ob die Verwendung von Color auf das Programm zugänglich ist und nicht als primäre Kommunikationsmethode verwendet wird, empfehlen wir die Verwendung der [Fujitsu colordoctor](https://www.fujitsu.com/global/about/businesspolicy/tech/design/) -oder der [Vischeck](https://www.vischeck.com/) -Hilfsprogramme, um Folgendes zu überprüfen:
+Um zu ermitteln, ob auf die Verwendung von Farben ihres Programms zugegriffen werden kann und nicht als primäre Kommunikationsmethode verwendet wird, empfiehlt es sich, den [ColorDoctor von ColorDoctor](https://www.fujitsu.com/global/about/businesspolicy/tech/design/) oder [die Vischeck-Hilfsprogramme](https://www.vischeck.com/) zu verwenden, um nach Folgenden zu überprüfen:
 
--   Gesamt Abhängigkeit von der Farbe mit dem grauen Skalierungs Filter.
--   Bestimmte Farb Verwirrungen bei der Verwendung der Filter "Protanopia", "Deuteranopia" und "tritanopia".
+-   Gesamtabhängigkeit von Farben mithilfe des Graustufenfilters.
+-   Spezifische Farbverwechslungsprobleme mithilfe der Filter Protanppe, Deuteranphy und Tritan verwechslungen.
 
-Testen Sie Ihr Programm in den folgenden Modi, um zu bestimmen, ob die Verwendung von Color in Ihrem Programm ordnungsgemäß programmiert ist:
+Um festzustellen, ob die Farbnutzung ihres Programms ordnungsgemäß programmiert ist, testen Sie das Programm in den folgenden Modi:
 
--   Design aktiviert mit dem standardmäßigen Windows-Design.
--   Design aktiviert mit einem nicht standardmäßigen Design.
--   Design deaktiviert ("klassisches Windows-Format" in den Design Einstellungen im System Steuerungselement der Personalisierung).
--   Hoher Kontrast Schwarz (weißer Text in schwarzem Hintergrund).
--   Hoher Kontrast weiß (schwarzer Text auf einem weißen Hintergrund).
+-   Das Design ist mithilfe des Windows-Standarddesigns aktiviert.
+-   Das Design ist mit einem nicht standardmäßigen Design aktiviert.
+-   Das Design ist deaktiviert ("Klassischer Windows-Stil" in den Designeinstellungen im Personalisierungselement Systemsteuerung).
+-   hoher Kontrast Schwarz (weißer Text auf schwarzem Hintergrund).
+-   hoher Kontrast Weiß (schwarzer Text auf weißem Hintergrund).
 
-Alle Bildschirmelemente sollten lesbar und erwartungsgemäß angezeigt werden, auch unmittelbar nach dem Ändern des Modus.
+Alle Bildschirmelemente sollten lesbar sein und erwartungsgemäß angezeigt werden, auch unmittelbar nachdem sich der Modus geändert hat.
 
 ## <a name="guidelines"></a>Richtlinien
 
 ### <a name="general"></a>Allgemein
 
--   **Verwenden Sie die Farbe nie als primäre Kommunikationsmethode,** sondern als sekundäre Methode, um die Bedeutung visuell zu verstärken.
+-   **Verwenden Sie niemals Farbe als primäre Kommunikationsmethode, sondern** als sekundäre Methode, um die Bedeutung visuell zu verstärken.
 
-### <a name="using-theme-and-system-colors"></a>Verwenden von Design-und Systemfarben
+### <a name="using-theme-and-system-colors"></a>Verwenden von Design- und Systemfarben
 
--   **Wählen Sie nach Möglichkeit Farben aus, indem Sie die entsprechende Design Farbe oder System Farbe auswählen.** Auf diese Weise können Sie die Farbeinstellung der Benutzer immer respektieren.
--   **Wählen Sie Design-und Systemfarben auf Grundlage ihres Zwecks aus.** Wählen Sie auf der Grundlage ihrer aktuellen Darstellung keine Farben aus, da diese Darstellung vom Benutzer oder von zukünftigen Windows-Versionen geändert werden kann.
--   **Vergleichen Sie die Vorder Grundfarben mit ihren zugeordneten Hintergrundfarben.** Vorder Grundfarben sind garantiert nur für die zugehörigen Hintergrundfarben lesbar. Kombinieren Sie nicht die Vorder Grundfarben mit anderen Hintergrundfarben oder noch schlimmer, andere Vordergrund Farben.
--   **Farben Typen nicht kombinieren.** Das heißt, Sie sollten immer Design Farben mit den zugehörigen Design Farben, Systemfarben mit den zugeordneten Systemfarben und hart verdrahteten Farben mit anderen hart verdrahteten Farben vergleichen. Beispielsweise ist es nicht garantiert, dass eine Design Textfarbe für einen hart verdrahteten Hintergrund lesbar ist.
--   **Wenn Sie eine Farbe verwenden müssen, die kein Design oder keine System Farbe ist:**
-    -   **Ziehen Sie es vor, die Farbe von einem Design oder einer System Farbe zu ableiten, wenn Sie Ihren Wert hart verknüpfen.** Verwenden Sie den weiter oben in diesem Artikel beschriebenen Prozess, in dem Sie andere Farben verwenden.
-    -   **Behandeln Sie den Modus für hohe Kontraste als Sonderfall.**
--   **Behandeln von Designänderungen.** Designänderungen werden von Windows automatisch mit Standardfenster Frames und allgemeinen Steuerelementen behandelt. Fenster mit benutzerdefinierten Fensterrahmen, benutzerdefinierten Steuerelementen oder Steuerelementen für den Besitzer zeichnen und andere Farbverwendung müssen Designänderungen explizit verarbeiten.
-    -   **Entwickler:** Sie können auf Design Änderungs Ereignisse reagieren, indem Sie die WM- \_ Nachricht verarbeiten.
+-   Wählen Sie nach **Möglichkeit Farben aus, indem Sie die entsprechende Design- oder Systemfarbe auswählen.** Dadurch können Sie die Farbpräferenz der Benutzer immer achten.
+-   **Wählen Sie Design- und Systemfarben basierend auf ihrem Zweck aus.** Wählen Sie Farben nicht basierend auf ihrer aktuellen Darstellung aus, da diese Darstellung vom Benutzer oder zukünftigen Versionen von Windows geändert werden kann.
+-   **Übereinstimmung von Vordergrundfarben mit den zugeordneten Hintergrundfarben.** Vordergrundfarben sind garantiert nur für ihre zugeordneten Hintergrundfarben lesbar. Kombinieren Sie keine Vordergrundfarben mit anderen Hintergrundfarben oder noch schlechter noch anderen Vordergrundfarben, und passen Sie sie nicht an.
+-   **Mischen Sie keine Farbtypen.** Dies bedeutet, dass Designfarben immer mit ihren zugeordneten Designfarben, Systemfarben mit den zugehörigen Systemfarben und hartverkabelten Farben mit anderen hartverkabelten Farben übereinstimmen. Beispielsweise ist nicht garantiert, dass eine Designtextfarbe vor einem hartverkabelten Hintergrund lesbar ist.
+-   **Wenn Sie eine Farbe verwenden müssen, die kein Design oder keine Systemfarbe ist:**
+    -   **Ziehen Sie es vor, die Farbe von einem Design oder einer Systemfarbe zu leiten, als den Wert fest zu verkabeln.** Verwenden Sie den weiter oben in diesem Artikel beschriebenen Prozess unter Verwenden anderer Farben.
+    -   **Behandeln Sie den Modus mit hohem Kontrast als Sonderfall.**
+-   **Behandeln sie Designänderungen.** Designänderungen werden automatisch von Fenstern mit Standardfensterrahmen und allgemeinen Steuerelementen verarbeitet. Fenster mit benutzerdefinierten Fensterrahmen, benutzerdefinierten Steuerelementen oder Steuerelementen zum Zeichnen von Besitzern und anderer Verwendung von Farben müssen Designänderungen explizit verarbeiten.
+    -   **Entwickler:** Sie können auf Designänderungsereignisse reagieren, indem Sie die WM \_ THEMECHANGED-Nachricht behandeln.
 
-### <a name="color-meaning"></a>Farbe, Bedeutung
+### <a name="color-meaning"></a>Farbbeeindruckung
 
--   Sie sollten zwar immer Design-und Systemfarben (oder abgeleitete Farben) verwenden, stellen Sie jedoch sicher, dass jede andere Verwendung von Color mit der folgenden Verwendung von Farbe in Windows kompatibel ist.
+-   Sie sollten zwar nach Möglichkeit Design- und Systemfarben (oder abgeleitete Farben) verwenden, stellen Sie jedoch sicher, dass jede andere Verwendung von Farben mit der folgenden Verwendung von Farben in Windows kompatibel ist.
 
 
 
-|                                      |                                                                               |                                                                                                                                                                 |
+| Farbton | Bedeutung | Verwenden in Windows  |
 |--------------------------------------|-------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Farbton**<br/>                   | **Bedeutung**<br/>                                                        | **Verwendung in Windows**<br/>                                                                                                                                   |
-| blau/grün<br/>                | Windows-Marke<br/>                                                      | Hintergrund: Windows-Branding.<br/>                                                                                                                        |
-| Glas, schwarz, grau, weiß<br/> | Neutral<br/>                                                            | Hintergrund: Standardfenster Rahmen, Startmenü, Taskleiste, Rand Leiste.<br/> Vordergrund: normaler Text.<br/>                                                |
-| blue<br/>                      | starten, Commit<br/>                                                      | Hintergrund: Standard Befehls Schaltflächen, suchen, anmelden.<br/> Symbole: Informationen, Hilfe.<br/> Vordergrund: Haupt Anweisungen, Links.<br/>           |
-| Rot<br/>                       | Fehler, Beendigung, anfällig, kritisch, unmittelbare Aufmerksamkeit, eingeschränkt<br/> | Hintergrund: Status, Status wird beendet (Statusanzeige).<br/> Symbole: Fehler, beenden, Fenster schließen, löschen, erforderliche Eingabe, fehlt, nicht verfügbar.<br/>     |
-| yellow<br/>                    | Warnung, Vorsicht, fragwürdig<br/>                                     | Hintergrund: Status, angehaltene Status (Status leisten).<br/> Symbole: Warnung<br/>                                                                       |
-| green<br/>                     | Los, fortfahren, Status, sicher<br/>                                        | Hintergrund: Status, normaler Status (Status leisten).<br/> Symbole: Gehe zu, abgeschlossen, aktualisieren.<br/> Vordergrund: Pfade und URLs (in den Suchergebnissen).<br/> |
-| purple<br/>                    | besichtigt<br/>                                                            | Vordergrund: besuchte Links (für Links in Windows Internet Explorer und Dokumenten).<br/>                                                                |
+| Blau/Grün<br/>                | Windows-Marke<br/>                                                      | Hintergrund: Windows-Branding.<br/>                                                                                                                        |
+| Glass, black, gray, white<br/> | Neutral<br/>                                                            | Hintergrund: Standardfensterrahmen, Startmenü, Taskleiste, Randleiste.<br/> Vordergrund: normaler Text.<br/>                                                |
+| blue<br/>                      | start, commit<br/>                                                      | Hintergrund: Standardbefehlsschaltflächen, Suche, Anmeldung.<br/> Symbole: Informationen, Hilfe.<br/> Vordergrund: Hauptanweisungen, Links.<br/>           |
+| Rot<br/>                       | error, stop, vulnerable, critical, immediate attention, restricted<br/> | Hintergrund: Status, Status beendet (Statusleisten).<br/> Symbole: error, stop, close window, delete, required input, missing, unavailable.<br/>     |
+| yellow<br/>                    | Warnung, Vorsicht, fragebar<br/>                                     | Hintergrund: Status, angehaltener Fortschritt (Statusleisten).<br/> Symbole: Warnung<br/>                                                                       |
+| green<br/>                     | go, proceed, progress, safe<br/>                                        | Hintergrund: Status, normaler Status (Statusleisten).<br/> Symbole: go, done, refresh.<br/> Vordergrund: Pfade und URLs (in Suchergebnissen).<br/> |
+| purple<br/>                    | Besucht<br/>                                                            | Vordergrund: Besuchte Links (für Links in Windows Internet Explorer und Dokumenten).<br/>                                                                |
 
 
 
  
 
--   **Um die Kommunikation mit der vorherigen Bedeutung zu vermeiden, wählen Sie Farben mit hoher oder niedriger Sättigung und hoher oder niedriger Helligkeit aus.** Benutzer ordnen die vorherige Bedeutungen Farben zu, die über eine vollständige oder hohe Sättigung und mittelgroße Helligkeit verfügen, sodass Sie diese Zuordnungen vermeiden können, indem Sie unterschiedliche Schattierungen auswählen.
+-   **Um die Kommunikation mit den vorherigen Bedeutungen zu vermeiden, wählen Sie Farben mit hoher mittlerer bis niedriger Sättigung und hoher oder niedriger Helligkeit aus.** Benutzer ordnen die vorherigen Bedeutungen Farben mit voller oder hoher Sättigung und Helligkeit auf mittlerem Niveau zu, sodass Sie diese Zuordnungen vermeiden können, indem Sie unterschiedliche Schattierungen auswählen.
 
-![Abbildung, die zeigt, wie sich Helligkeit auf Farbe auswirkt ](images/vis-color-image13.png)
+![Abbildung, die zeigt, wie die Helligkeit die Farbe beeinflusst ](images/vis-color-image13.png)
 
-In diesem Beispiel gibt es drei verschiedene Schattierungen von gelb, aber nur der stark satte, Mittelwert Ende Helligkeit gibt eine Warnung aus. Das gelbe Ordnersymbol hat keine Warnung.
+In diesem Beispiel gibt es drei verschiedene Gelbschattierungen, aber nur der stark überleerte Helligkeitston der mittleren Ebene gibt eine Warnung aus. Das gelbe Ordnersymbol sieht nicht wie eine Warnung aus.
 
-### <a name="using-color-with-data"></a>Verwenden von Color mit Daten
+### <a name="using-color-with-data"></a>Verwenden von Farben mit Daten
 
--   Wenn dies hilfreich ist, **weisen Sie Daten zu, damit Sie von Benutzern unterschieden** werden können. Beachten Sie, dass die Benutzer davon ausgehen, dass Daten mit ähnlichen Farben eine ähnliche Bedeutung haben.
--   **Weisen Sie standardmäßig Farben zu, die leicht zu unterscheiden sind.** Im Allgemeinen sind Farben leicht zu unterscheiden, wenn Sie sich in den HSL/HSV-Farbräumen weit voneinander unterscheiden, während Sie einen hohen Kontrast mit dem Hintergrund behalten:
-    -   Wenn Sie Farben auswählen, bevorzugen Sie Triad-Harmonien oder ergänzende Schattierungen, aber keine angrenzenden Farben.
+-   Wenn dies hilfreich **ist, weisen Sie Daten Farbe zu, damit benutzer sie unterscheiden können.** Beachten Sie, dass Benutzer davon ausgehen, dass Daten mit ähnlichen Farben eine ähnliche Bedeutung haben.
+-   **Weisen Sie standardmäßig Farben zu, die leicht zu unterscheiden sind.** Im Allgemeinen lassen sich Farben leicht unterscheiden, wenn sie in den HSL/HSV-Farbräumen weit voneinander entfernt sind, während gleichzeitig ein hoher Kontrast zum Hintergrund beibehalten wird:
+    -   Wenn Sie Farben auswählen, bevorzugen Sie Triad-Färbungen oder ergänzende Farbtons, aber keine angrenzenden Farbtons.
 
-        ![Abbildung zeigt, wie Kontrastfarben ausgewählt werden ](images/vis-color-image14.png)
+        ![Abbildung, die zeigt, wie kontrastreiche Farben verwendet werden ](images/vis-color-image14.png)
 
-        Wenn die erste Farb Zuweisung in diesem Beispiel rot ist, sollte die nächste Farbe blau, grün oder Cyan lauten, aber nicht Magenta, lila, Orange oder gelb.
+        Wenn in diesem Beispiel die erste Farbzuweisung Rot ist, sollte die nächste Farbe Blau, Grün oder Zyan, aber nicht Magenta, Violett, Orange oder Gelb sein.
 
-    -   Farben haben einen hohen Kontrast, wenn ein großer Unterschied in Ihrem Farbton, der Sättigung oder der Helligkeit vorliegt.
+    -   Farben haben einen hohen Kontrast, wenn der Farbton, die Sättigung oder die Helligkeit einen großen Unterschied haben.
 
-        ![Abbildung, die eine Farbe auf verschiedenen Hintergründen anzeigt ](images/vis-color-image15.png)
+        ![Abbildung, die eine Farbe auf unterschiedlichen Hintergründen zeigt ](images/vis-color-image15.png)
 
-        In diesem Beispiel steht die helle blaue Basis Farbe im Gegensatz zu Hintergründen mit großen Unterschieden in Farbton, Sättigung oder Helligkeit.
+        In diesem Beispiel steht die hellblaue Basisfarbe im Gegensatz zu Hintergründen mit großen Unterschieden in Farbton, Sättigung oder Helligkeit.
 
-    -   Durch die Verwendung eines weißen oder sehr hellen Hintergrunds können gegensätzliche Vorder Grundfarben leichter unterschieden werden.
+    -   Die Verwendung eines weißen oder sehr hellen Hintergrunds erleichtert die Unterscheidung von Kontrastfarben im Vordergrund.
 
-        ![Abbildung zur Veranschaulichung von gutem und mangelhafter Kontrast ](images/vis-color-image16.png)
+        ![Abbildung zur Veranschaulichung eines guten und schlechten Kontrasts ](images/vis-color-image16.png)
 
-        In diesem Beispiel wird die Vordergrundfarbe durch weiße und helle Hintergrundfarben leichter zu unterscheiden.
+        In diesem Beispiel erleichtern weiße und helle Hintergrundfarben die Unterscheidung der Vordergrundfarbe.
 
--   **Ermöglicht es Benutzern, diese Farbzuweisungen anzupassen, weil die** Farbauswahl subjektivere und persönliche Vorlieben ist. Wenn viele koordinierte Farben vorhanden sind, können Sie es Benutzern ermöglichen, Sie mithilfe von Farbschemas als Gruppe zu ändern.
--   **Ermöglicht es Benutzern, diese Farbzuweisungen zu bezeichnen.** Auf diese Weise können Sie leichter identifizieren und Auffinden.
--   **Anders als Benutzeroberflächen Farben sollten sich Daten nicht ändern, wenn sich die Systemfarben ändern.**
+-   **Ermöglichen Sie Es Benutzern, diese Farbzuweisungen anzupassen,** da die Farbauswahl privat und eine persönliche Vorliebe ist. Wenn viele koordinierte Farben verfügbar sind, können Benutzer sie mithilfe von Farbschemas als Gruppe ändern.
+-   **Benutzern erlauben, diese Farbzuweisungen zu beschriften.** Auf diese Weise können sie leichter identifiziert und leichter zu finden sein.
+-   **Im Gegensatz zu Benutzeroberflächenfarben sollten sich Daten nicht ändern, wenn sich die Systemfarben ändern.**
 
 ## <a name="documentation"></a>Dokumentation
 
--   **Verweisen Sie auf Benutzeroberflächen Elemente anhand ihrer Namen, nicht anhand ihrer Farben.** Verweise auf solche Verweise sind nicht verfügbar, und die Systemfarben können sich ändern. Wenn der Name eines Benutzeroberflächen Elements nicht bekannt ist oder nicht aussagekräftig genug ist, zeigen Sie einen Screenshot, um ihn zu verdeutlichen.
+-   **Verweisen Sie auf Benutzeroberflächenelemente nach ihren Namen, nicht nach ihren Farben.** Auf solche Verweise kann nicht zugegriffen werden, und die Systemfarben können sich ändern. Wenn der Name eines Benutzeroberflächenelements nicht bekannt oder nicht beschreibend genug ist, zeigen Sie zur Verdeutlichung einen Screenshot an.
 
 **Richtig:**
 
@@ -274,7 +273,7 @@ In diesem Beispiel gibt es drei verschiedene Schattierungen von gelb, aber nur d
 
 **Falsch:**
 
-![Screenshot der Nachricht mit "Gold Bar" ](images/vis-color-image18.png)
+![Screenshot der Nachricht, die "gold bar" enthält ](images/vis-color-image18.png)
 
-Im falschen Beispiel bezieht sich die Meldung auf die Informationsleiste von Windows Internet Explorer und nicht auf Ihren Namen.
+Im falschen Beispiel bezieht sich die Meldung auf die Windows-Internet Explorer informationsleiste durch ihre Farbe und nicht durch ihren Namen.
 

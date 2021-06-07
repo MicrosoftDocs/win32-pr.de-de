@@ -1,73 +1,73 @@
 ---
-title: Anpassen eines Menübands durch Größen Definitionen und Skalierungs Richtlinien
-description: Steuerelemente, die in der Menüband-Befehlsleiste gehostet werden, unterliegen Layoutregeln, die vom Windows-Menü Band Framework erzwungen werden, und basieren auf einer Kombination aus Standardverhalten und Layoutvorlagen (sowohl Framework-definiert als auch Benutzer definiert), wie im Menü Band Markup Diese Regeln definieren das Verhalten des adaptiven Layouts des Multifunktionsleisten-Frameworks, das beeinflussen, wie die Steuerelemente in der Befehlsleiste zur Laufzeit an verschiedene Menü Bandgrößen angepasst werden.
+title: Anpassen eines Menübands durch Größendefinitionen und Skalierungsrichtlinien
+description: Steuerelemente, die auf der Menüband-Befehlsleiste gehostet werden, unterliegen Layoutregeln, die vom Windows-Menübandframework erzwungen werden und auf einer Kombination aus Standardverhalten und Layoutvorlagen (sowohl frameworkdefiniert als auch benutzerdefiniert) basieren, wie im Menübandmarkup deklariert. Diese Regeln definieren das adaptive Layoutverhalten des Menübandframework, das beeinflusst, wie steuerelemente in der Befehlsleiste zur Laufzeit an verschiedene Menübandgrößen angepasst werden.
 ms.assetid: b5869394-3fa9-4817-add9-54487434fc4f
 keywords:
-- Windows-Menüband, anpassen
-- Multifunktionsleiste, anpassen
-- Windows-Multifunktionsleiste, sizedefinition-Vorlagen
-- Multifunktionsleiste, sizedefinition-Vorlagen
+- Windows-Menüband, Anpassen
+- Menüband,Anpassen
+- Windows-Menüband, SizeDefinition-Vorlagen
+- Menüband, SizeDefinition-Vorlagen
 - Windows-Menüband, benutzerdefinierte Vorlagen
-- Multifunktionsleiste, benutzerdefinierte Vorlagen
-- Anpassen des Menübands von Windows
+- Menüband, benutzerdefinierte Vorlagen
+- Anpassen des Windows-Menübands
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5b12618f88576cddeff119534215e501216193c3
-ms.sourcegitcommit: 2387bc0339a1764564c1509e72ed5f2e8ae60b36
+ms.openlocfilehash: f6576a672aa8c3d328a341370a7568595e988908
+ms.sourcegitcommit: 099ecdda1e83618b844387405da0db0ebda93a65
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "104569881"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111444141"
 ---
-# <a name="customizing-a-ribbon-through-size-definitions-and-scaling-policies"></a>Anpassen eines Menübands durch Größen Definitionen und Skalierungs Richtlinien
+# <a name="customizing-a-ribbon-through-size-definitions-and-scaling-policies"></a>Anpassen eines Menübands durch Größendefinitionen und Skalierungsrichtlinien
 
-Steuerelemente, die in der Menüband-Befehlsleiste gehostet werden, unterliegen Layoutregeln, die vom Windows-Menü Band Framework erzwungen werden, und basieren auf einer Kombination aus Standardverhalten und Layoutvorlagen (sowohl Framework-definiert als auch Benutzer definiert), wie im Menü Band Markup Diese Regeln definieren das Verhalten des adaptiven Layouts des Multifunktionsleisten-Frameworks, das beeinflussen, wie die Steuerelemente in der Befehlsleiste zur Laufzeit an verschiedene Menü Bandgrößen angepasst werden.
+Steuerelemente, die auf der Menüband-Befehlsleiste gehostet werden, unterliegen Layoutregeln, die vom Windows-Menübandframework erzwungen werden und auf einer Kombination aus Standardverhalten und Layoutvorlagen (sowohl frameworkdefiniert als auch benutzerdefiniert) basieren, wie im Menübandmarkup deklariert. Diese Regeln definieren das adaptive Layoutverhalten des Menübandframework, das beeinflusst, wie steuerelemente in der Befehlsleiste zur Laufzeit an verschiedene Menübandgrößen angepasst werden.
 
 -   [Introduction (Einführung)](#introduction)
-    -   [Menü Band-sizedefinition-Vorlagen](#customizing-a-ribbon-through-size-definitions-and-scaling-policies)
+    -   [MenübandgrößeDefinitionsvorlagen](#customizing-a-ribbon-through-size-definitions-and-scaling-policies)
     -   [Benutzerdefinierte Vorlagen](#custom-templates)
--   [Zugehörige Themen](#related-topics)
+-   [Verwandte Themen](#related-topics)
 
 ## <a name="introduction"></a>Einführung
 
-Das Adaptive Layout, wie im Menüband-Framework definiert, ist die Fähigkeit aller Steuerelemente auf der Multifunktionsleisten-Benutzeroberfläche, die Organisation, Größe, das Format und die relative Skalierung basierend auf den Änderungen an der Größe des Menübands zur Laufzeit dynamisch anzupassen.
+Adaptives Layout, wie durch das Menübandframework definiert, ist die Fähigkeit aller Steuerelemente auf der Menübandbenutzeroberfläche, ihre Organisation, Größe, Format und relative Skalierung basierend auf Änderungen an der Größe des Menübands zur Laufzeit dynamisch anzupassen.
 
-Das Framework stellt mithilfe eines Satzes von Markup Elementen, die für die Angabe und Anpassung verschiedener layoutverhaltensweisen vorgesehen sind, Adaptive Layoutfunktionen zur Verfügung. Eine Auflistung von Vorlagen, die als [**sizedefinitions**](windowsribbon-element-sizedefinition.md)bezeichnet wird, wird durch das Framework definiert, von denen jedes verschiedene Steuerungs-und Layoutszenarien unterstützt. Das Framework unterstützt jedoch auch benutzerdefinierte Vorlagen, wenn die vordefinierten Vorlagen nicht die Benutzeroberfläche oder die Layouts bereitstellen, die für eine Anwendung erforderlich sind.
+Das Framework macht adaptive Layoutfunktionen über eine Reihe von Markupelementen verfügbar, die für das Angeben und Anpassen verschiedener Layoutverhaltensverhalten dediert sind. Eine Sammlung von Vorlagen namens [**SizeDefinitions**](windowsribbon-element-sizedefinition.md)wird durch das Framework definiert, von denen jede verschiedene Steuerelement- und Layoutszenarien unterstützt. Das Framework unterstützt jedoch auch benutzerdefinierte Vorlagen, wenn die vordefinierten Vorlagen nicht die Benutzeroberflächenerfahrung oder layouts bereitstellen, die für eine Anwendung erforderlich sind.
 
-Zum Anzeigen von Steuerelementen in einem bevorzugten Layout auf einer bestimmten Menü Band Größe funktionieren sowohl vordefinierte Vorlagen als auch benutzerdefinierte Vorlagen in Verbindung mit dem [**scalingpolicy**](windowsribbon-element-scalingpolicy.md) -Element. Dieses Element enthält ein Manifest von Größen Einstellungen, das vom Framework beim Rendern des Menübands als Leitfaden verwendet wird.
+Um Steuerelemente in einem bevorzugten Layout mit einer bestimmten Menübandgröße anzuzeigen, funktionieren sowohl vordefinierte Vorlagen als auch benutzerdefinierte Vorlagen in Verbindung mit dem [**ScalingPolicy-Element.**](windowsribbon-element-scalingpolicy.md) Dieses Element enthält ein Manifest der Größeneinstellungen, die das Framework beim Rendern des Menübands als Leitfaden verwendet.
 
 > [!Note]  
-> Das Menüband-Framework bietet Standardlayout-Verhalten, das auf einer Reihe integrierter Heuristik für die Organisation und Darstellung von Steuerelementen zur Laufzeit basiert, ohne dass die vordefinierten [**sizedefinition**](windowsribbon-element-sizedefinition.md) -Vorlagen benötigt werden. Diese Funktion ist jedoch nur für prototypenzwecke gedacht.
+> Das Menübandframework bietet Standardlayoutverhalten, das auf einer Reihe integrierter Heuristiken für die Organisation und Darstellung von Steuerelementen zur Laufzeit basiert, ohne dass die [**vordefinierten SizeDefinition-Vorlagen benötigt**](windowsribbon-element-sizedefinition.md) werden. Diese Funktion ist jedoch nur für Prototypzwecke vorgesehen.
 
  
 
-### <a name="ribbon-sizedefinition-templates"></a>Menü Band-sizedefinition-Vorlagen
+### <a name="ribbon-sizedefinition-templates"></a>MenübandgrößeDefinitionsvorlagen
 
-Das Menüband-Framework bietet einen umfassenden Satz von [**sizedefinition**](windowsribbon-element-sizedefinition.md) -Vorlagen, die das Größen-und Layoutverhalten für eine [Gruppe](windowsribbon-controls-group.md) von Menü Band Steuerelementen angeben. Diese Vorlagen behandeln die häufigsten Szenarien zum Organisieren von Steuerelementen in einer Menüband-Anwendung.
+Das Menübandframework bietet einen umfassenden Satz von [**SizeDefinition-Vorlagen,**](windowsribbon-element-sizedefinition.md) die Größe und Layoutverhalten für eine Gruppe von Menüband-Steuerelementen angeben. [](windowsribbon-controls-group.md) Diese Vorlagen decken die gängigsten Szenarien zum Organisieren von Steuerelementen in einer Menübandanwendung ab.
 
-Um eine konsistente Benutzer Darstellung über Multifunktionsleisten-Anwendungen hinweg zu erzwingen, erzwingt jede [**sizedefinition**](windowsribbon-element-sizedefinition.md) -Vorlage Beschränkungen für die Steuerelemente oder die von ihr unterstützte Steuerelement Familie.
+Um eine konsistente Benutzeroberfläche für Menübandanwendungen zu erzwingen, erzwingt jede [**SizeDefinition-Vorlage**](windowsribbon-element-sizedefinition.md) Einschränkungen für die Steuerelemente oder die Von ihr unterstützten Steuerelementfamilien.
 
-Die Schaltflächen Familie der Steuerelemente umfasst z. b. Folgendes:
+Die Schaltflächenfamilie von Steuerelementen umfasst beispielsweise Folgendes:
 
--   [Schaltfläche](windowsribbon-controls-button.md)
--   [UMSCHALT Fläche](windowsribbon-controls-togglebutton.md)
--   [Dropdown Schaltfläche](windowsribbon-controls-dropdownbutton.md)
--   [Trenn Schaltfläche](windowsribbon-controls-splitbutton.md)
--   [Dropdown-Katalog](windowsribbon-controls-dropdowngallery.md)
--   [Split Button-Katalog](windowsribbon-controls-splitbuttongallery.md)
--   [Dropdown-Farbauswahl](windowsribbon-controls-dropdowncolorpicker.md)
+-   [Button](windowsribbon-controls-button.md) (Schaltfläche)
+-   [Umschaltfläche](windowsribbon-controls-togglebutton.md)
+-   [Dropdownschaltfläche](windowsribbon-controls-dropdownbutton.md)
+-   [Schaltfläche "Teilen"](windowsribbon-controls-splitbutton.md)
+-   [Dropdownkatalog](windowsribbon-controls-dropdowngallery.md)
+-   [Split Button Gallery](windowsribbon-controls-splitbuttongallery.md)
+-   [Dropdownliste Farbwähler](windowsribbon-controls-dropdowncolorpicker.md)
 
-Die Eingabe Familie der Steuerelemente umfasst Folgendes:
+Die Eingabefamilie von Steuerelementen umfasst Folgendes:
 
--   [Kombinations Feld](windowsribbon-controls-combobox.md)
+-   [Kombinationsfeld](windowsribbon-controls-combobox.md)
 -   [Spinner](windowsribbon-controls-spinner.md)
 
-Das [Kontrollkästchen](windowsribbon-controls-checkbox.md) und der [in-Ribbon-](windowsribbon-controls-inribbongallery.md) Katalog gehören weder zur Schaltflächen Familie noch zur Eingabe Familie. Diese beiden Steuerelemente können nur verwendet werden, wenn Sie explizit in einer [**sizedefinition**](windowsribbon-element-sizedefinition.md) -Vorlage angegeben werden.
+[Kontrollkästchen und](windowsribbon-controls-checkbox.md) [In-Ribbon Gallery](windowsribbon-controls-inribbongallery.md) gehören weder zur Schaltflächenfamilie noch zur Eingabefamilie. Diese beiden Steuerelemente können nur verwendet werden, wenn sie explizit in einer [**SizeDefinition-Vorlage angegeben**](windowsribbon-element-sizedefinition.md) sind.
 
-Im folgenden finden Sie eine Liste der [**sizedefinition**](windowsribbon-element-sizedefinition.md) -Vorlagen mit einer Beschreibung des Layouts und der Steuerelemente, die für jede Vorlage zulässig sind.
+Im Folgenden finden Sie eine Liste der [**SizeDefinition-Vorlagen**](windowsribbon-element-sizedefinition.md) mit einer Beschreibung des Layouts und der Steuerelemente, die für jede Vorlage zulässig sind.
 
 > [!IMPORTANT]
-> Wenn die in Markup deklarierten Steuerelemente nicht exakt der Steuerung von Typ, Reihenfolge und Menge zugeordnet werden, die in der zugeordneten Vorlage definiert ist, wird vom [Markup Compiler](windowsribbon-intentcl.md) ein [Validierungs Fehler](windowsribbon-compilationerrors.md) protokolliert, und die Kompilierung wird beendet.
+> Wenn die im Markup deklarierten Steuerelemente nicht genau dem in der zugeordneten [](windowsribbon-compilationerrors.md) Vorlage definierten Steuerelementtyp, [](windowsribbon-intentcl.md) der Reihenfolge und der Menge zugeordnet sind, wird ein Validierungsfehler vom Markupcompiler protokolliert, und die Kompilierung wird beendet.
 
  
 
@@ -75,120 +75,120 @@ Im folgenden finden Sie eine Liste der [**sizedefinition**](windowsribbon-elemen
 
 OneButton
 
-Ein Schaltflächen-familiensteuer Element.<br/> Es wird nur eine große Gruppengröße unterstützt.<br/>
+Ein Steuerelement der Schaltflächenfamilie.<br/> Nur große Gruppen werden unterstützt.<br/>
 
-![Bild der oneButton-sizedefinition-Vorlage.](images/overviews/sizedefinition-onebutton.png)
+![Abbildung der Vorlage "onebutton sizedefinition".](images/overviews/sizedefinition-onebutton.png)
 
-Twobuttons
+TwoButtons
 
-Zwei Schaltflächen-familiensteuer Elemente.<br/> Nur große und mittlere Gruppengrößen werden unterstützt.<br/>
+Zwei Steuerelemente der Schaltflächenfamilie.<br/> Es werden nur die Gruppengrößen Groß und Mittel unterstützt.<br/>
 
-![Bild der Vorlage "twobuttons Large sizedefinition".](images/overviews/sizedefinition-twobuttons-large.png)
+![Abbildung der Vorlage "twobuttons large sizedefinition".](images/overviews/sizedefinition-twobuttons-large.png)
 
-![Bild der "twobuttons mittlere sizedefinition"-Vorlage.](images/overviews/sizedefinition-twobuttons-medium.png)
+![Abbildung der Vorlage twobuttons medium sizedefinition.](images/overviews/sizedefinition-twobuttons-medium.png)
 
-Drei Schaltflächen
+ThreeButtons
 
-Drei Schaltflächen-familiensteuer Elemente.<br/> Nur große und mittlere Gruppengrößen werden unterstützt.<br/>
+Drei Steuerelemente der Schaltflächenfamilie.<br/> Es werden nur die Gruppengrößen Groß und Mittel unterstützt.<br/>
 
-![Bild der großen sizedefinition-Vorlage mit drei Schaltflächen.](images/overviews/sizedefinition-threebuttons-large.png)
+![Abbildung der Vorlage "Threebuttons large sizedefinition".](images/overviews/sizedefinition-threebuttons-large.png)
 
-![Bild der mittleren sizedefinition-Vorlage mit drei Buttons.](images/overviews/sizedefinition-threebuttons-medium.png)
+![Abbildung der Vorlage "Threebuttons medium sizedefinition".](images/overviews/sizedefinition-threebuttons-medium.png)
 
 ThreeButtons-OneBigAndTwoSmall
 
-Drei Schaltflächen-familiensteuer Elemente.<br/> Die erste Schaltfläche wird in allen drei Größen hervorgehoben dargestellt.<br/>
+Drei Steuerelemente der Schaltflächenfamilie.<br/> Die erste Schaltfläche wird in allen drei Größen deutlich dargestellt.<br/>
 
-![Bild der drei-Schaltflächen: onebigandtwosmall Large sizedefinition-Vorlage.](images/overviews/sizedefinition-threebuttons-onebigandtwosmall-large.png)
+![Abbildung der Vorlage threebuttons-onebigandtwosmall large sizedefinition.](images/overviews/sizedefinition-threebuttons-onebigandtwosmall-large.png)
 
-![Abbildung von "Dreifach Buttons": onebigandtwosmall Mittel sizedefinition-Vorlage.](images/overviews/sizedefinition-threebuttons-onebigandtwosmall-medium.png)
+![Abbildung der Vorlage threebuttons-onebigandtwosmall medium sizedefinition.](images/overviews/sizedefinition-threebuttons-onebigandtwosmall-medium.png)
 
-![Abbildung von "Dreifach Buttons": onebigandtwosmall Small sizedefinition-Vorlage.](images/overviews/sizedefinition-threebuttons-onebigandtwosmall-small.png)
+![Abbildung der Vorlage threebuttons-onebigandtwosmall small sizedefinition.](images/overviews/sizedefinition-threebuttons-onebigandtwosmall-small.png)
 
-Dreibuttonsandonecheckbox
+ThreeButtonsAndOneCheckBox
 
-Drei Schaltflächen-familiensteuer Elemente, die von einem einzelnen CheckBox-Steuerelement begleitet werden<br/> Nur große und mittlere Gruppengrößen werden unterstützt.<br/>
+Drei Steuerelemente der Schaltflächenfamilie, die von einem einzelnen CheckBox-Steuerelement begleitet werden.<br/> Es werden nur die Gruppengrößen Groß und Mittel unterstützt.<br/>
 
-![Bild der großen sizedefinition-Vorlage "dreibuttonsandonecheckbox".](images/overviews/sizedefinition-threebuttonsandonecheckbox-large.png)
+![Abbildung der Vorlage threebuttonsandonecheckbox large sizedefinition.](images/overviews/sizedefinition-threebuttonsandonecheckbox-large.png)
 
-![Bild der "dreibuttonsandonecheckbox mittlere sizedefinition"-Vorlage.](images/overviews/sizedefinition-threebuttonsandonecheckbox-medium.png)
+![Abbildung der Vorlage threebuttonsandonecheckbox medium sizedefinition.](images/overviews/sizedefinition-threebuttonsandonecheckbox-medium.png)
 
-Fourbuttons
+FourButtons
 
-Vier Schaltflächen-familiensteuer Elemente.<br/>
+Vier Steuerelemente der Schaltflächenfamilie.<br/>
 
-![Bild der Vorlage "große sizedefinition" von fourbuttons.](images/overviews/sizedefinition-fourbuttons-large.png)
+![Abbildung der Vorlage "Fourbuttons large sizedefinition".](images/overviews/sizedefinition-fourbuttons-large.png)
 
-![Bild der "fourbuttons mittlere sizedefinition"-Vorlage.](images/overviews/sizedefinition-fourbuttons-medium.png)
+![Abbildung der Vorlage "Fourbuttons medium sizedefinition".](images/overviews/sizedefinition-fourbuttons-medium.png)
 
-![Bild der "fourbuttons Small sizedefinition"-Vorlage.](images/overviews/sizedefinition-fourbuttons-small.png)
+![Abbildung der Small-SizeDefinition-Vorlage für vierButtons.](images/overviews/sizedefinition-fourbuttons-small.png)
 
-Schaltflächen
+FiveButtons
 
-Fünf Schaltflächen-familiensteuer Elemente.<br/>
+Fünf Steuerelemente der Schaltflächenfamilie.<br/>
 
-![Bild der Vorlage "große sizedefinition" für "fvebuttons".](images/overviews/sizedefinition-fivebuttons-large.png)
+![Abbildung der Vorlage "Fivebuttons large sizedefinition".](images/overviews/sizedefinition-fivebuttons-large.png)
 
-![Bild der "fvebuttons mittlere sizedefinition"-Vorlage.](images/overviews/sizedefinition-fivebuttons-medium.png)
+![Abbildung der Vorlage fivebuttons medium sizedefinition.](images/overviews/sizedefinition-fivebuttons-medium.png)
 
-![Bild der Vorlage "Small sizedefinition" von "List".](images/overviews/sizedefinition-fivebuttons-small.png)
+![Abbildung der Small-SizeDefinition-Vorlage für fivebuttons.](images/overviews/sizedefinition-fivebuttons-small.png)
 
-"Fveorsixbuttons"
+FiveOrSixButtons
 
-Fünf Schaltflächen-familiensteuer Elemente und eine optionale sechste Schaltfläche.<br/>
+Fünf Steuerelemente der Schaltflächenfamilie und eine optionale sechste Schaltfläche.<br/>
 
-![Bild der Vorlage "große sizedefinition" von "fveorsixbuttons".](images/overviews/sizedefinition-fiveorsixbuttons-large.png)
+![Abbildung der Vorlage "fiveorsixbuttons large sizedefinition".](images/overviews/sizedefinition-fiveorsixbuttons-large.png)
 
-![Bild der "fveorsixbuttons mittelgroßen sizedefinition"-Vorlage.](images/overviews/sizedefinition-fiveorsixbuttons-medium.png)
+![Abbildung der Vorlage fiveorsixbuttons medium sizedefinition.](images/overviews/sizedefinition-fiveorsixbuttons-medium.png)
 
-![Bild der "tvorsixbuttons Small sizedefinition"-Vorlage.](images/overviews/sizedefinition-fiveorsixbuttons-small.png)
+![Abbildung der Small SizeDefinition-Vorlage für fiveorsixbuttons.](images/overviews/sizedefinition-fiveorsixbuttons-small.png)
 
-Sixbuttons
+SixButtons
 
-Sechs Schaltflächen-familiensteuer Elemente.<br/>
+Sechs Steuerelemente der Schaltflächenfamilie.<br/>
 
-![Bild der sixbuttons-Vorlage "große sizedefinition".](images/overviews/sizedefinition-sixbuttons-large.png)
+![Abbildung der Vorlage "large sizedefinition" von sixbuttons.](images/overviews/sizedefinition-sixbuttons-large.png)
 
-![Bild der sixbuttons mittelgroßen sizedefinition-Vorlage.](images/overviews/sizedefinition-sixbuttons-medium.png)
+![Abbildung der Vorlage "sixbuttons medium sizedefinition".](images/overviews/sizedefinition-sixbuttons-medium.png)
 
-![Bild der sixbuttons Small sizedefinition-Vorlage.](images/overviews/sizedefinition-sixbuttons-small.png)
+![Abbildung der Vorlage "Sixbuttons small sizedefinition".](images/overviews/sizedefinition-sixbuttons-small.png)
 
 SixButtons-TwoColumns
 
-Sechs Schaltflächen-familiensteuer Elemente (alternative Darstellung).<br/>
+Sechs Steuerelemente der Schaltflächenfamilie (alternative Darstellung).<br/>
 
-![Bild von sixbuttons-twocolumns Large sizedefinition-Vorlage.](images/overviews/sizedefinition-sixbuttons-twocolumns-large.png)
+![Abbildung der Vorlage "sixbuttons-twocolumns large sizedefinition".](images/overviews/sizedefinition-sixbuttons-twocolumns-large.png)
 
-![sixbuttons-twocolumns mittlere sizedefinition-Vorlage.](images/overviews/sizedefinition-sixbuttons-twocolumns-medium.png)
+![sixbuttons-twocolumns medium sizedefinition template.](images/overviews/sizedefinition-sixbuttons-twocolumns-medium.png)
 
-![Bild von sixbuttons-twocolumns Small sizedefinition-Vorlage.](images/overviews/sizedefinition-sixbuttons-twocolumns-small.png)
+![Abbildung der Vorlage "sixbuttons-twocolumns small sizedefinition".](images/overviews/sizedefinition-sixbuttons-twocolumns-small.png)
 
-Sevenbuttons
+SevenButtons
 
-Sieben Schaltflächen-familiensteuer Elemente.<br/>
+Sieben Steuerelemente der Schaltflächenfamilie.<br/>
 
-![Bild der Vorlage "große sizedefinition" von sevenbuttons.](images/overviews/sizedefinition-sevenbuttons-large.png)
+![Abbildung der Vorlage "sevenbuttons large sizedefinition".](images/overviews/sizedefinition-sevenbuttons-large.png)
 
-![Bild der Vorlage "mediensizedefinition" von sevenbuttons.](images/overviews/sizedefinition-sevenbuttons-medium.png)
+![Abbildung der Vorlage "sevenbuttons mediumsizedefinition".](images/overviews/sizedefinition-sevenbuttons-medium.png)
 
-![Bild der "sevenbuttons Small sizedefinition"-Vorlage.](images/overviews/sizedefinition-sevenbuttons-small.png)
+![Abbildung der Vorlage "Sevenbuttons small sizedefinition".](images/overviews/sizedefinition-sevenbuttons-small.png)
 
-Eightbuttons
+EightButtons
 
-Acht Schaltflächen-familiensteuer Elemente.<br/>
+Acht Steuerelemente der Schaltflächenfamilie.<br/>
 
-![Bild der Vorlage "eightbuttons-lastthreesmall Large sizedefinition".](images/overviews/sizedefinition-eightbuttons-lastthreesmall-large.png)
+![Abbildung der Vorlage "eightbuttons-lastthreesmall large sizedefinition".](images/overviews/sizedefinition-eightbuttons-lastthreesmall-large.png)
 
-![Bild der Vorlage "eightbuttons-lastthreesmall Mittel sizedefinition".](images/overviews/sizedefinition-eightbuttons-lastthreesmall-medium.png)
+![Abbildung der Vorlage "eightbuttons-lastthreesmall medium sizedefinition".](images/overviews/sizedefinition-eightbuttons-lastthreesmall-medium.png)
 
-![Bild der Vorlage "eightbuttons-lastthreesmall Small sizedefinition".](images/overviews/sizedefinition-eightbuttons-lastthreesmall-small.png)
+![Abbildung der Vorlage "eightbuttons-lastthreesmall small sizedefinition".](images/overviews/sizedefinition-eightbuttons-lastthreesmall-small.png)
 
 EightButtons-LastThreeSmall
 
-Acht Schaltflächen-familiensteuer Elemente (alternative Darstellung).<br/>
+Acht Steuerelemente der Schaltflächenfamilie (alternative Darstellung).<br/>
 
 > [!Note]  
-> Alle Steuerelemente, die mit dieser Vorlage deklariert werden, müssen in zwei [**controlgroup**](windowsribbon-element-controlgroup.md) -Elementen enthalten sein: einer für die ersten fünf Elemente und einer für die letzten drei Elemente.
+> Alle mit dieser Vorlage deklarierten Steuerelementelemente müssen in zwei [**ControlGroup-Elementen**](windowsribbon-element-controlgroup.md) enthalten sein: eines für die ersten fünf Elemente und eines für die letzten drei Elemente.
 
 <br/> Im folgenden Beispiel wird das für diese Vorlage erforderliche Markup veranschaulicht.<br/>
 
@@ -212,99 +212,99 @@ Acht Schaltflächen-familiensteuer Elemente (alternative Darstellung).<br/>
 
 
 
-![Bild der "eightbuttons Large sizedefinition"-Vorlage.](images/overviews/sizedefinition-eightbuttons-large.png)
+![Abbildung der Vorlage "eightbuttons large sizedefinition".](images/overviews/sizedefinition-eightbuttons-large.png)
 
-![Bild der Vorlage "eightbuttons mittlere sizedefinition".](images/overviews/sizedefinition-eightbuttons-medium.png)
+![Abbildung der Vorlage "Eightbuttons medium sizedefinition".](images/overviews/sizedefinition-eightbuttons-medium.png)
 
-![Bild der eightbuttons Small sizedefinition-Vorlage.](images/overviews/sizedefinition-eightbuttons-small.png)
+![Abbildung der Vorlage "eightbuttons small sizedefinition".](images/overviews/sizedefinition-eightbuttons-small.png)
 
-Neunschalt Flächen
+NineButtons
 
-Neun Schaltflächen-familiensteuer Elemente.
+Neun Steuerelemente der Schaltflächenfamilie.
 
-![Abbildung von "neunschalt Flächen große sizedefinition"-Vorlage.](images/overviews/sizedefinition-ninebuttons-large.png)
+![Abbildung der Vorlage "ninebuttons large sizedefinition".](images/overviews/sizedefinition-ninebuttons-large.png)
 
-![Bild der "neunbuttons mittlere sizedefinition"-Vorlage.](images/overviews/sizedefinition-ninebuttons-medium.png)
+![Abbildung der Vorlage "ninebuttons medium sizedefinition".](images/overviews/sizedefinition-ninebuttons-medium.png)
 
-![Abbildung von "neunbuttons Small sizedefinition Template".](images/overviews/sizedefinition-ninebuttons-small.png)
+![Abbildung der Vorlage "ninebuttons small sizedefinition".](images/overviews/sizedefinition-ninebuttons-small.png)
 
-Tenbuttons
+TenButtons
 
-Zehn Schaltflächen-familiensteuer Elemente.
+Zehn Steuerelemente der Schaltflächenfamilie.
 
-![Bild der "tenbuttons Large sizedefinition"-Vorlage.](images/overviews/sizedefinition-tenbuttons-large.png)
+![Abbildung der Vorlage "tenbuttons large sizedefinition".](images/overviews/sizedefinition-tenbuttons-large.png)
 
-![Bild der Vorlage "tenbuttons Mittel (mittlere sizedefinition)".](images/overviews/sizedefinition-tenbuttons-medium.png)
+![Abbildung der Vorlage "Tenbuttons medium sizedefinition".](images/overviews/sizedefinition-tenbuttons-medium.png)
 
-![Bild der "tenbuttons Small sizedefinition"-Vorlage.](images/overviews/sizedefinition-tenbuttons-small.png)
+![Abbildung der Vorlage "tenbuttons small sizedefinition".](images/overviews/sizedefinition-tenbuttons-small.png)
 
-Elevumbuttons
+ElferButtons
 
-Elf Steuerelemente der Schaltflächen-Familie.
+Elf Steuerelemente der Schaltflächenfamilie.
 
-![Bild der elevenbuttons Large sizedefinition-Vorlage.](images/overviews/sizedefinition-elevenbuttons-large.png)
+![Abbildung der Vorlage "elfbuttons large sizedefinition".](images/overviews/sizedefinition-elevenbuttons-large.png)
 
-![Bild der elevenbuttons mittelgroßen sizedefinition-Vorlage.](images/overviews/sizedefinition-elevenbuttons-medium.png)
+![Abbildung der Vorlage für die mittlere Größendefinition von elfButtons.](images/overviews/sizedefinition-elevenbuttons-medium.png)
 
-![Bild der elevenbuttons Small sizedefinition-Vorlage.](images/overviews/sizedefinition-elevenbuttons-small.png)
+![Abbildung der Vorlage "elfbuttons small sizedefinition".](images/overviews/sizedefinition-elevenbuttons-small.png)
 
-Onefontcontrol
+OneFontControl
 
-Ein [**FontControl**](windowsribbon-element-fontcontrol.md)-Element.
+Ein [**FontControl -Zeichen.**](windowsribbon-element-fontcontrol.md)
 
-Nur große und mittlere Gruppengrößen werden unterstützt.
+Es werden nur große und mittlere Gruppengrößen unterstützt.
 
 > [!IMPORTANT]
-> Das Einschließen eines [**FontControl**](windowsribbon-element-fontcontrol.md) -Elements in eine benutzerdefinierte Vorlagen Definition wird vom Framework nicht unterstützt.
+> Das Einschließen von [**FontControl**](windowsribbon-element-fontcontrol.md) in eine benutzerdefinierte Vorlagendefinition wird vom Framework nicht unterstützt.
 
  
 
-![Bild der Vorlage "große sizedefinition" von onefontcontrol.](images/overviews/sizedefinition-onefontcontrol-large.png)
+![Abbildung der Onefontcontrol-Vorlage "large sizedefinition".](images/overviews/sizedefinition-onefontcontrol-large.png)
 
-![Bild der "onefontcontrol mittlere sizedefinition"-Vorlage.](images/overviews/sizedefinition-onefontcontrol-medium.png)
+![Abbildung der Vorlage onefontcontrol medium sizedefinition.](images/overviews/sizedefinition-onefontcontrol-medium.png)
 
-Oneinribbongallery
+OneInRibbonGallery
 
-Ein [**inribbongallery**](windowsribbon-element-inribbongallery.md) -Steuerelement.
+Ein [**InRibbonGallery-Steuerelement.**](windowsribbon-element-inribbongallery.md)
 
-Nur große und Kleine Gruppengrößen werden unterstützt.
+Nur große und kleine Gruppengrößen werden unterstützt.
 
-![Bild der Vorlage "große sizedefinition" von oneinribbongallery.](images/overviews/sizedefinition-oneinribbongallery-large.png)
+![Abbildung der Vorlage oneinribbongallery large sizedefinition.](images/overviews/sizedefinition-oneinribbongallery-large.png)
 
-![Bild der "oneinribbongallery Small sizedefinition"-Vorlage.](images/overviews/sizedefinition-oneinribbongallery-small.png)
+![Abbildung der Vorlage oneinribbongallery small sizedefinition.](images/overviews/sizedefinition-oneinribbongallery-small.png)
 
-Inribbongalleryandbigbutton
+InRibbonGalleryAndBigButton
 
-Ein [**inribbongallery**](windowsribbon-element-inribbongallery.md) -Steuerelement und ein Schaltflächen-familiensteuer Element.
+Ein [**InRibbonGallery-Steuerelement**](windowsribbon-element-inribbongallery.md) und ein Steuerelement der Schaltflächenfamilie.
 
-Nur große und Kleine Gruppengrößen werden unterstützt.
+Nur große und kleine Gruppengrößen werden unterstützt.
 
-![Bild der inribbongalleryandbigbutton Large sizedefinition-Vorlage.](images/overviews/sizedefinition-inribbongalleryandbigbutton-large.png)
+![Abbildung der Vorlage inribbongalleryandbigbigbutton large sizedefinition.](images/overviews/sizedefinition-inribbongalleryandbigbutton-large.png)
 
-![Bild der inribbongalleryandbigbutton Small sizedefinition-Vorlage.](images/overviews/sizedefinition-inribbongalleryandbigbutton-small.png)
+![Abbildung der Vorlage inribbongalleryandbigbigbutton small sizedefinition.](images/overviews/sizedefinition-inribbongalleryandbigbutton-small.png)
 
 InRibbonGalleryAndButtons-GalleryScalesFirst
 
-Ein [in-Ribbon](windowsribbon-controls-inribbongallery.md) -Katalog Steuerelement und zwei oder drei Schaltflächen-familiensteuer Elemente.
+Ein [Menübandkatalog-Steuerelement](windowsribbon-controls-inribbongallery.md) und zwei oder drei Steuerelemente der Schaltflächenfamilie.
 
-Der Katalog wird auf die Popup Darstellung in mittelgroßen und kleinen Gruppengrößen reduziert.
+Der Katalog wird auf die Popupdarstellung in den Gruppengrößen "Mittel" und "Klein" reduziert.
 
-![Bild der inribbongalleryandbuttons-galleryscalesfirst Large sizedefinition-Vorlage.](images/overviews/sizedefinition-inribbongalleryandbuttons-galleryscalesfirst-large.png)
+![Abbildung der Vorlage inribbongalleryandbuttons-galleryscalesfirst large sizedefinition.](images/overviews/sizedefinition-inribbongalleryandbuttons-galleryscalesfirst-large.png)
 
-![Bild der inribbongalleryandbuttons-galleryscalesfirst mittelgroßen sizedefinition-Vorlage.](images/overviews/sizedefinition-inribbongalleryandbuttons-galleryscalesfirst-medium.png)
+![Abbildung der Vorlage inribbongalleryandbuttons-galleryscalesfirst medium sizedefinition.](images/overviews/sizedefinition-inribbongalleryandbuttons-galleryscalesfirst-medium.png)
 
-![Bild der inribbongalleryandbuttons-galleryscalesfirst Small sizedefinition-Vorlage.](images/overviews/sizedefinition-inribbongalleryandbuttons-galleryscalesfirst-small.png)
+![Abbildung der Vorlage inribbongalleryandbuttons-galleryscalesfirst small sizedefinition.](images/overviews/sizedefinition-inribbongalleryandbuttons-galleryscalesfirst-small.png)
 
-Buttongroups
+ButtonGroups
 
-Eine komplexe Anordnung von 32-Schaltflächen-familiensteuer Elementen (die meisten sind optional).
+Eine komplexe Anordnung von 32 Steuerelementen der Schaltflächenfamilie (die meisten sind optional).
 
 > [!Note]  
-> Abgesehen von der optionalen vollständigen Schaltfläche der Vorlage für große buttongroups müssen alle Steuerelemente, die mit dieser Vorlage deklariert werden, in [**controlgroup**](windowsribbon-element-controlgroup.md) -Elementen enthalten sein.
+> Abgesehen von der optionalen Schaltfläche in voller Größe der großen ButtonGroups-Vorlage müssen alle mit dieser Vorlage deklarierten Steuerelementelemente in [**ControlGroup-Elementen**](windowsribbon-element-controlgroup.md) enthalten sein.
 
  
 
-Das folgende Beispiel zeigt das Markup, das erforderlich ist, um alle 32-Steuerelement Elemente (erforderlich und optional) mit dieser Vorlage anzuzeigen.
+Im folgenden Beispiel wird das Markup veranschaulicht, das erforderlich ist, um alle 32 Steuerelementelemente (erforderlich und optional) mit dieser Vorlage anzuzeigen.
 
 
 ```
@@ -371,24 +371,24 @@ Das folgende Beispiel zeigt das Markup, das erforderlich ist, um alle 32-Steuere
 
 
 
-![Bild der buttongroups Large sizedefinition-Vorlage.](images/overviews/sizedefinition-buttongroups-large.png)
+![Abbildung der GroßenDefinitionsvorlage für Schaltflächengruppen.](images/overviews/sizedefinition-buttongroups-large.png)
 
-![Bild der buttongroups mittelgroßen sizedefinition-Vorlage.](images/overviews/sizedefinition-buttongroups-medium.png)
+![Abbildung der Vorlage für mittlere Größendefinition von Schaltflächengruppen.](images/overviews/sizedefinition-buttongroups-medium.png)
 
-![Bild der buttongroups Small sizedefinition-Vorlage.](images/overviews/sizedefinition-buttongroups-small.png)
+![Abbildung der Vorlage für kleine Größendefinitionen von Schaltflächengruppen.](images/overviews/sizedefinition-buttongroups-small.png)
 
-Buttongroupsandinputs
+ButtonGroupsAndInputs
 
-Zwei eingabefamiliensteuerelemente (die zweite ist optional), gefolgt von einer komplexen Anordnung von 29 Schaltflächen-familiensteuer Elementen (die meisten sind optional).
+Zwei Steuerelemente der Eingabefamilie (das zweite ist optional), gefolgt von einer komplexen Anordnung von 29 Steuerelementen der Schaltflächenfamilie (die meisten sind optional).
 
-Nur große und mittlere Gruppengrößen werden unterstützt.
+Es werden nur große und mittlere Gruppengrößen unterstützt.
 
 > [!Note]  
-> Alle Steuerelemente, die mit dieser Vorlage deklariert werden, müssen in [**controlgroup**](windowsribbon-element-controlgroup.md) -Elementen enthalten sein.
+> Alle mit dieser Vorlage deklarierten Steuerelementelemente müssen in [**ControlGroup-Elementen**](windowsribbon-element-controlgroup.md) enthalten sein.
 
  
 
-Das folgende Beispiel zeigt das Markup, das erforderlich ist, um alle Steuerelemente (erforderlich und optional) mit dieser Vorlage anzuzeigen.
+Im folgenden Beispiel wird das Markup veranschaulicht, das zum Anzeigen aller (erforderlichen und optionalen) Steuerelementelemente mit dieser Vorlage erforderlich ist.
 
 
 ```
@@ -456,29 +456,29 @@ Das folgende Beispiel zeigt das Markup, das erforderlich ist, um alle Steuerelem
 
 
 
-![Bild der buttongroupsandinputs Large sizedefinition-Vorlage.](images/overviews/sizedefinition-buttongroupsandinputs-large.png)
+![Abbildung der Vorlage "buttongroups", "large sizedefinition".](images/overviews/sizedefinition-buttongroupsandinputs-large.png)
 
-![Bild der buttongroupsandinputs mittelgroßen sizedefinition-Vorlage.](images/overviews/sizedefinition-buttongroupsandinputs-medium.png)
+![Abbildung der Vorlage "buttongroups's medium sizedefinition".](images/overviews/sizedefinition-buttongroupsandinputs-medium.png)
 
-Bigbuttonsandsmallbuttonsorinputs
+BigButtonsAndSmallButtonsOrInputs
 
-Zwei Schaltflächen-familiensteuer Elemente (optional), gefolgt von zwei oder drei Schaltflächen-oder eingabefamiliensteuerelementen.
+Zwei Steuerelemente der Schaltflächenfamilie (beide optional), gefolgt von zwei oder drei Schaltflächen- oder Eingabefamilien-Steuerelementen.
 
-Nur große und mittlere Gruppengrößen werden unterstützt.
+Es werden nur große und mittlere Gruppengrößen unterstützt.
 
-![Abbildung der Vorlage "große sizedefinition" von bigbuttonsandsmallbuttonsorinputs.](images/overviews/sizedefinition-bigbuttonsandsmallbuttonsorinputs-large.png)
+![Abbildung der Vorlage bigbuttonsandsmallbuttonsorinputs large sizedefinition.](images/overviews/sizedefinition-bigbuttonsandsmallbuttonsorinputs-large.png)
 
-![Bild der "bigbuttonsandsmallbuttonsorinputs mittlere sizedefinition"-Vorlage.](images/overviews/sizedefinition-bigbuttonsandsmallbuttonsorinputs-medium.png)
+![Abbildung der Vorlage bigbuttonsandsmallbuttonsorinputs medium sizedefinition.](images/overviews/sizedefinition-bigbuttonsandsmallbuttonsorinputs-medium.png)
 
 
 
  
 
-### <a name="basic-sizedefinition-example"></a>Einfaches Beispiel für sizedefinition
+### <a name="basic-sizedefinition-example"></a>Beispiel für "Basic SizeDefinition"
 
-Das folgende Codebeispiel veranschaulicht, wie Sie eine [**sizedefinition**](windowsribbon-element-sizedefinition.md) -Vorlage im Menü Band Markup deklarieren.
+Im folgenden Codebeispiel wird veranschaulicht, wie eine [**SizeDefinition-Vorlage**](windowsribbon-element-sizedefinition.md) im Menübandmarkup deklariert wird.
 
-Die " *oneinribbongallery* " [**sizedefinition**](windowsribbon-element-sizedefinition.md) wird für dieses spezielle Beispiel verwendet, aber alle frameworkvorlagen sind auf ähnliche Weise angegeben.
+*OneInRibbonGallery* [**SizeDefinition**](windowsribbon-element-sizedefinition.md) wird für dieses spezielle Beispiel verwendet, aber alle Frameworkvorlagen werden auf ähnliche Weise angegeben.
 
 
 ```XML
@@ -509,18 +509,18 @@ Die " *oneinribbongallery* " [**sizedefinition**](windowsribbon-element-sizedefi
 
 
 
-### <a name="complex-sizedefinition-example-with-scaling-policies"></a>Komplexes sizedefinition-Beispiel mit Skalierungs Richtlinien
+### <a name="complex-sizedefinition-example-with-scaling-policies"></a>Beispiel für komplexe GrößeDefinition mit Skalierungsrichtlinien
 
-Das reduzierende Verhalten von [**sizedefinition**](windowsribbon-element-sizedefinition.md) -Vorlagen kann durch die Verwendung von Skalierungs Richtlinien im Menüband-Markup gesteuert werden.
+Das Reduzierungsverhalten von [**SizeDefinition-Vorlagen**](windowsribbon-element-sizedefinition.md) kann durch die Verwendung von Skalierungsrichtlinien im Menübandmarkup gesteuert werden.
 
-Das [**scalingpolicy**](windowsribbon-element-scalingpolicy.md) -Element enthält ein Manifest der [**scalingpolicy. ideal sizes**](windowsribbon-element-scalingpolicy-idealsizes.md) -und [**Scale**](windowsribbon-element-scale.md) -Deklarationen, die Adaptive Layouteinstellungen für ein oder mehrere [**Gruppen**](windowsribbon-element-group.md) Elemente angeben, wenn die Größe des Menübands geändert wird.
+Das [**ScalingPolicy-Element**](windowsribbon-element-scalingpolicy.md) enthält ein Manifest von [**ScalingPolicy.IdealSizes-**](windowsribbon-element-scalingpolicy-idealsizes.md) und [**Scale-Deklarationen,**](windowsribbon-element-scale.md) die adaptive Layouteinstellungen für ein oder mehrere [**Group-Elemente**](windowsribbon-element-group.md) angeben, wenn die Größe des Menübands geändert wird.
 
 > [!Note]  
-> Es wird dringend empfohlen, dass ausreichend Details zur Skalierungs Richtlinie angegeben werden, sodass die meisten, wenn nicht alle [**Gruppen**](windowsribbon-element-group.md) Elemente einem [**Scale**](windowsribbon-element-scale.md) -Element zugeordnet sind, in dem das *size* -Attribut gleich ist `Popup` . Auf diese Weise kann das-Framework das Menüband mit der kleinsten Größe darstellen und die breiteste Palette von Anzeigegeräten unterstützen, bevor es automatisch einen scrollmechanismus einführt.
+> Es wird dringend empfohlen, ausreichende Skalierungsrichtliniendetails anzugeben, sodass die meisten, wenn nicht alle [**Gruppenelemente**](windowsribbon-element-group.md) einem [**Scale-Element**](windowsribbon-element-scale.md) zugeordnet werden, bei dem das *Size-Attribut* gleich `Popup` ist. Auf diese Weise kann das Framework das Menüband in der kleinstmöglichen Größe rendern und die breite palette von Anzeigegeräten unterstützen, bevor automatisch ein Bildlaufmechanismus eingeführt wird.
 
  
 
-Das folgende Codebeispiel veranschaulicht ein [**scalingpolicy**](windowsribbon-element-scalingpolicy.md) -Manifest, das eine [**scalingpolicy. ideal sizes**](windowsribbon-element-scalingpolicy-idealsizes.md) [**sizedefinition**](windowsribbon-element-sizedefinition.md) -Einstellung für jede von vier Gruppen von Steuerelementen auf einer Registerkarte **Home** angibt. Außerdem werden [**Skalierungs**](windowsribbon-element-scale.md) Elemente angegeben, um das reduzierende Verhalten der einzelnen Gruppen in absteigender Reihenfolge zu beeinflussen.
+Im folgenden Codebeispiel wird ein [**ScalingPolicy-Manifest**](windowsribbon-element-scalingpolicy.md) veranschaulicht, das eine [**ScalingPolicy.IdealSizes**](windowsribbon-element-scalingpolicy-idealsizes.md) [**SizeDefinition-Einstellung**](windowsribbon-element-sizedefinition.md) für jede von vier Gruppen von Steuerelementen auf einer Registerkarte **Home** angibt. Darüber hinaus werden [**Skalierungselemente**](windowsribbon-element-scale.md) angegeben, um das Reduzierungsverhalten jeder Gruppe in absteigender Größenreihenfolge zu beeinflussen.
 
 
 ```C++
@@ -590,9 +590,9 @@ Das folgende Codebeispiel veranschaulicht ein [**scalingpolicy**](windowsribbon-
 
 ### <a name="custom-templates"></a>Benutzerdefinierte Vorlagen
 
-Wenn das Standardlayoutverhalten und die vordefinierten [**sizedefinition**](windowsribbon-element-sizedefinition.md) -Vorlagen die Flexibilität oder Unterstützung für ein bestimmtes Layoutszenario nicht bieten, werden benutzerdefinierte Vorlagen durch das Ribbon [**. sizedefinitions**](windowsribbon-element-ribbon-sizedefinitions.md) -Element vom Multifunktionsleisten-Framework unterstützt.
+Wenn das Standardlayoutverhalten und die vordefinierten [**SizeDefinition-Vorlagen**](windowsribbon-element-sizedefinition.md) nicht die Flexibilität oder Unterstützung für ein bestimmtes Layoutszenario bieten, werden benutzerdefinierte Vorlagen vom Menübandframework über das [**Ribbon.SizeDefinitions-Element**](windowsribbon-element-ribbon-sizedefinitions.md) unterstützt.
 
-Benutzerdefinierte Vorlagen können auf zweierlei Weise deklariert werden: eine eigenständige Methode, die das [**Ribbon. sizedefinitions**](windowsribbon-element-ribbon-sizedefinitions.md) -Element verwendet, um wiederverwendbare, benannte Vorlagen oder eine Inline Methode, die [**Gruppen**](windowsribbon-element-group.md)spezifisch ist, zu deklarieren.
+Benutzerdefinierte Vorlagen können auf zwei Arten deklariert werden: eine eigenständige Methode, die das [**Ribbon.SizeDefinitions-Element**](windowsribbon-element-ribbon-sizedefinitions.md) zum Deklarieren von wiederverwendbaren, benannten Vorlagen oder eine [**Gruppenspezifische**](windowsribbon-element-group.md)Inlinemethode verwendet.
 
 ### <a name="standalone-template"></a>Eigenständige Vorlage
 
@@ -617,11 +617,11 @@ Das folgende Codebeispiel veranschaulicht eine einfache, wiederverwendbare benut
 
 
 
-### <a name="inline-template"></a>Inline Vorlage
+### <a name="inline-template"></a>Inlinevorlage
 
-Die folgenden Codebeispiele veranschaulichen eine einfache Inline benutzerdefinierte Vorlage für eine Gruppe von vier Schaltflächen.
+Die folgenden Codebeispiele veranschaulichen eine einfache benutzerdefinierte Inlinevorlage für eine Gruppe von vier Schaltflächen.
 
-In diesem Code Abschnitt werden die Befehls Deklarationen für eine Gruppe von Schaltflächen angezeigt. Hier werden auch große und kleine Bild Ressourcen angegeben.
+Dieser Codeabschnitt zeigt die Befehlsdeklarationen für eine Gruppe von Schaltflächen. Hier werden auch große und kleine Imageressourcen angegeben.
 
 
 ```XML
@@ -694,7 +694,7 @@ In diesem Code Abschnitt werden die Befehls Deklarationen für eine Gruppe von S
 
 
 
-In diesem Code Abschnitt wird veranschaulicht, wie Sie die Vorlagen "Large", "Medium" und "Small [**groupsizedefinition**](windowsribbon-element-groupsizedefinition.md) " definieren, um die vier Schaltflächen in verschiedenen Größen und Layouts anzuzeigen. Die [**scalingpolicy**](windowsribbon-element-scalingpolicy.md) -Deklaration für die Registerkarte definiert, welche Vorlage für eine Gruppe von Steuerelementen basierend auf der Menü Band Größe und dem für die aktive Registerkarte erforderlichen Speicherplatz verwendet wird.
+In diesem Codeabschnitt wird veranschaulicht, wie Sie große, mittlere und kleine [**GroupSizeDefinition-Vorlagen**](windowsribbon-element-groupsizedefinition.md) definieren, um die vier Schaltflächen in verschiedenen Größen und Layouts anzuzeigen. Die [**ScalingPolicy-Deklaration**](windowsribbon-element-scalingpolicy.md) für die Registerkarte definiert, welche Vorlage für eine Gruppe von Steuerelementen verwendet wird, basierend auf der Größe und dem Speicherplatz des Menübands, die für die aktive Registerkarte erforderlich sind.
 
 
 ```XML
@@ -807,16 +807,16 @@ In diesem Code Abschnitt wird veranschaulicht, wie Sie die Vorlagen "Large", "Me
 
 
 
-Die folgenden Bilder veranschaulichen, wie die Vorlagen aus dem vorherigen Beispiel auf die Multifunktionsleisten-Benutzeroberfläche angewendet werden, um eine Verkleinerung der Menüband-Größe zu ermöglichen.
+Die folgenden Abbildungen zeigen, wie die Vorlagen aus dem vorherigen Beispiel auf die Menüband-Benutzeroberfläche angewendet werden, um eine Verringerung der Menübandgröße zu ermöglichen.
 
 
 
-|        |                                                                                                    |
+|  Typ  |      Image                                                                                         |
 |--------|----------------------------------------------------------------------------------------------------|
-| Groß  | ![Bild einer großen benutzerdefinierten Inline Vorlage.](images/overviews/sizedefinition-custom-large.png)   |
-| Medium | ![Bild einer benutzerdefinierten Inline-Vorlage.](images/overviews/sizedefinition-custom-medium.png) |
-| Klein  | ![Bild einer kleinen benutzerdefinierten Inline Vorlage.](images/overviews/sizedefinition-custom-small.png)   |
-| Popup  | ![Bild einer benutzerdefinierten Inline-Popup Vorlage.](images/overviews/sizedefinition-custom-popup.png)   |
+| Large  | ![Abbildung einer inline großen benutzerdefinierten Vorlage.](images/overviews/sizedefinition-custom-large.png)   |
+| Medium | ![Abbildung einer benutzerdefinierten Inlinevorlage mit mittlerem Inline-](images/overviews/sizedefinition-custom-medium.png) |
+| Small  | ![Abbildung einer kleinen benutzerdefinierten Inlinevorlage.](images/overviews/sizedefinition-custom-small.png)   |
+| Popup  | ![Abbildung einer benutzerdefinierten Inline-Popupvorlage.](images/overviews/sizedefinition-custom-popup.png)   |
 
 
 
@@ -826,10 +826,10 @@ Die folgenden Bilder veranschaulichen, wie die Vorlagen aus dem vorherigen Beisp
 
 <dl> <dt>
 
-[**Sizedefinition**](windowsribbon-element-sizedefinition.md)
+[**SizeDefinition**](windowsribbon-element-sizedefinition.md)
 </dt> <dt>
 
-[**Migen**](windowsribbon-element-scale.md)
+[**Skalieren**](windowsribbon-element-scale.md)
 </dt> <dt>
 
 [**Gruppe**](windowsribbon-element-group.md)

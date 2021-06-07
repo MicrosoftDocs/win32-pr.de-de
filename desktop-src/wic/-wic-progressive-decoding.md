@@ -1,88 +1,88 @@
 ---
-description: In diesem Thema wird die Progressive Decodierung und die Verwendung progressiver Decodierung in-Anwendungen vorgestellt.
+description: In diesem Thema werden die progressive Decodierung und die Verwendung der progressiven Decodierung in Anwendungen vorgestellt.
 ms.assetid: d22c2c59-0fa1-4452-93f1-dbf151033714
-title: Übersicht über Progressive Decodierung
+title: Übersicht über die progressive Decodierung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2bf005dfb5b4cf5a69ca45020776fee9f0641eee
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 568b9708802b082a880f358b969d9dd4beb1e481
+ms.sourcegitcommit: 099ecdda1e83618b844387405da0db0ebda93a65
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104217376"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111443671"
 ---
-# <a name="progressive-decoding-overview"></a>Übersicht über Progressive Decodierung
+# <a name="progressive-decoding-overview"></a>Übersicht über die progressive Decodierung
 
-In diesem Thema wird die Progressive Decodierung und die Verwendung progressiver Decodierung in-Anwendungen vorgestellt. Außerdem enthält es Richtlinien zum Erstellen von Codecs, die eine progressive Decodierung unterstützen.
+In diesem Thema werden die progressive Decodierung und die Verwendung der progressiven Decodierung in Anwendungen vorgestellt. Außerdem enthält sie Richtlinien zum Erstellen von Codecs, die die progressive Decodierung unterstützen.
 
 Dieses Thema enthält folgende Abschnitte:
 
 -   [Introduction (Einführung)](#introduction)
--   [Was ist progressiv-Decodierung?](#what-is-progressive-decoding)
--   [Unterstützung progressiver Decodierung in Windows 7](#progressive-decoding-support-in-windows-7)
--   [Progressive JPEG-Decodierung](#jpeg-progressive-decoding)
--   [Fortschreitende PNG/GIF-Decodierung](#pnggif-progressive-decoding)
-    -   [PNG-Progressive Decodierung](#png-progressive-decoding)
+-   [Was ist progressive Decodierung?](#what-is-progressive-decoding)
+-   [Unterstützung der progressiven Decodierung unter Windows 7](#progressive-decoding-support-in-windows-7)
+-   [PROGRESSIVE JPEG-Decodierung](#jpeg-progressive-decoding)
+-   [Png-/GIF-Progressive Decodierung](#pnggif-progressive-decoding)
+    -   [Progressive PNG-Decodierung](#png-progressive-decoding)
     -   [Progressive GIF-Decodierung](#gif-progressive-decoding)
 -   [Progressive Decodierung in Anwendungen](#progressive-decoding-in-applications)
--   [Unterstützung für die benutzerdefinierte Codec-Unterstützung](#custom-codec-support-for-progressive-decoding)
--   [Zugehörige Themen](#related-topics)
+-   [Unterstützung benutzerdefinierter Codecs für die progressive Decodierung](#custom-codec-support-for-progressive-decoding)
+-   [Verwandte Themen](#related-topics)
 
 ## <a name="introduction"></a>Einführung
 
-Die Progressive Decodierung bietet die Möglichkeit, Teile eines Bilds inkrementell zu decodieren und zu Rendering, bevor das gesamte Bild heruntergeladen wird. Diese Funktion verbessert die Benutzer Funktionalität beim Anzeigen von Images aus dem Internet erheblich, da der Benutzer nicht warten muss, bis das gesamte Image heruntergeladen wird, bevor die Decodierung beginnen kann. Benutzern kann eine Bildvorschau mit verfügbaren Daten angezeigt werden, bevor das gesamte Image heruntergeladen wird. Diese Funktion ist für alle Anwendungen, die zum Anzeigen von Images aus dem Internet oder für Datenquellen mit eingeschränkter Bandbreite verwendet werden, von entscheidender Bedeutung.
+Die progressive Decodierung bietet die Möglichkeit, Teile eines Bilds inkrementell zu decodieren und zu rendern, bevor der Download des gesamten Bilds abgeschlossen ist. Dieses Feature verbessert die Benutzerfreundlichkeit beim Anzeigen von Bildern aus dem Internet erheblich, da der Benutzer nicht warten muss, bis das gesamte Bild heruntergeladen wurde, bevor die Decodierung beginnen kann. Benutzer können eine Imagevorschau mit verfügbaren Daten anzeigen, lange bevor das gesamte Image heruntergeladen wird. Dieses Feature ist für jede Anwendung wichtig, die zum Anzeigen von Bildern aus dem Internet oder aus Datenquellen mit eingeschränkter Bandbreite verwendet wird.
 
-Die Windows Imaging Component (WIC) in Windows 7 unterstützt das Progressive decodieren beliebter Bildformate, wie z. b. JPEG, PNG und GIF. WIC unterstützt auch alle WIC-aktivierten nicht-Microsoft-Codecs, die eine progressive Decodierung implementieren. Progressive Codierung wird in der aktuellen Version von WIC nicht unterstützt. In diesem Thema wird das Progressive decodieren in Windows 7 und das Verfahren zum Aktivieren der progressiven Decodierung in Ihren Anwendungen erläutert.
+Die Windows-Bilderstellungskomponente (WIC) in Windows 7 unterstützt die progressive Decodierung gängiger Bildformate wie JPEG, PNG und GIF. WIC unterstützt auch alle WIC-fähigen Nicht-Microsoft-Codecs, die progressive Decodierung implementieren. Die progressive Codierung wird in der aktuellen Version von WIC nicht unterstützt. In diesem Thema wird die progressive Decodierung in Windows 7 und das Verfahren zum Aktivieren der progressiven Decodierung in Ihren Anwendungen beschrieben.
 
-## <a name="what-is-progressive-decoding"></a>Was ist progressiv-Decodierung?
+## <a name="what-is-progressive-decoding"></a>Was ist progressive Decodierung?
 
-Progressives decodieren ist die Möglichkeit, Teile eines Bilds inkrementell aus einer unvollständigen Bilddatei zu decodieren. Herkömmliche Decodierung erfordert eine komplette Bilddatei, bevor die Decodierung beginnen kann. Die Progressive Decodierung startet, nachdem eine progressive Ebene eines Bilds den Download abgeschlossen hat. Der Decoder führt einen Decodierungs Durchlauf für die aktuelle Progressive Ebene des Bilds durch. Anschließend werden mehrere Decodierungs Durchgänge für das Bild durchführt, wenn jede Progressive Ebene heruntergeladen wird. Jeder Decodierungs Durchlauf zeigt mehr von dem Bild an, bis das Bild vollständig heruntergeladen und decodiert wurde. Die Anzahl der zum Decodieren eines vollständigen Bilds erforderlichen Schritte hängt vom Bild Dateiformat und dem Codierungsprozess ab, der zum Erstellen des Images verwendet wurde.
+Die progressive Decodierung ist die Möglichkeit, Teile eines Bilds inkrementell aus einer unvollständigen Bilddatei zu decodieren. Die herkömmliche Decodierung erfordert eine vollständige Bilddatei, bevor die Decodierung beginnen kann. Die progressive Decodierung beginnt, nachdem das Herunterladen einer progressiven Ebene eines Bilds abgeschlossen wurde. Der Decoder führt einen Decodierungsdurchlauf auf der aktuellen progressiven Ebene des Bilds durch. Anschließend werden mehrere Decodierungsdurchläufe für das Bild ausgeführt, während jede progressive Ebene heruntergeladen wird. Jeder Decodierungsdurchlauf zeigt einen größeren Teil des Bilds an, bis das Bild vollständig heruntergeladen und decodiert wurde. Die Anzahl von Durchläufen, die zum Decodieren eines vollständigen Bilds erforderlich sind, hängt vom Bilddateiformat und dem Codierungsprozess ab, der zum Erstellen des Bilds verwendet wird.
 
-Bilder müssen speziell codiert werden, um eine progressive Decodierung zu implementieren, aber nicht alle Bildformate unterstützen Sie. In der folgenden Liste sind die Anforderungen für die Verwendung der progressiven Decodierung zusammengefasst
+Bilder müssen speziell codiert werden, um die progressive Decodierung zu implementieren, aber nicht alle Bildformate unterstützen sie. In der folgenden Liste sind die Anforderungen für die Verwendung der progressiven Decodierung zusammengefasst.
 
--   Die Bilddatei muss die Progressive Decodierung unterstützen. Die meisten Bildformate unterstützen keine Progressive Decodierung, obwohl das beliebte Bildformat JPEG, PNG und GIF tut.
--   Die Bilddatei muss als progressives Bild codiert werden. Bilddateien, die nicht mit der progressiven Bildcodierung erstellt wurden, können keine Progressive Decodierung implementieren, auch wenn das Dateiformat Sie andernfalls unterstützen würde.
--   Ein Codec, der die Progressive Decodierung unterstützt, muss verfügbar sein. Wenn ein Codec keine Progressive Decodierung unterstützt, wird ein als progressives Bild codiertes Bild als herkömmliches Bild decodiert.
+-   Die Bilddatei muss die progressive Decodierung unterstützen. Die meisten Bildformate unterstützen keine progressive Decodierung, obwohl die gängigen Bildformate JPEG, PNG und GIF dies tun.
+-   Die Bilddatei muss als progressives Bild codiert werden. Bilddateien, die nicht mit der progressiven Bildcodierung erstellt wurden, können keine progressive Decodierung implementieren, auch wenn das Dateiformat dies andernfalls unterstützen würde.
+-   Ein Codec, der die progressive Decodierung unterstützt, muss verfügbar sein. Wenn ein Codec keine progressive Decodierung unterstützt, wird ein als progressives Bild codiertes Bild als herkömmliches Bild decodiert.
 
-## <a name="progressive-decoding-support-in-windows-7"></a>Unterstützung progressiver Decodierung in Windows 7
+## <a name="progressive-decoding-support-in-windows-7"></a>Unterstützung der progressiven Decodierung unter Windows 7
 
-Windows 7 bietet integrierte Codecs, die eine progressive Decodierung für Bildformate von JPEG, PNG und GIF unterstützen. Jede dieser Windows 7-Codecs führt mehrere Decodierung für ein Abbild aus. Jeder Durchlauf entspricht einer bestimmten Ebene und einem Teil des Bilds, das decodiert wird, was schließlich zu einem vollständig decodierten Bild führt.
+Windows 7 bietet integrierte Codecs, die die progressive Decodierung für JPEG-, PNG- und GIF-Bildformate unterstützen. Jeder dieser Windows 7-Codecs führt mehrere Decodierungsdurchläufe für ein Bild durch. Jeder Durchlauf entspricht einer bestimmten Ebene und einem Teil des Bilds, das decodiert wird, was schließlich zu einem vollständig decodierten Bild führt.
 
-Jedes Bildformat behandelt die Progressive Decodierung auf andere Weise. In der folgenden Tabelle finden Sie Informationen zur Anzahl der progressiven Ebenen und der Decodierungs Methode, die von den progressiven Windows 7-Decodierung unterstützt wird. 
+Jedes Bildformat verarbeitet die progressive Decodierung auf andere Weise. Die folgende Tabelle enthält Informationen zur Anzahl der progressiven Ebenen und zur Decodierungsmethode, die von den Progressive Decoding-Formaten von Windows 7 unterstützt wird. 
 
-| Bildformat | Anzahl unterstützter Stufen | Progressive Decodierungs Methode |
+| Bildformat | Anzahl der unterstützten progressiven Ebenen | Progressive Decodierungsmethode |
 |--------------|----------------------------------------|-----------------------------|
-| JPEG         | Definiert durch Image                       | Erhöhen der Auflösung       |
-| PNG          | 7                                      | Zeilen Sprung                 |
-| GIF          | 4                                      | Zeilen Sprung                 |
+| JPEG         | Definiert durch Bild                       | Erhöhen der Auflösung       |
+| PNG          | 7                                      | Interlacing                 |
+| GIF          | 4                                      | Interlacing                 |
 
 
 
  
 
-Außerdem kann die Progressive Decodierung in Codecs implementiert werden, indem Unterstützung für Progressive Schnittstellen und Methoden bereitgestellt wird. Wenn eine progressive Decodierung nicht in einem Codec unterstützt wird, sollten entsprechende Fehlermeldungen zurückgegeben werden, wenn diese Methoden aufgerufen werden.
+Darüber hinaus kann die progressive Decodierung in Codecs implementiert werden, indem unterstützung für progressive Schnittstellen und Methoden geboten wird. Wenn die progressive Decodierung in einem Codec nicht unterstützt wird, sollten entsprechende Fehlermeldungen zurückgegeben werden, wenn diese Methoden aufgerufen werden.
 
-## <a name="jpeg-progressive-decoding"></a>Progressive JPEG-Decodierung
+## <a name="jpeg-progressive-decoding"></a>PROGRESSIVE JPEG-Decodierung
 
-Die Progressive JPEG-Decodierung stellt Bilddaten in immer höheren Auflösungen für jede Ebene dar, bis das voll auflösende Image verfügbar ist. Jede Ebene des Bilds wird so festgelegt, dass eine andere Auflösungsebene bereitgestellt wird. Wenn progressivere Ebenen verfügbar werden, wird das Bild bei einer höheren Auflösung angezeigt, bis das Bild der vollständigen Auflösung aufgelöst ist.
+Bei der progressiven JPEG-Decodierung werden Bilddaten in immer höheren Auflösungen für jede Ebene angezeigt, bis das Bild mit voller Auflösung verfügbar ist. Jede Bildebene wird so festgelegt, dass sie eine andere Auflösungsebene bereitstellt. Sobald mehr progressive Ebenen verfügbar sind, wird das Bild mit höheren Auflösungen angezeigt, bis das Bild mit vollständiger Auflösung aufgelöst wird.
 
-Die Anzahl der verfügbaren Ebenen und die auf jeder Ebene festgelegte Auflösung hängen vollständig vom codierten JPEG ab. Die beiden folgenden Abbildungen zeigen ein Beispiel für eine progressive JPEG-Decodierung auf zwei progressiven Ebenen.
+Die Anzahl der verfügbaren Ebenen und die auf jeder Ebene festgelegte Auflösung hängen vollständig vom codierten JPEG ab. Die folgenden beiden Bilder zeigen ein Beispiel für die progressive JPEG-Decodierung auf zwei progressiven Ebenen.
 
-![Beispiele für die Progressive JPEG-Decodierung](graphics/Progressive_JPEG_Comparison.jpg)
+![Beispiele für die progressive Jpeg-Decodierung](graphics/Progressive_JPEG_Comparison.jpg)
 
-Das Bild auf der linken Seite wird auf progressiver Ebene 0 decodiert. Das Bild auf der rechten Seite wird nach fünf progressiven Ebenen vollständig decodiert.
+Das Bild auf der linken Seite wird auf progressiver Ebene 0 decodiert. Das Bild auf der rechten Seite ist nach fünf progressiven Ebenen vollständig decodiert.
 
-## <a name="pnggif-progressive-decoding"></a>Fortschreitende PNG/GIF-Decodierung
+## <a name="pnggif-progressive-decoding"></a>Png-/GIF-Progressive Decodierung
 
-Sowohl PNG-als auch GIF-, Progressive Der Decodierungs Prozess für beide Formate ist sehr ähnlich.
+Sowohl die progressive PNG- als auch die GIF-Decodierung verwenden eine progressive Decodierungsmethode mit Zeilensprung. Der Decodierungsprozess für beide Formate ist sehr ähnlich.
 
-### <a name="png-progressive-decoding"></a>PNG-Progressive Decodierung
+### <a name="png-progressive-decoding"></a>Progressive PNG-Decodierung
 
-PNG-Bilddateien bieten sieben Progressive Ebenen für die Decodierung, wie in der PNG-Spezifikation beschrieben. Die demokratische PNG-Decodierung wird implementiert, indem ein angegebenes Pixelmuster bei jedem Durchlauf des Decoders decodiert wird. Das Muster in der folgenden Tabelle aus der PNG-Spezifikation wird über das gesamte Image repliziert. Jede Zahl stellt die Progressive Ebene dar, in der das entsprechende Pixel decodiert wird.
+PNG-Bilddateien bieten sieben progressive Ebenen für die Decodierung, wie in der PNG-Spezifikation beschrieben. Die progressive PNG-Decodierung wird implementiert, indem bei jedem Durchlauf des Decoders ein angegebenes Pixelmuster decodiert wird. Das Muster in der folgenden Tabelle aus der PNG-Spezifikation wird über das gesamte Bild repliziert. Jede Zahl stellt die progressive Ebene dar, in der das entsprechende Pixel decodiert wird.
 
 
 
-|     |     |     |     |     |     |     |     |
+|  &nbsp;  |  &nbsp;   |  &nbsp;   |  &nbsp;   |   &nbsp;  |  &nbsp;   |  &nbsp;   | &nbsp;    |
 |-----|-----|-----|-----|-----|-----|-----|-----|
 | 1   | 6   | 4   | 6   | 2   | 6   | 4   | 6   |
 | 7   | 7   | 7   | 7   | 7   | 7   | 7   | 7   |
@@ -97,36 +97,36 @@ PNG-Bilddateien bieten sieben Progressive Ebenen für die Decodierung, wie in de
 
  
 
-In der obigen Tabelle können Sie die Pixel ermitteln, die bei jedem Durchlauf des Decoders decodiert werden. Im Gegensatz zum Windows 7-GIF-Codec repliziert der Windows 7 PNG-Codec das auf der linken Seite Verfügbare Pixel in einer Überprüfungs Zeile, um leere Pixel aufzufüllen.
+In der obigen Tabelle können Sie die Pixel bestimmen, die bei jedem Durchgang des Decoders decodiert werden. Im Gegensatz zum WINDOWS 7-GIF-Codec repliziert der Png-Codec von Windows 7 das am linken Ende verfügbare Pixel auf einer Scanzeile, um leere Pixel zu füllen.
 
-Die folgenden Abbildungen zeigen ein Beispiel für den Windows 7 PNG-Codec für die Progressive Decodierung auf drei progressiven Ebenen.
+Die folgenden Abbildungen zeigen ein Beispiel für den progressiven Decodierungscodec von Windows 7 PNG auf drei progressiven Ebenen.
 
-![Beispiele für die Progressive PNG-Decodierung](graphics/PNG_Progressive_Comparison.jpg)
+![Beispiele für die progressive PNG-Decodierung](graphics/PNG_Progressive_Comparison.jpg)
 
-Das Bild oben links zeigt ein PNG-Bild, das auf progressiv Ebene 0 decodiert wurde. Das Bild oben rechts zeigt das gleiche PNG-Bild an, das auf progressiv Ebene 3 decodiert wurde. Das untere Bild zeigt das Bild, das nach 7 progressiven Ebenen vollständig decodiert wurde.
+Das Bild oben links zeigt ein PNG-Bild, das auf progressiver Ebene 0 decodiert ist. Das bild oben rechts zeigt das gleiche PNG-Bild, das auf progressiver Ebene 3 decodiert wurde. Das untere Bild zeigt das gleiche Bild, das nach sieben progressiven Ebenen vollständig decodiert wurde.
 
 ### <a name="gif-progressive-decoding"></a>Progressive GIF-Decodierung
 
-GIF-Bilddateien bieten vier Progressive Ebenen für die Decodierung, wie in der GIF-Spezifikation beschrieben. Jeder Durchlauf füllt bestimmte Zeilen innerhalb eines Bilds auf und erzeugt nach dem vierten Durchlauf ein vollständiges Bild. Die folgende Tabelle der GIF-Spezifikation zeigt, welche Scan Zeilen von jedem Durchlauf des Decoders decodiert werden. 
+GIF-Bilddateien bieten vier progressive Ebenen für die Decodierung, wie in der GIF-Spezifikation beschrieben. Jeder Durchgang füllt bestimmte Zeilen innerhalb eines Bilds auf und erzeugt nach dem vierten Durchgang ein vollständiges Bild. Die folgende Tabelle aus der GIF-Spezifikation zeigt, welche Scanzeilen von jedem Durchgang des Decoders decodiert werden. 
 
-| Anzahl der Ebenen/Passnummern | Ausgefüllten Zeilen überprüfen   | Scan Zeile wird gestartet |
+| Levelnummer/Passnummer | Aufgefüllte Scanzeilen   | Starten der Scanzeile |
 |---------------------------|------------------------|--------------------|
-| 1                         | Jede achte Überprüfungs Zeile | 0                  |
-| 2                         | Jede achte Überprüfungs Zeile | 4                  |
+| 1                         | Jede achte Scanzeile | 0                  |
+| 2                         | Jede achte Scanzeile | 4                  |
 | 3                         | Jede vierte Scanzeile | 2                  |
-| 4                         | Jede zweite Scan Zeile | 1                  |
+| 4                         | Jede zweite Scanzeile | 1                  |
 
 
 
  
 
-Obwohl Codecs den Inhalt von leeren Pixeln auf einer bestimmten Ebene angeben kann, füllt der Windows GIF-Codec leere Überprüfungs Zeilen durch Replizieren von gefüllten Scan Zeilen oberhalb der leeren Überprüfungs Linie auf.
+Obwohl Codecs den Inhalt leerer Pixel auf einer bestimmten Ebene angeben können, füllt der Windows GIF-Codec leere Scanzeilen auf, indem er aufgefüllte Scanzeilen über der leeren Scanzeile repliziert.
 
 ## <a name="progressive-decoding-in-applications"></a>Progressive Decodierung in Anwendungen
 
-Die wichtigste Progressive Decodierungs Schnittstelle ist die [**iwicprogressivelevelcontrol**](/windows/desktop/api/Wincodec/nn-wincodec-iwicprogressivelevelcontrol) -Schnittstelle. Um einen Verweis auf die-Schnittstelle zu erhalten, Fragen Sie einen Bildframe ([**IWICBitmapFrameDecode**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapframedecode)) für **iwicprogressivelevelcontrol** ab. Auf Progressive Methoden kann dann über die-Schnittstelle zugegriffen werden.
+Die wichtigste Schnittstelle für die progressive Decodierung ist [**die IWICProgressiveLevelControl-Schnittstelle.**](/windows/desktop/api/Wincodec/nn-wincodec-iwicprogressivelevelcontrol) Um einen Verweis auf die Schnittstelle zu erhalten, fragen Sie einen Bildrahmen ([**IWICBitmapFrameDecode**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapframedecode)) für **IWICProgressiveLevelControl ab.** Auf progressive Methoden kann dann über die -Schnittstelle zugegriffen werden.
 
-Der folgende Code enthält ein Beispiel für die Verwendung von progressiver Decodierung in-Anwendungen.
+Der folgende Code enthält ein Beispiel für die Verwendung der progressiven Decodierung in Anwendungen.
 
 
 ```
@@ -163,35 +163,35 @@ if (pProgressive)
 
 
 
-Der vorangehende Code stellt die grundlegenden Funktionen bereit, die für die Implementierung progressiver Decodierung in den meisten Anwendungen Mit dem Code können Sie auf Progressive Ebenen zugreifen, wenn Bildpixeldaten verfügbar werden. Die [**setcurrentlevel**](/windows/desktop/api/Wincodec/nf-wincodec-iwicprogressivelevelcontrol-setcurrentlevel) -Funktion blockiert die Ausführung, bis die angeforderte Ebene verfügbar ist.
+Der vorangehende Code stellt die grundlegende Funktionalität zur Verfügung, die für die Implementierung der progressiven Decodierung in den meisten Anwendungen erforderlich ist. Mithilfe des Codes kann auf progressive Ebenen zugegriffen werden, wenn Bildpixeldaten verfügbar werden. Die [**SetCurrentLevel-Funktion**](/windows/desktop/api/Wincodec/nf-wincodec-iwicprogressivelevelcontrol-setcurrentlevel) blockiert die Ausführung, bis die angeforderte Ebene verfügbar ist.
 
-## <a name="custom-codec-support-for-progressive-decoding"></a>Unterstützung für die benutzerdefinierte Codec-Unterstützung
+## <a name="custom-codec-support-for-progressive-decoding"></a>Unterstützung benutzerdefinierter Codecs für die progressive Decodierung
 
-Codec-Entwickler können das [**iwicprogressivelevelcontrol**](/windows/desktop/api/Wincodec/nn-wincodec-iwicprogressivelevelcontrol) -Element implementieren, wenn Ihre Bildformate eine progressive Decodierung unterstützen. Die Unterstützung für die Progressive Decodierung ist keine Voraussetzung für die Ermittlung und die Schiedsgerichtsbarkeit durch WIC. Durch die Progressive Decodierung wird jedoch die Benutzer Leistung erheblich gesteigert, und die Implementierung sollte nach Möglichkeit in Erwägung gezogen werden.
+Codec-Entwickler können sich für die Implementierung [**von IWICProgressiveLevelControl**](/windows/desktop/api/Wincodec/nn-wincodec-iwicprogressivelevelcontrol) entscheiden, wenn ihre Bildformate die progressive Decodierung unterstützen. Die Unterstützung der progressiven Decodierung ist keine Voraussetzung für die Ermittlung und Vermittlung durch WIC. Die progressive Decodierung verbessert jedoch die Benutzerfreundlichkeit stark, und die Implementierung sollte nach Möglichkeit berücksichtigt werden.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
-[Übersicht über die Windows Imaging-Komponente](-wic-about-windows-imaging-codec.md)
+[Windows-Bilderstellungskomponente Übersicht](-wic-about-windows-imaging-codec.md)
 </dt> <dt>
 
 **Andere Ressourcen**
 </dt> <dt>
 
-[Digitale Komprimierung und Codierung von Continuous-Tone weiterhin Images: Anforderungen und Richtlinien](https://www.w3.org/Graphics/JPEG/itu-t81.pdf)
+[Digitale Komprimierung und Codierung Continuous-Tone Still Images – Anforderungen und Richtlinien](https://www.w3.org/Graphics/JPEG/itu-t81.pdf)
 </dt> <dt>
 
-[JPEG-Dateiaustausch Format](https://www.w3.org/Graphics/JPEG/jfif3.pdf)
+[JPEG-Dateiaustauschformat](https://www.w3.org/Graphics/JPEG/jfif3.pdf)
 </dt> <dt>
 
 [GIF89a-Spezifikation](https://www.w3.org/Graphics/GIF/spec-gif89a.txt)
 </dt> <dt>
 
-[Spezifikation und Erweiterungen für Portable Network Graphics (PNG)](http://www.libpng.org/pub/png/spec/)
+[Portable Network Graphics (PNG) – Spezifikation und Erweiterungen](http://www.libpng.org/pub/png/spec/)
 </dt> </dl>
 
  

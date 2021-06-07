@@ -1,9 +1,9 @@
 ---
 title: DropDownButton-Element
-description: Stellt ein Standard-Drop-Down Schaltflächen-Steuerelement dar.
+description: Stellt ein standardmäßiges Drop-Down Button-Steuerelement dar.
 ms.assetid: 41031be2-43bc-4f75-b37a-1dcecc1635e1
 keywords:
-- Windows-Menüband für DropDownButton-Element
+- DropDownButton-Element Windows-Menüband
 topic_type:
 - apiref
 api_name:
@@ -13,18 +13,18 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 98af363aeb70a61def04eaee0ad13ff60e6e7640
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: a42b8ffb6d39c1da8993972c0b25995f778bdaca
+ms.sourcegitcommit: 099ecdda1e83618b844387405da0db0ebda93a65
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103729224"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111442961"
 ---
 # <a name="dropdownbutton-element"></a>DropDownButton-Element
 
-Stellt ein Standard [-Dropdown-Schalt](windowsribbon-controls-dropdownbutton.md) Flächen-Steuerelement dar.
+Stellt ein standardmäßiges [Dropdown-Schaltflächen-Steuerelement](windowsribbon-controls-dropdownbutton.md) dar.
 
-## <a name="usage"></a>Verbrauch
+## <a name="usage"></a>Verwendung
 
 ``` syntax
 <DropDownButton
@@ -47,26 +47,26 @@ Stellt ein Standard [-Dropdown-Schalt](windowsribbon-controls-dropdownbutton.md)
 </colgroup>
 <thead>
 <tr class="header">
-<th>Attribut</th>
-<th>type</th>
+<th>attribute</th>
+<th>Typ</th>
 <th>Erforderlich</th>
 <th>BESCHREIBUNG</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><strong>Applicationmodes</strong><br/></td>
+<td><strong>ApplicationModes</strong><br/></td>
 <td>xs:string<br/></td>
 <td>Nein<br/></td>
 <td>Nur gültig, wenn <a href="windowsribbon-element-menugroup.md"><strong>MenuGroup</strong></a> das übergeordnete Element ist.<br/> <br/>
-<dt><span></span><span></span><strong></strong> (xs: String)<br/> </dt> <dd> Eine Zeichenfolge, die eine durch Trennzeichen getrennte Liste mit ganzen Zahlen zwischen 0 und 31 enthält.<br/> Leerraum ist gültig und wird ignoriert.<br/> Maximale Länge: 250 Zeichen. <br/> </dd> </dl></td>
+<dt><span></span><span></span><strong></strong> (xs:string)<br/> </dt> <dd> Eine Zeichenfolge, die eine durch Trennzeichen getrennte Liste von ganzen Zahlen zwischen 0 und 31 enthält.<br/> Leerraum ist gültig und wird ignoriert.<br/> Maximale Länge: 250 Zeichen. <br/> </dd> </dl></td>
 </tr>
 <tr class="even">
 <td><strong>CommandName</strong><br/></td>
-<td>xs: positiveingeteger oder xs: String<br/></td>
+<td>xs:positiveInteger oder xs:string<br/></td>
 <td>Nein<br/></td>
-<td>Ordnet das-Element einem <a href="windowsribbon-element-command.md"><strong>Befehl</strong></a>zu.<br/> <br/>
-<dt><span></span><span></span><strong></strong> (xs: positiveingeteger oder xs: String)<br/> </dt> <dd> Eine Zeichenfolge, ein ganzzahliger Wert zwischen 2 und 59999, einschließlich, oder ein Hexadezimalwert zwischen 0x2 und 0xea5f (einschließlich). <br/> Der Wert muss innerhalb des Menüband-XML-Dokuments eindeutig sein. <br/> Maximale Länge: 100 Zeichen. <br/> </dd> </dl></td>
+<td>Ordnet das Element einem <a href="windowsribbon-element-command.md"><strong>Command zu.</strong></a><br/> <br/>
+<dt><span></span><span></span><strong></strong> (xs:positiveInteger oder xs:string)<br/> </dt> <dd> Eine Zeichenfolge, ein ganzzahliger Wert zwischen 2 und 59999 einschließlich oder ein Hexadezimalwert zwischen 0x2 und 0xea5f einschließlich. <br/> Der Wert muss innerhalb des Menüband-XML-Dokuments eindeutig sein. <br/> Maximale Länge: 100 Zeichen. <br/> </dd> </dl></td>
 </tr>
 </tbody>
 </table>
@@ -79,16 +79,16 @@ Stellt ein Standard [-Dropdown-Schalt](windowsribbon-controls-dropdownbutton.md)
 
 | Element                                                                             | BESCHREIBUNG                                        |
 |-------------------------------------------------------------------------------------|----------------------------------------------------|
-| [**Schaltfläche**](windowsribbon-element-button.md)<br/>                           | Kann ein-oder mehrmals vorkommen<br/> <br/> |
-| [**CheckBox**](windowsribbon-element-checkbox.md)<br/>                       | Kann ein-oder mehrmals vorkommen<br/> <br/> |
-| [**ComboBox**](windowsribbon-element-combobox.md)<br/>                       | Kann ein-oder mehrmals vorkommen<br/> <br/> |
-| **DropDownButton**<br/>                                                       | Kann ein-oder mehrmals vorkommen<br/> <br/> |
-| [**Dropdowncolorpicker**](windowsribbon-element-dropdowncolorpicker.md)<br/> | Kann ein-oder mehrmals vorkommen<br/> <br/> |
-| [**Dropdown Gallery**](windowsribbon-element-dropdowngallery.md)<br/>         | Kann ein-oder mehrmals vorkommen<br/> <br/> |
-| [**MenuGroup**](windowsribbon-element-menugroup.md)<br/>                     | Muss mindestens einmal vorkommen<br/> <br/>    |
-| [**SplitButton**](windowsribbon-element-splitbutton.md)<br/>                 | Kann ein-oder mehrmals vorkommen<br/> <br/> |
-| [**Splitbuttongallery**](windowsribbon-element-splitbuttongallery.md)<br/>   | Kann ein-oder mehrmals vorkommen<br/> <br/> |
-| [**ToggleButton**](windowsribbon-element-togglebutton.md)<br/>               | Kann ein-oder mehrmals vorkommen<br/> <br/> |
+| [**Schaltfläche**](windowsribbon-element-button.md)<br/>                           | Kann ein oder mehrere Male auftreten.<br/> <br/> |
+| [**Checkbox**](windowsribbon-element-checkbox.md)<br/>                       | Kann ein oder mehrere Male auftreten.<br/> <br/> |
+| [**ComboBox**](windowsribbon-element-combobox.md)<br/>                       | Kann ein oder mehrere Male auftreten.<br/> <br/> |
+| **DropDownButton**<br/>                                                       | Kann ein oder mehrere Male auftreten.<br/> <br/> |
+| [**DropDownColorPicker**](windowsribbon-element-dropdowncolorpicker.md)<br/> | Kann ein oder mehrere Male auftreten.<br/> <br/> |
+| [**DropDownGallery**](windowsribbon-element-dropdowngallery.md)<br/>         | Kann ein oder mehrere Male auftreten.<br/> <br/> |
+| [**Menugroup**](windowsribbon-element-menugroup.md)<br/>                     | Muss mindestens einmal auftreten<br/> <br/>    |
+| [**SplitButton**](windowsribbon-element-splitbutton.md)<br/>                 | Kann ein oder mehrere Male auftreten.<br/> <br/> |
+| [**SplitButtonGallery**](windowsribbon-element-splitbuttongallery.md)<br/>   | Kann ein oder mehrere Male auftreten.<br/> <br/> |
+| [**ToggleButton**](windowsribbon-element-togglebutton.md)<br/>               | Kann ein oder mehrere Male auftreten.<br/> <br/> |
 
 
 
@@ -98,31 +98,31 @@ Stellt ein Standard [-Dropdown-Schalt](windowsribbon-controls-dropdownbutton.md)
 
 | Element                                                                           |
 |-----------------------------------------------------------------------------------|
-| [**Controlgroup**](windowsribbon-element-controlgroup.md)<br/>             |
+| [**ControlGroup**](windowsribbon-element-controlgroup.md)<br/>             |
 | **DropDownButton**<br/>                                                     |
-| [**Dropdown Gallery**](windowsribbon-element-dropdowngallery.md)<br/>       |
+| [**DropDownGallery**](windowsribbon-element-dropdowngallery.md)<br/>       |
 | [**Gruppe**](windowsribbon-element-group.md)<br/>                           |
-| [**MenuGroup**](windowsribbon-element-menugroup.md)<br/>                   |
+| [**Menugroup**](windowsribbon-element-menugroup.md)<br/>                   |
 | [**SplitButton**](windowsribbon-element-splitbutton.md)<br/>               |
-| [**Splitbuttongallery**](windowsribbon-element-splitbuttongallery.md)<br/> |
+| [**SplitButtonGallery**](windowsribbon-element-splitbuttongallery.md)<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Optional oder erforderlich, abhängig vom übergeordneten Element.
+Optional oder erforderlich, je nach übergeordnetem Element.
 
-Kann für jedes [**controlgroup**](windowsribbon-element-controlgroup.md)-, **DropDownButton**-, [**dropdowngallery**](windowsribbon-element-dropdowngallery.md)-, [**Group**](windowsribbon-element-group.md)-, [**MenuGroup**](windowsribbon-element-menugroup.md)-, [**SplitButton**](windowsribbon-element-splitbutton.md)-oder [**splitbuttongallery**](windowsribbon-element-splitbuttongallery.md) -Element einmal oder mehrmals vorkommen.
+Kann ein oder mehrere Male für jedes [**ControlGroup-,**](windowsribbon-element-controlgroup.md) **DropDownButton-,** [**DropDownGallery-,**](windowsribbon-element-dropdowngallery.md) [**Group-, MenuGroup-,**](windowsribbon-element-menugroup.md) [**SplitButton-**](windowsribbon-element-splitbutton.md)oder [**SplitButtonGallery-Element**](windowsribbon-element-splitbuttongallery.md) auftreten. [](windowsribbon-element-group.md)
 
-**DropDownButton** unterstützt [Anwendungsmodi](ribbon-applicationmodes.md) , wenn Sie in der linken Spalte des Anwendungs Menüs gehostet werden.
+**DropDownButton** unterstützt [Anwendungsmodi,](ribbon-applicationmodes.md) wenn es in der linken Spalte des Anwendungsmenüs gehostet wird.
 
-[**Dropdowngallery**](windowsribbon-element-dropdowngallery.md) und [**splitbuttongallery**](windowsribbon-element-splitbuttongallery.md) sind keine gültigen untergeordneten Elemente von **DropDownButton** , wenn **DropDownButton** ein Nachfolger von [**applicationmenu**](windowsribbon-element-applicationmenu.md)ist.
+[**DropDownGallery**](windowsribbon-element-dropdowngallery.md) und [**SplitButtonGallery**](windowsribbon-element-splitbuttongallery.md) sind keine gültigen untergeordneten Elemente von **DropDownButton,** wenn **DropDownButton** ein Nachfolger von [**ApplicationMenu**](windowsribbon-element-applicationmenu.md)ist.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird das grundlegende Markup für **DropDownButton** veranschaulicht.
+Im folgenden Beispiel wird das grundlegende Markup für **dropDownButton** veranschaulicht.
 
-Dieser Code Abschnitt zeigt die **Dropdown Button** -Befehls Deklarationen mit einer zugeordneten [**Gruppe**](windowsribbon-element-group.md) , die als übergeordneter Container für das **Dropdown Button** -Element fungiert.
+Dieser Codeabschnitt zeigt die **DropDownButton-Befehlsdeklarationen** mit einer zugeordneten [**Gruppe,**](windowsribbon-element-group.md) die als übergeordneter Container für das **DropDownButton-Element** fungiert.
 
 
 ```XML
@@ -147,7 +147,7 @@ Dieser Code Abschnitt zeigt die **Dropdown Button** -Befehls Deklarationen mit e
 
 
 
-In diesem Code Abschnitt werden die Deklarationen des **Dropdown Button** -Steuer Elements angezeigt.
+Dieser Codeabschnitt zeigt die **DropDownButton-Steuerelementdeklarationen.**
 
 
 ```XML
@@ -165,23 +165,19 @@ In diesem Code Abschnitt werden die Deklarationen des **Dropdown Button** -Steue
 
 ## <a name="element-information"></a>Elementinformationen
 
-
-
-|                                     |           |
-|-------------------------------------|-----------|
-| Unterstützte Mindestversion (System)<br/> | Windows 7 |
-| Kann leer bleiben                        | Nein        |
+* **Unterstütztes Mindestsystem:** Windows 7
+* **Kann leer sein:** Nein
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
 [Dropdown-Schaltflächen-Steuerelement](windowsribbon-controls-dropdownbutton.md)
 </dt> <dt>
 
-[**Setmodes**](/windows/desktop/api/uiribbon/nf-uiribbon-iuiframework-setmodes)
+[**SetModes**](/windows/desktop/api/uiribbon/nf-uiribbon-iuiframework-setmodes)
 </dt> </dl>
 
  

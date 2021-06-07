@@ -1,29 +1,29 @@
 ---
-description: Enthält Textinformationen aus der Journal Notiz.
+description: Enthält Textinformationen aus der Journalnotiz.
 ms.assetid: 09ec2e8a-bd50-4f82-8ce3-a1c61f48ddb7
 title: Text-Element
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ed9c72fe584d0e796d4a6f897297aa60bbeddc5d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 570f613a06f9fe814bfb1acbdbdba040dbc1119f
+ms.sourcegitcommit: c3f669dc1d52278432bf75ad9fddba3257d26aa2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103960664"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111432318"
 ---
 # <a name="text-element"></a>Text-Element
 
-Enthält Textinformationen aus der Journal Notiz.
+Enthält Textinformationen aus der Journalnotiz.
 
 ## <a name="definition"></a>Definition
 
-Bei Verwendung mit [**Inhalt**](content-element--journal-reader.md):
+Bei Verwendung mit [**Inhalt:**](content-element--journal-reader.md)
 
 ``` syntax
 <xs:element name="Text" type="TextType" />
 ```
 
-Oder bei Verwendung mit [**titleinfo**](titleinfo-element.md) und [**groupnode**](groupnode-element.md):
+Oder, wenn sie mit [**TitleInfo und**](titleinfo-element.md) [**GroupNode verwendet wird:**](groupnode-element.md)
 
 ``` syntax
 <xs:element name="Text" type="xs:string" />
@@ -33,9 +33,9 @@ Oder bei Verwendung mit [**titleinfo**](titleinfo-element.md) und [**groupnode**
 
 [**Inhalt**](content-element--journal-reader.md)
 
-[**-Gruppenknoten**](groupnode-element.md)
+[**GroupNode**](groupnode-element.md)
 
-[**Titleinfo**](titleinfo-element.md)
+[**TitleInfo**](titleinfo-element.md)
 
 ## <a name="child-elements"></a>Untergeordnete Elemente
 
@@ -43,16 +43,16 @@ Keine
 
 ## <a name="attributes"></a>Attribute
 
-Es gibt keine Attribute, wenn Sie mit [**titleinfo**](titleinfo-element.md) und [**groupnode**](groupnode-element.md)verwendet werden. Bei Verwendung mit [**Inhalt**](content-element--journal-reader.md)lauten die Attribute wie folgt.
+Es gibt keine Attribute, wenn sie mit [**TitleInfo und**](titleinfo-element.md) [**GroupNode verwendet werden.**](groupnode-element.md) Bei Verwendung mit [**Content**](content-element--journal-reader.md)lauten die Attribute wie folgt.
 
 
 
-| Attribut  | type                      | Erforderlich | BESCHREIBUNG                                                                             | Mögliche Werte           |
+| attribute  | Typ                      | Erforderlich | BESCHREIBUNG                                                                             | Mögliche Werte           |
 |------------|---------------------------|----------|-----------------------------------------------------------------------------------------|---------------------------|
-| **Left**   | **xs:integer**            | Erforderlich | Der Abstand zwischen dem Ursprung und dem äußersten äußersten linken Punkt im umgebenden Feld des Elements. | Eine beliebige ganze Zahl.              |
-| **Top**    | **xs:integer**            | Erforderlich | Der Abstand zwischen dem Ursprung und dem obersten Punkt im umgebenden Feld für das Element.  | Eine beliebige ganze Zahl.              |
-| **Width**  | **xs:nonNegativeInteger** | Erforderlich | Die Breite des Begrenzungs Rahmens für das Element.                                          | Eine beliebige nicht negative ganze Zahl. |
-| **Height** | **xs:nonNegativeInteger** | Erforderlich | Die Höhe des umgebenden Felds für das Element.                                         | Eine beliebige nicht negative ganze Zahl. |
+| **Left**   | **xs:integer**            | Erforderlich | Der Abstand zwischen dem Ursprung und dem äußersten linken Punkt im Begrenzungsfeld für das Element. | Eine beliebige ganze Zahl.              |
+| **Top**    | **xs:integer**            | Erforderlich | Der Abstand zwischen dem Ursprung und dem obersten Punkt im Begrenzungsfeld für das Element.  | Eine beliebige ganze Zahl.              |
+| **Width**  | **xs:nonNegativeInteger** | Erforderlich | Die Breite des Begrenzungsfelds für das Element.                                          | Eine nicht negative ganze Zahl. |
+| **Height** | **xs:nonNegativeInteger** | Erforderlich | Die Höhe des Begrenzungsfelds für das Element.                                         | Eine nicht negative ganze Zahl. |
 
 
 
@@ -62,11 +62,11 @@ Es gibt keine Attribute, wenn Sie mit [**titleinfo**](titleinfo-element.md) und 
 
 
 
-|              |                                                                                                                                                                                                     |
+|   Element           |   Wert                                |
 |--------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Elementtyp | ComplexType-Element von [**TextType**](texttype-complex-type.md) (mit dem Content-Element) oder **xs: String** (mit [**groupnode**](groupnode-element.md) -und [**titleinfo**](titleinfo-element.md) -Elementen) |
-| Namespace    | urn: Schemas-Microsoft-com: TabletPC: RichInk<br/>                                                                                                                                               |
-| Schemaname  | Journal Leser<br/>                                                                                                                                                                           |
+| Elementtyp | [**complexType:TextType**](texttype-complex-type.md) (mit dem Content-Element) oder **xs:string** (mit [**GroupNode-**](groupnode-element.md) und [**TitleInfo-Elementen)**](titleinfo-element.md) |
+| Namespace    | urn:schemas-microsoft-com:tabletpc:richink<br/>                                                                                                                                               |
+| Schemaname  | Journalreader<br/>                                                                                                                                                                           |
 
 
 

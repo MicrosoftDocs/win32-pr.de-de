@@ -1,56 +1,56 @@
 ---
-description: Erstellen Sie symbolische Verknüpfungen, die einen absoluten oder relativen Pfad verwenden, indem Sie die Funktion "kreatesymboliclink" verwenden.
+description: Erstellen Sie symbolische Verknüpfungen, die entweder einen absoluten oder relativen Pfad verwenden, indem Sie die CreateSymbolicLink-Funktion verwenden.
 ms.assetid: 3821478d-87bb-4e47-8263-d977cf665503
-title: Erstellen von symbolischen Verknüpfungen
+title: Erstellen symbolischer Verknüpfungen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8c978532ffc11e44615d4de0ea902152438ecc7c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 252b999b05004fd7735b16582783ef0c3afb0013
+ms.sourcegitcommit: cb87082135319cbdc5df541e3071eebb83a58972
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104347829"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111387706"
 ---
-# <a name="creating-symbolic-links"></a>Erstellen von symbolischen Verknüpfungen
+# <a name="creating-symbolic-links"></a>Erstellen symbolischer Verknüpfungen
 
-Die Funktion " [**kreatesymboliclink**](/windows/desktop/api/WinBase/nf-winbase-createsymboliclinka) " ermöglicht es Ihnen, symbolische Verknüpfungen mit einem absoluten oder relativen Pfad zu erstellen.
+Mit der [**Funktion CreateSymbolicLink**](/windows/desktop/api/WinBase/nf-winbase-createsymboliclinka) können Sie symbolische Verknüpfungen mit einem absoluten oder relativen Pfad erstellen.
 
-Symbolische Verknüpfungen können entweder absolute oder relative Links sein. Absolute Links sind Links, die jeden Teil des Pfadnamens angeben. relative Verknüpfungen werden relativ zu bestimmt, wo sich relative –-linkspezifier in einem angegebenen Pfad befinden. Relative Links werden mithilfe der folgenden Konventionen angegeben:
+Symbolische Verknüpfungen können entweder absolute oder relative Links sein. Absolute Links sind Links, die jeden Teil des Pfadnamens angeben. Relative Links werden relativ dazu bestimmt, wo sich relative-link-Spezifizierer in einem angegebenen Pfad befinden. Relative Links werden mit den folgenden Konventionen angegeben:
 
--   Punkt (. und..) Konventionen – z. b. ".. \\ " löst den Pfad relativ zum übergeordneten Verzeichnis auf.
--   Namen ohne Schrägstriche ( \) – z. b. "tmp" löst den Pfad relativ zum aktuellen Verzeichnis auf.
--   Root relative – beispielsweise wird " \\ Windows \\ system32" in das *aktuelle Laufwerk*: \\ Windows System32 aufgelöst \\ . directory
--   Aktuelles Arbeitsverzeichnis-relativ – wenn das aktuelle Arbeitsverzeichnis z. b. "c: \\ Windows \\ system32" ist, wird "C:File.txt" in "c: \\ Windows \\ system32 \\File.txt" aufgelöst.
+-   Punkt (. und ..) -Konventionen, z. B. ".. \\ " löst den Pfad relativ zum übergeordneten Verzeichnis auf.
+-   Namen ohne Schrägstriche ( \\ ), z.B. "tmp" löst den Pfad relativ zum aktuellen Verzeichnis auf.
+-   Root relative, z.B. " \\ Windows \\ System32" wird in das *"aktuelle Laufwerk*: \\ Windows \\ System32" aufgelöst. directory
+-   Aktuelles Arbeitsverzeichnis relativ: Wenn das aktuelle Arbeitsverzeichnis z. B. "C: \\ Windows \\ System32" lautet, wird "C:File.txt" in "C: \\ Windows \\ System32 \\File.txt" aufgelöst.
 
-    **Hinweis**  Wenn Sie ein Aktuelles Arbeitsverzeichnis angeben – relative Verknüpfung, wird es als absoluter Link erstellt, weil das aktuelle Arbeitsverzeichnis basierend auf dem Benutzer und dem Thread verarbeitet wird.
+    **Hinweis**  Wenn Sie einen aktuellen Link vom Typ Arbeitsverzeichnis –relativ angeben, wird er aufgrund der Verarbeitung des aktuellen Arbeitsverzeichnisses basierend auf dem Benutzer und dem Thread als absoluter Link erstellt.
 
-Eine symbolische Verknüpfung kann auch sowohl Verknüpfungs Punkte als auch eingebundene Ordner als Teil des Pfadnamens enthalten.
+Eine symbolische Verknüpfung kann auch Verbindungspunkte und bereitgestellte Ordner als Teil des Pfadnamens enthalten.
 
-Symbolische Verknüpfungen können mithilfe des UNC-Pfads direkt auf eine Remote Datei oder ein Remote Verzeichnis verweisen.
+Symbolische Verknüpfungen können mithilfe des UNC-Pfads direkt auf eine Remotedatei oder ein Remoteverzeichnis verweisen.
 
 Relative symbolische Verknüpfungen sind auf ein einzelnes Volume beschränkt.
 
 ## <a name="example-of-an-absolute-symbolic-link"></a>Beispiel für einen absoluten symbolischen Link
 
-In diesem Beispiel enthält der ursprüngliche Pfad die Komponente "*x*", bei der es sich um einen absoluten symbolischen Link handelt. Wenn '*x*' gefunden wird, wird das Fragment des ursprünglichen Pfads bis zu und einschließlich '*x*' vollständig durch den Pfad ersetzt, auf den von '*x*' verwiesen wird. Der restliche Pfad nach "*x*" wird an diesen neuen Pfad angehängt. Dies wird jetzt zum geänderten Pfad.
+In diesem Beispiel enthält der ursprüngliche Pfad die Komponente "*x*", die eine absolute symbolische Verknüpfung ist. Wenn *"x"* gefunden wird, wird das Fragment des ursprünglichen Pfads bis einschließlich *"x"* vollständig durch den Pfad ersetzt, auf den *"x"* zeigt. Der Rest des Pfads nach "*x*" wird an diesen neuen Pfad angefügt. Dies wird nun zum geänderten Pfad.
 
-X: "C: \\ alpha \\ Beta \\ abslink \\ Gamma \\ Datei"
+X: "C: \\ alpha \\ beta \\ absLink gamma \\ \\ file"
 
-Link: "abslink" ist " \\ \\ machineB \\ share" zugeordnet
+Link: "absLink" wird \\ \\ "machineB \\ share" zugeordnet.
 
-Geänderter Pfad: " \\ \\ machineB \\ share \\ Gamma \\ file"
+Geänderter Pfad: \\ \\ "machineB \\ share \\ gamma \\ file"
 
 ## <a name="example-of-a-relative-symbolic-links"></a>Beispiel für relative symbolische Verknüpfungen
 
-In diesem Beispiel enthält der ursprüngliche Pfad die Komponente "*x*", bei der es sich um einen relativen symbolischen Link handelt. Wenn "*x*" gefunden wird, wird "*x*" vollständig durch das neue Fragment ersetzt, auf das von "*x*" gezeigt wird. Der restliche Pfad nach "*x*" wird an den neuen Pfad angehängt. Beliebige Punkte (..) in diesem neuen Pfad ersetzen Komponenten, die vor den Punkten (..) angezeigt werden. Jede Gruppe von Punkten ersetzt die vorangehende Komponente. Wenn die Anzahl der Punkte (..) die Anzahl der Komponenten überschreitet, wird ein Fehler zurückgegeben. Wenn alle Komponenten Ersetzung abgeschlossen ist, bleibt der abschließende, geänderte Pfad.
+In diesem Beispiel enthält der ursprüngliche Pfad eine Komponente "*x*", die eine relative symbolische Verknüpfung ist. Wenn '*x*' gefunden wird, wird '*x*' vollständig durch das neue Fragment ersetzt, auf das von '*x*' gezeigt wird. Der Rest des Pfads nach '*x*' wird an den neuen Pfad angefügt. Alle Punkte (..) in diesem neuen Pfad ersetzen Komponenten, die vor den Punkten (..) angezeigt werden. Jeder Satz von Punkten ersetzt die vorangehende Komponente. Wenn die Anzahl der Punkte (..) die Anzahl der Komponenten überschreitet, wird ein Fehler zurückgegeben. Andernfalls verbleibt der letzte geänderte Pfad, wenn der Austausch aller Komponenten abgeschlossen ist.
 
-X: C: \\ alpha- \\ Beta \\ Link- \\ Gamma \\ Datei
+X: C: \\ Alpha beta link gamma \\ \\ \\ \\ file
 
-Link: "Link" ist zugeordnet zu "... \\ . \\ Theta
+Link: "link" entspricht ".. \\ .. \\ theta"
 
-Modifizierter Pfad: "C: \\ alpha \\ Beta \\ .. \\ . \\ Datei- \\ Gamma \\ Datei "
+Geänderter Pfad: "C: \\ alpha \\ beta \\ .. \\ .. \\ theta \\ gamma \\ file"
 
-Abschließender Pfad: "C: die \\ \\ \\ Datei Gamma Datei"
+Endgültiger Pfad: "C: \\ theta \\ gamma \\ file"
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -59,7 +59,7 @@ Abschließender Pfad: "C: die \\ \\ \\ Datei Gamma Datei"
 [Symbolische Verknüpfungen](symbolic-links.md)
 </dt> <dt>
 
-[Feste Links und Verbindungen](hard-links-and-junctions.md)
+[Hard Links and Junctions](hard-links-and-junctions.md)
 </dt> <dt>
 
 [Benennen von Dateien, Pfaden und Namespaces](naming-a-file.md)

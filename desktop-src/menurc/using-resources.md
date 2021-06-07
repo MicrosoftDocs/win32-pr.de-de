@@ -1,37 +1,37 @@
 ---
 title: Verwenden von Ressourcen
-description: Dieser Abschnitt enthält Code, der sich auf Ressourcen Programmierungsaufgaben bezieht.
+description: Dieser Abschnitt enthält Code im Zusammenhang mit Ressourcenprogrammierungsaufgaben.
 ms.assetid: 73678045-1518-46cd-ab55-5d272852ba73
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 51c197cbec1e2ecf495f7a682d70311edc45c069
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: f9e4f42f908bc2ee63cfa273a5251b0bd8d9bf86
+ms.sourcegitcommit: b01ad017c152c6756f3638623fe335877644d414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104473092"
+ms.lasthandoff: 06/06/2021
+ms.locfileid: "111549872"
 ---
 # <a name="using-resources"></a>Verwenden von Ressourcen
 
-Dieser Abschnitt enthält Code Ausschnitte für die folgenden Aufgaben:
+Dieser Abschnitt enthält Codeausschnitte für die folgenden Aufgaben:
 
 -   [Aktualisieren von Ressourcen](#updating-resources)
--   [Erstellen einer Ressourcen Liste](#creating-a-resource-list)
+-   [Erstellen einer Ressourcenliste](#creating-a-resource-list)
 
 ## <a name="updating-resources"></a>Aktualisieren von Ressourcen
 
-Im folgenden Beispiel wird eine Dialogfeld Ressource mithilfe der folgenden Schritte aus einer ausführbaren Datei Hand.exe in eine andere Datei Foot.exe kopiert:
+Im folgenden Beispiel wird eine Dialogfeldressource aus einer ausführbaren Datei ( Hand.exe) in eine andere Foot.exe kopiert, indem die folgenden Schritte ausgeführt werden:
 
-1.  Verwenden Sie die [**LoadLibrary**](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya) -Funktion, um die ausführbare Datei Hand.exe zu laden.
-2.  Verwenden Sie die Funktionen [**FindResource**](/windows/desktop/api/Winbase/nf-winbase-findresourcea) und [**LoadResource**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadresource) , um die Dialogfeld Ressource zu suchen und zu laden.
-3.  Verwenden Sie die [**LockResource**](/windows/win32/api/libloaderapi/nf-libloaderapi-lockresource) -Funktion, um einen Zeiger auf die Ressourcen Daten des Dialog Felds abzurufen.
-4.  Verwenden Sie die [**beginupdateresource**](/windows/desktop/api/Winbase/nf-winbase-beginupdateresourcea) -Funktion, um ein Aktualisierungs Handle zum Foot.exe zu öffnen.
-5.  Verwenden Sie die [**UpdateResource**](/windows/desktop/api/Winbase/nf-winbase-updateresourcea) -Funktion, um die Dialogfeld Ressource von Hand.exe in Foot.exe zu kopieren.
-6.  Verwenden Sie die [**endupdateresource**](/windows/desktop/api/Winbase/nf-winbase-endupdateresourcea) -Funktion, um das Update abzuschließen.
+1.  Verwenden Sie die [**LoadLibrary-Funktion,**](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya) um die ausführbare Datei Hand.exe zu laden.
+2.  Verwenden Sie die Funktionen [**FindResource**](/windows/desktop/api/Winbase/nf-winbase-findresourcea) und [**LoadResource,**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadresource) um die Dialogfeldressource zu suchen und zu laden.
+3.  Verwenden Sie die [**LockResource-Funktion,**](/windows/win32/api/libloaderapi/nf-libloaderapi-lockresource) um einen Zeiger auf die Ressourcendaten des Dialogfelds abzurufen.
+4.  Verwenden Sie die [**BeginUpdateResource-Funktion,**](/windows/desktop/api/Winbase/nf-winbase-beginupdateresourcea) um ein Updatehandle für Foot.exe zu öffnen.
+5.  Verwenden Sie die [**UpdateResource-Funktion,**](/windows/desktop/api/Winbase/nf-winbase-updateresourcea) um die Dialogfeldressource aus Hand.exe in Foot.exe zu kopieren.
+6.  Verwenden Sie die [**EndUpdateResource-Funktion,**](/windows/desktop/api/Winbase/nf-winbase-endupdateresourcea) um das Update abzuschließen.
 
-Der folgende Code implementiert diese Schritte.
+Im folgenden Code werden diese Schritte implementiert.
 
-**Sicherheitswarnung:** Die falsche Verwendung von [**LoadLibrary**](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya) kann die Sicherheit Ihrer Anwendung beeinträchtigen, indem die falsche DLL geladen wird. Informationen zum ordnungsgemäßen Laden von DLLs mit unterschiedlichen Versionen von Windows finden Sie in der Dokumentation zu **LoadLibrary** .
+**Sicherheitswarnung:** Die falsche Verwendung von [**LoadLibrary**](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya) kann die Sicherheit Ihrer Anwendung beeinträchtigen, indem die falsche DLL geladen wird. Informationen zum ordnungsgemäßen Laden von DLLs mit verschiedenen Versionen von Windows finden Sie in der **LoadLibrary-Dokumentation.**
 
 
 ```C++
@@ -115,17 +115,17 @@ if (!FreeLibrary(hExe))
 
 
 
-## <a name="creating-a-resource-list"></a>Erstellen einer Ressourcen Liste
+## <a name="creating-a-resource-list"></a>Erstellen einer Ressourcenliste
 
-Im folgenden Beispiel wird eine Liste aller Ressourcen in der Hand.exe-Datei erstellt. Die Liste wird in die Resinfo.txt Datei geschrieben.
+Im folgenden Beispiel wird eine Liste aller Ressourcen in der Hand.exe-Datei erstellt. Die Liste wird in die datei Resinfo.txt geschrieben.
 
-Im Code wird veranschaulicht, wie die ausführbare Datei geladen, eine Datei erstellt wird, in der Ressourcen Informationen geschrieben werden, und die [**enumresourcetypes**](/windows/desktop/api/Winbase/nf-winbase-enumresourcetypesa) -Funktion aufgerufen wird, um jeden Ressourcentyp im Modul an die Anwendungs definierte Rückruffunktion zu senden `EnumTypesFunc` . Weitere Informationen zu Rückruf Funktionen dieses Typs finden Sie unter [*enumrestypproc*](/windows/win32/api/libloaderapi/nc-libloaderapi-enumrestypeproca) . Diese Rückruffunktion verwendet die [**enumresourcenames**](/windows/desktop/api/Winbase/nf-winbase-enumresourcenamesa) -Funktion, um den Namen der einzelnen Ressourcen innerhalb des angegebenen Typs an eine andere Anwendungs definierte Rückruffunktion zu übergeben `EnumNamesFunc` . Weitere Informationen zu Rückruf Funktionen dieses Typs finden Sie unter [*enumresnameproc*](/windows/win32/api/libloaderapi/nc-libloaderapi-enumresnameproca) . `EnumNamesFunc` verwendet die [**enumresourcelanguages**](/windows/desktop/api/Winbase/nf-winbase-enumresourcelanguagesa) -Funktion, um die Sprache jeder Ressource des angegebenen Typs und namens an eine dritte Rückruffunktion () zu übergeben `EnumLangsFunc` . Weitere Informationen zu Rückruf Funktionen dieses Typs finden Sie unter [*enumreslangproc*](/previous-versions/windows/desktop/legacy/ms648033(v=vs.85)) . `EnumLangsFunc` schreibt Informationen über die Ressource des angegebenen Typs, des angegebenen Namens und der angegebenen Sprache in die Resinfo.txt Datei.
+Der Code veranschaulicht, wie die ausführbare Datei geladen, eine Datei zum Schreiben von Ressourceninformationen erstellt und die [**EnumResourceTypes-Funktion**](/windows/desktop/api/Winbase/nf-winbase-enumresourcetypesa) aufgerufen wird, um jeden im Modul gefundenen Ressourcentyp an die anwendungsdefinierte Rückruffunktion zu `EnumTypesFunc` senden. Informationen zu Rückruffunktionen dieses Typs finden Sie unter [*EnumResTypeProc.*](/windows/win32/api/libloaderapi/nc-libloaderapi-enumrestypeproca) Diese Rückruffunktion verwendet die [**EnumResourceNames-Funktion,**](/windows/desktop/api/libloaderapi/nf-libloaderapi-enumresourcenamesa) um den Namen jeder Ressource innerhalb des angegebenen Typs an eine andere anwendungsdefinierte Rückruffunktion, , zu `EnumNamesFunc` übergeben. Informationen zu Rückruffunktionen dieses Typs finden Sie unter [*EnumResNameProc.*](/windows/win32/api/libloaderapi/nc-libloaderapi-enumresnameproca) `EnumNamesFunc` verwendet die [**EnumResourceLanguages-Funktion,**](/windows/desktop/api/Winbase/nf-winbase-enumresourcelanguagesa) um die Sprache jeder Ressource des angegebenen Typs und Namens an eine dritte Rückruffunktion, , zu `EnumLangsFunc` übergeben. Informationen zu Rückruffunktionen dieses Typs finden Sie unter [*EnumResLangProc.*](/previous-versions/windows/desktop/legacy/ms648033(v=vs.85)) `EnumLangsFunc` schreibt Informationen über die Ressource des angegebenen Typs, Namens und der angegebenen Sprache in die Resinfo.txt Datei.
 
-Beachten Sie, dass der *lpsztype* in [*enumrestypeer proc*](/windows/win32/api/libloaderapi/nc-libloaderapi-enumrestypeproca) entweder eine Ressourcen-ID oder ein Zeiger auf eine Zeichenfolge (die eine Ressourcen-ID oder einen Typnamen enthält) ist. " *lpsztype* " und " *lpszname* " in " [*enumresnameproc*](/windows/win32/api/libloaderapi/nc-libloaderapi-enumresnameproca) " und " [*enumreslangproc*](/previous-versions/windows/desktop/legacy/ms648033(v=vs.85)) " ähneln einander. Um eine aufgelistete Ressource zu laden, müssen Sie einfach die entsprechende Funktion aufzurufen. Wenn beispielsweise eine Menü Ressource (**RT- \_ Menü**) aufgezählt wurde, übergeben Sie *lpszname* an [**loadmenu**](/windows/desktop/api/Winuser/nf-winuser-loadmenua). Übergeben Sie für benutzerdefinierte Ressourcen " *lpsztype* " und " *lpszname* " an [**FindResource**](/windows/desktop/api/Winbase/nf-winbase-findresourcea).
+Beachten Sie, dass *lpszType* in [*EnumResTypeProc*](/windows/win32/api/libloaderapi/nc-libloaderapi-enumrestypeproca) entweder eine Ressourcen-ID oder ein Zeiger auf eine Zeichenfolge (mit einer Ressourcen-ID oder einem Typnamen) ist. *lpszType* und *lpszName* in [*EnumResNameProc*](/windows/win32/api/libloaderapi/nc-libloaderapi-enumresnameproca) und [*EnumResLangProc*](/previous-versions/windows/desktop/legacy/ms648033(v=vs.85)) sind ähnlich. Um eine aufzählende Ressource zu laden, rufen Sie einfach die entsprechende Funktion auf. Wenn beispielsweise eine Menüressource (**RT \_ MENU**) aufzählt wurde, übergeben Sie *lpszName* an [**LoadMenu**](/windows/desktop/api/Winuser/nf-winuser-loadmenua). Übergeben Sie für benutzerdefinierte Ressourcen *lpszType* und *lpszName* an [**FindResource**](/windows/desktop/api/Winbase/nf-winbase-findresourcea).
 
-Der Code für die [Update Ressourcen](#updating-resources) folgt einem ähnlichen Muster für eine Dialogfeld Ressource.
+Der Code [zum Aktualisieren von Ressourcen](#updating-resources) folgt einem ähnlichen Muster für eine Dialogfeldressource.
 
-**Sicherheitswarnung:** Die falsche Verwendung von [**LoadLibrary**](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya) kann die Sicherheit Ihrer Anwendung beeinträchtigen, indem die falsche DLL geladen wird. Informationen zum ordnungsgemäßen Laden von DLLs mit unterschiedlichen Versionen von Windows finden Sie in der Dokumentation zu **LoadLibrary** .
+**Sicherheitswarnung:** Die falsche Verwendung von [**LoadLibrary**](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya) kann die Sicherheit Ihrer Anwendung beeinträchtigen, indem die falsche DLL geladen wird. Informationen zum ordnungsgemäßen Laden von DLLs mit verschiedenen Versionen von Windows finden Sie in der **LoadLibrary-Dokumentation.**
 
 
 ```C++
@@ -388,6 +388,6 @@ BOOL EnumLangsFunc(
 
 
 
- 
+ 
 
- 
+ 

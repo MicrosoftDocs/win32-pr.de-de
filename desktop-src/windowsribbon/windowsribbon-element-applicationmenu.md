@@ -1,9 +1,9 @@
 ---
-title: Applicationmenu-Element
-description: Stellt das Anwendungsmenü dar. | Applicationmenu-Element
+title: ApplicationMenu-Element
+description: Stellt das Anwendungsmenü dar. | ApplicationMenu-Element
 ms.assetid: 815e0462-ea45-44b1-81bf-f5797b22e920
 keywords:
-- Windows-Menüband "applicationmenu-Element"
+- ApplicationMenu-Element Windows-Menüband
 topic_type:
 - apiref
 api_name:
@@ -13,18 +13,18 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: a02193b4c3e61b4b8cf2f129619969f6a82a84ac
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: e535fbcc09a404ad7dd5a4019438f4513f5c77c6
+ms.sourcegitcommit: 099ecdda1e83618b844387405da0db0ebda93a65
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104219278"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111443051"
 ---
-# <a name="applicationmenu-element"></a>Applicationmenu-Element
+# <a name="applicationmenu-element"></a>ApplicationMenu-Element
 
 Stellt das [Anwendungsmenü](windowsribbon-controls-applicationmenu.md)dar.
 
-## <a name="usage"></a>Verbrauch
+## <a name="usage"></a>Verwendung
 
 ``` syntax
 <ApplicationMenu
@@ -47,8 +47,8 @@ Stellt das [Anwendungsmenü](windowsribbon-controls-applicationmenu.md)dar.
 </colgroup>
 <thead>
 <tr class="header">
-<th>Attribut</th>
-<th>type</th>
+<th>attribute</th>
+<th>Typ</th>
 <th>Erforderlich</th>
 <th>BESCHREIBUNG</th>
 </tr>
@@ -56,10 +56,10 @@ Stellt das [Anwendungsmenü](windowsribbon-controls-applicationmenu.md)dar.
 <tbody>
 <tr class="odd">
 <td><strong>CommandName</strong><br/></td>
-<td>xs: positiveingeteger oder xs: String<br/></td>
+<td>xs:positiveInteger oder xs:string<br/></td>
 <td>Nein<br/></td>
-<td>Ordnet das-Element einem <a href="windowsribbon-element-command.md"><strong>Befehl</strong></a>zu.<br/> <br/>
-<dt><span></span><span></span><strong></strong> (xs: positiveingeteger oder xs: String)<br/> </dt> <dd> Eine Zeichenfolge, ein ganzzahliger Wert zwischen 2 und 59999, einschließlich, oder ein Hexadezimalwert zwischen 0x2 und 0xea5f (einschließlich). <br/> Der Wert muss innerhalb des Menüband-XML-Dokuments eindeutig sein. <br/> Maximale Länge: 100 Zeichen. <br/> </dd> </dl></td>
+<td>Ordnet das Element einem <a href="windowsribbon-element-command.md"><strong>Command zu.</strong></a><br/> <br/>
+<dt><span></span><span></span><strong></strong> (xs:positiveInteger oder xs:string)<br/> </dt> <dd> Eine Zeichenfolge, ein ganzzahliger Wert zwischen 2 und 59999( einschließlich) oder ein Hexadezimalwert zwischen 0x2 und 0xea5f einschließlich. <br/> Der Wert muss innerhalb des Menüband-XML-Dokuments eindeutig sein. <br/> Maximale Länge: 100 Zeichen. <br/> </dd> </dl></td>
 </tr>
 </tbody>
 </table>
@@ -72,8 +72,8 @@ Stellt das [Anwendungsmenü](windowsribbon-controls-applicationmenu.md)dar.
 
 | Element                                                                                             | BESCHREIBUNG                                        |
 |-----------------------------------------------------------------------------------------------------|----------------------------------------------------|
-| [**Applicationmenu. recentitems**](windowsribbon-element-applicationmenu-recentitems.md)<br/> | Kann höchstens einmal vorkommen<br/> <br/>      |
-| [**MenuGroup**](windowsribbon-element-menugroup.md)<br/>                                     | Kann ein-oder mehrmals vorkommen<br/> <br/> |
+| [**ApplicationMenu.RecentItems**](windowsribbon-element-applicationmenu-recentitems.md)<br/> | Kann höchstens einmal auftreten.<br/> <br/>      |
+| [**Menugroup**](windowsribbon-element-menugroup.md)<br/>                                     | Kann ein oder mehrere Male auftreten<br/> <br/> |
 
 
 
@@ -83,26 +83,26 @@ Stellt das [Anwendungsmenü](windowsribbon-controls-applicationmenu.md)dar.
 
 | Element                                                                                   |
 |-------------------------------------------------------------------------------------------|
-| [**Menü Band. applicationmenu**](windowsribbon-element-ribbon-applicationmenu.md)<br/> |
+| [**Ribbon.ApplicationMenu**](windowsribbon-element-ribbon-applicationmenu.md)<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Erforderlich.
 
-Muss für jede [**Multifunktionsleiste. applicationmenu**](windowsribbon-element-ribbon-applicationmenu.md)genau einmal auftreten.
+Muss genau einmal für jede [**Ribbon.ApplicationMenu-Datei**](windowsribbon-element-ribbon-applicationmenu.md)auftreten.
 
-Die untergeordneten Elemente des **applicationmenu** -Elements müssen in der angegebenen Reihenfolge vorkommen:
+Die untergeordneten Elemente des **ApplicationMenu-Elements** müssen in der angegebenen Reihenfolge auftreten:
 
-1.  [**Applicationmenu. recentitems**](windowsribbon-element-applicationmenu-recentitems.md)
-2.  [**MenuGroup**](windowsribbon-element-menugroup.md)
+1.  [**ApplicationMenu.RecentItems**](windowsribbon-element-applicationmenu-recentitems.md)
+2.  [**Menugroup**](windowsribbon-element-menugroup.md)
 
 ## <a name="examples"></a>Beispiele
 
 Im folgenden Beispiel wird das grundlegende Markup für das [Anwendungsmenü](windowsribbon-controls-applicationmenu.md)veranschaulicht.
 
-Dieser Code Abschnitt zeigt die **applicationmenu** -Befehls Deklarationen.
+Dieser Codeabschnitt zeigt die ApplicationMenu-Befehlsdeklarationen. 
 
 
 ```XML
@@ -155,7 +155,7 @@ Dieser Code Abschnitt zeigt die **applicationmenu** -Befehls Deklarationen.
 
 
 
-Dieser Code Abschnitt zeigt die **applicationmenu** -Steuerelement Deklarationen.
+Dieser Codeabschnitt zeigt die **ApplicationMenu-Steuerelementdeklarationen.**
 
 
 ```XML
@@ -184,16 +184,12 @@ Dieser Code Abschnitt zeigt die **applicationmenu** -Steuerelement Deklarationen
 
 ## <a name="element-information"></a>Elementinformationen
 
-
-
-|                                     |           |
-|-------------------------------------|-----------|
-| Unterstützte Mindestversion (System)<br/> | Windows 7 |
-| Kann leer bleiben                        | Nein        |
+* **Unterstütztes Mindestsystem:** Windows 7
+* **Kann leer sein:** Nein
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

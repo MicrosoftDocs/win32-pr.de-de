@@ -1,9 +1,9 @@
 ---
-title: Controlnamemap-Element
-description: Stellt einen Container für Steuerelement Namen in einer benutzerdefinierten sizedefinition-Layoutvorlage dar.
+title: ControlNameMap-Element
+description: Stellt einen Container für Steuerelementnamen in einer benutzerdefinierten SizeDefinition-Layoutvorlage dar.
 ms.assetid: b4bceb90-a9a3-42d7-a85b-bf6e4e02784b
 keywords:
-- Controlnamemap-Element Windows-Menüband
+- ControlNameMap-Element Im Windows-Menüband
 topic_type:
 - apiref
 api_name:
@@ -13,18 +13,18 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 7ca5338978be7f9ddf3432cbe1a0fb8d243d8c00
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 42654af7f81730d01f9c699de7041ba24be185e9
+ms.sourcegitcommit: 099ecdda1e83618b844387405da0db0ebda93a65
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "103857419"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111442911"
 ---
-# <a name="controlnamemap-element"></a>Controlnamemap-Element
+# <a name="controlnamemap-element"></a>ControlNameMap-Element
 
-Stellt einen Container für Steuerelement Namen in einer benutzerdefinierten [**sizedefinition**](windowsribbon-element-sizedefinition.md) -Layoutvorlage dar.
+Stellt einen Container für Steuerelementnamen in einer benutzerdefinierten [**SizeDefinition-Layoutvorlage**](windowsribbon-element-sizedefinition.md) dar.
 
-## <a name="usage"></a>Verbrauch
+## <a name="usage"></a>Verwendung
 
 ``` syntax
 <ControlNameMap>
@@ -42,7 +42,7 @@ Es gibt keine Attribute.
 
 | Element                                                                                 | BESCHREIBUNG                                        |
 |-----------------------------------------------------------------------------------------|----------------------------------------------------|
-| [**Controlnamedefinition**](windowsribbon-element-controlnamedefinition.md)<br/> | Kann ein-oder mehrmals vorkommen<br/> <br/> |
+| [**ControlNameDefinition**](windowsribbon-element-controlnamedefinition.md)<br/> | Kann ein oder mehrere Male auftreten.<br/> <br/> |
 
 
 
@@ -52,19 +52,19 @@ Es gibt keine Attribute.
 
 | Element                                                                   |
 |---------------------------------------------------------------------------|
-| [**Sizedefinition**](windowsribbon-element-sizedefinition.md)<br/> |
+| [**SizeDefinition**](windowsribbon-element-sizedefinition.md)<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Dies ist optional.
 
-Kann höchstens einmal für jedes [**sizedefinition**](windowsribbon-element-sizedefinition.md) -Element auftreten.
+Kann für jedes [**SizeDefinition-Element mindestens einmal**](windowsribbon-element-sizedefinition.md) auftreten.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Codebeispiel wird das grundlegende Markup für eine benutzerdefinierte [**sizedefinition**](windowsribbon-element-sizedefinition.md) -Layoutvorlage mit vier Schaltflächen mit einem **controlnamemap** -Element veranschaulicht.
+Im folgenden Codebeispiel wird das grundlegende Markup für eine benutzerdefinierte [**SizeDefinition-Layoutvorlage**](windowsribbon-element-sizedefinition.md) mit vier Schaltflächen mit einem **ControlNameMap-Element** veranschaulicht.
 
 
 ```XML
@@ -156,20 +156,16 @@ Im folgenden Codebeispiel wird das grundlegende Markup für eine benutzerdefinie
 
 ## <a name="element-information"></a>Elementinformationen
 
-
-
-|                                     |           |
-|-------------------------------------|-----------|
-| Unterstützte Mindestversion (System)<br/> | Windows 7 |
-| Kann leer bleiben                        | Nein        |
+* **Unterstütztes Mindestsystem:** Windows 7
+* **Kann leer sein:** Nein
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[Anpassen eines Menübands durch Größen Definitionen und Skalierungs Richtlinien](windowsribbon-templates.md)
+[Anpassen eines Menübands durch Größendefinitionen und Skalierungsrichtlinien](windowsribbon-templates.md)
 </dt> </dl>
 
  

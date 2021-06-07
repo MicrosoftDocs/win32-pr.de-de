@@ -1,45 +1,45 @@
 ---
-description: Dieses Thema enthält Informationen über den nativen ICO-Codec, der über die Windows Imaging Component (WIC) verfügbar ist.
+description: Dieses Thema enthält Informationen zum nativen ICO-Codec, der über Windows-Bilderstellungskomponente (WIC) verfügbar ist.
 ms.assetid: EF28956E-7156-4BAE-8805-C64B8C8ADE50
-title: Übersicht über ICO-Format
+title: Übersicht über das ICO-Format
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4d370497e9231d6deb8d1793a26a53565b5cd99c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 329a53a3b5d386c5e5386141162c608dc9db1ec0
+ms.sourcegitcommit: 099ecdda1e83618b844387405da0db0ebda93a65
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106360814"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111444470"
 ---
-# <a name="ico-format-overview"></a>Übersicht über ICO-Format
+# <a name="ico-format-overview"></a>Übersicht über das ICO-Format
 
-Dieses Thema enthält Informationen über den nativen ICO-Codec, der über die Windows Imaging Component (WIC) verfügbar ist.
+Dieses Thema enthält Informationen zum nativen ICO-Codec, der über Windows-Bilderstellungskomponente (WIC) verfügbar ist.
 
 ## <a name="codec-identity"></a>Codec-Identität
 
-In der folgenden Tabelle werden Codec-Identifikationsinformationen bereitstellt.
+Die folgende Tabelle enthält Informationen zur Codecidentifikation.
 
 
 
-|                        |                   |
+|   Komponente            | BESCHREIBUNG       |
 |------------------------|-------------------|
-| Formaler Name (n)         | Symbol Format (ICO) |
-| Dateinamenerweiterung (en) | ICO               |
-| MIME-Typ (MIME type)              | Image/ICO         |
-| Spezifikations Unterstützung  |                   |
+| Formale Namen         | Symbolformat (ICO) |
+| Dateinamenerweiterungen | Ico               |
+| MIME-Typ (MIME type)              | image/ico         |
+| Spezifikationsunterstützung  |                   |
 
 
 
  
 
-In der folgenden Tabelle werden die GUIDs aufgelistet, mit denen die systemeigenen ICO-Codec-Komponenten identifiziert werden.
+In der folgenden Tabelle sind die GUIDs aufgeführt, die zum Identifizieren der nativen ICO-Codeckomponenten verwendet werden.
 
 
 
 | Komponente        | Anzeigename            | GUID                                |
 |------------------|--------------------------|-------------------------------------|
-| Container Format | GUID \_ containerformatico | a3a860c4-338f-4c17-919afba4b5628f |
-| Decoder          | CLSID- \_ wicikodecoder     | c61bfcdf-2e0f-4aad-a8d7e06bafebcdfe |
+| Containerformat | GUID \_ ContainerFormatIco | a3a860c4-338f-4c17-919afba4b5628f21 |
+| Decoder          | CLSID \_ WICIcoDecoder     | c61bfcdf-2e0f-4aad-a8d7e06bafebcdfe |
 | Encoder          | NICHT VERFÜGBAR            | NICHT VERFÜGBAR                       |
 
 
@@ -48,11 +48,11 @@ In der folgenden Tabelle werden die GUIDs aufgelistet, mit denen die systemeigen
 
 ## <a name="encoding"></a>Codierung
 
-WIC stellt keinen systemeigenen ICO-Image Encoder bereit.
+WIC stellt keinen nativen ICO-Imageencoder bereit.
 
 ## <a name="decoding"></a>Decodierung
 
-Die WIC-Decodierung-API ist als Codec-unabhängig konzipiert, und die Decodierung von Bildern für WIC-fähige Codecs ist im Wesentlichen identisch. Weitere Informationen zur Decodierung von Bildern finden Sie in der Übersicht über die [Decodierung](-wic-creating-decoder.md). Weitere Informationen zur Verwendung von decodierten Bilddaten finden Sie in der [Übersicht über Bitmap-Quellen](-wic-bitmapsources.md).
+Die WIC-Decodierungs-API ist so konzipiert, dass sie codecunabhängig ist, und die Bilddecodierung für WIC-fähige Codecs ist im Wesentlichen identisch. Weitere Informationen zur Bilddecodierung finden Sie in der Übersicht über die [Decodierung.](-wic-creating-decoder.md) Weitere Informationen zur Verwendung von decodierten Bilddaten finden Sie in der [Übersicht über Bitmapquellen.](-wic-bitmapsources.md)
 
  
 

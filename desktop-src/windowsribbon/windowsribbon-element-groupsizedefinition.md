@@ -1,9 +1,9 @@
 ---
-title: Groupsizedefinition-Element
+title: GroupSizeDefinition-Element
 description: Stellt eine Layoutgröße für eine Gruppe von Steuerelementen in einer benutzerdefinierten Vorlage dar.
 ms.assetid: c0e20c80-16af-41d5-81e1-0dc32e92e3fa
 keywords:
-- Groupsizedefinition-Element Windows-Menüband
+- GroupSizeDefinition-Element im Windows-Menüband
 topic_type:
 - apiref
 api_name:
@@ -13,18 +13,18 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 5cf166dbf428c9d17beb148887cc94be73dc11a0
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 650301a29ace2c6df9316a315d4cdbad448e5573
+ms.sourcegitcommit: 099ecdda1e83618b844387405da0db0ebda93a65
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "106339461"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111443381"
 ---
-# <a name="groupsizedefinition-element"></a>Groupsizedefinition-Element
+# <a name="groupsizedefinition-element"></a>GroupSizeDefinition-Element
 
 Stellt eine Layoutgröße für eine Gruppe von Steuerelementen in einer benutzerdefinierten Vorlage dar.
 
-## <a name="usage"></a>Verbrauch
+## <a name="usage"></a>Verwendung
 
 ``` syntax
 <GroupSizeDefinition
@@ -46,8 +46,8 @@ Stellt eine Layoutgröße für eine Gruppe von Steuerelementen in einer benutzer
 </colgroup>
 <thead>
 <tr class="header">
-<th>Attribut</th>
-<th>type</th>
+<th>attribute</th>
+<th>Typ</th>
 <th>Erforderlich</th>
 <th>BESCHREIBUNG</th>
 </tr>
@@ -57,8 +57,8 @@ Stellt eine Layoutgröße für eine Gruppe von Steuerelementen in einer benutzer
 <td><strong>Größe</strong><br/></td>
 <td>xs:string<br/></td>
 <td>Nein<br/></td>
-<td>Beschränkt auf einen der folgenden Werte:<br/> <br/>
-<dt><span></span><span></span><strong></strong> Viele<br/> </dt> <dd> Standard. <br/> </dd> <dt><span></span><span></span><strong></strong> Mittelalter<br/> </dt> <dd></dd> <dt><span></span><span></span><strong></strong> Zuletzt<br/> </dt> <dd></dd> </dl></td>
+<td>Auf einen der folgenden Werte beschränkt:<br/> <br/>
+<dt><span></span><span></span><strong></strong> (Groß)<br/> </dt> <dd> Standard. <br/> </dd> <dt><span></span><span></span><strong></strong> (Mittel)<br/> </dt> <dd></dd> <dt><span></span><span></span><strong></strong> (Klein)<br/> </dt> <dd></dd> </dl></td>
 </tr>
 </tbody>
 </table>
@@ -71,10 +71,10 @@ Stellt eine Layoutgröße für eine Gruppe von Steuerelementen in einer benutzer
 
 | Element                                                                                 | BESCHREIBUNG                                        |
 |-----------------------------------------------------------------------------------------|----------------------------------------------------|
-| [**Columnbreak**](windowsribbon-element-columnbreak.md)<br/>                     | Kann ein-oder mehrmals vorkommen<br/> <br/> |
-| [**Controlgroup**](windowsribbon-element-controlgroup.md)<br/>                   | Kann ein-oder mehrmals vorkommen<br/> <br/> |
-| [**Controlsizedefinition**](windowsribbon-element-controlsizedefinition.md)<br/> | Kann ein-oder mehrmals vorkommen<br/> <br/> |
-| [**Zeile**](windowsribbon-element-row.md)<br/>                                     | Kann ein-oder mehrmals vorkommen<br/> <br/> |
+| [**ColumnBreak**](windowsribbon-element-columnbreak.md)<br/>                     | Kann ein oder mehrere Male auftreten.<br/> <br/> |
+| [**ControlGroup**](windowsribbon-element-controlgroup.md)<br/>                   | Kann ein oder mehrere Male auftreten.<br/> <br/> |
+| [**ControlSizeDefinition**](windowsribbon-element-controlsizedefinition.md)<br/> | Kann ein oder mehrere Male auftreten.<br/> <br/> |
+| [**Zeile**](windowsribbon-element-row.md)<br/>                                     | Kann ein oder mehrere Male auftreten.<br/> <br/> |
 
 
 
@@ -84,19 +84,19 @@ Stellt eine Layoutgröße für eine Gruppe von Steuerelementen in einer benutzer
 
 | Element                                                                   |
 |---------------------------------------------------------------------------|
-| [**Sizedefinition**](windowsribbon-element-sizedefinition.md)<br/> |
+| [**SizeDefinition**](windowsribbon-element-sizedefinition.md)<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Dies ist optional.
 
-Kann für jedes [**sizedefinition**](windowsribbon-element-sizedefinition.md) -Element (einmal pro *Größe*) bis zu drei mal vorkommen.
+Kann bis zu dreimal für jedes [**SizeDefinition-Element**](windowsribbon-element-sizedefinition.md) auftreten (einmal für jede *Größe*).
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Codebeispiel wird eine grundlegende benutzerdefinierte Vorlage veranschaulicht, die die drei Gruppen layoutgrößen enthält, die beim Erstellen einer benutzerdefinierten Vorlage mit dem **groupsizedefinition** -Element definiert werden müssen.
+Das folgende Codebeispiel veranschaulicht eine einfache benutzerdefinierte Vorlage, die die drei Gruppenlayoutgrößen enthält, die beim Erstellen einer benutzerdefinierten Vorlage mit dem **GroupSizeDefinition-Element** definiert werden müssen.
 
 
 ```XML
@@ -188,20 +188,16 @@ Im folgenden Codebeispiel wird eine grundlegende benutzerdefinierte Vorlage vera
 
 ## <a name="element-information"></a>Elementinformationen
 
-
-
-|                                     |           |
-|-------------------------------------|-----------|
-| Unterstützte Mindestversion (System)<br/> | Windows 7 |
-| Kann leer bleiben                        | Nein        |
+* **Unterstütztes Mindestsystem:** Windows 7
+* **Kann leer sein:** Nein
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[Anpassen eines Menübands durch Größen Definitionen und Skalierungs Richtlinien](windowsribbon-templates.md)
+[Anpassen eines Menübands durch Größendefinitionen und Skalierungsrichtlinien](windowsribbon-templates.md)
 </dt> </dl>
 
  

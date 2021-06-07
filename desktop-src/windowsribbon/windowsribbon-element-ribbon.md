@@ -1,9 +1,9 @@
 ---
-title: Ribbon-Element
-description: Stellt das Menüband-Steuerelement in der Menü Band Ansicht dar.
+title: Menübandelement
+description: Stellt das Menüband-Steuerelement in der Menübandansicht dar.
 ms.assetid: 51083180-4e86-4c90-9fd1-a58c12bcc756
 keywords:
-- Menüband Element Windows-Menüband
+- Menübandelement Windows-Menüband
 topic_type:
 - apiref
 api_name:
@@ -13,18 +13,18 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 76ce73735d05b3d8c8cfa686f53570fd08ae6f1c
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 9a743fc354dfea73c525884ec5ffe1f9471f3752
+ms.sourcegitcommit: 099ecdda1e83618b844387405da0db0ebda93a65
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "106342312"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111445001"
 ---
-# <a name="ribbon-element"></a>Ribbon-Element
+# <a name="ribbon-element"></a>Menübandelement
 
-Stellt das Menüband-Steuerelement in der Menü Band Ansicht dar.
+Stellt das Menüband-Steuerelement in der Menübandansicht dar.
 
-## <a name="usage"></a>Verbrauch
+## <a name="usage"></a>Verwendung
 
 ``` syntax
 <Ribbon
@@ -47,25 +47,25 @@ Stellt das Menüband-Steuerelement in der Menü Band Ansicht dar.
 </colgroup>
 <thead>
 <tr class="header">
-<th>Attribut</th>
-<th>type</th>
+<th>attribute</th>
+<th>Typ</th>
 <th>Erforderlich</th>
 <th>BESCHREIBUNG</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><strong>Groupspacing</strong><br/></td>
+<td><strong>GroupSpacing</strong><br/></td>
 <td>xs:string<br/></td>
 <td>Nein<br/></td>
-<td><dt><span></span><span></span><strong></strong> Zuletzt<br/> </dt> <dd> Standard. <br/> </dd> <dt><span></span><span></span><strong></strong> Mittelalter<br/> </dt> <dd></dd> <dt><span></span><span></span><strong></strong> Viele<br/> </dt> <dd></dd> </dl></td>
+<td><dt><span></span><span></span><strong></strong> (Klein)<br/> </dt> <dd> Standard. <br/> </dd> <dt><span></span><span></span><strong></strong> (Mittel)<br/> </dt> <dd></dd> <dt><span></span><span></span><strong></strong> (Groß)<br/> </dt> <dd></dd> </dl></td>
 </tr>
 <tr class="even">
 <td><strong>Name</strong><br/></td>
 <td>xs:string<br/></td>
 <td>Nein<br/></td>
-<td>Wird verwendet, um das Command-Element mit Anmerkungen zu versehen.<br/> <br/>
-<dt><span></span><span></span><strong></strong> (xs: String)<br/> </dt> <dd> Eine beliebige Sequenz von NULL oder mehr Zeichen.<br/> Die maximale Länge ist unbegrenzt.<br/> </dd> </dl></td>
+<td>Wird verwendet, um das Befehlselement zu kommentieren.<br/> <br/>
+<dt><span></span><span></span><strong></strong> (xs:string)<br/> </dt> <dd> Jede Sequenz von 0 (null) oder mehr Zeichen.<br/> Die maximale Länge ist nicht gebunden.<br/> </dd> </dl></td>
 </tr>
 </tbody>
 </table>
@@ -78,12 +78,12 @@ Stellt das Menüband-Steuerelement in der Menü Band Ansicht dar.
 
 | Element                                                                                         | BESCHREIBUNG                                   |
 |-------------------------------------------------------------------------------------------------|-----------------------------------------------|
-| [**Menü Band. applicationmenu**](windowsribbon-element-ribbon-applicationmenu.md)<br/>       | Kann höchstens einmal vorkommen<br/> <br/> |
-| [**Menüband. contextualtabs**](windowsribbon-element-ribbon-contextualtabs.md)<br/>         | Kann höchstens einmal vorkommen<br/> <br/> |
-| [**Menüband. HelpButton**](windowsribbon-element-ribbon-helpbutton.md)<br/>                 | Kann höchstens einmal vorkommen<br/> <br/> |
-| [**Menüband. quickaccesstoolbar**](windowsribbon-element-ribbon-quickaccesstoolbar.md)<br/> | Kann höchstens einmal vorkommen<br/> <br/> |
-| [**Ribbon. sizedefinitions**](windowsribbon-element-ribbon-sizedefinitions.md)<br/>       | Kann höchstens einmal vorkommen<br/> <br/> |
-| [**Menüband. Registerkarten**](windowsribbon-element-ribbon-tabs.md)<br/>                             | Kann höchstens einmal vorkommen<br/> <br/> |
+| [**Ribbon.ApplicationMenu**](windowsribbon-element-ribbon-applicationmenu.md)<br/>       | Kann höchstens einmal auftreten.<br/> <br/> |
+| [**Ribbon.ContextualTabs**](windowsribbon-element-ribbon-contextualtabs.md)<br/>         | Kann höchstens einmal auftreten.<br/> <br/> |
+| [**Ribbon.HelpButton**](windowsribbon-element-ribbon-helpbutton.md)<br/>                 | Kann höchstens einmal auftreten.<br/> <br/> |
+| [**Ribbon.QuickAccessToolbar**](windowsribbon-element-ribbon-quickaccesstoolbar.md)<br/> | Kann höchstens einmal auftreten.<br/> <br/> |
+| [**Ribbon.SizeDefinitions**](windowsribbon-element-ribbon-sizedefinitions.md)<br/>       | Kann höchstens einmal auftreten.<br/> <br/> |
+| [**Ribbon.Tabs**](windowsribbon-element-ribbon-tabs.md)<br/>                             | Kann höchstens einmal auftreten.<br/> <br/> |
 
 
 
@@ -93,19 +93,19 @@ Stellt das Menüband-Steuerelement in der Menü Band Ansicht dar.
 
 | Element                                                                         |
 |---------------------------------------------------------------------------------|
-| [**Application. views**](windowsribbon-element-application-views.md)<br/> |
+| [**Application.Views**](windowsribbon-element-application-views.md)<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Erforderlich.
 
-Muss für jedes [**Application. views**](windowsribbon-element-application-views.md) -Element genau einmal auftreten.
+Muss für jedes [**Application.Views-Element**](windowsribbon-element-application-views.md) genau einmal auftreten.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird das grundlegende Markup für eine Menü **Band** Ansicht veranschaulicht.
+Im folgenden Beispiel wird das grundlegende Markup für eine **Menübandansicht** veranschaulicht.
 
 
 ```XML
@@ -137,10 +137,9 @@ Im folgenden Beispiel wird das grundlegende Markup für eine Menü **Band** Ansi
 
 
 
-|                                     |           |
-|-------------------------------------|-----------|
-| Unterstützte Mindestversion (System)<br/> | Windows 7 |
-| Kann leer bleiben                        | Nein        |
+
+* **Unterstütztes Mindestsystem:** Windows 7
+* **Kann leer sein:** Nein
 
 
 

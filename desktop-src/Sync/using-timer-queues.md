@@ -1,21 +1,21 @@
 ---
-description: Im folgenden Beispiel wird eine Zeit Geber Routine erstellt, die nach einer Verzögerung von 10 Sekunden von einem Thread aus einer Zeit Geber Warteschlange ausgeführt wird.
+description: Im folgenden Beispiel wird eine Timerroutine erstellt, die von einem Thread aus einer Timerwarteschlange nach einer Verzögerung von 10 Sekunden ausgeführt wird.
 ms.assetid: 779156fe-f825-452b-acbe-e2cb189e24d2
-title: Verwenden von Timer
+title: Verwenden von Timerwarteschlangen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a13f7afd18a22c42e3af8cffd8b2b148f68b9d99
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 4d084a03eb25301f94361c1e7ca6b76dd9fee269
+ms.sourcegitcommit: b01ad017c152c6756f3638623fe335877644d414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106352623"
+ms.lasthandoff: 06/06/2021
+ms.locfileid: "111549932"
 ---
-# <a name="using-timer-queues"></a>Verwenden von Timer
+# <a name="using-timer-queues"></a>Verwenden von Timerwarteschlangen
 
-Im folgenden Beispiel wird eine Zeit Geber Routine erstellt, die nach einer Verzögerung von 10 Sekunden von einem Thread aus einer Zeit Geber [Warteschlange](timer-queues.md) ausgeführt wird. Zuerst verwendet der Code die Funktion " [**forateevent**](/windows/win32/api/synchapi/nf-synchapi-createeventa) ", um ein Ereignis Objekt zu erstellen, das signalisiert wird, wenn der Timer-Queue-Thread abgeschlossen wird. Anschließend werden eine Zeit Geber Warteschlange und ein Timer für Zeit Geber Warteschlangen erstellt, wobei die Funktionen " [**kreatetimerqueue**](/windows/win32/api/threadpoollegacyapiset/nf-threadpoollegacyapiset-createtimerqueue) " und " [**kreatetimerqueuetimer**](/windows/win32/api/threadpoollegacyapiset/nf-threadpoollegacyapiset-createtimerqueuetimer) " verwendet werden. Der Code verwendet die [**WaitForSingleObject**](/windows/win32/api/winbase/nf-winbase-registerwaitforsingleobject) -Funktion, um zu bestimmen, wann die Zeit Geber Routine abgeschlossen wurde. Zum Schluss ruft der Code [**deletetimerqueue**](/windows/desktop/api/WinBase/nf-winbase-deletetimerqueue) auf, um den Vorgang zu bereinigen.
+Im folgenden Beispiel wird eine Timerroutine erstellt, die von einem Thread aus einer [Timerwarteschlange](timer-queues.md) nach einer Verzögerung von 10 Sekunden ausgeführt wird. Zunächst verwendet der Code die [**CreateEvent-Funktion,**](/windows/win32/api/synchapi/nf-synchapi-createeventa) um ein Ereignisobjekt zu erstellen, das signalisiert wird, wenn der Timerwarteschlangenthread abgeschlossen ist. Anschließend wird mithilfe der [**Funktionen CreateTimerQueue**](/windows/win32/api/threadpoollegacyapiset/nf-threadpoollegacyapiset-createtimerqueue) bzw. [**CreateTimerQueueTimer eine Timerwarteschlange**](/windows/win32/api/threadpoollegacyapiset/nf-threadpoollegacyapiset-createtimerqueuetimer) und ein Timer-Queue-Timer erstellt. Der Code verwendet die [**WaitForSingleObject-Funktion,**](/windows/win32/api/winbase/nf-winbase-registerwaitforsingleobject) um zu bestimmen, wann die Timerroutine abgeschlossen wurde. Abschließend ruft der Code [**DeleteTimerQueue auf, um**](/windows/desktop/api/threadpoollegacyapiset/nf-threadpoollegacyapiset-deletetimerqueue) die Bereinigung zu bereinigen.
 
-Weitere Informationen zur Zeit Geber Routine finden Sie unter [**WaitOrTimerCallback**](/previous-versions/windows/desktop/legacy/ms687066(v=vs.85)).
+Weitere Informationen zur Timerroutine finden Sie unter [**WaitOrTimerCallback**](/previous-versions/windows/desktop/legacy/ms687066(v=vs.85)).
 
 
 ```C++

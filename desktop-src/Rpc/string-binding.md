@@ -1,202 +1,202 @@
 ---
-title: Zeichen folgen Bindung
-description: Die Zeichen folgen Bindung ist eine Zeichenfolge ohne Vorzeichen, die aus Zeichen folgen besteht, die das Bindungs Objekt UUID, die RPC-Protokoll Sequenz, die Netzwerkadresse und die Endpunkt-und Endpunkt Optionen darstellen.
+title: Zeichenfolgenbindung
+description: Die Zeichenfolgenbindung ist eine Zeichenfolge ohne Vorzeichen, die aus Zeichenfolgen besteht, die die Bindungsobjekt-UUID, die RPC-Protokollsequenz, die Netzwerkadresse sowie die Endpunkt- und Endpunktoptionen darstellen.
 ms.assetid: 5e55ddd0-d71c-42ef-90cc-dd1f0b9ed305
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c5d804fe614185b054b8041e13069e900501342a
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 8b3f925c03c85be3c47ab174a85f31e72e40d828
+ms.sourcegitcommit: cb87082135319cbdc5df541e3071eebb83a58972
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104390799"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111386979"
 ---
-# <a name="string-binding"></a>Zeichen folgen Bindung
+# <a name="string-binding"></a>Zeichenfolgenbindung
 
-Die Zeichen folgen Bindung ist eine Zeichenfolge ohne Vorzeichen, die aus Zeichen folgen besteht, die das Bindungs Objekt UUID, die RPC-Protokoll Sequenz, die Netzwerkadresse und die Endpunkt-und Endpunkt Optionen darstellen.
+Die Zeichenfolgenbindung ist eine Zeichenfolge ohne Vorzeichen, die aus Zeichenfolgen besteht, die die Bindungsobjekt-UUID, die RPC-Protokollsequenz, die Netzwerkadresse sowie die Endpunkt- und Endpunktoptionen darstellen.
 
-*Objectuuid* @ *Protocolsequence*:*networkaddress*- \[ *Endpunkt*,*Option*\]
+*ObjectUUID* @ *ProtocolSequence*:*NetworkAddress-Endpunkt* \[ ,*Option*\]
 
 ## <a name="parameters"></a>Parameter
 
 <dl> <dt>
 
-<span id="ObjectUUID"></span><span id="objectuuid"></span><span id="OBJECTUUID"></span>*Objectuuid*
+<span id="ObjectUUID"></span><span id="objectuuid"></span><span id="OBJECTUUID"></span>*ObjectUUID*
 </dt> <dd>
 
-[UUID](/windows/desktop/Midl/uuid) des Objekts, das vom Remote Prozedur aufrufsvorgang verarbeitet wird. Auf dem Server ordnet die RPC-Lauf Zeit Bibliothek den Objekttyp einem Manager-Einstiegspunkt Vektor (ein Array von Funktions Zeigern) zu, um die korrekte Manager-Routine aufzurufen. Eine Erläuterung zum Zuordnen von Objekt-UUIDs zu Manager-Einstiegspunkt Vektoren finden Sie unter [Registrieren von Schnittstellen](registering-interfaces.md).
+[UUID](/windows/desktop/Midl/uuid) des Objekts, das vom Remoteprozeduraufruf verwendet wird. Auf dem Server ordnet die RPC-Laufzeitbibliothek den Objekttyp einem Manager-Einstiegspunktvektor (einem Array von Funktionszektoren) zu, um die richtige Managerroutine aufrufen. Eine Erörterung der Zuordnung von Objekt-UUIDs zu Manager-Einstiegspunktvektoren finden Sie unter [Registrieren von Schnittstellen.](registering-interfaces.md)
 
 </dd> <dt>
 
-<span id="ProtocolSequence"></span><span id="protocolsequence"></span><span id="PROTOCOLSEQUENCE"></span>*Protocolsequence*
+<span id="ProtocolSequence"></span><span id="protocolsequence"></span><span id="PROTOCOLSEQUENCE"></span>*ProtocolSequence*
 </dt> <dd>
 
-Zeichenfolge, die eine gültige Kombination eines RPC-Protokolls (z. b. ncacn), eines Transport Protokolls (z. b. TCP) und eines Netzwerk Protokolls (z. b. IP) darstellt. Microsoft RPC unterstützt die folgenden Protokolle, die in den [Protokoll Sequenz Konstanten](protocol-sequence-constants.md)angegeben sind.
+Zeichenfolge, die eine gültige Kombination aus einem RPC-Protokoll (z. B. ncacn), einem Transportprotokoll (z. B. TCP) und einem Netzwerkprotokoll (z. B. IP) darstellt. Microsoft RPC unterstützt die folgenden Protokolle, die unter [Protokollsequenzkonst constants angegeben sind.](protocol-sequence-constants.md)
 
 </dd> <dt>
 
-<span id="NetworkAddress"></span><span id="networkaddress"></span><span id="NETWORKADDRESS"></span>*NetworkAddress*
+<span id="NetworkAddress"></span><span id="networkaddress"></span><span id="NETWORKADDRESS"></span>*Networkaddress*
 </dt> <dd>
 
-Netzwerkadresse des Systems, um Remote Prozedur Aufrufe zu empfangen.
+Netzwerkadresse des Systems zum Empfangen von Remoteprozeduraufrufen.
 
 > [!Note]  
-> Die folgenden Protokoll Sequenzen werden ab Windows XP nicht unterstützt:
+> Die folgenden Protokollsequenzen werden ab Windows XP nicht unterstützt:
 
  
 
--   [ncacn \_ NB \_ TCP](/windows/desktop/Midl/ncacn-nb-tcp)
--   [ncacn \_ NB \_ NB](/windows/desktop/Midl/ncacn-nb-nb)
--   [ncacn \_ NB \_ IPX](/windows/desktop/Midl/ncacn-nb-ipx)
--   [ncacn \_ dnet \_ NSP](/windows/desktop/Midl/ncacn-dnet-nsp)
--   [ncacn \_ VNS- \_ spp](/windows/desktop/Midl/ncacn-vns-spp)
--   [ncadg \_ MQ](/windows/desktop/Midl/ncadg-mq)
--   [ncadg \_ IPX](/windows/desktop/Midl/ncadg-ipx)
+-   [ncacn \_ nb \_ tcp](/windows/desktop/Midl/ncacn-nb-tcp)
+-   [ncacn \_ nb \_ nb](/windows/desktop/Midl/ncacn-nb-nb)
+-   [ncacn \_ nb \_ ipx](/windows/desktop/Midl/ncacn-nb-ipx)
+-   [ncacn \_ dnet \_ nsp](/windows/desktop/Midl/ncacn-dnet-nsp)
+-   [ncacn \_ vns \_ spp](/windows/desktop/Midl/ncacn-vns-spp)
+-   [ncadg \_ mq](/windows/desktop/Midl/ncadg-mq)
+-   [ncadg \_ ipx](/windows/desktop/Midl/ncadg-ipx)
 
-Das Format und der Inhalt der Netzwerkadresse sind wie folgt von der angegebenen Protokoll Sequenz abhängig.
+Das Format und der Inhalt der Netzwerkadresse hängen wie folgt von der angegebenen Protokollsequenz ab.
 
 
 
-| Protokoll Sequenz                       | Netzwerkadresse                                                                                                                                  | Beispiele                                               |
+| Protokollsequenz                       | Netzwerkadresse                                                                                                                                  | Beispiele                                               |
 |-----------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------|
-| [ncacn \_ NB \_ TCP](/windows/desktop/Midl/ncacn-nb-tcp)     | Computername                                                                                                                                    | MyServer                                               |
-| [ncacn \_ NB \_ IPX](/windows/desktop/Midl/ncacn-nb-ipx)     | Computername                                                                                                                                    | MyServer                                               |
-| [ncacn \_ NB \_ NB](/windows/desktop/Midl/ncacn-nb-nb)       | Computername                                                                                                                                    | MyServer                                               |
-| [ncacn \_ IP \_ TCP](/windows/desktop/Midl/ncacn-ip-tcp)     | Vier Oktett-Internet Adresse oder Hostname. Wenn der IPv6-Netzwerk Stapel installiert ist, wird IPv6 vollständig unterstützt, und eine IPv6-Adresse wird ebenfalls akzeptiert. | 128.10.2.30 anynode.Microsoft.com                      |
-| [ncacn \_ NP](/windows/desktop/Midl/ncacn-np)              | Server Name (führende doppelte umgekehrte Schrägstriche sind optional)                                                                                            | MyServer \\ \\ myotherserver                             |
-| [ncacn- \_ SPX](/windows/desktop/Midl/ncacn-spx)            | IPX-Internet Adresse oder Servername                                                                                                             | ~ 0000000108002b30612c MyServer                         |
-| [ncacn \_ dnet \_ NSP](/windows/desktop/Midl/ncacn-dnet-nsp) | Bereichs-und Knoten Syntax                                                                                                                             | 4,120                                                  |
-| [ncacn \_ bei \_ DSP](/windows/desktop/Midl/ncacn-at-dsp)     | Computer Name, optional gefolgt von @ und dem Namen der AppleTalk-Zone. Der Standardwert \* ist @, der Client Zone, wenn keine Zone bereitgestellt wird.                     | servername@zonename Servername                         |
-| [ncacn \_ VNS- \_ spp](/windows/desktop/Midl/ncacn-vns-spp)   | StreetTalk-Servername der Form item@group@organization                                                                                       | printserver@sdkdocs@microsoft                          |
-| [ncadg \_ MQ](/windows/desktop/Midl/ncadg-mq)              | Servername                                                                                                                                      | MyServer                                               |
-| [ncacn \_ http](/windows/desktop/Midl/ncacn-http)          | Internet Adresse (entweder vier Oktett oder Anzeige Name oder Name des lokalen Servers)                                                                       | 128.10.2.30 somesvr@anywhere.com mylocalsvr<br/> |
-| [ncadg \_ -IP- \_ UDP](/windows/desktop/Midl/ncadg-ip-udp)     | Vier Oktett-Internet Adresse oder Hostname                                                                                                        | 128.10.2.30 anynode.Microsoft.com                      |
-| [ncadg \_ IPX](/windows/desktop/Midl/ncadg-ipx)            | IPX-Internet Adresse oder Servername                                                                                                             | ~ 0000000108002b30612c MyServer                         |
-| [Ncalrpc](/windows/desktop/Midl/ncalrpc)                 | Computername                                                                                                                                     | thismachine                                            |
+| [ncacn \_ nb \_ tcp](/windows/desktop/Midl/ncacn-nb-tcp)     | Computername                                                                                                                                    | Myserver                                               |
+| [ncacn \_ nb \_ ipx](/windows/desktop/Midl/ncacn-nb-ipx)     | Computername                                                                                                                                    | Myserver                                               |
+| [ncacn \_ nb \_ nb](/windows/desktop/Midl/ncacn-nb-nb)       | Computername                                                                                                                                    | Myserver                                               |
+| [ncacn \_ ip \_ tcp](/windows/desktop/Midl/ncacn-ip-tcp)     | Internetadresse mit vier Oktetten oder Hostname. Wenn der IPv6-Netzwerkstapel installiert ist, wird IPv6 vollständig unterstützt, und eine IPv6-Adresse wird ebenfalls akzeptiert. | 128.10.2.30 anynode.microsoft.com                      |
+| [ncacn \_ np](/windows/desktop/Midl/ncacn-np)              | Servername (führende doppelte schräge Schrägstriche sind optional)                                                                                            | myserver \\ \\ myotherserver                             |
+| [ncacn \_ spx](/windows/desktop/Midl/ncacn-spx)            | IPX-Internetadresse oder Servername                                                                                                             | ~0000000108002B30612C myserver                         |
+| [ncacn \_ dnet \_ nsp](/windows/desktop/Midl/ncacn-dnet-nsp) | Bereichs- und Knotensyntax                                                                                                                             | 4.120                                                  |
+| [ncacn \_ bei \_ dsp](/windows/desktop/Midl/ncacn-at-dsp)     | Computername, optional gefolgt von @ und dem Namen der AppleTalk-Zone. Der Standardwert ist @ \* , die Zone des Clients, wenn keine Zone angegeben ist.                     | servername@zonename Servername                         |
+| [ncacn \_ vns \_ spp](/windows/desktop/Midl/ncacn-vns-spp)   | Name des StreetTalk-Servers des Formulars item@group@organization                                                                                       | printserver@sdkdocs@microsoft                          |
+| [ncadg \_ mq](/windows/desktop/Midl/ncadg-mq)              | Servername                                                                                                                                      | Myserver                                               |
+| [ncacn \_ http](/windows/desktop/Midl/ncacn-http)          | Internetadresse (entweder Vier-Oktett- oder -Beschriftungsname oder name des lokalen Servers)                                                                       | 128.10.2.30 somesvr@anywhere.com mylocalsvr<br/> |
+| [ncadg \_ ip \_ udp](/windows/desktop/Midl/ncadg-ip-udp)     | Internetadresse mit vier Oktetten oder Hostname                                                                                                        | 128.10.2.30 anynode.microsoft.com                      |
+| [ncadg \_ ipx](/windows/desktop/Midl/ncadg-ipx)            | IPX-Internetadresse oder Servername                                                                                                             | ~0000000108002B30612C myserver                         |
+| [ncalrpc](/windows/desktop/Midl/ncalrpc)                 | Computername                                                                                                                                     | thismachine                                            |
 
 
 
  
 
-Das Feld für die Netzwerkadresse ist optional. Wenn Sie keine Netzwerkadresse angeben, verweist die Zeichen folgen Bindung auf den lokalen Host. Es ist möglich, den Namen des lokalen Computers anzugeben, wenn Sie die **Ncalrpc** -Protokoll Sequenz verwenden. Dies ist jedoch völlig unnötig.
+Das Feld netzwerkadresse ist optional. Wenn Sie keine Netzwerkadresse angeben, bezieht sich die Zeichenfolgenbindung auf Ihren lokalen Host. Es ist möglich, den Namen des lokalen Computers anzugeben, wenn Sie die **ncalrpc-Protokollsequenz** verwenden. Dies ist jedoch völlig unnötig.
 
 </dd> <dt>
 
-<span id="Endpoint"></span><span id="endpoint"></span><span id="ENDPOINT"></span>*Dreher*
+<span id="Endpoint"></span><span id="endpoint"></span><span id="ENDPOINT"></span>*Endpunkt*
 </dt> <dd>
 
-Der Endpunkt oder die Adresse des Prozesses, der Remote Prozedur Aufrufe empfangen soll. Einem Endpunkt kann das Schlüsselwort **EndPoint =** vorangestellt werden. Das Angeben des Endpunkts ist optional, wenn der Server seine Bindungen mit der Endpunkt Zuordnung registriert hat. Weitere Informationen finden Sie unter [**rpcepregiester**](/windows/desktop/api/Rpcdce/nf-rpcdce-rpcepregister).
+Endpunkt oder Adresse des Prozesses zum Empfangen von Remoteprozeduraufrufen. Einem Endpunkt kann das Schlüsselwort **endpoint= vorangehenden werden.** Die Angabe des Endpunkts ist optional, wenn der Server seine Bindungen bei der Endpunktzuordnung registriert hat. Weitere Informationen [**finden Sie unter RpcEpRegister**](/windows/desktop/api/Rpcdce/nf-rpcdce-rpcepregister).
 
-Das Format und der Inhalt eines Endpunkts sind von der angegebenen Protokoll Sequenz abhängig, wie in der folgenden Endpunkt-/Option-Tabelle gezeigt.
+Das Format und der Inhalt eines Endpunkts hängen von der angegebenen Protokollsequenz ab, wie in der folgenden Endpunkt-/Optionstabelle gezeigt.
 
 </dd> <dt>
 
-<span id="Option"></span><span id="option"></span><span id="OPTION"></span>*Andere*
+<span id="Option"></span><span id="option"></span><span id="OPTION"></span>*Option*
 </dt> <dd>
 
-Protokoll spezifische Optionen. Das Optionsfeld ist nicht erforderlich. Jede Option wird durch ein {Name, Value}-Paar angegeben, das den  = *Optionswert* der Syntax Option Name verwendet. Optionen werden für jede Protokoll Sequenz definiert, wie in der folgenden Endpunkt-/Options-Tabelle gezeigt.
+Protokollspezifische Optionen. Das Optionsfeld ist nicht erforderlich. Jede Option wird durch ein {name, value}-Paar angegeben, das den Optionswert *der Syntaxoption* = *Name verwendet.* Optionen werden für jede Protokollsequenz definiert, wie in der folgenden Tabelle Endpunkt/Option gezeigt.
 
 
 
-| Protokoll Sequenz                       | Endpunkt                                                                                           | Beispiele             | Optionsname                                            |
+| Protokollsequenz                       | Endpunkt                                                                                           | Beispiele             | Optionsname                                            |
 |-----------------------------------------|----------------------------------------------------------------------------------------------------|----------------------|--------------------------------------------------------|
-| [ncacn \_ NB \_ TCP](/windows/desktop/Midl/ncacn-nb-tcp)     | Ganzzahl zwischen 1 und 254. Viele Werte zwischen 0 und 32 sind von Microsoft reserviert.                 | 100                  | Keine                                                   |
-| [ncacn \_ NB \_ IPX](/windows/desktop/Midl/ncacn-nb-ipx)     | (wie oben)                                                                                         | (wie oben)           | Keine                                                   |
-| [ncacn \_ NB \_ NB](/windows/desktop/Midl/ncacn-nb-nb)       | (wie oben)                                                                                         | (wie oben)           | Keine                                                   |
-| [ncacn \_ IP \_ TCP](/windows/desktop/Midl/ncacn-ip-tcp)     | Internet Portnummer.                                                                              | 1025                 | Keine                                                   |
-| [ncacn \_ NP](/windows/desktop/Midl/ncacn-np)              | Named Pipe. Der Name muss mit " \\ \\ Pipe" beginnen.                                                       | \\\\\\ \\ Pipename der Pipe | Sicherheit                                               |
-| [ncacn- \_ SPX](/windows/desktop/Midl/ncacn-spx)            | Ganzzahl zwischen 1 und 65535.                                                                       | 5.000                 | Keine                                                   |
-| [ncacn \_ dnet \_ NSP](/windows/desktop/Midl/ncacn-dnet-nsp) | Der DECnet-Phase IV-Objekt Nummer (muss das \# Zeichen vorangestellt sein) oder Objektname.              | Mailserver \# 17      | Keine                                                   |
-| [ncacn \_ bei \_ DSP](/windows/desktop/Midl/ncacn-at-dsp)     | Eine Zeichenfolge mit einer Länge von bis zu 22 bytes.                                                           | myservicesendpoint   | Keine                                                   |
-| [ncacn \_ VNS- \_ spp](/windows/desktop/Midl/ncacn-vns-spp)   | SPP-Portnummer der Reben zwischen 250 und 511.                                                         | 500                  | Keine                                                   |
-| [ncadg \_ MQ](/windows/desktop/Midl/ncadg-mq)              | Ganzzahl zwischen 1 und 65535.                                                                       | 5.000                 | Keine                                                   |
-| [ncacn \_ http](/windows/desktop/Midl/ncacn-http)          | Internet Portnummer.                                                                              | 2215                 | HTTP-und RPC-Proxy Servernamen, httpconnection-Option |
-| [ncadg \_ -IP- \_ UDP](/windows/desktop/Midl/ncadg-ip-udp)     | Internet Portnummer.                                                                              | 1025                 | Keine                                                   |
-| [ncadg \_ IPX](/windows/desktop/Midl/ncadg-ipx)            | Ganzzahl zwischen 1 und 65535.                                                                       | 5.000                 | Keine                                                   |
-| [Ncalrpc](/windows/desktop/Midl/ncalrpc)                 | Zeichenfolge, die den Anwendungs-oder Dienstnamen angibt. Die Zeichenfolge darf keine umgekehrten Schrägstriche enthalten. | mein \_ Drucker          | Sicherheit                                               |
+| [ncacn \_ nb \_ tcp](/windows/desktop/Midl/ncacn-nb-tcp)     | Ganze Zahl zwischen 1 und 254. Viele Werte zwischen 0 und 32 sind von Microsoft reserviert.                 | 100                  | Keine                                                   |
+| [ncacn \_ nb \_ ipx](/windows/desktop/Midl/ncacn-nb-ipx)     | (wie oben beschrieben)                                                                                         | (wie oben beschrieben)           | Keine                                                   |
+| [ncacn \_ nb \_ nb](/windows/desktop/Midl/ncacn-nb-nb)       | (wie oben beschrieben)                                                                                         | (wie oben beschrieben)           | Keine                                                   |
+| [ncacn \_ ip \_ tcp](/windows/desktop/Midl/ncacn-ip-tcp)     | Internetportnummer.                                                                              | 1025                 | Keine                                                   |
+| [ncacn \_ np](/windows/desktop/Midl/ncacn-np)              | Named Pipe. Name muss mit \\ \\ "pipe" beginnen.                                                       | \\\\pipe \\ \\ pipename | Sicherheit                                               |
+| [ncacn \_ spx](/windows/desktop/Midl/ncacn-spx)            | Ganze Zahl zwischen 1 und 65535.                                                                       | 5.000                 | Keine                                                   |
+| [ncacn \_ dnet \_ nsp](/windows/desktop/Midl/ncacn-dnet-nsp) | DECnet Phase IV-Objektnummer (muss dem Zeichen vorangestellt \# werden) oder Objektname.              | mailserver \# 17      | Keine                                                   |
+| [ncacn \_ bei \_ dsp](/windows/desktop/Midl/ncacn-at-dsp)     | Eine Zeichenfolge mit einer Länge von bis zu 22 Byte.                                                           | myservicesendpoint   | Keine                                                   |
+| [ncacn \_ vns \_ spp](/windows/desktop/Midl/ncacn-vns-spp)   | Vines-SPP-Portnummer zwischen 250 und 511.                                                         | 500                  | Keine                                                   |
+| [ncadg \_ mq](/windows/desktop/Midl/ncadg-mq)              | Ganze Zahl zwischen 1 und 65535.                                                                       | 5.000                 | Keine                                                   |
+| [ncacn \_ http](/windows/desktop/Midl/ncacn-http)          | Internetportnummer.                                                                              | 2215                 | HTTP- und RPC-Proxyservernamen, Option "HttpConnection" |
+| [ncadg \_ ip \_ udp](/windows/desktop/Midl/ncadg-ip-udp)     | Internetportnummer.                                                                              | 1025                 | Keine                                                   |
+| [ncadg \_ ipx](/windows/desktop/Midl/ncadg-ipx)            | Ganze Zahl zwischen 1 und 65535.                                                                       | 5.000                 | Keine                                                   |
+| [ncalrpc](/windows/desktop/Midl/ncalrpc)                 | Zeichenfolge, die den Anwendungs- oder Dienstnamen angibt. Die Zeichenfolge darf keine umgekehrten Schrägstriche enthalten. | Mein \_ Drucker          | Sicherheit                                               |
 
 
 
  
 
-Der **httpconnectionoption** -Options Name, der für die ncacn http-Protokoll Sequenz unterstützt wird \_ , hat den folgenden Wert.
+Der Für die ncacn-HTTP-Protokollsequenz unterstützte **HttpConnectionOption-Optionsname** \_ verwendet den folgenden Wert.
 
 
 
 | Optionsname       | Wert            |
 |-------------------|------------------|
-| Httpconnectoption | **Usehttpproxy** |
+| HttpConnectOption | **UseHttpProxy** |
 
 
 
  
 
-Mit der **httpconnectionoption** können Sie das RPC-e-Verhalten beim Herstellen von http-Verbindungen weiterleiten. Der **usehttpproxy** -Wert weist RPC an, den Datenverkehr jederzeit über den HTTP-Proxy weiterzuleiten. Dies umfasst auch, wenn der Client die Internetoptionen in Internet Explorer festgelegt hat, um den Proxy Server bei lokalen Adressen zu umgehen.  Mit dieser Option wird der Client angewiesen, eine zwangsweise über den HTTP-Proxy eine Verbindung zum RPC-Proxy herzustellen. Dies beschleunigt die Zeit, um eine Verbindung herzustellen, da die Verzögerung bei der Suche nach dem RPC-Server unmittelbar vor der Verwendung des HTTP-Proxys umgangen wird.
+**HttpConnectionOption** ermöglicht es Ihnen, rpc-Verhalten beim Herstellen von HTTP-Verbindungen zu leiten. Der **UseHttpProxy-Wert** weist RPC an, seinen Datenverkehr jederzeit über den HTTP-Proxy weiterzuleiten. Dies gilt auch, wenn für den Client die Internetoptionen in Internet Explorer proxy server for local addresses (Proxyserver für lokale Adressen umgehen) festgelegt sind.  Diese Option weist den Client an, eine verbindung mit dem RPC-Proxy über den HTTP-Proxy zu erzwingen. Dadurch wird die Zeit zum Herstellen einer Verbindung beschleunigt, da jede Verzögerung bei der Suche nach dem RPC-Server direkt vor der Verwendung des HTTP-Proxys umgangen wird.
 
-Wenn diese **httpconnectionoption** -Option verwendet wird und Internet Explorer auf dem Client nicht für die Verwendung dieses HTTP-Proxys konfiguriert ist, können Verbindungen mit **\_ ungültigen RPC S- \_ \_ Netzwerk \_ Optionen** fehlschlagen.
+Wenn diese **HttpConnectionOption-Option** verwendet wird und Internet Explorer auf dem Client nicht für die Verwendung dieses HTTP-Proxys konfiguriert ist, können Verbindungen mit **RPC S INVALID NETWORK \_ \_ \_ \_ OPTIONS** fehlschlagen.
 
 ``` syntax
 HttpConnectOption=UseHttpProxy
 ```
 
-Weitere Informationen zu **httpconnectionoption** finden [Sie unter Verwenden von http als RPC-Transport](using-http-as-an-rpc-transport.md).
+Weitere Informationen zur **HttpConnectionOption** finden Sie unter [Verwenden von HTTP als RPC-Transport.](using-http-as-an-rpc-transport.md)
 
-Der Name der **Sicherheits** Option, der für die Protokoll Sequenzen Ncalrpc, ncacn \_ NP, ncadg \_ IP \_ UDP und ncadg IPX unterstützt wird \_ , übernimmt die folgenden Optionswerte.
+Der Name der **Sicherheitsoption,** der für die Protokollsequenzen ncalrpc, ncacn \_ np, ncadg \_ ip \_ udp und ncadg ipx unterstützt \_ wird, verwendet die folgenden Optionswerte.
 
 
 
 | Optionsname  | Optionswert                                                                               |
 |--------------|--------------------------------------------------------------------------------------------|
-| **Security** | {Identifizierungs- \| Anonymer Identitätswechsel \| } {Dynamic \| static} {**true** \| **false**} |
+| **Sicherheit** | {Identification \| Anonymous \| impersonation} {dynamic \| static} {**true** \| **false**} |
 
 
 
  
 
-Wenn der Name der Sicherheitsoption angegeben ist, muss auch ein Eintrag aus den einzelnen Gruppen von Sicherheits Options Werten angegeben werden. Die Optionswerte müssen durch ein einzelnes Leerzeichen voneinander getrennt werden. Die folgenden *options* Felder sind z. b. gültig:
+Wenn der Name der Sicherheitsoption angegeben wird, muss auch ein Eintrag aus jedem der Sicherheitsoptionswerte angegeben werden. Die Optionswerte müssen durch ein einzelnes Leerzeichen getrennt werden. Beispielsweise sind die folgenden *Optionsfelder* gültig:
 
 ``` syntax
 Security=identification dynamic true
 Security=impersonation static true
 ```
 
-Die Werte der Sicherheitsoptionen haben folgende Bedeutungen.
+Die Werte der Sicherheitsoption haben die folgende Bedeutung.
 
 
 
 | Wert der Sicherheitsoption | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                              |
 |-----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Anonym             | Der Client ist gegenüber dem Server anonym.                                                                                                                                                                                                                                                                                                                   |
-| Dynamisch               | Änderungen an der Client Sicherheitsidentität werden vom Server erkannt, wenn der Server die Transportsicherheit verwendet. Dies ist der Standardmodus für die Sicherheit von LRPC (Ncalrpc) auf Transport Ebene und für die Sicherheit lokaler Named Pipe (ncacn \_ NP) auf Transport Ebene.                                                                                                             |
-| **False**             | Effektiv = **false**; Alle tokenberechtigungs-Einstellungen, einschließlich derjenigen, die auf OFF festgelegt sind, sind im Token auf dem Server enthalten und können vom Server aktiviert werden. Berechtigungen sind nur für RPC-Aufrufe desselben Computers relevant.                                                                                                                                     |
-| **Identifikation**    | Der Server enthält Informationen zum Client, kann aber keinen Identitätswechsel durchgeführt werden.                                                                                                                                                                                                                                                                                      |
-| **Identitätswechsel**     | Der Server kann im Namen des Clients innerhalb des lokalen Systems agieren (die Sicherheit auf Transport Ebene unterstützt keine Delegierung).                                                                                                                                                                                                                               |
-| **Statisch**            | Änderungen an der Client Sicherheitsidentität werden vom Server nicht erkannt, wenn der Server die Transportsicherheit verwendet. Dies ist der einzige Modus, der für die Sicherheit von Remote Named Pipe (ncacn \_ NP) auf Transport Ebene verfügbar ist. Die Identität des Aufrufers wird während des ersten Remote Prozedur Aufrufes für dieses Bindungs handle gespeichert, nicht zum Zeitpunkt, an dem das Bindungs Handle erstellt wird. |
-| **True**              | Effektiv = **true**; nur Einstellungen für tokenprivilegien, die auf ON festgelegt sind, sind im Token auf dem Server enthalten. Berechtigungen, die auf OFF festgelegt sind, können vom Server nicht aktiviert werden, wenn diese Option verwendet wird. Berechtigungen sind nur für RPC-Aufrufe desselben Computers relevant.                                                                                                         |
+| Dynamisch               | Änderungen an der Clientsicherheitsidentität werden vom Server erkannt, wenn der Server Transportsicherheit verwendet. Dies ist der Standardmodus für die Sicherheit auf LRPC-Transportebene (ncalrpc) und für die Sicherheit auf lokaler Named Pipe-Transportebene (ncacn \_ np).                                                                                                             |
+| **False**             | Effective = **FALSE**; Alle Tokenberechtigungseinstellungen, einschließlich der auf OFF festgelegten Einstellungen, sind im Token auf dem Server enthalten und können vom Server aktiviert werden. Berechtigungen sind nur für RPC-Aufrufe desselben Computers relevant.                                                                                                                                     |
+| **Identifikation**    | Der Server verfügt über Informationen zum Client, kann aber keine Identität annehmen.                                                                                                                                                                                                                                                                                      |
+| **Identitätswechsel**     | Der Server kann im Namen des Clients innerhalb des lokalen Systems agieren (die Sicherheit auf Transportebene unterstützt keine Delegierung).                                                                                                                                                                                                                               |
+| **Statisch**            | Änderungen an der Clientsicherheitsidentität werden vom Server nicht erkannt, wenn der Server Transportsicherheit verwendet. Dies ist der einzige Modus, der für die Sicherheit auf Remote-Named Pipe -Transportebene (ncacn np) verfügbar \_ ist. Die Identität des Aufrufers wird während des ersten Remoteprozeduraufrufs für dieses Bindungshandle gespeichert, nicht zum Zeitpunkt der Erstellung des Bindungshandle. |
+| **True**              | Effective = **TRUE**; Im Token auf dem Server sind nur einstellungen für Tokenberechtigungen enthalten, die auf ON festgelegt sind. Berechtigungen, die auf OFF festgelegt sind, können vom Server nicht aktiviert werden, wenn diese Option verwendet wird. Berechtigungen sind nur für RPC-Aufrufe desselben Computers relevant.                                                                                                         |
 
 
 
  
 
-Weitere Informationen zu Sicherheitsoptionen finden Sie unter [Sicherheit](security.md).
+Weitere Informationen zu Sicherheitsoptionen, [Sicherheit](security.md).
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Leerraum ist in Zeichen folgen Bindungen nicht zulässig, es sei denn, dies ist für die *options* Syntax erforderlich. Die Standardeinstellungen für die Felder " *networkaddress*", " *EndPoint*" und " *Option* " variieren je nach Wert des *protocolsequence* -Members.
+Leerzeichen sind in Zeichenfolgenbindungen nur zulässig, wenn *dies* für die Optionssyntax erforderlich ist. Die Standardeinstellungen für die Felder *NetworkAddress,* *Endpoint* und *Option* variieren je nach Wert des *ProtocolSequence-Members.*
 
-Für alle Zeichen folgen Bindungs Felder wird ein einzelner umgekehrter Schrägstrich ( \) als Escapezeichen interpretiert. Zum Angeben eines einzelnen literalen umgekehrten Schrägstrichs müssen Sie zwei umgekehrte Schrägstriche angeben ( \\ \) .
+Für alle Zeichenfolgenbindungsfelder wird ein einzelner umgekehrter Schrägstrich \\ () als Escapezeichen interpretiert. Um einen einzelnen literalen umgekehrten Schrägstrich anzugeben, müssen Sie zwei umgekehrte Schrägstriche \\ \\ () angeben.
 
-Eine Zeichen folgen Bindung enthält die Zeichen Darstellung eines Bindungs Handles und gelegentlich Teile eines Bindungs Handles. Zeichen folgen Bindungen sind praktisch für die Darstellung von Teilen eines Bindungs Handles, Sie können jedoch nicht zum Ausführen von Remote Prozedur aufrufen verwendet werden. Sie müssen zuerst durch Aufrufen von [**RpcBindingFromStringBinding**](/windows/desktop/api/Rpcdce/nf-rpcdce-rpcbindingfromstringbinding)in ein Bindungs handle konvertiert werden.
+Eine Zeichenfolgenbindung enthält die Zeichendarstellung eines Bindungshandle und gelegentlich Teile eines Bindungshandle. Zeichenfolgenbindungen eignen sich für die Darstellung von Teilen eines Bindungshandle, können jedoch nicht zum Durchführen von Remoteprozeduraufrufen verwendet werden. Sie müssen zuerst in ein Bindungshandle konvertiert werden, indem [**RpcBindingFromStringBinding**](/windows/desktop/api/Rpcdce/nf-rpcdce-rpcbindingfromstringbinding)aufgerufen wird.
 
-Darüber hinaus enthält eine Zeichen folgen Bindung nicht alle Informationen von einem Bindungs handle. Beispielsweise werden die einem Bindungs handle zugeordneten Authentifizierungsinformationen nicht in die durch Aufrufen von [**rpcbindingtostringbinding**](/windows/desktop/api/Rpcdce/nf-rpcdce-rpcbindingtostringbinding)zurückgegebene Zeichen folgen Bindung übersetzt.
+Darüber hinaus enthält eine Zeichenfolgenbindung nicht alle Informationen aus einem Bindungshandle. Die Authentifizierungsinformationen, die einem Bindungshandle zugeordnet sind, werden beispielsweise nicht in die Zeichenfolgenbindung übersetzt, die durch Aufrufen von [**RpcBindingToStringBinding**](/windows/desktop/api/Rpcdce/nf-rpcdce-rpcbindingtostringbinding)zurückgegeben wird.
 
-Während der Entwicklung einer verteilten Anwendung können Server Ihre Bindungs Informationen mithilfe von Zeichen folgen Bindungen an Clients übermitteln, um eine Client/Server-Beziehung herzustellen, ohne die Datenbank der Endpunkt Zuordnung oder die Name-Service-Datenbank zu verwenden. Um eine solche Beziehung herzustellen, verwenden Sie die [**rpcbindingtostringbinding**](/windows/desktop/api/Rpcdce/nf-rpcdce-rpcbindingtostringbinding) -Funktion, um ein oder mehrere Bindungs Handles von einem Bindungs handle-Vektor in eine Zeichen folgen Bindung zu konvertieren und die Zeichen folgen Bindung an den Client bereitzustellen.
+Während der Entwicklung einer verteilten Anwendung können Server ihre Bindungsinformationen mithilfe von Zeichenfolgenbindungen an Clients übermitteln, um eine Client-Server-Beziehung herzustellen, ohne die Datenbank endpoint-map oder name-service zu verwenden. Verwenden Sie zum Einrichten einer solchen Beziehung die [**Funktion RpcBindingToStringBinding,**](/windows/desktop/api/Rpcdce/nf-rpcdce-rpcbindingtostringbinding) um einen oder mehrere Bindungshandles aus einem Bindungshandlesvektor in eine Zeichenfolgenbindung zu konvertieren und die Zeichenfolgenbindung für den Client zur Verfügung zu stellen.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden finden Sie Beispiele für gültige Zeichen folgen Bindungen. In diesen Beispielen wird *obj-UUID* zur einfacheren Darstellung einer gültigen uuid in Form einer Zeichenfolge verwendet. Anstatt die UUID 308sb580-1eb2-11 ca-923b-08002b1075a7 anzuzeigen, zeigen die Beispiele *obj-UUID* an.
+Im Folgenden finden Sie Beispiele für gültige Zeichenfolgenbindungen. In diesen Beispielen wird *obj-uuid* zur Vereinfachung verwendet, um eine gültige UUID in Zeichenfolgenform zu darstellen. Anstelle der UUID 308FB580-1EB2-11CA-923B-08002B1075A7 zeigen die Beispiele *obj-uuid*.
 
 ``` syntax
 obj-uuid@ncadg_mq:mymqserver
@@ -236,13 +236,13 @@ obj-uuid@ncacn_spx:~0000000108002B30612C
 [**RpcBindingFromStringBinding**](/windows/desktop/api/Rpcdce/nf-rpcdce-rpcbindingfromstringbinding)
 </dt> <dt>
 
-[**Rpcbindingtostringbinding**](/windows/desktop/api/Rpcdce/nf-rpcdce-rpcbindingtostringbinding)
+[**RpcBindingToStringBinding**](/windows/desktop/api/Rpcdce/nf-rpcdce-rpcbindingtostringbinding)
 </dt> <dt>
 
-[**Rpcepregiester**](/windows/desktop/api/Rpcdce/nf-rpcdce-rpcepregister)
+[**RpcEpRegister**](/windows/desktop/api/Rpcdce/nf-rpcdce-rpcepregister)
 </dt> <dt>
 
-[Verwenden von http als RPC-Transport](using-http-as-an-rpc-transport.md)
+[Verwenden von HTTP als RPC-Transport](using-http-as-an-rpc-transport.md)
 </dt> </dl>
 
  

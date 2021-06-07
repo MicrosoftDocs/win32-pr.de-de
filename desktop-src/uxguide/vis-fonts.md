@@ -1,124 +1,124 @@
 ---
 title: Schriftarten
-description: Benutzer interagieren mit Text mehr als mit einem beliebigen anderen Element in Microsoft Windows. Segoe UI (ausgesprochen \ 0034; Siehe-go \ 0034;) die Schriftart des Windows-Systems. Die Standardschrift Größe wurde auf 9 Punkt angehoben.
+description: Benutzer interagieren mehr mit Text als mit jedem anderen Element in Microsoft Windows. Segoe UI (ausgesprochen \ 0034; SEE-go \ 0034;) ist die Windows-Systemschriftart. Der Standardschriftgrad wurde auf 9 Punkte erhöht.
 ms.assetid: 6d4f669d-d28c-4585-9bc3-ecda44de6df5
 ms.topic: article
 ms.date: 10/20/2020
-ms.openlocfilehash: 6c5fad1459d4ce45f2d677d4bd5864d89b125e4e
-ms.sourcegitcommit: 3bdf30edb314e0fcd17dc4ddbc70e4ec7d3596e6
+ms.openlocfilehash: b74c9a593cb8d73d67464133042dfcf0aef7eb74
+ms.sourcegitcommit: 099ecdda1e83618b844387405da0db0ebda93a65
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "103761223"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111444571"
 ---
 # <a name="fonts"></a>Schriftarten
 
 > [!NOTE]
-> Dieses Entwurfs Handbuch wurde für Windows 7 erstellt und wurde für neuere Versionen von Windows nicht aktualisiert. Ein Großteil der Anleitungen gilt weiterhin im Prinzip, aber die Präsentation und die Beispiele entsprechen nicht unseren [aktuellen Entwurfs Anleitungen](/windows/uwp/design/).
+> Dieser Entwurfsleitfaden wurde für Windows 7 erstellt und für neuere Versionen von Windows nicht aktualisiert. Ein Großteil der Anleitungen gilt immer noch im Prinzip, aber die Präsentation und die Beispiele spiegeln nicht unsere [aktuellen Entwurfsleitfäden](/windows/uwp/design/)wider.
 
-Benutzer interagieren mit Text mehr als mit einem beliebigen anderen Element in Microsoft Windows. Segoe UI (ausgesprochen "See-Go") ist die Schriftart des Windows-Systems. Die Standardschrift Größe wurde auf 9 Punkt angehoben.
+Benutzer interagieren mehr mit Text als mit jedem anderen Element in Microsoft Windows. Segoe UI (ausgesprochen "SEE-go") ist die Windows-Systemschriftart. Der Standardschriftgrad wurde auf 9 Punkte erhöht.
 
-![Abbildung von Alphabet in der Schriftart der Benutzeroberfläche in der Benutzeroberfläche ](images/vis-fonts-image1.png)
+![Abbildung des Alphabets in der Schriftart "segoe ui" ](images/vis-fonts-image1.png)
 
-Die Segoe UI Schriftart.
+Die schriftart Segoe UI.
 
-Segoe UI und "abgoe" sind nicht die gleiche Schriftart. Segoe UI ist die für Text Zeichenfolgen der Benutzeroberfläche vorgesehene Windows-Schriftart. "Abgoe" ist eine brandingschriftart, die von Microsoft und Partnern verwendet wird, um Material für Print und Werbung zu liefern.
+Segoe UI und Segoe sind nicht die gleiche Schriftart. Segoe UI ist die Windows-Schriftart für Textzeichenfolgen auf der Benutzeroberfläche. Segoe ist eine Brandingschriftart, die von Microsoft und Partnern verwendet wird, um Material für Druck und Werbung zu erzeugen.
 
-Segoe UI ist eine genehmigbare, offene und freundliche Schriftart, die eine bessere Lesbarkeit bietet als Tahoma, Microsoft Sans Serif und Arial. Es verfügt über die Merkmale eines humanistischen Sans Serif: die unterschiedlichen Breiten der Hauptstädte (schmale E und S, z. b. im Vergleich zu "Helvetica", bei denen die breiten ähnlicher, ziemlich breit sind); der Belastungs-und letterforms-Wert in Kleinbuchstaben; und die tatsächliche kursiv Formatierung (statt einer "schrägen" oder einer schrägen römischen, wie viele Industrie aussehende Sans serifs). Die Schriftart soll den gleichen visuellen Effekt auf dem Bildschirm und in Druck gestalten. Es wurde als humaner Sans-Serif ohne starkes Zeichen oder als ablenkend gedacht entwickelt.
+Segoe UI ist eine ansprechbare, offene und benutzerfreundliche Schriftart und hat daher eine bessere Lesbarkeit als Tahoma, Microsoft Sans Serif und Arial. Sie weist die Merkmale eines humanistischen Sans serifens auf: die unterschiedlichen Breiten der Großbuchstaben (z. B. schmales E und S im Vergleich zu Helvetica, wo die Breiten gleich und relativ breit sind); die Belastungs- und Buchstabenformen des Kleinbuchstabens; und seine wahren italischen (anstelle einer "obszönen" oder schrägen romanischen, wie vielen industrieähnlichen Sans-Serifen). Die Schriftart soll den gleichen visuellen Effekt auf dem Bildschirm und im Druck erzielen. Es wurde so konzipiert, dass es sich um einen humanistischen Sans-Serifen ohne starke Zeichen oder ablenkende Stille handelt.
 
-Segoe UI ist für ClearType optimiert, das in Windows standardmäßig aktiviert ist. Bei aktiviertem ClearType ist Segoe UI eine elegante, lesbare Schriftart. Ohne aktivierten ClearType ist Segoe UI nur geringfügig akzeptabel. Dieser Faktor bestimmt, wann Segoe UI verwendet werden soll.
+Segoe UI ist für ClearType optimiert, das in Windows standardmäßig aktiviert ist. Wenn ClearType aktiviert ist, ist Segoe UI eine elegante, lesbare Schriftart. Wenn ClearType nicht aktiviert ist, ist Segoe UI nur geringfügig akzeptabel. Dieser Faktor bestimmt, wann Sie Segoe UI verwenden sollten.
 
-Segoe UI umfasst lateinische, Griechisch, Kyrillisch und arabische Zeichen. Es gibt neue Schriftarten, die auch für ClearType optimiert sind und für andere Zeichensätze und Verwendungszwecke erstellt wurden. Hierzu gehören meiryo für Japanisch, Malgun-Gotik für Koreanisch, Microsoft jhenghei für Chinesisch (traditionell), Microsoft YaHei für Chinesisch (vereinfacht), gisha für Hebräisch und Leelawadee für Thai und die für die Verwendung von Dokumenten vorgesehenen ClearType-Auflistungs Schriftarten.
+Segoe UI enthält lateinische, lateinische, kyrillische und arabische Zeichen. Es gibt neue Schriftarten, die auch für ClearType optimiert sind und für andere Zeichensätze und -verwendungen erstellt wurden. Dazu gehören Wiegeryo für Japanisch, MalgunOse für Koreanisch, Microsoft JhengHei für Chinesisch (traditionell), Microsoft YaHei für Chinesisch (vereinfacht), Gisha für Hebräisch und Leechatadee für Thailändisch und die ClearType Collection-Schriftarten, die für die Dokumentverwendung entwickelt wurden.
 
-Meiryo enthält lateinische Zeichen, die auf Verdana basieren. Malgun Gothic, Microsoft jhenghei und Microsoft YaHei verwenden einen angepassten Segoe UI. Die Verwendung Kursiv Versionen dieser Schriftarten wird nicht empfohlen. Malgun Gothic, Microsoft jhenghei und Microsoft YaHei werden nur in regulären und fett formatierten Stilen bereitgestellt, was bedeutet, dass kursiv formatierte Zeichen durch das Durchlaufen der Aufhebungs Stile synthetisiert werden. Obwohl meiryo echte kursiv formatierte und Fett formatierte Formatierungen enthält, gelten diese Stile nur für die lateinischen Zeichen, wenn die kursiv Formatierung angewendet wird.
+Dieses Enthält lateinische Zeichen, die auf Verdana basieren. MalgunGot, Microsoft JhengHei und Microsoft YaHei verwenden eine benutzerdefinierte Segoe UI. Die Verwendung von italischen Versionen dieser Schriftarten wird nicht empfohlen. Malgun Styles, Microsoft JhengHei und Microsoft YaHei werden nur in regulären und fett formatierten Formaten bereitgestellt. Dies bedeutet, dass kursiv formatierte Zeichen synthetisiert werden, indem die stileigen Stile nach oben synthetisiert werden. Obwohl Der Stil true kursiv und fett kursiv ist, gelten diese Stile nur für die lateinischen Zeichen, die japanische Zeichen bleiben aufrecht, wenn kursiv formatiert wird.
 
-Eine Variation von meiryo, dem Namen meiryo UI, wird in der Benutzeroberfläche des Multifunktionsleisten [-Befehls bevorzugt](cmd-ribbons.md) .
+In der [Menübandbefehls-Benutzeroberfläche](cmd-ribbons.md) wird eine Variante von Sollryo bevorzugt, die als Ui bezeichnet wird.
 
-Zur Unterstützung von Gebiets Schemas, die diese Zeichensätze verwenden, wird Segoe UI abhängig von den einzelnen Gebiets Schemata während des [Lokalisierungs](glossary.md) Prozesses durch die richtigen Schriftarten ersetzt.
+Um Gebietsschemas mit diesen Zeichensätzen zu unterstützen, wird Segoe UI je nach Gebietsschema während des [Lokalisierungsprozesses](glossary.md) durch die richtigen Schriftarten ersetzt.
 
-Um Segoe UI und andere Microsoft-Schriftarten für die Verteilung mit einem Windows-basierten Programm zu lizenzieren, wenden Sie sich an [Monotype](https://www.monotype.com/).
+Wenden Sie sich an [Monotype](https://www.monotype.com/), um Segoe UI und andere Microsoft-Schriftarten für die Verteilung mit einem Windows-basierten Programm zu lizenzen.
 
-**Hinweis:** Richtlinien, die sich auf den Text [Stil und Ton](text-style-tone.md) und [Benutzeroberfläche](text-ui.md) beziehen, werden in separaten Artikeln dargestellt.
+**Hinweis:** Richtlinien für [Stil und Ton](text-style-tone.md) und [Benutzeroberflächentext](text-ui.md) werden in separaten Artikeln vorgestellt.
 
 ## <a name="design-concepts"></a>Entwurfskonzepte
 
-### <a name="fonts-typefaces-point-sizes-and-attributes"></a>Schriftarten, schriftflächen, Punktgrößen und Attribute
+### <a name="fonts-typefaces-point-sizes-and-attributes"></a>Schriftarten, Schriftarten, Punktgrößen und Attribute
 
-Bei der herkömmlichen Typographie beschreibt eine Schriftart eine Kombination aus Schriftart, Punktgröße und Attributen. Eine Schriftart ist das Aussehen der Schriftart. Segoe UI, Tahoma, Verdana und Arial sind alle typegesichter. Die Punktgröße bezieht sich auf die Größe der Schriftart, gemessen vom oberen Rand der Vorgänger bis zum unteren Rand der untergeordneten Elemente, abzüglich des internen Abstands (als "Leading" bezeichnet). Ein Punkt ist ungefähr 1/72 Zoll. Schließlich kann eine Schriftart fett formatierte oder kursiv formatierte Attribute aufweisen.
+In der herkömmlichen Typografie beschreibt eine Schriftart eine Kombination aus Schriftart, Punktgröße und Attributen. Eine Schriftart ist das Aussehen der Schriftart. Segoe UI, Tahoma, Verdana und Arial sind alle Schriftarten. Punktgröße bezieht sich auf die Größe der Schriftart, die von oben aufsteigend bis unten in den Nachfolgern gemessen wird, abzüglich des internen Abstands (als vorn bezeichnet). Ein Punkt beträgt ungefähr 1/72 Zoll. Schließlich kann eine Schriftart Fett- oder Kursivattribute aufweisen.
 
-Informell verwenden Benutzer häufig Schriftart anstelle der Schriftart in diesem Artikel, aber technisch gesehen Segoe UI eine Schriftart und keine Schriftart ist. Jede Kombination von Attributen ist eine eindeutige Schriftart (z. b. 9 Punkt Segoe UI regulär, 10 Punkt Segoe UI Fett usw.).
+Informell verwenden Benutzer häufig Schriftart anstelle der Schriftart wie in diesem Artikel, aber technisch gesehen ist Segoe UI eine Schriftart und keine Schriftart. Jede Kombination von Attributen ist eine eindeutige Schriftart (z. B. 9 Punkt Segoe UI reguläre, 10 Punkt Segoe UI Fett usw.).
 
-### <a name="serif-and-sans-serif"></a>Serif und Sans Serif
+### <a name="serif-and-sans-serif"></a>Serifen- und Sans-Serifen
 
-Typegesichter sind entweder Serif oder Sans Serif. Serif bezieht sich auf kleine Turn-Einheiten, die häufig die Striche von Buchstaben in einer Schriftart beenden. Eine Sans-Serif-Schriftart weist kein serifs auf.
+Schriftarten sind entweder serif oder sans serif. Serif bezieht sich auf kleine Drehungen, die häufig die Buchstabenstriche in einer Schriftart fertig stellen. Eine Serifenschrift "sans" hat keine Serifen.
 
-Leser bevorzugen im allgemeinen Serif-Schriftarten, die als Textkörper innerhalb eines Dokuments verwendet werden. Der Serifen an bietet ein Gefühl der Formalität und Eleganz eines Dokuments. Der Benutzeroberflächen Text sorgt für eine saubere Darstellung und die geringere Auflösung von Computermonitoren dafür, dass Sans Serif die bessere Wahl ist.
+Leser bevorzugen im Allgemeinen serifenschriftarten, die als Textkörper innerhalb eines Dokuments verwendet werden. Die Serifen vermitteln ein Gefühl der Formalität und der Vererbung zu einem Dokument. Für Benutzeroberflächentext ist die Notwendigkeit einer sauberen Darstellung und der niedrigeren Auflösung von Computermonitoren die bessere Wahl für sans serif-Schriftarten.
 
 ### <a name="contrast"></a>Vergleichen Sie
 
-Der Text ist am einfachsten zu lesen, wenn es einen großen Unterschied zwischen der Beleuchtung des Texts und dem Hintergrund gibt. Der schwarze Text auf einem weißen Hintergrund gibt den höchsten Kontrast an, den der dunkle Text in einem sehr hellen Hintergrund hervorragend hervorbringen kann. Diese Kombination eignet sich am besten für primäre Benutzeroberflächen Oberflächen.
+Text ist am einfachsten zu lesen, wenn ein großer Unterschied zwischen der Leuchtdichte des Texts und dem Hintergrund besteht. Schwarzer Text auf weißem Hintergrund bietet den höchsten kontrastreichen dunklen Text auf einem sehr hellen Hintergrund, der ebenfalls einen hohen Kontrast bieten kann. Diese Kombination eignet sich am besten für primäre Benutzeroberflächenoberflächen.
 
-Heller Text auf einem dunklen Hintergrund bietet einen guten Kontrast, aber nicht so gut wie dunkler Text auf einem hellen Hintergrund. Diese Kombination eignet sich gut für sekundäre Benutzeroberflächen Oberflächen, wie z. b. Explorer-Aufgabenbereiche, die Sie in Relation zu den primären Benutzeroberflächen Oberflächen hervorheben möchten.
+Helltext auf einem dunklen Hintergrund bietet einen guten Kontrast, aber nicht so gut wie dunkler Text auf einem hellen Hintergrund. Diese Kombination funktioniert gut für sekundäre Ui-Oberflächen, z. B. Explorer-Aufgabenbereiche, die Sie relativ zu den primären Ui-Oberflächen deaktivieren möchten.
 
-**Wenn Sie sicherstellen möchten, dass Benutzer Ihren Text lesen, verwenden Sie den dunklen Text auf einem hellen Hintergrund.**
+**Wenn Sie sicherstellen möchten, dass Benutzer Ihren Text lesen, verwenden Sie dunklen Text auf hellem Hintergrund.**
 
-### <a name="affordances"></a>Kostengünstig
+### <a name="affordances"></a>Affordances
 
-Der Text kann anhand der [folgenden Möglichkeiten](glossary.md) angeben, wie er verwendet wird:
+Text kann die folgenden [Möglichkeiten](glossary.md) verwenden, um anzugeben, wie er verwendet wird:
 
--   **Zeichner.** Der I-Bar-Zeiger ("Text Select") gibt an, dass der Text auswählbar ist, während der nach links zeigenden Pfeil ("normaler Select"-Zeiger) angibt, dass der Text nicht ist.
--   **Einfügemarke.** Wenn Text den Eingabefokus besitzt, ist die Einfügemarke der blinkende senkrechte Strich, der den Einfügungs-oder Auswahl Punkt in auswählbaren oder bearbeitbaren Text
--   **Chens.** Ein Feld um Text, das angibt, dass es bearbeitet werden kann. Um das Gewicht der Präsentation zu reduzieren, wird das Feld möglicherweise nur dynamisch angezeigt, wenn der bearbeitbare Text ausgewählt ist.
--   **Vordergrundfarbe.** Hellgrau gibt an, dass der Text deaktiviert ist. Nicht graue Farben (besonders blau und lila) geben an, dass der Text ein Link ist.
--   **Hintergrundfarbe.** Ein heller grauer Hintergrund weist darauf hin, dass der Text schreibgeschützt ist. in der Praxis kann Schreib geschützter Text aber einen beliebigen Hintergrund aufweisen.
+-   **Zeiger.** Der I-Bar-Zeiger ("Textauswahl") gibt an, dass der Text auswählbar ist, während der nach links zeigende Pfeil ("normal select") angibt, dass Text nicht ist.
+-   **Einfügemarke.** Wenn Text den Eingabefokus besitzt, ist das Caretzeichen der blinkende vertikale Balken, der den Einfüge-/Auswahlpunkt in auswählbarem oder bearbeitbarem Text angibt.
+-   **Box.** Ein Textfeld, das angibt, dass er bearbeitet werden kann. Um die Gewichtung der Präsentation zu reduzieren, kann das Feld nur dynamisch angezeigt werden, wenn der bearbeitbare Text ausgewählt ist.
+-   **Vordergrundfarbe.** Hellgrau gibt an, dass Text deaktiviert ist. Nicht graue Farben, insbesondere Blau und Violett, geben an, dass Text ein Link ist.
+-   **Hintergrundfarbe.** Ein hellgrauer Hintergrund deutet schwach darauf hin, dass Text schreibgeschützt ist, aber in der Praxis kann schreibgeschützter Text einen beliebigen Farbhintergrund aufweisen.
 
-Diese Kosten werden für folgende Bedeutungen kombiniert:
+Diese Möglichkeiten werden für die folgenden Bedeutungen kombiniert:
 
--   **Bearbeitet.** Text, der in einem Feld mit einem Text Select-Zeiger, einer Einfügemarke (beim Eingabefokus) und in der Regel in einem weißen Hintergrund angezeigt wird.
--   **Schreibgeschützt, auswählbar.** Text mit einem SELECT-Zeiger und einem Caretzeichen (im Eingabefokus).
--   **Schreibgeschützt, nicht auswählbar.** Text mit einem Pfeil Zeiger.
--   **Deaktiviert.** Heller grauer Text mit einem Pfeil Zeiger, der manchmal in einem grauen Hintergrund angezeigt wird.
+-   **Bearbeitbaren.** Text, der in einem Feld mit einem Textauswahlzeiger, einem Caretzeichen (beim Eingabefokus) und in der Regel auf einem weißen Hintergrund angezeigt wird.
+-   **Schreibgeschützt, auswählbar.** Text mit einem Auswahlzeiger und einem Caretzeichen (auf dem Eingabefokus).
+-   **Schreibgeschützt, nicht auswählbar.** Text mit einem Pfeilzeiger.
+-   **Deaktiviert.** Hellgrauer Text mit einem Pfeilzeiger, manchmal auf einem grauen Hintergrund.
 
-Schreib geschützter Text hat normalerweise einen grauen Hintergrund, aber ein grauer Hintergrund ist nicht erforderlich. Tatsächlich kann ein grauer Hintergrund unerwünscht sein, insbesondere für große Textblöcke, da er vorschlägt, dass der Text deaktiviert ist, und das Lesen verhindert.
+Schreibgeschützter Text hat normalerweise einen grauen Hintergrund, aber ein grauer Hintergrund ist nicht erforderlich. Tatsächlich kann ein grauer Hintergrund unerwünscht sein, insbesondere bei großen Textblöcken, da er darauf hindeutet, dass der Text deaktiviert ist und vom Lesen abraten wird.
 
-### <a name="accessibility-and-the-system-font-sizes-and-colors"></a>Barrierefreiheit und die Schriftart, Größe und Farben des Systems
+### <a name="accessibility-and-the-system-font-sizes-and-colors"></a>Barrierefreiheit und Die Schriftart, Größen und Farben des Systems
 
-Die Richtlinien, die für Benutzer mit Behinderungen oder Beeinträchtigungen zugänglich gemacht werden können, können in eine einfache Regel integriert werden: Beachten Sie die Benutzereinstellungen, indem Sie immer die Schriftart, die Größe und die Farben des Systems verwenden.
+Die Richtlinien zum Zugänglichmachen von Text für Benutzer mit Behinderungen oder Beeinträchtigungen können auf eine einfache Regel festgelegt werden: Beachten Sie die Einstellungen des Benutzers, indem Sie immer die Schriftart, die Größen und die Farben des Systems verwenden.
 
-**Wenn Sie nur eine Aktion ausführen...**
+**Wenn Sie nur eine Sache tun...**
 
-Beachten Sie die Benutzereinstellungen, indem Sie immer die Schriftart, die Größe und die Farben des Systems verwenden.
+Beachten Sie die Einstellungen des Benutzers, indem Sie immer die Systemschriftart, -größen und -farben verwenden.
 
-**Entwickler:** Im Code können Sie die Eigenschaften der System Schriftart (einschließlich ihrer Größe) mithilfe der gettemefont-API-Funktion bestimmen. Die Systemfarben können mithilfe der getthemesyscolor-API-Funktion bestimmt werden.
+**Entwickler:** Im Code können Sie die Eigenschaften der Systemschriftart (einschließlich ihrer Größe) mithilfe der GetThemeFont-API-Funktion bestimmen. Sie können die Systemfarben mithilfe der GetThemeSysColor-API-Funktion bestimmen.
 
-Da Sie keine Annahmen über die Systemdesign Einstellungen des Benutzers treffen können, sollten Sie folgende Schritte ausführen:
+Da Sie keine Annahmen über die Systemdesigneinstellungen von Benutzern treffen können, sollten Sie:
 
--   Basieren Sie stets auf den Farben und Hintergründen der Schriftart auf die Farben des Systemdesigns. Erstellen Sie niemals Ihre eigenen Farben auf der Grundlage fester RGB-Werte (rot, grün, blau).
--   Vergleichen Sie die System Textfarben stets mit ihren entsprechenden Hintergrundfarben. Wenn Sie z. b. für \_ die Textfarbe Color StaticText auswählen, müssen Sie auch Color \_ static als Hintergrundfarbe auswählen.
--   Erstellen Sie immer neue Schriftarten auf der Grundlage von Variationen der System Schriftart mit proportionaler Größenanpassung. Mit den Schriftart Metriken für das System können Sie Fett formatierte, kursiv, größere und kleinere Variationen erstellen.
+-   Basieren Sie ihre Schriftfarben und Hintergründe immer auf Systemdesignfarben. Erstellen Sie niemals eigene Farben basierend auf festen RGB-Werten (rot, grün, blau).
+-   Stimmen Sie Systemtextfarben immer mit den entsprechenden Hintergrundfarben ab. Wenn Sie beispielsweise COLOR \_ STATICTEXT als Textfarbe auswählen, müssen Sie auch COLOR \_ STATIC als Hintergrundfarbe auswählen.
+-   Erstellen Sie immer neue Schriftarten basierend auf variationen proportionaler Größe der Systemschriftart. Angesichts der Metriken der Systemschriftart können Sie fett, kursiv, größer und kleinere Variationen erstellen.
 
-**Eine einfache Möglichkeit, um sicherzustellen, dass das Programm die Benutzereinstellungen respektiert, besteht darin, einen anderen Schrift Grad und ein Farbschema mit hohem Kontrast zu testen.** Der gesamte Text sollte die Größe ändern und im ausgewählten Farbschema ordnungsgemäß angezeigt werden.
+**Eine einfache Möglichkeit, um sicherzustellen, dass Ihr Programm die Benutzereinstellungen beachtet, ist das Testen mit einem anderen Schriftgrad und einem Farbschema mit hohem Kontrast.** Die Größe des gesamten Texts sollte im ausgewählten Farbschema ordnungsgemäß geändert und angezeigt werden.
 
 ## <a name="usage-patterns"></a>Verwendungsmuster
 
-Text weist mehrere Verwendungs Muster auf:
+Text hat mehrere Verwendungsmuster:
 
 
 
-|                                                                                                                                                                                                                                                           |                                                                                                                                                       |
+|    Verwendung                                         |    BESCHREIBUNG                            |
 |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Text der Titelleiste**<br/> Text auf der Titelleiste, der das Fenster identifiziert.<br/>                                                                                                                                                                | ![Beispiel für Text Schriftart der Titelleiste ](images/vis-fonts-image2.png)<br/>                                                                            |
-| **Haupt Anleitung**<br/> Text, der erläutert, was für eine Seite, ein Fenster oder ein Dialogfeld zu tun ist. <br/>                                                                                                                                              | ![Beispiel für eine Text Schriftart in der Haupt Anleitung ](images/vis-fonts-image3.png)<br/>                                                                    |
-| **Sekundäre Anweisungen**<br/> Zusätzlicher Text, in dem erläutert wird, was auf einer Seite, einem Fenster oder einem Dialogfeld durchzuführen ist. <br/>                                                                                                                            | ![Beispiel für eine Text Schriftart mit Sekundär Anweisungen ](images/vis-fonts-image4.png)<br/>                                                               |
-| **Normaler Text**<br/> Normaler (Schreib geschützter) Text, der in einer Benutzeroberfläche angezeigt wird. <br/>                                                                                                                                                           | ![Beispiel für normale Text Schriftart ](images/vis-fonts-image5.png)<br/>                                                                               |
-| **Hervorgehobene Text**<br/> Fett formatierter Text wird verwendet, um die Analyse des Texts zu vereinfachen und auf den Text, den Benutzer lesen müssen, aufmerksam zu machen. Kursiv Text wird verwendet, um buchstäblich auf Text (anstelle von Anführungszeichen) zu verweisen und bestimmte Wörter hervorzuheben. <br/> | ![Beispiel für hervorgehobene Text Schriftart ](images/vis-fonts-image6.png)<br/>                                                                           |
-| **Bearbeitbarer Text**<br/> Text, der von Benutzern bearbeitet werden kann, wird in einem Feld angezeigt. um das Gewicht der Präsentation zu reduzieren, wird das Feld möglicherweise nur angezeigt, wenn der bearbeitbare Text ausgewählt ist. <br/>                                                          | ![Beispiel für eine bearbeitbare Text Schriftart ](images/vis-fonts-image7.png)<br/>                                                                             |
-| **Deaktivierter Text**<br/> Text, der nicht auf den aktuellen Kontext angewendet wird, z. b. Bezeichnungen für deaktivierte Steuerelemente. der deaktivierte Text gibt an, dass Benutzer (normalerweise) keinen Lesevorgang für den Text <br/>                                           | ![Beispiel für deaktivierte Text Schriftart ](images/vis-fonts-image8.png)<br/>                                                                             |
-| **Links**<br/> Text, der verwendet wird, um zu einer anderen Seite, einem anderen Fenster oder einem Hilfethema zu navigieren oder einen Befehl zu initiieren. <br/>                                                                                                                                     | ![Beispiel für Link Text Schriftart ](images/vis-fonts-image9.png)<br/> ![Beispiel für Verknüpfungs Text Schriftart (Hover) ](images/vis-fonts-image10.png)<br/> |
-| **Gruppen Kopfzeile**<br/> Text, der verwendet wird, um Elemente in einer Listenansicht zu gruppieren. <br/>                                                                                                                                                                          | ![Beispiel für eine Textschriftart für Gruppen Kopfzeilen ](images/vis-fonts-image11.png)<br/>                                                                        |
-| **Dateiname**<br/> Dateiname Text (nur in der Inhaltsansicht). <br/>                                                                                                                                                                               | ![Beispiel für einen Dateinamen (in der Inhaltsansicht) Text Schriftart ](images/vis-fonts-image12.png)<br/>                                                         |
-| **Dokument Text**<br/> Text, der in Dokumenten verwendet wird (im Gegensatz zum Benutzeroberflächen Text). <br/>                                                                                                                                                                  | ![Beispiel für Dokument Text Schriftart ](images/vis-fonts-image13.png)<br/>                                                                            |
-| **Dokument Überschriften**<br/> Text, der als Überschrift in einem Dokument verwendet wird. <br/>                                                                                                                                                                    | ![Beispiel für Text Schriftart für Dokument Überschriften ](images/vis-fonts-image14.png)<br/>                                                                   |
+| **Titelleistentext**<br/> Text auf der Titelleiste, der das Fenster identifiziert.<br/>                                                                                                                                                                | ![Beispiel für eine Textschriftart in der Titelleiste ](images/vis-fonts-image2.png)<br/>                                                                            |
+| **Hauptanweisungen**<br/> Text, in dem erläutert wird, was auf einer Seite, einem Fenster oder einem Dialogfeld zu tun ist. <br/>                                                                                                                                              | ![Beispiel für die Textschriftart "main-instructions" ](images/vis-fonts-image3.png)<br/>                                                                    |
+| **Sekundäre Anweisungen**<br/> Ergänzender Text, in dem erläutert wird, was auf einer Seite, einem Fenster oder einem Dialogfeld zu tun ist. <br/>                                                                                                                            | ![Beispiel für die Textschriftart "secondary-instructions" ](images/vis-fonts-image4.png)<br/>                                                               |
+| **Normaler Text**<br/> Gewöhnlicher (schreibgeschützter) Text, der auf einer Benutzeroberfläche angezeigt wird. <br/>                                                                                                                                                           | ![Beispiel für normale Textschriftart ](images/vis-fonts-image5.png)<br/>                                                                               |
+| **Hervorgehobener Text**<br/> Fett formatierten Text wird verwendet, um die Analyse des Texts zu vereinfachen und die Aufmerksamkeit auf Text zu ziehen, den Benutzer lesen müssen. Kursaler Text wird verwendet, um auf Text zu verweisen (anstelle von Anführungszeichen) und um bestimmte Wörter zu hervorheben. <br/> | ![Beispiel für eine hervorgehobene Textschriftart ](images/vis-fonts-image6.png)<br/>                                                                           |
+| **Bearbeitbarer Text**<br/> Text, den Benutzer bearbeiten können, wird in einem Feld angezeigt. um die Gewichtung der Präsentation zu verringern, wird das Feld möglicherweise nur angezeigt, wenn der bearbeitbare Text ausgewählt ist. <br/>                                                          | ![Beispiel für eine bearbeitbare Textschriftart ](images/vis-fonts-image7.png)<br/>                                                                             |
+| **Deaktivierter Text**<br/> Text, der nicht für den aktuellen Kontext gilt, z. B. Bezeichnungen für deaktivierte Steuerelemente. Deaktivierter Text gibt an, dass Benutzer (normalerweise) den Text nicht lesen sollten. <br/>                                           | ![Beispiel für deaktivierte Textschriftart ](images/vis-fonts-image8.png)<br/>                                                                             |
+| **Links**<br/> Text, der verwendet wird, um zu einer anderen Seite, einem fenster oder einem Hilfethema zu navigieren oder einen Befehl zu initiieren. <br/>                                                                                                                                     | ![Beispiel für eine Linktextschriftart ](images/vis-fonts-image9.png)<br/> ![Beispiel für die Textschriftart "Links" (Hover) ](images/vis-fonts-image10.png)<br/> |
+| **Gruppenheader**<br/> Text, der zum Gruppen von Elementen in einer Listenansicht verwendet wird. <br/>                                                                                                                                                                          | ![Beispiel für die Textschriftart "Gruppenheader" ](images/vis-fonts-image11.png)<br/>                                                                        |
+| **Dateiname**<br/> Dateinamentext (nur in der Inhaltsansicht). <br/>                                                                                                                                                                               | ![Beispiel für die Textschriftart "Dateiname" (in der Inhaltsansicht) ](images/vis-fonts-image12.png)<br/>                                                         |
+| **Dokumenttext**<br/> In Dokumenten verwendeter Text (im Gegensatz zu Benutzeroberflächentext). <br/>                                                                                                                                                                  | ![Beispiel für Dokumenttextschriftart ](images/vis-fonts-image13.png)<br/>                                                                            |
+| **Dokumentüberschriften**<br/> Text, der als Überschrift in einem Dokument verwendet wird. <br/>                                                                                                                                                                    | ![Beispiel für die Textschriftart "Dokumentüberschriften" ](images/vis-fonts-image14.png)<br/>                                                                   |
 
 
 
@@ -132,57 +132,55 @@ Text weist mehrere Verwendungs Muster auf:
 
 
 
-|                                                                                               |                             |                                                            |
+| Muster | Designsymbol | Schriftart, Farbe |
 |-----------------------------------------------------------------------------------------------|-----------------------------|------------------------------------------------------------|
-| **Muster**<br/>                                                                        | **Design Symbol**<br/> | **Schriftart, Farbe**<br/>                                 |
-| ![Beispiel für Text Schriftart der Titelleiste ](images/vis-fonts-image2.png)<br/>                    | CaptionFont<br/>      | 9 pt. schwarz ( \# 000000) Segoe UI<br/>                 |
-| ![Beispiel für eine Text Schriftart in der Haupt Anleitung ](images/vis-fonts-image3.png)<br/>            | Maininstruction<br/>  | 12 pt. blau ( \# 003399) Segoe UI<br/>                 |
-| ![Beispiel für eine Text Schriftart mit Sekundär Anweisungen ](images/vis-fonts-image4.png)<br/>       | Anweisung<br/>      | 9 pt. schwarz ( \# 000000) Segoe UI<br/>                 |
-| ![Beispiel für normale Text Schriftart ](images/vis-fonts-image5.png)<br/>                       | BodyText<br/>         | 9 pt. schwarz ( \# 000000) Segoe UI<br/>                 |
-| ![Beispiel für hervorgehobene Text Schriftart ](images/vis-fonts-image6.png)<br/>                   | BodyText<br/>         | 9 pt. schwarz ( \# 000000) Segoe UI, Fett oder kursiv<br/> |
-| ![Beispiel für eine bearbeitbare Text Schriftart ](images/vis-fonts-image7.png)<br/>                     | BodyText<br/>         | 9 pt. schwarz ( \# 000000) Segoe UI in einem Feld<br/>       |
-| ![Beispiel für deaktivierte Text Schriftart ](images/vis-fonts-image8.png)<br/>                     | Disabled<br/>         | 9 pt. dunkelgrau ( \# 323232) Segoe UI<br/>             |
-| ![Beispiel für Link Text Schriftart ](images/vis-fonts-image9.png)<br/>                         | Hyperlinktext<br/>    | 9 pt. Blue ( \# 0066cc)-Segoe UI<br/>                  |
-| ![Beispiel für Verknüpfungs Text Schriftart (Hover) ](images/vis-fonts-image10.png)<br/>               | Hot<br/>              | 9 pt. hellblau ( \# 3399ff)-Segoe UI<br/>            |
-| ![Beispiel für eine Textschriftart für Gruppen Kopfzeilen ](images/vis-fonts-image11.png)<br/>                |                             | 11 PT. blau ( \# 003399) Segoe UI<br/>                 |
-| ![Beispiel für einen Dateinamen (in der Inhaltsansicht) Text Schriftart ](images/vis-fonts-image12.png)<br/> |                             | 11 PT. schwarz ( \# 000000) Segoe UI<br/>                |
-| ![Beispiel für Dokument Text Schriftart ](images/vis-fonts-image13.png)<br/>                    | (none)<br/>           | 9 pt. schwarz ( \# 000000) Calibri<br/>                  |
-| ![Beispiel für Text Schriftart für Dokument Überschriften ](images/vis-fonts-image14.png)<br/>           | (none)<br/>           | 17 PT. schwarz ( \# 000000) Calibri<br/>                 |
+| ![Beispiel für eine Textschriftart in der Titelleiste ](images/vis-fonts-image2.png)<br/>                    | CaptionFont<br/>      | 9 pt. black ( \# 000000) Segoe UI<br/>                 |
+| ![Beispiel für die Textschriftart "main-instructions" ](images/vis-fonts-image3.png)<br/>            | MainInstruction<br/>  | 12 Pt. blue ( \# 003399) Segoe UI<br/>                 |
+| ![Beispiel für die Textschriftart "secondary-instructions" ](images/vis-fonts-image4.png)<br/>       | Anweisung<br/>      | 9 pt. black ( \# 000000) Segoe UI<br/>                 |
+| ![Beispiel für normale Textschriftart ](images/vis-fonts-image5.png)<br/>                       | BodyText<br/>         | 9 pt. black ( \# 000000) Segoe UI<br/>                 |
+| ![Beispiel für eine hervorgehobene Textschriftart ](images/vis-fonts-image6.png)<br/>                   | BodyText<br/>         | 9 pt. black ( \# 000000) Segoe UI, fett oder italisch<br/> |
+| ![Beispiel für eine bearbeitbare Textschriftart ](images/vis-fonts-image7.png)<br/>                     | BodyText<br/>         | 9 pt. black ( \# 000000) Segoe UI, in einem Feld<br/>       |
+| ![Beispiel für deaktivierte Textschriftart ](images/vis-fonts-image8.png)<br/>                     | Disabled<br/>         | 9 pt. dunkelgrau ( \# 323232) Segoe UI<br/>             |
+| ![Beispiel für eine Linktextschriftart ](images/vis-fonts-image9.png)<br/>                         | HyperLinkText<br/>    | 9 pt. blue ( \# 0066CC) Segoe UI<br/>                  |
+| ![Beispiel für die Textschriftart "Links" (Hover) ](images/vis-fonts-image10.png)<br/>               | heiße Ebene<br/>              | 9 pt. hellblau ( \# 3399FF) Segoe UI<br/>            |
+| ![Beispiel für die Textschriftart "Gruppenheader" ](images/vis-fonts-image11.png)<br/>                |                             | 11 Pt. blue ( \# 003399) Segoe UI<br/>                 |
+| ![Beispiel für die Textschriftart "Dateiname" (in der Inhaltsansicht) ](images/vis-fonts-image12.png)<br/> |                             | 11 Pt. black ( \# 000000) Segoe UI<br/>                |
+| ![Beispiel für Dokumenttextschriftart ](images/vis-fonts-image13.png)<br/>                    | (none)<br/>           | 9 pt. black ( \# 000000) Calibri<br/>                  |
+| ![Beispiel für die Textschriftart "Dokumentüberschriften" ](images/vis-fonts-image14.png)<br/>           | (none)<br/>           | 17 Pt. black ( \# 000000) Calibri<br/>                 |
 
 
 
  
 
--   **Wählen Sie Schriftarten aus, und optimieren Sie die Fensterlayouts basierend auf der UI-Technologie und der Zielversion von Windows:**
+-   **Wählen Sie Schriftarten aus, und optimieren Sie Fensterlayouts basierend auf der Benutzeroberflächentechnologie und der Zielversion von Windows:**
 
 
 
-|                                            |                                                       |                                                                                                                                                                                                                                                                                                                                                                  |
+| Ui-Technologie | Windows-Zielversion | Zu verwendende und zu optimierende Schriftarten |
 |--------------------------------------------|-------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **UI-Technologie**<br/>               | **Windows-Zielversion**<br/>                 | **Zu verwendende Schriftarten und zum Optimieren**<br/>                                                                                                                                                                                                                                                                                                                     |
-| Windows Presentation Foundation<br/> | Alle<br/>                                        | Verwenden Sie WPF-Design Teile.<br/>                                                                                                                                                                                                                                                                                                                                  |
+| Windows Presentation Foundation<br/> | Alle<br/>                                        | Verwenden Sie WPF-Designteile.<br/>                                                                                                                                                                                                                                                                                                                                  |
 | Win32 oder WinForms<br/>               | Windows Vista oder höher<br/>                     | Verwenden Sie die entsprechende Segoe UI Schriftart.<br/>                                                                                                                                                                                                                                                                                                                    |
-|                                            | Erweiterbare Komponenten oder Pre-Windows Vista<br/> | Verwenden Sie zum als Ziel für Windows XP und Windows 2000 die Pseudo Schriftart 8 Punkt MS Shell Dlg 2, die Tahoma zugeordnet ist.<br/> Um auf frühere Versionen von Windows ausgerichtet zu sein, verwenden Sie 8-Punkt-MS Shell Dlg-Pseudo Schriftart, die Tahoma unter Windows 2000 und Windows XP zugeordnet ist, und MS Sans Serif unter Windows 95, Windows 98, Windows Millennium Edition und Windows NT 4,0.<br/> |
+|                                            | Erweiterbare Komponenten oder vor Windows Vista<br/> | Um Windows XP und Windows 2000 als Ziel zu verwenden, verwenden Sie die Pseudoschriftart 8 Punkt MS Shell Dlg 2, die Tahoma zugeordnet ist.<br/> Verwenden Sie für frühere Versionen von Windows die Ms Shell-Pseudoschriftart 8 Punkt, die Tahoma unter Windows 2000 und Windows XP und MS Sans Serif unter Windows 95, Windows 98, Windows Editions und Windows NT 4.0 zugeordnet ist.<br/> |
 
 
 
  
 
--   **Anbietern**
-    -   Für Elemente, die ein festes Layout verwenden (z. b. Windows-Dialog Vorlagen und WinForms), wird die entsprechende Schriftart aus der vorangehenden Tabelle hart codiert.
-    -   Verwenden Sie für Elemente, die dynamisches Layout verwenden (z. b. Windows Presentation Foundation), die Design Schriftarten. Verwenden Sie Design-APIs wie drawdermetext zum Zeichnen von Text auf der Grundlage des Design Symbols. Stellen Sie sicher, dass eine Alternative auf Systemmetriken basiert, falls der Design Dienst nicht ausgeführt wird.
--   **Verwenden Sie für Segoe UI eine Schriftgröße von 9 Punkten oder eine größere.** Die Segoe UI Schriftart ist für diese Größen optimiert, daher sollten kleinere Größen nicht verwendet werden.
--   **Vergleichen Sie die System Textfarben stets mit ihren entsprechenden Hintergrundfarben.** Wenn Sie z. b. für \_ die Textfarbe Color StaticText auswählen, müssen Sie auch Color \_ static als Hintergrundfarbe auswählen.
--   **Erstellen Sie immer neue Schriftarten auf der Grundlage von Variationen der System Schriftart mit proportionaler Größenanpassung.** Mit den Schriftart Metriken für das System können Sie Fett formatierte, kursiv, größere und kleinere Variationen erstellen.
--   Zeigen Sie große Blöcke mit Schreib geschütztem Text (z. b. Lizenzbedingungen) vor einem hellen Hintergrund anstelle eines grauen Hintergrunds an. Graue Hintergründe deuten darauf hin, dass der Text deaktiviert ist und das Lesen verhindert.
--   Stellen Sie **eine maximale Zeilenlänge von 65 Zeichen in Erwägung** , damit der Text leichter lesbar ist. (Zeichen umfassen Buchstaben, Interpunktions Zeichen und Leerzeichen.)
+-   **Entwickler:**
+    -   Für Elemente, die ein festes Layout verwenden (z. B. Windows-Dialogfeldvorlagen und WinForms), hart codieren Sie die entsprechende Schriftart aus der vorherigen Tabelle.
+    -   Verwenden Sie für Elemente, die dynamisches Layout verwenden (z. B. Windows Presentation Foundation), die Designschriftarten. Verwenden Sie Design-APIs wie DrawThemeText, um Text basierend auf dem Designsymbol zu zeichnen. Stellen Sie sicher, dass Sie eine Alternative basierend auf Systemmetriken haben, falls der Designdienst nicht ausgeführt wird.
+-   **Verwenden Sie für Segoe UI einen Schriftgrad von 9 Oder höher.** Die Segoe UI Schriftart ist für diese Größen optimiert, daher vermeiden Sie die Verwendung kleinerer Größen.
+-   **Stimmen Sie Systemtextfarben immer mit den entsprechenden Hintergrundfarben ab.** Wenn Sie beispielsweise COLOR \_ STATICTEXT als Textfarbe auswählen, müssen Sie auch COLOR \_ STATIC als Hintergrundfarbe auswählen.
+-   **Erstellen Sie immer neue Schriftarten basierend auf variationen proportionaler Größe der Systemschriftart.** Angesichts der Metriken der Systemschriftart können Sie fett, kursiv, größer und kleinere Variationen erstellen.
+-   Zeigen Sie große Blöcke mit schreibgeschütztem Text (z. B. Lizenzbedingungen) vor einem hellen Hintergrund anstelle eines grauen Hintergrunds an. Graue Hintergründe deuten darauf hin, dass der Text deaktiviert ist und vom Lesen abraten.
+-   **Ziehen Sie eine maximale Zeilenlänge von 65 Zeichen** in Betracht, um den Text leicht lesbar zu machen. (Zeichen enthalten Buchstaben, Interpunktionszeichen und Leerzeichen.)
 
 ### <a name="attributes"></a>Attribute
 
--   Die meisten Benutzeroberflächen Texte sollten ohne Attribute einfach sein. Attribute können wie folgt verwendet werden:
-    -   **Bold.** Verwenden Sie in Steuerelement Bezeichnungen, um den Text leichter analysieren zu können. Verwenden Sie sparsam, um den Text zu zeichnen, den Benutzer lesen müssen. Wenn Sie zu viel fett formatieren, verringert sich die Auswirkung.
-    -   **Kursiv.** Verwenden Sie, um buchstäblich anstelle von Anführungszeichen auf Text zu verweisen. Verwenden Sie sehr sparsam, um bestimmte Wörter hervorzuheben. Verwenden Sie dies für [Eingabe Aufforderungen](glossary.md) in [Textfeldern](ctrl-text-boxes.md) und [bearbeitbaren Dropdown Listen](/windows/desktop/uxguide/ctrl-drop).
-    -   **Fett formatiert.** Verwenden Sie nicht.
-    -   **Streichen.** Verwenden Sie nicht mit Ausnahme von Links. Verwenden Sie stattdessen kursiv formatiert.
--   Nicht alle Schriftarten unterstützen Fett und kursiv, daher sollten Sie nie entscheidend sein, um den Text besser zu verstehen.
+-   Der Großteil des Benutzeroberflächentexts sollte ohne Attribute klar sein. Attribute können wie folgt verwendet werden:
+    -   **kühn.** Verwenden Sie in Steuerelementbezeichnungen, um die Analyse des Texts zu vereinfachen. Verwenden Sie sparingly , um die Aufmerksamkeit auf Text zu lenken, den Benutzer lesen müssen. Die Verwendung von zu viel Fett verringert die Auswirkungen.
+    -   **Italic.** Verwenden Sie , um anstelle von Anführungszeichen auf Text zu verweisen. Verwenden Sie sparingly , um bestimmte Wörter hervorzuheben. Verwenden Sie für [Eingabeaufforderungen](glossary.md) in [Textfeldern](ctrl-text-boxes.md) und [bearbeitbaren Dropdownlisten.](/windows/desktop/uxguide/ctrl-drop)
+    -   **Kursiv fett formatiert.** Nicht verwenden.
+    -   **Unterstreichen.** Verwenden Sie nur Links. Verwenden Sie stattdessen zur Hervorhebung die italische.
+-   Nicht alle Schriftarten unterstützen fett und kursiv, daher sollten sie nie entscheidend sein, um den Text zu verstehen.
 

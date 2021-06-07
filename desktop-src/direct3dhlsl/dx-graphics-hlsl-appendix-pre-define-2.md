@@ -1,6 +1,6 @@
 ---
 title: '\#define-Direktive (Makro)'
-description: Eine Präprozessordirektive, die ein Funktions ähnliches Makro erstellt.
+description: Präprozessordi directive that creates a function-like macro.
 ms.assetid: 73c19cf8-fbc5-444b-a51f-dc9f881f397b
 ms.topic: reference
 ms.date: 05/31/2018
@@ -9,20 +9,20 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: a8de5a47fc92c02e9f565c80f600359e8e5b32f9
-ms.sourcegitcommit: cba7f424a292fd7f3a8518947b9466439b455419
+ms.openlocfilehash: d0c54c0c433c91522c8a72c5955a419eb72f9eee
+ms.sourcegitcommit: cb87082135319cbdc5df541e3071eebb83a58972
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "104993278"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111387516"
 ---
 # <a name="define-directive-macro"></a>\#define-Direktive (Makro)
 
-Eine Präprozessordirektive, die ein Funktions ähnliches Makro erstellt.
+Präprozessordi directive that creates a function-like macro.
 
 
 
-| \#*Bezeichner* definieren ( *argument0*,..., *argumentn-1* ) *Tokenzeichenfolge* |
+| \#define *identifier*( *argument0*, ... , *argumentN-1* ) *token-string* |
 |--------------------------------------------------------------------------|
 
 
@@ -35,25 +35,25 @@ Eine Präprozessordirektive, die ein Funktions ähnliches Makro erstellt.
 
 | Element                                                                                                                                                                                                                                                          | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="identifier"></span><span id="IDENTIFIER"></span>*Figur*<br/>                                                                                                                                                                             | Der Bezeichner des Makros. <br/> Eine zweite [ \# Definition](dx-graphics-hlsl-appendix-pre-define.md) für ein Makro mit einem Bezeichner, der bereits im aktuellen Kontext vorhanden ist, generiert einen Fehler, es sei denn, die zweite tokensequenz ist mit der ersten identisch. <br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| <span id="___________argument0___...___argumentN-1_________"></span><span id="___________argument0___...___argumentn-1_________"></span><span id="___________ARGUMENT0___...___ARGUMENTN-1_________"></span> ( *argument0*,..., *argumentn-1* ) <br/> | Liste der Argumente für das Makro. Die Argumentliste ist durch Kommas getrennt, kann eine beliebige Länge aufweisen und muss in Klammern eingeschlossen werden. Jeder Argument Name in der Liste muss eindeutig sein. Der *bezeichnerparameter* und die öffnende Klammer können nicht durch Leerzeichen getrennt werden. <br/> Zeilen Verkettung platzieren platzieren Sie einen umgekehrten Schrägstrich ( \) unmittelbar vor dem Zeilen Umleitungs Zeichen, um lange Direktiven in mehrere Quellzeilen aufzuteilen. <br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| <span id="token-string__optional________"></span><span id="TOKEN-STRING__OPTIONAL________"></span>*Tokenzeichenfolge* \[ optionale\] <br/>                                                                                                                     | Der Wert des Makros. Dieser Parameter besteht aus einer Reihe von Token, wie z. b. Schlüsselwörtern, Konstanten oder Complete-Anweisungen. Dieser Parameter muss von einem oder mehreren Leerzeichen vom *bezeichnerparameter* getrennt werden. Dieser Leerraum wird nicht als Teil des ersetzten Texts betrachtet, und es ist kein Leerraum nach dem letzten Token des Texts enthalten. Nehmen Sie eine liberale Verwendung von Klammern vor, um sicherzustellen, dass komplizierte Argumente ordnungsgemäß interpretiert werden. <br/> Wenn der Wert des *bezeichnerparameters* innerhalb des *Tokenzeichenfolgen-* Parameters auftritt (auch als Ergebnis einer anderen Makro Erweiterung), wird er nicht erweitert. <br/> Wenn Sie diesen Parameter ausschließen, werden alle Instanzen des *bezeichnerparameters* aus der Quelldatei entfernt. Der Bezeichner bleibt definiert und kann mithilfe der Direktiven [ \# if defined](dx-graphics-hlsl-appendix-pre-ifdef.md), \# ifdef und \# ifndef getestet werden. <br/> |
+| <span id="identifier"></span><span id="IDENTIFIER"></span>*Bezeichner*<br/>                                                                                                                                                                             | Bezeichner des Makros. <br/> Eine zweite [ \# Definition für](dx-graphics-hlsl-appendix-pre-define.md) ein Makro mit einem Bezeichner, der bereits im aktuellen Kontext vorhanden ist, generiert einen Fehler, es sei denn, die zweite Tokensequenz ist mit der ersten identisch. <br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| <span id="___________argument0___...___argumentN-1_________"></span><span id="___________argument0___...___argumentn-1_________"></span><span id="___________ARGUMENT0___...___ARGUMENTN-1_________"></span> ( *argument0*, ... , *argumentN-1* ) <br/> | Liste der Argumente für das Makro. Die Argumentliste ist durch Kommas getrennt, kann eine beliebige Länge haben und muss in Klammern eingeschlossen werden. Jeder Argumentname in der Liste muss eindeutig sein. Der Bezeichnerparameter und die öffnende *Klammer* können nicht durch Leerzeichen getrennt werden. <br/> Verwenden Sie die Zeilenkonkettierung, um einen zurücken Schrägstrich ( ) direkt vor dem Zeilenumbruchzeichen zu platzieren, um lange Anweisungen auf mehrere \\ Quellzeilen zu teilen. <br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| <span id="token-string__optional________"></span><span id="TOKEN-STRING__OPTIONAL________"></span>*token-string* \[ Optional\] <br/>                                                                                                                     | Der Wert des Makros. Dieser Parameter besteht aus einer Reihe von Token, z. B. Schlüsselwörtern, Konstanten oder vollständigen Anweisungen. Mindestens ein Leerzeichen muss diesen Parameter vom *Bezeichnerparameter* trennen. dieses Leerzeichen wird weder als Teil des ersetzten Texts noch als Leerzeichen nach dem letzten Token des Texts betrachtet. Verwenden Sie Klammern, um sicherzustellen, dass komplizierte Argumente richtig interpretiert werden. <br/> Wenn der Wert  des Bezeichnerparameters im Tokenzeichenfolgenparameter auftritt (auch als Ergebnis einer anderen Makroerweiterung), wird er nicht erweitert.  <br/> Wenn Sie diesen Parameter ausschließen,  werden alle Instanzen des Bezeichnerparameters aus der Quelldatei entfernt. Der Bezeichner bleibt definiert und kann mithilfe der [ \# if-definierten](dx-graphics-hlsl-appendix-pre-ifdef.md)Anweisungen , \# ifdef und \# ifndef getestet werden. <br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Alle Instanzen des *bezeichnerparameters* , die nach der [ \# define](dx-graphics-hlsl-appendix-pre-define.md) -Direktive in der Quelldatei auftreten, bilden einen Makro-Aufrufwert, und der Bezeichner wird durch eine Version des *Tokenzeichenfolgen-* Parameters ersetzt, der tatsächliche Argumente für formale Parameter ersetzt. Die Anzahl der Parameter im-Aufrufwert muss mit der Anzahl von Parametern in der Makro Definition identisch sein. Der Bezeichner wird nur ersetzt, wenn er ein Token bildet. Beispielsweise wird der Bezeichner nicht ersetzt, wenn er in einem Kommentar, innerhalb einer Zeichenfolge oder als Teil eines längeren Bezeichners angezeigt wird.
+Alle Instanzen des  Bezeichnerparameters, die nach der [ \# define-Direktive](dx-graphics-hlsl-appendix-pre-define.md) in der Quelldatei auftreten, bilden einen Makroaufruf, und der Bezeichner wird durch eine Version des *Tokenzeichenfolgenparameters* ersetzt, der tatsächliche Argumente durch formale Parameter ersetzt. Die Anzahl der Parameter im Aufruf muss mit der Anzahl der Parameter in der Makrodefinition übereinstimmen. Der Bezeichner wird nur ersetzt, wenn er ein Token bildet. Beispielsweise wird der Bezeichner nicht ersetzt, wenn er in einem Kommentar, innerhalb einer Zeichenfolge oder als Teil eines längeren Bezeichners angezeigt wird.
 
-Die [ \# undef](dx-graphics-hlsl-appendix-pre-undef.md) -Direktive weist den Präprozessor an, die Definition eines Bezeichners zu vergessen. Weitere Informationen finden Sie unter \# undef-Direktive (DirectX HLSL).
+Die [ \# Undef-Direktive](dx-graphics-hlsl-appendix-pre-undef.md) weist den Präprozessor an, die Definition eines Bezeichners zu vergessen. Weitere Informationen finden Sie unter \# undef Directive (DirectX HLSL).
 
-Das Definieren von Konstanten mit der/D-Compileroption hat dieselbe Auswirkung wie die Verwendung der [ \# define](dx-graphics-hlsl-appendix-pre-define.md) -Direktive am Anfang der Datei. Bis zu 30 Makros können mit der/D-Option definiert werden.
+Das Definieren von Konstanten mit der Compileroption /D hat die gleiche Wirkung wie die Verwendung der [ \# define-Direktive](dx-graphics-hlsl-appendix-pre-define.md) am Anfang der Datei. Mit der Option /D können bis zu 30 Makros definiert werden.
 
-Die tatsächlichen Argumente im Makro-Befehl werden mit den entsprechenden formalen Argumenten in der Makro Definition abgeglichen. Jedes formale Argument in der Tokenzeichenfolge wird durch das entsprechende tatsächliche Argument ersetzt, es sei denn, dem Argument ist ein \# Zeichen folgen Operator (), ein \# Zeichen (@) oder ein tokeneinfügeoperator ( \# \# ) oder ein \# \# Operator gefolgt. Alle Makros im tatsächlichen Argument werden erweitert, bevor die Anweisung den formalen Parameter ersetzt.
+Die tatsächlichen Argumente im Makroaufruf werden mit den entsprechenden formalen Argumenten in der Makrodefinition übereinstimmen. Jedes formale Argument in der Tokenzeichenfolge wird durch das entsprechende tatsächliche Argument ersetzt, es sei denn, dem Argument ist ein Zeichenfolgenoperator ( ), ein Zeichenoperator ( @) oder ein Operator gefolgt von einem -Operator \# \# \# \# \# \# vorangegangen. Alle Makros im tatsächlichen Argument werden erweitert, bevor die Anweisung den formalen Parameter ersetzt.
 
-Das Einfügen von Token im HLSL-Compiler unterscheidet sich geringfügig von der tokeneinfügefunktion im C-Compiler, da die eingefügten Token selbst gültige Token sein müssen. Beachten Sie beispielsweise die folgende Makro Definition:
+Das Einfing von Token im HLSL-Compiler ist etwas anders als das Einfing von Token im C-Compiler, da die einzugebenden Token selbst gültige Token sein müssen. Betrachten Sie beispielsweise die folgende Makrodefinition:
 
 
 ```
@@ -63,7 +63,7 @@ MERGE(float, 4x4) test;
 
 
 
-Im C-Compiler führt dies zu folgendem:
+Im C-Compiler führt dies zu Folgendem:
 
 
 ```
@@ -72,7 +72,7 @@ float4x4 test
 
 
 
-Im HLSL-Compiler führt dies jedoch zu folgendem:
+Im HLSL-Compiler führt dies jedoch zu Folgendem:
 
 
 ```
@@ -81,7 +81,7 @@ float4 x4 test
 
 
 
-Sie können dieses Verhalten umgehen, indem Sie stattdessen die folgende Makro Definition verwenden.
+Sie können dieses Verhalten mithilfe der folgenden Makrodefinition vermeiden.
 
 
 ```
@@ -92,7 +92,7 @@ MERGE(MERGE(float, 4), x4) test;
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird ein-Makro zum Definieren von Cursor Linien verwendet.
+Im folgenden Beispiel wird ein Makro verwendet, um Cursorzeilen zu definieren.
 
 
 ```
@@ -101,7 +101,7 @@ Im folgenden Beispiel wird ein-Makro zum Definieren von Cursor Linien verwendet.
 
 
 
-Im folgenden Beispiel wird ein Makro definiert, das eine Pseudo Zufalls-Ganzzahl im angegebenen Bereich abruft.
+Im folgenden Beispiel wird ein Makro definiert, das eine pseudozufällige ganze Zahl im angegebenen Bereich abruft.
 
 
 ```
@@ -118,7 +118,7 @@ Im folgenden Beispiel wird ein Makro definiert, das eine Pseudo Zufalls-Ganzzahl
 [Präprozessordirektiven (DirectX HLSL)](dx-graphics-hlsl-appendix-preprocessor.md)
 </dt> <dt>
 
-[\#Definieren von über Ladungen](dx-graphics-hlsl-appendix-pre-define.md)
+[\#Definieren von Überladungen](dx-graphics-hlsl-appendix-pre-define.md)
 </dt> <dt>
 
 [\#undef-Direktive (DirectX HLSL)](dx-graphics-hlsl-appendix-pre-undef.md)
