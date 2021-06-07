@@ -1,41 +1,43 @@
 - name: Ereignisablaufverfolgung
   href: event-tracing-portal.md
   items:
-    - name: Neuerungen bei der Ereignis Ablauf Verfolgung
+    - name: Neues bei der Ereignisablaufverfolgung
       href: what-s-new-in-event-tracing.md
-    - name: Informationen zur Ereignis Ablauf Verfolgung
+    - name: Informationen zur Ereignisablaufverfolgung
       href: about-event-tracing.md
       items:
-        - name: Ereignis Ablauf Verfolgungs Sitzungen
+        - name: Ereignisablaufverfolgungssitzungen
           href: event-tracing-sessions.md
         - name: Gerätetreiber
           href: device-drivers.md
-    - name: Verwenden der Ereignis Ablauf Verfolgung
+    - name: Verwenden der Ereignisablaufverfolgung
       href: using-event-tracing.md
       items:
-        - name: Steuern von Ereignis Ablauf Verfolgungs Sitzungen
+        - name: Steuern von Ereignisablaufverfolgungssitzungen
           href: controlling-event-tracing-sessions.md
           items:
-            - name: Konfigurieren und Starten einer Ereignis Ablauf Verfolgungs Sitzung
+            - name: Konfigurieren und Starten einer Ereignisablaufverfolgungssitzung
               href: configuring-and-starting-an-event-tracing-session.md
               items:
-                - name: Beispiel für das Erstellen einer Sitzung und Aktivieren eines manifestresssbasierten oder klassischen Anbieters
+                - name: 'Beispiel: Erstellen einer Sitzung und Aktivieren eines manifestbasierten oder klassischen Anbieters'
                   href: example-that-creates-a-session-and-enables-a-manifest-based-provider.md
-            - name: Konfigurieren und Starten einer systemtraceprovider-Sitzung
+            - name: Konfigurieren und Starten einer SystemTraceProvider-Sitzung
               href: configuring-and-starting-a-systemtraceprovider-session.md
               items:
-                - name: Konfigurieren und Starten der NT Kernel Logger-Sitzung
+                - name: Konfigurieren und Starten der NT-Kernelprotokollierungssitzung
                   href: configuring-and-starting-the-nt-kernel-logger-session.md
-            - name: Konfigurieren und Starten einer autologger-Sitzung
+                - name: Systemanbieter
+                  href: system-providers.md
+            - name: Konfigurieren und Starten einer AutoLogger-Sitzung
               href: configuring-and-starting-an-autologger-session.md
               items:
-                - name: Konfigurieren und Starten der globalen Protokollierungs Sitzung
+                - name: Konfigurieren und Starten der globalen Protokollierungssitzung
                   href: configuring-and-starting-the-global-logger-session.md
-            - name: Konfigurieren und Starten einer Sitzung für private Logger
+            - name: Konfigurieren und Starten einer privaten Protokollierungssitzung
               href: configuring-and-starting-a-private-logger-session.md
-            - name: Aktualisieren einer Ereignis Ablauf Verfolgungs Sitzung
+            - name: Aktualisieren einer Ereignisablaufverfolgungssitzung
               href: updating-an-event-tracing-session.md
-            - name: Abrufen von zusätzlichen Ereignis Ablauf Verfolgungs Daten
+            - name: Abrufen zusätzlicher Ereignisablaufverfolgungsdaten
               href: retrieving-additional-event-tracing-data.md
         - name: Bereitstellen von Ereignissen
           href: providing-events.md
@@ -43,64 +45,64 @@
             - name: Schreiben von Ereignissen
               href: writing-events.md
               items:
-                - name: Schreiben von Manifest-basierten Ereignissen
+                - name: Schreiben von manifestbasierten Ereignissen
                   href: writing-manifest-based-events.md
                 - name: Schreiben von MOF-Ereignissen (klassisch)
                   href: tracing-events.md
                 - name: Schreiben von WPP-Ereignissen
                   href: windows-software-trace-preprocessor.md
-                - name: Abrufen eines Anbieters und einer Klassen-GUID
+                - name: Abrufen einer Anbieter- und Klassen-GUID
                   href: obtaining-a-provider-and-class-guid.md
-                - name: Anbieter Merkmale
+                - name: Anbietermerkmale
                   href: provider-traits.md
             - name: Schreiben verwandter Ereignisse in einem End-to-End-Szenario
               href: writing-related-events-in-an-end-to-end-scenario.md
               items:
-                - name: Schreiben verwandter Ereignisse in einem Manifest-basierten Anbieter
+                - name: Schreiben verwandter Ereignisse in einem manifestbasierten Anbieter
                   href: writing-related-events-in-a-manifest-base-provider.md
                 - name: Schreiben verwandter Ereignisse in einem klassischen Anbieter
                   href: tracing-event-instances.md
-            - name: Veröffentlichen des Ereignis Schemas
+            - name: Veröffentlichen des Ereignisschemas
               href: publishing-your-event-schema.md
               items:
-                - name: Veröffentlichen des Ereignis Schemas für einen Manifest-basierten Anbieter
+                - name: Veröffentlichen des Ereignisschemas für einen manifestbasierten Anbieter
                   href: publishing-your-event-schema-for-a-manifest-base-provider.md
-                - name: Veröffentlichen Ihres Ereignis Schemas für einen klassischen Anbieter
+                - name: Veröffentlichen des Ereignisschemas für einen klassischen Anbieter
                   href: publishing-your-event-schema-for-a-classic-provider.md
-        - name: Verarbeiten von Ereignissen
+        - name: Verwenden von Ereignissen
           href: consuming-events.md
           items:
             - name: Abrufen von Ereignisdaten
               href: retrieving-event-data.md
               items:
-                - name: Übersicht über Ereignis Metadaten
+                - name: Übersicht über Ereignismetadaten
                   href: event-metadata-overview.md
-                - name: Abrufen von Ereignisdaten mithilfe von TDH
+                - name: Abrufen von Ereignisdaten mit TDH
                   href: retrieving-event-data-using-tdh.md
                   items:
-                    - name: Verwenden von tdhformatproperty zum Verarbeiten von Ereignisdaten
+                    - name: Verwenden von TdhFormatProperty zum Verarbeiten von Ereignisdaten
                       href: using-tdhformatproperty-to-consume-event-data.md
-                    - name: Verwenden von tdhgetproperty zum Verarbeiten von Ereignisdaten
+                    - name: Verwenden von TdhGetProperty zum Verarbeiten von Ereignisdaten
                       href: using-tdhgetproperty-to-consume-event-data.md
                     - name: Auflisten von Anbietern
                       href: enumerating-providers.md
-                    - name: Abrufen von Ereignis Metadaten
+                    - name: Abrufen von Ereignismetadaten
                       href: retrieving-event-metadata.md
-                - name: Abrufen von Ereignisdaten mithilfe von MOF
+                - name: Abrufen von Ereignisdaten mit mof
                   href: retrieving-event-data-using-mof.md
-            - name: Verwenden von Ereignissen zur Berechnung der CPU-Auslastung
+            - name: Berechnen der CPU-Auslastung mithilfe von Ereignissen
               href: using-events-to-calculate-cpu-usage.md
-    - name: Referenz zur Ereignis Ablauf Verfolgung
+    - name: Referenz zur Ereignisablaufverfolgung
       href: event-tracing-reference.md
       items:
-        - name: Ereignis Ablauf Verfolgungs Konstanten
+        - name: Ereignisablaufverfolgungskonst constants
           href: event-tracing-constants.md
           items:
-            - name: NT-Kernel-Protokollierungs Konstanten
+            - name: NT-Kernelprotokollierungskonst constants
               href: nt-kernel-logger-constants.md
-            - name: Protokollierungs Modus-Konstanten
+            - name: Konstanten im Protokollierungsmodus
               href: logging-mode-constants.md
-        - name: Ereignis Ablauf Verfolgungs Makros
+        - name: Makros für die Ereignisablaufverfolgung
           href: event-tracing-macros.md
           items:
             - name: EventDataDescCreate
@@ -139,7 +141,7 @@
               href: /windows/desktop/api/Evntprov/nf-evntprov-eventdescsetversion
             - name: EventDescZero
               href: /windows/desktop/api/Evntprov/nf-evntprov-eventdesczero
-        - name: MOF-Klassen der Ereignis Ablauf Verfolgung
+        - name: MOF-Klassen für die Ereignisablaufverfolgung
           href: event-tracing-mof-classes.md
           items:
             - name: EventTrace
@@ -161,7 +163,7 @@
                           href: alpc-wait-for-new-message.md
                         - name: ALPC_Wait_For_Reply
                           href: alpc-wait-for-reply.md
-                    - name: Sowie
+                    - name: DiskIo
                       href: diskio.md
                       items:
                         - name: DiskIo_TypeGroup1
@@ -170,17 +172,17 @@
                           href: diskio-typegroup2.md
                         - name: DiskIo_TypeGroup3
                           href: diskio-typegroup3.md
-                        - name: Drivercompleterequest
+                        - name: DriverCompleteRequest
                           href: drivercompleterequest.md
-                        - name: Drivercompleterequestreturn
+                        - name: DriverCompleteRequestReturn
                           href: drivercompleterequestreturn.md
-                        - name: Drivercompletionroutine
+                        - name: DriverCompletionRoutine
                           href: drivercompletionroutine.md
-                        - name: Drivermajorfunctioncallcenter
+                        - name: DriverMajorFunctionCall
                           href: drivermajorfunctioncall.md
-                        - name: Drivermajorfunctionreturn
+                        - name: DriverMajorFunctionReturn
                           href: drivermajorfunctionreturn.md
-                    - name: Eventtraceevent
+                    - name: EventTraceEvent
                       href: eventtraceevent.md
                       items:
                         - name: EventTrace_Header
@@ -212,7 +214,7 @@
                       items:
                         - name: FileIo_V1_Name
                           href: fileio-v1-name.md
-                    - name: Hwconfig
+                    - name: HWConfig
                       href: hwconfig.md
                       items:
                         - name: HWConfig_CPU
@@ -243,16 +245,16 @@
                       items:
                         - name: RT_LostEvent
                           href: rt-lostevent.md
-                    - name: Obtrace
+                    - name: ObTrace
                       href: obtrace.md
                       items:
-                        - name: Obshandduplicateevent
+                        - name: ObHandleDuplicateEvent
                           href: obhandleduplicateevent.md
-                        - name: Oblenker Event
+                        - name: ObHandleEvent
                           href: obhandleevent.md
-                        - name: Obhandlerundownvent
+                        - name: ObHandleRundownEvent
                           href: obhandlerundownevent.md
-                        - name: Obtypeevent
+                        - name: ObTypeEvent
                           href: obtypeevent.md
                     - name: PageFault_V2
                       href: pagefault-v2.md
@@ -267,18 +269,18 @@
                           href: pagefault-typegroup1.md
                         - name: PageFault_VirtualAlloc
                           href: pagefault-virtualalloc.md
-                    - name: Perfinfo
+                    - name: PerfInfo
                       href: perfinfo.md
                       items:
                         - name: DPC
                           href: dpc.md
                         - name: ISR
                           href: isr.md
-                        - name: Sampledprofile
+                        - name: SampledProfile
                           href: sampledprofile.md
-                        - name: Syscallenter
+                        - name: SysCallEnter
                           href: syscallenter.md
-                        - name: Syscallexit
+                        - name: SysCallExit
                           href: syscallexit.md
                     - name: Prozess
                       href: process.md
@@ -317,12 +319,12 @@
                       items:
                         - name: Registry_V1_TypeGroup1
                           href: registry-v1-typegroup1.md
-                    - name: Splitio
+                    - name: SplitIo
                       href: splitio.md
                       items:
                         - name: SplitIo_Info
                           href: splitio-info.md
-                    - name: Stackwalk
+                    - name: StackWalk
                       href: stackwalk.md
                       items:
                         - name: StackWalk_Event
@@ -369,7 +371,7 @@
                           href: systemconfig-v0-services.md
                         - name: SystemConfig_V0_Video
                           href: systemconfig-v0-video.md
-                    - name: TcpIp
+                    - name: Tcpip
                       href: tcpip.md
                       items:
                         - name: TcpIp_Fail
@@ -416,13 +418,13 @@
                     - name: Thread_V2
                       href: thread-v2.md
                       items:
-                        - name: Cswitch
+                        - name: CSwitch
                           href: cswitch.md
                         - name: Thread_V2_TypeGroup1
                           href: thread-v2-typegroup1.md
-                        - name: '"Read ythread"'
+                        - name: ReadyThread
                           href: readythread.md
-                    - name: Udpip
+                    - name: UdpIp
                       href: udpip.md
                       items:
                         - name: UdpIp_Fail
@@ -441,13 +443,13 @@
                       items:
                         - name: UdpIp_V1_TypeGroup1
                           href: udpip-v1-typegroup1.md
-        - name: Ereignis Ablauf Verfolgung für MOF
+        - name: MOF-Qualifizierer für die Ereignisablaufverfolgung
           href: event-tracing-mof-qualifiers.md
-        - name: Ereignis Ablauf Verfolgungs Tools
+        - name: Tools für die Ereignisablaufverfolgung
           href: event-tracing-tools.md
-        - name: Beispiele zur Ereignis Ablauf Verfolgung
+        - name: Beispiele für die Ereignisablaufverfolgung
           href: event-tracing-samples.md
-        - name: Ereignisse der Ereignis Ablauf Verfolgung
+        - name: Ereignisablaufverfolgungsstrukturen
           href: /windows/desktop/api/_etw/#structures
           items:
             - name: WNODE_HEADER
