@@ -3,7 +3,7 @@
   items:
     - name: 64-Bit-Programmierung für Spieleentwickler
       href: sixty-four-bit-programming-for-game-developers.md
-    - name: Authenticode-Signierung für Spieleentwickler
+    - name: Authenticode Signing for Game Developers
       href: authenticode-signing-for-game-developers.md
     - name: Bewährte Sicherheitsmethoden bei der Spieleentwicklung
       href: best-security-practices-in-game-development.md
@@ -13,17 +13,17 @@
       href: coding-for-multiple-cores.md
     - name: Allgemeine Artikel zum Verbessern von Tiefenkarten für Schatten
       href: common-techniques-to-improve-shadow-depth-maps.md
-    - name: Absturz Abbild Analyse
+    - name: Absturzabbildanalyse
       href: crash-dump-analysis.md
     - name: Debuggen mit Symbolen
       href: debugging-with-symbols.md
     - name: "Häufig gestellte Fragen zu Direct3D\_10"
-      href: direct3d10-frequently-asked-questions.md
+      href: direct3d10-frequently-asked-questions.yml
     - name: Häufig gestellte Fragen zu DirectX
-      href: directx-9-frequently-asked-questions.md
+      href: directx-9-frequently-asked-questions.yml
     - name: DirectX-Installation für Spieleentwickler
       href: directx-setup-for-game-developers.md
-    - name: Deaktivieren von Tastenkombinationen in spielen
+    - name: Deaktivieren von Tastenkombinationen in Spielen
       href: disabling-shortcut-keys-in-games.md
     - name: Zeitliche Steuerung von Spielen und Multi-Core-Prozessoren
       href: game-timing-and-multicore-processors.md
@@ -33,9 +33,9 @@
       href: games-for-windows-test-requirements-1-0-0006.md
     - name: Gaming mit Least-Privileged Benutzerkonten
       href: gaming-with-least-privileged-user-accounts.md
-    - name: Installation bei Bedarf für Spiele
+    - name: Install-on-Demand für Spiele
       href: install-on-demand-for-games.md
-    - name: Installation und Wartung von spielen
+    - name: Installation und Wartung von Spielen
       href: installation-and-maintenance-of-games.md
     - name: Überlegungen zur blockierfreien Programmierung für Xbox 360 und Microsoft Windows
       href: lockless-programming.md
@@ -43,29 +43,29 @@
       href: mmo-installation-best-practices.md
     - name: Installieren und Verwenden von Eingabemethoden-Editoren
       href: installing-and-using-input-method-editors.md
-    - name: Einführung in die 10-Fuß-Darstellung für Windows-Spielentwickler
+    - name: Einführung in die 10-Fuß-Erfahrung für Windows-Spieleentwickler
       href: introduction-to-the-10-foot-experience-for-windows-game-developers.md
-    - name: 'Bereitstellen von Video Spielen: geschäftliche Begründungen und Entwurfs Überlegungen'
+    - name: 'Zugänglich machen von Videospielen: Geschäftliche Begründungen und Entwurfsüberlegungen'
       href: accessibility-best-practices.md
     - name: Optimieren der DVD-Leistung für Windows-Spiele
       href: optimizing-dvd-performance-for-windows-games.md
-    - name: 'Patchen von Spiel Software in Windows XP, Windows Vista und Windows 7'
+    - name: 'Patchen von Spielsoftware in Windows XP, Windows Vista und Windows 7'
       href: patching-methods-in-windows-xp-and-vista.md
     - name: Bewährte Methoden für die Ressourcenverwaltung
       href: resource-management-best-practices.md
-    - name: Vereinfachen der Spiele Installation
+    - name: Vereinfachen der Spieleinstallation
       href: simplifying-game-installation.md
-    - name: Nutzen der High-Definition Mausbewegung
+    - name: Nutzen der Vorteile High-Definition Mausbewegung
       href: taking-advantage-of-high-dpi-mouse-movement.md
-    - name: Die Direct3D-Transformations Pipeline
+    - name: Die Direct3D-Transformationspipeline
       href: the-direct3d-transformation-pipeline.md
-    - name: Top-Probleme bei Windows-Titeln
+    - name: Top Issues for Windows Titles
       href: top-issues-for-windows-titles.md
-    - name: Die wichtigsten Tools und Techniken zum Erstellen robuster Windows-Spiele
+    - name: Top Tools und Techniken zum Erstellen robusterer Windows-Spiele
       href: top-tools-and-techniques-for-making-more-robust-windows-games.md
     - name: Benutzerkontensteuerung für Spieleentwickler
       href: user-account-control-for-game-developers.md
-    - name: Verwenden eines Eingabemethoden-Editors in einem Spiel
+    - name: Verwenden eines Eingabemethode-Editors in einem Spiel
       href: using-an-input-method-editor-in-a-game.md
     - name: Windows-Firewall für Spieleentwickler
       href: games-and-firewalls.md
