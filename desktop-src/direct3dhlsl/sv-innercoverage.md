@@ -12,12 +12,12 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e1ac278f0524446b5171ef278e169fbe7c3a082f
-ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
+ms.openlocfilehash: 168f90c17c9e6837d696ebb6dac8f39dc6dfb366
+ms.sourcegitcommit: adba238660d8a5f4fe98fc6f5d105d56aac3a400
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "107996967"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "111826624"
 ---
 # <a name="sv_innercoverage"></a>SV \_ InnerCoverage
 
@@ -27,9 +27,8 @@ SV InputCoverage stellt verdeckte konservative Rasterungsinformationen dar (d. h
 
 
 
-|      |
+| Typ     |
 |------|
-| Typ |
 | uint |
 
 
@@ -47,7 +46,7 @@ Die konservative Rasterung ist sowohl in D3D11.3 als auch in D3D12 verfügbar. W
 -   [D3D11.3 Konservative Rasterung](/windows/desktop/direct3d11/conservative-rasterization)
 -   [D3D12 Konservative Rasterung](/windows/desktop/direct3d12/conservative-rasterization)
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

@@ -1,16 +1,16 @@
 ---
 title: Variablensyntax
-description: Verwenden Sie die folgenden Syntax Regeln, um HLSL-Variablen zu deklarieren.
+description: Verwenden Sie die folgenden Syntaxregeln, um HLSL-Variablen zu deklarieren.
 ms.assetid: 684c42d1-2dd4-42e1-9cff-580edb5c6bcd
 keywords:
 - extern, Variable Syntax (DirectX HLSL)
-- nointerpolations, Variablen Syntax (DirectX HLSL)
-- Shared, Variable Syntax (DirectX HLSL)
-- groupshared, Variablen Syntax (DirectX HLSL)
+- nointerpolation, Variable Syntax (DirectX HLSL)
+- shared, Variable Syntax (DirectX HLSL)
+- groupshared, Variable Syntax (DirectX HLSL)
 - static, Variable Syntax (DirectX HLSL)
 - Uniform, Variable Syntax (DirectX HLSL)
 - volatile, Variable Syntax (DirectX HLSL)
-- genaue Variable Syntax (DirectX HLSL)
+- precise, Variable Syntax (DirectX HLSL)
 ms.topic: article
 ms.date: 05/31/2018
 topic_type:
@@ -18,22 +18,18 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: f6e63bafa62a9857af678e0848c81237dcd0d585
-ms.sourcegitcommit: 4e0bde7dfa48a0b60bca4a5230eb2b05be3778d3
+ms.openlocfilehash: 446444e09b0b6aff3e0ba8ca8b12cfbf6dc94128
+ms.sourcegitcommit: adba238660d8a5f4fe98fc6f5d105d56aac3a400
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "104993646"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "111826068"
 ---
 # <a name="variable-syntax"></a>Variablensyntax
 
-Verwenden Sie die folgenden Syntax Regeln, um HLSL-Variablen zu deklarieren.
+Verwenden Sie die folgenden Syntaxregeln, um HLSL-Variablen zu deklarieren.
 
-
-
-|                                                                                                                                                                                    |
-|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| \[*Speicher \_* \] \[ *Klassentyp \_ Modifizierer* \] *Typname* \[ *Index* \] \[ *: Semantik* \] \[ *: packoffset* \] \[ *: Register* \] ;    \[  \] Anmerkungen \[ *= Anfänglich \_ Wert*                    \] |
+\[*Speicher \_* \] \[ *Typnamenindex \_ des* \] *Klassentypmodifizierers* \[  \] \[ *: Semantik* \] \[ *: Packoffset* \] \[ *: Register* \] ;    \[  \] Anmerkungen \[ *= Initial \_ Wert*                    \]
 
 
 
@@ -43,10 +39,10 @@ Verwenden Sie die folgenden Syntax Regeln, um HLSL-Variablen zu deklarieren.
 
 <dl> <dt>
 
-<span id="Storage_Class_"></span><span id="storage_class_"></span><span id="STORAGE_CLASS_"></span>*Speicher \_ Klasse* 
+<span id="Storage_Class_"></span><span id="storage_class_"></span><span id="STORAGE_CLASS_"></span>*\_Storage-Klasse* 
 </dt> <dd>
 
-Optionale Speicherklassenmodifizierer, die dem Compiler Hinweise zum Gültigkeitsbereich und zur Lebensdauer von Variablen die modifiziererer können in beliebiger Reihenfolge angegeben werden.
+Optionale Speicherklassenmodifizierer, die dem Compiler Hinweise zum Variablenbereich und zur Lebensdauer geben; die Modifizierer können in beliebiger Reihenfolge angegeben werden.
 
 
 
@@ -58,30 +54,30 @@ Optionale Speicherklassenmodifizierer, die dem Compiler Hinweise zum Gültigkeit
 <thead>
 <tr class="header">
 <th>Wert</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td><strong>extern</strong></td>
-<td>Markieren Sie eine globale Variable als externe Eingabe für den Shader. Dies ist die Standard Markierung für alle globalen Variablen. Kann nicht mit <strong>static</strong>kombiniert werden.</td>
+<td>Markieren Sie eine globale Variable als externe Eingabe für den Shader. dies ist die Standardmarkierung für alle globalen Variablen. Kann nicht mit statischem <strong>kombiniert werden.</strong></td>
 </tr>
 <tr class="even">
-<td><strong>nointerpolations</strong></td>
-<td>Interpolieren Sie die Ausgaben eines Vertex-Shaders nicht, bevor Sie Sie an einen PixelShader übergeben.</td>
+<td><strong>nointerpolation</strong></td>
+<td>Interpolieren Sie die Ausgaben eines Vertex-Shaders nicht, bevor Sie sie an einen Pixel-Shader übergeben.</td>
 </tr>
 <tr class="odd">
-<td><strong>sesten</strong></td>
-<td>Wenn <strong>das Schlüsselwort</strong> für eine Variable angewendet wird, werden alle Berechnungen, die für die Erstellung des Werts der Variablen verwendet werden, auf folgende Weise eingeschränkt:
+<td><strong>Präzise</strong></td>
+<td>Das <strong>genaue</strong> Schlüsselwort, wenn es auf eine Variable angewendet wird, schränkt alle Berechnungen ein, die verwendet werden, um den dieser Variablen zugewiesenen Wert auf folgende Weise zu erzeugen:
 
-*   Separate Vorgänge werden getrennt beibehalten. Wenn beispielsweise eine mul und ein Hinzufügevorgang in einen Mad-Vorgang unterteilt worden wären, erzwingt <strong>präzise</strong> , dass die Vorgänge getrennt bleiben. Stattdessen müssen Sie die intrinsische Funktion "Mad" explizit verwenden.
-*   Die Reihenfolge der Vorgänge wird beibehalten. Wenn die Reihenfolge der Anweisungen zum Verbessern der Leistung gemischt wurde, stellt <strong>präzise</strong> sicher, dass der Compiler die Bestellung wie geschrieben beibehält.
-*   Unsichere IEEE-Vorgänge sind eingeschränkt. Wenn der Compiler möglicherweise schnelle mathematische Vorgänge verwendet hat, die keine Nan-(not a Number) und INF-Werte (unendlich) berücksichtigen, erzwingt <strong>präzise</strong> die IEEE-Anforderungen bezüglich der Nan-und INF-Werte, die beachtet werden müssen. Ohne <strong>genaue</strong>Sicherheit sind diese Optimierungen und mathematischen Vorgänge nicht IEEE-sicher.
-*   Wenn Sie eine Variable <strong>genau</strong> qualifizieren, werden keine Vorgänge durchführt, die die Variable <strong>genau</strong>verwenden. Da die <strong>genaue</strong> Verteilung nur an Vorgänge durchführt, die zu den Werten beitragen, die der <strong>exakten</strong>qualifizierten Variablen zugewiesen sind, kann das korrekte Ausführen gewünschter Berechnungen knifflig sein. Daher empfiehlt <strong>es sich,</strong> die Shader-Ausgaben <strong>genau</strong> direkt zu markieren, wenn Sie Sie deklarieren, und zwar unabhängig davon, ob es sich um ein Strukturfeld oder einen Output-Parameter handelt.
+*   Separate Vorgänge werden getrennt gehalten. Wenn z. B. ein mul- und add-Vorgang <strong></strong> in einen unsinnigen Vorgang verschlangen wurde, zwingt präzise die Vorgänge, getrennt zu bleiben. Stattdessen müssen Sie explizit die intrinsische Funktion "mad" verwenden.
+*   Die Reihenfolge der Vorgänge wird beibehalten. Wenn die Reihenfolge der Anweisungen möglicherweise gemischt wurde, um die Leistung zu <strong>verbessern,</strong> stellt präzise sicher, dass der Compiler die Reihenfolge wie geschrieben beibwahrt.
+*   Unsichere IEEE-Vorgänge sind eingeschränkt. Wenn der Compiler möglicherweise schnelle mathematische Operationen verwendet hat, die keine NaN-Werte (keine Zahl) und INF-Werte (unendlich) <strong>berücksichtigen,</strong> erzwingt präzise die Einhaltung von IEEE-Anforderungen in Bezug auf NaN- und INF-Werte. Ohne <strong>präzise</strong>sind diese Optimierungen und mathematischen Operationen nicht IEEE-sicher.
+*   Wenn Sie eine Variable <strong>präzise qualifizieren,</strong> werden Vorgänge, die die Variable verwenden, nicht <strong>präzise.</strong> Da <strong></strong> präzise nur an Vorgänge weitergibt, die zu den <strong></strong>Werten beitragen, die der genau <strong></strong> qualifizierten Variablen zugewiesen sind, kann es schwierig <strong></strong> sein, die gewünschten Berechnungen richtig zu bestimmen. Daher wird empfohlen, die Shader-Ausgaben direkt dort zu markieren, wo Sie sie deklarieren, unabhängig davon, ob es sich um ein Strukturfeld, einen Ausgabeparameter oder den Rückgabetyp der Eingabefunktion handelt.
 
-Die Möglichkeit, Optimierungen auf diese Weise zu steuern, behält die Ergebnis Invarianz für die geänderte Ausgabevariable bei, indem Optimierungen deaktiviert werden, die die endgültigen Ergebnisse aufgrund von Unterschieden in kumulierten Genauigkeits unterschieden beeinflussen können. Es ist nützlich, wenn Shader für Mosaik Vorgänge Wasser strenge patchnähte oder Übereinstimmungs Werte über mehrere Durchgänge beibehalten möchten.
+Die Möglichkeit, Optimierungen auf diese Weise zu steuern, behält die Ergebnisinvarianz für die geänderte Ausgabevariable bei, indem Optimierungen deaktiviert werden, die sich aufgrund von Unterschieden bei akkumulierten Genauigkeitsunterschieden auf Endergebnisse auswirken können. Dies ist hilfreich, wenn Shader für Mosaik die wasserdichten Patchnähte bzw. die Übereinstimmung von Tiefenwerten über mehrere Durchläufe hinweg verwenden möchten.
 
-[Beispielcode](https://github.com/microsoft/DirectXShaderCompiler/blob/master/tools/clang/test/HLSLFileCheck/hlsl/types/modifiers/precise/precise4.hlsl): 
+[Beispielcode:](https://github.com/microsoft/DirectXShaderCompiler/blob/master/tools/clang/test/HLSLFileCheck/hlsl/types/modifiers/precise/precise4.hlsl) 
 ```HLSL
 matrix g_mWorldViewProjection;
 void main(in float3 InPos : Position, out precise float4 OutPos : SV_Position)
@@ -93,27 +89,27 @@ void main(in float3 InPos : Position, out precise float4 OutPos : SV_Position)
 </td>
 </tr>
 <tr class="even">
-<td><strong>Genu</strong></td>
-<td>Markieren einer Variablen für die Freigabe zwischen Effekten Dies ist ein Hinweis für den Compiler.</td>
+<td><strong>geteilt</strong></td>
+<td>Markieren Sie eine Variable für die Freigabe zwischen Effekten. dies ist ein Hinweis an den Compiler.</td>
 </tr>
 <tr class="odd">
 <td><strong>groupshared</strong></td>
-<td>Markieren Sie eine Variable für den Thread Gruppen freigegebenen Arbeitsspeicher für Compute-Shader. In d3d10 ist die maximale Gesamtgröße aller Variablen mit der groupshared-Speicher Klasse 16 KB. in D3D11 beträgt die maximale Größe 32 KB. Siehe Beispiele.</td>
+<td>Markieren Sie eine Variable für freigegebenen Threadgruppenspeicher für Compute-Shader. In D3D10 beträgt die maximale Gesamtgröße aller Variablen mit der groupshared-Speicherklasse 16 KB, in D3D11 beträgt die maximale Größe 32 KB. Siehe Beispiele.</td>
 </tr>
 <tr class="even">
 <td><strong>static</strong></td>
-<td>Markieren Sie eine lokale Variable, sodass Sie einmal initialisiert wird und zwischen Funktionsaufrufen besteht. Wenn die Deklaration keinen Initialisierer enthält, wird der Wert auf 0 (null) festgelegt. Eine globale Variable, die als <strong>statisch</strong> gekennzeichnet ist, ist für eine Anwendung nicht sichtbar.</td>
+<td>Markieren Sie eine lokale Variable so, dass sie einmal initialisiert wird und zwischen Funktionsaufrufen beibehalten wird. Wenn die Deklaration keinen Initialisierer enthält, wird der Wert auf 0 (null) festgelegt. Eine als statisch <strong>markierte globale Variable</strong> ist für eine Anwendung nicht sichtbar.</td>
 </tr>
 <tr class="odd">
 <td><strong>uniform-Variable</strong></td>
-<td>Markieren einer Variablen, deren Daten während der Ausführung eines Shaders konstant sind (z. b. eine Material Farbe in einem Scheitelpunkt-Shader); globale Variablen werden standardmäßig als <strong>einheitlich</strong> betrachtet.</td>
+<td>Markieren Sie eine Variable, deren Daten während der ausführung eines Shaders konstant sind (z. B. eine Materialfarbe in einem Vertex-Shader). globale Variablen werden standardmäßig <strong>als einheitlich</strong> betrachtet.</td>
 </tr>
 <tr class="even">
 <td><strong>volatile</strong></td>
-<td>Markieren einer Variablen, die häufig geändert wird; Dies ist ein Hinweis für den Compiler. Dieser Speicherklassenmodifizierer gilt nur für eine lokale Variable.<br/>
+<td>Markieren Sie eine Variable, die sich häufig ändert. dies ist ein Hinweis an den Compiler. Dieser Speicherklassenmodifizierer gilt nur für eine lokale Variable.<br/>
 <blockquote>
 [!Note]<br />
-Der HLSL-Compiler ignoriert zurzeit diesen Speicherklassenmodifizierer.
+Der HLSL-Compiler ignoriert diesen Speicherklassenmodifizierer derzeit.
 </blockquote>
 <br/></td>
 </tr>
@@ -129,83 +125,83 @@ Der HLSL-Compiler ignoriert zurzeit diesen Speicherklassenmodifizierer.
 <span id="Type_Modifier"></span><span id="type_modifier"></span><span id="TYPE_MODIFIER"></span>*\_Typmodifizierer*
 </dt> <dd>
 
-Optionaler Modifizierer vom Typ "Variable".
+Optionaler Variablentypmodifizierer.
 
 
 
-| Wert             | BESCHREIBUNG                                                                                                                                                                                                                                  |
+| Wert             | Beschreibung                                                                                                                                                                                                                                  |
 |-------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **const**         | Markieren Sie eine Variable, die nicht von einem Shader geändert werden kann. Daher muss Sie in der Variablen Deklaration initialisiert werden. Globale Variablen werden standardmäßig als **konstant** erachtet (unterdrücken Sie dieses Verhalten, indem Sie dem Compiler das/GEC-Flag bereitstellen). |
-| **\_Hauptzeile**    | Markieren Sie eine Variable, die vier Komponenten in einer einzelnen Zeile speichert, sodass Sie in einem einzelnen Konstanten Register gespeichert werden können.                                                                                                                             |
-| **\_Haupt Spalte** | Markieren Sie eine Variable, die vier Komponenten in einer einzelnen Spalte speichert, um die mathematische Matrix zu optimieren.                                                                                                                                                         |
+| **const**         | Markieren Sie eine Variable, die nicht von einem Shader geändert werden kann. Daher muss sie in der Variablendeklaration initialisiert werden. Globale Variablen werden standardmäßig als **const** betrachtet (unterdrücken Sie dieses Verhalten, indem Sie das Flag /Gec an den Compiler übergeben). |
+| **\_Zeilen-Hauptzeile**    | Markieren Sie eine Variable, die vier Komponenten in einer einzelnen Zeile speichert, damit sie in einem einzelnen konstanten Register gespeichert werden können.                                                                                                                             |
+| **\_Spalten-Hauptspalte** | Markieren Sie eine Variable, die 4 Komponenten in einer einzelnen Spalte speichert, um die Matrixmatrizen zu optimieren.                                                                                                                                                         |
 
 
 
  
 
 > [!Note]  
-> Wenn Sie keinen Typmodifiziererwert angeben, verwendet der Compiler die **Spalte \_ Major** als Standardwert.
+> Wenn Sie keinen Typmodifiziererwert angeben, verwendet der Compiler **die \_ Spalten-Hauptspalte** als Standardwert.
 
  
 
 </dd> <dt>
 
-<span id="Type"></span><span id="type"></span><span id="TYPE"></span>*Sorte*
+<span id="Type"></span><span id="type"></span><span id="TYPE"></span>*Typ*
 </dt> <dd>
 
-Jeder in den [Datentypen (DirectX HLSL)](dx-graphics-hlsl-data-types.md)aufgeführte HLSL-Typ.
+Alle HLSL-Typen, die unter [Datentypen (DirectX HLSL) aufgeführt sind.](dx-graphics-hlsl-data-types.md)
 
 </dd> <dt>
 
 <span id="Name_Index_"></span><span id="name_index_"></span><span id="NAME_INDEX_"></span>*Name* \[ *Index*\]
 </dt> <dd>
 
-Eine ASCII-Zeichenfolge, die eine Shader-Variable eindeutig identifiziert. Um ein optionales Array zu definieren, verwenden Sie den **Index** für die Array Größe, die eine positive Ganzzahl = 1 ist.
+ASCII-Zeichenfolge, die eine Shadervariable eindeutig identifiziert. Um ein optionales Array zu definieren, verwenden Sie **index** für die Arraygröße, bei der es sich um eine positive ganze Zahl = 1 handelt.
 
 </dd> <dt>
 
-<span id="Semantic"></span><span id="semantic"></span><span id="SEMANTIC"></span>*Tischer*
+<span id="Semantic"></span><span id="semantic"></span><span id="SEMANTIC"></span>*Semantische*
 </dt> <dd>
 
-Optionale Parameter Verwendungs Informationen, die vom Compiler verwendet werden, um shadereingaben und-Ausgaben zu verknüpfen. Es gibt mehrere vordefinierte [Semantik](dx-graphics-hlsl-semantics.md) für Scheitelpunkt-und Pixel-Shader. Der Compiler ignoriert Semantik, es sei denn, Sie sind für eine globale Variable deklariert, oder ein Parameter, der an einen Shader übergeben wird.
+Optionale Parameterverwendungsinformationen, die vom Compiler verwendet werden, um Shadereingaben und -ausgaben zu verknüpfen. Es gibt mehrere vordefinierte [Semantik für](dx-graphics-hlsl-semantics.md) Vertex- und Pixel-Shader. Der Compiler ignoriert die Semantik, es sei denn, sie werden für eine globale Variable deklariert oder ein Parameter, der an einen Shader übergeben wird.
 
 </dd> <dt>
 
 <span id="Packoffset"></span><span id="packoffset"></span><span id="PACKOFFSET"></span>*Packoffset*
 </dt> <dd>
 
-Optionales Schlüsselwort zum manuellen Packen von shaderkonstanten. Siehe [packoffset (DirectX HLSL)](dx-graphics-hlsl-variable-packoffset.md).
+Optionales Schlüsselwort zum manuellen Packen von Shaderkonst constants. Weitere Informationen [finden Sie unter packoffset (DirectX HLSL).](dx-graphics-hlsl-variable-packoffset.md)
 
 </dd> <dt>
 
-<span id="Register"></span><span id="register"></span><span id="REGISTER"></span>*Sich*
+<span id="Register"></span><span id="register"></span><span id="REGISTER"></span>*Registrieren*
 </dt> <dd>
 
-Optionales Schlüsselwort zum manuellen Zuweisen einer shadervariablen zu einem bestimmten Register. Weitere Informationen finden Sie unter [Register (DirectX HLSL)](dx-graphics-hlsl-variable-register.md).
+Optionales Schlüsselwort zum manuellen Zuweisen einer Shadervariablen zu einem bestimmten Register. Weitere [Informationen finden Sie unter register (DirectX HLSL).](dx-graphics-hlsl-variable-register.md)
 
 </dd> <dt>
 
-<span id="Annotation_s_"></span><span id="annotation_s_"></span><span id="ANNOTATION_S_"></span>*Anmerkung (e)*
+<span id="Annotation_s_"></span><span id="annotation_s_"></span><span id="ANNOTATION_S_"></span>*Anmerkungen*
 </dt> <dd>
 
-Optionale Metadaten in Form einer Zeichenfolge, die an eine globale Variable angefügt sind. Eine Anmerkung wird vom Effect-Framework verwendet und von HLSL ignoriert. Ausführlichere Informationen finden Sie unter [Anmerkung-Syntax](/windows/desktop/direct3d10/d3d10-effect-annotation-syntax).
+Optionale Metadaten in Form einer Zeichenfolge, die an eine globale Variable angefügt sind. Eine Anmerkung wird vom Effektframework verwendet und von HLSL ignoriert. Eine ausführlichere Syntax finden Sie unter [Anmerkungssyntax](/windows/desktop/direct3d10/d3d10-effect-annotation-syntax).
 
 </dd> <dt>
 
-<span id="Initial_Value"></span><span id="initial_value"></span><span id="INITIAL_VALUE"></span>*Anfangs \_ Wert*
+<span id="Initial_Value"></span><span id="initial_value"></span><span id="INITIAL_VALUE"></span>*\_Anfangswert*
 </dt> <dd>
 
-Optionaler Anfangswert (en); die Anzahl der Werte sollte mit der Anzahl der Komponenten im *Typ* identisch sein. Jede globale Variable, die als **extern** gekennzeichnet ist, muss mit einem Literalwert initialisiert werden. jede Variable, die als **statisch** gekennzeichnet ist, muss mit einer-Konstante initialisiert werden.
+Optionale Anfangswert(en); Die Anzahl der Werte sollte mit der Anzahl der Komponenten im Typ *übereinstimmen.* Jede globale Variable, die **als extern markiert** ist, muss mit einem Literalwert initialisiert werden. Jede als **statisch markierte** Variable muss mit einer Konstante initialisiert werden.
 
-Globale Variablen, die nicht als **statisch** oder **extern** gekennzeichnet sind, werden nicht in den Shader kompiliert. Der Compiler legt die Standardwerte für globale Variablen nicht automatisch fest und kann nicht in Optimierungen verwendet werden. Um diesen Typ globaler Variablen zu initialisieren, verwenden Sie Reflektion, um den Wert zu erhalten, und kopieren Sie dann den Wert in einen konstanten Puffer. Beispielsweise können Sie die [**ID3D11ShaderReflection:: getvariablebyname**](/windows/desktop/api/d3d11shader/nf-d3d11shader-id3d11shaderreflection-getvariablebyname) -Methode zum Aufrufen der Variablen verwenden, die [**ID3D11ShaderReflectionVariable:: getdesc**](/windows/desktop/api/d3d11shader/nf-d3d11shader-id3d11shaderreflectionvariable-getdesc) -Methode verwenden, um die Beschreibung der shadervariablen abzurufen, und den Anfangswert aus dem **DefaultValue** -Member der [**D3D11 \_ Shader- \_ Variablen \_ DESC**](/windows/desktop/api/d3d11shader/ns-d3d11shader-d3d11_shader_variable_desc) -Struktur erhalten. Um den Wert in den konstanten Puffer zu kopieren, müssen Sie sicherstellen, dass der Puffer mit CPU-Schreibzugriff ([**D3D11 \_ CPU \_ Access \_ Write**](/windows/desktop/api/d3d11/ne-d3d11-d3d11_cpu_access_flag)) erstellt wurde. Weitere Informationen zum Erstellen eines konstanten Puffers finden Sie unter Gewusst [wie: Erstellen eines konstanten Puffers](/windows/desktop/direct3d11/overviews-direct3d-11-resources-buffers-constant-how-to).
+Globale Variablen, die nicht als **statisch oder** **extern** gekennzeichnet sind, werden nicht in den Shader kompiliert. Der Compiler setzt nicht automatisch Standardwerte für globale Variablen und kann sie nicht in Optimierungen verwenden. Um diesen Typ einer globalen Variablen zu initialisieren, verwenden Sie reflektion, um ihren Wert zu erhalten, und kopieren Sie den Wert dann in einen konstanten Puffer. Beispielsweise können Sie die [**ID3D11ShaderReflection::GetVariableByName-Methode**](/windows/desktop/api/d3d11shader/nf-d3d11shader-id3d11shaderreflection-getvariablebyname) verwenden, um die Variable zu erhalten, die [**ID3D11ShaderReflectionVariable::GetDesc-Methode**](/windows/desktop/api/d3d11shader/nf-d3d11shader-id3d11shaderreflectionvariable-getdesc) verwenden, um die Beschreibung der Shadervariablen zu erhalten, und den Anfangswert aus dem **DefaultValue-Element** der [**D3D11 \_ SHADER \_ VARIABLE \_ DESC-Struktur**](/windows/desktop/api/d3d11shader/ns-d3d11shader-d3d11_shader_variable_desc) erhalten. Um den Wert in den Konstantenpuffer zu kopieren, müssen Sie sicherstellen, dass der Puffer mit CPU-Schreibzugriff [**(D3D11 \_ CPU \_ ACCESS \_ WRITE) erstellt wurde.**](/windows/desktop/api/d3d11/ne-d3d11-d3d11_cpu_access_flag) Weitere Informationen zum Erstellen eines konstanten Puffers finden Sie unter [How to: Create a Constant Buffer](/windows/desktop/direct3d11/overviews-direct3d-11-resources-buffers-constant-how-to).
 
-Sie können auch das [Effects-Framework](../direct3d11/d3d11-graphics-programming-guide-effects.md) verwenden, um die Spiegelung automatisch zu verarbeiten und den Anfangswert festzulegen. Beispielsweise können Sie die [**ID3DX11EffectPass:: apply**](/windows/desktop/direct3d11/id3dx11effectpass-apply) -Methode verwenden.
+Sie können auch das [Effektframework verwenden,](../direct3d11/d3d11-graphics-programming-guide-effects.md) um das reflektierende automatisch zu verarbeiten und den Anfangswert zu setzen. Beispielsweise können Sie die [**ID3DX11EffectPass::Apply-Methode**](/windows/desktop/direct3d11/id3dx11effectpass-apply) verwenden.
 
 </dd> </dl>
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden finden Sie einige Beispiele für Shader-Variable-Deklarationen.
+Im Folgenden finden Sie einige Beispiele für Shadervariablendeklarationen.
 
 
 ```
@@ -230,19 +226,19 @@ const float4 lightDirection = {0,0,1};
 
 
 
-### <a name="group-shared"></a>Gruppe freigegeben
+### <a name="group-shared"></a>Freigegebene Gruppe
 
-Mit HLSL können Threads eines Compute-Shaders Werte über gemeinsam genutzten Arbeitsspeicher austauschen. HLSL bietet Barriere, wie z. b. [**groupmemorybarrierwithgroupsync**](groupmemorybarrierwithgroupsync.md), usw., um die korrekte Reihenfolge von Lese-und Schreibvorgängen im Shader zu gewährleisten und Daten Rassen zu vermeiden.
+HLSL ermöglicht Threads eines Compute-Shaders den Austausch von Werten über freigegebenen Arbeitsspeicher. HLSL stellt Barriereprimitiven wie [**GroupMemoryBarrierWithGroupSync**](groupmemorybarrierwithgroupsync.md)und so weiter zur Verfügung, um die richtige Reihenfolge von Lese- und Schreibvorgängen in freigegebenen Speicher im Shader sicherzustellen und Datenprobleme zu vermeiden.
 
 > [!Note]  
-> Hardware führt Threads in Gruppen (Warps oder Wave-Fronts) aus, und die Sperrungs Synchronisierung kann manchmal ausgelassen werden, um die Leistung zu erhöhen, wenn nur die Synchronisierung von Threads, die derselben Gruppe angehören, korrekt ist. Diese Auslassung wird jedoch aus folgenden Gründen dringend davon abgeraten:
+> Die Hardware führt Threads in Gruppen aus (Warps oder Wellenfronten), und die Barrieresynchronisierung kann manchmal weggelassen werden, um die Leistung zu erhöhen, wenn nur die Synchronisierung von Threads, die derselben Gruppe angehören, korrekt ist. Wir raten jedoch dringend davon ab, diese Auslassung aus folgenden Gründen zu vermeiden:
 >
-> -   Diese Auslassung führt zu nicht portablen Code, der möglicherweise nicht auf Hardware funktioniert und auf Software-rasterizern, die in der Regel Threads in kleineren Gruppen ausführen, nicht funktioniert.
-> -   Die Leistungsverbesserungen, die mit dieser Unterstreichung erzielt werden können, sind im Vergleich zur Verwendung der gesamten Thread Barriere geringfügig.
+> -   Diese Auslassung führt zu nicht portablem Code, der auf einigen Hardwarekomponenten möglicherweise nicht funktioniert und nicht für Softwarerasterizer funktioniert, die in der Regel Threads in kleineren Gruppen ausführen.
+> -   Die Leistungsverbesserungen, die Sie mit dieser Auslassung erzielen können, sind im Vergleich zur Verwendung der Allthread-Barriere geringfügig.
 
  
 
-In Direct3D 10 gibt es beim Schreiben in **groupshared** keine Synchronisierung von Threads. Dies bedeutet, dass jeder Thread auf eine einzelne Position in einem Array zum Schreiben beschränkt ist. Verwenden Sie den System Wert [SV \_ groupIndex](dx-graphics-hlsl-semantics.md) , um beim Schreiben in dieses Array zu indizieren, um sicherzustellen, dass keine zwei Threads miteinander kollidieren können. Im Hinblick auf den Lesevorgang haben alle Threads Zugriff auf das gesamte Array zum Lesen.
+In Direct3D 10 erfolgt beim Schreiben in **groupshared** keine Synchronisierung von Threads. Dies bedeutet, dass jeder Thread zum Schreiben auf einen einzelnen Speicherort in einem Array beschränkt ist. Verwenden Sie den [Systemwert SV \_ GroupIndex,](dx-graphics-hlsl-semantics.md) um beim Schreiben in dieses Array zu indizieren, um sicherzustellen, dass keine zwei Threads miteinander in Konflikt treten können. Im Hinblick auf das Lesen haben alle Threads Zugriff auf das gesamte Array zum Lesen.
 
 
 ```
@@ -266,9 +262,9 @@ void main( uint index : SV_GroupIndex )
 
 
 
-### <a name="packing"></a>Verpacken
+### <a name="packing"></a>Verpackung
 
-Pack-unter Komponenten von Vektoren und skalaren, deren Größe groß genug ist, um das Überschreiten von Register boundarys zu verhindern. Diese sind z. b. gültig:
+Packen Sie Unterkomponenten von Vektoren und Skalaren, deren Größe groß genug ist, um das Überschreiten von Registergrenzen zu verhindern. Dies sind z. B. alle gültig:
 
 
 ```
@@ -283,11 +279,11 @@ cbuffer MyBuffer
 
 
 
-Verpackungstypen können nicht gemischt werden.
+Komprimierungstypen können nicht kombiniert werden.
 
-Wie das Register Schlüsselwort kann ein packoffset als Ziel spezifisch festgelegt werden. Die unter Komponenten Verpackung ist nur mit dem packoffset-Schlüsselwort, nicht mit dem Register-Schlüsselwort verfügbar. Innerhalb einer cBuffer-Deklaration wird das Register-Schlüsselwort für Direct3D 10-Ziele ignoriert, da es für plattformübergreifende Kompatibilität angenommen wird.
+Wie das Schlüsselwort register kann ein packoffset zielspezifisch sein. Das Packen von Unterkomponenten ist nur mit dem Schlüsselwort packoffset und nicht mit dem Schlüsselwort register verfügbar. Innerhalb einer cbuffer-Deklaration wird das Registerschlüsselwort für Direct3D 10-Ziele ignoriert, da es aus Gründen der plattformübergreifenden Kompatibilität angenommen wird.
 
-Gepackte Elemente können sich überlappen, und der Compiler gibt keinen Fehler oder keine Warnung aus. In diesem Beispiel überlappen sich Element2 und Element3 mit Element1. x und Element1. y.
+Gepackte Elemente können sich überlappen, und der Compiler gibt keinen Fehler oder keine Warnung aus. In diesem Beispiel überlappen sich Element2 und Element3 mit Element1.x und Element1.y.
 
 
 ```
@@ -302,7 +298,7 @@ cbuffer MyBuffer
 
 
 
-Ein Beispiel, in dem packoffset verwendet wird: [HLSLWithoutFX10 Sample](https://msdn.microsoft.com/library/Ee416414(v=VS.85).aspx).
+Ein Beispiel, das packoffset verwendet, [ist: HLSLWithoutFX10-Beispiel.](https://msdn.microsoft.com/library/Ee416414(v=VS.85).aspx)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

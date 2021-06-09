@@ -1,0 +1,660 @@
+### YamlMime:FAQ
+metadata:
+  title: Häufig gestellte Fragen zu DirectX
+  description: Dieser Artikel enthält eine Sammlung häufig gestellter Fragen (FAQ) zu Microsoft DirectX.
+  ms.assetid: 58d9fe45-a2c7-8280-2826-e2e14ecea983
+  ms.topic: article
+  ms.date: 05/31/2018
+  ms.openlocfilehash: 9522843268b34daca6ff944a556c10d16ff731fa
+  ms.sourcegitcommit: adba238660d8a5f4fe98fc6f5d105d56aac3a400
+  ms.translationtype: MT
+  ms.contentlocale: de-DE
+  ms.lasthandoff: 06/09/2021
+  ms.locfileid: "111852727"
+title: Häufig gestellte Fragen zu DirectX
+summary: >
+  Dieser Artikel enthält eine Sammlung häufig gestellter Fragen (FAQ) zu Microsoft DirectX.
+sections:
+- name: Allgemeine Probleme bei der DirectX-Entwicklung
+  questions:
+  - question: >
+      Sollten Sich Spieleentwickler wirklich für die Unterstützung von x64-Editionen interessieren?
+    answer: >
+      Natürlich. Die x64-Technologie ist auf dem Markt weit verbreitet. Der Großteil der neuen CPUs, die in den letzten Jahren verkauft wurden, und fast alle Prozessorlinien in der Entwicklung von AMD und Intel, sind x64-fähig. Windows XP Professional x64 Edition hat die Betriebssystem-Aktivierungstechnologie für x64 eingeführt, die im April 2005 veröffentlicht wurde. Da x64-Editionen eine neue Generation nativer 64-Bit-Treiber erfordern, war dieses erste Release auf die OEM-Distribution beschränkt.
+
+
+      Mit Windows Vista können Kunden beim Erwerb von Windows-basierten Computern entweder 32-Bit- oder 64-Bit-Editionen auswählen, und Lizenzen für Windows Vista sind sowohl für 32-Bit- als auch für 64-Bit-Editionen des Betriebssystems gültig. Darüber hinaus sind viele 64-Bit-Treiber im Feld verfügbar, und Gerätehersteller müssen im Rahmen des Windows-Zertifizierungsprogramms sowohl native 32-Bit- als auch 64-Bit-Treiber bereitstellen.
+
+
+      All diese Faktoren erhöhen die Bereitstellungen von 64-Bit-Editionen von Windows erheblich. Wenn neue Computer mit mehr als 2 GB physischem RAM ausgeliefert werden, verringert sich der Incentives zur Verwendung eines 32-Bit-Betriebssystems erheblich zugunsten von 64-Bit-Editionen. Die 64-Bit-Technologie unterstützt vollständig nativen 32-Bit-Code, obwohl native 64-Bit-Implementierungen erforderlich sind, um den neuen 64-Bit-Speicherplatz voll nutzen zu können. Jede 32-Bit-Anwendung sollte über 64-Bit-Kompatibilität als Mindestversandanforderung verfügen, und die Erfüllung dieser Anforderung ist eine Baselineanforderung für die Kompatibilität mit Windows Vista. Inkompatibilitäten entstehen in der Regel durch die Verwendung von 16-Bit-Code, der für das Windows 3.1-Betriebssystem entwickelt wurde, oder durch die Installation von Treibern, die nicht sowohl in nativer 32-Bit- als auch in 64-Bit-Form bereitgestellt werden.
+
+
+      Weitere Informationen zur 64-Bit-Technologie finden Sie unter [64-Bit-Programmierung für Spieleentwickler.](/windows/desktop/DxTechArts/sixty-four-bit-programming-for-game-developers)
+  - question: >
+      Sollten Spieleentwickler weiterhin Spiele für Windows 95, Windows 98 oder Windows ME veröffentlichen?
+    answer: >
+      Nicht mehr aus zwei Gründen: Leistung und Featuresatz.
+
+
+      Wenn die erforderliche CPU-Mindestgeschwindigkeit für Ihr Spiel 1,2 GHz oder höher beträgt (was bei Titeln mit hoher Leistung üblicher ist), wird auf den meisten geeigneten Computern Windows XP ausgeführt. Als Computer mit CPU-Geschwindigkeiten über 1,2 GHz verkauft wurden, wurde Windows XP von fast allen Herstellern als Standardbetriebssystem installiert. Dies bedeutet, dass es viele Features in Windows XP gibt, die heutige Spieleentwickler nutzen sollten, z. B.:
+
+
+      -   Verbessertes Multitasking: Dies führt zu einer besseren, reibungsloseren Benutzeroberfläche für Video, Audio und Gaming.
+
+      -   Stabileres Videotreibermodell, das ein einfacheres Debuggen, ein reibungsloses Spiel und eine bessere Leistung ermöglicht.
+
+      -   Einfachere Konfiguration für Netzwerke, wodurch der Zugriff auf Spiele mit mehreren Playern vereinfacht wird.
+
+      -   Unterstützung für DMA-Übertragungen standardmäßig von Festplatten , was zu reibungsloseren und schnelleren Ladeanwendungen führt.
+
+      -   Windows-Fehlerberichterstattung: Dies führt zu einem stabileren Betriebssystem, Treibern und Anwendungen.
+
+      -   Unicode-Unterstützung: Dies vereinfacht Lokalisierungsprobleme erheblich.
+
+      -   Bessere Sicherheit und Stabilität: Dies führt zu einer besseren Benutzererfahrung.
+
+      -   Bessere Unterstützung für moderne Hardware, von der die meisten keine Windows 98-Treiber mehr verwenden.
+
+      -   Verbesserte Speicherverwaltung, was zu einer höheren Stabilität und Sicherheit führt.
+
+      -   Verbessertes NTFS-Dateisystem, das widerstandsfähiger gegen Fehler ist und eine bessere Leistung mit Sicherheitsfeatures bietet.
+  - question: >
+      Sollten Spieleentwickler weiterhin Spiele für Windows 2000 veröffentlichen?
+    answer: >
+      Nicht mehr. Zusätzlich zu den unter **Sollten Spieleentwickler noch Spiele für Windows 95, Windows 98 oder Windows ME?** aufgeführt sind, verfügt Windows 2000 nicht über diese Features:
+
+
+      -   Windows XP unterstützt erweiterte Prozessorfeatures wie Hyperthreading, Multi-Core und x64.
+
+      -   Windows XP unterstützt komponentenseitige Komponenten, die Konflikte bei der Anwendungsversionsausführung erheblich reduzieren.
+
+      -   Windows XP unterstützt den Speicherschutz ohne Ausführung, der hilft, schädliche Programme zu verhindern und das Debuggen zu unterstützen.
+
+      -   Windows XP bietet verbesserte Unterstützung für erweiterte AGP- und PCI Express-basierte Grafikkarten.
+
+      -   Windows XP unterstützt schnelles Wechseln von Benutzern, Remotedesktop und Remoteunterstützung, um die Produktsupportkosten zu senken.
+
+      -   Leistungstools wie PIX (im DirectX Developer SDK) unterstützen Windows 2000 nicht mehr.
+
+
+      Kurz gesagt, Windows 2000 wurde nie als Consumerbetriebssystem entwickelt oder in den Markt überführungsvoll.
+  - question: >
+      Was sind die Unterschiede zwischen den verschiedenen Editionen von Windows Vista? Wie wirken sie sich auf meine DirectX-Anwendung aus?
+    answer: >
+      Die Windows Vista-Familie umfasst fünf Editionen:
+
+
+      -   Windows Vista Home Basic
+
+      -   Windows Vista Home Premium
+
+      -   Windows Vista Business
+
+      -   Windows Vista Enterprise
+
+      -   Windows Vista Ultimate
+
+
+      Home Basic und Home Premium sind verbraucherorientierte Versionen mit Features wie Family Safety (früher als Jugendschutz bezeichnet) und Home Premium umfasst Media Center. Business und Enterprise sind unternehmensorientierte Editionen mit Features wie Domäneneinführung und Remotedesktop/Terminaldienste. Die Ultimate Edition kombiniert alle Features der Consumer- und Unternehmenseditionen in einer Version. Alle Editionen sind sowohl in 32-Bit-Editionen (x86) als auch in 64-Bit-Editionen (x64) erhältlich, und Benutzer können denselben Produktbezeichner für beide Plattformen verwenden.
+
+
+      Die Technologie, die den verschiedenen Editionen zugrunde liegt, ist identisch, und sie verfügen alle über die gleiche Version der DirectX-Runtime und andere Komponenten. Die Editionen weisen jedoch einige geringfügige Unterschiede in Bezug auf Spiele auf:
+
+
+      -   Games Explorer ist in allen Editionen vorhanden, aber die Verknüpfung "Games" auf dem Startmenü ist nur in Home Basic, Home Premium und Ultimate verfügbar. Games-Explorer kann weiterhin in allen Editionen gefunden werden (indem Sie auf Start klicken, auf Alle Programme zeigen und dann auf Spiele klicken), und die IGameExplorer-Schnittstellenfunktionen für alle Editionen.
+
+      -   Die in Windows enthaltenen Spiele sind in Business und Enterprise standardmäßig nicht verfügbar, können jedoch vom Administrator aktiviert werden.
+
+      -   Family Safety- und Spielbewertungen werden nicht angezeigt oder beeinflussen das Verhalten von Unternehmen oder Unternehmen, und sie werden bei Ultimate deaktiviert, wenn eine Domäne verknüpft wird.
+
+
+      Die Einstellungen für die Benutzerkontensteuerung haben in allen Editionen die gleichen Standardwerte, können jedoch durch Gruppenrichtlinie Einstellungen für die Domäne unter Business, Enterprise und Ultimate überschrieben werden. Beispielsweise kann die Richtlinieneinstellung Benutzerkontensteuerung: Verhalten der Eingabeaufforderung für erhöhte Rechte für Standardbenutzer auf Anforderungen für erhöhte Rechte automatisch verweigern in vielen Geschäftseinstellungen festgelegt werden, um die Sicherheit zu erhöhen, und viele Benutzer in diesen Umgebungen werden immer als Standardbenutzer ausgeführt, ohne sich für die Ausführung als Administrator entscheiden zu können. Jedes Programm (z. B. ein Installationsprogramm), das Administratorrechte erfordert, entweder aufgrund der Erkennung des Legacysetups oder aufgrund eines Manifests, das die angeforderte Ausführungsebene als "requireAdministrator" angibt, kann in solchen Situationen immer nicht gestartet werden. Andere Richtlinieneinstellungen, z. B. Benutzerkontensteuerung: Nur ausführbare Dateien, die signiert und überprüft werden, können auch verhindern, dass Ihr Installationsprogramm funktioniert, wenn Sie die ausführbare Datei nicht mit Authenticode signieren.
+
+
+      Diese Arten von Richtlinienänderungen können auf jede Edition von Windows Vista angewendet werden, sind jedoch wahrscheinlicher auf Computern, die einer Domäne angehören.
+  - question: "Was sind die Unterschiede zwischen den verschiedenen Editionen von Windows 7? Wie wirken sie sich auf meine DirectX-Anwendung aus? \n"
+    answer: >
+      Die meisten Windows 7-Benutzer verfügen wahrscheinlich über eine von zwei Editionen: Windows 7 Home Premium, für Heimbenutzer oder Windows 7 Professional für Geschäftsbenutzer und Entwickler. Für große Unternehmen gibt es die volumenlizenzierte Windows 7 Enterprise Edition, die alle Windows 7-Features enthält. Windows 7 Ultimate ist das Einzelhandelsäquivalent dieser Edition.
+
+
+      Windows 7 Starter Edition ist weltweit für OEMs verfügbar und sollte primär mit Netbooks bereitgestellt werden, Notebookcomputer mit extrem geringem Leistungsdruck. Windows 7 Home Basic ist nur in neuen Märkten verfügbar.
+
+
+      Beachten Sie, dass alle Editionen von Windows 7 (mit Ausnahme der Starter Edition) sowohl für 32-Bit-Versionen (x86) als auch für 64-Bit-Versionen (x64) verfügbar sind und alle Verkaufspakete von Windows 7 Medien für beide Versionen enthalten. Wie bei Windows Vista können Benutzer auf beiden Plattformen denselben Einzelhandelsproduktbezeichner verwenden.
+
+
+      Die zugrunde liegende Technologie in den verschiedenen Editionen ist identisch, und alle Editionen verfügen über die gleiche Version der DirectX-Runtime und andere Komponenten. Sie weisen einige Unterschiede in Bezug auf Gamingfeatures auf:
+
+
+      -   Games Explorer ist in allen Editionen vorhanden, aber die Verknüpfung "Games" auf der Startmenü ist standardmäßig in Windows 7 Professional und Enterprise ausgeblendet. Games Explorer finden Sie weiterhin auf dem Startmenü (indem Sie auf Alle Programme klicken und dann auf Spiele doppelklicken), und die direkte Games-Verknüpfung kann vom Benutzer aktiviert werden.
+
+      -   Die in Windows enthaltenen Spiele sind unter Windows 7 Professional und Enterprise standardmäßig nicht verfügbar, können jedoch vom Administrator aktiviert werden.
+
+      -   Family Safety und Spielbewertungen sind in allen Editionen verfügbar, aber sie sind unter Windows 7 Professional, Enterprise und Ultimate deaktiviert, wenn das Betriebssystem einer Domäne beitritt. Wie bei Windows Vista Ultimate kann dieses Feature auf einem Computer, der einer Domäne beigetreten ist, erneut aktiviert werden.
+
+
+      Einstellungen für die Benutzerkontensteuerung (User Account Control, UAC) können von Gruppenrichtlinie Einstellungen in den Editionen Windows 7 Professional, Enterprise und Ultimate ähnlich wie Windows Vista beeinflusst werden. Weitere Informationen finden Sie unter **Was sind die Unterschiede zwischen den verschiedenen Editionen von Windows Vista? Wie wirken sie sich auf meine DirectX-Anwendung aus?**
+  - question: "Ist DirectX 10 für Windows XP verfügbar? \n"
+    answer: >
+      Nein. Windows Vista mit DirectX 10 enthält eine aktualisierte DirectX-Runtime, die auf der Runtime in Windows XP SP2 (DirectX 9.0c) basiert, mit Änderungen für die Arbeit mit dem neuen Windows Display Driver Model (WDDM) und dem neuen Audiotreiberstapel sowie mit anderen Updates im Betriebssystem. Zusätzlich zu Direct3D 9 unterstützt Windows Vista zwei neue Schnittstellen, wenn die richtige Videohardware und die richtigen Treiber vorhanden sind: Direct3D9Ex und Direct3D10.
+
+
+      Da diese neuen Schnittstellen auf der WDDM-Technologie basieren, sind sie in früheren Versionen von Windows nie verfügbar. Alle anderen Änderungen an DirectX-Technologien für Windows Vista gelten auch für die neue Version von Windows. Der Name DirectX 10 ist irreführend, da viele Technologien, die im DirectX SDK (XACT, XINPUT, D3DX) ausgeliefert werden, nicht von dieser Versionsnummer abgedeckt sind. Daher hat der Verweis auf die Versionsnummer der DirectX-Runtime als Ganzes einen Großteil seiner Bedeutung verloren, auch für 9.0c. Das DirectX-Diagnosetool (DXdiag.exe) unter Windows Vista meldet DirectX 10, aber dies bezieht sich eigentlich nur auf Direct3D 10.
+  - question: "Ist DirectX 11 für Windows Vista oder Windows XP verfügbar? \n"
+    answer: >
+      DirectX 11 ist in Windows 7 integriert und als Update für Windows Vista verfügbar (siehe <https://go.microsoft.com/fwlink/p/?linkid=160189> ). Dazu gehören die Direct3D 11-API, DirectX Graphic Infrastructure (DXGI) 1.1, 10Level9-Featureebenen, das Windows Advanced Rasterization Platform (WARP) 10-Softwarerenderinggerät, Direct2D, DirectWrite und ein Update der Direct3D 10.1-API zur Unterstützung von 10Level9 und WARP 10.
+
+
+      Aus den gleichen Gründen wie in der vorherigen Frage (**Ist DirectX 10 für Windows XP verfügbar?** ), Direct3D 11 und zugehörige APIs sind unter Windows XP nicht verfügbar.
+  - question: "Was ist mit DirectShow passiert? Ich kann es nicht im DirectX SDK finden. \n"
+    answer: >
+      DirectShow wurde seit April 2005 aus dem DirectX SDK entfernt. Sie können die Header, Bibliotheken, Tools und Beispiele für DirectShow im Windows Software Development Kit (früher als Plattform-SDK bekannt) abrufen. DirectSetup im DirectX SDK unterstützt weiterhin die Neuverteilung der DirectShow-Systemkomponenten, und die neuesten Komponenten sind bereits unter den folgenden Betriebssystemen installiert: Microsoft Windows XP Service Pack 2, Windows XP Professional x64 Edition, Windows Server 2003 Service Pack 1 und Windows Vista.
+  - question: "Welche Änderungen wurden an der DirectX-Runtime für Windows Vista vorgenommen? \n"
+    answer: >
+      Die primären Änderungen wurden vorgenommen, um das neue WDDM zu unterstützen. Weitere Informationen zum neuen Treibermodell, zu den Auswirkungen auf Direct3D 9 und zu den beiden neuen Grafikschnittstellen Direct3D 9Ex und Direct3D 10 finden Sie unter [Grafik-APIs in Windows.](/windows/desktop/direct3darticles/graphics-apis-in-windows-vista) Neue Grafik-APIs für Windows 7 – Direct3D 11, Direct2D, DirectWrite, DXGI 1.1 und ein aktualisiertes Direct3D 10.1 – sind als Update für Windows Vista verfügbar (siehe <https://go.microsoft.com/fwlink/p/?linkid=160189> ).
+
+
+      Windows Vista Service Pack 1 enthält eine aktualisierte Version der DirectX-Runtime. Dieses Update erweitert die Unterstützung von Windows Vista um Direct3D 10.1 und bietet neue optionale Hardwarefeatures. (Alle Hardware, die Direct3D 10.1 unterstützen kann, unterstützt auch alle Features von Direct3D 10 vollständig.)
+
+
+      DirectSound wurde aktualisiert, um die Funktionen des neuen Windows Vista-Audiotreiberstapels verfügbar zu machen, der Multichannel-Softwarepuffer unterstützt. Die API für den beibehaltenen Direct3D-Modus wurde vollständig aus Windows Vista entfernt. DirectPlay Voice wurde ebenfalls entfernt, ebenso wie das NAT-Hilfsfeld von DirectPlay und die Aktionszuordnungsbenutzeroberfläche von DirectInput. Die DirectX 7- und DirectX 8-Schnittstellen für Visual Basic 6.0 sind unter Windows Vista nicht verfügbar.
+  - question: "Welche Änderungen wurden an der DirectX-Runtime für Windows 7 vorgenommen? \n"
+    answer: >
+      Windows 7 enthält alle DirectX-Runtimekomponenten in Windows Vista und fügt direct3D 11, DXGI 1.1, 10Level9, das WARP10-Softwaregerät, Direct2D, DirectWrite und ein Update für Direct3D 10.1 hinzu, um 10Level9 und WARP10 zu unterstützen. Weitere Informationen finden Sie unter [Grafik-APIs in Windows.](/windows/desktop/direct3darticles/graphics-apis-in-windows-vista)
+
+
+      Alle anderen Komponenten sind mit Windows Vista identisch, und es wurde eine native 64-Bit-Unterstützung (x64) für die DirectBereichs-Kern-API im Zusammenhang mit zeitstempelierten CHROM-Funktionen eingeführt. Die Leistungsebene von DirectPerformance bleibt veraltet und ist aus Anwendungskompatibilitäts-Basis nur für 32-Bit-Anwendungen unter Windows 7 verfügbar. Beachten Sie, dass die native 64-Bit-Unterstützung von DirectVista unter Windows Vista nicht verfügbar ist.
+  - question: "Ich bin der Meinung, dass ich einen Treiberfehler gefunden habe. Was kann ich tun? \n"
+    answer: >
+      Stellen Sie zunächst sicher, dass Sie die Ergebnisse mit dem Referenzraster überprüft haben. Überprüfen Sie dann die Ergebnisse mit der neuesten WHQL-zertifizierten Version des IHVs-Treibers. Sie können den WHQL-Status programmgesteuert überprüfen, indem Sie die GetAdapterIdentifier()-Methode auf der IDirect3D9-Schnittstelle verwenden, um das Flag D3DENUM \_ WHQL \_ LEVEL zu übergeben.
+  - question: "Warum werden so viele Fehlermeldungen angezeigt, wenn ich versuche, die Beispiele zu kompilieren? \n"
+    answer: >
+      Ihr Includepfad ist wahrscheinlich nicht richtig festgelegt. Viele Compiler, einschließlich Microsoft Visual C++, enthalten eine frühere Version des SDK. Wenn Ihr Includepfad also zuerst die Standardcompiler-Includeverzeichnisse durchsucht, erhalten Sie falsche Versionen der Headerdateien. Um dieses Problem zu beheben, stellen Sie sicher, dass der Includepfad und die Bibliothekspfade so festgelegt sind, dass zuerst die Microsoft DirectX-Include- und Bibliothekspfade durchsucht werden. Siehe auch die dxreadme.txt im SDK. Wenn Sie das DirectX SDK installieren und Visual C++ verwenden, kann das Installationsprogramm optional die Includepfade für Sie einrichten.
+  - question: "Ich habe Linkerfehler zu mehreren oder fehlenden Symbolen für GUIDs (Globally Unique Identifiers) erhalten. Was kann ich tun? \n"
+    answer: >
+      Die verschiedenen GUIDs, die Sie verwenden, sollten nur einmal definiert werden. Die Definition für die GUID wird eingefügt, wenn Sie das INITGUID-Symbol definieren, bevor \# Sie die DirectX-Headerdateien einfügen. Daher sollten Sie sicherstellen, dass dies nur für eine Kompilierungseinheit auftritt. Eine Alternative zu dieser Methode ist die Verknüpfung mit der dxguid.lib-Bibliothek, die Definitionen für alle DirectX-GUIDs enthält. Wenn Sie diese Methode verwenden (was empfohlen wird), sollten Sie niemals das \# INITGUID-Symbol definieren.
+  - question: "Kann ich einen Zeiger auf eine DirectX-Schnittstelle in eine niedrigere Versionsnummer casten? \n"
+    answer: >
+      Nein. DirectX-Schnittstellen sind COM-Schnittstellen. Dies bedeutet, dass es nicht erforderlich ist, dass schnittstellen mit höheren Zahlen von entsprechenden schnittstellen mit niedrigeren Zahlen abgeleitet werden. Daher ist die einzige sichere Möglichkeit, eine andere Schnittstelle zu einem DirectX-Objekt zu erhalten, die Verwendung der QueryInterface-Methode der Schnittstelle. Diese Methode ist Teil der IUnknown-Standardschnittstelle, von der alle COM-Schnittstellen ableiten müssen.
+  - question: "Kann ich die Verwendung von DirectX 9-Komponenten und DirectX 8- oder früheren Komponenten innerhalb derselben Anwendung kombinieren? \n"
+    answer: >
+      Sie können verschiedene Komponenten unterschiedlicher Versionen frei kombinieren. Beispielsweise können Sie DirectInput 8 mit Direct3D 9 in derselben Anwendung verwenden. Sie können jedoch im Allgemeinen keine verschiedenen Versionen derselben Komponente innerhalb derselben Anwendung mischen. Sie können z. B. DirectDraw 7 nicht mit Direct3D 9 kombinieren (da es sich dabei tatsächlich um die gleiche Komponente wie DirectDraw handelt, die ab DirectX 8 in Direct3D subsumiert wurde). Es gibt jedoch Ausnahmen, z. B. die Gemeinsame Verwendung von Direct3D 9 und Direct3D 10 in derselben Anwendung, was zulässig ist.
+  - question: "Kann ich die Verwendung von Direct3D 9 und Direct3D 10 innerhalb derselben Anwendung kombinieren? \n"
+    answer: >
+      Ja, Sie können diese Versionen von Direct3D zusammen in derselben Anwendung verwenden.
+  - question: "Was bedeuten die Rückgabewerte der Release- oder AddRef-Methoden? \n"
+    answer: >
+      Der Rückgabewert ist die aktuelle Verweisanzahl des Objekts. Die COM-Spezifikation besagt jedoch, dass Sie sich nicht darauf verlassen sollten, und der Wert ist im Allgemeinen nur zu Debugzwecken verfügbar. Die beobachteten Werte können unerwartet sein, da verschiedene andere Systemobjekte Möglicherweise Verweise auf die von Ihnen erstellten DirectX-Objekte enthalten. Aus diesem Grund sollten Sie keinen Code schreiben, der "Release" wiederholt aufruft, bis die Verweisanzahl 0 (null) ist, da das Objekt dann möglicherweise wieder frei wird, obwohl möglicherweise noch eine andere Komponente darauf verweist.
+  - question: "Spielt es eine Rolle, in welcher Reihenfolge ich DirectX-Schnittstellen freilasse? \n"
+    answer: >
+      Dies sollte keine Rolle spielt, da COM-Schnittstellen als Verweis gezählt werden. Es gibt jedoch einige bekannte Fehler bei der Release reihenfolge der Schnittstellen in einigen Versionen von DirectX. Aus Sicherheitsgründen wird empfohlen, Schnittstellen nach Möglichkeit in umgekehrter Erstellungs reihenfolge frei zu geben.
+  - question: "Was ist ein intelligenter Zeiger, und sollte ich ihn verwenden? \n"
+    answer: >
+      Ein intelligenter Zeiger ist eine C++-Vorlagenklasse, die zum Kapseln von Zeigerfunktionen entwickelt wurde. Insbesondere gibt es intelligente Standardzeigerklassen, die zum Kapseln von COM-Schnittstellenzeigern entwickelt wurden. Diese Zeiger führen queryInterface automatisch anstelle einer Cast aus und verarbeiten AddRef und Release für Sie. Ob Sie sie verwenden sollten, ist größtenteils eine Frage des Vorliebes. Wenn Ihr Code viele Kopien von Schnittstellenzeigern mit mehreren AddRefs und Releases enthält, können intelligente Zeiger ihren Code wahrscheinlich übersichtlicher und weniger fehleranfällig machen. Andernfalls können Sie auf sie nicht zugreifen. Visual C++ enthält einen standardmäßigen intelligenten Microsoft COM-Zeiger, der in der Headerdatei "comdef.h" definiert ist (suchen Sie in der Hilfe nach com \_ ptr \_ t).
+  - question: "Ich habe Probleme beim Debuggen meiner DirectX-Anwendung, tipps? \n"
+    answer: >
+      Das häufigste Problem beim Debuggen von DirectX-Anwendungen ist der Versuch, zu debuggen, während eine DirectDraw-Oberfläche gesperrt ist. Diese Situation kann zu einer "Win16-Sperre" auf Microsoft Windows 9x-Systemen führen, die verhindert, dass das Debuggerfenster gestrichen wird. Wenn Sie beim Sperren der Oberfläche das Flag D3DLOCK NOSYSLOCK angeben, kann dies \_ in der Regel beseitigt werden. Windows 2000 ist nicht von diesem Problem betroffen. Beim Entwickeln einer Anwendung ist es hilfreich, mit der Debugversion der DirectX-Runtime (ausgewählt bei der Installation des SDK) ausgeführt zu werden, die einige Parameterüberprüfungen ausführt und nützliche Meldungen an die Debuggerausgabe ausgibt.
+  - question: "Wie können Rückgabecodes richtig überprüft werden? \n"
+    answer: >
+      Verwenden Sie die Makros SUCCEEDED und FAILED. DirectX-Methoden können mehrere Erfolgs- und Fehlercodes zurückgeben, also eine einfache:
+
+
+      ``` syntax
+
+      == D3D_OK
+
+      ```
+
+
+      oder ein ähnlicher Test reicht nicht immer aus.
+  - question: "Gewusst wie Alt+TAB und andere Aufgabenwechsel deaktivieren? \n"
+    answer: >
+      Das ist nicht der! Spiele müssen in der Lage sein, Aufgabenwechsel ordnungsgemäß zu verarbeiten, da viele Dinge dazu führen, dass es geschieht: ALT+TAB, Remotedesktopverbindungen, schnelle Benutzerwechsel, Nutzungsbeschränkungen für die Jugendkontrolle und viele andere Ereignisse.
+
+
+      Gleichzeitig drücken zwei häufige Quellen für versehentliche Aufgabenwechsel bei Spielen mit tastaturzentrierten Steuerelementschemas die Windows-Logo-Taste und aktivieren die Barrierefreiheitsfunktion StickyKeys mit der UMSCHALTTASTE. Um diese Fälle durch Deaktivieren der Funktionalität zu adressieren, lesen Sie die unter Deaktivieren von [Tastenkombinationen in Spielen beschriebenen Techniken.](/windows/desktop/DxTechArts/disabling-shortcut-keys-in-games)
+  - question: "Gibt es ein empfohlenes Buch, in dem COM erläutert wird? \n"
+    answer: >
+      Das von Microsoft Press veröffentlichte *In-COM-Produkt* von %. Es handelt sich um eine hervorragende Einführung in COM. Für einen ausführlicheren Blick auf COM wird auch das buch *Essential COM* von Don Box, das von Longman veröffentlicht wurde, dringend empfohlen.
+  - question: "Was ist verwalteter Code? \n"
+    answer: >
+      Verwalteter Code ist Code, dessen Ausführung von der .NET Framework Common Language Runtime (CLR) verwaltet wird. Er bezieht sich auf einen Vertrag der Zusammenarbeit zwischen nativ ausgeführten Code und der Laufzeit. Dieser Vertrag gibt an, dass die Laufzeit zu jedem Zeitpunkt der Ausführung eine ausgeführte CPU beenden und spezifische Informationen für die aktuelle CPU-Anweisungsadresse abrufen kann. Informationen, die abfragebar sein müssen, beziehen sich im Allgemeinen auf den Laufzeitzustand, z. B. Den Inhalt des Register- oder Stapelspeichers.
+
+
+      Bevor der Code ausgeführt wird, wird die IL in systemeigenen ausführbaren Code kompiliert. Und da diese Kompilierung von der verwalteten Ausführungsumgebung (oder, richtiger, von einem Laufzeitcompiler erfolgt, der weiß, wie die verwaltete Ausführungsumgebung als Ziel verwendet werden soll), kann die verwaltete Ausführungsumgebung Garantien darüber geben, was der Code tun soll. Er kann Traps und entsprechende Garbage Collection-Hooks, Ausnahmebehandlung, Typsicherheit, Array- und Indexüberprüfungen usw. einfügen. Ein solcher Compiler stellt z. B. sicher, dass Stapelrahmen und alles genau richtig sind, damit der Garbage Collector im Hintergrund in einem separaten Thread ausgeführt werden kann, ständig durch die aktive Aufrufliste läuft, alle Stämme findet und alle aktiven Objekte verdrungen. Da die IL ein Konzept der Typsicherheit hat, behält die Ausführungs-Engine außerdem die Garantie der Typsicherheit bei, wodurch eine ganze Klasse von Programmierfehlern beseitigt wird, die häufig zu Sicherheitslücken führen.
+
+
+      Im Gegensatz zur nicht verwalteten Welt: Nicht verwaltete ausführbare Dateien sind im Grunde ein binäres Bild, x86-Code, das in den Arbeitsspeicher geladen wird. Der Programmzähler wird dort abgeknöhnt, und dies ist der letzte, den das Betriebssystem kennt. Es gibt Schutz vor Speicherverwaltung und Port-E/A usw., aber das System weiß nicht, was die Anwendung tut. Aus diesem Grund kann keine Garantie dafür geben, was geschieht, wenn die Anwendung ausgeführt wird.
+  - question: "Welche Bücher gibt es zur allgemeinen Windows-Programmierung? \n"
+    answer: >
+      Viele. Die beiden dringend empfohlenen sind jedoch:
+
+
+      -   Programming Windows by Charles Petmicrod (Microsoft Press) (Programmieren von Windows von Charles Petmicrod (Microsoft Press))
+
+      -   Programming Applications for Windows (Programmieren von Anwendungen für Windows) von JeffreyUng (Microsoft Press)
+  - question: "Gewusst wie Debuggen mithilfe der Windows-Symboldateien? \n"
+    answer: >
+      Microsoft veröffentlicht entfernte Symbole für alle System-DLLs (und einige andere). Fügen Sie ihrem Symbolpfad in den Projekteinstellungen in Visual Studio Folgendes hinzu, um darauf zuzugreifen:
+
+
+      ``` syntax
+
+      srv*https://msdl.microsoft.com/download/symbols
+
+      ```
+
+
+      Verwenden Sie zum lokalen Zwischenspeichern von Symbolen die folgende Syntax:
+
+
+      ``` syntax
+
+      srv*c:\cache*https://msdl.microsoft.com/download/symbols
+
+      ```
+
+
+      Wobei c: \\ cache ein lokales Verzeichnis zum Zwischenspeichern von Symboldateien ist.
+
+
+      ## <a name="direct3d-questions"></a>Direct3D-Fragen
+
+
+      ### <a name="general-direct3d-questions"></a>Allgemeine Direct3D-Fragen
+  - question: "Wo finde ich Informationen zu 3D-Grafiktechniken? \n"
+    answer: >
+      Das Standardbuch zu diesem Thema ist Computer Graphics: Principles and Practice von Foley, VanMobile et al. Es ist eine wertvolle Ressource für alle, die die mathematischen Grundlagen von Geometrie, Rasterung und Beleuchtungstechniken verstehen möchten. Die häufig gestellten Fragen zur Usenet-Gruppe comp.graphics.algorithms enthalten ebenfalls nützliches Material.
+  - question: "Emuliert Direct3D Funktionen, die nicht von Hardware bereitgestellt werden? \n"
+    answer: >
+      Das ist unterschiedlich. Direct3D verfügt über eine vollständige Softwarepipeline zur Vertexverarbeitung (einschließlich Unterstützung für benutzerdefinierte Vertex-Shader). Für Vorgänge auf Pixelebene wird jedoch keine Emulation bereitgestellt. -Anwendungen müssen die entsprechenden Caps-Bits überprüfen und die ValidateDevice-API verwenden, um die Unterstützung zu ermitteln.
+  - question: "Ist ein Softwarerasterizer in Direct3D enthalten? \n"
+    answer: >
+      Nicht für Leistungsanwendungen. Ein Referenzrasterizer wird für die Treibervalidierung bereitgestellt, aber die Implementierung ist auf Genauigkeit und nicht auf Leistung ausgelegt. Direct3D unterstützt Plug-In-Softwarerasterizer.
+  - question: "Wie kann ich die Farbtasten mit DirectX-Grafiken ausführen? \n"
+    answer: >
+      Die Farbschlüsselung wird nicht direkt unterstützt, stattdessen müssen Sie alphanische Blending verwenden, um die Farbschlüsselung zu emulieren. Die D3DXCreateTextureFromFileEx()-Funktion kann verwendet werden, um dies zu erleichtern. Diese Funktion akzeptiert einen Schlüsselfarbparameter und ersetzt alle Pixel aus dem Quellbild, das die angegebene Farbe enthält, durch transparente schwarze Pixel in der erstellten Textur.
+  - question: "Verwendet der Direct3D-Geometriecode 3DNow! und/oder Pentium III SIMD-Anweisungen? \n"
+    answer: >
+      Ja. Die Direct3D-Geometriepipeline verfügt je nach Prozessortyp über mehrere verschiedene Codepfade und nutzt die speziellen Gleitkommavorgänge, die von 3DNow bereitgestellt werden. oder Pentium III SIMD-Anweisungen, wenn diese verfügbar sind. Dies schließt die Verarbeitung von benutzerdefinierten Vertex-Shadern ein.
+  - question: "Gewusst wie verhindern, dass transparente Pixel in den Z-Puffer geschrieben werden? \n"
+    answer: >
+      Sie können Pixel mit einem Alphawert herausfiltern, der über oder unter einem bestimmten Schwellenwert liegt. Sie steuern dieses Verhalten mit den Renderstates ALPHATESTENABLE, ALPHAREF und ALPHAFUNC.
+  - question: "Was ist ein Schablonenpuffer? \n"
+    answer: >
+      Ein Schablonenpuffer ist ein zusätzlicher Puffer von Informationen pro Pixel, ähnlich wie ein Z-Puffer. Tatsächlich befindet sie sich in einigen Bits eines Z-Puffers. Gängige Schablonen-/z-Pufferformate sind 15-Bit-Z- und 1-Bit-Schablone oder 24-Bit-Z- und 8-Bit-Schablone. Es ist möglich, einfache arithmetische Operationen für den Inhalt des Schablonenpuffers pro Pixel auszuführen, während Polygone gerendert werden. Beispielsweise kann der Schablonenpuffer erhöht oder dekrementiert werden, oder das Pixel kann abgelehnt werden, wenn der Schablonenwert bei einem einfachen Vergleichstest fehlschlägt. Dies ist nützlich für Effekte, bei denen ein Bereich des Rahmenpuffers markiert und dann nur der markierte (oder nicht markierte) Bereich gerendert wird. Gute Beispiele sind volumetrische Effekte wie Schattenvolumes.
+  - question: "Gewusst wie einen Schablonenpuffer verwenden, um Schattenvolumes zu rendern? \n"
+    answer: >
+      Der Schlüssel zu diesem und anderen volumetrischen Schablonenpuffereffekten ist die Interaktion zwischen dem Schablonenpuffer und dem Z-Puffer. Eine Szene mit einem Schattenvolumen wird in drei Phasen gerendert. Zunächst wird die Szene ohne den Schatten wie gewohnt mithilfe des Z-Puffers gerendert. Als Nächstes wird der Schatten im Schablonenpuffer wie folgt markiert. Die Vorderflächen des Schattenvolumens werden mithilfe unsichtbarer Polygone gezeichnet, wobei Z-Tests aktiviert sind, Z-Schreibvorgänge jedoch deaktiviert sind und der Schablonenpuffer bei jedem Pixel erhöht wird, das den Z-Test übergibt. Die hinteren Gesichter des Schattenvolumes werden ähnlich gerendert, aber stattdessen wird der Schablonenwert dekrementiert.
+
+
+      Betrachten Sie nun ein einzelnes Pixel. Wenn sich die Kamera nicht im Schattenvolumen befindet, gibt es vier Möglichkeiten für den entsprechenden Punkt in der Szene. Wenn der Strahl von der Kamera bis zum Punkt das Schattenvolumen nicht überschneidet, wurden dort keine Schattenpolygone gezeichnet, und der Schablonenpuffer ist immer noch 0 (null). Andernfalls werden die Schattenpolygone z-gepuffert, und die Schablone bleibt wieder unverändert, wenn sich der Punkt vor dem Schattenvolume befindet. Wenn die Punkte hinter dem Schattenvolume liegen, wurde die gleiche Anzahl von Frontschattengesichter gerendert, und die Schablone ist 0 (null), nachdem sie so oft erhöht wie dekrementiert wurde.
+
+
+      Die letzte Möglichkeit besteht darin, dass der Punkt innerhalb des Schattenvolumens liegt. In diesem Fall wird die Hinterseite des Schattenvolumes z-gepuffert, aber nicht das vordere Gesicht, sodass der Schablonenpuffer ein Wert ungleich 0 (null) ist. Das Ergebnis sind Teile des Framepuffers im Schatten, die einen Schablonenwert ungleich 0 aufweisen. Um den Schatten tatsächlich zu rendern, wird die gesamte Szene mit einem alphageblendeten Polygon umgeblendet, das nur Pixel mit einem Schablonenwert ungleich 0 beeinflusst. Ein Beispiel für diese Technik finden Sie im Beispiel "Schattenvolumen", das im DirectX SDK enthalten ist.
+  - question: "Was sind die Texel-Ausrichtungsregeln? Gewusst wie eine 1:1-Zuordnung abrufen? \n"
+    answer: >
+      Dies wird vollständig in der Direct3D 9-Dokumentation erläutert. Die Zusammenfassung lautet jedoch, dass Sie Ihre Bildschirmkoordinaten um -0,5 pixel voreinziehen sollten, um eine ordnungsgemäße Ausrichtung an Texel zu erreichen. Die meisten Karten entsprechen jetzt ordnungsgemäß den Texel-Ausrichtungsregeln, es gibt jedoch einige ältere Karten oder Treiber, die dies nicht tun. Um diese Fälle zu behandeln, empfiehlt es sich, sich an den betreffenden Hardwareanbieter zu wenden und aktualisierte Treiber oder deren vorgeschlagene Problemumgehung anzufordern. Beachten Sie, dass diese Regel in Direct3D 10 nicht mehr gilt.
+  - question: "Welchen Zweck hat das D3DCREATE \\_ PUREDEVICE-Flag? \n"
+    answer: >
+      Verwenden Sie das D3DCREATE \_ PUREDEVICE-Flag während der Geräteerstellung, um ein reines Gerät zu erstellen. Ein reines Gerät speichert nicht den aktuellen Zustand (während Zustandsänderungen), wodurch häufig die Leistung verbessert wird. Dieses Gerät erfordert auch die Verarbeitung von Hardwarevertex. Ein reines Gerät wird in der Regel verwendet, wenn die Entwicklung und das Debuggen abgeschlossen sind und Sie die beste Leistung erzielen möchten.
+
+
+      Ein Nachteil eines reinen Geräts ist, dass es nicht alle \* Get-API-Aufrufe unterstützt. Dies bedeutet, dass Sie kein reines Gerät verwenden können, um den Pipelinezustand abzufragen. Dies erschwert das Debuggen während der Ausführung einer Anwendung. Im Folgenden finden Sie eine Liste aller Methoden, die von einem reinen Gerät deaktiviert werden.
+
+
+      -   [**IDirect3DDevice9::GetClipPlane**](/windows/desktop/api/d3d9/nf-d3d9-idirect3ddevice9-getclipplane)
+
+      -   [**IDirect3DDevice9::GetClipStatus**](/windows/desktop/api/d3d9/nf-d3d9-idirect3ddevice9-getclipstatus)
+
+      -   [**IDirect3DDevice9::GetLight**](/windows/desktop/api/d3d9/nf-d3d9-idirect3ddevice9-getlight)
+
+      -   [**IDirect3DDevice9::GetLightEnable**](/windows/desktop/api/d3d9/nf-d3d9-idirect3ddevice9-getlightenable)
+
+      -   [**IDirect3DDevice9::GetMaterial**](/windows/desktop/api/d3d9/nf-d3d9-idirect3ddevice9-getmaterial)
+
+      -   [**IDirect3DDevice9::GetPixelShaderConstantF**](/windows/desktop/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-getpixelshaderconstantf)
+
+      -   [**IDirect3DDevice9::GetPixelShaderConstantI**](/windows/desktop/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-getpixelshaderconstanti)
+
+      -   [**IDirect3DDevice9::GetPixelShaderConstantB**](/windows/desktop/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-getpixelshaderconstantb)
+
+      -   [**IDirect3DDevice9::GetRenderState**](/windows/desktop/api/d3d9/nf-d3d9-idirect3ddevice9-getrenderstate)
+
+      -   [**IDirect3DDevice9::GetSamplerState**](/windows/desktop/api/d3d9/nf-d3d9-idirect3ddevice9-getsamplerstate)
+
+      -   [**IDirect3DDevice9::GetTextureStageState**](/windows/desktop/api/d3d9/nf-d3d9-idirect3ddevice9-gettexturestagestate)
+
+      -   [**IDirect3DDevice9::GetTransform**](/windows/desktop/api/d3d9/nf-d3d9-idirect3ddevice9-gettransform)
+
+      -   [**IDirect3DDevice9::GetVertexShaderConstantF**](/windows/desktop/api/d3d9/nf-d3d9-idirect3ddevice9-getvertexshaderconstantf)
+
+      -   [**IDirect3DDevice9::GetVertexShaderConstantI**](/windows/desktop/api/d3d9/nf-d3d9-idirect3ddevice9-getvertexshaderconstanti)
+
+      -   [**IDirect3DDevice9::GetVertexShaderConstantB**](/windows/desktop/api/d3d9/nf-d3d9-idirect3ddevice9-getvertexshaderconstantb)
+
+
+      Ein zweiter Nachteil eines reinen Geräts besteht darin, dass keine redundanten Zustandsänderungen gefiltert werden. Wenn Sie ein reines Gerät verwenden, sollte Ihre Anwendung die Anzahl der Zustandsänderungen in der Renderschleife auf ein Minimum reduzieren. Dies kann das Filtern von Zustandsänderungen umfassen, um sicherzustellen, dass Zustände nicht mehr als einmal festgelegt werden. Dieser Trade off ist anwendungsabhängig. Wenn Sie mehr als 1.000 Set-Aufrufe pro Frame verwenden, sollten Sie erwägen, die Redundanzfilterung zu nutzen, die automatisch von einem nicht reinen Gerät durchgeführt wird.
+
+
+      Wie bei allen Leistungsproblemen besteht die einzige Möglichkeit, zu wissen, ob Ihre Anwendung mit einem reinen Gerät besser abschneiden wird, darin, die Leistung Ihrer Anwendung mit einem reinen und einem nicht reinen Gerät zu vergleichen. Ein reines Gerät kann eine Anwendung beschleunigen, indem der CPU-Mehraufwand der API reduziert wird. Aber seien Sie vorsichtig! In einigen Szenarien verlangsamt ein reines Gerät Ihre Anwendung (aufgrund der zusätzlichen CPU-Arbeit, die durch redundante Zustandsänderungen verursacht wird). Wenn Sie nicht sicher sind, welcher Gerätetyp für Ihre Anwendung am besten geeignet ist und Sie redundante Änderungen in der Anwendung nicht filtern, verwenden Sie ein nicht reines Gerät.
+  - question: "Gewusst wie die Anzeigegeräte in einem System mit mehreren Monitoren aufzählen? \n"
+    answer: >
+      Die Enumeration kann durch eine einfache Iteration durch die Anwendung mithilfe von Methoden der IDirect3D9-Schnittstelle ausgeführt werden. Rufen Sie GetAdapterCount auf, um die Anzahl der Anzeigeadapter im System zu bestimmen. Rufen Sie GetAdapterMonitor auf, um zu bestimmen, mit welchem physischen Monitor ein Adapter verbunden ist (diese Methode gibt einen HMONITOR zurück, den Sie dann in der Win32-API GetMonitorInfo verwenden können, um Informationen zum physischen Monitor zu bestimmen). Das Bestimmen der Merkmale eines bestimmten Anzeigeadapters oder das Erstellen eines Direct3D-Geräts auf diesem Adapter ist so einfach wie die Übergabe der entsprechenden Adapternummer anstelle von D3DADAPTER DEFAULT beim Aufrufen von \_ GetDeviceCaps, CreateDevice oder anderen Methoden.
+  - question: "Was ist mit dem fixierten Funktions-Bumpmapping in D3D9 passiert? \n"
+    answer: "Ab Direct3D 9 haben wir die Überprüfung auf Karten verstärkt, die nur > 2 gleichzeitige Texturen unterstützen konnten. Bestimmte ältere Karten verfügen nur über drei Texturstufen, wenn Sie einen bestimmten Alphamodulatvorgang verwenden. Die gängigste Verwendung, für die die Benutzer die drei Phasen verwenden, ist das Klappen von Belägen, und Sie können dies auch mit D3D9 tun.\n\nDas Höhenfeld muss im Alphakanal gespeichert werden und wird verwendet, um den Lichtbeitrag zu modulieren, d. h.:\n\n``` syntax\n// Stage 0 is the base texture, with the height map in the alpha channel\nm_pd3dDevice->SetTexture(0, m_pEmbossTexture );\nm_pd3dDevice->SetTextureStageState(0, D3DTSS_TEXCOORDINDEX, 0 );\nm_pd3dDevice->SetTextureStageState(0, D3DTSS_COLOROP,   D3DTOP_MODULATE );\nm_pd3dDevice->SetTextureStageState(0, D3DTSS_COLORARG1, D3DTA_TEXTURE );\nm_pd3dDevice->SetTextureStageState(0, D3DTSS_COLORARG2, D3DTA_DIFFUSE );\nm_pd3dDevice->SetTextureStageState(0, D3DTSS_ALPHAOP,   D3DTOP_SELECTARG1 );\nm_pd3dDevice->SetTextureStageState(0, D3DTSS_ALPHAARG1, D3DTA_TEXTURE );\nif( m_bShowEmbossMethod )\n{\n // Stage 1 passes through the RGB channels (SELECTARG2 = CURRENT), and \n // does a signed add with the inverted alpha channel. \n // The texture coords associated with Stage 1 are the shifted ones, so \n // the result is:\n //    (height - shifted_height) * tex.RGB * diffuse.RGB\n   m_pd3dDevice->SetTexture( 1, m_pEmbossTexture );\n   m_pd3dDevice->SetTextureStageState( 1, D3DTSS_TEXCOORDINDEX, 1 );\n   m_pd3dDevice->SetTextureStageState( 1, D3DTSS_COLOROP, D3DTOP_SELECTARG2 );\n   m_pd3dDevice->SetTextureStageState( 1, D3DTSS_COLORARG1, D3DTA_TEXTURE );\n   m_pd3dDevice->SetTextureStageState( 1, D3DTSS_COLORARG2, D3DTA_CURRENT );\n   m_pd3dDevice->SetTextureStageState( 1, D3DTSS_ALPHAOP, D3DTOP_ADDSIGNED );\n   m_pd3dDevice->SetTextureStageState( 1, D3DTSS_ALPHAARG1, D3DTA_TEXTURE|D3DTA_COMPLEMENT );\n   m_pd3dDevice->SetTextureStageState( 1, D3DTSS_ALPHAARG2, D3DTA_CURRENT );\n\n   // Set up the alpha blender to multiply the alpha channel \n   // (monochrome emboss) with the src color (lighted texture)\n   m_pd3dDevice->SetRenderState( D3DRS_ALPHABLENDENABLE, TRUE );\n   m_pd3dDevice->SetRenderState( D3DRS_SRCBLEND,  D3DBLEND_SRCALPHA );\n   m_pd3dDevice->SetRenderState( D3DRS_DESTBLEND, D3DBLEND_ZERO );\n}\n```\n\nDieses Beispiel ist zusammen mit anderen älteren Beispielen nicht mehr in der aktuellen SDK-Version enthalten und wird in zukünftigen SDK-Releases nicht mehr ausgeliefert.\n\n### <a name=\"geometry-vertex-processing\"></a>Geometrieverarbeitung (Scheitelpunkt)\n"
+  - question: "Vertexstreams verwirren mich, wie funktionieren sie? \n"
+    answer: >
+      Direct3D stellt jeden Scheitelpunkt zusammen, der aus einem oder mehreren Scheitelpunktstreams in den Verarbeitungsteil der Pipeline eingespeist wird. Nur ein Scheitelpunktstream entspricht dem alten Modell vor DirectX 8, bei dem Scheitelpunkte aus einer einzelnen Quelle stammen. Mit DirectX 8 können verschiedene Scheitelpunktkomponenten aus verschiedenen Quellen stammen. Beispielsweise könnte ein Scheitelpunktpuffer Positionen und Normalwerte enthalten, während ein zweiter Farbwerte und Texturkoordinaten beibehält.
+  - question: "Was ist ein Vertex-Shader? \n"
+    answer: >
+      Ein Vertex-Shader ist eine Prozedur zum Verarbeiten eines einzelnen Scheitelpunkts. Sie wird mithilfe einer einfachen assemblyähnlichen Sprache definiert, die von der D3DX-Hilfsprogrammbibliothek in einem Tokenstream zusammengestellt wird, der von Direct3D akzeptiert wird. Der Vertex-Shader nimmt als Eingabe einen einzelnen Scheitelpunkt und einen Satz konstanter Werte an. Es gibt eine Scheitelpunktposition (im Clipspace) und optional einen Satz von Farben und Texturkoordinaten aus, die bei der Rasterung verwendet werden. Beachten Sie, dass bei einem benutzerdefinierten Vertex-Shader auf die Scheitelpunktkomponenten keine Semantik mehr von Direct3D angewendet wird, und Scheitelpunkte sind einfach beliebige Daten, die von dem von Ihnen erstellten Vertex-Shader interpretiert werden.
+  - question: "Führt ein Scheitelpunkt-Shader eine perspektivische Division oder ein Clipping durch? \n"
+    answer: >
+      Nein. Der Vertex-Shader gibt eine homogene Koordinate im Clipspace für die transformierte Scheitelpunktposition aus. Perspektivische Division und Clipping werden automatisch nach dem Shader ausgeführt.
+  - question: "Kann ich Geometrie mit einem Vertex-Shader generieren? \n"
+    answer: >
+      Ein Vertex-Shader kann keine Scheitelpunkte erstellen oder zerstören. Es wird jeweils auf einem einzelnen Scheitelpunkt ausgeführt, wobei ein nicht verarbeiteter Scheitelpunkt als Eingabe verwendet und ein einzelner verarbeiteter Scheitelpunkt ausgegeben wird. Sie kann daher verwendet werden, um vorhandene Geometrien zu bearbeiten (Anwenden von Hüllen oder Ausführen von Skinningvorgängen), aber keine neue Geometrie an sich zu generieren.
+  - question: "Kann ich einen benutzerdefinierten Vertex-Shader auf die Ergebnisse der Geometriepipeline mit fester Funktion anwenden (oder umgekehrt)? \n"
+    answer: >
+      Nein. Sie müssen das eine oder das andere auswählen. Wenn Sie einen benutzerdefinierten Vertex-Shader verwenden, sind Sie für die Durchführung der gesamten Vertextransformation verantwortlich.
+  - question: "Kann ich einen benutzerdefinierten Vertex-Shader verwenden, wenn er von meiner Hardware nicht unterstützt wird? \n"
+    answer: >
+      Ja. Die Direct3D-Software-Vertexverarbeitungs-Engine unterstützt benutzerdefinierte Vertex-Shader mit einer überraschend hohen Leistung.
+  - question: "Gewusst wie bestimmen, ob die Hardware meinen benutzerdefinierten Vertex-Shader unterstützt? \n"
+    answer: >
+      Geräte, die Vertexshader in der Hardware unterstützen können, müssen das Feld D3DCAPS9::VertexShaderVersion ausfüllen, um die Versionsebene des unterstützten Vertexshaders anzugeben. Jedes Gerät, das anfordert, eine bestimmte Ebene von Vertex-Shadern zu unterstützen, muss alle rechtlichen Vertex-Shader unterstützen, die die Spezifikation für diese Ebene oder darunter erfüllen.
+  - question: "Wie viele Konstantenregister sind für Vertex-Shader verfügbar? \n"
+    answer: >
+      Geräte, die Vertex-Shader im Vergleich zu 1,0 unterstützen, sind erforderlich, um mindestens 96 Konstantenregister zu unterstützen. Geräte unterstützen möglicherweise mehr als diese Mindestanzahl und können dies über das Feld D3DCAPS9::MaxVertexShaderConst melden.
+  - question: "Kann ich Positionsdaten zwischen Scheitelpunkten mit verschiedenen Texturkoordinaten freigeben? \n"
+    answer: >
+      Das übliche Beispiel für diese Situation ist ein Würfel, in dem Sie eine andere Textur für jedes Gesicht verwenden möchten. Leider ist die Antwort nein, es ist derzeit nicht möglich, die Scheitelpunktkomponenten unabhängig zu indizierung. Selbst bei mehreren Scheitelpunktstreams werden alle Datenströme zusammen indiziert.
+  - question: "Verarbeitet Direct3D beim Übermitteln einer indizierten Liste von Primitiven alle Scheitelpunkte im Puffer oder nur die, die ich indiziert habe? \n"
+    answer: >
+      Bei Verwendung der Softwaregeometriepipeline transformiert Direct3D zuerst alle Scheitelpunkte im von Ihnen übermittelten Bereich, anstatt sie bei Bedarf zu transformieren, während sie indiziert werden. Für stark gepackte Daten (d. h. wo die meisten Scheitelpunkte verwendet werden) ist dies effizienter, insbesondere wenn SIMD-Anweisungen verfügbar sind. Wenn Ihre Daten spärlich gepackt sind (d. h. viele Scheitelpunkte werden nicht verwendet), sollten Sie die Neuordnung Ihrer Daten in Betracht ziehen, um zu viele redundante Transformationen zu vermeiden. Bei Verwendung der Hardwaregeometriebeschleunigung werden Scheitelpunkte in der Regel bei Bedarf transformiert, sobald sie erforderlich sind.
+  - question: "Was ist ein Indexpuffer? \n"
+    answer: >
+      Ein Indexpuffer entspricht genau einem Scheitelpunktpuffer, enthält jedoch Indizes für die Verwendung in DrawIndexedPrimitive-Aufrufen. Es wird dringend empfohlen, indexpuffer anstelle von unformatiertem, von der Anwendung zugewiesenem Speicher zu verwenden, wenn dies möglich ist, aus den gleichen Gründen wie Scheitelpunktpuffer.
+  - question: "Ich stelle fest, dass 32-Bit-Indizes ein unterstützter Typ sind. kann ich sie auf allen Geräten verwenden? \n"
+    answer: >
+      Nein. Sie müssen das Feld D3DCAPS9::MaxVertexIndex überprüfen, um den maximalen Indexwert zu ermitteln, der vom Gerät unterstützt wird. Dieser Wert muss größer als 2 bis zur 16. Potenz -1 (0xffff) sein, damit Indexpuffer vom Typ D3DFMT \_ INDEX32 unterstützt werden. Beachten Sie außerdem, dass einige Geräte möglicherweise 32-Bit-Indizes unterstützen, aber einen maximalen Indexwert kleiner als 2 bis zur 32. Potenz -1 (0xffffffff) unterstützen. In diesem Fall muss die Anwendung den vom Gerät gemeldeten Grenzwert einhalten.
+  - question: "Unterstützt die S/W-Scheitelpunktverarbeitung 64 Bit? \n"
+    answer: >
+      Es gibt eine optimierte S/W-Scheitelpunktpipeline für x64, aber nicht für IA64.
+
+
+      ### <a name="performance-tuning"></a>Leistungsoptimierung
+  - question: "Wie kann ich die Leistung meiner Direct3D-Anwendung verbessern? \n"
+    answer: >
+      Im Folgenden werden wichtige Bereiche für die Leistungsoptimierung betrachtet:
+  - question: "Batchgröße \n"
+    answer: >
+      Direct3D ist für große Batches von Primitiven optimiert. Je mehr Polygone in einem einzelnen Aufruf gesendet werden können, desto besser. Eine gute Faustregel besteht darin, durchschnittlich 1.000 Scheitelpunkte pro primitivem Aufruf zu erreichen. Unterhalb dieser Ebene erzielen Sie wahrscheinlich keine optimale Leistung, und Sie sind in absteigender Rendite und potenzielle Konflikte mit Parallelitätsüberlegungen (siehe unten).
+  - question: "Statusänderungen \n"
+    answer: "Das Ändern des Renderzustands kann ein aufwendiger Vorgang sein, insbesondere beim Ändern der Textur. Aus diesem Grund ist es wichtig, die Anzahl der pro Frame vorgenommenen Zustandsänderungen so weit wie möglich zu minimieren. Versuchen Sie außerdem, Änderungen des Scheitelpunkts oder Indexpuffers zu minimieren.\n\n> [!Note]  \n> Ab DirectX 8 sind die Kosten für das Ändern des Scheitelpunktpuffers nicht mehr so teuer wie bei früheren Versionen, aber es ist immer noch eine bewährte Methode, Änderungen des Scheitelpunktpuffers nach Möglichkeit zu vermeiden.\n\n \n"
+  - question: >
+      Parallelität
+    answer: >
+      Wenn Sie das Gleichzeitige Rendern mit anderen Verarbeitungen anordnen können, nutzen Sie die Systemleistung in vollem Umfang. Dieses Ziel kann mit dem Ziel der Reduzierung von Renderzustandsänderungen in Konflikt geraten. Sie müssen ein Gleichgewicht zwischen der Batchverarbeitung finden, um Zustandsänderungen zu reduzieren und Daten frühzeitig an den Treiber zu pushen, um Parallelität zu erreichen. Die Verwendung mehrerer Scheitelpunktpuffer auf Roundrobin-Weise kann bei der Parallelität helfen.
+  - question: "Texturuploads \n"
+    answer: >
+      Das Hochladen von Texturen auf das Gerät beansprucht Bandbreite und verursacht einen Bandbreitenkonkurrenz mit Scheitelpunktdaten. Daher ist es wichtig, den Texturspeicher nicht überzubewegen, wodurch Ihr Zwischenspeicherungsschema dazu zwingen würde, in jedem Frame übermäßige Mengen von Texturen hochzuladen.
+  - question: "Vertex- und Indexpuffer \n"
+    answer: >
+      Sie sollten immer Scheitelpunkt- und Indexpuffer anstelle von einfachen Blöcken des zugewiesenen Anwendungsspeichers verwenden. Die Sperrsemantik für Scheitelpunkt- und Indexpuffer kann mindestens einen redundanten Kopiervorgang vermeiden. Bei einigen Treibern kann der Scheitelpunkt- oder Indexpuffer für den Zugriff durch die Hardware in einen optimaleren Speicher (z. B. im Video- oder AGP-Speicher) platziert werden.
+  - question: "Zustandsmakroblöcke \n"
+    answer: "Diese wurden in DirectX 7.0 eingeführt. Sie bieten einen Mechanismus zum Aufzeichnen einer Reihe von Zustandsänderungen (einschließlich Beleuchtungs-, Material- und Matrixänderungen) in einem Makro, das dann durch einen einzelnen Aufruf wiedergegeben werden kann. Das hat zwei Vorteile:\n\n-   Sie reduzieren den Mehraufwand für Aufrufe, indem Sie anstelle von vielen einen Aufruf tätigen.\n-   Ein fähigen Treiber kann die Zustandsänderungen vorab analysieren und kompilieren, sodass die Übermittlung an die Grafikhardware wesentlich schneller erfolgt.\n\nZustandsänderungen können weiterhin teuer sein, aber die Verwendung von Zustandsmakros kann dazu beitragen, mindestens einen Teil der Kosten zu reduzieren. Verwenden Sie nur ein einzelnes Direct3D-Gerät. Wenn Sie auf mehrere Ziele rendern müssen, verwenden Sie SetRenderTarget. Wenn Sie eine Anwendung mit Fenstern mit mehreren 3D-Fenstern erstellen, verwenden Sie die CreateAdditionalSwapChain-API. Die Runtime ist für ein einzelnes Gerät optimiert, und bei der Verwendung mehrerer Geräte kommt es zu erheblichen Geschwindigkeitseinbußen.\n\n \n"
+  - question: "Welche primitiven Typen (Strips, Lüfter, Listen usw.) sollte ich verwenden? \n"
+    answer: >
+      Viele Gitternetze, die in echten Daten gefunden werden, verfügen über Scheitelpunkte, die von mehreren Polygonen gemeinsam genutzt werden. Um die Leistung zu maximieren, ist es wünschenswert, die Duplizierung in Vertices zu reduzieren, die transformiert und über den Bus an das Renderinggerät gesendet werden. Es ist klar, dass die Verwendung einfacher Dreieckslisten keine Scheitelpunktfreigabe erreicht, was sie zur am wenigsten optimalen Methode macht. Die Wahl besteht dann zwischen der Verwendung von Strips und Lüftern, was eine bestimmte Konnektivitätsbeziehung zwischen Polygonen und die Verwendung indizierter Listen impliziert. Wenn die Daten auf natürliche Weise in Strips und Lüfter fallen, sind diese die am besten geeignete Wahl, da sie die an den Treiber gesendeten Daten minimieren. Das Zerlegen von Gitternetzen in Strips und Lüfter führt jedoch häufig zu einer großen Anzahl separater Teile, was eine große Anzahl von DrawPrimitive-Aufrufen impliziert. Aus diesem Grund ist die effizienteste Methode in der Regel die Verwendung eines einzelnen DrawIndexedPrimitive-Aufrufs mit einer Dreiecksliste. Ein zusätzlicher Vorteil der Verwendung einer indizierten Liste ist, dass ein Vorteil auch dann erzielt werden kann, wenn aufeinanderfolgende Dreiecke nur einen einzelnen Scheitelpunkt gemeinsam nutzen. Wenn Ihre Daten auf natürliche Weise in große Strips oder Lüfter fallen, verwenden Sie also Strips oder Lüfter. Verwenden Sie andernfalls indizierte Listen.
+  - question: "Wie bestimmen Sie den gesamten Texturspeicher einer Karte, mit Ausnahme des AGP-Speichers? \n"
+    answer: >
+      [**IDirect3DDevice9::GetAvailableTextureMem**](/windows/desktop/api/d3d9/nf-d3d9-idirect3ddevice9-getavailabletexturemem) gibt den gesamten verfügbaren Arbeitsspeicher einschließlich AGP zurück. Das Zuordnen von Ressourcen basierend auf der Annahme, wie viel Videoarbeitsspeicher Sie haben, ist keine gute Idee. Was geschieht beispielsweise, wenn die Karte unter einer Unified Memory Architecture (UMA) ausgeführt wird oder die Texturen komprimieren kann? Möglicherweise steht mehr Speicherplatz zur Verfügung, als Sie vielleicht gedacht haben. Sie sollten Ressourcen erstellen und nach Fehlern aufgrund von "Nicht genügend Arbeitsspeicher" suchen und dann wieder auf die Texturen skalieren. Beispielsweise können Sie die obersten Mip-Ebenen Ihrer Texturen entfernen.
+  - question: "Was ist ein gutes Verwendungsmuster für Scheitelpunktpuffer, wenn ich dynamische Daten generiere? \n"
+    answer: >
+      1.  Erstellen Sie einen Scheitelpunktpuffer mit den \_ Verwendungsflags D3DUSAGE DYNAMIC und D3DUSAGE \_ WRITEONLY und dem Poolflag D3DPOOL \_ DEFAULT. (Geben Sie auch D3DUSAGE \_ an. SOFTWAREPROCESSING, wenn Sie die Softwarevertexverarbeitung verwenden.)
+
+      2.  I = 0.
+
+      3.  Legen Sie den Zustand fest (Texturen, Renderstate usw.).
+
+      4.  Überprüfen Sie, ob im Puffer Speicherplatz vorhanden ist, z. B. I + M <= N? (Wobei M die Anzahl der neuen Scheitelpunkte ist.)
+
+      5.  Wenn ja, sperren Sie vb mit D3DLOCK \_ NOOVERWRITE. Dadurch wird Direct3D und dem Treiber mitgeteilt, dass Sie Scheitelpunkte hinzufügen und die zuvor als Batch ausgeführten Knoten nicht ändern. Wenn also ein DMA-Vorgang ausgeführt wird, wird er nicht unterbrochen. Wenn nein, wechseln Sie zu 11.
+
+      6.  Füllen Sie die M-Scheitelpunkte bei I aus.
+
+      7.  Entsperren.
+
+      8.  Rufen Sie Draw \[ Indexed \] Primitive auf. Verwenden Sie für nicht indizierte Primitive I als StartVertex-Parameter. Stellen Sie bei indizierten Primitiven sicher, dass die Indizes auf den richtigen Teil des Scheitelpunktpuffers zeigen (es ist möglicherweise am einfachsten, den BaseVertexIndex-Parameter des SetIndices-Aufrufs zu verwenden, um dies zu erreichen).
+
+      9.  I += M.
+
+      10. Wechseln Sie zu 3.
+
+      11. Ok, also ist der Platz nicht mehr da, also beginnen wir mit einem neuen VB. Wir möchten nicht dieselbe verwenden, da möglicherweise ein DMA-Vorgang ausgeführt wird. Wir kommunizieren mit Direct3D und dem Treiber, indem wir das gleiche VB mit dem D3DLOCK \_ DISCARD-Flag sperren. Dies bedeutet: "Sie können mir einen neuen Zeiger geben, da ich mit dem alten fertig bin und mir die alten Inhalte nicht mehr interessieren."
+
+      12. I = 0.
+
+      13. Wechseln Sie zu 4 (oder 6).
+  - question: "Warum muss ich weitere Informationen in der D3DVERTEXELEMENT9-Struktur angeben? \n"
+    answer: >
+      Ab Direct3D 9 ist die Vertexstreamdeklaration nicht mehr nur ein DWORD-Array, sie ist jetzt ein Array von D3DVERTEXELEMENT9-Strukturen. Die Runtime nutzt die zusätzlichen semantischen und Nutzungsinformationen, um den Inhalt von Scheitelpunktstreams an Vertex-Shader-Eingaberegister/-Variablen zu binden. Bei Direct3D 9 werden Scheitelpunktdeklarationen von Vertex-Shadern entkoppelt, was die Verwendung von Shadern mit Geometrien verschiedener Formate vereinfacht, da die Laufzeit nur die Daten bindet, die der Shader benötigt.
+
+
+      Die neuen Scheitelpunktdeklarationen können entweder mit der festen Funktionspipeline oder mit Shadern verwendet werden. Für die Feste Funktionspipeline ist es nicht erforderlich, SetVertexShader aufzurufen. Wenn Sie jedoch zur festen Funktionspipeline wechseln möchten und zuvor einen Vertexshader verwendet haben, rufen Sie SetVertexShader(NULL) auf. Wenn dies abgeschlossen ist, müssen Sie weiterhin SetFVF aufrufen, um den FVF-Code zu deklarieren.
+
+
+      Wenn Sie Vertexshader verwenden, rufen Sie SetVertexShader mit dem Vertexshader-Objekt auf. Rufen Sie außerdem SetFVF auf, um eine Scheitelpunktdeklaration einzurichten. Hierbei werden die informationen verwendet, die implizit in der FVF enthalten sind. SetVertexDeclaration kann anstelle von SetFVF aufgerufen werden, da es Scheitelpunktdeklarationen unterstützt, die nicht mit einer FVF ausgedrückt werden können.
+- name: D3DX-Hilfsprogrammbibliothek
+  questions:
+  - question: "Welche Dateiformate werden von den Funktionen des D3DX-Imagedateiladeprogramm unterstützt? \n"
+    answer: >
+      Die Funktionen des D3DX-Bilddateiladers unterstützen BMP-, TGA-, JPG-, DIB-, PPM- und DDS-Dateien.
+  - question: "Die Textrenderingfunktionen in D3DX funktionieren scheinbar nicht, was ist falsch? \n"
+    answer: >
+      Ein häufiger Fehler bei der Verwendung der Funktionen ID3DXFont::D rawText besteht darin, eine Alphakomponente von 0 (null) für den Farbparameter anzugeben. führt zu vollständig transparentem (d. h. unsichtbaren) Text. Stellen Sie für vollständig nicht transparenten Text sicher, dass die Alphakomponente des Farbparameters vollständig ausgelastet ist (255).
+  - question: "Wie kann ich den Inhalt einer Oberfläche oder Textur in einer Datei speichern? \n"
+    answer: >
+      Das DirectX 8.1 SDK hat der D3DX-Bibliothek speziell für diesen Zweck zwei Funktionen hinzugefügt: D3DXSaveSurfaceToFile() und D3DXSaveTextureToFile(). Diese Funktionen unterstützen das Speichern eines Bilds in einer Datei im BMP- oder DDS-Format. In früheren Versionen mussten Sie die Oberfläche sperren und die Bilddaten lesen und dann in eine Bitmapdatei schreiben. Informationen zum Schreiben einer Funktion zum Speichern von Bitmaps finden Sie unter [Speichern eines Bilds.](/windows/desktop/gdi/storing-an-image)
+
+
+      Alternativ kann GDI+ verwendet werden, um das Image in einer Vielzahl von Formaten zu speichern. Dies erfordert jedoch, dass zusätzliche Unterstützungsdateien mit Ihrer Anwendung verteilt werden.
+  - question: "Wie kann ich die High Level Shader Language (HLSL) in meinem Spiel verwenden? \n"
+    answer: >
+      Es gibt drei Möglichkeiten, wie die Microsoft High Level Shader Language (HLSL) in Ihre Spiel-Engine integriert werden kann:
+
+
+      -   Kompilieren Sie Ihre Shaderquelle in eine Vertex- oder Pixelschattierungsassembly (mithilfe des Befehlszeilenhilfsprogramms fxc.exe), und verwenden Sie D3DXAssembleShader() zur Laufzeit. Auf diese Weise kann sogar ein DirectX 8-Spiel die Leistungsfähigkeit von HLSL nutzen.
+
+      -   Verwenden Sie D3DXCompileShader(), um Ihre Shaderquelle in tokenstream- und constant table-Form zu kompilieren. Laden Sie zur Laufzeit den Tokenstream und die konstante Tabelle, und rufen Sie CreateVertexShader() oder CreatePixelShader() auf dem Gerät auf, um Ihre Shader zu erstellen.
+
+      -   Die einfachste Möglichkeit zum Einrichten und Ausführen besteht darin, das D3DX Effects-System zu nutzen, indem Sie D3DXCreateEffectFromFile() oder D3DXCreateEffectFromResource() mit Ihrer Effect-Datei aufrufen.
+  - question: "Welchen Zweck hat das neue Shadercompilerflag? \n"
+    answer: >
+      Ab dem DirectX SDK vom Dezember 2006 wurde der neue HLSL-Compiler, der für Direct3D 10 entwickelt wurde, für Direct3D 9-Ziele aktiviert. Der neue Compiler unterstützt ps \_ 1 \_ x-Ziele nicht und ist jetzt der Standardcompiler für alle Direct3D HLSL-Shader. Ein Flag für Abwärtskompatibilität kann verwendet werden, um die Kompilierung von PS \_ 1 \_ x-Zielen als PS \_ 2 \_ 0-Ziele zu erzwingen.
+
+
+      Anwendungen, die den Legacycompiler verwenden möchten, können dies auch weiterhin tun, indem sie zur Laufzeit ein Flag bereitstellen (siehe [**Compilerflags)**](/windows/desktop/direct3d9/d3dxshader-flags)oder einen Schalter bereitstellen, wenn fxc verwendet wird.
+  - question: "Was ist die richtige Methode, um Shader aus einem Effekt abzurufen? \n"
+    answer: >
+      Verwenden Sie D3DXCreateEffect, um einen ID3DXEffect zu erstellen, und verwenden Sie dann GetPassDesc, um einen D3DXPASS \_ DESC abzurufen. Diese Struktur enthält Zeiger auf Scheitelpunkt- und Pixel-Shader.
+
+
+      Verwenden Sie id3DXEffectCompiler::GetPassDesc nicht. Von dieser Methode zurückgegebene Vertex- und Pixel-Shaderhandles sind NULL.
+  - question: "Wofür ist hlsl noise() intrinsisch? \n"
+    answer: >
+      Die systeminterne Rauschfunktion generiert Perlinrauschen, wie von Ken Perlin definiert. Die HLSL-Funktion kann derzeit nur zum Füllen von Texturen in Textur-Shadern verwendet werden, da die aktuelle h/w-Methode die Methode nicht nativ unterstützt. Textur-Shader werden in Konjuktion mit den D3DXFill \* Texture()-Funktionen verwendet, die nützliche Hilfsfunktionen sind, um prozedural definierte Texturen während der Ladezeit zu generieren.
+  - question: "Gewusst wie erkennen, ob das Pixelshadermodell 2.0 oder 2.a verwendet werden soll? \n"
+    answer: >
+      Sie können die Funktionen D3DXGetPixelShaderProfile() und D3DXGetPixelShaderProfile() verwenden, die eine Zeichenfolge zurückgeben, die bestimmt, welches HLSL-Profil am besten für das ausgeführte Gerät geeignet ist.
+  - question: "Gewusst wie auf die Parameter in meinen vorkompilierten Effekt-Shadern zugreifen? \n"
+    answer: >
+      Über die ID3DXConstantTable-Schnittstelle, die für den Zugriff auf die Konstantentabelle verwendet wird. Diese Tabelle enthält die Variablen, die von übergeordneten Sprach-Shadern und -Effekten verwendet werden.
+  - question: "Gibt es eine Möglichkeit, Benutzerdaten zu einem Effekt oder einer anderen Ressource hinzuzufügen? \n"
+    answer: "Ja, um private Daten festzulegen, die Sie SetPrivateData aufrufen (pReal ist das D3D-Texturobjekt, pSpoof ist das umschlossene Texturobjekt).\n\n``` syntax\nhr = pReal->SetPrivateData(IID_Spoof, &pSpoof, \n            sizeof(IDirect3DResource9*), 0)));\n```\n\nSo suchen Sie den umschlossenen Zeiger:\n\n``` syntax\n    IDirect3DResource9* pSpoof;\n    DWORD dwSize = sizeof(pSpoof);\n    hr = pReal->GetPrivateData(IID_Spoof, (void*) &pSpoof, &dwSize);\n```\n"
+  - question: "Warum verlangsamt sich das Rendering eines ID3DXMesh-Objekts erheblich, nachdem ich Teilmengen definiert habe? \n"
+    answer: >
+      Sie haben das Gitternetz wahrscheinlich nicht optimiert, nachdem Sie die Gesichtsattribute definiert haben. Wenn Sie Attribute angeben und dann ID3DXMesh::D rawSubset() aufrufen, muss diese Methode eine Suche im Gitternetz für alle Gesichter durchführen, die die angeforderten Attribute enthalten. Darüber hinaus befinden sich die gerenderten Gesichter wahrscheinlich in einem zufälligen Zugriffsmuster und verwenden daher keinen Scheitelpunktcache. Nachdem Sie die Gesichtsattribute für Ihre Teilmengen definiert haben, rufen Sie die Methoden ID3DXMesh::Optimize oder ID3DXMesh::OptimizeInPlace auf, und geben Sie eine Optimierungsmethode von D3DXMESHOPT \_ ATTRSORT oder stärker an. Beachten Sie, dass Sie für eine optimale Leistung mit dem D3DXMESHOPT \_ VERTEXCACHE-Flag optimieren sollten, das auch Scheitelpunkte neu anordnt, um eine optimale Auslastung des Scheitelpunktcaches zu erzielen. Das für ein D3DX-Gitternetz generierte Adjazenzarray verfügt über drei Einträge pro Gesicht, aber einige Gesichter verfügen möglicherweise nicht über angrenzende Gesichter an allen drei Rändern. Wie wird dies codiert? Einträge, bei denen keine angrenzenden Gesichter vorhanden sind, werden als 0xffffffff codiert.
+  - question: "Ich habe viel über die Vorberechnung von Radiance Transfer (PRT) gehört, wo kann ich mehr erfahren? \n"
+    answer: >
+      PRT ist ein neues Feature von D3DX, das im Sommer 2003 SDK Update hinzugefügt wurde. Sie ermöglicht das Rendern komplexer Beleuchtungsszenarien, z. B. globale -Llumination, soft shadowing und Sub-Surface Scatter in Echtzeit. Das SDK enthält Dokumentation und Beispiele für die Integration der Technologie in Ihr Spiel. Die Beispiele PRT-Demobeispiel und LocalDeformablePRT-Beispiel veranschaulichen, wie der Simulator für Pro-Scheitelpunkt- bzw. Pro-Pixel-Beleuchtungsszenarien verwendet wird. Weitere Informationen zu diesem und anderen Themen finden Sie auch auf der Webseite von Peter Pike Sloan.
+  - question: "Wie kann ich in einer Textur rendern und Antialiasing verwenden? \n"
+    answer: >
+      Erstellen Sie mit Direct3DDevice9::CreateRenderTarget ein Multisampled-Renderziel. Nachdem sie die Szene auf dieses Renderziel gerendert hat, wird StretchRect von ihr in eine Renderzieltextur gestreckt. Wenn Sie änderungen am Textre des Offscreens (z. B. unscharf oder aufbrühend) nehmen, kopieren Sie ihn zurück in den Hintergrundpuffer, bevor Sie present() präsentieren.
+- name: DirectSound-Fragen
+  questions:
+  - question: "Warum kommt es beim Starten meiner Anwendung zu einem Burst statischer Daten? Ich sehe dieses Problem auch bei anderen Anwendungen. \n"
+    answer: >
+      Wahrscheinlich haben Sie die DirectX-Debuglaufzeit installiert. Die Debugversion der Laufzeit füllt Puffer mit statischen Puffern, damit Entwickler Fehler mit nicht initialisierten Puffern abfangen können. Sie können den Inhalt eines DirectSound-Puffers nach der Erstellung nicht garantieren. Insbesondere können Sie nicht davon ausgehen, dass ein Puffer mit auf 0 (null) gesetzt wird.
+  - question: "Warum kommt es zwischen dem Ändern eines Effektparameters und dem Hören der Ergebnisse zu einer Verzögerung? \n"
+    answer: >
+      Änderungen an wirksamen Parametern werden nicht immer sofort in DirectX 8 vorgenommen. Zur Effizienz verarbeitet DirectSound 100 Millisekunden von Sounddaten in einem Puffer, beginnend beim Wiedergabecursor, bevor der Puffer abgespielt wird. Diese Vorverarbeitung erfolgt nach allen folgenden Aufrufen:
+
+
+      ``` syntax
+
+      IDirectSoundBuffer8::SetCurrentPosition
+
+      IDirectSoundBuffer8::SetFX
+
+      IDirectSoundBuffer8::Stop
+
+      IDirectSoundBuffer8::Unlock
+
+      ```
+
+
+      Ab DirectX 9 löst ein neuer FX-Verarbeitungsalgorithmus, der Effekte mit Just-in-Time verarbeitet, dieses Problem und verringert die Latenz. Der Algorithmus wurde dem IDirectSoundBuffer8::P lay()-Aufruf hinzugefügt, zusammen mit einem zusätzlichen Thread, der Effekte direkt vor dem Schreibcursor verarbeitet. Sie können also jederzeit Parameter festlegen, die erwartungsgemäß funktionieren. Beachten Sie jedoch, dass es bei einem Wiedergabepuffer eine kleine Verzögerung (in der Regel 100 ms) gibt, bevor Sie die Parameteränderung hören, da die Audiodaten zwischen Wiedergabe- und Schreibcursorn (und etwas mehr Auf padding) zu diesem Zeitpunkt bereits verarbeitet wurden.
+  - question: "Gewusst wie, ob DSound installiert ist? \n"
+    answer: >
+      Wenn Sie DirectSoundEnumerate() nicht zum Auflisten der verfügbaren DSound-Geräte verwenden müssen, verknüpfen Sie Ihre Anwendung nicht mit dsound.lib, sondern verwenden Sie sie über coMs CoCreateInstance(CLSID DirectSound...), und initialisieren Sie dann das DSound-Objekt mit \_ Initialize(NULL). Wenn Sie DirectSoundEnumerate() verwenden müssen, können Sie dsound.dll LoadLibrary("dsound.dll" ) dynamisch laden. und greifen mithilfe von GetProcAddress("DirectSoundEnumerateA/W") und GetProcAddress("DirectSoundCreateA/W") auf seine Methoden zu.
+  - question: "Gewusst wie Multichannel-Audio mit WAVEFORMATEXTENSIBLE erstellen? \n"
+    answer: >
+      Wenn Sie in den DirectSound-Hilfedateien keine Antwort auf Ihre Frage finden, finden Sie unter Multiple Channel Audio Data and WAVE Files (Audiodaten für mehrere Kanäle und WAVE-Dateien) einen guten Artikel mit weitere Informationen.
+  - question: "Wie kann ich DirectSound Voice Manager mit Eigenschaftensätzen wie EAX verwenden? \n"
+    answer: >
+      Wenn Sie in DirectSound 9.0 einen Puffer duplizieren, ist es jetzt möglich, die IDirectSoundBuffer8-Schnittstelle für den doppelten Puffer zu erhalten, wodurch Sie Zugriff auf die AcquireResources-Methode erhalten. Dadurch können Sie einen Puffer dem DSBCAPS \_ LOCDEFER-Flag einer Hardwareressource zuordnen. Anschließend können Sie Ihre EAX-Parameter für diesen Puffer festlegen, bevor Sie Play() aufrufen müssen.
+  - question: "Ich habe Probleme mit unzuverlässigem Verhalten bei der Verwendung von Cursorpositionsbenachrichtigungen. Wie kann ich genauere Informationen erhalten? \n"
+    answer: >
+      Es gibt einige kleine Fehler in verschiedenen Versionen von DirectSound, dem Kern-Windows-Audiostapel und Audiotreibern, die Cursorpositionsbenachrichtigungen unzuverlässig machen. Vermeiden Sie Cursorpositionsbenachrichtigungen, es sei denn, Sie verwenden eine bekannte HW/SW-Konfiguration, bei der Sie wissen, dass sich Benachrichtigungen gut verhalten. Für die Positionsnachverfolgung ist GetCurrentPosition() eine sicherere Technik.
+  - question: "Bei Verwendung von GetCurrentPosition() kommt es zu Leistungseinbußen. Wie kann ich die Leistung verbessern? \n"
+    answer: >
+      Jeder GetCurrentPosition()-Aufruf für jeden Puffer verursacht einen Systemaufruf, und Systemaufrufe sollten minimiert werden, da sie eine große Komponente des CPU-Speicherbedarfs von DSound sind. Bei NT (Win2K und XP) bewegen sich die Cursor in SW-Puffern (und HW-Puffern auf einigen Geräten) in Schritten von 10 ms, sodass der Aufruf von GetCurrentPosition() alle 10 ms ideal ist. Wenn sie häufiger als alle 5 ms aufruft, kommt es zu Leistungseinbußen.
+  - question: "Meine DirectSound-Anwendung nimmt zu viel CPU-Zeit in Anspruch oder wird langsam ausgeführt. Kann ich meinen Code optimieren? \n"
+    answer: >
+      Es gibt mehrere Möglichkeiten, die Leistung Ihres Audiocodes zu verbessern:
+
+
+      -   Rufen Sie GetCurrentPosition nicht zu oft auf. Jeder GetCurrentPosition()-Aufruf für jeden Puffer verursacht einen Systemaufruf, und Systemaufrufe sollten minimiert werden, da sie eine große Komponente des CPU-Speicherbedarfs von DSound sind. Bei NT (Win2K und XP) bewegen sich die Cursor in SW-Puffern (und HW-Puffern auf einigen Geräten) in Schritten von 10 ms, sodass der Aufruf von GetCurrentPosition() alle 10 ms ideal ist. Wenn sie häufiger als alle 5 ms aufruft, führt dies zu einer Verschlechterung der Leistungseinbußen.
+
+      -   Verwenden Sie eine separate, niedrigere Bildfrequenz für Audio. Heutzutage können viele Windows-Spiele 100 Frames pro Sekunde überschreiten, und es ist in den meisten Fällen nicht erforderlich, Ihre 3D-Audioparameter mit der gleichen Bildfrequenz zu aktualisieren. Die Verarbeitung Ihrer Audiodaten pro Sekunde oder drittem Grafikframe oder alle 30 ms oder so kann die Anzahl der Audioaufrufe in Ihrer gesamten Anwendung erheblich reduzieren, ohne die Audioqualität zu verringern.
+
+      -   Verwenden Sie DS3D \_ DEFERRED für 3D-Objekte. Die meisten Soundkarten reagieren sofort auf Parameteränderungen, und in einem einzelnen Frame kann sich vieles ändern, insbesondere wenn Sie die Position oder Ausrichtung des Listeners ändern. Dies führt dazu, dass die Soundcard/CPU viele unnötige Berechnungen durchführen. Eine weitere schnelle und universelle Optimierung besteht also in der Verzögerung einiger Parameteränderungen und deren Commit am Ende des Frames.
+
+          oder verwenden Sie mindestens SetAllParameters anstelle einzelner Set3DParamX-Aufrufe für Puffer.
+
+          Ebenso sollten Sie mindestens SetAllParamenters-Aufrufe für 3D-Puffer anstelle der einzelnen Set3DParamX-Aufrufe verwenden. Versuchen Sie nach Möglichkeit, Systemaufrufe zu minimieren.
+
+      -   Keine redundanten Aufrufe; Speichern und sortieren Sie eine Liste von Wiedergabeaufrufen. Häufig gibt es in einem Audioupdateframe zwei Anforderungen, um neue Sounds wieder zu geben. Wenn die Anforderungen beim Eintreffen verarbeitet werden, kann der erste neue Sound gestartet und dann sofort der zweite angeforderte Sound ersetzt werden. Dies führt zu redundanten Berechnungen, einem unnötigen Wiedergabeaufruf und einem unnötigen Stoppaufruf. Es ist besser, eine Liste von Anforderungen für die Wiedergabe neuer Sounds zu speichern, damit die Liste sortiert werden kann und nur die Stimmen, die mit der Wiedergabe beginnen sollten, tatsächlich jemals abgespielt werden.
+
+          Außerdem sollten Sie lokale Kopien der 3D- und EAX-Parameter für jede Soundquelle speichern. Wenn eine Anforderung zum Festlegen eines Parameters auf einen bestimmten Wert gestellt wird, können Sie überprüfen, ob der Wert tatsächlich vom letzten festgelegten Wert abgesehen ist. Wenn dies nicht der Dere ist, muss der Aufruf nicht vorgenommen werden.
+
+          Obwohl der Soundkartentreiber dieses Szenario wahrscheinlich erkennt und die (gleiche) Berechnung nicht erneut durchführen wird, muss der Audioaufruf den Audiotreiber erreichen (über einen Ringübergang), und dies ist bereits ein langsamer Vorgang.
+  - question: "Wenn ich einen Puffer streame, führt dies dazu, dass er zu einem Fehler führt und eine schlechte Leistung auf ich habe. Was ist die beste Möglichkeit zum Streamen eines Puffers? \n"
+    answer: >
+      Beim Streamen von Audiodaten in einen Puffer gibt es zwei grundlegende Algorithmen: After-Write-Cursor (AWC) und Before-Play-Cursor (BPC). AWC minimiert die Latenz auf Kosten einer Störung, während BPC das Gegenteil ist. Da es in der Regel keine interaktiven Änderungen am gestreamten Sound gibt, ist diese Art von Latenz selten ein Problem für Spiele und ähnliche Anwendungen, daher ist BPC der geeignetere Algorithmus. In AWC wird jedes Mal, wenn ihr Streamingthread ausgeführt wird, die Daten in Ihren Schleifenpuffern bis zu N ms über die Schreibcursor hinaus "auf" (in der Regel N=40 oder so, um Windows-Zeitplanungs-Jitter zu ermöglichen). In BPC schreiben Sie immer so viele Daten wie möglich in die Puffer und füllen sie bis zu ihren Wiedergabecursorn (oder vielleicht 32 Bytes vorher), um Treiber zu ermöglichen, die ihren Wiedergabecursorfortschritt falsch melden.
+
+
+      Verwenden Sie BPC, um glimimize zu mimimisieren, und verwenden Sie Puffer mit einer Größe von 100 ms oder höher, auch wenn Ihre Spiele auf Ihrer Testhardware nicht aus dem Tritt kommen, wird sie auf einem Computer auf dem computerexternen Computer aus.
+  - question: "Ich spiele die gleichen Sounds immer wieder und sehr schnell und manchmal auch nicht richtig, oder der Play()-Aufruf dauert sehr lange.   Wie sollte ich vorgehen? \n"
+    answer: >
+      Die Startlatenz (die sich von der oben erwähnten Streaminglatenz abzieht) kann bei hardwarebeschleunigenden Komponenten ein Problem sein (der Play()-Aufruf dauert auf bestimmten Soundkarten manchmal sehr lange). Wenn Sie diese Latenz wirklich reduzieren möchten, besteht ein praktischer Trick bei Twitch-Tönen (Stichaufnahmen, Luftaufnahmen und so weiter) in der Immer-Schleifen- und Stille-Wiedergabe einiger Puffer. Wenn Sie einen Twitch-Sound wieder geben müssen, wählen Sie einen freien Puffer aus, sehen Sie, wo sich der Schreibcursor befindet, und legen Sie den Sound direkt hinter dem Schreibcursor in den Puffer. Einige Soundcards führen für zurückgestellte Eigenschaften, von denen ich weiß, dass sie unterstützt werden, zu einem QuerySupport-Fehler. Gibt es eine Problemumgehung? Sie können einfach QuerySupport für die nicht verzögerten Versionen der Eigenschaften verwenden und trotzdem verzögerte Einstellungen verwenden. Dieses Problem kann auch mit den neuesten Soundcardtreibern behoben werden.
+  - question: "Gewusst wie SIE WAV-Dateien in WMA codieren? \n"
+    answer: >
+      Weitere Informationen finden Sie in der Dokumentation zu Windows Media Encoder unter: Windows Media Encoder 9-Serie.
+  - question: "Gewusst wie sie MP3-Dateien mit DirectSound decodieren? \n"
+    answer: >
+      DirectSound unterstützt die MP3-Decodierung nicht nativ. Sie können die Dateien selbst im Voraus decodieren (mithilfe eines ACM-Codecs eines DirectShow-Filters) oder einfach DirectShow selbst verwenden, wodurch die Decodierung für Sie möglich ist. Anschließend können Sie die resultierenden PCM-Audiodaten in Ihre DirectSound-Puffer kopieren.
+- name: DirectX-Erweiterungen für Alias Maya
+  questions:
+  - question: "Warum werden meine NURBS nicht angezeigt? \n"
+    answer: >
+      NURBS werden nicht unterstützt. Sie können sie in Polygongitternetze konvertieren.
+  - question: >
+      Warum werden meine SUBDs nicht angezeigt?
+    answer: >
+      SUBDs werden nicht unterstützt. Sie können sie in Polygongitternetze konvertieren.
+  - question: "Warum sieht meine Animation in der X-Datei anders aus als die Animation im Vorschaufenster? \n"
+    answer: >
+      Das Vorschaufenster ist nicht im strengsten Sinn animiert. Es wird keine Animation abspielt, sondern stattdessen mit dem aktuellen Zustand der Maya-Szene synchronisiert. Beim Exportieren der Animation werden die Matrizen bei jeder Transformation in Skalierung, Drehung (Quaternion) und Übersetzungskomponenten (häufig als SRTs bezeichnet) zergelegt. SRTs sind wünschenswerter als Matrizen, da sie gut interpolieren, eine kompaktere Form der Daten bereitstellen und unabhängig komprimiert werden können. Nicht alle Matrizen können in SRTs zerlegen. Wenn sie nicht zersetzt werden können, sind die resultierenden SRTs unbekannt, sodass kleine Fehler in der Animation erkannt werden können. Die beiden Features in Maya, die am häufigsten Probleme während der Zerlegung verursachen, sind Hear- und Off-Center-Drehungen oder Skalierungen. Wenn dieses Problem auftreten sollte, weil Sie dreh- oder skalierungsbasierte Rotationen verwenden, sollten Sie zusätzliche Transformationen hinzufügen, um die Hierarchieebene zu erhöhen.
+
+
+      D3DX-Animationen, die SRTs unterstützen, sehen wie hier aus:
+
+
+      ``` syntax
+
+      [S]x[R]x[T]
+
+      ```
+
+
+      Mayas Matrizen sind viel komplizierter und erfordern einen erheblichen zusätzlichen Prozess, der wie hier aussieht:
+
+
+      ``` syntax
+
+      [SpInv]x[S]x[Sh]x[Sp]x[St]x[RpInv]x[Ro]x[R]x[Rp]x[Rt]x[T]
+
+      ```
+  - question: "Ich habe mein Gitter mit RigidSkin gehäut, aber das Gitternetz (oder der Teil) bewegt sich nicht. Warum? \n"
+    answer: >
+      Mayas starre Skin wird derzeit nicht unterstützt. Verwenden Sie Smooth Skin.
+  - question: "Wo ist mein IK in der X-Datei nicht mehr gespeichert? \n"
+    answer: >
+      X-Dateien unterstützen IK nicht. Stattdessen werden die IK-Lösungen in die in der X-Datei gespeicherten Frames gebacken.
+  - question: "Warum werden mit Ausnahme von DirectXShaders keine meiner Materialfarben angezeigt? \n"
+    answer: >
+      Die DirectX-Erweiterungen für Maya unterstützen derzeit nur DirectXShader-Materialien für die Vorschau und den Export. In einer zukünftigen Version werden möglicherweise andere Materialien unterstützt.
+- name: XInput-Fragen
+  questions:
+  - question: "Kann ich DirectInput verwenden, um die Trigger zu lesen? \n"
+    answer: >
+      Ja, aber sie fungieren als dieselbe Achse. Daher können Sie die Trigger nicht unabhängig mit DirectInput lesen. Mit XInput geben die Trigger separate Werte zurück.
+
+
+      Weitere Informationen dazu, warum DirectInput die Trigger als eine Achse interpretiert, finden Sie unter Verwenden des [Xbox 360-Controllers mit DirectInput.](/windows/desktop/xinput/xinput-and-directinput)
+  - question: "Wie viele Controller werden von XInput unterstützt? \n"
+    answer: >
+      XInput unterstützt vier Controller, die gleichzeitig angeschlossen sind.
+  - question: "Unterstützt XInput nicht gängige Controller? \n"
+    answer: >
+      Nein, dies ist nicht der Grund.
+  - question: "Sind allgemeine Controller über DirectInput verfügbar? \n"
+    answer: >
+      Ja, Sie können über DirectInput auf allgemeine Controller zugreifen.
+  - question: "Gewusst wie erzwingen Sie Feedback zu den gängigen Controllern? \n"
+    answer: >
+      Verwenden Sie [**die XInputSetState-Funktion.**](/windows/desktop/api/xinput/nf-xinput-xinputsetstate)
+  - question: "Warum ändert sich mein Standardaudiogerät? \n"
+    answer: >
+      Beim Verbinden des Headsets fungiert das Headset des Controllers als STANDARD-USB-Audiogerät. Wenn es verbunden ist, ändert sich Windows automatisch, um dieses USB-Audiogerät als Standardgerät zu verwenden. Da der Benutzer wahrscheinlich nicht möchte, dass alle Audiodaten das Headset durchgehen, muss er es manuell an die ursprüngliche Einstellung anpassen.
+  - question: "Gewusst wie die Beleuchtung auf dem Controller steuern? \n"
+    answer: >
+      Die Beleuchtung auf dem Controller ist vom Betriebssystem vorgegeben und kann nicht geändert werden.
+  - question: "Gewusst wie auf die Schaltfläche Xbox 360 in meinen Anwendungen? \n"
+    answer: >
+      Diese Schaltfläche ist für die zukünftige Verwendung reserviert.
+  - question: "Wo finde ich Treiber? \n"
+    answer: >
+      Die Treiber sind über die Windows Update.
+  - question: "Wie wird die Controller-ID bestimmt? \n"
+    answer: >
+      Beim XInput-Start wird die ID nicht deterministisch von der XInput-Engine und den Controllern bestimmt, die angeschlossen sind. Wenn Controller angeschlossen werden, während eine XInput-Anwendung ausgeführt wird, weist das System dem neuen Controller die niedrigste verfügbare Anzahl zu. Wenn ein Controller getrennt ist, wird seine Nummer wieder verfügbar gemacht.
+  - question: "Gewusst wie Sie die Audiogeräte für den Controller? \n"
+    answer: >
+      Verwenden Sie [**die XInputGetDSoundAudioDeviceGuids-Funktion.**](/windows/desktop/api/xinput/nf-xinput-xinputgetdsoundaudiodeviceguids) Weitere Informationen finden Sie im AudioController-Beispiel.
+  - question: "Was soll ich tun, wenn ein Controller nicht angeschlossen ist? \n"
+    answer: Wenn der Controller von einem Spieler verwendet wurde, sollten Sie das Spiel anhalten, bis der Controller wieder verbunden ist und der Spieler eine Schaltfläche drückt, um zu signalisieren, dass er bereit ist, das Anhalten zu unterbrechen.

@@ -13,12 +13,12 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: aa6ac503eb99b24bee8e869676812c473ab42bf5
-ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
+ms.openlocfilehash: 90e3699b06eedfe5ec655de8156363c0ec42cd05
+ms.sourcegitcommit: adba238660d8a5f4fe98fc6f5d105d56aac3a400
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "107996907"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "111826538"
 ---
 # <a name="sv_outputcontrolpointid"></a>SV \_ OutputControlPointID
 
@@ -28,9 +28,8 @@ Definiert den Index der Kontrollpunkt-ID, die durch einen Aufruf des Haupteinsti
 
 
 
-|      |
+| Typ     |
 |------|
-| Typ |
 | uint |
 
 
@@ -53,7 +52,7 @@ Diese Funktion wird in den folgenden Shadertypen unterstützt:
 
  
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

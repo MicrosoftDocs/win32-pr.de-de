@@ -13,24 +13,23 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 2d36e5639b017dfa94e0f3c9f84d6725f6b6a283
-ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
+ms.openlocfilehash: d399008f1a9314ceb1fd4b1499b51340b499600b
+ms.sourcegitcommit: adba238660d8a5f4fe98fc6f5d105d56aac3a400
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "107996987"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "111827029"
 ---
 # <a name="sv_groupthreadid"></a>SV \_ GroupThreadID
 
-Indizes, für die ein einzelner Thread innerhalb einer Threadgruppe einen Compute-Shader ausführt. SV \_ GroupThreadID variiert je nach Bereich, der für den Compute-Shader im [numthreads-Attribut](sm5-attributes-numthreads.md) angegeben ist. Wenn beispielsweise numthreads(3,2,1) als mögliche Werte für den \_ SV GroupThreadID-Eingabewert angegeben wurde, haben Sie diesen Wertebereich (0-2,0-1,0).
+Indizes, für die ein einzelner Thread innerhalb einer Threadgruppe einen Compute-Shader ausführt. SV \_ GroupThreadID variiert je nach Bereich, der für den Compute-Shader im [numthreads-Attribut](sm5-attributes-numthreads.md) angegeben ist. Wenn beispielsweise numthreads(3,2,1) als mögliche Werte für den SV \_ GroupThreadID-Eingabewert angegeben wurde, weist dieser Wertebereich (0-2,0-1,0) auf.
 
 ## <a name="type"></a>Typ
 
 
 
-|       |
+| Typ      |
 |-------|
-| Typ  |
 | uint3 |
 
 
@@ -57,7 +56,7 @@ Diese Funktion wird in den folgenden Shadertypen unterstützt:
 
  
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

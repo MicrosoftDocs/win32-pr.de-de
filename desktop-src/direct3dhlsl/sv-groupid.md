@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: cf96e1db7dbb93c88ec741e309413dea3df2b01d
-ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
+ms.openlocfilehash: ab94cef0a9a33f23947e11b93a5487c65eee3890
+ms.sourcegitcommit: adba238660d8a5f4fe98fc6f5d105d56aac3a400
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "107996997"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "111827039"
 ---
 # <a name="sv_groupid"></a>SV \_ GroupID
 
-Indizes für die Threadgruppe, in der ein Compute-Shader ausgeführt wird. Die Indizes gelten für die gesamte Gruppe und nicht für einen einzelnen Thread. Mögliche Werte variieren im Bereich, der als Parameter an [**Dispatch übergeben wird.**](/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-dispatch) Beispielsweise führt der Aufruf von Dispatch(2,1,1) zu möglichen Werten von 0,0,0 und 1,0,0.
+Indizes für die Threadgruppe, in der ein Compute-Shader ausgeführt wird. Die Indizes gelten für die gesamte Gruppe und nicht für einen einzelnen Thread. Mögliche Werte variieren in dem Bereich, der als Parameter an [**Dispatch**](/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-dispatch)übergeben wird. Beispielsweise führt der Aufruf von Dispatch(2,1,1) zu möglichen Werten von 0,0,0 und 1,0,0.
 
 Definiert den Gruppenoffset innerhalb eines [**Dispatchaufrufs**](/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-dispatch) pro Dimension des Dispatchaufrufs.
 
@@ -30,9 +30,8 @@ Definiert den Gruppenoffset innerhalb eines [**Dispatchaufrufs**](/windows/deskt
 
 
 
-|       |
+| Typ      |
 |-------|
-| Typ  |
 | uint3 |
 
 
@@ -43,7 +42,7 @@ Definiert den Gruppenoffset innerhalb eines [**Dispatchaufrufs**](/windows/deskt
 
 Dieser Systemwert ist optional.
 
-Die folgende Abbildung zeigt die Beziehung zwischen den an [**Dispatch,**](/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-dispatch)Dispatch(5,3,2) übergebenen Parametern, den im [numthreads-Attribut](sm5-attributes-numthreads.md) angegebenen Werten, numthreads(10,8,3) und Werten, die für die threadbezogenen Systemwerte an den Compute-Shader übergeben werden ([SV \_ GroupIndex,](sv-groupindex.md)[SV \_ DispatchThreadID, SV](sv-dispatchthreadid.md)[ \_ GroupThreadID,](sv-groupthreadid.md)SV \_ GroupID).
+Die folgende Abbildung zeigt die Beziehung zwischen den Parametern, die an [**Dispatch,**](/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-dispatch)Dispatch(5,3,2) übergeben werden, den im [attribut numthreads angegebenen](sm5-attributes-numthreads.md) Werten, numthreads(10,8,3) und Werten, die an den Compute-Shader für die threadbezogenen Systemwerte übergeben werden ([SV \_ GroupIndex](sv-groupindex.md),[SV \_ DispatchThreadID](sv-dispatchthreadid.md),[SV \_ GroupThreadID](sv-groupthreadid.md), SV \_ GroupID).
 
 ![Abbildung der Beziehung zwischen Dispatch, Threadgruppen und Threads](images/threadgroupids.png)
 
@@ -59,7 +58,7 @@ Diese Funktion wird in den folgenden Shadertypen unterstützt:
 
  
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

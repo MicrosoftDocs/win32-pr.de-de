@@ -1,22 +1,20 @@
 ---
 description: 'Dieser Artikel enthält folgende Abschnitte:'
 ms.assetid: 27bd0b8a-fece-4db1-a954-ff91c2a919e6
-title: D3DX Reference (Direct3D 10-Grafik)
+title: D3DX-Referenz (Direct3D 10-Grafiken)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: af62cd2c919123544b91e82eb2f00997f3b76eba
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 026ea9d8ce13cc86b4d4a99b5ff90030331ed90a
+ms.sourcegitcommit: adba238660d8a5f4fe98fc6f5d105d56aac3a400
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104523219"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "111826989"
 ---
-# <a name="d3dx-reference-direct3d-10-graphics"></a>D3DX Reference (Direct3D 10-Grafik)
+# <a name="d3dx-reference-direct3d-10-graphics"></a>D3DX-Referenz (Direct3D 10-Grafiken)
 
-> [!Note]  
-> Die Hilfsprogrammbibliothek D3DX (D3DX 9, D3DX 10 und D3DX 11) ist für Windows 8 veraltet und wird für Windows Store-Apps nicht unterstützt.
-
- 
+> [!NOTE]  
+> Die Hilfsprogrammbibliothek D3DX (D3DX 9, D3DX 10 und D3DX 11) ist für Windows 8 veraltet und wird für Microsoft Store-Apps nicht unterstützt. Wenn ein Upgrade auf eine neuere Version von Direct3D und den zugehörigen Hilfsprogrammcode nicht möglich ist, können Sie das NuGet-Paket [Microsoft.DXSDK.D3DX](https://www.nuget.org/packages/Microsoft.DXSDK.D3DX) verwenden, anstatt sich auf das ältere DirectX SDK oder DirectSetup zu verlassen.
 
 Dieser Artikel enthält folgende Abschnitte:
 
@@ -27,14 +25,4 @@ Dieser Artikel enthält folgende Abschnitte:
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
-<dl> <dt>
-
-[Referenz für Direct3D 10](d3d10-graphics-reference.md)
-</dt> </dl>
-
- 
-
- 
-
-
-
+* [Referenz zu Direct3D 10](d3d10-graphics-reference.md)

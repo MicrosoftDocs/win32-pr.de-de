@@ -1,147 +1,150 @@
 ---
-title: Barrierefreiheits Tools-überprüfen
-description: Untersuchen (Inspect.exe) ist ein Windows-basiertes Tool, mit dem Sie beliebige Benutzeroberflächen Elemente auswählen und die Barrierefreiheits Daten des Elements anzeigen können.
+title: Barrierefreiheitstools – Überprüfen
+description: Inspect (Inspect.exe) ist ein Windows-basiertes Tool, mit dem Sie ein beliebiges Benutzeroberflächenelement auswählen und die Barrierefreiheitsdaten des Elements anzeigen können.
 ms.assetid: 38edacbc-cf24-4818-b029-561b21e3704c
 keywords:
-- Tool überprüfen
-- Eingabehilfen
+- Tool "Inspect" (Überprüfen)
+- Zugriff
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1770c6c4db812ea7d2880c50fcc72cd0edc15022
-ms.sourcegitcommit: 3e70ae762629e244028b437420ed50b5850db4e3
+ms.openlocfilehash: dcef8efa9efc0241d0f813da01623a1c02e6d226
+ms.sourcegitcommit: adba238660d8a5f4fe98fc6f5d105d56aac3a400
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "104389960"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "111827636"
 ---
-# <a name="accessibility-tools---inspect"></a>Barrierefreiheits Tools-überprüfen
+# <a name="accessibility-tools---inspect"></a>Barrierefreiheitstools – Überprüfen
 
-Unter **Suchen** (Inspect.exe) ist ein Windows-basiertes Tool, mit dem Sie beliebige Benutzeroberflächen Elemente auswählen und die Barrierefreiheits Daten des Elements anzeigen können. Sie können Eigenschaften und Steuerelementmuster der Microsoft-Benutzeroberflächenautomatisierung sowie Microsoft Active Accessibility-Eigenschaften anzeigen. Über **prüfen** ermöglicht außerdem das Testen der Navigationsstruktur der Automatisierungselemente in der Benutzeroberflächenautomatisierungs-Struktur und der barrierefreien Objekte in der Microsoft-Active Accessibility Hierarchie.
+> [!Important]
+> **Inspect** ist ein Legacytool. Es wird empfohlen, [stattdessen Accessibility Insights zu](https://accessibilityinsights.io/) verwenden.
 
-Unter **Suchen** wird mit dem Windows Software Development Kit (SDK) installiert. (Sie ist auch in früheren Versionen von Windows SDK verfügbar.) Sie befindet sich im \\ Ordner "bin \\ < *Version* > \\ < *Platform*>" des SDK-Installations Pfads (Inspect.exe).
+**Inspect** (Inspect.exe) ist ein Windows-basiertes Tool, mit dem Sie ein beliebiges Benutzeroberflächenelement auswählen und die Barrierefreiheitsdaten des Elements anzeigen können. Sie können Eigenschaften und Steuerelementmuster der Microsoft-Benutzeroberflächenautomatisierung sowie Microsoft Active Accessibility-Eigenschaften anzeigen. **Mit Inspect** können Sie auch die Navigationsstruktur der Automatisierungselemente in der Benutzeroberflächenautomatisierung struktur und die zugänglichen Objekte in der Microsoft Active Accessibility testen.
+
+## <a name="requirements"></a>Requirements (Anforderungen)
+
+Um die Benutzeroberflächenautomatisierung, Benutzeroberflächenautomatisierung auf dem System vorhanden sein. Weitere Informationen finden Sie im Abschnitt "Anforderungen" [Benutzeroberflächenautomatisierung](entry-uiauto-win32.md).
+
+**Inspect** wird als Teil der gesamten Tools im Windows Software Development Kit (SDK) installiert und nicht als separater Download verteilt. Die Windows SDK enthält alle in diesem Abschnitt dokumentierten Tools zur Barrierefreiheit.
+
+[Laden Sie die Windows SDK.](https://developer.microsoft.com/en-us/windows/downloads/windows-10-sdk/)
 
 > [!NOTE]
-> Unter **Suchen** ist ein Legacy Tool. Stattdessen wird die [](https://accessibilityinsights.io/) Verwendung von eingabeinsights empfohlen.
+> Informationen zu älteren Versionen des Windows SDK finden Sie im Windows SDK [und Emulatorarchiv.](https://developer.microsoft.com/en-us/windows/downloads/sdk-archive/)
 
-## <a name="requirements"></a>Anforderungen
+**Inspect.exe** befindet sich im Ordner bin version platform> des SDK-Installationspfads (sie müssen in der Regel \\ \\ <  > \\ <  nicht als Administrator ausgeführt werden).
 
-Untersuchen kann verwendet werden, um Barrierefreiheits Daten auf Systemen zu untersuchen, die keine Benutzeroberflächen Automatisierung aufweisen, aber nur die Eigenschaften von Microsoft Active Accessibility unter **suchen können.** Zum Untersuchen der Benutzeroberflächen Automatisierung muss die Benutzeroberflächen Automatisierung auf dem System vorhanden sein. Weitere Informationen finden Sie im Abschnitt "Anforderungen" unter [UI Automation](entry-uiauto-win32.md).
+## <a name="the-inspect-window"></a>Das Fenster "Überprüfen"
 
-Unter **Suchen** ist als Teil der Gesamtmenge der Tools in der Windows SDK installiert und wird nicht als separater Download bereitgestellt. Die Windows SDK umfasst alle Tools für die Barrierefreiheit, die in diesem Abschnitt dokumentiert sind. [Holen Sie sich den Windows SDK.](https://developer.microsoft.com/) (Es gibt auch ein SDK-Download Archiv, das von dieser Seite verknüpft ist, wenn Sie eine vorherige Version benötigen.)
+Das **Fenster** Überprüfen besteht aus mehreren Hauptteilen:
 
-Zum Ausführen von "über **prüfen**" finden Sie Inspect.exe im \\ Ordner "bin \\ < *Version* > \\ < *Platform*>" und führen ihn aus (Sie müssen in der Regel nicht als Administrator ausgeführt werden).
-
-## <a name="the-inspect-window"></a>Das Fenster überprüfen
-
-Das Fenster über **prüfen** besteht aus mehreren Hauptteilen:
-
-- Titelleiste. Zeigt das **Fenster** handle (HWND) für die Überprüfung an.
-- Menüleiste. Bietet Zugriff zum über **prüfen** der Funktionalität.
-- Symbolleiste Bietet Zugriff zum über **prüfen** der Funktionalität.
-- Strukturansicht. Zeigt die hierarchische Struktur von UI-Elementen als Strukturansicht-Steuerelement an, mit dem Sie zwischen den Elementen navigieren können.
-- Datenansicht. Zeigt alle verfügbar gemachten Barrierefreiheits Eigenschaften für das ausgewählte UI-Element an.
+- Titelleiste. Zeigt das **Fensterhand** handle überprüfen (HWND) an.
+- Menüleiste. Ermöglicht den Zugriff auf **die Funktion "Überprüfen".**
+- Symbolleiste Ermöglicht den Zugriff auf **die Funktion "Überprüfen".**
+- Strukturansicht. Stellt die hierarchische Struktur von Benutzeroberflächenelementen als Strukturansicht-Steuerelement vor, mit dem Sie zwischen den Elementen navigieren können.
+- Datenansicht. Zeigt alle verfügbar gemachten Barrierefreiheitseigenschaften für das ausgewählte Benutzeroberflächenelement an.
 
 Die in der Menüleiste verfügbaren Befehle sind auch auf der Symbolleiste verfügbar. Die folgende Abbildung zeigt das **Inspect**-Tool, mit dem die Benutzeroberflächenautomatisierungseigenschaften des Menübefehls **Bearbeiten** in Editor abgefragt werden.
 
-![Screenshot der Benutzeroberfläche für das Tool "überprüfen"](images/inspect.png)
+![Screenshot der Benutzeroberfläche für das Überprüfungstool](images/inspect.png)
 
-## <a name="using-inspect"></a>Überprüfen
+## <a name="using-inspect"></a>Verwenden von Inspect
 
-Wenn Sie **mit der über** Prüfung beginnen, wird in der Strukturansicht der Speicherort des aktuell ausgewählten Benutzeroberflächen Elements in der Element Hierarchie angezeigt, und in der **Daten** **Ansicht werden die** Eigenschafts Informationen für das ausgewählte UI-Element angezeigt. Sie können auf der Benutzeroberfläche navigieren, um Barrierefreiheits Informationen zu allen Elementen in der Benutzeroberfläche anzuzeigen. Standardmäßig wird die Tastatur oder der Mauszeiger von unter **Suchen** nachverfolgt. Wenn sich der Fokus ändert, wird die **Daten** Ansicht mit den Eigenschafts Informationen des Elements mit dem Fokus aktualisiert.
+Wenn Sie Untersuchen **starten,** zeigt die **Strukturansicht** den Speicherort des aktuell  ausgewählten Benutzeroberflächenelements in der Elementhierarchie an, und die Datenansicht zeigt die Eigenschafteninformationen für das ausgewählte Benutzeroberflächenelement an. Sie können in der Benutzeroberfläche navigieren, um Barrierefreiheitsinformationen zu jedem Element in der Benutzeroberfläche anzuzeigen. Standardmäßig verfolgt **Inspect den** Tastatur- oder Mausfokus nach. Wenn sich der Fokus ändert, wird **die** Datenansicht mit den Eigenschaftsinformationen des Elements mit Fokus aktualisiert.
 
-Zum Navigieren zwischen Benutzeroberflächen Elementen können Sie Folgendes verwenden:
+Um zwischen Benutzeroberflächenelementen zu navigieren, können Sie eines der folgenden Elemente verwenden:
 
-- Der Mauszeiger
+- Die Maus
 - Die Tastatur
-- Das Strukturansicht-Steuerelement in **der Struktur** Ansicht
-- Navigationsoptionen im **Navigations** Menü
-- Navigationsoptionen in der Symbolleiste
+- Das Strukturansicht-Steuerelement in der **Strukturansicht**
+- Die Navigationsoptionen im **Navigationsmenü**
+- Die Navigationsoptionen auf der Symbolleiste
 
-Die letzten drei Optionen ermöglichen es Ihnen, in der Struktur Hierarchie der Benutzeroberfläche zu navigieren. Die Struktur dieser Struktur kann sich zwischen der Benutzeroberflächenautomatisierungs-und der Microsoft Active Accessibility-Modi leicht unterscheiden.
+Mit den letzten drei Optionen können Sie durch die Strukturhierarchie der Benutzeroberfläche navigieren. Die Struktur dieser Struktur kann sich zwischen den Modi Benutzeroberflächenautomatisierung und Microsoft Active Accessibility unterscheiden.
 
-## <a name="verifying-accessibility-property-information"></a>Informationen zur Barrierefreiheits Eigenschaft werden überprüft
+## <a name="verifying-accessibility-property-information"></a>Überprüfen von Informationen zur Barrierefreiheitseigenschaft
 
-Die **Daten** Ansicht zeigt die Eigenschaften Informationen des Benutzeroberflächen Elements an, das derzeit ausgewählt ist. Sie können die Überprüfung **so konfigurieren, dass Informationen zu allen** Barrierefreiheits Eigenschaften oder eine Teilmenge dieser Eigenschaften angezeigt werden. Sie können auch andere Anzeigeoptionen angeben, z. b **. ob die** Überprüfung auf anderen Benutzeroberflächen verbleiben soll oder ob über **prüfen** ein umschließendes Rechteck um das ausgewählte Element hervorheben soll. Nachdem Sie die Überprüfung **so konfiguriert haben, dass** Sie wie gewünscht funktioniert, können Sie mit dem Navigieren zwischen Benutzeroberflächen Elementen und Anzeigen von Eigenschafts Informationen beginnen. Unter **Suchen** speichert Ihre Konfigurationseinstellungen beim Schließen und verwendet diese zum Initialisieren der nächsten **Prüfungs** Sitzung.
+In **der Ansicht** Daten werden die Eigenschafteninformationen des benutzeroberflächenelements angezeigt, das derzeit ausgewählt ist. Sie können **Inspect** so konfigurieren, dass Informationen zu allen Barrierefreiheitseigenschaften oder einer Teilmenge dieser Eigenschaften gezeigt werden. Sie können auch andere Anzeigeoptionen angeben, z. B. ob **Inspect** auf anderen Benutzeroberflächen verbleiben soll oder ob **Inspect** ein um das ausgewählte Element umendes Rechteck hervorheben soll. Nachdem Sie Inspect so **konfiguriert** haben, dass es ihren Wünschen entsprechend funktioniert, können Sie zwischen Benutzeroberflächenelementen navigieren und Eigenschafteninformationen anzeigen. **Überprüfen** speichert Ihre Konfigurationseinstellungen, wenn sie geschlossen werden, und verwendet sie, um Die nächste **Inspect-Sitzung zu** initialisieren.
 
-### <a name="configure-property-settings"></a>Konfigurieren von Eigenschaften Einstellungen
+### <a name="configure-property-settings"></a>Konfigurieren von Eigenschafteneinstellungen
 
-1. Wählen Sie im Menü **Optionen die Option** **Einstellungen...** aus, oder klicken Sie auf der Symbolleiste auf **Einstellungen anzeigen** .
-2. Wählen Sie in der Liste **in Hauptfenster anzeigen** die Eigenschaften aus, die in der **Daten** Ansicht von über **prüfen** angezeigt werden sollen.
-3. Wählen Sie in der **QuickInfo-Liste Anzeige in Informationen** die Eigenschaften aus, die in einer QuickInfo angezeigt werden sollen.
-4. Um Eigenschaften anzuzeigen, die das UI-Element möglicherweise nicht unterstützt, aktivieren Sie das Kontrollkästchen **nicht unterstützte Eigenschaften anzeigen** .
+1. Wählen Sie **im Menü** Optionen die Option **Einstellungen...** aus, oder wählen Sie **auf der Symbolleiste das Dialogfeld** Einstellungen anzeigen aus.
+2. Wählen Sie **in der Liste Im Hauptfenster anzeigen**  die Eigenschaften aus, die in der Datenansicht von Überprüfen **angezeigt werden.**
+3. Wählen Sie **in der Liste In Informations-QuickInfo** anzeigen die Eigenschaften aus, die in einer QuickInfo angezeigt werden.
+4. Aktivieren Sie das Kontrollkästchen Nicht unterstützte Eigenschaften anzeigen, um Eigenschaften anzuzeigen, die das **Benutzeroberflächenelement möglicherweise nicht** unterstützt.
 5. Klicken Sie auf **OK**.
 
 ### <a name="to-configure-viewing-options"></a>So konfigurieren Sie Anzeigeoptionen
 
 - Im Menü **Optionen** oder auf der Symbolleiste können Sie die folgenden Anzeigeoptionen auswählen.
 
-| Wenn diese Option ausgewählt ist | Unter **Suchen** dies                                                                                                                                                                                                              |
+| Wenn diese Option ausgewählt ist | **Inspect** führt dies aus.                                                                                                                                                                                                              |
 |------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Immer im Vordergrund                | Wird oben in jedem anderen Fenster auf dem Bildschirm angezeigt.                                                                                                                                                                                  |
-| MSAA-Modus                    | Zeigt Eigenschaften Informationen von Microsoft Active Accessibility an.                                                                                                                                                                      |
-| Benutzeroberflächen-Automatisierungs Modus           | Zeigt Eigenschaften Informationen für die Benutzeroberflächen Automatisierung an.                                                                                                                                                                                       |
-| Sichtbare Windows-Ansicht    | Nur im MSAA-Modus verfügbar.                                                                                                                                                                                                       |
-| Rohdatenansicht                     | Zeigt die [Rohdaten Ansicht](uiauto-treeoverview.md) der Benutzeroberflächenautomatisierungs-Struktur oder der MSAA-Struktur in der **Strukturansicht an** .                                                                                                             |
-| Steuerelementansicht                 | Zeigt die [Steuerelement Ansicht](uiauto-treeoverview.md) der Benutzeroberflächenautomatisierungs-Struktur in der **Strukturansicht an** . Nur im Benutzeroberflächenautomatisierungs-Modus verfügbar.                                                                            |
-| Inhaltsansicht                 | Zeigt die [Inhaltsansicht](uiauto-treeoverview.md) der Benutzeroberflächenautomatisierungs-Struktur in der **Strukturansicht an** . Nur im Benutzeroberflächenautomatisierungs-Modus verfügbar.                                                                            |
-| Aktive Hover-Symbolleiste         | Aktiviert die Symbolleisten Schaltflächen auf dem Mauszeiger, anstatt einen Mausklick zu erfordern.                                                                                                                                                      |
-| Bei Fehler bei Fehler                | Gibt an, wenn während einer Benutzeroberflächen Automatisierung oder eines MSAA-Vorgangs ein Fehler erkannt wird.                                                                                                                                                          |
-| SPI- \_ Screenreader-Flag       | Geht davon aus, dass ein Bildschirm Reader vorhanden ist. Dieses Flag gibt an, dass eine Anwendung Informationen textueller anstatt grafisch bereitstellen soll. Sie sollten nicht davon ausgehen, dass dieses Flag einfach festgelegt ist, weil eine Bildschirm Sprachausgabe vorhanden ist.         |
-| Hervorhebungs Rechteck anzeigen     | Markiert ein Rechteck um das Element mit dem Fokus.                                                                                                                                                                              |
-| Hervorhebung von Caretzeichen anzeigen         | Hebt die Einfügemarke hervor. Nur im MSAA-Modus verfügbar.                                                                                                                                                                                 |
-| Info Info anzeigen     | Zeigt Eigenschafts Informationen in einer QuickInfo an.                                                                                                                                                                                           |
-| Fokus ansehen                  | Folgt dem Tastaturfokus. Wenn diese Option aktiviert ist, wird ein asynchroner Fokus Ereignis Hook installiert, der die Einfügemarke nach oben links vom Element mit dem Fokus verschiebt. Dies bewirkt **, dass die Eigenschaften** in ungefähr einer Sekunde von der Überprüfung aktualisiert werden. |
-| Caretzeichen ansehen                  | Folgt der Einfügemarke. Nur im MSAA-Modus verfügbar.                                                                                                                                                                                    |
-| Überwachungs Cursor                 | Folgt dem Cursor.                                                                                                                                                                                                                |
-| Quick Infos ansehen               | Folgt den Quick Infos.                                                                                                                                                                                                              |
-| Struktur anzeigen                    | Zeigt die **Struktur** Ansicht an.                                                                                                                                                                                                        |
+| Always on Top                | Wird über einem beliebigen anderen Fenster auf dem Bildschirm angezeigt.                                                                                                                                                                                  |
+| MSAA-Modus                    | Zeigt Microsoft Active Accessibility Eigenschafteninformationen an.                                                                                                                                                                      |
+| Benutzeroberflächenautomatisierung Modus           | Zeigt Benutzeroberflächenautomatisierung Eigenschafteninformationen an.                                                                                                                                                                                       |
+| Ansicht "Nur sichtbare Fenster"    | Nur im MSAA-Modus verfügbar.                                                                                                                                                                                                       |
+| Rohdatenansicht                     | Zeigt die [rohe Ansicht](uiauto-treeoverview.md) der Benutzeroberflächenautomatisierung struktur oder MSAA-Struktur in der **Strukturansicht** an.                                                                                                             |
+| Steuerelementansicht                 | Stellt die [Steuerelementansicht der](uiauto-treeoverview.md) Benutzeroberflächenautomatisierung Struktur in der **Strukturansicht** vor. Nur im Benutzeroberflächenautomatisierung verfügbar.                                                                            |
+| Inhaltsansicht                 | Zeigt die [Inhaltsansicht](uiauto-treeoverview.md) der Benutzeroberflächenautomatisierung Struktur in der **Strukturansicht** an. Nur im Benutzeroberflächenautomatisierung verfügbar.                                                                            |
+| Symbolleiste mit aktivem Hover         | Aktiviert Symbolleistenschaltflächen beim Mauszeigerzeiger, anstatt einen Mausklick zu erfordern.                                                                                                                                                      |
+| Signalton bei Fehler                | Signalt, wenn ein Fehler während eines Benutzeroberflächenautomatisierung MSAA-Vorgangs erkannt wird.                                                                                                                                                          |
+| SPI \_ SCREENREADER-Flag       | Setzt voraus, dass eine Sprachausgabe vorhanden ist. Dieses Flag gibt an, dass eine Anwendung Informationen nicht grafisch, sondern textlich bereitstellen soll. Sie sollten nicht davon ausgehen, dass dieses Flag einfach festgelegt ist, weil eine Sprachausgabe vorhanden ist.         |
+| Hervorhebungsrechte anzeigen     | Hebt ein Rechteck um das Element mit dem Fokus hervor.                                                                                                                                                                              |
+| Caret highlight anzeigen         | Hebt das Caret-Caret- hervor. Nur im MSAA-Modus verfügbar.                                                                                                                                                                                 |
+| QuickInfo "Informationen anzeigen"     | Zeigt Eigenschaftsinformationen in einer QuickInfo an.                                                                                                                                                                                           |
+| Watch Focus                  | Folgt dem Tastaturfokus. Wenn diese Option ausgewählt ist, wird ein asynchroner Fokusereignishook installiert, der das Caretelement an die linke obere Seite des Elements mit dem Fokus verschiebt. Dies **bewirkt, dass Inspect** seine Eigenschaften in etwa einer Sekunde aktualisiert. |
+| Caretuhr ansehen                  | Folgt dem Caret-Caret. Nur im MSAA-Modus verfügbar.                                                                                                                                                                                    |
+| Überwachungscursor                 | Folgt dem Cursor.                                                                                                                                                                                                                |
+| QuickInfos ansehen               | Folgt den QuickInfos.                                                                                                                                                                                                              |
+| Struktur anzeigen                    | Zeigt die **Strukturansicht** an.                                                                                                                                                                                                        |
 
-## <a name="verifying-accessibility-navigation"></a>Überprüfen der Navigations Navigation
+## <a name="verifying-accessibility-navigation"></a>Überprüfen der Barrierefreiheitsnavigation
 
-Nachdem Sie mithilfe von überprüfen ein UI-Element ausgewählt haben, können Sie über **prüfen**, ob das Element die richtige Windows-Automatisierungs Navigation für Hilfstechnologieprodukte verfügbar macht.
+Nachdem Sie mit **Inspect** ein Benutzeroberflächenelement ausgewählt haben, können Sie überprüfen, ob das -Element die richtige Windows Automation-Navigation für Hilfstechnologieprodukte verfügbar macht.
 
-### <a name="verify-accessibility-navigation"></a>Barrierefreiheits Navigation überprüfen
+### <a name="verify-accessibility-navigation"></a>Überprüfen der Barrierefreiheitsnavigation
 
-1. Öffnen Sie über **prüfen** und die Anwendung, die Sie testen möchten.
-2. Wählen Sie das UI-Element aus, von dem aus die Navigation gestartet werden soll.
-3. Überprüfen Sie in der **Daten** Sicht, ob das-Element die richtigen Navigations bezogenen Eigenschaften verfügbar macht.
-4. Verwenden Sie die Strukturansicht, das **Navigations** Menü oder die Navigations Schaltflächen auf der Symbolleiste, **um die Benutzer** Oberfläche zu navigieren und zu überprüfen, ob jedes Element die richtigen Navigations bezogenen Eigenschaften verfügbar macht.
+1. Öffnen **Sie Überprüfen** und die Anwendung, die Sie testen möchten.
+2. Wählen Sie das Benutzeroberflächenelement aus, über das Sie die Navigation starten möchten.
+3. Überprüfen Sie in der **Datenansicht,** ob das Element die richtigen navigationsbezogenen Eigenschaften verfügbar macht.
+4. Verwenden Sie die **Strukturansicht,** das **Navigationsmenü** oder die Navigationsschaltflächen auf der Symbolleiste, um auf der Benutzeroberfläche zu navigieren und zu überprüfen, ob jedes Element die richtigen navigationsbezogenen Eigenschaften verfügbar macht.
     > [!Note]  
-    > Die **Navigations** Menü Optionen und Navigations Symbolleisten-Schaltflächen ändern sich abhängig davon, wo sich das ausgewählte Element in der Struktur befindet.
+    > Die Optionen des **Navigationsmenüs** und die Schaltflächen der Navigationssymbolleiste ändern sich abhängig davon, wo sich das ausgewählte Element in der Struktur befindet.
 
-## <a name="interacting-with-ui-elements"></a>Interagieren mit Benutzeroberflächen Elementen
+## <a name="interacting-with-ui-elements"></a>Interagieren mit Benutzeroberflächenelementen
 
-Windows Automation macht Methoden verfügbar, mit denen Hilfstechnologieprodukte mit einem UI-Element interagieren können, als ob die Maus oder Tastatur verwendet würde (z. b. zum Klicken auf eine Schaltfläche). Mit dem Menü "Aktion über **prüfen** " können Tester Windows-Automatisierungsmethoden auf einem Element aufrufen (z **. b. "aufrufen. aufrufen** " Ruft die [**iuiautomationinvokepattern:: Aufrufen**](/windows/desktop/api/UIAutomationClient/nf-uiautomationclient-iuiautomationinvokepattern-invoke) -Methode auf).
+Windows Automation macht Methoden verfügbar, mit denen Hilfstechnologieprodukte mit einem Benutzeroberflächenelement interagieren können, als ob die Maus oder Tastatur verwendet würde (z. B. um auf eine Schaltfläche zu klicken). Im Menü **Aktion überprüfen** können Tester Windows Automation-Methoden für ein Element aufrufen **(z.B. ruft Invoke.Invoke** die [**IUIAutomationInvokePattern::Invoke-Methode**](/windows/desktop/api/UIAutomationClient/nf-uiautomationclient-iuiautomationinvokepattern-invoke) auf).
 
-### <a name="interact-with-ui-elements"></a>Interagieren mit Benutzeroberflächen Elementen
+### <a name="interact-with-ui-elements"></a>Interagieren mit Benutzeroberflächenelementen
 
-1. Öffnen Sie über **prüfen** und die Anwendung, die Sie testen möchten.
-2. Wählen Sie das UI-Element aus, mit dem Sie interagieren möchten.
-3. Wählen Sie im Menü **Aktion** oder auf der Symbolleiste die Aktion aus, die der Windows-Automatisierungs Methode entspricht, die Sie aufrufen möchten.
+1. Öffnen **Sie Überprüfen** und die Anwendung, die Sie testen möchten.
+2. Wählen Sie das Benutzeroberflächenelement aus, mit dem Sie interagieren möchten.
+3. Wählen Sie im Menü **Aktion** oder auf der Symbolleiste die Aktion aus, die der Windows Automation-Methode entspricht, die Sie aufrufen möchten.
 
-Das Menü **Aktion** enthält die Elemente **Aktualisieren** und **Fokus** sowie andere Elemente, die abhängig davon variieren, ob der Benutzeroberflächenautomatisierungs-Modus oder der MSAA-Modus ausgewählt ist. Im Benutzeroberflächenautomatisierungs-Modus reflektieren die anderen Elemente die Steuerelement Muster, die vom aktuell ausgewählten Benutzeroberflächen Element unterstützt werden. Im MSAA-Modus bestehen die anderen Elemente immer aus folgendem:
+Das Menü **Aktion** enthält die Elemente **Aktualisieren** und **Fokus** sowie andere Elemente, die abhängig davon variieren, ob Benutzeroberflächenautomatisierung Modus oder MSAA-Modus ausgewählt ist. Im Benutzeroberflächenautomatisierung Modus spiegeln die anderen Elemente die Steuerelementmuster wider, die vom derzeit ausgewählten Benutzeroberflächenelement unterstützt werden. Im MSAA-Modus bestehen die anderen Elemente immer aus folgenden Elementen:
 
 | Aktion                | BESCHREIBUNG                                                                                                           |
 |-----------------------|-----------------------------------------------------------------------------------------------------------------------|
-| Aktualisieren               | Aktualisiert die Benutzeroberfläche. Verfügbar im MSAA-und Benutzeroberflächenautomatisierungs-Modus.                                               |
-| Standardaktion        | Führt die Standardaktion für das-Element aus.                                                                          |
-| Fokus                 | Legt den Fokus auf das Element fest. Verfügbar im MSAA-und Benutzeroberflächenautomatisierungs-Modus.                                                  |
+| Aktualisieren               | Aktualisiert die Benutzeroberfläche. Verfügbar im MSAA- und Benutzeroberflächenautomatisierung-Modus.                                               |
+| Standardaktion        | Führt die Standardaktion für das Element aus.                                                                          |
+| Fokus                 | Legt den Fokus auf das Element fest. Verfügbar im MSAA- und Benutzeroberflächenautomatisierung-Modus.                                                  |
 | Select                | Wählt das Element aus.                                                                                                  |
-| Auswahl erweitern      | Erweitert die Auswahl von Elementen, um alle Elemente zwischen dem ersten ausgewählten Element und dem aktuellen Element einzuschließen. |
-| Zur Auswahl hinzufügen      | Wählt das aktuelle Element aus (z. b. ein Listenelement).                                                                    |
+| Auswahl erweitern      | Erweitert die Auswahl von Elementen, um alle Elemente zwischen dem ersten ausgewählten Element und dem aktuellen Element einzuschließt. |
+| Zur Auswahl hinzufügen      | Wählt das aktuelle Element (z. B. ein Listenelement) aus.                                                                    |
 | Aus Auswahl entfernen | Entfernt das aktuelle Element aus der Auswahl.                                                                       |
-| Setaccvalue           | Legt den Wert von Microsoft Active Accessibility des-Elements auf die angegebene Zeichenfolge fest.                                 |
-| Untergeordnetes Element         | Navigiert zum untergeordneten Element des Elements, das gerade den Fokus besitzt.                                                       |
-| HitTest bei Cursor     | Navigiert zum untergeordneten Element des Elements, das durch den Maus Cursor angegeben wird.                                                      |
-| HitTest...            | Öffnet das Dialogfeld " **HitTest** ".                                                                                     |
+| SetAccValue           | Legt den Microsoft Active Accessibility Wert des Elements auf die angegebene Zeichenfolge fest.                                 |
+| Fokussiertes untergeordnetes Element         | Navigiert zum untergeordneten Element des Elements, das derzeit den Fokus besitzt.                                                       |
+| HitTest am Cursor     | Navigiert zum untergeordneten Element des vom Mauscursor angegebenen Elements.                                                      |
+| Hittest...            | Öffnet das Dialogfeld **HitTest.**                                                                                     |
 
 
 
- 
+ 
 
 ## <a name="keyboard-shortcuts"></a>Tastenkombinationen
 
-Viele der Menü Elemente können auch mit einer Tastenkombination aufgerufen werden, auch **Wenn die** Überprüfung nicht die aktive Anwendung ist. Beachten Sie jedoch, dass die Tastenkombinationen mit einigen Anwendungen in Konflikt stehen.
+Viele der Menüelemente können mit einer Tastenkombination aufgerufen werden, auch wenn **Inspect** nicht die aktive Anwendung ist. Beachten Sie jedoch, dass die Tastenkombinationen mit einigen Anwendungen in Konflikt geraten.
 
 Die folgenden Tastenkombinationen aktivieren die verschiedenen Optionen im Menü:
 
@@ -149,27 +152,27 @@ Die folgenden Tastenkombinationen aktivieren die verschiedenen Optionen im Menü
 
 | Aufgabe                                                                                                                                       | Tastenkombination |
 |--------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------|
-| Rufen Sie die Standardaktion des-Objekts unter dem Cursor auf (Do default Action). Nur im MSAA-Modus verfügbar.                                       | STRG+UMSCHALT+F2              |
-| Wählen Sie das Objekt unter dem Cursor (Select) aus. Nur im MSAA-Modus verfügbar.                                                                        | STRG+UMSCHALT+F3              |
-| Legen Sie den Tastaturfokus auf das-Objekt unter dem Cursor (Fokus) fest.                                                                                   | STRG + UMSCHALT + F4              |
-| Wechselt zum vorhergehenden neben geordneten Objekt von dem unter dem Cursor. Dieser Befehl navigiert zu Objekten nur innerhalb eines Containers (Vorheriges gleich geordnetes Element). | STRG+UMSCHALT+F5              |
-| Wechselt zum übergeordneten Element des Objekts (übergeordnet).                                                                                                            | STRG+UMSCHALT+F6              |
-| Wechselt zum ersten untergeordneten Element des aktuellen-Objekts (erstes untergeordnetes Element).                                                                                     | STRG + UMSCHALT + F7              |
-| Wechselt zum nächsten neben geordneten Objekt, das sich unter dem Cursor befinden soll. Dieser Befehl navigiert zu Objekten nur innerhalb eines Containers (nächstes neben geordnetes Element).         | STRG + UMSCHALT + F8              |
-| Wechselt zum letzten untergeordneten Element des aktuellen-Objekts (letztes untergeordnetes Element).                                                                                       | STRG+UMSCHALT+F9              |
-| Wechseln Sie zum-Objekt unter dem Mauszeiger (HitTest bei Cursor). Nur im MSAA-Modus verfügbar.                                                      | STRG+UMSCHALT+1               |
-| Kopieren Sie den Inhalt der Datenansicht in die Zwischenablage (alle kopieren).                                                                                  | STRG+UMSCHALT+4               |
-| Aktualisieren Sie den Inhalt der Datenansicht (aktualisieren).                                                                                                 | STRG+UMSCHALT+5               |
-| Sehen Sie sich das Objekt an, das den Fokus besitzt (Überwachungs Fokus).                                                                                                   | STRG+UMSCHALT+6               |
-| Wechselt zum neben geordneten Objekt, das sich auf der linken Seite des Cursors befindet (links). Nur im MSAA-Modus verfügbar.                                        | STRG+UMSCHALT+7               |
-| Wechseln Sie zu dem neben geordneten Objekt oberhalb des Objekts, über dem sich der Cursor befindet (aufwärts). Nur im MSAA-Modus verfügbar.                                                | STRG+UMSCHALT+8               |
-| Wechseln Sie zu dem neben geordneten Objekt, das sich unter dem befindet, über dem sich der Cursor befindet (unten). Nur im MSAA-Modus verfügbar.                                                 | STRG+UMSCHALT+9               |
-| Wechselt zum neben geordneten Objekt rechts vom Cursor, über dem sich der Cursor befindet (rechts). Nur im MSAA-Modus verfügbar.                                      | STRG + UMSCHALT + 0               |
+| Rufen Sie die Standardaktion des Objekts unter dem Cursor auf (Standardaktion durchführen). Nur im MSAA-Modus verfügbar.                                       | STRG+UMSCHALT+F2              |
+| Wählen Sie das Objekt unter dem Cursor aus (Auswählen). Nur im MSAA-Modus verfügbar.                                                                        | STRG+UMSCHALT+F3              |
+| Legen Sie den Tastaturfokus auf das Objekt unter dem Cursor (Fokus) fest.                                                                                   | STRG+UMSCHALT+F4              |
+| Wechseln Sie von dem Objekt unter dem Cursor zum vorherigen nebengeordneten Objekt. Dieser Befehl navigiert nur zu Objekten innerhalb eines Containers (Previous Sibling). | STRG+UMSCHALT+F5              |
+| Wechseln Sie zum übergeordneten (übergeordneten) Objekt.                                                                                                            | STRG+UMSCHALT+F6              |
+| Wechseln Sie zum ersten untergeordneten Element des aktuellen Objekts (Erstes untergeordnetes Element).                                                                                     | STRG+UMSCHALT+F7              |
+| Wechseln Sie zum nächsten nebengeordneten Objekt von dem Objekt unter dem Cursor. Dieser Befehl navigiert nur innerhalb eines Containers zu Objekten (Next Sibling).         | STRG+UMSCHALT+F8              |
+| Wechseln Sie zum letzten untergeordneten Element des aktuellen Objekts (Letztes untergeordnetes Element).                                                                                       | STRG+UMSCHALT+F9              |
+| Wechseln Sie zum Objekt unter dem Mauszeiger (HitTest bei Cursor). Nur im MSAA-Modus verfügbar.                                                      | STRG+UMSCHALT+1               |
+| Kopieren Sie den Inhalt der Datenansicht in die Zwischenablage (Alle kopieren).                                                                                  | STRG+UMSCHALT+4               |
+| Aktualisieren Sie den Inhalt der Datenansicht (Aktualisieren).                                                                                                 | STRG+UMSCHALT+5               |
+| Sehen Sie sich das Objekt an, das den Fokus besitzt (Fokus ansehen).                                                                                                   | STRG+UMSCHALT+6               |
+| Wechseln Sie zum nebengeordneten Objekt links neben dem Objekt, über dem sich der Cursor befindet (Links). Nur im MSAA-Modus verfügbar.                                        | STRG+UMSCHALT+7               |
+| Wechseln Sie zum nebengeordneten Objekt über dem Objekt, über dem sich der Cursor befindet (Nach oben). Nur im MSAA-Modus verfügbar.                                                | STRG+UMSCHALT+8               |
+| Wechseln Sie zum nebengeordneten Objekt unter dem Objekt, über dem sich der Cursor befindet (Nach unten). Nur im MSAA-Modus verfügbar.                                                 | STRG+UMSCHALT+9               |
+| Wechseln Sie zum nebengeordneten Objekt rechts neben dem Objekt, über dem sich der Cursor befindet (rechts). Nur im MSAA-Modus verfügbar.                                      | STRG+UMSCHALT+0               |
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 - [Überwachung für barrierefreie Ereignisse](accessible-event-watcher.md)
-- [TestTools](testing-tools.md)
+- [Testtools](testing-tools.md)
 - [UI Accessibility Checker](ui-accessibility-checker.md)
 - [Benutzeroberflächenautomatisierungs-Überprüfung](ui-automation-verify.md)
 - [EH-Viewer (AccScope)](accscope.md)

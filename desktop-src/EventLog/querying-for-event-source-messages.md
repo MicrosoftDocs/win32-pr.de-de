@@ -1,19 +1,19 @@
 ---
-description: Abfragen von Ereignis Informationen
+description: Abfragen von Ereignisinformationen
 ms.assetid: e03d2ab5-50ea-4916-9774-850506714538
-title: Abfragen von Ereignis Informationen
+title: Abfragen von Ereignisinformationen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c6cd577703e38b6f13ed40d82fad6955a7d636f0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: fcd20521060ecceb5dcec1fbd37cbdac4f34c5b7
+ms.sourcegitcommit: adba238660d8a5f4fe98fc6f5d105d56aac3a400
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104131317"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "111826308"
 ---
-# <a name="querying-for-event-information"></a>Abfragen von Ereignis Informationen
+# <a name="querying-for-event-information"></a>Abfragen von Ereignisinformationen
 
-Im folgenden Beispiel wird gezeigt, wie Sie ein Ereignisprotokoll öffnen, Ereignisse aus dem Protokoll lesen, Informationen zu den Ereignissen ausgeben und das Ereignisprotokoll dann schließen. In diesem Beispiel wird nach den Ereignissen gefiltert, die in der [Berichterstellung eines Ereignisses](reporting-an-event.md)durch das Beispiel geschrieben wurden.
+Das folgende Beispiel zeigt, wie Sie ein Ereignisprotokoll öffnen, Ereignisse aus dem Protokoll lesen, Informationen zu den Ereignissen drucken und dann das Ereignisprotokoll schließen. Dieses Beispiel filtert nach den Ereignissen, die im Beispiel unter [Melden eines Ereignisses geschrieben wurden.](reporting-an-event.md)
 
 
 ```C++
@@ -326,7 +326,9 @@ DWORD ApplyParameterStringsToMessage(CONST LPCWSTR pMessage, LPWSTR & pFinalMess
     // Determine the number of parameter insertion strings in pMessage.
     while (pTempMessage = wcschr(pTempMessage, L'%'))
     {
-        dwParameterCount++;
+        if (isdigit(*(pTempMessage + 1))) {
+            dwParameterCount++;
+        }
         pTempMessage++;
     }
 
@@ -405,6 +407,9 @@ DWORD ApplyParameterStringsToMessage(CONST LPCWSTR pMessage, LPWSTR & pFinalMess
             pEndingAddresses[i] = pTempMessage;
 
             i++;
+        }
+        else {
+            pTempMessage++;
         }
     }
 

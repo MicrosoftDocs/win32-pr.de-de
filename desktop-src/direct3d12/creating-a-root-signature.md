@@ -5,35 +5,35 @@ ms.assetid: 565B28C1-DBD1-42B6-87F9-70743E4A2E4A
 ms.localizationpriority: high
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ed993618e021656dbc9377882e2961f7f0d62263
-ms.sourcegitcommit: ca37395fd832e798375e81142b97cffcffabf184
+ms.openlocfilehash: 87209dfc324b950a74d2b31e5f1a1f6326792b9f
+ms.sourcegitcommit: adba238660d8a5f4fe98fc6f5d105d56aac3a400
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "110335644"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "111826436"
 ---
 # <a name="creating-a-root-signature"></a>Erstellen einer Stammsignatur
 
-Stammsignaturen sind eine komplexe Datenstruktur, die geschachtelte Strukturen enthält. Diese können programmgesteuert mithilfe der unten angegebenen Datenstrukturdefinition definiert werden (einschließlich Methoden zum Initialisieren von Membern). Alternativ können sie in HLSL (High Level Shading Language) erstellt werden, was den Vorteil bietet, dass der Compiler frühzeitig überprüft, ob das Layout mit dem Shader kompatibel ist.
+Stammsignaturen sind eine komplexe Datenstruktur, die geschachtelte Strukturen enthält. Diese können programmgesteuert mithilfe der unten angegebenen Datenstrukturdefinition definiert werden (einschließlich Methoden zum Initialisieren von Membern). Alternativ können sie in HLSL (High Level Shading Language) erstellt werden. Dies hat den Vorteil, dass der Compiler frühzeitig überprüft, ob das Layout mit dem Shader kompatibel ist.
 
-Die API zum Erstellen einer Stammsignatur verwendet eine serialisierte (eigenständige, zeigerfreie) Version der unten beschriebenen Layoutbeschreibung. Eine Methode zum Generieren dieser serialisierten Version aus der C++-Datenstruktur wird bereitgestellt. Eine weitere Möglichkeit zum Abrufen einer serialisierten Stammsignaturdefinition besteht jedoch im Abrufen aus einem Shader, der mit einer Stammsignatur kompiliert wurde.
+Die API zum Erstellen einer Stammsignatur verwendet eine serialisierte (eigenständige, zeigerfreie) Version der unten beschriebenen Layoutbeschreibung. Eine Methode wird zum Generieren dieser serialisierten Version aus der C++-Datenstruktur bereitgestellt. Eine weitere Möglichkeit zum Abrufen einer serialisierten Stammsignaturdefinition besteht jedoch darin, sie von einem Shader abzurufen, der mit einer Stammsignatur kompiliert wurde.
 
-Wenn Sie Treiberoptimierungen für Stammsignaturdeskriptoren und -daten nutzen möchten, lesen Sie [Root Signature Version 1.1.](root-signature-version-1-1.md)
+Wenn Sie Treiberoptimierungen für Stammsignaturdeskriptoren und -daten nutzen möchten, lesen Sie [Stammsignaturversion 1.1.](root-signature-version-1-1.md)
 
--   [Deskriptortabellen-Bindungstypen](#descriptor-table-bind-types)
+-   [Deskriptortabellenbindungstypen](#descriptor-table-bind-types)
 -   [Deskriptorbereich](#descriptor-range)
 -   [Deskriptortabellenlayout](#descriptor-table-layout)
--   [Stammkonst constants](#root-constants)
+-   [Stammkonstanten](#root-constants)
 -   [Stammdeskriptor](#root-descriptor)
 -   [Shadersichtbarkeit](#shader-visibility)
 -   [Stammsignaturdefinition](#root-signature-definition)
 -   [Serialisierung/Deserialisierung der Stammsignaturdatenstruktur](/windows)
--   [Api zum Erstellen von Stammsignaturen](#root-signature-creation-api)
+-   [API zum Erstellen von Stammsignaturen](#root-signature-creation-api)
 -   [Stammsignatur in Pipelinezustandsobjekten](#root-signature-in-pipeline-state-objects)
 -   [Code zum Definieren einer Stammsignatur der Version 1.1](#code-for-defining-a-version-11-root-signature)
 -   [Verwandte Themen](#related-topics)
 
-## <a name="descriptor-table-bind-types"></a>Deskriptortabellen-Bindungstypen
+## <a name="descriptor-table-bind-types"></a>Deskriptortabellenbindungstypen
 
 Die Enumeration [**D3D12 \_ DESCRIPTOR \_ RANGE \_ TYPE**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_descriptor_range_type) definiert die Typen von Deskriptoren, auf die als Teil einer Deskriptortabellenlayoutdefinition verwiesen werden kann.
 
@@ -53,7 +53,7 @@ typedef enum D3D12_DESCRIPTOR_RANGE_TYPE
 
 Die [**D3D12 \_ DESCRIPTOR \_ RANGE-Struktur**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_descriptor_range) definiert einen Deskriptorbereich eines bestimmten Typs (z. B. SRVs) innerhalb einer Deskriptortabelle.
 
-Das `D3D12_DESCRIPTOR_RANGE_OFFSET_APPEND` Makro kann in der Regel für den `OffsetInDescriptorsFromTableStart` -Parameter von [**D3D12 \_ DESCRIPTOR \_ RANGE**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_descriptor_range)verwendet werden. Dies bedeutet, dass der Deskriptorbereich, der nach dem vorherigen in der Deskriptortabelle definiert wird, angefügt wird. Wenn die Anwendung Aliasdeskriptoren verwenden oder Aus irgendeinem Grund Slots überspringen möchte, kann sie `OffsetInDescriptorsFromTableStart` auf den gewünschten Offset festlegen. Das Definieren überlappender Bereiche verschiedener Typen ist ungültig.
+Das `D3D12_DESCRIPTOR_RANGE_OFFSET_APPEND` Makro kann in der Regel für den `OffsetInDescriptorsFromTableStart` -Parameter von [**D3D12 \_ DESCRIPTOR \_ RANGE**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_descriptor_range)verwendet werden. Dies bedeutet, dass sie den Deskriptorbereich anfügen, der nach dem vorherigen in der Deskriptortabelle definiert wird. Wenn die Anwendung Aliasdeskriptoren verwenden oder Aus irgendeinem Grund Slots überspringen möchte, kann sie `OffsetInDescriptorsFromTableStart` auf den gewünschten Offset festlegen. Das Definieren überlappender Bereiche verschiedener Typen ist ungültig.
 
 Der Satz von Shaderregistern, die durch die Kombination von , , und angegeben werden, `RangeType` kann keine Konflikte oder `NumDescriptors` `BaseShaderRegister` `RegisterSpace` Überschneidungen zwischen Deklarationen in einer Stammsignatur mit allgemeiner [**D3D12-SHADER-SICHTBARKEIT \_ \_**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_shader_visibility) verursachen (weitere Informationen finden Sie im Abschnitt zur Shadersichtbarkeit weiter unten).
 
@@ -69,7 +69,7 @@ Um eine Computedeskriptortabelle festzulegen, verwenden Sie [**ID3D12GraphicsCom
 
 ## <a name="root-constants"></a>Stammkonstanten
 
-Die [**D3D12 \_ ROOT \_ CONSTANTS-Struktur**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_root_constants) deklariert Konstanten inline in der Stammsignatur, die in Shadern als ein konstanter Puffer angezeigt werden.
+Die [**D3D12 \_ ROOT \_ CONSTANTS-Struktur**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_root_constants) deklariert Konstanten inline in der Stammsignatur, die in Shadern als ein Konstantenpuffer angezeigt werden.
 
 Diese Struktur wird verwendet, wenn der Stammsignaturslottyp auf festgelegt `D3D12_ROOT_PARAMETER_TYPE_32BIT_CONSTANTS` ist.
 
@@ -77,27 +77,27 @@ Diese Struktur wird verwendet, wenn der Stammsignaturslottyp auf festgelegt `D3D
 
 Die [**D3D12 \_ ROOT \_ DESCRIPTOR-Struktur**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_root_descriptor) deklariert Deskriptoren (die in Shadern angezeigt werden) inline in der Stammsignatur.
 
-Diese Struktur wird verwendet, wenn der Stammsignaturslottyp auf `D3D12_ROOT_PARAMETER_TYPE_CBV` oder `D3D12_ROOT_PARAMETER_TYPE_SRV` festgelegt `D3D12_ROOT_PARAMETER_TYPE_UAV` ist.
+Diese Struktur wird verwendet, wenn der Stammsignaturslottyp auf oder festgelegt `D3D12_ROOT_PARAMETER_TYPE_CBV` `D3D12_ROOT_PARAMETER_TYPE_SRV` `D3D12_ROOT_PARAMETER_TYPE_UAV` ist.
 
 ## <a name="shader-visibility"></a>Shadersichtbarkeit
 
-Der Member der [**D3D12 \_ SHADER VISIBILITY-Aufumerierung, \_**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_shader_visibility) der im Shader-Sichtbarkeitsparameter von [**D3D12 \_ ROOT \_ PARAMETER**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_root_parameter) festgelegt ist, bestimmt, welche Shader den Inhalt eines bestimmten Stammsignaturslots sehen. Compute verwendet immer \_ ALL (da es nur eine aktive Phase gibt). Grafiken können auswählen, aber wenn sie ALL verwendet, sehen alle Shaderstufen, was am \_ Stammsignaturslot gebunden ist.
+Der Member der [**D3D12 \_ SHADER \_ VISIBILITY-Enumeration,**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_shader_visibility) die im Shader-Sichtbarkeitsparameter von [**D3D12 \_ ROOT \_ PARAMETER**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_root_parameter) festgelegt ist, bestimmt, welche Shader den Inhalt eines angegebenen Stammsignaturslots sehen. Compute verwendet immer \_ ALL (da es nur eine aktive Phase gibt). Grafiken können auswählen, aber wenn all verwendet \_ wird, sehen alle Shaderstufen, was am Stammsignaturslot gebunden ist.
 
-Eine Verwendung der Shadersichtbarkeit ist die Unterstützung bei Shadern, die erstellt wurden und unterschiedliche Bindungen pro Shaderphase mithilfe eines überlappenden Namespace erwarten. Beispielsweise kann ein Vertex-Shader Folgendes deklarieren:
+Eine Verwendung der Shadersichtbarkeit ist die Unterstützung von Shadern, die erstellt wurden und unterschiedliche Bindungen pro Shaderphase mithilfe eines überlappenden Namespace erwarten. Beispielsweise kann ein Vertex-Shader Folgendes deklarieren:
 
 ```hlsl
 Texture2D foo : register(t0);
 ```
 
-und der Pixel-Shader kann auch Folgendes deklarieren:
+und der Pixelshader kann auch Folgendes deklarieren:
 
 ```hlsl
 Texture2D bar : register(t0);
 ```
 
-Wenn die Anwendung eine Stammsignaturbindung an t0 VISIBILITY ALL vort, sehen beide \_ Shader dieselbe Textur. Wenn der Shader definiert, dass jeder Shader tatsächlich unterschiedliche Texturen sehen soll, kann er zwei Stammsignaturslots mit VISIBILITY \_ VERTEX und \_ PIXEL definieren. Unabhängig davon, welche Sichtbarkeit für einen Stammsignaturslot gilt, hat er immer die gleichen Kosten (Kosten nur abhängig vom SlotType) für eine feste maximale Größe der Stammsignatur.
+Wenn die Anwendung eine Stammsignaturbindung an t0 VISIBILITY \_ ALL vornimmt, sehen beide Shader die gleiche Textur. Wenn der Shader definiert, dass jeder Shader tatsächlich unterschiedliche Texturen anzeigen soll, kann er zwei Stammsignaturslots mit VISIBILITY \_ VERTEX und \_ PIXEL definieren. Unabhängig von der Sichtbarkeit eines Stammsignaturslots sind die Kosten (kosten nur je nach SlotType) für eine feste maximale Stammsignaturgröße identisch.
 
-Auf Low-End-D3D11-Hardware wird SHADER VISIBILITY auch bei der Validierung der Größe von Deskriptortabellen in einem Stammlayout berücksichtigt, da einige D3D11-Hardware nur eine maximale Anzahl von Bindungen pro Stufe unterstützen \_ kann. Diese Einschränkungen gelten nur bei der Ausführung auf niedriger Hardwareebene und schränken keine modernere Hardware ein.
+Bei Low-End-D3D11-Hardware wird SHADER \_ VISIBILITY auch beim Überprüfen der Größe von Deskriptortabellen in einem Stammlayout berücksichtigt, da einige D3D11-Hardware nur eine maximale Anzahl von Bindungen pro Phase unterstützen kann. Diese Einschränkungen gelten nur, wenn sie auf Low-Tier-Hardware ausgeführt werden, und beschränken überhaupt keine modernere Hardware.
 
 Wenn für eine Stammsignatur mehrere Deskriptortabellen definiert sind, die sich im Namespace überlappen (die Registerbindungen an den Shader), und eine davon \_ all für die Sichtbarkeit angibt, ist das Layout ungültig (die Erstellung schlägt fehl).
 
@@ -119,17 +119,17 @@ Das serialisierte Formular wird beim Erstellen einer Stammsignatur an die API ü
 
 Wenn eine Anwendung prozedural eine [**D3D12 \_ ROOT \_ SIGNATURE \_ DESC-Datenstruktur**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_root_signature_desc) generiert, muss sie das serialisierte Formular mithilfe von [**D3D12SerializeRootSignature**](/windows/desktop/api/d3d12/nf-d3d12-d3d12serializerootsignature)erstellen. Die Ausgabe von , die an [**ID3D12Device::CreateRootSignature**](/windows/desktop/api/d3d12/nf-d3d12-id3d12device-createrootsignature)übergeben werden kann.
 
-Wenn eine Anwendung bereits über eine serialisierte Stammsignatur verfügt oder über einen kompilierten Shader verfügt, der eine Stammsignatur enthält und die Layoutdefinition (als "Reflektion" bezeichnet) programmgesteuert entdecken möchte, kann [**D3D12CreateRootSignatureDeserializer**](/windows/desktop/api/d3d12/nf-d3d12-d3d12createrootsignaturedeserializer) aufgerufen werden. Dadurch wird eine [**ID3D12RootSignatureDeserializer-Schnittstelle**](/windows/desktop/api/d3d12/nn-d3d12-id3d12rootsignaturedeserializer) generiert, die eine Methode zum Zurückgeben der deserialisierten [**D3D12 \_ ROOT SIGNATURE \_ \_ DESC-Datenstruktur**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_root_signature_desc) enthält. Die Schnittstelle besitzt die Lebensdauer der deserialisierten Datenstruktur.
+Wenn eine Anwendung bereits über eine serialisierte Stammsignatur verfügt oder über einen kompilierten Shader verfügt, der eine Stammsignatur enthält und die Layoutdefinition programmgesteuert ermitteln möchte (als "Reflektion" bezeichnet), kann [**D3D12CreateRootSignatureDeserializer**](/windows/desktop/api/d3d12/nf-d3d12-d3d12createrootsignaturedeserializer) aufgerufen werden. Dadurch wird eine [**ID3D12RootSignatureDeserializer-Schnittstelle**](/windows/desktop/api/d3d12/nn-d3d12-id3d12rootsignaturedeserializer) generiert, die eine Methode zum Zurückgeben der deserialisierten [**D3D12 \_ ROOT SIGNATURE \_ \_ DESC-Datenstruktur**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_root_signature_desc) enthält. Die Schnittstelle besitzt die Lebensdauer der deserialisierten Datenstruktur.
 
-## <a name="root-signature-creation-api"></a>Api zum Erstellen von Stammsignaturen
+## <a name="root-signature-creation-api"></a>API zum Erstellen von Stammsignaturen
 
-Die [**ID3D12Device::CreateRootSignature-API**](/windows/desktop/api/d3d12/nf-d3d12-id3d12device-createrootsignature) verwendet eine serialisierte Version einer Stammsignatur.
+Die [**ID3D12Device::CreateRootSignature-API**](/windows/desktop/api/d3d12/nf-d3d12-id3d12device-createrootsignature) übernimmt eine serialisierte Version einer Stammsignatur.
 
 ## <a name="root-signature-in-pipeline-state-objects"></a>Stammsignatur in Pipelinezustandsobjekten
 
-Die Methoden zum Erstellen des Pipelinezustands ([**ID3D12Device::CreateGraphicsPipelineState**](/windows/desktop/api/d3d12/nf-d3d12-id3d12device-creategraphicspipelinestate) und [**ID3D12Device::CreateComputePipelineState**](/windows/desktop/api/d3d12/nf-d3d12-id3d12device-createcomputepipelinestate) ) verwenden eine optionale [**ID3D12RootSignature-Schnittstelle**](/windows/win32/api/d3d12/nn-d3d12-id3d12rootsignature) als Eingabeparameter (gespeichert in einer [**D3D12 \_ GRAPHICS PIPELINE STATE \_ \_ \_ DESC-Struktur).**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_graphics_pipeline_state_desc) Dadurch werden alle Stammsignaturen überschrieben, die sich bereits in den Shadern enthalten.
+Die Methoden zum Erstellen des Pipelinezustands ([**ID3D12Device::CreateGraphicsPipelineState**](/windows/desktop/api/d3d12/nf-d3d12-id3d12device-creategraphicspipelinestate) und [**ID3D12Device::CreateComputePipelineState**](/windows/desktop/api/d3d12/nf-d3d12-id3d12device-createcomputepipelinestate) ) verwenden eine optionale [**ID3D12RootSignature-Schnittstelle**](/windows/win32/api/d3d12/nn-d3d12-id3d12rootsignature) als Eingabeparameter (gespeichert in einer [**D3D12 \_ GRAPHICS PIPELINE STATE \_ \_ \_ DESC-Struktur).**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_graphics_pipeline_state_desc) Dadurch werden alle Stammsignaturen überschrieben, die bereits in den Shadern enthalten sind.
 
-Wenn eine Stammsignatur an eine der Methoden zum Erstellen des Pipelinezustands übergeben wird, wird diese Stammsignatur anhand aller Shader im PSO auf Kompatibilität überprüft und dem Treiber zur Verwendung mit allen Shadern übergeben. Wenn einer der Shader über eine andere Stammsignatur verfügt, wird er durch die Stammsignatur ersetzt, die an die API übergeben wird. Wenn keine Stammsignatur übergeben wird, müssen alle übergebenen Shader über eine Stammsignatur verfügen und übereinstimmen. Dies wird an den Treiber übergeben. Das Festlegen eines PSO für eine Befehlsliste oder ein Paket ändert nicht die Stammsignatur. Dies wird durch die Methoden [**SetGraphicsRootSignature**](/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-setgraphicsrootsignature) und [**SetComputeRootSignature erreicht.**](/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-setcomputerootsignature) Wenn draw(graphics)/dispatch(compute) aufgerufen wird, muss die Anwendung sicherstellen, dass das aktuelle PSO der aktuellen Stammsignatur entspricht. Andernfalls ist das Verhalten nicht definiert.
+Wenn eine Stammsignatur an eine der Methoden zum Erstellen des Pipelinezustands übergeben wird, wird diese Stammsignatur für alle Shader im PSO auf Kompatibilität überprüft und dem Treiber zur Verwendung mit allen Shadern übergeben. Wenn einer der Shader eine andere Stammsignatur enthält, wird er durch die an die API übergebene Stammsignatur ersetzt. Wenn keine Stammsignatur übergeben wird, müssen alle übergebenen Shader über eine Stammsignatur verfügen, und sie müssen übereinstimmen. Dies wird dem Treiber übergeben. Das Festlegen eines PSO für eine Befehlsliste oder ein Paket ändert die Stammsignatur nicht. Dies wird mit den Methoden [**SetGraphicsRootSignature**](/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-setgraphicsrootsignature) und [**SetComputeRootSignature**](/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-setcomputerootsignature)erreicht. Wenn draw(graphics)/dispatch(compute) aufgerufen wird, muss die Anwendung sicherstellen, dass die aktuelle PSO mit der aktuellen Stammsignatur übereinstimmt. Andernfalls ist das Verhalten nicht definiert.
 
 ## <a name="code-for-defining-a-version-11-root-signature"></a>Code zum Definieren einer Stammsignatur der Version 1.1
 
@@ -153,9 +153,9 @@ Das folgende Beispiel zeigt, wie Sie eine Stammsignatur im folgenden Format erst
 
 Wenn die meisten Teile der Stammsignatur meistens verwendet werden, kann dies besser sein, als die Stammsignatur zu häufig wechseln zu müssen. Anwendungen sollten Einträge in der Stammsignatur von den am häufigsten geänderten in die geringsten Einträge sortieren. Wenn eine App die Bindungen an einen beliebigen Teil der Stammsignatur ändert, muss der Treiber möglicherweise eine Kopie eines oder aller Stammsignaturstatus erstellen. Dies kann zu nicht typischen Kosten werden, wenn er mit vielen Zustandsänderungen multipliziert wird.
 
-Darüber hinaus definiert die Stammsignatur einen statischen Sampler, der eine isisotrope Texturfilterung im Shaderregister s3 vort.
+Darüber hinaus definiert die Stammsignatur einen statischen Sampler, der anisotrope Texturfilterung im Shaderregister s3 vorsetzt.
 
-Nachdem diese Stammsignatur gebunden wurde, können Deskriptortabellen, Stamm-CBV und Konstanten dem \[ 0..6-Parameterbereich \] zugewiesen werden. Beispielsweise können Deskriptortabellen (Bereiche in einem Deskriptorhap) an jeden der Stammparameter 1 und \[ \] \[ 3..6 gebunden \] werden.
+Nachdem diese Stammsignatur gebunden wurde, können Deskriptortabellen, CBV-Stammtabellen und Konstanten dem \[ Parameterbereich 0..6 zugewiesen \] werden. Beispielsweise können Deskriptortabellen (Bereiche in einem Deskriptorheap) an jeden der Stammparameter \[ 1 \] und \[ 3..6 gebunden \] werden.
 
 ``` syntax
 CD3DX12_DESCRIPTOR_RANGE1 DescRange[6];
@@ -195,7 +195,7 @@ hr = CheckHR(pDevice->CreateRootSignature(
     &pRootSignature));
 ```
 
-Der folgende Code veranschaulicht, wie die oben genannte Stammsignatur in einer Grafikbefehlsliste verwendet werden kann.
+Der folgende Code veranschaulicht, wie die obige Stammsignatur in einer Grafikbefehlsliste verwendet werden kann.
 
 ``` syntax
 InitializeMyDescriptorHeapContentsAheadOfTime(); // for simplicity of the 
@@ -205,7 +205,7 @@ CreatePipelineStatesAhreadOfTime(pRootSignature); // The root signature is passe
 ...
 
 ID3D12DescriptorHeap* pHeaps[2] = {pCommonHeap, pSamplerHeap};
-pGraphicsCommandList->SetDescriptorHeaps(pHeaps,2);
+pGraphicsCommandList->SetDescriptorHeaps(2,pHeaps);
 pGraphicsCommandList->SetGraphicsRootSignature(pRootSignature);
 pGraphicsCommandList->SetGraphicsRootDescriptorTable(
                         6,heapOffsetForMoreData,DescRange[5].NumDescriptors);

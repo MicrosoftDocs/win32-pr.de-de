@@ -9,12 +9,12 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 9c9090caec35bfc5e46d7024bf6de44d865d4ad6
-ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
+ms.openlocfilehash: 60ac1153ff3491bc904f4f759f6653cb4243adff
+ms.sourcegitcommit: adba238660d8a5f4fe98fc6f5d105d56aac3a400
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "107998307"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "111825727"
 ---
 # <a name="fragment-declaration-syntax-direct3d-9-hlsl"></a>Syntax der Fragmentdeklaration (Direct3D 9 HLSL)
 
@@ -33,7 +33,7 @@ Dabei gilt:
 
 
 
-|                   |                                                                                                                                                                                                                                                       |
+| Wert                  | Beschreibung                                                                                                                                                                                                                                                      |
 |-------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | fragmentKeyword   | Erforderliches Schlüsselwort. Entweder pixelfragment oder vertexfragment.                                                                                                                                                                                             |
 | FragmentName      | Eine ASCII-Textzeichenfolge, die den Kompilierten Fragmentnamen angibt.                                                                                                                                                                                       |
@@ -68,7 +68,7 @@ vertexfragment AmbientDiffuseFragment = compile_fragment vs_1_1 AmbientDiffuse()
 In diesem Beispiel identifizieren die Semantik von r PosWorld und r NormalWorld, dass diese beiden Parameter gemeinsame Parameter \_ \_ für andere Fragmente sind.
 
 > [!Note]  
-> Fragmentlinker war eine Microsoft Direct3D 9-Technologie in D3DX 9. Der Fragmentlinker war ein Tool (Flink.exe), eine D3DX 9-API und eine HLSL-Erweiterung. Der Fragmentlinker wurde ab dem DirectX SDK-Release vom August 2009 gelöscht. Fragmentlinker wird nie auf Microsoft Direct3D 10, Microsoft Direct3D 10.1 oder Microsoft Direct3D 11 angewendet.
+> Fragmentlinker war eine Microsoft Direct3D 9-Technologie in D3DX 9. Der Fragmentlinker war ein Tool (Flink.exe), eine D3DX 9-API und eine HLSL-Erweiterung. Der Fragmentlinker wurde ab dem DirectX SDK-Release vom August 2009 gelöscht. Der Fragmentlinker wurde nie auf Microsoft Direct3D 10, Microsoft Direct3D 10.1 oder Microsoft Direct3D 11 angewendet.
 
  
 
