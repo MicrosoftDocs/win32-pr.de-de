@@ -1,79 +1,79 @@
 ---
-description: Microsoft Windows Search verwendet Filter zum Extrahieren des Inhalts von Elementen für die Aufnahme in einen Volltextindex.
+description: Erfahren Sie mehr über bewährte Methoden zum Erstellen von Filterhandlern in Windows Search. Bei der Suche werden Filter verwendet, um Elemente für die Aufnahme in einen Volltextindex zu extrahieren.
 ms.assetid: 7b86a1b4-c8a9-400d-a9f1-a3b821c0269d
-title: Bewährte Methoden für Filter Handler in Windows Search
+title: Bewährte Methoden für Filterhandler in Windows Search
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 544992e252d9ec0e3a7c402d1c348d3e3bfa9a85
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7a864cb2651d6236a212f3bf356eed3380869284
+ms.sourcegitcommit: 6fc8a7419bd01787cf6a1c52c355a4a2d1aec471
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104525538"
+ms.lasthandoff: 06/10/2021
+ms.locfileid: "111989305"
 ---
-# <a name="best-practices-for-creating-filter-handlers-in-windows-search"></a>Bewährte Methoden zum Erstellen von Filter Handlern in Windows Search
+# <a name="best-practices-for-creating-filter-handlers-in-windows-search"></a>Bewährte Methoden zum Erstellen von Filterhandlern in Windows Search
 
-Microsoft Windows Search verwendet Filter zum Extrahieren des Inhalts von Elementen für die Aufnahme in einen Volltextindex. Sie können die Windows-Suche erweitern, um neue oder proprietäre Dateitypen zu indizieren, indem Sie Filter Handler zum Extrahieren des Inhalts schreiben und Eigenschaften Handler, um die Eigenschaften von Dateien zu extrahieren. Filter sind Dateitypen zugeordnet, die durch Dateinamen Erweiterungen, MIME-Typen oder Klassen Bezeichner (CLSIDs) bezeichnet werden. Obwohl ein Filter mehrere Dateitypen verarbeiten kann, kann jeder Typ nur mit einem einzigen Filter verwendet werden.
+Microsoft Windows Search verwendet Filter, um den Inhalt von Elementen für die Aufnahme in einen Volltextindex zu extrahieren. Sie können Windows Search, um neue oder proprietäre Dateitypen zu indizieren, indem Sie Filterhandler schreiben, um den Inhalt zu extrahieren, und Eigenschaftenhandler, um die Eigenschaften von Dateien zu extrahieren. Filter werden Dateitypen zugeordnet, wie durch Dateierweiterungen, MIME-Typen oder Klassenbezeichner (CLSIDs) angegeben. Während ein Filter mehrere Dateitypen verarbeiten kann, funktioniert jeder Typ nur mit einem Filter.
 
 Dieses Thema enthält folgende Abschnitte:
 
 -   [Nativer Code](#native-code)
--   [Methoden für den sicheren Code für Windows Search](#secure-code-practices-for-windows-search)
+-   [Sichere Codemethoden für Windows Search](#secure-code-practices-for-windows-search)
 -   [Weitere Ressourcen](#additional-resources)
--   [Zugehörige Themen](#related-topics)
+-   [Verwandte Themen](#related-topics)
 
 ## <a name="native-code"></a>nativer Code
 
-In Windows 7 und höher werden in verwaltetem Code geschriebene Filter explizit blockiert. Filter müssen in nativem Code geschrieben werden, da mögliche Probleme bei der CLR-Versionsverwaltung mit dem Prozess auftreten, in dem mehrere Add-Ins ausgeführt werden.
+In Windows 7 und höher werden Filter, die in verwaltetem Code geschrieben wurden, explizit blockiert. Filter MÜSSEN aufgrund potenzieller CLR-Versionsprobleme mit dem Prozess, in dem mehrere Add-Ins ausgeführt werden, in nativem Code geschrieben werden.
 
-## <a name="secure-code-practices-for-windows-search"></a>Methoden für den sicheren Code für Windows Search
+## <a name="secure-code-practices-for-windows-search"></a>Sichere Codemethoden für Windows Search
 
-Im folgenden werden Methoden zum Schreiben sicherer Anwendungen für die Verwendung mit Windows Search beschrieben.
+Im Folgenden finden Sie Methoden zum Schreiben sicherer Anwendungen für die Verwendung mit Windows Search.
 
-**Für Abfrage Anwendungen:**
+**Für Abfrageanwendungen:**
 
--   Wenn Sie Such Clients schreiben, sollten Sie die API auswählen, die in einem Sicherheitskontext ausgeführt wird, der dem Benutzer die geringsten Rechte gewährt. Beispielsweise können ASP-Seiten das ixsso-Abfrageobjekt verwenden, das als Benutzer Prozess ausgeführt wird.
+-   Beim Schreiben von Suchclients sollten Sie die API auswählen, die in einem Sicherheitskontext ausgeführt wird, der dem Benutzer die geringsten Berechtigungen zulässt. ASP-Seiten können z. B. das IXSSO-Abfrageobjekt verwenden, das als Benutzerprozess ausgeführt wird.
 
 **Für IFilters und Sprachressourcen:**
 
--   Wenn ein neuer Filter Handler für einen Dateityp als Ersatz für eine vorhandene Filter Registrierung installiert wird, sollte der Installer die aktuelle Registrierung speichern und wiederherstellen, wenn der neue Filter Handler deinstalliert wird. Es gibt keinen Mechanismus zum Verketten von Filtern. Daher ist der neue Filter Handler für die Replikation aller notwendigen Funktionen des alten Filters verantwortlich.
--   IFilters, Wörter Trennungen und Wort Stamm Erkennungen für Windows Search werden im lokalen Sicherheitskontext ausgeführt. Sie sollten so geschrieben werden, dass Sie Puffer verwalten und ordnungsgemäß stapeln. Alle Zeichen folgen Kopien müssen über explizite Überprüfungen zum Schutz vor Pufferüberläufen verfügen. Sie sollten stets die zugeordnete Größe des Puffers überprüfen und die Größe der Daten mit der Größe des Puffers testen. Pufferüberläufe sind eine gängige Methode für die Ausnutzung von Code, der keine Einschränkungen der Puffergröße erzwingt.
--   Die Komponenten " [**IFilter**](/windows/win32/api/filter/nn-filter-ifilter)", "Wörter Trennung" und "Wort Stamm Erkennung" sollten niemals die Funktion " [ExitProcess](/windows/win32/api/processthreadsapi/nf-processthreadsapi-exitprocess) " oder eine ähnliche API aufzurufen, die einen Prozess und alle Threads beendet.
--   Weisen Sie dem DllMain-Einstiegspunkt keine Ressourcen zu. Dies kann zu Fehlern bei Belastungstests mit geringer Auslastung führen.
--   Codieren Sie alle Objekte, die Thread sicher sind. Windows Search Ruft eine beliebige Instanz einer Wörter Trennung oder Wort Stamm Erkennung in jeweils einem Thread auf, aber es können mehrere Instanzen gleichzeitig über mehrere Threads hinweg aufgerufen werden.
+-   Wenn ein neuer Filterhandler für einen Dateityp als Ersatz für eine vorhandene Filterregistrierung installiert wird, sollte das Installationsprogramm die aktuelle Registrierung speichern und wiederherstellen, wenn der neue Filterhandler deinstalliert wird. Es gibt keinen Mechanismus zum Verketten von Filtern. Daher ist der neue Filterhandler für die Replikation aller erforderlichen Funktionen des alten Filters verantwortlich.
+-   IFilter, Wörterbrechen und Wortstammnoten für Windows Search im kontext der lokalen Sicherheit ausgeführt werden. Sie sollten geschrieben werden, um Puffer zu verwalten und ordnungsgemäß zu stapeln. Alle Zeichenfolgenkopien müssen explizite Überprüfungen zum Schutz vor Pufferüberläufen enthalten. Sie sollten immer die zugeordnete Größe des Puffers überprüfen und die Größe der Daten mit der Größe des Puffers testen. Pufferüberläufe sind ein gängiges Verfahren zum Ausnutzen von Code, der keine Puffergrößenbeschränkungen erzwingt.
+-   [**IFilter-,**](/windows/win32/api/filter/nn-filter-ifilter)Wortbruch- und Wortstammwortkomponenten sollten niemals die [ExitProcess-Funktion](/windows/win32/api/processthreadsapi/nf-processthreadsapi-exitprocess) oder eine ähnliche API aufrufen, die einen Prozess und alle seine Threads beendet.
+-   Weisen Sie keine Ressourcen im DllMain-Einstiegspunkt zu oder geben Sie sie frei. Dies kann zu Fehlern bei Belastungstests mit geringen Ressourcen führen.
+-   Codieren Sie alle Objekte so, dass sie threadsicher sind. Windows Search aufruft jede Instanz einer Wörterpause oder wortstammendes Wortstamm in einem Thread gleichzeitig, kann jedoch mehrere Instanzen gleichzeitig über mehrere Threads hinweg aufrufen.
 -   Vermeiden Sie das Erstellen temporärer Dateien oder das Schreiben in die Registrierung.
--   Wenn Sie den Microsoft Visual C++-Compiler verwenden, stellen Sie sicher, dass Sie die Anwendung mithilfe der **/GS** -Option kompilieren. Die **/GS** -Option wird verwendet, um Pufferüberläufe zu erkennen. Mit der Option/GS werden Sicherheitsüberprüfungen in den kompilierten Code eingefügt. Weitere Informationen finden Sie unter [DllGetClassObject Function](https://msdn.microsoft.com/library/8dbf701c(vs.71).aspx)  / **GS** (Buffer Security Check) im Abschnitt Visual C++ Compileroptionen des Platform SDK.
+-   Wenn Sie die Microsoft Visual C++-Compiler, stellen Sie sicher, dass Sie Ihre Anwendung mit der **Option /GS kompilieren.** Die **Option /GS** wird verwendet, um Pufferüberläufe zu erkennen. Die Option /GS platziert Sicherheitsüberprüfungen in den kompilierten Code. Weitere Informationen finden Sie unter [DllGetClassObject Function](https://msdn.microsoft.com/library/8dbf701c(vs.71).aspx)  / **GS** (Buffer Security Check) im Abschnitt Visual C++ Compiler Options des Platform SDK.
 
 ## <a name="additional-resources"></a>Weitere Ressourcen
 
--   Das [ifiltersample](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/Win7Samples/winui/WindowsSearch/IFilterSample) -Beispiel veranschaulicht, wie eine IFilter-Basisklasse für die Implementierung der [**IFilter**](/windows/win32/api/filter/nn-filter-ifilter) -Schnittstelle erstellt wird.
--   Eine Übersicht über den Indizierungsprozess finden Sie [im Abschnitt zur Indizierung](-search-indexing-process-overview.md).
--   Eine Übersicht über die Dateitypen finden Sie unter [Dateitypen](../shell/fa-file-types.md).
--   Informationen zum Abfragen von Datei Zuordnungs Attributen für einen Dateityp finden Sie unter " [wahrtentypen", "systemfileassociation" und "Anwendungs Registrierung](/previous-versions/windows/desktop/legacy/cc144150(v=vs.85))".
+-   Das [IFilterSample-Beispiel](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/Win7Samples/winui/WindowsSearch/IFilterSample) veranschaulicht, wie eine IFilter-Basisklasse zum Implementieren der [**IFilter-Schnittstelle erstellt**](/windows/win32/api/filter/nn-filter-ifilter) wird.
+-   Eine Übersicht über den Indizierungsprozess finden Sie unter [Der Indizierungsprozess](-search-indexing-process-overview.md).
+-   Eine Übersicht über Dateitypen finden Sie unter [Dateitypen.](../shell/fa-file-types.md)
+-   Informationen zum Abfragen von Dateiassoziationsattributen für einen Dateityp finden Sie unter [PerceivedTypes, SystemFileAssociations und Application Registration](/previous-versions/windows/desktop/legacy/cc144150(v=vs.85)).
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Entwickeln von Filter Handlern](-search-ifilter-conceptual.md)
+[Entwickeln von Filterhandlern](-search-ifilter-conceptual.md)
 </dt> <dt>
 
-[Informationen zu Filter Handlern in Windows Search](-search-ifilter-about.md)
+[Informationen zu Filterhandlern in Windows Search](-search-ifilter-about.md)
 </dt> <dt>
 
-[Zurückgeben von Eigenschaften aus einem Filter Handler](-search-ifilter-property-filtering.md)
+[Zurückgeben von Eigenschaften von einem Filterhandler](-search-ifilter-property-filtering.md)
 </dt> <dt>
 
-[Filtern von Handlern, die mit Windows ausgeliefert werden](-search-ifilter-implementations.md)
+[Filterhandler, die mit Windows gesendet werden](-search-ifilter-implementations.md)
 </dt> <dt>
 
-[Implementieren von Filter Handlern in Windows Search](-search-ifilter-constructing-filters.md)
+[Implementieren von Filterhandlern in Windows Search](-search-ifilter-constructing-filters.md)
 </dt> <dt>
 
-[Registrieren von Filter Handlern](-search-ifilter-registering-filters.md)
+[Registrieren von Filterhandlern](-search-ifilter-registering-filters.md)
 </dt> <dt>
 
-[Testen von Filter Handlern](-search-ifilter-testing-filters.md)
+[Testen von Filterhandlern](-search-ifilter-testing-filters.md)
 </dt> </dl>
 
  

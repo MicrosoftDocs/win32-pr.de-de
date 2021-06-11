@@ -1,24 +1,24 @@
 ---
-description: In Windows Vista und höher wurden Metadaten als Methode zum Organisieren von Elementen, z. b. Dateien, e-Mails oder Kontakten, als zentrales Element.
+description: Erfahren Sie mehr über Entwicklungsszenarien für benutzerdefinierte Eigenschaften und Eigenschaftenhandler innerhalb der Windows-Eigenschaftensystem.
 ms.assetid: 3281736b-f9ea-4699-a128-3bce6810126e
-title: Entwicklerhandbuch zu Eigenschaften System
+title: Entwicklerhandbuch für Das Eigenschaftensystem
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6746c24d24a6926d20078c00f6780c72fb7c8e0c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 46a26044d0d457d4ba24b8c9a18555885c12a571
+ms.sourcegitcommit: 6fc8a7419bd01787cf6a1c52c355a4a2d1aec471
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106347425"
+ms.lasthandoff: 06/10/2021
+ms.locfileid: "111988925"
 ---
-# <a name="property-system-developers-guide"></a>Entwicklerhandbuch zu Eigenschaften System
+# <a name="property-system-developers-guide"></a>Entwicklerhandbuch für Das Eigenschaftensystem
 
-In Windows Vista und höher wurden Metadaten als Methode zum Organisieren von Elementen, z. b. Dateien, e-Mails oder Kontakten, als zentrales Element. Um ein System zu aktivieren, in dem Elemente basierend auf Ihren Metadaten durchsucht werden können und Benutzer diese Metadaten lesen oder schreiben können, wurde in Windows Vista ein neues Eigenschaften System eingeführt. Metadaten in diesem System werden durch einen erweiterbaren Satz von Eigenschaften dargestellt. Mit der Einführung von Eigenschaften in Windows Vista, die die Besonderheiten von Elementen wie Fotos, Musik, Dokumenten, Nachrichten, Kontakten und Dateien abstrahiert haben, können unabhängige Softwarehersteller (ISVs) jetzt Ihre eigenen Eigenschaften für die Plattform einführen, wenn keine vorhandene Eigenschaft Ihren Anforderungen entspricht.
+In Windows Vista und höher wurden Metadaten als Methode zum Organisieren von Elementen wie Dateien, E-Mails oder Kontakten zentral. Um ein System zu aktivieren, in dem Elemente basierend auf ihren Metadaten durchsucht werden können und in dem Benutzer diese Metadaten lesen oder schreiben können, hat Windows Vista ein neues Eigenschaftensystem eingeführt. Metadaten in diesem System werden durch einen erweiterbaren Satz von Eigenschaften dargestellt. Mit der Einführung von Eigenschaften in Windows Vista, die die Besonderheiten von Elementen wie Fotos, Musik, Dokumenten, Nachrichten, Kontakten und Dateien abstrahiert haben, können unabhängige Softwarehersteller (Independent Software Vendors, ISVs) jetzt ihre eigenen Eigenschaften auf der Plattform einführen, wenn keine vorhandene Eigenschaft ihren Anforderungen entspricht.
 
-In diesem Abschnitt werden die folgenden Entwicklungsszenarien innerhalb des Windows-Eigenschaften Systems beschrieben:
+In diesem Abschnitt werden die folgenden Entwicklungsszenarien innerhalb der Windows-Eigenschaftensystem beschrieben:
 
 -   [Erstellen von benutzerdefinierten Eigenschaften](./building-property-handlers-property-schemas.md)
--   [Implementieren von Eigenschaften Handlern](./building-property-handlers.md)
+-   [Implementieren von Eigenschaftenhandlern](./building-property-handlers.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -27,7 +27,7 @@ In diesem Abschnitt werden die folgenden Entwicklungsszenarien innerhalb des Win
 [Übersicht über das Eigenschaftensystem](property-system-overview.md)
 </dt> <dt>
 
-[Eigenschaften System Referenz](property-system-reference.md)
+[Referenz zum Eigenschaftensystem](property-system-reference.md)
 </dt> <dt>
 
 [Eigenschaftensystem-Codebeispiele](property-system-code-samples.md)

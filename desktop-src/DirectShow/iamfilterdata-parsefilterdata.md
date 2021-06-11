@@ -1,7 +1,7 @@
 ---
-description: Beachten Sie, dass diese Schnittstelle veraltet ist.
+description: Erfahren Sie mehr über die IAMFilterData::P arseFilterData-Methode, entpackt die binären Registrierungsdaten für einen Filter. Diese Schnittstelle ist veraltet.
 ms.assetid: 86095fcf-3364-42a0-95db-08223fa3cc20
-title: Iamfilterdata::P Ardie FilterData-Methode (fil \_ Data. h)
+title: IAMFilterData::P arseFilterData-Methode (File \_ Data.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,23 +13,23 @@ api_type:
 - COM
 api_location:
 - Quartz.dll
-ms.openlocfilehash: 18e1367813adff6b0debdfb698644731668bfc5d
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 9560280fa6f16699af907cdb5cf682b9c4bb1277
+ms.sourcegitcommit: 6fc8a7419bd01787cf6a1c52c355a4a2d1aec471
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364898"
+ms.lasthandoff: 06/10/2021
+ms.locfileid: "111989445"
 ---
-# <a name="iamfilterdataparsefilterdata-method"></a>Iamfilterdata::P Ardie FilterData-Methode
+# <a name="iamfilterdataparsefilterdata-method"></a>IAMFilterData::P arseFilterData-Methode
 
 > [!Note]  
-> Diese Schnittstelle ist veraltet. Diese sollten von neuen Anwendungen nicht verwendet werden.
+> Diese Schnittstelle ist veraltet. Neue Anwendungen sollten sie nicht verwenden.
 
  
 
-Die- `ParseFilterData` Methode entpackt die binären Registrierungsdaten für einen Filter.
+Die `ParseFilterData` -Methode entpackt die binären Registrierungsdaten für einen Filter.
 
-Es gibt in der Regel keinen Grund dafür, dass eine Anwendung diese Methode aufruft. Die [**IFilterMapper2:: enummatchingfilters**](/windows/desktop/api/Strmif/nf-strmif-ifiltermapper2-enummatchingfilters) -Methode bietet eine bequeme Möglichkeit, auf die Filter Registrierungsdaten zuzugreifen.
+Es gibt in der Regel keinen Grund, warum eine Anwendung diese Methode aufruft. Die [**IFilterMapper2::EnumMatchingFilters-Methode**](/windows/desktop/api/Strmif/nf-strmif-ifiltermapper2-enummatchingfilters) bietet eine bequemere Möglichkeit, auf die Filterregistrierungsdaten zu zugreifen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,45 +48,45 @@ HRESULT ParseFilterData(
 
 <dl> <dt>
 
-*rgbfilterdata* \[ in\]
+*rgbFilterData* \[ In\]
 </dt> <dd>
 
-Zeiger auf die binären Registrierungsdaten. Sie können diese Daten abrufen, indem Sie die Eigenschaft "FilterData" aus dem filtermoniker abrufen. Die Daten werden als **SAFEARRAY** von Bytes (VT \_ UI1 \| VT \_ Array) gespeichert.
+Zeiger auf die binären Registrierungsdaten. Sie können diese Daten abrufen, indem Sie die Eigenschaft "FilterData" aus dem Filtermoniker abrufen. Die Daten werden als **SAFEARRAY von** Bytes (VT \_ UI1 \| VT \_ ARRAY) gespeichert.
 
 </dd> <dt>
 
-*CB* \[ in\]
+*cb* \[ In\]
 </dt> <dd>
 
 Gibt die Größe der Binärdaten in Bytes an.
 
 </dd> <dt>
 
-*prgbRegFilter2* \[ vorgenommen\]
+*prgbRegFilter2* \[ out\]
 </dt> <dd>
 
-Adresse einer Variablen, die einen Zeiger auf die entpackten Daten empfängt. Wenn die Methode zurückgegeben wird, wandeln Sie diesen Zeiger in einen [**REGFILTER2**](/windows/desktop/api/strmif/ns-strmif-regfilter2) -Typ um, um auf die Filterdaten zuzugreifen. Der Aufrufer muss den Speicher freigeben, indem er die **CoTaskMemFree** -Methode aufruft.
+Adresse einer Variablen, die einen Zeiger auf die entpackten Daten empfängt. Wenn die Methode zurückgegeben wird, casten Sie diesen Zeiger in einen [**REGFILTER2-Typ,**](/windows/desktop/api/strmif/ns-strmif-regfilter2) um auf die Filterdaten zu zugreifen. Der Aufrufer muss den Arbeitsspeicher durch Aufrufen der **CoTaskMemFree-Methode** frei geben.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Methode erfolgreich ausgeführt wird, gibt Sie S \_ OK zurück. Bei einem Fehler wird ein Fehlercode zurückgegeben.
+Wenn die Methode erfolgreich ist, wird S \_ OK zurückgegeben. Bei einem Fehler wird ein Fehlercode zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Der Header "fil \_ Data. h" befindet sich im Verzeichnis " [Mapper Sample](mapper-sample.md) " in der Windows SDK.
+> Der Header Header \_ "data.h" befindet sich im [Verzeichnis Mapper Sample (Mapperbeispiel)](mapper-sample.md) im Windows SDK.
 
  
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Fil- \_ Daten. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Datei \_ "data.h"</dt> </dl> |
 | DLL<br/>    | <dl> <dt>Quartz.dll</dt> </dl>  |
 
 
@@ -95,7 +95,7 @@ Wenn die Methode erfolgreich ausgeführt wird, gibt Sie S \_ OK zurück. Bei ein
 
 <dl> <dt>
 
-[**Iamfilterdata-Schnittstelle**](iamfilterdata.md)
+[**IAMFilterData-Schnittstelle**](iamfilterdata.md)
 </dt> </dl>
 
  

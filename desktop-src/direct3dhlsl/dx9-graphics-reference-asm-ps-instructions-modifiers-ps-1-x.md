@@ -1,6 +1,6 @@
 ---
-title: Modifiziererer für ps_1_X
-description: Anweisungsmodifiziererer wirken sich auf das Ergebnis der Anweisung aus, bevor Sie in das Ziel Register geschrieben wird.
+title: Modifizierer für ps_1_X
+description: Anweisungsmodifizierer beeinflussen das Ergebnis der Anweisung, bevor sie in das Zielregister geschrieben wird. Erfahren Sie mehr über Modifizierer ps_1_X.
 ms.assetid: 15b892da-b6fd-4bd5-8889-bc48035e7819
 ms.topic: article
 ms.date: 05/31/2018
@@ -9,16 +9,16 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: bbc8a9b13f7ffc29cf84bc839409f29bea6c8c8b
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 6c97196040a8f5f9888cb2fb354dcc18ca3743c7
+ms.sourcegitcommit: 6fc8a7419bd01787cf6a1c52c355a4a2d1aec471
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103856959"
+ms.lasthandoff: 06/10/2021
+ms.locfileid: "111988725"
 ---
-# <a name="modifiers-for-ps_1_x"></a>Modifiziererer für PS \_ 1 \_ X
+# <a name="modifiers-for-ps_1_x"></a>Modifizierer für ps \_ 1 \_ X
 
-Anweisungsmodifiziererer wirken sich auf das Ergebnis der Anweisung aus, bevor Sie in das Ziel Register geschrieben wird. Verwenden Sie diese beispielsweise, um das Ergebnis durch einen Faktor von zwei zu multiplizieren oder aufzuteilen, oder um das Ergebnis zwischen null und eins zu binden. Anweisungsmodifiziererer werden angewendet, nachdem die Anweisung ausgeführt wurde, aber bevor das Ergebnis in das Ziel Register geschrieben wurde.
+Anweisungsmodifizierer beeinflussen das Ergebnis der Anweisung, bevor sie in das Zielregister geschrieben wird. Verwenden Sie sie beispielsweise, um das Ergebnis durch den Faktor 2 zu multiplizieren oder zu dividieren oder um das Ergebnis zwischen 0 und 1 zu klammern. Anweisungsmodifizierer werden angewendet, nachdem die Anweisung ausgeführt wurde, aber bevor das Ergebnis in das Zielregister geschrieben wird.
 
 Eine Liste der Modifizierer ist unten dargestellt.
 
@@ -27,27 +27,27 @@ Eine Liste der Modifizierer ist unten dargestellt.
 | Modifizierer | BESCHREIBUNG                   | Syntax           | Version |      |      |      |
 |----------|-------------------------------|------------------|---------|------|------|------|
 |          |                               |                  | 1\_1    | 1\_2 | 1 \_ 3 | 1\_4 |
-| \_x2     | Multiplizieren um 2                 | Anweisung \_ x2  | X       | X    | X    | X    |
-| \_x4     | Multiplizieren um 4                 | Anweisung \_ X4  | X       | X    | X    | X    |
-| \_x8     | Multiplizieren um 8                 | Anweisung \_ x8  |         |      |      | X    |
-| \_D2     | Dividieren durch 2                   | Anweisung \_ D2  | X       | X    | X    | X    |
-| \_D4     | Dividieren durch 4                   | Anweisung \_ D4  |         |      |      | X    |
-| \_D8     | Dividieren durch 8                   | Anweisung \_ D8  |         |      |      | X    |
-| \_gesetzt    | Vollständig (Klammer zwischen 0 und 1) | Anweisung \_ Sat | X       | X    | X    | X    |
+| \_x2     | Multiplizieren mit 2                 | Anweisung \_ x2  | X       | X    | X    | X    |
+| \_x4     | Multiplizieren mit 4                 | Anweisung \_ x4  | X       | X    | X    | X    |
+| \_x8     | Multiplizieren mit 8                 | Anweisung \_ x8  |         |      |      | X    |
+| \_d2     | Division durch 2                   | Anweisung \_ d2  | X       | X    | X    | X    |
+| \_d4     | Division durch 4                   | Anweisung \_ d4  |         |      |      | X    |
+| \_d8     | Division durch 8                   | Anweisung \_ d8  |         |      |      | X    |
+| \_Sat    | Saturate (Klammer von 0 und 1) | Anweisung \_ sa | X       | X    | X    | X    |
 
 
 
- 
+ 
 
--   Der Multiplikations Modifizierer multipliziert die Register Daten mit einer Potenz von zwei, nachdem Sie gelesen wurde. Dies ist das gleiche wie bei einer UMSCHALT links.
--   Der Divide-Modifizierer dividiert die Register Daten durch eine Potenz von zwei, nachdem Sie gelesen wurde. Dies ist das gleiche wie ein UMSCHALT Recht.
--   Der Bezeichner "Bezeichner" bindet den Bereich der Registerwerte von 0 (null) auf 1.
+-   Der Multiplikationsmodifizierer multipliziert die Registerdaten mit einer Zweierleistung, nachdem sie gelesen wurden. Dies ist identisch mit einer Verschiebung nach links.
+-   Der Divide-Modifizierer dividiert die Registerdaten nach dem Lesen durch eine Zweierkraft. Dies ist identisch mit einer Verschiebung nach rechts.
+-   Der Saturate-Modifizierer klammert den Bereich der Registerwerte von 0 bis 1.
 
-Anweisungsmodifiziererer können in arithmetischen Anweisungen verwendet werden. Sie dürfen nicht in Textur Adress Anweisungen verwendet werden.
+Anweisungsmodifizierer können für arithmetische Anweisungen verwendet werden. Sie dürfen nicht für Texturadressenanweisungen verwendet werden.
 
-Modifizierer multiplizieren
+Multiplikationsmodifizierer
 
-In diesem Beispiel wird das Ziel Register (dest) mit der Summe der beiden Farben in den Quell Operanden (src0 und Quelle1) geladen und das Ergebnis mit zwei multipliziert.
+In diesem Beispiel wird das Zielregister (dest) mit der Summe der beiden Farben in den Quellopernden (src0 und src1) geladen und das Ergebnis mit zwei multipliziert.
 
 
 ```
@@ -56,7 +56,7 @@ add_x2 dest, src0, src1
 
 
 
-In diesem Beispiel werden zwei Anweisungs Modifizierer kombiniert. Zuerst werden zwei Farben in den Quell Operanden (src0 und Quelle1) hinzugefügt. Das Ergebnis wird dann mit zwei multipliziert und für jede Komponente zwischen 0,0 und 1,0 gebunden. Das Ergebnis wird im Ziel Register gespeichert.
+In diesem Beispiel werden zwei Anweisungsmodifizierer kombiniert. Zunächst werden zwei Farben in den Quellopernden (src0 und src1) hinzugefügt. Das Ergebnis wird dann mit zwei multipliziert und für jede Komponente zwischen 0,0 und 1,0 geklammert. Das Ergebnis wird im Zielregister gespeichert.
 
 
 ```
@@ -67,7 +67,7 @@ add_x2_sat dest, src0, src1
 
 Divide-Modifizierer
 
-In diesem Beispiel wird das Ziel Register (dest) mit der Summe der beiden Farben in den Quell Operanden (src0 und Quelle1) geladen und das Ergebnis durch zwei dividiert.
+In diesem Beispiel wird das Zielregister (dest) mit der Summe der beiden Farben in den Quellopernden (src0 und src1) geladen und das Ergebnis durch zwei dividiert.
 
 
 ```
@@ -76,9 +76,9 @@ add_d2 dest, src0, src1
 
 
 
--Modifizierer
+Saturate-Modifizierer
 
-Bei arithmetischen Anweisungen bindet der Sättigungs Modifizierer das Ergebnis dieser Anweisung für jede Komponente in den Bereich 0,0 bis 1,0. Im folgenden Beispiel wird gezeigt, wie dieser Anweisungs Modifizierer verwendet wird.
+Bei arithmetischen Anweisungen klammert der Sättigungsmodifizierer das Ergebnis dieser Anweisung für jede Komponente in den Bereich 0,0 bis 1,0. Im folgenden Beispiel wird die Verwendung dieses Anweisungsmodifizierers veranschaulicht.
 
 
 ```
@@ -87,9 +87,9 @@ dp3_sat r0, t0_bx2, v0_bx2    ; t0 is bump, v0 is light direction
 
 
 
-Dieser Vorgang tritt nach jedem Multiplikations-oder Teilungs Anweisungs Modifizierer auf. \_"Sat" wird am häufigsten verwendet, um Punktprodukt Ergebnisse zu binden. Sie ermöglicht jedoch auch eine konsistente Emulation von Multipass-Methoden, bei denen sich der Frame Puffer immer im Bereich von 0 bis 1 und in der Multitextur-Syntax von DirectX 6 und 7,0 befindet, in der die Sättigung definiert ist, die in jeder Phase auftritt.
+Dieser Vorgang erfolgt nach jedem Multiplikations- oder Divisionsanweisungsmodifizierer. \_Sat wird am häufigsten verwendet, um Punktproduktergebnisse zu klammern. Sie ermöglicht jedoch auch eine konsistente Emulation von Multipassmethoden, bei denen der Framepuffer immer im Bereich von 0 bis 1 liegt, und der DirectX 6- und 7.0-Multitextursyntax, bei der die Sättigung in jeder Phase definiert ist.
 
-In diesem Beispiel wird das Ziel Register (dest) mit der Summe der beiden Farben in den Quell Operanden (src0 und Quelle1) geladen, und das Ergebnis wird für jede Komponente in den Bereich 0,0 bis 1,0 geklammert.
+In diesem Beispiel wird das Zielregister (dest) mit der Summe der beiden Farben in den Quellopernden (src0 und src1) geladen und das Ergebnis für jede Komponente in den Bereich 0,0 bis 1,0 klammert.
 
 
 ```
@@ -98,7 +98,7 @@ add_sat dest, src0, src1
 
 
 
-In diesem Beispiel werden zwei Anweisungs Modifizierer kombiniert. Zuerst werden zwei Farben in den Quell Operanden (src0 und Quelle1) hinzugefügt. Das Ergebnis wird mit zwei multipliziert und für jede Komponente zwischen 0,0 und 1,0 gebunden. Das Ergebnis wird im Ziel Register gespeichert.
+In diesem Beispiel werden zwei Anweisungsmodifizierer kombiniert. Zunächst werden zwei Farben in den Quellopernden (src0 und src1) hinzugefügt. Das Ergebnis wird mit zwei multipliziert und für jede Komponente zwischen 0,0 und 1,0 geklammert. Das Ergebnis wird im Zielregister gespeichert.
 
 
 ```
@@ -111,12 +111,12 @@ add_x2_sat dest, src0, src1
 
 <dl> <dt>
 
-[Pixelshaderanweisungen](dx9-graphics-reference-asm-ps-instructions.md)
+[Anweisungen zum Pixel-Shader](dx9-graphics-reference-asm-ps-instructions.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 
