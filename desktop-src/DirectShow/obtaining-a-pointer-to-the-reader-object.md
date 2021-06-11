@@ -1,19 +1,19 @@
 ---
-description: Abrufen eines Zeigers auf das Reader-Objekt
+description: Erfahren Sie mehr über das Abrufen eines Zeigers auf das Reader-Objekt des Windows Media Format SDK mithilfe der IWMReaderAdvanced2-Schnittstelle in DirectShow.
 ms.assetid: d1292e2f-bd0e-4961-a6fa-8cdaeb28b692
-title: Abrufen eines Zeigers auf das Reader-Objekt (DirectShow)
+title: Abrufen eines Zeigers auf das Readerobjekt (DirectShow)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d3be22a22581c8f262ac4c6898271ebccb53a0e4
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: e131b9e111aa5e779d1208b68e04c9979e3b1d7f
+ms.sourcegitcommit: 6fc8a7419bd01787cf6a1c52c355a4a2d1aec471
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "103745600"
+ms.lasthandoff: 06/10/2021
+ms.locfileid: "111989106"
 ---
-# <a name="obtaining-a-pointer-to-the-reader-object-directshow"></a><span data-ttu-id="d4f1b-103">Abrufen eines Zeigers auf das Reader-Objekt (DirectShow)</span><span class="sxs-lookup"><span data-stu-id="d4f1b-103">Obtaining a Pointer to the Reader Object (DirectShow)</span></span>
+# <a name="obtaining-a-pointer-to-the-reader-object-directshow"></a><span data-ttu-id="3a166-103">Abrufen eines Zeigers auf das Readerobjekt (DirectShow)</span><span class="sxs-lookup"><span data-stu-id="3a166-103">Obtaining a Pointer to the Reader Object (DirectShow)</span></span>
 
-<span data-ttu-id="d4f1b-104">In bestimmten Fällen, z. b. bei der Ermittlung, welche Dateneinheiten Erweiterungen für einen bestimmten Stream festgelegt werden, müssen Sie möglicherweise direkt auf das Reader-Objekt des Windows Media SDK-SDKs zugreifen.</span><span class="sxs-lookup"><span data-stu-id="d4f1b-104">In certain cases, for example when determining which data unit extensions are set on a given stream, you may need to access the Reader Object of the Windows Media Format SDK directly.</span></span> <span data-ttu-id="d4f1b-105">Die folgende Funktion zeigt, wie Sie die [**IWMReaderAdvanced2**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmreaderadvanced2) -Schnittstelle für das Reader-Objekt selbst abrufen:</span><span class="sxs-lookup"><span data-stu-id="d4f1b-105">The following function shows how to obtain the [**IWMReaderAdvanced2**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmreaderadvanced2) interface on the Reader Object itself:</span></span>
+<span data-ttu-id="3a166-104">In bestimmten Fällen, z. B. wenn Sie bestimmen, welche Dateneinheitserweiterungen für einen bestimmten Stream festgelegt sind, müssen Sie möglicherweise direkt auf das Reader-Objekt des Windows Media Format SDK zugreifen.</span><span class="sxs-lookup"><span data-stu-id="3a166-104">In certain cases, for example when determining which data unit extensions are set on a given stream, you may need to access the Reader Object of the Windows Media Format SDK directly.</span></span> <span data-ttu-id="3a166-105">Die folgende Funktion zeigt, wie sie die [**IWMReaderAdvanced2-Schnittstelle**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmreaderadvanced2) für das Readerobjekt selbst abrufen:</span><span class="sxs-lookup"><span data-stu-id="3a166-105">The following function shows how to obtain the [**IWMReaderAdvanced2**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmreaderadvanced2) interface on the Reader Object itself:</span></span>
 
 
 ```C++
@@ -71,11 +71,11 @@ HRESULT GetReaderAdvanced(IGraphBuilder *pGraph, IWMReaderAdvanced2** pReaderAdv
 
 
 
-## <a name="related-topics"></a><span data-ttu-id="d4f1b-106">Zugehörige Themen</span><span class="sxs-lookup"><span data-stu-id="d4f1b-106">Related topics</span></span>
+## <a name="related-topics"></a><span data-ttu-id="3a166-106">Zugehörige Themen</span><span class="sxs-lookup"><span data-stu-id="3a166-106">Related topics</span></span>
 
 <dl> <dt>
 
-[<span data-ttu-id="d4f1b-107">Lesen von ASF-Dateien in DirectShow</span><span class="sxs-lookup"><span data-stu-id="d4f1b-107">Reading ASF Files in DirectShow</span></span>](reading-asf-files-in-directshow.md)
+[<span data-ttu-id="3a166-107">Lesen von ASF-Dateien in DirectShow</span><span class="sxs-lookup"><span data-stu-id="3a166-107">Reading ASF Files in DirectShow</span></span>](reading-asf-files-in-directshow.md)
 </dt> </dl>
 
  
