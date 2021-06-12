@@ -1,15 +1,15 @@
 ---
-description: Sehen Sie sich eine Kombination aus einem oder mehrere Flags an, die das Verhalten beim Erstellen des Geräts steuern.
+description: Sehen Sie sich eine Kombination aus einem oder mehrere Flags an, die das Verhalten beim Erstellen von Geräten in der D3DCREATE-Konstante steuern.
 ms.assetid: 91387a2d-3927-4285-a09b-9ce247e6bfdd
 title: D3DCREATE
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7d89043ac49b72bccf6279ef3c9c8fa2c856c775
-ms.sourcegitcommit: b40a986d5ded926ae7617119cdd35d99b533bad9
+ms.openlocfilehash: b525c24529c725b8b7c7f71c53718d56ceb50603
+ms.sourcegitcommit: 8f0a1d212dd154e8d94ab4c0e4ced053fa16823a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "110343228"
+ms.lasthandoff: 06/11/2021
+ms.locfileid: "112011283"
 ---
 # <a name="d3dcreate"></a>D3DCREATE
 
@@ -25,7 +25,7 @@ Eine Kombination aus einem oder mehrere Flags, die das Verhalten beim Erstellen 
 <tbody>
 <tr class="odd">
 <td>#Definieren</td>
-<td>BESCHREIBUNG</td>
+<td>Beschreibung</td>
 </tr>
 <tr class="even">
 <td>D3DCREATE_ADAPTERGROUP_DEVICE</td>
@@ -54,7 +54,7 @@ Eine Kombination aus einem oder mehrere Flags, die das Verhalten beim Erstellen 
 </tr>
 <tr class="even">
 <td>D3DCREATE_DISABLE_PSGP_THREADING</td>
-<td>Beschränken Sie die Berechnung auf den Hauptanwendungsthread. Wenn das Flag nicht festgelegt ist, kann die Runtime softwarevertex processing and other computations in worker thread (Softwarevertexverarbeitung und andere Berechnungen im Arbeitsthread) ausführen, um die Leistung auf Systemen mit mehreren Prozessoren zu verbessern. 
+<td>Beschränken Sie die Berechnung auf den Hauptanwendungsthread. Wenn das Flag nicht festgelegt ist, kann die Laufzeit Softwarevertexverarbeitung und andere Berechnungen im Arbeitsthread ausführen, um die Leistung auf Systemen mit mehreren Prozessoren zu verbessern. 
 <table>
 <tbody>
 <tr class="odd">
@@ -67,7 +67,7 @@ Eine Kombination aus einem oder mehrere Flags, die das Verhalten beim Erstellen 
 </tr>
 <tr class="odd">
 <td>D3DCREATE_ENABLE_PRESENTSTATS</td>
-<td>Ermöglicht das Sammeln vorhandener Statistiken auf dem Gerät. Aufrufe von <a href="/previous-versions/windows/desktop/legacy/bb205901(v=vs.85)"><strong>GetPresentStatistics</strong></a> geben gültige Daten zurück. 
+<td>Ermöglicht das Sammeln vorhandener Statistiken auf dem Gerät. Aufrufe <a href="/previous-versions/windows/desktop/legacy/bb205901(v=vs.85)"><strong>von GetPresentStatistics</strong></a> geben gültige Daten zurück. 
 <table>
 <tbody>
 <tr class="odd">
@@ -80,10 +80,10 @@ Eine Kombination aus einem oder mehrere Flags, die das Verhalten beim Erstellen 
 </tr>
 <tr class="even">
 <td>D3DCREATE_FPU_PRESERVE</td>
-<td>Legen Sie die Genauigkeit für Direct3D-Gleitkommaberechnungen auf die Genauigkeit fest, die vom aufrufenden Thread verwendet wird. Wenn Sie dieses Flag nicht angeben, verwendet Direct3D aus zwei Gründen standardmäßig den Modus "Round-to-Nearest" mit einfacher Genauigkeit:
+<td>Legen Sie die Genauigkeit für Direct3D-Gleitkommaberechnungen auf die Genauigkeit fest, die vom aufrufenden Thread verwendet wird. Wenn Sie dieses Flag nicht angeben, wird direct3D standardmäßig aus zwei Gründen auf den Round-to-Nearest-Modus mit einmaliger Genauigkeit festgelegt:
 <ul>
-<li>Der Modus mit doppelter Genauigkeit reduziert die Direct3D-Leistung.</li>
-<li>Bei Teilen von Direct3D wird davon ausgegangen, dass Gleitkommaeinheits-Ausnahmen maskiert sind. Das Aufheben derMaskatur dieser Ausnahmen kann zu undefiniertem Verhalten führen.</li>
+<li>Der Modus mit doppelter Genauigkeit verringert die Direct3D-Leistung.</li>
+<li>Bei Teilen von Direct3D wird davon ausgegangen, dass Gleitkommaeinheitsausnahmen maskiert werden. Das Entmaskieren dieser Ausnahmen kann zu nicht definiertem Verhalten führen.</li>
 </ul></td>
 </tr>
 <tr class="odd">
@@ -92,7 +92,7 @@ Eine Kombination aus einem oder mehrere Flags, die das Verhalten beim Erstellen 
 </tr>
 <tr class="even">
 <td>D3DCREATE_MIXED_VERTEXPROCESSING</td>
-<td>Gibt die gemischte Vertexverarbeitung (software- und hardwareseitig) an. Für Windows 10 Version 1607 und höher wird die Verwendung dieser Einstellung nicht empfohlen. Siehe D3DCREATE_SOFTWARE_VERTEXPROCESSING.</td>
+<td>Gibt die Vertexverarbeitung gemischter Scheitelpunkte (Software und Hardware) an. Für Windows 10 Version 1607 und höher wird die Verwendung dieser Einstellung nicht empfohlen. Siehe D3DCREATE_SOFTWARE_VERTEXPROCESSING.</td>
 </tr>
 <tr class="odd">
 <td>D3DCREATE_SOFTWARE_VERTEXPROCESSING</td>
@@ -109,7 +109,7 @@ Sofern keine Hardwarevertexverarbeitung verfügbar ist, wird die Verwendung der 
 </tr>
 <tr class="even">
 <td>D3DCREATE_MULTITHREADED</td>
-<td>Gibt an, dass die Anwendung Direct3D als multithreadsicher angibt. Dadurch wird ein Direct3D-Thread <a href="/windows/desktop/Sync/critical-section-objects"></a> häufiger besitzer des globalen kritischen Abschnitts, was die Leistung beeinträchtigen kann. Wenn eine Anwendung Fenstermeldungen in einem Thread verarbeitet, während sie Direct3D-API-Aufrufe in einem anderen threadt, muss die Anwendung dieses Flag beim Erstellen des Geräts verwenden. Dieses Fenster muss auch zerstört werden, bevor sie d3d9.dll.</td>
+<td>Gibt an, dass die Anwendung Direct3D als multithreadsicher angibt. Dadurch wird ein Direct3D-Thread <a href="/windows/desktop/Sync/critical-section-objects"></a> häufiger besitzer des globalen kritischen Abschnitts, was die Leistung beeinträchtigen kann. Wenn eine Anwendung Fenstermeldungen in einem Thread verarbeitet, während sie Direct3D-API-Aufrufe in einem anderen threadt, muss die Anwendung dieses Flag beim Erstellen des Geräts verwenden. Dieses Fenster muss auch zerstört werden, bevor es d3d9.dll.</td>
 </tr>
 <tr class="odd">
 <td>D3DCREATE_NOWINDOWCHANGES</td>
@@ -130,7 +130,7 @@ Wenn dieses Flag festgelegt ist, muss die Anwendung alle Fokusverwaltungsereigni
 </tr>
 <tr class="odd">
 <td>D3DCREATE_SCREENSAVER</td>
-<td>Ermöglicht Bildschirmschoner während einer Vollbildanwendung. Ohne dieses Flag deaktiviert Direct3D Bildschirmschoner, solange die aufrufende Anwendung vollbildig ist. Wenn die aufrufende Anwendung bereits ein Bildschirmschoner ist, hat dieses Flag keine Auswirkungen. 
+<td>Ermöglicht Bildschirmschoner während einer Vollbildanwendung. Ohne dieses Flag deaktiviert Direct3D Bildschirmschoner, solange die aufrufende Anwendung Vollbildmodus ist. Wenn die aufrufende Anwendung bereits ein Bildschirmschoner ist, hat dieses Flag keine Auswirkungen. 
 <table>
 <tbody>
 <tr class="odd">
@@ -148,9 +148,9 @@ Wenn dieses Flag festgelegt ist, muss die Anwendung alle Fokusverwaltungsereigni
 
  
 
-D3DCREATE \_ HARDWARE \_ VERTEXPROCESSING, D3DCREATE \_ MIXED \_ VERTEXPROCESSING und D3DCREATE \_ SOFTWARE \_ VERTEXPROCESSING sind sich gegenseitig ausschließende Flags. Mindestens eines dieser Scheitelpunktverarbeitungsflags muss beim Aufrufen von [**CreateDevice**](/windows/win32/api/d3d9/nf-d3d9-idirect3d9-createdevice)angegeben werden.
+D3DCREATE \_ HARDWARE \_ VERTEXPROCESSING, D3DCREATE \_ MIXED \_ VERTEXPROCESSING und D3DCREATE \_ SOFTWARE \_ VERTEXPROCESSING schließen sich gegenseitig aus. Beim Aufrufen von [**CreateDevice**](/windows/win32/api/d3d9/nf-d3d9-idirect3d9-createdevice)muss mindestens eines dieser Scheitelpunktverarbeitungsflags angegeben werden.
 
-## <a name="constant-information"></a>Konstanteninformationen
+## <a name="constant-information"></a>Konstante Informationen
 
 
 

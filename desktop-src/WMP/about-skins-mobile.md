@@ -1,33 +1,33 @@
 ---
-title: Informationen zu Skins (Mobile)
-description: Informationen zu Skins
+title: Informationen zu Skins (Mobil)
+description: Erfahren Sie mehr über Skins für mobile Player. Eine Skin ist eine benutzerdefinierte Benutzeroberfläche für Windows Media Player.
 ms.assetid: 105c11ce-705b-4a0c-8982-d0f9dd9ae3ac
 keywords:
-- Windows Media Player Mobile, Skins
-- Windows Media Player Mobile Skins, Informationen zu
-- Windows Media Player Mobile Skins, erstellen
-- Skins, Windows Media Player Mobile
-- Erstellen von Skins, Windows Media Player Mobile
+- Windows Media Player Mobile,skins
+- Windows Media Player Mobile-Skins, Informationen
+- Windows Media Player Mobile-Skins,erstellen
+- skins,Windows Media Player Mobile
+- Erstellen von Skins,Windows Media Player Mobile
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b2db0e81c45c253e3a4fe3c12d4cc97a51f4ede0
-ms.sourcegitcommit: 8fa6614b715bddf14648cce36d2df22e5232801a
+ms.openlocfilehash: ebdffdc4075456c6cb7ccf9d1940c5253c732cd3
+ms.sourcegitcommit: 8f0a1d212dd154e8d94ab4c0e4ced053fa16823a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "104340097"
+ms.lasthandoff: 06/11/2021
+ms.locfileid: "112011223"
 ---
-# <a name="about-skins-mobile"></a>Informationen zu Skins (Mobile)
+# <a name="about-skins-mobile"></a>Informationen zu Skins (Mobil)
 
-Ein Skin ist eine angepasste Benutzeroberfläche für Windows Media Player. Sie können eigene Schaltflächen erstellen, um die Wiedergabe digitaler Medien zu starten und zu unterbinden, Schieberegler zum Ändern der Volume-und Wiedergabe Position im Medien Element hinzuzufügen und dem Benutzer Textinformationen wie z. b. den Namen eines Titels bereitzustellen. Das beste ist, dass Sie Ihre eigene Kunst hinzufügen oder vorhandene Grafiken verwenden können, um eine einzigartige Darstellung für Ihre Skin zu schaffen.
+Eine Skin ist eine benutzerdefinierte Benutzeroberfläche für Windows Media Player. Sie können eigene Schaltflächen erstellen, um die Wiedergabe digitaler Medien zu starten und zu beenden, Schieberegler zum Ändern der Lautstärke und Wiedergabeposition im Medienelement hinzufügen und dem Benutzer Textinformationen wie den Namen eines Musiktitels zur Verfügung stellen. Das Beste ist, dass Sie Ihre eigenen Grafiken hinzufügen oder vorhandene Grafiken verwenden können, um eine einzigartige Darstellung für Ihre Skin zu erstellen.
 
 Die grundlegenden Schritte zum Erstellen einer Skin sind:
 
-1.  **Entwerfen** Sie die Benutzeroberfläche. Entscheiden Sie, welche Schaltflächen, Textfelder und trackbars Sie für den Benutzer bereitstellen möchten, damit Sie die Funktionen steuern können, die Sie in Schritt 1 ausgewählt haben. Vielleicht möchten Sie Ihre Ideen herausfinden, um zu sehen, wie Sie in die Image Größe passen, mit der Sie arbeiten werden.
-2.  **Erstellen** Sie die Art, in der der Benutzer angezeigt werden soll. Dies besteht aus mehreren Bildern, die die Hintergrundbilder, andere Bilder, die Sie anzeigen können, und das Mapping von Bildern, wenn Sie Bereichs Schaltflächen verwenden.
-3.  **Schreiben** Sie die Skin-Definitionsdatei, mit der die Funktionen, die Benutzeroberfläche und die Bilder der digitalen Medien miteinander verknüpft werden. Sie müssen bestimmte Regeln befolgen, um die Textdaten in die Datei einzugeben, aber Sie können die Standard Skin als Leitfaden betrachten.
+1.  **Entwerfen** Sie Ihre Benutzeroberfläche. Entscheiden Sie, welche Schaltflächen, Textfelder und Trackleisten Sie dem Benutzer zur Verfügung stellen möchten, damit er die Funktionen steuern kann, die Sie in Schritt 1 ausgewählt haben. Vielleicht möchten Sie Ihre Ideen skizzieren, um zu sehen, wie sie zu der Bildgröße passen, mit der Sie arbeiten werden.
+2.  **Erstellen** Sie die Art, die Sie dem Benutzer zeigen möchten. Dies besteht aus mehreren Bildern, die die Hintergrundbilder, andere Bilder, die Sie möglicherweise anzeigen möchten, und Zuordnungsbilder, wenn Sie Schaltflächen für Regionen verwenden.
+3.  **Schreiben** Sie die Skindefinitionsdatei, die die digitalen Medienfunktionen, die Benutzeroberfläche und Bilder miteinander verknüpfen soll. Sie müssen bestimmte Regeln für die Eingabe der Textdaten in die Datei befolgen, aber Sie können sich die Standard-Skin als Leitfaden angesehen werden.
 
-Sie müssen diese Schritte nicht in der angegebenen Reihenfolge ausführen, aber ein guter Entwurf ist, dass Sie sich mit allen Möglichkeiten vertraut machen und alle Details berücksichtigen.
+Sie müssen diese Schritte nicht in der angegebenen Reihenfolge ausführen, aber ein guter Entwurf ergibt sich daraus, dass Sie alle Möglichkeiten kennen und sich um alle Details kümmern.
 
 Die folgenden Abschnitte enthalten ausführliche Informationen zu Skins.
 
@@ -35,11 +35,11 @@ Die folgenden Abschnitte enthalten ausführliche Informationen zu Skins.
 
 | `Section`                                                                                    | BESCHREIBUNG                                                                                                                                                                                      |
 |--------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Informationen zur Kompatibilität](about-compatibility.md)                                             | Listet die verschiedenen Versionen von Windows Media Player Mobile, die Hardwareanforderungen, die Verfügbarkeit von Windows Media Player und die für jede Version der Software eingeführten Skin-Features auf. |
-| [Windows Media Player Mobile-Funktionalität](windows-media-player-mobile-functionality.md) | Beschreibt die Funktionen, die ihre Skin unterstützen kann.                                                                                                                                                    |
-| [Elemente der Benutzeroberfläche](user-interface-elements.md)                                     | Beschreibt die Elemente der Benutzeroberfläche, die Sie für Ihre Skin erstellen können, z. b. Schaltflächen, trackbars und Video anzeigen.                                                                              |
-| [Kunstdateien](art-files-mobile.md)                                                          | Beschreibt die kunstdateien, die Sie für Ihre Skin erstellen.                                                                                                                                                |
-| [Skin-Definitionsdatei](skin-definition-file-mobile.md)                                    | Beschreibt die Datei, die Sie zum Beschreiben Ihrer Skin erstellen müssen.                                                                                                                                        |
+| [Informationen zur Kompatibilität](about-compatibility.md)                                             | Listet die verschiedenen Versionen von Windows Media Player Mobile, die Hardwareanforderungen, die Verfügbarkeit von Windows Media Player und die Skinfeatures, die für jede Version der Software eingeführt wurden. |
+| [Windows Media Player Mobile-Funktionalität](windows-media-player-mobile-functionality.md) | Beschreibt die Features, die Ihre Skin unterstützen kann.                                                                                                                                                    |
+| [Benutzeroberfläche Elements](user-interface-elements.md)                                     | Beschreibt die Benutzeroberflächenelemente, die Sie für Ihre Skin erstellen können, z. B. Schaltflächen, Trackbars und Videoanzeigen.                                                                              |
+| [Art-Dateien](art-files-mobile.md)                                                          | Beschreibt die Artdateien, die Sie für Ihre Skin erstellen.                                                                                                                                                |
+| [Skindefinitionsdatei](skin-definition-file-mobile.md)                                    | Beschreibt die Datei, die Sie erstellen müssen, um Ihre Skin zu beschreiben.                                                                                                                                        |
 
 
 

@@ -1,37 +1,37 @@
 ---
-description: Informationen zu Medientypen
+description: Erfahren Sie mehr über Medientypen in DirectShow. Der Medientyp ist eine universelle und erweiterbare Möglichkeit, digitale Medienformate zu beschreiben.
 ms.assetid: 9984ba36-4e43-4886-a073-34b330274c9c
 title: Informationen zu Medientypen (DirectShow)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3289a37e95bf5dbd1e5c277b5799a2c7c8c90586
-ms.sourcegitcommit: c16214e53680dc71d1c07111b51f72b82a4512d8
+ms.openlocfilehash: a7b1489543b33f5eeb2c288add48148b37f31915
+ms.sourcegitcommit: 8f0a1d212dd154e8d94ab4c0e4ced053fa16823a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "104351229"
+ms.lasthandoff: 06/11/2021
+ms.locfileid: "112010893"
 ---
 # <a name="about-media-types-directshow"></a>Informationen zu Medientypen (DirectShow)
 
-Da DirectShow modular aufgebaut ist, ist es erforderlich, das Format der Daten an jedem Punkt im Filter Diagramm zu beschreiben. Nehmen Sie beispielsweise die AVI-Wiedergabe. Daten werden als Stream von Riff Blöcken in das Diagramm eingegeben. Diese werden in Video-und Audiodatenströme analysiert. Der Videostream besteht aus Video Frames, die wahrscheinlich komprimiert sind. Nach der Decodierung ist der Videostream eine Reihe von nicht komprimierten Bitmaps. Der Audiodatenstrom durchläuft einen ähnlichen Prozess.
+Da DirectShow modular aufgebaut ist, ist es erforderlich, das Format der Daten an jedem Punkt im Filterdiagramm zu beschreiben. Betrachten Sie beispielsweise die AVI-Wiedergabe. Daten werden in den Graphen als Stream vonUNK-Blocken übertragen. Diese werden in Video- und Audiostreams analysiert. Der Videostream besteht aus Videoframes, die wahrscheinlich komprimiert sind. Nach der Decodierung besteht der Videostream aus einer Reihe nicht komprimierter Bitmaps. Der Audiostream durchläuft einen ähnlichen Prozess.
 
-Medientypen: Funktionsweise von DirectShow-Formaten
+Medientypen: Wie DirectShow Formate darstellt
 
-Der *Medientyp* ist eine universelle und erweiterbare Methode, um digitale Medienformate zu beschreiben. Wenn zwei Filter eine Verbindung herstellen, stimmen Sie einem Medientyp zu. Der Medientyp gibt an, welche Art von Daten der Upstream-Filter für den downstreamfilter bereitstellt, und das physische Layout der Daten. Wenn zwei Filter einem Medientyp nicht zustimmen können, wird keine Verbindung hergestellt.
+Der *Medientyp ist* eine universelle und erweiterbare Möglichkeit, digitale Medienformate zu beschreiben. Wenn zwei Filter eine Verbindung herstellen, stimmen sie einem Medientyp zu. Der Medientyp gibt an, welche Art von Daten der Upstreamfilter an den Downstreamfilter liefert, und das physische Layout der Daten. Wenn sich zwei Filter nicht auf einen Medientyp einigen können, wird keine Verbindung hergestellt.
 
-Bei manchen Anwendungen müssen Sie sich keine Gedanken über die Medientypen machen. Bei der Wiedergabe von Dateien verarbeitet DirectShow beispielsweise alle Details. Andere Arten von Anwendungen müssen möglicherweise direkt mit Medientypen arbeiten.
+Bei einigen Anwendungen müssen Sie sich keine Gedanken über Medientypen machen. Bei der Dateiwiedergabe verarbeitet DirectShow beispielsweise alle Details. Andere Arten von Anwendungen müssen möglicherweise direkt mit Medientypen arbeiten.
 
-Medientypen werden mithilfe der [**am- \_ \_ Medientyp**](/windows/win32/api/strmif/ns-strmif-am_media_type) Struktur definiert. Diese Struktur enthält die folgenden Informationen:
+Medientypen werden mithilfe der [**AM \_ MEDIA \_ TYPE-Struktur**](/windows/win32/api/strmif/ns-strmif-am_media_type) definiert. Diese Struktur enthält die folgenden Informationen:
 
--   **Haupttyp**: der Haupttyp ist eine GUID, die die Gesamtkategorie der Daten definiert. Zu den Haupttypen zählen Video, Audiodaten, nicht analysierte Bytestream, MIDI-Daten usw.
--   **Untertyp**: der Untertyp ist eine andere GUID, die das Format weiter definiert. Im Video Haupttyp gibt es z. b. Untertypen für RGB-24, RGB-32, UYVY usw. In Audiodaten gibt es PCM-Audiodaten, MPEG-1-Nutzlast und andere. Der Untertyp bietet mehr Informationen als der Haupttyp, aber er definiert nicht alles über das Format. Beispielsweise definieren Video Untertypen nicht die Bildgröße oder die Framerate. Diese werden durch den unten beschriebenen Format Block definiert.
--   **Format Block**: der Format Block ist ein Datenblock, der das Format ausführlich beschreibt. Der Format Block wird getrennt von der [**am- \_ \_ Medientyp**](/windows/win32/api/strmif/ns-strmif-am_media_type) Struktur zugeordnet. Der **pbformat** -Member der **am \_ \_ Medientyp** -Struktur verweist auf den Format Block.
+-   **Haupttyp:** Der Haupttyp ist eine GUID, die die Gesamtkategorie der Daten definiert. Zu den Haupttypen zählen Video, Audio, nicht geparster Bytestream, DANN-Daten usw.
+-   **Untertyp:** Der Untertyp ist eine weitere GUID, die das Format weiter definiert. Innerhalb des Haupttyps des Videos gibt es beispielsweise Untertypen für RGB-24, RGB-32, UY RGB usw. In audio gibt es PCM-Audio, MPEG-1-Nutzlast und andere. Der Untertyp stellt mehr Informationen als der Haupttyp zur Verfügung, definiert jedoch nicht alles über das Format. Videountertypen definieren z. B. weder die Bildgröße noch die Bildfrequenz. Diese werden durch den Formatblock definiert, der unten beschrieben wird.
+-   **Formatblock:** Der Formatblock ist ein Datenblock, der das Format im Detail beschreibt. Der Formatblock wird getrennt von der [**AM \_ MEDIA \_ TYPE-Struktur**](/windows/win32/api/strmif/ns-strmif-am_media_type) zugeordnet. Der **pbFormat-Member** der **AM MEDIA \_ \_ TYPE-Struktur** zeigt auf den Formatblock.
 
-    Der **pbformat** -Member ist typisiert **void \** _, weil das Layout des Format Blocks abhängig vom Medientyp geändert wird. Beispielsweise verwendet PCM-Audiodaten eine [_ *WaveFormatEx* *](/previous-versions/dd757713(v=vs.85)) -Struktur. Video verwendet verschiedene Strukturen, einschließlich [**videoinfoheader**](/previous-versions/windows/desktop/api/amvideo/ns-amvideo-videoinfoheader) und [**VIDEOINFOHEADER2**](/previous-versions/windows/desktop/api/dvdmedia/ns-dvdmedia-videoinfoheader2). Der **Format Type** -Member der [**am \_ \_ Medientyp**](/windows/win32/api/strmif/ns-strmif-am_media_type) -Struktur ist eine GUID, die angibt, welche Struktur im Format Block enthalten ist. Jeder Format Struktur wird eine GUID zugewiesen. Der **cbformat** -Member gibt die Größe des Format Blocks an. Überprüfen Sie diese Werte immer, bevor Sie den **pbformat** -Zeiger dereferenzieren.
+    Der **pbFormat-Member** ist vom Typ **void \** _ , da sich das Layout des Formatblocks je nach Medientyp ändert. PCM-Audio verwendet beispielsweise eine [*_WAVEFORMATEX-Struktur.* *](/previous-versions/dd757713(v=vs.85)) Video verwendet verschiedene Strukturen, einschließlich [**VIDEOINFOHEADER**](/previous-versions/windows/desktop/api/amvideo/ns-amvideo-videoinfoheader) und [**VIDEOINFOHEADER2**](/previous-versions/windows/desktop/api/dvdmedia/ns-dvdmedia-videoinfoheader2). Der **formattype-Member** der [**AM MEDIA \_ \_ TYPE-Struktur**](/windows/win32/api/strmif/ns-strmif-am_media_type) ist eine GUID, die angibt, welche Struktur im Formatblock enthalten ist. Jeder Formatstruktur wird eine GUID zugewiesen. Der **cbFormat-Member** gibt die Größe des Formatblocks an. Überprüfen Sie diese Werte immer, bevor Sie den **pbFormat-Zeiger** deferencieren.
 
-Wenn der Format Block ausgefüllt ist, enthalten der Haupttyp und der Untertyp redundante Informationen. Der Haupttyp und der Untertyp stellen jedoch eine bequeme Möglichkeit zum Identifizieren von Formaten ohne einen kompletten Format Block dar. Sie können z. b. ein generisches 24-Bit-RGB-Format (mediasubtype \_ RGB24) angeben, ohne alle Informationen zu kennen, die für die [**videoinfoheader**](/previous-versions/windows/desktop/api/amvideo/ns-amvideo-videoinfoheader) -Struktur erforderlich sind, wie z. b. die Bildgröße und die Framerate.
+Wenn der Formatblock ausgefüllt ist, enthalten Haupttyp und Untertyp redundante Informationen. Der Haupttyp und Untertyp bieten jedoch eine bequeme Möglichkeit, Formate ohne einen vollständigen Formatblock zu identifizieren. Beispielsweise können Sie ein generisches 24-Bit-RGB-Format (MEDIASUBTYPE RGB24) angeben, ohne alle Informationen zu kennen, die für die \_ [**VIDEOINFOHEADER-Struktur**](/previous-versions/windows/desktop/api/amvideo/ns-amvideo-videoinfoheader) erforderlich sind, z. B. Bildgröße und Bildfrequenz.
 
-Ein Filter kann z. b. den folgenden Code verwenden, um einen Medientyp zu überprüfen:
+Beispielsweise kann ein Filter den folgenden Code verwenden, um einen Medientyp zu überprüfen:
 
 
 ```C++
@@ -70,17 +70,17 @@ HRESULT CheckMediaType(AM_MEDIA_TYPE *pmt)
 
 
 
-Die [**am \_ \_ Medientyp**](/windows/win32/api/strmif/ns-strmif-am_media_type) -Struktur enthält auch einige optionale Felder. Diese können verwendet werden, um zusätzliche Informationen bereitzustellen, aber es sind keine Filter erforderlich, um Sie zu verwenden:
+Die [**AM \_ MEDIA \_ TYPE-Struktur**](/windows/win32/api/strmif/ns-strmif-am_media_type) enthält auch einige optionale Felder. Diese können verwendet werden, um zusätzliche Informationen zur Verfügung zu stellen, aber Filter sind nicht erforderlich, um sie zu verwenden:
 
--   **lsamplesize**. Wenn dieses Feld ungleich 0 (null) ist, wird die Größe der einzelnen Stichproben definiert. Wenn Sie 0 (null) ist, gibt Sie an, dass sich die Stichprobengröße von Sample in Sample ändern kann.
--   **bfixedsizesamples**. Wenn dieses boolesche Flag " **true**" ist, bedeutet dies, dass der Wert in " **lsamplesize** " gültig ist. Andernfalls sollten Sie " **lsamplesize**" ignorieren.
--   **btemporalcompression**. Wenn dieses boolesche Flag **false** ist, bedeutet dies, dass es sich bei allen Frames um Keyframes handelt.
+-   **lSampleSize**. Wenn dieses Feld nicht 0 (null) ist, wird die Größe der einzelnen Stichproben definiert. Wenn der Wert 0 (null) ist, bedeutet dies, dass sich die Stichprobengröße von Stichproben in Stichproben ändern kann.
+-   **bFixedSizeSamples**. Wenn dieses boolesche Flag **TRUE ist,** bedeutet dies, dass der Wert in **lSampleSize** gültig ist. Andernfalls sollten Sie **lSampleSize ignorieren.**
+-   **bTemporalCompression**. Wenn dieses boolesche Flag **FALSE ist,** bedeutet dies, dass alle Frames Keyframes sind.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Das Filter Diagramm und dessen Komponenten](the-filter-graph-and-its-components.md)
+[Das Filterdiagramm und seine Komponenten](the-filter-graph-and-its-components.md)
 </dt> </dl>
 
  

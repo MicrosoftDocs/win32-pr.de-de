@@ -1,6 +1,6 @@
 ---
 title: ps_2_0
-description: Ein programmierbarer Pixelshader besteht aus einer Reihe von Anweisungen, die auf Pixeldaten angewendet werden. Registriert Übertragungsdaten in und aus dem Alu. Zusätzliche Steuerelemente können angewendet werden, um die Anweisung, die Ergebnisse oder die abgeschriebenen Daten zu ändern.
+description: Erfahren Sie mehr über ps_2_0, einen programmierbaren Pixelshader, der aus einer Reihe von Anweisungen besteht, die mit Pixeldaten arbeiten.
 ms.assetid: 15f2e4a4-9c39-434b-bea7-5d2d31cae1d9
 ms.topic: article
 ms.date: 05/31/2018
@@ -9,42 +9,42 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 98b0f252d87a1f7e08c3531415d7ebcb93d4f6f5
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: a2433c8490af06d23d8dccef676ec206fdbb88c0
+ms.sourcegitcommit: 8f0a1d212dd154e8d94ab4c0e4ced053fa16823a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104975905"
+ms.lasthandoff: 06/11/2021
+ms.locfileid: "112010983"
 ---
-# <a name="ps_2_0"></a>PS \_ 2 \_ 0
+# <a name="ps_2_0"></a>ps \_ 2 \_ 0
 
-Ein programmierbarer Pixelshader besteht aus einer Reihe von Anweisungen, die auf Pixeldaten angewendet werden. Registriert Übertragungsdaten in und aus dem Alu. Zusätzliche Steuerelemente können angewendet werden, um die Anweisung, die Ergebnisse oder die abgeschriebenen Daten zu ändern.
+Ein programmierbarer Pixel-Shader besteht aus einer Reihe von Anweisungen, die mit Pixeldaten arbeiten. Registriert Datenübertragungen in und aus der ALU. Es kann ein zusätzliches Steuerelement angewendet werden, um die Anweisung, die Ergebnisse oder die geschriebenen Daten zu ändern.
 
--   [die \_ Anweisungen für PS 2 \_ 0](dx9-graphics-reference-asm-ps-instructions-ps-2-0.md) enthalten eine Liste der verfügbaren Anweisungen.
--   [PS \_ 2 \_ 0-Register](dx9-graphics-reference-asm-ps-registers-ps-2-0.md) listet die verschiedenen Register Typen auf, die von Vertex-Shader Alu verwendet werden.
--   [Modifiziererer](dx9-graphics-reference-asm-ps-registers-modifiers.md) Wird verwendet, um die Funktionsweise einer Anweisung zu ändern.
--   Die [Ziel Register-Schreib Maske](dx9-graphics-reference-asm-ps-registers-modifiers-write-mask.md) bestimmt, welche Komponenten des Ziel Registers geschrieben werden.
--   [Pixel-Shader-Quell Registrierungs Modifizierern](dx9-graphics-reference-asm-ps-registers-modifiers-source.md) ändern die Quell Registrierungsdaten, bevor die Anweisung ausgeführt wird.
--   Das [Quellen Register "Schwenken](dx9-graphics-reference-asm-ps-registers-modifiers-source-register-swizzling.md) " bietet zusätzliche Kontrolle darüber, welche Register Komponenten gelesen, kopiert oder geschrieben werden.
+-   [ps \_ 2 \_ 0 Anweisungen](dx9-graphics-reference-asm-ps-instructions-ps-2-0.md) enthält eine Liste der verfügbaren Anweisungen.
+-   [ps \_ 2 \_ 0 Register listet](dx9-graphics-reference-asm-ps-registers-ps-2-0.md) die verschiedenen Registertypen auf, die vom Vertex-Shader ALU verwendet werden.
+-   [Modifizierer](dx9-graphics-reference-asm-ps-registers-modifiers.md) Werden verwendet, um die Funktionsweise einer Anweisung zu ändern.
+-   [Zielregister-Schreibmaske](dx9-graphics-reference-asm-ps-registers-modifiers-write-mask.md) bestimmt, welche Komponenten des Zielregisters geschrieben werden.
+-   [Die Quellregistermodifizierer des Pixelshader](dx9-graphics-reference-asm-ps-registers-modifiers-source.md) ändern die Quellregisterdaten, bevor die Anweisung ausgeführt wird.
+-   [Das Quellenregister swizzling](dx9-graphics-reference-asm-ps-registers-modifiers-source-register-swizzling.md) bietet zusätzliche Kontrolle darüber, welche Registerkomponenten gelesen, kopiert oder geschrieben werden.
 
-## <a name="instruction-count"></a>Anweisungs Anzahl
+## <a name="instruction-count"></a>Anweisungsanzahl
 
-Shader haben Beschränkungen für die maximale Anweisungs Anzahl. Anweisungs Slots gesamt: 96 (64 Arithmetik und 32 Textur).
+Shader weisen Einschränkungen für die maximale Anzahl von Anweisungen auf. Anweisungsslots gesamt: 96 (64 arithmetische und 32 Textur).
 
 ## <a name="sampler-count"></a>Sampleranzahl
 
-Die Anzahl der verfügbaren Textur-Samplern ist 16.
+Die Anzahl der verfügbaren Textur-Sampler beträgt 16.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Pixel-Shader](dx9-graphics-reference-asm-ps.md)
+[Pixelshader](dx9-graphics-reference-asm-ps.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

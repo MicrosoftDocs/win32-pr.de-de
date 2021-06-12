@@ -1,6 +1,6 @@
 ---
-description: Eine Unterabfrage ist eine gespeicherte Suchdatei ( \* . Search-MS), die Sie als Filter für eine neue Abfrage verwenden können.
-title: Unterabfrage Argument (die Windows-Shell)
+description: Erfahren Sie mehr über das SUBQUERY-Argument in Der Windows Shell. Eine Unterabfrage ist eine gespeicherte Suchdatei, die Sie als Filter für eine neue Abfrage verwenden können.
+title: SUBQUERY-Argument (Die Windows-Shell)
 ms.topic: article
 ms.date: 05/31/2018
 ms.assetid: 2d97b891-ba62-4009-bc6a-9f42e6dbbb34
@@ -9,16 +9,16 @@ api_type: ''
 api_location: ''
 topic_type:
 - kbArticle
-ms.openlocfilehash: 43e4a5b904d5e769eb43acad05aa5d8ce37ebde2
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ef0b37c0f473f2b86c85c18a99124be3b366f447
+ms.sourcegitcommit: 8f0a1d212dd154e8d94ab4c0e4ced053fa16823a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104995038"
+ms.lasthandoff: 06/11/2021
+ms.locfileid: "112010663"
 ---
-# <a name="subquery-argument-the-windows-shell"></a>Unterabfrage Argument (die Windows-Shell)
+# <a name="subquery-argument-the-windows-shell"></a>SUBQUERY-Argument (Die Windows-Shell)
 
-Eine Unterabfrage ist eine gespeicherte Suchdatei ( \* . Search-MS), die Sie als Filter für eine neue Abfrage verwenden können. Die Ergebnisse der Unterabfrage werden als Quelle für die neue Abfrage verwendet. Angenommen, Sie verfügen über mehrere gespeicherte Suchdateien, die eine Abfrage durch eine e-Mail-Verteilerliste einschränken: myDepartment. Search-MS, teamproject. Search-MS und corporatewide. Search-ms. Mit dem `subquery` -Argument können Sie e-Mail-Suchvorgänge auf beliebige oder alle dieser gespeicherten Suchvorgänge beschränken.
+Eine Unterabfrage ist eine gespeicherte Suchdatei \* (.search-ms), die Sie als Filter für eine neue Abfrage verwenden können. Die Ergebnisse der Unterabfrage werden als Quelle für die neue Abfrage verwendet. Angenommen, Sie verfügen über mehrere gespeicherte Suchdateien, die eine Abfrage nach E-Mail-Verteilerliste einschränken: mydepartment.search-ms, teamproject.search-ms und corporatewide.search-ms. Mithilfe des `subquery` -Arguments können Sie E-Mail-Suchvorgänge auf eine oder alle dieser gespeicherten Suchvorgänge beschränken.
 
 ## <a name="example"></a>Beispiel
 
@@ -29,13 +29,13 @@ search:query=vacation&subquery=mydepartment.search-ms
 
 
 
-### <a name="argument-information"></a>Argument Informationen
+### <a name="argument-information"></a>Argumentinformationen
 
 
 
 |                          |                                         |
 |--------------------------|-----------------------------------------|
-| Mindestens Betriebs System | Windows Vista mit Service Pack 1 (SP1) |
+| Mindestbetriebssystem | Windows Vista mit Service Pack 1 (SP1) |
 
 
 

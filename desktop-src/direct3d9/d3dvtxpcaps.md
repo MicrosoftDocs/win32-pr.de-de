@@ -1,15 +1,15 @@
 ---
-description: Erfahren Sie mehr über eine Kombination aus einem oder mehreren Flags, die das Geräteerstellungsverhalten steuern.
+description: Erfahren Sie mehr über eine Kombination aus einem oder mehreren Flags, die das Geräteerstellungsverhalten in der D3DVTXPCAPS-Konstante steuern.
 ms.assetid: 2d3e548f-8559-4a36-b814-6d598bead1d0
 title: D3DVTXPCAPS
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 07ad3b5eca7a264e489382d80b336f5b2c660e1a
-ms.sourcegitcommit: b40a986d5ded926ae7617119cdd35d99b533bad9
+ms.openlocfilehash: 6b544f3e4a69de23607366832aca110e42c61d6d
+ms.sourcegitcommit: 8f0a1d212dd154e8d94ab4c0e4ced053fa16823a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "110342915"
+ms.lasthandoff: 06/11/2021
+ms.locfileid: "112011083"
 ---
 # <a name="d3dvtxpcaps"></a>D3DVTXPCAPS
 
@@ -17,7 +17,7 @@ Eine Kombination aus einem oder mehreren Flags, die das Erstellungsverhalten des
 
 
 
-| \#Definieren                                | BESCHREIBUNG                                                                                                                                                                                        |
+| \#Definieren                                | Beschreibung                                                                                                                                                                                        |
 |-----------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | D3DVTXPCAPS \_ DIRECTIONALLIGHTS          | Das Gerät kann gerichtete Beleuchtungen durchführen.                                                                                                                                                                  |
 | D3DVTXPCAPS \_ LOCALVIEWER                | Das Gerät kann den lokalen Viewer verwenden.                                                                                                                                                                        |
@@ -26,13 +26,13 @@ Eine Kombination aus einem oder mehreren Flags, die das Erstellungsverhalten des
 | D3DVTXPCAPS \_ POSITIONALLIGHTS           | Das Gerät kann Positionslichter (einschließlich Punkt und Punkt) durchführen.                                                                                                                                         |
 | D3DVTXPCAPS \_ TEXGEN                     | Das Gerät kann texgen.                                                                                                                                                                              |
 | D3DVTXPCAPS \_ TEXGEN \_ SPHEREMAP          | Das Gerät unterstützt D3DTSS \_ TCI \_ SPHEREMAP.                                                                                                                                                            |
-| D3DVTXPCAPS-TWEENING \_                   | Das Gerät kann Scheitelpunkt-Tweening verwenden.                                                                                                                                                                     |
+| D3DVTXPCAPS-TWEENING \_                   | Das Gerät kann Scheitelpunkt-Tweening durchführen.                                                                                                                                                                     |
 
 
 
  
 
-## <a name="constant-information"></a>Konstante Informationen
+## <a name="constant-information"></a>Konstanteninformationen
 
 
 

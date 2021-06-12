@@ -1,24 +1,24 @@
 ---
-description: Eine Unterabfrage ist eine gespeicherte Suchdatei ( \* . Search-MS), die Sie als Filter für eine neue Abfrage verwenden können.
+description: Erfahren Sie mehr über das SUBQUERY-Argument in Windows Search. Eine Unterabfrage ist eine gespeicherte Suchdatei, die Sie als Filter für eine neue Abfrage verwenden können.
 ms.assetid: a92c774f-310b-4c40-be1c-0c2b0cac907b
-title: Unterabfrage Argument (Windows-Suche)
+title: SUBQUERY-Argument (Windows Search)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f673cf9c2a9867593fd6c8fdac83b5901f531257
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 93b23028d0bddcc674714f51f8b31883052431bd
+ms.sourcegitcommit: 8f0a1d212dd154e8d94ab4c0e4ced053fa16823a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103958785"
+ms.lasthandoff: 06/11/2021
+ms.locfileid: "112011033"
 ---
-# <a name="subquery-argument-windows-search"></a>Unterabfrage Argument (Windows-Suche)
+# <a name="subquery-argument-windows-search"></a>SUBQUERY-Argument (Windows Search)
 
-Eine Unterabfrage ist eine gespeicherte Suchdatei ( \* . Search-MS), die Sie als Filter für eine neue Abfrage verwenden können. Die Ergebnisse der Unterabfrage werden als Quelle für die neue Abfrage verwendet. Angenommen, Sie verfügen über mehrere gespeicherte Suchdateien, die eine Abfrage durch eine e-Mail-Verteilerliste einschränken: myDepartment. Search-MS, teamproject. Search-MS und corporatewide. Search-ms. Mit dem `subquery` -Argument können Sie e-Mail-Suchvorgänge auf beliebige oder alle dieser gespeicherten Suchvorgänge beschränken.
+Eine Unterabfrage ist eine gespeicherte Suchdatei ( .search-ms), die Sie als Filter für \* eine neue Abfrage verwenden können. Die Ergebnisse der Unterabfrage werden als Quelle für die neue Abfrage verwendet. Angenommen, Sie verfügen über mehrere gespeicherte Suchdateien, die eine Abfrage nach E-Mail-Verteilerliste einschränken: mydepartment.search-ms, teamproject.search-ms und corporatewide.search-ms. Mithilfe `subquery` des -Arguments können Sie E-Mail-Suchvorgänge auf eine oder alle dieser gespeicherten Suchvorgänge beschränken.
 
 Dieses Thema ist wie folgt organisiert:
 
 -   [Beispiel](#example)
--   [Zugehörige Themen](#related-topics)
+-   [Verwandte Themen](#related-topics)
 
 ## <a name="example"></a>Beispiel
 
@@ -33,19 +33,19 @@ Dieses Thema ist wie folgt organisiert:
 
 <dl> <dt>
 
-[Die ersten Schritte mit Parameter-Value Argumenten](getting-started-with-parameter-value-arguments.md)
+[Erste Schritte mit Parameter-Value Argumenten](getting-started-with-parameter-value-arguments.md)
 </dt> <dt>
 
-[Locale-bezeichnerargumente](-search-3x-wds-qryidx-localeidentifiers.md)
+[Locale Identifier Arguments](-search-3x-wds-qryidx-localeidentifiers.md)
 </dt> <dt>
 
-[Crumb-Argument](-search-3x-wds-qryidx-crumb.md)
+[CRUMB-Argument](-search-3x-wds-qryidx-crumb.md)
 </dt> <dt>
 
-[Syntax Argument](-search-3x-wds-qryidx-syntaxargument.md)
+[SYNTAX-Argument](-search-3x-wds-qryidx-syntaxargument.md)
 </dt> <dt>
 
-[Stackedby-Argument](-search-3x-wds-qryidx-stackedby.md)
+[STACKEDBY-Argument](-search-3x-wds-qryidx-stackedby.md)
 </dt> </dl>
 
  
