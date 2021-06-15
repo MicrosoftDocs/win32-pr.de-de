@@ -1,71 +1,71 @@
 ---
-description: Zum Umstellen von Mediendateien in das ASF-Format können Sie Windows Media Encoder verwenden. Um diese Encoder verwenden zu können, müssen Sie beim System registriert werden.
+description: Zum Konvertieren von Mediendateien in das ASF-Format können Sie Windows Media Encoder verwenden. Erfahren Sie mehr über die Verwendung der Aktivierungsobjekte eines Encoders.
 ms.assetid: 18c26619-6047-4f7f-bb65-ca418f02e5b1
-title: Verwenden von Encoders-Aktivierungs Objekten
+title: Verwenden von Encoderaktivierungsobjekten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: bfd44a1b97ad0f133b7215ff4474835ddfba66bb
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9c4111d116c8864cc0a500fa3a0c2f612d1d6345
+ms.sourcegitcommit: 51ef825fb48f15e1aa30e8795988f10dc2b2155c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103863935"
+ms.lasthandoff: 06/14/2021
+ms.locfileid: "112067978"
 ---
-# <a name="using-an-encoders-activation-objects"></a>Verwenden der Aktivierungs Objekte eines Encoders
+# <a name="using-an-encoders-activation-objects"></a>Verwenden der Aktivierungsobjekte eines Encoders
 
-Zum Umstellen von Mediendateien in das ASF-Format können Sie Windows Media Encoder verwenden. Um diese Encoder verwenden zu können, müssen Sie beim System registriert werden.
+Zum Konvertieren von Mediendateien in das ASF-Format können Sie Windows Media Encoder verwenden. Um diese Encoder verwenden zu können, müssen sie beim System registriert werden.
 
-Weitere Informationen zur encoderregistrierung finden Sie unter [Instanziieren eines Encoders MFT](instantiating-the-encoder-mft.md).
+Informationen zur Encoderregistrierung finden Sie unter [Instanziieren eines Encoder-MFT.](instantiating-the-encoder-mft.md)
 
--   [Verwenden der Aktivierungs Objekte eines Encoders](#using-an-encoders-activation-objects)
--   [Encoderenumeration in Windows 7 und höher](#encoder-enumeration-in-windows-7-and-later)
--   [Zugehörige Themen](#related-topics)
+-   [Verwenden der Aktivierungsobjekte eines Encoders](#using-an-encoders-activation-objects)
+-   [Encoderenumeration unter Windows 7 und höher](#encoder-enumeration-in-windows-7-and-later)
+-   [Verwandte Themen](#related-topics)
 
-## <a name="using-an-encoders-activation-objects"></a>Verwenden der Aktivierungs Objekte eines Encoders
+## <a name="using-an-encoders-activation-objects"></a>Verwenden der Aktivierungsobjekte eines Encoders
 
-Als Alternative zur Verwendung der [**imftransform**](/windows/desktop/api/mftransform/nn-mftransform-imftransform) -Schnittstelle eines Encoders (beschrieben unter [Erstellen eines Encoders mithilfe von cokreateinstance](using-an-encoder-s-imftransform--interface.md)) können Sie eine Instanz des Aktivierungs Objekts für den Encoder erstellen. Aktivierungs Objekte erleichtern die encodererstellung, und Media Foundation stellt die folgenden beiden Funktionen für diesen Ansatz bereit:
+Als Alternative zur Verwendung der [**ENCODER-SCHNITTSTELLE VONTRANSFORM**](/windows/desktop/api/mftransform/nn-mftransform-imftransform) (beschrieben unter [Erstellen eines Encoders mit CoCreateInstance)](using-an-encoder-s-imftransform--interface.md)können Sie eine Instanz des Aktivierungsobjekts für den Encoder erstellen. Aktivierungsobjekte erleichtern die Encodererstellung, und Media Foundation stellt die folgenden beiden Funktionen für diesen Ansatz bereit:
 
--   [**MF | atewmaencoderaktivierungs**](/windows/desktop/api/wmcontainer/nf-wmcontainer-mfcreatewmaencoderactivate) zum Instanziieren des Windows Media-Audioencoders.
--   [**MF | atewmvencoderaktivierungs**](/windows/desktop/api/wmcontainer/nf-wmcontainer-mfcreatewmvencoderactivate) zum Instanziieren des Windows Media-Video Encoders.
+-   [**MFCreateWMAEncoderActivate**](/windows/desktop/api/wmcontainer/nf-wmcontainer-mfcreatewmaencoderactivate) zum Instanziieren des Windows Media-Audioencoders.
+-   [**MFCreateWMVEncoderActivate**](/windows/desktop/api/wmcontainer/nf-wmcontainer-mfcreatewmvencoderactivate) zum Instanziieren des Windows Media-Videoencoders.
 
-Beide Funktionen erfordern, dass Sie den Ziel Medientyp erstellen und die Codierungs Eigenschaften festlegen, bevor Sie diese Funktionen aufrufen. Wenn Ihre Anwendung die [ASF-Komponenten der Pipeline Schicht](pipeline-layer-asf-components.md) verwendet, um eine Datei in das ASF-Format zu codieren, und die [ASF-Medien senken](asf-media-sinks.md)bereits erstellt und konfiguriert haben, können Sie diesen Satz von Informationen aus der ASF-Medien Senke erhalten.
+Beide Funktionen erfordern, dass Sie den Zielmedientyp erstellen und die Codierungseigenschaften festlegen, bevor Sie diese Funktionen aufrufen. Wenn Ihre Anwendung [ASF-Komponenten](pipeline-layer-asf-components.md) auf Pipelineebene verwendet, um eine Datei im ASF-Format zu codieren, und die [ASF-Mediensenken](asf-media-sinks.md)bereits erstellt und konfiguriert haben, können Sie diesen Satz von Informationen aus der ASF-Mediensenke abrufen.
 
-[**Mfkreatewmaencoderaktivierungs**](/windows/desktop/api/wmcontainer/nf-wmcontainer-mfcreatewmaencoderactivate) und [**mfkreatewmvencoderaktivierungs**](/windows/desktop/api/wmcontainer/nf-wmcontainer-mfcreatewmvencoderactivate) legen Sie den Ausgabetyp des Encoders auf den Medientyp fest, der von der Anwendung angegeben wird.
+[**MFCreateWMAEncoderActivate**](/windows/desktop/api/wmcontainer/nf-wmcontainer-mfcreatewmaencoderactivate) und [**MFCreateWMVEncoderActivate**](/windows/desktop/api/wmcontainer/nf-wmcontainer-mfcreatewmvencoderactivate) legen den Ausgabetyp des Encoders auf den von der Anwendung angegebenen Medientyp fest.
 
-**Hinweis**  Wenn Sie [**mfcreatewmaencoderaktivierungs**](/windows/desktop/api/wmcontainer/nf-wmcontainer-mfcreatewmaencoderactivate) und [**mfcreatewmvencoderaktivierungs**](/windows/desktop/api/wmcontainer/nf-wmcontainer-mfcreatewmvencoderactivate) verwenden, können Sie den Encoder durch Aufrufen von [**imfaktivate:: activateobject**](/windows/desktop/api/mfobjects/nf-mfobjects-imfactivate-activateobject) aktivieren, aber Sie können die Eingabe-und Ausgabemedien Typen des Encoders nicht ändern, und Sie können die Codierungs Eigenschaften nicht ändern.
+**Hinweis**  Wenn Sie [**MFCreateWMAEncoderActivate**](/windows/desktop/api/wmcontainer/nf-wmcontainer-mfcreatewmaencoderactivate) und [**MFCreateWMVEncoderActivate**](/windows/desktop/api/wmcontainer/nf-wmcontainer-mfcreatewmvencoderactivate) verwenden, können Sie den Encoder aktivieren, indem Sie [**DIE AKTIONACTIVATE::ActivateObject**](/windows/desktop/api/mfobjects/nf-mfobjects-imfactivate-activateobject) aufrufen. Sie können jedoch weder die Eingabe- und Ausgabemedientypen des Encoders noch die Codierungseigenschaften ändern.
 
-Weitere Informationen zum Erstellen von Media Foundation Objekten mithilfe von Aktivierungs Objekten finden Sie unter [Activation Objects](activation-objects.md).
+Weitere Informationen zum Erstellen von Media Foundation Objekten mithilfe von Aktivierungsobjekten finden Sie unter [Activation Objects](activation-objects.md).
 
-**So erhalten Sie den Ziel Medientyp aus der ASF-Medien Senke**
+**So erhalten Sie den Zielmedientyp aus der ASF-Mediensenke**
 
-1.  Rufen Sie einen Zeiger auf den [**imfasfcontentinfo**](/windows/desktop/api/wmcontainer/nn-wmcontainer-imfasfcontentinfo) -Zeiger der ASF-Medien Senke ab, indem Sie **imfmediasink:: QueryInterface** in der ASF-Medien Senke aufrufen und **IID \_ imfasfcontentinfo** als Schnittstellen Bezeichner übergeben.
-2.  Holen Sie sich das dem ContentInfo-Objekt zugeordnete ASF-Profil Objekt.
-3.  Listet die Streams im Profil auf, um den Medientyp des Streams zu erhalten.
+1.  Rufen Sie einen Zeiger auf den [**IMFASFContentInfo-Zeiger**](/windows/desktop/api/wmcontainer/nn-wmcontainer-imfasfcontentinfo) der ASF-Mediensenke ab, indem Sie ÜBER DIE ASF-Mediensenke **DENMEDIASink::QueryInterface** aufrufen und **IID \_ IMFASFContentInfo** als Schnittstellenbezeichner übergeben.
+2.  Abrufen des ASF-Profilobjekts, das dem ContentInfo-Objekt zugeordnet ist.
+3.  Aufzählen der Datenströme im Profil, um den Medientyp des Streams abzurufen.
 
-**So erhalten Sie die Codierungs Eigenschaften aus der ASF-Medien Senke**
+**So erhalten Sie die Codierungseigenschaften aus der ASF-Mediensenke**
 
-1.  Wenn Sie die [Codierungs Eigenschaften](configuring-the-encoder.md) in der Medien Senke konfiguriert haben (siehe [Festlegen von Eigenschaften in der Datei Senke](setting-properties-in-the-file-sink.md)), können Sie einen Verweis auf den Eigenschaften Speicher der Senke aufrufen, indem Sie **imfmediasink:: QueryInterface** in der ASF-Medien Senke aufrufen und **IID \_ IPropertyStore** als Schnittstellen Bezeichner übergeben.
-2.  Wenn Sie einen Zeiger auf das ContentInfo-Objekt der Senke haben, können Sie [**imfasfcontentinfo:: getencodingconfigurationpropertystore**](/windows/desktop/api/wmcontainer/nf-wmcontainer-imfasfcontentinfo-getencodingconfigurationpropertystore) aufrufen, um einen Verweis auf den Eigenschaften Speicher der Medien Senke zu erhalten.
+1.  Wenn Sie die [Codierungseigenschaften](configuring-the-encoder.md) in der Mediensenke konfiguriert haben (wie unter [Festlegen von Eigenschaften in der Dateisenke](setting-properties-in-the-file-sink.md)beschrieben), können Sie einen Verweis auf den Eigenschaftenspeicher der Senke erstellen, indem Sie **AUFMEDIASink::QueryInterface** für die ASF-Mediensenke aufrufen und **IID \_ IPropertyStore** als Schnittstellenbezeichner übergeben.
+2.  Wenn Sie einen Zeiger auf das ContentInfo-Objekt der Senke haben, können Sie [**IMFASFContentInfo::GetEncodingConfigurationPropertyStore**](/windows/desktop/api/wmcontainer/nf-wmcontainer-imfasfcontentinfo-getencodingconfigurationpropertystore) aufrufen, um einen Verweis auf den Eigenschaftenspeicher der Mediensenke abzurufen.
 
-    Stellen Sie sicher, dass alle Codierungs Eigenschaften, die auf der ASF-Medien Senke festgelegt sind, im Eigenschaften Speicher widergespiegelt werden, der an [**mfkreatewmaencoderaktivierungs**](/windows/desktop/api/wmcontainer/nf-wmcontainer-mfcreatewmaencoderactivate) und [**mfkreatewmvencoderaktivierungs**](/windows/desktop/api/wmcontainer/nf-wmcontainer-mfcreatewmvencoderactivate)übergeben wird. Der Encoder wird automatisch basierend auf den von der Anwendung angegebenen Einstellungen konfiguriert.
+    Stellen Sie sicher, dass alle Codierungseigenschaften, die für die ASF-Mediensenke festgelegt sind, im Eigenschaftenspeicher widergespiegelt werden, der an [**MFCreateWMAEncoderActivate**](/windows/desktop/api/wmcontainer/nf-wmcontainer-mfcreatewmaencoderactivate) und [**MFCreateWMVEncoderActivate**](/windows/desktop/api/wmcontainer/nf-wmcontainer-mfcreatewmvencoderactivate)übergeben wird. Der Encoder wird basierend auf den von der Anwendung angegebenen Einstellungen automatisch konfiguriert.
 
-Beim Erstellen des Transformations Knotens in der Codierungs Topologie können Sie den Objekttyp als [**imfaktivate**](/windows/desktop/api/mfobjects/nn-mfobjects-imfactivate) -Zeiger festlegen, der in diesen beiden Aufrufen empfangen wird. Wenn die Topologie aufgelöst wird, verwendet die Medien Sitzung das Aktivierungs Objekt, um eine Instanz des MFT-Encoders zu erstellen.
+Beim Erstellen des Transformationsknotens in der Codierungstopologie können Sie den Objekttyp als [**einen INDATEActivate-Zeiger**](/windows/desktop/api/mfobjects/nn-mfobjects-imfactivate) festlegen, der in diesen beiden Aufrufen empfangen wird. Wenn die Topologie aufgelöst wird, verwendet die Mediensitzung das Aktivierungsobjekt, um eine Instanz des Encoder-MFT zu erstellen.
 
-## <a name="encoder-enumeration-in-windows-7-and-later"></a>Encoderenumeration in Windows 7 und höher
+## <a name="encoder-enumeration-in-windows-7-and-later"></a>Encoderenumeration unter Windows 7 und höher
 
-Für Anwendungen, die unter Windows 7 ausgeführt werden, können Sie zusätzlich zu [**mftenum**](/windows/desktop/api/mfapi/nf-mfapi-mftenum) die Encoder-MFTs durch Aufrufen von [**mftenumex**](/windows/desktop/api/mfapi/nf-mfapi-mftenumex)auflisten. Diese Funktion gibt einen Zeiger auf das Aktivierungs Objekt des Encoder-MFT zurück. Die Struktur der Funktion ähnelt der oben beschriebenen **mftenum** , außer dass **mftenumex** ein Array von [**imfaktivate**](/windows/desktop/api/mfobjects/nn-mfobjects-imfactivate) -Zeigern für die Encoder-MFTs zurückgibt, die den Suchkriterien entsprechen.
+Für Anwendungen, die unter Windows 7 ausgeführt werden, können Sie zusätzlich zu [**MFTEnum**](/windows/desktop/api/mfapi/nf-mfapi-mftenum) die Encoder-MFTs aufzählen, indem Sie [**MFTEnumEx**](/windows/desktop/api/mfapi/nf-mfapi-mftenumex)aufrufen. Diese Funktion gibt einen Zeiger auf das Aktivierungsobjekt des Encoder-MFT zurück. Die Struktur der Funktion ähnelt der oben **beschriebenen MFTEnum-Struktur,** mit der Ausnahme, dass **MFTEnumEx** ein Array von [**POINTERActivate-Zeigern**](/windows/desktop/api/mfobjects/nn-mfobjects-imfactivate) für die Encoder-MFTs zurückgibt, die den Suchkriterien entsprechen.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Instanziieren eines MFT-Encoders](instantiating-the-encoder-mft.md)
+[Instanziieren eines Encoder-MFT](instantiating-the-encoder-mft.md)
 </dt> <dt>
 
 [Windows Media Encoder](windows-media-encoders.md)
 </dt> <dt>
 
-[Aktivierungs Objekte](activation-objects.md)
+[Aktivierungsobjekte](activation-objects.md)
 </dt> </dl>
 
  

@@ -1,44 +1,44 @@
 ---
-description: Zum Umstellen von Mediendateien in das ASF-Format können Sie Windows Media Encoder verwenden. Um diese Encoder verwenden zu können, müssen Sie beim System registriert werden.
+description: Zum Konvertieren von Mediendateien in das ASF-Format können Sie Windows Media Encoder verwenden. Erfahren Sie mehr über das Erstellen eines Encoders mit CoCreateInstance.
 ms.assetid: 96f19dfb-a328-41db-8fa8-77f052b1a192
-title: Erstellen eines Encoders mithilfe von cokreateingestance
+title: Erstellen eines Encoders mit coCreateInstance
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 28a19a3ec13f60e7f602fa4f16854efa060dd96d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 15c4cdf7b72bbfee97031088502113d085738981
+ms.sourcegitcommit: 51ef825fb48f15e1aa30e8795988f10dc2b2155c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106358811"
+ms.lasthandoff: 06/14/2021
+ms.locfileid: "112068466"
 ---
-# <a name="creating-an-encoder-by-using-cocreateinstance"></a>Erstellen eines Encoders mithilfe von cokreateingestance
+# <a name="creating-an-encoder-by-using-cocreateinstance"></a>Erstellen eines Encoders mit coCreateInstance
 
-Zum Umstellen von Mediendateien in das ASF-Format können Sie Windows Media Encoder verwenden. Um diese Encoder verwenden zu können, müssen Sie beim System registriert werden. Encoder werden als [Media Foundation Transformationen](media-foundation-transforms.md) (MFTs) implementiert und müssen die IMF Transform-Schnittstelle verfügbar machen. In diesem Thema wird beschrieben, wie eine Anwendung einen Zeiger auf die imftransform-Schnittstelle des erforderlichen MFT-Encoders erhält und diese für die Verwendung instanziieren kann.
+Zum Konvertieren von Mediendateien in das ASF-Format können Sie Windows Media Encoder verwenden. Um diese Encoder verwenden zu können, müssen sie beim System registriert werden. Encoder werden als [Media Foundation Transformationen](media-foundation-transforms.md) (MFTs) implementiert und müssen die INTERFACESTransform-Schnittstelle verfügbar machen. In diesem Thema wird beschrieben, wie eine Anwendung einen Zeiger auf die MSITransform-Schnittstelle des erforderlichen MFT-Encoders abrufen und zur Verwendung instanziieren kann.
 
-Weitere Informationen zur encoderregistrierung finden Sie unter [Instanziieren eines Encoders MFT](instantiating-the-encoder-mft.md).
+Informationen zur Encoderregistrierung finden Sie unter [Instanziieren eines Encoder-MFT.](instantiating-the-encoder-mft.md)
 
--   [Verwenden der IMF Transform-Schnittstelle eines Encoders](#creating-an-encoder-by-using-cocreateinstance)
-    -   [Beispiel für Codierungs Erstellung](#encoder-creation-example)
--   [Zugehörige Themen](#related-topics)
+-   [Verwenden der INTERFACESTransform-Schnittstelle eines Encoders](#creating-an-encoder-by-using-cocreateinstance)
+    -   [Beispiel für die Encodererstellung](#encoder-creation-example)
+-   [Verwandte Themen](#related-topics)
 
-## <a name="using-an-encoders-imftransform-interface"></a>Verwenden der IMF Transform-Schnittstelle eines Encoders
+## <a name="using-an-encoders-imftransform-interface"></a>Verwenden der INTERFACESTransform-Schnittstelle eines Encoders
 
-Nach erfolgreicher Registrierung von Windows Media Encoder beim System kann eine Anwendung die Encoder durch Aufrufen von [**mftenum**](/windows/desktop/api/mfapi/nf-mfapi-mftenum)auflisten. Um nach dem richtigen Encoder zu suchen, müssen Sie Folgendes angeben:
+Nach erfolgreicher Registrierung von Windows Media Encodern beim System kann eine Anwendung die Encoder aufzählen, indem [**sie MFTEnum**](/windows/desktop/api/mfapi/nf-mfapi-mftenum)aufruft. Um nach dem richtigen Encoder zu suchen, müssen Sie Folgendes angeben:
 
--   Die GUID, die die Kategorie darstellt, bei der es sich entweder um einen **\_ \_ \_ Audioencoder der MFT-Kategorie** oder um einen **\_ \_ Video \_ Encoder für die MFT**
+-   Die GUID, die die Kategorie darstellt, bei der es sich entweder um **MFT \_ CATEGORY AUDIO \_ \_ ENCODER** oder **MFT CATEGORY VIDEO ENCODER \_ \_ \_ handelt.**
 
--   Das Format, das verglichen werden soll. Dies wird in der [**MFT- \_ Register \_ Type \_ Info**](/windows/win32/api/mfobjects/ns-mfobjects-mft_register_type_info) -Struktur festgelegt, die den Haupttyp und den Untertyp des Medientyps angibt, in dem der Encoder Beispiele generiert. Diese Struktur wird im *poutputtype* -Parameter übergeben. Informationen zu den unterstützten Typen finden Sie unter [Medientyp-GUIDs](media-type-guids.md).
+-   Das abzugleichende Format. Dies wird in der [**MFT \_ REGISTER TYPE \_ \_ INFO-Struktur**](/windows/win32/api/mfobjects/ns-mfobjects-mft_register_type_info) festgelegt, die den Haupttyp und Untertyp des Medientyps angibt, in dem der Encoder Stichproben generiert. Diese Struktur wird im *pOutputType-Parameter* übergeben. Informationen zu den unterstützten Typen finden Sie unter [Medientyp-GUIDs.](media-type-guids.md)
 
     > [!Note]  
-    > Die Eingabetyp Informationen im *pinputtype* -Parameter sind nicht erforderlich. Dies liegt daran, dass der Eingabetyp der Anwendung bekannt ist und der Encoder erwartet, dass der Eingabedaten Strom ein unkomprimiertes Format hat.
+    > Die Eingabetypinformationen im *pInputType-Parameter* sind nicht erforderlich. Dies liegt daran, dass der Eingabetyp der Anwendung bekannt ist und der Encoder erwartet, dass der Eingabestream in einem nicht komprimierten Format vorliegt.
 
      
 
-[**Mfitenum**](/windows/desktop/api/mfapi/nf-mfapi-mftenum) gibt ein Array von [**IMF Transform**](/windows/desktop/api/mftransform/nn-mftransform-imftransform) -Zeigern für die Encoder-MFTs zurück, die den Suchkriterien entsprechen. Sie können einen Encoder instanziieren, indem Sie die com-Funktion **CoCreateInstance** aufrufen und die CLSID des Encoders übergeben, den Sie verwenden möchten. Diese Funktion gibt einen Zeiger auf die **imftransform** -Schnittstelle zurück, die den Encoder darstellt. Weitere Informationen zu diesem Funktions aufzurufen finden Sie in der Windows SDK-Dokumentation für die Component Object Model (com).
+[**MFTEnum**](/windows/desktop/api/mfapi/nf-mfapi-mftenum) gibt ein Array von [**POINTERTransform-Zeigern**](/windows/desktop/api/mftransform/nn-mftransform-imftransform) für die Encoder-MFTs zurück, die den Suchkriterien entsprechen. Sie können einen Encoder instanziieren, indem Sie die COM-Funktion **CoCreateInstance** aufrufen und die CLSID des Encoders übergeben, den Sie verwenden möchten. Diese Funktion gibt einen Zeiger auf die **INTERFACESTransform-Schnittstelle** zurück, die den Encoder darstellt. Weitere Informationen zu diesem Funktionsaufruf finden Sie in der Windows SDK-Dokumentation für die Component Object Model (COM).
 
-### <a name="encoder-creation-example"></a>Beispiel für Codierungs Erstellung
+### <a name="encoder-creation-example"></a>Beispiel für die Encodererstellung
 
-Im folgenden Codebeispiel wird gezeigt, wie ein Audio-oder Video Encoder erstellt wird.
+Das folgende Codebeispiel zeigt, wie Sie einen Audio- oder Videoencoder erstellen.
 
 
 ```C++
@@ -92,7 +92,7 @@ HRESULT FindEncoder(
 
 <dl> <dt>
 
-[Instanziieren eines MFT-Encoders](instantiating-the-encoder-mft.md)
+[Instanziieren eines Encoder-MFT](instantiating-the-encoder-mft.md)
 </dt> <dt>
 
 [Windows Media Encoder](windows-media-encoders.md)

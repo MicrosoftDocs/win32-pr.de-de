@@ -1,32 +1,32 @@
 ---
-title: Auflisten von Geräten (WPD)
-description: Auflisten von Geräten
+title: Aufzählen von Geräten (WPD)
+description: Erfahren Sie, wie eine Anwendung Geräte mithilfe der Funktion EnumerateAllDevices aufzählt, die die Anzahl der verbundenen Geräte und gerätespezifische Informationen ruft.
 ms.assetid: 28ded3cf-b0c8-4c90-ab39-efc879adb6e7
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a2738398de7f3bfb6aa1ea88175ff30241b4dbb0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6465b04e6f1a18a0bdb74f0ce883cf9161371fb6
+ms.sourcegitcommit: 51ef825fb48f15e1aa30e8795988f10dc2b2155c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106361697"
+ms.lasthandoff: 06/14/2021
+ms.locfileid: "112068596"
 ---
-# <a name="enumerating-devices-wpd"></a>Auflisten von Geräten (WPD)
+# <a name="enumerating-devices-wpd"></a>Aufzählen von Geräten (WPD)
 
-Die erste Aufgabe, die von den meisten Anwendungen abgeschlossen wird, ist die Enumeration der Geräte, die mit dem Computer verbunden sind. Diese Aufgabe und das Abrufen von Geräteinformationen (z. b. Hersteller, Anzeige Name und Beschreibung) werden von der [**iportabledevicemanager**](/windows/desktop/api/PortableDeviceApi/nn-portabledeviceapi-iportabledevicemanager) -Schnittstelle unterstützt.
+Die erste Aufgabe, die von den meisten Anwendungen abgeschlossen wird, ist die Enumeration der Geräte, die mit dem Computer verbunden sind. Diese Aufgabe und das Abrufen von Geräteinformationen (z. B. Hersteller, Angezeigter Name und Beschreibung) wird von der [**IPortableDeviceManager-Schnittstelle**](/windows/desktop/api/PortableDeviceApi/nn-portabledeviceapi-iportabledevicemanager) unterstützt.
 
-Die Funktion "enumeratealldevices" im deviceenumeration. cpp-Modul enthält Code, der das Abrufen der Anzahl verbundener Geräte und nach dem Abrufen der Anzahl den Abruf Geräte spezifischer Informationen für jedes verbundene Gerät veranschaulicht.
+Die Funktion EnumerateAllDevices im Modul DeviceEnumeration.cpp enthält Code, der das Abrufen der Anzahl verbundener Geräte veranschaulicht und nach dem Abrufen der Anzahl gerätespezifische Informationen für jedes verbundene Gerät abruft.
 
-Die Funktion "enumeratealldevices" führt vier Hauptaufgaben aus:
+Die EnumerateAllDevices-Funktion erfüllt vier primäre Aufgaben:
 
-1.  Erstellt das portablen Geräte-Manager-Objekt.
-2.  Ruft die Anzahl verbundener Geräte ab.
-3.  Ruft Geräteinformationen (für die verbundenen Geräte) ab.
-4.  Gibt den Arbeitsspeicher frei, der beim Abrufen der Geräteinformationen verwendet wurde.
+1.  Erstellt das Portable Device Manager-Objekt.
+2.  Ruft die Anzahl der verbundenen Geräte ab.
+3.  Ruft Geräteinformationen ab (für die verbundenen Geräte).
+4.  Gibt den beim Abrufen der Geräteinformationen verwendeten Arbeitsspeicher frei.
 
-Diese vier Aufgaben werden in den folgenden Abschnitten ausführlicher beschrieben.
+Jede dieser vier Aufgaben wird in den folgenden Abschnitten ausführlicher beschrieben.
 
-Der erste Schritt im Geräte Aufzählungs Prozess ist die Erstellung eines portablen Geräte-Manager-Objekts. Dies erfolgt durch Aufrufen der CoCreateInstance-Funktion und durch übergeben der Klassen-ID (CLSID) für das Objekt. dabei wird der Kontext angegeben, in dem der Code ausgeführt wird, und es wird ein Verweis Bezeichner für die iportabledevicemanager-Schnittstelle angegeben
+Der erste Schritt des Geräteenumerationsprozesses ist die Erstellung eines portablen Geräte-Manager-Objekts. Dies erfolgt durch Aufrufen der CoCreateInstance-Funktion und Übergeben des Klassenbezeichners (CLSID) für das Objekt, Angeben des Kontexts, in dem der Code ausgeführt wird, Angabe eines Verweisbezeichners für die IPortableDeviceManager-Schnittstelle und anschließendes Angeben einer Zeigervariable, die den IPortableDeviceManager-Schnittstellenzeiger empfängt.
 
 
 ```C++
@@ -42,7 +42,7 @@ if (FAILED(hr))
 
 
 
-Sobald Sie einen [**iportabledevicemanager**](/windows/desktop/api/PortableDeviceApi/nn-portabledeviceapi-iportabledevicemanager) -Schnittstellen Zeiger erhalten haben, können Sie mit dem Aufrufen von Methoden für diese Schnittstelle beginnen. Die erste Methode, die in der Funktion "enumeratealldevices" aufgerufen wird, ist [**iportabledevicemanager:: GetDevices**](/windows/desktop/api/PortableDeviceApi/nf-portabledeviceapi-iportabledevicemanager-getdevices). Wenn diese Methode aufgerufen wird, wobei das erste Argument auf **null** festgelegt ist, wird die Anzahl der verbundenen Geräte zurückgegeben.
+Nachdem Sie einen [**IPortableDeviceManager-Schnittstellenzeiger**](/windows/desktop/api/PortableDeviceApi/nn-portabledeviceapi-iportabledevicemanager) erhalten haben, können Sie mit dem Aufrufen von Methoden für diese Schnittstelle beginnen. Die erste Methode, die in der EnumerateAllDevices-Funktion aufgerufen wird, ist [**IPortableDeviceManager::GetDevices**](/windows/desktop/api/PortableDeviceApi/nf-portabledeviceapi-iportabledevicemanager-getdevices). Wenn diese Methode aufgerufen wird und das erste Argument auf **NULL** festgelegt ist, wird die Anzahl der verbundenen Geräte zurückgegeben.
 
 
 ```C++
@@ -63,9 +63,9 @@ printf("\n%d Windows Portable Device(s) found on the system\n\n", cPnPDeviceIDs)
 
 
 
-Nachdem Sie die Anzahl der verbundenen Geräte abgerufen haben, können Sie mit diesem Wert Geräteinformationen für jedes verbundene Gerät abrufen. Dieser Prozess beginnt mit dem Übergeben eines Arrays von Zeichen folgen Zeigern als erstes Argument und der Anzahl der Elemente, die dieses Array als zweites Argument enthalten kann (diese Anzahl sollte mindestens der Anzahl der verfügbaren Geräte entsprechen).
+Nachdem Sie die Anzahl der verbundenen Geräte abgerufen haben, können Sie diesen Wert verwenden, um Geräteinformationen für jedes verbundene Gerät abzurufen. Dieser Prozess beginnt mit der Übergabe eines Arrays von Zeichenfolgenze0ern als erstes Argument und der Anzahl der Elemente, die dieses Array als zweites Argument enthalten kann (diese Anzahl sollte mindestens der Anzahl der verfügbaren Geräte entspricht).
 
-Die von dieser Methode zurückgegebenen Zeichen folgen sind die Plug & Play Namen der verbundenen Geräte. Diese Namen werden wiederum an andere Methoden der [**iportabledevicemanager**](/windows/desktop/api/PortableDeviceApi/nn-portabledeviceapi-iportabledevicemanager) -Schnittstelle übergeben, um gerätespezifische Informationen wie den anzeigen Amen, den Namen des Herstellers und die Geräte Beschreibung abzurufen. (Diese Namen werden auch verwendet, um eine Verbindung mit dem Gerät zu öffnen, wenn eine Anwendung die [**iportabledevice:: Open**](/windows/desktop/api/PortableDeviceApi/nf-portabledeviceapi-iportabledevice-open) -Methode aufruft.)
+Die von dieser Methode zurückgegebenen Zeichenfolgen sind Plug & Play Namen der verbundenen Geräte. Diese Namen werden wiederum an andere Methoden auf der [**IPortableDeviceManager-Schnittstelle**](/windows/desktop/api/PortableDeviceApi/nn-portabledeviceapi-iportabledevicemanager) übergeben, um gerätespezifische Informationen abzurufen, z. B. den Benutzernamen, den Herstellernamen und die Gerätebeschreibung. (Diese Namen werden auch verwendet, um eine Verbindung mit dem Gerät zu öffnen, wenn eine Anwendung die [**IPortableDevice::Open-Methode**](/windows/desktop/api/PortableDeviceApi/nf-portabledeviceapi-iportabledevice-open) aufruft.)
 
 
 ```C++
@@ -99,7 +99,7 @@ if (SUCCEEDED(hr) && (cPnPDeviceIDs > 0))
 
 
 
-Nachdem Sie die Geräteinformationen abgerufen haben, müssen Sie den Arbeitsspeicher freigeben, der den Zeichen folgen zugeordnet ist, auf die durch das Array von Zeichen folgen Zeigern verwiesen wird. Außerdem müssen Sie dieses Array löschen.
+Nachdem Sie die Geräteinformationen abgerufen haben, müssen Sie den Arbeitsspeicher, der den Zeichenfolgen zugeordnet ist, auf die durch das Array von Zeichenfolgenzedern verwiesen wird, frei geben. Sie müssen auch dieses Array löschen.
 
 
 ```C++
@@ -120,7 +120,7 @@ pPnpDeviceIDs = NULL;
 
 <dl> <dt>
 
-[**Iportabledebug Manager-Schnittstelle**](/windows/desktop/api/PortableDeviceApi/nn-portabledeviceapi-iportabledevicemanager)
+[**IPortableDeviceManager-Schnittstelle**](/windows/desktop/api/PortableDeviceApi/nn-portabledeviceapi-iportabledevicemanager)
 </dt> <dt>
 
 [**Programmierhandbuch**](programming-guide.md)

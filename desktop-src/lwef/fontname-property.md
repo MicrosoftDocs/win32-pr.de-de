@@ -1,39 +1,39 @@
 ---
 title: FontName-Eigenschaft (Commands-Objekt)
-description: FontName-Eigenschaft
+description: Erfahren Sie mehr über die FontName Commands-Objekteigenschaft. Microsoft Agent ist ab Windows 7 veraltet.
 ms.assetid: 7de3653e-9b4d-4a31-82d5-243f10e2743b
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d4b04fa386958a75b55f9cfc50a9149de454d48f
-ms.sourcegitcommit: 8fa6614b715bddf14648cce36d2df22e5232801a
+ms.openlocfilehash: 739fceae4e73788f408306f6af08713173c99843
+ms.sourcegitcommit: 51ef825fb48f15e1aa30e8795988f10dc2b2155c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "104102731"
+ms.lasthandoff: 06/14/2021
+ms.locfileid: "112068256"
 ---
 # <a name="fontname-property-commands-object"></a>FontName-Eigenschaft (Commands-Objekt)
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Microsoft Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht mehr verfügbar.\]
 
 <dl> <dt>
 
 <span id="Description"></span><span id="description"></span><span id="DESCRIPTION"></span>**Beschreibung**
 </dt> <dd>
 
-Gibt die im Popupmenü des Zeichens verwendete Schriftart zurück oder legt diese fest.
+Gibt die Schriftart zurück, die im Popupmenü des Zeichens verwendet wird, oder legt diese fest.
 
 </dd> <dt>
 
 <span id="Syntax"></span><span id="syntax"></span><span id="SYNTAX"></span>**Syntax**
 </dt> <dd>
 
-*Agent. *-**Zeichen ("**_Merkmal-ID_*_"). "Commands. FontName_"- *  \[  =  *Schriftart*\]
+*agent.***Characters("**_CharacterID_*_"). Commands.FontName-Schriftart_ *  \[  =  \]
 
 
 
-| Teil   | BESCHREIBUNG                                      |
+| Teil   | Beschreibung                                      |
 |--------|--------------------------------------------------|
-| *Schriftart* | Ein Zeichen folgen Wert, der dem Namen der Schriftart entspricht. |
+| *Schriftart* | Ein Zeichenfolgenwert, der dem Namen der Schriftart entspricht. |
 
 
 
@@ -43,9 +43,9 @@ Gibt die im Popupmenü des Zeichens verwendete Schriftart zurück oder legt dies
 
 ## <a name="remarks"></a>Bemerkungen
 
-Die **FontName** -Eigenschaft definiert die Schriftart, die zum Anzeigen von Text im Popupmenü des Zeichens verwendet wird. Der Standardwert für die Schriftart Einstellung basiert auf der Einstellung für die Einstellung der Schriftart für die **LanguageID** -Einstellung des Zeichens, oder--wenn dies nicht festgelegt ist, der Standardeinstellung für die Benutzer-ID der Benutzereinstellung.
+Die **FontName-Eigenschaft** definiert die Schriftart, die zum Anzeigen von Text im Popupmenü des Zeichens verwendet wird. Der Standardwert für die Schriftarteinstellung basiert auf der Einstellung für die Menüschriftart für die **LanguageID-Einstellung** des Zeichens oder – wenn dies nicht festgelegt ist – der Standardeinstellung für die Sprach-ID des Benutzers.
 
-Diese Eigenschaft gilt nur für die Verwendung des Zeichens durch die Client Anwendung. Diese Einstellung wirkt sich nicht auf andere Clients des Zeichens oder andere Zeichen ihrer Client Anwendung aus.
+Diese Eigenschaft gilt nur für die Verwendung des Zeichens durch Ihre Clientanwendung. Die Einstellung wirkt sich nicht auf andere Clients des Zeichens oder anderer Zeichen Ihrer Clientanwendung aus.
 
  
 

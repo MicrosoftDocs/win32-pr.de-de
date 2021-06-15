@@ -1,33 +1,33 @@
 ---
-description: Eine Erläuterung der folgenden Tabellen finden Sie unter Tabellen und Zuweisungen.
+description: Dieser Artikel enthält Häufigkeitstabellen für die internationale analoge TV-Optimierung für Frankreich. Häufigkeitsindizes sind für Kanalnummern nicht geeignet.
 ms.assetid: 852ead0e-3539-483d-943d-1779f7358ba5
 title: Frankreich
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5da01c7645f8ed8a7715ae0514b073b63bd33e0f
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 825efa71702dfe617325586d657665a302076369
+ms.sourcegitcommit: 51ef825fb48f15e1aa30e8795988f10dc2b2155c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "106344909"
+ms.lasthandoff: 06/14/2021
+ms.locfileid: "112068115"
 ---
 # <a name="france"></a>Frankreich
 
 Eine Erläuterung der folgenden Tabellen finden Sie unter [Tabellen und Zuweisungen](tables-and-assignments.md).
 
-Die Häufigkeits Indizes in den Frankreich-Tabellen sind nicht für die Verwendung als Kanalnummern geeignet.
+Die Häufigkeitsindizes in den Tabellen "Frankreich" sind nicht für die Verwendung als Kanalnummern geeignet.
 
 -   [Windows 7 und höher](#windows-7-and-later)
-    -   [Frankreich-Broadcast Zuweisungen](#france-broadcast-assignments)
-    -   [Französische Kabel Zuweisungen](#france-cable-assignments)
--   [Frühere Kanal Zuweisungen](#earlier-channel-assignments)
-    -   [Frankreich-Broadcast Zuweisungen](#france-broadcast-assignments)
-    -   [Französische Kabel Zuweisungen](#france-cable-assignments)
--   [Zugehörige Themen](#related-topics)
+    -   [Broadcastzuweisungen in Frankreich](#france-broadcast-assignments)
+    -   [Kabelzuweisungen in Frankreich](#france-cable-assignments)
+-   [Frühere Kanalzuweisungen](#earlier-channel-assignments)
+    -   [Broadcastzuweisungen in Frankreich](#france-broadcast-assignments)
+    -   [Kabelzuweisungen in Frankreich](#france-cable-assignments)
+-   [Verwandte Themen](#related-topics)
 
 ## <a name="windows-7-and-later"></a>Windows 7 und höher
 
-### <a name="france-broadcast-assignments"></a>Frankreich-Broadcast Zuweisungen
+### <a name="france-broadcast-assignments"></a>Broadcastzuweisungen in Frankreich
 
 ``` syntax
         2L,             // Lowest channel
@@ -103,7 +103,7 @@ Die Häufigkeits Indizes in den Frankreich-Tabellen sind nicht für die Verwendu
        855250000L,      // 69
 ```
 
-### <a name="france-cable-assignments"></a>Französische Kabel Zuweisungen
+### <a name="france-cable-assignments"></a>Kabelzuweisungen in Frankreich
 
 ``` syntax
          1L,            // Lowest channel
@@ -233,9 +233,9 @@ Die Häufigkeits Indizes in den Frankreich-Tabellen sind nicht für die Verwendu
        296000000L,      // 120 TV37++
 ```
 
-## <a name="earlier-channel-assignments"></a>Frühere Kanal Zuweisungen
+## <a name="earlier-channel-assignments"></a>Frühere Kanalzuweisungen
 
-### <a name="france-broadcast-assignments"></a>Frankreich-Broadcast Zuweisungen
+### <a name="france-broadcast-assignments"></a>Broadcastzuweisungen in Frankreich
 
 ``` syntax
         2L,             // Lowest channel
@@ -311,7 +311,7 @@ Die Häufigkeits Indizes in den Frankreich-Tabellen sind nicht für die Verwendu
        855250000L,      // 69
 ```
 
-### <a name="france-cable-assignments"></a>Französische Kabel Zuweisungen
+### <a name="france-cable-assignments"></a>Kabelzuweisungen in Frankreich
 
 ``` syntax
          1L,            // Lowest channel
@@ -431,7 +431,7 @@ Die Häufigkeits Indizes in den Frankreich-Tabellen sind nicht für die Verwendu
 
 <dl> <dt>
 
-[Internationale Analog-TV-Optimierung](international-analog-tv-tuning.md)
+[Internationale analoge TV-Optimierung](international-analog-tv-tuning.md)
 </dt> </dl>
 
  

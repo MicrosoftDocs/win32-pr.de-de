@@ -1,33 +1,33 @@
 ---
-title: Auflisten von Geräten (WMP SDK)
-description: Auflisten von Geräten
+title: Aufzählen von Geräten (WMP SDK)
+description: Dieser Beispielcode zeigt eine Funktion, die Geräte aufzählt, indem ein Array von Zeigern erstellt wird, die jeweils ein Gerät darstellen.
 ms.assetid: 0236a629-c09a-4687-a8ba-fa05107fab33
 keywords:
-- Windows Media Player, portable Geräte
-- Windows Media Player-Objektmodell, portable Geräte
+- Windows Media Player,portable Geräte
+- Windows Media Player Objektmodell, portable Geräte
 - Objektmodell, portable Geräte
 - Windows Media Player ActiveX-Steuerelement, portable Geräte
 - ActiveX-Steuerelement, portable Geräte
 - Windows Media Player Mobile ActiveX-Steuerelement, portable Geräte
-- Windows Media Player Mobile, tragbare Geräte
-- Portable Geräte, auflisten
+- Windows Media Player Mobile,portable Geräte
+- Portable Geräte,Aufzählen
 - Enumerationen, portable Geräte
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d5025d0e0a7e99028b22cc24ebc56337ea84d2fb
-ms.sourcegitcommit: 48d1c892045445bcbd0f22bafa2fd3861ffaa6e7
+ms.openlocfilehash: d44f71fa26f40983424ced70280d9c03e0892a00
+ms.sourcegitcommit: 51ef825fb48f15e1aa30e8795988f10dc2b2155c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "103948435"
+ms.lasthandoff: 06/14/2021
+ms.locfileid: "112068437"
 ---
-# <a name="enumerating-devices"></a>Auflisten von Geräten
+# <a name="enumerating-devices"></a>Aufzählen von Geräten
 
-Windows Media Player stellt tragbare Geräte mithilfe der **iwmpsyncdevice** -Schnittstelle dar. Der folgende Beispielcode zeigt eine Funktion, die ein Array von Zeigern auf **iwmpsyncdevice** erstellt. Jeder Zeiger im Array stellt ein Gerät dar, für das Windows Media Player über gespeicherte Informationen verfügt. Es ist nicht erforderlich, dass ein Gerät mit dem Computer verbunden ist, und es ist nicht erforderlich, eine Partnerschaft mit der aktuellen Windows Media Player-Instanz zu haben.
+Windows Media Player stellt portable Geräte mithilfe der **IWMPSyncDevice-Schnittstelle** dar. Der folgende Beispielcode zeigt eine Funktion, die ein Array von Zeigern auf **IWMPSyncDevice erstellt.** Jeder Zeiger im Array stellt ein Gerät dar, für das Windows Media Player gespeicherte Informationen enthält. Ein Gerät muss nicht mit dem Computer verbunden sein, und es ist auch keine Partnerschaft mit der aktuellen Windows Media Player erforderlich.
 
-Sie sollten Geräte immer dann auflisten, wenn Sie das Ereignis " **de viceconnetct** " oder das Ereignis " **devicedisconnect** " erhalten.
+Sie sollten Geräte aufzählen, wenn Sie das **DeviceConnect-Ereignis** oder das **DeviceDisconnect-Ereignis** erhalten.
 
-Mit der folgenden Funktion werden Geräte aufgelistet. Der *bconnectedonly* -Parameter gibt an, ob nur Geräte aufgelistet werden, die derzeit mit dem Computer des Benutzers verbunden sind.
+Die folgende Funktion aufzählt Geräte. Der *bConnectedOnly-Parameter* gibt an, ob nur Geräte aufzählt werden, die derzeit mit dem Computer des Benutzers verbunden sind.
 
 
 ```C++
@@ -121,33 +121,33 @@ STDMETHODIMP CMainDlg::EnumDevices(BOOL bConnectedOnly)
 
 
 
-Sie können ähnlichen Code verwenden, um andere Gerätelisten abzurufen. Sie können z. b. mit [iwmpsyncdevice:: get \_ Status](/previous-versions/windows/desktop/api/wmp/nf-wmp-iwmpsyncdevice-get_status) ein Array von Geräten erstellen, für die eine Partnerschaft vorhanden ist.
+Sie können ähnlichen Code verwenden, um andere solche Gerätelisten abzurufen. Beispielsweise können Sie [MITMPSyncDevice::get \_ status](/previous-versions/windows/desktop/api/wmp/nf-wmp-iwmpsyncdevice-get_status) verwenden, um ein Array von Geräten zu erstellen, für die eine Partnerschaft besteht.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**IWMPEvents2::D eviceconnetct**](/previous-versions/windows/desktop/api/wmp/nf-wmp-iwmpevents2-deviceconnect)
+[**IWMPEvents2::D eviceConnect**](/previous-versions/windows/desktop/api/wmp/nf-wmp-iwmpevents2-deviceconnect)
 </dt> <dt>
 
-[**IWMPEvents2::D entfernen**](/previous-versions/windows/desktop/api/wmp/nf-wmp-iwmpevents2-devicedisconnect)
+[**IWMPEvents2::D eviceDisconnect**](/previous-versions/windows/desktop/api/wmp/nf-wmp-iwmpevents2-devicedisconnect)
 </dt> <dt>
 
-[**Iwmpsyncdevice-Schnittstelle**](/previous-versions/windows/desktop/api/wmp/nn-wmp-iwmpsyncdevice)
+[**IWMPSyncDevice-Schnittstelle**](/previous-versions/windows/desktop/api/wmp/nn-wmp-iwmpsyncdevice)
 </dt> <dt>
 
-[**Iwmpsyncdevice:: \_ Verbindung herstellen**](/previous-versions/windows/desktop/api/wmp/nf-wmp-iwmpsyncdevice-get_connected)
+[**IWMPSyncDevice::get \_ connected**](/previous-versions/windows/desktop/api/wmp/nf-wmp-iwmpsyncdevice-get_connected)
 </dt> <dt>
 
-[**Iwmpsyncservices-Schnittstelle**](/previous-versions/windows/desktop/api/wmp/nn-wmp-iwmpsyncservices)
+[**IWMPSyncServices-Schnittstelle**](/previous-versions/windows/desktop/api/wmp/nn-wmp-iwmpsyncservices)
 </dt> <dt>
 
-[**Arbeiten mit tragbaren Geräten**](working-with-portable-devices.md)
+[**Arbeiten mit portablen Geräten**](working-with-portable-devices.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

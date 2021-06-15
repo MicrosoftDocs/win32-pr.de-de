@@ -1,39 +1,39 @@
 ---
-title: FontSize-Eigenschaft (Sprechblasen Objekt)
-description: FontSize-Eigenschaft
+title: FontSize-Eigenschaft (Balloon-Objekt)
+description: Erfahren Sie mehr über die FontSize Balloon-Objekteigenschaft. Microsoft Agent ist ab Windows 7 veraltet.
 ms.assetid: 36d5526a-1ae9-4ef2-94f6-0ad63ce86882
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 569c07e98fb8bf973a554e89655f71e816b4a51b
-ms.sourcegitcommit: 8fa6614b715bddf14648cce36d2df22e5232801a
+ms.openlocfilehash: 85e6a2c13708d3066faaf396a3a451c9be01d177
+ms.sourcegitcommit: 51ef825fb48f15e1aa30e8795988f10dc2b2155c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "104391444"
+ms.lasthandoff: 06/14/2021
+ms.locfileid: "112068217"
 ---
-# <a name="fontsize-property-balloon-object"></a>FontSize-Eigenschaft (Sprechblasen Objekt)
+# <a name="fontsize-property-balloon-object"></a>FontSize-Eigenschaft (Balloon-Objekt)
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Microsoft Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht mehr verfügbar.\]
 
 <dl> <dt>
 
 <span id="Description"></span><span id="description"></span><span id="DESCRIPTION"></span>**Beschreibung**
 </dt> <dd>
 
-Gibt den Schrift Grad zurück, der für die Wort Sprechblase für das angegebene Zeichen unterstützt wird.
+Gibt den Schriftgrad zurück, der für das Wort balloon für das angegebene Zeichen unterstützt wird, oder legt diesen fest.
 
 </dd> <dt>
 
 <span id="Syntax"></span><span id="syntax"></span><span id="SYNTAX"></span>**Syntax**
 </dt> <dd>
 
-*Agent. * * * Zeichen* *  **("**_Merkmal-ID_*_"). Sprechblase. FontSize_* - \[  =  *Punkte*\]
+*agent.**Characters* *  **("**_CharacterID_*_"). Balloon.FontSize-Punkte_* \[  =  \]
 
 
 
-| Teil     | BESCHREIBUNG                                              |
+| Teil     | Beschreibung                                              |
 |----------|----------------------------------------------------------|
-| *Punkt* | Ein Long Integer-Wert, der den Schrift Grad in Punkten angibt. |
+| *Punkte* | Ein ganzzahliger Long-Wert, der den Schriftgrad in Punkten angibt. |
 
 
 
@@ -43,9 +43,9 @@ Gibt den Schrift Grad zurück, der für die Wort Sprechblase für das angegebene
 
 ## <a name="remarks"></a>Bemerkungen
 
-Die [**FontSize**](fontsize-property.md) -Eigenschaft gibt einen Long Integer-Wert zurück, der den aktuellen Schrift Grad in Punkten angibt. Der maximale Wert für **FontSize** beträgt 2160 Punkte.
+Die [**FontSize-Eigenschaft**](fontsize-property.md) gibt einen long integer-Wert zurück, der den aktuellen Schriftgrad in Punkten angibt. Der Höchstwert für **FontSize** beträgt 2160 Punkte.
 
-Der Standardwert für die Schriftart Einstellungen der Word-Sprechblase eines Zeichens wird im Microsoft-Agent-Zeichen-Editor festgelegt. Außerdem kann der Benutzer die Schriftart Einstellungen für alle Zeichen auf dem Eigenschaften Blatt Microsoft-Agent überschreiben.
+Der Standardwert für die Schriftarteinstellungen der Wortsprechblase eines Zeichens wird im Microsoft Agent-Zeichen-Editor festgelegt. Darüber hinaus kann der Benutzer Schriftarteinstellungen für alle Zeichen im Microsoft Agent-Eigenschaftenblatt überschreiben.
 
  
 

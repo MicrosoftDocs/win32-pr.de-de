@@ -1,33 +1,33 @@
 ---
-description: Eine Erläuterung der folgenden Tabellen finden Sie unter Tabellen und Zuweisungen.
+description: Dieser Artikel enthält Häufigkeitstabellen für die internationale analoge TV-Optimierung für Spanien. Häufigkeitsindizes sind für Kanalnummern nicht geeignet.
 ms.assetid: 955fb828-4290-4e60-a5db-d3f243b86d8d
 title: Italien
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1c92fd079a61b95b2007134b17601f6f3dfbfbc4
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: f1e74092318cfbc889f9173685176d48d6b72fc0
+ms.sourcegitcommit: 51ef825fb48f15e1aa30e8795988f10dc2b2155c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "106339653"
+ms.lasthandoff: 06/14/2021
+ms.locfileid: "112068576"
 ---
 # <a name="italy"></a>Italien
 
 Eine Erläuterung der folgenden Tabellen finden Sie unter [Tabellen und Zuweisungen](tables-and-assignments.md).
 
-Die Häufigkeits Indizes in den Italien-Tabellen sind nicht für die Verwendung als Kanalnummern geeignet.
+Die Häufigkeitsindizes in den Tabellen "Spanien" sind nicht für die Verwendung als Kanalnummern geeignet.
 
 -   [Windows 7 und höher](#windows-7-and-later)
-    -   [Italien-Broadcast Zuweisungen](#italy-broadcast-assignments)
-    -   [Italien-Kabel Zuweisungen](#italy-cable-assignments)
--   [Frühere Kanal Zuweisungen](#earlier-channel-assignments)
-    -   [Italien-Broadcast Zuweisungen](#italy-broadcast-assignments)
-    -   [Italien-Kabel Zuweisungen](#italy-cable-assignments)
--   [Zugehörige Themen](#related-topics)
+    -   [Broadcastzuweisungen in Spanien](#italy-broadcast-assignments)
+    -   [Italienische Kabelzuweisungen](#italy-cable-assignments)
+-   [Frühere Kanalzuweisungen](#earlier-channel-assignments)
+    -   [Broadcastzuweisungen in Spanien](#italy-broadcast-assignments)
+    -   [Italienische Kabelzuweisungen](#italy-cable-assignments)
+-   [Verwandte Themen](#related-topics)
 
 ## <a name="windows-7-and-later"></a>Windows 7 und höher
 
-### <a name="italy-broadcast-assignments"></a>Italien-Broadcast Zuweisungen
+### <a name="italy-broadcast-assignments"></a>Broadcastzuweisungen in Spanien
 
 ``` syntax
         1L,             // Lowest channel
@@ -104,7 +104,7 @@ Die Häufigkeits Indizes in den Italien-Tabellen sind nicht für die Verwendung 
        855250000L,      // 69 TV69
 ```
 
-### <a name="italy-cable-assignments"></a>Italien-Kabel Zuweisungen
+### <a name="italy-cable-assignments"></a>Italienische Kabelzuweisungen
 
 ``` syntax
          1L,            // Lowest channel
@@ -133,9 +133,9 @@ Die Häufigkeits Indizes in den Italien-Tabellen sind nicht für die Verwendung 
        305250000L,      // 20 Not used
 ```
 
-## <a name="earlier-channel-assignments"></a>Frühere Kanal Zuweisungen
+## <a name="earlier-channel-assignments"></a>Frühere Kanalzuweisungen
 
-### <a name="italy-broadcast-assignments"></a>Italien-Broadcast Zuweisungen
+### <a name="italy-broadcast-assignments"></a>Broadcastzuweisungen in Spanien
 
 ``` syntax
          1L,             // Lowest channel
@@ -214,7 +214,7 @@ Die Häufigkeits Indizes in den Italien-Tabellen sind nicht für die Verwendung 
        855250000L,      // 69
 ```
 
-### <a name="italy-cable-assignments"></a>Italien-Kabel Zuweisungen
+### <a name="italy-cable-assignments"></a>Italienische Kabelzuweisungen
 
 ``` syntax
          1L,            // Lowest channel
@@ -247,7 +247,7 @@ Die Häufigkeits Indizes in den Italien-Tabellen sind nicht für die Verwendung 
 
 <dl> <dt>
 
-[Internationale Analog-TV-Optimierung](international-analog-tv-tuning.md)
+[Internationale analoge TV-Optimierung](international-analog-tv-tuning.md)
 </dt> </dl>
 
  

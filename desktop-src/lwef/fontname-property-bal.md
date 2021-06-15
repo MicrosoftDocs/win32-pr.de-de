@@ -1,39 +1,39 @@
 ---
-title: FontName-Eigenschaft (Sprechblasen Objekt)
-description: FontName-Eigenschaft
+title: FontName-Eigenschaft (Balloon-Objekt)
+description: Erfahren Sie mehr über die FontName Balloon-Objekteigenschaft. Microsoft Agent ist ab Windows 7 veraltet.
 ms.assetid: a84a19a4-9e0e-4736-b401-286e6618bc19
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ead06323b36e86dce36163769b329140279f240d
-ms.sourcegitcommit: 8fa6614b715bddf14648cce36d2df22e5232801a
+ms.openlocfilehash: c47e14935f913ce81b5faed5a49c3d731a73532f
+ms.sourcegitcommit: 51ef825fb48f15e1aa30e8795988f10dc2b2155c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "104102734"
+ms.lasthandoff: 06/14/2021
+ms.locfileid: "112068266"
 ---
-# <a name="fontname-property-balloon-object"></a>FontName-Eigenschaft (Sprechblasen Objekt)
+# <a name="fontname-property-balloon-object"></a>FontName-Eigenschaft (Balloon-Objekt)
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Microsoft Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht mehr verfügbar.\]
 
 <dl> <dt>
 
 <span id="Description"></span><span id="description"></span><span id="DESCRIPTION"></span>**Beschreibung**
 </dt> <dd>
 
-Gibt die in der Wort Sprechblase für das angegebene Zeichen verwendete Schriftart zurück oder legt diese fest.
+Gibt die Schriftart zurück, die im Wort balloon für das angegebene Zeichen verwendet wird, oder legt diese fest.
 
 </dd> <dt>
 
 <span id="Syntax"></span><span id="syntax"></span><span id="SYNTAX"></span>**Syntax**
 </dt> <dd>
 
-*Agent. *-**Zeichen ("**_Merkmal-ID_*_"). Sprechblase. FontName_( *  \[  =  *Schriftart* )\]
+*agent.***Characters("**_CharacterID_*_"). Balloon.FontName-Schriftart_ *  \[  =  \]
 
 
 
-| Teil   | BESCHREIBUNG                                      |
+| Teil   | Beschreibung                                      |
 |--------|--------------------------------------------------|
-| *Raster* | Ein Zeichen folgen Wert, der dem Namen der Schriftart entspricht. |
+| *Schriftart* | Ein Zeichenfolgenwert, der dem Namen der Schriftart entspricht. |
 
 
 
@@ -43,12 +43,12 @@ Gibt die in der Wort Sprechblase für das angegebene Zeichen verwendete Schrifta
 
 ## <a name="remarks"></a>Bemerkungen
 
-Die [**FontName**](fontname-property.md) -Eigenschaft definiert die Schriftart, die zum Anzeigen von Text im Word-sprecherfenster einer Zeichenfolge verwendet wird. Der Standardwert für die Schriftart Einstellungen der Word-Sprechblase eines Zeichens wird im Microsoft-Agent-Zeichen-Editor festgelegt. Außerdem kann der Benutzer die Schriftart Einstellungen für alle Zeichen auf dem Eigenschaften Blatt Microsoft-Agent überschreiben.
+Die [**FontName-Eigenschaft**](fontname-property.md) definiert die Schriftart, die zum Anzeigen von Text im Wortsprechblasenfenster einer Zeichenfolge verwendet wird. Der Standardwert für die Schriftarteinstellungen der Wortsprechblase eines Zeichens wird im Microsoft Agent-Zeichen-Editor festgelegt. Darüber hinaus kann der Benutzer Schriftarteinstellungen für alle Zeichen im Microsoft Agent-Eigenschaftenblatt überschreiben.
 
-Diese Eigenschaft gilt nur für die Verwendung des Zeichens durch die Client Anwendung. Diese Einstellung wirkt sich nicht auf andere Clients des Zeichens oder andere Zeichen ihrer Client Anwendung aus.
+Diese Eigenschaft gilt nur für die Verwendung des Zeichens durch Ihre Clientanwendung. Die Einstellung wirkt sich nicht auf andere Clients des Zeichens oder anderer Zeichen Ihrer Clientanwendung aus.
 
 > [!Note]  
-> Wenn Sie ein Zeichen verwenden, das Sie nicht kompiliert haben, überprüfen Sie die Eigenschaften [**FontName**](fontname-property.md) und [**fontcharset**](fontcharset-property.md) auf das Zeichen, um zu bestimmen, ob Sie für Ihr Gebiets Schema geeignet sind. Sie müssen diese Werte möglicherweise vor der Verwendung der [**Sprech**](speak-method.md) Methode festlegen, um die entsprechende Textanzeige innerhalb der Word-Sprechblase sicherzustellen.
+> Wenn Sie ein Zeichen verwenden, das Sie nicht kompiliert haben, überprüfen Sie die [**Eigenschaften FontName**](fontname-property.md) und [**FontCharSet**](fontcharset-property.md) für das Zeichen, um zu bestimmen, ob sie für Ihr Locale geeignet sind. Möglicherweise müssen Sie diese Werte festlegen, bevor Sie die [**Speak-Methode**](speak-method.md) verwenden, um eine geeignete Textanzeige im Wortsprechblasen zu gewährleisten.
 
  
 

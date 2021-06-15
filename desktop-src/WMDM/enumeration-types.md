@@ -1,42 +1,42 @@
 ---
 title: WMDM-Enumerationen
-description: Enumerationstypen
+description: Erfahren Sie mehr über die Von Windows Media Geräte-Manager definierten Enumerationen, z. B. WMDM_ENUM_PROP_VALID_VALUES_FORM und WMDM_FIND_SCOPE.
 ms.assetid: 205fe651-a712-4d9a-9ebf-bf7e8ec05ed0
 keywords:
-- Windows Media-Device Manager, Enumerationen
-- Device Manager, Enumerationen
-- Programmier Referenz, Enumerationen
-- Referenz für Windows Media-Device Manager, Enumerationen
+- Windows Media Geräte-Manager,Enumerationen
+- Geräte-Manager,Enumerationen
+- Programmierreferenz,Enumerationen
+- Referenz für Windows Media Geräte-Manager,Enumerationen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: fef8cc4922d00a8d9e32344316557d422cc61f38
-ms.sourcegitcommit: cba7f424a292fd7f3a8518947b9466439b455419
+ms.openlocfilehash: ec50acdfcf780f65a638c3761f3f6164d29afb74
+ms.sourcegitcommit: 51ef825fb48f15e1aa30e8795988f10dc2b2155c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "104389628"
+ms.lasthandoff: 06/14/2021
+ms.locfileid: "112067917"
 ---
 # <a name="wmdm-enumerations"></a>WMDM-Enumerationen
 
-In diesem Thema wird eine Funktion des Windows Media Device Manager SDK dokumentiert. Es wird empfohlen, die Anwendung für die Verwendung der Windows-API für tragbare Geräte zu migrieren. Weitere Informationen finden Sie im SDK für tragbare Windows-Geräte.
+In diesem Thema wird eine Funktion des Windows Media Geräte-Manager SDK dokumentiert. Es wird empfohlen, ihre Anwendung zur Verwendung der Windows Portable Devices-API zu migrieren. Weitere Informationen finden Sie unter Windows Portable Devices SDK.
 
-Windows Media Device Manager definiert die folgenden Enumerationen.
+Windows Media Geräte-Manager definiert die folgenden Enumerationen.
 
 
 
-| Enumerationstyp                                                                  | BESCHREIBUNG                                                                                     |
+| Enumerationstyp                                                                  | Beschreibung                                                                                     |
 |-----------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|
-| [**\_ \_ \_ Formular für gültige \_ Werte \_ für WMDM-Enumeration**](wmdm-enum-prop-valid-values-form.md) | Beschreibt mögliche Formen gültiger Werte für eine Eigenschaft.                                        |
-| [**WMDM-Such \_ \_ Bereich**](wmdm-find-scope.md)                                      | Definiert den Gültigkeitsbereich des Speicher Objekts.                                                        |
-| [**WMDM- \_ Formatcode**](wmdm-formatcode.md)                                       | Definiert eine Liste von Formatcodes, die Typen von Inhalten beschreiben, die an ein und von einem Gerät übertragen werden. |
-| [**WMDM \_ - \_ Sitzungstyp**](wmdm-session-type.md)                                  | Definiert den Sitzungstyp.                                                                       |
-| [**WMDM \_ - \_ speicherenum- \_ Modus**](wmdm-storage-enum-mode.md)                       | Definiert, wie der Inhalt des Speichers aufgezählt werden soll.                                     |
-| [**WMDM \_ - \_ tagdatatype**](wmdm-tag-datatype.md)                                  | Definiert einen Datentyp.                                                                            |
-| [**Wmdmmess**](wmdmmessage.md)                                                | Definiert Nachrichten Typen und-Zustände.                                                               |
+| [**WMDM \_ ENUM \_ PROP \_ VALID \_ VALUES \_ FORM**](wmdm-enum-prop-valid-values-form.md) | Beschreibt mögliche Formen gültiger Werte für eine Eigenschaft.                                        |
+| [**\_WMDM-SUCHBEREICH \_**](wmdm-find-scope.md)                                      | Definiert den Bereich des Speicherobjekts.                                                        |
+| [**WMDM \_ FORMATCODE**](wmdm-formatcode.md)                                       | Definiert eine Liste von Formatcodes, die Typen von Inhalten beschreiben, die an ein und von einem Gerät übertragen werden. |
+| [**\_WMDM-SITZUNGSTYP \_**](wmdm-session-type.md)                                  | Definiert den Sitzungstyp.                                                                       |
+| [**\_WMDM-SPEICHERENUM-MODUS \_ \_**](wmdm-storage-enum-mode.md)                       | Definiert, wie der Inhalt im Speicher aufzählt werden soll.                                     |
+| [**\_WMDM-TAGDATENTYP \_**](wmdm-tag-datatype.md)                                  | Definiert einen Datentyp.                                                                            |
+| [**WMDMMessage**](wmdmmessage.md)                                                | Definiert Nachrichtentypen und -zustände.                                                               |
 
 
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -45,9 +45,9 @@ Windows Media Device Manager definiert die folgenden Enumerationen.
 [**Programmierverzeichnis**](programming-reference.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

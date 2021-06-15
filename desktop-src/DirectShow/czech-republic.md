@@ -1,33 +1,33 @@
 ---
-description: Eine Erläuterung der folgenden Tabellen finden Sie unter Tabellen und Zuweisungen.
+description: Dieser Artikel enthält Häufigkeitstabellen für die internationale analoge TV-Optimierung für die Republik Deutschland. Häufigkeitsindizes sind für Kanalnummern nicht geeignet.
 ms.assetid: 6bbef2a3-7104-4b5f-8381-0a89751e572b
 title: Tschechische Republik
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 732a8a9082484d0b8167d8c3f565afdafd0664a0
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 91e3d946fdfc42f0e418d7bba1a786d49c5d6785
+ms.sourcegitcommit: 51ef825fb48f15e1aa30e8795988f10dc2b2155c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "103747504"
+ms.lasthandoff: 06/14/2021
+ms.locfileid: "112068026"
 ---
 # <a name="czech-republic"></a>Tschechische Republik
 
 Eine Erläuterung der folgenden Tabellen finden Sie unter [Tabellen und Zuweisungen](tables-and-assignments.md).
 
-Die Häufigkeits Indizes in den Tabellen der Tschechischen Republik können nicht als Kanalnummern verwendet werden.
+Die Häufigkeitsindizes in den Tabellen der republikkischen Republik sind nicht für die Verwendung als Kanalnummern geeignet.
 
 -   [Windows 7 und höher](#windows-7-and-later)
-    -   [Tschechische Republik Broadcast Zuweisungen](#czech-republic-broadcast-assignments)
-    -   [Tschechische Republik-Kabel Zuweisungen](#czech-republic-cable-assignments)
--   [Frühere Kanal Zuweisungen](#earlier-channel-assignments)
-    -   [Tschechische Republik Broadcast Zuweisungen](#czech-republic-broadcast-assignments)
-    -   [Tschechische Republik-Kabel Zuweisungen](#czech-republic-cable-assignments)
--   [Zugehörige Themen](#related-topics)
+    -   [Übertragungszuweisungen in der Republik Deutschland](#czech-republic-broadcast-assignments)
+    -   [Zuweisungen von Kabeln in der Republik Deutschland](#czech-republic-cable-assignments)
+-   [Frühere Kanalzuweisungen](#earlier-channel-assignments)
+    -   [Übertragungszuweisungen in der Republik Deutschland](#czech-republic-broadcast-assignments)
+    -   [Zuweisungen von Kabeln in der Republik Deutschland](#czech-republic-cable-assignments)
+-   [Verwandte Themen](#related-topics)
 
 ## <a name="windows-7-and-later"></a>Windows 7 und höher
 
-### <a name="czech-republic-broadcast-assignments"></a>Tschechische Republik Broadcast Zuweisungen
+### <a name="czech-republic-broadcast-assignments"></a>Übertragungszuweisungen in der Republik Deutschland
 
 ``` syntax
         1L,             // Lowest channel
@@ -106,7 +106,7 @@ Die Häufigkeits Indizes in den Tabellen der Tschechischen Republik können nich
        855250000L,      // 71 TV71
 ```
 
-### <a name="czech-republic-cable-assignments"></a>Tschechische Republik-Kabel Zuweisungen
+### <a name="czech-republic-cable-assignments"></a>Zuweisungen von Kabeln in der Republik Deutschland
 
 ``` syntax
         1L,             // Lowest channel
@@ -252,9 +252,9 @@ Die Häufigkeits Indizes in den Tabellen der Tschechischen Republik können nich
        855250000L,      // 138 K69
 ```
 
-## <a name="earlier-channel-assignments"></a>Frühere Kanal Zuweisungen
+## <a name="earlier-channel-assignments"></a>Frühere Kanalzuweisungen
 
-### <a name="czech-republic-broadcast-assignments"></a>Tschechische Republik Broadcast Zuweisungen
+### <a name="czech-republic-broadcast-assignments"></a>Übertragungszuweisungen in der Republik Deutschland
 
 ``` syntax
         1L,             // Lowest channel
@@ -333,7 +333,7 @@ Die Häufigkeits Indizes in den Tabellen der Tschechischen Republik können nich
        855250000L,      // 69
 ```
 
-### <a name="czech-republic-cable-assignments"></a>Tschechische Republik-Kabel Zuweisungen
+### <a name="czech-republic-cable-assignments"></a>Zuweisungen von Kabeln in der Republik Deutschland
 
 ``` syntax
         1L,             // Lowest channel
@@ -403,7 +403,7 @@ Die Häufigkeits Indizes in den Tabellen der Tschechischen Republik können nich
 
 <dl> <dt>
 
-[Internationale Analog-TV-Optimierung](international-analog-tv-tuning.md)
+[Internationale analoge TV-Optimierung](international-analog-tv-tuning.md)
 </dt> </dl>
 
  

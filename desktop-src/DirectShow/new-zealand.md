@@ -1,33 +1,33 @@
 ---
-description: Eine Erläuterung der folgenden Tabellen finden Sie unter Tabellen und Zuweisungen.
+description: Dieser Artikel enthält Häufigkeitstabellen für die internationale analoge TV-Optimierung für Neuseeland. Häufigkeitsindizes eignen sich nicht für Kanalnummern.
 ms.assetid: a314d0b1-9e4f-42dd-914a-65a8f3610300
 title: Neuseeland
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b56d806951fff53a674870b446167c2599838cd4
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 9879e89f6460ab25aa93594001068526404dcd84
+ms.sourcegitcommit: 51ef825fb48f15e1aa30e8795988f10dc2b2155c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104480750"
+ms.lasthandoff: 06/14/2021
+ms.locfileid: "112067985"
 ---
 # <a name="new-zealand"></a>Neuseeland
 
-Eine Erläuterung der folgenden Tabellen finden Sie unter [Tabellen und Zuweisungen](tables-and-assignments.md).
+Eine Erläuterung der folgenden Tabellen finden Sie unter [Tabellen und Zuweisungen.](tables-and-assignments.md)
 
-Die Häufigkeits Indizes in der New Zealand-Broadcast Tabelle sind für die Verwendung als Kanalnummern geeignet. die Indizes für die Kabel Frequenz können nicht als Kanalnummern verwendet werden.
+Die Häufigkeitsindizes in der Neuseeländischen Broadcasttabelle eignen sich für die Verwendung als Kanalnummern. Die Kabelfrequenzindizes sind nicht für die Verwendung als Kanalnummern geeignet.
 
 -   [Windows 7 und höher](#windows-7-and-later)
-    -   [New-Zealand-Broadcast Zuweisungen](#new-zealand-broadcast-assignments)
-    -   [Neuseeland-Kabel Zuweisungen](#new-zealand-cable-assignments)
--   [Frühere Kanal Zuweisungen](#earlier-channel-assignments)
-    -   [New-Zealand-Broadcast Zuweisungen](#new-zealand-broadcast-assignments)
-    -   [Neuseeland-Kabel Zuweisungen](#new-zealand-cable-assignments)
--   [Zugehörige Themen](#related-topics)
+    -   [Neuseeländische Broadcastzuweisungen](#new-zealand-broadcast-assignments)
+    -   [Neuseeländische Kabelzuweisungen](#new-zealand-cable-assignments)
+-   [Frühere Kanalzuweisungen](#earlier-channel-assignments)
+    -   [Neuseeländische Broadcastzuweisungen](#new-zealand-broadcast-assignments)
+    -   [Neuseeländische Kabelzuweisungen](#new-zealand-cable-assignments)
+-   [Verwandte Themen](#related-topics)
 
 ## <a name="windows-7-and-later"></a>Windows 7 und höher
 
-### <a name="new-zealand-broadcast-assignments"></a>New-Zealand-Broadcast Zuweisungen
+### <a name="new-zealand-broadcast-assignments"></a>Neuseeländische Broadcastzuweisungen
 
 ``` syntax
         1L,             // Lowest channel
@@ -84,7 +84,7 @@ Die Häufigkeits Indizes in der New Zealand-Broadcast Tabelle sind für die Verw
        815000000L,      // 49 TV63_Cable
 ```
 
-### <a name="new-zealand-cable-assignments"></a>Neuseeland-Kabel Zuweisungen
+### <a name="new-zealand-cable-assignments"></a>Neuseeländische Kabelzuweisungen
 
 ``` syntax
          1L,            // Lowest channel
@@ -142,9 +142,9 @@ Die Häufigkeits Indizes in der New Zealand-Broadcast Tabelle sind für die Verw
        799250000L,      // 49   E62 
 ```
 
-## <a name="earlier-channel-assignments"></a>Frühere Kanal Zuweisungen
+## <a name="earlier-channel-assignments"></a>Frühere Kanalzuweisungen
 
-### <a name="new-zealand-broadcast-assignments"></a>New-Zealand-Broadcast Zuweisungen
+### <a name="new-zealand-broadcast-assignments"></a>Neuseeländische Broadcastzuweisungen
 
 ``` syntax
         1L,             // Lowest channel
@@ -164,7 +164,7 @@ Die Häufigkeits Indizes in der New Zealand-Broadcast Tabelle sind für die Verw
        224250000L,      // 11
 ```
 
-### <a name="new-zealand-cable-assignments"></a>Neuseeland-Kabel Zuweisungen
+### <a name="new-zealand-cable-assignments"></a>Neuseeländische Kabelzuweisungen
 
 ``` syntax
          1L,            // Lowest channel
@@ -226,7 +226,7 @@ Die Häufigkeits Indizes in der New Zealand-Broadcast Tabelle sind für die Verw
 
 <dl> <dt>
 
-[Internationale Analog-TV-Optimierung](international-analog-tv-tuning.md)
+[Internationale Analog TV-Optimierung](international-analog-tv-tuning.md)
 </dt> </dl>
 
  
