@@ -1,33 +1,33 @@
 ---
-description: Eine Erläuterung der folgenden Tabellen finden Sie unter Tabellen und Zuweisungen.
+description: Dieser Artikel enthält Häufigkeitstabellen für die internationale analoge TV-Optimierung für Spanien. Häufigkeitsindizes sind für Kanalnummern nicht geeignet.
 ms.assetid: 955fb828-4290-4e60-a5db-d3f243b86d8d
 title: Italien
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1c92fd079a61b95b2007134b17601f6f3dfbfbc4
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: f1e74092318cfbc889f9173685176d48d6b72fc0
+ms.sourcegitcommit: 51ef825fb48f15e1aa30e8795988f10dc2b2155c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "106339653"
+ms.lasthandoff: 06/14/2021
+ms.locfileid: "112068576"
 ---
-# <a name="italy"></a><span data-ttu-id="b5601-103">Italien</span><span class="sxs-lookup"><span data-stu-id="b5601-103">Italy</span></span>
+# <a name="italy"></a><span data-ttu-id="66028-104">Italien</span><span class="sxs-lookup"><span data-stu-id="66028-104">Italy</span></span>
 
-<span data-ttu-id="b5601-104">Eine Erläuterung der folgenden Tabellen finden Sie unter [Tabellen und Zuweisungen](tables-and-assignments.md).</span><span class="sxs-lookup"><span data-stu-id="b5601-104">For an explanation of the following tables, see [Tables and Assignments](tables-and-assignments.md).</span></span>
+<span data-ttu-id="66028-105">Eine Erläuterung der folgenden Tabellen finden Sie unter [Tabellen und Zuweisungen](tables-and-assignments.md).</span><span class="sxs-lookup"><span data-stu-id="66028-105">For an explanation of the following tables, see [Tables and Assignments](tables-and-assignments.md).</span></span>
 
-<span data-ttu-id="b5601-105">Die Häufigkeits Indizes in den Italien-Tabellen sind nicht für die Verwendung als Kanalnummern geeignet.</span><span class="sxs-lookup"><span data-stu-id="b5601-105">The frequency indexes in the Italy tables are not suitable for use as channel numbers.</span></span>
+<span data-ttu-id="66028-106">Die Häufigkeitsindizes in den Tabellen "Spanien" sind nicht für die Verwendung als Kanalnummern geeignet.</span><span class="sxs-lookup"><span data-stu-id="66028-106">The frequency indexes in the Italy tables are not suitable for use as channel numbers.</span></span>
 
--   [<span data-ttu-id="b5601-106">Windows 7 und höher</span><span class="sxs-lookup"><span data-stu-id="b5601-106">Windows 7 and Later</span></span>](#windows-7-and-later)
-    -   [<span data-ttu-id="b5601-107">Italien-Broadcast Zuweisungen</span><span class="sxs-lookup"><span data-stu-id="b5601-107">Italy Broadcast Assignments</span></span>](#italy-broadcast-assignments)
-    -   [<span data-ttu-id="b5601-108">Italien-Kabel Zuweisungen</span><span class="sxs-lookup"><span data-stu-id="b5601-108">Italy Cable Assignments</span></span>](#italy-cable-assignments)
--   [<span data-ttu-id="b5601-109">Frühere Kanal Zuweisungen</span><span class="sxs-lookup"><span data-stu-id="b5601-109">Earlier Channel Assignments</span></span>](#earlier-channel-assignments)
-    -   [<span data-ttu-id="b5601-110">Italien-Broadcast Zuweisungen</span><span class="sxs-lookup"><span data-stu-id="b5601-110">Italy Broadcast Assignments</span></span>](#italy-broadcast-assignments)
-    -   [<span data-ttu-id="b5601-111">Italien-Kabel Zuweisungen</span><span class="sxs-lookup"><span data-stu-id="b5601-111">Italy Cable Assignments</span></span>](#italy-cable-assignments)
--   [<span data-ttu-id="b5601-112">Zugehörige Themen</span><span class="sxs-lookup"><span data-stu-id="b5601-112">Related topics</span></span>](#related-topics)
+-   [<span data-ttu-id="66028-107">Windows 7 und höher</span><span class="sxs-lookup"><span data-stu-id="66028-107">Windows 7 and Later</span></span>](#windows-7-and-later)
+    -   [<span data-ttu-id="66028-108">Broadcastzuweisungen in Spanien</span><span class="sxs-lookup"><span data-stu-id="66028-108">Italy Broadcast Assignments</span></span>](#italy-broadcast-assignments)
+    -   [<span data-ttu-id="66028-109">Italienische Kabelzuweisungen</span><span class="sxs-lookup"><span data-stu-id="66028-109">Italy Cable Assignments</span></span>](#italy-cable-assignments)
+-   [<span data-ttu-id="66028-110">Frühere Kanalzuweisungen</span><span class="sxs-lookup"><span data-stu-id="66028-110">Earlier Channel Assignments</span></span>](#earlier-channel-assignments)
+    -   [<span data-ttu-id="66028-111">Broadcastzuweisungen in Spanien</span><span class="sxs-lookup"><span data-stu-id="66028-111">Italy Broadcast Assignments</span></span>](#italy-broadcast-assignments)
+    -   [<span data-ttu-id="66028-112">Italienische Kabelzuweisungen</span><span class="sxs-lookup"><span data-stu-id="66028-112">Italy Cable Assignments</span></span>](#italy-cable-assignments)
+-   [<span data-ttu-id="66028-113">Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="66028-113">Related topics</span></span>](#related-topics)
 
-## <a name="windows-7-and-later"></a><span data-ttu-id="b5601-113">Windows 7 und höher</span><span class="sxs-lookup"><span data-stu-id="b5601-113">Windows 7 and Later</span></span>
+## <a name="windows-7-and-later"></a><span data-ttu-id="66028-114">Windows 7 und höher</span><span class="sxs-lookup"><span data-stu-id="66028-114">Windows 7 and Later</span></span>
 
-### <a name="italy-broadcast-assignments"></a><span data-ttu-id="b5601-114">Italien-Broadcast Zuweisungen</span><span class="sxs-lookup"><span data-stu-id="b5601-114">Italy Broadcast Assignments</span></span>
+### <a name="italy-broadcast-assignments"></a><span data-ttu-id="66028-115">Broadcastzuweisungen in Spanien</span><span class="sxs-lookup"><span data-stu-id="66028-115">Italy Broadcast Assignments</span></span>
 
 ``` syntax
         1L,             // Lowest channel
@@ -104,7 +104,7 @@ ms.locfileid: "106339653"
        855250000L,      // 69 TV69
 ```
 
-### <a name="italy-cable-assignments"></a><span data-ttu-id="b5601-115">Italien-Kabel Zuweisungen</span><span class="sxs-lookup"><span data-stu-id="b5601-115">Italy Cable Assignments</span></span>
+### <a name="italy-cable-assignments"></a><span data-ttu-id="66028-116">Italienische Kabelzuweisungen</span><span class="sxs-lookup"><span data-stu-id="66028-116">Italy Cable Assignments</span></span>
 
 ``` syntax
          1L,            // Lowest channel
@@ -133,9 +133,9 @@ ms.locfileid: "106339653"
        305250000L,      // 20 Not used
 ```
 
-## <a name="earlier-channel-assignments"></a><span data-ttu-id="b5601-116">Frühere Kanal Zuweisungen</span><span class="sxs-lookup"><span data-stu-id="b5601-116">Earlier Channel Assignments</span></span>
+## <a name="earlier-channel-assignments"></a><span data-ttu-id="66028-117">Frühere Kanalzuweisungen</span><span class="sxs-lookup"><span data-stu-id="66028-117">Earlier Channel Assignments</span></span>
 
-### <a name="italy-broadcast-assignments"></a><span data-ttu-id="b5601-117">Italien-Broadcast Zuweisungen</span><span class="sxs-lookup"><span data-stu-id="b5601-117">Italy Broadcast Assignments</span></span>
+### <a name="italy-broadcast-assignments"></a><span data-ttu-id="66028-118">Broadcastzuweisungen in Spanien</span><span class="sxs-lookup"><span data-stu-id="66028-118">Italy Broadcast Assignments</span></span>
 
 ``` syntax
          1L,             // Lowest channel
@@ -214,7 +214,7 @@ ms.locfileid: "106339653"
        855250000L,      // 69
 ```
 
-### <a name="italy-cable-assignments"></a><span data-ttu-id="b5601-118">Italien-Kabel Zuweisungen</span><span class="sxs-lookup"><span data-stu-id="b5601-118">Italy Cable Assignments</span></span>
+### <a name="italy-cable-assignments"></a><span data-ttu-id="66028-119">Italienische Kabelzuweisungen</span><span class="sxs-lookup"><span data-stu-id="66028-119">Italy Cable Assignments</span></span>
 
 ``` syntax
          1L,            // Lowest channel
@@ -243,11 +243,11 @@ ms.locfileid: "106339653"
        305250000L,      // 20 Not used
 ```
 
-## <a name="related-topics"></a><span data-ttu-id="b5601-119">Zugehörige Themen</span><span class="sxs-lookup"><span data-stu-id="b5601-119">Related topics</span></span>
+## <a name="related-topics"></a><span data-ttu-id="66028-120">Zugehörige Themen</span><span class="sxs-lookup"><span data-stu-id="66028-120">Related topics</span></span>
 
 <dl> <dt>
 
-[<span data-ttu-id="b5601-120">Internationale Analog-TV-Optimierung</span><span class="sxs-lookup"><span data-stu-id="b5601-120">International Analog TV Tuning</span></span>](international-analog-tv-tuning.md)
+[<span data-ttu-id="66028-121">Internationale analoge TV-Optimierung</span><span class="sxs-lookup"><span data-stu-id="66028-121">International Analog TV Tuning</span></span>](international-analog-tv-tuning.md)
 </dt> </dl>
 
  
