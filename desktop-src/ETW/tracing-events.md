@@ -1,62 +1,62 @@
 ---
-description: Bevor Sie Ereignisse in eine Ablauf Verfolgungs Sitzung schreiben können, müssen Sie den Anbieter registrieren.
+description: Erfahren Sie mehr über das Schreiben von MOF-Ereignissen in eine Ablaufverfolgungssitzung. Beginnen Sie mit der Registrierung Ihres Anbieters, damit er bereit ist, Ereignisse in eine Ablaufverfolgungssitzung zu schreiben.
 ms.assetid: 21f62b5d-0a2d-468c-af88-2fab1512f0ec
 title: Schreiben von MOF-Ereignissen (klassisch)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9d3d041e2792540d4a05637bcffdb67e1164a95b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
-ms.translationtype: HT
+ms.openlocfilehash: 29d081c48567851d2fb570dd7bfa5c75e687b524
+ms.sourcegitcommit: d0eb44d0a95f5e5efbfec3d3e9c143f5cba25bc3
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104980905"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112261842"
 ---
 # <a name="writing-mof-classic-events"></a>Schreiben von MOF-Ereignissen (klassisch)
 
-Bevor Sie Ereignisse in eine Ablauf Verfolgungs Sitzung schreiben können, müssen Sie den Anbieter registrieren. Wenn Sie einen Anbieter registrieren, wird etw mitgeteilt, dass der Anbieter zum Schreiben von Ereignissen in eine Ablauf Verfolgungs Sitzung bereit ist. Ein Prozess kann bis zu 1.024 Anbieter-GUIDs registrieren. Sie sollten jedoch die Anzahl der Anbieter, die Ihr Prozess registriert, auf einen oder zwei beschränken.
+Bevor Sie Ereignisse in eine Ablaufverfolgungssitzung schreiben können, müssen Sie Ihren Anbieter registrieren. Durch die Registrierung eines Anbieters wird ETW mitgeteilt, dass Ihr Anbieter bereit ist, Ereignisse in eine Ablaufverfolgungssitzung zu schreiben. Ein Prozess kann bis zu 1.024 Anbieter-GUIDs registrieren. Sie sollten jedoch die Anzahl der Anbieter, die ihr Prozess registriert, auf ein oder zwei beschränken.
 
 **Vor Windows Vista:** Es gibt keine Beschränkung für die Anzahl der Anbieter, die ein Prozess registrieren kann.
 
-Um einen klassischen Anbieter zu registrieren, müssen Sie die Funktion [**registertraceguids**](/windows/win32/api/evntrace/nf-evntrace-registertraceguidsa) aufrufen. Die-Funktion registriert die GUID des Anbieters, Ereignis Ablauf Verfolgungs Klasse-GUIDs und identifiziert den Rückruf, der von etw aufgerufen wird, wenn ein Controller den Anbieter aktiviert oder deaktiviert.
+Um einen klassischen Anbieter zu registrieren, rufen Sie die [**RegisterTraceGuids-Funktion**](/windows/win32/api/evntrace/nf-evntrace-registertraceguidsa) auf. Die Funktion registriert die GUID des Anbieters und die GUIDs der Ereignisablaufverfolgungsklasse und identifiziert den Rückruf, den ETW aufruft, wenn ein Controller den Anbieter aktiviert oder deaktiviert.
 
-Wenn der Anbieter die [**TraceEvent**](/windows/win32/api/evntrace/nf-evntrace-traceevent) -Funktion aufruft, um Ereignisse zu protokollieren, müssen Sie beim Aufrufen der [**registertraceguids**](/windows/win32/api/evntrace/nf-evntrace-registertraceguidsa) -Funktion nicht das Array der Klassen-GUIDs (kann **null** sein) einschließen. Sie müssen das Array nur einschließen, wenn der Anbieter die [**traceeventinstance**](/windows/win32/api/evntrace/nf-evntrace-traceeventinstance) -Funktion aufruft, um Ereignisse zu protokollieren.
+Wenn der Anbieter die [**TraceEvent-Funktion**](/windows/win32/api/evntrace/nf-evntrace-traceevent) aufruft, um Ereignisse zu protokollieren, müssen Sie beim Aufrufen der [**RegisterTraceGuids-Funktion**](/windows/win32/api/evntrace/nf-evntrace-registertraceguidsa) kein Array von Klassen-GUIDs (kann **NULL** sein) einschließen. Sie müssen das Array nur einschließen, wenn der Anbieter die [**TraceEventInstance-Funktion**](/windows/win32/api/evntrace/nf-evntrace-traceeventinstance) aufruft, um Ereignisse zu protokollieren.
 
-**Windows XP und Windows 2000:** Sie müssen immer das Array der Klassen-GUIDs einschließen (darf nicht **null** sein).
+**Windows XP und Windows 2000:** Sie müssen immer das Array der Klassen-GUIDs einschließen (darf nicht **NULL** sein).
 
-Nachdem sich ein Anbieter selbst registriert und durch den Controller aktiviert wurde, kann der Anbieter Ereignisse in der Ablauf Verfolgungs Sitzung des Controllers protokollieren.
+Nachdem sich ein Anbieter registriert und vom Controller aktiviert wurde, kann der Anbieter Ereignisse in der Ablaufverfolgungssitzung des Controllers protokollieren.
 
-Bevor der Anbieter beendet wird, müssen Sie die [**unregistertraceguids**](/windows/win32/api/evntrace/nf-evntrace-unregistertraceguids) -Funktion aufrufen, um die Registrierung des Anbieters von etw zu entfernen. Die [**registertraceguids**](/windows/win32/api/evntrace/nf-evntrace-registertraceguidsa) -Funktion gibt das Registrierungs Handle zurück, das Sie an die **unregistertraceguids** -Funktion übergeben.
+Rufen Sie vor dem Beenden des Anbieters die [**UnregisterTraceGuids-Funktion**](/windows/win32/api/evntrace/nf-evntrace-unregistertraceguids) auf, um die Registrierung des Anbieters aus ETW zu entfernen. Die [**RegisterTraceGuids-Funktion**](/windows/win32/api/evntrace/nf-evntrace-registertraceguidsa) gibt das Registrierungshandle zurück, das Sie an die **UnregisterTraceGuids-Funktion** übergeben.
 
-Wenn Ihr Anbieter Ereignisse nur in der globalen Protokollierungs Sitzung protokolliert, müssen Sie den Anbieter nicht bei etw registrieren, da der globale Protokollierungs Controller Anbieter nicht aktiviert oder deaktiviert. Weitere Informationen finden Sie unter [Konfigurieren und Starten der globalen](configuring-and-starting-the-global-logger-session.md)Protokollierungs Sitzung.
+Wenn Ihr Anbieter ereignisse nur in der Global Logger-Sitzung protokolliert, müssen Sie Ihren Anbieter nicht bei ETW registrieren, da der Globale Protokollierungscontroller anbieter nicht aktiviert oder deaktiviert. Weitere Informationen finden Sie unter [Konfigurieren und Starten der globalen Protokollierungssitzung.](configuring-and-starting-the-global-logger-session.md)
 
-Alle [klassischen](about-event-tracing.md) Anbieter (mit Ausnahme derjenigen, die Ereignisse in der globalen Protokollierungs Sitzung verfolgen) müssen die [**controlcallback**](/windows/win32/api/evntrace/nc-evntrace-wmidprequest) -Funktion implementieren. Der Anbieter verwendet die Informationen im Rückruf, um zu bestimmen, ob er aktiviert oder deaktiviert ist und welche Ereignisse er schreiben soll.
+Alle [klassischen](about-event-tracing.md) Anbieter (mit Ausnahme derjenigen, die Ereignisse auf die Globale Protokollierungssitzung verfolgen) müssen die [**ControlCallback-Funktion**](/windows/win32/api/evntrace/nc-evntrace-wmidprequest) implementieren. Der Anbieter verwendet die Informationen im Rückruf, um zu bestimmen, ob er aktiviert oder deaktiviert ist und welche Ereignisse geschrieben werden sollen.
 
-Der Anbieter gibt den Namen der Rückruffunktion an, wenn die [**registertraceguids**](/windows/win32/api/evntrace/nf-evntrace-registertraceguidsa) -Funktion aufgerufen wird, um sich selbst zu registrieren. Etw Ruft die Rückruffunktion auf, wenn der Controller die Funktion [**EnableTrace**](/windows/win32/api/evntrace/nf-evntrace-enabletrace) aufruft, um den Anbieter zu aktivieren oder zu deaktivieren.
+Der Anbieter gibt den Namen der Rückruffunktion an, wenn er die [**RegisterTraceGuids-Funktion**](/windows/win32/api/evntrace/nf-evntrace-registertraceguidsa) aufruft, um sich selbst zu registrieren. ETW ruft die Rückruffunktion auf, wenn der Controller die [**EnableTrace-Funktion aufruft,**](/windows/win32/api/evntrace/nf-evntrace-enabletrace) um den Anbieter zu aktivieren oder zu deaktivieren.
 
-In Ihrer [**controlcallback**](/windows/win32/api/evntrace/nc-evntrace-wmidprequest) -Implementierung müssen Sie die [**gettraceloggerhandle**](/windows/win32/api/evntrace/nf-evntrace-gettraceloggerhandle) -Funktion aufrufen, um das Sitzungs Handle abzurufen. Sie verwenden das Sitzungs handle, wenn Sie die [**TraceEvent**](/windows/win32/api/evntrace/nf-evntrace-traceevent) -Funktion aufrufen. Sie müssen nur die [**gettraceenableflags**](/windows/win32/api/evntrace/nf-evntrace-gettraceenableflags) -Funktion oder die [**gettraceenablelevel**](/windows/win32/api/evntrace/nf-evntrace-gettraceenablelevel) -Funktion in der **controlcallback** -Implementierung aufrufen, wenn Ihr Anbieter die Aktivierungsstufe enable oder Enable Flags verwendet.
+In ihrer [**ControlCallback-Implementierung**](/windows/win32/api/evntrace/nc-evntrace-wmidprequest) müssen Sie die [**GetTraceLoggerHandle-Funktion**](/windows/win32/api/evntrace/nf-evntrace-gettraceloggerhandle) aufrufen, um das Sitzungshandle abzurufen. Sie verwenden das Sitzungshandle, wenn Sie die [**TraceEvent-Funktion**](/windows/win32/api/evntrace/nf-evntrace-traceevent) aufrufen. Sie müssen nur die [**GetTraceEnableFlags-Funktion**](/windows/win32/api/evntrace/nf-evntrace-gettraceenableflags) oder die [**GetTraceEnableLevel-Funktion**](/windows/win32/api/evntrace/nf-evntrace-gettraceenablelevel) in Ihrer **ControlCallback-Implementierung** aufrufen, wenn Ihr Anbieter die Aktivierungsebene oder enable-Flags verwendet.
 
-Ein Anbieter kann Ablauf Verfolgungs Ereignisse nur an eine Sitzung protokollieren, es gibt jedoch nichts, um zu verhindern, dass mehrere Controller einen einzelnen Anbieter aktivieren. Um zu verhindern, dass ein anderer Controller die Ablauf Verfolgungs Ereignisse an seine Sitzung umleitet, empfiehlt es sich, der [**controlcallback**](/windows/win32/api/evntrace/nc-evntrace-wmidprequest) -Implementierung Logik hinzuzufügen, um Sitzungs Handles zu vergleichen und die Aktivierung von Anforderungen von anderen Controllern zu ignorieren.
+Ein Anbieter kann Ablaufverfolgungsereignisse nur in einer Sitzung protokollieren, aber es gibt nichts, was mehrere Controller daran hindert, einen einzelnen Anbieter zu aktivieren. Um zu verhindern, dass ein anderer Controller Ihre Ablaufverfolgungsereignisse an seine Sitzung umleitet, können Sie Ihrer [**ControlCallback-Implementierung**](/windows/win32/api/evntrace/nc-evntrace-wmidprequest) Logik hinzufügen, um Sitzungshandles zu vergleichen und Aktivierungsanforderungen von anderen Controllern zu ignorieren.
 
-Zum Protokollieren von Ereignissen wird von [klassischen](about-event-tracing.md) Anbietern die [**TraceEvent**](/windows/win32/api/evntrace/nf-evntrace-traceevent) -Funktion aufgerufen. Ein Ereignis besteht aus der [**Ereignis Ablauf \_ Verfolgungs \_ Header**](/windows/win32/api/evntrace/ns-evntrace-event_trace_header) -Struktur und allen ereignisspezifischen Daten, die an den Header angehängt werden.
+Zum Protokollieren von Ereignissen rufen [klassische](about-event-tracing.md) Anbieter die [**TraceEvent-Funktion**](/windows/win32/api/evntrace/nf-evntrace-traceevent) auf. Ein Ereignis besteht aus der [**EVENT \_ TRACE \_ HEADER-Struktur**](/windows/win32/api/evntrace/ns-evntrace-event_trace_header) und allen ereignisspezifischen Daten, die an den Header angefügt werden.
 
 Der Header muss die folgenden Informationen enthalten:
 
--   Der **size** -Member muss die Gesamtzahl der Bytes enthalten, die für das Ereignis aufgezeichnet werden sollen (einschließlich der Größe der Ereignis-Ablauf [**\_ Verfolgungs \_ Header**](/windows/win32/api/evntrace/ns-evntrace-event_trace_header) -Struktur und von ereignisspezifischen Daten, die an den Header angefügt werden).
--   Der **GUID** -Member muss die Klassen-GUID des Ereignisses enthalten (oder der **guidptr** -Member muss einen Zeiger auf die Klassen-GUID enthalten).
+-   Der **Size-Member** muss die Gesamtzahl der Bytes enthalten, die für das Ereignis aufgezeichnet werden sollen (einschließlich der Größe der [**EVENT TRACE \_ \_ HEADER-Struktur**](/windows/win32/api/evntrace/ns-evntrace-event_trace_header) und aller ereignisspezifischen Daten, die an den Header angefügt werden).
+-   Der **Guid-Member** muss die Klassen-GUID des Ereignisses enthalten (oder der **GuidPtr-Member** muss einen Zeiger auf die Klassen-GUID enthalten).
 
-    **Windows XP und Windows 2000:** Die Klassen-GUID muss zuvor mithilfe der [**registertraceguids**](/windows/win32/api/evntrace/nf-evntrace-registertraceguidsa) -Funktion registriert worden sein.
+    **Windows XP und Windows 2000:** Die Klassen-GUID muss zuvor mit der [**RegisterTraceGuids-Funktion**](/windows/win32/api/evntrace/nf-evntrace-registertraceguidsa) registriert worden sein.
 
--   Der **Flags** -Member muss das Flag für die nach **\_ \_ verfolgte \_ GUID des wnode** -Flags enthalten. Wenn Sie die Klassen-GUID mit dem **guidptr** -Member angeben, fügen Sie auch das **wnode- \_ Flag \_ use \_ GUID \_ ptr** -Flag hinzu.
--   Der **Class. Type** -Member muss den Ereignistyp enthalten, wenn Sie das Layout der Ereignisdaten mit MOF veröffentlichen.
--   Der Member **Class. Version** muss die Ereignis Version enthalten, wenn Sie das Layout der Ereignisdaten mit MOF veröffentlichen. Die-Version wird verwendet, um zwischen Revisionen der Ereignisdaten zu unterscheiden. Legen Sie die anfängliche Versionsnummer auf 0 fest.
+-   Der **Flags-Member** muss das **\_ \_ \_ GUID-Flag WNODE FLAG TRACED** enthalten. Wenn Sie die Klassen-GUID mithilfe des **GuidPtr-Members** angeben, fügen Sie auch das **FLAG WNODE \_ FLAG USE \_ \_ GUID \_ PTR** hinzu.
+-   Der **Class.Type-Member** muss den Ereignistyp enthalten, wenn Sie MOF verwenden, um das Layout Ihrer Ereignisdaten zu veröffentlichen.
+-   Der **Class.Version-Member** muss die Ereignisversion enthalten, wenn Sie MOF verwenden, um das Layout Ihrer Ereignisdaten zu veröffentlichen. Die Version wird verwendet, um zwischen Revisionen der Ereignisdaten zu unterscheiden. Legen Sie die anfängliche Versionsnummer auf 0 fest.
 
-Wenn Sie sowohl den Anbieter als auch den Consumer schreiben, können Sie eine-Struktur verwenden, um die ereignisspezifischen Daten aufzufüllen, die an den-Header angefügt werden. Wenn Sie jedoch MOF zum Veröffentlichen der ereignisspezifischen Daten verwenden, sodass alle Consumer das Ereignis verarbeiten können, sollten Sie keine-Struktur verwenden, um die ereignisspezifischen Daten an den-Header anzuhängen. Dies liegt daran, dass der Compiler den ereignisspezifischen Daten für Byte-Ausrichtungs Zwecke zusätzliche Bytes hinzufügen kann. Da in der MOF-Definition die zusätzlichen Bytes nicht berücksichtigt werden, kann der Consumer Daten abrufen, die nicht gültig sind.
+Wenn Sie sowohl den Anbieter als auch den Consumer schreiben, können Sie eine -Struktur verwenden, um die ereignisspezifischen Daten aufzufüllen, die an den Header angefügt werden. Wenn Sie jedoch MOF verwenden, um die ereignisspezifischen Daten zu veröffentlichen, sodass jeder Consumer das Ereignis verarbeiten kann, sollten Sie keine -Struktur verwenden, um die ereignisspezifischen Daten an den Header anzufügen. Dies liegt daran, dass der Compiler den ereignisspezifischen Daten zu Byteausrichtungszwecken zusätzliche Bytes hinzufügen kann. Da die MOF-Definition die zusätzlichen Bytes nicht berücksichtigt, ruft der Consumer möglicherweise ungültige Daten ab.
 
-Sie sollten entweder einen Speicherblock für das Ereignis zuordnen und jedes Ereignisdaten Element in den Speicher kopieren oder eine Struktur erstellen, die ein Array von [**MOF- \_ Feld**](/windows/win32/api/evntrace/ns-evntrace-mof_field) Strukturen enthält. die meisten Anwendungen erstellen eine Struktur, die ein Array von **MOF- \_ Feld** Strukturen enthält. Stellen Sie sicher, dass **Header. Size** die tatsächliche Anzahl der **MOF- \_ Feld** Strukturen angibt, die vor dem Protokollieren des Ereignisses tatsächlich festgelegt sind. Wenn das Ereignis z. b. drei Datenfelder enthält, legen Sie **Header. Size** auf sizeof (Ereignis Ablauf \_ Verfolgungs \_ Header) + (sizeof (MOF- \_ Feld) \* 3) fest.
+Sie sollten entweder einen Speicherblock für das Ereignis zuordnen und jedes Ereignisdatenelement in den Arbeitsspeicher kopieren oder eine Struktur erstellen, die ein Array von [**MOF \_ FIELD-Strukturen**](/windows/win32/api/evntrace/ns-evntrace-mof_field) enthält. Die meisten Anwendungen erstellen eine -Struktur, die ein Array von **MOF \_ FIELD-Strukturen** enthält. Stellen Sie sicher, dass **Header.Size** die tatsächliche Anzahl von **MOF \_ FIELD-Strukturen** angibt, die tatsächlich vor der Protokollierung des Ereignisses festgelegt werden. Wenn das Ereignis beispielsweise drei Datenfelder enthält, legen Sie **Header.Size** auf sizeof(EVENT \_ TRACE \_ HEADER) + (sizeof(MOF \_ FIELD) \* 3) fest.
 
-Weitere Informationen zur Ablauf Verfolgung für verwandte Ereignisse finden [Sie unterschreiben von verknüpften Ereignissen in einem End-to-End-Szenario](writing-related-events-in-an-end-to-end-scenario.md).
+Informationen zur Ablaufverfolgung verwandter Ereignisse finden Sie unter [Schreiben verwandter Ereignisse in einem End-to-End-Szenario.](writing-related-events-in-an-end-to-end-scenario.md)
 
-Im folgenden Beispiel wird gezeigt, wie die [**TraceEvent**](/windows/win32/api/evntrace/nf-evntrace-traceevent) -Funktion zum Protokollieren von Ereignissen aufgerufen wird. Das Beispiel verweist auf die in [Veröffentlichen Ihres Ereignis Schemas für einen klassischen Anbieter](publishing-your-event-schema-for-a-classic-provider.md)definierten Ereignisse.
+Das folgende Beispiel zeigt, wie die [**TraceEvent-Funktion**](/windows/win32/api/evntrace/nf-evntrace-traceevent) aufgerufen wird, um Ereignisse zu protokollieren. Das Beispiel verweist auf die Ereignisse, die unter [Veröffentlichen des Ereignisschemas für einen klassischen Anbieter](publishing-your-event-schema-for-a-classic-provider.md)definiert sind.
 
 
 ```C++

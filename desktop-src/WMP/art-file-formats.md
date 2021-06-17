@@ -1,53 +1,53 @@
 ---
-title: Kunst Dateiformate
-description: Kunst Dateiformate
+title: Dateiformate für Die Bildart
+description: Erfahren Sie mehr über die Dateiformate, Windows Media Player für Skins erkannt werden. Dazu gehören Bitmap, GIF, JPEG und PNG.
 ms.assetid: 803479e8-0e00-4724-80b7-9d86709c43db
 keywords:
-- Windows Media Player Skins, Grafikdateien
-- Skins, Art Dateien
-- Dateien für Skins, Art
-- kunstdateien für Skins, Dateiformate
-- Windows Media Player Skins, Dateiformate für Kunst
-- Skins, Dateiformate für Kunst
-- Dateiformate für Skin Art
+- Windows Media Player skins,art files
+- Skins,Art-Dateien
+- Dateien für Skins,Art
+- Artdateien für Skins,Dateiformate
+- Windows Media Player Skins,Dateiformate für Die Technik
+- Skins,Dateiformate für Die Technik
+- Dateiformate für Skinart
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a35af72fd502cb23e81063fe9513b4a9311f9557
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 2b525bc316d6a9901e32e51a54b6fb938fa91208
+ms.sourcegitcommit: d0eb44d0a95f5e5efbfec3d3e9c143f5cba25bc3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104311357"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112262212"
 ---
-# <a name="art-file-formats"></a>Kunst Dateiformate
+# <a name="art-file-formats"></a>Dateiformate für Die Bildart
 
-Die folgenden Kunst Dateiformate werden von Windows Media Player für Skins erkannt:
+Die folgenden Dateiformate werden von der -Windows Media Player für Skins erkannt:
 
 
 
 | Format                                  | Durchwahl   | BESCHREIBUNG                                                                                        |
 |-----------------------------------------|-------------|----------------------------------------------------------------------------------------------------|
-| Bitmap                                  | BMP        | Bitmapbilder werden empfohlen, da Sie die höchste Kontrolle über das exakte Bild und die Farben bieten. |
-| GIF (Graphics Interchange Format)       | .gif        | Für Webseiten verwendetes komprimiertes Bildformat. Animierte Gifs werden unterstützt.                            |
-| JPEG (Joint Photographic Experts Group) | JPEG, JPG | Für Webseiten verwendetes komprimiertes Bildformat.                                                         |
-| PNG (Portable Network Graphics)         | .png        | Für Webseiten verwendetes komprimiertes Bildformat.                                                         |
+| Bitmap                                  | BMP        | Bitmapbilder werden empfohlen, da sie die größte Kontrolle über das genaue Bild und die Farben bieten. |
+| GIF (Graphics Interchange Format)       | .gif        | Komprimiertes Bildformat, das für Webseiten verwendet wird. Animierte GIFs werden unterstützt.                            |
+| JPEG (Joint Photographic Experts Group) | JPEG, JPG | Komprimiertes Bildformat, das für Webseiten verwendet wird.                                                         |
+| PNG (Portable Network Graphics)         | .png        | Komprimiertes Bildformat, das für Webseiten verwendet wird.                                                         |
 
 
 
- 
+ 
 
-Wenn Sie eines der komprimierten Dateiformate verwenden, das eine Farbe für einen Webbrowser als transparent definiert, definieren Sie in der Bilddatei keine Farbe als transparent. Verwenden Sie eine sichtbare Farbe, um transparente Bereiche im Bild darzustellen, und definieren Sie dann diese Farbe in der Skin-Definitionsdatei als transparent. Wenn Sie z. b. eine GIF-Datei mit einigen Bereichen transparent erstellen, sind Sie in ihrem endgültigen Bild nicht transparent, und Sie können die Farbe, die Sie in ihrer GIF-Datei als transparent festgelegt haben, nicht als Transparenz Farbe in der Skin verwenden.
+Wenn Sie eines der komprimierten Dateiformate verwenden, das eine Farbe als für einen Webbrowser transparent definiert, definieren Sie eine Farbe in der Bilddatei nicht als transparent. Verwenden Sie eine sichtbare Farbe, um transparente Bereiche im Bild zu darstellen, und definieren Sie diese Farbe dann in der Skindefinitionsdatei als transparent. Wenn Sie beispielsweise eine GIF-Datei mit einigen transparenten Bereichen erstellen, sind diese in Ihrem endgültigen Bild nicht transparent, und Sie können die Farbe, die Sie in Ihrer GIF-Datei als transparent festgelegt haben, nicht für die Transparenzfarbe in Ihrer Skin verwenden.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Kunstdateien**](art-files.md)
+[**Art-Dateien**](art-files.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

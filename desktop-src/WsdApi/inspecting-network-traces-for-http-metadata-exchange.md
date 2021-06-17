@@ -1,69 +1,69 @@
 ---
-description: Alle Network Packet Analyzer, die unformatierte Pakete anzeigen können, können zum Überprüfen von http-metadatenaustauschanforderungen verwendet werden. Microsoft-Netzwerkmonitor 3 (NetMon) wird empfohlen. Weitere Informationen zu Netmon finden Sie unter Herunterladen von Netmon und Beispiel-DPWS-filtern.
+description: Erfahren Sie mehr über das Überprüfen von Netzwerkablaufverfolgungen für den HTTP-Metadatenaustausch. Verwenden Sie eine Netzwerkpaketanalyse, die unformatierte Pakete anzeigt.
 ms.assetid: b3b6c4d1-5fa3-41fb-ae1d-067638e385b0
-title: Überprüfen von Netzwerk Ablauf Verfolgungen für http-Metadatenaustausch
+title: Überprüfen von Netzwerkablaufverfolgungen für DEN HTTP-Metadatenaustausch
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0c9993c542789b7f11eb35344dd6b0b03bfbafc3
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0e653b0852f84382873973cd63fbd3223a245dd4
+ms.sourcegitcommit: d0eb44d0a95f5e5efbfec3d3e9c143f5cba25bc3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104215429"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112262682"
 ---
-# <a name="inspecting-network-traces-for-http-metadata-exchange"></a>Überprüfen von Netzwerk Ablauf Verfolgungen für http-Metadatenaustausch
+# <a name="inspecting-network-traces-for-http-metadata-exchange"></a>Überprüfen von Netzwerkablaufverfolgungen für DEN HTTP-Metadatenaustausch
 
-Alle Network Packet Analyzer, die unformatierte Pakete anzeigen können, können zum Überprüfen von http-metadatenaustauschanforderungen verwendet werden. Microsoft-Netzwerkmonitor 3 (NetMon) wird empfohlen. Weitere Informationen zu Netmon finden Sie unter [Herunterladen von Netmon und Beispiel-DPWS-Filtern](downloading-netmon-and-sample-dpws-filters.md).
+Alle Netzwerkpaketanalysetools, die unformatierte Pakete anzeigen können, können verwendet werden, um HTTP-Metadatenaustauschanforderungen zu überprüfen. Microsoft-Netzwerkmonitor 3 (Netmon) wird empfohlen. Weitere Informationen zu Netmon finden Sie unter [Herunterladen von Netmon und DPWS-Beispielfiltern.](downloading-netmon-and-sample-dpws-filters.md)
 
-Diese Diagnose Prozedur ist möglicherweise nicht so nützlich für Clients und Hosts, die einen sicheren Kommunikationskanal verwenden, da der Nachrichten Inhalt verschlüsselt ist.
+Dieses Diagnoseverfahren ist möglicherweise nicht so nützlich für Clients und Hosts, die einen sicheren Kanal für die Kommunikation verwenden, da der Nachrichteninhalt verschlüsselt ist.
 
-**So überprüfen Sie die Netzwerk Ablauf Verfolgungen für http**
+**So überprüfen Sie Netzwerkablaufverfolgungen für den HTTP-Metadatenaustausch**
 
-1.  Konfigurieren Sie den Host und den Client für die Netzwerk übergreifende Ausführung (d. h., stellen Sie sicher, dass der Host und der Client auf unterschiedlichen Computern ausgeführt werden).
-2.  Installieren Sie Packet Analyzer (NetMon) entweder auf dem Client oder auf dem Host.
-3.  Konfigurieren Sie die Paket Analyse für die Erfassung von Datenverkehr auf dem Netzwerkadapter, der den Host und den Client verbindet.
-4.  Reproduzieren Sie den Fehler Durchstarten des Hosts und Clients oder durch Drücken von F5 im Netzwerk-Explorer.
-5.  Filtern Sie die Ergebnisse, um WS-Discovery-und metadatenaustauschdatenverkehr zu isolieren Beispiel-Netmon-Filter finden Sie unter [Herunterladen von Netmon und Beispiel-DPWS-Filtern](downloading-netmon-and-sample-dpws-filters.md).
+1.  Konfigurieren Sie host und client so, dass sie über das Netzwerk ausgeführt werden (stellen Sie also sicher, dass der Host und der Client auf verschiedenen Computern ausgeführt werden).
+2.  Installieren Sie die Paketanalyse (Netmon) entweder auf dem Client oder auf dem Host.
+3.  Konfigurieren Sie die Paketanalyse, um Datenverkehr auf dem Netzwerkadapter zu erfassen, der den Host und den Client verbindet.
+4.  Reproduzieren Sie den Fehler, indem Sie host und client starten oder F5 im Netzwerk-Explorer drücken.
+5.  Filtern Sie die Ergebnisse, um WS-Discovery- und Metadatenaustauschdatenverkehr zu isolieren. Informationen zum Anzeigen von Netmon-Beispielfiltern finden Sie unter [Herunterladen von Netmon- und DPWS-Beispielfiltern.](downloading-netmon-and-sample-dpws-filters.md)
     > [!Note]  
     > Dieser Schritt ist optional.
 
      
 
-6.  Überprüfen Sie, ob Nachrichten, die zwischen Client und Host gesendet werden, grundlegende Anforderungen
+6.  Vergewissern Sie sich, dass zwischen Client und Host gesendete Nachrichten die grundlegenden Datenverkehrsanforderungen erfüllen.
 
-## <a name="verifying-that-messages-meet-traffic-requirements"></a>Überprüfen, ob Nachrichten Datenverkehrs Anforderungen erfüllen
+## <a name="verifying-that-messages-meet-traffic-requirements"></a>Überprüfen, ob Nachrichten die Datenverkehrsanforderungen erfüllen
 
-WSDAPI-Clients und-Hosts müssen Nachrichten senden, die den folgenden Kriterien entsprechen. Allgemeine Informationen zu Nachrichten Mustern finden Sie unter Ermittlungs [-und Metadatenaustausch-Nachrichten Muster](discovery-and-metadata-exchange-message-patterns.md).
+WSDAPI-Clients und -Hosts müssen Nachrichten senden, die den folgenden Kriterien entsprechen. Allgemeine Informationen zu Nachrichtenmustern finden Sie unter [Ermittlungs- und Metadatenaustausch-Nachrichtenmuster.](discovery-and-metadata-exchange-message-patterns.md)
 
--   Nachrichten müssen die im Thema [Überprüfen von Netzwerk Ablauf Verfolgungen für UDP WS-Discovery](inspecting-network-traces-for-udp-ws-discovery.md)bereitgestellten Datenverkehrs Anforderungen erfüllen, es sei denn, es ist absolut sicher, dass WS-Discovery nicht für Metadatenaustausch verwendet wird.
--   Zwischen dem Client und der ersten Transport Adresse, die im **xaddrs** -Element einer [Probe Matches](probematches-message.md) -oder [resolvematches](resolvematches-message.md) -Nachricht angegeben ist, muss eine TCP-Verbindung hergestellt werden. Die folgende Liste zeigt einen typischen Paket Austausch, der zum Herstellen einer TCP-Verbindung verwendet wird.
-    -   Der Client sendet ein TCP-SYN-Paket an den Host an einem angegebenen Port.
-    -   Der Host sendet ein TCP-SYN/ACK-Paket an den Client.
+-   Nachrichten müssen die Datenverkehrsanforderungen erfüllen, die im Thema [Überprüfen von Netzwerkablaufverfolgungen für die UDP-WS-Ermittlung](inspecting-network-traces-for-udp-ws-discovery.md)bereitgestellt werden, es sei denn, es ist absolut sicher, dass WS-Discovery nicht für den Metadatenaustausch verwendet wird.
+-   Zwischen dem Client und der ersten Transportadresse, die im **XAddrs-Element** einer [ProbeMatches-](probematches-message.md) oder [ResolveMatches-Nachricht](resolvematches-message.md) bereitgestellt wird, muss eine TCP-Verbindung hergestellt werden. Die folgende Liste zeigt einen typischen Paketaustausch, der zum Herstellen einer TCP-Verbindung verwendet wird.
+    -   Der Client sendet ein TCP SYN-Paket an den Host an einem angegebenen Port.
+    -   Der Host sendet ein TCP SYN/ACK-Paket an den Client.
     -   Der Client sendet ein TCP-ACK-Paket an den Host an einem angegebenen Port.
 
     Nachdem der Client ein TCP-ACK-Paket gesendet hat, wird die TCP-Verbindung hergestellt. Beachten Sie, dass dieser Nachrichtenaustausch nicht stattfindet, wenn zuvor eine TCP-Verbindung hergestellt wurde.
--   Der Client muss eine gültige [Get](get--metadata-exchange--http-request-and-message.md) http-Anforderung und-Nachricht senden.
--   Der Host muss den URL-Pfad lauschen, der in der [Get](get--metadata-exchange--http-request-and-message.md) http-Anforderung angegeben ist.
--   Das **to** -Element einer [Get](get--metadata-exchange--http-request-and-message.md) -metadatennachricht muss vorhanden und nicht leer sein. Der Wert des **to** -Elements muss mit einer der Endpunkt Adressen des Hosts identisch sein. Die Endpunkt Adresse eines Hosts wird in der Regel in einer [Probe Matches](probematches-message.md) -oder [resolvematches](resolvematches-message.md) -Nachricht angekündigt.
--   Der Host muss einen gültigen HTTP-Antwortheader senden. Wenn die anfängliche Anforderung erfolgreich war, sollte der Antwortheader den Statuscode HTTP/1.1 200 enthalten.
--   Der Host muss eine gültige [GetResponse](getresponse--metadata-exchange--message.md) -Nachricht senden.
--   Das **RelatesTo** -Element einer [GetResponse](getresponse--metadata-exchange--message.md) -Nachricht muss vorhanden sein und darf nicht leer sein. Der Wert muss mit dem Wert des **MessageId** -Elements aus der entsprechenden [Get](get--metadata-exchange--http-request-and-message.md) -Nachricht übereinstimmen.
+-   Der Client muss eine gültige [Get](get--metadata-exchange--http-request-and-message.md) HTTP-Anforderung und -Nachricht senden.
+-   Der Host muss auf den URL-Pfad lauschen, der in der GET-HTTP-Anforderung angegeben ist. [](get--metadata-exchange--http-request-and-message.md)
+-   Das **To-Element** einer [Get](get--metadata-exchange--http-request-and-message.md) Metadata-Nachricht muss vorhanden und nicht leer sein. Der Wert des **To-Elements** muss mit einer der Endpunktadressen des Hosts übereinstimmen. Die Endpunktadresse eines Hosts wird in der Regel in einer [ProbeMatches-](probematches-message.md) oder [ResolveMatches-Nachricht](resolvematches-message.md) angekündigt.
+-   Der Host muss einen gültigen HTTP-Antwortheader senden. Wenn die erste Anforderung erfolgreich war, sollte der Antwortheader den HTTP/1.1 200-Statuscode enthalten.
+-   Der Host muss eine gültige [GetResponse-Nachricht](getresponse--metadata-exchange--message.md) senden.
+-   Das **RelatesTo-Element** einer [GetResponse-Nachricht](getresponse--metadata-exchange--message.md) muss vorhanden sein und darf nicht leer sein. Der Wert muss mit dem Wert des **MessageId-Elements** aus der entsprechenden [Get-Nachricht](get--metadata-exchange--http-request-and-message.md) übereinstimmen.
 
-Wenn die vom Programm gesendeten HTTP-Anforderungen oder Metadatenaustausch-Nachrichten diesen Datenverkehrs Anforderungen nicht entsprechen, wurde die Ursache des Problems erfolgreich identifiziert, und es sind keine weiteren Schritte zur Problembehandlung erforderlich. Schreiben Sie das Programm so um, dass konforme Nachrichten und Anforderungen generiert werden, und testen Sie das Programm erneut.
+Wenn die vom Programm gesendeten HTTP-Anforderungen oder Metadatenaustauschnachrichten diesen Datenverkehrsanforderungen nicht entsprechen, wurde die Ursache des Problems erfolgreich identifiziert, und es sind keine weiteren Schritte zur Problembehandlung erforderlich. Schreiben Sie das Programm so um, dass es konforme Nachrichten und Anforderungen generiert, und testen Sie das Programm erneut.
 
-Wenn die Ursache des Problems weiterhin nicht identifiziert werden kann, wenden Sie sich an den Microsoft Support, um Hilfe zu erhalten. Bevor Sie sich an den Support wenden, erfassen Sie die entsprechenden Protokolldateien, um die Ursache des Problems zu identifizieren. Weitere Informationen finden Sie unter [Aktivieren der WSDAPI](enabling-wsdapi-tracing.md)-Ablauf Verfolgung.
+Wenn die Ursache des Problems weiterhin nicht identifiziert werden kann, wenden Sie sich an den Microsoft-Support, um Unterstützung zu erhalten. Bevor Sie sich an den Support wenden, sammeln Sie die entsprechenden Protokolldateien, um die Grundursache des Problems zu ermitteln. Weitere Informationen finden Sie unter [Aktivieren der WSDAPI-Ablaufverfolgung.](enabling-wsdapi-tracing.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[WSDAPI-Diagnose Prozeduren](wsdapi-diagnostic-procedures.md)
+[WSDAPI-Diagnoseverfahren](wsdapi-diagnostic-procedures.md)
 </dt> <dt>
 
-[Ersten Schritte mit der WSDAPI-Problembehandlung](getting-started-with-wsdapi-troubleshooting.md)
+[Erste Schritte mit WSDAPI-Problembehandlung](getting-started-with-wsdapi-troubleshooting.md)
 </dt> <dt>
 
-[Herunterladen von Netmon und Beispiel-DPWS-Filtern](downloading-netmon-and-sample-dpws-filters.md)
+[Herunterladen von Netmon- und DPWS-Beispielfiltern](downloading-netmon-and-sample-dpws-filters.md)
 </dt> </dl>
 
  

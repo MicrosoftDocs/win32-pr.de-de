@@ -1,39 +1,39 @@
 ---
-title: Caption-Eigenschaft (Commands-Auflistungs Objekt)
-description: Caption-Eigenschaft
+title: Caption-Eigenschaft (Commands Collection-Objekt)
+description: Erfahren Sie mehr über die Caption-Eigenschaft des Command Collection-Objekts. Der Microsoft-Agent ist ab Windows 7 veraltet.
 ms.assetid: 7182c21e-1ff0-4dce-9571-534b7576c082
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2010fe051568f71c4940b4bcf964f257ba9f52ca
-ms.sourcegitcommit: 8fa6614b715bddf14648cce36d2df22e5232801a
+ms.openlocfilehash: b34ae7bd6da1fc6cc60f882cc231af5730a1077e
+ms.sourcegitcommit: d0eb44d0a95f5e5efbfec3d3e9c143f5cba25bc3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "104102687"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112262052"
 ---
-# <a name="caption-property-commands-collection-object"></a>Caption-Eigenschaft (Commands-Auflistungs Objekt)
+# <a name="caption-property-commands-collection-object"></a>Caption-Eigenschaft (Commands Collection-Objekt)
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht mehr verfügbar.\]
 
 <dl> <dt>
 
 <span id="Description"></span><span id="description"></span><span id="DESCRIPTION"></span>**Beschreibung**
 </dt> <dd>
 
-Bestimmt den Text, der für ein [**Befehls**](/windows/desktop/lwef/the-commands-collection-object) Objekt im Popupmenü des Zeichens angezeigt wird.
+Bestimmt den Text, der für ein [**Commands-Objekt**](/windows/desktop/lwef/the-commands-collection-object) im Popupmenü des Zeichens angezeigt wird.
 
 </dd> <dt>
 
 <span id="Syntax"></span><span id="syntax"></span><span id="SYNTAX"></span>**Syntax**
 </dt> <dd>
 
-*Agent ***. Zeichen ("**_Merkmal-ID_*_")._ * [Commands. Caption](caption-property.md) - \[  =  *Zeichenfolge*\]
+*agent***. Zeichen ("**_CharacterID_*_")._ * [Commands.Caption-Zeichenfolge](caption-property.md) \[  =  \]
 
 
 
-| Teil     | BESCHREIBUNG                                                              |
+| Teil     | Beschreibung                                                              |
 |----------|--------------------------------------------------------------------------|
-| *string* | Ein Zeichen folgen Ausdruck, der den Text ergibt, der als Beschriftung angezeigt wird. |
+| *string* | Ein Zeichenfolgenausdruck, der den als Beschriftung angezeigten Text ergibt. |
 
 
 
@@ -43,9 +43,9 @@ Bestimmt den Text, der für ein [**Befehls**](/windows/desktop/lwef/the-commands
 
 ## <a name="remarks"></a>Bemerkungen
 
-Wenn Sie die [**Caption**](caption-property.md) -Eigenschaft für die [**Commands**](/windows/desktop/lwef/the-commands-collection-object) -Auflistung festlegen, wird definiert, wie diese im Popup Menü des Zeichens angezeigt wird, wenn die [**sichtbare**](visible-property.md) Eigenschaft auf true festgelegt ist und die Anwendung nicht der Eingabe-aktiv-Client ist. Um einen Zugriffsschlüssel (unline-mnetmonic) für Ihre **Beschriftung** anzugeben, fügen Sie vor diesem Zeichen ein kaufmännisches und-Zeichen (&) ein.
+Durch Festlegen der [**Caption-Eigenschaft**](caption-property.md) für Ihre [**Commands-Sammlung**](/windows/desktop/lwef/the-commands-collection-object) wird definiert, wie sie im Popupmenü des Zeichens angezeigt wird, wenn die [**Visible-Eigenschaft**](visible-property.md) auf True festgelegt ist und Ihre Anwendung nicht der eingabeaktive Client ist. Um einen Zugriffsschlüssel (unlineiertes mnemonic) für Die **Beschriftung** anzugeben, schließen Sie vor diesem Zeichen ein ampersand (&) Zeichen ein.
 
-Wenn Sie Befehle für eine [**Befehls**](/windows/desktop/lwef/the-commands-collection-object) Auflistung definieren, die über eine [**Beschriftung**](caption-property.md)verfügt, definieren Sie in der Regel auch eine **Beschriftung** für die zugeordnete **Befehls** Auflistung.
+Wenn Sie Befehle für eine [**Commands-Sammlung**](/windows/desktop/lwef/the-commands-collection-object) mit einer [**Beschriftung**](caption-property.md)definieren, definieren Sie in der Regel auch eine **Beschriftung** für die zugehörige **Commands-Sammlung.**
 
  
 

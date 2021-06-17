@@ -1,121 +1,121 @@
 ---
-description: Verschlüsselungs Sammlungen können nur für TLS-Versionen ausgehandelt werden, die diese unterstützen. Die höchste unterstützte TLS-Version wird beim TLS-Handshake immer bevorzugt.
-title: TLS-Verschlüsselungs Sammlungen in Windows Server 2022.
+description: Erfahren Sie mehr über TLS-Verschlüsselungssammlungen in Windows Server 2022. Verschlüsselungssammlungen können nur für TLS-Versionen ausgehandelt werden, die sie unterstützen.
+title: TLS-Verschlüsselungssammlungen in Windows Server 2022.
 ms.topic: article
 ms.date: 02/16/2021
-ms.openlocfilehash: 215e62d5f94f6a4927f3081ab9109cefbbd266ea
-ms.sourcegitcommit: 07b756a2f350efa5cfd5024a723ef392274ac3d9
+ms.openlocfilehash: d69cf4d97b356bf772b3a6d59a8bc4146f596ce8
+ms.sourcegitcommit: d0eb44d0a95f5e5efbfec3d3e9c143f5cba25bc3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "104351138"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112262332"
 ---
-# <a name="tls-cipher-suites-in-windows-server-2022"></a>TLS-Verschlüsselungs Sammlungen in Windows Server 2022
+# <a name="tls-cipher-suites-in-windows-server-2022"></a>TLS-Verschlüsselungssammlungen in Windows Server 2022
 
-Verschlüsselungs Sammlungen können nur für TLS-Versionen ausgehandelt werden, die diese unterstützen. Die höchste unterstützte TLS-Version wird beim TLS-Handshake immer bevorzugt.
+Verschlüsselungssammlungen können nur für TLS-Versionen ausgehandelt werden, die sie unterstützen. Die höchste unterstützte TLS-Version wird im TLS-Handshake immer bevorzugt.
 
-Die Verfügbarkeit von Verschlüsselungs Sammlungen sollte auf eine von zwei Arten gesteuert werden:
+Die Verfügbarkeit von Verschlüsselungssammlungen sollte auf zwei Arten gesteuert werden:
 
--   Die Standard Prioritäts Reihenfolge wird überschrieben, wenn eine Prioritäts Liste konfiguriert wird. Verschlüsselungs Sammlungen, die nicht in der Prioritäts Liste enthalten sind, werden nicht verwendet.
--   Zulässig, wenn die Anwendung Sch \_ die \_ starke \_ kryptografieverschlüsselung verwendet: der Microsoft SChannel-Anbieter filtert bekannte schwache Verschlüsselungs Sammlungen heraus, wenn die Anwendung das Sch-Flag für die starke Verschlüsselung verwendet \_ \_ \_ . RC4-, des-, Export-und NULL-Verschlüsselungs Sammlungen werden herausgefiltert.
+-   Die Standardprioritäts reihenfolge wird überschrieben, wenn eine Prioritätsliste konfiguriert ist. Verschlüsselungssammlungen, die nicht in der Prioritätsliste enthalten sind, werden nicht verwendet.
+-   Zulässig, wenn die Anwendung SCH USE STRONG CRYPTO besteht: Der \_ Microsoft \_ \_ Schannel-Anbieter filtert bekannte schwache Verschlüsselungssammlungen heraus, wenn die Anwendung das FLAG SCH \_ USE STRONG CRYPTO \_ \_ verwendet. RC4-, DES-, Export- und NULL-Verschlüsselungssammlungen werden herausgefiltert.
 
 > [!IMPORTANT]
-> HTTP/2-Webdienste schlagen mit nicht-http/2-kompatiblen Verschlüsselungs Sammlungen fehl. Informationen zum sicherstellen, dass Ihre Webdienste mit http/2-Clients und-Browsern funktionieren, finden Sie unter Bereitstellen einer [benutzerdefinierten Chiffre Sammlungs Bestellung](https://support.microsoft.com/help/4032720/how-to-deploy-custom-cipher-suite-ordering-in-windows-server-2016).
+> HTTP/2-Webdienste führen bei nicht HTTP/2-kompatiblen Verschlüsselungssammlungen zu einem Fehler. Um sicherzustellen, dass Ihre Webdienste mit HTTP/2-Clients und -Browsern funktionieren, lesen Sie How to deploy custom cipher suite ordering (Bereitstellen einer [benutzerdefinierten Verschlüsselungssammlungsbestellung).](https://support.microsoft.com/help/4032720/how-to-deploy-custom-cipher-suite-ordering-in-windows-server-2016)
 
  
 
-Die Kompatibilität mit der Kompatibilität mit der Funktion "PPS-Konformität" ist komplexer geworden, und es werden elliptische Kurven hinzugefügt Beispielsweise ist eine Verschlüsselungs Sammlung, z. b. TLS \_ ecdhe \_ RSA \_ mit \_ AES \_ 128 \_ CBC \_ SHA256, nur FIPS-Beschwerde, wenn NIST-elliptische Kurven verwendet werden. Informationen dazu, welche Kombinationen aus elliptischen Kurven und Verschlüsselungs Sammlungen im FIPS-Modus aktiviert werden, finden Sie im Abschnitt 3.3.1 von [Richtlinien für die Auswahl, Konfiguration und Verwendung von TLS-Implementierungen]( https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-52r2.pdf).
+Die FIPS-Konformität wurde durch das Hinzufügen elliptischer Kurven komplexer, wodurch die Spalte fips mode enabled (FIPS-Modus aktiviert) in früheren Versionen dieser Tabelle irreführend wurde. Beispielsweise ist eine Verschlüsselungssammlung wie TLS \_ ECDHE \_ RSA \_ WITH \_ AES \_ 128 \_ CBC \_ SHA256 nur FIPS-schwer, wenn elliptische NIST-Kurven verwendet werden. Informationen dazu, welche Kombinationen aus elliptischen Kurven und Verschlüsselungssammlungen im FIPS-Modus aktiviert werden, finden Sie in Abschnitt 3.3.1 der Richtlinien für die Auswahl, Konfiguration und Verwendung von [TLS-Implementierungen.]( https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-52r2.pdf)
 
-Für Windows Server 2022 sind die folgenden Verschlüsselungs Sammlungen aktiviert, und in dieser Prioritäts Reihenfolge wird standardmäßig der Microsoft SChannel-Anbieter verwendet:
+Für Windows Server 2022 sind die folgenden Verschlüsselungssammlungen mithilfe des Microsoft Schannel-Anbieters standardmäßig in dieser Prioritäts reihenfolge aktiviert:
 
 
 
-| Chiffre Sammlungs Zeichenfolge                                                                           | Zugelassen von Sch \_ verwenden \_ starker \_ Kryptografie | TLS/SSL-Protokoll Versionen                     |
+| Verschlüsselungssammlungszeichenfolge                                                                           | Zulässig durch SCH \_ USE \_ STRONG \_ CRYPTO | TLS/SSL-Protokollversionen                     |
 |-----------------------------------------------------------------------------------------------|-------------------------------------|-----------------------------------------------|
-| TLS \_ AES \_ 256 \_ GCM \_ SHA384<br/>                                                               | Ja<br/>                      | TLS 1,3<br/>                            |
-| TLS \_ AES \_ 128 \_ GCM \_ SHA256<br/>                                                               | Ja<br/>                      | TLS 1,3<br/>                            |
-| TLS \_ ecdhe \_ ECDSA \_ mit \_ AES \_ 256 \_ GCM \_ SHA384<br/>                                           | Ja<br/>                      | TLS 1.2<br/>                            |
-| TLS \_ ecdhe \_ ECDSA \_ mit \_ AES \_ 128 \_ GCM \_ SHA256<br/>                                           | Ja<br/>                      | TLS 1.2<br/>                            |
-| TLS \_ ecdhe \_ RSA \_ mit \_ AES \_ 256 \_ GCM \_ SHA384<br/>                                             | Ja<br/>                      | TLS 1.2<br/>                            |
-| TLS \_ ecdhe \_ RSA \_ mit \_ AES \_ 128 \_ GCM \_ SHA256<br/>                                             | Ja<br/>                      | TLS 1.2<br/>                            |
-| TLS \_ dhe \_ RSA \_ with \_ AES \_ 256 \_ GCM \_ SHA384<br/>                                               | Nein<br/>                       | TLS 1.2<br/>                            |
-| TLS \_ dhe \_ RSA \_ with \_ AES \_ 128 \_ GCM \_ SHA256<br/>                                               | Ja<br/>                      | TLS 1.2<br/>                            |
-| TLS \_ ecdhe \_ ECDSA \_ mit \_ AES \_ 256 \_ CBC \_ SHA384<br/>                                           | Ja<br/>                      | TLS 1.2<br/>                            |
-| TLS \_ ecdhe \_ ECDSA \_ mit \_ AES \_ 128 \_ CBC \_ SHA256<br/>                                           | Ja<br/>                      | TLS 1.2<br/>                            |
-| TLS \_ ecdhe \_ RSA \_ mit \_ AES \_ 256 \_ CBC \_ SHA384<br/>                                             | Ja<br/>                      | TLS 1.2<br/>                            |
-| TLS \_ ecdhe \_ RSA \_ mit \_ AES \_ 128 \_ CBC \_ SHA256<br/>                                             | Ja<br/>                      | TLS 1.2<br/>                            |
-| TLS \_ ecdhe \_ ECDSA \_ mit \_ AES \_ 256 \_ CBC \_ SHA<br/>                                              | Ja<br/>                      | TLS 1,2, TLS 1,1, TLS 1,0<br/>          |
-| TLS \_ ecdhe \_ ECDSA \_ mit \_ AES \_ 128 \_ CBC \_ SHA<br/>                                              | Ja<br/>                      | TLS 1,2, TLS 1,1, TLS 1,0<br/>          |
-| TLS \_ ecdhe \_ RSA \_ mit \_ AES \_ 256 \_ CBC \_ SHA<br/>                                                | Ja<br/>                      | TLS 1,2, TLS 1,1, TLS 1,0<br/>          |
-| TLS \_ ecdhe \_ RSA \_ mit \_ AES \_ 128 \_ CBC \_ SHA<br/>                                                | Ja<br/>                      | TLS 1,2, TLS 1,1, TLS 1,0<br/>          |
-| TLS \_ RSA \_ mit \_ AES \_ 256 \_ GCM \_ SHA384<br/>                                                    | Ja<br/>                      | TLS 1.2<br/>                            |
-| TLS \_ RSA \_ mit \_ AES \_ 128 \_ GCM \_ SHA256<br/>                                                    | Ja<br/>                      | TLS 1.2<br/>                            |
-| TLS \_ RSA \_ mit \_ AES \_ 256 \_ CBC \_ SHA256<br/>                                                    | Ja<br/>                      | TLS 1.2<br/>                            |
-| TLS \_ RSA \_ mit \_ AES \_ 128 \_ CBC \_ SHA256<br/>                                                    | Ja<br/>                      | TLS 1.2<br/>                            |
-| TLS \_ RSA \_ mit \_ AES \_ 256 \_ CBC \_ SHA<br/>                                                       | Ja<br/>                      | TLS 1,2, TLS 1,1, TLS 1,0<br/>          |
-| TLS \_ RSA \_ mit \_ AES \_ 128 \_ CBC \_ SHA<br/>                                                       | Ja<br/>                      | TLS 1,2, TLS 1,1, TLS 1,0<br/>          |
-| TLS \_ RSA \_ mit \_ 3DES \_ Ede \_ CBC \_ SHA<br/>                                                      | Nein<br/>                      | TLS 1,2, TLS 1,1, TLS 1,0<br/>          |
-| TLS- \_ RSA \_ mit NULL- \_ \_ SHA256 <br/> Wird nur verwendet, wenn explizit von der Anwendung angefordert wird.<br/>       | Nein<br/>                       | TLS 1.2<br/>                            |
-| TLS- \_ RSA \_ mit NULL- \_ \_ SHA <br/> Wird nur verwendet, wenn explizit von der Anwendung angefordert wird.<br/>          | Nein<br/>                       | TLS 1,2, TLS 1,1, TLS 1,0, SSL 3,0<br/> |
+| TLS \_ AES \_ 256 \_ GCM \_ SHA384<br/>                                                               | Ja<br/>                      | TLS 1.3<br/>                            |
+| TLS \_ AES \_ 128 \_ GCM \_ SHA256<br/>                                                               | Ja<br/>                      | TLS 1.3<br/>                            |
+| TLS \_ ECDHE \_ ECDSA \_ MIT \_ AES \_ 256 \_ GCM \_ SHA384<br/>                                           | Ja<br/>                      | TLS 1.2<br/>                            |
+| TLS \_ ECDHE \_ ECDSA \_ MIT \_ AES \_ 128 \_ GCM \_ SHA256<br/>                                           | Ja<br/>                      | TLS 1.2<br/>                            |
+| TLS \_ ECDHE \_ RSA MIT \_ \_ AES \_ 256 \_ GCM \_ SHA384<br/>                                             | Ja<br/>                      | TLS 1.2<br/>                            |
+| TLS \_ ECDHE \_ RSA MIT \_ \_ AES \_ 128 \_ GCM \_ SHA256<br/>                                             | Ja<br/>                      | TLS 1.2<br/>                            |
+| TLS \_ DHE \_ RSA MIT \_ \_ AES \_ 256 \_ GCM \_ SHA384<br/>                                               | Nein<br/>                       | TLS 1.2<br/>                            |
+| TLS \_ DHE \_ RSA MIT \_ \_ AES \_ 128 \_ GCM \_ SHA256<br/>                                               | Ja<br/>                      | TLS 1.2<br/>                            |
+| TLS \_ ECDHE \_ ECDSA \_ MIT \_ AES \_ 256 \_ CBC \_ SHA384<br/>                                           | Ja<br/>                      | TLS 1.2<br/>                            |
+| TLS \_ ECDHE \_ ECDSA \_ MIT \_ AES \_ 128 \_ CBC \_ SHA256<br/>                                           | Ja<br/>                      | TLS 1.2<br/>                            |
+| TLS \_ ECDHE \_ RSA MIT \_ \_ AES \_ 256 \_ CBC \_ SHA384<br/>                                             | Ja<br/>                      | TLS 1.2<br/>                            |
+| TLS \_ ECDHE \_ RSA MIT \_ \_ AES \_ 128 \_ CBC \_ SHA256<br/>                                             | Ja<br/>                      | TLS 1.2<br/>                            |
+| TLS \_ ECDHE \_ ECDSA \_ MIT \_ AES \_ 256 \_ CBC \_ SHA<br/>                                              | Ja<br/>                      | TLS 1.2, TLS 1.1, TLS 1.0<br/>          |
+| TLS \_ ECDHE \_ ECDSA \_ MIT \_ AES \_ 128 \_ CBC \_ SHA<br/>                                              | Ja<br/>                      | TLS 1.2, TLS 1.1, TLS 1.0<br/>          |
+| TLS \_ ECDHE \_ RSA MIT \_ \_ AES \_ 256 \_ CBC \_ SHA<br/>                                                | Ja<br/>                      | TLS 1.2, TLS 1.1, TLS 1.0<br/>          |
+| TLS \_ ECDHE \_ RSA MIT \_ \_ AES \_ 128 \_ CBC \_ SHA<br/>                                                | Ja<br/>                      | TLS 1.2, TLS 1.1, TLS 1.0<br/>          |
+| TLS \_ RSA \_ MIT \_ AES \_ 256 \_ GCM \_ SHA384<br/>                                                    | Ja<br/>                      | TLS 1.2<br/>                            |
+| TLS \_ RSA \_ MIT \_ AES \_ 128 \_ GCM \_ SHA256<br/>                                                    | Ja<br/>                      | TLS 1.2<br/>                            |
+| TLS \_ RSA \_ MIT \_ AES \_ 256 \_ CBC \_ SHA256<br/>                                                    | Ja<br/>                      | TLS 1.2<br/>                            |
+| TLS \_ RSA \_ MIT \_ AES \_ 128 \_ CBC \_ SHA256<br/>                                                    | Ja<br/>                      | TLS 1.2<br/>                            |
+| TLS \_ RSA \_ MIT \_ AES \_ 256 \_ CBC \_ SHA<br/>                                                       | Ja<br/>                      | TLS 1.2, TLS 1.1, TLS 1.0<br/>          |
+| TLS \_ RSA \_ MIT \_ AES \_ 128 \_ CBC \_ SHA<br/>                                                       | Ja<br/>                      | TLS 1.2, TLS 1.1, TLS 1.0<br/>          |
+| TLS \_ RSA \_ MIT \_ 3DES \_ EDE \_ CBC \_ SHA<br/>                                                      | Nein<br/>                      | TLS 1.2, TLS 1.1, TLS 1.0<br/>          |
+| TLS \_ RSA MIT NULL \_ \_ \_ SHA256 <br/> Wird nur verwendet, wenn die Anwendung explizit anforderungen.<br/>       | Nein<br/>                       | TLS 1.2<br/>                            |
+| TLS \_ RSA MIT NULL \_ \_ \_ SHA <br/> Wird nur verwendet, wenn die Anwendung explizit anforderungen.<br/>          | Nein<br/>                       | TLS 1.2, TLS 1.1, TLS 1.0, SSL 3.0<br/> |
 
 
 
  
 
-Die folgenden Verschlüsselungs Sammlungen werden vom Microsoft SChannel-Anbieter unterstützt, sind jedoch nicht standardmäßig aktiviert:
+Die folgenden Verschlüsselungssammlungen werden vom Microsoft Schannel-Anbieter unterstützt, aber standardmäßig nicht aktiviert:
 
 
 
-| Chiffre Sammlungs Zeichenfolge                                                                               | Zugelassen von Sch \_ verwenden \_ starker \_ Kryptografie | TLS/SSL-Protokoll Versionen                     |
+| Verschlüsselungssammlungszeichenfolge                                                                               | Zulässig durch SCH \_ USE \_ STRONG \_ CRYPTO | TLS/SSL-Protokollversionen                     |
 |---------------------------------------------------------------------------------------------------|-------------------------------------|-----------------------------------------------|
-| TLS \_ CHACHA20 \_ POLY1305 \_ SHA256<br/>                                                        | Ja<br/>                      | TLS 1,3<br/>                            |
-| TLS \_ dhe \_ RSA \_ mit \_ AES \_ 256 \_ CBC \_ SHA<br/>                                                | Ja<br/>                      | TLS 1,2, TLS 1,1, TLS 1,0<br/>          |
-| TLS \_ dhe \_ RSA \_ mit \_ AES \_ 128 \_ CBC \_ SHA<br/>                                                | Ja<br/>                      | TLS 1,2, TLS 1,1, TLS 1,0<br/>          |
-| TLS \_ dhe \_ DSS \_ mit \_ AES \_ 256 \_ CBC \_ SHA256<br/>                                             | Ja<br/>                      | TLS 1.2<br/>                            |
-| TLS \_ dhe \_ DSS \_ mit \_ AES \_ 128 \_ CBC \_ SHA256<br/>                                             | Ja<br/>                      | TLS 1.2<br/>                            |
-| TLS \_ dhe \_ DSS \_ mit \_ AES \_ 256 \_ CBC \_ SHA<br/>                                                | Ja<br/>                      | TLS 1,2, TLS 1,1, TLS 1,0<br/>          |
-| TLS \_ dhe \_ DSS \_ mit \_ AES \_ 128 \_ CBC \_ SHA<br/>                                                | Ja<br/>                      | TLS 1,2, TLS 1,1, TLS 1,0<br/>          |
-| TLS \_ dhe \_ DSS \_ mit \_ 3DES \_ Ede \_ CBC \_ SHA<br/>                                               | Nein<br/>                      | TLS 1,2, TLS 1,1, TLS 1,0, SSL 3,0<br/> |
-| TLS- \_ RSA \_ mit \_ RC4 \_ 128 \_ SHA<br/>                                                          | Nein<br/>                       | TLS 1,2, TLS 1,1, TLS 1,0, SSL 3,0<br/> |
-| TLS- \_ RSA \_ mit \_ RC4 \_ 128 \_ MD5<br/>                                                          | Nein<br/>                       | TLS 1,2, TLS 1,1, TLS 1,0, SSL 3,0<br/> |
-| TLS- \_ RSA \_ mit \_ des \_ CBC \_ SHA<br/>                                                          | Nein<br/>                       | TLS 1,2, TLS 1,1, TLS 1,0, SSL 3,0<br/> |
-| TLS \_ dhe \_ DSS \_ mit \_ des \_ CBC \_ SHA<br/>                                                     | Nein<br/>                       | TLS 1,2, TLS 1,1, TLS 1,0, SSL 3,0<br/> |
-| TLS \_ dhe \_ DSS \_ EXPORT1024 \_ mit \_ des \_ CBC \_ SHA No TLS 1,2, TLS 1,1, TLS 1,0, SSL 3,0<br/>   | Nein<br/>                       | TLS 1,2, TLS 1,1, TLS 1,0, SSL 3,0<br/> |
-| TLS- \_ RSA \_ mit \_ NULL \_ MD5 <br/> Wird nur verwendet, wenn explizit von der Anwendung angefordert wird. <br/> | Nein<br/>                       | TLS 1,2, TLS 1,1, TLS 1,0, SSL 3,0<br/> |
-| TLS- \_ RSA- \_ EXPORT1024 \_ mit \_ RC4 \_ 56 \_ SHA<br/>                                               | Nein<br/>                       | TLS 1,2, TLS 1,1, TLS 1,0, SSL 3,0<br/> |
-| TLS- \_ RSA- \_ Export \_ mit \_ RC4 \_ 40 \_ MD5<br/>                                                   | Nein<br/>                       | TLS 1,2, TLS 1,1, TLS 1,0, SSL 3,0<br/> |
-| TLS- \_ RSA- \_ EXPORT1024 \_ mit \_ des \_ CBC \_ SHA<br/>                                              | Nein<br/>                       | TLS 1,2, TLS 1,1, TLS 1,0, SSL 3,0<br/> |
+| TLS \_ CHACHA20 \_ POLY1305 \_ SHA256<br/>                                                        | Ja<br/>                      | TLS 1.3<br/>                            |
+| TLS \_ DHE \_ RSA MIT \_ \_ AES \_ 256 \_ CBC \_ SHA<br/>                                                | Ja<br/>                      | TLS 1.2, TLS 1.1, TLS 1.0<br/>          |
+| TLS \_ DHE \_ RSA MIT \_ \_ AES \_ 128 \_ CBC \_ SHA<br/>                                                | Ja<br/>                      | TLS 1.2, TLS 1.1, TLS 1.0<br/>          |
+| TLS \_ DHE \_ DSS \_ MIT \_ AES \_ 256 \_ CBC \_ SHA256<br/>                                             | Ja<br/>                      | TLS 1.2<br/>                            |
+| TLS \_ DHE \_ DSS \_ MIT \_ AES \_ 128 \_ CBC \_ SHA256<br/>                                             | Ja<br/>                      | TLS 1.2<br/>                            |
+| TLS \_ DHE \_ DSS \_ MIT \_ AES \_ 256 \_ CBC \_ SHA<br/>                                                | Ja<br/>                      | TLS 1.2, TLS 1.1, TLS 1.0<br/>          |
+| TLS \_ DHE \_ DSS \_ MIT \_ AES \_ 128 \_ CBC \_ SHA<br/>                                                | Ja<br/>                      | TLS 1.2, TLS 1.1, TLS 1.0<br/>          |
+| TLS \_ DHE \_ DSS \_ MIT \_ 3DES \_ EDE \_ CBC \_ SHA<br/>                                               | Nein<br/>                      | TLS 1.2, TLS 1.1, TLS 1.0, SSL 3.0<br/> |
+| TLS \_ RSA \_ MIT \_ RC4 \_ 128 \_ SHA<br/>                                                          | Nein<br/>                       | TLS 1.2, TLS 1.1, TLS 1.0, SSL 3.0<br/> |
+| TLS \_ RSA \_ MIT \_ RC4 \_ 128 \_ MD5<br/>                                                          | Nein<br/>                       | TLS 1.2, TLS 1.1, TLS 1.0, SSL 3.0<br/> |
+| TLS \_ RSA MIT DES \_ \_ \_ CBC \_ SHA<br/>                                                          | Nein<br/>                       | TLS 1.2, TLS 1.1, TLS 1.0, SSL 3.0<br/> |
+| TLS \_ DHE \_ DSS \_ MIT DES \_ \_ CBC \_ SHA<br/>                                                     | Nein<br/>                       | TLS 1.2, TLS 1.1, TLS 1.0, SSL 3.0<br/> |
+| TLS \_ DHE \_ DSS \_ EXPORT1024 \_ WITH DES \_ \_ CBC SHA No TLS \_ 1.2, TLS 1.1, TLS 1.0, SSL 3.0<br/>   | Nein<br/>                       | TLS 1.2, TLS 1.1, TLS 1.0, SSL 3.0<br/> |
+| TLS \_ RSA MIT NULL \_ \_ \_ MD5 <br/> Wird nur verwendet, wenn die Anwendung explizit anforderungen. <br/> | Nein<br/>                       | TLS 1.2, TLS 1.1, TLS 1.0, SSL 3.0<br/> |
+| TLS \_ RSA \_ EXPORT1024 \_ MIT \_ RC4 \_ 56 \_ SHA<br/>                                               | Nein<br/>                       | TLS 1.2, TLS 1.1, TLS 1.0, SSL 3.0<br/> |
+| TLS \_ RSA \_ EXPORT \_ WITH \_ RC4 \_ 40 \_ MD5<br/>                                                   | Nein<br/>                       | TLS 1.2, TLS 1.1, TLS 1.0, SSL 3.0<br/> |
+| TLS \_ RSA \_ EXPORT1024 \_ MIT DES \_ \_ CBC \_ SHA<br/>                                              | Nein<br/>                       | TLS 1.2, TLS 1.1, TLS 1.0, SSL 3.0<br/> |
 
 
 
  
 
-Die folgenden PSK-Verschlüsselungs Sammlungen sind aktiviert, und in dieser Prioritäts Reihenfolge wird standardmäßig der Microsoft SChannel-Anbieter verwendet:
+Die folgenden PSK-Verschlüsselungssammlungen sind mithilfe des Microsoft Schannel-Anbieters standardmäßig in dieser Prioritäts reihenfolge aktiviert:
 
 
 
-| Chiffre Sammlungs Zeichenfolge                              | Zugelassen von Sch \_ verwenden \_ starker \_ Kryptografie | TLS/SSL-Protokoll Versionen |
+| Verschlüsselungssammlungszeichenfolge                              | Zulässig durch SCH \_ USE \_ STRONG \_ CRYPTO | TLS/SSL-Protokollversionen |
 |--------------------------------------------------|-------------------------------------|---------------------------|
-| TLS \_ PSK \_ mit \_ AES \_ 256 \_ GCM \_ SHA384<br/> | Ja<br/>                      | TLS 1.2<br/>        |
-| TLS \_ PSK \_ mit \_ AES \_ 128 \_ GCM \_ SHA256<br/> | Ja<br/>                      | TLS 1.2<br/>        |
-| TLS \_ PSK \_ mit \_ AES \_ 256 \_ CBC \_ SHA384<br/> | Ja<br/>                      | TLS 1.2<br/>        |
-| TLS \_ PSK \_ mit \_ AES \_ 128 \_ CBC \_ SHA256<br/> | Ja<br/>                      | TLS 1.2<br/>        |
-| TLS- \_ PSK \_ mit \_ NULL- \_ SHA384<br/>          | Nein<br/>                       | TLS 1.2<br/>        |
-| TLS- \_ PSK \_ mit \_ NULL- \_ SHA256<br/>          | Nein<br/>                       | TLS 1.2<br/>        |
+| TLS \_ PSK \_ MIT \_ AES \_ 256 \_ GCM \_ SHA384<br/> | Ja<br/>                      | TLS 1.2<br/>        |
+| TLS \_ PSK \_ MIT \_ AES \_ 128 \_ GCM \_ SHA256<br/> | Ja<br/>                      | TLS 1.2<br/>        |
+| TLS \_ PSK \_ MIT \_ AES \_ 256 \_ CBC \_ SHA384<br/> | Ja<br/>                      | TLS 1.2<br/>        |
+| TLS \_ PSK \_ MIT \_ AES \_ 128 \_ CBC \_ SHA256<br/> | Ja<br/>                      | TLS 1.2<br/>        |
+| TLS \_ PSK \_ MIT NULL \_ \_ SHA384<br/>          | Nein<br/>                       | TLS 1.2<br/>        |
+| TLS \_ PSK \_ MIT NULL \_ \_ SHA256<br/>          | Nein<br/>                       | TLS 1.2<br/>        |
 
 
 
  
 
 > [!Note]  
-> Standardmäßig sind keine PSK-Verschlüsselungs Sammlungen aktiviert. Anwendungen müssen PSK mithilfe von Sch anfordern \_ . verwenden Sie \_ nur PresharedKey \_ . Weitere Informationen zu SChannel-Flags finden Sie unter [**SChannel | \_ d**](/windows/desktop/api/Schannel/ns-schannel-schannel_cred).
+> Standardmäßig sind keine PSK-Verschlüsselungssammlungen aktiviert. Anwendungen müssen PSK mit SCH \_ USE \_ PRESHAREDKEY \_ ONLY anfordern. Weitere Informationen zu Schannel-Flags finden Sie unter [**SCHANNEL \_ CRED**](/windows/desktop/api/Schannel/ns-schannel-schannel_cred).
 
  
 
-Um Verschlüsselungs Sammlungen hinzuzufügen, stellen Sie entweder eine Gruppenrichtlinie bereit, oder verwenden Sie die TLS-Cmdlets:
+Um Verschlüsselungssammlungen hinzuzufügen, stellen Sie entweder eine Gruppenrichtlinie oder die TLS-Cmdlets zur Verfügung:
 
--   Um die Gruppenrichtlinie zu verwenden, konfigurieren Sie die Reihenfolge der SSL-Verschlüsselungs Sammlung unter Computer Konfiguration > administrative Vorlagen > Netzwerk > SSL-Konfigurationseinstellungen mit der Prioritäts Liste für alle Verschlüsselungs Sammlungen, die Sie aktivieren möchten.
--   Informationen zur Verwendung von PowerShell finden Sie unter [TLS-Cmdlets](/powershell/module/tls/?view=win10-ps).
+-   Um gruppenrichtlinien zu verwenden, konfigurieren Sie die REIHENFOLGE DER SSL-Verschlüsselungssammlung unter Computerkonfiguration > Administrative Vorlagen > Netzwerk > SSL-Konfigurationseinstellungen mit der Prioritätsliste für alle Verschlüsselungssammlungen, die Sie aktivieren möchten.
+-   Informationen zur Verwendung von PowerShell finden Sie unter [TLS-Cmdlets.](/powershell/module/tls/?view=win10-ps)
 
 > [!Note]  
-> Vor Windows 10 wurden Chiffre Sammlungs Zeichenfolgen mit der elliptischen Kurve angehängt, um die Kurven Priorität zu bestimmen. Windows 10 unterstützt eine Einstellung für die Prioritäts Reihenfolge der elliptischen Kurven, damit das elliptische Kurven Suffix nicht erforderlich ist und von der neuen Priorität der elliptischen Kurven Priorität außer Kraft gesetzt wird, um Organisationen die Verwendung von Gruppenrichtlinien zum Konfigurieren verschiedener Versionen von Windows mit denselben Verschlüsselungs Sammlungen zu ermöglichen.
+> Vor der Windows 10 wurden Verschlüsselungssammlungszeichenfolgen mit der elliptischen Kurve angefügt, um die Kurvenpriorität zu bestimmen. Windows 10 unterstützt eine Einstellung für die Reihenfolge der Elliptic Curve-Priorität, sodass das Elliptic Curve-Suffix nicht erforderlich ist und durch die neue Reihenfolge der Elliptic Curve-Priorität außer Kraft gesetzt wird, sofern angegeben, damit Organisationen gruppenrichtlinien verwenden können, um verschiedene Versionen von Windows mit den gleichen Verschlüsselungssammlungen zu konfigurieren.

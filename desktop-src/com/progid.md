@@ -1,17 +1,17 @@
 ---
 title: ProgID
-description: Ordnet eine ProgID einer CLSID zu.
+description: Erfahren Sie mehr über HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID Registrierungsschlüssel, der eine ProgID einer CLSID zu ordnet.
 ms.assetid: 89060943-7007-418b-a544-effbad548e87
 keywords:
-- ProgID-Registrierungsschlüssel com
+- ProgID-Registrierungsschlüssel COM
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: feec17db2cf16425968c64ef25759f284341bdb5
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 486f7e30bb0caff72eca3ad68191aaf50ab70280
+ms.sourcegitcommit: d0eb44d0a95f5e5efbfec3d3e9c143f5cba25bc3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103710349"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112262722"
 ---
 # <a name="progid"></a>ProgID
 
@@ -21,27 +21,27 @@ Ordnet eine ProgID einer CLSID zu.
 
 ```
 HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID
-   {CLSID}
-      ProgID = value
+   {CLSID}
+      ProgID = value
 ```
 
 ## <a name="remarks"></a>Bemerkungen
 
-Jede einfügbar-Objektklasse verfügt über eine ProgID. Weitere Informationen zum Erstellen einer ProgID finden Sie unter dem [ <ProgID> Schlüssel](-progid--key.md).
+Jede insertable-Objektklasse verfügt über eine ProgID. Informationen zum Erstellen einer ProgID finden Sie unter dem [ <ProgID> Schlüssel](-progid--key.md).
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[<ProgID> wichtigen](-progid--key.md)
+[<ProgID> Schlüssel](-progid--key.md)
 </dt> <dt>
 
-[**VersionIndependentProgId**](versionindependentprogid.md)
+[**VersionIndependentProgID**](versionindependentprogid.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 
