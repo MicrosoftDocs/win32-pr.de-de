@@ -1,39 +1,39 @@
 ---
-title: Visible-Eigenschaft (Sprechblasen Objekt)
-description: Visible-Eigenschaft
+title: Visible-Eigenschaft (Balloon-Objekt)
+description: Erfahren Sie mehr über die Visible-Eigenschaft des Balloon-Objekts, die die sichtbare Einstellung für das Wort balloon für das angegebene Zeichen zurückgibt oder legt.
 ms.assetid: cbda7f69-889a-45a0-9549-d27eddfcec57
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ba58993a3328a4c99dbe7da43b43460f6048bf57
-ms.sourcegitcommit: 8fa6614b715bddf14648cce36d2df22e5232801a
+ms.openlocfilehash: 93ac587fa649f2a8ccb5ea83ddc077050a8548d2
+ms.sourcegitcommit: 91530c19d26ba4c57a6af1f37b57f211f580464e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "104039909"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112396325"
 ---
-# <a name="visible-property-balloon-object"></a>Visible-Eigenschaft (Sprechblasen Objekt)
+# <a name="visible-property-balloon-object"></a>Visible-Eigenschaft (Balloon-Objekt)
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Microsoft Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht mehr verfügbar.\]
 
 <dl> <dt>
 
 <span id="Description"></span><span id="description"></span><span id="DESCRIPTION"></span>**Beschreibung**
 </dt> <dd>
 
-Gibt die sichtbare Einstellung für die Word-Sprechblase für das angegebene Zeichen zurück oder legt diese fest.
+Gibt die sichtbare Einstellung für das Wort balloon für das angegebene Zeichen zurück oder legt diese fest.
 
 </dd> <dt>
 
 <span id="Syntax_"></span><span id="syntax_"></span><span id="SYNTAX_"></span>**Syntax** 
 </dt> <dd>
 
-*Agent ***. Zeichen (**"* Merkmal-ID *" * *). Sprechblase. sichtbarer* *  \[  =  *boolescher* Wert\]
+*agent***. Characters(**"* CharacterID *"**). Balloon.Visible* *  \[  =  *boolean*\]
 
 
 
-| Teil      | BESCHREIBUNG                                                                                                                                                             |
+| Teil      | Beschreibung                                                                                                                                                             |
 |-----------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| *boolean* | Ein boolescher Ausdruck, der angibt, ob die Wort Sprechblase sichtbar ist.<br/> **True** Die Sprechblase ist sichtbar.<br/> **False** Die Sprechblase ist ausgeblendet.<br/> |
+| *boolean* | Ein boolescher Ausdruck, der an gibt, ob das Wort Balloon sichtbar ist.<br/> **True** Die Sprechblase ist sichtbar.<br/> **False** Die Sprechblase ist ausgeblendet.<br/> |
 
 
 
@@ -43,11 +43,11 @@ Gibt die sichtbare Einstellung für die Word-Sprechblase für das angegebene Zei
 
 ## <a name="remarks"></a>Bemerkungen
 
-Wenn Sie einen Gespräch [**oder einen**](speak-method.md) Ansichts Versuch mit einer-Anweisung befolgen, um zu versuchen, die-Eigenschaft der Sprechblase zu ändern, wirkt sich dies möglicherweise nicht auf den sichtbaren Zustand **der Sprechblase** aus, da der **Sprech** -oder [**der Ansichts**](think-method.md) Rückruf in die Warteschlange eingereiht wird Legen Sie diesen Wert daher nur dann fest, wenn sich keine **Sprech** **-oder Aufruf** Anrufe in der Warteschlange des Zeichens befinden.
+Wenn Sie [](speak-method.md) einem Speak- oder [**Think-Aufruf**](think-method.md) mit einer -Anweisung folgen, um zu versuchen, die -Eigenschaft des Sprechblasens zu ändern, wirkt sich dies möglicherweise nicht auf den Sichtbar-Zustand des Balloons aus, da der **Speak-** oder **Think-Aufruf** in die Warteschlange gestellt wird, aber der Aufruf, der den sichtbaren Zustand des Balloons ansteuert, nicht. Legen Sie diesen Wert daher nur fest, wenn **sich keine Speak-** oder **Think-Aufrufe** in der Warteschlange des Zeichens befinden.
 
-Wenn Sie versuchen, diese Eigenschaft festzulegen, während das Zeichen gerade gesprochen, bewegt oder gezogen wird, wird die Einstellung der Eigenschaft erst wirksam, wenn der vorherige Vorgang abgeschlossen ist.
+Wenn Sie versuchen, diese Eigenschaft während des Sprechens, Verschiebens oder Ziehens des Zeichens zu setzen, wird die Eigenschafteneinstellung erst wirksam, wenn der vorherige Vorgang abgeschlossen ist.
 
-Durch [**das Aufrufen**](visible-property.md) der Methoden "sprechen" und " [**Think**](think-method.md) " wird der [**Sprech**](speak-method.md) Blasen automatisch angezeigt Wenn die Eigenschaft für das automatische Ausblenden des Sprechers des Zeichens aktiviert ist, wird die Sprechblase automatisch ausgeblendet, nachdem der Ausgabetext gesprochen wurde. Durch Klicken oder Ziehen eines Zeichens, das derzeit nicht gesprochen wird, wird auch dann automatisch die Sprechblase ausgeblendet, wenn die Einstellung für das automatische ausblenden deaktiviert ist. Sie können die Einstellung für das automatische Ausblenden des Zeichens mithilfe der [**Style**](style-property.md) -Eigenschaft des sprechenden-Objekts ändern.
+Durch Aufrufen [**der Speak-**](speak-method.md) [**und Think-Methoden**](think-method.md) wird der Balloon automatisch sichtbar, und die [**Visible-Eigenschaft**](visible-property.md) wird auf **True (Wahr) festlegen.** Wenn die AutoHide-Eigenschaft des Zeichens aktiviert ist, wird die Sprechblase automatisch ausgeblendet, nachdem der Ausgabetext gesprochen wurde. Wenn Sie auf ein Zeichen klicken oder ziehen, das derzeit nicht spricht, wird der Balloon auch dann automatisch ausblendet, wenn die Einstellung AutoHide deaktiviert ist. Sie können die Einstellung AutoHide des Zeichens ändern, indem Sie die [**Style-Eigenschaft**](style-property.md) des Balloons verwenden.
 
 ### <a name="see-also"></a>Weitere Informationen
 
