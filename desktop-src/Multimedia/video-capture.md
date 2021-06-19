@@ -1,27 +1,27 @@
 ---
-title: Video Erfassung (Windows Multimedia)
-description: Video Erfassung
+title: Videoaufnahme (Windows Multimedia)
+description: Erfahren Sie, wie Sie Videoaufnahmefunktionen in Ihre Anwendung integrieren, indem Sie die AVICap-Fensterklasse verwenden, die eine einfache, nachrichtenbasierte Schnittstelle verwendet.
 ms.assetid: c93ecc51-e2c5-4b69-8625-c8385d53fab2
 keywords:
-- Video für Windows (Vfw), Video Erfassung
-- VFW (Video für Windows), Video Erfassung
-- Avicap, Informationen zu
+- Video für Windows (VFW), Videoaufnahme
+- VFW (Video für Windows), Videoaufnahme
+- AVICap,About
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: bba048c869b99f345e5dd35fcac3bfd51d0ba490
-ms.sourcegitcommit: 8fa6614b715bddf14648cce36d2df22e5232801a
+ms.openlocfilehash: c53bcb3330511675d61fa835ddd460cf5b136e83
+ms.sourcegitcommit: 91530c19d26ba4c57a6af1f37b57f211f580464e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "103858599"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112395505"
 ---
-# <a name="video-capture-windows-multimedia"></a>Video Erfassung (Windows Multimedia)
+# <a name="video-capture-windows-multimedia"></a>Videoaufnahme (Windows Multimedia)
 
-Mithilfe der avicap-Fenster Klasse können Sie problemlos Video Erfassungs Funktionen in Ihre Anwendung integrieren. Avicap bietet Anwendungen eine einfache, Nachrichten basierte Schnittstelle für den Zugriff auf Video-und Waveform-audioerfassungs Hardware und steuert den Prozess der Streaming-Video Erfassung auf die Festplatte.
+Sie können Videoaufnahmefunktionen problemlos in Ihre Anwendung integrieren, indem Sie die AVICap-Fensterklasse verwenden. AVICap bietet Anwendungen eine einfache, nachrichtenbasierte Schnittstelle für den Zugriff auf Video- und Waveform-Audio-Erfassungshardware und die Steuerung des Streamingprozesses der Videoaufzeichnung auf den Datenträger.
 
--   [Informationen zur Video Erfassung](about-video-capture.md)
--   [Verwenden der Video Erfassung](using-video-capture.md)
--   [Video Aufzeichnungs Referenz](video-capture-reference.md)
+-   [Informationen zur Videoaufnahme](about-video-capture.md)
+-   [Verwenden von Video capture](using-video-capture.md)
+-   [Videoaufnahmereferenz](video-capture-reference.md)
 
  
 

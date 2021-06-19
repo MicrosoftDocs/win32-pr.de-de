@@ -1,39 +1,39 @@
 ---
-title: Voicecaption-Eigenschaft (Commands-Objekt)
-description: Voicecaption (Eigenschaft)
+title: VoiceCaption-Eigenschaft (Commands-Objekt)
+description: Erfahren Sie mehr über die VoiceCaption-Eigenschaft des Commands-Objekts, die den für das Commands-Objekt im Fenster "Voice Commands" angezeigten Text zurückgibt oder legt diesen fest.
 ms.assetid: 2c4fa175-fc2d-4474-b15f-7e838103a435
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0aa7d4a8ea9ff1cdd4a5792fca58231f203e21ac
-ms.sourcegitcommit: 8fa6614b715bddf14648cce36d2df22e5232801a
+ms.openlocfilehash: 8a4a2113e0a952f253df901d192b42466fa30350
+ms.sourcegitcommit: 91530c19d26ba4c57a6af1f37b57f211f580464e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "103739480"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112396125"
 ---
-# <a name="voicecaption-property-commands-object"></a>Voicecaption-Eigenschaft (Commands-Objekt)
+# <a name="voicecaption-property-commands-object"></a>VoiceCaption-Eigenschaft (Commands-Objekt)
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Microsoft Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht mehr verfügbar.\]
 
 <dl> <dt>
 
 <span id="Description"></span><span id="description"></span><span id="DESCRIPTION"></span>**Beschreibung**
 </dt> <dd>
 
-Gibt den Text zurück, der für das [**Commands**](/windows/desktop/lwef/the-commands-collection-object) -Objekt im Fenster Sprachbefehle angezeigt wird, oder legt diesen fest.
+Gibt den Text zurück, der für das [**Commands-Objekt**](/windows/desktop/lwef/the-commands-collection-object) im Fenster für Sprachbefehle angezeigt wird, oder legt diesen fest.
 
 </dd> <dt>
 
 <span id="Syntax"></span><span id="syntax"></span><span id="SYNTAX"></span>**Syntax**
 </dt> <dd>
 
-*Agent. *-**Zeichen ("**_Merkmal-ID_*_"). Commands. voicecaption_- *  \[  =  *Zeichenfolge*\]
+*agent.***Characters("**_CharacterID_*_"). Commands.VoiceCaption-Zeichenfolge_ *  \[  =  \]
 
 
 
-| Teil     | BESCHREIBUNG                                               |
+| Teil     | Beschreibung                                               |
 |----------|-----------------------------------------------------------|
-| *string* | Ein Zeichen folgen Ausdruck, der den angezeigten Text ergibt. |
+| *string* | Ein Zeichenfolgenausdruck, der den angezeigten Text auswertet. |
 
 
 
@@ -43,9 +43,9 @@ Gibt den Text zurück, der für das [**Commands**](/windows/desktop/lwef/the-com
 
 ## <a name="remarks"></a>Bemerkungen
 
-Wenn Sie die [**Voice**](voice-property.md) -Eigenschaft der [**Commands**](/windows/desktop/lwef/the-commands-collection-object) -Auflistung festlegen, legen Sie in der Regel auch die **voicecaption** -Eigenschaft fest. Die Texteinstellung **voicecaption** wird im Fenster Sprachbefehle angezeigt, wenn die Client Anwendung aktiv ist und das Zeichen sichtbar ist. Wenn diese Eigenschaft nicht festgelegt ist, bestimmt die-Einstellung für die [**Caption**](caption-property.md) -Eigenschaft der **Befehls** Sammlung den angezeigten Text. Wenn weder die **voicecaption** -Eigenschaft noch die **Caption** -Eigenschaft festgelegt ist, werden die Befehle in der Auflistung im Fenster "Sprachbefehle" unter "(nicht definierter Befehl)" angezeigt, wenn die Client Anwendung als Eingabe aktiv wird.
+Wenn Sie die [**Voice-Eigenschaft**](voice-property.md) Ihrer [**Commands-Sammlung**](/windows/desktop/lwef/the-commands-collection-object) festlegen, legen Sie in der Regel auch deren **VoiceCaption-Eigenschaft** fest. Die **Texteinstellung VoiceCaption** wird im Fenster Sprachbefehle angezeigt, wenn Ihre Clientanwendung eingabeaktiv ist und das Zeichen sichtbar ist. Wenn diese Eigenschaft nicht festgelegt ist, bestimmt die Einstellung für die [**Caption-Eigenschaft**](caption-property.md) der **Commands-Auflistung** den angezeigten Text. Wenn weder **die VoiceCaption-** noch die **Caption-Eigenschaft** festgelegt ist, werden Befehle in der Sammlung im Fenster Für Sprachbefehle unter "(nicht definierter Befehl)" angezeigt, wenn Ihre Clientanwendung eingabeaktiv wird.
 
-Mit der **voicecaption** -Einstellung wird auch der im Überwachungsport angezeigte Text bestimmt, um die Befehle anzugeben, für die das Zeichen lauscht.
+Die **VoiceCaption-Einstellung** bestimmt auch den im Lauschenden Tipp angezeigten Text, um die Befehle anzugeben, auf die das Zeichen lausiert.
 
 ## <a name="see-also"></a>Weitere Informationen
 

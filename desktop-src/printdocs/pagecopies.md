@@ -1,19 +1,19 @@
 ---
-description: Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter Spezifikation des Druckschemas.
+description: Lesen Sie Referenzinformationen zum PageCopies-Parameter. Dieses Thema ist nicht aktuell. Aktuelle Informationen finden Sie unter Print Schema Specification (Spezifikation des Druckschemas).
 ms.assetid: a15fe075-6696-4c70-b658-ae62d542bb4e
 title: PageCopies
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 83b1fc822d27d104364c2414ca89cf1fdf30c7d3
-ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
+ms.openlocfilehash: 5002850fa1df5a86b0022a941e3b2a1f7e414a44
+ms.sourcegitcommit: 91530c19d26ba4c57a6af1f37b57f211f580464e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "107997667"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112396685"
 ---
 # <a name="pagecopies"></a>PageCopies
 
-Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter [Print Schema Specification (Spezifikation des Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
+Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie unter Print Schema Specification (Spezifikation des [Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 
 Gibt die Anzahl der Kopien einer Seite an.
 
@@ -36,7 +36,7 @@ Gibt die Anzahl der Kopien einer Seite an.
 
 ## <a name="structure-content"></a>Strukturieren von Inhalt
 
-Die XML-Struktur dieses Elements ist:
+Die XML-Struktur dieses Elements lautet:
 
 ``` syntax
 <psf:ParameterDef name="psk:PageCopies">
@@ -67,7 +67,7 @@ Die XML-Struktur dieses Elements ist:
 
 ## <a name="structure-properties"></a>Struktureigenschaften
 
-In der folgenden Tabelle werden die Merkmale der Variablen beschrieben, die in der XML-Struktur definiert sind.
+In der folgenden Tabelle werden die Merkmale der in der XML-Struktur definierten Variablen beschrieben.
 
 
 
@@ -77,7 +77,7 @@ In der folgenden Tabelle werden die Merkmale der Variablen beschrieben, die in d
 | DefaultValue<br/> | integer<br/> | 1<br/>                 |
 | MaxValue<br/>     | integer<br/> | nicht definiert<br/>         |
 | Minvalue<br/>     | integer<br/> | 1<br/>                 |
-| Obligatorisch.<br/>    | Zeichenfolge<br/>  | psk:Unconditional<br/> |
+| Obligatorisch.<br/>    | Zeichenfolge<br/>  | psk:Bedingungslos<br/> |
 | Mehrere<br/>     | integer<br/> | 1<br/>                 |
 | Unittype<br/>     | Zeichenfolge<br/>  | Kopien<br/>            |
 

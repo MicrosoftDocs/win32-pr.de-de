@@ -1,33 +1,33 @@
 ---
-description: Um ereignisspezifische Daten zu nutzen, muss der Consumer das Format der Ereignisdaten kennen.
+description: Rufen Sie Ereignisdaten mit Managed Object Format (MOF) ab, während Ereignisse verarbeitet werden. Um ereignisspezifische Daten zu nutzen, muss der Consumer das Format der Ereignisdaten kennen.
 ms.assetid: 13512236-c416-43ba-bf36-b05c5c08d6c9
-title: Abrufen von Ereignisdaten mithilfe von MOF
+title: Abrufen von Ereignisdaten mit MOF
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 455ddc08aae189b2ceab05aab365d9b9fb1a15d4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f8752d7a4dc71ddb7b5a5dbc39e93c5fe16bb652
+ms.sourcegitcommit: 91530c19d26ba4c57a6af1f37b57f211f580464e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104977609"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112395015"
 ---
-# <a name="retrieving-event-data-using-mof"></a>Abrufen von Ereignisdaten mithilfe von MOF
+# <a name="retrieving-event-data-using-mof"></a>Abrufen von Ereignisdaten mit MOF
 
-Um ereignisspezifische Daten zu nutzen, muss der Consumer das Format der Ereignisdaten kennen. Wenn der Anbieter MOF verwendet hat, um das Format der Ereignisdaten zu veröffentlichen, können Sie die MOF-Klasse verwenden, um die Ereignisdaten zu analysieren. Alle Kernel Ereignisse verwenden MOF, um das Format der Ereignisdaten zu veröffentlichen. Informationen zum Veröffentlichen von Ereignissen finden [Sie unter Veröffentlichen Ihres Ereignis Schemas](publishing-your-event-schema.md).
+Um ereignisspezifische Daten zu nutzen, muss der Consumer das Format der Ereignisdaten kennen. Wenn der Anbieter MOF zum Veröffentlichen des Formats der Ereignisdaten verwendet hat, können Sie die Ereignisdaten mithilfe der MOF-Klasse analysieren. Alle Kernelereignisse verwenden MOF, um das Format der Ereignisdaten zu veröffentlichen. Informationen zum Veröffentlichen von Ereignissen finden Sie unter [Veröffentlichen ihres Ereignisschemas.](publishing-your-event-schema.md)
 
-Das Auswerten der Ereignisdaten erfordert die Verwendung der Windows-Verwaltungsinfrastruktur (WMI)-API. Der etw-Namespace, in dem Anbieter ihre MOF-Klasse veröffentlichen, ist root \\ WMI. Der etw-Namespace enthält drei Typen von MOF-Klassen: die MOF-Anbieter Klasse, die MOF-Ereignisklasse und die MOF-Klasse des Ereignis Typs. Die MOF-Klasse des Ereignisses gruppiert eine oder mehrere MOF-Klassen des Ereignis Typs logisch. Der Ereignistyp MOF-Klasse definiert die tatsächlichen Ereignisdaten.
+Zum Analysieren der Ereignisdaten muss die WMI-API (Windows Management Infrastructure) verwendet werden. Der ETW-Namespace, in dem Anbieter ihre MOF-Klasse veröffentlichen, ist \\ root wmi. Der ETW-Namespace enthält drei Typen von MOF-Klassen: die MOF-Anbieterklasse, die MOF-Ereignisklasse und die MOF-Ereignisklasse. Die MOF-Ereignisklasse gruppiert logisch eine oder mehrere MOF-Ereignistypklassen. Die MOF-Ereignisklasse definiert die tatsächlichen Ereignisdaten.
 
-Eine MOF-Ereignisklasse enthält einen **GUID** -Klassen Qualifizierer, dessen Wert dem Wert im **Header. GUID** -Member der [**Ereignis Ablauf \_ Verfolgungs**](/windows/win32/api/evntrace/ns-evntrace-event_trace) Struktur entsprechen muss. Um sicherzustellen, dass Sie über die richtige Version der Klasse verfügen, vergleichen Sie auch den **eventversion** -Klassen Qualifizierer mit dem **Header. Class. Version** -Member der **Ereignis Ablauf \_ Verfolgungs** Struktur.
+Eine MOF-Ereignisklasse  enthält einen Guid-Klassenqualifizierer, dessen Wert mit dem Wert im **Header.Guid-Member** der [**EVENT \_ TRACE-Struktur**](/windows/win32/api/evntrace/ns-evntrace-event_trace) übereinstimmen muss. Um sicherzustellen, dass Sie über die richtige Version der -Klasse verfügen, vergleichen Sie auch den **EventVersion-Klassenqualifizierer** mit dem **Header.Class.Version-Member** der **EVENT \_ TRACE-Struktur.**
 
-Nachdem Sie die richtige Ereignisklasse gefunden haben, können Sie die untergeordneten Ereignistyp Klassen aufzählen, um die Klasse zu suchen, die das Format der Ereignisdaten enthält. Die richtige Ereignistyp Klasse enthält einen **eventType** -Klassen Qualifizierer, dessen Wert mit dem Wert im **Header. Class. Type** -Member der [**Ereignis Ablauf \_ Verfolgungs**](/windows/win32/api/evntrace/ns-evntrace-event_trace) Struktur übereinstimmt.
+Nachdem Sie die richtige Ereignisklasse gefunden haben, müssen Sie ihre untergeordneten Ereignistypklassen aufzählen, um die Klasse zu finden, die das Format der Ereignisdaten enthält. Die richtige Ereignistypklasse enthält einen **EventType-Klassenqualifizierer,** dessen Wert mit dem Wert im **Header.Class.Type-Member** der [**EVENT \_ TRACE-Struktur**](/windows/win32/api/evntrace/ns-evntrace-event_trace) übereinstimmt.
 
-Anschließend können Sie die WMI-API verwenden, um die Eigenschaften der MOF-Klasse aufzulisten. Verwenden Sie die Qualifizierer und den Datentyp der einzelnen Eigenschaften, um die Größe des Datenelements in den zu lesenden Ereignisdaten zu ermitteln und zu formatieren. Eine Liste der MOF-Qualifizierer, die von etw unterstützt werden, finden Sie unter [MOF-Qualifizierer](event-tracing-mof-qualifiers.md)
+Sie können dann die WMI-API verwenden, um die Eigenschaften der MOF-Klasse aufzuzählen. Verwenden Sie die Qualifizierer und den Datentyp jeder Eigenschaft, um die Größe des Datenelements in den zu lesenden Ereignisdaten und deren Formatierung zu bestimmen. Eine Liste der MOF-Qualifizierer, die ETW unterstützt, finden Sie unter [MOF-Qualifizierer](event-tracing-mof-qualifiers.md)für die Ereignisablaufverfolgung.
 
-Da etw keine Ausrichtung zwischen Ereignisdaten Werten erzwingt, kann das Typecasting oder die Zuweisung des Werts direkt aus einem Puffer einen Ausrichtungsfehler verursachen. Sie sollten keine Struktur aus der MOF-Klasse erstellen und versuchen, Sie für die Nutzung von Ereignisdaten zu verwenden. Wenn Sie z. b. ein Zeichen haben, auf das ULONGLONG folgt, wird ULONGLONG nicht an eine 8-Byte-Grenze ausgerichtet, sodass eine Zuweisung eine Ausrichtungs Ausnahme auslösen würde. (Auf 64-Bit-Computern erfolgt dies häufiger.) Aus diesem Grund sollten Sie CopyMemory verwenden, um die Daten aus dem Puffer in eine lokale Variable zu kopieren. Wenn das Ereignis später überarbeitet wird, funktioniert der Consumer möglicherweise nicht, wenn Sie versuchen, eine Struktur zu verwenden.
+Da ETW keine Ausrichtung zwischen Ereignisdatenwerten erzzwingen kann, kann das Typcasten oder Zuweisen des Werts direkt aus einem Puffer zu einem Ausrichtungsfehler führen. Sie sollten keine Struktur aus der MOF-Klasse erstellen und versuchen, sie zum Nutzen von Ereignisdaten zu verwenden. Wenn Sie beispielsweise über ein Zeichen gefolgt von ULONGLONG verfügen, wird ULONGLONG nicht an einer 8-Byte-Grenze ausgerichtet, sodass eine Zuweisung eine Ausrichtungsausnahme verursachen würde. (Auf 64-Bit-Computern geschieht dies häufiger.) Aus diesem Grund sollten Sie CopyMemory verwenden, um die Daten aus dem Puffer in eine lokale Variable zu kopieren. Wenn das Ereignis später überarbeitet wird, funktioniert Ihr Consumer möglicherweise nicht, wenn Sie versuchen, eine -Struktur zu verwenden.
 
-Ab Windows Vista wird empfohlen, dass Sie die Funktionen des Trace Data Helper (TDH) verwenden, um Ereignisse zu verarbeiten, die mithilfe von MOF-Klassen veröffentlicht wurden. Weitere Informationen finden [Sie unter Abrufen von Ereignisdaten mit TDH](retrieving-event-data-using-tdh.md).
+Ab Windows Vista wird empfohlen, die TDH-Funktionen (Trace Data Helper) zu verwenden, um Ereignisse zu nutzen, die mit MOF-Klassen veröffentlicht wurden. Weitere Informationen finden Sie unter [Abrufen von Ereignisdaten mit TDH.](retrieving-event-data-using-tdh.md)
 
-Im folgenden Beispiel wird gezeigt, wie Ereignisse verwendet werden, die durch eine MOF-Klasse definiert werden.
+Das folgende Beispiel zeigt, wie Ereignisse verwendet werden, die von einer MOF-Klasse definiert werden.
 
 
 ```C++

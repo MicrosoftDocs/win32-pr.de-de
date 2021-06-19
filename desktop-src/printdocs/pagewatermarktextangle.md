@@ -1,19 +1,19 @@
 ---
-description: Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter Spezifikation des Druckschemas.
+description: Weitere Informationen zum PageWatermarkTextAngle-Parameter. Dieses Thema ist nicht aktuell. Aktuelle Informationen finden Sie unter Print Schema Specification (Spezifikation des Druckschemas).
 ms.assetid: 157bb79c-68d2-4121-8a85-cd2f48095541
 title: PageWatermarkTextAngle
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 86c13d759232670c6957a91de12f9c35cf48aeb4
-ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
+ms.openlocfilehash: 1dce37512314e1eaac0cbbe3b5b4b817cb2ee455
+ms.sourcegitcommit: 91530c19d26ba4c57a6af1f37b57f211f580464e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "107995547"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112395975"
 ---
 # <a name="pagewatermarktextangle"></a>PageWatermarkTextAngle
 
-Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter [Print Schema Specification (Spezifikation des Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
+Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie unter Print Schema Specification (Spezifikation des [Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 
 Gibt den Winkel des Wasserzeichentexts relativ zur PageImageableSizeWidth-Richtung an. Der Winkel wird gegen den Uhrzeigersinn gemessen.
 
@@ -28,7 +28,7 @@ Gibt den Winkel des Wasserzeichentexts relativ zur PageImageableSizeWidth-Richtu
 |----------------------------|--------------------------------------------|
 | Elementtyp <br/>   | ParameterDef<br/>                    |
 | Bereichspräfix <br/> | Seite<br/>                            |
-| Hinweise <br/>          | Mit PageWatermark-Element verknüpft<br/> |
+| Hinweise <br/>          | Verknüpft mit dem PageWatermark-Element<br/> |
 
 
 
@@ -36,7 +36,7 @@ Gibt den Winkel des Wasserzeichentexts relativ zur PageImageableSizeWidth-Richtu
 
 ## <a name="structure-content"></a>Strukturieren von Inhalt
 
-Die XML-Struktur dieses Elements lautet wie folgt:
+Die XML-Struktur dieses Elements sieht wie folgt aus:
 
 ``` syntax
 <psf:ParameterDef name="psk:PageWatermarkTextAngle">
@@ -67,7 +67,7 @@ Die XML-Struktur dieses Elements lautet wie folgt:
 
 ## <a name="structure-properties"></a>Struktureigenschaften
 
-In der folgenden Tabelle werden die Merkmale der Variablen beschrieben, die in der XML-Struktur definiert sind.
+In der folgenden Tabelle werden die Merkmale der in der XML-Struktur definierten Variablen beschrieben.
 
 
 

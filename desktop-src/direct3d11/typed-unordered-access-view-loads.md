@@ -1,86 +1,86 @@
 ---
-title: Typisierte nicht geordnete zugriffsansichts Ladungen
-description: Die gegebene UAV-Auslastung (unsortierter Zugriffs Ansicht) ist die Fähigkeit eines Shaders, aus einer UAV mit einem bestimmten DXGI-Format zu lesen \_ .
+title: Typisiertes Laden von ungeordneten Zugriffsansichten
+description: Erfahren Sie mehr über die typisierte Last der ungeordneten Zugriffsansicht (UAV) in Direct3D 11. UAV Typed Load ist die Möglichkeit für einen Shader, aus einem UAV mit einem bestimmten DXGI_FORMAT zu lesen.
 ms.assetid: BA72BF21-8621-461D-8677-9DFB7D5BC6AA
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0958b3563ab8001fd7b34ae62c9bcc37ad75c07a
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 2c6d2cbfa51c8473dc3da51c5844c63bef944b50
+ms.sourcegitcommit: 91530c19d26ba4c57a6af1f37b57f211f580464e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104315453"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112396285"
 ---
-# <a name="typed-unordered-access-view-loads"></a>Typisierte nicht geordnete zugriffsansichts Ladungen
+# <a name="typed-unordered-access-view-loads"></a>Typisiertes Laden von ungeordneten Zugriffsansichten
 
-Die gegebene UAV-Auslastung (unsortierter Zugriffs Ansicht) ist die Fähigkeit eines Shaders, aus einer UAV mit einem bestimmten DXGI-Format zu lesen \_ .
+Unordered Access View (UAV) Typed Load ist die Möglichkeit für einen Shader, aus einem UAV mit einem bestimmten DXGI-FORMAT zu \_ lesen.
 
 -   [Übersicht](#overview)
 -   [Unterstützte Formate und API-Aufrufe](#supported-formats-and-api-calls)
--   [Verwenden von typisierten UAV-Ladungen aus HLSL](#using-typed-uav-loads-from-hlsl)
--   [Zugehörige Themen](#related-topics)
+-   [Verwenden von typisierten UAV-Ladevorgängen aus HLSL](#using-typed-uav-loads-from-hlsl)
+-   [Verwandte Themen](#related-topics)
 
 ## <a name="overview"></a>Übersicht
 
-Eine ungeordnete Zugriffs Ansicht (UAV) ist eine Ansicht einer unsorierten Zugriffs Ressource (die auch Puffer, Texturen und Textur Arrays enthalten kann, ohne Multisampling). Eine UAV ermöglicht Temporale ungeordnete Lese-/Schreibzugriffe aus mehreren Threads. Dies bedeutet, dass dieser Ressourcentyp gleichzeitig von mehreren Threads gelesen/geschrieben werden kann, ohne dass Speicher Konflikte entstehen. Dieser gleichzeitige Zugriff wird durch die Verwendung von [atomaren Funktionen](/windows/desktop/direct3d11/direct3d-11-advanced-stages-cs-atomic-functions)gehandhabt.
+Eine ungeordnete Zugriffsansicht (UAV) ist eine Ansicht einer ungeordneten Zugriffsressource (die Puffer, Texturen und Texturarrays enthalten kann, jedoch ohne Mehrfachsampling). Ein UAV ermöglicht temporal ungeordneten Lese-/Schreibzugriff von mehreren Threads. Dies bedeutet, dass dieser Ressourcentyp von mehreren Threads gleichzeitig gelesen/geschrieben werden kann, ohne Speicherkonflikte zu generieren. Dieser gleichzeitige Zugriff wird durch die Verwendung von [Atomic Functions](/windows/desktop/direct3d11/direct3d-11-advanced-stages-cs-atomic-functions)verarbeitet.
 
-D3D12 und D3D 11.3 werden in der Liste der Formate erweitert, die mit typisierten UAV-Ladevorgängen verwendet werden können.
+D3D12 und D3D11.3 erweitern die Liste der Formate, die mit typisierten UAV-Ladevorgängen verwendet werden können.
 
 ## <a name="supported-formats-and-api-calls"></a>Unterstützte Formate und API-Aufrufe
 
-Bisher unterstützten die folgenden drei Formate typisierte UAV-Ladungen und waren für die D3D 11.0-Hardware erforderlich. Sie werden für alle D3D 11.3-und D3D12-Hardware unterstützt.
+Zuvor unterstützten die folgenden drei Formate typisierte UAV-Ladevorgänge und waren für D3D11.0-Hardware erforderlich. Sie werden für alle D3D11.3- und D3D12-Hardware unterstützt.
 
--   R32 \_ float
--   R32 \_ uint
--   R32 \_ Sint
+-   R32 \_ FLOAT
+-   R32 \_ UINT
+-   R32 \_ SINT
 
-Die folgenden Formate werden als Satz auf D3D12-oder D3D 11.3-Hardware unterstützt. Wenn eine solche unterstützt wird, werden alle unterstützt.
+Die folgenden Formate werden als Satz auf D3D12- oder D3D11.3-Hardware unterstützt. Wenn also eines unterstützt wird, werden alle unterstützt.
 
--   R32G32B32A32 \_ float
--   R32G32B32A32 \_ uint
--   R32G32B32A32 \_ Sint
--   R16G16B16A16 \_ float
--   R16G16B16A16 \_ uint
--   R16G16B16A16 \_ Sint
--   R8G8B8A8 \_ unorm
--   R8G8B8A8 \_ uint
--   R8G8B8A8 \_ Sint
--   R16 \_ float
--   R16 \_ uint
--   R16 \_ Sint
--   R8- \_ unorm
--   R8 \_ uint
--   R8 \_ Sint
+-   R32G32B32A32 \_ FLOAT
+-   R32G32B32A32 \_ UINT
+-   R32G32B32A32 \_ SINT
+-   R16G16B16A16 \_ FLOAT
+-   R16G16B16A16 \_ UINT
+-   R16G16B16A16 \_ SINT
+-   R8G8B8A8 \_ UNORM
+-   R8G8B8A8 \_ UINT
+-   R8G8B8A8 \_ SINT
+-   R16 \_ FLOAT
+-   R16 \_ UINT
+-   R16 \_ SINT
+-   R8 \_ UNORM
+-   R8 \_ UINT
+-   R8 \_ SINT
 
-Die folgenden Formate werden optional und einzeln auf D3D12-und D3D 11.3-Hardware unterstützt. Daher muss eine einzelne Abfrage für jedes Format durchgeführt werden, um die Unterstützung zu testen.
+Die folgenden Formate werden optional und einzeln auf D3D12- und D3D11.3-Hardware unterstützt, sodass eine einzelne Abfrage für jedes Format durchgeführt werden muss, um die Unterstützung zu testen.
 
--   R16G16B16A16 \_ unorm
--   R16G16B16A16 \_ snorm
--   R32G32 \_ float
--   R32G32 \_ uint
--   R32G32 \_ Sint
--   R10G10B10A2 \_ unorm
--   R10G10B10A2 \_ uint
--   R11G11B10 \_ float
--   R8G8B8A8 \_ snorm
--   R16G16 \_ float
--   R16G16 \_ unorm
--   R16G16 \_ uint
--   R16G16 \_ snorm
--   R16G16 \_ Sint
--   R8G8 \_ unorm
--   R8G8 \_ uint
--   R8G8 \_ snorm
--   8g8 \_ Sint
--   R16 \_ unorm
--   R16 \_ snorm
--   R8 \_ snorm
--   A8- \_ unorm
--   B5G6R5 \_ unorm
--   B5G5R5A1 \_ unorm
--   B4G4R4A4 \_ unorm
+-   R16G16B16A16 \_ UNORM
+-   R16G16B16A16 \_ SNORM
+-   R32G32 \_ FLOAT
+-   R32G32 \_ UINT
+-   R32G32 \_ SINT
+-   R10G10B10A2 \_ UNORM
+-   R10G10B10A2 \_ UINT
+-   R11G11B10 \_ FLOAT
+-   R8G8B8A8 \_ SNORM
+-   R16G16 \_ FLOAT
+-   R16G16 \_ UNORM
+-   R16G16 \_ UINT
+-   R16G16 \_ SNORM
+-   R16G16 \_ SINT
+-   R8G8 \_ UNORM
+-   R8G8 \_ UINT
+-   R8G8 \_ SNORM
+-   8G8 \_ SINT
+-   R16 \_ UNORM
+-   R16 \_ SNORM
+-   R8 \_ SNORM
+-   A8 \_ UNORM
+-   B5G6R5 \_ UNORM
+-   B5G5R5A1 \_ UNORM
+-   B4G4R4A4 \_ UNORM
 
-Um die Unterstützung für weitere Formate zu ermitteln, müssen Sie [**ID3D11Device:: checkfeaturesupport**](/windows/desktop/api/D3D11/nf-d3d11-id3d11device-checkfeaturesupport) mit der [**D3D11 \_ Feature \_ Data \_ D3D11 \_ OPTIONS2**](/windows/desktop/api/D3D11/ns-d3d11-d3d11_feature_data_d3d11_options2) -Struktur als ersten Parameter aufrufen. Das `TypedUAVLoadAdditionalFormats` Bit wird festgelegt, wenn die oben genannte Liste als Satz unterstützt wird. Erstellen Sie einen zweiten Rückruf von **checkfeaturesupport unter** Verwendung einer [**D3D11 \_ Feature \_ Data \_ Format \_ SUPPORT2**](/windows/desktop/api/D3D11/ns-d3d11-d3d11_feature_data_format_support2) -Struktur (Überprüfen der zurückgegebenen Struktur mit dem D3D12- \_ Format \_ SUPPORT2 \_ UAV \_ typisiertes Load- \_ Member des D3D11- [**\_ Formats \_ SUPPORT2**](/windows/desktop/api/D3D11/ne-d3d11-d3d11_format_support2) Enum), um die Unterstützung in der Liste der optional unterstützten Formate zu ermitteln, z. b.:
+Um die Unterstützung für zusätzliche Formate zu ermitteln, rufen Sie [**ID3D11Device::CheckFeatureSupport**](/windows/desktop/api/D3D11/nf-d3d11-id3d11device-checkfeaturesupport) mit der [**D3D11 \_ FEATURE DATA \_ \_ D3D11 \_ OPTIONS2-Struktur**](/windows/desktop/api/D3D11/ns-d3d11-d3d11_feature_data_d3d11_options2) als ersten Parameter auf. Das `TypedUAVLoadAdditionalFormats` Bit wird festgelegt, wenn die obige Liste "supported as a set" unterstützt wird. Führen Sie einen zweiten Aufruf von **CheckFeatureSupport** durch, indem Sie eine [**D3D11 \_ FEATURE DATA FORMAT \_ \_ \_ SUPPORT2-Struktur**](/windows/desktop/api/D3D11/ns-d3d11-d3d11_feature_data_format_support2) verwenden (überprüfen Sie die zurückgegebene Struktur anhand des \_ \_ \_ UAV \_ TYPED LOAD-Members D3D12 FORMAT SUPPORT2 der \_ [**D3D11 \_ FORMAT \_ SUPPORT2-Enumeration),**](/windows/desktop/api/D3D11/ne-d3d11-d3d11_format_support2) um die Unterstützung in der Liste der optional unterstützten Formate oben zu ermitteln, z. B.:
 
 ``` syntax
 D3D11_FEATURE_DATA_D3D11_OPTIONS2 FeatureData;
@@ -105,11 +105,11 @@ if (SUCCEEDED(hr))
 }
 ```
 
-## <a name="using-typed-uav-loads-from-hlsl"></a>Verwenden von typisierten UAV-Ladungen aus HLSL
+## <a name="using-typed-uav-loads-from-hlsl"></a>Verwenden von typisierten UAV-Ladevorgängen aus HLSL
 
-Bei typisierten UAVs ist das HLSL-Flag D3D \_ Shader \_ erfordert ein \_ typisiertes \_ UAV- \_ Laden \_ zusätzlicher \_ Formate.
+Für typisierte UAVs ist das HLSL-Flag \_ D3D-SHADER \_ erfordert \_ TYPISIERTE \_ UAV-LADEFORMATE. \_ \_ \_
 
-Dies ist beispielsweise ein Shader-Code, der eine typisierte UAV-Auslastung verarbeitet:
+Hier ist ein Beispiel-Shadercode zum Verarbeiten einer typisierten UAV-Last:
 
 ``` syntax
 RWTexture2D<float4> uav1;
@@ -124,12 +124,12 @@ float4 main() : SV_Target
 
 <dl> <dt>
 
-[Direct3D 11,3-Features](direct3d-11-3-features.md)
+[Direct3D 11.3-Features](direct3d-11-3-features.md)
 </dt> <dt>
 
-[Shadermodell 5,1](/windows/desktop/direct3dhlsl/shader-model-5-1)
+[Shadermodell 5.1](/windows/desktop/direct3dhlsl/shader-model-5-1)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

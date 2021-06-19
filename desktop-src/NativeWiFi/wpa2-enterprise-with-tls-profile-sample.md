@@ -1,29 +1,29 @@
 ---
-description: Verwendet EAP-TLS (Extensible Authentication Protocol Transport Level Security) mit Zertifikaten für die Authentifizierung beim Netzwerk.
+description: Verwendet EAP-TLS (Extensible Authentication Protocol Transport Level Security) mit Zertifikaten für die Authentifizierung beim Netzwerk (WPA2-Enterprise).
 ms.assetid: ded07fda-ea7f-4c5a-9433-60196c3f14af
-title: Beispiel für WPA2-Enterprise mit TLS-Profil
+title: WPA2-Enterprise mit TLS-Profilbeispiel
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ebd85d30bed631a55f0e7e622aac4a8ade17ba3b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ba561f552614896ca5da1522180a53146dc5ce54
+ms.sourcegitcommit: 91530c19d26ba4c57a6af1f37b57f211f580464e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104041751"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112394820"
 ---
-# <a name="wpa2-enterprise-with-tls-profile-sample"></a>Beispiel für WPA2-Enterprise mit TLS-Profil
+# <a name="wpa2-enterprise-with-tls-profile-sample"></a>WPA2-Enterprise mit TLS-Profilbeispiel
 
-Dieses Beispiel Profil verwendet EAP-TLS (Extensible Authentication Protocol Transport Level Security) mit Zertifikaten für die Authentifizierung beim Netzwerk.
+Dieses Beispielprofil verwendet EAP-TLS (Extensible Authentication Protocol Transport Level Security) mit Zertifikaten für die Authentifizierung beim Netzwerk.
 
-Dieses Beispiel ist für die Verwendung Wi-Fi geschützten Zugriffs 2-Sicherheit konfiguriert, die im Unternehmens Modus (WPA2-Enterprise) ausgeführt wird. Der WPA2-Enterprise-Sicherheitstyp verwendet 802.1 x für den Authentifizierungs Austausch beim Back-End. Der Advanced Encryption Standard (AES)-Chiffre Typ wird für die Verschlüsselung verwendet.
+Dieses Beispiel ist so konfiguriert, dass Wi-Fi Protected Access 2-Sicherheit verwendet wird, die im Unternehmensmodus (WPA2-Enterprise) ausgeführt wird. Der WPA2-Enterprise verwendet 802.1X für den Authentifizierungsaustausch mit dem Back-End. Der Advanced Encryption Standard -Verschlüsselungstyp (AES) wird für die Verschlüsselung verwendet.
 
-Die EAP-TLS-Anmelde Informationen werden aus dem Zertifikat Speicher abgerufen. Wenn die Authentifizierung auf der Grundlage der Anmelde Informationen im Zertifikat Speicher fehlschlägt, wird der Benutzer aufgefordert, gültige Anmelde Informationen einzugeben. Wenn der erste Versuch fehlschlägt, werden keine alternativen Server, Stamm Zertifizierungsstellen oder Benutzernamen für die Authentifizierung verwendet.
+Die EAP-TLS-Anmeldeinformationen werden aus dem Zertifikatspeicher erhalten. Wenn die Authentifizierung basierend auf den Anmeldeinformationen im Zertifikatspeicher fehlschlägt, wird der Benutzer aufgefordert, gültige Anmeldeinformationen anzugeben. Für die Authentifizierung werden keine alternativen Server, Stammzertifizierungsstellen oder Benutzernamen verwendet, wenn der erste Versuch fehlschlägt.
 
-Die in diesem drahtlos Profil Beispiel verwendete EAPHost-Konfiguration wurde aus dem Beispiel der [EAP-TLS-Verbindungs Eigenschaften](../eaphost/eap-tls-connection-properties.md) abgeleitet.
+Die in diesem Funkprofilbeispiel verwendete EAPHost-Konfiguration wurde aus dem [Beispiel für EAP-TLS-Verbindungseigenschaften](../eaphost/eap-tls-connection-properties.md) abgeleitet.
 
-**Windows 7 und Windows Server 2008 R2 mit installiertem drahtlosen LAN-Dienst:** Änderungen werden unter Windows 7 und Windows Server 2008 R2 implementiert, und der drahtlose LAN-Dienst wird installiert, um die Leistung des drahtlos Netzwerks zu optimieren. Die Standardeinstellung für [**autoswitch**](wlan-profileschema-autoswitch-wlanprofile-element.md) , wenn dieses Element nicht in einem Drahtlos LAN-Profil festgelegt ist, hat sich geändert. Die Standardeinstellung wird unter Windows 7 und Windows Server 2008 R2 in "false" geändert, wobei der drahtlose LAN-Dienst installiert ist. Die Standardeinstellung ist auf Windows Server 2008 und Windows Vista auf "true" festgelegt. Weitere Informationen finden Sie in der Beschreibung des Schema Elements " [**autoswitch**](wlan-profileschema-autoswitch-wlanprofile-element.md) ".
+**Windows 7 und Windows Server 2008 R2 mit installierten Wlan-Diensten:** Änderungen werden unter Windows 7 und Windows Server 2008 R2 mit installierten Wlan-Diensten implementiert, um die Leistung von Drahtlosnetzwerken zu optimieren. Die Standardeinstellung für [**autoSwitch,**](wlan-profileschema-autoswitch-wlanprofile-element.md) wenn dieses Element nicht in einem WLAN-Profil festgelegt ist, wurde geändert. Die Standardeinstellung wird unter Windows 7 und Windows Server 2008 R2 mit installierten WLAN-Diensten in "false" geändert. Die Standardeinstellung war "true" unter Windows Server 2008 und Windows Vista. Weitere Informationen finden Sie in der Beschreibung des [**Schemaelements autoSwitch.**](wlan-profileschema-autoswitch-wlanprofile-element.md)
 
-**Windows XP mit SP3 und Wireless LAN API für Windows XP mit SP2:** EAP-TLS wird nicht unterstützt.
+**Windows XP mit SP3 und Wlan-API für Windows XP mit SP2:** EAP-TLS wird nicht unterstützt.
 
 ``` syntax
 <?xml version="1.0" encoding="US-ASCII"?>
@@ -83,7 +83,7 @@ Die in diesem drahtlos Profil Beispiel verwendete EAPHost-Konfiguration wurde au
 
 <dl> <dt>
 
-[Beispiele für Funk profile](wireless-profile-samples.md)
+[Beispiele für Drahtlosprofile](wireless-profile-samples.md)
 </dt> </dl>
 
  

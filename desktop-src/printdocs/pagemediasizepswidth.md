@@ -1,21 +1,21 @@
 ---
-description: Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter Spezifikation des Druckschemas.
+description: Hier finden Sie Informationen zum PageMediaSizePSWidth-Parameter. Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter Spezifikation des Druckschemas.
 ms.assetid: a1a684ce-5615-4ff7-a7aa-5c9f786f84ed
 title: PageMediaSizePSWidth
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2f4399b75f047c2705983c893075995800396120
-ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
+ms.openlocfilehash: dfe678107d2a183ee0f0bf6ce290dfe230fa8cc2
+ms.sourcegitcommit: 91530c19d26ba4c57a6af1f37b57f211f580464e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "107997547"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112395645"
 ---
 # <a name="pagemediasizepswidth"></a>PageMediaSizePSWidth
 
 Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter [Print Schema Specification (Spezifikation des Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 
-Gibt die Breite der Seite an, die der Ausrichtungsrichtung des Feeds entspricht (Referenz [zur Spezifikation des Dateiformats der PostScript-Druckerbeschreibung](https://www.adobe.com/products/postscript/pdfs/PLRM.pdf)).
+Gibt die Breite der Seite an, die an die Ausrichtungsrichtung des Feeds angibt (Referenz zur Spezifikation des Dateiformats der [PostScript-Druckerbeschreibung](https://www.adobe.com/products/postscript/pdfs/PLRM.pdf)).
 
 -   [Elementinformationen](#element-information)
 -   [Strukturieren von Inhalt](#structure-content)
@@ -28,7 +28,7 @@ Gibt die Breite der Seite an, die der Ausrichtungsrichtung des Feeds entspricht 
 |----------------------------|-------------------------------------------------------------|
 | Elementtyp <br/>   | ParameterDef<br/>                                     |
 | Bereichspräfix <br/> | Seite<br/>                                             |
-| Hinweise <br/>          | Mit PageMediaSize-Element verknüpft, CustomPS-Option<br/> |
+| Hinweise <br/>          | Verknüpft mit PageMediaSize-Element, CustomPS-Option<br/> |
 
 
 

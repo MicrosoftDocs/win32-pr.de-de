@@ -1,21 +1,21 @@
 ---
-description: Dieses Thema ist nicht aktuell. Aktuelle Informationen finden Sie unter Print Schema Specification(Spezifikation des Druckschemas).
+description: Hier finden Sie Informationen zum PageMediaSizePSOrientation-Parameter. Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter Spezifikation des Druckschemas.
 ms.assetid: b091c250-66f2-47cc-a012-1526c0ed02c9
 title: PageMediaSizePSOrientation
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d16a9a2e59ebffb41ad7c9a9c16eaf41497ade62
-ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
+ms.openlocfilehash: adb1b3aff1099199a98d6c8be899824dd1a1f17c
+ms.sourcegitcommit: 91530c19d26ba4c57a6af1f37b57f211f580464e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "107997557"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112395725"
 ---
 # <a name="pagemediasizepsorientation"></a>PageMediaSizePSOrientation
 
-Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie unter Print Schema Specification (Spezifikation des [Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
+Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter [Print Schema Specification (Spezifikation des Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 
-Gibt die Ausrichtung relativ zur Richtung der Feedausrichtung an (Referenz zur Spezifikation des [PostScript-Druckerbeschreibungsdateiformats).](https://www.adobe.com/products/postscript/pdfs/PLRM.pdf)
+Gibt die Ausrichtung relativ zur Ausrichtungsrichtung des Feeds an (Referenz [zur Spezifikation des Dateiformats der PostScript-Druckerbeschreibung](https://www.adobe.com/products/postscript/pdfs/PLRM.pdf)).
 
 -   [Elementinformationen](#element-information)
 -   [Strukturieren von Inhalt](#structure-content)
@@ -28,7 +28,7 @@ Gibt die Ausrichtung relativ zur Richtung der Feedausrichtung an (Referenz zur S
 |----------------------------|-------------------------------------------------------------|
 | Elementtyp <br/>   | ParameterDef<br/>                                     |
 | Bereichspräfix <br/> | Seite<br/>                                             |
-| Hinweise <br/>          | Mit PageMediaSize-Element verknüpft, CustomPS-Option<br/> |
+| Hinweise <br/>          | Verknüpft mit PageMediaSize-Element, CustomPS-Option<br/> |
 
 
 
@@ -36,7 +36,7 @@ Gibt die Ausrichtung relativ zur Richtung der Feedausrichtung an (Referenz zur S
 
 ## <a name="structure-content"></a>Strukturieren von Inhalt
 
-Die XML-Struktur dieses Elements lautet:
+Die XML-Struktur dieses Elements ist:
 
 ``` syntax
 <psf:ParameterDef name="psk:PageMediaSizePSOrientation">
@@ -67,7 +67,7 @@ Die XML-Struktur dieses Elements lautet:
 
 ## <a name="structure-properties"></a>Struktureigenschaften
 
-In der folgenden Tabelle werden die Merkmale der in der XML-Struktur definierten Variablen beschrieben.
+In der folgenden Tabelle werden die Merkmale der Variablen beschrieben, die in der XML-Struktur definiert sind.
 
 
 
@@ -89,7 +89,7 @@ In der folgenden Tabelle werden die Merkmale der in der XML-Struktur definierten
 
 <dl> <dt>
 
-[Spezifikation des PostScript-Druckerbeschreibungsdateiformats](https://www.adobe.com/products/postscript/pdfs/PLRM.pdf)
+[Spezifikation des Dateiformats der PostScript-Druckerbeschreibung](https://www.adobe.com/products/postscript/pdfs/PLRM.pdf)
 </dt> <dt>
 
 [Spezifikation des Druckschemas](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)

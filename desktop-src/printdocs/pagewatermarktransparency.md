@@ -1,15 +1,15 @@
 ---
-description: Dieses Thema ist nicht aktuell. Aktuelle Informationen finden Sie unter Print Schema Specification(Spezifikation des Druckschemas).
+description: Abrufen von Informationen zum PageWatermarkTransparency-Parameter. Dieses Thema ist nicht aktuell. Aktuelle Informationen finden Sie unter Print Schema Specification (Spezifikation des Druckschemas).
 ms.assetid: f94c1450-9648-4aee-8f88-2a9213eba4a9
 title: PageWatermarkTransparency
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e8d46a03cfb1b2129f4c89a6ea7c751e23cd565e
-ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
+ms.openlocfilehash: 46ba405c3cd4a269edc4585ad8cba4c81f2c05e9
+ms.sourcegitcommit: 91530c19d26ba4c57a6af1f37b57f211f580464e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "107996877"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112394785"
 ---
 # <a name="pagewatermarktransparency"></a>PageWatermarkTransparency
 

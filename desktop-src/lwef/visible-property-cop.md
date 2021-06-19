@@ -1,39 +1,39 @@
 ---
-title: Visible-Eigenschaft (Befehls Objekt)
-description: Visible-Eigenschaft
+title: Visible-Eigenschaft (Befehlsobjekt)
+description: Erfahren Sie mehr über die Visible-Eigenschaft des Command-Objekts, das zurückgibt oder festlegt, ob der Befehl im Popupmenü des Zeichens sichtbar ist.
 ms.assetid: 80137e16-4646-4251-b1c0-bca39ff7a233
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: feaa6603812bf0938e6639021eb0f8660382af37
-ms.sourcegitcommit: 8fa6614b715bddf14648cce36d2df22e5232801a
+ms.openlocfilehash: af4efec1ad8a97d6412a560a81836273b93ebf2b
+ms.sourcegitcommit: 91530c19d26ba4c57a6af1f37b57f211f580464e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "106342391"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112396245"
 ---
-# <a name="visible-property-command-object"></a>Visible-Eigenschaft (Befehls Objekt)
+# <a name="visible-property-command-object"></a>Visible-Eigenschaft (Befehlsobjekt)
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht mehr verfügbar.\]
 
 <dl> <dt>
 
 <span id="Description"></span><span id="description"></span><span id="DESCRIPTION"></span>**Beschreibung**
 </dt> <dd>
 
-Gibt zurück oder legt fest, ob der [**Befehl**](/windows/desktop/lwef/the-command-object) im Popupmenü des Zeichens sichtbar ist.
+Gibt zurück oder legt fest, ob der [**Befehl**](/windows/desktop/lwef/the-command-object) im Popupmenü des Zeichens angezeigt wird.
 
 </dd> <dt>
 
 <span id="Syntax_"></span><span id="syntax_"></span><span id="SYNTAX_"></span>**Syntax** 
 </dt> <dd>
 
-*Agent ***. Zeichen (**"* Merkmal-ID *"**). Befehle (**"* Name *" * *). Sichtbarer* *  \[  =  *boolescher* Wert\]
+*agent***. Characters(**"* CharacterID *"**). Commands(**"* name *"**). Sichtbarer* *  \[  =  *boolescher Wert*\]
 
 
 
-| Teil      | BESCHREIBUNG                                                                                                                                                                                                                                      |
+| Teil      | Beschreibung                                                                                                                                                                                                                                      |
 |-----------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| *boolean* | Ein boolescher Ausdruck, der angibt, ob die Beschriftung des [**Befehls**](/windows/desktop/lwef/the-command-object)im Popupmenü des Zeichens angezeigt wird.<br/> **True** (Standard) die Beschriftung wird angezeigt.<br/> **False** Die Beschriftung wird nicht angezeigt.<br/> |
+| *boolean* | Ein boolescher Ausdruck, der angibt, ob die Beschriftung des [**Befehls**](/windows/desktop/lwef/the-command-object)im Popupmenü des Zeichens angezeigt wird.<br/> **True** (Standard) Die Beschriftung wird angezeigt.<br/> **False** Die Beschriftung wird nicht angezeigt.<br/> |
 
 
 
@@ -43,9 +43,9 @@ Gibt zurück oder legt fest, ob der [**Befehl**](/windows/desktop/lwef/the-comma
 
 ## <a name="remarks"></a>Bemerkungen
 
-Legen Sie diese Eigenschaft auf " **false** " fest, wenn Sie Spracheingaben für Ihre eigenen Schnittstellen einschließen möchten, ohne dass Sie im Popup Menü für das Zeichen angezeigt werden. Wenn Sie die [**Caption**](caption-property.md) -Eigenschaft eines [**Befehls**](/windows/desktop/lwef/the-command-object) Objekts auf die leere Zeichenfolge ("") festlegen, wird der Beschriftungs Text nicht im Popup Menü (z. b. als Leerzeile) angezeigt, unabhängig von dessen [**sichtbarer**](visible-property.md) Eigenschaften Einstellung.
+Legen Sie diese Eigenschaft auf **False** fest, wenn Sie Spracheingaben für Ihre eigenen Schnittstellen einschließen möchten, ohne dass sie im Popupmenü für das Zeichen angezeigt werden. Wenn Sie die [**Caption-Eigenschaft**](caption-property.md) eines [**Command-Objekts**](/windows/desktop/lwef/the-command-object) auf die leere Zeichenfolge ("") festlegen, wird der Beschriftungstext unabhängig von der [](visible-property.md) Visible-Eigenschaftseinstellung nicht im Popupmenü angezeigt (z. B. als leere Zeile).
 
-Die [**Visible**](visible-property.md) -Eigenschaften Einstellung der Auflistung der übergeordneten [**Befehle**](/windows/desktop/lwef/the-commands-collection-object) eines [**Befehls**](/windows/desktop/lwef/the-command-object) Objekts wirkt sich nicht auf die **sichtbare** Eigenschafts Einstellung des **Befehls** aus.
+Die [](visible-property.md) Visible-Eigenschafteneinstellung der [**übergeordneten Commands-Auflistung**](/windows/desktop/lwef/the-commands-collection-object) eines [**Command-Objekts**](/windows/desktop/lwef/the-command-object) wirkt sich nicht auf die **Visible-Eigenschafteneinstellung** des **Befehls** aus.
 
  
 

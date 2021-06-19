@@ -1,39 +1,39 @@
 ---
-title: Top-Eigenschaft (Zeichen-Objekt)
-description: Top-Eigenschaft
+title: Top-Eigenschaft (Characters-Objekt)
+description: Erfahren Sie mehr über die Top-Eigenschaft (Characters-Objekt). Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht mehr verfügbar.
 ms.assetid: d5758a77-2d9a-44b8-bbbb-57ddf96c7fe4
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ef724c7052ad1d9ba5cb51ea46ccd7647723ed32
-ms.sourcegitcommit: 8fa6614b715bddf14648cce36d2df22e5232801a
+ms.openlocfilehash: 28a5e26d2ef578a98447d47eb2a3fae3613760a9
+ms.sourcegitcommit: 91530c19d26ba4c57a6af1f37b57f211f580464e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "106338307"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112396345"
 ---
-# <a name="top-property-characters-object"></a>Top-Eigenschaft (Zeichen-Objekt)
+# <a name="top-property-characters-object"></a>Top-Eigenschaft (Characters-Objekt)
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht mehr verfügbar.\]
 
 <dl> <dt>
 
 <span id="Description"></span><span id="description"></span><span id="DESCRIPTION"></span>**Beschreibung**
 </dt> <dd>
 
-Gibt den oberen Rand des Frames des angegebenen Zeichens zurück oder legt ihn fest.
+Gibt den oberen Rand des Rahmens des angegebenen Zeichens zurück oder legt diese fest.
 
 </dd> <dt>
 
 <span id="Syntax"></span><span id="syntax"></span><span id="SYNTAX"></span>**Syntax**
 </dt> <dd>
 
-*Agent ***. Zeichen ("**_Merkmal-ID_*_"). Top_- *  \[  =  *Wert*\]
+*agent***. Zeichen ("**_CharacterID_*_"). Oberster_ *  \[  =  *Wert*\]
 
 
 
-| Teil    | BESCHREIBUNG                                             |
+| Teil    | Beschreibung                                             |
 |---------|---------------------------------------------------------|
-| *value* | Eine lange ganze Zahl, die den oberen Rand des Zeichens angibt. |
+| *value* | Eine long-Ganzzahl, die den oberen Rand des Zeichens angibt. |
 
 
 
@@ -43,15 +43,15 @@ Gibt den oberen Rand des Frames des angegebenen Zeichens zurück oder legt ihn f
 
 ## <a name="remarks"></a>Bemerkungen
 
-Die **Top** -Eigenschaft wird immer in Pixel ausgedrückt, relativ zum Bildschirm Ursprung (oben links). Diese Eigenschafts Einstellung gilt für alle Clients des Zeichens.
+Die **Top-Eigenschaft** wird immer in Pixel relativ zum Bildschirmursprung (oben links) ausgedrückt. Die Einstellung dieser Eigenschaft gilt für alle Clients des Zeichens.
 
-Obwohl das Zeichen in einem unregelmäßig formatierte Regions Fenster angezeigt wird, basiert der Speicherort des Zeichens auf den externen Dimensionen des rechteckigen Animations Rahmens, der verwendet wurde, als das Zeichen mit dem Microsoft-Agent-Zeichen-Editor kompiliert wurde.
+Obwohl das Zeichen in einem unregelmäßig formatierten Bereichsfenster angezeigt wird, basiert die Position des Zeichens auf den externen Dimensionen des rechteckigen Animationsrahmens, der beim Kompilieren des Zeichens mit dem Microsoft-Agent-Zeichen-Editor verwendet wurde.
 
-Verwenden Sie die Methode " [**muveto**](moveto-method.md) ", um den Speicherort des Zeichens zu ändern.
+Verwenden Sie die [**MoveTo-Methode,**](moveto-method.md) um die Position des Zeichens zu ändern.
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[**Left-Eigenschaft**](left-property.md), " [ **muveto** "-Methode](moveto-method.md)
+[**Left-Eigenschaft,**](left-property.md) [ **MoveTo-Methode**](moveto-method.md)
 
 
  

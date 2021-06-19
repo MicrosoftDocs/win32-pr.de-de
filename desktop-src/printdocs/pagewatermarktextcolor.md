@@ -1,19 +1,19 @@
 ---
-description: Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter Spezifikation des Druckschemas.
+description: Abrufen von Informationen zum PageWatermarkTextColor-Parameter. Dieses Thema ist nicht aktuell. Aktuelle Informationen finden Sie unter Print Schema Specification (Spezifikation des Druckschemas).
 ms.assetid: edbdd2c7-da04-49fb-a0f8-31a7df88f8ef
 title: PageWatermarkTextColor
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5a2cc4d4f88724080b09ef52d7ded781039ff852
-ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
+ms.openlocfilehash: db7cb7b893ec9a2ecf774173cf2a9f2410549087
+ms.sourcegitcommit: 91530c19d26ba4c57a6af1f37b57f211f580464e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "107996887"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112396015"
 ---
 # <a name="pagewatermarktextcolor"></a>PageWatermarkTextColor
 
-Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter [Print Schema Specification (Spezifikation des Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
+Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie unter Print Schema Specification (Spezifikation des [Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 
 Definiert die sRGB-Farbe für den Wasserzeichentext. Das Format ist ARGB: \# AARRGGBB.
 
@@ -28,7 +28,7 @@ Definiert die sRGB-Farbe für den Wasserzeichentext. Das Format ist ARGB: \# AAR
 |----------------------------|--------------------------------------------|
 | Elementtyp <br/>   | ParameterDef<br/>                    |
 | Bereichspräfix <br/> | Seite<br/>                            |
-| Hinweise <br/>          | Mit PageWatermark-Element verknüpft<br/> |
+| Hinweise <br/>          | Verknüpft mit dem PageWatermark-Element<br/> |
 
 
 
@@ -36,7 +36,7 @@ Definiert die sRGB-Farbe für den Wasserzeichentext. Das Format ist ARGB: \# AAR
 
 ## <a name="structure-content"></a>Strukturieren von Inhalt
 
-Die XML-Struktur dieses Elements lautet wie folgt:
+Die XML-Struktur dieses Elements sieht wie folgt aus:
 
 ``` syntax
 <psf:ParameterDef name="psk:PageWatermarkTextColor">
@@ -64,7 +64,7 @@ Die XML-Struktur dieses Elements lautet wie folgt:
 
 ## <a name="structure-properties"></a>Struktureigenschaften
 
-In der folgenden Tabelle werden die Merkmale der Variablen beschrieben, die in der XML-Struktur definiert sind.
+In der folgenden Tabelle werden die Merkmale der in der XML-Struktur definierten Variablen beschrieben.
 
 
 

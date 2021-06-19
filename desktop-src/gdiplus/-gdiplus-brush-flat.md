@@ -1,31 +1,31 @@
 ---
-description: Windows GDI+ macht eine flache API verfügbar, die aus ungefähr 600 Funktionen besteht, die in Gdiplus.dll implementiert und in "Gdiplus. h" deklariert sind.
+description: Windows GDI+ macht eine flache API verfügbar, die aus etwa 600 Funktionen besteht. Diese flachen API-Funktionen werden von der Brush C++-Klasse umschlossen.
 ms.assetid: def64d31-9a4b-4365-a618-b87735ce38f1
-title: Pinsel Funktionen (GDI+)
+title: Pinselfunktionen (GDI+)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7490cc641312014987b2fb847979de640c28c47e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ffe23588c44d8a3a6412cd0c2bc1327b98bbbd95
+ms.sourcegitcommit: 91530c19d26ba4c57a6af1f37b57f211f580464e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104345108"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112395085"
 ---
-# <a name="brush-functions-gdi"></a>Pinsel Funktionen (GDI+)
+# <a name="brush-functions-gdi"></a>Pinselfunktionen (GDI+)
 
-Windows GDI+ macht eine flache API verfügbar, die aus ungefähr 600 Funktionen besteht, die in Gdiplus.dll implementiert und in "Gdiplus. h" deklariert sind. Die Funktionen in der flatapi GDI+ werden von einer Sammlung von ungefähr 40 C++-Klassen umschließt. Es wird empfohlen, die Funktionen in der flatapi nicht direkt aufzurufen. Wenn Sie GDI+ aufrufen, sollten Sie dies tun, indem Sie die Methoden und Funktionen aufrufen, die von den C++-Wrappern bereitgestellt werden. Der Microsoft-Produktsupport bietet keine Unterstützung für Code, mit dem die flatapi direkt aufgerufen wird. Weitere Informationen zur Verwendung dieser Wrapper Methoden finden Sie unter [GDI+ Flat API](-gdiplus-flatapi-flat.md).
+Windows GDI+ macht eine flache API verfügbar, die aus etwa 600 Funktionen besteht, die in Gdiplus.dll implementiert und in Gdiplusflat.h deklariert werden. Die Funktionen in der flachen GDI+-API werden von einer Sammlung von etwa 40 C++-Klassen umschlossen. Es wird empfohlen, die Funktionen in der flachen API nicht direkt aufzurufen. Wenn Sie GDI+ aufrufen, sollten Sie dazu die Methoden und Funktionen aufrufen, die von den C++-Wrappern bereitgestellt werden. Microsoft Product Support Services bietet keine Unterstützung für Code, der die flache API direkt aufruft. Weitere Informationen zur Verwendung dieser Wrappermethoden finden Sie unter [GDI+ Flat API](-gdiplus-flatapi-flat.md).
 
-Die folgenden flatapi-Funktionen werden von der [**Brush**](/windows/desktop/api/gdiplusbrush/nl-gdiplusbrush-brush) C++-Klasse umschließt.
+Die folgenden flachen API-Funktionen werden von der [**Brush**](/windows/desktop/api/gdiplusbrush/nl-gdiplusbrush-brush) C++-Klasse umschlossen.
 
-## <a name="brush-functions-and-corresponding-wrapper-methods"></a>Pinsel Funktionen und entsprechende Wrapper Methoden
+## <a name="brush-functions-and-corresponding-wrapper-methods"></a>Pinselfunktionen und entsprechende Wrappermethoden
 
 
 
-| Flat-Funktion                                                                        | Wrapper Methode                                          | BESCHREIBUNG                                                                                                                                          |
+| Flat-Funktion                                                                        | Wrappermethode                                          | Beschreibung                                                                                                                                          |
 |--------------------------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Gpstatus wingdipapi gdipclonebrush (gpbrush-Pinsel \* , gpbrush \* \* cloneBrush)          | [**Pinsel:: Clone**](/windows/desktop/api/Gdiplusbrush/nf-gdiplusbrush-brush-clone)     | Die [**Brush:: Clone**](/windows/desktop/api/Gdiplusbrush/nf-gdiplusbrush-brush-clone) -Methode erstellt ein neues [**Pinsel**](/windows/desktop/api/gdiplusbrush/nl-gdiplusbrush-brush) Objekt auf Grundlage dieses Pinsels. |
-| Gpstatus wingdipapi gdipdeletebrush (gpbrush-Pinsel \* )                                 | virtuelles ~ Brush ()                                        | Bereinigt die von einem [**Pinsel**](/windows/desktop/api/gdiplusbrush/nl-gdiplusbrush-brush) Objekt verwendeten Ressourcen.                                                                    |
-| Gpstatus wingdipapi gdipgetbrushtype (gpbrush-Pinsel \* , gpbrushtype- \* Typ)<br/> | [**Brush:: GetType**](/windows/desktop/api/Gdiplusbrush/nf-gdiplusbrush-brush-gettype) | Mit der [**Brush:: GetType**](/windows/desktop/api/Gdiplusbrush/nf-gdiplusbrush-brush-gettype) -Methode wird der Typ dieses Pinsels abgerufen.                                                      |
+| GpStatus WINGDIPAPI GdipCloneBrush(GpBrush-Pinsel, \* GpBrush \* \* cloneBrush)          | [**Brush::Clone**](/windows/desktop/api/Gdiplusbrush/nf-gdiplusbrush-brush-clone)     | Die [**Brush::Clone-Methode**](/windows/desktop/api/Gdiplusbrush/nf-gdiplusbrush-brush-clone) erstellt ein neues [**Brush-Objekt,**](/windows/desktop/api/gdiplusbrush/nl-gdiplusbrush-brush) das auf diesem Pinsel basiert. |
+| GpStatus WINGDIPAPI GdipDeleteBrush(GpBrush-Pinsel) \*                                 | virtual ~Brush()                                        | Bereinigt die von einem [**Brush-Objekt**](/windows/desktop/api/gdiplusbrush/nl-gdiplusbrush-brush) verwendeten Ressourcen.                                                                    |
+| GpStatus WINGDIPAPI GdipGetBrushType(GpBrush-Pinsel, \* \* GpBrushType-Typ)<br/> | [**Brush::GetType**](/windows/desktop/api/Gdiplusbrush/nf-gdiplusbrush-brush-gettype) | Die [**Brush::GetType-Methode**](/windows/desktop/api/Gdiplusbrush/nf-gdiplusbrush-brush-gettype) ruft den Typ dieses Pinsels ab.                                                      |
 
 
 

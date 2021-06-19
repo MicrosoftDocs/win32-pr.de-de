@@ -1,6 +1,6 @@
 ---
-description: 'Dieses Thema ist wie folgt organisiert:'
-title: Auswählen einer statischen oder dynamischen Kontextmenü Methode
+description: Wählen Sie eine statische oder dynamische Kontextmenümethode aus, wenn Sie ein benutzerdefiniertes Dateiformat in der Windows Shell implementieren.
+title: Auswählen einer statischen oder dynamischen Kontextmenümethode
 ms.topic: article
 ms.date: 05/31/2018
 ms.assetid: 44227BCF-D35E-4a9e-B4E6-D50E6AFBAEDF
@@ -9,32 +9,32 @@ api_type: ''
 api_location: ''
 topic_type:
 - kbArticle
-ms.openlocfilehash: 70c6cb74e2c9a432bfdae2f26da1fdbebfc5f00b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: dfd73ee052594e1136fe2885ce92b682f229096b
+ms.sourcegitcommit: 91530c19d26ba4c57a6af1f37b57f211f580464e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104042569"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112394775"
 ---
-# <a name="choosing-a-static-or-dynamic-shortcut-menu-method"></a>Auswählen einer statischen oder dynamischen Kontextmenü Methode
+# <a name="choosing-a-static-or-dynamic-shortcut-menu-method"></a>Auswählen einer statischen oder dynamischen Kontextmenümethode
 
 Dieses Thema ist wie folgt organisiert:
 
--   [Verb Methode auswählen](#choose-a-verb-method)
-    -   [Statische Verb-Methoden](#static-verb-methods)
-    -   [Bevorzugte dynamische Verb-Methoden](#preferred-dynamic-verb-methods)
-    -   [Nicht abgewehrt dynamische Verb Methoden](#discouraged-dynamic-verb-methods)
+-   [Auswählen einer Verbmethode](#choose-a-verb-method)
+    -   [Statische Verbmethoden](#static-verb-methods)
+    -   [Bevorzugte dynamische Verbmethoden](#preferred-dynamic-verb-methods)
+    -   [Von dynamischen Verbmethoden abgeraten](#discouraged-dynamic-verb-methods)
 -   [Erweitern eines Kontextmenüs](#extend-a-shortcut-menu)
--   [Unterstützung für Verb-Methoden nach Betriebs System](#support-for-verb-methods-by-operating-system)
--   [Zugehörige Themen](#related-topics)
+-   [Unterstützung für Verbmethoden nach Betriebssystem](#support-for-verb-methods-by-operating-system)
+-   [Verwandte Themen](#related-topics)
 
-## <a name="choose-a-verb-method"></a>Verb Methode auswählen
+## <a name="choose-a-verb-method"></a>Auswählen einer Verbmethode
 
-Es wird dringend empfohlen, dass Sie ein Kontextmenü mit einer der statischen Verb-Methoden implementieren.
+Es wird dringend empfohlen, ein Kontextmenü mit einer der statischen Verbmethoden zu implementieren.
 
-### <a name="static-verb-methods"></a>Statische Verb-Methoden
+### <a name="static-verb-methods"></a>Statische Verbmethoden
 
-Statische Verben sind die einfachsten zu implementierenden Verben, aber Sie bieten weiterhin umfassende Funktionen. Wählen Sie immer die einfachste Kontextmenü Methode aus, die Ihren Anforderungen entspricht.
+Statische Verben sind die einfachsten Verben, die implementiert werden müssen, bieten aber dennoch umfangreiche Funktionen. Wählen Sie immer die einfachste Kontextmenümethode aus, die Ihren Anforderungen entspricht.
 
 
 
@@ -46,32 +46,32 @@ Statische Verben sind die einfachsten zu implementierenden Verben, aber Sie biet
 <thead>
 <tr class="header">
 <th>Statisches Verb</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>" <a href="/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa"><strong>Kreateprocess</strong></a> " mit Befehlszeilen Parametern</td>
-<td>Dies ist die einfachste und vertraute Methode zum Implementieren eines statischen Verbs. Ein Prozess wird durch einen Aufruf der Funktion " <a href="/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa"><strong>deateprocess</strong></a> " mit den ausgewählten Dateien und allen optionalen Parametern aufgerufen, die als Befehlszeile übergeben werden. Dadurch wird die Datei oder der Ordner geöffnet.<br/> Für diese Methode gelten die folgenden Einschränkungen:
+<td><a href="/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa"><strong>CreateProcess</strong></a> mit Befehlszeilenparametern</td>
+<td>Dies ist das einfachste und vertrauteste Mittel zum Implementieren eines statischen Verbs. Ein Prozess wird durch einen Aufruf der <a href="/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa"><strong>CreateProcess-Funktion</strong></a> mit den ausgewählten Dateien und optionalen Parametern aufgerufen, die als Befehlszeile übergeben werden. Dadurch wird die Datei oder der Ordner geöffnet.<br/> Für diese Methode gelten die folgenden Einschränkungen:
 <ul>
-<li>Die Länge der Befehlszeile ist auf 2000 Zeichen beschränkt, was die Anzahl der Elemente einschränkt, die das Verb verarbeiten kann.</li>
-<li>Kann nur mit Dateisystem Elementen verwendet werden.</li>
-<li>Die Wiederverwendung eines bereits laufenden Prozesses wird von nicht unterstützt.</li>
+<li>Die Befehlszeilenlänge ist auf 2.000 Zeichen beschränkt, was die Anzahl der Elemente einschränkt, die das Verb verarbeiten kann.</li>
+<li>Kann nur mit Dateisystemelementen verwendet werden.</li>
+<li>Aktiviert nicht die erneute Verwendung eines bereits ausgeführten Prozesses.</li>
 <li>Erfordert, dass eine ausführbare Datei installiert wird, um das Verb zu verarbeiten.</li>
 </ul>
 <br/></td>
 </tr>
 <tr class="even">
 <td><strong>DropTarget</strong> / <a href="/windows/desktop/api/oleidl/nn-oleidl-idroptarget"> <strong>IDropTarget</strong></a></td>
-<td>Eine COM-basierte Verb Aktivierung bedeutet, dass die in-proc-oder out-of-proc-Aktivierung unterstützt. <strong>DropTarget</strong> / <a href="/windows/desktop/api/oleidl/nn-oleidl-idroptarget"><strong>IDropTarget</strong></a> unterstützt auch die Wiederverwendung eines bereits laufenden Handlers, wenn die <strong>IDropTarget</strong> -Schnittstelle von einem lokalen Server implementiert wird. Außerdem werden die Elemente über das gemarshallte Datenobjekt hervorragend ausgedrückt, und es wird ein Verweis auf die aufrufende Site Kette bereitgestellt, sodass Sie mit dem aufrufende Instanz über den <a href="/previous-versions/windows/internet-explorer/ie-developer/platform-apis/cc678966(v=vs.85)"><strong>QueryService</strong></a>interagieren können.</td>
+<td>Eine COM-basierte Verbaktivierung bedeutet, dass die In-Proc- oder Out-of-Proc-Aktivierung unterstützt. <strong>DropTarget</strong> / <a href="/windows/desktop/api/oleidl/nn-oleidl-idroptarget"><strong>IDropTarget</strong></a> unterstützt auch die erneute Verwendung eines bereits ausgeführten Handlers, wenn die <strong>IDropTarget-Schnittstelle</strong> von einem lokalen Server implementiert wird. Außerdem werden die Elemente perfekt über das gemarshallte Datenobjekt ausgedrückt, und es wird ein Verweis auf die aufrufende Websitekette angezeigt, sodass Sie über <a href="/previous-versions/windows/internet-explorer/ie-developer/platform-apis/cc678966(v=vs.85)"><strong>queryService</strong></a>mit dem Aufrufer interagieren können.</td>
 </tr>
 <tr class="odd">
-<td>Windows 7 und höher: <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iexecutecommand"> <strong>iexecutecommand</strong></a></td>
-<td>Die direkteste Implementierungsmethode. Da es sich hierbei um eine COM-basierte Aufruf Methode (z. b. DropTarget) handelt, unterstützt diese Schnittstelle in-proc und außerhalb der proc-Aktivierung. Das Verb implementiert <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iexecutecommand"><strong>iexecutecommand</strong></a> und <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iobjectwithselection"><strong>iobjectwithselection</strong></a>und optional <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iinitializecommand"><strong>iinitializecommand</strong></a>. Die Elemente werden direkt als shellelementarray weitergegeben, und weitere Parameter aus dem aufrufende Instanz sind für die Verb-Implementierung verfügbar, einschließlich des Aufruf Punkts, des Tastatur Zustands usw.</td>
+<td>Windows 7 und höher: <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iexecutecommand"> <strong>IExecuteCommand</strong></a></td>
+<td>Die direkteste Implementierungsmethode. Da es sich hierbei um eine COM-basierte Aufrufmethode (z.B. DropTarget) handelt, unterstützt diese Schnittstelle die In-Proc- und Out-of-Proc-Aktivierung. Das Verb implementiert <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iexecutecommand"><strong>IExecuteCommand</strong></a> und <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iobjectwithselection"><strong>IObjectWithSelection</strong></a>und optional <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iinitializecommand"><strong>IInitializeCommand.</strong></a> Die Elemente werden direkt als Shell-Elementarray übergeben, und weitere Parameter des Aufrufrs sind für die Verbimplementierungen verfügbar, einschließlich des Aufrufpunkts, des Tastaturzustands usw.</td>
 </tr>
 <tr class="even">
-<td>Windows 7 und höher:<strong>explorercommand</strong> /  <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iexplorercommand"><strong>IExplorerCommand</strong></a></td>
-<td>Ermöglicht Datenquellen, die ihre Befehls Modul Befehle über <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iexplorercommandprovider"><strong>IExplorerCommandProvider</strong></a> bereitstellen, diese Befehle als Verben in einem Kontextmenü zu verwenden. Da diese Schnittstelle nur die Prozess interne Aktivierung unterstützt, empfiehlt es sich, von shelldatenquellen zu verwenden, die die Implementierung zwischen Befehlen und Kontextmenüs freigeben müssen.</td>
+<td>Windows 7 und höher:<strong>ExplorerCommand</strong> /  <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iexplorercommand"><strong>IExplorerCommand</strong></a></td>
+<td>Ermöglicht Datenquellen, die ihre Befehlsmodulbefehle über <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iexplorercommandprovider"><strong>IExplorerCommandProvider</strong></a> bereitstellen, diese Befehle als Verben in einem Kontextmenü zu verwenden. Da diese Schnittstelle nur die Prozessaktivierung unterstützt, wird die Verwendung durch Shell-Datenquellen empfohlen, die die Implementierung zwischen Befehlen und Kontextmenüs freigeben müssen.</td>
 </tr>
 </tbody>
 </table>
@@ -81,53 +81,52 @@ Statische Verben sind die einfachsten zu implementierenden Verben, aber Sie biet
  
 
 > [!Note]  
-> [**IExplorerCommand**](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iexplorercommand) ist ein Hybrid zwischen einem statischen und dynamischen Verb. **IExplorerCommand** wurde in Windows Vista deklariert, aber seine Fähigkeit zum Implementieren eines Verbs in einem Kontextmenü ist neu in Windows 7.
+> [**IExplorerCommand**](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iexplorercommand) ist ein Hybrid zwischen einem statischen und einem dynamischen Verb. **IExplorerCommand** wurde in Windows Vista deklariert, aber die Möglichkeit, ein Verb in einem Kontextmenü zu implementieren, ist neu in Windows 7.
 
  
 
-Weitere Informationen zu [**IDropTarget**](/windows/win32/api/oleidl/nn-oleidl-idroptarget) -und Shell-Abfragen für Datei Zuordnungs Attribute finden Sie unter [wahrgenommene Typen und Anwendungs Registrierung](fa-perceivedtypes.md).
+Weitere Informationen zu [**IDropTarget-**](/windows/win32/api/oleidl/nn-oleidl-idroptarget) und Shell-Abfragen für Dateizuordnungsattribute finden Sie unter [Wahrgenommene Typen und Anwendungsregistrierung.](fa-perceivedtypes.md)
 
-### <a name="preferred-dynamic-verb-methods"></a>Bevorzugte dynamische Verb-Methoden
+### <a name="preferred-dynamic-verb-methods"></a>Bevorzugte dynamische Verbmethoden
 
-Die folgenden dynamischen Verb Methoden werden bevorzugt:
+Die folgenden dynamischen Verbmethoden werden bevorzugt:
 
 
 
-| Vertyp                                                                                 | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| Verbtyp                                                                                 | Beschreibung                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 |-------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Statisches Verb (in der vorherigen Tabelle aufgelistet) + Erweiterte Abfrage Syntax (AQS)                  | Mit dieser Auswahl wird die Sichtbarkeit des dynamischen Verbs abgerufen.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| Windows 7 und höher: [ **IExplorerCommand**](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iexplorercommand)                         | Diese Auswahl aktiviert eine gängige Implementierung von Verben-und Explorer-Befehlen, die im Befehls Modul in Windows-Explorer angezeigt werden.                                                                                                                                                                                                                                                                                                                                                                                               |
-| Windows 7 und höher: [**iexplorercommandstate**](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iexplorercommandstate) + statisches Verb | Diese Auswahl erhält auch dynamische Verb Sichtbarkeit. Dabei handelt es sich um ein Hybridmodell, bei dem ein einfacher in-Process-Handler verwendet wird, um zu berechnen, ob ein bestimmtes statisches Verb verteilt werden soll. Dies kann auf alle statischen Verb Implementierungs Methoden angewendet werden, um dynamisches Verhalten zu erreichen und das verfügbar machen der in-Process-Logik zu minimieren. [**Iexplorercommandstate**](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iexplorercommandstate) hat den Vorteil, dass Sie in einem Hintergrund Thread ausgeführt wird. Dadurch wird die Benutzeroberfläche nicht mehr reagiert. Es ist wesentlich einfacher als [**IContextMenu**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-icontextmenu). |
+| Statisches Verb (in der vorherigen Tabelle aufgeführt) + Erweiterte Abfragesyntax (AQS)                  | Diese Auswahl ruft dynamische Verbsichtbarkeit ab.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| Windows 7 und höher: [ **IExplorerCommand**](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iexplorercommand)                         | Diese Auswahl ermöglicht eine allgemeine Implementierung von Verben und Explorer-Befehlen, die im Befehlsmodul in Windows-Explorer angezeigt werden.                                                                                                                                                                                                                                                                                                                                                                                               |
+| Windows 7 und höher: [**IExplorerCommandState**](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iexplorercommandstate) + statisches Verb | Diese Auswahl erhält auch dynamische Verbsichtbarkeit. Es handelt sich um ein Hybridmodell, bei dem ein einfacher In-Process-Handler verwendet wird, um zu berechnen, ob ein bestimmtes statisches Verb disponiert werden soll. Dies kann auf alle Implementierungsmethoden für statische Verben angewendet werden, um ein dynamisches Verhalten zu erzielen und die Gefährdung der In-Process-Logik zu minimieren. [**IExplorerCommandState**](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iexplorercommandstate) bietet den Vorteil der Ausführung in einem Hintergrundthread und vermeidet dadurch das Hängen der Benutzeroberfläche. Sie ist erheblich einfacher als [**IContextMenu.**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-icontextmenu) |
 
 
 
  
 
-### <a name="discouraged-dynamic-verb-methods"></a>Nicht abgewehrt dynamische Verb Methoden
+### <a name="discouraged-dynamic-verb-methods"></a>Von dynamischen Verbmethoden abgeraten
 
-[**IContextMenu**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-icontextmenu) ist die leistungsfähigste, aber auch die komplizierteste Methode, die implementiert werden kann. Es basiert auf in-Process-COM-Objekten, die auf dem Thread des Aufrufers ausgeführt werden, der normalerweise Windows Explorer ist, aber eine beliebige Anwendung sein kann, die die Elemente gehostet. **IContextMenu** unterstützt die Sichtbarkeit, Reihenfolge und benutzerdefinierte Zeichnung. Einige dieser Features wurden den statischen Verb Features hinzugefügt, z. b. einem Symbol, das einem Befehl zugeordnet werden soll, und [**IExplorerCommand**](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iexplorercommand) , um die Sichtbarkeit zu behandeln.
+[**IContextMenu**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-icontextmenu) ist die leistungsfähigste, aber auch die komplizierteste Methode, die implementiert werden muss. Sie basiert auf prozessin-process-COM-Objekten, die im Thread des Aufrufers ausgeführt werden. Dies Windows-Explorer, kann aber eine beliebige Anwendung sein, die die Elemente hostet. **IContextMenu** unterstützt Verbsichtbarkeit, Sortierung und benutzerdefiniertes Zeichnen. Einige dieser Features wurden den statischen Verbfeatures hinzugefügt, z. B. einem Symbol, das einem Befehl zugeordnet werden soll, und [**IExplorerCommand,**](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iexplorercommand) um die Sichtbarkeit zu behandeln.
 
-Wenn Sie das Kontextmenü für einen Dateityp erweitern müssen, indem Sie für den Dateityp ein dynamisches Verb registrieren, befolgen Sie die Anweisungen unter [Anpassen eines Kontextmenüs mithilfe dynamischer Verben](shortcut-menu-using-dynamic-verbs.md).
+Wenn Sie das Kontextmenü für einen Dateityp erweitern müssen, indem Sie ein dynamisches Verb für den Dateityp registrieren, befolgen Sie die Anweisungen unter [Anpassen eines Kontextmenüs mit dynamischen Verben.](shortcut-menu-using-dynamic-verbs.md)
 
 ## <a name="extend-a-shortcut-menu"></a>Erweitern eines Kontextmenüs
 
-Nachdem Sie eine Verb Methode ausgewählt haben, können Sie ein Kontextmenü für einen Dateityp erweitern, indem Sie für den Dateityp ein statisches Verb registrieren. Weitere Informationen finden Sie unter [Erstellen von Kontextmenü Handlern](context-menu-handlers.md).
+Nachdem Sie eine Verbmethode ausgewählt haben, können Sie ein Kontextmenü für einen Dateityp erweitern, indem Sie ein statisches Verb für den Dateityp registrieren. Weitere Informationen finden Sie unter [Erstellen von Kontextmenühandlern.](context-menu-handlers.md)
 
-## <a name="support-for-verb-methods-by-operating-system"></a>Unterstützung für Verb-Methoden nach Betriebs System
+## <a name="support-for-verb-methods-by-operating-system"></a>Unterstützung für Verbmethoden nach Betriebssystem
 
-In der folgenden Tabelle sind die Unterstützung für Verb Aufruf Methoden nach Betriebssystem aufgeführt.
+Die Unterstützung für Verbaufrufmethoden nach Betriebssystem ist in der folgenden Tabelle aufgeführt.
 
 
 
-|                      |            |               |                      |
+| Verb-Methode          | Windows XP | Windows Vista | Windows 7 und darüber hinaus |
 |----------------------|------------|---------------|----------------------|
-|                      | Windows XP | Windows Vista | Windows 7 und darüber hinaus |
 | CreateProcess        | X          | X             | X                    |
 | DDE                  | X          | X             | X                    |
 | DropTarget           | X          | X             | X                    |
-| ExecuteCommand       |            | X             | X                    |
-| Explorercommand      |            |               | X                    |
-| Explorercommandstate |            |               | X                    |
+| Executecommand       |            | X             | X                    |
+| ExplorerCommand      |            |               | X                    |
+| ExplorerCommandState |            |               | X                    |
 
 
 
@@ -137,19 +136,19 @@ In der folgenden Tabelle sind die Unterstützung für Verb Aufruf Methoden nach 
 
 <dl> <dt>
 
-[Bewährte Methoden für Kontextmenü Handler und Mehrfachauswahl Verben](verbs-best-practices.md)
+[Bewährte Methoden für Kontextmenühandler und Verben für mehrfache Auswahl](verbs-best-practices.md)
 </dt> <dt>
 
-[Erstellen von Kontextmenü Handlern](context-menu-handlers.md)
+[Erstellen von Kontextmenühandlern](context-menu-handlers.md)
 </dt> <dt>
 
-[Anpassen eines Kontextmenüs mithilfe dynamischer Verben](shortcut-menu-using-dynamic-verbs.md)
+[Anpassen eines Kontextmenüs mit dynamischen Verben](shortcut-menu-using-dynamic-verbs.md)
 </dt> <dt>
 
-[Kontextmenüs und Kontextmenü Handler](context-menu.md)
+[Kontextmenüs und Kontextmenühandler](context-menu.md)
 </dt> <dt>
 
-[Verweis auf das Kontextmenü](context-menu-reference.md)
+[Kontextmenüreferenz](context-menu-reference.md)
 </dt> <dt>
 
 [Verben und Dateizuordnungen](fa-verbs.md)

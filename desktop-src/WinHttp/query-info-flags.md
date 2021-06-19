@@ -1,17 +1,17 @@
 ---
 description: Diese Attribute und Modifizierer werden von WinHttpQueryHeaders verwendet.
 ms.assetid: c26dac1d-9a75-440a-a0ef-a2029f138f3b
-title: Abfrageinformationsflags (Winhttp.h)
+title: Anfrageinfo-Flags (Winhttp.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 32ba15c258a37627cdbdd79f13859761fd671385
-ms.sourcegitcommit: df0933ad2b42f07031f4340330712c11cf712ff0
+ms.openlocfilehash: 5b3d8a7f95f0e093f175901e4bed30f4055a04b8
+ms.sourcegitcommit: 91530c19d26ba4c57a6af1f37b57f211f580464e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "107385888"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112396625"
 ---
-# <a name="query-info-flags-winhttph"></a>Abfrageinformationsflags (Winhttp.h)
+# <a name="query-info-flags-winhttph"></a>Anfrageinfo-Flags (Winhttp.h)
 
 Diese Attribute und Modifizierer werden von [**WinHttpQueryHeaders**](/windows/win32/api/Winhttp/nf-winhttp-winhttpqueryheaders)verwendet.
 
@@ -84,7 +84,7 @@ Ruft das Feld Age response-header ab, das die Schätzung des Absenders für den 
 
 
 
-Empfängt die [**vom Server unterstützten**](glossary.md) HTTP-Verben.
+Empfängt die vom Server [**unterstützten HTTP-Verben.**](glossary.md)
 
 
 </dt> </dl> </dd> <dt>
@@ -94,7 +94,7 @@ Empfängt die [**vom Server unterstützten**](glossary.md) HTTP-Verben.
 
 
 
-Ruft den Authentication-Info ab.
+Ruft den Authentication-Info-Header ab.
 
 
 </dt> </dl> </dd> <dt>
@@ -109,12 +109,12 @@ Ruft die für eine Anforderung verwendeten Autorisierungsanmeldeinformationen ab
 
 </dt> </dl> </dd> <dt>
 
-<span id="WINHTTP_QUERY_CACHE_CONTROL"></span><span id="winhttp_query_cache_control"></span>**\_ \_ WINHTTP-ABFRAGECACHE-STEUERELEMENT \_**
+<span id="WINHTTP_QUERY_CACHE_CONTROL"></span><span id="winhttp_query_cache_control"></span>**WINHTTP \_ QUERY \_ CACHE \_ CONTROL**
 </dt> <dd> <dl> <dt>
 
 
 
-Ruft die Cachesteuerungs-Direktiven ab.
+Ruft die Cachesteuerelementdirektiven ab.
 
 
 </dt> </dl> </dd> <dt>
@@ -134,27 +134,27 @@ Ruft alle Optionen ab, die für eine bestimmte Verbindung angegeben sind und nic
 
 
 
-Ruft den Basis-Uniform Resource Identifier (URI) ab, um relative URLs innerhalb der Entität aufzulösen.
+Ruft die Basis-Uniform Resource Identifier (URI) ab, um relative URLs innerhalb der Entität aufzulösen.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WINHTTP_QUERY_CONTENT_DESCRIPTION"></span><span id="winhttp_query_content_description"></span>**\_ \_ WINHTTP-ABFRAGEINHALTSBESCHREIBUNG \_**
+<span id="WINHTTP_QUERY_CONTENT_DESCRIPTION"></span><span id="winhttp_query_content_description"></span>**BESCHREIBUNG DES INHALTS DER \_ WINHTTP-ABFRAGE \_ \_**
 </dt> <dd> <dl> <dt>
 
 
 
-Veraltet. Wird aus Kompatibilitäts- und Legacy-Anwendungskompatibilität verwaltet.
+Veraltet. Wird aus Gründen der Kompatibilität von Legacyanwendungen beibehalten.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WINHTTP_QUERY_CONTENT_DISPOSITION"></span><span id="winhttp_query_content_disposition"></span>**\_ \_ WINHTTP-ABFRAGEINHALTSDISPOSITION \_**
+<span id="WINHTTP_QUERY_CONTENT_DISPOSITION"></span><span id="winhttp_query_content_disposition"></span>**DISPOSITION DES INHALTS VON \_ WINHTTP-ABFRAGEN \_ \_**
 </dt> <dd> <dl> <dt>
 
 
 
-Veraltet. Wird aus Kompatibilitäts- und Legacy-Anwendungskompatibilität verwaltet.
+Veraltet. Wird aus Gründen der Kompatibilität von Legacyanwendungen beibehalten.
 
 
 </dt> </dl> </dd> <dt>
@@ -169,7 +169,7 @@ Ruft zusätzliche Inhaltscodierung ab, die auf die gesamte Ressource angewendet 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WINHTTP_QUERY_CONTENT_ID"></span><span id="winhttp_query_content_id"></span>**\_ \_ WINHTTP-ABFRAGEINHALTS-ID \_**
+<span id="WINHTTP_QUERY_CONTENT_ID"></span><span id="winhttp_query_content_id"></span>**INHALTS-ID DER \_ \_ \_ WINHTTP-ABFRAGE**
 </dt> <dd> <dl> <dt>
 
 
@@ -274,7 +274,7 @@ Wird nicht unterstützt.
 
 
 
-Bewirkt, dass [**WinHttpQueryHeaders**](/windows/win32/api/Winhttp/nf-winhttp-winhttpqueryheaders) nach dem im *pwszName-Parameter angegebenen* Headernamen sucht und die Headerinformationen in *lpBuffer* speichert. Eine Anwendung kann **WINHTTP \_ OPTION RECEIVE \_ RESPONSE \_ \_ TIMEOUT** verwenden, um die maximale Zeit zu begrenzen, die diese Abfrage auf den Empfang aller Header wartet.
+Bewirkt, dass [**WinHttpQueryHeaders**](/windows/win32/api/Winhttp/nf-winhttp-winhttpqueryheaders) nach dem im *pwszName-Parameter angegebenen* Headernamen sucht und die Headerinformationen in *lpBuffer* speichert. Eine Anwendung kann **WINHTTP \_ OPTION RECEIVE \_ RESPONSE \_ \_ TIMEOUT** verwenden, um die maximale Zeit einzuschränken, die diese Abfrage auf den Empfang aller Header wartet.
 
 
 </dt> </dl> </dd> <dt>
@@ -289,7 +289,7 @@ Empfängt das Datum und die Uhrzeit, zu der die Nachricht stammt.
 
 </dt> </dl> </dd> <dt>
 
-<span id="WINHTTP_QUERY_DERIVED_FROM"></span><span id="winhttp_query_derived_from"></span>**VON \_ \_ ABGELEITETE WINHTTP-ABFRAGE \_**
+<span id="WINHTTP_QUERY_DERIVED_FROM"></span><span id="winhttp_query_derived_from"></span>**VON \_ ABGELEITETE WINHTTP-ABFRAGE \_ \_**
 </dt> <dd> <dl> <dt>
 
 
@@ -299,7 +299,7 @@ Wird nicht unterstützt.
 
 </dt> </dl> </dd> <dt>
 
-<span id="WINHTTP_QUERY_ETAG"></span><span id="winhttp_query_etag"></span>**\_ \_ WINHTTP-ABFRAGE-ETAG**
+<span id="WINHTTP_QUERY_ETAG"></span><span id="winhttp_query_etag"></span>**WINHTTP \_ QUERY \_ ETAG**
 </dt> <dd> <dl> <dt>
 
 
@@ -309,7 +309,7 @@ Ruft das Entitätstag für die zugeordnete Entität ab.
 
 </dt> </dl> </dd> <dt>
 
-<span id="WINHTTP_QUERY_EXPECT"></span><span id="winhttp_query_expect"></span>**WINHTTP \_ QUERY \_ EXPECT**
+<span id="WINHTTP_QUERY_EXPECT"></span><span id="winhttp_query_expect"></span>**\_WINHTTP-ABFRAGE \_ ERWARTET**
 </dt> <dd> <dl> <dt>
 
 
@@ -329,12 +329,12 @@ Empfängt das Datum und die Uhrzeit, nach der die Ressource als veraltet betrach
 
 </dt> </dl> </dd> <dt>
 
-<span id="WINHTTP_QUERY_FORWARDED"></span><span id="winhttp_query_forwarded"></span>**\_WINHTTP-ABFRAGE \_ WEITERGELEITET**
+<span id="WINHTTP_QUERY_FORWARDED"></span><span id="winhttp_query_forwarded"></span>**WEITERGELEITETE \_ WINHTTP-ABFRAGE \_**
 </dt> <dd> <dl> <dt>
 
 
 
-Veraltet. Wird aus Kompatibilitäts- und Legacy-Anwendungskompatibilität verwaltet.
+Veraltet. Wird aus Gründen der Kompatibilität von Legacyanwendungen beibehalten.
 
 
 </dt> </dl> </dd> <dt>
@@ -359,7 +359,7 @@ Ruft den Internethost und die Portnummer der angeforderten Ressource ab.
 
 </dt> </dl> </dd> <dt>
 
-<span id="WINHTTP_QUERY_IF_MATCH"></span><span id="winhttp_query_if_match"></span>**WINHTTP \_ QUERY \_ IF \_ MATCH**
+<span id="WINHTTP_QUERY_IF_MATCH"></span><span id="winhttp_query_if_match"></span>**\_WINHTTP-ABFRAGE \_ BEI \_ ÜBEREINSTIMMUNG**
 </dt> <dd> <dl> <dt>
 
 
@@ -369,7 +369,7 @@ Ruft den Inhalt des If-Match Anforderungsheaderfelds ab.
 
 </dt> </dl> </dd> <dt>
 
-<span id="WINHTTP_QUERY_IF_MODIFIED_SINCE"></span><span id="winhttp_query_if_modified_since"></span>**\_WINHTTP-ABFRAGE, \_ WENN \_ SIE GEÄNDERT \_ WURDE**
+<span id="WINHTTP_QUERY_IF_MODIFIED_SINCE"></span><span id="winhttp_query_if_modified_since"></span>**\_WINHTTP-ABFRAGE, \_ WENN SIE SEIT GEÄNDERT \_ \_ WURDE**
 </dt> <dd> <dl> <dt>
 
 
@@ -454,12 +454,12 @@ Gibt den maximalen Wert eines WINHTTP \_ \_ \* QUERY-Werts an. Kein Abfrageflag.
 
 
 
-Ruft die Anzahl der Proxys oder Gateways ab, die die Anforderung an den nächsten eingehenden Server weitergeleitet werden können.
+Ruft die Anzahl von Proxys oder Gateways ab, die die Anforderung an den nächsten eingehenden Server weiterleiten können.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WINHTTP_QUERY_MESSAGE_ID"></span><span id="winhttp_query_message_id"></span>**\_ \_ WINHTTP-ABFRAGENACHRICHTEN-ID \_**
+<span id="WINHTTP_QUERY_MESSAGE_ID"></span><span id="winhttp_query_message_id"></span>**\_ \_ WINHTTP-ABFRAGEMELDUNGS-ID \_**
 </dt> <dd> <dl> <dt>
 
 
@@ -469,12 +469,12 @@ Wird nicht unterstützt.
 
 </dt> </dl> </dd> <dt>
 
-<span id="WINHTTP_QUERY_MIME_VERSION"></span><span id="winhttp_query_mime_version"></span>**\_ \_ WINHTTP-ABFRAGE-MIME-VERSION \_**
+<span id="WINHTTP_QUERY_MIME_VERSION"></span><span id="winhttp_query_mime_version"></span>**MIME-VERSION DER \_ \_ WINHTTP-ABFRAGE \_**
 </dt> <dd> <dl> <dt>
 
 
 
-Empfängt die Version des MULTIPURPOSE INTERNET MAIL EXTENSIONS (MIME), das zum Erstellen der Nachricht verwendet wurde.
+Empfängt die Version des MIME-Protokolls (Multipurpose Internet Mail Extensions), das zum Erstellen der Nachricht verwendet wurde.
 
 
 </dt> </dl> </dd> <dt>
@@ -484,7 +484,7 @@ Empfängt die Version des MULTIPURPOSE INTERNET MAIL EXTENSIONS (MIME), das zum 
 
 
 
-Veraltet. Wird aus Kompatibilitäts- und Legacy-Anwendungskompatibilität verwaltet.
+Veraltet. Wird aus Gründen der Kompatibilität von Legacyanwendungen beibehalten.
 
 
 </dt> </dl> </dd> <dt>
@@ -494,17 +494,17 @@ Veraltet. Wird aus Kompatibilitäts- und Legacy-Anwendungskompatibilität verwal
 
 
 
-Empfängt die implementierungsspezifischen Anweisungen, die für jeden Empfänger entlang der Anforderungs-/Antwortkette gelten können.
+Empfängt die implementierungsspezifischen Anweisungen, die für jeden Empfänger in der Anforderungs-/Antwortkette gelten können.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WINHTTP_QUERY_PROXY_AUTHENTICATE"></span><span id="winhttp_query_proxy_authenticate"></span>**\_ \_ WINHTTP-ABFRAGEPROXYAUTHENTIFIZIERUNG \_**
+<span id="WINHTTP_QUERY_PROXY_AUTHENTICATE"></span><span id="winhttp_query_proxy_authenticate"></span>**\_WINHTTP-ABFRAGEPROXY \_ \_ AUTHENTIFIZIEREN**
 </dt> <dd> <dl> <dt>
 
 
 
-Ruft das vom Proxy zurückgegebene Authentifizierungsschema und den Bereich ab.
+Ruft das Authentifizierungsschema und den Vom Proxy zurückgegebenen Bereich ab.
 
 
 </dt> </dl> </dd> <dt>
@@ -514,7 +514,7 @@ Ruft das vom Proxy zurückgegebene Authentifizierungsschema und den Bereich ab.
 
 
 
-Ruft den Header ab, mit dem der Benutzer bei einem Proxy identifiziert wird, für den eine Authentifizierung erforderlich ist. Dieser Header kann nur abgerufen werden, bevor die Anforderung an den Server gesendet wird.
+Ruft den Header ab, der verwendet wird, um den Benutzer für einen Proxy zu identifizieren, der eine Authentifizierung erfordert. Dieser Header kann nur abgerufen werden, bevor die Anforderung an den Server gesendet wird.
 
 
 </dt> </dl> </dd> <dt>
@@ -524,7 +524,7 @@ Ruft den Header ab, mit dem der Benutzer bei einem Proxy identifiziert wird, fü
 
 
 
-Ruft den Proxy-Connection ab.
+Ruft den Proxy-Connection-Header ab.
 
 
 </dt> </dl> </dd> <dt>
@@ -534,7 +534,7 @@ Ruft den Proxy-Connection ab.
 
 
 
-Ruft den Proxy-Support ab.
+Ruft den Proxy-Support-Header ab.
 
 
 </dt> </dl> </dd> <dt>
@@ -614,7 +614,7 @@ Empfängt das HTTP-Verb, das in der Anforderung verwendet wird, in der Regel GET
 
 
 
-Ruft den Zeitraum ab, für den der Dienst voraussichtlich nicht verfügbar ist.
+Ruft den Zeitraum ab, in dem der Dienst voraussichtlich nicht verfügbar ist.
 
 
 </dt> </dl> </dd> <dt>
@@ -644,7 +644,7 @@ Empfängt den Wert des Für die Anforderung festgelegten Cookies.
 
 
 
-Empfängt den vom Server zurückgegebenen Statuscode. Eine Liste der möglichen Werte finden Sie unter [**HTTP-Statuscodes**](http-status-codes.md).
+Empfängt den vom Server zurückgegebenen Statuscode. Eine Liste der möglichen Werte finden Sie unter [**HTTP-Statuscodes.**](http-status-codes.md)
 
 
 </dt> </dl> </dd> <dt>
@@ -664,7 +664,7 @@ Empfängt zusätzlichen Text, der vom Server in der Antwortzeile zurückgegeben 
 
 
 
-Veraltet. Wird aus Kompatibilitäts- und Legacy-Anwendungskompatibilität verwaltet.
+Veraltet. Wird aus Gründen der Kompatibilität von Legacyanwendungen beibehalten.
 
 
 </dt> </dl> </dd> <dt>
@@ -674,17 +674,17 @@ Veraltet. Wird aus Kompatibilitäts- und Legacy-Anwendungskompatibilität verwal
 
 
 
-Ruft den Typ der Transformation ab, die auf den Nachrichtentext angewendet wurde, damit er sicher zwischen Absender und Empfänger übertragen werden kann.
+Ruft den Typ der Transformation ab, der auf den Nachrichtentext angewendet wurde, damit er sicher zwischen Absender und Empfänger übertragen werden kann.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WINHTTP_QUERY_UNLESS_MODIFIED_SINCE"></span><span id="winhttp_query_unless_modified_since"></span>**\_WINHTTP-ABFRAGE, \_ ES SEI \_ DENN, SIE WURDE \_ GEÄNDERT.**
+<span id="WINHTTP_QUERY_UNLESS_MODIFIED_SINCE"></span><span id="winhttp_query_unless_modified_since"></span>**\_WINHTTP-ABFRAGE, \_ SOFERN NICHT \_ GEÄNDERT \_ SEIT**
 </dt> <dd> <dl> <dt>
 
 
 
-Ruft den Unless-Modified-Since-Header ab.
+Ruft den Header Unless-Modified-Since ab.
 
 
 </dt> </dl> </dd> <dt>
@@ -704,7 +704,7 @@ Ruft die zusätzlichen Kommunikationsprotokolle ab, die vom Server unterstützt 
 
 
 
-Empfängt einen Teil oder den ganzen URI, mit dem die Request-URI-Ressource identifiziert werden kann.
+Empfängt einen Teil oder den gesamten URI, mit dem die Request-URI-Ressource identifiziert werden kann.
 
 
 </dt> </dl> </dd> <dt>
@@ -714,12 +714,12 @@ Empfängt einen Teil oder den ganzen URI, mit dem die Request-URI-Ressource iden
 
 
 
-Ruft Informationen über den Benutzer-Agent ab, der die Anforderung gestellt hat.
+Ruft Informationen zum Benutzer-Agent ab, der die Anforderung gestellt hat.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WINHTTP_QUERY_VARY"></span><span id="winhttp_query_vary"></span>**\_WINHTTP-ABFRAGE \_ VARIIERT**
+<span id="WINHTTP_QUERY_VARY"></span><span id="winhttp_query_vary"></span>**WINHTTP \_ QUERY \_ VARY**
 </dt> <dd> <dl> <dt>
 
 
@@ -798,12 +798,30 @@ Fragt nur Anforderungsheader ab.
 
 
 
-Gibt den Headerwert als [**SYSTEMTIME-Struktur**](/windows/win32/api/minwinbase/ns-minwinbase-systemtime) zurück, die keine Analyse der Daten durch die Anwendung erfordert. Verwenden Sie für Header, deren Wert eine Datums-/Uhrzeitzeichenfolge ist, z. B. "Last-Modified-Time".
+Gibt den Headerwert als [**SYSTEMTIME-Struktur**](/windows/win32/api/minwinbase/ns-minwinbase-systemtime) zurück, die nicht erfordert, dass die Anwendung die Daten analysiert. Verwenden Sie für Header, deren Wert eine Datums-/Uhrzeitzeichenfolge ist, z. B. "Last-Modified-Time".
 
 
 </dt> </dl> </dd> </dl>
 
-## <a name="requirements"></a>Anforderungen
+<span id="WINHTTP_QUERY_FLAG_TRAILERS"></span><span id="winhttp_query_flag_trailers"></span>**\_ \_ WINHTTP-ABFRAGEFLAG-TRAILER \_**
+</dt> <dd> <dl> <dt>
+
+
+Fragt Antwort-Trailer ab. Vor dem Abfragen von Antwort-Trailern müssen Sie [**WinHttpReadData**](/windows/win32/api/Winhttp/nf-winhttp-winhttpreaddata) aufrufen, bis gelesene 0 Bytes zurückgegeben werden.
+
+
+</dt> </dl> </dd> </dl>
+
+<span id="WINHTTP_QUERY_FLAG_WIRE_ENCODING"></span><span id="winhttp_query_flag_wire_encoding"></span>**WINHTTP \_ QUERY \_ FLAG \_ WIRE \_ ENCODING**
+</dt> <dd> <dl> <dt>
+
+
+Standardmäßig führt [**WinHttpQueryHeaders**](/windows/win32/api/Winhttp/nf-winhttp-winhttpqueryheaders) eine Unicode-Konvertierung durch, bevor der abgefragte Header zurückgegeben wird. Wenn dieses Flag festgelegt ist, gibt WinHttp den Header an den Aufrufer zurück, ohne diese Konvertierung durchzuführen.
+
+
+</dt> </dl> </dd> </dl>
+
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------|
@@ -811,6 +829,6 @@ Gibt den Headerwert als [**SYSTEMTIME-Struktur**](/windows/win32/api/minwinbase/
 | Unterstützte Mindestversion (Server) | Nur Windows Server 2003, Windows 2000 Server mit \[ SP3-Desktop-Apps\]   |
 | Header                   | <dl> <dt>Winhttp.h</dt> </dl> |
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 * [WinHTTP-Versionen](winhttp-versions.md)

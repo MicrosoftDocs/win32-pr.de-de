@@ -1,37 +1,37 @@
 ---
 title: Visible-Eigenschaft (PropertySheet-Objekt)
-description: Visible-Eigenschaft
+description: Erfahren Sie mehr über die Visible-Eigenschaft des PropertySheet-Objekts, das zurückgibt oder festlegt, ob das Eigenschaftenblattfenster des Microsoft-Agents sichtbar (geöffnet) ist.
 ms.assetid: 8a58cd45-0391-4897-b3a2-d4f5d7297ea8
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 730456563d0349b6a7ce7bf7cba8340db36b39cb
-ms.sourcegitcommit: 8fa6614b715bddf14648cce36d2df22e5232801a
+ms.openlocfilehash: 525c78a3fdfc7e852838ff288194cfc762334409
+ms.sourcegitcommit: 91530c19d26ba4c57a6af1f37b57f211f580464e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "106340751"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112396215"
 ---
 # <a name="visible-property-propertysheet-object"></a>Visible-Eigenschaft (PropertySheet-Objekt)
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht mehr verfügbar.\]
 
 <dl> <dt>
 
 <span id="Description"></span><span id="description"></span><span id="DESCRIPTION"></span>**Beschreibung**
 </dt> <dd>
 
-Gibt zurück oder legt fest, ob das Eigenschaften Blatt Fenster von Microsoft-Agent sichtbar (geöffnet) ist.
+Gibt zurück oder legt fest, ob das Eigenschaftenblattfenster des Microsoft-Agents sichtbar (geöffnet) ist.
 
 </dd> <dt>
 
 <span id="Syntax_"></span><span id="syntax_"></span><span id="SYNTAX_"></span>**Syntax** 
 </dt> <dd>
 
-*Agent * * *. PropertySheet. Visible* *  \[  =  *boolescher* Wert\]
+*agent wird. Boolescher Wert "PropertySheet.Visible"* *  \[  =  \]
 
 
 
-| Teil      | BESCHREIBUNG                                                                                                                                                   |
+| Teil      | Beschreibung                                                                                                                                                   |
 |-----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | *boolean* | Ein boolescher Ausdruck, der angibt, ob das Fenster sichtbar ist. **True** Das Fenster ist sichtbar.<br/> **False** Das Fenster ist ausgeblendet (geschlossen).<br/> |
 
@@ -43,7 +43,7 @@ Gibt zurück oder legt fest, ob das Eigenschaften Blatt Fenster von Microsoft-Ag
 
 ## <a name="remarks"></a>Bemerkungen
 
-Der Server zeigt das Fenster basierend auf dem Speicherort und der Größe an, die vom Benutzer festgelegt wurden.
+Der Server zeigt das Fenster basierend auf dem Standort und der Größe an, die vom Benutzer festgelegt wurden.
 
 > [!Note]  
 > Der Benutzer kann diese Eigenschaft überschreiben.

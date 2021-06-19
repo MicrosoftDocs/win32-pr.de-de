@@ -1,23 +1,23 @@
 ---
-description: Verwendet das Protected Extensible Authentication Protocol mit dem Microsoft Challenge Handshake Authentication-Protokollversion 2 (Peer Version 2, Peer Version 2) mit Benutzername/Kennwort, um sich beim Netzwerk zu authentifizieren.
+description: Verwendet protected Extensible Authentication Protocol mit Microsoft Challenge Handshake Authentication Protocol Version 2 mit WPA-Enterprise.
 ms.assetid: e344c360-4ab5-4a5f-a1b2-b0fa890b8666
-title: Beispiel für WPA-Enterprise mit PEAP-MSCHAPv2 Profil
+title: WPA-Enterprise mit PEAP-MSCHAPv2 Profilbeispiel
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 787cc2e4652d3b588b49faf2f9215cd9bd1936e7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 364cc7a9cc85e4c5e2ef908c0ac2a4726d6c5a96
+ms.sourcegitcommit: 91530c19d26ba4c57a6af1f37b57f211f580464e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104485686"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112395045"
 ---
-# <a name="wpa-enterprise-with-peap-mschapv2-profile-sample"></a>Beispiel für WPA-Enterprise mit PEAP-MSCHAPv2 Profil
+# <a name="wpa-enterprise-with-peap-mschapv2-profile-sample"></a>WPA-Enterprise mit PEAP-MSCHAPv2 Profilbeispiel
 
-In diesem Beispiel Profil wird das geschützte Extensible Authentication Protocol with Microsoft Challenge Handshake Authentication Protocol Version 2 (PAP-MSCHAPv2) mit * username * **/** _Password_ verwendet, um sich beim Netzwerk zu authentifizieren. Der Benutzer wird aufgefordert, Anmelde Informationen einzugeben.
+Dieses Beispielprofil verwendet protected Extensible Authentication Protocol mit Microsoft Challenge Handshake Authentication Protocol Version 2 (PEAP-MSCHAPv2) mit *UserName* Password für die Authentifizierung **/**  beim Netzwerk. Der Benutzer wird aufgefordert, Anmeldeinformationen einzugeben.
 
-Dieses Beispiel ist für die Verwendung Wi-Fi geschützten Zugriffssicherheit konfiguriert, die im Unternehmens Modus (WPA-Enterprise) ausgeführt wird. Der WPA-Enterprise-Sicherheitstyp verwendet 802.1 x für den Authentifizierungs Austausch beim Back-End. Das Temporale Schlüssel Integritäts Protokoll (TKIP) wird für die Verschlüsselung verwendet.
+Dieses Beispiel ist so konfiguriert, dass die Wi-Fi geschützten Zugriff verwendet wird, die im Unternehmensmodus (WPA-Enterprise) ausgeführt wird. Der WPA-Enterprise verwendet 802.1X für den Authentifizierungsaustausch mit dem Back-End. Das Temporal Key Integrity Protocol (TKIP) wird für die Verschlüsselung verwendet.
 
-**Windows XP mit SP3 und Wireless LAN API für Windows XP mit SP2:** Der untergeordnete [**Name**](wlan-profileschema-name-wlanprofile-element.md) des [**wlanprofile**](wlan-profileschema-wlanprofile-element.md) -Elements wird ignoriert. Der Name des Profils, wie er im Profil Speicher gespeichert ist, wird vom untergeordneten [**Namen**](wlan-profileschema-name-ssid-element.md) des [**SSID**](wlan-profileschema-ssid-ssidconfig-element.md) -Elements abgeleitet.
+**Windows XP mit SP3 und Wlan-API für Windows XP mit SP2:** Das [**untergeordnete Name-Element**](wlan-profileschema-name-wlanprofile-element.md) [**des WLANProfile-Elements**](wlan-profileschema-wlanprofile-element.md) wird ignoriert. Der Im Profilspeicher gespeicherte Name des Profils [](wlan-profileschema-name-ssid-element.md) wird vom untergeordneten Namen des [**SSID-Elements**](wlan-profileschema-ssid-ssidconfig-element.md) abgeleitet.
 
 ``` syntax
 <?xml version="1.0" encoding="US-ASCII"?>
@@ -82,7 +82,7 @@ Dieses Beispiel ist für die Verwendung Wi-Fi geschützten Zugriffssicherheit ko
 
 <dl> <dt>
 
-[Beispiele für Funk profile](wireless-profile-samples.md)
+[Beispiele für Drahtlosprofile](wireless-profile-samples.md)
 </dt> </dl>
 
  

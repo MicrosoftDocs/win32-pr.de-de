@@ -1,22 +1,22 @@
 ---
-description: In der folgenden Syntax wird die Erstellung einer CAB-Darstellung veranschaulicht.
+description: Sehen Sie sich ein Codebeispiel an, das veranschaulicht, wie sie mithilfe der Cabinet-API ein Gehäuse erstellen. Zum Kompilieren müssen die Rückruffunktionen definiert werden.
 ms.assetid: a16c332d-5afc-46ad-992b-324ed5e70683
-title: Erstellen einer CAB-
+title: Erstellen eines Gehäuses
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0b54df5e5373de82e7de6cc194d3e16e6917bb62
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 7d1d746a61f09237d08ade349ea33b4ec8146913
+ms.sourcegitcommit: 91530c19d26ba4c57a6af1f37b57f211f580464e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214071"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112396605"
 ---
-# <a name="creating-a-cabinet"></a>Erstellen einer CAB-
+# <a name="creating-a-cabinet"></a>Erstellen eines Gehäuses
 
-In der folgenden Syntax wird die Erstellung einer CAB-Darstellung veranschaulicht.
+Die folgende Syntax veranschaulicht die Erstellung eines Schränks.
 
 > [!Note]  
-> Dieser Code dient nur zu Illustrations Zwecken. Zum kompilieren müssen die Rückruf Funktionen definiert werden.
+> Dieser Code dient nur zur Veranschaulichung. Zum Kompilieren müssen die Rückruffunktionen definiert werden.
 
  
 
@@ -249,22 +249,22 @@ LPCSTR FCIErrorToString(FCIERROR err)
 
 <dl> <dt>
 
-[**"F" erstellen**](/windows/desktop/api/Fci/nf-fci-fcicreate)
+[**FCIErzählen**](/windows/desktop/api/Fci/nf-fci-fcicreate)
 </dt> <dt>
 
-[**Datei "file"**](/windows/desktop/api/Fci/nf-fci-fciaddfile)
+[**FCIAddFile**](/windows/desktop/api/Fci/nf-fci-fciaddfile)
 </dt> <dt>
 
-[**Ordner "sciflushfolder"**](/windows/desktop/api/Fci/nf-fci-fciflushfolder)
+[**FCIFlushFolder**](/windows/desktop/api/Fci/nf-fci-fciflushfolder)
 </dt> <dt>
 
-[**"Sciflushcabinet"**](/windows/desktop/api/Fci/nf-fci-fciflushcabinet)
+[**FCIFlushCabinet**](/windows/desktop/api/Fci/nf-fci-fciflushcabinet)
 </dt> <dt>
 
-[**Mit der Verschlüsselung**](/windows/desktop/api/Fci/nf-fci-fcidestroy)
+[**FCIDestroy**](/windows/desktop/api/Fci/nf-fci-fcidestroy)
 </dt> <dt>
 
-[CAB-API-Makros](cabinet-api-macros.md)
+[Cab-API-Makros](cabinet-api-macros.md)
 </dt> </dl>
 
  

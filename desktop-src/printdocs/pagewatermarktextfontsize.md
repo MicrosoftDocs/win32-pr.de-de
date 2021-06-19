@@ -1,15 +1,15 @@
 ---
-description: Dieses Thema ist nicht aktuell. Aktuelle Informationen finden Sie unter Print Schema Specification(Spezifikation des Druckschemas).
+description: Abrufen von Informationen zum PageWatermarkTextFontSize-Parameter. Dieses Thema ist nicht aktuell. Aktuelle Informationen finden Sie unter Print Schema Specification (Spezifikation des Druckschemas).
 ms.assetid: 4c379898-d21f-4c6c-93c8-e5f386e032ba
 title: PageWatermarkTextFontSize
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 72cc8c7f3c9a692ffbe180c253d448d7c4e320d7
-ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
+ms.openlocfilehash: 9eb28044ca676dedfb136cb58190db90a06fd624
+ms.sourcegitcommit: 91530c19d26ba4c57a6af1f37b57f211f580464e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "107999127"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112395995"
 ---
 # <a name="pagewatermarktextfontsize"></a>PageWatermarkTextFontSize
 

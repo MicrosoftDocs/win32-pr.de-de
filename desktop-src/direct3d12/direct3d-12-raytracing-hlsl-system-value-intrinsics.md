@@ -1,60 +1,60 @@
 ---
 title: Direct3D 12-Raytracing, HLSL-Systemwertinterna
-description: Die folgenden HLSL-Shader unterstützen die Direct3D 12-Raytracing-Pipeline.
+description: Hier finden Sie Links zu Artikeln, in denen systeminterne HlSL-Systemwertfunktionen (High-Level Shader Language, Shadersprache) beschrieben werden, die die Direct3D 12-Raytracingpipeline unterstützen.
 ms.assetid: ''
 ms.localizationpriority: low
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8a20282e7bc0e9e4898fd361b0959cd6b6f32253
-ms.sourcegitcommit: 4e4f9e7c90d25af0774deec1d44bd49fa9b6daa9
+ms.openlocfilehash: 3e2790cf5df42f64071db3ca51a35e58ee9afcd5
+ms.sourcegitcommit: 91530c19d26ba4c57a6af1f37b57f211f580464e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "106338100"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112396435"
 ---
 # <a name="direct3d-12-raytracing-hlsl-system-value-intrinsics"></a>Direct3D 12-Raytracing, HLSL-Systemwertinterna
 
-System Werte werden mithilfe spezieller intrinsischer Funktionen abgerufen, anstatt Parameter mit spezieller Semantik in die Signatur der Shaderfunktionen einzuschließen. 
+Systemwerte werden mithilfe spezieller intrinsischer Funktionen abgerufen, anstatt Parameter mit spezieller Semantik in Ihre Shaderfunktionssignatur ein- und zu übernehmen. 
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
-### <a name="ray-dispatch-system-values"></a>System Werte von Ray Dispatch
+### <a name="ray-dispatch-system-values"></a>Ray Dispatch-Systemwerte
 
-| Thema | BESCHREIBUNG |
+| Thema | Beschreibung |
 |-|-|
-| [**Dispatchraysindex**](dispatchraysindex.md) | Ruft die aktuelle x-und y-Position innerhalb der Breite und Höhe ab, die mit dem systeminternen **dispatchraysdimensions** -System Wert abgerufen wird. |
-| [**DispatchRaysDimensions**](dispatchraysdimensions.md) | Die Werte für Breite, Höhe und Tiefe der **D3D12 \_ Dispatch \_ Rays \_** -Struktur, die in den ursprünglichen **dispatchrays** -aufrufen angegeben sind. |
+| [**DispatchRaysIndex**](dispatchraysindex.md) | Ruft die aktuelle x- und y-Position innerhalb der Breite und Höhe ab, die mit dem **systeminternen DispatchRaysDimensions-Systemwert** ermittelt wird. |
+| [**DispatchRaysDimensions**](dispatchraysdimensions.md) | Die Werte für Breite, Höhe und Tiefe der **D3D12 \_ DISPATCH \_ RAY \_ DESC-Struktur,** die im ursprünglichen **DispatchRays-Aufruf angegeben** sind. |
 
-### <a name="ray-system-values"></a>Ray-System Werte
+### <a name="ray-system-values"></a>Ray-Systemwerte
 
-| Thema | BESCHREIBUNG |
+| Thema | Beschreibung |
 |-|-|
-| [**Worldrayorigin**](worldrayorigin.md) | Der Welt Raum Ursprung des aktuellen Strahls. |
-| [**Worldraydirection**](worldraydirection.md) | Die Welt Raum Richtung für das aktuelle Ray. |
-| [**Raytmin**](raytmin.md) | Ein float-Wert, der den aktuellen parametrischen Anfangspunkt für den Strahl darstellt. |
-| [**Raycurrent**](raytcurrent.md) | Ein float-Wert, der den aktuellen parametrischen Endpunkt für den Strahl darstellt.  |
-| [**Rayflags**](rayflags.md) | Eine ganze Zahl ohne Vorzeichen, die die aktuellen **ray_flag** Flags enthält. |
+| [**WorldRayOrigin**](worldrayorigin.md) | Der Ursprung des aktuellen Strahls in der Welt. |
+| [**WorldRayDirection**](worldraydirection.md) | Die Weltraumrichtung für den aktuellen Strahl. |
+| [**RayTMin**](raytmin.md) | Ein Gleitkommawert, der den aktuellen parametrischen Ausgangspunkt für den Strahl darstellt. |
+| [**RayTCurrent**](raytcurrent.md) | Ein Gleitkommawert, der den aktuellen parametrischen Endpunkt für den Strahl darstellt.  |
+| [**RayFlags**](rayflags.md) | Eine ganze Zahl ohne Vorzeichen, die die aktuellen **ray_flag** enthält. |
 
-### <a name="primitiveobject-space-system-values"></a>Primitive/Objekt Raum System Werte
+### <a name="primitiveobject-space-system-values"></a>Primitive/Objektraum-Systemwerte
 
-| Thema | BESCHREIBUNG |
+| Thema | Beschreibung |
 |-|-|
-| [**Instanceingedex**](instanceindex.md) | Der automatisch generierte Index der aktuellen Instanz in der Raytracing-Beschleunigungs Struktur der obersten Ebene. |
-| [**InstanceId**](instanceid.md) | Der vom Benutzer bereitgestellte Bezeichner für die-Instanz auf der unteren Ebene der Beschleunigungs Struktur Instanz innerhalb der Struktur der obersten Ebene. |
-| [**Primitiveingedex**](primitiveindex.md) | Der automatisch generierte Index des primitiven innerhalb der Geometrie innerhalb der Beschleunigung der Beschleunigung-Struktur der untersten Ebene. |
-| [**Objectrayorigin**](objectrayorigin.md) | Der Objekt Raum Ursprung für das aktuelle Ray. |
-| [**Objectraydirection**](objectraydirection.md) | Die Richtung des Objekt Raums für das aktuelle Ray. |
-| [**ObjectToWorld3x4**](objecttoworld3x4.md) | Eine Matrix zum Transformieren von Objekt Raum in Raum. |
-| [**ObjectToWorld4x3**](objecttoworld4x3.md) | Eine Matrix zum Transformieren von Objekt Raum in Raum. |
-| [**WorldToObject3x4**](worldtoobject3x4.md) | Eine Matrix zum Transformieren von Welt Raum zu Objekt Raum |
-| [**WorldToObject4x3**](worldtoobject4x3.md) | Eine Matrix zum Transformieren von Welt Raum zu Objekt Raum |
-### <a name="hit-specific-system-values"></a>Treffer spezifische System Werte
+| [**InstanceIndex**](instanceindex.md) | Der automatisch generierte Index der aktuellen Instanz in der Raytracingbeschleunigungsstruktur der obersten Ebene. |
+| [**Instanceid**](instanceid.md) | Der vom Benutzer bereitgestellte Bezeichner für die -Instanz in der Instanz der Beschleunigungsstruktur auf unterer Ebene innerhalb der Struktur der obersten Ebene. |
+| [**PrimitiveIndex**](primitiveindex.md) | Der automatisch generierte Index des Primitiven innerhalb der Geometrie innerhalb der Instanz der Beschleunigungsstruktur auf unterer Ebene. |
+| [**ObjectRayOrigin**](objectrayorigin.md) | Der Objektraum-Ursprung für den aktuellen Strahl. |
+| [**ObjectRayDirection**](objectraydirection.md) | Die Objektraumrichtung für den aktuellen Strahl. |
+| [**ObjectToWorld3x4**](objecttoworld3x4.md) | Eine Matrix für die Transformation von Objektraum in Raum. |
+| [**ObjectToWorld4x3**](objecttoworld4x3.md) | Eine Matrix für die Transformation von Objektraum in Raum. |
+| [**WorldToObject3x4**](worldtoobject3x4.md) | Eine Matrix für die Transformation vom Raum in den Objektraum |
+| [**WorldToObject4x3**](worldtoobject4x3.md) | Eine Matrix für die Transformation vom Raum in den Objektraum |
+### <a name="hit-specific-system-values"></a>Trefferspezifische Systemwerte
 
-| Thema | BESCHREIBUNG |
+| Thema | Beschreibung |
 |-|-|
-| [**Hitkind**](hitkind.md) | Gibt den Wert zurück, der als **hitkind** -Parameter an Report [**Thread**](reporthit-function.md)übergeben wird. |
+| [**HitKind**](hitkind.md) | Gibt den Wert zurück, der als **HitKind-Parameter** an [**ReportHit übergeben wird.**](reporthit-function.md) |
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
-* [Kern Referenz](direct3d-12-core-reference.md)
+* [Kernreferenz](direct3d-12-core-reference.md)
 * [Referenz für Direct3D 12](direct3d-12-reference.md)
