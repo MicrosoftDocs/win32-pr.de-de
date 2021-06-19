@@ -1,26 +1,26 @@
 ---
-description: In der folgenden Syntax wird die Erstellung einer CAB-Darstellung veranschaulicht.
+description: Sehen Sie sich ein Codebeispiel an, das veranschaulicht, wie sie mithilfe der Cabinet-API ein Gehäuse erstellen. Zum Kompilieren müssen die Rückruffunktionen definiert werden.
 ms.assetid: a16c332d-5afc-46ad-992b-324ed5e70683
-title: Erstellen einer CAB-
+title: Erstellen eines Gehäuses
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0b54df5e5373de82e7de6cc194d3e16e6917bb62
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 7d1d746a61f09237d08ade349ea33b4ec8146913
+ms.sourcegitcommit: 91530c19d26ba4c57a6af1f37b57f211f580464e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214071"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112396605"
 ---
-# <a name="creating-a-cabinet"></a><span data-ttu-id="21c97-103">Erstellen einer CAB-</span><span class="sxs-lookup"><span data-stu-id="21c97-103">Creating a Cabinet</span></span>
+# <a name="creating-a-cabinet"></a><span data-ttu-id="5d812-104">Erstellen eines Gehäuses</span><span class="sxs-lookup"><span data-stu-id="5d812-104">Creating a Cabinet</span></span>
 
-<span data-ttu-id="21c97-104">In der folgenden Syntax wird die Erstellung einer CAB-Darstellung veranschaulicht.</span><span class="sxs-lookup"><span data-stu-id="21c97-104">The following syntax illustrates the creation of a cabinet.</span></span>
+<span data-ttu-id="5d812-105">Die folgende Syntax veranschaulicht die Erstellung eines Schränks.</span><span class="sxs-lookup"><span data-stu-id="5d812-105">The following syntax illustrates the creation of a cabinet.</span></span>
 
 > [!Note]  
-> <span data-ttu-id="21c97-105">Dieser Code dient nur zu Illustrations Zwecken.</span><span class="sxs-lookup"><span data-stu-id="21c97-105">This code is for illustrative purposes only.</span></span> <span data-ttu-id="21c97-106">Zum kompilieren müssen die Rückruf Funktionen definiert werden.</span><span class="sxs-lookup"><span data-stu-id="21c97-106">To compile, the callback functions must be defined.</span></span>
+> <span data-ttu-id="5d812-106">Dieser Code dient nur zur Veranschaulichung.</span><span class="sxs-lookup"><span data-stu-id="5d812-106">This code is for illustrative purposes only.</span></span> <span data-ttu-id="5d812-107">Zum Kompilieren müssen die Rückruffunktionen definiert werden.</span><span class="sxs-lookup"><span data-stu-id="5d812-107">To compile, the callback functions must be defined.</span></span>
 
  
 
-## <a name="example"></a><span data-ttu-id="21c97-107">Beispiel</span><span class="sxs-lookup"><span data-stu-id="21c97-107">Example</span></span>
+## <a name="example"></a><span data-ttu-id="5d812-108">Beispiel</span><span class="sxs-lookup"><span data-stu-id="5d812-108">Example</span></span>
 
 
 ```C++
@@ -245,26 +245,26 @@ LPCSTR FCIErrorToString(FCIERROR err)
 
 
 
-## <a name="related-topics"></a><span data-ttu-id="21c97-108">Zugehörige Themen</span><span class="sxs-lookup"><span data-stu-id="21c97-108">Related topics</span></span>
+## <a name="related-topics"></a><span data-ttu-id="5d812-109">Zugehörige Themen</span><span class="sxs-lookup"><span data-stu-id="5d812-109">Related topics</span></span>
 
 <dl> <dt>
 
-[<span data-ttu-id="21c97-109">**"F" erstellen**</span><span class="sxs-lookup"><span data-stu-id="21c97-109">**FCICreate**</span></span>](/windows/desktop/api/Fci/nf-fci-fcicreate)
+[<span data-ttu-id="5d812-110">**FCIErzählen**</span><span class="sxs-lookup"><span data-stu-id="5d812-110">**FCICreate**</span></span>](/windows/desktop/api/Fci/nf-fci-fcicreate)
 </dt> <dt>
 
-[<span data-ttu-id="21c97-110">**Datei "file"**</span><span class="sxs-lookup"><span data-stu-id="21c97-110">**FCIAddFile**</span></span>](/windows/desktop/api/Fci/nf-fci-fciaddfile)
+[<span data-ttu-id="5d812-111">**FCIAddFile**</span><span class="sxs-lookup"><span data-stu-id="5d812-111">**FCIAddFile**</span></span>](/windows/desktop/api/Fci/nf-fci-fciaddfile)
 </dt> <dt>
 
-[<span data-ttu-id="21c97-111">**Ordner "sciflushfolder"**</span><span class="sxs-lookup"><span data-stu-id="21c97-111">**FCIFlushFolder**</span></span>](/windows/desktop/api/Fci/nf-fci-fciflushfolder)
+[<span data-ttu-id="5d812-112">**FCIFlushFolder**</span><span class="sxs-lookup"><span data-stu-id="5d812-112">**FCIFlushFolder**</span></span>](/windows/desktop/api/Fci/nf-fci-fciflushfolder)
 </dt> <dt>
 
-[<span data-ttu-id="21c97-112">**"Sciflushcabinet"**</span><span class="sxs-lookup"><span data-stu-id="21c97-112">**FCIFlushCabinet**</span></span>](/windows/desktop/api/Fci/nf-fci-fciflushcabinet)
+[<span data-ttu-id="5d812-113">**FCIFlushCabinet**</span><span class="sxs-lookup"><span data-stu-id="5d812-113">**FCIFlushCabinet**</span></span>](/windows/desktop/api/Fci/nf-fci-fciflushcabinet)
 </dt> <dt>
 
-[<span data-ttu-id="21c97-113">**Mit der Verschlüsselung**</span><span class="sxs-lookup"><span data-stu-id="21c97-113">**FCIDestroy**</span></span>](/windows/desktop/api/Fci/nf-fci-fcidestroy)
+[<span data-ttu-id="5d812-114">**FCIDestroy**</span><span class="sxs-lookup"><span data-stu-id="5d812-114">**FCIDestroy**</span></span>](/windows/desktop/api/Fci/nf-fci-fcidestroy)
 </dt> <dt>
 
-[<span data-ttu-id="21c97-114">CAB-API-Makros</span><span class="sxs-lookup"><span data-stu-id="21c97-114">Cabinet API Macros</span></span>](cabinet-api-macros.md)
+[<span data-ttu-id="5d812-115">Cab-API-Makros</span><span class="sxs-lookup"><span data-stu-id="5d812-115">Cabinet API Macros</span></span>](cabinet-api-macros.md)
 </dt> </dl>
 
  
