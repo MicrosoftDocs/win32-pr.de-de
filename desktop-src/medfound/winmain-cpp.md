@@ -1,19 +1,19 @@
 ---
-description: Dieses Thema enthält Code für das Tutorial zum Wiedergeben von Mediendateien mit Media Foundation.
+description: Dieser Artikel enthält Code für die Datei winmain.cpp für das Tutorial How to Play Media Files with Media Foundation.
 ms.assetid: f13cba48-bfb6-4964-a9de-004cbb5c0dce
-title: winmain. cpp
+title: winmain.cpp
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ce99bdc59eb29b77de0418a995b7683e9c040ccc
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 31c0ec32af15d6598dbb34d29f80ec6b4ad7a48f
+ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103959886"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112406353"
 ---
-# <a name="winmaincpp"></a>winmain. cpp
+# <a name="winmaincpp"></a>winmain.cpp
 
-Dieses Thema enthält Code für das Tutorial zum Wiedergeben von [Mediendateien mit Media Foundation](how-to-play-unprotected-media-files.md).
+Dieses Thema enthält Code für das Tutorial [How to Play Media Files with Media Foundation](how-to-play-unprotected-media-files.md).
 
 
 ```C++
@@ -521,7 +521,7 @@ HRESULT AllocGetWindowText(HWND hwnd, WCHAR **pszText, DWORD *pcchLen)
 
 <dl> <dt>
 
-[Beispiel für Medien Sitzungs Wiedergabe](media-session-playback-example.md)
+[Beispiel für die Mediensitzungswiedergabe](media-session-playback-example.md)
 </dt> <dt>
 
 [Audio-/Videowiedergabe](audio-video-playback.md)

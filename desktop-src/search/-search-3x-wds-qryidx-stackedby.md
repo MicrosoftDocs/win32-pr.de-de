@@ -1,24 +1,24 @@
 ---
-description: Das stackedby-Argument gibt die Eigenschaften Spalte an, nach der die Ergebnisse gestapelt werden. Sie können eine beliebige gültige Eigenschaft im Eigenschaften System stapeln.
+description: Erfahren Sie, wie Sie das stackedby-Argument in Windows Search verwenden. Dieses Argument gibt die Eigenschaftenspalte an, nach der Ergebnisse gestapelt werden sollen.
 ms.assetid: 7563bf34-b790-4cb0-94fa-31e771f34455
-title: Stackedby-Argument (Windows-Suche)
+title: STACKEDBY-Argument (Windows Search)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c691f2f9dd08575a9f93a5fc309b167e83f6acff
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9844efb21849cad6c1d02f48f7adf793992aec08
+ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103958786"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112403713"
 ---
-# <a name="stackedby-argument-windows-search"></a>Stackedby-Argument (Windows-Suche)
+# <a name="stackedby-argument-windows-search"></a>STACKEDBY-Argument (Windows Search)
 
-Das **stackedby** -Argument gibt die Eigenschaften Spalte an, nach der die Ergebnisse gestapelt werden. Sie können eine beliebige gültige Eigenschaft im Eigenschaften System stapeln.
+Das **stackedby-Argument** gibt die Eigenschaftenspalte an, nach der Ergebnisse gestapelt werden sollen. Sie können nach jeder gültigen Eigenschaft aus dem Eigenschaftensystem stapeln.
 
 Dieses Thema ist wie folgt organisiert:
 
 -   [Beispiel](#example)
--   [Zugehörige Themen](#related-topics)
+-   [Verwandte Themen](#related-topics)
 
 ## <a name="example"></a>Beispiel
 
@@ -33,19 +33,19 @@ Dieses Thema ist wie folgt organisiert:
 
 <dl> <dt>
 
-[Die ersten Schritte mit Parameter-Value Argumenten](getting-started-with-parameter-value-arguments.md)
+[Erste Schritte mit Parameter-Value Argumenten](getting-started-with-parameter-value-arguments.md)
 </dt> <dt>
 
-[Locale-bezeichnerargumente](-search-3x-wds-qryidx-localeidentifiers.md)
+[Gebietsschemabezeichnerargumente](-search-3x-wds-qryidx-localeidentifiers.md)
 </dt> <dt>
 
-[Crumb-Argument](-search-3x-wds-qryidx-crumb.md)
+[ARGUMENTS-Argument](-search-3x-wds-qryidx-crumb.md)
 </dt> <dt>
 
-[Syntax Argument](-search-3x-wds-qryidx-syntaxargument.md)
+[SYNTAX-Argument](-search-3x-wds-qryidx-syntaxargument.md)
 </dt> <dt>
 
-[Unterabfrage Argument](-search-3x-wds-qryidx-subquery.md)
+[SUBQUERY-Argument](-search-3x-wds-qryidx-subquery.md)
 </dt> </dl>
 
  

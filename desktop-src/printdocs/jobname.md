@@ -1,15 +1,15 @@
 ---
-description: Dieses Thema ist nicht aktuell. Aktuelle Informationen finden Sie unter Print Schema Specification(Spezifikation des Druckschemas).
+description: Erfahren Sie mehr über das JobName-Element, das einen beschreibenden Namen für den Auftrag angibt. Aktuelle Informationen finden Sie unter Print Schema Specification (Spezifikation des Druckschemas).
 ms.assetid: 1e7b0681-a29b-4fd6-8518-dc9d0b716b12
 title: JobName
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: fcb6259d8623a4611364023bf0f74784fe308b58
-ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
+ms.openlocfilehash: 3bfb63a54e9501ff5dc45ff09a925396c168b20c
+ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "107998107"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112408873"
 ---
 # <a name="jobname"></a>JobName
 
@@ -19,7 +19,7 @@ Gibt einen beschreibenden Namen für den Auftrag an.
 
 -   [Elementinformationen](#element-information)
 -   [Strukturell](#structural-content)
--   [Extensible Markup Language -Inhalt (XML)](#extensible-markup-language-xml-content)
+-   [xml-Inhalt (Extensible Markup Language)](#extensible-markup-language-xml-content)
 
 ## <a name="element-information"></a>Elementinformationen
 
@@ -59,7 +59,7 @@ In der folgenden Tabelle werden die Merkmale der in der XML-Struktur definierten
 
  
 
-## <a name="extensible-markup-language-xml-content"></a>Extensible Markup Language -Inhalt (XML)
+## <a name="extensible-markup-language-xml-content"></a>xml-Inhalt (Extensible Markup Language)
 
 ``` syntax
 <psf:Property name="psk:JobName">

@@ -1,29 +1,29 @@
 ---
 title: WPD-Referenz
-description: Programmierverzeichnis
+description: Dieser Artikel enthält Links zu Referenzartikeln für WPD, z. B. Konstanten, Clientschnittstellen, Treiberschnittstellen und Sammlungsschnittstellen.
 ms.assetid: e9dcb602-d04f-4067-8abc-d39e5a29de4e
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ffa107702ecf9d048728650b324d4a8d081b95df
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c8a37b34eab3542f01d281bfebd10a387651e1dd
+ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104530254"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112409853"
 ---
 # <a name="wpd-reference"></a>WPD-Referenz
 
-Der Abschnitt "Referenz" in dieser Dokumentation enthält die folgenden Abschnitte.
+Der Referenzabschnitt dieser Dokumentation enthält die folgenden Abschnitte.
 
 
 
 | `Section`                                                                  | BESCHREIBUNG                                                                                                         |
 |--------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------|
-| [Konstanten](constants.md)                                               | Konstanten, die von den Treibern und Anwendungen verwendet werden, einschließlich der Fehlercodes, die von tragbaren Windows-Geräten definiert werden. |
-| [Client Schnittstellen](client-interfaces.md)                               | Schnittstellen, die von einer Windows-Anwendung für tragbare Geräte verwendet werden.                                                  |
-| [Treiber Schnittstellen](driver-interfaces.md)                               | Schnittstellen, die von einem Windows-Treiber für tragbare Geräte verwendet werden.                                                       |
-| [Sammlungs Schnittstellen](collection-interfaces.md)                       | Schnittstellen, die verwendet werden, um Gruppen von Werten zu speichern, die zwischen der Anwendung und dem Treiber gesendet werden.                      |
-| [Befehle](commands.md)                                                 | Befehle, die von der Anwendung an den Treiber gesendet werden.                                                                  |
+| [Konstanten](constants.md)                                               | Konstanten, die von den Treibern und Anwendungen verwendet werden, einschließlich Fehlercodes, die von portablen Windows-Geräten definiert werden. |
+| [Clientschnittstellen](client-interfaces.md)                               | Schnittstellen, die von einer Windows Portable Device-Anwendung verwendet werden.                                                  |
+| [Treiberschnittstellen](driver-interfaces.md)                               | Schnittstellen, die von einem Windows Portable Device-Treiber verwendet werden.                                                       |
+| [Sammlungsschnittstellen](collection-interfaces.md)                       | Schnittstellen, die zum Enthalten von Gruppen von Werten verwendet werden, die zwischen der Anwendung und dem Treiber gesendet werden.                      |
+| [Befehle](commands.md)                                                 | Befehle, die die Anwendung an den Treiber sendet.                                                                  |
 | [Strukturen und Enumerationstypen](structures-and-enumeration-types.md) | Strukturen und Enumerationen, die von Treibern und Anwendungen verwendet werden.                                              |
 
 
@@ -34,7 +34,7 @@ Der Abschnitt "Referenz" in dieser Dokumentation enthält die folgenden Abschnit
 
 <dl> <dt>
 
-[**Tragbare Windows-Geräte**](/windows/desktop/windows-portable-devices)
+[**Portable Windows-Geräte**](/windows/desktop/windows-portable-devices)
 </dt> </dl>
 
  

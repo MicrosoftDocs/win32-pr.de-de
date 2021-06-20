@@ -1,21 +1,21 @@
 ---
-description: 'Gibt an, wie ipropertydescription:: formatfordisplay den Wert der Eigenschaft als Zeichenfolge formatieren soll. Dies gilt nur, wenn <displayInfo displayType=&\#0034;String&\#0034;> .'
+description: Gibt an, wie IPropertyDescription::FormatForDisplay den Wert der booleanFormat-Eigenschaft als Zeichenfolge formatieren soll.
 ms.assetid: f6384910-4411-4ac2-884d-3476c1b6ff96
-title: BooleanFormat
+title: booleanFormat
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d91332f0cc062e7ee4a83e3584776ecf09c5c4b7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 528458d9c31d54ef43eca8325b1daeef4eee1195
+ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103959833"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112405963"
 ---
-# <a name="booleanformat"></a>BooleanFormat
+# <a name="booleanformat"></a>booleanFormat
 
-Gibt an, wie [**ipropertydescription:: formatfordisplay**](/windows/win32/api/propsys/nf-propsys-ipropertydescription-formatfordisplay) den Wert der Eigenschaft als Zeichenfolge formatieren soll. Dies gilt nur, wenn <displayInfo displayType="String"> . Es darf nur ein [BooleanFormat]() -Element für jedes [DisplayInfo](./propdesc-schema-displayinfo.md) -Element vorhanden sein.
+Gibt an, wie [**IPropertyDescription::FormatForDisplay**](/windows/win32/api/propsys/nf-propsys-ipropertydescription-formatfordisplay) den Wert der Eigenschaft als Zeichenfolge formatieren soll. Dies gilt nur, wenn <displayInfo displayType="String"> . Es sollte nur ein [booleanFormat-Element]() für jedes [displayInfo-Element](./propdesc-schema-displayinfo.md) vorhanden sein.
 
-Wenn mehrere Elemente vorhanden sind, wird der letzte verwendet. Wenn kein [BooleanFormat]() -Element bereitgestellt wird, werden die Standard Attribut Einstellungen auf die Eigenschafts Beschreibung angewendet.
+Wenn mehrere Elemente vorhanden sind, wird das letzte Element verwendet. Wenn kein [booleanFormat-Element]() angegeben wird, werden die Standardattributeinstellungen auf die Eigenschaftenbeschreibung angewendet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,7 +45,7 @@ Wenn mehrere Elemente vorhanden sind, wird der letzte verwendet. Wenn kein [Bool
 
 | Übergeordnetes Element                                   | Untergeordnete Elemente |
 |--------------------------------------------------|----------------|
-| [Display Info](./propdesc-schema-displayinfo.md) | Keine           |
+| [displayInfo](./propdesc-schema-displayinfo.md) | Keine           |
 
 
 
@@ -62,14 +62,14 @@ Wenn mehrere Elemente vorhanden sind, wird der letzte verwendet. Wenn kein [Bool
 </colgroup>
 <thead>
 <tr class="header">
-<th>Attribut</th>
-<th>BESCHREIBUNG</th>
+<th>attribute</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>formatas</td>
-<td>Öffentlich. Dies ist optional. Der Standardwert ist &quot; YesNo &quot; . Die folgenden Werte sind gültig. 
+<td>formatAs</td>
+<td>Öffentlich. Dies ist optional. Der Standardwert ist &quot; &quot; YesNo. Die folgenden Werte sind gültig. 
 <table>
 <thead>
 <tr class="header">
@@ -80,15 +80,15 @@ Wenn mehrere Elemente vorhanden sind, wird der letzte verwendet. Wenn kein [Bool
 <tbody>
 <tr class="odd">
 <td>YesNo</td>
-<td>Standard. Formatiert den Wert entweder als " &quot; yes" &quot; oder "No" &quot; &quot; . Erfordert, dass der Eigenschaftentyp ein boolescher Wert ist.</td>
+<td>Standard. Formatiert den Wert entweder als &quot; Ja &quot; oder &quot; &quot; Nein. Erfordert, dass der Eigenschaftstyp boolesch ist.</td>
 </tr>
 <tr class="even">
 <td>OnOff</td>
-<td>Formatiert den Wert entweder als ein- &quot; &quot; oder &quot; ausschalten &quot; . Erfordert, dass der Eigenschaftentyp ein boolescher Wert ist.</td>
+<td>Formatiert den Wert entweder als &quot; Ein &quot; oder &quot; &quot; Aus. Erfordert, dass der Eigenschaftstyp boolesch ist.</td>
 </tr>
 <tr class="odd">
 <td>TrueFalse</td>
-<td>Formatiert den Wert entweder als " &quot; true" &quot; oder "false" &quot; &quot; . Erfordert, dass der Eigenschaftentyp ein boolescher Wert ist.</td>
+<td>Formatiert den Wert entweder als &quot; True &quot; oder &quot; &quot; False. Erfordert, dass der Eigenschaftstyp boolesch ist.</td>
 </tr>
 </tbody>
 </table>

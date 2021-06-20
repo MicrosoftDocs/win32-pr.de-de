@@ -1,19 +1,19 @@
 ---
-title: Aktivierte Eigenschaft (Spracheingabe Objekt)
-description: Enabled-Eigenschaft
+title: Enabled-Eigenschaft (Speech-Eingabeobjekt)
+description: Erfahren Sie mehr über die Enabled Speech Input-Objekteigenschaft. Microsoft Agent ist ab Windows 7 veraltet.
 ms.assetid: d48f02f1-7d93-4780-88a7-61597672bb58
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8ed92d33a6215a0534181f887662c3549f4f9f62
-ms.sourcegitcommit: 8fa6614b715bddf14648cce36d2df22e5232801a
+ms.openlocfilehash: 88a3e5d7989da4144805fbb926f744026033638d
+ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "104391430"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112407323"
 ---
-# <a name="enabled-property-speech-input-object"></a>Aktivierte Eigenschaft (Spracheingabe Objekt)
+# <a name="enabled-property-speech-input-object"></a>Enabled-Eigenschaft (Speech-Eingabeobjekt)
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Microsoft Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht mehr verfügbar.\]
 
 <dl> <dt>
 
@@ -27,7 +27,7 @@ Gibt einen booleschen Wert zurück, der angibt, ob die Spracheingabe aktiviert i
 <span id="Syntax"></span><span id="syntax"></span><span id="SYNTAX"></span>**Syntax**
 </dt> <dd>
 
-*Agent * * *. Speechinput. aktiviert**
+*agent**. SpeechInput.Enabled**
 
 
 
@@ -44,7 +44,7 @@ Gibt einen booleschen Wert zurück, der angibt, ob die Spracheingabe aktiviert i
 
 ## <a name="remarks"></a>Bemerkungen
 
-Die [**aktivierte**](enabled-property.md) Eigenschaft gibt auf der Seite Spracheingabe des agentteigenschaftenblatts (erweiterte Zeichen Optionen) die Option Zeichen auf Eingabe überwachen an. Die-Eigenschafts Einstellung wirkt sich auf alle agentzeichen aus und ist schreibgeschützt. nur der Benutzer kann diese Eigenschaft ändern.
+Die [**Enabled-Eigenschaft**](enabled-property.md) spiegelt die Option Characters Listen For Input (Zeichen lauschen auf Eingabe) auf der Seite Spracheingabe des Eigenschaftenblatts agent (Erweiterte Zeichenoptionen) wider. Die Eigenschafteneinstellung wirkt sich auf alle -Agent-Zeichen aus und ist schreibgeschützt. nur der Benutzer kann diese Eigenschaft ändern.
 
  
 

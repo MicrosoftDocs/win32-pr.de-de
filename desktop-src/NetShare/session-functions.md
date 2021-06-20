@@ -1,50 +1,50 @@
 ---
-description: Die Funktionen der Netzwerk Verwaltungssitzung Steuern Netzwerksitzungen, die zwischen Arbeitsstationen und Servern hergestellt werden. Die Funktionen erfordern, dass der Server Dienst auf dem Server gestartet wird.
+description: Grundlegendes zu Sitzungsfunktionen in der Verwaltung von Netzwerkfreigaben. Diese Funktionen steuern Netzwerksitzungen, die zwischen Arbeitsstationen und Servern eingerichtet wurden.
 ms.assetid: 931455e3-1301-4a68-93c3-2674b3d4c491
-title: Sitzungs Funktionen (Netzwerkfreigabe Verwaltung)
+title: Sitzungsfunktionen (Netzwerkfreigabeverwaltung)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2c672abd7c976cb9f83fa4f387dd40d175879dee
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1cdde451eb2942171569b24c36aae5d5742208e5
+ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106354643"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112409723"
 ---
-# <a name="session-functions-network-share-management"></a>Sitzungs Funktionen (Netzwerkfreigabe Verwaltung)
+# <a name="session-functions-network-share-management"></a>Sitzungsfunktionen (Netzwerkfreigabeverwaltung)
 
-Die Funktionen der Netzwerk Verwaltungssitzung Steuern Netzwerksitzungen, die zwischen Arbeitsstationen und Servern hergestellt werden. Die Funktionen erfordern, dass der Server Dienst auf dem Server gestartet wird.
+Die Netzwerkverwaltungssitzungsfunktionen steuern Netzwerksitzungen, die zwischen Arbeitsstationen und Servern eingerichtet werden. Die Funktionen erfordern, dass der Serverdienst auf dem Server gestartet wird.
 
-Die Sitzungs Funktionen sind nachfolgend aufgeführt.
+Die Sitzungsfunktionen sind im Folgenden aufgeführt.
 
 
 
-| Funktion                                       | BESCHREIBUNG                                                                                       |
+| Funktion                                       | Beschreibung                                                                                       |
 |------------------------------------------------|---------------------------------------------------------------------------------------------------|
-| [**"Netzessiondel"**](/windows/desktop/api/Lmshare/nf-lmshare-netsessiondel)         | Löscht die aktuellen Verbindungen zwischen einer Arbeitsstation und einem Server. beendet die Netzwerksitzung. |
-| [**"Netzessionaufumum"**](/windows/desktop/api/Lmshare/nf-lmshare-netsessionenum)       | Gibt Informationen zu allen aktuellen Sitzungen zurück, die für einen Server eingerichtet wurden.                          |
-| [**"Netzessiongetinfo"**](/windows/desktop/api/Lmshare/nf-lmshare-netsessiongetinfo) | Gibt Informationen zu einer bestimmten Sitzung zurück.                                                   |
+| [**NetSessionDel**](/windows/desktop/api/Lmshare/nf-lmshare-netsessiondel)         | Löscht die aktuellen Verbindungen zwischen einer Arbeitsstation und einem Server. beendet die Netzwerksitzung. |
+| [**NetSessionEnum**](/windows/desktop/api/Lmshare/nf-lmshare-netsessionenum)       | Gibt Informationen zu allen aktuellen Sitzungen zurück, die für einen Server eingerichtet wurden.                          |
+| [**NetSessionGetInfo**](/windows/desktop/api/Lmshare/nf-lmshare-netsessiongetinfo) | Gibt Informationen zu einer bestimmten Sitzung zurück.                                                   |
 
 
 
  
 
-Eine *Sitzung* ist eine Verknüpfung zwischen einer Arbeitsstation und einem Server. Eine Sitzung wird erstellt, wenn eine Arbeitsstation zum ersten Mal eine Verbindung mit einer freigegebenen Ressource auf dem Server herstellt. Bis zum Ende der Sitzung sind alle weiteren Verbindungen zwischen der Arbeitsstation und dem Serverteil derselben Sitzung. Um eine Sitzung zu beenden, ruft eine Anwendung auf dem Server Ende einer Verbindung die Funktion " [**netzessiondel**](/windows/desktop/api/Lmshare/nf-lmshare-netsessiondel) " auf.
+Eine *Sitzung* ist eine Verknüpfung zwischen einer Arbeitsstation und einem Server. Wenn eine Arbeitsstation zum ersten Mal eine Verbindung mit einer freigegebenen Ressource auf dem Server herstellen soll, wird eine Sitzung eingerichtet. Bis zum Ende der Sitzung sind alle weiteren Verbindungen zwischen der Arbeitsstation und dem Server Teil derselben Sitzung. Um eine Sitzung zu beenden, ruft eine Anwendung auf dem Serverende einer Verbindung die [**NetSessionDel-Funktion**](/windows/desktop/api/Lmshare/nf-lmshare-netsessiondel) auf.
 
-Die Funktionen der Netzwerk Verwaltungssitzung verwalten die Informationen auf Benutzerbasis mit dem *username* -Parameter. Da mehrere Benutzer pro Sitzung vorhanden sein können, ist dieser Parameter erforderlich, um auf die benutzerspezifischen Informationen der Sitzung zuzugreifen.
+Die Netzwerkverwaltungssitzungsfunktionen verwalten Informationen pro Benutzer mit dem *Parameter username.* Da es mehrere Benutzer pro Sitzung geben kann, ist dieser Parameter erforderlich, um auf die benutzerspezifischen Informationen für die Sitzung zuzugreifen.
 
-Sitzungs Funktionen sind auf fünf Informationsebenen verfügbar:
+Sitzungsfunktionen sind auf fünf Informationsebenen verfügbar:
 
 <dl>
 
-[**Sitzungs \_ Informationen \_ 0**](/windows/desktop/api/Lmshare/ns-lmshare-session_info_0)  
-[**Sitzungs \_ Informationen \_ 1**](/windows/desktop/api/Lmshare/ns-lmshare-session_info_1)  
-[**Sitzungs \_ Informationen \_ 2**](/windows/desktop/api/Lmshare/ns-lmshare-session_info_2)  
-[**Sitzungs \_ Informationen \_ 10**](/windows/desktop/api/Lmshare/ns-lmshare-session_info_10)  
-[**Sitzungs \_ Informationen \_ 502**](/windows/desktop/api/Lmshare/ns-lmshare-session_info_502)  
+[**\_SITZUNGSINFORMATIONEN \_ 0**](/windows/desktop/api/Lmshare/ns-lmshare-session_info_0)  
+[**\_SITZUNGSINFORMATIONEN \_ 1**](/windows/desktop/api/Lmshare/ns-lmshare-session_info_1)  
+[**\_SITZUNGSINFORMATIONEN \_ 2**](/windows/desktop/api/Lmshare/ns-lmshare-session_info_2)  
+[**\_SITZUNGSINFORMATIONEN \_ 10**](/windows/desktop/api/Lmshare/ns-lmshare-session_info_10)  
+[**\_SITZUNGSINFORMATIONEN \_ 502**](/windows/desktop/api/Lmshare/ns-lmshare-session_info_502)  
 </dl>
 
-Wenn Sie für Active Directory programmieren, können Sie möglicherweise bestimmte Active Directory Service Interface (ADSI)-Methoden aufrufen, um die gleiche Funktionalität zu erreichen, die Sie durch Aufrufen der Funktionen der Netzwerk Verwaltungssitzung erreichen können. Weitere Informationen finden Sie unter [**iadssession**](/windows/desktop/api/iads/nn-iads-iadssession) und [**iadsfileserviceoperations**](/windows/desktop/api/iads/nn-iads-iadsfileserviceoperations).
+Wenn Sie für Active Directory programmieren, können Sie möglicherweise bestimmte ADSI-Methoden (Active Directory Service Interface) aufrufen, um die gleiche Funktionalität zu erreichen, die Sie durch Aufrufen der Netzwerkverwaltungssitzungsfunktionen erreichen können. Weitere Informationen finden Sie unter [**IADsSession**](/windows/desktop/api/iads/nn-iads-iadssession) und [**IADsFileServiceOperations.**](/windows/desktop/api/iads/nn-iads-iadsfileserviceoperations)
 
  
 

@@ -1,25 +1,25 @@
 ---
-description: Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter Spezifikation des Druckschemas.
+description: Erfahren Sie mehr über das DocumentCoverBack-Element, das das Hintergrundabdeckungsblatt beschreibt. Jedes Dokument enthält ein separates Blatt.
 ms.assetid: 29d0bf2d-4897-43ed-ba3d-0b38b2f30375
 title: DocumentCoverBack
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d5822921fe3dc1852100569b29a1ded8b37bc9aa
-ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
+ms.openlocfilehash: ad5c75fd4bbce89bbc707c17a82202846cf2490a
+ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "107994537"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112409383"
 ---
 # <a name="documentcoverback"></a>DocumentCoverBack
 
 Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter [Print Schema Specification (Spezifikation des Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 
-Beschreibt das Coversheet für die Rückseite (Ende). Jedes Dokument enthält ein separates Blatt. Das Titelblatt sollte auf den Seiten "PageMediaSize" und "PageMediaType" gedruckt werden, die für die letzte Seite des Dokuments verwendet werden. Das Coversheet sollte in Verarbeitungsoptionen (z. B. DocumentDuplex, DocumentNUp) integriert werden, wie durch die angegebene Option angegeben.
+Beschreibt das Coversheet für die Rückseite (endend). Jedes Dokument enthält ein separates Blatt. Das Titelblatt sollte auf den Seiten "PageMediaSize" und "PageMediaType" gedruckt werden, die für die letzte Seite des Dokuments verwendet werden. Das Coversheet sollte in Verarbeitungsoptionen (z. B. DocumentDuplex, DocumentNUp) integriert werden, wie durch die angegebene Option angegeben.
 
 -   [Elementinformationen](#element-information)
 -   [Strukturelle Inhalte](#structural-content)
--   [Extensible Markup Language (XML) Content](#extensible-markup-language-xml-content)
+-   [Extensible Markup Language (XML)-Inhalt](#extensible-markup-language-xml-content)
 
 ## <a name="element-information"></a>Elementinformationen
 
@@ -58,22 +58,22 @@ Die XML-Struktur dieses Elements ist:
 
 ## <a name="structure-variables"></a>Strukturvariablen
 
-In der folgenden Tabelle werden die Merkmale der in der XML-Struktur definierten Variablen beschrieben.
+In der folgenden Tabelle werden die Merkmale der Variablen beschrieben, die in der XML-Struktur definiert sind.
 
 
 
 | Name                               | Datentyp         | Einheit                  | Unterstützte Werte                                                                                                                                                                      | Zusammenfassung                                                                      |
 |------------------------------------|-------------------|-----------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------|
-| \_Optionname\_<br/>          | Zeichenfolge<br/> | Buchstaben<br/> | Gültiger vollqualifizierte Name, wie von [Namespaces in XML](https://www.w3.org/TR/1999/REC-xml-names-19990114/)definiert. Wenn kein Namespace angegeben ist, wird der Standardnamespace angenommen.<br/> | Der Name der Option.<br/>                                           |
-| \_IdentityOptionValue\_<br/> | Zeichenfolge<br/> | –<br/>        | TRUE, FALSE<br/>                                                                                                                                                               | Definiert eine Option, die diese Funktion deaktiviert, wenn sie ausgewählt wird.<br/> |
+| \_Optionname\_<br/>          | Zeichenfolge<br/> | Buchstaben<br/> | Gültiger vollqualifizierter Name, wie durch [Namespaces in XML definiert.](https://www.w3.org/TR/1999/REC-xml-names-19990114/) Wenn kein Namespace angegeben wird, wird der Standardnamespace angenommen.<br/> | Der Name der Option.<br/>                                           |
+| \_IdentityOptionValue\_<br/> | Zeichenfolge<br/> | –<br/>        | TRUE, FALSE<br/>                                                                                                                                                               | Definiert eine Option, durch die diese Funktion deaktiviert wird, wenn sie ausgewählt wird.<br/> |
 
 
 
  
 
-## <a name="extensible-markup-language-xml-content"></a>Extensible Markup Language -Inhalt (XML)
+## <a name="extensible-markup-language-xml-content"></a>Extensible Markup Language (XML)-Inhalt
 
-Die Schlüsselwörter für das öffentliche Druckschema werden im https://schemas.microsoft.com/windows/2003/08/printing/printschemakeywords -Namespace definiert. Der Inhalt des öffentlichen Extensible Markup Language (XML) für dieses Schlüsselwort ist unten definiert:
+Die Schlüsselwörter des öffentlichen Druckschemas werden im -Namespace https://schemas.microsoft.com/windows/2003/08/printing/printschemakeywords definiert. Der öffentliche Extensible Markup Language (XML) für dieses Schlüsselwort ist unten definiert:
 
 ``` syntax
 <psf:Feature name="psk:DocumentCoverBack">

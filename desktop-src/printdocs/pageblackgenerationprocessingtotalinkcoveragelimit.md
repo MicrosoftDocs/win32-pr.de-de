@@ -1,19 +1,19 @@
 ---
-description: Dieses Thema ist nicht aktuell. Aktuelle Informationen finden Sie unter Print Schema Specification(Spezifikation des Druckschemas).
+description: Erfahren Sie mehr über das PageBlackGenerationProcessingTotalInkCoverageLimit-Element, das die maximal zulässige Summe der vier Freikmalabdeckungen an einer beliebigen Stelle in einem Bild angibt.
 ms.assetid: 7ccd02c2-7cec-4d9d-83c1-512f25f4045c
 title: PageBlackGenerationProcessingTotalInkCoverageLimit
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 29918bfe48d1547a3c61b8d79425b36368f6d249
-ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
+ms.openlocfilehash: 68410cabdfafa5ce82450821e4ae45709ee8d4c9
+ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "107993877"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112408443"
 ---
 # <a name="pageblackgenerationprocessingtotalinkcoveragelimit"></a>PageBlackGenerationProcessingTotalInkCoverageLimit
 
-Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie unter Print Schema Specification (Spezifikation des [Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
+Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter [Print Schema Specification (Spezifikation des Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 
 Gibt die maximal zulässige Summe der vier Ink-Abdeckungen an einer beliebigen Stelle in einem Bild an.
 
@@ -28,7 +28,7 @@ Gibt die maximal zulässige Summe der vier Ink-Abdeckungen an einer beliebigen S
 |----------------------------|------------------------------------------------------------|
 | Elementtyp <br/>   | ParameterDef<br/>                                    |
 | Bereichspräfix <br/> | Seite<br/>                                            |
-| Hinweise <br/>          | Verknüpft mit dem PageBlackGenerationProcessing-Element<br/> |
+| Hinweise <br/>          | Mit PageBlackGenerationProcessing-Element verknüpft<br/> |
 
 
 
@@ -36,7 +36,7 @@ Gibt die maximal zulässige Summe der vier Ink-Abdeckungen an einer beliebigen S
 
 ## <a name="structure-content"></a>Strukturieren von Inhalt
 
-Die XML-Struktur dieses Elements lautet:
+Die XML-Struktur dieses Elements ist:
 
 ``` syntax
 <psf:ParameterDef name="psk:PageBlackGenerationProcessingTotalInkCoverageLimit">
@@ -66,7 +66,7 @@ Die XML-Struktur dieses Elements lautet:
 
 ## <a name="structure-properties"></a>Struktureigenschaften
 
-In der folgenden Tabelle werden die Merkmale der in der XML-Struktur definierten Variablen beschrieben.
+In der folgenden Tabelle werden die Merkmale der Variablen beschrieben, die in der XML-Struktur definiert sind.
 
 
 

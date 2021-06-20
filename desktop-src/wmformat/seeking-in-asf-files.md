@@ -1,33 +1,33 @@
 ---
 title: Suchen in ASF-Dateien (Windows Media Format 11 SDK)
-description: Suchen in ASF-Dateien
+description: Erfahren Sie, wie der WM ASF-Reader eine sehr genaue temporale Suche auf Windows Media-basierten Inhalten durchführen kann, die über einen temporalen Index im Windows Media Format 11 SDK verfügt.
 ms.assetid: a1717cb4-9f41-4148-b088-a6517be7da9b
 keywords:
-- Windows Media-Format-SDK, suchen in ASF-Dateien
-- Windows Media-Format-SDK, DirectShow
-- Advanced Systems Format (ASF), DirectShow
+- Windows Media Format SDK, Suchen in ASF-Dateien
+- Windows Media Format SDK, DirectShow
+- Advanced Systems Format (ASF),DirectShow
 - ASF (Advanced Systems Format), DirectShow
-- Advanced Systems Format (ASF), suchen
-- ASF (Advanced Systems Format), suchen
-- DirectShow, suchen in ASF-Dateien
+- Advanced Systems Format (ASF),seeking
+- ASF (Advanced Systems Format), seeking
+- DirectShow,Suchen in ASF-Dateien
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 18389ded80f0202564cba0ce6384b5ff02d26fdd
-ms.sourcegitcommit: 8fa6614b715bddf14648cce36d2df22e5232801a
+ms.openlocfilehash: 807631861cdc820457360058f22fca380fca29ea
+ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "104039933"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112409883"
 ---
 # <a name="seeking-in-asf-files-windows-media-format-11-sdk"></a>Suchen in ASF-Dateien (Windows Media Format 11 SDK)
 
-Der [WM-ASF-Reader](wm-asf-reader-filter.md)kann über seine **imediaseeking** -Schnittstelle eine sehr genaue Temporale Suche auf Windows Media – basierten Inhalten mit einem temporalen Index durchführen. (Alle Frame indizierten Inhalte enthalten auch einen temporalen Index.) Garantierte Frame-exakte Suchvorgänge werden im WM-ASF-Reader nicht direkt unterstützt. es gibt jedoch eine Möglichkeit, dies zu tun, wenn Sie diese Funktionalität benötigen. Verwenden Sie zunächst das Windows Media-Format-SDK direkt zum Erstellen einer Instanz des synchronen Reader-Objekts, öffnen Sie die Datei, rufen Sie den einem angegebenen Frame zugeordneten Zeitstempel ab, und verwenden Sie dann die Schnittstelle DirectShow **imediaseeking** , um zu diesem Zeitpunkt zu suchen. Die DirectShow **ivideoframestep** -Schnittstelle unterstützt keine Frame genaue Suche von Windows Media – basierten Inhalten. Das dsseekfm-Beispiel im Windows Media-Format-SDK veranschaulicht, wie Sie eine Frame genaue Suche mithilfe des WM-ASF-Readers durchführen können.
+Der [WM ASF-Reader](wm-asf-reader-filter.md)kann über seine **IMediaSeeking-Schnittstelle** sehr genaue temporale Suchmaßnahmen für Windows Media-basierte Inhalte ausführen, die über einen temporalen Index verfügt. (Alle frameindizierten Inhalte enthalten auch einen temporalen Index.) Garantierte framegenaue Suchfunktionen werden im WM ASF-Reader nicht direkt unterstützt, aber es gibt eine Möglichkeit, dies zu tun, wenn Sie diese Funktionalität benötigen. Verwenden Sie zunächst das Windows Media Format SDK direkt, um eine Instanz des synchronen Readerobjekts zu erstellen, die Datei zu öffnen, den einem angegebenen Frame zugeordneten Zeitstempel zu erhalten und dann die DirectShow **IMediaSeeking-Schnittstelle** zu verwenden, um nach dieser Zeit zu suchen. Die **IVideoFrameStep-Schnittstelle** von DirectShow unterstützt keine framegenaue Suche nach Windows Media-basierten Inhalten. Das DSSeekFm-Beispiel im Windows Media Format SDK veranschaulicht, wie Frame-genaue Suchungen mithilfe des WM ASF-Readers ausgeführt werden.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**WM-ASF-Lesefilter**](wm-asf-reader-filter.md)
+[**WM ASF-Readerfilter**](wm-asf-reader-filter.md)
 </dt> </dl>
 
  

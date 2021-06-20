@@ -1,40 +1,40 @@
 ---
-title: Referenz (Server Schnittstelle des Microsoft-Agents)
-description: Referenz
+title: Referenz (Microsoft Agent-Serverschnittstelle)
+description: In diesem Referenzthema werden Objekte in der Microsoft Agent-Serverschnittstelle beschrieben. Microsoft Agent ist ab Windows 7 veraltet.
 ms.assetid: vs|msagent|~\paface_83s5.htm
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0a96f45d212df69f9de4cd62c964f9c04d1aba83
-ms.sourcegitcommit: 8fa6614b715bddf14648cce36d2df22e5232801a
+ms.openlocfilehash: e9e6e88e80b2a780e7a4ce57eea3d7e3e06c3c66
+ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "103858584"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112405533"
 ---
-# <a name="reference-microsoft-agent-server-interface"></a>Referenz (Server Schnittstelle des Microsoft-Agents)
+# <a name="reference-microsoft-agent-server-interface"></a>Referenz (Microsoft Agent-Serverschnittstelle)
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Microsoft Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht mehr verfügbar.\]
 
-Diese Referenz enthält die folgenden Schnittstellen:
+Dieser Verweis enthält die folgenden Schnittstellen:
 
--   [**Iagent**](iagent.md)
--   [**Iagentaudiooutputproperties**](iagentaudiooutputproperties.md)
--   [**Iagentaudiooutputpropertiesex**](iagentaudiooutputpropertiesex.md)
--   [**Iagentballoon**](iagentballoon.md)
--   [**Iagentballoonex**](iagentballoonex.md)
--   [**Iagentcharacter**](iagentcharacter.md)
--   [**Iagentcharakteriex**](iagentcharacterex.md)
--   [**Iagentcommand**](iagentcommand.md)
--   [**Iagentcommandex**](iagentcommandex.md)
--   [**Iagentcommands**](iagentcommands.md)
--   [**Iagentcommandsex**](iagentcommandsex.md)
--   [**Iagentcommandwindow**](iagentcommandwindow.md)
--   [**Iagentex**](iagentex.md)
--   [**Iagentnotifysink**](events.md)
--   [**Iagentnotifysinkex**](iagentnotifysinkex.md)
--   [**Iagentpropertysheet**](iagentpropertysheet.md)
--   [**Iagentspeechinputproperties**](iagentspeechinputproperties.md)
--   [**Iagentuserinput**](iagentuserinput.md)
+-   [**IAgent**](iagent.md)
+-   [**IAgentAudioOutputProperties**](iagentaudiooutputproperties.md)
+-   [**IAgentAudioOutputPropertiesEx**](iagentaudiooutputpropertiesex.md)
+-   [**IAgentBalloon**](iagentballoon.md)
+-   [**IAgentBalloonEx**](iagentballoonex.md)
+-   [**IAgentCharacter**](iagentcharacter.md)
+-   [**IAgentCharacterEx**](iagentcharacterex.md)
+-   [**IAgentCommand**](iagentcommand.md)
+-   [**IAgentCommandEx**](iagentcommandex.md)
+-   [**IAgentCommands**](iagentcommands.md)
+-   [**IAgentCommandsEx**](iagentcommandsex.md)
+-   [**IAgentCommandWindow**](iagentcommandwindow.md)
+-   [**IAgentEx**](iagentex.md)
+-   [**IAgentNotifySink**](events.md)
+-   [**IAgentNotifySinkEx**](iagentnotifysinkex.md)
+-   [**IAgentPropertySheet**](iagentpropertysheet.md)
+-   [**IAgentSpeechInputProperties**](iagentspeechinputproperties.md)
+-   [**IAgentUserInput**](iagentuserinput.md)
 
  
 

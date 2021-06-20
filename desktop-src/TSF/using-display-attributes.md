@@ -1,34 +1,34 @@
 ---
-title: Verwenden von Anzeige Attributen
-description: Mit dem Text Services-Framework (TSF) kann ein Text Dienst Anzeige Attribute für Text bereitstellen.
+title: Verwenden von Anzeigeattributen
+description: Erfahren Sie mehr über die Verwendung von Anzeigeattributen. Textdienstframework (TSF) ermöglicht es einem Textdienst, Anzeigeattribute für Text bereitzustellen.
 ms.assetid: b0f6e8e8-586a-4b51-a498-fb22bd36161f
 keywords:
-- Text Dienst Framework (TSF), Attribute anzeigen
-- TSF (Text Dienste-Framework), Anzeige Attribute
-- TSF-aktivierte Anwendungen, Anzeigen von Attributen
+- Textdienstframework (TSF),Anzeigeattribute
+- TSF (Textdienstframework),Anzeigeattribute
+- TSF-fähige Anwendungen, Anzeigeattribute
 - Anzeigeattribute
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: dbc725f67fab904db23f6232ac5efb5d63c62c26
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: c3c576064ab22571b5a7822f5e6ff143add55d03
+ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103708345"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112406133"
 ---
-# <a name="using-display-attributes"></a>Verwenden von Anzeige Attributen
+# <a name="using-display-attributes"></a>Verwenden von Anzeigeattributen
 
-Mit dem Text Services-Framework (TSF) kann ein Text Dienst Anzeige Attribute für Text bereitstellen. Dies ermöglicht es einer Anwendung, zusätzliches visuelles Feedback anzuzeigen. Ein Rechtschreibprüfung-Text Dienst kann z. b. ein falsch geschriebenes Wort mit einer roten Unterstreichung markieren. Die Anzeige Attribute, die bereitgestellt werden können, werden durch die [tf \_ DisplayAttribute](/windows/desktop/api/Msctf/ns-msctf-tf_displayattribute) -Struktur definiert und enthalten Textfarbe, Text Hintergrundfarbe, unterstrich-Stil, unterstrich Farbe und unterstrich Gewichtung.
+Textdienstframework (TSF) ermöglicht es einem Textdienst, Anzeigeattribute für Text bereitzustellen. Dadurch kann eine Anwendung zusätzliches visuelles Feedback anzeigen. Beispielsweise kann ein Textdienst für die Rechtschreibprüfung ein falsch geschriebenes Wort mit einer roten Unterstreichung hervorheben. Die Anzeigeattribute, die bereitgestellt werden können, werden von der [TF \_ DISPLAYATTRIBUTE-Struktur](/windows/desktop/api/Msctf/ns-msctf-tf_displayattribute) definiert und enthalten Textfarbe, Hintergrundfarbe für Text, Unterstreichungsstil, Unterstreichungsfarbe und Unterstreichungsgewichtung.
 
-Beim Rendern von Text sollte eine Anwendung die Anzeige Attribute für den gezeichneten Text abrufen und die Attribute verwenden, um die Art und Weise zu ändern, wie der Text gezeichnet wird. Führen Sie die folgenden Schritte aus, um Anzeige Attribute abzurufen.
+Beim Rendern von Text sollte eine Anwendung die Anzeigeattribute für den gezeichneten Text abrufen und die Attribute verwenden, um zu ändern, wie der Text gezeichnet wird. Führen Sie die folgenden Schritte aus, um Anzeigeattribute abzurufen.
 
-1.  Rufen Sie ein Eigenschafts Objekt für das GUID- \_ Prop- \_ Attribut durch Aufrufen von [ITfContext:: GetProperty](/windows/desktop/api/Msctf/nf-msctf-itfcontext-getproperty)ab.
-2.  Rufen Sie den Wert des GUID- \_ Prop- \_ Attributs für den angegebenen Bereich durch Aufrufen von [itfreadonlyproperty:: GetValue](/windows/desktop/api/Msctf/nf-msctf-itfreadonlyproperty-getvalue)ab. Dadurch wird ein [tfguidatom](tfguidatom.md) -Wert bereitstellt.
-3.  Konvertieren Sie den [tfguidatom](tfguidatom.md) -Wert durch Aufrufen von [itfcategorymgr:: GetGuid](/windows/desktop/api/Msctf/nf-msctf-itfcategorymgr-getguid)in eine GUID.
-4.  Erstellen Sie ein [itfdisplayattributeinfo](/windows/desktop/api/Msctf/nn-msctf-itfdisplayattributeinfo) -Objekt für das Anzeige Attribut, indem Sie [itfdisplayattributemgr:: getdisplayattributeinfo](/windows/desktop/api/Msctf/nf-msctf-itfdisplayattributemgr-getdisplayattributeinfo)aufrufen.
-5.  Rufen Sie die Anzeige Attributinformationen durch Aufrufen von [itfdisplayattributeinfo:: getattributeinfo](/windows/desktop/api/Msctf/nf-msctf-itfdisplayattributemgr-getdisplayattributeinfo)ab.
+1.  Rufen Sie ein Eigenschaftenobjekt für GUID \_ PROP \_ ATTRIBUTE ab, indem Sie [ITfContext::GetProperty](/windows/desktop/api/Msctf/nf-msctf-itfcontext-getproperty)aufrufen.
+2.  Rufen Sie den Wert des GUID \_ PROP ATTRIBUTE für den \_ angegebenen Bereich ab, indem [Sie ITfReadOnlyProperty::GetValue](/windows/desktop/api/Msctf/nf-msctf-itfreadonlyproperty-getvalue)aufrufen. Dadurch wird ein [TfGuidAtom-Wert](tfguidatom.md) bereitgestellt.
+3.  Konvertieren Sie den [TfGuidAtom-Wert](tfguidatom.md) in eine GUID, indem [Sie ITfCategoryMgr::GetGUID](/windows/desktop/api/Msctf/nf-msctf-itfcategorymgr-getguid)aufrufen.
+4.  Erstellen Sie ein [ITfDisplayAttributeInfo-Objekt](/windows/desktop/api/Msctf/nn-msctf-itfdisplayattributeinfo) für das Anzeigeattribut, indem [Sie ITfDisplayAttributeMgr::GetDisplayAttributeInfo](/windows/desktop/api/Msctf/nf-msctf-itfdisplayattributemgr-getdisplayattributeinfo)aufrufen.
+5.  Rufen Sie die Anzeigeattributinformationen ab, indem [Sie ITfDisplayAttributeInfo::GetAttributeInfo](/windows/desktop/api/Msctf/nf-msctf-itfdisplayattributemgr-getdisplayattributeinfo)aufrufen.
 
-Im folgenden Codebeispiel wird eine Funktion veranschaulicht, die die Anzeige Attribute aus einem angegebenen Kontext, Bereich und Bearbeitungs Cookie abruft.
+Im folgenden Codebeispiel wird eine Funktion veranschaulicht, die die Anzeigeattribute aus einem angegebenen Kontext, Bereich und Bearbeitungscookie erhält.
 
 
 ```C++
@@ -121,33 +121,33 @@ HRESULT GetDispAttrFromRange(   ITfContext *pContext,
 
 <dl> <dt>
 
-[TF \_ DisplayAttribute](/windows/desktop/api/Msctf/ns-msctf-tf_displayattribute)
+[TF \_ DISPLAYATTRIBUTE](/windows/desktop/api/Msctf/ns-msctf-tf_displayattribute)
 </dt> <dt>
 
-[ITF context:: GetProperty](/windows/desktop/api/Msctf/nf-msctf-itfcontext-getproperty)
+[ITfContext::GetProperty](/windows/desktop/api/Msctf/nf-msctf-itfcontext-getproperty)
 </dt> <dt>
 
-[Itfreadonlyproperty:: GetValue](/windows/desktop/api/Msctf/nf-msctf-itfreadonlyproperty-getvalue)
+[ITfReadOnlyProperty::GetValue](/windows/desktop/api/Msctf/nf-msctf-itfreadonlyproperty-getvalue)
 </dt> <dt>
 
-[Tfguidatom](tfguidatom.md)
+[TfGuidAtom](tfguidatom.md)
 </dt> <dt>
 
-[ITF categorymgr:: GetGuid](/windows/desktop/api/Msctf/nf-msctf-itfcategorymgr-getguid)
+[ITfCategoryMgr::GetGUID](/windows/desktop/api/Msctf/nf-msctf-itfcategorymgr-getguid)
 </dt> <dt>
 
-[ITF displayattributeinfo](/windows/desktop/api/Msctf/nn-msctf-itfdisplayattributeinfo)
+[ITfDisplayAttributeInfo](/windows/desktop/api/Msctf/nn-msctf-itfdisplayattributeinfo)
 </dt> <dt>
 
-[ITF displayattributemgr:: getdisplayattributeinfo](/windows/desktop/api/Msctf/nf-msctf-itfdisplayattributemgr-getdisplayattributeinfo)
+[ITfDisplayAttributeMgr::GetDisplayAttributeInfo](/windows/desktop/api/Msctf/nf-msctf-itfdisplayattributemgr-getdisplayattributeinfo)
 </dt> <dt>
 
- ITF displayattributeinfo:: getattributeinfo 
+ ITfDisplayAttributeInfo::GetAttributeInfo 
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

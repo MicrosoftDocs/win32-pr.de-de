@@ -1,29 +1,29 @@
 ---
-description: Einige Effekt Konstanten müssen nur initialisiert werden.
+description: Einige Effektkonstanten müssen nur initialisiert werden. Informationen zum Festlegen von Effektvariablen in Direct3D 10 finden Sie im grundlegenden Code.
 ms.assetid: 743261a8-fdd8-492e-be8a-4faeb9b6f986
-title: Status des festgelegten Effekts (Direct3D 10)
+title: Festlegen des Effektzustands (Direct3D 10)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9f14d4cdfb23c56f9534d1b4029482ce4e494b37
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 6df7133276b6392abca8d75eed16de896fb58f84
+ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103958273"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112404723"
 ---
-# <a name="set-effect-state-direct3d-10"></a>Status des festgelegten Effekts (Direct3D 10)
+# <a name="set-effect-state-direct3d-10"></a>Festlegen des Effektzustands (Direct3D 10)
 
-Einige Effekt Konstanten müssen nur initialisiert werden. Nach der Initialisierung wird der Effekt Zustand auf das Gerät für die gesamte Renderschleife festgelegt. Andere Variablen müssen jedes Mal aktualisiert werden, wenn die Renderschleife aufgerufen wird. Der grundlegende Code für das Festlegen von Effekt Variablen wird unten für jeden der Variablen Typen angezeigt.
+Einige Effektkonstanten müssen nur initialisiert werden. Nach der Initialisierung wird der Effektzustand für die gesamte Renderschleife auf das Gerät festgelegt. Andere Variablen müssen jedes Mal aktualisiert werden, wenn die Renderschleife aufgerufen wird. Der grundlegende Code zum Festlegen von Effektvariablen ist unten für jeden Variablentyp dargestellt.
 
-Ein Effekt kapselt den gesamten renderzustand, der zum Durchführen eines Renderings erforderlich ist. Im Hinblick auf die API gibt es drei Arten von Status, die in einem Effekt gekapselt sind.
+Ein Effekt kapselt den gesamten Renderzustand, der für einen Renderingdurchlauf erforderlich ist. Im Hinblick auf die API gibt es drei Arten von Zuständen, die in einem Effekt gekapselt sind.
 
 -   [Konstanter Zustand](#constant-state)
--   [Shader-Status](#shader-state)
--   [Textur Zustand](#texture-state)
+-   [Shaderstatus](#shader-state)
+-   [Texturzustand](#texture-state)
 
 ## <a name="constant-state"></a>Konstanter Zustand
 
-Deklarieren Sie zunächst Variablen in einem Effekt mithilfe von HLSL-Datentypen.
+Deklarieren Sie zunächst Variablen in einem Effekt mit HLSL-Datentypen.
 
 
 ```
@@ -47,7 +47,7 @@ float4x4 g_mWorldViewProjection;    // World * View * Projection matrix
 
 
 
-Deklarieren Sie die Variablen in der Anwendung, die von der Anwendung festgelegt werden können, und aktualisieren Sie dann die Effekt Variablen.
+Deklarieren Sie zweitens Variablen in der Anwendung, die von der Anwendung festgelegt werden können, und aktualisieren Sie dann die Auswirkungsvariablen.
 
 
 ```
@@ -83,7 +83,7 @@ OnD3D10CreateDevice()
 
 
 
-Verwenden Sie Drittens die Update-Methoden, um den Wert der Variablen in der Anwendung in den Effekt Variablen festzulegen.
+Verwenden Sie drittens die Updatemethoden, um den Wert der Variablen in der Anwendung in den Effect-Variablen festzulegen.
 
 
 ```
@@ -102,11 +102,11 @@ OnD3D10FrameRender()
 
 
 
-### <a name="two-ways-to-get-the-state-in-an-effect-variable"></a>Zwei Möglichkeiten, den Zustand in einer Effekt Variablen zu erhalten
+### <a name="two-ways-to-get-the-state-in-an-effect-variable"></a>Zwei Möglichkeiten zum Abrufen des Zustands in einer Effektvariablen
 
-Es gibt zwei Möglichkeiten, den Zustand zu erhalten, der in einer Effekt Variablen enthalten ist. Bei einem Effekt, der in den Arbeitsspeicher geladen wurde.
+Es gibt zwei Möglichkeiten, den in einer Effektvariablen enthaltenen Zustand abzurufen. Gibt einen Effekt an, der in den Arbeitsspeicher geladen wurde.
 
-Eine Möglichkeit besteht darin, den samplerstatus von einer [**ID3D10EffectVariable-Schnittstelle**](/windows/desktop/api/D3D10Effect/nn-d3d10effect-id3d10effectvariable) zu erhalten, die als Sampler-Schnittstelle umgewandelt wurde.
+Eine Möglichkeit besteht darin, den Samplerzustand aus einer [**ID3D10EffectVariable-Schnittstelle**](/windows/desktop/api/D3D10Effect/nn-d3d10effect-id3d10effectvariable) abzurufen, die als Samplerschnittstelle castet wurde.
 
 
 ```
@@ -123,7 +123,7 @@ if( g_pEffect10 )
 
 
 
-Die andere Möglichkeit besteht darin, den samplerstatus aus einer [**ID3D10SamplerState-Schnittstelle**](/windows/desktop/api/D3D10/nn-d3d10-id3d10samplerstate)zu erhalten.
+Die andere Möglichkeit besteht darin, den Samplerzustand aus einer [**ID3D10SamplerState-Schnittstelle**](/windows/desktop/api/D3D10/nn-d3d10-id3d10samplerstate)abzurufen.
 
 
 ```
@@ -145,9 +145,9 @@ if( g_pEffect10 )
 
 
 
-## <a name="shader-state"></a>Shader-Status
+## <a name="shader-state"></a>Shaderstatus
 
-Der Shader-Zustand wird in einem Durchlauf deklariert und in einem Effekt zugewiesen.
+Der Shaderzustand wird in einer Effekttechnik innerhalb eines Durchlaufs deklariert und zugewiesen.
 
 
 ```
@@ -164,11 +164,11 @@ technique10 RenderSceneWithTexture1Light
 
 
 
-Dies funktioniert genauso wie bei Verwendung eines Effekts. Es gibt drei Aufrufe, eine für jeden Shader (Scheitelpunkt, Geometrie und Pixel). Der erste, setvertexshader, ruft [**ID3D10Device:: vssetshader**](/windows/desktop/api/D3D10/nf-d3d10-id3d10device-vssetshader)auf. Compileshader ist eine spezielle Effekt Funktion, die das Shader-Profil (vs \_ 4 \_ 0) und den Namen der Vertex-Shader-Funktion (rendervs) annimmt. Mit anderen Worten: jeder dieser setxxxshader-Aufrufe kompiliert die zugehörige shaderfunktion und gibt einen Zeiger auf den kompilierten Shader zurück.
+Dies funktioniert genauso wie bei der Verwendung eines Effekts. Es gibt drei Aufrufe, einen für jeden Shadertyp (Scheitelpunkt, Geometrie und Pixel). Die erste , SetVertexShader, ruft [**ID3D10Device::VSSetShader auf.**](/windows/desktop/api/D3D10/nf-d3d10-id3d10device-vssetshader) CompileShader ist eine Funktion mit speziellen Effekten, die das Shaderprofil (im Vergleich \_ zu 4 \_ 0) und den Namen der Vertexshaderfunktion (RenderVS) übernimmt. Anders ausgedrückt: Jeder dieser SetXXXShader-Aufrufe kompiliert die zugeordnete Shaderfunktion und gibt einen Zeiger auf den kompilierten Shader zurück.
 
-## <a name="texture-state"></a>Textur Zustand
+## <a name="texture-state"></a>Texturzustand
 
-Der Textur Zustand ist ein wenig komplexer als das Festlegen einer Variablen, da Textur Daten nicht einfach wie eine Variable gelesen werden, sondern aus einer Textur entnommen werden. Daher müssen Sie die Textur Variable definieren (genau wie eine normale Variable, mit der Ausnahme, dass ein Textur-Typ verwendet wird), und Sie müssen die Samplings definieren. Im folgenden finden Sie ein Beispiel für eine Textur Variablen Deklaration und die entsprechende Samplings-Zustands Deklaration.
+Der Texturzustand ist etwas komplexer als das Festlegen einer Variablen, da Texturdaten nicht einfach wie eine Variable gelesen werden, sondern aus einer Textur entnommen werden. Daher müssen Sie die Texturvariable definieren (genau wie eine normale Variable mit Ausnahme eines Texturtyps), und Sie müssen die Samplingbedingungen definieren. Hier sehen Sie ein Beispiel für eine Texturvariablendeklaration und die entsprechende Samplingzustandsdeklaration.
 
 
 ```
@@ -185,9 +185,9 @@ SamplerState MeshTextureSampler
 
 
 
-Im folgenden finden Sie ein Beispiel für das Festlegen einer Textur aus einer Anwendung. In diesem Beispiel wird die Textur in den Mesh-Daten gespeichert, die beim Erstellen des Effekts geladen wurden.
+Hier sehen Sie ein Beispiel für das Festlegen einer Textur aus einer Anwendung. In diesem Beispiel wird die Textur in den Gitternetzdaten gespeichert, die beim Erstellen des Effekts geladen wurden.
 
-Der erste Schritt besteht darin, einen Zeiger auf die Textur aus dem Effekt (aus dem Mesh) zu erhalten.
+Der erste Schritt besteht darin, einen Zeiger auf die Textur aus dem Effekt (aus dem Gitternetz) zu erhalten.
 
 
 ```
@@ -199,7 +199,7 @@ ID3D10EffectShaderResourceVariable* g_ptxDiffuse = NULL;
 
 
 
-Der zweite Schritt besteht darin, eine Sicht für den Zugriff auf die Textur anzugeben. Die Sicht definiert eine allgemeine Methode für den Zugriff auf die Daten aus der Textur Ressource.
+Im zweiten Schritt wird eine Ansicht für den Zugriff auf die Textur angegeben. Die Ansicht definiert eine allgemeine Möglichkeit, auf die Daten aus der Texturressource zuzugreifen.
 
 
 ```
@@ -217,7 +217,7 @@ OnD3D10FrameRender()
 
 
 
-Weitere Informationen zum Anzeigen von Ressourcen finden Sie unter [Textur Ansichten (Direct3D 10)](d3d10-graphics-programming-guide-resources-access-views.md).
+Weitere Informationen zum Anzeigen von Ressourcen finden Sie unter [Texturansichten (Direct3D 10).](d3d10-graphics-programming-guide-resources-access-views.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

@@ -1,52 +1,52 @@
 ---
-title: Farbformen
-description: In diesem Thema wird VML beschrieben, eine Funktion, die ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+title: Färben von Formen
+description: In diesem Artikel werden Färbungsformen in VML beschrieben, einem Feature, das seit Windows Internet Explorer 9 veraltet ist.
 ms.assetid: f528f0c7-1351-4bca-b309-67511431b711
 keywords:
-- Webworkshop, Farbformen
-- Entwerfen von Webseiten, Farbformen
-- Vector Markup Language (VML), Farbformen
-- VML (Vector Markup Language), Farbformen
-- Vektorgrafiken, Farbformen
-- VML-Formen, Farben
-- Farbformen
-- Vector Markup Language (VML), Schlüsselwort Farben Namen
-- VML (Vector Markup Language), Name der Schlüsselwort Farbe
-- Vektorgrafiken, Schlüsselwort Farben Namen
-- Farbnamen für Schlüsselwort
-- Vector Markup Language (VML), RGB-dreier
-- VML (Vector Markup Language), RGB-drei
-- Vektorgrafiken, RGB-dreier
-- RGB-dreier
+- Web-Workshop, Färben von Formen
+- Entwerfen von Webseiten, Färben von Formen
+- Vector Markup Language (VML), färbende Formen
+- VML (Vector Markup Language),färbende Formen
+- Vektorgrafiken, färbende Formen
+- VML-Formen, Färbung
+- Färben von Formen
+- Vector Markup Language (VML), Schlüsselwortfarbnamen
+- VML (Vector Markup Language),Schlüsselwortfarbnamen
+- Vektorgrafiken, Schlüsselwortfarbnamen
+- Schlüsselwortfarbnamen
+- Vector Markup Language (VML),RGB-Triplets
+- VML (Vector Markup Language),RGB-Triplets
+- Vektorgrafiken, RGB-Triplets
+- RGB-Triplets
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1257c5f5b0cf8021658820f09de6e87099f0a52b
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: c203debd01d4234ae58900a023944511f9fc73c1
+ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104039293"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112407743"
 ---
-# <a name="coloring-shapes"></a>Farbformen
+# <a name="coloring-shapes"></a>Färben von Formen
 
-In diesem Thema wird VML beschrieben, eine Funktion, die ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen weit verbreiteten Standards migriert werden.
 
 > [!Note]  
-> Ab Dezember 2011 wurde dieses Thema archiviert. Daher wird er nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [archivierte Inhalte](/previous-versions/windows/internet-explorer/ie-developer/). Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center](https://msdn.microsoft.com/ie/).
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
- 
+ 
 
-Wie in den vorherigen Abschnitten erwähnt, können Sie "Red" verwenden, um eine Farbe in rot darzustellen, "blau", um eine Farbe in blau darzustellen usw. In diesem Thema wird veranschaulicht, wie Formen in einer beliebigen Farbe gezeichnet werden.
+Wie bereits in früheren Abschnitten erwähnt, können Sie "red" verwenden, um eine Farbe in Rot, "blue" für eine Farbe in Blau und so weiter zu darstellen. In diesem Thema wird veranschaulicht, wie Sie Formen in einer beliebigen Farbe zeichnen.
 
-VML erweitert die HTML-und CSS-Farb Syntax. Wenn der Attributtyp eines VML-Elements Farben ist (z. b. **FillColor** und **strokeColor** ), können Sie die Farbe entweder mithilfe eines [Schlüssel Worts-Farbnamens](#keyword-color-name) oder eines [RGB-Dreiecks](#rgb-triplet)Ausdrücken.
+VML erweitert die HTML- und CSS-Farbsyntax. Wenn der Attributtyp eines VML-Elements farblich ist , z. B. **fillcolor** und [](#keyword-color-name) **strokecolor,** können Sie die Farbe ausdrücken, indem Sie entweder einen Schlüsselwortfarbnamen oder ein [RGB-Triplet verwenden.](#rgb-triplet)
 
-[![zurück ](images/top.gif) zum Anfang](#top)
+[![zurück zum Anfang ](images/top.gif) Zurück zum Anfang](#top)
 
-## <a name="keyword-color-name"></a>Name der Schlüsselwort Farbe
+## <a name="keyword-color-name"></a>Schlüsselwortfarbname
 
-HTML 4,0 definiert eine Liste von Schlüsselwort Farben. Dabei handelt es sich um Aqua, Black, Blue, Fuchsia, Gray, Green, Kalk, Maroon, Navy, Olive, lila, rot, Silber, Teal, weiß und gelb. Der RGB-Wert für diese 16 Farben wird in der [Spezifikation von HTML 4,0](https://www.w3.org/TR/REC-html40/types.mdl#h-6-5) definiert.
+HTML 4.0 definiert eine Liste von Schlüsselwortfarbnamen. Sie sind "aqua", "black", "blue", "ia", "gray", "green", "lime", "maroon", "violett", "red", "silver", "teal", "white" und "yellow". Der RGB-Wert für diese 16 Farben wird in der [HTML 4.0-Spezifikation definiert.](https://www.w3.org/TR/REC-html40/types.mdl#h-6-5)
 
-Sie können z. b. ein Rechteck mit gelb zeichnen, indem Sie angeben `fillcolor="yellow"` , und einen blauen Umriss angeben, indem Sie angeben `strokecolor="blue"` , wie in der folgenden VML-Darstellung gezeigt:
+Sie können z. B. ein mit Gelb gefülltes Rechteck zeichnen, indem Sie angeben, und ihm eine blaue Kontur geben, indem Sie angeben, wie in der folgenden `fillcolor="yellow"` `strokecolor="blue"` VML-Darstellung gezeigt:
 
 ![color1.gif (305 Bytes)](images/color1.gif)
 
@@ -60,13 +60,13 @@ fillcolor="yellow" strokecolor="blue"/>
 
 
 
-[![zurück ](images/top.gif) zum Anfang](#top)
+[![zurück zum Anfang ](images/top.gif) Zurück zum Anfang](#top)
 
-## <a name="rgb-triplet"></a>RGB-dreier
+## <a name="rgb-triplet"></a>RGB-Triplet
 
-Wenn es sich bei der Farbe nicht um einen [Schlüsselwort Farbnamen](#keyword-color-name)handelt, können Sie die Farbe entweder als RGB-Dezimalzahl oder als RGB-hexadezimal Trennzeichen Ausdrücken. Mit RGB-Werten können Sie Werte für die roten, grünen und blauen Komponenten der Farbe angeben, wobei jede Komponente auf einen Wert zwischen 0 und 255 in Dezimalwert oder 00 bis FF im Hexadezimal Bereich festgelegt wird.
+Wenn die Farbe [](#keyword-color-name)kein Schlüsselwortfarbname ist, können Sie die Farbe entweder als RGB-Dezimaldreifach oder als RGB-Hexadezimal-Triplet ausdrücken. Mit RGB-Triplets können Sie Werte für die roten, grünen und blauen Komponenten der Farbe angeben, indem Sie jede Komponente auf einen Wert zwischen 0 und 255 dezimal oder 00 bis FF im Hexadezimalformat festlegen.
 
-Sie können z. b. ein Rechteck erstellen, das mit einer angepassten Farbe mit einem RGB-Wert von 253, 249, 186 in Dezimalform aufgefüllt ist, indem Sie entweder `fillcolor="rgb(253,249, 186)"` oder angeben `fillcolor="#FDF9BA"` , wie in der folgenden VML-Darstellung gezeigt. In Hexadezimal wird der Wert 253 zu FD, 249 wird zu F9, und 186 wird zu BA.
+Beispielsweise können Sie ein Rechteck erstellen, das mit einer benutzerdefinierten Farbe mit einem RGB-Wert von 253, 249 und 186 als Dezimalzahl gefüllt ist, indem Sie entweder oder angeben, wie in der folgenden `fillcolor="rgb(253,249, 186)"` `fillcolor="#FDF9BA"` VML-Darstellung gezeigt. Im Hexadezimalwert wird der Wert 253 zu FD, 249 zu F9 und 186 zu BA.
 
 ![color2.gif (305 Bytes)](images/color2.gif)
 
@@ -80,18 +80,18 @@ fillcolor="#FDF9BA" strokecolor="blue"/>
 
 
 
-Wenn der RGB-Wert im Hexadezimal Format über ein Muster wie xxyyzz verfügt, können Sie es mit XYZ abkürzen. Beispielsweise kann " \# 66ff99" als " \# 6f9" ausgeschrieben werden.
+Wenn rgb im Hexadezimal-Format ein Muster wie XXYYZZ auftauen kann, können Sie es in XYZ abkürzen. Beispielsweise kann \# "66FF99" als \# "6F9" geschrieben werden.
 
-[![zurück ](images/top.gif) zum Anfang](#top)
+[![zurück zum Anfang ](images/top.gif) Zurück zum Anfang](#top)
 
 ## <a name="summary"></a>Zusammenfassung
 
 In VML können Sie eine Farbe in einem der folgenden Formate darstellen:
 
-1.  FillColor = "Blue"
-2.  FillColor = "RGB (0, RGB)"
-3.  FillColor = " \# 0000FF"
+1.  fillcolor="blue"
+2.  fillcolor="rgb(0,0,255)"
+3.  fillcolor=" \# 0000ff"
 
- 
+ 
 
- 
+ 

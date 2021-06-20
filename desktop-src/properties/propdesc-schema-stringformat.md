@@ -1,21 +1,21 @@
 ---
-description: 'Gibt an, wie ipropertydescription:: formatfordisplay den Wert der Eigenschaft als Zeichenfolge formatieren soll. Dies gilt nur, wenn <displayInfo displayType=&\#0034;String&\#0034;> .'
+description: Gibt an, wie IPropertyDescription::FormatForDisplay den Wert der stringFormat-Eigenschaft als Zeichenfolge formatieren soll.
 ms.assetid: 7c38bc15-be86-4260-b2e4-13afc90de6d7
 title: stringFormat
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ec05a6eedf1734c1d62c0503027810ad05916160
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 730355507b78d99eba02e82666427dd29425c942
+ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106356888"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112408353"
 ---
 # <a name="stringformat"></a>stringFormat
 
-Gibt an, wie [**ipropertydescription:: formatfordisplay**](/windows/win32/api/propsys/nf-propsys-ipropertydescription-formatfordisplay) den Wert der Eigenschaft als Zeichenfolge formatieren soll. Dies gilt nur, wenn <displayInfo displayType="String"> . Es darf nur ein [StringFormat]() -Element für jedes [DisplayInfo](./propdesc-schema-displayinfo.md) -Element vorhanden sein.
+Gibt an, wie [**IPropertyDescription::FormatForDisplay**](/windows/win32/api/propsys/nf-propsys-ipropertydescription-formatfordisplay) den Wert der Eigenschaft als Zeichenfolge formatieren soll. Dies gilt nur, wenn <displayInfo displayType="String"> . Es sollte nur ein [stringFormat-Element]() für jedes [displayInfo-Element](./propdesc-schema-displayinfo.md) vorhanden sein.
 
-Wenn mehrere Elemente vorhanden sind, wird der letzte verwendet. Wenn kein [StringFormat]() -Element bereitgestellt wird, werden die Standard Attribut Einstellungen auf die Eigenschafts Beschreibung angewendet.
+Wenn mehrere Elemente vorhanden sind, wird das letzte Element verwendet. Wenn kein [stringFormat-Element]() bereitgestellt wird, werden die Standardattributeinstellungen auf die Eigenschaftenbeschreibung angewendet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,7 +46,7 @@ Wenn mehrere Elemente vorhanden sind, wird der letzte verwendet. Wenn kein [Stri
 
 | Übergeordnetes Element                                   | Untergeordnete Elemente |
 |--------------------------------------------------|----------------|
-| [Display Info](./propdesc-schema-displayinfo.md) | Keine           |
+| [displayInfo](./propdesc-schema-displayinfo.md) | Keine           |
 
 
 
@@ -63,14 +63,14 @@ Wenn mehrere Elemente vorhanden sind, wird der letzte verwendet. Wenn kein [Stri
 </colgroup>
 <thead>
 <tr class="header">
-<th>Attribut</th>
-<th>BESCHREIBUNG</th>
+<th>attribute</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>formatas</td>
-<td>Öffentlich. Dies ist optional. Der Standardwert ist &quot; Allgemein &quot; . Die folgenden Werte sind gültig. 
+<td>formatAs</td>
+<td>Öffentlich. Dies ist optional. Der Standardwert ist &quot; &quot; Allgemein. Die folgenden Werte sind gültig. 
 <table>
 <thead>
 <tr class="header">
@@ -85,11 +85,11 @@ Wenn mehrere Elemente vorhanden sind, wird der letzte verwendet. Wenn kein [Stri
 </tr>
 <tr class="even">
 <td>FileName</td>
-<td>Formatiert den Wert als Dateinamen. Blendet die Erweiterung entsprechend den Benutzereinstellungen aus. Erfordert, dass der Eigenschaftentyp Zeichenfolge ist.</td>
+<td>Formatiert den Wert als Dateinamen. Blendet die Erweiterung entsprechend den Benutzereinstellungen aus. Erfordert, dass der Eigenschaftstyp String ist.</td>
 </tr>
 <tr class="odd">
 <td>FilePath</td>
-<td>Formatiert den Wert als Dateipfad. Blendet die Erweiterung entsprechend den Benutzereinstellungen aus. Erfordert, dass der Eigenschaftentyp Zeichenfolge ist.</td>
+<td>Formatiert den Wert als Dateipfad. Blendet die Erweiterung entsprechend den Benutzereinstellungen aus. Erfordert, dass der Eigenschaftstyp String ist.</td>
 </tr>
 <tr class="even">
 <td>Hyperlink</td>

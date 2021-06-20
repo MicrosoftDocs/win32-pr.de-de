@@ -1,36 +1,36 @@
 ---
-title: Windows-Desktop Suche 2. x
-description: Die Verwendung der-und-Entwicklung für die 2. x-Versionen von Microsoft Windows Desktop Search (WDS) wird zugunsten von Windows Search dringend empfohlen.
+title: Windows Desktop Search 2.x
+description: Informationen zur Windows-Desktopsuche 2.x. Verwenden Sie für Windows-Releases, die höher als Windows XP und Windows Server 2003 sind, Windows Search.
 ms.assetid: 3d73f850-58b8-4a41-8863-e2914661d4b9
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e5131fe700b7b049371625249768b0073d009a87
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: c1ff43f827458d295e54b71b3f39c7aa471c058d
+ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "106337429"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112408123"
 ---
-# <a name="windows-desktop-search-2x"></a>Windows-Desktop Suche 2. x
+# <a name="windows-desktop-search-2x"></a>Windows Desktop Search 2.x
 
 > [!NOTE]
-> Windows-Desktop Suche 2. x ist eine veraltete Technologie, die ursprünglich als Add-in für Windows XP und Windows Server 2003 verfügbar war. Verwenden Sie in späteren Versionen stattdessen [Windows Search](../search/-search-3x-wds-overview.md) .
+> Windows Desktop Search 2.x ist eine veraltete Technologie, die ursprünglich als Add-In für Windows XP und Windows Server 2003 verfügbar war. Verwenden Sie in späteren [Versionen Windows Search.](../search/-search-3x-wds-overview.md)
 
-Die Verwendung der-und-Entwicklung für die 2. x-Versionen von Microsoft Windows Desktop Search (WDS) wird zugunsten von [Windows Search](../search/-search-3x-wds-overview.md)dringend empfohlen.
+Die Verwendung von und entwicklung für die 2.x-Versionen von Microsoft Windows Desktop Search (WDS) wird dringend zugunsten von [Windows Search.](../search/-search-3x-wds-overview.md)
 
-Bei WDS handelt es sich um einen Indizierungs Dienst und eine Plattform, die eine schnelle Suche von Dateien und Daten über verschiedene Datenquellen und Standorte hinweg ermöglicht. WDS unterstützt Benutzer und andere Anwendungen dabei, fast alles auf ihren Computern, e-Mail-Nachrichten, Kalender Terminen, Fotos, Dokumente und mehr zu finden. Darüber hinaus können WDS Ergebnisse aus mehreren Datenquellen in einer Windows-Explorer-Umgebung zurückgeben, damit Ihre Benutzer schnell eine Vorschau, eine Filterung und einen Suchvorgang für Suchergebnisse durchführen können.
+WDS ist ein Indizierungsdienst und eine Plattform, die eine schnelle Suche nach Dateien und Daten über verschiedene Datenquellen und Speicherorte hinweg ermöglicht. WDS hilft Benutzern und anderen Anwendungen, fast alles auf ihren Computern, E-Mail-Nachrichten, Kalenderterminen, Fotos, Dokumenten und mehr zu finden. Darüber hinaus kann WDS Ergebnisse aus mehreren Datenquellen in einer Windows-Explorer-Umgebung zurückgeben, damit Ihre Benutzer schnell eine Vorschau anzeigen, filtern und auf Suchergebnisse reagieren können.
 
-WDS indiziert Daten innerhalb eines bestimmten Durchforstungs Bereichs, die angegebenen Speicherorte auf einem lokalen Computer und das freigegebene Netzwerk, das der Indexer durchforsten soll. Dieser Crawl Bereich kann durch Benutzer Satz Optionen, Verwaltungs-APIs und Gruppenrichtlinien gesteuert werden, die Netzwerkadministratoren so konfigurieren können, dass Benutzer Zugriffsberechtigungen und Indizierungs Einstellungen gesteuert werden. Gruppenrichtlinien können den Zugriff auf bestimmte Netzwerkressourcen einschränken und die zu indizierenden Ressourcen definieren.
+WDS indiziert Daten innerhalb eines bestimmten Durchforstungsbereichs, der angegebenen Speicherorte innerhalb eines lokalen Computers und freigegebenen Netzwerks, die der Indexer durchforsten soll. Dieser Durchforstungsbereich kann durch Benutzergruppenoptionen, Verwaltungs-APIs und Gruppenrichtlinien gesteuert werden, die Netzwerkadministratoren konfigurieren können, um Benutzerzugriffsberechtigungen und Indizierungseinstellungen zu steuern. Gruppenrichtlinien können den Zugriff auf bestimmte Netzwerkressourcen einschränken und zu indizierende Ressourcen definieren.
 
 Dieser Abschnitt enthält die folgenden Themen:
 
 -   [Übersicht](#windows-desktop-search-2x)
     -   [Informationen zum WDS-Indexer](#about-the-wds-indexer)
     -   [Informationen zum WDS-Katalog](#about-the-wds-catalog)
-    -   [Informationen zur Suchmaschine und zu Ergebnissen](#about-the-search-engine-and-results)
+    -   [Informationen zur Suchmaschine und den Ergebnissen](#about-the-search-engine-and-results)
 -   [Entwickeln mit WDS](#developing-with-wds)
-    -   [Hinzufügen von Daten zum Index mit Add-ins](#adding-data-to-the-index-with-add-ins)
-    -   [Abfragen des Indexes](#querying-the-index)
+    -   [Hinzufügen von Daten zum Index mit Add-Ins](#adding-data-to-the-index-with-add-ins)
+    -   [Abfragen des Index](#querying-the-index)
 -   [Kompatibilitätsanforderungen](#compatibility-requirements)
     -   [Systemanforderungen](#system-requirements)
 -   [Verwandte Themen](#related-topics)
@@ -39,75 +39,75 @@ Dieser Abschnitt enthält die folgenden Themen:
 
 ### <a name="about-the-wds-indexer"></a>Informationen zum WDS-Indexer
 
-Bei der Erstinstallation durchsucht der Indexer die gängigsten Benutzer seitigen Dateien im Ordner "eigene Dateien", in Microsoft Outlook und in Microsoft Outlook Express-e-Mail-Ordnern und in Gruppenrichtlinie angegebene Standorte. Benutzer können auch neue Dateien und Speicherorte angeben, die der Indexer in nachfolgende Crawls einschließen (oder ausschließen) soll. Jeder enthaltene Speicherort wird durch die URL identifiziert, und der Indexer beginnt bei dieser URL und durchläuft rekursiv alle Unterordner oder Speicherorte, bis alle Elemente indiziert wurden. Ein Bereich ist ein Satz von URLs. Die Verwaltungs-APIs können von benutzerdefinierten Anwendungen verwendet werden, um Ihren Crawl Bereich zu definieren, eine Gruppe von URLs, die auf Pfade innerhalb eines Protokolls verweisen, z `file://` . b. für Ordner auf einem Laufwerk oder `mapi:// ` für MAPI-e-Mail-Speicher wie Outlook. WDS verwendet Protokollhandler, um auf die Datenspeicher und Filter zuzugreifen, um den Text und die Eigenschaften der Elemente zu analysieren und zu indizieren. Diese Daten werden dann im-Katalog gespeichert.
+Bei der ersten Installation durchforstung der Indexer die gängigsten benutzerorientierten Dateien im Ordner Eigene Dokumente, in den E-Mail-Ordnern Microsoft Outlook und Microsoft Outlook Express sowie an den in Gruppenrichtlinie. Benutzer können auch neue Dateien und Speicherorte für den Indexer angeben, die in aufeinander folgende Durchforstungen aufgenommen (oder ausgeschlossen) werden. Jeder enthaltene Speicherort wird durch eine URL identifiziert, und der Indexer beginnt bei dieser URL und durchlädt rekursiv alle Unterordner oder Speicherorte, bis alle Elemente indiziert wurden. Ein Bereich ist ein Satz von URLs. Die Verwaltungs-APIs können von benutzerdefinierten Anwendungen verwendet werden, um ihren Durchforstungsbereich zu definieren, eine Reihe von URLs, die auf Pfade innerhalb eines Protokolls verweisen, z. B. für Ordner auf einem Laufwerk oder `file://` für MAPI-E-Mail-Speicher wie `mapi:// ` Outlook. WDS verwendet Protokollhandler für den Zugriff auf die Datenspeicher und Filter, um den Text und die Eigenschaften der Elemente zu analysieren und zu indizieren. Diese Daten werden dann im Katalog gespeichert.
 
 ### <a name="about-the-wds-catalog"></a>Informationen zum WDS-Katalog
 
-Beim WDS-Katalog handelt es sich um einen Index von Text und Eigenschaften, die von Elementen in der angegebenen e-Mail, von lokalen Laufwerken, Netzwerkressourcen und anderen lokalen Daten speichern gesammelt werden. Der Inhalt des Katalogs basiert auf von WDS festgelegten Optionen und Regeln, auf der WDS-Plattform basierende Anwendungen, Benutzereinstellungen und Gruppenrichtlinien. Es sind mehr als 200 Eigenschaften für jedes indizierte Element verfügbar, wie z. b. Erstellungsdatum, Größe und typspezifische Eigenschaften ("from" für e-Mail-Nachrichten). Eine Liste dieser Eigenschaften finden Sie in der WDS- [Schema Referenz](-search-2x-wds-schematable.md).
+Der WDS-Katalog ist ein Index von Text und Eigenschaften, die von Elementen in angegebenen E-Mails, lokalen Laufwerken, Netzwerkressourcen und anderen lokalen Datenspeichern gesammelt wurden. Der Inhalt des Katalogs basiert auf Optionen und Regeln, die von WDS, auf der WDS-Plattform erstellten Anwendungen, Benutzereinstellungen und Gruppenrichtlinien festgelegt werden. Für jedes indizierte Element sind über 200 Eigenschaften verfügbar, z. B. Erstellungsdatum, Größe und typspezifische Eigenschaften ("From" für E-Mail-Nachrichten). Eine Liste dieser Eigenschaften finden Sie in der [WDS-Schemareferenz.](-search-2x-wds-schematable.md)
 
-### <a name="about-the-search-engine-and-results"></a>Informationen zur Suchmaschine und zu Ergebnissen
+### <a name="about-the-search-engine-and-results"></a>Informationen zur Suchmaschine und den Ergebnissen
 
-Auf der WDS-Desktop Leiste oder im Windows-Explorer können Benutzer den voll Text Inhalt und die Eigenschafts Metadaten von indizierten Elementen durchsuchen. Die gleichen Arten von Such Vorgängen können auch über die Befehlszeile, über eine Webseite oder über eine benutzerdefinierte Anwendung initiiert werden. Das WDS-Suchmodul sucht nach Elementen, die mit den Suchkriterien übereinstimmen, und gibt diese als ADO-Resultsets (Microsoft ActiveX Data Objects) zurück. WDS zeigt Elemente an, die mit den Suchkriterien übereinstimmen, und kann eine umfangreiche Vorschau des Elements darstellen. Sie können Anwendungen erstellen, um die Suchabfrage abzufangen, die Suche durchzuführen und/oder das Resultset anzuzeigen.
+Über die WDS-Deskleiste oder Windows-Explorer können Benutzer die Volltextinhalts- und Eigenschaftsmetadaten indizierter Elemente durchsuchen. Die gleichen Suchvorgänge können auch über die Befehlszeile, über eine Webseite oder über eine benutzerdefinierte Anwendung initiiert werden. Die WDS-Suchmaschine sucht Nach Elementen, die den Suchkriterien entsprechen, und gibt sie als Microsoft ActiveX Data Objects(ADO)-ResultSets zurück. WDS zeigt Elemente an, die den Suchkriterien entsprechen, und kann eine umfassende Vorschau des Elements anzeigen. Sie können Anwendungen erstellen, um die Suchabfrage abzufangen, die Suche durchzuführen und/oder das Ergebnisset anzuzeigen.
 
 ## <a name="developing-with-wds"></a>Entwickeln mit WDS
 
-Es gibt zwei primäre Arten der Integration in WDS: das Hinzufügen von Daten zum Index und das Abfragen des Index Inhalts zum Abrufen von Datensätzen, die den Suchkriterien entsprechen.
+Es gibt zwei Haupttypen der Integration in WDS: das Hinzufügen von Daten zum Index und das Abfragen des Indexinhalts, um Datensätze abzurufen, die den Suchkriterien entsprechen.
 
 ### <a name="adding-data-to-the-index-with-add-ins"></a>Hinzufügen von Daten zum Index mit Add-Ins
 
-Es gibt im Grunde zwei Arten von Datenquellen: Dateisystem Speicher und nicht-Dateisystem Speicher. Eine Gruppe von Dateien in "eigene Dokumente" ist ein einfacher Dateisystem Speicher. WDS kann Informationen in den in einem solchen Dateisystem gespeicherten Dateien durchsuchen, wenn ein Filter für den Dateityp gefunden werden kann. Sie können WDS aktivieren, um einen neuen proprietären Dateityp zu indizieren, wenn Sie eine Implementierung der [**IFilter**](/windows/desktop/api/filter/nn-filter-ifilter)-Schnittstelle für diesen Dateityp bereitstellen.
+Es gibt im Grunde zwei Arten von Datenquellen: Dateisystemspeicher und Nichtdateisystemspeicher. Eine Gruppe von Dateien in Eigene Dokumente ist ein einfacher Dateisystemspeicher. WDS kann Informationen in den Dateien durchsuchen, die in einem solchen Dateisystem gespeichert sind, wenn ein Filter für den Dateityp gefunden werden kann. Sie können WDS aktivieren, um einen neuen proprietären Dateityp zu indizieren, wenn Sie eine Implementierung der [**IFilter-Schnittstelle**](/windows/desktop/api/filter/nn-filter-ifilter)für diesen Dateityp bereitstellen.
 
-Ein nicht-Dateisystem Speicher, wie z. b. eine Datenbank, erfordert einen Protokollhandler, um WDS die Navigation innerhalb und Indizierung von Daten im Datenspeicher zu ermöglichen. Wenn Sie z. b. einen e-Mail-Client haben, in dem die Liste der empfangenen e-Mails in einer eigenen Datei gespeichert ist (z. b. PST-Dateien in Outlook), können Sie einen Protokollhandler zum Indizieren und Durchsuchen jeder einzelnen e-Mail bereitstellen, indem Sie einen Protokollhandler angeben Wenn der Datenspeicher hierarchisch ist, müssen Sie auch eine [**IFilter**](/windows/desktop/api/filter/nn-filter-ifilter)-Schnittstelle implementieren, um die Elemente im Speicher aufzuzählen. Um eine bessere Benutzer Leistung zu erzielen, können Sie eine Shellerweiterung implementieren, um Kontextmenüs und-Symbole in der Ergebnis Ansicht bereitzustellen.
+Ein Nichtdateisystemspeicher wie eine Datenbank erfordert einen Protokollhandler, um WDS das Navigieren durch und Indizieren von Daten innerhalb des Datenspeichers zu ermöglichen. Wenn Sie beispielsweise über einen E-Mail-Client verfügen, der die Liste der empfangenen E-Mails in einer eigenen Datei speichert (z. B. PST-Dateien in Outlook), können Sie einen Protokollhandler bereitstellen, um jede einzelne E-Mail zu indizieren und zu durchsuchen, indem Sie einen Protokollhandler bereitstellen. Wenn der Datenspeicher hierarchisch ist, müssen Sie auch eine [**IFilter-Schnittstelle**](/windows/desktop/api/filter/nn-filter-ifilter)implementieren, um die Elemente im Speicher aufzuzählen. Für eine bessere Benutzererfahrung können Sie eine Shellerweiterung implementieren, um Kontextmenüs und Symbole aus der Ergebnisansicht zur Verfügung zu stellen.
 
-Derzeit enthält WDS Filter für mehr als 200 Typen von Elementen (einschließlich Klartext-Elemente wie HTML-, XML-und Quell Code Dateien) und verwendet dieselbe [**IFilter**](/windows/desktop/api/filter/nn-filter-ifilter)-und protokollhandlertechnologie wie SharePoint Services. Wenn Sie bereits Filter für proprietäre Dateitypen installiert haben, kann WDS die vorhandenen Filter Schnittstellen verwenden, um diese Daten zu indizieren.
+Derzeit enthält WDS Filter für mehr als 200 Elementtypen (einschließlich Klartextelementen wie HTML-, XML- und Quellcodedateien) und verwendet die gleiche [**IFilter-**](/windows/desktop/api/filter/nn-filter-ifilter)und Protokollhandlertechnologie wie SharePoint Services. Wenn Sie bereits Filter für proprietäre Dateitypen installiert haben, kann WDS die vorhandenen Filterschnittstellen verwenden, um diese Daten zu indizieren.
 
-### <a name="querying-the-index"></a>Abfragen des Indexes
+### <a name="querying-the-index"></a>Abfragen des Index
 
-WDS stellt Anwendungen mit angepassten Resultsets von Daten aus dem Index auf der Grundlage der verfügbaren Schema Werte bereit. Die Ergebnisse werden als ADO-Daten Satz Gruppen zurückgegeben. Es gibt vier Möglichkeiten, um WDS-Abfragen in eine Anwendung einzubinden, die jeweils verschiedene Anpassungs-und Stabilitäts Stufen bieten.
+WDS stellt Anwendungen benutzerdefinierte Datensätze aus dem Index bereit, die auf einem der verfügbaren Schemawerte basieren. Ergebnisse werden als ADO-Eintragssätze zurückgegeben. Es gibt vier Möglichkeiten, WDS-Abfragen in eine Anwendung zu integrieren, die jeweils verschiedene Anpassungs- und Stabilitätsebenen bieten.
 
--   ISearchDesktop Interface: APIs in dieser Schnittstelle werden verwendet, um WDS Programm gesteuert aufzurufen, indem Sie eine Abfrage Zeichenfolge, eine Liste der zurück zugebende Spalten, Bereichs Einschränkungen ähnlich einer Structured Query Language (SQL) WHERE-Klausel und den Namen der Spalte angeben, nach der sortiert werden soll. Diese APIs sind für nativen und verwalteten Code verfügbar.
--   WDS-ActiveX-Steuerelement: dieses Steuerelement zeichnet die WDS-Suchschnittstelle und verwaltet das Suchen und Anzeigen von Ergebnissen. Diese Methode ist einfacher als die Verwendung der APIs, aber weniger flexibel. Um dieses Steuerelement in einer Microsoft Visual Studio Anwendung zu verwenden, navigieren Sie **im Menü Extras** zum Dialogfeld **Toolbox Elemente auswählen** , und fügen Sie der **Toolbox** auf der Registerkarte **com-Komponenten** "Windows Desktop Search-results Viewer" hinzu. Fügen Sie dann das Steuerelement dem Formular hinzu, in das Sie es einschließen möchten. Das WDS-ActiveX-Steuerelement ist nur mit WDS 2. x und 3. x unter Windows XP kompatibel.
--   Befehlszeilenparameter: Anwendungen können die ausführbare WDS-Datei mit verschiedenen Parametern aufrufen, um Ergebnisse zu suchen und anzuzeigen. Dadurch wird ein WDS-Fenster mit den angezeigten Ergebnissen geöffnet. Dies ist die einfachste Möglichkeit zum Hinzufügen von Suchfunktionen zu einer Anwendung, jedoch nicht zur aufrufenden Anwendung, um Informationen darüber zu erfahren, was der Benutzer innerhalb des WDS-Fensters vornimmt.
--   WDS-Browserhilfsobjekt (BHO): ähnlich können Webseiten das BHO verwenden, um Abfragen an WDS oder die registrierte Suchanwendung zu senden. Nach der Überprüfung der Webseiten-URL anhand der WDS-Domänen sicheren Liste führt WDS entweder die Abfrage aus und zeigt die Ergebnisse mit der Standard Suchschnittstelle an oder übergibt die Abfrage an die registrierte Suchanwendung.
+-   ISearchDesktop-Schnittstelle: APIs in dieser Schnittstelle werden zum programmgesteuerten Aufrufen von WDS verwendet, indem eine Abfragezeichenfolge, eine Liste der zurücksenden Spalten, Bereichseinschränkungen ähnlich einer Structured Query Language (SQL)-WHERE-Klausel und der Name der Spalte angegeben werden, nach der sortiert werden soll. Diese APIs sind für nativen und verwalteten Code verfügbar.
+-   WDS-ActiveX-Steuerelement: Dieses Steuerelement zeichnet die WDS-Suchschnittstelle und verwaltet das Suchen und Anzeigen von Ergebnissen. Diese Methode ist einfacher als die Verwendung der APIs, aber weniger flexibel. Um dieses Steuerelement in einer Microsoft Visual Studio-Anwendung zu verwenden, wechseln Sie im Menü **Extras** zum Dialogfeld **Toolboxelemente** auswählen, und fügen Sie der **Toolbox** auf der Registerkarte **COM-Komponenten** "Windows Desktop Search - Results Viewer" hinzu. Fügen Sie dann das Steuerelement dem Formular hinzu, in dem Sie es enthalten möchten. Das WDS ActiveX-Steuerelement ist nur unter Windows XP mit WDS 2.x und 3.x kompatibel.
+-   Befehlszeilenparameter: Anwendungen können die ausführbare WDS-Datei mit verschiedenen Parametern aufrufen, um Ergebnisse zu suchen und anzuzeigen. Dadurch wird ein WDS-Fenster geöffnet, in dem die Ergebnisse angezeigt werden. Dies ist die einfachste Möglichkeit, einer Anwendung eine Suche hinzuzufügen, gibt jedoch keine Informationen darüber zurück, was der Benutzer im WDS-Fenster tut.
+-   WDS-Browser-Hilfsobjekt (BHO): Auf ähnliche Weise können Webseiten den BHO verwenden, um Abfragen an WDS oder die registrierte Suchanwendung zu senden. Nach dem Überprüfen der Webseiten-URL anhand der liste mit den WDS-Domänensicheren führt WDS entweder die Abfrage aus und zeigt die Ergebnisse über die Standardsuchschnittstelle an, oder die Abfrage wird an die registrierte Suchanwendung übergeben.
 
-Benutzer können die [Erweiterte Abfrage Syntax](-search-2x-wds-aqsreference.md) verwenden, um den Katalog effektiver abzufragen, indem Sie den Suchbereich Steuern und Suchparameter mit booleschen Operatoren kombinieren. Ein Benutzer könnte z. b. eine Anlage in einer e-Mail von John suchen, die entweder "Project Schedule" oder "Project Plan" mit einer Abfrage wie der folgenden enthält: `from:John isattachment:true "project schedule" OR "project plan"` .
+Benutzer können erweiterte [Abfragesyntax verwenden,](-search-2x-wds-aqsreference.md) um den Katalog leistungsfähiger zu abfragen, indem sie den Suchbereich steuern und Suchparameter mit booleschen Operatoren kombinieren. Beispielsweise könnte ein Benutzer in einer E-Mail von John nach einer Anlage suchen, die entweder "Projektzeitplan" oder "Projektplan" mit einer Abfrage wie der folgenden enthält: `from:John isattachment:true "project schedule" OR "project plan"` .
 
 ## <a name="compatibility-requirements"></a>Kompatibilitätsanforderungen
 
-WDS 2.6.5 ist nur für Windows 2000, Windows Server 2003 und Windows XP verfügbar. Bei WDS handelt es sich um einen separaten Download, der von Microsoft kostenlos zur Verfügung gestellt wird. Sie muss installiert und für die Indizierung des Benutzerkontos verwendet werden, bevor die für WDS 2.6.5 erstellten Anwendungen funktionieren.
+WDS 2.6.5 ist nur für Windows 2000, Windows Server 2003 und Windows XP verfügbar. WDS ist ein separater Download, der von Microsoft kostenlos für den privaten und geschäftlichen Gebrauch zur Verfügung steht. Sie muss installiert sein und für die Indizierung des Benutzerkontos verwendet werden, bevor anwendungen, die für WDS 2.6.5 erstellt wurden, funktionieren.
 
 ### <a name="system-requirements"></a>Systemanforderungen
 
-Folgendes ist erforderlich, um die Windows-Desktop Suche zu verwenden:
+Für die Verwendung der Windows-Desktopsuche ist Folgendes erforderlich:
 
 -   Windows Internet Explorer oder höher.
--   Wenn Sie Ihre e-Mail-Nachrichten in den Katalog einschließen möchten, müssen Sie entweder Microsoft Microsoft Outlook 2000 oder höher oder Microsoft Outlook Express 6,0 oder höher haben.
--   Für die vollständige Vorschau von Microsoft Microsoft Office-Dokumenten in der Ergebnis Ansicht ist Office XP oder höher erforderlich.
--   Minimaler Pentium 500 MHz-Prozessor (1 GHz empfohlen).
+-   Um Ihre E-Mail-Nachrichten in den Katalog einfingen zu können, müssen Sie microsoft Microsoft Outlook 2000 oder höher oder Microsoft Outlook Express 6.0 oder höher verwenden.
+-   Die vollständige Vorschau von Microsoft Microsoft Office in der Ergebnisansicht erfordert Office XP oder höher.
+-   Mindestens ein Pentium-Prozessor mit 500 MHz (1 GHz empfohlen).
 -   Windows XP, Windows 2000 SP4 oder höher oder Windows Server 2003 Service Pack 1.
 -   Mindestens 128 MB RAM (256 MB empfohlen).
--   500 MB freier Festplattenspeicher empfohlen. Die Größe des Indexes hängt davon ab, wie viel Inhalt indiziert wurde.
+-   500 MB freier Festplattenspeicher empfohlen. Die Größe des Index hängt davon ab, wie viel Inhalt Sie indiziert haben.
 -   1024 x 768 Bildschirmauflösung empfohlen.
 
 ## <a name="related-topics"></a>Verwandte Themen
 
-1.  Abfragen des Indexes
+1.  Abfragen des Index
 
-    -   [Programm gesteuertes Aufrufen von WDS (über ISearchDesktop)](-search-2x-wds-callingwdsprogrammatically.md)
-    -   [Aufrufen von WDS von Webseiten](-search-2x-wds-browserhelpobject.md)
+    -   [Programmgesteuertes Aufrufen von WDS (über ISearchDesktop)](-search-2x-wds-callingwdsprogrammatically.md)
+    -   [Aufrufen von WDS über Webseiten](-search-2x-wds-browserhelpobject.md)
     -   [Aufrufen von WDS über die Befehlszeile](-search-2x-wds-fromcommandline.md)
 
 2.  [Erweitern des Indexes (Übersicht)](-search-2x-wds-extendingtheindex.md)
 
-    -   [Entwickeln von IFilter-Add-ins](-search-2x-wds-ifilteraddins.md)
-    -   [Entwickeln von Protokoll Handlern](-search-2x-wds-phaddins.md)
+    -   [Entwickeln von IFilter-Add-Ins](-search-2x-wds-ifilteraddins.md)
+    -   [Entwickeln von Protokollhandlern](-search-2x-wds-phaddins.md)
 
 3.  Allgemeine Verweise
 
     -   [WDS-Schema](-search-2x-wds-schematable.md)
     -   [Erweiterte Abfragesyntax](-search-2x-wds-aqsreference.md)
-    -   [Von WDS erkannte Typen](-search-2x-wds-perceivedtype.md)
+    -   [Von WDS wahrgenommene Typen](-search-2x-wds-perceivedtype.md)
 
- 
+ 
 
- 
+ 

@@ -1,32 +1,32 @@
 ---
-title: Konstanten (Active Accessibility Benutzeroberflächen Dienste)
-description: Konstanten
+title: Konstanten (Active Accessibility Benutzeroberfläche Services)
+description: Diese Artikel enthalten Informationen zu den Konstanten, die mit dem Microsoft Active Accessibility.
 ms.assetid: a6325361-ea7b-472d-85d7-bc1544b57352
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d3a8538a9e50443df3f9e2d5b762a780aa4808c5
-ms.sourcegitcommit: 8fa6614b715bddf14648cce36d2df22e5232801a
+ms.openlocfilehash: 6b63371b29fa5b7a697f96abd6d2d9077124a0ff
+ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "104340257"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112406953"
 ---
-# <a name="constants-active-accessibility-user-interface-services"></a>Konstanten (Active Accessibility Benutzeroberflächen Dienste)
+# <a name="constants-active-accessibility-user-interface-services"></a>Konstanten (Active Accessibility Benutzeroberfläche Services)
 
-Dieser Abschnitt enthält Informationen zu den Konstanten, die mit Microsoft Active Accessibility verwendet werden.
+Dieser Abschnitt enthält Informationen zu den Konstanten, die mit dem Microsoft Active Accessibility.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
 
 
-| Thema                                                               | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                                                           |
+| Thema                                                               | Beschreibung                                                                                                                                                                                                                                                                                                                                                                           |
 |---------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Ereignis Konstanten**](event-constants.md)<br/>               | In diesem Thema werden die Ereignisse beschrieben, die vom Betriebssystem und von Server Anwendungen generiert werden.<br/>                                                                                                                                                                                                                                                                     |
-| [**Navigations Konstanten**](navigation-constants.md)<br/>     | In diesem Thema werden die Konstanten Werte beschrieben, die in Oleacc. h definiert sind, die die *räumliche* Richtung (oben, unten, Links und rechts) oder die *logische* (erste untergeordnete, letzte, nächste und vorherige) Richtung angeben, die beobachtet wird, wenn Clients [**IAccessible:: accNavigate**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-accnavigate) verwenden, um innerhalb desselben Containers von einem Benutzeroberflächen Element zu einem anderen zu navigieren.<br/> |
-| [**Objektbezeichner**](object-identifiers.md)<br/>         | In diesem Thema werden die Microsoft Active Accessibility-Objekt Bezeichner, 32-Bit-Werte beschrieben, die *Kategorien* von zugänglichen Objekten innerhalb eines Fensters identifizieren.<br/>                                                                                                                                                                                                                |
-| [**Objekt Rollen**](object-roles.md)<br/>                     | In diesem Thema werden die Konstanten Werte beschrieben, die zum Beschreiben der Rollen verschiedener UI-Objekte in einer Anwendung verwendet werden.<br/>                                                                                                                                                                                                                                                               |
-| [**Objekt Zustands Konstanten**](object-state-constants.md)<br/> | In diesem Thema werden die Konstanten Werte beschrieben, die zum Beschreiben des Zustands von Objekten in einer Anwendungs Benutzeroberfläche verwendet werden.<br/>                                                                                                                                                                                                                                                                       |
-| [**Selflag-Konstanten**](selflag.md)<br/>                     | In diesem Thema werden die Konstanten Werte beschrieben, die verwendet werden, um anzugeben, wie ein Barrierefreies Objekt ausgewählt wird oder den Fokus erhält.<br/>                                                                                                                                                                                                                                                     |
+| [**Ereigniskonst constants**](event-constants.md)<br/>               | In diesem Thema werden die Ereignisse beschrieben, die vom Betriebssystem und von Serveranwendungen generiert werden.<br/>                                                                                                                                                                                                                                                                     |
+| [**Navigationskonst constants**](navigation-constants.md)<br/>     | In diesem Thema werden die konstanten Werte beschrieben, die in oleacc.h definiert sind und die räumliche *(nach* oben, unten, links und rechts) oder logische *(erste* untergeordnete, letzte, nächste und vorherige) Richtung angeben, die beobachtet wird, wenn Clients [**IAccessible::accNavigate**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-accnavigate) verwenden, um von einem Benutzeroberflächenelement zu einem anderen innerhalb desselben Containers zu navigieren.<br/> |
+| [**Objektbezeichner**](object-identifiers.md)<br/>         | In diesem Thema werden die Microsoft Active Accessibility Objektbezeichner beschrieben, 32-Bit-Werte, die Kategorien von barrierefreien Objekten innerhalb eines Fensters identifizieren. <br/>                                                                                                                                                                                                                |
+| [**Objektrollen**](object-roles.md)<br/>                     | In diesem Thema werden die konstanten Werte beschrieben, die verwendet werden, um die Rollen verschiedener Benutzeroberflächenobjekte in einer Anwendung zu beschreiben.<br/>                                                                                                                                                                                                                                                               |
+| [**Objektzustandskonst constants**](object-state-constants.md)<br/> | In diesem Thema werden die konstanten Werte beschrieben, die zum Beschreiben des Zustands von Objekten in einer Anwendungsbenutzeroberfläche verwendet werden.<br/>                                                                                                                                                                                                                                                                       |
+| [**SELFLAG-Konstanten**](selflag.md)<br/>                     | In diesem Thema werden die konstanten Werte beschrieben, die verwendet werden, um anzugeben, wie ein barrierefreies Objekt ausgewählt wird oder den Fokus übernimmt.<br/>                                                                                                                                                                                                                                                     |
 
 
 
@@ -36,7 +36,7 @@ Dieser Abschnitt enthält Informationen zu den Konstanten, die mit Microsoft Act
 
 <dl> <dt>
 
-[Active Accessibility von Benutzeroberflächen Diensten](active-accessibility-user-interface-services-ref.md)
+[Active Accessibility Benutzeroberfläche Services](active-accessibility-user-interface-services-ref.md)
 </dt> </dl>
 
  

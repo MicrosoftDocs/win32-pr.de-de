@@ -1,59 +1,59 @@
 ---
-description: Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie in der PrintSchema-Spezifikation.
+description: Dieser Artikel enthält eine Prüfliste, die Autoren von PrintCapabilities-Dokumenten verwenden können, um ein PrintCapabilities-Dokument zu erstellen, das ein Gerät beschreibt.
 ms.assetid: 4b8fa1a4-6461-4722-861b-354f206b2a73
-title: Prüfliste zur Erstellung von printfunktionen
+title: Prüfliste für die Erstellung von PrintCapabilities-Dokumenten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a0f730a426bb787104e08f879ecccd357fd3102b
-ms.sourcegitcommit: de72a1294df274b0a71dc0fdc42d757e5f6df0f3
+ms.openlocfilehash: ee309c96cf7b2d70cb78f125e7783668fb2298da
+ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "106353267"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112407113"
 ---
-# <a name="printcapabilities-document-construction-checklist"></a>Prüfliste zur Erstellung von printfunktionen
+# <a name="printcapabilities-document-construction-checklist"></a>Prüfliste für die Erstellung von PrintCapabilities-Dokumenten
 
-Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie in der [PrintSchema-Spezifikation](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip).
+Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie unter Print Schema Specification (Spezifikation des [Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 
-Die [Zusammenfassung der Element Typen](summary-of-element-types.md) erläutert die verschiedenen Elemente, aus denen ein printfunktionen-Dokument besteht. Dieser Abschnitt enthält eine Prüfliste, die Autoren von Printworks-Dokumenten zum Erstellen eines printfunktionalitäten-Dokuments verwenden können, das ein Gerät beschreibt.
+[In der Zusammenfassung der Elementtypen](summary-of-element-types.md) werden die verschiedenen Elemente erläutert, aus denen ein PrintCapabilities-Dokument besteht. Dieser Abschnitt enthält eine Prüfliste, die Autoren von PrintCapabilities-Dokumenten verwenden können, um ein PrintCapabilities-Dokument zu erstellen, das ein Gerät beschreibt.
 
-1.  Identifizieren Sie alle Geräte Attribute, die zur Gerätekonfiguration beitragen. Legen Sie für jedes derartige Geräte Attribut fest, ob es als Funktions-/optionskonstrukt oder als Parameter Konstrukt dargestellt werden soll.
+1.  Identifizieren Sie alle Geräteattribute, die zur Gerätekonfiguration beitragen. Bestimmen Sie für jedes geräteattribut, ob es als Feature-/Optionskonstrukt oder als Parameterkonstrukt dargestellt werden soll.
 
-2.  Bestimmen Sie für jedes Geräte Feature, ob es durch eine Funktion dargestellt werden kann, die in den Schlüsselwörtern für den Druck Schema definiert ist. Wenn dies nicht der Fall ist, müssen Sie eine neue privat definierte Funktion (und ein entsprechendes Namensattribut) einführen.
+2.  Bestimmen Sie für jedes Gerätefeature, ob es durch ein Feature dargestellt werden kann, das in den Schlüsselwörtern für Das Druckschema definiert ist. Andernfalls müssen Sie ein neues privat definiertes Feature (und ein entsprechendes Namensattribut) einführen.
 
-    -   Identifizieren Sie für Schlüsselwörter von Druck Schema-Schlüsselwörtern definierte Funktions Instanzen jeden der verfügbaren Zustände, auf die diese Funktion festgelegt werden kann. Jeder Zustand entspricht einer Option der Funktions Instanz. Legen Sie fest, welche dieser Zustände den von diesem Feature zugeordneten Druck Schema definierten Options Instanzen entsprechen und welche Zustände eine angepasste Options Instanz erfordern. Das Thema " [options Definitionen](option-definitions.md) " enthält Informationen zum Erstellen neuer Options Instanzen und zum Ableiten neuer Options Instanzen aus vorhandenen Options Instanzen.
+    -   Identifizieren Sie für mit Schlüsselwörtern für Druckschemas definierte Featureinstanzen jeden verfügbaren Status, auf den dieses Feature festgelegt werden kann. Jeder Zustand entspricht einer Option der Funktionsinstanz. Bestimmen Sie, welcher dieser Zustände den Mit diesem Feature verknüpften Vom Schema definierten Optionsinstanzen drucken entspricht und welche Zustände eine benutzerdefinierte Optionsinstanz erfordern. Das Thema [Optionsdefinitionen](option-definitions.md) enthält Informationen zum Erstellen neuer Optionsinstanzen und zum Ableiten neuer Optionsinstanzen von vorhandenen Optionsinstanzen.
 
-    -   Identifizieren Sie bei nicht standardmäßigen Funktions Instanzen die Merkmale, die verwendet werden können, um eine Option von einer anderen zu unterscheiden. Stellen Sie jedes dieser Merkmale durch ein ScoredProperty-Element dar, und weisen Sie jeder ScoredProperty in jeder Options Instanz einen Wert zu, der für diese Option spezifisch ist. Stellen Sie sicher, dass genügend ScoredProperty-Elemente vorhanden sind, sodass jede Option für eine bestimmte Funktion eindeutig ist. Nicht dem Standard entsprechende Funktions-und Options Instanzen sind naturgemäß nicht portabel. Das heißt, dass ein anderer Treiber keine äquivalente Funktion oder Option finden kann, um eine Übereinstimmung mit einer nicht dem Standard entsprechenden Funktion oder Option zu finden, die in dem von Ihrem Treiber erstellten PrintTicket angegeben ist.
+    -   Identifizieren Sie bei nicht standardmäßigen Featureinstanzen die Merkmale, die verwendet werden können, um eine Option von einer anderen zu unterscheiden. Stellen Sie jedes dieser Merkmale durch ein ScoredProperty-Element dar, und weisen Sie jedem ScoredProperty-Element in jeder Option-Instanz einen Wert zu, der für diese Option spezifisch ist. Stellen Sie sicher, dass genügend ScoredProperty-Elemente vorhanden sind, sodass jede Option für ein bestimmtes Feature eindeutig ist. Nicht standardmäßige Feature- und Optionsinstanzen sind naturgemäß nicht portierbar. Das heißt, ein anderer Treiber kann keine entsprechende Funktion oder Option finden, die mit einer nicht dem Standard entsprechenden Funktion oder Option übereinstimmt, die im von Ihrem Treiber erstellten PrintTicket angegeben ist.
 
-3.  Bestimmen Sie, ob eine Option ParameterRef-Elemente enthalten muss. Weitere Informationen finden Sie unter [Parameterkonstrukte](parameter-constructs.md) und [Parameter Verweis Elemente](parameter-reference-elements.md).
+3.  Bestimmen Sie, ob eine Option ParameterRef-Elemente enthalten muss. Weitere Informationen finden Sie unter [Parameterkonstrukte](parameter-constructs.md) und [Parameterverweiselemente.](parameter-reference-elements.md)
 
-4.  Legen Sie für Parameter fest, ob eine der ParameterDef-Instanzen, die in den Schlüsselwörtern für den Druck Schema definiert sind, eine angemessene Entsprechung ist Wenn dies der Fall ist, kopieren Sie die ParameterDef-Instanz aus den Schlüsselwörtern des Druck Schemas, und passen Sie den Wert der einzelnen änderbaren Eigenschaften Instanzen an Wenn keine der ParameterDef-Instanzen in den Print Schema-Schlüsselwörtern eine angemessene Entsprechung ist, erstellen Sie eine eigene ParameterDef-Instanz. Weitere Informationen finden Sie unter [Parameter im Dokument "printfunktionalitäten](parameters-in-the-printcapabilities-document.md)".
+4.  Bestimmen Sie für Parameter, ob eine der ParameterDef-Instanzen, die in den Schlüsselwörtern für Druckschemas definiert sind, eine angemessene Übereinstimmung ist. Wenn dies der Fall ist, kopieren Sie die ParameterDef-Instanz aus den Druckschemaschlüsselwörtern, und passen Sie den Wert jeder änderbaren Eigenschaftsinstanz an, um die beste Anpassung zu erhalten. Wenn keine der ParameterDef-Instanzen in den Schlüsselwörtern für Druckschemas eine angemessene Übereinstimmung ist, erstellen Sie Ihre eigene ParameterDef-Instanz. Weitere Informationen finden Sie unter [Parameter im PrintCapabilities-Dokument.](parameters-in-the-printcapabilities-document.md)
 
-5.  Stellen Sie sicher, dass alle Eigenschaften-und ScoredProperty-Instanzen, die für das Schlüsselwort "Print Schema Keywords" erforderlich sind, in Ihrem Printworks-Dokument vorhanden sind und ordnungsgemäß initialisiert sind.
+5.  Stellen Sie sicher, dass alle Property- und ScoredProperty-Instanzen, die für das Dokument Print Schema Keywords erforderlich sind, im PrintCapabilities-Dokument vorhanden sind und ordnungsgemäß initialisiert sind.
 
-6.  Fügen Sie zusätzliche Eigenschafts-und unter Eigenschaften Instanzen wie gewünscht hinzu. Sie können privat definierte Eigenschaften Instanzen einführen, wenn es Aspekte des Geräts gibt, die Sie charakterisieren müssen, die nicht von den in den Schlüsselwörtern des Print-Schemas definierten Eigenschaften Instanzen abgedeckt werden.
+6.  Fügen Sie nach Bedarf zusätzliche Eigenschaften- und Untereigenschafteninstanzen hinzu. Sie können privat definierte Eigenschafteninstanzen einführen, wenn Es Aspekte des Geräts gibt, die Sie charakterisieren müssen, die nicht von den Eigenschafteninstanzen abgedeckt werden, die in den Schlüsselwörtern des Druckschemas definiert sind.
 
-7.  Beachten Sie die Namespace Konvention für namens Attribute. Dies gilt für Privat definierte namens Attribute sowie für diejenigen, die in den Schlüsselwörtern des Print-Schemas definiert sind.
+7.  Beachten Sie die Namespacekonvention für Namensattribute. Dies gilt sowohl für privat definierte Namensattribute als auch für die attribute, die in den Schlüsselwörtern für Druckschemas definiert sind.
 
-8.  Untergeordnete Elemente desselben Elementtyps dürfen nicht in einer Tiefe von mehr als 10 Elementen geschachtelt werden. Diese Regel gilt unabhängig für jeden Typ von Element, der definiert werden kann.
+8.  Untergeordnete Elemente des gleichen Elementtyps dürfen nicht in eine Tiefe von mehr als 10 Elementen geschachtelt werden. Diese Regel gilt unabhängig für jeden Elementtyp, der definiert werden kann.
 
-Beachten Sie, dass der XML-Inhalt von Druckfunktionen mit UTF-8 oder UTF-16 codiert werden muss.
+Beachten Sie, dass der XML-Inhalt von Druckfunktionen-Dokumenten entweder mit UTF-8 oder UTF-16 codiert werden muss.
 
-Beachten Sie, dass der Satz von Funktions-, Options-und ParameterDef-Instanzen unabhängig von der Momentaufnahme nicht geändert werden darf. Die ScoredProperty-Instanzen, die die einzelnen Options Instanzen bilden, sowie der Wert, der den einzelnen ScoredProperty-Elementen zugewiesen ist, dürfen sich ebenfalls nicht ändern. Das gleiche gilt für die Eigenschaften Instanzen, aus denen sich die einzelnen ParameterDef-Instanzen bilden.
+Beachten Sie, dass sich die gemeldeten Funktions-, Options- und ParameterDef-Instanzen unabhängig von der Momentaufnahme nicht ändern dürfen. Die ScoredProperty-Instanzen, aus denen jede Option-Instanz und der jedem ScoredProperty-Element zugewiesene Wert gehören, dürfen sich ebenfalls nicht ändern. Dasselbe gilt für die Property-Instanzen, aus denen jede ParameterDef-Instanz bestehen.
 
-Eine Liste zusätzlicher Eigenschaften Instanzen, die bereitgestellt werden müssen, um Funktions-/optionskonstrukte und-Parameter vollständig zu definieren, finden Sie unter [ParameterDef](parameterdef.md) und [parameterinit](parameterinit.md). Beispielsweise muss jede Funktion das Verhalten der Benutzeroberfläche angeben, insbesondere, ob genau eine oder mehrere Options Instanzen gleichzeitig für jede Funktion ausgewählt werden können. Das Dokument mit dem Schlüsselwort "Print Schema" definiert diese Eigenschafts Instanzen, in denen Sie innerhalb des Printworks-Dokuments angezeigt werden müssen und die in den Schlüsselwörtern des Druck Schemas definierten Wert Instanzen verfügbar sind.
+Eine Liste zusätzlicher Eigenschafteninstanzen, die bereitgestellt werden müssen, um Funktions-/Optionskonstrukte und Parameter vollständig zu definieren, finden Sie unter [ParameterDef](parameterdef.md) und [ParameterInit.](parameterinit.md) Beispielsweise muss jedes Feature sein Benutzeroberflächenverhalten angeben, insbesondere ob genau eine oder mehrere Optionsinstanzen für jedes Feature gleichzeitig ausgewählt werden können. Das Dokument Druckschemaschlüsselwörter definiert diese Eigenschafteninstanzen, in denen sie im PrintCapabilities-Dokument angezeigt werden müssen und welche in den Schlüsselwörtern für Druckschemas definierten Wertinstanzen verfügbar sind.
 
-Der Printworks-Anbieter ist dafür verantwortlich, den entsprechenden Wert für alle Konfigurations abhängigen Eigenschaften Instanzen auszuwerten. Wenn die Druck Rate z. b. sowohl vom Farbmodus als auch von der verwendeten Auflösung abhängt, muss der Printworks-Anbieter die im vom Client bereitgestellten PrintTicket angegebenen Farb Modus-und Auflösungseinstellungen notieren und den richtigen Wert für die Druck Rate melden. Beachten Sie, dass jede ScoredProperty-Instanz einwertig sein muss. die Wert Instanz kann sich nicht ändern, wenn die Gerätekonfiguration geändert wird.
+Der PrintCapabilities-Anbieter ist für die Ausgabe des entsprechenden Werts für alle konfigurationsabhängigen Eigenschafteninstanzen verantwortlich. Wenn z. B. die Druckrate sowohl vom Farbmodus als auch von der verwendeten Auflösung abhängt, muss der PrintCapabilities-Anbieter den Farbmodus und die Auflösungseinstellungen beachten, die im vom Client bereitgestellten PrintTicket angegeben sind, und den richtigen Wert für die Druckrate melden. Beachten Sie, dass jede ScoredProperty-Instanz einwertig sein muss. die Value-Instanz kann nicht geändert werden, wenn sich die Gerätekonfiguration ändert.
 
-Beachten Sie auch, dass die in den Schlüsselwörtern des Druck Schemas definierten Eigenschaften Instanzen an der dort angegebenen Position angezeigt werden müssen. Sie können in einem Printworks-Dokument nicht an beliebigen Orten angezeigt werden. Privat definierte Eigenschaften Instanzen können überall angezeigt werden, auch als untergeordnete Eigenschaften innerhalb von Schema definierten Eigenschaften Instanzen.
+Beachten Sie auch, dass Eigenschafteninstanzen, die in den Schlüsselwörtern für Druckschemas definiert sind, an der dort angegebenen Position angezeigt werden müssen. Sie können nicht an beliebigen Stellen innerhalb eines PrintCapabilities-Dokuments angezeigt werden. Privat definierte Eigenschafteninstanzen können überall angezeigt werden, auch als Untereigenschaften innerhalb von Schema-defined Property-Instanzen.
 
-Beachten Sie, dass ein funktionaler Konflikt zwischen Einstellungen als zwei nicht in Konflikt stehende Druck Schema Elemente definiert ist, die über eine ähnliche Funktion verfügen, aber unterschiedliche Funktionen aufweisen. Ein Beispiel wäre jobduplexalldocumentscontiguron und DocumentDuplex. Beide stellen die Duplex Funktion des Geräts dar, unterscheiden sich jedoch in der Anwendung der Funktion, eine, die auf den gesamten Auftrag angewendet wird, und eine auf Dokumente. Wenn zwei solche Elemente angegeben werden, wird die Rangfolge durch den Printworks Producer und den PrintTicket-Consumer bestimmt. Der Printworks Producer ist dafür verantwortlich, Einschränkungen zwischen widersprüchlichen Elementen durch das "eingeschränkte" Attribut anzugeben. Elemente im öffentlichen Druck Schema, die diesen semantischen Konflikt aufweisen, werden in ihrer Definition identifiziert.
+Beachten Sie, dass ein funktionaler Konflikt zwischen Einstellungen als zwei nicht in Konflikt stehende Druckschemaelemente definiert ist, die eine ähnliche Funktion aufweisen, aber unterschiedliche Features sind. Ein Beispiel wären JobDuplexAllDocumentsContiguously und DocumentDuplex. beide stellen die Duplexfunktion des Geräts dar, unterscheiden sich jedoch in der Anwendung der Funktion, eine anwendung auf den gesamten Auftrag zusammenhängend und eine für Dokumente. Wenn zwei solche Elemente angegeben werden, wird die Rangfolge durch den PrintCapabilities-Producer und den PrintTicket-Consumer bestimmt. Es liegt in der Verantwortung des PrintCapabilities-Producers, Einschränkungen zwischen konfliktverursachenden Elementen über das attribut "constrained" ordnungsgemäß anzugeben. Elemente im öffentlichen Druckschema, die diesen semantischen Konflikt aufweisen, werden in ihrer Definition identifiziert.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Druck Schema Spezifikation](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
+[Spezifikation des Druckschemas](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 </dt> </dl>
 
  

@@ -1,15 +1,15 @@
 ---
-description: Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter Spezifikation des Druckschemas.
+description: Erfahren Sie mehr über das JobInputBin-Element, das den installierten Eingabebehälter auf einem Gerät oder die vollständige Liste der unterstützten Behälter für ein Gerät beschreibt.
 ms.assetid: 9192ceb1-90c4-480e-9247-68d457976f42
 title: JobInputBin
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2f87782d6cf9aae5c34d36603f025e803f47db3e
-ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
+ms.openlocfilehash: 929df4cb4871e5a8d2ebacfe533b5da3ad9babf3
+ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "107998097"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112408893"
 ---
 # <a name="jobinputbin"></a>JobInputBin
 
@@ -92,25 +92,25 @@ In der folgenden Tabelle werden die Merkmale der Variablen beschrieben, die in d
 | Name                                   | Datentyp          | Einheit                  | Unterstützte Werte                                                                                                                                                                      | Zusammenfassung                                                                             |
 |----------------------------------------|--------------------|-----------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------|
 | \_Optionname\_<br/>              | Zeichenfolge<br/>  | Buchstaben<br/> | Gültiger vollqualifizierter Name, wie durch [Namespaces in XML definiert.](https://www.w3.org/TR/1999/REC-xml-names-19990114/) Wenn kein Namespace angegeben wird, wird der Standardnamespace angenommen.<br/> | Der Name der Option.<br/>                                                  |
-| \_IdentityOptionValue\_<br/>     | Zeichenfolge<br/>  | –<br/>        | TRUE, FALSE<br/>                                                                                                                                                               | Definiert eine Option, die diese Funktion deaktiviert, wenn sie ausgewählt wird.<br/>        |
-| \_EnvelopeOptionValue\_<br/>     | Zeichenfolge<br/>  | –<br/>        | TRUE, FALSE<br/>                                                                                                                                                               | Definiert eine Option, die diese Funktion deaktiviert, wenn sie ausgewählt wird.<br/>        |
-| \_BinTypeValue\_<br/>            | Zeichenfolge<br/>  | –<br/>        | ContinuousFeed, SheetFeed.<br/>                                                                                                                                                 | Gibt den Typ des Papierkorbs an.<br/>                                           |
-| \_FeedTypeValue\_<br/>           | Zeichenfolge<br/>  | –<br/>        | Automatisch, Manuell.<br/>                                                                                                                                                         | Gibt den Feedmechanismus des Papierkorbs an.<br/>                                 |
-| \_MediaCapacityValue\_<br/>      | Zeichenfolge<br/>  | –<br/>        | Hoch, Standard.<br/>                                                                                                                                                            | Gibt an, ob es sich bei dem Container um einen Container mit hoher Kapazität (qualitativ) handelt.<br/>          |
-| \_MediaSizeAutoSenseValue\_<br/> | Zeichenfolge<br/>  | –<br/>        | Unterstützt, Keine.<br/>                                                                                                                                                           | Gibt die Funktion zur automatischen Empfindlichkeit der Mediengröße des Geräts an.<br/>                |
-| \_MediaTypeAutoSenseValue\_<br/> | Zeichenfolge<br/>  | –<br/>        | Unterstützt, Keine.<br/>                                                                                                                                                           | Gibt die Funktion für den automatischen Sinn des Medientyps des Geräts an.<br/>                |
-| \_MediaSheetCapacityValue\_<br/> | integer<br/> | Blätter<br/>     | Maximal zulässige ganzzahlige Einschränkung des Geräts.<br/>                                                                                                                              | Gibt die Medienkapazität in der Anzahl der Seiten (vollständige Ebene) des Papierkorbs an.<br/> |
+| \_IdentityOptionValue\_<br/>     | Zeichenfolge<br/>  | –<br/>        | TRUE, FALSE<br/>                                                                                                                                                               | Definiert eine Option, durch die diese Funktion deaktiviert wird, wenn sie ausgewählt wird.<br/>        |
+| \_EnvelopeOptionValue\_<br/>     | Zeichenfolge<br/>  | –<br/>        | TRUE, FALSE<br/>                                                                                                                                                               | Definiert eine Option, durch die diese Funktion deaktiviert wird, wenn sie ausgewählt wird.<br/>        |
+| \_BinTypeValue\_<br/>            | Zeichenfolge<br/>  | –<br/>        | ContinuousFeed, SheetFeed.<br/>                                                                                                                                                 | Gibt den Typ des Bin-Werts an.<br/>                                           |
+| \_FeedTypeValue\_<br/>           | Zeichenfolge<br/>  | –<br/>        | Automatisch, Manuell.<br/>                                                                                                                                                         | Gibt den Feedmechanismus des Bin-Werts an.<br/>                                 |
+| \_MediaCapacityValue\_<br/>      | Zeichenfolge<br/>  | –<br/>        | Hoch, Standard.<br/>                                                                                                                                                            | Gibt an, ob es sich bei der Behälter um einen Hochkapazitätsbehälter (qualitativ) handelt.<br/>          |
+| \_MediaSizeAutoSenseValue\_<br/> | Zeichenfolge<br/>  | –<br/>        | Unterstützt, Keine.<br/>                                                                                                                                                           | Gibt die Funktion zur automatischen Nutzung der Mediengröße des Geräts an.<br/>                |
+| \_MediaTypeAutoSenseValue\_<br/> | Zeichenfolge<br/>  | –<br/>        | Unterstützt, Keine.<br/>                                                                                                                                                           | Gibt die Funktion für den automatischen Medientypsendung des Geräts an.<br/>                |
+| \_MediaSheetCapacityValue\_<br/> | integer<br/> | Blätter<br/>     | Maximale ganzzahlige Einschränkung, die vom Gerät zugelassen wird.<br/>                                                                                                                              | Gibt die Medienkapazität in der Anzahl der Seiten (vollständige Ebene) des Bin-Werts an.<br/> |
 | \_MediaPathValue\_<br/>          | Zeichenfolge<br/>  | –<br/>        | Gerade, Serpentine.<br/>                                                                                                                                                      | Gibt die Merkmale des Medienpfads an.<br/>                         |
 | \_FeedFaceValue\_<br/>           | Zeichenfolge<br/>  | –<br/>        | FaceUp, FaceDown<br/>                                                                                                                                                           | Gibt an, ob Medien nach oben oder nach unten gedruckt werden sollen.<br/>           |
-| \_FeedDirectionValue\_<br/>      | Zeichenfolge<br/>  | –<br/>        | LongEdgeFirst, ShortEdgeFirst<br/>                                                                                                                                              | Gibt an, ob dem Medium zuerst der lange Rand oder zuerst der kurze Rand zugeführt wird.<br/>      |
+| \_FeedDirectionValue\_<br/>      | Zeichenfolge<br/>  | –<br/>        | LongEdgeFirst, ShortEdgeFirst<br/>                                                                                                                                              | Gibt an, ob medien zuerst lange Kanten oder kurze Kanten gespeist werden.<br/>      |
 
 
 
  
 
-## <a name="extensible-markup-language-xml-content"></a>Extensible Markup Language -Inhalt (XML)
+## <a name="extensible-markup-language-xml-content"></a>Extensible Markup Language (XML) Content
 
-Die Schlüsselwörter für das öffentliche Druckschema werden im https://schemas.microsoft.com/windows/2003/08/printing/printschemakeywords -Namespace definiert. Der Inhalt des öffentlichen Extensible Markup Language (XML) für dieses Schlüsselwort ist unten definiert:
+Die Schlüsselwörter des öffentlichen Druckschemas werden im -Namespace https://schemas.microsoft.com/windows/2003/08/printing/printschemakeywords definiert. Der öffentliche Extensible Markup Language (XML) für dieses Schlüsselwort ist unten definiert:
 
 ``` syntax
 <psf:Feature name="psk:JobInputBin">

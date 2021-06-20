@@ -1,17 +1,17 @@
 ---
-description: Dieses Thema enthält Code für das Tutorial Audio-/Videowiedergabe in DirectShow.
+description: Dieser Artikel enthält Code für die Datei playback.h für das Tutorial Audio-/Videowiedergabe in DirectShow.
 ms.assetid: 8cf0f281-3680-4329-80d0-8282d1051c1a
-title: Wiedergabe. h
+title: playback.h
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 03bd6ebd1d0b37c0351fbbe1b4e7906b243ffc7a
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: ba52dc50cd14b26bcd26284a62c96400706d8aa8
+ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "103745440"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112405113"
 ---
-# <a name="playbackh"></a>Wiedergabe. h
+# <a name="playbackh"></a>playback.h
 
 Dieses Thema enthält Code für das Tutorial [Audio-/Videowiedergabe in DirectShow](audio-video-playback-in-directshow.md).
 
@@ -84,10 +84,10 @@ private:
 
 <dl> <dt>
 
-[Audiowiedergabe und Video Wiedergabe in DirectShow](audio-video-playback-in-directshow.md)
+[Audio-/Videowiedergabe in DirectShow](audio-video-playback-in-directshow.md)
 </dt> <dt>
 
-[Beispiel zur DirectShow-Wiedergabe](directshow-playback-example.md)
+[Beispiel für DirectShow-Wiedergabe](directshow-playback-example.md)
 </dt> </dl>
 
  

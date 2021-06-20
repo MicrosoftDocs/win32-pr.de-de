@@ -1,15 +1,15 @@
 ---
-description: Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter Spezifikation des Druckschemas.
+description: Erfahren Sie mehr über das DocumentRollCut-Element, das die Schneidmethode für Roll paper beschreibt. Jedes Dokument wird separat behandelt.
 ms.assetid: 8eb4e574-3209-459c-9a25-95377b2f7439
 title: DocumentRollCut
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d3d4bfb09a1c3f6f43f11886685a0edfcf2bbd92
-ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
+ms.openlocfilehash: 92f7232cbe9dafce25aa2ee482ca40bf99145841
+ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "107997047"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112409183"
 ---
 # <a name="documentrollcut"></a>DocumentRollCut
 
@@ -19,7 +19,7 @@ Beschreibt die Schneidmethode für Roll paper. Jedes Dokument wird separat behan
 
 -   [Elementinformationen](#element-information)
 -   [Strukturelle Inhalte](#structural-content)
--   [Extensible Markup Language (XML) Content](#extensible-markup-language-xml-content)
+-   [Extensible Markup Language (XML)-Inhalt](#extensible-markup-language-xml-content)
 
 ## <a name="element-information"></a>Elementinformationen
 
@@ -68,9 +68,9 @@ In der folgenden Tabelle werden die Merkmale der Variablen beschrieben, die in d
 
  
 
-## <a name="extensible-markup-language-xml-content"></a>Extensible Markup Language -Inhalt (XML)
+## <a name="extensible-markup-language-xml-content"></a>Extensible Markup Language (XML)-Inhalt
 
-Die Schlüsselwörter für das öffentliche Druckschema werden im https://schemas.microsoft.com/windows/2003/08/printing/printschemakeywords -Namespace definiert. Der Inhalt des öffentlichen Extensible Markup Language (XML) für dieses Schlüsselwort ist unten definiert:
+Die Schlüsselwörter des öffentlichen Druckschemas werden im -Namespace https://schemas.microsoft.com/windows/2003/08/printing/printschemakeywords definiert. Der öffentliche Extensible Markup Language (XML) für dieses Schlüsselwort ist unten definiert:
 
 ``` syntax
 <psf:Feature name="psk:DocumentRollCut">

@@ -1,21 +1,21 @@
 ---
-description: Der benutzerfreundliche Anzeige Pfad für den übergeordneten Ordner eines Elements.
+description: Informieren Sie sich über die System.ItemFolderPathDisplay-Eigenschaft, die den benutzerfreundlichen Anzeigepfad des übergeordneten Ordners eines Elements darstellt.
 ms.assetid: 16f67edc-ca8a-4c2e-9d9b-be8600446e51
-title: System. itemfolderpathdisplay
+title: System.ItemFolderPathDisplay
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5c4ae4c9178356d36c644f1bc886d63331155e88
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c12909b29790ea2c016154cea9fccf7c53e45630
+ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106359012"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112403933"
 ---
-# <a name="systemitemfolderpathdisplay"></a>System. itemfolderpathdisplay
+# <a name="systemitemfolderpathdisplay"></a>System.ItemFolderPathDisplay
 
-Der benutzerfreundliche Anzeige Pfad für den übergeordneten Ordner eines Elements.
+Der benutzerfreundliche Anzeigepfad des übergeordneten Ordners eines Elements.
 
-## <a name="windows-10-version-1703-windows-10-version-1607-windows-10-version-1511-windows-10-version-1507-windows-81-windows-8-windows-7-windows-vista"></a>Windows 10, Version 1703, Windows 10, Version 1607, Windows 10, Version 1511, Windows 10, Version 1507, Windows 8.1, Windows 8, Windows 7, Windows Vista
+## <a name="windows-10-version-1703-windows-10-version-1607-windows-10-version-1511-windows-10-version-1507-windows-81-windows-8-windows-7-windows-vista"></a>Windows 10, version 1703, Windows 10, version 1607, Windows 10, version 1511, Windows 10, version 1507, Windows 8.1, Windows 8, Windows 7, Windows Vista
 
 ```
 propertyDescription
@@ -33,21 +33,21 @@ propertyDescription
 
 ## <a name="remarks"></a>Bemerkungen
 
-Pkey-Werte werden in "propkey. h" definiert.
+PKEY-Werte werden in Propkey.h definiert.
 
-Wenn [System. itempathdisplay](./props-system-itempathdisplay.md) den Wert VT \_ empty hat, sollte diese Eigenschaft auch leer sein. Andernfalls sollte Sie von der Datenquelle aus System. itempathdisplay ordnungsgemäß abgeleitet werden.
+Wenn [System.ItemPathDisplay](./props-system-itempathdisplay.md) VT \_ EMPTY ist, sollte diese Eigenschaft ebenfalls leer sein. Andernfalls sollte sie entsprechend von der Datenquelle aus System.ItemPathDisplay abgeleitet werden.
 
 Beispielwerte:
 
 
 
-| Pfad                                   | Itemfolderpathdisplay    |
+| Pfad                                   | ItemFolderPathDisplay    |
 |----------------------------------------|--------------------------|
-| c: \\ \\ Eigene Dateien \\hello.txt         | c: \\ \\ persönliche Dateien      |
-| \\\\Server \\ Freigabe \\ "MyDir" \\goodnews.doc | \\\\Server \\ Freigabe \\ "MyDir" |
-| \\\\Server \\ Freigabe \\numbers.xls         | \\\\Server \\ Freigabe        |
-| c: \\ Nahrungsmittel \\ MyFolder                     | c: \\ Nahrungsmittel                 |
-| /Mailbox Account/Inbox/"Re: Hello!"    | /Mailbox Konto/Eingangsbox   |
+| c: \\ dateien \\ persönlich \\hello.txt         | c: \\ Dateien \\ persönlich      |
+| \\\\\\server share \\ mydir \\goodnews.doc | \\\\Serverfreigabe \\ \\ mydir |
+| \\\\server \\ share \\numbers.xls         | \\\\\\Serverfreigabe        |
+| c: \\ food \\ MyFolder                     | c: \\ Lebensmittel                 |
+| /Mailbox Account/Inbox/'Re: Hello!'    | /Postfachkonto/Posteingang   |
 
 
 
@@ -57,46 +57,46 @@ Beispielwerte:
 
 <dl> <dt>
 
-[propertydescription](./propdesc-schema-propertydescription.md)
+[propertyDescription](./propdesc-schema-propertydescription.md)
 </dt> <dt>
 
-[SearchInfo](./propdesc-schema-searchinfo.md)
+[searchInfo](./propdesc-schema-searchinfo.md)
 </dt> <dt>
 
-[Labelinfo](./propdesc-schema-labelinfo.md)
+[labelInfo](./propdesc-schema-labelinfo.md)
 </dt> <dt>
 
-[TypeInfo](./propdesc-schema-typeinfo.md)
+[Typeinfo](./propdesc-schema-typeinfo.md)
 </dt> <dt>
 
-[Display Info](./propdesc-schema-displayinfo.md)
+[displayInfo](./propdesc-schema-displayinfo.md)
 </dt> <dt>
 
-[StringFormat](./propdesc-schema-stringformat.md)
+[Stringformat](./propdesc-schema-stringformat.md)
 </dt> <dt>
 
-[BooleanFormat](./propdesc-schema-booleanformat.md)
+[booleanFormat](./propdesc-schema-booleanformat.md)
 </dt> <dt>
 
-[NumberFormat](./propdesc-schema-numberformat.md)
+[Numberformat](./propdesc-schema-numberformat.md)
 </dt> <dt>
 
 [dateTimeFormat](./propdesc-schema-datetimeformat.md)
 </dt> <dt>
 
-[enumeratedlist](./propdesc-schema-enumeratedlist.md)
+[enumeratedList](./propdesc-schema-enumeratedlist.md)
 </dt> <dt>
 
-[DrawControl](./propdesc-schema-drawcontrol.md)
+[drawControl](./propdesc-schema-drawcontrol.md)
 </dt> <dt>
 
-[editcontrol](./propdesc-schema-editcontrol.md)
+[editControl](./propdesc-schema-editcontrol.md)
 </dt> <dt>
 
-[FilterControl](./propdesc-schema-filtercontrol.md)
+[Filtercontrol](./propdesc-schema-filtercontrol.md)
 </dt> <dt>
 
-[querycontrol](./propdesc-schema-querycontrol.md)
+[queryControl](./propdesc-schema-querycontrol.md)
 </dt> </dl>
 
  

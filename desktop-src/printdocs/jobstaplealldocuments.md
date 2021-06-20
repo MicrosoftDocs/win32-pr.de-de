@@ -1,25 +1,25 @@
 ---
-description: Dieses Thema ist nicht aktuell. Aktuelle Informationen finden Sie unter Print Schema Specification(Spezifikation des Druckschemas).
+description: Erfahren Sie mehr über das JobStapleAllDocuments-Element, das die Staplingmerkmale der Auftragsausgabe beschreibt.
 ms.assetid: a6721c13-a3dc-4273-b40f-2a28184b04a9
 title: JobStapleAllDocuments
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9abf6184c3164e0e5a1492911e15794ea7e1d948
-ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
+ms.openlocfilehash: 8f9598f09181a225bf10d097b8c2aedaf19373a1
+ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "107993907"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112408643"
 ---
 # <a name="jobstaplealldocuments"></a>JobStapleAllDocuments
 
 Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie unter Print Schema Specification (Spezifikation des [Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 
-Beschreibt die Staplingmerkmale der Ausgabe. Alle Dokumente im Auftrag sind zusammengeheftet. Die Schlüsselwörter JobStapleAllDocuments und DocumentStaple schließen sich gegenseitig aus. Es liegt an dem Treiber, die Einschränkungsbehandlung zwischen diesen Schlüsselwörtern zu bestimmen.
+Beschreibt die Staplingmerkmale der Ausgabe. Alle Dokumente im Auftrag sind zusammen zusammengestellt. Die Schlüsselwörter JobStapleAllDocuments und DocumentStaple schließen sich gegenseitig aus. Es obliegt dem Treiber, die Einschränkungsbehandlung zwischen diesen Schlüsselwörtern zu bestimmen.
 
 -   [Elementinformationen](#element-information)
 -   [Strukturell](#structural-content)
--   [Extensible Markup Language -Inhalt (XML)](#extensible-markup-language-xml-content)
+-   [xml-Inhalt (Extensible Markup Language)](#extensible-markup-language-xml-content)
 
 ## <a name="element-information"></a>Elementinformationen
 
@@ -68,17 +68,17 @@ In der folgenden Tabelle werden die Merkmale der in der XML-Struktur definierten
 | Name                               | Datentyp          | Einheit                       | Unterstützte Werte                                                                                                                                                                      | Zusammenfassung                                                                                                                                               |
 |------------------------------------|--------------------|----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
 | \_Optionname\_<br/>          | Zeichenfolge<br/>  | Zeichen<br/>      | Gültiger vollqualifizierte Name, wie von [Namespaces in XML](https://www.w3.org/TR/1999/REC-xml-names-19990114/)definiert. Wenn kein Namespace angegeben ist, wird der Standardnamespace angenommen.<br/> | Der Name der Option.<br/>                                                                                                                    |
-| \_IdentityOptionValue\_<br/> | Zeichenfolge<br/>  | –<br/>             | TRUE, FALSE<br/>                                                                                                                                                               | Definiert eine Option, durch die diese Funktion deaktiviert wird, wenn sie ausgewählt wird.<br/>                                                                          |
-| \_AngleValue\_<br/>          | integer<br/> | Grad<br/>         | Größer 0<br/>                                                                                                                                                            | Gibt den Klammerwinkel relativ zur Breite von PageImageableSize an. Der Winkel der Klammer wird gegen den Uhrzeigersinn gemessen.<br/> |
-| \_SheetCapacityValue\_<br/>  | integer<br/> | Medienblätter<br/> | Größer 0<br/>                                                                                                                                                            | Gibt die Anzahl der Blätter an, die von der Heftoption für den aktuell ausgewählten MediaType unterstützt werden.<br/>                                          |
+| \_IdentityOptionValue\_<br/> | Zeichenfolge<br/>  | –<br/>             | TRUE, FALSE<br/>                                                                                                                                                               | Definiert eine Option, die diese Funktion deaktiviert, wenn sie ausgewählt wird.<br/>                                                                          |
+| \_AngleValue\_<br/>          | integer<br/> | Grad<br/>         | Größer 0<br/>                                                                                                                                                            | Gibt den Klammerwinkel relativ zur Breite von PageImageableSize an. Der Klammerwinkel wird gegen den Uhrzeigersinn gemessen.<br/> |
+| \_SheetCapacityValue\_<br/>  | integer<br/> | Medienblätter<br/> | Größer 0<br/>                                                                                                                                                            | Gibt die Anzahl von Blättern an, die von der Staplingoption für den aktuell ausgewählten MediaType unterstützt werden.<br/>                                          |
 
 
 
  
 
-## <a name="extensible-markup-language-xml-content"></a>Extensible Markup Language (XML) Content
+## <a name="extensible-markup-language-xml-content"></a>xml-Inhalt (Extensible Markup Language)
 
-Die Schlüsselwörter des öffentlichen Druckschemas werden im -Namespace https://schemas.microsoft.com/windows/2003/08/printing/printschemakeywords definiert. Der öffentliche Extensible Markup Language (XML) für dieses Schlüsselwort ist unten definiert:
+Die Schlüsselwörter für das öffentliche Druckschema werden im https://schemas.microsoft.com/windows/2003/08/printing/printschemakeywords -Namespace definiert. Der Inhalt des öffentlichen Extensible Markup Language (XML) für dieses Schlüsselwort ist unten definiert:
 
 ``` syntax
 <psf:Feature name="psk:JobStapleAllDocuments">

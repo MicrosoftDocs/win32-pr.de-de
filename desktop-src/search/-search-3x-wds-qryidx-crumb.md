@@ -1,36 +1,36 @@
 ---
-description: Das Breadcrumb)-Argument unterstützt vollständige Anweisungen der erweiterten Abfrage Syntax (AQS) und ist besonders nützlich, um den Suchbereich zu steuern.
+description: Erfahren Sie, wie Sie das CRUMB-Argument in Windows Search, um den Bereich einer Suche zu steuern.
 ms.assetid: b0b974ae-0573-45e4-888e-07138604b62e
-title: Crumb-Argument (Windows-Suche)
+title: CRUMB-Argument (Windows Search)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 51f36764174e0eecaedee4a9c360bb9d7dabca3a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8f56287c7182c0cf370250d53075a1c951ddf28b
+ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104128596"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112403733"
 ---
-# <a name="crumb-argument-windows-search"></a>Crumb-Argument (Windows-Suche)
+# <a name="crumb-argument-windows-search"></a>CRUMB-Argument (Windows Search)
 
-Das `crumb` -Argument unterstützt vollständige Anweisungen der erweiterten Abfrage Syntax (AQS) und ist besonders nützlich, um den Suchbereich zu steuern. Zusätzlich zu den AQS-Elementen kann das- `crumb` Argument einen speziellen `location` Parameter für Windows Vista und `kind` und `store` Parameter in XP verwenden, wie weiter unten in diesem Thema beschrieben.
+Das `crumb` -Argument unterstützt vollständige AQS-Anweisungen (Advanced Query Syntax) und ist besonders nützlich, um den Bereich einer Suche zu steuern. Zusätzlich zu AQS-E-Mails kann das -Argument einen speziellen Parameter unter Windows Vista und Parameter unter XP verwenden, wie weiter unten `crumb` `location` in diesem Thema `kind` `store` beschrieben.
 
 Dieses Thema ist wie folgt organisiert:
 
 -   [Crumb-Syntax](#crumb-syntax)
     -   [Allgemeine Beispiele](#general-examples)
--   [Verwenden von Breadcrumb) mit Vista (Speicherort)](#using-crumb-with-vista-location)
+-   [Verwenden von Crumb mit Vista (Standort)](#using-crumb-with-vista-location)
     -   [Vista-Beispiele](#vista-examples)
     -   [Konstanten für allgemeine Ordner](#constants-for-common-folders)
--   [Verwenden von Breadcrumb) mit Windows XP (Kind und Store)](#using-crumb-with-windows-xp-kind-and-store)
+-   [Verwenden von Crumb mit Windows XP (Art und Speicher)](#using-crumb-with-windows-xp-kind-and-store)
     -   [XP-Beispiele](#xp-examples)
--   [Zugehörige Themen](#related-topics)
+-   [Verwandte Themen](#related-topics)
 
  
 
 ## <a name="crumb-syntax"></a>Crumb-Syntax
 
-Die Breadcrumb)-Syntax lautet wie folgt:
+Die Crumb-Syntax lautet wie folgt:
 
 
 ```
@@ -39,7 +39,7 @@ crumb=<column>:<value>[,<label>][,<column>:<value>[,<label>]]&
 
 
 
-Der <column> Teil ist eine beliebige Eigenschaft im Eigenschaften System, und der <value> "Teil" ist ein gültiger Wert für diese Eigenschaft. Der- <label> Teil ist ein optionaler Alias für die Eigenschaft, die als Benutzeroberflächen Hinweis angezeigt wird.
+Der <column> -Teil ist eine beliebige Eigenschaft im Eigenschaftensystem, und <value> -Teil ist ein gültiger Wert für diese Eigenschaft. Der <label> -Teil ist ein optionaler Alias für die Eigenschaft, die als Benutzeroberflächenhinweis angezeigt wird.
 
 ### <a name="general-examples"></a>Allgemeine Beispiele
 
@@ -54,40 +54,40 @@ crumb=location:c%3a%5cMyVacationPix,Vacation&
 
  
 
-## <a name="using-crumb-with-vista-location"></a>Verwenden von Breadcrumb) mit Vista (Speicherort)
+## <a name="using-crumb-with-vista-location"></a>Verwenden von Crumb mit Vista (Standort)
 
-Im Breadcrumb)-Parameter unterstützt Windows Vista vollständige AQS und auch die- `location` Eigenschaft, die über eine spezielle Implementierung verfügt, die nur unter Windows Vista verfügbar ist. Sie können entweder eine AQS-Zeichenfolge oder die- `location` Eigenschaft innerhalb eines einzelnen Breadcrumb)-Parameters verwenden, aber nicht beides. Wenn der Breadcrumb)-Parameter AQS enthält, wird alles andere in diesem Breadcrumb)-Parameter ignoriert.
+Im crumb-Parameter unterstützt Windows Vista die vollständige AQS-Version sowie die -Eigenschaft, die nur unter Windows Vista über eine spezielle Implementierung `location` verfügt. Sie können entweder eine AQS-Zeichenfolge oder die -Eigenschaft innerhalb eines `location` einzelnen crumb-Parameters verwenden, aber nicht beide. Wenn der crumb-Parameter AQS enthält, wird alles andere in diesem crumb-Parameter ignoriert.
 
-Mit der- `location` Eigenschaft können Sie einen zu suchenden Pfad angeben. Windows Vista kann den Indexer umgehen und das Verzeichnis direkt durchlaufen, wenn der Speicherort außerhalb des Durchforstungs Bereichs des Indexers liegt. Folglich sind diese Suchvorgänge möglicherweise langsamer als Suchvorgänge, die den Indexer verwenden.
+Mit `location` der -Eigenschaft können Sie einen Zu suchpfad angeben. Windows Vista kann den Indexer umgehen und das Verzeichnis direkt durchlaufen, wenn sich der Speicherort außerhalb des Indexer-Durchforstungsbereichs befindet. Folglich sind diese Suchvorgänge möglicherweise langsamer als Suchvorgänge, die den Indexer verwenden.
 
-Wenn Sie eine `location` Eigenschaft angeben, werden zwei zusätzliche Parameter unterstützt und optional:
+Wenn Sie eine Eigenschaft `location` angeben, werden zwei zusätzliche Parameter unterstützt und optional:
 
 
 
-| Parameter | Werte                  | BESCHREIBUNG                                                                                                                                                                       |
+| Parameter | Werte                  | Beschreibung                                                                                                                                                                       |
 |-----------|-------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Aufnahme | einschließen, ausschließen        | Gibt an, ob die Abfrage Elemente von diesem Pfad einschließen oder ausschließen soll. "Include" ist die Standardeinstellung. Windows Vista unterstützt keine Ausschlüsse ohne Inklusions. (Siehe Beispiel) |
-| Rekursion | rekursiv, nicht rekursiv | Gibt an, ob bei der Suche alle Unterordner beginnend mit dem am Speicherort definierten Wert rekursiert werden sollen:<value>. Der Standardwert ist rekursiv.                             |
+| Aufnahme | include, exclude        | Gibt an, ob die Abfrage Elemente in diesen Pfad ein- oder ausschließen soll. "Include" ist die Standardeinstellung. Windows Vista unterstützt keine Ausschlüsse ohne Einschlüsse. (Siehe Beispiel) |
+| Rekursion | rekursiv, nicht rekursiv | Gibt an, ob bei der Suche alle Unterordner beginnend mit dem am Speicherort definierten Wert erneut wiederholt werden sollen:<value>. "Rekursiv" ist die Standardeinstellung.                             |
 
 
 
  
 
-Wenn Sie den Bereich für eine Suche mithilfe des Such-MS:-Protokolls festlegen möchten, haben Sie je nach Ziel des Bereichs unterschiedliche Optionen.
+Für den Bereich einer Suche mithilfe des Protokolls search-ms: stehen Ihnen je nach Ziel des Bereichs unterschiedliche Optionen zur Verfügung.
 
 Ordner auf einem lokalen Computer:
 
--   Verwenden Sie AQS (Crumb = Ordner: <URL-codierter Pfad>).
--   Use Location-Argument (Crumb = Speicherort: <URL-codierter Pfad>)
+-   Verwenden Sie AQS (crumb=folder:<URL-codierten Pfad>)
+-   Verwenden Sie das location-Argument (crumb=location:<URL-codierten Pfad>)
 
-Ordner auf einem Remote Computer/Netzwerk:
+Ordner auf einem Remotecomputer/-netzwerk:
 
--   Use Location-Argument (Crumb = Speicherort: <URL-codierter Pfad>)
+-   Verwenden Sie das location-Argument (crumb=location:<URL-codierten Pfad>)
 
 Ordner, auf den über einen bekannten UNC-Protokollhandler zugegriffen wird:
 
--   Verwenden Sie AQS (Crumb = Store: <UNC protocol handler name> ).
--   Use Location-Argument (Crumb = Speicherort: <URL-codierter Pfad>)
+-   Verwenden Sie AQS (crumb=store: <UNC protocol handler name> ).
+-   Verwenden Sie das location-Argument (crumb=location:<URL-codierten Pfad>)
 
 ### <a name="vista-examples"></a>Vista-Beispiele
 
@@ -102,17 +102,17 @@ search-ms:crumb=location:c%3a%5cDocuments&crumb=kind:pics&
 
 
 
-Im ersten Beispiel wird eine Suche nach "Vacation" begonnen, beginnend an der Shell://Personal (eine besondere Verknüpfung zum Ordner "eigene Dateien" des Benutzers), einschließlich dieses Ordners und aller Unterordner. Siehe dazu die folgende Tabelle.
+Im ersten Beispiel wird eine Suche nach "Vacation" ausgeführt, die am Shell://Personal-Speicherort beginnt (eine spezielle Verknüpfung zum Eigene Dokumente-Ordner des Benutzers), einschließlich dieses Ordners und aller Unterordner. Siehe dazu die folgende Tabelle.
 
-Im zweiten Beispiel wird eine Suche in c:- \\ Bildern ausgeführt, aber nicht in c: \\ Bilder \\ Duplikaten.
+Im zweiten Beispiel wird eine Suche in C: \\ Bilder ausgeführt, jedoch nicht in C: \\ \\ Bildduplizieren.
 
-Im dritten Beispiel wird eine Suche innerhalb von C: \\ Documents ausgeführt, die auf Dateien beschränkt ist, deren Kind-Eigenschaft auf Bilder festgelegt ist.
+Im dritten Beispiel wird eine Suche in C: Dokumente ausgeführt, die auf Dateien beschränkt ist, deren \\ kind-Eigenschaft auf Pics festgelegt ist.
 
 ### <a name="constants-for-common-folders"></a>Konstanten für allgemeine Ordner
 
-Windows Vista ermöglicht die Verwendung von [KNOWNFOLDERID](/previous-versions//bb762584(v=vs.85)) -Werten, die eine eindeutige, systemunabhängige Möglichkeit zur Identifizierung spezieller Ordner bieten, die häufig von Anwendungen verwendet werden, aber nicht denselben Namen oder Speicherort auf einem beliebigen System haben. Der Systemordner kann z. b. "c: \\ Windows" auf einem System und "c: \\ Winnt" auf einem anderen System sein. Vor Windows Vista wurden [CSIDLs](/windows/desktop/shell/csidl) verwendet.
+Windows Vista ermöglicht die Verwendung von [KNOWNFOLDERID-Werten,](/previous-versions//bb762584(v=vs.85)) die eine eindeutige systemunabhängige Möglichkeit bieten, spezielle Ordner zu identifizieren, die häufig von Anwendungen verwendet werden, aber möglicherweise nicht denselben Namen oder Speicherort auf einem bestimmten System haben. Der Systemordner kann beispielsweise "C: Windows" auf einem System und \\ "C: \\ Winnt" auf einem anderen System sein. Vor Windows Vista wurden [CSIDLs](/windows/desktop/shell/csidl) verwendet.
 
-Verwenden Sie diese Speicherorte mit der folgenden Syntax:
+Verwenden Sie diese Speicherorte mit dieser Syntax:
 
 
 ```
@@ -123,13 +123,13 @@ crumb=location:shell%3a<LocationName>&
 
  
 
-## <a name="using-crumb-with-windows-xp-kind-and-store"></a>Verwenden von Breadcrumb) mit Windows XP (Kind und Store)
+## <a name="using-crumb-with-windows-xp-kind-and-store"></a>Verwenden von Crumb mit Windows XP (Art und Speicher)
 
-Für Windows Search unter Windows XP (WDS 3. x) verfügen die AQS-Begriffe "Kind" und "Store" über eine besondere Implementierung. Die "Kind"-Werte entsprechen den [Werten, die in WDS 2. x verwendet](../lwef/-search-2x-wds-perceivedtype.md)werden. Die "Store"-Werte umfassen Folgendes:
+Für Windows Search Windows XP (WDS 3.x) verfügen die AQS-Begriffe "kind" und "store" über eine spezielle Implementierung. Die "kind"-Werte sind dieselben [Werte, die in WDS 2.x verwendet werden.](../lwef/-search-2x-wds-perceivedtype.md) Die Werte für "store" umfassen Folgendes:
 
--   MAPI
+-   Mapi
 -   file
--   OutlookExpress
+-   outlookexpress
 -   any
 
 ### <a name="xp-examples"></a>XP-Beispiele
@@ -142,25 +142,25 @@ search-ms:query=from:john&crumb=kind:communications&
 
 
 
-Im ersten Beispiel werden Microsoft Outlook Express-e-Mails von John mit der benutzerdefinierten Bezeichnung "OE Mail" zurückgegeben. Im zweiten Beispiel wird eine Suche nach einer beliebigen Kommunikation von John ausgeführt.
+Im ersten Beispiel werden Microsoft Outlook Express-E-Mails von John mit der benutzerdefinierten Bezeichnung "OE Mail" zurückgegeben. Im zweiten Beispiel wird eine Suche nach einer beliebigen Kommunikation von John ausgeführt.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Die ersten Schritte mit Parameter-Value Argumenten](getting-started-with-parameter-value-arguments.md)
+[Erste Schritte mit Parameter-Value Argumenten](getting-started-with-parameter-value-arguments.md)
 </dt> <dt>
 
-[Locale-bezeichnerargumente](-search-3x-wds-qryidx-localeidentifiers.md)
+[Locale Identifier Arguments](-search-3x-wds-qryidx-localeidentifiers.md)
 </dt> <dt>
 
-[Syntax Argument](-search-3x-wds-qryidx-syntaxargument.md)
+[SYNTAX-Argument](-search-3x-wds-qryidx-syntaxargument.md)
 </dt> <dt>
 
-[Stackedby-Argument](-search-3x-wds-qryidx-stackedby.md)
+[STACKEDBY-Argument](-search-3x-wds-qryidx-stackedby.md)
 </dt> <dt>
 
-[Unterabfrage Argument](-search-3x-wds-qryidx-subquery.md)
+[SUBQUERY-Argument](-search-3x-wds-qryidx-subquery.md)
 </dt> </dl>
 
  

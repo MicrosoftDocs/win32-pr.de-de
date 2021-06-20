@@ -1,36 +1,36 @@
 ---
-description: Diese Werte werden mit den Funktionen "immgetdeversionstatus" und "immsetconfiguration" verwendet.
+description: Überprüfen Sie die Liste der ImE-Konvertierungsmoduswerte (Input Method Editor). Diese Werte werden mit den Funktionen ImmGetConversionStatus und ImmSetConversionStatus verwendet.
 ms.assetid: 0b0afb4e-f7aa-4ca6-9174-21983b2a422b
 title: Werte des IME-Konvertierungsmodus
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f59b9f1a8d5015e78a5249d3499fc55e1a94d941
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0c52bc2f8f6f9fc87df48a15c66ce24b33e51742
+ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104129740"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112406753"
 ---
 # <a name="ime-conversion-mode-values"></a>Werte des IME-Konvertierungsmodus
 
-Diese Werte werden mit den Funktionen " [**immgetdeversionstatus**](/windows/desktop/api/Imm/nf-imm-immgetconversionstatus) " und " [**immsetconfiguration**](/windows/desktop/api/Imm/nf-imm-immsetconversionstatus) " verwendet.
+Diese Werte werden mit den [**Funktionen ImmGetConversionStatus**](/windows/desktop/api/Imm/nf-imm-immgetconversionstatus) und [**ImmSetConversionStatus**](/windows/desktop/api/Imm/nf-imm-immsetconversionstatus) verwendet.
 
 
 
 | bit                      | Bedeutung                                                                                   |
 |--------------------------|-------------------------------------------------------------------------------------------|
-| \_alphanumerischer IME-cmode-Wert \_ | Alphanumerischer Eingabemodus. Dies ist die Standardeinstellung, die als 0x0000 definiert ist.                          |
-| IME- \_ cmode- \_ CharCode     | Auf 1 festgelegt, wenn Zeichencode Eingabemodus; 0, wenn nicht.                                          |
-| IME- \_ cmode- \_ EUDC         | Auf 1 festgelegt, wenn EUDC-Konvertierungsmodus; 0, wenn nicht.                                               |
-| IME- \_ cmode- \_ Fehler        | **Windows Me/98, Windows 2000, Windows XP:** Auf 1 festgelegt, wenn fester Konvertierungsmodus; 0, wenn nicht. |
-| IME \_ cmode \_ fullshape    | Auf 1 festgelegt, wenn vollständiger Shape-Modus; 0 (null), wenn Halbform Modus.                                        |
-| IME- \_ cmode- \_ hanjaconvert | Auf 1 festgelegt, wenn der Hanja-Konvertierungsmodus. 0, wenn nicht.                                                 |
-| IME- \_ cmode- \_ Katakana     | Auf 1 festgelegt, wenn Katakana-Modus; 0, wenn der Hiragana-Modus ist.                                            |
-| IME \_ cmode \_ Native       | Auf 1 festgelegt, wenn der einheitliche Modus ist; 0 (null), wenn der alphanumerische Modus ist.                                          |
-| IME \_ cmode- \_ noconversion | Auf 1 festgelegt, um die Verarbeitung von Konvertierungen durch IME zu verhindern. 0, wenn nicht.                           |
-| IME \_ cmode- \_ Roman        | Auf 1 festgelegt, wenn der römische Eingabemodus; 0, wenn nicht.                                                   |
-| IME \_ cmode- \_ Software      | Auf 1 festgelegt, wenn weicher Tastaturmodus 0, wenn nicht.                                                 |
-| IME- \_ cmode- \_ Symbol       | Auf 1 festgelegt, wenn der Modus für die Symbol Konvertierung 0, wenn nicht.                                             |
+| IME \_ CMODE \_ ALPHANUMERIC | Alphanumerischer Eingabemodus. Dies ist die Standardeinstellung, die als 0x0000.                          |
+| IME \_ CMODE \_ CHARCODE     | Legen Sie auf 1 fest, wenn der Zeichencodeeingabemodus ist. 0, wenn nicht.                                          |
+| IME \_ CMODE \_ EUDC         | Legen Sie auf 1 fest, wenn der EUDC-Konvertierungsmodus ist. 0, wenn nicht.                                               |
+| IME \_ CMODE \_ FIXED        | **Windows Me/98, Windows 2000, Windows XP:** Legen Sie auf 1 fest, wenn der Konvertierungsmodus fest ist. 0, wenn nicht. |
+| IME \_ CMODE \_ FULLSHAPE    | Legen Sie auf 1 fest, wenn der Vollformmodus aktiviert ist. 0, wenn halber Formmodus.                                        |
+| IME \_ CMODE \_ HANJACONVERT | Legen Sie auf 1 fest, wenn der HANJA-Konvertierungsmodus aktiviert ist. 0, wenn nicht.                                                 |
+| IME \_ CMODE \_ KATAKANA     | Legen Sie auf 1 fest, wenn der KATAKANA-Modus ist. 0, wenn HIRAGANA-Modus.                                            |
+| IME \_ CMODE \_ NATIVE       | Legen Sie auf 1 fest, wenn der MODUS NATIV ist. 0, wenn der ALPHANUMERIC-Modus.                                          |
+| IME \_ CMODE \_ NOCONVERSION | Legen Sie auf 1 fest, um die Verarbeitung von Konvertierungen durch IME zu verhindern. 0, wenn nicht.                           |
+| IME \_ CMODE \_ ROMAN        | Legen Sie auf 1 fest, wenn der EINGABEMODUS FÜR ROMAN festgelegt ist. 0, wenn nicht.                                                   |
+| IME \_ CMODE \_ SOFTKBD      | Legen Sie auf 1 fest, wenn der Softtastaturmodus aktiviert ist. 0, wenn nicht.                                                 |
+| \_IME-CMODE-SYMBOL \_       | Legen Sie auf 1 fest, wenn der SYMBOL-Konvertierungsmodus aktiviert ist. 0, wenn nicht.                                             |
 
 
 

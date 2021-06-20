@@ -1,19 +1,19 @@
 ---
-description: Dieses Thema enthält Code für das Tutorial Audio-/Videowiedergabe in DirectShow.
+description: Dieser Artikel enthält Code für die Datei video.h für das Tutorial Audio/Video Playback in DirectShow.
 ms.assetid: 5f7d5647-cdf0-4bb7-a4d5-09656c0ed702
-title: Video. h
+title: video.h
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e884f668e185eac2df8a4337baa355f381aaa485
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 654b413b39509dfd5ffcc31533470eb9d67c6295
+ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106351771"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112407823"
 ---
-# <a name="videoh"></a>Video. h
+# <a name="videoh"></a>video.h
 
-Dieses Thema enthält Code für das Tutorial [Audio-/Videowiedergabe in DirectShow](audio-video-playback-in-directshow.md).
+Dieses Thema enthält Code für das Tutorial [Audio/Video Playback in DirectShow](audio-video-playback-in-directshow.md).
 
 
 ```C++
@@ -120,10 +120,10 @@ public:
 
 <dl> <dt>
 
-[Audiowiedergabe und Video Wiedergabe in DirectShow](audio-video-playback-in-directshow.md)
+[Audio-/Videowiedergabe in DirectShow](audio-video-playback-in-directshow.md)
 </dt> <dt>
 
-[Beispiel zur DirectShow-Wiedergabe](directshow-playback-example.md)
+[DirectShow-Wiedergabebeispiel](directshow-playback-example.md)
 </dt> </dl>
 
  
