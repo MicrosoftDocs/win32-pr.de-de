@@ -1,30 +1,30 @@
 ---
-title: Httpcustomheaderpurchaseorderserviceexample
-description: In diesem Beispiel wird gezeigt, wie der Dienst Host zum Hosten eines PurchaseOrder-Diensts über HTTP verwendet wird.
+title: HttpCustomHeaderPurchaseOrderServiceExample
+description: Überprüfen Sie ein C++-Beispiel für die Windows Web Services-API (WWSAPI) eines Bestelldiensts über benutzerdefinierte HTTP-Header.
 ms.assetid: 7a86e0be-6e52-4ad2-bca4-0162a8030cdc
 keywords:
-- Httpcustomheaderpurchaseorderserviceexample Native Webdienste
-- Wwsapi
+- HttpCustomHeaderPurchaseOrderServiceExample Native-Web-Services
+- WWSAPI
 - WWS
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 022fa8fa7ddd128fa86f8b1bcb49119bfa369953
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 93c412b0106a9343695b4a96cd01e54df7ea654d
+ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104388457"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112404123"
 ---
-# <a name="httpcustomheaderpurchaseorderserviceexample"></a><span data-ttu-id="93eeb-106">Httpcustomheaderpurchaseorderserviceexample</span><span class="sxs-lookup"><span data-stu-id="93eeb-106">HttpCustomHeaderPurchaseOrderServiceExample</span></span>
+# <a name="httpcustomheaderpurchaseorderserviceexample"></a><span data-ttu-id="edc33-106">HttpCustomHeaderPurchaseOrderServiceExample</span><span class="sxs-lookup"><span data-stu-id="edc33-106">HttpCustomHeaderPurchaseOrderServiceExample</span></span>
 
-<span data-ttu-id="93eeb-107">In diesem Beispiel wird gezeigt, wie der Dienst Host zum Hosten eines PurchaseOrder-Diensts über HTTP verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="93eeb-107">This example shows how to use service host for hosting a PurchaseOrder service over HTTP.</span></span>
+<span data-ttu-id="edc33-107">In diesem Beispiel wird gezeigt, wie der Diensthost zum Hosten eines PurchaseOrder-Diensts über HTTP verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="edc33-107">This example shows how to use service host for hosting a PurchaseOrder service over HTTP.</span></span>
 
--   [<span data-ttu-id="93eeb-108">Httpcustomheaderservice. cpp</span><span class="sxs-lookup"><span data-stu-id="93eeb-108">HttpCustomHeaderService.cpp</span></span>](#httpcustomheaderservicecpp)
--   [<span data-ttu-id="93eeb-109">PurchaseOrder. WSDL</span><span class="sxs-lookup"><span data-stu-id="93eeb-109">PurchaseOrder.wsdl</span></span>](#purchaseorderwsdl)
--   [<span data-ttu-id="93eeb-110">Ordersessionheader. xsd</span><span class="sxs-lookup"><span data-stu-id="93eeb-110">OrderSessionHeader.xsd</span></span>](#ordersessionheaderxsd)
--   [<span data-ttu-id="93eeb-111">Makefile</span><span class="sxs-lookup"><span data-stu-id="93eeb-111">Makefile</span></span>](#makefile)
+-   [<span data-ttu-id="edc33-108">HttpCustomHeaderService.cpp</span><span class="sxs-lookup"><span data-stu-id="edc33-108">HttpCustomHeaderService.cpp</span></span>](#httpcustomheaderservicecpp)
+-   [<span data-ttu-id="edc33-109">PurchaseOrder.wsdl</span><span class="sxs-lookup"><span data-stu-id="edc33-109">PurchaseOrder.wsdl</span></span>](#purchaseorderwsdl)
+-   [<span data-ttu-id="edc33-110">OrderSessionHeader.xsd</span><span class="sxs-lookup"><span data-stu-id="edc33-110">OrderSessionHeader.xsd</span></span>](#ordersessionheaderxsd)
+-   [<span data-ttu-id="edc33-111">Makefile</span><span class="sxs-lookup"><span data-stu-id="edc33-111">Makefile</span></span>](#makefile)
 
-## <a name="httpcustomheaderservicecpp"></a><span data-ttu-id="93eeb-112">Httpcustomheaderservice. cpp</span><span class="sxs-lookup"><span data-stu-id="93eeb-112">HttpCustomHeaderService.cpp</span></span>
+## <a name="httpcustomheaderservicecpp"></a><span data-ttu-id="edc33-112">HttpCustomHeaderService.cpp</span><span class="sxs-lookup"><span data-stu-id="edc33-112">HttpCustomHeaderService.cpp</span></span>
 
 
 ```C++
@@ -385,7 +385,7 @@ Exit:
 
 
 
-## <a name="purchaseorderwsdl"></a><span data-ttu-id="93eeb-113">PurchaseOrder. WSDL</span><span class="sxs-lookup"><span data-stu-id="93eeb-113">PurchaseOrder.wsdl</span></span>
+## <a name="purchaseorderwsdl"></a><span data-ttu-id="edc33-113">PurchaseOrder.wsdl</span><span class="sxs-lookup"><span data-stu-id="edc33-113">PurchaseOrder.wsdl</span></span>
 
 ``` syntax
 <wsdl:definitions 
@@ -496,7 +496,7 @@ Exit:
 </wsdl:definitions>
 ```
 
-## <a name="ordersessionheaderxsd"></a><span data-ttu-id="93eeb-114">Ordersessionheader. xsd</span><span class="sxs-lookup"><span data-stu-id="93eeb-114">OrderSessionHeader.xsd</span></span>
+## <a name="ordersessionheaderxsd"></a><span data-ttu-id="edc33-114">OrderSessionHeader.xsd</span><span class="sxs-lookup"><span data-stu-id="edc33-114">OrderSessionHeader.xsd</span></span>
 
 ``` syntax
 <?xml version="1.0" encoding="utf-8"?>
@@ -514,7 +514,7 @@ Exit:
  </xsd:schema>
 ```
 
-## <a name="makefile"></a><span data-ttu-id="93eeb-115">Makefile</span><span class="sxs-lookup"><span data-stu-id="93eeb-115">Makefile</span></span>
+## <a name="makefile"></a><span data-ttu-id="edc33-115">Makefile</span><span class="sxs-lookup"><span data-stu-id="edc33-115">Makefile</span></span>
 
 ``` syntax
 !include <Win32.Mak>
@@ -545,9 +545,9 @@ clean:
     $(CLEANUP)
 ```
 
- 
+ 
 
- 
+ 
 
 
 

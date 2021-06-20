@@ -1,29 +1,29 @@
 ---
-title: Httpserverexample
-description: Dieses Beispiel zeigt einen TCP-Server, der einen Channel annimmt und Nachrichten empfängt und darauf antwortet.
+title: HttpServerExample
+description: Sehen Sie sich ein BEISPIEL für einen HTTP-Server an, der die Windows-Webdienste-API verwendet. Dieses Beispiel zeigt einen TCP-Server, der einen Kanal akzeptiert und Nachrichten empfängt und antwortet.
 ms.assetid: b8cf29af-f13f-47ae-9954-7845515135f9
 keywords:
-- "\"Httpserverexample\" (Native Webdienste)"
-- Wwsapi
+- HttpServerExample Native-Web-Services
+- WWSAPI
 - WWS
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 41194ce745c214c6892235d24f53012233131595
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 72859f9e59353fe926f18570e10de65cd40e0fd4
+ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106337816"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112409753"
 ---
-# <a name="httpserverexample"></a><span data-ttu-id="e6449-106">Httpserverexample</span><span class="sxs-lookup"><span data-stu-id="e6449-106">HttpServerExample</span></span>
+# <a name="httpserverexample"></a><span data-ttu-id="c81a6-107">HttpServerExample</span><span class="sxs-lookup"><span data-stu-id="c81a6-107">HttpServerExample</span></span>
 
-<span data-ttu-id="e6449-107">Dieses Beispiel zeigt einen TCP-Server, der einen Channel annimmt und Nachrichten empfängt und darauf antwortet.</span><span class="sxs-lookup"><span data-stu-id="e6449-107">This example shows a TCP server that accepts a channel and receives and replies to messages.</span></span>
+<span data-ttu-id="c81a6-108">Dieses Beispiel zeigt einen TCP-Server, der einen Kanal akzeptiert und Nachrichten empfängt und antwortet.</span><span class="sxs-lookup"><span data-stu-id="c81a6-108">This example shows a TCP server that accepts a channel and receives and replies to messages.</span></span>
 
--   [<span data-ttu-id="e6449-108">HTTPServer. cpp</span><span class="sxs-lookup"><span data-stu-id="e6449-108">HttpServer.cpp</span></span>](#httpservercpp)
--   [<span data-ttu-id="e6449-109">PurchaseOrder. WSDL</span><span class="sxs-lookup"><span data-stu-id="e6449-109">PurchaseOrder.wsdl</span></span>](#purchaseorderwsdl)
--   [<span data-ttu-id="e6449-110">Makefile</span><span class="sxs-lookup"><span data-stu-id="e6449-110">Makefile</span></span>](#makefile)
+-   [<span data-ttu-id="c81a6-109">HttpServer.cpp</span><span class="sxs-lookup"><span data-stu-id="c81a6-109">HttpServer.cpp</span></span>](#httpservercpp)
+-   [<span data-ttu-id="c81a6-110">PurchaseOrder.wsdl</span><span class="sxs-lookup"><span data-stu-id="c81a6-110">PurchaseOrder.wsdl</span></span>](#purchaseorderwsdl)
+-   [<span data-ttu-id="c81a6-111">Makefile</span><span class="sxs-lookup"><span data-stu-id="c81a6-111">Makefile</span></span>](#makefile)
 
-## <a name="httpservercpp"></a><span data-ttu-id="e6449-111">HTTPServer. cpp</span><span class="sxs-lookup"><span data-stu-id="e6449-111">HttpServer.cpp</span></span>
+## <a name="httpservercpp"></a><span data-ttu-id="c81a6-112">HttpServer.cpp</span><span class="sxs-lookup"><span data-stu-id="c81a6-112">HttpServer.cpp</span></span>
 
 
 ```C++
@@ -489,7 +489,7 @@ Exit:
 
 
 
-## <a name="purchaseorderwsdl"></a><span data-ttu-id="e6449-112">PurchaseOrder. WSDL</span><span class="sxs-lookup"><span data-stu-id="e6449-112">PurchaseOrder.wsdl</span></span>
+## <a name="purchaseorderwsdl"></a><span data-ttu-id="c81a6-113">PurchaseOrder.wsdl</span><span class="sxs-lookup"><span data-stu-id="c81a6-113">PurchaseOrder.wsdl</span></span>
 
 ``` syntax
 <wsdl:definitions 
@@ -600,7 +600,7 @@ Exit:
 </wsdl:definitions>
 ```
 
-## <a name="makefile"></a><span data-ttu-id="e6449-113">Makefile</span><span class="sxs-lookup"><span data-stu-id="e6449-113">Makefile</span></span>
+## <a name="makefile"></a><span data-ttu-id="c81a6-114">Makefile</span><span class="sxs-lookup"><span data-stu-id="c81a6-114">Makefile</span></span>
 
 ``` syntax
 !include <Win32.Mak>
@@ -629,9 +629,9 @@ clean:
     $(CLEANUP)
 ```
 
- 
+ 
 
- 
+ 
 
 
 
