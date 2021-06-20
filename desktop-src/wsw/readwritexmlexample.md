@@ -1,29 +1,29 @@
 ---
-title: "\"Read Write texmlexample\""
-description: In diesem Beispiel wird XML in einen XML-Puffer geschrieben und dann wieder ausgecheckt.
+title: ReadWriteXmlExample
+description: Überprüfen Sie ein XML-Beispiel für Lese-/Schreibzugriff, das die Windows-Webdienst-API (WWSAPI) verwendet. In diesem Beispiel wird XML in einen XML-Puffer schreibt und dann zurückgelesen.
 ms.assetid: e9802e3c-c8a0-4b68-bba5-cdafb7250298
 keywords:
-- "\"Read Write texmlexample\"-Webdienste für Windows"
-- Wwsapi
+- ReadWriteXmlExample-Webdienste für Windows
+- WWSAPI
 - WWS
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: fbc1571716c2f01a20c18743c1f73c7306c7b53b
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: a3d83230f690098958ea396e830aaa54dace1f73
+ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103947298"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112404093"
 ---
-# <a name="readwritexmlexample"></a><span data-ttu-id="ad453-106">"Read Write texmlexample"</span><span class="sxs-lookup"><span data-stu-id="ad453-106">ReadWriteXmlExample</span></span>
+# <a name="readwritexmlexample"></a><span data-ttu-id="d92fa-107">ReadWriteXmlExample</span><span class="sxs-lookup"><span data-stu-id="d92fa-107">ReadWriteXmlExample</span></span>
 
-<span data-ttu-id="ad453-107">In diesem Beispiel wird XML in einen XML-Puffer geschrieben und dann wieder ausgecheckt.</span><span class="sxs-lookup"><span data-stu-id="ad453-107">This example writes XML to an XML buffer, and then reads it back out.</span></span>
+<span data-ttu-id="d92fa-108">In diesem Beispiel wird XML in einen XML-Puffer schreibt und dann zurückgelesen.</span><span class="sxs-lookup"><span data-stu-id="d92fa-108">This example writes XML to an XML buffer, and then reads it back out.</span></span>
 
--   [<span data-ttu-id="ad453-108">"Read Write texml. cpp"</span><span class="sxs-lookup"><span data-stu-id="ad453-108">ReadWriteXml.cpp</span></span>](#readwritexmlcpp)
--   [<span data-ttu-id="ad453-109">PurchaseOrder. WSDL</span><span class="sxs-lookup"><span data-stu-id="ad453-109">PurchaseOrder.wsdl</span></span>](#purchaseorderwsdl)
--   [<span data-ttu-id="ad453-110">Makefile</span><span class="sxs-lookup"><span data-stu-id="ad453-110">Makefile</span></span>](#makefile)
+-   [<span data-ttu-id="d92fa-109">ReadWriteXml.cpp</span><span class="sxs-lookup"><span data-stu-id="d92fa-109">ReadWriteXml.cpp</span></span>](#readwritexmlcpp)
+-   [<span data-ttu-id="d92fa-110">PurchaseOrder.wsdl</span><span class="sxs-lookup"><span data-stu-id="d92fa-110">PurchaseOrder.wsdl</span></span>](#purchaseorderwsdl)
+-   [<span data-ttu-id="d92fa-111">Makefile</span><span class="sxs-lookup"><span data-stu-id="d92fa-111">Makefile</span></span>](#makefile)
 
-## <a name="readwritexmlcpp"></a><span data-ttu-id="ad453-111">"Read Write texml. cpp"</span><span class="sxs-lookup"><span data-stu-id="ad453-111">ReadWriteXml.cpp</span></span>
+## <a name="readwritexmlcpp"></a><span data-ttu-id="d92fa-112">ReadWriteXml.cpp</span><span class="sxs-lookup"><span data-stu-id="d92fa-112">ReadWriteXml.cpp</span></span>
 
 
 ```C++
@@ -462,7 +462,7 @@ Exit:
 
 
 
-## <a name="purchaseorderwsdl"></a><span data-ttu-id="ad453-112">PurchaseOrder. WSDL</span><span class="sxs-lookup"><span data-stu-id="ad453-112">PurchaseOrder.wsdl</span></span>
+## <a name="purchaseorderwsdl"></a><span data-ttu-id="d92fa-113">PurchaseOrder.wsdl</span><span class="sxs-lookup"><span data-stu-id="d92fa-113">PurchaseOrder.wsdl</span></span>
 
 ``` syntax
 <wsdl:definitions 
@@ -573,7 +573,7 @@ Exit:
 </wsdl:definitions>
 ```
 
-## <a name="makefile"></a><span data-ttu-id="ad453-113">Makefile</span><span class="sxs-lookup"><span data-stu-id="ad453-113">Makefile</span></span>
+## <a name="makefile"></a><span data-ttu-id="d92fa-114">Makefile</span><span class="sxs-lookup"><span data-stu-id="d92fa-114">Makefile</span></span>
 
 ``` syntax
 #------------------------------------------------------------
@@ -606,9 +606,9 @@ clean:
     $(CLEANUP)
 ```
 
- 
+ 
 
- 
+ 
 
 
 

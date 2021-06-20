@@ -1,33 +1,33 @@
 ---
-title: Httpcalculatorwithlayeredchannelserviceexample
-description: In diesem Beispiel wird gezeigt, wie der Dienst Host zum Hosten eines Rechner Diensts mit einer benutzerdefinierten Kanal-und Listenerimplementierung verwendet wird, die über HTTP hinausgeht.
+title: HttpCalculatorWithLayeredChannelServiceExample
+description: Sehen Sie sich ein C++-Beispiel für eine Windows-Webdienst-API (WWSAPI) eines HTTP-Rechners mit mehrschichtigem Kanaldienst an.
 ms.assetid: c5bc37bc-f242-4eda-abc4-510793d301d8
 keywords:
-- Httpcalculatorwithlayeredchannelserviceexample Native Webdienste
-- Wwsapi
+- HttpCalculatorWithLayeredChannelServiceExample Native-Web-Services
+- WWSAPI
 - WWS
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 933e39cc687ecd057f112119ff9b47be9123deff
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 277703f703051bfff77efbc01b14d25bd427a1f5
+ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104388444"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112404143"
 ---
-# <a name="httpcalculatorwithlayeredchannelserviceexample"></a><span data-ttu-id="61d8b-106">Httpcalculatorwithlayeredchannelserviceexample</span><span class="sxs-lookup"><span data-stu-id="61d8b-106">HttpCalculatorWithLayeredChannelServiceExample</span></span>
+# <a name="httpcalculatorwithlayeredchannelserviceexample"></a><span data-ttu-id="794c2-106">HttpCalculatorWithLayeredChannelServiceExample</span><span class="sxs-lookup"><span data-stu-id="794c2-106">HttpCalculatorWithLayeredChannelServiceExample</span></span>
 
-<span data-ttu-id="61d8b-107">In diesem Beispiel wird gezeigt, wie der Dienst Host zum Hosten eines Rechner Diensts mit einer benutzerdefinierten Kanal-und Listenerimplementierung verwendet wird, die über HTTP hinausgeht.</span><span class="sxs-lookup"><span data-stu-id="61d8b-107">This example shows how to use service host for hosting a calculator service with a custom channel and listener implementation that layer on top of HTTP.</span></span>
+<span data-ttu-id="794c2-107">In diesem Beispiel wird gezeigt, wie Sie den Diensthost zum Hosten eines Rechnerdiensts mit einem benutzerdefinierten Kanal und einer Listenerimplementierung verwenden, die auf HTTP-Ebene sind.</span><span class="sxs-lookup"><span data-stu-id="794c2-107">This example shows how to use service host for hosting a calculator service with a custom channel and listener implementation that layer on top of HTTP.</span></span>
 
--   [<span data-ttu-id="61d8b-108">Httpcalculatorwithlayeredchannelservice. cpp</span><span class="sxs-lookup"><span data-stu-id="61d8b-108">HttpCalculatorWithLayeredChannelService.cpp</span></span>](#httpcalculatorwithlayeredchannelservicecpp)
--   [<span data-ttu-id="61d8b-109">Layeredchannel. h</span><span class="sxs-lookup"><span data-stu-id="61d8b-109">LayeredChannel.h</span></span>](#layeredchannelh)
--   [<span data-ttu-id="61d8b-110">Layeredchannel. cpp</span><span class="sxs-lookup"><span data-stu-id="61d8b-110">LayeredChannel.cpp</span></span>](#layeredchannelcpp)
--   [<span data-ttu-id="61d8b-111">Layeredlistener. h</span><span class="sxs-lookup"><span data-stu-id="61d8b-111">LayeredListener.h</span></span>](#layeredlistenerh)
--   [<span data-ttu-id="61d8b-112">Layeredlistener. cpp</span><span class="sxs-lookup"><span data-stu-id="61d8b-112">LayeredListener.cpp</span></span>](#layeredlistenercpp)
--   [<span data-ttu-id="61d8b-113">CalculatorService. WSDL</span><span class="sxs-lookup"><span data-stu-id="61d8b-113">CalculatorService.wsdl</span></span>](#calculatorservicewsdl)
--   [<span data-ttu-id="61d8b-114">Makefile</span><span class="sxs-lookup"><span data-stu-id="61d8b-114">Makefile</span></span>](#makefile)
+-   [<span data-ttu-id="794c2-108">HttpCalculatorWithLayeredChannelService.cpp</span><span class="sxs-lookup"><span data-stu-id="794c2-108">HttpCalculatorWithLayeredChannelService.cpp</span></span>](#httpcalculatorwithlayeredchannelservicecpp)
+-   [<span data-ttu-id="794c2-109">LayeredChannel.h</span><span class="sxs-lookup"><span data-stu-id="794c2-109">LayeredChannel.h</span></span>](#layeredchannelh)
+-   [<span data-ttu-id="794c2-110">LayeredChannel.cpp</span><span class="sxs-lookup"><span data-stu-id="794c2-110">LayeredChannel.cpp</span></span>](#layeredchannelcpp)
+-   [<span data-ttu-id="794c2-111">LayeredListener.h</span><span class="sxs-lookup"><span data-stu-id="794c2-111">LayeredListener.h</span></span>](#layeredlistenerh)
+-   [<span data-ttu-id="794c2-112">LayeredListener.cpp</span><span class="sxs-lookup"><span data-stu-id="794c2-112">LayeredListener.cpp</span></span>](#layeredlistenercpp)
+-   [<span data-ttu-id="794c2-113">CalculatorService.wsdl</span><span class="sxs-lookup"><span data-stu-id="794c2-113">CalculatorService.wsdl</span></span>](#calculatorservicewsdl)
+-   [<span data-ttu-id="794c2-114">Makefile</span><span class="sxs-lookup"><span data-stu-id="794c2-114">Makefile</span></span>](#makefile)
 
-## <a name="httpcalculatorwithlayeredchannelservicecpp"></a><span data-ttu-id="61d8b-115">Httpcalculatorwithlayeredchannelservice. cpp</span><span class="sxs-lookup"><span data-stu-id="61d8b-115">HttpCalculatorWithLayeredChannelService.cpp</span></span>
+## <a name="httpcalculatorwithlayeredchannelservicecpp"></a><span data-ttu-id="794c2-115">HttpCalculatorWithLayeredChannelService.cpp</span><span class="sxs-lookup"><span data-stu-id="794c2-115">HttpCalculatorWithLayeredChannelService.cpp</span></span>
 
 
 ```C++
@@ -389,7 +389,7 @@ Exit:
 
 
 
-## <a name="layeredchannelh"></a><span data-ttu-id="61d8b-116">Layeredchannel. h</span><span class="sxs-lookup"><span data-stu-id="61d8b-116">LayeredChannel.h</span></span>
+## <a name="layeredchannelh"></a><span data-ttu-id="794c2-116">LayeredChannel.h</span><span class="sxs-lookup"><span data-stu-id="794c2-116">LayeredChannel.h</span></span>
 
 
 ```C++
@@ -422,7 +422,7 @@ extern WS_CUSTOM_CHANNEL_CALLBACKS layeredChannelCallbacks;
 
 
 
-## <a name="layeredchannelcpp"></a><span data-ttu-id="61d8b-117">Layeredchannel. cpp</span><span class="sxs-lookup"><span data-stu-id="61d8b-117">LayeredChannel.cpp</span></span>
+## <a name="layeredchannelcpp"></a><span data-ttu-id="794c2-117">LayeredChannel.cpp</span><span class="sxs-lookup"><span data-stu-id="794c2-117">LayeredChannel.cpp</span></span>
 
 
 ```C++
@@ -678,7 +678,7 @@ WS_CUSTOM_CHANNEL_CALLBACKS layeredChannelCallbacks =
 
 
 
-## <a name="layeredlistenerh"></a><span data-ttu-id="61d8b-118">Layeredlistener. h</span><span class="sxs-lookup"><span data-stu-id="61d8b-118">LayeredListener.h</span></span>
+## <a name="layeredlistenerh"></a><span data-ttu-id="794c2-118">LayeredListener.h</span><span class="sxs-lookup"><span data-stu-id="794c2-118">LayeredListener.h</span></span>
 
 
 ```C++
@@ -710,7 +710,7 @@ extern WS_CUSTOM_LISTENER_CALLBACKS layeredListenerCallbacks;
 
 
 
-## <a name="layeredlistenercpp"></a><span data-ttu-id="61d8b-119">Layeredlistener. cpp</span><span class="sxs-lookup"><span data-stu-id="61d8b-119">LayeredListener.cpp</span></span>
+## <a name="layeredlistenercpp"></a><span data-ttu-id="794c2-119">LayeredListener.cpp</span><span class="sxs-lookup"><span data-stu-id="794c2-119">LayeredListener.cpp</span></span>
 
 
 ```C++
@@ -948,7 +948,7 @@ WS_CUSTOM_LISTENER_CALLBACKS layeredListenerCallbacks =
 
 
 
-## <a name="calculatorservicewsdl"></a><span data-ttu-id="61d8b-120">CalculatorService. WSDL</span><span class="sxs-lookup"><span data-stu-id="61d8b-120">CalculatorService.wsdl</span></span>
+## <a name="calculatorservicewsdl"></a><span data-ttu-id="794c2-120">CalculatorService.wsdl</span><span class="sxs-lookup"><span data-stu-id="794c2-120">CalculatorService.wsdl</span></span>
 
 ``` syntax
 <wsdl:definitions 
@@ -1045,7 +1045,7 @@ WS_CUSTOM_LISTENER_CALLBACKS layeredListenerCallbacks =
 </wsdl:definitions>
 ```
 
-## <a name="makefile"></a><span data-ttu-id="61d8b-121">Makefile</span><span class="sxs-lookup"><span data-stu-id="61d8b-121">Makefile</span></span>
+## <a name="makefile"></a><span data-ttu-id="794c2-121">Makefile</span><span class="sxs-lookup"><span data-stu-id="794c2-121">Makefile</span></span>
 
 ``` syntax
 !include <Win32.Mak>
@@ -1080,9 +1080,9 @@ clean:
 
 ```
 
- 
+ 
 
- 
+ 
 
 
 
