@@ -1,34 +1,34 @@
 ---
-description: 'Schritt 1:'
+description: Wählen Sie beim Schreiben eines Transformationsfilters eine Basisklasse aus. Erfahren Sie, welche Klassen für Transformationsfilter geeignet sind.
 ms.assetid: 4b2d3add-0430-480b-ad5f-bb1aa19fef21
-title: 'Schritt 1: Basisklasse auswählen'
+title: 'Schritt 1: Auswählen einer Basisklasse'
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f4679873e78e75b350335b5294db63579fd41f36
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b1a2bbf704bb2247034bc2ba3a6f35812f46aaaa
+ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103866476"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112406463"
 ---
-# <a name="step-1-choose-a-base-class"></a>Schritt 1: Basisklasse auswählen
+# <a name="step-1-choose-a-base-class"></a>Schritt 1: Auswählen einer Basisklasse
 
-Dies ist Schritt 1 des Tutorials zum [Schreiben von Transformations Filtern](writing-transform-filters.md).
+Dies ist Schritt 1 des Tutorials [Schreiben von Transformationsfiltern](writing-transform-filters.md).
 
-Angenommen, Sie entscheiden sich für das Schreiben eines Filters und nicht eines DMO. der erste Schritt besteht darin, die zu verwendende Basisklasse auszuwählen. Die folgenden Klassen sind für Transformations Filter geeignet:
+Unter der Annahme, dass Sie sich entscheiden, einen Filter und keinen DMO zu schreiben, besteht der erste Schritt in der Auswahl der zu verwendenden Basisklasse. Die folgenden Klassen sind für Transformationsfilter geeignet:
 
--   [**Ctransformfilter**](ctransformfilter.md) wurde für Transformations Filter entwickelt, für die separate Eingabe-und Ausgabepuffer verwendet werden. Diese Art von Filter wird manchmal als "Copy-Transform"-Filter bezeichnet. Wenn ein "Copy-Transform"-Filter ein Eingabe Beispiel empfängt, werden neue Daten in ein Ausgabe Beispiel geschrieben und das Ausgabe Beispiel an den nächsten Filter übermittelt.
--   [**Ctransinplacefilter**](ctransinplacefilter.md) wurde für Filter entwickelt, die Daten im ursprünglichen Puffer ändern, auch als "Trans-in-Place"-Filter bezeichnet. Wenn ein transdirektionale Filter eine Stichprobe empfängt, werden die Daten innerhalb dieses Beispiels geändert, und es wird das gleiche Beispiel für einen downstreamvorgang durchgeführt. Die Eingabe-PIN und die Ausgabe-PIN des Filters stellen immer eine Verbindung mit den entsprechenden Medientypen her.
--   [**Cvideotransformfilter**](cvideotransformfilter.md) ist hauptsächlich für Video Decoder konzipiert. Sie wird von **ctransformfilter** abgeleitet, bietet jedoch Funktionen zum Löschen von Frames, wenn der downstreamrenderer dahinter liegt.
--   [**Cbasefilter**](cbasefilter.md) ist eine generische Filterklasse. Die anderen Klassen in dieser Liste werden alle von **cbasefilter** abgeleitet. Wenn keines dieser Elemente geeignet ist, können Sie auf diese Klasse zurückgreifen. Diese Klasse erfordert jedoch auch die meiste Arbeit an Ihrem Teil.
+-   [**CTransformFilter**](ctransformfilter.md) ist für Transformationsfilter konzipiert, die separate Eingabe- und Ausgabepuffer verwenden. Diese Art von Filter wird manchmal als Kopiertransformationsfilter bezeichnet. Wenn ein Kopiertransformationsfilter ein Eingabebeispiel empfängt, schreibt er neue Daten in ein Ausgabebeispiel und übergibt das Ausgabebeispiel an den nächsten Filter.
+-   [**CTransInPlaceFilter**](ctransinplacefilter.md) ist für Filter konzipiert, die Daten im ursprünglichen Puffer ändern, die auch als Trans-in-Place-Filter bezeichnet werden. Wenn ein trans-in-place-Filter eine Stichprobe empfängt, ändert er die Daten in diesem Beispiel und liefert das gleiche Beispiel nachgeschaltet. Der Eingabepin und der Ausgabepin des Filters verbinden sich immer mit übereinstimmenden Medientypen.
+-   [**CVideoTransformFilter**](cvideotransformfilter.md) ist in erster Linie für Videodecoder konzipiert. Sie wird von **CTransformFilter ableiten,** enthält jedoch Funktionen zum Löschen von Frames, wenn der Downstreamrenderer zurückfällt.
+-   [**CBaseFilter**](cbasefilter.md) ist eine generische Filterklasse. Die anderen Klassen in dieser Liste werden alle von **CBaseFilter ableiten.** Wenn keines davon geeignet ist, können Sie auf diese Klasse zurückfallen. Diese Klasse erfordert jedoch auch die meisten Arbeit auf Ihrer Seite.
 -   \[! Wichtig\]  
-    > Direkte Video Transformationen können schwerwiegende Auswirkungen auf die Renderingleistung haben. Direkte Transformationen erfordern Lese-und Schreibvorgänge für den Puffer. Wenn sich der Arbeitsspeicher auf einer Grafikkarte befindet, sind Lesevorgänge erheblich langsamer. Darüber hinaus kann auch eine Kopier Transformation unerwünschte Lesevorgänge verursachen, wenn Sie Sie nicht sorgfältig implementieren. Daher sollten Sie bei der Erstellung einer Video Transformation immer Leistungstests durchführen.
+    > In-Place-Videotransformationen können schwerwiegende Auswirkungen auf die Renderingleistung haben. In-place-Transformationen erfordern Lese-/Änderungs-/Schreibvorgänge für den Puffer. Wenn sich der Arbeitsspeicher auf einer Grafikkarte befindet, sind Lesevorgänge deutlich langsamer. Darüber hinaus kann selbst eine Kopiertransformation unbeabsichtigte Lesevorgänge verursachen, wenn Sie sie nicht sorgfältig implementieren. Daher sollten Sie immer Leistungstests durchführen, wenn Sie eine Videotransformation schreiben.
 
      
 
-Für den RLE-Beispiel Encoder ist entweder **ctransformfilter** oder **cvideotransformfilter** die beste Wahl. Tatsächlich sind die Unterschiede zwischen Ihnen größtenteils intern, sodass es einfach ist, von einem in das andere zu konvertieren. Da sich die Medientypen auf den beiden Pins unterscheiden müssen, ist die **ctransinplacefilter** -Klasse für diesen Filter nicht geeignet. In diesem Beispiel wird **ctransformfilter** verwendet.
+Für den RLE-Beispielencoder ist entweder **CTransformFilter** oder **CVideoTransformFilter die beste Wahl.** Tatsächlich sind die Unterschiede zwischen ihnen größtenteils intern, sodass es einfach ist, von einer in die andere zu konvertieren. Da die Medientypen auf den beiden Stecknadeln unterschiedlich sein müssen, ist die **CTransInPlaceFilter-Klasse** für diesen Filter nicht geeignet. In diesem Beispiel wird **CTransformFilter verwendet.**
 
-Weiter: [Schritt 2. Deklarieren Sie die Filter-Klasse](step-2--declare-the-filter-class.md).
+Weiter: [Schritt 2. Deklarieren Sie die Filterklasse](step-2--declare-the-filter-class.md).
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

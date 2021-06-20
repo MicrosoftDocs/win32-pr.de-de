@@ -1,71 +1,71 @@
 ---
-description: D3DX ist eine Hilfsprogrammbibliothek, die Hilfsdienste bereitstellt. Es handelt sich um eine Ebene oberhalb der Direct3D-Komponente.
+description: Erfahren Sie mehr über die Unterstützung von Linienzeichnungen in D3DX. D3DX ist eine Hilfsprogrammbibliothek, die Hilfsdienste bietet. Es handelt sich um eine Ebene über der Direct3D-Komponente.
 ms.assetid: 34ad82f2-542c-4342-af02-a767d6d4c96c
-title: Zeilen Zeichnungs Unterstützung in D3DX (Direct3D 9)
+title: Unterstützung für Linienzeichnung in D3DX (Direct3D 9)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 974a0fdeb24dad1107f85e6c79603368776bce15
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: c4cf15eae461d0dbe719e99cfac605a6c8b8d272
+ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104392690"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112407533"
 ---
-# <a name="line-drawing-support-in-d3dx-direct3d-9"></a>Zeilen Zeichnungs Unterstützung in D3DX (Direct3D 9)
+# <a name="line-drawing-support-in-d3dx-direct3d-9"></a>Unterstützung für Linienzeichnung in D3DX (Direct3D 9)
 
-D3DX ist eine Hilfsprogrammbibliothek, die Hilfsdienste bereitstellt. Es handelt sich um eine Ebene oberhalb der Direct3D-Komponente.
+D3DX ist eine Hilfsprogrammbibliothek, die Hilfsdienste bietet. Es handelt sich um eine Ebene über der Direct3D-Komponente.
 
-D3DX unterstützt einzelne Pixel weite, Antialiasing-Zeilen. Zeilen Muster werden nicht mehr unterstützt.
+D3DX unterstützt Einpixelweite Antialiasinglinien. Linienmuster werden nicht mehr unterstützt.
 
-Die Zeilen Zeichnungs Bibliothek emuliert Linien mithilfe von Textur Dreiecken und setzt Folgendes voraus:
+Die Linienzeichnungsbibliothek emuliert Linien mithilfe von Texturdreiecken und geht von Folgendem aus:
 
 -   Hardware ist über die Direct3D 9-Schnittstellen verfügbar.
--   Mindestens eine Textur Phase ist verfügbar.
--   64 x 64-Texturen werden verwendet.
+-   Es ist mindestens eine Texturphase verfügbar.
+-   Es werden 64 x 64 Texturen verwendet.
 -   Die folgenden Modi sind verfügbar:
     -   Bilineare Filterung
-    -   Klammer Adress Modus
-    -   Adress Modus Umbruch
-    -   Alpha-op-modulieren
-    -   Alpha Blending (srcblend = src \_ Alpha, destblend = Inv \_ src \_ Alpha)
-    -   Alpha Test, wenn Alpha Blending nicht verfügbar ist; Ergebnis der niedrigeren Qualität
+    -   Adressmodus "Klammer"
+    -   Adressmodus umschließen
+    -   Alpha op modulate
+    -   Alphamischung (SRCBLEND = SRC \_ ALPHA, DESTBLEND = INV \_ SRC \_ ALPHA)
+    -   Alphatest, wenn alpha blending nicht verfügbar ist; Ergebnis mit niedrigerer Qualität
 
-Verwenden Sie zum Rendern von Zeilen mit Antialiasing in Multisampling-Renderingzielen [**ID3DXLine**](id3dxline.md) , mit dem strukturierte Polygone generiert werden. Die Pixel Coverage-Werte, die durch die Zeilen-rasterisierung mit Antialiasing generiert werden, modulieren den Alpha-Wert des Pixels, der durch den Pixelshader berechnet wird. Um eine Antialiasing-Linie zu zeichnen, muss eine Anwendung Alpha Blending aktivieren, und dann muss der D3DRS \_ antialiasedlineenable-Rendering-Zustand auf **true** festgelegt werden.
+Verwenden Sie für das Antialiasing von Linienrendering in Multisample-Renderzielen [**ID3DXLine,**](id3dxline.md) wodurch texturierte Polygone generiert werden. Die Pixelabdeckungswerte, die durch antialiasierte Linienrasterung generiert werden, modulieren den alpha-Wert des Pixels, der vom Pixel-Shader berechnet wird. Um eine Antialiasinglinie zu zeichnen, muss eine Anwendung alpha blending aktivieren und dann den D3DRS \_ ANTIALIASEDLINEENABLE-Renderzustand auf **TRUE festlegen.**
 
 ## <a name="functionality-description"></a>Funktionsbeschreibung
 
-Die Bibliothek unterstützt das Zeichnen farbiger Linien Streifen mit den folgenden Zeilen Features, von denen jede unabhängig voneinander ist:
+Die Bibliothek unterstützt das Zeichnen farbiger Linienstreifen mit den folgenden Linienfeatures, die jeweils unabhängig von anderen sind:
 
 -   Linienstärke
--   Zeilen Muster mit Wiederholung (der Zeilen Muster-Leistungsindikators wird mit jedem [**ID3DXLine::D RAW**](id3dxline--draw.md) -oder [**ID3DXLine::D rawtransform**](id3dxline--drawtransform.md) -Aufrufsatz zurückgesetzt. Er wird nicht mit den einzelnen Segmenten des Zeilen Streifens zurückgesetzt.)
+-   Zeilenmuster mit Wiederholung (der Zeilenmusterzähler wird mit jedem [**ID3DXLine::D raw-**](id3dxline--draw.md) oder [**ID3DXLine::D rawTransform-Aufruf**](id3dxline--drawtransform.md) zurückgesetzt. Es wird nicht mit jedem Segment des Linienstreifens zurückgesetzt.)
 -   Antialiasing
--   OpenGL-stillinien
+-   OpenGL-Stillinien
 
 > [!Note]  
-> Es wird keine mistration unterstützt.
+> Es wird keine Vererbung unterstützt.
 
  
 
-Die Bibliothek verwendet systemeigene Zeichnungs Unterstützung für Hardware Linien (falls im Gerät verfügbar) nur, wenn:
+Die Bibliothek verwendet die Native Hardware-Strichzeichnungsunterstützung (sofern auf dem Gerät verfügbar) nur in folgenden Anwendungen:
 
--   Die Linienstärke ist 1.
--   Es ist kein Zeilen Muster aktiviert.
+-   Die Linienbreite ist 1.
+-   Es ist kein Linienmuster aktiviert.
 
-Einzelne Pixel weite Antialiasing-Linien werden von Hardware unterstützt, sodass diese von der Bibliothek verwendet wird, falls verfügbar. Der LineCaps-Member der [**D3DCAPS9**](/windows/desktop/api/D3D9Caps/ns-d3d9caps-d3dcaps9) -Struktur listet die Hardwarefunktionen für Zeilen Zeichnungs primitive auf.
+Antialiasinglinien mit einer Breite von einem Pixel werden von einigen Hardwarekomponenten unterstützt, daher verwendet die Bibliothek diese, falls verfügbar. Das LineCaps-Member der [**D3DCAPS9-Struktur**](/windows/desktop/api/D3D9Caps/ns-d3d9caps-d3dcaps9) aufzählt Hardwarefunktionen für Grundtypen zum Zeichnen von Linien.
 
-Wenn die Software Zeilen Zeichnung verwendet wird, wird jede Zeile in ein Rechteck erweitert, und vier Vertices werden an den Treiber gesendet.
+Wenn die Softwarelinienzeichnung verwendet wird, wird jede Linie zu einem Rechteck erweitert, und vier Scheitellinien werden an den Treiber gesendet.
 
-Jedes Liniensegment wird mit zwei Dreiecken gezeichnet. Die Breite des primitiven ist die angegebene Breite Plus 1,0. Dies kann zu einer zusätzlichen Zeile oder Spalte in Pixel führen. Wenn die Linie breiter ist, wird der Farbverlauf des AntiAlias in der Textur immer größer, und die vollständig undurchsichtigeren texeln werden um die Mitte repliziert. Der Farbverlauf wird in der v-Richtung der Textur codiert und normalerweise entlang der u-Richtung repliziert. Der Textur Adressierungs Modus für v ist eine Klammer.
+Jedes Liniensegment wird mit zwei Dreiecken gezeichnet. Die Breite des Primitivs ist die angegebene Breite plus 1,0, was zu einer zusätzlichen Zeile oder Spalte von Pixeln führen kann. Wenn die Linie breiter wird, wird der Antialias-Farbverlauf in der Textur ungefährer, und in der Mitte werden mehr vollständig deckende Texel repliziert. Der Farbverlauf wird in v-Richtung der Textur codiert und in der Regel entlang der U-Richtung repliziert. Der Texturadrierungsmodus für v ist "Klammer".
 
-Jedes Zeilen Segment in der Liste kann als separate Zeile betrachtet werden, die am vorherigen Endpunkt beginnt.
+Jedes Liniensegment in der Liste kann als separate Zeile betrachtet werden, die ab dem vorherigen Endpunkt beginnt.
 
-Die antialiasingqualität entlang der Kanten, die bis zur Länge der ursprünglichen Zeile parallel ist, weist darauf hin, dass die Linie breiter wird. Es wird erwartet, dass die Linienbreite, die größer als 32,0 ist, die Artefakte entlang dieser Ränder anweist.
+Die Antialiasingqualität entlang der Kanten, die parallel zur Länge der ursprünglichen Linie verlaufen, wird durch die Breite der Linie immer größer. Es wird erwartet, dass Linienbreiten größer als 32,0 Artefakte entlang dieser Ränder zeigen.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[D3DX](d3dx.md)
+[D3dx](d3dx.md)
 </dt> </dl>
 
  

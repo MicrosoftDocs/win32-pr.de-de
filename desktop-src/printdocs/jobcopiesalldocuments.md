@@ -1,19 +1,19 @@
 ---
-description: Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter Spezifikation des Druckschemas.
+description: Erfahren Sie mehr über das JobCopiesAllDocuments-Element, das die Anzahl der Kopien eines Auftrags angibt.
 ms.assetid: 584a71cd-fc32-485e-a627-27be95c377a9
 title: JobCopiesAllDocuments
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3e8e606095462dc3a2eee1391121bf663de3655c
-ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
+ms.openlocfilehash: 05166715a5985c5ddee33fa6808d0fb6b150774b
+ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "107998367"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112409033"
 ---
 # <a name="jobcopiesalldocuments"></a>JobCopiesAllDocuments
 
-Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter [Print Schema Specification (Spezifikation des Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
+Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie unter Print Schema Specification (Spezifikation des [Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 
 Gibt die Anzahl der Kopien eines Auftrags an.
 
@@ -36,7 +36,7 @@ Gibt die Anzahl der Kopien eines Auftrags an.
 
 ## <a name="structure-content"></a>Strukturieren von Inhalt
 
-Die XML-Struktur dieses Elements ist:
+Die XML-Struktur dieses Elements lautet:
 
 ``` syntax
 <psf:ParameterDef name="psk:JobCopiesAllDocuments">
@@ -67,7 +67,7 @@ Die XML-Struktur dieses Elements ist:
 
 ## <a name="structure-properties"></a>Struktureigenschaften
 
-In der folgenden Tabelle werden die Merkmale der Variablen beschrieben, die in der XML-Struktur definiert sind.
+In der folgenden Tabelle werden die Merkmale der in der XML-Struktur definierten Variablen beschrieben.
 
 
 
@@ -77,7 +77,7 @@ In der folgenden Tabelle werden die Merkmale der Variablen beschrieben, die in d
 | DefaultValue<br/> | integer<br/> | 1<br/>                 |
 | MaxValue<br/>     | integer<br/> | nicht definiert<br/>         |
 | Minvalue<br/>     | integer<br/> | 1<br/>                 |
-| Obligatorisch.<br/>    | Zeichenfolge<br/>  | psk:Unconditional<br/> |
+| Obligatorisch.<br/>    | Zeichenfolge<br/>  | psk:Bedingungslos<br/> |
 | Mehrere<br/>     | integer<br/> | 1<br/>                 |
 | Unittype<br/>     | Zeichenfolge<br/>  | Kopien<br/>            |
 

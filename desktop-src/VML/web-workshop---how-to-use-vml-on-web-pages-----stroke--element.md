@@ -1,69 +1,69 @@
 ---
 title: Verwenden des Stroke-Elements
-description: In diesem Thema wird VML beschrieben, eine Funktion, die ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+description: In diesem Artikel wird die Verwendung des Stroke-Elements von VML beschrieben, einem Feature, das ab Windows Internet Explorer 9 veraltet ist.
 ms.assetid: e3d9dbe5-e087-4b6f-8318-c7d4485cd502
 keywords:
-- Webworkshop, Stroke-Element
-- Entwerfen von Webseiten, Stroke-Element
-- Vector Markup Language (VML), Stroke-Element
-- VML (Vector Markup Language), Stroke-Element
-- Vektorgrafiken, Stroke-Element
-- Stroke-Element
+- Web workshop,stroke-Element
+- Entwerfen von Webseiten, Strichelement
+- Vector Markup Language (VML),Strichelement
+- VML (Vector Markup Language),Strichelement
+- Vektorgrafik, Strichelement
+- stroke-Element
 - VML-Elemente, Strich
-- VML-Formen, Stroke-Element
-- Vector Markup Language (VML), Eigenschafts Attribut für dashstile
-- VML (Vector Markup Language), Eigenschafts Attribut für dashstile
-- Vektorgrafiken, Eigenschafts Attribut für dashstile
-- DashStyle-Eigenschafts Attribut
-- Vector Markup Language (VML), Opacity-Eigenschafts Attribut
-- VML (Vector Markup Language), Opacity-Eigenschafts Attribut
-- Vektorgrafiken, Opacity-Eigenschafts Attribut
-- Deck Kraft-Eigenschafts Attribut
-- Vector Markup Language (VML), LineStyle-Eigenschafts Attribut
-- VML (Vector Markup Language), LineStyle-Eigenschafts Attribut
-- Vektorgrafiken, LineStyle-Eigenschafts Attribut
-- LineStyle-Eigenschafts Attribut
-- Vector Markup Language (VML), JOINSTYLE-Eigenschafts Attribut
-- VML (Vector Markup Language), JOINSTYLE-Eigenschafts Attribut
-- Vektorgrafiken, JOINSTYLE-Eigenschafts Attribut
-- JOINSTYLE-Eigenschafts Attribut
-- Vector Markup Language (VML), FillType-Eigenschafts Attribut
-- VML (Vector Markup Language), FillType-Eigenschafts Attribut
-- Vektorgrafiken, FillType-Eigenschafts Attribut
-- FillType-Eigenschafts Attribut
+- VML-Formen, Strichelement
+- Vector Markup Language (VML),Dashstyle-Eigenschaftsattribut
+- VML (Vector Markup Language),Dashstyle-Eigenschaftsattribut
+- Vektorgrafik, Dashstyle-Eigenschaftsattribut
+- dashstyle-Eigenschaftsattribut
+- Vector Markup Language (VML),Opacity-Eigenschaftsattribut
+- VML-Eigenschaftsattribut (Vector Markup Language),Deckkrafteigenschaft
+- Vektorgrafik, Opacity-Eigenschaftsattribut
+- Opacity-Eigenschaftsattribut
+- Vector Markup Language (VML),Linestyle-Eigenschaftsattribut
+- VML (Vector Markup Language),Linestyle-Eigenschaftsattribut
+- Vektorgrafik, Eigenschaftenattribut "linestyle"
+- linestyle-Eigenschaftsattribut
+- Vector Markup Language (VML),Joinstyle-Eigenschaftsattribut
+- VML (Vector Markup Language),Joinstyle-Eigenschaftsattribut
+- Vektorgrafik, Joinstyle-Eigenschaftsattribut
+- joinstyle-Eigenschaftsattribut
+- Vector Markup Language (VML), Filltype-Eigenschaftsattribut
+- VML (Vector Markup Language),Filltype-Eigenschaftsattribut
+- Vektorgrafiken, Filltype-Eigenschaftsattribut
+- filltype-Eigenschaftsattribut
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4b58e02945884ea63ad1be01e67cfc156951cd5e
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: dff7a4b3bc654063fe8156476cc9c52453247a0b
+ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104316353"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112407843"
 ---
 # <a name="using-the-stroke-element"></a>Verwenden des Stroke-Elements
 
-In diesem Thema wird VML beschrieben, eine Funktion, die ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
 
 > [!Note]  
-> Ab Dezember 2011 wurde dieses Thema archiviert. Daher wird er nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [archivierte Inhalte](/previous-versions/windows/internet-explorer/ie-developer/). Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center](https://msdn.microsoft.com/ie/).
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie unter [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
- 
+ 
 
 Verwenden von `<stroke>`
 
-Wie Sie gelernt haben, können Sie die Eigenschaften Attribute **strokeColor** und **strokeweight** einer vordefinierten Form (z. b. `<oval>` ,, `<line>` , `<polyline>` `<curve>` , `<rect>` ,,--) verwenden, `<roundrect>` `<arc>` um die Farbe und Gewichtung der Kontur einer Form anzugeben. In diesem Thema wird veranschaulicht, wie Sie eine Form mit einer erweiterten Gliederung zeichnen.
+Wie Sie gelernt haben, können Sie die **Strokecolor-** und **Strokeweight-Eigenschaftsattribute** einer vordefinierten Form wie , , , , , , `<oval>` `<line>` `<polyline>` `<curve>` `<rect>` `<roundrect>` `<arc>` verwenden, um die Farbe und Gewichtung der Kontur einer Form anzugeben. In diesem Thema wird veranschaulicht, wie eine Form mit einer erweiterten Kontur gezeichnet wird.
 
-Sie können das `<stroke>` untergeordnete Element innerhalb des- `<shape>` ,-oder-Elements `<shapetype>` oder eines beliebigen vordefinierten Shape-Elements platzieren, um zu beschreiben, wie der Umriss der Form gezeichnet wird. Sie können dann die Eigenschafts Attribute (z. b. "Dashboard", " [Deck Kraft](#opacity)", " [LineStyle](#linestyle) [", "](#dashstyle) [JOINSTYLE](#joinstyle)", " [FillType](#filltype) ") des `<stroke>` unter Elements verwenden, um die Kontur anzupassen.
+Sie können das `<stroke>` Unterelement innerhalb von `<shape>` oder oder in `<shapetype>` einem beliebigen vordefinierten Formelement platzieren, um zu beschreiben, wie die Kontur der Form gezeichnet wird. Anschließend können Sie die Eigenschaftsattribute (z. [B. Dashstyle,](#dashstyle) [Deckkraft,](#opacity) [Linestyle,](#linestyle) [Joinstyle,](#joinstyle) [Filltype)](#filltype) des `<stroke>` Unterelements verwenden, um die Kontur anzupassen.
 
-[![zurück ](images/top.gif) zum Anfang](#top)
+[![Zurück zum Anfang ](images/top.gif) Zurück zum Anfang](#top)
 
-## <a name="dashstyle"></a>DashStyle
+## <a name="dashstyle"></a>Dashstyle
 
-Sie können **das Eigenschafts** Attribut "Dashboard" des `<stroke>` unter Elements verwenden, um einen Umriss mit verschiedenen Bindestrichen zu zeichnen.
+Sie können das **Dashstyle-Eigenschaftsattribut** des `<stroke>` Unterelements verwenden, um eine Kontur mit verschiedenen Bindestrichen zu zeichnen.
 
 **Beispiele:**
 
-Wenn Sie `<v:stroke dashstyle="solid" />` im- `<line>` Element angeben, können Sie eine vollständig erstellte Linie erstellen, wie in der folgenden VML-Darstellung gezeigt:
+Wenn Sie `<v:stroke dashstyle="solid" />` innerhalb des `<line>` -Elements angeben, können Sie eine durchgezogene Linie erstellen, wie in der folgenden VML-Darstellung gezeigt:
 
 ![solid.gif (96 Bytes)](images/solid.gif)
 
@@ -79,9 +79,9 @@ strokecolor="red" strokeweight="2pt">
 
 
 
-Wenn Sie das Eigenschafts Attribut "Dashboard" in "Punkt" ändern, können Sie eine gepunktete Linie erstellen, wie **in der folgenden** VML-Darstellung gezeigt:
+Wenn Sie das **Dashstyle-Eigenschaftsattribut** in "dot" ändern, können Sie eine gepunktete Linie erstellen, wie in der folgenden VML-Darstellung gezeigt:
 
-![dot.gif (144 Bytes)](images/dot.gif)
+![dot.gif (144 Byte)](images/dot.gif)
 
 
 ```HTML
@@ -95,9 +95,9 @@ strokecolor="red" strokeweight="2pt">
 
 
 
-Wenn Sie das Eigenschafts Attribut "Dashboard" in "Dash" ändern, können Sie wie **in der folgenden** VML-Darstellung gezeigt eine Bindestrich Linie erstellen:
+Wenn Sie das **Dashstyle-Eigenschaftsattribut** in "Bindestrich" ändern, können Sie eine Bindestrichlinie erstellen, wie in der folgenden VML-Darstellung gezeigt:
 
-![dash.gif (137 bytes)](images/dash.gif)
+![dash.gif (137 Bytes)](images/dash.gif)
 
 
 ```HTML
@@ -111,9 +111,9 @@ strokecolor="red" strokeweight="2pt">
 
 
 
-Wenn Sie das Eigenschafts Attribut " **DashStyle** " in "DashDot" ändern, können Sie eine Linie mit einem gestrichelten und gepunkteten Stil erstellen, wie in der folgenden VML-Darstellung dargestellt:
+Wenn Sie das **Dashstyle-Eigenschaftsattribut** in "dashdot" ändern, können Sie eine Linie mit einem gestrichelten und gepunkteten Stil erstellen, wie in der folgenden VML-Darstellung gezeigt:
 
-![dashdot.gif (145 bytes)](images/dashdot.gif)
+![dashdot.gif (145 Bytes)](images/dashdot.gif)
 
 
 ```HTML
@@ -127,7 +127,7 @@ strokecolor="red" strokeweight="2pt">
 
 
 
-Wenn Sie das Eigenschafts Attribut "Dashboard" in "longdash" ändern, können Sie eine Zeile mit einem langen gestrichelten Stil erstellen, wie **in der folgenden** VML-Darstellung dargestellt:
+Wenn Sie das **Dashstyle-Eigenschaftsattribut** in "longdash" ändern, können Sie eine Linie mit einem langen gestrichelten Stil erstellen, wie in der folgenden VML-Darstellung gezeigt:
 
 ![longdash.gif (123 Bytes)](images/longdash.gif)
 
@@ -143,9 +143,9 @@ strokecolor="red" strokeweight="2pt">
 
 
 
-Wenn **Sie das** Eigenschafts Attribut "Dashboard" in "longdashdot" ändern, können Sie eine Zeile mit einem langen gestrichelten und gepunkteten Stil erstellen, wie in der folgenden VML-Darstellung dargestellt:
+Wenn Sie das **Dashstyle-Eigenschaftsattribut** in "longdashdot" ändern, können Sie eine Linie mit einem langen gestrichelten und gepunkteten Stil erstellen, wie in der folgenden VML-Darstellung gezeigt:
 
-![longdashdot.gif (135 bytes)](images/longdashdot.gif)
+![longdashdot.gif (135 Byte)](images/longdashdot.gif)
 
 
 ```HTML
@@ -159,9 +159,9 @@ strokecolor="red" strokeweight="2pt">
 
 
 
-Wenn Sie im- `<v:stroke dashstyle="dashdot" />` `<rect>` Element platzieren, können Sie ein Rechteck mit einem gestrichelten und gepunkteten Umriss erstellen, wie in der folgenden VML-Darstellung dargestellt:
+Wenn Sie `<v:stroke dashstyle="dashdot" />` innerhalb des Elements `<rect>` platzieren, können Sie ein Rechteck mit gestrichelter und gepunkteter Kontur erstellen, wie in der folgenden VML-Darstellung gezeigt:
 
-![rect.gif (615 bytes)](images/rect.gif)
+![rect.gif (615 Bytes)](images/rect.gif)
 
 
 ```HTML
@@ -174,15 +174,15 @@ Wenn Sie im- `<v:stroke dashstyle="dashdot" />` `<rect>` Element platzieren, kö
 
 
 
-[![zurück ](images/top.gif) zum Anfang](#top)
+[![Zurück zum Anfang ](images/top.gif) Zurück zum Anfang](#top)
 
 ## <a name="opacity"></a>Durchlässigkeit
 
-Sie können das Attribut der **Deck Kraft** -Eigenschaft des `<stroke>` unter Elements verwenden, um eine Gliederung mit verschiedenen Deckkraft Stilen zu zeichnen. Der Wert für das Attribut für die **Deck Kraft** -Eigenschaft kann eine beliebige Zahl zwischen 0 und 1 sein. Standardmäßig ist der Wert 1, was eine vollständige Deckkraft angibt.
+Sie können das **Opacity-Eigenschaftsattribut** des `<stroke>` Unterelements verwenden, um eine Kontur mit verschiedenen Deckkraftstilen zu zeichnen. Der Wert für das **Opacity-Eigenschaftsattribut** kann eine beliebige Zahl zwischen 0 und 1 sein. Standardmäßig ist es 1, was die vollständige Deckkraft angibt.
 
 **Beispiele:**
 
-In der folgenden VML-Darstellung wird eine Zeile mit vollständiger Deckkraft erstellt:
+Die folgende VML-Darstellung erstellt eine Linie mit vollständiger Deckkraft:
 
 ![line1.gif (96 Bytes)](images/line1.gif)
 
@@ -197,9 +197,9 @@ strokeweight="2pt">
 
 
 
-Wenn Sie `<v:stroke opacity="0.5" />` innerhalb des- `<line>` Elements hinzufügen, können Sie eine Zeile mit einer Deckkraft von 50% erstellen, wie in der folgenden VML-Darstellung dargestellt:
+Wenn Sie `<v:stroke opacity="0.5" />` innerhalb des `<line>` -Elements hinzufügen, können Sie eine Linie mit einer Deckkraft von 50 % erstellen, wie in der folgenden VML-Darstellung gezeigt:
 
-![line2.gif (108 bytes)](images/line2.gif)
+![line2.gif (108 Bytes)](images/line2.gif)
 
 
 ```HTML
@@ -213,15 +213,15 @@ strokeweight="2pt">
 
 
 
-[![zurück ](images/top.gif) zum Anfang](#top)
+[![Zurück zum Anfang ](images/top.gif) Zurück zum Anfang](#top)
 
-## <a name="linestyle"></a>LineStyle
+## <a name="linestyle"></a>Linestyle
 
-Sie können das **LineStyle** -Eigenschafts Attribut des `<stroke>` untergeordneten-Elements verwenden, um eine Gliederung mit verschiedenen Linienstilen zu zeichnen.
+Sie können das Eigenschaftenattribut **linestyle** des `<stroke>` Unterelements verwenden, um eine Kontur mit verschiedenen Linienstilen zu zeichnen.
 
 **Beispiele:**
 
-Wenn Sie `<v:stroke linestyle="single" />` im- `<rect>` Element angeben, können Sie ein Rechteck mit einem einzelnen Umriss erstellen, wie in der folgenden VML-Darstellung dargestellt:
+Wenn Sie `<v:stroke linestyle="single" />` im `<rect>` -Element angeben, können Sie ein Rechteck mit einer einzelnen Kontur erstellen, wie in der folgenden VML-Darstellung gezeigt:
 
 ![single.gif (537 Bytes)](images/single.gif)
 
@@ -236,9 +236,9 @@ Wenn Sie `<v:stroke linestyle="single" />` im- `<rect>` Element angeben, können
 
 
 
-Wenn Sie das **LineStyle** -Eigenschafts Attribut in "Thin Thin" ändern, können Sie ein Rechteck mit der Kontur (1:1:1) erstellen, wie in der folgenden VML-Darstellung gezeigt:
+Wenn Sie  das Linestyle-Eigenschaftsattribut in "thinthin" ändern, können Sie ein Rechteck mit der Kontur (1:1:1) erstellen, wie in der folgenden VML-Darstellung gezeigt:
 
-![thinthin.gif (642 bytes)](images/thinthin.gif)
+![thinthin.gif (642 Byte)](images/thinthin.gif)
 
 
 ```HTML
@@ -252,9 +252,9 @@ strokeweight="10pt">
 
 
 
-Wenn Sie das **LineStyle** -Eigenschafts Attribut in "Thin Thick" ändern, können Sie ein Rechteck mit der Kontur (1:1:2) erstellen, wie in der folgenden VML-Darstellung gezeigt:
+Wenn Sie  das Linestyle-Eigenschaftsattribut in "thinthick" ändern, können Sie ein Rechteck mit der Kontur (1:1:2) erstellen, wie in der folgenden VML-Darstellung gezeigt:
 
-![thinthick.gif (646 bytes)](images/thinthick.gif)
+![thinthick.gif (646 Bytes)](images/thinthick.gif)
 
 
 ```HTML
@@ -268,9 +268,9 @@ strokeweight="10pt">
 
 
 
-Wenn Sie das **LineStyle** -Eigenschafts Attribut in "Thick Thin" ändern, können Sie ein Rechteck mit der Kontur (2:1:1) erstellen, wie in der folgenden VML-Darstellung gezeigt:
+Wenn Sie das Eigenschaftenattribut **linestyle** in "thickthin" ändern, können Sie ein Rechteck mit der Kontur (2:1:1) erstellen, wie in der folgenden VML-Darstellung gezeigt:
 
-![thickthin.gif (676 bytes)](images/thickthin.gif)
+![thickthin.gif (676 Bytes)](images/thickthin.gif)
 
 
 ```HTML
@@ -284,9 +284,9 @@ strokeweight="10pt">
 
 
 
-Wenn Sie das **LineStyle** -Eigenschafts Attribut in "thickbetweenthin" ändern, können Sie ein Rechteck mit der Kontur (1:1:2:1:1) erstellen, wie in der folgenden VML-Darstellung gezeigt:
+Wenn Sie  das Linestyle-Eigenschaftsattribut in "thickbetweenthin" ändern, können Sie ein Rechteck mit der Kontur (1:1:2:1:1) erstellen, wie in der folgenden VML-Darstellung gezeigt:
 
-![thickbthin.gif (669 bytes)](images/thickbthin.gif)
+![thickbthin.gif (669 Bytes)](images/thickbthin.gif)
 
 
 ```HTML
@@ -300,15 +300,15 @@ strokeweight="10pt">
 
 
 
-[![zurück ](images/top.gif) zum Anfang](#top)
+[![Zurück zum Anfang ](images/top.gif) Zurück zum Anfang](#top)
 
-## <a name="joinstyle"></a>JOINSTYLE
+## <a name="joinstyle"></a>joinstyle
 
-Sie können das **JOINSTYLE** -Attribut des `<stroke>` untergeordneten-Elements verwenden, um zu definieren, wie Linien verknüpft werden.
+Sie können das **joinstyle-Attribut** des `<stroke>` Unterelements verwenden, um zu definieren, wie Zeilen miteinander verknüpft werden.
 
-Um z. b. eine Form zu erstellen, die die roundjoingliederung hat, wie in der folgenden Abbildung dargestellt, können Sie im- `<v:stroke joinstyle="round" />` `<polyline>` Element angeben, wie in der folgenden VML-Darstellung gezeigt:
+Um z. B. eine Form mit der Rundungsverknüpfungsgliederung zu erstellen, wie in der folgenden Abbildung gezeigt, können Sie `<v:stroke joinstyle="round" />` innerhalb des `<polyline>` -Elements angeben, wie in der folgenden VML-Darstellung gezeigt:
 
-![round.gif (660 bytes)](images/round.gif)
+![round.gif (660 Bytes)](images/round.gif)
 
 
 ```HTML
@@ -323,9 +323,9 @@ strokecolor="red" strokeweight="20pt">
 
 
 
-Wenn Sie das Attribut " **JOINSTYLE** Property" in "abvel" ändern, können Sie eine Form erstellen, die die Kontur für den Abschrägungs Join enthält, wie in der folgenden VML-Darstellung dargestellt:
+Wenn Sie  das Joinstyle-Eigenschaftsattribut in "abschrägung" ändern, können Sie eine Form mit der Abschrägungsverknüpfungsgliederung erstellen, wie in der folgenden VML-Darstellung gezeigt:
 
-![bevel.gif (650 bytes)](images/bevel.gif)
+![bevel.gif (650 Byte)](images/bevel.gif)
 
 
 ```HTML
@@ -340,9 +340,9 @@ strokecolor="red" strokeweight="20pt">
 
 
 
-Wenn Sie das Attribut " **JOINSTYLE** Property" in "Miter" ändern, können Sie wie in der folgenden VML-Darstellung gezeigt eine Form erstellen, die die Beschreibung des Miter-Joins hat:
+Wenn Sie  das joinstyle-Eigenschaftsattribut in "miter" ändern, können Sie eine Form mit der Kontur "miter-join" erstellen, wie in der folgenden VML-Darstellung gezeigt:
 
-![miter.gif (702 bytes)](images/miter.gif)
+![miter.gif (702 Bytes)](images/miter.gif)
 
 
 ```HTML
@@ -357,17 +357,17 @@ strokecolor="red" strokeweight="20pt">
 
 
 
-[![zurück ](images/top.gif) zum Anfang](#top)
+[![Zurück zum Anfang ](images/top.gif) Zurück zum Anfang](#top)
 
-## <a name="filltype"></a>FillType
+## <a name="filltype"></a>filltype
 
-Sie können das **FillType** -Eigenschafts Attribut des `<stroke>` unter Elements verwenden, um einen Umriss mit verschiedenen Füll Effekten zu zeichnen.
+Sie können  das filltype-Eigenschaftsattribut des `<stroke>` Unterelements verwenden, um eine Kontur mit verschiedenen Fülleffekten zu zeichnen.
 
 **Beispiele:**
 
-Wenn Sie `<v:stroke filltype="solid" />` im- `<roundrect>` Element angeben, können Sie ein abgerundetes Rechteck mit dem vollständig gefüllten Umriss erstellen, wie in der folgenden VML-Darstellung dargestellt:
+Wenn Sie `<v:stroke filltype="solid" />` im `<roundrect>` -Element angeben, können Sie ein abgerundetes Rechteck mit der durchgezogenen Kontur erstellen, wie in der folgenden VML-Darstellung gezeigt:
 
-![solid.gif (701 Bytes)](images/solidborder.gif)
+![solid.gif (701 Byte)](images/solidborder.gif)
 
 
 ```HTML
@@ -381,7 +381,7 @@ strokeweight="15pt">
 
 
 
-Wenn Sie das **FillType** -Eigenschafts Attribut in "Pattern" ändern, das **src** -Eigenschafts Attribut auf den Speicherort der Pattern-Bilddatei verweisen und das **color2** -Eigenschafts Attribut auf die zweite Muster Farbe festlegen, können Sie ein abgerundetes Rechteck mit einem Muster Umriss erstellen, wie in der folgenden VML-Darstellung dargestellt:
+Wenn Sie  das filltype-Eigenschaftsattribut in "pattern" ändern, das src-Eigenschaftsattribut auf den Speicherort der Musterbilddatei verweisen und das **Color2-Eigenschaftsattribut** auf die zweite Musterfarbe festlegen, können Sie ein abgerundetes Rechteck mit einer Mustergliederung erstellen, wie in der folgenden VML-Darstellung gezeigt: 
 
 ![pattern.gif (1055 Bytes)](images/pattern.gif)
 
@@ -398,7 +398,7 @@ color2="green" />
 
 
 
-Wenn Sie das **FillType** -Eigenschafts Attribut in "Tile" ändern und das **src** -Eigenschafts Attribut auf den Speicherort der Bilddatei verweisen, können Sie ein abgerundetes Rechteck mit einer gekachelten Gliederung erstellen, wie in der folgenden VML-Darstellung dargestellt:
+Wenn Sie  das Filltype-Eigenschaftsattribut in "tile" ändern und das src-Eigenschaftsattribut auf den Speicherort der Bilddatei verweisen, können Sie ein abgerundetes Rechteck mit einer gekachelten Gliederung erstellen, wie in der folgenden VML-Darstellung gezeigt: 
 
 ![tile.gif (6617 Bytes)](images/tile.gif)
 
@@ -414,7 +414,7 @@ strokeweight="15pt">
 
 
 
-Wenn Sie das **FillType** -Eigenschafts Attribut in "Frame" ändern und das **src** -Eigenschafts Attribut auf den Speicherort der Bilddatei verweisen, können Sie ein abgerundetes Rechteck mit einer Bild Gliederung erstellen, wie in der folgenden VML-Darstellung dargestellt:
+Wenn Sie  das filltype-Eigenschaftsattribut in "frame" ändern und das src-Eigenschaftsattribut auf den Speicherort der Bilddatei verweisen, können Sie ein abgerundetes Rechteck mit einer Bildgliederung erstellen, wie in der folgenden VML-Darstellung gezeigt: 
 
 ![frame.gif (6203 Bytes)](images/frame.gif)
 
@@ -430,8 +430,8 @@ strokeweight="15pt">
 
 
 
-Weitere Informationen zu diesem Element finden Sie in der [VML-Spezifikation](https://www.w3.org/TR/NOTE-VML#-toc416858395) .
+Weitere Informationen zu diesem Element finden Sie in der [VML-Spezifikation.](https://www.w3.org/TR/NOTE-VML#-toc416858395)
 
- 
+ 
 
- 
+ 

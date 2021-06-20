@@ -1,21 +1,21 @@
 ---
-description: Das Eigenschaften Gruppen Trennzeichen, das in Eigenschafts Listen verwendet wird, um Audiodateien von anderen Typen zu trennen. Verwenden Sie diese Eigenschaft nicht zum erhalten oder Festlegen von Werten. Sie ist nur als Marker vorgesehen.
+description: Erfahren Sie mehr über die System.PropGroup.Message-Eigenschaft. Verwenden Sie diese Eigenschaft nicht zum Abrufen oder Festlegen von Werten. Sie ist nur als Marker vorgesehen.
 ms.assetid: bbb475f3-f5da-42f1-be8f-396c5be86417
-title: System. propgroup. Message
+title: System.PropGroup.Message
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7d8b90527040f4ff3b702811f74efa0ed5caf763
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 603a0e85c54d736a086585d932638ec908a0f566
+ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106347969"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112405163"
 ---
-# <a name="systempropgroupmessage"></a>System. propgroup. Message
+# <a name="systempropgroupmessage"></a>System.PropGroup.Message
 
-Das Eigenschaften Gruppen Trennzeichen, das in Eigenschafts Listen verwendet wird, um Audiodateien von anderen Typen zu trennen. Verwenden Sie diese Eigenschaft nicht zum erhalten oder Festlegen von Werten. Sie ist nur als Marker vorgesehen.
+Das Eigenschaftengruppentrennzeichen, das in Eigenschaftenlisten verwendet wird, um Audiodateien von anderen Typen zu trennen. Verwenden Sie diese Eigenschaft nicht zum Abrufen oder Festlegen von Werten. Sie ist nur als Marker vorgesehen.
 
-## <a name="windows-10-version-1703-windows-10-version-1607-windows-10-version-1511-windows-10-version-1507-windows-81-windows-8-windows-7-windows-vista"></a>Windows 10, Version 1703, Windows 10, Version 1607, Windows 10, Version 1511, Windows 10, Version 1507, Windows 8.1, Windows 8, Windows 7, Windows Vista
+## <a name="windows-10-version-1703-windows-10-version-1607-windows-10-version-1511-windows-10-version-1507-windows-81-windows-8-windows-7-windows-vista"></a>Windows 10, version 1703, Windows 10, version 1607, Windows 10, version 1511, Windows 10, version 1507, Windows 8.1, Windows 8, Windows 7, Windows Vista
 
 ```
 propertyDescription
@@ -32,52 +32,52 @@ propertyDescription
 
 ## <a name="remarks"></a>Bemerkungen
 
-Pkey-Werte werden in "propkey. h" definiert.
+PKEY-Werte werden in Propkey.h definiert.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[propertydescription](./propdesc-schema-propertydescription.md)
+[propertyDescription](./propdesc-schema-propertydescription.md)
 </dt> <dt>
 
-[SearchInfo](./propdesc-schema-searchinfo.md)
+[searchInfo](./propdesc-schema-searchinfo.md)
 </dt> <dt>
 
-[Labelinfo](./propdesc-schema-labelinfo.md)
+[labelInfo](./propdesc-schema-labelinfo.md)
 </dt> <dt>
 
-[TypeInfo](./propdesc-schema-typeinfo.md)
+[Typeinfo](./propdesc-schema-typeinfo.md)
 </dt> <dt>
 
-[Display Info](./propdesc-schema-displayinfo.md)
+[displayInfo](./propdesc-schema-displayinfo.md)
 </dt> <dt>
 
-[StringFormat](./propdesc-schema-stringformat.md)
+[Stringformat](./propdesc-schema-stringformat.md)
 </dt> <dt>
 
-[BooleanFormat](./propdesc-schema-booleanformat.md)
+[booleanFormat](./propdesc-schema-booleanformat.md)
 </dt> <dt>
 
-[NumberFormat](./propdesc-schema-numberformat.md)
+[Numberformat](./propdesc-schema-numberformat.md)
 </dt> <dt>
 
 [dateTimeFormat](./propdesc-schema-datetimeformat.md)
 </dt> <dt>
 
-[enumeratedlist](./propdesc-schema-enumeratedlist.md)
+[enumeratedList](./propdesc-schema-enumeratedlist.md)
 </dt> <dt>
 
-[DrawControl](./propdesc-schema-drawcontrol.md)
+[drawControl](./propdesc-schema-drawcontrol.md)
 </dt> <dt>
 
-[editcontrol](./propdesc-schema-editcontrol.md)
+[editControl](./propdesc-schema-editcontrol.md)
 </dt> <dt>
 
-[FilterControl](./propdesc-schema-filtercontrol.md)
+[Filtercontrol](./propdesc-schema-filtercontrol.md)
 </dt> <dt>
 
-[querycontrol](./propdesc-schema-querycontrol.md)
+[queryControl](./propdesc-schema-querycontrol.md)
 </dt> </dl>
 
  

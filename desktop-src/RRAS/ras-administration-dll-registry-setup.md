@@ -1,66 +1,66 @@
 ---
-title: Informationen zur Registrierungs Einrichtung der RAS-Verwaltung
-description: Das Setup Programm für eine Drittanbieter-RAS-Verwaltungs-dll muss die dll bei RAS registrieren, indem Sie Informationen unter dem folgenden Schlüssel in der Registrierung bereitstellt.
+title: Informationen zum Setup der RAS-Verwaltungs-DLL-Registrierung
+description: Machen Sie sich mit den Anforderungen für die Registrierung einer RAS-Verwaltungs-DLL (Remote Access Service) eines Drittanbieters bei RAS bewusst. RAS unterstützt mehrere RAS-Verwaltungs-DLLs.
 ms.assetid: e83a5e37-a39d-4465-abc9-653cdd56893b
 keywords:
-- RAS-Administration-RRAS, Einrichten der DLL-Registrierung
+- RAS-Administration RRAS , SETUP DER DLL-Registrierung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2cf487f792a4add9ebf61e8f866b9f0577fb468d
-ms.sourcegitcommit: cba7f424a292fd7f3a8518947b9466439b455419
+ms.openlocfilehash: 8b9a7b7c48422264a890a74b1bab36e61672f11d
+ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "103857827"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112406663"
 ---
-# <a name="about-ras-administration-dll-registry-setup"></a>Informationen zur Registrierungs Einrichtung der RAS-Verwaltung
+# <a name="about-ras-administration-dll-registry-setup"></a>Informationen zum Setup der RAS-Verwaltungs-DLL-Registrierung
 
-Das Setup Programm für eine Drittanbieter-RAS-Verwaltungs-dll muss die dll bei RAS registrieren, indem Sie Informationen unter dem folgenden Schlüssel in der Registrierung bereitstellt.
+Das Setupprogramm für eine RAS-Verwaltungs-DLL eines Drittanbieters muss die DLL bei RAS registrieren, indem Informationen unter dem folgenden Schlüssel in der Registrierung zur Verfügung gestellt werden.
 
 ```
 HKEY_LOCAL_MACHINE
-   SOFTWARE
-      Microsoft
-         RAS
-            AdminDll
+   SOFTWARE
+      Microsoft
+         RAS
+            AdminDll
 ```
 
-Um die dll zu registrieren, legen Sie die folgenden Werte unter diesem Schlüssel fest.
+Legen Sie zum Registrieren der DLL die folgenden Werte unter diesem Schlüssel fest.
 
 
 
 | Wertname    | Wertdaten                                                                    |
 |---------------|-------------------------------------------------------------------------------|
-| *DisplayName* | Eine **reg \_ SZ** -Zeichenfolge, die den benutzerfreundlichen anzeigen amen der dll enthält. |
-| *Dll*     | Eine **reg- \_ SZ** -Zeichenfolge, die den vollständigen Pfad der dll enthält.                  |
+| *DisplayName* | Eine **REG \_ SZ-Zeichenfolge,** die den benutzerfreundlichen Anzeigenamen der DLL enthält. |
+| *DLLPath*     | Eine **REG \_ SZ-Zeichenfolge,** die den vollständigen Pfad der DLL enthält.                  |
 
 
 
- 
+ 
 
-Da RAS mehrere RAS-Verwaltungs-DLLs unterstützt, kann der Registrierungs Wert **DllPath** eine durch Semikolons getrennte Liste von Pfaden enthalten. Beispielsweise könnte der Registrierungs Eintrag für eine RAS-Verwaltungs-dll von einem fiktiven Unternehmen mit dem Namen ProElectron, Inc. wie folgt lauten:
+Da RAS mehrere RAS-Verwaltungs-DLLs unterstützt, kann der Registrierungswert **DLLPath** eine durch Semikolons getrennte Liste von Pfaden enthalten. Der Registrierungseintrag für eine RAS-Verwaltungs-DLL eines fiktiven Unternehmens namens ProElecaku, Inc. kann beispielsweise wie folgt sein:
 
 ```
 HKEY_LOCAL_MACHINE
-   SOFTWARE
-      Microsoft
-         RAS
-            AdminDll
+   SOFTWARE
+      Microsoft
+         RAS
+            AdminDll
 ```
 
-*Display Name*: **reg \_ SZ** : ProElectron RAS admin dll
+*DisplayName*: **REG \_ SZ** : ProElecron RAS Admin DLL
 
-*DllPath*: **reg \_ SZ** : C: \\ NT \\ system32 \\ntwkadm.dll; C: \\ NT \\ system32 \\ntwkadm2.dll
+*DLLPath*: **REG \_ SZ** : C: \\ nt \\ system32 \\ntwkadm.dll; C: \\ nt \\ system32 \\ntwkadm2.dll
 
-RAS Ruft die DLLs in der Reihenfolge auf, in der Sie in diesem Registrierungs Wert aufgelistet sind. Der Registrierungs Wert *Display Name* enthält immer noch nur einen einzigen anzeigen Amen.
+RAS ruft die DLLs in der Reihenfolge auf, in der sie in diesem Registrierungswert aufgeführt sind. Der Registrierungswert *DisplayName* enthält immer noch nur einen einzigen Anzeigenamen.
 
-Das Setup Programm für eine RAS-Verwaltungs-dll muss ebenfalls die Funktionen zum Entfernen und deinstallieren bereitstellen. Wenn ein Benutzer die dll entfernt, muss das Setup Programm die Registrierungseinträge für die dll löschen.
+Das Setupprogramm für eine RAS-Verwaltungs-DLL muss auch Funktionen zum Entfernen und Deinstallieren bereitstellen. Wenn ein Benutzer die DLL entfernt, muss das Setupprogramm die Registrierungseinträge für die DLL löschen.
 
-**Windows 2000/NT:** RAS unterstützt nur eine RAS-Verwaltungs-dll, sodass der Registrierungs Wert ' **DllPath** ' keine durch Semikolons getrennte Liste von Pfaden enthalten darf.
+**Windows 2000/NT:** RAS unterstützt nur eine RAS-Verwaltungs-DLL, sodass der Registrierungswert **DLLPath** keine durch Semikolons getrennte Liste von Pfaden enthalten kann.
 
- 
+ 
 
- 
+ 
 
 
 

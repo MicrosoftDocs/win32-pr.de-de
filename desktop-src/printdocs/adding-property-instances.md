@@ -1,21 +1,21 @@
 ---
-description: Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie in der PrintSchema-Spezifikation.
+description: Erfahren Sie mehr über das Hinzufügen von Eigenschafteninstanzen. Mit dem Druckschema können Eigenschaftsinstanzen in einer Option-Instanz vorhanden sein.
 ms.assetid: dac287a9-77ca-44d8-8019-b05e4c61dc52
-title: Hinzufügen von Eigenschaften Instanzen
+title: Hinzufügen von Eigenschafteninstanzen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 08e3df1b6c271c37c080968cc775ac11eba2e3ce
-ms.sourcegitcommit: de72a1294df274b0a71dc0fdc42d757e5f6df0f3
+ms.openlocfilehash: 8085fa10f824f32dc76aef0f1e5f78ca05b22b93
+ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "104393874"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112409693"
 ---
-# <a name="adding-property-instances"></a>Hinzufügen von Eigenschaften Instanzen
+# <a name="adding-property-instances"></a>Hinzufügen von Eigenschafteninstanzen
 
-Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie in der [PrintSchema-Spezifikation](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip).
+Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie unter Print Schema Specification (Spezifikation des [Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 
-Mit dem Druck Schema können Eigenschaften Instanzen in einer Options Instanz vorhanden sein. Die im printfunktionalitäten-Dokument definierten Eigenschaften Instanzen werden nicht an die Options Instanzen weitergegeben, die in PrintTicket gespeichert sind. Eigenschaften Elemente wirken sich nicht auf das Ergebnis des Bewertungsprozesses aus, wenn zwei Options Instanzen verglichen werden, die ScoredProperty-Instanzen sich jedoch auf diesen Prozess auswirken. Alle Gerätetreiber, die einen Bewertungs Algorithmus implementieren, sollten diese Konvention beachten. Mithilfe von printfunktionsanbietern können einer Option Eigenschafts Instanzen hinzugefügt werden, wenn diese Instanzen für diese bestimmte Option spezifisch sind, oder wenn der Anbieter beabsichtigt, dass der Wert dieser Eigenschaft für jede Option in der Funktion angezeigt wird. Angenommen, die printrate-Eigenschaft ist abhängig von der Option, die für die Funktion PageResolution ausgewählt ist. Wenn die printrate-Eigenschaft auf der Stamm Ebene des printfunktionalitäten-Dokuments abgelegt wurde, wäre sie einwertig und würde nur die Druck Rate für die aktuell ausgewählte Auflösung widerspiegeln. Wenn jedoch die printrate-Eigenschaft in jeder PageResolution-Option platziert wurde, kann jede Instanz der printrate-Eigenschaft die Druck Rate für die PageResolution-Option widerspiegeln, in der Sie enthalten war. Das Dokument printfunktionalitäten enthält mehrere Definitionen für printrate, eines für jede PageResolution-Option. Mit einer kurz Darstellung enthalten die printfunktionen Folgendes:
+Mit dem Druckschema können Eigenschaftsinstanzen in einer Option-Instanz vorhanden sein. Die im PrintCapabilities-Dokument definierten Eigenschafteninstanzen werden nicht an die Option-Instanzen weitergegeben, die im PrintTicket gespeichert sind. Eigenschaftselemente wirken sich nicht auf das Ergebnis des Bewertungsprozesses aus, wenn zwei Optionsinstanzen verglichen werden, aber ScoredProperty-Instanzen wirken sich auf diesen Prozess aus. Alle Gerätetreiber, die einen Bewertungsalgorithmus implementieren, sollten diese Konvention einhalten. PrintCapabilities-Anbieter dürfen Einer Option Eigenschafteninstanzen hinzufügen, wenn diese Instanzen spezifisch für diese bestimmte Option und keine anderen sind oder wenn der Anbieter beabsichtigt, dass der Wert dieser Eigenschaft für jede Option in der Funktion angezeigt wird. Angenommen, die PrintRate-Eigenschaft hängt von der Option ab, die für das PageResolution-Feature ausgewählt wurde. Wenn die PrintRate-Eigenschaft auf der Stammebene des PrintCapabilities-Dokuments platziert würde, wäre sie einwertig und würde nur die Druckrate für die aktuell ausgewählte Auflösung widerspiegeln. Wenn die PrintRate-Eigenschaft jedoch innerhalb jeder PageResolution-Option platziert wird, kann jede Instanz der PrintRate-Eigenschaft die Druckrate für die PageResolution-Option widerspiegeln, die sie enthielt. Das PrintCapabilities-Dokument würde mehrere Definitionen für PrintRate enthalten, eine für jede PageResolution-Option. Mithilfe einer Kurzformdarstellung würden die PrintCapabilities Folgendes enthalten:
 
 ``` syntax
 <psf:Feature name="psk:PageResolution">
@@ -39,15 +39,15 @@ Mit dem Druck Schema können Eigenschaften Instanzen in einer Options Instanz vo
 </psf:Feature>
 ```
 
-In einigen Situationen ist das Platzieren einer Drucksatz Eigenschaft in jeder Auflösungs Option für den Client bequemer, da der Client auf einen Blick festlegen kann, welche Auswirkung die einzelnen Auflösungsoptionen auf die Druck Rate haben, ohne dass für jede Auflösungseinstellung ein neues printfunktionalitäten-Dokument erforderlich ist.
+In einigen Situationen ist das Platzieren einer Eigenschaft für die Druckrate innerhalb jeder Auflösungsoption für den Client praktischer, da der Client auf einen Blick den Effekt jeder Auflösungsoption auf die Druckrate bestimmen kann, ohne dass für jede Auflösungseinstellung ein neues PrintCapabilities-Dokument erhalten werden muss.
 
-Beachten Sie auch, dass Eigenschaften Instanzen auch als untergeordnete Elemente von Funktions Elementen hinzugefügt werden können. Dies ist nützlich, wenn Eigenschafts Instanzen oder-Werte von Eigenschaften Instanzen vorhanden sind, die für die einzelnen Features spezifisch sind. Es kann z. b. eine Eigenschaft geben, die angibt, ob nur eine Option gleichzeitig für eine Funktion ausgewählt werden darf oder ob mehrere Optionen ausgewählt werden können. Dabei handelt es sich um die Auswahl \_ . Wählen Sie \_ viele in PPD-und GPD-Dateien verwendete Eigenschaften aus. Da einige featureinstanzen möglicherweise als Pick \_ 1 identifiziert werden, während andere als "Pick many" bezeichnet werden \_ , muss diese Eigenschaft für jede Funktion definiert werden. Wenn Sie die-Eigenschaft als untergeordnetes Element der-Funktion suchen, wird die Zuordnung zwischen der-Eigenschaft und der-Funktion erzeugt.
+Beachten Sie auch, dass Eigenschafteninstanzen auch als untergeordnete Elemente von Feature-Elementen hinzugefügt werden können. Dies ist nützlich, wenn Eigenschafteninstanzen oder Werte von Eigenschafteninstanzen vorhanden sind, die für jedes Feature spezifisch sind. Beispielsweise kann eine Eigenschaft vorhanden sein, die angibt, ob nur eine Option gleichzeitig für ein Feature ausgewählt werden darf oder ob mehrere Optionen ausgewählt werden können. Dies ist die \_ PICK ONE- und PICK \_ MANY-Eigenschaft, die in PPD- und GPD-Dateien verwendet wird. Da einige Featureinstanzen als PICK ONE identifiziert werden \_ können, während andere als PICK MANY identifiziert werden \_ können, muss diese Eigenschaft für jedes Feature definiert werden. Das Suchen der Eigenschaft als untergeordnetes Element des Features erzeugt die Zuordnung zwischen der Eigenschaft und dem Feature.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Druck Schema Spezifikation](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
+[Spezifikation des Druckschemas](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 </dt> </dl>
 
  

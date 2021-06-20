@@ -1,45 +1,45 @@
 ---
-title: Bereitstellen von Anzeige Attributen
-description: Mit dem Text Services-Framework (TSF) kann ein Text Dienst Anzeige Attribute für Text bereitstellen.
+title: Bereitstellen von Anzeigeattributen
+description: Erfahren Sie, wie Sie Anzeigeattribute bereitstellen. Textdienstframework (TSF) ermöglicht einem Textdienst das Bereitstellen von Anzeigeattributen für Text.
 ms.assetid: 5809f5b8-0396-4abd-b5fe-61ecc8cd0914
 keywords:
-- Text Dienst Framework (TSF), Attribute anzeigen
-- TSF (Text Dienste-Framework), Anzeige Attribute
-- Text Dienste, Anzeigen von Attributen
+- Textdienstframework (TSF), Anzeigen von Attributen
+- TSF (Textdienstframework), Anzeigeattribute
+- Textdienste,Anzeigeattribute
 - Anzeigeattribute
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c08f59bb64ef4f06df020a40189d273c703768d1
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 780cc191e39d5b1d0c3329bab87af5267e4a6c73
+ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106340829"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112406113"
 ---
-# <a name="providing-display-attributes"></a>Bereitstellen von Anzeige Attributen
+# <a name="providing-display-attributes"></a>Bereitstellen von Anzeigeattributen
 
-Mit dem Text Services-Framework (TSF) kann ein Text Dienst Anzeige Attribute für Text bereitstellen. Dadurch kann dem Benutzer zusätzliches visuelles Feedback bereitgestellt werden. Ein Rechtschreibprüfung-Text Dienst kann z. b. ein falsch geschriebenes Wort mit einer roten Unterstreichung markieren. Die angegebenen Anzeige Attribute werden durch die [tf \_ DisplayAttribute](/windows/desktop/api/Msctf/ns-msctf-tf_displayattribute) -Struktur definiert und enthalten Textfarbe, Text Hintergrundfarbe, unterstrich Farbe, unterstrich Farbe und unterstrich Gewichtung.
+Textdienstframework (TSF) ermöglicht einem Textdienst das Bereitstellen von Anzeigeattributen für Text. Dadurch kann dem Benutzer zusätzliches visuelles Feedback bereitgestellt werden. Beispielsweise kann ein Textdienst für die Rechtschreibprüfung ein falsch geschriebenes Wort mit einer roten Unterstreichung hervorheben. Die bereitgestellten Anzeigeattribute werden durch die [TF \_ DISPLAYATTRIBUTE-Struktur](/windows/desktop/api/Msctf/ns-msctf-tf_displayattribute) definiert und umfassen Textfarbe, Hintergrundfarbe des Texts, Unterstreichungsstil, Unterstreichungsfarbe und Unterstreichungsgewichtung.
 
-Clients, die diese Anzeige Attributinformationen verwenden, sind meist Anwendungen, können aber auch Text Dienste enthalten. Der TSF-Manager mediiert zwischen dem Anzeige Attribut Anbieter und dem Client und verfolgt den Anzeige Attribut Anbieter der spezifischen Anzeige Attribute nach.
+Clients, die diese Anzeigeattributinformationen verwenden, sind am häufigsten Anwendungen, können aber auch Textdienste enthalten. Der TSF-Manager vermittelt zwischen dem Anzeigeattributanbieter und dem Client und verfolgt den Anzeigeattributanbieter der spezifischen Anzeigeattribute nach.
 
-Zum Bereitstellen von Anzeige Attributen muss ein Text Dienst folgende Aktionen ausführen.
+Um Anzeigeattribute bereitstellen zu können, muss ein Textdienst Folgendes tun.
 
-1.  Registrieren Sie den Text Dienst als Anzeige Attribut Anbieter durch Aufrufen von [itfcategorymgr:: registercategory](/windows/desktop/api/Msctf/nf-msctf-itfcategorymgr-registercategory) mit dem Klassen Bezeichner des Text Dienstanbieters für den ersten Parameter, GUID \_ tfcat \_ displayattributeprovider für den zweiten Parameter und der Klassen Bezeichner des Text Dienstanbieters für den dritten Parameter.
-2.  Implementieren Sie [ITF displayattributeprovider](/windows/desktop/api/Msctf/nn-msctf-itfdisplayattributeprovider) , und stellen Sie Sie aus der Klassenfactory zur Verfügung.
-3.  Implementieren Sie [ienumtfdisplayattributeinfo](/windows/desktop/api/Msctf/nn-msctf-ienumtfdisplayattributeinfo) , und stellen Sie Sie über [ITF displayattributeprovider:: enumdisplayattributeinfo](/windows/desktop/api/Msctf/nf-msctf-itfdisplayattributeprovider-enumdisplayattributeinfo)zur Verfügung.
-4.  Implementieren Sie ein [ITF displayattributeinfo](/windows/desktop/api/Msctf/nn-msctf-itfdisplayattributeinfo) -Objekt für jeden Typ von Anzeige Attribut, den der Text Dienst bereitstellt.
+1.  Registrieren Sie den Textdienst als Anzeigeattributanbieter, indem Sie [ITfCategoryMgr::RegisterCategory](/windows/desktop/api/Msctf/nf-msctf-itfcategorymgr-registercategory) mit dem Klassenbezeichner des Textdiensts für den ersten Parameter, GUID \_ TFCAT DISPLAYATTRIBUTEPROVIDER für den zweiten Parameter und dem Klassenbezeichner des Textdiensts erneut für den dritten Parameter \_ aufrufen.
+2.  Implementieren [Sie ITfDisplayAttributeProvider,](/windows/desktop/api/Msctf/nn-msctf-itfdisplayattributeprovider) und stellen Sie es über die Klassen factory zur Verfügung.
+3.  Implementieren [Sie IEnumTfDisplayAttributeInfo,](/windows/desktop/api/Msctf/nn-msctf-ienumtfdisplayattributeinfo) und stellen Sie es über [ITfDisplayAttributeProvider::EnumDisplayAttributeInfo zur Verfügung.](/windows/desktop/api/Msctf/nf-msctf-itfdisplayattributeprovider-enumdisplayattributeinfo)
+4.  Implementieren Sie [ein ITfDisplayAttributeInfo-Objekt](/windows/desktop/api/Msctf/nn-msctf-itfdisplayattributeinfo) für jeden Vom Textdienst bereitgestellten Anzeigeattributtyp.
 
-## <a name="applying-the-display-attributes"></a>Anwenden der Anzeige Attribute
+## <a name="applying-the-display-attributes"></a>Anwenden der Anzeigeattribute
 
-Der Text Dienst muss das Anzeige Attribut auf einen Textbereich anwenden. Ein Text Dienst kann den Eigenschafts Wert nur während einer Sitzung mit Lese-/schreibbearbeitung ändern.
+Der Textdienst muss das Anzeigeattribut auf einen Textbereich anwenden. Ein Textdienst kann den Eigenschaftswert nur während einer Lese-/Schreibbearbeitungssitzung ändern.
 
-Wenn dies in einer Sitzung mit Lese-/schreibbearbeitung erfolgt, wird ein Anzeige Attribut wie folgt angewendet.
+Wenn dies innerhalb einer Lese-/Schreibbearbeitungssitzung erfolgt, wird ein Anzeigeattribut wie folgt angewendet.
 
-1.  Rufen Sie ein [itfrange](/windows/desktop/api/Msctf/nn-msctf-itfrange) -Objekt ab, das den Text abdeckt, auf den das Anzeige Attribut angewendet wird.
-2.  Rufen Sie ein [itfproperty](/windows/desktop/api/Msctf/nn-msctf-itfproperty) -Objekt für die Text Attribute ab, indem Sie [ITfContext:: GetProperty](/windows/desktop/api/Msctf/nf-msctf-itfcontext-getproperty) mit dem GUID- \_ Prop-Attribut aufrufen \_ .
-3.  Erstellen Sie ein [tfguidatom](tfguidatom.md) aus der durch den Text Dienst definierten **GUID** des Anzeige Attribut Bezeichners durch Aufrufen von [itfcategorymgr:: registerguid](/windows/desktop/api/Msctf/nf-msctf-itfcategorymgr-registerguid).
-4.  Initialisieren Sie eine Variant-Variable zu VT \_ I4, und legen Sie den **LVAL** -Member auf das im vorherigen Schritt erstellte **tfguidatom** fest.
-5.  Wenden Sie das Anzeige Attribut auf den Bereich an, indem Sie [itfproperty:: SetValue](/windows/desktop/api/Msctf/nf-msctf-itfproperty-setvalue) mit dem Cookie für die Lese-/schreibbearbeitung aufrufen, den Bereich und die Variante, die im vorherigen Schritt initialisiert wurden.
+1.  Abrufen eines [ITfRange-Objekts,](/windows/desktop/api/Msctf/nn-msctf-itfrange) das den Text abdeckt, auf den das Anzeigeattribut angewendet wird.
+2.  Rufen Sie [ein ITfProperty-Objekt](/windows/desktop/api/Msctf/nn-msctf-itfproperty) für die Textattribute ab, indem [Sie ITfContext::GetProperty](/windows/desktop/api/Msctf/nf-msctf-itfcontext-getproperty) mit GUID \_ PROP ATTRIBUTE \_ aufrufen.
+3.  Erstellen Sie ein [TfGuidAtom-Attribut](tfguidatom.md) aus der vom Textdienst definierten Anzeigeattributbezeichner-GUID, indem [Sie ITfCategoryMgr::RegisterGUID aufrufen.](/windows/desktop/api/Msctf/nf-msctf-itfcategorymgr-registerguid) 
+4.  Initialisieren Sie eine VARIANT-Variable mit VT I4, und legen Sie den lVal-Member auf das \_ **tfGuidAtom** fest, das im vorherigen Schritt erstellt wurde. 
+5.  Wenden Sie das Anzeigeattribut auf den Bereich an, indem [Sie ITfProperty::SetValue](/windows/desktop/api/Msctf/nf-msctf-itfproperty-setvalue) mit dem Lese-/Schreibbearbeitungscookie, dem Bereich und dem VARIANT aufrufen, die im vorherigen Schritt initialisiert wurden.
 
 
 ```C++
@@ -103,85 +103,85 @@ STDAPI CEditSession::DoEditSession(TfEditCookie ec)
 
 
 
-## <a name="supplying-the-display-attribute-information-object"></a>Bereitstellen des Anzeige Attribut Informationsobjekts
+## <a name="supplying-the-display-attribute-information-object"></a>Angeben des Anzeigeattributinformationsobjekts
 
-Ein Client erhält ein **ITF displayattributeinfo** -Objekt auf zwei Arten.
+Ein Client erhält ein **ITfDisplayAttributeInfo-Objekt** auf zwei Arten.
 
-1.  Der Client ruft [ITF displayattributemgr:: getdisplayattributeinfo](/windows/desktop/api/Msctf/nf-msctf-itfdisplayattributemgr-getdisplayattributeinfo) mit dem **GUID** -Bezeichner des Anzeige Attributs auf. Wenn der Client zum ersten Mal **itfdisplayattributemgr:: getdisplayattributeinfo** aufruft, erstellt der TSF-Manager eine Instanz des Anzeige Attribut Anbieters durch Aufrufen von CoCreateInstance mit dem Klassen Bezeichner, der als erster Parameter an **itfcategorymgr:: registercategory** übergeben wird. Bei nachfolgenden Aufrufen von **itfdisplayattributemgr:: getdisplayattributeinfo** wird das Display Attribute Provider-Objekt wieder verwendet.
+1.  Der Client ruft [ITfDisplayAttributeMgr::GetDisplayAttributeInfo mit](/windows/desktop/api/Msctf/nf-msctf-itfdisplayattributemgr-getdisplayattributeinfo) dem **GUID-Bezeichner** des Anzeigeattributs auf. Wenn der Client **ITfDisplayAttributeMgr::GetDisplayAttributeInfo** zum ersten Mal aufruft, erstellt der TSF-Manager eine Instanz des Anzeigeattributanbieters, indem er CoCreateInstance mit dem Klassenbezeichner aufruft, der als erster Parameter **an ITfCategoryMgr::RegisterCategory übergeben wird.** Nachfolgende Aufrufe von **ITfDisplayAttributeMgr::GetDisplayAttributeInfo** verwenden das Anzeigeattributanbieterobjekt erneut.
 
-    Der TSF-Manager ruft dann [itfdisplayattributeprovider:: getdisplayattributeinfo](/windows/desktop/api/Msctf/nf-msctf-itfdisplayattributeprovider-getdisplayattributeinfo) mit dem Display-Attribut **GUID** auf, um das **itfdisplayattributeinfo** -Objekt abzurufen.
+    Der TSF-Manager ruft dann [ITfDisplayAttributeProvider::GetDisplayAttributeInfo](/windows/desktop/api/Msctf/nf-msctf-itfdisplayattributeprovider-getdisplayattributeinfo) mit dem Anzeigeattribut **GUID** auf, um das **ITfDisplayAttributeInfo-Objekt zu** erhalten.
 
-    Der TSF-Manager übergibt dann das **itfdisplayattributeinfo** -Objekt an den Client zurück.
+    Der TSF-Manager übergibt dann das **ITfDisplayAttributeInfo-Objekt** zurück an den Client.
 
-2.  Der Client ruft [itfdisplayattributemgr:: enumdisplayattributeinfo](/windows/desktop/api/Msctf/nf-msctf-itfdisplayattributemgr-enumdisplayattributeinfo) auf, um ein **ienumtfdisplayattributeinfo** -Objekt zu erhalten, das alle Anzeige Attribute enthält, die von allen Anzeige Attribut Anbietern bereitgestellt werden. Der TSF-Manager listet jeden Anzeige Attribut Anbieter auf und erstellt eine Instanz jedes Anbieters durch Aufrufen von CoCreateInstance mit dem Klassen Bezeichner, der als dritter Parameter an **itfcategorymgr:: registercategory** übergeben wird.
+2.  Der Client ruft [ITfDisplayAttributeMgr::EnumDisplayAttributeInfo](/windows/desktop/api/Msctf/nf-msctf-itfdisplayattributemgr-enumdisplayattributeinfo) auf, um ein **IEnumTfDisplayAttributeInfo-Objekt** zu erhalten, das alle Anzeigeattribute enthält, die von allen Anzeigeattributanbietern bereitgestellt werden. Der TSF-Manager führt jeden Anzeigeattributanbieter auf und erstellt eine Instanz jedes Anbieters, indem er CoCreateInstance mit dem Klassenbezeichner aufruft, der als dritter Parameter an **ITfCategoryMgr::RegisterCategory** übergeben wird.
 
-    Der TSF-Manager ruft dann den **itfdisplayattributeprovider:: enumdisplayattributeinfo** jedes Anbieters auf, um ein **ienumtfdisplayattributeinfo** -Objekt zu erhalten, das alle vom Anbieter bereitgestellten Anzeige Attribute enthält.
+    Der TSF-Manager ruft dann den **ITfDisplayAttributeProvider::EnumDisplayAttributeInfo** jedes Anbieters auf, um ein **IEnumTfDisplayAttributeInfo-Objekt** zu erhalten, das alle vom Anbieter bereitgestellten Anzeigeattribute enthält.
 
-    Der TSF-Manager ruft dann die [ienumtfdisplayattributeinfo:: Next](/windows/desktop/api/Msctf/nf-msctf-ienumtfdisplayattributeinfo-next) -Methode des Anbieters auf und fügt jedes **itfdisplayattributeinfo** -Objekt hinzu, das dem eigenen Enumerator des Managers abgerufen wurde, bis das Ende der Enumeration des Anbieters erreicht ist.
+    Der TSF-Manager ruft dann die [IEnumTfDisplayAttributeInfo::Next-Methode](/windows/desktop/api/Msctf/nf-msctf-ienumtfdisplayattributeinfo-next) des Anbieters auf und fügt jedes **ITfDisplayAttributeInfo-Objekt** hinzu, das dem eigenen Enumerator des Managers abgerufen wurde, bis das Ende der Anbieterenumeration erreicht ist.
 
-    Wenn alle **itfdisplayattributeinfo** -Objekte für alle Anzeige Attribut Anbieter dem Enumerator von TSF-Manager hinzugefügt werden, gibt der Manager seinen Enumerator an den Client zurück. Der Client ruft dann **ienumtfdisplayattributeinfo:: Next** einmal oder mehrmals auf, um die **itfdisplayattributeinfo** -Objekte abzurufen.
+    Wenn alle **ITfDisplayAttributeInfo-Objekte** für alle Anzeigeattributanbieter dem Enumerator des TSF-Managers hinzugefügt werden, gibt der Manager seinen Enumerator an den Client zurück. Der Client ruft dann **mindestens einmal IEnumTfDisplayAttributeInfo::Next** auf, um die **ITfDisplayAttributeInfo-Objekte zu** erhalten.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[TF \_ DisplayAttribute](/windows/desktop/api/Msctf/ns-msctf-tf_displayattribute)
+[TF \_ DISPLAYATTRIBUTE](/windows/desktop/api/Msctf/ns-msctf-tf_displayattribute)
 </dt> <dt>
 
-[ITF categorymgr:: registercategory](/windows/desktop/api/Msctf/nf-msctf-itfcategorymgr-registercategory)
+[ITfCategoryMgr::RegisterCategory](/windows/desktop/api/Msctf/nf-msctf-itfcategorymgr-registercategory)
 </dt> <dt>
 
-[ITF displayattributeprovider](/windows/desktop/api/Msctf/nn-msctf-itfdisplayattributeprovider)
+[ITfDisplayAttributeProvider](/windows/desktop/api/Msctf/nn-msctf-itfdisplayattributeprovider)
 </dt> <dt>
 
-[Ienumtfdisplayattributeinfo](/windows/desktop/api/Msctf/nn-msctf-ienumtfdisplayattributeinfo)
+[IEnumTfDisplayAttributeInfo](/windows/desktop/api/Msctf/nn-msctf-ienumtfdisplayattributeinfo)
 </dt> <dt>
 
-[ITF displayattributeprovider:: enumdisplayattributeinfo](/windows/desktop/api/Msctf/nf-msctf-itfdisplayattributeprovider-enumdisplayattributeinfo)
+[ITfDisplayAttributeProvider::EnumDisplayAttributeInfo](/windows/desktop/api/Msctf/nf-msctf-itfdisplayattributeprovider-enumdisplayattributeinfo)
 </dt> <dt>
 
-[ITF displayattributeinfo](/windows/desktop/api/Msctf/nn-msctf-itfdisplayattributeinfo)
+[ITfDisplayAttributeInfo](/windows/desktop/api/Msctf/nn-msctf-itfdisplayattributeinfo)
 </dt> <dt>
 
-[Itfrange](/windows/desktop/api/Msctf/nn-msctf-itfrange)
+[ITfRange](/windows/desktop/api/Msctf/nn-msctf-itfrange)
 </dt> <dt>
 
-[ITF Property](/windows/desktop/api/Msctf/nn-msctf-itfproperty)
+[ITfProperty](/windows/desktop/api/Msctf/nn-msctf-itfproperty)
 </dt> <dt>
 
-[ITF context:: GetProperty](/windows/desktop/api/Msctf/nf-msctf-itfcontext-getproperty)
+[ITfContext::GetProperty](/windows/desktop/api/Msctf/nf-msctf-itfcontext-getproperty)
 </dt> <dt>
 
-[Tfguidatom](tfguidatom.md)
+[TfGuidAtom](tfguidatom.md)
 </dt> <dt>
 
-[ITF categorymgr:: registerguid](/windows/desktop/api/Msctf/nf-msctf-itfcategorymgr-registerguid)
+[ITfCategoryMgr::RegisterGUID](/windows/desktop/api/Msctf/nf-msctf-itfcategorymgr-registerguid)
 </dt> <dt>
 
-[ITF Property:: SetValue](/windows/desktop/api/Msctf/nf-msctf-itfproperty-setvalue)
+[ITfProperty::SetValue](/windows/desktop/api/Msctf/nf-msctf-itfproperty-setvalue)
 </dt> <dt>
 
-[ITF displayattributemgr:: getdisplayattributeinfo](/windows/desktop/api/Msctf/nf-msctf-itfdisplayattributemgr-getdisplayattributeinfo)
+[ITfDisplayAttributeMgr::GetDisplayAttributeInfo](/windows/desktop/api/Msctf/nf-msctf-itfdisplayattributemgr-getdisplayattributeinfo)
 </dt> <dt>
 
-[ITF displayattributeprovider:: getdisplayattributeinfo](/windows/desktop/api/Msctf/nf-msctf-itfdisplayattributeprovider-getdisplayattributeinfo)
+[ITfDisplayAttributeProvider::GetDisplayAttributeInfo](/windows/desktop/api/Msctf/nf-msctf-itfdisplayattributeprovider-getdisplayattributeinfo)
 </dt> <dt>
 
-[ITF displayattributemgr:: enumdisplayattributeinfo](/windows/desktop/api/Msctf/nf-msctf-itfdisplayattributemgr-enumdisplayattributeinfo)
+[ITfDisplayAttributeMgr::EnumDisplayAttributeInfo](/windows/desktop/api/Msctf/nf-msctf-itfdisplayattributemgr-enumdisplayattributeinfo)
 </dt> <dt>
 
- Ienumtfdisplayattributeinfo 
+ IEnumTfDisplayAttributeInfo 
 </dt> <dt>
 
- ITF displayattributeprovider:: enumdisplayattributeinfo 
+ ITfDisplayAttributeProvider::EnumDisplayAttributeInfo 
 </dt> <dt>
 
-[Ienumtfdisplayattributeinfo:: Next](/windows/desktop/api/Msctf/nf-msctf-ienumtfdisplayattributeinfo-next)
+[IEnumTfDisplayAttributeInfo::Next](/windows/desktop/api/Msctf/nf-msctf-ienumtfdisplayattributeinfo-next)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

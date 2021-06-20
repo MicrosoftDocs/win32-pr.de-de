@@ -1,31 +1,31 @@
 ---
-title: Windows touchscratchpad mit dem Real-Time tablettstiftbeispiel (c#)
-description: Das Windows touchscratchpad-Beispiel (mtscratchpadrtstylus) zeigt, wie Sie Windows-touchnachrichten verwenden, um Ablauf Verfolgungen der touchpunkte zu einem Fenster zu zeichnen.
+title: Windows Touch Scratchpad mithilfe des Real-Time-Stiftbeispiels (C#)
+description: Sehen Sie sich Windows Touch Scratchpad C#-Beispiel (MTScratchpadRTStylus) an, das zeigt, wie sie Windows Touch-Nachrichten verwenden, um Ablaufverfolgungen der Berührungspunkte in ein Fenster zu zeichnen.
 ms.assetid: 8e80672f-0780-4dec-a9b4-afec0f7782ad
 keywords:
-- Windows-Fingereingabe, Codebeispiele
-- Windows-Fingereingabe, Beispielcode
-- Windows Toucheingabe, Scratchpad-Beispiele
+- Windows Touch,Codebeispiele
+- Windows Touch,Beispielcode
+- Windows Touch,Scratchpad-Beispiele
 - Scratchpad-Beispiele
-- Windows-Fingereingabe, RTS-Objekt (Echt Zeit Stift)
+- Windows Touch RTS-Objekt (Real-Time Stylus)
 ms.topic: article
 ms.date: 10/28/2019
-ms.openlocfilehash: 4cf9ab2e451dcdcaaee808083ca42c420778f231
-ms.sourcegitcommit: 48d1c892045445bcbd0f22bafa2fd3861ffaa6e7
+ms.openlocfilehash: 3c30d3543024a48394ddd7b9b2b06a05b61f5025
+ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "104314255"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112406313"
 ---
-# <a name="windows-touch-scratchpad-using-the-real-time-stylus-sample-c"></a>Windows touchscratchpad mit dem Real-Time tablettstiftbeispiel (c#)
+# <a name="windows-touch-scratchpad-using-the-real-time-stylus-sample-c"></a>Windows Touch Scratchpad mithilfe des Real-Time-Stiftbeispiels (C#)
 
-Das Windows touchscratchpad-Beispiel ([mtscratchpadrtstylus](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/Win7Samples/Touch/MTScratchpadRTStylus/CS)) zeigt, wie Sie Windows-touchnachrichten verwenden, um Ablauf Verfolgungen der touchpunkte zu einem Fenster zu zeichnen. Die Ablauf Verfolgung des primären Fingers, die zuerst auf dem Digitalisierer abgelegt wurde, wird schwarz gezeichnet. Sekundäre Finger werden in sechs anderen Farben gezeichnet: rot, grün, blau, Cyan, Magenta und gelb. Der folgende Screenshot zeigt, wie die Anwendung während der Ausführung aussehen könnte.
+Das Windows Touch Scratchpad-Beispiel ([MTScratchpadRTStylus](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/Win7Samples/Touch/MTScratchpadRTStylus/CS)) zeigt, wie Sie Windows Touch-Nachrichten verwenden, um Ablaufverfolgungen der Berührungspunkte in ein Fenster zu zeichnen. Die Ablaufverfolgung des primären Fingers, der zuerst auf den Digitizer gezogen wurde, wird schwarz gezeichnet. Sekundäre Finger werden in sechs weiteren Farben gezeichnet: Rot, Grün, Blau, Zyan, Magenta und Gelb. Der folgende Screenshot zeigt, wie die Anwendung während der Ausführung aussehen könnte.
 
-![Screenshot mit dem Windows touchscratchpad-Beispiel unter Verwendung des Echt Zeit Tablettstifts in c sharp mit schwarzen und roten Wellenlinien auf dem Bildschirm](images/mtscratchpadrtstyluscs.png)
+![Screenshot des Beispiels "Windows Touch Scratchpad" mit dem Echtzeit-Tablettstift in C-Schärfe mit schwarzen und roten Drehungen auf dem Bildschirm](images/mtscratchpadrtstyluscs.png)
 
-In diesem Beispiel wird das Real-Time tablettstiftobjekt (RTS) erstellt, und die Unterstützung für mehrere Kontaktpunkte ist aktiviert. Dem RTS wird ein DynamicRenderer-Plug-in hinzugefügt, um Inhalt zu Renderern. Ein Plug-in, eventhandlerplugin, wird implementiert, um die Anzahl der Finger zu verfolgen und die Farbe zu ändern, die der dynamische Renderer zeichnet. Mit beiden Plug-ins im RTS-Plug-in-Stapel wird der primäre Kontakt von der Windows touchscratchpad-Anwendung in schwarz und den restlichen Kontakten in den verschiedenen Farben dargestellt.
+Für dieses Beispiel wird Real-Time RtS-Objekt (Stylus) erstellt und die Unterstützung für mehrere Kontaktpunkte aktiviert. Ein DynamicRenderer-Plug-In wird rts hinzugefügt, um Inhalt zu rendern. Ein Plug-In, EventHandlerPlugIn, wird implementiert, um die Anzahl von Fingern zu verfolgen und die Farbe zu ändern, die der dynamische Renderer zeichnen soll. Bei beiden Plug-Ins im RTS-Plug-In-Stapel rendert die Windows Touch Scratchpad-Anwendung den primären Kontakt schwarz und die restlichen Kontakte in den verschiedenen Farben.
 
-Der folgende Code zeigt, wie das eventhandlerplugin-Ereignis eine Anzahl von Kontakten erhöht und dekrediert und die Farbe des dynamischen Renderers festlegt.
+Der folgende Code zeigt, wie EventHandlerPlugIn die Anzahl der Kontakte erhöht und dekrementiert und die Farbe des dynamischen Renderers fest legt.
 
 ```CSharp
         public void StylusDown(RealTimeStylus sender, StylusDownData data)
@@ -43,7 +43,7 @@ Der folgende Code zeigt, wie das eventhandlerplugin-Ereignis eine Anzahl von Kon
         }
 ```
 
-Der folgende Code zeigt, wie das RTS mit Unterstützung mehrerer Kontaktpunkte erstellt wird.
+Der folgende Code zeigt, wie rts mit Unterstützung für mehrere Kontaktpunkt erstellt wird.
 
 ```CSharp
         private void OnLoadHandler(Object sender, EventArgs e)
@@ -65,7 +65,7 @@ Der folgende Code zeigt, wie das RTS mit Unterstützung mehrerer Kontaktpunkte e
         }
 ```
 
-Nachdem sich die Farbe des DynamicRenderer-Objekts geändert hat und Striche gezeichnet wurden, bewirkt ein Aufrufe von DynamicRenderer:: Refresh, dass die neuen Striche angezeigt werden. Der folgende Code zeigt, wie dies in der onpainthandler-Methode erfolgt.
+Nachdem sich die Farbe des DynamicRenderer-Objekts geändert und Striche gezeichnet wurden, werden die neuen Striche durch einen Aufruf von DynamicRenderer::Refresh angezeigt. Der folgende Code zeigt, wie dies in der OnPaintHandler-Methode ausgeführt wird.
 
 ```CSharp
         private void OnPaintHandler(object sender, PaintEventArgs e)
@@ -81,4 +81,4 @@ Nachdem sich die Farbe des DynamicRenderer-Objekts geändert hat und Striche gez
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
-[Multitouch Scratchpad-Anwendung (RTS/c#)](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/Win7Samples/Touch/MTScratchpadRTStylus/CS), [Multitouch Scratchpad-Anwendung (RTS/C++)](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/Win7Samples/Touch/MTScratchpadRTStylus/cpp), [Windows Touch-Beispiele](windows-touch-samples.md)
+[Scratchpad-Multi-Touch-Anwendung (RTS/C#),](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/Win7Samples/Touch/MTScratchpadRTStylus/CS) [Multi-Touch Scratchpad-Anwendung (RTS/C++),](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/Win7Samples/Touch/MTScratchpadRTStylus/cpp) [Windows Touch Beispiele](windows-touch-samples.md)

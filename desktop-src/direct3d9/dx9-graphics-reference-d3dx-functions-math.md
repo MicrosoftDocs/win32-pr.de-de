@@ -1,26 +1,26 @@
 ---
-description: Die von der D3DX Utility Library bereitgestellte mathematische Bibliothek stellt Funktionen zum Berechnen von 3D-mathematischen Vorgängen bereit.
+description: Erfahren Sie mehr über die mathematische Bibliothek, die von der D3DX-Hilfsprogrammbibliothek in Direct3D 9 Graphics bereitgestellt wird. Die Bibliothek stellt Funktionen zum Berechnen von mathematischen 3D-Operationen zur Verfügung.
 ms.assetid: 00f0f943-64fa-45e3-8bd3-ca61c8b87e1a
 title: Mathematische Funktionen (Direct3D 9-Grafiken)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 069b0de6a40806a4461fa68ba00e456b1d3b9dfb
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 17fa7e56282d74dbe6a67b023ca5f64d0f88be20
+ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "103746552"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112408213"
 ---
 # <a name="math-functions-direct3d-9-graphics"></a>Mathematische Funktionen (Direct3D 9-Grafiken)
 
 > [!Note]  
-> Die mathematischen Funktionen der D3DX Utility Library sind für Windows 8 veraltet. Es wird empfohlen, stattdessen [directxmath](../dxmath/directxmath-portal.md) zu verwenden.
+> Die mathematischen Funktionen der D3DX-Hilfsprogrammbibliothek sind für die Windows 8. Es wird empfohlen, stattdessen [DirectXMath zu](../dxmath/directxmath-portal.md) verwenden.
 
  
 
-Die von der D3DX Utility Library bereitgestellte mathematische Bibliothek stellt Funktionen zum Berechnen von 3D-mathematischen Vorgängen bereit. Jede der Funktionen kann dasselbe Objekt wie die über gebenden \[ \] und zurückgegebenen Parameter annehmen \[ \] . Außerdem werden out-Parameter normalerweise als Rückgabewerte zurückgegeben, sodass die Ausgabe einer mathematischen Funktion als Parameter für eine andere mathematische Funktion verwendet werden kann.
+Die von der D3DX-Hilfsprogrammbibliothek bereitgestellte mathematische Bibliothek stellt Funktionen zum Berechnen von mathematischen 3D-Operationen zur Verfügung. Jede der Funktionen kann das gleiche Objekt wie die übergebenen und \[ \] zurückgegebenen \[ Parameter \] verwenden. Außerdem werden out-Parameter in der Regel als Rückgabewerte zurückgegeben, sodass die Ausgabe einer mathematischen Funktion als Parameter für eine andere mathematische Funktion verwendet werden kann.
 
-Viele der Funktionen sind in d3dx9math. INL implementiert.
+Viele der Funktionen sind in d3dx9math.inl implementiert.
 
 Die mathematischen 3D-Anwendungsfunktionen können in die folgenden Gruppen unterteilt werden.
 

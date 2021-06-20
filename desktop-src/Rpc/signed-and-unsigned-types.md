@@ -1,23 +1,23 @@
 ---
-title: Typen mit und ohne Vorzeichen (RPC)
-description: Compiler, die unterschiedliche Standardwerte für Typen mit und ohne Vorzeichen verwenden, können zu Softwarefehlern in der verteilten Anwendung führen.
+title: Signierte und nicht signierte Typen (RPC)
+description: Erfahren Sie mehr über signierte und nicht signierte Typen in RPC. Compiler, die unterschiedliche Standardtypen verwenden, können Softwarefehler in Ihrer verteilten Anwendung verursachen.
 ms.assetid: 0464d465-84b7-49fc-968e-5efe037966c2
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 453d45d0a4c29a2e30449fb645e6f40338eac546
-ms.sourcegitcommit: 8fa6614b715bddf14648cce36d2df22e5232801a
+ms.openlocfilehash: f4c03010262c8492b6738d1e817e165e5ca8f839
+ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "103858606"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112406543"
 ---
-# <a name="signed-and-unsigned-types-rpc"></a>Typen mit und ohne Vorzeichen (RPC)
+# <a name="signed-and-unsigned-types-rpc"></a>Signierte und nicht signierte Typen (RPC)
 
-Compiler, die unterschiedliche Standardwerte für Typen mit und ohne Vorzeichen verwenden, können zu Softwarefehlern in der verteilten Anwendung führen. Sie können diese Probleme vermeiden, indem Sie die Zeichen Typen explizit als **signiert** oder **unsigniert** deklarieren.
+Compiler, die unterschiedliche Standardwerte für signierte und nicht signierte Typen verwenden, können Softwarefehler in Ihrer verteilten Anwendung verursachen. Sie können diese Probleme vermeiden, indem Sie Ihre Zeichentypen explizit als **signiert** oder nicht signiert **deklarieren.**
 
-In der mittleren l-Datei wird der [**kleine**](/windows/desktop/Midl/small) Typ so definiert, dass dasselbe Standard Zeichen wie der **char** -Typ im C-Ziel Compiler übernommen wird. Wenn der Compiler annimmt, dass **char** nicht signiert ist, wird **Small** auch als unsigned definiert. Viele C-Compiler ermöglichen es Ihnen, den Standardwert als Befehlszeilenoption zu ändern. Beispielsweise ändert die Befehlszeilenoption Microsoft C Compiler **/J** das Standard Zeichen von **char** von signed in unsigned.
+MIDL definiert den [**kleinen**](/windows/desktop/Midl/small) Typ so, dass er das gleiche Standardzeichen wie der **char-Typ** im C-Zielcompiler verwendet. Wenn der Compiler davon ausgeht, dass **char** nicht signiert ist, wird **small** auch als unsigned definiert. Mit vielen C-Compilern können Sie die Standardeinstellung als Befehlszeilenoption ändern. Beispielsweise ändert die Befehlszeilenoption des Microsoft C-Compilers **/J** das Standardzeichen von **char** von signed in unsigned.
 
-Sie können auch das Vorzeichen der Variablen vom Typ " **char** " und " **Small** " mithilfe des Befehls Zeilenschalters " [**/char**](/windows/desktop/Midl/-char)" für den Mittelpunkt steuern. Mithilfe dieses Schalters können Sie das von Ihrem Compiler verwendete standardmäßige Vorzeichen angeben. Der mittlerer l-Compiler deklariert explizit das Vorzeichen aller **char** -Typen, die nicht mit dem Standardtyp des C-Compilers in der generierten Header Datei identisch sind.
+Sie können auch das Vorzeichen von Variablen vom Typ **char** und **small** mit dem MIDL-Compilerbefehlszeilenschalter [**/char**](/windows/desktop/Midl/-char)steuern. Mit diesem Schalter können Sie das Standardzeichen angeben, das vom Compiler verwendet wird. Der MIDL-Compiler deklariert explizit  das Vorzeichen aller char-Typen, die nicht mit Ihrem C-Compiler-Standardtyp in der generierten Headerdatei übereinstimmen.
 
  
 

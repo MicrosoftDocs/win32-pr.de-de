@@ -1,35 +1,35 @@
 ---
-description: 'Schritt 6:'
+description: Unterstützung für COM als Teil des Schreibens eines Transformationsfilters hinzugefügt. Dies ist der letzte Schritt in diesem Tutorial.
 ms.assetid: 53e4f5b7-c85d-4b44-9a0c-0ad05ca872cc
-title: 'Schritt 6: Unterstützung für com hinzufügen'
+title: 'Schritt 6: Hinzufügen von Unterstützung für COM'
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e477cc22650604bce623874c0afbba1063609e44
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 097d51fa440812311edde9ce448916c66721a507
+ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106369749"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112406773"
 ---
-# <a name="step-6-add-support-for-com"></a>Schritt 6: Unterstützung für com hinzufügen
+# <a name="step-6-add-support-for-com"></a>Schritt 6: Hinzufügen von Unterstützung für COM
 
-Dies ist Schritt 6 des Tutorials zum [Schreiben von Transformations Filtern](writing-transform-filters.md).
+Dies ist Schritt 6 des Tutorials [Schreiben von Transformationsfiltern.](writing-transform-filters.md)
 
-Der letzte Schritt besteht im Hinzufügen der Unterstützung für com.
+Der letzte Schritt besteht darin, Unterstützung für COM hinzuzufügen.
 
-## <a name="reference-counting"></a>Verweis Zählung
+## <a name="reference-counting"></a>Verweiszählung
 
-[**IUnknown:: adressf**](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref) oder [**IUnknown:: Release**](/windows/win32/api/unknwn/nf-unknwn-iunknown-release)muss nicht implementiert werden. Alle Filter-und PIN-Klassen werden von [**cunknown**](cunknown.md)abgeleitet, das die Verweis Zählung behandelt.
+Sie müssen [**IUnknown::AddRef**](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref) oder [**IUnknown::Release**](/windows/win32/api/unknwn/nf-unknwn-iunknown-release)nicht implementieren. Alle Filter- und Stecknadelklassen werden von [**CUnknown**](cunknown.md)abgeleitet, das die Verweiszählung verarbeitet.
 
 ## <a name="queryinterface"></a>QueryInterface
 
-Alle Filter-und PIN-Klassen implementieren [**IUnknown:: QueryInterface**](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) für beliebige com-Schnittstellen, die Sie erben. [**Ctransformfilter**](ctransformfilter.md) erbt z. b. [**ibasefilter**](/windows/desktop/api/Strmif/nn-strmif-ibasefilter) (über [**cbasefilter**](cbasefilter.md)). Wenn Ihr Filter keine weiteren Schnittstellen verfügbar macht, müssen Sie nichts weiter tun.
+Alle Filter- und Stecknadelklassen implementieren [**IUnknown::QueryInterface**](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) für alle COM-Schnittstellen, die sie erben. Beispielsweise erbt [**CTransformFilter**](ctransformfilter.md) [**IBaseFilter**](/windows/desktop/api/Strmif/nn-strmif-ibasefilter) (über [**CBaseFilter**](cbasefilter.md)). Wenn Ihr Filter keine zusätzlichen Schnittstellen verfügbar macht, müssen Sie nichts anderes tun.
 
-Um zusätzliche Schnittstellen verfügbar zu machen, überschreiben Sie die [**cunknown:: nondelegatingqueryinterface**](cunknown-nondelegatingqueryinterface.md) -Methode. Nehmen Sie beispielsweise an, dass Ihr Filter eine benutzerdefinierte Schnittstelle namens imycustominterface implementiert. Gehen Sie folgendermaßen vor, um diese Schnittstelle für Clients verfügbar zu machen:
+Um zusätzliche Schnittstellen verfügbar zu machen, überschreiben Sie die [**CUnknown::NonDelegatingQueryInterface-Methode.**](cunknown-nondelegatingqueryinterface.md) Angenommen, Ihr Filter implementiert eine benutzerdefinierte Schnittstelle mit dem Namen IMyCustomInterface. Gehen Sie wie folgt vor, um diese Schnittstelle für Clients verfügbar zu machen:
 
--   Leiten Sie die Filterklasse von dieser Schnittstelle ab.
--   Fügen Sie das Makro [**Declare \_ IUnknown**](declare-iunknown.md) in den Abschnitt öffentliche Deklaration ein.
--   Überschreiben Sie [**nondelegatingqueryinterface**](cunknown-nondelegatingqueryinterface.md) , um die IID der Schnittstelle zu überprüfen und einen Zeiger auf den Filter zurückzugeben.
+-   Leiten Sie Ihre Filterklasse von dieser Schnittstelle ab.
+-   Legen Sie das [**DECLARE \_ IUNKNOWN-Makro**](declare-iunknown.md) im Abschnitt öffentliche Deklaration ab.
+-   Überschreiben Sie [**NonDelegatingQueryInterface,**](cunknown-nondelegatingqueryinterface.md) um nach der IID Ihrer Schnittstelle zu suchen und einen Zeiger auf Ihren Filter zurückzugeben.
 
 Diese Schritte sind im folgenden Code dargestellt:
 
@@ -52,13 +52,13 @@ STDMETHODIMP CMyFilter::NonDelegatingQueryInterface(REFIID iid, void **ppv)
 
 
 
-Weitere Informationen finden Sie unter Gewusst [wie: Implementieren von IUnknown](how-to-implement-iunknown.md).
+Weitere Informationen finden Sie unter [Implementieren von IUnknown](how-to-implement-iunknown.md).
 
 ## <a name="object-creation"></a>Objekterstellung
 
-Wenn Sie beabsichtigen, den Filter in einer DLL zu verpacken und für andere Clients verfügbar zu machen, müssen Sie [**cokreateinstance**](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance) und andere verwandte com-Funktionen unterstützen. Die Basisklassen Bibliothek implementiert den größten Teil dieses. Sie müssen nur einige Informationen zu Ihrem Filter angeben. In diesem Abschnitt erhalten Sie einen kurzen Überblick über die Vorgehensweise. Weitere Informationen finden [Sie unter Erstellen einer DirectShow-Filter-DLL](how-to-create-a-dll.md).
+Wenn Sie den Filter in einer DLL packen und für andere Clients verfügbar machen möchten, müssen Sie [**CoCreateInstance**](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance) und andere zugehörige COM-Funktionen unterstützen. Die Basisklassenbibliothek implementiert die meisten dieser Funktionen. Sie müssen nur einige Informationen zu Ihrem Filter angeben. Dieser Abschnitt bietet eine kurze Übersicht über die zu erledigende Aufgabe. Weitere Informationen finden Sie unter [Erstellen einer DirectShow-Filter-DLL.](how-to-create-a-dll.md)
 
-Schreiben Sie zunächst eine statische Klassenmethode, die eine neue Instanz des Filters zurückgibt. Sie können diese Methode beliebig benennen, aber die Signatur muss mit der Signatur identisch sein, die im folgenden Beispiel gezeigt wird:
+Schreiben Sie zunächst eine statische Klassenmethode, die eine neue Instanz Ihres Filters zurückgibt. Sie können diese Methode beliebig benennen, aber die Signatur muss mit der signatur übereinstimmen, die im folgenden Beispiel gezeigt wird:
 
 
 ```C++
@@ -75,7 +75,7 @@ CUnknown * WINAPI CRleFilter::CreateInstance(LPUNKNOWN pUnk, HRESULT *pHr)
 
 
 
-Deklarieren Sie als nächstes ein globales Array von [**cfactorytemplate**](cfactorytemplate.md) -Klassen Instanzen mit dem Namen *g \_ Templates*. Jede **cfactorytemplate** -Klasse enthält Registrierungsinformationen für einen Filter. Mehrere Filter können sich in einer einzelnen DLL befinden. Fügen Sie einfach zusätzliche **cfactoriytemplate** -Einträge ein. Sie können auch andere COM-Objekte deklarieren, z. b. Eigenschaften Seiten.
+Deklarieren Sie als Nächstes ein globales Array von [**CFactoryTemplate-Klasseninstanzen**](cfactorytemplate.md) mit dem Namen *g \_ Templates*. Jede **CFactoryTemplate-Klasse** enthält Registrierungsinformationen für einen Filter. Mehrere Filter können sich in einer einzelnen DLL befinden. fügen Sie einfach zusätzliche **CFactoryTemplate-Einträge** ein. Sie können auch andere COM-Objekte deklarieren, z. B. Eigenschaftenseiten.
 
 
 ```C++
@@ -94,7 +94,7 @@ CFactoryTemplate g_Templates[] =
 
 
 
-Definieren Sie eine globale Ganzzahl mit dem Namen *g \_ ctemplates* , deren Wert der Länge des *g- \_ Vorlagen* Arrays gleicht:
+Definieren Sie eine globale ganze Zahl mit dem Namen *g \_ cTemplates,* deren Wert der Länge des *g \_ Templates-Arrays* entspricht:
 
 
 ```C++
@@ -103,7 +103,7 @@ int g_cTemplates = sizeof(g_Templates) / sizeof(g_Templates[0]);
 
 
 
-Implementieren Sie schließlich die dll-Registrierungsfunktionen. Das folgende Beispiel zeigt die minimale Implementierung für diese Funktionen:
+Implementieren Sie abschließend die DLL-Registrierungsfunktionen. Das folgende Beispiel zeigt die minimale Implementierung für diese Funktionen:
 
 
 ```C++
@@ -119,14 +119,14 @@ STDAPI DllUnregisterServer()
 
 
 
-## <a name="filter-registry-entries"></a>Registrierungseinträge Filtern
+## <a name="filter-registry-entries"></a>Filtern von Registrierungseinträgen
 
-In den vorherigen Beispielen wird gezeigt, wie die CLSID eines Filters für com registriert wird. Für viele Filter ist dies ausreichend. Anschließend wird erwartet, dass der Client den Filter mithilfe von [**CoCreateInstance**](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance) erstellt und ihn dem Filter Diagramm durch Aufrufen von [**ifiltergraph:: AddFilter**](/windows/desktop/api/Strmif/nf-strmif-ifiltergraph-addfilter)hinzufügt. In einigen Fällen möchten Sie jedoch möglicherweise zusätzliche Informationen über den Filter in der Registrierung bereitstellen. Diese Informationen werden wie folgt durchführt:
+Die vorherigen Beispiele zeigen, wie die CLSID eines Filters für COM registriert wird. Für viele Filter ist dies ausreichend. Vom Client wird dann erwartet, dass er den Filter mitHilfe von [**CoCreateInstance**](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance) erstellt und dem Filterdiagramm durch Aufrufen von [**IFilterGraph::AddFilter**](/windows/desktop/api/Strmif/nf-strmif-ifiltergraph-addfilter)hinzufüg. In einigen Fällen sollten Sie jedoch zusätzliche Informationen zum Filter in der Registrierung bereitstellen. Diese Informationen haben folgende Möglichkeiten:
 
--   Ermöglicht Clients das Ermitteln des Filters mithilfe des [Filter Mappers](filter-mapper.md) oder des [System Geräte Enumerators](system-device-enumerator.md).
--   Ermöglicht es dem Filter Graph-Manager, den Filter während der automatischen Diagramm erbaubildung zu ermitteln.
+-   Ermöglicht Clients das Ermitteln des Filters mithilfe der [Filterzuordnung](filter-mapper.md) oder des [Systemgeräte-Enumerators.](system-device-enumerator.md)
+-   Ermöglicht dem Filtergraph-Manager, den Filter während der automatischen Grapherstellung zu ermitteln.
 
-Im folgenden Beispiel wird der RLE-Encoder-Filter in der Kategorie Video-Kompressor registriert. Weitere Informationen finden Sie unter Vorgehens [Weise beim Registrieren von DirectShow-Filtern](how-to-register-directshow-filters.md). Lesen Sie unbedingt den Abschnitt [Richtlinien zum Registrieren von Filtern](guidelines-for-registering-filters.md), in denen die empfohlenen Vorgehensweisen für die Filter Registrierung beschrieben werden.
+Im folgenden Beispiel wird der RLE-Encoderfilter in der Kategorie Videokomprimierung registriert. Weitere Informationen finden Sie unter [Registrieren von DirectShow-Filtern.](how-to-register-directshow-filters.md) Lesen Sie unbedingt den Abschnitt [Richtlinien zum Registrieren von Filtern,](guidelines-for-registering-filters.md)in dem die empfohlenen Methoden für die Filterregistrierung beschrieben werden.
 
 
 ```C++
@@ -210,7 +210,7 @@ STDAPI DllUnregisterServer()
 
 
 
-Außerdem müssen Filter nicht in DLLs verpackt werden. In einigen Fällen können Sie einen speziellen Filter schreiben, der nur für eine bestimmte Anwendung entworfen wurde. In diesem Fall können Sie die Filterklasse direkt in der Anwendung kompilieren und mit dem- `new` Operator erstellen, wie im folgenden Beispiel gezeigt:
+Außerdem müssen Filter nicht in DLLs gepackt werden. In einigen Fällen können Sie einen speziellen Filter schreiben, der nur für eine bestimmte Anwendung konzipiert ist. In diesem Fall können Sie die Filterklasse direkt in Ihrer Anwendung kompilieren und mit dem `new` -Operator erstellen, wie im folgenden Beispiel gezeigt:
 
 
 ```C++
@@ -250,7 +250,7 @@ int main()
 [Schreiben von DirectShow-Filtern](writing-directshow-filters.md)
 </dt> <dt>
 
-[Schreiben von Transformations Filtern](writing-transform-filters.md)
+[Schreiben von Transformationsfiltern](writing-transform-filters.md)
 </dt> </dl>
 
  

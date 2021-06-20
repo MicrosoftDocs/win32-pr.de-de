@@ -1,27 +1,27 @@
 ---
-description: Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie in der PrintSchema-Spezifikation.
+description: Erfahren Sie mehr über die PrintTicket-Anbieterschnittstelle, die eine Methode enthält, die ein Standard-PrintTicket zurückgibt.
 ms.assetid: 3fe4940b-3605-483a-ade5-368d24b630aa
-title: Erstellen eines Standard-PrintTicket
+title: Erstellen eines Standarddrucktickets
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f744a55b135b3abd7c7cff5577f4af64b98b6a33
-ms.sourcegitcommit: de72a1294df274b0a71dc0fdc42d757e5f6df0f3
+ms.openlocfilehash: ffa4c0c7d79b373e3fb2249165ac87e5320bf726
+ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "106357159"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112409550"
 ---
-# <a name="creating-a-default-printticket"></a>Erstellen eines Standard-PrintTicket
+# <a name="creating-a-default-printticket"></a>Erstellen eines Standarddrucktickets
 
-Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie in der [PrintSchema-Spezifikation](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip).
+Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter [Print Schema Specification (Spezifikation des Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 
-Die PrintTicket-Anbieter Schnittstelle enthält eine Methode, die ein Standardmäßiges PrintTicket zurückgibt. Außerdem verfügt die printfunktionalitäten-Anbieter Schnittstelle über eine-Methode, die ein Standarddokument der printfunktionen zurückgibt. Das heißt, eine Momentaufnahme der Print-Funktionen, die mit einem Standard-PrintTicket erstellt werden. Ein solches Standard-Print Ticket muss automatisch durch den folgenden Prozess generiert werden.
+Die PrintTicket-Anbieterschnittstelle enthält eine Methode, die ein Standard-PrintTicket zurückgibt. Darüber hinaus verfügt die PrintCapabilities-Anbieterschnittstelle über eine -Methode, die ein PrintCapabilities-Standarddokument zurückgibt. Das heißt, eine Momentaufnahme der PrintCapabilities-Datei, die mithilfe eines Standarddrucktickets erstellt wurde. Ein solches Standard-PrintTicket muss automatisch durch den folgenden Prozess generiert werden.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Druck Schema Spezifikation](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
+[Spezifikation des Druckschemas](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 </dt> </dl>
 
  

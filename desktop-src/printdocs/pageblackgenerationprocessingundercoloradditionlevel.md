@@ -1,21 +1,21 @@
 ---
-description: Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter Spezifikation des Druckschemas.
+description: Hier erfahren Sie mehr über das PageBlackGenerationProcessingUnderColorAdditionLevel-Element, das die Menge der freizugebenden Freihand in Bereichen mit BlackInkLimit beschreibt.
 ms.assetid: da957aca-1655-4e8d-9e7b-4da0f253293b
 title: PageBlackGenerationProcessingUnderColorAdditionLevel
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8e1b43d8d9ee366fc742dc3d7b1617f6297fc96e
-ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
+ms.openlocfilehash: e3b496fbe890f53d1da8d1054cc5a19fe6318811
+ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "107995667"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112408413"
 ---
 # <a name="pageblackgenerationprocessingundercoloradditionlevel"></a>PageBlackGenerationProcessingUnderColorAdditionLevel
 
-Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter [Print Schema Specification (Spezifikation des Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
+Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie unter Print Schema Specification (Spezifikation des [Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 
-Beschreibt die Menge an roter Freifläche (in grauen Komponentenverhältnisse), die Bereichen hinzugefügt werden soll, in denen GCR/UCR "BlackInkLimit" (oder UKAStart, falls angegeben) in den dunkelneutralen und nahezu neutralen Bereichen generiert hat.
+Beschreibt die Menge an freihandfarbener Freihand (in grauen Komponentenverhältnissen), die Bereichen hinzugefügt werden soll, in denen GCR/UCR "BlackInkLimit" (oder , falls angegeben), in den dunklen Neutralen und nahezu neutralen Bereichen generiert hat.
 
 -   [Elementinformationen](#element-information)
 -   [Strukturieren von Inhalt](#structure-content)
@@ -28,7 +28,7 @@ Beschreibt die Menge an roter Freifläche (in grauen Komponentenverhältnisse), 
 |----------------------------|------------------------------------------------------------|
 | Elementtyp <br/>   | ParameterDef<br/>                                    |
 | Bereichspräfix <br/> | Seite<br/>                                            |
-| Hinweise <br/>          | Mit PageBlackGenerationProcessing-Element verknüpft<br/> |
+| Hinweise <br/>          | Verknüpft mit dem PageBlackGenerationProcessing-Element<br/> |
 
 
 
@@ -36,7 +36,7 @@ Beschreibt die Menge an roter Freifläche (in grauen Komponentenverhältnisse), 
 
 ## <a name="structure-content"></a>Strukturieren von Inhalt
 
-Die XML-Struktur dieses Elements ist:
+Die XML-Struktur dieses Elements lautet:
 
 ``` syntax
 <psf:ParameterDef name="psk:PageBlackGenerationProcessingUnderColorAdditionLevel">
@@ -66,7 +66,7 @@ Die XML-Struktur dieses Elements ist:
 
 ## <a name="structure-properties"></a>Struktureigenschaften
 
-In der folgenden Tabelle werden die Merkmale der Variablen beschrieben, die in der XML-Struktur definiert sind.
+In der folgenden Tabelle werden die Merkmale der in der XML-Struktur definierten Variablen beschrieben.
 
 
 

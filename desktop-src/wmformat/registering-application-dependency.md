@@ -1,76 +1,76 @@
 ---
 title: Registrieren von Anwendungsabhängigkeiten (Windows Media Format 11 SDK)
-description: Anwendungs Abhängigkeit wird registriert
+description: Erfahren Sie, wie Sie Ihre Anwendung mit Laufzeitkomponenten von APIs registrieren, die vom Windows Media Format 11 SDK bereitgestellt werden.
 ms.assetid: 09f63519-5c65-4784-9ea4-4fbecfa6d4aa
 keywords:
-- Windows Media-Format-SDK, Registrieren von Anwendungsabhängigkeiten
-- Anwendungsabhängigkeiten werden registriert
+- Windows Media Format SDK, Registrieren von Anwendungsabhängigkeiten
+- Registrieren von Anwendungsabhängigkeiten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 090cf61d32597800b52e2bc112d2bee1cc1b7cd7
-ms.sourcegitcommit: 8fa6614b715bddf14648cce36d2df22e5232801a
+ms.openlocfilehash: 1cd546ee9b162652f00a131e87561a7e34f7e3a2
+ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "104039914"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112406163"
 ---
 # <a name="registering-application-dependency-windows-media-format-11-sdk"></a>Registrieren von Anwendungsabhängigkeiten (Windows Media Format 11 SDK)
 
-Anwendungen, die APIs verwenden, die vom Windows Media-Format-SDK oder Windows Media Player SDK bereitgestellt werden, sind von den Laufzeitkomponenten dieser Technologien abhängig. Sie können Ihre Anwendung im Rahmen des Anwendungs Setups als von diesen Komponenten abhängig registrieren.
+Anwendungen, die APIs verwenden, die vom Windows Media Format SDK oder Windows Media Player SDK bereitgestellt werden, sind von den Laufzeitkomponenten dieser Technologien abhängig. Sie können Ihre Anwendung im Rahmen der Anwendungseinrichtung als abhängig von diesen Komponenten registrieren.
 
-Wenn Sie Ihre Anwendung registrieren, können Sie eine von zwei Abhängigkeits Ebenen auswählen: "blockieren" oder "abhängig". Wenn eine oder mehrere Anwendungen mit einer blockierenden Abhängigkeit von einer der Laufzeitkomponenten registriert werden, wird die Komponente von einem Rollback auf eine vorherige Version blockiert. Abhängige Anwendungen, die nicht als Blockierung registriert sind, blockieren kein Rollback. Stattdessen wird der Benutzer vor dem Rollback aufgefordert, eine Meldung anzugeben, dass die Anwendungen von der Komponente abhängig sind.
+Wenn Sie Ihre Anwendung registrieren, können Sie eine von zwei Abhängigkeitsebenen auswählen: blockierend oder abhängig. Wenn eine oder mehrere Anwendungen mit einer blockierenden Abhängigkeit von einer der Laufzeitkomponenten registriert werden, wird die Komponente von einem Rollback auf eine frühere Version blockiert. Abhängige Anwendungen, die nicht als blockierend registriert sind, blockieren kein Rollback. Stattdessen wird der Benutzer vor dem Ausführen des Rollbacks mit einer Meldung aufgefordert, dass Anwendungen von der Komponente abhängig sind.
 
-Um Ihre Anwendung zu registrieren, müssen Sie einen Wert in der Registrierung festlegen, der Ihre Anwendung identifiziert. Der festzulegende Registrierungs Wert hängt von der Komponente ab, von der die Anwendung abhängt. Sie können auch zwei zusätzliche Werte pro Abhängigkeit festlegen, um zusätzliche Informationen zu Ihrer Anwendung bereitzustellen.
+Um Ihre Anwendung zu registrieren, müssen Sie einen Wert in der Registrierung festlegen, der Ihre Anwendung identifiziert. Der registrierungswert, der festgelegt werden soll, hängt von der Komponente ab, von der Ihre Anwendung abhängig ist. Sie können auch zwei zusätzliche Werte pro Abhängigkeit festlegen, um zusätzliche Informationen zu Ihrer Anwendung zur Verfügung zu stellen.
 
-Die folgenden Registrierungs Werte werden verwendet, um die Abhängigkeit von der SDK-Laufzeit des Windows Media-Formats zu registrieren:
+Die folgenden Registrierungswerte werden verwendet, um die Abhängigkeit von der Windows Media Format SDK-Runtime zu registrieren:
 
--   HKEY \_ Classes \_ root \\ Software \\ Microsoft \\ Windows Media \\ Setup \\ *ref \_ Type* \\ app, "*App*", "*App \_ String*"
--   HKEY \_ Classes \_ root \\ Software \\ Microsoft \\ WindowsMedia \\ Setup Referenz \\ *\_ Typdeskriptor* \\ , "*App*", "*ref \_ Descriptor*"
--   HKEY \_ Classes \_ root \\ Software \\ Microsoft \\ WindowsMedia \\ Setup \\ *ref \_ Type* \\ Version, "*App*", "*WMF \_ Version*"
+-   HKEY \_ CLASSES ROOT Software Microsoft \_ \\ \\ \\ WindowsMedia Setup REF \\ \\ *\_ TYPE* \\ App, "*APP*", "*APP \_ STRING*"
+-   HKEY \_ CLASSES ROOT Software Microsoft \_ \\ \\ \\ WindowsMedia Setup REF \\ \\ *\_ TYPE* \\ Descriptor, "*APP*", "*REF \_ DESCRIPTOR*"
+-   HKEY \_ CLASSES ROOT Software Microsoft \_ \\ \\ \\ WindowsMedia Setup REF \\ \\ *\_ TYPE* \\ Version, "*APP*", "*WMF \_ VERSION*"
 
-Der folgende Registrierungs Wert wird verwendet, um die Abhängigkeit von der Windows Media Player SDK-Laufzeit zu registrieren:
+Der folgende Registrierungswert wird verwendet, um die Abhängigkeit von Windows Media Player SDK-Runtime zu registrieren:
 
--   HKEY \_ Classes \_ root \\ Software \\ Microsoft \\ Media Player \\ Setup \\ *ref \_ Type* \\ app, "*App*", "*App \_ String*"
--   HKEY \_ Classes \_ root \\ Software \\ Microsoft \\ Media Player \\ Setup \\ *ref \_ Type* \\ Descriptor, "*App*", "*ref \_ Descriptor*"
--   HKEY \_ Classes \_ root \\ Software \\ Microsoft \\ Media Player \\ Setup \\ *ref \_ Type* \\ Version, "*App*", "*WMP \_ Version*"
+-   HKEY \_ CLASSES ROOT Software Microsoft \_ \\ \\ \\ MediaPlayer Setup REF \\ \\ *\_ TYPE* \\ App, "*APP*", "*APP \_ STRING*"
+-   HKEY \_ CLASSES ROOT Software Microsoft \_ \\ \\ \\ MediaPlayer Setup REF \\ \\ *\_ TYPE* \\ Descriptor, "*APP*", "*REF \_ DESCRIPTOR*"
+-   HKEY \_ CLASSES ROOT Software Microsoft \_ \\ \\ \\ MediaPlayer Setup REF \\ \\ *\_ TYPE* \\ Version, "*APP*", "*WMP \_ VERSION*"
 
-In den oben aufgeführten Registrierungs Werten werden die folgenden Variablen verwendet:
+Die folgenden Variablen werden in den oben aufgeführten Registrierungswerten verwendet:
 
-*\_Verweistyp*
+*REF \_ TYPE*
 
-Ersetzen Sie dies durch blockingref Counts zum Blockieren der Abhängigkeit oder durch dependentref Counts für nicht blockierende Abhängigkeiten.
+Ersetzen Sie durch BlockingRefCounts für blockierende Abhängigkeiten oder durch DependentRefCounts für nicht blockierende Abhängigkeiten.
 
 *APP*
 
-Der Name oder der kurze Deskriptor Ihrer Anwendung. Diese Zeichenfolge wird nicht in Nachrichten verwendet, die für den Benutzer angezeigt werden. Dieser Wert ist der Bezeichner, der in allen drei Registrierungs Werten verwendet wird, die den einzelnen Laufzeitkomponenten zugeordnet sind.
+Der Name oder kurze Deskriptor Ihrer Anwendung. Diese Zeichenfolge wird nicht in Meldungen verwendet, die für den Benutzer angezeigt werden. Dieser Wert ist der Bezeichner, der in allen drei Registrierungswerten verwendet wird, die den einzelnen Laufzeitkomponenten zugeordnet sind.
 
-*APP- \_ Zeichenfolge*
+*\_APP-ZEICHENFOLGE*
 
-Deskriptor Ihrer Anwendung. Diese Zeichenfolge kann in Nachrichten verwendet werden, die für den Benutzer angezeigt werden.
+Deskriptor Ihrer Anwendung. Diese Zeichenfolge kann in Meldungen verwendet werden, die für den Benutzer angezeigt werden.
 
-*Verweis \_ Deskriptor*
+*\_REF-DESKRIPTOR*
 
 Beschreibung der Verwendung der Komponente durch Ihre Anwendung. Dieser Wert kann maximal 256 Zeichen enthalten.
 
-*WMP- \_ Version*
+*\_WMP-VERSION*
 
-Die Version von Windows Media Player, die für Ihre Anwendung erforderlich ist.
+Version der Windows Media Player, die für Ihre Anwendung erforderlich ist.
 
-*WMF- \_ Version*
+*\_WMF-VERSION*
 
-Die Version des Windows Media-SDK, das für Ihre Anwendung erforderlich ist.
+Version des Windows Media Format SDK, die für Ihre Anwendung erforderlich ist.
 
-Die folgenden drei Beispiel Registrierungs Werte veranschaulichen, wie die Werte für Ihre Anwendung konfiguriert werden:
+Die folgenden drei Beispielregistrierungswerte veranschaulichen, wie die Werte für Ihre Anwendung konfiguriert werden:
 
--   HKEY \_ Classes \_ root \\ Software \\ Microsoft \\ WindowsMedia \\ Setup \\ dependentrefcounts \\ app, "southridgevideo", "southridge Video Player"
--   HKEY \_ Classes \_ root \\ Software \\ Microsoft \\ \\ Windows Media Setup \\ dependentrefcounts \\ Descriptor, "southridgevideo", "southridge Video Player verwendet das Windows Media Format SDK zum Wiedergeben von Video Dateien".
--   HKEY \_ Classes \_ root \\ Software \\ Microsoft \\ WindowsMedia \\ Setup \\ dependentrefcounts \\ Version, "southridgevideo", "9.0.0.2600"
+-   HKEY \_ CLASSES ROOT Software Microsoft \_ \\ \\ \\ WindowsMedia Setup \\ \\ DependentRefCounts \\ App, "Southvideo", "South southplayer"
+-   HKEY \_ CLASSES ROOT Software Microsoft \_ \\ \\ \\ WindowsMedia Setup \\ \\ DependentRefCounts \\ Descriptor, "South betriebssystemVideo", "South javascript Video Player uses the Windows Media Format SDK to play video files".
+-   HKEY \_ CLASSES ROOT Software Microsoft \_ \\ \\ \\ WindowsMedia Setup \\ \\ DependentRefCounts \\ Version, "Southvideo", "9.0.0.2600"
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Überlegungen zu Projekten**](project-considerations.md)
+[**Überlegungen zum Projekt**](project-considerations.md)
 </dt> </dl>
 
  

@@ -1,11 +1,11 @@
 ---
 title: ps_3_0 Register
-description: Pixel-Shader sind von Registern abhängig, um Vertex-Daten zu erhalten, Pixeldaten auszugeben, temporäre Ergebnisse während der Berechnungen zu speichern und Textur-Samplings zu identifizieren.
+description: Dieser Artikel enthält Referenzinformationen zu den Eingabe- und Ausgaberegistern, die von der Pixelshaderversion 3_0 implementiert werden.
 ms.assetid: 01bee50a-c1b7-4b15-9df8-1dd52d9ff163
 keywords:
-- vpos
-- Positions Register, Pixel-Shader
-- Register-ps_3_0
+- vPos
+- Positionsregister, Pixelshader
+- Register – ps_3_0
 ms.topic: article
 ms.date: 05/31/2018
 topic_type:
@@ -13,74 +13,74 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: ef4eef435857968246ab0413841ef072b5391a5e
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: e1cd0173beabc8fbe21ad15e88e23fc1b6e84892
+ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104390467"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112405493"
 ---
-# <a name="ps_3_0-registers"></a>PS \_ 3 \_ 0-Register
+# <a name="ps_3_0-registers"></a>ps \_ 3 \_ 0 Register
 
-Pixel-Shader sind von Registern abhängig, um Vertex-Daten zu erhalten, Pixeldaten auszugeben, temporäre Ergebnisse während der Berechnungen zu speichern und Textur-Samplings zu identifizieren. Es gibt mehrere Arten von Registern, von denen jede über eine eindeutige Funktionalität verfügt. Dieser Abschnitt enthält Referenzinformationen zu den Eingabe-und Ausgabe Registern, die von Pixel Shader Version 3 0 implementiert werden \_ .
+Pixel-Shader sind von Registern abhängig, um Scheitelpunktdaten abzurufen, Pixeldaten auszugeben, temporäre Ergebnisse bei Berechnungen zu speichern und Textursamplingstufen zu identifizieren. Es gibt mehrere Arten von Registern, die jeweils eine eindeutige Funktionalität aufweisen. Dieser Abschnitt enthält Referenzinformationen zu den Eingabe- und Ausgaberegistern, die von Version 3 0 des Pixelshader implementiert \_ werden.
 
 ## <a name="new-registers"></a>Neue Register
 
-### <a name="input-register"></a>Eingabe Register
+### <a name="input-register"></a>Eingaberegister
 
-Die Eingabe Register (v \# ) sind nun vollständig Gleit Komma und die [Texturkoordinaten Register](dx9-graphics-reference-asm-ps-registers-texture-coordinate.md)s (t \# ) wurden in Sie konsolidiert. Die [DCL \_ -Semantik (SM3-PS ASM)](dcl-usage---ps.md) am Anfang des Shaders wird verwendet, um zu beschreiben, was in einem bestimmten Eingabe Register Container enthalten ist \_ . Eine Semantik für die Pixel Typen wird (analog zur Scheitelpunkt Seite) für dieses Modell eingeführt. Es wird keine Klammer ausgeführt, wenn die Eingabe Register als Farben (z. b. Texturkoordinaten) definiert sind. Die Auswertung der als Farbe definierten Register unterscheidet sich von den Texturkoordinaten beim Multisampling.
+Die Eingaberegister (v \# ) sind jetzt vollständig gleitkomma, und die [Texturkoordinatenregister](dx9-graphics-reference-asm-ps-registers-texture-coordinate.md)(t \# ) wurden darin konsolidiert. Die [ \_ dcl-Semantik (sm3 - ps asm)](dcl-usage---ps.md) am oberen Rand des Shaders wird verwendet, um zu beschreiben, was in einem bestimmten Eingaberegister enthalten \_ ist. Für dieses Modell wird eine Semantik für die Pixeltypen eingeführt (analog zur Scheitelpunktseite). Es wird keine Klammer ausgeführt, wenn die Eingaberegister als Farben (z. B. Texturkoordinaten) definiert sind. Die Auswertung der als Farbe definierten Register unterscheidet sich von den Texturkoordinaten beim Multisampling.
 
-### <a name="face-register"></a>Gesichts Register
+### <a name="face-register"></a>Gesichtsregister
 
-Das Face Register (vface) ist neu für dieses Modell. Dabei handelt es sich um ein Gleit Komma-skalarregister, das schließlich den primitiven Bereich enthalten wird. In PS \_ 3 \_ 0 ist jedoch nur das Vorzeichen dieses Registers gültig. Wenn der Wert also kleiner als 0 (null) ist (das Signier Bit ist auf negativ festgelegt), ist das primitive das hintere Gesicht (der Bereich ist negativ, gegen den Uhrzeigersinn). Daher ist es in PS \_ 3 \_ 0 nur sinnvoll, dieses Register mit 0 (> 0 oder < 0) zu vergleichen. Innerhalb des Pixel-Shaders kann die Anwendung entscheiden, welches Beleuchtungs Verfahren verwendet werden soll. Die zweiseitige Beleuchtung kann auf diese Weise erreicht werden. Dieses Register erfordert eine Deklaration, sodass die nicht deklarierte Verwendung als Fehler gekennzeichnet wird. Für Zeilen und Punkt primitive ist dieses Register nicht definiert. Das Gesichts Register kann nur als Bedingung mit den folgenden Anweisungen verwendet werden: [SETP \_ Comp-PS](setp-comp---ps.md), [if \_ Comp-](if-comp---ps.md)PS oder [break \_ -PS unterbrechen](break-comp---ps.md).
+Das Gesichtsregister (vFace) ist für dieses Modell neu. Dies ist ein Gleitkomma-Skalarregister, das schließlich den primitiven Bereich enthält. In PS \_ 3 \_ 0 ist jedoch nur das Vorzeichen dieses Registers gültig. Wenn der Wert also kleiner als 0 (das Vorzeichenbit ist negativ festgelegt) ist, ist der Primitive die Rückwand (der Bereich ist negativ, gegen den Uhrzeigersinn). Daher ist es in PS \_ 3 \_ 0 nur sinnvoll, dieses Register mit 0 (> 0 oder < 0) zu vergleichen. Innerhalb des Pixelshader kann die Anwendung entscheiden, welche Beleuchtungstechnik verwendet werden soll. Auf diese Weise kann eine zweiseitige Beleuchtung erreicht werden. Dieses Register erfordert eine Deklaration, sodass nicht deklarierte Nutzung als Fehler gekennzeichnet wird. Für Linien und Punktprimitive ist dieses Register nicht definiert. Das Gesichtsregister kann nur als Bedingung mit den folgenden Anweisungen verwendet werden: [setp \_ comp - ps](setp-comp---ps.md), wenn comp - [ \_ ps](if-comp---ps.md), oder [break comp - \_ ps](break-comp---ps.md).
 
-### <a name="loop-counter-register"></a>Schleifen-Counter-Register
+### <a name="loop-counter-register"></a>Schleifenzählerregister
 
-Das [Schleifen-Counter-Register](dx9-graphics-reference-asm-ps-registers-loop-counter.md) (Al) ist neu für dieses Modell. Sie wird bei jeder Ausführung des [Loop-PS](loop---ps.md)- / [ENDLOOP-PS-](endloop---ps.md) Blocks automatisch inkrementiert. Sie kann bei Bedarf im-Block für die relative Adressierung verwendet werden. Es ist ungültig, das Schleifen Counter-Register außerhalb der-Schleife zu verwenden.
+Das [Schleifenzählerregister (Loop Counter Register,](dx9-graphics-reference-asm-ps-registers-loop-counter.md) aL) ist für dieses Modell neu. Bei jeder Ausführung der [Schleife](loop---ps.md)– ps / [endloop](endloop---ps.md) – ps block – wird sie automatisch erhöht. Sie kann im -Block bei Bedarf für die relative Adressierung verwendet werden. Es ist ungültig, das Schleifenzählerregister außerhalb der Schleife zu verwenden.
 
-### <a name="position-register"></a>Positions Register
+### <a name="position-register"></a>Positionsregister
 
-Das Positions Register (vpos) ist neu für dieses Modell. Sie enthält die aktuellen Pixel (x, y) in den entsprechenden Kanälen. Die Kanäle (z, w) sind nicht definiert. Dieses Register erfordert eine Deklaration, sodass die nicht deklarierte Verwendung als Fehler gekennzeichnet wird. Wenn Sie deklariert ist, muss dieses Register genau eine der folgenden Masken aufweisen:. x,. y,. XY.
+Das Positionsregister (vPos) ist für dieses Modell neu. Sie enthält die aktuellen Pixel (x, y) in den entsprechenden Kanälen. Die Kanäle (z, w) sind nicht definiert. Dieses Register erfordert eine Deklaration, sodass nicht deklarierte Nutzung als Fehler gekennzeichnet wird. Wenn dieses Register deklariert wird, muss es genau eine der folgenden Masken aufweisen: .x, .y, .xy.
 
-## <a name="input-register-types"></a>Eingabe Register Typen
+## <a name="input-register-types"></a>Eingaberegistertypen
 
 
 
-| Register | Name                                                                                      | Anzahl | R/W | \# Leseports | \# Lese-/inst- | Dimension | Reladdr | der Arbeitszeittabelle   | Erfordert DCL |
+| Registrieren | Name                                                                                      | Anzahl | R/W | \# Leseports | \# Lese-/Inst-Lesefunktionen | Dimension | RelAddr | Standardeinstellungen   | Erfordert DCL |
 |----------|-------------------------------------------------------------------------------------------|-------|-----|---------------|---------------|-----------|---------|------------|--------------|
-| Ramelow\#      | [Eingabe Register](dx9-graphics-reference-asm-ps-registers-input-color.md)                 | 10    | R   | 1             | Unbegrenzt     | 4         | irdische      | Keine       | Ja          |
-| r\#      | [Temporäres Register](dx9-graphics-reference-asm-ps-registers-temporary.md)               | 32    | R/W | 3             | Unbegrenzt     | 4         | Nein      | Keine       | Nein           |
-| c\#      | [Konstantes float-Register](dx9-graphics-reference-asm-ps-registers-constant-float.md)     | 224   | R   | 1             | Unbegrenzt     | 4         | Nein      | 0000       | Nein           |
-| Ich\#      | [Konstanter ganzzahliges Register](dx9-graphics-reference-asm-ps-registers-constant-integer.md) | 16    | R   | 1             | 1             | 4         | Nein      | 0000       | Nein           |
-| b\#      | [Konstantes boolesches Register](dx9-graphics-reference-asm-ps-registers-constant-boolean.md) | 16    | R   | 1             | 1             | 1         | Nein      | FALSE      | Nein           |
-| P0       | [Prädikat Register](dx9-graphics-reference-asm-ps-registers-predicate.md)               | 1     | R   | 1             | 1             | 1         | Nein      | Keine       | Nein           |
-| s\#      | [Sampler (Direct3D 9 ASM-PS)](dx9-graphics-reference-asm-ps-registers-sampler.md)        | 16    | R   | 1             | 1             | 4         | Nein      | Siehe Hinweis 1 | Ja          |
-| vface    | Gesichts \_ Register                                                                            | 1     | R   | 1             | Unbegrenzt     | 1         | Nein      | Keine       | Ja          |
-| vpos     | Positions \_ Register                                                                        | 1     | R   | 1             | Unbegrenzt     | 4         | Nein      | Keine       | Ja          |
-| irdische       | Schleifen- \_ counter- \_ Register                                                                   | 1     | R   | 1             | Unbegrenzt     | 1         | –     | Keine       | Nein           |
+| V\#      | [Eingaberegister](dx9-graphics-reference-asm-ps-registers-input-color.md)                 | 10    | R   | 1             | Unbegrenzt     | 4         | Al      | Keine       | Ja          |
+| R\#      | [Temporäres Register](dx9-graphics-reference-asm-ps-registers-temporary.md)               | 32    | R/W | 3             | Unbegrenzt     | 4         | Nein      | Keine       | Nein           |
+| c\#      | [Constant Float Register](dx9-graphics-reference-asm-ps-registers-constant-float.md)     | 224   | R   | 1             | Unbegrenzt     | 4         | Nein      | 0000       | Nein           |
+| Ich\#      | [Constant Integer Register](dx9-graphics-reference-asm-ps-registers-constant-integer.md) | 16    | R   | 1             | 1             | 4         | Nein      | 0000       | Nein           |
+| b\#      | [Constant Boolean Register](dx9-graphics-reference-asm-ps-registers-constant-boolean.md) | 16    | R   | 1             | 1             | 1         | Nein      | FALSE      | Nein           |
+| p0       | [Prädikatregister](dx9-graphics-reference-asm-ps-registers-predicate.md)               | 1     | R   | 1             | 1             | 1         | Nein      | Keine       | Nein           |
+| s\#      | [Sampler (Direct3D 9 asm-ps)](dx9-graphics-reference-asm-ps-registers-sampler.md)        | 16    | R   | 1             | 1             | 4         | Nein      | Siehe Hinweis 1 | Ja          |
+| vFace    | \_Gesichtsregister                                                                            | 1     | R   | 1             | Unbegrenzt     | 1         | Nein      | Keine       | Ja          |
+| vPos     | \_Positionsregister                                                                        | 1     | R   | 1             | Unbegrenzt     | 4         | Nein      | Keine       | Ja          |
+| Al       | \_ \_ Schleifenzählerregister                                                                   | 1     | R   | 1             | Unbegrenzt     | 1         | –     | Keine       | Nein           |
 
 
 
- 
+ 
 
 Hinweise:
 
--   Standardwerte für samplerlookups sind vorhanden, aber die Werte hängen vom Textur Format ab.
+-   Es sind Standardwerte für Samplersuchen vorhanden, die Werte hängen jedoch vom Texturformat ab.
 
-Die Anzahl der Schreibvorgänge ist die Anzahl der verschiedenen Register (für jeden Registrierungstyp), die in einer einzelnen Anweisung gelesen werden können.
+Die Anzahl der Readports ist die Anzahl verschiedener Register (für jeden Registertyp), die in einer einzelnen Anweisung gelesen werden können.
 
-## <a name="output-register-types"></a>Ausgabe Register Typen
+## <a name="output-register-types"></a>Ausgaberegistertypen
 
 
 
-| Register | Name                                                                              | Anzahl                                                                             | R/W | Dimension | Reladdr | der Arbeitszeittabelle | Erfordert DCL |
+| Registrieren | Name                                                                              | Anzahl                                                                             | R/W | Dimension | RelAddr | Standardeinstellungen | Erfordert DCL |
 |----------|-----------------------------------------------------------------------------------|-----------------------------------------------------------------------------------|-----|-----------|---------|----------|--------------|
-| d #     | [Ausgabe Farb Register](dx9-graphics-reference-asm-ps-registers-output-color.md) | Siehe [Texturen mit mehreren Elementen (Direct3D 9)](/windows/desktop/direct3d9/multiple-element-textures) | W   | 4         | Nein      | Keine     | Nein           |
-| otiefe   | [Ausgabe tiefen Register](dx9-graphics-reference-asm-ps-registers-output-depth.md) | 1                                                                                 | W   | 1         | Nein      | Keine     | Nein           |
+| Oc #     | [Ausgabefarbregister](dx9-graphics-reference-asm-ps-registers-output-color.md) | Weitere [Informationen finden Sie unter Texturen mit mehreren Element (Direct3D 9).](/windows/desktop/direct3d9/multiple-element-textures) | W   | 4         | Nein      | Keine     | Nein           |
+| oDepth   | [Ausgabetiefenregister](dx9-graphics-reference-asm-ps-registers-output-depth.md) | 1                                                                                 | W   | 1         | Nein      | Keine     | Nein           |
 
 
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -89,6 +89,6 @@ Die Anzahl der Schreibvorgänge ist die Anzahl der verschiedenen Register (für 
 [Register](dx9-graphics-reference-asm-ps-registers.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

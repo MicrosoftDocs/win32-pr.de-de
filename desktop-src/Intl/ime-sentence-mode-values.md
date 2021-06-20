@@ -1,36 +1,36 @@
 ---
-description: Diese Werte werden mit den Funktionen "immgetdeversionstatus" und "immsetconfiguration" verwendet.
+description: Überprüfen Sie die Liste der Ime-Satzmoduswerte (Input Method Editor). Diese Werte werden mit den Funktionen ImmGetConversionStatus und ImmSetConversionStatus verwendet.
 ms.assetid: 24b12936-7dfc-4c8d-970c-d8354ad46d1d
-title: Werte für den IME-Satzmodus
+title: IME-Satzmoduswerte
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4b2fb9d25b2c3b1828e8c36aca554468f6447af2
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 285636ab097bd536e5bd0e4e1869f12c648c3cbb
+ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104216237"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112406763"
 ---
-# <a name="ime-sentence-mode-values"></a>Werte für den IME-Satzmodus
+# <a name="ime-sentence-mode-values"></a>IME-Satzmoduswerte
 
-Diese Werte werden mit den Funktionen " [**immgetdeversionstatus**](/windows/desktop/api/Imm/nf-imm-immgetconversionstatus) " und " [**immsetconfiguration**](/windows/desktop/api/Imm/nf-imm-immsetconversionstatus) " verwendet.
+Diese Werte werden mit den Funktionen [**ImmGetConversionStatus**](/windows/desktop/api/Imm/nf-imm-immgetconversionstatus) und [**ImmSetConversionStatus**](/windows/desktop/api/Imm/nf-imm-immsetconversionstatus) verwendet.
 
 
 
 | Konstante                  | Definition                                                                 |
 |---------------------------|----------------------------------------------------------------------------|
-| IME- \_ smode \_ automatisch     | Der IME führt die Konvertierungs Verarbeitung im automatischen Modus aus.               |
-| IME \_ smode \_ None          | Keine Informationen für einen Satz.                                               |
-| IME \_ smode \_ phravervorhersage | Der IME verwendet Ausdrucks Informationen, um das nächste Zeichen vorherzusagen.             |
-| IME \_ smode \_ pluralclause  | Der IME verwendet die Plural-klauselinformationen, um die Konvertierungs Verarbeitung auszuführen. |
-| IME \_ smode \_ singleconvert | Der IME führt die Konvertierungs Verarbeitung im Einzelzeichen Modus aus.        |
-| IME- \_ smode- \_ Konversation  | Der IME verwendet den Konversationsmodus. Dies ist nützlich für Chat Anwendungen.      |
+| IME \_ SMODE \_ AUTOMATIC     | Die IME führt die Konvertierungsverarbeitung im automatischen Modus durch.               |
+| IME \_ SMODE \_ NONE          | Keine Informationen für Satz.                                               |
+| IME \_ SMODE \_ PHRASEPREDICT | Die IME verwendet Ausdrucksinformationen, um das nächste Zeichen vorherzusagen.             |
+| IME \_ SMODE \_ PLURALCLAUSE  | Die IME verwendet Pluralklauselinformationen, um die Konvertierungsverarbeitung durchzuführen. |
+| IME \_ SMODE \_ SINGLECONVERT | Die IME führt die Konvertierungsverarbeitung im Einzelzeichenmodus durch.        |
+| IME \_ SMODE \_ CONVERSATION  | Die IME verwendet den Konversationsmodus. Dies ist nützlich für Chatanwendungen.      |
 
 
 
  
 
-Bits 16 bis 31 sind für die IME-Verwendung reserviert.
+Die Bits 16 bis 31 sind für die Ime-Verwendung reserviert.
 
  
 

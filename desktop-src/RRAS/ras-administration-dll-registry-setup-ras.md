@@ -1,60 +1,60 @@
 ---
-title: Registrierungs Einrichtung der RAS-Verwaltungs-dll
-description: Das Setup Programm für eine Drittanbieter-RAS-Verwaltungs-dll muss die dll bei RAS registrieren, indem Sie Informationen unter dem folgenden Schlüssel in der Registrierung bereitstellt.
+title: Setup der RAS-Verwaltungs-DLL-Registrierung
+description: Machen Sie sich mit den Anforderungen für die Registrierung einer RAS-Verwaltungs-DLL (Remote Access Service) eines Drittanbieters bei RAS bewusst.
 ms.assetid: 8108a0ac-8562-4251-99be-5f2b2f5c67c4
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b0aed28fc41334c161a11ce5575b6395c4bb5da5
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: ed0af8e4b189de69f254429c18beb4756e01ad56
+ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104516023"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112406713"
 ---
-# <a name="ras-administration-dll-registry-setup"></a>Registrierungs Einrichtung der RAS-Verwaltungs-dll
+# <a name="ras-administration-dll-registry-setup"></a>Setup der RAS-Verwaltungs-DLL-Registrierung
 
-Das Setup Programm für eine Drittanbieter-RAS-Verwaltungs-dll muss die dll bei RAS registrieren, indem Sie Informationen unter dem folgenden Schlüssel in der Registrierung bereitstellt.
+Das Setupprogramm für eine RAS-Verwaltungs-DLL eines Drittanbieters muss die DLL bei RAS registrieren, indem Informationen unter dem folgenden Schlüssel in der Registrierung zur Verfügung gestellt werden.
 
 ```
 HKEY_LOCAL_MACHINE
-   SOFTWARE
-      Microsoft
-         RAS
-            AdminDll
+   SOFTWARE
+      Microsoft
+         RAS
+            AdminDll
 ```
 
-Um die dll zu registrieren, legen Sie die folgenden Werte unter diesem Schlüssel fest.
+Legen Sie zum Registrieren der DLL die folgenden Werte unter diesem Schlüssel fest.
 
 
 
 | Wertname    | Wertdaten                                                                    |
 |---------------|-------------------------------------------------------------------------------|
-| *DisplayName* | Eine **reg \_ SZ** -Zeichenfolge, die den benutzerfreundlichen anzeigen amen der dll enthält. |
-| *Dll*     | Eine **reg- \_ SZ** -Zeichenfolge, die den vollständigen Pfad der dll enthält.                  |
+| *DisplayName* | Eine **REG \_ SZ-Zeichenfolge,** die den benutzerfreundlichen Anzeigenamen der DLL enthält. |
+| *DLLPath*     | Eine **REG \_ SZ-Zeichenfolge,** die den vollständigen Pfad der DLL enthält.                  |
 
 
 
- 
+ 
 
-Beispielsweise könnte der Registrierungs Eintrag für eine RAS-Verwaltungs-dll von einem fiktiven Unternehmen mit dem Namen ProElectron, Inc. wie folgt lauten:
+Der Registrierungseintrag für eine RAS-Verwaltungs-DLL eines fiktiven Unternehmens mit dem Namen ProElecron, Inc. kann beispielsweise wie im Folgenden beschrieben sein:
 
 ```
 HKEY_LOCAL_MACHINE
-   SOFTWARE
-      Microsoft
-         RAS
-            AdminDll
+   SOFTWARE
+      Microsoft
+         RAS
+            AdminDll
 ```
 
-*Display Name* : **reg \_ SZ** : ProElectron RAS admin dll
+*DisplayName* : **REG \_ SZ** : ProElecron RAS Admin DLL
 
-*DllPath* : **reg \_ SZ** : C: \\ NT \\ system32 \\ntwkadm.dll
+*DLLPath* : **REG \_ SZ** : C: \\ nt \\ system32 \\ntwkadm.dll
 
-Das Setup Programm für eine RAS-Verwaltungs-dll sollte auch Funktionen zum Entfernen/Deinstallieren bereitstellen. Wenn ein Benutzer die dll entfernt, sollte das Setup Programm die Registrierungseinträge der dll löschen.
+Das Setupprogramm für eine RAS-Verwaltungs-DLL sollte auch Funktionen zum Entfernen/Deinstallieren bereitstellen. Wenn ein Benutzer die DLL entfernt, sollte das Setupprogramm die Registrierungseinträge der DLL löschen.
 
- 
+ 
 
- 
+ 
 
 
 

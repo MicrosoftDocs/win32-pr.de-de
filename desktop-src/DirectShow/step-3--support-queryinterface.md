@@ -1,21 +1,21 @@
 ---
-description: 'Schritt 3:'
+description: Machen Sie die neuen Schnittstellen eines Filters für Clients verfügbar, wenn Sie eine Filtereigenschaftsseite für einen benutzerdefinierten DirectShow-Filter erstellen.
 ms.assetid: a0e52ba9-9f7c-4cf3-ba5f-b0035ed1794c
-title: 'Schritt 3: QueryInterface-Unterstützung'
+title: 'Schritt 3: Unterstützung von QueryInterface'
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b0e3d44b67971e165b8586aa3a02cc65ab3ab05f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 84b62132a6f24c68453ad4e51f72cdd9a2a78c65
+ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106356998"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112410023"
 ---
-# <a name="step-3-support-queryinterface"></a>Schritt 3: QueryInterface-Unterstützung
+# <a name="step-3-support-queryinterface"></a>Schritt 3: Unterstützung von QueryInterface
 
-Gehen Sie folgendermaßen vor, um die neuen Schnittstellen des Filters für Clients verfügbar zu machen:
+Gehen Sie wie folgt vor, um die neuen Schnittstellen des Filters für Clients verfügbar zu machen:
 
--   Fügen Sie das Makro [**Declare \_ IUnknown**](declare-iunknown.md) in den Abschnitt Public Declaration Ihres Filters ein:
+-   Schließen Sie [**das DECLARE \_ IUNKNOWN-Makro**](declare-iunknown.md) in den öffentlichen Deklarationsabschnitt Ihres Filters ein:
     ```C++
     public:
         DECLARE_IUNKNOWN;
@@ -23,7 +23,7 @@ Gehen Sie folgendermaßen vor, um die neuen Schnittstellen des Filters für Clie
 
     
 
--   Überschreiben Sie [**cunknown:: nondelegatingqueryinterface**](cunknown-nondelegatingqueryinterface.md) , um die IIDs der beiden Schnittstellen zu überprüfen:
+-   Überschreiben [**Sie CUnknown::NonDelegatingQueryInterface,**](cunknown-nondelegatingqueryinterface.md) um nach den IIDs der beiden Schnittstellen zu überprüfen:
     ```C++
     STDMETHODIMP CGrayFilter::NonDelegatingQueryInterface(REFIID riid, void **ppv)
     {
@@ -51,13 +51,13 @@ Gehen Sie folgendermaßen vor, um die neuen Schnittstellen des Filters für Clie
 
     
 
-Weiter: [Schritt 4. Erstellen Sie die Eigenschaften Seite](step-4--create-the-property-page.md).
+Weiter: [Schritt 4. Erstellen Sie die Eigenschaftenseite](step-4--create-the-property-page.md).
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Erstellen einer Filter Eigenschaften Seite](creating-a-filter-property-page.md)
+[Erstellen einer Filtereigenschaftsseite](creating-a-filter-property-page.md)
 </dt> <dt>
 
 [Implementieren von IUnknown](how-to-implement-iunknown.md)

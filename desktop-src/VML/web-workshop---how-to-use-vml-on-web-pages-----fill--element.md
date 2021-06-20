@@ -1,66 +1,66 @@
 ---
 title: Verwenden des Fill-Elements
-description: In diesem Thema wird VML beschrieben, eine Funktion, die ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+description: In diesem Artikel wird die Verwendung des Fill-Elements von VML beschrieben, einem Feature, das ab Windows Internet Explorer 9 veraltet ist.
 ms.assetid: ed36601d-2e90-412e-ac3f-58324fac300d
 keywords:
-- Webworkshop, Fill-Element
-- Entwerfen von Webseiten, Fill-Element
-- Vector Markup Language (VML), Fill-Element
-- VML (Vector Markup Language), Fill-Element
+- Web workshop,fill-Element
+- Entwerfen von Webseiten, Füllen des Elements
+- Vector Markup Language (VML),Fill-Element
+- VML (Vector Markup Language),Fill-Element
 - Vektorgrafiken, Fill-Element
-- Fill-Element
-- VML-Elemente, ausfüllen
+- fill-Element
+- VML-Elemente, auffüllen
 - VML-Formen, Fill-Element
 - Vector Markup Language (VML), Farbverlaufsfüllung
-- VML (Vector Markup Language), Farbverlaufsfüllung
-- Vektorgrafiken, Farbverlaufsfüllung
+- VML (Vector Markup Language),Farbverlaufsfüllung
+- Vektorgrafik, Farbverlaufsfüllung
 - VML-Formen, Farbverlaufsfüllung
-- durch Farbverlauf gefüllte Formen
+- Mit Farbverlauf gefüllte Formen
 - Vector Markup Language (VML), Musterfüllung
-- VML (Vector Markup Language), Musterfüllung
+- VML (Vector Markup Language),Musterfüllung
 - Vektorgrafiken, Musterfüllung
 - VML-Formen, Musterfüllung
-- Muster gefüllte Formen
-- Vector Markup Language (VML), Bild Füllung
-- VML (Vector Markup Language), Bild Füllung
-- Vektorgrafiken, bildfüll
-- VML-Formen, Bild Füllung
-- Bild gefüllte Formen
+- Mit Mustern gefüllte Formen
+- Vector Markup Language (VML),Bildfüllung
+- VML (Vector Markup Language),Bildfüllung
+- Vektorgrafiken, Bildfüllung
+- VML-Formen, Bildfüllung
+- Mit Bildern gefüllte Formen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: cf497a3120f53e24f1cff2bf7084469754bbaf7e
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: ecb243e4896443fd36a1b22c2ac3a0ab0bedfb2b
+ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104555357"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112407793"
 ---
 # <a name="using-the-fill-element"></a>Verwenden des Fill-Elements
 
-In diesem Thema wird VML beschrieben, eine Funktion, die ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen weit verbreiteten Standards migriert werden.
 
 > [!Note]  
-> Ab Dezember 2011 wurde dieses Thema archiviert. Daher wird er nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [archivierte Inhalte](/previous-versions/windows/internet-explorer/ie-developer/). Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center](https://msdn.microsoft.com/ie/).
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie unter [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
- 
+ 
 
-Wie Sie gelernt haben, können Sie das **FillColor** -Eigenschafts Attribut eines vordefinierten Shape-Elements verwenden, z. b.,,,, `<oval>` `<line>` `<polyline>` `<curve>` `<rect>` , `<roundrect>` , `<arc>` --, um die Farbe anzugeben, die zum Ausfüllen der Form verwendet wird. In diesem Thema wird veranschaulicht, wie eine Form gezeichnet wird, die mit erweiterten Effekten gefüllt ist.
+Wie Sie gelernt haben, können  Sie das fillcolor-Eigenschaftsattribut eines vordefinierten Formelements wie `<oval>` , , , , , , `<line>` `<polyline>` `<curve>` `<rect>` `<roundrect>` `<arc>` verwenden, um die Farbe anzugeben, die zum Füllen der Form verwendet wird. In diesem Thema wird veranschaulicht, wie eine Form gezeichnet wird, die mit erweiterten Effekten gefüllt ist.
 
-Sie können das `<fill>` untergeordnete Element innerhalb des- `<shape>` ,-oder-Elements `<shapetype>` oder eines beliebigen vordefinierten Shape-Elements platzieren, um das Ausfüllen der Form zu beschreiben. Anschließend können Sie die Eigenschafts Attribute des `<fill>` unter Elements verwenden, um den Fülleffekt anzupassen, z. b. [Farbverlaufsfüllung](#gradient-fill), [Musterfüllung](#pattern-fill), [Bild Füllung](#picture-fill).
+Sie können das `<fill>` Unterelement innerhalb von `<shape>` oder oder in einem `<shapetype>` beliebigen vordefinierten Shape-Element platzieren, um zu beschreiben, wie die Form gefüllt werden soll. Anschließend können Sie die Eigenschaftenattribute des `<fill>` Unterelements verwenden, um den Fülleffekt anzupassen, z. B. [Farbverlaufsfüllung,](#gradient-fill) [Musterfüllung,](#pattern-fill) [Bildfüllung.](#picture-fill)
 
 In diesem Thema:
 
 -   [Farbverlaufsfüllung](#gradient-fill)
 -   [Musterfüllung](#pattern-fill)
--   [Bild Füllung](#picture-fill)
+-   [Bildfüllung](#picture-fill)
 
 ## <a name="gradient-fill"></a>Farbverlaufsfüllung
 
-Um eine Form vom **Typ** "Gradient" zu zeichnen, können Sie das Type-Eigenschafts Attribut des `<fill>` unter Elements auf "Gradient" oder "gradientradi" festlegen und dann andere Eigenschafts Attribute des `<fill>` unter Elements angeben, z. b. **Methode**, **color2**, **Fokus** und **Winkel**.
+Um eine mit Farbverlauf gefüllte  Form zu zeichnen, können Sie das Type-Eigenschaftsattribut des `<fill>` Unterelements auf "gradient" oder "gradientRadial" festlegen und dann andere Eigenschaftsattribute des `<fill>` Unterelements angeben, z. B. **methode**, **color2,** **focus** und **angle**.
 
 **Beispiele:**
 
-Zum Erstellen einer Form, die horizontal mit einem Farbverlauf gefüllt ist, können Sie das Attribut **Type** Property auf "Gradient" festlegen, wie in der folgenden VML-Darstellung gezeigt:
+Um eine Form zu erstellen, die horizontal mit  Farbverlauf gefüllt ist, können Sie das type-Eigenschaftsattribut auf "gradient" festlegen, wie in der folgenden VML-Darstellung gezeigt:
 
 ![horizontal1.gif (3055 Bytes)](images/horizontal1.gif)
 
@@ -74,7 +74,7 @@ Zum Erstellen einer Form, die horizontal mit einem Farbverlauf gefüllt ist, kö
 
 
 
-Wenn Sie das **FillColor** -Eigenschafts Attribut der Form ändern, wird die Form dann mit einer anderen Farbe aufgefüllt. Sie können eine zweite Farbe hinzufügen, indem Sie das **color2** -Eigenschafts Attribut des `<fill>` unter Elements angeben. Um z. b. eine Form zu erstellen, die in zwei Farben mit einem Farbverlauf gefüllt ist, können Sie eine zweite Farbe hinzufügen, indem Sie das **color2** -Eigenschafts Attribut des `<fill>` unter Elements angeben, wie in der folgenden VML-Darstellung dargestellt:
+Wenn Sie  das Fillcolor-Eigenschaftsattribut der Form ändern, wird die Form mit einer anderen Farbe farbverlaufsgefüllt. Sie können eine zweite Farbe  hinzufügen, indem Sie das color2-Eigenschaftsattribut des `<fill>` Unterelements angeben. Wenn Sie z. B. eine Form erstellen möchten, die in zwei Farben  mit Farbverläufen gefüllt ist, können Sie eine zweite Farbe hinzufügen, indem Sie das color2-Eigenschaftsattribut des `<fill>` Unterelements angeben, wie in der folgenden VML-Darstellung gezeigt:
 
 ![horizontal2.gif (3127 Bytes)](images/horizontal2.gif)
 
@@ -88,13 +88,13 @@ Wenn Sie das **FillColor** -Eigenschafts Attribut der Form ändern, wird die For
 
 
 
-Sie können das **method** -Eigenschaften Attribut auf "Linear" oder "Sigma" oder "Any" oder "None" festlegen. Die Auswirkung des Farbverlaufs unterscheidet sich geringfügig. Außerdem können Sie mit dem **Angle**-,**Fokus**-,**focussize**-oder **focusposition** -Eigenschafts Attribut ändern, wie der Farbverlauf verläuft.
+Sie können  das Methodeneigenschaftsattribut auf "linear" oder "sigma" oder "any" oder "none" festlegen. Die Auswirkung des Farbverlaufs unterscheidet sich geringfügig. Darüber hinaus können Sie das Eigenschaftenattribut **angle**,**focus**,**focussize** oder **focusposition** verwenden, um zu ändern, wie der Farbverlauf verläuft.
 
 **Beispiele:**
 
- 
+ 
 
-Zum Erstellen einer Form, die mit einem vertikalen Farbverlauf aufgefüllt ist, können Sie das Angle-Eigenschafts Attribut auf Angle = "-90" festlegen, wie in der folgenden VML-Darstellung gezeigt:
+Um eine vertikal mit Farbverlauf gefüllte Form zu erstellen, können Sie das Angle-Eigenschaftsattribut auf angle="-90" festlegen, wie in der folgenden VML-Darstellung gezeigt:
 
 ![vertical1.gif (3836 Bytes)](images/vertical1.gif)
 
@@ -109,7 +109,7 @@ type="gradient" />
 
 
 
-Um eine Form zu erstellen, die von diagonalem bewegen mit einem Farbverlauf gefüllt ist, können Sie das **Angle** -Eigenschafts Attribut auf Angle = "-135" festlegen, wie in der folgenden VML-Darstellung gezeigt:
+Um eine Form zu erstellen, die vom Diagonalen  nach oben mit Farbverläufen gefüllt wird, können Sie das Angle-Eigenschaftsattribut auf angle="-135" festlegen, wie in der folgenden VML-Darstellung gezeigt:
 
 ![dialgonalup1.gif (5816 Bytes)](images/dialgonalup1.gif)
 
@@ -124,7 +124,7 @@ type="gradient" />
 
 
 
-Um eine Form zu erstellen, die von einem diagonalen, nach unten ausgefüllten Farbverlauf gefüllt ist, können Sie das **Angle** -Eigenschafts Attribut auf Angle = "-45" festlegen, wie in der folgenden VML-Darstellung gezeigt:
+Um eine Form zu erstellen, die vom Diagonalen  nach unten mit Farbverläufen gefüllt wird, können Sie das Angle-Eigenschaftsattribut auf angle="-45" festlegen, wie in der folgenden VML-Darstellung gezeigt:
 
 ![diagonaldown1.gif (5753 Bytes)](images/diagonaldown1.gif)
 
@@ -139,7 +139,7 @@ type="gradient" />
 
 
 
-Um eine Form zu erstellen, die aus dem Mittelpunkt aufgefüllt wird, können Sie angeben `angle="-45" focus="100%" focusposition=".5, .5" focussize="0, 0" type="gradientRadial"` , wie in der folgenden VML-Darstellung gezeigt:
+Um eine Form zu erstellen, die von der Mitte aus mit Farbverläufen gefüllt ist, können Sie `angle="-45" focus="100%" focusposition=".5, .5" focussize="0, 0" type="gradientRadial"` angeben, wie in der folgenden VML-Darstellung gezeigt:
 
 ![fromcenter1.gif (4598 Bytes)](images/fromcenter1.gif)
 
@@ -155,17 +155,17 @@ type="gradientRadial" />
 
 
 
-[![zurück ](images/top.gif) zum Anfang](#top)
+[![Zurück zum Anfang ](images/top.gif) Zurück zum Anfang](#top)
 
 ## <a name="pattern-fill"></a>Musterfüllung
 
-Um eine Muster gefüllte Form zu zeichnen, können Sie das **Type** -Eigenschafts Attribut des `<fill>` unter Elements auf "Pattern" festlegen und anschließend andere Eigenschafts Attribute des `<fill>` unter Elements angeben, z. b. **src** und **color2**.
+Um eine mit Mustern gefüllte  Form zu zeichnen, können Sie das type-Eigenschaftsattribut des `<fill>` Unterelements auf "pattern" festlegen und dann andere Eigenschaftsattribute des `<fill>` Unterelements angeben, z. B. **src** und **color2.**
 
 **Beispiele:**
 
-Zum Erstellen einer Form, die mit einem Musterbild gefüllt ist, können Sie das **Type** -Eigenschafts Attribut auf "Pattern" festlegen und das **src** -Eigenschafts Attribut auf den Speicherort der Pattern-Bilddatei verweisen, wie in der folgenden VML-Darstellung gezeigt:
+Um eine Form zu erstellen, die mit einem  Musterbild gefüllt ist, können Sie das type-Eigenschaftsattribut auf "pattern" angeben und das src-Eigenschaftsattribut auf den Speicherort der Musterbilddatei verweisen, wie in der folgenden VML-Darstellung gezeigt: 
 
-![pattern1.gif (872 bytes)](images/pattern1.gif)
+![pattern1.gif (872 Bytes)](images/pattern1.gif)
 
 
 ```HTML
@@ -177,9 +177,9 @@ Zum Erstellen einer Form, die mit einem Musterbild gefüllt ist, können Sie das
 
 
 
-Wenn Sie das **src** -Eigenschafts Attribut auf eine andere Musterdatei verweisen, können Sie eine Form erstellen, die mit einem anderen Muster gefüllt ist. Außerdem können Sie die Farbe ändern, indem Sie einen anderen Wert für das **FillColor** -oder **color2** -Eigenschafts Attribut angeben, wie in der folgenden VML-Darstellung dargestellt:
+Wenn Sie  das src-Eigenschaftsattribut auf eine andere Musterdatei verweisen, können Sie eine Form erstellen, die mit einem anderen Muster gefüllt ist. Außerdem können Sie die Farbe ändern, indem Sie einen anderen Wert für das **fillcolor-** oder color2-Eigenschaftsattribut angeben, wie in der folgenden VML-Darstellung gezeigt: 
 
-![pattern2.gif (831 Bytes)](images/pattern2.gif)
+![pattern2.gif (831 Byte)](images/pattern2.gif)
 
 
 ```HTML
@@ -192,15 +192,15 @@ color2="blue" />
 
 
 
-[![zurück ](images/top.gif) zum Anfang](#top)
+[![Zurück zum Anfang ](images/top.gif) Zurück zum Anfang](#top)
 
-## <a name="picture-fill"></a>Bild Füllung
+## <a name="picture-fill"></a>Bildfüllung
 
-Zum Zeichnen eines Bilds können Sie das **Type** -Eigenschafts Attribut des `<fill>` unter Elements auf "Frame" festlegen und anschließend andere Eigenschafts Attribute des `<fill>` unter Elements angeben, z. b. **src** und **color2**.
+Um eine mit Bildern gefüllte Form  zu zeichnen, können Sie das type-Eigenschaftsattribut des `<fill>` Unterelements auf "frame" festlegen und dann andere Eigenschaftsattribute des `<fill>` Unterelements angeben, z. B. **src** und **color2.**
 
 **Beispiele:**
 
-Um eine Form zu erstellen, die mit einer Bilddatei gefüllt ist, können Sie das **Type** -Eigenschafts Attribut auf "Frame" festlegen und dann das **src** -Eigenschafts Attribut auf den Speicherort der Bilddatei verweisen, wie in der folgenden VML-Darstellung gezeigt:
+Um eine Form zu erstellen, die mit einer  Bilddatei gefüllt ist, können Sie das type-Eigenschaftsattribut auf "frame" angeben und dann das src-Eigenschaftsattribut auf den Speicherort der Bilddatei verweisen, wie in der folgenden VML-Darstellung gezeigt: 
 
 ![picture1.gif (8496 Bytes)](images/picture1.gif)
 
@@ -215,10 +215,10 @@ strokeweight="2.5pt">
 
 
 
-Sie können problemlos eine Form erstellen, die mit einem anderen Bild gefüllt ist, indem Sie das **src** -Eigenschafts Attribut auf eine andere Datei zeigen.
+Sie können ganz einfach eine Form erstellen, die  mit einem anderen Bild gefüllt ist, indem Sie das src-Eigenschaftsattribut auf eine andere Datei verweisen.
 
-Weitere Informationen zu diesem Element finden Sie in der [VML-Spezifikation](https://www.w3.org/TR/NOTE-VML#-toc416858394) .
+Weitere Informationen zu diesem Element finden Sie in der [VML-Spezifikation.](https://www.w3.org/TR/NOTE-VML#-toc416858394)
 
- 
+ 
 
- 
+ 

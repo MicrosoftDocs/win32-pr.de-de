@@ -1,25 +1,25 @@
 ---
-description: 'Schritt 1:'
+description: Definieren Sie einen Mechanismus zum Festlegen der Eigenschaft als Teil der Erstellung einer Filtereigenschaftsseite für einen benutzerdefinierten DirectShow-Filter.
 ms.assetid: 1912af22-11dc-4864-8c20-91675d4f45d9
 title: 'Schritt 1: Definieren eines Mechanismus zum Festlegen der Eigenschaft'
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 74a1845cfb3cdf5642378a2321e827e52720a83d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 191014c35e27974c52961c2c6218e3a83effcc99
+ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106368034"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112410073"
 ---
 # <a name="step-1-define-a-mechanism-for-setting-the-property"></a>Schritt 1: Definieren eines Mechanismus zum Festlegen der Eigenschaft
 
-Der Filter muss eine Methode unterstützen, mit der die Eigenschaften Seite damit kommunizieren kann, damit die Eigenschaften Seite Eigenschaften des Filters festlegen und abrufen kann. Folgende Mechanismen sind möglich:
+Der Filter muss eine Möglichkeit unterstützen, damit die Eigenschaftenseite damit kommunizieren kann, damit die Eigenschaftenseite Eigenschaften für den Filter festlegen und abrufen kann. Folgende Mechanismen sind möglich:
 
--   Macht eine benutzerdefinierte COM-Schnittstelle verfügbar.
--   Unterstützung von Automatisierungs Eigenschaften über **IDispatch**.
--   Macht die **IPropertyBag** -Schnittstelle verfügbar und definiert einen Satz benannter Eigenschaften.
+-   Machen Sie eine benutzerdefinierte COM-Schnittstelle verfügbar.
+-   Automation-Eigenschaften werden über **IDispatch unterstützt.**
+-   Machen Sie die **IPropertyBag-Schnittstelle** verfügbar, und definieren Sie einen Satz benannter Eigenschaften.
 
-In diesem Beispiel wird eine benutzerdefinierte COM-Schnittstelle mit dem Namen isaturierung verwendet. Dabei handelt es sich nicht um eine tatsächliche DirectShow-Schnittstelle. Er ist nur für dieses Beispiel definiert. Beginnen Sie, indem Sie die-Schnittstelle in einer Header Datei zusammen mit dem Schnittstellen Bezeichner (IID) deklarieren:
+In diesem Beispiel wird eine benutzerdefinierte COM-Schnittstelle namens ISaturation verwendet. Dies ist keine tatsächliche DirectShow-Schnittstelle. sie wird nur für dieses Beispiel definiert. Deklarieren Sie zunächst die Schnittstelle in einer Headerdatei zusammen mit dem Schnittstellenbezeichner (IID):
 
 
 ```C++
@@ -36,7 +36,7 @@ interface ISaturation : public IUnknown
 
 
 
-Sie können auch die Schnittstelle mit IDL definieren und den Mittelpunkt Compiler zum Erstellen der Header Datei verwenden. Implementieren Sie anschließend die benutzerdefinierte Schnittstelle im Filter. In diesem Beispiel werden die Methoden "Get" und "Set" für den Sättigungswert des Filters verwendet. Beachten Sie, dass beide Methoden den m \_ lsättigung-Member mit einem kritischen Abschnitt schützen.
+Sie können die Schnittstelle auch mit IDL definieren und den MIDL-Compiler verwenden, um die Headerdatei zu erstellen. Implementieren Sie als Nächstes die benutzerdefinierte Schnittstelle im Filter. In diesem Beispiel werden die Methoden "Get" und "Set" für den Sättigungswert des Filters verwendet. Beachten Sie, dass beide Methoden den m \_ lSaturation-Member mit einem kritischen Abschnitt schützen.
 
 
 ```C++
@@ -68,7 +68,7 @@ public:
 
 
 
-Die Details Ihrer eigenen Implementierung unterscheiden sich natürlich von dem hier gezeigten Beispiel.
+Natürlich unterscheiden sich die Details Ihrer eigenen Implementierung von dem hier gezeigten Beispiel.
 
 Weiter: [Schritt 2. Implementieren Sie ISpecifyPropertyPages](step-2--implement-ispecifypropertypages.md).
 
@@ -76,10 +76,10 @@ Weiter: [Schritt 2. Implementieren Sie ISpecifyPropertyPages](step-2--implement-
 
 <dl> <dt>
 
-[**Ccritsec-Klasse**](ccritsec.md)
+[**CCritSec-Klasse**](ccritsec.md)
 </dt> <dt>
 
-[Erstellen einer Filter Eigenschaften Seite](creating-a-filter-property-page.md)
+[Erstellen einer Filtereigenschaftsseite](creating-a-filter-property-page.md)
 </dt> </dl>
 
  

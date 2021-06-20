@@ -1,39 +1,39 @@
 ---
-description: Zeigt die Beziehung zwischen den Funktionsparametern an, die auf Strukturen oder Arrays und deren initialisierte Daten zeigen.
+description: Zeigt die Beziehung zwischen diesen Funktionsparametern, die auf Strukturen oder Arrays verweisen, und ihren initialisierten Daten mit einem Codebeispiel.
 ms.assetid: b1ad0f13-fb4d-421f-b054-a99c8ad9c83a
-title: 'Beispiel-C-Programm: Verwenden von cryptencryptmessage und cryptdecryptmessage'
+title: 'C-Beispielprogramm: Verwenden von CryptEncryptMessage und CryptDecryptMessage'
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 726381b1c76c987207e2115c6282534b94212931
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8b776ea1e0286717da94ed1b92caccfc19652e70
+ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104559558"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112410033"
 ---
-# <a name="example-c-program-using-cryptencryptmessage-and-cryptdecryptmessage"></a>Beispiel-C-Programm: Verwenden von cryptencryptmessage und cryptdecryptmessage
+# <a name="example-c-program-using-cryptencryptmessage-and-cryptdecryptmessage"></a>C-Beispielprogramm: Verwenden von CryptEncryptMessage und CryptDecryptMessage
 
-[**Cryptencryptmessage**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptencryptmessage) ist der einzige Funktionsaufrufe, der erforderlich ist, um alle Aufgaben auszuführen, die unter [Verschlüsseln einer Nachricht](../secauthn/encrypting-a-message.md)aufgeführt sind. Die Initialisierung der Datenstrukturen ist erforderlich. Die folgende Abbildung zeigt die Beziehung zwischen den Funktionsparametern, die auf Strukturen oder Arrays und deren initialisierte Daten zeigen. In diesem Beispiel wird die Nachricht auch mithilfe von [**cryptdecryptmessage**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptdecryptmessage)entschlüsselt.
+[**CryptEncryptMessage**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptencryptmessage) ist der einzige Funktionsaufruf, der erforderlich ist, um alle Unter [Verschlüsseln einer Nachricht aufgeführten Aufgaben auszuführen.](../secauthn/encrypting-a-message.md) Die Initialisierung von Datenstrukturen ist erforderlich. Die folgende Abbildung zeigt die Beziehung zwischen diesen Funktionsparametern, die auf Strukturen oder Arrays verweisen, und ihren initialisierten Daten. In diesem Beispiel wird die Nachricht auch mithilfe von [**CryptDecryptMessage entschlüsselt.**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptdecryptmessage)
 
-![Initialisierungs Zuordnung für einen "cryptencryptmessage"-Rückruf](images/crypenc.png)
+![Initialisierungszuordnung für einen Aufruf von cryptencryptmessage](images/crypenc.png)
 
 **So verschlüsseln Sie Daten**
 
-1.  Einen Zeiger auf den zu verschlüsselnden Inhalt erhalten.
-2.  Legen Sie die Größe des zu verschlüsselnden Inhalts fest.
-3.  Abrufen eines Handles für einen Kryptografieanbieter.
-4.  Öffnen Sie einen [*Zertifikat Speicher*](../secgloss/c-gly.md).
-5.  Holen Sie sich das Empfänger Zertifikat.
-6.  Erstellen Sie das Array des Empfänger Zertifikats.
-7.  Initialisieren Sie die Struktur des [**crypt- \_ Algorithmus \_ Bezeichners**](/windows/desktop/api/Wincrypt/ns-wincrypt-crypt_algorithm_identifier) .
-8.  Initialisieren Sie die [**crypt- \_ Verschlüsselungs Nachrichten- \_ \_ para**](/windows/desktop/api/Wincrypt/ns-wincrypt-crypt_encrypt_message_para) -Struktur.
-9.  Rufen Sie [**cryptencryptmessage**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptencryptmessage) auf, um den Inhalt zu verschlüsseln und eine Digital umgehüllte Nachricht zu erstellen.
+1.  Sie erhalten einen Zeiger auf den zu verschlüsselnden Inhalt.
+2.  Bestimmen Sie die Größe des zu verschlüsselnden Inhalts.
+3.  Erwerben sie ein Handle für einen Kryptografieanbieter.
+4.  Öffnen Sie einen [*Zertifikatspeicher.*](../secgloss/c-gly.md)
+5.  Erhalten Sie das Empfängerzertifikat.
+6.  Erstellen Sie das Empfängerzertifikatarray.
+7.  Initialisieren Sie die [**CRYPT \_ ALGORITHM \_ IDENTIFIER-Struktur.**](/windows/desktop/api/Wincrypt/ns-wincrypt-crypt_algorithm_identifier)
+8.  Initialisieren Sie die [**CRYPT \_ ENCRYPT MESSAGE \_ \_ PARA-Struktur.**](/windows/desktop/api/Wincrypt/ns-wincrypt-crypt_encrypt_message_para)
+9.  Rufen [**Sie CryptEncryptMessage auf,**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptencryptmessage) um den Inhalt zu verschlüsseln und eine digital umhumhierte Nachricht zu erstellen.
 
 Im folgenden Beispiel wird diese Prozedur implementiert.
 
-Kommentare verknüpfen Code Fragmente mit den einzelnen Schritten in der Prozedur. Weitere Informationen zur-Funktion finden Sie unter [**cryptencryptmessage**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptencryptmessage). Weitere Informationen zu den Datenstrukturen finden Sie unter [**crypt \_ - \_ Algorithmusbezeichner**](/windows/desktop/api/Wincrypt/ns-wincrypt-crypt_algorithm_identifier) und [**crypt- \_ Verschlüsselungs \_ Nachricht \_**](/windows/desktop/api/Wincrypt/ns-wincrypt-crypt_encrypt_message_para).
+Kommentare beziehen sich auf Codefragmente auf jeden Schritt in der Prozedur. Weitere Informationen zur -Funktion finden Sie unter [**CryptEncryptMessage**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptencryptmessage). Weitere Informationen zu den Datenstrukturen finden Sie unter [**CRYPT \_ ALGORITHM \_ IDENTIFIER**](/windows/desktop/api/Wincrypt/ns-wincrypt-crypt_algorithm_identifier) und [**CRYPT \_ ENCRYPT MESSAGE \_ \_ PARA.**](/windows/desktop/api/Wincrypt/ns-wincrypt-crypt_encrypt_message_para)
 
-In diesem Beispiel werden die Funktionen [**mylenker Error**](myhandleerror.md) und [**bytedestr**](bytetostr.md)verwendet. Der Code für diese Funktion ist im Beispiel enthalten. Der Code für dieses und andere Hilfsfunktionen ist auch unter [universell Funktionen](general-purpose-functions.md)aufgeführt.
+In diesem Beispiel werden die Funktionen [**MyHandleError**](myhandleerror.md) und [**ByteToStr verwendet.**](bytetostr.md) Der Code für diese Funktion ist im Beispiel enthalten. Der Code für diese und andere Hilfsfunktionen ist auch unter Universell [Functions aufgeführt.](general-purpose-functions.md)
 
 
 ```C++

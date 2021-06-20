@@ -1,27 +1,27 @@
 ---
-title: Die Server Anwendung
-description: Das folgende Beispiel ist aus der "Hallo Welt"-Anwendung im Verzeichnis "RPC \\ Hello" des Platform Software Development Kit (SDK).
+title: Die Serveranwendung
+description: Zeigen Sie den Serveranwendungsteil eines RPC-Beispiels (Remote Procedure Call, Remoteprozeduraufruf) an. Das Beispiel ist aus der Anwendung "Hallo Welt" im Plattform-SDK.
 ms.assetid: 82ccfd67-6626-49c4-8974-86ebc5841444
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9e6f13e2c8fecdcff820c62f3076dd2a8edd1a5a
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 34b8a2bb66fd415a9b8f778134edb4903f88a717
+ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103856196"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112406063"
 ---
-# <a name="the-server-application"></a>Die Server Anwendung
+# <a name="the-server-application"></a>Die Serveranwendung
 
-Das folgende Beispiel ist aus der "Hallo Welt"-Anwendung im Verzeichnis "RPC \\ Hello" des Platform Software Development Kit (SDK). Die Serverseite der verteilten Anwendung informiert das System darüber, dass die zugehörigen Dienste verfügbar sind. Dann wartet er auf Client Anforderungen. Der mittlerer l-Compiler muss mit dem folgenden Beispiel verwendet werden.
+Das folgende Beispiel ist aus der Anwendung "Hallo Welt" im RPC \\ Hello-Verzeichnis des Platform Software Development Kit (SDK) enthalten. Die Serverseite der verteilten Anwendung informiert das System darüber, dass seine Dienste verfügbar sind. Anschließend wird auf Clientanforderungen gewartet. Der MIDL-Compiler muss mit dem folgenden Beispiel verwendet werden.
 
-Abhängig von der Größe Ihrer Anwendung und ihren Codierungs Einstellungen können Sie auswählen, dass Remote Prozeduren in einer oder mehreren separaten Dateien implementiert werden. In diesem Tutorial-Programm enthält die Quelldatei hellos. c die Hauptserver Routine. Die Datei hellop. c enthält die Remote Prozedur.
+Abhängig von der Größe Ihrer Anwendung und Ihren Codierungseinstellungen können Sie Remoteverfahren in einer oder mehrere separate Dateien implementieren. In diesem Tutorialprogramm enthält die Quelldatei Hellos.c die Hauptserverroutine. Die Datei Hellop.c enthält die Remoteprozedur.
 
-Der Vorteil der Organisation der Remote Prozeduren in separaten Dateien besteht darin, dass die Prozeduren mit einem eigenständigen Programm verknüpft werden können, um den Code vor der Konvertierung in eine verteilte Anwendung zu debuggen. Wenn die Prozeduren im eigenständigen Programm funktionieren, können Sie die Quelldateien, die die Remote Prozeduren enthalten, mit der Serveranwendung kompilieren und verknüpfen. Wie bei der Quelldatei der Client Anwendung muss die Quelldatei für die Serveranwendung die Header Datei "Hello. h" enthalten.
+Der Vorteil der Organisation der Remoteverfahren in separaten Dateien ist, dass die Prozeduren mit einem eigenständigen Programm verknüpft werden können, um den Code zu debuggen, bevor er in eine verteilte Anwendung konvertiert wird. Nachdem die Prozeduren im eigenständigen Programm ausgeführt wurden, können Sie die Quelldateien kompilieren und mit der Serveranwendung verknüpfen, die die Remoteverfahren enthalten. Wie bei der Quelldatei der Clientanwendung muss die Quelldatei der Serveranwendung die Headerdatei Hello.h enthalten.
 
-Der Server Ruft die RPC-Lauf Zeitfunktionen [**rpcserveruseprotabqep**](/windows/desktop/api/Rpcdce/nf-rpcdce-rpcserveruseprotseqep) und [**RpcServerRegisterIf**](/windows/desktop/api/Rpcdce/nf-rpcdce-rpcserverregisterif) auf, um dem Client Bindungs Informationen zur Verfügung zu stellen. Dieses Beispielprogramm übergibt den Namen des Schnittstellen Handles an **RpcServerRegisterIf**. Die anderen Parameter werden auf **null** festgelegt. Der Server ruft dann die [**rpcserverlauschen**](/windows/desktop/api/Rpcdce/nf-rpcdce-rpcserverlisten) -Funktion auf, um anzugeben, dass Sie auf Client Anforderungen wartet.
+Der Server ruft die RPC-Laufzeitfunktionen [**RpcServerUseProtseqEp**](/windows/desktop/api/Rpcdce/nf-rpcdce-rpcserveruseprotseqep) und [**RpcServerRegisterIf**](/windows/desktop/api/Rpcdce/nf-rpcdce-rpcserverregisterif) auf, um dem Client Bindungsinformationen zur Verfügung zu stellen. Dieses Beispielprogramm übergibt den Schnittstellenhandpunktnamen an **RpcServerRegisterIf.** Die anderen Parameter werden auf **NULL festgelegt.** Der Server ruft dann die [**RpcServerListen-Funktion**](/windows/desktop/api/Rpcdce/nf-rpcdce-rpcserverlisten) auf, um anzugeben, dass er auf Clientanforderungen wartet.
 
-Die Serveranwendung muss auch die beiden Speicherverwaltungsfunktionen enthalten, die der Serverstub aufruft: [**mittlere \_ Benutzer \_**](the-midl-user-allocate-function.md) Zuordnungen und [**mittlerer l- \_ Benutzer \_ kostenlos**](the-midl-user-free-function.md). Diese Funktionen weisen Arbeitsspeicher auf dem Server zu und verteilen ihn frei, wenn eine Remote Prozedur Parameter an den Server übergibt. In diesem Beispielprogramm sind die **Mittel l- \_ Benutzer \_** Zuordnungen und die **\_ Benutzer \_ Freihand für mittlere Benutzer** einfach Wrapper für die C-Bibliotheksfunktionen [**malloc**](pointers-and-memory-allocation.md) und **Free**. (Beachten Sie, dass in der vom Compiler generierten Forward-Deklarationen "Mittel l" in Großbuchstaben vorliegt. Die Header Datei Rpcndr. h definiert mittlere \_ Benutzer freie und mittlere Benutzer Zuordnungen, \_ die als \_ \_ mittlere \_ Benutzer \_ kostenfrei \_ \_ sind, bzw. Benutzer Zuordnungen.
+Die Serveranwendung muss auch die beiden Speicherverwaltungsfunktionen enthalten, die der Serverstub aufruft: [**midl \_ user \_ allocate**](the-midl-user-allocate-function.md) und [**midl \_ user \_ free**](the-midl-user-free-function.md). Diese Funktionen weisen Arbeitsspeicher auf dem Server zu und geben diesen frei, wenn eine Remoteprozedur Parameter an den Server übergibt. In diesem Beispielprogramm sind **midl \_ user \_ allocate** und **midl \_ user \_ free** einfach Wrapper für die C-Bibliotheksfunktionen [**malloc**](pointers-and-memory-allocation.md) und **free.** (Beachten Sie, dass "MIDL" in den vom MIDL-Compiler generierten Vorwärtsdeklarationen Großbuchstaben ist. Die Headerdatei Rpcndr.h definiert die midl-Benutzerfreigabe und die midl-Benutzer-Zuordnung, um MIDL-Benutzer kostenlos und \_ \_ \_ \_ \_ \_ MIDL-Benutzer \_ \_ zuteilen.)
 
 
 ```C++
@@ -78,9 +78,9 @@ void __RPC_USER midl_user_free(void __RPC_FAR * ptr)
 
 
 
- 
+ 
 
- 
+ 
 
 
 

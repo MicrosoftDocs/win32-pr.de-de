@@ -1,25 +1,25 @@
 ---
-description: Es werden bereit Stellungen zum Erweitern von Konstanten und Strukturen auf geräteunabhängige Weise und in Geräte spezifischer (Hersteller spezifischer) Art und Weise vorgenommen.
+description: Erfahren Sie mehr über die konstante Erweiterbarkeit. Es werden Sowohl geräteunabhängige als auch gerätespezifische Erweiterungen von Konstanten und Strukturen vorgenommen.
 ms.assetid: 78430503-3e1f-49ab-be9c-d48bd21a840e
 title: Konstante Erweiterbarkeit
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a470ccb52af1bdc92596ac42bbafb74d4821db1e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 975d2901dcc3f7e574ffdacdabbcf457821ef932
+ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106347003"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112409973"
 ---
 # <a name="constant-extensibility"></a>Konstante Erweiterbarkeit
 
-Es werden bereit Stellungen zum Erweitern von Konstanten und Strukturen auf geräteunabhängige Weise und in Geräte spezifischer (Hersteller spezifischer) Art und Weise vorgenommen.
+Die Erweiterung von Konstanten und Strukturen wird sowohl geräteunabhängig als auch gerätespezifisch (herstellerspezifisch) bereitgestellt.
 
-In Konstanten, bei denen es sich um skalare Enumerationen handelt, ist ein Wertebereich für zukünftige allgemeine Erweiterungen reserviert. Der Rest der Werte wird als gerätespezifisch identifiziert. Ein Anbieter kann Bedeutungen für diese Werte in beliebiger Weise definieren. Die Interpretation dieser Werte ist an die Erweiterungs-ID gebunden, die durch die [**linedevcaps**](/windows/win32/api/tapi/ns-tapi-linedevcaps) -Datenstruktur bereitgestellt wird. Bei Konstanten, die als Bitflags definiert sind, ist ein Bereich von Bits mit niedriger Ordnung reserviert, wobei die höherwertigen Bits Erweiterungs spezifisch sein können. Es wird empfohlen, dass erweiterte Werte und Bitarrays Bits aus dem höchsten Wert oder dem großen Bit nach unten verwenden. Dadurch ist es nicht mehr möglich, den Rahmen zwischen dem allgemeinen Teil und dem Erweiterungs Teil zu verschieben, wenn dies in Zukunft notwendig ist. Erweiterungen zu Datenstrukturen werden einem Feld mit variabler Größe zugewiesen, wobei Größe/Offset Teil des fixierten Teils ist. TSPI beschreibt, welche gerätespezifischen Erweiterungen für jede Datenstruktur zulässig sind. Weitere Informationen finden Sie im Thema zur [Speicher Belegung](./memory-allocation.md) .
+In Konstanten, bei denen es sich um skalare Enumerationen handelt, ist ein Wertebereich für zukünftige allgemeine Erweiterungen reserviert. Der Rest der Werte wird als gerätespezifisch identifiziert. Ein Anbieter kann Bedeutungen für diese Werte in beliebiger Weise definieren. Die Interpretation dieser Werte wird mit der Erweiterungs-ID in der [**LINEDEVCAPS-Datenstruktur**](/windows/win32/api/tapi/ns-tapi-linedevcaps) angegeben. Für Konstanten, die als Bitflags definiert sind, ist ein Bereich von low-order-Bits reserviert, wobei die hohen Bits erweiterungsspezifisch sein können. Es wird empfohlen, dass erweiterte Werte und Bitarrays Bits des höchsten Werts oder eines hohen Bitwerts nach unten verwenden. Dadurch bleibt die Option, den Rahmen zwischen dem gemeinsamen Teil und dem Erweiterungsteil zu verschieben, falls dies in Zukunft erforderlich ist. Erweiterungen für Datenstrukturen werden einem Feld mit unterschiedlicher Größe zugewiesen, bei dem Größe/Offset Teil des festen Teils ist. TSPI beschreibt, welche gerätespezifischen Erweiterungen für jede Datenstruktur zulässig sind. Weitere Informationen finden Sie im Thema [Speicherzuordnung.](./memory-allocation.md)
 
-Zusätzlich zum Erkennen eines bestimmten Erweiterungs Bezeichners muss TAPI (im Auftrag einer Anwendung) die Erweiterungs Versionsnummer aushandeln, unter der die Anwendung und der Dienstanbieter arbeiten. Dies erfolgt mithilfe der [**TSPI- \_ linenegotiateextversion**](/windows/win32/api/tspi/nf-tspi-tspi_linenegotiateextversion) -und [**TSPI- \_ phonenegotiateextversion**](/windows/win32/api/tspi/nf-tspi-tspi_phonenegotiateextversion) -Funktionen.
+Zusätzlich zur Erkennung eines bestimmten Erweiterungsbezeichners muss TAPI (im Auftrag einer Anwendung) die Versionsnummer der Erweiterung aushandeln, unter der die Anwendung und der Dienstanbieter arbeiten. Dies erfolgt mithilfe der [**Funktionen TSPI \_ lineNegotiateExtVersion**](/windows/win32/api/tspi/nf-tspi-tspi_linenegotiateextversion) und [**TSPI \_ phoneNegotiateExtVersion.**](/windows/win32/api/tspi/nf-tspi-tspi_phonenegotiateextversion)
 
-Ein Erweiterungs Bezeichner ist eine Globally Unique Identifier. Es gibt keine zentrale Registrierung für Erweiterungs-IDs. Stattdessen werden Sie vom Hersteller lokal durch ein Dienstprogramm generiert, das im Toolkit verfügbar ist. Um globale Eindeutigkeit zu gewährleisten, besteht die Zahl aus Teilen, wie z. b. einer (eindeutigen) LAN-Adresse, Tageszeit und einer Zufallszahl. Global eindeutige Bezeichner sind so konzipiert, dass Sie von allgemein eindeutigen HP/Dec-bezeichnerbezeichnerbezeichnerunter schieden werden und somit vollständig kompatibel sind.
+Ein Erweiterungsbezeichner ist ein global eindeutiger Bezeichner. Es gibt keine zentrale Registrierung für Erweiterungsbezeichner. Stattdessen werden sie lokal vom Hersteller durch ein Hilfsprogramm generiert, das mit dem Toolkit verfügbar ist. Um die globale Eindeutigkeit zu gewährleisten, besteht die Zahl aus Teilen wie einer (eindeutigen) LAN-Adresse, Tageszeit und einer Zufallszahl. Global eindeutige Bezeichner sind so konzipiert, dass sie von universell eindeutigen HP/DEC-Bezeichnern unterschieden werden können und daher vollständig kompatibel sind.
 
  
 
