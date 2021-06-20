@@ -1,40 +1,40 @@
 ---
-title: Referenz (Server Schnittstelle des Microsoft-Agents)
-description: Referenz
+title: Referenz (Microsoft Agent-Serverschnittstelle)
+description: In diesem Referenzthema werden Objekte in der Microsoft Agent-Serverschnittstelle beschrieben. Microsoft Agent ist ab Windows 7 veraltet.
 ms.assetid: vs|msagent|~\paface_83s5.htm
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0a96f45d212df69f9de4cd62c964f9c04d1aba83
-ms.sourcegitcommit: 8fa6614b715bddf14648cce36d2df22e5232801a
+ms.openlocfilehash: e9e6e88e80b2a780e7a4ce57eea3d7e3e06c3c66
+ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "103858584"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112405533"
 ---
-# <a name="reference-microsoft-agent-server-interface"></a><span data-ttu-id="38f14-103">Referenz (Server Schnittstelle des Microsoft-Agents)</span><span class="sxs-lookup"><span data-stu-id="38f14-103">Reference (Microsoft Agent Server Interface)</span></span>
+# <a name="reference-microsoft-agent-server-interface"></a><span data-ttu-id="eb079-104">Referenz (Microsoft Agent-Serverschnittstelle)</span><span class="sxs-lookup"><span data-stu-id="eb079-104">Reference (Microsoft Agent Server Interface)</span></span>
 
-<span data-ttu-id="38f14-104">\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]</span><span class="sxs-lookup"><span data-stu-id="38f14-104">\[Microsoft Agent is deprecated as of Windows 7, and may be unavailable in subsequent versions of Windows.\]</span></span>
+<span data-ttu-id="eb079-105">\[Microsoft Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht mehr verfügbar.\]</span><span class="sxs-lookup"><span data-stu-id="eb079-105">\[Microsoft Agent is deprecated as of Windows 7, and may be unavailable in subsequent versions of Windows.\]</span></span>
 
-<span data-ttu-id="38f14-105">Diese Referenz enthält die folgenden Schnittstellen:</span><span class="sxs-lookup"><span data-stu-id="38f14-105">This reference contains the following interfaces:</span></span>
+<span data-ttu-id="eb079-106">Dieser Verweis enthält die folgenden Schnittstellen:</span><span class="sxs-lookup"><span data-stu-id="eb079-106">This reference contains the following interfaces:</span></span>
 
--   [<span data-ttu-id="38f14-106">**Iagent**</span><span class="sxs-lookup"><span data-stu-id="38f14-106">**IAgent**</span></span>](iagent.md)
--   [<span data-ttu-id="38f14-107">**Iagentaudiooutputproperties**</span><span class="sxs-lookup"><span data-stu-id="38f14-107">**IAgentAudioOutputProperties**</span></span>](iagentaudiooutputproperties.md)
--   [<span data-ttu-id="38f14-108">**Iagentaudiooutputpropertiesex**</span><span class="sxs-lookup"><span data-stu-id="38f14-108">**IAgentAudioOutputPropertiesEx**</span></span>](iagentaudiooutputpropertiesex.md)
--   [<span data-ttu-id="38f14-109">**Iagentballoon**</span><span class="sxs-lookup"><span data-stu-id="38f14-109">**IAgentBalloon**</span></span>](iagentballoon.md)
--   [<span data-ttu-id="38f14-110">**Iagentballoonex**</span><span class="sxs-lookup"><span data-stu-id="38f14-110">**IAgentBalloonEx**</span></span>](iagentballoonex.md)
--   [<span data-ttu-id="38f14-111">**Iagentcharacter**</span><span class="sxs-lookup"><span data-stu-id="38f14-111">**IAgentCharacter**</span></span>](iagentcharacter.md)
--   [<span data-ttu-id="38f14-112">**Iagentcharakteriex**</span><span class="sxs-lookup"><span data-stu-id="38f14-112">**IAgentCharacterEx**</span></span>](iagentcharacterex.md)
--   [<span data-ttu-id="38f14-113">**Iagentcommand**</span><span class="sxs-lookup"><span data-stu-id="38f14-113">**IAgentCommand**</span></span>](iagentcommand.md)
--   [<span data-ttu-id="38f14-114">**Iagentcommandex**</span><span class="sxs-lookup"><span data-stu-id="38f14-114">**IAgentCommandEx**</span></span>](iagentcommandex.md)
--   [<span data-ttu-id="38f14-115">**Iagentcommands**</span><span class="sxs-lookup"><span data-stu-id="38f14-115">**IAgentCommands**</span></span>](iagentcommands.md)
--   [<span data-ttu-id="38f14-116">**Iagentcommandsex**</span><span class="sxs-lookup"><span data-stu-id="38f14-116">**IAgentCommandsEx**</span></span>](iagentcommandsex.md)
--   [<span data-ttu-id="38f14-117">**Iagentcommandwindow**</span><span class="sxs-lookup"><span data-stu-id="38f14-117">**IAgentCommandWindow**</span></span>](iagentcommandwindow.md)
--   [<span data-ttu-id="38f14-118">**Iagentex**</span><span class="sxs-lookup"><span data-stu-id="38f14-118">**IAgentEx**</span></span>](iagentex.md)
--   [<span data-ttu-id="38f14-119">**Iagentnotifysink**</span><span class="sxs-lookup"><span data-stu-id="38f14-119">**IAgentNotifySink**</span></span>](events.md)
--   [<span data-ttu-id="38f14-120">**Iagentnotifysinkex**</span><span class="sxs-lookup"><span data-stu-id="38f14-120">**IAgentNotifySinkEx**</span></span>](iagentnotifysinkex.md)
--   [<span data-ttu-id="38f14-121">**Iagentpropertysheet**</span><span class="sxs-lookup"><span data-stu-id="38f14-121">**IAgentPropertySheet**</span></span>](iagentpropertysheet.md)
--   [<span data-ttu-id="38f14-122">**Iagentspeechinputproperties**</span><span class="sxs-lookup"><span data-stu-id="38f14-122">**IAgentSpeechInputProperties**</span></span>](iagentspeechinputproperties.md)
--   [<span data-ttu-id="38f14-123">**Iagentuserinput**</span><span class="sxs-lookup"><span data-stu-id="38f14-123">**IAgentUserInput**</span></span>](iagentuserinput.md)
+-   [<span data-ttu-id="eb079-107">**IAgent**</span><span class="sxs-lookup"><span data-stu-id="eb079-107">**IAgent**</span></span>](iagent.md)
+-   [<span data-ttu-id="eb079-108">**IAgentAudioOutputProperties**</span><span class="sxs-lookup"><span data-stu-id="eb079-108">**IAgentAudioOutputProperties**</span></span>](iagentaudiooutputproperties.md)
+-   [<span data-ttu-id="eb079-109">**IAgentAudioOutputPropertiesEx**</span><span class="sxs-lookup"><span data-stu-id="eb079-109">**IAgentAudioOutputPropertiesEx**</span></span>](iagentaudiooutputpropertiesex.md)
+-   [<span data-ttu-id="eb079-110">**IAgentBalloon**</span><span class="sxs-lookup"><span data-stu-id="eb079-110">**IAgentBalloon**</span></span>](iagentballoon.md)
+-   [<span data-ttu-id="eb079-111">**IAgentBalloonEx**</span><span class="sxs-lookup"><span data-stu-id="eb079-111">**IAgentBalloonEx**</span></span>](iagentballoonex.md)
+-   [<span data-ttu-id="eb079-112">**IAgentCharacter**</span><span class="sxs-lookup"><span data-stu-id="eb079-112">**IAgentCharacter**</span></span>](iagentcharacter.md)
+-   [<span data-ttu-id="eb079-113">**IAgentCharacterEx**</span><span class="sxs-lookup"><span data-stu-id="eb079-113">**IAgentCharacterEx**</span></span>](iagentcharacterex.md)
+-   [<span data-ttu-id="eb079-114">**IAgentCommand**</span><span class="sxs-lookup"><span data-stu-id="eb079-114">**IAgentCommand**</span></span>](iagentcommand.md)
+-   [<span data-ttu-id="eb079-115">**IAgentCommandEx**</span><span class="sxs-lookup"><span data-stu-id="eb079-115">**IAgentCommandEx**</span></span>](iagentcommandex.md)
+-   [<span data-ttu-id="eb079-116">**IAgentCommands**</span><span class="sxs-lookup"><span data-stu-id="eb079-116">**IAgentCommands**</span></span>](iagentcommands.md)
+-   [<span data-ttu-id="eb079-117">**IAgentCommandsEx**</span><span class="sxs-lookup"><span data-stu-id="eb079-117">**IAgentCommandsEx**</span></span>](iagentcommandsex.md)
+-   [<span data-ttu-id="eb079-118">**IAgentCommandWindow**</span><span class="sxs-lookup"><span data-stu-id="eb079-118">**IAgentCommandWindow**</span></span>](iagentcommandwindow.md)
+-   [<span data-ttu-id="eb079-119">**IAgentEx**</span><span class="sxs-lookup"><span data-stu-id="eb079-119">**IAgentEx**</span></span>](iagentex.md)
+-   [<span data-ttu-id="eb079-120">**IAgentNotifySink**</span><span class="sxs-lookup"><span data-stu-id="eb079-120">**IAgentNotifySink**</span></span>](events.md)
+-   [<span data-ttu-id="eb079-121">**IAgentNotifySinkEx**</span><span class="sxs-lookup"><span data-stu-id="eb079-121">**IAgentNotifySinkEx**</span></span>](iagentnotifysinkex.md)
+-   [<span data-ttu-id="eb079-122">**IAgentPropertySheet**</span><span class="sxs-lookup"><span data-stu-id="eb079-122">**IAgentPropertySheet**</span></span>](iagentpropertysheet.md)
+-   [<span data-ttu-id="eb079-123">**IAgentSpeechInputProperties**</span><span class="sxs-lookup"><span data-stu-id="eb079-123">**IAgentSpeechInputProperties**</span></span>](iagentspeechinputproperties.md)
+-   [<span data-ttu-id="eb079-124">**IAgentUserInput**</span><span class="sxs-lookup"><span data-stu-id="eb079-124">**IAgentUserInput**</span></span>](iagentuserinput.md)
 
  
 
